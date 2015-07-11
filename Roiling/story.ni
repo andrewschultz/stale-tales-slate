@@ -2,7 +2,7 @@
 
 volume browsing and building notes
 
-[This initial section is to try and organize the source code. Of course, with a 2 million+ byte file, it's sort of tough to figure where to start. I can't promise that my code is super-readable, but I hope you find it interesting. It's been vetted all the way through, once.
+[This initial section is to try and organize the source code. Of course, with a 2.4 million+ byte file, it's sort of tough to figure where to start. I can't promise that my code is super-readable, but I hope you find it interesting. It's been vetted all the way through, once.
 
 To search for your favorite goofy random tables, use ^blurb with a regular-expression search for editors that allow them, such as notepad++ in Windows, which is well worth a download for other reasons. You can also search for (bracket) then xx(first letter) with g = general (for example, blank command/wait responses) or m=manor (for example, comedians Gunter mentions) or v = gritty dialogue, and so forth. XX alone is a (poorly-named) variable in some places, but searching with the bracket and then XX will cover everything.
 
@@ -289,8 +289,8 @@ table of posh dialogue	true	0	0	say-posh rule	troves	"Posh Spoiloplis dialogue[i
 table of posse bosses	false	0	0	in-lot-or-ruin rule	troves	"Rustin['] Ruin St./Loudes Used Lot bad guys[indic of troves]"	"maybe "	""	"not Mean Roy Maroney, anymore--he's the last of them"
 table of prestigious bums	false	0	0	read-deal rule	troves	"'Inspirational' Yorpwaldians in [i]DEAL[r][indic of troves]"	--	"Aliver Elvira, in case anyone forgot"
 table of real estate ads	false	0	0	read-brochure rule	troves	"Rotunda brochure locations[indic of troves]"	"It's for real estate by Sir Dee. One page header blares [i]Home's so Meh? "	".[r][paragraph break]The page-end reads RESIDE! RESIDE! RESIDE!"	"Secretcester! OWN NOW! is the final entry."
-table of Leo and Rand chitchat	true	0	0	chitchat-over-idols rule	presto	"Leo and Rand's chatter[if rand is fightin] (STORE P)[end if]"	--	""	"'Heya.' / 'Yeah?' An awkward silence follows.[paragraph break]They've run out of conversation, but fortunately (for them,) they forgot it all, so they can just restart."
-table of Leo and Rand idols	true	0	0	Leo-Rand-cry rule	presto	"Leo and Rand's idols[if rand is fightin] (STORE P)[end if]"	"	"[one of]Leo and Rand[or]Rand and Leo[at random] sadly admit they're no"
+table of Leo-Rand chitchat	true	0	0	chitchat-over-idols rule	presto	"Leo and Rand's chatter[if rand is fightin] (STORE P)[end if]"	--	""	"'Heya.' / 'Yeah?' An awkward silence follows.[paragraph break]They've run out of conversation, but fortunately (for them,) they forgot it all, so they can just restart."
+table of Leo-Rand idols	true	0	0	Leo-Rand-cry rule	presto	"Leo and Rand's idols[if rand is fightin] (STORE P)[end if]"	--	"[one of]Leo and Rand[or]Rand and Leo[at random] sadly admit they're no"
 table of catechism pages	false	0	0	catechism-over-research rule	presto	"Hacks['] shack catechism entries[indic of presto]"	--	""	"After the final 'Ok, worn? Work on or know,' only a nixed-pap Appendix is left. But for reading this, appoint you a rarest raster starer. Have an, er, star."
 table of research topics	false	0	0	research-over-doctors rule	presto	"[one of]Some[or]More[stopping] explanation of research by Arch Rees:[indic of presto]"	"Arch Rees[one of][or] further[stopping] explaining research on "	"."
 table of smartypants	false	0	0	read-docs rule	presto	"Ph. D. researchers"	"The highly technical yet useful research of "	"."
@@ -535,7 +535,7 @@ this is the read-divorces rule:
 this is the chitchat-over-idols rule:
 	unless Rand is washed up and player is in ridge:
 		the rule fails;
-	if go-with-first of table of leo and rand chitchat and table of leo and rand idols:
+	if go-with-first of table of Leo-Rand chitchat and table of Leo-Rand idols:
 		the rule succeeds;
 
 this is the Leo-Rand-cry rule:
@@ -561,6 +561,11 @@ this is the research-over-doctors rule:
 
 this is the read-docs rule:
 	if current action is not examining the catechism:
+		the rule fails;
+	the rule succeeds;
+	
+this is the read-futon rule:
+	if current action is not examining the futon:
 		the rule fails;
 	the rule succeeds;
 
@@ -679,7 +684,7 @@ to decide whether go-with-first of (t1 - a table name) and (t2 - a table name):
 		if m1 > 1: [this is not perfect but basically the larger tables come first]
 			decide no; [this lets the 2nd bit cycle]
 	d "[t1] vs [t2] is [n1] vs [m1] and [n1] * [m2] = [n1 * m2] vs [m1] * [n2] = [n2 * m1].";
-	if weighted:
+	if weighted is true:
 		if n1 * m2 <= n2 * m1:
 			decide yes;
 	else:
@@ -929,13 +934,17 @@ Instead of saying no:
 		do nothing;
 	repeat through table of yesnoes:
 		if the-person entry is in location of player:
-			if there is a noage entry:
-				say "[noage entry]" instead;
+			if there is a nosaying entry:
+				say "[nosaying entry]" instead;
 	rhet-q;
 
 Instead of saying yes:
 	if block-north is true:
 		do nothing;
+	repeat through table of yesnoes:
+		if the-person entry is in location of player:
+			if there is a yessaying entry:
+				say "[yessaying entry]" instead;
 	say "[randbla]";
 	rhet-q;
 	
@@ -945,7 +954,7 @@ to rhet-q:
 		now yes-no-warn is true
 
 table of yesnoes
-the-person	yessage	noage
+the-person	yessaying	nosaying
 Elvira	"Don't give in like that!"	"Elvira smirks and shakes her head. Your Just Say No would be no jaunty SOS."
 Gunter	"Agreeing with Gunter probably wouldn't get him to leave."	"You can't out-argue Gunter or change his mind."
 old giant	"Passively agreeing with him might just keep things going ad infinitum. You need to find the right way to ride out the conversation."	"Disagreeing with the giant might make him too mad. You need to find the right way to ride out the conversation."
@@ -957,12 +966,12 @@ pun-warn is a truth state that varies.
 instead of eating a fruit:
 	if noun is lemons or noun is melons:
 		say "A [if noun is lemons]lemon[else]melon[end if]? No meal!" instead;
-	say "[one of]You shouldn't eat into Curtis's profits. ";
+	say "[one of]You shouldn't eat into Curtis's profits. [or][stopping]";
 	if pun-warn is false:
 		ital-say "if you try again, you'll get a bad anagram pun.";
-		now pun-warn is true;
+		now pun-warn is true instead;
 	else:
-		say "No fruit. Ruf it! On! ([one of]Told you so[or]Yup. Still here[stopping][stopping].)";
+		say "No fruit. Ruf it! On! ([one of]Told you so[or]Yup. Still here[stopping].)";
 
 an undesc is a kind of thing. description of undesc is "[bug-report]";
 
@@ -1011,9 +1020,9 @@ use MAX_DICT_ENTRIES of 3000.
 
 use MAX_OBJECTS of 900.
 
-use SYMBOLS_CHUNK_SIZE of 11000
+use MAX_SYMBOLS of 120000.
 
-use MAX_SYMBOLS of 100000.
+use SYMBOLS_CHUNK_SIZE of 12000
 
 use MAX_VERBSPACE of 10240.
 
@@ -1023,7 +1032,7 @@ use MAX_VERBS of 640.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
-use MAX_NUM_STATIC_STRINGS of 60000.
+use MAX_NUM_STATIC_STRINGS of 70000.
 
 use MAX_PROP_TABLE_SIZE of 540000.
 
@@ -1073,9 +1082,17 @@ when play begins (this is the screenread gender swears and precursor rule) :
 		if cholet is 70 or cholet is 102:
 			now the player is female;
 			now the admirer is male;
+			now smart kid is female;
+			now doc-y is female;
+			now coin-person is Dr Lola;
+			now greedy-person is Dr Tera;
 		else:
 			now the player is male;
 			now the admirer is female;
+			now smart kid is male;
+			now doc-y is male;
+			now coin-person is Lord Al;
+			now greedy-person is Red Rat;
 		if the player is male:
 			now i trash his art is part of the dope op-ed;
 		else:
@@ -1099,7 +1116,7 @@ to decide whether (cho - a number) is irrelevant:
 	if cho is 77 or cho is 109, decide no;
 	decide yes;
 
-section gender specific silliness
+section gender specific stubs and/or silliness
 
 to say a-b:
 	say "[if player is male]Abe[else]Bea[end if]"
@@ -1131,6 +1148,24 @@ to say tt:
 
 to say ta:
 	say "[if player is male]Tai[else]Tia[end if]"
+
+to say he-she of (p - a person):
+	say "[if p is male]he[else]she[end if]"
+
+to say him-her of (p - a person):
+	say "[if p is male]him[else]her[end if]"
+
+to say his-her of (p - a person):
+	say "[if p is male]his[else]her[end if]"
+
+to say he-she-c of (p - a person):
+	say "[if p is male]He[else]She[end if]"
+
+to say him-her-c of (p - a person):
+	say "[if p is male]Him[else]Her[end if]"
+
+to say his-her-c of (p - a person):
+	say "[if p is male]His[else]Her[end if]"
 
 section redact cussing
 
@@ -10430,7 +10465,31 @@ to coin-eval:
 					now player has droll dollar;
 				continue the action;
 
-a droll dollar is a thing. description is "It has a picture of some gangster--wait, it's Lord Al Ollard--lighting a cigar with a dollar remarkably similar to it--on which is a gangster lighting a cigar, and so forth[one of]. LOL, rad, you think, though the joke wears off[or][stopping]."
+a droll dollar is a thing. description is "It has a picture of some gangster--wait, it's [coin-person]--lighting a cigar with a dollar remarkably similar to it--on which is a gangster lighting a cigar, and so forth[one of]. LOL, rad, you think, though the joke wears off[or][stopping]."
+
+coin-person is a thing that varies.
+
+Lord Al Ollard is a thing. description of Lord Al is "[coin-per-d]"
+
+Dr Lola Ollard is a thing. description of Dr Lola is "[coin-per-d]"
+
+to say coin-per-d:
+	say "[he-she-c of player] looks stereotypically bloated, hypocritical and plutocratic, though some people find that sort of thing valuable."
+
+instead of doing something with coin-person:
+	if action is procedural:
+		continue the action;
+	say "Doing anything with or too such a horrid counterfeit coin wouldn't be very satisfying or productive. Probably best to get this off your hands for any profit at all.";
+	
+to say ollard-hint:
+	say "[he-she-c of player] is worse than useless to society but only useless to you. Yay?"
+
+after doing something with coin-person:
+	if coin-person is Lord Al:
+		set the pronoun him to Lord Al;
+	else:
+		set the pronoun her to Dr Lola;
+	continue the action;
 
 understand "dollar/-- bill" as droll dollar.
 
@@ -11387,15 +11446,25 @@ a-text of an-a is "RYRYRY". b-text of an-a is "YGRYRY".
 
 The small yellow banana is a fruit.
 
-Red Rat Art Erd is a person in Scape Space. "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's Red Rat Art Erd! Who performed all sorts of 'risky' financial transactions, but Elvira managed to get him bailed out because he was being interesting and creative, or something. Some people tarred him, and, well, he deserved it[or]Red Rat Art Erd, the tarred trader, is stil slumped here. He probably got kicked out [if clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if storage box is in scape space]--he's sort of holding out a box labeled So-Great Storage[end if]."
+greedy-person is a person that varies.
 
-understand "tarred trader" and "tarred/trader" as Art Erd.
+Red Rat Art Erd is a person. "[gree-desc]"
+
+Dr Tera Darter is a person. "[gree-desc]"
+
+the printed name of Dr Tera is "Dr. Tera Darter".
+
+to say gree-desc:
+	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her of greedy-person] bailed out because he was being interesting and creative, or something. Some people tarred him, and, well, he deserved it[or]Red Rat Art Erd, the tarred trader, is stil slumped here. He probably got kicked out [if clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if storage box is in scape space]--he's sort of holding out a box labeled So-Great Storage[end if]."
+
+understand "tarred trader" and "tarred/trader" as Red Rat when player is male.
+understand "tarred trader" and "tarred/trader" as Dr Tera when player is female.
 
 understand "retard" as a mistake ("You can picture people like Art Erd calling you, or people he 'provided financial services to,' that, but two wrongs don't make a right. Besides, if anything, he was being too clever.") when player is in scape space
 
 understand "darter" as a mistake ("Art Erd has nowhere to run[if storage box is in scape space], and you don't know if you want him taking that storage box with him[end if].") when player is in scape space
 
-rule for printing a locale paragraph about Art Erd:
+rule for printing a locale paragraph about greedy-person:
 	if storage box is in scape space:
 		now storage box is mentioned;
 	continue the action;
@@ -12904,7 +12973,13 @@ instead of doing something with s-d:
 to say meet-kid:
 	now met-kid is true.
 
-a smart kid is a reflexive person. "[if met-kid is false]'Hi! I'm Dirk Stam! Thanks for getting rid of those big mean adults!' It's the kid you rescued. You exchange greetings[meet-kid][else if doc-y is in lalaland][what-kid-sez][else]Your friend Dirk Stam the smart kid is here[if-tent][end if]."
+to say kid-full:
+	say "[if kid is male]Dirk Stam[else]Kim Darst[end if]"
+
+to say kid-first:
+	say "[if kid is male]Dirk[else]Kim[end if]"
+
+a smart kid is a reflexive person. "[if met-kid is false]'Hi! I'm [kid-full]! Thanks for getting rid of those big mean adults!' It's the kid you rescued. You exchange greetings[meet-kid][else if doc-y is in lalaland][what-kid-sez][else]Your friend [kid-full] the smart kid is here[if-tent][end if]."
 
 to say if-tent:
 	if player is in coastlines:
@@ -13010,7 +13085,7 @@ check giving gizmo to smart kid:
 	else:
 		say "'Wow! That'd be neat if I have something to build.'" instead;
 
-description of smart kid is "Freckly-faced and buck-toothed and talking to himself[if doc-y is visible]. He's visibly [i][at-ten][r] just being around Dr. Yow[end if].";
+description of smart kid is "Freckly-faced and buck-toothed and talking to [him-her of smart kid]self[if doc-y is visible]. He's visibly [i][at-ten][r] just being around Dr. Yow[end if].";
 
 to say at-ten:
 	say "[if kid is reflexed]attentive[else]tentative[end if]"
@@ -34778,7 +34853,7 @@ blurb
 "relates the measured sympathy of [i]Pared Joy Jeopardy, Doper Jay[r]."
 "reminds people [i]Nice Into Nicotine[r] is old because it's true."
 "reminds people all drugs are wrong, as in [i]Kent's Doom: Don't Smoke[r]."
-"reveals the personal nature of [i[I'd Do: Facts of Addicts[r]."
+"reveals the personal nature of [i]I'd Do: Facts of Addicts[r]."
 "riffs on the subtleties of [i]Alco-Lust Calls Out[r]."
 "rues technology's contributions to addictions with [i]To Click a Cocktail[r]."
 "says [i]Bad Slick Backslid[r] is not just a catchy title."
@@ -47051,7 +47126,7 @@ blurb
 "Dweeb-Arts Waterbeds"
 "E-Z Do Doze"
 "Enteric's Rest-Nice"
-"Fab Dale's Leaf Beds (which gives no bad feels)"	true
+"Fab Dale's Leaf Beds (which gives no bad feels)"
 "Gold Zone Long Doze"
 "Knaub-Kuban A-Bunk"
 "LAZ-E-BOD DOZABLE"
@@ -47276,7 +47351,7 @@ blurb
 "You see advice: 'Don't begrudge if your debugger is buggered.'"
 "You start reading an exponential explain-note but give up."
 
-table of Leo and Rand chitchat [xxp3]
+table of Leo-Rand chitchat [xxp3]
 blurb
 "[l-r] admits he couldn't handle the regimen of Thickener Kent Reich-Kitchener."
 "[l-r] begins construing trouncings, but not anyone. Just abstractly."
@@ -47382,7 +47457,7 @@ blurb
 "'We ain't gonzo-goonz.'"
 "You hear [l-r] recount an eco-runt trounce."
 
-table of Leo and Rand idols [xxp4]
+table of Leo-Rand idols [xxp4]
 blurb
 "[tt] 'Thud' Douthit"
 "Abe 'Grr' Garber"
@@ -50955,9 +51030,7 @@ definition: a thing (called hintcand) is hintrelevant:
 		decide yes;
 	decide no;
 
-definition: a thing is in-range if it is hintrelevant
-
-xxyying is an action applying to one in-range thing.
+definition: a thing is in-range if it is hintrelevant.
 
 objhinting is an action applying to one visible thing.
 
@@ -50966,7 +51039,7 @@ check objhinting a deregioned object:
 
 understand the command "hint/hints/info/help [any thing]" as something new.
 
-understand "hint [any thing]" as objhinting. understand "hints [any thing]" as objhinting. understand "info [any thing]" as objhinting. understand "help [any thing]" as objhinting.
+understand "hint [any hintrelevant thing]" as objhinting. understand "hints [any hintrelevant thing]" as objhinting. understand "info [any hintrelevant thing]" as objhinting. understand "help [any hintrelevant thing]" as objhinting.
 
 [understand "hint [any not hintrelevant thing]" as a mistake ("Can't hint that.").]
 
@@ -51716,6 +51789,8 @@ s-i	"[if player has storage box]You can put the icons in the lost slot.[else][on
 storage box	"[if player has dollar]You can trade the dollar for the storage box.[else if player has storage and lost slot is visible]You can put something in the box's slot.[else]There's a way to open the storage box. Curtis's coins can be manipulated into something else that could open the storage.[end if]"
 Art Erd	"[one of]Art Erd [if player has storage]was[else]is[end if] just there to barter for the storage. You need something of value[if player has coin or player has coins], more value than a coin or two[end if].[plus][or][if player has dollar]That dollar would make Art Erd happy[else if number of fruits in lalaland < 12]Curtis's third gift, after [12 - number of fruits in lalaland in words] more fruits, will be handy[else]You can go back to Curtis for an item that will please Art Erd[end if].[minus][cycling]"
 droll dollar	"[one of]The droll dollar is probably not spendable in a reputable place.[plus][or]Where is a less reputable place to spend the dollar? Maybe a less reputable person?[plus][or]Give the dollar to Art Erd in the Scape Space.[minus][cycling]"
+Lord Al	"[ollard-hint]"
+Dr Lola	"[ollard-hint]"
 tekno-token	"The tekno-token is currency to help you buy stuff after haggling in the Clangier Clearing."
 lost slot	"[if player has s-i]You need to put the sonic icons in the slot to open the So-Great Storage[else if s-i are in lalaland]You've used the slot already[else]You need to reform the coins Curtis gave you to put something in the lost slot[end if]."
 passport	"The passport will get you through the gates in the Gates Stage, but you need to study it to enter the Admit-Us Stadium safely. The viewer and searcher can help, as can the message if you go north and fail." [??PREP]
