@@ -186,14 +186,6 @@ release along with cover art. [and a website?]
 
 use American dialect.
 
-use MAX_STATIC_DATA of 300000.
-
-use MAX_ACTIONS of 280.
-
-use MAX_VERBS of 350.
-
-use MAX_SYMBOLS of 28000.
-
 include Conditional Undo by Jesse McGrew.
 
 include Flexible Windows by Jon Ingold.
@@ -258,6 +250,38 @@ when play begins (this is the status window rule):
 	set the text color of the status window to g-white;
 	open the status window;
 
+Procedural rule: ignore the print final score rule.
+
+section compiler non-syntax section
+
+[This is the main section to edit if I get a compiler error not due to syntax. With the 6.33 compiler, Inform should be a bit more descriptive, but just in case, I want to write this in]
+
+use MAX_STATIC_DATA of 300000.
+
+use MAX_ACTIONS of 280.
+
+use MAX_VERBS of 350.
+
+use MAX_SYMBOLS of 30000.
+
+section about the player
+
+does the player mean examining the player: it is unlikely.
+
+description of player is "[player-descrip][run paragraph on]"
+
+to say player-descrip:
+	if Trips Strip is unvisited:
+		say "You're [tag-status]. And hey, your ex-company let you dress casually[one of]. It'd stink if the dress code STILL applied[or][stopping]";
+	otherwise:
+		if warts are part of player:
+			say "Those warts are making you feel ugly right now";
+		otherwise:
+			say "You're wearing generic, comfortable and inoffensive clothes, which have enough pockets for a modest inventory";
+	say "."
+
+section diagonals
+
 a direction can be diagonal. a direction is usually not diagonal.
 
 a direction can be ordinal. a direction is usually not ordinal.
@@ -275,24 +299,12 @@ before going (this is the reject diagonals rule):
 		if trips strip is visited:
 			say "[one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[at random]" instead;
 
+section dropping
+
 check dropping:
 	if noun is shotgun:
 		say "You[if wolves are visible] probably [otherwise]'re going to [end if] need that gun." instead;
 	say "You shouldn't need to drop [if noun is plural-named]those[otherwise]that[end if]. You have enough hands and pockets." instead;
-
-Procedural rule: ignore the print final score rule.
-
-description of player is "[player-descrip][run paragraph on]"
-
-to say player-descrip:
-	if Trips Strip is unvisited:
-		say "You're [tag-status]. And hey, your ex-company let you dress casually[one of]. It'd stink if the dress code STILL applied[or][stopping]";
-	otherwise:
-		if warts are part of player:
-			say "Those warts are making you feel ugly right now";
-		otherwise:
-			say "You're wearing generic, comfortable and inoffensive clothes, which have enough pockets for a modest inventory";
-	say "."
 
 to say tag-status:
 	if player is wearing the nametag:
@@ -300,12 +312,12 @@ to say tag-status:
 	otherwise:
 		say "[if gateman is visible]at least [end if]not wearing that stupid nametag any more";
 
-does the player mean examining the player: it is unlikely.
-
 instead of dropping tomato:
 	say "Much as you'd like to drop it, it [if player is in Hotel]is actually handy here[otherwise]might come in handy somewhere[end if]."
 
 [??2 words]
+
+chapter special help
 
 [?? if backdrop is 1st it goes screwy]
 table of spechelp [tosh] [this is for specific error messages for specific items]
@@ -970,7 +982,7 @@ check objhinting a deregioned object:
 
 understand the command "hint/hints/info/help [any thing]" as something new.
 
-understand "hint [any thing]" as objhinting. understand "hints [any thing]" as objhinting. understand "info [any thing]" as objhinting. understand "help [any thing]" as objhinting.
+understand "hint [any hintrelevant thing]" as objhinting. understand "hints [any hintrelevant thing]" as objhinting. understand "info [any hintrelevant thing]" as objhinting. understand "help [any hintrelevant thing]" as objhinting.
 
 ever-obj-hinted is a truth state that varies.
 

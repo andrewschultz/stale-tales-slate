@@ -68,7 +68,7 @@ the story description is "Dear, Lo! Ordeal reload!"
 
 release along with cover art.
 
-the release number is 3.
+the release number is 4.
 
 a region has a number called max-score. a region has a number called min-score.
 
@@ -2146,7 +2146,7 @@ persuasion rule for asking Curtis to try doing something:
 	say "[if dollar is not off-stage]Curtis can't do any more for you[else]Curtis gestures surprise that YOU are ordering HIM around[end if].";
 	persuasion fails;
 
-persuasion rule for asking Art Erd to try doing something:
+persuasion rule for asking greedy-person to try doing something:
 	say "He's too slick to be ordered around.";
 	persuasion fails;
 
@@ -2441,6 +2441,7 @@ Elvira	"She sniffs haughtily. As if you have to ask! As if you're NOT too biased
 Curtis	"'Just trying to rustle up fruit and biotech business. Need to be growing more than iPrunes or those discussing yorpberries.'"
 Len Craig	"'I'm a businessman. What you got?'"
 Art Erd	"'Traded a dead rat...' he mumbles."
+Dr Tera	"'Traded a dead rat...' she mumbles."
 passport	--
 
 check asking Curtis about:
@@ -2610,7 +2611,7 @@ parrot	"[if Merle is visible]Don't blow his cover![else]'Fear the feather! A bir
 Elvira	"'I watch a witch,' you mutter. 'Nice try. Tiny rec. Y'cretin.' You're not going to out-debate the vexin['] vixen."
 Curtis	"'I'm a busy man!' yells Curtis. 'I have confidence in you, dealing with fruit. I mean, you saved the whole COUNTRY already. This can't take too long." [begin others]
 Len Craig	"[one of]Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge[or]Your magic powers do not, alas, expand to straightforward bargaining[stopping]."
-Art Erd	"He mumbles 'er, drat' and something about how money is very, very nice."
+Art Erd	"[his-her-c of greedy-person] mumbles 'er, drat' and something about how money is very, very nice."
 salesmen	"They utterly ignore your inquiry and instead talk about anything and talk about how they can talk about anything. They talk about how just one word has the power to change things. And finally, they get around to how great Nerd-Aid is, and you shouldn't be ashamed if you need a little Nerd-Aid."
 passport	"Try using its features instead."
 
@@ -2820,13 +2821,16 @@ Gretta	Elvira	"[if macks are visible]Gretta cringes even more at hearing Elvira'
 Merle	Elvira	"'She is a great leader. You do not deserve to visit her to the west.'" [end otters]
 curtis	rampage note	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'"
 curtis	mopeage rant	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'"
-curtis	Art Erd	"[one of]Curtis breathes deeply and gives a look of contempt and shakes his head[or]No point asking again[stopping]. Just don't tell him any fruit you [gave-give-curt] him is from Art Erd."
+curtis	Art Erd	"[one of]Curtis breathes deeply and gives a look of contempt and shakes his head[or]No point asking again[stopping]. Curtis probably doesn't want to know if any fruit came from [him-her of greedy-person]."
 Art Erd	curtis	"'There's people with silly science ideas like him, then there's businessmen like ME. Pfft.'"
 Art Erd	storage box	"'[if storage box is in scape space]It's...umm...worth something.[else]You bought it[end if].'"
 Art Erd	len craig	"'Nicely? Len? Icy!' he mutters. 'Cut Len's cluster...'"
 len craig	curtis	"[one of]'Nice fella, lots of ideas about agriculture, but no business sense. Just sits looking for someone to do his dirty work for him. You don't...'[or]You don't want to admit Curtis has you gofering. Though, really, it's been not too bad, with your powers.[stopping]"
 len craig	tekno-token	"[if tekno-token is off-stage]'We accept tekno-tokens, yes.'[else][one of]He inspects the token and says it's valid[or]If you ask again, Len might question its validity[stopping].[end if]"
 len craig	Art Erd	"Len snorts and shakes his head. 'What a weasel.'"
+
+check objasking about Dr Tera when player is female:
+	try objasking noun about Art Erd instead;
 
 to say endorse-aid:
 	say "[one of]it's endorsed by Red Dina, among others[or]endorsed by Ned Radi, among others[or]endorsed by Ed Nardi, among others[or]endorsed by Ed Darin, among others[or]endorsed by Adi Dern[or]endorsed by Nerd Ida, of course[or]you can Add Erin, Reid, Dan to the list of endorsers[cycling]--they see red when you ask who THAT is"
@@ -4165,7 +4169,7 @@ check taking drinks stand:
 	say "The drinks stand is too big to take[if slime is off-stage], but maybe it's worth examining[else], and you sort of ransacked it anyway[end if]." instead;
 
 check taking reserved sign:
-	say "Art Erd yells at you to be a little more subtle trying to steal stuff." instead;
+	say "[greedy-s] yells at you to be a little more subtle trying to steal stuff." instead;
 
 check taking b-r:
 	say "It's stuck in there. Maybe you can make it something smaller." instead;
@@ -5599,7 +5603,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "lemon"	388955186	others	--	--	lemmel rule	"You can't focus on just one of them."
 "auction"	417662159	others	--	caution	--	"[papay]."
 "banner"	371551651	others	--	caution	--	"[papay]."
-"trader"	424780640	others	--	Art Erd	--	"Art Erd is tarred real good. That's the point of tarring. But [if storage is in scape]you got what you wanted[else]he might trade that storage box[end if]."
+"trader"	424780640	others	scape space	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is in scape]you got what you wanted[else][he-she of greedy-person] might trade that storage box[end if]."
 "orange"	391177517	others	--	orange	--	"[if player has orange]You got it, already[else]That doesn't seem sneaky enough to get the orange."
 "plant"	309485142	others	--	pugnacious plant	--	"[plant-no]."
 "red"	234159001	others	scape space	--	--	"[no-art]."
@@ -6010,7 +6014,7 @@ to say rapt-glare:
 	say "The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. You'll have to change IT before the spoon"
 
 to say 1st-name:
-	say "You're not sure you want to be on a first-name basis with Art Erd. Okay, you're sure you don't want to be";
+	say "You're not sure you want to be on a first-name basis with [greedy-s]. Okay, you're sure you don't want to be";
 
 to say prob-ov:
 	say "You are probably over-thinking it. There's a more direct way to tackle the rude door"
@@ -6898,9 +6902,9 @@ check buying:
 	if player is in scape space:
 		if player has dollar:
 			if noun is storage:
-				try giving dollar to Art Erd instead;
+				try giving dollar to greedy-person instead;
 		else:
-			say "You have nothing Art Erd wants." instead;
+			say "You have nothing [greedy-person] wants." instead;
 	if player has tekno-token:
 		say "This isn't a place of commerce." instead;
 	if player is in sand home:
@@ -11431,7 +11435,7 @@ rhubarb is a fruit.
 instead of doing something with the pugnacious plant:
 	if action is procedural:
 		continue the action;
-	say "The plant senses you trying to do something with it and whips a burr at you. [one of]'Burr. Bah!' you say as you notice a brief red welt[or]'Bah. Burr,' you say, as a burr bounces off[or]'Arrh, bub,' you brag as you duck the plant's reflexive attack[or]'Bub...' Art Erd distracts you. 'Arrh!' you cry, as you pick out a burr the plant shot at you[in random order]." instead;
+	say "The plant senses you trying to do something with it and whips a burr at you. [one of]'Burr. Bah!' you say as you notice a brief red welt[or]'Bah. Burr,' you say, as a burr bounces off[or]'Arrh, bub,' you brag as you duck the plant's reflexive attack[or]'Bub...' [greedy-s] distracts you. 'Arrh!' you cry, as you pick out a burr the plant shot at you[in random order]." instead;
 
 check scaning plant:
 	say "The settler doesn't register anything, though the plant gestures threateningly. Maybe you need to be more hands-on, here." instead;
@@ -11450,19 +11454,29 @@ greedy-person is a person that varies.
 
 Red Rat Art Erd is a person. "[gree-desc]"
 
-Dr Tera Darter is a person. "[gree-desc]"
+Dr Tera Darter is a female person. "[gree-desc]"
 
+the chum of dr tera darter is red rat art erd.
+
+to say greedy-s:
+	say "[if greedy-person is Art Erd]Art Erd[else]Dr Tera[end if]"
+
+to say trader-clue:
+	say "[one of][greedy-s] [if player has storage]was[else]is[end if] just there to barter for the storage. You need something of value[if player has coin or player has coins], more value than a coin or two[end if].[plus][or][if player has dollar]That dollar would make [greedy-s] happy[else if number of fruits in lalaland < 12]Curtis's third gift, after [12 - number of fruits in lalaland in words] more fruits, will be handy[else]You can go back to Curtis for an item that will please [greedy-s][end if].[minus][cycling]"
+	
 the printed name of Dr Tera is "Dr. Tera Darter".
 
 to say gree-desc:
-	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her of greedy-person] bailed out because he was being interesting and creative, or something. Some people tarred him, and, well, he deserved it[or]Red Rat Art Erd, the tarred trader, is stil slumped here. He probably got kicked out [if clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if storage box is in scape space]--he's sort of holding out a box labeled So-Great Storage[end if]."
+	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her of greedy-person] bailed out because [he-she of greedy-person] was being interesting and creative, or something. Some people tarred [him-her of greedy-person], and, well, [he-she of greedy-person] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c of greedy-person] probably got kicked out [if clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if storage box is in scape space]--[he-she of greedy-person]'s sort of holding out a box labeled So-Great Storage[end if]."
 
 understand "tarred trader" and "tarred/trader" as Red Rat when player is male.
 understand "tarred trader" and "tarred/trader" as Dr Tera when player is female.
 
-understand "retard" as a mistake ("You can picture people like Art Erd calling you, or people he 'provided financial services to,' that, but two wrongs don't make a right. Besides, if anything, he was being too clever.") when player is in scape space
+understand "retard" as a mistake ("You can picture people like [greedy-person] calling you, or people he 'provided financial services to,' that, but two wrongs don't make a right. Besides, if anything, he was being too clever.") when player is in scape space
 
-understand "darter" as a mistake ("Art Erd has nowhere to run[if storage box is in scape space], and you don't know if you want him taking that storage box with him[end if].") when player is in scape space
+understand "red rat" as a mistake ("Dr. Tera Trader is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.") when player is in scape space and greedy-person is Dr Tera
+
+understand "darter" as a mistake ("Art Erd has nowhere to run[if storage box is in scape space], and you don't know if you want him taking that storage box with him[end if].") when player is in scape space and greedy-person is Art Erd
 
 rule for printing a locale paragraph about greedy-person:
 	if storage box is in scape space:
@@ -11479,20 +11493,20 @@ instead of opening box:
 	say "If brute force worked, it wouldn't be so great for storage.";
 
 check taking storage box:
-	say "Art Erd guards it carefully. 'I need currency. Give me currency.'" instead;
+	say "[greedy-s] guards it carefully. 'I need currency. Give me currency.'" instead;
 
 check giving droll dollar to someone:
-	if second noun is not Art Erd:
+	if second noun is not greedy-person:
 		say "[second noun] isn't seedy enough to accept it." instead;
 
-check giving something to Art Erd:
+check giving something to greedy-person:
 	if player has storage:
 		say "You've already traded." instead;
 	if noun is coin or noun is coins:
 		say "'[one of]No redeem. Need more.'[or]Too heavy.' Hey! A veto![in random order]" instead;
 	if noun is dollar:
 		say "He consults an imaginary calendar. 'Sell date. All's teed. Let's deal.' On receiving the dollar, he cries 'Monies so mine!'[paragraph break]You take the storage box.";
-		now Art Erd has dollar;
+		now greedy-person has dollar;
 		if player has s-i:
 			slot-appear;
 		now player has storage instead;
@@ -11502,13 +11516,13 @@ check giving something to Art Erd:
 
 description of Art Erd is "Tarred literally and figuratively, he gives off an 'I'm sly. Slimy.' air. Grease agrees with him."
 
-instead of doing something to Art Erd:
+instead of doing something to greedy-person:
 	if action is procedural:
 		continue the action;
 	otherwise:
 		if player has storage:
-			say "You don't want to deal with Red Rat Art Erd any more than you have to." instead;
-		say "Art Erd shrugs, then does the 'let's swap' hand gesture. Hmm, what could you give Art Erd to get that so-great storage?"
+			say "You don't want to deal with [greedy-s] any more than you have to." instead;
+		say "[greedy-s] shrugs, then does the 'let's swap' hand gesture. Hmm, what could you give [he-she of greedy-person] to get that so-great storage?"
 
 The basket of blackberries is a fruit. description is "It's from Bickerers['] Lab, wherever that is."
 
@@ -11519,7 +11533,7 @@ understand "gorean" as a mistake ("This game isn't about sexual stuff. Not that 
 a-text of orange is "RY*RYYR". b-text of orange is "RY*RYYR".
 
 instead of taking the orange:
-	say "[one of]With a sleepy, sly 'Eep,' [or]T[stopping]he trader whips his hand out and grabs you with alacrity. Maybe even two lacrities--it was much faster and intenser than you thought possible. You back off, and he goes back to semi-dozing. You rage on and see red before thinking, Maybe you need to sneak up somehow."
+	say "[one of]With a sleepy, sly 'Eep,' th[or]Th[stopping]e trader whips [his-her of greedy-person] and grabs you with alacrity. Maybe even two lacrities--it was much faster and intenser than you thought possible. You back off, and [he-she of greedy-person] goes back to semi-dozing. You rage on like an ogre and see red before thinking, Maybe you need to sneak up somehow."
 
 chapter gonearing
 
@@ -11531,7 +11545,7 @@ understand "go near" as gonearing.
 
 carry out gonearing:
 	if orange is in Scape Space and orange is visible:
-		say "You move cautiously, with moves as sneaky as Art Erd's that eventually got him tarred. He sees you grab it but sniffs 'O anger. A goner.' Sour grapes at the orange!";
+		say "You move cautiously, with moves as sneaky as [greedy-s]'s that eventually got him tarred. He sees you grab it but sniffs 'O anger. A goner.' Sour grapes at the orange!";
 		now player has orange;
 		reg-inc;
 		check-fruit-min instead;
@@ -13509,7 +13523,11 @@ Elmer	"[att-elm]"
 Merle	"[att-elm]"
 Curtis	"Aw, c'mon. Curtis is sort of bossy, but he's not that bad." [start OTHERS]
 Len Craig	"Len Craig is pretty fair and balanced."
-Red Rat Art Erd	"If anyone deserves it, he does. But he still doesn't. He's already had enough physical abuse."
+Red Rat Art Erd	"[not-even-trader]."
+Dr Tera Darter	"[not-even-trader]."
+
+to say not-even-trader:
+	say "If anyone deserves it, he does. But he still doesn't. [he-she-c of greedy-person]'s already had enough physical abuse."
 
 to say nice-to-animals:
 	say "You didn't rescue them to kill them like this";
@@ -23198,8 +23216,8 @@ melons	melons	"solemn"	"solemn"	"You half-frown at the melons, and Len, groaning
 rapt figure	grapefruit	"grapefruit"	"grapefruit"	"The figure gives a look as if it's eaten something sour before it rolls into itself, into a lumpy yellow ball--a grapefruit!"	true	694430761
 nectarine	nectarine	"ancienter"	"ancienter"	"The unripe nectarine becomes salable. You swipe your tekno-token, taking only one: multiple nectarines might have transience."	true	648047304
 tangerine	tangerine	"argentine"	"argentine"	"Your fake knowledge pays off! You now have a tangerine."	true	661641421
-reserved	guava	"reversed"	"reversed"	"The sign wobbles over and falls. You take a guava you found behind it. Art Erd nods, impressed."	true	778533808
-pugnacious plant	rhubarb	"rhubarb"	"rhubarb"	"The plant's arms turn to stalks of rhubarb, which fall off. What looks like an evil spirit departs from it as it slinks into a corner. Art Erd sniffs at the rhubarb with disdain. Yay, more fruit for you."	true	352061340
+reserved	guava	"reversed"	"reversed"	"The sign wobbles over and falls. You take a guava you found behind it. [greedy-person] nods, impressed."	true	778533808
+pugnacious plant	rhubarb	"rhubarb"	"rhubarb"	"The plant's arms turn to stalks of rhubarb, which fall off. What looks like an evil spirit departs from it as it slinks into a corner. [greedy-s] sniffs at the rhubarb with disdain. Yay, more fruit for you."	true	352061340
 sorer bogey	gooseberry	"gooseberry"	"gooseberry"	"A howling from the well, and the reddish letters fly off! A rather large gooseberry falls on the ground. You pick it up."	true	844616803
 b-r	breadfruit	"breadfruit"	"breadfruit"	"You decide the raft would be better as breadfruit, whatever that is. The raft swirls into something more spherical, but still nothing close to what you expected. It's odd and bumpy, but you take it."	true	619813094
 briar screen	cranberries	"cranberries"	"cranberries"	"The prickly screen turns into (you hope) less prickly cranberries."	true	761370255 [briar + cranberries]
@@ -49046,7 +49064,6 @@ blurb
 "Dr. Taube Daubert"
 "Dr. Tay Tardy"
 "Dr. Tena Arendt"
-"Dr. Tera Trader"
 "Dr. Thea Dehart-Dearth"
 "Dr. Theola Aderholt"
 "Dr. Tonya Drayton"
@@ -51783,12 +51800,13 @@ coin	"[one of]You ultimately need another coin, but perhaps it can be converted 
 coins	"[one of]There are two things to do with the coins.[plus][or]The coins can become another thing, or they can change in quality.[plus][or]The thing coins can become is ICONS.[plus][or]The coins can also become SONIC.[minus][cycling]"
 icon	"You've done what you can with the icon. You need to [if number of fruits in lalaland < 8]get more fruits[else]return to Curtis[end if] to get another coin and make ICONS."
 icons	"[one of]The icons are too inert.[plus][or]The icons can become SONIC.[minus][cycling]"
-gs	"You need [if curtis-level < 2]more stuff from Curtis[else if player has s-i]something to put the sonic icons in[else]to change Curtis's coins into something[end if]. [if player has storage box]You have the storage box[else if player has dollar]You need to trade the dollar for something[else if Scape Space is unvisited]Try looking below[else]You need to open the storage box Art Erd is guarding[end if]."
+gs	"You need [if curtis-level < 2]more stuff from Curtis[else if player has s-i]something to put the sonic icons in[else]to change Curtis's coins into something[end if]. [if player has storage box]You have the storage box[else if player has dollar]You need to trade the dollar for something[else if Scape Space is unvisited]Try looking below[else]You need to open the storage box [greedy-s] is guarding[end if]."
 s-c	"[one of]The sonic coins aren't quite what you need. Nobody wants singing money.[plus][or]The coins can become ICONS.[minus][cycling]"
 s-i	"[if player has storage box]You can put the icons in the lost slot.[else][one of]You need to put the sonic icons somewhere.[plus][or]If you've seen anything that doesn't accept money, that might help.[plus][or]The So-Great Storage doesn't accept money. You need the droll dollar from Curtis.[minus][cycling]"
 storage box	"[if player has dollar]You can trade the dollar for the storage box.[else if player has storage and lost slot is visible]You can put something in the box's slot.[else]There's a way to open the storage box. Curtis's coins can be manipulated into something else that could open the storage.[end if]"
-Art Erd	"[one of]Art Erd [if player has storage]was[else]is[end if] just there to barter for the storage. You need something of value[if player has coin or player has coins], more value than a coin or two[end if].[plus][or][if player has dollar]That dollar would make Art Erd happy[else if number of fruits in lalaland < 12]Curtis's third gift, after [12 - number of fruits in lalaland in words] more fruits, will be handy[else]You can go back to Curtis for an item that will please Art Erd[end if].[minus][cycling]"
-droll dollar	"[one of]The droll dollar is probably not spendable in a reputable place.[plus][or]Where is a less reputable place to spend the dollar? Maybe a less reputable person?[plus][or]Give the dollar to Art Erd in the Scape Space.[minus][cycling]"
+Art Erd	"[trader-clue]"
+Dr Tera	"[trader-clue]"
+droll dollar	"[one of]The droll dollar is probably not spendable in a reputable place.[plus][or]Where is a less reputable place to spend the dollar? Maybe a less reputable person?[plus][or]Give the dollar to [greedy-s] in the Scape Space.[minus][cycling]"
 Lord Al	"[ollard-hint]"
 Dr Lola	"[ollard-hint]"
 tekno-token	"The tekno-token is currency to help you buy stuff after haggling in the Clangier Clearing."
@@ -53183,7 +53201,7 @@ others	"making GAPERS around the pagers or grapes?"
 others	"SILT or SLIT around the list in the clearing?"
 --	"[italic type][bracket]NOTE: [super-rude].[roman type][close bracket]"	presto-or-others rule
 presto	"TARD while getting the dart in Presto/Burnt Brunt?"
-others	"RETARD at the Tarred Trader, Red Rat Art Erd, in Others's Scape Space?"
+others	"RETARD at the Tarred Trader, [greedy-person], in Others's Scape Space?"
 
 to say super-rude:
 	if presto is not solved and others is not solved:
