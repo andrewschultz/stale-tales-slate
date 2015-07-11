@@ -939,13 +939,13 @@ carry out mainhelping:
 			try objhinting store r instead;
 		otherwise:
 			all-say "[bug-report] Somehow you flipped the resort before solving other areas you needed to." instead;
-	if map region of the location of the player is forest:
+	if mrlp is forest:
 		try forest-hinting instead;
-	if map region of the location of the player is metros:
+	if mrlp is metros:
 		try metros-hinting instead;
-	if map region of the location of the player is sortie:
+	if mrlp is sortie:
 		try sortie-hinting instead;
-	if map region of the location of the player is resort:
+	if mrlp is resort:
 		try resort-hinting instead;
 	all-say "Bug text. Should not appear.";
 	the rule succeeds;
@@ -973,6 +973,75 @@ nerd-hinting is an action applying to nothing.
 
 coe-clue is a truth state that varies. coe-clue is usually false.
 
+section hintrelevance
+
+redness is a thing. understand "red" and "color red" as redness when player is in notices section. description of redness is "Bug."
+
+does the player mean objasking generically redness when player is in notices: it is very likely.
+does the player mean objasking about redness when player is in notices: it is very likely.
+
+does the player mean objasking generically when noun is enclosed by location of the player: it is very likely.
+	
+does the player mean objasking about when second noun is enclosed by location of the player: it is very likely.
+
+check objhinting a deregioned object:
+	say "That's not something in this region[one of]--note: locations are not available to hint[or][stopping]." instead;
+
+does the player mean objhinting a deregioned object:
+	it is very unlikely.
+
+does the player mean objhinting a hintrelevant object:
+	it is likely.
+
+[does the player mean objhinting a visible object:
+	it is likely.]
+
+does the player mean objhinting an object in lalaland:
+	it is unlikely.
+
+definition: a thing (called hthing) is deregioned:
+	if location of hthing is nothing, decide no;
+	if location of hthing is lalaland, decide no;
+	if mrlp is not map region of location of hthing, decide yes;
+	decide no.
+
+definition: a thing (called hintcand) is hintrelevant:
+	if hintcand is off-stage, decide no;
+	if hintcand is in lalaland, decide no;
+	if hintcand is in bullpen:
+		decide yes;
+	if hintcand is air, decide yes;
+	if hintcand is beats:
+		if mrlp is metros:
+			decide yes;
+		decide no;
+	if hintcand is priv-camp:
+		if player is in camp or player is in underside:
+			decide yes;
+		decide no;
+	if hintcand is warding drawing:
+		if player is in anti-cool or player is in underside:
+			decide yes;
+		decide no;
+	if hintcand is forest-leaves:
+		if player is in rf or player is in sf:
+			decide yes;
+		decide no;
+[	if hintcand is a backdrop or hintcand is scenery:
+		if hintcand is visible, decide yes;
+		if hintcand is not visible, decide no;] [throws error]
+	let R1 be map region of location of hintcand;
+	let R2 be mrlp;
+	if R1 is not R2:
+		decide no;
+	if R1 is R2:
+		if location of R1 is visited:
+			decide yes;
+	decide no;
+
+[does the player mean objasking about a hintrelevant thing: it is likely;]
+[does the player mean objasking generically a hintrelevant thing: it is likely;]
+
 section objhinting
 
 objhinting is an action applying to one visible thing.
@@ -981,6 +1050,8 @@ check objhinting a deregioned object:
 	say "That's not something in this region[one of]--note: locations are not available to hint[or][stopping]." instead;
 
 understand the command "hint/hints/info/help [any thing]" as something new.
+
+understand "hint [text]" as a mistake ("There's nothing relevant around like that.")
 
 understand "hint [any hintrelevant thing]" as objhinting. understand "hints [any hintrelevant thing]" as objhinting. understand "info [any hintrelevant thing]" as objhinting. understand "help [any hintrelevant thing]" as objhinting.
 
@@ -1338,44 +1409,6 @@ to say i-sed:
 
 to say i-s-t:
 	say "[if player is in Sorted Trodes][else]in Sorted Trodes [end if]";
-
-section hintrelevant
-
-definition: a thing (called hintcand) is hintrelevant:
-	if hintcand is off-stage, decide no;
-	if hintcand is in lalaland, decide no;
-	if hintcand is useless, decide no;
-	if hintcand is air, decide yes;
-	if hintcand is a backdrop or hintcand is scenery:
-		if hintcand is visible, decide yes;
-		if hintcand is not visible, decide no;
-	let R1 be map region of location of hintcand;
-	let R2 be mrlp;
-	d "[hintcand] [R1] vs [R2].";
-	if R1 is R2:
-		decide yes;
-	decide no;
-
-check objhinting a deregioned object:
-	say "That's not something in this region[one of]--note: locations are not available to hint[or][stopping]." instead;
-
-does the player mean objhinting a deregioned object:
-	it is very unlikely.
-
-does the player mean objhinting a hintrelevant object:
-	it is likely.
-
-[does the player mean objhinting a visible object:
-	it is likely.]
-
-does the player mean objhinting an object in lalaland:
-	it is unlikely.
-
-definition: a thing (called hthing) is deregioned:
-	if location of hthing is nothing, decide no;
-	if location of hthing is lalaland, decide no;
-	if mrlp is not map region of location of hthing, decide yes;
-	decide no.
 
 section forest
 
@@ -4516,7 +4549,7 @@ check going nowhere in Bassy Abyss:
 
 section beats-beast
 
-the beats are a backdrop. rgtext of beats is "[gc][gc][gc][rc][rc]". lgth of beats is 5. gpos of beats is 1. rpos of beats is 4. understand "thumping" as beats.
+the beats are a plural-named backdrop. rgtext of beats is "[gc][gc][gc][rc][rc]". lgth of beats is 5. gpos of beats is 1. rpos of beats is 4. understand "thumping" as beats.
 
 description of beats is "You're sure some idiot would call them funky, but you don't have time for aesthetics."
 
@@ -7022,10 +7055,9 @@ check entering metros-x:
 	recover-items instead;
 
 to recover-items:
-	let JJ be the map region of the location of the player;
-	repeat with JJJ running through item-list of JJ:
+	repeat with JJJ running through item-list of mrlp:
 		now player has JJJ;
-	repeat with JJJJ running through worn-list of JJ:
+	repeat with JJJJ running through worn-list of mrlp:
 		now player wears JJJJ;
 
 description of store m is "There's no window in store m--just a detailed map of a subway."
@@ -10156,40 +10188,6 @@ check telling about:
 	if tell-warn is false:
 		now tell-warn is true;
 		say "You're an adventurer, not a ruler--probably better to ASK about stuff. In the future, the game will usually assume you mean to ask instead." instead;
-		
-
-section hintrelevance
-
-redness is a thing. understand "red" and "color red" as redness when player is in notices section. description of redness is "Bug."
-
-does the player mean objasking generically redness when player is in notices: it is very likely.
-does the player mean objasking about redness when player is in notices: it is very likely.
-
-does the player mean objasking generically when noun is enclosed by location of the player: it is very likely.
-	
-does the player mean objasking about when second noun is enclosed by location of the player: it is very likely.
-
-definition: a thing (called hintcand) is hintrelevant:
-	let myc be 0;
-	if hintcand is in bullpen:
-		decide yes;
-	if hintcand is off-stage, decide no;
-	if hintcand is in lalaland, decide no;
-	if hintcand is air, decide yes;
-	if hintcand is a backdrop or hintcand is scenery:
-		if hintcand is visible, decide yes;
-		if hintcand is not visible, decide no;
-	let R1 be map region of location of hintcand;
-	let R2 be mrlp;
-	if R1 is not R2:
-		decide no;
-	if R1 is R2:
-		if location of R1 is visited:
-			decide yes;
-	decide no;
-
-does the player mean objasking about a hintrelevant thing: it is likely;
-does the player mean objasking generically a hintrelevant thing: it is likely;
 
 part wolves-vowels
 
@@ -11312,12 +11310,11 @@ to say espec-xtra:
 	now player has all things in cabinet;
 
 to item-warp:
-	let A be the map region of the location of the player;
-	d "So far you have [cur-score of A] of [max-score of A] points.[line break]";
-	now last-loc of A is location of the player;
+	d "So far you have [cur-score of mrlp] of [max-score of mrlp] points.[line break]";
+	now last-loc of mrlp is location of the player;
 	if number of carried not warpable things > 0 or number of worn not warpable things > 0:
-		if A is solved:
-			if A is intro:
+		if mrlp is solved:
+			if mrlp is intro:
 				say "This game just removed an item it should not have. [bug-report]! => ([list of carried not warpable things]) ([list of worn not warpable things]).";
 			otherwise: [?? needs testing]
 				say "Out of nowhere swoops the [if cabinet is in lalaland]nice bat[otherwise]cabinet[end if]. [run paragraph on][if number of solved regions is 2]You're about to complain, but then you realize it's helping you not carry all that junk around. It sits there, out of reach[else if cabinet is in lalaland]You're still a little spooked, but grateful, as it swoops away[otherwise]The cabinet's trying its best to be good and helpful, even making enthusiastic squeaky noises, and you wonder if maybe you can do something for it[end if][espec-xtra].";
@@ -11342,7 +11339,7 @@ section reg-inc
 
 to reg-inc:
 	increment the score;
-	increment the cur-score of the map region of the location of the player;
+	increment the cur-score of mrlp;
 
 part directional cleanup
 
@@ -16857,6 +16854,10 @@ section as
 test yack with "in/door/blot/in/goat/in/gateman/babble" in subsite
 
 test hinttest with "hint/y/ask me about 1 should not show/hint/hf/ask me about 2 should not show/hint/hd/ask me about 3 should show/hint/hf/ask me about 4 should show/hd/hint"
+
+section randtext
+
+test randtext with "cap 11/x list/g/g/g/purloin maps/x maps/g/g/g/g/g/cap 4/gonear moor/z/z/z/z/z/gonear psa/x psa/g/g/g/g/g/n/n/z/z/z/z/z/n/z/z/z/z/z/gonear nerds/z/z/z/z/z/gonear hotspot/z/z/z/z/z/trio/potters/chain/kilns/z/z/z/z/z/z"
 
 section big-picture
 

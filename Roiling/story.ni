@@ -1779,12 +1779,11 @@ to reset-regions:
 		now the item-list of reg entry is {};
 
 to item-warp:
-	let A be the map region of the location of the player;
-	d "So far you have [cur-score of A] of [max-score of A] points.[line break]";
-	now last-loc of A is location of the player;
+	d "So far you have [cur-score of mrlp] of [max-score of mrlp] points.[line break]";
+	now last-loc of mrlp is location of the player;
 	if number of carried not warpable things > 0 or number of worn not warpable things > 0:
-		if A is solved:
-			if A is Roman Manor or A is others:
+		if mrlp is solved:
+			if mrlp is Roman Manor or mrlp is others:
 				say "This game just removed an item it should not have. [bug-report]! => ([list of carried not warpable things]) ([list of worn not warpable things]).";
 			otherwise:
 				say "[one of]An acuter curate relieves you of the items you won't need any more. He points at himself. 'Rod Hare, Hoarder.' He [if player is female]mumbles pensively, 'Her road...[run paragraph on][else]points at you. 'Rad, hero.[run paragraph on][end if]' He points away. 'I scour curios.'[or]The hoarder takes your surplus stuff again.[stopping]";
@@ -6528,10 +6527,9 @@ this is the degen-false rule:
 	the rule fails.
 
 to recover-items:
-	let JJ be the map region of the location of the player;
-	d "ITEMS: [item-list of JJ]";
-	repeat with JJJ running through item-list of JJ:
-		if JJJ is not scenery and JJ is not a backdrop:
+	d "ITEMS: [item-list of mrlp]";
+	repeat with JJJ running through item-list of mrlp:
+		if JJJ is not scenery and JJJ is not a backdrop:
 			now player has JJJ;
 			if JJJ is star:
 				now player wears star;
@@ -11452,9 +11450,9 @@ The small yellow banana is a fruit.
 
 greedy-person is a person that varies.
 
-Red Rat Art Erd is a person. "[gree-desc]"
+Red Rat Art Erd is a person. "[gree-app]."
 
-Dr Tera Darter is a female person. "[gree-desc]"
+Dr Tera Darter is a female person. "[gree-app]."
 
 the chum of dr tera darter is red rat art erd.
 
@@ -11466,8 +11464,8 @@ to say trader-clue:
 	
 the printed name of Dr Tera is "Dr. Tera Darter".
 
-to say gree-desc:
-	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her of greedy-person] bailed out because [he-she of greedy-person] was being interesting and creative, or something. Some people tarred [him-her of greedy-person], and, well, [he-she of greedy-person] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c of greedy-person] probably got kicked out [if clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if storage box is in scape space]--[he-she of greedy-person]'s sort of holding out a box labeled So-Great Storage[end if]."
+to say gree-app:
+	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her of greedy-person] bailed out because [he-she of greedy-person] was being interesting and creative, or something. Some people tarred [him-her of greedy-person], and, well, [he-she of greedy-person] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c of greedy-person] probably got kicked out [if clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if storage box is in scape space]--[he-she of greedy-person]'s sort of holding out a box labeled So-Great Storage[end if]"
 
 understand "tarred trader" and "tarred/trader" as Red Rat when player is male.
 understand "tarred trader" and "tarred/trader" as Dr Tera when player is female.
@@ -11514,7 +11512,12 @@ check giving something to greedy-person:
 		say "Traceable. Be real, cat." instead;
 	say "'An empty payment.' He's not interested in that. Just money." instead;
 
-description of Art Erd is "Tarred literally and figuratively, he gives off an 'I'm sly. Slimy.' air. Grease agrees with him."
+description of Art Erd is "[gree-desc]."
+
+description of Dr Tara is "[gree-desc]."
+
+to say gree-desc:
+	say "Tarred literally and figuratively, [he-she of greedy-person] gives off an 'I'm sly. Slimy.' air. Grease agrees with [him-her of greedy-person]"
 
 instead of doing something to greedy-person:
 	if action is procedural:
@@ -16602,7 +16605,7 @@ check going in Bleary Barley:
 b-b is privately-named reflexive scenery in Bleary Barley. the printed name of b-b is "bleary barley". understand "bleary/barley" and "barley" as b-b. "[if b-b is reflexed]Not so impressive now--it might be a mirage, but it looks like the barley to the east is on water, and thicker-yellow on top. It reminds you of a marsh[otherwise]It ranges expansively--but the weird thing is, it hasn't flowered. Very bleary though[end if]."
 
 does the player mean gotothinging b-b:
-	if map region of player is otters:
+	if mrlp is otters:
 		it is very likely;
 	it is very unlikely.
 
@@ -51026,16 +51029,13 @@ before objhinting for the first time:
 	now have-objhinted is true;
 	ital-say "a word of warning before hinting objects. It is possible but very unlikely that this may reveal items you do not know about yet if this is not used carefully.";
 
-definition: a thing (called hintcand) is hintrelevant:
+[definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is off-stage, decide no;
 	if hintcand is in lalaland, decide no;
 	if hintcand is useless, decide no;
 	if hintcand is air, decide yes;
 	if hintcand is the diorama or hintcand is part of the diorama: [if hintcand is out of play?]
 		decide no;
-	if hintcand is a backdrop or hintcand is scenery:
-		if hintcand is visible, decide yes;
-		if hintcand is not visible, decide no;
 [	if hintcand is rude door or hintcand is knob:		[Bad Coding. if hintcand is enclosed by a thing: now R1 is map region of location of a thing that encloses hintcand;]
 		if rude door is visible:
 			decide yes;
@@ -51045,9 +51045,60 @@ definition: a thing (called hintcand) is hintrelevant:
 	d "[hintcand] [R1] vs [R2].";
 	if R1 is R2:
 		decide yes;
-	decide no;
+	decide no;]
 
-definition: a thing is in-range if it is hintrelevant.
+[	if hintcand is a backdrop or hintcand is scenery:
+		if hintcand is visible, decide yes;
+		if hintcand is not visible, decide no;] [this code causes a loop & I don't know why]
+
+definition: a thing (called hintcand) is hintrelevant:
+	if hintcand is off-stage, decide no;
+	if hintcand is in lalaland, decide no;
+	if hintcand is useless, decide no;
+	if hintcand is air, decide yes;
+	if hintcand is the diorama or hintcand is part of the diorama: [if hintcand is out of play?]
+		if player is in basement or player is in study:
+			decide yes;
+		decide no;
+	if hintcand is closest closets:
+		if mrlp is manor and highest heights is visited:
+			decide yes;
+		decide no;
+	if hintcand is red writing:
+		decide yes;
+	if hintcand is o-s:
+		if mrlp is towers:
+			if coastlines is visited or shoreline is visited:
+				decide yes;
+		decide no;
+	if hintcand is curst palace:
+		if mrlp is towers:
+			decide yes;
+		decide no;
+	if hintcand is big-let:
+		if maze entry is visited:
+			decide yes;
+		decide no;
+	if hintcand is plain old church:
+		if mrlp is routes:
+			decide yes;
+		decide no;
+	if hintcand is bulwark:
+		if mrlp is otters and fro is visited:
+			decide yes;
+		decide no;
+	if hintcand is leak lake or hintcand is shoals aslosh:
+		if mrlp is towers:
+			if salted deltas is visited or Actionless Coastlines is visited or Ole Shrine Shoreline is visited:
+				decide yes;
+		decide no;
+	let R1 be map region of location of hintcand;
+	let R2 be mrlp;
+	d "[hintcand] [R1] vs [R2].";
+	if R1 is R2:
+		decide yes;
+	decide no;
+	decide yes;
 
 objhinting is an action applying to one visible thing.
 
@@ -51056,7 +51107,9 @@ check objhinting a deregioned object:
 
 understand the command "hint/hints/info/help [any thing]" as something new.
 
-understand "hint [any hintrelevant thing]" as objhinting. understand "hints [any hintrelevant thing]" as objhinting. understand "info [any hintrelevant thing]" as objhinting. understand "help [any hintrelevant thing]" as objhinting.
+understand "hint [text]" as a mistake ("You've come across nothing like that, yet.")
+
+understand "hint [any hintrelevant thing]" as objhinting. understand "hints [any thing]" as objhinting. understand "info [any thing]" as objhinting. understand "help [any thing]" as objhinting.
 
 [understand "hint [any not hintrelevant thing]" as a mistake ("Can't hint that.").]
 
