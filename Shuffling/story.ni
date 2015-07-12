@@ -678,7 +678,7 @@ to say post-lb:
 
 table of megachatter [tmc]
 mytab	eturn	curidx	maxidx	go-ahead	descr	prefix	suffix	lasties	maxbeforepause (number)	done-once	table-size (number)	ent-per	end-count
-table of evil locations	false	0	0	reading-the-map rule	"Evil map locations (F)"	""	""	"(worst and last) Hell's Shell"	20	false	0	1	0
+table of evil locations	false	0	0	reading-the-map rule	"Evil map locations (F)"	""	""	"(worst and last) Hell's Shell[post-brk]"	20	false	0	1	0
 table of poem codas	true	0	--	pat-poem rule	"Pat's verse-ends (I)"	"You cringe as Pat ends a verse with [i]"	"[r]"	"'O Scant Cantos!' cries Pat. He asks what you thought of his Marsh Poet Metaphors. 'Souly,' you say. 'It's...THY.'[paragraph break]He thanks you and begins again, direr, drier. 'Verse. I revise.'[line break]"	--	false	0
 table of camp chants	true	0	0	with-hippies rule	"Red Camp chants (M)"	"[one of]S[or]More s[stopping]ounds of social protest. "	""	"Chants stanch. 'Restin['], OK?' Their tone irks, then ... 'Restokin[']! Strike on!' Petitioner repetition.[line break]"	--	false	--
 table of condo dialogue	true	0	--	talk-in-condo rule	"Condo chatter (M)"	"Flabbier blab: rife. "	""	"Laugh-ins languish. You hear someone re-repeat repartee. Conversations start anew...[line break]"

@@ -262,13 +262,30 @@ to say randexc:
 		say "![no line break]";
 	say "[line break]";
 
+[below for if list line breaks don't match up with what's in the game]
+to say post-brk:
+	if otters is solved:
+		say "[paragraph break]";
+		
+to say post-lb:
+	if otters is solved:
+		say "[line break]";
+
+to say pre-brk:
+	if otters is solved:
+		say "[paragraph break]";
+		
+to say pre-lb:
+	if otters is solved:
+		say "[line break]";
+
 table of megachatter [tmc] [may not be alphabetized since some rules must come before others]
 mytab	eturn	curidx	maxidx	go-ahead	whichreg	descr	prefix	suffix	lasties	maxbeforepause	done-once	init-order	table-size	reps
 table of undo rejects	false	0	0	undo-rej rule	lll	"Undo rejects"	--	""	"'Do-over overdo.'"
 table of undo allows	false	0	0	undo-ok rule	lll	"Successful undo responses"	--	""	"'Do? Er, re-do.' (Last one. Stale? NO.)"
 table of random books	false	0	0	read-books rule	manor	"All the books in your bookshelf"	"[i]"	"[r]"	"our own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1
 table of ad slogans	true	0	0	blurby rule	manor	"All the ads in the Dope Op-Ed"	--	""	"HANKER! HARKEN! you read. With that general ad, it's back to the start."
-table of mob chants	false	0	0	mob-chanting rule	manor	"Mob chants (LISTEN post-Gunter in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[line break]"	"They finish fishin[']."
+table of mob chants	false	0	0	mob-chanting rule	manor	"Mob chants (LISTEN post-Gunter in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"They finish fishin[']."
 table of idiotic lecture points	true	0	0	lecture-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	" [ted-die]."	"The lecturer flips back to the start of his keystone keynotes, resuming his ol['] mongo monolog.[lby]"	20
 table of overdone movies	true	0	0	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer alludes to "	""	"The lecturer reminds the crowd [i]Dosing Doings[r] remains the universal classic."	20
 table of sicko movies	false	0	0	movie-over-ad rule	stores	"Store C videos (parental advisory)"	"You peruse the movies: "	""	--	--	false	0	0	5
@@ -1149,23 +1166,25 @@ to say tt:
 to say ta:
 	say "[if player is male]Tai[else]Tia[end if]"
 
-to say he-she of (p - a person):
-	say "[if p is male]he[else]she[end if]"
+[this is strictly speaking bad coding but "of x" and "of y" got tedious]
 
-to say him-her of (p - a person):
-	say "[if p is male]him[else]her[end if]"
+to say he-she:
+	say "[if player is male]he[else]she[end if]"
 
-to say his-her of (p - a person):
-	say "[if p is male]his[else]her[end if]"
+to say him-her:
+	say "[if player is male]him[else]her[end if]"
 
-to say he-she-c of (p - a person):
-	say "[if p is male]He[else]She[end if]"
+to say his-her:
+	say "[if player is male]his[else]her[end if]"
 
-to say him-her-c of (p - a person):
-	say "[if p is male]Him[else]Her[end if]"
+to say he-she-c:
+	say "[if player is male]He[else]She[end if]"
 
-to say his-her-c of (p - a person):
-	say "[if p is male]His[else]Her[end if]"
+to say him-her-c:
+	say "[if player is male]Him[else]Her[end if]"
+
+to say his-her-c:
+	say "[if player is male]His[else]Her[end if]"
 
 section redact cussing
 
@@ -2610,7 +2629,7 @@ parrot	"[if Merle is visible]Don't blow his cover![else]'Fear the feather! A bir
 Elvira	"'I watch a witch,' you mutter. 'Nice try. Tiny rec. Y'cretin.' You're not going to out-debate the vexin['] vixen."
 Curtis	"'I'm a busy man!' yells Curtis. 'I have confidence in you, dealing with fruit. I mean, you saved the whole COUNTRY already. This can't take too long." [begin others]
 Len Craig	"[one of]Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge[or]Your magic powers do not, alas, expand to straightforward bargaining[stopping]."
-Art Erd	"[his-her-c of greedy-person] mumbles 'er, drat' and something about how money is very, very nice."
+Art Erd	"[his-her-c] mumbles 'er, drat' and something about how money is very, very nice."
 salesmen	"They utterly ignore your inquiry and instead talk about anything and talk about how they can talk about anything. They talk about how just one word has the power to change things. And finally, they get around to how great Nerd-Aid is, and you shouldn't be ashamed if you need a little Nerd-Aid."
 passport	"Try using its features instead."
 
@@ -2776,20 +2795,20 @@ yapper	walleyes	"'Pft, foot soldiers, working for mere salary.'"
 yapper	Casper	"'Too much violence in his books, not enough money making.'"
 yapper	Elvira	"'She's called on the dialer a few times.'"
 salesmen	Nerd-Aid	"The salesmen [one of]are more than happy to talk about Nerd-Aid. They're not nerdy themselves, but they just want to HELP people, because yay tolerance. They [or][stopping]mention [one of]it's much better than that red Rind-Ade, and if you ask again, they'll tell you who endorses Nerd-Aid[or][endorse-aid][cycling]."
-kid	doc-y	"[if kid is lonely and doc-y is in ropins]'I heard he was imprisoned. But I'd love to learn from him.'[else if kid is lonely][one of]'Wow! You rescued him? You're almost as awesome as he is!' [kid-fol][or]'Tell me something I don't know. Or get Dr. Yow to.'[stopping][else if kid is following]'Just lead me to him, already.'[else]He's zoned you out, what with Dr. Yow [around-gone].[end if]"
+kid	doc-y	"[if kid is lonely and doc-y is in ropins]'I heard [he-she] was imprisoned. But I'd love to learn from [him-her].'[else if kid is lonely][one of]'Wow! You rescued [him-her]? You're almost as awesome as [he-she] is!' [kid-fol][or]'Tell me something I don't know. Or get Dr. Yow to. No offense'[stopping][else if kid is following]'I wanna see Dr. Yow!'[else][he-she-c]'s zoned you out, what with Dr. Yow [around-gone].[end if]"
 kid	jetskis	"'Man, I'm learning to build stuff! [if jetskis are off-stage]Like jetskis! [end if]But I need someone to try them.'"
 kid	keycar	"'I'd love to make one of them! But that man said I wasn't grown up enough.'"
 kid	Atheists	"'Boy! Tell them religion has a point, and they get huffy. Thanks for deep-sixin['] [']em!'"
 kid	deacons	"'Boy! Ask one question about their religion, they get huffy. Thanks for deep-sixin['] [']em!'"
 kid	settler	"'Wow! I'm real impressed with who built this! Whatever it is. [if jetskis are visible]All I can build is mechanical stuff[else]I'd like to build something, too[end if].'"
-kid	gizmo	"[if gizmo is off-stage]'I could use a weird tool to build things.'[else if player has gizmo]'Wow! Maybe if I knew how to build something, I could have it?' You could probably GIVE it to the kid, once he's inspired to build something.[else]It's be kind of rude to ask for it back. The kid'll use it better anyway."
+kid	gizmo	"[if gizmo is off-stage]'I could use a weird tool to build things.'[else if player has gizmo]'Wow! Maybe if I knew how to build something, I could have it?' You could probably GIVE it to the kid, once [he-she]'s inspired to build something.[else]It's be kind of rude to ask for it back. The kid'll use it better anyway."
 kid	duck	"'I'm not real big on biology. But I guess ducks are cute.'"
-kid	toaster	"[if toaster is in coastlines]'Gee, thanks for it! I'll do something cool with, I mean to, it!''[else if toaster is in Danger Garden]You think back to the toaster in the garden. It might be worth giving the kid, as a nice gift, if you ever leave.[else]You show the toaster to the kid, who's very interested, but he says he'd feel guilty taking it before he actually helped you.[end if]"
+kid	toaster	"[if toaster is in coastlines]'Gee, thanks for it! I'll do something cool with, I mean to, it!''[else if toaster is in Danger Garden]You think back to the toaster in the garden. It might be worth giving the kid, as a nice gift, if you ever leave.[else]You show the toaster to the kid, who's very interested, but [he-she] says [he-she]'d feel guilty taking it before actually helping you.[end if]"
 doc-y	duck	"[if ravages is unvisited]'I miss my duck! When they captured me, I was clear in a west waste.'[else if duck is not in subsector]'I--I'm too exhausted to get my duck. If you could bring it back--it just needs to hear my voice.'[else]'Very loyal to me. It might ignore you now, but...thank you.'[end if]"
 doc-y	gizmo	"[if doc-y is in ropins]'Not enough sharp edges. It's for making things...crafting.'[else]I'm too tired to make anything, but maybe an eager apprentice...it's a newfangled device for younguns anyway.'[end if]"
 doc-y	bonker	"[one of]Dr. Yow facepalms a bit. You can imagine listening to that bonker was even worse if you were imprisoned, too[or]No need to dredge that up, again[stopping]."
 doc-y	lake	"[doc-on-lake]"
-doc-y	kid	"[if kid is reflexed]'A sharp learner! He can help you now.'[else if kid is in subsector]'He is smart enough, but he's not ready to learn. For some kids, they just need that switch to go on.'[else]'I could use a young apprentice. You--well, you probably have other prisoners to rescue, or something.'[end if]"
+doc-y	kid	"[if kid is reflexed]'A sharp learner! [he-she-c] can help you now.'[else if kid is in subsector]'Sart enough, but [he-she]'s not ready to learn. For some kids, they just need that switch to go on.'[else]'I could use a young apprentice. You--well, you probably have other prisoners to rescue, or something.'[end if]"
 salesmen	curst palace	"They mention their homes are dandier than that curst palace."
 ray eck	settler	"Ray Eck just won't shut up about what the settler could be for, and why it doesn't do anything. You notice its colors don't change even when you switch it to and from cheat mode, which--well, that's a pretty big help."
 Ed Yerg	curst palace	"'It can be something super special. [3-random]! If only...' You got no concrete clues, but Ed's pep talk was a help[new-yerg-thing]. Maybe you can come back for another, later, if you still have no luck outside."
@@ -2820,7 +2839,7 @@ Gretta	Elvira	"[if macks are visible]Gretta cringes even more at hearing Elvira'
 Merle	Elvira	"'She is a great leader. You do not deserve to visit her to the west.'" [end otters]
 curtis	rampage note	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'"
 curtis	mopeage rant	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'"
-curtis	Art Erd	"[one of]Curtis breathes deeply and gives a look of contempt and shakes his head[or]No point asking again[stopping]. Curtis probably doesn't want to know if any fruit came from [him-her of greedy-person]."
+curtis	Art Erd	"[one of]Curtis breathes deeply and gives a look of contempt and shakes his head[or]No point asking again[stopping]. Curtis probably doesn't want to know if any fruit came from [him-her]."
 Art Erd	curtis	"'There's people with silly science ideas like him, then there's businessmen like ME. Pfft.'"
 Art Erd	storage box	"'[if storage box is in scape space]It's...umm...worth something.[else]You bought it[end if].'"
 Art Erd	len craig	"'Nicely? Len? Icy!' he mutters. 'Cut Len's cluster...'"
@@ -2856,15 +2875,15 @@ check objasking kid about a guardian:
 	else:
 		if kid-cheat is false:
 			if second noun is curst palace:
-				say "The kid puts his hand to his face, then mumbles 'Sorry, eleven letters is too much. Maybe something shorter.'" instead;
+				say "The kid puts [his-her] hand to [his-her] face, then mumbles 'Sorry, eleven letters is too much. Maybe something shorter.'" instead;
 			choose row with the-from of second noun in the table of anagrams;
 			now kid-guar is the-from entry;
 			now kid-cheat is true;
-			say "The kid sits and thinks a few seconds after you tell him where you were stuck. 'Yeah, you just say [right-word entry in upper case]. That'll do it.' He looks kind of bored, though. Probably not nice to push him.";
+			say "The kid sits and thinks a few seconds after you tell [him-her] where you were stuck. 'Yeah, you just say [right-word entry in upper case]. That'll do it.' [he-she-c] looks kind of bored, though. Probably not nice to push [him-her].";
 			preef the-from entry instead;
 		else:
 			if kid-guar is not noun:
-				say "The kid mumbles he's bored with word games." instead;
+				say "The kid mumbles [he-she]'s bored with word games." instead;
 			if kid-guar is in lalaland:
 				say "You thank the kid for helping you out." instead;
 
@@ -3000,7 +3019,7 @@ to say kid-fol: [h]
 	else if kid-moves is 4:
 		say "You loop around a bit past guardians you haven't cleared.";
 	else if kid-moves is 6:
-		say "You regret not clearing more guardians--the kid is nice, but he sure can TALK, and he sure likes to kibitz about what  you didn't clear, and why, and he even figures a few out, but you are a bit too exhausted to show him HOW you work your magic. And a little embarrassed. You mumble something about being practical. Plus the long walk may help the kid sit and listen. You hope.";
+		say "You regret not clearing more guardians--the kid is nice, but [he-she] sure can TALK and loves to kibitz about who's hanging around, and how and why you could've figured things out, leaving you a bit too exhausted to show HOW you work your magic. And a little embarrassed. You mumble something about being practical. Plus the long walk may help the kid sit and listen. You hope.";
 	now kid is found;
 	move kid to subsector;
 	move player to subsector;
@@ -5321,12 +5340,14 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "idtag"	203919473	towers	--	ID Tag	--	"ID tag: dig at it? Gad."
 "retape"	527699816	towers	--	raves saver	--	"The raves saver has limited functionality, alas."
 "wordy"	410999494	towers	--	doc-y	--	"Dr. Yow seems to ponder something for a second but then shakes his head[if doc-y has been rowdy and doc-y has been wordy]--he's probably shown his full range of emotions[else if doc-y has not been rowdy and doc-y has not been wordy]--but he can't break out of his shell[else]--maybe there's one more way for him to be, to talk[end if]."
-"tentative"	788195264	towers	--	--	kid-not-learnt rule	"The kid fidgets a bit but can't keep focused, though he wants to."
-"dirk stam"	469925871	towers	--	smart kid	--	"The kid looks at you curiously. You probably don't need to change his name or his intelligence."
+"tentative"	788195264	towers	--	--	kid-not-learnt rule	"The kid fidgets a bit but can't keep focused, though [he-she] wants to."
+"dirk stam"	469925871	towers	--	smart kid	--	"The kid looks at you curiously. You probably don't need to change [his-her] name or intelligence."
 "smart"	350970758	towers	--	smart kid	--	"[dirk-no]."
 "kid"	118955113	towers	--	smart kid	--	"[dirk-no]."
-"dirk"	204278916	towers	--	smart kid	--	"[dirk-no]."
-"stam"	265646955	towers	--	smart kid	--	"[dirk-no]."
+"dirk"	204278916	towers	--	--	kid-male rule	"[dirk-no]."
+"stam"	265646955	towers	--	--	kid-male rule	"[dirk-no]."
+"kim"	162001177	towers	--	--	kid-female rule	"[dirk-no]."
+"darst"	307924694	towers	--	--	kid-female rule	"[dirk-no]."
 "gizmo"	338989896	towers	--	gizmo	--	"[giz-tex]."
 "zomg"	293997050	towers	--	gizmo	--	"[giz-tex]."
 "turbo"	386311110	towers	--	turbos	--	"You [if turbos are reflexed]already dealt[else]need to deal[end if] with both turbos."
@@ -5602,7 +5623,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "lemon"	388955186	others	--	--	lemmel rule	"You can't focus on just one of them."
 "auction"	417662159	others	--	caution	--	"[papay]."
 "banner"	371551651	others	--	caution	--	"[papay]."
-"trader"	424780640	others	scape space	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is in scape]you got what you wanted[else][he-she of greedy-person] might trade that storage box[end if]."
+"trader"	424780640	others	scape space	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is in scape]you got what you wanted[else][he-she] might trade that storage box[end if]."
 "orange"	391177517	others	--	orange	--	"[if player has orange]You got it, already[else]That doesn't seem sneaky enough to get the orange."
 "plant"	309485142	others	--	pugnacious plant	--	"[plant-no]."
 "red"	234159001	others	scape space	--	--	"[no-art]."
@@ -5751,6 +5772,16 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 [the rules/texts below are organized in the order I thought up the nudges above, which is to say, more or less random. But nothing there is game-critical enough that it needs to be sorted. I hope.]
 
 [ton]
+
+this is the kid-male rule:
+	if smart kid is visible and smart kid is male:
+		the rule succeeds;
+	the rule fails;
+
+this is the kid-female rule:
+	if smart kid is visible and smart kid is female:
+		the rule succeeds;
+	the rule fails;
 
 to say ache-plur:
 	say "[if sardine is in arches]There's not just one arch, there's two. And they've made more than one person ache[else]You already dealt with both arches--no need to deal with one[end if]"
@@ -6040,7 +6071,7 @@ to say papwall:
 	say "The paperwall is unmoved. Maybe the stuff [if plaster is in lalaland and plates are in lalaland]that came from it[else if plaster is in Basement and plates are in Basement]in the wall[else]in and out of the wall[end if]  could help you more, here";
 
 to say dirk-no:
-	say "The kid looks at you curiously. You probably don't need to change his name or his intelligence";
+	say "The kid looks at you curiously. You probably don't need to change [his-her] name or intelligence";
 
 to say dir-rej:
 	say "This game usually doesn't require you to mess with cardinal directions";
@@ -6753,7 +6784,7 @@ rewired robot	"The robot almost looked a bit odd there for a moment."
 deacons	"The deacons ponder for a minute before going back to their scheming. But they looked scared--worried--you were close to exposing their ol['] heist."
 Ray Eck	"The keycar slows down for a minute. Ray Eck frowns at you."
 ropins	"The ropins remains secure, with no easy way to open it."
-smart kid	"The kid seems to be trying so hard to concentrate, but he hasn't found it yet."
+smart kid	"[kid-first] seems to be trying so hard to concentrate, but [he-she] hasn't found it yet."
 denim	"The denim bends and warps, but not enough to cut it."
 pulses	"The pulses seem less there and less negative for a moment."
 old ice	"The old ice seems to glimmer a bit."
@@ -7760,9 +7791,9 @@ check giving something to:
 			if noun is a hintpastry:
 				say "Giving sweets to kids? Really." instead;
 			if doc-y is not in lalaland:
-				say "The kid seems like he'd rather have the gift of knowledge." instead;
+				say "The kid seems like [he-she]'d rather have the gift of knowledge." instead;
 			if noun is settler:
-				say "The kid seems impressed, but he's more mechanically than magically inclined." instead;
+				say "The kid seems impressed, but [he-she]'s more mechanically than magically inclined." instead;
 			unless noun is gizmo:
 				say "That's not technical enough for the kid." instead;
 			continue the action;
@@ -10476,7 +10507,7 @@ Lord Al Ollard is a thing. description of Lord Al is "[coin-per-d]"
 Dr Lola Ollard is a thing. description of Dr Lola is "[coin-per-d]"
 
 to say coin-per-d:
-	say "[he-she-c of player] looks stereotypically bloated, hypocritical and plutocratic, though some people find that sort of thing valuable."
+	say "[he-she-c] looks stereotypically bloated, hypocritical and plutocratic, though some people find that sort of thing valuable."
 
 instead of doing something with coin-person:
 	if action is procedural:
@@ -10484,7 +10515,7 @@ instead of doing something with coin-person:
 	say "Doing anything with or too such a horrid counterfeit coin wouldn't be very satisfying or productive. Probably best to get this off your hands for any profit at all.";
 	
 to say ollard-hint:
-	say "[he-she-c of player] is worse than useless to society but only useless to you. Yay?"
+	say "[he-she-c] is worse than useless to society but only useless to you. Yay?"
 
 after doing something with coin-person:
 	if coin-person is Lord Al:
@@ -11465,7 +11496,7 @@ to say trader-clue:
 the printed name of Dr Tera is "Dr. Tera Darter".
 
 to say gree-app:
-	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her of greedy-person] bailed out because [he-she of greedy-person] was being interesting and creative, or something. Some people tarred [him-her of greedy-person], and, well, [he-she of greedy-person] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c of greedy-person] probably got kicked out [if clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if storage box is in scape space]--[he-she of greedy-person]'s sort of holding out a box labeled So-Great Storage[end if]"
+	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her] bailed out because [he-she] was being interesting and creative, or something. Some people tarred [him-her], and, well, [he-she] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c] probably got kicked out [if clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if storage box is in scape space]--[he-she]'s sort of holding out a box labeled So-Great Storage[end if]"
 
 understand "tarred trader" and "tarred/trader" as Red Rat when player is male.
 understand "tarred trader" and "tarred/trader" as Dr Tera when player is female.
@@ -11517,7 +11548,7 @@ description of Art Erd is "[gree-desc]."
 description of Dr Tara is "[gree-desc]."
 
 to say gree-desc:
-	say "Tarred literally and figuratively, [he-she of greedy-person] gives off an 'I'm sly. Slimy.' air. Grease agrees with [him-her of greedy-person]"
+	say "Tarred literally and figuratively, [he-she] gives off an 'I'm sly. Slimy.' air. Grease agrees with [him-her]"
 
 instead of doing something to greedy-person:
 	if action is procedural:
@@ -11525,7 +11556,7 @@ instead of doing something to greedy-person:
 	otherwise:
 		if player has storage:
 			say "You don't want to deal with [greedy-s] any more than you have to." instead;
-		say "[greedy-s] shrugs, then does the 'let's swap' hand gesture. Hmm, what could you give [he-she of greedy-person] to get that so-great storage?"
+		say "[greedy-s] shrugs, then does the 'let's swap' hand gesture. Hmm, what could you give [he-she] to get that so-great storage?"
 
 The basket of blackberries is a fruit. description is "It's from Bickerers['] Lab, wherever that is."
 
@@ -11536,7 +11567,7 @@ understand "gorean" as a mistake ("This game isn't about sexual stuff. Not that 
 a-text of orange is "RY*RYYR". b-text of orange is "RY*RYYR".
 
 instead of taking the orange:
-	say "[one of]With a sleepy, sly 'Eep,' th[or]Th[stopping]e trader whips [his-her of greedy-person] and grabs you with alacrity. Maybe even two lacrities--it was much faster and intenser than you thought possible. You back off, and [he-she of greedy-person] goes back to semi-dozing. You rage on like an ogre and see red before thinking, Maybe you need to sneak up somehow."
+	say "[one of]With a sleepy, sly 'Eep,' th[or]Th[stopping]e trader whips [his-her] hand out and grabs you with alacrity. Maybe even two lacrities--it was much faster and intenser than you thought possible. You back off, and [he-she] goes back to semi-dozing. You rage on like an ogre and see red before thinking, Maybe you need to sneak up somehow."
 
 chapter gonearing
 
@@ -12535,7 +12566,7 @@ to kid-appears:
 			if player is in coastlines:
 				say "Some kid comes into view from a dark mist with the atheists and deacons gone, [what-kid-does].";
 			else:
-				say "You hear a kid yell, 'Boy! They're gone! And He's gone!' to the [if player is in shoreline]north[else]east[end if].";
+				say "You hear a kid yell, 'Yay! They're all gone!' to the [if player is in shoreline]north[else]east[end if].";
 		else:
 			say "You hear [if deacons are not in lalaland]voices[else]a voice[end if] yell [one of]'Sadly no, nosy lad[or]a bizarrely accented 'Abort, o brat[in random order]!' to someone you can't see.";
 
@@ -12751,7 +12782,7 @@ check xraying:
 	if noun is the player:
 		say "You might expose yourself to harmful rays and stuff, looking that close." instead;
 	if noun is kid and doc-y is not visible:
-		say "[if doc-y is not visible]'I--I don't like free candy, [mrmaam],' he says, looking scared.[paragraph break]Maybe you can't quite help him now[else]The kid seems to cringe, memories of bullying hall monitors, probably[end if]." instead;
+		say "[if doc-y is not visible]'I--I don't like free candy, [mrmaam],' [he-she] says, looking scared.[paragraph break]Maybe you can't quite help [him-her] now[else]The kid seems to cringe, memories of bullying hall monitors, probably[end if]." instead;
 	if noun is reflexed or noun is nonreflexive:
 		say "That doesn't seem to need internal changing. Maybe find something or someone else to x-ray." instead;
 	if noun is doc-y:
@@ -13033,7 +13064,7 @@ persuasion rule for asking smart kid to try doing something (this is the block k
 			say "You don't know about that area yet.";
 			persuasion fails;
 		try objasking smart kid about doc-y instead;
-	say "The kid is good at mechanical stuff, but he's not very good at following orders.";
+	say "The kid is good at mechanical stuff but not so good at following orders.";
 	persuasion fails;
 
 check scaning smart kid:
@@ -13046,7 +13077,7 @@ check scaning smart kid:
 met-kid is a truth state that varies.
 
 to say what-kid-sez:
-	say "[if kid has gizmo]Dirk Stam now has the jetskis he made. He looks nervously at you--he can't bring himself to ask you to try them.[no line break][else]The smart kid potters around here. 'Aww man! I have a wicked awesome plan for some jetskis! But I don't have the right tools.' He kicks at the ground[end if]";
+	say "[if kid has gizmo][kid-full] now has the jetskis [he-she] made. [he-she-c] looks nervously at you--[he-she] can't bring himself to ask you to try them.[no line break][else]The smart kid potters around here. 'Aww man! I have a wicked awesome plan for some jetskis! But I don't have the right tools.' [he-she-c] kicks at the ground[end if]";
 	now met-kid is true;
 
 to say what-kid-does:
@@ -13071,7 +13102,7 @@ check giving hintpastry to duck:
 	say "It turns away as if to say, yuck." instead;
 
 check giving raves saver to smart kid:
-	say "[one of]He frowns at it. 'No way! That's way too ancient! Maybe it's useful for you, cause you're one of a few people remembers how it works, but...' he pauses awkwardly.[or]That won't help the kid build anything.[stopping]" instead;
+	say "[one of][he-she-c] frowns at it. 'No way! That's way too ancient! Maybe it's useful for you, cause you're one of a few people remembers how it works, but...' [he-she] pauses awkwardly.[or]That won't help the kid build anything.[stopping]" instead;
 
 before giving something to doc-y when doc-y is in prison ropins:
 	say "Nothing fits through the fence." instead;
@@ -13102,7 +13133,7 @@ check giving gizmo to smart kid:
 	else:
 		say "'Wow! That'd be neat if I have something to build.'" instead;
 
-description of smart kid is "Freckly-faced and buck-toothed and talking to [him-her of smart kid]self[if doc-y is visible]. He's visibly [i][at-ten][r] just being around Dr. Yow[end if].";
+description of smart kid is "Freckly-faced and buck-toothed and talking to [him-her]self[if doc-y is visible]. [he-she-c]'s visibly [i][at-ten][r] just being around Dr. Yow[end if].";
 
 to say at-ten:
 	say "[if kid is reflexed]attentive[else]tentative[end if]"
@@ -13530,7 +13561,7 @@ Red Rat Art Erd	"[not-even-trader]."
 Dr Tera Darter	"[not-even-trader]."
 
 to say not-even-trader:
-	say "If anyone deserves it, he does. But he still doesn't. [he-she-c of greedy-person]'s already had enough physical abuse."
+	say "If anyone deserves it, he does. But he still doesn't. [he-she-c]'s already had enough physical abuse."
 
 to say nice-to-animals:
 	say "You didn't rescue them to kill them like this";
@@ -13789,7 +13820,7 @@ check taking jetskis:
 	if turbos are not part of jetskis:
 		say "'It's not even built yet, [mrmaam]! I need a tool to get the blaster and turbos working!'" instead;
 	if player has toaster:
-		say "'Hey! [mrmamu]! It'd be dangerous to take that toaster across the water!' He's right[if number of carried hintpastries > 0]. But you decide to heat up what you have[end if]. You leave the toaster--you bet the kid could do some cool stuff with it. it will be a decent enough payment for his time and efforts. The kid leaves the toaster on the sand.[line break]";
+		say "'Hey! [mrmamu]! It'd be dangerous to take that toaster across the water!' [he-she-c]'s right[if number of carried hintpastries > 0]. But you decide to heat up what you have[end if]. You leave the toaster--you bet the kid could do some cool stuff with it. It will be a decent enough payment for [his-her] time and efforts. The kid leaves the toaster on the sand.[line break]";
 		now all carried hintpastries are heated;
 		now toaster is in coastlines;
 	else if toaster is visible:
@@ -14237,7 +14268,7 @@ carry out rowdying:
 	if kid is visible:
 		now doc-cool is 0;
 		if kid is reflexive:
-			say "[line break]The kid is too star-struck to listen carefully. It's hard not to be tentative in the presence of such a great genius. He's unstabler than a subaltern of a great thinker like Dr. Yow needs to be.";
+			say "[line break]The kid is too star-struck to listen carefully. It's hard not to be tentative in the presence of such a great genius. [he-she-c]'s unstabler than a subaltern of a great thinker like Dr. Yow needs to be.";
 		otherwise:
 			kid-gets-it instead;
 	the rule succeeds;
@@ -14245,7 +14276,7 @@ carry out rowdying:
 [rowdy -> attentive]
 
 to kid-gets-it:
-	say "The kid's understanding is paltry at first, but he's attentive, so he gets it partly, then he exclaims raptly 'Droll Dr. LOL!' Dr. Yow's confident now, explaining patly and aptly. 'Call me Dr. Leo--older version of you.' They converse animatedly about the dream of no-silage gasoline, but Dr. Yow convinces him to start small.[paragraph break]The lecture over, the kid says, 'Dr.?'[paragraph break]'Toy! Try! Do!' The kid smacks his forehead and runs off 'It--it won't just be pseudo-souped! Pen lids, spindle...' He runs off to the Actionless Coastlines.[paragraph break]'Wait! Kid! I have this lots-o-tools stool...' but the kid's gone.[paragraph break]'Wait! Where is it? O lost!' He searches his pockets, just in case.[paragraph break]'Dr. Yow's Drowsy. My lab: balmy. Long cameo.' Then, above his duck's quack, 'come along.' He follows a loading diagonal, off for some bachelor lab chore. Before he does, he shows you a picture labeled CURSEE RESCUE, featuring--a very unflattering portrait of yourself, before sticking it in his pocket. 'That dude[if player is female], um, dudess[end if] with the powers. House arrest, I heard. You look like someone who cares.' Unintentional compliments are the nicest.";
+	say "The kid's understanding is paltry at first, but [he-she]'s attentive, so [he-she] gets it partly, before raptly exclaiming 'Droll Dr. LOL!' Dr. Yow's confident now, explaining patly and aptly. 'Call me Dr. Leo--older version of you.' They converse animatedly about the dream of no-silage gasoline, but Dr. Yow convinces [him-her] to start small.[paragraph break]The lecture over, the kid says, 'Dr.?'[paragraph break]'Toy! Try! Do!' The kid smacks [his-her] forehead and runs off 'It--it won't just be pseudo-souped! Pen lids, spindle...'[paragraph break]'Wait! Kid! I have this lots-o-tools stool...' but the kid's gone.[paragraph break]'Wait! Where is it? O lost!' [he-she-c] searches [his-her] pockets, just in case.[paragraph break]'Dr. Yow's Drowsy. My lab: balmy. Long cameo.' Then, above [his-her] duck's quack, 'come along.' [he-she-c] follows a loading diagonal, off for some [if player is female](sic) [end if]bachelor lab chore. Before [he-she] does, [he-she] shows you a picture labeled CURSEE RESCUE, featuring--a very unflattering portrait of yourself, before sticking it in [his-her] pocket. 'That dude[if player is female], um, dudess[end if] with the powers. House arrest, I heard. You look like someone who cares.' Unintentional compliments are the nicest.";
 	now doc-y is in lalaland;
 	now duck is in lalaland;
 	now kid is in Actionless Coastlines;
@@ -14560,7 +14591,7 @@ organised ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SI
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'JAIL DEFENDED!' you hear from the east."
 natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."
 Atheists	Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."
-once-sad deacons	Ole Shrine Shoreline	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with his blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their careers if you fixed that."
+once-sad deacons	Ole Shrine Shoreline	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their careers if you fixed that."
 
 chapter min-score-of-towers
 
@@ -23128,7 +23159,7 @@ old ice	old ice	"coiled"	"coiled"	"The docile old ice bends, cracks, and whirs a
 denim	start tarts	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of start tarts in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, to keep the copse tidy. You take the tarts."	true	326810705	"mined"
 fissure	fissure	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, and out comes Dr. Yow. He thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."	false	582291393	"fussier"
 prison ropins	prison ropins	"unlocked"	"unlocked"	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. He thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."	false	522953692	"It already is. Dr. Yow is free."
-kid	kid	"attentive"	"attentive"	"Dirk Stam snaps to attention. He's more ready to learn, now."	false	788195264	"That'd be kind of schoolmarmish. Dirk's ready to learn."
+kid	kid	"attentive"	"attentive"	"[kid-full] snaps to attention. [he-she-c]'s more ready to learn, now."	false	788195264	"That'd be kind of schoolmarmish. [kid-first]'s ready to learn."
 turbos	turbos	"robust"	"robust"	"The turbos whir a bit and grow shinier. Robust or bust! You'd feel [if blaster is reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the jetskis now."	false	482585076	"The turbos are working fine now."
 blaster	blaster	"stabler"	"stabler"	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the jetskis now."	false	486934458	"The blaster is working fine now."
 eastern shore	eastern shore	"nearest"	"nearest"	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the flowerpot, too, and maybe you have the time to drop off a gift...wherever Daltho's friend may be."	false	611415331	"nearest"	Mislit Limits
@@ -27199,6 +27230,20 @@ blurb
 "Wordless Lewd Ross"
 "Wrapped-Up Warped Pup Peppard Wu"
 "Wry Ben Berwyn"
+"Wry Leo Worley"
+"Wry Ed Dwyer"
+"Wry Abel Brawley"
+"Wry Cole Crowley"
+"Wry Elmo Wormley"
+"Wry Alec Crawley"
+"Wry Thorson Norsworthy"
+"Wry Red Drewry"
+"Wry Moe Mowery-Wymore"
+"Wry Theo Worthey"
+"Wry Lea Rawley"
+"Wry Amie Waymire"
+"Wry Alda Aylward"
+"Wry Adah Hayward"
 "Wry Ole Rowley Lowery-Worley"
 "Zanier [if player is male]Ezra Ni[else]Inez Ra[end if]"
 "Zingier Ziering"
@@ -50925,6 +50970,44 @@ blurb
 
 volume hinting
 
+chapter nothining
+
+absolutely-no-hints is a truth state that varies.
+
+nothining is an action out of world.
+
+understand the command "nothin" as something new.
+
+understand "nothin" as nothining.
+
+carry out nothining:
+	if absolutely-no-hints is true:
+		say "You're already shut down." instead;
+	say "Disabling hints for the entirety of play is a drastic step, so [one of][or]once again I want to note [stopping]NO HINT may be better than the drastic NOTHING. Do you still wish to disable hints completely?";
+	if the player consents:
+		now absolutely-no-hints is true;
+	say "Okay[if absolutely-no-hints is true]. Hints are now disabled even if you save and restore[end if].";
+	the rule succeeds;
+
+chapter nohinting
+
+session-hints-off is a truth state that varies.
+
+nohinting is an action out of world.
+
+understand the commands "nohint" and "no hint" as something new.
+
+understand "nohint" and "no hint" as nohinting.
+
+carry out nohinting:
+	if absolutely-no-hints is true:
+		say "You've already shut hints down completely." instead;
+	if session-hints-off is true:
+		say "You've already shut off hints for this session." instead;
+	say "Hints are now shut off for this session. If you save and restore, you will get hints again.";
+	now session-hints-off is true;
+	the rule succeeds;
+
 chapter hinting (plain)
 
 hinting is an action out of world.
@@ -50946,14 +51029,13 @@ check hinting for the first time:
 		if player is not in Inclosure:
 			if hint-to-file is false and hint-to-display is false:
 				say "You're not sure whom to call. There are so many choices! [twiddle of table of help companies and 3]Well, one of those must be right. Because in front of you is a rare help elph! He smiles and waits. 'Er, clues, recluse?' Silence. 'No hint? Nothin[']?'[paragraph break]'Helpless spells, eh? On so soon?'[paragraph break]'Yup. In-game enigma. Tried. Tired. I caved. Advice?'[paragraph break]He acknowledges your pure re-up and presents you with an option potion from his luckiest clue kits. 'Spoils be possible.' Do you accept it?";
-				ital-say "you can always accept hints for this game. ARO tries to hint intelligently and does not spoil anything immediately. But you may rather HINT (a specific thing)[if ever-obj-hinted is true]--as you've already done--[else] [end if]to see if it's important.";
+				ital-say "the help elph will not appear again. And while ARO tries to hint intelligently and does not spoil anything immediately, you may rather HINT (a specific thing)[if ever-obj-hinted is true]--as you've already done--[else] [end if]to see if it's important.";
 				if the player consents:
 					say "'Hints OK? Think so!' You drink the option potion, hoping it will help you get to point O. 'Nifty hair, hint fairy!' you say, in way of thanks.[paragraph break]";
 				otherwise:
 					say "'Spoiler perils, O! Sink hint thinkins[']!' a voice booms.";
-					ital-say "because this game is rather big, I decided not to disable hints fully.";
-					do nothing instead;
-
+				ital-say "you can type NO HINT to disable hints for this session, or NOTHIN to disable them fully."
+					
 carry out hinting:
 	if mrlp is demo dome:
 		say "You're already in my clue lyceum." instead;
@@ -51663,7 +51745,7 @@ Ray Eck	"[one of]Ray Eck and his car are in tip-top shape, but maybe you can cha
 keycar	--	Ray Eck
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
 pirates	"[one of]The pirates are very sun-burnt, and they like it that way.[plus][or]The pirates make fun of your own pale skin.[plus][or]Why not make the pirates PASTIER?[minus][cycling]"
-smart kid	"[if obscurest subsector is unvisited]Dirk Stam's not important right now.[else if doc-y is in prison ropins]Dirk Stam makes stuff. You'll want to hook him up with Dr. Yow--release Dr. Yow.[else if kid is lonely][one of]Dirk wants someone who can help him make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK KID ABOUT DOCTOR.[minus][cycling][else if kid is reflexive and kid is in subsector][one of]Dirk is TENTATIVE around Dr. Yow and can't figure his lectures.[plus][or]You need to make him ATTENTIVE.[minus][cycling][else if kid does not have gizmo]You need to give Dirk something to build with. A tool.[else]Dirk's jetskis are more important.[end if]"
+smart kid	"[if obscurest subsector is unvisited][kid-full]'s not important right now.[else if doc-y is in prison ropins][kid-full] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if kid is lonely][one of][kid-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK KID ABOUT DOCTOR.[minus][cycling][else if kid is reflexive and kid is in subsector][one of]Dirk is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if kid does not have gizmo]You need to give Dirk something to build with. A tool.[else]Dirk's jetskis are more important.[end if]"
 Reed's Ale	"[one of]The RELEASED poem is awful, isn't it?[plus][or]The zip-lock bag is a bit of a clue.[plus][or]RESEALED.[minus][cycling]"
 ego drains	"[one of]They're organised, but perhaps if they were hyperbole, they wouldn't be as effective.[plus][or]How could you make them over-the-top?[plus][or]Say, GRANDIOSE?[minus][cycling]"
 admirer	"[one of]She needs someone to be attached to.[plus][or]Why stop at just engaged?[plus][or]MARRIED.[minus][cycling]"
@@ -51681,7 +51763,7 @@ retape button	"RETAPE gives something for the repeat button to replay."
 doc-y	"[unless doc-y has been wordy][one of]Dr. Yow is silent, but you can change that.[plus][or]Take a look at his name.[plus][or]You can make him WORDY.[plus][or]If you have the raves saver, you can then PUSH RETAPE.[minus][cycling][else if doc-y is in prison ropins]You need to bring a friend along to rescue Dr. Yow.[else if doc-y has not been rowdy][one of]Dr. Yow can be something besides wordy, too.[plus][or]You can make Dr. Yow be exciting.[plus][or]Dr. Yow can be ROWDY.[minus][cycling][else]Dr. Yow will stay around to impart his knowledge for a bit.[end if]"
 ragged dagger	"[one of]The dagger isn't as useful as it could be.[plus][or]Have you found a machine that might sharpen the dagger?[plus][or][if havens is unvisited]There's a room west of the Scope Copse, past the pirates.[else]The Shaven Havens.[end if][plus][or]The machine in the Shaven Havens can repair the dagger.[minus][cycling]"
 raves saver	"[one of]The raves saver is, well, a tape recorder.[plus][or]REPEAT is the PLAY button.[plus][or]RETAPE is the RECORD button.[plus][or]Combining RETAPE and REPEAT can bring a sound from one end of this region's map to another.[minus][cycling]"
-gizmo	"[if kid has gizmo]Dirk has the gizmo. He can use it better than you.[else][one of]You have this gizmo. Have you met anyone who could use it?[plus][or]Dirk Stam in Actionless Coastlines.[plus][or]He may need a lecture first.[plus][or]Give Dirk the gizmo [n-o] he's inspired by a science lecture.[minus][cycling][end if]"
+gizmo	"[if kid has gizmo][kid-first] has the gizmo. [he-she-c] can use it better than you.[else][one of]You have this gizmo. Have you met anyone who could use it?[plus][or][kid-full] in Actionless Coastlines.[plus][or][he-she-c] may need a lecture first.[plus][or]Give [kid-first] the gizmo [n-o] [he-she]'s inspired by a science lecture.[minus][cycling][end if]"
 ID Tag	"[if subsector is unvisited]Hm, you need to find Dr. Yow, the name on the tag. He's in the very east.[else]Hm, the ID tag says Dr. Yow. This is his duck.[end if]"
 fissure	"[one of]The fissure can, surprisingly, become animated.[plus][or]Make the fissure FUSSIER.[plus][or]But you need something that will fuss back at the fissure. Like a free animal or something.[minus][cycling]"
 ropins	"The prison ropins can't be opened with a key. Or a word with C-E-E-F-N. You need to find another way to free Dr. Yow."
@@ -52714,13 +52796,13 @@ carry out towers-hinting:
 	if actionless coastlines is unvisited:
 		all-say "[one of]You need to find the Actionless Shoreline.[or]It's in the northeast of the Scope Copse map.[or][if deacons are in lalaland or pirates are in lalaland]You've already cleared who you need to[else]You've got at least another guardian to get rid of[end if].[cycling]" instead;
 	if kid is lonely:
-		all-say "[one of]Hm, the kid [if player is not in shoreline]at the shoreline [end if]seems technically inclined but restless.[or]Who else might help him learn stuff?[or]Dr. Yow.[or]TELL/ASK KID ABOUT DOCTOR.[cycling]" instead;
+		all-say "[one of]Hm, the kid [if player is not in shoreline]at the shoreline [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK KID ABOUT DOCTOR.[cycling]" instead;
 	if kid is not in subsector and doc-y is in subsector:
-		all-say "The kid will follow you wherever you go. Lead him back to the doctor in the subsector." instead;
+		all-say "The kid will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
 	unless doc-y has been rowdy:
-		all-say "[one of]Dr. Yow is versatile. You need him to be exciting around the kid.[or]He can also be...[or]...ROWDY.[cycling]" instead;
+		all-say "[one of]Dr. Yow is versatile. You need [him-her] to be exciting around the kid.[or][he-she-c] can also be...[or]...ROWDY.[cycling]" instead;
 	if kid is reflexive:
-		all-say "[one of]The kid is too tentative to listen to Dr. Yow.[or]What can he become?[or]This is slightly tricky, even with three t's. You need to focus, so the kid can focus.[or]ATTENTIVE.[cycling]" instead;
+		all-say "[one of]The kid is too tentative to listen to Dr. Yow.[or]What can [he-she] become?[or]This is slightly tricky, even with three t's. You need to focus, so the kid can focus.[or]ATTENTIVE.[cycling]" instead;
 	if havens is not visited:
 		all-say "You need to visit west of the Copse Scope[if neural pulses are not in lalaland]. The rewired robot guards that area[end if]." instead;
 	if player is in havens:
