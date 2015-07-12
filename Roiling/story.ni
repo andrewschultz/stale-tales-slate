@@ -830,7 +830,7 @@ raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expe
 deacons	false	true	false	false	"Well, this is tricky. They could be just plain deacons, or they could be the hostile ol['] heist. You may need to observe a bit more to clear this up."
 man covered in inapt paint	false	true	false	false	"Hmm, painted and covered have three vowels--so it's probably the FLEMISH in inapt paint across his chest."
 old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
-doc-y	false	true	false	false	"[if doc-y has not been rowdy and doc-y has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if doc-y has been rowdy or doc-y has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of him.[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]"
+doc-y	false	true	false	false	"[if doc-y has not been rowdy and doc-y has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if doc-y has been rowdy or doc-y has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her].[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]"
 ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to unlock them."
 serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
 cinders	true	true	false	false	"Hm, that's weird. Perhaps there are two things you can do with the cinders." [otters]
@@ -2108,7 +2108,7 @@ persuasion rule for asking Casper to try doing something:
 	persuasion fails;
 
 persuasion rule for asking doc-y to try doing something:
-	say "Dr. Yow [if ropins is reflexive]mopes silently. He's already in prison--no need to order him[else]still looks exhausted from his ordeal. Maybe you should just let him be himself[end if].";
+	say "Dr. Yow [if ropins is reflexive]mopes silently. [he-she-c]'s already in prison--no need to order [him-her][else]still looks exhausted from [his-her] ordeal. Maybe you should just let [him-her] be [him-her]self[end if].";
 	persuasion fails;
 
 [otters]
@@ -2434,7 +2434,7 @@ ingrates	--
 iPrune	--
 organised	--
 admirer	"'But enough about me! What about you?' You need a way to make them less interested in you."
-doc-y	"Dr. Yow is too modest--and focused on his science--to bang on about his achievements or his imprisonment."
+doc-y	"Dr. Yow is too modest--and focused on [his-her] science--to bang on about previous achievements or imprisonment."
 Atheists	--
 Ed Yerg	"Ed Yerg mentions [if flowerpot is in lalaland]how happy he is you helped him. So happy, if you go out and come in, he might give you help with that palace[else if ed yerg is reflexive]his advice isn't cheap[else]he needs something to cheer him up[end if]."
 Ed Riley	"[one of]Ed Riley blathers how he can stand up to WHO DO YOU THINK YOU ARE and all that sort of thing. You claim you were just trying to get to know him, then he says THEN YOU'LL KNOW I NEED TO GUARD THE WAY WEST, HERE. He speaks very authoritatively[or]You don't need another verbal smackdown, at least not in Ed's current tone of voice[stopping]."
@@ -2483,7 +2483,7 @@ to say left-here:
 	say "'I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be.'"
 
 to say doc-in-prison:
-	say "He gestures to the ropins and then shakes an invisible fence of his own. As if he is too exhausted to talk any more[if doc-y has been rowdy or doc-y has been wordy]. You figured two ways to get him to talk[else if doc-y has been rowdy].";
+	say "[he-she-c] gestures to the ropins and then shakes an invisible fence of [his-her] own. As if [he-she] is too exhausted to talk any more[if doc-y has been rowdy and doc-y has been wordy]. You figured two ways to get [him-her] to talk, and that's probably enough[else if doc-y has been rowdy or doc-y has been wordy]. Maybe Dr. Yow has a bit more expressiveness in [him-her][end if].";
 
 before asking doc-y about:
 	if doc-y is wordy or doc-y is rowdy:
@@ -2553,7 +2553,7 @@ dialer	"Your voice would be recognized as not evil enough, even if you got throu
 intercom	"Your voice would be recognized as not evil enough, even if you got through."
 spec-o-scope	"Try looking in it instead."
 smart kid	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not in lalaland]'Boy! If only I had a tool to create jetskis!'[else]'Man! If I [jetskis-work], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]" [begin TOWERS]
-doc-y	"[if ropins is reflexive][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' He begins calculating on his fingers and working on an abstruse problem. He's probably not going to help you much, but he could help someone technical help you.[end if]"
+doc-y	"[if ropins is reflexive][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much, but [he-she] could help someone technical help you.[end if]"
 drama armada	"The drama armada doesn't seem to respond to conversation. Maybe if you just boom out one word, they'll go along with it."
 plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe you could yell at him the right way to make him move."
 muscly hulk	"He kind of stumbles with dialogue. Maybe you can make him stumble physically."
@@ -2899,15 +2899,15 @@ check objasking doc-y about a guardian:
 	else:
 		if doc-cheat is false:
 			if second noun is curst palace:
-				say "Dr. Yow scrunches his head a bit, then shrugs. 'Ouch. Eleven letters. Maybe if it was shorter.'" instead;
+				say "Dr. Yow scrunches [his-her] head a bit, then shrugs. 'Ouch. Eleven letters. Maybe if it was shorter.'" instead;
 			choose row with the-from of second noun in the table of anagrams;
 			now doc-guar is the-from entry;
 			now doc-cheat is true;
-			say "Dr. Yow sits and thinks a minute after you tell him where you were stuck. 'Mm, yes. Of course, of course. I'd think Yeah, you just say [right-word entry in upper case] should work.'";
+			say "Dr. Yow sits and thinks a minute after you tell [him-her] where you were stuck. 'Mm, yes. Of course, of course. I'd think Yeah, you just say [right-word entry in upper case] should work.'";
 			preef the-from entry instead;
 		else:
 			if doc-guar is not noun:
-				say "Dr. Yow rubs his temples. He's probably up to more technical stuff, now." instead;
+				say "Dr. Yow rubs [his-her] temples. [he-she-c]'s probably up to more technical stuff, now." instead;
 			if doc-guar is in lalaland:
 				say "You thank Dr. Yow for helping you out." instead;
 
@@ -2989,7 +2989,7 @@ him-who	topic	him-say
 nestor	"life"	"'Life is, like, the time of your life!'"
 nestor	"father" or "his father"	"You have a country to save. Don't waste time shaming recreational drug users."
 Gunter	"old/ man/ almond"	"He and you are up to no good, I'm sure."
-doc-y	"key"	"Dr. Yow shrugs. If he knew where a key was, he'd find it."
+doc-y	"key"	"Dr. Yow shrugs. If [he-she] knew where a key was, [he-she]'d find it."
 
 table of object-blather [this gives people default things to say about stuff, if they are not terse.]
 person-subj	right-region	him-say
@@ -4168,7 +4168,7 @@ check taking ropins:
 	say "WAY too heavy and big." instead;
 
 check taking doc-y:
-	say "[if doc-y is in ropins]You'll need to open the gaol first[else]Dr. Yow doesn't need that, after his spell in gaol[end if]." instead;
+	say "[if doc-y is in ropins]You'll need to open the gaol first[else]Dr. Yow doesn't need that, after a spell in gaol[end if]." instead;
 
 section otters
 
@@ -5334,12 +5334,12 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "neuralpulses"	1003884530	towers	--	neural pulses	--	"Man, biochemistry's way complex. Complex isomers and such are worse than anagrams! You may be more successful breaking the neural pulses down into components."
 "geese"	512291995	towers	--	--	bonker-gone rule	"The geese are fine as they are. They're just there for scenery, and stuff."
 "atheist"	514763074	towers	--	atheists	--	"Changing only one atheist would only help you so long. The rest would restore their companion's (lack of) faith shortly."
-"yow"	304646602	towers	--	doc-y	--	"He's a doctor! Have some respect when you try to scramble him up."
+"yow"	304646602	towers	--	doc-y	--	"[he-she-c]'s a doctor! Have some respect when you try to scramble [him-her] up."
 "doctor"	377173649	towers	--	doc-y	--	"That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean."
 "locked"	348940377	towers	--	subsector	--	"Nothing needs to be locked here, certainly not the gaol which [if doc-y is in ropins]already is[else]you unlocked[end if]."
 "idtag"	203919473	towers	--	ID Tag	--	"ID tag: dig at it? Gad."
 "retape"	527699816	towers	--	raves saver	--	"The raves saver has limited functionality, alas."
-"wordy"	410999494	towers	--	doc-y	--	"Dr. Yow seems to ponder something for a second but then shakes his head[if doc-y has been rowdy and doc-y has been wordy]--he's probably shown his full range of emotions[else if doc-y has not been rowdy and doc-y has not been wordy]--but he can't break out of his shell[else]--maybe there's one more way for him to be, to talk[end if]."
+"wordy"	410999494	towers	--	doc-y	--	"Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if doc-y has been rowdy and doc-y has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if doc-y has not been rowdy and doc-y has not been wordy]--but [he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]."
 "tentative"	788195264	towers	--	--	kid-not-learnt rule	"The kid fidgets a bit but can't keep focused, though [he-she] wants to."
 "dirk stam"	469925871	towers	--	smart kid	--	"The kid looks at you curiously. You probably don't need to change [his-her] name or intelligence."
 "smart"	350970758	towers	--	smart kid	--	"[dirk-no]."
@@ -7803,7 +7803,7 @@ check giving something to:
 		if second noun is smart kid:
 			say "He's more physical sciences than biological." instead;
 		if second noun is doc-y:
-			say "[one of]Dr. Yow puts the flowerpot on his head, angles it, shakes his head, and gives it back. He smiles and shrugs[or]You already tried that[stopping]." instead;
+			say "[one of]Dr. Yow puts the flowerpot on [his-her] head and angles it several ways, gives it back, smiles and shrugs[or]You already tried that[stopping]." instead;
 		if second noun is a guardian:
 			say "You remember Old Hat Daltho's friend was across the water. So it can't be anyone guarding things over here." instead;
 	if second noun is Curtis: [others]
@@ -7960,7 +7960,7 @@ before listening (this is the you can hear stuff some places rule):
 		if doc-y is in ropins:
 			if doc-y has been rowdy or doc-y has been wordy:
 				say "Dr. Yow is silent once again." instead;
-			say "Dr. Yow moans he could hack less shackles." instead;
+			say "Dr. Yow moans [he-she] could hack less shackles." instead;
 	if ingrates is visible:
 		say "The ingrates go red from [one of]complaining about [i]Geraint's[r] stupidity[or]describing how tacky [i]Nate's rig[r] is[or]having the [i]rangiest[r] list of complaints you've heard[or]babbling about how they've never been to [i]Tangiers[r][or]relating his horrible education at [i]St. [a-r][r][or]explaining what sane grit they have[or]a cloud of red nitre gas that passed a day ago[or]claiming you think you're a saner git than them[in random order]." instead;
 	if admirer is visible:
@@ -12787,7 +12787,7 @@ check xraying:
 		say "That doesn't seem to need internal changing. Maybe find something or someone else to x-ray." instead;
 	if noun is doc-y:
 		if doc-y has been rowdy and doc-y has been wordy:
-			say "You've done what you can with Dr. Yow. He can be rowdy or wordy." instead;
+			say "You've done what you can with Dr. Yow. [he-she-c] can be rowdy or wordy." instead;
 		if doc-y has been wordy:
 			say "You realize Dr. Yow has a rowdy side, too.";
 		else if doc-y has been rowdy:
@@ -13640,7 +13640,7 @@ after fliptoing (this is the yow is free rule) :
 check inserting into the fissure:
 	say "Nothing from your inventory seems to fit it. It's really oblong."
 
-doc-y is a super-easy auxiliary privately-named person in prison ropins. description is "[one of]You remember a slanderous (or is it libelous?) article claiming he was really Dr. Ieow, but he does look a[or]A[stopping] bit wonky, y'know? But with an intense look in his eyes[if doc-y is rowdy] as he yells[else if doc-y is wordy]as he babbles[end if][what-can-doc-say].". "Dr. Yow is pacing around semi-absent-mindedly[if doc-y is not in prison ropins] enjoying[otherwise] pining for[end if] his freedom."
+doc-y is a super-easy auxiliary privately-named person in prison ropins. description is "[one of]You remember a slanderous (or is it libelous?) article claiming [he-she] was really Dr. Ieow, but [he-she] does look a[or]A[stopping] bit wonky, y'know? But with an intense look in [his-her] eyes[if doc-y is rowdy] as [he-she] yells[else if doc-y is wordy]as [he-she] babbles[end if][what-can-doc-say].". "Dr. Yow is pacing around semi-absent-mindedly[if doc-y is not in prison ropins] enjoying[otherwise] pining for[end if] [his-her] freedom."
 
 to say what-can-doc-say:
 	let tosay be 0;
@@ -13656,7 +13656,7 @@ understand "dr/doctor/doc /yow" as doc-y.
 
 printed name of doc-y is "Dr. Yow"
 
-understand "dowry" as a mistake ("Dr. Yow is an intellectual. He needs a [if duck is returned]breakout[else]willing pupil[end if], not material things or romance.") when doc-y is visible.
+understand "dowry" as a mistake ("Dr. Yow is an intellectual. [he-she-c] needs a [if duck is returned]breakout[else]willing pupil[end if], not material things or romance.") when doc-y is visible.
 
 doc-y can be rowdy, wordy or calm. doc-y is calm.
 
@@ -14239,10 +14239,10 @@ every turn (this is the cool rowdy rule):
 		decrement doc-cool;
 		if doc-cool is 1:
 			if doc-y is visible:
-				say "Dr. Yow was [if doc-y is rowdy]rowdier[otherwise]wordier[end if] a bit ago. Now he's worried.";
+				say "Dr. Yow was [if doc-y is rowdy]rowdier[otherwise]wordier[end if] a bit ago. Now [he-she]'s worried.";
 		if doc-cool is 0:
 			if doc-y is visible:
-				say "Dr. Yow quits talking. He's not [if doc-y is rowdy]rowdy[otherwise]wordy[end if] any more.";
+				say "Dr. Yow quits talking. [he-she-c]'s not [if doc-y is rowdy]rowdy[otherwise]wordy[end if] any more.";
 			now doc-y is calm;
 
 doc-cool is a number that varies. doc-cool is usually 0.
@@ -14260,7 +14260,7 @@ carry out rowdying:
 	if doc-y is rowdy:
 		say "You recharge Dr. Yow's rowdiness.";
 	otherwise:
-		say "Dr. Yow appears charged! He begins ranting about scientific solutions and implementations and so forth, and how [one of]he was called wormy Mr. Yow until he got his Ph.D., and the worst he gets is 'Wooly Ol['] Yow' now[or]someone needs to grundy Dr. Yung[or]you can be a weirdo AND woe-rid[or]Dr. Ney is his idol[cycling]. It's quite a sight[if doc-y is in prison ropins], even through the jail door[end if][unless doc-y has been rowdy][one of]. You doubt he's like this all the time, though. Maybe he can speak more calmly, in other situations[or][stopping][end if].";
+		say "Dr. Yow appears charged! [he-she-c] begins ranting about scientific solutions and implementations and so forth, and how [one of][he-she] was called [if player is male]wormy Mr. Yow[else]Frowsy Mrs. Yow (despite being single)[end if] until [he-she] got [his-her] Ph.D., and the worst [he-she] gets is 'Wooly Ol['] Yow' now[or]someone needs to grundy Dr. Yung[or]you can be a weirdo AND woe-rid[or]Dr. Ney is [his-her] idol[cycling]. It's quite a sight[if doc-y is in prison ropins], even through the jail door[end if][unless doc-y has been rowdy][one of]. You doubt [he-she]'s like this all the time, though. Maybe [he-she] can speak more calmly, in other situations[or][stopping][end if].";
 	unless doc-y has been rowdy:
 		reg-inc;
 	now doc-y is rowdy;
@@ -14287,7 +14287,7 @@ after fliptoing smart kid:
 		say "The kid's attentive now, but Dr. Yow's wordiness isn't quite exciting enough for learning." instead;
 	if doc-y is rowdy:
 		kid-gets-it instead;
-	say "Unfortunately, Dr. Yow has nothing to say--maybe you can help him, there.";
+	say "Unfortunately, Dr. Yow has nothing to say--maybe you can help [him-her], there.";
 	continue the action;
 
 chapter wordying
@@ -14315,9 +14315,9 @@ carry out wordying:
 	the rule succeeds;
 
 to say wordy-hinty:
-	say "[unless doc-y has been wordy][one of]. You doubt he's like this all the time, though. Maybe he can speak more excitingly, in other situations[or][stopping]"
+	say "[unless doc-y has been wordy][one of]. You doubt [he-she]'s like this all the time, though. Maybe [he-she] can speak more excitingly, in other situations[or][stopping]"
 
-understand "dowry" as a mistake ("Marriage is probably the last thing on Dr. Yow's mind right now[if prison ropins is reflexed], even though he probably is pleased with you[else], and the only thing worse than being imprisoned would be...well...feeling like property[end if].") when doc-y is visible.
+understand "dowry" as a mistake ("Marriage is probably the last thing on Dr. Yow's mind right now[if prison ropins is reflexed], even though [he-she] probably is pleased with you[else], and the only thing worse than being imprisoned would be...well...feeling like property[end if].") when doc-y is visible.
 
 chapter guardian stubs
 
@@ -23157,8 +23157,8 @@ ray eck	ray eck	"creaky"	"creaky"	"You hear a squeak from the keycar, then Ray E
 pirates	pirates	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."	false	541160519	"pastier"
 old ice	old ice	"coiled"	"coiled"	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."	false	341000045	"mistier"
 denim	start tarts	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of start tarts in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, to keep the copse tidy. You take the tarts."	true	326810705	"mined"
-fissure	fissure	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, and out comes Dr. Yow. He thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."	false	582291393	"fussier"
-prison ropins	prison ropins	"unlocked"	"unlocked"	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. He thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."	false	522953692	"It already is. Dr. Yow is free."
+fissure	fissure	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."	false	582291393	"fussier"
+prison ropins	prison ropins	"unlocked"	"unlocked"	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."	false	522953692	"It already is. Dr. Yow is free."
 kid	kid	"attentive"	"attentive"	"[kid-full] snaps to attention. [he-she-c]'s more ready to learn, now."	false	788195264	"That'd be kind of schoolmarmish. [kid-first]'s ready to learn."
 turbos	turbos	"robust"	"robust"	"The turbos whir a bit and grow shinier. Robust or bust! You'd feel [if blaster is reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the jetskis now."	false	482585076	"The turbos are working fine now."
 blaster	blaster	"stabler"	"stabler"	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the jetskis now."	false	486934458	"The blaster is working fine now."
@@ -23188,7 +23188,7 @@ Shane	Shane	"ashen"	"ashen"	"Suddenly, the color rushes from Shane's face, and h
 Terrance	Terrance	"recreant"	"recreant"	"Terrance decides he might as well desert his duty and wanders off. [if number of visible warriors is 2]Rodney[else]The others[end if] can surely handle a bunch of drunks."	false	619470753	"recreant"
 Tyson	Tyson	"stony"	"stony"	"Tyson's emotions grow from hateful to just plain stony. This extends to his feelings towards Rodney as well as the tavern dwellers."	false	465003321	"stony"
 Wade	Wade	"awed"	"awed"	"Wade suddenly sees who you are. He's a clever fellow. He nods, walking away, giving Rodney such a look, he won't be stopped."	false	258957789	"awed"
-Rodney	Rodney	"yonder/droney"	"yonder"	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar. The speaker introduces himself as Old Hat Daltho, once a hot lad tipped to save Yorpwald. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find him, will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Daltho hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say.[wfak][paragraph break]You follow his directions, apparently towards a voice booming 'Stop! Die!' But where you wind up isn't so threatening. Someone's there to greet you! Or to have a chat. A long one--he's a bit of a yacker."	false	499778338	"Rodney should already be gone."	Deposit
+Rodney	Rodney	"yonder/droney"	"yonder"	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar. The speaker introduces himself as Old Hat Daltho, once a hot lad tipped to save Yorpwald. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Daltho hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say.[wfak][paragraph break]You follow his directions, apparently towards a voice booming 'Stop! Die!' But where you wind up isn't so threatening. Someone's there to greet you! Or to have a chat. A long one--he's a bit of a yacker."	false	499778338	"Rodney should already be gone."	Deposit
 flowerpot	flowerpot	"dingy"	"dingy"	"The crocus doesn't look a great shade of green, but it doesn't look dried out any more. It looks safer to pick up, so you do, and you put it in the flowerpot[unless player is in solo den][else if ed yerg is reflexive]. Ed sniffs--it still doesn't seem valuable[else]Ed looks longingly at the plant[end if]."	false	289888397	-- [583551280?]
 Ed Yerg	Ed Yerg	"greyed"	"greyed"	"[yergy]."	false	516924064	"That might be cruel. Ed's on the level, now."
 Ed Yerg	Ed Yerg	"grey"	"grey"	"[yergy]"	false	368088866	"That might be cruel. Ed's on the level, now."
@@ -51760,16 +51760,16 @@ Atheists	"[one of]The atheists are willing to explain everything very slowly to 
 bonker	"[one of]The bonker is working just great. How to gum it up?[plus][or]Busted...or...[plus][or]BROKEN.[minus][cycling]"
 repeat button	"REPEAT plays back what you recorded with the retape button."
 retape button	"RETAPE gives something for the repeat button to replay."
-doc-y	"[unless doc-y has been wordy][one of]Dr. Yow is silent, but you can change that.[plus][or]Take a look at his name.[plus][or]You can make him WORDY.[plus][or]If you have the raves saver, you can then PUSH RETAPE.[minus][cycling][else if doc-y is in prison ropins]You need to bring a friend along to rescue Dr. Yow.[else if doc-y has not been rowdy][one of]Dr. Yow can be something besides wordy, too.[plus][or]You can make Dr. Yow be exciting.[plus][or]Dr. Yow can be ROWDY.[minus][cycling][else]Dr. Yow will stay around to impart his knowledge for a bit.[end if]"
+doc-y	"[unless doc-y has been wordy][one of]Dr. Yow is silent, but you can change that.[plus][or]Take a look at [his-her] name.[plus][or]You can make [him-her] WORDY.[plus][or]If you have the raves saver, you can then PUSH RETAPE.[minus][cycling][else if doc-y is in prison ropins]You need to bring a friend along to rescue Dr. Yow.[else if doc-y has not been rowdy][one of]Dr. Yow can be something besides wordy, too.[plus][or]You can make Dr. Yow be exciting.[plus][or]Dr. Yow can be ROWDY.[minus][cycling][else]Dr. Yow will stay around to impart [his-her] knowledge for a bit.[end if]"
 ragged dagger	"[one of]The dagger isn't as useful as it could be.[plus][or]Have you found a machine that might sharpen the dagger?[plus][or][if havens is unvisited]There's a room west of the Scope Copse, past the pirates.[else]The Shaven Havens.[end if][plus][or]The machine in the Shaven Havens can repair the dagger.[minus][cycling]"
 raves saver	"[one of]The raves saver is, well, a tape recorder.[plus][or]REPEAT is the PLAY button.[plus][or]RETAPE is the RECORD button.[plus][or]Combining RETAPE and REPEAT can bring a sound from one end of this region's map to another.[minus][cycling]"
 gizmo	"[if kid has gizmo][kid-first] has the gizmo. [he-she-c] can use it better than you.[else][one of]You have this gizmo. Have you met anyone who could use it?[plus][or][kid-full] in Actionless Coastlines.[plus][or][he-she-c] may need a lecture first.[plus][or]Give [kid-first] the gizmo [n-o] [he-she]'s inspired by a science lecture.[minus][cycling][end if]"
-ID Tag	"[if subsector is unvisited]Hm, you need to find Dr. Yow, the name on the tag. He's in the very east.[else]Hm, the ID tag says Dr. Yow. This is his duck.[end if]"
+ID Tag	"[if subsector is unvisited]Hm, you need to find Dr. Yow, the name on the tag. [he-she-c]'s in the very east.[else]Hm, the ID tag says Dr. Yow. This is [his-her] duck.[end if]"
 fissure	"[one of]The fissure can, surprisingly, become animated.[plus][or]Make the fissure FUSSIER.[plus][or]But you need something that will fuss back at the fissure. Like a free animal or something.[minus][cycling]"
 ropins	"The prison ropins can't be opened with a key. Or a word with C-E-E-F-N. You need to find another way to free Dr. Yow."
 log gaol	"It's just there to block you from going anywhere else."
 ropins	"[one of]The prison ropins are locked.[plus][or]What could change that?[plus][or]Or make the ropins UNLOCKED? There's an NPC.[plus][or]The Lone Duck could make the gaol unlocked.[cycling]"
-lone duck	"[one of]You need to bring him back to his owner.[plus][or]In the Obscurest Subsector.[plus][or]He won't follow you, though.[plus][or]If you have the Raves Saver, you can record Dr. Yow while he's wordy.[plus][or]This will make the duck follow back to Dr. Yow.[plus][or]The duck can open the lock.[plus][or]How? He is a lone duck.[plus][or]He can make the gaol UNLOCKED.[minus][cycling]"
+lone duck	"[one of]You need to bring it back to its owner.[plus][or]In the Obscurest Subsector.[plus][or]It won't follow you, though.[plus][or]If you have the Raves Saver, you can record Dr. Yow while [he-she]'s wordy.[plus][or]This will make the duck follow back to Dr. Yow.[plus][or]The duck can open the lock.[plus][or]How? It is a lone duck.[plus][or]The lone duck can make the gaol UNLOCKED.[minus][cycling]"
 rapier repair	"[one of]The rapier repair machine looks like it could use something.[plus][or]Have you seen anything that looks like a rapier and needs repair?[plus][or]That ragged dagger[if player does not have ragged dagger] you left in the ravages[end if].[plus][or]Put the dagger in the machine.[plus][or]The gizmo may help the kid build something.[minus][cycling]"
 o-s	"The ole shrine is just sort of there, for a clue. You don't need to do anything with it."
 jetskis	"Two parts of the jetskis were broken. The blaster and turbos."
@@ -52790,7 +52790,7 @@ carry out towers-hinting:
 	unless doc-y has been wordy:
 		all-say "[one of]Dr. Yow[if player is not in subsector] back in the prison ropins[end if] can be manipulated.[or]There are two ways to make Dr. Yow wordy, but one is more useful than the other right away.[or]Dr. Yow can be WORDY.[cycling]" instead;
 	if duck is aloof:
-		all-say "[one of]That duck [if duck is not visible]in the havens seemed[else]seems[end if] awfully lonely. Maybe you can bring it home?[or]It won't follow you. It doesn't trust your voice.[or]Someone else's voice, then, maybe?[or]Find anything that could record that?[or][if ravages is unvisited]Something's in the ravages.[else if player does not have raves saver]The raves saver you saw is useful.[else]Your raves saver.[end if][or]It's actually a tape recorder.[or]It has two buttons, RETAPE and REPEAT, and you can probably figure what does what.[or]If you RETAPE Dr. Yow when he is [if doc-y has been wordy]WORDY[else]in a certain state[end if], that gets his voice.[cycling]" instead;
+		all-say "[one of]That duck [if duck is not visible]in the havens seemed[else]seems[end if] awfully lonely. Maybe you can bring it home?[or]It won't follow you. It doesn't trust your voice.[or]Someone else's voice, then, maybe?[or]Find anything that could record that?[or][if ravages is unvisited]Something's in the ravages.[else if player does not have raves saver]The raves saver you saw is useful.[else]Your raves saver.[end if][or]It's actually a tape recorder.[or]It has two buttons, RETAPE and REPEAT, and you can probably figure what does what.[or]If you RETAPE Dr. Yow when [he-she] is [if doc-y has been wordy]WORDY[else]in a certain state[end if], that gets [his-her] voice.[cycling]" instead;
 	if duck is not returned:
 		all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or]UNLOCKED.[cycling]" instead;
 	if actionless coastlines is unvisited:
