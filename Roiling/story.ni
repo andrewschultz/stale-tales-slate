@@ -50987,6 +50987,8 @@ carry out nothining:
 	if the player consents:
 		now absolutely-no-hints is true;
 	say "Okay[if absolutely-no-hints is true]. Hints are now disabled even if you save and restore[end if].";
+	if session-hints-off:
+		turn-temp-on; [need to disable the message in the new Save the Game Rule]
 	the rule succeeds;
 
 chapter nohinting
@@ -51002,11 +51004,57 @@ understand "nohint" and "no hint" as nohinting.
 carry out nohinting:
 	if absolutely-no-hints is true:
 		say "You've already shut hints down completely." instead;
-	if session-hints-off is true:
+	if session-hints-off:
 		say "You've already shut off hints for this session." instead;
 	say "Hints are now shut off for this session. If you save and restore, you will get hints again.";
-	now session-hints-off is true;
+	turn-temp-off;
 	the rule succeeds;
+	
+Include (-
+global temphintoff = 0;
+
+-) after "Definitions.i6t"
+	
+to turn-temp-off: (- temphintoff = 1; -).
+to turn-temp-on: (- temphintoff = 0; -).
+
+to decide whether session-hints-off: (- (temphintoff==1) -).
+
+Include (-
+
+[ SAVE_THE_GAME_R res fref zz;
+	if (actor ~= player) rfalse;
+	fref = glk_fileref_create_by_prompt($01, $01, 0);
+	if (fref == 0) jump SFailed;
+	gg_savestr = glk_stream_open_file(fref, $01, GG_SAVESTR_ROCK);
+	glk_fileref_destroy(fref);
+	if (gg_savestr == 0) jump SFailed;
+	@save gg_savestr res;
+	if (res == -1) {
+		! The player actually just typed "restore". We're going to print
+		!  GL__M(##Restore,2); the Z-Code Inform library does this correctly
+		! now. But first, we have to recover all the Glk objects; the values
+		! in our global variables are all wrong.
+		GGRecoverObjects();
+		glk_stream_close(gg_savestr, 0); ! stream_close
+		gg_savestr = 0;
+		zz = GL__M(##Restore, 2);
+		print "!!";
+		if (temphintoff==1)
+		{
+			print "^Hinting has been restored, since you temporarily disabled it last session.^";
+			temphintoff=0;
+		}
+		return zz;
+	}
+	glk_stream_close(gg_savestr, 0); ! stream_close
+	gg_savestr = 0;
+	if (res == 0) return GL__M(##Save, 2);
+	.SFailed;
+	GL__M(##Save, 1);
+];
+
+-) instead of "Save The Game Rule" in "Glulx.i6t".
 
 chapter hinting (plain)
 
