@@ -3054,7 +3054,10 @@ book the air
 
 the air is a proper-named backdrop. the air is everywhere. description is "Yup. Still breathable."
 
-does the player mean scaning air: it is very likely.
+does the player mean scaning air:
+	if player is in lean lane and cans are in lean lane:
+		it is unlikely;
+	it is very likely.
 
 rule for supplying a missing noun when scaning: now the noun is the air.
 
@@ -6569,6 +6572,8 @@ to recover-items:
 
 section crust parsing
 
+crust-warn is a truth state that varies.
+
 check eating curst crust:
 	if swears < 1:
 		say "[bug-report]" instead;
@@ -6576,6 +6581,11 @@ check eating curst crust:
 		say "You should probably eat it when you're beyond the, er, spot." instead;
 	if mrlp is not presto:
 		say "The crust fell from the remains of store P. Perhaps it's best to eat it there." instead;
+	if crust-warn is false:
+		say "Ugh! This crust may help you out, but it may be--wait for it--distasteful and spoiled. Go ahead anyway?";
+		now crust-warn is true;
+		unless the player consents:
+			say "OK, maybe later. This warning won't appear again." instead;
 	say "You wince and prepare to take a bite...";
 	now spoilit is true;
 	try presto-hinting;
@@ -12197,7 +12207,7 @@ the shells are part of store y. the shells are uncluing and undesc.
 instead of doing something with the shells:
 	say "Messing with the shells won't help you get in Store Y, but maybe they're a clue." instead;
 
-the oyster-x is a privately-named portal. diffic of oyster-x is 6. the printed name of oyster-x is "oyster". understand "oyster" as oyster-x. the go-region of oyster-x is Oyster. "The oyster that was Store Y is open. You could definitely fit in.". description of oyster-x is "It's not particularly tall, but its wideness suggests there's a lot to do there."
+the oyster-x is a privately-named portal. diffic of oyster-x is 6. the printed name of oyster-x is "a huge oyster". understand "oyster" as oyster-x. the go-region of oyster-x is Oyster. "The oyster that was Store Y is open. You could definitely fit in.". description of oyster-x is "It's not particularly tall, but its width suggests there's a lot to do there."
 
 understand "toyers" as a mistake ("You see red at the possibility people might mess with your mind in whatever's behind store Y--especially after noting the TOYERS with the red line through in the window.") when store y is visible.
 
@@ -12779,6 +12789,12 @@ check xraying:
 		if Topside is unvisited:
 			say "[reject]" instead;
 		say "That was for the towers. It doesn't work anywhere else because, well, different areas are different." instead;
+	if noun is prefigured:
+		choose row with the-from of noun in table of anagrams;
+		say "You already remember trying [right-word entry in upper case]--which seems right, just a matter of getting other things right first. Maybe they already are." instead;
+	if noun is thruhinted:
+		choose row with the-from of noun in table of anagrams;
+		say "You remember, from somwhere behind a fourth wall, reading you could just say [right-word entry in upper case]." instead;
 	if noun is the player:
 		say "You might expose yourself to harmful rays and stuff, looking that close." instead;
 	if noun is kid and doc-y is not visible:
@@ -15476,11 +15492,15 @@ the snoop spoon is a thing. description is "The spoon looks pretty normal despit
 
 understand "noops" as a mistake ("The snoop spoon isn't as complicated as assembly language.") when player has snoop spoon.
 
+snoop-warn is a truth state that varies.
+
 check examining snoop spoon:
 	if scams is false:
-		say "Examine the spoon at just the right angle, for a hint?";
-		unless the player consents:
-			continue the action;
+		if snoop-warn is false:
+			now snoop-warn is true;
+			say "Examine the spoon at just the right angle, for a hint?";
+			unless the player consents:
+				continue the action;
 	now spoilit is true;
 	try routes-hinting;
 	now spoilit is false;
@@ -16830,7 +16850,7 @@ to say orish of (myl - a list of text):
 		else:
 			say "or [entry lelt in myl]";
 
-to say Rand-to-go:
+to say rand-to-go:
 	let mysc be random reflexive scenery in location of player;
 	repeat through table of anagrams:
 		if mysc is the-from entry:
@@ -16844,16 +16864,20 @@ after fliptoing cinders:
 	now rescind-cinders is true;
 	continue the action;
 
+discern-warn is a truth state that varies.
+
 carry out discerning:
 	let do-i-dis be true;
 	if noun is not cinders:
 		if mrlp is not otters:
 			say "[reject]" instead;
 		say "[if player has cinders]You can only discern the cinders--they will tell you what is most important to do next[else]You're not around the right item to do that[end if]." instead;
-	if ed riley is visible:
-		say "You discern that it might be a bit early to use this. Surely the cinders could be saved for later--and you could make Ed's voice higher. Still, discern further?";
+	if discern-warn is false:
+		say "You feel sort of clever finding what to do, but maybe you can be even cleverer, if you're a perfectionist and all[if ed riley is visible]. Plus, it seems a bit early[end if]. Discern anyway?";
+		now discern-warn is true;
 		unless the player consents:
-			say "You look at the barley to the east. It seems different." instead;
+			say "Okay. This nag won't appear again." instead;
+	if ed riley is visible:
 		say "You discern Ed Riley could speak more reedily.";
 	else if player is in bran barn:
 		if macks are in fro:
@@ -18390,14 +18414,13 @@ carry out spilling:
 			say "You can't spill the jar--just what's in it.";
 	now cheated-guy is nothing;
 	if player is in End Den:
-		say "Unfortunately, the pills won't lead the way to where you need to go. You need some sort of map[if player has gleaner and gleaner is reflexed]. One might be in your inventory, and you just need to examine it[end if]." instead;
-	if pill-warned is false and anger range is not visited:
-		if scams is false:
-			say "You briefly wonder if the pill jar might be better saved for later. Release the pills anyway?";
-			now pill-warned is true;
-			unless the player consents:
-				do nothing instead;
-			say "Okay.";
+		say "Unfortunately, the pills won't roll off and lead the way to where you need to go. You need some sort of map[if player has gleaner and gleaner is reflexed]. One might be in your inventory, and you just need to examine it[end if]." instead;
+	if pill-warned is false and scams is false:
+		say "[if anger range is not visited]You briefly wonder if the pill jar might be better saved for later[else]You have a brief vision of Elvira trolling '[he-she-c] needed DRUGS!' which is silly, but yeah[end if]. Release the pills anyway?";
+		now pill-warned is true;
+		unless the player consents:
+			do nothing instead;
+		say "Okay.";
 	if aunt tuna is visible and bubble wrap is not off-stage:
 		say "That would be a rude parting gift. You've claimed your reward--the bubble wrap[if tea tray is not in lalaland]. Though it would seem polite--and straightforward--to try something from the tea tray[end if]." instead;
 	if player is in Lean Lane:
@@ -18515,12 +18538,13 @@ carry out spilling:
 	if player is in Achers' Arches:
 		if sardine is in Achers' Arches:
 			say "The sardine motions for you to share before you can spill the pills. Guess you better find some other way." instead;
-		if arches-search is false:
-			say "The pills bounce over by the arches. You try to grab them back but wind up grabbing a hidden pearl by mistake.";
-			pearl-check;
-			now arches-search is true;
-			reg-inc;
-			guy-cheat a-s instead;
+		if a-s is prefigured:
+			say "You remember that SEARCHing might've worked better with the sardine gone." instead;
+		say "The pills bounce over by the arches. You try to grab them back but wind up grabbing a hidden pearl by mistake.";
+		pearl-check;
+		now arches-search is true;
+		reg-inc;
+		guy-cheat a-s instead;
 	if haunter is in anger range and player is in anger range:
 		say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]." instead;
 	if player is in Hedron and o-t is in hedron:
@@ -37795,6 +37819,7 @@ blurb
 "ABNORMAL BAN = MORAL"
 "ADS KILL ALL KIDS"
 "AFOS = OAFS"
+"WASTE FOOD? OAF, DO STEW"
 "AH, VOWIN[']? HOW VAIN"
 "ALLURIN[']: RUIN ALL"
 "ALOHA, OL['] OOH-LA-LA"
@@ -51145,10 +51170,10 @@ to all-say (xx - indexed text):
 		say "[xx][line break]";
 
 to say plus:
-	now cur-item is thruhinted;
 	say "[run paragraph on][one of] (+) [i][bracket]Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.[no line break][r][close bracket][or] (+)[stopping]";
 
 to say minus:
+	now cur-item is thruhinted;
 	say "[one of] (-) [bracket][i]A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.[no line break][r][close bracket][or] (-)[stopping]";
 
 chapter hinting (object)
@@ -51224,8 +51249,8 @@ definition: a thing (called hintcand) is hintrelevant:
 		decide no;
 	let R1 be map region of location of hintcand;
 	let R2 be mrlp;
-	d "[hintcand] [R1] vs [R2].";
 	if R1 is R2:
+		d "[hintcand] is relevant.";
 		decide yes;
 	decide no;
 	decide yes;
@@ -51360,7 +51385,7 @@ carry out objhinting (this is the pick object to hint rule) :
 					say "[line break]You have [swears] bite[if swears > 1]s[end if] left." instead;
 			if player has snoop spoon:
 				if noun is thruhinted or noun is prefigured:
-					say "Hmm, wait. Maybe now's a good time to try to go [spoil-entry entry]." instead;
+					say "Hmm, wait. Maybe you can just go [spoil-entry entry]." instead;
 				now snoop spoon is in lalaland;
 				prevent undo;
 				now undo-code is 6;
@@ -51448,6 +51473,9 @@ to say give-croc:
 to say if-cro:
 	if crocus is reflexive:
 		say ", if you figure what to do with the crocus";
+
+to say casp-cap:
+	say "[one of]Casper doesn't want to be disturbed while writing Capers Recaps.[plus][or]Capers Recaps looks like almost two blackboards folded together. It's tempting to do something.[plus][or]SCRAPE the blackboard.[minus][cycling]"
 
 table of hintobjs [toh]
 hint-entry	advice-entry	parallel-entry	spoil-entry
@@ -51712,8 +51740,8 @@ tunes	"[one of]It's kind of complicated to change the tunes or get rid of them.[
 jar of pills	"[one of]What can you do with PILLS?[plus][or]You can pop the pills, but the lid is stuck.[plus][or]The pills can make life convenient for your adversaries, if they were on the ground.[plus][or]You would have to SPILL them.[plus][or]You can do so at various places.[minus][cycling]"
 tines	--	stein
 stein	"[one of]The stein is free.[plus][or]How does the stein hook up with the tines?[plus][or]INSERT the stein and you're five-sixths there.[plus][or]INSET the stein.[minus][cycling]"
-casper	"[one of]Casper doesn't want to be disturbed while writing Capers Recaps.[plus][or]Capers Recaps looks like almost two blackboards folded together. It's tempting to do something.[plus][or]SCRAPE the blackboard.[minus][cycling]"
-capers recaps	--	casper
+casper	"[if recaps is in lalaland]You've disturbed Casper enough.[else][casp-cap][end if]"
+capers recaps	"[casp-cap]"
 gins sign	"[if i-sung is true]You already managed to SING.[else][one of]The gins sign is a last lousy point, but it's one that introduces what to do in the area.[plus][or]The drinks are named after depressing puns on popular music.[plus][or]This is a last lousy point, but because it is a hint, I'll tell you what it is next.[plus][or]You can SING.[minus][cycling][end if]"
 clam	"[one of]The clam is agitated. It probably doesn't want to attack you.[plus][or]You need to settle the clam down.[plus][or]I mean CALM it.[minus][cycling]"
 urn	"[one of]You can't walk away from the urn. You need to do something more decisive.[plus][or]You should RUN from the urn.[minus][cycling]"
@@ -52380,7 +52408,7 @@ book presto-hinting
 
 carry out presto-hinting:
 	if cur-score of presto is 0 and spoilit is false:
-		all-say "[one of]You haven't gotten any points yet, so you probably want to find what sort of word is used here.[plus][or]There's lots of yelling, and the curst crust is a clue. You will be using dramatic words. You could ask yourself what sort of word is remaining.[plus][or]You may curse yourself if you find out.[plus][or]The words are interjections.[plus][or][red-stump-clue][minus][cycling]" instead;
+		all-say "[one of]You haven't gotten any points yet, so you probably want to find what sort of word is used here.[plus][or]There's lots of yelling, and the curst crust is a clue. You will be using dramatic words. You could ask yourself what sort of word is remaining.[plus][or]You may curse yourself if you find out.[plus][or]The words are interjections.[minus][cycling]" instead;
 	if hump is visible:
 		try objhinting hump instead;
 	if plebe is visible:
@@ -52519,7 +52547,7 @@ to say maze-solve:
 	say "[one of]You don't need to enter the maze to solve it[or]There's a magic word[or]Congratulate yourself before you enter. But nothing pedestrian[or]Note the Yiddish clues if you solve it[or]MAZELTOV[cycling]";
 
 to say red-stump-clue:
-	say "[if location of player is not Burnt Brunt]A good first puzzle is by the red stump.[otherwise][one of]That star is embedded in a crack in the stump.[or]You say dang, but that's a bit too much. You will need to soften your tone.[or]You know the drill--anagram what you need. RATS =~ ?[or]STAR.[cycling][end if]";
+	say "[if location of player is not Burnt Brunt]A good first puzzle is by the red stump.[otherwise][one of]That star is embedded in a crack in the stump. [or]You say dang, but that's a bit too much. You will need to soften your tone. [or]You know the drill--anagram what you need. RATS =~ ?[or]STAR.[cycling][end if]";
 
 to say wash-up:
 	say "[one of]Rand and Leo are a bit upset you beat them, but you can fix that.[no line break][plus][or]They think they're washups.[no line break][plus][or]What could show the washups you meant no harm?[no line break][plus][or]You can talk to the washups for clues of something nice to say.[no line break][plus][or]They're not interested in stuff. Not perfect grammar here, but they're not exactly grammar cops...[no line break][plus][or]Say WHASSUP.[no line break][minus][cycling]"
@@ -54722,17 +54750,17 @@ chapter hint clashes
 
 [* to make sure HINT, EAT CRUST and PREEF don't clash]
 
-test clash-u with "routes/enter routes/against/past/out/across/out/inside/x list/out/x spoon"
+test clash-u with "routes/enter routes/against/past/out/across/out/inside/x list/out/x spoon/y"
 
-test clash-v with "troves/enter troves/ate/care/spot/observe/eat truffle/sopt/reason/recall/hint/hint/hint/hint/eat truffle"
+test clash-v with "troves/enter troves/ate/care/spot/observe/eat truffle/sopt/reason/recall/hint/hint/hint/hint/eat truffle/y"
 
 test clash-p with "presto/enter spot/w/e/s/hint/hint/hint/hint/eat crust/star/dart/n/umph/blam/eat crust"
 
-test clash-y with "oyster/enter oyster/get pills/remap/sing/scrape/stroll/calm/hint/hint/hint/spill pills/run/boast/leap/spike/w/search arches/e/e/scan/seek/tutor/eat/w/w/warp/spill pills"
+test clash-y with "oyster/enter oyster/get pills/remap/sing/scrape/stroll/calm/hint/hint/hint/spill pills/n/run/boast/leap/spike/w/search arches/e/e/scan/seek/tutor/eat/w/w/warp/spill pills"
 
 test clash-w with "fixtow/towers/enter towers/gone/awed/bleak/olden/godly/lardy/yonder/n/creaky/get toaster/rustled/n/rinsed/e/drained/e/broken/e/unlocked/fussier/eat strudel/xray fissure/w/w/w/hint hulk/g/g/g/xray hulk"
 
-test clash-t with "a5/otters/enter otters/barely/reedily/w/snidely/tearily/n/because/else/discern/s/tediously/s/hint ghoul hat/g/g/g/disceern"
+test clash-t with "a5/otters/enter otters/barely/reedily/w/snidely/tearily/n/because/else/discern/s/tediously/s/hint ghoul hat/g/g/g/discern"
 
 chapter others
 
@@ -55768,6 +55796,20 @@ Rule for deciding whether all includes people while taking:
 Rule for deciding whether all includes fixed in place things while taking:
 	if take-it is true, rule succeeds;
 	the rule fails;
+
+chapter rfxing
+
+[* sees all reflexive things ]
+rfxing is an action out of world.
+
+understand the command "rfx" as something new.
+
+understand "rfx" as rfxing.
+
+carry out rfxing:
+	repeat with RF running through reflexive things:
+		say "[RF] is reflexive.";
+	the rule succeeds;
 
 chapter repling
 

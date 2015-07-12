@@ -180,7 +180,7 @@ to dn (a - indexed text):
 
 book globals
 
-the release number is 4.
+the release number is 5.
 
 release along with cover art. [and a website?]
 
@@ -215,6 +215,8 @@ ff is a truth state that varies.
 a thing has text called rgtext. rgtext of a thing is usually "[bug-report]".
 
 a thing can be prefigured, unfigured or done-for. a thing is usually unfigured.
+
+a thing can be thruhinted. a thing is usually not thruhinted.
 
 a thing can be reversible. a thing is usually not reversible.
 
@@ -861,6 +863,7 @@ hintsoff is a truth state that varies. hintsoff is usually false.
 just-print is a truth state that varies. just-print is usually true.
 
 to say minus:
+	now cur-item is thruhinted;
 	say "[one of](-) [italic type][bracket]NOTE: A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.[close bracket][r][or](-)[stopping]";
 
 to say plus:
@@ -1059,8 +1062,11 @@ ever-obj-hinted is a truth state that varies.
 
 a thing can be realized. a thing is usually not realized.
 
+cur-item is a thing that varies.
+
 carry out objhinting:
 	now ever-obj-hinted is true;
+	now cur-item is noun;
 	if noun is air:
 		all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
 	if location of noun is nothing and noun is not a backdrop:
@@ -8649,6 +8655,10 @@ carry out xmxing:
 		if nametag is in lalaland:
 			say "You don't need to unlock any further mysteries of the gateway." instead;
 		try xmxing nametag instead;
+	if noun is thruhinted:
+		say "You already hinted through for that. Are you sure you want to use your saltine?";
+		unless the player consents:
+			say "Ok." instead;
 	if noun is static:
 		say "[if gateman is visible]Old Man Almond makes a dubious noise. Maybe it is not a good idea to use something as powerful as the saltine this early in the game, on something potentially unimportant[else]You stop and think. The static doesn't seem as important as that gateway[end if]. Do so anyway?";
 		unless the player consents:
