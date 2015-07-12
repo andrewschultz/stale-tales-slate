@@ -54485,12 +54485,11 @@ test rtr with "ts/presto/in/s/drat/rats/retry/in"
 
 chapter randtext
 
-[* this tests all possibilities of random text, by region]
+[* this tests all possibilities of random text, by region. Generic possibilities are included in rand-i.]
 
+test twi with "lamp/x shelf/db/open door/1/4/4/4/4/4/lamp/x trash/g/g/g/g/g/g/g/g/d/staple/stapler/put staple in stapler/ts/troves/in/x pa/gonear office/ignore/bolster/last/resign/otwin/deeply/quickly/w/e/w/e/w/e/w/7/play whistle"
 
-test twi with "lamp/x shelf/db/open door/1/4/4/4/4/4/lamp/x trash/g/g/g/g/g/g/g/g/d/staple/stapler/put staple in stapler/ts/troves/in/x pa/gonear office/ignore/bolster/last/resign/otwin/deeply/quickly/w/7/play whistle"
-
-test rand-i with "cap 3/x bookshelf/g/g/g/g/g/g/attack it/g/g/g/lamp/open door/1/1/1/1/1/1/1/1/2/lamp/x art/g/g/g/g/g/g/g/g/hint/n/shit/g/g/g/x ads/g/g/g/listen/g/g/g/basement/d/satchel/x settler/in/flier/2/2/1/1/1/1/1/1/8/8/8/10/10/staple/stapler/staple wall/z/z/z/z/////in"
+test rand-i with "cap 3/x bookshelf/g/g/g/g/g/g/attack it/g/g/g/lamp/open door/1/1/1/1/1/1/1/1/2/lamp/x art/g/g/g/g/g/g/g/g/hint/n/y/g/g/g/n/g/g/g/shit/g/g/g/x ads/g/g/g/listen/g/g/g/basement/d/satchel/x settler/in/flier/2/2/1/1/1/1/1/1/8/8/8/10/10/staple/stapler/staple wall/z/z/z/z/////in"
 
 test rand-sto with "tokers/nestor/enter smoke/z/z/z/z/x ian/g/g/g/outside"
 
@@ -54498,13 +54497,21 @@ test rand-p with "blam/s/rats/drat/s/ole/darn/z/z/z/z/whassup/n/n/umph/phooey/e/
 
 test rand-r with "past/ask pat about food/g/g/despite/out/across/opposite/out/inside/out/in/out/in/out/in/out/in/z/z/z/z/x pious/y/x pious/g/g/g/retry"
 
+[this one actually wins, so I don't retry.]
+
 test rand-v with "z/z/z/z/x ethics/g/g/g/hate/care/l/l/l/l/observe/spot/reason/believe/recall/glare/gape/x lead/deal/x brochure/g/g/g/desire/aspire/strive/ponder/ignore/x desk/g/g/g/x sked/g/g/g/bolster/master/last/x divorces/g/g/g/discover/last/decide/y"
 
 test rand-y with "ask casper about xyz/g/g/g/g/g/g/g/sing/inset/remap/stroll/calm/run/boast/leap/z/z/z/z/z/z/z/z/spike/e/scan cans/seek/ask tuna about tuna/g/g/g/g/g/g/g/tutor/eat/w/w/warp/search/n/x theses/g/g/g/retry"
 
-test rand-w with "z/z/z/z/gonear sled rut/docile/n/rinsed/e/himself/n/sewed/get all/s/w/weirder/w/put dagger in repair/x dagger/g/g/g/g/g/retry"
+test rand-w with "z/z/z/z/gonear ray eck/creaky/n/rinsed/e/himself/n/sewed/get all/s/w/weirder/w/put dagger in repair/x dagger/g/g/g/g/g/retry"
+
+[capturing Elvira's text is done in test twi]
 
 test rand-t with "gonear elmer/honestly/z/z/z/z/retry"
+
+[this wins the game, so...no retry, either]
+
+test rand-h with "gonear len craig/z/z/z/z/purloin passport/w/n/research/review/n"
 
 chapter combos
 
