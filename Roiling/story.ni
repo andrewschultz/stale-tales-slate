@@ -1053,7 +1053,7 @@ use MAX_NUM_STATIC_STRINGS of 70000.
 
 use MAX_PROP_TABLE_SIZE of 540000.
 
-use MAX_STATIC_DATA of 660000.
+use MAX_STATIC_DATA of 700000.
 
 Use MAX_LABELS of 16000.
 
@@ -3555,6 +3555,7 @@ before quipping when player is in fro (this is the Gretta checks rule):
 				say "A bit of awkward silence follows, but it's nowhere near as awkward as the macks['] conversation.[no line break]";
 				now hold-it-up is true;
 				reject the player's command;
+		now the player has medals;
 
 instead of abouting or creditsing or xyzzying or requesting the score when rq is active:
 	say "[convoforce]." instead;
@@ -3569,7 +3570,7 @@ to say convoforce:
 	else if Elvira is visible:
 		say "'Good fail of dialog!' Elvira can negotiate awkward silence better than you can.[paragraph break]You can RECAP to see your options";
 	else if Gretta is visible:
-		say "She looks in a rush to get away. So you should probably listen up, or you can RECAP to see your options";
+		say "She looks around uneasily, but she doesn't seem to be glaring at you. So you should probably listen up, or you can RECAP to see your options";
 
 to decide whether the action is blathery:
 	if asking about, yes;
@@ -16708,7 +16709,7 @@ check going west in Bleary Barley:
 	if Ed Riley is visible:
 		say "'I will not re-yield! I am no longer a yielder! Ye Idler!' booms Ed Riley[ed-nonsense].[paragraph break]He's not bigger than you, but his loud voice scares you. And he could probably swat you with either that deli rye or er, yield sign. You back away." instead;
 
-the weltish whistle is a reflexive thing. description is "It's ugly, that's for sure, but [if parrot wears whistle]the parrot isn't carrying it around for nothing[else if whistle is reflexive]you can probably PLAY it and practice to figure how to use it[else]you do know how to PLAY it, and that's something[end if]. It reads DISCOURAGE-SCOURGE AID. WHISTLES: SHE WILTS. Red writing indicates who crafted it..";
+the weltish whistle is a reflexive thing. description is "It's ugly, that's for sure, but [if parrot wears whistle]the parrot isn't carrying it around for nothing[else if whistle is reflexive]you can probably PLAY it and practice to figure how to use it[else]you do know how to PLAY it, and that's something[end if]. It reads DISCOURAGE-SCOURGE AID. WHISTLES: SHE WILTS. Red writing indicates who crafted it.";
 
 after printing the name of the whistle while taking inventory:
 	say " ([if whistle is reflexed]which you know how[else if whistle-play is true]which you tried and failed[else]which you haven't tried[end if] to play)";
@@ -16867,7 +16868,6 @@ after fliptoing cinders:
 discern-warn is a truth state that varies.
 
 carry out discerning:
-	let do-i-dis be true;
 	if noun is not cinders:
 		if mrlp is not otters:
 			say "[reject]" instead;
@@ -16877,7 +16877,13 @@ carry out discerning:
 		now discern-warn is true;
 		unless the player consents:
 			say "Okay. This nag won't appear again." instead;
-	if ed riley is visible:
+	if otters-cur-item is player:
+		say "You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet." instead;
+	now spoilit is true;
+	try otters-hinting;
+	now spoilit is false instead;
+
+[	if ed riley is visible:
 		say "You discern Ed Riley could speak more reedily.";
 	else if player is in bran barn:
 		if macks are in fro:
@@ -16894,9 +16900,9 @@ carry out discerning:
 	else if macks are visible:
 		say "You listen to the macks and discern you could make them act and talk more [mack-actions].";
 	else if sly imp is visible:
-		say "You discern the imp would look ridiculous moving [Rand-to-go].";
+		say "You discern the imp would look ridiculous moving [rand-to-go].";
 	else if whiners are visible:
-		say "You discern the men could be less intimidating acting [Rand-to-go].";
+		say "You discern the men could be less intimidating acting [rand-to-go].";
 	else if player is in perverse preserve:
 		if raptor is visible:
 			say "You discern that the raptor could become a parrot[if inhib is true] with your powers back[end if].";
@@ -16936,7 +16942,7 @@ carry out discerning:
 	now undo-code is 7;
 	poss-d;
 	now cinders are in lalaland;
-	the rule succeeds.
+	the rule succeeds.]
 
 to say mack-actions:
 	let xy be a random number from 1 to the number of rows in table of nasty guys;
@@ -16997,7 +17003,7 @@ carry out playing:
 				get-dead;
 				follow the shutdown rules instead;
 			now whistle-play is true;
-			say "A horrible noise[one of][or]again[stopping], as if someone [i]yelped[r][one of]. You can't put up with it more than a split-second, and you probably need to figure how to make a more tolerable sound[or]. Hm, how to lower the pitch[stopping]." instead;
+			say "A horrible noise[one of][or] again[stopping], as if someone [i]yelped[r][one of]. You can't put up with it more than a split-second, and you probably need to figure how to make a more tolerable, less shrill sound[or]. Hm, how to lower the pitch[stopping]." instead;
 		if location of player is Reclusion Inclosure:
 			if nounsolve + adjsolve is 0:
 				say "Elvira looks momentarily worried, then giggles sardonically as nothing happens on your end. Plenty happens on hers. 'Ah, treat a threat.' Maybe you need some help?";
@@ -17019,7 +17025,7 @@ carry out playing:
 			clean-for-roving;
 			continue the action;
 		else:
-			say "The whistle doesn't seem to make any noise. Well, not here." instead;
+			say "You don't need to call anyone in this area." instead;
 	say "That doesn't seem like a toy or an instrument." instead;
 	the rule succeeds;
 
@@ -17150,6 +17156,9 @@ before doing something when Gretta is visible and macks are not visible:
 
 the litany of Gretta Garett-Tatger is the table of Gretta comments.
 
+to say but-stuck:
+	say "[if try-fail-animal is true], but I got chased after that[end if]"
+	
 table of Gretta comments
 prompt	response	enabled
 "Boy, those macks, huh?"	gre-macks-quip	1
@@ -17157,7 +17166,7 @@ prompt	response	enabled
 "I sort of lost my powers. Well, most of them. What can I do now?"	gre-what-quip	0
 "[if loop pool is visited]What can I do with the pool[else]What's[end if] to the north?"	gre-north-quip	0
 "[if bran barn is visited]What can I do in the barn[else]What's[end if] to the south?"	gre-south-quip	0
-"What's back east[if sly imp is in lalaland or whiners are in lalaland]? I got rid of some people, but I got stuck.[else]?[end if]"	gre-east-quip	0
+"What's back east[if sly imp is in lalaland or whiners are in lalaland]? I got rid of some nuisances[but-stuck].[else]?[end if]"	gre-east-quip	0
 "Rescuing animals? How?"	gre-animals-quip	0
 "[if optleft of Gretta is 1]Wow! You've been a big help[else if gre-go-warn is true]That's really all, now[else]Um, that's all, I guess[end if]. Thanks."	gre-go-quip	0
 
@@ -17274,7 +17283,6 @@ to process-macks:
 		say "[paragraph break]The maiden nods, able to reject the worst of the macks['] bragging, but she still listens, likely out of cognitive dissonance. Strike two for the macks.";
 	otherwise:
 		say "[paragraph break]Suddenly, the maiden realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the bulwark in the first place. But you can't ask that straight out.";
-		now player has the medals;
 		now macks are in lalaland;
 		reg-inc;
 		try talking to Gretta;
@@ -17525,10 +17533,13 @@ understand "simply" as a mistake ("He's already simply annoying, so that has no 
 
 understand "implys" as a mistake ("You will have to be subtle here, but you'll want to work on actions, instead.") when sly imp is visible
 
+try-fail-animal is a truth state that varies.
+
 check going north in Anger Pit:
 	if imp is visible:
 		say "The imp gives a sidle-slide, then idles in front of you. He's too smooth for you right now." instead;
 	if inhib is true:
+		now try-fail-animal is true;
 		say "You hear a dangerous hooting as you go north. You run from a bunch of owls before they can carve at you with their beaks, but boy, they were quick, and it was close. You don't want to risk it again, with your powers drained." instead;
 
 Wickeder Wire Deck is north of Anger Pit. Wickeder Wire Deck is part of otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south."
@@ -17835,10 +17846,11 @@ check going south in Anteroom:
 	if whiners are visible:
 		say "The whiners can't imagine why anyone would want to go there. They block you, for your own good. They seem to have all sorts of reasons, and there's no way past the quantity, if not the quality, of their arguments." instead;
 	if inhib is true:
+		now try-fail-animal is true;
 		say "A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have your full powers." instead;
 
 to say shout-check:
-	say "[one of]The din loses speed, energy, nastiness and volume. A re-count of the men reveals several leavers. But even with them gone, too many men are left blocking the way south.[no line break][or]Slowly, conversation dwindles until it leaves every hassler rahless, slasher of noise. They find another place where rioters roister.[no line break][stopping]";
+	say "[one of]The din loses speed, energy, nastiness and volume. A re-count reveals several leavers. But even with them gone, too many are left blocking the way south.[no line break][or]Slowly, conversation dwindles until it leaves every hassler rahless, slasher of noise. They find another place where rioters roister.[no line break][stopping]";
 
 quietness is a number that varies.
 
@@ -51397,6 +51409,14 @@ carry out objhinting (this is the pick object to hint rule) :
 				prevent undo;
 				now undo-code is 4;
 				say "Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to [spoil-entry entry] right now." instead;
+			if player has cinders:
+				if noun is thruhinted or noun is prefigured:
+					say "You pause, realizing you do not need to discern. Perhaps now is a good time to remember [spoil-entry entry]." instead;
+				say "As you gaze into the cinders, they blow away, leaving you feeling [spoil-entry entry].";
+				prevent undo;
+				now undo-code is 7;
+				poss-d;
+				now cinders are in lalaland;
 	if there is hint-entry of noun in the table of hintobjs:
 		choose row with hint-entry of noun in the table of hintobjs;
 		if there is a parallel-entry entry:
@@ -51476,6 +51496,29 @@ to say if-cro:
 
 to say casp-cap:
 	say "[one of]Casper doesn't want to be disturbed while writing Capers Recaps.[plus][or]Capers Recaps looks like almost two blackboards folded together. It's tempting to do something.[plus][or]SCRAPE the blackboard.[minus][cycling]"
+
+to decide whether one-imp-down:
+	if imp1 is reflexed or imp2 is reflexed or imp3 is reflexed:
+		decide yes;
+	decide no;
+
+to decide whether one-whine-down:
+	if ram1 is reflexed or ram2 is reflexed or ram3 is reflexed:
+		decide yes;
+	decide no;
+	
+to say medal-help:
+	say "The medals look less than perfect. ";
+	if nounsolve is 0 and adjsolve is 0:
+		say "Maybe you can find someone, or something, to help. You should [if player is in wire deck or player is in preserve]see what you can do here[else]explore north or south of the barley[end if]";
+	else if nounsolve >= 3:
+		say "You've done good work in the preserve, but maybe you can go [if wire deck is unvisited]north[else]to the wire deck[end if] to do more";
+	else if adjsolve >= 3:
+		say "You've done good work in the wire deck, but maybe you can go [if wire deck is unvisited]north[else]to the preserve[end if] to do more";
+	else if nounsolve is 0 or adjsolve is 0:
+		say "You've done something in the [if nounsolve is 0]wire deck[else]preserve[end if], but not enough. And then there's [if nounsolve is 0]south[else]north[end if] of the barley, too";
+	else:
+		say "You've done work in the wire deck and preserve, but not enough"
 
 table of hintobjs [toh]
 hint-entry	advice-entry	parallel-entry	spoil-entry
@@ -51886,56 +51929,55 @@ flowerpot	--	succor crocus
 Old Hat Daltho	"[if crocus is not in lalaland]The succor crocus Daltho gave you may be of some use.[else]You've taken care of Old Hat Daltho's gift.[end if]"
 Ed Yerg	"[if ed yerg is reflexive][one of]Ed Yerg seems to be, well, GREEDY.[plus][or]But he looks suspiciously old despite his hair.[plus][or]Make him GREYED.[minus][cycling][else if player has flowerpot][one of]Ed may still want something, but little of what you have interests him.[plus][or]The succor crocus may help him feel better about himself.[plus][or]Give it to him[if-cro].[minus][cycling]"
 Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]Ed Yerg might, [yerg-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]" [end towers hinting]
-b-b	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	[start otters hinting]
-Gretta	"[one of]The macks are [if macked-out > 0]still [end if]bugging Gretta Garett-Tatger. They're doing so effectiveLY.[plus][or]You can make the macks act more [current-mackiness].[minus][cycling]"
+b-b	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"	[start otters hinting]
+Gretta	"[one of]The macks are [if macked-out > 0]still [end if]bugging Gretta Garett-Tatger. They're doing so effectiveLY.[plus][or]You can make the macks act more [current-mackiness].[minus][cycling]"	--	"the macks can talk [current-mackiness]"
 macks	--	Gretta
-Ed Riley	"[one of]A steward won't let you go eastward--but he is too emphatically denying he is a YIELDER.[plus][or]The settler logically knocks this one out, but also consider his booming voice. You want the opposite of that.[plus][or]REEDILY.[minus][cycling]"
+Ed Riley	"[one of]A steward won't let you go eastward--but he is too emphatically denying he is a YIELDER.[plus][or]The settler logically knocks this one out, but also consider his booming voice. You want the opposite of that.[plus][or]REEDILY.[minus][cycling]"	--	"Ed can speak REEDILY"
 deli rye	"Ed Riley won't share, but the rye can share a hint with you if you scan it."
 yield sign	"The yield sign symbolizes Ed Riley isn't THAT in control of things. Oh, and it can share a hint with you if you scan it."
-sly imp	"[one of]You can probably knock the imp off at half-strength if you do it right.[plus][or]More adverbs.[plus][or]He can be made to move less gracefully and more [Rand-to-go].[minus][cycling]"
-whiners	"[one of]They're certainly aggressive and callous.[plus][or]You can soften them up a bit.[plus][or]They'll be less interested in annoying you if they start acting more [Rand-to-go].[minus][cycling]"
-ghoul hat	"[one of]Mr. Lee's 'Hola, Thug' greeting is not very nice. He sees red and doesn't trust you.[plus][or]Mr. Lee's upset with you. But one word, useless on its own, can turn it around.[plus][or]The first one had better be a good one.[plus][or]No L-Y, so no adverb.[plus][or]ALTHOUGH.[minus][cycling]"
-mr-l	"[if ghoul hat is not in lalaland]Try to help Mr. Lee with that ghoul hat.[else if p-2 is in bran barn]Try to get rid of that painting of Rev. Howe.[else]You've helped Mr. Lee all you can."
-p-2	"[if ghoul hat is not in lalaland]Deal with the ghoul hat first.[else][one of]The painting has a lot of writing, all in red, which cuts down what to say.[plus][or]But the painting is ultimately the same sort of thing as before.[plus][or]HOWEVER.[minus][cycling]"
-atmo-moat	"[one of]The moat seems to get in your way, but you sense it could be compacted.[plus][or]It's also an atmo-moat, though you see less red when you think of it that way.[plus][or]You can shrink the moat to an ATOM, but you need to have your powers back, first.[plus][or]Also, you need to have gotten rid of the macks to change the moat.[minus][cycling]"
+sly imp	"[one of][if one-imp-down]You need to take the imp down another peg[else]The imp certainly does things three different ways[end if].[plus][or]You may need [if one-imp-down]yet [end if]another adverb.[plus][or][if one-imp-down]Take him out for good by making him[else]He can be made to[end if] move less gracefully and more [rand-to-go].[minus][cycling]"	--	"[rand-to-go ]"
+whiners	"[one of][if one-whine-down]They've lost a bit of steam, but they need to lose a bit more[else]The whiners have a lot of energy and exercise it many different ways[end if].[plus][or]You can soften them up a bit[if one-whine-down] more[end if].[plus][or]They'll [if one-whine-down]give up on[else]be less interested in[end if] annoying you if they start acting more [rand-to-go].[minus][cycling]"	--	"the imp can act [rand-to-go]"
+mr-l	"[loop-pool-already][if ghoul hat is not in lalaland]Try to help Mr. Lee with that ghoul hat. Or ask hints about the hat.[else if p-2 is in bran barn]Try to get rid of that painting of Rev. Howe. Or ask hints about it.[else]You've helped Mr. Lee all you can."
+ghoul hat	"[loop-pool-already][one of]Mr. Lee's 'Hola, Thug' greeting is not very nice. He sees red and doesn't trust you.[plus][or]Mr. Lee's upset with you. But one word, useless on its own, can turn it around.[plus][or]The first one had better be a good one.[plus][or]No L-Y, so no adverb.[plus][or]ALTHOUGH.[minus][cycling]"	--	"you can say ALTHOUGH"
+p-2	"[loop-pool-already][if ghoul hat is not in lalaland]Deal with the ghoul hat first.[else][one of]The painting has a lot of writing, all in red, which cuts down what to say.[plus][or]But the painting is ultimately the same sort of thing as before.[plus][or]HOWEVER.[minus][cycling]"	--	"you can say HOWEVER"
+atmo-moat	"[one of]The moat seems to get in your way, but you sense it could be compacted.[plus][or]It's also an atmo-moat, though you see less red when you think of it that way.[plus][or]You can shrink the moat to an ATOM, [if inhib is true]but you need to have your powers back, first[else]which is possible with your powers back[end if].[minus][cycling]"	--	"you can make a MOAT"
 le mer	--	sea cube
-sea cube	"[one of]The sea cube in the atmo-moat/loop pool can be talked to.[plus][or]The sea gets bored if you talk to it. First words count. But they need to be useless on their own.[plus][or]The SEA CUBE draws you to it.[plus][or]BECAUSE.[minus][cycling]"
-eels	"[one of]The eels need convincing, too. What will happen, otherwise?[plus][or]Again, first words count. But they need to be useless on their own.[plus][or]Tell them ELSE.[plus][or]BECAUSE.[minus][cycling]"
+sea cube	"[bran-barn-already][one of]The sea cube in the atmo-moat/loop pool can be talked to.[plus][or]The sea gets bored if you talk to it. First words count. But they need to be useless on their own.[plus][or]The SEA CUBE draws you to it.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say BECAUSE"
+eels	"[bran-barn-already][one of]The eels need convincing, too. What will happen, otherwise?[plus][or]Again, first words count. But they need to be useless on their own.[plus][or]Tell them ELSE.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say ELSE"
 imp1	"[bug-report]"
 imp2	"[bug-report]"
 imp3	"[bug-report]"
 ram1	"[bug-report]"
 ram2	"[bug-report]"
 ram3	"[bug-report]"
-owls	"[one of]You only have one move to tackle the owls.[plus][or]They are too fast now.[plus][or]Make them SLOW. This hints what else to do here.[minus][cycling]"
-satyr	"[one of]The satyr seems set on blood and guts, fighting for the sake of it.[plus][or]Make him less violent?[plus][or]A bit ARTSY?[minus][cycling]"
-badger	"[one of]The badger is embarrassed they're naked.[plus][or]How could he be clothed?[plus][or]Or GARBED?[minus][cycling]"
-leopard	"[one of]The leopard is orangish and jumpsuited, with its paws bound together by some invisible handcuffs.[plus][or]Like the leopard's in jail. Well, it sort of is.[plus][or]But the leopard's been well behaved. Can you get them out early?[plus][or]Yup. If they're PAROLED.[minus][cycling]"
-ocelots	"[one of]Those clip on shades aren't very suave on the ocelots.[plus][or]You're not going to find any shades for the ocelots.[plus][or]But you can make the ocelots cooler.[plus][or]Or, better, make the ocelots the COOLEST.[minus][cycling]"
+owls	"[one of]You only have one move to tackle the owls.[plus][or]They are too fast now.[plus][or]Make them SLOW. This hints what else to do here.[minus][cycling]"	--	"you can make the owls SLOW"
+satyr	"[one of]The satyr seems set on blood and guts, fighting for the sake of it.[plus][or]Make him less violent?[plus][or]A bit ARTSY?[minus][cycling]"	--	"you can make the satyr ARTSY"
+badger	"[one of]The badger is embarrassed to be naked.[plus][or]How could it be clothed?[plus][or]Or GARBED?[minus][cycling]"	--	"you can make the badger GARBED"
+leopard	"[one of]The leopard is orangish and jumpsuited, with its paws bound together by some invisible handcuffs.[plus][or]Like the leopard's in jail. Well, it sort of is.[plus][or]But the leopard's been well behaved. Can you get them out early?[plus][or]Yup. If they're PAROLED.[minus][cycling]"	--	"you can make the leopard PAROLED"
+ocelots	"[one of]Those clip on shades aren't very suave on the ocelots.[plus][or]You're not going to find any shades for the ocelots.[plus][or]But you can make the ocelots cooler.[plus][or]Or, better, make the ocelots the COOLEST.[minus][cycling]"	--	"you can make the ocelots COOLEST"
 raptor	"[one of]You only have one move to tackle the raptor.[plus][or]Its roars are worse than the squawking below.[plus][or]Make the raptor a PARROT. This hints what else to do here.[minus][cycling]"
-nails	"[one of]They're arranged in a circular pattern, spiraling out.[plus][or]What's an animal whose shell is like that?[plus][or]A SNAIL.[minus][cycling]"
-pines	"[one of]They're shaped like a long bird's bill or something.[plus][or]If you listen, you hear bickering.[plus][or]SNIPE.[minus][cycling]"
-corona	"[one of]Black and whitish, easy to hide in the dark.[plus][or]RACOON.[minus][cycling]"
-thrones	"[one of]Sit on them and they'll sting you.[plus][or]What animals sting?[plus][or]HORNETS.[minus][cycling]"
-Elmer	"[if Merle is reflexed]Just enjoy Elmer's and Merle's spitefulness.[else][one of]You can listen to Elmer and Merle's evil plan for a bit.[plus][or]There's also a way to make Elmer and Merle less annoying. It's an annoying last lousy point puzzle and the opposite of on-the-sly.[plus][or]Elmer and Merle can be made to speak HONESTLY.[minus][cycling]"
+nails	"[one of]They're arranged in a circular pattern, spiraling out.[plus][or]What's an animal whose shell is like that?[plus][or]A SNAIL.[minus][cycling]"	--	"you can make a SNAIL"
+pines	"[one of]They're shaped like a long bird's bill or something.[plus][or]If you listen, you hear bickering.[plus][or]SNIPE.[minus][cycling]"	--	"you can make a SNIPE"
+corona	"[one of]Black and whitish, easy to hide in the dark.[plus][or]RACOON.[minus][cycling]"	--	"you can make a RACOON"
+thrones	"[one of]Sit on them and they'll sting you.[plus][or]What animals sting?[plus][or]HORNETS.[minus][cycling]"	--	"you can make HORNETS"
+Elmer	"[if parrot is in alcoves]You can't change Elmer or Merle directly, but you may want to mess with the parrot[else]You can't really deal with Elmer and Merle until you have an ally[end if]. [if merle is reflexed][one of]You can, however, make Elmer and Merle change for a Last Lousy Point.[plus][or]What is the opposite of on-the-sly?[plus][or]Elmer and Merle can be made to speak HONESTLY.[minus][cycling][else]You can just enjoy their random squabbles as you figure what the parrot needs to do or become.[end if]"	--	"Elmer and Merle can speak HONESTLY"
 snail	"The snail will help you when the time comes."
 snipe	"The snipe will help you when the time comes."
-raptor	"[one of]The raptor can be changed to something much less vicious.[plus][or]The raptor has rather odd bright coloring doesn't it? Like a tropical bird?[plus][or]Make the raptor a PARROT.[minus][cycling]"
+raptor	"[one of]The raptor can be changed to something much less vicious.[plus][or]The raptor has rather odd bright coloring doesn't it? Like a tropical bird?[plus][or]Make the raptor a PARROT.[minus][cycling]"	--	"you can make a PARROT"
 hornets	"It will help you when the time comes."
 racoon	"It will help you when the time comes."
-parrot	"You can change it back to a RAPTOR to help you get past another fearsome beast."
+parrot	"[one of]The parrot is scared of Merle and Elmer, as they're a lot bigger.[plus][or]Maybe if the parrot got bigger. Wait, it was![plus][or]You can change it back to a RAPTOR to help you get past another fearsome beast.[minus][cycling]"	--	"you can re-make a RAPTOR"
 cinders	"[one of]The cinders can be used for two things.[plus][or]You can take them and use them to hint through one thing with one passive verb.[plus][or]You can DISCERN (no nouns,) but that won't get you full points.[plus][or]You can get rid of the cinders--not by dropping them.[plus][or]RESCIND.[minus][cycling]"
 Merle	--	Elmer
 sober robes	"Elmer and Merle can't be naked, and I felt like trawling for a cheap anagram. Win-win! (Oh. The robes aren't important to the game.)"
-medals	"[one of]The medals are thanks for your smarts and quick thinking.[plus][or]The medals are more powerful together than apart.[plus][or]IQ and LUCKY mean something.[plus][or]You can use them to go QUICKLY, but the question is, where?[plus][or]If you have gotten rid of Merle and Elmer, going QUICKLY to the west will help you deal with Elvira's initial attack.[minus][cycling]"
+medals	"[if nounsolve < 3 or adjsolve < 3][medal-help].[else][one of]The medals are thanks for your smarts and quick thinking.[plus][or]The medals are more powerful together than apart.[plus][or]IQ and LUCKY mean something.[plus][or]You can use them to go QUICKLY, but the question is, where?[plus][or]If you have gotten rid of Merle and Elmer, going QUICKLY to the west will help you deal with Elvira's initial attack.[minus][cycling][end if]"	--	"the medals can make you go QUICKLY"
 jumpsuit	--	leopard
 SlopInc	"They aren't the hippest, are they? Change the ocelots to make them cooler."
 Look-Kool	"You can't do much but admire them."
 bulwark	"The bulwark is where Elvira's hiding out. You need to get [if Inclosure is visited]in[else]back[end if] there and be prepared."
-weltish whistle	"[if whistle is reflexed]PLAY it by Elvira to win.[else][one of]It can summon animals when you need to.[plus][or]That'll be a big fight, though.[plus][or]PLAY WHISTLE in the Reclusion Inclosure.[minus][cycling][end if]"
-medals	"[one of]They are thanks for your smarts and quick thinking.[plus][or]They are more powerful together than apart.[plus][or]IQ and LUCKY mean something.[plus][or]You won't need them right away, but when you do...[plus][or]...they can help you go QUICKLY.[minus][cycling]"
+weltish whistle	"[if whistle is reflexed]PLAY it by Elvira to win.[else][one of]The whistle can summon animals when you need to, but you haven't had the practice yet.[plus][or]That'll be a big fight, though, so you need to prepare earlier.[plus][or]Examining the whistle gives a clue--who made it, etc. So does playing it, as if someone yelped[plus][or]You need to play it DEEPLY.[minus][cycling][end if]"	--	"you can play the whistle DEEPLY"
 hydra	"[if parrot is off-stage]You'd need to be pretty big to defeat the hydra. Or have a pretty big ally. But you haven't found one, yet.[else][one of]If only you had a bigger animal as an ally, to beat the hydra.[plus][or]One that almost attacked you.[plus][or]Remember what the parrot was?[plus][or]The parrot was a RAPTOR.[plus][or]Don't summon the raptor before the alcoves.[minus][cycling][end if]"
-Elvira	"[if nounsolve is 0 and adjsolve is 0]You'll need animal allies to face Elvira, the charismatic conversationalist.[else if nounsolve < 3 or adjsolve < 3]You'll need more animal allies to face Elvira, the charismatic conversationalist.[else][one of]You have enough animals to overwhelm--and ignore the charms of--Elvira, the charismatic conversationalist.[plus][or]First, you need to BLOW THE WHISTLE to summon them.[plus][or]You have one more thing that can help.[plus][or]Remember how you helped the maiden?[plus][or]The medals can make you--and your allies--go QUICKLY.[minus][cycling][end if]" [end otters hinting]
+Elvira	"[if current quip is final-quip]Just PLAY THE WHISTLE to defeat her.[else if nounsolve is 0 and adjsolve is 0]You'll need animal allies to face Elvira, the charismatic conversationalist.[else if nounsolve < 3 or adjsolve < 3]You'll need more animal allies to face Elvira, the charismatic conversationalist.[else][one of]You have enough animals to overwhelm--and ignore the charms of--Elvira, the charismatic conversationalist.[plus][or]First, you need to BLOW THE WHISTLE to summon them.[plus][or]You have one more thing that can help.[plus][or]Remember how you helped the maiden?[plus][or]The medals can make you--and your allies--go QUICKLY.[minus][cycling][end if]" [end otters hinting]	--	"you can just PLAY THE WHISTLE"
 harmonicas	"[one of]If you try to play them, your playing is the pits, and the game stems you.[or]What's a fruit that has pits and a stem?[or]A cherry, but this is a much brighter red than usual.[or]MARASCHINO.[cycling]"
 lumps	"[one of]Hmm, the lumps are purplish, maybe even a bit soft.[or]You're trying to retrieve fruit, so that should be a clue.[or]The settler will tell you where to place a vowel.[or]PLUMS.[cycling]"
 slime	"[one of]Hmm, the slime is green and knobbly and smells a bit like dishwashing detergent.[or]What can green dishwashing detergent smell like?[or]LIMES.[cycling]"
@@ -52727,104 +52769,107 @@ verb-warned is a truth state that varies.
 
 trolls-hinted is a truth state that varies.
 
+to decide which thing is oyster-item:
+	if player is in posh hops shop:
+		if trolls-hinted is false and cur-score of oyster is 0:
+			decide on trolls;
+		if number of entries in marcitems is 2:
+			decide on trolls;
+		decide on entry 1 of marcitems;
+	if player is in lode:
+		if clam is in lode:
+			decide on clam;
+		if urn is in lode:
+			decide on urn;
+	if player is in hero's shore:
+		decide on boats;
+	if player is on raft:
+		if raft is reflexed:
+			decide on oars;
+		decide on raft;
+	if player is in range:
+		if pikes are in range:
+			decide on carps;
+		if haunter is off-stage:
+			decide on scrawl;
+		if haunter is reflexive:
+			decide on haunter;
+	if haunter is reflexed and location of player is location of haunter:
+		decide on haunter;
+	if player is in plains:
+		if skis are in plains:
+			decide on skis;
+		if reacted is false:
+			decide on crate;
+		if knob is reflexive:
+			decide on knob;
+	if player is in Lean Lane:
+		if eeks are visible:
+			decide on eeks;
+	if player is in uaah:
+		if tubs are in uaah:
+			decide on tubs;
+		if prod is visible:
+			decide on prod;
+		if waste is reflexive and waste is visible:
+			decide on waste;
+		if lance is not cleaned and lance is in uaah:
+			decide on lance;
+		if heaps are reflexive:
+			decide on heaps;
+	if player is in sand home:
+		if tea tray is visible:
+			decide on tea tray;
+		if trout is reflexive:
+			decide on trout;
+		if bubble wrap is off-stage:
+			decide on drawer;
+	if player is in Achers' Arches:
+		if sardine is in Achers' Arches:
+			decide on the sardine;
+		if arches-search is false:
+			decide on a-s;
+		if ruby is off-stage:
+			decide on bubble wrap;
+	if player has paler pearl:
+		decide on paler pearl;
+	if player has gleaner and gleaner is reflexive:
+		decide on gleaner;
+	if player is in hedron:
+		if walleyes are in hedron:
+			decide on walleyes;
+		if o-t is in hedron:
+			decide on o-t;
+	if player is in Scum Ant Sanctum:
+		decide on ant;
+	if location of player is Den Loft:
+		if yapper is in loft:
+			decide on yapper;
+		decide on dialer;
+	decide on the player;
+
 carry out oyster-hinting:
 	if verb-warned is false and cur-score of oyster is 0:
 		now verb-warned is true;
 		all-say "There's a lot of action here. You will need lots of action. So that gives you a clue as to the commands to use." instead;
-	if player is in Posh Hops Shop:
-		if trolls-hinted is false and cur-score of oyster is 0:
-			try objhinting trolls instead;
-		if number of entries in marcitems is 2:
-			try objhinting trolls instead;
-		try objhinting entry 1 of marcitems instead;
-	if clam is visible:
-		try objhinting the clam instead;
-	if urn is visible:
-		try objhinting the urn instead;
-	if player is in Hero's shore:
-		try objhinting boats instead;
-	if player is on raft:
-		if raft is reflexed:
-			try objhinting oars instead;
-		try objhinting raft instead;
-	if pikes are visible or carps are visible:
-		try objhinting carps instead;
-	if player is in Lapsin' plains:
-		if skis are visible:
-			try objhinting skis instead;
-		if reacted is false:
-			try objhinting crate instead;
-		if knob is reflexive:
-			try objhinting knob instead;
-	if player is in uaah:
-		if tubs are in uaah:
-			try objhinting tubs instead;
-		if prod is visible:
-			try objhinting prod instead;
-		if waste is reflexive and waste is visible:
-			try objhinting waste instead;
-		if lance is not cleaned and lance is in uaah:
-			try objhinting lance instead;
-		if heaps are reflexive:
-			try objhinting heaps instead;
-	if player is in Lean Lane:
-		if eeks are visible:
-			try objhinting eeks instead;
-	if player is in sand home:
-		if tea tray is visible:
-			try objhinting tea tray instead;
-		if trout is reflexive:
-			try objhinting trout instead;
+	if oyster-item is not player:
+		try objhinting oyster-item instead;
+	if haunter is reflexed and location of haunter is location of player:
+		all-say "You need to show the haunter where the ruby is buried, now.";
+	else if player is in Arches:
 		if bubble wrap is off-stage:
-			try objhinting drawer instead;
-	if player is in Achers' Arches:
-		if sardine is in Achers' Arches:
-			try objhinting the sardine instead;
-		if arches-search is false:
-			try objhinting a-s instead;
-	if player is in Hedron:
-		if bubble wrap is off-stage:
-			all-say "You need to go back to the handsome sand home for a small gift." instead;
-		if ruby is off-stage:
-			try objhinting bubble wrap instead;
-		if player does not have the digger:
-			all-say "You don't have everything you need. You'll want to do some digging here. But you have nothing to dig with, yet." instead;
-	if player is in anger range:
-		if eeks are in Lean Lane:
-			all-say "You may want to visit the trout to the east." instead;
-		if player does not have digger:
-			all-say "You'll want something to dig here. See to the north." instead;
-		if haunter is off-stage:
-			try objhinting scrawl instead;
-		if haunter is reflexive:
-			try objhinting haunter instead;
-	if haunter is visible:
-		if haunter is reflexed:
-			say "You need to show the haunter where the ruby is buried, now." instead;
-		try objhinting haunter instead;
-	if player has paler pearl:
-		try objhinting paler pearl instead;
-	if player has gleaner and gleaner is unexamined:
-		try objhinting gleaner instead;
-	if location of player is Hedron:
-		if walleyes are in Hedron:
-			try objhinting walleyes instead;
-		if o-t is visible:
-			try objhinting o-t instead;
-	if location of player is Collapsed Old Places:
-		if ruby is off-stage:
-			all-say "This would be a good place to bury something, but you're not sure what." instead;
-		if player has ruby:
-			try objhinting ruby instead;
-	if player is in Scum Ant Sanctum:
-		try objhinting ant instead;
-	if location of player is End Den:
+			all-say "You need to go back to the handsome sand home for a small gift.";
+	else if player is in anger range and eeks are in lean lane:
+		all-say "You may want to visit the trout to the east.";
+	else if player is in collapsed and player does not have the digger:
+		all-say "You don't have everything you need. You'll want to do some digging here. But you have nothing to dig with, yet.";
+	else if location of player is Collapsed Old Places and ruby is off-stage:
+		all-say "This would be a good place to bury something, but you're not sure what.";
+	else if location of player is End Den:
 		all-say "[one of]You're at a dead end, here. Exiting and re-entering won't do much good. You need some sort of talisman to guide you through.[or][if player has gleaner]You should really examine the gleaner[else if player has pearl]You should find the other half of the pearl.[else]There are two fragments that can combine to form what you need. The arches and handsome sand home contain them.[end if][cycling]";
-	if location of player is Den Loft:
-		if yapper is visible:
-			try objhinting yapper instead;
-		try objhinting dialer instead;
-	all-say "There is nothing more I can find to do here. Maybe you'll want to hint a specific thing instead." instead;
+	else:
+		all-say "I can't find anything to try to do right now. Maybe hint a specific thing instead.";
+	the rule succeeds;
 
 book towers-hinting
 
@@ -52956,82 +53001,110 @@ to say current-mackiness:
 	choose row mack-row in table of nasty guys;
 	say "[adverb-to-say entry in upper case]";
 
-carry out otters-hinting:
+to decide which thing is otters-cur-item:
 	if player is in Bleary Barley:
 		if b-b is reflexive:
-			try objhinting b-b instead;
-		if Ed Riley is visible:
-			try objhinting Ed Riley instead;
-		all-say "You made a way west. You're done here." instead;
+			decide on b-b;
+		if Ed Riley is in Bleary Barley:
+			decide on Ed Riley;
 	if player is in fro:
-		if Gretta is visible:
-			try objhinting Gretta instead;
-		all-say "You rescued Gretta Garett-Tatger. You're done here[if alcoves is unvisited], but you may want to try to go west[else if inhib is true], but you need to go north or south to regain your powers[end if]." instead;
+		if Macks are in fro:
+			decide on Gretta;
+		if atmo-moat is in fro and inhib is false:
+			decide on atmo-moat;
 	if player is in bran barn:
-		if inhib is false:
-			unless p-2 is reflexed:
-				all-say "This area isn't critical since you've solved the loop pool, but it'll get extra points.[paragraph break]";
-		if althoughed is false:
-			try objhinting mr-l instead;
+		if ghoul hat is in bran barn:
+			decide on ghoul hat;
 		if p-2 is in bran barn:
-			try objhinting p-2 instead;
-		all-say "You recovered your powers, so there's nothing more to do here." instead;
+			decide on p-2;
 	if player is in loop pool:
-		if inhib is false:
-			unless sea cube is in lalaland and eels are in lalaland:
-				all-say "This area isn't critical since you've solved the bran barn, but it'll get extra points.[paragraph break]";
 		if sea cube is not in lalaland:
-			try objhinting sea cube instead;
+			decide on sea cube;
 		if eels are not in lalaland:
-			try objhinting eels instead;
-		all-say "You recovered your powers, so there's nothing more to do here." instead;
-	if player is in Anger Pit:
-		if sly imp is visible:
-			try objhinting sly imp instead;
-		all-say "The path north is cleared[if number of reflexive animals in wire deck <= 1], and you've taken care of the wire deck, so you can probably retreat[else], and you still have work there[end if]." instead;
-	if player is in Anteroom:
-		if whiners are visible:
-			try objhinting whiners instead;
-		all-say "The path south is cleared[if number of animals in wire deck >= 3], and you've taken care of the preserve, so you can probably retreat[else], and you still have work there[end if]." instead;
-	if player is in wickeder wire deck:
-		if inhib is true:
-			all-say "You need to get your powers back before you do anything. Look around [if fro is visited]the frontage[else]west of the barley[end if]." instead;
-		if owls are visible:
-			try objhinting owls instead;
+			decide on eels;
+	if player is in anger pit:
+		if sly imp is in anger pit:
+			decide on sly imp;
+	if player is in anteroom:
+		if whiners are in anteroom:
+			decide on whiners;
+	if player is in wire deck:
+		if owls are in wire deck:
+			decide on owls;
 		if number of visible reflexive animals > 1:
 			if satyr is not reflexed:
-				try objhinting satyr instead;
+				decide on satyr;
 			if badger is not reflexed:
-				try objhinting badger instead;
+				decide on badger;
 			if leopard is not reflexed:
-				try objhinting leopard instead;
+				decide on leopard;
 			if ocelots are not reflexed:
-				try objhinting ocelots instead;
-		all-say "[if number of visible reflexive animals is 1]You don't need to do anything with the [random visible reflexive animal], but you can.[else]You've got all the animals here on your side.[end if]" instead;
+				decide on ocelots;
 	if player is in perverse preserve:
-		if inhib is true:
-			all-say "You need to get your powers back before you do anything. Look around [if fro is visited]the frontage[else]west of the barley[end if]." instead;
 		if raptor is visible:
-			try objhinting raptor instead;
+			decide on raptor;
 		if number of visible pre-animal things is 0:
-			all-say "You've summoned all the animals here, so you can move on." instead;
+			decide on player;
 		if number of visible pre-animal things is 1:
-			all-say "You've summoned all you need to, though you can still do something with the [random visible pre-animal things]." instead;
+			decide on player;
 		if nails are visible:
-			try objhinting nails instead;
+			decide on nails;
 		if pines are visible:
-			try objhinting pines instead;
+			decide on pines;
 		if corona are visible:
-			try objhinting corona instead;
+			decide on corona;
 		if thrones are visible:
-			try objhinting thrones instead;
+			decide on thrones;
 	if player is in alcoves:
-		if Merle is visible:
-			try objhinting Merle instead;
-		all-say "Your destiny awaits west. Hopefully you will have enough allies for the big fight." instead;
-	if player is in Reclusion Inclosure:
-		try objhinting Elvira instead;
-	all-say "There seems to be nothing to do here." instead;
+		if parrot is in alcoves:
+			decide on parrot;
+		if Merle is in alcoves:
+			decide on Merle;
+	if inhib is true:
+		decide on the player;
+	if player has medals and medals are not reflexed:
+		decide on medals;
+	if player has whistle and whistle is not reflexed:
+		decide on whistle;
+	if current quip is final-quip:
+		decide on elvira;
+	decide on the player;
+
+to say loop-pool-already:
+	say "[one of]The bran barn isn't critical since you've solved the loop pool, but it'll get extra points.[paragraph break][or][stopping]";
+
+to say bran-barn-already:
+	say "[one of]The loop pool isn't critical since you've solved the bran barn, but it'll get extra points.[paragraph break][or][stopping]";
+
+to say tho-work:
+	say ", though you still have work there[if inhib is true], which you might not be up for yet[end if]"
+
+carry out otters-hinting:
+	unless otters-cur-item is player:
+		try objhinting otters-cur-item instead;
+	if player is in Bleary Barley: [if there is no item, see what to do next based on where we can go]
+		all-say "You made a way west. You're done here." instead;
+	else if player is in fro:
+		all-say "[if gretta is in fro]Gretta's advice may prove useful. [else]With Gretta gone, [end if]You're done here[if alcoves is unvisited], but you may want to try to go west[else if inhib is true], but you need to go north or south to regain your powers[end if].";
+	else if player is in loop pool or player is in bran barn:
+		all-say "You recovered your powers, so there's nothing more to do here.";
+	else if player is in Anger Pit:
+		all-say "The path north is cleared[if number of reflexive animals in wire deck <= 1], and you've taken care of the wire deck, so you can probably retreat[else][tho-work][end if].";
+	else if player is in Anteroom:
+		all-say "The path south is cleared[if number of animals in preserve >= 3], and you've taken care of the preserve, so you can probably retreat[else][tho-work][end if].";
+	else if player is in wickeder wire deck or player is in perverse preserve:
+		if inhib is true:
+			all-say "You need to get your powers back before you do anything. Look around [if fro is visited]the frontage[else if ed riley is in barley]and try to get past Ed Riley[else]west of the barley[end if].";
+		else:
+			if player is in perverse preserve:
+				all-say "You've re-summoned all the animals you need to[if number of pre-animal things in preserve is 1], though you can also try to fix the [random visible pre-animal thing][end if].";
+			else:
+				all-say "You've helped all the animals you need to[if number of reflexive animals in wire deck > 0], but you can still try to help the [list of reflexive animals in wire deck][end if].";
+	else if player is in alcoves:
+		all-say "Your destiny awaits west. Hopefully you will have enough allies for the big fight.";
+	else:
+		all-say "There seems to be nothing to do here.";
+	the rule succeeds;
 
 to say to-make-ani:
 	if number of pre-animal things > 0:
@@ -53040,7 +53113,6 @@ to say to-make-ani:
 		say "The [MY] can become a [the-to entry].[line break]";
 
 definition: a thing (called X) is pre-animal:
-	if X is not visible, decide no;
 	if X is corona or X is nails or X is thrones or X is pines, decide yes;
 	decide no.
 
