@@ -283,11 +283,11 @@ table of megachatter [tmc] [may not be alphabetized since some rules must come b
 mytab	eturn	curidx	maxidx	go-ahead	whichreg	descr	prefix	suffix	lasties	maxbeforepause	done-once	init-order	table-size	reps
 table of undo rejects	false	0	0	undo-rej rule	lll	"Undo rejects"	--	""	"'Do-over overdo.'"
 table of undo allows	false	0	0	undo-ok rule	lll	"Successful undo responses"	--	""	"'Do? Er, re-do.' (Last one. Stale? NO.)"
-table of random books	false	0	0	read-books rule	manor	"All the books in your bookshelf"	"[i]"	"[r]"	"our own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1
+table of random books	false	0	0	read-books rule	manor	"All the books in your bookshelf"	"[i]"	"[r]"	"your own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1
 table of ad slogans	true	0	0	blurby rule	manor	"All the ads in the Dope Op-Ed"	--	""	"HANKER! HARKEN! you read. With that general ad, it's back to the start."
 table of mob chants	false	0	0	mob-chanting rule	manor	"Mob chants (LISTEN post-Gunter in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"They finish fishin[']."
-table of idiotic lecture points	true	0	0	lecture-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	" [ted-die]."	"The lecturer flips back to the start of his keystone keynotes, resuming his ol['] mongo monolog.[lby]"	20
-table of overdone movies	true	0	0	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer alludes to "	""	"The lecturer reminds the crowd [i]Dosing Doings[r] remains the universal classic."	20
+table of idiotic lecture points	true	0	0	lecture-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	" [ted-die]."	"The lecturer flips back to the start of his keystone keynotes, resuming his ol['] mongo monolog."	20
+table of overdone movies	true	0	0	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	""	"The lecturer reminds the crowd [i]Dosing Doings[r] remains the universal classic."	20
 table of sicko movies	false	0	0	movie-over-ad rule	stores	"Store C videos (parental advisory)"	"You peruse the movies: "	""	--	--	false	0	0	5
 table of store c competitors	false	0	0	compet-over-ad rule	stores	"Store C competitors"	"You're promised better prices and service than "	"."	"Finally, there's a put-down of Twisted Twit Ed's."
 table of store c ads	false	0	0	read-c rule	stores	"Store C advertisements (parental advisory)"	--	""	"'Wanker? Ew, rank!' someone hisses at you. Yup, you've been reading a while."
@@ -295,37 +295,37 @@ table of tokers nonsense	true	0	0	ohai-tokers rule	stores	"The tokers['] chat[if
 table of moralizers	false	0	0	read-pious-1 rule	routes	"Moralizers[c-c-u]"	--	""	--
 table of rev ali advice	false	0	0	read-pious-2 rule	routes	"Rev. Ali's hot takes[c-c-u]"	--	"[randexc]"	"an epilogue hand-written in: [i]sad, rash [if censor-minor is true](mean name)[else]hardass[end if][r], which is refreshing."
 table of horbert musings	true	0	0	horby rule	routes	"Brother Horbert's musings[c-c-u]"	"Brother Horbert mumbles something to himself... [i]"	"[r]"	"Brother Horbert mumbles [i]Ah, even heaven...[r] A pause. His thoughts may loop again--like people's wanderings in the mesa."	40
-table of horbert farewells	false	0	0	horb-bye rule	routes	"Brother Horbert's blessings[c-c-u]"	"Brother Horbert speaks as you leave: [i]"	"[r][line break]"	"Brother Horbert's face shows neat, epic patience as you leave, again."	40
+table of horbert farewells	false	0	0	horb-bye rule	routes	"Brother Horbert's blessings[c-c-u]"	"Brother Horbert speaks as you leave: [i]"	"[r][pre-lb]"	"Brother Horbert's face shows neat, epic patience as you leave, again."	40
 table of missing deli foods	false	0	0	ask-deli rule	routes	"Non-foods at the Idle Deli[indic of routes]"	--	""	"'Not even spoiled old pies...'"
 table of checklist items	false	0	0	read-tec rule	troves	"SlickTech Checklist to-dos[indic of troves]"	--	""	"Wow! That's a lot to do. You need to sit and think and build up to believing you can do it all. And quickly."
 table of DIVORCES articles	false	0	0	read-divorces rule	troves	"'Fascinating' DIVORCES articles[indic of troves]"	--	""	"an interview with an influential mayor who knows what's what: Ah, Mr. Harm![paragraph break]Well, they saved the worst for last. You could reread if you want."
-table of ethics advice	false	0	0	read-eths rule	troves	"Advice from Pa, Egg, Pea[eisiping]"	"[one of]There is some blurb about how REAL CHANGE COMES FROM WITHIN and how you shouldn't look to change a clover into Velcro or any such nonsense. Also how this book is better than [i][twiddle of table of self-help bestsellers and 3][r].[paragraph break][or][stopping]One random  'thought-improving' passagefrom Peg A. Page reads: "	""	"You've reached the end, filled with [crap]piest tips recap. Rereading may or may not be less painful the second time through."
+table of ethics advice	false	0	0	read-eths rule	troves	"Advice from Pa, Egg, Pea[eisiping]"	"[one of]There is some blurb about how REAL CHANGE COMES FROM WITHIN and how you shouldn't look to change a clover into Velcro or any such nonsense. Also how this book is better than [i][twiddle of table of self-help bestsellers and 3][r].[paragraph break][or][stopping]One random  'thought-improving' passage from Peg A. Page reads: "	""	"You've reached the end, filled with [crap]piest tips recap. Rereading may or may not be less painful the second time through."
 table of gritty dialogue	true	0	0	say-gritty rule	troves	"Gritty Spoiloplis dialogue[indic of troves]"	"Gritty sounds come, then go, from [one of]your testers, the tersest[or]the[stopping] streets: "	""	"Tense silence replaces the gritty sounds, which will probably return and cycle. People making the same mistakes they did before. But you are bound for better things--or, with that book, you'd better be."
 table of non-checklists	false	0	0	desk-look rule	troves	"Slick-Tech Checklist alternatives[if fiefco is unvisited] (Troves)[end if]"	--	""
 table of posh dialogue	true	0	0	say-posh rule	troves	"Posh Spoiloplis dialogue[indic of troves]"	"Upper-class concerns: "	""	"A low, snide 'Old is new, wild ones.' Cue repetition."
-table of posse bosses	false	0	0	in-lot-or-ruin rule	troves	"Rustin['] Ruin St./Loudes Used Lot bad guys[indic of troves]"	"maybe "	""	"not Mean Roy Maroney, anymore--he's the last of them"
-table of prestigious bums	false	0	0	read-deal rule	troves	"'Inspirational' Yorpwaldians in [i]DEAL[r][indic of troves]"	--	"Aliver Elvira, in case anyone forgot"
-table of real estate ads	false	0	0	read-brochure rule	troves	"Rotunda brochure locations[indic of troves]"	"It's for real estate by Sir Dee. One page header blares [i]Home's so Meh? "	".[r][paragraph break]The page-end reads RESIDE! RESIDE! RESIDE!"	"Secretcester! OWN NOW! is the final entry."
+table of posse bosses	false	0	0	in-lot-or-ruin rule	troves	"Rustin['] Ruin St./Loudest Used Lot bad guys[indic of troves]"	"maybe "	""	"not Mean Roy Maroney, anymore--he's the last of them"
+table of prestigious bums	false	0	0	read-deal rule	troves	"'Inspirational' Yorpwaldians in [i]DEAL[r][indic of troves]"	--	""	"Aliver Elvira, in case anyone forgot"
+table of real estate ads	false	0	0	read-brochure rule	troves	"Rotunda brochure locations[indic of troves]"	"It's for real estate by Sir Dee. One page header blares [i]Home's so Meh? "	"[r]"	"Secretcester! OWN NOW! is the final entry."
 table of Leo-Rand chitchat	true	0	0	chitchat-over-idols rule	presto	"Leo and Rand's chatter[if rand is fightin] (STORE P)[end if]"	--	""	"'Heya.' / 'Yeah?' An awkward silence follows.[paragraph break]They've run out of conversation, but fortunately (for them,) they forgot it all, so they can just restart."
-table of Leo-Rand idols	true	0	0	Leo-Rand-cry rule	presto	"Leo and Rand's idols[if rand is fightin] (STORE P)[end if]"	--	"[one of]Leo and Rand[or]Rand and Leo[at random] sadly admit they're no"
+table of Leo-Rand idols	true	0	0	Leo-Rand-cry rule	presto	"Leo and Rand's idols[if rand is fightin] (STORE P)[end if]"	"[one of]Leo and Rand[or]Rand and Leo[at random] sadly admit they're no"	--
 table of catechism pages	false	0	0	catechism-over-research rule	presto	"Hacks['] shack catechism entries[indic of presto]"	--	""	"After the final 'Ok, worn? Work on or know,' only a nixed-pap Appendix is left. But for reading this, appoint you a rarest raster starer. Have an, er, star."
 table of research topics	false	0	0	research-over-doctors rule	presto	"[one of]Some[or]More[stopping] explanation of research by Arch Rees:[indic of presto]"	"Arch Rees[one of][or] further[stopping] explaining research on "	"."
 table of smartypants	false	0	0	read-docs rule	presto	"Ph. D. researchers"	"The highly technical yet useful research of "	"."
 table of bedding brands	false	0	0	read-futon rule	presto	"Sleep aide brands"	--	--	"Smartest Mattress, hopefully cleaner than the one you remember from The Ol['] Hotel in the Metros behind Store M."
 table of bar dialogue	true	0	0	bar-over-comp rule	oyster	"Posh Hops Shop action[indic of oyster]"	"[one of]Whew. Rough talk and action here. [or]More rough talk and action. [or][stopping]" 	""	"You've seen it all. Time to take decisive action(s) of your own."
-table of competing bars	true	0	0	in-bar rule	oyster	"Posh Hops Shop competitors[indic of oyster]"	"Someone says the Posh Hops Shop [one of]has nothing on[or]sure beats[at random] "	"."
+table of competing bars	true	0	0	in-bar rule	oyster	"Posh Hops Shop competitors[indic of oyster]"	"Someone says the Posh Hops Shop [one of]has nothing on[or]sure beats[at random] "	"."	"Everyone agrees Soph Pho's is a total rip-off of, well, here."
 table of Casper mumbles	false	0	0	casper-talk rule	oyster	"Casper's mumblings[indic of oyster]"	""	""
 table of fish fries	true	0	0	insult-over-girls rule	oyster	"Carps/pikes trout-bullying [if anger range is visited]in anger range[else](STORE Y)[end if]"	--	""	"The bullies call him 'A soft fatso so fat.' They're out of ideas and claim it's the trout's fault for not being interesting enough. The ratters restart samer smear-reams."
 table of unpopular girls	true	0	0	ohai-bullies rule	oyster	"Unpopular girls carps/pikes mention[indic of oyster]"	"The bullies insinuate the trout [one of]likes[or]isn't good enough for[cycling] "	"."	"Zina is the last, and wrongest, girl they accuse the trout of liking."
 table of tuna gossip	true	0	0	gossip-over-chatter rule	oyster	"Aunt Tuna's gossip[indic of oyster]"	"Aunt Tuna gossips: "	""	"'Edda Dade. Dead. Cleo's Close. Dorithy--Thyroid. Halle's a shell. All she... Heather's Heart. She... diabetes, die, beast!' Aunt Tuna pauses, head in hands. That was the final thing she'd been repressing."
 table of aunt tuna chatter	true	0	0	ohai-tuna rule	oyster	"Aunt Tuna's complaints[indic of oyster]"	"[one of]'Oh, dear! Do hear!' / 'D'oh...are...' Aunt Tuna cuts you off and[or]Aunt Tuna[stopping] "	""	"Aunt Tuna, as her nags snag, restarts her prattle platter of how she is BEYOND done-by..."
 table of theses	false	0	0	screed-read rule	oyster	"Theses Sheets notes[indic of oyster]"	""	""	"Life Conks Nice Folks![paragraph break]Well, that's probably enough proof you're dealing with bad guys, here."
-table of rodney bluster	true	0	0	rodney-here rule	towers	"Rodney's bluster[indic of towers]"	"Rodney [if number of visible warriors is 7]informs his gang[else if number of visible warriors > 3]yells at his remaining troops[else if number of visible warriors is 2]yells to his remaining companion[else]mutters to himself[end if] about "	"."	"repeating, then inept rage and a petering."
+table of rodney bluster	true	0	0	rodney-here rule	towers	"Rodney's bluster[indic of towers]"	"Rodney [if number of visible warriors is 7]informs his gang[else if number of visible warriors > 3]yells at his remaining troops[else if number of visible warriors is 2]yells to his remaining companion[else]mutters to himself[end if] about "	"."	"Rodney warns about repeating, then inept rage and a petering.[pre-lb]"
 table of gizmo parts	false	0	0	examining-gizmo rule	towers	"Parts of the I ZOMG GIZMO[indic of towers]"	--	""	"Ulti-Util, the most powerful, confusing and hidden of all the gizmo parts"
-table of Elmer and Merle squabbles	true	0	0	alcove-talk rule	otters	"Elmer and Merle's chat"	--	""	"Since they're kinda evil, or at least serving someone evil, they give a greedy look as they restart their complaint routines."
+table of Elmer and Merle squabbles	true	0	0	alcove-talk rule	otters	"Elmer and Merle's chat"	--	""	"Since they're kinda evil, or at least serving someone evil, they give a greedy look as they restart their complaint routines.[pre-lb]"
 table of Elvira battle cries	false	0	0	last-battle rule	otters	"Elvira's battle cries"	--	""	""
 table of Elvira machines	false	0	0	bzzt rule	otters	"Elvira's machines"	--	""	""
-table of Elvira taunts	false	0	0	Elvira-taunt rule	otters	"Elvira's taunts"	--	""	"'Stellar staller!'  Dang, the simplest ones hurt the most."
+table of Elvira taunts	false	0	0	Elvira-taunt rule	otters	"Elvira's taunts"	--	""	"'Stellar staller!' Dang, the simplest ones hurt the most.[pre-lb]"
 table of animal friends	false	0	0	bzzt rule	otters	"Your animal friends"	--	""
 table of political slogans	false	0	0	sloganing rule	others	"Political slogans"	--	""
 table of selly yells	false	0	0	clearing-listen rule	others	"Selly Yells[indic of others]"	""	""	"A big errant inert brag pauses the bartering for a minute."
@@ -352,7 +352,7 @@ table of oldies singers	false	0	0	bzzt rule	manor	"Initial oldies singers[elv-ar
 table of lousy hit songs	false	0	0	bzzt rule	manor	"Bad songs[elv-art]"	--	""
 table of self-help bestsellers	false	0	0	bzzt rule	troves	"Self-help bestsellers[eisiping]"	--	""
 table of songs you could write	false	0	0	bzzt rule	troves	"Songs you write on solving Troves"	--	""
-table of sleep rejects	false	0	0	am-sleeping rule	lll	"Sleeping rejects"	--	"[line break]"
+table of sleep rejects	false	0	0	am-sleeping rule	lll	"Sleeping rejects"	--	"[pre-lb]"
 [tmc]
 
 to say eisiping:
@@ -10969,6 +10969,8 @@ check going north in Gates Stage:
 		append "Test passed for Others.[line break]" to the file of debuggery;
 	choose the row with final response activity of putzing about in the table of final question options;
 	now final response activity entry is nextlisting; [this is an awful hack but I'd rather not reveal this til after you beat OTHERS]
+	choose the row with final response activity of putzing around in the table of final question options;
+	now final response activity entry is prevlisting;
 	choose the row with final response activity of nrling about in the table of final question options;
 	now final response activity entry is nextreglisting;
 	choose the row with final response activity of potzing around in the table of final question options;
@@ -16076,7 +16078,7 @@ book Dour Tan Rotunda
 
 Dour Tan Rotunda is an innie room in Troves. "This could also be a rotund rotunda, but obesity is not very posh. Nobody is quite happy here. It's posh enough, but designed specifically to make people want even more. There's not much to do except stare at a brochure just lying around. But oh, what a brochure!".
 
-a brochure is vanishing scenery in Dour Tan Rotunda. "[one of]'Got here? No debt to bend? Go there!'[paragraph break][or][stopping][randbla]"
+a brochure is vanishing scenery in Dour Tan Rotunda. "[one of]'Got here? No debt to bend? Go there!'[paragraph break][or][stopping][randbla]. The page-end reads RESIDE! RESIDE! RESIDE!"
 
 a-text of brochure is "RYRYRY". b-text of brochure is "R???RG".
 
@@ -17923,7 +17925,7 @@ hydra-known is a truth state that varies.
 check going west in Alcoves (this is the need quick rule):
 	if parrot is in lalaland and raptor is in lalaland:
 		if medals are not reflexed:
-			say "Your medals clink as you go west. Elvira hears them and ambushes you! She touches what you recognize as the Ultimate Mutilate-It Amulet and fires the legendary Phrase Shaper Phaser at you. You think of possible replies, of ways to block her, as you slump to the ground. But you are not fast enough. Your last thought is of the medals Gretta gave you that you never quite used.";
+			say "Your medals clink as you go west. Elvira hears them and ambushes you! She touches what you recognize as the Ultimate Mutilate-It Amulet and fires the legendary Phrase Shaper Phaser at you. You think of possible replies, of ways to block her, as you slump to the ground. But you are not fast enough. The last thing you hear as you slump to the ground is Gretta's medals clanking--the ones you never quite used[if medals are prefigured], though you sort of figured how, earlier[end if].";
 			get-dead;
 			follow the shutdown rules instead;
 		continue the action;
@@ -53399,7 +53401,9 @@ carry out liliing:
 	if there is a lasties entry:
 		say "LAST: [lasties entry][paragraph break]";
 	else:
-		say "No final entry.";
+		say "No final entry.[line break]";
+	if there is a prefix entry:
+		say "PREFIX: [prefix entry][paragraph break]";
 	repeat with ABC running from 1 to number of rows in my-table:
 		if remainder after dividing cur-e by threshold is 0 and cur-e > 0:
 			say "([cur-e] of [number of rows in my-table]) so far. Type q to quit the list or any other key to continue.";
@@ -53409,7 +53413,7 @@ carry out liliing:
 				the rule succeeds;
 			say "[jjk] continued.";
 		increment cur-e;
-		say "[abc]. [if there is a prefix entry][prefix entry][end if][blurb in row abc of my-table][if there is a suffix entry][suffix entry][end if][line break]";
+		say "[abc]. [blurb in row abc of my-table][if there is a suffix entry][suffix entry][end if][line break]";
 	try-ln;
 	if cur-e <= number of rows in my-table:
 		say "Total elements = [number of rows in my-table].";
@@ -53559,6 +53563,7 @@ section bogus activities
 [bogus activities]
 
 nrling about is an activity. [nextreglisting]
+putzing around is an activity.
 putzing about is an activity.
 potzing around is an activity.
 potzing about is an activity.
@@ -53573,6 +53578,7 @@ final question wording	only if victorious	topic		final response rule		final resp
 "check what you may've MISSED (minor spoilers) point-wise"	true	"missed"	--	showing what the player missed
 --	false	"l/list"	--	potzing about
 --	false	"n/ln/nl"	--	putzing about
+--	false	"p/pl"	--	putzing around
 --	false	"la/lh/lm/lp/ls/lt/lu/lv/lw/ly"	--	reging about
 --	false	"nr/lr"	--	nrling about
 "[one of]FORM (OF MR)[or](M OR F) FORM[in random order] to see where your sex matters"	true	"form" or "form of mr" or "m or f form"	--	sexsorting
@@ -53623,15 +53629,25 @@ rule for demo dome moding:
 	now all held things are in lalaland;
 	the rule succeeds;
 
-nextlisting is an activity.
-
 curlistnum is a number that varies.
+
+nextlisting is an activity.
 
 rule for nextlisting:
 	increment curlistnum;
 	if curlistnum > number of rows in table of megachatter:
 		say "(Cycling back to 1.)[line break]";
 		now curlistnum is 1;
+	try liliing curlistnum;
+	next-list-poke;
+
+prevlisting is an activity.
+
+rule for prevlisting:
+	decrement curlistnum;
+	if curlistnum is 0:
+		say "(Cycling back to [number of rows in table of megachatter].)[line break]";
+		now curlistnum is number of rows in table of megachatter;
 	try liliing curlistnum;
 	next-list-poke;
 
@@ -53660,11 +53676,9 @@ showing regional lists is an activity.
 megsort is a truth state that varies.
 
 to sort-meg:
-	d "1.";
 	if megsort is false:
 		now megsort is true;
 		sort table of megachatter in reverse table-size order;
-	d "2.";
 
 table of regabr
 this-reg	this-top
@@ -53719,10 +53733,11 @@ rule for showing list of lists:
 		if there is a mytab entry:
 			now nr is number of rows in mytab entry;
 		else:
+			d "Blank row.";
 			now nr is 16; [undos]
 		if there is a lasties entry and number of characters in lasties entry > 2:
 			increment nr;
-		if this-reg entry is others and others is unsolved:
+		if whichreg entry is others and others is unsolved:
 			say "[myrow]. (REDACTED) (for OTHERS)[line break]";
 		say "[myrow]. [descr entry] ([nr] anagrams)[line break]";
 		if the remainder after dividing myrow by 20 is 0:
@@ -55535,8 +55550,8 @@ carry out otwining:
 		now Elmer is in lalaland;
 		now adjsolve is 3;
 		now nounsolve is 3;
-		now whistle is reflexed;
 		now player is in alcoves;
+	say "Otters endgame cheats are invoked! You may wish to QUICKLY before attacking Elvira, although of course the instadeath if you forget is relevant too. Also, you need to play the whistle DEEPLY or it won't work in the Inclosure.";
 	the rule succeeds;
 
 chapter mf
