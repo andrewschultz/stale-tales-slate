@@ -6359,23 +6359,23 @@ to say macks-not-arg:
 
 to say macks-add-two of (nu - a number):
 	let new-num be nu + 176173091;
-	if there is a mackhash of new-num in table of nasty guys:
-		choose row with mackhash of new-num in table of nasty guys;
+	if there is a mackhash of new-num in table of mack behaviors:
+		choose row with mackhash of new-num in table of mack behaviors;
 		say "[macks-not-arg][if still-doable entry is false]Besides, you already did something like that[else]Your word ended too...abruptly[end if].";
 	else:
 		say "[bug-report][mack-oops]";
 
 to say macks-wrong-abbrev of (nu - a number):
 	let new-num be nu + 98806685;
-	if there is a mackhash of new-num in table of nasty guys:
-		choose row with mackhash of new-num in table of nasty guys;
+	if there is a mackhash of new-num in table of mack behaviors:
+		choose row with mackhash of new-num in table of mack behaviors;
 		say "[macks-not-arg][if still-doable entry is false]Besides, you already did something like that[else]You think how to alter that last word, busily[end if].";
 	else:
 		say "[bug-report][mack-oops]";
 
 to say mack-clue of (nu - a number):
-	if there is a mackhash of nu in table of nasty guys:
-		choose row with mackhash of nu in table of nasty guys;
+	if there is a mackhash of nu in table of mack behaviors:
+		choose row with mackhash of nu in table of mack behaviors;
 		say "You look for a way to redirect the conversation, even after it changes subject. But--hmm, [if still-doable entry is false]you already did something like that[else]not quite like that[end if]";
 	else:
 		say "[bug-report][mack-oops]";
@@ -7714,6 +7714,7 @@ when play begins (this is the hint and other randomization rule):
 	else:
 		now carps-pref is false;
 	now a random badbook is in hacks' shack;
+	sort table of animal randomness in random order;
 	sort the table of xibits in random order;
 	if a random chance of 1 in 2 succeeds:
 		now last-wall is inform 7 wall;
@@ -12539,7 +12540,7 @@ after fliptoing lecturer (this is the disable the macks slightly too rule) :
 	now reflections are in lalaland;
 	increase headaches by 10;
 	now lectures is shunned;
-	choose row with mackhash of 748843503 in table of nasty guys; ["tediously"]
+	choose row with mackhash of 748843503 in table of mack behaviors; ["tediously"]
 	now still-doable entry is false;
 	move player to Strip of Profits;
 	continue the action;
@@ -16945,13 +16946,13 @@ carry out discerning:
 	the rule succeeds.]
 
 to say mack-actions:
-	let xy be a random number from 1 to the number of rows in table of nasty guys;
+	let xy be a random number from 1 to the number of rows in table of mack behaviors;
 	let zw be macked-out;
 	while zw < 3:
 		increment xy;
-		if xy > number of rows in table of nasty guys:
+		if xy > number of rows in table of mack behaviors:
 			now xy is 1;
-		choose row xy in table of nasty guys;
+		choose row xy in table of mack behaviors;
 		if still-doable entry is true:
 			increment zw;
 			if zw is 2:
@@ -17254,7 +17255,7 @@ carry out ladying:
 	let mackstate be false;
 	if macks are not visible:
 		say "[reject]" instead;
-	repeat through table of nasty guys:
+	repeat through table of mack behaviors:
 		if the player's command matches the text "[adverb-to-say entry]":
 			now mackstate is true;
 			if ff is true:
@@ -17313,38 +17314,38 @@ mack-row is a number that varies. mack-row is 1.
 
 when play begins (this is the mack-randomize rule):
 	let my-wt be 0;
-	repeat through table of nasty guys:
+	repeat through table of mack behaviors:
 		now wt-rand entry is number of characters in adverb-to-say entry;
-	sort the table of nasty guys in random order;
-	repeat through table of nasty guys:
+	sort the table of mack behaviors in random order;
+	repeat through table of mack behaviors:
 		increment my-wt;
 		increase wt-rand entry by my-wt;
-	sort the table of nasty guys in random order;
-	repeat through table of nasty guys:
+	sort the table of mack behaviors in random order;
+	repeat through table of mack behaviors:
 		now its-been-done entry is false;
 
 every turn when macks are visible (this is the macks hitting on rule):
 	let this-bool be false;
 	let recyc be false;
 	increment mack-row;
-	if mack-row > number of rows in table of nasty guys:
+	if mack-row > number of rows in table of mack behaviors:
 		now mack-row is 1;
 		now recyc is true;
-	choose row mack-row in the table of nasty guys;
+	choose row mack-row in the table of mack behaviors;
 	now this-bool is still-doable entry;
 	while this-bool is false:
 		increment mack-row;
-		if mack-row > number of rows in table of nasty guys:
+		if mack-row > number of rows in table of mack behaviors:
 			now mack-row is 1;
-		choose row mack-row in the table of nasty guys;
+		choose row mack-row in the table of mack behaviors;
 		now this-bool is still-doable entry;
-	choose row mack-row in the table of nasty guys;
+	choose row mack-row in the table of mack behaviors;
 	say "[dumb-action entry][line break]";
 	now its-been-done entry is true;
 	if recyc is true:
 		say "The macks take a break. They've [one of][or]once again [stopping]babbled for long enough, and about enough, they can repeat their 'exciting' conversation all over again[if macked-out > 0], except for what you managed to alter[end if]."
 
-table of nasty guys
+table of mack behaviors [this is where we report what the macks do, have been caught at, etc.]
 dumb-action	still-doable	mack-do	adverb-to-say	mack-phail	its-been-done	set-txt	second-text	mackhash	wt-rand
 "Amazingly, the macks make projects like drywalling seem almost exciting--how competent they are, how incompetent some other guys are. Maybe it's just they're talking so fast, that they make [i]drywalling[r] interesting."	true	"blabbing about drywalling"	"drawlingly"	"The macks begin talking slower, and suddenly, their conversational hold is broken. Gretta realizes there's no good way to make home repair discussions more exciting and says so. She looks relieved."	false	"[if cheat-on is false]RRYRRYRRRO[else]PPYPRYRRRO[end if]"	--	592962469	10
 "Each mack discusses how he outyields someone else with a lousy diet, all, 'You! Idlest!' You see red."	true	"disparaging a lousy diet"	"tediously"	"The macks begin whinging with the same old argument, going dreadfully off-subject, and so forth. Suddenly, their nonsense is less believable, or fun to believe."	false	"RYRYYYRRO"	--	748843503	9
@@ -17367,7 +17368,7 @@ dumb-action	still-doable	mack-do	adverb-to-say	mack-phail	its-been-done	set-txt	
 "The macks begin lawyering about why she should probably choose ONE of them. You see red, a bit."	true	"lawyering"	"wearingly"	"They start repeating their arguments, and finally, Gretta draws up the courage to explain it's getting old."	false	"[if cheat-on is false]RYYRYRRRO[else]RYYRYRRRO[end if]."	--	645925650
 
 check scaning macks: [?? doesn't give text at top]
-	choose row mack-row in table of nasty guys;
+	choose row mack-row in table of mack behaviors;
 	say "The settler switches to [set-txt entry][line break][one of][line break]Hmm, seems it changes as the subject does. Though maybe you can bring up a past subject to annoy them.[or][stopping]" instead;
 
 book Bran Barn
@@ -51425,6 +51426,7 @@ carry out objhinting (this is the pick object to hint rule) :
 			now eisihint is true;
 			all-say "You try and imagine what [i]Pa, Egg, Pea[r] might say if it were actually about helping everyday people. Here's what you come up with.[line break]";
 		choose row with hint-entry of noun in the table of hintobjs;
+		now last-thing-hinted is noun; [for the special case HINT LEOPARD.HINT where SATYR might be the first in the random table. Less jarring this way.]
 		all-say "[advice-entry entry]" instead;
 	if noun is a portal:
 		all-say "You can just enter it.";
@@ -52998,7 +53000,7 @@ to any-guardian-hint:
 book otters-hinting
 
 to say current-mackiness:
-	choose row mack-row in table of nasty guys;
+	choose row mack-row in table of mack behaviors;
 	say "[adverb-to-say entry in upper case]";
 
 to decide which thing is otters-cur-item:
@@ -53032,14 +53034,7 @@ to decide which thing is otters-cur-item:
 		if owls are in wire deck:
 			decide on owls;
 		if number of visible reflexive animals > 1:
-			if satyr is not reflexed:
-				decide on satyr;
-			if badger is not reflexed:
-				decide on badger;
-			if leopard is not reflexed:
-				decide on leopard;
-			if ocelots are not reflexed:
-				decide on ocelots;
+			decide on animal-to-hint;
 	if player is in perverse preserve:
 		if raptor is visible:
 			decide on raptor;
@@ -53047,14 +53042,7 @@ to decide which thing is otters-cur-item:
 			decide on player;
 		if number of visible pre-animal things is 1:
 			decide on player;
-		if nails are visible:
-			decide on nails;
-		if pines are visible:
-			decide on pines;
-		if corona are visible:
-			decide on corona;
-		if thrones are visible:
-			decide on thrones;
+		decide on animal-to-hint;
 	if player is in alcoves:
 		if parrot is in alcoves:
 			decide on parrot;
@@ -53078,6 +53066,27 @@ to say bran-barn-already:
 
 to say tho-work:
 	say ", though you still have work there[if inhib is true], which you might not be up for yet[end if]"
+
+table of animal randomness
+this-animal
+thrones
+corona
+pines
+nails
+ocelots
+leopard
+satyr
+badger
+
+last-thing-hinted is a thing that varies. last-thing-hinted is the palm.
+
+to decide which thing is animal-to-hint:
+	if last-thing-hinted is in location of player:
+		decide on last-thing-hinted;
+	repeat through table of animal randomness:
+		if this-animal entry is in location of player and this-animal entry is reflexive:
+			decide on this-animal entry;
+	decide on the player; [this should never happen]
 
 carry out otters-hinting:
 	unless otters-cur-item is player:
@@ -53787,7 +53796,7 @@ rule for showing alternate routes:
 
 to say how-macks:
 	let got-yet be false;
-	repeat through table of nasty guys:
+	repeat through table of mack behaviors:
 		say "[unless got-yet is true], [end if]";
 		if still-doable entry is true:
 			say "[adverb-to-say entry in upper case]";

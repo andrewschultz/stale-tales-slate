@@ -1,0 +1,476 @@
+out=shuffling-invisiclues.htm
+!Shuffling Around HTML Clues
+>INTRODUCTION
+?What is my power in this game?
+Does the name of this opening room strike you as curious?
+Spoiler below, though you can guess.
+They're anagrams.
+That is your power in the game.
+>>BUSIEST SUBSITE
+?Where do I go, to start?
+None of the standard directions work.
+The passage seems to be calling you.
+You can ENTER the passage or go IN.
+?What's with all the scenery?
+It's a clue as to the game's mechanic.
+Less stuffily, you'll notice a lot of silly word tricks.
+They clue your power.
+The name list should make it obvious.
+?What's with the name list?
+All the names have something in common you (probably) don't have.
+There are 400+, so you don't need to look through all of them.
+All the first and last names make anagrams.
+>>A DRY YARD
+?What's the odor?
+It can become something more physical.
+Just switch two letters.
+Make it a DOOR.
+?Can I do anything with the bolt?
+Yes, again, switching two letters.
+It can become a BLOT, unlocking the door.
+You can enter the door after this, though you won't get maximum points.
+?Can I do anything with the bulge?
+Yes, again, switching two letters.
+It can become a BUGLE.
+You can PLAY the BUGLE to unlock the door.
+You can enter the door after this, though you won't get maximum points.
+>>THICKEST THICKETS
+?What's the toga doing here?
+Nothing. It is your first "real" test.
+You only switched two letters before, but this is a step up.
+'You GOT A believe' seems forced. On purpose.
+You may also notice that the toga smells of a barnyard.
+And flipping any two letters doesn't do too much.
+That is because it should be a GOAT.
+Once you've made the goat, just go IN.
+?Is there anything else to do here?
+Well, nothing game-critical.
+The darnels are snarled, and they make you want to lash out verbally.
+This is a seven-letter puzzle and, thus, maybe a bit tough for early on. And you have no cluing device.
+You can SLANDER the snarled darnels for an extra point.
+>>NOTICES SECTION
+?Do I need to do anything with the getaway gateway?
+No. You need someone to operate it.
+If you read the broad board, you'll see that the nametag may be something else.
+You'll also read some cues about red letters.
+?How do I get someone to help me?
+Well, there are a few clues.
+The broad board indicates you need to do something with the magenta nametag.
+The mega-ant is all red. So it is all wrong, as the board says: seeing red means you're seeing things all wrong.
+Other clues include Mt. Egana, red again.
+You can place the A's with one more clue, in particular, A TAN GEM won't help you, and it should be a lot easier.
+-A---A-. Tengama (from the nametag,) Mt. Egana and E.g, man ta! (Ta meaning goodbye) cut things down even more.
+GATEMAN. With or without the space.
+?What do I talk to the gateman about?
+It's useful to ask about the tagged gadget, so you can take it from the cabinet.
+He has some advice, like about the Inclusion-Exclusion Principle. The numbers aren't important, and it duplicates what's on the broad board, but hey.
+?What does CERTIFY/RECTIFY do?
+RECTIFY may give no letters. CERTIFY gives two.
+You can try both of them if you want.
+?What does RECUSE/SECURE do?
+RECUSE lets you skip an area. You can use only one of CERTIFY/RECTIFY once you set it.
+SECURE lets you use both of CERTIFY/RECTIFY.
+This is set for good once you leave the next room.
+?Which gadget setting is best?
+RECTIFY will give you one letter right on average. CERTIFY gives two.
+So CERTIFY makes the game easier, but RECTIFY may get you certain puzzles.
+Sometimes there'll be red clues telling you what's wrong. Those can add to either.
+?Is the dollhouse critical?
+No, but it gives you a Last Lousy Point.
+The static can be changed.
+You should use the gadget in both orientations.
+It gives you another example puzzle.
+AT---S are what you change the static to.
+There are actually only four possibilities left. You can brute force this.
+You can flip the ATTICS back, too, to get comfortable with the gadget.
+>TRIPS STRIP
+?Oh no! I broke my leg and now it's in a cast! Plus I'm lonely.
+You could use some companionship.
+If only there was a way to change the cast.
+Wait! It can be!
+Into cats.
+You can even choose what color they are...
+...since you've already imagined the cast and cats anyway.
+?Can I do anything with the stores?
+Yes. F, I, M and later R.
+Look at them for clues.
+?Store F?
+Green and brown, earth tones.
+FOREST.
+?Store I?
+It's an exit.
+Scan the Tories for an additional clue.
+SORTIE.
+?Store M?
+Mt. Rose gives a clue.
+METROS.
+?Store R?
+You can't do anything with it right away.
+It can become a RESORT once you've solved two stores--three if you SECUREd the gadget.
+>STORE F
+>>Forest
+?How do I go anywhere?
+There'll be some scenery, or something you notice.
+You can use that to determine what direction to go. It's random in each play-through.
+Or you can just find your way by accident. This wasn't intended to be a tough puzzle.
+If you smell stew, go WEST. Teas, go EAST. If you hear a shout, go SOUTH. If you see a thorn, go NORTH.
+After the Softer Forest, there's one more room with a similar plan.
+>>Self-ID Fields
+?How do I get through the turnstile in the silent rut?
+You need a disguise.
+Facial hair, glasses and nose.
+They're in the side areas.
+PUT SHADES ON NOSE
+PUT NOSE ON BEARD
+WEAR DISGUISE.N
+>>Sorted Trodes
+?What do I do with the ones?
+They become a NOSE.
+?What do I do with the noughts?
+They become a SHOTGUN.
+?What do I do with the dashes?
+They become SHADES.
+>>Stored, Er, Dots
+?What are the dots for?
+Examine them. They're frozen, protruding from the wall
+Take them to reveal the livers.
+?What do I do with the grinder?
+You need to put each liver in it.
+With the product, the livers...
+...you make a SLIVER.
+?What do I do with the sandwich?
+OPEN it and it's bread and spam.
+?What do I do with the sandwich components?
+The bread looks scuzzy.
+It becomes a BEARD.
+The spam has weird lines.
+Because it can be MAPS.
+>>Cruel Ones' Enclosures
+?The liches are scary! What do I do?
+Look at them. They may clue a word.
+They become a CHISEL.
+Now you can go back to the Storing Area and chisel the livers.
+?What do I do with the drapes?
+None will be spared.
+SPREAD.
+CUT SPREAD (with sliver)
+?That banshee is annoying! Can I get rid of it?
+It's a last lousy point, but yes.
+?Do I need anything for the next bit?
+Yes. The maps...
+...the silver...
+...and the shotgun.
+>>Ghouls' Slough
+?How do I not get lost?
+READ MAPS.
+?How do I get a loaded weapon?
+You should have the shotgun from Sorting.
+You need some ammo that will repel wolves.
+SILVER.
+PUT SILVER IN SHOTGUN.
+>>Frost Forts
+?Vowels? Words can't hurt me, can they?
+Well, apparently one would flow.
+WOLVES.
+?How do I shoot the enemies?
+SHOOT WOLVES.
+>STORE I
+>>CENTRIFUGE
+?How do I stop the spinning?
+Two ways. You can guess, using binary searches.
+Or you can note EXITS?? =~ some number.
+It must have an X, and two of (NSEW).
+SIXTEEN.
+?The room name changed! Does this mean anything?
+Only that there's not much else to do here.
+?Help! I'm locked in the nick!
+You hungry for a new location?
+KITCHEN.
+>>After escaping The Nick
+?What do I do here in the Kitchen?
+You need to make something warm.
+The ingredients are on the counter.
+You can PUT them on each other once they're made.
+?What's the spearman?
+Cheesy.
+A cheese is...
+PARMESAN.
+?What's the skate for?
+Meaty.
+STEAK.
+?What's the tall trio for?
+Doughy...
+TORTILLA.
+>>>In the fridge
+?What's the cakepan?
+An optional point, and an easy one, I hope.
+PANCAKE.
+?What's the grist?
+An optional point, and an easy one, I hope.
+GRITS.
+?Help! I have warts!
+Reverse them.
+They can become STRAW.
+You can get a container later.
+>>Room
+?What are the rubber hoses for?
+You notice your feet getting wet?
+They can become SHOES.
+?What is the cask for?
+Carrying stuff.
+But not everything.
+Some stuff requires a SACK.
+You can switch back and forth.
+The straw from the warts fits in the sack, for now.
+?Where can I go from here?
+Your gadget registers something.
+And, well, apparently you can get to the flipside.
+What do you get when you flip ROOM?
+MOOR.
+>>Stiller Trellis
+?Can I go east?
+Yes, but not right away. You need to find a third way out of the Room.
+HALLWAY under construction.
+4/7 complete with a WALL. ??
+You have a wall. It needs to be filled with something.
+HALLWAY-WALL=HAY.
+Once you have hay, PUT HAY IN WALL
+Then, HALLWAY.
+?Help! The location name changed!
+That's because you're done to the east.
+>>Moor
+?How do I get rid of the poet?
+Everything is in ANAPEST.
+ST. PAEAN is his latest work.
+Summoning a PEASANT will get him to flee.
+?What do I do for the peasant?
+He has hay, but Lord Ablemiser doesn't know the difference between that and straw.
+Warp to the room if need be. PUT STRAW IN SACK.TAKE SACK. GIVE STRAW TO PEASANT.
+Woohoo! Some hay! And another poem. A shorter one.
+?What do I do with the poem?
+It looks like you can fold it, but wait. The smilies cry out.
+The smilies can become a MISSILE. Don't worry. It's nonviolent.
+Then when you FOLD THE PAPER, it becomes a plane.
+Which can become a PANEL.
+?What do I do or build in the moor?
+You need to build something to house the missile.
+Sacred Cedars, east of the Stiller Trellis, has more information. It talks about a weapon and such but really you just need the oils. So don't reveal any more clues until you've been there.
+SILO won't work. Not a firm foundation, the muck.
+SOIL.
+Go back for more oils.
+SILO.
+?Okay, I built something. What to put on it?
+See the poem clue.
+The panel is a good start.
+PUT PANEL ON SILO.
+?What's this roadblock?
+It looks like it should lead somewhere.
+The silo also has the outline of a door--but it doesn't have a door.
+????? DOOR.
+BLACK DOOR.
+?What else can I do to get the weapon working?
+PUT DOOR ON SILO.
+PUT MISSILE IN SILO.
+?What do I push on the panel?
+HOOTS and TREES don't do much.
+What do you do with a missile?
+SHOOT it. But you cannot do so for safety reasons. It's inaccurate.
+What can TREES do? Not RESET, but...
+STEER. So...
+STEER
+PUSH STEER
+SHOOT
+PUSH SHOOT
+>>Sacred Cedars
+?Who is Lois?
+She'll provide you with something that can be transformed.
+OILS.
+?How do I get the oils?
+The sack leaks.
+But it can turn back...
+...into a CASK.
+PUT OILS IN CASK.
+You'll need to do so twice.
+?Help! Stiller Trellis changed its name!
+That was just something I put in there to make it clear players didn't need to visit Sacred Cedars again.
+Also, I thought it was a cool room name, but adding a room seemed like a bad idea. Like the Centrifuge, it's just a way to say you're done here.
+>STORE M
+>>Undesired Underside
+?What do I do with the drainage?
+It would be the first thing to beautify.
+The Aged Rain is a clue. So is Dear Inga, or the Arena Dig.
+In addition, A Reading makes you see red.
+The flower shop may want this item, as it's a...
+GARDENIA.
+?Can I go east? How?
+Yes. It's probably the big puzzle for this section.
+You need an ID. It's built from items from two other places.
+One thing is from the condo. The other is from Elf Row Flowers.
+Spoilers of what to change things to are ahead.
+The KEYCARD and BARCODE.
+PUT BARCODE ON KEYCARD.
+PUT KEYCARD ON SENSOR.
+>>Cramped Red Camp
+?What do I do with the clover?
+It has hooks...
+...like VELCRO.
+?What does the deadbeat want?
+For you to stick it to the man to the north.
+Once you do, he will let you have the lost corn.
+?Can I do anything else with the deadbeat?
+Yes, but you don't have to.
+If you give him the emitter, he fills it with angst gnats.
+?What does the lost corn become?
+It's from SlorntCo, and it looks high-tech.
+CONTROLS.
+>>A Yell Alley
+?What do I do with a motto?
+It is a motto, not the motto, after all. It advertises itself as such.
+TOMATO.
+?What do I do with the words?
+You need to have done business with the fairies.
+Then, it depends whether you got the heaths or begonias.
+The heaths become a SHEATH.
+Then you can make the words a SWORD.
+Alternatively the begonias become a NOISE BAG.
+OPEN NOISE BAG.
+>>The Ol' Hotel
+?Can I look at the mattress?
+Not til the night thing's gone.
+Once you do, you get a termite emitter.
+It's useful to lower property values.
+?What do I do with the Night Thing?
+The bottle of ketchup is a clue.
+THROW TOMATO AT THING.
+>>Cordoned Red Condo
+?Do I need the dry cake?
+Yes, but you need to get rid of people.
+?Can I go anywhere else?
+No. The exits are all blocked.
+?What do I need to do here to get people to leave?
+Have you gotten anything from the ol' hotel?
+Have you searched the mattress, once the Night Thing is gone?
+The termite emitter might be handy.
+SWITCH EMITTER.
+GET CAKE before you leave. Well, the game forces you to. I hope.
+?What should the dry cake be?
+Oddly metallic.
+KEYCARD.
+?What are the antlers for?
+Pretentious. Presumptuous. Far too expensive to own.
+But not critical to the game.
+They are RENTALS.
+>>Elf Row Flowers
+?What do the faeries want?
+A flower.
+There's one in the Underside.
+The GARDENIA.
+GIVE GARDENIA TO FAERIES.
+Take either the heaths or begonias.
+Note that the flowers look sort of like containers.
+?What is the brocade for?
+It's got black vertical lines on white background.
+A lot like a sort of ID...
+...a BARCODE.
+?What do I do to the heaths?
+They can become a SHEATH.
+?What do I do to the begonias?
+They become a NOISE BAG.
+>>Anti-Cool Location
+?Is the lit-up tulip important?
+Yes. But you need to show the nerds you're smart enough.
+?How do I deal with the nerds?
+Three ways. One, ASK NERDS about the right thing.
+They give hints. What is a lit-up tulip for?
+To provide light in the...
+...DARKNESS.
+You can also OPEN THE NOISE BAG if you have it, since the nerds are in a quiet environment apart from the city.
+You can also SWITCH THE EMITTER if you have the angst gnats.
+They kick you out, but you're done here now.
+>>Elm Train Terminal
+?Can I go east? How?
+You need a light source and to make the way less dangerous.
+The light source is in the Anti-Cool Location, east of the Underside.
+You also need to shut down the faulty electricity to the east.
+?What's this neon pig?
+So tacky, better to have nothing there at all.
+Or, at least, an OPENING.
+?Can I reach where the pig was?
+Yes.
+WEAR VELCRO. CLIMB WALL.
+?What do I do when I'm up there?
+PUT CONTROLS IN OPENING.
+Now the rail is working again!
+>>Bassy Abyss
+?Stupid siren!
+You can't RINSE...
+...and you can't pound it into dust...
+...but it can be RESIN.
+?The beats are annoying me! How can I fight them?
+They're nasty, but not physical enough.
+However, a BEAST would be.
+?I can't grab my sword from the sheath!
+See siren above.
+?Can I use the noise bag?
+OPEN BAG.SWORD
+?How do I kill the enemy?
+ATTACK BEAST.
+>STORE R
+>>TILES
+?What? This is one lousy resort! These tiles go on forever!
+They can become an ISLET.
+?How do I get out of here?
+The rock and swing can be used. Go east once you have flipped one. You only need one.
+?What does the rock become?
+It says afloat.
+What floats?
+CORK.
+?What does the swing become?
+It says aloft.
+What flies?
+WINGS.
+>>An Odd Low Woodland
+?The poles are too steep!
+Yes, they're vertical.
+What can be at an angle?
+A SLOPE.
+But now you still need help to climb it.
+?Can the sprig become anything?
+Yes. It's a bit sticky as is.
+GRIPS.
+?Can the spore become anything?
+It seems flexible, but what's even more flexible?
+ROPES.
+?What's the toolshed do?
+It can become something pretty slick.
+TOEHOLDS.
+?When can I go up?
+When you've transformed the poles, and either the toolshed...
+...or both the grips and ropes.
+>>Potshot Hotspot
+?This riot sure has a lot of people!
+It would be easier to handle if there were under ten.
+Under five, hey.
+Maybe even three.
+TRIO.
+?Help! They're still a protest!
+They need something better to do with their hands.
+Maybe if they were POTTERS.
+?What can I do with the links?
+The potters have no tools!
+What do all potters need?
+KILNS.
+?Oh no! It's Red Bull Burdell! How do I beat him?
+Don't worry. He won't beat you.
+What does he say every move?
+GET OUT!
+Look at him. Does he have a weakness?
+Hm, his foot.
+Specifically, his toe.
+TUG TOE.
+>>Roman Manor
+?What do I do?
+There are exits on all side, but you don't want to take them.
+You deserve to sit, relax and do nothing.
+Your gadget should give a clue either way.
+Just EXIST.

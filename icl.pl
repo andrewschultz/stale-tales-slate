@@ -19,6 +19,8 @@ $proj{"-s"} = "sa";
 $debug = 0;
 $release = 1;
 
+$count = 0;
+
 while ($count <= $#ARGV)
 {
 
@@ -46,6 +48,10 @@ sub runProj
 $ex = "ulx";
 $gz = "gblorb";
 if ($_[0] =~ /threed/) { $ex = "z8"; $gz = "zblorb";}
+
+$beta = "c:/games/inform/beta.inform";
+$base = "c:/games/inform/$_[0].inform";
+$bdir = "$base/Build";
 
 `cd c:/games/inform/$_[0].inform/Build`;
 if ($beta)
@@ -76,24 +82,28 @@ system("erase \"c:\\games\\inform\\beta materials/Cover.png\"");
 }
 print "5\n";
 modifyBeta();
-system("\"C:/Program Files (x86)/Inform 7/Compilers/ni\" -release -rules \"C:/Program Files (x86)/Inform 7/Inform7/Extensions\" -package \"C:/games/inform/beta.inform\" -extension=$ex");
-system("\"C:/Program Files (x86)/Inform 7/Compilers/cblorb\" -windows c:/games/inform/beta.inform/Release.blurb c:/games/inform/beta.inform/Build/output.$gz");
+system("\"C:/Program Files (x86)/Inform 7/Compilers/ni\" -release -rules \"C:/Program Files (x86)/Inform 7/Inform7/Extensions\" -package \"$beta\" -extension=$ex");
+system("\"C:/Program Files (x86)/Inform 7/Compilers/cblorb\" -windows $beta/Release.blurb $beta/Build/output.$gz");
 }
 if ($debug)
 {
 system("set HOME=c:\\games\\inform\\beta.inform");
 printf "Debug build.\n";
 system("\"C:/Program Files (x86)/Inform 7/Compilers/ni\" -rules \"C:/Program Files (x86)/Inform 7/Inform7/Extensions\" -package \"C:/games/inform/$_[0].inform\" -extension=$ex");
-system("\"C:/Program Files (x86)/Inform 7/Compilers/inform-633\" -kwSDG +include_path=../Source,./ auto.inf output.$ex");
+system("\"C:/Program Files (x86)/Inform 7/Compilers/inform-633\" -kwSDG +include_path=$base,$bdir $bdir/auto.inf $bdir/output.ulx");
 }
 if ($release)
 {
 system("cd c:/games/inform/$_[0].inform");
 printf "Release build.\n";
-system("\"C:/Program Files (x86)/Inform 7/Compilers/ni\" -release -rules \"C:/Program Files (x86)/Inform 7/Inform7/Extensions\" -package \"C:/games/inform/$_[0].inform\" -extension=$ex");
+printf "Generating output.$ex.\n";
+system("\"C:/Program Files (x86)/Inform 7/Compilers/ni\" -release -rules \"C:/Program Files (x86)/Inform 7/Inform7/Extensions\" -package \"$base\" -extension=$ex");
+printf "Generating blorb.$ex.\n";
+system("\"C:/Program Files (x86)/Inform 7/Compilers/inform-633\" -kw~S~DG +include_path=$base,$bdir $bdir/auto.inf $bdir/output.ulx");
 #the below doesn't work as in the Windows compiler, so we have to explicitly set paths
 #system("\"C:/Program Files (x86)/Inform 7/Compilers/cblorb\" -windows Release.blurb Build/output.gblorb");
-system("\"C:/Program Files (x86)/Inform 7/Compilers/cblorb\" -windows c:/games/inform/$_[0].inform/Release.blurb c:/games/inform/$_[0].inform/Build/output.$gz");
+printf "Bundling for release.\n";
+system("\"C:/Program Files (x86)/Inform 7/Compilers/cblorb\" -windows $base/Release.blurb $bdir/output.$gz");
 }
 }
 
