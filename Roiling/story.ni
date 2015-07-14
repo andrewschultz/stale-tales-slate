@@ -329,8 +329,8 @@ table of Elvira taunts	false	0	0	Elvira-taunt rule	otters	"Elvira's taunts"	--	"
 table of animal friends	false	0	0	bzzt rule	otters	"Your animal friends"	--	""
 table of political slogans	false	0	0	sloganing rule	others	"Political slogans"	--	""
 table of selly yells	false	0	0	clearing-listen rule	others	"Selly Yells[indic of others]"	""	""	"A big errant inert brag pauses the bartering for a minute."
-table of noage	false	0	0	am-noing rule	lll	"Rejects for saying no"	--	--	"You're so down, yow. Sour. DONE."
-table of yessage	false	0	0	am-yessing rule	lll	"Rejects for saying yes"	--	--	"A rote ego too eager!"
+table of noage	false	0	0	am-noing rule	lll	"Rejects for saying no"	--	""	"You're so down, yow. Sour. DONE."
+table of yessage	false	0	0	am-yessing rule	lll	"Rejects for saying yes"	--	""	"A rote ego too eager!"
 table of singing rejects	false	0	0	is-singing rule	lll	"Rejects for singing"	--	""	"Sing-ings! Sing-ings!"
 table of empty command rejects	false	0	0	you-said-nothing rule	lll	"Responses to an empty command"	--	""	"Go for it or I GTFO! (this is the last blank response and an empty threat to boot.)"	--	false	0	0	1
 table of wait responses	false	0	0	you-waited rule	lll	"Wait/Z messages"	--	""	"A lag gala.[no line break]"
@@ -352,7 +352,7 @@ table of oldies singers	false	0	0	bzzt rule	manor	"Initial oldies singers[elv-ar
 table of lousy hit songs	false	0	0	bzzt rule	manor	"Bad songs[elv-art]"	--	""
 table of self-help bestsellers	false	0	0	bzzt rule	troves	"Self-help bestsellers[eisiping]"	--	""
 table of songs you could write	false	0	0	bzzt rule	troves	"Songs you write on solving Troves"	--	""
-table of sleep rejects	false	0	0	am-sleeping rule	lll	"Sleeping rejects"	--	""
+table of sleep rejects	false	0	0	am-sleeping rule	lll	"Sleeping rejects"	--	"[line break]"
 [tmc]
 
 to say eisiping:
@@ -759,7 +759,7 @@ to say twiddle of (tn - a table name) and (nums - a number):
 				now skip-past is true;
 			say "[line break]";
 			increment curcount;
-			if curcount is 5 and twiddle-warn is false:
+			if curcount is 5 and twiddle-warn is false and skip-past is false:
 				now twiddle-warn is true;
 				ital-say "you can see all this at the end, so no need to page through all [tr] entries.";
 		else:
@@ -953,6 +953,7 @@ Instead of saying no:
 		if the-person entry is in location of player:
 			if there is a nosaying entry:
 				say "[nosaying entry]" instead;
+	say "[randbla]";
 	rhet-q;
 
 Instead of saying yes:
@@ -967,8 +968,10 @@ Instead of saying yes:
 	
 to rhet-q:
 	if yes-no-warn is false:
-		say "(Rhetorical questions can be safely ignored, and typing No/Yes will give random silly responses.)[line break]";
-		now yes-no-warn is true
+		say " (Rhetorical questions can be safely ignored, and typing No/Yes will give random silly responses.)[line break]";
+		now yes-no-warn is true;
+	else:
+		say "[line break]";
 
 table of yesnoes
 the-person	yessaying	nosaying
@@ -1247,7 +1250,6 @@ every turn when scams is true (this is the scam rule):
 	else if mrlp is troves:
 		now player has truffle;
 		try eating truffle;
-		[now player has truffle;]
 	else if mrlp is otters:
 		now player has cinders;
 		try discerning cinders;
@@ -8660,7 +8662,7 @@ report taking pedanto-notepad:
 	move-ads instead;
 
 to move-ads:
-	now sad ads are in lalaland;
+	now sad ads are in dusty study;
 	say "Taking the pedanto-notepad uncovered some sad ads on the chair.";
 
 instead of pushing or pulling or searching or opening or closing bookshelf:
@@ -10961,7 +10963,7 @@ check going north in Gates Stage:
 		say "You try to sneak through--you're backstage at the Admit-Us Stadium! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
 	else if gate-level is 1:
 		say "[one of]You try to sneak into the Admit-Us Stadium, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells 'PERP!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
-	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Admit-Us Stadium. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say?'Able, I'd bailed,' you start. Silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragment spurs you: [randbla][paragraph break]'Go, O.G.,' people call. You're on a roll: [randbla] [randbla][paragraph break]By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Roman Manor becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. There's not much more to do, except visit DEMO DOME MODE, if you want, which is a look behind the scenes.";
+	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Admit-Us Stadium. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragment spurs you: [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Roman Manor becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. There's not much more to do, except visit DEMO DOME MODE, if you want, which is a look behind the scenes.";
 	now others is solved;
 	if debug-state is true:
 		append "Test passed for Others.[line break]" to the file of debuggery;
@@ -11215,7 +11217,7 @@ check fliptoing when player is in clearing and player does not have tekno-token:
 		preef noun;
 		do nothing instead;
 
-Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "There's lots of noise among traders here, though most of them pay you no attention. That leaves you time to notice a list of prices and another banner saying AUCTION CAUTION. It looks like people are using all sorts of speech tricks and gesturing to haggle here."
+Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "There's lots of noise among traders here, though most of them pay you no attention. That leaves you time to notice a list of prices and another banner saying AUCTION CAUTION. It looks like people are using all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow."
 
 after choosing notable locale objects when player is in clangier clearing:
 	set the locale priority of len craig to 1;
@@ -23512,7 +23514,7 @@ before sleeping:
 	if mrlp is presto and shack is visited and slept is false:
 		say "Only the shack seems to be a safe place to sleep, here." instead;
 	if player is in study:
-		say "[if Gunter is in lalaland]But you just woke up![otherwise]Not with that knocking.[end if]" instead;
+		say "[if Gunter is off-stage]But you just woke up![otherwise]Not with that knocking.[end if]" instead;
 	if player is in FiefCo Office:
 		say "You got here by doing nothing while conscious, not doing nothing while unconscious." instead;
 	if player is in boredom:
@@ -51114,7 +51116,7 @@ check hinting for the first time:
 	if have-objhinted is false:
 		if player is not in Inclosure:
 			if hint-to-file is false and hint-to-display is false:
-				say "You're not sure whom to call. There are so many choices! [twiddle of table of help companies and 3]Well, one of those must be right. Because in front of you is a rare help elph! He smiles and waits. 'Er, clues, recluse?' Silence. 'No hint? Nothin[']?'[paragraph break]'Helpless spells, eh? On so soon?'[paragraph break]'Yup. In-game enigma. Tried. Tired. I caved. Advice?'[paragraph break]He acknowledges your pure re-up and presents you with an option potion from his luckiest clue kits. 'Spoils be possible.' Do you accept it?";
+				say "You're not sure whom to call. There are so many choices! [twiddle of table of help companies and 3] Well, one of those must be right. Because in front of you is a rare help elph! He smiles and waits. 'Er, clues, recluse?' Silence. 'No hint? Nothin[']?'[paragraph break]'Helpless spells, eh? On so soon?'[paragraph break]'Yup. In-game enigma. Tried. Tired. I caved. Advice?'[paragraph break]He acknowledges your pure re-up and presents you with an option potion from his luckiest clue kits. 'Spoils be possible.' Do you accept it?";
 				ital-say "the help elph will not appear again. And while ARO tries to hint intelligently and does not spoil anything immediately, you may rather HINT (a specific thing)[if ever-obj-hinted is true]--as you've already done--[else] [end if]to see if it's important.";
 				if the player consents:
 					say "'Hints OK? Think so!' You drink the option potion, hoping it will help you get to point O. 'Nifty hair, hint fairy!' you say, in way of thanks.[paragraph break]";

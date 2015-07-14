@@ -685,7 +685,7 @@ table of poem codas	true	0	--	pat-poem rule	"Pat's verse-ends (I)"	"You cringe a
 table of camp chants	true	0	0	with-hippies rule	"Red Camp chants (M)"	"[one of]S[or]More s[stopping]ounds of social protest. "	""	"Chants stanch. 'Restin['], OK?' Their tone irks, then ... 'Restokin[']! Strike on!' Petitioner repetition.[line break]"	--	false	--
 table of condo dialogue	true	0	--	talk-in-condo rule	"Condo chatter (M)"	"Flabbier blab: rife. "	""	"Laugh-ins languish. You hear someone re-repeat repartee. Conversations start anew...[line break]"
 table of psas	false	0	--	x-psa rule	"Every last Pa's PSA in Elm Train Terminal (M)"	"You watch for the next Pa's PSA[one of] (and yeah, they're kind of paternalistic and probably can't help you one bit)[or][stopping]: "	""	"DON'T PIRATE TRAIN DEPOT POINTED ART is the last one[post-brk]"
-table of nerd natter	true	0	--	in-mensa rule	"Anti-Cool Location chatter (M)"	"[one of]Wits fly swiftly. [or]Brainy brayin[']. [or][in random order]"	""	"The allergy gallery takes a sneezing and coughing break. Largely regally. Hey, I'm not making fun of nerds. Some of my best friends have sinus problems! Maybe they're allergic to people being stuck on brainy puzzles, and they break out in memes.[paragraph break]They restart their brainy brayin['].[line break]"
+table of nerd natter	true	0	--	in-mensa rule	"Anti-Cool Location chatter (M)"	"[one of]Wits fly swiftly. [or]Brainy brayin[']. [or][in random order]"	""	"The allergy gallery takes a sneezing and coughing break. Largely regally. Hey, I'm not making fun of nerds. Some of my best friends have sinus problems! Maybe they're allergic to people being stuck on brainy puzzles, and they break out in memes.[line break]"
 table of job searcher names	false	0	0	x-namelist rule	"Names of other job applicants (intro)"	""	""	". That's the last. Boy--you can't imagine you'll ever fit in"	--	--	--	5
 table of riot slogans	true	0	--	protests rule	"Rioters['] chants (R)"	"Voices babble[one of][or] on[stopping]. "	""	"The protesters seem out of ideas before egging to get going: 'Persons! Press on!' The swarm warms to a re-blab. Rabble.[line break]"
 table of red bull taunts	true	0	0	burdell rule	"Red Bull Burdell's taunts (R)"	"'GET OUT!!!!' yells Red Bull Burdell. "	" His boot, with his toe sticking out, swings within an inch of your chin[one of][or] again[or] yet again[or], prompting one of your finest feints[or]. But his smiting timings are just off[or]. Be neat if he got beaten[or]. You say, 'I fend, fiend!'[or]. He's stout-armed, but he can be outsmarted[or]. He's getting set-up for an upset[or]. He's on a roll, but you're rolling around ok[cycling][1-in-5]."	"Red Bull Burdell, the shover, hovers, emitting real thug laughter. He looks ready to start his taunts again. How to rub his hubris?[line break]"
@@ -10394,7 +10394,7 @@ part maps-Spam
 
 some maps are plural-named things.
 
-understand "map" as some maps.
+understand "map" as some maps when mrlp is forest.
 
 description of maps is "[if Ghouls' Slough is visited]They've worked fine. No need to use them again.[else if Enclosure is visited]You notice the Cruel Ones['] Enclosure at the bottom, but you can't make sense of the rest, yet--[randbla] and [randbla] seem scary, though.[otherwise]They're labeled 'ALMOST LOST, MA' and claim to lead to the slayer layers and help you go off of fog--[randbla] and [randbla] seem scary, though. Maybe if you get past the turnstile they'll make more sense.[end if]"
 
@@ -12327,7 +12327,7 @@ carry out lishing:
 	if number understood is 1: [hardcoded due to punctuational trickiness]
 		say "Name list's last entry is 'Boy--that's the last. You can't imagine you'll ever fit in.'";
 	else:
-		say "[descr entry]: [if there is a lasties entry]last entry reads [lasties entry][else]no last entry[end if]";
+		say "[descr entry]: [if there is a lasties entry][paragraph break]LAST ENTRY: [lasties entry][else](no last entry)[end if]";
 	let this-tab be mytab entry;
 	let idx be 0;
 	let lump-amount be maxbeforepause entry;
@@ -17475,7 +17475,7 @@ carry out ffing:
 
 chapter debuging
 
-debuging is an action applying to nothing.
+debuging is an action out of world.
 
 understand the command "debug/db" as something new.
 
@@ -17483,7 +17483,20 @@ understand "debug" and "db" as debuging.
 
 carry out debuging:
 	now debug-state is whether or not debug-state is false;
-	say "Debugging [if debug-state is true]on[else]off[end if].";
+	say "Debugging [if debug-state is true]on[else]off[end if]. Use DP to turn off DEBUG INFO.";
+	the rule succeeds;
+
+chapter debug printing
+
+dbprinting is an action out of world.
+
+understand the command "dp" as something new.
+
+understand "debug" and "dp" as dbprinting.
+
+carry out dbprinting:
+	now debug-print is whether or not debug-print is false;
+	say "Debug info printing [if debug-print is true]on[else]off[end if].";
 	the rule succeeds;
 
 chapter privsing
