@@ -318,7 +318,7 @@ table of smartypants	false	0	0	read-docs rule	presto	"Ph. D. researchers"	"The h
 table of bedding brands	false	0	0	read-futon rule	presto	"Sleep aide brands"	--	""	"Smartest Mattress, hopefully cleaner than the one you remember from The Ol['] Hotel in the Metros behind Store M."
 table of bar dialogue	true	0	0	bar-over-comp rule	oyster	"Posh Hops Shop action[indic of oyster]"	"[one of]Whew. Rough talk and action here. [or]More rough talk and action. [or][stopping]" 	""	"You've seen it all. Time to take decisive action(s) of your own.[pre-brk]"
 table of competing bars	true	0	0	in-bar rule	oyster	"Posh Hops Shop competitors[indic of oyster]"	"Someone says the Posh Hops Shop [one of]has nothing on[or]sure beats[at random] "	"."	"Everyone agrees Soph Pho's is a total rip-off of, well, here.[pre-brk]"
-table of Casper mumbles	false	0	0	casper-talk rule	oyster	"Casper's mumblings[indic of oyster]"	""	""
+table of Casper mumbles	false	0	0	casper-talk rule	oyster	"Casper's mumblings[indic of oyster]"	""	""	"'[if player is male]Rhett Weir[else]Teri Werth[end if], the writer? Eh, err...TWIT!' Casper suddenly flips back to the start of his notes. Perhaps he feels you are not good enough to hear any more of his original thoughts."
 table of fish fries	true	0	0	insult-over-girls rule	oyster	"Carps/pikes trout-bullying [if anger range is visited]in anger range[else](STORE Y)[end if]"	--	""	"The bullies call him 'A soft fatso so fat.' They're out of ideas and claim it's the trout's fault for not being interesting enough. The ratters restart samer smear-reams.[pre-brk]"
 table of unpopular girls	true	0	0	ohai-bullies rule	oyster	"Unpopular girls carps/pikes mention[indic of oyster]"	"The bullies insinuate the trout [one of]likes[or]isn't good enough for[cycling] "	"."	"Zina is the last, and utterly wrongest, girl they accuse the trout of liking. Really, shame on them.[pre-brk]"
 table of tuna gossip	true	0	0	gossip-over-chatter rule	oyster	"Aunt Tuna's gossip[indic of oyster]"	"Aunt Tuna gossips: "	""	"'Edda Dade. Dead. Cleo's Close. Dorithy--Thyroid. Halle's a shell. All she... Heather's Heart. She... diabetes, die, beast!' Aunt Tuna pauses, head in hands. That was the final thing she'd been repressing.[pre-brk]"
@@ -1846,13 +1846,13 @@ carry out gotoing:
 	if noun is strip and mrlp is not stores:
 		say "This is equivalent to the RETRY command, so that's what I'll do.";
 		try retrying instead;
-	if mrlp is routes:
+	if mrlp is routes: [ROUTES]
 		if player is in mesa:
 			if the-b is in mesa:
 				say "You can't go anywhere with the bean and the crowd around!" instead;
 			if thing form above is in mesa:
 				say "The thing form above is too big to ignore or walk out on." instead;
-	if mrlp is troves:
+	if mrlp is troves: [TROVES]
 		say "[if noun is visited]Going back would be a dereliction of your destiny[else]You must work to make your dreams of going there become reality[end if]." instead;
 	if noun is unvisited and mrlp is noureg:
 		say "You've never been there yet, so you can't go back." instead;
@@ -1860,7 +1860,7 @@ carry out gotoing:
 		say "[if last-loc of noureg is unvisited]You haven't made it to that region, yet[else]That's in the wrong region[end if]." instead;
 	if progval of noun > progval of location of player:
 		say "You seem to be getting ahead of yourself. You shouldn't know about that, yet." instead;
-	if noun is dirge ridge and mrlp is presto:
+	if noun is dirge ridge and mrlp is presto: [PRESTO]
 		if Leo is dismissed:
 			post-wall-brunt;
 			do nothing instead;
@@ -1868,6 +1868,8 @@ carry out gotoing:
 		consider the shack-south rule;
 		unless the rule succeeded:
 			do nothing instead;
+	if player is in fighter freight: [OYSTER, generic message not enough]
+		say "If only it was that easy. Well, I hope it's not [italic type]too[roman type] hard to figure the right action." instead;
 	d "From [progval of location of player] to [progval of noun].";
 	if progval of noun < progval of location of player:
 		repeat through table of progvals:
@@ -1934,7 +1936,8 @@ cripple clipper	4	-- [routes]
 posh hops shop	1	--	"The trolls would not welcome you back[if progval of location of player is 3], and it'd take too long to get there[end if]."
 olde lode	2	--	"You don't want to go near that urn[if progval of location of player is 3], and it'd be hard, being on the other side of the shore[end if]."
 Hero's shore	3	--	"No sense crossing back. There's more on this side of the shore."
---	4	oyster	[oyster]
+Fighter Freight	4	--	"You don't really want to revisit the crays."
+--	5	oyster	[oyster]
 loftier trefoil	1	--	"[if progval of location of player is 1]You had your fun in there[else]That's way in the past[end if]."
 --	2	towers	"You don't want to cross Leak Lake again."
 rawest waters	3	--	"Leak Lake wasn't fun the first time."
@@ -5171,7 +5174,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "eat"	233103945	oyster	--	tea tray	--	"Quit playing with your food, already."
 "tray"	312980891	oyster	--	tea tray	--	"[just-tea]."
 "teatray"	546084836	oyster	--	tea tray	--	"[just-tea]."
-"trace"	337433333	oyster	--	--	crates-menace rule	"[if traced is true]Yes, one more thing to do with the crate--you know where they're from, and you know what to do. Instinctively[else]That won't quite help you figure where the crate is coming from[end if]."
+"trace"	337433333	oyster	--	--	crates-menace rule	"[if crate is reflexed]Yes, one more thing to do with the crate--you know where they're from, and you know what to do. Instinctively[else]That won't quite help you figure where the crate is coming from[end if]."
 "plain"	251367970	oyster	--	--	plains rule	"[if splained is true]You had your say.[else]'I...plan,' you think, then in a fit of confidence, 'I...PLANS!'[end if]"
 "splain"	347641936	oyster	--	--	plains rule	"[if splained is true]You had your say[else]You feel like making a big speech about what you've done and what you plan to do, but not quite like that[end if]."
 "rude"	339264808	oyster	--	rude door	--	"It's not the rudeness[knob-skis]."
@@ -5192,7 +5195,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "not"	246370103	oyster	--	intercom	--	"Changing the intercom to a ton-crime intercom would be the opposite of what you want to do."
 "crime"	341203496	oyster	--	intercom	--	"[i-com]."
 "debris"	393844718	oyster	--	crate	--	"You can't learn much from the debris. You're pretty sure it's from a crate."
-"fragments"	606798973	oyster	--	fragments	--	"[if reacted is true and traced is true]Not worth messing with the fragments[else]They're fragments of a crate--this may or may not help[end if]."
+"fragments"	606798973	oyster	--	fragments	--	"[if reacted is true and crate is reflexed]Not worth messing with the fragments[else]They're fragments of a crate--this may or may not help[end if]."
 "shut"	341772090	oyster	--	plains	--	"[if uaah is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the door[end if]."
 "inthere"	595228692	oyster	--	plains	--	"You don't need to mess with the message on the rude door."
 "sardine"	446521139	oyster	--	sardine	--	"The sardine gives you a weird look, as if you need to stop mumbling. You're not sure you can do anything to him directly."
@@ -7446,6 +7449,13 @@ check fliptoing (this is the by Rand and Leo rule):
 			say "You mumble other words to shoo Rand and Leo, but you sort of miss them. Maybe you can get them to provide some muscle." instead;
 	continue the action;
 
+to pill-list (pilly - a thing):
+	if pilly is not a pill-thing listed in table of pill-comments:
+		say "**Need pill entry for [pilly].";
+	else:
+		choose row with pill-thing of pilly in table of pill-comments;
+		say "[pill-do entry]";
+
 carry out fliptoing:
 	repeat through table of anagrams:
 		if noun is the-to entry and the-from entry is cromulent:
@@ -7460,7 +7470,10 @@ carry out fliptoing:
 					increment nounsolve;
 			set pronoun it to the-to entry;
 			set pronoun them to the-to entry;
-			say "[the-msg entry][line break]";
+			if pill-use is true:
+				pill-list the-from entry;
+			else:
+				say "[the-msg entry][line break]";
 			if mrlp is stores:
 				if the-from entry is Store T:
 					do nothing;
@@ -9933,10 +9946,9 @@ definition: a thing (called candi) is bluable:
 	if candi is decrepit mark or candi is decrepit mark, no;
 	if candi is tunes, no;
 	if candi is crate:
-		if reacted is false or traced is false, yes;
-		no;
+		if c2 is in plains, yes;
 	if candi is haunter:
-		if player is in anger range and candi is off-stage:
+		if player is in anger range and candi is off-stage: [visibility issues here. We "see" the haunter but can't see it with bluables]
 			decide no;
 	if candi is visible, yes;
 
@@ -14286,7 +14298,7 @@ carry out rowdying:
 	if doc-y is rowdy:
 		say "You recharge Dr. Yow's rowdiness.";
 	otherwise:
-		say "Dr. Yow appears charged! [he-she-c] begins ranting about scientific solutions and implementations and so forth, and how [one of][he-she] was called [if player is male]wormy Mr. Yow[else]Frowsy Mrs. Yow (despite being single)[end if] until [he-she] got [his-her] Ph.D., and the worst [he-she] gets is 'Wooly Ol['] Yow' now[or]someone needs to grundy Dr. Yung[or]you can be a weirdo AND woe-rid[or]Dr. Ney is [his-her] idol[cycling]. It's quite a sight[if doc-y is in prison ropins], even through the jail door[end if][unless doc-y has been rowdy][one of]. You doubt [he-she]'s like this all the time, though. Maybe [he-she] can speak more calmly, in other situations[or][stopping][end if].";
+		say "Dr. Yow appears charged! [he-she-c] begins ranting about scientific solutions and implementations and so forth, and how [one of][he-she] was called [if player is male]wormy Mr. Yow[else]My Sow Ms. Yow[end if] until [he-she] got [his-her] Ph.D., and the worst [he-she] gets is 'Wooly Ol['] Yow' now[or]someone needs to grundy Dr. Yung[or]you can be a weirdo AND woe-rid[or]Dr. Ney is [his-her] idol[cycling]. It's quite a sight[if doc-y is in prison ropins], even through the jail door[end if][unless doc-y has been rowdy][one of]. You doubt [he-she]'s like this all the time, though. Maybe [he-she] can speak more calmly, in other situations[or][stopping][end if].";
 	unless doc-y has been rowdy:
 		reg-inc;
 	now doc-y is rowdy;
@@ -18421,6 +18433,38 @@ to guy-cheat (gc - a thing):
 		say "You shake your head and realize the pills and the jar didn't go anywhere, but whatever it did still works.";
 		now player has the pills;
 
+table of pill-comments
+pill-thing	pill-do
+eeks	"The pills make a racket as they bounce around. A matronly tuna sticks her head out a window and yells IF YOU PLEASE. You notice your friend the trout behind her. He waves to you. The tuna invites you up."
+drawer	"You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of bubble wrap[if tea is not in lalaland] and the tea tray, too[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel don't know how. Anyway, once you left, she kept muttering how she wanted to get rid of this bubble wrap to somebody. So I snuck it for you.'"
+c2	"The pills jump over to the debris and then off somewhere. You think they showed you where the throwing came from."
+crate	"The pills jump over to the debris and then swarm in the air like bees, causing your hidden tormentor to shriek and run away."
+knob	"The pills gravitate to the knob and turn it forcefully. It won't act up again."
+skis	"The pills fly to the skis with a bizarre smooching noise. The skis dissolve, perhaps out of inanimate shame."
+clam	"The pills form a large maze with no dead ends. The clam goes after the bouncing pills and eats some, zigzags crazily, and runs himself tired tracking new ones down. Then, suddenly, it looks as if it's seen a ghost. It shrivels to a point with a sad deflating noise, then vanishes with a pop!"
+urn	"The urn, being possessed of greed, seems to suck in the pills, which cause it to shake. You run in a random direction as it explodes. Hm, run, urn. You could've figured that, but, well, time to move on."
+boats	"A boat pulls over as you spill the pills. 'If ye need a ride, come aboard! We'll collect yer coins...'[paragraph break]Before you can protest, you're aboard. You hear yelling as several of the fish realize the 'coins' are pills. They don't like freeloaders..."
+oars	"The pills must've been energy pills, because they jump up and down and attach to the oars and create a reaction that blasts your raft into the air to the other side! With a bump, you tumble out and walk a bit..."
+plea	"The crays are dumb enough to think that the pills might be coins. In the ensuing hubbub, you jump over the edge and swim to shore."
+carps	"The carps and pikes, distracted by the pills that fall out and keep jumping, ignore the trout. 'You stupid! Those pills are valuable. Out of our way, mouth-breather.' The range anger wells up in you."
+lance	"The pills somehow dissolve the ugly bits on the lance. It's the retractable sort, which is handy for carrying."
+tubs	"You spill the pills and slip on them, because no bathmat is around. In the process, you smack your elbow against the tubs. Right on the funny bone. You find it so unfunny you beat the tubs into heaps and waste. You find a prod inside, which you take."
+prod	"You spill the pills, which bounce around at your legs until you're annoyed enough to start hitting at them with the prod. Foomp! A hidden switch triggers, and the prod transforms to a rigged digger."
+waste	"The pills perform a disturbing chemical reaction with the waste, dissolving to leave a dirty lance."
+sardine	"'Man! That might just be the thing for my ears!' The sardine grabs the pills as the first one falls, then runs off for some water to swallow them with. He doesn't come back."
+a-s	"The pills bounce over by the arches. You try to grab them back but wind up grabbing a hidden pearl by mistake."
+o-t	"The pills thump all over the floor, but you notice one segment sounds hollow. You go over, look under and--voilà! You are able to defuse the ol['] trap with a switch. Alas, the pills are too scattered to replace. Some kind of spilled into the floor too, but yeah, the five second rule, anyway."
+ant	"With the pills dropping around, the ant is distracted, and your wild hacks with the lance easily chase it. But your lance breaks in the process."
+ruby	"The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint."
+yapper	"The yapper begins bellyaching about picking up the pills. He complains about how it's HIS job to clean things up. He goes off to look for a wastebasket--but you think you see him popping a pill as he leaves."
+d2	 "THe pills fall on the dialer and change it to REDIAL."
+dialer	"You spill the pills on the dialer, and they change DIALER to enough of the 720 possibilities that they settle on DERAIL."
+
+pill-use is a truth state that varies.
+
+every turn when mrlp is oyster:
+	d "Current hint item = [oyster-item].";
+
 carry out spilling:
 	if player does not have pills:
 		say "(Taking them first, to be pedantic.)";
@@ -18441,15 +18485,45 @@ carry out spilling:
 		say "Okay.";
 	if aunt tuna is visible and bubble wrap is not off-stage:
 		say "That would be a rude parting gift. You've claimed your reward--the bubble wrap[if tea tray is not in lalaland]. Though it would seem polite--and straightforward--to try something from the tea tray[end if]." instead;
-	if player is in Lean Lane:
-		say "The pills make a racket as they bounce around. A matronly tuna sticks her head out a window and yells IF YOU PLEASE. You notice your friend the trout behind her. He waves to you. The tuna invites you up.";
+	if player is in Posh Hops Shop: [special case for spilling pills. This overrides the current hint item and takes out the trolls]
+		say "The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.";
+		increase min-score of oyster by cur-score of oyster;
+		guy-cheat trolls;
+		if cur-score of oyster < 3:
+			now poss-score of oyster is poss-score of oyster + cur-score of oyster - 3; [you will not lose a point using the pills later to tutor Tortu the trout if you use the pills now]
+		reg-inc;
+		move player to olde lode instead;
+	if player is in Hedron and walleyes are in hedron: [walleyes can't really be flipped. You need to go through the sausage.]
+		say "You don't have one for everyone, and there's too many everyone, anyway. You'll need to outsmart the walleyes." instead;
+	if player is in uaah and heaps are in uaah and heaps are reflexive: [heaps reject since it's a last lousy point]
+		say "As you look at the heaps, you realize maybe writers and musicians need to pop pills to do their work, but sculptors don't. Maybe you can make the heaps more beautiful on your own.[paragraph break]Plus you don't know if aesthetics matter as much as your quest." instead;
+	if oyster-item is d2 and lev-pull is false:
+		say "Nothing happens, so you pull the lever...";
+	if oyster-item is the player:
+		say "You spill out a pill, cautiously, but nothing happens. Maybe you're done here." instead;	
+	if oyster-item is a pill-thing listed in table of pill-comments:
+		let any-flip be false;
+		now pill-use is true;
+		repeat through table of anagrams:
+			if oyster-item is the-from entry and any-flip is false:
+				try fliptoing the-to entry;
+				now any-flip is true;
+		now pill-use is false;
+		if any-flip is false:
+			say "I should've tried to flip something, but I couldn't. BUG.";
+			d "[oyster-item] was not a the-from in table of anagrams.";
+	else:
+		say "You should be able to spill the pills to work on the [oyster-item] but you can't. This is a BUG and I need to put an entry in a table for the [oyster-item].";
+	the rule succeeds;
+[	if player is in Lean Lane:
+		say 
 		reg-inc;
 		guy-cheat eeks;
 		now player is in sand home;
 		bowl-to-home;
 		now eeks are in lalaland instead;
 	if aunt tuna is visible and trout is reflexive:
-		say "You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of bubble wrap[if tea is not in lalaland] and the tea tray, too[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel don't know how. Anyway, once you left, she kept muttering how she wanted to get rid of this bubble wrap to somebody. So I snuck it for you.'";
+		say ;
 		if produce-redo-cup is false:
 			if dent-tend is false:
 				poss-d; [can't fix dent again]
@@ -18466,42 +18540,34 @@ carry out spilling:
 		if traced is false:
 			guy-cheat crate;
 			now traced is true;
-			say "The pills jump over to the debris and then off somewhere. You think they showed you where the throwing came from.";
+			say ;
 			reg-inc;
 			check-rude-door instead;
 		if reacted is false:
 			guy-cheat rude door;
 			now reacted is true;
-			say "The pills jump over to the debris and then swarm in the air like bees, causing your hidden tormentor to shriek and run away.";
+			say ;
 			reg-inc;
 			check-rude-door instead;
 		if knob is reflexive:
 			guy-cheat knob;
 			now knob is reflexed;
-			say "The pills gravitate to the knob and turn it forcefully. It won't act up again.";
+			say ;
 			reg-inc;
 			check-rude-door instead;
 		if skis are in plains:
 			guy-cheat skis;
 			now skis are in lalaland;
-			say "The pills fly to the skis with a bizarre smooching noise. The skis dissolve, perhaps out of inanimate shame.";
+			say 
 			reg-inc;
 			check-rude-door instead;
-	if player is in Posh Hops Shop:
-		say "The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.";
-		increase min-score of oyster by cur-score of oyster;
-		guy-cheat trolls;
-		if cur-score of oyster < 3:
-			now poss-score of oyster is poss-score of oyster + cur-score of oyster - 3; [you will not lose a point using the pills later to tutor Tortu the trout if you use the pills now]
-		reg-inc;
-		move player to olde lode instead;
 	if clam is visible: [?? which point is dropped?]
-		say "The pills form a large maze with no dead ends. The clam goes after the bouncing pills and eats some, zigzags crazily, and runs himself tired tracking new ones down. Then, suddenly, he looks as if he's seen a ghost. He shrivels to a point with a sad deflating noise. With a pop, he has vanished!";
+		say ;
 		reg-inc;
 		guy-cheat clam;
 		now clam is in lalaland instead;
 	if urn is visible:
-		say "The urn, being possessed of greed, seems to suck in the pills, which cause it to shake. You run in a random direction as it explodes. Hm, run, urn. You could've figured that, but, well, time to move on.";
+		say ;
 		reg-inc;
 		guy-cheat urn;
 		now urn is in lalaland instead;
@@ -18513,19 +18579,19 @@ carry out spilling:
 		guy-cheat boats;
 		move player to anger range instead;
 	if carps are visible:
-		say "The carps and pikes, distracted by the pills that fall out and keep jumping, ignore the trout. 'You stupid! Those pills are valuable. Out of our way, mouth-breather.' The range anger wells up in you.";
+		say ;
 		reg-inc;
 		guy-cheat carps;
 		try fliptoing carps instead;
 	if lance is visible and lance is not cleaned:
-		say "The pills somehow dissolve the ugly bits on the lance. It's the retractable sort, which is handy for carrying.";
+		say ;
 		guy-cheat lance;
 		now lance is cleaned;
 		now player has lance;
 		reg-inc instead;
 	if player is in uaah:
 		if tubs are in uaah:
-			say "You spill the pills and slip on them, because no bathmat is around. In the process, you smack your elbow against the tubs. Right on the funny bone. You find it so unfunny you beat the tubs into heaps and waste. You find a prod inside, which you take.";
+			say ;
 			reg-inc;
 			now tubs are in lalaland;
 			now waste is in uaah;
@@ -18533,7 +18599,7 @@ carry out spilling:
 			guy-cheat tubs;
 			now heaps are in uaah instead;
 		if player has prod:
-			say "You spill the pills, which bounce around at your legs until you're annoyed enough to start hitting at them with the prod. Foomp! A hidden switch triggers, and the prod transforms to a rigged digger.";
+			say ;
 			now player has digger;
 			now prod is in lalaland;
 			guy-cheat prod;
@@ -18541,41 +18607,36 @@ carry out spilling:
 		if waste is in uaah and waste is reflexive:
 			now waste is reflexed;
 			guy-cheat waste;
-			say "The pills perform a disturbing chemical reaction with the waste, dissolving to leave a dirty lance.";
+			say ;
 			now lance is in uaah;
 			reg-inc;
 			now waste is in lalaland instead;
-		if heaps are visible and heaps are reflexive:
-			say "That would just add litter to the heaps. You need to do something artistic." instead;
 	if ant is visible:
-		say "With the pills dropping around, the ant is distracted, and your wild hacks with the lance easily chase it. But your lance breaks in the process.";
+		say ;
 		reg-inc;
 		guy-cheat ant;
 		now lance is in lalaland;
 		move player to Den Loft instead;
 	if player is in Achers' Arches:
 		if sardine is in Achers' Arches:
-			say "The sardine motions for you to share before you can spill the pills. Guess you better find some other way." instead;
+			say  instead;
 		if a-s is prefigured:
 			say "You remember that SEARCHing might've worked better with the sardine gone." instead;
-		say "The pills bounce over by the arches. You try to grab them back but wind up grabbing a hidden pearl by mistake.";
+		
 		pearl-check;
 		now arches-search is true;
 		reg-inc;
 		guy-cheat a-s instead;
-	if haunter is in anger range and player is in anger range:
+	if location of haunter is location of player:
+		if haunter is reflexed:
+		
 		say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]." instead;
-	if player is in Hedron and o-t is in hedron:
-		if walleyes are visible:
-			say "The walleyes leer hungrily at your pills. You put them away." instead;
-		say "The pills thump all over the floor, but you notice one segment sounds hollow. You go over, look under and--voilà! You are able to defuse the ol['] trap with a switch. Alas, the pills are too scattered to replace. Some kind of spilled into the floor too, but yeah, the five second rule, anyway.";
 		reg-inc;
 		guy-cheat o-t;
 		now o-t is in lalaland;
 		now a-p is in hedron instead;
 	if player is in collapsed:
 		if player has ruby:
-			say "The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint.";
 			now thin hint is in collapsed;
 			now ruby is in lalaland;
 			guy-cheat ruby;
@@ -18584,11 +18645,11 @@ carry out spilling:
 		if d2 is in den loft:
 			say "No--this one, you shouldn't need pills for. DERAIL was the hard one. You just need to dial again..." instead;
 		if yapper is visible:
-			say "The yapper begins bellyaching about picking up the pills. He complains about how it's HIS job to clean things up. He goes off to look for a wastebasket. But it may be a while.";
+			say ;
 			guy-cheat yapper;
 			now yapper is in lalaland;
 			reg-inc instead;
-		say "You spill the pills on the dialer, and they change DIALER to enough of the 720 possibilities that [if dialer is reflexive]they become DERAIL then [end if][if lev-pull is false]you see you should pull the lever so they become [end if]REDIAL. You flip the lever a few times to make sure whatever should happen does.";
+		say ;
 		if dialer is reflexive:
 			now doublecheat is true;
 		guy-cheat dialer;
@@ -18598,7 +18659,7 @@ carry out spilling:
 		now d2 is in tenfold;
 		now lev-pull is true instead;
 	say "Those pills wouldn't create enough of a mess here.";
-	the rule succeeds.
+	the rule succeeds.]
 
 chapter produceredocuping
 
@@ -18608,7 +18669,7 @@ understand the command "produce redo cup" as something new.
 
 understand "produce redo cup" as produceredocuping.
 
-produce-redo-cup is a truth state that varies. produce-redo-cup is true.
+produce-redo-cup is a truth state that varies. produce-redo-cup is false.
 
 carry out produceredocuping:
 	if mrlp is not oyster:
@@ -19143,36 +19204,36 @@ carry out assuageing:
 		say "[if noun is in anger range]Concentrate on the carps and pikes instead[else]He's already happy with you[end if]." instead;
 	the rule succeeds.
 
-chapter tarceing
+chapter traceing
 
 understand "caret" as a mistake ("You need[if reacted is true]ed[end if] to shift letters and not sixes, here.") when crate is visible.
 
 understand "cater" as a mistake ("No use catering to an enemy you can't see. Besides, the crate is too smashed to cater something.") when crate is visible.
 
-traceing is an action applying to nothing.
-
-traced is a truth state that varies. traced is usually false.
+traceing is an action applying to one thing.
 
 understand the command "trace" as something new.
 
-understand "trace" as traceing.
+understand "trace [thing]" as traceing.
+
+does the player mean traceing the crate: it is very likely.
 
 carry out traceing:
-	if location of player is not Lapsin' plains:
+	if noun is not crate:
 		say "[reject]" instead;
-	if traced is true:
+	if c2 is in lalaland:
 		say "You already did that. If you retrace, you might get lost at a terrace." instead;
-	now traced is true;
-	say "Based on where you got hit and how fast it hit you, you throw some grass up in the air or something, note how the wood landed, and figure where it came from! But you see no crates-caster. They'll probably chuck something at you when you're not looking, and you'll probably need to use your instincts. (P.S. don't worry, it's not a centaur either, so you can't untrace. You can't trace up and capture it either.)";
-	reg-inc;
-	check-rude-door instead;
+	try fliptoing c2 instead;
 
-check scaning crate:
-	if reacted is true:
-		say "Your settler does nothing. Hopefully, that's the last of that." instead;
-	if traced is false:
-		say "Your settler registers [if cheat-on is false]RRYRY[else]RPGRG[end if]." instead;
-	say "Your settler registers [if cheat-on is false]RYYRR[else]RYGRR[end if]." instead;
+after fliptoing c2:
+	check-rude-door;
+	continue the action;
+
+after fliptoing crate:
+	check-rude-door;
+	continue the action;
+
+a-text of crate is "RYYRR". b-text of crate is "RYGRR".
 
 chapter reacting
 
@@ -19187,12 +19248,11 @@ understand "react" as reacting.
 carry out reacting:
 	if location of player is not Lapsin' plains:
 		say "[reject]" instead;
-	if traced is false:
+	if c2 is in plains:
 		say "You don't yet know how, or why, to react." instead;
-	if reacted is true:
+	if crate is reflexed:
 		say "Already did." instead;
 	now reacted is true;
-	say "This time you're ready. You turn around and know when to look when the crate is about to hit you. You knock it down in mid-air and, in a fit of rage, fling it back into the tall weeds and hit the en-pris sniper. You hear an expression of anger, then scurrying. You won't need to recast the crates.";
 	reg-inc;
 	check-rude-door instead;
 
@@ -19776,6 +19836,10 @@ Lapsin' Plains is north of anger range. Lapsin' plains is in oyster. "[if rude d
 
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin' Plains
 
+c2 is scenery in lapsin' plains. c2 is undesc. c2 is privately-named. c2 is vanishing.
+
+a-text of c2 is "RRYRY". b-text of c2 is "RPGRG".
+
 understand "lapins" as a mistake ("Cute bunnies can make any game better, but having to deal with French as well would drive me crazy.") when player is in Lapsin' Plains
 
 instead of doing something with the crate:
@@ -19785,7 +19849,7 @@ instead of doing something with the crate:
 
 does the player mean opening the rude door: it is likely.
 
-the crate is scenery in Lapsin' Plains. "[if reacted is true]You can only see fragments of what it was, and they're not worth paying attention to[else]You can't see the crate but you know it, or one just like it, is about to be thrown at you. Crates are a dime a dozen for any bad guys, so that could go on for a while[end if]."
+the crate is reflexive scenery in Lapsin' Plains. "[if reacted is true]You can only see fragments of what it was, and they're not worth paying attention to[else]You can't see the crate but you know it, or one just like it, is about to be thrown at you. Crates are a dime a dozen for any bad guys, so that could go on for a while[end if]."
 
 understand "debris" and "crates" as crate.
 
@@ -19921,7 +19985,7 @@ chapter bonking
 to check-rude-door:
 	if skis are not visible:
 		if reacted is true:
-			if traced is true:
+			if crate is reflexed:
 				if knob is reflexed:
 					say "[line break]Your last act seems to have broken the door's will to block you. It emits a rude odor, rued briefly, and it creaks open with a hinge-neigh and grumpy 'Open door? Done poor.' You're all 'Postpone? Stop? Nope.'";
 					now door-sux is true;
@@ -19992,11 +20056,11 @@ carry out bonking:
 	if noun is not knob:
 		try attacking noun instead;
 	if knob is reflexed:
-		say "That might undo what you did[if reacted is false or traced is false], and it might get you another knock on the noggin anyway[end if]." instead;
-	if traced is false:
+		say "That might undo what you did[if bonkies is true], and it might get you another knock on the noggin anyway[end if]." instead;
+	if c2 is reflexive:
 		now bonkies is true;
 		say "[one of]As you reach to smack the knob, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you[or]You don't need to be hit with another crate[stopping]." instead;
-	if reacted is false:
+	if crate is reflexive:
 		say "[if bonkies is true]You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate[else]You flinch, a second too late. You can trace the crate, but you can't -- use your reflexes[end if].";
 		now bonkies is true instead;
 	say "BONK! You hit the knob just right.";
@@ -20043,10 +20107,7 @@ check opening prod:
 check dropping prod:
 	if word number 1 in the player's command is not "drop":
 		say "That's not the right way to abuse the prod to open it." instead;
-	say "It rattles as you drop it. You try every which way. Heavy end first, light end first, sideways, at an angle--then POW! It opens. It's a properly rigged digger, now. You can't really call it a prod. But you can, and do, pick it up.";
-	reg-inc;
-	now prod is in lalaland;
-	now player has rigged digger instead;
+	try fliptoing prod instead;
 
 the tubs are a plural-named thing in uaah. "Tubs lie here--two glued together by their tops--and perhaps there's something inside."
 
@@ -20142,12 +20203,12 @@ does the player mean busting tubs: it is very likely.
 
 carry out busting:
 	if noun is tubs:
-		say "As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right.";
-		reg-inc;
-		now player has prod;
-		now waste is in uaah;
-		now tubs are in lalaland instead;
+		try fliptoing tubs instead;
 	try attacking noun instead;
+
+after fliptoing tubs:
+	now player has prod;
+	continue the action;
 
 book Achers' Arches
 
@@ -23124,9 +23185,13 @@ oars	oars	"soar"	"soar"	"The oars seem to have thrusters underneath. Physics! Te
 raft	raft	"fart"	"fart"	"Channeling frat, uh, co-eds['] humor, you fail to keep your tush shut, thus. Your gust-guts cause the oars, of all things, to grow larger, as if they have gained the gas for propulsion.[paragraph break]It's kind of disgusting, but at least it's not wasteful!"	false	217136535	"Quit rafting around. That raft has oars. Use them. Even if they're stuck in place."
 carps	carps	"scrap"	"scrap"	"[spike-scrap]."	false	284257131
 carps	carps	"spike"	"spike"	"[spike-scrap]."	false	403472058
+c2	c2	"trace"	"trace"	"Based on where you got hit and how fast it hit you, you throw some grass up in the air or something, note how the wood landed, and figure where it came from! But you see no crates-caster. They'll probably chuck something at you when you're not looking, and you'll probably need to use your instincts. (P.S. don't worry, it's not a centaur either, so you can't untrace. You can't trace up and capture it either.)"	false	337433333
+crate	crate	"react"	"react"	"This time you're ready. You turn around and know when to look when the crate is about to hit you. You knock it down in mid-air and, in a fit of rage, fling it back into the tall weeds and hit the en-pris sniper. You hear an expression of anger, then scurrying. You won't need to recast the crates."	false	337433333
 bubble wrap	ruby	"warp"	"warp"	"You warp the bubble wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"	false	276912353
 o-t	a-p	"patrol"	"patrol"	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap. It's a portal now."	false	400254014	"Waste of time. You already disabled the ol['] trap--you can just enter the portal."
 eeks	eeks	"seek"	"seek"	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the reward drawer. You also notice some wipes on the drawer."	false	404819362	"You don't want to get Aunt Tuna started again."	Handsome Sand Home
+tubs	waste	"bust"	"bust"	"As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right."	false	322908696
+prod	digger	"drop"	"drop"	"It rattles as you drop it. You try every which way. Heavy end first, light end first, sideways, at an angle--then POW! It opens. It's a properly rigged digger, now. You can't really call it a prod. But you can, and do, pick it up."	true	262171428
 waste	lance	"sweat"	"sweat"	"You make real effort to clean up the waste. And you do! You pile them into heaps, in the process finding a very dirty lance."	false	437312684
 heaps	heaps	"shape" or "shape the/ heaps"	"shape"	"You channel your inner artist and make something beautiful out of the heaps."	false	345016151	"You spend time criticizing your own art--no, it's about as good as it'll be."
 haunter	haunter	"assuage"	"assuage"	"'How sad, shadow,' you explain, and you think you might know where someone hid his rubies. You explain some bad guys have buried his ruby. He nods. He is willing to follow."	false	462435186	"The ghost needs no further convincing."
@@ -24258,6 +24323,7 @@ blurb
 "'Do a run-around.'"
 "'Do. Certain? Redaction.'"
 "'Do it, man, and omit...'"
+"'Echos: CHOSE!'"
 "'Eliminate a timeline!'"
 "'Er, cautions. Recusation.'"
 "'Flounderer! Err, Undo Elf!'"
@@ -24380,8 +24446,8 @@ blurb
 "Hurry on? No hurry."
 "I contain inaction."
 "I lag. Fun? Gainful?"
-"I stew. We sit."
 "'I loaf?' O, fail!"
+"I stew. We sit."
 "'I wanna win...naa.'"
 "I'd lessen idleness."
 "'I'll best be still.'"
@@ -24480,6 +24546,7 @@ blurb
 "Say ays?"
 "Simpers impress no-one."
 "So cheery! Or...cheesy?"
+"So fond of nods!"
 "Sure, user! Sure!"
 "Yes, eh? Yeesh!"
 
@@ -24628,6 +24695,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Ben Way's News Bay"
 "Benton's Bonnets"
 "Berdahl's Halberds"
+"Berhorst Brothers"
 "Best Bets"
 "Best Buy Yet: Bub's!"	true
 "Bettina's Tabinets"
@@ -25065,6 +25133,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Fun Bart's Burns Fat (Barf TUNS!)"	true
 "Fun-Fort Turnoff"
 "Fungal-Unflag"
+"Funk Dojo Junk Food"
 "Furlham Rum: HALF harmful!"	true
 "G. Crosby Cyborgs"
 "G. Frei Grief-Refig"
@@ -25539,8 +25608,6 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Nitschke Kitchens"
 "Nitzsche Chintzes"
 "No date? Note ad! Do neat! Donate to Dean!"	true
-"Funk Dojo Junk Food"
-"Berhorst Brothers"
 "No-Daze Ad Zone"
 "No-Glitch Clothing"
 "No-Logic Cool Gin"
@@ -27275,22 +27342,22 @@ blurb
 "Word-Shout Hurstwood"
 "Wordless Lewd Ross"
 "Wrapped-Up Warped Pup Peppard Wu"
-"Wry Ben Berwyn"
-"Wry Leo Worley"
-"Wry Ed Dwyer"
 "Wry Abel Brawley"
-"Wry Cole Crowley"
-"Wry Elmo Wormley"
-"Wry Alec Crawley"
-"Wry Thorson Norsworthy"
-"Wry Red Drewry"
-"Wry Moe Mowery-Wymore"
-"Wry Theo Worthey"
-"Wry Lea Rawley"
-"Wry Amie Waymire"
-"Wry Alda Aylward"
 "Wry Adah Hayward"
+"Wry Alda Aylward"
+"Wry Alec Crawley"
+"Wry Amie Waymire"
+"Wry Ben Berwyn"
+"Wry Cole Crowley"
+"Wry Ed Dwyer"
+"Wry Elmo Wormley"
+"Wry Lea Rawley"
+"Wry Leo Worley"
+"Wry Moe Mowery-Wymore"
 "Wry Ole Rowley Lowery-Worley"
+"Wry Red Drewry"
+"Wry Theo Worthey"
+"Wry Thorson Norsworthy"
 "Zanier [if player is male]Ezra Ni[else]Inez Ra[end if]"
 "Zingier Ziering"
 
@@ -27607,9 +27674,6 @@ blurb
 "Mean Ex-Axemen"
 "Mega GI Maggie"
 "Mm Yeah Mayhem"
-"Virtual Ritual V"
-"The War W/Earth"
-"Threat Epoch: Reach the Top"
 "Mob-Cast Combats"
 "Mock a Whale, Whack a Mole"
 "Mom's Rune Summoner"
@@ -27781,6 +27845,7 @@ blurb
 "Theif of Hot Fief"
 "Theobald Bothdale, Hot Blade"
 "Thingies Heisting"
+"Threat Epoch: Reach the Top"
 "Thugster Gets Hurt"
 "Thy Pro Trophy"
 "Thy Seek: the Keys"
@@ -27815,8 +27880,10 @@ blurb
 "Unresting Insurgent"
 "The Urn Hunter"
 "Us, Bloody Body, Soul: Doubly So"
+"Virtual Ritual V"
 "Wall it at Will"
 "War of Dr. Forward"
+"The War W/Earth"
 "Ward Off Dwarf of Fafword"
 "We Found Feud Now"
 "Weapons ops anew: Snap Woe"
@@ -27838,7 +27905,6 @@ table of lame movies [xxm7]
 blurb
 "[if player is male]Burt Oakes[else]Tresa Kubo[end if] Breaks Out"
 "Abdul's Bud Sal"
-"A Driver's Rare Vids"
 "Admiral Dalarmi"
 "Aforementioned Foe, Renominated"
 "Alias Alisa"
@@ -27908,6 +27974,7 @@ blurb
 "Dr. Neo's Drones"
 "Dr. Roach-Orchard"
 "Dr. Spano Pardons Rod's Nap"
+"A Driver's Rare Vids"
 "Dugger's Grudges"
 "Dullard Dr. Udall"
 "East to O-State"
@@ -30186,21 +30253,7 @@ blurb	prio
 "A'Rite, I Tear a Tire[r], by Artie Etria"
 "Abbey Cho's Sobby Ache[r], by [if player is male]Cobey Bash[else]Sheya Cobb[end if]"
 "Abbie's Babies[r], by Seb Iba"
-"Jocks are a Jerk [']Cos[r], by Jack Rose"
-"Nerf Ball: Barn Fell[r], by Fran Bell"
 "ABC is Basic![r] by Cassi Babic"
-"Roll Back, Cork Ball[r], by [if player is male]Carl Blok[else]Lor Black[end if]"
-"My Card, Mr. Cady[r], by Maddy McCrary"
-"Truce Re-Cut Cuter[r], by Cuc Reutter"
-"To Scale a Closet[r], by Les Cato"
-"Ox Burden Under Box[r], by Bud Rexon"
-"Atom Bombs, a Mob's Tomb[r], by Bobo Stamm"
-"Della's Dalles[r], by Lad Les Edsall"
-"The Girl, Lighter[r], by Reg Hilt"
-"A Lion's Slain, O[r], by Sonia Allison"
-"Fated for Trade-Off[r], by Ted Raffo"
-"Merry Con: My Corner[r], by Ron Mercy"
-"My Clear Calm Rye[r], by Marc Ley"
 "Abhorrent, Earth-Born[r], by [if player is male]Robert Han[else]Berna Roth[end if]"
 "Abide Inert, Inebriated[r], by Benita Reid"
 "Able Arty Betrayal[r], by [if player is male]Bart Ealy[else]Tara Blye[end if]"
@@ -30430,6 +30483,7 @@ blurb	prio
 "At-Worst Tot Wars Start, Ow[r], by Ros Watt"
 "Atlantis Ain't Last[r], by Lita Nast"
 "Atlas of Alas, Oft So Fatal[r], by Flo Asta"
+"Atom Bombs, a Mob's Tomb[r], by Bobo Stamm"
 "The Atoms Most Hate[r], by Shea Mott"
 "Atoners, Senator Orantes[r], by Stan Roe"
 "Auctions['] Cautions[r], by Nia Couts"
@@ -30957,6 +31011,7 @@ blurb	prio
 "Delaune's unleased Used Lane[r], by Luna Dees & Adele Sun"
 "DeLaurentis Adulterines, Neutralised[r], by [if player is male]Dustin Earle[else]Adriene Lust[end if]"
 "Delete Leet Ed[r], by Ted Lee"
+"Della's Dalles[r], by Lad Les Edsall"
 "Delora's Ordeals[r], by Al DeRos & Rod Sale"
 "Demand a Man Dead[r], by Ned Adam"
 "Demarinis's Misandries[r], by Iris Madsen & Mindi Sears"
@@ -31350,6 +31405,7 @@ blurb	prio
 "Fat Lord, Old Fart[r], by Flo Dart-Talford"
 "Fat Red's Sad Fret[r], by Stef Ard"
 "A Fat Sum, Ma Faust[r], by Atsumfa Mustafa"
+"Fated for Trade-Off[r], by Ted Raffo"
 "Fated Here The Feared Feathered Draftee, Eh?[r] by Thea Feder"
 "A Father's Hat Fears[r], by Rea Shaft"
 "Fathom of Math[r], by Mo Haft"
@@ -31492,6 +31548,7 @@ blurb	prio
 "The Gin's Nighest[r], by Si Ghent"
 "Gina's in Gas, I Sang[r], by Agnis Gains"
 "Giordano's grandioso rigadoons[r], by [if player is male]Dario Song[else]Doris Noga[end if]"
+"The Girl, Lighter[r], by Reg Hilt"
 "Give-All Village[r], by Gail Lev"
 "Give Away a Gay View[r], by Ivy Waage"
 "Give Shout This Vogue[r], by [if player is male]Hugo Tevis[else]Sue Voight[end if]"
@@ -32107,6 +32164,7 @@ blurb	prio
 "Jingos['] Jog-Ins[r], by Si Jong"
 "Jo's Lunar Journals[r], by [if player is male]Rajon Sul[else]Ros Lujan[end if]"
 "Job Notice Objection[r], by Joi Becton"
+"Jocks are a Jerk [']Cos[r], by Jack Rose"
 "Join the Tie, John[r], by Thin Joe"
 "Joints St. Joni Jots in[r], by O. J. Nist"
 "Joke About: a Jute Book[r], by Joe Kubota"
@@ -32276,6 +32334,7 @@ blurb	prio
 "Links to Lost Kin[r], by Nik Solt"
 "Lint Owl Will Not Lilt Now[r], by Lon Wilt"
 "The Lion Noel Hit[r], by Eli Noth & Theo Lin"
+"A Lion's Slain, O[r], by Sonia Allison"
 "Liquor Be Obliquer[r], by Eriq Lubo"
 "Lisanne Leans In[r], by Ali Senn"
 "List Not Lost Tin[r], by Nils Ott-Stilton"
@@ -32485,6 +32544,7 @@ blurb	prio
 "Merge No Ogre Men[r], by Mo Green"
 "[']Merica: a Crime[r], by Marcie Camire" []
 "Merman Grange[r], by German Engram-Magner"
+"Merry Con: My Corner[r], by Ron Mercy"
 "Merson's Sermons[r], by Ren Moss"
 "Meshiest Smithees[r], by [if player is male]Tim Hesse[else]Tess Heim[end if]"
 "Mess Bay Embassy: Mass Bye, My Bases[r], by Bess May"
@@ -32614,9 +32674,11 @@ blurb	prio
 "My Ann[r], by Manny Nyman"
 "My Art, or to Marry[r], by [if player is male]Rory Tam[else]Mary Ort[end if]"
 "My Boat By Moat[r], by Tom Bay"
+"My Card, Mr. Cady[r], by Maddy McCrary"
 "My Cat is a Mystic[r], by Tim Casy"
 "My Cats['] Sty, Mac[r], by Ms. Tacy St. Macy"
 "My Clean Clay Men[r], by Len Macy & Al McNey"
+"My Clear Calm Rye[r], by Marc Ley"
 "My Coarse Sycamore[r], and its sequel, [i]Some Racy Sycamore[r], by Rose Macy"
 "My Dirt, Dmitry[r], by Dry Tim"
 "My Drug: Dry Gum[r], by DRM GUY"
@@ -32694,6 +32756,7 @@ blurb	prio
 "Nerdier Naiad Air Den[r], by Nerida & Adrien Naderi"
 "Nerdy Bum: My Burden[r], by Ned Byrum"
 "Nereid Denier[r], by Derien Indree"
+"Nerf Ball: Barn Fell[r], by Fran Bell"
 "Nero the Thereon Not Here[r], by Rhet Eno"
 "Nerve to Veer Not[r], by Rev. Teno Ventore"
 "Nerviest? Reinvest[r], by Vi Ernest"
@@ -32772,6 +32835,7 @@ blurb	prio
 "No Mail, Oilman[r], by Ol['] Mina Molina-Milano"
 "No-Mess Mesons[r], by Ms. Enos Sensom"
 "No Mire or Mine[r], by Normie Remino"
+"No Mo['] Tripe, Minor Poet[r], by Tom Perino" []
 "No More Romone Moreno[r], by Ron Moe"
 "No-Nest Sent-On Sonnet[r], by Tone N. Stenson"
 "No Overt Veto, Ron[r], by Trevono Overton"
@@ -33113,6 +33177,8 @@ blurb	prio
 "Overt Op: Vote Pro to Prove, Poor Vet[r], by Rev. Toop"
 "Ow, Years So Weary: Ay, Worse[r], by [if player is male]O. Sawyer[else]Rose Way[end if]"
 "Own It to Win[r], by [toti] Witnow"
+"Ox Burden Under Box[r], by Bud Rexon"
+"Ox's Real Ax Lores[r], by Rex Sola"
 "Oysterman Monastery[r], by [if player is male]Myron East[else]Amy Nestor[end if]"
 "Ozone's Snooze[r], by Zoe Nos"
 "Pa Burke's Breakups[r], by Kap Suber"
@@ -33500,6 +33566,7 @@ blurb	prio
 "Rod, Muck, Mud, Rock[r], by Mr. Ducko Murdock"
 "Rod Ruby's Sorry Bud[r], by Rudy Bors"
 "Rod Sent Nerds to Dr. Stone[r], by Ted Sorn"
+"Roll Back, Cork Ball[r], by [if player is male]Carl Blok[else]Lor Black[end if]"
 "Romp, Idle Imploder[r], by [if player is male]Pedro Lim[else]Dori Lemp[end if]"
 "Ron's Poem: Some Porn[r], by [if player is male]Mo Posner[else]Ro Empson[end if]"
 "Roofless Solo Serf[r], by Flo Rosse"
@@ -34297,6 +34364,7 @@ blurb	prio
 "To Sales so Stale[r], by Les Tsao"
 "To Sand Not Sad[r], by Don-Tad Santos"
 "To Saul: Soul at a Lotus[r], by Lu Sato"
+"To Scale a Closet[r], by Les Cato"
 "To Scar or Scat[r], by Cora St. Castro"
 "To Scorn Not Orcs[r], by Ron Scot"
 "To Scream at Comers[r], by Tom Cesar"
@@ -34400,6 +34468,7 @@ blurb	prio
 "Trollin['] Til Lorn[r], by Ron Till"
 "A Trophy? Oh, Party![r] by Phat Roy"
 "Troubled Old Brute, Loud Bert, But Older[r], by Bud Toler"
+"Truce Re-Cut Cuter[r], by Cuc Reutter"
 "Truest Utters[r], by Stuert Sutter"
 "Try a Vice: Evita, Cry,[r] by Ray Civet"
 "Try Again, Giant Ray[r], by Tina Gary"
@@ -34772,7 +34841,6 @@ blurb
 "'Bad calls, ball-cads!'"
 "'Bears are BS!'"
 "'Cal won?! A clown!'"
-"'Fullback? Flab! Luck!'"
 "'Checked out? Cute. CHOKED.'"
 "'Cons rig scoring!'"
 "'Dam['] ref. Framed!'"
@@ -34785,6 +34853,7 @@ blurb
 "'Fest for soft ref efforts.'"
 "'Fowler? Low ref.'"
 "'Friedel: fielder? Refiled: defiler!'"
+"'Fullback? Flab! Luck!'"
 "'Gus DeNaro. Dangerous nose-guard.'"
 "'Hickson? Chokins[']!'"
 "'Impure umpire.' / 'Sobs, boss.'"
@@ -35159,6 +35228,7 @@ blurb
 "Cuddly DD Lucy."
 "Cum Into My Community."
 "Cum is Music."
+"Cute Mom's Commutes."
 "Cuter, re-cut."
 "Daaamn, Amanda."
 "Dam Yer Dreamy My Dear."
@@ -35330,6 +35400,7 @@ blurb
 "The Group-Grope Hut."
 "Grungiest Gesturing."
 "Gush On, Shogun So Hung."
+"Guthrie's Urges Hit."
 "Guy-a-Guay."
 "Handy Dynah."
 "Hard Long Horn, Glad."
@@ -35423,8 +35494,6 @@ blurb
 "I Slam a Slim Ms. Ali."
 "I Take Katie."
 "I Want Tawni Twain."
-"Cute Mom's Commutes."
-"Guthrie's Urges Hit."
 "I'd Bare a Bride."
 "I'd Do Dido."
 "I'd Goose Doogie's Goodies."
@@ -35762,6 +35831,7 @@ blurb
 "Po['] Rev. Pervo."
 "Porgy's Spry Go."
 "Porn O['] NPR."
+"Porno Time, Minor Poet."
 "Portia's Spa Trio."
 "Pounces on E-Cups."
 "Poxes! Sex-Op Expos."
@@ -36468,7 +36538,6 @@ blurb
 "about the I-confess-sins conf."
 "ah, yon, Mr. A hymn or harmony."
 "Aid Ida, Adi..."
-"to undergo a good nature: outraged? No!"
 "and sellin['], all sinned."
 "anecdote, sir: decorate sin, acridest one? Noise! Redact!"
 "angry? Wow, wrong way."
@@ -36622,6 +36691,7 @@ blurb
 "to be like Rev. Figo, Giver of Org Five."
 "to prey? Rot. Yep."
 "To sin is not on, is't?"
+"to undergo a good nature: outraged? No!"
 "trite, posy posterity rots piety."
 "truce cruet... he doesn't eruct."
 "Ug. Some egos. Um."
@@ -37792,6 +37862,7 @@ blurb
 "Unamused [if player is male]Duane Sum[else]Sue Duman[end if]"
 "Unbearable Reuben Alba"
 "Unchanged Dean Chung"
+"Undaring Ida Grund"
 "Unsubtle Blunt Sue"
 "Uplifted Tepid Ulf"
 "Upstanding [if player is male]Dustin Pang[else]Agnis Pundt[end if]"
@@ -37836,7 +37907,6 @@ blurb
 "Yell-Ban Allenby"
 "Yuna, Epic Picayune"
 "Zealot Zoe Tal"
-"Undaring Ida Grund"
 "Zealous Sue Zola"
 
 table of rev ali advice [xxu5]
@@ -37845,7 +37915,6 @@ blurb
 "ABNORMAL BAN = MORAL"
 "ADS KILL ALL KIDS"
 "AFOS = OAFS"
-"WASTE FOOD? OAF, DO STEW"
 "AH, VOWIN[']? HOW VAIN"
 "ALLURIN[']: RUIN ALL"
 "ALOHA, OL['] OOH-LA-LA"
@@ -38225,6 +38294,7 @@ blurb
 "VITUPERATE? A VIRTUE, PET"
 "VOICE HATE TO ACHIEVE"
 "WANDER? SINS. INWARDNESS"
+"WASTE FOOD? OAF, DO STEW"
 "WHO RIPS WORSHIP? MAD SIN ADMINS"
 "WINES? EW, SIN"
 "WISDOM? NO, DOOM WINS"
@@ -39063,10 +39133,8 @@ blurb
 "'[d-word-u]! Elf Feldman fled, man.'"
 "'A-ok, mob? KABOOM!'"
 "'A-team? Eat me!'"
-"'Ah, dupes! Heads up!'"
 "'Aargh! Graah! Hagar!'"
 "'Ace, hi!' 'Eh...ice! I ache!'"
-"'Alive, OK, go, give a look.'"
 "'Ach so! A cosh! Chaos!'"
 "'The acid, it ached. Hide, cat!'"
 "'Ack, mind? Dick, man!' / 'Mad, Nick?'"
@@ -39080,6 +39148,7 @@ blurb
 "'Ah, [d-t] had to do tha...' / 'Oh, DAT?'"
 "'Ah! A dime! I'm ahead!'"
 "'Ah-ah-AH! Hahahahahaha!'"
+"'Ah, dupes! Heads up!'"
 "'Ah, Flo. Fo['] Hal? Oh, Alf.'"
 "'Ah, Sid! A dish?' / 'I dash!'"
 "'Ah, ted hated Death...' / 'Oh, Tad had to.'"
@@ -39101,6 +39170,7 @@ blurb
 "'Al, I ail!'"
 "'Alf's in! Finals!'"
 "'Alibi? I bail.'"
+"'Alive, OK, go, give a look.'"
 "'Allo, Lola!' / 'Ol['] Al!'"
 "'Alloted to. Dealt. Totaled.'"
 "'Alphonse, phone Sal.'"
@@ -41667,19 +41737,7 @@ blurb
 "Abused Bad Sue"
 "Ace Lord DeCarlo"
 "Ace Rogue Oceguera"
-"Wired Amy Widmayer"
-"Wired Gay Ridgeway"
-"Wired Lan Reinwald"
-"Wired Inge Weidinger"
-"Wired Alf Warfield"
-"Wired Genna Winegarden"
-"Wired Fleta Waterfield"
 "'Achoo' Ochoa"
-"Martial Tim Lara"
-"No-Facts Fast Con Scot Fan"
-"Fraudulent Ren DuFault"
-"Webb of Few Bob"
-"Resonant Stan Nero" []
 "Acne Lord Calderon"
 "Actorly Cal Troy"
 "Addled Ed Ladd"
@@ -42447,6 +42505,7 @@ blurb
 "Fox Red Exford"
 "Fragile Eli Graf"
 "Fraud Bennie Bauernfeind"
+"Fraudulent Ren DuFault"
 "Free-Lunch [if player is male]Luc Hefner[else]Lue French[end if]"
 "Fricker Ferrick"
 "Frightful Riff Gluth"
@@ -43068,6 +43127,7 @@ blurb
 "Manhattan Matt Hanna"
 "Map Nut Putman"
 "Marietta's Metatarsi"
+"Martial Tim Lara"
 "Masquer Marques"
 "Mastodon Stan Odom"
 "Mauls-a-Slum Sam Lu"
@@ -43227,6 +43287,7 @@ blurb
 "No-Drugs Gus Dorn"
 "No-Ethics [if player is male]Otis Chen[else]Toni Esch[end if]"
 "No-Faces Fonseca"
+"No-Facts Fast Con Scot Fan"
 "No-Gab Bogan"
 "'No Girls' Sol Ring" [p]
 "No-Glom Mongol Mo Long-Golmon"
@@ -43536,6 +43597,7 @@ blurb
 "Repelling Pellegrin"
 "Repo Man Rampone"
 "Resetter Streeter"
+"Resonant Stan Nero" []
 "Restive Sievert"
 "Retainer Renteria"
 "Retreater Ratterree"
@@ -44272,6 +44334,7 @@ blurb
 "Wealthy Whatley"
 "Weaseling [if player is male]Galen[else]Angel[end if] Wise"
 "Weaseling [if player is male]Lewis Egan[else]Elise Wang[end if]"
+"Webb of Few Bob"
 "Wee Nik Weinke"
 "Weird Fleta Waterfield"
 "Well-Born Brownell"
@@ -44286,6 +44349,13 @@ blurb
 "Whomper Morphew"
 "Winded Dedwin"
 "Winker Kerwin"
+"Wired Alf Warfield"
+"Wired Amy Widmayer"
+"Wired Fleta Waterfield"
+"Wired Gay Ridgeway"
+"Wired Genna Winegarden"
+"Wired Inge Weidinger"
+"Wired Lan Reinwald"
 "Wormer Merrow"
 "Wormy Wry Mo"
 "Worn Ed Wredon"
@@ -47472,35 +47542,35 @@ blurb
 table of Leo-Rand chitchat [xxp3]
 blurb
 "[l-r] admits he couldn't handle the regimen of Thickener Kent Reich-Kitchener."
-"[lrp] begin construing trouncings, but not anyone. Just abstractly."
-"[lrp] both weep 'Machos? A schmo.'"
-"[l-r] considers re-reading [i]The New You, Thou Weeny[r], by Huey Towne."
-"[l-r] considers the Thin Gym: My Thing workout."
 "[l-r] considers ordering Buffs to Bust Off."
+"[l-r] considers re-reading [i]The New You, Thou Weeny[r], by Huey Towne."
 "[l-r] considers the methods of Dr. Sweat Steward."
-"[lrp] discuss the wrestling event: Mean Nils's Nine-Slams Manliness."
+"[l-r] considers the Thin Gym: My Thing workout."
 "[l-r] discusses Sweaty-Way Set training."
 "[l-r] discusses the plexus-suplex, not willing to practice it on each other."
 "[l-r] does a quick-start squat trick to try to get into shape."
 "[l-r] feels guilt over a long-gone goonie-noogie."
+"[l-r] mutters[if player is female], ignoring your gender,[end if] 'Ugly slam, small guy.'"
+"[l-r] recalls good seats at the Limburger Rumble Rig."
+"[l-r] resolves to do abs so bad."
+"[l-r] talks of working at a tungsten guns tent."
+"[l-r] vows to read My Abs, By Sam."
+"[l-r] wonders if Invig-Givin['] is too good to be true."
+"[lrp] begin construing trouncings, but not anyone. Just abstractly."
+"[lrp] both weep 'Machos? A schmo.'"
+"[lrp] discuss the wrestling event: Mean Nils's Nine-Slams Manliness."
 "[lrp] figure at least they tried, unlike Quit-Goon Quitongo."
 "[lrp] grit flesh so. 'Fight losers. Griefs. Sloth.'"
 "[lrp] half-heartedly laugh recounting [i]To Crudest Destructo[r]."
 "[lrp] half-heartedly recap favorite moments in [i]OK, at a TKO[r]."
 "[lrp] mention Police Pec-Oil HAS to work."
 "[lrp] moan they're no Brooks KO Bros."
-"[l-r] mutters[if player is female], ignoring your gender,[end if] 'Ugly slam, small guy.'"
 "[lrp] realize they're no Rad Ryno and Rory."
-"[l-r] recalls good seats at the Limburger Rumble Rig."
 "[lrp] regret picking on Pinko Sal Polanski, Pinko Lis Polinski, Pinko Shon Hopkinson and Pinko Ann Pankonin."
-"[l-r] resolves to do abs so bad."
 "[lrp] suddenly see the sad side of [i]Sucker-Punch Checkup Runs[r]."
 "[lrp] suddenly sympathize with the losers in [i]Booyahs: Oh, Ay, Sob[r]."
-"[l-r] talks of working at a tungsten guns tent."
 "[lrp] try and fail to make that move from Neat-KO Keaton."
-"[l-r] vows to read My Abs, By Sam."
 "[lrp] wonder if Gus Funk Kung-Fus work THAT well."
-"[l-r] wonders if Invig-Givin['] is too good to be true."
 "Each wishes he were a gung ho gun hog."
 "'Eats gum? Me gusta!'"
 "'Galoots also got gals, too. To goals!'"
@@ -50274,7 +50344,6 @@ blurb
 "Alert, clown: we can troll!"
 "All We Do: ALLOWED!"
 "ARM! RAM! MAR!"
-"Comply with my low pitch!"
 "Arm twisting! Smarting wit!"
 "AUNT TUNA (an unflattering picture, captioned weight: A TUN)" [p]
 "Aye for year of fear, yo!"
@@ -50285,6 +50354,7 @@ blurb
 "Be rotten, no better!"
 "Being mean? Binge! Amen!"
 "But yeah, buy hate!"
+"Comply with my low pitch!"
 "Defense? Send fee!"
 "Deny Thee the Needy!"
 "Depants pedants!"
@@ -50769,14 +50839,14 @@ table of Elvira battle cries [xxt3]
 blurb
 "A belting, tangible"
 "Blotted. Bottled"
-"Grr, an a-ok Ragnarok"
 "Dead poser! Desperado"
 "Defame me? FADE! Mad fee"
-"A foe, utmost: out of steam"
 "A dirty aid try"
 "Drat. Seem mastered"
 "Drubbing! Burn'd big"
 "Extend furies? Six feet under"
+"A foe, utmost: out of steam"
+"Grr, an a-ok Ragnarok"
 "Hour is come, choir-mouse. Um, so heroic"
 "I can see a scenic ceasin[']"
 "I, super, rise up"
@@ -51277,7 +51347,8 @@ definition: a thing (called hintcand) is hintrelevant:
 	let R1 be map region of location of hintcand;
 	let R2 be mrlp;
 	if R1 is R2:
-		if progval of location of R1 < progval of location of R2: [check for something inside something else]
+		d "[hintcand] [location of hintcand] vs [R2].";
+		if progval of location of hintcand < progval of location of player: [check for something inside something else]
 			decide no;
 		d "[hintcand] is relevant.";
 		decide yes;
@@ -51878,7 +51949,7 @@ river	"[one of]There are two ways across the river.[plus][or]You can get the boa
 raft	"[one of]Just getting on the raft is no fun. You want it to, well. move.[plus][or]Those oars on the raft would be a drag to pull around.[plus][or]Hint the oars if you can't figure out what to do with them.[minus][cycling]"
 boats	"[one of]The sailors aboard the boats seem to like a good chat about accomplishments.[plus][or]How could you get the boats['] attention with your own bragging or self-promotion?[plus][or]BOAST.[minus][cycling]"
 crays	--	plea
-plea	"[one of]You can't change the cray, but the plea offers a way out. The pale plea.[plus][or]You are feeling too jumpy to just plain jump, so you need to...[plus][or]...LEAP.[minus][cycling]"
+plea	"[one of]You can't change the crays, but the plea offers a way out. The pale plea.[plus][or]You are feeling too jumpy to just plain jump, so you need to...[plus][or]...LEAP.[minus][cycling]"
 canoe	"[one of]The canoe can be changed to make more water, but you don't need that.[plus][or]In fact, you need to do nothing with the canoe.[plus][or]Because if you make the canoe an OCEAN, that's bad news.[minus][cycling]"
 fish	--	canoe
 oars	"[one of]Those oars provide propulsion.[plus][or]And not just through the water.[plus][or]SOAR.[minus][cycling]"
@@ -51886,7 +51957,7 @@ carps	"[one of]You're bigger than they are, and your arms have more reach. You c
 pikes	"[one of]They, or the carps, can be beaten. It doesn't make any difference whom you attack.[plus][or]The pikes require a slightly odd verb. You can brawl, tussle, or...[plus][or]SPIKE the pikes.[minus][cycling]"
 skis	"[one of]The skis are blocking the door.[plus][or]They can't be moved by force.[plus][or]You need to KISS the skis.[minus][cycling]"
 knob	"[if reacted is false]You need to deal with a crate first, but the knob will be easier.[else][one of]The knob won't budge. It doesn't seem to have a lock.[plus][or]You need to do something with it.[plus][or]BONK the knob.[minus][cycling][end if]"
-crate	"[if traced is false][one of]You can't figure where the debris is coming from.[plus][or]It's debris of a CRATE.[plus][or]You want to TRACE it.[minus][cycling][else if reacted is false][one of]Someone has an unending supply of crates.[plus][or]You can't seem to find the time to open the door, still.[plus][or]The crate still requires you to do one more thing.[plus][or]REACT.[minus][cycling][else]Nothing more to do with the crates."
+crate	"[if crate is reflexive][one of]You can't figure where the debris is coming from.[plus][or]It's debris of a CRATE.[plus][or]You want to TRACE it.[minus][cycling][else if reacted is false][one of]Someone has an unending supply of crates.[plus][or]You can't seem to find the time to open the door, still.[plus][or]The crate still requires you to do one more thing.[plus][or]REACT.[minus][cycling][else]Nothing more to do with the crates."
 fragments	--	crate
 bogus-plains	"[one of]You can talk about how great you are, to all who would hear.[plus][or]What can you do in the lapsin['] plains?[plus][or]SPLAIN.[minus][cycling]"
 waste	"[one of]The waste puzzle is optional. [plus][or][one of]The waste is hard to move. It requires effort.[plus][or]Taking the waste is out, but you can sift through it the right way.[plus][or]SWEAT.[minus][cycling][stopping]"
@@ -52872,6 +52943,8 @@ to decide which thing is oyster-item:
 		if raft is reflexed:
 			decide on oars;
 		decide on raft;
+	if player is in freight:
+		decide on plea;
 	if player is in range:
 		if pikes are in range:
 			decide on carps;
@@ -52884,7 +52957,9 @@ to decide which thing is oyster-item:
 	if player is in plains:
 		if skis are in plains:
 			decide on skis;
-		if reacted is false:
+		if c2 is in plains:
+			decide on c2;
+		if crate is reflexive:
 			decide on crate;
 		if knob is reflexive:
 			decide on knob;
