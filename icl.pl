@@ -1,3 +1,7 @@
+#ICL = Inform Command Line
+#
+#Perl script to compile stuff without having to open the IDE, etc.
+#
 #cd c:/Users/Andrew/Documents/Inform/Extensions/
 #cd c:/games/inform/$proj.inform/Build
 #"C:/Program Files (x86)/Inform 7/Compilers/ni" -rules "C:/Program Files (x86)/Inform 7/Inform7/Extensions" -package "C:/games/inform/$proj.inform" -extension=ulx
@@ -8,13 +12,18 @@
 
 #I can and should expand this to do more than one at once
 
-@allProj = ("-s", "-r");
+@allProj = ("-s", "-r", "-u", "-15", "-d");
 
 $myProj = "roiling";
 
 $proj{"-3"} = "threediopolis";
+$proj{"-d"} = "dirk";
 $proj{"-r"} = "roiling";
 $proj{"-s"} = "sa";
+$proj{"-u"} = "uglyoafs";
+$proj{"-15"} = "directors";
+$proj{"-dir"} = "directors";
+$proj{"-dob"} = "directors";
 
 $debug = 0;
 $release = 1;
