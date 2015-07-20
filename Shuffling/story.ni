@@ -14532,6 +14532,7 @@ blurb
 "Zoren Enzor"
 "Zorrie Rozier"
 "Zuri Ruiz"
+"Rigel Igler"
 
 book forest
 
@@ -14658,6 +14659,8 @@ blurb
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
 "Act so! O, CAST!"
+"The URL lureth? Hurtle!"
+"Mussy fro, or fuss? My, so smurfy!"
 "Ada the Heated had tea. A death!"
 "Adam she has made ashamed."
 "Adieu, blot! Bailed out!"
@@ -15920,6 +15923,7 @@ blurb
 "'Win-Lose Wiles? No Lies, Now!'"
 "'WorldCo? Cold Row!'"
 "A worn 'No war.'"
+"'Life more moil-free!'"
 "'Yuck, one coy nuke!'"
 "'Zeal's sin. LAZINESS!'"
 
