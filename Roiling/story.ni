@@ -216,11 +216,11 @@ to say randbla:
 							now curidx entry is 0;
 						d "[curidx entry] vs [maxidx entry]. Repnum is [repnum].";
 						let thistab be mytab entry;
+						increase curidx entry by repnum; [afterwards gets runtime error as inform thinks it's the new table]
 						repeat with county running from 1 to repnum:
 							choose row whrow in thistab;
 							say "[blurb entry] ";
 							increment whrow;
-						increase curidx entry by repnum;
 					if wrap-note is false and whrow > 5: [this is a magic number, to see if the person is really examining something.]
 						now wrap-note is true;
 					the rule succeeds;
@@ -257,7 +257,9 @@ to say ted-die:
 		decrement die-trigger;
 		say "[if die-trigger is 0]'Die to us!' the lecturer yells, as he points at someone who may or may not be using drugs. 'To use...I'd...' the poor soul mumbles as he is slapped up and carted off. You see red at what must be either harsh injustice or appalling acting[else]Man, it's all so [i]tedious[r][end if]";
 	else if a random chance of 1 in 4 succeeds:
-		say "After that ... incident, everything is back to [i]tedious[r]";
+		say "After that ... incident, everything is back to [i]tedious[r].";
+	else:
+		say "[line break]";
 
 to say randexc:
 	let re be a random number from 1 to 5;
@@ -290,8 +292,8 @@ table of undo allows	false	0	0	undo-ok rule	lll	"Successful undo responses"	--	"
 table of random books	false	0	0	read-books rule	manor	"All the books in your bookshelf"	"[i]"	"[r]"	"your own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1
 table of ad slogans	true	0	0	blurby rule	manor	"All the ads in the Dope Op-Ed"	--	""	"HANKER! HARKEN! you read. With that general ad, it's back to the start."
 table of mob chants	false	0	0	mob-chanting rule	manor	"Mob chants (LISTEN post-Gunter in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"They finish fishin[']."
-table of idiotic lecture points	true	0	0	lecture-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	" [ted-die]."	"The lecturer flips back to the start of his keystone keynotes, resuming his ol['] mongo monolog."	20
-table of overdone movies	true	0	0	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	""	"The lecturer reminds the crowd [i]Dosing Doings[r] remains the universal classic."	20
+table of idiotic lecture points	true	0	0	lecture-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	" [ted-die]"	"The lecturer flips back to the start of his keystone keynotes, resuming his ol['] mongo monolog.[pre-brk]"	20
+table of overdone movies	true	0	0	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	""	"The lecturer reminds the crowd [i]Dosing Doings[r] remains the universal classic.[pre-brk]"	20
 table of sicko movies	false	0	0	movie-over-ad rule	stores	"Store C videos (parental advisory)"	"You peruse the movies: "	""	--	--	false	0	0	5
 table of store c competitors	false	0	0	compet-over-ad rule	stores	"Store C competitors"	"You're promised better prices and service than "	"."	"Finally, there's a put-down of Twisted Twit Ed's."
 table of store c ads	false	0	0	read-c rule	stores	"Store C advertisements (parental advisory)"	--	""	"'Wanker? Ew, rank!' someone hisses at you. Yup, you've been reading a while."
@@ -312,12 +314,12 @@ table of prestigious bums	false	0	0	read-deal rule	troves	"'Inspirational' Yorpw
 table of real estate ads	false	0	0	read-brochure rule	troves	"Rotunda brochure locations[indic of troves]"	"It's for real estate by Sir Dee. One page header blares [i]Home's so Meh? "	"[r]"	"Secretcester! OWN NOW! is the final entry."
 table of Leo-Rand chitchat	true	0	0	chitchat-over-idols rule	presto	"Leo and Rand's chatter[if rand is fightin] (STORE P)[end if]"	--	""	"'Heya.' / 'Yeah?' An awkward silence follows.[paragraph break]They've run out of conversation, but fortunately (for them,) they forgot it all, so they can just restart."
 table of Leo-Rand idols	true	0	0	Leo-Rand-cry rule	presto	"Leo and Rand's idols[if rand is fightin] (STORE P)[end if]"	"[one of]Leo and Rand[or]Rand and Leo[at random] sadly admit they're no "	"."
-table of catechism pages	false	0	0	catechism-over-research rule	presto	"Hacks['] shack catechism entries[indic of presto]"	--	""	"After the final 'Ok, worn? Work on or know,' only a nixed-pap Appendix is left. But for reading this, appoint you a rarest raster starer. Have an, er, star."
+table of catechism pages	false	0	0	catechism-over-research rule	presto	"Hacks['] shack catechism entries[indic of presto]"	--	""	"After the final 'Ok, worn? Work on or know,' only a nixed-pap Appendix is left. You could flip through for more research topics or brainy types, but you've done enough. I appoint you a rarest raster starer. Have an, er, star."
 table of research topics	false	0	0	research-over-doctors rule	presto	"[one of]Some[or]More[stopping] explanation of research by Arch Rees:[indic of presto]"	"Arch Rees[one of][or] further[stopping] explaining research on "	"."
 table of smartypants	false	0	0	read-docs rule	presto	"Ph. D. researchers"	"The highly technical yet useful research of "	"."
 table of bedding brands	false	0	0	read-futon rule	presto	"Sleep aide brands"	--	""	"Smartest Mattress, hopefully cleaner than the one you remember from The Ol['] Hotel in the Metros behind Store M."
 table of bar dialogue	true	0	0	bar-over-comp rule	oyster	"Posh Hops Shop action[indic of oyster]"	"[one of]Whew. Rough talk and action here. [or]More rough talk and action. [or][stopping]" 	""	"You've seen it all. Time to take decisive action(s) of your own.[pre-brk]"
-table of competing bars	true	0	0	in-bar rule	oyster	"Posh Hops Shop competitors[indic of oyster]"	"Someone says the Posh Hops Shop [one of]has nothing on[or]sure beats[at random] "	"."	"Everyone agrees Soph Pho's is a total rip-off of, well, here.[pre-brk]"
+table of competing bars	true	0	0	in-bar rule	oyster	"Posh Hops Shop competitors[indic of oyster]"	"Someone says the Posh Hops Shop [one of]has nothing on[or]sure beats[at random] "	"."	"Everyone agrees Soph Pho's is a total rip-off of, well, here. You can't imagine any more bars being discussed.[pre-brk]"
 table of Casper mumbles	false	0	0	casper-talk rule	oyster	"Casper's mumblings[indic of oyster]"	""	""	"'[if player is male]Rhett Weir[else]Teri Werth[end if], the writer? Eh, err...TWIT!' Casper suddenly flips back to the start of his notes. Perhaps he feels you are not good enough to hear any more of his original thoughts."
 table of fish fries	true	0	0	insult-over-girls rule	oyster	"Carps/pikes trout-bullying [if anger range is visited]in anger range[else](STORE Y)[end if]"	--	""	"The bullies call him 'A soft fatso so fat.' They're out of ideas and claim it's the trout's fault for not being interesting enough. The ratters restart samer smear-reams.[pre-brk]"
 table of unpopular girls	true	0	0	ohai-bullies rule	oyster	"Unpopular girls carps/pikes mention[indic of oyster]"	"The bullies insinuate the trout [one of]likes[or]isn't good enough for[cycling] "	"."	"Zina is the last, and utterly wrongest, girl they accuse the trout of liking. Really, shame on them.[pre-brk]"
@@ -26735,7 +26737,9 @@ blurb
 "Acerbic Ric Cabe"
 "Adrenalin-Riled Erlinda Ladnier-Ireland"
 "Adult Kid Ida Kludt"
+"Too-Dark Tad Rook"
 "Alf of Offal"
+"Bunch-O-JK John Buck"
 "Alive Elvia Leiva"
 "Am-I-Nuts Mustain"
 "Amuser Mauser"
@@ -29550,6 +29554,7 @@ table of oldies singers [xxm03]
 blurb
 "Abject Cat Jeb"
 "Absurd Bard Su"
+"Solid Gold Dodo Gills"
 "Alto Ben Labonte"
 "Alto Bo Lobato"
 "Alto Cyr Claytor"
@@ -51105,6 +51110,7 @@ table of selly yells [xxh2]
 blurb
 "'Aw, yep, we pay.'"
 "'Bargain! Baring a grin, bag!'"
+"'Foul offers? Suffer, fool!'"
 "'Best price!' / 'Creeps bit!'"
 "'Boonies! Soon, I be...'"
 "'Buy em!' / 'Um, bye!'"
