@@ -28,17 +28,24 @@ if ($#dirs == -1) { @dirs = (lc(getcwd())); }
 
 for $mydir (@dirs)
 {
-  if ($alfed{lc($mydir)}) { print "Duplicate directory $mydir\n."; } else { alphSource($mydir); $alfed{lc($mydir)} = 1; }
+  if ($alfed{$mydir}) { print "Duplicate directory $mydir\n."; } else { alphSource($mydir); $alfed{lc($mydir)} = 1; }
 }
+
+postProcess();
 
 #This is the big subfunction
 
 sub alphSource
 {
 
+$findy{lc("$_[0]/story.ni")} = 1; #print "Adding $_[0] to findy.\n";
+
 $lines = 0;
 
 my $thisDir = lc($_[0]);
+
+$short = $thisDir;
+$short =~ s/\.inform.*//g; $short =~ s/.*[\\\/]//g;
 
 my $fileName = "$thisDir/$fileName";
 my $outFileName = "$thisDir/$outFileName";
@@ -82,6 +89,10 @@ $nuSize = -s "$outFileName";
 
 if ($niSize != $nuSize) { print "Something went wrong. File sizes aren't equal! New=$nuSize Old=$niSize. Maybe check CR's."; die; }
 
+}
+
+sub postProcess
+{
 if (!$dontcopy)
 {
   print "Copying .nu to .ni\n";
@@ -90,23 +101,27 @@ if (!$dontcopy)
   while ($a = <A>)
   {
     @b = split(/,/, $a);
-    if (@b[0] eq $fileName)
+    if ($findy{@b[0]})
 	{
-	  print "OK, found $fileName in tsh.txt.\n";
+	  print "Updating @b[0].\n";
 	}
 	else
 	{
+	  print "Not updating @b[0].\n";
 	  $outString .= $a;
 	}
   }
+  for $q (sort keys %findy)
+  {
 	@localtime = localtime(time);
 	  $dateForm = sprintf("%4d-%02d-%02d-%02d-%02d-%02d",
 	    @localtime[5]+1900, @localtime[4]+1, @localtime[3], @localtime[2], @localtime[1], @localtime[0]);
-      $thisOutString = "$fileName," . (-s $fileName) . ",$dupes,$dateForm\n";
+      $thisOutString = "$q," . (-s $q) . ",$dupes,$dateForm\n";
+	  $outString .= $thisOutString;
+  }
   close(A);
   open(B, ">c:/games/inform/tsh.txt");
   print B $outString;
-  print B $thisOutString;
   close(B);
   $cmd = "copy $outFileName $fileName";
   $cmd =~ s/\//\\/g;
@@ -152,15 +167,15 @@ sub sortTheTable
   {
     $lines2 = $lines + $_;
     $temp = lch(@ary2[$_]); chomp($temp); 
-    if ($isDone{$temp}) { print "$temp ($lines2) is duplicated from line $isDone{$temp}.\n"; $dupes++; $dupeString .= "$thisTable ($lines2 from $isDone{$temp}): $temp\n"; }
+    if ($isDone{$temp}) { print "$temp ($lines2-$short) is duplicated from line $isDone{$temp}.\n"; $dupes++; $dupeString .= "$thisTable ($lines2-$short from $isDone{$temp}): $temp\n"; }
 	elsif ($_ > 0)
 	{
 	  if (@ary2[$_] =~ /\Q@ary2[$_-1]/i)
 	  {
-	    print "$temp ($lines2) is duplicated from line $isDone{$temp}.\n"; $dupes++; $dupeString .= "$thisTable ($lines2 from $isDone{$temp}): $temp\n";
+	    print "$temp ($lines2-$short) is duplicated from line $isDone{$temp}.\n"; $dupes++; $dupeString .= "$thisTable ($lines2 from $isDone{$temp}): $temp\n";
 	  }
 	}
-	$isDone{$temp} = $lines2;
+	$isDone{$temp} = "$lines2-$short";
   }
   $lines += $#ary2 + 2;
   
