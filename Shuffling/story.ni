@@ -13887,6 +13887,7 @@ blurb
 "Glennis Lensing"
 "Glenster Stengler"
 "Glinda Alding"
+"Godfrey Geyford"
 "Goldina Galindo"
 "Gonzalo Zalongo"
 "Gorduna Durango-Guadron"
@@ -13982,7 +13983,6 @@ blurb
 "Karisa Askari"
 "Karla Kraal"
 "Karsten Kastner"
-"Kassia Sasaki"
 "Katrina Nakrita"
 "Kavon Novak"
 "Kaylee Yeakle"
@@ -14050,6 +14050,7 @@ blurb
 "Lenhard Handler"
 "Lennie Leinen"
 "Lenny Lynne"
+"Lenore El Reno"
 "Leoma Meola"
 "Leonard Olander"
 "Leota Olate"
@@ -14523,7 +14524,6 @@ blurb
 "Yussef Fussey"
 "Zaid Diaz"
 "Zana Naaz"
-"Zerina Arinze" []
 "Zino Zion"
 "Zofia Fazio"
 "Zog Zgo"
@@ -14532,7 +14532,6 @@ blurb
 "Zoren Enzor"
 "Zorrie Rozier"
 "Zuri Ruiz"
-"Rigel Igler"
 
 book forest
 
@@ -14651,6 +14650,7 @@ blurb
 "Wary-Ado Roadway"
 "Waste-link twin lakes" []
 "Weak-Evil Lake View"
+"Yon Pit Pointy"
 
 book sortie
  
@@ -14659,8 +14659,6 @@ blurb
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
 "Act so! O, CAST!"
-"The URL lureth? Hurtle!"
-"Mussy fro, or fuss? My, so smurfy!"
 "Ada the Heated had tea. A death!"
 "Adam she has made ashamed."
 "Adieu, blot! Bailed out!"
@@ -14795,6 +14793,7 @@ blurb
 "Doc Al: a cold ol['] Cad!"
 "A docent acted on to dance."
 "The dogs, ghosted, get shod."
+"Don't we all dwell on at a dell town?"
 "Doom of mo['] food!"
 "Doomin['] Domino!"
 "Dot Plum's old stump must plod."
@@ -14853,6 +14852,7 @@ blurb
 "Erode, meadow! A weeded moor! We are doomed!"
 "Erotica to Erica."
 "Ethos o['] Seth: shoot these!"
+"Eve, call thy Tech Valley level yacht."
 "Ever hating in the grave: the vinegar, her vintage!"
 "Fa, soul! A flu so foul, as of Saul."
 "A faced facade."
@@ -15026,6 +15026,7 @@ blurb
 "Hip-Led, I'd Help Delphi Phield."
 "Hipness? Ay, sisyphean ashen yips."
 "His net then is the sin!"
+"His seer-heiress is sheer. He rises."
 "Hit, mend, then dim the mind."
 "Hiver's hi-revs shiver!"
 "Ho, stout shout to shut out..."
@@ -15497,6 +15498,7 @@ blurb
 "Spine to spite, in poets? NO!"
 "Spires. I press."
 "Spoils is SLOP!"
+"A spring, rasping. Pigs ran."
 "Spy him, my ship."
 "Squint, St. Quin!"
 "Stain'd, I stand in Tad's."
@@ -15520,6 +15522,7 @@ blurb
 "Ten rods? Dr. Stone snorted."
 "That wood! What to do?"
 "Thee, aid the idea i.e. DEATH!"
+"Their glad light read? Death, girl!"
 "Their hope hereto hip: oh, prithee!"
 "Their hope? Oh, hi, Peter!"
 "Their vow: over with! Vie, wroth!"
@@ -15546,6 +15549,7 @@ blurb
 "Tipsy elf felt yips, self-pity. Fly, spite!"
 "Tirade. Read it!"
 "[']Tis Red, Direst Sir Ted!"
+"To a wren, worn: eat! [']Ware not!"
 "To be on one bot: oo, bent! Ben, too!"
 "To copies so poetic: epics, too!"
 "To fads so daft, fat sod!"
@@ -15923,7 +15927,6 @@ blurb
 "'Win-Lose Wiles? No Lies, Now!'"
 "'WorldCo? Cold Row!'"
 "A worn 'No war.'"
-"'Life more moil-free!'"
 "'Yuck, one coy nuke!'"
 "'Zeal's sin. LAZINESS!'"
 
@@ -16278,6 +16281,7 @@ blurb
 "TOKIN'S STINKO TO SKIN"
 "TROLLING? GRILL NOT"
 "UM, SPEED'S MESSED UP"
+"US, PUFF NOT = UP TO SNUFF"
 "USE CARE? SURE, ACE"
 "WASTEFUL = AWFULEST"
 
