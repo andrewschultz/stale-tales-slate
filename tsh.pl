@@ -24,7 +24,17 @@ while ($count <= $#ARGV)
   }
 }
 
-if ($#dirs == -1) { @dirs = (lc(getcwd())); }
+if ($#dirs == -1)
+{
+  if (-f "story.ni")
+  {
+  @dirs = (lc(getcwd()));
+  }
+  else
+  {
+  @dirs = ($r);
+  }
+}
 
 for $mydir (@dirs)
 {

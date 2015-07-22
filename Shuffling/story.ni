@@ -14406,7 +14406,6 @@ blurb
 "Sigmund Mudgins"
 "Silvia Valisi"
 "Simon Minos"
-"Sir Ron Norris"
 "Skye Keys"
 "Sloane Leanos-Leason"
 "Solange Gleason-Nogales"
@@ -14535,6 +14534,11 @@ blurb
 "Zoren Enzor"
 "Zorrie Rozier"
 "Zuri Ruiz"
+"Ansel Slane-Neals"
+"Yves Sevy"
+"Alston Lantos"
+"Myrona Raymon"
+"Rutheen Terhune"
 
 book forest
 
@@ -14661,6 +14665,8 @@ table of poem codas [xxi]
 blurb
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
+"Unfair world, fold! Ruin! War!"
+"A giver's grave is rags. Vie!"
 "Act so! O, CAST!"
 "Ada the Heated had tea. A death!"
 "Adam she has made ashamed."
@@ -14708,7 +14714,6 @@ blurb
 "Artists['] straits: it's...rats."
 "As The Hates Haste He's At Thea's."
 "As thy hasty sty, HA!"
-"Aw, a fray far away!"
 "Aw, sire, I swear."
 "Aw, the wheat, wet, ah!"
 "AWOL? Fob a bowl of fab wool."
@@ -14783,7 +14788,6 @@ blurb
 "Dear Rev Everard averred, re-raved!"
 "Death of fate. D'oh!"
 "Deathly deal thy dye. Halt, the lady!"
-"Decay, ye cad!"
 "Deepest steeped pet seed!"
 "Demand, sir? Read minds? Madder sin!"
 "Deputies due spite die, upset!"
@@ -15064,7 +15068,6 @@ blurb
 "I froze fire, Oz!"
 "I get why they wig, weighty."
 "I glut guilt!"
-"I goofed, good! Fie!"
 "I, grand, nag-rid: a grind!"
 "I lose to so-elite toil, see?"
 "I lost a tail so also it is a lot."
@@ -15083,7 +15086,6 @@ blurb
 "Idea B: abed, I abide."
 "Idly, a Lady, I... Daily!"
 "If a lord fraid, LO!"
-"If afar, affair!"
 "If hate fate? Hi, a thief!"
 "If hating, a fit: night, in a fight!"
 "If I sell fillies, ills! Fie!"
@@ -15675,6 +15677,7 @@ table of camp chants [xxm1]
 blurb
 "'Abusive USA vibe!'"
 "'Account, U-Can't-Co!'"
+"'More fuel? Mere foul!'"
 "'The ad: hated!'"
 "'Ad-pest adepts: PASTED!'"
 "'Advancement, me? Vacant end!'"
@@ -15786,7 +15789,6 @@ blurb
 "'Layin['] quiet?! INEQUALITY!'"
 "'Lazy life. Zeal? I fly!'"
 "'Leadership: Lies Harped!'"
-"'Leading? Dang lie!'"
 "'LeadingCo: Genocidal!'"
 "'Leiferman's reinflames!'"
 "'Let silage legislate? Elite slag? It's GALL, ee!'"
@@ -15986,6 +15988,7 @@ blurb
 "'Any D&D? Dandy?' The nerds laugh."
 "'The APIs ape this!' / 'Ha, spite!'"
 "'App? Pap!'"
+"'Ron Isom? Moron is SO minor!'"
 "'Ar, I'd raid a dir!'"
 "'Ari's PC is crap!'"
 "'Armor class calms roars.'"
@@ -16294,7 +16297,9 @@ book resort
 
 table of red bull taunts [xxr1]
 blurb
-"'Aha, deft fathead!'"
+"'Aha! Deft? Fathead!'"
+"'Decay, ye cad!'"
+"'Gusto, oaf? Out of gas!'"
 "'Argument, mega-runt?'"
 "'At rut, man? ARM! TAUNT! A TANTRUM!'"
 "'Bad egg: BAGGED!'"
