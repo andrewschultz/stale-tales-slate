@@ -14547,6 +14547,7 @@ table of evil locations [xxf]
 blurb
 "Absorbing-Brains Bog"
 "the AH! Heath"
+"Wexton, ex-Town"
 "the all-grey gallery"
 "Any-Con Canyon"
 "the asp spa"
@@ -14666,6 +14667,7 @@ table of poem codas [xxi]
 blurb
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
+"Damp huts. Mud paths."
 "Act so! O, CAST!"
 "Ada the Heated had tea. A death!"
 "Adam she has made ashamed."
