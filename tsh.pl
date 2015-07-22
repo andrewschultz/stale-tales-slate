@@ -14,12 +14,12 @@ while ($count <= $#ARGV)
   $b = @ARGV[$count+1];  
   for ($a)
   {
-    /-x/ && do { $dontcopy = 1; $count++; next; };
-	/-r/ && do { @dirs = (@dirs, $r); $count++; next; };
-	/-s/ && do { @dirs = (@dirs, $s); $count++; next; };
-	/-b/ && do { @dirs = (@dirs, $r, $s); $count++; next; }; # both: roiling goes first due to more debug text
-	/-o/ && do { $outFileName = "$b"; $count += 2; next; };
-	/-f/ && do { $fileName = "$b"; if ($fileName !~ /\.ni/) { $fileName .= ".ni"; } $count += 2; next; };
+    /^-?x$/ && do { $dontcopy = 1; $count++; next; };
+	/^-?r$/ && do { @dirs = (@dirs, $r); $count++; next; };
+	/^-?s$/ && do { @dirs = (@dirs, $s); $count++; next; };
+	/^-?b$/ && do { @dirs = (@dirs, $r, $s); $count++; next; }; # both: roiling goes first due to more debug text
+	/^-?o$/ && do { $outFileName = "$b"; $count += 2; next; };
+	/^-?f$/ && do { $fileName = "$b"; if ($fileName !~ /\.ni/) { $fileName .= ".ni"; } $count += 2; next; };
 	usage();
   }
 }
@@ -216,6 +216,9 @@ sub lch
 sub usage
 {
 print <<EOT;
+-b both
+-r roiling (default unless story.ni in PWD)
+-s shuffling
 -f file name
 -x don't copy over
 EOT
