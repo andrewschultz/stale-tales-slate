@@ -8271,6 +8271,9 @@ Rule for printing a parser error when the latest parser error is the can't see a
 	say "You can't see anything like that here.";
 	the rule succeeds;
 
+Rule for printing a parser error when the latest parser error is the only understood as far as error:
+	say "I understood the first word, but it can just stand on its own as a verb. If you were trying to do something tricky with it, you shouldn't need to. So just '[word number 1 in the player's command]' should work.";
+
 Rule for printing a parser error when the latest parser error is the I beg your pardon error:
 	say "[one of]Be daring, you pro![or]Broaden your grip.[or]Go yon, bud! Repair![or]Go, do pure brainy![or]Peg your brain. Do![or]Probing, you read...[or]'No prayer, bud,' I go.[or]No drab gripe, you![or]You're poring. Bad.[or]Go, bud. Reap irony![or]Be young or rapid![or]Yip on, drab rogue![or]Go yon, rapid rube![or]Yep, I guard no orb.[or]Yup, I err. Dang. Boo.[or]Broody gape? Ruin![at random]" instead;
 
@@ -13671,7 +13674,7 @@ blurb
 "Charita Archati"
 "Charla Rachal"
 "Chas Cash"
-"Chelsea LeChase"
+"Chelsea LeChase-Aeschle"
 "Cheri Reich"
 "Chermyn McHenry"
 "Cherrie Reicher"
@@ -14540,6 +14543,12 @@ blurb
 "Zoren Enzor"
 "Zorrie Rozier"
 "Zuri Ruiz"
+"Hadim Idham-Mahdi"
+"Sabrina Baranis"
+"Tobias Saboti"
+"Wilford Fridlow"
+"Serban Nabers-Barnes"
+"Jaros Rojas"
 
 book forest
 
@@ -14547,7 +14556,9 @@ table of evil locations [xxf]
 blurb
 "Absorbing-Brains Bog"
 "the AH! Heath"
+"Mist of Mo['] Fits"
 "Wexton, ex-Town"
+"Vengeful Even Gulf"
 "the all-grey gallery"
 "Any-Con Canyon"
 "the asp spa"
@@ -14667,7 +14678,15 @@ table of poem codas [xxi]
 blurb
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
+"Miserably by realism, slimy bear."
+"I, rankest, streak in, a stinker."
+"A theme's the same, eh, mates?"
+"Peru, pure peru!"
+"Lies fought: gosh, futile! Life's tough."
+"Lo, Nordic icon lord! Cold iron!"
+"'Bed, blow!' Lewd Bob Wobbled."
 "Damp huts. Mud paths."
+"Our destiny intrudes, yo. Sore, untidy."
 "Act so! O, CAST!"
 "Ada the Heated had tea. A death!"
 "Adam she has made ashamed."
@@ -14806,7 +14825,7 @@ blurb
 "Doomin['] Domino!"
 "Dot Plum's old stump must plod."
 "A doter orated to read."
-"Dove hit the void, tho['] I'd've..."
+"Dove hit the void, tho['] I'd've..." [p]
 "Dr. Ice Cried: I'd rec!"
 "Dr., sow words!"
 "Drab ole era: bold real bod."
@@ -15680,6 +15699,7 @@ table of camp chants [xxm1]
 blurb
 "'Abusive USA vibe!'"
 "'Account, U-Can't-Co!'"
+"'Life's fouls: fossil fuel!'"
 "'The ad: hated!'"
 "'Ad-pest adepts: PASTED!'"
 "'Advancement, me? Vacant end!'"
@@ -15990,6 +16010,7 @@ blurb
 "'Aliterate tail eater!' / 'Retaliate!'"
 "'Any D&D? Dandy?' The nerds laugh."
 "'The APIs ape this!' / 'Ha, spite!'"
+"'Numerology? You mongrel!'"
 "'App? Pap!'"
 "'Ar, I'd raid a dir!'"
 "'Ari's PC is crap!'"
@@ -16300,6 +16321,7 @@ book resort
 
 table of red bull taunts [xxr1]
 blurb
+"'Fade until in default, failed nut!'"
 "'Aha! Deft? Fathead!'"
 "'Argument, mega-runt?'"
 "'At rut, man? ARM! TAUNT! A TANTRUM!'"
@@ -16376,6 +16398,7 @@ blurb
 "'You should BLUSH, SHLUB!'"
 "'You're for HURTSHURST!' he yells, making a rush-thrust."
 "'You're SO THIN, you'll get NO HITS on me!'"
+"'Turn, dire intruder!'"
 
 table of riot slogans [xxr2]
 blurb
