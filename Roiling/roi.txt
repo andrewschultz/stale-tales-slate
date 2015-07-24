@@ -1214,6 +1214,7 @@ Your friend the ex-ex-parrot will help you...
 >>TORPID TRIPOD
 ?Does the conversation with Elvira matter?
 No.
+But she has to say something, doesn't she?
 ?How do I defeat Elvira?
 The whistle on its own doesn't work. Especially if you haven't "adjusted" it.
 You may need to retreat and come back to do so.
@@ -1376,13 +1377,15 @@ A weird hum. Like sound waves.
 You need something to counteract that.
 Once you have two coins, you can make them SONIC.
 Similarly, ICONS can become SONIC, too.
+You can adjust the coins in any order you please to get SONIC ICONS. Well, you can't make a coin SONIC, but yeah.
 ?What do I do with the final item?
 It can take you pretty much anywhere.
 But you need to pay attention to it.
 A viewer and searcher are pretty easy to use. You feel they could be.
 REVIEW or RESEARCH.
 You're also called a PERP in the demo dome.
-In that case you could PREP a bit. But you can't do all three actions.
+In that case you could PREP a bit.
+You only need to to two of three actions. They were meant to be easy, to emphasize looking stuff up can be easier than abstruse word puzzles.
 Just go through the gates for the finale.
 >DEMO DOME MODE
 ?What do I do here?
@@ -1392,12 +1395,12 @@ Just explore everywhere and examine what you want. The SCORE should keep track o
 It's on Wikipedia, yeah, but the example in my own code was maybe a cool learning moment, if you care. And if you clicked here, you actually might.
 Benford's Law says that randomly occurring measurements' first digits occur at a rate of [log X+1 - log X] for X from 1 to 9. As long as the measurements span several orders of magnitude.
 Of course, you need enough data points to make it significant, too. With 40+, you can start to see the shape.
-In my case, the random anagram sets conform to Benford's Law, though it's probably skewed towards the ones digit, because I didn't make a random table until I had ten entries.
-Plus I enjoyed working to round numbers like 1000 or 100 just to hit goals. This was particularly evident when I hit 80 entries.
+In my case, the random anagram sets conform to Benford's Law, though it's probably skewed towards the ones digit.
+That's because I enjoyed working to round numbers like 1000 or 100 just to hit goals. This was particularly evident when I hit 80 entries.
 Since the books hit 2600 titles (I include both # of entries and KB of entries) I had enough orders of magnitude for Benford's Law to apply. But the general pattern is still pretty clear.
 Yay, scientific rules and scientific thinking why data might be skewed! See, this game isn't just about anagrams.
 ?What's Zipf's law?
-It's on Wikipedia, but basically it says naturally countable measurements (like city populations) follow x, x/2, x/3, etc. Or x, x/2^,z, x/3^z.
+It's on Wikipedia, but basically it says naturally countable measurements (like city populations) follow x, x/2, x/3, etc. Or x, x/2^z, x/3^z.
 My anagram lists do so--but in two segments. That's probably because I introduced many lists late. You can calculate, though, that it roughly works for the top ten.
 Some anagram lists outstripped others at various times. But the laws were still roughly followed.
 >GENERAL QUESTIONS FOR YOUR (POTENTIAL) AMUSEMENT

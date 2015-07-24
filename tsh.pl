@@ -41,8 +41,6 @@ for $mydir (@dirs)
   if ($alfed{$mydir}) { print "Duplicate directory $mydir\n."; } else { alphSource($mydir); $alfed{lc($mydir)} = 1; }
 }
 
-postProcess();
-
 #This is the big subfunction
 
 sub alphSource
@@ -99,6 +97,8 @@ $nuSize = -s "$outFileName";
 
 if ($niSize != $nuSize) { print "Something went wrong. File sizes aren't equal! New=$nuSize Old=$niSize. Maybe check CR's."; die; }
 
+postProcess("$thisDir");
+
 }
 
 sub postProcess
@@ -133,10 +133,10 @@ if (!$dontcopy)
   open(B, ">c:/games/inform/tsh.txt");
   print B $outString;
   close(B);
-  $cmd = "copy $outFileName $fileName";
+  $cmd = "copy $thisDir/$outFileName $thisDir/$fileName";
   $cmd =~ s/\//\\/g;
   #print "$cmd\n";
-  if (!$seriouslyTesting) { `$cmd`; } else { print "Testing means I didn't copy.\n"; exit; }
+  if (!$seriouslyTesting) { `$cmd`; print "Copying over $outFileName $fileName.\n"; } else { print "Testing means I didn't copy.\n"; exit; }
 }
 else
 {
