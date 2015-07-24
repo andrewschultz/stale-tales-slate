@@ -1,0 +1,392 @@
+This document contains a list of ways to make some of the puzzles in Shuffling Around a bit simpler. I realize it probably won't do much to boost the overall creative ideas, or lack thereof, but I hope you find it interesting.
+
+It is also not meant as a slap on the wrist to people who could not figure this out but more as a guide to how I tried to make two solutions in cases where the original puzzles seemed too tough. They still may be. And hopefully I only cut out the obvious steps in my reasoning--proofs often work that way, cutting out just the step one person would need. The jumps I make seem to make sense 95%+ of the time, but there are more than 20, so I hope you don't get stuck too much. It';s also not meant as a CYA if a puzzle seems too tough--okay, a bit of one.
+
+I wanted to provide descriptions that would clue the player, but for words of eight letters or so, it seemed only fair to have another way to go about things. The way I figured it, if the player had to go to the Internet Anagram Server, that lessened the immersion in my game. Perhaps, also, people will enjoy looking at this to see what they could have done, although I can't blame them if they didn't consider certain things or don't want to try too many logic squares.
+
+Because as someone who loved logic square problems as a kid, I probably don't hate them as much as most people. However, I really have no desire to go back one unless I have to, or it's part of a bigger puzzle. Hopefully this game is nice enough context for some people and do the dirty work for them, and also, I hope this document provides a quick way through for people who use both the rectify/certify features of the gadget. If you use fewer, well, I will just note extra certify-style clues, mostly where everything is wrong.
+
+For the most part I am assuming that the player is strictly logical, not really guessing at words unless there is an obvious jumble of consonants. Of course, at the end, it does come down to seeing which word looks awful and which word looks right, and with six or fewer possibilities left, I trust the reader to figure things out--or recognize that something that gives six or fewer possible words that all fail is a bad choice.
+
+But I don't know if that sort of strict logic problem, replete with logic squares, is really fun to do several times in a row. I'm hoping that SA provides a mix of intuition and logic with its anagram puzzles, and while I can't provide the intuition (except obliquely, when you examine something,) hopefully this document on the logic will be interesting and will help resolve any frustration people felt at the puzzles--whether or not they enjoyed them.
+
+These solutions also "play dumb" by eliminating the options that don't work. Sometimes a bit of guesswork--the path of least resistance that removes the most answers--will get the answer sooner.
+
+If anyone feels I have missed the puzzle that needs to be looked into, I would be glad to know. Maybe it could provide an alternate solution. I've tried to avoid 6-long problems as after the stores you should have the hang of them.
+
+Schultz.andrew@sbcglobal.net.
+
+Also, this is probably apparent, but spoilers are below, although anybody looking at this document has hopefully already played through the game and is just interested in details here.
+
+INTRO
+
+The GATEMAN/MAGENTA/NAMETAG puzzle once you get to the Notices Section works as follows. This puzzle is potentially 100% logical.
+
+The Broad Board says two words--four and three. You get, with certify,
+
+?A?E???, but you also note that the sixth letter is T or A.
+
+You can use rectify as well, which gives you
+
+GA?E??N which should be pretty straightforward, as there are only six possibilities left. You can also see about GAMETAN, but that doesn't make sense. GA?E?TN also makes little or no sense,
+
+Now what to do about the gateway?
+
+The gateman says there's a lot less to do than with the nametag. Probably just one little thing.
+
+Certifying gives  G?T?WAY, which must be GETAWAY. Because the question marks are not-A and not-E.
+
+TRIPS STRIP
+
+Store F starts things off. You can get the first and last letters:
+  1 2 3 4 5 6
+F + x x x x x
+O x   x     x
+R x     x   x
+E x       x x
+S x         x
+T x x x x x +
+
+That doesn't really cut things down. S is not 2, probably, but you need some more.
+
+The sign above the store as a slightly hacky list of clues, with the directions all in red. Red generally means wrong. Therefore, you have the following which can't match:
+
+TRESFO/S EFTRO on the sign makes things easier.
+
+...and, of course, Store F if you have the gadget.
+
+  1 2 3 4 5 6
+F + x x x x x
+O x   x     x
+R x x   x x x
+E x x x   x x
+S x x   x   x
+T x x x x x +
+
+This says -ORE-- must be the next letters, leaving S at 5.
+
+However, if you want to be meticulous, it's possible to ignore the roadsign and pick off bad values e.g. S can' be 2, E=3 means R=2 and FRE--T is not a word. SIimilarly for R=2. Now S=4 leaves F(oe)RS(oe)T and O=5 would then mean R=S=3. That leaves 4 possibilities, but it's more likely someone will see the word than have to go through this.
+
+Also, E FORTS/OSTFER allows complete solving if you only use one aspect.
+
+The SORTIE also eliminates things pretty quickly.
+
+If you certify the Tories and rectify Store I, you get what's below.
+
+  1 2 3 4 5 6
+s + x x x x x
+o x + x x x x
+r x x + x x x
+t x x x     x
+i x x x x   x
+e x x x x x +
+
+If you certify the Tories and Store I, you get SOR-I- and SORTIE is the only one that makes sense.
+
+Store M is a bit tricky. Rectifying gives M----S.
+
+  1 2 3 4 5 6
+m + x x x x x
+e x     x x x
+t x x   x   x
+r x x x + x x
+o x   x x   x
+s x x x x x +
+
+The above results from certifying. You can try O at 2 here, giving MOETRS. Which doesn't work. So O=3. METROS.
+
+Store R also contains two clues.
+
+ROSTER = R-S---
+STORER = ------
+
+  1 2 3 4 5 6
+R + x x x x x
+E x   x   x x
+S x x + x x x
+O x x x     x
+R x   x x   x
+T x x x x x +
+
+Certifying gives S=3. But R=2 gives nonsense, so E=2 and O=4 and R=5.
+
+FOREST
+
+The forest doesn't have a lot of mixups. The noughts are probably the toughest puzzle. Note that the letters give the gadget/slider a super bright glow. A degree of wrongness you hope to see nowhere else. That's right--all the letters in the poem are wrong.
+
+In fact, the poem is so wrong, you may be able to guess without the gadget, period. Rectifying lessens the busy-work you have to do but is not critical. But hopefully you can guess before then.
+
+  1 2 3 4 5 6 7
+G x x x - + x x
+H x - + x - - x
+N x x x x x x +
+O x x - + x x -
+S + - x x - x x
+T x + x - - x x
+U x x x x x + -
+
+Now, first of all, S=1. N=7. That leaves U=6.
+
+H=3 is next.  leads to STHOG(nu/un) which is nonsense. H=2 gives SHO(TG/GT)(UN/NU) and here I think the player can be expected to make a good educated guess.
+
+The sliver also seemed to be nasty for a lot of people.
+
+SV---- doesn't make sense, and now I'll play a guessing game.
+
+  1 2 3 4 5 6
+S + x x x x x
+L x         x
+I x x       x
+V x x x     x
+E x     x   x
+R x x x x x +
+
+SE---R may give SEI--R, which gives a consonant clump, or SELIVR/SELVIR. So SE is not viable. SL---R and if SL--VR, we have nothing.
+
+SL-V-R must be SLIVER. The gadget makes the next bit easy.
+
+SORTIE
+
+I hope you enjoyed clues like the ants carrying the pea if you got stuck with Woeful Pat. But if not, the logical way through with the gadget is as follows:
+
+  1 2 3 4 5 6 7
+A x x + x x x x
+A x   x x   x x
+E x   x   x   x
+N x x x       x
+P + x x x x x x
+S x   x     x x
+T x x x x x x +
+
+ST. PAEAN is where Pat will read his poetry. Or collection of them. If you've got these clues, you can make a lot of progress trying to place the vowels.
+
+If A is the second letter, PAA---T is a mess. So A is fifth. But then S in the 2nd spot, on inspection, doesn't make any decent words.
+
+  1 2 3 4 5 6 7
+A x x + x x x x
+A x x x x + x x
+E x   x   x   x
+N x x x   x   x
+P + x x x x x x
+S x x x   x x x
+T x x x x x x +
+
+That forces E=2 and S=4. PEASANT.
+
+The TORTILLA seems tricky, too.
+
+
+  1 2 3 4 5 6 7 8
+T + x x x x x x x
+O x             x
+R x         x   x
+T x             x
+I x           x x
+L x   x x       x
+L x   x x       x
+A x x x x x x x +
+
+Al Tiltro is the name of the artist. That leaves L at 6 and 7--but since there are 2, we must have
+
+T----LLA
+
+  1 2 3 4 5 6 7 8
+T + x x x x x x x
+O x       x x x x
+R x         x x x
+T x   x   x x x x
+I x         x x x
+L x x x x x + x x
+L x x x x x x + x
+A x x x x x x x +
+
+TT* won't make a word. So...
+
+T--T-LLA
+
+But T--TRLLA is not so hot. That leaves T--TILLA and that is TORTILLA.
+
+The ROADBLOCK is also a bit difficult. However, what's written on it is pretty handy.
+
+  1 2 3 4 5 6 7 8 9
+B + x x x x x x x x
+L x   x   x x x   x
+A x x + x x x x x x
+C x   x       x x x
+K x   x       x x x
+D x   x x     x   x
+O x x x x x x + x x
+O x x x x     x   x
+R x x x x x x x x +
+
+DOC OLBARK has been here. He is written in red. The way he is written can let you assume you have (5 letter word/4 letter word.)
+
+B*A** is a bit of a clue--BCA, BDA and BKA are messy. So that leaves L. Similarly you can chip away to show BLAK doesn't work, leavinng BLACK. Then OODR or DOOR remains.
+
+That is all for the 
+DRAINAGE
+
+This seemed to be the toughest thing to do anything with. There's a silly clue with the faeries and their garden-and-a-third, but I wanted to make something more logical. I figured it out October 1st.
+
+The AGED RAIN is a beer can, and you may get DEAR INGA or an ARENA DIG flyer. These give different paths to an answer. I was probably showing off, here.
+
+DRAINAGE = --------
+AGEDRAIN = ---D--I- (you definitely get this one)
+DEARINGA = -----N-A
+
+  1 2 3 4 5 6 7 8
+G + x x x x x x x
+A x             x
+R x x           x
+D x     +       x
+E x             x
+N x         +   x
+I x           + x
+A x x x x x x x +
+
+G--D-NIA and since R isn't in the 5th part, then G-RD-NIA is Gardenia.
+
+For Arena Dig,
+
+G + x x x x x x x
+A x     x x x x x
+R x x   x x   x x
+D x x x + x x x x
+E x   x x     x x
+N x     x     x x
+I x x x x x x + x
+A x x x x x x x +
+
+N=3 gives GANDERIA which doesn't work. Then R=6 gives A=3 and GNADERIA or GEADNRIA.
+
+LOST CORN
+
+The Lost Corn is not easy to do strictly logically. If you ask the deadbeat about the corn, it's from SlorntCo (all red.)
+
+  1 2 3 4 5 6 7 8
+c + x x x x x x x
+o x     x   x   x
+n x     x x     x
+t x x x + x x x x
+r x     x   x x x
+o x x x x x   x x
+l x x   x       x
+s x x x x x x x +
+
+Again CN-- and CROT---S doesn't do much, so that leaves CO-T-O-S. St. Rolcno is also a clue--the bogus charity of bad corn. This leaves two possibilities.
+
+  1 2 3 4 5 6 7 8
+c + x x x x x x x
+o x + x x x x x x
+n x x   x x x   x
+t x x x + x x x x
+r x x   x   x x x
+o x x x x x + x x
+l x x   x   x   x
+s x x x x x x x +
+
+N=7 gives CORTLONS or COLTRONS. The second might be a neat word, but it isn't.
+
+"ASK NERDS"
+
+It's also tough to know what to ask the nerds about. However, scanning them makes NERDS ASK things. Which gives you a second S. And an R.
+
+  1 2 3 4 5 6 7 8
+D + x x x x x x x
+A x   x     x x x
+R x x + x x x x x
+K x   x       x x
+N x   x x     x x
+E x x x   x   x x
+S x x x x x x + x
+S x x x x x x x +
+
+N and K can't be at the start, leaving A. Then DARE(kn/nk)SS doesn't make much sense, either. So that leaves DARKNESS.
+
+This is all a bit tricky if you can only certify/rectify, but if you repeatedly ask the nerds, you can also note Karkdoss and ASK DORKS which, shuffled like ASK NERDS, gives KRADNESS/DARKNESS.
+
+The Neon Pig is a nuisance that needs to go. It's worse than an empty space.
+
+  1 2 3 4 5 6 7
+O + x x x x x x
+P x     x x   x
+E x x   x     x
+N x x x + x x x
+I x     x   x x
+N x     x     x
+G x x x x x x +
+
+So where do things go? You may want to note that O(ei)(ie)N(pn)(np)G is a mess as is switching ie/np, so we have one consonant/vowel on each side. So I=2 and E=6 fail. Also, now, P=3 or N=3 or N=5 can't work, because then E and I would both have to be in one slot.
+
+  1 2 3 4 5 6 7
+O + x x x x x x
+P x     x x   x
+E x x   x   x x
+N x x x + x x x
+I x x   x   x x
+N x     x     x
+G x x x x x x +
+
+This leaves 4 possibilities.
+
+  1 2 3 4 5 6 7
+O + x x x x x x
+P x   x x x   x
+E x x   x   x x
+N x x x + x x x
+I x x   x   x x
+N x   x x x   x
+G x x x x x x +
+
+O(pn)(ei)N(ei)(pn)G
+
+Only OPENING remains.
+
+THE CABINET IN THE TRIPS STRIP
+
+This one is tricky. Tricky enough it's a last lousy point.
+
+  1 2 3 4 5 6 7
+N + x x x x x x
+I x     x     x
+C x           x
+E x         x x
+B x   x       x
+A x x         x
+T x x x x x x +
+
+There are two words. N(abcei)+ and (abcei)+t. The second word can't be two spaces--AT or IT is a bit weird and there are no words. N(cbei4) AT and N(cbei)4 IT. However, the end must likely be A or I (ACT or ENACT leaves nonsense and only DEBT/DOUBT is a word.
+
+  1 2 3 4 5 6 7
+N + x x x x x x
+I x     x     x
+C x x       x x
+E x         x x
+B x x x     x x
+A x x         x
+T x x x x x x +
+
+Inspection shows there is no 3-length word to start or 2-length, so it is 4- and 3-. So you can eliminate things a bit. What if NE--? There is nothing. So we have NI--. There are 9 possibilities and NIE-/NIA- are nowhere. NIC, NICE. That leaves BAT.
+
+ROSTER
+
+The alternate puzzle of the roster is tricky. The main way should not be too hard. This is probably the most tricky logic square use in the game, but you do get two points for it. Note that you may see "Toe" early on and work from there, but the super-rigorous way is below.
+
+T + X X X X X X X
+O X + X X X X X X
+E X X   x     X X
+H X X       X   X
+O X X X     x x X
+L X X x X       X
+D X X x x       X
+S X X X X X X X +
+
+The toolshed held soot, if you examine it--it leaves you seeing red. The padlock is OLD ETHOS brand, as well.
+
+From this there's a lot you can do--if E is in 5 or 6, L and D are in 6 and 7 together, leaving TOHO---S, then TOHOE(LD/DL)S. This can't be. E is thus 3. We may want to see if H can be 7, and then
+
+TOE---HS gives nonsense. Because once H is not 7, we can get rid of L and D in the 5-spot, as H/O would both be 4 then. From there, there are only four possibilities.
+
+TOE(HO/OH)(LD/DL)S and that gives TOEHOLDS.
+
+Yeah. It's trickier if you secured/recused. But it -is- a last lousy point. A last lousy 2-pointer, no less.

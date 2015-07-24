@@ -1,0 +1,460 @@
+Walkthrough for Shuffling Around, an IFComp 2012 game by Andrew Schultz (schultz.andrew@sbcglobal.net) as Ned Yompus
+
+Last updated 7/23/2015. The different ways through have been tested to work. I threw in some fun stuff to try, but I also hid the Last Lousy Point(s).
+
+I put in a lot of spaces so as not to spoil things. There are three sections. For IFComp, you only had to complete two. For this, you can complete all three, or you can activate the RECUSE button to get all two.
+
+You may wish to search for the following: intro, store f, store i, store m, store r.
+
+*********** intro
+
+> in
+
+> door
+> bugle
+> play bugle
+> in
+
+> goat
+> in
+
+> gateman
+> x cabinet (this & next bit before entering gate optional but recommended)
+> take all (Oops! Can't take dollhouse)
+> scan dollhouse
+> attics
+> static
+> attics
+
+(You have all the points now, but you may want to get this information.)
+
+> read board
+> read info-lit
+> ask about mumblety-peg
+> ask about cabinet
+> ask about quest
+> ask about general advice
+> ask about goat
+> ask about redness
+> ask about saltine
+> ask about gadget
+> ask about red bull burdell
+> ask about redness
+> get phial
+> enter gate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+store f
+
+> forest
+> in
+
+Note: the puzzles are random here. You have two of the four cardinal directions to go, and there's no penalty for a wrong way. So you could just plain guess. You can probably figure out which way without a mistake, though.
+
+> (direction)
+> (direction)
+
+Now you're out of the forest. You need to sort of look like the spirits passing through.
+
+> e
+> nose
+> shades
+> shotgun
+> put shades on nose
+
+Almost there. What about to the west?
+
+> w
+> w
+> maps
+> beard
+> put nose on beard
+> wear beard
+> e
+> n
+> chisel
+> get chisel
+
+The banshee can be disposed of and made a thing of the past.
+
+> hasbeen
+
+> s
+> w
+> peel chicken
+> peel cow
+> put chicken in canister
+> put cow in canister
+> e
+> n
+> sliver
+> drapes
+> cut drapes
+> silver
+> put silver in gun
+> n
+> read maps
+> wolves
+> shoot wolves
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+store i
+
+> scan pictures (they are TORIES)
+> scan store i
+> sortie
+> d
+> sixteen
+> n
+> kitchen
+> tortilla
+> lettuce
+> steak
+> parmesan
+> hotsauce
+> put hotsauce in tortilla
+> put steak on tortilla
+> put lettuce on tortilla
+> put parmesan on tortilla
+> coat
+> e
+> s
+> sack
+> shoes
+> straw
+> put straw in sack
+> moor
+> attack poet
+
+Okay, not really. He's just kind of annoying. If you wait around, you'll get another clue, but...
+
+> peasant
+> give straw
+> room
+> n
+> put hay in wall
+> hallway
+> e
+> cask
+> fill cask
+
+You can teleport back to the moor from anywhere. The game gives you that shortcut.
+
+> moor
+> soil
+> room
+> n
+> e
+> fill cask
+> w
+
+The way east collapses. You have all you need.
+
+> moor
+> silo
+> missile
+> black door
+> fold doggerel
+> throw plane
+
+(A clue, sort of.)
+
+> panel
+> put panel on silo
+> put black door on silo
+> put missile in silo
+> shoot
+> steer
+> push steer
+> push shoot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+store m (the alternate way through is in parentheses)
+
+> metros
+> enter metros
+> gardenia
+> n
+> w
+> tomato
+> e
+> s
+> w
+> throw tomato at night thing
+> search mattress
+> e
+> n
+> n
+> switch emitter
+> keycard
+
+Oh, those antlers are actually ridiculously expensive and ostentatious.
+
+> rentals
+
+> s
+> e
+> give gardenia to faeries
+> get brocade
+> get heaths/get begonias
+
+And now the walkthrough splits in two.
+
+> w
+> w
+> sheath/noise bag
+> sword/open bag
+> barcode
+> put barcode on keycard
+> e
+> controls
+> velcro
+> wear velcro
+> show emitter to deadbeat
+
+(Optional, but it allows another way to get rid of the nerds.)
+
+> s
+> e
+> ask nerds about darkness/switch emitter/open noise bag
+> w
+> s
+> climb wall
+> opening
+> put controls in opening
+> d
+> e
+> resin
+> beast
+> sword (get sword, if you have the sheath)
+> attack beast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+store r (again, there are two ways through. Well, four, technically. Okay, technically, twelve, if you leave some puzzles undone.)
+
+> resort
+> enter resort
+> islet
+> wings
+
+And, for full points, also knock off
+
+> cork
+
+> e
+> slope
+> e
+
+Not quite, yet.
+
+> ropes
+> grips (the toolshed can be changed instead of, or in addition to, both of these)
+> e
+> trio
+> potters
+
+To get a Last Lousy Point,
+
+> china
+
+> kilns
+> tug toe
+> e
+> exist
+
+
+
+
+
+I hope you enjoyed this game!
+
+Note: if you want to replay but skip a section, here are some cheats.
+
+LOGOI skips the forest. (An IGLOO is in Frost Forst.)
+SOOTH skips the sortie.
+SAY BS skips the metros.
+
+==========

@@ -1,0 +1,98 @@
+####need start capital? punctuation (1/0/-1) quotes 1/0/-1
+# 1 means we need it, -1 means we need NOT to have it, 0 OK either way
+# -- means that, although the table has a "blurb" entry, it is not part of the random list of text we wish to print out.
+# in this case, magnifs is what Ed Yerg tells you once he's friendly, sexdif is the table of differences based on your gender, and
+# townarr gives additional information about the Curst Palace once you visit certain rooms.
+# the [p] after in the source code means to pass on the possible errors.
+####ROIL
+VALUE=roiling
+political slogans	1	1	1
+sleep rejects	1	1	0
+store c competitors	1	0	-1
+mob chants	1	1	0
+non-checklists	1	-1	-1
+unpopular girls	1	-1	-1
+competing bars	1	-1	-1
+research topics	0	-1	-1
+casper mumbles	1	1	-1
+missing deli foods	1	-1	-1
+gizmo parts	0	-1	-1
+elmo emo	0	-1	-1
+laughhouses	1	-1	-1
+sports chatter	0	1	0
+nonviolence messages	1	1	-1
+lame talk shows	1	-1	-1
+lousy hit songs	1	-1	-1
+bar dialogue	1	1	0
+ad slogans	1	0	-1
+elvira machines	-1	-1	-1
+biopics	1	-1	-1
+random books	1	-1	-1
+real estate ads	1	-1	-1
+prestigious bums	1	-1	-1
+smartypants	1	-1	-1
+#couldn't have table with "and" in the name
+fish fries	1	1	0
+posse bosses	1	-1	-1
+store c ads	1	1	0
+selly yells	1	1	1
+comedians	1	-1	-1
+cussing rejects	1	1	-1
+DIVORCES articles	1	1	-1
+elmer and merle squabbles	1	1	0
+elvira taunts	1	1	1
+elvira battle cries	1	0	0
+singing rejects	1	1	0
+ethics advice	1	1	0
+lame computer games	1	-1	-1
+gritty dialogue	1	1	1
+help companies	1	1	-1
+horbert farewells	1	1	1
+horbert musings	0	1	0
+empty command rejects	1	0	0
+oldies singers	1	-1	-1
+idiotic lecture points	-1	1	0
+leo-rand chitchat	1	1	0
+leo-rand idols	1	-1	-1
+noage	1	1	-1
+yessage	1	1	-1
+lame movies	1	-1	-1
+lame tv shows	1	-1	-1
+rev ali advice	1	-1	-1
+posh dialogue	1	1	1
+sicko movies	1	1	-1
+bad rappers	1	-1	-1
+self-help bestsellers	1	-1	-1
+songs you could write	1	-1	-1
+checklist items	1	1	0
+catechism pages	1	1	0
+theses	1	1	-1
+tokers nonsense	1	1	0
+aunt tuna chatter	-1	1	0
+wait responses	1	1	0
+death messages	1	1	-1
+moralizers	1	-1	-1
+rodney bluster	-1	-1	-1
+animal friends	0	-1	-1
+tuna gossip	0	0	0
+undo allows	1	1	1
+undo rejects	1	-1	-1
+overdone movies	0	1	-1
+bedding brands	1	-1	-1
+####need start capital? punctuation (1/0/-1) quotes 1/0/-1
+magnifs	--
+sexdif	--
+townarr	--
+####SA
+# this list is shorter, consisting of Pat's codas, the deadbeat camp, condo chatter, PSAs, nerd chat, Red Bull Burdell's taunts, the riot chants and the names on the graffiti in the strip.
+VALUE=sa
+camp chants	1	1	1
+poem codas	1	1	-1
+condo dialogue	1	1	0
+psas	1	-1	-1
+nerd natter	1	1	0
+job searcher names	1	-1	-1
+riot slogans	1	1	0
+red bull taunts	1	1	0
+evil locations	0	-1	-1
+;
