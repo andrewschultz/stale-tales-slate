@@ -1,0 +1,122 @@
+Features for A Roiling Original, release 2.
+
+Big spoiler: if you completed the original game and don't want to play through, but you are interested in a new area, you can warp there with:
+[rant]ROVE OVER[/rant]
+To enter it, you will need to type...
+[rant]OTHERS[/rant] at the strip.
+
+Because of the nature of the game, people familiar with Shuffling Around or ARO may be able to deduce the new/fixed puzzle solutions with what I wrote in. I've also organized fixes by area.
+
+All-around:
+--store H is open for business, once you've cleared the others! There is a new area, with a "super" ending.
+--hints for all objects. Hints are rejected with a call for specificity if ambiguous. Often the game could ask you to disambiguate between 3 items not in the region, which is likely an unwanted spoiler. General hinting is polished but not still perfect.
+--custom dying message.
+--cover art that may not be an improvement over Inform 7's book default.
+--ability to see big list of all possible random text with LIST (number) or LN to work through, including the Strip ads, once you defeat the new area. It's in the source code, but it's nicer and more formatted in-game.
+--Necro-Crone has an actual name and more story.
+--many more notepad entries.
+--each Stores location now has an item that hints or gives a puzzle solution in its area, though undo is disabled.
+--quasi-Invisiclues in a separate document.
+--slider from Shuffling Around is now part of the settler. It has limited uses, though.
+--upper graphic window now has text to go with the settler's output
+--NPCs say more random things now.
+--NPCs respond to more of your specific inquiries.
+--blind/visually impaired accessibility which includes full words for the settler cluing. RRY becomes Red Red Yellow
+--many room name changes.
+--many shortcuts to use the settler more efficiently, including "LA" to see the last use. These are better cued in both error checking and the game flow.
+--a few more random rejects for attacking, waiting and no text entered
+--ss command hinted better and works better
+--window up top now shows last item scanned as well as colors from the settler
+--updated "for your amusement" section with the "best" of the "jokes."
+--the bookshelf now has >300 entries. Other areas have a lot more random stuff, too. You also have the option to shut random chatter off with HUSH
+--source code released so you don't have to Z through an area to see the above random talk.
+--"List" option on winning new areas allows you to see all random babble-text for one area in context
+--a few more silly UNDO or no-text messages. One-time-only helps now have undo blocked.
+--punctuation check on all random text.
+
+Manor:
+[spoiler]--Gunter is now overtly hostile. Relatively useless conversation topics are marked as such. Gunter (involuntarily) explains what you are fighting and why. Copy of diorama is in basement.
+--Elmo now gives more of a tutorial for your settler before offering (more) information about the areas to clear.
+--3rd way out of the Study. Ways back and forward so you don't trap yourself.
+--a new location name, with the plaster puzzle *after* the tutorial[/spoiler]
+
+Stores:
+--the patcher is, um, patched. Sorry about that, seriously. Along with the star bug below, this had me cringing.
+[spoiler]--the strip is renamed
+--store C now has more dialogue but still has the warning.
+--store B is an extra point.
+--if you've forgotten/lost a save state, you can type the final winning command.
+--nice mush munchies from the Lectures provide a hint with the slider.
+--the patcher is now just fixed in place. It's still a bit inexplicable, but the explanation's less convoluted now.[/spoiler]
+
+Area P:
+--very bad infinite loop bug when you have the star and try to do something with it is now fixed. Ironically, the bug was in some player help code.
+[spoiler]--crust is much better. It also hints what to do in the shack, so it's not wasted if you "forget" to use it.
+--room names completely changed in N/S corridor.
+--passage south is noted in old starting area.
+--Rickey has a new name. Leo and not-Rickey--well, you 'introduce' them.
+--new LLP in the shack, a TBA key.
+--computer table in shack renamed as slab to eliminate ambiguity with computer screen
+--cheap add-on end puzzle is trivial with 2 solutions. You can undo if you want to see both.
+--bored yak now wears something clue-y.
+--added a few cheap puzzles to help the shack feel lived-in
+--can't shoo Leo for an extra point when he's already gone
+--the Hedron, probably the worst puzzle in the game, was repurposed. In its place is a two-solution puzzle. It allows Leo and his new pal to get in one more fight, too.
+--JPG map of the area[/spoiler]
+
+Area T:
+[spoiler]--new anti-creeps stuff.
+--more logical/hinted way to annoy Merle and Elmer for the LLP.
+--Necro-Crone now has an optional but silly dialogue at the end. She also has accessories.
+--medals clued better
+--a new item, cinders, you can get rid of (for a point) or use to hint your way through[/spoiler]
+
+Area U:
+[spoiler]--spoon bypasses one puzzle.
+--old-giant puzzle problems (walking out on him as he talks) are now fixed.
+--two puzzles are swapped to hopefully make more sense and add humor
+--Logan has a new first name. How you get to him is also changed. This also requires another item/scenery for the next puzzle.
+--Pat's and Oscar's have new names, though Pat and Oscar are still there. Original location has a new name, too.
+--Final puzzle allows 2 solutions as does the one before.[/spoiler]
+
+Area V:
+[spoiler]--truffle can be eaten for a hint.
+--you can now read the self-help book in many different ways. Life hints + game hints, life hints or (probably most user-friendly) game hints. PAGE through it.
+--more and better hinting of all puzzles, particularly of the bee, and of the shift from Poverty (renamed) to the Boulevard.
+--new location: Rotunda. Rotunda/Skyscraper now share random text.
+--the can of lager is moved to your bedroom. DIVORCES magazine now lies in your office.
+--alternate puzzle for final point based on a song by Eddie C. The singer is still there, but under the salt.
+[/spoiler]
+
+Area W:
+[spoiler]--papery yapper repurposed elsewhere. New guardian for the Subsector.
+--more clues for the palace in the Limits. Rescuing Daltho is still optional, but the puzzle is flipped.
+--can't skip giving kid the gizmo now.
+--toaster now works better.
+--taverns now renamed to something totally presumptuous.
+--denim hides something.
+--two outright LLPs: the icesheets and the pulses. The nebula is shifted to the topside.
+--better reason why kid does not show up at first.
+--you can rescue Dr. Yow by twiddling a fissure now.
+--many more clues for the guardians, including the serpent, if you talk/examine/try to get by. In general, I want two clues for each one except in special cases.
+--more random warriors to fight/dispell, though none are tricky.[/spoiler]
+
+Area Y:
+I think this is the most upgraded area in the game.
+[spoiler]--Marc's now has a name more fitting to the game.
+--passage west in the range is now hinted.
+--to leave not-Marc's you now need 3 of 5 verbs, not 2 of 3. The sign now helps you.
+--different door guardian(s) to not-Marc's force you to behave differently to exit.
+--Casper is now more grumbly and doing stuff to him (or his book) makes more sense.
+--annoying guardian in the final area. The final two-part puzzle once he's gone involves a dialer.
+--side quest to kill an additional bad guy. It contains about five or so Things To Do.
+--You now have pills to bypass many, but not all, puzzles.
+--the drawer is not a puzzle any more--it was a stretch.
+--new more logical way to cross river (boats) and also a canoe. The raft is clued better.
+--parser now more flexibly accepts solutions.
+--DIE THOU is renamed. The puzzles are more logical and flow better (I hope) especially the final one. The "you got lost," entry and final room are renamed, and there's a side location to complete another puzzle.
+--the haunter does not kill you as before. Hints are offered.[/spoiler]
+
+A maintenance release is planned for May, and it will also include a non-puzzle area which discusses the things I did, right and wrong, to make this game. It will be called
+
+[spoiler]DEMO DOME MODE.[/spoiler]

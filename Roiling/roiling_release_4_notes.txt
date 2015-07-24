@@ -1,0 +1,22 @@
+A Roiling Original, release 4 notes
+
+This was largely a maintenance release, spurred on by one bug Sean M. Shore found during testing of release 3. It was too complex to fix.
+
+There are some items which give a hint what to do next. If you have used the hints, or if you've pre-figured things, those items may be used up with no real benefit.
+
+There was also other miscellaneous stuff and even a few features that fell out when my mind wandered. I cheated and used a program to generate a lot, but I hope they're still fun.
+
+--five new random lists
+  --the Catechism now has a bunch of eminent Ph.D.s along with research topics and general information.
+  --Leo and Rand now have idols in fighting.
+  --yes and no now have longer cycles of responses that you can see in the endgame.
+  --there are now random brands of sleepables if you examine the futon in the shack.
+--over half of the random lists now have 100+ entries. Almost 60%, in fact: 43 of 72.
+--all random lists now have 25+ entries. Including the new yes and no responses.
+--27000+ total elements in the random lists.
+--a few more clues for the Lone Duck
+--the trader is now female if you are, with a new name
+--the smart kid is now female if you are
+--Dr. Yow is now female if you are
+
+??Demo Dome Mode is now more robust

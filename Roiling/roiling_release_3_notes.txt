@@ -1,0 +1,210 @@
+A Roiling Original, release 3 notes
+
+The main content addition was going to be a sort of director's cut, but I kept finding things to add here and there. You can view the area with a certain command. It's been rant-tagged. However, there are a lot of bug fixes, and there is more hinting and player-friendliness, too. There are probably still bugs and user friendliness issues, and I would like to write a release 4 possibly later. I don't foresee any huge technical changes, and 95% of puzzles are as good as they're going to be. But I may add more to the director's cut, which got squeezed for time.
+
+I also eliminated the R2 debug text. It's not the first time this happened, but I tweaked my procedures so I have a separate beta testing volume to shut off before release.
+
+This has no actual deep meaning, but the code-name for this build is
+[spoiler]
+Gad! Super Upgrades!
+
+The previous one was Past-Due Updates.
+[/spoiler]
+
+[spoiler]
+--DEMO DOME MODE is the new mode. There's nothing really to do, just look behind the scenes. There are a few rooms and such. They tell the story of how I did this,  the mistakes I make, and how you can avoid them. You can't do anything wrong there.
+[/spoiler]
+
+Steven Watson, Joel Webster and Elizabeth McDonald were credited as testers in release 2. They had so many good suggestions that I could not fit into a deadline I forced on myself. (I had had several deadlines before that, but feature creep happened.) The results of their work did not even close to fully show until release 3. This release includes many technical fixes and upgrades their work made clear I needed to fix.
+
+Sean M. Shore helped a ton with every area (and the walkthrough), Lydia Dames tested all the areas and inspired a lot of fixes despite never having tested a parser game before, and David Streever came back for another release for more good input. They helped me avoid a lot of embarrassing regressions, and they also spurred some handy features I didn't consider or I was just being lazy about, and I thank them for keeping in touch and keeping patient and encouraging as the bugs piled up & maybe I couldn't get back nearly as quickly as they gave me transcripts. The big problem was that I got embarrassingly impatient waiting for a game with 2.1 million+ bytes to compile! Of course, I'd wind up wasting 10 minutes' time instead of sticking it out for 40 seconds, but people are irrational like that.
+
+Jason Lautzenheiser's touchups to Trizbort helped me to touch up the graphic map with colors. I think it looks nicer that way.
+
+Everyone's contributions helped me concentrate more on silly random game text, which was a treat for me, and hopefully you, too. The source code should be organized a lot better, too.
+
+General issues fixed:
+--The HTML Invisiclues-style walkthrough should now be fully synced to the game.
+--There should be a heat map describing my games' relative difficulties.
+--LA is fixed.
+--correct backside graphic for WORDPLAY now
+--NOS is fixed to interact properly with screen reading.
+--notepad is fixed to separate into general and region-specific stuff
+--the game now gives the option to avoid explicit minor swears, though many are still implied by the game mechanic.
+--the game now gives you a bit of help for your first parser error in a region, specific to that region.
+--the pronoun "it" now refers to something you magicked into existence. "Them" too.
+--talking to non-people doesn't cause an error.
+--READing is now smarter than it used to be. If you examine something, it is the last object examined. Red writing is a backdrop and the game looks for "readable" writing. This was guessed at before, but I've tightened that up now.
+--push/pull now bypasses default rules for interesting messages.
+--scans should be there for all items that need them.
+--red text from reading stuff in-game has been verified programatically.
+--asking people to do something now gives non-default reactions. Some may even be amusing.
+--THROW is now slightly separate from DROP, because trying to throw the dart in store P just makes sense.
+--RETRY was broken.
+--some correct-ish guesses were being outright rejected. This is fixed, as I combed through the tables that deal with them for bad numbers.
+[spoiler]
+For instance, doing something with Lager looked for an anagram of "CAN OF LAGER." West barriers looked for "w-b," the private name. There were about 15 or so, but I think few were critical, and those that were had another way to see them.
+[/spoiler]
+--slider described a LOT better.
+[spoiler]
+--Basically, the slider lets you see red if you guess everything wrong on the command line e.g. YOTSRE will let you see red but give you a headache. You get more if you solve the Lectures.
+--error checking for people try to use a double magic word like changing NERF FERN to something.
+[/spoiler]
+
+There are also numerous technical, mechanical and aesthetic fixes.
+--many additional synonyms.
+--if you guess right, but you can't flip something, your notepad tracks it. For instance, the palm in the study before Gunter knocks. PF is the command in shorthand.
+--you can now be male or female! I probably left a howler in there, but it's better than last release and probably a bit less sex-biased too. Game text and gimmicks adjust accordingly, with a list at the end of all the differences. For instance, authors on the bookshelf can be male or female.
+--all rooms now Conform To Specifications.
+--more interesting rejects to giving.
+--more individualized rejects for messing with objects you don't need to, to funnel you to ones you do.
+--Game now has 950+ checks for good guesses, including cuing that the room need never be magicked.
+--more conversation topics. Everyone should have something to say. Talking to non-people is now supported, though mostly just with a default to hint other things.
+--more after-scanning text if your settler's data seems ambiguous. R2 had some, but this has more.
+--when settler gives a question mark instead of a clear color, the game hints why it may not be disastrous.
+--logic document added which focuses on when the settler pops up question marks, as well as other tougher seeming puzzles.
+--rigorous look-through of all red-text clues to ensure that a helpful clue was not deleted. Also, more red-text clues, period.
+--rigorous look-through of all settler scans to ensure that they were correct. While I'd written a program to derive what they should be, I also did a bunch by hand, which failed, and I also wrote the wrong to- or from- object in my script.
+--random undo messages.
+--duplicate random dialogues, etc. (mostly) weeded out. Many bad messages were removed or adjusted.
+--GO TO (person or thing) lets you move around quicker within a region, which is especially handy in Store W.
+--you can now ask NPCs to do something. They may not do much, but there are some alternate puzzle solutions and hints there.
+--What You Missed is now more robust and lists the LLPs. If you win such a long game, you earned the right to see them.
+--Alternate and mutually exclusive paths are now tracked much better as well. You can view them at game's end.
+--minimum/maximum score now calculated more accurately, especially in store W, and if winning score is fixed, x/y replaces x/y-y.
+--specialized rejects to tell you when you don't need to mess with an item any more. This was something slipped in late to take care of the sign in the path, so it is not robust. It should be more complete in release 4.
+--footnotes are now standardized to in italics and in brackets.
+
+Manor
+--You now need to look around before contacting Gunter. He knocks once you've looked at a few things, or even tried to solve them. You also have a quick opt-out to get the information you need.
+--Gunter now throws something at you that you can peruse later. This 'something' envelops a lot of the dialogue that bogged down the intro before. So the intro is now more straightforward and less wordy, unless you really WANT to poke around.
+--diorama is now a backdrop and explained.
+--you don't carry the stapler around any more after entering the strip.
+--satchel is now taken but flagged as useless while in purse.
+--if you have the notepad, game no longer says it's on the chair in room description.
+--warn player before bailing on hint conversation with Elmo.
+--many more books in the shelf have names. Shelf is more plausibly fixed in place.
+--EXITS command now works better.
+
+Strip
+--window/windows are now scenery though not very interesting.
+--a montage now provides you with a map of the stores. The graffiti was also moved from the (now-defunct) limestone, and it offers a sort of clue now.
+--(bug fix) game now puts the patcher in Trips Strip if you bypass two areas with last-win command.
+--the game now gives you a rough idea of which area is toughest. For instance, Store W is toughest, so it warns you if you go to it first or second. Store Y is described as wide but not tall--it has lots you need to do but no huge tricks. I think. So you are warned there, too. The others pass without comment.
+--your 'friends' from behind stores K and N take off after you solve an area.
+--IN now guides the player to the shorter/shortest of the portals, where "short" is defined by necessary points. So P is "easier" than Y, though many people find Y's individual puzzles easier.
+--ENTER STORE gives more detail, and the montage serves as a directory.
+
+Store P
+--fixed double text with Rand and Leo around.
+--treasure room puzzle is now less abstruse and simpler, with a more guessable (and commonly-used) solution. Two, actually, one being an LLP.
+--now (re-)clues the player if they guessed what to do with the censer and yoke before the shack.
+--added additional clue item(s) for yoke: several very bad books. They also provide an alternate solution.
+--added rejects, especially in treasure room, to point you where need to go.
+--game now encourages you to walk into walls in Volt Maze, which gives hints if you run into walls or get to the end.
+--spring mechanism in popgun replaced by something better-named. Popgun is now dismissed as what you need to look at.
+--Leo and Rand now "attack" every turn, not just when you look.
+--can now actually talk to hogs.
+--keys are now more visible, in description and on wall.
+--can now shoot the wrong people and things with gun loaded. Okay, you can try.
+--de-privately-named parts of the warning sign, giving a forced disambiguation and noting it to help the player.
+--items lumped together in shack description now, and the shack clues you better to do something to the censer.
+--game now is nice if you flipped censer before visiting hacks shack--cuts out a chunk of the game.
+--the textbook is renamed to something more appropriate, so it doesn't conflict with your notepad. It's also marked as more clearly useless.
+--new optional food-to-food item in the shack gives alternate solution. In fact, there are three ways to get the yoke from the yak now, and the original is less convoluted.
+
+Store U
+--Wilson's rants are compartmentalized. Actually, Wilson is now Rev. Ali, and he has followers (one of whom is Wilson) as well as rants.
+--bugs in disambiguating the plain old church and church sign are fixed. The case of the missing "continue the action."
+--bench scans correctly now in all cases based on giant's conversation.
+--alternating path through the, I mean da, mist.
+--giant's book now scans correctly.
+--you can't take the Huge Thing, now.
+--conversations now direct you around better.
+--much better redirects for scanning/hinting.
+
+Store V
+--the self-help book is now a LLP and not too tough I hope. You no longer need it to access hints. It gives a clue as to the area mechanic. It is also compared to other self-help best-sellers.
+--DIVORCES magazine now has individual "fascinating" articles.
+--you now have an alternate way to find the cellar.
+--the statue is now more clearly laid out for the next puzzle and more (succinctly) fatuous. The puzzle is basically unchanged. I fixed some line breaks as well, so yay.
+--you have a new puzzle to get to the Skyscraper, or rather now, the room with the skyscraper.
+--It should be a bit clearer how to blow off the visitor when you get to the office.
+--room names are adjusted and (I think) more concise.
+
+Store W
+--you start out in the tavern, so there's somewhat of a story with Daltho. Also, the first guy outside the tavern is less confusing and daunting, with fewer possibilities for the introductory puzzle. The serpent is repurposed to the end.
+--the area before the lake is now called the Bland Sad Badlands.
+--location names shuffled to make more sense. There is a new location by the Limits, near the end. Someone New (but not really) is there. He reacts differently based on whether you get the last lousy point with him--or even got to see him. The Funfair location has a new name, and the Funfair name itself is relegated to a video game. Daltho just gives you something to give to the Someone New.
+--The saver now has an alternate brand name, and it can be last-lousy-pointed if you read its brand name.
+--Weeds now guard the items in the Topside. The Nebula is repurposed to cloak the residence by the locations.
+--The game now tries to give more motivation and to describe what you are doing. The curst palace is now a backdrop whose description changes as you get nearer or farther, and in an unvisited location, you have description that pushes the story forward.
+--you can try to bribe a few guardians (though nothing works other than to give clues,) and running into them gives clues, too.
+--can now TOAST pastries if you have the toaster, although it more just hints stuff.
+--now there are descriptions of exits vanished guardians no longer block.
+--random warriors that appear in the bar are now more difficulty-balanced and (I think, due to how I weighted the groups) very slightly easier overall. Before I just took 6 of 26 (or 4 of 18, whichever) possible cohorts. Now I take one from each semi-uniform group of 4 or 5.
+--SCAN SERPENT now gives you an explanation after the scan. Though the serpent is at the end.
+--SCAN PALACE now gives different results based on how close it is.
+--fixed un-cosmetic bug where kid is kicked to shoreline instead of coastline. Also, different messages based on how easy coastline/subsector access is.
+--painted man is now not privately-named. The reason he wasn't in the first place makes sense to me but not, I imagine, to players, without a very dreary explanation of the code and the game history.
+--the gnome is replaced by diners. Two other guardians are shifted. The Prefect is replaced by atheists. The unripe thing finally makes sense, I hope. Many other guardians now have more clues if you poke around.
+--the kid and Dr. Yow now each give you a hint to knock off a guardian if you ask them. But they get bored on #2.
+--the game tells you if the guardian you see is really guarding anything necessary.
+--the yurts now just guard another pastry. They are an LLP and are replaced by natives.
+--line-and-box graphics appear in the top window once you've used the scope, as a map of the region. They disappear when you make it to the Trefoil.
+--the curst palace has a proper name as a castle, which provides another clue.
+--the gizmo now has individual random pieces which are utterly useless to you.
+
+Store Y
+--Aunt Tuna's desk now has a dent you can take care of if you want. Oh, Aunt Tuna is female, too. Oops.
+--bar patrons are now people but not very interesting.
+--the clam is now exposed as guarding something, which results in an extra small puzzle you need to solve. This is in an extra room, which seems less convoluted than the original coral pit.
+--If you board one of the boats, you now have a sequence where you need to escape. This balances the two ways across the river a bit better.
+--New location name and location east of the range before you become a guest. It, like the sand home, has a silly bonus point.
+--You can now get a bonus point in the Plains. Different things happen if you realize what to do at different times, and you get different "amusing" text during different parts of the puzzle, but you only get one point.
+--the yapper is clued more if you talk to him. You can also scan him now. There's a ?-clue on cheat mode.
+--infinite point bug with sifting through the waste is fixed.
+--DIG when you have the digger provides a clue.
+--you can now scan the skis. They should be easy, but still.
+--location name inside huts is now new, with a corny pun so you guess which hut.
+--TELL HAUNTER ABOUT RUBY now moves it along with you.
+--and oh dear, the settler clued the tubs wrong. I wrote things in wrong in in my verification program. Ouch. Fixed.
+--The end of the game now lets you in on a silly command to be able to use the pills more than once on replay.
+
+Store T
+--The Barn now has more coherent and intuitive puzzles and things to change and auxiliary cluing items. Mr. Lee now talks more sensibly.
+--Ed Riley is clued more, now.
+--You now need to do something with the whistle, a new item, to defeat Elvira. You need to learn to play it right. The guy who made it is called Ed Plye.
+--the creeps are now macks, which just makes more sense, but they're creepy in more ways! Sixteen! One way, you have two solutions! Hooray for showing not telling! Also, better cuing for the many ways to defeat them.
+--Inform now sees the macks' target as female. I hope this is not the funniest thing you found about the game in releases 1 and 2, or I'm in trouble. I got Elvira right, though, so 1 of 3 (Aunt Tuna was not female) is a good batting average. In fact, she's not a damsel, any more. She has a name, and you can ask Elmo about her.
+--The ex-damsel also talks briefly after you rescue her and tells you what you can try and explains why she is there, and why she has it in for Elvira. She explains how to beat Elvira. She also has a name.
+--the men of rampant callosity are now gender-neutral.
+--Elvira's bulwark is now a backdrop outside the entry. In fact, everywhere that's not inside.
+--location names now flip based on if you got rid of the annoying blockers. This doesn't affect any game mechanics, but I hope you find them neat. The trizbort map has the details, again, if you don't want to play through.
+--A moat now guards Elvira's bulwark.
+--The room inside Elvira's bulwark has been renamed.
+--I may or may not have allowed you to skip one of the puzzles to regain your powers. Whether or not I did, I now clue things better if a puzzle is unskippable.
+--you can now interact (sort of) with the hydra once it's discovered.
+
+Store H
+--Curtis still gives you something every four tasks, but now, you get a token after you get the moss cap. This makes this scenario tougher but a bit more sensible.
+--You can't negotiate in the clearing without the token. However, the basic requirements are still the same. Before, you just somehow had credit.
+--Curtis explains why he needs what he needs a bit better now.
+--trader has a name and a history.
+--a new fruit can be changed from a videotape collection. Another can be changed from a banner's instructions in the clearing. Another's just in the clearing. One is also made from a buried raft.
+--disabled taking certain things and fixed up take-rejects
+--fixed bug where you could create a couple fruits indefintely (but get no points)
+--implemented BUY minimally, because the Clearing needed something better than the Inform default.
+--random slogans at the very end.
+
+Lists/tables in general
+--random epitaphs if you get killed. Not a ton, but enough to make a list. Undo accept and reject text, too.
+--many lists of bad art: movies, TV, comedians, talk shows, songs, rappers--are in Elvira's new manifesto and in a list at the end. You can scroll through a lot of them at will, so you don't have to wait.
+--there are now over 15000 random text-bits. In particular, there are 3000+ books, 1000+ things said at both the start of store v and in the more upscale areas, 1000+ ad slogans and 700+ movies. Don't worry. I didn't do them all by hand. I just churned interesting words into a site in the credits. The game notes you can see them all without hitting Z, and at the game's end, you have an opportunity to list them. It shows the final message as well, if there is one. There are 66 random tables at last count, and the game also clues you where to find them if you missed.
+--I also did punctuation checking and general verification thanks to some PERL scripts I developed. If you are interested in them for your own code, let me know. They have been a tremendous time saver for me.
+
+Outlook for Release 4
+--general code cleanup
+--double or triple check of anagrams
+--flesh out Demo Dome Mode with more examples
+--maybe get past Blue Lacuna's byte count? At the very least, get the total byte count for Roiling and Shuffling over 3 million.

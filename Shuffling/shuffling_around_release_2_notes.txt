@@ -1,0 +1,63 @@
+
+I added a lot of stuff for Shuffling Around, release 3, (release 2 was post-comp,) and unfortunately I didn't do a good job tracking it all. That may mean there's even more fixed stuff than what I'm listing below! I also may not include relatively minor fixes in this roll-up
+
+However, the main thing is, some big bugs are fixed, polish is added, and so are last lousy points. I'm grateful to all who helped and encouraged me with this. While I didn't make any spectacular changes, I enjoyed adding stuff to this.
+
+I'd like to thank Sean M. Shore (Mr. Patient) in particular, for helping me fix stuff up. There was a lot that got into this release because of what he noticed and what he left me free to notice.
+
+TECHNICAL
+--Magic word processing engine now mimicks A Roiling Original, so you won't have nasty disambiguations, or ones that cause spoilers. Thanks to David White/Heartless Zombie for his patience explaining this to me. It saved me so much time. You will know if you are on the right track, too. There was potential for LOTS of guesswork in release 1, because I basically gave up on the hashing HZ explained to me, without even trying why it works.
+--spoilery/annoying disambiguation is kneecapped for hinting or magic words
+--some non-magical-object errors are now covered, so the player is clued away from them, or to the right words
+--player is encouraged about the right object and given the option to OPT IN for a more detailed hint or ask for NO TIP at any time in the game. After a few failed guesses, this reiterates.
+--the game now provides helpful rejects to 300+ tries
+
+BUG FIXES
+--fixed many no-win bugs in the Store M area
+--fixed infinite points bug in Store M area (put SPOILER on sensor, or PUT SPOILER in SPOILER repeatedly at the terminal)
+--got rid of a lot of disambiguation
+--you can't put livers in the grinder before you have the (spoiler) to peel them
+
+PLAYER FRIENDLINESS
+--if you find the right thing to do, but in the wrong order, you write it in your notepad now
+--The player can now determine which items to mess with. [spoiler]Blue Lube lets the player ANGLE or GLEAN[/spoiler]
+--Slider functionality collapsed into tagged gadget so you don't have to decide
+[spoiler]You can RECUSE or SECURE the gadget, in addition, to either skip a store or have both gadget and slider functionality: now referred to as RECTIFY and CERTIFY. The game also gives you a rough idea of what is better.[/spoiler] 
+--added explanation that weapon would not be physically harmful in Store I area
+--a prep paper now describes 3 goals for each area
+--a few more see-red clues for tough puzzles like the Gardenia
+--a command given at the end of a scenario lets you skip over certain areas you've already won if you want to replay
+--InvisiClues hints should be provided
+--more thorough AMUSING section which probably includes some fun tries I didn't allow in the first release, too
+--people now say more. Well, a bit
+
+AESTHETIC
+--many rooms are renamed more accurately or amusingly (I think) with a list below
+[spoiler]Bassy Abyss is the final Store M location
+Anti-Cool Location is where the nerds are, though "Special Place is Special" is now a more universal warning.
+Self-ID Fields are where you start off. The Turnstile is now in the Silent Rut.
+Sorted Trodes is east of the Fields. Stored, er, dots is now west.
+Stiller Trellis gets a new name once you get everything from Sacred Cedars: Crashing Archings
+Er Train Terrain is now Elm Train Terminal[/spoiler]
+--the 1's and 0's are now sorted in a bucket, a shell and a bubble. Geddit? Bucket sort, shell sort, bubble sort? Also, scanning a container scans what's in it
+--Kitchen items are now lumped by if they are ingredients or not when you look. This is the biggest of that sort of fix.
+--let a player who wins the game see list of all random chats
+--text coloring with the settler and also with the prep paper
+--handicapped accessibility puts spaces so the RGB mess is easier to read
+--many more examples of random chatter
+----300+ epigrams from Pat's poetry
+----100+ graffiti names "X was here"
+----60+ slogans from the deadbeat's camp
+----50+ clever quotes from the nerds
+----30+ taunts from Red Bull Burdell
+----20+ bits of random condo chatter
+----20+ riot slogans
+----20+ PSAs in the terminal
+
+EXTRA PUZZLY
+--a store in the strip can be messed with for a LLP
+--slightly stretchy puzzle for the cabinet for a LLP
+--two Last Lousy Points in Store I that aren't hard at all, I hope
+--new command processing engine allows a last lousy point with the Chain Links that people probably tried
+--there's a Banshee in Store F, and the puzzle to get out of the enclosure is more exciting (?)
+--there's an item you can mess with in Store M for an extra point

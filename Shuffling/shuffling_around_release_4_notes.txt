@@ -1,0 +1,27 @@
+Shuffling Around release 4 is largely a maintenance release. It has far less scope than release 3. But I think there's still some good stuff in there! If you were intimidated or annoyed by the introduction, I really thing I cleaned it up for release 4, and if you give it another shot, I'd be grateful. The introduction was something I never quite felt at home with, and once I saw a way to make it less rocky, I felt like it would fit with the technical stuff.
+
+TECHNICAL
+--Shuffling Around now allows object-based hinting, e.g. HINT ATTICS. HINT still jogs the game to try to figure what to do next, and it works best outside Store M. Inside M, there are so many alternate paths that the game can only direct you to a different room
+--you can now have the game list "Current/min to solve-max to solve" with POSS, just like A Roiling Original
+
+BUG FIXES
+--fixed "BUG" text when you scan something that has no scannability
+--the saltine now gives better hints and isn't consumed for stuff you should already know. It also adds certain clues to the flips section in your notepad
+--fixed runtime error for feature I forgot I put in (GO TO ROOM X)
+--You can't re-peel something once it's in the grinder
+
+PUZZLE SWAPS, ETC.
+--The introduction to Store F is now different and a bit more mazy. It incorporates random puzzles, which you'll probably see the theme of pretty quickly
+--The intro section now starts with easier puzzles, including one where you have an option of two to solve, and the two puzzles to enter the gate are collapsed to one. This one has several clues that can help you figure the word(s) by process of elimination.
+--The intro section has an additional LLP which is not trivial. It is in the additional room between the yard and the section
+
+AESTHETIC
+--2000 random text bits, including 700 poem codas and 800 other job searchers
+--the job searchers were moved from "X WAS HERE" in the Strip to the Name List in the intro. They are now listed five at a time, with "interesting" text that changes the first ten times you read
+--fixing room descriptions like in the northeast room of Store I before and after Cedars is available
+
+OUT-OF-WORLD
+--CREDITS are labeled more clearly, and they branch into release information, technical information, and so forth
+--Trizbort map now has colors. Thanks to Genstein for Trizbort originally and Jason Lautzenheiser for picking the project up!
+
+Transcripts are welcome. A bug database is at https://bitbucket.org/andrewschultz/shuffling-around/issues?status=new&status=open

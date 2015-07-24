@@ -1,3 +1,14 @@
+#hv.pl
+#this is probably one of the odder utilities. It simply searches for if an anagram is accounted for in my tables--of nudges, anagrams, etc.
+#
+#usage:
+#
+#hv.pl mack macks
+#
+#Prints out a sample line for the table of nudges
+#
+#
+
 my %ary;
 
 $printIfThere = 0;
@@ -33,6 +44,7 @@ $ary{"z"} = 122969618;
 
 @alf = ( "e", "z", "y", "x", "w", "v", "u", "t", "s", "r", "q", "p", "o", "n", "m", "l", "k", "j", "i", "h", "g", "f", "d", "c", "b", "a" );
 
+#This was when I got odd hash values and didn't have any way to reverse engineer them. I found out what they were.
 #foreach $q (sort {$ary{$b} <=> $ary{$a} } keys %ary)
 #{ print "$q $ary{$q}\n"; }
 #fhbig(179927743, 11); die; ASP
