@@ -7582,7 +7582,7 @@ understand the command "credits" as something new.
 understand "credits" as creditsing.
 
 carry out creditsing:
-	say "Thanks to the organizers of IFComp 2012 and Spring Thing 2013. I must direct credit to my testers for finding bugs. Thanks to bitbucket for posting a project that let me organize bugs. Thanks to Heartless Zombie (David White) for his hash code and suggestions, which removed many technical barriers.[paragraph break]More generally, thanks to people involved with Inform 7. Sparser parsers couldn't have hacked this game.[paragraph break]More personally, thanks to my testers who beat my Beta. They are, in first-name alphabetical order: David White, Jason Ermer, Kevin Jackson-Mead, Paul Lee, Peter Butter, Melvin Rangasamy, and Wade Clarke. Robert DeFord provided moral support and proofread game documents.[paragraph break]Potsy typos and possibly a tyro's story are not their fault.[paragraph break]Out of the blue help post-release came from Toby Ott, who went through the game several times, and David Welbourn, whose walkthrough at www.plover.net/~davidw/sol/r/roili13.html inspired many bug, hint and user-friendliness fixes. Hanon Ondricek helped with user-friendliness issues and found the wonderful name Dawn Churlzest, Streever helped with a Heisenbug and lots of release 2/3 stuff, and Marshal Winter found cool stuff. For release 3, Elizabeth McDonald, Joel Webster, Lydia Q. Dames, Sean M. Shore and Steven Watson provided testing too, and Matt Weiner noted a debug-text bug that helped me overhaul under the hood stuff.[paragraph break]Thanks to Hanon Ondricek for finding the Electric Slide font and to Wade Clarke for consulting on the new release 3 cover art. If you hate the main idea, that's on me, but they helped me bring it out as best I could." instead;
+	say "I must direct credit to my testers for finding bugs and making sure this game was not mega (redacted).Thanks to Heartless Zombie (David White) for his hash code and suggestions, which removed many technical barriers.[paragraph break]More generally, thanks to people involved with Inform 7. Sparser parsers couldn't have hacked this game.[paragraph break]More personally, thanks to my testers who beat my Beta. They are, in first-name alphabetical order: David White, Jason Ermer, Kevin Jackson-Mead, Paul Lee, Peter Butter, Melvin Rangasamy, and Wade Clarke. Robert DeFord provided moral support and proofread game documents.[paragraph break]Potsy typos and possibly a tyro's story are not their fault.[paragraph break]Out of the blue help post-release came from Toby Ott, who went through the game several times, and David Welbourn, whose walkthrough at www.plover.net/~davidw/sol/r/roili13.html inspired many bug, hint and user-friendliness fixes. Hanon Ondricek helped with user-friendliness issues and found the wonderful name Dawn Churlzest, Streever helped with a Heisenbug and lots of release 2/3 stuff, and Marshal Winter found cool stuff. For release 3, Elizabeth McDonald, Joel Webster, Lydia Q. Dames, Sean M. Shore and Steven Watson provided testing too, and Matt Weiner noted a debug-text bug that helped me overhaul under the hood stuff.[paragraph break]Thanks to Hanon Ondricek for finding the Electric Slide font and to Wade Clarke for consulting on the new release 3 cover art. If you hate the main idea, that's on me, but they helped me bring it out as best I could.[paragraph break]Thanks to the organizers of IFComp 2012 and Spring Thing 2013, Stephen Granade and Greg Boettcher. Thanks to Greg for checking up on me when I forgot to confirm my entry fee payment.[paragraph break]Thanks to bitbucket for posting a project that let me organize bugs privately and github for letting me organize post-comp releases. If you want to write something, just having a place to write down issues is fabulous.[paragraph break]You can see the current project status at [my-repo]." instead;
 
 chapter abouting
 
@@ -7592,7 +7592,7 @@ understand the command "about" as something new.
 
 understand "about" as abouting.
 
-to say bbuck:
+to say my-repo:
 	say "https://bitbucket.org/andrewschultz/a-roiling-original/issues/new";
 
 carry out abouting:
@@ -7601,8 +7601,8 @@ carry out abouting:
 		say "Oh, wait, did you want to see the ABOUT message for real? I should note here you don't need ABOUT to win the Routes area.";
 		unless the player consents:
 			say "OK." instead;
-	say "A Roiling Original is the sequel to Shuffling Around and part 2 in my Stale Tales Slate. I doubt there'll be a third, since I've milked the concept dry.[paragraph break]ARO was initially written for Spring Thing 2013 and contains the same mechanics as Shuffling Around but hopefully is different enough to make for a new, original, and enjoyable story, especially since I focused on story in the post-comp release. You can see more abut the people who helped the game come to be by typing CREDITS.";
-	ital-say "I really appreciate transcripts (even though this is a post-comp version,) as it's cool to tinker with what I made--or to be able to squash a bug, or to make a puzzle clearer. If you wish to send a transcript, you can do so by typing TRANSCRIPT at the command line, then mailing me that text file. ;, * and ? at the line's start will indicate comments.[paragraph break]You can directly report bugs or annoyances at [bbuck]--no need for an account." instead;
+	say "A Roiling Original is the sequel to Shuffling Around and part 2 in my Stale Tales Slate. I doubt there'll be a third, since I've milked the concept dry.[paragraph break]ARO was initially written for Spring Thing 2013 and contains the same mechanics as Shuffling Around but hopefully is different enough to make for a new, original, and enjoyable story, especially since I focused on story in the post-comp release. You can see more abut the people who helped the game come to be by typing CREDITS. There are a lot of them!";
+	ital-say "I really appreciate transcripts (even though this is a post-comp version,) as it's cool to tinker with what I made--or to be able to squash a bug, or to make a puzzle clearer. If you wish to send a transcript, you can do so by typing TRANSCRIPT at the command line, then mailing me that text file at [email]. ;, * and ? at the line's start will indicate comments.[paragraph break]You can directly report bugs or annoyances at [my-repo]--no need for an account." instead;
 
 chapter bugtracking
 
@@ -11000,7 +11000,7 @@ check going north in Gates Stage:
 		say "You try to sneak through--you're backstage at the Admit-Us Stadium! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
 	else if gate-level is 1:
 		say "[one of]You try to sneak into the Admit-Us Stadium, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells 'PERP!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
-	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Admit-Us Stadium. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragment spurs you: [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Roman Manor becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. There's not much more to do, except visit DEMO DOME MODE, if you want, which is a look behind the scenes.";
+	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Admit-Us Stadium. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragment spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Roman Manor becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. There's not much more to do, except visit DEMO DOME MODE, if you want, which is a look behind the scenes.";
 	now others is solved;
 	if debug-state is true:
 		append "Test passed for Others.[line break]" to the file of debuggery;
@@ -23777,7 +23777,6 @@ blurb
 "Fractious fiasco? Rut!"
 "Frenzied? Fried? Zen!"
 "Froth forth!"
-"Salty be beastly."
 "Gah! Agh!"
 "Go share rages, oh!"
 "Goin['] red? Ignored!"
@@ -23818,6 +23817,7 @@ blurb
 "Maledict? Climated."
 "Mean bilge? Being lame."
 "Mean spurt? Smarten up."
+"Melt down? Mewl? Don't!"
 "Mo['] sweary? Ow, my ears!"
 "Moany, man? Oy!"
 "'My TAILS, I'm salty!'" [p]
@@ -23856,6 +23856,7 @@ blurb
 "Repulsing lingers up!"
 "Resenting it? Interesting."
 "Rude or Dourer? Ordure!"
+"Salty be beastly."
 "Savoring raving so?"
 "Say nice? Yes, I can!"
 "Say snot so nasty? Nay, toss!"
@@ -25584,6 +25585,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "McHeinus Nice Mush Munchies"
 "Mclean's Encalms!"	true
 "McNealy Clay Men"
+"McPoot's Compost"
 "Me-Bod: Be Mod, Bed Mo[']!"	true
 "Meals at Almeta's Tamales"
 "Meat-Flip Flame Pit"
@@ -29656,6 +29658,7 @@ blurb
 "'Solitude's dissolute!'"
 "Surging Urgings."
 "'TYRANT'S RANT STY!'"
+"'Venerable? Never able!'"
 "'We throng the wrong!'"
 "'Wordsmith? Worth's dim!'"
 "'Yesterday's strayed, yes?'"
@@ -30415,7 +30418,6 @@ blurb	prio
 "Abbey Cho's Sobby Ache[r], by [if player is male]Cobey Bash[else]Sheya Cobb[end if]"
 "Abbie's Babies[r], by Seb Iba"
 "ABC is Basic![r] by Cassi Babic"
-"No Story? Try Soon[r], by Ron Yost"
 "Abhorrent, Earth-Born[r], by [if player is male]Robert Han[else]Berna Roth[end if]"
 "Abide Inert, Inebriated[r], by Benita Reid"
 "Able Arty Betrayal[r], by [if player is male]Bart Ealy[else]Tara Blye[end if]"
@@ -31673,6 +31675,7 @@ blurb	prio
 "Fraction a Fanatic or Naif Actor[r], by [if player is male]Fran Caito[else]Cari Afton & Iona Craft[end if]"
 "Fractious Scout Fair[r], by Staci Rufo"
 "Fraid [']Ol Florida Alfrido[r], by Ida Rolf"
+"Framing Mr. Fagin[roman type], by Min Graf"
 "Frat House: Fate's Hour[r], by Rhea Fouts"
 "A Freak's Ask Fear[r], by Fae Kras"
 "Free Now, Foe Wren?[r] by Oren Few"
@@ -32165,6 +32168,7 @@ blurb	prio
 "I Stared at Rides[r], by Art Dies, Ed Raist & Red Tsai"
 "I Stole: Lies to Lose It[r], by Leotis O'Steil"
 "I Strew Wriest Writes[r], by T. R. Wise"
+"I, Surgeon or Genius[roman type], by Dr Esme Demers."
 "I Take a Kite[r], by Katie Keita"
 "I Teach AI Tech[r], by Cathie Ecthia"
 "I Tempt Pet Tim[r], by Em Pitt"
@@ -32694,6 +32698,7 @@ blurb	prio
 "Me, a Blot to Blame[r], by Tom Beal"
 "Me and Ad Men Amend[r], by Dede Ammann"
 "Me, I Rust, Mustier[r], by Sue Trim"
+"Me, Iris, I See Mr. Miseri[r], by Em Iris"
 "Me, Mayor: a Memory[r], by [if player is male]Roy Emma[else]Mary Moe[end if]"
 "Me, Tiny Enmity, Ye Mint[r], by Tim Ney"
 "Meager Mr. Agee[r], by Meg Rea"
@@ -33049,6 +33054,7 @@ blurb	prio
 "No Stag To Snag Tangos[r], by Gaston Gantos"[]
 "No Stick in Stock[r], by Nik Cost"
 "No Stoic's Coin Toss[r], by Scot Ison"
+"No Story? Try Soon[r], by Ron Yost"
 "No Taunts Unto Stan Staunton[r], by Ann Stout"
 "No Trees or Teens: So, Enter to Sneer[r], by Ernesto O'Sterne" []
 "No Trends, Snot-Nerd[r], by Don Ernst"
@@ -33256,6 +33262,7 @@ blurb	prio
 "On, Micro-Moronic Room, Inc[r], by Ric Moon"
 "On Nests [']N Stones: Notness Sonnets[r], by Stenson Stesnon"
 "On, Rascal, to Root Canals[r], by [if player is male]Oscar Alton[else]Cora Lantos[end if]"
+"On She Shone[r], by Shoe Henson"
 "On-the-Ropes Phone Store[r], by Nestor Hope"
 "On This Day a Tidy Nosh[r], by Dinah Yost"
 "On to Rev. Overton[r], by Tor Evon"
@@ -33611,6 +33618,7 @@ blurb	prio
 "Ran Due Under a Rune-Ad[r], by Unread Andreu Renaud"
 "The Ranch: Her Chant[r], by Ren Hatch"
 "Rancid Ol['] Clorinda[r], by Conrad Li"
+"A Random No-Drama Roadman[r], by Dan Mora"
 "Rank Ode, Dark One[r], by [if player is male]Rod Kane[else]Nedra Ko[end if]"
 "Ransomed Roadsmen[r], by Ned Ramos-Soderman"
 "Rant Hill: in Thrall[r], by Lin Hartl"
@@ -33729,6 +33737,7 @@ blurb	prio
 "Rev of Sly Flyovers[r], by Yves Rolf"
 "Rewind, Tank: Dank Winter[r], by [if player is male]Kent Darwin[else]Dawn Tinker[end if]"
 "Rhea's Share[r], by Sarah Esher"
+"Rhodes Hordes, Reshod[r], by Sherrod Dohse."
 "Rhodesia: Her Adios[r], by [if player is male]Dre Hsiao[else]Rio Shade[end if]"
 "Ribald Dr. Albi[r], by Brad Li"
 "Ribs Gone? Big Snore[r], by Bo Singer"
@@ -33830,6 +33839,7 @@ blurb	prio
 "Sad Ben's Badness[r], by Ned Bass & Dan Bess"
 "Sad Boy Bo's Day[r], by Sy Doba"
 "The Sad Deaths At Ed H.[']s[r], by Ted Ash & Tad Esh"
+"Sad Fool Adolfo's Old Sofa[r], by Alf Sood"
 "Sad Kin Danski is Dank[r], by Kandiss Dakin"
 "Sad Life? Fie, Lads[r], by Sid Leaf"
 "Sad Mo, So Mad[r], by Moss D'Adamo"
@@ -34171,6 +34181,7 @@ blurb	prio
 "Somber Mr Bose[r], by Bess O'Brommer"
 "Some Bait a Mob Site[r], by Tobie Sam"
 "Some Envy a Money Save[r], by Evan Moyes"
+"Some Faint Manifesto[r], by Fiona Stem"
 "Some Fan of Names[r], by E. F. Mason"
 "Some Gang's Mega-Songs[r], by Megan Goss"
 "Some Grunt More Stung[r], by Gus Merton"
@@ -34693,6 +34704,7 @@ blurb	prio
 "A Try As Astray[r], by Ty Saar"
 "Try Bein['] Tiny Reb Britney[r], by Brent Yi"
 "Try Caring, Crying Rat[r], by Caryn Trig & Tracy Ring"
+"Try On, Ron, Ty[r], by Toryn Yornt."
 "Try? Oy, Rot[r], by Tyro Tory Troy"
 "Tubes, Cans, Substance[r], by Bess Cantu"
 "Tuesday Sea Duty: Aye, Dust[r], by Stu Eady"
@@ -35446,6 +35458,7 @@ blurb
 "Cougar is Gracious."
 "Crass Rude Crusaders."
 "A Cream Camera."
+"Creamy Marcey."
 "Creamy McRaye."
 "Crude-Ass Crusades."
 "A Cruise, Saucier."
@@ -35721,7 +35734,6 @@ blurb
 "I Slam a Slim Ms. Ali."
 "I Take Katie."
 "I Want Tawni Twain."
-"Ms. Hypno-Nympho's"
 "I'd Bare a Bride."
 "I'd Do Dido."
 "I'd Goose Doogie's Goodies."
@@ -35939,6 +35951,7 @@ blurb
 "Mr. Was-Ms., Raw."
 "Mrs. Male-Slammer."
 "Mrs. Pape Pampers, Pa."
+"Ms. Hypno-Nympho's"
 "Must Do Mo['], Stud."
 "A MVP Vamp Pam V."
 "My Candi, Dynamic."
@@ -39015,22 +39028,22 @@ blurb
 "Ruin Ola Laurino."
 "Ruin Tam Maturin."
 "Sack Jon Jackson."
-"Scam Bo Bascom."
-"Scam Rene Cremeans"
-"Scam Herb Chambers"
-"Scam Ora Marasco"
-"Scam Rena Creasman"
-"Scam Leila Escamilla"
-"Scam Rae Maresca"
 "Scam Alana Salamanca"
-"Scam Nicola Maniscalco"
-"Scam Trish Christmas"
+"Scam Bo Bascom."
 "Scam Boren Branscome"
-"Scam Lira Mariscal"
 "Scam Heflin Fleischman"
+"Scam Herb Chambers"
+"Scam Leila Escamilla"
+"Scam Linde Mcdaniels"
+"Scam Lira Mariscal"
+"Scam Nicola Maniscalco"
+"Scam Ora Marasco"
+"Scam Rae Maresca"
+"Scam Rena Creasman"
+"Scam Rene Cremeans"
 "Scam Rhee Marchese"
 "Scam Shen Chamness"
-"Scam Linde Mcdaniels"
+"Scam Trish Christmas"
 "Scoop up US Pop Co."
 "Secure private VIP rate."
 "See SimplyCo Olympics."
@@ -39761,6 +39774,7 @@ blurb
 "'Got any sin?' / 'Not saying.'"
 "'Got fire? Go fer it!' / 'I forget.' / 'To grief!'"
 "'Got mine. Tim?! Gone!'"
+"'Gouger? Rousse? Grouse, rogues!'"
 "'Grant is a string-gnat! Sir.'"
 "'Greef's Free, G's!' (the spelling can be gritty, too.)"
 "'Grief, us? Figures.'"
@@ -40711,6 +40725,7 @@ blurb
 "Clients-Stencil"
 "Cues-for-Refocus"
 "Delegating/Get-Dealing Gadget Line"
+"A Desk, Asked"
 "Desk-Sked"
 "Dire SOS Dossier"
 "Doings-Dosing"
@@ -42011,6 +42026,7 @@ blurb
 
 table of posse bosses [xxv7]
 blurb
+"**** Watt"
 "[a-word-u]hat Shasta"
 "[A-word-u]hole Sal Shoe"
 "[crap-u] Kid Pickard"
@@ -42062,6 +42078,7 @@ blurb
 "Arm-Twist Tim Straw"
 "Arm-Twister [if player is male]Master Wirt[else]Star Witmer[end if]"
 "Armed Mr. Ade"
+"Arsey Ayers"
 "Art Lover Val Torre"
 "ASBO Sabo (a SOB)"
 "Astonishing Tina Hissong"
@@ -42752,17 +42769,17 @@ blurb
 "Fasching chafings"
 "Fashionable [if player is male]Blaine Shoaf[else]Fiona Shelba[end if]" []
 "Fashionable [if player is male]Fabian Lohse[else]Felisha Hoban[end if]"
+"Fast Dione Distefano"
+"Fast Dorn Stanford"
+"Fast Eiler Saterfiel"
 "Fast Fats"
 "Fast-Lane [if player is male]Stan Leaf[else]Tana Self[end if]"
-"Fast Loose Fleta Osso"
-"Fast Ol['] [if player is male]Alf Tso[else]Flo Ast[end if]"
-"Fast Lore Laforest"
-"Fast Dione Distefano"
-"Fast Lugo Falgoust"
-"Fast Dorn Stanford"
-"Fast Rhee Feathers"
 "Fast Linde Stanfield"
-"Fast Eiler Saterfiel"
+"Fast Loose Fleta Osso"
+"Fast Lore Laforest"
+"Fast Lugo Falgoust"
+"Fast Ol['] [if player is male]Alf Tso[else]Flo Ast[end if]"
+"Fast Rhee Feathers"
 "Fat Amos Mostafa"
 "Fat Boor Barfoot"
 "Fat Clem Metcalf"
@@ -46712,6 +46729,7 @@ blurb
 "Sales-Paid Palisades/Ideal Pass"
 "Sighshire Highrises"
 "Sin-Mason Mansions"
+"Singular Snug Lair"
 "Snoot-So-Ton"
 "Snotston"
 "Social-Pro Acropolis"
@@ -50960,6 +50978,7 @@ blurb
 "increm-mincer"
 "Informed-Mo['] Finder"
 "Infra-Depth Pathfinder"
+"InReal Linear-Aliner"
 "Knitter Trinket"
 "law awl"
 "Liters Lister"
@@ -51073,6 +51092,7 @@ blurb
 "go-quash quahogs"
 "a go-sure grouse"
 "green-forest-gone ferrets"
+"a greet-egret"
 "headstrong gnat hordes"
 "a hero-within white rhino"
 "hip [']n old dolphin"

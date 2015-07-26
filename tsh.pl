@@ -46,6 +46,8 @@ for $mydir (@dirs)
 sub alphSource
 {
 
+print "Alphabetizing $_[0].\n";
+
 $findy{lc("$_[0]/story.ni")} = 1; #print "Adding $_[0] to findy.\n";
 
 $lines = 0;
@@ -103,6 +105,7 @@ postProcess("$thisDir");
 
 sub postProcess
 {
+  my $thisDir = $_[0];
 if (!$dontcopy)
 {
   print "Copying .nu to .ni\n";
@@ -136,7 +139,7 @@ if (!$dontcopy)
   $cmd = "copy $thisDir/$outFileName $thisDir/$fileName";
   $cmd =~ s/\//\\/g;
   #print "$cmd\n";
-  if (!$seriouslyTesting) { `$cmd`; print "Copying over $outFileName $fileName.\n"; } else { print "Testing means I didn't copy.\n"; exit; }
+  if (!$seriouslyTesting) { `$cmd`; print "Copying over $outFileName $fileName.\n$cmd\n"; } else { print "Testing means I didn't copy.\n"; exit; }
 }
 else
 {
