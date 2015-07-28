@@ -7582,7 +7582,7 @@ understand the command "credits" as something new.
 understand "credits" as creditsing.
 
 carry out creditsing:
-	say "I must direct credit to my testers for finding bugs and making sure this game was not mega (redacted).Thanks to Heartless Zombie (David White) for his hash code and suggestions, which removed many technical barriers.[paragraph break]More generally, thanks to people involved with Inform 7. Sparser parsers couldn't have hacked this game.[paragraph break]More personally, thanks to my testers who beat my Beta. They are, in first-name alphabetical order: David White, Jason Ermer, Kevin Jackson-Mead, Paul Lee, Peter Butter, Melvin Rangasamy, and Wade Clarke. Robert DeFord provided moral support and proofread game documents.[paragraph break]Potsy typos and possibly a tyro's story are not their fault.[paragraph break]Out of the blue help post-release came from Toby Ott, who went through the game several times, and David Welbourn, whose walkthrough at www.plover.net/~davidw/sol/r/roili13.html inspired many bug, hint and user-friendliness fixes. Hanon Ondricek helped with user-friendliness issues and found the wonderful name Dawn Churlzest, Streever helped with a Heisenbug and lots of release 2/3 stuff, and Marshal Winter found cool stuff. For release 3, Elizabeth McDonald, Joel Webster, Lydia Q. Dames, Sean M. Shore and Steven Watson provided testing too, and Matt Weiner noted a debug-text bug that helped me overhaul under the hood stuff.[paragraph break]Thanks to Hanon Ondricek for finding the Electric Slide font and to Wade Clarke for consulting on the new release 3 cover art. If you hate the main idea, that's on me, but they helped me bring it out as best I could.[paragraph break]Thanks to the organizers of IFComp 2012 and Spring Thing 2013, Stephen Granade and Greg Boettcher. Thanks to Greg for checking up on me when I forgot to confirm my entry fee payment.[paragraph break]Thanks to bitbucket for posting a project that let me organize bugs privately and github for letting me organize post-comp releases. If you want to write something, just having a place to write down issues is fabulous.[paragraph break]You can see the current project status at [my-repo]." instead;
+	say "I must direct credit to my testers for finding bugs and making sure this game was not mega (redacted).Thanks to Heartless Zombie (David White) for his hash code and suggestions, which removed many technical barriers.[paragraph break]More generally, thanks to people involved with Inform 7. Sparser parsers couldn't have hacked this game.[paragraph break]More personally, thanks to my testers who beat my Beta. They are, in first-name alphabetical order: David White, Jason Ermer, Kevin Jackson-Mead, Paul Lee, Peter Butter, Melvin Rangasamy, and Wade Clarke. Robert DeFord provided moral support and proofread game documents.[paragraph break]Potsy typos and possibly a tyro's story are not their fault.[paragraph break]Out of the blue help post-release came from Toby Ott, who went through the game several times, and David Welbourn, whose walkthrough at www.plover.net/~davidw/sol/r/roili13.html inspired many bug, hint and user-friendliness fixes. Hanon Ondricek helped with user-friendliness issues and found the wonderful name Dawn Churlzest, Streever helped with a Heisenbug and lots of release 2/3 stuff, and Marshal Winter found cool stuff. For release 3, Elizabeth McDonald, Joel Webster, Lydia Q. Dames, Sean M. Shore and Steven Watson provided testing too, and Matt Weiner noted a debug-text bug that helped me overhaul under the hood stuff.[paragraph break]Jason Lautzenheiser did some code review for release 4.[paragraph break]Thanks to Hanon Ondricek for finding the Electric Slide font and to Wade Clarke for consulting on the new release 3 cover art. If you hate the main idea, that's on me, but they helped me bring it out as best I could.[paragraph break]Thanks to the organizers of IFComp 2012 and Spring Thing 2013, Stephen Granade and Greg Boettcher. Thanks to Greg for checking up on me when I forgot to confirm my entry fee payment.[paragraph break]Thanks to bitbucket for posting a project that let me organize bugs privately and github for letting me organize post-comp releases. If you want to write something, just having a place to write down issues is fabulous.[paragraph break]You can see the current project status at [my-repo]." instead;
 
 chapter abouting
 
@@ -11170,9 +11170,9 @@ to say n-gates:
 
 to upgrade-passport:
 	if gate-level is 2:
-		say "'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies [n-gates], now[if cur-score of others < max-score of others]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
+		say "Man! Another things you just out and learned stuff and didn't get bogged down in mental gymnastics. You feel brief guilt until you realize you've paid your dues. SOMEthing should be simple, SOMEtime.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies [n-gates], now[if cur-score of others < max-score of others]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
 	else if gate-level is 1:
-		say "You feel almost ready to tackle what lies [n-gates], now. Even if you didn't get anywhere, the failure might teach you something.";
+		say "Well! That was simpler than a lot of other things you had to figure out. Perhaps Elvira was right that anagram puzzles can make people overthink much, even if she was wrong about everything else. You feel almost ready to tackle what lies [n-gates], now. Even if you didn't get anywhere, the failure might teach you something.";
 	reg-inc;
 	continue the action;
 
@@ -23777,6 +23777,7 @@ blurb
 "Fractious fiasco? Rut!"
 "Frenzied? Fried? Zen!"
 "Froth forth!"
+"A furor's far sour!"
 "Gah! Agh!"
 "Go share rages, oh!"
 "Goin['] red? Ignored!"
@@ -24395,6 +24396,7 @@ blurb
 "'Echos: CHOSE!'"
 "'Eliminate a timeline!'"
 "'Er, cautions. Recusation.'"
+"'Erase tons! So earnest!'"
 "'Flounderer! Err, Undo Elf!'"
 "'A fresh re-fash.'"
 "'Gad! Reset!' / 'Restaged.'"
@@ -24464,6 +24466,7 @@ blurb
 "Redoing ignored"
 "Rehash, eh? Rash"
 "Reorients? No retries"
+"A reset? NO! Erase not"
 "Retracing act: erring"
 "Retreads? ARRESTED"
 "Second try? Descry not"
@@ -25669,6 +25672,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Neil's Liens"
 "Nelson's Data Stands Alone!"	true
 "Neurogenic Encoignure"
+"Nevski Knives" []
 "New Age Awe-Gen"
 "New-Eyes Sweeney"
 "Ngoma's Mangos"
@@ -27213,8 +27217,8 @@ blurb
 "Raunchy [if player is male]Ryan Chu[else]Caryn Hu[end if]"
 "Raw Don Rowand"
 "Raw Eve Weaver"
-"Raw Ren Warner"
-"Raw Shane Earnshaw"
+"Raw Ren Warner" []
+"Raw Shane Earnshaw" []
 "Rebellious [if player is male]Olle Suber[else]Rosie Buell[end if]"
 "Red Nose Don Rees"
 "Refined Ned Frei"
@@ -27225,7 +27229,7 @@ blurb
 "Riffing Griffin"
 "Rimshot Tom Rish"
 "Rioter Torrie"
-"Rioter Torrie Terrio"
+"Rioter Torrie Terrio" []
 "Ripe Cat Patrice"
 "Roaster Art Rose"
 "Rob tha Hat-Bro Hobart"
@@ -27252,7 +27256,7 @@ blurb
 "Rude Lisa Urdiales"
 "Rude Marg Magruder"
 "Rude Min Dunmire"
-"Rude Nilsa Lauridsen"
+"Rude Nilsa Lauridsen" []
 "Rude Noe Derouen"
 "Rude Oma DeMauro"
 "Rude Ona Rondeau"
@@ -27262,7 +27266,7 @@ blurb
 "Rude Roni Ridenour"
 "Rude Sal Lusader"
 "Rude Sam DeRamus"
-"Rude Son Duerson"
+"Rude Son Duerson" []
 "Rude Tana Urdaneta"
 "Rude Teri Deruiter"
 "Rude Trey Deruyter"
@@ -27511,12 +27515,12 @@ blurb
 "Elly's yells"
 "Eve's wrath: whatevers"
 "Fancier Francie"
-"Hurt Ruth"
+"Hurt Ruth" []
 "Inane Annie: her pics, ciphers, her slow howlers"
 "Kim's grins, smirkings"
-"Libeler Brielle"
+"Libeler Brielle" []
 "Luann's annuls"
-"Margie's mirages"
+"Margie's mirages" []
 "Melinda's [d-word] lies"
 "Middler Mildred"
 "No-Telling Ellington"
@@ -27581,6 +27585,7 @@ blurb
 "Breakout Outbreak"
 "A Bridge Brigade"
 "Bronze Zen Orb"
+"Bruiser Gal Burglaries" []
 "Bum-Wrath Thumb War"
 "Burst-Sea Brutes as Abstruse"
 "Bust-O-Bouts"
@@ -28142,6 +28147,7 @@ blurb
 "Fiddler Dr. Field"
 "Figure Out: I Go Future"
 "Filler: Re-Fill"
+"Final Girl: Grain-Fill Lair Fling"
 "Flavor For Val"
 "Fly Me My Elf"
 "Formulated Artful Demo"
@@ -28175,6 +28181,7 @@ blurb
 "A Hunted Haunted Un-Death"
 "Hurr, Ooze Zero Hour"
 "Hut, Fear the Frau"
+"Hutless Lushest Hustles"
 "Hypocentral Lycanthrope"
 "I Drove Over Di"
 "I Wear a Wire"
@@ -29508,6 +29515,7 @@ blurb
 "Sunniest Sin-Tunes"
 "Surely Fo['] Yourself"[]
 "Surly Chant, Runty Clash"
+"Surreal Big Burglaries"
 "Swiftie if I Stew"
 "A Swigger, I Swagger"
 "A Swing in Swag"
@@ -29648,6 +29656,7 @@ blurb
 "Mobile lie mob."
 "'More spew EMPOWERS!'"
 "'Neutrals run stale!'"
+"'Not happy, phony? Apt!'"
 "'One-ups us? Nope!'"
 "'Our uprise: superior!'"
 "'Privilege? Vile prig!'"
@@ -30614,6 +30623,7 @@ blurb	prio
 "Arnie's Arisen[r], by Serina Raines"
 "Arrange No Ego, O Anger[r], by Genaro O'Regan-Garone"
 "Arrogant Tarragon[r], by Art Garno"
+"The Arrow, a Thrower: Hot, Rawer[r], by Hart Rowe" []
 "The Arrow Heart Row[r], by Thor Ware"
 "Arsenic's Raciness[r], by [if player is male]Eric Sans[else]Erin Cass[end if]"
 "Art I Love To Elvira[r], by [if player is male]Avi Toler[else]Lita Vore[end if]"
@@ -31359,8 +31369,6 @@ blurb	prio
 "Drew and Red Dawn[r], by Ned Ward"
 "Drink Tea, Darn Tike[r], by [if player is male]Nate Dirk[else]Kira Dent[end if]"
 "A Drive, Varied[r], by Deadra Vivier"
-"Driven Dr. Vine[r], by Vi Dern"
-"Driven Men Never Mind[r], by Ned Mervin"
 "A Driver Arrived[r], by Vi Rader"
 "Drole Ol['] Red, Older Lorde[r], by Dr. Leo Elrod-DeLor"
 "Drone by a Boneyard Brayed On[r], by [if player is male]Arne Boyd[else]Robyn Ade[end if]"
@@ -31427,6 +31435,7 @@ blurb	prio
 "Edrington's Grindstone[r], by [if player is male]Goren Stind[else]Enid Strong[end if]"
 "Educing a Guidance[r], by [if player is male]Ice Dugan[else]Inga Duce[end if]"
 "Eel Inn[r], by Lennie Leinen"
+"Eel Jaw: a Jewel[r], by Jae Lew"
 "Eelskins['] Likeness[r], by Len Sikes"
 "Eeriest Sisters[r], by Tressie Tessier"
 "Eeyore's Eyesore[r], by Rose Yee"
@@ -31691,6 +31700,7 @@ blurb	prio
 "Fruity Pond of Punditry: Found it? Pry[r], by Toriy Pfund"
 "A Fun Faun[r], by Nana Fufu"
 "Fun Pair's Pun Fairs[r], by 'Nips' Rauf"
+"Fun Silence Influences[r], by Lucien Senf"
 "Fuss, Care, Cuss, Fear[r], by Russ Face"
 "Gabriel, a Gerbil[r], by Ali Berg"[]
 "Gad, No Rum? Moan, Drug Gourmand[r], by Omar Gund"
@@ -31721,6 +31731,7 @@ blurb	prio
 "Get Ahead. Age. Death[r], by Tad Gahee"
 "Get, Annul, Untangle[r], by [if player is male]Glen Tuan[else]Luna Gent[end if]"
 "Get Drab: Drat, Beg[r], by Tad Berg"
+"Get No Imp to Ping Me[r], by Meg Ponti"
 "Ghost Mine Hosting Me[r], by Tim Goshen"
 "Gift Fair Graffiti[r], by Gita Riff"
 "Gig Re-Rises[r], by Sergi Giers"
@@ -32540,6 +32551,7 @@ blurb	prio
 "Live, Levi[r], by Viv-Ellie"
 "Live Long, Try Revoltingly: Very Tolling[r], by Tyler Loving"
 "Lo, a Debt, Bloated[r], by [d-t] Abel"
+"Lo, Able Ole Lab[r], by Al Loeb-Bollea"
 "Lo! Ashes. She also Heals So[r], by ******* Sol Shea"	40
 "Lo, Dwarf of Drawl[r], by Flo Ward-Waldorf"
 "Lo, Ester: Ere Lost to Leers or Steel[r], by Sol Tree"
@@ -33140,6 +33152,7 @@ blurb	prio
 "O, Rant on Art[r], by Toran Arnot"
 "O Rebel, Rob Lee[r], by Ol['] Bree Loeber"
 "O, Rile Me, Moliere, Lie More[r], by Eli Mero & Milo Ree"
+"O, Roary Arroyo[r], by Ray Rao"
 "O, Sad Lug[r], by Douglas Asgould"
 "O, Serpent Peterson[r], by Rene Post"
 "O Shorn Honors[r], by Roshon Shnoor"
@@ -35002,6 +35015,7 @@ blurb	prio
 "Ye Hardest Three Days Shared Yet[r], by [if player is male]Reed Hasty[else]Thresa Dey[end if]"
 "Ye Laden, Leadeny[r], by Danyele Delaney"
 "Ye Old Yodel[r], by [if player is male]Dooley Lyde[else]Dolly DeYoe[end if]"
+"Ye Ole Lorry[r], by Elroy LeRoy"
 "Ye Raw, Ye War Weary[r], by Ray Ewer-Way"
 "Ye Stoic Society[r], by Ice Stoy"
 "Yearn, Beg, Green Bay: Bye, Anger[r], by [if player is male]Ben Yager[else]Bree Yang[end if]"
@@ -35226,6 +35240,7 @@ blurb
 "lauds the characterization in [i]Corrupted Doper Curt[r]."
 "lauds the poetry-like quality of [i]No Spiel: One Slip Piles On[r]."
 "lauds the revolutionary perspective in [i]I, a New Drug, Waged Ruin[r]."
+"lauds the supernatural creepiness of [i]Methadone: Death Omen, the Daemon Ahem, Noted."
 "laughs at people who laugh at [i]Jean, Took: Not a Joke[r]."
 "loud-whispers that [i]Not Dirk: Kid, Torn, to Drink[r], has an understated truth to it."
 "mansplains [i]Turds Go to Drugs[r] is full of tough love, not snide put-downs."
@@ -36857,6 +36872,7 @@ blurb
 "I'll stay on saintly, lo."
 "I'm lost, St. Milo."
 "I've got to give."
+"id rose, or dies, so dire."
 "if proud, up! Rid of..."
 "in sum, minus, um, sin..."
 "Inept? Beat? Be patient."
@@ -38247,6 +38263,7 @@ blurb
 "DIRTY JOKES? RISKY! DO JET"
 "DISDAIN SIN, I ADD"
 "DISLIKE LIES, KID"
+"DISLIKES: KIDS['] LIES"
 "DISORDER = SORDIDER"
 "DO INK? NO, KID"
 "DO WRONG? GO DROWN"
@@ -38764,6 +38781,7 @@ blurb
 "Credit Dr. Tice."
 "Cremate McAteer."
 "Cross up SpursCo."
+"Curt pity void = PRODUCTIVITY."
 "Cut Down WundtCo."
 "Cut off TuffCo."
 "Cut Out TutuCo."
@@ -38780,6 +38798,7 @@ blurb
 "Defer Dr. Fee." []
 "Defer Fred E. Feder. Redef."
 "Deflate Ted Leaf."
+"Delay/skew weekly ads." []
 "Delete Ted Lee."
 "Demerits: Redist [']em."
 "Demote a bag manager to garbage man."
@@ -39768,6 +39787,7 @@ blurb
 "'Gold door? Drool, dog!' / ' Good Lord.'"
 "'Goober? Booger? Go, bore!'"
 "'Good Thing...' / 'Nothin['], Dog.'"
+"'Good?' / 'Oof! Dog food!'"
 "'Goons! Go, son!'"[]
 "'Gord!' / 'R-Dog!'"
 "'Gosh! Tut! Gut shot? Ugh! Tots!'"
@@ -42851,7 +42871,7 @@ blurb
 "Gaming Gig-Man M. Giang"
 "Gang Leader Delagrange"
 "Gangster Greg Nast"
-"Ganker Kera Ng"
+"Ganker [if player is male]Reg Kan[else]Kera Ng[end if]"
 "Garcon Corgan"
 "Gassy Eli Yglesias"
 "Gaunt Ali Lantigua"
@@ -43570,6 +43590,7 @@ blurb
 "Mrs. Cable-Scramble"
 "Ms. Acquired-Crime-Squad"
 "Mumbler Brummel"
+"Munch-Good McDonough"
 "Murderer Demurrer Red Rumer"
 "Muscular Scum Raul"
 "My-Rules Rumsley"
@@ -46811,6 +46832,8 @@ blurb
 "Don't Fail, Naif Dolt[r], by [if player is male]Don Latif[else]Loni Daft[end if]"
 "Doubters, Yo? Do Your Best[r], by [if player is male]Tory DuBose[else]Ruby DeSoto[end if]"
 "Dr. Be Un-Burned[r], by [if player is male]Bud Ren[else]Deb Nur[end if]"
+"Driven Dr. Vine[r], by Vi Dern"
+"Driven Men Never Mind[r], by Ned Mervin"
 "Earn Top: Part One[r], by Patreon Pat Reno"
 "Earner Gang Range[r], by Regan Agner"
 "Edictal Dialect[r], by Ted Laci"
@@ -46938,6 +46961,7 @@ blurb
 "Reaching? In Charge[r], by [if player is male]Ari Cheng[else]Geri Chan[end if]"
 "Reavowing Overawing[r], by Gavin Rowe"
 "Redeem? No, Need More[r], by [if player is male]Nemo Reed[else]Renee Dom[end if]"
+"Resonate So Neater[r], by Antos Ree"
 "Richen Up, Punchier[r], by Rupe Chin"
 "Right Stuff: Turf Fights, Guff, Thirst[r], by Griff Shutt"
 "Risk on or Sink[r], by Rossini Kronk"
@@ -48792,6 +48816,7 @@ blurb
 "Hussong shoguns"
 "hypodorian radiophony"
 "Hyppolite's psilophyte"
+"ice funnel influence"
 "incognito cognition"
 "Infinger refining"
 "intersocietal electrisation"
@@ -48849,6 +48874,7 @@ blurb
 "the Lucien Clue-in Nuclei"
 "Lupercio's supercoil"
 "Macagoula's glaucomas"
+"Mackenzie's eczema skin"
 "Maginn's mamings"
 "Manderson's randomness"
 "Mangieri's imaginers['] migraines"
@@ -49563,8 +49589,7 @@ blurb
 "Dr. Savino Arvidson"
 "Dr. Seal Sadler"
 "Dr. Seals Lessard"
-"Dr. Sean Anders-Arends" [dupe]
-"Dr. Sean Anders-Sander-Andres-Arends"
+"Dr. Sean Arends"
 "Dr. See Drees-Seder"
 "Dr. Selina Sindelar"
 "Dr. Seto Strode-Doster"
@@ -50797,6 +50822,7 @@ blurb
 "THUD! Fear the fraud, Utah Fred."
 "Thud-Prime TRIUMPHED!"
 "THUNDER! DETH! RUN!"
+"To envy: yo, vent!"
 "Trash pays. Stay sharp, rash patsy!"
 "Turn away a wary nut!"
 "Upright? HUT, prig!"
@@ -51038,6 +51064,7 @@ blurb
 "nobody escaping through a fuel flue"
 "nobody getting all 'Do fly' like Foldy Floyd" [p]
 "not being Ronins like Snorin['] Sir Ron"
+"not demotivating the team like Jader Jared"
 "not getting Flayer Farley"
 "not mouthing off like Crowin['] Corwin"
 "not needing the bulk of Frigate Freitag"

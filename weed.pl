@@ -10,6 +10,8 @@
 #Shuffling = 5 seconds
 #Roiling = 
 
+use POSIX;
+
 use Math::BigInt;
 
 #print Math::BigInt::bgcd((8,12,18,27));
@@ -43,22 +45,51 @@ $ary{"x"} = 112768081;
 $ary{"y"} = 122359252;
 $ary{"z"} = 122969618;
 
+$di = $sm = $badans = $posBad = 0;
+
 $badana = 1;
+
+$upBadLimit = -1;
+$upPosLimit = -1;
 
 $inDir = "";
 
 open(A2, ">dupes.txt");
-open(B, ">badana.txt");
+open(B, ">oddmatch.txt");
+open(C, ">badana.txt");
 
 $sta = time();
 
 $exp{"r"} = $exp{"-r"} = "roiling";
 $exp{"s"} = $exp{"-s"} = $exp{""} = "sa";
 
-if (@ARGV[0] eq "-b")
+$pwd = getcwd();
+
+@weedDir = ();
+
+while ($count <= $#ARGV)
+{
+  $a = @ARGV[$count];
+  $b = @ARGV[$count+1];
+  for ($a)
+  {
+  /^-?b/ && do { $upBadLimit = $b; $count++; next; };
+  /^-?p/ && do { $upPosLimit = $b; $count++; next; };
+  /^-?r/ && do { @weedDir = (@weedDir, $roi); $count++; next; };
+  /^-?s/ && do { @weedDir = (@weedDir, $sa); $count++; next; };
+  /^-?2/ && do { @weedDir = (@weedDir, $sa, $roi); $count++; next; };
+  usage();
+  }
+}
+
+if (@ARGV[0] eq "-2")
 {
 weedOneSource("c:/games/inform/sa.inform/source");
 weedOneSource("c:/games/inform/roiling.inform/source");
+}
+elsif ($pwd =~ /(sa|roiling).inform/)
+{
+weedOneSource("$pwd");
 }
 elsif ($exp{@ARGV[0]})
 {
@@ -69,6 +100,19 @@ else
 weedOneSource("c:/games/inform/@ARGV[0].inform/source");
 }
 
+sub usage
+{
+print << EOT;
+EOT;
+}
+
+sub stillWorth
+{
+  if ($badans == $upBadLimit) { return 0; }
+  if ($posBad == $upPosLimit) { return 0; }
+  return 1;
+}
+
 sub weedOneSource
 {
 
@@ -76,7 +120,7 @@ my $myfi = "$_[0]/story.ni";
 open(A, "$myfi") || die ("No $_[0]/$myfi.");
 print "Weeding out $myfi\n";
 
-while ($a = <A>)
+while (($a = <A>) && (stillWorth())
 {
   $line++;
   chomp($a);
@@ -105,9 +149,15 @@ while ($a = <A>)
 
 }
 
-print A2 "$di total differences. $sm size mismatches.\n";
+$s1 = "$di total differences. $sm size mismatches.\n";
+$s2 = "$posBad interesting cases.\n";
+$s3 = "$badans total likely bad anagrams, disable with \[\].\n";
 
-print B "$badans total possible bad anagrams.\n";
+print A2 "$s1";
+
+print B "$s2";
+
+print C "$s3";
 
 close(A);
 close(A2);
@@ -115,12 +165,12 @@ close(B);
 
 $totTime = time() - $sta;
 
-print "$totTime total seconds. Output to dupes.txt and badana.txt.\n";
+print "$totTime total seconds. Output to dupes.txt and badana.txt and oddmatch.txt.\n$s1$s2$s3";
 
 sub cutDown
 {
   my $temp = $_[0];
-  $temp =~ s/, by //g;
+  $temp =~ s/, by / /g;
   $temp =~ s/\[[^\]]*\]//g;
   return $temp;
   
@@ -146,7 +196,19 @@ sub mash
   {
     print B "SOME-ANA: $_[0]\n";
   }
-  elsif (($badana) && ($_[0] !~ /\[\]/)) { print B "$_[0]\n"; $badans++; }
+  elsif (($badana) && ($_[0] !~ /\[\]/))
+  {
+    if (!$hadPoss)
+	{
+	  $badans++; print C "$badans $_[0]\n";
+	}
+	else
+	{
+	$posBad++;
+	print B "$posBad $_[0]\n";
+	}
+	$hadPoss = 0;
+	}
   
   $mess = join("", @roots);
   #die ($mess . $_[0]	);
@@ -189,6 +251,7 @@ sub gotAna
 	  else
 	  {
 	    print B "$_[0] $i-$j maps to $runTote : $totes{$runTote}\n";
+		$hadPoss = 1;
       }
 	}
   }
