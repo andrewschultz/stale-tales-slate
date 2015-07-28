@@ -1,0 +1,97 @@
+Intro (min)
+door/bolt/toga/nametag
+Intro (max)
+door/bolt/bugle/toga/slander/nametag/attics
+Stores (min)
+forest/sortie/metros/resort
+Stores (max)
+forest/sortie/metros/resort/sorbet/nicebat
+Store F (min)
+east/west/shades/shotgun
+beard/chisel
+silver/sliver/spread
+maps/wolves
+Store F (max)
+north/south/nose/shades/shotgun
+beard/chisel
+silver/sliver/spread/hasbeen
+maps/wolves
+Store M (min)
+gardenia/tomato/keycard
+sheath/sword/barcode/controls/velcro/darkness/opening
+resin/beast/sword
+Store M (max)
+gardenia/tomato/rentals/keycard
+sheath/sword/barcode/controls/velcro/darkness/opening
+resin/beast/sword
+Store I (min)
+sixteen/kitchen/straw/sack/tortilla/lettuce/steak/parmesan/hotsauce
+coat/shoes/moor/peasant/hallway/soil
+missile/blackdoor/panel/shoot/steer
+Store I (max)
+sixteen/kitchen/straw/sack/tortilla/lettuce/steak/parmesan/hotsauce
+coat/shoes/moor/peasant/hallway/soil
+missile/blackdoor/panel/shoot/steer
+pancake/grits
+Store R (min)
+islet/cork/slope/ropes/grips/trio/potters/kilns/getout/exist
+Store R (max)
+islet/cork/wings/toeholds/slope/ropes/grips/trio/potters/kilns/chain/getout/exist
+========
+Manor (min)
+lamp/satchel/stable/stair/flier/staple/stapler
+Manor (max)
+lamp/satchel/basement/stable/chimney/ramp/painting/stair/flier/staple/stapler
+Stores (min)
+routes/troves/otters
+Stores (max)
+routes/troves/presto/oyster/towers/otters/others/sorbet/nestor/tokers/outside
+Store U (min)
+inside/against/astride/below/under/past/despite/across/opposite/inside/from/beneath/until/around/along/aboard/within/through
+Store U (max)
+towards/inside/against/astride/below/under/past/despite/across/opposite/inside/from/beneath/until/around/along/aboard/within/through
+Store V (min)
+hate/care/observe/spot/reason/recall/despair/deal/desire/aspire/ponder/ignore/master/last/decide
+Store V (max)
+hate/care/gape
+observe/spot/believe/reason/derive
+despair/glare/deal/desire/aspire/strive
+ponder/ignore/master/bolster/discover/last/decide
+Store P (min)
+mazeltov/umph/pooh/drat/rats/ole/darn/whassup/bleep/bingo/there/syke/later/solong/capslock/mug/leaf/skid/cola/futon/keyboard/screen/reboot/sleep/compile/debug/sub
+Store P (max)
+blam/mazeltov/umph/phooey/drat/rats/ole/darn/whassup/bleep/bingo/there/syke/later/solong/capslock/mug/leaf/skid/cola/futon/keyboard/screen/rom sticks/casserole/reboot/tab/sleep/compile/debug/sub
+Store Y (min)
+spill/stroll/calm/run/boast/scrap/seek/eat/tutor/kiss/trace/react/bonk/bust/drop/warp/bury/unearth/assuage/search/enlarge/patrol/prepay/derail/redial
+Store Y (max)
+sing/spit/inset/stroll/calm/run/fart/soar/scrap/scan/seek/eat/tutor/tend/swipe/kiss/trace/react/splain/bonk/bust/drop/sweat/clean/shape/warp/bury/unearth/assuage/search/enlarge/patrol/tan/prepay/revel/derail/redial
+Store W (min)
+awed/coyer/weedy/yonder/creaky/weirder/clumsy/punier/pastier/resealed/hostile/organised/married/hostile/hastiest/broken/wordy/unlocked/attentive/rowdy/stabler/robust/spectacular
+Store W (max)
+ashen/coyer/weedy/tenser/achier/recreant/yonder/rustled/creaky/rusty/clumsy/weirder/rinsed/pastier/punier/coiled/married/weariest/angstier/marginal/himself/sewed/mined/resealed/unreal/drained/naivest/grandiose/broken/wordy/pearly/unlocked/holiest/hastiest/attentive/rowdy/stabler/nearest/present/dingy/greyed/spectacular
+Store T (min) (adjusted)
+bare/reedi/shadi/teari/catti/because/else/atom/angri/brute/slow/coolest/artsy/garbed/stoical/terse/parrot/snail/snipe/racoon/honest/raptor/deep/quick
+Store T (max) (adjusted)
+bare/rescind/reedi/wearing/martial/drawling/because/else/atom/although/however/angri/brute/slow/paroled/coolest/artsy/garbed/loathing/stoical/parrot/snail/hornets/snipe/racoon/honest/raptor/deep/quick
+Store T (min)
+barely/reedily/shadily/tearily/cattily/because/else/atom/angrily/brutely/slow/coolest/artsy/garbed/stoically/tersely/parrot/snail/snipe/racoon/honestly/raptor/deeply/quickly
+Store T (max)
+barely/rescind/reedily/wearingly/martially/drawlingly/because/else/atom/although/however/angrily/brutely/slow/paroled/coolest/artsy/garbed/loathingly/stoically/parrot/snail/hornets/snipe/racoon/honestly/raptor/deeply/quickly
+Store H (min)
+limes/grapes/pears/plums/compass
+apples/apricot/nabana/gonear
+cheap/cripes/solemn/solemn
+rhubarb/tamarind/tangerine/nectarine
+raspberry/pineapple/reversed/mango
+sonic/icons/prep/review
+Store H (max)
+limes/grapes/pears/plums/compass
+apples/apricot/nabana/gonear
+cheap/cripes/solemn/solemn
+rhubarb/tamarind/tangerine/nectarine
+raspberry/pineapple/reversed/mango/persimmon
+sonic/icons/research/review
+blackberries/blueberries/strawberries/cantaloupe
+maraschino/cranberries/pomegranate
+gooseberry/grapefruit/papayas/breadfruit/cinque/skyscraper
+;

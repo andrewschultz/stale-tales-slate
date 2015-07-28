@@ -1,0 +1,443 @@
+################
+#SETTLER.TXT
+################
+#A Roiling Original solutions testing file
+#arranged by region
+################cover art
+!aroiling,original
+!original,aroiling
+################ROMAN MANOR
+!palm,lamp
+v:stable,tables,ablest,bleats,labset
+!pram,ramp
+v:ramp,mrpa,pram
+!giant pin,painting
+!plates,staple
+!latches,satchel
+!plaster,stapler
+!ten beams,basement
+!tables,stable
+!letters,settler
+!settler,letters
+!yorpwald,wordplay
+!wordplay,yorpwald
+!pavement,event map
+!event map,pavement
+!crabgrass,brass crag
+!brass crag,crabgrass
+!platform,farm plot
+!farm plot,platform
+!pedestal,steel pad
+!steel pad,pedestal
+!sitar,stair
+!stria,stair
+!myniche,chimney
+#################TRIPS STRIP
+v:towers,westor,restow
+v:presto,so pert
+v:others,hoster,esroth
+v:nestor,sterno,sorent,ertons,sorent
+v:oyster,toyers
+v:tokers,stroke,restok,ktrose
+!store b,sorbet
+#store g = go rest
+!store h,others
+!store k,tokers
+!kt rose,tokers
+!store n,nestor
+#stoner,nestor
+!toners,nestor
+!on rest,nestor
+!store p,presto
+!tropes,presto
+!poster,presto
+!store t,otters
+!store u,routes
+!voters,troves
+!store v,troves
+!store w,towers
+!store y,oyster
+!tedious,outside
+!i used to,outside
+#####################TROVES
+!divorces,discover
+v:ignore,goerin,ergnio,onregi,region
+v:hate,ateh,ehat,thea
+v:reason,noears,sorena,anorse
+v:glare,regal,lager,ergal,agler
+v:observe,evesbro,servebo
+!heat,hate
+!race,care
+!verbose,observe
+!obverse,observe <- I would like to include this, but I can't
+!stop,spot
+!post,spot
+!evilbee,believe
+!vilebee,believe
+!so near,reason
+# be sure to make bee different based on if reasoned or not.
+!cellar,recall
+!sad pier,despair
+!a spider,despair
+!diapers,despair
+!lead,deal
+!reside,desire=brochure
+!praise,aspire
+!rivets,strive
+!pernod,ponder
+!region,ignore
+!lager,glare
+!salt,last
+!lobster,bolster
+!stream,master
+!singer,resign
+!conker,reckon <- this would make an extra point--but not worth it.
+###################ROUTES
+v:beneath,the bean,hatbeen
+v:despite,speed it
+v:towards,radwost
+!worst ad,towards
+!pats,past
+!oscars,across
+!die sin,inside
+!sin die,inside
+!seed pit,despite
+!pets die,despite
+!a giants,against
+!tirades,astride
+!elbow,below
+!pipe soot,opposite
+!runed,under
+!unlit,until
+!the bean,beneath
+!form,from
+!aboard,abroad
+!orandu,around
+!logan,along
+!hit win,within
+!ben hid, behind
+!hug thor,through
+!thor hug,through
+!new beet,between
+#######################PRESTO
+v:compile,melcopi
+!lamb,blam
+!hump,umph
+!matzo lev,mazeltov
+!lev matzo,mazeltov
+!voltmaze,mazeltov
+!gunlord,goldurn=gold censer
+!dart,drat
+!star,rats
+!boing,bingo
+!plebe,bleep
+!leo,ole
+!rickey,crikey
+!thaw,what
+!ether,there
+!washups,whassup=lar
+!alert,later
+!log ons,so long
+!ought,tough
+!disk,skid
+!skid,disk
+!bored yak,keyboard
+!drab yoke,keyboard
+!clock sap,caps lock
+!censer,screen
+!coal,cola
+!fount,futon
+!flea,leaf
+!gum,mug
+!trim socks,rom sticks
+!to be or,reboot
+!polemic,compile
+!budge,debug=computer screen
+v:whassup,uswhaps,pahwuss,hawpuss,saw push,pushaws,SshUpaw
+!hogs,gosh
+!keys,syke
+!tba,tab
+!escaroles,casserole
+!speel,sleep
+!yehoop,phooey
+!brokeday,keyboard
+!dearkoby,keyboard
+!bredokay,keyboard
+!ebaydork,keyboard
+###############################TOWERS
+v:nearest,stearne,strenae,ernesta
+v:stabler,alberts
+v:rustled,dreltus,sledrut
+v:porcine,openric,nicepro
+v:himself,melfish,shelfim,smhlife
+v:angstier,iregnats,nitregas,nitergas,rangiest,geraints,natesrig,tangiers,sanegrit,sanergit,stingera,strigena,streagin
+v:unreal,lauren
+v:grandiose,siregadno,sadregion,digreason,eardosing,doersgain
+v:grandiose,nosiregad,noegadsir,siregadno
+v:rewired,drew ire
+v:punier,inpure
+v:broken,rebonk
+v:drained,ed indar,rindade
+v:spectacular,capsule cart
+v:pastier,air pest,reaps it
+v:mistier,stimeri
+v:unable,bluena
+v:married,edmirra,iraderm
+!natives,naivest
+!natives,vainest
+!atheists,hastiest
+#drearim,
+!strudel,rustled
+!!coiled,docile
+!denim,mined
+#### guardians
+!greedy,greyed
+!angriest,angstier
+!ingrates,angstier
+!organised,grandiose
+!bonker,broken
+!weeds,sewed
+!sweatier,weariest
+!waitseer,weariest
+!dandier,drained
+!rayeck,creaky
+!keycar,creaky
+!yacker,creaky
+!muscly,clumsy
+!nebula,unable
+!flemish,himself
+!rewired,weirder
+#wererid,rewired
+!unripe,punier
+!yurts,rusty
+!admirer,married
+!neural,unreal
+!reedsale,released
+!reedsale,resealed
+!alarming,marginal
+!grailman,marginal
+!hostile,holiest
+!pirates,pastier
+!poncier,porcine
+!rimiest,mistier
+#### post-guardian
+!tentative,attentive=smart kid
+!dr yow,wordy
+!dr yow,rowdy
+!lone duck,unlocked=log-gaol
+!fissure,fussier
+!turbos,robust
+!blaster,stabler
+!eastern,nearest
+#### warriors and beyond
+!Terrance,recreant
+!Leander,learned
+!Marlon,normal
+!Daryl,lardy
+!Geno,gone
+!Tyson,stony
+!Preston,pronest
+!Eldon,olden
+!Rodney,yonder
+!Shane,ashen
+!Edwin,wined
+!Cedrick,cricked
+!Ernest,tenser
+!Reggie,eggier
+!Andres,snared
+!Andrew,warned
+!Demetri,Timider
+!Blake,Bleak
+!Dewey,weedy
+!barney,nearby
+!marcel,calmer
+!royce,coyer
+!wade,awed
+!archie,achier
+!bredo,bored
+!floyd,foldy
+!goldy,godly
+!dying,dingy
+!player,pearly
+!replay,pearly
+!curst palace,spectacular
+!accurst leap,spectacular
+!clear catsup,spectacular
+!pest accrual,spectacular
+!cactus pearl,spectacular
+!pearl cactus,spectacular
+!accu-plaster,spectacular
+v:greyed,edyerg,eegdry,regedy
+v:weariest,sweatier,treesawi
+v:released,dreleesa,lardeese
+v:docile,liedoc,olecid,ecolid,idleco,cledio
+###############################OYSTER
+!papery,prepay
+!yapper,prepay
+!skis,kiss
+pale,leap
+plea,leap
+v:spill,lilps
+v:derail,ialder,laired
+v:redial,ialder,laired
+v:reward,drawer
+v:soar,oars
+v:swipe,wipes,i-spew
+!prod,drop
+!redial,derail=red toys
+!tubs,bust
+!sign,sing
+!gins,sing
+!boats,boast
+!tunes,unset
+!tines,inset
+!stein,inset
+!casper,scrape
+!capers,scrape
+!recaps,scrape
+!trolls,stroll
+!waste,sweat
+!lance,clean
+!wipes,swipe
+!ant,tan
+!marcs,scram
+!clam,calm
+!raft,fart
+!oars,soar
+!a river,arrive
+!carps,scrap
+!pikes,spike
+!knob,bonk
+!crate,trace
+!crate,react
+!heaps,shape
+!portal,patrol
+!eeks,seek
+!tea,eat
+!trout,tutor
+!uttro,tutor
+!drawer,reward
+!wrap,warp
+!ruby,bury
+!arches,search
+!chaser,search
+!achers,search
+!haunter,unearth=scrawl
+!gleaner,enlarge
+!general,enlarge
+!sausage,assuage
+!lever,revel
+!red toys,destroy
+!oyster d,destroy
+!derail,redial
+!dialer,derail
+!dialer,redial
+v:unearth,Etahn Ru,Near-Hut,Haunter
+############################################OTTERS
+!cinders,discern
+!cinders,rescind
+v:however,veerhow,revhowe,whereov
+!butlery,brutely=imp1
+!rangily,angrily=imp2
+!legendary,enragedly=imp3
+!callosity,stoically=ram1
+!restyle,tersely=ram2
+!tallyhoing,loathingly=ram3
+!bleary,barely
+!barley,barely
+!ed riley,reedily
+!deli rye,reedily
+!er yield,reedily
+!yielder,reedily
+lobbyings,sobbingly
+!eyelids,seedily
+!locality,coitally
+!maritally,martially
+!ladyish,shadily
+!lindsey,snidely
+!reality,tearily
+!reality,irately
+!saintly,nastily
+!reliably,blearily
+!outyields,tediously
+!lawyering,wearingly
+!drywalling,drawlingly
+!redisplaying,despairingly
+flymoral,formally
+mayislet,steamily
+mistyale,steamily
+slimytea,steamily
+!thrones,hornets
+!nails,snail
+!corona,racoon
+!pines,snipe
+!raptor,parrot
+!parrot,raptor
+!ocelots,coolest
+!leopard,paroled
+!badger,garbed
+!satyr,artsy
+!owls,slow
+!sea cube,because
+!eels,else
+!hola thug,although
+!revhowe,however
+!vowhere,however
+!yltsenoh,honestly=merle
+!bridally,ribaldly
+!yelped,deeply=whistle
+###################OTHERS
+#### CITRUS
+!mimesporn,persimmon
+!esppal,apples
+!quince,cinque
+!coins,icons
+!icons,sonic
+!coins,sonic
+!coin,icon
+!rifle,flier
+!slime,limes
+!lumps,plums
+!spear,pears
+!peanut cola,cantaloupe
+!barriers west,strawberries
+!eerie blurbs,blueberries
+!bieber rules,blueberries
+!mad train,tamarind
+!bar pryers,raspberry
+!rapt figure,grapefruit
+!pipe panel,pineapple
+!pagers,grapes
+!buried raft,breadfruit
+!briar screen,cranberries
+!barren cries,cranberries
+#### all to one fruit
+!magenta rope,pomegranate
+!rampage note,pomegranate
+!mopeage rant,pomegranate
+##swell wells
+!riot cap,apricot
+!sorer bogey,gooseberry
+#advance
+!moss cap,compass
+!barber sickle,blackberries
+####Field
+#mango,among=detritius
+#### MR ICE
+!orange,go near
+!bribe slacker,blackberries
+!banana,nab an a
+!bbarrhu,rhubarb=pugnacious
+#### CLANGIER CLEARING
+!goman,among
+!prices,cripes
+!lemons,solemn
+!melons,solemn
+!peach,cheap
+!nectarine,ancienter
+!tangerine,argentine
+!deserver,reversed
+!reserved,reversed
+!harmonicas,maraschino
+#### final point
+!viewer,review
