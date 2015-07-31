@@ -457,7 +457,7 @@ to say reject:
 	say "That's not something you can say, do or see here."
 
 to say bug-report:
-	say "BUG. Contact me at schultz.andrew@sbcglobal.net with a transcript or description of where you are/what you did. Use up arrow to see previous commands. Or use UNDO several times and hit TRANSCRIPT to show me how you got here, what your inventory was, etc."
+	say "BUG. Contact me at [email] with a transcript or description of where you are/what you did. Use up arrow to see previous commands. Or use UNDO several times and hit TRANSCRIPT to show me how you got here, what your inventory was, etc."
 
 the air is a proper-named backdrop. the air is everywhere. understand "room" as air.
 
@@ -11164,11 +11164,14 @@ understand the command "about" as something new.
 understand "about" as abouting.
 
 carry out abouting:
-	say "This game, the first of two in [if cur-score of intro is 0]a series[else]the Stale Tales Slate[end if], is about[if cur-score of Intro is 0], well, I don't want to spoil that yet until you get your first point, which I hope isn't too hard. It's a bit different from other text adventures, being a wordplay game, but the hope is that the right sort of (one-word) command to solve certain puzzles is clued in more than one way.[paragraph break]This is much simpler than it sounds, and I think/hope I've made efforts to make it less guess-the-verb. No, not verb. That's the sequel.[otherwise] a certain sort of wordplay. I think you know it, now that your score is positive?[paragraph break]It's a tribute to Infocom's [i]Nord and Bert Couldn't Make Head or Tail of It[r] and something they didn't do. Probably not due to lack of creativity--either they thought something like this would be a mess, or maybe it was just due to technical or disk space limitations.[paragraph break]I hope it is the latter, and it's enough to be its own game, and I hope you find so too.[end if]You can see the testers who gave me transcripts with the CREDITS, which are rather long. Thanks, guys! If you want to see technical contributions, type TECH. For general release information, type RELEASE.[paragraph break]Also, I still appreciate transcripts! So, if you like, type TRANSCRIPT, then send reports--especially ones with transcripts--to schultz.andrew@sbcglobal.net.[paragraph break]And finally, a warning: if this game drove you up the wall, you will find A Roiling Original utterly painful. It has seven areas to explore from [unless trips strip is visited]the main world-hub[else]what the Trips Strip becomes[end if].";
+	say "This game, the first of two in [if cur-score of intro is 0]a series[else]the Stale Tales Slate[end if], is about[if cur-score of Intro is 0], well, I don't want to spoil that yet until you get your first point, which I hope isn't too hard. It's a bit different from other text adventures, being a wordplay game, but the hope is that the right sort of (one-word) command to solve certain puzzles is clued in more than one way.[paragraph break]This is much simpler than it sounds, and I think/hope I've made efforts to make it less guess-the-verb. No, not verb. That's the sequel.[otherwise] a certain sort of wordplay. I think you know it, now that your score is positive?[paragraph break]It's a tribute to Infocom's [i]Nord and Bert Couldn't Make Head or Tail of It[r] and something they didn't do. Probably not due to lack of creativity--either they thought something like this would be a mess, or maybe it was just due to technical or disk space limitations.[paragraph break]I hope it is the latter, and it's enough to be its own game, and I hope you find so too.[end if]You can see the testers who gave me transcripts with the CREDITS, which are rather long. Thanks, guys! If you want to see technical contributions, type TECH. For general release information, type RELEASE.[paragraph break]Also, I still appreciate transcripts! So, if you like, type TRANSCRIPT, then send reports--especially ones with transcripts--to [email].[paragraph break]And finally, a warning: if this game drove you up the wall, you will find A Roiling Original utterly painful. It has seven areas to explore from [unless trips strip is visited]the main world-hub[else]what the Trips Strip becomes[end if].";
 	the rule succeeds;
 
+to say ghsite:
+	say "http://github.com/andrewschultz/stale-tales-slate";
+
 report switching the story transcript on:
-	say "Thanks for taking this transcript! If you've never made a transcript before, it's not hard. Type TRANSCRIPT and save to a text file and start any comments with ; or * or ?. Then locate the file and mail it to me at schultz.andrew@sbcglobal.net. Don't worry if you don't make many comments--I can often see ways I didn't mean for the player to get stuck.[paragraph break]	While Shuffling Around's puzzles are rather stable, I'm interested in anything from 'this is broken' or 'this was hinted poorly' to 'you missed this joke.' Authors enjoy getting transcripts--I mean, after we realize what we did wrong, we can learn a lot.[paragraph break]You can also report and see issues at https://bitbucket.org/andrewschultz/shuffling-around/issues?status=new&status=open.[paragraph break]Again, my email address is schultz.andrew@sbcglobal.net. Thanks!";
+	say "Thanks for taking this transcript! If you've never made a transcript before, it's not hard. Type TRANSCRIPT and save to a text file and start any comments with ; or * or ?. Then locate the file and mail it to me at [email]. Don't worry if you don't make many comments--I can often see ways I didn't mean for the player to get stuck.[paragraph break]	While Shuffling Around's puzzles are rather stable, I'm interested in anything from 'this is broken' or 'this was hinted poorly' to 'you missed this joke.' Authors enjoy getting transcripts--I mean, after we realize what we did wrong, we can learn a lot.[paragraph break]You can also report and see issues at [ghsite].[paragraph break]Again, my email address is [email]. Thanks!";
 	continue the action;
 
 part creditsing
@@ -11182,8 +11185,9 @@ understand "credits" and "credit" as creditsing.
 carry out creditsing:
 	if cur-score of Intro is 0:
 		say "There is a list of websites I would like to credit. But it might spoil things before you score anything. So I'll just list beta-testers and general help.[paragraph break]";
-	say "[if cur-score of Intro > 0]Tester Street residents ('no on tiredness:')[paragraph break][end if]Adri, Anthony Hope, DJ Hastings, Gavin Myers-Leman, Hulk Handsome ([if cur-score of intro > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[otherwise][i]shout-out not spoiled til you score a point[r][end if],) Joey Jones, John Nitchals, Paul Lee, Robert Patten and Tomie Campf, in alphabetical first-name order. They found 700+ bugs.[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: David Wilkins, Jason Orendorff, Matt Weiner, Sean M. Shore and Toby Ott. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or this game's IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at schultz.andrew@sbcglobal.net, and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type SITES for a list of sites that helped[if cur-score of intro is 0], which will totally spoil things right now[end if].";
-	say "Oh, hey, do you wish to see what the pen names are? Some people were kind enough to take them at my request.";
+	say "[if cur-score of Intro > 0]Tester Street residents ('no on tiredness:')[paragraph break][end if]Adri, Anthony Hope, DJ Hastings, Gavin Myers-Leman, Hulk Handsome ([if cur-score of intro > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[otherwise][i]shout-out not spoiled til you score a point[r][end if],) Joey Jones, John Nitchals, Paul Lee, Robert Patten and Tomie Campf, in alphabetical first-name order. They found 700+ bugs.[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: David Wilkins, Jason Orendorff, Matt Weiner, Sean M. Shore and Toby Ott. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or this game's IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type SITES for a list of sites that helped[if cur-score of intro is 0], which will totally spoil things right now[end if].";
+	say "Also, thanks to Google Code and BitBucket, which contained original source control and issues, and GitHub, where I currently have a repository: [ghsite].";
+	say "Oh, hey, do you wish to see what the pen names are right now? Some people were kind enough to take them at my request.";
 	if the player consents:
 		say "John Nitchals = Wade Clarke.[line break]Gavin Myers-Leman = Melvin Rangasamy.[line break]Tomie Campf = Kevin Jackson-Mead, who used 'Pam Comfite' as an anagram of 'IFComp Meta' the year before--it's worth checking out the 2011 competition for those games alone.[paragraph break]Hulk Handsome is also a cool pseudonym, but it's one he uses lots of places."
 
@@ -11269,6 +11273,9 @@ to say poss-range:
 		say "*[poss-score of mrlp]*";
 
 book stubs
+
+to say email:
+	say "blurglecruncheon@gmail.com";
 
 to ital-say (x - indexed text):
 	say "[italic type][bracket]NOTE: [x][close bracket][roman type][line break]";
@@ -14543,6 +14550,7 @@ blurb
 "Zoren Enzor"
 "Zorrie Rozier"
 "Zuri Ruiz"
+"Geri Iger"
 
 book forest
 
@@ -14726,7 +14734,7 @@ blurb
 "Aw, sire, I swear."
 "Aw, the wheat, wet, ah!"
 "AWOL? Fob a bowl of fab wool."
-"The bad guy, beady thug, by hate dug!"
+"The bad guy, beady thug: by hate, dug!"
 "Bad's nigh. Bind, gash, big hands!"
 "Balk, cook. Look back a block, ok?"
 "Bands Co-Abscond."
@@ -16401,7 +16409,6 @@ blurb
 "The [ri-tri] continue their bashin['], hoping to banish you."
 "The [ri-tri] decry The Villain In The Villa. The one they're blocking you from. Hooray, mob logic."
 "The [ri-tri] discuss what to hate next. A 'BINGO! AMEN!' restarts their bemoaning."
-"The [ri-tri] lambaste your work in the forest with a meat slab."
 "The [ri-tri] seem particularly upset you destroyed store I & R[if store i is in trips strip] (okay, they're wrong about I)[end if]."
 "The [ri-tri] vent their hates with haste."
 "'Apology? A ploy! Go!'"
@@ -16428,7 +16435,7 @@ blurb
 "The tough-on-sin [ri-tri] continue on shouting."
 "The visceral cavilers continue their masculine calumnies."
 "'We are right! Rage! Writhe!'"
-"You note someone casting his own blames at you, keeping lame tabs on your reaction."
+"They lambaste blames at you, then yell 'Beat! Slam!' and keep lame tabs on your reaction."
 "You see someone handing out fliers, cringe that they might turn to rifles, and feel relieved you didn't do so by accident."
 
 volume talky

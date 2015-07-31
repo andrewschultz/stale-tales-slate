@@ -42,7 +42,7 @@ Are the two modified, and there may be a problem with naming Flexible Windows.i7
 
 ]
 
-volume globals
+volume globals and initializers
 
 include Reactable Quips by Michael Martin.
 
@@ -90,6 +90,8 @@ a person has a person called the chum. [a chum is someone whom they imitate in d
 
 to rulesOn:
 	(- RulesOnSub(); -)
+	
+part random tables
 
 when play begins (this is the table scramble and index rule) :
 	let mycount be 0;
@@ -368,7 +370,9 @@ to say elv-art:
 	unless dope-read is true:
 		say " (read [if player is male]I Trash His Art[else]Her Arts Er Trash[end if])"
 
-[GENERAL random text rules]
+chapter random text rules
+
+section GENERAL random text rules
 
 this is the bzzt rule:
 	the rule fails.
@@ -423,7 +427,7 @@ this is the undo-rej rule:
 		the rule succeeds;
 	the rule fails;
 
-[MANOR random text rules]
+section MANOR random text rules
 
 this is the read-books rule:
 	if current action is examining the bookshelf:
@@ -440,7 +444,7 @@ this is the mob-chanting rule:
 		the rule succeeds;
 	the rule fails;
 
-[STRIP random text rules]
+section STRIP random text rules
 
 this is the movie-over-ad rule:
 	if current action is not examining store c:
@@ -477,7 +481,7 @@ this is the name-movie rule:
 		the rule succeeds;
 	the rule fails;
 
-[ROUTES random text rules]
+section ROUTES random text rules
 
 this is the ask-deli rule:
 	if pat-whine is true:
@@ -506,7 +510,7 @@ this is the horb-bye rule:
 		the rule succeeds;
 	the rule fails;
 
-[TROVES random text rules]
+section TROVES random text rules
 
 this is the read-eths rule:
 	if current action is examining Pa Egg Pea:
@@ -553,7 +557,7 @@ this is the read-divorces rule:
 		the rule succeeds;
 	the rule fails.
 
-[PRESTO random text rules]
+section PRESTO random text rules
 
 this is the chitchat-over-idols rule:
 	unless Rand is washed up and player is in ridge:
@@ -591,7 +595,7 @@ this is the read-futon rule:
 		the rule succeeds;
 	the rule fails;
 
-[OYSTER random text rules]
+section OYSTER random text rules
 
 this is the in-bar rule:
 	if player is in hops shop:
@@ -640,7 +644,7 @@ this is the screed-read rule:
 		the rule succeeds;
 	the rule fails.
 
-[TOWERS random text rules]
+section TOWERS random text rules
 
 this is the rodney-here rule:
 	if player is in trefoil and rodney is in trefoil:
@@ -652,7 +656,7 @@ this is the examining-gizmo rule:
 		the rule succeeds;
 	the rule fails;
 
-[OTTERS random text rules]
+section OTTERS random text rules
 
 this is the last-battle rule:
 	if current action is playing whistle and player is in Inclosure:
@@ -670,7 +674,7 @@ this is the alcove-talk rule:
 		if Elmer is in alcoves:
 			if Merle is reflexed:
 				the rule succeeds;
-			else:
+			else: [this is a bit tricky since we need the clue to get Elmer and Merle to talk "Honestly" -- so text only appears if player is in alcoves etc
 				say "Merle and Elmer [one of]begin[or]continue[stopping] concern trolling with the whole good-is-evil-and-evil-is-good routine, [one of]exclaiming HOLY NETS![or]all, 'Sly, eh? NOT.' discussing you.[or]lamenting Elvira's no-ethyls policy.[or]dissing Shy Elton.[or]so obviously on-the-sly, but what can you do?[in random order]";
 	the rule fails;
 
@@ -679,7 +683,7 @@ this is the Elvira-taunt rule:
 		the rule succeeds;
 	the rule fails;
 
-[OTHERS random text rules]
+section OTHERS random text rules
 
 this is the sloganing rule:
 	if player is in gates stage and current action is going north:
@@ -691,7 +695,9 @@ this is the clearing-listen rule:
 		the rule succeeds;
 	the rule fails.
 
-[this is the random rule to decide which of 2 tables comes first]
+section deciding how to weight rules
+
+[this is the random rule to decide which of 2 tables we choose if, say, examining the catechism]
 
 weighted is a truth state that varies. weighted is usually false.
 
@@ -717,6 +723,10 @@ this is the blurby rule:
 	the rule fails;
 
 [end of rules to parse through]
+
+chapter text twiddling
+
+[this is the code that gives the player the option to scroll through more randoms. Sometimes X.G.G is not feasible, e.g. at the end of Troves.]
 
 twiddle-warn is a truth state that varies.
 
@@ -795,74 +805,6 @@ every turn when strip of profits is visited (this is the region-hint on no score
 
 before going north when block-north is true:
 	do nothing instead; [?! hack to get rid of z.z.z.z. and answer n]
-
-table of region-spoilers
-hint-reg	spoil-expl
-otters	"adverbs[if inhib is true](weakest, due to lost powers)[else](but powers back now)[end if]"
-presto	"interjections"
-routes	"prepositions"
-troves	"passive verbs"
-towers	"adjectives"
-oyster	"active verbs"
-others	"not nouns any more--a different part of speech in each location"
-
-[this table gives clues after you scan, although sometimes it may be approrpriate to give hints only in cheat mode.]
-
-table of aftertexts [taf]
-xtradesc	b-only	clue-only-once	clued-yet	bothscan	xtratext
-tables	false	false	false	true	"You fiddle with the cheat button and note that nothing happens to the R's and Y's." [manor]
-niche	false	false	false	true	"You fiddle with the cheat button and note that nothing happens to the R's and Y's."
-t-b	false	false	false	true	"You fiddle with the cheat button and note that nothing happens to the R's and Y's." [end manor]
-bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [routes]
-controls	false	false	false	false	"This is odd--all these question marks. Surely you'll find by accident where Ben hid the hit win button? Or you can just pick and choose, focusing on Ben, or the win."
-ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?"
-Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
-brochure	true	false	false	false	"You imagine a voice saying OBSTACLES LIKE THOSE QUESTION MARKS MAY BE OPPORTUNITIES. A [if brochure is examined]re[end if]reading of the brochure may help see what it's about."
-rivets	false	false	false	true		"[rivet-help]."
-song	false	true	false	false	"You'd guess it's Eddie's song and not Eddie, since when the instrumentals kick in, the settler's reading stays."
-alert letters	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them." [presto]
-USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
-pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, five letters is easier than four[end if]."
-general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
-Ray Eck	false	true	false	false	"Ray Eck begins babbling about how interesting the settler looks, almost as interesting as his keycar. Maybe you could ASK him about the settler, if he's still stumping you." [towers]
-nameless salesmen	false	true	false	true	"Hm. Salesmen is eight letters, but your settler registers seven. Seven letters in Nerd-Aid. It's--well, they're certainly dressed unusually."
-alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
-sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
-iPrune	true	true	false	false	"Hm. That one blinky letter is pretty weird. Maybe you can start there, or try to annoy the iPrune."
-raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT."
-deacons	false	true	false	false	"Well, this is tricky. They could be just plain deacons, or they could be the hostile ol['] heist. You may need to observe a bit more to clear this up."
-man covered in inapt paint	false	true	false	false	"Hmm, painted and covered have three vowels--so it's probably the FLEMISH in inapt paint across his chest."
-old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
-doc-y	false	true	false	false	"[if doc-y has not been rowdy and doc-y has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if doc-y has been rowdy or doc-y has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her].[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]"
-ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to unlock them."
-serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
-cinders	true	true	false	false	"Hm, that's weird. Perhaps there are two things you can do with the cinders." [otters]
-atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
-Merle	false	false	false	true	"Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings."
-sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp is maybe too active for even the settler to pin down."
-whiners	false	false	false	false	"The settler then garbles and changes. The men have ways of staying loud." [end otters]
-coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [others]
-pugnacious	false	false	false	false	"Wow, seven letters, odd. Maybe you need to talk to the plant or attack it or something to see what kind it might be."
-caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
-an-a	false	false	false	false	"You think you hear a taunting na-naa-b after you scan the letters."
-natives	true	true	false	false	"That's weird. They're just natives, but the blinky bit suggests there may be two possible solutions."
-curst palace	true	false	false	false	"[if palace-let < 5]Wow, lots of blank data. You may want to get closer to have any hope of figuring how to restore the palace[else if palace-let is 11 and cheat-on is true]The final letter clue blinks alternately with the fifth--neither is purple at the same time[else if cheat-on is true]Hm, maybe you can figure what the fifth letter is if you know more about the later ones[else]Just the reds and yellows still leave a lot of possibilities. But maybe you'll have clues along the way[end if]."
-
-check scaning a prefigured thing:
-	if noun is not dialer:
-		say "Before running the scanner, you remember you've already figured what to do, just not when. The information's in your pedanto-notepad." instead;
-
-to say rivet-help:
-	if rivets are reflexed and prai is reflexed:
-		say "Well, there's probably not much else hidden in the rivets";
-		continue the action;
-	if rivets are reflexed:
-		say "You maybe could focus on what the rivets say";
-		continue the action;
-	if prai is reflexed:
-		say "Hmm, the message could've been painted on, but Trevis Vister commissioned rivets";
-		continue the action;
-	say "[if cheat-on is true]The greens and yellows in the last two characters blink in unison[else]A little messy, but that may just mean there are two ways to look at this problem[end if]";
 
 a thing can be ssok, ssno, ssblur or ssclear. a thing is usually ssok.
 
@@ -1013,7 +955,7 @@ Procedural rule: ignore the print final score rule.
 check examining player when mrlp is demo dome:
 	say "You look just fine. You don't need to be dressed too fancy for this." instead;
 
-description of player is "As every[if player is female]wo[end if]mannish as ever[if player wears star], and wearing a spiffy star, too[end if]. [one of]You'll never be a [if player is female]Fine Nefi Fein[else]Hunk Kuhn or Icon Nico[end if], or even a Darling Lingard, and you don't want to be. Because i[or]I[stopping]t's the power inside you that's important[if mrlp is otters and inhib is true]. Well, the power you may need to regain[end if]."
+description of player is "As every[if player is female]wo[end if]mannish as ever[if player wears star], and wearing a spiffy star, too[end if]. [one of]You'll never be a [if player is female]Fine Nefi Fein[else]Hunk Kuhn or Icon Nico[end if][one of], or even a or Dreamboat [if player is male]Brad Mateo[else]Amber Dato[end if][or][stopping], and you don't want to be. Because i[or]I[stopping]t's the power inside you that's important[if mrlp is otters and inhib is true]. Well, the power you may need to regain[end if]."
 
 does the player mean examining the player when mrlp is troves: it is very likely.
 
@@ -8496,6 +8438,76 @@ to say hit-win: [?! bad idea for spacing]
 
 to say ben-hid:
 	say "[if cheat-on is true]PGRYRP[else]RYRYRR[end if]"
+
+chapter aftertexts
+
+table of region-spoilers
+hint-reg	spoil-expl
+otters	"adverbs[if inhib is true](weakest, due to lost powers)[else](but powers back now)[end if]"
+presto	"interjections"
+routes	"prepositions"
+troves	"passive verbs"
+towers	"adjectives"
+oyster	"active verbs"
+others	"not nouns any more--a different part of speech in each location"
+
+[this table gives clues after you scan, although sometimes it may be approrpriate to give hints only in cheat mode.]
+
+table of aftertexts [taf]
+xtradesc	b-only	clue-only-once	clued-yet	bothscan	xtratext
+tables	false	false	false	true	"You fiddle with the cheat button and note that nothing happens to the R's and Y's." [manor]
+niche	false	false	false	true	"You fiddle with the cheat button and note that nothing happens to the R's and Y's."
+t-b	false	false	false	true	"You fiddle with the cheat button and note that nothing happens to the R's and Y's." [end manor]
+bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [routes]
+controls	false	false	false	false	"This is odd--all these question marks. Surely you'll find by accident where Ben hid the hit win button? Or you can just pick and choose, focusing on Ben, or the win."
+ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?"
+Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
+brochure	true	false	false	false	"You imagine a voice saying OBSTACLES LIKE THOSE QUESTION MARKS MAY BE OPPORTUNITIES. A [if brochure is examined]re[end if]reading of the brochure may help see what it's about."
+rivets	false	false	false	true		"[rivet-help]."
+song	false	true	false	false	"You'd guess it's Eddie's song and not Eddie, since when the instrumentals kick in, the settler's reading stays."
+alert letters	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them." [presto]
+USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
+pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, five letters is easier than four[end if]."
+general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
+Ray Eck	false	true	false	false	"Ray Eck begins babbling about how interesting the settler looks, almost as interesting as his keycar. Maybe you could ASK him about the settler, if he's still stumping you." [towers]
+nameless salesmen	false	true	false	true	"Hm. Salesmen is eight letters, but your settler registers seven. Seven letters in Nerd-Aid. It's--well, they're certainly dressed unusually."
+alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
+sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
+iPrune	true	true	false	false	"Hm. That one blinky letter is pretty weird. Maybe you can start there, or try to annoy the iPrune."
+raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT."
+deacons	false	true	false	false	"Well, this is tricky. They could be just plain deacons, or they could be the hostile ol['] heist. You may need to observe a bit more to clear this up."
+man covered in inapt paint	false	true	false	false	"Hmm, painted and covered have three vowels--so it's probably the FLEMISH in inapt paint across his chest."
+old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
+doc-y	false	true	false	false	"[if doc-y has not been rowdy and doc-y has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if doc-y has been rowdy or doc-y has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her].[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]"
+ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to unlock them."
+serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
+cinders	true	true	false	false	"Hm, that's weird. Perhaps there are two things you can do with the cinders." [otters]
+atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
+Merle	false	false	false	true	"Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings."
+sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp is maybe too active for even the settler to pin down."
+whiners	false	false	false	false	"The settler then garbles and changes. The men have ways of staying loud." [end otters]
+coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [others]
+pugnacious	false	false	false	false	"Wow, seven letters, odd. Maybe you need to talk to the plant or attack it or something to see what kind it might be."
+caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
+an-a	false	false	false	false	"You think you hear a taunting na-naa-b after you scan the letters."
+natives	true	true	false	false	"That's weird. They're just natives, but the blinky bit suggests there may be two possible solutions."
+curst palace	true	false	false	false	"[if palace-let < 5]Wow, lots of blank data. You may want to get closer to have any hope of figuring how to restore the palace[else if palace-let is 11 and cheat-on is true]The final letter clue blinks alternately with the fifth--neither is purple at the same time[else if cheat-on is true]Hm, maybe you can figure what the fifth letter is if you know more about the later ones[else]Just the reds and yellows still leave a lot of possibilities. But maybe you'll have clues along the way[end if]."
+
+check scaning a prefigured thing:
+	if noun is not dialer:
+		say "Before running the scanner, you remember you've already figured what to do, just not when. The information's in your pedanto-notepad." instead;
+
+to say rivet-help:
+	if rivets are reflexed and prai is reflexed:
+		say "Well, there's probably not much else hidden in the rivets";
+		continue the action;
+	if rivets are reflexed:
+		say "You maybe could focus on what the rivets say";
+		continue the action;
+	if prai is reflexed:
+		say "Hmm, the message could've been painted on, but Trevis Vister commissioned rivets";
+		continue the action;
+	say "[if cheat-on is true]The greens and yellows in the last two characters blink in unison[else]A little messy, but that may just mean there are two ways to look at this problem[end if]";
 
 volume big lumpy rules
 
@@ -29676,6 +29688,7 @@ table of oldies singers [xxm03]
 blurb
 "Abject Cat Jeb"
 "Absurd Bard Su"
+"Darling Lingard"
 "Alto Ben Labonte"
 "Alto Bo Lobato"
 "Alto Cyr Claytor"
@@ -44335,6 +44348,32 @@ blurb
 "SOB Al, a slob so bla"
 "SOB Mac Bascom"
 "SOB, Well, Slob Lew Bellows"
+"SOB Eric Briscoe"
+"SOB Don Dobson"
+"SOB Tom Toombs"
+"SOB Ron Osborn"
+"SOB Marion Ambrosino"
+"SOB Al Sabol"
+"SOB Carmen Branscome"
+"SOB Ty Ostby"
+"SOB Art Bartos"
+"SOB Erin Briseno"
+"SOB Trey Boyster"
+"SOB Dee DeBose"
+"SOB Mac Bascom"
+"SOB Oren Osborne-Robeson"
+"SOB Len Nobles"
+"SOB Rey Boyers"
+"SOB Anita Sabatino"
+"SOB Alma Balsamo"
+"SOB Erma Ambrose"
+"SOB Rena Seaborn"
+"SOB Nola Bolanos"
+"SOB Tia Tobias"
+"SOB Leta Seabolt"
+"SOB Estrella Ballesteros"
+"SOB Roni Orbison"
+"SOB Marna Abramson"
 "Softest Fossett"
 "Softie Dan DiStefano"
 "Softie Ren Firestone"
@@ -50736,6 +50775,7 @@ table of theses [xxy6]
 blurb
 "Alert, clown: we can troll!"
 "All We Do: ALLOWED!"
+"Ill tempers melt perils!"
 "ARM! RAM! MAR!"
 "Arm twisting! Smarting wit!"
 "AUNT TUNA (an unflattering picture, captioned weight: A TUN)" [p]
