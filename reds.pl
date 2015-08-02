@@ -10,7 +10,7 @@
 
 use Algorithm::Permute;
 
-$myMax = 10000;
+$myMax = 1000;
 $maxLetters = 20;
 
 
@@ -24,7 +24,8 @@ while ($cur <= $#ARGV)
   /-f/ && do { $fileName = @ARGV[$cur+1]; $cur += 2; next; };
   /-y/ && do { $fileName = "reds.txt"; $settler = 1; $cur++; next; };
   /-n/ && do { $fileName = "reds.txt"; $settler = 0; $cur++; next; };
-  /-m/ && do {$maxLetters = @ARGV[$cur+1]; $cur += 2; next; };
+  /-l/ && do {$maxLetters = @ARGV[$cur+1]; $cur += 2; next; };
+  /-m/ && do {$myMax = @ARGV[$cur+1]; $cur += 2; next; };
   /\./ && do { $fileName = @ARGV[$cur]; $cur++; next; };
   $cur = $#ARGV + 1;
   }

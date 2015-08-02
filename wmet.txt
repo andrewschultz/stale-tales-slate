@@ -92,6 +92,6 @@ rhubarb/tamarind/tangerine/nectarine
 raspberry/pineapple/reversed/mango/persimmon
 sonic/icons/research/review
 blackberries/blueberries/strawberries/cantaloupe
-maraschino/cranberries/pomegranate
-gooseberry/grapefruit/papayas/breadfruit/cinque/skyscraper
+maraschino/cranberries/pomegranate/watermelon
+gooseberry/grapefruit/papayas/breadfruit/cinque
 ;

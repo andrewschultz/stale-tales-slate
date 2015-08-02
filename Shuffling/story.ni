@@ -13640,6 +13640,7 @@ blurb
 "Brascoe Escobar"
 "Brenda Barden"
 "Brenda Dabner-Braden" []
+"Brene Berne-Ebner"
 "Briana Arabin"
 "Briano Baroni"
 "Briscoe Crosbie"
@@ -13882,6 +13883,7 @@ blurb
 "Geraldo DeLargo"
 "Gerda Edgar"
 "Geri Gier"
+"Geri Iger"
 "Gerri Grier"
 "Gerry Ryger"
 "Gershon Shogren"
@@ -14550,7 +14552,6 @@ blurb
 "Zoren Enzor"
 "Zorrie Rozier"
 "Zuri Ruiz"
-"Geri Iger"
 
 book forest
 
@@ -15956,6 +15957,7 @@ blurb
 "'Win-Lose Wiles? No Lies, Now!'"
 "'WorldCo? Cold Row!'"
 "A worn 'No war.'"
+"'WSJ? SJW!'"
 "'Yuck, one coy nuke!'"
 "'Zeal's sin. LAZINESS!'"
 
@@ -16431,11 +16433,11 @@ blurb
 "Some total fruit loop's sign says ANARCHIST? NAH, RACIST!"
 "Someone in the crowd yells that they will not be your assistant satanists. Everyone rebukes him for a moment--that's a bit far--then continues protesting."
 "'Stirred-up disrupter! Super dirt!'"
+"They lambaste blames at you, then yell 'Beat! Slam!' and keep lame tabs on your reaction."
 "'Torridest distorter!'"
 "The tough-on-sin [ri-tri] continue on shouting."
 "The visceral cavilers continue their masculine calumnies."
 "'We are right! Rage! Writhe!'"
-"They lambaste blames at you, then yell 'Beat! Slam!' and keep lame tabs on your reaction."
 "You see someone handing out fliers, cringe that they might turn to rifles, and feel relieved you didn't do so by accident."
 
 volume talky

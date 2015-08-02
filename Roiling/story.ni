@@ -21,6 +21,7 @@ DSB = default subject blather, about a specific topic. If an NPC has no entry, i
 TOB = read ALL the book titles!
 TOSB = subj-blather, about a specific subject
 TNW = messages for "you can't go that way"
+TRE = table of readables
 TSX  = differences between sexes
 TSH = table of spechelp, so you can see the specialized help for an item
 TSR = table of specreject, which gives specialized responses for if you try to flip something that doesn't need it any more
@@ -3017,6 +3018,100 @@ does the player mean scaning air:
 
 rule for supplying a missing noun when scaning: now the noun is the air.
 
+book reading (vs just examining)
+
+The reading action translates into I6 as "Read".
+
+Understand the commands "r" and "read" as something new.
+
+Understand "r [something]" and "read [something]" as reading. Reading is an action applying to one thing, requiring light.
+
+carry out reading:
+	if noun is red writing:
+		if number of readable things is 0:
+			say "No writing around here on anything." instead;
+		if number of readable things is 1:
+			try examining a random readable thing instead;
+		say "Too much to read." instead;
+	if noun is a to-read listed in the table of readables:
+		choose row with to-read of noun in table of readables;
+		if there is a what-read entry:
+			say "[what-read entry][line break]" instead;
+		try reading alt-read entry instead;
+	if noun is drinks stand:
+		try examining blurbs instead;
+	try examining noun instead;
+
+the red writing is a backdrop. the indefinite article of red writing is "some". the writing is everywhere. description of writing is "BUG. You should've been kicked to something to read. Let me know how this happened at [email].". understand "words" and "red/-- letters" as writing.
+
+does the player mean reading ltb: it is very likely.
+does the player mean reading the red writing when number of readable things > 0: it is likely.
+does the player mean reading the red writing when number of readable things is 0: it is unlikely.
+does the player mean examining the red writing when number of readable things > 0: it is likely.
+does the player mean examining the red writing when number of readable things is 0: it is unlikely.
+
+last-read is a thing that varies.
+
+does the player mean reading last-read when last-read is visible: it is likely.
+
+instead of doing something with red writing:
+	if current action is examining or current action is reading:
+		if player is in solo den:
+			say "GYDIN['] in big red letters." instead;
+		if number of readable things is 0:
+			say "No red writing around here on anything." instead;
+		if number of readable things is 1:
+			try reading a random readable thing instead;
+		if last-read is visible:
+			try reading last-read instead;
+		say "That's sensible but ambiguous here with so much to look at--the preferred verb is to READ one of [the list of readable things]." instead;
+	 if current action is objhinting:
+		continue the action;
+	if number of readable things is 0:
+		say "There's no red writing here to do anything with." instead;
+	say "You can really only read the writing." instead;
+
+definition: a thing (called cand) is readable:
+	if cand is not a to-read listed in table of readables:
+		decide no;
+	if cand is not visible:
+		decide no;
+	decide yes;
+
+table of readables [tre]
+to-read	what-read	alt-read
+sitar	"Oh, right. You bought it from Trisa Israt." [manor]
+rifle	"It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle."
+Store H	"'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'" [stores]
+ltb	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple."	[troves]
+DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
+card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned Orp.[cycling]"
+playbill	"[one of]S. Negri and N. Regis are the band. And there's a promotions company to read about, too[or]Isnerg promotions[cycling]."
+volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz and Zemo Valt were the main architects. [cycling] You can read it again to see the [one of]architects[or]company, again[cycling]." [presto]
+drab yoke	"It is, apparently, an OAK DERBY drab yoke, from the small red print."
+jar of pills	--	ps	[oyster]
+stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe."
+jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
+tumblers	"The PITS is written in red on the bottom of one tumbler."
+scrawl	"[if carps are visible][reject][else]Etahn Ru. Near-Hut Haunter.[end if]"
+gleaner	"The gleaner was made by Al Green, written in red."
+dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED."
+strudel	"DR. ELTUS recommends this strudel!"	[towers]
+keycar	"When the car slows a bit, you read KC AYER in red."
+iPrune	"InPure industries[one of]. Yep, you heard rumors Elvira was involved with them, too[or][stopping]."
+rewired robot	"Rewired -- DR. EWRIE."
+o-s	"[if deacons are in lalaland]The shrine reads LOST? HIE! THE LOIS![else][one of]Written in red on the shrine is THE LOIS, who helped you in the sortie pre-Elvira You can read a bit more.[or][one of]LOST? HIE! [or]THE LOIS [cycling]is written on the ole shrine in red.[stopping][end if]"
+prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[in random order]. There're two other bits to read."
+blaster	"ALBERT'S."
+welt-proof flowerpot	"GYDIN['], >> 'Y/N, dig?'"
+p-2	"One barely legible bit reads [one of]Eeh, Row V![or]Veer How?[or]Rev. Howe[or]Whereov[in random order]."	[otters]
+whistle	"Ed Plye, apparently, made the whistle."
+drinks stand	--	blurbs	[others]
+riot cap	"It's red and [one of]made of I-TRAP-CO material[or]designed and shaped by CAPTOR-I, whoever they are[in random order]"	--
+mad train	"DR. NIMATA."
+mean trowel	"It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt."
+singed design	"The singed design on the [if player has coins or player has s-c]coins[else if player has coin]coin[else if player has icon]icon[else if player has icons]icons[else]BUG[end if] reads, when you look close, property of NISCO."
+
 book quips
 
 section artistic
@@ -5574,6 +5669,9 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "jagged"	265182945	others	--	jagged spoon	--	"[rapt-glare]."
 "briar"	236247175	others	--	briar screen	--	"[whole-item]."
 "screen"	525123080	others	--	briar screen	--	"[whole-item]."
+"drupelet"	705460733	others	--	pryer bars	--	"[no-pryer]."
+"drupelets"	801734699	others	--	pryer bars	--	"[no-pryer]"
+"pryerbar"	608209452	others	--	pryer bars	--	"No, it's [i]both[r] pryer bars"
 "peanut"	488583219	others	--	peanut cola	--	"[whole-item]."
 "cola"	149359819	others	--	peanut cola	--	"[whole-item]."
 "moss"	330975662	others	--	moss cap	--	"[whole-item]."
@@ -5742,6 +5840,9 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 [the rules/texts below are organized in the order I thought up the nudges above, which is to say, more or less random. But nothing there is game-critical enough that it needs to be sorted. I hope.]
 
 [ton]
+
+to say no-pryer:
+	say "No, it's the whole pryer bars"
 
 this is the kid-male rule:
 	if smart kid is visible and smart kid is male:
@@ -7267,8 +7368,6 @@ carry out possing:
 chapter fliptoing
 
 fliptoing is an action applying to one visible thing.
-
-a mango is a fruit.
 
 a thing can be reflexive, reflexed, vanishing, or nonreflexive. a thing is usually nonreflexive.
 
@@ -10458,6 +10557,8 @@ to check-fruit-min:
 
 description of Rustic Citrus is "A sign on an abandoned drinks stand says RUSTIC CITRUS and, well, it's pretty rustic even if nothing much is growing[if spear is visible]--I don't think the spear stuck in the ground counts[end if][if mad train is visible], and a mad train lies glaring at the lack of track ahead[end if]. [if lumps are visible]The ground's covered with lumps, too. [end if][if pagers are visible]You hear pagers beeping all around as well. [end if][if slime is visible]You also have trouble not looking at some slime oozing off to the side. [end if][if videotape is in citrus]That videotape collection you uncovered from the drinks stand lies here, too. [end if]"
 
+chapter curtis and dealing with him
+
 Curtis is a person in Rustic Citrus. description is "I curst him to be nondescript.". "Curtis is pottering around, waiting for you to hand over [if cur-score of others is 0]some[else]more[end if] fruits."
 
 extra-citrus is a number that varies.
@@ -10469,15 +10570,6 @@ negged-yet is a truth state that varies.
 after printing the locale description for rustic citrus:
 	coin-eval;
 
-The mad train is scenery in Rustic Citrus. description is "It's got quite a frown in its cow catcher, all right. It was apparently designed by Dr. Nimata, whose name is in red.".
-
-a-text of mad train is "RYRYRYRR". b-text of mad train is "RGRYPYRR".
-
-instead of taking mad train:
-	say "You'd strain to find a use for trains here.";
-
-a tamarind is a fruit. description is "It looks more like a potato than any fruit you know. But it still counted."
-
 check giving fruit to curtis:
 	if moss cap is off-stage:
 		say "'No, no. A bit more, then I'll give you a reward." instead;
@@ -10485,6 +10577,51 @@ check giving fruit to curtis:
 
 check going inside in Rustic Citrus:
 	say "You can't go backward. There is enough to do here, including figuring where to go next." instead;
+
+chapter grapes
+
+some pagers are plural-named scenery in rustic citrus. description is "They come in green and reddish-purple and black. Like all pagers, they seem a bit seedy."
+
+instead of taking pagers:
+	say "Nobody ever saved a country with a pager."
+
+a-text of pagers is "RRYRYR". b-text of pagers is "RRYRYP".
+
+to say mami:
+	if player is male:
+		say "[d-word-u] Mister Master Mind";
+	else:
+		say "[if player is in citrus]Named It[else]AND TIME,[end if] Mrs Master Mind";
+
+understand "gapers" and "gasper" as a mistake ("Really, you don't need people all [mami] over changing those [if pagers are visible]pagers[else]grapes into anything else[end if]. That's not your style.") when pagers are visible or grapes are visible.
+
+instead of taking pagers:
+	say "As much as you'd like to bash them, there's another way to shut them up."
+
+instead of examining pagers:
+	say "Remember when these things were the most annoying electronic devices? Then came cell phones and iPods."
+
+grapes are a fruit.
+
+after fliptoing grapes:
+	say "You hear barren cries now that the pagers aren't distracting you.";
+	now barren cries are in citrus;
+	continue the action;
+
+chapter maraschino
+
+the harmonicas are a plural-named thing in rustic citrus. "Two harmonicas, rusted together, are here."
+
+description of harmonicas is "They're an off-red, unlike your usual visions in the game. Their condition is the pits. They look like a...how do you spell it? Anachorism?"
+
+instead of taking harmonicas:
+	say "They're too rusty.";
+
+a-text of harmonicas is "RYRYRRRYRY". b-text of harmonicas is "RGPYRRRYRY".
+
+the maraschino cherry is a fruit.
+
+chapter pears
 
 A spear is scenery in Rustic Citrus. description of spear is "It'd make a powerful weapon, but you couldn't hold anything else. Plus, this isn't that sort of game."
 
@@ -10504,6 +10641,8 @@ the pears are a fruit.
 
 understand "parse" as a mistake ("No, that's my job. Okay, it's your job to parse the anagrams, but you'll need to be more specific with [if spear is visible]the spear[else]other fruits besides the pear[end if].") when spear is visible or pears are visible.
 
+chapter plums
+
 the lumps are plural-named scenery in Rustic Citrus. "They're more purplish than dirt usually is."
 
 a-text of lumps is "RRYRR". b-text of lumps is "RRYRP".
@@ -10511,6 +10650,32 @@ a-text of lumps is "RRYRR". b-text of lumps is "RRYRP".
 the plums are a plural-named fruit.
 
 understand "slump" as a mistake ("Don't get exhausted! You're near the end!") when lumps are visible or plums are visible
+
+chapter slime
+
+some slime is singular-named scenery. "It's green, like most slime. But it smells nicer than most slime and is even a bit bumpy."
+
+a-text of slime is "RYRYR". b-text of slime is "RYRYR".
+
+instead of taking slime:
+	say "Eww. Not in that form you won't."
+
+some limes are a fruit.
+
+understand "smile" as a mistake ("[if limes are visible]You are thrilled to have gotten those limes, yes.[else if slime is visible]You smile at the slime. It can't be that hard to figure what to do.[otherwise][reject][run paragraph on][end if]")
+
+understand "miles" as a mistake ("[if limes are visible]You don't need miles and miles of limes.[else if slime is visible]You don't want miles and miles of slime.[else][reject][run paragraph on][end if]")
+
+chapter tamarind
+
+The mad train is scenery in Rustic Citrus. description is "It's got quite a frown in its cow catcher, all right. It was apparently designed by Dr. Nimata, whose name is in red.".
+
+a-text of mad train is "RYRYRYRR". b-text of mad train is "RGRYPYRR".
+
+instead of taking mad train:
+	say "You'd strain to find a use for trains here.";
+
+a tamarind is a fruit. description is "It looks more like a potato than any fruit you know. But it still counted."
 
 chapter coin-give
 
@@ -10560,6 +10725,8 @@ to coin-eval:
 				if get-dollar entry is 1:
 					now player has droll dollar;
 				continue the action;
+
+chapter dollar
 
 a droll dollar is a thing. description is "It has a picture of some gangster--wait, it's [coin-person]--lighting a cigar with a dollar remarkably similar to it--on which is a gangster lighting a cigar, and so forth[one of]. LOL, rad, you think, though the joke wears off[or][stopping]."
 
@@ -10625,30 +10792,6 @@ instead of doing something with the needle:
 
 a-text of moss cap is "RYRRYRR". b-text of moss cap is "RGRRYRR".
 
-the harmonicas are a plural-named thing in rustic citrus. "Two harmonicas, rusted together, are here."
-
-description of harmonicas is "They're an off-red, unlike your usual visions in the game. Their condition is the pits. They look like a...how do you spell it? Anachorism?"
-
-instead of taking harmonicas:
-	say "They're too rusty.";
-
-a-text of harmonicas is "RYRYRRRYRY". b-text of harmonicas is "RGPYRRRYRY".
-
-the maraschino cherry is a fruit.
-
-some slime is singular-named scenery. "It's green, like most slime. But it smells nicer than most slime and is even a bit bumpy."
-
-a-text of slime is "RYRYR". b-text of slime is "RYRYR".
-
-instead of taking slime:
-	say "Eww. Not in that form you won't."
-
-some limes are a fruit.
-
-understand "smile" as a mistake ("[if limes are visible]You are thrilled to have gotten those limes, yes.[else if slime is visible]You smile at the slime. It can't be that hard to figure what to do.[otherwise][reject][run paragraph on][end if]")
-
-understand "miles" as a mistake ("[if limes are visible]You don't need miles and miles of limes.[else if slime is visible]You don't want miles and miles of slime.[else][reject][run paragraph on][end if]")
-
 check going north in Rustic Citrus:
 	if moss cap is off-stage:
 		say "[one of]Rats! You've no clue which direction is north. Maybe if you help Curtis, he'll give you pointers. But he's quite a businessman.[or]You still have no sense of direction.[stopping]" instead;
@@ -10656,144 +10799,67 @@ check going north in Rustic Citrus:
 		say "The moss cap isn't helping your sense of direction as much as it should. Well, not in its present form." instead;
 	now others is unspoiled;
 
-some pagers are plural-named scenery in rustic citrus. description is "They come in green and reddish-purple and black. Like all pagers, they seem a bit seedy."
+chapter drinks stand
 
-instead of taking pagers:
-	say "Nobody ever saved a country with a pager."
+the abandoned drinks stand is scenery in Rustic Citrus. "[one of]It's pretty easy to see why it's abandoned. Unfortunately, it's not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant, and plans for a megaton pear, under some magenta rope. And there's a lame video collection.[or]There's no other nasty cola, or writing, or 'art,' to find.[or][stopping][if eerie blurbs are visible] You notice some eerie blurbs written on the stand.[end if]"
 
-a-text of pagers is "RRYRYR". b-text of pagers is "RRYRYP".
+the citrus sign is part of the abandoned drinks stand. description is "It says CURTIS['] (sic) RUSTIC CITRUS.". the citrus sign is useless.
 
-to say mami:
-	if player is male:
-		say "[d-word-u] Mister Master Mind";
-	else:
-		say "[if player is in citrus]Named It[else]AND TIME,[end if] Mrs Master Mind";
-
-understand "gapers" and "gasper" as a mistake ("Really, you don't need people all [mami] over changing those [if pagers are visible]pagers[else]grapes into anything else[end if]. That's not your style.") when pagers are visible or grapes are visible.
-
-instead of taking pagers:
-	say "As much as you'd like to bash them, there's another way to shut them up."
-
-instead of examining pagers:
-	say "Remember when these things were the most annoying electronic devices? Then came cell phones and iPods."
-
-grapes are a fruit.
-
-after fliptoing grapes:
-	say "You hear barren cries now that the pagers aren't distracting you.";
-	now barren cries are in citrus;
+after examining abandoned drinks stand (this is the three fruits in drinks stand rule) : [all 3 conditions should be all true or all false, but just in case...]
+	if slime is off-stage:
+		now slime is in Rustic Citrus;
+		say "Eww. You also brushed against some slime while looking around.";
+		now slime is in Rustic Citrus;
+	if peanut cola is off-stage:
+		now peanut cola is in rustic citrus;
+	if magenta rope is off-stage:
+		now megaton pear is in Rustic Citrus;
+		now magenta rope is in Rustic Citrus;
+		now rampage note is in Rustic Citrus;
+		now mopeage rant is in Rustic Citrus;
 	continue the action;
 
-after fliptoing cranberries:
-	now briar screen is in lalaland;
-	now barren cries are in lalaland;
-	continue the action;
+chapter blueberries
 
-cranberries are a fruit.
+the eerie blurbs are part of the abandoned drinks stand. description is "A weird blue-purple. The worst of them reads BIEBER RULES.[paragraph break]Yup, this place needs help."
 
-section reading
+instead of taking blurbs:
+	say "Please tell me you're not a fan of his.";
 
-The reading action translates into I6 as "Read".
+a-text of eerie blurbs is "RRYYRYRRYYR". b-text of eerie blurbs is "RRYYRYRRYYP".
 
-Understand the commands "r" and "read" as something new.
+check scaning blurbs when cheat-on is true:
+	let a1 be b-text of eerie blurbs;
+	let a2 be "PRYYRYPRYGP";
+	say "They read [spacies of a1], except for 'Bieber Rules,' which says [spacies of a2]." instead;
 
-Understand "r [something]" and "read [something]" as reading. Reading is an action applying to one thing, requiring light.
+the blueberries are a plural-named fruit. description is "Yes, they're really more purple, I know."
 
-carry out reading:
-	if noun is red writing:
-		if number of readable things is 0:
-			say "No writing around here on anything." instead;
-		if number of readable things is 1:
-			try examining a random readable thing instead;
-		say "Too much to read." instead;
-	if noun is a to-read listed in the table of readables:
-		choose row with to-read of noun in table of readables;
-		if there is a what-read entry:
-			say "[what-read entry][line break]" instead;
-		try reading alt-read entry instead;
-	if noun is drinks stand:
-		try examining blurbs instead;
-	try examining noun instead;
+chapter cantaloupe
 
-the red writing is a backdrop. the indefinite article of red writing is "some". the writing is everywhere. description of writing is "BUG. You should've been kicked to something to read. Let me know how this happened at [email].". understand "words" and "red/-- letters" as writing.
+the cantaloupe is a fruit.
 
-does the player mean reading ltb: it is very likely.
-does the player mean reading the red writing when number of readable things > 0: it is likely.
-does the player mean reading the red writing when number of readable things is 0: it is unlikely.
-does the player mean examining the red writing when number of readable things > 0: it is likely.
-does the player mean examining the red writing when number of readable things is 0: it is unlikely.
+the can of peanut cola is a thing. description is "There's an actual peon on one side, a neat cupola on the other. It's orange-pink and tan."
 
-last-read is a thing that varies.
+a-text of peanut cola is "RYRRYRYYRY". b-text of peanut cola is "RYRRYRYYRY".
 
-does the player mean reading last-read when last-read is visible: it is likely.
+check drinking peanut cola:
+	say "[one of]Eww. Nasty[or]You don't want to repeat that experiment[stopping]. If only you could change it into something else entirely with just one word!" instead;
 
-instead of doing something with red writing:
-	if current action is examining or current action is reading:
-		if player is in solo den:
-			say "GYDIN['] in big red letters." instead;
-		if number of readable things is 0:
-			say "No red writing around here on anything." instead;
-		if number of readable things is 1:
-			try reading a random readable thing instead;
-		if last-read is visible:
-			try reading last-read instead;
-		say "That's sensible but ambiguous here with so much to look at--the preferred verb is to READ one of [the list of readable things]." instead;
-	 if current action is objhinting:
-		continue the action;
-	if number of readable things is 0:
-		say "There's no red writing here to do anything with." instead;
-	say "You can really only read the writing." instead;
+Instead of taking the peanut cola:
+	say "Blech. Too nasty to touch. You might drink it in a moment of weakness."
 
-definition: a thing (called cand) is readable:
-	if cand is not a to-read listed in table of readables:
-		decide no;
-	if cand is not visible:
-		decide no;
-	decide yes;
-
-table of readables [tre]
-to-read	what-read	alt-read
-sitar	"Oh, right. You bought it from Trisa Israt." [manor]
-rifle	"It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle."
-Store H	"'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'" [stores]
-ltb	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple."	[troves]
-DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
-card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned Orp.[cycling]"
-playbill	"[one of]S. Negri and N. Regis are the band. And there's a promotions company to read about, too[or]Isnerg promotions[cycling]."
-volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz and Zemo Valt were the main architects. [cycling] You can read it again to see the [one of]architects[or]company, again[cycling]." [presto]
-drab yoke	"It is, apparently, an OAK DERBY drab yoke, from the small red print."
-jar of pills	--	ps	[oyster]
-stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe."
-jukebox	"Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, never songs. [one of]Do, undo[or]Reset, set[or]Do, undo, set, reset? Hm[cycling]."
-tumblers	"The PITS is written in red on the bottom of one tumbler."
-scrawl	"[if carps are visible][reject][else]Etahn Ru. Near-Hut Haunter.[end if]"
-gleaner	"The gleaner was made by Al Green, written in red."
-dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED."
-strudel	"DR. ELTUS recommends this strudel!"	[towers]
-keycar	"When the car slows a bit, you read KC AYER in red."
-iPrune	"InPure industries[one of]. Yep, you heard rumors Elvira was involved with them, too[or][stopping]."
-rewired robot	"Rewired -- DR. EWRIE."
-o-s	"[if deacons are in lalaland]The shrine reads LOST? HIE! THE LOIS![else][one of]Written in red on the shrine is THE LOIS, who helped you in the sortie pre-Elvira You can read a bit more.[or][one of]LOST? HIE! [or]THE LOIS [cycling]is written on the ole shrine in red.[stopping][end if]"
-prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[in random order]. There're two other bits to read."
-blaster	"ALBERT'S."
-welt-proof flowerpot	"GYDIN['], >> 'Y/N, dig?'"
-p-2	"One barely legible bit reads [one of]Eeh, Row V![or]Veer How?[or]Rev. Howe[or]Whereov[in random order]."	[otters]
-whistle	"Ed Plye, apparently, made the whistle."
-drinks stand	--	blurbs	[others]
-riot cap	"It's red and [one of]made of I-TRAP-CO material[or]designed and shaped by CAPTOR-I, whoever they are[in random order]"	--
-mad train	"DR. NIMATA."
-singed design	"The singed design on the [if player has coins or player has s-c]coins[else if player has coin]coin[else if player has icon]icon[else if player has icons]icons[else]BUG[end if] reads, when you look close, property of NISCO."
-
-
-chapter peanut cola
-
-the abandoned drinks stand is scenery in Rustic Citrus. "[one of]It's pretty easy to see why it's abandoned. Unfortunately, it's not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant, and plans for a megaton pear, under some magenta rope. And there's a lame video collection.[or]There's no other nasty cola, or writing, or 'art,' to find.[or][stopping][if eerie blurbs are visible] You notice some eerie blurbs written on the stand.[end if]"
-
-the videotape collection is scenery in Rustic Citrus. description is "A bunch of weird films in this collection. One title is [one of]Mr. Pinsome, in red[or]One Ms. Prim, in red[or]Moni's Perm, in red[or]Nope, Mr. Sim, in red[in random order]."
+chapter persimmon
 
 the persimmon is a fruit.
 
+the videotape collection is scenery in Rustic Citrus. description is "A bunch of weird films in this collection. One title is [one of]Mr. Pinsome, in red[or]One Ms. Prim, in red[or]Moni's Perm, in red[or]Nope, Mr. Sim, in red[in random order]."
+
 a-text of videotape is "RYRRYRRYR". b-text of videotape is "RYRRYRRYR".
+
+chapter pomegranate
+
+the pomegranate is a fruit.
 
 magenta rope is a vanishing thing. "A magenta rope is here by the drinks stand, partially obscuring a rampage note and mopeage rant."
 
@@ -10827,71 +10893,15 @@ a-text of mopeage rant is "RYRYRRYRYRY". b-text of mopeage rant is "RGRGRRYRGRY"
 
 a-text of megaton pear is "RYRYRRYRYRY". b-text of megaton pear is "RYRYRRYRYRY".
 
-the pomegranate is a fruit.
-
-Instead of taking the peanut cola:
-	say "Blech. Too nasty to touch. You might drink it in a moment of weakness."
-
-after fliptoing pomegranate:
+after fliptoing pomegranate: [the magenta rope is already flipped]
 	now megaton pear is in lalaland;
 	now rampage note is in lalaland;
 	now mopeage rant is in lalaland;
 	continue the action;
 
-after examining drinks stand:
-	if peanut cola is off-stage:
-		now peanut cola is in rustic citrus;
-	if magenta rope is off-stage:
-		now megaton pear is in Rustic Citrus;
-		now magenta rope is in Rustic Citrus;
-		now rampage note is in Rustic Citrus;
-		now mopeage rant is in Rustic Citrus;
-	continue the action;
-
-the citrus sign is part of the abandoned drinks stand. description is "It says CURTIS['] (sic) RUSTIC CITRUS.". the citrus sign is useless.
-
-the eerie blurbs are part of the abandoned drinks stand. description is "A weird blue-purple. The worst of them reads BIEBER RULES.[paragraph break]Yup, this place needs help."
-
-instead of taking blurbs:
-	say "Please tell me you're not a fan of his.";
-
-a-text of eerie blurbs is "RRYYRYRRYYR". b-text of eerie blurbs is "RRYYRYRRYYP".
-
-check scaning blurbs when cheat-on is true:
-	let a1 be b-text of eerie blurbs;
-	let a2 be "PRYYRYPRYGP";
-	say "They read [spacies of a1], except for 'Bieber Rules,' which says [spacies of a2]." instead;
-
-the blueberries are a plural-named fruit. description is "Yes, they're really more purple, I know."
-
-after examining abandoned drinks stand:
-	if slime is off-stage:
-		now slime is in Rustic Citrus;
-		say "Eww. You also brushed against some slime while looking around.";
-		now slime is in Rustic Citrus;
-	continue the action;
-
-the can of peanut cola is a thing. description is "There's an actual peon on one side, a neat cupola on the other. It's orange-pink and tan."
-
-a-text of peanut cola is "RYRRYRYYRY". b-text of peanut cola is "RYRRYRYYRY".
-
-the cantaloupe is a fruit.
-
-check drinking peanut cola:
-	say "[one of]Eww. Nasty[or]You don't want to repeat that experiment[stopping]. If only you could change it into something else entirely with just one word!" instead;
-
 book Swell Wells
 
-Swell Wells is north of Rustic Citrus. "Wells, err, swell from this [one of]lowland[or]old lawn[cycling]. You can go east to a loud clearing, or down the wells, or west to a filed field[if sorer bogey is visible]. You think you hear something from the wells[end if]."
-
-the sorer bogey is ghostly scenery in Swell Wells. "You can't see the sorer bogey, but knowing it's there makes your skin break out in pimples...no, bumps."
-
-check taking sorer bogey:
-	say "Don't be a silly goose." instead;
-
-a-text of sorer bogey is "RYYRYRYRRO". b-text of sorer bogey is "RGYRYPYRRB".
-
-the gooseberry is a fruit.
+Swell Wells is north of Rustic Citrus. "Wells, err, swell from this [one of]lowland[or]old lawn[cycling]. You can go east to a loud clearing, or down the wells, or west to a filed field[if sorer bogey is visible]. You think you hear something from the wells[end if].". Swell Wells is in Others.
 
 s-w are privately-named scenery in swell wells. printed name of s-w is "the wells". understand "wells" as s-w. "'Ye borers, GO!' is written in red on the wells."
 
@@ -10906,13 +10916,24 @@ check climbing s-w:
 check going to Swell Wells for the first time:
 	say "'Ramble, ambler!' Curtis calls.";
 
+chapter gooseberry
+
+the sorer bogey is ghostly scenery in Swell Wells. "You can't see the sorer bogey, but knowing it's there makes your skin break out in pimples...no, bumps."
+
+check taking sorer bogey:
+	say "Don't be a silly goose." instead;
+
+a-text of sorer bogey is "RYYRYRYRRO". b-text of sorer bogey is "RGYRYPYRRB".
+
+the gooseberry is a fruit.
+
 the lost slot is a thing. description of lost slot is "It's soft to the touch, as if it could change its shape for the right item."
 
 understand "lots" as a mistake ("You only need the one slot.") when lost slot is visible.
 
-Swell Wells is in Others.
-
 the silly shirt is a thing in Swell Wells. "A silly shirt lies here."
+
+chapter apricot
 
 the riot cap is a thing in swell wells. description is "It's orangish-reddish, an odd pastel. It looks even dumber than the moss cap from Curtis. Red writing is stamped on each side of the riot cap. You can read it.". "A riot cap hangs from one of the wells."
 
@@ -10925,6 +10946,8 @@ instead of doing something with riot cap:
 		continue the action;
 	say "You wouldn't want to make the riot cap parotic--you can't imagine violence ahead."
 
+chapter apples
+
 description of silly shirt is "It's a hideous red-and-green-and-yellow blend with the phrase 'Got ESP, PAL?'"
 
 a-text of shirt is "YRRRYR". b-text of shirt is "YRPRYR".
@@ -10934,12 +10957,6 @@ instead of doing something with silly shirt:
 	say "You wouldn't want to take or wear the shirt. Maybe it can be recycled.";
 
 the apples are plural-named fruit.
-
-check opening slot:
-	say "It will fit if you give it the right thing." instead;
-
-check closing slot:
-	say "It needs to be open--or how will you pass the gate?" instead;
 
 book gates stage
 
@@ -11289,6 +11306,12 @@ for writing a paragraph about a fruit (called froo) in Clangier Clearing:
 
 understand "cigar" as a mistake ("That'd be out of place among fresh fruits. Plus, whether or not Len deserves a cigar, he doesn't deserve to be turned into one.") when player is in clearing.
 
+the dummy-mango is useless privately-named scenery. the dummy-mango is undesc.
+
+a-text of dummy-mango is "YRYRR". b-text of dummy-mango is "YRYRR".
+
+a mango is a fruit.
+
 understand "mango" as a mistake ("That's the fruit you need to find. You see red wondering where or how?") when player is in clearing and mango is off-stage.
 
 clearing-fruits is a number that varies.
@@ -11414,23 +11437,38 @@ carry out amonging:
 
 book Filed Field
 
-Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Foliage cause foilage all directions except east. [if b-w are visible]Barriers west block you. [end if][if ppf is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries[end if][if ppf is in lalaland and briar screen is in lalaland and b-w is in lalaland and rapt figure is in lalaland]. You've gotten rid of all the junk here--good job![else].[end if]"
+chapter where it is, and scenery
 
-the b-r is scenery in Filed Field. "It's jammed into the ground. You can't take it.". printed name of b-r is "buried raft". understand "buried/raft" and "buried raft" as b-r.
-
-the breadfruit is a fruit. description is "It doesn't look doughy at all."
-
-a-text of b-r is "RRYYRRRYYR". b-text of b-r is "PRYYRRPYYP".
-
-the barren cries are scenery in Filed Field. "You can't see them or where they're coming from. But they sound sour and bitter and tiny."
-
-a-text of barren cries is "RRYRRYRRYYR". b-text of barren cries is "RRYRRYRPGGP".
+Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Foliage cause foilage all directions except east. [if b-w are visible]Barriers west block you. [end if][if ppf is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries[end if][if ppf is in lalaland and briar screen is in lalaland and b-w is in lalaland and rapt figure is in lalaland]. You've gotten rid of all the junk here--good job![else].[end if]". Filed Field is in Others.
 
 the foliage is useless scenery in filed field. "It'll still block you going anywhere but back east, even with the more man-made obstacles gone."
 
 understand "fidel" as a mistake ("A thin voice howls 'I fled!'") when player is in Filed Field.
 
-Filed Field is in Others.
+chapter breadfruit (Ohai Philip Larkin!)
+
+the b-r is scenery in Filed Field. "It's jammed into the ground. You can't take it.". printed name of b-r is "buried raft". understand "buried/raft" and "buried raft" as b-r.
+
+a-text of b-r is "RRYYRRRYYR". b-text of b-r is "PRYYRRPYYP".
+
+the breadfruit is a fruit. description is "It doesn't look doughy at all. Too bad Philip Larkin's ghost isn't around, or you could show him what one looks like. That'd be a cultural experience!"
+
+chapter watermelon
+
+the watermelon is a fruit. description is "It isn't too heavy or big to carry, thankfully."
+
+the mean trowel is a thing in Filed Field. description is "It has some red writing saying who made it and also what it protects against."
+
+check taking the mean trowel:
+	say "You can't find anything to dig, dig?" instead;
+
+chapter cranberries
+
+some cranberries are a plural-named fruit.
+
+the barren cries are scenery in Filed Field. "You can't see them or where they're coming from. But they sound sour and bitter and tiny."
+
+a-text of barren cries is "RRYRRYRRYYR". b-text of barren cries is "RRYRRYRPGGP".
 
 The briar screen is scenery in filed field. "It's stained dark off-red and smells kind of bitter. You can barely see what it is screening. Examining it amplifies the barren cries."
 
@@ -11444,10 +11482,22 @@ after fliptoing cranberries:
 Instead of taking the briar screen:
 	say "The briars it is screening would prickle you."
 
+chapter grapefruit
+
+the rapt figure is scenery in filed field. It is fixed in place.
+
+a-text of rapt figure is "RRYRYRRYYR". b-text of rapt figure is "RRYRYRRGYR".
+
+description of rapt figure is "It's smiling, with ruby red lips and white teeth. It's holding a jagged spoon."
+
+the grapefruit is a fruit.
+
 the jagged spoon is part of the rapt figure. understand "utensil" as jagged spoon. description of jagged spoon is "It's jagged at the end.".
 
 instead of doing something with the jagged spoon:
 	say "[one of]The utensil untiles nothing, nor does it contain luteins[or]All you need to know is, it's a hint, and you don't need to futz with it[stopping]."
+
+chapter pineapple
 
 the ppf is privately-named scenery in Filed Field. "It's not worth sneaking over or through, either way. It's an eyesore, really."
 
@@ -11460,17 +11510,7 @@ a-text of ppf is "RYRYYRRRY". b-text of ppf is "PGRGYRRRY".
 
 the pineapple is a fruit.
 
-the rapt figure is scenery in filed field. It is fixed in place.
-
-a-text of rapt figure is "RRYRYRRYYR". b-text of rapt figure is "RRYRYRRGYR".
-
-description of rapt figure is "It's smiling, with ruby red lips and white teeth. It's holding a jagged spoon."
-
-the grapefruit is a fruit.
-
-the dummy-mango is a useless thing. the dummy-mango is undesc.
-
-a-text of dummy-mango is "YRYRR". b-text of dummy-mango is "YRYRR".
+chapter raspberry
 
 Some pryer bars are a thing in Filed Field. description is "They're not quite crowbars. They have drupelets on them.". "Some pryer bars sit here, and it'd be nice to put them to a less distasteful use than to break into places."
 
@@ -11489,7 +11529,11 @@ the drupelets are part of the pryer bars. the drupelets are plural-named. descri
 
 a raspberry is a fruit.
 
+chapter strawberries
+
 b-w are plural-named proper-named privately-named scenery in Filed Field. "The barriers west seem to mark the end of the Filed Field."
+
+strawberries are a plural-named fruit.
 
 printed name of b-w is "the barriers west"
 
@@ -11499,8 +11543,6 @@ check taking b-w:
 understand "barriers/ west/w/" as b-w.
 
 a-text of b-w is "RRRYRRYRRYYR". b-text of b-w is "RRPYRRYRRYYR".
-
-strawberries are a plural-named fruit.
 
 book Scape Space
 
@@ -11622,6 +11664,12 @@ instead of doing something to greedy-person:
 		if player has storage:
 			say "You don't want to deal with [greedy-s] any more than you have to." instead;
 		say "[greedy-s] shrugs, then does the 'let's swap' hand gesture. Hmm, what could you give [he-she] to get that so-great storage?"
+
+check opening slot:
+	say "It will fit if you give it the right thing." instead;
+
+check closing slot:
+	say "It needs to be open--or how will you pass the gate?" instead;
 
 The basket of blackberries is a fruit. description is "It's from Bickerers['] Lab, wherever that is."
 
@@ -23420,6 +23468,7 @@ peach	peach	"cheap"	"cheap"	"You go for a direct approach, which works great. Pr
 lemons	lemons	"solemn"	"solemn"	"Thinking all 'I frown for win' at the lemons, you mind-trick Len into lowing his price. 'Enjoy your rickets sticker.'"	true	485229152
 melons	melons	"solemn"	"solemn"	"You half-frown at the melons, and Len, groaning slightly, lowers his price. You take a few."	true	485229152
 rapt figure	grapefruit	"grapefruit"	"grapefruit"	"The figure gives a look as if it's eaten something sour before it rolls into itself, into a lumpy yellow ball--a grapefruit!"	true	694430761
+mean trowel	watermelon	"watermelon"	"watermelon"	"The trowel seems to inflate from within and take on a much greener shade. It becomes a watermelon--not a big one, but healthy looking enough."	true	815317707
 nectarine	nectarine	"ancienter"	"ancienter"	"The unripe nectarine becomes salable. You swipe your tekno-token, taking only one: multiple nectarines might have transience."	true	648047304
 tangerine	tangerine	"argentine"	"argentine"	"Your fake knowledge pays off! You now have a tangerine."	true	661641421
 reserved	guava	"reversed"	"reversed"	"The sign wobbles over and falls. You take a guava you found behind it. [greedy-person] nods, impressed."	true	778533808
@@ -25173,6 +25222,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Fast Paced Pat's Decaf"
 "Fastbaker Breakfast"
 "Fat Frodo Afford-to-Fart Food"
+"Fat Jai's Fajitas"
 "Fat-O-Meal Meat Loaf"
 "Faunists['] Fustians" []
 "Faustin's Fustians"
@@ -29688,7 +29738,6 @@ table of oldies singers [xxm03]
 blurb
 "Abject Cat Jeb"
 "Absurd Bard Su"
-"Darling Lingard"
 "Alto Ben Labonte"
 "Alto Bo Lobato"
 "Alto Cyr Claytor"
@@ -29820,6 +29869,7 @@ blurb
 "Cute Tora Crotteau"
 "Cute Ula Cuautle"
 "Cyril's Lyrics"
+"Darling Lingard"
 "Darn Fly Fryland"
 "Darn Glib Girl Band"
 "Debonair [if player is male]Rob Daine[else]Andi Boer[end if]"
@@ -44346,34 +44396,33 @@ blurb
 "So-Ugly Guy Sol"
 "So-Wasted Tessa Dow" []
 "SOB Al, a slob so bla"
-"SOB Mac Bascom"
-"SOB, Well, Slob Lew Bellows"
-"SOB Eric Briscoe"
-"SOB Don Dobson"
-"SOB Tom Toombs"
-"SOB Ron Osborn"
-"SOB Marion Ambrosino"
 "SOB Al Sabol"
-"SOB Carmen Branscome"
-"SOB Ty Ostby"
-"SOB Art Bartos"
-"SOB Erin Briseno"
-"SOB Trey Boyster"
-"SOB Dee DeBose"
-"SOB Mac Bascom"
-"SOB Oren Osborne-Robeson"
-"SOB Len Nobles"
-"SOB Rey Boyers"
-"SOB Anita Sabatino"
 "SOB Alma Balsamo"
+"SOB Anita Sabatino"
+"SOB Art Bartos"
+"SOB Carmen Branscome"
+"SOB Dee DeBose"
+"SOB Don Dobson"
+"SOB Eric Briscoe"
+"SOB Erin Briseno"
 "SOB Erma Ambrose"
-"SOB Rena Seaborn"
-"SOB Nola Bolanos"
-"SOB Tia Tobias"
-"SOB Leta Seabolt"
 "SOB Estrella Ballesteros"
-"SOB Roni Orbison"
+"SOB Len Nobles"
+"SOB Leta Seabolt"
+"SOB Mac Bascom"
+"SOB Marion Ambrosino"
 "SOB Marna Abramson"
+"SOB Nola Bolanos"
+"SOB Oren Osborne-Robeson"
+"SOB Rena Seaborn"
+"SOB Rey Boyers"
+"SOB Ron Osborn"
+"SOB Roni Orbison"
+"SOB Tia Tobias"
+"SOB Tom Toombs"
+"SOB Trey Boyster"
+"SOB Ty Ostby"
+"SOB, Well, Slob Lew Bellows"
 "Softest Fossett"
 "Softie Dan DiStefano"
 "Softie Ren Firestone"
@@ -50775,7 +50824,6 @@ table of theses [xxy6]
 blurb
 "Alert, clown: we can troll!"
 "All We Do: ALLOWED!"
-"Ill tempers melt perils!"
 "ARM! RAM! MAR!"
 "Arm twisting! Smarting wit!"
 "AUNT TUNA (an unflattering picture, captioned weight: A TUN)" [p]
@@ -50816,6 +50864,7 @@ blurb
 "'I donate?' DIE! A TON!"
 "I put down to wind up."
 "I support riots, pup."
+"Ill tempers melt perils!"
 "Inspire sin: I rep!"
 "It's our time! Merit is out!"
 "Kids, rebel! Risk! Bleed!"
