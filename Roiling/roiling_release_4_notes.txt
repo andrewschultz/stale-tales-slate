@@ -18,5 +18,7 @@ There was also other miscellaneous stuff and even a few features that fell out w
 --the trader is now female if you are, with a new name
 --the smart kid is now female if you are
 --Dr. Yow is now female if you are
+--new fruit in the Field
+--I also decided to reveal the code names of the updates. They're rather silly, but I hope you enjoy them.
 
 ??Demo Dome Mode is now more robust

@@ -71,6 +71,12 @@ release along with cover art.
 
 the release number is 4.
 
+[for the purposes of amusement, I'd like to list the release updates.
+--Past-Due Updates
+--Sustinent nuttiness
+--Gad! Super Upgrades!
+--Gasp! Rude Upgrades!]
+
 a region has a number called max-score. a region has a number called min-score.
 
 a region has a number called poss-score. a region has a number called cur-score.
@@ -87,7 +93,59 @@ a region can be parsewrned. a region is usually not parsewrned.
 
 a region has a list of things called item-list.
 
+a thing can be reflexive, reflexed, vanishing, or nonreflexive. a thing is usually nonreflexive.
+
+a thing can be ssok, ssno, ssblur or ssclear. a thing is usually ssok.
+
+a thing can be attempted. a thing is usually not attempted.
+
+a thing can be unscannable. a thing is usually not unscannable.
+
+a thing can be prefigured or unfigured. a thing is usually unfigured.
+
+a thing can be uncheated, cheatitemed, or cheathinted. a thing is usually uncheated.
+
+a thing has text called a-text. a thing has text called b-text.
+
+a thing can be warpable. a thing is usually not warpable.
+
+a thing can be LLPish. a thing is usually not LLPish.
+
+a thing can be universal, useless, cluey, amusing, abstract or practical. a thing is usually practical.
+
+a thing can be flippable, auxiliary or uncluing. a thing is usually uncluing.
+
+a thing can be super-easy, semi-easy, or not-easy. a thing is usually not-easy. [this is subjective, but super-easy is trivially solvable with settler non-cheat. Semi-easy is trivially solvable with settler cheat. Not-easy takes some more brainwork.]
+
+a thing can be rayed. a thing is usually not rayed.
+
+a thing can be examined or unexamined. a thing is usually unexamined.
+
+a room can be stairy. a room is usually not stairy.
+
+a room can be outie or innie. a room is usually outie. [innie has WALL/WALLS for anagrams]
+
+a room can be shunned. a room is usually not shunned. [GO TO ROOM won't work]
+
+a room has a number called progval. progval of a room is usually 0. [again for GO TO ROOM, from progval of 2 to 1 is not valid]
+
+a thing can be ghostly. a thing is usually not ghostly.
+
+a person can be superchatty, subject-talking or terse. a person is usually subject-talking. [terse = they ignore general defaults like asking about Elvira, subject-talking = ignore silly details.]
+
+a person can be terse-warned. a person is usually not terse-warned.
+
 a person has a person called the chum. [a chum is someone whom they imitate in dialogue. For instance, Rand's chum is Leo. All warriors' chums are Andres. And so on.]
+
+a guardian is a kind of person. a guardian is usually auxiliary and vanishing. a guardian can be passtried. a guardian is usually not passtried. a guardian can be clueneedy. a guardian is usually not clueneedy. a guardian can be unprodded or prodded. a guardian is usually unprodded. a guardian can be plurtry. a guardian is usually not plurtry.
+
+a guardian has text called retrytext.
+
+a guardian has a room called gualoc.
+
+a guardian has a direction called guadir.
+
+a guardian can be blue, red, white or purple. a guardian is usually purple.
 
 to rulesOn:
 	(- RulesOnSub(); -)
@@ -675,7 +733,7 @@ this is the alcove-talk rule:
 		if Elmer is in alcoves:
 			if Merle is reflexed:
 				the rule succeeds;
-			else: [this is a bit tricky since we need the clue to get Elmer and Merle to talk "Honestly" -- so text only appears if player is in alcoves etc
+			else: [this is a bit tricky since we need the clue to get Elmer and Merle to talk "Honestly" -- so text only appears if player is in alcoves etc]
 				say "Merle and Elmer [one of]begin[or]continue[stopping] concern trolling with the whole good-is-evil-and-evil-is-good routine, [one of]exclaiming HOLY NETS![or]all, 'Sly, eh? NOT.' discussing you.[or]lamenting Elvira's no-ethyls policy.[or]dissing Shy Elton.[or]so obviously on-the-sly, but what can you do?[in random order]";
 	the rule fails;
 
@@ -806,46 +864,6 @@ every turn when strip of profits is visited (this is the region-hint on no score
 
 before going north when block-north is true:
 	do nothing instead; [?! hack to get rid of z.z.z.z. and answer n]
-
-a thing can be ssok, ssno, ssblur or ssclear. a thing is usually ssok.
-
-a thing can be attempted. a thing is usually not attempted.
-
-a thing can be unscannable. a thing is usually not unscannable.
-
-a thing can be prefigured or unfigured. a thing is usually unfigured.
-
-a thing can be uncheated, cheatitemed, or cheathinted. a thing is usually uncheated.
-
-a thing has text called a-text. a thing has text called b-text.
-
-a thing can be warpable. a thing is usually not warpable.
-
-a thing can be LLPish. a thing is usually not LLPish.
-
-a thing can be universal, useless, cluey, amusing, abstract or practical. a thing is usually practical.
-
-a thing can be flippable, auxiliary or uncluing. a thing is usually uncluing.
-
-a thing can be super-easy, semi-easy, or not-easy. a thing is usually not-easy. [this is subjective, but super-easy is trivially solvable with settler non-cheat. Semi-easy is trivially solvable with settler cheat. Not-easy takes some more brainwork.]
-
-a thing can be rayed. a thing is usually not rayed.
-
-a thing can be examined or unexamined. a thing is usually unexamined.
-
-a room can be stairy. a room is usually not stairy.
-
-a room can be outie or innie. a room is usually outie. [innie has WALL/WALLS for anagrams]
-
-a room can be shunned. a room is usually not shunned. [GO TO ROOM won't work]
-
-a room has a number called progval. progval of a room is usually 0. [again for GO TO ROOM, from progval of 2 to 1 is not valid]
-
-a thing can be ghostly. a thing is usually not ghostly.
-
-a person can be superchatty, subject-talking or terse. a person is usually subject-talking. [terse = they ignore general defaults like asking about Elvira, subject-talking = ignore silly details.]
-
-a person can be terse-warned. a person is usually not terse-warned.
 
 the player is terse.
 
@@ -1418,7 +1436,7 @@ to force-all-rules:
 
 chapter glulx header
 
-when play begins:
+when play begins (this is the top window rule):
 	open up the graphics-window;
 	change the current graphics window to the graphics-window;
 	change the current background-color to (R 0 G 0 B 0);
@@ -3424,7 +3442,7 @@ u-quip	"'Store U used to hold all sorts of road maps, telling people where to go
 v-quip	"'Store V used to hold a bunch of self-help books that taught you how to think wrong. But the proprietor moved on to lectures. More lucrative. Self-help industries have overrun Yorpwald. Spoiloplis is the big hub. Mayor's Irv Lea. But you may not even need to meet him.'"
 w-quip	"'Store W, well, everyone seems to have a different word to describe what's going on there in the Bland Sad Badlands. People protecting their territory just because. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. They say it's being torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow...'"
 y-quip	"'Store Y, well, it connects to the sea somehow. A seashore seahorse told me about seaside dis-ease you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU.'"
-flier-quip	"'Hmm.' You and Elmo scan the flier, which is [if setspace is true]R Y R R Y[else]RYRRY[end if] with cheat or teach mode. 'I saw your settler was [if setspace is true]R R Y Y R[else]RRYYR[end if] when I had the rifle.' Elmo speed-reads your treatise. 'So the colors tell you what stuff should become. That gives us five letters.'[paragraph break]'I and E are yellow for the rifle AND the flier, and R and F and L are red. Hm. Dunno if that's enough. I have some other supplies Old Man Almond gave me.' You note a PLUG of nutrients, laces, and an ELMO nametag." [check what's scanned]
+flier-quip	"'Hmm. Well, my last name's not Stetler, but I can give it a shot.' You and Elmo scan the flier, which is [if setspace is true]R Y R R Y[else]RYRRY[end if] with cheat or teach mode. 'I saw your settler was [if setspace is true]R R Y Y R[else]RRYYR[end if] when I had the rifle.' Elmo speed-reads your treatise. 'So the colors tell you what stuff should become. That gives us five letters.'[paragraph break]'I and E are yellow for the rifle AND the flier, and R and F and L are red. Hm. Dunno if that's enough. I have some other supplies Old Man Almond gave me.' You note a PLUG of nutrients, laces, and an ELMO nametag." [check what's scanned]
 scale-quip	"You experiment with changing the laces to a scale and back. Laces to scale is [if setspace is true]R Y R R Y[else]RYRRY[end if], scale to laces is [if setspace is true]R Y R Y R[else]RYRYR[end if].  [mo-data]."
 gulp-quip	"The plug becomes a gulp, then back to a plug, no more unappetizing than before. You note plug to gulp is [if setspace is true]R Y R R[else]RYRR[end if], gulp to plug is [if setspace is true]R R Y R[else]RRYR[end if], and cheat mode changes nothing. [mo-data]."
 elmomole-quip	"You flip the nametag to MOLE and back, tracking the scanner. Elmo to Mole is [if setspace is true]R Y R Y[else]RYRY[end if], Mole to Elmo is [if setspace is true]Y R R Y[else]YRRY[end if]. [mo-data]."
@@ -5738,7 +5756,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "code"	242193360	demo dome	hows show	--	--	"[its-a-museum]."
 "perlcode"	590603070	demo dome	hows show	--	--	"[its-a-museum]."
 "informcode"	606360143	demo dome	hows show	--	--	"[its-a-museum]."
-"neds"	314016672	demo dome	ned's dens	--	--	"Maybe in another wordplay game, flipping things around like this might work. But not here."
+"neds"	314016672	demo dome	ned's dens	--	--	"This isn't Threediopolis. Which, if you haven't played yet, you should."
 "sparse"	489331621	demo dome	sparse spares	--	--	"[dome-rm]."
 "intel"	398630320	demo dome	intel inlet	--	--	"[dome-rm]."
 "shall"	243371761	demo dome	peek keep	--	--	"You can't get near the shall halls, although you still have the nonmagical ability to change the future. Well, some day you will."
@@ -7249,11 +7267,11 @@ towers	2	"You're sort of glad for the short-ish names and the brute force, here.
 others	1	"Well, that's nice. With Elvira gone, it's back to changing stuff to...stuff."
 otters	1	"Hmm. Being weak might not be so bad, for a while. It cuts down the words you can use, but...it cuts down a lot of extraneous possibilities, too!"
 
-when play begins (this is the define-status-line rule):
+when play begins (this is the define-status-line and intro text rule):
 	now left hand status line is "[lhs]";
 	now right hand status line is "[cur-score of mrlp]/[if possibles is true][poss-range][else][max-score of mrlp][end if][if Strip of Profits is visited] [bracket][number of solved regions][close bracket][end if]";
 	ital-say "this game is a sequel to Shuffling Around. It has the same mechanics. But the back story is not important.";
-	say "[wfak][line break]Yorpwald's been peaceful for a long time after your turn shuffling around. You weren't tabbed to lead the kingdom--but those in charge did a decent enough job, until along came Elvira. Nobody took her seriously at first, since it slipped that she was once branded the Necro-Crone.[wfak][line break]That was before she came out with a proposal she said you could not resist: ELVIRA'S REVISAL! You had to admit, if you didn't think it worked, then your shuffling around only went so far. But if you did, then obviously she was the right person to execute it, and so forth. Either way, the way you rescued Yorpwald was so silly, it couldn't happen again, and no bad guy would be dumb enough to leave things that way! There would be new, bold defenses against the next big challenge.[wfak][line break]Thus Elvira gained prominence, vowing to fight the scourge of stupid wordplay armed only with her charisma. 'ELVIRA'S REVISAL? I SLAVER!' became the chant. And people did. She was a more exciting conversationalist than you, weighing in on spoonerism elitists (pro and con), and implementing other 'improvements' such as Reality TV and gossip columns.[wfak][line break]Then one day she suggested the possibility you might become jealous of her popularity! And who could blame you?[wfak][line break]Her being the Necro-Crone was all in the past! She was way more exciting and social than you, and didn't people deserve a second chance? Of course they did![wfak]"
+	say "[wfak][line break]Yorpwald's been peaceful for a long time after your turn shuffling around. You weren't tabbed to lead the kingdom--but those in charge did a decent enough job, until along came Elvira. Nobody took her seriously at first, since it slipped that she was once branded the Necro-Crone.[wfak][line break]That was before she came out with a proposal she said you could not resist: ELVIRA'S REVISAL! You had to admit, if you didn't think it worked, then your shuffling around only went so far. But if you did, then obviously she was the right person to execute it, and so forth. Either way, the way you rescued Yorpwald was so silly, it couldn't happen again, and no bad guy would be dumb enough to leave things that way! There would be new, bold defenses against the next big challenge.[wfak][line break]Thus Elvira gained prominence, vowing to fight the scourge of stupid wordplay armed only with her charisma. 'ELVIRA'S REVISAL? I SLAVER!' became the chant. And people did. Oh, how they laughed at her plea 'UNRATIFIED? INFURIATED?' After that, pro- and anti-anagram types had to agree she was a more exciting conversationalist than you, weighing in on spoonerism elitists (pro and con), and implementing other 'improvements' such as Reality TV and gossip columns.[wfak][line break]Then one day she suggested the possibility you might become jealous of her popularity! And who could blame you?[wfak][line break]Her being the Necro-Crone was all in the past! She was way more exciting and social than you, and didn't people deserve a second chance? Of course they did![wfak]"
 
 to say lhs:
 	if mrlp is not troves:
@@ -7368,8 +7386,6 @@ carry out possing:
 chapter fliptoing
 
 fliptoing is an action applying to one visible thing.
-
-a thing can be reflexive, reflexed, vanishing, or nonreflexive. a thing is usually nonreflexive.
 
 check fliptoing when inhib is true:
 	if player is in wickeder or player is in preserve:
@@ -7633,9 +7649,6 @@ understand the command "about" as something new.
 
 understand "about" as abouting.
 
-to say my-repo:
-	say "https://bitbucket.org/andrewschultz/a-roiling-original/issues/new";
-
 carry out abouting:
 	if mrlp is routes and cur-score of mrlp > 0:
 		say "You push your luck, but no u-boat shows up. [if pier is unvisited]Good thing you're above-ground[else if player is in pier]A ship is already there[else if player is in clipper]That's the last thing you'd need now[else][end if].";
@@ -7647,9 +7660,12 @@ carry out abouting:
 
 chapter bugtracking
 
+to say my-repo:
+	say "http://github.com/andrewschultz/stale-tales-slate";
+
 to say bug-report:
 	abort-if-bugfind;
-	say "BUG! You should not have seen this. Write me at [email] to describe how and where you got this--use the up arrows, or have a transcript ready, if you want to give the last few commands.[paragraph break]You can also report reproducible bugs at [bbuck].";
+	say "BUG! You should not have seen this. Write me at [email] to describe how and where you got this--use the up arrows, or have a transcript ready, if you want to give the last few commands.[paragraph break]You can also report reproducible bugs at [my-repo].";
 
 bugsquash is a truth state that varies.
 
@@ -7903,10 +7919,6 @@ check giving something to:
 		say "Curtis shrugs. That won't help him with his big fruit empire." instead;
 	say "Hm. Nah. [if second noun is plural-named]They don't[else if second noun is female]She doesn't[else if second noun is male]He doesn't[else]It doesn't[end if] want that--or, it seems, anything of yours." instead;
 
-a guardian is a kind of person. a guardian is usually auxiliary and vanishing. a guardian can be passtried. a guardian is usually not passtried. a guardian can be clueneedy. a guardian is usually not clueneedy. a guardian can be unprodded or prodded. a guardian is usually unprodded. a guardian can be plurtry. a guardian is usually not plurtry.
-
-a guardian has text called retrytext.
-
 check objasking a guardian about a guardian (this is the guardian general chat rule):
 	if noun is serpent:
 		continue the action;
@@ -7931,12 +7943,6 @@ after doing something with a guardian:
 	else:
 		set the pronoun it to noun;
 	continue the action;
-
-a guardian has a room called gualoc.
-
-a guardian has a direction called guadir.
-
-a guardian can be blue, red, white or purple. a guardian is usually purple.
 
 book push and pull to
 
@@ -8045,6 +8051,8 @@ before listening (this is the you can hear stuff some places rule):
 		say "You listen until you cringe. Red lights flash across the robot, pleased he drew ire." instead;
 	if player is in havens:
 		say "You think you hear NEVAHs, but that might just be internal melodrama." instead;
+	if player is in topside:
+		say "An unconvincing voice moans 'Stop! Die!' but it's not very effective." instead;
 	if player is in subsector:
 		if doc-y is rowdy:
 			say "Dr. Yow is yacking away noisily." instead;
@@ -8580,7 +8588,7 @@ old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusi
 doc-y	false	true	false	false	"[if doc-y has not been rowdy and doc-y has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if doc-y has been rowdy or doc-y has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her].[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]"
 ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to unlock them."
 serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
-cinders	true	true	false	false	"Hm, that's weird. Perhaps there are two things you can do with the cinders." [otters]
+cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders." [otters]
 atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
 Merle	false	false	false	true	"Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings."
 sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp is maybe too active for even the settler to pin down."
@@ -14160,7 +14168,7 @@ check giving to Ed Yerg:
 	if second noun is crocus:
 		try giving flowerpot to Ed Yerg;
 	if ed yerg is reflexive:
-		say "Ed turns his nose up at your meager offering[if noun is flowerpot] but mentions he might've liked it when he was less ambitious[end if]." instead;
+		say "With an edgy 'Er...' that makes you see red, Ed turns his nose up at your meager offering[if noun is flowerpot] but mentions he might've liked it when he was less ambitious[end if]." instead;
 	unless noun is flowerpot:
 		say "Ed thanks you, but that's not quite what he wants[if flowerpot is in lalaland]. The flowerpot was probably enough[end if]." instead;
 	if crocus is reflexive:
@@ -14482,7 +14490,7 @@ the initial appearance of a guardian is usually "[gd of the item described]."
 
 chapter who are the guardians?
 
-The once-sad deacons are plural-named purple guardians. description is "They tut-tut you and argue the reason you are most likely to miss out on heaven. But they are all equally hostile."
+The once-sad deacons are plural-named purple guardians. description is "They interrupt their 'Lo, he's it' act to tut-tut you and argue the reason you are most likely to miss out on heaven. But they are all equally hostile."
 
 understand "deacon" as deacons.
 
@@ -14640,7 +14648,7 @@ description of iPrune is "It's almost impossibly big for being unripe and distur
 
 a-text of iPrune is "RYRYYR". b-text of iPrune is "RYR?YR".
 
-some pirates are semi-easy plural-named red guardians. description of pirates is "Sun-burnt and proud of it. They traipse, unlikely to hand you a piastre[one of]. If you look again, you might remember what the dance they're doing is[or]. You blush as you recall their dance is the Star Pie Traipse[stopping]."
+some pirates are semi-easy plural-named red guardians. description of pirates is "Sun-burnt and proud of it. They traipse, unlikely to hand you a piastre or discuss the REST API[one of]. If you look again, you might remember what the dance they're doing is[or]. You blush as you recall their dance is the Star Pie Traipse[stopping]."
 
 understand "pirate" as pirates.
 
@@ -14891,7 +14899,7 @@ after fliptoing a warrior:
 		now h-w is rodney;
 	continue the action;
 
-Sir Rodney is a leaderly warrior. description is "A big strong fellow who probably won't be removed by physical force. He looks sort of like Red Bull Burdell's weaker younger brother.". The chum of Rodney is yourself.
+Sir Rodney is a leaderly warrior. description is "A big strong fellow who probably won't be removed by physical force. He looks sort of like Red Bull Burdell's slightly weaker younger brother.". The chum of Rodney is yourself.
 
 Andres is a warrior. description is "He doesn't look restricted in any way.". The chum of Andres is yourself.
 Andrew is a warrior. description is "He has a careless look in his eyes. He does not seem to be aware of risk."
@@ -15985,7 +15993,7 @@ instead of opening Pa Egg Pea:
 	try reading Pa Egg Pea instead;
 
 check examining Pa Egg Pea for the first time:
-	say "[i]Pa, Egg, Pea[r], of course, recently topped [i][twiddle of table of self-help bestsellers and 1][r] and [i][twiddle of table of self-help bestsellers and 1][r] as the best-selling self-help book all-time in Yorpwald, at least until its promised sequels in the Tryin[']-it Trinity, [i]The MORE Theorem[r] and [i]No Guts? Go Nuts[r], appear. It combines overused success-story fables with spectacularly improbably leaps of logic to 'prove' both thinking your way to success and doing your way to success are more important than the other, and anybody who finds these to be a contradiction is just intellectually lazy.[paragraph break]The introduction explains YOU AND ONLY YOU must think up the way out of a tough situation.[paragraph break]A rudimentary flip through shows that it's full of aphorisms and heavily invested in sustaining the personality cult of its author, Peg A. Page. You remember a suppressed review that went 'Ee! Gag! Pap!' and aren't sure of the best way to read it, if any. Though it's probably symptomatic of the times, you doubt it can help you with your specific situation[if cur-score of troves is 0], but it may help you get started[else], especially now you're started a bit[end if]." instead;
+	say "[i]Pa, Egg, Pea[r], of course, recently topped [i][twiddle of table of self-help bestsellers and 1][r] and [i][twiddle of table of self-help bestsellers and 1][r] as the best-selling self-help book all-time in Yorpwald, at least until its promised sequels in the Tryin[']-it Trinity, [i]The MORE Theorem[r] and [i]No Guts? Go Nuts[r], appear. It combines overused success-story fables with spectacularly improbably leaps of logic to 'prove' both thinking your way to success and doing your way to success are more important than the other, and anybody who finds these to be a contradiction is just intellectually lazy.[paragraph break]The introduction explains YOU AND ONLY YOU must think up the way out of a tough situation.[paragraph break]A rudimentary flip through shows that it's full of aphorisms spouted by the main character, Gaga Pepe, and heavily invested in sustaining the personality cult of its author, Peg A. Page. You remember a suppressed review that went 'Ee! Gag! Pap!' and aren't sure of the best way to read it, if any. Though it's probably symptomatic of the times, you doubt it can help you with your specific situation[if cur-score of troves is 0], but it may help you get started[else], especially now you're started a bit[end if]." instead;
 
 check looking in Loather Rathole for the first time:
 	now the player has Pa Egg Pea.
@@ -17956,7 +17964,7 @@ quietness is a number that varies.
 after fliptoing when player is in Anteroom (this is the de-tallyho rule) :
 	increment quietness;
 	if quietness is 2:
-		say "As they sulk away, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily[if ed riley is in Bleary Barley]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
+		say "As they sulk away, no more at the anteroom7, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily[if ed riley is in Bleary Barley]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
 		now printed name of Anteroom is "Near-Moot Anteroom";
 		now whiners are in lalaland;
 		now ram1 is in lalaland;
@@ -18904,7 +18912,7 @@ the raft is an enterable reflexive supporter in Hero's shore. the raft is fixed 
 instead of taking raft:
 	say "You probably want to ENTER or CLIMB or GET ON the raft. It's too big to take, physically.";
 
-understand "frat" as a mistake ("It would just sink into the river, creating more problems.") when player is in Hero's shore;
+understand "frat" as a mistake ("A frat would just sink into the river, creating more problems. Plus fratboys probably aren't big on wordgames.") when player is in Hero's shore;
 
 instead of pushing raft:
 	say "It would crash into a boat if you tried to cross the standard way." instead;
@@ -19470,7 +19478,7 @@ check taking the cans:
 
 check scaning the cans (this is the bonus point rule) :
 	if the player's command includes "scan":
-		say "You scan the cans, and at first they flash RRYR, as expected. Then you hear a rip in the fabric of reality. Apparently, you caused it by 1) not knowing what to do with the cans, so you scanned them and 2) knowing you needed to scan the cans. It's not very big, but between the logical paradox and infraviolet rays or whatever, the sludge in the cans (itself created through an abuse of quantum physics) bursts into water and dirt. [paragraph break]If you get rid of Elvira, you'll see if you can replicate this. It'd make recycling pretty darned efficient. You feel more socially conscious, and less of a plain wordslinger, for having partially cleaned up Lean Lane.";
+		say "You scan the cans, and at first they flash RRYR, as expected. Then you hear a rip in the fabric of reality. Apparently, you caused it by 1) not knowing what to do with the cans, so you scanned them and 2) knowing you needed to scan the cans. It's not very big, but between the logical paradox and infraviolet rays or whatever, the sludge in the cans (itself created through an abuse of quantum physics of infraviolet rays or whatever--hey, I'm a programmer, not a physicist) bursts into water and dirt. [paragraph break]If you get rid of Elvira, you'll see if you can replicate this. It'd make recycling pretty darned efficient. You feel more socially conscious, and less of a plain wordslinger, for having partially cleaned up Lean Lane.";
 		min-and;
 		now cans are in lalaland instead;
 	say "You're over-thinking this one." instead;
@@ -20425,7 +20433,7 @@ instead of taking sheets:
 instead of scaning sheets:
 	say "The words on the theses can certainly be twisted into something worse, but the sheets cannot be changed for the better."
 
-description of theses sheets is "[one of]They're a MEAN FIST MANIFEST written in praise of Ulf-Theo The Foul ('Feh, lout!')[paragraph break]Beneath the main HIDEOUT! DIE THOU! slogan, one[or]Another[stopping] point reads: [randbla]"
+description of theses sheets is "[one of]They're a MEAN FIST MANIFEST written in praise of Ulf-Theo The Foul ('Feh, lout!')[paragraph break]Beneath the main HIDEOUT! DIE THOU! slogan (OH, ENTER NOT HERE) one[or]Another[stopping] point reads: [randbla]"
 
 
 the o-t is privately-named flippable scenery in Hedron. understand "ol/ol' trap" and "trap/oltrap" as o-t. printed name of o-t is "ol['] trap".
@@ -21297,7 +21305,7 @@ after fliptoing onyx censer (this is the pooh-phooey rule):
 		now phooeyed is true;
 	continue the action;
 
-the onyx censer is a super-easy thing. description of onyx censer is "It's dark with flecks of bright green. If they were lumped together and you stared too long, you'd get a headache. The year 1983 is scratched in, possibly AD or BC.". "An onyx censer, dark with flecks of black green, rests here."
+the onyx censer is a super-easy thing. description of onyx censer is "It's dark with blocky flecks of bright green. If they were lumped together and you stared too long, you'd get a headache. The year 1983 is scratched in, possibly AD or BC.". "An onyx censer, dark with flecks of black green, rests here."
 
 after printing the name of the onyx censer while taking inventory:
 	if censer is prefigured:
@@ -22073,26 +22081,30 @@ understand "book" and "bad book" as a badbook.
 
 does the player mean doing something with a visible badbook: it is very likely.
 
-Day Broke is a badbook. author of badbook is "Rob Keady". theme of Day Broke is "schmaltzy supernatural love affairs".
+Bakery Do is a badbook. author of Bakery Do is "DeRoy Bak". theme of Bakery Do is "overoptimistic views on enterpeneurism". a-text of Bakery Do is "RYORYYRR". b-text of Bakery Do is "RYORYYRR".
 
-eBay Dork is a badbook. author of eBay Dork is "Kary Bode". theme of eBay Dork is "puberty and predictable nonconformity"
+Bred Okay is a badbook. author of Bred Okay is "Bad Korey". theme of Bred Okay is "pointless rebellion". a-text of Bred Okay is "RYORYYRR". b-text of Bred Okay is "RYORGYRR".
 
-Bred Okay is a badbook. author of Bred Okay is "Bad Korey". theme of Bred Okay is "pointless rebellion"
+Day Broke is a badbook. author of badbook is "Rob Keady". theme of Day Broke is "schmaltzy supernatural love affairs". a-text of Day Broke is "RYORYYRR". b-text of Day Broke is "RYBPYYRR".
 
-Dear Koby is a badbook. author of Dear Koby is "Yoda Berk". theme of Dear Koby is "thinly-veiled wishful-thinking autobiography and cyberspace epistles"
+Dear Koby is a badbook. author of Dear Koby is "Yoda Berk". theme of Dear Koby is "thinly-veiled wishful-thinking autobiography and cyberspace epistles". a-text of Dear Koby is "RYORYYRR". b-text of Dear Koby is "RGORYYRR".
 
-Yo Be Dark is a badbook. author of Yo Be Dark is "Dr. Bo Kaye". theme of Yo Be Dark is "the hopelessness of hopelessness". printed name of Yo Be is "Yo, Be Dark".
+eBay Dork is a badbook. author of eBay Dork is "Kary Bode". theme of eBay Dork is "puberty and predictable nonconformity". a-text of eBay Dork is "RYORYYRR". b-text of eBay Dork is "RYORYYPR".
 
-Bakery Do is a badbook. author of Bakery Do is "DeRoy Bak". theme of Bakery Do is "overoptimistic views on enterpeneurism".
-
-a-text of Day Broke is "RYORYYRR". a-text of dear koby is "RYORYYRR". a-text of bred okay is "RYORYYRR". a-text of ebay dork is "RYORYYRR". a-text of Yo Be Dark is "RYORYYRR". a-text of Bakery Do is "RYORYYRR".
-b-text of Day Broke is "RYBPYYRR". b-text of dear koby is "RGORYYRR". b-text of bred okay is "RYORGYRR". b-text of ebay dork is "RYORYYPR". b-text of Yo Be Dark is "RYORYGPR". b-text of Bakery Do is "RYORYYRR".
+Yo Be Dark is a badbook. author of Yo Be Dark is "Dr. Bo Kaye". theme of Yo Be Dark is "the hopelessness of hopelessness". printed name of Yo Be is "Yo, Be Dark". a-text of Yo Be Dark is "RYORYYRR". b-text of Yo Be Dark is "RYORYGPR".
 
 description of a badbook is "[the item described], by [author], is a hopelessly simplistic look at [theme of item described] that rose to inexplicable bestsellerdom and consequent bestseller-movie adaptation. You've never read it, though you recall it's even worse than [ev-worse]. Or maybe it's the other way around. Or maybe it's true both ways, somehow."
 
+a badbook can be unalluded or alluded. a badbook is usually unalluded.
+
 to say ev-worse:
-	let mybk be a random off-stage badbook;
-	say "[mybk] by [author of mybk]";
+	if number of unalluded badbooks is 0:
+		let mybk be a random off-stage badbook;
+		say "[mybk] by [author of mybk]";
+	else:
+		let mybk be a random off-stage unalluded badbook;
+		now mybk is alluded;
+		say "[mybk] by [author of mybk][if number of unalluded badbooks is 0] (that's the last one)[end if]";
 
 check reading a badbook:
 	if yak is in lalaland:
@@ -22697,6 +22709,8 @@ chapter Sparse Spares
 
 Sparse Spares is below Peek Keep. Sparse Spares is in Demo Dome. "All sorts of weird tools and paraphernalia that couldn't fit into the game proper lie here, likely impulse purchases from Bulk-Klub. You can go back up."
 
+the parcels clasper is a thing in Sparse Spares.
+
 the bolt case is a transparent closed container in Sparse Spares. description is "It contains an obstacle, and it's also not openable, since it's--well-bolted. There's also a can of Best Cola in there."
 
 the obstacle is in the bolt case. description of the obstacle is "it reads Bulk-Klub."
@@ -22782,7 +22796,7 @@ instead of doing something with Great Grate:
 		continue the action;
 	say "It was put there just to let you know there will be new stuff from the author. Of course, if you could see it, it might be too raw to be any good.";
 
-a spec space is scenery in peek keep.
+a spec space is scenery in peek keep. "It could be a spec-scape, with all that's here."
 
 a talks stalk is scenery in peek keep. "From what you see on the other side of the Great Grate, it has many branches, but none appear particularly healthy yet. It symbolizes the author's grand high goal up there of one day implementing more believable NPCs."
 
@@ -22798,8 +22812,8 @@ volume dometables
 [dmt]
 
 table of calparts
-thiscal [x calendar]
-"Part one: Protean[paragraph break]This part maps how ARO was part of Shuffling Around at first, til I realized that'd be too long for IFComp's two hours. You see how the game started with the stores, how there was F, I, U, V, W and Y, with P being the finale, and how store M didn't exist for a while. In fact, Store R got finished at the very last. It relates how OUTSIDE was the original puzzle until the author realized that was too abstruse, thanks to a tester, and it maps how F and I were first, so they go the good stuff--the nouns--before M started developing. Somewhere along the line, too, I decided to go in for an anagram of Psuedonym. Moe Spudny, Spud Money, Don Muspey and Ed Spumony all seemed amusing, but it wasn't until I remembered a character I wrote for a walkthrough of Deathlord, Ned, that I started poking around. Yompus may not be a real last name, but it sounds like one. So I went with it. Finding it was one of those 'click' moments that didn't solve any technical problems, but it felt cool.[paragraph break]Plus, Andrew Schultz doesn't really anagram well."
+thiscal [x calendar] [tdm1]
+"Part one: Protean[paragraph break]This part maps how ARO was part of Shuffling Around at first, til I realized that'd be too long for IFComp's two hours. You see how the game started with the stores, how there was F, I, U, V, W and Y, with P being the finale, and how store M didn't exist for a while. In fact, Store R got finished at the very last. It relates how OUTSIDE was the original puzzle until the author realized that was too abstruse, thanks to a tester, and it maps how F and I were first, so they go the good stuff--the nouns--before M started developing. Somewhere along the line, too, I decided to go in for an anagram of Psuedonym. Moe Spudny, Spud Money, Don Muspey and Ed Spumony all seemed amusing, but it wasn't until I remembered a character I wrote for a walkthrough of Deathlord, Ned, that I started poking around. Yompus may not be a real last name, but it sounds like one. So I went with it. Finding it was one of those 'click' moments that didn't solve any technical problems, but it felt cool.[paragraph break]Plus, Andrew Schultz doesn't really anagram well, except to CRAWLS, ZEN, THUD."
 "Part two: Wrapt to[paragraph break]I realized that it was probably best to go with nouns-to-nouns. Well, until the last puzzle. This kicked out all but F and I. I didn't know what else to do, or where the finale would be. I eventually decided on R, once I figured a resort would be a good place. It only had the Manor, and you just had to EXIST. I think your enemy was Too-Apt Pa Otto, and you had to make him into a POTATO. But that was a bit mean. Then METROS began to take shape, and I liked the underside and hotel, and then other locations fell into place."
 "Part three: Trap there? Er, phatter[paragraph break]The big problem I had was that I couldn't disambiguate how to flip items, and I had no encouragement for guesses for anagrams. This was a pretty big fault, and there were others, too. Nevertheless, I found a lot with the help of my testers, and I even had the bright idea of trying to provide an alternate way through Metros. One sub-try got the player stuck. Nevertheless, I was able to identify ways to take care of this throughout the comp, and I had plans for post-release stuff. Every mistake I made served to give me an idea to make things easier for the player. The game needed it. I also settled on the idea for the new hint device. I didn't want to reuse what I had from SA, but I also wanted to make things simpler and more powerful. People had trouble seeing if they could take both devices, so I merged them. And I started on the settler, once people said they wanted something a bit more Master Mind like."
 "Part four: tap furor[paragraph break]Nobody was really furious at the game, but I certainly got to work when I learned about David White's hashing. Immediately it made ARO more accessible, in theory. I had a lot to whip into shape. I tried to fix a few things per day. I was disappointed in the bigger mistakes I made, and after getting SA into a decent beta (or so I thought,) I started on ARO."
@@ -22817,7 +22831,7 @@ thiscal [x calendar]
 [teenager pith part eighteen]
 
 table of informcode
-thiscode [x inform wall]
+thiscode [x inform wall] [tdm2]
 "A chunk of code starting with CheckTranscriptStatus notes how the author was able to nag his testers to take a transcript if they left a comment without transcripting on--or to thank them."
 "You read various testing commands used in writing the game, including ones to show the exits every move, hint everything visible every move, and track hints without spoiling things for the player. Other commands include jumping to the Strip of Profits, clearing all but Otters, and even jumping to just before the Gates Stage."
 "You stare at the start of the Table of Nudges. It's really big! Like, [number of rows in table of nudges] big! That's over double Shuffling Around! The numbers look confusing and arbitrary, but you recognize the anagram-strings that the game checks for, as well as how room anagrams seem to point to the same error messages."
@@ -22825,9 +22839,10 @@ thiscode [x inform wall]
 "You see some specialized Inform 6 code from Andrew Plotkin, Climbing Stars (for disabling TRACE for the Oyster puzzle, and for restarting the game after winning) and other people."
 "You see a bit more Inform 6 code the author scratched out himself. The main chunk is at https://www.intfic.com/t/i6-stubs-for-i7-programmers/83/6."
 "You read more various miscellaneous testing commands, like ones that zap all the guardians, see all the fruits or even show what the player would've missed or alternat paths every move."
+"You stare at the various tables of random text. A voice from behind a fourth wall mentions they used to be in lists, and worse, not even alphabetized so that some duplicates could be caught easily."
 
 table of perlcode
-thiscode [x perl wall]
+thiscode [x perl wall] [tdm3]
 "$alf = join('', sort(split(//, lc($a)))); if ($ana{$alf}) { print '$a=$ana{$alf}'; } $ana{$alf} .= ' $a'; # anagram find code"
 "if ($a =~ /^\'[bracket]a-z[close bracket]'/ { print 'bad quotes line $line: $a' } # quote tracking"
 "if (firstWord($a) eq firstWord($last) { print 'Possible duplicate: $line, $a = $last.\n'; }"
@@ -22835,9 +22850,10 @@ thiscode [x perl wall]
 "The perl code is a bit complex, but it involves splitting a string in two, then assigning each a value. Manage, for instance, is 20001010000011000000000000. Mega Game is 30003030000030000000000000, which gets simplified to 1's. It looks like this piece of code detects if two strings are anagrams. There's commentary below."
 "In particular, the code seems to account for if the book titles and the author names are anagrams. A note below mentions about 70% had matching names before the try, and 10% just had bad anagrams, before that was all fixed. And many former author names were shipped off to Shuffling Around to make room for new ones here."
 "There's simpler code below just detecting if any anagrams are found in table entries. It's tough to follow, with exceptions for if two of the same word are in an entry, with the same hash as above."
+"Other things I put on [my-repo] include scripts to verify random text anagrams, to create the cheat and non-cheat text and even track geometric means."
 
 table of observations
-obser [from chic loner chronicle]
+obser [from chic loner chronicle] [tdm4]
 "I found so many ridiculous anagrams just reading a book on the way to work, or working out, and then I'd just feed them into the anagram server. If ten thousand seems like a lot, well, that is over two years, so that is fifteen per day. That is not so bad when you consider one takes a minute, and I can waste a lot of time in any case."
 "A simple I <3 BLOCKSITE FOR FIREFOX. Well, that's not very philosophical or motivational, but it could be practical."
 "It's difficult to describe when an idea has critical weight to branch out. For things like the responses to waiting or blank commands, I maybe had a few in one of/or loops, until I sat down and concentrated on words that meant doing nothing. It took a while to find, but once I had, say, six, I sat down and tried to stretch it to ten, when I put it in a table for the player to see at the end."
@@ -22847,8 +22863,10 @@ obser [from chic loner chronicle]
 "Once the anagrams started flowing, and I started adding alternate solutions, ARO started taking a long time to compile. Like 30 seconds. So I tried to place in random text and so forth while I built, since that was low-risk for recompiling. I had one rather bad bug which the Inform 6.32 compiler didn't track (http://www.ifarchive.org/indexes/if-archiveXinfocomXcompilersXinform6Xexecutables.html got the new version) but mostly it was just a matter of writing stuff down and feeding it to a computer. It was much more fun procrastination than others."
 "Many of the puzzles just didn't make sense in the first version. But I was able to sort them out by ones that needed to be changed and ones that would be nice to. I found a lot of times I had to let a tester's observation sit for about two weeks before changing something: gee, it'd be nice to..."
 "Perhaps the last thing I enjoyed looking up was that my data roughly obeyed both Zipf's and Benford's Law. I put the megachatter table rows and byte totals as data points into a graph at http://benford.jplusplus.org/, and while each looked pretty good by itself, together they gave a very low z-statistic. Zipf's law was a little trickier--the upper and lower halves of the data had different trend lines. I impart this to how I just sort of added a bunch of tables late, so of course thouse would sink to the bottom. While a few later tables gained traction (posse bosses, lame talk shows and comedians,) many were just neat to get to ten, and I didn't add to them."
+"Learned Helplessness is a powerful thing, and you can always be sucked back down into it: there's that silly voice in my head saying 'Haven't you gotten enough shortcuts?' Larry Wall's delightful oversimplification of the three programming virtues has helped me a lot, here, but I think the real way to frame things is: with the tools I have now, X would be too tough. I don't see how to fix it, yet, but I will."
 
-table of pagelist [from novella]
+
+table of pagelist [from novella] [tdm5]
 pgtxt	read-yet	comprehensible
 "Page One: Openage. Peonage."	false	true
 "Page Two: 'Pa, we got top wage!'"
@@ -23245,7 +23263,7 @@ pipe soot	pipe soot	"opposite"	"opposite"	"You inch to the other side of the roo
 seed pit	mushrooms	"despite"	"despite"	"You ignore Pat's 'pits go to pigs' and 'yon pit, no pity' warnings and the sign. 'You can't...'[paragraph break]But you do. It's yucky and squishy, but it's not the seediest seed site ever. You hold your nose enough to find some mushrooms which you can take, leaving the mere pit emptier."	true	602484096	"That'd be a double negative, to re-enter. Your argument would be so won, it's lost."
 Rude 'N Nuder	runed book	"under"	"under"	"You can't take the giant waving the, um, literature around. You jump off and duck under the bench. Disgusted that nobody will listen any more, he throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal...a runed book! Well, this could be useful."	true	408172316	"The book is already runed."
 huge thing	the-b	"from"	"from"	"The huge thing form above turns into a huge thing FROM above. You watch a blot bloat as it gets closer. You notice it is shaped like a bean and duck. You don't hear the thud.[paragraph break]'Mesa's a mess!' you hear people screaming."	false	250266429
-the-b	the-b	"beneath"	"beneath"	"You push the bean and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. As you do, the drama armada cheers you... 'Go down now, dog!' ... 'So true, sure to set our ouster...' forgetting that the bean can roll back into place..."	false	485518766	--	Sun-Spared Underpass
+the-b	the-b	"beneath"	"beneath"	"You push the bean and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. As you do, the drama armada cheers you... 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear the bean roll back into place..."	false	485518766	--	Sun-Spared Underpass
 darkness	narrow cracks	"until"	"until"	"The one preposition gives you confidence you will find No-Gal Logan. The dirt and walls don't exactly start glowing, but you can notice things better. Like a few narrow cracks. You're not sure which way to go, though. You can really notice things, now."	false	375930018	"The underground is already unlit."
 narrow cracks	un-road	"around"	"around"	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."	false	356906602
 un-road	cracks you followed	"along"	"along"	"You go along the path you found. With almost no lag, you find yourself at a pier by an underground lake."	false	231861444	--	ripe pier
@@ -23374,7 +23392,7 @@ an alarming grailman	an alarming grailman	"marginal"	"marginal"	"The grailman mi
 Atheists	Atheists	"hastiest"	"hastiest"	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right!' They run off for someone else to harass."	false	611037040	"hastiest"
 once-sad deacons	once-sad deacons	"holiest"	"holiest"	"The deacons shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the shrine. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the shrine opens for him![wfak][paragraph break]Then the next deacon realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already."	false	537631654	"holiest"
 ray eck	ray eck	"creaky"	"creaky"	"You hear a squeak from the keycar, then Ray Eck cringing and grabbing his leg. He spends some time complaining about various aches (don't worry, they're psychosomatic) and then about how he'd been ripped off purchasing stuff like the keycar before. Worried the keycar will sputter and die out here, he guides it home."	false	409615745	"creaky"
-pirates	pirates	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."	false	541160519	"pastier"
+pirates	pirates	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."	false	541160519	"pastier"
 old ice	old ice	"coiled"	"coiled"	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."	false	341000045	"mistier"
 denim	start tarts	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of start tarts in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, to keep the copse tidy. You take the tarts."	true	326810705	"mined"
 fissure	fissure	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."	false	582291393	"fussier"
@@ -23924,6 +23942,7 @@ blurb
 "Say snot so nasty? Nay, toss!"
 "Say tuff stuff, ya!"
 "Scorned? Ire? Reconsider."
+"Screed? No! CENSORED!"
 "Seagulls['] sullages!"
 "Searing rage-sin!"
 "A silly say-ill."
@@ -24212,6 +24231,7 @@ blurb
 "Gain the Hintage!"
 "Game-Aid Vet: Give Me Data!"
 "The Giant Get-a-Hint!"
+"Gold Hope Good Help"
 "Got Hint Tonight?"
 "GRATITUDE Strat-Guide."
 "Hecate's E-Cheats."
@@ -24331,6 +24351,7 @@ blurb
 "Hating--a thing? Nah, git."
 "A hint: hatin[']? Nah, it..."
 "Hit [']um? No! Mouthin[']!"
+"How stupid is THUD-POW."
 "Huh, intent: in the hunt?"
 "Hurty, uh, try."
 "'I slap' is, pal, a slip." [p]
@@ -26875,7 +26896,38 @@ blurb
 "Bombshell Mell Hobbs"
 "Bonkers Berkson"
 "Boob Bobo"
+"Bro Al Albro"
+"Bro Alden Bolander"
+"Bro Andre Bernardo-Dearborn"
+"Bro Dale Laborde"
+"Bro Dan Bodnar"
+"Bro Dee DeBoer"
+"Bro Derick Broderick"
+"Bro Dong Brogdon"
+"Bro Drew Browder"
+"Bro Ed Brode"
+"Bro Efren Freeborn"
+"Bro Eldon Bordelon"
+"Bro Elmo Bloomer"
+"Bro Ethan Rathbone"
+"Bro Gus Burgos"
+"Bro Ian Obrian"
+"Bro Lee Oberle"
+"Bro Len Lebron"
+"Bro Les Robles"
+"Bro Nat Barton"
+"Bro Neal Lebaron"
+"Bro Ned Borden-Bodner"
+"Bro Neil Oberlin"
+"Bro Nestor Robertson"
 "Bro Nic Corbin"
+"Bro Nigel Bolinger"
+"Bro Ray Yarbro"
+"Bro Rene Boerner"
+"Bro Rey O'Berry"
+"Bro Ryan Rayborn"
+"Bro Sean Seaborn"
+"Bro Wes Bowers"
 "Brony Byron"
 "Buffoon Bo Onuff"
 "Bunch-O-JK John Buck"
@@ -29627,6 +29679,7 @@ blurb
 "Um, Be Stout, Bust [']Em Out"
 "Um, Bla Album"
 "Um, Love Volume"
+"Um, This, it Hums"
 "Umm, Mix a Maximum"
 "Un-Dorks So Drunk" []
 "Undergoing Guerdoning"
@@ -29887,7 +29940,19 @@ blurb
 "Desperate Pete Strad"
 "Destroyed [if player is male]Teddy Rose[else]Dede Story[end if]"
 "Dire Bo Brodie"
+"Dire Euna Riendeau"
+"Dire Hans Sheridan"
+"Dire Jan Jardine"
+"Dire Lew Weidler"
+"Dire Luna Lindauer"
+"Dire Minta DeMartini"
+"Dire Mose Medeiros"
+"Dire Pam Dampier"
 "Dire-Rock Roderick"
+"Dire Rolf Reliford"
+"Dire Tom DeMitro"
+"Dire Wen Weidner"
+"Dire Wm Widmer"
 "Dirge-Led Eldridge"
 "Disheartened Deidre Athens"
 "Diva Al Davila"
@@ -31486,6 +31551,7 @@ blurb	prio
 "Ebola: O, Bale[r], by Bo Lea"
 "Echo Ire? Cheerio, I Cohere[r], by [if player is male]Reo Eich[else]Cori Hee[end if]"
 "Echo Mr. Chrome[r], by Mo Cher"
+"Eco-Dust: Due Cost Scouted[r], by Ted Usco"
 "Eco-Ship Hospice[r], by Chip Ose"
 "Ed Has a Shed[r], by De Ash"
 "Ed Ictis, Diciest Deicist[r], by Sid Tice"
@@ -31736,6 +31802,7 @@ blurb	prio
 "The Form for Them[r], by Em Forth"
 "A Form of RAM for Ma[r], by Momar Raffo"
 "Formal Mr. Olaf[r], by Al From"
+"A Fort of Art[r], by Tara Troffo"
 "Fortunes of Unrest[r], by Ren Fouts"
 "Forwardest Afterwords[r], by Ward Foster"
 "Foul Dire Fluoride[r], by Lou Fried"
@@ -31981,6 +32048,7 @@ blurb	prio
 "Hate Mail: a Lame Hit[r], by Leia Math"
 "Hate Psalm: Me, Asphalt, the Plasma Heat Lamps[r], by Seth Palma"
 "Hated Death: Add the Heat[r], by 'Teeth' Hadad"
+"Hateful Leaf Hut[r], by Fleta Hu & Fae Thul"
 "Haters, Rest, Ah[r], by Tre Ash"
 "Hauling Laughin['][r], by Ali Hung"
 "Haw, Tell the Wall[r], by Walt Leh"
@@ -32533,8 +32601,10 @@ blurb	prio
 "Lead On, Lad Neo[r], by Ol['] Dean Delano"
 "Leaden Lean Dell[r], by Danelle Allende"
 "Leaking Linkage[r], by Gil Kane"
+"Leaky Roof for a Yokel[r], by Fay Looker"
 "Lean Log Galleon[r], by Leola Ng"
 "Lean Low, One Wall[r], by Leon Law"
+"Leap, Thing: Plan Eight[r], by [if player is male]Phil Tegan[else]Pat Hingle[end if]"
 "Learn by Blarney[r], by [if player is male]Al Byrne[else]Lyn Baer[end if]"
 "Learn'd Randle Aldner[r], by Darnel Lander"
 "Leased, Sealed[r], by Deedee Sallas"
@@ -32909,6 +32979,7 @@ blurb	prio
 "Motliest Lost Time[r], by Miles Ott"
 "Motown's Tom Snow[r], by Wm. Snoot"
 "Mountainside Un-Mediations[r], by [if player is male]Austin Domine[else]Dionne Matsui[end if]"
+"Mourn, Stoic Consortium[r], by [if player is male]Tom Rusconi[else]Cris Mouton[end if]"
 "Mourned [']N Rude Mo Dunmore[r], by Ned Orum"
 "Move Icy, My Voice[r], by Vic Moye"
 "Move Til Mt. Olive[r], by Tim Love"
@@ -33197,6 +33268,7 @@ blurb	prio
 "O Clashin['] Nicholas[r], by Loni Cash"
 "O Clingy Cloying[r], by Gy Nicol"
 "O Coyest Coyotes[r], by Scot Yeo"
+"O Curse Course Sour, Coerce Us[r], by Reusser Cuoco"
 "O, Do Rely, Ol['] Yoder[r], by [if player is male]Loyd Roe[else]Loo Dyer[end if]"
 "O, Dozens Snoozed[r], by Zed Soon"
 "O, Feelin['] One Life[r], by Leo Fine"
@@ -33441,6 +33513,7 @@ blurb	prio
 "Our Stuff: Surf, Tofu[r], by Stu Ruffo"
 "Our Times Suit More Moisture[r], by Sue Mitro. Tim Rouse"
 "Oust-Outs Sous Tout[r], by Stu Souto"
+"Out, Crimson Consortium[r], by Curtis Moon."
 "Out-Dirge Us, Tour Guides[r], by Doug Uresti"
 "Outbid? I Doubt[r], by Bud Ito"
 "Outing Real Regulation: Nil Outrage[r], by [if player is male]Louie Grant[else]Rina Goulet[end if]"
@@ -33614,6 +33687,7 @@ blurb	prio
 "Potential: Inept a Lot[r], by Tia Pelton"
 "POTUS Pouts[r], by Su Top"
 "Pound Lies, Unspoiled[r], by Deon Pulis"
+"Pow, Li'l Pillow[r], by Will Po."
 "Praetorian Reparation[r], by [if player is male]Aaron Pitre[else]Tara Perino[end if]"
 "A Pre-Term Tamperer[r], by Pat Ermer"
 "Predate, Adepter[r], by Pat Reed"
@@ -34505,6 +34579,7 @@ blurb	prio
 "This Borg So Bright[r], by Brit Shog"
 "This Bum, Bismuth[r], by Tim Bush & Si Thumb"
 "This Bum Bit Mush[r], by Tim Bush"
+"This Cool Holistic[r], by Otis Loch"
 "This False Faithless Thief-Lass Fails Seth[r], by Elsa Shift"[]
 "This Flake Hates Filk[r], by Kathi Self"
 "This Gnome Mine Ghost[r], by Og Nesmith"[]
@@ -36017,6 +36092,7 @@ blurb
 "Moni's Simon."
 "Monica's So Manic."
 "Monty, a Man-Toy."
+"More-Bod Bedroom."
 "More Fetish Motifs Here."
 "Mort is So Trim, Sir Tom!"
 "Mr. Beach's Chambers."
@@ -39269,6 +39345,7 @@ blurb
 "Delphia's Helipads."
 "Dig posh godship."
 "Do I need? O, Indeed!"
+"Domestic Stim-Deco."
 "Dragonish Hoardings."
 "Drives to Divert so: I'd Strove."
 "Ego-Trip: Grope It."
@@ -39691,6 +39768,7 @@ blurb
 "'Dat so, toads? Sad to...'"
 "'Dat wuss was DUST!'"
 "'Deadly lady, Ed!'"
+"'A death? Me? Meathead!'"
 "'Debauchery curbed?' / 'Yeah.'"
 "'Deck the kid, Chet!'"
 "'A def hat...fathead!'"
@@ -39868,6 +39946,7 @@ blurb
 "'Gunfire!' / 'Un-grief.' / 'Urg, fine.'"
 "'Gunther! Run the hurt-gen!'"
 "'Gus, end Ned's gun nudges!'"
+"'Gus, not GUNS to go nuts!'"
 "'Guys, no guns, yo!'"
 "'Gym? Er, germy.'"
 "'Gypsies?' / 'Yes, pigs?'"
@@ -40329,7 +40408,9 @@ blurb
 "'Piss off, spiffos!'"
 "'A pity. Pay it!'"
 "'Plaid? Al, dip da lip. Pal, I'd...'"
+"'Plan four: a flop! Run!'"
 "'The plan then, pal!' / 'Help! Nat!'"
+"'Plan two? Wan plot. Won't, pal.'"
 "'Plug the gut! Help!'"
 "'Ply [']im, Limpy!'"
 "'Po['] guy, I...' / 'You pig!'"
@@ -40591,6 +40672,7 @@ blurb
 "'Then mob BOTH men!'"
 "'There, Al! The real heel! Rat!'"[]
 "'They amp empathy. Pay them.' / 'Empty.' / 'HA!'"
+"'They ARE teary, eh?'"
 "'They won? Note why. Won't, hey?'"
 "'Thinkers!' / 'Shtinker!'"
 "'Thirties? ****tier.'"
@@ -41211,6 +41293,7 @@ blurb
 "'Gag, Otto. Gotta Go.'"
 "'Gambler? Me? Blarg!'"[]
 "'Garth, ice the cigar!'"
+"'Gasp! Cake packages!'"
 "'Gay slur, Ray? Slug.'"
 "'Gee, can Ace neg!'"
 "'Gee! Clean elegance!'"
@@ -41511,6 +41594,7 @@ blurb
 "'Mealtime? Me, I'm late.'"
 "Mean prod. 'Pardon me.' Name Drop." [p]
 "'Measures?' / 'Reassume same user.'"
+"'Mediocre cider? O me!'"
 "'Meet [']im? Me time!'"
 "'Meetups? Must pee...'"
 "'Meg, I'm ... / Gimme!'"
@@ -41942,6 +42026,7 @@ blurb
 "'Textins[']? Sit next!'" []
 "'TGIF'n? F'n git!'"
 "'Tha feds shafted...' / 'He's daft!'"
+"'That, I'd hit, Tad.'"
 "'That so, tots? HA!'"
 "'Thayer, is thy raise this year?'"
 "'A theft, eh, Taft?'"
@@ -46859,6 +46944,7 @@ blurb
 "Top Dens to Spend"
 "Top-Floor Roof-Plot/Pool-Fort"
 "Trop-Port"
+"Truco Court"
 "Un-Bore-Bourne" []
 "Upscale Capsule"
 "Warm Mawr"
@@ -47069,6 +47155,7 @@ blurb
 "Smarting Wit, Arm Twisting[r], by Matt Wirsing & Grits Witman"
 "So Meek? Seem OK? Seek Mo['][r], by Em Seko"
 "So Plan On, Pals[r], by Pop & Son Llanas"
+"So Plan On, Pals[r], by Sol Sapp-Nolan"
 "So Told, Do Lots[r], by [d-t] Los"
 "So, Wealth: Steal How? Late Show[r], by [if player is male]Theo Laws[else]Tosha Lew[end if]"
 "Soap, Stone, Teaspoons[r], by [if player is male]Enos Patos[else]Tessa Poon[end if]"
@@ -47718,7 +47805,6 @@ blurb
 "An Ugly Any-Lug"
 "Um, Depths, the Dumps"
 "Um, Earn Manure"
-"Um, This it Hums"
 "Un-Rich, I Churn"
 "Un-Rich Urchin, I Churn"
 "Un-Robust Burnouts"
@@ -48105,6 +48191,7 @@ blurb
 "Urghs. Shrug."
 "'Us, bloody. Body, soul.'"
 "'We ain't gonzo-goonz.'"
+"'Woomph! Phwoom!' they describe a fight, which is sort of cheating. But they don't need grammar policing."
 "You hear [l-r] recount an eco-runt trounce."
 
 table of Leo-Rand idols [xxp4]
@@ -50341,6 +50428,7 @@ blurb
 "Not game to nag me!"
 "Oy, pert tropey poetry. To pyre!"
 "Prosey Osprey Ros Pye? O, pyres!"
+"'Refuse to wear...evocator overcoat!"
 "Rhett Weir, the Writer: Err, Twit, Eh?"
 "Rio Demps? Sid Premo? Dim prose, PROMISED!"
 "Some poets, pose-smote, emote. SOPS!"
@@ -50512,6 +50600,7 @@ blurb
 "Over-sad, Savored Devora's"
 "A Palest Palate's Ale Taps"
 "Party'n Pantry"
+"Pat Ching's Nightcaps"
 "Perssing Persing's"
 "Pet Bear Beer Tap"
 "Pissy Ev Spivey's"
@@ -51410,6 +51499,7 @@ blurb
 "a reloading girandole"
 "the Repeatedly-Deplete Ray"
 "rimless slimers"
+"robust ur-bots"
 "a Samsung mass-gun"
 "a schmoes-SOS mech"
 "a scorp-proc"
@@ -51417,6 +51507,7 @@ blurb
 "skanker krakens"
 "smashter hamsters"
 "snort-trons"
+"sore-rot roosters"
 "spam-U pumas"
 "a spambot tomb-asp"
 "splitter triplets"

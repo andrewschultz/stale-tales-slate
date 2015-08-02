@@ -160,10 +160,12 @@ v:whassup,uswhaps,pahwuss,hawpuss,saw push,pushaws,SshUpaw
 !escaroles,casserole
 !speel,sleep
 !yehoop,phooey
-!brokeday,keyboard
-!dearkoby,keyboard
+!bakerydo,keyboard
 !bredokay,keyboard
+!daybroke,keyboard
+!dearkoby,keyboard
 !ebaydork,keyboard
+!yobedark,keyboard
 ###############################TOWERS
 v:nearest,stearne,strenae,ernesta
 v:stabler,alberts

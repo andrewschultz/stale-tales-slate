@@ -7117,15 +7117,20 @@ after choosing notable locale objects when player is in moor:
 	if Pat is in moor:
 		set the locale priority of Woeful Pat to 8;
 
-understand "reset" and "reset button" as a mistake ("[reset-goof]") when player is in moor and panel is part of silo.
+understand "reset" and "reset button" as a mistake ("[reset-goof].") when player is in moor and panel is part of silo.
 
 understand "terse" as a mistake ("[if trees button is visible]All five wrong[else]Already good[end if]") when player is in moor and panel is part of silo.
 
+reset-already is a truth state that varies.
+
 to say reset-goof:
-	if trees button is visible:
-		say "[if trees-is-pushed is true]The reset button only appears in emergencies. Maybe there's one more thing you can change the trees button to[otherwise]A reset button is not practical once a missile is launched, but you are on the right track[end if].[run paragraph on][line break]";
-	otherwise:
-		say "You don't need to reset the steer button [if trees-is-pushed is true]like you did the trees button[end if]. It's what it's supposed to be.[run paragraph on][line break]"
+	if steer button is visible:
+		say "You don't need to reset the steer button[if trees-is-pushed is true] like you did the trees button[end if]. It's what it's supposed to be"
+	else if reset-already is false:
+		say "Unfortunately, it's not QUITE as easy as just pushing a reset button[if trees-is-pushed is true], which only worked to undo the trees[end if]. You have one more puzzle to navigate";
+		now reset-already is true;
+	else:
+		say "Resetting twice won't get you anywhere. You need a new direction to change the TREES"
 
 the woods are useless scenery in moor. "They're forbidding--both for travel and for changing them into something else."
 
@@ -14991,6 +14996,7 @@ blurb
 "Glint of flint. Go to fling!"
 "Gloomy My Logo."
 "Go draw, war god!"
+"Go, earnest great ones! Tons agree!"
 "Go, ferret, tree frog of regret! Got freer? Fret gore!"
 "Go fry land, Dragon! Fly!"
 "Go, host to hogs so goth!"
@@ -15225,6 +15231,7 @@ blurb
 "My nephew, wee nymph. Weep hymn!"
 "My oaf of May, Foamy."
 "My Old Moldy Mydol."
+"My opus: end, puny demos! Pundom, yes!"
 "My path. Thy may. Myth, pa!"
 "My soy: um, so yummy!"
 "My space! Ye scamp."
@@ -15368,6 +15375,7 @@ blurb
 "Plight-wary playwright gal, wry pith!"
 "Poach a chop, o chap!"
 "Poems sop me, Ms. Poe."
+"Poet, we weep to pet woe."
 "Poetic Eco-Pit."
 "Poor boy, Roy Boop."
 "A posse: Aesop's!"
@@ -15920,6 +15928,7 @@ blurb
 "'Throats to trash torts, ah!'"
 "'Tiptoe in? PETITION!'"
 "'Title is elitist.'"
+"'TixCo: Toxic!'"
 "'To-allow-loot law? Low, a lot!'"
 "'To frisk oft irks!'"
 "'To mean mo['] neat! No meat!'"
@@ -16098,6 +16107,7 @@ blurb
 "The nerds debate whether Andrea's Sane Rad Nerd Asa riffs on, or extends, nerd stereotypes."
 "The nerds debate whether dumb people deserve clamor or calm."
 "The nerds debate whether RiderNet is part of the Trendier Nerd Tier."
+"The nerds discuss a high-powered consortium of Tim Courson, Rico Mounts, and Simon Turco."
 "The nerds discuss Bros to Robots and E-Haven Heaven, two popular science fiction books."
 "The nerds discuss Geekiness, by Gene Sikes."
 "The nerds discuss levels of irony in Doc Pat's Top Cads['] Podcast."
@@ -16150,6 +16160,7 @@ blurb
 "'Numerology? You mongrel!'"
 "'Oh, Dirk's dorkish.'"
 "Oh, prates: 'Pros hate heap sort!'"
+"'Oleg, go Google!'"
 "One nerd boldly proclaims 'Tech is ETHICS!'"
 "One nerd describes building an Ion-Duct Conduit."
 "One nerd downloads a U-Adept Update."
@@ -16192,6 +16203,7 @@ blurb
 "They berate a grade-f defrag."
 "They debate if the mental math of Number Bum Ren is worth it."
 "They discuss admissions for the Brilliant-Brain Till."
+"They discuss submissions to the Upgrades-Surge Pad."
 "They disparage Maze-Gain Magazine."
 "They evaluate various like-stats talk sites."
 "They quote lyrics from the Rap Nerds Pardners."
