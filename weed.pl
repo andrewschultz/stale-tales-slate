@@ -54,10 +54,6 @@ $upPosLimit = -1;
 
 $inDir = "";
 
-open(A2, ">dupes.txt");
-open(B, ">oddmatch.txt");
-open(C, ">badana.txt");
-
 $sta = time();
 
 $exp{"r"} = $exp{"-r"} = "roiling";
@@ -73,6 +69,7 @@ while ($count <= $#ARGV)
   $b = @ARGV[$count+1];
   for ($a)
   {
+  / / && do { $word = $a; die(cromstring($word, 1)); $count++; next; };
   /^-?b/ && do { $upBadLimit = $b; $count++; next; };
   /^-?p/ && do { $upPosLimit = $b; $count++; next; };
   /^-?r/ && do { @weedDir = (@weedDir, $roi); $count++; next; };
@@ -81,6 +78,10 @@ while ($count <= $#ARGV)
   usage();
   }
 }
+
+open(A2, ">dupes.txt");
+open(B, ">oddmatch.txt");
+open(C, ">badana.txt");
 
 if (@ARGV[0] eq "-2")
 {
@@ -102,8 +103,13 @@ weedOneSource("c:/games/inform/@ARGV[0].inform/source");
 
 sub usage
 {
-print << EOT;
-EOT;
+print <<EOT;
+weed.pl splits things into three files
+dupes.txt = possible duplicates without []
+oddmatch.txt = odd matches
+badana.txt = bad anagrams
+EOT
+exit;
 }
 
 sub stillWorth
@@ -120,29 +126,35 @@ my $myfi = "$_[0]/story.ni";
 open(A, "$myfi") || die ("No $_[0]/$myfi.");
 print "Weeding out $myfi\n";
 
-while (($a = <A>) && (stillWorth())
+while (($a = <A>) && (stillWorth()))
 {
   $line++;
-  chomp($a);
+  chomp($a); $a = lc($a);
   
-  if ($a =~ /^table of.*xx/) { $inTable = 1; $thisTable = $a; $thisTable =~ s/\[.*//g; chomp($thisTable); next;}
+  if ($a =~ /^table of.*xx/) { $inTable = 1; $thisTable = $a; $thisTable =~ s/\[.*//g; chomp($thisTable); print B "==$thisTable\n"; next;}
   if (!$inTable) { next; }
   
   if ($a !~ /[a-z]/) { $inTable = 0; next; }
   if (($a =~ /^\"/) && ($a !~ /\t/) && ($a =~ /[a-z]/) && ($a !~ /\[\]/))
   {
     $a = cutDown($a);
-    $b = mash(lc($a));
-    if ($dupes{$b})
+	if (!checkFullAna($a))
+	{
+	  mash($a);
+	}
+    if ($dupes{$a})
     {
 	$q = lets($a);
 	$q2 = lets($dupes{$b});
 	if ($q2 != $q) { $z = Math::BigInt::bgcd(($q2, $q)); $q2 /= $z; $q /= $z; print A2 "SZ $q2 $q: "; $sm++; }
 	print A2 "$a ($line/$thisTable) possible dupe of $dupes{$b} ($ln{$b}/$ta{$b}).\n"; $di++;
 	}
+	else
+	{
     $dupes{$b} = $a;
 	$ln{$b} = $line;
 	$ta{$b} = $thisTable;
+	}
 	#print "$b -> $a\n";
   }
 }
@@ -176,6 +188,54 @@ sub cutDown
   
 }
 
+sub checkFullAna
+{
+  $fullAna = 0;
+  $fullAna |= quikAna($_[0]);
+  if ($fullAna) { return $fullAna; }
+  if ($_[0] =~ /^\"the[^a-z]/i)
+  {
+    $b = $_[0]; $b =~ s/^\"the//gi; $fullAna |= quikAna($b);
+    if ($fullAna) { return $fullAna; }
+  }
+  if ($_[0] =~ /^\"a[^a-z]/i)
+  {
+    $b = $_[0]; $b =~ s/^\"a//gi; $fullAna |= quikAna($b);
+    if ($fullAna) { return $fullAna; }
+  }
+  return 0;
+}
+
+sub quikAna
+{
+  my $strg = lc($_[0]); $strg =~ s/[^a-z]//gi;
+  
+  my@x = split(//, $strg);
+  
+  for ('a' .. 'z') { $quik{$_} = 0; }
+  
+  for (@x) { $quik[ord($_)-97]++; }
+  
+  my %roots;
+  my $retStr;
+  my $temp = lc($_[0]);
+  
+  #print "$temp: $a $b $c\n";
+  for $let ('a' .. 'z')
+  {
+    $idx = ord($let) - 97;
+    $t2 = () = ($temp =~ /$let/g);
+	@roots[$idx] = $t2;
+  }
+
+  $q = Math::BigInt::bgcd(@roots);
+  
+  if ($q > 1) { return 1; }
+  
+  return 0;
+  
+}
+
 sub mash
 {
   my %roots;
@@ -205,7 +265,7 @@ sub mash
 	else
 	{
 	$posBad++;
-	print B "$posBad $_[0]\n";
+	print B "$posBad $_[0]: " . cromstring($_[0]) . "\n";
 	}
 	$hadPoss = 0;
 	}
@@ -222,13 +282,70 @@ sub lets
   return length($temp);
 }
 
+sub cromstring
+{
+  my $x = lc($_[0]); $x =~ s/[^a-z]//gi;
+  my $cromString = "";
+  if ($x !~ /[a-z]/) { return 1; } #trivially true
+  @z = split(//, $x);
+  my @which;
+  for (@z)
+  {
+    #print "Adding $_: @which\n";
+    @which[ord($_)-97]++;
+  }
+  for (0..25)
+  {
+    if (@which[$_])
+	{
+	$c = chr($_+97);
+    $cromString .= "$c@which[$_]";
+	}
+  }
+  if ($_[1])
+  {
+    $bgcd = Math::BigInt::bgcd(@which) . "=GCD...";
+	if ($bgcd == 1)
+	{
+	  print "not perfect anagram";
+	  $lowestInt = 0;
+	  for (0..25)
+	  {
+	    if (@which[$_])
+		{
+		  if (!$lowestInt) { $lowestInt = @which[$_]; }
+		  elsif (@which[$_] < $lowestInt) { $lowestInt = @which[$_]; }
+		}
+	  }
+	  print "\nCulprit(s): ";
+	  for (0..25)
+	  {
+	    if (@which[$_] % $lowestInt)
+		{
+		  $rem = @which[$_] % $lowestInt;
+		  print chr($_+97) . "($rem) ";
+		}
+	  }
+	  print "\n";
+	  
+	}
+	else
+	{
+	  print "Perfect anagram";
+	}
+  }
+  return $cromString;
+}
+
 sub gotAna
 {
-  my $temp = $_[0]; $temp =~ s/\[[^\]]*\]//g; $temp =~ s/^\"//g;
+  my $temp = $_[0]; $temp =~ s/\[[^\]]*\]//g; $temp =~ s/^[^a-z0-9]*//gi;
   my @divs = split(/[ -\.]+/, $temp);
   my %totes;
   my @tmp;
   my @words;
+  
+  if ($temp =~ /hillside/i) { for (0..$#divs) { print "$_ @divs[$_]\n"; } print $temp;}
   
   for $q (0..$#divs)
   {
@@ -246,11 +363,28 @@ sub gotAna
 	  $runTote += @words[$j]; 
       if (!$totes{$runTote})
 	  {
+	    if ($i == $j)
+		{
+	    $totes{$runTote} = "$i"; #print "New hash $runTote\n";
+		}
+		else
+		{
 	    $totes{$runTote} = "$i-$j"; #print "New hash $runTote\n";
+		}
 	  }
 	  else
 	  {
-	    print B "$_[0] $i-$j maps to $runTote : $totes{$runTote}\n";
+	    @rt = split(/-/, $totes{$runTote});
+		$mayDupe = 0;
+		if (($j - $i == @rt[1] - @rt[0]) && ($i > @rt[1])) { $mayDupe = 1; }
+		
+		if ($j == $i) { $combo = "$i-$j"; } else { $combo = "$i"; }
+		
+		if ($mayDupe && $showDupe) { print B "(DUPE WORDS?) "; }
+		if (($mayDupe == 0) || ($showDupe == 1))
+		{
+	    print B "$_[0] $combo maps to $runTote : $totes{$runTote}\n";
+		}
 		$hadPoss = 1;
       }
 	}

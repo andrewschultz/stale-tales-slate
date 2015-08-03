@@ -13,6 +13,8 @@ use Algorithm::Permute;
 $myMax = 1000;
 $maxLetters = 20;
 
+$showPoss = 1;
+$showRemain = 1;
 
 $checkForDup = 0;
 
@@ -22,16 +24,19 @@ while ($cur <= $#ARGV)
   {
   /-a/ && do { $lookDif = 1; $cur++; next; };
   /-f/ && do { $fileName = @ARGV[$cur+1]; $cur += 2; next; };
-  /-y/ && do { $fileName = "reds.txt"; $settler = 1; $cur++; next; };
-  /-n/ && do { $fileName = "reds.txt"; $settler = 0; $cur++; next; };
+  /^-y$/ && do { $fileName = "reds.txt"; $settler = 1; $cur++; next; };
+  /^-n$/ && do { $fileName = "reds.txt"; $settler = 0; $cur++; next; };
   /-l/ && do {$maxLetters = @ARGV[$cur+1]; $cur += 2; next; };
   /-m/ && do {$myMax = @ARGV[$cur+1]; $cur += 2; next; };
+  /-np/ && do {$showPoss = 0; $cur++; next; };
+  /-nr/ && do {$showRemain = 0; $cur++; next; };
   /\./ && do { $fileName = @ARGV[$cur]; $cur++; next; };
+  /^[a-z]/ && do { if (!$firstString) { $firstString = $cur; } $cur++; next; };
   $cur = $#ARGV + 1;
   }
 }
 
-if (!$fileName) { $printResults = 1; @letArray = split(//, "@ARGV[0]"); @array = @ARGV; oneRed(); }
+if (!$fileName) { $printResults = 1; @letArray = split(//, "@ARGV[$firstString]"); @array = @ARGV; for (1..$firstString) { shift(@array); } oneRed(); }
 else
 {
   $printResults = 0;
@@ -121,10 +126,27 @@ $firstLet = "";
 for $a (sort keys %statFin)
 {
   $thisLet = $a; $thisLet =~ s/^(.).*/$1/;
+  if ($showPoss)
+  {
   if ($firstLet ne $thisLet) { print "\n"; } else { print " | "; }
   print "$a: $statFin{$a}";
+  }
+  if ($statFin{$a})
+  {
+    @x = split(/-/, $a);
+	if (@poss[@x[1]] !~ /@x[0]/)
+	{
+		@poss[@x[1]] .= @x[0];
+	}
+	else
+	{
+	  #print "\n@poss[@x[0]]: Not adding @x[0] to @x[1].\n";
+	}
+  }
   $firstLet = $thisLet;
 }
+
+if ($showRemain) { print "\n"; for (0..$#poss) { print "" . ($_+1) . ": @poss[$_] "; } }
 
 if ($succ == 0) { print "We didn't find any possibilities. Sorry.\n" }
 }
