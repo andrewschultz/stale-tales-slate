@@ -45,6 +45,23 @@ $ary{"x"} = 112768081;
 $ary{"y"} = 122359252;
 $ary{"z"} = 122969618;
 
+$repl{"d-word-u"} = "damn";
+$repl{"d-word"} = "damn";
+$repl{"ass"} = "ass";
+$repl{"ass-u"} = "ass";
+$repl{"crap"} = "crap";
+$repl{"crap-u"} = "crap";
+$repl{"dick"} = "dick";
+$repl{"dick-u"} = "dick";
+$repl{"a-b"} = "abe";
+$repl{"d-t"} = "dot";
+$repl{"n-t"} = "nate";
+$repl{"i-n"} = "ian";
+$repl{"sim"} = "simeon";
+$repl{"toti"} = "toni";
+$repl{"tt"} = "toi";
+$repl{"ta"} = "tai";
+
 $di = $sm = $badans = $posBad = 0;
 
 $badana = 1;
@@ -131,23 +148,32 @@ while (($a = <A>) && (stillWorth()))
   $line++;
   chomp($a); $a = lc($a);
   
-  if ($a =~ /^table of.*xx/) { $inTable = 1; $thisTable = $a; $thisTable =~ s/\[.*//g; chomp($thisTable); print B "==$thisTable\n"; next;}
+  if ($a =~ /^table of.*xx/) { $inTable = 1; $thisTable = $a; $thisTable =~ s/\[.*//g; chomp($thisTable); $tableYetA2 = 0; print B "==$thisTable\n"; next;}
   if (!$inTable) { next; }
   
   if ($a !~ /[a-z]/) { $inTable = 0; next; }
   if (($a =~ /^\"/) && ($a !~ /\t/) && ($a =~ /[a-z]/) && ($a !~ /\[\]/))
   {
+    $old = $a;
     $a = cutDown($a);
+	#if ($a =~ /tjaden/i) { die ("$old -> $a"); }
 	if (!checkFullAna($a))
 	{
 	  mash($a);
 	}
-    if ($dupes{$a})
+	$b = cromstring($a);
+    if ($dupes{$b})
     {
 	$q = lets($a);
-	$q2 = lets($dupes{$b});
-	if ($q2 != $q) { $z = Math::BigInt::bgcd(($q2, $q)); $q2 /= $z; $q /= $z; print A2 "SZ $q2 $q: "; $sm++; }
-	print A2 "$a ($line/$thisTable) possible dupe of $dupes{$b} ($ln{$b}/$ta{$b}).\n"; $di++;
+	$q2 = lets($dupes{$a});
+	if ($q2 != $q)
+	{
+	  $z = Math::BigInt::bgcd(($q2, $q)); $q2 /= $z; $q /= $z;
+	  #print A2 "SZ $q2 $q: "; $sm++;
+	  $sm++;
+	}
+	if (!$tableYetA2) { $tableYetA2 = 1; print A2 "==$thisTable\n"; }
+	print A2 "$a ($line) ~? $dupes{$b} ($ln{$b}/$ta{$b}).\n"; $di++;
 	}
 	else
 	{
@@ -161,9 +187,9 @@ while (($a = <A>) && (stillWorth()))
 
 }
 
-$s1 = "$di total differences. $sm size mismatches.\n";
-$s2 = "$posBad interesting cases.\n";
-$s3 = "$badans total likely bad anagrams, disable with \[\].\n";
+$s1 = "(DUPES.TXT) $di total differences. $sm size mismatches.\n";
+$s2 = "(ODDMATCH.TXT) $posBad interesting cases.\n";
+$s3 = "(BADANA.TXT) $badans total likely bad anagrams, disable with \[\].\n";
 
 print A2 "$s1";
 
@@ -182,7 +208,19 @@ print "$totTime total seconds. Output to dupes.txt and badana.txt and oddmatch.t
 sub cutDown
 {
   my $temp = $_[0];
+  $temp =~ s/\"\s.*/\"/g;
   $temp =~ s/, by / /g;
+  #if ($temp =~ /may undo/) { print "!!!!$temp\n"; }
+  if ($temp =~ /\[[a-z-]+\]/)
+  {
+    for $x (sort keys %repl)
+	{
+	  if ($temp =~ /\[$x\]/)
+	  { #print "$x to $repl{$x} in $temp\n";
+	    $temp =~ s/\[$x\]/$repl{$x}/g;
+	  }
+	}
+  }
   $temp =~ s/\[[^\]]*\]//g;
   return $temp;
   
@@ -260,7 +298,7 @@ sub mash
   {
     if (!$hadPoss)
 	{
-	  $badans++; print C "$badans $_[0]\n";
+	  $badans++; print C "$badans $_[0]: " . cromstring($_[0]) . "\n";
 	}
 	else
 	{
@@ -294,6 +332,17 @@ sub cromstring
     #print "Adding $_: @which\n";
     @which[ord($_)-97]++;
   }
+  if ($_[1] == -1)
+  {
+    $bgcd = Math::BigInt::bgcd(@which) . "=GCD...";
+	for (0..25)
+	{
+	  if (@which[$_])
+	  {
+	    @which[$_] /= $bgcd;
+	  }
+	}
+  }
   for (0..25)
   {
     if (@which[$_])
@@ -302,7 +351,7 @@ sub cromstring
     $cromString .= "$c@which[$_]";
 	}
   }
-  if ($_[1])
+  if ($_[1] == 1)
   {
     $bgcd = Math::BigInt::bgcd(@which) . "=GCD...";
 	if ($bgcd == 1)
@@ -345,7 +394,6 @@ sub gotAna
   my @tmp;
   my @words;
   
-  if ($temp =~ /hillside/i) { for (0..$#divs) { print "$_ @divs[$_]\n"; } print $temp;}
   
   for $q (0..$#divs)
   {
@@ -354,6 +402,7 @@ sub gotAna
 	for $i (0..$#tmp) { $x = $x + $ary{@tmp[$i]}; }
 	@words[$q] = $x;
   }
+  #if ($temp =~ /hillside/i) { for (0..$#words) { print "$_ @words[$_]\n"; } print $temp; $die = 1;}
   #die(join("/", @words));
   for $i (0..$#words)
   {
@@ -361,7 +410,8 @@ sub gotAna
     for $j ($i..$#words)
 	{
 	  $runTote += @words[$j]; 
-      if (!$totes{$runTote})
+	  #if ($totes{$runTote} =~ /^0/) { print B "$totes{$runTote}: $i, $j, $_[0]\n"; }
+      if ($totes{$runTote} !~ /[0-9]/)
 	  {
 	    if ($i == $j)
 		{
@@ -374,20 +424,36 @@ sub gotAna
 	  }
 	  else
 	  {
+	    if ($die) { print "$runTote already $totes{$runTote}\n"; }
 	    @rt = split(/-/, $totes{$runTote});
-		$mayDupe = 0;
-		if (($j - $i == @rt[1] - @rt[0]) && ($i > @rt[1])) { $mayDupe = 1; }
+		if (!@rt[1]) { @rt[1] = @rt[0]; }
 		
-		if ($j == $i) { $combo = "$i-$j"; } else { $combo = "$i"; }
+		$mayDupe = 0;
+		if ($i <= @rt[1]) { $mayDupe = 1; }
+		
+		if ($j == $i) { $combo = "$i"; } else { $combo = "$i-$j"; }
 		
 		if ($mayDupe && $showDupe) { print B "(DUPE WORDS?) "; }
 		if (($mayDupe == 0) || ($showDupe == 1))
 		{
-	    print B "$_[0] $combo maps to $runTote : $totes{$runTote}\n";
+		$anaStr = "PART-ANA:";
+		#note it'd be nice to reject if one word is the other.
+		if (($i == $j) && (@rt[0] == @rt[1]) && (@divs[$i] == @divs[@rt[0]]))
+		{
+		}
+		else
+		{
+		for ($i..$j) { $anaStr .= " @divs[$_]"; }
+		$anaStr .= " <->";
+		for (@rt[0]..@rt[1]) { $anaStr .= " @divs[$_]"; }
+		print B "$anaStr\n";
+		}
+	    #print B "$_[0] $combo maps to $runTote : $totes{$runTote}\n";
 		}
 		$hadPoss = 1;
       }
+	  #if ($die) { print "Tried $i-$j, total = $runTote\n";}
 	}
   }
-  #for $g (sort keys %totes) { print B "$_[0]: $g $totes{$g}\n"; } die;
+  #if ($die) { for $g (sort keys %totes) { print B "$_[0]: $g $totes{$g}\n"; } $g = "0-0"; print "0=$totes{$g}"; die; }
 }
