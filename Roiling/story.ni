@@ -24441,7 +24441,7 @@ blurb
 "Cop out? Up, coot!"
 "Eh, napping happening?"
 "Fond of nod off?"
-"Go to bed? Beg: to DO."
+"Go to bed? Beg: to DO." []
 "Let astray? Stay alert!"
 "Loafing? I flag? No."
 "Nap Time? Am inept!"
@@ -24503,8 +24503,8 @@ blurb
 "'Re-gluing...grueling!'"
 "'Reader, at a retread.'"
 "'Redacting? Can get rid.'"
-"'Redaction? I don't care.'"
-"'Redoin['].' / 'Ride on.'"
+"'Redaction? I don't care.'" []
+"'Redoin['].' / 'Ride on.'" []
 "'Rein in, er...'"
 "'Rent-up? Re-punt.'"
 "'A retry artery.'"
@@ -24531,7 +24531,7 @@ blurb
 "Beat? A knock? No take back"
 "Bouts of undo: out of bounds"
 "Bud, yo, tiny bitty undo? Don't buy it"
-"Can't redo! Don't care"
+"Can't redo! Don't care" []
 "Can't undo. Dunno--ACT"
 "CHOSEN! Nag no changes"
 "Dire to redo it"
@@ -24544,7 +24544,7 @@ blurb
 "No tube to un-be"
 "Not again! A giant NO"
 "Oo, rend no re-do"
-"Redoing ignored"
+"Redoing ignored" []
 "Rehash, eh? Rash"
 "Reorients? No retries"
 "A reset? NO! Erase not"
@@ -24579,7 +24579,7 @@ blurb
 "A dally: all day?"
 "Deferment fermented."
 "Delayings yield nags."
-"Dog, a hint: do a thing!"
+"Dog, a hint: do a thing!" []
 "Dust off! DO stuff!"
 "'Effort? I forfeit!'"
 "Elapse time? Lame. I step."
@@ -24591,9 +24591,9 @@ blurb
 "Game rut? Um, great."
 "Gee, don't get done."
 "A glum, um, lag."
-"Gosh, di'n't DO things." [p]
+"Gosh, di'n't DO things." [p] []
 "Haste? Meh! The shame!"
-"Haw, lie a while."
+"Haw, lie a while." []
 "Hold sweat? Slow death."
 "Howdy! Why do?"
 "Hurry on? No hurry."
@@ -24664,10 +24664,9 @@ blurb
 "Trek slow? Let's work!"
 "'Tries? It's, er...I rest.'"
 "Uh, stir! Rush it!"
-"Uhh, mo['] ho-hum?"
+"Uhh, mo['] ho-hum?" []
 "Unmotivated? I'd vent, man. Out!"
 "Veg out, eh? The vogue."
-"'Vex me not. Next move.'"
 "Waste time?! Emit sweat!"
 "A watch? Haw, act."
 "Way in, I yawn."
@@ -24696,7 +24695,7 @@ blurb
 "'O, quite,' quote I."
 "On doubts: bud, not so!"
 "Reaction's so certain."
-"Right on, I throng!"
+"Right on, I throng!" []
 "Say ays?"
 "Simpers impress no-one."
 "So cheery! Or...cheesy?"
@@ -25982,7 +25981,6 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Reb Heet, the Beer: Be There!"	true
 "Rebier's Berries"
 "Rebuildy Bud Riley"
-"Recursed Reducers"
 "Recursions Co-Insurers"
 "Red Bay Bad Rye"
 "Red Inn Dinner Rendin[']"
@@ -26584,7 +26582,7 @@ blurb
 "Fly Reid Fridley"
 "Fly Rena Flanery"
 "Fly Renna Flannery"
-"Fly Retha Flaherty"
+"Hater Retha"
 "Fly Ware Frawley"
 "Frankly Fly Rank"
 "Freakin['] Frankie"
@@ -26633,7 +26631,7 @@ blurb
 "Ill Andre Nardelli"
 "Ill Angel Langille"
 "Ill Annie Iannelli"
-"Ill Archie Chiarelli"
+"Ill Archie Chiarelli" []
 "Ill Ash Sillah"
 "Ill Bee Liebel"
 "Ill Ben Bellin"
@@ -26644,7 +26642,7 @@ blurb
 "Ill Cara Laclair"
 "Ill Cesar Carlisle"
 "Ill Chana Callihan"
-"Ill Chas Challis"
+"Ill Chas Challis" []
 "Ill Chase Achilles"
 "Ill Cora Carillo"
 "Ill Corie Ciriello"
@@ -26689,8 +26687,8 @@ blurb
 "Ill Nathan Tannahill"
 "Ill Nevada Villaneda"
 "Ill Noe O'Neill"
-"Ill Omer Morelli"
-"Ill One Lionel"
+"Ill Omer Morelli" []
+"Ill One Lionel" []
 "Ill Peter Petrelli"
 "Ill Regan Allinger"
 "Ill Regena Langelier"
@@ -26764,9 +26762,9 @@ blurb
 "Playful Fly Paul"
 "Poet Carn Caperton"
 "Poet Clem Lecompte"
-"Poet Dan Patnode"
+"Poet Dan Patnode" []
 "Poet Ernst Petterson"
-"Poet Hans Stanhope"
+"Poet Hans Stanhope" []
 "Poet Lina Lapointe"
 "Pop Diva Ida Vopp"
 "Pop Lee's Peoples"
@@ -26798,7 +26796,7 @@ blurb
 "Stinkin['] Kittins"
 "Street Mix Extremist Mister Tex"
 "Streetwise [if player is male]Stew Steier[else]Tessie Wert[end if]"
-"Swell Bo Bellows"
+"Swell Bo Bellows" []
 "Swell Harton Allensworth"
 "Swell Roth Ellsworth"
 "Tennis Hater Hartenstein"
@@ -27647,7 +27645,7 @@ blurb
 "Taky Katy"
 "Taxin['] Xtina"
 "Tessa's assets"
-"Wantier Terwina"
+"Wantier Terwina" []
 "a weekend, weakened"
 
 table of lame computer games [xxm6]
@@ -27668,7 +27666,7 @@ blurb
 "Awe, Havoc, Have a Cow"
 "Awestriking Waterskiing"
 "Ax of a Fox"
-"Ax Them the Max"
+"Ax Them the Max" []
 "Ay, Fists Satisfy"
 "Bad Cop Pod-Cab"
 "Bad Tin Bandit"
@@ -27685,7 +27683,7 @@ blurb
 "Beating Big [n-t]"
 "Beer-Clash Bleachers"
 "Behold a Bad Hole"
-"BLAM! The Meth Lab"
+"BLAM! The Meth Lab" []
 "Blasting Battlings"
 "Blings O['] Goblins"
 "Bold Moves Mobs Loved"
@@ -27693,7 +27691,6 @@ blurb
 "Bonus Bo'Sun"
 "Bops to Po['] Bots"
 "A Bounce on a Cube"
-"The Box-Bot Hex"
 "Box the HexBot"
 "Break Into Oteri Bank"
 "Breakout Outbreak"
@@ -27815,7 +27812,7 @@ blurb
 "Go, Wrath Warthog: a Growth"
 "Gogar's Aggros"
 "Gold-Tiara Gladiator Triad Gaol"
-"Gory Orgy"
+"Gory Orgy" []
 "Got a Row, Go to War"
 "Grim Mr. GI"
 "Gringo Goring"
@@ -27863,7 +27860,7 @@ blurb
 "I, Norman, Iron Man"
 "I Prevent ViperNet"
 "I Push Up His U-Ship"
-"I Shaft at Fish"
+"I Shaft at Fish" []
 "I Spoon Poison"[]
 "I Thud it, Duh"
 "I, Trojan Janitor"
@@ -27875,7 +27872,7 @@ blurb
 "Imhotep's Time Hops"
 "Imperialist Primalities"
 "Imps W/Wimps"
-"Infidel Fieldin[']"
+"Infidel Fieldin[']" []
 "Insatiable Alien Baits" []
 "Intense Nine-Set Tennies"
 "Ion Rig Origin"
@@ -27889,7 +27886,7 @@ blurb
 "Kill Him, Kim Hill"
 "Kill Off Folk-Ilk"
 "King is Skiing"
-"A KO Brute Outbreak"
+"A KO Brute Outbreak" []
 "Lane of a Felon"
 "Lard-Dork, Dark Lord"
 "Lasered Leaders"
@@ -27928,7 +27925,7 @@ blurb
 "Mars Arms"
 "Martians A-Smartin[']"
 "Marv's Tin Varmints"
-"Mastering Emigrants"
+"Mastering Emigrants" []
 "Mean Ex-Axemen"
 "Mega GI Maggie"
 "Mm Yeah Mayhem"
@@ -28004,7 +28001,7 @@ blurb
 "Raids On Inroads"
 "RamTek Market"
 "Rapidest Pest Raid"
-"Reamings, Smearing"
+"Reamings, Smearing" []
 "Recessed Receders"
 "Recessed Seceders"
 "Red Air Raider"
@@ -28014,7 +28011,7 @@ blurb
 "Regentship Spree-Thing"
 "Reichs['] Riches"
 "Ribs Gone? So Boring"
-"A Rider-Raider"
+"A Rider-Raider" []
 "Rifle Op Profile of Peril"
 "Ring of Forgin[']"
 "Roads So Rad"
@@ -28039,7 +28036,7 @@ blurb
 "Senshi Shines"
 "A Setup Up East"
 "Shoot Down Hood Towns"
-"Shooting This Goon"
+"Shooting This Goon" []
 "Simoni's Mini-SOS Mission"
 "Sing Loud, Solid Gun"
 "Six-Gun Heat: Exhausting"
@@ -28057,7 +28054,7 @@ blurb
 "So, Fright or Fights"
 "So Ply, Ol['] Spy"
 "So Ply Slopy Ploys, Po['] Sly Ol['] Spy"
-"So-Retro Rooster"
+"So-Retro Rooster" []
 "Soho Bay Booyahs"
 "Some Fair of Armies"
 "Sonar Arson"
@@ -28072,7 +28069,7 @@ blurb
 "Spook KO Ops"
 "Sporadic Picadors"
 "Spot Clue Couplets/Octuples"
-"Sprint [']N Trips"
+"Sprint [']N Trips" []
 "Sputnik Stink-Up"
 "Spyplane Playpens"
 "St. Thief the Fist"
@@ -28092,7 +28089,7 @@ blurb
 "Street Setter"
 "Streetcar Scatterer"
 "Stun Gun, Nun Guts"
-"Superstar Pasturers"
+"Superstar Pasturers" []
 "Swat it: a Twist"
 "Swervyn['] Wyverns"
 "Swordman, Sandworm"
@@ -28118,8 +28115,8 @@ blurb
 "To Progress: Gore Sports"
 "To Ship Hit-Ops"
 "To Swarm at Worms"
-"Toastin['] Station"
-"Too-Hard Hot Road"
+"Toastin['] Station" []
+"Too-Hard Hot Road" []
 "Top Cars to Scrap Captors or Pacts"
 "Top Games: Most Gape"
 "Traffic Car Tiff"
@@ -28127,7 +28124,7 @@ blurb
 "Trash Coop Crapshoot"
 "Tree Plot Teleport"
 "Trikes Strike"
-"Troop'n Proton"
+"Troop'n Proton" []
 "Trucks Struck"
 "Truster Turrets"
 "Try Fo['] Forty to Fry"
@@ -40033,7 +40030,6 @@ blurb
 "'Hug, Ace? Gauche!'"
 "'Hug some gumshoe? Ug, homes.'"
 "'Hum, chow. How much?'"
-"'Hurray! A hurry!'"
 "'Hyena Haney!' / 'Nyeah!'"
 "'A hyper prey, ah? Eh? Pray!'"
 "'I, a sly lout?' / 'It's all you!'"
@@ -40688,7 +40684,6 @@ blurb
 "'Time card? I'm traced!'"
 "'The time. TIE THEM.'"
 "'Time to go. Get [']im too!'"
-"'Time's out, titmouse!'"
 "A timid 'I admit...'"
 "'Tino! Toni!' / 'On it!'"
 "'Tintin, innitt?'"
@@ -41340,7 +41335,7 @@ blurb
 "'Granola, Al? Groan!'"
 "'Graveyard? A drag, very.'"
 "'Great, I'd grade it.'"
-"'Greed is EDGE, Sid.'"
+"'Greed is EDGE, Sir.'"
 "'Greedy Ken. Geeky Nerd!'"
 "'Grim? Nay, I'm angry!'"
 "'Grumpy, Mr. G? / Yup.'"
@@ -42199,14 +42194,14 @@ blurb
 "[A-word-u]hole Sal Shoe"
 "[crap-u] Kid Pickard" []
 "[crap-u]-Kind Pinckard"
-"[d-word-u] Elsie Siedlecki"
-"[d-word-u] Fern Fendrick"
-"[d-word-u] Karon Kondracki"
-"[d-word-u] Leo Dolecki"
-"[d-word-u] Rae Radecki"
-"[d-word-u] Teri Dietrick"
-"[d-word-u] Therese Ketcherside"
-"[d-word-u] Wes Sedwick"
+"[dick-u] Elsie Siedlecki"
+"[dick-u] Fern Fendrick"
+"[dick-u] Karon Kondracki"
+"[dick-u] Leo Dolecki"
+"[dick-u] Rae Radecki"
+"[dick-u] Teri Dietrick"
+"[dick-u] Therese Ketcherside"
+"[dick-u] Wes Sedwick"
 "[d-word-u]-Why Wyndham" []
 "[dick-u] Ian Kincaid" []
 "[if player is male]Barry 'Bud'[else]Drab Ruby[end if] Bradbury"
@@ -42530,7 +42525,7 @@ blurb
 "Cloying Long Icy Gino Cly"
 "Clued Ed Luc"
 "Coachman Mcconaha"
-"Coddled Edd Cole"
+"Coddled Cold Edd"
 "Cogniser/Co-Signer Rescigno"
 "Coiner [if player is male]Enrico[else]Corine[end if] Cerino"
 "Colasanti's scalations"
@@ -43209,7 +43204,7 @@ blurb
 "Inhumane [if player is male]Huie Mann[else]Nina Hume[end if]"
 "Injuro-Junior Jon Rui"
 "Innocent Nice [toti]"
-"Introvert Trot Nevin"
+"Introvert Trot Ervin"
 "Invalid Vain Lida"
 "Ireless Eissler"
 "Islander Dan Riles"
@@ -43701,7 +43696,7 @@ blurb
 "Meanie Raj Jeanmarie"
 "Meany Lech McElhaney"
 "Meany Mayne"
-"Measeled Ledesma"
+"Measel'd Ledesma"
 "Measly Sly Mae"
 "Meatier Rita Mee"
 "Meek Mr. Kemmer"
@@ -44137,7 +44132,7 @@ blurb
 "Rifle Nut [if player is male]Len Fruit[else]Rue Flint[end if]"
 "Right-Bank King Barth"
 "Rinser Risner"
-"Rip-Glands Spalding"
+"Rip-Glands Spradling"
 "Ripped Perp Di"
 "Ritz-O Ortiz"
 "Roach Arch-O Rocha"
@@ -44306,7 +44301,7 @@ blurb
 "Silent Roge Oesterling"
 "Silent-Yawn Winstanley"
 "Sin Kid Sin Diskin"
-"Sin-Mouth Hulmston"
+"Sin-Mouth Humiston"
 "Sir Paul Luprisa"
 "Skinned Denkins"
 "Slanderer Red Larsen"
@@ -44683,7 +44678,7 @@ blurb
 "Tetchier Teichert"
 "Tetchy Chetty"
 "Thick Art Kithcart"
-"Thick Ed, the ----"
+"Thick Ed, the [dick-u]"
 "Thick Ewan Whitenack"
 "Thick Hoss Hotchkiss-Hotchkiss"
 "Thick Leo Eickholt"
@@ -44880,7 +44875,7 @@ blurb
 "Warty Raw Ty"
 "Warzone Zorwena"
 "Was-Nerd Andrews Swander"
-"Waster Rat West"
+"Waster Rat Wes"
 "Weakling Gale Wink"
 "Wealthy Whatley"
 "Weaseling [if player is male]Galen[else]Angel[end if] Wise"
@@ -47697,7 +47692,6 @@ blurb
 "Refuge's Free, Gus"
 "Remiss Misers"
 "A Repo Opera"
-"Retire, Ol['] Loiterer"
 "Rife Sad Far Side"
 "Right, I'm Grim-Hit"
 "Rube St., Buster"
@@ -49109,7 +49103,7 @@ blurb
 "Morriset Trisomes"
 "Moses's mosses"
 "Moss-Bly Symbols"
-"mossier ismoeres"
+"mossier isomers"
 "Motte's Totems"
 "Mr. Poyle's Polymers"
 "Mr. Tice's Metrics"
@@ -49327,7 +49321,6 @@ blurb
 "the TerraCo Reactor"
 "Tessi-Estis sites"
 "Tessudi studies"
-"test case cassettes"
 "Theorist Theriot's thorites"
 "Theropodan parenthood"
 "Tiedeman dementia"
@@ -50108,12 +50101,12 @@ blurb
 "Wiz Kraus Zurawski"
 "Wiz Reba Wierzba"
 "Wiz Ren Winzer"
-"Wiz Roth Horwitz"
+"Wiz Roth Horwitz" []
 "Wiz Ruth Hurwitz"
 "Wiz Scheer Schweizer"
 "Wiz Ted Dewitz"
 "Wonder Geo Greenwood"
-"Wonder Sal Rosenwald"
+"Wonder Sal Rosenwald" []
 
 book oyster
 
@@ -50162,7 +50155,7 @@ blurb
 "has said before: 'Bernice, be nicer!'"
 "heaps scorn on her corns."
 "hears parents should hate Napster--it ENTRAPS."
-"'Hives on veins, oh!'"
+"'Hives on veins, oh!'" []
 "hopes she didn't catch fungal nag-flu."
 "hopes Tortu can pass the Ax [']Em Exam. Fish schools are so competitive."
 "hopes Tortu doesn't become a truant art nut."
@@ -50240,7 +50233,7 @@ blurb
 "'Ah, novices! Have coins, anchovies?' ask carps playing craps. 'Parley, player!' / 'Lose, sole, lose!'"
 "'Ahab? Baha!'"
 "'Alco-cola! Loca!'"
-"'Alcohol call! Ooh!'"
+"'Alcohol call! Ooh!'" []
 "'Any tip for profanity?'"[]
 "'As to a sot, oats!' Worst hangover cure yet."
 "'Ashtray?! Ray's hat!'"
@@ -50248,24 +50241,23 @@ blurb
 "'BastardCo Broadcast sets my system with formulas so [']armful,' moans some paranoid next to you."
 "'Bear the beer hat.'"
 "'Beer day: be ready!'"
-"'Beer? Gin? Re-binge!'"
+"'Beer? Gin? Re-binge!'" []
 "'Beers! Gin! Bring! See?'"
 "'Begin being human? Uh, MAN.'"
-"'BEHAVIOR!' / 'Bro, I have!'"
-"'Bettina's ain't best!'"
+"'BEHAVIOR!' / 'Bro, I have!'" []
+"'Bettina's ain't best!'" []
 "A bogus lardo whines about his blood sugar."
 "A bonefish wishes he had the fishbone to talk to that woman across the bar."
-"'Boor! Snub Bourbons?'"
+"'Boor! Snub Bourbons?'" []
 "'Bus stop sots['] pub? [']S sub-opt.'"
 "'By darn, brandy!' calls a patron."
 "'Champagne, chap? Nag [']em!'"
 "'Coke, Beam! Come back!'"
 "'A coke OK, Ace?'"
 "'Cost us to cuss? Scouts!' moans a patron."
-"'Cougars? I...gracious!'"
 "'Crikey! Ickyer Rickey!'"
 "A customer's leering is turned to reeling."
-"'Dan Klum's slam dunk!'"
+"'Dan Klum's slam dunk!'" []
 "'Dares? ... Arsed? Er, sad.'"
 "Dead Harm Made Hard blasts through the speakers."
 "Dolor-drool from a neighboring patron."
@@ -50274,26 +50266,26 @@ blurb
 "'Drink to Dirk? Not!'"
 "'Drinking Gin, Dirk?' / 'I...'"
 "'Each gin nice? Agh!'"
-"'Eh, bars basher? BS, hear?'"
+"'Eh, bars basher? BS, hear?'" []
 "'Enos Tam? Mean sot. No mates.'"
 "'Er, [a-b]? A beer?'"
 "A factish catfish shows the ladies he's cash-fit, mentioning his Navo-Nova-O-Van."
-"'Feel rad, Fred? Ale! Red Leaf Federal!'"
+"'Feel rad, Fred? Ale! Red Leaf Federal!'" []
 "Female voices: 'Octo-coot? Friendly nerd? I fly!' / 'Mobs o['] moobs? Sob mo[']!' / 'Her BEAT beer hat!'"
 "A fish in a dirty suit yells 'To bar! Abort!' repeatedly in a funny accent."
 "Fishmice create mischief."
-"'Float to Alf! ... O, flat.'"
+"'Float to Alf! ... O, flat.'" []
 "'Gin, Brit? Bring it!'"
 "'Gin? Fab. Big fan.'"
 "'A gin. I nag.'"
 "'Gin, Rob? Big Ron?' / 'Boring.'"
 "'Got any not-gay Tang? Oy!'"
-"'Grandi Gin? Rad! Gradin[']: daring!'"
+"'Grandi Gin? Rad! Gradin[']: daring!'" []
 "A gullible bluegill buys more drinks for ladies out of his league."
 "A halibut continues acting habitual."
 "'He dreads redheads. Sadder, eh?'"
 "'Healthy?! Hey! Halt!'"
-"'Herb! At the bar!' / 'Eh? ... BART!'"
+"'Herb! At the bar!' / 'Eh? ... BART!'" []
 "'Herbal? Er, blah.'"
 "'Hi, not hit-on?'"
 "'Hot ale to heal? Loathe a lot, eh?'"
@@ -50308,10 +50300,10 @@ blurb
 "'Konig gin? OK!'"
 "'Latham's malts? Ah!'"
 "'Le Bore, Lo-Beer!' someone mumbles."
-"'Lo-cal? Us? Callous.'"
+"'Lo-cal? Us? Callous.'" []
 "Lots of drinking around here, but not one kind grin."
-"'Low fat? Ow, flat.'"
-"'Man, sick mackins[']!'"
+"'Low fat? Ow, flat.'" []
+"'Man, sick mackins[']!'" []
 "Marlins snarl 'I'm...' at pinkos['] ink-ops."
 "'Martini! Ram it in!'"
 "'Mel's IPA? I sample a simple sip. Lame.'"
@@ -50328,7 +50320,7 @@ blurb
 "'Nice tan, ancient...'"
 "'No grog, gorgon!'"
 "'No vies? Bovines.'"
-"'Nor I'm minor!' yells someone the trolls frisk for IDs."
+"'Nor I'm minor!' yells someone the trolls frisk for IDs." []
 "'Oh no! Sick chinooks!'"
 "'Oik-Koi!'"
 "'Ok, cry, Rocky.'"
@@ -50363,7 +50355,7 @@ blurb
 "Scorn out. 'Oi! These croutons are corn snot!'"
 "'Seven evens? Streak Staker.' ... 'Takers!'"
 "A shark harks to a KRASH out of view."
-"'Sip on. POSIN[']!'"
+"'Sip on. POSIN[']!'" []
 "'Sips, all?' / 'I'll pass.'"
 "'Sit up! Tip us!'"
 "'Slim, get gimlets!'"
@@ -50375,7 +50367,7 @@ blurb
 "Snickers as someone orders Dr. Ice Riced Cider."
 "'Sober up? O, pure BS!'"
 "'Sobriety bites, Roy.'"
-"'Some bar, Ambrose!'"
+"'Some bar, Ambrose!'" []
 "Some clod king brags about his...hmm, you can't quite make it out."
 "Someone asks if this is a monied-up opium den."
 "Someone asks Wendi if she'd like to get wined."
@@ -50400,7 +50392,7 @@ blurb
 "Someone remarks this place has so much soul, you can skip Kip's and scram from Marc's."
 "Someone saves a bar seat abreast."
 "Someone wears plastic catlips as a gag."
-"'Sorghum rum? Gosh!'"
+"'Sorghum rum? Gosh!'" []
 "'Sounds on! Suds!'"
 "Spry male lampreys fish for companionship."
 "A squalider real squid walks by."
@@ -50408,7 +50400,7 @@ blurb
 "A strumpet trumpets pert smut."
 "'Tip here, prithee!' / 'Eh, tripe!'"
 "'To sip is top!' / 'O, pits!'"
-"'Too drunk! No? OK, turd!'"
+"'Too drunk! No? OK, turd!'" []
 "Tripes show esprit denouncing the ripest spiter."
 "The trolls leave people with BYOBs sobby."
 "'Um, Ron?' / 'No rum, Munro,' you hear a mourn."
@@ -50454,7 +50446,7 @@ blurb
 "Tom Snider? Snot-mired modernist!"
 "Undersea, endure as earn dues."
 "Vapid prose? Disapprove!"
-"Writing. Wring it..."
+"Writing. Wring it..." []
 "Yep, so-posey Poesy!"
 
 table of competing bars [xxy4]
@@ -51173,6 +51165,7 @@ blurb
 "a-parted data pre-adapter"
 "Anytime Amenity"
 "Barnacle Balancer"
+"Test-Case Cassette"
 "Boasty-say bot"
 "Boulder Doubler"
 "brindle blinder"
@@ -51488,17 +51481,17 @@ blurb
 "defensive feed-vines"
 "a doom-angel megalodon"
 "a DuPont's Stun-Pod"
-"gagmost maggots"
+"gagmost maggots" []
 "a gouge-o-gauge"
 "a harm-set hamster"
-"holistic hit-coils"
+"holistic hit-coils" []
 "horrendous dour herons" []
 "I-stun units" [p]
 "less-brat blasters"
 "literaliser artilleries"
 "a masher-shamer" []
 "a mend-o-demon"
-"mess-tron monsters"
+"mess-tron monsters" []
 "a mordant mad-tron"
 "a morto-motor"
 "an oranger groaner"
@@ -51515,25 +51508,25 @@ blurb
 "a reloading girandole"
 "the Repeatedly-Deplete Ray"
 "rimless slimers"
-"robust ur-bots"
+"robust ur-bots" []
 "a Samsung mass-gun"
 "a schmoes-SOS mech"
 "a scorp-proc"
 "shred-herds"
 "skanker krakens"
-"smashter hamsters"
+"smashter hamsters" []
 "snort-trons"
 "snotrag/gas-tron"
 "sore-rot roosters"
 "spam-U pumas"
 "a spambot tomb-asp"
-"splitter triplets"
+"splitter triplets" []
 "the Stalnaker LaserTank"
 "a stinger-nets rig"
 "a tan-block (not black) clank-bot"
 "a tartar rat"
 "technos-o-stench"
-"termless smelters"
+"termless smelters" []
 "ultrasound undulators"
 
 table of Elvira taunts [xxt5]
@@ -51551,24 +51544,24 @@ blurb
 "'Come, pet, compete!'"
 "'Courage, a cure: GO!'"
 "'Courage's a scourge!'"
-"'Coy AWOL? Way cool!'"
+"'Coy AWOL? Way cool!'" []
 "'Crisply slip. Cry?'"
 "'Cut in, choke, chicken out!'"
 "'Dastardly? Drat, sadly.'"
 "'Detachin[']? Can't hide!'"
 "'A detour?! Our DATE!'"
-"'A dodge! A dodge! ... Goaded?'"
+"'A dodge! A dodge! ... Goaded?'" []
 "'Drift away, tardy waif!'"
 "'Dry bolt? Bold try.'"
 "'Dueler eluder!'"
 "'Ego slit? Leg it so!'"
-"'Eh, valour overhaul?'"
+"'Eh, valour overhaul?'" []
 "'Emigrate it? Meager!'"
 "'Exit meant a Next Time!'"
 "'Fear nigh? Hang fire!'"
 "'Feint, wail--a fine wilt!'"
-"'Final-go loafing?'"
-"'Flee! Be feeble!'"
+"'Final-go loafing?'" []
+"'Flee! Be feeble!'" []
 "'A foul serf so fearful!'"
 "'Funk it so! Fink-outs!'"
 "'Furtive turf-vie?'"
@@ -51579,11 +51572,10 @@ blurb
 "'A hasty stay, ha!'"
 "'Head over, evader! Ho!'"
 "'A hurry? Hurray!'"
-"'Hurt none, on the run!'"
 "'I, abler bailer!'"
-"'I stunk of fink-outs!'"
+"'I stunk of fink-outs!'" []
 "'In check? Chicken?'"
-"'Leavin[']? Venial!'"
+"'Leavin[']? Venial!'" []
 "'Lo! Retire, loiterer!'"
 "'A low AWOL!'"
 "'March out, our match? Macho rut! Humor, cat!'"
@@ -51591,49 +51583,49 @@ blurb
 "'My foe, mo['] fey!'"
 "'Nearly meet? Later, enemy! Elementary!'"
 "'Need a while? Denial! Whee!'"
-"'No wit to win? Own it!'"
+"'No wit to win? Own it!'" []
 "'Not a swell stonewall!'" []
-"'Not ready yet? O darn! Tread yon!'"
+"'Not ready yet? O darn! Tread yon!'" []
 "'O, a runt ran out!'"
 "'Of course! Scour, foe!'"
 "'Oy, far foray for ya!'"
 "'A patsy! We step away!'"
-"'A perfect farce, pet!'"
+"'A perfect farce, pet!'" []
 "'Petulant, late punt!'"
 "'Postponing? No stopping!'"
 "'A ramble, yet, bleary mate? Maybe later!'"
 "'Ran? Tut! Truant!'"
 "'Retreating? Get trainer!'"
-"'Return, un-rent!'"
-"'The road--or DEATH!'"
+"'Return, un-rent!'" []
+"'The road--or DEATH!'" []
 "'Roam on, maroon!'"
 "'Scape-paces?'"
 "'Set you a easy out?'"
-"'Skeer'd? Re-sked!'"
+"'Skeer'd? Re-sked!'" []
 "'Slip [']way waspily!'"
 "'A smoove vamoose!'"
 "'Sneak away, weak as any...'"
 "'So, backbone! Be back soon!'"
 "'So I fade of ideas...'"
-"'Sod's gone. Goodness!'"
+"'Sod's gone. Goodness!'" []
 "'Sortie's rosiest!'"
 "'Spaciest escapist!'"
 "'Stagnation, antagonist?'"
 "'Take us on? Sneak out!'"
 "'Tasked? Skated!'"
-"'Time outs? Titmouse!'"
+"'Time outs? Titmouse!'" []
 "'Too scared? Scoot, dear!'"
 "'Tough? Shot! Thought so! Thou ghost!'"
-"'Toughen? Huge NOT! Uh, get on!'"
-"'Toughness gushes not!'"
+"'Toughen? Huge NOT! Uh, get on!'" []
+"'Toughness gushes not!'" []
 "'Try, fail, frailty!'"
 "'Um, be [if player is male]Mr. Bummer[else]Mrs. Bummers[end if]?'"
-"'Un-torn? Run not.'"
+"'Un-torn? Run not.'" []
 "'Unprepared? Run, dear! Pep!'"
 "'Up to it? I opt out!'"
 "'Veritably viable try!'"
 "'Walking out? Know a guilt!'"
-"'Wary, clod? Cowardly!'"
+"'Wary, clod? Cowardly!'" []
 "'Whoops! Po['] show!'"
 "'Win, fool? Low-info foil, now!'"
 "'Ye cards, descry a scaredy!'"
@@ -51656,7 +51648,7 @@ blurb
 "'The machine hath icemen!'"
 "'Me, I'd unite in due time!'"
 "'Mo['] debates: BEAST MODE!'"
-"'PROMISE SO PRIME!'"
+"'PROMISE SO PRIME!'" []
 "'Promissive improvisers miss. I PROVE!'"
 "'Reformist firestorm!'"
 "'Resorting to ringers? I: stronger!'"
@@ -51681,7 +51673,7 @@ blurb
 "'Cauliflower? Our face will recoil! Awful!'"
 "'Cheap bulk!' / 'Buck, eh, pal?'"
 "'Cheap bum! Be a chump!'"
-"'Con Moe? Come on!'"
+"'Yo, um, once you con me...'"
 "'Conspire on prices? Nice, pros!'"
 "'Ever sold? Resolved.'"
 "'Foul offers? Suffer, fool!'"
@@ -51693,7 +51685,7 @@ blurb
 "'Loaned? No deal!' / 'Lad, one...'"
 "'Lost head? Deal shot!'"
 "'Low deal!' / 'Allowed!'" []
-"'A melon mo['] lean? No, lame!'"
+"'A melon mo['] lean? No, lame!'" []
 "'Miss, a free...?' / 'Seems fair.'"
 "'No-credit doctrine, tired con!'"
 "'No wallets? STONEWALL!'" []
@@ -51707,15 +51699,15 @@ blurb
 "'Read fail! Fair deal!'"
 "'Ready to trade, yo!'"
 "'See if fee is...'"
-"'Spree, per se?'"
+"'Spree, per se?'" []
 "'Sprocket!' / 'Pet rocks!' / 'Stock rep?'"
 "'Stall gone. Lost, angel. Legal?' 'Tons.'"
-"'Super deal!?' / 'Sure!' / 'PLEAD.'"
+"'Super deal!?' / 'Sure!' / 'PLEAD.'" []
 "'Ten pounds?' / 'Dunno, pest.'"
 "'Three pounds? Thou spender!'"
 "'Two pounds. Put down, so.'"
 "'Un-bilk in bulk!'"
-"'Well, son? Sell now!'"
+"'Well, son? Sell now!'" []
 
 volume hinting
 

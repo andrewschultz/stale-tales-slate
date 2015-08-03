@@ -47,8 +47,8 @@ $ary{"z"} = 122969618;
 
 $repl{"d-word-u"} = "damn";
 $repl{"d-word"} = "damn";
-$repl{"ass"} = "ass";
-$repl{"ass-u"} = "ass";
+$repl{"a-word"} = "ass";
+$repl{"a-word-u"} = "ass";
 $repl{"crap"} = "crap";
 $repl{"crap-u"} = "crap";
 $repl{"dick"} = "dick";
@@ -97,6 +97,7 @@ while ($count <= $#ARGV)
 }
 
 open(A2, ">dupes.txt");
+open(A3, ">dshort.txt");
 open(B, ">oddmatch.txt");
 open(C, ">badana.txt");
 
@@ -172,8 +173,9 @@ while (($a = <A>) && (stillWorth()))
 	  #print A2 "SZ $q2 $q: "; $sm++;
 	  $sm++;
 	}
-	if (!$tableYetA2) { $tableYetA2 = 1; print A2 "==$thisTable\n"; }
+	if (!$tableYetA2) { $tableYetA2 = 1; print A2 "==$thisTable\n"; print A3 "==$thisTable\n"; }
 	print A2 "$a ($line) ~? $dupes{$b} ($ln{$b}/$ta{$b}).\n"; $di++;
+	print A3 "$a ($line)\n";
 	}
 	else
 	{
@@ -187,9 +189,9 @@ while (($a = <A>) && (stillWorth()))
 
 }
 
-$s1 = "(DUPES.TXT) $di total differences. $sm size mismatches.\n";
-$s2 = "(ODDMATCH.TXT) $posBad interesting cases.\n";
-$s3 = "(BADANA.TXT) $badans total likely bad anagrams, disable with \[\].\n";
+if ($di + $sm) { $s1 = "(DUPES.TXT/DSHORT.TXT) $di total differences. $sm size mismatches.\n"; } else { $s1 = "DUPES.TXT/DSHORT.TXT will be blank. Hooray!\n"; }
+if ($posBad) { $s2 = "(ODDMATCH.TXT) $posBad interesting cases.\n"; } else { $s2 = "ODDMATCH.TXT has nothing. Wow!\n"; }
+if ($badans) { $s3 = "(BADANA.TXT) $badans total likely bad anagrams, disable with \[\].\n"; } else { $s3 = "You have no bad anagrams. Well done!\n"; }
 
 print A2 "$s1";
 
