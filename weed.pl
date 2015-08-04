@@ -18,6 +18,8 @@ use Math::BigInt;
 #print Math::BigInt::bgcd((12,18,27));
 #print Math::BigInt::bgcd((8,12,18));
 
+#$teststring = "\"accustor curators\""; die(cromstring($teststring) . " " . offstring($teststring));
+
 $ary{"a"} = 2187818;
 $ary{"b"} = 18418905;
 $ary{"c"} = 19005585;
@@ -61,6 +63,9 @@ $repl{"sim"} = "simeon";
 $repl{"toti"} = "toni";
 $repl{"tt"} = "toi";
 $repl{"ta"} = "tai";
+$repl{"t-w"} = "watt";
+$repl{"s-w"} = "this";
+$repl{"f-w"} = "ukcf";
 
 $di = $sm = $badans = $posBad = 0;
 
@@ -95,6 +100,8 @@ while ($count <= $#ARGV)
   usage();
   }
 }
+
+`copy badana.txt badana.bak`;
 
 open(A2, ">dupes.txt");
 open(A3, ">dshort.txt");
@@ -149,12 +156,15 @@ while (($a = <A>) && (stillWorth()))
   $line++;
   chomp($a); $a = lc($a);
   
-  if ($a =~ /^table of.*xx/) { $inTable = 1; $thisTable = $a; $thisTable =~ s/\[.*//g; chomp($thisTable); $tableYetA2 = 0; print B "==$thisTable\n"; next;}
+  if ($a =~ /^table of.*xx/) { $inTable = 1; $thisTable = $a; $thisTable =~ s/\[.*//g; chomp($thisTable); $tableYetC = 0; $tableYetA2 = 0; print B "==$thisTable\n"; next;}
   if (!$inTable) { next; }
   
   if ($a !~ /[a-z]/) { $inTable = 0; next; }
-  if (($a =~ /^\"/) && ($a !~ /\t/) && ($a =~ /[a-z]/) && ($a !~ /\[\]/))
+  if ($a =~ / \[[px]\]/) { next; } # deliberately ignore
+  if (($a =~ /^\"/) && ($a !~ /\t/) && ($a =~ /[a-z]/))
   {
+	if ($a =~ /\[\]/) { next; } #move this after mash ($a) or back to the top to see about duplicated stuff
+    $badAnaSoFar = 0;
     $old = $a;
     $a = cutDown($a);
 	#if ($a =~ /tjaden/i) { die ("$old -> $a"); }
@@ -163,7 +173,7 @@ while (($a = <A>) && (stillWorth()))
 	  mash($a);
 	}
 	$b = cromstring($a);
-    if ($dupes{$b})
+    if ($dupes{$b} && (!$badAnaSoFar))
     {
 	$q = lets($a);
 	$q2 = lets($dupes{$a});
@@ -189,9 +199,9 @@ while (($a = <A>) && (stillWorth()))
 
 }
 
-if ($di + $sm) { $s1 = "(DUPES.TXT/DSHORT.TXT) $di total differences. $sm size mismatches.\n"; } else { $s1 = "DUPES.TXT/DSHORT.TXT will be blank. Hooray!\n"; }
+if ($di + $sm) { $s1 = "(DUPES.TXT/DSHORT.TXT) $di total differences (disable with \[\]). $sm size mismatches.\n"; } else { $s1 = "DUPES.TXT/DSHORT.TXT will be blank. Hooray!\n"; }
 if ($posBad) { $s2 = "(ODDMATCH.TXT) $posBad interesting cases.\n"; } else { $s2 = "ODDMATCH.TXT has nothing. Wow!\n"; }
-if ($badans) { $s3 = "(BADANA.TXT) $badans total likely bad anagrams, disable with \[\].\n"; } else { $s3 = "You have no bad anagrams. Well done!\n"; }
+if ($badans) { $s3 = "(BADANA.TXT) $badans total likely bad anagrams, disable with \[x\].\n"; } else { $s3 = "You have no bad anagrams. Well done!\n"; }
 
 print A2 "$s1";
 
@@ -207,11 +217,21 @@ $totTime = time() - $sta;
 
 print "$totTime total seconds. Output to dupes.txt and badana.txt and oddmatch.txt.\n$s1$s2$s3";
 
+###################
+#cutDown: this breaks down the punctuation in a possible anagram and also replaces test like toti -> Tio. So fewer false positives are reported.
+#
+
 sub cutDown
 {
   my $temp = $_[0];
   $temp =~ s/\"\s.*/\"/g;
   $temp =~ s/, by / /g;
+  if ($temp =~ /\[if/)
+  {
+    #so that an if statement with 2 different texts doesn't put them both into the anagram.
+	#this obviously neglects the problem of what if the [if] and [else] don't anagram, but I think that's a minor one
+    $temp =~ s/\[else\][^\[]*\[end if\]//gi;
+  }
   #if ($temp =~ /may undo/) { print "!!!!$temp\n"; }
   if ($temp =~ /\[[a-z-]+\]/)
   {
@@ -245,6 +265,9 @@ sub checkFullAna
   }
   return 0;
 }
+
+######################
+#quikAna: this simply checks if the GCD of the # of different letters is more than 1. If it is, something probably anagrams something else. If not, error.
 
 sub quikAna
 {
@@ -300,7 +323,15 @@ sub mash
   {
     if (!$hadPoss)
 	{
-	  $badans++; print C "$badans $_[0]: " . cromstring($_[0]) . "\n";
+	  $badans++;
+	  if (!$tableYetC)
+	  {
+	    print C "==$thisTable\n";
+		$tableYetC = 1;
+	  }
+	  if ($showNums) { print C "$badans "; }
+	  $badAnaSoFar = 1;
+	  print C "$_[0] ($line): " . cromstring($_[0]) . " " . offstring($_[0]) . "\n";
 	}
 	else
 	{
@@ -321,6 +352,56 @@ sub lets
   $temp =~ s/[^a-z]//gi;
   return length($temp);
 }
+
+##########################
+#offstring returns the "what's off" from an anagram that doesn't quite work
+#
+
+sub offstring
+{
+  my $x = lc($_[0]); $x =~ s/[^a-z]//gi;
+  my @lets = ();
+  my @z = split(//, $x);
+  my @which;
+  my $retString;
+  for (@z)
+  {
+    #print "Adding $_: @which\n";
+    @which[ord($_)-97]++;
+  }
+  my $lowestInt = 0;
+	  for (0..25)
+	  {
+	    if (@which[$_])
+		{
+		  if (!$lowestInt) { $lowestInt = @which[$_]; }
+		  elsif (@which[$_] < $lowestInt) { $lowestInt = @which[$_]; }
+		}
+	  }
+	  $retStrung =  "Culprit(s): ";
+	  if ($lowestInt == 1)
+	  {
+	  for (0..25) { if (@which[$_] == 1) { $retString .= chr($_+97); $retString .= " (1-iso) "; } }
+	  #die("$_[0] -> $resString");
+	  }
+	  else
+	  {
+	  for (0..25)
+	  {
+	    if (@which[$_] % $lowestInt)
+		{
+		  $rem = @which[$_] % $lowestInt;
+		  $retString .= chr($_+97);
+		  $retString .= "($rem) ";
+		}
+	  }
+	  }
+  return $retString;
+}
+
+##########################
+# cromstring returns the "cromulence string"
+# this is => h1i2s2t1
 
 sub cromstring
 {
@@ -440,7 +521,7 @@ sub gotAna
 		{
 		$anaStr = "PART-ANA:";
 		#note it'd be nice to reject if one word is the other.
-		if (($i == $j) && (@rt[0] == @rt[1]) && (@divs[$i] == @divs[@rt[0]]))
+		if (($i == $j) && (@rt[0] == @rt[1]) && (@divs[$i] eq @divs[@rt[0]]))
 		{
 		}
 		else

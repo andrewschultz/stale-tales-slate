@@ -24,39 +24,28 @@ $printCmds = 0;
 
 $firstNames = 1;
 
-if (@ARGV[0] eq "-m")
-{
-  $middleName = 1;
-  shift(@ARGV);
-}
- 
-if (@ARGV[0] eq "-p")
-{
-  $printCmds = 1;
-  shift(@ARGV);
-  die;
-}
-
-if (!@ARGV[0])
-{
-$fullStr = "Hon.";
-}
-else
-{
-$fullStr = @ARGV[0];
-if ($fullStr =~ /^-/) { $fullStr =~ s/^-//g; $firstNames = 1; }
-}
-
-$firstNames = 0;
-
 $firstsFile = "firsts.txt";
 $lastsFile = "lastbig.txt";
 
-if (@ARGV[0] eq "-f")
+$fullStr = "Hon.";
+
+while ($count <= $#ARGV)
 {
-$lastsFile = "firsts.txt";
-$firstsFile = "lastbig.txt";
+  $a = @ARGV[$count];
+  $b = @ARGV[$count+1];
+  
+  for ($a)
+  {
+  /-m/ && do { $middleName = 1; $count++; next; };
+  /-p/ && do { $printCmds = 1; $count++; next; };
+  /-f/ && do { $lastsFile = "firsts.txt"; $firstsFile = "lastbig.txt"; $count++; next; };
+  /-r/ && do { $reverses = 1; $count++; next; };
+  /-\?/ && do { usage(); $count++; next; };
+  /^[a-z]/ && do { $fullStr = $a; $count++; next; };
+  }
 }
+
+$firstNames = 0;
 
 if (! -f "$dictDir/$lastsFile") { $lastsFile = "lasts2.txt"; }
 
@@ -143,4 +132,11 @@ sub alf
   @xx = sort(@x);
   my $z = join('', @xx);
   return $z;
+}
+
+sub usage
+{
+print<<EOT;
+EOT
+exit;
 }
