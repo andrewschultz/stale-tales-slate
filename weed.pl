@@ -20,6 +20,8 @@ use Math::BigInt;
 
 #$teststring = "\"accustor curators\""; die(cromstring($teststring) . " " . offstring($teststring));
 
+@color = ("#ffffff", "#dddddd", "#bbbbbb");
+
 $ary{"a"} = 2187818;
 $ary{"b"} = 18418905;
 $ary{"c"} = 19005585;
@@ -94,6 +96,9 @@ while ($count <= $#ARGV)
   / / && do { $word = $a; die(cromstring($word, 1)); $count++; next; };
   /^-?b/ && do { $upBadLimit = $b; $count++; next; };
   /^-?p/ && do { $upPosLimit = $b; $count++; next; };
+  /^-f/ && do { $flipIt = 1; $count++; next; };
+  /^-2/ && do { $read2nd = 1; $count++; next; };
+  /^-w/ && do { $weirdLine = $b; $notWeirdYet = 1; $count++; next; };
   /^-?r/ && do { @weedDir = (@weedDir, $roi); $count++; next; };
   /^-?s/ && do { @weedDir = (@weedDir, $sa); $count++; next; };
   /^-?2/ && do { @weedDir = (@weedDir, $sa, $roi); $count++; next; };
@@ -103,10 +108,12 @@ while ($count <= $#ARGV)
 
 `copy badana.txt badana.bak`;
 
-open(A2, ">dupes.txt");
+open(A2, ">dupes.htm");
 open(A3, ">dshort.txt");
 open(B, ">oddmatch.txt");
 open(C, ">badana.txt");
+
+print A2 "<html><body><table width=69% border=1><th width=23%><th width=23%><th width=23%>\n";
 
 if (@ARGV[0] eq "-2")
 {
@@ -130,9 +137,12 @@ sub usage
 {
 print <<EOT;
 weed.pl splits things into three files
-dupes.txt = possible duplicates without []
+dupes.htm = possible duplicates without [], dupes-f.htm is reverse
 oddmatch.txt = odd matches
 badana.txt = bad anagrams
+options include -r=roiling -s=shuffling
+-2=take 2nd option of the if then
+-f=flip the final file (may be easier to read)
 EOT
 exit;
 }
@@ -154,9 +164,21 @@ print "Weeding out $myfi\n";
 while (($a = <A>) && (stillWorth()))
 {
   $line++;
+  $tableRows++;
+  if ($notWeirdYet)
+  {
+    if ($line == $weirdLine) { $notWeirdYet = 0; }
+  }
   chomp($a); $a = lc($a);
   
-  if ($a =~ /^table of.*xx/) { $inTable = 1; $thisTable = $a; $thisTable =~ s/\[.*//g; chomp($thisTable); $tableYetC = 0; $tableYetA2 = 0; print B "==$thisTable\n"; next;}
+  if ($a =~ /^table of.*xx/)
+  {
+    if ($dupeRows) { $dupCount{$thisTable} = $dupeRows;  }
+	$dupeRows = 0;
+	$curA2Table = 0; $inTable = 1; $tableYetC = 0; $tableYetA2 = 0;
+	$thisTable = $a; $thisTable =~ s/\[.*//g; chomp($thisTable);
+	print B "==$thisTable\n"; next;
+  }
   if (!$inTable) { next; }
   
   if ($a !~ /[a-z]/) { $inTable = 0; next; }
@@ -183,8 +205,21 @@ while (($a = <A>) && (stillWorth()))
 	  #print A2 "SZ $q2 $q: "; $sm++;
 	  $sm++;
 	}
-	if (!$tableYetA2) { $tableYetA2 = 1; print A2 "==$thisTable\n"; print A3 "==$thisTable\n"; }
-	print A2 "$a ($line) ~? $dupes{$b} ($ln{$b}/$ta{$b}).\n"; $di++;
+	if (!$tableYetA2)
+	{
+	  $tableYetA2 = 1;
+	  print A2 "</tr><tr colspan=3 background=grey><td><center>$thisTable</center></td></tr>\n"; print A3 "==$thisTable\n";
+	}
+	  if ($curA2Table == 0)
+	  {
+	  print A2 "<tr>\n";
+	  }
+	  $dif = $line - $oldline;
+	print A2 "<td bgcolor=@color[$curA2Table] halign=center>$a ($line,+$dif)<br>$dupes{$b} ($ln{$b})</td>\n"; $di++;
+	  $oldline = $line;
+	  $curA2Table++;
+	  $curA2Table %= 3;
+	  $dupeRows++;
 	print A3 "$a ($line)\n";
 	}
 	else
@@ -199,7 +234,7 @@ while (($a = <A>) && (stillWorth()))
 
 }
 
-if ($di + $sm) { $s1 = "(DUPES.TXT/DSHORT.TXT) $di total differences (disable with \[\]). $sm size mismatches.\n"; } else { $s1 = "DUPES.TXT/DSHORT.TXT will be blank. Hooray!\n"; }
+if ($di + $sm) { $s1 = "(DUPES.HTM/DSHORT.TXT) $di total differences (disable with \[\]). $sm size mismatches.\n"; } else { $s1 = "DUPES.HTM/DSHORT.TXT will be blank. Hooray!\n"; }
 if ($posBad) { $s2 = "(ODDMATCH.TXT) $posBad interesting cases.\n"; } else { $s2 = "ODDMATCH.TXT has nothing. Wow!\n"; }
 if ($badans) { $s3 = "(BADANA.TXT) $badans total likely bad anagrams, disable with \[x\].\n"; } else { $s3 = "You have no bad anagrams. Well done!\n"; }
 
@@ -210,13 +245,39 @@ print B "$s2";
 print C "$s3";
 
 close(A);
+
+print A2 "</table></body></html>";
+
 close(A2);
 close(B);
+close(C);
 
 $totTime = time() - $sta;
 
-print "$totTime total seconds. Output to dupes.txt and badana.txt and oddmatch.txt.\n$s1$s2$s3";
+print "$totTime total seconds. Output to dupes.htm, dshort.txt and badana.txt and oddmatch.txt.\n$s1$s2$s3";
 
+for $x (sort keys %dupCount)
+{
+  print "$x had $dupCount{$x}\n";
+}
+
+if ($flipIt)
+{
+open(A, "dupes.htm");
+
+$hdr = <A>;
+
+while ($a  = <A>) { push (@rev, $a); }
+@rev = reverse(@rev);
+close(A);
+
+open(B, ">dupes-f.htm");
+print B $hdr;
+for (1..$#rev) { print B $_; }
+print B @rev[0];
+
+print "Reverse file in dupes-f.htm.\n";
+}
 ###################
 #cutDown: this breaks down the punctuation in a possible anagram and also replaces test like toti -> Tio. So fewer false positives are reported.
 #
@@ -225,12 +286,19 @@ sub cutDown
 {
   my $temp = $_[0];
   $temp =~ s/\"\s.*/\"/g;
-  $temp =~ s/, by / /g;
+  $temp =~ s/(,|\[r\]) by / /g;
   if ($temp =~ /\[if/)
   {
     #so that an if statement with 2 different texts doesn't put them both into the anagram.
 	#this obviously neglects the problem of what if the [if] and [else] don't anagram, but I think that's a minor one
+	if ($read2nd)
+	{
+	$temp =~ s/\[if\[*\[else\]//g;
+	}
+	else
+	{
     $temp =~ s/\[else\][^\[]*\[end if\]//gi;
+	}
   }
   #if ($temp =~ /may undo/) { print "!!!!$temp\n"; }
   if ($temp =~ /\[[a-z-]+\]/)
@@ -336,7 +404,10 @@ sub mash
 	else
 	{
 	$posBad++;
-	print B "$posBad $_[0]: " . cromstring($_[0]) . "\n";
+	if (!$notWeirdYet)
+	{
+	print B "$posBad ($line) $_[0]: " . cromstring($_[0]) . "\n";
+	}
 	}
 	$hadPoss = 0;
 	}
@@ -529,7 +600,10 @@ sub gotAna
 		for ($i..$j) { $anaStr .= " @divs[$_]"; }
 		$anaStr .= " <->";
 		for (@rt[0]..@rt[1]) { $anaStr .= " @divs[$_]"; }
+		if (!$notWeirdYet)
+		{
 		print B "$anaStr\n";
+		}
 		}
 	    #print B "$_[0] $combo maps to $runTote : $totes{$runTote}\n";
 		}

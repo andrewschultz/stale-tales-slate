@@ -210,6 +210,7 @@ sub lch
 	$temp =~ s/^(\[[^\]]])? *//g;
 	$temp =~ s/^(the|a|an|) //gi;
 	$temp =~ s/^\(//gi;
+	$temp =~ s/\///g;
   }
   $temp =~ s/^\"//g; $temp =~ s/\".*//g;
   $temp =~ s/-/ /g; $temp =~ s/[\.\?\!]//g; $temp =~ s/,//g; $temp =~ s/\'$//g;
