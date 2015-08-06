@@ -97,7 +97,8 @@ while ($count <= $#ARGV)
   /^-?b/ && do { $upBadLimit = $b; $count++; next; };
   /^-?p/ && do { $upPosLimit = $b; $count++; next; };
   /^-f/ && do { $flipIt = 1; $count++; next; };
-  /^-2/ && do { $read2nd = 1; $count++; next; };
+  /^-g/ && do { $read2nd = 1; $count++; next; };
+  /^-l/ && do { $launch = 1; $count++; next; };
   /^-w/ && do { $weirdLine = $b; $notWeirdYet = 1; $count++; next; };
   /^-?r/ && do { @weedDir = (@weedDir, $roi); $count++; next; };
   /^-?s/ && do { @weedDir = (@weedDir, $sa); $count++; next; };
@@ -111,40 +112,25 @@ while ($count <= $#ARGV)
 open(A2, ">dupes.htm");
 open(A3, ">dshort.txt");
 open(B, ">oddmatch.txt");
+open(B2, ">falsepos.txt");
 open(C, ">badana.txt");
 
 print A2 "<html><body><table width=69% border=1><th width=23%><th width=23%><th width=23%>\n";
 
-if (@ARGV[0] eq "-2")
+if (!@weedDir[0])
 {
-weedOneSource("c:/games/inform/sa.inform/source");
-weedOneSource("c:/games/inform/roiling.inform/source");
+
+if ($pwd =~ /(sa|roiling)\.inform/)
+{
+@weedDir[0] = $pwd;
 }
-elsif ($pwd =~ /(sa|roiling).inform/)
-{
-weedOneSource("$pwd");
-}
-elsif ($exp{@ARGV[0]})
-{
-weedOneSource("c:/games/inform/$exp{@ARGV[0]}.inform/source");
-}
-else
-{
-weedOneSource("c:/games/inform/@ARGV[0].inform/source");
 }
 
-sub usage
+if (!@weedDir[0]) { die "No suitable directory found. -s, -r or -2."; }
+
+for $thisDir(@weedDir)
 {
-print <<EOT;
-weed.pl splits things into three files
-dupes.htm = possible duplicates without [], dupes-f.htm is reverse
-oddmatch.txt = odd matches
-badana.txt = bad anagrams
-options include -r=roiling -s=shuffling
--2=take 2nd option of the if then
--f=flip the final file (may be easier to read)
-EOT
-exit;
+  weedOneSource($thisDir);
 }
 
 sub stillWorth
@@ -161,10 +147,13 @@ my $myfi = "$_[0]/story.ni";
 open(A, "$myfi") || die ("No $_[0]/$myfi.");
 print "Weeding out $myfi\n";
 
+$ch = chr(0xe2);
+
 while (($a = <A>) && (stillWorth()))
 {
   $line++;
   $tableRows++;
+  if ($a =~ /$ch/) { print("BIG WARN line $line has a smart quote or apostrophe.\n"); }
   if ($notWeirdYet)
   {
     if ($line == $weirdLine) { $notWeirdYet = 0; }
@@ -185,7 +174,19 @@ while (($a = <A>) && (stillWorth()))
   if ($a =~ / \[[px]\]/) { next; } # deliberately ignore
   if (($a =~ /^\"/) && ($a !~ /\t/) && ($a =~ /[a-z]/))
   {
-	if ($a =~ /\[\]/) { next; } #move this after mash ($a) or back to the top to see about duplicated stuff
+   $acrom = cromstring(cutDown($a));
+	if ($a =~ /\[\]/)
+	{
+	  if (!$dupes{$acrom})
+	  {
+	    $falsePos++; print B2 "false \[\] $falsePos on $a line $line\n"; $fapo{$acrom} = "$a-$line";
+	  }
+	  next;
+	} #move this after mash ($a) or back to the top to see about duplicated stuff
+	elsif ($fapo{$acrom})
+	{
+	  print B2"----($line) $a not \[\] vs $fapo{$acrom}\n";
+	}
     $badAnaSoFar = 0;
     $old = $a;
     $a = cutDown($a);
@@ -236,11 +237,14 @@ while (($a = <A>) && (stillWorth()))
 
 if ($di + $sm) { $s1 = "(DUPES.HTM/DSHORT.TXT) $di total differences (disable with \[\]). $sm size mismatches.\n"; } else { $s1 = "DUPES.HTM/DSHORT.TXT will be blank. Hooray!\n"; }
 if ($posBad) { $s2 = "(ODDMATCH.TXT) $posBad interesting cases.\n"; } else { $s2 = "ODDMATCH.TXT has nothing. Wow!\n"; }
+if ($falsePos) { $s2 = "(FALSEPOS.TXT) $falsePos \[\]'s.\n"; } else { $s2 = "FALSEPOS.TXT has nothing. Good!\n"; }
 if ($badans) { $s3 = "(BADANA.TXT) $badans total likely bad anagrams, disable with \[x\].\n"; } else { $s3 = "You have no bad anagrams. Well done!\n"; }
 
 print A2 "$s1";
 
 print B "$s2";
+
+print B2 "$s2a";
 
 print C "$s3";
 
@@ -250,13 +254,17 @@ print A2 "</table></body></html>";
 
 close(A2);
 close(B);
+close(B2);
 close(C);
+
+if ($launch) { `dupes.htm`; }
 
 $totTime = time() - $sta;
 
 print "$totTime total seconds. Output to dupes.htm, dshort.txt and badana.txt and oddmatch.txt.\n$s1$s2$s3";
 
-for $x (sort keys %dupCount)
+#cmp would put 93 above 111
+for $x (sort { $dupCount{$b} <=> $dupCount{$a} } keys %dupCount)
 {
   print "$x had $dupCount{$x}\n";
 }
@@ -287,13 +295,15 @@ sub cutDown
   my $temp = $_[0];
   $temp =~ s/\"\s.*/\"/g;
   $temp =~ s/(,|\[r\]) by / /g;
+  $temp =~ s/\&//g;
   if ($temp =~ /\[if/)
   {
     #so that an if statement with 2 different texts doesn't put them both into the anagram.
 	#this obviously neglects the problem of what if the [if] and [else] don't anagram, but I think that's a minor one
 	if ($read2nd)
 	{
-	$temp =~ s/\[if\[*\[else\]//g;
+	$temp =~ s/\[if player is male\][^\]]*\]//gi;
+	#$temp =~ s/\[if[^\]]*\]*\[else\]//g;
 	}
 	else
 	{
@@ -486,7 +496,7 @@ sub cromstring
     #print "Adding $_: @which\n";
     @which[ord($_)-97]++;
   }
-  if ($_[1] == -1)
+  if (($_[1] == -1) || ($_[1] == 0))
   {
     $bgcd = Math::BigInt::bgcd(@which) . "=GCD...";
 	for (0..25)
@@ -613,4 +623,21 @@ sub gotAna
 	}
   }
   #if ($die) { for $g (sort keys %totes) { print B "$_[0]: $g $totes{$g}\n"; } $g = "0-0"; print "0=$totes{$g}"; die; }
+}
+
+###########################
+#usage stuff
+#
+sub usage
+{
+print <<EOT;
+weed.pl splits things into three files
+dupes.htm = possible duplicates without [], dupes-f.htm is reverse
+oddmatch.txt = odd matches
+badana.txt = bad anagrams
+options include -r=roiling -s=shuffling -2=both
+-g = flip genders
+-f=flip the final file (may be easier to read)
+EOT
+exit;
 }

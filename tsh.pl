@@ -77,7 +77,7 @@ while ($a = <A>)
   if (($a =~ /^blurb/) && ($a !~ /\[noalf\]/) && ($a !~ /^blurb\t\"/)) #blurb then quote appears in SA
   {
     $count++;
-    print "$count: Sorting $b";
+    #print "$count: Sorting $b";
 	$thisTable = $b; $thisTable =~ s/ ?\[.*//g; chomp($thisTable);
     print B $a;
     sortTheTable();
@@ -106,6 +106,8 @@ postProcess("$thisDir");
 sub postProcess
 {
   my $thisDir = $_[0];
+  my $updateFound = 0;
+  my $outString = $thisOutString = "";
 if (!$dontcopy)
 {
   print "Copying .nu to .ni\n";
@@ -114,8 +116,9 @@ if (!$dontcopy)
   while ($a = <A>)
   {
     @b = split(/,/, $a);
-    if ($findy{@b[0]})
+    if (@b[0] =~ /$_[0]/)
 	{
+	  $updateFound = 1;
 	  print "Updating @b[0].\n";
 	}
 	else
@@ -124,14 +127,15 @@ if (!$dontcopy)
 	  $outString .= $a;
 	}
   }
-  for $q (sort keys %findy)
-  {
-	@localtime = localtime(time);
-	  $dateForm = sprintf("%4d-%02d-%02d-%02d-%02d-%02d",
-	    @localtime[5]+1900, @localtime[4]+1, @localtime[3], @localtime[2], @localtime[1], @localtime[0]);
-      $thisOutString = "$q," . (-s $q) . ",$dupes,$dateForm\n";
-	  $outString .= $thisOutString;
-  }
+  if (!$updateFound) { print "New file $_[0]/story.ni.\n"; }
+  @localtime = localtime(time);
+  $dateForm = sprintf("%4d-%02d-%02d-%02d-%02d-%02d",
+  @localtime[5]+1900, @localtime[4]+1, @localtime[3], @localtime[2], @localtime[1], @localtime[0]);
+  $thisOutString = "$_[0]/story.ni," . (-s "$_[0]/story.ni") . ",$dupes,$dateForm\n";
+  $outString .= $thisOutString;
+
+  print "Now:\n$outString";
+  
   close(A);
   open(B, ">c:/games/inform/tsh.txt");
   print B $outString;
@@ -159,6 +163,7 @@ sub sortTheTable
 
   while ($a = <A>)
   {
+    if ($a =~ /^'/) { die ("Uh-oh, single quote line start at line " . ($lines+$#ary+2) . ", bailing."); }
     if ($a !~ /^\"/) { $ch = chr(0xe2);
 	  if ($a =~ /^$ch/) { die ("Uh-oh, smart quote found at line " . ($lines+$#ary+2) . ", bailing."); }
 	  #print "Final = $a";
@@ -169,6 +174,9 @@ sub sortTheTable
 	$num = () = $a =~ /\"/gi;
 	if (($num % 2) || (!$num)) { $quoteWarn .= "  -- $thisTable: $a\n"; }
   }
+  print "$count: Sorting $thisTable, " . ($#ary+1) . " total elements.\n";
+  if ($#ary < 23)
+  { print "********UH OH, THERE ARE WAY TOO FEW, $#ary********\n"; }
   @ary2 = sort {lch($a) cmp lch($b)} @ary;
   for (@ary2)
   {
