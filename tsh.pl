@@ -164,7 +164,9 @@ sub sortTheTable
   while ($a = <A>)
   {
     if ($a =~ /^'/) { die ("Uh-oh, single quote line start at line " . ($lines+$#ary+2) . ", bailing."); }
-    if ($a !~ /^\"/) { $ch = chr(0xe2);
+    if ($a !~ /^\"/) {
+	  if ($a =~ /^[a-z]/i) { die ("Uh-oh, you started a table line with a character: # " .  ($lines+$#ary+2) . ", bailing."); }
+	  $ch = chr(0xe2);
 	  if ($a =~ /^$ch/) { die ("Uh-oh, smart quote found at line " . ($lines+$#ary+2) . ", bailing."); }
 	  #print "Final = $a";
 	  last;

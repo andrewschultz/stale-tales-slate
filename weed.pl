@@ -99,6 +99,7 @@ while ($count <= $#ARGV)
   /^-f/ && do { $flipIt = 1; $count++; next; };
   /^-g/ && do { $read2nd = 1; $count++; next; };
   /^-l/ && do { $launch = 1; $count++; next; };
+  /^-!/ && do { $remains = 1; $count++; next; };
   /^-w/ && do { $weirdLine = $b; $notWeirdYet = 1; $count++; next; };
   /^-?r/ && do { @weedDir = (@weedDir, $roi); $count++; next; };
   /^-?s/ && do { @weedDir = (@weedDir, $sa); $count++; next; };
@@ -133,107 +134,7 @@ for $thisDir(@weedDir)
   weedOneSource($thisDir);
 }
 
-sub stillWorth
-{
-  if ($badans == $upBadLimit) { return 0; }
-  if ($posBad == $upPosLimit) { return 0; }
-  return 1;
-}
-
-sub weedOneSource
-{
-
-my $myfi = "$_[0]/story.ni";
-open(A, "$myfi") || die ("No $_[0]/$myfi.");
-print "Weeding out $myfi\n";
-
-$ch = chr(0xe2);
-
-while (($a = <A>) && (stillWorth()))
-{
-  $line++;
-  $tableRows++;
-  if ($a =~ /$ch/) { print("BIG WARN line $line has a smart quote or apostrophe.\n"); }
-  if ($notWeirdYet)
-  {
-    if ($line == $weirdLine) { $notWeirdYet = 0; }
-  }
-  chomp($a); $a = lc($a);
-  
-  if ($a =~ /^table of.*xx/)
-  {
-    if ($dupeRows) { $dupCount{$thisTable} = $dupeRows;  }
-	$dupeRows = 0;
-	$curA2Table = 0; $inTable = 1; $tableYetC = 0; $tableYetA2 = 0;
-	$thisTable = $a; $thisTable =~ s/\[.*//g; chomp($thisTable);
-	print B "==$thisTable\n"; next;
-  }
-  if (!$inTable) { next; }
-  
-  if ($a !~ /[a-z]/) { $inTable = 0; next; }
-  if ($a =~ / \[[px]\]/) { next; } # deliberately ignore
-  if (($a =~ /^\"/) && ($a !~ /\t/) && ($a =~ /[a-z]/))
-  {
-   $acrom = cromstring(cutDown($a));
-	if ($a =~ /\[\]/)
-	{
-	  if (!$dupes{$acrom})
-	  {
-	    $falsePos++; print B2 "false \[\] $falsePos on $a line $line\n"; $fapo{$acrom} = "$a-$line";
-	  }
-	  next;
-	} #move this after mash ($a) or back to the top to see about duplicated stuff
-	elsif ($fapo{$acrom})
-	{
-	  print B2"----($line) $a not \[\] vs $fapo{$acrom}\n";
-	}
-    $badAnaSoFar = 0;
-    $old = $a;
-    $a = cutDown($a);
-	#if ($a =~ /tjaden/i) { die ("$old -> $a"); }
-	if (!checkFullAna($a))
-	{
-	  mash($a);
-	}
-	$b = cromstring($a);
-    if ($dupes{$b} && (!$badAnaSoFar))
-    {
-	$q = lets($a);
-	$q2 = lets($dupes{$a});
-	if ($q2 != $q)
-	{
-	  $z = Math::BigInt::bgcd(($q2, $q)); $q2 /= $z; $q /= $z;
-	  #print A2 "SZ $q2 $q: "; $sm++;
-	  $sm++;
-	}
-	if (!$tableYetA2)
-	{
-	  $tableYetA2 = 1;
-	  print A2 "</tr><tr colspan=3 background=grey><td><center>$thisTable</center></td></tr>\n"; print A3 "==$thisTable\n";
-	}
-	  if ($curA2Table == 0)
-	  {
-	  print A2 "<tr>\n";
-	  }
-	  $dif = $line - $oldline;
-	print A2 "<td bgcolor=@color[$curA2Table] halign=center>$a ($line,+$dif)<br>$dupes{$b} ($ln{$b})</td>\n"; $di++;
-	  $oldline = $line;
-	  $curA2Table++;
-	  $curA2Table %= 3;
-	  $dupeRows++;
-	print A3 "$a ($line)\n";
-	}
-	else
-	{
-    $dupes{$b} = $a;
-	$ln{$b} = $line;
-	$ta{$b} = $thisTable;
-	}
-	#print "$b -> $a\n";
-  }
-}
-
-}
+if ($remains) { weedOneSource("!!"); }
 
 if ($di + $sm) { $s1 = "(DUPES.HTM/DSHORT.TXT) $di total differences (disable with \[\]). $sm size mismatches.\n"; } else { $s1 = "DUPES.HTM/DSHORT.TXT will be blank. Hooray!\n"; }
 if ($posBad) { $s2 = "(ODDMATCH.TXT) $posBad interesting cases.\n"; } else { $s2 = "ODDMATCH.TXT has nothing. Wow!\n"; }
@@ -302,7 +203,7 @@ sub cutDown
 	#this obviously neglects the problem of what if the [if] and [else] don't anagram, but I think that's a minor one
 	if ($read2nd)
 	{
-	$temp =~ s/\[if player is male\][^\]]*\]//gi;
+	$temp =~ s/\[if player is (fe)?male\][^\]]*\]//gi;
 	#$temp =~ s/\[if[^\]]*\]*\[else\]//g;
 	}
 	else
@@ -623,6 +524,119 @@ sub gotAna
 	}
   }
   #if ($die) { for $g (sort keys %totes) { print B "$_[0]: $g $totes{$g}\n"; } $g = "0-0"; print "0=$totes{$g}"; die; }
+}
+
+sub stillWorth
+{
+  if ($badans == $upBadLimit) { return 0; }
+  if ($posBad == $upPosLimit) { return 0; }
+  return 1;
+}
+
+sub weedOneSource
+{
+
+my $myfi;
+if ($_[0] =~ /!!/)
+{
+  $myfi = "c:/games/inform/roiling.inform/source/lones.txt";
+}
+else
+{
+  $myfi = "$_[0]/story.ni";
+}
+
+open(A, "$myfi") || die ("No $_[0]/$myfi.");
+print "Weeding out $myfi\n";
+
+$ch = chr(0xe2);
+
+my $line = 0;
+
+while (($a = <A>) && (stillWorth()))
+{
+  $line++;
+  $tableRows++;
+  if ($a =~ /$ch/) { print("BIG WARN line $line has a smart quote or apostrophe.\n"); }
+  if ($notWeirdYet)
+  {
+    if ($line == $weirdLine) { $notWeirdYet = 0; }
+  }
+  chomp($a); $a = lc($a);
+  
+  if ($a =~ /^table of.*xx/)
+  {
+    if ($dupeRows) { $dupCount{$thisTable} = $dupeRows;  }
+	$dupeRows = 0;
+	$curA2Table = 0; $inTable = 1; $tableYetC = 0; $tableYetA2 = 0;
+	$thisTable = $a; $thisTable =~ s/\[.*//g; chomp($thisTable);
+	print B "==$thisTable\n"; next;
+  }
+  if (!$inTable) { next; }
+  
+  if ($a !~ /[a-z]/) { $inTable = 0; next; }
+  if ($a =~ / \[[px]\]/) { next; } # deliberately ignore
+  if (($a =~ /^\"/) && ($a !~ /\t/) && ($a =~ /[a-z]/))
+  {
+   $acrom = cromstring(cutDown($a));
+	if ($a =~ /\[\]/)
+	{
+	  if (!$dupes{$acrom})
+	  {
+	    $falsePos++; print B2 "false \[\] $falsePos on $a line $line\n"; $fapo{$acrom} = "$a-$line";
+	  }
+	  next;
+	} #move this after mash ($a) or back to the top to see about duplicated stuff
+	elsif ($fapo{$acrom})
+	{
+	  print B2"----($line) $a not \[\] vs $fapo{$acrom}\n";
+	}
+    $badAnaSoFar = 0;
+    $old = $a;
+    $a = cutDown($a);
+	#if ($a =~ /tjaden/i) { die ("$old -> $a"); }
+	if (!checkFullAna($a))
+	{
+	  mash($a);
+	}
+	$b = cromstring($a);
+    if ($dupes{$b} && (!$badAnaSoFar))
+    {
+	$q = lets($a);
+	$q2 = lets($dupes{$a});
+	if ($q2 != $q)
+	{
+	  $z = Math::BigInt::bgcd(($q2, $q)); $q2 /= $z; $q /= $z;
+	  #print A2 "SZ $q2 $q: "; $sm++;
+	  $sm++;
+	}
+	if (!$tableYetA2)
+	{
+	  $tableYetA2 = 1;
+	  print A2 "</tr><tr colspan=3 background=grey><td><center>$thisTable</center></td></tr>\n"; print A3 "==$thisTable\n";
+	}
+	  if ($curA2Table == 0)
+	  {
+	  print A2 "<tr>\n";
+	  }
+	  $dif = $line - $oldline;
+	print A2 "<td bgcolor=@color[$curA2Table] halign=center>$a ($line,+$dif)<br>$dupes{$b} ($ln{$b})</td>\n"; $di++;
+	  $oldline = $line;
+	  $curA2Table++;
+	  $curA2Table %= 3;
+	  $dupeRows++;
+	print A3 "$a ($line)\n";
+	}
+	else
+	{
+    $dupes{$b} = $a;
+	$ln{$b} = $line;
+	$ta{$b} = $thisTable;
+	}
+	#print "$b -> $a\n";
+  }
+}
+
 }
 
 ###########################
