@@ -2,7 +2,7 @@
 
 volume browsing and building notes
 
-[This initial section is to try and organize the source code. Of course, with a 2.4 million+ byte file, it's sort of tough to figure where to start. I can't promise that my code is super-readable, but I hope you find it interesting. It's been vetted all the way through, once.
+[This initial section is to try and organize the source code. Of course, with a 2.5 million+ byte file, it's sort of tough to figure where to start. I can't promise that my code is super-readable, but I hope you find it interesting. It's been vetted all the way through, once.
 
 To search for your favorite goofy random tables, use ^blurb with a regular-expression search for editors that allow them, such as notepad++ in Windows, which is well worth a download for other reasons. You can also search for (bracket) then xx(first letter) with g = general (for example, blank command/wait responses) or m=manor (for example, comedians Gunter mentions) or v = gritty dialogue, and so forth. XX alone is a (poorly-named) variable in some places, but searching with the bracket and then XX will cover everything.
 
@@ -32,7 +32,7 @@ VRT = VOLUME RANDOM TEXT BLURB TABLES has the random text.
 Volumes are divided by region for the most part.
 ]
 
-[you may need special versions of certain modules. They can be found at
+[Build this at your own risk. I think you'll get the general idea, but really, it takes 45 seconds to build. Plus you may need special versions of certain modules. They can be found at
 
 http://code.google.com/p/shuffling-around/downloads/list
 
@@ -383,7 +383,7 @@ table of bar dialogue	true	0	0	bar-over-comp rule	oyster	"Posh Hops Shop action[
 table of competing bars	true	0	0	in-bar rule	oyster	"Posh Hops Shop competitors[indic of oyster]"	"Someone says the Posh Hops Shop [one of]has nothing on[or]sure beats[at random] "	"."	"Everyone agrees Soph Pho's is a total rip-off of, well, here. You can't imagine any more bars being discussed.[pre-brk]"
 table of Casper mumbles	false	0	0	casper-talk rule	oyster	"Casper's mumblings[indic of oyster]"	""	""	"'[if player is male]Rhett Weir[else]Teri Werth[end if], the writer? Eh, err...TWIT!' Casper suddenly flips back to the start of his notes. Perhaps he feels you are not good enough to hear any more of his original thoughts."
 table of fish fries	true	0	0	insult-over-girls rule	oyster	"Carps/pikes trout-bullying [if anger range is visited]in anger range[else](STORE Y)[end if]"	--	""	"The bullies call him 'A soft fatso so fat.' They're out of ideas and claim it's the trout's fault for not being interesting enough. The ratters restart samer smear-reams.[pre-brk]"
-table of unpopular girls	true	0	0	ohai-bullies rule	oyster	"Unpopular girls carps/pikes mention[indic of oyster]"	"The bullies insinuate the trout [one of]likes[or]isn't good enough for[cycling] "	"."	"Zina and Rayna are next, and utterly wrongest, girl they accuse the trout of liking. They pause, almost ashamed. Or maybe they're just recycling ideas.[pre-brk]"
+table of unpopular girls	true	0	0	ohai-bullies rule	oyster	"Unpopular girls carps/pikes mention[indic of oyster]"	"The bullies insinuate the trout [one of]likes[or]isn't good enough for[cycling] "	"."	"Zina is the last, and utterly wrongest, girl they accuse the trout of liking (she's actually pretty nice, but...innuendo.) When you sink that low, you've obviously run out of ideas.[pre-brk]"
 table of tuna gossip	true	0	0	gossip-over-chatter rule	oyster	"Aunt Tuna's gossip[indic of oyster]"	"Aunt Tuna gossips: "	""	"'Edda Dade. Dead. Cleo's Close. Dorithy--Thyroid. Halle's a shell. All she... Heather's Heart. She... diabetes, die, beast!' Aunt Tuna pauses, head in hands. That was the final thing she'd been repressing.[pre-brk]"
 table of aunt tuna chatter	true	0	0	ohai-tuna rule	oyster	"Aunt Tuna's complaints[indic of oyster]"	"[one of]'Oh, dear! Do hear!' / 'D'oh...are...' Aunt Tuna cuts you off and[or]Aunt Tuna[stopping] "	""	"Aunt Tuna, as her nags snag, restarts her prattle platter of how she is BEYOND done-by...[pre-brk]"
 table of theses	false	0	0	screed-read rule	oyster	"Theses Sheets notes[indic of oyster]"	""	""	"Life Conks Nice Folks![paragraph break]Well, that's probably enough proof you're dealing with bad guys, here."
@@ -14869,7 +14869,7 @@ to reposition-guardians:
 
 chapter warriors
 
-A warrior is a kind of person. a warrior is usually vanishing. a warrior can be leaderly. a warrior is usually not leaderly. a warrior can be pinko. a warrior is usually not pinko. a warrior is usually terse.
+A warrior is a kind of person. a warrior is usually vanishing. a warrior can be leaderly. a warrior is usually not leaderly. a warrior can be pinko. a warrior is usually not pinko. a warrior is usually terse. a warrior has a number called pod-num. a warrior has a number called pod-ord.
 
 the chum of a warrior is usually Andres.
 
@@ -14910,89 +14910,35 @@ after fliptoing a warrior:
 		now h-w is rodney;
 	continue the action;
 
-Sir Rodney is a leaderly warrior. description is "A big strong fellow who probably won't be removed by physical force. He looks sort of like Red Bull Burdell's slightly weaker younger brother.". The chum of Rodney is yourself.
+Sir Rodney is a leaderly warrior. description is "A big strong fellow who probably won't be removed by physical force. He looks sort of like Red Bull Burdell's slightly weaker younger brother.". The chum of Rodney is yourself. pod-num of Rodney is 7. pod-ord of Rodney is 1. a-text of Rodney is "OYRRYR". b-text of Rodney is "OGRRGR".
 
-Andres is a warrior. description is "He doesn't look restricted in any way.". The chum of Andres is yourself.
-Andrew is a warrior. description is "He has a careless look in his eyes. He does not seem to be aware of risk."
-Archie is a warrior. description is "He looks free of pain."
-Barney is a warrior. description is "He seems far too close, but maybe you could push him back."
-Blake is a warrior. description is "He beams, likely a paragon of positive thinking."
-Bredo is a warrior. description is "He seems focused and interested."
-Cedrick is a warrior. description is "He moves effortlessly, without any hitches."
-Daryl is a warrior. description is "He has no fat on him."
-Demitri is a warrior. description is "He stares out, bolder than his compatriots."
-Dewey is a warrior. description is "Solidly build, almost less just a man than a big tree."
-Edwin is a warrior. description is "He looks sober and focused, except when he briefly gives a red-faced glare at all the alcohol in here."
-Eldon is a warrior. description is "He looks vigorous and youthful."
-Ernest is a warrior. description is "He looks relaxed and ready to gaffle tavernlings."
-Geno is a semi-easy warrior. description is "Well, he's ... here. He hasn't left yet. He may not be the best warrior, but he's still stronger than you."
-Goldy is a warrior. description is "Goldy has an amoral, mercenary look about him."
-Leander is a warrior. description is "He looks too dumb to contemplate anything besides knocking people's heads in."
-Marcel is a warrior. description is "He is clearly just agitated."
-Marlon is a warrior. description is "He doesn't look like all the rest, but he's comfortable with that."
-Preston is a warrior. description is "He appears to be the best protected of your persecutors."
-Reggie is a warrior. description is "He looks spotless--no stains on his clothes. He probably smells as nice as he looks, too."
-Royce is a warrior. description is "He seems to be looking at the door as if to make a bolt for it."
-Shane is a warrior. description is "He looks well-tanned."
-Terrance is a warrior. description is "He constantly looks at Rodney and nods."
-Tyson is a warrior. description is "He keeps snarling at people, red-faced."
-Wade is a warrior. description is "He looks confident, as if nothing can drain that."
+Andres is a warrior. description is "He doesn't look restricted in any way.". a-text of Andres is "RRYRYR". b-text of Andres is "RPYPGR". pod-num of Andres is 5. pod-ord of Andres is 1.
+Andrew is a warrior. description is "He has a careless look in his eyes. He does not seem to be aware of risk.". a-text of Andrew is "RYRRYR". b-text of Andrew is "RYRRGR". pod-num of Andrew is 5. pod-ord of Andrew is 2.
+Archie is a warrior. description is "He looks free of pain.". a-text of Archie is "YRRYYR". b-text of Archie is "GRRYYR". pod-num of Archie is 5. pod-ord of Archie is 3.
+Barney is a warrior. description is "He seems far too close, but maybe you could push him back.". a-text of Barney is "RYYRRO". b-text of barney is "RYYRRB". pod-num of Barney is 5. pod-ord of Barney is 4.
+Blake is a warrior. description is "He beams, likely a paragon of positive thinking.". a-text of Blake is "RRYYR". b-text of Blake is "PPYYR". pod-num of Blake is 3. pod-ord of Blake is 1.
+Bredo is a warrior. description is "He seems focused and interested.". a-text of Bredo is "RYRYR". b-text of Bredo is "PYRYR". pod-num of Bredo is 3. pod-ord of Bredo is 2.
+Cedrick is a warrior. description is "He moves effortlessly, without any hitches.". a-text of Cedrick is "RRYRRYR". b-text of Cedrick is "PRYRRYR". pod-num of Cedrick is 6. pod-ord of Cedrick is 1.
+Daryl is a warrior. description is "He has no fat on him.". a-text of Daryl is "RYRRO". b-text of Daryl is "RGPRO". pod-num of Daryl is 3. pod-ord of Daryl is 3.
+Demitri is a warrior. description is "He stares out confidently, bolder than his compatriots.". a-text of Demitri is "RYRYRYR". b-text of Demitri is "RYPGRYR". pod-num of Demitri is 6. pod-ord of Demitri is 2.
+Dewey is a warrior. description is "Solidly build, almost less just a man than a big tree.". a-text of Dewey is "RYYRO". b-text of Dewey is "RGYRB". pod-num of Dewey is 3. pod-ord of Dewey is 4.
+Edwin is a warrior. description is "He looks sober and focused, except when he briefly gives a red-faced glare at all the alcohol in here.". a-text of Edwin is "RYRYR". b-text of Edwin is "RYRYR". pod-num of Edwin is 4. pod-ord of Edwin is 1.
+Eldon is a warrior. description is "He looks vigorous and youthful.". a-text of Eldon is "YRRYR". b-text of Eldon is "YPPYP"..pod-num of Eldon is 4. pod-ord of Eldon is 2.
+Ernest is a warrior. description is "He looks relaxed and ready to gaffle tavernlings.". a-text of Ernest is "RYRRYR". b-text of Ernest is "RYPRYR". pod-num of Ernest is 4. pod-ord of Ernest is 1.
+Geno is a semi-easy warrior. description is "Well, he's ... here. He hasn't left yet. He may not be the best warrior, but he's still stronger than you.". a-text of Geno is "RYRY". b-text of Geno is "PYPY". pod-num of Geno is 1. pod-ord of Geno is 1.
+Goldy is a warrior. description is "Goldy has an amoral, mercenary look about him.". a-text of Goldy is "RYRRO". b-text of Goldy is "PGRRB". pod-num of Goldy is 4. pod-ord of Goldy is 3.
+Leander is a warrior. description is "He looks too dumb to contemplate anything besides knocking people's heads in.". a-text of Leander is "RYYRRYR". b-text of Leander is "PGGRRGR". pod-num of Leander is 6. pod-ord of Leander is 3.
+Marcel is a warrior. description is "He is clearly just agitated.". a-text of Marcel is "RYRRYR". b-text of Marcel is "RGRRGR". pod-num of Marcel is 4. pod-ord of Marcel is 2.
+Marlon is a warrior. description is "He doesn't look like all the rest, but he's comfortable with that.". a-text of Marlon is "RYRRYR". b-text of Marlon is "RYPRYR". pod-num of Marlon is 4. pod-ord of Marlon is 3.
+Preston is a warrior. description is "He appears to be the best protected of your persecutors.". a-text of Preston is "RRYRYRR". b-text of Preston is "PPYRYRR". pod-num of Preston is 6. pod-ord of Preston is 4.
+Reggie is a warrior. description is "He looks spotless--no stains on his clothes. He probably smells as nice as he looks, too.". a-text of Reggie is "YRRYYR". b-text of Reggie is "YRPYYR". pod-num of Reggie is 4. pod-ord of Reggie is 4.
+Royce is a warrior. description is "He seems to be looking at the door as if to make a bolt for it.". a-text of Royce is "RYOYR". b-text of royce is "RGBYR". pod-num of Royce is 4. pod-ord of Royce is 4.
+Shane is a warrior. description is "He looks well-tanned.". a-text of Shane is "YRRYR". b-text of Shane is "YRRYR". pod-num of Shane is 1. pod-ord of Shane is 2.
+Terrance is a warrior. description is "He constantly looks at Rodney and nods obediently.". a-text of terrance is "RYRRYYRR". b-text of terrance is "RGRPYYRR". pod-num of Terrance is 6. pod-ord of Terrance is 5.
+Tyson is a warrior. description is "He keeps snarling at people, red-faced.". a-text of Tyson is "RRYRO". b-text of Tyson is "RRYRO". pod-num of Tyson is 1. pod-ord of Tyson is 3.
+Wade is a warrior. description is "He looks confident, as if nothing can drain that.". a-text of Wade is "YRYR". b-text of wade is "YRYR". pod-num of Wade is 1. pod-ord of Wade is 4.
 
-a-text of Andres is "RRYRYR". b-text of Andres is "RPYPGR".
-a-text of Andrew is "RYRRYR". b-text of Andrew is "RYRRGR".
-a-text of Archie is "YRRYYR". b-text of Archie is "GRRYYR".
-a-text of Barney is "RYYRRO". b-text of barney is "RYYRRB".
-a-text of Bredo is "RYRYR". b-text of Bredo is "PYRYR".
-a-text of Blake is "RRYYR". b-text of Blake is "PPYYR".
-a-text of Cedrick is "RRYRRYR". b-text of Cedrick is "PRYRRYR".
-a-text of Daryl is "RYRRO". b-text of Daryl is "RGPRO".
-a-text of Demitri is "RYRYRYR". b-text of Demitri is "RYPGRYR".
-a-text of Dewey is "RYYRO". b-text of Dewey is "RGYRB".
-a-text of Edwin is "RYRYR". b-text of Edwin is "RYRYR".
-a-text of Eldon is "YRRYR". b-text of Eldon is "YPPYP".
-a-text of Ernest is "RYRRYR". b-text of Ernest is "RYPRYR".
-a-text of Geno is "RYRY". b-text of Geno is "PYPY".
-a-text of Goldy is "RYRRO". b-text of Goldy is "PGRRB".
-a-text of Leander is "RYYRRYR". b-text of Leander is "PGGRRGR".
-a-text of Marcel is "RYRRYR". b-text of marcel is "RGRRGR".
-a-text of Marlon is "RYRRYR". b-text of Marlon is "RYPRYR".
-a-text of Preston is "RRYRYRR". b-text of Preston is "PPYRYRR".
-a-text of Reggie is "YRRYYR". b-text of Reggie is "YRPYYR".
-a-text of Rodney is "OYRRYR". b-text of Rodney is "OGRRGR".
-a-text of Royce is "RYOYR". b-text of royce is "RGBYR".
-a-text of Shane is "YRRYR". b-text of Shane is "YRRYR".
-a-text of Terrance is "RYRRYYRR". b-text of Terrance is "RGRPYYRR".
-a-text of Tyson is "RRYRO". b-text of Tyson is "RRYRO".
-a-text of Wade is "YRYR". b-text of wade is "YRYR".
-
-Table of warguys
-fighter	vuln	wargrp
-Andres	"snared"	5
-Andrew	"warned"	5
-Archie	"achier"	5
-Barney	"nearby"	5
-Blake	"bleak"	3
-Bredo	"bored"	3
-Cedrick	"cricked"	6
-Daryl	"lardy"	3
-Demitri	"timider"	6
-Dewey	"weedy"	3
-Edwin	"wined"	2
-Eldon	"olden"	2
-Ernest	"tenser"	4
-Geno	"gone"	1
-Goldy	"godly"	2
-Leander	"learned"	6
-Marcel	"calmer"	4
-Marlon	"normal"	4
-Preston	"pronest"	6
-Reggie	"eggier"	4
-Rodney	"yonder"	7
-Royce	"coyer"	2
-Shane	"ashen"	1
-Terrance	"recreant"	6
-Tyson	"stony"	1
-Wade	"awed"	1
+The chum of Andres is yourself.
 
 when play begins (this is the distribute warriors rule) :
 	now Rodney is in Loftier Trefoil;
@@ -15001,9 +14947,11 @@ when play begins (this is the distribute warriors rule) :
 		choose row with wargrp of temp in table of warguys;
 		now fighter entry is in trefoil;
 	now h-w is a random not leaderly warrior in Trefoil;
-[This pulls 1 guy from each wargroup. As of release 3 there are 26 distinct guys with 5.65 letters--the shuffling was previously totally random but now it's weighted down to ~5.61 with a more uniform distribution. You are sure to get 2 6's, 2 5's, a 7-8 and a 4-5.]
+	
+[This pulls 1 guy from each wargroup. As of release 3 there are 26 distinct guys with 5.65 letters on average--the shuffling was previously totally random but now it's weighted down to ~5.61 with a more uniform distribution. You are sure to get 2 6's, 2 5's, a 7-8 and a 4-5.]
 
 understand "wendi" as a mistake ("Now that would be too embarrassing. Maybe you could embarrass him a little, though.") when player is in trefoil and Edwin is in trefoil.
+understand "new id" as a mistake ("You need to make sure Edwin's new ID is something negative.") when player is in trefoil and Edwin is in trefoil.
 
 understand "recalm" and "recalm marcel" as a mistake ("Right idea, but it might work better in [if cur-score of oyster > 0]the oyster[else]another area[end if].") when player is in trefoil and marcel is in trefoil.
 
@@ -17429,8 +17377,6 @@ check going west in fro:
 
 chapter nasty things guys do
 
-mack-row is a number that varies. mack-row is 1.
-
 when play begins (this is the mack-randomize rule):
 	let my-wt be 0;
 	repeat through table of mack behaviors:
@@ -17442,6 +17388,57 @@ when play begins (this is the mack-randomize rule):
 	sort the table of mack behaviors in wt-rand order; [what we are doing here is to slightly weight this in favor of the shorter ones coming first]
 	repeat through table of mack behaviors:
 		now its-been-done entry is false;
+
+a mack-idea is a kind of scenery. a mack-idea is usually vanishing. a mack-idea is usually unscannable. a mack-idea has a number called pod-num. a mack-idea has a number called pod-ord. a mack-idea has text called mack-move. a mack-idea has text called mack-brief.
+
+t-tacitly is a mack-idea. pod-num is 1. pod-ord is 1. a-text of t-tacitly is "RYRRYRO". b-text of t-tacitly is "RGRRYPB". mack-move is "Each mack discusses tacitly why he's got something the others don't.". mack-brief is "acting tacitly".
+t-saintly is a mack-idea. pod-num is 1. pod-ord is 2. a-text is "RYRRYRO". b-text is "RGRRYPB". mack-move is "The macks suddenly start acting very saintly."	"acting saintly".
+t-eyelids is a mack-idea. pod-num is 1. pod-ord is 3. a-text of t-eyelids is "RYYRYRO". b-text of t-eyelids is "RYGRGRO". mack-move is "A few macks do something stupid with their eyelids to get her attention.". mack-brief is "twiddling their eyelids".
+t-reality is a mack-idea.  pod-num is 1. pod-ord is 4. a-text is "RYRYYYRRO". b-text is "RYRYYYRRO". mack-move is "The macks ooze on about how women want companionship, as much as men, and that's REALITY.". mack-brief is "discussing reality".
+t-lindsey is a mack-idea. pod-num is 1. pod-ord is 5. a-text is "RRYRYRO". b-text is "RRYPYRB". mack-move is "The macks blather about how she is better than Lindsey.". mack-brief is "negging Lindsey".
+t-ladyish is a mack-idea. pod-num is 1. pod-ord is 6. a-text is "RRYRYRO". b-text is "RRYRGRO". mack-move is "The macks try to talk about ladyish things and fob off any awkwardness in the conversation to simple honesty.". mack-brief is "seeming ladyish".
+t-krystal is a mack-idea. pod-num is 1. pod-ord is 7. a-text is "RRYRRRO". b-text is "RRYRRRO". mack-move is "Some of the macks compare her to Krystal, being sort-of favorable to both. Still, it's icky.". mack-idea is "comparing Gretta and Krystal".
+
+t-mistyale is a mack-idea. pod-num is 2. pod-ord is 1. a-text is "RRYYRYRO". b-text is "RRYYRY*O". mack-move is "The macks claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". mack-brief is "mis-discussing Misty Ale".
+t-formally is a mack-idea. pod-num is 2. pod-ord is 2. a-text is "RYRRYRRO". b-text is "*YR*YRRO". mack-move is "The macks manage to seem surprisingly fly, moral. Like Ally from 'My Floral', a 'premium' cable show so bad you turn red just thinking of it. But they've got the confidence and pace to pull it off, for now.". mack-brief is "acting too formally".
+t-bridally is a mack-idea. pod-num is 2. pod-ord is 3. a-text is "RYRYRRRO". b-text is "RYRYRRPB". mack-move is "The macks ask if she has been thinking bridally.". mack-brief is "talking bridally"
+t-snityell is a mack-move. pod-num is 2. pod-ord is 4. a-text is "RYRYRRRO". b-text is "P**YRRRO". mack-move is "The macks perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". mack-brief is "having a snit-yell".
+t-locality is a mack-idea. pod-num is 2. pod-ord is 5. a-text is "RYYRYRRO". b-text is "RGYRYRRB". mack-move is "The macks discuss how nice it is to meet her in this locality.". mack-brief is "'admiring' this locality"
+t-reliably is a mack-idea. pod-num is 2. pod-ord is 6. a-text is "RRYYRYRO". b-text is "RRYYRYPB". mack-move is "The macks cut each other off reliably, giving Gretta no time to reject them or point out they're not THAT exciting.". mack-brief is "interrupting each other reliably"
+
+t-lousydiet is a mack-idea. pod-num is 3. pod-ord is 1. a-text is "RYRYYYRRO". b-text is "RYRYYYRRO". mack-move is "Each mack discusses how he outyields someone else with a lousy diet, all, 'You! Idlest!' You see red.". mack-brief is "disparaging a lousy diet".
+t-lobbyings is a mack-idea. pod-num is 3. pod-ord is 2. a-text is "RYRRYRRRO". b-text is "RGPPYRRRO". mack-move is "The macks continuing their lobbyings, far too cheery and confident.". mack-brief is "making lobbyings".
+t-lawyering is a mack-idea. pod-num is 3. pod-ord is 3. a-text is "RYYRYRRRO". b-text of is "RYYRYRRRO". mack-move is "The macks begin lawyering about why she should probably choose ONE of them. You see red, a bit.". mack-brief is "lawyering".
+t-martially is a mack-idea. pod-num is 3. pod-ord is 4. a-text is "RYRRYYRRO". b-text is "PGPRYGPPB". mack-move is "Some of the macks even begin to talk maritally.". mack-brief is "blabbing maritally".
+
+t-drywalling is a mack-idea. pod-num is 4. pod-ord is 1. a-text is "RRYRRYRRRO". b-text is "PPYPRYRRRO". mack-move is "Amazingly, the macks make projects like drywalling seem almost exciting--how competent they are, how incompetent some other guys are. Maybe it's just they're talking so fast, that they make [i]drywalling[r] interesting.". mack-brief is "blabbing about drywalling"
+
+t-despairingly is a mack-idea. pod-num is 5. pod-ord is 1. a-text is "RYRRYYRYRRRO". b-text is "RGRRYYRYRRRO". mack-move is "The macks begin redisplaying and redisplaying why they're so great."	"redisplaying their 'greatness'"
+
+mack-row is a number that varies. mack-row is 1.
+
+max-pod-num is a number that varies. max-pod-num is 4.
+
+[t-bridally	t-bridally	"ribaldly"	"ribaldly"	"The macks move from the wedding to what they expect on the wedding night. She wanted to believe they would not, but they couldn't help it."	false	401939391
+t-tacitly	t-tacitly	"cattily"	"cattily"	"The macks each lose their composure, each putting down the next guy's uniqueness or virtues or whatever. They're talking more sense than before, but the truth hurts, and things get out of hand quickly."	false	448579376
+t-drywalling	t-drywalling	"drawlingly"	"drawlingly"	"The macks begin talking slower, and suddenly, their conversational hold is broken. Gretta realizes there's no good way to make home repair discussions more exciting and says so. She looks relieved."	false	592962469
+t-saintly	t-saintly	"nastily"	"nastily"	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. They scramble to assure her they didn't mean it that way, but she's not fooled."	false	491645247
+t-eyelids	t-eyelids	"seedily"	"seedily"	"That thing they were doing? With their eyelids? Well, Gretta seems to have caught on, now. She laughs and groans a bit, and the macks accuse each other of being too obvious."	false	594081210
+t-reality	t-reality	"irately/reailty"	"irately"	"One suitor is reduced to tears as he talks about reality, or his version of it. 'Dude, that was pathetic,' someone else says. 'Yet...LIAR! True-luv vulture!' The argument reflects well on no-one."	false	539593685
+t-lobbyings	t-lobbyings	"sobbingly"	"sobbingly"	"The macks change up the mood, but it is for the worst. One starts crying, then others do--and it'spathetic enough, their plucky efforts to persuade without logic fall to pieces."	false	530137500
+t-mistyale	t-mistyale	"steamily"	"steamily"	"The macks begin to discuss the disgraceful commercial in much more detail than is necessary, and their facade of refined alcohol palette, etc., is broken."	false	614619001
+t-lousydiet	t-lousydiet	"tediously"	"tediously"	"The macks begin whinging with the same old argument, going dreadfully off-subject, and so forth. Suddenly, their nonsense is less believable, or fun to believe."	false	748843503
+t-locality	t-locality	"coitally"	"coitally"	"Sometimes you just have to let idiots talk about what, apparently, all men think about. With these guys, it's like you almost didn't have to do anything."	false	"[if cheat-on is false][else][end if]."	false	473635774
+t-lawyering	t-lawyering	"wearingly"	"wearingly"	"They start repeating their arguments, and finally, Gretta draws up the courage to explain it's getting old."	false	645925650
+t-formally	t-formally	"formally"	"formally"	"The macks over-explain how they're fly/moral, and that's a critical lapse in concentration! Gretta has the time to ask obvious questions and make them contradict each other. And shortly THAT's all over."	false	482441177
+t-despairingly	t-despairingly	"despairingly"	"despairingly"	"The macks become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the macks."	false	781752737
+t-lindsey	t-lindsey	"snidely"	"snidely"	"The macks refer to Lindsey a little too unfavorably and ignore Gretta's hint that she doesn't really hate Lindsey. Their apologies fail."	false	535182609
+t-ladyish	t-ladyish	"shadily"	"shadily"	"You manage to make them let slip a mean dis of other maidens."	false	"[if cheat-on is false][else][end if]."	false	377939109
+t-snityell	t-snityell	"silently"	"silently"	"The macks run out of words to describe their style nit, and they begin miming, but that just makes them look a parody of themselves. With time to think, Gretta is able to say how sad they look."	false	671077377
+t-martially	t-martially	"martially"	"martially"	"The men, in an effort to prove their worth, begin talking about that most manly of subjects, war. They talk very loudly and begin discussing cool ammunition and weapons and blood and guts. And shoot-em-up games. Gretta yawns conspicuously, clamming the macks up."	false	531864386
+t-reliably	t-reliably	"blearily"	"blearily"	"They interrupt each other, but not forcefully enough. Gretta comments, 'fascinating,' further cutting them."	false	508716411
+t-krystal	t-krystal	"starkly"	"starkly"	"The macks finally get a bit too explicit about looks, and Gretta is able to overcome their flattery."	false	516001874
+]
 
 every turn when macks are visible (this is the macks hitting on rule):
 	let this-bool be false;
@@ -17463,28 +17460,6 @@ every turn when macks are visible (this is the macks hitting on rule):
 	now its-been-done entry is true;
 	if recyc is true:
 		say "The macks take a break. They've [one of][or]once again [stopping]babbled for long enough, and about enough, they can repeat their 'exciting' conversation all over again[if macked-out > 0], except for what you managed to alter[end if]."
-
-table of mack behaviors [this is where we report what the macks do, have been caught at, etc.]
-dumb-action	still-doable	mack-do	adverb-to-say	mack-phail	its-been-done	set-txt	second-text	mackhash	wt-rand
-"Amazingly, the macks make projects like drywalling seem almost exciting--how competent they are, how incompetent some other guys are. Maybe it's just they're talking so fast, that they make [i]drywalling[r] interesting."	true	"blabbing about drywalling"	"drawlingly"	"The macks begin talking slower, and suddenly, their conversational hold is broken. Gretta realizes there's no good way to make home repair discussions more exciting and says so. She looks relieved."	false	"[if cheat-on is false]RRYRRYRRRO[else]PPYPRYRRRO[end if]"	--	592962469	10
-"Each mack discusses how he outyields someone else with a lousy diet, all, 'You! Idlest!' You see red."	true	"disparaging a lousy diet"	"tediously"	"The macks begin whinging with the same old argument, going dreadfully off-subject, and so forth. Suddenly, their nonsense is less believable, or fun to believe."	false	"RYRYYYRRO"	--	748843503	9
-"The macks claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!"	true	"mis-discussing Misty Ale"	"steamily"	"The macks begin to discuss the disgraceful commercial in much more detail than is necessary, and their facade of refined alcohol palette, etc., is broken."	false	"[if cheat-on is false]RRYYRYRO[else]RRYYRY*O[end if]"	--	614619001
-"The macks continuing their lobbyings, far too cheery and confident."	true	"making lobbyings"	"sobbingly"	"The macks change up the mood, but it is for the worst. One starts crying, then others do--and it'spathetic enough, their plucky efforts to persuade without logic fall to pieces."	false	"[if cheat-on is false]RYRRYRRRO[else]RGPPYRRRO[end if]"	--	530137500
-"The macks manage to seem surprisingly fly, moral. Like Ally from 'My Floral', a 'premium' cable show so bad you turn red just thinking of it. But they've got the confidence and pace to pull it off, for now."	true	"acting too formally"	"formally"	"The macks over-explain how they're fly/moral, and that's a critical lapse in concentration! Gretta has the time to ask obvious questions and make them contradict each other. And shortly THAT's all over."	false	"[if cheat-on is false]RYRRYRRO[else]*YR*YRRO[end if]"	--	482441177
-"Each mack discusses tacitly why he's got something the others don't."	true	"acting tacitly"	"cattily"	"The macks each lose their composure, each putting down the next guy's uniqueness or virtues or whatever. They're talking more sense than before, but the truth hurts, and things get out of hand quickly."	false	"[if cheat-on is false]RYRRYRO[else]RGRRYPB[end if]."	--	448579376
-"The macks suddenly start acting very saintly."	true	"acting saintly"	"nastily"	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. They scramble to assure her they didn't mean it that way, but she's not fooled."	false	"[if cheat-on is false]RYRRYRO[else]RGRRYPB[end if]."	--	491645247
-"The macks begin redisplaying and redisplaying why they're so great."	true	"redisplaying their 'greatness'"	"despairingly"	"The macks become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the macks."	false	"[if cheat-on is false]RYRRYYRYRRRO[else]RGRRYYRYRRRO[end if]."	--	781752737
-"The macks ooze on about how women want companionship, as much as men, and that's REALITY."	true	"discussing reality"	"tearily"	"One suitor is reduced to tears as he talks about reality, or his version of it. 'Dude, that was pathetic,' someone else says. 'Yet...LIAR! True-luv vulture!' The argument reflects well on no-one."	false	"[if cheat-on is false]RYYRYRO[else]RGGRGRB[end if]."	"irately"	539593685
-"The macks ask if she has been thinking bridally."	true	"talking bridally"	"ribaldly"	"The macks move from the wedding to what they expect on the wedding night. She wanted to believe they would not, but they couldn't help it."	false	"[if cheat-on is false]RYRYRRRO[else]RYRYRRPB[end if]."	--	401939391
-"The macks blather about how she is better than Lindsey."	true	"negging Lindsey"	"snidely"	"The macks refer to Lindsey a little too unfavorably and ignore Gretta's hint that she doesn't really hate Lindsey. Their apologies fail."	false	"[if cheat-on is false]RRYRYRO[else]RRYPYRB[end if]."	--	535182609
-"A few macks do something stupid with their eyelids to get her attention."	true	"twiddling their eyelids"	"seedily"	"That thing they were doing? With their eyelids? Well, Gretta seems to have caught on, now. She laughs and groans a bit, and the macks accuse each other of being too obvious."	false	"[if cheat-on is false]RYYRYRO[else]RYGRGRO[end if]."	--	594081210
-"The macks try to talk about ladyish things and fob off any awkwardness in the conversation to simple honesty."	true	"seeming ladyish"	"shadily"	"You manage to make them let slip a mean dis of other maidens."	false	"[if cheat-on is false]RRYRYRO[else]RRYRGRO[end if]."	--	377939109
-"The macks perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet."	true	"having a snit-yell"	"silently"	"The macks run out of words to describe their style nit, and they begin miming, but that just makes them look a parody of themselves. With time to think, Gretta is able to say how sad they look."	false	"[if cheat-on is false]RYRYRRRO[else]P**YRRRO[end if]"	--	671077377
-"Some of the macks even begin to talk maritally."	true	"blabbing maritally"	"martially"	"The men, in an effort to prove their worth, begin talking about that most manly of subjects, war. They talk very loudly and begin discussing cool ammunition and weapons and blood and guts. And shoot-em-up games. Gretta yawns conspicuously, clamming the macks up."	false	"[if cheat-on is false]RYRRYYRRO[else]PGPRYGPPB[end if]."	--	531864386
-"Some of the macks compare her to Krystal, being sort-of favorable to both. Still, it's icky."	true	"comparing Gretta and Krystal"	"starkly"	"The macks finally get a bit too explicit about looks, and Gretta is able to overcome their flattery."	false	"RRYRRRO"	--	516001874
-"The macks discuss how nice it is to meet her in this locality."	true	"'admiring' this locality"	"coitally"	"Sometimes you just have to let idiots talk about what, apparently, all men think about. With these guys, it's like you almost didn't have to do anything."	false	"[if cheat-on is false]RYYRYRRO[else]RGYRYRRB[end if]."	--	473635774
-"The macks cut each other off reliably, giving Gretta no time to reject them or point out they're not THAT exciting."	true	"interrupting each other reliably"	"blearily"	"They interrupt each other, but not forcefully enough. Gretta comments, 'fascinating,' further cutting them."	false	"[if cheat-on is false]RRYYRYRO[else]RRYYRYPB[end if]."	--	508716411
-"The macks begin lawyering about why she should probably choose ONE of them. You see red, a bit."	true	"lawyering"	"wearingly"	"They start repeating their arguments, and finally, Gretta draws up the courage to explain it's getting old."	false	"[if cheat-on is false]RYYRYRRRO[else]RYYRYRRRO[end if]."	--	645925650
 
 check scaning macks: [?? doesn't give text at top]
 	choose row mack-row in table of mack behaviors;
@@ -24706,6 +24681,7 @@ blurb
 table of yessage [xxg11]
 blurb
 "Agree, Eager."
+"Agreed? Gee, rad!"
 "Agreement's sent? Meagre."
 "Attuning nutating?"
 "Bound to doubt? NO!" []
@@ -24813,6 +24789,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Apperson Propanes"
 "Aquino Quinoa"
 "Ar, Avast! Ava's Art Avatars"	true
+"Aragon's Angoras"
 "Ardolino's Doornails"
 "Arista Tiaras" []
 "Ark O['] Okra"
@@ -24872,6 +24849,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Bea Kraft's Breakfast"
 "Bearded Dad Beer"
 "Beaudry Daubery"
+"Beavins Ave. Bins"
 "Beilfuss Sub-Files"
 "Bella's Labels"
 "Ben Moral's Lemon Bars"
@@ -25140,6 +25118,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Doane's Anodes"
 "Doc Hume's Does-Much Ouch-Meds"
 "Doc Tom Dot Com"
+"Doc's Cult Cold Cuts"
 "DocTime's Medics To Domestic"
 "Dodie's Diodes"
 "Dolinger-Reingold Older Gin"
@@ -25720,6 +25699,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Milliken's Lime Kilns"
 "MiltonCo Cool Mint"
 "Minced Med'Cin"
+"Minden Indemn-Mendin[']"
 "Mine Camp Pemmican"
 "Ming Acuff's Macguffins"
 "Minty-Ade: Dynamite!"	true
@@ -25876,10 +25856,12 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Palmerton Patrolmen"
 "Pam Tell's Pet Malls"
 "Pamila's Impalas"
+"Panic St. Catnips"
 "Paniccia's Capsaicin"
 "Pappy's Spy App"
 "Parrent's Partners"
 "Parriott's Portraits"
+"Parrots['] Art Spot"
 "PartyCo's Crap Toys"
 "Passero Soapers"
 "Pasternak Partakens"
@@ -25963,6 +25945,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Priestley's Peristyles"
 "Prig Fanny's Frying Pans"
 "Prim Sot Imports Is Top, Mr.!"	true
+"ProTec's Copters"
 "Protect-Tec Port"
 "Proust's Sprouts"
 "PSI ISP"
@@ -26227,6 +26210,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "St. Pam's Stamps"
 "St. Roj or J.T.'s Jorts"
 "Staap Tapas/Pasta"
+"Stagle Aglets"
 "Stale-Munch Lunch Meats"
 "Stampney Payments"
 "Stanfield Inflateds"
@@ -27194,6 +27178,7 @@ blurb
 "Jeer-Mo['] Jerome"
 "Jester JT Rees"
 "Joking King OJ"
+"Jovial Ol['] Javi"
 "Juvenile Vile June"
 "Kidder Bloom Middlebrook"
 "King Rebel Kleinberg"
@@ -27681,8 +27666,8 @@ blurb
 
 table of elmo emo [xxm5]
 blurb
-"Aimless Melissa"
 "Amelia's malaise"
+"Barb's abbrs."
 "Beau's abuse"
 "Bob's Lie-Lobbies"
 "Cathy's yachts"
@@ -27700,7 +27685,6 @@ blurb
 "Luann's annuls"
 "Margie's mirages" []
 "Melinda's [d-word] lies"
-"Middler Mildred"
 "No-Telling Ellington"
 "Pam's spam"
 "Rene's sneer"
@@ -27753,6 +27737,7 @@ blurb
 "BLAM! The Meth Lab" []
 "Blings O['] Goblins"
 "Bold Moves Mobs Loved"
+"Bomber Mobber"
 "Bonk Castle Blackstone"
 "Bonus Bo'Sun"
 "Bops to Po['] Bots"
@@ -27787,6 +27772,7 @@ blurb
 "The Cliffs: Filch Fest"
 "Clout a Couatl"
 "Colgate Cage Lot"
+"Colonize Coil Zone"
 "Commander Mac Redmon"
 "Commodore's Cosmodrome"
 "Console O['] Clones"
@@ -27803,6 +27789,7 @@ blurb
 "Crime-Org Grim Core"
 "Crop-Meet Competer"
 "Cry Duel Crudely"
+"A Cyanotic Action Cay"
 "D'oh, Get the Dog"
 "Dang Our Gun Road: No Guard Aground" []
 "Dare-Port Predator"
@@ -28032,7 +28019,6 @@ blurb
 "Ogre Ergo Gore"
 "Ogre Hut: Tougher"
 "Oh, Madder Hard Mode"
-"OK, Am Amok"
 "Old Guard Drug Load"
 "Omega God: Agog Demo"
 "Omerta: a Metro To Ream"
@@ -28098,6 +28084,7 @@ blurb
 "Saint Al, Lanista"
 "Save Eva's Vase"
 "Scalper Parcels"
+"Scry Up Cyprus"
 "Scum Path Matchups"
 "Sea Trip Pirates"
 "Sedentary Try-and-See"
@@ -28262,17 +28249,20 @@ blurb
 "Black Spot Plots Back"
 "Bland Hero Bohlander"
 "The Blob Lobbeth"
+"Blumsted Stumbled"
 "Bo's Pluck Blocks Up"
 "Bods Can Abscond"
 "The Borg Got Herb"
 "Broodiest Robots Die"
 "The Buck Huck Bet"
+"Burrrito Tub Riot"
 "Caress-Scares"
 "Carnivorous Coronavirus"
 "Cash in, Mr. Chrisman"
 "Castle Den: Let's Dance and Select"
 "Cesium Miscue"
 "Chad Bogue, Douchebag" []
+"Chamber Pot Camp Bothers"
 "Chet's Ma Matches the Scam"
 "Chicken-Pot Kitchen-Top Checkpoint"
 "Chum in Munich"
@@ -28312,6 +28302,7 @@ blurb
 "Dr. Neo's Drones" []
 "Dr. Roach-Orchard"
 "A Driver's Rare Vids"
+"Duffers Suffer'd"
 "Dugger's Grudges"
 "Dullard Dr. Udall"
 "East to O-State"
@@ -28478,6 +28469,7 @@ blurb
 "Sad Lev Valdes Slaved"
 "Same Blind Semi-Bland Mandibles"
 "Say, Rude Duryea's Rues Day"
+"A Scion's Casinos"
 "Scoffin['] Coffins" []
 "Scumball Cam's Bull"
 "Seine's Sensei is Seen"
@@ -28670,6 +28662,7 @@ blurb
 "Curt Ain't Taciturn" []
 "Curt Yin's Scrutiny"
 "Curtest Cutters: Tut's Rec"
+"Daily Lydia"
 "Dibbler's Dribbles"
 "Diety Deity Ted Yi"
 "Dinner of Nerd Info"
@@ -28682,6 +28675,7 @@ blurb
 "Emme's Memes"
 "Emote to MEE"
 "Empathic Emphatic [if player is male]Tim Paech[else]Pam Teich[end if]"
+"Enquire, Enrique"
 "Eric [']N Nicer Recin[']"
 "Essie Fitt Testifies Feistiest"
 "Factoids: Tad's Foci"
@@ -28888,6 +28882,7 @@ blurb
 "So Vent to Sven"
 "Sociable [if player is male]Basil Coe[else]Casi Loeb[end if]"
 "Speak: the Hep Takes"
+"Spiel Piles"
 "Stand in and Snit"
 "Steamiest Estimates"
 "Step In [']N Spite"
@@ -28970,7 +28965,6 @@ blurb
 "Boy, Mr. Byrom"
 "Brain-Bairn Brian"
 "Bub Chun's Bus Bunch"
-"Bud for Buford"
 "Can't Hate Etta Chan"
 "Castor's StarsCo"
 "Cats Like Kastelic" []
@@ -29245,11 +29239,13 @@ blurb
 "UpFront Funport"
 "Wildest-Led Wits: It's Lewd"
 "Wit as it Was" []
+"Wry Folks['] Fly Works"
 "Ye Luls Be Bullseye"
 
 table of lousy hit songs [xxm01]
 blurb
 "[d-word-u], Be Bad Men"
+"A-OK We Awoke"
 "Abby, Baby"
 "About Me: Mo['] Beaut"
 "Above Must Bust a Move"
@@ -29300,12 +29296,15 @@ blurb
 "Bomb Mobb"
 "Boo, Damn, Bad No Mo[']"
 "The Boon Be on, Tho[']"
+"Boy, Mr., My Bro"
 "Bozo MC Comboz"
 "Brawling Warbling"
 "Broads So Drab"
+"The Bros Brothers Be Short"
 "Budapest: a Dubstep"
 "Butterier Re-Tribute"
 "Call Out a Cut, LOL"
+"Called Da Cell"
 "Cap the Hep Cat"
 "Cat, Kite a Ticket"
 "Charisma is a Charm"
@@ -29480,6 +29479,7 @@ blurb
 "I Break a Biker"
 "I, Cat Ever Creative"
 "I Chafe a Chief"
+"I Cream a Crime"
 "I Cred Dr. Ice"
 "I Dis and Disdain"
 "I Dis To Idiots"
@@ -29549,6 +29549,7 @@ blurb
 "Lads Can Scandal"
 "Lash Out Tha Soul"
 "Laws So Low-[a-word-u]"
+"Le Rock Locker"
 "Less Lout Sellouts"
 "Let Go, Get Lo"
 "Life'z Feliz"
@@ -29607,6 +29608,7 @@ blurb
 "My Fortune: Money Turf"
 "My Noise is Money"
 "Nah, Got to Hang"
+"Nashty Shanty"
 "New Gibe We Begin"
 "New, Youngish, When You Sing"
 "A Night Be in the Bag: Bang it, Eh"
@@ -29640,6 +29642,7 @@ blurb
 "Oh, Tim! I'm Hot to Him"
 "Oh, Top to Hop"
 "Oh, Us Got So Tough" []
+"OK, Am Amok"	
 "OK Crew We Rock"
 "Omigod I'm Good"
 "One Fly Felony"
@@ -30646,9 +30649,9 @@ blurb
 
 this-book is a number that varies. this-book is usually 0.
 
-table of random books [tob] [xxm04]
+table of random books [xxm4] [tob]
 blurb	prio
-"[a-b], Russ: ABUSERS[r], by Bess Rau"
+"[a-b], Russ: ABUSERS[r], by Bess Rau"	0
 "[A-word-u] Zit Zen: Snazziest[r], by Issa Zentz"
 "[d-t] Shed the Odds[r], by Ted Dosh"
 "[d-t], Snub Not Buds[r], by Stu Bond"
@@ -30662,6 +30665,7 @@ blurb	prio
 "Abbey Cho's Sobby Ache[r], by [if player is male]Cobey Bash[else]Sheya Cobb[end if]"
 "Abbie's Babies[r], by Seb Iba"
 "ABC is Basic![r] by Cassi Babic"
+"ABCDEFGHI Chafed Big[r], by Fidge Bach"
 "Abhorrent, Earth-Born[r], by [if player is male]Robert Han[else]Berna Roth[end if]" []
 "Abide Inert, Inebriated[r], by Benita Reid" []
 "Able Arty Betrayal[r], by [if player is male]Bart Ealy[else]Tara Blye[end if]" []
@@ -30679,8 +30683,10 @@ blurb	prio
 "Achy Odes: Days Echo[r], by Doc Hayes"
 "AcidSoft Factoids[r], by Tad Scifo" []
 "Acronyms? Mas Corny![r] by Ros McNay"
+"Act, Feed a Defect[r], by Ted Face"
 "Acting Naif's Fascinating[r], by Cats Finigan"
 "Acton's Cantos to Scan[r], by Costas Canton"
+"Actually Lay a Cult[r], by Lucy Lata"
 "Acuity Calls Caustically[r], by Stacy Ciulla"
 "The Ad or Her Toad[r], by Ed Troha" []
 "Adam, He's Ashamed[r], by [if player is male]Ed Hamsa[else]Mae Shad[end if]"
@@ -30837,6 +30843,7 @@ blurb	prio
 "Any Pen a Penny[r], by Nann Pye"
 "Any Pick Panicky[r], by Nick Yap"
 "Any Plight, Plaything? Ply a Night[r], by Hilty Pang"
+"Any Rad Day Ran[r], by Andray-Daryan Darnay"
 "Any Temp Payment Type, Man[r], by [n-t] Pym" []
 "Apes['] Apse[r], by Essa Pape"
 "Apex Roads Paradoxes[r], by [if player is male]Rex Posada[else]Rox Espada[end if]"
@@ -30847,6 +30854,7 @@ blurb	prio
 "Arc I Curl, Circular[r], by [if player is male]Arric Luc[else]Luci Carr[end if]"
 "Arcane Commoner Romance[r], by Ace Norm Cameron"
 "Arch Woes, Raw Echos: Who Cares[r], by [if player is male]Chas Rowe[else]Shea Crow[end if]"
+"Archivee Achiever[r], by Vera Eich"
 "Ardor Roar'd[r], by Dorra Arrod"
 "Are Tots to Stare[r], by [if player is male]Ares Ott[else]Ros Tate[end if]"
 "The Area: a Reheat[r], by Tea Rahe"
@@ -30858,6 +30866,7 @@ blurb	prio
 "Aristotle's Totalisers[r], by [if player is male]Otis Slater[else]Tess Rialto[end if]"
 "Arlo's Solar Orals[r], by Ross Allaro"
 "Armories['] Semi-Roar[r], by [if player is male]Omar Reis[else]Rosa Meir[end if]" []
+"Armoring Rigor Man[r], by [if player is male]Gino Marr[else]Roni Gram[end if]"
 "Arms on Ransom[r], by Ms. Rona Rosman" []
 "Arnie's Arisen[r], by Serina Raines"
 "Arrange No Ego, O Anger[r], by Genaro O'Regan-Garone"
@@ -30894,6 +30903,7 @@ blurb	prio
 "At a Blue Tableau[r], by Beau Alt"
 "At a Creek, Take Care[r], by Kate Cera"
 "At a Rum Trauma[r], by Mat Rau"
+"At Bison Bastion[r], by Boston Sabatini"
 "At Lowly Lyla Two[r], by Walt Loy"
 "At No Addition[r], by Donita Donati"
 "At the Theta[r], by Hetta H. Tate"
@@ -30922,10 +30932,12 @@ blurb	prio
 "Ay, Tots, To Stay Toasty[r], by Ty Sato"
 "Ay, Warn Us, Runaways[r], by Ruy Aswan"
 "Aye, I Trust Austerity[r], by [if player is male]Titus Raye[else]Sari Yuett[end if]"
+"Aye, Net a Teeny Tan Eye[r], by Nat Yee"
 "Aye, Sinner: Ye Insaner Nine Years[r], by Serina Ney & Nina Reyes"
 "B-Movies: Mobs Vie[r], by Mo Bevis"
 "Back Under Crude-Bank Cad Bunker[r], by Buck Arden"
 "Bad Grades[r], by Brad Degas"
+"Bad Men or [d-word-u] Bore[r], by Don Amber"
 "Bad, Rote, Aborted[r], by Art Bode, Tad Boer & [d-t] Bare"
 "Bah, Rent the Barn[r], by Ben Hart"
 "Bah, Son! Bash On! Ah, Snob[r], by Bo Nash"
@@ -30934,6 +30946,7 @@ blurb	prio
 "Bait Your Obituary[r], by Ryu Tobia" []
 "Ballyard Balladry[r], by Lyra Bald"
 "Balmier, I Ramble[r], by Amber Li"
+"Bamboo's a Bomb, So[r], by Bob Amos"
 "Ban a New Wannabe[r], by Anna Web"
 "Ban Ego? No, Gabe[r], by Bo Egan"
 "BAN MILK[r], by Bilk-Man Lambkin Milbank"
@@ -30957,6 +30970,7 @@ blurb	prio
 "Bauer's Abuser, Bear Us[r], by Su Baer" []
 "Bauerle's Reusable Blues Era[r], by [if player is male]Saul Bree[else]Lea Suber[end if]"
 "Baum, a Bum[r], by Babu Muma"
+"Bayern Nearby[r], by [if player is male]Barnaby Neyer[else]Bryanne Beyer[end if]"
 "Be Afraid: a Bad Fire[r], by Deb Faria"
 "Be Cool, Ole Cob[r], by Bo Cole"
 "Be Drony, Nerd Boy Ed Byron[r], by Rey Bond"
@@ -30964,6 +30978,7 @@ blurb	prio
 "Be Moany Mean Boy[r], by [if player is male]Ben Mayo[else]May Bone[end if]"
 "Be Proud, Prude Bo[r], by Bud Poer"
 "Be Sat! St. [a-b] Abets Betas[r], by Abbess Etta"
+"Be Trim, Timber[r], by Betti Brimmer"
 "Beach [']N a Bench[r], by Bec Han"
 "Beam Dry, My Bread[r], by Em Brady"
 "Bear no Bane or one Bar[r], by Robena Barone" []
@@ -30987,8 +31002,10 @@ blurb	prio
 "Bein['] Sly: Bylines[r], by Lyn Seib-Lisenby"
 "Being Right: Hint Bigger[r], by Inge Bright & Britni Hegg"
 "A Belief's Feasible, Base Life[r], by Basil Fee"
+"Belmont Blotmen[r], by Len Tomb"
 "Belser Rebels[r], by Les Erb"
 "Bely So, Ye Slob[r], by Les-Boy Bosley-Boyles"
+"Bemused Seed-Bum[r], by Bud Mees"
 "Ben, a Bean[r], by Anne Abbe"
 "Ben Sat Absent[r], by Beans Basnett & Bennett Sabas"
 "Bend, Stray Bystander[r], by Bret Sandy & Andy Brest"
@@ -31010,6 +31027,7 @@ blurb	prio
 "Big East, Get Bias[r], by Gia Best"
 "Big, Lame, I Gamble[r], by Gabe Lim"
 "Big Land Balding[r], by Al D. Bing"
+"A Big Nerd Barged In[r], by [if player is male]Brad Egin[else]Dina Berg[end if]"
 "Big Note to Begin: I Go Bent[r], by Tobie Ng"
 "Big Red Bridge[r], by Brigid Edberg & Di Berg"
 "Big Throne, Both Reign[r], by [if player is male]Bo Enright[else]Beth Gorin[end if]"
@@ -31019,16 +31037,20 @@ blurb	prio
 "Bilious, I Boil Us[r], by Lois Bui"
 "The Bill: Hell Bit[r], by Bet Hill"
 "Bill the Bell-Hit[r], by Li'l Beth" []
+"Bill's Hut: Stub Hill[r], by Lis Bluth"
+"Bin a Gig, Big Gain[r], by Gia Bing"
 "The Bind: Hid Bent Hint Bed[r], by Ted Binh" []
 "Bind the Thin Bed, then Bid[r], by Beth Din"
 "The Bird be Third[r], by Di Berth"
 "Birdbrain and Brinda[r], by Brandi Briand"
 "The Birds Bred This[r], by [if player is male]Sid Breth[else]Deb Hirst[end if]"
 "A Bit Shy, Thy Bias[r], by Tish Bay"
+"Bite, Mr. Be-Trim[r], by Betti Brimmer"
+"Bite, Nag, Neg, Bait[r], by [if player is male]Ben Taig[else]Gia Bent[end if]"
 "Biter Tribe[r], by Berti Tiber"
 "The Black Belt Hack Tech-Balk[r], by Kat Belch, Chet Balk & Beth Lack"
 "Black Fire, Leaf Brick[r], by Flick Baer"
-"Blackmail Claim-Balk[r], by [if player is male]Mack Bilal[else]Alma Blick[end if]"[]
+"Blackmail Claim-Balk[r], by [if player is male]Mack Bilal[else]Alma Blick[end if]" []
 "Blamable Me[r], by Mabel Lambe"
 "Blame Mabel[r] by Mel LeBamba" []
 "Blame to Me: A Blot[r], by Tom Beal & [a-b] Molt" []
@@ -31051,6 +31073,7 @@ blurb	prio
 "Blood Bay, Ol['] Bad Boy[r], by Lady Bobo"
 "A Blowgun Bungalow[r], by [if player is male]Blu Wogan[else]Ang Bulow[end if]"
 "Blue Words, Rude Blows[r], by Bud Rowles"
+"A Blur of Our Flab[r], by [if player is male]Rob Lauf[else]Flo Baur[end if]-Balfour"
 "Blush Ripe, Publisher![r] by Herb Pulis"
 "Bo's Life-Foibles[r], by [if player is male]Leif Bos[else]Flo Seib[end if]"
 "The Board's Drab Ethos[r], by [if player is male]Shad Berto[else]Rhoda Best[end if]"
@@ -31064,6 +31087,7 @@ blurb	prio
 "Bold Euro Blue Door[r], by Lou Brode"
 "Bold Greg Goldberg[r], by Blogger D"
 "Bold Heat, Theobald[r], by [if player is male]Thad Loeb[else]Beth Aldo[end if]" []
+"Bolder Bro Del Led Rob[r], by Deb Lor"
 "A Bolder Labored Old Bear: Bad Lore[r], by [a-b] Lord" []
 "Boldest Slob Ted Lost Deb[r], by Del Bost" []
 "The Bone He Bet On[r], by Benet Ho"
@@ -31111,7 +31135,7 @@ blurb	prio
 "Bring Me Mr. Being[r], by Ben Grim"
 "Bring Un-Burning[r], by Bri Gunn-Ninburg"
 "A Brittle Trite Lab[r], by Brett Ali"
-"Bro-Code: Be Crood[r], by Doc Ober"
+"Bro-Code: Bore, Doc? Be Crood[r], by Ced Boor"
 "Bro Didd, Odd Bird[r], by Bri Dodd"
 "Bro-Duel Boulder[r], by Old Rube Rod Blue"
 "Bro Time Bit More[r], by Tim Boer"
@@ -31119,8 +31143,11 @@ blurb	prio
 "Bronte's Ten Bros[r], by Ron Best"
 "Broody Boy Rod[r], by Boyd Ro" []
 "Brooms or Mobs[r], by Mo Bors"
+"The Bros Be Short[r], by Rob Tesh."
 "A Brown Bar Now[r], by Bo Warn"
 "Brownest Torn Webs[r], by Bret Snow"
+"Bub's Gig: Big Bugs[r], by Gus Gibb"
+"Bud for Buford[r], by Bo Ruff-DuBord"
 "Bud's Tin Dustbin[r], by Sid Bunt"
 "Bugs['] Rent: Grub Nest[r], by Gus Brent"
 "Bum Hans, Bushman[r], by BS Human Shubman"
@@ -31145,6 +31172,7 @@ blurb	prio
 "By Sod, a Sad Boy[r], by Bo Days"
 "Bye Now, New Boy[r], by Ben Yow"
 "Bye, Souls: Bless You[r], by [if player is male]Loy Busse[else]Su Bosley[end if]"
+"'Cab-Only Balcony, Boy Clan[r], by Lyn Coba"
 "Cabin Fever: France Vibe[r], by Vince Faber"
 "Cadger-Graced Dr. Cage[r], by Edgar C. DeCrag"
 "The Cads Scathed[r], by Ted Cash"
@@ -31155,6 +31183,7 @@ blurb	prio
 "Call Thou Local Hut: Touch All[r], by Lou Latch"
 "Call Up Pal Luc[r], by Al Culp"
 "Calumnies['] Main Clues[r], by [if player is male]Sam Lucien[else]Sue Maclin[end if]"
+"Came for Cream of Mo['] Farce[r], by Mac Fero"
 "A Camp Elf Facepalm[r], by Alec Famp"
 "Can-Do and Co[r], by A. Condon, Cad"
 "Can His Chains Cash In[r], by Nic Ash"
@@ -31176,6 +31205,7 @@ blurb	prio
 "Carcinogen: Cancer, Go In[r], by Nanci Groce"
 "The Cards Herd Cats[r], by Dre Tasch"
 "Care? Groan, Arrogance or Carnage[r], by [if player is male]Reg Carano[else]Cora Agner[end if]"
+"Carl W is Sir Claw, I Scrawl[r], by Ric Laws"
 "Carlsen Left Crestfallen[r], by Frances Tell"
 "Carmelo's Scam-Role Clamores[r], by Sam LeRoc"
 "Carnage Can Rage[r], by Ace Garn"
@@ -31193,6 +31223,7 @@ blurb	prio
 "The Cause: He's Acute[r], by Ace Theus" []
 "Caustic Rare Caricatures: Accurate, Sir![r], by Traci Crause"
 "Cave Dirt: It Craved A Verdict[r], by Tad Cervi"
+"Cavendish and Chives[r], by [if player is male]Chad Vines[else]Devin Cash[end if]"
 "The Caves Save Tech[r], by [if player is male]Steve Cha[else]Eva Tesch[end if]"
 "A Cedar Arcade[r], by Ace Ard"
 "Cedary Red Cay[r], by [if player is male]Ed Cary[else]Darcey DeCray[end if]" []
@@ -31223,6 +31254,7 @@ blurb	prio
 "Chicest Thrillers, Stretchier Chills[r], by Christel Tichsler"
 "A Chicken: Nice Hack[r], by Ceci Khan"
 "Chider Dr. Eich[r], by Ed Rich"
+"Chimeras Scare Him[r], by [if player is male]Rich Ames[else]Sam Reich[end if]"
 "A Chit-Chat I Act, Hi[r], by Cathi Chait"
 "Chokes at Hotcakes[r], by [if player is male]Chet Soak[else]Kath Esco[end if]"
 "Chorale Cholera[r], by Carole H. LaRoche"
@@ -31232,6 +31264,7 @@ blurb	prio
 "A Chum's Scum, Ha[r], by Mac Shu"
 "Chunks to Shuck Not[r], by Scot Kuhn"
 "Ciambi's Iambics[r], by Ibis Mac"
+"Cicero's Co-Cries: Soccer, I?[r], by Ceci Ros"
 "Cinema Fit to Naif Totemic Metafiction[r], by Camie Fitton"
 "Cinnamon Icon Mann[r], by Mina Conn"
 "Citatory Atrocity[r], by Cory Tait"
@@ -31242,6 +31275,7 @@ blurb	prio
 "Civil Man's Calvinism[r], by Vic Silman"
 "Civilians, I Cavil Sin[r], by Cali Ivins & Lisa Vinci"
 "Clan Dour Cauldron[r], by [if player is male]Conrad Lu[else]Luna Cord[end if]"
+"Clap at a Catalpa[r], by Pat Cala"
 "Clarke: a Clerk[r], by Clara Keckler"
 "Clashed Sad Lech[r], by Les Chad"
 "Classify Cy's Fails[r], by Cay Fliss"
@@ -31251,6 +31285,7 @@ blurb	prio
 "Clearly, Carlyle[r], by Ella Cyr"
 "Clematis Climates[r], by [if player is male]Alec Smit[else]Laci Smet[end if]"
 "A Cleric Pro-Reciprocal[r], by [if player is male]Rico Parcel[else]Carol Price[end if]"
+"Cloak a Lock[r], by Kao Allcock"
 "Clochards, Arch-Clods[r], by Cal Dorsch"
 "Clod Ed's Scolded Coddles[r], by Ced Olds"
 "A Close Solace[r], by Sal Coe & Cal Ose"
@@ -31263,6 +31298,7 @@ blurb	prio
 "Co-Whine? How Nice[r], by Owen Chi"
 "Coalitionist Solicitation[r], by Alison Ciotti"
 "Coarsen It: on Raciest Reactions to Arsenic[r], by [if player is male]Eric Santo[else]Nita Crose[end if]" []
+"A Cobalt Lab Coat[r], by Al Cabot"
 "Coca, Yayo: a Coy CYOA[r], by Cacy O. Yao"	60
 "Code-Fork Roofdeck[r], by Fred Cook"
 "Coded-to-Dote Doc[r], by Todd Coe"
@@ -31280,6 +31316,7 @@ blurb	prio
 "Come to Me, Coot[r], by Tom Coe"
 "Commenter Rec-Moment[r], by Tom McNeer & Mort Nemec"
 "A Common Ammo Con[r], by Mac Moon"
+"Computersd['] Cute Romps[r], by Tom Spruce"
 "Comrades['] Co-Dreams[r], by Ed Marcos"
 "Conceal Rarely Yon Cry Alone[r], by Carolyne Roylance"
 "Confession Confines So[r], by [if player is male]Ennis Fosco[else]Connie Foss[end if]"
@@ -31352,13 +31389,16 @@ blurb	prio
 "Cult Den[r], by Luc Dent & Ced Lunt"
 "Cumberland's Calm Burdens[r], by Del Branscum"
 "Cupid, Jeer Prejudice[r], by Jude Price"
+"Curb [']Em, Mr. Cube[r], by Rube McCumber"
 "Cure Also Carousel[r], by [if player is male]Lucas Roe[else]Cora Luse[end if]"
 "Curse-Paw Swap Cure[r], by A Screw-Up"
+"A Curse Saucer[r], by Su Cera"
 "A Cursed crusade[r], by Sue Card"
 "Cushing Chugs In[r], by Gus Inch"
 "Cuss Fear Fuss Care: Surfaces[r], by Russ Face"
 "Cussier Cruises[r], by Russ Ice"
 "Cut Grain, Giant Cur[r], by Cari Tung"
+"Cutlers['] Cluster[r], by Les Curt"
 "Cynic, Hear Chicanery[r], by Carey Chin"
 "Cynical Caci-Lyn[r], by Nic Lacy"
 "Cynical, Icy Clan[r], by I. Clancy" []
@@ -31420,6 +31460,7 @@ blurb	prio
 "Dear Jo or Jade: J'Adore[r], by Joe Ard"
 "Dear Old Dad Lore: Lo, Dread[r], by Ed Doral"
 "Dear Pa's Parades[r], by Ed Paras"
+"Dear Sol, Sore Lad, Reloads[r], by Del Rosa"
 "Dear Sot: Roasted or Sated?[r] by Ed Astor"
 "Dear Voter (Overrated,)[r] by Art DeVore"
 "Death Metal Healed Matt[r], by Mattee Dahl"
@@ -31507,6 +31548,7 @@ blurb	prio
 "Dingier Cons Considering Nicer Doings[r], by Cindi Gerson"
 "Dinsdale's Side Lands[r], by Silas Nedd"
 "Dipietro's Tripodies[r], by Otis Pride"
+"A Dipole, Oedipal[r], by [if player is male]Lida Poe[else]Ed Paoli[end if]"
 "The Dire Deer-Hit Hid Tree[r], by Ed Reith"
 "A Dire Id Era Aired[r], by Aida Reider"
 "Dire Rap Parried Rapider[r], by Pa Rider"
@@ -31761,6 +31803,7 @@ blurb	prio
 "Epic Rut Picture[r], by Curt Pei"
 "Epidemic: Dim Piece[r], by Cimi Deep"
 "Epigram Primage[r], by Pam Iger & Meg Ripa"
+"Equated as Adequates[r], by Tesa Quade"
 "Er, Yes, Reesy[r], by Syree Reyes"
 "Era Eight Heritage[r], by Gita Rhee"
 "Era End Neared[r], by Randee Deaner"
@@ -31970,6 +32013,7 @@ blurb	prio
 "Gait, Balk, a Big Talk[r], by Gil Kabat"
 "A Gal's Hut At Laughs[r], by [if player is male]Asa Gluth[else]Tasha Lug[end if]"
 "Game On, Ego-Man[r], by Mo Egan"
+"A Gamed Damage[r], by Meg Ada"
 "Games as Massage[r], by Sam Sage"
 "Gang, to Gag Not[r], by Og Gant & Nat Ogg"
 "Gangnam, Eh? Meh[r], by Meghan Ghanem"
@@ -32025,6 +32069,7 @@ blurb	prio
 "Gloominess? Neologisms[r], by [if player is male]Moises Long[else]Signe Olmos[end if]"
 "Gloomy Rune Numerology? You Mongrel[r], by Myron Logue"
 "Glub Day, Ugly Bad Bald Guy[r], by Ladybug Gaby D. Lu"
+"Glucose Eco-Slug Cues-Log[r], by Gus Cole"
 "Go Anti to Gain[r], by Gio Tan"
 "Go Bait a Bigot[r], by Bo Taig"
 "Go, Bend, Nod, Beg[r], by [if player is male]Bo Deng[else]Deb Ngo[end if]"
@@ -32260,6 +32305,7 @@ blurb	prio
 "Hint, D-Bag: Bad Night[r], by Thad Bing"
 "Hip Farce: a Cheap Fair[r], by Rafi Peach"
 "His Blood Holds Bio[r], by [if player is male]Odis Bohl[else]Lido Bosh[end if]"
+"His Blue Helibus[r], by Eli Bush"
 "His Clang-Clashing Clings, Ah[r], by Lis Chang, Chas Ling, Cal Singh & Sal Ching"
 "His Code: So Chide Disco, Eh[r], by Desi Cho"
 "His Dance: Echidnas Cashed In[r], by [if player is male]Deac Shin[else]Dina Esch[end if]"
@@ -32272,6 +32318,7 @@ blurb	prio
 "History of Fishy Root[r], by Io Forsyth & Sofyi Hort"
 "Hit Knot to Think[r], by Nik Toth"
 "Ho, Nigh on High Noon[r], by Nino Hogh"
+"Hobert's Bothers[r], by Rob Tesh"
 "Hold Fast Old Shaft[r], by Thad Flos"
 "Home Strife Smit Hereof[r], by [if player is male]Tim Forshee[else]Mei Forseth[end if]"
 "Hone Vast Havens to Have-Nots[r], by Noah Vest"
@@ -32758,6 +32805,7 @@ blurb	prio
 "Led of Ego? Feel good[r], by Flo Goede" []
 "Lee IX, Exile[r], by Lexie Xiele"
 "Lee Roth's the Loser[r], by Lester Ho"
+"Leer: Ben's Beer Lens[r], by Les Breen"
 "Leermost Molester Storm Lee[r], by Mr. O. Steel"
 "Leery Ol['] Eye-Roll[r], by Elly Roe"
 "Lefties['] Lie Fest[r], by Les Feit"
@@ -32791,6 +32839,7 @@ blurb	prio
 "Levin's Snivel Livens Elvins[r], by Nevil Vesslin"
 "Lew, Stu: We Lust[r], by Lu West"
 "Lew's Got Two Legs, Gets Low[r], by Wes Golt & Stew Log"
+"A Li'l Grue Guerilla[r], by [if player is male]Gil LaRue[else]Lula Iger[end if]"
 "Liane's Saline Aliens[r], by Sean Li" []
 "Liar, Liar[r], by Raia Rill" []
 "Liars['] Lairs[r], by Sir Al Sarli"
@@ -32921,6 +32970,7 @@ blurb	prio
 "Luther's Hustler Hurtles[r], by Les Urth" []
 "Lutzke's Klutzes[r], by Su Keltz"
 "Lyla Be Label-y: by Ella[r], by Lea Bly"
+"A Lyre, Early[r], by Larry Ealey"
 "Ma, Icon, In Coma[r], by Monica Camino"
 "Ma, This is Math[r], by A. Smith" []
 "Ma, Try My Art[r], by [if player is male]Matty Rymar[else]Tammy Tarry[end if]"
@@ -32940,18 +32990,21 @@ blurb	prio
 "The Maid Had Time Amid the Dim Hate[r], by Tad Heim"[]
 "Maid Lee Emailed Limeade[r], by Imelda E"
 "The Mail Hit Lame[r], by Tim Leah" []
+"Mailboxes So Mixable[r], by Isobel Max"
 "Mailer's Realism is Lamer[r], by Irma Les"
 "Maim Lore[r], by Romi Elam"
 "The Major Other Jam[r], by [if player is male]Joe Marth[else]Jo Mather[end if]"
 "Make Do, OK, Dame?[r] by Mo Dake"
 "Making Up a Punk Mug[r], by Mika Pung"
 "Males[r], by Selma Salem"
+"Malibu's Bums Ail[r], by Sia Blum"
 "Malinger, a Gremlin[r], by Mean Girl Erma Ling"
 "Malinger, Germinal Maligner[r], by Amir Glen" [p]
 "Malpractice's Clear Impacts[r], by [if player is male]Clem Scarpati[else]Clarice Stamp[end if]"
 "The Man, Dr. Math Nerd[r], by Ned Marth"
 "Man, I Try My Train[r], by Tim Ryan"
 "Man, with Math, WIN[r], by Tim Hawn-Whitman" []
+"Man's Flaunted Fundamentals[r], by Stefan Umland"
 "Manage a Nag, Me?[r] by Meagan Gaeman"
 "Mandibles, Able Minds, Sin, Bedlam[r], by [if player is male]Denis Lamb[else]Deb Sliman[end if]" []
 "The Manic Mean Itch[r], by Tim Hance"
@@ -33061,6 +33114,7 @@ blurb	prio
 "Minaret Raiment[r], by Martine Armenti" []
 "Minecraft: Me, Frantic[r], by Tim France"
 "Minerva, a Vermin[r], by Marvin E. Van Mier"
+"A Minger, Mangier[r], by Mariam Greening"
 "Mini Lols? Millions[r], by Slim Olin" []
 "Mink-Dog Kingdom[r], by Kim Gond"
 "The Minor Hero Mint[r], by [if player is male]Tim Horne[else]Mei North[end if]"
@@ -33100,6 +33154,7 @@ blurb	prio
 "Monasterial Ameliorants[r], by [if player is male]Salim Renato[else]Alison Marte[end if]"
 "Mongillo's Goon Mills[r], by Ling Olmos"
 "Monitor Naif Information[r], by Mario Finton & Afton Morini"
+"A Monk: OK, Man[r], by Koko Ammann"
 "Monsieur Inermous[r], by [if player is male]Simon Ure[else]Sue Minor[end if]"
 "Montague's Age Mounts[r], by Mungo East"
 "Month, Meet the Moment[r], by Tom Nemeth"
@@ -33404,6 +33459,7 @@ blurb	prio
 "Now Art's Tons Raw[r], by Stan Row" []
 "Now I See, Wise One[r], by Wes Oien"
 "Nuge is Genius[r], by Su Inge"
+"Number a Beam Run[r], by Mae Burn"
 "Number Eight Regiment Hub[r], by [if player is male]Hubert Minge[else]Inge Humbert[end if]"
 "Number Four Rumor, Be Fun[r], by Murf Bourne"
 "Number Three Ember Hunter[r], by Rene Humbert"
@@ -33510,6 +33566,7 @@ blurb	prio
 "Okay, Burn Your Bank[r], by Bryan Kuo"
 "Ol['] Ash-Pit Hospital[r], by Tisha Olp"
 "Ol['] Bikes Like Bo's Obelisk[r], by Eli Kons"
+"Ol['] Bore Bolero[r], by Rob Leo"
 "Ol['] Dan Dolan[r], by [if player is male]Aldo Landon[else]Lona Donald[end if]"
 "Ol['] Dr. Lord[r], by Doll Dorr"
 "Ol['] Greta Got Real to Glare[r], by Reg Toal" []
@@ -33539,6 +33596,7 @@ blurb	prio
 "Old-Years-Easy Lord[r], by Lady Rose"
 "An Older Real Don[r], by Neal Ord" []
 "Ole Bilk? I'll Be OK[r], by Eli Kolb, Ike Boll & Li'l Kobe"
+"Ole Bud's Bold Use Doubles[r], by Sol Dube"
 "Ole Dad Doled a Loaded, Dead Ol['] Ad Lode[r], by Odd Lea" []
 "Ole Gun Lounge, No Glue[r], by Leon Ug"
 "Ole Site, See Toil So Elite[r], by Otis Lee"
@@ -33697,6 +33755,7 @@ blurb	prio
 "Pa Burke's Breakups[r], by Kap Suber"
 "Pa, Lump a Plump Palm Up[r], by Lu Mapp"
 "Pa's Buck Backs Up[r], by Cap Busk"
+"A Pacecar Carapace[r], by Ace Capra"
 "The Pack Pet Hack[r], by Pat Heck"
 "Pain, a Hope: Apophenia[r], by Pip O'Haane"
 "Pains Aspin[r], by Papa Inniss"
@@ -33767,6 +33826,7 @@ blurb	prio
 "A Pert Pater[r], by Tara Tepper"
 "Pest Increase: a Persistence[r], by Serita Spence"
 "A Pestled Deep-Salt Pedestal[r], by Pat Leeds"
+"Pet, Bury Puberty[r], by Burt Pye"
 "Pet Rants, Pen-Start Patterns[r], by Pat Ernst"
 "Pete's Steep Pests Tepee[r], by Sepp Testee"
 "Peter Klein's Serpentlike[r], by Lester Kneip"
@@ -34045,6 +34105,7 @@ blurb	prio
 "Resist, Sister[r], by Tess Ri"
 "Respond, Holy Polyhedrons[r], by Loyd Pherson & Dyson Proehl"
 "A Response Pre-Season[r], by Rose Aspen"
+"Rest, Bind, Bird Nest[r], by Sid Brent"
 "Rest Home Theorems[r], by Tom Sheer"
 "Rest Ill, Lilters[r] by Lilster Stiller"
 "Rest, Maid, Die Smart[r], by Tim Sader"
@@ -34247,7 +34308,9 @@ blurb	prio
 "See, Chap, a Speech[r], by Peaches Paesche"
 "See-Gigs Inn: Genie Sings[r], by Signe Gines"
 "See, Mine Enemies[r], by Enis Mee"
+"See Papa's Apse[r], by Asa Eppes"
 "Seeding Edges In[r], by Ned Egis"
+"A Seedy Sad Eye[r], by Ed Seay"
 "Seek a Man, Namesake[r], by Sam Keane"
 "Seek Any Yankees[r], by Easy Ken Keansey"
 "Seek Micro-Mockeries[r], by Cori Meeks"
@@ -34269,6 +34332,7 @@ blurb	prio
 "Senor Cid Cinderos[r], by Cris Oden" []
 "Sent Away? Stay Anew[r], by [if player is male]Wayne Ast[else]Anya West[end if]"
 "Sent to Tetons to Nest[r], by Tosten Ettson" []
+"Serge, I'm Grim, See[r], by Sig Mere"
 "Serge's Egress[r], by S. Seger"
 "Sermonise Emersions[r], by [if player is male]Simon Rees[else]Erin Moses[end if]"
 "Serviceable Receivables[r], by [if player is male]Elvis Bearce & Caleb Rieves[else]Alice Bevers[end if]"
@@ -34355,6 +34419,7 @@ blurb	prio
 "A Sink or Rain's OK[r], by Arin Kos"
 "Sir, Accept Practices[r], by Pat Cresci"
 "Sir Ahmed: His Dream, Semi-Hard, Misheard[r], by Si Dahmer"
+"Sir Beef Frisbee, Fib-Seer[r], by Bri Fees"
 "Sir Cade's Sidecars[r], by Ida Cress"
 "Sir Glen Lingers Singler[r], by Les Grin"
 "Sir Jake is a Jerk: Ask Jeri[r], by Jae Risk"
@@ -34371,6 +34436,7 @@ blurb	prio
 "Sit, Sneer, Sentries[r], by Enis Rest"
 "Sit, Speak, Piss-Take[r], by Peta Sisk"
 "Sit Thereon in the Store[r], by Theo Estrin"
+"Sit, Ye Yetis[r], by Ty Eis"
 "Six Neat Tin Axes: It's Xena[r], by Anti-Sex Ex-Saint Esta Nix"
 "Six Rope Proxies[r], by Ox Pires"
 "Sixteen Nexties[r], by Tex Enis"
@@ -34614,6 +34680,7 @@ blurb	prio
 "Stink-Stone Token Snits[r], by InesKnotts"
 "The Stink Think Set[r], by Kent Tish"
 "Stipender President[r], by Trip Edens"
+"Stogy Odor, Good Story[r], by Gordy Soto"
 "Stoic June on Justice: Joust Nice[r], by [if player is male]Justin Coe[else]Jeni Couts[end if]"
 "Stoking Mr. Storm King[r], by Kim Strong"
 "Stomach Mo['] Chats[r], by Tom Cash"
@@ -34644,6 +34711,7 @@ blurb	prio
 "Stuck Echo Checks Out[r], by Kutch Esco"
 "Studying Tidy Guns[r], by Dingy Stu"
 "Stumbler Blurts? Me?[r] by Mel Brust"
+"A Stunt Taunts[r], by Stan Tu"
 "The Stupid Tepid Huts: Thud, Spite[r], by Shedu Pitt"
 "Suavery: a Survey Very USA[r], by Eva Usry"
 "Sub-Nerd Burdens[r], by Su Bernd & Ed Burns"
@@ -34701,6 +34769,7 @@ blurb	prio
 "Tar the He-Tart[r], by Art the Hatter"
 "Tardis: It's Rad[r], by Astrid St. Radi" []
 "Tarnish, Trashin[']: His Rant[r], by Tristan Harnish"
+"Tax Code: Do Exact[r], by Tex Coda"
 "Taxi Info Fixation[r], by Nitia Fox"
 "Tch, Done Then, Doc?[r] by Notched [d-t] Chen"
 "Tea, My Matey[r], by Yetta Mayme"
@@ -34861,6 +34930,7 @@ blurb	prio
 "To Get a Toe Tag[r], by Og Tate"
 "To Hack OKChat[r], by Kat Cho"
 "To Hammer Math More[r], by [if player is male]Tom Maher[else]Emma Roth[end if]"
+"To Hamper Metaphor[r], by Mart Hope"
 "To Handle Old Ethan[r], by Dale Thon"
 "To Hans: No Hats[r], by [if player is male]Stan Ho[else]Shonta Haston[end if]"
 "To Harm Math or Mr. Oath[r], by Mo Hart"
@@ -34923,6 +34993,7 @@ blurb	prio
 "To Sail is a Lot[r], by Al Tsoi"
 "To Sales so Stale[r], by Les Tsao"
 "To Sand Not Sad[r], by Don-Tad Santos"
+"To Satan: a No, STAT[r], by Nat Sato"
 "To Saul: Soul at a Lotus[r], by Lu Sato"
 "To Scale a Closet[r], by Les Cato" []
 "To Scar or Scat[r], by Cora St. Castro"
@@ -34988,6 +35059,7 @@ blurb	prio
 "Torn Map? Tramp On[r], by Pam Nort"
 "Tornado Donator[r], by Dan Root"
 "Tory Chen, the Corny[r], by Trey Cohn" []
+"Tot, Bug a Tugboat[r], by Gab Tout"
 "Tot Gabe Got Beat[r], by Bo Tatge"
 "Totally Tall Toy[r], by Lyla Ott"
 "Tough Ones Not So Huge Gone South[r], by Hugo Osten"
@@ -35149,6 +35221,7 @@ blurb	prio
 "Us, Half a Flush[r], by Alf Hsu"
 "Us, Late, St. Eula?[r] by Stu Lea" []
 "Us, Storied Outsiders[r], by Susie Dort & Stu DeRosi"
+"USA-Made: Amadeus[r], by Sue Adam"
 "Uselyss Ulysses[r], by Ly Seuss"
 "Usher Not, Hurt Ones[r], by Rose Hunt" []
 "Utterances Sent Acuter[r], by [if player is male]Curt Santee[else]Reena Cutts[end if]" []
@@ -35207,6 +35280,7 @@ blurb	prio
 "Warlocks['] Laws Rock[r], by Cal Skrow"
 "Warm Boy Mowbray[r], by Mary Bow"
 "Warp Drive Viper, Draw[r], by Pew Rivard"
+"Warthogs, Grow Hats[r], by Garth Sow"
 "Was I Not Wastin['][r], by Tia Snow"
 "Wasted Health: What's the Deal?[r] by Halsted Wheat"
 "A Waster, Awarest[r], by Wes Tara"
@@ -35292,6 +35366,7 @@ blurb	prio
 "A Winter in Water[r], by [if player is male]Art Wien & Tai Wren[else]Rita New & Tia Wren[end if]" []
 "Winterhold in the World[r], by Eldon Wirth"
 "Wire Till I'll Write[r], by [if player is male]Wilt Iler[else]Lili Wert[end if]"
+"Wiry-Leg Yew-Girl[r], by Gil Wrey-Wrigley"
 "The Wisdom Tom Wished, Tim Showed with Demos[r], by Dim Stew Ho"
 "Wisdom Verge: Give Me Words[r], by [if player is male]Mr. Edwig Vose[else]Ms. Vergie Dow[end if]"
 "Wit Song: to Swing no Twigs[r], by Og Swint" []
@@ -35353,6 +35428,7 @@ blurb	prio
 "Yep, Al, a Yelp[r], by Paley LePay"
 "Yep, Ann, a Penny[r], by Nan Pye" []
 "Yep, Ed's Speedy[r], by Des Pye"
+"Yep, Sam Pays Me[r], by Pa Syme"
 "Yes, Ardor So Dreary Arose Dry[r], by [if player is male]Rory Sade[else]Rosa Dyer[end if]"
 "Yes, Bart Betrays By Tears[r], by Rey Bast"
 "Yes, Bill, Be Silly[r], by Sly Lieb"
@@ -35559,6 +35635,7 @@ blurb
 "exults in the optimism of [i]Haskins Sank His Shakins[r]."
 "feels [i]A Stoner: No Tears[r] clearly deserves more than one star."
 "hails the artistic daring of [i]Skid-Bars: Brass, Kid? Bad Risks[r]."
+"hashes out legal details of [i]Audi: a DUI[r]."
 "hat-tips [i]Mess Around: Sour Amends[r]."
 "hints at the fantasy redefinition in [i]A Demon on Mead[r]."
 "injects deeper social meaning into [i]The Wimp Wit['] Hemp Met WHIP[r]."
@@ -35654,6 +35731,7 @@ blurb
 table of sicko movies [xxs3]
 blurb
 "[A-word-u]-Hump Smash-Up."
+"[a-word-u] Porn Parsons."
 "[d-word-u] Hoes Had Men So Handsome." []
 "[if player is male]SOB Seth[else]Hot Bess[end if] the Boss."
 "Abasin['] Sabina."
@@ -35716,10 +35794,12 @@ blurb
 "Bared Debra."[]
 "Barest Breast."
 "Be Hot, Bo the He-Bot."
+"Be? No. BONE"
 "Be Rad--er, Bad--Bared."
 "Bear on a Boner." []
 "Bed-Singe Big Needs."
 "Beeswax: a Sex Web."
+"Bend [']N Bed."
 "Bend, Ow: We Bond" []
 "Benino Bein['] on Bonnie."
 "Bent Sam, Best Man."
@@ -35758,6 +35838,7 @@ blurb
 "Boo at a Boot Taboo."
 "Boom, Desire: More Bodies."
 "Boot a Taboo."[]
+"Bow, Cosy Cowboys."
 "Brandy and Bry."
 "The Bride Herb Tied: Her Debit."
 "A Bride's Bi Dares." []
@@ -36056,6 +36137,7 @@ blurb
 "I Did Didi."
 "I Dream, Admire Ma Reid."
 "I FEAST LOL." [x]
+"I Flash Al Fish."
 "I-Gag-Em Maggie." []
 "I Greet Gertie."
 "I Gulp Up Gil."
@@ -36251,6 +36333,7 @@ blurb
 "Marta, Tamra, Tamar."
 "Mary, Myra, Amyr, YR MA." []
 "Mary Sue Sure May."
+"Masseur Erasmus."
 "Masseur User Sam." []
 "Massive Miss Eva: Sam Vies."
 "Me, Em, MeMe, Emme."
@@ -36261,6 +36344,7 @@ blurb
 "Meg's Sin Messing."
 "Mega Ass Massage." []
 "Melinda's Name Slid." []
+"Men Bag, Bang Me."
 "Mick, Pry My Prick."
 "Mighty Sin Smithying."
 "Mild? Naw, WILD Man."
@@ -36427,6 +36511,7 @@ blurb
 "Poxes! Sex-Op Expos."
 "Prattish Tartship." []
 "Prey, Elated, Repeatedly."
+"Prod, Be Probed."
 "Profanest Porn Feats."
 "Prom Romp."
 "Prude Duper."
@@ -36635,6 +36720,7 @@ blurb
 "Sweet Bi Website."
 "Sweetness, Wetnesses."
 "Sy Ain't Stayin['] Sainty."
+"A T-Shirt, Tartish."
 "Tad, Rex: X-Rated."
 "Taint-So Station." []
 "Tally-Ho, at Holly!"
@@ -36943,6 +37029,7 @@ blurb
 "'The A-Ok Toke! Ah!'"
 "'Ah, post: Host Pa has pot so phat!'"
 "'Any pot? Pay not!' they tempt you, but things are mind-bending enough."
+"'Bake crew, we're back!'"
 "'Bake mud, make bud,' one toker giggles."
 "'Bask there: Herbs take the breaks!' they say, channeling Herb Keats."
 "'Be a dork--or baked!' / 'OK, Debra.'"
@@ -37329,6 +37416,7 @@ blurb
 "Precious rice soup"
 "Prog-GORP"
 "Roasted red oats" []
+"Semi-banal lima beans"
 "Sorta-Top Pot-Roast"
 "Tasto-toast-tatos"
 "Toroid Dorito"
@@ -37911,6 +37999,12 @@ blurb
 "Manner-Kid Kinderman" []
 "Mannerist Martinsen"
 "Meddler Mel Redd"
+"Meek Clair Mielcarek"
+"Meek Lan Kleeman"
+"Meek Len Kelemen"
+"Meek Mary Kammeyer"
+"Meek Nona Koeneman"
+"Meek Raymon Moneymaker"
 "Melancholy Chloe Lyman"
 "Melancholy Molly Hance" []
 "Mentor Merton"
@@ -38788,6 +38882,7 @@ blurb
 "PLAY DICE? YEA, CLIP'D"
 "PLAY PARTY? PAY RAPTLY? PRAY APTLY"
 "POPELESS, PEOPLES'S PEP LOSES"
+"PORN HAS ORPHANS"
 "PORN IS PRISON"
 "POSH BI BISHOP HIP? SOB"
 "POSIT NO POTIONS" []
@@ -38900,6 +38995,7 @@ blurb
 "TRITHEISTS? THIRSTIEST"
 "TURPITUDE: TIED UP RUT" []
 "TV: ART, YES? TRAVESTY"
+"U: FLAW? AWFUL"
 "UM, BILE'S SUBLIME" []
 "UNCHOSEN? NONE SUCH. SHUN ONCE. ECHO, NUNS"
 "UNCLEAR EVILS? SURVEILLANCE"
@@ -39923,6 +40019,7 @@ blurb
 "'Bad G! ... D-bag!'"
 "'Bad g's? D-bags!'"
 "'Bad men sty? Stand by me.'"[]
+"'Bag THIS, big hats!' / 'Bah, gits!'"
 "'Ballet? Be tall!'"
 "'Bam! Re-bar [']em!'" []
 "'Bam! Shun bum Hans.'" []
@@ -39930,6 +40027,7 @@ blurb
 "'Bane, ma!' / 'Be a man.'"
 "'Bash Ed, BS-head. He's bad.'"
 "'Be arty? Betray, ye brat!'" []
+"'Be done, Bo!' / 'Need...one bed...'"
 "'The bear BEAT HER!' / 'Breathe.'"
 "'Beat, Don? Don't be a..." []
 "'Beat down? We not bad!'" []
@@ -40560,6 +40658,7 @@ blurb
 "'Nobody nod. Yob.'"
 "'Nod, Don!'"
 "'The Noid. Doin['] the hit?' / 'Done.'" []
+"'Non-biker? Broken in!'"
 "'Non-guest? Note: guns!'"
 "'Noose? O noes!'"
 "'Nope, it's nite-ops.'"
@@ -40652,6 +40751,7 @@ blurb
 "'Pathetic, Cheap tit!'"
 "'Paupers! A supper!' / 'Super, Pa!'[paragraph break]Pure sap."
 "'Pay up, ya pup.' / 'Yup, Pa.'"
+"'Peanut be beaten up!'"
 "'Peanuts! Up antes!' ... 'An upset!'"
 "'Pedal!' / 'Plead, pal!' / 'Ed...'"
 "'Pee! Eep!'"
@@ -40664,6 +40764,7 @@ blurb
 "'Pheew, ace crime!' / 'Phwee, ice cream!'"
 "'Phew, Lon! Help now?' / 'No, whelp!'"
 "'Phil set the slip! He split!'"
+"'A phone? Ah, nope! Ha, peon!' / 'Heap on!'"
 "'Piss off, spiffos!'"
 "'A pity. Pay it!'"
 "'Plaid? Al, dip da lip. Pal, I'd...'"
@@ -40705,6 +40806,7 @@ blurb
 "'Quit ale. Tequila!'"
 "'Race bait? Bacteria!'"
 "'Rad? Yer dreary, Dr. Ayer.'" []
+"'Radials? Alas, rid.' / 'Sad liar!'"
 "'The raid! Hide, Art! Hi, TREAD!'" []
 "'Rashly? Har! Sly!'"
 "'Ratty try at tarty!'"
@@ -40729,7 +40831,7 @@ blurb
 "'Ride, Tim!' / 'I'm tired.' / 'Timider?'" []
 "'Rip Me, Mr. Pie? I'm pre-prime!'"
 "'Rise, [d-t]!' / 'So tired!'"[]
-"'Risk two. It WORKS. []'"
+"'Risk two. It WORKS." []'
 "'Roam, bud!' / 'U mad, bro?'"
 "'Rob!' / 'Bro!'"
 "'Robber! ... Err, Bob?'"
@@ -40879,7 +40981,7 @@ blurb
 "'Stealing? Let's gain!!'"[]
 "'Step, son! No pests!'"
 "'Stink up...? Punk, SIT!'" []
-"'Stipend? Spend it!'"
+"'Stipend? Tens? Dip, spend it!'"
 "'Stop trying, prying tots!'"
 "'Street Smarts Matter. STRESS.'"
 "'Stride? It's red, driest. I'd rest.'" []
@@ -41212,6 +41314,7 @@ blurb
 "'Ah, dumb, or bad humor?'" []
 "'Ah, got a goth to ... gah!'"
 "'Ah, Gus, uh...gas?'"
+"'Ah, hi, Ms. Hamish!'"
 "'Ah, howdy, Haywood!' / 'Why, Adoo!'"
 "'Ah, Lord Harold!'" []
 "'Ah, Marc! A charm cam! Har!'"
@@ -41231,6 +41334,7 @@ blurb
 "'Ahh, rest-hearths!'"
 "'Ahh, Ross. So harsh!'"
 "'Ail, eh? Lie! Ha!' / 'I...heal.'"
+"'Ain't Mr. Martin trim?' / 'Na.'"
 "'Air hockey? Oh yea, Rick!'" []
 "'Alfy, flay a fly.'"
 "'All, rig a grill!' / 'Ill! Arg!'"
@@ -41335,6 +41439,7 @@ blurb
 "'Buy tea, beauty?' / 'Yea...but...'"
 "'By the way, why a byte? Thy way be...'"
 "'BYOB's BS. Boy!'"
+"'Camp out? Pout, mac. Um, po['] cat.'"
 "'Can Ed Dance? Ed Can Dance!'"
 "'Can fit? Can't if in fact...F! Can it, Fat Nic?'"
 "'Can we do anew, Doc?' / 'Down, Ace.'"
@@ -41363,6 +41468,7 @@ blurb
 "'Chip Ross? His corp's rich sops.'"
 "'A cigar, Garcia?'"
 "'Cigar? None? Ignorance!'"
+"'Cigar, pet?' / 'Tip, Grace: price tag!'"
 "'Clams? Po['] slop, Mac!' / 'Ol['] scamp!' Mo['] claps."
 "'Class! Now!' / '[a-word-u]-clown.'"
 "'Claudine's uncle said dunces ail.'"
@@ -41682,6 +41788,7 @@ blurb
 "'Hum more.' / 'Uh, er, Mom?' / 'Humor me.'"
 "'Hup, Stu!' / 'Shut up!'"
 "'Hush now, huns!' / 'How?'"
+"'I be glum! Belgium? Um, bilge!'"
 "'I bet on Benoit. No bite?'"[]
 "'I dare.' A dire 'Er, aid?'" []
 "'I? Debt? I'd bet it'd be...'"
@@ -42038,6 +42145,7 @@ blurb
 "'PG, sir!' / 'Prigs!'"
 "'Phil, set his pelt!' / 'Shlep it!'" []
 "'Photo op? Hot!'" []
+"'Picayune!' / 'Ayup.' / 'Nice.'"
 "'A pickle?' / 'Ick! Pale!'" []
 "'Pie, Ace?' / 'A piece.'"
 "'Pie, OK? I poke Po['] Ike.'"
@@ -42049,6 +42157,7 @@ blurb
 "'Pip Erd ripped Dr. Pepi!'"
 "'Pix, Neal. Explain.'"
 "'Plan yet? Penalty!'" []
+"'Plaudits! Sit up, lad!'"
 "'Play a joke? Peak joy, Al.'"
 "'Play dumb amply, bud.'" []
 "'Play safe!' / ' Safely, Pa!' / 'False yap.'"
@@ -42469,6 +42578,7 @@ blurb
 "[if player is male]Sham Reg[else]Rash Meg[end if] Gresham" []
 "[t-w] Watt"
 "A-OK Tad Dakota AKA Tod"
+"Abel 'Ranch' Labranche"
 "Aborter Roberta" []
 "Abrupt Pub-Rat Pa Burt"
 "Abused Bad Sue"
@@ -42574,6 +42684,7 @@ blurb
 "Beast Sonia Sebastiano"
 "Beastly Stabley" []
 "Beastly Ty Bales" []
+"Becki 'Ranch' Rickenbach"
 "Beldin's Bindles"
 "Belgian Big Neal"
 "Belier Lieber"
@@ -42930,6 +43041,7 @@ blurb
 "Dealing Ida Glen" []
 "Death-ish Tad Hsieh" []
 "Death Row Drew Otha" []
+"Debbie 'Ranch' Breidenbach"
 "Debonair [if player is male]Ira Boden[else]Robin Ade[end if]" []
 "Decatur Rude Cat" []
 "Decayed Ace Eddy"
@@ -42937,6 +43049,7 @@ blurb
 "Decried Decider Cid Reed"
 "Deferrer Ferderer"
 "Defiling Fielding"
+"Del 'Ranch' Chandler"
 "Delaware Earl Wade" []
 "Delayer Eardley"
 "Demandin['] Ned Minda"
@@ -42993,6 +43106,7 @@ blurb
 "Doomer Ed Odom"
 "Dooming Domingo" []
 "Doorman Don Mora" []
+"Doris 'Ranch' Richardson"
 "Doser-So-Red Erdos"
 "Double-Talk [if player is male]Odell Kubat[else]Bella Dutko[end if]"
 "Douchebag Doug Beach"
@@ -43094,6 +43208,7 @@ blurb
 "Easy-Ayes Seya Seay"
 "Easy-Life Elise Fay"
 "Eat-Most Tom East" []
+"Ed 'Ranch' Chenard"
 "Edenic Denice"
 "Edington's denotings"
 "Education-Cautioned [i-n] Doucet"
@@ -43121,6 +43236,7 @@ blurb
 "Ephemerist Peter Sheim"
 "Epperson propenes"
 "Erlking Klinger"
+"Ernie 'Ranch' Nachreiner"
 "Errant Terran Ratner" []
 "Erratic Art Rice" []
 "Evader [if player is male]Dav Ree[else]Eve Ard[end if]" []
@@ -43476,6 +43592,7 @@ blurb
 "Islander Dan Riles"
 "Islander Sindelar" []
 "Isolater Lita Rose"
+"Iva 'Ranch' Chavarin"
 "Jackhole [if player is male]Joe Chalk[else]Jae Holck[end if]"
 "Jaywalker Jake Lawry"
 "Jealous Joe Saul" []
@@ -43546,6 +43663,7 @@ blurb
 "Kid Trice Dietrick" []
 "Kid Vanselow Levandowski"
 "Kid Zane Dziekan"
+"Kim 'Ranch' Kirchman"
 "Kinder Kid Ren"
 "King Al Glinka"
 "King Arnott Tarkington"
@@ -43874,6 +43992,7 @@ blurb
 "Made Star Armstead" []
 "Made Tito DiMatteo"
 "Made Trinh Meinhardt"
+"Magan 'Ranch' Mcgranahan"
 "Malefactor [if player is male]Cal Frometa[else]Leoma Craft[end if]"
 "Malicious Lucia Isom"
 "Malicious Musical Io" []
@@ -43885,6 +44004,7 @@ blurb
 "Mangler Mr. Lange" []
 "Manhattan Matt Hanna"
 "Map Nut Putman"
+"Maranda 'Ranch' Ramachandran"
 "Marietta's Metatarsi"
 "Martial Tim Lara"
 "Masquer Marques"
@@ -43962,6 +44082,7 @@ blurb
 "Meatier Rita Mee" []
 "Meek Mr. Kemmer"
 "Mega Icky Cagy Mike" []
+"Mei 'Ranch' Reichman"
 "Menacing [if player is male]Nic Gamen[else]Nanci-Meg[end if]"
 "Mental Len Tam"
 "Merciless [if player is male]Clem Siers[else]Cris Semel[end if]" []
@@ -44773,6 +44894,7 @@ blurb
 "Softest Fossett"
 "Softie Dan DiStefano" []
 "Softie Ren Firestone"
+"Sol 'Ranch' Charlson"
 "Sore [n-t] Senatore" []
 "Sore Al LaRose" []
 "Sore Alden Rosendale" []
@@ -44910,6 +45032,7 @@ blurb
 "Swiggin['] Wiggins"
 "Swooner Rosenow"
 "Tacky KC Tay" []
+"Tana 'Ranch' Carnathan"
 "Tank Kant"
 "Tarnished [if player is male]Dean Hirst[else]Enid Stahr[end if]"
 "Tart Barb Barr-Batt"
@@ -45133,6 +45256,7 @@ blurb
 "Well Ned Wendell" []
 "Well-to-Do Lewd Tool Leo Woldt"
 "Wendee Weeden"
+"Wes 'Ranch' Crenshaw"
 "West Side Ted Weiss"
 "Whale LaHew"
 "Wheedler Ed Wehrle"
@@ -45168,6 +45292,7 @@ blurb
 "Wuss-Like Sulewski"
 "Yakima Mia Kay"
 "Ye Con Coyne"
+"Yeasty Yatesy"
 "Yen-Led Len Dey" []
 "Yen Lord Dreylon Reynold-Londrey" []
 "Yobling Bony Gil" []
@@ -47081,6 +47206,7 @@ blurb
 "Bayes-by-Sea"
 "Bogus-Lawn Bungalows"
 "Camus's Sumacs"
+"Capel Place"
 "Capella LaPlace"
 "Cary Tudor's Courtyards"
 "Cassandra's Sandaracs"
@@ -47300,6 +47426,7 @@ blurb
 "How-Tiny Whiny to Why Not I[r], by Hoyt Win" []
 "Hup! Rise, Pushier[r], by Pei Rush"
 "I Bash Po['] Phobias[r], by Pia Bosh" []
+"I Can! I Can![r] by Nica Cain"
 "I Gotta Go at It[r], by Gia Ott" []
 "I Kept ETA. Keep At It[r], by Tate Pike"
 "I On Top Option[r], by [toti] Po"
@@ -47469,6 +47596,7 @@ blurb
 "A-Holes So Hale"
 "A-One St.: So Neat" []
 "Ace, Pine in Peace"
+"Ach, gut-caught"
 "Achin['], Mr. Rich Man"[]
 "Ad Men's Amends" []
 "Aging Bod Going Bad"
@@ -47519,6 +47647,7 @@ blurb
 "Boss, Lend Boldness" []
 "Bottlers['] Blotters" []
 "Bred to be Trod"
+"Bum-Self Fumbles"
 "Bummed, Dumb Me"
 "Bump on, Po['], Numb"
 "The Bums Hum Best" []
@@ -47546,6 +47675,7 @@ blurb
 "City Runs on No Scrutiny"
 "Clochard Doc Crahl" []
 "Cloud, Sky, Lucky Sod"
+"Club Woes, Blue Cows"
 "Co-Try to Cry"
 "Coal Miner Marcelino" []
 "Codas O['] Cads"
@@ -47832,6 +47962,7 @@ blurb
 "Not Small Tolls, Man"
 "Now I Slog, Solo-Wing"
 "Now Tour Our Town, Worn Out"
+"Numb Loose Blue Moons"
 "Numb'd [']n Dumb"
 "O Cheer, Cohere, Re-Echo"
 "O Clear RealCo Oracle" []
@@ -48390,6 +48521,7 @@ blurb
 "They are too beat-up to feel upbeat."
 "They argue over the best flavor of U-GOTS-GUSTO energy drink."
 "They bemoan being on the wrong side of the GPA gap."
+"They both recall reading 'Hi-Fat? Ha? FIT' as kids. It's sort of touching."
 "They both reckon they need to do abs so bad."
 "They both wish they'd grown up in Far Friff or the Anarch-a-Ranch."
 "They compare the Exhil-Helix and To-Scare Coaster rides."
@@ -49061,6 +49193,7 @@ blurb
 "atom-units mutations"
 "Attinger Treating"
 "avant-garde graven data"
+"average veerage"
 "Baier's Rabies Ribase"
 "Bailly's syllabi"
 "Balaguer's arguables"
@@ -49077,6 +49210,7 @@ blurb
 "bossier riboses" []
 "Branco's carbons"
 "Brausell's rubellas"
+"Briarton brain-rot"
 "Broering's Resorbing"
 "Bucci's Cubics"
 "Bussiere's subseries"
@@ -49626,7 +49760,7 @@ blurb
 "Doc Alta Cataldo"
 "Doc Arlen Calderon" []
 "Doc Arlene Calderone" []
-"Doc Arner Dorrance []"
+"Doc Arner Dorrance" []
 "Doc Atlas Castaldo"
 "Doc Audra Cuadrado"
 "Doc Azar Cardoza"
@@ -50872,6 +51006,7 @@ blurb
 "Selkirk Likkers"
 "Senhor Rhone's" []
 "Sensist Stiens's"
+"Sentry Teryn's"
 "Seraphim Ephraim's"
 "Sharon Horan's" []
 "Sheer Rhee's"
@@ -50945,6 +51080,7 @@ blurb
 "Trash Man Rathman's"
 "Trasher Erhart's"
 "Tropical Coral Pit"
+"Ty Han's Shanty"
 "Ty's Sty"
 "Un-Slick Culkin's"
 "Un-Smart Truman's"
@@ -51046,6 +51182,7 @@ blurb
 "'Shouldn't stun hold...' says the trout."
 "'Simp!' -- the imps."
 "Skeletal eels talk."
+"'Smallest! Let's slam!'"
 "Sneeriest interesse."
 "Snot-laugh onslaught."
 "'So daft, da soft fat sod!'"
@@ -51282,7 +51419,9 @@ blurb
 "Acrid Darci Icard"
 "Aeriest Teresia"
 "Agit-Gita"
+"Aimless Melissa"
 "Alien Aline" []
+"All-Sad Dallas"
 "Alpo Opal"
 "Anti-Car Catrina"
 "Antlike Katelin" []
@@ -51296,6 +51435,7 @@ blurb
 "Catarhine Catherina"
 "Creative Traci-Eve" []
 "Dandruff Fran Fudd"
+"Dazed Zedda"
 "Dire Deri Reid" []
 "Dull-Airs Drusilla"
 "Eat'n Tena" []
@@ -51336,6 +51476,7 @@ blurb
 "Meerkat Tremeka"
 "Menacer Marcene"
 "Menial Melani" []
+"Middler Mildred"
 "Narker Karren"
 "NASA Math Samantha"
 "No-Lays Alyson" []
@@ -51377,10 +51518,12 @@ book towers
 table of gizmo parts [xxw1]
 blurb
 "a-parted data pre-adapter"
+"anti-slam talisman"
 "Anytime Amenity"
 "balanced lace band"
 "Barnacle Balancer"
 "Boasty-say bot"
+"bores-glow snowglobe"
 "Boulder Doubler" []
 "brindle blinder" []
 "bus-pack backups" []
@@ -51391,9 +51534,11 @@ blurb
 "coolant loot-can" []
 "CoreOps Scooper"
 "Corpsman crampons"
+"crackle-clacker"
 "dry earth hydrater"
 "eat-mech machete" []
 "Electro-Corelet" []
+"epic taints-antiseptic"
 "an epulotic poultice"
 "errantries restrainer"
 "flatiron inflator"
@@ -51427,6 +51572,7 @@ blurb
 "Prickle Pickler"
 "productive crude pivot"
 "Rasped Spader"
+"raw-prep wrapper"
 "reboots-booster"
 "Relics Slicer"
 "Replica Caliper"
@@ -51515,6 +51661,7 @@ blurb
 "dimming-shrub hummingbirds"
 "a dominate nematoid"
 "a dry enough young herd greyhound"
+"a dull-bog bulldog"
 "a dyed-armor dromedary"
 "end-o[']-sky donkeys" []
 "enshrouded deerhounds"
@@ -51569,6 +51716,7 @@ blurb
 "a pro-wars sparrow"
 "a pumpkin mink-pup"
 "Quasimodo, a moo-squid"
+"a rad-buzz buzzard"
 "re-denier reindeer"
 "real-wuss walruses"
 "a retirer terrier"
@@ -51651,6 +51799,7 @@ blurb
 
 table of Elvira battle cries [xxt3]
 blurb
+"Arr, aww! Raw war"
 "A belting, tangible" []
 "Blotted. Bottled"
 "Dead poser! Desperado"
@@ -51658,11 +51807,13 @@ blurb
 "A dirty aid try" []
 "Drat. Seem mastered" []
 "Drubbing! Burn'd big"
+"A duress, assured! Rude [a-word]"
 "Extend furies? Six feet under" []
 "A foe, utmost: out of steam"
 "Foul demise, field mouse"
 "Grr, an a-ok Ragnarok"
 "Hour is come, choir-mouse. Um, so heroic"
+"I, intact, TITANIC"
 "I, super, rise up"
 "Life lost, still foe"
 "Life's gone, single foe" []
@@ -51764,6 +51915,7 @@ blurb
 "'Be a hero? Eh, a bore.'"
 "'Bye, elf! Flee by, feebly!'"
 "'Bye now. Web...yon!'" []
+"'Cameo mo['] ace!'"
 "'Come, pet, compete!'"
 "'Courage, a cure: GO!'"
 "'Courage's a scourge!'"
@@ -51800,6 +51952,7 @@ blurb
 "'I stunk of fink-outs!'" []
 "'In check? Chicken?'"
 "'Leavin[']? Venial!'" []
+"'A legion? Ego lain! Go alien!'"
 "'Lo! Retire, loiterer!'"
 "'A low AWOL!'"
 "'March out, our match? Macho rut! Humor, cat!'"
@@ -51901,6 +52054,7 @@ blurb
 "'Cheap bulk!' / 'Buck, eh, pal?'"
 "'Cheap bum! Be a chump!'" []
 "'Conspire on prices? Nice, pros!'"
+"'Deal-bot? A bolted, bloated, beat old...'"
 "'Ever sold? Resolved.'" []
 "'Foul offers? Suffer, fool!'"
 "'Freebie beer? Fie!'"
@@ -53971,9 +54125,8 @@ carry out towers-hinting:
 h-w is a warrior that varies. [h-w means hinted warrior]
 
 to decide what indexed text is the vul of (w - a warrior):
-	choose row with fighter of w in table of warguys;
-	decide on "[vuln entry]";
-	[decide on "[vuln entry]";]
+	choose row with the-from of w in table of anagrams;
+	decide on "[right-word entry]";
 
 turbfirst is a truth state that varies.
 
@@ -56596,6 +56749,64 @@ carry out miscing:
 	if number of flippable nonreflexive things > 0:
 		say "Flippable nonreflexive: [list of flippable nonreflexive things].";
 
+chapter seed
+
+[* SEED seeds the towers or otters with option #N in a list]
+
+seeding is an action applying to one number.
+
+understand the command "seed" as something new.
+
+understand "seed" as seeding.
+
+carry out seeding:
+	let temp be 0;
+	let G be Rodney;
+	let found-yet be false;
+	if act-index < 1:
+		say "Need a positive act index.";
+		the rule fails;
+	let act-index be the number understood;
+	if trefoil is visited: [first, seed the start of TOWERS]
+		say "Skipping Trefoil seeding as you've already been there. Restart if you wish to re-seed.";
+	else:
+		if act-index > 4:
+			say "Decreasing index to 4 for the Trefoil.";
+			now act-index is 4;
+		now all warriors are off-stage;
+		repeat with J running from 1 to 7:
+			now temp is 0;
+			if there is a warrior with pod-num of J and pod-ord of act-index:
+				let G be a random warrior with pod-num of J and pod-ord of act-index;
+				now G is in trefoil;
+			else:
+				now found-yet is false;
+				repeat with J2 running from act-index to 1:
+					if there is a warrior with pod-num of J and pod-ord of J2:
+						if found-yet is false:
+							let G be a random warrior with pod-num of J and pod-ord of act-index;
+							now G is in trefoil;
+							now found-yet is true;
+	if fro is visited: [next, seed the macks in OTTERS]
+		say "Skipping Frontage seeding as you've already been there. Restart if you wish to re-seed.";
+	else:
+		now act-index is number understood;
+		if act-index > 4:
+			say "Decreasing index to 4 for the Frontage.";
+		now all mack-ideas are off-stage;
+		repeat with J running from 1 to 7:
+			now temp is 0;
+			if there is a mack-idea with pod-num of J and pod-ord of act-index:
+				let G be a random mack-idea with with pod-num of J and pod-ord of act-index:
+				now G is in fro;
+			else:
+				now found-yet is false;
+				repeat with J2 running from number understood to 1:
+					if there is a mack-idea with pod-num of J and pod-ord of act-index:
+						let G be a random mack-idea with with pod-num of J and pod-ord of act-index:
+							now G is in fro;
+							now found-yet is true;
+
 chapter cap
 
 [* CAP caps the # of entries in a random table. For testing.]
@@ -57047,4 +57258,4 @@ volume spare ideas
 				replace the text "G" in temptext with "Y";
 				replace the text "P" in temptext with "R";
 				change b-text of Z to "[temptext]";
-				[say "[Z]: [b-text of Z] -> [temptext].";]]
+				[say "[Z]: [b-text of Z] -> [temptext].";]]]

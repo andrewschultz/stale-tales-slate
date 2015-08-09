@@ -232,7 +232,7 @@ v:married,edmirra,iraderm
 !blaster,stabler
 !eastern,nearest
 #### warriors and beyond
-!Terrance,recreant
+Terrance,recreant
 !Leander,learned
 !Marlon,normal
 !Daryl,lardy

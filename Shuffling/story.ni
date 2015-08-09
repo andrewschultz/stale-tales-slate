@@ -7125,7 +7125,7 @@ reset-already is a truth state that varies.
 
 to say reset-goof:
 	if steer button is visible:
-		say "You don't need to reset the steer button[if trees-is-pushed is true] like you did the trees button[end if]. It's what it's supposed to be"
+		say "You don't need to reset the steer button[if trees-is-pushed is true] like you did the trees button[end if]. It's what it's supposed to be";
 	else if reset-already is false:
 		say "Unfortunately, it's not QUITE as easy as just pushing a reset button[if trees-is-pushed is true], which only worked to undo the trees[end if]. You have one more puzzle to navigate";
 		now reset-already is true;
@@ -13642,6 +13642,7 @@ blurb
 "Boyd Doby"
 "Brandee Bearden-Bardeen"
 "Branden Bennard"
+"Brantley Blantyre"
 "Brascoe Escobar"
 "Brenda Barden"
 "Brenda Dabner-Braden" []
@@ -13776,6 +13777,7 @@ blurb
 "Dedra Radde"
 "Dedrick Reddick"
 "Delsie Seidel"
+"Dena Nead"
 "Denise Seiden-Deines"
 "Denny Nyden"
 "Deon Oden"
@@ -13811,7 +13813,6 @@ blurb
 "Eckart Tacker"
 "Eden Ende-Deen"
 "Edith Heidt"
-"Edna Dean"
 "Edsel Leeds"
 "Edy Dye-Dey"
 "Edyth Heydt"
@@ -14469,6 +14470,7 @@ blurb
 "Tandra Darant"
 "Tangela Galante"
 "Tanisha Ashanti" []
+"Tareza Zarate"
 "Tasia Asati-Satai"
 "Telly Lytle"
 "Teran Nater"
@@ -14576,6 +14578,7 @@ table of evil locations [xxf]
 blurb
 "Absorbing-Brains Bog"
 "the AH! Heath"
+"All-Down Lowland"
 "the all-grey gallery"
 "Any-Con Canyon"
 "the asp spa"
@@ -14752,6 +14755,7 @@ blurb
 "Artists['] straits: it's...rats."
 "As The Hates Haste He's At Thea's."
 "As thy hasty sty, HA!"
+"As to taos? So, a toast!"
 "Aw, sire, I swear."
 "Aw, the wheat, wet, ah!"
 "AWOL? Fob a bowl of fab wool."
@@ -14768,6 +14772,7 @@ blurb
 "Bethany! They ban thy bane!"
 "Bias of Fabio's: I so fab!"
 "Big note: I go, bent, to being bit, gone."
+"Big screen begs nicer, recs being."
 "Big top bog pit."
 "A big town's wan bigots sat bowing."
 "Bingo! Mo['] booming big moon."
@@ -14833,7 +14838,9 @@ blurb
 "Deepest steeped pet seed!"
 "Demand, sir? Read minds? Madder sin!"
 "Demur? No! Mend our mourned ur-demon."
+"A depth pathed the pad."
 "Deputies due spite die, upset!"
+"A dervish, ravished, has drive."
 "Diagnose: Agonised!"
 "Dial for a florid lord of fair old Florida!" []
 "Did elf fiddle, defil'd? I'd fled."
@@ -15059,6 +15066,7 @@ blurb
 "He cries CHEERS, I see, Rich!"
 "He eats the sea as thee."
 "He oinks. No sheik hikes on. OK, he's in!"
+"He parps: ah, preps, perhaps?"
 "He Stands the Sands."
 "He's As Ashes!"
 "Hearties! There is a satire, eh?"
@@ -15083,6 +15091,7 @@ blurb
 "High water! Writhe, hag! Hear, wight!"
 "Hip-Led, I'd Help Delphi Phield."
 "Hipness? Ay, sisyphean ashen yips."
+"His lean inhales heal sin."
 "His net then is the sin!"
 "His seer-heiress is sheer. He rises."
 "Hit, mend, then dim the mind."
@@ -15185,6 +15194,7 @@ blurb
 "Le giant gelatin. Glean it."
 "Le haste! Ah, sleet. He's late!"
 "Le Pimp's Pimples."
+"Lean voice, once alive, a violence."
 "Lend, tots? Don't let's tend lost old tents."
 "Let Man Lament."
 "Let's yen, sly teen. Enstyle, tensely!"
@@ -15288,6 +15298,7 @@ blurb
 "Noblesse, snob, else: be lesson!" []
 "North star? Short rant: tart, shorn."
 "Not super, prose nut! Poets run!"
+"Note harm? Ah, mentor the manor or another."
 "Notify of tiny fit, yon!"
 "Nourish, oh, ruins! I rush on!"
 "Now bar a brown wan orb." []
@@ -15404,6 +15415,7 @@ blurb
 "Pip fled, flipped!"
 "Plain sad paladins."
 "Plight-wary playwright gal, wry pith!"
+"Po['] Eric: copier, or epic ice pro?"
 "Poach a chop, o chap!"
 "Poems sop me, Ms. Poe."
 "Poet, we weep to pet woe."
@@ -15717,6 +15729,7 @@ blurb
 "Wow, lithe white owl! While two toil, whew."
 "A Wren's Answer!"
 "Writing? Wring it, Win grit!"
+"The yawl, wetly: ha, wealthy, why late?"
 "Ye allow a yellow alloy? Ew!"
 "Ye Dr. Dyer: Reedy, Dry."
 "Ye earth: teary, eh?"
@@ -15747,6 +15760,7 @@ blurb
 "'Account, U-Can't-Co!'"
 "'The ad: hated!'"
 "'Ad-pest adepts: PASTED!'"
+"'Adidas is Dada!'"
 "'Advancement, me? Vacant end!'"
 "'All-Eco Locale!'"
 "'Alms for ol['] farms!'"
@@ -15794,6 +15808,7 @@ blurb
 "'DuesCorp produces rude cops!'"
 "'A dumb ad-bum? Um, bad!'"
 "'Eccentrics! Crescentic!'"
+"'Eco-cash coaches, cache so!'"
 "'Eh, toil's hostile!'"
 "'Empeach MacPhee!'"
 "'End furs['] refunds!'"
@@ -15962,6 +15977,7 @@ blurb
 "'Take us for freaks? OUT!'"
 "'A tasing? Against!'"
 "'Tasks be base, tsk.'"
+"'Tax bunker? Extra bunk, tux-banker!'"
 "'Theft laws? A twelfth's what's left!'"
 "'ThemCo Cometh!'"
 "They brag of prowess at Clear-BBS Scrabble." [p]
@@ -16019,6 +16035,7 @@ blurb
 "'Bub, Russ? Suburbs!'"
 "'Cadge, sir? Disgrace!'"
 "'Cake, ho! Ah, coke!'"
+"Chat! Soothe toothaches! Taste hooch!"
 "The conversationalists decry conservationalists."
 "Discussion of groats via gastro-argots."
 "'Gotwin Towing charges poor people the same as us rich people. And yet poor folks still whine!'"
@@ -16138,7 +16155,7 @@ blurb
 "'My bug? By gum!'"
 "'My group's so grumpy! Guys, ROMP!'"
 "A nerd says WLOG with a glow."
-"The nerds argue: Acier Erica, Chat-Less Tech Lass, Learned Darlene the Nerd-Ale girl, Admin Mandi, Nerd Gal Dr. Angel LeGrand, Thin Reba the Brain, or Gamer Marge."
+"The nerds argue: Acier Erica, Chat-Less Tech Lass, Brainiac Cari Bain, Learned Darlene the Nerd-Ale girl, Admin Mandi, Nerd Gal Dr. Angel LeGrand, Thin Reba the Brain, or Gamer Marge."
 "The nerds argue details of Art's Tech Chatters."
 "The nerds argue how minuter runtime is, um, inert."
 "The nerds babble, 'Obtuse? Use bot to be us!'"

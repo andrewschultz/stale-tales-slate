@@ -74,7 +74,7 @@ binmode(B);
 while ($a = <A>)
 {
   $lines++;
-  if (($a =~ /^blurb/) && ($a !~ /\[noalf\]/) && ($a !~ /^blurb\t\"/)) #blurb then quote appears in SA
+  if (($a =~ /^blurb/) && ($a !~ /\[noalf\]/) && ($a !~ /^blurb\t\"/) && ($b !~ /magnifs/)) #blurb then quote appears in SA
   {
     $count++;
     #print "$count: Sorting $b";
@@ -108,6 +108,7 @@ sub postProcess
   my $thisDir = $_[0];
   my $updateFound = 0;
   my $outString = $thisOutString = "";
+  my $quoteWarn = 0;
 if (!$dontcopy)
 {
   print "Copying .nu to .ni\n";
@@ -163,6 +164,8 @@ sub sortTheTable
 
   while ($a = <A>)
   {
+    @c = split(/\"/,  $a);
+	if (($#c ==1) || ($#c > 2)) { die ("Uh-oh, wrong # of quotes at line " . ($lines+$#ary+2) . "\n$#c:$a"); }
     if ($a =~ /^'/) { die ("Uh-oh, single quote line start at line " . ($lines+$#ary+2) . ", bailing."); }
     if ($a !~ /^\"/) {
 	  if ($a =~ /^[a-z]/i) { die ("Uh-oh, you started a table line with a character: # " .  ($lines+$#ary+2) . ", bailing."); }
