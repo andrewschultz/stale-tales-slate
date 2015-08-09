@@ -70,13 +70,13 @@ awed/coyer/weedy/yonder/creaky/weirder/clumsy/punier/pastier/resealed/hostile/or
 Store W (max)
 ashen/coyer/weedy/tenser/achier/recreant/yonder/rustled/creaky/rusty/clumsy/weirder/rinsed/pastier/punier/coiled/married/weariest/angstier/marginal/himself/sewed/mined/resealed/unreal/drained/naivest/grandiose/broken/wordy/pearly/unlocked/holiest/hastiest/attentive/rowdy/stabler/nearest/present/dingy/greyed/spectacular
 Store T (min) (adjusted)
-bare/reedi/shadi/teari/catti/because/else/atom/angri/brute/slow/coolest/artsy/garbed/stoical/terse/parrot/snail/snipe/racoon/honest/raptor/deep/quick
+bare/reedi/seedi/steami/tedious/because/else/atom/angri/brute/slow/coolest/artsy/garbed/stoical/terse/parrot/snail/snipe/racoon/honest/raptor/deep/quick
 Store T (max) (adjusted)
-bare/rescind/reedi/wearing/martial/drawling/because/else/atom/although/however/angri/brute/slow/paroled/coolest/artsy/garbed/loathing/stoical/parrot/snail/hornets/snipe/racoon/honest/raptor/deep/quick
+bare/rescind/reedi/sobbing/emotional/despairing/tedious/because/else/atom/although/however/angri/brute/slow/paroled/coolest/artsy/garbed/loathing/stoical/parrot/snail/hornets/snipe/racoon/honest/raptor/deep/quick
 Store T (min)
-barely/reedily/shadily/tearily/cattily/because/else/atom/angrily/brutely/slow/coolest/artsy/garbed/stoically/tersely/parrot/snail/snipe/racoon/honestly/raptor/deeply/quickly
+barely/reedily/seedily/steamily/tediously/because/else/atom/angrily/brutely/slow/coolest/artsy/garbed/stoically/tersely/parrot/snail/snipe/racoon/honestly/raptor/deeply/quickly
 Store T (max)
-barely/rescind/reedily/wearingly/martially/drawlingly/because/else/atom/although/however/angrily/brutely/slow/paroled/coolest/artsy/garbed/loathingly/stoically/parrot/snail/hornets/snipe/racoon/honestly/raptor/deeply/quickly
+barely/rescind/reedily/sobbingly/emotionally/despairingly/because/else/atom/although/however/angrily/brutely/slow/paroled/coolest/artsy/garbed/loathingly/stoically/parrot/snail/hornets/snipe/racoon/honestly/raptor/deeply/quickly
 Store H (min)
 limes/grapes/pears/plums/compass
 apples/apricot/nabana/gonear
@@ -94,4 +94,16 @@ sonic/icons/research/review
 blackberries/blueberries/strawberries/cantaloupe
 maraschino/cranberries/pomegranate/watermelon
 gooseberry/grapefruit/papayas/breadfruit/cinque
+;
+######For reference, all the Store T stuff
+Store Q (min)
+tacitly/saintly/seedily/tearily/snidely/ladyish/starkly
+steamily/formally/bridally/silently/locality/blearily/stupidly/modestly/shoddily/suddenly/shabbily
+sincerely/sobbingly/wearingly/martially/tediously
+drywalling/emotionally/despairingly
+Store Q2 (max)
+tacit/saint/seedi/teari/snide/shadi/stark
+steami/formal/bridal/silent/coital/bleari/stupid/modest/shoddi/sudden/shabbi
+sincere/sobbing/wearing/martial/tedious/
+drawling/emotional/despairing
 ;

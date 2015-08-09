@@ -18,7 +18,8 @@ for (1..12) { @fact[$_] = $_ * @fact[$_-1]; }
 while ($a = <A>)
 {
   chomp($a); #$a = lc($a);
-  if ($a !~ /\//)
+  if ($debug) { print "$a\n"; }
+  if ($a !~ /\//) #this is bad code as I may want to have just 1 item on a line. Maybe eliminate spaces or caps
   {
     evaluate();
     $header = $a;

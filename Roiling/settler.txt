@@ -364,6 +364,7 @@ lobbyings,sobbingly
 !outyields,tediously
 !lawyering,wearingly
 !drywalling,drawlingly
+!yoloailment,emotionally
 !redisplaying,despairingly
 flymoral,formally
 mayislet,steamily
