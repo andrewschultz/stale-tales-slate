@@ -1437,20 +1437,59 @@ The former yielder speaks boomingly.
 
 > REEDILY
 
-The cinders are a bonus point. DISCERN to get a free pass, or...well, the other is a Last Lousy Point.
+The cinders are a bonus point. DISCERN will help you get a free pass anywhere, or...well, the other is a Last Lousy Point.
 
 > W
 
-How to help Gretta ward off the macks? These are three of many responses as the creeps cycle through their attempts to woo her. All are functionally equivalent, so let's save some keystrokes. You can use one before the macks get to it.
+How to help Gretta ward off the macks? There are seven things they say, divided into pods. You have 7-word and 8-word adverbs with and without repeating letters, 9-word adverbs, 10-word adverbs and a 12-word adverb. Since these are random for each playthrough, guesswork probably doesn't work right away. But one in each pod will. If you're curious, the strategy requiring the fewest keys to type in involves guessing the 12- and 11-letter words, then either the duplicate or unique seven-letter words.
 
+This twelve-letter adverb always works:
+> DESPAIRINGLY
+
+One of these two eleven-letter adverbs will work:
+> EMOTIONALLY
+> DRAWLINGLY
+
+The ten-word adverbs are below:
+> MARTIALLY
+> SINCERELY
+> SOBBINGLY
+> TEDIOUSLY
+> WEARINGLY
+
+Here are the nine-word adverbs:
+> MARTIALLY
+> SINCERELY
+> SOBBINGLY
+> WEARINGLY
+> TEDIOUSLY
+
+Here are the unique-letter eight-word adverbs (also called isograms. Knowledge!) :
+> SAINTLY
+> SHADILY
 > SNIDELY
-> IRATELY
+> STARKLY
 
-Small point: Irately or Tearily can work, but not both.
+Here are the duplicate-letter eight-word adverbs:
+> BRIDALLY
+> FORMALLY
+> SHABBILY
+> SHODDILY
+> SUDDENLY
 
-> CATTILY
+Here are the unique-letter seven-word adverbs (also called isograms. Knowledge!) :
+> SAINTLY
+> SHADILY
+> SNIDELY
+> STARKLY
 
-Now we're going to skip the conversation, here, but you may wish to work through it. She describes what sort of allies work best against Elvira.
+Here are the duplicate-letter seven-word adverbs:
+> BOSSILY
+> SEEDILY
+> TACITLY
+> TEARILY/IRATELY (you can use either one)
+
+Now we're going to skip the conversation, here, but you may wish to work through it. Gretta describes what sort of allies work best against Elvira and why.
 
 > 3
 > Y
@@ -1478,7 +1517,7 @@ Now you can get rid of the moat.
 
 > ATOM
 
-The next part with Mr. Lee is an alternate solution. Longer words, though.
+The next part with Mr. Lee is an alternate solution, or just a way to get full points. Longer words, though.
 
 > S
 

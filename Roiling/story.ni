@@ -7181,8 +7181,11 @@ to reg-inc:
 			now stores is solved;
 			now last-solved-region is stores;
 	consider the notify score changes rule;
+	let tru-sco be cur-score of mrlp;
+	if mrlp is otters and cinders are in lalaland:
+		decrement tru-sco; [if the player uses the cinders earlier than they should--I can't stop them, but this ]
 	repeat through table of init-points:
-		if mrlp is myrg entry and cur-score of mrlp >= pttot entry:
+		if mrlp is myrg entry and tru-sco >= pttot entry:
 			if no-tip is false and roved is false and doneyet entry is false:
 				say "[line break][blurb entry][paragraph break]";
 				if tip-warn is false:
@@ -7190,6 +7193,7 @@ to reg-inc:
 					now tip-warn is true;
 					pad-rec "opt in/no tip";
 			now doneyet entry is true;
+			the rule succeeds;
 
 table of init-points
 myrg	pttot	blurb	doneyet
@@ -7198,14 +7202,20 @@ stores	1	"Well, it looks like the stores can be changed into something else. May
 routes	1	"Well, that was different from the standard directions. But there can't be too many other ways to go."
 troves	1	"Neat. You made progress just thinking. Or not-thinking. It could be either."
 troves	2	"Thinking has gotten you somewhere, you think. [if Pa Egg Pea is reflexive]Maybe reading Pa, Egg, Pea right will help you further, let you look into your mind more dispassionately[else]Hating and gaping are totally different, except for the whole not actually doing anything, but they've both worked[end if]."
-presto	1	"It feels cathartic, using sub-profanities to get going. Looks like words that generally don't mean anything, do, here."
-presto	2	"Gee! Such good clean fun! Your only regret is, you won't get to use many huge compound words to change anything, if you know Yorpwald."
+presto	1	"It feels cathartic, using a sub-profanity to get going."
+presto	2	"Gee! Such good clean fun! But--how many clean swears are there? Golly! If you run into compound words..."
 oyster	1	"You've started to get some action in."
 oyster	2	"Bam! More action! You'll still sort of be guessing the verb, but it's sort of just reacting, too."
-towers	1	"Well! You're starting to understand how things can, or should, be here."
-towers	2	"You're sort of glad for the short-ish names and the brute force, here. Things will probably get tougher to describe outside the Trefoil, but this is good practice."
-others	1	"Well, that's nice. With Elvira gone, it's back to changing stuff to...stuff."
-otters	1	"Hmm. Being weak might not be so bad, for a while. It cuts down the words you can use, but...it cuts down a lot of extraneous possibilities, too!"
+towers	1	"Well! You kind of cost him a few macho points, but you didn't, like, name-call him. He's probably better off being described that way in the long run."
+towers	2	"Most of these fellows seem short-named and not too complex. I mean, if they got suckered by Rodney... things will probably get tougher to describe outside the Trefoil, but this is good practice."
+others	1	"You've used pretty much every kind of word in the dictionary to get here. You have a strong idea what's left. Maybe you can test that hypothesis on Ed!"
+otters	2	"Barley, [if player is in bleary barley]reedily[else]then another l-y. Ed Riley seems a bit less intimidating--you dinged up the [imp-or-whiners] here[end if]. Until you get your full powers back, your restriction has made a bit of a pattern, here. For now."
+
+to say imp-or-whiners:
+	if player is in anteroom:
+		say "whiners";
+	else:
+		say "sly imp";
 
 when play begins (this is the define-status-line and intro text rule):
 	now left hand status line is "[lhs]";
@@ -12589,7 +12599,11 @@ after fliptoing lecturer (this is the disable the macks slightly too rule) :
 	now reflections are in lalaland;
 	increase headaches by 10;
 	now lectures is shunned;
-	now pod-num of t-tediously is 0; [disable "tediously" in otters]
+	if t-tediously is in otters:
+		let A be pod-num of t-tediously;
+		now pod-num of t-tediously is 0; [disable "tediously" in otters]
+		let B be a random number from 1 to mack-count of A;
+		place-a-mack A and B;
 	move player to Strip of Profits;
 	continue the action;
 
@@ -17023,7 +17037,7 @@ carry out playing:
 				say "Yeah. Maybe later. If you want to help him, you can ROVE OVER from your dusty study next time someone knocks. Or you can just UNDO at the next command.";
 				end the story finally saying "A MONSTER ROTS. AMEN.";
 				follow the shutdown rules instead;
-			say "Yeah. You've got nothing pressing back at the manor. But it's probably a good idea to keep the settler and notepad. The whistle and medals will go to a museum, or something.";
+			say "Yeah. You've got nothing pressing back at the manor. But it's probably a good idea to keep the settler and notepad. The whistle and medals will go to a museum, or something.[paragraph break]The animals escort you to the strip of profits.";
 			clean-for-roving;
 			continue the action;
 		else:
@@ -17274,6 +17288,7 @@ after fliptoing a mack-idea:
 		now macks are in lalaland;
 		try talking to Gretta;
 		continue the action;
+	consider the macks hitting on rule;
 	continue the action;
 
 macked-out is a number that varies. macked-out is usually 0.
@@ -17308,84 +17323,120 @@ to decide which number is mack-count of (mc - a number):
 			increment temp;
 	decide on temp.
 
+to place-a-mack (x1 - a number) and (x2 - a number):
+	let one-yet be false;
+	repeat with XX running through mack-ideas:
+		if pod-num of XX is x1 and pod-ord of XX is x2:
+			if one-yet is true:
+				say "Oops [XX] is a duplicate.";
+			else:
+				now XX is in fro;
+				now one-yet is true;
+	if one-yet is false:
+		say "Oops [x1] pod [x2] ord had no mack idea.";
+
 when play begins (this is the mack-randomize rule):
 	let my-wt be 0;
 	repeat with X running from 1 to max-pod-num:
 		now cur-pod-num is X;
 		let G be the mack-count of X;
-		[say "[G] mack things of length [X + 6].";]
+		[say "[G] mack things in pod [X + 6].";]
 		let H be a random number from 1 to G;
-		repeat with XX running through mack-ideas:
-			if pod-num of XX is X and pod-ord of XX is H:
-				now XX is in fro;
+		place-a-mack X and H;
+	assign-mack-priority;
 	now cur-pod-num is 0;
+
+definition: a mack-idea (called mm) is unprioritized:
+	if mack-prio of mm is 0 and mm is in fro:
+		decide yes;
+	decide no;
+
+to assign-mack-priority:
+	let C be number of mack-ideas in fro; [should be 7, but yeah]
+	repeat with B running from 1 to C:
+		let thismack be a random unprioritized mack-idea;
+		now mack-prio of thismack is B;
 
 a mack-idea is a kind of thing. a mack-idea is usually privately-named. a mack-idea is usually vanishing. a mack-idea is usually unscannable. a mack-idea has a number called pod-num. a mack-idea has a number called pod-ord. a mack-idea has text called mack-move. a mack-idea has text called mack-brief.
 
+rule for deciding whether all includes mack-ideas:
+	it does not.
+
+a mack-idea has a number called mack-prio. mack-prio of a mack-idea is usually 0.
+
 a mack-idea can be ment. a mack-idea is usually not ment. a mack-idea can be passed-on. a mack-idea is usually not passed-on.
+
+max-pod-num is a number that varies. max-pod-num is 7. cur-mack-blab is a number that varies. cur-mack-blab is 0.
+
+current-idea is a mack-idea that varies. cur-pod-num is a number that varies. ever-loop-mack is a truth state that varies.
 
 For printing a locale paragraph about a mack-idea (called the item):
 	set the locale priority of the item to 0;
 	continue the activity.
 
-t-tacitly is a mack-idea. pod-num is 1. pod-ord is 1. a-text of t-tacitly is "RYRRYRO". b-text of t-tacitly is "RGRRYPB". mack-move is "Each mack discusses tacitly why he's got something the others don't.". mack-brief is "acting tacitly".
-t-saintly is a mack-idea. pod-num is 1. pod-ord is 2. a-text is "RYRRYRO". b-text is "RGRRYPB". mack-move is "The macks suddenly start acting very saintly.". mack-brief is "acting saintly".
-t-seedily is a mack-idea. pod-num is 1. pod-ord is 3. a-text of t-seedily is "RYYRYRO". b-text of t-seedily is "RYGRGRO". mack-move is "A few macks do something stupid with their eyelids to get her attention.". mack-brief is "twiddling their eyelids".
-t-tearily-irately is a mack-idea.  pod-num is 1. pod-ord is 4. a-text is "RYRYYYRRO". b-text is "RYRYYYRRO". mack-move is "The macks ooze on about how women want companionship, as much as men, and that's REALITY.". mack-brief is "discussing reality".
-t-snidely is a mack-idea. pod-num is 1. pod-ord is 5. a-text is "RRYRYRO". b-text is "RRYPYRB". mack-move is "The macks blather about how she is better than Lindsey.". mack-brief is "negging Lindsey".
-t-shadily is a mack-idea. pod-num is 1. pod-ord is 6. a-text is "RRYRYRO". b-text is "RRYRGRO". mack-move is "The macks try to talk about ladyish things and fob off any awkwardness in the conversation to simple honesty.". mack-brief is "seeming ladyish".
-t-starkly is a mack-idea. pod-num is 1. pod-ord is 7. a-text is "RRYRRRO". b-text is "RRYRRRO". mack-move is "Some of the macks compare her to Krystal, being sort-of favorable to both. Still, it's icky.". mack-brief is "comparing Gretta and Krystal".
+[pod 1 is 7-letters repeating]
+t-bossily is a mack-idea. pod-num is 1. pod-ord is 1. a-text is "RYRRYRO". b-text is "RYRRYRO".  mack-move is "Fake plaintiveness makes you see red! 'I? Sly SOB? Si Bloy's...'". mack-brief is "acting bossily".
+t-seedily is a mack-idea. pod-num is 1. pod-ord is 2. a-text of t-seedily is "RYYRYRO". b-text of t-seedily is "RYGRGRO". mack-move is "A few macks do something stupid with their eyelids to get her attention.". mack-brief is "twiddling their eyelids".
+t-tacitly is a mack-idea. pod-num is 1. pod-ord is 3. a-text is "RYRRYRO". b-text is "RGRRYPB". mack-move is "Each mack discusses tacitly why he's got something the others don't.". mack-brief is "acting tacitly".
+t-tearily-irately is a mack-idea.  pod-num is 1. pod-ord is 4. a-text is "RYRYYYRRO". b-text is "RYRYYYRRO". mack-move is "The macks ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". mack-brief is "discussing reality".
 
-t-steamily is a mack-idea. pod-num is 2. pod-ord is 1. a-text is "RRYYRYRO". b-text is "RRYYRY*O". mack-move is "The macks claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". mack-brief is "mis-discussing Misty Ale".
-t-formally is a mack-idea. pod-num is 2. pod-ord is 2. a-text is "RYRRYRRO". b-text is "*YR*YRRO". mack-move is "The macks manage to seem surprisingly fly, moral. Like Ally from 'My Floral', a 'premium' cable show so bad you turn red just thinking of it. But they've got the confidence and pace to pull it off, for now.". mack-brief is "acting too formally".
-t-bridally is a mack-idea. pod-num is 2. pod-ord is 3. a-text is "RYRYRRRO". b-text is "RYRYRRPB". mack-move is "The macks ask if she has been thinking bridally.". mack-brief is "talking bridally".
-t-silently is a mack-idea. pod-num is 2. pod-ord is 4. a-text is "RYRYRRRO". b-text is "P**YRRRO". mack-move is "The macks perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". mack-brief is "having a snit-yell".
-t-locality is a mack-idea. pod-num is 2. pod-ord is 5. a-text is "RYYRYRRO". b-text is "RGYRYRRB". mack-move is "The macks discuss how nice it is to meet her in this locality.". mack-brief is "'admiring' this locality".
-t-blearily is a mack-idea. pod-num is 2. pod-ord is 6. a-text is "RRYYRYRO". b-text is "RRYYRYPB". mack-move is "The macks cut each other off reliably, giving Gretta no time to reject them or point out they're not THAT exciting.". mack-brief is "interrupting each other reliably".
-t-stupidly is a mack-idea. pod-num is 2. pod-ord is 7. a-text is "RRYRYRRO". b-text is "RRYRYRRO". mack-move is "One mack idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.".
-t-modestly is a mack-idea. pod-num is 2. pod-ord is 8. a-text is "RYRYRRRO". b-text is "RYRYRRRO". mack-move is "Three macks put on a production. 'Ed, my lost styledom! Yet old Ms...' 'Ty, sod...' / 'Mel!' It's over-the-top, but through seeing red you almost admire their courage.". mack-brief is "behaving fake-modestly".
-t-shoddily is a mack-idea. pod-num is 2. pod-ord is 9. a-text is "RRYRRYRO". b-text is "RRYRRYRO".  mack-move is "A tag-team effort. One mack gives an odd sly hi. The other replies 'Dish, Loyd!' It's ridiculous, but polished enough that they pull it off leaving you seeing red.".
-t-suddenly is a mack-idea. pod-num is 2. pod-ord is 10. a-text is "RYRRYRRO". b-text is "RYRRYRRO". mack-move is "The macks incorporate the stylings of Desy Lund [']N Sly Dude, their perfect smooth timings making you see red.". mack-brief is "not stopping suddenly.".
-t-shabbily is a mack-idea. pod-num is 2. pod-ord is 11. a-text is "RRYRRYRO". b-text is "RRYRRYRO".  mack-move is "A mack, going for the intellectual angle, describes the atmosphere by his lab, and his friend from a BBS, Hal Yi. He...he has to have messed up some details, somewhere.". mack-brief is "describing things shabbily".
+[pod 2 is non-repeating 7-letters]
+t-saintly is a mack-idea. pod-num is 2. pod-ord is 1. a-text is "RYRRYRO". b-text is "RGRRYPB". mack-move is "The macks suddenly start acting very saintly.". mack-brief is "acting saintly".
+t-shadily is a mack-idea. pod-num is 2. pod-ord is 2. a-text is "RRYRYRO". b-text is "RRYRGRO". mack-move is "The macks try to talk about ladyish things and fob off any awkwardness in the conversation to simple honesty.". mack-brief is "seeming ladyish".
+t-snidely is a mack-idea. pod-num is 2. pod-ord is 3. a-text is "RRYRYRO". b-text is "RRYPYRB". mack-move is "The macks blather about how she is better than Lindsey.". mack-brief is "negging Lindsey".
+t-starkly is a mack-idea. pod-num is 2. pod-ord is 4. a-text is "RRYRRRO". b-text is "RRYRRRO". mack-move is "Some of the macks compare her to Krystal, being sort-of favorable to both. Still, it's icky.". mack-brief is "comparing Gretta and Krystal".
 
-t-sincerely is a mack-idea. pod-num is 3. pod-ord is 1. a-text is "RYRRYRYRO". b-text is "RYRRYRYRO". mack-move is "Someone shouts 'Celery's in, yes! [']N slice yer...' / 'Rec, Lin, yes!' You cringe and see red at how forced and fake it is.". mack-brief is "speaking too sincerely".
-t-sobbingly is a mack-idea. pod-num is 3. pod-ord is 2. a-text is "RYRRYRRRO". b-text is "RGPPYRRRO". mack-move is "The macks continuing their lobbyings, far too cheery and confident.". mack-brief is "making lobbyings".
-t-wearingly is a mack-idea. pod-num is 3. pod-ord is 3. a-text is "RYYRYRRRO". b-text is "RYYRYRRRO". mack-move is "The macks begin lawyering about why she should probably choose ONE of them. You see red, a bit.". mack-brief is "lawyering".
-t-martially is a mack-idea. pod-num is 3. pod-ord is 4. a-text is "RYRRYYRRO". b-text is "PGPRYGPPB". mack-move is "Some of the macks even begin to talk maritally.". mack-brief is "blabbing maritally".
-t-tediously is a mack-idea. pod-num is 3. pod-ord is 5. a-text is "RYRYYYRRO". b-text is "RYRYYYRRO". mack-move is "Each mack discusses how he outyields someone else with a lousy diet, all, 'You! Idlest!' You see red.". mack-brief is "disparaging a lousy diet".
+[pod 3 is 8-letters repeating]
+t-bridally is a mack-idea. pod-num is 3. pod-ord is 1. a-text is "RYRYRRRO". b-text is "RYRYRRPB". mack-move is "The macks ask if she has been thinking bridally.". mack-brief is "talking bridally".
+t-formally is a mack-idea. pod-num is 3. pod-ord is 2. a-text is "RYRRYRRO". b-text is "*YR*YRRO". mack-move is "The macks manage to seem surprisingly fly, moral. Like Ally from 'My Floral', a 'premium' cable show so bad you turn red just thinking of it. But they've got the confidence and pace to pull it off, for now.". mack-brief is "acting too formally".
+t-shabbily is a mack-idea. pod-num is 3. pod-ord is 3. a-text is "RRYRRYRO". b-text is "RRYRRYRO".  mack-move is "A mack, going for the intellectual angle, describes the atmosphere by his lab, and his friend from a BBS, Hal Yi. He...he has to have messed up some details, somewhere.". mack-brief is "describing things shabbily".
+t-shoddily is a mack-idea. pod-num is 3. pod-ord is 4. a-text is "RRYRRYRO". b-text is "RRYRRYRO".  mack-move is "A tag-team effort. One mack gives an odd sly hi. The other replies 'Dish, Loyd!' It's ridiculous, but polished enough that they pull it off leaving you seeing red.".
+t-suddenly is a mack-idea. pod-num is 3. pod-ord is 5. a-text is "RYRRYRRO". b-text is "RYRRYRRO". mack-move is "The macks incorporate the stylings of Desy Lund [']N Sly Dude, their perfect smooth timings making you see red.". mack-brief is "not stopping suddenly.".
 
-t-drawlingly is a mack-idea. pod-num is 4. pod-ord is 1. a-text is "RRYRRYRRRO". b-text is "PPYPRYRRRO". mack-move is "Amazingly, the macks make projects like drywalling seem almost exciting--how competent they are, how incompetent some other guys are. Maybe it's just they're talking so fast, that they make [i]drywalling[r] interesting.". mack-brief is "blabbing about drywalling".
-t-emotionally is a mack-idea. pod-num is 4. pod-ord is 2. a-text is "YRYRYYRYRRO". b-text is "YRYRYYRYRRO". mack-move is "One mack, seizing the moment, asks 'YOLO Ailment? Oo, tally mine. I yell at moon.' The response: 'All? No time, yo.' But it's surprisingly subdued. You see red, anyway.". mack-brief is "behaving emotionally".
+[pod 4 is 8-letters non-repeating]
+t-blearily is a mack-idea. pod-num is 4. pod-ord is 1. a-text is "RRYYRYRO". b-text is "RRYYRYPB". mack-move is "The macks cut each other off reliably, giving Gretta no time to reject them or point out they're not THAT exciting.". mack-brief is "interrupting each other reliably".
+t-locality is a mack-idea. pod-num is 4. pod-ord is 2. a-text is "RYYRYRRO". b-text is "RGYRYRRB". mack-move is "The macks discuss how nice it is to meet her in this locality.". mack-brief is "'admiring' this locality".
+t-modestly is a mack-idea. pod-num is 4. pod-ord is 3. a-text is "RYRYRRRO". b-text is "RYRYRRRO". mack-move is "Three macks put on a production. 'Ed, my lost styledom! Yet old Ms...' 'Ty, sod...' / 'Mel!' It's over-the-top, but through seeing red you almost admire their courage.". mack-brief is "behaving fake-modestly".
+t-silently is a mack-idea. pod-num is 4. pod-ord is 4. a-text is "RYRYRRRO". b-text is "P**YRRRO". mack-move is "The macks perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". mack-brief is "having a snit-yell".
+t-steamily is a mack-idea. pod-num is 4. pod-ord is 5. a-text is "RRYYRYRO". b-text is "RRYYRY*O". mack-move is "The macks claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". mack-brief is "mis-discussing Misty Ale".
+t-stupidly is a mack-idea. pod-num is 4. pod-ord is 6. a-text is "RRYRYRRO". b-text is "RRYRYRRO". mack-move is "One mack idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.".
 
-t-despairingly is a mack-idea. pod-num is 5. pod-ord is 1. a-text is "RYRRYYRYRRRO". b-text is "RGRRYYRYRRRO". mack-move is "The macks begin redisplaying and redisplaying why they're so great.". mack-brief is "redisplaying their 'greatness'"
+[pod 5 is 9 letters]
+t-martially is a mack-idea. pod-num is 5. pod-ord is 1. a-text is "RYRRYYRRO". b-text is "PGPRYGPPB". mack-move is "Some of the macks even begin to talk maritally.". mack-brief is "blabbing maritally".
+t-sincerely is a mack-idea. pod-num is 5. pod-ord is 2. a-text is "RYRRYRYRO". b-text is "RYRRYRYRO". mack-move is "Someone shouts 'Celery's in, yes! [']N slice yer...' / 'Rec, Lin, yes!' You cringe and see red at how forced and fake it is.". mack-brief is "speaking too sincerely".
+t-sobbingly is a mack-idea. pod-num is 5. pod-ord is 3. a-text is "RYRRYRRRO". b-text is "RGPPYRRRO". mack-move is "The macks continuing their lobbyings, far too cheery and confident.". mack-brief is "making lobbyings".
+t-wearingly is a mack-idea. pod-num is 5. pod-ord is 4. a-text is "RYYRYRRRO". b-text is "RYYRYRRRO". mack-move is "The macks begin lawyering about why she should probably choose ONE of them. You see red, a bit.". mack-brief is "lawyering".
+t-tediously is a mack-idea. pod-num is 5. pod-ord is 5. a-text is "RYRYYYRRO". b-text is "RYRYYYRRO". mack-move is "Each mack discusses how he outyields someone else with a lousy diet, all, 'You! Idlest!' You see red.". mack-brief is "disparaging a lousy diet". [not alphabetical, but due to lazy coding I wand this last. Tediously has to disappear.]
 
-mack-row is a number that varies. mack-row is 1.
+[pod 6 is 10 letters.]
+t-drawlingly is a mack-idea. pod-num is 6. pod-ord is 1. a-text is "RRYRRYRRRO". b-text is "PPYPRYRRRO". mack-move is "Amazingly, the macks make projects like drywalling seem almost exciting--how competent they are, how incompetent some other guys are. Maybe it's just they're talking so fast, that they make [i]drywalling[r] interesting.". mack-brief is "blabbing about drywalling".
+t-emotionally is a mack-idea. pod-num is 6. pod-ord is 2. a-text is "YRYRYYRYRRO". b-text is "YRYRYYRYRRO". mack-move is "One mack, seizing the moment, asks 'YOLO Ailment? Oo, tally mine. I yell at moon.' The response: 'All? No time, yo.' But it's surprisingly subdued. You see red, anyway.". mack-brief is "behaving emotionally".
 
-max-pod-num is a number that varies. max-pod-num is 5. cur-pod-num is a number that varies. cur-pod-num is 1.
-
-current-idea is a mack-idea that varies. cur-pod-num is a number that varies. ever-loop-mack is a truth state that varies.
+[pod5 is a trivial pod. You will always get "despairingly," but you will also get 2 7's and 2 8's]
+t-despairingly is a mack-idea. pod-num is 7. pod-ord is 1. a-text is "RYRRYYRYRRRO". b-text is "RGRRYYRYRRRO". mack-move is "The macks begin redisplaying and redisplaying why they're so great.". mack-brief is "redisplaying their 'greatness'"
 
 to decide whether (n - a number) is unworkable:
 	decide yes;
 
 this is the find-mack-idea rule:
 	repeat with Q running through mack-ideas:
-		if Q is in fro and cur-pod-num is pod-num of Q:
+		if Q is in fro and mack-prio of Q is cur-mack-blab:
 			now current-idea is Q;
 			the rule succeeds;
 	the rule fails;
 		
 every turn when player is in fro and macks are in fro (this is the macks hitting on rule):
+	repeat with Q running through mack-ideas in fro:
+		say "[q]: [mack-prio of q].";
 	let loop be false;
-	increment cur-pod-num;
 	while cur-pod-num is unworkable:
-		increment cur-pod-num;
-		if cur-pod-num > max-pod-num:
+		increment cur-mack-blab;
+		if cur-mack-blab > max-pod-num:
 			if loop is true:
-				say "[bug-report]";
+				say "The macks seem to be out of ideas! [bug-report]";
 				the rule succeeds;
 			now loop is true;
-			now cur-pod-num is 1;
+			now cur-mack-blab is 1;
 		consider the find-mack-idea rule;
 		if the rule succeeded:
 			if loop is true:
@@ -17393,7 +17444,7 @@ every turn when player is in fro and macks are in fro (this is the macks hitting
 					now ever-loop-mack is true;
 					say "The macks take a break. They've [one of][or]once again [stopping]babbled for long enough, and about enough, they can repeat their 'exciting' conversation all over again[if macked-out > 0], except for what you managed to alter[end if].";
 			now current-idea is ment;
-			say "[mack-move of current-idea]";
+			say "[mack-move of current-idea][line break]";
 			the rule succeeds;
 
 check scaning macks:
@@ -17970,6 +18021,12 @@ after printing the locale description for Inclosure when Inclosure is unvisited:
 		say "'Serious issue, or...?'";
 
 Reclusion Inclosure is an innie room in otters. Reclusion Inclosure is west of Alcoves. "You feel as slowed here as you did on entering the barley field. Vast vats emit sour moisture over a prey pyre. The room is cluttered with a stocked stockade, a torpid tripod (slowing you down,) and entrances to a warpish warship and becharm-chamber. That nacht-chant could be coming from any of them. You can leave to the east."
+
+understand "nicer soul" as a mistake ("[one of]'O, nice slur!' Elvira counters. 'Cruel is ON!' Dang! She's come prepared with defense of her own too. I guess finding the redemption in all of us isn't the way to go, her[or]You don't want to hear 'Cruel is on!' again[stopping].") when player is in inclosure.
+
+understand "rule scion" as a mistake ("Elvira smirks and shakes her head in disbelief. 'I was expecting you to give up, but...no, you're not getting a post in my secret police for that. I mean, if I ever established any.' She quickly makes sure nobody will remember hearing her slip-up.[uurrgg]") when player is in inclosure.
+
+understand "coins lure" as a mistake ("[one of]Elvira momentarily sniffs. 'Money? Where? Mmm, I'll find it after beating this little dorkling up.'[or]Elvira's lust for power has eclipsed her lust for money. You should probably try to destroy her.[stopping]") when player is in inclosure.
 
 the torpid tripod is amusing scenery in Inclosure. tripod is an undesc.
 
@@ -23332,9 +23389,9 @@ Bredo	Bredo	"bored/robed"	"bored"	 "Bredo gives an exasperated look, shrugs, and
 Cedrick	Cedrick	"cricked"	"cricked"	"Suddenly, Cedrick clutches at his knee, then at his elbow. 'I can't do this anymore!' He whines, as he runs upstairs for some rest."	false	370096195	"cricked"
 Daryl	Daryl	"lardy"	"lardy"	"Suddenly, Daryl grows flabby and is really in no shape for fighting. He excuses himself."	false	284713801	"lardy"
 Demitri	Demitri	"timider"	"timider"	"Demitri's face becomes contorted with fear, perhaps fear at how embarrassing it would be if you managed to beat him and Rodney[if number of visible warriors > 3] and the rest[end if]. He runs away quickly, muttering 'I'm tired.'"	false	491329864	"timider"
-Dewey	Dewey	"weedy"	"weedy"	"Dewey loses muscle mass before your eyes (don't worry, he's still in good enough shape.) His armor hangs off him loosely. He flees from embarrassment, but Rodney doesn't care enough to follow."	false	506935332	"weedy"
-Edwin	Edwin	"wined"	"wined"	"You watch as Edwin's face grows redder and he begins hiccuping. He lurches unsteadily, and then he runs upstairs to where he can lie down."	false	370670325	"wined"
-Eldon	Eldon	"olden"	"olden"	"Eldon rapidly becomes older than the rest of the knights guarding the tavern. He walks off in shame, figuring he cannot do much. (Don't worry. It's only temporary.)"	false	345909122	"olden"
+Dewey	Dewey	"weedy"	"weedy"	"Dewey loses muscle mass before your eyes (don't worry, he's still in good enough shape.) His armor hangs off him loosely. He flees from embarrassment, but Rodney doesn't care enough to follow. Don't worry--he'll gain his muscle back. Working out is a habit for him!"	false	506935332	"weedy"
+Edwin	Edwin	"wined"	"wined"	"You watch as Edwin's face grows redder and he begins hiccuping. He lurches unsteadily, and then he runs upstairs to where he can lie down. He had only been opposed to alcohol on principle, but he will be more understanding now."	false	370670325	"wined"
+Eldon	Eldon	"olden"	"olden"	"Eldon rapidly becomes older than the rest of the knights guarding the tavern. He limps off, muttering he wishes he could help. Once outside the Trefoil and free of your magic, he bolts in shame."	false	345909122	"olden"
 Ernest	Ernest	"tenser"	"tenser"	"Ernest, who had looked quite relaxed up to this point, suddenly mumbles to himself about all the things that could go wrong, to resent his way of life. And even if nothing can go wrong, that would just make it even more embarrassing if things did. He whispers a prayer to St. Rene, then decides he had better flee."	false	609227513	"tenser"
 Geno	Geno	"gone"	"gone"	"Geno just walks off, without explanation. Not that you need any. Perhaps he went to seek his twin, Egon."	false	303665896	"gone"
 Goldy	Goldy	"godly"	"godly"	"Goldy has a revelation and looks to the skies. 'No more mercenary money! No more violence!' he cries. He runs off, a new mission in life."	false	304154459	"godly"
@@ -23764,6 +23821,7 @@ blurb
 "[if player is male]Mr. Taunt-Tantrum[else]Mrs. Taunt-Tantrums[end if]!"
 "A-ah! Not an oath!"
 "Absolutely lousy bleat!"
+"Eeg! Gee!"
 "Ach, a venal avalanche!"
 "Acrimony! I moan, cry!"
 "Ah, rote oather, to hear or hate!"
@@ -28187,6 +28245,7 @@ blurb
 "[n-t]'s Pets: Past Tense"
 "Abdul's Bud Sal"
 "Abysmal Amy's Lab"
+"Dark Side Adds Erik"
 "Admiral Dalarmi"
 "Aforementioned Foe, Renominated"
 "Alias Alisa"
@@ -54614,8 +54673,10 @@ towers	"PORIN or PORINS by the prison ropin's?"
 --	"OTTERS:"
 --	"SLAIN or AS NIL by the nails?"
 --	"(risque) saying SPINE around the pines? There's another one, too."
---	"Trying to PROD IT or DROP IT in the Inclosure?"
+--	"Trying to PROD IT or DROP IT in the Inclosure (the torpid tripod is nearby)?"
 --	"Making Elvira ALIVER in the Inclosure?"
+--	"Trying to make Elvira a NICER SOUL in the Inclosure?"
+--	"Saying COINS RULE or RULE, SCION in the Inclosure?"
 others	"OTHERS:"
 others	"making GAPERS around the pagers or grapes?"
 others	"SILT or SLIT around the list in the clearing?"
@@ -55333,7 +55394,7 @@ final question wording	only if victorious	topic	final response rule	final respon
 
 This is the epilogue rule:
 	fully resume the story;
-	say "The animals escort you back to the Strip of Profits.";
+	say "You decide, why not ROVE OVER?";
 	clean-for-roving;
 
 volume stubs
