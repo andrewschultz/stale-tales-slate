@@ -4779,7 +4779,7 @@ to say if-no-pad:
 
 table of nudges [ton]
 this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
-"basement"	608585586	manor	Basement	--	--	"[locname]."
+"basement"	608585586	manor	Basement	--	--	"[locname]." [start MANOR]
 "rove"	394647309	manor	--	--	gunter-onstage rule	"That's not a way to sneak around and avoid the knock at the door."
 "meet"	422797389	manor	--	--	is-unbent rule	"[locname-part]."
 "bans"	185788197	manor	--	--	is-unbent rule	"[locname-part]."
@@ -4855,7 +4855,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "sadsad"	238981746	manor	--	sad ads	--	"[w-twi]."
 "evac"	256164332	manor	Basement	--	--	"The evac-cave is your way out. It'd be a bad idea to change it."
 "manor"	294846859	manor	--	--	degen-true rule	"[not-the-reg]."
-"others"	524148772	stores	--	store h	--	"No--it's a weird place you need to get to, sort of--the rest."
+"others"	524148772	stores	--	store h	--	"No--it's a weird place you need to get to, sort of--the rest." [start STORES]
 "window"	425151566	stores	--	windows	--	"Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new."
 "windows"	521425532	stores	--	windows	--	"Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new."
 "storea"	489054291	stores	--	store-a	--	"[no-cand]."
@@ -4909,7 +4909,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "strip"	411166592	stores	profits	--	--	"[locname]."
 "profits"	512034065	stores	strip of profits	--	--	"[locname]."
 "profit"	415760099	stores	strip of profits	--	--	"[locname]."
-"orcas"	277143749	routes	same mesa	--	--	"[if adobe is visited]No further secrets[else]Hm, it's Oscar'S[end if]."
+"orcas"	277143749	routes	same mesa	--	--	"[if adobe is visited]No further secrets[else]Hm, it's Oscar'S[end if]." [start ROUTES]
 "mark"	204519952	routes	same mesa	--	--	"[name-worry]."
 "dilapidated"	523644520	routes	same mesa	--	--	"[name-worry]."
 "dingy"	289888397	routes	same mesa	--	--	"[name-worry]."
@@ -4998,7 +4998,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "clipper"	493874100	routes	cripple clipper	--	--	"[locname]."
 "storeu"	591972280	routes	--	--	degen-true rule	"[not-the-reg]."
 "route"	495698314	routes	--	--	degen-true rule	"[not-the-reg]."
-"spoil"	350899187	troves	--	--	degen-true rule	"[no-spoil]."
+"spoil"	350899187	troves	--	--	degen-true rule	"[no-spoil]." [start TROVES]
 "spoiloplis"	701798374	troves	--	--	degen-true rule	"[no-spoil]."
 "pothole"	552183378	troves	rathole	--	--	"[p-hole]."
 "potholes"	648457344	troves	rathole	--	--	"[p-hole]."
@@ -5072,7 +5072,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "poverty"	701582538	troves	--	--	degen-true rule	"There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details."
 "trove"	497757327	troves	--	--	degen-true rule	"[not-the-reg]."
 "storev"	594031293	troves	--	--	degen-true rule	"[not-the-reg]."
-"crust"	408819179	presto	--	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food."
+"crust"	408819179	presto	--	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food." [start PRESTO]
 "plaque"	454785149	presto	--	plaque	--	"It's the maze you need to change, not the plaque."
 "entry"	507506690	presto	--	plaque	--	"It's the maze you need to change, not the plaque."
 "mazeentry"	824545388	presto	--	plaque	--	"It's the maze you need to change, not the plaque."
@@ -5209,7 +5209,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "shack"	207682846	presto	shack	--	--	"[locname]."
 "hack"	111408880	presto	shack	--	--	"[locname]."
 "storep"	568332432	presto	--	--	degen-true rule	"[not-the-reg]."
-"tine"	344816481	oyster	--	stein	--	"Just one tine doesn't seem up to much."
+"tine"	344816481	oyster	--	stein	--	"Just one tine doesn't seem up to much." [start OYSTER]
 "troll"	370414076	oyster	hops shop	--	--	"Dealing with just one troll would cause the rest to call you a bully and beat you up. Gotta take [']em all, somehow."
 "recap"	315789274	oyster	hops shop	--	--	"Casper glares at you, as if he knows you're thinking all his recaps are the same. No. You [if recaps are reflexive]need to deal[else]already dealt[end if] with them all."
 "patrons"	511621649	oyster	hops shop	--	--	"[patron]."
@@ -5329,7 +5329,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "ahut"	247685942	oyster	uaah	--	--	"[locname]."
 "hut"	245498124	oyster	uaah	--	--	"[locname-part]."
 "storey"	609225725	oyster	--	--	degen-true rule	"[not-the-reg]."
-"badlands"	283848032	towers	--	--	degen-true rule	"[bland-sad]."
+"badlands"	283848032	towers	--	--	degen-true rule	"[bland-sad]."	[start TOWERS]
 "sad"	119490873	towers	--	--	degen-true rule	"[bland-sad]."
 "bland"	164357159	towers	--	--	degen-true rule	"[bland-sad]."
 "curst"	408819179	towers	--	--	degen-true rule	"It's not just that it's curst, it's a PALACE, too."
@@ -5514,8 +5514,42 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "cure"	337241304	towers	--	talc spa cure	--	"[focus-castle]."
 "mislit"	407258668	towers	limits	--	--	"[towersloc]."
 "storew"	594801246	towers	--	--	degen-true rule	"[not-the-reg]."
+"ly"	176173091	otters	--	--	degen-true rule	"Yup, that's the idea here in Otters[if inhib is false], even with your powers back[end if]." [start OTTERS]
+"bare"	233736635	otters	--	b-b	--	"[adj-needs-ly]?"
 "cinder"	367064940	otters	--	cinders	--	"You'll need to change more than one cinder."
 "bulwark"	425718123	otters	--	bulwark	--	"The whole bulwark? No, you [if inhib is true]couldn't do much with it at full strength[else]can't do much[end if]. [if Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if inhib is true] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to, well, a bulwark."
+"bossy"	407678666	otters	--	t-bossily	--	"[adj-needs-ly]?"
+"bossi"	330312260	otters	--	t-bossily	--	"[adj-needs-ly]?"
+"seedi"	417908119	otters	--	t-seedily	--	"[adj-needs-ly]?"
+"seedy"	495274525	otters	--	t-seedily	--	"[adj-needs-ly]?"
+"tacit"	272406285	otters	--	t-cattily	--	"[adj-needs-ly]?"
+"teari"	363420594	otters	--	t-tearily-irately	--	"[adj-needs-ly]?"
+"teary"	440787000	otters	--	t-tearily-irately	--	"[adj-needs-ly]?"
+"stark"	339828783	otters	--	t-starkly	--	"[adj-needs-ly]?"
+"snide"	359009518	otters	--	t-snidely	--	"[adj-needs-ly]?"
+"shady"	279132424	otters	--	t-shadily	--	"[adj-needs-ly]?"
+"shadi"	201766018	otters	--	t-shadily	--	"[adj-needs-ly]?"
+"saint"	315472156	otters	--	t-nastily	--	"[adj-needs-ly]?"
+"modest"	486646912	otters	--	t-modestly	--	"[adj-needs-ly]?"
+"steami"	438445910	otters	--	t-steamily	--	"[adj-needs-ly]?"
+"steamy"	515812316	otters	--	t-steamily	--	"[adj-needs-ly]?"
+"stupid"	451977685	otters	--	t-stupidly	--	"[adj-needs-ly]?"
+"bleary"	409909726	otters	--	t-blearily	--	"[adj-needs-ly]?"
+"bleari"	332543320	otters	--	t-blearily	--	"[adj-needs-ly]?"
+"coital"	297462683	otters	--	t-coitally	--	"[adj-needs-ly]?"
+"ribald"	225766300	otters	--	t-ribaldly	--	"[adj-needs-ly]?"
+"formal"	306268086	otters	--	t-formally	--	"[adj-needs-ly]?"
+"shabbi"	217574739	otters	--	t-shabbily	--	"[adj-needs-ly]?"
+"shabby"	294941145	otters	--	t-shabbily	--	"[adj-needs-ly]?"
+"shoddi"	294959866	otters	--	t-shoddily	--	"[adj-needs-ly]?"
+"shoddy"	372326272	otters	--	t-shoddily	--	"[adj-needs-ly]?"
+"silent"	494904286	otters	--	t-silently	--	"[adj-needs-ly]?"
+"sudden"	440151568	otters	--	t-suddenly	--	"[adj-needs-ly]?"
+"martial"	355691295	otters	--	t-martially	--	"[adj-needs-ly]?"
+"sincere"	570115926	otters	--	t-sincerely	--	"[adj-needs-ly]?"
+"sobbing"	353964409	otters	--	t-sobbingly	--	"[adj-needs-ly]?"
+"wearing"	469752559	otters	--	t-wearingly	--	"[adj-needs-ly]?"
+"tedious"	572670412	otters	--	t-tediously	--	"[adj-needs-ly]?"
 "corona"	324129868	otters	--	racoon	--	"[poor-animal]."
 "nails"	266175977	otters	--	snail	--	"[poor-animal]."
 "thrones"	593056280	otters	--	hornets	--	"[poor-animal]."
@@ -5607,7 +5641,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "preserve"	838970678	otters	perverse preserve	--	--	"[locname]."
 "otter"	493702525	otters	--	--	degen-true rule	"[not-the-reg]."
 "storet"	589976491	otters	--	--	degen-true rule	"[not-the-reg]."
-"pear"	296783689	others	--	spear	--	"[plur-fruit]."
+"pear"	296783689	others	--	spear	--	"[plur-fruit]." [start OTHERS]
 "plum"	304460758	others	--	lumps	--	"[plur-fruit]."
 "pager"	329383391	others	--	pagers	--	"[plur-fruit]."
 "lime"	290687947	others	--	slime	--	"[plur-fruit]."
@@ -5710,7 +5744,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "admit"	235394924	others	gates stage	--	--	"[stad-chg]."
 "other"	427874806	others	--	--	degen-true rule	"[not-the-reg]."
 "storeh"	524148772	others	--	--	degen-true rule	"[not-the-reg]."
-"peek"	390011355	demo dome	peek keep	--	--	"[dome-rm]."
+"peek"	390011355	demo dome	peek keep	--	--	"[dome-rm]." [start DEMO DOME]
 "evoc"	328329091	demo dome	evoc-cove	--	--	"[dome-rm]."
 "hows"	315843615	demo dome	hows show	--	--	"[dome-rm]."
 "perl"	348409710	demo dome	hows show	--	--	"[its-a-museum]."
@@ -5753,7 +5787,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "unfold"	349723716	demo dome	peek keep	--	--	"[no-mess]."
 "memoir"	460625641	demo dome	peek keep	--	--	"[no-mess]."
 "demo"	287262928	demo dome	--	--	degen-true rule	"Museums are designed to be impassive and impermeable, for the most part. This is full of exhibits--your questing days are over."
-"Elvira"	421289235	--	--	--	degen-true rule	"Changing Elvira is impossible, [if player is in Inclosure]even now you've resisted her first attack[else]and you certainly don't want to summon her[end if]."
+"Elvira"	421289235	--	--	--	elvira-here rule	"Changing Elvira is impossible, [if player is in Inclosure]even now you've resisted her first attack[else]and you certainly don't want to summon her[end if]." [start GENERAL STUFF]
 "yorpwald"	548467110	--	--	--	degen-true rule	"You can't just unjumble Yorpwald with just one word. You need to deal with individual things."
 "settler"	697243862	--	--	settler	--	"[no-set]."
 "recoded"	476352361	--	--	settler	--	"[no-set]."
@@ -5824,6 +5858,14 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 [the rules/texts below are organized in the order I thought up the nudges above, which is to say, more or less random. But nothing there is game-critical enough that it needs to be sorted. I hope.]
 
 [ton]
+
+this is the elvira-here rule:
+	if otters is not solved:
+		the rule succeeds;
+	the rule fails;
+
+to say adj-needs-ly:
+	say "Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh"
 
 to say no-pryer:
 	say "No, it's the whole pryer bars"
@@ -6939,7 +6981,7 @@ to say spec-help of (itm - a thing):
 [		else:
 			say "You feel as though you could've done something.";]
 	if itm is a mack-idea:
-		say "The macks seem to waver a bit, but not enough.";
+		say "[if itm is ment]The macks seem to waver a bit, but not enough.[else][reject]";
 		continue the action;
 	say "You feel a slight psychic push-pull coming from [the itm]. That's a decent omen.";
 
@@ -7055,8 +7097,9 @@ to say reject:
 					if there is no this-reg entry or this-reg entry is mrlp:
 						if there is a this-item entry:
 							if this-item entry is visible:
-								say "[this-clue entry][line break]";
-								continue the action;
+								unless this-item entry is a mack-idea and this-item entry is not ment: [small hack for mack guesses that aren't present yet]
+									say "[this-clue entry][line break]";
+									continue the action;
 						else if there is a this-room entry:
 							if location of the player is this-room entry:
 								say "[this-clue entry][line break]";
@@ -17093,7 +17136,7 @@ carry out whistleing:
 
 book fro
 
-fro is west of Bleary Barley. fro is part of otters. "[if Gretta is visible]This seems like the best place to meet a maiden in Yorpwald. Okay, it is probably the only one[else]Not much to do here now you ruined the 'fun' for those macks[end if]. A raw-bulk bulwark is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in fro]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if inhib is false], not that you need to[end if]."
+fro is west of Bleary Barley. fro is part of otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. A raw-bulk bulwark is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in fro]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if inhib is false], not that you need to[end if]."
 
 the atmo-moat is super-easy vanishing scenery in fro. understand "atmo/moat" and "atmo moat" as atmo-moat. "Nothing subtle, no bustle. It's not the bluest you've seen water--in fact, for a moat, it's really red."
 
@@ -17149,7 +17192,7 @@ understand "mack" as macks.
 a-text of macks is "BUG". b-text of macks is "BUG".
 
 rule for printing a locale paragraph about macks:
-	say "[one of]You hear a conversation. Men trying to impress--yes, it's Gretta Garett-Tatger--here. Their pick-up lines and stories are just horrible. But that's how it is, with macks. Or whatever annoying flirters are called these days[or]The macks continue to annoy Gretta[how-macked][stopping].";
+	say "[one of]Wait a minute. You think you recognize whom the macks are trying to impress. It's that lady from the picture Elmo showed you: Gretta Garett-Tatger! Their pick-up lines and stories are just horrible, but their technique keeps them afloat. But that's how it is, with macks. Or whatever annoying flirters are called these days. And, well, if she ran, they'd probably cut her off[or]The macks continue trying to impress Gretta[how-macked][stopping].";
 	now Gretta is mentioned;
 	now macks are mentioned;
 
@@ -17262,6 +17305,10 @@ chapter mack flipping
 ladying is an action applying to nothing.
 
 irately is a truth state that varies.
+
+check fliptoing a mack-idea (this is the NO ESP rule):
+	if noun is not ment:
+		say "[reject]" instead;
 
 after fliptoing a mack-idea:
 	if uber-rand-cheat is true:
@@ -17377,29 +17424,29 @@ For printing a locale paragraph about a mack-idea (called the item):
 [pod 1 is 7-letters repeating]
 t-bossily is a mack-idea. pod-num is 1. pod-ord is 1. a-text is "RYRRYRO". b-text is "RYRRYRO".  mack-move is "Fake plaintiveness makes you see red! 'I? Sly SOB? Si Bloy's...'". mack-brief is "acting bossily".
 t-seedily is a mack-idea. pod-num is 1. pod-ord is 2. a-text of t-seedily is "RYYRYRO". b-text of t-seedily is "RYGRGRO". mack-move is "A few macks do something stupid with their eyelids to get her attention.". mack-brief is "twiddling their eyelids".
-t-tacitly is a mack-idea. pod-num is 1. pod-ord is 3. a-text is "RYRRYRO". b-text is "RGRRYPB". mack-move is "Each mack discusses tacitly why he's got something the others don't.". mack-brief is "acting tacitly".
+t-cattily is a mack-idea. pod-num is 1. pod-ord is 3. a-text is "RYRRYRO". b-text is "RGRRYPB". mack-move is "Each mack discusses tacitly why he's got something the others don't.". mack-brief is "acting tacitly".
 t-tearily-irately is a mack-idea.  pod-num is 1. pod-ord is 4. a-text is "RYRYYYRRO". b-text is "RYRYYYRRO". mack-move is "The macks ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". mack-brief is "discussing reality".
 
 [pod 2 is non-repeating 7-letters]
-t-saintly is a mack-idea. pod-num is 2. pod-ord is 1. a-text is "RYRRYRO". b-text is "RGRRYPB". mack-move is "The macks suddenly start acting very saintly.". mack-brief is "acting saintly".
+t-nastily is a mack-idea. pod-num is 2. pod-ord is 1. a-text is "RYRRYRO". b-text is "RGRRYPB". mack-move is "The macks suddenly start acting very saintly.". mack-brief is "acting saintly".
 t-shadily is a mack-idea. pod-num is 2. pod-ord is 2. a-text is "RRYRYRO". b-text is "RRYRGRO". mack-move is "The macks try to talk about ladyish things and fob off any awkwardness in the conversation to simple honesty.". mack-brief is "seeming ladyish".
 t-snidely is a mack-idea. pod-num is 2. pod-ord is 3. a-text is "RRYRYRO". b-text is "RRYPYRB". mack-move is "The macks blather about how she is better than Lindsey.". mack-brief is "negging Lindsey".
 t-starkly is a mack-idea. pod-num is 2. pod-ord is 4. a-text is "RRYRRRO". b-text is "RRYRRRO". mack-move is "Some of the macks compare her to Krystal, being sort-of favorable to both. Still, it's icky.". mack-brief is "comparing Gretta and Krystal".
 
 [pod 3 is 8-letters repeating]
-t-bridally is a mack-idea. pod-num is 3. pod-ord is 1. a-text is "RYRYRRRO". b-text is "RYRYRRPB". mack-move is "The macks ask if she has been thinking bridally.". mack-brief is "talking bridally".
+t-blearily is a mack-idea. pod-num is 3. pod-ord is 1. a-text is "RRYYRYRO". b-text is "RRYYRYPB". mack-move is "The macks cut each other off reliably, giving Gretta no time to reject them or point out they're not THAT exciting.". mack-brief is "interrupting each other reliably".
 t-formally is a mack-idea. pod-num is 3. pod-ord is 2. a-text is "RYRRYRRO". b-text is "*YR*YRRO". mack-move is "The macks manage to seem surprisingly fly, moral. Like Ally from 'My Floral', a 'premium' cable show so bad you turn red just thinking of it. But they've got the confidence and pace to pull it off, for now.". mack-brief is "acting too formally".
-t-shabbily is a mack-idea. pod-num is 3. pod-ord is 3. a-text is "RRYRRYRO". b-text is "RRYRRYRO".  mack-move is "A mack, going for the intellectual angle, describes the atmosphere by his lab, and his friend from a BBS, Hal Yi. He...he has to have messed up some details, somewhere.". mack-brief is "describing things shabbily".
-t-shoddily is a mack-idea. pod-num is 3. pod-ord is 4. a-text is "RRYRRYRO". b-text is "RRYRRYRO".  mack-move is "A tag-team effort. One mack gives an odd sly hi. The other replies 'Dish, Loyd!' It's ridiculous, but polished enough that they pull it off leaving you seeing red.".
-t-suddenly is a mack-idea. pod-num is 3. pod-ord is 5. a-text is "RYRRYRRO". b-text is "RYRRYRRO". mack-move is "The macks incorporate the stylings of Desy Lund [']N Sly Dude, their perfect smooth timings making you see red.". mack-brief is "not stopping suddenly.".
+t-coitally is a mack-idea. pod-num is 3. pod-ord is 3. a-text is "RYYRYRRO". b-text is "RGYRYRRB". mack-move is "The macks discuss how nice it is to meet her in this locality.". mack-brief is "'admiring' this locality".
+t-ribaldly is a mack-idea. pod-num is 3. pod-ord is 4. a-text is "RYRYRRRO". b-text is "RYRYRRPB". mack-move is "The macks ask if she has been thinking bridally.". mack-brief is "talking bridally".
+t-shabbily is a mack-idea. pod-num is 3. pod-ord is 5. a-text is "RRYRRYRO". b-text is "RRYRRYRO".  mack-move is "A mack, going for the intellectual angle, describes the atmosphere by his lab, and his friend from a BBS, Hal Yi. He...he has to have messed up some details, somewhere.". mack-brief is "describing things shabbily".
+t-silently is a mack-idea. pod-num is 3. pod-ord is 6. a-text is "RYRYRRRO". b-text is "P**YRRRO". mack-move is "The macks perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". mack-brief is "having a snit-yell".
+t-shoddily is a mack-idea. pod-num is 3. pod-ord is 7. a-text is "RRYRRYRO". b-text is "RRYRRYRO".  mack-move is "A tag-team effort. One mack gives an odd sly hi. The other replies 'Dish, Loyd!' It's ridiculous, but polished enough that they pull it off leaving you seeing red.".
+t-suddenly is a mack-idea. pod-num is 3. pod-ord is 8. a-text is "RYRRYRRO". b-text is "RYRRYRRO". mack-move is "The macks incorporate the stylings of Desy Lund [']N Sly Dude, their perfect smooth timings making you see red.". mack-brief is "not stopping suddenly.".
 
 [pod 4 is 8-letters non-repeating]
-t-blearily is a mack-idea. pod-num is 4. pod-ord is 1. a-text is "RRYYRYRO". b-text is "RRYYRYPB". mack-move is "The macks cut each other off reliably, giving Gretta no time to reject them or point out they're not THAT exciting.". mack-brief is "interrupting each other reliably".
-t-locality is a mack-idea. pod-num is 4. pod-ord is 2. a-text is "RYYRYRRO". b-text is "RGYRYRRB". mack-move is "The macks discuss how nice it is to meet her in this locality.". mack-brief is "'admiring' this locality".
-t-modestly is a mack-idea. pod-num is 4. pod-ord is 3. a-text is "RYRYRRRO". b-text is "RYRYRRRO". mack-move is "Three macks put on a production. 'Ed, my lost styledom! Yet old Ms...' 'Ty, sod...' / 'Mel!' It's over-the-top, but through seeing red you almost admire their courage.". mack-brief is "behaving fake-modestly".
-t-silently is a mack-idea. pod-num is 4. pod-ord is 4. a-text is "RYRYRRRO". b-text is "P**YRRRO". mack-move is "The macks perform a disturbingly convincing snit-yell: a style nit over a joke at SillyNet.". mack-brief is "having a snit-yell".
-t-steamily is a mack-idea. pod-num is 4. pod-ord is 5. a-text is "RRYYRYRO". b-text is "RRYYRY*O". mack-move is "The macks claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". mack-brief is "mis-discussing Misty Ale".
-t-stupidly is a mack-idea. pod-num is 4. pod-ord is 6. a-text is "RRYRYRRO". b-text is "RRYRYRRO". mack-move is "One mack idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.".
+t-modestly is a mack-idea. pod-num is 4. pod-ord is 1. a-text is "RYRYRRRO". b-text is "RYRYRRRO". mack-move is "Three macks put on a production. 'Ed, my lost styledom! Yet old Ms...' 'Ty, sod...' / 'Mel!' It's over-the-top, but through seeing red you almost admire their courage.". mack-brief is "behaving fake-modestly".
+t-steamily is a mack-idea. pod-num is 4. pod-ord is 2. a-text is "RRYYRYRO". b-text is "RRYYRY*O". mack-move is "The macks claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". mack-brief is "mis-discussing Misty Ale".
+t-stupidly is a mack-idea. pod-num is 4. pod-ord is 3. a-text is "RRYRYRRO". b-text is "RRYRYRRO". mack-move is "One mack idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.".
 
 [pod 5 is 9 letters]
 t-martially is a mack-idea. pod-num is 5. pod-ord is 1. a-text is "RYRRYYRRO". b-text is "PGPRYGPPB". mack-move is "Some of the macks even begin to talk maritally.". mack-brief is "blabbing maritally".
@@ -17427,7 +17474,8 @@ this is the find-mack-idea rule:
 		
 every turn when player is in fro and macks are in fro (this is the macks hitting on rule):
 	repeat with Q running through mack-ideas in fro:
-		say "[q]: [mack-prio of q].";
+		if debug-state is true:
+			say "[q]: [mack-prio of q].";
 	let loop be false;
 	while cur-pod-num is unworkable:
 		increment cur-mack-blab;
@@ -23426,17 +23474,17 @@ p-2	p-2	"however"	"however"	"Mr. Lee doesn't seem willing to discuss the paintin
 sea cube	sea cube	"because"	"because"	"'Well, now that you put it that way...' You hear a rush of water. Le Mer has unlocked the sea cube. Eels come out. They look up at you--they may be able to understand you."	false	496604299
 eels	eels	"else"	"else"	"The eels seem to understand you. They squirm across the pool and gaze at you as if to stay still. You feel a shock through your body[if inhib is false] much like in Mr. Lee's bran barn[else], and your mordant skills are no longer dormant[end if]."	false	405700023
 atmo-moat	atmo-moat	"atom"	"atom"	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom."	false	243725566
-t-saintly	t-saintly	"nastily"	"nastily"	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. They scramble to assure her they didn't mean it that way, but she's not fooled."	false	491645247 [begin MACKS 7]
+t-nastily	t-nastily	"nastily"	"nastily"	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. They scramble to assure her they didn't mean it that way, but she's not fooled."	false	491645247 [begin MACKS 7]
 t-seedily	t-seedily	"seedily"	"seedily"	"That thing they were doing? With their eyelids? Well, Gretta seems to have caught on, now. She laughs and groans a bit, and the macks accuse each other of being too obvious."	false	594081210
 t-shadily	t-shadily	"shadily"	"shadily"	"You manage to make them let slip a mean dis of other maidens."	false	377939109
 t-snidely	t-snidely	"snidely"	"snidely"	"The macks refer to Lindsey a little too unfavorably and ignore Gretta's hint that she doesn't really hate Lindsey. Their apologies fail."	false	535182609
 t-starkly	t-starkly	"starkly"	"starkly"	"The macks finally get a bit too explicit about looks, and Gretta is able to overcome their flattery."	false	516001874
-t-tacitly	t-tacitly	"cattily"	"cattily"	"The macks each lose their composure, each putting down the next guy's uniqueness or virtues or whatever. They're talking more sense than before, but the truth hurts, and things get out of hand quickly."	false	448579376
+t-cattily	t-cattily	"cattily"	"cattily"	"The macks each lose their composure, each putting down the next guy's uniqueness or virtues or whatever. They're talking more sense than before, but the truth hurts, and things get out of hand quickly."	false	448579376
 t-tearily-irately	t-tearily-irately	"irately" or "tearily"	"irately"	"One suitor is reduced to tears as he talks about reality, or his version of it. 'Dude, that was pathetic,' someone else says. 'Yet...LIAR! True-luv vulture!' The argument reflects well on no-one."	false	539593685
 t-blearily	t-blearily	"blearily"	"blearily"	"They interrupt each other, but not forcefully enough. Gretta comments, 'fascinating,' further cutting them."	false	508716411 [begin MACKS 8]
-t-bridally	t-bridally	"ribaldly"	"ribaldly"	"The macks move from the wedding to what they expect on the wedding night. She wanted to believe they would not, but they couldn't help it."	false	401939391
+t-ribaldly	t-ribaldly	"ribaldly"	"ribaldly"	"The macks move from courtship to...well, less than courtly desires. She wanted to believe they would not, but they couldn't help it."	false	401939391
 t-formally	t-formally	"formally"	"formally"	"The macks over-explain how they're fly/moral, and that's a critical lapse in concentration! Gretta has the time to ask obvious questions and make them contradict each other. And shortly THAT's all over."	false	482441177
-t-locality	t-locality	"coitally"	"coitally"	"Sometimes you just have to let idiots talk about what, apparently, all men think about. With these guys, it's like you almost didn't have to do anything."	false	473635774
+t-coitally	t-coitally	"coitally"	"coitally"	"Sometimes you just have to let idiots talk about what, apparently, all men think about. With these guys, it's like you almost didn't have to do anything."	false	473635774
 t-modestly	t-modestly	"modestly"	"modestly"	"Modesty is a good thing--well, in the long term. In the short term, the macks['] backtracking is too brazen, and it ruins any hope of impressing anyone with false humility or braggadocio."	false	662820003
 t-shabbily	t-shabbily	"shabbily"	"shabbily"	"The mack discussing his lab tries to supply details, but the more he makes up, the easier it is for others to pounce on his inconsistencies--but their trolling is so crude, nobody comes out looking too good."	false	393747830
 t-shoddily	t-shoddily	"shoddily"	"shoddily"	"The two macks can't keep up their production. They mutter 'D'oh! Sly is...' realizing they've worked into a dead end."	false	471132957
@@ -30684,6 +30732,7 @@ blurb	prio
 "Abbey Cho's Sobby Ache[r], by [if player is male]Cobey Bash[else]Sheya Cobb[end if]"
 "Abbie's Babies[r], by Seb Iba"
 "ABC is Basic![r] by Cassi Babic"
+"Bird of Forbid[r], by Bibi Ford-Dorf"
 "ABCDEFGHI Chafed Big[r], by Fidge Bach"
 "Abhorrent, Earth-Born[r], by [if player is male]Robert Han[else]Berna Roth[end if]" []
 "Abide Inert, Inebriated[r], by Benita Reid" []

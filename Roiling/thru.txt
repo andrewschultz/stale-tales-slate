@@ -1450,31 +1450,27 @@ One of these two eleven-letter adverbs will work:
 > EMOTIONALLY
 > DRAWLINGLY
 
-The ten-word adverbs are below:
-> MARTIALLY
-> SINCERELY
-> SOBBINGLY
-> TEDIOUSLY
-> WEARINGLY
-
 Here are the nine-word adverbs:
 > MARTIALLY
 > SINCERELY
 > SOBBINGLY
-> WEARINGLY
 > TEDIOUSLY
+> WEARINGLY
 
 Here are the unique-letter eight-word adverbs (also called isograms. Knowledge!) :
-> SAINTLY
-> SHADILY
-> SNIDELY
-> STARKLY
+> MODESTLY
+> STEAMILY
+> STUPIDLY
 
 Here are the duplicate-letter eight-word adverbs:
-> BRIDALLY
+
+> BLEARILY
+> COITALLY
 > FORMALLY
+> RIBALDLY
 > SHABBILY
 > SHODDILY
+> SILENTLY
 > SUDDENLY
 
 Here are the unique-letter seven-word adverbs (also called isograms. Knowledge!) :
@@ -1487,7 +1483,7 @@ Here are the duplicate-letter seven-word adverbs:
 > BOSSILY
 > SEEDILY
 > TACITLY
-> TEARILY/IRATELY (you can use either one)
+> TEARILY/IRATELY (you can use either one--note no letters are duplicated, but there are two solutions, so it got bumped to the "easy" pool)
 
 Now we're going to skip the conversation, here, but you may wish to work through it. Gretta describes what sort of allies work best against Elvira and why.
 
