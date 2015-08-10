@@ -18,6 +18,8 @@ $showRemain = 1;
 
 $checkForDup = 0;
 
+$cur = 0;
+
 while ($cur <= $#ARGV)
 {
   for (@ARGV[$cur])
@@ -31,7 +33,7 @@ while ($cur <= $#ARGV)
   /-np/ && do {$showPoss = 0; $cur++; next; };
   /-nr/ && do {$showRemain = 0; $cur++; next; };
   /\./ && do { $fileName = @ARGV[$cur]; $cur++; next; };
-  /^[a-z]/ && do { if (!$firstString) { $firstString = $cur; } $cur++; next; };
+  /^[a-z]/ && do { if ($firstString eq "") { $firstString = $cur; } $cur++; next; };
   $cur = $#ARGV + 1;
   }
 }

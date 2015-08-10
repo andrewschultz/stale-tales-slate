@@ -14875,12 +14875,14 @@ check fliptoing Rodney:
 
 after fliptoing a warrior:
 	let vw be number of warriors in trefoil;
-	d "[list of visible warriors].";
+	d "[list of warriors in trefoil].";
 	if noun is Rodney:
 		now all visible warriors are pinko;
 		d "[vw] left.";
 		if vw > 0:
 			decrease poss-score of towers by vw;
+		if vw > 0:
+			say "Rodney's remaining follower[if vw > 1]s look[else] looks[end if] a bit lost, but not upset. [if vw > 1]They even ask[else]He even asks[end if] if you can work your magic to make [if vw > 1]them better people[else]him a better person[end if]. After a surprisingly illuminating speech that avoids the major self-help catch-phrase, you make an excellent case for self-improvement coming from within, and not worrying about being perfect, or getting a perfect score. It goes over well, and [list of warriors in trefoil] thank you profusely before going on [if vw > 1]their ways[else]his way[end if].";
 		now all visible warriors are in lalaland;
 		now player has flowerpot;
 		continue the action;
@@ -14904,36 +14906,36 @@ check objhinting a not leaderly warrior (this is the poke Rodney but don't spoil
 		
 Sir Rodney is a leaderly warrior. description is "A big strong fellow who probably won't be removed by physical force. He looks sort of like Red Bull Burdell's slightly weaker younger brother.". The chum of Rodney is yourself. pod-num of Rodney is 7. pod-ord of Rodney is 1. a-text of Rodney is "OYRRYR". b-text of Rodney is "OGRRGR".
 
-Geno is a semi-easy warrior. description is "Well, he's ... here. He hasn't left yet. He may not be the best warrior, but he's still stronger than you.". a-text of Geno is "RYRY". b-text of Geno is "PYPY". pod-num of Geno is 1. pod-ord of Geno is 1.
-Shane is a warrior. description is "He looks well-tanned.". a-text of Shane is "YRRYR". b-text of Shane is "YRRYR". pod-num of Shane is 1. pod-ord of Shane is 2.
-Tyson is a warrior. description is "He keeps snarling at people, red-faced.". a-text of Tyson is "RRYRO". b-text of Tyson is "RRYRO". pod-num of Tyson is 1. pod-ord of Tyson is 3.
-Wade is a warrior. description is "He looks confident, as if nothing can drain that.". a-text of Wade is "YRYR". b-text of wade is "YRYR". pod-num of Wade is 1. pod-ord of Wade is 4.
+Geno is a semi-easy warrior. description is "Well, Geno is ... here. He hasn't left yet. He may not be the best warrior, but he's still stronger than you.". a-text of Geno is "RYRY". b-text of Geno is "PYPY". pod-num of Geno is 1. pod-ord of Geno is 1.
+Shane is a warrior. description is "Shane looks well-tanned, but a bit reddish-faced.". a-text of Shane is "YRRYR". b-text of Shane is "YRRYR". pod-num of Shane is 1. pod-ord of Shane is 2.
+Tyson is a warrior. description is "Tyson keeps snarling at people, red-faced.". a-text of Tyson is "RRYRO". b-text of Tyson is "RRYRO". pod-num of Tyson is 1. pod-ord of Tyson is 3.
+Wade is a warrior. description is "Wade looks confident, as if nothing can drain that. He's dressed in red.". a-text of Wade is "YRYR". b-text of wade is "YRYR". pod-num of Wade is 1. pod-ord of Wade is 4.
 
-Edwin is a warrior. description is "He looks sober and focused, except when he briefly gives a red-faced glare at all the alcohol in here.". a-text of Edwin is "RYRYR". b-text of Edwin is "RYRYR". pod-num of Edwin is 2. pod-ord of Edwin is 1.
-Eldon is a warrior. description is "He looks vigorous and youthful.". a-text of Eldon is "YRRYR". b-text of Eldon is "YPPYP"..pod-num of Eldon is 2. pod-ord of Eldon is 2.
+Edwin is a warrior. description is "Edwin looks sober and focused, except when he briefly gives a red-faced glare at all the alcohol in here he isn't allowed to destroy yet.". a-text of Edwin is "RYRYR". b-text of Edwin is "RYRYR". pod-num of Edwin is 2. pod-ord of Edwin is 1.
+Eldon is a warrior. description is "Eldon looks vigorous and youthful. Perhaps it's a bit put-on.". a-text of Eldon is "YRRYR". b-text of Eldon is "YPPYP"..pod-num of Eldon is 2. pod-ord of Eldon is 2.
 Goldy is a warrior. description is "Goldy has an amoral, mercenary look about him.". a-text of Goldy is "RYRRO". b-text of Goldy is "PGRRB". pod-num of Goldy is 2. pod-ord of Goldy is 3.
-Royce is a warrior. description is "He seems to be looking at the door as if to make a bolt for it.". a-text of Royce is "RYOYR". b-text of royce is "RGBYR". pod-num of Royce is 2. pod-ord of Royce is 4.
+Royce is a warrior. description is "Royce seems to be muttering-not-muttering about what a tough guy he is.". a-text of Royce is "RYOYR". b-text of royce is "RGBYR". pod-num of Royce is 2. pod-ord of Royce is 4.
 
-Blake is a warrior. description is "He beams, likely a paragon of positive thinking.". a-text of Blake is "RRYYR". b-text of Blake is "PPYYR". pod-num of Blake is 3. pod-ord of Blake is 1.
-Bredo is a warrior. description is "He seems focused and interested.". a-text of Bredo is "RYRYR". b-text of Bredo is "PYRYR". pod-num of Bredo is 3. pod-ord of Bredo is 2.
-Daryl is a warrior. description is "He has no fat on him.". a-text of Daryl is "RYRRO". b-text of Daryl is "RGPRO". pod-num of Daryl is 3. pod-ord of Daryl is 3.
-Dewey is a warrior. description is "Solidly build, almost less just a man than a big tree.". a-text of Dewey is "RYYRO". b-text of Dewey is "RGYRB". pod-num of Dewey is 3. pod-ord of Dewey is 4.
+Blake is a warrior. description is "Blake beams, likely a paragon of positive thinking.". a-text of Blake is "RRYYR". b-text of Blake is "PPYYR". pod-num of Blake is 3. pod-ord of Blake is 1.
+Bredo is a warrior. description is "Bredo seems unusually focused and interested.". a-text of Bredo is "RYRYR". b-text of Bredo is "PYRYR". pod-num of Bredo is 3. pod-ord of Bredo is 2.
+Daryl is a warrior. description is "Daryl appears to be in tremendous physical shape.". a-text of Daryl is "RYRRO". b-text of Daryl is "RGPRO". pod-num of Daryl is 3. pod-ord of Daryl is 3.
+Dewey is a warrior. description is "Dewey is solidly build, almost less just a man than a big tree.". a-text of Dewey is "RYYRO". b-text of Dewey is "RGYRB". pod-num of Dewey is 3. pod-ord of Dewey is 4.
 
-Ernest is a warrior. description is "He looks relaxed and ready to gaffle tavernlings.". a-text of Ernest is "RYRRYR". b-text of Ernest is "RYPRYR". pod-num of Ernest is 4. pod-ord of Ernest is 1.
-Marcel is a warrior. description is "He is clearly just agitated.". a-text of Marcel is "RYRRYR". b-text of Marcel is "RGRRGR". pod-num of Marcel is 4. pod-ord of Marcel is 2.
-Marlon is a warrior. description is "He doesn't look like all the rest, but he's comfortable with that.". a-text of Marlon is "RYRRYR". b-text of Marlon is "RYPRYR". pod-num of Marlon is 4. pod-ord of Marlon is 3.
-Reggie is a warrior. description is "He looks spotless--no stains on his clothes. He probably smells as nice as he looks, too.". a-text of Reggie is "YRRYYR". b-text of Reggie is "YRPYYR". pod-num of Reggie is 4. pod-ord of Reggie is 4.
+Ernest is a warrior. description is "Ernest looks relaxed and ready to gaffle tavernlings.". a-text of Ernest is "RYRRYR". b-text of Ernest is "RYPRYR". pod-num of Ernest is 4. pod-ord of Ernest is 1.
+Marcel is a warrior. description is "Marcel looks just plain agitated, which can't hurt in his line of work.". a-text of Marcel is "RYRRYR". b-text of Marcel is "RGRRGR". pod-num of Marcel is 4. pod-ord of Marcel is 2.
+Marlon is a warrior. description is "Marlon doesn't look like all the rest. In fact, he's sort of looking down his nose at them a bit.". a-text of Marlon is "RYRRYR". b-text of Marlon is "RYPRYR". pod-num of Marlon is 4. pod-ord of Marlon is 3.
+Reggie is a warrior. description is "Reggie looks spotless--no stains on his clothes. He probably smells as nice as he looks, too.". a-text of Reggie is "YRRYYR". b-text of Reggie is "YRPYYR". pod-num of Reggie is 4. pod-ord of Reggie is 4.
 
-Andres is a warrior. description is "He doesn't look restricted in any way.". a-text of Andres is "RRYRYR". b-text of Andres is "RPYPGR". pod-num of Andres is 5. pod-ord of Andres is 1.
-Andrew is a warrior. description is "He has a careless look in his eyes. He does not seem to be aware of risk.". a-text of Andrew is "RYRRYR". b-text of Andrew is "RYRRGR". pod-num of Andrew is 5. pod-ord of Andrew is 2.
-Archie is a warrior. description is "He looks free of pain.". a-text of Archie is "YRRYYR". b-text of Archie is "GRRYYR". pod-num of Archie is 5. pod-ord of Archie is 3.
-Barney is a warrior. description is "He seems far too close, but maybe you could push him back.". a-text of Barney is "RYYRRO". b-text of barney is "RYYRRB". pod-num of Barney is 5. pod-ord of Barney is 4.
+Andres is a warrior. description is "Andres's movements are carefree as he sways back and forth.". a-text of Andres is "RRYRYR". b-text of Andres is "RPYPGR". pod-num of Andres is 5. pod-ord of Andres is 1.
+Andrew is a warrior. description is "Andrew has a careless look in his eyes. He does not seem to be aware of risk.". a-text of Andrew is "RYRRYR". b-text of Andrew is "RYRRGR". pod-num of Andrew is 5. pod-ord of Andrew is 2.
+Archie is a warrior. description is "Archie looks free of pain, big or small.". a-text of Archie is "YRRYYR". b-text of Archie is "GRRYYR". pod-num of Archie is 5. pod-ord of Archie is 3.
+Barney is a warrior. description is "Barney feels close and far at the same time, like he should be placed somewhere else.". a-text of Barney is "RYYRRO". b-text of barney is "RYYRRB". pod-num of Barney is 5. pod-ord of Barney is 4.
 
-Cedrick is a warrior. description is "He moves effortlessly, without any hitches.". a-text of Cedrick is "RRYRRYR". b-text of Cedrick is "PRYRRYR". pod-num of Cedrick is 6. pod-ord of Cedrick is 1.
-Demitri is a warrior. description is "He stares out confidently, bolder than his compatriots.". a-text of Demitri is "RYRYRYR". b-text of Demitri is "RYPGRYR". pod-num of Demitri is 6. pod-ord of Demitri is 2.
-Leander is a warrior. description is "He looks too dumb to contemplate anything besides knocking people's heads in.". a-text of Leander is "RYYRRYR". b-text of Leander is "PGGRRGR". pod-num of Leander is 6. pod-ord of Leander is 3.
-Preston is a warrior. description is "He appears to be the best protected of your persecutors.". a-text of Preston is "RRYRYRR". b-text of Preston is "PPYRYRR". pod-num of Preston is 6. pod-ord of Preston is 4.
-Terrance is a warrior. description is "He constantly looks at Rodney and nods obediently.". a-text of terrance is "RYRRYYRR". b-text of terrance is "RGRPYYRR". pod-num of Terrance is 6. pod-ord of Terrance is 5.
+Cedrick is a warrior. description is "Cedrick stretches effortlessly, without any hitches.". a-text of Cedrick is "RRYRRYR". b-text of Cedrick is "PRYRRYR". pod-num of Cedrick is 6. pod-ord of Cedrick is 1.
+Demitri is a warrior. description is "Demitri stares out confidently, bolder than his compatriots.". a-text of Demitri is "RYRYRYR". b-text of Demitri is "RYPGRYR". pod-num of Demitri is 6. pod-ord of Demitri is 2.
+Leander is a warrior. description is "Leander looks too dumb to contemplate anything besides knocking people's heads in.". a-text of Leander is "RYYRRYR". b-text of Leander is "PGGRRGR". pod-num of Leander is 6. pod-ord of Leander is 3.
+Preston is a warrior. description is "Preston appears to be the best protected of your persecutors.". a-text of Preston is "RRYRYRR". b-text of Preston is "PPYRYRR". pod-num of Preston is 6. pod-ord of Preston is 4.
+Terrance is a warrior. description is "Terrance constantly looks at Rodney and nods obediently. Perhaps you could help him gain a freer mindset.". a-text of terrance is "RYRRYYRR". b-text of terrance is "RGRPYYRR". pod-num of Terrance is 6. pod-ord of Terrance is 5.
 
 The chum of Andres is yourself.
 
@@ -14959,7 +14961,7 @@ when play begins (this is the distribute warriors rule) :
 	
 [This pulls 1 guy from each wargroup. As of release 3 there are 26 distinct guys with 5.65 letters on average--the shuffling was previously totally random but now it's weighted down to ~5.61 with a more uniform distribution. You are sure to get 2 6's, 2 5's, a 7-8 and a 4-5.]
 
-understand "wendi" as a mistake ("Now that would be too embarrassing. Maybe you could embarrass him a little, though.") when player is in trefoil and Edwin is in trefoil.
+understand "wendi/widen" as a mistake ("Now that would be too embarrassing. Maybe you could embarrass him a little, though.") when player is in trefoil and Edwin is in trefoil.
 understand "new id" as a mistake ("You need to make sure Edwin's new ID is something negative.") when player is in trefoil and Edwin is in trefoil.
 
 understand "recalm" and "recalm marcel" as a mistake ("Right idea, but it might work better in [if cur-score of oyster > 0]the oyster[else]another area[end if].") when player is in trefoil and marcel is in trefoil.
@@ -17404,7 +17406,7 @@ to assign-mack-priority:
 		let thismack be a random unprioritized mack-idea;
 		now mack-prio of thismack is B;
 
-a mack-idea is a kind of thing. a mack-idea is usually privately-named. a mack-idea is usually vanishing. a mack-idea is usually unscannable. a mack-idea has a number called pod-num. a mack-idea has a number called pod-ord. a mack-idea has text called mack-move. a mack-idea has text called mack-brief.
+a mack-idea is a kind of undesc. a mack-idea is usually privately-named. a mack-idea is usually vanishing. a mack-idea is usually unscannable. a mack-idea has a number called pod-num. a mack-idea has a number called pod-ord. a mack-idea has text called mack-move. a mack-idea has text called mack-brief.
 
 rule for deciding whether all includes mack-ideas:
 	it does not.
@@ -23428,31 +23430,31 @@ kid	kid	"attentive"	"attentive"	"[kid-full] snaps to attention. [he-she-c]'s mor
 turbos	turbos	"robust"	"robust"	"The turbos whir a bit and grow shinier. Robust or bust! You'd feel [if blaster is reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the jetskis now."	false	482585076	"The turbos are working fine now."
 blaster	blaster	"stabler"	"stabler"	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the jetskis now."	false	486934458	"The blaster is working fine now."
 eastern shore	eastern shore	"nearest"	"nearest"	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the flowerpot, too, and maybe you have the time to drop off a gift...wherever Daltho's friend may be."	false	611415331	"nearest"	Mislit Limits
-Andres	Andres	"snared"	"snared"	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Trefoil. He'll be out back and out of your way for a while."	false	401528293	"snared"
+Andres	Andres	"snared"	"snared"	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Trefoil. It's nothing lethal, but enough to make him flee."	false	401528293	"snared"
 Andrew	Andrew	"warned"	"warned"	"Andrew suddenly gulps, as if he hadn't realized the downside of this venture. 'Darn, we...raw end!' he mumbles, then flees. Rodney mumbles 'Aw, nerd.'"	false	413189100	"warned"
 Archie	Archie	"achier"	"achier"	"Archie begins grabbing his joints and moaning 'I reach!' then 'I crack a crick!' until Rodney yells at him to get out. Which he does."	false	316598460	"achier"
-Barney	Barney	"nearby"	"nearby"	"Barney assures Rodney he'll look for any unused exits. But you can see him sneaking off once he is out of Rodney's sight."	false	425003395	"nearby"
-Blake	Blake	"bleak"	"bleak"	"Blake looks depressed. What does fighting matter? Nobody even wants to argue this, which makes him lonelier. He moans for his twin brother Kaleb and trudges away."	false	255159849	"bleak"
-Bredo	Bredo	"bored/robed"	"bored"	 "Bredo gives an exasperated look, shrugs, and walks off for someone more [bored-robed] to follow. Or beat up. Whichever."	false	326930483	"bored"
+Barney	Barney	"nearby"	"nearby"	"Barney assures Rodney he'll look for any unused exits captives might sneak out. But you can see him sneaking off once he is out of Rodney's sight."	false	425003395	"nearby"
+Blake	Blake	"bleak"	"bleak"	"Blake moans, depressed, what does fighting matter? He just wants to see his twin brother Kaleb, who's probably as sad as he is. Nobody particularly tries to stop him."	false	255159849	"bleak"
+Bredo	Bredo	"bored/robed"	"bored"	 "Bredo gives an exasperated look, shrugs, and walks off for someone more [bored-robed] to follow. Or beat up. Or philosophize with. Whichever."	false	326930483	"bored"
 Cedrick	Cedrick	"cricked"	"cricked"	"Suddenly, Cedrick clutches at his knee, then at his elbow. 'I can't do this anymore!' He whines, as he runs upstairs for some rest."	false	370096195	"cricked"
-Daryl	Daryl	"lardy"	"lardy"	"Suddenly, Daryl grows flabby and is really in no shape for fighting. He excuses himself."	false	284713801	"lardy"
+Daryl	Daryl	"lardy"	"lardy"	"Suddenly, Daryl grows flabby and is really in no shape for fighting. He excuses himself, and Rodney shrugs."	false	284713801	"lardy"
 Demitri	Demitri	"timider"	"timider"	"Demitri's face becomes contorted with fear, perhaps fear at how embarrassing it would be if you managed to beat him and Rodney[if number of visible warriors > 3] and the rest[end if]. He runs away quickly, muttering 'I'm tired.'"	false	491329864	"timider"
 Dewey	Dewey	"weedy"	"weedy"	"Dewey loses muscle mass before your eyes (don't worry, he's still in good enough shape.) His armor hangs off him loosely. He flees from embarrassment, but Rodney doesn't care enough to follow. Don't worry--he'll gain his muscle back. Working out is a habit for him!"	false	506935332	"weedy"
-Edwin	Edwin	"wined"	"wined"	"You watch as Edwin's face grows redder and he begins hiccuping. He lurches unsteadily, and then he runs upstairs to where he can lie down. He had only been opposed to alcohol on principle, but he will be more understanding now."	false	370670325	"wined"
-Eldon	Eldon	"olden"	"olden"	"Eldon rapidly becomes older than the rest of the knights guarding the tavern. He limps off, muttering he wishes he could help. Once outside the Trefoil and free of your magic, he bolts in shame."	false	345909122	"olden"
-Ernest	Ernest	"tenser"	"tenser"	"Ernest, who had looked quite relaxed up to this point, suddenly mumbles to himself about all the things that could go wrong, to resent his way of life. And even if nothing can go wrong, that would just make it even more embarrassing if things did. He whispers a prayer to St. Rene, then decides he had better flee."	false	609227513	"tenser"
+Edwin	Edwin	"wined"	"wined"	"You watch as Edwin's face grows redder and he begins hiccuping. He lurches unsteadily, and then he runs upstairs to where he can lie down. He had only been opposed to alcohol on principle, but he will be more understanding now to others who drink."	false	370670325	"wined"
+Eldon	Eldon	"olden"	"olden"	"Eldon rapidly becomes older than the rest of the knights guarding the tavern. He limps off, muttering he wishes he could help. Once outside the Trefoil and free of your magic, his youth comes back, but he bolts in shame. Hopefully he retained some wisdom."	false	345909122	"olden"
+Ernest	Ernest	"tenser"	"tenser"	"Ernest, who had looked quite relaxed up to this point, suddenly mumbles to himself about all the things that could go wrong, to resent his way of life. And even if nothing can go wrong, that would just make it even more embarrassing if things did. He whispers a prayer to St. Rene, then zigzags jerkily out."	false	609227513	"tenser"
 Geno	Geno	"gone"	"gone"	"Geno just walks off, without explanation. Not that you need any. Perhaps he went to seek his twin, Egon."	false	303665896	"gone"
 Goldy	Goldy	"godly"	"godly"	"Goldy has a revelation and looks to the skies. 'No more mercenary money! No more violence!' he cries. He runs off, a new mission in life."	false	304154459	"godly"
-Leander	Leander	"learned"	"learned"	"Leander suddenly sees the futility of war and aggression. He drops his weapon and armor and runs away."	false	486874275	"learned"
-Marcel	Marcel	"calmer"	"calmer"	"Marcel looks less enraged. He wonders what he is fighting for, apologizes to Rodney--and the people in the tavern, and walks off, almost skipping."	false	352212307	"calmer"
-Marlon	Marlon	"normal"	"normal"	"Marlon feels normal again, too normal for this questing business! Yay, Marlon! Yay, you!"	false	348660698	"normal"
-Preston	Preston	"pronest"	"pronest"	"Preston suddenly looks around. He seems panicked, as if anybody could attack him from anywhere. He turns around and runs smack into a postern. after shaking himself off, he runs further away."	false	637239940	"pronest"
-Reggie	Reggie	"eggier"	"eggier"	"Reggie suddenly snaps. As do the people next to him. They both mentioned that he smells a little funny, and he runs outside to freshen up. He doesn't come back."	false	451128271	"eggier"
-Royce	Royce	"coyer"	"coyer"	"Royce waits for Rodney to turn his head before quietly slipping away."	false	428847326	"coyer"
+Leander	Leander	"learned"	"learned"	"Leander suddenly sees the futility of war and aggression, its true cost, and how violence begets violence. 'THAT's what I should've learned in school!' He drops his weapon and armor and runs away."	false	486874275	"learned"
+Marcel	Marcel	"calmer"	"calmer"	"Marcel looks less enraged. He wonders what he is fighting for, apologizes to Rodney--and the people in the tavern, and to people he'd forgotten he's harmed. Then he walks off, almost skipping."	false	352212307	"calmer"
+Marlon	Marlon	"normal"	"normal"	"Marlon feels normal again, but not boring normal! He feels special enough to realize Rodney doesn't need to hold a spell over him. Yay, Marlon! Yay, you!"	false	348660698	"normal"
+Preston	Preston	"pronest"	"pronest"	"Preston suddenly looks around. He seems panicked, as if anybody could attack him from anywhere. He turns around and runs smack into a postern. After shaking himself off, he runs further away."	false	637239940	"pronest"
+Reggie	Reggie	"eggier"	"eggier"	"Reggie suddenly snaps. As do the people next to him. They both mentioned that he smells a little sulfuric, and he runs outside to freshen up. He doesn't come back."	false	451128271	"eggier"
+Royce	Royce	"coyer"	"coyer"	"Royce clams up, and when Rodney isn't looking, hey slips away."	false	428847326	"coyer"
 Shane	Shane	"ashen"	"ashen"	"Suddenly, the color rushes from Shane's face, and he looks a bit embarrassed. He looks at Rodney, realizing 'He's an...' before running away."	false	332457700	"ashen"
-Terrance	Terrance	"recreant"	"recreant"	"Terrance decides he might as well desert his duty and wanders off. [if number of visible warriors is 2]Rodney[else]The others[end if] can surely handle a bunch of drunks."	false	619470753	"recreant"
+Terrance	Terrance	"recreant"	"recreant"	"Terrance suddenly realizes that unconditional acceptance of duty ecides he might as well desert his duty and wanders off. [if number of visible warriors is 2]Rodney[else]The others[end if] can surely handle a bunch of drunks."	false	619470753	"recreant"
 Tyson	Tyson	"stony"	"stony"	"Tyson's emotions grow from hateful to just plain stony. This extends to his feelings towards Rodney as well as the tavern dwellers."	false	465003321	"stony"
-Wade	Wade	"awed"	"awed"	"Wade suddenly sees who you are. He's a clever fellow. He nods, walking away, giving Rodney such a look, he won't be stopped."	false	258957789	"awed"
+Wade	Wade	"awed"	"awed"	"Wade glances at your settler. 'Hmm,' he says. 'A gadget like that, you must be someone important. Beats Rodney's stupid sword.' As he walks away, he mutters some interesting, lucid points that make you feel better about needing or using the settler and quest aides in general. You get the sense if you ever made a game yourself, he'd give some pretty awesome work and advice. You could even picture him helping create a gadget like the settler. Clearly, he was way too good for Rodney!"	false	258957789	"awed"
 Rodney	Rodney	"yonder/droney"	"yonder"	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar. The speaker introduces himself as Old Hat Daltho, once a hot lad tipped to save Yorpwald. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Daltho hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say.[wfak][paragraph break]You follow his directions, apparently towards a voice booming 'Stop! Die!' But where you wind up isn't so threatening. Someone's there to greet you! Or to have a chat. A long one--he's a bit of a yacker."	false	499778338	"Rodney should already be gone."	Deposit
 flowerpot	flowerpot	"dingy"	"dingy"	"The crocus doesn't look a great shade of green, but it doesn't look dried out any more. It looks safer to pick up, so you do, and you put it in the flowerpot[unless player is in solo den][else if ed yerg is reflexive]. Ed sniffs--it still doesn't seem valuable[else]Ed looks longingly at the plant[end if]."	false	289888397	-- [583551280?]
 Ed Yerg	Ed Yerg	"greyed"	"greyed"	"[yergy]."	false	516924064	"That might be cruel. Ed's on the level, now."
@@ -30732,6 +30734,7 @@ blurb	prio
 "Abbey Cho's Sobby Ache[r], by [if player is male]Cobey Bash[else]Sheya Cobb[end if]"
 "Abbie's Babies[r], by Seb Iba"
 "ABC is Basic![r] by Cassi Babic"
+"No Beads Based on Bad Ones[r], by Dan Bose"
 "Bird of Forbid[r], by Bibi Ford-Dorf"
 "ABCDEFGHI Chafed Big[r], by Fidge Bach"
 "Abhorrent, Earth-Born[r], by [if player is male]Robert Han[else]Berna Roth[end if]" []
@@ -57373,4 +57376,4 @@ volume spare ideas
 				replace the text "G" in temptext with "Y";
 				replace the text "P" in temptext with "R";
 				change b-text of Z to "[temptext]";
-				[say "[Z]: [b-text of Z] -> [temptext].";]]
+				[say "[Z]: [b-text of Z] -> [temptext].";]]]
