@@ -1,6 +1,6 @@
 A Roiling Original, release 4 notes
 
-This was largely a maintenance release, spurred on by one bug Sean M. Shore found during testing of release 3. It was too complex to fix.
+This was largely a maintenance release, spurred on by one bug Sean M. Shore found during testing of release 3. It was too complex to fix. Then one thing led to another, and so forth.
 
 There are some items which give a hint what to do next. If you have used the hints, or if you've pre-figured things, those items may be used up with no real benefit.
 
@@ -20,5 +20,8 @@ There was also other miscellaneous stuff and even a few features that fell out w
 --Dr. Yow is now female if you are
 --new fruit in the Field
 --I also decided to reveal the code names of the updates. They're rather silly, but I hope you enjoy them.
+--the Bedroom in Store V now has a new name
+--the macks' idiocy in Store T is now refactored to be one of 7, drawn from pods, much like the warriors in Store W
+--tweaks to the Trizbort map
 
 ??Demo Dome Mode is now more robust

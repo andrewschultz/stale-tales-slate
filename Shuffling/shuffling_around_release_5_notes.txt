@@ -1,8 +1,9 @@
 Shuffling Around Release 5 Notes
 
-This fixed one bug Sean M. Shore found in A Roiling Original. The problem is that the saltine can be used on an item you've prefigured or hinted, which essentially renders it useless.
+This fixed one bug Sean M. Shore found in A Roiling Original. The problem was that the saltine could be used on an item you've prefigured or hinted, which essentially renders it useless.
 
 --1000 poem codas and 1000 job competitor names
 --hinting disambiguation is better
 --over 2500 total random things
---final list touchup
+--all random lists have at least 40 words
+--final list-of-lists once you win touchup
