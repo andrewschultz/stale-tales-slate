@@ -3633,7 +3633,7 @@ check inserting barcode into keycard:
 chapter Elf Row's Flowers
 
 check going to elf row's flowers for the first time:
-	say "'Main goal, magnolia... what low serf seeks our flowers?' you hear as you enter. 'He must do better than that primrose promiser! A rose leaves us sore! No succor in a crocus either! Players with parsley are rewarded sparely!'";
+	say "'Main goal, magnolia... what low serf seeks our flowers?' you hear as you enter. 'He must do better than that primrose promiser! A rose leaves us sore! No succor in a crocus either! Players with parsley are rewarded sparely! Peony? Nopey!'";
 
 Elf Row's Flowers is east of Cramped Red Camp. "You're in a flower shop manned (elfed?) by faeries. You can go back west to the camp."
 
@@ -11743,6 +11743,15 @@ understand "folded paper plane" as poem when poem is folded.
 
 the panel is a thing.
 
+to decide whether plane-or-panel:
+	if player has poem and poem is folded:
+		decide yes;
+	if panel is enclosed by location of the player:
+		decide yes;
+	decide no;
+
+understand "nepal" as a mistake ("Whoah! Teleporting there would be too cold even with that coat on. Plus, you have no mountain climbing gear.") when plane-or-panel
+
 the wires are part of the panel.
 
 description of wires is "They're not, like, chewed or anything. They seem [if panel is part of silo]not to be breaking anything[otherwise]in decent shape[end if]."
@@ -12622,6 +12631,8 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "poem"	347699798	sortie	--	pat	--	"[pat-poe]."
 "poetry"	594417718	sortie	--	pat	--	"[pat-poe]."
 "warhead"	383751709	sortie	--	missile	--	"You don't want to change the missile's message, which seems rather nice."
+"wires"	462331497	sortie	wires		--	"[no-wire]."
+"wire"	366057531	sortie	wires		--	"[no-wire]."
 "buttons"	569278799	sortie	--	--	panel-in-silo rule	"[but-but]."
 "button"	473004833	sortie	--	--	panel-in-silo rule	"[but-but]."
 "leftbutton"	784249695	sortie	--	--	panel-in-silo rule	"[what-b-says]."
@@ -12845,6 +12856,9 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 [the rules/texts below are organized in the order I thought up the nudges above, which is to say, more or less random. But nothing there below is game-critical, or in need of ordering.]
 
 [ton]
+
+to say no-wire:
+	say "Despite the magic you can do, electricity still feels like, well, total magic. Plus you don't want to mess those wires up";
 
 this is the riot-gone rule:
 	if player is in hotspot and riot is in lalaland:
@@ -13579,6 +13593,7 @@ blurb
 "Alvis Silva"
 "Alyce Lacey"
 "Alyne Layne-Nealy"
+"Amaris Samari"
 "Amir Mari" []
 "Anais Asani"
 "Andra Randa"
@@ -13637,6 +13652,7 @@ blurb
 "Beryl Lerby-Byler"
 "Beula Aubel"
 "Bianca Bacani"
+"Bitsy Tisby"
 "Blain Albin-Balin"
 "Boaz S. Szabo"
 "Bosric Brisco"
@@ -14252,6 +14268,7 @@ blurb
 "Norbert Bortner"
 "Norm Mudd-Drummond"
 "Norma Moran-Roman"
+"Normah Harmon"
 "Norman Mannor"
 "Normy Myron"
 "Norrie Renoir"
@@ -14608,6 +14625,7 @@ blurb
 "Cold Rainy Nordic Lay"
 "the deathless slate shed"
 "Desolate East Lode"
+"Despond-Den Pods"
 "Dewy Lakes Seedy Walk"
 "the Direr Rider Re-Dir"
 "Don't-Dare-Tend Road"
@@ -14722,6 +14740,7 @@ blurb
 "Acidic, a cicada, I."
 "Act four: fur coat. Our fact."
 "Act so! O, CAST!"
+"Acted immoral? Melodramatic? Calm mediator!"
 "Ada the Heated, a death date, eh?"
 "Adam she has made ashamed."
 "Adieu, blot! Bailed out!"
@@ -14748,6 +14767,7 @@ blurb
 "All Over, Overall!"
 "Aloha! A Halo!"
 "Altho['] Loath, Halt! O!"
+"Anchorage: oh, carnage! Each groan!"
 "And fie! A fiend!"
 "And flag Gandalf, glad fan!"
 "And posse passed on. Sad peons!"
@@ -14825,6 +14845,7 @@ blurb
 "A clarinet? Ain't clear."
 "Classroom? Macro loss! Scars loom!"
 "Cold wet dew-clot."
+"Colder suns, closed urns...SCOUNDRELS!"
 "Come, souls, cool muses: colosseum!"
 "Computers-curst poem!"
 "Conceptual cot cleanup: put, conceal."
@@ -14863,6 +14884,7 @@ blurb
 "Die first, fit Sir Ed!"
 "Dim tower. Worm-tide. Time word."
 "Dine slow, wild ones. Now slide."
+"Dire fact: I crafted fat cider."
 "Dirty pan? Dry paint? Darn pity."
 "Disown ego. New is good. Woo, design!"
 "Do ineptly, poet Lindy!"
@@ -14898,6 +14920,7 @@ blurb
 "Egos, drag! Go, grades so ragged!"
 "Eh, drips. His derp perish'd."
 "Eh, Dusted, the Dude's Deeds Hut."
+"Eh, foment, hem often the men of omen-heft!"
 "Eh, mousy shy moue?"
 "Eh, nuts, the sun."
 "Eh, posit spite? Oh, it's hope."
@@ -15016,6 +15039,7 @@ blurb
 "Fred, his red fish."
 "Free TV, eh? The fever!"
 "Fresh air. Far shire. Rare Fish. Eh, friars?"
+"Freshest, I sift here the fries. This, free!"
 "Frettier tree rift? Refitter!"
 "The frog forgeth! Fret, hog!"
 "A frog! Go far!"
@@ -15027,6 +15051,7 @@ blurb
 "Fêters fester." []
 "Gad! Elk of fake gold!"
 "Gaea's a Sage."
+"Gal's Ruin: a Ruling's Singular."
 "Gallop. Gap? LOL!"
 "The gang naggeth!"
 "Gap, sir! Rip! Sag! I grasp a sprig!"
@@ -15213,6 +15238,7 @@ blurb
 "Lab, be Babel!"
 "Lack Duly Lady Luck? All Ducky!"
 "Lacrosse scares ol['] solacers."
+"Lash deck held cask. Shackled."
 "Latin's in last, I slant--la, snit."
 "Latte so stale to eat lots."
 "Lawns? Lo, all snow! No walls!"
@@ -15311,6 +15337,8 @@ blurb
 "New path when apt: the pawn-ant, phew."
 "New to Towne? Not we!"
 "The new wet hen, he went then. Ew!"
+"News Story? To wryness, worst yens."
+"Newt mold won't meld, melt down."
 "Newton went on. ‘Net now!’ Not new." []
 "A nice spew: wee panics? Epics anew: Peace wins!"
 "Nicest eras: resistance sat sincere."
@@ -15367,6 +15395,7 @@ blurb
 "Oaks rule our lakes! A sour elk? Real? Us: OK!"
 "Observatory? Bravo! Yo, rest!"
 "Ode dropper Dr. Poe, doper, ordered pop."
+"Of humility: you lift him."
 "Of tours oft sour, our soft furs, too."
 "Oft here, tho['] free for thee."
 "Oh, bison his boon!"
@@ -15410,6 +15439,7 @@ blurb
 "Oof! Not on foot!"
 "Or do us odours so dour? O, sour'd!"
 "Or know no work? OK, worn."
+"Or ploy poorly, ol['] pyro."
 "Or Thus So Hurt to Rush."
 "Orange Vest Gravestone."
 "Our destiny intrudes, yo. Sore, untidy."
@@ -15420,6 +15450,7 @@ blurb
 "Overtax a vortex!"
 "Ow, false foe's law, sea wolf!"
 "Ow! Smit! Mo['] wist to swim."
+"Ow, thief of white! Ho, we fit!"
 "Oy, sage. Go-Easy Egos, Ay."
 "Oy, scars so scary. Ay, cross."
 "Pa, I club a public bail cup."
@@ -15430,6 +15461,7 @@ blurb
 "Patronise a separation? No, parasite!"
 "Peaceful puce leaf."
 "Peer! Frere! Freer Pere!"
+"Pen hordes? Red phones? Nope, shred."
 "A Pert, Apter Paper Treat? Repeat trap!"
 "Pert, hey? Pry thee the prey!"
 "Peru, pure peru!"
@@ -15442,6 +15474,7 @@ blurb
 "The Pinto, tho['] inept, thine opt."
 "Pioneer! I reopen one pier!"
 "Pip fled, flipped!"
+"A pithy yap hit. Ah, pity!"
 "Plain sad paladins."
 "Plight-wary playwright gal, wry pith!"
 "'Plod? Uh, hold up!'"
@@ -15450,6 +15483,7 @@ blurb
 "Poems sop me, Ms. Poe."
 "Poet, we weep to pet woe."
 "Poetic Eco-Pit."
+"Poke at a pet OK? Po['] take."
 "Pollutions? Lo, unspoilt sunlit pool. Loon! Tulips! Spout no ill!"
 "Poor boy, Roy Boop."
 "A posse: Aesop's!"
@@ -15471,6 +15505,7 @@ blurb
 "Proxies, pro-sex? I ... pox, sire!"
 "Purdue's pursued! Usurped!"
 "Pure goth, the group: tough rep!"
+"Pure threat? The rapture! Erupt, Earth!"
 "A purge! Rage up!"
 "A pushed, u-shaped sud-heap. Up, a shed."
 "Pyramid may drip rapid. My!"
@@ -15479,6 +15514,7 @@ blurb
 "Raffle info final-offer: a felon riff!"
 "Rah, the hearth!"
 "Raids of rid oafs: fraid so!"
+"Rap city. A pit. Cry: 'Icy trap!' Pity, arc!"
 "Rasping, I sprang a spring. Snag, rip! Pigs ran!"
 "Raw ROM or warm marrow?"
 "Ray hung a hungry, uh, angry yarn. Ugh!"
@@ -15547,6 +15583,7 @@ blurb
 "Seriously lousy, sire!"
 "Sewer slop slow spree. Powerless!"
 "Shack o['] Cask? Oh, a shock!"
+"Sheer meow somewhere. Sewer? Home?"
 "Shipmate, the map is, ahem, PITS."
 "Shove? Low. Oh, wolves, show love!"
 "Shrub fire. Brief rush. Refurbish."
@@ -15589,6 +15626,8 @@ blurb
 "So, tea, Oates? Eat so. To sea! O, east!"
 "So wanted down east? No, wasted, new toads!"
 "Soar, tense era's onset! Eons stare! Tens arose!"
+"Sods pace, sad copes, passcode."
+"The sofa: oh, a fest of hates!"
 "Soft hint: shift not this font!"
 "Soft-worn snow fort, oft sworn to frowns."
 "A solid sad oil, laid so."
@@ -15611,10 +15650,12 @@ blurb
 "Splayed for self-parody? Frayed slop. Drop safely."
 "Spoils is SLOP!"
 "Spy him, my ship."
+"Spy him my ship, shy imp!"
 "Squint, St. Quin!"
 "Stain'd, I stand in Tad's."
 "Stall, if it falls ill fast!"
 "Sterile, it leers."
+"Stone claw cleans two. Neat scowl!"
 "A storied asteroid, it soared! Sit, adore! Read it so!"
 "A sty. Stay?"
 "Stylite Letty is yet slit testily!"
@@ -15624,11 +15665,14 @@ blurb
 "Summon ten monuments."
 "Sun, bring burnings!"
 "Sundial said NUL."
+"Super fan spun fear, reaps fun."
+"Super long gulp snore. Splurge on? Slurp! Gone!"
 "Swan Lord Rowlands drawls on darn slow, warns old worn lads."
 "Swineford! Fire's down! Forewinds!"
 "The swines['] whiteness!"
 "Swoon! Greed worsened! Go, green woods!"
 "Tarnished, it hardens."
+"Ted rung. DrugNet grunted."
 "Ten rods? Dr. Stone snorted."
 "That wood! What to do?"
 "Thee, aid the idea i.e. DEATH!"
@@ -15656,6 +15700,7 @@ blurb
 "Thy row: wry, tho['] worthy."
 "Thy urge: try huge theurgy? Ugh, Trey! Yer...thug!"
 "Tied finely, yet infidel: definitely, tidy feline!"
+"A tiff now, fan of wit? Waft info!"
 "Tike Sol likes to lose Kit."
 "The times smit thee!"
 "Tipsy elf felt yips, self-pity. Fly, spite!"
@@ -15679,6 +15724,7 @@ blurb
 "To warrens near-worst! Narrowest!"
 "To Wear a Tower? Woe, art!" []
 "To Wharf-Fort? Haw? For what?"
+"Togas of oafs got a soft go."
 "Too Hep to Hope, oh Poet."
 "Torn legs? Slog-rent? Rest long!"
 "Tourin['] our tin unit, or, to ruin."
@@ -15699,6 +15745,7 @@ blurb
 "Ugh, ol['] ghoul! Lug! Ho!"
 "Ugliest Lie Gust!"
 "Ugly into guilty? No, outlying."
+"Uh, sniped! Pushed in. His end, up. Punished!"
 "Uh, spook, shook up?"
 "Uh, yo, gent. Ye go hunt the young!"
 "An ulcer can rule? Unclear."
@@ -15799,6 +15846,7 @@ blurb
 "'Ad-pest adepts: PASTED!'"
 "'Adidas is Dada!'"
 "'Advancement, me? Vacant end!'"
+"'Advice-of-Fad voice, face void!'"
 "'All-Eco Locale!'"
 "'Alms for ol['] farms!'"
 "'Anti-serf fine arts!' they cry, mumbling about a snifter and a rain fest."
@@ -15843,6 +15891,7 @@ blurb
 "'Dig no doing!'"
 "'Disable Di Bale's Bad Lies!'"
 "'Don't rec TrendCo!'"
+"'Down, greed! Wrong deed, edged, worn.'"
 "'DuesCorp produces rude cops!'"
 "'A dumb ad-bum? Um, bad!'"
 "'Eccentrics! Crescentic!'"
@@ -15901,6 +15950,7 @@ blurb
 "'Incite it NICE!'"
 "'InfoTeams? Some faint manifesto to famines!'"
 "'Interest? Resent it!'" []
+"'Irate guns['] signature: tearing us!'"
 "'Juice? TONS! No justice!'"
 "'Kissing-up pig is sunk!'"
 "'Labor, man? Abnormal!'"
@@ -15949,6 +15999,7 @@ blurb
 "'Oil is SCAM! Socialism!'"
 "'OK, writ now: I won't work!'"
 "'Ol['] taxer! To relax or exalt?'"
+"'Omit soppy pomposity!'"
 "'One by one, OBEY NONE!'"
 "'Or mass arms so? Morass!'"
 "'Orgs Won? So wrong!'"
@@ -16015,6 +16066,7 @@ blurb
 "'SuperOil? Perilous!'" []
 "'Support Pop Rust!'"
 "'Swallow low laws? Wallows? Aww, LOLs!'"
+"'Swank? See weakness!'"
 "'Take us for freaks? OUT!'"
 "'A tasing? Against!'"
 "'Tasks be base, tsk.'"
@@ -16111,6 +16163,7 @@ blurb
 "'Stoneham-Matheson? Mean host!'"
 "They argue over who has subtler butlers."
 "'Too pricy? Poor city!'"
+"'Top inn rec: Princeton!'"
 "'Tosh, host! Hot? [']S shot!'"
 "'Whoa, style so wealthy, stay whole!'"
 "'Wines, swine!' yells a visitor, snapping his fingers at a waiter. Of [i]course[r] that had several layers of irony."
@@ -16131,6 +16184,8 @@ blurb
 "'Berated, debater!'"
 "'Best-idea debate is base diet.'"
 "Bewarin['] a brewin['] webinar."
+"'Blue screen? Serene club!'"
+"Bold ideas? Bad. Soiled. Old. Biased.'"
 "A brief argument over the Hax-o-Gen Hexagon: good or bad?"
 "'...butler I rebuilt!'"
 "'Citin['] of fiction!'"
@@ -16144,6 +16199,7 @@ blurb
 "'Debian? I abend!' / 'Ban! Die!'"
 "'Delete leet Ed!'"
 "'Deliver e-drivel? Er, devil!'"
+"'Dim peer? I derp [']em per diem.' / 'Prime, Ed!'"
 "A disagreement over the taste of Boolean Noob Ale."
 "'The disc ditches ID techs!'"
 "'Discounted duds, notice! Deductions!'"
@@ -16190,6 +16246,7 @@ blurb
 "'List-U-Utils? I lust!'"
 "'Lo-fi foil? LOL fo['] if I...'"
 "'Lo-res? LOSER!'"
+"'Lock down. Know COLD.'"
 "'Lowly UI! You will LUL!' / 'I...yow!'"
 "'Math set? That's me!'"
 "'Mediums are for dummies!'"
@@ -16257,6 +16314,7 @@ blurb
 "The nerds wonder who is too dumb to use the Navster Servant to find taverns."
 "'Neuromancy? NO! Numeracy!'"
 "'Neurons non-user!'"
+"'No bail for fool-brain!'"
 "'No ROM, moron!'"
 "'Noel?' / 'EOLN, Leon!'" []
 "'Non-Mac? Con man!' one booms."
@@ -16365,6 +16423,7 @@ blurb
 "EAT BOLD => BLOATED"
 "EAT GRIST! IT'S GREAT"
 "ETHANOL? HEAL? NOT"
+"FAT PILLS = PITFALLS"
 "FELONIES? FINE! LOSE"
 "GET DRUNK = DUNG TREK"
 "GO BET? BE GOT TO BEG"
@@ -16419,6 +16478,7 @@ blurb
 "SO HEAVY? HAVE SOY"
 "SO WASTED? *** TOWED"
 "SOBER IS BOSSIER"
+"SODA, PIE...ADIPOSE"
 "STUDIERS = STURDIES"
 "SUPER HIGH !-> HIGHER UPS"
 "SWAMP FEVER REVAMPS FEW"
@@ -16511,6 +16571,7 @@ blurb
 "'So thin? No hits shot in!'"
 "'Strike, cad? Sidetrack!'"
 "'Stud? NO! Dust on donuts!'"
+"'Succumb, scum-cub!'"
 "'A tickle? I TACKLE!'"
 "'Tremendous to sunder [']em!'"
 "'Turn, dire intruder!'"
