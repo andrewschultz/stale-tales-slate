@@ -163,8 +163,11 @@ when play begins (this is the table scramble and index rule) :
 		if there is no curidx entry:
 			now curidx entry is 0;
 		if there is no maxidx entry or maxidx entry is 0:
-			if there is a mytab entry:
-				now maxidx entry is number of rows in mytab entry;
+			if there is a mytab entry: [just see if the maxidx entry can and should be cut down]
+				if there is a maxidx entry and maxidx entry < number of rows in mytab entry:
+					do nothing;
+				else:
+					now maxidx entry is number of rows in mytab entry;
 		if there is no maxbeforepause entry:
 			now maxbeforepause entry is 40;
 		increment mycount;
@@ -194,6 +197,13 @@ every turn (this is the process random dialogue rule) :
 	consider the find-blather rule;
 	now chat-rand is false;
 
+ever-hit-last is a truth state that varies. just-hit-last is a truth state that varies.
+
+every turn when ever-hit-last is false (this is the check for loop and warn rule):
+	if just-hit-last is true:
+		ital-say "you have reached your first end of random text. If you wish to see all the random text, there will be a menu once you win the game. Or you can look in the source that should come with the game.";
+		now ever-hit-last is true;
+
 [find-blather is what is used for random dialogue. It relies on the table of megachatter.]
 
 this is the find-blather rule:
@@ -211,6 +221,7 @@ this is the find-blather rule:
 						if there is a lasties entry:
 							say "[lasties entry]"; [I maybe should put a paragraph break here but I think it disrupts one of the randoms, so that's no good. It'd be a better solution than pre-brk if it worked...but it's so dicey. Things work as they are.]
 							now curidx entry is 0;
+							now just-hit-last is true;
 							the rule succeeds;
 						else:
 							say "You feel a sense of deja vu.[paragraph break]";
@@ -348,78 +359,78 @@ to say pre-lb:
 
 table of megachatter [tmc] [may not be alphabetized since some rules must come before others]
 mytab	eturn	curidx	maxidx	go-ahead	whichreg	descr	prefix	suffix	lasties	maxbeforepause	done-once	init-order	table-size	reps
-table of undo rejects	false	0	0	undo-rej rule	lll	"Undo rejects"	--	""	"'Do-over overdo.'"
-table of undo allows	false	0	0	undo-ok rule	lll	"Successful undo responses"	--	""	"'Do? Er, re-do.' (Last one. Stale? NO.)"
-table of random books	false	0	0	read-books rule	manor	"All the books in your bookshelf"	"[i]"	"[r]"	"your own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1
-table of ad slogans	true	0	0	blurby rule	manor	"All the ads in the Dope Op-Ed"	--	""	"HANKER! HARKEN! you read. With that general ad, it's back to the start."
-table of mob chants	false	0	0	mob-chanting rule	manor	"Mob chants (LISTEN post-Gunter in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"They finish fishin[']."
-table of idiotic lecture points	true	0	0	lecture-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	" [ted-die]"	"The lecturer flips back to the start of his keystone keynotes, resuming his ol['] mongo monolog.[pre-brk]"	20
-table of overdone movies	true	0	0	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	""	"The lecturer reminds the crowd [i]Dosing Doings[r] remains the universal classic.[pre-brk]"	20
-table of sicko movies	false	0	0	movie-over-ad rule	stores	"Store C videos (parental advisory)"	"You peruse the movies: "	""	--	--	false	0	0	5
-table of store c competitors	false	0	0	compet-over-ad rule	stores	"Store C competitors"	"You're promised better prices and service than "	"."	"Finally, there's a put-down of Twisted Twit Ed's."
-table of store c ads	false	0	0	read-c rule	stores	"Store C advertisements (parental advisory)"	--	""	"'Wanker? Ew, rank!' someone hisses at you. Yup, you've been reading a while."
-table of tokers nonsense	true	0	0	ohai-tokers rule	stores	"The tokers['] chat[if tokers are off-stage and nestor is off-stage] (flip STORE K and STORE N in Strip of Profits)[end if]"	--	""	"'No weed? We done!' but they find some more, ready to repeat. You may wish to HUSH them to zone them out as they zone out.[pre-brk]"
-table of moralizers	false	0	0	read-pious-1 rule	routes	"Moralizers[c-c-u]"	--	""	--
-table of rev ali advice	false	0	0	read-pious-2 rule	routes	"Rev. Ali's hot takes[c-c-u]"	--	"[randexc]"	"wait, no, an epilogue hand-written in: [i]sad, rash [if censor-minor is true](mean name)[else]hardass[end if][r], which is refreshing."
-table of horbert musings	true	0	0	horby rule	routes	"Brother Horbert's musings[c-c-u]"	"Brother Horbert mumbles something to himself... [i]"	"[r]"	"Brother Horbert mumbles [i]Ah, even heaven...[r] A pause. His thoughts may loop again--like people's wanderings in the mesa.[pre-brk]"	40
-table of horbert farewells	false	0	0	horb-bye rule	routes	"Brother Horbert's blessings[c-c-u]"	"Brother Horbert speaks as you leave: [i]"	"[r][pre-brk]"	"Brother Horbert's face shows neat, epic patience as you leave, again.[pre-brk]"	40
-table of missing deli foods	false	0	0	ask-deli rule	routes	"Non-foods at the Idle Deli[indic of routes]"	--	""	"'Not even spoiled old pies...'"
-table of checklist items	false	0	0	read-tec rule	troves	"SlickTech Checklist to-dos[indic of troves]"	--	""	"Wow! That's a lot to do. You need to sit and think and build up to believing you can do it all. And quickly."
-table of DIVORCES articles	false	0	0	read-divorces rule	troves	"'Fascinating' DIVORCES articles[indic of troves]"	--	""	"an interview with an influential mayor who knows what's what: Ah, Mr. Harm![paragraph break]Well, they saved the worst for last. You could reread if you want."
-table of ethics advice	false	0	0	read-eths rule	troves	"Advice from Pa, Egg, Pea[eisiping]"	"[one of]There is some blurb about how REAL CHANGE COMES FROM WITHIN and how you shouldn't look to change a clover into Velcro or any such nonsense. Also how this book is better than [i][twiddle of table of self-help bestsellers and 3][r][paragraph break][or][stopping]You pore over a random  'thought-improving' passage of Peg A. Page: "	""	"You've reached the end, filled with [crap]piest tips recap. Rereading may or may not be less painful the second time through."
-table of gritty dialogue	true	0	0	say-gritty rule	troves	"Gritty Spoiloplis dialogue[indic of troves]"	"Gritty sounds come, then go, from [one of]your testers, the tersest[or]the[stopping] streets: "	""	"Tense silence replaces the gritty sounds, which will probably return and cycle. People making the same mistakes they did before. But you are bound for better things--or, with that book, you'd better be.[pre-brk]"
-table of non-checklists	false	0	0	desk-look rule	troves	"Slick-Tech Checklist alternatives[if fiefco is unvisited] (Troves)[end if]"	--	""
-table of posh dialogue	true	0	0	say-posh rule	troves	"Posh Spoiloplis dialogue[indic of troves]"	"Upper-class concerns: "	""	"A low, snide 'Old is new, wild ones.' Cue repetition.[pre-brk]"
-table of posse bosses	false	0	0	in-lot-or-ruin rule	troves	"Rustin['] Ruin St./Loudest Used Lot bad guys[indic of troves]"	"maybe "	""	"not Mean Roy Maroney, anymore--he's the last of them"
-table of prestigious bums	false	0	0	read-deal rule	troves	"'Inspirational' Yorpwaldians in [i]DEAL[r][indic of troves]"	--	""	"Aliver Elvira, in case anyone forgot"
-table of real estate ads	false	0	0	read-brochure rule	troves	"Rotunda brochure locations[indic of troves]"	"It's for real estate by Sir Dee. One page header blares [i]Home's so Meh? "	"[r]"	"Secretcester! OWN NOW! is the final entry."
-table of Leo-Rand chitchat	true	0	0	chitchat-over-idols rule	presto	"Leo and Rand's chatter[if rand is fightin] (STORE P)[end if]"	--	""	"'Heya.' / 'Yeah?' An awkward silence follows.[paragraph break]They've run out of conversation, but fortunately (for them,) they forgot it all, so they can just restart."
-table of Leo-Rand idols	true	0	0	Leo-Rand-cry rule	presto	"Leo and Rand's idols[if rand is fightin] (STORE P)[end if]"	"[one of]Leo and Rand[or]Rand and Leo[at random] sadly admit they're no "	"."
-table of catechism pages	false	0	0	catechism-over-research rule	presto	"Hacks['] shack catechism entries[indic of presto]"	--	""	"After the final 'Ok, worn? Work on or know,' only a nixed-pap Appendix is left. You could flip through for more research topics or brainy types, but you've done enough. I appoint you a rarest raster starer. Have an, er, star."
-table of research topics	false	0	0	research-over-doctors rule	presto	"[one of]Some[or]More[stopping] explanation of research by Arch Rees:[indic of presto]"	"Arch Rees[one of][or] further[stopping] explaining research on "	"."
-table of smartypants	false	0	0	read-docs rule	presto	"Ph. D. researchers"	"The highly technical yet useful research of "	"."
-table of bedding brands	false	0	0	read-futon rule	presto	"Sleep aide brands"	--	""	"Smartest Mattress, hopefully cleaner than the one you remember from The Ol['] Hotel in the Metros behind Store M."
-table of bar dialogue	true	0	0	bar-over-comp rule	oyster	"Posh Hops Shop action[indic of oyster]"	"[one of]Whew. Rough talk and action here. [or]More rough talk and action. [or][stopping]" 	""	"You've seen it all. Time to take decisive action(s) of your own.[pre-brk]"
-table of competing bars	true	0	0	in-bar rule	oyster	"Posh Hops Shop competitors[indic of oyster]"	"Someone says the Posh Hops Shop [one of]has nothing on[or]sure beats[at random] "	"."	"Everyone agrees Soph Pho's is a total rip-off of, well, here. You can't imagine any more bars being discussed.[pre-brk]"
-table of Casper mumbles	false	0	0	casper-talk rule	oyster	"Casper's mumblings[indic of oyster]"	""	""	"'[if player is male]Rhett Weir[else]Teri Werth[end if], the writer? Eh, err...TWIT!' Casper suddenly flips back to the start of his notes. Perhaps he feels you are not good enough to hear any more of his original thoughts."
-table of fish fries	true	0	0	insult-over-girls rule	oyster	"Carps/pikes trout-bullying [if anger range is visited]in anger range[else](STORE Y)[end if]"	--	""	"The bullies call him 'A soft fatso so fat.' They're out of ideas and claim it's the trout's fault for not being interesting enough. The ratters restart samer smear-reams.[pre-brk]"
-table of unpopular girls	true	0	0	ohai-bullies rule	oyster	"Unpopular girls carps/pikes mention[indic of oyster]"	"The bullies insinuate the trout [one of]likes[or]isn't good enough for[cycling] "	"."	"Zina is the last, and utterly wrongest, girl they accuse the trout of liking (she's actually pretty nice, but...innuendo.) When you sink that low, you've obviously run out of ideas.[pre-brk]"
-table of tuna gossip	true	0	0	gossip-over-chatter rule	oyster	"Aunt Tuna's gossip[indic of oyster]"	"Aunt Tuna gossips: "	""	"'Edda Dade. Dead. Cleo's Close. Dorithy--Thyroid. Halle's a shell. All she... Heather's Heart. She... diabetes, die, beast!' Aunt Tuna pauses, head in hands. That was the final thing she'd been repressing.[pre-brk]"
-table of aunt tuna chatter	true	0	0	ohai-tuna rule	oyster	"Aunt Tuna's complaints[indic of oyster]"	"[one of]'Oh, dear! Do hear!' / 'D'oh...are...' Aunt Tuna cuts you off and[or]Aunt Tuna[stopping] "	""	"Aunt Tuna, as her nags snag, restarts her prattle platter of how she is BEYOND done-by...[pre-brk]"
+table of undo rejects	false	0	30	undo-rej rule	lll	"Undo rejects"	--	""	"'Do-over overdo.'"
+table of undo allows	false	0	30	undo-ok rule	lll	"Successful undo responses"	--	""	"'Do? Er, re-do.' (Last one. Stale? NO.)"
+table of random books	false	0	30	read-books rule	manor	"All the books in your bookshelf"	"[i]"	"[r]"	"your own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1
+table of ad slogans	true	0	30	blurby rule	manor	"All the ads in the Dope Op-Ed"	--	""	"HANKER! HARKEN! you read. With that general ad, it's back to the start."
+table of mob chants	false	0	30	mob-chanting rule	manor	"Mob chants (LISTEN post-Gunter in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"They finish fishin[']."
+table of idiotic lecture points	true	0	15	lecture-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	" [ted-die]"	"The lecturer flips back to the start of his keystone keynotes, resuming his ol['] mongo monolog.[pre-brk]"	20
+table of overdone movies	true	0	15	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	""	"The lecturer reminds the crowd [i]Dosing Doings[r] remains the universal classic.[pre-brk]"	20
+table of sicko movies	false	0	50	movie-over-ad rule	stores	"Store C videos (parental advisory)"	"You peruse the movies: "	""	--	--	false	0	0	5
+table of store c competitors	false	0	10	compet-over-ad rule	stores	"Store C competitors"	"You're promised better prices and service than "	"."	"Finally, there's a put-down of Twisted Twit Ed's."
+table of store c ads	false	0	10	read-c rule	stores	"Store C advertisements (parental advisory)"	--	""	"'Wanker? Ew, rank!' someone hisses at you. Yup, you've been reading a while."
+table of tokers nonsense	true	0	30	ohai-tokers rule	stores	"The tokers['] chat[if tokers are off-stage and nestor is off-stage] (flip STORE K and STORE N in Strip of Profits)[end if]"	--	""	"'No weed? We done!' but they find some more, ready to repeat. You may wish to HUSH them to zone them out as they zone out.[pre-brk]"
+table of moralizers	false	0	30	read-pious-1 rule	routes	"Moralizers[c-c-u]"	--	""	--
+table of mantle laments	false	0	30	read-pious-2 rule	routes	"Rev. Ali's hot takes[c-c-u]"	--	"[randexc]"	"wait, no, an epilogue hand-written in: [i]sad, rash [if censor-minor is true](mean name)[else]hardass[end if][r], which is refreshing."
+table of horbert musings	true	0	30	horby rule	routes	"Brother Horbert's musings[c-c-u]"	"Brother Horbert mumbles something to himself... [i]"	"[r]"	"Brother Horbert mumbles [i]Ah, even heaven...[r] A pause. His thoughts may loop again--like people's wanderings in the mesa.[pre-brk]"	40
+table of horbert farewells	false	0	20	horb-bye rule	routes	"Brother Horbert's blessings[c-c-u]"	"Brother Horbert speaks as you leave: [i]"	"[r][pre-brk]"	"Brother Horbert's face shows neat, epic patience as you leave, again.[pre-brk]"	40
+table of missing deli foods	false	0	20	ask-deli rule	routes	"Non-foods at the Idle Deli[indic of routes]"	--	""	"'Not even spoiled old pies...'"
+table of checklist items	false	0	20	read-tec rule	troves	"SlickTech Checklist to-dos[indic of troves]"	--	""	"Wow! That's a lot to do. You need to sit and think and build up to believing you can do it all. And quickly."
+table of DIVORCES articles	false	0	30	read-divorces rule	troves	"'Fascinating' DIVORCES articles[indic of troves]"	--	""	"an interview with an influential mayor who knows what's what: Ah, Mr. Harm![paragraph break]Well, they saved the worst for last. You could reread if you want."
+table of ethics advice	false	0	20	read-eths rule	troves	"Advice from Pa, Egg, Pea[eisiping]"	"[one of]There is some blurb about how REAL CHANGE COMES FROM WITHIN and how you shouldn't look to change a clover into Velcro or any such nonsense. Also how this book is better than [i][twiddle of table of self-help bestsellers and 3][r][paragraph break][or][stopping]You pore over a random  'thought-improving' passage of Peg A. Page: "	""	"You've reached the end, filled with [crap]piest tips recap. Rereading may or may not be less painful the second time through."
+table of gritty dialogue	true	0	20	say-gritty rule	troves	"Gritty Spoiloplis dialogue[indic of troves]"	"Gritty sounds come, then go, from [one of]your testers, the tersest[or]the[stopping] streets: "	""	"Tense silence replaces the gritty sounds, which will probably return and cycle. People making the same mistakes they did before. But you are bound for better things--or, with that book, you'd better be.[pre-brk]"
+table of non-checklists	false	0	20	desk-look rule	troves	"Slick-Tech Checklist alternatives[if fiefco is unvisited] (Troves)[end if]"	--	""
+table of posh dialogue	true	0	20	say-posh rule	troves	"Posh Spoiloplis dialogue[indic of troves]"	"Upper-class concerns: "	""	"A low, snide 'Old is new, wild ones.' Cue repetition.[pre-brk]"
+table of posse bosses	false	0	20	in-lot-or-ruin rule	troves	"Rustin['] Ruin St./Loudest Used Lot bad guys[indic of troves]"	"maybe "	""	"not Mean Roy Maroney, anymore--he's the last of them"
+table of prestigious bums	false	0	20	read-deal rule	troves	"'Inspirational' Yorpwaldians in [i]DEAL[r][indic of troves]"	--	""	"Aliver Elvira, in case anyone forgot"
+table of real estate ads	false	0	20	read-brochure rule	troves	"Rotunda brochure locations[indic of troves]"	"It's for real estate by Sir Dee. One page header blares [i]Home's so Meh? "	"[r]"	"Secretcester! OWN NOW! is the final entry."
+table of Leo-Rand chitchat	true	0	15	chitchat-over-idols rule	presto	"Leo and Rand's chatter[if rand is fightin] (STORE P)[end if]"	--	""	"'Heya.' / 'Yeah?' An awkward silence follows.[paragraph break]They've run out of conversation, but fortunately (for them,) they forgot it all, so they can just restart."
+table of Leo-Rand idols	true	0	15	Leo-Rand-cry rule	presto	"Leo and Rand's idols[if rand is fightin] (STORE P)[end if]"	"[one of]Leo and Rand[or]Rand and Leo[at random] sadly admit they're no "	"."
+table of catechism pages	false	0	10	catechism-over-research rule	presto	"Hacks['] shack catechism entries[indic of presto]"	--	""	"After the final 'Ok, worn? Work on or know,' only a nixed-pap Appendix is left. You could flip through for more research topics or brainy types, but you've done enough. I appoint you a rarest raster starer. Have an, er, star."
+table of research topics	false	0	10	research-over-doctors rule	presto	"[one of]Some[or]More[stopping] explanation of research by Arch Rees:[indic of presto]"	"Arch Rees[one of][or] further[stopping] explaining research on "	"."
+table of smartypants	false	0	10	read-docs rule	presto	"Ph. D. researchers"	"The highly technical yet useful research of "	"."
+table of bedding brands	false	0	20	read-futon rule	presto	"Sleep aide brands"	--	""	"Smartest Mattress, hopefully cleaner than the one you remember from The Ol['] Hotel in the Metros behind Store M."
+table of bar dialogue	true	0	15	bar-over-comp rule	oyster	"Posh Hops Shop action[indic of oyster]"	"[one of]Whew. Rough talk and action here. [or]More rough talk and action. [or][stopping]" 	""	"You've seen it all. Time to take decisive action(s) of your own.[pre-brk]"
+table of competing bars	true	0	15	in-bar rule	oyster	"Posh Hops Shop competitors[indic of oyster]"	"Someone says the Posh Hops Shop [one of]has nothing on[or]sure beats[at random] "	"."	"Everyone agrees Soph Pho's is a total rip-off of, well, here. You can't imagine any more bars being discussed.[pre-brk]"
+table of Casper mumbles	false	0	20	casper-talk rule	oyster	"Casper's mumblings[indic of oyster]"	""	""	"'[if player is male]Rhett Weir[else]Teri Werth[end if], the writer? Eh, err...TWIT!' Casper suddenly flips back to the start of his notes. Perhaps he feels you are not good enough to hear any more of his original thoughts."
+table of fish fries	true	0	15	insult-over-girls rule	oyster	"Carps/pikes trout-bullying [if anger range is visited]in anger range[else](STORE Y)[end if]"	--	""	"The bullies call him 'A soft fatso so fat.' They're out of ideas and claim it's the trout's fault for not being interesting enough. The ratters restart samer smear-reams.[pre-brk]"
+table of unpopular girls	true	0	15	ohai-bullies rule	oyster	"Unpopular girls carps/pikes mention[indic of oyster]"	"The bullies insinuate the trout [one of]likes[or]isn't good enough for[cycling] "	"."	"Zina is the last, and utterly wrongest, girl they accuse the trout of liking (she's actually pretty nice, but...innuendo.) When you sink that low, you've obviously run out of ideas.[pre-brk]"
+table of tuna gossip	true	0	15	gossip-over-chatter rule	oyster	"Aunt Tuna's gossip[indic of oyster]"	"Aunt Tuna gossips: "	""	"'Edda Dade. Dead. Cleo's Close. Dorithy--Thyroid. Halle's a shell. All she... Heather's Heart. She... diabetes, die, beast!' Aunt Tuna pauses, head in hands. That was the final thing she'd been repressing.[pre-brk]"
+table of aunt tuna chatter	true	0	15	ohai-tuna rule	oyster	"Aunt Tuna's complaints[indic of oyster]"	"[one of]'Oh, dear! Do hear!' / 'D'oh...are...' Aunt Tuna cuts you off and[or]Aunt Tuna[stopping] "	""	"Aunt Tuna, as her nags snag, restarts her prattle platter of how she is BEYOND done-by...[pre-brk]"
 table of theses	false	0	0	screed-read rule	oyster	"Theses Sheets notes[indic of oyster]"	""	""	"Life Conks Nice Folks![paragraph break]Well, that's probably enough proof you're dealing with bad guys, here."
-table of rodney bluster	true	0	0	rodney-here rule	towers	"Rodney's bluster[indic of towers]"	"Rodney [if number of visible warriors is 7]informs his gang[else if number of visible warriors > 3]yells at his remaining troops[else if number of visible warriors is 2]yells to his remaining companion[else]mutters to himself[end if] about "	"."	"Rodney warns about repeating, then inept rage and a petering.[pre-lb]"
-table of gizmo parts	false	0	0	examining-gizmo rule	towers	"Parts of the I ZOMG GIZMO[indic of towers]"	--	""	"Ulti-Util, the most powerful, confusing and hidden of all the gizmo parts"
-table of Elmer and Merle squabbles	true	0	0	alcove-talk rule	otters	"Elmer and Merle's chat"	--	""	"Since they're kinda evil, or at least serving someone evil, they give a greedy look as they restart their complaint routines.[pre-lb]"
-table of Elvira battle cries	false	0	0	last-battle rule	otters	"Elvira's battle cries"	--	""	""
-table of Elvira machines	false	0	0	bzzt rule	otters	"Elvira's machines"	--	""	""
-table of Elvira taunts	false	0	0	Elvira-taunt rule	otters	"Elvira's taunts"	--	""	"'Stellar staller!' Dang, the simplest ones hurt the most.[pre-lb]"
-table of animal friends	false	0	0	bzzt rule	otters	"Your animal friends"	--	""
-table of political slogans	false	0	0	sloganing rule	others	"Political slogans"	--	""
-table of selly yells	false	0	0	clearing-listen rule	others	"Selly Yells[indic of others]"	""	""	"A big errant inert brag pauses the bartering for a minute."
-table of noage	false	0	0	am-noing rule	lll	"Rejects for saying no"	--	""	"You're so down, yow. Sour. DONE."
-table of yessage	false	0	0	am-yessing rule	lll	"Rejects for saying yes"	--	""	"A rote ego too eager!"
-table of singing rejects	false	0	0	is-singing rule	lll	"Rejects for singing"	--	""	"Sing-ings! Sing-ings!"
-table of empty command rejects	false	0	0	you-said-nothing rule	lll	"Responses to an empty command"	--	""	"Go for it or I GTFO! (this is the last blank response and an empty threat to boot.)"	--	false	0	0	1
-table of wait responses	false	0	0	you-waited rule	lll	"Wait/Z messages"	--	""	"A gag? La, la. A lag gala.[no line break]"
-table of cussing rejects	false	0	0	you-cussed rule	lll	"How the game blocks profanity, mild or obscene"	--	""	"Screed on, [bracket]CENSORED[close bracket].[no line break]"
-table of nonviolence messages	false	0	0	you-attacked rule	lll	"How the game blocks ATTACK"	--	""	"Ill touch? Chill out till...ouch!"
+table of rodney bluster	true	0	20	rodney-here rule	towers	"Rodney's bluster[indic of towers]"	"Rodney [if number of visible warriors is 7]informs his gang[else if number of visible warriors > 3]yells at his remaining troops[else if number of visible warriors is 2]yells to his remaining companion[else]mutters to himself[end if] about "	"."	"Rodney warns about repeating, then inept rage and a petering.[pre-lb]"
+table of gizmo parts	false	0	20	examining-gizmo rule	towers	"Parts of the I ZOMG GIZMO[indic of towers]"	--	""	"Ulti-Util, the most powerful, confusing and hidden of all the gizmo parts"
+table of Elmer and Merle squabbles	true	0	20	alcove-talk rule	otters	"Elmer and Merle's chat"	--	""	"Since they're kinda evil, or at least serving someone evil, they give a greedy look as they restart their complaint routines.[pre-lb]"
+table of Elvira battle cries	false	0	20	last-battle rule	otters	"Elvira's battle cries"	--	""	""
+table of Elvira machines	false	0	20	bzzt rule	otters	"Elvira's machines"	--	""	""
+table of Elvira taunts	false	0	20	Elvira-taunt rule	otters	"Elvira's taunts"	--	""	"'Stellar staller!' Dang, the simplest ones hurt the most.[pre-lb]"
+table of animal friends	false	0	60	bzzt rule	otters	"Your animal friends"	--	""
+table of political slogans	false	0	20	sloganing rule	others	"Political slogans"	--	""
+table of selly yells	false	0	30	clearing-listen rule	others	"Selly Yells[indic of others]"	""	""	"A big errant inert brag pauses the bartering for a minute."
+table of noage	false	0	20	am-noing rule	lll	"Rejects for saying no"	--	""	"You're so down, yow. Sour. DONE."
+table of yessage	false	0	20	am-yessing rule	lll	"Rejects for saying yes"	--	""	"A rote ego too eager!"
+table of singing rejects	false	0	20	is-singing rule	lll	"Rejects for singing"	--	""	"Sing-ings! Sing-ings!"
+table of empty command rejects	false	0	20	you-said-nothing rule	lll	"Responses to an empty command"	--	""	"Go for it or I GTFO! (this is the last blank response and an empty threat to boot.)"	--	false	0	0	1
+table of wait responses	false	0	20	you-waited rule	lll	"Wait/Z messages"	--	""	"A gag? La, la. A lag gala.[no line break]"
+table of cussing rejects	false	0	20	you-cussed rule	lll	"How the game blocks profanity, mild or obscene"	--	""	"Screed on, [bracket]CENSORED[close bracket].[no line break]"
+table of nonviolence messages	false	0	20	you-attacked rule	lll	"How the game blocks ATTACK"	--	""	"Ill touch? Chill out till...ouch!"
 table of death messages	false	0	0	bzzt rule	lll	"Death notices"	--	""
-table of help companies	false	0	0	bzzt rule	lll	"Hint guy t-shirt writing[if have-objhinted is false] (occurs first time you request hints)[end if]"	--	""
-table of elmo emo	false	0	0	bzzt rule	manor	"Elmo's romantic complaints[if girls-quip is not mowered] (off-topic Elmo chat)[end if]"	""	""
-table of sports chatter	false	0	0	bzzt rule	manor	"Elmo's sports banter[if sports-quip is not mowered] (off-topic Elmo chat)[end if]"	""	""
-table of biopics	false	0	0	bzzt rule	manor	"Biopics, good and bad[if media-quip-2 is not mowered] (off-topic Elmo chat)[end if]"	""	""
-table of bad rappers	false	0	0	bzzt rule	manor	"Bad rap music[elv-art]"	--	""
-table of lame computer games	false	0	0	bzzt rule	manor	"Computer games[elv-art]"	--	""
-table of comedians	false	0	0	bzzt rule	manor	"Comedians of Yorpwald[elv-art]"	""	""
-table of laughhouses	false	0	0	bzzt rule	manor	"Comedy joints[unless pun-quip is mowered] (with Gunter, lighten the mood with a joke)[end if]"	""	""
-table of lame talk shows	false	0	0	bzzt rule	manor	"Bad talk shows[unless media-quip-2 is mowered] (complain about the media some more to Elmo)[end if]"	--	""
-table of lame movies	false	0	0	bzzt rule	manor	"Bad movies[elv-art]"	""	""
-table of lame tv shows	false	0	0	bzzt rule	manor	"Bad TV shows[elv-art]"	""	""
-table of oldies singers	false	0	0	bzzt rule	manor	"Initial oldies singers[elv-art]"	""	""
-table of lousy hit songs	false	0	0	bzzt rule	manor	"Bad songs[elv-art]"	--	""
-table of self-help bestsellers	false	0	0	bzzt rule	troves	"Self-help bestsellers[eisiping]"	--	""
-table of songs you could write	false	0	0	bzzt rule	troves	"Songs you write on solving Troves"	--	""
-table of sleep rejects	false	0	0	am-sleeping rule	lll	"Sleeping rejects"	--	"[pre-lb]"
+table of help companies	false	0	30	bzzt rule	lll	"Hint guy t-shirt writing[if have-objhinted is false] (occurs first time you request hints)[end if]"	--	""
+table of elmo emo	false	0	30	bzzt rule	manor	"Elmo's romantic complaints[if girls-quip is not mowered] (off-topic Elmo chat)[end if]"	""	""
+table of sports chatter	false	0	30	bzzt rule	manor	"Elmo's sports banter[if sports-quip is not mowered] (off-topic Elmo chat)[end if]"	""	""
+table of biopics	false	0	30	bzzt rule	manor	"Biopics, good and bad[if media-quip-2 is not mowered] (off-topic Elmo chat)[end if]"	""	""
+table of bad rappers	false	0	60	bzzt rule	manor	"Bad rap music[elv-art]"	--	""
+table of lame computer games	false	0	30	bzzt rule	manor	"Computer games[elv-art]"	--	""
+table of comedians	false	0	30	bzzt rule	manor	"Comedians of Yorpwald[elv-art]"	""	""
+table of laughhouses	false	0	30	bzzt rule	manor	"Comedy joints[unless pun-quip is mowered] (with Gunter, lighten the mood with a joke)[end if]"	""	""
+table of lame talk shows	false	0	30	bzzt rule	manor	"Bad talk shows[unless media-quip-2 is mowered] (complain about the media some more to Elmo)[end if]"	--	""
+table of lame movies	false	0	30	bzzt rule	manor	"Bad movies[elv-art]"	""	""
+table of lame tv shows	false	0	30	bzzt rule	manor	"Bad TV shows[elv-art]"	""	""
+table of oldies singers	false	0	30	bzzt rule	manor	"Initial oldies singers[elv-art]"	""	""
+table of lousy hit songs	false	0	30	bzzt rule	manor	"Bad songs[elv-art]"	--	""
+table of self-help bestsellers	false	0	30	bzzt rule	troves	"Self-help bestsellers[eisiping]"	--	""
+table of songs you could write	false	0	30	bzzt rule	troves	"Songs you write on solving Troves"	--	""
+table of sleep rejects	false	0	30	am-sleeping rule	lll	"Sleeping rejects"	--	"[pre-lb]"
 [tmc]
 
 to say eisiping:
@@ -548,13 +559,13 @@ this is the ask-deli rule:
 	the rule fails;
 
 this is the read-pious-1 rule:
-	if current action is examining the pious rev:
+	if current action is examining the lament mantle:
 		if pious-state is true:
 			the rule succeeds;
 	the rule fails.
 
 this is the read-pious-2 rule:
-	if current action is examining the pious rev:
+	if current action is examining the lament mantle:
 		if pious-state is false:
 			the rule succeeds;
 	the rule fails.
@@ -15518,9 +15529,24 @@ does the player mean doing something with church sign:
 does the player mean scaning dingy dwelling: it is likely.
 does the player mean scaning grubby restaurant: it is likely.
 
-Cleric Circle is an innie room in Routes. "Things seem less confused here than outside. It's quieter, too--no organs['] groans, but chants you can't stanch: a steady Latiny litany, no skyier kyries[if list o toils is visible]. You see a list-o-toils on the wall[end if]. Of course, there are Spew Pews, a common legacy from Elvira's suggestions to make religion more exciting and practical, along with a picture of the previous, viperous pious rev.".
+Cleric Circle is an innie room in Routes. "Things seem less confused here than outside--but oppressive, from organs['] groans to a Latiny litany to skyier kyries. Chants snatch but don't stanch[if list o toils is visible]. You see a list-o-toils on the wall[end if]. Of course, there are Spew Pews, a common legacy from Elvira's suggestions to make religion more exciting and practical, along with a lament-mantle.".
 
-the spew pews are amusing plural-named scenery in cleric circle. "You rifle absentmindedly through the pews som more, but nothing turns up."
+the latiny litany is amusing scenery in cleric circle. "[not-upb]."
+
+the chants are amusing scenery in cleric circle. "[not-upb]."
+
+the skyier kyries are amusing plural-named scenery in cleric circle. "[not-upb]."
+
+to say not-upb:
+	say "Not the most upbeat music, but then, you aren't here for art critiques"
+
+instead of doing something with scenery when player is in cleric circle:
+	if the action is procedural:
+		continue the action;
+	say "The music is there just to provide oppressive atmosphere."
+
+
+the spew pews are amusing plural-named scenery in cleric circle. "You rifle absentmindedly through the pews some more, but nothing turns up."
 
 check closing summary:
 	say "You fold up the summary and start at page 1.";
@@ -15620,11 +15646,9 @@ to say pious1: [otherwise the picture has trouble with randbla for random stuff]
 
 pious-state is a truth state that varies.
 
-the picture of the previous viperous pious rev is useless scenery in Cleric Circle. "[one of]It's a picture of Rev. Ali, whose distincter interdicts left the Mesa in the lurch, looking even harsher than[or]Rev. Ali's still outdoing even[stopping] [pious1][randbla][one of], full of tarnished sin-hatred and obliged god-bile for your sinner inners[or][stopping]. [one of]Their creeds-screed contains[or]Another no-heart rant, e-oh:[stopping] [pious1][randbla]"
+the lament mantle is useless scenery in Cleric Circle. "[one of]It's full of regrets. Regrets Rev. Ali and his hangers-on have that people do certain things, and regrets those people will have that they did them[or]Another interdict[stopping]. [pious1][randbla][one of], full of tarnished sin-hatred and obliged god-bile for your sinner inners[or][stopping]. [one of]Their creeds-screed contains[or]Another no-heart rant, e-oh:[stopping] [pious1][randbla]"
 
-understand "ali" and "rev ali" as pious rev.
-
-check examining pious rev for the first time:
+check examining mental lament for the first time:
 	say "Just a small check-off: there's some religious stuff in here, poking fun at hot button issues. This might be annoying, and I don't want do do that. Do you wish to go ahead?";
 	unless the player consents:
 		say "Okay. This warning will vanish next time." instead;
@@ -24344,7 +24368,9 @@ blurb
 "Is-on-Quest Questions."
 "Kewl-Klew!"
 "The King Hint Keg."
+"Le Focus of Clues."
 "Le Herp Helper."
+"Le Hints-Hit Lens"
 "Le Ship is Help!"
 "Leibniz Biz-Line."
 "Let-up, ho? Hole-put? Ult-Hope Help Out!"
@@ -24445,13 +24471,17 @@ blurb
 "Bait! I bat a bit."
 "Batteries? Be artiest!"
 "Battering? Bitter nag."
+"Beating-up's abusing, pet."
 "Box? No, obnox.!"
+"Brawling? Glib warn!"
 "Brutality? Truly, a bit."
 "Conk, eh? Heck no!"
 "Conk-fu? [f-w] no!"
 "Do war? A word."
 "Eh, I swoop...whoopsie!"
 "Equip pique?!"
+"Ferocious? I, of course, coo 'Furies!'"
+"Fist? No: oft, sin."
 "Flay-outs? So faulty, lusty oaf." []
 "Get mean? Neg, mate."
 "Gonna hit? No hating!"
@@ -24470,9 +24500,11 @@ blurb
 "Indulge in eluding, not dueling."
 "It's rot to stir..."
 "Jerk acts? Rest, jack."
+"Lashing out? Hating soul."
 "Lay off of flay."
 "Lay waste? Stale way."
 "Leapt into potential peltation? Lo, patient!"
+"Less anger: largeness."
 "Lie down idle now, wild one."
 "Lunge! Try urgently!"
 "Main goal: Go animal?"
@@ -24498,8 +24530,12 @@ blurb
 "Rearing, angrier!"
 "Ripe-Fist Spitfire!"
 "Row? Dear! A re-word!" []
+"Salty, mac. Stay calm."
 "Say, don't do nasty!"
 "Shift a fist? Ha."
+"Sip guilt, pugilist!"
+"Slugfest guts SELF."
+"Smackin[']? Sick, man."
 "Snuffliest fitfulness!"
 "So wild? I'd slow..."
 "Sword? Words."
@@ -24507,16 +24543,20 @@ blurb
 "Tangle? Go! Get along!"
 "Terminate? Mean! Trite!"
 "Thuds now? Shut down!"
+"To brawl? Raw blot. Low, brat."
 "To clash? Ha, clots."
 "To scowl: low-cost."
 "To shred? D'oh! Rest!"
 "To slay? Ay, lost."
 "To spring on...sporting? No!"
 "Trounce? No! Truce!" []
+"Truculent? Un-clutter. Cut. Let run."
 "A twitch? Watch it!" []
+"Type A? Rec: try peace."
 "Um, meanest amusement."
 "Un-rec: to trounce."
 "Violence?! Love! Nice!"
+"Violent, so: I solve not!"
 "Warpath? Haw, trap!"
 "Weakest swat. Eek!"
 "Whaps? Pshaw!"
@@ -28162,6 +28202,7 @@ blurb
 "Lane of a Felon"
 "Lard-Dork, Dark Lord"
 "Lasered Leaders"
+"Lasers['] Rassle"
 "The Last Stealth"
 "Latescent Tentacles"
 "Le Scum Muscle"
@@ -29550,6 +29591,7 @@ blurb
 "Be Punk or Broken Up"
 "Be Via a Vibe"
 "Beastly Sly Beat" []
+"Beatdowns Won't Be Sad"
 "Beef Not, Bent Foe"
 "Bet Guys Get Busy"
 "Biggest Gig Best"
@@ -37214,7 +37256,7 @@ blurb
 "Slut Greta's Great Lusts."
 "Sly, Bi Sibyl Lisby."
 "Smack Lips, Kiss, Clamp."
-"Smackin[']-Skin Cam."
+"Smackin[']-Skin Cam." []
 "Smoking Ms. Konig."
 "Smoocher Moochers."
 "Smorgas-Orgasms."
@@ -37950,7 +37992,422 @@ blurb
 "zap ire: a prize!"
 "zen: fry frenzy."
 
-table of missing deli foods [xxu3]
+table of mantle laments [xxu3]
+blurb
+"ABET?! BEAT"
+"ABNORMAL BAN = MORAL"
+"ADS KILL ALL KIDS"
+"AFOS = OAFS"
+"AH, VOWIN[']? HOW VAIN"
+"ALLURIN[']: RUIN ALL"
+"ALOHA, OL['] OOH-LA-LA"
+"ANY DOUBT? BANDY OUT"
+"APHORISMS NET MISANTHROPES"
+"ARTFUL, YOU? YOUR FAULT"
+"ASK NO KOANS"
+"ASPIRANT ANTI-RAPS PARTISAN, RIP SATAN" []
+"ATHEISM'S MASHIEST"
+"AY, LAWS ALWAYS" []
+"BAD: DO IT A BIT ODD"
+"BAKINGS BASKING? BAG, SKIN"
+"BANG-O! GO BAN A BONG" []
+"BASSLINE, LESBIANS = SIN, BALES" []
+"BAWDINESS IS BAD NEWS"
+"BE CARING? NICE BRAG" []
+"BE DECENT: BENT, CEDE"
+"A BE-IN? I? BANE"
+"BE-INS/IBSEN BE SIN"
+"BE MINDLESS? SEEMS BLIND" []
+"BEATLES BE STALE"
+"BEER, CADS? BE SCARED"
+"BEER? VILE, BELIEVER"
+"BEN-WA? EW! BAN"
+"BILLIARDS? RABID ILLS"
+"BIT TRUE TRIBUTE? REBUT IT"
+"BLOW UP, LOW PUB"
+"BLUNDER-LED? BURN" []
+"BONA FIDE? NO? BAD, FIE"
+"BOOZE DENS NEED BOZOS"
+"BORN AGAIN? NO BARGAIN"
+"BREATHE WRONG? BANE REGROWTH"
+"THE BRIG BE RIGHT"
+"BRING UP BURPING? BURN, PIG"
+"BUDDHAS? BAH! DUDS"
+"A BURP'S SUBPAR"
+"CERTITUDE! RECTITUDE"
+"CHA-CHA? ACH! ACH"
+"CHARITABLE? LIAR, BETCHA"
+"COMPASSION? SCAM! POISON"
+"CONSIDER, SCORN, DIE" []
+"CONSUMING GIN? NO, SCUM"
+"CONTEMPLATE ALE: CONTEMPT"
+"COOP LIARS, ACROPOLIS"
+"COPULATE-PLACE? OUT"
+"COPULATIONS? UNAPOSTOLIC"
+"CRAVE GOLD? COLD GRAVE"
+"CREATIVES? VISCERATE"
+"CREED CEDER? DE-REC"
+"A CROOK? O, CROAK"
+"CULTURES, CURE LUST"
+"CUPIDITY? PUDICITY"
+"CURVIEST, VICE = RUTS"
+"DANCE = CEDE DECADENCE"
+"DEALINGS = DANG LIES"
+"DEISM NOW, MR? SIMMER DOWN"
+"DESIST, DEISTS"
+"THE DEVIL: A VILE DEATH"
+"DIANETICS INDICATES ANTICS. DIE"
+"DIG NOT DOTING"
+"DIG THOR? DO RIGHT"
+"DIGNITY? TIDYING"
+"DIRTY JOKES? RISKY! DO JET"
+"DISDAIN SIN, I ADD" []
+"DISLIKE LIES, KID"
+"DISLIKES: KIDS['] LIES"
+"DISORDER = SORDIDER"
+"DO INK? NO, KID"
+"DO WRONG? GO DROWN"
+"DOFF LUST? OLD STUFF"
+"DOING IN GOD? NO, DIG"
+"DONATE? ATONED"
+"DOOBIE? BOO! DIE"
+"DOWN THY WHY-DON'T"
+"DREAD NOT? DON'T DARE"
+"EDITORIALS = IDOLATRIES"
+"EGO: VIRUS, GRIEVOUS"
+"EH, A TOT TO HATE" []
+"EH, PURE UP HERE"
+"EH, RYE'S HERESY" []
+"EH, SEX = HEXES"
+"ELEGISING = EGGIN[']! LIES"
+"EMPATHY IS SHAM PIETY"
+"ENERVATE? VENERATE"
+"ENSHEATH HEATHENS" []
+"ERECTIONS NECROTISE"
+"EUDEMONISTS? SEDIMENTOUS"
+"F'ING ODD? FIND GOD"
+"FAD, U R FRAUD"
+"FAIRY TALES ARE FALSITY"
+"FAITHFUL-FITFUL? AH"
+"FAST? COOL? SCAT, FOOL"
+"FEELING UP? FIE! PLUNGE"
+"FERULE? RE-FUEL"
+"FIB? RELY BREIFLY"
+"FILM SET? LEFTISM"
+"FILTH AS TEXT? LET'S FIX THAT"
+"FITNESS FEST = SIN"
+"FLAKINESS: SINK A SELF"
+"FLASHIEST? FAITHLESS" []
+"FLESH IS SELFISH"
+"FOCUS ON SIN: CONFUSIONS"
+"FOIL SLOTH, SOLO FILTH" []
+"FOREGO, GOOFER"
+"FOREPLAY? PRAY, O ELF"
+"FORESTALL, FELLATORS"
+"FORGO YE GOOFERY" []
+"FORNICATING = FRACTIONING"
+"FOULNESS LOSES FUN"
+"FRIED UP? I = PURIFIED"
+"GAIETY IN TV = NEGATIVITY"
+"GAY PRIDE? GRIPE DAY"
+"GEISHAS? HISSAGE" []
+"GENTILES? STEELING" []
+"GIN HATE GAINETH" []
+"A GIN LUSH? LANGUISH"
+"GO BET? BE GOT"
+"GO FUND GOD? FUN"
+"GO SOBER, GOOBERS" []
+"GOD BANS BAD SONG"
+"GONE BAD? GOD BANE! NO BADGE" []
+"GOT LINGERIE, ELITE GRINGO? GET RELIGION"
+"GRACE = LIES/SACRILEGE"
+"GRIEF'S FUN! SUFFERING"
+"GROG = SELF FLOGGERS"
+"GUILDERS = SLUDGIER"
+"GUILE = LIE, UG"
+"GUITARS? OUT! GRATUITOUS" []
+"HARDLINE HANDLER = I"
+"HASSLE? LASHES"
+"HATE FREER HEREAFTER" []
+"HATE GOD? GO! DEATH"
+"HATE SIN IN HASTE" []
+"HATE SIN, OK? SHAKE ON IT"
+"HATEFUL, EH? FAULT" []
+"HBO'S BOSH" []
+"HEATHEN? NAH, THEE"
+"HEDONISM? MIS-HONED"
+"HEDONISM? MONISHED" []
+"HEDONISTS = DISHONEST: [']STONISHED"
+"HELLFIRES RILE FLESH"
+"HEURISM? MUSHIER"
+"HICKEYS: SICK, HEY"
+"HIS DEMONS: HEDONISM'S DIMNESS, OH"
+"HIS GOAL: NO HOOLIGANS"
+"HONEST AIM: NO ATHEISM" []
+"HOPE? EH, PO[']"
+"HOPING? ROT. POOR THING"
+"HOPING'S NIGH? SOP"
+"HOT DIVE = THE VOID"
+"HOT SIN? [s-w] NO" []
+"HUMANISM? SHUN! MAIM"
+"HURT GOD? DROUGHT"
+"I BLESS? BS! LIES"
+"'I DODGE GOD?' DIE"
+"I FLED SINNERS['] FRIENDLINESS"
+"I KNOCK KINKCO"
+"I RE-DAMN DREAMIN[']" []
+"I SANCTION ONANISTIC INACTIONS"
+"I SCOFF OFF SCI"
+"I SCORN SCORIN[']" []
+"I SENSE SIN, SEE" []
+"I SUNDER RUDE SIN"
+"I'D SLUR LURIDS"
+"I'D STROKE?! DORKIEST! DO STRIKE" []
+"IDLE, EH? TV? THE DEVIL"
+"IDLINGS GILD SIN"
+"IDOLATRY DAILY = ROT"
+"IF BINGE, BIG FINE"
+"IF NEUTRAL, REAL UNFIT" []
+"IF NO CUSS, FOCUSINS[']"
+"IF PRIDE, FIE, DRIP"
+"ILL TEMPER? PRIME! TELL, MELT PERIL"
+"IN DOUBT? NOT I, BUD"
+"INCULPATE! CLEAN IT UP"
+"INFIDELS FIND LIES"
+"INSOUCIANT? CAUTION: SIN"
+"INTO CRUDE? INTRODUCE REDUCTION"
+"INTO US? SIN: OUT"
+"INTOX? NO! X IT"
+"IS HOPE NEAR? NO, PHARISEE"
+"IT'S NORMAL? MORTAL SIN" []
+"IT'S PAP, PAPIST"
+"IT'S THE TITHES, THEIST" []
+"KORAN? O, RANK"
+"KUMBAYAS? SAMBA? YUK"
+"LABS BE BABELS"
+"LACK BIBLE? I'LL BE BACK"
+"LECTORSHIP? SPLOTCHIER"
+"LEGIT RAVE: GIVE LATER = GREAT EVIL"
+"LENIENT? A POX: EXPONENTIAL" []
+"LESS CRIME! MERCILESS"
+"LET'S FIX SEX-FILT"
+"LEVY NOT NOVELTY" []
+"LEWD ACTOR? COLD WATER" []
+"A LIE TOLLS? LOSE IT ALL"
+"LIES DANDY? DYED NAILS? DEADLY SIN"
+"LOOK WEIRD? LO, WORK, DIE"
+"LOST ONCE? NOT CLOSE" []
+"LSD IS NOT SIN? DOLTS"
+"LUST, HERE? THE RULES SLUR THEE" []
+"LUST-LED = DULLEST"
+"LUST'S RIFE, FRUITLESS"
+"LYIN'S SINLY"
+"MAGIC? BS! BIG SCAM"
+"MAGIC USER? SCUM! I RAGE"
+"MALT, SON? LOST MAN"
+"MAMBO? VILE! IMMOVABLE"
+"MANKIEST? MISTAKEN" []
+"MASTURB = BUM ARTS! MUST BAR"
+"MERCY IS CRIMES-Y"
+"MISERABLE? RISE! BLAME"
+"MISSED DEISMS? DISS [']EM"
+"MODERATE = MERE TOAD MADE ROTE" []
+"MODERNITIES? MISORIENTED"
+"MOONIES? NOISOME"
+"MOOSH HOMOS" []
+"MOST DYE. MY DOTES? MODESTY"
+"MUSICAL? AIL, SCUM" []
+"MUSING SIN? MUG"
+"NAG PROUDLY. PARDON? UGLY" []
+"NEED MORE? NO REDEEM"
+"NEW AGE? GEE, NAW" []
+"NICKNAMES SICKEN, MAN"
+"NIL PUBIC IN PUBLIC"
+"NOBLESSE? BONE LESS"
+"NOIRS? NO SIR" []
+"NOISY? OY, SIN"
+"NOT MAD TO DAMN"
+"NOT ODD? DON'T DO D-N-D, TOO"
+"NOT SERIOUS = TOO-SURE SIN"
+"NUTS TO NO-TUTS SUTTON" []
+"O, DOGMATIST MATT IS GOOD"
+"O, STOW WOOTS"
+"ODD IF DO DIF"
+"OF SIN: NO IFS"
+"OGLE OFT? FOOL, GET LET GO OF"
+"OGLIN'S LOSING"
+"OH, I'D SLAY HOLIDAYS"
+"OL['] MINDSET: DON'T SMILE? NOT MISLED"
+"ONE FLIRT, NO FILTER: LIFE TORN"
+"ONE THRILL? ROT IN HELL"
+"ONE URGE, YO? YOU'RE GONE"
+"OUGHTNESS = TOUGHNESS"
+"OUT, RASH AUTHORS"
+"OVID? VOID"
+"OW, SIN WINS, O WINOS"
+"OY, ONE URGE? YOU'RE GONE"
+"PANTHEIST? IN THE PAST" []
+"PARDON DA PORN? NO, PARD[']" []
+"PART BUNK? BANKRUPT"
+"PASSION IN SOAPS? NO, I PASS"
+"PEER? SPY? YEPPERS"
+"PENETRANT? REPENTANT"
+"PENTAGRAM? PAGAN TERM"
+"PERISH NOT THE PRISON"
+"PERVERSION OVERRIPENS"
+"PHARISEE, EH? PRAISE HEAPS? IRE! I RESHAPE"
+"PHOBIA'S A BISHOP"
+"PICK NOSE? SICK PEON" []
+"PINAFORES IS PROFANE"
+"PINBALL? PILL? BAN"
+"PLAID SUIT? AIL, STUPID"
+"PLAY DICE? YEA, CLIP'D"
+"PLAY PARTY? PAY RAPTLY? PRAY APTLY"
+"POPELESS, PEOPLES'S PEP LOSES"
+"PORN HAS ORPHANS"
+"PORN IS PRISON"
+"POSH BI BISHOP HIP? SOB"
+"POSIT NO POTIONS" []
+"POUND NO PUD"
+"POUTISH? SHIP OUT"
+"PREVENT TV-PREEN"
+"PRINCIPLES CRIPPLE SIN"
+"PRO-GAY? GO PRAY"
+"PRO-SIN? PRISON ROPIN'S" []
+"PROCLIVITY: CIVIL TO PRY"
+"PROSECUTE CREEP-OUTS" []
+"PUB RUN? BURN UP"
+"PUBLIC HOUSE, EH? PIOUS CLUB"
+"PUN-CREED? PRUDENCE"
+"PURE BOD? BE PROUD" []
+"PURITANISM IMPAIRS? NUT"
+"PURSUER, US = PURER"
+"RAPTURES? RUSE! TRAP" []
+"RATE VICE CREATIVE?! REACT! VIE" []
+"RE-OFFEND? FOREFEND" []
+"RE SMOKING: SMIRK GONE"
+"RE-UPDATE: I REPUDIATE"
+"REASONING? GO NEAR SIN"
+"RECIDIVOUS, VERIDICOUS"
+"REPULSE A PLEASURE PLEA? SURE" []
+"RESOLVING SIN? GROVEL"
+"RID PLAY RAPIDLY"
+"RIP A CULT? A CULPRIT"
+"ROTE PAGANS['] PATRONAGE: GROPE SATAN"
+"RUE ALL ALLURE"
+"RUT? WRATH! RAW TRUTH"
+"(S'MORE MORES)"
+"SALOONS? NO! A LOSS"
+"SANCTION NO ANTICS"
+"SANEST SIN? NASTINESS"
+"SAUCINESS CAUSES SIN"
+"SCANTITY = SANCTITY"
+"SCI-FI IS FIC"
+"SECULAR? NO: LARCENOUS" []
+"SECULAR RECUSAL: SLUR? ACE"
+"SEE GIN: GEE, SIN" []
+"SEEDIER? I SEE RED" []
+"SHINTO? NO, THIS" []
+"SHOOT CRAPS: SPORT? CHAOS"
+"SHOOT UP? THOU P O S" []
+"SHOULDN'T HOLD NUTS" []
+"SICKO? I SOCK" []
+"SICKOS? ICK! SOS" []
+"SILLINESS IS ILLNESS"
+"SIMONY? O MY, SIN" []
+"SIN AMOUNT: MOUNTAINS"
+"SIN? COUNT UNCTIONS"
+"SIN HUT? SHUN IT"
+"SIN NOW WINS ON"
+"SIN: ONENESS IS NONSENSE"
+"SIN? OOP: POISON" []
+"SIN? PROPOSE OPPRESSION" []
+"SIN'S FEAR: FAIRNESS"
+"SING LEAST SLANGIEST"
+"A SMILE IS LAME" []
+"SMUT-CO = TO SCUM"
+"SO PERVY? VERY? P O S"
+"SO VALIANT? SALVATION AVAILS NOT"
+"SODS, END ODDNESS"
+"SOFT? NAA. A FAT SON OF SATAN"
+"SOT KING? GO SKINT"
+"SPONSOR PORN? SOS"
+"A SPORTING PASTORING? GROAN! PITS"
+"ST. BRAD: A BAD STAR"
+"ST. CINDI INDICTS"
+"ST. DEON = STONED DEN-SOT" []
+"ST. ELY'S SLYEST STYLES? LESS, T/Y"
+"ST. ENCINI ISN'T NICE"
+"ST. LOU, OL['] STU: LOUTS" []
+"ST. TERIL LITTERS"
+"STAGNATE: GET SATAN"
+"STAND ST. DAN = AN STD"
+"STAR SHINES? TRASHINESS"
+"STARK FOE OF TAKERS TO FREAKS"
+"START FEW WET FARTS"
+"STIR UP, PURIST! SPUR IT"
+"SURTOUT: SORT OUT OUR TOTS"
+"A SWINGER? SWEARING? EW! ARG! SIN"
+"SYMPATHY: A PSY-MYTH"
+"TAILORED? IDOLATER" []
+"TAPHOUSE? PHASE OUT"
+"TAROT = A TORT"
+"TAT-SHOD? SOD THAT"
+"TECHIER? HERETIC"
+"TEEN SIMPS? EMPTINESS"
+"TEMP-FAIL? AMPLE FIT? FLAME PIT" []
+"THIRD LEG? RED LIGHT"
+"THOR'S SHORT"
+"THOU, BEG? BE TOUGH"
+"THRUST TRUTHS"
+"THUS PRIM TRIUMPHS"
+"TIDY SUM? MIS-DUTY"
+"TO DERP = DE TROP"
+"TO HAIL TOIL, AH"
+"TO HAREMS: SHAME! ROT"
+"TO RAP OR TAP = PO['] ART"
+"TO RAP'S A SPORT, PASTOR? PART! SO" []
+"TO STUMP: SMUT, POT"
+"TORAH, HO? ART? HA, ROT" []
+"TOUT ESPRIT? TUT, ROPIEST PROSTITUTE"
+"TOYS? TRIPE! POSTERITY" []
+"TRAIN UP, PURITAN" []
+"TRANSGRESSIONS, ANGST, SORRINESS"
+"TRANSMIT TANTRISM? TAINTS, MR" []
+"TRIPE'S RIPEST"
+"TRITHEISTS? THIRSTIEST"
+"TURPITUDE: TIED UP RUT" []
+"TV: ART, YES? TRAVESTY"
+"U: FLAW? AWFUL"
+"UM, BILE'S SUBLIME" []
+"UNCHOSEN? NONE SUCH. SHUN ONCE. ECHO, NUNS"
+"UNCLEAR EVILS? SURVEILLANCE"
+"UNTOWARD? DRAWN OUT"
+"UP! I SO PIOUS"
+"UP TO SIN? SPIN OUT" []
+"UR-SIN: RUINS"
+"URGENT! SIN INSURGENT" []
+"US, POOR MUSIC, COPIOUS RUMS: PROMISCUOUS"
+"V. PUERILE? PURE EVIL"
+"VANITY IN TV? AY"
+"VILIFY ROT, FRIVOLITY"
+"VITUPERATE? A VIRTUE, PET"
+"VOICE HATE TO ACHIEVE" []
+"WANDER? SINS. INWARDNESS"
+"WANK? WOE, WAKE NOW"
+"WANT? BASE! SWAT BANE"
+"WASTE FOOD? OAF, DO STEW"
+"WASTE MONEY: AMNESTY? WOE"
+"WHO RIPS WORSHIP? MAD SIN ADMINS"
+"WINES? EW, SIN" []
+"WISDOM? NO, DOOM WINS"
+"A WTF = A FATWA"
+"YO, A SIN? I SAY NO"
+"YOUR SIDE IS RUDE, YO"
+"YOUTHFUL? UH, FLY OUT"
+"YUP, I TRIM IMPURITY"
+
+table of missing deli foods [xxu4]
 blurb
 "Appealing lagniappe"
 "Artichoke, heck, a trio"
@@ -37986,7 +38443,7 @@ blurb
 "Usual Luaus"
 "Utes['] suet"
 
-table of moralizers [xxu4]
+table of moralizers [xxu5]
 blurb
 "A. Turnip, Puritan" []
 "Abjured Jeb Radu"
@@ -39174,421 +39631,6 @@ blurb
 "Zealot Zoe Tal"
 "Zealous Sue Zola"
 "Zen-Led Denzel"
-
-table of rev ali advice [xxu5]
-blurb
-"ABET?! BEAT"
-"ABNORMAL BAN = MORAL"
-"ADS KILL ALL KIDS"
-"AFOS = OAFS"
-"AH, VOWIN[']? HOW VAIN"
-"ALLURIN[']: RUIN ALL"
-"ALOHA, OL['] OOH-LA-LA"
-"ANY DOUBT? BANDY OUT"
-"APHORISMS NET MISANTHROPES"
-"ARTFUL, YOU? YOUR FAULT"
-"ASK NO KOANS"
-"ASPIRANT ANTI-RAPS PARTISAN, RIP SATAN" []
-"ATHEISM'S MASHIEST"
-"AY, LAWS ALWAYS" []
-"BAD: DO IT A BIT ODD"
-"BAKINGS BASKING? BAG, SKIN"
-"BANG-O! GO BAN A BONG" []
-"BASSLINE, LESBIANS = SIN, BALES" []
-"BAWDINESS IS BAD NEWS"
-"BE CARING? NICE BRAG" []
-"BE DECENT: BENT, CEDE"
-"A BE-IN? I? BANE"
-"BE-INS/IBSEN BE SIN"
-"BE MINDLESS? SEEMS BLIND" []
-"BEATLES BE STALE"
-"BEER, CADS? BE SCARED"
-"BEER? VILE, BELIEVER"
-"BEN-WA? EW! BAN"
-"BILLIARDS? RABID ILLS"
-"BIT TRUE TRIBUTE? REBUT IT"
-"BLOW UP, LOW PUB"
-"BLUNDER-LED? BURN" []
-"BONA FIDE? NO? BAD, FIE"
-"BOOZE DENS NEED BOZOS"
-"BORN AGAIN? NO BARGAIN"
-"BREATHE WRONG? BANE REGROWTH"
-"THE BRIG BE RIGHT"
-"BRING UP BURPING? BURN, PIG"
-"BUDDHAS? BAH! DUDS"
-"A BURP'S SUBPAR"
-"CERTITUDE! RECTITUDE"
-"CHA-CHA? ACH! ACH"
-"CHARITABLE? LIAR, BETCHA"
-"COMPASSION? SCAM! POISON"
-"CONSIDER, SCORN, DIE" []
-"CONSUMING GIN? NO, SCUM"
-"CONTEMPLATE ALE: CONTEMPT"
-"COOP LIARS, ACROPOLIS"
-"COPULATE-PLACE? OUT"
-"COPULATIONS? UNAPOSTOLIC"
-"CRAVE GOLD? COLD GRAVE"
-"CREATIVES? VISCERATE"
-"CREED CEDER? DE-REC"
-"A CROOK? O, CROAK"
-"CULTURES, CURE LUST"
-"CUPIDITY? PUDICITY"
-"CURVIEST, VICE = RUTS"
-"DANCE = CEDE DECADENCE"
-"DEALINGS = DANG LIES"
-"DEISM NOW, MR? SIMMER DOWN"
-"DESIST, DEISTS"
-"THE DEVIL: A VILE DEATH"
-"DIANETICS INDICATES ANTICS. DIE"
-"DIG NOT DOTING"
-"DIG THOR? DO RIGHT"
-"DIGNITY? TIDYING"
-"DIRTY JOKES? RISKY! DO JET"
-"DISDAIN SIN, I ADD" []
-"DISLIKE LIES, KID"
-"DISLIKES: KIDS['] LIES"
-"DISORDER = SORDIDER"
-"DO INK? NO, KID"
-"DO WRONG? GO DROWN"
-"DOFF LUST? OLD STUFF"
-"DOING IN GOD? NO, DIG"
-"DONATE? ATONED"
-"DOOBIE? BOO! DIE"
-"DOWN THY WHY-DON'T"
-"DREAD NOT? DON'T DARE"
-"EDITORIALS = IDOLATRIES"
-"EGO: VIRUS, GRIEVOUS"
-"EH, A TOT TO HATE" []
-"EH, PURE UP HERE"
-"EH, RYE'S HERESY" []
-"EH, SEX = HEXES"
-"ELEGISING = EGGIN[']! LIES"
-"EMPATHY IS SHAM PIETY"
-"ENERVATE? VENERATE"
-"ENSHEATH HEATHENS" []
-"ERECTIONS NECROTISE"
-"EUDEMONISTS? SEDIMENTOUS"
-"F'ING ODD? FIND GOD"
-"FAD, U R FRAUD"
-"FAIRY TALES ARE FALSITY"
-"FAITHFUL-FITFUL? AH"
-"FAST? COOL? SCAT, FOOL"
-"FEELING UP? FIE! PLUNGE"
-"FERULE? RE-FUEL"
-"FIB? RELY BREIFLY"
-"FILM SET? LEFTISM"
-"FILTH AS TEXT? LET'S FIX THAT"
-"FITNESS FEST = SIN"
-"FLAKINESS: SINK A SELF"
-"FLASHIEST? FAITHLESS" []
-"FLESH IS SELFISH"
-"FOCUS ON SIN: CONFUSIONS"
-"FOIL SLOTH, SOLO FILTH" []
-"FOREGO, GOOFER"
-"FOREPLAY? PRAY, O ELF"
-"FORESTALL, FELLATORS"
-"FORGO YE GOOFERY" []
-"FORNICATING = FRACTIONING"
-"FOULNESS LOSES FUN"
-"FRIED UP? I = PURIFIED"
-"GAIETY IN TV = NEGATIVITY"
-"GAY PRIDE? GRIPE DAY"
-"GEISHAS? HISSAGE" []
-"GENTILES? STEELING" []
-"GIN HATE GAINETH" []
-"A GIN LUSH? LANGUISH"
-"GO BET? BE GOT"
-"GO FUND GOD? FUN"
-"GO SOBER, GOOBERS" []
-"GOD BANS BAD SONG"
-"GONE BAD? GOD BANE! NO BADGE" []
-"GOT LINGERIE, ELITE GRINGO? GET RELIGION"
-"GRACE = LIES/SACRILEGE"
-"GRIEF'S FUN! SUFFERING"
-"GROG = SELF FLOGGERS"
-"GUILDERS = SLUDGIER"
-"GUILE = LIE, UG"
-"GUITARS? OUT! GRATUITOUS" []
-"HARDLINE HANDLER = I"
-"HASSLE? LASHES"
-"HATE FREER HEREAFTER" []
-"HATE GOD? GO! DEATH"
-"HATE SIN IN HASTE" []
-"HATE SIN, OK? SHAKE ON IT"
-"HATEFUL, EH? FAULT" []
-"HBO'S BOSH" []
-"HEATHEN? NAH, THEE"
-"HEDONISM? MIS-HONED"
-"HEDONISM? MONISHED" []
-"HEDONISTS = DISHONEST: [']STONISHED"
-"HELLFIRES RILE FLESH"
-"HEURISM? MUSHIER"
-"HICKEYS: SICK, HEY"
-"HIS DEMONS: HEDONISM'S DIMNESS, OH"
-"HIS GOAL: NO HOOLIGANS"
-"HONEST AIM: NO ATHEISM" []
-"HOPE? EH, PO[']"
-"HOPING? ROT. POOR THING"
-"HOPING'S NIGH? SOP"
-"HOT DIVE = THE VOID"
-"HOT SIN? [s-w] NO" []
-"HUMANISM? SHUN! MAIM"
-"HURT GOD? DROUGHT"
-"I BLESS? BS! LIES"
-"'I DODGE GOD?' DIE"
-"I FLED SINNERS['] FRIENDLINESS"
-"I KNOCK KINKCO"
-"I RE-DAMN DREAMIN[']" []
-"I SANCTION ONANISTIC INACTIONS"
-"I SCOFF OFF SCI"
-"I SCORN SCORIN[']" []
-"I SENSE SIN, SEE" []
-"I SUNDER RUDE SIN"
-"I'D SLUR LURIDS"
-"I'D STROKE?! DORKIEST! DO STRIKE" []
-"IDLE, EH? TV? THE DEVIL"
-"IDLINGS GILD SIN"
-"IDOLATRY DAILY = ROT"
-"IF BINGE, BIG FINE"
-"IF NEUTRAL, REAL UNFIT" []
-"IF NO CUSS, FOCUSINS[']"
-"IF PRIDE, FIE, DRIP"
-"ILL TEMPER? PRIME! TELL, MELT PERIL"
-"IN DOUBT? NOT I, BUD"
-"INCULPATE! CLEAN IT UP"
-"INFIDELS FIND LIES"
-"INSOUCIANT? CAUTION: SIN"
-"INTO CRUDE? INTRODUCE REDUCTION"
-"INTO US? SIN: OUT"
-"INTOX? NO! X IT"
-"IS HOPE NEAR? NO, PHARISEE"
-"IT'S NORMAL? MORTAL SIN" []
-"IT'S PAP, PAPIST"
-"IT'S THE TITHES, THEIST" []
-"KORAN? O, RANK"
-"KUMBAYAS? SAMBA? YUK"
-"LABS BE BABELS"
-"LACK BIBLE? I'LL BE BACK"
-"LECTORSHIP? SPLOTCHIER"
-"LEGIT RAVE: GIVE LATER = GREAT EVIL"
-"LENIENT? A POX: EXPONENTIAL" []
-"LESS CRIME! MERCILESS"
-"LET'S FIX SEX-FILT"
-"LEVY NOT NOVELTY" []
-"LEWD ACTOR? COLD WATER" []
-"A LIE TOLLS? LOSE IT ALL"
-"LIES DANDY? DYED NAILS? DEADLY SIN"
-"LOOK WEIRD? LO, WORK, DIE"
-"LOST ONCE? NOT CLOSE" []
-"LSD IS NOT SIN? DOLTS"
-"LUST, HERE? THE RULES SLUR THEE" []
-"LUST-LED = DULLEST"
-"LUST'S RIFE, FRUITLESS"
-"LYIN'S SINLY"
-"MAGIC? BS! BIG SCAM"
-"MAGIC USER? SCUM! I RAGE"
-"MALT, SON? LOST MAN"
-"MAMBO? VILE! IMMOVABLE"
-"MANKIEST? MISTAKEN" []
-"MASTURB = BUM ARTS! MUST BAR"
-"MERCY IS CRIMES-Y"
-"MISERABLE? RISE! BLAME"
-"MISSED DEISMS? DISS [']EM"
-"MODERATE = MERE TOAD MADE ROTE" []
-"MODERNITIES? MISORIENTED"
-"MOONIES? NOISOME"
-"MOOSH HOMOS" []
-"MOST DYE. MY DOTES? MODESTY"
-"MUSICAL? AIL, SCUM" []
-"MUSING SIN? MUG"
-"NAG PROUDLY. PARDON? UGLY" []
-"NEED MORE? NO REDEEM"
-"NEW AGE? GEE, NAW" []
-"NICKNAMES SICKEN, MAN"
-"NIL PUBIC IN PUBLIC"
-"NOBLESSE? BONE LESS"
-"NOIRS? NO SIR" []
-"NOISY? OY, SIN"
-"NOT MAD TO DAMN"
-"NOT ODD? DON'T DO D-N-D, TOO"
-"NOT SERIOUS = TOO-SURE SIN"
-"NUTS TO NO-TUTS SUTTON" []
-"O, DOGMATIST MATT IS GOOD"
-"O, STOW WOOTS"
-"ODD IF DO DIF"
-"OF SIN: NO IFS"
-"OGLE OFT? FOOL, GET LET GO OF"
-"OGLIN'S LOSING"
-"OH, I'D SLAY HOLIDAYS"
-"OL['] MINDSET: DON'T SMILE? NOT MISLED"
-"ONE FLIRT, NO FILTER: LIFE TORN"
-"ONE THRILL? ROT IN HELL"
-"ONE URGE, YO? YOU'RE GONE"
-"OUGHTNESS = TOUGHNESS"
-"OUT, RASH AUTHORS"
-"OVID? VOID"
-"OW, SIN WINS, O WINOS"
-"OY, ONE URGE? YOU'RE GONE"
-"PANTHEIST? IN THE PAST" []
-"PARDON DA PORN? NO, PARD[']" []
-"PART BUNK? BANKRUPT"
-"PASSION IN SOAPS? NO, I PASS"
-"PEER? SPY? YEPPERS"
-"PENETRANT? REPENTANT"
-"PENTAGRAM? PAGAN TERM"
-"PERISH NOT THE PRISON"
-"PERVERSION OVERRIPENS"
-"PHARISEE, EH? PRAISE HEAPS? IRE! I RESHAPE"
-"PHOBIA'S A BISHOP"
-"PICK NOSE? SICK PEON" []
-"PINAFORES IS PROFANE"
-"PINBALL? PILL? BAN"
-"PLAID SUIT? AIL, STUPID"
-"PLAY DICE? YEA, CLIP'D"
-"PLAY PARTY? PAY RAPTLY? PRAY APTLY"
-"POPELESS, PEOPLES'S PEP LOSES"
-"PORN HAS ORPHANS"
-"PORN IS PRISON"
-"POSH BI BISHOP HIP? SOB"
-"POSIT NO POTIONS" []
-"POUND NO PUD"
-"POUTISH? SHIP OUT"
-"PREVENT TV-PREEN"
-"PRINCIPLES CRIPPLE SIN"
-"PRO-GAY? GO PRAY"
-"PRO-SIN? PRISON ROPIN'S" []
-"PROCLIVITY: CIVIL TO PRY"
-"PROSECUTE CREEP-OUTS" []
-"PUB RUN? BURN UP"
-"PUBLIC HOUSE, EH? PIOUS CLUB"
-"PUN-CREED? PRUDENCE"
-"PURE BOD? BE PROUD" []
-"PURITANISM IMPAIRS? NUT"
-"PURSUER, US = PURER"
-"RAPTURES? RUSE! TRAP" []
-"RATE VICE CREATIVE?! REACT! VIE" []
-"RE-OFFEND? FOREFEND" []
-"RE SMOKING: SMIRK GONE"
-"RE-UPDATE: I REPUDIATE"
-"REASONING? GO NEAR SIN"
-"RECIDIVOUS, VERIDICOUS"
-"REPULSE A PLEASURE PLEA? SURE" []
-"RESOLVING SIN? GROVEL"
-"RID PLAY RAPIDLY"
-"RIP A CULT? A CULPRIT"
-"ROTE PAGANS['] PATRONAGE: GROPE SATAN"
-"RUE ALL ALLURE"
-"RUT? WRATH! RAW TRUTH"
-"(S'MORE MORES)"
-"SALOONS? NO! A LOSS"
-"SANCTION NO ANTICS"
-"SANEST SIN? NASTINESS"
-"SAUCINESS CAUSES SIN"
-"SCANTITY = SANCTITY"
-"SCI-FI IS FIC"
-"SECULAR? NO: LARCENOUS" []
-"SECULAR RECUSAL: SLUR? ACE"
-"SEE GIN: GEE, SIN" []
-"SEEDIER? I SEE RED" []
-"SHINTO? NO, THIS" []
-"SHOOT CRAPS: SPORT? CHAOS"
-"SHOOT UP? THOU P O S" []
-"SHOULDN'T HOLD NUTS" []
-"SICKO? I SOCK" []
-"SICKOS? ICK! SOS" []
-"SILLINESS IS ILLNESS"
-"SIMONY? O MY, SIN" []
-"SIN AMOUNT: MOUNTAINS"
-"SIN? COUNT UNCTIONS"
-"SIN HUT? SHUN IT"
-"SIN NOW WINS ON"
-"SIN: ONENESS IS NONSENSE"
-"SIN? OOP: POISON" []
-"SIN? PROPOSE OPPRESSION" []
-"SIN'S FEAR: FAIRNESS"
-"SING LEAST SLANGIEST"
-"A SMILE IS LAME" []
-"SMUT-CO = TO SCUM"
-"SO PERVY? VERY? P O S"
-"SO VALIANT? SALVATION AVAILS NOT"
-"SODS, END ODDNESS"
-"SOFT? NAA. A FAT SON OF SATAN"
-"SOT KING? GO SKINT"
-"SPONSOR PORN? SOS"
-"A SPORTING PASTORING? GROAN! PITS"
-"ST. BRAD: A BAD STAR"
-"ST. CINDI INDICTS"
-"ST. DEON = STONED DEN-SOT" []
-"ST. ELY'S SLYEST STYLES? LESS, T/Y"
-"ST. ENCINI ISN'T NICE"
-"ST. LOU, OL['] STU: LOUTS" []
-"ST. TERIL LITTERS"
-"STAGNATE: GET SATAN"
-"STAND ST. DAN = AN STD"
-"STAR SHINES? TRASHINESS"
-"STARK FOE OF TAKERS TO FREAKS"
-"START FEW WET FARTS"
-"STIR UP, PURIST! SPUR IT"
-"SURTOUT: SORT OUT OUR TOTS"
-"A SWINGER? SWEARING? EW! ARG! SIN"
-"SYMPATHY: A PSY-MYTH"
-"TAILORED? IDOLATER" []
-"TAPHOUSE? PHASE OUT"
-"TAROT = A TORT"
-"TAT-SHOD? SOD THAT"
-"TECHIER? HERETIC"
-"TEEN SIMPS? EMPTINESS"
-"TEMP-FAIL? AMPLE FIT? FLAME PIT" []
-"THIRD LEG? RED LIGHT"
-"THOR'S SHORT"
-"THOU, BEG? BE TOUGH"
-"THRUST TRUTHS"
-"THUS PRIM TRIUMPHS"
-"TIDY SUM? MIS-DUTY"
-"TO DERP = DE TROP"
-"TO HAIL TOIL, AH"
-"TO HAREMS: SHAME! ROT"
-"TO RAP OR TAP = PO['] ART"
-"TO RAP'S A SPORT, PASTOR? PART! SO" []
-"TO STUMP: SMUT, POT"
-"TORAH, HO? ART? HA, ROT" []
-"TOUT ESPRIT? TUT, ROPIEST PROSTITUTE"
-"TOYS? TRIPE! POSTERITY" []
-"TRAIN UP, PURITAN" []
-"TRANSGRESSIONS, ANGST, SORRINESS"
-"TRANSMIT TANTRISM? TAINTS, MR" []
-"TRIPE'S RIPEST"
-"TRITHEISTS? THIRSTIEST"
-"TURPITUDE: TIED UP RUT" []
-"TV: ART, YES? TRAVESTY"
-"U: FLAW? AWFUL"
-"UM, BILE'S SUBLIME" []
-"UNCHOSEN? NONE SUCH. SHUN ONCE. ECHO, NUNS"
-"UNCLEAR EVILS? SURVEILLANCE"
-"UNTOWARD? DRAWN OUT"
-"UP! I SO PIOUS"
-"UP TO SIN? SPIN OUT" []
-"UR-SIN: RUINS"
-"URGENT! SIN INSURGENT" []
-"US, POOR MUSIC, COPIOUS RUMS: PROMISCUOUS"
-"V. PUERILE? PURE EVIL"
-"VANITY IN TV? AY"
-"VILIFY ROT, FRIVOLITY"
-"VITUPERATE? A VIRTUE, PET"
-"VOICE HATE TO ACHIEVE" []
-"WANDER? SINS. INWARDNESS"
-"WANK? WOE, WAKE NOW"
-"WANT? BASE! SWAT BANE"
-"WASTE FOOD? OAF, DO STEW"
-"WASTE MONEY: AMNESTY? WOE"
-"WHO RIPS WORSHIP? MAD SIN ADMINS"
-"WINES? EW, SIN" []
-"WISDOM? NO, DOOM WINS"
-"A WTF = A FATWA"
-"YO, A SIN? I SAY NO"
-"YOUR SIDE IS RUDE, YO"
-"YOUTHFUL? UH, FLY OUT"
-"YUP, I TRIM IMPURITY"
 
 book troves
 
@@ -52228,6 +52270,7 @@ blurb
 "Anytime Amenity"
 "balanced lace band"
 "Barnacle Balancer"
+"bend-or-bonder"
 "Boasty-say bot"
 "bores-glow snowglobe"
 "Boulder Doubler" []
@@ -52252,6 +52295,7 @@ blurb
 "Gilleran's Allergins Signaller"
 "Grainless Glariness Signalers"
 "harmonic ion charm" []
+"hi-frets shifter"
 "hi-scan chains" []
 "hostler holster"
 "increm-mincer" []
@@ -52260,11 +52304,13 @@ blurb
 "InReal Linear-Aliner" []
 "Knitter Trinket"
 "law awl"
+"linear nailer"
 "Liters Lister"
 "Lo-perish polisher"
 "loot tool"
 "low-speed seed plow"
 "lower-price power-relic"
+"masker-makers"
 "mod-me modem" []
 "Obtrusive Turbo-Vise" []
 "panic-leap appliance"
@@ -52277,24 +52323,31 @@ blurb
 "Plastic Scalp-It" []
 "porcelain ion placer" []
 "posterior repositor"
+"pre-war warper"
 "precise-op periscope"
 "Prickle Pickler"
 "productive crude pivot"
 "pulsing plug-ins"
+"quit-errs squirter"
 "Rasped Spader"
 "raw-prep wrapper"
 "reboots-booster"
 "Relics Slicer"
 "Replica Caliper"
+"rheums-musher"
 "rhodium humidor"
 "Risk-Tec Sci-Trek sticker"
+"roster sorter-storer"
 "Rusted Duster"
 "sapper-papers"
+"scalder cradles"
 "sectoral locaters"
 "silence ice-lens"
 "sleeper-peelers" []
 "solid-grasp'n load springs"
 "spherical share-clip"
+"splatter-platters"
+"strap-parts"
 "surface-car fuse"
 "Synchro-chyrons"
 "synthetic tiny chest"
@@ -52308,7 +52361,9 @@ blurb
 "Trifle Lifter"
 "twistable waistbelt"
 "unplumed pendulum"
-"Wee Stark Tweakers"
+"wee stark tweakers"
+"winged new dig"
+"wrest-it twister"
 
 table of rodney bluster [xxw2]
 blurb
