@@ -397,7 +397,7 @@ table of fish fries	true	0	15	insult-over-girls rule	oyster	"Carps/pikes trout-b
 table of unpopular girls	true	0	15	ohai-bullies rule	oyster	"Unpopular girls carps/pikes mention[indic of oyster]"	"The bullies insinuate the trout [one of]likes[or]isn't good enough for[cycling] "	"."	"Zina is the last, and utterly wrongest, girl they accuse the trout of liking (she's actually pretty nice, but...innuendo.) When you sink that low, you've obviously run out of ideas.[pre-brk]"
 table of tuna gossip	true	0	15	gossip-over-chatter rule	oyster	"Aunt Tuna's gossip[indic of oyster]"	"Aunt Tuna gossips: "	""	"'Edda Dade. Dead. Cleo's Close. Dorithy--Thyroid. Halle's a shell. All she... Heather's Heart. She... diabetes, die, beast!' Aunt Tuna pauses, head in hands. That was the final thing she'd been repressing.[pre-brk]"
 table of aunt tuna chatter	true	0	15	ohai-tuna rule	oyster	"Aunt Tuna's complaints[indic of oyster]"	"[one of]'Oh, dear! Do hear!' / 'D'oh...are...' Aunt Tuna cuts you off and[or]Aunt Tuna[stopping] "	""	"Aunt Tuna, as her nags snag, restarts her prattle platter of how she is BEYOND done-by...[pre-brk]"
-table of theses	false	0	0	screed-read rule	oyster	"Theses Sheets notes[indic of oyster]"	""	""	"Life Conks Nice Folks![paragraph break]Well, that's probably enough proof you're dealing with bad guys, here."
+table of theses	false	0	30	screed-read rule	oyster	"Theses Sheets notes[indic of oyster]"	""	""	"Life Conks Nice Folks![paragraph break]Well, that's probably enough proof you're dealing with bad guys, here."
 table of rodney bluster	true	0	20	rodney-here rule	towers	"Rodney's bluster[indic of towers]"	"Rodney [if number of visible warriors is 7]informs his gang[else if number of visible warriors > 3]yells at his remaining troops[else if number of visible warriors is 2]yells to his remaining companion[else]mutters to himself[end if] about "	"."	"Rodney warns about repeating, then inept rage and a petering.[pre-lb]"
 table of gizmo parts	false	0	20	examining-gizmo rule	towers	"Parts of the I ZOMG GIZMO[indic of towers]"	--	""	"Ulti-Util, the most powerful, confusing and hidden of all the gizmo parts"
 table of Elmer and Merle squabbles	true	0	20	alcove-talk rule	otters	"Elmer and Merle's chat"	--	""	"Since they're kinda evil, or at least serving someone evil, they give a greedy look as they restart their complaint routines.[pre-lb]"
@@ -2699,7 +2699,7 @@ lecturer	Elvira	"You probably know he's in favor of her."
 idg	lecturer	"A great man. Listen to him, not me."
 idg	Elvira	"She didn't get to her position of power by using DRUGS."
 Brother Horbert	spoon	"'[if spoon is in lalaland]I hope you used it wisely[else]It may help you figure where to go[end if].'"
-Brother Horbert	rev	"[one of]Brother Horbert shudders a bit[or]Best not to press him[stopping]."
+Brother Horbert	mantle	"[one of]Brother Horbert shudders a bit[or]Best not to press him[stopping]."
 Brother Horbert	list o toils	"[if l-o-p is unexamined]Why not examine the list yourself?[else if mushrooms are off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]"	[horbert tells about quest items elsewhere]
 Brother Horbert	form	"[if form is off-stage]Brother Horbert mutters something about the gift of second sight.[else]Brother Horbert says, 'If you found the reagents, surely dealing with that form will be easier!'[end if]"
 Brother Horbert	Pat	"[lost-faith]"
@@ -5055,10 +5055,10 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "checklist"	554223425	troves	--	checklist	--	"[list-stable]."
 "midwest"	565221954	troves	--	vanity	--	"No, he's yesterday's news. Or he should be. Concentrate on the [if noise is in lalaland]task ahead[else]region[end if], not him."
 "playbill"	430866297	troves	--	playbill	--	"You fold and look at the playbill many different ways before figuring it's probably the writing on it that matters."
-"lil"	152620524	troves	--	pallid li'l pad	--	"[loc-name]."
-"pad"	104682866	troves	--	pallid li'l pad	--	"[loc-part]."
-"lilpad"	257303390	troves	--	pallid li'l pad	--	"[loc-part]."
-"bedroom"	465358213	troves	--	pad-now-bedroom rule	"[locname]."
+"lil"	152620524	troves	--	pallid li'l pad	--	"[locname]."
+"pad"	104682866	troves	--	pallid li'l pad	--	"[locname-part]."
+"lilpad"	257303390	troves	--	pallid li'l pad	--	"[locname-part]."
+"bedroom"	465358213	troves	--	--	pad-now-bedroom rule	"[locname]."
 "rathole"	483876463	troves	rathole	--	--	"[locname]."
 "loudest"	581491405	troves	--	Used Lot	--	"some text"
 "dues"	350214971	troves	Used Lot	--	--	"[locname-part]"
@@ -8090,7 +8090,7 @@ before listening (this is the you can hear stuff some places rule):
 		say "You hear the clam snapping." instead;
 	if player is in freight:
 		try examining the pale plea instead;
-	if player is in boredom:
+	if player is in pallid li'l pad:
 		say "The dead air inspires no rad idea." instead;
 	if old giant is in lalaland and player is in Same Mesa:
 		say "Nice to have silence with the giant gone." instead;
@@ -14984,7 +14984,8 @@ when play begins (this is the distribute warriors rule) :
 	
 [This pulls 1 guy from each wargroup. As of release 3 there are 26 distinct guys with 5.65 letters on average--the shuffling was previously totally random but now it's weighted down to ~5.61 with a more uniform distribution. You are sure to get 2 6's, 2 5's, a 7-8 and a 4-5.]
 
-understand "wendi/widen" as a mistake ("Now that would be too embarrassing. Maybe you could embarrass him a little, though.") when player is in trefoil and Edwin is in trefoil.
+understand "wendi" and "widen" as a mistake ("Now that would be too embarrassing. Maybe you could embarrass him a little, though.") when player is in trefoil and Edwin is in trefoil.
+
 understand "new id" as a mistake ("You need to make sure Edwin's new ID is something negative.") when player is in trefoil and Edwin is in trefoil.
 
 understand "recalm" and "recalm marcel" as a mistake ("Right idea, but it might work better in [if cur-score of oyster > 0]the oyster[else]another area[end if].") when player is in trefoil and marcel is in trefoil.
@@ -15648,7 +15649,7 @@ pious-state is a truth state that varies.
 
 the lament mantle is useless scenery in Cleric Circle. "[one of]It's full of regrets. Regrets Rev. Ali and his hangers-on have that people do certain things, and regrets those people will have that they did them[or]Another interdict[stopping]. [pious1][randbla][one of], full of tarnished sin-hatred and obliged god-bile for your sinner inners[or][stopping]. [one of]Their creeds-screed contains[or]Another no-heart rant, e-oh:[stopping] [pious1][randbla]"
 
-check examining mental lament for the first time:
+check examining lament mantle for the first time:
 	say "Just a small check-off: there's some religious stuff in here, poking fun at hot button issues. This might be annoying, and I don't want do do that. Do you wish to go ahead?";
 	unless the player consents:
 		say "Okay. This warning will vanish next time." instead;
@@ -16160,7 +16161,7 @@ check scaning what-a-bee:
 
 book Pallid Li'l Pad
 
-Pallid Li'L Pad is a room in Troves. "This is [if diapers are reflexed]no bro-dome--it leaves you feeling all me, BROOD[else]a dump, um, pad[end if]. Well, it beats Get-a-Cot Cottage, or Drag-Grad.[paragraph break]You notice trappings of spiritual and material poverty: a picture of a sad pier, a box of diapers, and a spider crawling[if diapers are reflexed]. Though you're not quite held back by them so much[else]. They all point to a rock bottom you haven't hit yet, but it may be necessary[end if].  now. You have learned to despair and to deal, and now you need a third way between them. You believe you deserve to [i]reside[r] somewhere better[else if diapers are reflexed]. Such details will drag you back. You want to break out of the funless fulness of Drag-grad, here, to [i]lead[r][end if]. All equally depressing."
+Pallid Li'L Pad is a room in Troves. "This is [if diapers are reflexed]no bro-dome--it leaves you feeling all me, BROOD[else]a dump, um, pad[end if]. Well, it beats Get-a-Cot Cottage, or Drag-Grad.[paragraph break]You notice trappings of spiritual and material poverty: a picture of a sad pier, a box of diapers, and a spider crawling[if diapers are reflexed]. Though you're not quite held back by them so much[else]. They all point to a rock bottom you haven't hit yet, but it may be necessary[end if].  now. You have learned to despair and to deal, and now you need a third way between them. You believe you deserve to [i]reside[r] somewhere better[if diapers are reflexed]. Such details will drag you back. You want to break out of the funless fulness of Drag-grad, here, to [i]lead[r][end if]. All equally depressing."
 
 understand "praised" as a mistake ("You would like to be, but you can't just want others to. Change comes from within.") when player is in Pallid Li'l Pad.
 
@@ -16175,7 +16176,7 @@ box of diapers is reflexive scenery in Pallid Li'l Pad. "The diapers are a symbo
 understand "boredom/bedroom" and "boredom bedroom" as Pallid Li'l Pad when diapers are reflexed.
 
 after fliptoing diapers:
-	now printed name of Pallid Li'l Pad is "Boredom Bedroom"
+	now printed name of Pallid Li'l Pad is "Boredom Bedroom";
 	now ltb is in Pallid Li'l Pad;
 	continue the action;
 
@@ -23811,7 +23812,7 @@ before sleeping:
 		say "[if Gunter is off-stage]But you just woke up![otherwise]Not with that knocking.[end if]" instead;
 	if player is in FiefCo Office:
 		say "You got here by doing nothing while conscious, not doing nothing while unconscious." instead;
-	if player is in boredom:
+	if player is in pallid li'l pad:
 		say "You don't have time to dream of titanium golf clubs or overpriced alcohol or all the things you should have been dreaming about all these years. Slacker." instead;
 	if mrlp is troves:
 		say "Nonsense! Spoiloplis is no place for sleepers. Maybe you can sleep somewhere else. But not now." instead;
@@ -58091,4 +58092,4 @@ volume spare ideas
 				replace the text "G" in temptext with "Y";
 				replace the text "P" in temptext with "R";
 				change b-text of Z to "[temptext]";
-				[say "[Z]: [b-text of Z] -> [temptext].";]]]]
+				[say "[Z]: [b-text of Z] -> [temptext].";]]
