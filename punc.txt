@@ -58,7 +58,7 @@ noage	1	1	-1
 yessage	1	1	-1
 lame movies	1	-1	-1
 lame tv shows	1	-1	-1
-rev ali advice	1	-1	-1
+mantle laments	1	-1	-1
 posh dialogue	1	1	1
 sicko movies	1	1	-1
 bad rappers	1	-1	-1

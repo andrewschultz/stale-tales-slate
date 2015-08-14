@@ -476,11 +476,11 @@ version 3 March 2015</history>
 			<dock index="0" id="142" port="nw" />
 			<dock index="1" id="143" port="se" />
 		</line>
-		<room id="157" name="Peek Keep" subtitle="Start Demo Dome" x="352" y="160" w="96" h="64" region="NoRegion" handDrawn="no" ellipse="no" roundedCorners="yes" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="157" name="Peek Keep" subtitle="Start Demo Dome" x="352" y="160" w="96" h="64" region="Demo Dome" handDrawn="no" ellipse="no" roundedCorners="yes" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="158" name="Ned's Dens" subtitle="" x="224" y="160" w="96" h="64" region="NoRegion" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="159" name="Hows-Show" subtitle="" x="352" y="64" w="96" h="64" region="NoRegion" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="158" name="Ned's Dens" subtitle="" x="224" y="160" w="96" h="64" region="Demo Dome" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="159" name="Hows-Show" subtitle="" x="352" y="64" w="96" h="64" region="Demo Dome" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="160" color="#0000FF">
 			<dock index="0" id="157" port="n" />
 			<dock index="1" id="159" port="s" />
@@ -489,8 +489,8 @@ version 3 March 2015</history>
 			<dock index="0" id="157" port="w" />
 			<dock index="1" id="158" port="e" />
 		</line>
-		<room id="162" name="Intel Inlet" subtitle="" x="480" y="64" w="96" h="64" region="NoRegion" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="163" name="Evoc-Cove" subtitle="" x="480" y="160" w="96" h="64" region="NoRegion" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="162" name="Intel Inlet" subtitle="" x="480" y="64" w="96" h="64" region="Demo Dome" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="163" name="Evoc-Cove" subtitle="" x="480" y="160" w="96" h="64" region="Demo Dome" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="164" color="#0000FF">
 			<dock index="0" id="157" port="e" />
 			<dock index="1" id="163" port="w" />
@@ -610,6 +610,7 @@ version 3 March 2015</history>
 			<grid>#F5F5F5</grid>
 		</colors>
 		<regions>
+			<Demo____Dome Name="Demo Dome" TextColor="Black">#E0E0E0</Demo____Dome>
 			<Manor Name="Manor" TextColor="Black">Silver</Manor>
 			<NoRegion Name="NoRegion" TextColor="Black">White</NoRegion>
 			<Others Name="Others" TextColor="Black">Lime</Others>

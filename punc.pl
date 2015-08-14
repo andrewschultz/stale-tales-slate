@@ -12,6 +12,8 @@
 # overridden by [p] in the source file
 #
 
+$showOK = 0;
+
 if (-f "punc.txt") 
 {
 open(A, "punc.txt") || die ("Can't open punc.txt.");
@@ -120,7 +122,7 @@ for $key (sort keys %entry)
 if (!$anyerr) { print "No tables had errors!\n"; }
 else
 {
-print "OK tables:$noerr.\n";
+if ($showOK) { print "OK tables:$noerr.\n"; }
 }
 
 close(A);
