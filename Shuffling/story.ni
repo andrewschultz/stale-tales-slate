@@ -17,7 +17,7 @@ are modified versions.
 You may have some problems with Glulx Text Effects.i7x / Glulx Text Effects - New.i7x naming and getting duplicate tables. If you are getting an already defined table, make sure other extensions all point to one of the two. This is the big hurdle to building. I may need to sort this out or update modules if there are new ones.
 ]
 
-[Given that this source file has eclipsed 800000 bytes, I've tried to provide a rough outline as well as places to look to find the tricky bits. The standard method of searching game text in the source will probably get you pretty far, but also, I used some searchies repeatedly when I needed to change something in this game.
+[Given that this source file is on its way to 900000 bytes, I've tried to provide a rough outline as well as places to look to find the tricky bits. The standard method of searching game text in the source will probably get you pretty far, but also, I used some searchies repeatedly when I needed to change something in this game.
 
 TMC=table of megachatter, where all the random text is forked.
 TON=table of nudges, where a good try is rejected, so the player knows they are on the wrong track.
@@ -25,6 +25,8 @@ TOA=table of anagrams, or the big one.
 TOH=table of hint objects
 TOSH=table of specialized help (for specific rejects)
 AIP=check if action is procedural
+
+You can also search for various random tables with bracket-xx-(region abbreviation) -- this should go much quicker than in A Roiling Original. But m=metros and r=roster. 3 x's = names.
 ]
 
 book disambig
@@ -81,40 +83,6 @@ include Property Checking by Emily Short.
 include Direction Response Testing by Andrew Schultz.
 
 include Rules-Based Testing by Andrew Schultz.
-
-table of verification rules (continued)
-rule-short (topic)	rule-name	rule-description
-"ts"	trips-strip rule	"At trips strip e.g. solved area"
-"sco"	max-reg-score rule	"All solved region scores are maximum"
-"rm"	in-roman-manor rule	"In roman manor"
-"fi"	in-fields rule	"In fields"
-
-this is the in-fields rule:
-	if the player is in self-id fields:
-		the rule succeeds;
-	the rule fails;
-
-this is the max-reg-score rule:
-	let tempbool be true;
-	repeat with REG running through solved regions:
-		if last-loc of REG is visited:
-			if cur-score of REG is not max-score of REG:
-				append "Region [REG] only has [cur-score of REG] of [max-score of REG] points.[line break]" to the file of test results;
-				now tempbool is false;
-	if tempbool is true:
-		the rule succeeds;
-	the rule fails;
-
-this is the trips-strip rule:
-	if the player is in trips strip:
-		the rule succeeds;
-	the rule fails.
-
-this is the in-roman-manor rule:
-	append "Current score = [cur-score of resort] of [max-score of resort].[line break]" to the file of test results;
-	if player is in roman manor:
-		the rule succeeds;
-	the rule fails;
 
 a thing can be abstract. a thing is usually not abstract.
 
@@ -208,9 +176,13 @@ index map with Sorted Trodes mapped east of Self-ID Fields.]
 
 [release along with a solution.]
 
-debug-state is a truth state that varies. debug-state is usually false. [!!!]
+debug-state is a truth state that varies. debug-state is usually false.
 
 ff is a truth state that varies.
+
+Procedural rule: ignore the print final score rule.
+
+chapter basic things about things
 
 a thing has text called rgtext. rgtext of a thing is usually "[bug-report]".
 
@@ -246,15 +218,15 @@ a disguise-piece is a kind of thing. a disguise-piece has a number called elevat
 
 a flower is a kind of thing. understand "flower" and "flowers" as a flower.
 
+chapter colors
+
 when play begins (this is the status window rule):
 	set the background of the status window to colored;
 	set the background color of the status window to g-black;
 	set the text color of the status window to g-white;
 	open the status window;
 
-Procedural rule: ignore the print final score rule.
-
-section compiler non-syntax section
+section compiler adjust constant section
 
 [This is the main section to edit if I get a compiler error not due to syntax. With the 6.33 compiler, Inform should be a bit more descriptive, but just in case, I want to write this in]
 
@@ -294,7 +266,7 @@ north,east,south,west are ordinal.
 
 before going (this is the reject diagonals rule):
 	if location is roman manor:
-		say "[one of]You don't feel like getting up. Suddenly you're in the middle of an exitstential crisis.[or]You've had it with doing and going[or]Sit, ex-adventurer.[or]Where would you go? Texis?[or]Seeing exits just makes you want to...[or]Come on, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here![stopping]" instead;
+		say "[one of]You don't feel like getting up. Suddenly you're in the middle of an exitstential crisis.[or]You've had it with doing and going[or]Sit, ex-adventurer.[or]Where would you go? Texis? You see red at the thought![or]Seeing exits just makes you want to...[or]Come on, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here![stopping]" instead;
 	if noun is a diagonal:
 		if player is in busiest subsite:
 			say "You walk around the perimeter of the big hall. It's weird. The passage by the sign isn't stuck in a corner--it's just off to the side a bit, so it's not really north or whatever. You should be able to ENTER it or go INSIDE." instead;
@@ -317,11 +289,10 @@ to say tag-status:
 instead of dropping tomato:
 	say "Much as you'd like to drop it, it [if player is in Hotel]is actually handy here[otherwise]might come in handy somewhere[end if]."
 
-[??2 words]
-
 chapter special help
 
-[?? if backdrop is 1st it goes screwy]
+[We need a non-backdrop first here, or the compiler complains.]
+
 table of spechelp [tosh] [this is for specific error messages for specific items]
 xtrhelp	helptxt
 bolt	"You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here."
@@ -464,8 +435,6 @@ the air is a proper-named backdrop. the air is everywhere. understand "room" as 
 understand "nick" as air when player is in nick.
 
 description of air is "[bug-report]";
-
-[?? nos/son]
 
 instead of examining the air:
 	if player is in busiest subsite:
@@ -2489,7 +2458,8 @@ when play begins (this is the don't use any other besides status window when pla
 		say "Shuffling Around has accessibility features for the vision impaired that make a hinting device more readable. Would you like to activate them?";
 		if the player consents:
 			now hc-acc is true;
-		say "OK.";
+		else:
+			say "OK. This can be toggled at any time with the three-letter commands NOS (off) or SON (on).";
 	say "So you just got fired from the best company ever, but it's the best day of your life. Because, new opportunities! New horizons! New ways to look at things! Like calling this stupid kiss-off job fair a 'convention.' As you are stuffed in a slow slow elevator up to the next lecture, you hope there's some way out...";
 	move player to Busiest Subsite, without printing a room description;
 	now player wears magenta nametag;
@@ -2570,7 +2540,7 @@ grims is a truth state that varies.
 to set-other-default:
 	now cask is not flipped-yet;
 
-the magenta nametag is a thing. rgtext of magenta nametag is "[rc][gc][rc][gc][rc]*[rc]". lgth of nametag is 7. gpos of nametag is 7. rpos of nametag is 1.
+the magenta nametag is a thing. rgtext of magenta nametag is "[rcn][gc][rc][gc][rc]*[rc]". lgth of nametag is 7. gpos of nametag is 7. rpos of nametag is 1.
 
 does the player mean listening to the air: it is likely.
 
@@ -2819,7 +2789,7 @@ after fliptoing gateman:
 
 understand "old man" and "almond" as gateman when gateman is visible.
 
-the odor is scenery. the odor is undesc. it is in Dry Yard. rgtext of odor is "[rc][rc][gc][gc]". lgth of odor is 4. gpos of odor is 2. rpos of odor is 4.
+the odor is scenery. the odor is undesc. it is in Dry Yard. rgtext of odor is "[rcn][rc][gc][gc]". lgth of odor is 4. gpos of odor is 2. rpos of odor is 4.
 
 understand "smell" and "breeze" as odor.
 
@@ -2858,7 +2828,7 @@ the bolt is part of the yard-door. description is "It sticks out from the door."
 check taking bolt:
 	say "It's like there's an invisible force field around the bolt." instead;
 
-rgtext of bolt is "[gc][rc][rc][gc]". lgth of bolt is 4. gpos of bolt is 1. rpos of bolt is 4.
+rgtext of bolt is "[gcn][rc][rc][gc]". lgth of bolt is 4. gpos of bolt is 1. rpos of bolt is 4.
 
 bugle-played is a truth state that varies. bugle-played is false.
 
@@ -2878,7 +2848,7 @@ after fliptoing bugle:
 		min-up;
 	continue the action;
 
-the bulge is part of the yard-door. rgtext of bulge is "[gc][gc][rc][rc][gc]". lgth of bulge is 5. gpos of bulge is 1. rpos of bulge is 5.
+the bulge is part of the yard-door. rgtext of bulge is "[gcn][gc][rc][rc][gc]". lgth of bulge is 5. gpos of bulge is 1. rpos of bulge is 5.
 
 description of the bulge is "It's shaped like a racetrack, except for an upper corner that fans out. There's no way to pry it from the door. [run paragraph on][bugle-clue]."
 
@@ -2964,7 +2934,7 @@ carry out fliptoing goat:
 	if player has toga:
 		now toga is in location of player;
 
-the toga is a thing in Thickest Thickets. "A toga is lying here. It doesn't look particularly festive or clean.". rgtext of toga is "[rc][gc][rc][rc]". lgth of toga is 4. gpos of toga is 3. rpos of toga is 1.
+the toga is a thing in Thickest Thickets. "A toga is lying here. It doesn't look particularly festive or clean.". rgtext of toga is "[rcn][gc][rc][rc]". lgth of toga is 4. gpos of toga is 3. rpos of toga is 1.
 
 report taking the toga:
 	say "From the smell[if toga is examined] and the writing on it[end if], you doubt wearing it will get you anywhere cool in its current form, but you take it anyway.";
@@ -2983,7 +2953,7 @@ understand "thickets/thickest" and "thickest thickets" as darnels when player is
 
 the snarled darnels are scenery in Thickest Thickets. "Well, they're tangled enough, you'd probably get hurt going through them."
 
-the rgtext of snarled darnels is "[rc][rc][rc][rc][rc][rc][rc]". the lgth of darnels is 5. gpos of darnels is 7. rpos of darnels is 3.
+the rgtext of snarled darnels is "[rcn][rc][rc][rc][rc][rc][rc]". the lgth of darnels is 5. gpos of darnels is 7. rpos of darnels is 3.
 
 the goat is an animal. "The goat is half-sleeping here. He's probably best left that way."
 
@@ -3109,7 +3079,7 @@ instead of smelling garbage:
 check going nowhere in alley:
 	say "Only way out's back east." instead;
 
-some words are a thing in alley. rgtext of words is "[rc][rc][rc][rc][rc]". gpos of words is 5. rpos of words is 4. lgth of words is 5.
+some words are a thing in alley. rgtext of words is "[rcn][rc][rc][rc][rc]". gpos of words is 5. rpos of words is 4. lgth of words is 5.
 
 description of words is "They're not visible[if words are in bag], but you can feel them pulsing against the bag[otherwise], but they certainly sound angry. Sharp. Pointed. Lethal.[end if]."
 
@@ -3196,7 +3166,7 @@ instead of inserting into garbage:
 		say "I'm sure the garbage would feel insulted." instead;
 	say "You're a hero, not a garbage man!";
 
-rgtext of motto is "[rc][rc][rc][rc][gc][gc]". lgth of motto is 6. gpos of motto is 4. rpos of motto is 6.
+rgtext of motto is "[rcn][rc][rc][rc][gc][gc]". lgth of motto is 6. gpos of motto is 4. rpos of motto is 6.
 
 description of the motto is "[ex-placard]It's labeled A MOTTO, and somehow, someone named Too-Apt Pa Otto has managed to make a hash of grammar, logic, math, science and basic human decency in sixty letters. Sixty-four if it were spelled correctly.[paragraph break]I'd tell you what it said, but you-the-person would be the worse for it. It's like Monty Python's funniest joke in the world that way. Even considering it makes you feel worried you'll forget simple stupid stuff, like what's a fruit and what's a vegetable."
 
@@ -3339,7 +3309,7 @@ check going nowhere in cramped red camp:
 		continue the action;
 	say "There're condos north[if dry cake is not off-stage], which you were booted out of[end if], an alley west, a flower shop east, and a seedier area south." instead;
 
-the fuzzy clover is a thing in Cramped Red Camp. "A small clover is growing here.". rgtext of clover is "[rc][rc][rc][rc][rc][rc]". lgth of clover is 6. gpos of clover is 4. rpos of clover is 3.
+the fuzzy clover is a thing in Cramped Red Camp. "A small clover is growing here.". rgtext of clover is "[rcn][rc][rc][rc][rc][rc]". lgth of clover is 6. gpos of clover is 4. rpos of clover is 3.
 
 description of clover is "You touch the leaves a bit, and they seem to hook into your skin. You count two layers of five leaves each."
 
@@ -3394,7 +3364,7 @@ the hooks are part of the Velcro. the hooks are plural-named. description of hoo
 
 the Velcro is wearable.
 
-some lost corn is a singular-named thing. rgtext of lost corn is "[rc][gc][rc][gc][rc][gc][rc][rc]". lgth of lost corn is 8. gpos of lost corn is 5. rpos of lost corn is 3. the indefinite article of lost corn is "some".
+some lost corn is a singular-named thing. rgtext of lost corn is "[rcn][gc][rc][gc][rc][gc][rc][rc]". lgth of lost corn is 8. gpos of lost corn is 5. rpos of lost corn is 3. the indefinite article of lost corn is "some".
 
 initial appearance of the lost corn is "That lost corn is still in that corner. Sorry if that sounds corny."
 
@@ -3491,7 +3461,7 @@ does the player mean throwing the tomato at the talkers: it is likely.
 instead of throwing tomato at talkers:
 	say "That would get rid of one of them, but the rest would oust you. Perhaps a more pervasive threat would disperse them."
 
-the antlers are plural-named scenery in cordoned red condo. rgtext of antlers is "[rc][rc][rc][rc][rc][rc][gc]". lgth of antlers is 7. gpos of antlers is 6. rpos of antlers is 7.
+the antlers are plural-named scenery in cordoned red condo. rgtext of antlers is "[rcn][rc][rc][rc][rc][rc][gc]". lgth of antlers is 7. gpos of antlers is 6. rpos of antlers is 7.
 
 instead of taking the antlers:
 	say "They are utterly useless, even for impressing people. Actually, they're all just here for the free food, too."
@@ -3557,7 +3527,7 @@ check going in cordoned red condo:
 	if noun is diagonal:
 		say "You skulk in a corner for a bit. People not-notice you a bit more than before." instead;
 
-Some dry cake is a singular-named thing in Cordoned Red Condo. "Some dry cake is here[if talkers are visible]. Nobody else is lower-class enough to eat it, but everyone's making sure nobody lower-class nabs it. It's a big residence, but any exploration would result in discreter redirects[otherwise]. And nobody is here to stop you from taking it any more[end if].". rgtext of dry cake is "[rc][rc][gc][gc][gc][rc][rc]". lgth of dry cake is 7. gpos of dry cake is 6. rpos of dry cake is 1. indefinite article of dry cake is "some".
+Some dry cake is a singular-named thing in Cordoned Red Condo. "Some dry cake is here[if talkers are visible]. Nobody else is lower-class enough to eat it, but everyone's making sure nobody lower-class nabs it. It's a big residence, but any exploration would result in discreter redirects[otherwise]. And nobody is here to stop you from taking it any more[end if].". rgtext of dry cake is "[rcn][rc][gc][gc][gc][rc][rc]". lgth of dry cake is 7. gpos of dry cake is 6. rpos of dry cake is 1. indefinite article of dry cake is "some".
 
 description of dry cake is "The least stale of what's left, but weird and silvery and in no state to taste[if player does not have cake]. Someone sees you eying the cake, and you suddenly wish to steal it out of spite[end if]."
 
@@ -3702,7 +3672,7 @@ to say he-be:
 to say sure-you:
 	say "[if heaths are not in flowers or begonias are not in flowers]! We are sure you can do something with your reward[end if]";
 
-some heaths are a plural-named flower in Elf Row's Flowers. they are not fixed in place. rgtext of heaths is "[rc][rc][rc][rc][rc][rc]". lgth of heaths is 6. gpos of heaths is 6. rpos of heaths is 5.
+some heaths are a plural-named flower in Elf Row's Flowers. they are not fixed in place. rgtext of heaths is "[rcn][rc][rc][rc][rc][rc]". lgth of heaths is 6. gpos of heaths is 6. rpos of heaths is 5.
 
 understand "heath" as heaths.
 
@@ -3723,7 +3693,7 @@ check taking off sheath:
 
 description of sheath is "It's a dull grey, with the words FOR GREAT QUIETNESS inscribed in some Gothic font."
 
-some begonias are a plural-named flower in Elf Row's Flowers. they are not fixed in place. rgtext of begonias is "[rc][rc][rc][rc][rc][rc][gc][rc]". lgth of begonias is 8. gpos of begonias is 5. rpos of begonias is 3.
+some begonias are a plural-named flower in Elf Row's Flowers. they are not fixed in place. rgtext of begonias is "[rcn][rc][rc][rc][rc][rc][gc][rc]". lgth of begonias is 8. gpos of begonias is 5. rpos of begonias is 3.
 
 understand "begonia" as begonias.
 
@@ -3804,7 +3774,7 @@ check taking:
 to say greedy-greedy:
 	say "The faeries cry 'We already gave you one clump of flowers for your one flower! So unfair, sour naif!'";
 
-the brocade is a thing in Elf Row's Flowers. "A small piece of brocade is discarded away from the merchandise. You see scratchings above it.". rgtext of brocade is "[gc][rc][rc][gc][rc][gc][gc]". lgth of brocade is 7. gpos of brocade is 1. rpos of brocade is 7.
+the brocade is a thing in Elf Row's Flowers. "A small piece of brocade is discarded away from the merchandise. You see scratchings above it.". rgtext of brocade is "[gcn][rc][rc][gc][rc][gc][gc]". lgth of brocade is 7. gpos of brocade is 1. rpos of brocade is 7.
 
 the merchandise is scenery in elf row's flowers. "All sorts of flower-related semi-magical stuff spans the store. You wouldn't know what to do with any of it, [if begonias are not in elf row's flowers and heaths are not in elf row's flowers]but you've got something for your troubles[else if fairy-worthy is true]but you can probably take the heaths or begonias[otherwise]but maybe if you help the faeries, they'll give you something[end if]."
 
@@ -3935,7 +3905,7 @@ check fliptoing gardenia:
 		now can of beer is in lalaland;
 		now soggy love letter is in lalaland;
 
-description of drainage is "It smells and looks disgusting. Just the sort of thing that needs to be cleaned up or reprocessed to get this city looking nice again. A beer can and a [if flier is visible]flier[otherwise]soggy note[end if] float in it.". rgtext of drainage is "[rc][rc][rc][rc][rc][rc][rc][rc]". lgth of drainage is 8. gpos of drainage is 7. rpos of drainage is 6.
+description of drainage is "It smells and looks disgusting. Just the sort of thing that needs to be cleaned up or reprocessed to get this city looking nice again. A beer can and a [if flier is visible]flier[otherwise]soggy note[end if] float in it.". rgtext of drainage is "[rcn][rc][rc][rc][rc][rc][rc][rc]". lgth of drainage is 8. gpos of drainage is 7. rpos of drainage is 6.
 
 does the player mean doing something with soggy letter: it is likely.
 
@@ -3948,7 +3918,7 @@ to say letter-or-flier:
 	otherwise:
 		say "heap of gunk where an item should be ([bug-report])";
 
-the can of beer is auxiliary scenery in Undesired Underside. description of can of beer is "It appears to be AGED RAIN brand beer. Hooray, truth in advertising? A reading of the small print, though, leaves you seeing red.". rgtext of can of beer is "[rc][rc][rc][gc][rc][rc][gc][rc]". lgth of can of beer is 8. gpos of can of beer is 2. rpos of can of beer is 1.
+the can of beer is auxiliary scenery in Undesired Underside. description of can of beer is "It appears to be AGED RAIN brand beer. Hooray, truth in advertising? A reading of the small print, though, leaves you seeing red.". rgtext of can of beer is "[rcn][rc][rc][gc][rc][rc][gc][rc]". lgth of can of beer is 8. gpos of can of beer is 2. rpos of can of beer is 1.
 
 understand "aged rain" and "aged" and "rain" and "beer/ can/" as can of beer when can of beer is visible.
 
@@ -3966,7 +3936,7 @@ instead of doing something with the can of beer:
 
 does the player mean doing something with the love letter when the love letter is visible: it is very likely.
 
-the soggy love letter is auxiliary scenery. description of soggy love letter is "Someone has written [b]DEAR INGA:[r] in big letters. The waters have smudged the smaller writing, which is probably for the best. A reading of what's there makes you see red, anyhow.". lgth of soggy love letter is 8. gpos of soggy love letter is 7. rpos of soggy love letter is 3. rgtext of soggy letter is "[rc][rc][rc][rc][rc][gc][rc][gc]".
+the soggy love letter is auxiliary scenery. description of soggy love letter is "Someone has written [b]DEAR INGA:[r] in big letters. The waters have smudged the smaller writing, which is probably for the best. A reading of what's there makes you see red, anyhow.". lgth of soggy love letter is 8. gpos of soggy love letter is 7. rpos of soggy love letter is 3. rgtext of soggy letter is "[rcn][rc][rc][rc][rc][gc][rc][gc]".
 
 understand "dear inga" and "soggy note" as soggy love letter when soggy love letter is visible.
 
@@ -3975,7 +3945,7 @@ instead of doing something with the soggy letter:
 		continue the action;
 	say "You don't really want to get close to it." instead;
 
-the arena dig flier is auxiliary scenery. lgth of dig flier is 8. gpos of dig flier is 8. rpos of dig flier is 1. rgtext of dig flier is "[rc][rc][rc][rc][rc][rc][gc][rc]". description of arena dig flier is "The flier seems like an invitation to an ARENA DIG--perhaps an arena that never got built, or a shindig in some arena. A reading makes you see red."
+the arena dig flier is auxiliary scenery. lgth of dig flier is 8. gpos of dig flier is 8. rpos of dig flier is 1. rgtext of dig flier is "[rcn][rc][rc][rc][rc][rc][gc][rc]". description of arena dig flier is "The flier seems like an invitation to an ARENA DIG--perhaps an arena that never got built, or a shindig in some arena. A reading makes you see red."
 
 the arena dig flier is fixed in place.
 
@@ -4454,7 +4424,7 @@ check climbing fuzzy looking wall:
 
 the neon pig is scenery in Elm Train Terminal.
 
-lgth of neon pig is 7. gpos of neon pig is 3. rpos of neon pig is 7. rgtext of neon pig is "[rc][rc][rc][gc][rc][rc][gc]".
+lgth of neon pig is 7. gpos of neon pig is 3. rpos of neon pig is 7. rgtext of neon pig is "[rcn][rc][rc][gc][rc][rc][gc]".
 
 the op is proper-named privately-named scenery container. understand "opening/recess" as op. the printed name of op is "the opening"
 
@@ -4557,7 +4527,7 @@ check going nowhere in Bassy Abyss:
 
 section beats-beast
 
-the beats are a plural-named backdrop. rgtext of beats is "[gc][gc][gc][rc][rc]". lgth of beats is 5. gpos of beats is 1. rpos of beats is 4. understand "thumping" as beats.
+the beats are a plural-named backdrop. rgtext of beats is "[gcn][gc][gc][rc][rc]". lgth of beats is 5. gpos of beats is 1. rpos of beats is 4. understand "thumping" as beats.
 
 description of beats is "You're sure some idiot would call them funky, but you don't have time for aesthetics."
 
@@ -4580,7 +4550,7 @@ understand "bates" as a mistake ("You don't need to deal with a knife-wielding p
 
 section siren-resin
 
-the siren is scenery in Bassy Abyss. rgtext of siren is "[rc][rc][rc][rc][gc]". rpos of siren is 5. gpos of siren is 3. lgth of siren is 5.
+the siren is scenery in Bassy Abyss. rgtext of siren is "[rcn][rc][rc][rc][gc]". rpos of siren is 5. gpos of siren is 3. lgth of siren is 5.
 
 instead of doing something with the siren:
 	unless current action is progressive:
@@ -4741,7 +4711,7 @@ some warts are a thing. warts are plural-named.
 instead of taking the warts:
 	say "They're kind of stuck on, and you've heard cures like burning make them worse."
 
-description of warts is "You can only feel them--no mirrors around--but they're plenty bumpy.". rgtext of warts is "[rc][rc][gc][rc][rc]". lgth of warts is 5. gpos of warts is 5. rpos of warts is 1.
+description of warts is "You can only feel them--no mirrors around--but they're plenty bumpy.". rgtext of warts is "[rcn][rc][gc][rc][rc]". lgth of warts is 5. gpos of warts is 5. rpos of warts is 1.
 
 some straw is a singular-named thing. "Some straw, too much to lug around in your hands, lies here."
 
@@ -4815,13 +4785,13 @@ the sack is a transparent reversible container. "A sack is here. It's made of so
 
 the sack is flipped-yet.
 
-rgtext of sack is "[rc][gc][rc][gc]". lgth of sack is 4. gpos of sack is 3. rpos of sack is 4.
+rgtext of sack is "[rcn][gc][rc][gc]". lgth of sack is 4. gpos of sack is 3. rpos of sack is 4.
 
 description of the sack is "Sturdy burlap, reading 'a stick it sack'. [if number of things in sack is 0]It's empty[otherwise]In it you see [list of things in sack][end if]."
 
 the cask is a transparent reversible container in roomroom. "You see a plain cask here[if cask is closed]--it seems unbroached[otherwise]--someone has cut a small hole in the top[end if]."
 
-the cask is closed. rgtext of cask is "[rc][gc][rc][gc]". lgth of cask is 4. gpos of cask is 3. rpos of cask is 4.
+the cask is closed. rgtext of cask is "[rcn][gc][rc][gc]". lgth of cask is 4. gpos of cask is 3. rpos of cask is 4.
 
 description of the cask is "It's plain and cedar[if cask is open], with a small hole on top[otherwise], and it seems airtight[end if]. It's engraved WERE-EWER[in-cask]."
 
@@ -5039,14 +5009,14 @@ instead of examining the panel:
 
 the hoots button is a thing. description is "It's on the right, and it's labeled HOOTS.".
 
-rgtext of hoots button is "[rc][rc][gc][rc][rc]". lgth of hoots button is 5. gpos of hoots button is 5. rpos of hoots button is 4.
+rgtext of hoots button is "[rcn][rc][gc][rc][rc]". lgth of hoots button is 5. gpos of hoots button is 5. rpos of hoots button is 4.
 
 the shoot button is a thing. description is "It's on the right, and it's labeled SHOOT.".
 
 understand "sooth" as a mistake ("Close...what you need to do will sooth, in a bit.") when shoot button is visible.
 the trees button is a thing. description is "It's on the left, and it's labeled TREES."
 
-rgtext of trees is "[rc][rc][gc][gc][rc]". lgth of trees button is 5. gpos of trees button is 5. rpos of trees button is 2.
+rgtext of trees is "[rcn][rc][gc][gc][rc]". lgth of trees button is 5. gpos of trees button is 5. rpos of trees button is 2.
 
 the steer button is a thing. description is "It's on the left, and it's labeled STEER."
 
@@ -5200,7 +5170,7 @@ before taking hay:
 
 section hoses-shoes
 
-a pair of hoses are a plural-named thing. "[one of]A familiar pair of hoses lies by the cask. The guards must have forgotten them while, err, celebrating[or]That pair of hoses is still lying around[stopping].". rgtext of hoses is "[rc][rc][rc][gc][gc]". gpos of hoses is 3. rpos of hoses is 5. lgth of hoses is 5.
+a pair of hoses are a plural-named thing. "[one of]A familiar pair of hoses lies by the cask. The guards must have forgotten them while, err, celebrating[or]That pair of hoses is still lying around[stopping].". rgtext of hoses is "[rcn][rc][rc][gc][gc]". gpos of hoses is 3. rpos of hoses is 5. lgth of hoses is 5.
 
 after doing something with hoses:
 	set the pronoun it to hoses;
@@ -5469,7 +5439,7 @@ description of tune is "You should be listening instead.";
 check going nowhere in Kitchen:
 	say "You can only go south to the centrifuge or east[if Trellis is visited] to the trellis[end if]." instead;
 
-the tall trio is a pregredient in Kitchen. rgtext of tall trio is "[gc][rc][rc][rc][rc][rc][rc][rc]". lgth of tall trio is 8. gpos of tall trio is 1. rpos of tall trio is 2.
+the tall trio is a pregredient in Kitchen. rgtext of tall trio is "[gcn][rc][rc][rc][rc][rc][rc][rc]". lgth of tall trio is 8. gpos of tall trio is 1. rpos of tall trio is 2.
 
 understand "chefs/chef/statues/statue" as tall trio.
 
@@ -5597,7 +5567,7 @@ check taking an ingredient:
 	if noun is part of the tortilla:
 		say "Don't futz with your culinary creation." instead;
 
-the cult tee is a pregredient in Kitchen. rgtext of cult tee is "[rc][rc][rc][gc][rc][rc][gc]". lgth of cult tee is 7. gpos of cult tee is 3. rpos of cult tee is 7.
+the cult tee is a pregredient in Kitchen. rgtext of cult tee is "[rcn][rc][rc][gc][rc][rc][gc]". lgth of cult tee is 7. gpos of cult tee is 3. rpos of cult tee is 7.
 
 instead of wearing cult tee:
 	say "You appreciate the drawing, but [if moored is true]it's not warm enough to get you to the moor, and [end if]you never were one for bold t-shirts anyway."
@@ -5616,7 +5586,7 @@ description of the lettuce is "It's green and crispy and healthy and without fla
 instead of eating the lettuce:
 	say "Too plain by itself.";
 
-the skate is a pregredient in Kitchen. rgtext of skate is "[gc][rc][rc][rc][rc]". lgth of skate is 5. gpos of skate is 1. rpos of skate is 2.
+the skate is a pregredient in Kitchen. rgtext of skate is "[gcn][rc][rc][rc][rc]". lgth of skate is 5. gpos of skate is 1. rpos of skate is 2.
 
 description of the skate is "Ice, not roller. [one of]Apparently, it's Kate's. The blade is sharp enough to cut meat, but unfortunately, there's not any around here. Yet. Plus, the blade's probably not clean enough. You don't see any sink around. Never mind[or]It's a meaty question, what an ice skate's doing somewhere this warm[stopping]."
 
@@ -5631,7 +5601,7 @@ after doing something with the spearman:
 	set the pronoun him to the spearman;
 	continue the action;
 
-the cheesy spearman is a male pregredient in Kitchen. "A cheesy spearman is here. Well, he's [i]posed[r] all cheesy.". rgtext of spearman is "[rc][rc][rc][rc][rc][rc][gc][gc]". lgth of spearman is 8. gpos of spearman is 2. rpos of spearman is 8. understand "man" as spearman when spearman is visible. the spearman can be female or male. the spearman is male.
+the cheesy spearman is a male pregredient in Kitchen. "A cheesy spearman is here. Well, he's [i]posed[r] all cheesy.". rgtext of spearman is "[rcn][rc][rc][rc][rc][rc][gc][gc]". lgth of spearman is 8. gpos of spearman is 2. rpos of spearman is 8. understand "man" as spearman when spearman is visible. the spearman can be female or male. the spearman is male.
 
 description of spearman is "[spearman-descrip]".
 
@@ -5673,7 +5643,7 @@ description of Parmesan is "Already grated, for which you are grateful. (Sorry i
 instead of eating the Parmesan:
 	say "Too strong by itself. You could've when you were three. Not now."
 
-the taco is a thing. rgtext of taco is "[rc][rc][rc][rc]". lgth of taco is 4. gpos of taco is 3. rpos of taco is 1.
+the taco is a thing. rgtext of taco is "[rcn][rc][rc][rc]". lgth of taco is 4. gpos of taco is 3. rpos of taco is 1.
 
 check wearing taco:
 	say "The taco is not cereal, and your name is (probably) not Farley Drexel Hatcher. Still, it could become something wearable." instead;
@@ -5697,7 +5667,7 @@ check taking off the coat:
 		say "Nah, you may need to go there." instead;
 	say "It's not making you sweaty. Maybe there'll be a place you need it. [if roomroom is unvisited or Trellis is unvisited]You haven't been everywhere here, yet[else if moor is unvisited]Maybe there's a way out you haven't found--a simple one[end if]." instead;
 
-the bottle of CATHOUSE perfume is a pregredient. "A bottle of CATHOUSE perfume is here.". rgtext of CATHOUSE is "[rc][rc][gc][rc][rc][gc][rc][gc]". lgth of cathouse is 8. gpos of cathouse is 4. rpos of cathouse is 8.
+the bottle of CATHOUSE perfume is a pregredient. "A bottle of CATHOUSE perfume is here.". rgtext of CATHOUSE is "[rcn][rc][gc][rc][rc][gc][rc][gc]". lgth of cathouse is 8. gpos of cathouse is 4. rpos of cathouse is 8.
 
 understand "cat house perfume" as CATHOUSE.
 
@@ -5779,7 +5749,7 @@ understand "heapin/ helpin/" as grist
 
 understand "heapin/ helpin/" as grits
 
-the grits are a plural-named thing. lgth of grist is 5. gpos of grist is 1. rpos of grist is 4. rgtext of grist is "[gc][gc][gc][rc][rc]".
+the grits are a plural-named thing. lgth of grist is 5. gpos of grist is 1. rpos of grist is 4. rgtext of grist is "[gcn][gc][gc][rc][rc]".
 
 rule for deciding whether all includes a thing in fridge: it does not.
 
@@ -5790,7 +5760,7 @@ rule for deciding whether all includes pancake: it does not.
 
 description of grits is "They look more edible than the grits, but you're not THAT hungry right now."
 
-the cake pan is in the fridge. lgth of cake pan is 7. gpos of cake pan is 5. rpos of cake pan is 4. rgtext of cake pan is "[rc][gc][rc][rc][rc][rc][rc]".
+the cake pan is in the fridge. lgth of cake pan is 7. gpos of cake pan is 5. rpos of cake pan is 4. rgtext of cake pan is "[rcn][gc][rc][rc][rc][rc][rc]".
 
 understand "cakepan" as cake pan.
 
@@ -5983,7 +5953,7 @@ ts are plural-named privately-named scenery in tiles. understand "tiles" and "ti
 
 understand "colors" as tiles.
 
-the ts are flippable. gpos of ts is 2. rpos of ts is 1. lgth of ts is 5. the rgtext of ts is "[rc][rc][gc][gc][rc]".
+the ts are flippable. gpos of ts is 2. rpos of ts is 1. lgth of ts is 5. the rgtext of ts is "[rcn][rc][gc][gc][rc]".
 
 description of ts is "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one."
 
@@ -6041,7 +6011,7 @@ the swing is a thing in islet. "You see a rudimentary swing hanging from a tree 
 instead of taking the swing:
 	say "It's tied, and you can't climb to untie it."
 
-description of swing is "The swing is made of twine and hangs from a tree branch high up. You won't get to untie it, but you can see something scratched on the tree.". rgtext of swing is "[rc][rc][rc][rc][rc]". lgth of swing is 5. gpos of swing is 2. rpos of swing is 1.
+description of swing is "The swing is made of twine and hangs from a tree branch high up. You won't get to untie it, but you can see something scratched on the tree.". rgtext of swing is "[rcn][rc][rc][rc][rc]". lgth of swing is 5. gpos of swing is 2. rpos of swing is 1.
 
 understand "twine" as swing
 
@@ -6053,7 +6023,7 @@ section cork - rock
 
 the rock is a thing in islet. "A large-ish rock sits here[if player has wings], but it seems less potentially useful now you have the wings[else] away from the swing[end if]."
 
-description of rock is "It's holey, like a sponge, but not any less dense for that--it's scratched to read FLOAT.". rgtext of rock is "[rc][gc][rc][gc]". lgth of rock is 4. gpos of rock is 3. rpos of rock is 4.
+description of rock is "It's holey, like a sponge, but not any less dense for that--it's scratched to read FLOAT.". rgtext of rock is "[rcn][gc][rc][gc]". lgth of rock is 4. gpos of rock is 3. rpos of rock is 4.
 
 instead of taking the rock:
 	say "It's too heavy. You can't see anything to do with it.";
@@ -6127,7 +6097,7 @@ section poles-slope
 
 the poles are plural-named scenery in woodland. understand "pole" as poles.
 
-description of poles is "They are too vertical [if toeholds are not visible]and smooth [end if]to climb. You can't push them--they look quite sturdy and are at least twenty feet tall--but maybe, if they were at an angle..[if tool shed is visible]. Or you could get a grip somewhere[end if].". lgth of poles is 5. gpos of poles is 5. rpos of poles is 4. rgtext of poles is "[rc][rc][rc][rc][rc]".
+description of poles is "They are too vertical [if toeholds are not visible]and smooth [end if]to climb. You can't push them--they look quite sturdy and are at least twenty feet tall--but maybe, if they were at an angle..[if tool shed is visible]. Or you could get a grip somewhere[end if].". lgth of poles is 5. gpos of poles is 5. rpos of poles is 4. rgtext of poles is "[rcn][rc][rc][rc][rc]".
 
 the slope is scenery.
 
@@ -6141,7 +6111,7 @@ check climbing slope:
 
 section tool shed - toeholds
 
-the tool shed is scenery in woodland. rgtext of tool shed is "[gc][gc][rc][rc][rc][rc][rc][rc]". description of tool shed is "It's metal, with no visible entry or even windows. A forbidding u-lock (a padlock could become an old pack, after all,) is welded to it, just to make sure. You notice outcroppings scattered around the tool shed walls.". lgth of tool shed is 8. gpos of tool shed is 1. rpos of tool shed is 5. understand "toolshed" as tool shed.
+the tool shed is scenery in woodland. rgtext of tool shed is "[gcn][gc][rc][rc][rc][rc][rc][rc]". description of tool shed is "It's metal, with no visible entry or even windows. A forbidding u-lock (a padlock could become an old pack, after all,) is welded to it, just to make sure. You notice outcroppings scattered around the tool shed walls.". lgth of tool shed is 8. gpos of tool shed is 1. rpos of tool shed is 5. understand "toolshed" as tool shed.
 
 the windows are part of the tool shed. the windows are useless and plural-named.
 
@@ -6221,7 +6191,7 @@ description of spore is "It looks too delicate as is to support any weight."
 instead of taking the spore:
 	say "You might crush it in its present form."
 
-rgtext of spore is "[rc][rc][rc][rc][rc]". rpos of spore is 1. gpos of spore is 4. lgth of spore is 5.
+rgtext of spore is "[rcn][rc][rc][rc][rc]". rpos of spore is 1. gpos of spore is 4. lgth of spore is 5.
 
 section sprig - grips
 
@@ -6230,7 +6200,7 @@ the sprig is in woodland. "A sprig of some tree or weed you can't identify is he
 instead of taking the sprig:
 	say "Uprooting it would probably kill it."
 
-rgtext of sprig is "[rc][rc][rc][rc][rc]". rpos of sprig is 1. gpos of sprig is 5. lgth of sprig is 5.
+rgtext of sprig is "[rcn][rc][rc][rc][rc]". rpos of sprig is 1. gpos of sprig is 5. lgth of sprig is 5.
 
 description of sprig is "Very fragile in its present form."
 
@@ -6303,7 +6273,7 @@ check going nowhere in potshot hotspot:
 
 section riot
 
-the riot is plural-named scenery in Potshot Hotspot. lgth of riot is 4. gpos of riot is 4. rpos of riot is 3. rgtext of riot is "[rc][rc][rc][rc]".
+the riot is plural-named scenery in Potshot Hotspot. lgth of riot is 4. gpos of riot is 4. rpos of riot is 3. rgtext of riot is "[rcn][rc][rc][rc]".
 
 instead of taking riot:
 	say "You couldn't even 'take' a few of them.";
@@ -6319,7 +6289,7 @@ description of the riot is "Well, you have to admit, there's a wide variety of p
 
 the protest is privately-named scenery. printed name of protest is "trio".
 
-lgth of protest is 7. gpos of protest is 1. rpos of protest is 6. rgtext of protest is "[gc][rc][rc][gc][gc][rc][rc]".
+lgth of protest is 7. gpos of protest is 1. rpos of protest is 6. rgtext of protest is "[gcn][rc][rc][gc][gc][rc][rc]".
 
 understand "trio" as protest when riot is not visible and tall trio is not visible.
 
@@ -6427,7 +6397,7 @@ to say kicks:
 	if player has gadget:
 		now tagged gadget is in Potshot Hotspot;
 
-the chain links are a plural-named thing. rgtext of chain links is "[rc][gc][rc][rc][gc]". lgth of links is 5. gpos of links is 4. rpos of links is 5. description of chain links is "A bunch of ovular links hooked together. Out of the hands of rioters, it'll cause less achin[']. But they're still more violent things than you'd like, this near your manor."
+the chain links are a plural-named thing. rgtext of chain links is "[rcn][gc][rc][rc][gc]". lgth of links is 5. gpos of links is 4. rpos of links is 5. description of chain links is "A bunch of ovular links hooked together. Out of the hands of rioters, it'll cause less achin[']. But they're still more violent things than you'd like, this near your manor."
 
 understand "chains" as chain links when chain links are visible.
 
@@ -6817,11 +6787,11 @@ description of store b is "It seems to catch a rainbow every now and then, and y
 
 understand "strobe" as a mistake ("You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. You suspect Store B may have better refreshment to add.")
 
-rgtext of store b is "[gc][rc][rc][rc][gc][rc]". lgth of store b is 6. gpos of store b is 1. rpos of store b is 2.
+rgtext of store b is "[gcn][rc][rc][rc][gc][rc]". lgth of store b is 6. gpos of store b is 1. rpos of store b is 2.
 
 the marquee is part of store b. the marquee is auxiliary. description of the marquee is "BERTO'S fine (the rest is cut off.)"
 
-rgtext of marquee is "[rc][rc][gc][rc][rc][rc]". lgth of store b is 6. gpos of marquee is 6. rpos of marquee is 4.
+rgtext of marquee is "[rcn][rc][gc][rc][rc][rc]". lgth of store b is 6. gpos of marquee is 6. rpos of marquee is 4.
 
 the sorbet is an undesc. the sorbet is amusing.
 
@@ -6837,7 +6807,7 @@ store e is a sto. understand "store/ 5/five" as store e.
 
 description of store e is "It's bolted up but seems to be advertising a stereo sale."
 
-store F is a sto. understand "store/ 6/six" as store f. rgtext of store f is "[rc][rc][rc][rc][rc][rc]". lgth of store f is 6. gpos of store f is 6. rpos of store f is 2.
+store F is a sto. understand "store/ 6/six" as store f. rgtext of store f is "[rcn][rc][rc][rc][rc][rc]". lgth of store f is 6. gpos of store f is 6. rpos of store f is 2.
 
 description of store f is "This is odd. It's kind of green on top, brown on the bottom. You smell pine needles and dirt and leaves you can't quite discern[if forest is unvisited]. You think back to the gateway and how you got here. There might be a way to do something to this store[end if]."
 
@@ -6866,9 +6836,9 @@ store h is a sto. understand "store/ 8/eight" as store h. [description of store 
 
 description of store h is "Inside store H you see such a miscellany that you doubt it was successful even in better times."
 
-store I is a sto. understand "store/ 9/nine" as store i. lgth of store i is 6. gpos of store i is 1. rpos of store i is 5. rgtext of store i is "[gc][rc][rc][rc][rc][rc]".
+store I is a sto. understand "store/ 9/nine" as store i. lgth of store i is 6. gpos of store i is 1. rpos of store i is 5. rgtext of store i is "[gcn][rc][rc][rc][rc][rc]".
 
-the Tories are plural-named scenery in trips strip. lgth of tories is 6. gpos of tories is 6. rpos of tories is 5. rgtext of tories is "[rc][gc][gc][rc][rc][rc]". The tories are auxiliary.
+the Tories are plural-named scenery in trips strip. lgth of tories is 6. gpos of tories is 6. rpos of tories is 5. rgtext of tories is "[rcn][gc][gc][rc][rc][rc]". The tories are auxiliary.
 
 description of tories is "A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something."
 
@@ -6892,7 +6862,7 @@ store j is a sto. understand "store/ 10/ten" as store j.
 
 description of store j is "[na]"
 
-store k is a sto. understand "store/ 11/eleven" as store k. rgtext of store k is "[rc][rc][rc][rc][rc][rc]"
+store k is a sto. understand "store/ 11/eleven" as store k. rgtext of store k is "[rcn][rc][rc][rc][rc][rc]"
 
 description of store k is "A peculiar smell of smoke and incense seeps from store k, but that's probably not the BIG reason this place went downhill. No use prying."
 
@@ -6900,7 +6870,7 @@ store l is a sto. understand "store/ 12/twelve" as store l.
 
 description of store l is "You take a peek inside but feel loster and loster as you do."
 
-store M is a sto. understand "store/ 13/thirteen" as store m. rgtext of store m is "[rc][rc][rc][gc][rc][rc]". lgth of store m is 6. gpos of store m is 6. rpos of store m is 1.
+store M is a sto. understand "store/ 13/thirteen" as store m. rgtext of store m is "[rcn][rc][rc][gc][rc][rc]". lgth of store m is 6. gpos of store m is 6. rpos of store m is 1.
 
 store n is a sto. understand "store/ 14/fourteen" as store n.
 
@@ -6926,7 +6896,7 @@ store q is a sto. understand "store/ 17/seventeen" as store q.
 
 description of store q is "[na] There's no secret passage to store u, either."
 
-store R is a sto. understand "store/ 18/eighteen" as store r. rgtext of store r is "[rc][rc][rc][rc][rc][rc]". lgth of store r is 6. gpos of store r is 4. rpos of store r is 2.
+store R is a sto. understand "store/ 18/eighteen" as store r. rgtext of store r is "[rcn][rc][rc][rc][rc][rc]". lgth of store r is 6. gpos of store r is 4. rpos of store r is 2.
 
 description of store r is "It may be the smallest store in the strip. [how-far-along]. You also see a roster in the front door."
 
@@ -6941,7 +6911,7 @@ to say how-far-along:
 		say "Store R is now completely red";
 	say ". You [if you-can-advance]should be able to do something to it like with the other stores[otherwise]probably need to see what's behind at least one other stores first[end if]"
 
-the roster is part of store r. the roster is auxiliary. rgtext of roster is "[gc][rc][gc][rc][rc][rc]". gpos of roster is 1. rpos of roster is 4. lgth of roster is 6.
+the roster is part of store r. the roster is auxiliary. rgtext of roster is "[gcn][rc][gc][rc][rc][rc]". gpos of roster is 1. rpos of roster is 4. lgth of roster is 6.
 
 instead of taking the roster:
 	say "It's taped inside the front door, and besides, it's just there for information."
@@ -6985,7 +6955,7 @@ store x is a sto. understand "store/ 24/twentyfour" as store x.
 
 description of store x is "[na]"
 
-store y is a sto. understand "store/ 25/twentyfive" as store y. rgtext of store y is "[rc][rc][rc][rc][gc][rc]".
+store y is a sto. understand "store/ 25/twentyfive" as store y. rgtext of store y is "[rcn][rc][rc][rc][gc][rc]".
 
 understand "oyster" as a mistake ("Nice try, but that's next game![fake-clue of store y]") when player is in trips strip.
 
@@ -7182,7 +7152,7 @@ check listening to anapest:
 		say "[anapest-clue]" instead;
 	say "[one of]He at least has the meter--what was it again, anapest?--right. 'End of canto,' he says.[or]'Are you reflecting on the inner meaning? Or are you just amazed I have gotten the anapest right in every single line? Even--pff--mathy types who can't count meter right.'[stopping]" instead;
 
-the roadblock is a thing in the moor. "A roadblock that isn't actually blocking any roads lies here. Maybe it can become more useful.". rgtext of roadblock is "[rc][rc][gc][rc][rc][rc][gc][rc][rc]". lgth of roadblock is 9. gpos of roadblock is 5. rpos of roadblock is 1.
+the roadblock is a thing in the moor. "A roadblock that isn't actually blocking any roads lies here. Maybe it can become more useful.". rgtext of roadblock is "[rcn][rc][gc][rc][rc][rc][gc][rc][rc]". lgth of roadblock is 9. gpos of roadblock is 5. rpos of roadblock is 1.
 
 understand "block" as roadblock when roadblock is visible.
 
@@ -7244,7 +7214,7 @@ instead of doing something with the bright red graffiti:
 
 description of bright red graffiti is "DOC OLBARK has chosen to deface this roadblock, in bright red paint, no less."
 
-anapest is scenery in moor. rgtext of anapest is "[rc][rc][gc][rc][rc][rc][gc]". lgth of anapest is 7. gpos of anapest is 4. rpos of anapest is 7. anapest is undesc.
+anapest is scenery in moor. rgtext of anapest is "[rcn][rc][gc][rc][rc][rc][gc]". lgth of anapest is 7. gpos of anapest is 4. rpos of anapest is 7. anapest is undesc.
 
 understand "anapests" as anapest.
 
@@ -7328,7 +7298,7 @@ before giving straw to peasant (this is the straw-peasant rule):
 	now straw is in lalaland;
 	now hay is in sack instead;
 
-a poem is a thing. lgth of poem is 5. gpos of poem is 1. rpos of poem is 2. rgtext of poem is "[gc][rc][rc][rc][rc]". understand "poetry" as poem when poem is visible.
+a poem is a thing. lgth of poem is 5. gpos of poem is 1. rpos of poem is 2. rgtext of poem is "[gcn][rc][rc][rc][rc]". understand "poetry" as poem when poem is visible.
 
 after printing the name of the poem while taking inventory:
 	if smilies are part of the poem:
@@ -7384,7 +7354,7 @@ Include (-
 	has transparent animate
 -) when defining banshee.
 
-the banshee is scenery in Enclosure. rgtext of banshee is "[rc][rc][rc][rc][rc][gc][rc]". lgth of banshee is 7. gpos of banshee is 5. rpos of banshee is 3.
+the banshee is scenery in Enclosure. rgtext of banshee is "[rcn][rc][rc][rc][rc][gc][rc]". lgth of banshee is 7. gpos of banshee is 5. rpos of banshee is 3.
 
 description of banshee is "You can't see him, but you can hear him."
 
@@ -7486,7 +7456,7 @@ Frost Forts is north of Ghouls' Slough. nowhere is south of Frost Forts.
 
 vowels are in Frost Forts. vowels are plural-named and privately-named. "Six large aplastic capitals sway when there is no breeze and stand still when there is."
 
-rgtext of vowels is "[rc][gc][rc][rc][rc][gc]". lgth of vowels is 6. gpos of vowels is 3. rpos of vowels is 6. [describe canister in room better]
+rgtext of vowels is "[rcn][gc][rc][rc][rc][gc]". lgth of vowels is 6. gpos of vowels is 3. rpos of vowels is 6. [describe canister in room better]
 
 understand "a/e/i/o/u" as vowels when player is in frost forts.
 
@@ -7789,11 +7759,11 @@ instead of peelxing bread:
 	otherwise:
 		say "Peeling crust is a bad habit.";
 
-the bread is part of the sandwich. rgtext of bread is "[gc][rc][rc][rc][gc]". lgth of bread is 5. gpos of bread is 1. rpos of bread is 5. the indefinite article of the bread is "some".
+the bread is part of the sandwich. rgtext of bread is "[gcn][rc][rc][rc][gc]". lgth of bread is 5. gpos of bread is 1. rpos of bread is 5. the indefinite article of the bread is "some".
 
 description of bread is "It appears gritty, like a five o'clock shadow. Not mold, more like it was toasted some time ago[if bread is part of sandwich]. It's kind of stuck to the Spam it's covering[end if]."
 
-some Spam is part of the sandwich. rgtext of Spam is "[rc][rc][rc][rc]". lgth of Spam is 4. gpos of Spam is 4. rpos of Spam is 1. Spam is singular-named. the indefinite article of Spam is "some".
+some Spam is part of the sandwich. rgtext of Spam is "[rcn][rc][rc][rc]". lgth of Spam is 4. gpos of Spam is 4. rpos of Spam is 1. Spam is singular-named. the indefinite article of Spam is "some".
 
 understand "meat" as Spam when Spam is visible. does the player mean doing something with Spam: it is likely.
 
@@ -7904,7 +7874,7 @@ instead of eating livers:
 instead of eating Spam:
 	say "The thought of eating Spams gives you a spasm. Eww."
 
-livers are things. description of livers is "Amalgamated well enough that you can't recognize which parts were cow and chicken. You suspect they're an upgrade from the individual livers but need to find out how.". lgth of livers is 6. gpos of livers is 6. rpos of livers is 5. rgtext of livers is "[rc][rc][rc][rc][rc][rc]".
+livers are things. description of livers is "Amalgamated well enough that you can't recognize which parts were cow and chicken. You suspect they're an upgrade from the individual livers but need to find out how.". lgth of livers is 6. gpos of livers is 6. rpos of livers is 5. rgtext of livers is "[rcn][rc][rc][rc][rc][rc]".
 
 understand "glop" and "glob" as livers.
 
@@ -8514,13 +8484,13 @@ instead of taking or attacking the doll house:
 
 description of the doll house is "[if attics are visible]It's much nicer and quieter now that you tacked the attics on[otherwise]You hear static hissing from it. Plus, the doll house isn't nearly as tall as it could be. It could use an extra floor or two[end if]."
 
-the static is reversible scenery in notices section. lgth of static is 6. gpos of static is 3. rpos of static is 1. rgtext of static is "[rc][gc][rc][rc][rc][rc]".
+the static is reversible scenery in notices section. lgth of static is 6. gpos of static is 3. rpos of static is 1. rgtext of static is "[rcn][gc][rc][rc][rc][rc]".
 
 description of static is "It's not especially painful to listen to, but you probably don't have to."
 
 understand "noise" as static when player is in notices section and static is in notices section.
 
-the attics are reversible plural-named scenery. the attics are flippable and flipped-yet. lgth of attics is 6. gpos of attics is 6. rpos of attics is 5. rgtext of attics is "[rc][gc][rc][rc][rc][rc]".
+the attics are reversible plural-named scenery. the attics are flippable and flipped-yet. lgth of attics is 6. gpos of attics is 6. rpos of attics is 5. rgtext of attics is "[rcn][gc][rc][rc][rc][rc]".
 
 understand "attic" as attics when attics are visible or static is visible.
 
@@ -8533,7 +8503,7 @@ section acne-bit cabinet
 
 the acne-bit cabinet is an open openable transparent container in notices section. It is fixed in place. "[one of]It can't be... can it be...? A cabinet floating in mid-air. It looks acne-bit. It's open, too[or]The acne-bit cabinet is still floating [if player is in notices]and squeaking [end if]here[if player is in notices section]. It contains [a list of things in cabinet][end if][stopping]."
 
-rgtext of cabinet is "[rc][rc][rc][rc][rc][rc][gc]". rpos of cabinet is 7. gpos of cabinet is 5.
+rgtext of cabinet is "[rcn][rc][rc][rc][rc][rc][gc]". rpos of cabinet is 7. gpos of cabinet is 5.
 
 the nice bat is a thing. "A nice bat is here, standing on its rear claws."
 
@@ -9270,6 +9240,32 @@ carry out gleaning:
 
 to say sortie-end:
 	say ". It all seems to end with some sort of rocket hitting a huge building. But there is no explosion, just rainbows and bubbles. Weird";
+
+chapter soning
+
+soning is an action out of world.
+
+understand the command "son" as something new.
+
+understand "son" as soning.
+
+carry out soning:
+	say "Handicapped accessibility is [if hc-acc is true]already[else]now[end if] on.";
+	now hc-acc is true;
+	the rule succeeds;
+
+chapter nosing
+
+nosing is an action out of world.
+
+understand the command "nos" as something new.
+
+understand "nos" as nosing.
+
+carry out nosing:
+	say "Handicapped accessibility is [if hc-acc is false]already[else]now[end if] off.";
+	now hc-acc is false;
+	the rule succeeds;
 
 chapter angleing
 
@@ -10054,7 +10050,7 @@ to say book-in-nerds:
 check examining the utterly unreadable book:
 	say "Even the author names are pretentious and important sounding. Think they're worth remembering?";
 	if the player consents:
-		say "[rc]Srs. Ek and Rensskad-Knessard";
+		say "[rcn]Srs. Ek and Rensskad-Knessard";
 	otherwise:
 		say "Hm, yes. The nerds may give a less cryptic hint."
 
@@ -10346,7 +10342,7 @@ to decide whether the current action is progressive:
 		decide no;
 	decide yes;
 
-the spread is flippable scenery. lgth of spread is 6. gpos of spread is 6. rpos of spread is 1. rgtext of spread is "[rc][rc][rc][rc][rc][rc]".
+the spread is flippable scenery. lgth of spread is 6. gpos of spread is 6. rpos of spread is 1. rgtext of spread is "[rcn][rc][rc][rc][rc][rc]".
 
 description of spread is "You feel fear going near the spread. It might lash out at you if you get too close, or if you tried to cut it with [if player has sliver]your sliver[else]something[end if]."
 
@@ -10372,7 +10368,7 @@ instead of doing something with the spread:
 		say "The spread is too large and too heavy. Maybe you can examine it, to figure what to do with it." instead;
 	continue the action;
 
-the red asp is a flippable thing. lgth of red asp is 6. gpos of red asp is 6. rpos of red asp is 1. rgtext of red asp is "[rc][rc][rc][rc][rc][rc]".
+the red asp is a flippable thing. lgth of red asp is 6. gpos of red asp is 6. rpos of red asp is 1. rgtext of red asp is "[rcn][rc][rc][rc][rc][rc]".
 
 description of red asp is "It's fortunately attached to the north side of the enclosure, much like the spread was before you disturbed it. It's fast, mean, vicious and very red, and you'd be no match for it even with [if player has sliver]that sliver[else]a weapon[end if]."
 
@@ -10382,7 +10378,7 @@ Include (-
 
 part sliver-livers-silver
 
-the sliver is a thing. the sliver is flippable. rgtext of sliver is "[gc][rc][rc][gc][gc][gc]". lgth of sliver is 6. gpos of sliver is 1. rpos of sliver is 6.
+the sliver is a thing. the sliver is flippable. rgtext of sliver is "[gcn][rc][rc][gc][gc][gc]". lgth of sliver is 6. gpos of sliver is 1. rpos of sliver is 6.
 
 description of sliver is "Surprisingly sharp and of an odd metal. It could cut something as long as you didn't have to saw much."
 
@@ -10412,7 +10408,7 @@ the Spam is flippable.
 
 part noughts-shotgun
 
-the noughts are a plural-named thing in bubble. understand "naughts" as noughts. rgtext of noughts is "[rc][rc][rc][rc][rc][rc][rc]". lgth of noughts is 7. gpos of noughts is 7. rpos of noughts is 1.
+the noughts are a plural-named thing in bubble. understand "naughts" as noughts. rgtext of noughts is "[rcn][rc][rc][rc][rc][rc][rc]". lgth of noughts is 7. gpos of noughts is 7. rpos of noughts is 1.
 
 understand "0s" and "zeros" and "zeroes" as noughts.
 
@@ -10462,7 +10458,7 @@ carry out fireing:
 
 part shades-dashes
 
-the dashes are a plural-named thing in the shell. the dashes are flippable. rgtext of dashes is "[rc][rc][rc][rc][gc][gc]". lgth of dashes is 6. gpos of dashes is 3. rpos of dashes is 6.
+the dashes are a plural-named thing in the shell. the dashes are flippable. rgtext of dashes is "[rcn][rc][rc][rc][gc][gc]". lgth of dashes is 6. gpos of dashes is 3. rpos of dashes is 6.
 
 the pattern is part of the dashes.
 
@@ -10489,7 +10485,7 @@ to say nose-shades:
 
 part nose-ones
 
-the ones are a plural-named thing in the bucket. the ones are flippable. rgtext of ones is "[rc][rc][rc][rc]". lgth of ones is 4. gpos of ones is 2. rpos of ones is 3.
+the ones are a plural-named thing in the bucket. the ones are flippable. rgtext of ones is "[rcn][rc][rc][rc]". lgth of ones is 4. gpos of ones is 2. rpos of ones is 3.
 
 understand "1s" and "one" as ones.
 
@@ -10561,7 +10557,7 @@ instead of eating beard:
 
 part smilies-missile
 
-description of smilies is "On reflection, the smilies are the centerpiece of the poem. They're not purely happy, but not sarcastic or violent, either. They've had enough and are willing to launch, or be launched, into some great cause, exploding in the face of elitism and excess.". lgth of smilies is 7. gpos of smilies is 2. rpos of smilies is 6. rgtext of smilies is "[rc][rc][rc][rc][gc][rc][rc]".
+description of smilies is "On reflection, the smilies are the centerpiece of the poem. They're not purely happy, but not sarcastic or violent, either. They've had enough and are willing to launch, or be launched, into some great cause, exploding in the face of elitism and excess.". lgth of smilies is 7. gpos of smilies is 2. rpos of smilies is 6. rgtext of smilies is "[rcn][rc][rc][rc][gc][rc][rc]".
 
 the missile is a thing. "A rather soft and cheery looking missile lies here."
 
@@ -10578,7 +10574,7 @@ Include (-
 	has transparent animate
 -) when defining liches.
 
-The liches are scenery in Enclosure. The liches are flippable. rgtext of liches is "[rc][rc][rc][rc][gc][rc]". lgth of liches is 6. gpos of liches is 3. rpos of liches is 1.
+The liches are scenery in Enclosure. The liches are flippable. rgtext of liches is "[rcn][rc][rc][rc][gc][rc]". lgth of liches is 6. gpos of liches is 3. rpos of liches is 1.
 
 understand "lich" as liches
 
@@ -11768,7 +11764,7 @@ understand the command "fill [something]" as something new.
 
 understand "fill [something]" as filling.
 
-the oils are a plural-named thing in sacred cedars. the description of oils is "[if oils are not in cask]You try looking up the spout for a glimpse of the oils, but it doesn't work[otherwise]You can't see through the cask--or its narrow hole very well--but you remember the oils being thick and somewhat golden. You trust they are sacred enough for your job, though[end if].". rgtext of oils is "[rc][if caskfillings is 2][gc][gc][else][rc][rc][end if][rc]". lgth of oils is 4. gpos of oils is 4. rpos of oils is 1. [change to 3 once...]
+the oils are a plural-named thing in sacred cedars. the description of oils is "[if oils are not in cask]You try looking up the spout for a glimpse of the oils, but it doesn't work[otherwise]You can't see through the cask--or its narrow hole very well--but you remember the oils being thick and somewhat golden. You trust they are sacred enough for your job, though[end if].". rgtext of oils is "[rcn][if caskfillings is 2][gc][gc][else][rc][rc][end if][rc]". lgth of oils is 4. gpos of oils is 4. rpos of oils is 1. [change to 3 once...]
 
 understand "oil" as oils when oils are visible.
 
@@ -13870,6 +13866,7 @@ blurb
 "Erich Reich" []
 "Erland Ladner"
 "Ern Renner"
+"Ernesto Sentero"
 "Ernie Neier"
 "Ernst Stern"
 "Errik Riker"
@@ -14252,6 +14249,7 @@ blurb
 "Neryca Carney"
 "Nestor Rosten-Tornes"
 "Nevria Earvin"
+"Nicholas Laschino"
 "Nicola Colina"
 "Nicolas Liscano"
 "Nicolasa Casalino"
@@ -17923,6 +17921,44 @@ carry out foing:
 	try going godir of GGG;
 	consider the notify score changes rule;
 	the rule succeeds;
+
+chapter verif
+
+[ * for use with rules verification extension: TEST X ]
+
+table of verification rules (continued)
+rule-short (topic)	rule-name	rule-description
+"ts"	trips-strip rule	"At trips strip e.g. solved area"
+"sco"	max-reg-score rule	"All solved region scores are maximum"
+"rm"	in-roman-manor rule	"In roman manor"
+"fi"	in-fields rule	"In fields"
+
+this is the in-fields rule:
+	if the player is in self-id fields:
+		the rule succeeds;
+	the rule fails;
+
+this is the max-reg-score rule:
+	let tempbool be true;
+	repeat with REG running through solved regions:
+		if last-loc of REG is visited:
+			if cur-score of REG is not max-score of REG:
+				append "Region [REG] only has [cur-score of REG] of [max-score of REG] points.[line break]" to the file of test results;
+				now tempbool is false;
+	if tempbool is true:
+		the rule succeeds;
+	the rule fails;
+
+this is the trips-strip rule:
+	if the player is in trips strip:
+		the rule succeeds;
+	the rule fails.
+
+this is the in-roman-manor rule:
+	append "Current score = [cur-score of resort] of [max-score of resort].[line break]" to the file of test results;
+	if player is in roman manor:
+		the rule succeeds;
+	the rule fails;
 
 chapter apping
 
