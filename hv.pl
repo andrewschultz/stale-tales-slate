@@ -117,9 +117,11 @@ sub wordit
 sub lookFor
 {
   open(A, "$_[1]") || die ("Can't open $_[1].\n");
+  $line = 0;
   my $foundyet = 0;
   while ($a = <A>)
   {
+  $line++;
   if ($a =~ /^table of/i) { $currentTable = "($a)"; chomp($currentTable); }
   if (($a !~ /^[a-z]/) || ($a =~ /\t/)) { $currentTable = ""; chomp($currentTable); }
   if ($a =~ /$hash/)
@@ -127,7 +129,7 @@ sub lookFor
   if (($myRegion) && ($a !~ /$myRegion/))
   { print "REGION-IGNORING\n$a"; }
   else
-  { if (!$foundyet) { print "Found in $_[1]$currentTable:\n"; } print $a; $foundyet = 1; $anyFound = 1;}
+  { if (!$foundyet) { print "Found in $_[1]$currentTable:\n"; } print "($line) $a"; $foundyet = 1; $anyFound = 1;}
   }
   }
   close(A);
