@@ -24589,6 +24589,7 @@ blurb
 "So atonal. Nasal, too!"
 "So chanty? Yo, STANCH!"
 "A sore arose! O, ears!"
+"Talent of...flat note!"
 "Tenuously lousy tune you lent us."
 "Trololo? Oo, troll!"
 "You sang us agony. Go, un-say!"
@@ -24703,6 +24704,7 @@ blurb
 "An edit? DETAIN"
 "Hark! Redo?' / 'Dark, Hero"
 "If redos, so fired"
+"Inverts, ace? Can't revise antics ever"
 "Last slip? It'll pass"
 "No, rude undoer"
 "No tube to un-be"
@@ -29857,6 +29859,7 @@ blurb
 "Ill, or I Roll"
 "Ill Pun Pullin[']"
 "In Rout to Ruin"
+"In the Now With Neon"
 "In Your Ruin, Yo"
 "Is We Wise"
 "It Rocks So, Trick"
@@ -31628,6 +31631,7 @@ blurb	prio
 "Civilians, I Cavil Sin[r], by Cali Ivins & Lisa Vinci"
 "Clan Dour Cauldron[r], by [if player is male]Conrad Lu[else]Luna Cord[end if]"
 "Clap at a Catalpa[r], by Pat Cala"
+"Clark, Be Blacker[r], by Al Breck"
 "Clarke: a Clerk[r], by Clara Keckler"
 "Clashed Sad Lech[r], by Les Chad"
 "Classify Cy's Fails[r], by Cay Fliss"
@@ -32439,7 +32443,7 @@ blurb	prio
 "Giordano's Grandioso Rigadoons[r], by [if player is male]Dario Song[else]Doris Noga[end if]"
 "Girl Code? Relic, Dog[r], by Eric Gold"
 "The Girl, Lighter[r], by Reg Hilt"
-"Give-All Village[r], by Gail Lev" []
+"Give-All Village[r], by [if player is male]Gil Vela[else]Gail Lev[end if]" []
 "Give Away a Gay View[r], by Ivy Waage"
 "Give Shout This Vogue[r], by [if player is male]Hugo Tevis[else]Sue Voight[end if]"
 "Glaciers['] Cries Lag[r], by Gil Cesar & Ric Gales"
@@ -34811,6 +34815,7 @@ blurb	prio
 "See-Gigs Inn: Genie Sings[r], by Signe Gines"
 "See, Mine Enemies[r], by Enis Mee"
 "See Papa's Apse[r], by Asa Eppes"
+"Seed-Tent Detentes[r], by Ted Steen"
 "Seeding Edges In[r], by Ned Egis"
 "A Seedy Sad Eye[r], by Ed Seay"
 "Seek a Man, Namesake[r], by Sam Keane"
@@ -35290,6 +35295,7 @@ blurb	prio
 "Take Rib, Break It[r], by Kit Baer"
 "Takey Katey, a Tyke[r], by Katt Yeakey"
 "Talc Oils to Lilacs[r], by Callisto Castillo" []
+"Talk Pricy: Trick Play[r], by Kip Cyr-Alt"
 "Talkative Ava Kittle[r], by Alva Keitt" []
 "Tall Poem, Lame Plot[r], by [if player is male]Pat Mello[else]Pam Tolle[end if]"
 "Tall Silos Also Still: All is Lost[r], by Lisa Stoll"
@@ -36242,6 +36248,7 @@ blurb
 "notes [i]Unwary Ryan Wu[r] underlines too much education is never enough."
 "notes all the clever implications in [i]The Pill: Help, [']Til[r]."
 "notes anyone can be tempted, like in [i]Stars Go to Grass[r]."
+"notes that [i]THEM, METH[r], does, indeed, 'h/t me.'"
 "notes the exoticism and down to earthiness of [i]The Ganja, Then a Jag[r]."
 "notes the factual relevance of [i]They Said It's Heady[r]."
 "notes you have to appreciate the down-home candor of [i]Nelson's Lesson'N[r] starring Sol Ness."
@@ -38180,6 +38187,7 @@ blurb
 "I SUNDER RUDE SIN"
 "I'D SLUR LURIDS"
 "I'D STROKE?! DORKIEST! DO STRIKE" []
+"ICY MALT: A CALAMITY"
 "IDLE, EH? TV? THE DEVIL"
 "IDLINGS GILD SIN"
 "IDOLATRY DAILY = ROT"
@@ -38380,6 +38388,7 @@ blurb
 "THUS PRIM TRIUMPHS"
 "TIDY SUM? MIS-DUTY"
 "TO DERP = DE TROP"
+"TO FAPS OFT? SAP"
 "TO HAIL TOIL, AH"
 "TO HAREMS: SHAME! ROT"
 "TO RAP OR TAP = PO['] ART"
@@ -40521,7 +40530,7 @@ blurb
 "If at a fit: FIAT."
 "If in Soho, Shoo!"
 "If shy, fishy!"
-"In the NOW, whine not."
+"In the NOW, whine not." []
 "Industry runs tidy. [']S un-dirty."
 "It is consistent to agree with this book even more on rereading. In fact, if you do not, you read it wrong and wasted time."
 "Less drugged, less grudged."
@@ -41382,6 +41391,7 @@ blurb
 "'Overpays? Say, PROVE!'"
 "'Ow, a gay! Go away!'"
 "'Ow! Ain't...?' / 'Wait on it now, a...'"
+"'Ow, my ears! Easy!' / 'Worm!'"
 "'Ow, no, clod! Cool down!'"
 "'Ow, rat! To WAR!'"
 "'Ow, son!' / 'So? Now swoon on, sow!'"
@@ -43913,6 +43923,7 @@ blurb
 "Engaoled DeAngelo"
 "Engirded Eddinger"
 "Engrosser Roger Ness"
+"Enigma Geiman"
 "Enigmatic Macie Ting"
 "Ensilaged DeAngelis" []
 "Ensnared Andersen"
@@ -48287,6 +48298,7 @@ blurb
 "Tradin[']: Dart in, Darn it[r], by Dr. Tina Ridant" []
 "Trained in Trade[r], by [if player is male]Ira Dent[else]Tia Dern[end if]"
 "Trend Up: Prudent[r], by Red Punt"
+"Try Out as You Start[r], by [if player is male]Ray Stout[else]Toya Rust[end if]"
 "Tussler Results: Rutless[r], by Les Rust"
 "U Sad Bro? Soar, Bud[r], by [if player is male]Rob Suda[else]Ros Daub[end if]"
 "Um, Efforts Must Offer More Stuff[r], by Smet Ruoff" []
@@ -50028,6 +50040,7 @@ blurb
 "Dreymon's Syndrome" []
 "dripstones['] torpidness"
 "Duerson's sounders" []
+"DuFils fluids"
 "Ederra's readers"
 "Egen's Genes"
 "Eisenbarth's breathiness"
