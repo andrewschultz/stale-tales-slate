@@ -28648,6 +28648,7 @@ blurb
 "It Opts to Spit"
 "Jem or Mr. Joe"
 "Joe Bay's Easy Job"
+"Kid of OK Dif"
 "Lab Tot Talbot"
 "Lamia Malia"
 "Lanyard Lad Ryan"
@@ -40387,6 +40388,7 @@ blurb
 "A Host Has To." []
 "In-Touch Count, Hi." []
 "Income Dump Compendium." []
+"Info on the Bein' Raw Wine Bar Webinar."
 "Inside Sets['] Sensitised Tidinesses."
 "Interest'n Internets."
 "Kruschke Chukkers."
@@ -48603,6 +48605,7 @@ blurb
 "Le Bus Blues"
 "Learning to Go Internal"
 "Leave Now a New Love"
+"Let-Down, Dwelt-On"
 "Levantine Valentine" []
 "Lies Sung, Ugliness"
 "Life-Sunk Flunkies"
@@ -51901,7 +51904,6 @@ blurb
 "'Flat-out fat lout! Feca-face! A tool? Total!'"
 "'Frowsy sow-fry!'"
 "'Fruity!' / 'F U I try!'"
-"'Frump face! Creampuff!'"
 "'A gassy gay-[a-word]!'"
 "'Go, ya gayo! Hate a het, frilly lil['] fry!'"
 "The goonies threaten noogies."
@@ -52020,6 +52022,7 @@ blurb
 "'We don't care, coward teen! React? Owned!'"
 "'We're in tune, weenie runt!'"
 "'Weakling! Like Wang!'" []
+"'Whip us, mac? Such a wimp!'"
 "'Why not sedate when teased?'"
 "'Woe-rid, weirdo? Dire!' / 'Ow!'" []
 "'Wotta twat-o!'"
@@ -52081,6 +52084,7 @@ blurb
 "Kindness-sinks? END!"
 "Know math? WHAM! TONK!"
 "Legalize the Noisier ioniser!"
+"The libe BELIETH!"
 "Listen to the Cad-Spot Podcast!"
 "Loud music: um, so lucid!"
 "Maim loser memorials!"
