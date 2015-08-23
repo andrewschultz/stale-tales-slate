@@ -51,6 +51,9 @@ while ($count <= $#ARGV)
   {
   print "$count of $#ARGV: $a\n";
   /beta/ && do { $runBeta = 1 - $runBeta; $count++; next; };
+  /^-bo/ && do { $runBeta = 1; $debug = $release = 0; $count++; next; };
+  /^-do/ && do { $debug = 1; $runBeta = $release = 0; $count++; next; };
+  /^-ro/ && do { $release = 1; $debug = $runBeta = 0; $count++; next; };
   /-f/ && do { $release = $debug = $beta = 0;
     if ($a =~ /r/) { $release = 1; }
     if ($a =~ /d/) { $debug = 1; }
@@ -85,6 +88,7 @@ $infDir = buildDir($_[0]);
 $i6x = i6exe($_[0]);
 
 $beta = "c:\\games\\inform\\beta.inform";
+$betm = "c:\\games\\inform\\beta Materials";
 $base = "c:\\games\\inform\\$_[0].inform";
 
 if ($use6l{$_[0]})
@@ -104,7 +108,7 @@ if ($runBeta)
 {
 print("set HOME=c:\\games\\inform\\beta.inform");
 print "****BETA BUILD****\n";
-system("copy $base\\source\\story.ni $beta\\source\\story.ni");
+
 system("copy $base\\Release.blurb $beta\\Release.blurb");
 system("copy $base\\uuid.txt $beta\\uuid.txt");
 print "Searching for cover....\n";
@@ -127,9 +131,16 @@ system("erase \"c:\\games\\inform\\beta materials/Cover.png\"");
 }
 }
 print "5\n";
-modifyBeta();
+
+modifyBeta("$base\\source\\story.ni", "$beta\\source\\story.ni");
+
 system("\"$infDir/Compilers/ni\" -release -rules \"$infDir/Inform7/Extensions\" -package \"$beta\" -extension=$ex");
-system("\"$infDir/Compilers/cblorb\" -windows $beta/Release.blurb $beta/Build/output.$gz");
+system("\"$infDir/Compilers/$i6x\" -kw~S~D$iflag +include_path=$beta,$beta $beta/Build/auto.inf $beta/Build/output.$ex");
+
+$betaFileShort = getFile("$beta/Release.blurb");
+
+print("\"$infDir/Compilers/cblorb\" -windows $beta/Release.blurb $betm/Release/beta-$betaFileShort");
+system("\"$infDir/Compilers/cblorb\" -windows \"$beta/Release.blurb\" \"$betm/Release/beta-$betaFileShort\"");
 if ($execute) { $execute = 0; `$beta/Release.blurb $beta/Build/output.$gz`; }
 }
 if ($debug)
@@ -159,8 +170,8 @@ if ($execute) { $execute = 0; `$bdir/output.$gz`; }
 
 sub modifyBeta
 {
-  open(A, "$beta/source/story.ni");
-  open(B, ">$beta/source/story.bak");
+  open(A, "$_[0]") || die ("Can't open source $_[0]");
+  open(B, ">$_[1]") || die ("Can't open target $_[1]");
   
   $foundBetaLine = 0;
   
@@ -172,7 +183,6 @@ sub modifyBeta
   close(A);
   close(B);
   if (!$foundBetaLine) { print "Warning: didn't find Beta line!"; }
-  system("copy $beta\\source\\story.bak $beta\\source\\story.ni");
 }
 
 sub i6exe
@@ -195,4 +205,15 @@ if (!$use6l{$_[0]})
 }
 my @altDir = ("c:/program files (x86)/Inform 76L", "d:/program files (x86)/Inform 7");
 for (0..$#altDir) { if (-d "@altDir[$_]") { return @altDir[$_]; } }
+}
+
+sub getFile
+{
+  open(A, "$_[0]") || die ("No blorb file $_[0]");
+  
+  while ($a = <A>)
+  {
+    if ($a =~ / leafname /) { chomp($a); $a =~ s/.* leafname \"//g; $a =~ s/\"//g; return $a; }
+  }
+  return "output.$ext";
 }
