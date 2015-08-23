@@ -145,9 +145,9 @@ a guardian has a room called gualoc.
 
 a guardian has a direction called guadir.
 
-a guardian can be blue, red, white or purple. a guardian is usually purple.
+a guardian can be blue, red, white or purple. a guardian is usually purple. [blue guardians are one minimal path. red are another. white = unnecessary, purple = necessary. Color blends!]
 
-to rulesOn:
+to rulesOn: [used to turn rules on at the very start of play]
 	(- RulesOnSub(); -)
 	
 part random tables
@@ -915,7 +915,7 @@ The describe what's on scenery supporters in room descriptions rule is not liste
 to say email:
 	say "blurglecruncheon@gmail.com";
 
-check taking a fruit (this is the probably archaic debug fruitflips in case rule) :
+check taking a fruit (this is the probably archaic debug fruit-flips in case rule) :
 	say "Oops! You should've taken this fruit when you flipped it. [bug-report]" instead;
 
 instead of waking:
@@ -955,6 +955,8 @@ the-person	yessaying	nosaying
 Elvira	"Don't give in like that!"	"Elvira smirks and shakes her head. Your Just Say No would be no jaunty SOS."
 Gunter	"Agreeing with Gunter probably wouldn't get him to leave."	"You can't out-argue Gunter or change his mind."
 old giant	"Passively agreeing with him might just keep things going ad infinitum. You need to find the right way to ride out the conversation."	"Disagreeing with the giant might make him too mad. You need to find the right way to ride out the conversation."
+macks	"They're so totally wrong, even a sarcastic yes would be just bad."	"Their arguments are too well-constructed for such a simple reject."
+Ed Riley	"He doesn't look terribly agreeable."	"Too direct. He'd just reject you to show you he's no YIELDER."
 
 throw-warn is a truth state that varies.
 
@@ -993,15 +995,19 @@ check examining the player when mrlp is troves:
 	say "[one of]You look into your thoughts, feelings and beliefs. You realize they cannot possibly be as pertinent as whatever Peg A. Page has to say. So you defer to her knowledge[or]Your thoughts lead back to the good book[stopping].[line break]";
 	try examining Pa Egg Pea instead;
 
-the file of roilhints is called "roilhints".
-
-the file of debuggery is called "debug".
+section graphic files
 
 figure graflogo-1 is the file "letters-settler-1.png"
 
 figure graflogo-2 is the file "letters-settler-2.png"
 
 figure yorpwald-1 is the file "yorpwald-1.png"
+
+section external files for testers
+
+the file of roilhints is called "roilhints".
+
+the file of debuggery is called "debug".
 
 section glulxy adjustments
 
@@ -1011,7 +1017,7 @@ use DICT_WORD_SIZE of 12
 
 section compiler non-syntax section
 
-[This is the main section to edit if I get a compiler error not due to syntax. With the 6.33 compiler, Inform should be a bit more descriptive, but just in case, I want to write this in]
+[This is the main section to edit if I get a compiler error not due to syntax. With the 6.33 compiler, Inform should be a bit more descriptive, but just in case, I want to write this in. If something fails, increase from ab0* a(b+1)0*. Or b+2 if I did a lot of work, or whatever.]
 
 use MAX_DICT_ENTRIES of 3000.
 
@@ -1130,7 +1136,7 @@ to say fs:
 to say i-n:
 	say "[if player is male]Ian[else]Nia[end if]"
 
-to say sic:
+to say sic: [for when I totally have to bail out]
 	if player is female:
 		say " (sic) "
 
@@ -1216,7 +1222,7 @@ section sss
 
 sss is a truth state that varies.
 
-every turn when sss is true (this is the show blues rule):
+every turn when sss is true (this is the show blues rule): [this shows everything that looks odd or can be hinted without the player having to type it]
 	if player has settler and sss is true:
 		append ">[the player's command]: [no line break]" to the file of debuggery;
 		show-bluable;
@@ -1450,7 +1456,7 @@ To set the/-- pronoun them to (O - an object): (- LanguagePronouns-->12 = {O}; -
 
 chapter rules-switch
 
-to force-rules:
+to force-rules: [again this is simple I6 stuff so that I can capture errors from When Play Begins]
 	(- debug_Rules = 1; -)
 
 to force-all-rules:
@@ -1696,8 +1702,14 @@ rule for deciding whether to allow undo:
 
 chapter look under
 
+look-under-warn is a truth state that varies.
+
 check looking under:
-	ital-say "looking under is equivalent to SEARCHing unless the game is explicit. That way you can look inside, around and under in just one move. Let's do that now.";
+	if look-under-warn is false:
+		ital-say "looking under is equivalent to SEARCHing unless the game is explicit. That way you can look inside, around and under in just one move. Let's do that now.";
+		now look-under-warn is true;
+	else:
+		say "(just searching instead)[paragraph break]";
 	try searching noun instead;
 
 chapter retry/terry
@@ -1856,6 +1868,10 @@ carry out gotoing:
 		consider the shack-south rule;
 		unless the rule succeeded:
 			do nothing instead;
+	if Leo is in location of player and Leo is eager:
+		say "(Leo and Rand following.)";
+		move Leo to noun;
+		move Rand to noun;
 	if player is in fighter freight: [OYSTER, generic message not enough]
 		say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
 	d "From [progval of location of player] to [progval of noun].";
@@ -1875,13 +1891,13 @@ carry out gotoing:
 		if noun is lectures:
 			say "You have better things to do than think of going back there." instead;
 		say "That's off-limits." instead;
-	if duck is in location of player and duck is friendly:
+	if duck is in location of player and duck is friendly: [TOWERS]
 		say "(The duck follows, with quick-nag quacking, though you're walking pretty fast.)";
 		move duck to noun;
-	if Leo is in location of player and Leo is eager:
-		say "(Leo and Rand following.)";
-		move Leo to noun;
-		move Rand to noun;
+	if player is in inclosure: [OTTERS]
+		elvira-flea;taunt instead;
+	if mrlp is demo dome:
+		say "You rush, despite having nothing urgent to do.";
 	move player to noun;
 	if mrlp is towers and can-see-map:
 		draw-my-loc;
@@ -1992,8 +2008,20 @@ persuasion rule for asking an animal to try doing something:
 
 [routes]
 
-persuasion rule for asking Pat to try doing something:
+persuasion rule for asking church sign to try doing something:
 	say "If it could speak, it'd probably tell you you need to look inside yourself, anyway.";
+	persuasion fails;
+
+persuasion rule for asking the-b to try doing something:
+	say "It's not going to move itself.";
+	persuasion fails;
+
+persuasion rule for asking drama armada to try doing something:
+	say "They're too antsy. But maybe just saying the right word will get them going.";
+	persuasion fails;
+
+persuasion rule for asking Pat to try doing something:
+	say "He seems too despondent to do much of anything.";
 	persuasion fails;
 
 persuasion rule for asking Oscar to try doing something:
@@ -18147,11 +18175,14 @@ instead of doing something with vast vats:
 	say "The vats are far away, but you can smell sulfinyl in them reeking sinfully--no silly fun."
 
 carry out going east in Reclusion Inclosure:
+	elvira-flee-taunt;
+	continue the action;
+
+to elvira-flee-taunt:
 	if do-i-chat is true:
 		say "This should not happen in full release mode, but all you can do is blow the whistle to win." instead;
 	say "You leave her sin shrine before getting a shiner.[paragraph break]Elvira mocks you[one of], but makes no attack[or] again[stopping]: [randbla][paragraph break]";
 	now Elvira-delay is 0;
-	continue the action;
 
 the roarings garrison is amusing scenery in Inclosure. garrison is undesc.
 
@@ -38474,6 +38505,7 @@ table of moralizers [xxu5]
 blurb
 "A. Turnip, Puritan" []
 "Abjured Jeb Radu"
+"Burn-in-Hell Len Hilburn"
 "Abjurer Jae Burr"
 "Act-Naif Fanatic Nia Fact"
 "Admonisher [if player is male]Misha Roden[else]Sandie Rohm[end if]"
@@ -44883,6 +44915,7 @@ blurb
 "No-Drugs Gus Dorn" []
 "No-Ethics [if player is male]Otis Chen[else]Toni Esch[end if]"
 "No-Faces Fonseca"
+"Safe-Con Fonseca" []
 "No-Facts Fast Con Scot Fan"
 "No-Gab Bogan" []
 "'No Girls' Sol Ring" [p]
