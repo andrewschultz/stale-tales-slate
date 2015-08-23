@@ -2671,7 +2671,7 @@ definition: a thing (called xx) is fungible:
 
 fliptoing is an action applying to one visible thing.
 
-carry out fliptoing:
+carry out fliptoing (this is the main flipping rule) :
 	let mything be the player;
 	let got-yet be false;
 	repeat through the table of anagrams:
@@ -2682,7 +2682,7 @@ carry out fliptoing:
 				the rule succeeds;
 			now got-yet is true;
 			say "[from-msg entry][line break]";
-			if the-to entry is not in lalaland:
+			if the-to entry is not in lalaland and the-to entry is not in bullpen:
 				reg-inc;
 				if the-to entry is attics:
 					min-up;
@@ -2696,7 +2696,10 @@ carry out fliptoing:
 				if the-from entry is a backdrop:
 					move the-from entry to lll;
 				else:
-					move the-from entry to lalaland;
+					if the-from entry is reversible:
+						move the-from entry to bullpen;
+					else:
+						move the-from entry to lalaland;
 	if player does not have the noun and noun is not visible:
 		if noun is shoes:
 			move noun to lalaland;
@@ -2720,7 +2723,7 @@ after fliptoing (this is the set pronouns rule) :
 	d "[noun] is now it.";
 	continue the action;
 
-after fliptoing (this is the increase min points rule): [static is taken care of in carry out fliptoing--since you can reflip, it gets tricky]
+after fliptoing (this is the when to increase min points after flip rule): [static is taken care of in carry out fliptoing--since you can reflip, it gets tricky]
 	if noun is nice bat: [STORES]
 		min-up;
 	if noun is grits or noun is pancake: [SORTIE]
@@ -12919,6 +12922,7 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "okrapot"	473725930	sortie	kitchen	--	--	"Aigh! It's a catchy tune, but really, it won't help you figure anything out."
 "fridge"	338266445	sortie	kitchen	--	--	"The fridge is just a fridge."
 "obligatory"	611511337	sortie	kitchen	--	--	"The fridge will always be what it is. Generally what is or was inside is more interesting, anyway."
+"burlap"	346316131	sortie	--	sack	--	"The sack itself seems pliable, but its individual fibers aren't."
 "middle"	332746125	sortie	--	tall trio	--	"[to-trio]."
 "left"	311244862	sortie	--	tall trio	--	"[to-trio]."
 "right"	303308668	sortie	--	tall trio	--	"[to-trio]."

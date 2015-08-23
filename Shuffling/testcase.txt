@@ -1,0 +1,8 @@
+#SHUFFLING AROUND
+#
+#Testcase.txt
+#
+
+This is a text file of test cases that I can and should look at.
+
+--I need to try silver -> sliver, livers -> sliver after pulling out "oneways" and "anagrams" and "anagram" code

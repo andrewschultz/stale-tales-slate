@@ -930,6 +930,8 @@ Instead of saying no:
 		if the-person entry is in location of player:
 			if there is a nosaying entry:
 				say "[nosaying entry]" instead;
+	if mrlp is troves:
+		say "Negative thinking isn't the way to the top, here!" instead;
 	say "[randbla]";
 	rhet-q;
 
@@ -940,6 +942,8 @@ Instead of saying yes:
 		if the-person entry is in location of player:
 			if there is a yessaying entry:
 				say "[yessaying entry]" instead;
+	if mrlp is troves:
+		say "It's not enough to have positive thinking! YOU MUST HAVE PRODUCTIVE POSITIVE THOUGHTS!" instead;
 	say "[randbla]";
 	rhet-q;
 	
@@ -1977,11 +1981,10 @@ persuasion rule for asking the parrot to try giving:
 	say "[if player has whistle]Already got it[else]The parrot shakes its head. You'll have to earn that[end if]." instead;
 
 persuasion rule for asking an animal to try doing something:
+	if noun is spider:
+		say "No...will...power.";
 	if noun is dead flea:
 		say "It's dead.";
-		persuasion fails;
-	if noun is raptor:
-		say "You'd be better off changing it.";
 		persuasion fails;
 	if noun is yak:
 		say "It's far too apathetic.";
@@ -1991,6 +1994,9 @@ persuasion rule for asking an animal to try doing something:
 			say "You aren't sure you want to alert the coevals to the parrot, helpless as it is right now.";
 			persuasion fails;
 		say "The parrot flies around, cocking its head vaguely west.";
+		persuasion fails;
+	if noun is raptor:
+		say "You'd be better off changing it.";
 		persuasion fails;
 	if noun is eels:
 		say "You need to use just one word at the right time.";
@@ -2013,11 +2019,9 @@ persuasion rule for asking church sign to try doing something:
 	persuasion fails;
 
 persuasion rule for asking the-b to try doing something:
+	if the player's command includes "beneath":
+		try fliptoing the-b instead;
 	say "It's not going to move itself.";
-	persuasion fails;
-
-persuasion rule for asking drama armada to try doing something:
-	say "They're too antsy. But maybe just saying the right word will get them going.";
 	persuasion fails;
 
 persuasion rule for asking Pat to try doing something:
@@ -2029,7 +2033,11 @@ persuasion rule for asking Oscar to try doing something:
 	persuasion fails;
 
 persuasion rule for asking Brother Horbert to try doing something:
-	say "Brother Horbert mutters absent-mindedly, maybe hoping YOU can do something for HIM, but too polite to say it.";
+	say "Brother Horbert mutters absent-mindedly he wishes he could do something for you, but not yet.";
+	persuasion fails;
+
+persuasion rule for asking drama armada to try doing something:
+	say "They're too antsy. But maybe just saying the right word will get them going.";
 	persuasion fails;
 
 persuasion rule for asking old giant to try doing something:
@@ -2043,7 +2051,7 @@ persuasion rule for asking Pa Egg Pea to try doing something:
 	persuasion fails;
 
 persuasion rule for asking astute statue to try doing something:
-	say "Trevis Vister would like the thought of someone asking him to do something. Problem is, his answer would be negative.";
+	say "Trevis Vister would like the thought of someone asking him to do something. Problem is, he likes to say no a lot on principle, to feel important.";
 	persuasion fails;
 
 [presto]
@@ -2058,16 +2066,24 @@ persuasion rule for asking a person to try doing something when player is in r24
 
 [oyster]
 
+persuasion rule for asking trolls to try doing something:
+	say "'You know what we'd like YOU to do?' the trolls chuckle.";
+	persuasion fails;
+
 persuasion rule for asking Casper to try doing something:
-	say "Casper doesn't even take orders from his editor sometimes.";
+	say "You're not Casper's publicist or his editor, and they're the only one with a chance of telling him what to do[if recaps are reflexed]. Plus, there was that scraping incident[end if].";
 	persuasion fails;
 
 persuasion rule for asking patrons to try doing something:
 	say "They're here to NOT be ordered around.";
 	persuasion fails;
 
-persuasion rule for asking trolls to try doing something:
-	say "The trolls snicker. You're not going to tell them what to do.";
+persuasion rule for asking scary crays to try doing something:
+	say "You're in no position to tell them what to do.";
+	persuasion fails;
+
+persuasion rule for asking clam to try doing something:
+	say "It doesn't seem to understand commands, but maybe it can bend to niceness.";
 	persuasion fails;
 
 persuasion rule for asking carps to try doing something:
@@ -2078,6 +2094,17 @@ persuasion rule for asking pikes to try doing something:
 	say "Ordering them around won't help. Take action!";
 	persuasion fails;
 
+persuasion rule for asking rude door to try doing something:
+	say "[make-open].";
+	persuasion fails;
+
+persuasion rule for asking rude door to try doing something:
+	say "[make-open].";
+	persuasion fails;
+
+to say make-open:
+	say "[if door-sux is true]It's already doing what you want, but not happily[else]You need to act cleverly to make it less obstreperous[end if]";
+
 persuasion rule for asking Aunt Tuna to try doing something:
 	say "Hard to tell her what to do.";
 	persuasion fails;
@@ -2086,12 +2113,22 @@ persuasion rule for asking Trout to try doing something:
 	say "[if trout is reflexed]You've helped him enough--he needs time to absorb your lessons[else if trout is in range]He doesn't need orders--he needs help[else]You may need to show, not tell, him what to do[end if].";
 	persuasion fails;
 
+persuasion rule for asking haunter to try gotoing collapsed old places:
+	try objasking haunter about ruby instead;
+
+persuasion rule for asking haunter to try gotothinging ruby:
+	try objasking haunter about ruby instead;
+
+persuasion rule for asking haunter to try doing something:
+	if the player's command matches the regular expression "\b(ruby|places)\b":
+		try objasking haunter about ruby instead;
+
 persuasion rule for asking walleyes to try doing something:
 	say "They begin unglibly bullying. You're not in a bargaining position here.";
 	persuasion fails;
 
 persuasion rule for asking yapper to try doing something:
-	say "He scratches his palm absent-mindedly. Or maybe deliberately.";
+	say "He scratches his palm absent-mindedly. Or maybe absent-ethically.";
 	persuasion fails;
 
 persuasion rule for asking ant to try doing something:
@@ -2124,16 +2161,32 @@ persuasion rule for asking a warrior to try doing something:
 	say "Rodney is the one giving the orders, here[if noun is rodney], and he doesn't want to take them from you[end if].";
 	persuasion fails;
 
-persuasion rule for asking trolls to try doing something:
-	say "'You know what we'd like YOU to do?' the trolls chuckle.";
-	persuasion fails;
-
-persuasion rule for asking Casper to try doing something:
-	say "You're not Casper's publicist or his editor, so, no chance of ordering him around[if recaps are reflexed], especially after that scraping[end if].";
-	persuasion fails;
-
 persuasion rule for asking doc-y to try doing something:
 	say "Dr. Yow [if ropins is reflexive]mopes silently. [he-she-c]'s already in prison--no need to order [him-her][else]still looks exhausted from [his-her] ordeal. Maybe you should just let [him-her] be [him-her]self[end if].";
+	persuasion fails;
+
+[here are some shortcuts to solve kid puzzles. I suspect there are more, but we'll see]
+
+persuasion rule for asking smart kid to try gotothinging doc-y:
+	try objasking smart kid about doc-y instead;
+
+persuasion rule for asking smart kid to try gotothinging prison ropins:
+	try objasking smart kid about doc-y instead;
+
+persuasion rule for asking smart kid to try gotoing subsector:
+	try objasking smart kid about doc-y instead;
+
+persuasion rule for asking smart kid to try doing something (this is the block kid to subsector rule) :
+	if the player's command matches the regular expression "gizmo" and kid is reflexive and player has gizmo:
+		try giving gizmo to smart kid instead;
+	if the player's command matches the regular expression "jetski" and kid is reflexive:
+		try objasking smart kid about jetskis instead;
+	if the player's command matches the regular expression "\b(doctor|dr|yow)":
+		if subsector is unvisited:
+			say "You don't know about that area yet.";
+			persuasion fails;
+		try objasking smart kid about doc-y instead;
+	say "The kid is good at mechanical stuff but not so good at following orders.";
 	persuasion fails;
 
 [otters]
@@ -2141,15 +2194,6 @@ persuasion rule for asking doc-y to try doing something:
 persuasion rule for asking Ed Riley to try doing something:
 	say "He wags his finger. You need to find a way to dent his confidence.";
 	persuasion fails;
-
-persuasion rule for asking Elvira to try doing something:
-	say "You've got the word power but not the conversation power.";
-	persuasion fails;
-
-persuasion rule for asking a person to try doing something:
-	if noun is Elmer or noun is Merle:
-		say "Elmer and Merle both blow you off.";
-		persuasion fails;
 
 persuasion rule for asking Le Mer to try doing something:
 	say "You need to communicate less forcefully.";
@@ -2183,6 +2227,10 @@ persuasion rule for asking Gretta to try doing something:
 	say "She's already beset by the macks. Best to help her out with your powers.";
 	persuasion fails;
 
+persuasion rule for asking Elvira to try doing something:
+	say "You've got the word power but not the conversation power.";
+	persuasion fails;
+
 [others]
 
 persuasion rule for asking Curtis to try doing something:
@@ -2190,7 +2238,7 @@ persuasion rule for asking Curtis to try doing something:
 	persuasion fails;
 
 persuasion rule for asking greedy-person to try doing something:
-	say "He's too slick to be ordered around.";
+	say "[if noun is male]He[else]She[end if]'s too slick to be ordered around.";
 	persuasion fails;
 
 persuasion rule for asking Len Craig to try doing something:
@@ -2282,15 +2330,15 @@ to say b:
 to say r:
 	say "[roman type]";
 
+section specifically
+
+Rand-first is a truth state that varies.
+
 to washup-clue:
 	say "[one of]'Us? Whaps?'[no line break][or]'Pah, wuss,'[or]'Haw, puss,'[or]'You'd place last in a saw push,'[or]'I like dat TV show the Upshaws,'[or]'Don't push aws on me,'[or]'Ssh! Up...aw,'[cycling] [noun] says, red-faced. He's not in the mood for deep discussion. But maybe a nice word would help.";
 
 to reason-clue:
 	say "It has NO EARS! Yet it buzzes its name...Sorena A. Norse. The noise makes you see red but lets up when you deduce the bee is a senora.";
-
-section specifically
-
-Rand-first is a truth state that varies.
 
 check objasking it about (This is the check for object information rule):
 	if noun is what-a-bee:
@@ -2306,14 +2354,18 @@ check objasking it about (This is the check for object information rule):
 	if noun is haunter and second noun is ruby:
 		if haunter is reflexive:
 			say "You need to get the haunter to trust you, first." instead;
-		say "You describe the path to take to get to the ruby, neglecting why you know--fortunately, the haunter doesn't seem to care.";
-		try going west;
-		consider the track haunter rule;
-		try going north;
-		consider the track haunter rule;
-		try going west;
-		consider the track haunter rule;
-		the rule succeeds;
+		if player is not in collapsed:
+			say "You describe the path to take to get to the ruby, neglecting why you know--fortunately, the haunter doesn't seem to care.";
+			if player is in anger range:
+				try going west;
+				consider the track haunter rule;
+			if player is in achers' arches:
+				try going north;
+				consider the track haunter rule;
+			if player is in horned hedron:
+				try going west;
+				consider the track haunter rule;
+			the rule succeeds;
 	if noun is Leo or noun is Rand:
 		if noun is fightin:
 			if noun is Rand and Rand-first is false:
@@ -2413,7 +2465,7 @@ Elmo	"You already know about his mission and what he's done to help you. No time
 nestor	"[if store k is visible]'Want...friends...man!'[else]You can't think of a way to ask that without saying WHAT DO YOU THINK YOU'RE DOING, buy you get the impression there's not much to ask.[end if]"
 tokers	"[if store n is visible]'Missing our friend, man!'[else]You can't think of a way to ask that without saying WHAT DO YOU THINK YOU'RE DOING, buy you get the impression there's not much to ask.[end if]"
 lecturer	--
-idg	"'I'm nothing without Max P. Lee's help.' He goes on a bit. How tedious."
+idg	"'I'm nothing without Max P. Lee's help.' He goes on about how and why he is nothing, leaving you wishing he sort of was. How [i]tedious[r]."
 Brother Horbert	"He mentions he cannot do much--the Same Mesa needs magic to undo the curse, but the list-o-toils is on the wall[if list o toils is examined], as you've seen[end if]." [reflex ROUTES]
 old giant	"He is already talking about himself, his complaints, and so forth."
 Oscar	"'I'm just this guy, in this house, with that ashtray [if pipe soot is in adobe]full of nice smelling pipe soot[else]some self-appointed do-gooder cleaned out. Well, I can make more[end if].' Nope, he doesn't seem to have much to say."
@@ -2489,7 +2541,7 @@ passport	--
 
 check asking Curtis about:
 	if second noun is a fruit:
-		say "[if second noun is in lalaland]'Yes, thanks for that.'[else]'That might be a good one to have.'[end if]" instead;
+		say "'[if second noun is in lalaland]Yes, thanks for that, again[else]That'd work well, yeah[end if].'" instead;
 
 to say mon-men:
 	say "'We're Elvira's monster mentors. Making REAL animals. You don't need Eden.' They [if Merle is reflexive][one of]babble a bit about the philosophies of Lhen Yost[or]prissily swear Elsy Noth is ruining kids['] morals[or]pay sycophantic respects to St. Hoylen[or]get all, ETHYLS, NO and make a drinking gesture and wag their fingers[or]discuss how they have to talk shy to Len[or]wonder if they should pull out the ole synth[or]discuss the philosophies of Lytheson[in random order], which leaves you seeing red[else]continue semi-squabbling[end if]."
@@ -2521,7 +2573,7 @@ before objasking doc-y about:
 the basic RQ out of range rule is not listed in any rulebook.
 
 An RQ out of range rule for a number (called max) (this is the modified RQ out of range rule):
-	say "[one of]You murmur 'Umm...urr.' [or][stopping][if Gunter is visible]Gunter yells, 'Flounder, foul nerd!'[else if Elmo is visible]'Evil days.' / 'Ay, devils.' [else if Elvira is visible]You think 'Her slams, harmless. She can't chasten...' then she hits you with the phrase-phaser. You must respond. [end if][bracket][if max is 1]The only response right now is 1[else]Valid responses range from 1-[max][end if]. Type REPEAT to [if max is 1]see it again[else]re-list the options[end if].[close bracket][paragraph break]".
+	say "[one of]You murmur 'Umm...urr.' [or][stopping][if Gunter is visible]Gunter yells, 'Flounder, foul nerd!'[else if Elmo is visible]'Evil days.' / 'Ay, devils.' [else if macks are visible]You're not tricky enough to change the conversation drastically.[else if Elvira is visible]You think 'Her slams, harmless. She can't chasten...' then she hits you with the phrase-phaser. You must respond. [end if][bracket][if max is 1]The only response right now is 1[else]Valid responses range from 1-[max][end if]. Type REPEAT to [if max is 1]see it again[else]re-list the options[end if].[close bracket][paragraph break]".
 
 to say lrduh:
 	say "'I dunno much about that. I like do stuff not think stuff.'";
@@ -2683,7 +2735,7 @@ to say pal-yak:
 
 to say doc-on-lake:
 	if kid is in subsector:
-		say "The kid almost seems to interrupt you with an idea how to get across.";
+		say "The kid almost seems to interrupt you saying the lake isn't THAT far across.";
 		continue the action;
 	if kid is reflexive:
 		say "'It's treacherous to get across the lake. I am too physically tired to make anything[if doc-y is in ropins] even if I escaped[end if]. I could use an apprentice. Maybe you. Or you can find me one.'";
@@ -2717,16 +2769,16 @@ to say ohai-casper:
 
 table of subject-blather	[ask x about thing he knows about] [tosb]
 him-who	person-subj	him-say
-Elmo	settler	"This shouldn't be available."
+Elmo	settler	"This shouldn't be available." [start INTRO]
 nestor	Store N	"'Man, it was actually kind of sort of like fun in there. Until it wasn't.'"
 nestor	tokers	"[if tokers are visible]Nestor gives them a thumbs-up, they cheer drippily, and he cheers back[else]'Dude! Could you magic them back somehow?' he pleads[end if]."
 tokers	Store K	"'Man, it was actually kind of sort of like fun in there. Until it wasn't.'"
 tokers	nestor	"[if nestor is visible]They thank you for finding him[else]They weep at hearing the name of a lost friend[end if]."
 tokers	smoke cloud	"[if cruelest lectures is visited]You know more about it than they do[else]'Er, free reefer!' they say. You'd probably have SOME sort of experience going through those fumes[end if]."
 lecturer	Elvira	"You probably know he's in favor of her."
-idg	lecturer	"A great man. Listen to him, not me."
+idg	lecturer	"A great man. Listen to him, not me." [start STORES]
 idg	Elvira	"She didn't get to her position of power by using DRUGS."
-Brother Horbert	spoon	"'[if spoon is in lalaland]I hope you used it wisely[else]It may help you figure where to go[end if].'"
+Brother Horbert	spoon	"'[if spoon is in lalaland]I hope you used it wisely[else]It may help you figure where to go[end if].'" [start ROUTES]
 Brother Horbert	mantle	"[one of]Brother Horbert shudders a bit[or]Best not to press him[stopping]."
 Brother Horbert	list o toils	"[if l-o-p is unexamined]Why not examine the list yourself?[else if mushrooms are off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]"	[horbert tells about quest items elsewhere]
 Brother Horbert	form	"[if form is off-stage]Brother Horbert mutters something about the gift of second sight.[else]Brother Horbert says, 'If you found the reagents, surely dealing with that form will be easier!'[end if]"
@@ -2743,7 +2795,7 @@ pat	seed pit	"[if pit is reflexive]'IT'S DEEP,' yells Pat.[else]'Well, it didn't
 pat	oscar	"'Him and his filthy pipe. Not welcome here.'"
 pat	giant	"'Probably not good for business.'"
 pat	Brother Horbert	"'He means well, but he can't really HELP us.'"
-plebe	Elvira	"[one of]The plebe looks distinctly uncomfortable but nods. Perhaps they don't agree with Elvira, but their job is to serve and protect, blah blah, especially when intimidated by authority. Hey. Maybe you could be that authority[or]You don't need to ask them again. They, like any good plebe, are intimidated by authority[stopping]."
+plebe	Elvira	"[one of]The plebe looks distinctly uncomfortable but nods. Perhaps they don't agree with Elvira, but their job is to serve and protect, blah blah, especially when intimidated by authority. Hey. Maybe you could be that authority[or]You don't need to ask them again. They, like any good plebe, are intimidated by authority[stopping]." [start PRESTO]
 plebe	Leo	"You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force."
 plebe	Rand	"You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force."
 Rand	yak	"[pal-yak]" [chum=Leo]
@@ -2751,8 +2803,6 @@ Rand	plebe	"[no-plebe]"
 Leo	hogs	"[if phat path is unvisited]You haven't seen any hogs yet.[else if lawl wall is in lalaland]'Dat was fun. You was clever.'[else]'If only you was our size, we could just take [']em. But you ain't. No offense. Maybe you can out-clever [']em like you did us.'[end if]"
 Rand	Leo	"[if Rand is washed up and Leo is washed up]We're washed up, boss. We could use a nice word.[else if Rand is fightin]This is no time for conversation![else]He flashes a thumbs-up at his friend.[end if]"
 Leo	Rand	"[if Rand is washed up and Leo is washed up]We're washed up, boss. We could use a nice word.[else if Leo is fightin]This is no time for conversation![else]He flashes a thumbs-up at his friend.[end if]"
-hogs	Rand	"'They size him up and give a thumbs-down. Then they give you a double thumbs-down. Ouch! No respect.'"
-hogs	Leo	"'They size him up and give a thumbs-down. Then they give you a double thumbs-down. Ouch! No respect.'"
 l-m	volt maze	"[maze-end-clue]."
 m-l	volt maze	"[maze-end-clue]."
 Tom Alvez	volt maze	"[maze-end-clue]."
@@ -2763,9 +2813,9 @@ m-l	Tom Alvez	"[maze-later]."
 Tom Alvez	l-m	"[maze-before]."
 Tom Alvez	m-l	"[maze-before]."
 hogs	popgun	"They snicker at the memory."
+hogs	Rand	"'They size him up and give a thumbs-down. Then they give you a double thumbs-down. Ouch! No respect.'"
+hogs	Leo	"'They size him up and give a thumbs-down. Then they give you a double thumbs-down. Ouch! No respect.'"
 hogs	keys	"They snicker at the thought of you being clever or strong enough to get the keys."
-hogs	Leo	"The hogs smirk and flex a bit, to show they're bigger and stronger."
-hogs	Rand	"The hogs smirk and flex a bit, to show they're bigger and stronger."
 hogs	yourself	"The hogs smirk and flex a bit, to show they're bigger and stronger." [end presto]
 trolls	Casper	"[one of]'A great man! We're sure his books are great, if you have nothing better to do than read. But he LIVED his books.'[or]'Wanna know about him, ask HIM.'[stopping]"	 [oyster]
 trolls	capers	"[if stein is in lalaland][yeah-cute][else]'Hard-hitting stuff, we're sure. He's told us what's in there. Poke at it wrong, you'll upset the man himself.'[end if]"
@@ -2774,7 +2824,7 @@ trolls	tunes	"[if song is in reflexed][yeah-cute][else]'Don't be messing with th
 trolls	gins sign	"[if sign is reflexed][yeah-cute][else]'Lots of people think they're really cute, like they've got something special can make them disobey that sign.'[end if]"
 trolls	stumbler tumblers	"[if sign is reflexed][yeah-cute][else]'Best to cough up some tips in there. For the wait staff.'[end if]"
 trolls	haunter	"[one of]'Hasn't bugged us yet. What, you scared of it? Aww.'[or]Asking again would just make them snicker more.[stopping]"
-patrons	Casper	"'Weirdo. With his books. Even if they're books where people drink a lot."
+patrons	Casper	"'Weirdo. With his books. Even if they're books where people drink a lot." [start OYSTER]
 patrons	trolls	"'They rather keep us in and make us spend more than kick us out.'"
 Casper	haunter	"'I heard it's buried on the other side of the shore. Need to bring it something lost."
 Casper	trolls	"'They are rough and ready types. I will include some of their gritty dialogue in Capers Recaps. With their permission, of course.'"
@@ -2791,7 +2841,6 @@ trout	pikes	"[if player is in range]You can ask about them later. They're pretty
 trout	aunt tuna	"[if carps are visible]The carps are already asking mean questions.[else]She sure is grateful you rescued me.[end if]"
 trout	haunter	"'S-s-s-cary[if trout is reflexive], even after you helped me[end if]!'"
 trout	Casper	"'I don't like his books. Too violent. But Aunt Tuna thinks I read the dirty bits, anyway.'"
-aunt tuna	tea	"'[if tea is in lalaland]It's much better than[else]The stuff you drink? or[end if]...'"
 aunt tuna	tea	"'[if tea is in lalaland]Goodness! I cannot share the recipe[else]Try it! You'll like it[end if].'"
 aunt tuna	pikes	"[bbbullies]."
 aunt tuna	carps	"[bbbullies]."
@@ -2819,7 +2868,7 @@ yapper	sardine	"'Pft, foot soldiers, working for mere salary.'"
 yapper	walleyes	"'Pft, foot soldiers, working for mere salary.'"
 yapper	Casper	"'Too much violence in his books, not enough money making.'"
 yapper	Elvira	"'She's called on the dialer a few times.'"
-salesmen	Nerd-Aid	"The salesmen [one of]are more than happy to talk about Nerd-Aid. They're not nerdy themselves, but they just want to HELP people, because yay tolerance. They [or][stopping]mention [one of]it's much better than that red Rind-Ade, and if you ask again, they'll tell you who endorses Nerd-Aid[or][endorse-aid][cycling]."
+salesmen	Nerd-Aid	"The salesmen [one of]are more than happy to talk about Nerd-Aid. They're not nerdy themselves, but they just want to HELP people, because yay tolerance. They [or][stopping]mention [one of]it's much better than that red Rind-Ade, and if you ask again, they'll tell you who endorses Nerd-Aid[or][endorse-aid][cycling]." [start TOWERS]
 kid	doc-y	"[if kid is lonely and doc-y is in ropins]'I heard [he-she] was imprisoned. But I'd love to learn from [him-her].'[else if kid is lonely][one of]'Wow! You rescued [him-her]? You're almost as awesome as [he-she] is!' [kid-fol][or]'Tell me something I don't know. Or get Dr. Yow to. No offense'[stopping][else if kid is following]'I wanna see Dr. Yow!'[else][he-she-c]'s zoned you out, what with Dr. Yow [around-gone].[end if]"
 kid	jetskis	"'Man, I'm learning to build stuff! [if jetskis are off-stage]Like jetskis! [end if]But I need someone to try them.'"
 kid	keycar	"'I'd love to make one of them! But that man said I wasn't grown up enough.'"
@@ -2861,8 +2910,8 @@ sly imp	Elvira	"'Oh, you know her too? Of course you don't! If you did, you'd kn
 whiners	Elvira	"They bang on about how Elvira would be furious if they let someone see the animals to the south."
 Elmer	Elvira	"'She is a great leader. You do not deserve to visit her to the west.'"
 Gretta	Elvira	"[if macks are visible]Gretta cringes even more at hearing Elvira's name, but she can't do much with those macks around, and neither can you[else]You are already talking about Elvira[end if]."
-Merle	Elvira	"'She is a great leader. You do not deserve to visit her to the west.'" [end otters]
-curtis	rampage note	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'"
+Merle	Elvira	"'She is a great leader. You do not deserve to visit her to the west.'" [end OTTERS]
+curtis	rampage note	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'" [start OTHERS]
 curtis	mopeage rant	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'"
 curtis	Art Erd	"[one of]Curtis breathes deeply and gives a look of contempt and shakes his head[or]No point asking again[stopping]. Curtis probably doesn't want to know if any fruit came from [him-her]."
 Art Erd	curtis	"'There's people with silly science ideas like him, then there's businessmen like ME. Pfft.'"
@@ -2870,7 +2919,7 @@ Art Erd	storage box	"'[if storage box is in scape space]It's...umm...worth somet
 Art Erd	len craig	"'Nicely? Len? Icy!' he mutters. 'Cut Len's cluster...'"
 len craig	curtis	"[one of]'Nice fella, lots of ideas about agriculture, but no business sense. Just sits looking for someone to do his dirty work for him. You don't...'[or]You don't want to admit Curtis has you gofering. Though, really, it's been not too bad, with your powers.[stopping]"
 len craig	tekno-token	"[if tekno-token is off-stage]'We accept tekno-tokens, yes.'[else][one of]He inspects the token and says it's valid[or]If you ask again, Len might question its validity[stopping].[end if]"
-len craig	Art Erd	"Len snorts and shakes his head. 'What a weasel.'"
+len craig	Art Erd	"Len snorts and shakes his head. 'What a weasel.'" [end OTHERS]
 
 check objasking about Dr Tera when player is female:
 	try objasking noun about Art Erd instead;
@@ -2952,11 +3001,6 @@ check objasking len craig about a fruit:
 		say "'A fine fruit, but I don't deal in that. Maybe someone else does.'";
 	the rule succeeds;
 
-check objasking curtis about a fruit:
-	if second noun is in lalaland:
-		say "'Yes, thanks, it'll be useful.'" instead;
-	say "'Hm, yes, I could use one of those.'" instead;
-
 to say no-plebe:
 	say "'I respect da military too much to push him outta da way. Plus I can't yell clever neither.'"
 
@@ -3029,7 +3073,7 @@ topic	right-region	him-say
 "yorpwald"	--	"That might suck you into a boring discussion about politics. Or, worse, an exciting one."
 "old/ man/ almond"	--	"Asking about him might blow your cover."
 
-to decide which number is kid-moves: [hacky but simple and easy to prove. Inapt/swarm = force you 2W. SWSE or WSSE are only possible 4-movers. 2 + how many squares east you must go.]
+to decide which number is kid-moves: [hacky but simple and easy to prove. Inapt/swarm = force you 2W. SWSE or WSSE are only possible 4-movers. 2 + 2 * how many squares west you must go to go all the way south.]
 	if ego drains are in lalaland:
 		decide on 2;
 	if inapt is not in lalaland:
@@ -3124,8 +3168,6 @@ does the player mean reading last-read when last-read is visible: it is likely.
 
 instead of doing something with red writing:
 	if current action is examining or current action is reading:
-		if player is in solo den:
-			say "GYDIN['] in big red letters." instead;
 		if number of readable things is 0:
 			say "No red writing around here on anything." instead;
 		if number of readable things is 1:
@@ -13219,28 +13261,6 @@ a-text of smart kid is "YRRYRRYRY". b-text of smart kid is "YRRYRPGPG".
 
 talking to doc-y is kiddoing.]
 
-persuasion rule for asking smart kid to try gotothinging doc-y:
-	try objasking smart kid about doc-y instead;
-
-persuasion rule for asking smart kid to try gotothinging prison ropins:
-	try objasking smart kid about doc-y instead;
-
-persuasion rule for asking smart kid to try gotoing subsector:
-	try objasking smart kid about doc-y instead;
-
-persuasion rule for asking smart kid to try doing something (this is the block kid to subsector rule) :
-	if the player's command matches the regular expression "gizmo" and kid is reflexive and player has gizmo:
-		try giving gizmo to smart kid instead;
-	if the player's command matches the regular expression "jetski" and kid is reflexive:
-		try objasking smart kid about jetskis instead;
-	if the player's command matches the regular expression "\b(doctor|dr|yow)":
-		if subsector is unvisited:
-			say "You don't know about that area yet.";
-			persuasion fails;
-		try objasking smart kid about doc-y instead;
-	say "The kid is good at mechanical stuff but not so good at following orders.";
-	persuasion fails;
-
 check scaning smart kid:
 	if smart kid is reflexed:
 		say "'Oh! Pf! I bet I could make one of those, easy." instead;
@@ -15339,7 +15359,7 @@ carry out insideing:
 after looking in Cleric Circle:
 	if number of held quest-items is 3:
 		now all quest-items are in lalaland;
-		say "'You have all the reagents! Wonderful!' The priest gains esprit. 'Mixture...mixture...true mix! To censor crones like the Spiter Sprite and repeal the red orb border, changing the moronic omicron to dreamiest diameters, nag ol['] No-Gal Logan beyond an un-road to dig an urn during an... rarify this friary ... act divine. Vindicate.' He rushes off.[paragraph break]No-Gal Logan. That's an odd name. You write it down.";
+		say "'You have all the reagents! Wonderful!' The priest gains esprit. 'Mixture...mixture...true mix! To censor crones like the Spiter Sprite and repeal the red orb border, changing the moronic omicron to dreamiest diameters, nag ol['] No-Gal Logan beyond an un-road to dig an urn during an... rarify this friary ... act divine. Vindicate.' He rushes off to a private office.[paragraph break]No-Gal Logan. That's an odd name. You write it down.";
 		pad-rec "No-Gal Logan";
 		now Brother Horbert is in lalaland;
 		pad-del "reagents";
@@ -19330,16 +19350,6 @@ check answering haunter that (this is the ruby answer rule):
 	if the player's command includes "ruby":
 		try objasking haunter about ruby instead;
 
-persuasion rule for asking haunter to try gotoing collapsed old places:
-	try objasking haunter about ruby instead;
-
-persuasion rule for asking haunter to try gotothinging ruby:
-	try objasking haunter about ruby instead;
-
-persuasion rule for asking haunter to try doing something:
-	if the player's command matches the regular expression "\b(ruby|places)\b":
-		try objasking haunter about ruby instead;
-
 understand "sausage" as haunter.
 
 understand "ghost" as haunter when haunter is visible.
@@ -19362,7 +19372,7 @@ every turn (this is the track haunter rule):
 				say "[line break]The walleyes spout yea-wells. Their toothy cackling becomes toothy clacking as the haunter hovers over you protectively.";
 				the rule succeeds;
 			if location of player is Old Places:
-				say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Hedron now. Well, once you find where to disarm it.";
+				say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Hedron now. [if o-t is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].";
 				now walleyes are in lalaland;
 				now haunter is in lalaland;
 				now thin hint is in lalaland;
@@ -58160,4 +58170,4 @@ volume spare ideas
 				replace the text "G" in temptext with "Y";
 				replace the text "P" in temptext with "R";
 				change b-text of Z to "[temptext]";
-				[say "[Z]: [b-text of Z] -> [temptext].";]]
+				[say "[Z]: [b-text of Z] -> [temptext].";]]]
