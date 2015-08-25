@@ -13856,8 +13856,10 @@ blurb
 "Darian Adrian" []
 "Daril Laird"
 "Darius Suradi"
+"Darko Rodak"
 "Darla Ardal"
 "Darleen Anderle"
+"Darline Reiland"
 "Darlon Landor" []
 "Darrel Radler"
 "Darren Radner"
@@ -14345,6 +14347,7 @@ blurb
 "Nikita Kitani"
 "Nikole Olenik"
 "Nita Tian"
+"Noble LeBon"
 "Noella Anello"
 "Noemi Mineo"
 "Nora Roan"
@@ -14679,6 +14682,7 @@ blurb
 "Yves Sevy"
 "Zaid Diaz"
 "Zana Naaz"
+"Zander DeZarn"
 "Zerina Arinze" []
 "Zino Zion"
 "Zofia Fazio"
@@ -15107,6 +15111,7 @@ blurb
 "Floor mat. Flat room. Oft moral."
 "Florid old fir! Lord, if..."
 "Flow also so fallow, fool laws!"
+"Flow, drip, word-flip, wild prof!"
 "The flu, uh, left elf hut!"
 "Flustered, rudest elf!"
 "Fly, crow! Cry Wolf!"
@@ -15370,6 +15375,7 @@ blurb
 "Lost knee, skeleton? Not sleek!" []
 "Louts rue our lutes['] true soul."
 "Love fear? Leave for Oval Reef! Loaf, ever!"
+"Lover, east to several elevators!"
 "Lure-hit, Luther, I lie hurt."
 "'M'sieur?' Um, Sire, I'm sure!"
 "Ma's uproar: paramours-spur aroma."
@@ -15546,6 +15552,7 @@ blurb
 "Oy, scars so scary. Ay, cross."
 "Pa, I club a public bail cup."
 "Palm lines, spill name! Smell pain!"
+"Pass, dark sad parks, pads, arks."
 "Passed out. Update: SOS. Ousted, sap!"
 "Pastoral, oral spat. Also trap."
 "Pater's repast tapers."
@@ -16609,6 +16616,7 @@ blurb
 "'Don't lose, dolt-nose!' he mutters."
 "'Evasion so naive!'"
 "'Fade until in default, failed nut!'"
+"'Fail now, low naif wan foil!'"
 "'Feel my too-plain pain tool! Optional? Oi, pal! NOT!'"
 "'Feints--finest? Intense? Stiff!'" []
 "'A fight? Ha, gift!'"
@@ -16677,6 +16685,7 @@ blurb
 "'So, REP, poser!'" []
 "'So thin? No hits shot in!'"
 "'Spar? Tut, upstart!'"
+"'Step to me, mote-pest? Meet STOP!'"
 "'Strike, cad? Sidetrack!'"
 "'Stud? NO! Dust on donuts!'"
 "'Succumb, scum-cub!'"
@@ -16687,8 +16696,10 @@ blurb
 "'Turn, dire intruder!'"
 "'Turn, runt!'"
 "'Up, panderer! Unprepared pauper nerd!'"
+"'Verbal games? Grave blames!'"
 "'Virulent evil runt!'"
 "'Whip met the wimp!'"
+"'Wordplay's low, dry sap!'"
 "'Yep, Bull!' He points at you. 'Belly up!'"
 "'Yo, mite! Omit ye!'"
 "You need actions as tonic but think 'I so can't.' You're not coastin[']."

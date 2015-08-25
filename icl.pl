@@ -69,7 +69,11 @@ while ($count <= $#ARGV)
   /-a/ && do { for $entry(@allProj) { runProj($entry); } $count++; next; };
   if ($proj{$a}) { $myProj = $proj{$a}; }
   elsif ($proj{"-$a"}) { $myProj = $proj{"-$a"}; }
-  else { die("No project for $proj.\n"); }
+  else {
+  $myProj = "";
+  for $q (keys %proj) { if ($proj{$q} eq "$a") { $myProj = $a; } }
+  if (!$myProj) { die("No project for $proj.\n"); }
+  }
   $infDir = @inDirs[$v6l];
   runProj($myProj);
   $count++;

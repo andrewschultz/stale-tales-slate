@@ -11,7 +11,7 @@ The new Inform IDE may allow you to search this way, too. For A Roiling Original
 You can place a bracket before any of the other text chunks below to search. They're ordered in approximate priority I used and how often I searched for them.
 TOA = the table of big point scoring changes, table of anagrams
 TOH = table of hint logic
-TON = nudge for good guesses
+TON = nudge for good guesses (note: the subsection for each store has its letter after it e.g. tonw = store w) and TON- is the end.
 TSH = specific help for specific items you have the right anagram for
 TMC = mega-chatter, which logs all the tables I search lists for
 TAF = after-texts, which logs everything said after scanning stuff. Used to help clue the player if something is confusing, whether it's a question mark or vowels/consonants not lining up
@@ -3224,11 +3224,26 @@ singed design	"The singed design on the [if player has coins or player has s-c]c
 
 book quips
 
-section artistic
-
-section quip-text
+[added this to check if a quip is gone-through. Artistic is not used, but yeah...]
 
 a quip can be mowered, artistic or dormant. a quip is usually dormant.
+
+section debugging
+
+[this checks to see if lawnmowering worked. What is left over?]
+
+to lawnmower (mytab - a table-name) :
+	if debug-state is false:
+		continue the action;
+	let mower be true;
+	repeat through mytab:
+		if response entry is not mowered:
+			say "DEBUG: Did not touch [response entry]: [prompt entry][line break]";
+			now mower is false;
+	if mower is true:
+		say "DEBUG: Lawnmowering worked.";
+
+chapter quip-variable-text
 
 to say satchel-extra:
 	if satchel is bscanned:
@@ -3241,6 +3256,10 @@ to say mo-data:
 	say "[one of]More data[or]Even more data[or]Ok, lots of stuff to look at[stopping]";
 
 last-yays is a number that varies.
+
+section settler color deduction text
+
+[some of these are blank in case I decide to add another clue]
 
 to say current-known:
 	let yays be 0;
@@ -3417,7 +3436,7 @@ this is the got-z rule:
 	the rule fails.
 
 table of known-letters
-my-let	my-rule	v-c-y
+my-let	my-rule	v-c-y [vowel=2 consonant=1 Y=3]
 " A"	got-a rule	2
 " B"	got-b rule	1
 " C"	got-c rule	1
@@ -3452,6 +3471,20 @@ y-orange is a truth state that varies.
 to say y-know:
 	now y-orange is true;
 
+section gretta
+
+gre-go-warn is a truth state that varies.
+
+to say gre-other:
+	say "[if gre-what-quip is mowered]Remember[else]I didn't tell you[end if] her army can't leave the bulwark...yet. And she won't. [if gre-east-quip is mowered]You may need help from other than people[else]The animals I told you about--they could do something[end if]";
+
+to say note-gretta:
+	unless gretta-quip is mowered:
+		say "'Oh, you should know--Gretta Garett-Tatger, the journalist, has become a target--sorry about that--for looking into Elvira's operations. Gretta may've left a hint in the Strip of Profits, and she may have something for you, if you find her. So, um, yeah, good idea, write that down.'[paragraph break]";
+		pad-rec-q "Gretta";
+
+section quip random useless fun text
+
 [the part-list takes from 5x+1 to 5x+(fi-1)%5 + 1 & is useful for when I want to display a few things at once. The 5 is for when I need 2 short lists.]
 
 to say part-list of (tt - a table-name) and (fi - a number):
@@ -3459,11 +3492,6 @@ to say part-list of (tt - a table-name) and (fi - a number):
 	repeat with idx running from lonum to fi:
 		choose row idx in tt;
 		say "[if idx is fi and idx > lonum]and [end if][blurb entry][if idx < fi - 1], [end if]";
-
-to say note-gretta:
-	unless gretta-quip is mowered:
-		say "'Oh, you should know--Gretta Garett-Tatger, the journalist, has become a target--sorry about that--for looking into Elvira's operations. Gretta may've left a hint in the Strip of Profits, and she may have something for you, if you find her. So, um, yeah, good idea, write that down.'[paragraph break]";
-		pad-rec-q "Gretta";
 
 to say biop of (ts - a truth state):
 	repeat through table of biopics:
@@ -3487,22 +3515,17 @@ to say check-started-yet:
 		increment prefigs;
 	if prefigs is 4:
 		say ". Everything you tried will probably work now";
-		continue the action;
-	if prefigs is 3:
+	else if prefigs is 3:
 		say ". You may be able to do a lot in the [if southfigs is 1]pool[else]barn[end if], now";
-		continue the action;
-	if prefigs is 2:
+	else if prefigs is 2:
 		say ". You made [if southfigs is 1]some progress to the north and south[else if southfigs is 2]progress to the south[else]progress to the north[end if]";
-		continue the action;
-	if prefigs is 1:
+	else if prefigs is 1:
 		say ". Maybe you can go back to the [if p-2 is prefigured or ghoul hat is prefigured]barn[else]pool[end if] and do some work now";
-		continue the action;
-
 
 table of quip texts (continued)
 quip	quiptext
 null-quip	"This shouldn't be part of the conversation."
-summary-quip	"'Must I sum it? It's, um...' / 'Condense it.' / 'So indecent.'[paragraph break]Gunter glosses over your successes in the forest (store F,) the sortie (store I,) and the metros (store M) and how anyone with a little dorky thinkery could've done it, but whatever. Then he gets to Elvira. How before she arrived, Yorpwald was a bit boring, but now it has more reality shows, advertisers and loud opinions than ever.[paragraph break]And how--well, she pointed out it was nice of you to save Yorpwald the first time, but a bunch of pedants looked through dictionaries to ensure there wasn't much left TO change. And how your choosing not to be A Personality was suspicious for sure. And how SHATTER-THREATS would check the anagrammability of stuff so Red Bull Burdell wouldn't happen again. Plus you never helped create cool new slang. But you, of all people, are most likely to form a polit-i-plot. He ends with a yawny anyway, mentioning how liking Elvira is what makes us different from animals, and you should totally write that in your pedanto-notepad.[paragraph break]You already sort of knew this, but Elvira seems to want you out of the way, seriously. As to Gunter, you'll probably annoy him equally by turning him out (if you want to get on with things) or failing to agree with all he has to say."
+summary-quip	"'Must I sum it? It's, um...' / 'Condense it.' / 'So indecent.'[paragraph break]Gunter glosses over your successes in the forest (store F,) the sortie (store I,) and the metros (store M) and how anyone with a little dorky thinkery could've done it, but whatever. Then he gets to Elvira. How before she arrived, Yorpwald was a bit boring, but now it has more reality shows, advertisers and loud opinions than ever.[paragraph break]And how--well, she pointed out it was nice of you to save Yorpwald the first time, but a bunch of pedants looked through dictionaries to ensure there wasn't much left TO change. And how your choosing not to be A Personality was suspicious for sure. And how SHATTER-THREATS would check the anagrammability of stuff so Red Bull Burdell wouldn't happen again. Plus you never helped create cool new slang. But you, of all people, are most likely to form a polit-i-plot. He ends with a yawny anyway, mentioning how liking Elvira is what makes us different from animals, and you should totally write that in your pedanto-notepad.[paragraph break]You already sort of knew this, but Elvira seems to want you out of the way, seriously. As to Gunter, you'll probably annoy him equally by turning him out (if you want to get on with things) or failing to agree with all he has to say." [start GUNTER text]
 powers-quip	"'Humble-brag, bumbler? Agh! Snake oil. So like an aloneski! You could ply a word! Change Yorpwald from untied to united! Change clover to Velcro! Noughts to a shotgun! Words, no sword! Aarg. Man. With whatsits.'"
 necro-quip	"'No rec!' Gunter goes from dynamic to [d-word] icy, flashing an off-grace frog face. A pouty payout![paragraph break]'You irk, heel. You LIKE her? I can't can it! What she did...shaded with...'[paragraph break]'No, glib goblin! The slob lobs BS, lo! Poisonin['] Opinions! That BS idea abides, biased!' Gunter glosses over Blue Frog Urbfogel, Bugler of Foulberg, and how he beat up monsters that came back anyway til he could beat her up? Talked to people who knew where hidden items like the horn-o-honor and gavel of Fogvale were. It was rigged! Now, with her dynamite, tidy name, oh, the soaring signora! Her vast harvest, her mystic chemistry-, her tact-chatter. Her lean elan's made Yorpwald go real galore--be aliver--a praised paradise--with her ReaLiv initiative for the Sunnier Unrisen Inner Us! From arsey years to so sane season! Had us voting her overnight the roving virgo then! Became a rowdy pal! Yorpwald was old, warpy, but now it's more wordy, pal! A Yapworld and Payworld! Oh, her good deeds!'"
 clown-quip	"Scathing sigh. 'Can't.'[paragraph break]Yet she's an a-lister realist. To suggest such a reform-former is a viler...it was censor-crones who tried to quiet HER, the defamed made def! You're probably upset she pointed out anyone with your powers would've figured what to do...eventually...unless they got bored. But she is a wonder. You're a downer.'"
@@ -3519,8 +3542,8 @@ girls-quip	"You listen about [twiddle of table of elmo emo and 3]. No friend fin
 weather-quip	"That's always a safe one. You say 'How [']bout that weather, geez,' not realizing you haven't gotten out enough to know if it's been too hot, cold, rainy or dry. But fortunately, you haven't gotten out enough to remember those details don't matter.[paragraph break]Elmo seems ready to listen to deeper concerns, even if they probably aren't germane to what you need to do."
 sports-quip	"Sports banter follows.[paragraph break][twiddle of table of sports chatter and 2]'Chokers.' / 'Shocker.'"
 artsy-quip	"'Where do I look?'[paragraph break]'Spry prys say end of the alphabet. The start's tourist traps. Especially the sortie and forest and metros you solved. The tour guides are a bit, uh, revisionist.'[paragraph break]'What's the bare mi...uh, most efficient way through?'[paragraph break]'Well, stores U and V at the Strip seem the most easy. P is not too bad. Y--well, lots to do but it's simple. W is--I can't quite describe it. T--you might be weak when you get there.'"
-leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [if player is female]wo[end if]man! Ego hurt? Er, tough!'[paragraph break]Gunter pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manor.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'"
-curb-quip	"'It's not your fault you didn't have a super perfect story when you rescued Yorpwald. That's the fault of -- someone above -- if they even exist. Maybe if you fix what's wrong here, it'll be a more compelling story and pontificators won't turn against you. Or get bored.' Elmo turns to the fourth wall. 'Or have an excuse to pretend they're bored.'"
+leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [if player is female]wo[end if]man! Ego hurt? Er, tough!'[paragraph break]Gunter pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manor.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end GUNTER text]
+curb-quip	"'It's not your fault you didn't have a super perfect story when you rescued Yorpwald. That's the fault of -- someone above -- if they even exist. Maybe if you fix what's wrong here, it'll be a more compelling story and pontificators won't turn against you. Or get bored.' Elmo turns to the fourth wall. 'Or have an excuse to pretend they're bored.'" [start ELMO text]
 interr-quip	"'Information on the Strip of Profits. It's thriving now. People buy stuff from the stores! They're so occupied, they won't notice YOU! But I think you've got a trial trail ahead. Elvira's got her toy theory started. About you being bad for Yorpwald.'"
 toy-theory-quip	"You've sort of heard it, and you've sort of thought it, but yeah. She really did backhand-compliment you (big deal, boring mathy stuff, not a SHRED of excitement, but you did the job, she guessed) while saying people needed someone more exciting to mythologize about.[wfak][paragraph break]Like, gosh, HER! 'Her united con continued unnoticed. But it's too perfect. Tough to--ugh. Something messes up, she denounces it right away. SHATTER-THREATS is so specific to you, too. That's why I don't like it.[paragraph break]'She at the very least SEEMS to think you're behind the influx of annoying anagrams. But then, she might be trolling us by framing you. That's an...other-y theory, eh, tyro?'"
 strip-quip	"'Yeah, lots to explore. But I bet observing and talking to people will help. Even if they don't want to help. There also may be some--illegal types around stores K and N. You don't need them, but they can't hurt.'"
@@ -3561,16 +3584,16 @@ still-no-gp-quip	"Elmo notes that individual letters can be either red-or-purple
 got-it-quip	"'Excellent! So, yeah, the settler adds blues when you're in cheat mode and the letters are right. Purple consonants, green vowels.'[if y-orange is false] Elmo looks over your settler once more. 'Hmm. What's the orange for? On Yorpwald/wordplay?'[else] You and Elmo note orange is for Y's, and you suspect correct oranges become brown or something.[end if]"
 orange-know-quip	"You've got this one--Yorpwald, wordplay, the orange D at the end goes to Y, the orange W at the start to Y, too[y-know]."
 orange-dunno-quip	"You [if backside is examined]re-[end if]examine the backside of settler and note how Yorpwald lines up with Wordplay--those two orange letters MEAN something. Then you both realize both orange letters go to a Y that's not in the right place[y-know]."
-bye-Elmo-quip	"[if hold-it-up is false][note-gretta]A pause. 'Go, you doer. You're good. Un-retire, reuniter. Re-shift it fresh. Disable bad lies. There's an evac-cave over thataway. You'll know what to do. I think. Forsake fears, ok?'[paragraph break]You leave, feeling less resave-averse, but run as you hear 'Get Elmo!' / 'Get ol['] me? Let me go!' 'Sympathy?' / 'My hat, spy!' ... 'A spy yaps, pays...'[paragraph break]You crawl through the evac-cave, which exits to writing behind a dune, man. UNNAMED: MUNDANE, but you look closer and see RETRAIN TERRAIN. Behind is a carven cavern. It looks as good a place as any to visit.[end if]"
-gre-macks-quip	"She introduces herself as Gretta. 'I was just trying to explain what Elvira's about, why to fight her. They started telling me they were all socially conscious--then they started hitting on me.' It's true--Elvira's brand of 'magic without magic,' which places excitement over boring honesty, has been captured in the horrid [i]OK, Be Hot: The Book[r], by Beth Koo and Theo Bok. It mentions anyone can learn its techniques--sadly, that's the truest part of the book by far.[paragraph break]You let slip it's the sort of word twisting that you can't and won't do. She pauses, then realizes how you managed to disrupt the macks without doing anything. You're that Shuffling Around person, with those powers. 'Hmm, I guess Elvira hates you even more than she hates me. I mean, she actually said I was almost as bad as you, to my face.'"
+bye-Elmo-quip	"[if hold-it-up is false][note-gretta]A pause. 'Go, you doer. You're good. Un-retire, reuniter. Re-shift it fresh. Disable bad lies. There's an evac-cave over thataway. You'll know what to do. I think. Forsake fears, ok?'[paragraph break]You leave, feeling less resave-averse, but run as you hear 'Get Elmo!' / 'Get ol['] me? Let me go!' 'Sympathy?' / 'My hat, spy!' ... 'A spy yaps, pays...'[paragraph break]You crawl through the evac-cave, which exits to writing behind a dune, man. UNNAMED: MUNDANE, but you look closer and see RETRAIN TERRAIN. Behind is a carven cavern. It looks as good a place as any to visit.[end if]" [end ELMO text]
+gre-macks-quip	"She introduces herself as Gretta. 'I was just trying to explain what Elvira's about, why to fight her. They started telling me they were all socially conscious--then they started hitting on me.' It's true--Elvira's brand of 'magic without magic,' which places excitement over boring honesty, has been captured in the horrid [i]OK, Be Hot: The Book[r], by Beth Koo and Theo Bok. It mentions anyone can learn its techniques--sadly, that's the truest part of the book by far.[paragraph break]You let slip it's the sort of word twisting that you can't and won't do. She pauses, then realizes how you managed to disrupt the macks without doing anything. You're that Shuffling Around person, with those powers. 'Hmm, I guess Elvira hates you even more than she hates me. I mean, she actually said I was almost as bad as you, to my face.'" [start GRETTA text]
 gre-elv-quip	"'Elvira backstabbed me. [']A nice gal? An ICE gal!['] Being called a gal was bad enough. But she used to rent the bulwark from me. Then SHATTER-THREATS somehow let her not pay rent in the name of national security. Then own it. It's hard to get ONE person to go up there, much less many. I found out she's--well, [i]augmenting[r] animals.'"
 gre-what-quip	"'You can't rely on people coming together. They're either too scared to resist, or too eager to kiss up. But animals might be willing to help. She's still training the ones she made.' Gretta looks nervously around."
 gre-north-quip	"'Maybe you will figure how to help the eels to the north and their spirit, Le Mer. They're suspicious of people, though, after Elvira failed to recruit them.'"
 gre-south-quip	"'Mr. Lee is ready to blame his failed crops on anyone. Elvira's got him convinced it's not her, but if you help him, he could be swayed back. Plus, he's a farmer, so, more animals.'"
 gre-east-quip	"'There are animal pens back east.' [if Anteroom is visited and Tapering Anger Pit is visited]You nod your head[else if Anteroom is unvisited and Tapering Anger Pit is unvisited]You cough a bit, realizing you didn't look there[else]You make a note to check the other pen[end if]. 'Perhaps animals can succeed where people failed, because Elvira won't be able to charm them with words. Well, not all of them. She captured and changed some, but you'd win their gratitude--and their friends[']--if you changed them back. Even, or especially, the ones guarding the pens.'"
 gre-animals-quip	"'The animals aren't just imprisoned but reduced to mockeries of their real selves--whether they know it or not. Maybe one reason she wanted to discredit you was, you might be able to change them back.'"
-gre-go-quip	"[if hold-it-up is false]'Here. Take these. They are ancient emblems of magic and power--damsel medals--from long before people cringed at words like damsel.' She removes her medals and hands them to you. '[gre-other].' She nods and walks off[check-started-yet].[end if]"
-logical-quip	"'Pick a nit? Pack it in! Drone-o-nerd!' she laughs, hypnotic, pythonic. 'I? Spoon Poison? Overbearing, raving bore!' Your reply is undone in innuendo."
+gre-go-quip	"[if hold-it-up is false]'Here. Take these. They are ancient emblems of magic and power--damsel medals--from long before people cringed at words like damsel.' She removes her medals and hands them to you. '[gre-other].' She nods and walks off[check-started-yet].[end if]" [end GRETTA text]
+logical-quip	"'Pick a nit? Pack it in! Drone-o-nerd!' she laughs, hypnotic, pythonic. 'I? Spoon Poison? Overbearing, raving bore!' Your reply is undone in innuendo." [start ELVIRA text]
 wtf-quip	"WTF is swift. 'Egad, an agenda. Rugged Grudge. Reactions so certain. A sincerest resistance! Dayum, Y U MAD?' / 'Say, fits satisfy?' She gives a plain man's mansplain of her main plans and gets to clamp into a compliant calm point about your complaint. Manic plot? Progress! She also points out that it's probably for the best. You were feeling useless, weren't you? And if you just attack her and get it over with, you can die feeling heroic. She's sure you worked hard to get here."
 hollow-quip	"An ol['] howl. 'Me? Rocky mockery! Petulant late punt! [if player is male]Ach, Mr. Charm[else]Ms. Arch-Charms[end if]!' She laughs with mindless mildness. 'Uber-Rube! Delicate, elite cad! Deny it's destiny? Evasion! So naive!' You cork a croak."
 abhor-quip	"'Recoil, O Relic!' / 'Nuh-unh, hun! Solicit colitis!' Wow. Oww."
@@ -3578,10 +3601,9 @@ strong-quip	"'So pure? Poseur! Soppy psy-op!' Dang, your spoonerism got double-t
 sneer-quip	"'Obliged old gibe. Bilge OD!' Coughs co-gush, chug so. 'Be a god? Bad ego!' you try back, but she's a serener sneerer. 'How silly! Why so ill?'"
 bald-quip	"'Ow, sloth. Low shot.' She laughs. You probably shouldn't be worrying about looks, now."
 sinister-quip	"'Sinister RESISTIN[']. Loutier Outlier!' she calls back. There's a brief scuffle over whose insult was less creative, but you kind of shuffled a lower percentage of letters, there. So she wins.[paragraph break]But don't worry. You're still the good guy. You just lost a style point."
-final-quip	"'No mercy, my crone! Corny, me?' She flinches at your pure re-up, responding 'Oh, cute. Touché.' A truce, acuter. 'Careful now, awful crone.' 'Woeful narc!' Eugh. No. Enough."
+final-quip	"'No mercy, my crone! Corny, me?' She flinches at your pure re-up, responding 'Oh, cute. Touché.' A truce, acuter. 'Careful now, awful crone.' 'Woeful narc!' Eugh. No. Enough." [end ELVIRA text]
 
-to say gre-other:
-	say "[if gre-what-quip is mowered]Remember[else]I didn't tell you[end if] her army can't leave the bulwark...yet. And she won't. [if gre-east-quip is mowered]You may need help from other than people[else]The animals I told you about--they could do something[end if]";
+section individual comments
 
 table of Gunter comments
 prompt	response	enabled
@@ -3660,19 +3682,6 @@ prompt	response	enabled
 "Go bald, old bag!"	bald-quip	0
 "Sinister Insister. Hypno-phony."	sinister-quip	0
 "Scourge-curse, go! (yeah, yeah, get on with it)"	final-quip	1
-
-to lawnmower (mytab - a table-name) :
-	if debug-state is false:
-		continue the action;
-	let mower be true;
-	repeat through mytab:
-		if response entry is not mowered:
-			say "DEBUG: Did not touch [response entry]: [prompt entry][line break]";
-			now mower is false;
-	if mower is true:
-		say "DEBUG: Lawnmowering worked.";
-
-gre-go-warn is a truth state that varies.
 
 before QBC responding with (this is the warn you before bailing from a convo rule):
 	let cur-act be a number; [this is kind of cutesy code. Basically, it checks to see if Player Choice is equal to the # of available choices. If so, it warns you.]
@@ -3775,7 +3784,7 @@ before doing something when Elmo is visible:
 		say "[convoforce].";
 		reject the player's command;
 
-before doing something when player is in Reclusion Inclosure and current quip is not final-quip:
+before doing something when player is in Reclusion Inclosure and current quip is not final-quip (this is the Elvira forces initial convo rule):
 	if current action is fliptoing medals:
 		say "You'll never out-talk Elvira." instead;
 	if current action is fliptoing whistle:
@@ -3788,27 +3797,6 @@ before doing something when player is in Reclusion Inclosure and current quip is
 		say "Elvira's not going to give you any useful information." instead;
 	if current action is not talking to Elvira and current action is not QBC responding with:
 		say "[convoforce]." instead;
-
-check fliptoing whistle:
-	if player is in Inclosure:
-		if whistle is reflexed:
-			try playing whistle instead;
-		say "Elvira looks amused as you practice, and when you look up, you can but mouth 'Cor! Orc! Roc! A tiger? I...great...'[paragraph break]Maybe you could and should have practiced beforehand. Maybe you could still sneak out.";
-		get-dead;
-		follow the shutdown rules instead;
-
-chiefed is a truth state that varies.
-
-complaint-num is a number that varies.
-
-to check-complaints:
-	increment complaint-num;
-	if complaint-num is 3:
-		say "You get the sense Gunter would listen to your complaints all day, but then, information is probably more valuable.[paragraph break]";
-	if complaint-num is 6:
-		say "Gunter glances briefly at the door he entered.[paragraph break]";
-	if complaint-num is 9:
-		say "Man! You haven't complained to anyone for a while, and it feels good. You hope Gunter understands. He's not [i]scowling or fleeing[r] yet. Or even dropping hints.[paragraph break]";
 
 talked-to-Elmo is a truth state that varies.
 
@@ -3846,7 +3834,7 @@ to decide whether nothing-scanned:
 		if rb is escanned, decide no;
 	decide yes;
 
-definition: a quip (called myq) is doable:
+definition: a quip (called myq) is doable: [Inform doesn't like "enabled quip"]
 	choose row with response of myq in the table of Elmo comments; [?! bad if other conditional]
 	if enabled entry is 1:
 		decide yes;
@@ -3878,7 +3866,7 @@ after quipping: [qa]
 		now hold-it-up is false instead;
 	d "[current quip].";
 	if current quip is showset-quip:
-		ital-say "if you didn't mean to do this, you can UNDO to get Elmo's tutorial.";
+		ital-say "if you didn't mean to do this, you can UNDO to get a bit more help from Elmo.";
 	else:
 		if debug-state is false:
 			prevent undo;
@@ -4067,7 +4055,7 @@ after quipping: [qa]
 		terminate the conversation;
 		now Elmo is in lalaland;
 		now satchel is in lalaland;
-		if do-i-chat is true:
+		if do-i-chat is true: [this is a cheat bypass]
 			now hydra is in lalaland;
 			move player to Inclosure;
 		else:
@@ -4122,25 +4110,9 @@ to ptg:
 	if debug-state is false:
 		pause the game;
 
-chapter taking person
-
-check taking old giant:
-	say "You'll have to take his babble, but not him." instead;
-
-chapter taking fixed in place
-
-check taking a sto:
-	say "You can't take that, [if noun is flippable]but you can maybe change it and enter it[else]and you can't do much else, either." instead;
-
-check taking disamb-store:
-	say "You can't take one store, much less all." instead;
-
 chapter taking scenery
 
 section general
-
-check taking a sto:
-		say "[if noun is flippable]You can change that into something else[else]That store is useless for your purposes[end if]." instead;
 
 check taking scenery:
 	if noun is forest or noun is sortie or noun is metros:
@@ -4157,65 +4129,10 @@ check taking scenery:
 		say "Oh, you'll TAKE Spoilopolis, all of it. But you can't lug THAT around." instead;
 	if location of player is fiefco:
 		say "You don't need to take that. Just take inspiration from it." instead;
-	say "You don't need to take any of the scenery here." instead;
-
-section manor
-
-check taking:
-	if noun is part of the Letters Settler:
-		say "You don't want to go deconstructing the Letters Settler. It was hard enough to create for Old Man Almond! (And me, too. But enough about coding.)" instead;
-
-check taking stria:
-	say "Too high up." instead;
+	say "You don't need to take any of the scenery here. Or, well, anywhere. Unless you change it to something else first." instead;
 
 check taking air:
 	say "You do so every move, even without thinking." instead;
-
-check taking bench:
-	say "The bench is too big." instead;
-
-check taking worst ad:
-	say "You'd need to get closer." instead;
-
-check taking passage:
-	say "EXAMINE it, instead." instead;
-
-check taking chimney:
-	say "To take the chimney in the going somewhere sense, go UP." instead;
-
-check taking plaster:
-	say "Peeling the plaster would be more painful and pedantic than, well, figuring a seven-word anagram." instead;
-
-section routes
-
-check taking narrow cracks:
-	say "Take a hint from them, where they may lead you." instead;
-
-check taking stripey pyrites:
-	say "Take a hint from them, where they may lead you." instead;
-
-check taking tables:
-	say "The tables are written on the wall." instead;
-
-check taking ramp:
-	say "To take the ramp in the going somewhere sense, go DOWN." instead;
-
-check taking pier sign:
-	say "Take its advice instead." instead;
-
-check taking controls:
-	say "You need a more thematic way to, err, take control." instead;
-
-section troves
-
-check taking cold:
-	say "You have as much cold as you can take." instead;
-
-check taking stop post:
-	say "The post is firmly in place." instead;
-
-check taking babblings:
-	say "You have as much cold as you can take." instead;
 
 section presto
 
@@ -4305,7 +4222,7 @@ check taking intercom:
 section towers
 
 check taking a warrior:
-	say "You'll have to deal with him indirectly." instead;
+	say "You'll have to deal with him[if noun is rodney] and/or his followers[end if] indirectly." instead;
 
 check taking:
 	if player is in Danger Garden and serpent is in Danger Garden:
@@ -4334,14 +4251,6 @@ check taking ropins:
 
 check taking doc-y:
 	say "[if doc-y is in ropins]You'll need to open the gaol first[else]Dr. Yow doesn't need that, after a spell in gaol[end if]." instead;
-
-section otters
-
-check taking ed riley:
-	say "Ed Riley raises up on his toes and booms 'I'm no yielder!'" instead;
-
-check taking imp:
-	say "Simply much too fast." instead;
 
 section others
 
@@ -4860,7 +4769,7 @@ to say if-no-pad:
 
 table of nudges [ton]
 this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
-"basement"	608585586	manor	Basement	--	--	"[locname]." [start MANOR]
+"basement"	608585586	manor	Basement	--	--	"[locname]." [start MANOR] [tonm]
 "rove"	394647309	manor	--	--	gunter-onstage rule	"That's not a way to sneak around and avoid the knock at the door."
 "meet"	422797389	manor	--	--	is-unbent rule	"[locname-part]."
 "bans"	185788197	manor	--	--	is-unbent rule	"[locname-part]."
@@ -4936,7 +4845,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "sadsad"	238981746	manor	--	sad ads	--	"[w-twi]."
 "evac"	256164332	manor	Basement	--	--	"The evac-cave is your way out. It'd be a bad idea to change it."
 "manor"	294846859	manor	--	--	degen-true rule	"[not-the-reg]."
-"others"	524148772	stores	--	store h	--	"No--it's a weird place you need to get to, sort of--the rest." [start STORES]
+"others"	524148772	stores	--	store h	--	"No--it's a weird place you need to get to, sort of--the rest." [start STORES] [tons]
 "window"	425151566	stores	--	windows	--	"Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new."
 "windows"	521425532	stores	--	windows	--	"Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new."
 "storea"	489054291	stores	--	store-a	--	"[no-cand]."
@@ -4990,7 +4899,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "strip"	411166592	stores	profits	--	--	"[locname]."
 "profits"	512034065	stores	strip of profits	--	--	"[locname]."
 "profit"	415760099	stores	strip of profits	--	--	"[locname]."
-"orcas"	277143749	routes	same mesa	--	--	"[if adobe is visited]No further secrets[else]Hm, it's Oscar'S[end if]." [start ROUTES]
+"orcas"	277143749	routes	same mesa	--	--	"[if adobe is visited]No further secrets[else]Hm, it's Oscar'S[end if]." [start ROUTES] [tonu]
 "mark"	204519952	routes	same mesa	--	--	"[name-worry]."
 "dilapidated"	523644520	routes	same mesa	--	--	"[name-worry]."
 "dingy"	289888397	routes	same mesa	--	--	"[name-worry]."
@@ -5074,12 +4983,13 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "underpass"	684374025	routes	underpass	--	--	"[locname]."
 "sun"	270287281	routes	underpass	--	--	"[locname-part]."
 "spared"	414086744	routes	underpass	--	--	"[locname-part]."
-"pyrites"	661331953	routes	--	pyrites	--	"The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol['] No-Gal Logan."
+"pyrites"	661331953	routes	--	pyrites	--	"[py-glow]."
+"pyrite"	565057987	routes	--	pyrites	--	"[py-glow]."
 "pier"	339588717	routes	ripe pier	--	--	"[locname]."
 "clipper"	493874100	routes	cripple clipper	--	--	"[locname]."
 "storeu"	591972280	routes	--	--	degen-true rule	"[not-the-reg]."
 "route"	495698314	routes	--	--	degen-true rule	"[not-the-reg]."
-"spoil"	350899187	troves	--	--	degen-true rule	"[no-spoil]." [start TROVES]
+"spoil"	350899187	troves	--	--	degen-true rule	"[no-spoil]." [start TROVES] [tonv]
 "spoiloplis"	701798374	troves	--	--	degen-true rule	"[no-spoil]."
 "pothole"	552183378	troves	rathole	--	--	"[p-hole]."
 "potholes"	648457344	troves	rathole	--	--	"[p-hole]."
@@ -5156,7 +5066,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "poverty"	701582538	troves	--	--	degen-true rule	"There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details."
 "trove"	497757327	troves	--	--	degen-true rule	"[not-the-reg]."
 "storev"	594031293	troves	--	--	degen-true rule	"[not-the-reg]."
-"crust"	408819179	presto	--	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food." [start PRESTO]
+"crust"	408819179	presto	--	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food." [start PRESTO] [tonp]
 "plaque"	454785149	presto	--	plaque	--	"It's the maze you need to change, not the plaque."
 "entry"	507506690	presto	--	plaque	--	"It's the maze you need to change, not the plaque."
 "mazeentry"	824545388	presto	--	plaque	--	"It's the maze you need to change, not the plaque."
@@ -5252,7 +5162,8 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "lawl"	217750269	presto	--	lawl wall	--	"It's too expansive for you to use any mental energy on."
 "saps"	276201709	presto	phat	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to go [if shack is visited]back [end if]north, here."
 "mount"	415551063	presto	phat	--	--	"Mount Um, Not silently disposes of your attempts to manipulate it."
-"harms"	285143039	presto	phat	--	--	"Despite being dangerous to walk into, Harm's Marsh serves an important ecological purpose I can't explain here. So, best not to meddle."
+"harms"	285143039	presto	phat	--	--	"[h-ma]."
+"marh"	188869073	presto	--	phat	--	"[h-ma]."
 "hog"	144234578	presto	phat	--	--	"You need to deal with all the hogs."
 "key"	303098539	presto	--	keys	--	"You aren't sure which key would work, so you need a plan to get them all."
 "entry"	507506690	presto	phat path	--	--	"[if leo is visible]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
@@ -5293,7 +5204,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "shack"	207682846	presto	shack	--	--	"[locname]."
 "hack"	111408880	presto	shack	--	--	"[locname]."
 "storep"	568332432	presto	--	--	degen-true rule	"[not-the-reg]."
-"tine"	344816481	oyster	--	stein	--	"Just one tine doesn't seem up to much." [start OYSTER]
+"tine"	344816481	oyster	--	stein	--	"Just one tine doesn't seem up to much." [start OYSTER] [tony]
 "troll"	370414076	oyster	hops shop	--	--	"Dealing with just one troll would cause the rest to call you a bully and beat you up. Gotta take [']em all, somehow."
 "recap"	315789274	oyster	hops shop	--	--	"Casper glares at you, as if he knows you're thinking all his recaps are the same. No. You [if recaps are reflexive]need to deal[else]already dealt[end if] with them all."
 "patrons"	511621649	oyster	hops shop	--	--	"[patron]."
@@ -5413,7 +5324,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "ahut"	247685942	oyster	uaah	--	--	"[locname]."
 "hut"	245498124	oyster	uaah	--	--	"[locname-part]."
 "storey"	609225725	oyster	--	--	degen-true rule	"[not-the-reg]."
-"badlands"	283848032	towers	--	--	degen-true rule	"[bland-sad]."	[start TOWERS]
+"badlands"	283848032	towers	--	--	degen-true rule	"[bland-sad]."	[start TOWERS] [tonw]
 "sad"	119490873	towers	--	--	degen-true rule	"[bland-sad]."
 "bland"	164357159	towers	--	--	degen-true rule	"[bland-sad]."
 "curst"	408819179	towers	--	--	degen-true rule	"It's not just that it's curst, it's a PALACE, too."
@@ -5598,7 +5509,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "cure"	337241304	towers	--	talc spa cure	--	"[focus-castle]."
 "mislit"	407258668	towers	limits	--	--	"[towersloc]."
 "storew"	594801246	towers	--	--	degen-true rule	"[not-the-reg]."
-"ly"	176173091	otters	--	--	degen-true rule	"Yup, that's the idea here in Otters[if inhib is false], even with your powers back[end if]." [start OTTERS]
+"ly"	176173091	otters	--	--	degen-true rule	"Yup, that's the idea here in Otters[if inhib is false], even with your powers back[end if]." [start OTTERS] [tont]
 "bare"	233736635	otters	--	b-b	--	"[adj-needs-ly]?"
 "cinder"	367064940	otters	--	cinders	--	"You'll need to change more than one cinder."
 "bulwark"	425718123	otters	--	bulwark	--	"The whole bulwark? No, you [if inhib is true]couldn't do much with it at full strength[else]can't do much[end if]. [if Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if inhib is true] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to, well, a bulwark."
@@ -5649,6 +5560,14 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "imp"	190533958	otters	--	sly imp	--	"[imp-sly]."
 "whiner"	472247338	otters	anteroom	--	--	"[whiney]."
 "whiners"	568521304	otters	anteroom	--	--	"[whiney]."
+"brute"	439764642	otters	--	imp1	--	"[add-ly]."
+"angry"	311378083	otters	--	imp2	--	"[add-ly]."
+"angri"	234011677	otters	--	imp2	--	"[add-ly]."
+"enraged"	465660138	otters	--	imp3	--	"[add-ly]."
+"loathing"	417246607	otters	--	ram1	--	"[add-ly]."
+"stoic"	337734992	otters	--	ram2	--	"[add-ly]."
+"stoical"	393736649	otters	--	ram2	--	"[add-ly]."
+"terse"	540320005	otters	--	ram2	--	"[add-ly]."
 "mack"	138201734	otters	--	macks	--	"If you messed with one mack, the others would gang up on you. Work on the argument, instead."
 "macks"	234475700	otters	--	macks	--	"Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying[if macked-out > 0] some more[end if]."
 "gretta"	454137468	otters	--	Gretta	--	"Gretta's been manipulated enough[if macks are visible]. Deal with the macks['] arguments, instead[end if]."
@@ -5725,7 +5644,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "preserve"	838970678	otters	perverse preserve	--	--	"[locname]."
 "otter"	493702525	otters	--	--	degen-true rule	"[not-the-reg]."
 "storet"	589976491	otters	--	--	degen-true rule	"[not-the-reg]."
-"pear"	296783689	others	--	spear	--	"[plur-fruit]." [start OTHERS]
+"pear"	296783689	others	--	spear	--	"[plur-fruit]." [start OTHERS] [tonh]
 "plum"	304460758	others	--	lumps	--	"[plur-fruit]."
 "pager"	329383391	others	--	pagers	--	"[plur-fruit]."
 "lime"	290687947	others	--	slime	--	"[plur-fruit]."
@@ -5879,6 +5798,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "backside"	382647496	--	--	settler	--	"[no-set]."
 "decal"	223842440	--	--	settler	--	"[no-set]."
 "button"	473004833	--	--	settler	--	"[no-set]."
+"receptor"	704193963	--	--	settler	--	"[no-set]."
 "receptors"	800467929	--	--	settler	--	"[no-set]."
 "output"	572250186	--	--	settler	--	"[no-set]."
 "display"	422122769	--	--	settler	--	"[no-set]."
@@ -5941,7 +5861,16 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 
 [the rules/texts below are organized in the order I thought up the nudges above, which is to say, more or less random. But nothing there is game-critical enough that it needs to be sorted. I hope.]
 
-[ton]
+[ton-]
+
+to say ha-m:
+	say "Despite being dangerous to walk into, Harm's Marsh serves an important ecological purpose I can't explain here. So, best not to meddle";
+
+to say py-glow:
+	say "The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol['] No-Gal Logan"
+
+to say add-ly:
+	say "No, you need a couple more letters... [if inhib is true]even with your powers back, that seems to work[else]a couple to make a word weak enough to control[end if]"
 
 this is the pad-now-bedroom rule:
 	if player is in pallid li'l pad and diapers are reflexed:
@@ -9193,6 +9122,9 @@ chapter tables
 
 The tables are plural-named vanishing scenery in Dusty Study. understand "table" as tables.
 
+check taking tables:
+	say "The tables are written on the wall." instead;
+
 after fliptoing tables:
 	now study is mapped inside stable;
 	now stable is mapped inside study;
@@ -9332,6 +9264,9 @@ instead of doing something with niche:
 	say "It's too far away to meaningfully interact with.";
 
 the chimney is scenery. "It's where your niche was. You can probably put your chair on the bed, then climb the chair to reach it. I won't even make you spell out the details. Just go [b]up[r]."
+
+check taking chimney:
+	say "To take the chimney in the going somewhere sense, go UP." instead;
 
 before going up in study:
 	if niche is in study:
@@ -9493,6 +9428,9 @@ a-text of stria is "RRYYR". b-text of stria is "PPYGR".
 
 understand "astir" as a mistake ("[if stair is visible]You don't need to do any more with the stair[else]You need to change that to something else, then it'll be astir[end if]") when stair is visible or stria is visible or sitar is visible.
 
+check taking stria:
+	say "Too high up." instead;
+
 the stair is a backdrop. "It leads [if player is in Basement]up[else]down[end if].";
 
 does the player mean climbing the stair: it is very likely.
@@ -9615,6 +9553,9 @@ check going inside in cavern:
 chapter plaster
 
 some plaster is scenery in cavern. "It looks sloppily put on, as if someone wanted it to be torn down the right way, though you don't have the patience or tools to do so physically[if plates are visible]. Some plates are stuck in it too[end if]. RETRAIN TERRAIN is written at the top."
+
+check taking plaster:
+	say "Peeling the plaster would be more painful and pedantic than, well, figuring a seven-word anagram." instead;
 
 understand "psalter" as a mistake ("You don't need prayer when you have this cool magic power.") when plaster is visible.
 
@@ -9786,7 +9727,10 @@ to say painful-memory:
 	otherwise:
 		say "Yeah, you probably don't need to, to figure what to do with the pram.[no line break]";
 
-the ramp is scenery. "The ramp slopes not too sharply down."
+the ramp is scenery. "The ramp slopes down, not too sharply."
+
+check taking ramp:
+	say "To take the ramp in the going somewhere sense, go DOWN." instead;
 
 check going down in highest heights:
 	if ramp is not visible:
@@ -9997,6 +9941,10 @@ check examining settler (this is the examine to scan under duress rule) :
 	if player is in bleary barley and b-b is reflexive:
 		say "The barley seems to be causing readings on your settler.";
 		try scaning b-b instead;
+
+check taking:
+	if noun is part of the Letters Settler:
+		say "You don't want to go deconstructing the Letters Settler. It was hard enough to create for Old Man Almond! (And me, too. But enough about coding.)" instead;
 
 the receptors are part of the letters settler.
 
@@ -12007,6 +11955,12 @@ instead of entering a sto:
 		say "Probably not in its present state." instead;
 	say "You're not here to shop. You're here to save Yorpwald[if noun is nonreflexive]. Not shop in some random store[one of]. You changed a few other stores to get where you needed before--maybe do that again[or]. Like this one[stopping][else], and you remember how changing stores helped you get places before[end if]."
 
+check taking a sto:
+	say "You can't take that, [if noun is flippable]but you can maybe change it and enter it[else]and you can't do much else, either." instead;
+
+check taking disamb-store:
+	say "You can't take one store, much less all." instead;
+
 a sto can be bedruggled. a sto is usually not bedruggled.
 
 to say gd:
@@ -12452,6 +12406,9 @@ instead of scaning passage:
 		say "You already got YYRRGRG from it.";
 	else:
 		say "Be brave! ENTER the passage!";
+
+check taking passage:
+	say "EXAMINE it, instead." instead;
 
 understand "studio e/" as passage.
 
@@ -15230,6 +15187,9 @@ instead of entering marquee:
 
 the bench is reflexive scenery in Same Mesa. "[if old giant is in Same Mesa]The giant's on it, and he covers enough of it, you could only half squeeze in between him and the armrests[else if old giant is off-stage]It'd be a chore to sit on--it looks like it's a giant's. Probably because the words A GIANT'S are painted where you would sit. Maybe he'll come back[otherwise]The giant probably won't be around here any more[end if]."
 
+check taking bench:
+	say "The bench is too big." instead;
+
 a-text of bench is "YRYYRRR". b-text of bench is "GPYYPRR".
 
 a-text of bench-end is "YRRRYRY". b-text of bench-end is "YRRRYRY".
@@ -15276,6 +15236,9 @@ the grouchy old giant is a person. "There's a grouchy old giant here sitting on 
 understand "staider" as a mistake ("[if bench-end is reflexive]You already did your best with the tirades[else]Not only directions but mind games fail to work here[end if]. The giant will complain if he wants to.") when old giant is visible.
 
 understand "tardies" as a mistake ("You can't tell the giant off for being late.") when old giant is visible.
+
+check taking old giant:
+	say "You'll have to take his babble, but not him." instead;
 
 the giant's elbow is part of the grouchy old giant. description is "Well, thankfully, only one is flailing. Both would be extra tough to dodge. [if elbow is reflexed]But you have the hang of it now[else]Still, there's almost a pattern to it, and maybe there's a safe spot[end if]."
 
@@ -15328,6 +15291,8 @@ check fliptoing worst ad:
 
 a-text of worst ad is "RYRYRRR". b-text of worst ad is "RGRYRRR".
 
+check taking worst ad:
+	say "You'd need to get closer." instead;
 
 the bench-end is part of the bench. understand "end" as bench-end. description of bench-end is "Thick enough to sit on, with not too much pain, if you found the right way.". the bench-end is reflexive.
 
@@ -15449,6 +15414,9 @@ to say to-o:
 
 the narrow cracks are scenery. "[to-o]"
 
+check taking narrow cracks:
+	say "Take a hint from them, where they may lead you." instead;
+
 a-text of narrow cracks is "YRYYRR". b-text of narrow cracks is "YRYYRP".
 
 the un-road is scenery. "The un-road must lead to No-Gal Logan. But how to follow it?"
@@ -15485,6 +15453,9 @@ understand "pish" as a mistake ("Pretending you don't want to get on the ship wo
 
 the pier sign is vanishing scenery in ripe pier. "You can't see much of the actual pier, but you can smell it. Thankfully, the pier sign offers some advice. 'Ripe pier! Boat rides ABROAD! Disclaimer: deal with DA MIST at your own risk.'[paragraph break]Hmm. There may be more than one way to get by."
 
+check taking pier sign:
+	say "Take its advice instead." instead;
+
 da mist is vanishing scenery in ripe pier. "My, It's misty. It phases through shapes, but there's a sign in front of it."
 
 a-text of da mist is "YRYRRR". b-text of da mist is "YRYRPP".
@@ -15520,6 +15491,9 @@ book Cripple Clipper
 Cripple Clipper is a room in routes. "You see a free reef ahead and to each side. You aren't much of a sailor, [if hit win button is visible]and the hit win button didn't even do everything[else]but maybe you can somehow hit win on the ship controls[end if]."
 
 the ship controls are reflexive scenery in Cripple Clipper. "They're on-deck, but conked. [one of]I rag a rig, you note. [or][stopping]You've no clue how to [if ship controls are reflexive]find where Ben hid the Hit Win button[else]operate them[end if]."
+
+check taking controls:
+	say "You need a more thematic way to, err, take control." instead;
 
 a-text of ship controls is "RYR??R". b-text of ship controls is "?G???P".
 
@@ -16126,7 +16100,15 @@ understand "redive" as a mistake ("Close, but you need to figure out where to re
 
 bab-lis is a truth state that varies.
 
-the verbose babblings are vanishing scenery in Used Lot. "[listen-careful]."
+the verbose babblings are vanishing plural-named scenery in Used Lot. "[listen-careful]."
+
+after doing something with babblings:
+	if babblings are not in lalaland:
+		set the pronoun it to babblings;
+	continue the action;
+
+check taking babblings:
+	say "You have as much cold as you can take." instead;
 
 a-text of verbose is "YRRYRRY". b-text of verbose is "YRRYRRG".
 
@@ -16148,6 +16130,9 @@ check examining stop post when babblings are in Used Lot:
 	say "You try to, but you get a headache. Everyone here's too [i]verbose. [r]You need to find what to do make them less verbose. Or seem that way." instead;
 
 The stop post is reflexive super-easy scenery in Used Lot. "[if babblings are reflexive]You're so distracted by it, you can't stop and see the big picture. It blocks out all but the babblings round--it's really big and verbose and you could look at it a while without seeing anything meaningful. You can't even remember what you just read. As if you'd lost the ability to.[else if post is reflexive]Its opts. aren't exactly tops. Apparently, though, it is made of recycled pots.[else if bee's head is reflexive]You notice an ad in red proclaiming O. Asner as Nero.[else]An ad in red for L. Clear cleaning[one of], with directions below to [one of]Evans Ave N/S[or]Weave Ave E/W[in random order][or][stopping].[end if]"
+
+check taking stop post:
+	say "The post is firmly in place." instead;
 
 check scaning stop post:
 	if babblings are visible:
@@ -16612,6 +16597,9 @@ the cold is flippable scenery in Loather Rathole. "[one of]Even though you waste
 
 a-text of cold is "RYRY". b-text of cold is "PYRY".
 
+check taking cold:
+	say "You have as much cold as you can take." instead;
+
 understand "hate" as a mistake ("You don't want to get burnt up with hate[if heat is visible], and that won't get back your super purse like racing after that guy[end if].") when cold is not visible.
 
 the heat is flippable vanishing scenery. "The heat is nice and all, but being happy for it isn't the right emotion, here, with your possessions stolen."
@@ -16698,7 +16686,7 @@ after fliptoing troend1:
 	continue the action;
 
 check scaning post:
-	if babblings is reflexive:
+	if babblings are reflexive:
 		try scaning babblings instead;
 	if post is reflexed:
 		say "You've dealt with the post." instead;
@@ -16843,6 +16831,12 @@ check eating b-b:
 
 Ed Riley is a vanishing man. description is "'You won't get past Ed Riley, yielder!' he booms. For all this bluster, you get the feeling his loud voice hides an insecurity.". "Ed Riley acts as a steward here to keep you eastward. He is carrying an ER, YIELD sign and a loaf of deli rye."
 
+check taking ed riley:
+	say "Ed Riley raises up on his toes and booms 'I'm no YIELDER!'" instead;
+
+check taking deli rye:
+	say "Ed Riley snatches it away forcefully. 'I'm no YIELDER!'" instead;
+
 the deli rye is an edible auxiliary thing. description is "It looks delicious enough for Ed not to share with you.". Ed Riley carries the deli rye.
 
 instead of doing something with Ed Riley:
@@ -16882,6 +16876,8 @@ after printing the name of the whistle while taking inventory:
 	say " ([if whistle is reflexed]which you know how[else if whistle-play is true]which you tried and failed[else]which you haven't tried[end if] to play)";
 
 a-text of whistle is "RYYRRO". b-text of whistle is "RGYPRO".
+
+[cor! Orc! Roc!]
 
 check fliptoing the whistle when whistle is reflexive:
 	if Elvira is visible:
@@ -17733,9 +17729,14 @@ understand "inert gap" and "inert/gap" as anger pit when sly imp is in lalaland.
 
 The sly imp is a flippable person in Anger Pit. "A sly imp simply zooms about [if imp1 is reflexive]rangily [end if]guarding the way north[if imp2 is reflexive], with a butlery air[end if][if imp3 is reflexive], showing legendary patience[end if] that allows vaster averts[if inhib is false]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "He looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as he can, or keep you just mad enough not to think how to get rid of him.[paragraph break]He seems to have several tricks, but that may just mean several ways to get at him."
 
+check taking imp:
+	say "Simply much too fast." instead;
+
 understand "green lady" and "enragedly" as a mistake ("You remember reading about the Green Lady in the Silver Chair, where she started nice and started acting furiously--no, that's not the word, not quite, it doesn't fit with Legendary. But it must be something like that.") when imp3 is reflexive and sly imp is visible.
 
 a-text of sly imp is "BUG". b-text of sly imp is "BUG".
+
+[These are all dummy items. imp1 = brutely, imp2 = angrily, imp3 = enragedly]
 
 imp1 is privately-named unscannable reflexive ssno scenery in Anger Pit. printed name of imp1 is "the imp's actions". description of imp1 is "[bug-report].".
 
@@ -17743,8 +17744,8 @@ imp2 is privately-named unscannable reflexive ssno scenery in Anger Pit. printed
 
 imp3 is privately-named unscannable reflexive ssno scenery in Anger Pit. printed name of imp3 is "the imp's actions". description of imp3 is "[bug-report].".
 
-a-text of imp1 is "RRYRYRO". b-text of imp1 is "PRYRGRB".
-a-text of imp2 is "YRRRYRO". b-text of imp2 is "YRRRGPB".
+a-text of imp1 is "YRRRYRO". b-text of imp1 is "YRRRGPB".
+a-text of imp2 is "RRYRYRO". b-text of imp2 is "PRYRGRB".
 a-text of imp3 is "YRRYRYRRO". b-text of imp3 is "YRRYRYRRB".
 
 understand "simply" as a mistake ("He's already simply annoying, so that has no effect. Maybe you can alter how he does things another way.") when sly imp is visible
@@ -17968,6 +17969,8 @@ after fliptoing an animal:
 book Rote-Moan Anteroom
 
 Rote-Moan Anteroom is south of Bleary Barley. Anteroom is part of otters. Anteroom is innie. "[if whiners are visible]The noise here is just unbearable--men guarding the way south and not shutting up about it[else]This room is quieter now, just a north-south passage[end if]."
+
+[3 dummy sceneries. Loathingly, stoically, tersely]
 
 ram1 is privately-named unscannable reflexive ssno scenery in Anteroom. ram1 is undesc. printed name of ram1 is "the men's shouting".
 ram2 is privately-named unscannable reflexive ssno scenery in Anteroom. ram2 is undesc. printed name of ram2 is "the men's shouting".
@@ -23302,6 +23305,9 @@ to say logan-hi:
 	say "'No-Gal Logan. Serial Sailer. Here's our selves-vessel. Not quite the HMS SMH.'[paragraph break]'Hooray...or ahoy?' you say, confused.[paragraph break]But the sail ails where the stripe would be above ground. You sort of think you can see a reddish haze, or maybe it's your imagination. 'Now to hit WIN...where's that button? Hmph, won't let me cross. It's up to you. You seem like a trireme meriter. You'll find the hit win button Ben hid. Did it so well, made sure we didn't use it before we need to. You'll reach the beyond. One way now. Aye,' says No-Gal Logan. 'The end! Boy!'[paragraph break]You see him nod bye as he jumps over. 'Logan!' you cry. 'No lag!' he yells back. Then 'St. Olaf!' He floats, so flat, leaving you for the last of...he cries, 'Harbor!' and you cry 'Rah, Bro!' Then you write down what No-Gal said about the button.";
 
 the stripey pyrites are useless scenery. "The pyrites look pretty, but you're not here for a treasure hunt. You're here to find No-Gal Logan."
+
+check taking stripey pyrites:
+	say "Take a hint from them, where they may lead you." instead;
 
 after fliptoing un-road:
 	now stripey pyrites are in underpass;
@@ -32014,6 +32020,7 @@ blurb	prio
 "Dopy Hal's Posh Lady Holds Pay[r], by Loyd Hasp"
 "Dork Play? Dark Ploy[r], by Loyd Park"
 "A Dork's So Dark[r], by Rod Sak-Kardos"
+"A Dork's Zen: Dark Zones[r], by Zander Kos"
 "Dorx of Oxford[r], by Rod Fox"
 "Dosage, Sea Dog[r], by Dad-E-O Gossage"
 "Dote and Add Note: Not Dead[r], by [d-t] Dean"
@@ -32705,6 +32712,7 @@ blurb	prio
 "Heaven, Sin as Nineveh[r], by [if player is male]Evan Hines[else]Iva Hensen[end if]"
 "Heavy Rains Year, Vanish[r], by [if player is male]Harvey Sina[else]Ivana Hyser[end if]"
 "Hecate's Scathee Ceaseth[r], by Cath See" []
+"Heck, Flout: Luck of the Chute Folk[r], by Luke Focht"
 "Heisted: the Side He Edits[r], by Ed Theis"
 "Hell Hit the Hill[r], by H. L. Thiel"
 "A Hell Town on the Wall, Now Lethal[r], by Nell Howat"
@@ -33163,6 +33171,7 @@ blurb	prio
 "Journalist Roils Junta, Runs to Jail[r], by Lorina Just"
 "Journeyman: Men on a Jury[r], by Jenny Mauro"
 "Joy Rune Journey[r], by June Roy" []
+"Judoist Studio J[r], by Judi Tso"
 "Juliet's Just Lie[r], by Luis Jet"
 "June of UFO Jen[r], by Fun Joe"
 "Junk Mail? J/K, Alumni [r], by [if player is male]Juan Milk[else]Kim Lujan[end if]"
@@ -33468,6 +33477,7 @@ blurb	prio
 "Magic World? Go, Crawl Dim, Low Grim Cad[r], by Lido McGraw"
 "The Maid Had Time Amid the Dim Hate[r], by Tad Heim"[]
 "Maid Lee Emailed Limeade[r], by Imelda E"
+"Maiden, I Amend[r], by Maddie Nieman"
 "The Mail Hit Lame[r], by Tim Leah" []
 "Mailboxes So Mixable[r], by Isobel Max"
 "Mailer's Realism is Lamer[r], by Irma Les"
@@ -33522,6 +33532,7 @@ blurb	prio
 "Maxims : Ma's Mix[r], by Ax Mims"
 "Maybe Do My Abode, Bay Dome[r], by Mae Boyd"
 "Me, a Blot to Blame[r], by Tom Beal" []
+"Me, a Gym: My Game[r], by Meg May"
 "Me and Ad Men Amend[r], by Dede Ammann" []
 "Me, I Rust, Mustier[r], by Sue Trim"
 "Me, Iris, I See Mr. Miseri[r], by Em Iris"
@@ -35069,6 +35080,7 @@ blurb	prio
 "So Al's a Loss[r], by Sal LoSasso" []
 "So Angry Sang Roy Grayson[r], by Roy Gans"
 "So Atlas Also Sat at a Loss[r], by Sal Sato"
+"So, Audit a Studio? Aid us To[r], by Ida Tsou"
 "So Ban a Snob[r], by Bo San-Banos"
 "So Blank Ol['] Banks[r], by Sal Bonk"
 "So-Boring Sir Bongo[r], by Rob Goins"
@@ -35281,6 +35293,7 @@ blurb	prio
 "StriveCo Covers It[r], by Vic Oster"
 "Strober Orb, Rest[r], by Roberts Berrost"
 "Stuck Echo Checks Out[r], by Kutch Esco"
+"Studio M Dims Out[r], by Mo Dusti & Sid Muto"
 "Studying Tidy Guns[r], by Dingy Stu"
 "Stumbler Blurts? Me?[r] by Mel Brust"
 "A Stunt Taunts[r], by Stan Tu"
@@ -36409,6 +36422,7 @@ blurb
 "Arik, Kira, Kari, Rika."
 "Arlo, Al or Oral Lora."
 "Arnita, Anitra, A-Train."
+"Aroused: a Sure Do!"
 "Arsene, Serena, Naseer."
 "Ash Has [a-word-u], Ahh!"
 "Assaults: a Lust [a-word-u]."
@@ -38515,7 +38529,6 @@ table of moralizers [xxu5]
 blurb
 "A. Turnip, Puritan" []
 "Abjured Jeb Radu"
-"Burn-in-Hell Len Hilburn"
 "Abjurer Jae Burr"
 "Act-Naif Fanatic Nia Fact"
 "Admonisher [if player is male]Misha Roden[else]Sandie Rohm[end if]"
@@ -38566,6 +38579,7 @@ blurb
 "Brimstone Bert Simon"
 "Bunkered Debunker Ned Burke"
 "Burdened Rene Budd"
+"Burn-in-Hell Len Hilburn"
 "Called Cadell"
 "Calvinist Civil Stan"
 "Cancely-Clean Cy Clancey"
@@ -44925,7 +44939,6 @@ blurb
 "No-Drugs Gus Dorn" []
 "No-Ethics [if player is male]Otis Chen[else]Toni Esch[end if]"
 "No-Faces Fonseca"
-"Safe-Con Fonseca" []
 "No-Facts Fast Con Scot Fan"
 "No-Gab Bogan" []
 "'No Girls' Sol Ring" [p]
@@ -45305,6 +45318,7 @@ blurb
 "Ruthless Les Hurst"
 "Sad-Front Stanford" []
 "Sad-Wink Dawkins"
+"Safe-Con Fonseca" []
 "Saintly [if player is female]Sly Tina[else]Tiny Sal[r]"
 "Sallow Slow Al"
 "Samesy Massey"
@@ -50394,6 +50408,7 @@ blurb
 "Scalardi Radicals" []
 "Scales's classes"
 "Scanlon's non-class"
+"Scempeidi epidemics"
 "scenic e-Science"
 "Scuderi's discures"
 "Seagrave averages" []
@@ -51577,6 +51592,7 @@ blurb
 "Bar-Quotes? Art Bosque? Square-bot!" []
 "Crates of farces to forecast oft scare. Sore fact. Cost: fear."
 "Distraction, sardonic tit? Roast! Indict!"
+"Extraordinary intro? Dreary. Ax."
 "Grey men, my genre."
 "I draft, adrift..."
 "I Snared a Snider Sardine." []
@@ -51586,10 +51602,12 @@ blurb
 "My ideas dim easy. I? Mad? Yes!" []
 "Not game to nag me!"
 "Oy, pert tropey poetry. To pyre!" []
+"People's purr: proper pulse? Purple prose!"
 "Prosey Osprey Ros Pye? O, pyres!"
 "Refuse to wear...evocator overcoat!"
 "Rhett Weir, the Writer: Err, Twit, Eh?"
 "Rio Demps? Sid Premo? Dim prose, PROMISED!"
+"Riveter Town? Woven triter. Overwritten."
 "Some poets, pose-smote, emote. SOPS!"
 "Speak to a pest? OK." []
 "Thoreau? Ah, outre!" []
@@ -52303,6 +52321,7 @@ blurb
 "Menacer Marcene"
 "Menial Melani" []
 "Middler Mildred"
+"Minge-O Imogen"
 "Narker Karren"
 "NASA Math Samantha"
 "No-Lays Alyson" []
