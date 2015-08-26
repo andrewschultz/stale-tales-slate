@@ -77,6 +77,8 @@ the release number is 4.
 --Gad! Super Upgrades!
 --Gasp! Rude Upgrades!]
 
+chapter region specs
+
 a region has a number called max-score. a region has a number called min-score.
 
 a region has a number called poss-score. a region has a number called cur-score.
@@ -92,6 +94,53 @@ a region can be unspoiled or spoiled. a region is usually unspoiled.
 a region can be parsewrned. a region is usually not parsewrned.
 
 a region has a list of things called item-list.
+
+chapter region definition
+
+Roman Manor is an unsolved region. max-score of Roman Manor is 13. min-score of Roman Manor is 8. [giant pin, stable/stair, chimney/ramp, basement] [non-anagram = staple wall]
+
+Others is an unsolved region. max-score of Others is 38. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits + compass + icons/sonic + passport x 2. FRUI checks what fruit is where.]
+
+Routes is a region. max-score of Routes is 18. min-score of Routes is 17. [worst ad]
+
+Troves is a region. max-score of Troves is 21. min-score of Troves is 15. [Pa Egg Pea, lager, lobster/stream, bee, astute statue, DIVORCES]
+
+Oyster is a region. max-score of oyster is 39. min-score of oyster is 27. [scan cans = 1, revel/lever=1, fart/soar=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter and pulling lever]
+
+cheated-guy is an object that varies. cheated-guy is nothing.
+
+Presto is a region. max-score of presto is 33. min-score of presto is 28. [rom stick, lamb, tab, casserole, +1 point for Phooey]
+
+Towers is a region. max-score of towers is 44. min-score of towers is 24.
+[4 for regular warriors
+1 for Ray Eck
+1 for rewired
+1 for admirer
+1 for bonker
+7 for basic stuff
+1 for weeds
+2 for Dr Yow
+1 for lone duck
+1 for tentative
+2 for jetskis
+1 for the palace] [1 non-anagram for rapier repair]
+[3 for the extra warriors
+1 for strudel
+1 for the yurts
+5 for the H/I beyond needing to clear the coastlines
+2 for the ingrates/natives
+3 for the denim, neural pulses and old ice
+1 for the replay player
+1 for giving Ed the flowerpot NON-ANAGRAM
+3 for dying crocus/serpent/ed yerg]
+
+Otters is an unsolved region. max-score of otters is 29. min-score of otters is 23. [2 for a conjunction pair, 1 for dissing Elmer/Merle, 2 for N and S animal regions, 1 for cinders]
+
+Stores is an unsolved spoiled region. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
+
+a thing has a region called lreg. lreg of a thing is usually manor.
+
+chapter things
 
 a thing can be reflexive, reflexed, vanishing, or nonreflexive. a thing is usually nonreflexive.
 
@@ -121,6 +170,8 @@ a thing can be rayed. a thing is usually not rayed.
 
 a thing can be examined or unexamined. a thing is usually unexamined.
 
+chapter rooms
+
 a room can be stairy. a room is usually not stairy.
 
 a room can be outie or innie. a room is usually outie. [innie has WALL/WALLS for anagrams]
@@ -136,6 +187,29 @@ a person can be superchatty, subject-talking or terse. a person is usually subje
 a person can be terse-warned. a person is usually not terse-warned.
 
 a person has a person called the chum. [a chum is someone whom they imitate in dialogue. For instance, Rand's chum is Leo. All warriors' chums are Andres. And so on.]
+
+chapter portals
+
+a portal is a kind of thing. a portal is usually fixed in place. a portal has a number called diffic.
+
+the specification of portal is "A thing that allows you access to vulnerable areas of Yorpwald."
+
+a portal can be fake-enterable. a portal is usually fake-enterable.
+
+a portal can be maingame. a portal is usually maingame.
+
+a portal can be lumpable. a portal is usually lumpable.
+
+a portal can be checkedoff or available. a portal is usually available.
+
+a portal can be enter-clued. a portal is usually not enter-clued.
+
+a portal has a region called a go-region.
+
+instead of taking a portal:
+	say "Try entering, instead.";
+
+chapter guardians
 
 a guardian is a kind of person. a guardian is usually auxiliary and vanishing. a guardian can be passtried. a guardian is usually not passtried. a guardian can be clueneedy. a guardian is usually not clueneedy. a guardian can be unprodded or prodded. a guardian is usually unprodded. a guardian can be plurtry. a guardian is usually not plurtry.
 
@@ -4134,138 +4208,6 @@ check taking scenery:
 check taking air:
 	say "You do so every move, even without thinking." instead;
 
-section presto
-
-check taking hump:
-	say "You can take it if you believe in yourself and motivate yourself the right way!" instead;
-
-check taking plebe:
-	say "That plebe won't be pushed aside." instead;
-
-check taking dumpster:
-	say "Way too heavy." instead;
-
-check taking dam:
-	say "You take in the dam's beauty for a moment." instead;
-
-check taking um-not:
-	say "Stronger adventurers than you couldn't take Mount Um-Not." instead;
-
-check taking Harm's Marsh:
-	say "The marsh is more likely to take YOU." instead;
-
-check taking lawl wall:
-	say "You'll need to take the keys, somehow." instead;
-
-check taking hogs:
-	say "You and Rand and Leo can take [']em. But not literally." instead;
-
-check taking lamb:
-	say "It's not a bit lamb, but it wouldn't fit in your super purse." instead;
-
-check taking a fightin person:
-	say "You can 'take' them by trickery." instead;
-
-check taking smart people sign:
-	say "Removing the warning won't make the warning any less valid." instead;
-
-check taking clock sap:
-	say "The sap is too sticky." instead;
-
-section oyster
-
-check taking tines:
-	say "[if stein is in lalaland]You destroyed them already[else]Wrong way to vandalize things, here[end if]." instead;
-
-check taking tunes:
-	say "They're the sort of tunes you really can't take." instead;
-
-check taking canoe:
-	try entering canoe instead;
-
-check taking river:
-	say "The river drips through your fingers." instead;
-
-check taking pikes:
-	say "That's the wrong way to 'take' them.'" instead;
-
-check taking carps:
-	say "That's the wrong way to 'take' them.'" instead;
-
-check taking trout:
-	say "You can't just take him and run. You need to fight back." instead;
-
-check taking arches:
-	say "[if a-s are reflexed]You got enough from the arches[else]You might find something in there. How to do that without taking them[end if]." instead;
-
-check taking thin hint:
-	say "You don't need to take a hint you yourself dropped." instead;
-
-check taking shut huts:
-	try entering shut huts instead;
-
-check taking h-h:
-	say "Better to enter the hedron." instead;
-
-check taking o-t:
-	say "That'd be a good way to spring it." instead;
-
-check taking haunter:
-	say "It's incorporeal. But maybe you can take it somewhere." instead;
-
-check taking ant:
-	say "Dealing with the ant is even easier than TAKE." instead;
-
-check taking intercom:
-	say "You'd probably get a nasty shock and set off an alarm." instead;
-
-section towers
-
-check taking a warrior:
-	say "You'll have to deal with him[if noun is rodney] and/or his followers[end if] indirectly." instead;
-
-check taking:
-	if player is in Danger Garden and serpent is in Danger Garden:
-		say "[one of]The serpent hisses as you reach down to grab that. You may need a way to calm it. The serpent, not the [noun].[or]Deal with the serpent first.[stopping]" instead;
-
-check taking sled rut:
-	say "[if strudel is in Danger Garden]Maybe take the strudel instead[else]The sled rut is nothing and holds nothing[end if]." instead;
-
-check taking yurts:
-	say "They're too strongly built to even flake a piece off." instead;
-
-check taking a guardian:
-	say "Sadly, you can't just move anyone or anything out of the way in the Badlands." instead;
-
-check taking old ice:
-	say "You'd get your hands stuck. And I won't double dog dare you." instead;
-
-check taking neural pulses:
-	say "You don't need or want to--they just flow through either way." instead;
-
-check taking denim:
-	say "You can't get a good grip on the denim to pull it." instead;
-
-check taking ropins:
-	say "WAY too heavy and big." instead;
-
-check taking doc-y:
-	say "[if doc-y is in ropins]You'll need to open the gaol first[else]Dr. Yow doesn't need that, after a spell in gaol[end if]." instead;
-
-section others
-
-check taking gs:
-	say "No way you could move the gates." instead;
-
-check taking drinks stand:
-	say "The drinks stand is too big to take[if slime is off-stage], but maybe it's worth examining[else], and you sort of ransacked it anyway[end if]." instead;
-
-check taking reserved sign:
-	say "[greedy-s] yells at you to be a little more subtle trying to steal stuff." instead;
-
-check taking b-r:
-	say "It's stuck in there. Maybe you can make it something smaller." instead;
-
 chapter drinking
 
 the block drinking rule is not listed in the check drinking rulebook.
@@ -4281,32 +4223,30 @@ check climbing (this is the climb to enter rule) :
 	if noun is raft or noun is dumpster or noun is chimney or noun is bench or noun is stair:
 		try entering noun instead;
 
-check climbing (this is the climb can mean up or down rule):
-	if noun is ramp:
+check climbing (this is the generic silly climbing reject rule):
+	if noun is ramp: [start MANOR]
 		try going down instead;
 	if noun is stair:
-		if player is in basement:
-			move player to stable instead;
-		else:
+		if player is in stable:
 			move player to basement instead;
-
-check climbing (this is the generic silly climbing reject rule):
-	if noun is crate:
-		say "This isn't a shooter or survival game. Plus the crates are too broken to lead anywhere. [if uaah is visited]The door, on the other hand...[else]You already got through the door, anyway.[end if]" instead;
-	if noun is mount:
-		say "It seems as if the peaks speak with a sticky, icy tsk. You start to num considering going unto'm." instead;
-	if noun is gaol:
-		say "Too tall. Anyway, if it were climbable, the subsector wouldn't be the obscurest, now." instead;
-	if noun is prison:
-		say "It's actually a decent jungle gym, but you're not here to putz around." instead;
-	if noun is huts:
-		say "They're too tall. No good handholds. The rude door is the only way in." instead;
-	if noun is skyscraper:
-		say "Your thought and efforts may lead you to the top, not a physical feat." instead;
-	if noun is bulwark:
-		say "Elvira is in the bulwark, not on top of it." instead;
-	if noun is the-b:
+		else:
+			move player to study instead;
+	if noun is the-b: [routes]
 		say "It's too slippery and round." instead;
+	if noun is skyscraper: [troves]
+		say "Your thought and efforts may lead you to the top, not a physical feat." instead;
+	if noun is mount: [start presto]
+		say "It seems as if the peaks speak with a sticky, icy tsk. You start to num considering going unto'm." instead;
+	if noun is crate: [start OYSTER]
+		say "This isn't a shooter or survival game. Plus the crates are too broken to lead anywhere. [if uaah is visited]The door, on the other hand...[else]You already got through the door, anyway.[end if]" instead;
+	if noun is huts: [end OYSTER]
+		say "They're too tall. No good handholds. The rude door is the only way in." instead;
+	if noun is gaol: [towers]
+		say "Too tall. Anyway, if it were climbable, the subsector wouldn't be the obscurest, now." instead;
+	if noun is prison: [end TOWERS]
+		say "It's actually a decent jungle gym, but you're not here to putz around." instead;
+	if noun is bulwark: [otters]
+		say "Elvira is in the bulwark, not on top of it." instead;
 	say "You don't need to climb over much of anything in this game. Though in some spots, you may go up or down, or possibly IN." instead;
 
 chapter push-pull
@@ -4368,27 +4308,6 @@ to d (a - indexed text):
 to dn (a - indexed text):
 	if debug-state is true:
 		say "DEBUG INFO: [a]"
-
-chapter portals
-
-a portal is a kind of thing. a portal is usually fixed in place. a portal has a number called diffic.
-
-the specification of portal is "A thing that allows you access to vulnerable areas of Yorpwald."
-
-a portal can be fake-enterable. a portal is usually fake-enterable.
-
-a portal can be maingame. a portal is usually maingame.
-
-a portal can be lumpable. a portal is usually lumpable.
-
-a portal can be checkedoff or available. a portal is usually available.
-
-a portal can be enter-clued. a portal is usually not enter-clued.
-
-a portal has a region called a go-region.
-
-instead of taking a portal:
-	say "Try entering, instead.";
 
 chapter regions
 
@@ -4475,12 +4394,12 @@ this is the check final region action rule:
 
 table of end-flips
 thisflip	thatflip	warned-yet	my-prog	pointwarn
-USB	USB	false	shack-left rule	"That will win, but there's still a bit you could do in the shack."
-thor	new beet	false	degen-false rule	"You should never see this."
-troend1	troend2	false	office-left rule	"You tidied your office up pretty well, but you could do a bit more."
+USB	USB	false	presto-left rule	"That will win, but there's still a bit you could do in the shack[if lamb is in gyre]. Also, you missed what to do with the lamb, but it's too late[end if]."
+thor	new beet	false	degen-false rule	"You should never see this, because the only LLP was in the Mesa."
+troend1	troend2	false	troves-left rule	"You tidied your office up pretty well, but you could do a bit more."
 d2	d2	false	oyster-left rule	"This is the winning command, but you may be able to backtrack to see some other bits."
-curst palace	curst palace	false	palace-left rule	"This will knock down the palace, but you still have that flowerpot you got from Daltho."
-Elvira	Elvira	false	any-otters rule	"You could've cleaned up business with [to-clean-otters]."
+curst palace	curst palace	false	towers-left rule	"This will knock down the palace, but you still have that flowerpot you got from Daltho."
+Elvira	Elvira	false	otters-left rule	"You could've cleaned up business with [to-clean-otters]."
 
 to say to-clean-otters: [hells bells this is ugly]
 	if p-2 is reflexive or eels are reflexive:
@@ -4499,7 +4418,7 @@ to say to-clean-otters: [hells bells this is ugly]
 
 [here, the rules succeed if there's still stuff left to do]
 
-this is the any-otters rule:
+this is the otters-left rule:
 	if p-2 is reflexive or eels are reflexive:
 		the rule succeeds;
 	if elmer is reflexive:
@@ -4508,7 +4427,7 @@ this is the any-otters rule:
 		the rule succeeds;
 	the rule fails.
 
-this is the palace-left rule:
+this is the towers-left rule:
 	if flowerpot is not in lalaland:
 		the rule succeeds;
 	the rule fails;
@@ -4522,7 +4441,7 @@ this is the oyster-left rule:
 		the rule succeeds;
 	the rule fails;
 
-this is the shack-left rule:
+this is the presto-left rule:
 	if usb is off-stage: [note 2 things flip to USB, the code and the USB, so this gives 'debug' a pass]
 		the rule fails;
 	if trim socks are in shack:
@@ -4531,7 +4450,7 @@ this is the shack-left rule:
 		the rule succeeds;
 	the rule fails;
 
-this is the office-left rule:
+this is the troves-left rule:
 	if Pa Egg Pea is reflexive:
 		the rule succeeds;
 	if lobster is reflexive or stream is reflexive:
@@ -4540,7 +4459,7 @@ this is the office-left rule:
 		the rule succeeds;
 	the rule fails;
 
-chapter zaping
+chapter zaping (with patcher)
 
 zaping is an action applying to one thing.
 
@@ -4614,52 +4533,7 @@ definition: a thing (called xx) is patchable:
 	if xx is a portal, yes;
 	no.
 
-chapter region definition
-
-Roman Manor is an unsolved region. max-score of Roman Manor is 13. min-score of Roman Manor is 8. [giant pin, stable/stair, chimney/ramp, basement] [non-anagram = staple wall]
-
-Others is an unsolved region. max-score of Others is 38. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits + compass + icons/sonic + passport x 2. FRUI checks what fruit is where.]
-
-Routes is a region. max-score of Routes is 18. min-score of Routes is 17. [worst ad]
-
-Troves is a region. max-score of Troves is 21. min-score of Troves is 15. [Pa Egg Pea, lager, lobster/stream, bee, astute statue, DIVORCES]
-
-Oyster is a region. max-score of oyster is 39. min-score of oyster is 27. [scan cans = 1, revel/lever=1, fart/soar=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter and pulling lever]
-
-cheated-guy is an object that varies. cheated-guy is nothing.
-
-Presto is a region. max-score of presto is 33. min-score of presto is 28. [rom stick, lamb, tab, casserole, +1 point for Phooey]
-
-Towers is a region. max-score of towers is 44. min-score of towers is 24.
-[4 for regular warriors
-1 for Ray Eck
-1 for rewired
-1 for admirer
-1 for bonker
-7 for basic stuff
-1 for weeds
-2 for Dr Yow
-1 for lone duck
-1 for tentative
-2 for jetskis
-1 for the palace] [1 non-anagram for rapier repair]
-[3 for the extra warriors
-1 for strudel
-1 for the yurts
-5 for the H/I beyond needing to clear the coastlines
-2 for the ingrates/natives
-3 for the denim, neural pulses and old ice
-1 for the replay player
-1 for giving Ed the flowerpot NON-ANAGRAM
-3 for dying crocus/serpent/ed yerg]
-
-Otters is an unsolved region. max-score of otters is 29. min-score of otters is 23. [2 for a conjunction pair, 1 for dissing Elmer/Merle, 2 for N and S animal regions, 1 for cinders]
-
-Stores is an unsolved spoiled region. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
-
-a thing has a region called lreg. lreg of a thing is usually manor.
-
-section portal-entry
+chapter entering portals
 
 towers-warn is a truth state that varies.
 
@@ -4734,8 +4608,6 @@ to add-errs (reg - a region):
 understand "walkthrough" or "walkthru" as a mistake ("You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.");
 
 understand "use [text]" as a mistake ("The verb USE is a bit too nonspecific for the parser. You can SWITCH things, or OPEN doors[if player has settler], or SCAN with the settler[end if][if player has whistle], or PLAY the whistle[end if]. You should also be able to EXAMINE something you want to use, and the game should hint a verb.")
-
-understand "clod" as a mistake ("Hey! No beating yourself up. You'll do it wrong.") when player is in Loather Rathole.
 
 to say poor-animal:
 	say "You don't need to snap the poor animal back to...whatever, wherever it was before"
@@ -5303,8 +5175,8 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "jumble"	418180338	oyster	Den Loft	--	--	"It's the words on the jumble you need to mess with. With which you need to mess[if yapper is in den loft]. Well, once the yapper's out of the way[end if]."
 "posh"	289374801	oyster	hops shop	--	--	"[locname]."
 "lode"	277001614	oyster	olde lode	--	--	"[locname]."
-"hoser"	421038754	oyster	hero's shore	--	--	"You give a few Er-ohs, oh-ers, Or Ehs. You'll probably need to say something entirely different to cross the river. There's the raft--those boats."
-"hero"	324764788	oyster	hero's shore	--	--	"You give a few Er-ohs, oh-ers, Or Ehs. You'll probably need to say something entirely different to cross the river. There's the raft--those boats."
+"hoser"	421038754	oyster	hero's shore	--	--	"You give a few Er-ohs, oh-ers, Or Ehs. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats."
+"hero"	324764788	oyster	hero's shore	--	--	"You give an Er-oh, oh-er, or Eh. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats."
 "anger"	316824940	oyster	anger range	--	--	"[locname]."
 "handsome"	491914519	oyster	handsome sand home	--	--	"[locname]."
 "home"	303516138	oyster	sand home	--	--	"[locname-part]."
@@ -5943,7 +5815,7 @@ to say rev-sum:
 	say "That document is the stone truth! It doesn't need revisionism or embellishment"
 
 to say no-art:
-	say "You don't need to do anything to Art, especially since [if storage box is in scape space]you want to get that storage box[else]you got that storage box[end if]"
+	say "You don't need to do anything to [if art erd is visible]Art[else]Dr. Tera[end if], especially since [if storage box is in scape space]you want to get that storage box[else]you got that storage box[end if]"
 
 to say out-rou:
 	say "Changing the direction or the composition of the trail won't do anything"
@@ -9055,7 +8927,6 @@ instead of opening the latches:
 		now player has treatise;
 	say "You can't figure how to open them. The latches are a Gordian knot, and you probably mix up where to start or end, but maybe the red paper has more information on what to do.";
 
-
 understand "chalets" as a mistake ("You don't need a safe home, right now. You need adventure[if latches are visible]. Oh, and you don't have to switch that many letters, either[end if].") when latches are visible or satchel is visible.
 
 to trea-check:
@@ -9434,12 +9305,6 @@ check taking stria:
 the stair is a backdrop. "It leads [if player is in Basement]up[else]down[end if].";
 
 does the player mean climbing the stair: it is very likely.
-
-check climbing stair:
-	if player is in stable:
-		try going down instead;
-	else:
-		try going up instead;
 
 understand "wallpaper" as a mistake ("You try the word-flip, to check--sadly, it doesn't work. Maybe there is another way to remove the paperwall.") when paperwall is visible
 
@@ -10841,6 +10706,9 @@ chapter drinks stand
 
 the abandoned drinks stand is scenery in Rustic Citrus. "[one of]It's pretty easy to see why it's abandoned. Unfortunately, it's not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant, and plans for a megaton pear, under some magenta rope. And there's a lame video collection.[or]There's no other nasty cola, or writing, or 'art,' to find.[or][stopping][if eerie blurbs are visible] You notice some eerie blurbs written on the stand.[end if]"
 
+check taking drinks stand:
+	say "The drinks stand is too big to take[if slime is off-stage], but maybe it's worth examining[else], and you sort of ransacked it anyway[end if]." instead;
+
 the citrus sign is part of the abandoned drinks stand. description is "It says CURTIS['] (sic) RUSTIC CITRUS.". the citrus sign is useless.
 
 after examining abandoned drinks stand (this is the three fruits in drinks stand rule) : [all 3 conditions should be all true or all false, but just in case...]
@@ -11023,6 +10891,9 @@ instead of doing something with a near arena:
 	say "You can't do much but look at the arena."
 
 gs are privately-named scenery in Gates Stage. printed name of gs is "gates". "They're [if player has passport]open for easy entry north[else]closed by a halt lath[end if]."
+
+check taking gs:
+	say "No way you could move the gates." instead;
 
 understand "gate" as gs.
 
@@ -11489,6 +11360,9 @@ the b-r is scenery in Filed Field. "It's jammed into the ground. You can't take 
 
 a-text of b-r is "RRYYRRRYYR". b-text of b-r is "PRYYRRPYYP".
 
+check taking b-r:
+	say "It's stuck in there. Maybe you can make it something smaller." instead;
+
 the breadfruit is a fruit. description is "It doesn't look doughy at all. Too bad Philip Larkin's ghost isn't around, or you could show him what one looks like. That'd be a cultural experience!"
 
 chapter watermelon
@@ -11588,6 +11462,9 @@ Scape Space is an innie room in Others. Scape Space is below Swell Wells.
 
 The reserved sign is semi-easy auxiliary scenery in Scape Space. "RESERVED for the DESERVER."
 
+check taking reserved sign:
+	say "[greedy-s] yells at you to be a little more subtle trying to steal stuff." instead;
+
 the guava is a fruit.
 
 a-text of reserved sign is "RYRYRRYR". b-text of reserved sign is "*GRGPRG*".
@@ -11633,7 +11510,7 @@ Dr Tera Darter is a female person. "[gree-app]."
 the chum of dr tera darter is red rat art erd.
 
 to say greedy-s:
-	say "[if greedy-person is Art Erd]Art Erd[else]Dr Tera[end if]"
+	say "[if greedy-person is Art Erd]Art Erd[else]Dr. Tera[end if]"
 
 to say trader-clue:
 	say "[one of][greedy-s] [if player has storage]was[else]is[end if] just there to barter for the storage. You need something of value[if player has coin or player has coins], more value than a coin or two[end if].[plus][or][if player has dollar]That dollar would make [greedy-s] happy[else if number of fruits in lalaland < 12]Curtis's third gift, after [12 - number of fruits in lalaland in words] more fruits, will be handy[else]You can go back to Curtis for an item that will please [greedy-s][end if].[minus][cycling]"
@@ -12820,6 +12697,9 @@ check scaning strudel:
 
 The sled rut is useless scenery in Topside. "It's flecked with red, oddly[if strudel is in Topside], and the strudel's still in it[else if strudel is reflexed], though you think you know why, now[end if]."
 
+check taking sled rut:
+	say "[if strudel is in Danger Garden]Maybe take the strudel instead[else]The sled rut is nothing and holds nothing[end if]." instead;
+
 The Rosetta Toaster is a container. It is in Topside Deposit. "A rosetta toaster rotates here."
 
 check scaning toaster:
@@ -13064,6 +12944,9 @@ Scope Copse is north of Topside Deposit. Scope Copse is in Towers. "A [one of]sp
 the yurts are super-easy plural-named scenery in scope copse. "The yurts, of dull sturdy metal, don't look very lived-in. They read TRY US in red letters."
 
 understand "yurt" as yurts.
+
+check taking yurts:
+	say "They're too strongly built to even flake a piece off." instead;
 
 the Owers'-Bin Brownies are a plural-named LLPish hintpastry. description of Brownies is "These cheap brownies don't look too unappetizing. However, nobody wanted to eat them until it was re-advertised as food that helps you think your way out of your problems, because it definitely can't be served at parties. Nobody much still wants to eat them, because doing so is now an admission you have, well, problems."
 
@@ -13390,6 +13273,9 @@ before going down in ravages:
 
 the denim is LLPish semi-easy vanishing scenery in ravages. the indefinite article of denim is "some".
 
+check taking denim:
+	say "You can't get a good grip on the denim to pull it." instead;
+
 understand "i mend" as a mistake ("You're more interested in doing the opposite--seeing what's behind.") when denim is in ravages and player is in ravages.
 
 a-text of denim is "RYRYR". b-text of denim is "RYPYR".
@@ -13573,6 +13459,9 @@ to say no-rips:
 	say "[if player has dagger]The dagger is too ragged[else if player has gizmo]The gizmo is too unwieldy to fit between the mesh. You try to cut it, but the blade squeaks against the steel[else]You have nothing that could cut anything[end if]."
 
 The prison ropins are a reflexive plural-named transparent container in Subsector. ropins are fixed in place. "The prison ropins are dense and strong enough that they will cause no rips, but you can see through them. They're made to ensure no rips (of course!) [if duck is returned]though you found another way in[else]and look locked, but there must be some way to make them openable--[one of]ah, there's a[or]there's that[stopping] small fissure which is the closest thing to a keyhole, and some writing, too[end if]."
+
+check taking ropins:
+	say "WAY too heavy and big." instead;
 
 understand "jail" as prison ropins.
 
@@ -13792,6 +13681,9 @@ check inserting into the fissure:
 	say "Nothing from your inventory seems to fit it. It's really oblong."
 
 doc-y is a super-easy auxiliary privately-named person in prison ropins. description is "[one of]You remember a slanderous (or is it libelous?) article claiming [he-she] was really Dr. Ieow, but [he-she] does look a[or]A[stopping] bit wonky, y'know? But with an intense look in [his-her] eyes[if doc-y is rowdy] as [he-she] yells[else if doc-y is wordy]as [he-she] babbles[end if][what-can-doc-say].". "Dr. Yow is pacing around semi-absent-mindedly[if doc-y is not in prison ropins] enjoying[otherwise] pining for[end if] [his-her] freedom."
+
+check taking doc-y:
+	say "[if doc-y is in ropins]You'll need to open the gaol first[else]Dr. Yow doesn't need that, after a spell in gaol[end if]." instead;
 
 to say what-can-doc-say:
 	let tosay be 0;
@@ -14692,12 +14584,18 @@ the old ice is LLPish reflexive scenery in Blasted Saltbed. "[if old ice is refl
 
 a-text of old ice is "RYYRYR". b-text of old ice is "R?YRYR".
 
+check taking old ice:
+	say "You'd get your hands stuck. And I won't double dog dare you." instead;
+
 check scaning cliff:
 	if old ice is reflexive:
 		say "Nothing happens until you also flick across the old ice.";
 		try scaning old ice instead;
 
 Ray Eck is a proper-named semi-easy purple guardian in Topside Deposit.  description is "He doesn't look particularly wealthy or elitist, but he sure does like watching his keycar go round and round."
+
+check taking a guardian:
+	say "Sadly, you can't just move anyone or anything out of the way in the Badlands." instead;
 
 a-text of ray eck is "RRYYRO". b-text of ray eck is "RRYYRO".
 
@@ -14716,10 +14614,12 @@ a-text of atheists is "RYRRYYRR". b-text of atheists is "RYRRGYRR".
 
 the neural pulses are plural-named LLPish vanishing scenery in Unblest Sunbelt.
 
+check taking neural pulses:
+	say "You don't need or want to--they just flow through either way." instead;
+
 description of neural pulses is "They seem to cause neural shocks when you get too close. And they make you see red when you think of...Lauren. Man, she was beyond fake. What did [if player is male]other [end if]guys see in her?"
 
 a-text of pulses is "YRRYYR". b-text of pulses is "YRRYGP".
-
 
 chapter guardian table
 
@@ -14932,6 +14832,9 @@ check objhinting a not leaderly warrior (this is the poke Rodney but don't spoil
 		ital-say "Rodney's vulnerable enough now, you can HINT RODNEY if you don't care about maximum points. I will simply plow through his comrades, otherwise.";
 		now rod-hint is true;
 		
+check taking a warrior:
+	say "You'll have to deal with him[if noun is rodney] and/or his followers[end if] indirectly." instead;
+
 Sir Rodney is a leaderly warrior. description is "A big strong fellow who probably won't be removed by physical force. He looks sort of like Red Bull Burdell's slightly weaker younger brother.". The chum of Rodney is yourself. pod-num of Rodney is 7. pod-ord of Rodney is 1. a-text of Rodney is "OYRRYR". b-text of Rodney is "OGRRGR".
 
 Geno is a semi-easy warrior. description is "Well, Geno is ... here. He hasn't left yet. He may not be the best warrior, but he's still stronger than you.". a-text of Geno is "RYRY". b-text of Geno is "PYPY". pod-num of Geno is 1. pod-ord of Geno is 1.
@@ -15871,7 +15774,7 @@ carry out pasting:
 	if drama armada is in mesa or the-b is in mesa:
 		say "[but-armada]" instead;
 	if old giant is visible:
-		say "Walking away would upset the giant. I mean, into doing something, not just talking. And he is bigger than you." instead;
+		say "[listen-cue]." instead;
 	if Idle Deli is unvisited:
 		say "You decide to walk past Pat's. Then, you turn and enter the alley just past it. The building lurches sideways toward you, and you manage to jump through the doorway with only a minor bump as it slams into you. You hear taps spat as you enter.";
 		reg-inc;
@@ -16569,6 +16472,8 @@ instead of doing something with the nerf fern:
 	say "Don't futz with it. It's there for ambiance. The sort of ambiance people less busy than you care about.";
 
 book silly verbs needed to win Troves
+
+understand "clod" as a mistake ("Hey! No beating yourself up. You'll do it wrong.") when player is in Loather Rathole.
 
 understand "care" as a mistake ("You find yourself boohooing over mumbo-jumbo about how the socioeconomic system must be even more unfair to people without your powers. How unproductive to care about THAT.") when heat is not visible and mrlp is troves.
 
@@ -18321,6 +18226,9 @@ instead of exiting when in Posh Hops Shop:
 
 the tines are semi-easy plural-named auxiliary scenery in Posh Hops Shop. "They look perfect for fitting a stein into, for refills."
 
+check taking tines:
+	say "[if stein is in lalaland]You destroyed them already[else]Wrong way to vandalize things, here[end if]." instead;
+
 understand "insert" as a mistake ("Almost, with the stein, there.") when stein is visible.
 
 understand "insert [something]" as a mistake ("Almost, with the stein, there.") when stein is visible.
@@ -18339,6 +18247,9 @@ rule for supplying a missing noun when inserting into:
 		now noun is stein;
 
 The tunes are super-easy plural-named 	vanishing scenery in Posh Hops Shop. "The tunes really are awful. You wish you could just get rid of them with some technical know-how."
+
+check taking tunes:
+	say "Ironically, they're the sort of tunes you really can't take." instead;
 
 a-text of tunes is "YRRYR". b-text of tunes is "YRRGR".
 
@@ -18968,6 +18879,9 @@ Hero's Shore is a room in Oyster. "A super cult sculpture of Shoer Osher sits on
 
 the canoe is scenery in Hero's shore. "The canoe is all red and has a fish carved into it. The fish seems to be trying to cut...a tree?!"
 
+check taking canoe:
+	try entering canoe instead;
+
 the fish is part of the canoe. description of fish is "You can't tell what sort of fish it is. It may not be important. It seems to be cutting down a tree, but you can't tell."
 
 instead of entering canoe:
@@ -19019,6 +18933,9 @@ understand "horse" as a mistake ("A horse can't cross water! You obviously did n
 understand "hoser" as a mistake ("Saying that does not help you take off to the north.") when player is in Hero's shore
 
 a river is scenery in Hero's shore. "Boats pass on the river. A raft is also docked to it. You probably need to cross it, but you can't expect a groupie pirogue to show up."
+
+check taking river:
+	say "The river drips through your fingers." instead;
 
 understand "arrive" as a mistake ("Easier said than done. Perhaps a river craft could help you across. Like the raft. Or the boats.") when player is in Hero's shore.
 
@@ -19207,6 +19124,15 @@ a-text of trout is "RYRYR". b-text of trout is "PYRYR".
 
 the pikes are plural-named flippable nasty people in Anger Range. initial appearance of pikes is "[bug-report]"
 
+check taking pikes:
+	say "That's the wrong way to 'take' them.'" instead;
+
+check taking carps:
+	say "That's the wrong way to 'take' them.'" instead;
+
+check taking trout:
+	say "You can't just take him and run. You need to fight back." instead;
+
 the chum of the pikes is the carps.
 
 understand "fish" and "bullies" as pikes when carps-pref is false.
@@ -19348,6 +19274,9 @@ carry out unearthing:
 [anagram haunter when he is present = no, already did that]
 
 the haunter is a reflexive semi-easy person. description is "It's a seven-foot tall sausage--or, rather, a stick figure of several sausages tied together, with a bacon comb-over, a ham hock shield and a pork chop bone for a weapon."
+
+check taking haunter:
+	say "It's incorporeal. But maybe you can take it somewhere." instead;
 
 check answering haunter that (this is the ruby answer rule):
 	if the player's command includes "ruby":
@@ -19788,6 +19717,9 @@ book sanctum
 
 the ant is a super-easy animal. "An oddly colored ant is here! It seems more threatening than anything, but your lance seems to hold it at bay.". description of ant is "If you look at it one way, it's a light brown--no, that's not it--but another way, it's a bright red, a simulacrum of the legendary Tar Rat Art. You're glad you have that lance to do something simple to fend it off, or maybe even run it off."
 
+check taking ant:
+	say "Dealing with the ant is even easier than TAKE." instead;
+
 a-text of ant is "RYR". b-text of ant is "RYR".
 
 understand "nat" as a mistake ("You don't need to name the ant. It's not a pet.") when player is in Scum Ant Sanctum.
@@ -19865,11 +19797,14 @@ Include (-
 	has transparent talkable
 -) when defining dialer.
 
-the NotCrime intercom is scenery in Den Loft. "The NotCrime intercom, the let-in-intel device of choice for the shadier denizens of Yorpwald. It probably works with the dialer in some way"
+the NotCrime intercom is scenery in Den Loft. "The NotCrime intercom, the let-in-intel device of choice for the shadier denizens of Yorpwald. It probably works with the dialer in some way."
 
 Include (-
 	has transparent talkable
 -) when defining intercom.
+
+check taking intercom:
+	say "You'd probably get a nasty shock and set off an alarm." instead;
 
 description of dialer is "It's a big intimidating important looking thing. You probably won't understand details of how it works. A jumble on the dialer spells out, conveniently, [if dialer is reflexive]DIALER[else]DERAIL[end if]. It looks like you could shift it. You also see some red writing, in small print."
 
@@ -20084,6 +20019,9 @@ understand "brides" as a mistake ("No, no time to think about romance, now.") wh
 understand "thus" as a mistake ("Your inactive word does nothing to the huts[if knob is not reflexive]. Perhaps you can do something to the door[else]. But you don't need to do any more, since you can walk in[end if].") when shut huts are visible.
 
 the shut huts are plural-named scenery in Lapsin' plains. "They're shaped like a big ol['] upended tush.". understand "tush" and "hut" as shut huts.
+
+check taking shut huts:
+	try entering shut huts instead;
 
 instead of entering huts:
 	try opening rude door instead;
@@ -20455,6 +20393,9 @@ instead of doing something with h-h:
 
 the a-s are plural-named privately-named auxiliary scenery in arches. description of a-s is "[if a-s is reflexed]You already searched the arches and found something[else]A quick examination turns up nothing, but maybe if you were more methodical, something might turn up[end if].". the printed name of the a-s is "arches"
 
+check taking a-s:
+	say "[if a-s are reflexed]You got enough from the arches[else]You might find something in there. How to do that without taking them[end if]." instead;
+
 understand "achers/arches" and "achers arches" as a-s.
 
 a-text of a-s is "RYYRRR". b-text of a-s is "RY?RRR".
@@ -20553,6 +20494,9 @@ the o-t is privately-named flippable scenery in Hedron. understand "ol/ol' trap"
 
 a-text of o-t is "RYRRYR". b-text of o-t is "RYRRGR".
 
+check taking o-t:
+	say "That'd be a good way to spring it." instead;
+
 description of o-t is "Naturally, it is there to make it hard for you to enter. But there must be some way to disarm it. Somewhere hidden in this room."
 
 check fliptoing a-p:
@@ -20626,6 +20570,8 @@ thin hint is scenery. "The thin hint marks where you buried the ruby. You will b
 before doing something with thin hint:
 	if action is procedural:
 		continue the action;
+	if action is taking:
+		say "You don't need to take a hint you yourself dropped." instead;	
 	say "There's nothing to do with that hint except point it out to someone else, later." instead;
 
 book End Den
@@ -20779,6 +20725,9 @@ chapter lamb
 
 The lamb is a vanishing LLPish super-easy animal in Grey Gyre. "A poor lost lamb seems stuck here, too frightened to move."
 
+check taking lamb:
+	say "It's not a bit lamb, but it wouldn't fit in your super purse." instead;
+
 understand "balm" as a mistake ("Giving the lamb balm might be an option, if there was any in the game, but turning it into balm would be out of line. And it wouldn't scare the lamb home.") when lamb is visible
 
 a-text of lamb is "RRYR". b-text of lamb is "RRYR".
@@ -20841,6 +20790,9 @@ section hump
 
 the hump is vanishing scenery in Grey Gyre. "It doesn't look like it'd be too hard to get over, but as you walk over to inspect it, you feel a bit drained."
 
+check taking hump:
+	say "You can take it if you believe in yourself and motivate yourself the right way!" instead;
+
 check going west in grey gyre:
 	if hump is visible:
 		say "You try to be all 'I leap a pile' but can't get over the hump. Hmph." instead;
@@ -20852,6 +20804,9 @@ The hump is fixed in place.
 chapter bleeping
 
 the plebe is a vanishing person in Grey Gyre. description is "He's got the shaved head, boring monochrome clothes--nothing on him marks him as too special to be yelled at.". "A plebe is standing at attention here to the east, waiting for a command from someone in charge. Or just bossy[if plebe is prefigured and player wears star][one of]. Now that you're wearing that star, maybe you can use that semi-cuss you used earlier[or][stopping][end if]."
+
+check taking plebe:
+	say "That plebe won't be pushed aside." instead;
 
 a-text of plebe is "RRYYR". b-text of plebe is "RPGYR".
 
@@ -20901,6 +20856,9 @@ understand "mad" as a mistake ("How can you feel mad, looking at such a beautifu
 understand "cafe" as a mistake("You don't need caffeine or food here.") when player is in Burnt Brunt.
 
 a mad dam is useless scenery in Burnt Brunt. "The mad dam pours water on itself. The waterfall's flaws alter as you watch, though you can't do much with it. Beautiful in its own way."
+
+check taking dam:
+	say "You take in the dam's beauty for a moment." instead;
 
 instead of doing something to mad dam:
 	if action is procedural:
@@ -21050,6 +21008,9 @@ to post-wall-brunt:
 section dumpster
 
 the dumpster is scenery in Burnt Brunt. the dumpster is an opaque container.
+
+check taking dumpster:
+	say "Way too heavy." instead;
 
 check examining dumpster:
 	ignore the examine containers rule;
@@ -21280,6 +21241,9 @@ check scaning Leo when Rand is in Ridge and Rand is fightin:
 	say "It's Rand you need to deal with, now." instead;
 
 Leo is a super-easy fightin bruisin reflexive person. Leo is in Dirge Ridge. description is "[if Rand is off-stage]Huge but lumbering. Almost like a bull[else]Leo is Rand's mirror image--violent, not evil. A naughty anythug on a gay hunt[end if][if Leo is washed up]. He seems upset[end if]."
+
+check taking a fightin person:
+	say "You can 'take' them by trickery." instead;
 
 to say l-r:
 	say "[if a random chance of 1 in 2 succeeds]Leo[else]Rand[end if]"
@@ -21550,12 +21514,18 @@ Phat Path is a room in Presto. "This path cuts between two lethally beautiful ar
 
 Mount Um-Not is scenery in Phat Path. understand "mount/um/not" as Mount Um-Not. "It's as huge and unwelcoming as Cupid's Cuspid isn't. You remember hearing Saps['] Pass, with all its pitfalls, cuts through it."
 
+check taking um-not:
+	say "Stronger adventurers than you couldn't take Mount Um-Not." instead;
+
 Saps' Pass is amusing scenery in Phat Path. Saps' Pass is undesc.
 
 instead of doing something with Saps' Pass:
 	say "Saps['] Pass is not to be trod, man. It's a mordant, dormant mtn road. It may lead to No-Goal Lagoon, anyway." instead;
 
 Harm's Marsh is scenery in Phat Path. "You swear you can see the toxic fumes seeping from it. It's too dangerous to explore[swan-puma]."
+
+check taking Harm's Marsh:
+	say "The marsh is more likely to take YOU." instead;
 
 check entering harm's marsh:
 	try going west instead;
@@ -21595,6 +21565,9 @@ Check going inside in Phat Path:
 
 the smart people sign is scenery. description of smart people sign is "'ALERT! ALTER nothing in here if not technically inclined. You OUGHT not to abuse LOG ONS.' Hm, weird that logons has a space."
 
+check taking smart people sign:
+	say "Removing the warning won't make the warning any less valid." instead;
+
 check scaning smart people sign:
 	say "It's all over the place. Maybe you should focus on specific letters. The ones in CAPS seem like a start.";
 
@@ -21604,6 +21577,9 @@ Grey Gyre is south of Phat Path.
 
 the lawl wall is vanishing scenery in Phat Path.
 
+check taking lawl wall:
+	say "You'll need to take the keys, somehow." instead;
+
 instead of touching lawl wall:
 	say "It feels like it is in a state of thaw. Which makes no sense."
 
@@ -21611,11 +21587,14 @@ description of lawl wall is "A spams-spasm of bad jokes, and I'd tell you a few,
 
 the keys are part of the lawl wall. the keys are reflexive. description is "You're pretty sure the keys open the lawl wall, since the hogs are keeping an eye on them, but you can't be sure."
 
+a-text of keys is "RORY". b-text of keys is "RORY".
+
 the hogs are reflexive plural-named people in Phat Path. description is "They're as big as Leo and Rand but meaner. Plus there are three of them. They look a little smarter, too--but maybe you can use reverse psychology to get under their skin or sneak those keys on the wall.". "Hogs are stretched against the lawl wall, in no hurry to try to get by. They look like tough customers, ones who might get annoyed by the sort of words that got you here."
 
 a-text of hogs is "RYRR". b-text of hogs is "RGRR".
 
-a-text of keys is "RORY". b-text of keys is "RORY".
+check taking hogs:
+	say "You and Rand and Leo can take [']em. But not literally." instead;
 
 check going north in Phat Path:
 	if lawl wall is visible:
@@ -22253,6 +22232,9 @@ carry out rebooting:
 chapter clock sap
 
 some clock sap is scenery in Hacks' Shack. description is "WHAT IS THIS, you think to yourself as you inspect the clock sap closer. You wonder how THE CLOCK ISN'T DRAINED since it's dripping at a pretty constant rate. CONFUSING!"
+
+check taking clock sap:
+	say "The sap is too sticky." instead;
 
 understand "spa" as a mistake ("Operating machinery in water is dangerous. Or, if the spa was all sap, just plain gross.") when clock sap is visible
 
@@ -29294,6 +29276,7 @@ blurb
 "Wry Eve is Very Wise"
 "Yacking Nick Gay"
 "Yang is Saying"
+"Chastity is Chatty"
 "Ye Kewl Weekly"
 "Yeller Ellery"
 "Yenta Teyna Taney"
@@ -58189,4 +58172,4 @@ volume spare ideas
 				replace the text "G" in temptext with "Y";
 				replace the text "P" in temptext with "R";
 				change b-text of Z to "[temptext]";
-				[say "[Z]: [b-text of Z] -> [temptext].";]]]
+				[say "[Z]: [b-text of Z] -> [temptext].";]]]]
