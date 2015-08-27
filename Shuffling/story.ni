@@ -2518,13 +2518,18 @@ understand "cr [something]" as cring.
 
 marcos-trumped is a truth state that varies.
 
+to buzz-or-no-noise (ana - a thing):
+	repeat through table of anagrams:
+		if the-from entry is ana:
+			say "The gadget buzzes[buz-help]";
+			continue the action;
+	say "The gadget makes no noise.";
+
 carry out cring:
 	if gadget-secured is true:
 		say "You can't use this shortcut. Your gadget is locked." instead;
 	if noun is inflexible:
-		if number of things that anagram the noun > 0:
-			say "The gadget buzzes[buz-help]" instead;
-		say "The gadget makes no noise." instead;
+		buzz-or-no-noise noun instead;
 	now marcos-trumped is true;
 	if noun is pig and player is not on fuzzy looking wall: [?? this is not perfect code. It is duplicated elsewhere.]
 		say "You are too far away at the moment." instead;
@@ -2619,18 +2624,6 @@ a region has a room called last-loc.
 a region has a list of things called item-list.
 
 a region has a list of things called worn-list.
-
-book onewaying
-
-onewaying relates various things to various things.
-
-the verb to oneway (it oneways, they oneway, it onewayed) implies the onewaying relation.
-
-book anagramming
-
-anagramming relates things to each other.
-
-The verb to anagram (it anagrams, they anagram, it anagrammed) implies the anagramming relation.
 
 book region division
 
@@ -2777,13 +2770,8 @@ before fliptoing (this is the enter pray or examine rule):
 
 check fliptoing (this is the should we bother flipping rule):
 	if noun is not visible:
-		if number of things that oneway noun > 0:
-			repeat with prosp running through things that oneway noun:
-				if prosp is visible:
-					continue the action;
-		repeat with prosp running through things that anagram noun:
-			d "Checking [prosp].";
-			if prosp is visible:
+		repeat through table of anagrams:
+			if the-to entry is noun and the-from entry is visible:
 				continue the action;
 		if noun is sword and noise bag contains words and location of player is Abyss:
 			now noise bag is open;
@@ -3221,7 +3209,6 @@ when play begins (this is the don't use any other besides status window when pla
 	repeat with Q running through regions:
 		now poss-score of Q is max-score of Q;
 	repeat through table of anagrams:
-		now the-from entry anagrams the-to entry;
 		now the-from entry is flippable;
 		if there is no force-take entry:
 			d "no force-take for [the-from entry]/[the-to entry].[line break]";
@@ -4173,8 +4160,11 @@ carry out xmxing:
 		say "They just seem to EXIST. Maybe you can, too.";
 		ditch-saltine instead;
 	if noun is flippable: [start general stuff]
-		say "[v-b]you see [a random thing that anagrams noun].";
-		ditch-saltine instead;
+		if there is a the-to corresponding to the-from of noun in table of anagrams:
+			say "[v-b]you see [the-to corresponding to the-from of noun in table of anagrams].";
+			ditch-saltine instead;
+		else:
+			say "You give the saltine a funny look. Like you're not sure if it could give you help. This is a [bug-report]" instead;
 	if player is in the nick:
 		say "Perhaps just staring at the air will do something." instead;
 	say "Though you squinted extra, you don't see anything beyond what you normally would've. Well, maybe some other time.";
@@ -10448,11 +10438,7 @@ carry out scaning:
 			check-marcos instead;
 	if noun is inflexible:
 		say "The gadget registers nothing. Maybe you don't need to shuffle around [if noun is plural-named]those[else]that[end if]." instead;
-	if number of things that anagram the noun > 0:
-		say "The gadget buzzes[buz-help]" instead;
-	say "The gadget makes no noise." instead;
-	the rule succeeds;
-	[rehash so if Old Man Almond is visible...]
+	buzz-or-no-noise noun instead;
 
 yes-scans is a number that varies.
 
@@ -11003,8 +10989,6 @@ the sliver is a thing. the sliver is flippable. rgtext of sliver is "[gcn][rc][r
 
 description of sliver is "Surprisingly sharp and of an odd metal. It could cut something as long as you didn't have to saw much."
 
-the livers oneway the sliver. the livers are flippable.
-
 the silver is a thing. the printed name of silver is "silver cylinder". understand "silver cylinder" and "cylinder" and "silver bullet" and "bullet" as silver when silver is visible.
 
 understand "shell" as silver when silver is visible.
@@ -11012,10 +10996,6 @@ understand "shell" as silver when silver is visible.
 does the player mean doing something with the shell when silver is visible: it is unlikely.
 
 description of silver is "[if silver is in shotgun]It's locked and loaded, Junior[otherwise]It's shaped like a small rocket. It'd make a nifty projectile[end if]."
-
-the sliver oneways the silver.
-
-[the silver oneways the livers.]
 
 part maps-Spam
 
@@ -14074,6 +14054,7 @@ blurb
 "Imogen Megino"
 "Indra Darin"
 "Ines Nies"
+"Inge Negi"
 "Inger Negri"
 "Iola Liao"
 "Irina Irani"
@@ -14690,8 +14671,14 @@ blurb
 "Zola Lazo"
 "Zora-Roza Razo"
 "Zoren Enzor"
+"Zorilda Lizardo"
 "Zorrie Rozier"
 "Zuri Ruiz"
+"Archibald Brachaldi"
+"Claude DeLuca"
+"Larsen Lesnar"
+"Tahari Hirata"
+"Sabra Baars"
 
 book forest
 
@@ -14831,6 +14818,7 @@ table of poem codas [xxi]
 blurb
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
+"A formed far dome, made for dream of more fad."
 "Act four: fur coat. Our fact."
 "Act so! O, CAST!"
 "Acted immoral? Melodramatic? Calm mediator!"
@@ -15294,6 +15282,7 @@ blurb
 "Idea B: abed, I abide."
 "Idly, a Lady, I... Daily!"
 "If a lord fraid, LO!" []
+"If cruel life, cur Lucifer, furl ice!"
 "If hate fate? Hi, a thief!" []
 "If hating, a fit: nigh, in a fight!"
 "If I sell fillies, ills! Fie!"
@@ -15943,6 +15932,8 @@ table of camp chants [xxm1]
 blurb
 "'Abusive USA vibe!'"
 "'Account, U-Can't-Co!'"
+"'Lawns of no flaws: fans? Low!'"
+"'Rile! Obtain liberation!'"
 "'The ad: hated!'"
 "'Ad-pest adepts: PASTED!'"
 "'Adidas is Dada!'"
@@ -16055,6 +16046,7 @@ blurb
 "'Juice? TONS! No justice!'"
 "'Kissing-up pig is sunk!'"
 "'Labor, man? Abnormal!'"
+"'Lawns-of-no-flaws fans? Low!'"
 "'Lawsters: Wastrels!'"
 "'Lay quiet?! EQUALITY!'"
 "'Layin['] quiet?! INEQUALITY!'"
@@ -16276,6 +16268,8 @@ blurb
 "'Any D&D? Dandy?' The nerds laugh."
 "'The APIs ape this!' / 'Ha, spite!'"
 "'App? Pap!'"
+"'A loud type. Played out yet? Upload!'"
+"'User-Fit? Fustier surfeit!'"
 "'Ar, I'd raid a dir!'"
 "'Ari's PC is crap!'"
 "'Armor class calms roars.'"
@@ -16290,6 +16284,7 @@ blurb
 "A brief argument over the Hax-o-Gen Hexagon: good or bad?"
 "'...butler I rebuilt!'"
 "'Citin['] of fiction!'"
+"'CleanSoft Conflates lone facts!'"
 "'Cold dark-clad dork!'"
 "A conceders['] crescendo follows a claim nerds'd LIKE to help everyday stupid people."
 "'A cretin! Certain!' / 'I recant!'"
@@ -16699,6 +16694,7 @@ blurb
 "'Verbal games? Grave blames!'"
 "'Virulent evil runt!'"
 "'Whip met the wimp!'"
+"'Word-gamer? Worm-grade!'"
 "'Wordplay's low, dry sap!'"
 "'Yep, Bull!' He points at you. 'Belly up!'"
 "'Yo, mite! Omit ye!'"
