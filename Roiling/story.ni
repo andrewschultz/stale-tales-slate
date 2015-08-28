@@ -25605,6 +25605,7 @@ blurb
 "Neat-Help Elephant!"
 "Nice Guys['] Yes-Cuing."
 "O-It's-Bad Aid-Bots."
+"Of Hints I Fish Into: This Info."
 "Ole Hint Hotline."
 "One Fluid Un-Foiled Duel Info."
 "Overleaf of Reveal!"
@@ -25843,7 +25844,6 @@ table of undo allows [xxg9]
 blurb
 "'Action over? Revocation!'"
 "'Adjourn? Jar! Undo!'"
-"'I wander. A rewind!'"
 "'Anyhow, it's -- this way? No.'"
 "'Anyhow, tear another way.'"
 "'Construe recounts.'"
@@ -25866,6 +25866,7 @@ blurb
 "'I--return! Re-run it!'"
 "'I create a re-cite.'"
 "'I rode. O, dire! I redo!'" []
+"'I wander. A rewind!'"
 "Loth sound: 'Should not undo, sloth! Thud!' Loons." [p]
 "'A mess-up? Um, passe.'"
 "'More to re-moot!'"
@@ -25947,7 +25948,6 @@ table of wait responses [xxg10]
 blurb
 "Act, cat!"
 "'Actin[']? I can't!'"
-"Effort is forfeits!"
 "Ah, so: net no haste."
 "Ahh, paused? Push ahead!"
 "Any gelid delaying: yield nag."
@@ -25967,6 +25967,7 @@ blurb
 "Dog, a hint: do a thing!" []
 "Dust off! DO stuff!"
 "'Effort? I forfeit!'"
+"Effort is forfeits!"
 "Eh, I try on...in THEORY."
 "Elapsing: Pleasing?"
 "Ennui-abled? Undeniable."
@@ -29718,7 +29719,6 @@ blurb
 "[if player is male]Burt Oakes[else]Tresa Kubo[end if] Breaks Out"
 "[n-t]'s Pets: Past Tense"
 "Abdul's Bud Sal"
-"Dr. I Play Rapidly"
 "Abysmal Amy's Lab"
 "Admiral Dalarmi"
 "Aforementioned Foe, Renominated"
@@ -29795,6 +29795,7 @@ blurb
 "Done-For Roof-Den"
 "Dr. Egan's Dangers"
 "Dr. Geist Gets Rid"
+"Dr. I Play Rapidly"
 "Dr. Idle-Riddle"
 "Dr. Neo's Drones" []
 "Dr. Roach-Orchard"
@@ -30421,6 +30422,7 @@ blurb
 "Speak: the Hep Takes"
 "Spiel Piles"
 "Stand in and Snit"
+"Star-Like Talk, Rise"
 "Steamiest Estimates"
 "Step In [']N Spite"
 "Stew is Wisest"
@@ -30469,7 +30471,6 @@ blurb
 "Wry Eve is Very Wise"
 "Yacking Nick Gay"
 "Yang is Saying"
-"Star-Like Talk, Rise"
 "Ye Kewl Weekly"
 "Yeller Ellery"
 "Yenta Teyna Taney"
@@ -30852,6 +30853,7 @@ blurb
 "Cat, Kite a Ticket"
 "Charisma is a Charm"
 "Christen Snitcher Retchins[']"
+"City Is Our Curiosity"
 "Close to Coolest"
 "Cloy to Yo['] Colt"
 "Co-Fend, Def Con"
@@ -31181,8 +31183,6 @@ blurb
 "Now Wish Who Wins"
 "Number Six Burn Mixes"
 "O It's the Hotties"
-"City Is Our Curiosity"
-"Rouse Euros"
 "O Town to Own"
 "Oaths by Hats Boy"
 "Odd [a-word-u] Saddos"
@@ -31253,6 +31253,7 @@ blurb
 "Rock Can Crack On"
 "Rock on or Conk"
 "Rock Out, Ruck Too"
+"Rouse Euros"
 "Sad Lu Lauds U Lads"
 "Scan, Hit a Snitch" []
 "Scum-Aid Ad Music"
@@ -32227,8 +32228,6 @@ blurb	prio
 "Abbey Cho's Sobby Ache[r], by [if player is male]Cobey Bash[else]Sheya Cobb[end if]"
 "Abbie's Babies[r], by Seb Iba"
 "ABC is Basic![r] by Cassi Babic"
-"Yokel Herd Keyholder[r], by [if player is male]Kyle Herod[else]Keely Hord[end if]"
-"Note, Dear Ex: Exonerated[r], by Roxane Deet"
 "ABCDEFGHI Chafed Big[r], by Fidge Bach"
 "Abhorrent, Earth-Born[r], by [if player is male]Robert Han[else]Berna Roth[end if]" []
 "Abide Inert, Inebriated[r], by Benita Reid" []
@@ -35153,6 +35152,7 @@ blurb	prio
 "Not-Wise Townies[r], by Otis Wen"
 "Nota Bene: Beaten? No[r], by Bee Anton"
 "Notarise, Notaries, in a Store[r], by Senorita Tina-Rose Restaino" []
+"Note, Dear Ex: Exonerated[r], by Roxane Deet"
 "Novelty-Envy Lot[r], by Ty Loven"
 "Novice Con, Vie[r], by [if player is male]Evon Vicencio[else]Vivienne Coco[end if]"
 "Now Art's Tons Raw[r], by Stan Row" []
@@ -37278,6 +37278,7 @@ blurb	prio
 "Yo, Rend, Dry One[r], by Ned Roy & Don Rey"
 "Yo, Rent: One Try[r], by Rotney-Tyrone Toyner"
 "Yo, Rogue, Your Ego[r], by Reo Yugo"
+"Yokel Herd Keyholder[r], by [if player is male]Kyle Herod[else]Keely Hord[end if]"
 "Yon, a Jig: Gain Joy[r], by [if player is male]Gino Jay[else]Joni Gay[end if]"
 "Yon Bald Land Boy[r], by Bo Dylan"
 "Yon Desk Donkeys[r], by E. K. Dyson"
@@ -41568,7 +41569,6 @@ blurb
 "Aerologists['] astrologies."
 "Aging an['] you: Young again?"
 "Alfreda's Real Fads."
-"Geothermal Gamer Hotel."
 "All-Best Ballets."
 "Art Cly's Crystal." []
 "Babblier, Bribable, I Blabber."
@@ -41613,6 +41613,7 @@ blurb
 "Games for Ego Farms."
 "Gaudiest Guest-Aid." []
 "Gaudiest Suite, Gad." []
+"Geothermal Gamer Hotel."
 "Glam Note: Gloat, Men! Go Mental." []
 "Goal: Mr. Glamor."
 "Golf Carts, Logcrafts."
@@ -51180,7 +51181,6 @@ blurb
 "adsorb-boards" []
 "Agostinelli's legislations"
 "Alison's Sialons"
-"the Geothermal Lag Theorem"
 "Allister Literals"
 "Almeida's Maladies"
 "amateur e-trauma"
@@ -51325,6 +51325,7 @@ blurb
 "Geiselman's semiangles"
 "Gelinas's sealings" []
 "genteelish gehlenites"
+"the Geothermal Lag Theorem"
 "Geremia's gamesier reimages"
 "the Germi-Grime-IMGer"
 "Gerrindo Ordering" []
@@ -53151,6 +53152,7 @@ blurb
 "'Dood? Odd-o dodo!'"
 "'Dull boy? Bully! Do!'"
 "'Faky bore! Freak boy!'"
+"Fashion tips: 'FILA? Fail!'"
 "'FFS, joker!' they cry, trying to bait the trout into a profanity." [x]
 "'Fit? STFU! Stuff it!'"
 "'Flat-out fat lout! Feca-face! A tool? Total!'"
@@ -53557,7 +53559,6 @@ blurb
 "a-parted data pre-adapter"
 "anti-slam talisman"
 "Anytime Amenity"
-"too-small salt-loom"
 "balanced lace band"
 "Barnacle Balancer"
 "bend-or-bonder"
@@ -53648,6 +53649,7 @@ blurb
 "temperate tape meter"
 "Test-Case Cassette"
 "tetramers smatterer"
+"too-small salt-loom"
 "Torque Quoter"
 "trendi-tinder"
 "Trifle Lifter"
@@ -54011,6 +54013,7 @@ blurb
 "'Final-go loafing?'" []
 "'Flee! Be feeble!'" []
 "'Fleeing legs? Fine!'"
+"'Flight set? Let's fight!'"
 "'A foul serf so fearful!'"
 "'Funk it so! Fink-outs!'"
 "'Furtive turf-vie?'"
