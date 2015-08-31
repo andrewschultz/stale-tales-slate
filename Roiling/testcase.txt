@@ -8,3 +8,8 @@ This is a text file of test cases that I can and should look at.
 --I want to try to talk to the haunter about the ruby while walking along.
 --routes revamp
 --see about ORANGE
+--test ways to take the pedanto-notepad
+--X GUARDIAN (all of them)
+--X STORE A etc
+--bypass a region and try to win and look at descriptions
+--examine OTTERS twice. Anything weird happen?

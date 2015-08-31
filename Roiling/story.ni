@@ -207,7 +207,13 @@ a portal can be enter-clued. a portal is usually not enter-clued.
 a portal has a region called a go-region.
 
 instead of taking a portal:
-	say "Try entering, instead.";
+	say "You try taking the portal in the entering sense."
+	try entering the noun instead;
+
+for writing a paragraph about a lumpable portal (called ptl) :
+	say "Where stores once sat, you can now enter [list of lumpable portals in location of the player].";
+	now all lumpable portals in location of the player are mentioned;
+	continue the action;
 
 chapter guardians
 
@@ -4511,33 +4517,6 @@ to recover-items:
 			if JJJ is medals:
 				now player wears medals;
 
-section crust parsing
-
-crust-warn is a truth state that varies.
-
-check eating curst crust:
-	if swears < 1:
-		say "[bug-report]" instead;
-	if mrlp is stores:
-		say "You should probably eat it when you're beyond the, er, spot." instead;
-	if mrlp is not presto:
-		say "The crust fell from the remains of store P. Perhaps it's best to eat it there." instead;
-	if crust-warn is false:
-		say "Ugh! This crust may help you out, but it may be--wait for it--distasteful and spoiled. Go ahead anyway?";
-		now crust-warn is true;
-		unless the player consents:
-			say "OK, maybe later. This warning won't appear again." instead;
-	say "You wince and prepare to take a bite...";
-	now spoilit is true;
-	try presto-hinting;
-	now spoilit is false instead;
-
-track-crust is a truth state that varies.
-
-every turn when player has curst crust and mrlp is presto and track-crust is true:
-	increment swears;
-	try eating curst crust;
-
 chapter say "[reject]" and lalaland
 
 lalaland is a privately-named room. "[bug-report]"
@@ -8752,6 +8731,20 @@ to say att-elm:
 to say which-sharp:
 	say "[if player has ragged dagger]The dagger is not very sharp[else if player has gizmo]The gizmo is versatile but not sharp[otherwise]You have nothing remotely sharp[end if]"
 
+chapter entering
+
+rule for supplying a missing noun when entering:
+	if location of player is Hero's shore:
+		try entering raft;
+	if location of player is Strip of Profits and number of visible portals is 1:
+		now noun is a random visible portal;
+	if location of player is Cruelest Lectures:
+		if the player's command matches the text "sit":
+			now noun is seats;
+		if e-revealed is true:
+			now noun is seats;
+		now noun is passage.
+
 chapter drinking
 
 the block drinking rule is not listed in the check drinking rulebook.
@@ -9397,6 +9390,26 @@ instead of taking a person:
 		say "You might be worse at picking Gretta up than the macks." instead;
 	say "Lifting [if noun is plural-named]people[else]a person[end if] or something [if noun is plural-named]people[else]person[end if]-sized is too heavy for your superpowers. Even if your name happens to be Kate."
 
+chapter looking
+
+section under
+
+chapter look under
+
+look-under-warn is a truth state that varies.
+
+check looking under:
+	if look-under-warn is false:
+		ital-say "looking under is equivalent to SEARCHing unless the game is explicit. That way you can look inside, around and under in just one move. Let's do that now.";
+		now look-under-warn is true;
+	else:
+		say "(just searching instead)[paragraph break]";
+	try searching noun instead;
+
+section behind
+
+understand "look behind [thing]" as searching.
+
 chapter examining
 
 does the player mean examining a direction: it is very unlikely.
@@ -9416,18 +9429,6 @@ after examining:
 	if noun is readable:
 		now last-read is noun;
 	continue the action;
-
-chapter look under
-
-look-under-warn is a truth state that varies.
-
-check looking under:
-	if look-under-warn is false:
-		ital-say "looking under is equivalent to SEARCHing unless the game is explicit. That way you can look inside, around and under in just one move. Let's do that now.";
-		now look-under-warn is true;
-	else:
-		say "(just searching instead)[paragraph break]";
-	try searching noun instead;
 
 chapter tying it to
 
@@ -10677,7 +10678,7 @@ after fliptoing otters-x:
 	now engravings are part of otters-x;
 	continue the action;
 
-volume intro
+volume manor
 
 book Dusty Study
 
@@ -10696,6 +10697,21 @@ the player is in Dusty Study.
 a rich chair is useless scenery in Dusty Study. "You thought you preferred a recliner but this is real. Nicer. It guards against cushionless slouchiness. Its backrest is shaped like brackets, and it's from Art Beck's. Small things can get lost in it[if pedanto-notepad is on chair]. Like your pedanto-notepad, just sitting on it[end if][if latches are off-stage]. In fact, it seems a bit lumpy now[end if]."
 
 the sad ads are plural-named scenery. "[one of]The ads aren't sad because they're drab but rather because so many people fall for them. And they're not even magically possessed. This is the price of prosperity, and yet... One[or]Another[stopping] ad [hawk-blare]."
+
+this-ad is a number that varies. this-ad is usually 0.
+
+check scaning ads:
+	say "Few have deeper meaning. You wonder if they are worth scanning with your own eyes." instead;
+
+to say hawk-blare:
+	increment this-ad;
+	let mxad be maxidx corresponding to a mytab of table of ad slogans in table of megachatter;
+	if this-ad > mxad:
+		say "exhorts HANKER! HARKEN! You must be at the end.";
+		now this-ad is 1;
+		continue the action;
+	choose row this-ad in table of ad slogans;
+	say "[if blare entry is true]blares[else]hawks[end if] [blurb entry][if blare entry is false][end if]"
 
 understand "ad" as sad ads.
 
@@ -10912,6 +10928,41 @@ after fliptoing sitar (this is the check sitar min-up and exits rule) :
 	else if niche is in lalaland and pram is in lalaland:
 		min-up; [check if passage is made via beams or chimney->pram]
 	continue the action;
+
+chapter roveovering
+
+roveovering is an action applying to nothing.
+
+understand the command "rove over" as something new.
+
+understand "rove over" as roveovering.
+
+roved is a truth state that varies.
+
+carry out roveovering:
+	[d "[number of fruits] fruits: [list of fruits]. [list of backdrops] = backdrops.[line break]";]
+	if roved is true:
+		say "You already did." instead;
+	if player is not in dusty study:
+		say "You're not sure where to." instead;
+	if Gunter is not off-stage:
+		say "It's not that easy. Maybe once you've returned [if player is in study]back here [end if]to your Dusty Study, you can sneak out a more usual passage. But you need to fix things in Yorpwald, first. Or restart the game." instead;
+	say "Oh man. That's right. Those adventures--the routes, the troves--and Curtis. Elmo told you to ROVE OVER. Better than Gunter's [one of]cringy-crying[or]slimey-smiley[or]bubbly-blubby[in random order] plea peal, a big tear rate about Elvira...mumbling 'Sad I said a dis.' No, you don't want a CHANCE to be suckered [if stuff-found < 3]if he comes knocking[else]by opening that door[end if]. You slip out a secret passage. Shouldn't need a last atlas for this, but...don't slow down LOTS. You eat a carbo-carob cobra for the long journey.";
+	now roved is true;
+	now first-good-scan is true;
+	now kind-of-cool is true;
+	move player to strip of profits;
+	repeat with ZT running through needed regions:
+		now ZT is bypassed;
+	repeat with ZT running through patchable things:
+		now ZT is in lalaland;
+	now Store K is in lalaland;
+	now Store N is in lalaland;
+	now magneto is in lalaland;
+	now player has super purse;
+	now player has letters settler;
+	now player has pedanto-notepad;
+	the rule succeeds;
 
 chapter side door
 
@@ -12438,6 +12489,12 @@ carry out padding:
 
 recbuffer is indexed text that varies.
 
+to say preefsay of (pfy - a thing):
+	if pfy is not prefigured:
+		preef pfy;
+		say "[line break]";
+		pad-rec-q "flips";
+
 to pad-rec-p (q - text):
 	pad-rec q;
 	say "[paragraph break]";
@@ -12525,53 +12582,119 @@ carry out pfing:
 
 volume stores
 
-book Strip of Profits
+after choosing notable locale objects when player is in strip of profits:
+	if store h is in strip of profits:
+		set the locale priority of store h to 0;
+	if hoster is in strip of profits:
+		set the locale priority of hoster to 0;
+	if otters-x are in strip of profits:
+		set the locale priority of otters-x to 10;
+	if tokers are in strip of profits:
+		set the locale priority of tokers to 1;
+	if tokers are in strip of profits and nestor is in strip of profits:
+		set the locale priority of nestor to 0;
+	continue the action;
 
-Strip of Profits is a room in Stores. "[if roved is true]Well, those stores you took care of are gone, and so is the megaton magneto-montage. [h-or-others].[else]Most of the twenty-six stores from your first time here remain, though you're not here to shop[which-stores].[paragraph break]A megaton magneto-montage[i-u] stands here.[end if]"
+book definitions
 
-last-loc of Stores is Strip of Profits.
-
-to say i-u:
-	if magneto montage is unexamined:
-		say ", which looks like a directory of some sort,"
-
-to say h-or-others:
-	say "[if store h is in strip]But Store H remains[else]That hoster remains where Store H was[end if]"
-
-does the player mean entering a sto: it is likely.
-
-understand "restow" as a mistake ("[if store w is visible]Store W glows red as you try this[else if towers are visible]The towers glow red as you try this[else]You did what you could in store W and the towers[end if]") when player is in strip of profits
-
-after printing the locale description for Strip of Profits when Strip of Profits is unvisited:
-	if roved is false:
-		say "You remember something from your first trip to Yorpwald--how Terry would help you RETRY if you got stuck in any stores. So you write that in your pedanto-notepad. Also, as a fourth-wall note, if you have solved any area, simply type the command you used to win it.";
-		pad-rec-lump "retry";
-		pad-rec "warp";
-
-disamb-store is privately-named useless scenery in Strip of Profits. printed name of disamb-store is "the entire store bank". understand "store" and "entire/ store bank/" and "stores" as disamb-store.
-
-description of disamb-store is "[sto-desc].".
-
-to say sto-desc:
-	say "Some stick out more than others. Some have too many shoppers around. Some seem more solitary and ready to explore[one of]. You notice stores F, I, M and R are missing--of course they are, since you got past them to the forest, sortie, metros and resort last time here[or][stopping]. You can examine one in particular with, say, X STORE Q"
-
-instead of entering disamb-store:
-	say "Hmm, you can't enter all the stores at once. You'll need to pick a store--you can also refer to it by its abbreviation, e.g. Q for Store Q.";
-
-does the player mean examining disamb-store:it is likely.
-does the player mean entering disamb-store: it is likely.
-
-check going south in Strip of Profits:
-	if hoster is not visible:
-		try going west instead;
-
-to decide whether (myp - a thing) is nonpost:
+to decide whether (myp - a thing) is nonpost: [nonpost is short for "a portal, but not to store h"]
 	if myp is not a portal, decide no;
 	if myp is hoster, decide no;
 	if myp is in strip of profits, decide yes;
 	decide no;
 
-check going inside in Strip of Profits (this is the which portal rule) :
+definition: a sto is game-critical:
+	if it is not in Strip of Profits, no;
+	if it is not flippable, no;
+	if it is bedruggled, no;
+	if it is Store H, no;
+	if it is Store B, no;
+	yes;
+
+definition: a sto is supporting: [ie need to win before entering store T. K/N don't count]
+	if it is Store T, no;
+	if it is Store H, no;
+	if it is Store B, no;
+	if it is bedruggled, no;
+	if it is game-critical, yes;
+	no;
+
+book what is a sto
+
+does the player mean scaning a sto:
+	it is very likely;
+
+a sto is a kind of thing. a sto is usually undescribed. a sto is usually fixed in place. description of a sto is "This is some posh shop or other. But it has been integrated into the whole strip. It can't lead anywhere interesting. It's greyed out, like an area in a video game you can't get to."
+
+a sto can be bedruggled. a sto is usually not bedruggled. [K and N are bedruggled]
+
+specification of sto is "Something that may or may not change into a portal."
+
+cur-hint-sto is a sto that varies. cur-hint-sto is usually Store V.
+
+the plural of sto is stos.
+
+does the player mean entering a sto: it is likely.
+
+instead of entering a sto:
+	if noun is store b:
+		say "You [if store b is reflexive]need to say what you want a free sample of[else]already got your free sample[end if]." instead;
+	if noun is store c:
+		say "You'd have to show ID. Then they'd know who you were. Then Elvira would have you arrested. Plus, ew." instead;
+	if noun is store h:
+		say "[if roved is true]You need to figure how to convert Store H into something different[else]Store H looks so wild and confusing, you're disoriented when approaching it. Maybe take care of Elvira first[end if]." instead;
+	if noun is store k or noun is store n:
+		say "That looks distinctly too seedy. It actually does need to be demolished, somehow." instead;
+	if noun is store r:
+		say "You can't go back to your resort. Not until Elvira's dispatched." instead;
+	if noun is useless:
+		say "There's nothing you'd want in that store, even if you were shopping." instead;
+	if noun is flippable:
+		say "Probably not in its present state." instead;
+	say "You're not here to shop. You're here to save Yorpwald[if noun is nonreflexive]. Not shop in some random store[one of]. You changed a few other stores to get where you needed before--maybe do that again[or]. Like this one[stopping][else], and you remember how changing stores helped you get places before[end if]."
+
+check taking a sto:
+	say "You can't take that, [if noun is flippable]but you can maybe change it and enter it[else]and you can't do much else, either." instead;
+
+understand "follow [text]" as a mistake ("This game doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.") [for ROUTES]
+
+book Strip of Profits
+
+Strip of Profits is a room in Stores. "[if roved is true]Well, those stores you took care of are gone, and so is the megaton magneto-montage. [h-or-others].[else]Most of the twenty-six stores from your first time here remain, though you're not here to shop[which-stores].[paragraph break]A megaton magneto-montage[i-u] stands here.[end if]"
+
+to say which-stores:
+	if number of visible flippable stos is 0:
+		say ", but there aren't any more you can switch up";
+		the rule succeeds;
+	if number of visible flippable stos is 1:
+		say ". Only [random visible flippable sto] is still worth investigating";
+		the rule succeeds;
+	let BBQ be a list of things;
+	now BBQ is list of flippable not bedruggled stos in Strip of Profits;
+	remove Store B from BBQ, if present;
+	remove Store H from BBQ, if present;
+	sort BBQ;
+	let A be indexed text;
+	now A is "[BBQ]";
+	now A is "[A in title case]";
+	replace the text "store " in A with "", case insensitively;
+	replace the text "And" in A with "and";
+	say ". Stores [A] seem in decent shape[if hoster is visible], but that hoster you made looks too scary for now[end if].[no line break][tokies] Looks like near the end of the alphabet's where it's at";
+
+to decide whether you-can-advance:
+	let Q be number of solved regions;
+	increase Q by number of bypassed regions;
+	if Q < 5:
+		decide no;
+	decide yes.
+
+to say tokies:
+	if number of visible bedruggled stos is 0:
+		say "[no line break]";
+		continue the action;
+	say " Also, [list of visible bedruggled stos] seem[if number of visible bedruggled stos is 1]s[end if] nearly condemned.[no line break]";
+
+check going inside in Strip of Profits (this is the which portal rule) : [we choose the "easiest" by default]
 	if number of maingame portals in strip is 1:
 		if hoster is in strip:
 			say "You figure the hoster can be put off [']til later.";
@@ -12595,163 +12718,54 @@ check going inside in Strip of Profits (this is the which portal rule) :
 		try entering smoke cloud instead;
 	say "There's nothing you can enter--the plain old stores don't count. You don't have time to shop." instead;
 
-instead of doing something to ads:
-	if action is procedural, continue the action;
-	say "They aren't what's really wrong with Yorpwald. I mean, they're not right, but they're an inevitable consequence of a place not in total peril. Best do something with the stores, or what they can become, instead.";
+last-loc of Stores is Strip of Profits.
 
-to say which-stores:
-	if number of visible flippable stos is 0:
-		say ", but there aren't any more you can switch up";
-		the rule succeeds;
-	if number of visible flippable stos is 1:
-		say ". Only [random visible flippable sto] is still worth investigating";
-		the rule succeeds;
-	let BBQ be a list of things;
-	now BBQ is list of flippable not bedruggled stos in Strip of Profits;
-	remove Store B from BBQ, if present;
-	remove Store H from BBQ, if present;
-	sort BBQ;
-	let A be indexed text;
-	now A is "[BBQ]";
-	now A is "[A in title case]";
-	replace the text "store " in A with "", case insensitively;
-	replace the text "And" in A with "and";
-	say ". Stores [A] seem in decent shape[if hoster is visible], but that hoster you made looks too scary for now[end if].[no line break][tokies] Looks like near the end of the alphabet's where it's at";
+to say i-u:
+	if magneto montage is unexamined:
+		say ", which looks like a directory of some sort,"
 
-definition: a sto is game-critical:
-	if it is not in Strip of Profits, no;
-	if it is not flippable, no;
-	if it is bedruggled, no;
-	if it is Store H, no;
-	if it is Store B, no;
-	yes;
+section describing the Strip
 
-definition: a sto is supporting:
-	if it is Store T, no;
-	if it is Store H, no;
-	if it is Store B, no;
-	if it is bedruggled, no;
-	if it is game-critical, yes;
-	no;
+to say h-or-others:
+	say "[if store h is in strip]But Store H remains[else]That hoster remains where Store H was[end if]"
 
-to say tokies:
-	if number of visible bedruggled stos is 0:
-		say "[no line break]";
-		continue the action;
-	say " Also, [list of visible bedruggled stos] seem[if number of visible bedruggled stos is 1]s[end if] nearly condemned.[no line break]";
+after printing the locale description for Strip of Profits when Strip of Profits is unvisited:
+	if roved is false:
+		say "You remember something from your first trip to Yorpwald--how Terry would help you RETRY if you got stuck in any stores. So you write that in your pedanto-notepad. Also, as a fourth-wall note, if you have solved any area, simply type the command you used to win it.";
+		pad-rec-lump "retry";
+		pad-rec "warp";
 
-section ads
+chapter all the stores
 
-check scaning ads:
-	say "Few have deeper meaning. You wonder if they are worth scanning with your own eyes." instead;
+disamb-store is privately-named useless scenery in Strip of Profits. printed name of disamb-store is "the entire store bank". understand "store" and "entire/ store bank/" and "stores" as disamb-store.
 
-to say hawk-blare:
-	increment this-ad;
-	let mxad be maxidx corresponding to a mytab of table of ad slogans in table of megachatter;
-	if this-ad > mxad:
-		say "exhorts HANKER! HARKEN! You must be at the end.";
-		now this-ad is 1;
-		continue the action;
-	choose row this-ad in table of ad slogans;
-	say "[if blare entry is true]blares[else]hawks[end if] [blurb entry][if blare entry is false][end if]"
+description of disamb-store is "[sto-desc].".
 
-this-ad is a number that varies. this-ad is usually 0.
-
-chapter roveovering
-
-roveovering is an action applying to nothing.
-
-understand the command "rove over" as something new.
-
-understand "rove over" as roveovering.
-
-roved is a truth state that varies.
-
-to say h-other:
-	say "[if store h is visible]Store H[else]the hoster[end if]";
-
-carry out roveovering:
-	[d "[number of fruits] fruits: [list of fruits]. [list of backdrops] = backdrops.[line break]";]
-	if roved is true:
-		say "You already did." instead;
-	if player is not in dusty study:
-		say "You're not sure where to." instead;
-	if Gunter is not off-stage:
-		say "It's not that easy. Maybe once you've returned [if player is in study]back here [end if]to your Dusty Study, you can sneak out a more usual passage. But you need to fix things in Yorpwald, first. Or restart the game." instead;
-	say "Oh man. That's right. Those adventures--the routes, the troves--and Curtis. Elmo told you to ROVE OVER. Better than Gunter's [one of]cringy-crying[or]slimey-smiley[or]bubbly-blubby[in random order] plea peal, a big tear rate about Elvira...mumbling 'Sad I said a dis.' No, you don't want a CHANCE to be suckered [if stuff-found < 3]if he comes knocking[else]by opening that door[end if]. You slip out a secret passage. Shouldn't need a last atlas for this, but...don't slow down LOTS. You eat a carbo-carob cobra for the long journey.";
-	now roved is true;
-	now first-good-scan is true;
-	now kind-of-cool is true;
-	move player to strip of profits;
-	repeat with ZT running through needed regions:
-		now ZT is bypassed;
-	repeat with ZT running through patchable things:
-		now ZT is in lalaland;
-	now Store K is in lalaland;
-	now Store N is in lalaland;
-	now magneto is in lalaland;
-	now player has super purse;
-	now player has letters settler;
-	now player has pedanto-notepad;
-	the rule succeeds;
-
-chapter stores
-
-the windows are useless plural-named scenery in Strip of Profits. the windows are undesc. understand "window" as windows.
-
-instead of doing something with windows:
-	if current action is attacking:
-		say "Unfortunately, if you enter a store that way, while it's still a store, there'd be nothing worth exploring.[paragraph break]Plus Elvira'd have a field day if and when you get caught." instead;
-	unless action is procedural:
-		say "Unfortunately, with all those windows, it's hard to be specific. But you should be able to refer to the store with the windows you want to look in." instead;
-	say "Unfortunately, you can't do much with the windows. Since stores sort of have to have them, that gets ambiguous. It's probably simpler to refer to the store you want to inspect.";
-
-does the player mean scaning a sto:
-	it is very likely;
-
-a sto is a kind of thing. a sto is usually undescribed. a sto is usually fixed in place. description of a sto is "This is some posh shop or other. But it has been integrated into the whole strip. It can't lead anywhere interesting."
-
-specification of sto is "Something that may or may not change into a portal."
-
-cur-hint-sto is a sto that varies. cur-hint-sto is usually Store V.
-
-the plural of sto is stos.
-
-instead of entering a sto:
-	if noun is store b:
-		say "You [if store b is reflexive]need to say what you want a free sample of[else]already got your free sample[end if]." instead;
-	if noun is store c:
-		say "You'd have to show ID. Then they'd know who you were. Then Elvira would have you arrested. Plus, ew." instead;
-	if noun is store h:
-		say "[if roved is true]You need to figure how to convert Store H into something different[else]Store H looks so wild and confusing, you're disoriented when approaching it. Maybe take care of Elvira first[end if]." instead;
-	if noun is store k or noun is store n:
-		say "That looks distinctly too seedy. It actually does need to be demolished, somehow." instead;
-	if noun is store r:
-		say "You can't go back to your resort. Not until Elvira's dispatched." instead;
-	if noun is useless:
-		say "There's nothing you'd want in that store, even if you were shopping." instead;
-	if noun is flippable:
-		say "Probably not in its present state." instead;
-	say "You're not here to shop. You're here to save Yorpwald[if noun is nonreflexive]. Not shop in some random store[one of]. You changed a few other stores to get where you needed before--maybe do that again[or]. Like this one[stopping][else], and you remember how changing stores helped you get places before[end if]."
-
-check taking a sto:
-	say "You can't take that, [if noun is flippable]but you can maybe change it and enter it[else]and you can't do much else, either." instead;
+to say sto-desc:
+	say "Some stick out more than others. Some have too many shoppers around. Some seem more solitary and ready to explore[one of]. You notice stores F, I, M and R are missing--of course they are, since you got past them to the forest, sortie, metros and resort last time here[or][stopping]. You can examine one in particular with, say, X STORE Q"
 
 check taking disamb-store:
 	say "You can't take one store, much less all." instead;
 
-a sto can be bedruggled. a sto is usually not bedruggled.
+instead of entering disamb-store:
+	say "Hmm, you can't enter all the stores at once. You'll need to pick a store--you can also refer to it by its abbreviation, e.g. Q for Store Q.";
 
-to say gd:
-	say "It's oddly greyed out, like an area in a video game you can't get to. [no line break]"
+does the player mean examining disamb-store:it is likely.
+does the player mean entering disamb-store: it is likely.
 
-store-a is a privately-named useless sto. understand "store/ 1/one/a" as store-a when player is in Strip of Profits. the printed name of store-a is "Store A".
+chapter store a
+
+there is a sto named Store A. it is privately-named and useless.
+
+chapter store b
 
 Store B is a LLPish reflexive sto. understand "store/ 2/two" as Store B when player is in Strip of Profits.
 
 a-text of store b is "RYRRYR". b-text of store b is "PYRRGR".
 
 description of Store B is "It's not as greyed out as most of the other stores. It reads BERTO'S (crossed out) then OBERT'S BEST, OR... It also claims to be better than Dupree Pureed[if store b is reflexive]. It's probably some sort of food store, and it feels a bit cold nearby[end if][one of]. You think you see who built this--you could examine it again. Red text[or]. The builder's name is REST, BO, in red text[stopping]."
+
+chapter store c
 
 Store C is a useless sto. understand "store/ 3/three" as Store C when player is in Strip of Profits.
 
@@ -12762,42 +12776,27 @@ check examining Store C for the first time:
 	ital-say "store C is a no gamier mirage but a pro-sin prison--enough smut you must need Tums--so this fun fort may be a turnoff to examine again[if censor-minor is true], especially since you have profanity disabled[end if]. So, pardon da porn (hetero or the other) or call pornog no-prog. I'm not judging. I just discovered them all by intellectual curiosity and guesswork, so stop saying that. Go on. Harp. Pry.";
 	the rule fails;
 
+chapter store d
+
 Store D is a useless sto. understand "store/ 4/four" as Store D when player is in Strip of Profits.
+
+chapter store e
 
 Store E is a useless sto. understand "store/ 5/five" as Store E when player is in Strip of Profits.
 
 description of Store E is "It's bolted up but seems to be advertising a stereo sale."
 
-the forest is useless scenery in Strip of Profits. understand "store f" and "store/f" as forest when player is in strip of profits. "It's not really Store F any more. It's been preserved--a foster forest. But new stores have sprouted up."
+chapter store f, i mean, forest
 
-instead of doing something with the megaton magneto montage:
-	if current action is scaning:
-		say "Your settler registers nothing. It looks too dense to change. Besides, it's got information on the stores, and you wouldn't want to lose that." instead;
-	if action is procedural:
-		continue the action;
-	say "The magneto-montage's not good for much besides looking at. But it's a useful guide.";
+the forest is useless scenery in Strip of Profits. understand "store f" and "store/f" as forest when player is in strip of profits. "It's not really Store F any more. It's been preserved--a foster forest. But new stores have sprouted up around it since last game."
 
 instead of entering forest:
-	say "You don't know if you'd be welcome at that tourist trap, and there's nothing more to do there."
+	say "[t-trap]."
 
-the megaton magneto montage is useless scenery in Strip of Profits. printed name of montage is "megaton magneto montage"
+to say t-trap:
+	say "You don't know if you'd be welcome at that tourist trap, and there's nothing more to do there"
 
-understand "look behind [thing]" as searching.
-
-description of megaton magneto montage is "It's a sort of directory of all the stores[one of]. You read it through, but you can gloss through it for interesting bits (or even call it LM,) later[or]. You gloss through for what interests you[stopping].[paragraph break][b]CLOSED ON YORPDAY (that's today)[r]: A, D, E, G, J, L, O, Q, S, X, Z[if store b is reflexive][line break][b]FREE SAMPLES: B[r][end if][if store c is not examined][line break][b]NO PRUDES, USED !!!!: C[r][end if][line break][b]DON'T BOTHER UNLESS YOU'VE NOTHING, I MEAN NOTHING, TO DO[r]: H[one of][line break][b]OF HISTORICAL SIGNIFICANCE[r]: F/Forest, I/Sortie, M/Metros, R/Resort[or][stopping][if store k is in strip or store k is in strip][line break]CONDEMNED: K, N[line break][end if][b]NOT ELVIRA-APPROVED. ENTER AT OWN RISK[r]: P, U, V, W, Y[if store t is in profits][line break][b]ELVIRA SAYS KEEP EXTRA DOUBLE OUT[r]: T[paragraph break][engrav-note]."
-
-to say engrav-note:
-	say "[if engravings are examined]Those engravings are at the bottom, too[else]You note engravings craftily hidden below all this[end if]"
-
-check examining magneto montage when roved is true:
-	say "It's not really relevant now that there's just [if store h is visible]Store H[else]the hoster." instead;
-
-change-warn is a truth state that varies.
-
-after examining magneto montage when change-warn is false:
-	if number of solved regions + number of bypassed regions > 1:
-		say "It's kind of out of date since you got to work, but it'll be good enough reference in the future.";
-		now change-warn is true;
+chapter store g
 
 Store G is a useless sto. understand "store/ 7/seven" as Store G when player is in Strip of Profits.
 
@@ -12808,6 +12807,8 @@ understand "gorest" and "go rest" as a mistake ("Store G is too busy to allow th
 understand "gots er" as a mistake ("And what would you do with Store G, when you take it?") when Store G is visible.
 
 understand "storge" as a mistake ("[one of]You have a momentary vision of an apocryphal eighth book in the Harry Potter series sitting by a pillar, but it passes[or]Stop trying to make Pillar of Storge happen[stopping].") when Store G is visible.
+
+chapter store h
 
 Store H is a sto. understand "store/ 8/eight" as Store H when player is in Strip of Profits. [description of Store H is "Spray painted on this locked store is: others are in the throes of being reshot."]
 
@@ -12841,18 +12842,28 @@ check entering hoster:
 	if roved is false:
 		say "You think about entering, but you remember Elmo saying it wasn't critical to save Yorpwald." instead;
 
+chapter store i
+
 the sortie is useless scenery in Strip of Profits. understand "store f" and "store/f" as sortie when player is in strip of profits. "The sortie leads to the erstwhile Lord Ablemiser's territory, which you were able to neutralize your first time through. You think he still likes you--but you've no time to verify that."
 
 instead of entering sortie:
-	say "You don't know if you'd be welcome at that tourist trap, and there's nothing more to do there."
+	say "[t-trap]."
+
+chapter store j
 
 Store J is a useless sto. understand "store/ 10/ten" as Store J when player is in Strip of Profits.
 
+chapter store k
+
 Store K is a bedruggled sto. understand "store/ 11/eleven" as Store K when player is in Strip of Profits.
+
+a-text of Store K is "RYRYRR". b-text of Store K is "RYRYRR".
+
+description of Store K is "[one of]A peculiar smell of smoke and incense seeps from Store K, but that's probably not the BIG reason this place went downhill. 'Hey! stop violating our privacy, Dude, or we will maybe, like, insult you next time![or]'Dude! We're trying to REST, OK?' someone looks briefly at you through bloodshot eyes.[or]Someone with bloodshot red eyes begins blasting the truly awful music of K. T. Rose.[or]You wonder how they can rest okay while listening to the music of K. T. Rose.[stopping]"
 
 understand "stroke" as a mistake ("You need a stroke of genius, but that's all wrong. You are left seeing red a bit. But this puzzle probably isn't worth risking your health over.")
 
-a-text of Store K is "RYRYRR". b-text of Store K is "RYRYRR".
+section smoke cloud
 
 the smoke cloud is a not maingame not lumpable portal. diffic of smoke cloud is 1. "The tokers['] smoke cloud hovers--[if lectures is visited]but you don't want to go back[else]maybe there's a small 'adventure' inside[end if]."
 
@@ -12872,25 +12883,11 @@ check entering smoke cloud:
 check smelling when smoke cloud is visible:
 	say "Err. I can't tell you exactly how the smoke smells. I wouldn't know." instead;
 
-after choosing notable locale objects when player is in strip of profits:
-	if store h is in strip of profits:
-		set the locale priority of store h to 0;
-	if hoster is in strip of profits:
-		set the locale priority of hoster to 0;
-	if otters-x are in strip of profits:
-		set the locale priority of otters-x to 10;
-	if tokers are in strip of profits:
-		set the locale priority of tokers to 1;
-	if tokers are in strip of profits and nestor is in strip of profits:
-		set the locale priority of nestor to 0;
-	continue the action;
+section tokers
 
 the tokers are plural-named people. "Some tokers are here[if Store N is visible], moaning about their friend they lost nearby[otherwise], doing their tokin['] thing[if-nest]."
 
-for writing a paragraph about a lumpable portal (called ptl) :
-	say "Where stores once sat, you can now enter [list of lumpable portals in location of the player].";
-	now all lumpable portals in location of the player are mentioned;
-	continue the action;
+description of tokers is "Long-haired, lazy, babbling bums, unwilling to do anything nearing earning. Their taste in clothes is worse than their taste in music. they seem to be fervently arguing whether it is best to say dude, like, or man too much."
 
 rule for printing a locale paragraph about tokers:
 	now nestor is mentioned;
@@ -12903,26 +12900,30 @@ to say if-nest:
 	if nestor is visible:
 		say ", your friend Nestor participating fervently"
 
-description of tokers is "Long-haired, lazy, babbling bums, unwilling to do anything nearing earning. Their taste in clothes is worse than their taste in music. they seem to be fervently arguing whether it is best to say dude, like, or man too much."
-
-description of Store K is "[one of]A peculiar smell of smoke and incense seeps from Store K, but that's probably not the BIG reason this place went downhill. 'Hey! stop violating our privacy, Dude, or we will maybe, like, insult you next time![or]'Dude! We're trying to REST, OK?' someone looks briefly at you through bloodshot eyes.[or]Someone with bloodshot red eyes begins blasting the truly awful music of K. T. Rose.[or]You wonder how they can rest okay while listening to the music of K. T. Rose.[stopping]"
+chapter store l
 
 Store L is a useless sto. understand "store/ 12/twelve" as Store L when player is in Strip of Profits.
 
 description of Store L is "You take a peek inside but feel loster and loster as you do."
+
+chapter store m
 
 the metros are useless plural-named scenery in strip of profits. understand "store m" and "store/m" as metros when player is in strip of profits.
 
 description of metros is "It's probably a quick path to Mt. Rose, which does not need your help. In fact, with public opinion as it is right now, if you showed up there, you might get beaten up for implying there was something wrong with Mt. Rose."
 
 instead of entering metros:
-	say "You don't know if you'd be welcome at that tourist trap, and there's nothing more to do there."
+	say "[t-trap]."
+
+chapter store n
 
 Store N is a bedruggled sto. understand "store/ 14/fourteen" as Store N when player is in Strip of Profits.
 
 description of Store N is "Someone appears to be in there."
 
 a-text of Store N is "RYRRYR". b-text of Store N is "RYRRYR".
+
+section nestor
 
 Nestor is a person. description of nestor is "[if tokers are visible or smoke cloud is visible]Nestor is somewhere among the tokers, you'd guess[otherwise]Nestor pines for his most bummedly lost friends[end if].". initial appearance of Nestor is "Nestor mopes around, hoping his friends drop by."
 
@@ -12938,7 +12939,11 @@ understand "stoner" as a mistake ("[if nestor is visible]Being a stoner isn't tr
 
 the bottles of toners are a plural-named cluey thing. understand "lotions" as toners. description is "They are trial-sized bottle of toners for skin care[one of]. Thankfully, they weren't made of Sterno, which wouldn't have helped you at all[or]. They're so rent you can't see a brand name[or]There's lots--er, tons--to look at if you see it right[stopping]. The bottles are disgracefully red."
 
+chapter store o
+
 Store O is a useless sto. understand "store/ 15/fifteen" as Store O when player is in Strip of Profits.
+
+chapter store p
 
 Store P is a semi-easy sto. understand "store/ 16/sixteen" as Store P when player is in Strip of Profits.
 
@@ -12950,17 +12955,9 @@ a-text of Store P is "RRYRRY". b-text of Store P is "RRYRRY".
 
 understand "pteros" as a mistake ("[if store p is in strip or e-s is in strip]You don't need to face any predators[else]They're in the past, and so are Store P and the Presto region[end if].") when player is in strip of profits.
 
-the curst crust is a thing. description of crust is "[one of]It's probably from Curt's, the worst bakery in the world. [or][stopping]You have about [swears in words] bites of this disgusting thing left to eat."
-
-understand "bread" as curst crust.
-
-swears is a number that varies. swears is usually 2.
-
 the e-s is a proper-named portal. diffic of e-s is 5. the go-region of e-s is Presto. the printed name of e-s is "an, er, spot". description is "It's hecka swirly. You're sure it goes somewhere the speech is louder and so forth.". initial appearance of e-s is "The, er, spot created when you said PRESTO swirls here."
 
 understand "er/spot" and "er spot" as e-s.
-
-prestoing is an action applying to nothing.
 
 the tropes poster is part of Store P. the tropes poster is auxiliary and semi-easy.
 
@@ -12968,9 +12965,13 @@ description of tropes poster is "It features many important, if mis-stated, meme
 
 a-text of poster is "RRYRRY". b-text of poster is "??YRRY".
 
+chapter store q
+
 Store Q is a useless sto. understand "store/ 17/seventeen" as store Q when player is in Strip of Profits.
 
 description of store Q is "This is a posh shop like many others in the Strip of Profits. It doesn't look likely to hide any sort of portal, even shared with Store U."
+
+chapter store r
 
 Store R is a useless sto. understand "store/ 18/eighteen" as Store R when player is in Strip of Profits.
 
@@ -12978,21 +12979,17 @@ description of Store R is "It could lead back to your resort, to your Roman Mano
 
 understand "resort" as a mistake ("You can't go back to the Roman Manor. Well, you can, but it's a bad idea.") when player is in strip of profits.
 
-to say how-far-along:
-	say "This needs to be filled in to describe the poster on Store P."
-
-to decide whether you-can-advance:
-	if number of solved regions < 5:
-		decide no;
-	decide yes.
+chapter store s
 
 Store S is a useless sto. understand "store/ 19/nineteen" as Store S when player is in Strip of Profits.
 
 description of Store S is "As you get near, you hear GO AWAY YOU TOSSER. The accent doesn't sound British, so you suspect this person just needed to use a new swear and kind of forced things a bit."
 
+chapter store t
+
 Store T is a sto. understand "store/ 20/twenty" as Store T when player is in Strip of Profits.
 
-understand "tortes" as a mistake ("There's no time for food! Especially fatty, non-brain food!")
+understand "tortes" as a mistake ("There's no time for food! Especially fatty, non-brain food[if topside is visited]! Besides, the towers had plenty of food. There was your chance[end if]!")
 
 a-text of Store T is "YRRYRR". b-text of Store T is "YPRYRR".
 
@@ -13002,42 +12999,11 @@ otters-x are a privately-named plural-named not lumpable portal. printed name of
 
 description of otters-x is "They are named Darin and Randi, according to what is engraved below. You see a field of barley beyond them. There's also something below their names, and it reads:"
 
-understand "barely" as a mistake ("You [one of][or]still [stopping]aren't close enough for such a weak word to affect the barley. But that seems right[one of] and worth writing in your notepad[or][stopping].[preefsay of b-b]") when f-o-b is visible.
-
-to say preefsay of (pfy - a thing):
-	if pfy is not prefigured:
-		preef pfy;
-		say "[line break]";
-		pad-rec-q "flips";
-
 after examining otters-x:
 	try examining engravings;
 	now f-o-b is in strip of profits;
 
-the engravings are part of magneto montage. the engravings are plural-named. understand "engraving" and "names" as engravings when engravings are visible.
-
-description of engravings is "[emph of e-s]Man, [r][b]SOMEONE[r] [emph of towers-x]evil[r] [emph of troves-x]will[r] [emph of oyster-x]pay[r] [emph of routes-x]up[r], [emph of otters-x]hard[r][if note-progress is true].[paragraph break][i]NOUNED: UNDONE.[r][paragraph break]The letter emphases seem to have changed since you last read it[npoff][end if]."
-
-eng-scan is a truth state that varies.
-
-check scaning engravings:
-	say "None of the words on the engravings scan to anything.";
-	now eng-scan is true instead;
-
-after examining engravings when eng-scan is false:
-	say "You scan the engravings, just in case, but none of the words turn up anything special. There's probably a different hint at stake, here. Also, it's odd an anti-Elvira message would be around. Maybe it's Gretta's clue Elmo mentioned, and maybe it'll make more sense after you've made your way a bit more.";
-	now eng-scan is true;
-	continue the action;
-
-to say npoff:
-	now note-progress is false;
-
-to say emph of (r - a portal):
-	say "[r]";
-	if go-region of r is solved or go-region of r is bypassed or go-region of r is shortcircuited:
-		say "[b]";
-	if r is visible:
-		say "[i]";
+understand "barely" as a mistake ("You [one of][or]still [stopping]aren't close enough for such a weak word to affect the barley. But that seems right[one of] and worth writing in your notepad[or][stopping].[preefsay of b-b]") when f-o-b is visible.
 
 understand "randi" and "darin" as otters-x.
 
@@ -13059,6 +13025,8 @@ check entering otters-x:
 		now inhib is true;
 	say "You begin to feel drained, and you let out a 'darn, I...' you slow down but just make it. 'Rad! In!'"
 
+chapter store u
+
 Store U is a semi-easy sto. understand "store/ 21/twentyone" as Store U when player is in Strip of Profits.
 
 understand "ouster" as a mistake ("It's your job to be the ouster in Store u, but how to get there?") when Store U is visible or routes-x are visible.
@@ -13068,6 +13036,8 @@ understand "sureto" or "sure to" as a mistake ("You'll be sure to figure it out 
 a-text of Store U is "RYYRYR". b-text of Store U is "RYYRGR".
 
 description of Store U is "Though Store U is the smallest of the stores that stand out, along with Store V[if store v is not visible] before you changed it[end if], you see a dizzying array of branching possibilities inside. Well, roads, except each seems to have a number or label. The roads are red and almost seem to form letters if you look at them right."
+
+section roads
 
 the roads are part of store u. description is "When you stare just right, the red roads reform to 'Sure to set our...'"
 
@@ -13082,6 +13052,8 @@ the routes-x are a privately-named plural-named portal. diffic of routes-x is 2.
 
 description of routes-x is "They appear to branch out in all directions."
 
+chapter store v
+
 Store V is a sto. understand "store/ 22/twentytwo" as Store V when player is in Strip of Profits.
 
 description of Store V is "Store V would be the smallest of the stores that stand out, but for Store U[if store u is not visible] before you changed it[end if]. Strange garnets lie inside. You also see a hologram of voters."
@@ -13094,8 +13066,7 @@ a-text of Store V is "RRYRYR". b-text of Store V is "RRGRGR".
 
 troves-x are a privately-named plural-named portal. diffic of troves-x is 3. understand "troves/jewels" as troves-x. printed name of troves-x is "troves of glittering jewels". go-region of troves-x is troves. initial appearance of troves-x is "[if Loather Rathole is visited]empty troves[else]troves of too-good-to-be-true jewels[end if] glisten here.". understand "trove" as troves-x. description of troves-x is "[if Loather Rathole is unvisited]Shiny. Tempting. You have enough room for a few jewels your super purse[else]You could probably go through the ordeal of them vanishing to get back to Spoiloplis[end if]."
 
-instead of taking troves-x:
-	try entering troves-x instead;
+chapter store w
 
 Store W is a sto. understand "store/ 23/twentythree" as Store W when player is in Strip of Profits.
 
@@ -13124,7 +13095,13 @@ check entering ivory tower:
 	say "You try to enter the ivory tower, but they keep shifting around, and you find yourself walking between them.";
 	try entering towers-x instead;
 
+understand "restow" as a mistake ("[if store w is visible]Store W glows red as you try this[else if towers are visible]The towers glow red as you try this[else]You did what you could in store W and the towers[end if]") when player is in strip of profits
+
+chapter store x
+
 Store X is a useless sto. understand "store/ 24/twentyfour" as Store X when player is in Strip of Profits.
+
+chapter store y
 
 Store Y is a super-easy sto. understand "store/ 25/twentyfive" as Store Y when player is in Strip of Profits.
 
@@ -13146,9 +13123,73 @@ understand "troyes" as a mistake ("Store Y does not lead to France.") when store
 instead of eating oyster-x:
 	say "In Soviet Yorpwald, oyster eat you. Plus, it's all shell, no slime."
 
+chapter store z
+
 Store Z is a useless sto. understand "store/ 26/twentysix" as Store Z when player is in Strip of Profits.
 
-understand "follow [text]" as a mistake ("This game doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.") [for ROUTES]
+chapter megaton magneto montage
+
+the megaton magneto montage is useless scenery in Strip of Profits. printed name of montage is "megaton magneto montage"
+
+instead of doing something with the megaton magneto montage:
+	if current action is scaning:
+		say "Your settler registers nothing. It looks too dense to change. Besides, it's got information on the stores, and you wouldn't want to lose that." instead;
+	if action is procedural:
+		continue the action;
+	say "The magneto-montage's not good for much besides looking at. But it's a useful guide.";
+
+description of megaton magneto montage is "It's a sort of directory of all the stores[one of]. You read it through, but you can gloss through it for interesting bits (or even call it LM,) later[or]. You gloss through for what interests you[stopping].[paragraph break][b]CLOSED ON YORPDAY (that's today)[r]: A, D, E, G, J, L, O, Q, S, X, Z[if store b is reflexive][line break][b]FREE SAMPLES: B[r][end if][if store c is not examined][line break][b]NO PRUDES, USED !!!!: C[r][end if][line break][b]DON'T BOTHER UNLESS YOU'VE NOTHING, I MEAN NOTHING, TO DO[r]: H[one of][line break][b]OF HISTORICAL SIGNIFICANCE[r]: F/Forest, I/Sortie, M/Metros, R/Resort[or][stopping][if store k is in strip or store k is in strip][line break]CONDEMNED: K, N[line break][end if][b]NOT ELVIRA-APPROVED. ENTER AT OWN RISK[r]: P, U, V, W, Y[if store t is in profits][line break][b]ELVIRA SAYS KEEP EXTRA DOUBLE OUT[r]: T[paragraph break][engrav-note]."
+
+to say engrav-note:
+	say "[if engravings are examined]Those engravings are at the bottom, too[else]You note engravings craftily hidden below all this[end if]"
+
+check examining magneto montage when roved is true:
+	say "It's not really relevant now that there's just [if store h is visible]Store H[else]the hoster." instead;
+
+change-warn is a truth state that varies.
+
+after examining magneto montage when change-warn is false:
+	if number of solved regions + number of bypassed regions > 1:
+		say "It's kind of out of date since you got to work, but it'll be good enough reference in the future.";
+		now change-warn is true;
+
+section engravings
+
+the engravings are part of magneto montage. the engravings are plural-named. understand "engraving" and "names" as engravings when engravings are visible.
+
+description of engravings is "[emph of e-s]Man, [r][b]SOMEONE[r] [emph of towers-x]evil[r] [emph of troves-x]will[r] [emph of oyster-x]pay[r] [emph of routes-x]up[r], [emph of otters-x]hard[r][if note-progress is true].[paragraph break][i]NOUNED: UNDONE.[r][paragraph break]The letter emphases seem to have changed since you last read it[npoff][end if]."
+
+to say npoff:
+	now note-progress is false;
+
+to say emph of (r - a portal):
+	say "[r]";
+	if go-region of r is solved or go-region of r is bypassed or go-region of r is shortcircuited:
+		say "[b]";
+	if r is visible:
+		say "[i]";
+
+eng-scan is a truth state that varies.
+
+check scaning engravings:
+	say "None of the words on the engravings scan to anything.";
+	now eng-scan is true instead;
+
+after examining engravings when eng-scan is false:
+	say "You scan the engravings, just in case, but none of the words turn up anything special. There's probably a different hint at stake, here. Also, it's odd an anti-Elvira message would be around. Maybe it's Gretta's clue Elmo mentioned, and maybe it'll make more sense after you've made your way a bit more.";
+	now eng-scan is true;
+	continue the action;
+
+chapter windows
+
+the windows are useless plural-named scenery in Strip of Profits. the windows are undesc. understand "window" as windows.
+
+instead of doing something with windows:
+	if current action is attacking:
+		say "Unfortunately, if you enter a store that way, while it's still a store, there'd be nothing worth exploring.[paragraph break]Plus Elvira'd have a field day if and when you get caught." instead;
+	unless action is procedural:
+		say "Unfortunately, with all those windows, it's hard to be specific. But you should be able to refer to the store with the windows you want to look in." instead;
+	say "Unfortunately, you can't do much with the windows. Since stores sort of have to have them, that gets ambiguous. It's probably simpler to refer to the store you want to inspect.";
 
 book Cruelest Lectures
 
@@ -13156,6 +13197,11 @@ Cruelest Lectures is an innie room in Stores. "You're standing in the back of an
 
 check looking in lectures for the first time:
 	say "As you march through the smoke, you hear 'Freeze! Anti-drug drag unit!' You turn around to see a tall bulky man wearing a T-shirt saying 'IAN. A DRUG GUARDIAN. QUADS SQUAD.'[paragraph break]'So! you're one of those people who have been poking around stores K and N. But these are no-drugs grounds. We finger fringe like you. [if smoke cloud is examined]Second hand funny-smoke. No rationalizations about how you cheat drug lords that way. It's an entry drug and that's facts. [end if]Let's go.'[paragraph break]He frog-marches you to an auditorium. It's quite a crowd, and you're a bit late, so you can't even sit.";
+
+check exiting in Cruelest Lectures:
+	say "[one of]You make a half-hearted (well, 42.86%-hearted) effort to leave, but without a planned destination (jeesh! The self-help speak's already hitting you) you'll just wind up coming back around here. Even though it's so [i]tedious[r][or]You managed to leave for a bathroom break, and you were sort of curious what was in Studio E. You tried the door. It was locked[or]You might wander around inside, but you would come back. That's how you got stuck inside your cubicle at the company so long. Tedious but safe. Oops[or]They...they can't zap your severance check for ditching this tedious lecture? Probably not. But the ushers would guilt trip you into sitting back down[or]The lecturer isn't as tedious as coworker chitchat, but you never pulled yourself away from THAT, either[or]Tedious, tedious, tedious[or]Your eyes wander to the top of the screen. Um, the screen behind the lecturer, that sort of blends in with the room[stopping]." instead;
+
+section seats
 
 the seats are useless plural-named scenery in lectures. "'If you'd gotten here earlier, you might've gotten one,' growls Ian. You're not sure that'd make sense even if you actually [i]were[r] stoned."
 
@@ -13166,17 +13212,7 @@ instead of doing something to the seats:
 		continue the action;
 	try examining seats instead;
 
-rule for supplying a missing noun when entering:
-	if location of player is Hero's shore:
-		try entering raft;
-	if location of player is Strip of Profits and number of visible portals is 1:
-		now noun is a random visible portal;
-	if location of player is Cruelest Lectures:
-		if the player's command matches the text "sit":
-			now noun is seats;
-		if e-revealed is true:
-			now noun is seats;
-		now noun is passage.
+section passage
 
 the passage is scenery in lectures. "The passage that leads to Studio E seems unguarded. Maybe you could sneak in there."
 
@@ -13206,6 +13242,8 @@ check entering passage:
 
 [strudel/lsd-ture and joke if eat after visiting]
 
+chapter lecturer
+
 the lecturer is a reflexive person in Cruelest Lectures. "A lecturer lectures lecturingly about why his wasting your time is better for society than how you waste your time. And how the sooner you agree, the less you'll waste HIS time, and the golden rule and stuff."
 
 check scaning lecturer:
@@ -13216,6 +13254,8 @@ a-text of lecturer is "YYRRYRY". b-text of lecturer is "YYRRYRY".
 understand "max p lee" and "max/lee" and "max lee" as lecturer.
 
 description of lecturer is "He's wearing a very expensive suit and tie. You're not sure why they should be expensive, but you know they are. They're probably about as showy as drug dealers['] $5,000 suits and $300 ties. You read MAX P LEE, EXAMPLE projected behind him, and he is sponsored by RutCorp, who help pull you out of ruts, apparently."
+
+chapter ian
 
 idg is a privately-named person in Cruelest Lectures. printed name of idg is "Ian (a Drug Guardian)". description is "'What? Those biceps are from pure hard work. And a proper diet. And the right vitamins.' He nods and points to the lecturer.". "Standing by the only exit is Ian (a Drug Guardian.)"
 
@@ -13238,6 +13278,8 @@ instead of doing something with idg:
 			continue the action;
 		say "Before you can do anything, Ian points at the heartfelt reflections he shared on you. Or at you. But not just plain with you. He's so much bigger than you, it distracts you from whatever you meant to do.";
 
+subject reflections
+
 The heartfelt reflections are plural-named thing.
 
 after doing something with reflections:
@@ -13246,11 +13288,6 @@ after doing something with reflections:
 description of reflections is "It's a list of thirty-odd sentences beginning I USED TO. It's in hard-hitting simple language but no less painful to read for all that. I will spare you the details--a brochure's such a borer."
 
 a-text of reflections is "YYRRYRY". b-text of reflections is "YGRRYRY".
-
-check exiting in Cruelest Lectures:
-	say "[one of]You make a half-hearted (well, 42.86%-hearted) effort to leave, but without a planned destination (jeesh! The self-help speak's already hitting you) you'll just wind up coming back around here. Even though it's so [i]tedious[r][or]You managed to leave for a bathroom break, and you were sort of curious what was in Studio E. You tried the door. It was locked[or]You might wander around inside, but you would come back. That's how you got stuck inside your cubicle at the company so long. Tedious but safe. Oops[or]They...they can't zap your severance check for ditching this tedious lecture? Probably not. But the ushers would guilt trip you into sitting back down[or]The lecturer isn't as tedious as coworker chitchat, but you never pulled yourself away from THAT, either[or]Tedious, tedious, tedious[stopping]." instead;
-
-[say "[one of]Something [i]deters[r] you from leaving. You know the lecturer doesn't care about you one way or another, but you would feel guilty just walking out. As if you were giving up[or]If you were more [i]rested,[r] you might be able to leave without guilt.[or]You are almost ready to go, but then you see a brochure about [i]Ester D.[r] extolling a wonderful work-from-home moneymaking opportunity. 'It works! It really does! I'm proof!'[paragraph break]How can you pass that up?[or]Your eyes wander to an electronic timer with a [i]red set[r] of dots...[or]You cringe at the neologism the lecturer offered up early on. [i]REDEST[r]ination.[or]You hear a voice from behind the fourth wall loud-whispering LOOK AT THE STATUS LINE, ALREADY.[or]That voice, again. 'Good thing we're not playing hangman.'[or]Amazingly, I'm still going to give you a point once you say the right command.[or]Okay, now you're just fishing for smart-aleck responses. Get on with it, already![stopping]" instead;]
 
 volume routes
 
@@ -14978,6 +15015,41 @@ check fliptoing cellar door:
 volume presto
 
 last-loc of Presto is Grey Gyre.
+
+section CURST CRUST
+
+the curst crust is a thing. description of crust is "[one of]It's probably from Curt's, the worst bakery in the world. [or][stopping]You have about [swears in words] bites of this disgusting thing left to eat."
+
+understand "bread" as curst crust.
+
+swears is a number that varies. swears is usually 2.
+
+section crust parsing
+
+crust-warn is a truth state that varies.
+
+check eating curst crust:
+	if swears < 1:
+		say "[bug-report]" instead;
+	if mrlp is stores:
+		say "You should probably eat it when you're beyond the, er, spot." instead;
+	if mrlp is not presto:
+		say "The crust fell from the remains of store P. Perhaps it's best to eat it there." instead;
+	if crust-warn is false:
+		say "Ugh! This crust may help you out, but it may be--wait for it--distasteful and spoiled. Go ahead anyway?";
+		now crust-warn is true;
+		unless the player consents:
+			say "OK, maybe later. This warning won't appear again." instead;
+	say "You wince and prepare to take a bite...";
+	now spoilit is true;
+	try presto-hinting;
+	now spoilit is false instead;
+
+track-crust is a truth state that varies.
+
+every turn when player has curst crust and mrlp is presto and track-crust is true:
+	increment swears;
+	try eating curst crust;
 
 section turn rules
 

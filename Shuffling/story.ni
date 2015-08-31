@@ -5013,11 +5013,11 @@ to say gd:
 to say na:
 	say "There isn't even a store here any more--just a plot. [no line break]"
 
-store a is a sto. understand "store/ 1/one" as store a.
+there is a sto named Store A. understand "store/ 1/one" as store a.
 
 description of store a is "You can't imagine anything as rote as calling itself A Store, but it did."
 
-store B is a sto. understand "store/ 2/two" as store b.
+Store B is a sto. understand "store/ 2/two" as store b.
 
 description of store b is "It seems to catch a rainbow every now and then, and you smell fruits you can't discern. It looks nowhere near as, well, lively as stores F, I or M, but maybe it holds a small treat."
 
@@ -5031,19 +5031,19 @@ rgtext of marquee is "[rcn][rc][gc][rc][rc][rc]". lgth of store b is 6. gpos of 
 
 the sorbet is an undesc. the sorbet is amusing.
 
-store c is an amusing sto in subsite. understand "store/ 3/three" as store c.
+Store C is an amusing sto in subsite. understand "store/ 3/three" as store c.
 
 description of store c is "[one of]It's bolted up but seems to be advertising a corset sale. Useful for people who work in the escort sector. This game is word-weird, not sex-weird, though[or]You briefly wonder if you'll find sapient panties in there that might give a hint, then you feel kinda guilty. Whether you're male or female[or]'This is a LEGIT AD to help you (censored)!!!'[or]You see striptease tapestries and are sorry you did[or]'No shower here. Don't ask.'[or]Apparently employees of L'Harem Harlem pay only 69% of retail here[or]All Lipsopolis items are 20% off, apparently. Whatever those were.[or]It's adults only, but no Lady Lust will visit any time soon[or]Oh dear. Not a legit ad. 'Get L...'? Whoah.[or]You think you hear 'You perv, voyeur :p' but the emoticon makes it moot. Nice.[or]'Helpin' you deuces seduce!'[or]That's all the innuendo I got. There are a lot better sites on the Internet to find information on THAT sort of thing than wherever you downloaded this game from. Go on. Harp. Pry[stopping]."
 
-store d is a sto. understand "store/ 4/four" as store d.
+Store D is a sto. understand "store/ 4/four" as store d.
 
 description of store d is "[na]"
 
-store e is a sto. understand "store/ 5/five" as store e.
+Store E is a sto. understand "store/ 5/five" as store e.
 
 description of store e is "It's bolted up but seems to be advertising a stereo sale."
 
-store F is a sto. understand "store/ 6/six" as store f. rgtext of store f is "[rcn][rc][rc][rc][rc][rc]". lgth of store f is 6. gpos of store f is 6. rpos of store f is 2.
+Store F is a sto. understand "store/ 6/six" as store f. rgtext of store f is "[rcn][rc][rc][rc][rc][rc]". lgth of store f is 6. gpos of store f is 6. rpos of store f is 2.
 
 description of store f is "This is odd. It's kind of green on top, brown on the bottom. You smell pine needles and dirt and leaves you can't quite discern[if forest is unvisited]. You think back to the gateway and how you got here. There might be a way to do something to this store[end if]."
 
@@ -5059,7 +5059,7 @@ check examining roadsign:
 	if the player consents:
 		say "The sign appears to say, in all red, [one of]E FORTS/OSTFER[or]TRESFO/S EFTRO[cycling][r] before a gust of wind picks it up and flips it around.";
 
-store g is a sto. understand "store/ 7/seven" as store g.
+Store G is a sto. understand "store/ 7/seven" as store g.
 
 description of store g is "A flier stapled to the front of the door says [if you-can-advance]REST?! GO![otherwise]GO REST![end if]. There's nothing else interesting about the store, though."
 
@@ -5068,11 +5068,11 @@ the go rest flier is scenery in trips strip. go rest flier is undesc.
 instead of examining the go rest flier:
 	say "It's just a subtle hint to get on with things[if you-can-advance]--in this case, to your reward in store R[end if]."
 
-store h is a sto. understand "store/ 8/eight" as store h. [description of store h is "Spray painted on this locked store is: others are in the throes of being reshot."]
+Store H is a sto. understand "store/ 8/eight" as store h. [description of store h is "Spray painted on this locked store is: others are in the throes of being reshot."]
 
 description of store h is "Inside store H you see such a miscellany that you doubt it was successful even in better times."
 
-store I is a sto. understand "store/ 9/nine" as store i. lgth of store i is 6. gpos of store i is 1. rpos of store i is 5. rgtext of store i is "[gcn][rc][rc][rc][rc][rc]".
+Store I is a sto. understand "store/ 9/nine" as store i. lgth of store i is 6. gpos of store i is 1. rpos of store i is 5. rgtext of store i is "[gcn][rc][rc][rc][rc][rc]".
 
 the Tories are plural-named scenery in trips strip. lgth of tories is 6. gpos of tories is 6. rpos of tories is 5. rgtext of tories is "[rcn][gc][gc][rc][rc][rc]". The tories are auxiliary.
 
@@ -5094,15 +5094,15 @@ to say tory-clue:
 	if player has gadget:
 		say "[one of][or]. Scanning the pictures for clues physically is all well and good, but maybe your gadget would help[or]. You bring your gadget too close to the pictures, and it begins behaving weirdly[or][cycling]";
 
-store j is a sto. understand "store/ 10/ten" as store j.
+Store J is a sto. understand "store/ 10/ten" as store j.
 
 description of store j is "[na]"
 
-store k is a sto. understand "store/ 11/eleven" as store k. rgtext of store k is "[rcn][rc][rc][rc][rc][rc]"
+Store K is a sto. understand "store/ 11/eleven" as store k. rgtext of store k is "[rcn][rc][rc][rc][rc][rc]"
 
 description of store k is "A peculiar smell of smoke and incense seeps from store k, but that's probably not the BIG reason this place went downhill. No use prying."
 
-store l is a sto. understand "store/ 12/twelve" as store l.
+Store L is a sto. understand "store/ 12/twelve" as store l.
 
 description of store l is "You take a peek inside but feel loster and loster as you do."
 
@@ -5112,15 +5112,15 @@ description of store m is "There's no window in store m--just a detailed map of 
 
 subway map is part of store m. description of subway map is "It's for a city called Mt. Rose, apparently."
 
-store n is a sto. understand "store/ 14/fourteen" as store n.
+Store N is a sto. understand "store/ 14/fourteen" as store n.
 
 description of store n is "It's greyed out, but you see a music book inside, songs for tenors, apparently."
 
-store o is a sto. understand "store/ 15/fifteen" as store o.
+Store O is a sto. understand "store/ 15/fifteen" as store o.
 
 description of store o is "[na]"
 
-store p is a sto. understand "store/ 16/sixteen" as store p.
+Store P is a sto. understand "store/ 16/sixteen" as store p.
 
 description of store p is "[gd]A poster covers the entire window. It's turned away from you, as if to say, don't worry about solving it this game, pal."
 
@@ -5132,11 +5132,11 @@ to say fake-clue of (myst - a sto):
 	say "[paragraph break]";
 	preef myst;
 
-store q is a sto. understand "store/ 17/seventeen" as store q.
+Store Q is a sto. understand "store/ 17/seventeen" as store q.
 
 description of store q is "[na] There's no secret passage to store u, either."
 
-store R is a sto. understand "store/ 18/eighteen" as store r. rgtext of store r is "[rcn][rc][rc][rc][rc][rc]". lgth of store r is 6. gpos of store r is 4. rpos of store r is 2.
+Store R is a sto. understand "store/ 18/eighteen" as store r. rgtext of store r is "[rcn][rc][rc][rc][rc][rc]". lgth of store r is 6. gpos of store r is 4. rpos of store r is 2.
 
 description of store r is "It may be the smallest store in the strip. [how-far-along]. You also see a roster in the front door."
 
@@ -5165,43 +5165,43 @@ to decide whether you-can-advance:
 
 description of roster is "The roster on the front of store R reads: 'People who have earned a vacation: you[if you-can-advance] (well, go on!)[otherwise] (well, soon!)[end if]'"
 
-store s is a sto. understand "store/ 19/nineteen" as store s.
+Store S is a sto. understand "store/ 19/nineteen" as store s.
 
 description of store s is "As you get near, you hear GO AWAY YOU TOSSER. The accent doesn't sound British, so you suspect this person just needed to use a new swear."
 
-store t is a sto. understand "store/ 20/twenty" as store t.
+Store T is a sto. understand "store/ 20/twenty" as store t.
 
 description of store t is "The window of store T is really lovely stained-glass--it's a depiction of a family of otters."
 
-store u is a sto. understand "store/ 21/twentyone" as store u.
+Store U is a sto. understand "store/ 21/twentyone" as store u.
 
 description of store u is "[gd]The floor looks like some sort of cross-country map."
 
 understand "routes" as a mistake ("Hm, that seems right, but it doesn't work this game![fake-clue of store u]") when player is in trips strip.
 
-store v is a sto. understand "store/ 22/twentytwo" as store v.
+Store V is a sto. understand "store/ 22/twentytwo" as store v.
 
 description of store v is "[gd][one of]You see people voting glumly and you think you hear them whisper it doesn't matter. Their votes go in the stove anyway. But politics wasn't in your job description. There are, apparently, more basic needs than that right now. Plus it's pervy to vote pry[or]Voters...but there's nothing to vote ON, yet[stopping]."
 
 understand "troves" as a mistake ("Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.[fake-clue of store v]") when player is in trips strip.
 
-store w is a sto. understand "store/ 23/twentythree" as store w.
+Store W is a sto. understand "store/ 23/twentythree" as store w.
 
 understand "towers" as a mistake ("That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.[fake-clue of store w]") when player is in trips strip.
 
 description of store w is "You see replicas of two tall, narrow buildings."
 
-store x is a sto. understand "store/ 24/twentyfour" as store x.
+Store X is a sto. understand "store/ 24/twentyfour" as store x.
 
 description of store x is "[na]"
 
-store y is a sto. understand "store/ 25/twentyfive" as store y. rgtext of store y is "[rcn][rc][rc][rc][gc][rc]".
+Store Y is a sto. understand "store/ 25/twentyfive" as store y. rgtext of store y is "[rcn][rc][rc][rc][gc][rc]".
 
 understand "oyster" as a mistake ("Nice try, but that's next game![fake-clue of store y]") when player is in trips strip.
 
 description of store y is "[gd]However, the store seems filled with water. There's a slimy bit and a small glistening sphere."
 
-store z is a sto. understand "store/ 26/twentysix" as store z.
+Store Z is a sto. understand "store/ 26/twentysix" as store z.
 
 description of store z is "[na]"
 
