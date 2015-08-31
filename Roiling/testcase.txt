@@ -6,3 +6,5 @@
 This is a text file of test cases that I can and should look at.
 
 --I want to try to talk to the haunter about the ruby while walking along.
+--routes revamp
+--see about ORANGE

@@ -16044,6 +16044,7 @@ blurb
 "'His meat, shame, IT eats HIM.'"
 "'Housings? Us? Sigh, no.'"
 "'I block BilkCo!'"
+"'I, fool of oil!'"
 "'I yen: quit inequity!'"
 "'I'd repress presiders-disperser Red Priess!'"
 "'I'm Happy, am Hippy!'"
