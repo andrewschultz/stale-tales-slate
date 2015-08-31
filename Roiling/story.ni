@@ -207,7 +207,7 @@ a portal can be enter-clued. a portal is usually not enter-clued.
 a portal has a region called a go-region.
 
 instead of taking a portal:
-	say "You try taking the portal in the entering sense."
+	say "You try taking the portal in the entering sense.";
 	try entering the noun instead;
 
 for writing a paragraph about a lumpable portal (called ptl) :
@@ -488,7 +488,7 @@ table of ethics advice	false	0	20	read-eths rule	troves	"Advice from Pa, Egg, Pe
 table of gritty dialogue	true	0	20	say-gritty rule	troves	"Gritty Spoiloplis dialogue[indic of troves]"	"Gritty sounds come, then go, from [one of]your testers, the tersest[or]the[stopping] streets: "	""	"Tense silence replaces the gritty sounds, which will probably return and cycle. People making the same mistakes they did before. But you are bound for better things--or, with that book, you'd better be.[pre-brk]"
 table of non-checklists	false	0	20	desk-look rule	troves	"Slick-Tech Checklist alternatives[if fiefco is unvisited] (Troves)[end if]"	--	""
 table of posh dialogue	true	0	20	say-posh rule	troves	"Posh Spoiloplis dialogue[indic of troves]"	"Upper-class concerns: "	""	"A low, snide 'Old is new, wild ones.' Cue repetition.[pre-brk]"
-table of posse bosses	false	0	20	in-lot-or-ruin rule	troves	"Rustin['] Ruin St./Loudest Used Lot bad guys[indic of troves]"	"maybe "	""	"not Mean Roy Maroney, anymore--he's the last of them"
+table of posse bosses	false	0	20	in-lot-or-ruin rule	troves	"Loudest Used Lot bad guys[indic of troves]"	"maybe "	""	"not Mean Roy Maroney, anymore--he's the last of them"
 table of prestigious bums	false	0	20	read-deal rule	troves	"'Inspirational' Yorpwaldians in [i]DEAL[r][indic of troves]"	--	""	"Aliver Elvira, in case anyone forgot"
 table of real estate ads	false	0	20	read-brochure rule	troves	"Rotunda brochure locations[indic of troves]"	"It's for real estate by Sir Dee. One page header blares [i]Home's so Meh? "	"[r]"	"Secretcester! OWN NOW! is the final entry."
 table of Leo-Rand chitchat	true	0	15	chitchat-over-idols rule	presto	"Leo and Rand's chatter[if rand is fightin] (STORE P)[end if]"	--	""	"'Heya.' / 'Yeah?' An awkward silence follows.[paragraph break]They've run out of conversation, but fortunately (for them,) they forgot it all, so they can just restart."
@@ -5427,7 +5427,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "others"	524148772	stores	--	store h	--	"No--it's a weird place you need to get to, sort of--the rest." [start STORES] [tons]
 "window"	425151566	stores	--	windows	--	"Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new."
 "windows"	521425532	stores	--	windows	--	"Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new."
-"storea"	489054291	stores	--	store-a	--	"[no-cand]."
+"storea"	489054291	stores	--	store a	--	"[no-cand]."
 "storec"	505872058	stores	--	store c	--	"[no-cand]."
 "stored"	507895562	stores	--	store d	--	"[no-cand]."
 "storee"	614672582	stores	--	store e	--	"[no-cand]."
@@ -5444,7 +5444,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "storex"	599634554	stores	--	store x	--	"[no-way]."
 "shells"	465264018	stores	--	store y	--	"The shells don't move. Perhaps they are just a clue."
 "storez"	609836091	stores	--	store z	--	"[no-way]."
-"store"	486866473	stores	--	store-a	--	"You'll want to focus on a specific store."
+"store"	486866473	stores	--	store a	--	"You'll want to focus on a specific store."
 "montage"	473038885	stores	--	magneto montage	--	"It's probably counterproductive to change--it's more an information booth."
 "toker"	443525685	stores	--	tokers	--	"They already lost one of their collective, man. It'd be a bummer if [if nestor is off-stage]they lost another[else]someone replaced Nestor[end if]."
 "someone"	633573999	stores	--	engravings	--	"[engs]."
@@ -5625,9 +5625,9 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "loudest"	581491405	troves	--	Used Lot	--	"[locname]."
 "dues"	350214971	troves	Used Lot	--	--	"[locname-part]."
 "lot"	231276434	troves	Used Lot	--	--	"[locname-part]."
-"rustin"	503713948	troves	--	Used Lot	--	"[locname]."
-"ruin"	304329964	troves	--	Used Lot	--	"[locname-part]."
-"ruts"	389813594	troves	--	Used Lot	--	"[locname-part]."
+"rustin"	503713948	troves	--	Used Lot	--	"[ruts-pull]."
+"ruin"	304329964	troves	--	Used Lot	--	"[ruts-pull]."
+"ruts"	389813594	troves	--	Used Lot	--	"[ruts-pull]."
 "boor"	252447862	troves	--	Used Lot	--	"[boor-grub]."
 "grub"	241448217	troves	--	Used Lot	--	"[boor-grub]."
 "boorboro"	504895724	troves	--	Used Lot	--	"[boor-grub]."
@@ -6446,6 +6446,9 @@ chapter table of nudges rules and text
 [the rules/texts below are organized in the order I thought up the nudges above, which is to say, more or less random. But nothing there is game-critical enough that it needs to be sorted. I hope.]
 
 [ton-]
+
+to say ruts-pull:
+	say "The ruts will pull you down if you look too far into them"
 
 to say poor-animal:
 	say "You don't need to snap the poor animal back to...whatever, wherever it was before"
@@ -7462,6 +7465,7 @@ bench	false	true	false	false	"Hm, bench is only five letters, but nothing was hi
 controls	false	false	false	false	"This is odd--all these question marks. Surely you'll find by accident where Ben hid the hit win button? Or you can just pick and choose, focusing on Ben, or the win."
 ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?"
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
+stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
 brochure	true	false	false	false	"You imagine a voice saying OBSTACLES LIKE THOSE QUESTION MARKS MAY BE OPPORTUNITIES. A [if brochure is examined]re[end if]reading of the brochure may help see what it's about."
 rivets	false	false	false	true		"[rivet-help]."
 song	false	true	false	false	"You'd guess it's Eddie's song and not Eddie, since when the instrumentals kick in, the settler's reading stays."
@@ -8745,6 +8749,19 @@ rule for supplying a missing noun when entering:
 			now noun is seats;
 		now noun is passage.
 
+chapter waiting
+
+check waiting:
+	if mrlp is troves:
+		if player is in Pallid Li'l Pad:
+			say "Solo detail? Isolated? No. Desolation." instead;
+		if cur-score of troves is 0:
+			say "That's the wrong sort of inaction for here[one of]. Better watch it, or snotbag nagbots or a boot-o-bot will get you[or][stopping]." instead;
+		say "You are paralyzed by the hustle and bustle of the big city. Though how much is bustle or hustle, I really couldn't say." instead;
+	if carps are visible:
+		try listening instead;
+	say "[randbla][line break]" instead;
+
 chapter drinking
 
 the block drinking rule is not listed in the check drinking rulebook.
@@ -8901,7 +8918,13 @@ report pulling:
 	say "Ullp! You can't pull...";
 	the rule succeeds;
 
+chapter singing
+
 the block singing rule is not listed in any rulebook.
+
+i-sung is a truth state that varies.
+
+lyre-dest is a truth state that varies.
 
 check singing:
 	if player is in hops shop:
@@ -13278,7 +13301,7 @@ instead of doing something with idg:
 			continue the action;
 		say "Before you can do anything, Ian points at the heartfelt reflections he shared on you. Or at you. But not just plain with you. He's so much bigger than you, it distracts you from whatever you meant to do.";
 
-subject reflections
+section reflections
 
 The heartfelt reflections are plural-named thing.
 
@@ -13860,7 +13883,7 @@ check examining snoop spoon:
 	now spoilit is false;
 	the rule succeeds;
 
-chapter silly scenery
+chapter silly circle scenery
 
 section musical
 
@@ -14272,33 +14295,15 @@ instead of doing something to new beet:
 
 volume troves
 
-i-sung is a truth state that varies.
-
-lyre-dest is a truth state that varies.
-
-to silly-min:
-	increment silly-acts;
-	if silly-acts < 3:
-		min-up;
-
-check waiting:
-	if mrlp is troves:
-		if player is in Pallid Li'l Pad:
-			say "Solo detail? Isolated? No. Desolation." instead;
-		if cur-score of troves is 0:
-			say "That's the wrong sort of inaction for here[one of]. Better watch it, or snotbag nagbots or a boot-o-bot will get you[or][stopping]." instead;
-		say "You are paralyzed by the hustle and bustle of the big city. Though how much is bustle or hustle, I really couldn't say." instead;
-	if carps are visible:
-		try listening instead;
-	say "[randbla][line break]" instead;
-
-book Loather Rathole
+book very basics
 
 before going up in troves:
 	say "Moving on up needs to be a state of mind here." instead;
 
 before going down in troves:
 	say "It is important to be down to earth as you work your way to the top, yes." instead;
+
+chapter Pa Egg Pea (book)
 
 Pa Egg Pea is a super-easy proper-named reflexive LLPish thing. printed name of Pa Egg Pea is "Pa, Egg, Pea"
 
@@ -14315,14 +14320,16 @@ instead of opening Pa Egg Pea:
 check examining Pa Egg Pea for the first time:
 	say "[i]Pa, Egg, Pea[r], of course, recently topped [i][twiddle of table of self-help bestsellers and 1][r] and [i][twiddle of table of self-help bestsellers and 1][r] as the best-selling self-help book all-time in Yorpwald, at least until its promised sequels in the Tryin[']-it Trinity, [i]The MORE Theorem[r] and [i]No Guts? Go Nuts[r], appear. It combines overused success-story fables with spectacularly improbably leaps of logic to 'prove' both thinking your way to success and doing your way to success are more important than the other, and anybody who finds these to be a contradiction is just intellectually lazy.[paragraph break]The introduction explains YOU AND ONLY YOU must think up the way out of a tough situation.[paragraph break]A rudimentary flip through shows that it's full of aphorisms spouted by the main character, Gaga Pepe, and heavily invested in sustaining the personality cult of its author, Peg A. Page. You remember a suppressed review that went 'Ee! Gag! Pap!' and aren't sure of the best way to read it, if any. Though it's probably symptomatic of the times, you doubt it can help you with your specific situation[if cur-score of troves is 0], but it may help you get started[else], especially now you're started a bit[end if]." instead;
 
+book Loather Rathole
+
+Loather Rathole is a room in Troves. "Under the stinky tin sky, [if heat is visible]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[otherwise]you feel nothing but bone-chilling poverty here. [i]Heat[r]. It's what you need. All you can think of[end if]. Of course, there are plenty of potholes about.". last-loc of troves is Loather Rathole.
+
 check looking in Loather Rathole for the first time:
 	now the player has Pa Egg Pea.
 
 check going nowhere (this is the troves general direction reject rule):
 	if mrlp is troves:
 		say "Nothing urgent that way. Once you figure out what you need to do, you'll figure if you need to go anywhere. Focus, focus, focus." instead;
-
-Loather Rathole is a room in Troves. last-loc of troves is Loather Rathole.
 
 every turn when player is in Loather Rathole (this is the Loather Rathole complaints rule) :
 	say "[if heat is in Loather Rathole]You need your super purse back. But you try and fail to get stoked enough to be a race-acer![else]'Heat...' you think. Then you see red and muse [one of]'[one of]At... eh...[no line break][or]Eh... at...[no line break][in random order]' as you are not sure where you are.[or]'A...the...' your thoughts degenerate.[or]'The...a...' your thoughts degenerate, as your eyes redden.[in random order][end if]";
@@ -14332,6 +14339,8 @@ the Loather Rathole complaints rule is listed after the process random dialogue 
 after printing the locale description for Loather Rathole when Loather Rathole is unvisited:
 	say "Skid Row, Wordski.";
 	continue the action;
+
+chapter fretful truffle
 
 the fretful truffle is a thing. description is "It's probably a character building experience to eat it. You may learn something about how to think or what to do."
 
@@ -14349,7 +14358,7 @@ check eating fretful truffle:
 
 spoilit is a truth state that varies. spoilit is false.
 
-description of Loather Rathole is "Under the stinky tin sky, [if heat is visible]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[otherwise]you feel nothing but bone-chilling poverty here. [i]Heat[r]. It's what you need. All you can think of[end if]. Of course, there are plenty of potholes about."
+chapter potholes
 
 the potholes are useless plural-named scenery in Loather Rathole.
 
@@ -14360,11 +14369,38 @@ potholes are undesc.
 
 understand "a rec" as a mistake ("You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.") when player is in rathole and heat is in rathole.
 
-book Used Lot
+chapter cold
 
-Loudest Used Lot is a room in Troves.
+the cold is flippable scenery in Loather Rathole. "[one of]Even though you wasted time watching weathercasts as a kid (boo!) and never learned to small-talk about it with important people (boo!) t[or]T[stopping]he cold's still just...cold."
 
-Used Lot is in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs. Someone seedy owns this area, [randbla]. This messhole with its sidewalk laid askew is almost as bad as being homeless...[paragraph break][if babblings are visible]Except for a stop post that seems to be distracting your attention. Verbose babblings are in the air[else]The stop post is still there, but you can deal[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]."
+a-text of cold is "RYRY". b-text of cold is "PYRY". [cold -> heat, need to hate]
+
+check taking cold:
+	say "You have as much cold as you can take." instead;
+
+understand "clod" as a mistake ("Hey! No beating yourself up. You'll do it wrong.") when player is in Loather Rathole.
+
+understand "care" as a mistake ("You find yourself boohooing over mumbo-jumbo about how the socioeconomic system must be even more unfair to people without your powers. How unproductive to care about THAT.") when heat is not visible and mrlp is troves.
+
+understand "race" as a mistake ("Races scare you without the proper motivation from inside.") when player is in Loather Rathole and cold is visible.
+
+understand "acre" as a mistake ("That farm-boy terminology won't help show you give a darn in the big city.") when player is in Loather Rathole and cold is not visible.
+
+understand "hate" as a mistake ("You don't want to get burnt up with hate[if heat is visible], and that won't get back your super purse like racing after that guy[end if].") when cold is not visible.
+
+chapter heat
+
+the heat is flippable vanishing scenery. "The heat is nice and all, but being happy for it isn't the right emotion, here, with your possessions stolen."
+
+a-text of heat is "RYRY". b-text of heat is "RGRG". [heat -> care, need to race]
+
+book Loudest Used Lot
+
+Loudest Used Lot is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs. Someone seedy owns this area, [randbla]. This messhole with its sidewalk laid askew is almost as bad as being homeless...[paragraph break][if babblings are visible]Except for a stop post that seems to be distracting your attention. Verbose babblings are in the air[else]The stop post is still there, but you can deal[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]."
+
+chapter useless scenery
+
+section sidewalk
 
 a sidewalk laid askew is useless scenery in Used Lot. "You don't really have time to memorize the sidewalk's cracks."
 
@@ -14376,12 +14412,16 @@ instead of doing something with a sidewalk laid askew:
 		continue the action;
 	say "[more-pos].";
 
+section ruts
+
 the rustin ruts are useless scenery in Used Lot. printed name of ruts is "rustin['] ruts". understand "rustin ruin" and "rustin/ruin" as ruts. "If you stare too long, you may get in a rut yourself."
 
 instead of doing something with rustin ruts:
 	if action is procedural:
 		continue the action;
 	say "[more-pos].";
+
+chapter babblings
 
 understand "obverse" as a mistake ("You can't just make things obverse by wanting them to be. [i]But if change comes within, perhaps things are closer to obverse than you think[r].") when babblings are visible.
 
@@ -14415,10 +14455,19 @@ to say listen-careful:
 to say erv:
 	say "[one of]Eve's Bro serve Bo! Bo Evers!'[or]Erv be so...'[cycling]";
 
-check examining stop post when babblings are in Used Lot:
-	say "You try to, but you get a headache. Everyone here's too [i]verbose. [r]You need to find what to do make them less verbose. Or seem that way." instead;
+chapter stop post
 
 The stop post is reflexive super-easy scenery in Used Lot. "[if babblings are reflexive]You're so distracted by it, you can't stop and see the big picture. It blocks out all but the babblings round--it's really big and verbose and you could look at it a while without seeing anything meaningful. You can't even remember what you just read. As if you'd lost the ability to.[else if post is reflexive]Its opts. aren't exactly tops. Apparently, though, it is made of recycled pots.[else if bee's head is reflexive]You notice an ad in red proclaiming O. Asner as Nero.[else]An ad in red for L. Clear cleaning[one of], with directions below to [one of]Evans Ave N/S[or]Weave Ave E/W[in random order][or][stopping].[end if]"
+
+check scaning post:
+	if babblings are reflexive:
+		try scaning babblings instead;
+	if post is reflexed:
+		say "You've dealt with the post." instead;
+	say "[if cheat-on is false]RRYR[else]The stop post blinks between PRGR and RRYP[end if]." instead;
+
+check examining stop post when babblings are in Used Lot:
+	say "You try to, but you get a headache. Everyone here's too [i]verbose. [r]You need to find what to do make them less verbose. Or seem that way." instead;
 
 check taking stop post:
 	say "The post is firmly in place." instead;
@@ -14435,17 +14484,27 @@ check fliptoing stop post:
 
 understand "observe" as a mistake ("You already did all the general observing you needed.") when player is in Used Lot and babblings are not in Used Lot.
 
-a-text of stop post is "RRYR". b-text of stop post is "?R??". [show example]
+a-text of stop post is "RRYR". b-text of stop post is "?R??".
 
 every turn when player is in Used Lot:
 	if what-a-bee is not reflexive or bee's head is not reflexive:
 		if current action is not listening:
 			say "How to get down to the cellar? The cellar.";
 
+chapter THE BEE and 2 solutions
+
+section bee proper (believe)
+
 the what-a-bee is a reflexive privately-named thing. printed name of what-a-bee is "[if bee's head is reflexive and what-a-bee is reflexive]evil bee[else if bee's head is reflexed and what-a-bee is reflexed]live bee[otherwise]vile bee[end if]"
 
+a-text of what-a-bee is "RYRYYRY". b-text of what-a-bee is "[if bee's head is reflexed]RYPYYRG[else]RYRYYRG[end if]".
+
+check fliptoing what-a-bee:
+	if verbose is reflexive:
+		say "You haven't paid enough attention to know what to spot." instead;
+
 check taking what-a-bee:
-	say "I'll be stingy. Better than the bee, eh?" instead;
+	say "I'll be stingy. Better me than the bee, eh?" instead;
 
 Include (-
 	has transparent animate
@@ -14461,14 +14520,12 @@ to say vile-evil:
 	else:
 		say "vile";
 
-understand "evil/ bee" as what-a-bee when bee's head is reflexive and what-a-bee is reflexive.
-understand "vile/ bee" as what-a-bee when bee's head is reflexive and what-a-bee is reflexed.
-understand "vile/ bee" as what-a-bee when bee's head is reflexed and what-a-bee is reflexive.
-understand "live/ bee" as what-a-bee when bee's head is reflexed and what-a-bee is reflexed.
+[this is really awful but I don't see a better way]
 
-a-text of what-a-bee is "RYRYYRY". b-text of what-a-bee is "[if bee's head is reflexed]RYPYYRG[else]RYRYYRG[end if]".
-
-a-text of bee's head is "RYYRYR". b-text of bee's head is "RYYRYR".
+understand "evil" and "evil bee" as what-a-bee when bee's head is reflexive and what-a-bee is reflexive.
+understand "vile" and "vile bee" as what-a-bee when bee's head is reflexive and what-a-bee is reflexed.
+understand "vile" and "vile bee" as what-a-bee when bee's head is reflexed and what-a-bee is reflexive.
+understand "live" and "live bee" as what-a-bee when bee's head is reflexed and what-a-bee is reflexed.
 
 check scaning what-a-bee:
 	if what-a-bee is reflexive and bee's head is reflexive:
@@ -14481,13 +14538,65 @@ check scaning what-a-bee:
 	if bee's head is reflexed and what-a-bee is reflexed:
 		say "The bee rests, silent, and so does your settler." instead;
 
+after fliptoing what-a-bee:
+	if bee's head is reflexed:
+		min-up;
+	else:
+		say "Now that the bee's buzzing less, you can hear people giving directions, and maybe you can listen in. Or concentrate on the cellar.";
+	continue the action;
+
+section bee's head (reason)
+
+the bee's head is part of the what-a-bee. the bee's head is reflexive. description is "[if bee's head is reflexed]It appears a bit duller now, after you reasoned so well against it[else]It shines brightly, as if it is ready for a battle of wits[end if]."
+
+a-text of bee's head is "RYYRYR". b-text of bee's head is "RYYRYR".
+
+instead of taking bee's head:
+	say "You're not fast enough to behead the bee's head."
+
+after fliptoing bee's head:
+	if what-a-bee is reflexed:
+		min-up;
+	else:
+		say "Now that the bee's buzzing less, you can hear people giving directions, and maybe you can listen in. Or concentrate on the cellar.";
+	continue the action;
+
+chapter cellar door (after bee dispatched)
+
+the cellar door that must be here somewhere is vanishing scenery in Used Lot. "You can't really examine it if you don't know where it is."
+
+a-text of cellar door is "RYRYRR". b-text of cellar door is "RGRYRR".
+
+instead of doing something to cellar door:
+	if current action is taking or current action is opening or current action is closing:
+		say "But you're not sure where the door is, so you can't do that." instead;
+	if action is procedural, continue the action;
+	say "No, you need to do something to find the cellar. Since you can't quite remember...";
+
+derived is a truth state that varies.
+
+after fliptoing cellar door:
+	if the player's command includes "derive":
+		now derived is true;
+	if bee's head is reflexive or what-a-bee is reflexive:
+		poss-d;
+	continue the action;
+
+check fliptoing cellar door:
+	if what-a-bee is off-stage:
+		say "You haven't forgotten anything important, yet." instead;
+	if bee's head is reflexive and what-a-bee is reflexive:
+		say "Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now." instead;
+
 book Pallid Li'l Pad
 
 Pallid Li'L Pad is a room in Troves. "This is [if diapers are reflexed]no bro-dome--it leaves you feeling all me, BROOD[else]a dump, um, pad[end if]. Well, it beats Get-a-Cot Cottage, or Drag-Grad.[paragraph break]You notice trappings of spiritual and material poverty: a picture of a sad pier, a box of diapers, and a spider crawling[if diapers are reflexed]. Though you're not quite held back by them so much[else]. They all point to a rock bottom you haven't hit yet, but it may be necessary[end if].  now. You have learned to despair and to deal, and now you need a third way between them. You believe you deserve to [i]reside[r] somewhere better[if diapers are reflexed]. Such details will drag you back. You want to break out of the funless fulness of Drag-grad, here, to [i]lead[r][end if]. All equally depressing."
 
+chapter adeiprs
+
 understand "praised" as a mistake ("You would like to be, but you can't just want others to. Change comes from within.") when player is in Pallid Li'l Pad.
 
-understand "asipred" as a mistake ("Now is not the time to fret on past dreams.") when player is in Pallid Li'l Pad.
+understand "aspired" as a mistake ("Now is not the time to fret on past dreams.") when player is in Pallid Li'l Pad.
 
 the picture of a sad pier is auxiliary semi-easy scenery in Pallid Li'l Pad. "It is a warding drawing of what not to wallow in: solitude so dilute in an old suite. According to [i]Pa, Egg, Pea[r], if it were not marked as such, it should be illegal."
 
@@ -14497,11 +14606,6 @@ box of diapers is reflexive scenery in Pallid Li'l Pad. "The diapers are a symbo
 
 understand "boredom/bedroom" and "boredom bedroom" as Pallid Li'l Pad when diapers are reflexed.
 
-after fliptoing diapers:
-	now printed name of Pallid Li'l Pad is "Boredom Bedroom";
-	now ltb is in Pallid Li'l Pad;
-	continue the action;
-
 a-text of diapers is "RYRRYYR". b-text of diapers is "PYRPYYR".
 
 a spider is scenery in Pallid Li'l Pad. "You're don't know whether to crush it or even think 'I spared a spider.'"
@@ -14510,9 +14614,53 @@ a-text of a spider is "RYRRYYR". b-text of a spider is "RYRRYYP".
 
 understand "broomed" as a mistake ("You are not rich and consequential enough to snap your fingers and watch your own mess get cleaned up. Yet.") when player is in Pallid Li'l Pad.
 
+after fliptoing diapers:
+	now printed name of Pallid Li'l Pad is "Boredom Bedroom";
+	now ltb is in Pallid Li'l Pad;
+	continue the action;
+
+chapter ltb
+
+ltb is a privately-named vanishing super-easy thing. "A copy of LEAD[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here.". description of ltb is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.". printed name of ltb is "LEAD".
+
+a-text of ltb is "RYYR". b-text of ltb is "???R".
+
+understand "copy" and "book" and "lead" as ltb when player is in Pallid Li'l Pad.
+
+does the player mean doing something with ltb when the player is in Pallid Li'l Pad: it is likely.
+
+understand "aled" as a mistake ("Getting drunk will not solve your problems[if lager is in Pallid Li'l Pad]. And that lager would taste awful, anyway[else]. Especially when there's nothing here to get drunk with[end if]. You see red at yourself for such thoughts.") when ltb is visible
+
+instead of taking the ltb:
+	say "You already have one motivational book. Perhaps you need to find the right way to soak up LEAD's essence."
+
+chapter lager
+
+The can of Large Regal Lager is a vanishing LLPish thing in Pallid Li'l Pad. description is "It has a picture of someone smiling as he chugs a can of Large Regal Lager--the LARGE being black and above the red Regal Lager below. A warning on the can says that important people drinking too many of these is as bad for the economy as people with nothing better to do not drinking enough. Also there's a rubbish story about how the beer is brewed."
+
+the rubbish story is part of the Regal Lager. the rubbish story is cluey and auxiliary. description is "[one of]It's in red and about how Ergal Agler brewed the first batch long ago. It kills almost as many brain cells as you drinking it[or]Your eyes gloss over all but the red ERGAL AGLER[stopping]."
+
+a-text of rubbish story is "RRYRY". b-text of rubbish story is "RRYRY".
+
+instead of scaning rubbish story:
+	try scaning Large Regal Lager instead;
+
+a-text of lager is "RRYRY". b-text of lager is "RRYRY".
+
+instead of drinking lager:
+	say "One sip is--nope. Next, a liter, retail. Though it's not as nasty as Camelot Eco-Malt, it'd make your liver viler and send you to Bum Lane seeing blue men.[paragraph break]Though you can't bring yourself to throw it out. Maybe you are not looking at things the right way.";
+
+instead of eating lager:
+	say "It drinks like a meal, you're sure, but you're too important now to risk brain cells to find out.";
+
+instead of taking lager:
+	say "No, touching or holding a can almost always leads to drinking from it. You may even be able to ignore the Large Regal Lager altogether. But you will need to steel yourself before taking it."
+
 book Dour Tan Rotunda
 
 Dour Tan Rotunda is an innie room in Troves. "This could also be a rotund rotunda, but obesity is not very posh. Nobody is quite happy here. It's posh enough, but designed specifically to make people want even more. There's not much to do except stare at a brochure just lying around. But oh, what a brochure!".
+
+chapter brochure
 
 a brochure is vanishing scenery in Dour Tan Rotunda. "[one of]'Got here? No debt to bend? Go there!'[paragraph break][or][stopping][randbla]. The page-end reads RESIDE! RESIDE! RESIDE!"
 
@@ -14521,80 +14669,37 @@ a-text of brochure is "RYRYRY". b-text of brochure is "R???RG".
 instead of taking brochure:
 	say "No. What would the next person here read?"
 
+understand "eiders" as a mistake ("But what would ducks DO in the big city? They have no ambition. They don't crave...") when brochure is visible
+
 book Econ Cone
 
 Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the perky crass skyscraper in the center forms the top of the skyline, which is itself a cone. [one of]Once here, t[or]T[stopping]he bluster from your average bustler is subtler here. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]You have lost all sense of direction, mainly because that statue nearby looks so important! [if rivets is reflexive and prai is reflexive]Maybe it will help you motivate yourself even more[else if rivets is reflexive or prai is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]That statue taught you all it could, so maybe you can move on--or in--to the skyscraper[end if]."
+
+check going inside in Econ Cone:
+	say "You can't just walk in[if statue is reflexed or rivets are reflexed] even with your desire at its level[end if]! You need the right sort of thinking." instead;
+	try going west instead;
+
+understand "once" as a mistake ("Yes! You only need a chance! Once! To get inside! [if rivets is reflexive and prai is reflexive]You are almost enthused enough[else]You're enthused enough, but you need to strategize[end if].") when player is in Econ Cone.
+
+chapter skyline and scenery
 
 the skyline is scenery in Econ Cone. understand "cone" as skyline when player is in Econ Cone. the skyline is undesc.
 
 instead of doing something with the skyline:
 	say "The most interesting part of the skyline is the perky crass skyscraper! You feel pulled to it. The rest is...well, okay for other people, but not you.";
 
-understand "once" as a mistake ("Yes! You only need a chance! Once! To get inside! [if rivets is reflexive and prai is reflexive]You are almost enthused enough[else]You're enthused enough, but you need to strategize[end if].") when player is in Econ Cone.
+the perky crass skyscraper is scenery in Econ Cone. "It's built by [trev] and is emblazoned with his twin motto, PROPERTY IS PROSPERITY and ADVERTS-STARVED? READ TVS. It doesn't let up on opulent. You remember reading a scientific study that just wanting to work there five minutes a day increases productivity by 25%."
 
-understand "persia" as a mistake ("You redden at the thought of mystical lands that aren't relevant to the here and now.") when player is in Econ Cone.
-
-check going inside in Econ Cone:
-	say "You can't just walk in[if statue is reflexed or rivets are reflexed] even with your desire at its level[end if]! You need the right sort of thinking." instead;
-	try going west instead;
-
-after fliptoing prai:
+after fliptoing skyscraper:
+	consider the region-knock rule;
 	continue the action;
 
-after fliptoing rivets:
-	continue the action;
-
-after fliptoing when location of player is Econ Cone (this is the hello Pernod rule):
-	if noun is prai or noun is rivets:
-		if pernod is off-stage:
-			say "Your concentration is broken by shattering glass! When you turn around, you notice the person who originally gave you the Peg A. Page book. He has been escorted out by security. They hand him a bottle. There's an argument, he smashes the bottle, and he runs away. Perhaps this is your chance, to take his place now that he has burned out!";
-			now pernod is in Econ Cone;
-	continue the action;
-
-the bottle of Pernod is a semi-easy vanishing thing. "A broken bottle of [if label is in lalaland]N-E-Prod[else]Pernod[end if] champagne lies here. There's a card that seems glued to it, with some writing on it."
-
-after fliptoing pernod:
-	if rivets are reflexive or prai is reflexive:
-		decrement poss-score of troves;
-	continue the action;
-
-description of bottle of pernod is "It says [if label is in lalaland]N-E-Prod below where the label was[else]PERNOD on the label, which looks a bit loose[end if]. There's also a card you could read."
-
-understand "champagne" as Pernod.
-
-understand "prod/neprod/n-e-prod" and "bottle of prod/neprod/n-e-prod" as Pernod.
-
-check taking the card:
-	say "It's glued to the Pernod." instead;
-
-a-text of card is "RYRRYR". b-text of card is "[if label is part of pernod]P[else]R[end if]YRRYR".
-
-the label is part of the bottle of pernod. description of label is "It says PERNOD."
-
-check taking the label:
-	say "The label comes off to reveal a much less hoity-toity label: the generic N-E-PROD is the [i]REAL[r] manufacturer! It's in red letters, too.";
-	now label is in lalaland instead;
-
-check examining the label:
-	say "It looks like you could TAKE it off! You wonder if this bottle is a fake. It says PERNOD, but there's also a card tied to the bottle." instead;
-
-instead of scaning the label:
-	try scaning the pernod instead;
-
-a-text of pernod is "RYRRYR". b-text of pernod is "[if label is part of pernod]P[else]R[end if]YRRYR".
-
-the card is part of the bottle of Pernod. description of card is "It's got red writing on it that you could read."
-
-check reading pernod:
-	try reading card instead;
-
-check taking bottle of Pernod:
-	say "The jagged glass would cut your hands, or your super purse's space-capes." instead;
+check fliptoing skyscraper:
+	if prai is reflexive and rivets are reflexive: [stri is false and asp is false:]
+		say "You sit and ponder for a bit. But it is just general complaining. The whole mish-mosh about people approximately as unfortunate as you. No wish for [i]praise rivets[r] you enough for you to ponder positively." instead;
 
 instead of entering skyscraper:
 	say "You try to go enter, but your brute force approach attracts nobody. You are filled with desire to move up in the world, but perhaps not the thoughtfulness, yet.";
-
-the perky crass skyscraper is scenery in Econ Cone. "It's built by [trev] and is emblazoned with his twin motto, PROPERTY IS PROSPERITY and ADVERTS-STARVED? READ TVS. It doesn't let up on opulent. You remember reading a scientific study that just wanting to work there five minutes a day increases productivity by 25%."
 
 check scaning skyscraper:
 	if pernod is off-stage:
@@ -14603,8 +14708,7 @@ check scaning skyscraper:
 		say "Your settler seems to give the same reading for the Pernod as for the skyscraper.";
 		try scaning pernod instead;
 
-to say trev:
-	say "Trevis Vister[one of], Ph.D in Life Success[or][stopping]";
+chapter astute statue
 
 The astute statue is uncluing scenery in Econ Cone. "[one of]It is, of course, of [trev]. It's thirty feet tall and a decent likeness, except it's a shocking red, so nobody can miss it, and he has a full head of hair instead of that ridiculous comb-over. Also, his arm is around air, because when this statue was initially commissioned, his third wife demanded to be part of it. She was removed when he remarried, replaced by his fourth wife, who divorced him when she was portrayed as shorter than he was.[or][trev] is unchanged, himself, just waiting for you to want to be like him.[stopping][paragraph break]Rivets lie at the bottom of the statue in some sort of pattern. [one of]. It is not a statue of limitations, for sure[or][stopping]."
 
@@ -14648,19 +14752,77 @@ check scaning statue:
 
 a-text of rivets is "RRRYRY". b-text of rivets is "[if prai is reflexed]RRRYRY[else]?RR?R?[end if]".
 
-[stew: many people sit outside and want more money. You want something else, though.]
+understand "persia" as a mistake ("You redden at the thought of mystical lands that aren't relevant to the here and now.") when player is in Econ Cone.
 
-after fliptoing skyscraper:
-	consider the region-knock rule;
+after fliptoing prai:
 	continue the action;
 
-check fliptoing skyscraper:
-	if prai is reflexive and rivets are reflexive: [stri is false and asp is false:]
-		say "You sit and ponder for a bit. But it is just general complaining. The whole mish-mosh about people approximately as unfortunate as you. No wish for [i]praise rivets[r] you enough for you to ponder positively." instead;
+after fliptoing rivets:
+	continue the action;
+
+chapter pernod
+
+the bottle of Pernod is a semi-easy vanishing thing. "A broken bottle of [if label is in lalaland]N-E-Prod[else]Pernod[end if] champagne lies here. There's a card that seems glued to it, with some writing on it."
+
+a-text of pernod is "RYRRYR". b-text of pernod is "[if label is part of pernod]P[else]R[end if]YRRYR".
+
+check reading pernod:
+	try reading card instead;
+
+check taking bottle of Pernod:
+	say "The jagged glass would cut your hands, or your super purse's space-capes." instead;
+
+after fliptoing when location of player is Econ Cone (this is the Pernod appears on first statue success rule):
+	if noun is prai or noun is rivets:
+		if pernod is off-stage:
+			say "Your concentration is broken by shattering glass! When you turn around, you notice the person who originally gave you the Peg A. Page book. He has been escorted out by security. They hand him a bottle. There's an argument, he smashes the bottle, and he runs away. Perhaps this is your chance, to take his place now that he has burned out!";
+			now pernod is in Econ Cone;
+	continue the action;
+
+after fliptoing pernod:
+	if rivets are reflexive or prai is reflexive:
+		decrement poss-score of troves;
+	continue the action;
+
+description of bottle of pernod is "It says [if label is in lalaland]N-E-Prod below where the label was[else]PERNOD on the label, which looks a bit loose[end if]. There's also a card you could read."
+
+understand "champagne" as Pernod.
+
+understand "prod/neprod/n-e-prod" and "bottle of prod/neprod/n-e-prod" as Pernod.
+
+section label
+
+the label is part of the bottle of pernod. description of label is "It says PERNOD."
+
+check taking the label:
+	say "The label comes off to reveal a much less hoity-toity label: the generic N-E-PROD is the [i]REAL[r] manufacturer! It's in red letters, too.";
+	now label is in lalaland instead;
+
+check examining the label:
+	say "It looks like you could TAKE it off! You wonder if this bottle is a fake. It says PERNOD, but there's also a card tied to the bottle." instead;
+
+instead of scaning the label:
+	try scaning the pernod instead;
+
+section card
+
+the card is part of the bottle of Pernod. description of card is "It's got red writing on it that you could read."
+
+check taking the card:
+	say "It's glued to the Pernod." instead;
+
+a-text of card is "RYRRYR". b-text of card is "[if label is part of pernod]P[else]R[end if]YRRYR".
+
+to say trev:
+	say "Trevis Vister[one of], Ph.D in Life Success[or][stopping]";
 
 book FiefCo Office
 
-check fliptoing when player is in FiefCo Office and noise is in FiefCo Office: [note that this trumps check fliptoing song]
+FiefCo Office is an innie room in Troves. "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Slick-Tech Checklist[if divorces is visible], and DIVORCES magazine[end if] on your desk to the plasm lamps above, to the inspirational picture of a stream, your office conforms to the opulent/no let-up deco-code. Including the double-plus-secure door out[if song is visible].[paragraph break]Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes, still[else]. A shaker of salt sits on the vanity, too[end if]."
+
+section order the flips
+
+check fliptoing when player is in FiefCo Office and noise is in FiefCo Office (this is the order Office flips rule): [note that this trumps check fliptoing song]
 	if noun is song:
 		say "First things first: you need to outlast that noise.";
 		preef salt;
@@ -14670,27 +14832,30 @@ check fliptoing when player is in FiefCo Office and noise is in FiefCo Office: [
 		preef noun;
 		do nothing instead;
 
-FiefCo Office is an innie room in Troves. "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Slick-Tech Checklist[if divorces is visible], and DIVORCES magazine[end if] on your desk to the plasm lamps above, to the inspirational picture of a stream, your office conforms to the opulent/no let-up deco-code. Including the double-plus-secure door out[if song is visible].[paragraph break]Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes, still[else]. A shaker of salt sits on the vanity, too[end if]."
+chapter silly office scenery
 
-the noise is vanishing scenery in FiefCo Office. "It's noise from the person you locked out."
+section nerf fern
 
-instead of doing something with the noise:
-	if action is procedural:
+The nerf fern is useless scenery in FiefCo Office.
+
+description of nerf fern is "It saves time, since you don't have to water it. But you can't see how it gives any new ideas."
+
+instead of doing something with the nerf fern:
+	if current action is examining or scaning:
 		continue the action;
-	if current action is objasking about or current action is asking about:
-		say "You don't want to step down from a strong negotiating point."
+	say "Don't futz with it. It's there for ambiance. The sort of ambiance people less busy than you care about.";
 
-the playbill is scenery. "It's for Siren G. Grines, Singer. That's in red, as is smaller writing about the band and promoters and so forth. It looks counter-cultural, but you are intrigued."
+section lamps
 
-instead of doing something with playbill:
-	if action is procedural:
-		continue the action;
-	say "You can just examine or read the playbill, but that's about it."
+the plasm lamps are plural-named scenery in FiefCo Office. "They start to inspire a Psalm, until you remember you're a busy [guy] with a job to do."
 
-instead of doing something with eddie's song:
-	if action is procedural:
-		continue the action;
-	say "You can just listen to Eddie's song for evocative details and stuff."
+to say guy:
+	say "[if player is female]wo[end if]man";
+
+instead of taking lamps:
+	say "That'd be expensive and toxic."
+
+section secure door
 
 the secure door is scenery in FiefCo Office. "It isn't even to be thought about."
 
@@ -14701,36 +14866,15 @@ instead of doing something with the secure door:
 		continue the action;
 	say "You don't even want to think about that door with all you have to do."
 
-DIVORCES Magazine is vanishing scenery in FiefCo Office. "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla]"
-
-a-text of divorces is "RYRRYRYR". b-text of divorces is "PGRRYRGR".
-
-instead of doing something to DIVORCES:
-	if current action is taking:
-		say "No. It's best read briefly, if at all." instead;
-	if action is procedural:
-		continue the action;
-	say "DIVORCES is mostly for reading, mostly, unless you have an insight otherwise." instead;
-
-understand "signer" as a mistake ("No. Your eyes redden as you remember you are already a signer. The singer makes you want to do something else.") when player is in FiefCo Office.
-
-understand "maters" and "tamers" as a mistake ("Such people would be beneath your delegational abilities.") when stream is visible.
-
-does the player mean examining the big important desk: it is very likely.
+chapter desk, checklist and vanity
 
 the big important desk is scenery in FiefCo Office. "Made of nice to notice eco-tin, it has a Slick-Tech Checklist (more popular and efficient than the [randbla]) on it that you could read all day."
 
 the Slick-Tech Checklist is scenery in FiefCo Office. understand "list" and "checklist" and "slick/tech" and "slick tech" as checklist.
 
+does the player mean examining the big important desk: it is very likely.
+
 description of slick-tech checklist is "You browse some steno-notes on your Slick-Tech Checklist: [randbla]"
-
-the plasm lamps are plural-named scenery in FiefCo Office. "They start to inspire a Psalm, until you remember you're a busy [guy] with a job to do."
-
-to say guy:
-	say "[if player is female]wo[end if]man";
-
-instead of taking lamps:
-	say "That'd be expensive and toxic."
 
 check going east in FiefCo Office:
 	say "You couldn't just run out on your company and your responsibilities like that! You would engage to leave a note or something first. And, of course, you would need to mentally prepare yourself to[if salt is visible]. And you'd need to have proved yourself. You haven't, yet[otherwise]. I guess you could leave now, if you did the right thing, first[end if]." instead;
@@ -14756,54 +14900,40 @@ instead of scaning vanity:
 		try scaning playbill instead;
 	say "You weren't able to find any. But there must be something to do!"
 
+chapter the noise (IGNORE)
+
+every turn while player is in FiefCo Office (this is the region-knock rule):
+	if noise is in office:
+		say "[one of]'Er...go in?' cries a voice not worth your attention[or]You hear the voice cry '[one of]Erin! Go[or]Go, Erin[cycling]!' which makes you see red. YOU'RE in charge here[or]Your 'visitor' seems to be plotting...he says 'One: rig...' but you tune the rest out, seeing red[or]'No! I...erg!' your adversary rages[in random order].[paragraph break]If only you could tune that out!";
+
+the noise is vanishing scenery in FiefCo Office. "It's noise from the person you locked out."
+
 a-text of noise is "YRRYRY". b-text of noise is "YRRYRY".
 
-chapter vanscaning
+instead of doing something with the noise:
+	if action is procedural:
+		continue the action;
+	if current action is objasking about or current action is asking about:
+		say "You don't want to step down from a strong negotiating point."
 
-[* scans vanity every move in troves]
+chapter DIVORCES magazine
 
-vanscan is a truth state that varies.
+DIVORCES Magazine is vanishing scenery in FiefCo Office. "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla]"
 
-vanscaning is an action out of world.
+a-text of divorces is "RYRRYRYR". b-text of divorces is "PGRRYRGR".
 
-understand the command "vanscan" as something new.
+instead of doing something to DIVORCES:
+	if current action is taking:
+		say "No. It's best read briefly, if at all." instead;
+	if action is procedural:
+		continue the action;
+	say "DIVORCES is mostly for reading, mostly, unless you have an insight otherwise." instead;
 
-understand "vanscan" as vanscaning.
+understand "maters" and "tamers" as a mistake ("Such people would be beneath your delegational abilities.") when stream is visible.
 
-carry out vanscaning:
-	if vanscan is false:
-		now vanscan is true;
-	else:
-		now vanscan is false;
-	say "[if vanscan is true]Scanning vanity every move[else]No longer scanning each move[end if].";
-	the rule succeeds;
+chapter how to last (1 of 2)
 
-every turn when vanscan is true:
-	say "Results of scanning vanity:[line break]";
-	try scaning vanity;
-
-chapter lager
-
-The can of Large Regal Lager is a vanishing LLPish thing in Pallid Li'l Pad. description is "It has a picture of someone smiling as he chugs a can of Large Regal Lager--the LARGE being black and above the red Regal Lager below. A warning on the can says that important people drinking too many of these is as bad for the economy as people with nothing better to do not drinking enough. Also there's a rubbish story about how the beer is brewed."
-
-the rubbish story is part of the Regal Lager. the rubbish story is cluey and auxiliary. description is "[one of]It's in red and about how Ergal Agler brewed the first batch long ago. It kills almost as many brain cells as you drinking it[or]Your eyes gloss over all but the red ERGAL AGLER[stopping]."
-
-a-text of rubbish story is "RRYRY". b-text of rubbish story is "RRYRY".
-
-
-instead of scaning rubbish story:
-	try scaning Large Regal Lager instead;
-
-a-text of lager is "RRYRY". b-text of lager is "RRYRY".
-
-instead of drinking lager:
-	say "One sip is--nope. Next, a liter, retail. Though it's not as nasty as Camelot Eco-Malt, it'd make your liver viler and send you to Bum Lane seeing blue men.[paragraph break]Though you can't bring yourself to throw it out. Maybe you are not looking at things the right way.";
-
-instead of eating lager:
-	say "It drinks like a meal, you're sure, but you're too important now to risk brain cells to find out.";
-
-instead of taking lager:
-	say "No, touching or holding a can almost always leads to drinking from it. You may even be able to ignore the Large Regal Lager altogether. But you will need to steel yourself before taking it."
+section lobster
 
 an extra fancy lobster meal is in FiefCo Office. description is "Oh, man, it looks awesome. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if stream is reflexed]--though you are feeling confident enough, having dealt with the stream[end if].". fancy lobster meal is vanishing. initial appearance of lobster meal is "A meal's on the desk. Lobster! You may or may not have the confidence to eat it."
 
@@ -14815,7 +14945,7 @@ instead of eating lobster meal:
 instead of taking lobster meal:
 	say "A big executive like you shouldn't worry about procedural details like taking something before eating it."
 
-chapter stream painting
+section stream painting
 
 The painting of the stream is reflexive scenery in FiefCo Office. "It's labeled as PRACTICAL RELAXATION FOR TODAY'S LEADERS. The stream is about all there is to it. It shimmers based on how you stare at it[if stream is not reflexed and lobster is in lalaland]. You doubt you need to do anything with it, since you had that delicious lobster, but then, it might be one more overachievement[end if]."
 
@@ -14846,83 +14976,20 @@ check putting salt on:
 		say "That'd ruin it." instead;
 	say "The salt is there for ornamental and inspirational purposes. Plus, there's nothing here to eat[if lobster is visible], except the lobster, which doesn't need it[end if]." instead;
 
-chapter nerf fern
+chapter final action 1 of 2
 
-The nerf fern is useless scenery in FiefCo Office.
+check fliptoing song:
+	if lobster is in office and stream is reflexive:
+		say "Man. That seems right. But you haven't improved yourself enough to last, yet.";
+		preef salt;
+		do nothing instead;
 
-description of nerf fern is "It saves time, since you don't have to water it. But you can't see how it gives any new ideas."
-
-instead of doing something with the nerf fern:
-	if current action is examining or scaning:
-		continue the action;
-	say "Don't futz with it. It's there for ambiance. The sort of ambiance people less busy than you care about.";
-
-book silly verbs needed to win Troves
-
-understand "clod" as a mistake ("Hey! No beating yourself up. You'll do it wrong.") when player is in Loather Rathole.
-
-understand "care" as a mistake ("You find yourself boohooing over mumbo-jumbo about how the socioeconomic system must be even more unfair to people without your powers. How unproductive to care about THAT.") when heat is not visible and mrlp is troves.
-
-understand "race" as a mistake ("Races scare you without the proper motivation from inside.") when player is in Loather Rathole and cold is visible.
-
-understand "acre" as a mistake ("That farm-boy terminology won't help show you give a darn in the big city.") when player is in Loather Rathole and cold is not visible.
-
-section note from dale
-
-ltb is a privately-named vanishing super-easy thing. "A copy of LEAD[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here.". description of ltb is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.". printed name of ltb is "LEAD".
-
-a-text of ltb is "RYYR". b-text of ltb is "???R".
-
-understand "copy" and "book" and "lead" as ltb when player is in Pallid Li'l Pad.
-
-does the player mean doing something with ltb when the player is in Pallid Li'l Pad: it is likely.
-
-understand "aled" as a mistake ("Getting drunk will not solve your problems[if lager is in Pallid Li'l Pad]. And that lager would taste awful, anyway[else]. Especially when there's nothing here to get drunk with[end if]. You see red at yourself for such thoughts.") when ltb is visible
-
-instead of taking the ltb:
-	say "You already have one motivational book. Perhaps you need to find the right way to soak up LEAD's essence."
-
-understand "eiders" as a mistake ("But what would ducks DO in the big city? They have no ambition. They don't crave...") when brochure is visible
-
-the cold is flippable scenery in Loather Rathole. "[one of]Even though you wasted time watching weathercasts as a kid (boo!) and never learned to small-talk about it with important people (boo!) t[or]T[stopping]he cold's still just...cold."
-
-a-text of cold is "RYRY". b-text of cold is "PYRY".
-
-check taking cold:
-	say "You have as much cold as you can take." instead;
-
-understand "hate" as a mistake ("You don't want to get burnt up with hate[if heat is visible], and that won't get back your super purse like racing after that guy[end if].") when cold is not visible.
-
-the heat is flippable vanishing scenery. "The heat is nice and all, but being happy for it isn't the right emotion, here, with your possessions stolen."
-
-a-text of heat is "RYRY". b-text of heat is "RGRG".
-
-chapter ignoreing
-
-every turn while player is in FiefCo Office (this is the region-knock rule):
-	if noise is in office:
-		say "[one of]'Er...go in?' cries a voice not worth your attention[or]You hear the voice cry '[one of]Erin! Go[or]Go, Erin[cycling]!' which makes you see red. YOU'RE in charge here[or]Your 'visitor' seems to be plotting...he says 'One: rig...' but you tune the rest out, seeing red[or]'No! I...erg!' your adversary rages[in random order].[paragraph break]If only you could tune that out!";
-
-instead of taking bee's head:
-	say "You're not fast enough to behead the bee's head."
-
-the bee's head is part of the what-a-bee. the bee's head is reflexive. description is "[if bee's head is reflexed]It appears a bit duller now, after you reasoned so well against it[else]It shines brightly, as if it is ready for a battle of wits[end if]."
-
-after fliptoing bee's head:
-	if what-a-bee is reflexed:
-		min-up;
-	else:
-		say "Now that the bee's buzzing less, you can hear people giving directions, and maybe you can listen in. Or concentrate on the cellar.";
+after fliptoing song:
+	say "You're besieged by art, in fact! What's...what's that sound? It's that song! By Eddie C.!";
+	now playbill is in fiefco;
 	continue the action;
 
-after fliptoing what-a-bee:
-	if bee's head is reflexed:
-		min-up;
-	else:
-		say "Now that the bee's buzzing less, you can hear people giving directions, and maybe you can listen in. Or concentrate on the cellar.";
-	continue the action;
-
-chapter resigning
+section Eddie's Song
 
 Eddie's song is super-easy reflexive scenery. "Eddie C. warbles on."
 
@@ -14938,20 +15005,27 @@ understand "snog" as a mistake ("You're too busy for...THAT. You focus on the si
 instead of examining song:
 	try listening instead;
 
+section playbill
+
+the playbill is scenery. "It's for Siren G. Grines, Singer. That's in red, as is smaller writing about the band and promoters and so forth. It looks counter-cultural, but you are intrigued."
+
+instead of doing something with playbill:
+	if action is procedural:
+		continue the action;
+	say "You can just examine or read the playbill, but that's about it."
+
+instead of doing something with eddie's song:
+	if action is procedural:
+		continue the action;
+	say "You can just listen to Eddie's song for evocative details and stuff."
+
+understand "signer" as a mistake ("No. Your eyes redden as you remember you are already a signer. The singer makes you want to do something else.") when player is in FiefCo Office.
+
 understand "resign" as a mistake ("Wrong place for that. If you must, QUIT instead.") when player is not in FiefCo Office.
 
 understand "reigns" as a mistake ("You try to convince yourself it totally reigns here, but the singer pushes you towards giving up your responsibility.") when song is visible.
 
-check fliptoing song:
-	if lobster is in office and stream is reflexive:
-		say "Man. That seems right. But you haven't improved yourself enough to last, yet.";
-		preef salt;
-		do nothing instead;
-
-after fliptoing song:
-	say "You're besieged by art, in fact! What's...what's that sound? It's that song! By Eddie C.!";
-	now playbill is in fiefco;
-	continue the action;
+section troend1 and troend2 dummy variables to flip
 
 troend1 is privately-named useless scenery. troend1 is undesc. printed name of troend1 is "I'd Cede (Eddie C.)"
 
@@ -14975,42 +15049,6 @@ decide-win is a truth state that varies.
 after fliptoing troend1:
 	now decide-win is true;
 	continue the action;
-
-check scaning post:
-	if babblings are reflexive:
-		try scaning babblings instead;
-	if post is reflexed:
-		say "You've dealt with the post." instead;
-	say "[if cheat-on is false]RRYR[else]The stop post blinks between PRGR and RRYP[end if]." instead;
-
-check fliptoing what-a-bee:
-	if verbose is reflexive:
-		say "You haven't paid enough attention to know what to spot." instead;
-
-the cellar door that must be here somewhere is vanishing scenery in Used Lot. "You can't really examine it if you don't know where it is."
-
-a-text of cellar door is "RYRYRR". b-text of cellar door is "RGRYRR".
-
-instead of doing something to cellar door:
-	if current action is taking or current action is opening or current action is closing:
-		say "But you're not sure where the door is, so you can't do that." instead;
-	if action is procedural, continue the action;
-	say "No, you need to do something to find the cellar. Since you can't quite remember...";
-
-derived is a truth state that varies.
-
-after fliptoing cellar door:
-	if the player's command includes "derive":
-		now derived is true;
-	if bee's head is reflexive or what-a-bee is reflexive:
-		poss-d;
-	continue the action;
-
-check fliptoing cellar door:
-	if what-a-bee is off-stage:
-		say "You haven't forgotten anything important, yet." instead;
-	if bee's head is reflexive and what-a-bee is reflexive:
-		say "Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now." instead;
 
 volume presto
 
@@ -17352,6 +17390,13 @@ a-text of stein is "YRRYR". b-text of stein is "YRRYR".
 description of stein is "It's undoubtedly from the Set-In-Nites corporation, mostly black but with red writing[one of]. You mentally compare it to the tines, and you reckon if you inserted it, it'd be 20% too big[or][stopping]."
 
 marcitems is a list of thing variable. marcitems is { stein, stumbler tumblers, recaps, gins sign, tunes }.
+
+chapter min up rule
+
+to silly-min:
+	increment silly-acts;
+	if silly-acts < 3:
+		min-up;
 
 chapter remaping
 
@@ -36498,6 +36543,7 @@ blurb	prio
 "Sober Kin is Broken[r], by [if player is male]Ken Boris[else]Kris Bone[end if]"
 "Sober Kin is Broken[r], by Ken Boris"
 "The Social So-Ethical Coal Heist[r], by Theo Scali"
+"A Society Stoic, Aye[r], by [if player is male]Casey Ito[else]Staci Yeo[end if]"
 "Sociopath, I Opt Chaos[r], by Pooch Tsai"
 "Sock-Lab So Black[r], by Sal Bock"
 "Soda Ados[r], by Odo Assad"
@@ -58356,6 +58402,30 @@ carry out repling:
 		reposition-guardians;
 		the rule succeeds;
 	say "Doesn't apply here.";
+
+chapter vanscaning
+
+[* scans vanity every move in troves]
+
+vanscan is a truth state that varies.
+
+vanscaning is an action out of world.
+
+understand the command "vanscan" as something new.
+
+understand "vanscan" as vanscaning.
+
+carry out vanscaning:
+	if vanscan is false:
+		now vanscan is true;
+	else:
+		now vanscan is false;
+	say "[if vanscan is true]Scanning vanity every move[else]No longer scanning each move[end if].";
+	the rule succeeds;
+
+every turn when vanscan is true:
+	say "Results of scanning vanity:[line break]";
+	try scaning vanity;
 
 chapter coping
 
