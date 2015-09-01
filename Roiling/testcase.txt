@@ -13,3 +13,4 @@ This is a text file of test cases that I can and should look at.
 --X STORE A etc
 --bypass a region and try to win and look at descriptions
 --examine OTTERS twice. Anything weird happen?
+--SS in the anteroom and north, and other places with privately-named reflexive/vanishing scenery

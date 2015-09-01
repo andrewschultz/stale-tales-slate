@@ -8452,15 +8452,237 @@ leopard	"paroled"
 badger	"garbed"
 satyr	"artsy"
 
-volume parser errors
+volume parser tricks and errors
 
-[not a very BIG volume, but a lot of commands go through it.]
+[not a very BIG volume, but we need to know what to do with commands that should work.]
+
+book reading the command
+
+after reading a command:
+	let XX be indexed text;
+	now block-north is false; [?! remove if fixed later. N during Z.Z.Z.Z is annoying]
+	let XX be the player's command in lower case;
+	change the text of the player's command to XX;
+	if scan-nag is false and settler is visible:
+		if the player's command includes "scanner":
+			say "(Fourth wall dumb joke: the letters settler isn't a scanner made for canners. It's for text adventurers.)";
+			now scan-nag is true;
+	if XX matches the regular expression "^(say|think|shout|speak|yell) ":
+		if say-warn is false:
+			say "If you want to say or think a magic word, you can just type it. So instead of SAY XYZZY, you can use the command XYZZY.[paragraph break]You can ASK someone ABOUT something, if you want to talk to them. So this game will snip SAY/THINK/SHOUT/SPEAK/YELL from the start of all future commands.";
+			pad-rec "saying";
+			now say-warn is true;
+			reject the player's command;
+		say "(cutting off the trailing '[word number 1 in the player's command]')[line break]";
+		let XX be the player's command;
+		replace the regular expression "^(say|think|shout|speak|yell) " in XX with "";
+		change the text of the player's command to XX;
+	if XX matches the regular expression "scan.*with" and player has settler:
+		if scanwith is false:
+			ital-say "you don't need the prepostion WITH. You can just say SCAN, as the settler is the only item that can scan.";
+			now scanwith is true;
+		pad-rec-q "long commands";
+		replace the regular expression "with.*" in XX with "";
+		change the text of the player's command to XX;
+	if the player's command matches the regular expression "^\p" or the player's command matches the regular expression "^<\*;>":
+		if hint-to-file is true:
+			append "COMMENT: [the player's command]" to the file of roilhints;
+		if currently transcripting:
+			say "Noted.";
+		otherwise:
+			if ignore-transcript-nag is false:
+				say "You've made a comment-style command, but Transcript is off. Type TRANSCRIPT to turn it on, if you wish to make notes.[paragraph break]The long version of this nag will only appear once. You may press any key to continue.";
+				wait for any key;
+				now ignore-transcript-nag is true;
+			else:
+				say "(Comment not sent to transcript.)";
+		reject the player's command;
+	if period-warned is false:
+		if the player's command matches the regular expression "\.":
+			say "Small warning--this shouldn't be a problem, but if you use periods to separate a command to do your magic, the parser will have problems. I couldn't find a way around it. Sorry. That said, normal commands will work okay.[wfak]";
+			now period-warned is true;
+	if number of words in player's command is 5 and long-sent-warn is false:
+		ital-say "you probably don't need more than four words per command. The most complex ones are PUT X ON Y or ASK X ABOUT Y, and a compound item like GIANT PIN can use GIANT or PIN. Adjectives usually aren't necessary, and GET ALL will never take anything harmful or lethal.";
+		now long-sent-warn is true;
+		pad-rec "long commands";
+	if word number 1 in player's command is "a":
+		if ask-warn is false:
+			say "Replacing 'a' with 'ask about.' Saying 'a' is not required for any puzzle.";
+			now ask-warn is true;
+		replace the regular expression "^a " in XX with "ask about";
+		change the text of the player's command to XX;
+		d "Changing text to [XX].";
+	if mrlp is routes:
+		if word number 1 in player's command is "go":
+			unless word number 2 in player's command is "to":
+				if go-warned is false:
+					ital-say "you don't need to start a command with go in Routes. One word should be fine.";
+					now go-warned is true;
+				let XX be the player's command;
+				replace the regular expression "^go " in XX with "";
+				change the text of the player's command to XX;
+	repeat with QQ running through fungible things:
+		if QQ is a the-from listed in the table of anagrams:
+			if the player's command matches right-cmd entry:
+				try fliptoing the-to entry;
+				consider the notify score changes rule;
+				[save-present-input;]
+				consider the hint flags checkoff rule;
+				consider the scam rule instead;
+	if Gunter is off-stage and peephole is unexamined:
+		if the player's command includes "Gunter":
+			say "[if peephole is unexamined]Who?[else]Gunter's outside, but to interact meaningfully, you should open the door and let him in.[end if]" instead;
+	if e-s is visible:
+		if the player's command includes "presto":
+			unless the player's command includes "test":
+				say "Presto is the word you said to reveal the, er, spot." instead;
+	if the player's command includes "tickle" and Elmo is in Basement:
+		say "Really. This is a juvenile computer game, not a juvenile toy." instead;
+	if player is in evoc-cove and the player's command includes "page":
+		let XX be the player's command;
+		replace the regular expression "page" in XX with "";
+		ital-say "you don't need to say PAGE, just give a number.";
+		change the text of the player's command to XX;
+	if the player's command includes "under":
+		if number of words in the player's command > 1:
+			if old giant is visible:
+				if rude 'n nuder is visible:
+					say "Truncating to one word.";
+					change the text of the player's command to "under";
+	if player is in collapsed and ruby is in lalaland:
+		if the player's command includes "ruby":
+			say "Don't worry about the ruby any more[if haunter is in lalaland], or the haunter[else]. It's someone else's worry. Or someTHING's[end if].";
+			reject the player's command;
+	if the player is in strip of profits:
+		repeat through table of skipcmds:
+			if word number 1 in the player's command is "[lastcmd entry]":
+				if storedest entry is visible or portdest entry is visible:
+					if storedest entry is store t:
+						say "Sorry. I can't let you do that. But if you want to go back to the Dusty Study and ROVE OVER, that will work.";
+						reject the player's command;
+					if old-rel entry > 0:
+						say "The [go-region of portdest entry] region for this final command may've changed since you last played, which is probably release [old-rel entry][if old-rel entry > 1] or earlier[end if]. Go ahead?";
+						if the player consents:
+							do nothing;
+						else:
+							say "It'll be fun. And worth it. I hope!";
+							reject the player's command;
+					say "You declare cleared [go-region of portdest entry] and watch [if portdest entry is visible][portdest entry][else][storedest entry][end if] dissolve.";
+					if storedest entry is visible:
+						reg-inc;
+					now storedest entry is in lalaland;
+					now portdest entry is in lalaland;
+					now go-region of portdest entry is shortcircuited;
+					see-about-patcher;
+					reject the player's command;
+				say "You already took care of [go-region of portdest entry].";
+				reject the player's command;
+	if the player is in uaah and digger is off-stage:
+		if the player's command includes "shovel":
+			say "Hmm. No shovel yet. Or anything like it. Maybe you'll find one, though.";
+			reject the player's command;
+	if hydra-known is true and player is in alcoves and Inclosure is unvisited:
+		if the player's command matches the regular expression "\b(hardy|hydra)\b":
+			say "You don't want to THINK about taking on the hydra by yourself. You need something much bigger.";
+			reject the player's command;
+	if pirates are not plurtry:
+		if the player's command matches the regular expression "\bpirate\b" and pirates are visible:
+			now pirates are plurtry;
+			ital-say "there are too many pirates, and they're too uniform in their uniforms, to examine just one. But you don't need to.";
+	if natives are not plurtry:
+		if the player's command matches the regular expression "\bnative\b" and natives are visible:
+			now natives are plurtry;
+			ital-say "there are too many natives to deal with one at a time.";
+	if yurt-plurtry is false:
+		if the player's command matches the regular expression "\byurt\b" and yurts are visible:
+			now yurt-plurtry is true;
+			ital-say "there are too many yurts, and they're too uniform, to examine just one. But you don't need to.";
+	if deacons are not plurtry:
+		if the player's command matches the regular expression "\bdeacon\b" and deacons are visible:
+			now deacons are plurtry;
+			ital-say "there are too many deacons, and they're too uniform, to examine just one. But you don't need to.";
+	if diners are not plurtry:
+		if the player's command matches the regular expression "\bdiner\b" and diners are visible:
+			now diners are plurtry;
+			ital-say "there are too many diners, and they're too uniform, to examine just one. But you don't need to.";
+	if ingrates are not plurtry:
+		if the player's command matches the regular expression "\bingrate\b" and ingrates are visible:
+			now ingrates are plurtry;
+			ital-say "there are too many ingrates, and they're too uniform, to examine just one. But you don't need to.";
+	if the player's command matches the regular expression "\bsmell\b" and word number 1 in the player's command is not "smell":
+		say "You can just type SMELL.";
+		reject the player's command;
+	if getall-warn is false:
+		if the player's command matches the regular expression "\ball$":
+			if the player's command matches the regular expression "^(get|take)":
+				say "Multiple item-pull!";
+				now getall-warn is true;
+
+section command reader booleans
+
+period-warned is a truth state that varies.
+
+ignore-transcript-nag is a truth state that varies.
+
+say-warn is a truth state that varies.
+
+scan-nag is a truth state that varies.
+
+block-north is a truth state that varies.
+
+long-sent-warn is a truth state that varies.
+
+yurt-plurtry is a truth state that varies.
+scanwith is a truth state that varies.
+
+ask-warn is a truth state that varies.
+
+go-warned is a truth state that varies.
+
+section disambiguation
+
+[this is so parenthetical text doesn't pop up]
+
+rule for clarifying the parser's choice when discerning: do nothing.
+
+Rule for clarifying the parser's choice of super purse: do nothing.
+
+[stopgap. Could be any store, or any object]
+
+Rule for clarifying the parser's choice of Store Z: do nothing.
+
+rule for supplying a missing second noun while unlocking:
+	now second noun is super purse.
+
+section commands to skip previously solved areas
+
+table of skipcmds
+lastcmd	storedest	portdest	old-rel [old release is last one where this command worked. If 0, it currently works]
+"through"	store u	routes-x	0
+"between"	store u	routes-x	0
+"bus"	store p	e-s	0
+"sub"	store p	e-s	0
+"debug"	store p	e-s	1
+"redial"	store y	oyster-x	0
+"destroy"	store y	oyster-x	1
+"spectacular"	store w	towers-x	0
+"decide"	store v	troves-x	0
+"resign"	store v	troves-x	0
+"quickly"	store t	otters-x	-1
+
+book errors
 
 Rule for printing a parser error when the latest parser error is the nothing to do error:
 	say "Nothing is small or mobile or valuable enough to take here." instead;
 
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error:
 	say "[reject]";
+
+definition: a thing (called xx) is fungible:
+	if xx is held, yes;
+	if xx is palm and xx is in dusty study, yes;
+	if xx is visible, yes;
+	no.
 
 Rule for printing a parser error when the latest parser error is the didn't understand error:
 	if player has wrap:
@@ -8518,6 +8740,8 @@ Rule for printing a parser error when the latest parser error is the I beg your 
 	now pardons is true;
 	say "[randbla][line break]";
 	now pardons is false;
+
+book reading a command
 
 volume regular verb tweaks and irregular verbs
 
@@ -9540,6 +9764,120 @@ carry out pointing it at:
 
 book specific irregular verbs
 
+part settler stubs
+
+chapter cting
+
+[* c=t=cheat=teach=push tcb/cheat button]
+
+cting is an action applying to nothing.
+
+understand the command "c/t/cheat/teach" as something new.
+
+understand "c" and "t" and "cheat" and "teach" as cting.
+
+understand "cheat on/off" and "teach on/off" as a mistake ("Just type c/t or cheat/teach to toggle. Note: settler is currently in [unless cheat-on is true]non-[end if]cheat mode.") when player has settler.
+
+carry out cting:
+	if settler is not visible:
+		say "[reject]" instead;
+	try pushing tcb instead;
+
+chapter ssing
+
+[* SS scans an object forcing no-cheat mode]
+
+ssing is an action applying to nothing.
+
+understand the command "ss" as something new.
+
+understand "ss" as ssing.
+
+understand the command "shake" as something new.
+
+understand "shake [thing]" as ss0ing.
+
+ss0ing is an action applying to one thing.
+
+carry out ss0ing:
+	if noun is not settler:
+		say "That doesn't really work." instead;
+	try ssing instead;
+
+carry out ssing:
+	if settler is not visible:
+		say "[reject]" instead;
+	try switching on the settler instead;
+
+chapter sying
+
+[* SY scans an object forcing cheat mode]
+
+sying is an action applying to one thing.
+
+understand the command "sy [something]" as something new.
+
+understand "sy [something]" as sying.
+
+carry out sying:
+	if player does not have settler and settler is visible:
+		try taking settler;
+	if player does not have settler:
+		say "You need the settler for this shortcut." instead;
+	now cheat-on is false;
+	now squee is false;
+	try scaning noun;
+	if squee was true:
+		say "You reset the equals sign.";
+		now squee is true;
+	if cheat-on was true:
+		say "You reset the cheat/teach button.";
+		now cheat-on is true;
+	the rule succeeds.
+
+chapter sning
+
+[* SN scans an object forcing no-cheat mode]
+
+sning is an action applying to one thing.
+
+understand the command "sn [something]" as something new.
+
+understand "sn [something]" as sning.
+
+carry out sning:
+	if player does not have settler and settler is visible:
+		try taking settler;
+	if player does not have settler:
+		say "You need the settler for this shortcut." instead;
+	now cheat-on is false;
+	now squee is false;
+	try scaning noun;
+	if squee was true:
+		say "You reset the equals sign.";
+		now squee is true;
+	if cheat-on was false:
+		say "You re-unset the cheat/teach button.";
+		now cheat-on is true;
+	the rule succeeds;
+
+chapter laing
+
+[* LA looks at the last thing scanned. It should not be relevant unless you are vision impaired. ]
+
+last-scanned-thing is a thing that varies.
+
+scanlasting is an action out of world.
+
+understand the command "la" as something new.
+
+understand "la" as scanlasting.
+
+carry out scanlasting:
+	if last-scanned-thing is yourself or last-scanned-thing is nothing:
+		say "You haven't successfully scanned anything yet." instead;
+	say "The [last-scanned-thing][if last-scanned-thing is in lalaland], which are now out of play,[end if] scanned [full-monty of last-scanned-thing]." instead;
+
 part accessibility
 
 chapter accessing
@@ -9592,6 +9930,44 @@ carry out nospaceing:
 		say "No space mode is very problematic with a screen reader, so I have disabled your ability to do so. You can turn screen reading off with ACCESS, if you want." instead;
 	say "[if setspace is false]Spaces are already[else]Now spaces are[end if] off.";
 	now setspace is false;
+	the rule succeeds;
+
+part random text toggles
+
+quiet-warn is a truth state that varies.
+talk-quiet is a truth state that varies.
+
+chapter uhhsing
+
+uhhsing is an action out of world.
+
+understand the command "uhhs" as something new.
+
+understand "uhhs" as uhhsing.
+
+carry out uhhsing:
+	if talk-quiet is false:
+		say "You already can hear random dialogue.";
+	else:
+		say "Random dialogue on again.";
+	now talk-quiet is false;
+	the rule succeeds;
+
+chapter hushing
+
+hushing is an action out of world.
+
+understand the command "hush" as something new.
+
+understand "hush" as hushing.
+
+carry out hushing:
+	if talk-quiet is true:
+		say "You already can't hear random dialogue." instead;
+	else:
+		say "HUSH on.[paragraph break]";
+		ital-say "you will still hear the first random dialogue in an area, but it will be noted as such.";
+	now talk-quiet is true;
 	the rule succeeds;
 
 part nothin/nohint
@@ -10101,7 +10477,7 @@ prai	prai	"aspire"	"aspire"	"You remember how when you were a kid you just wante
 rivets	rivets	"strive"	"strive"	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if prai is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"	false	564671562	"You have already expanded your goals that way, [if prai is reflexive]but there is another, if you want[else]and the other[end if]."
 pernod	pernod	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through!"	false	458885045	--	FiefCo Office
 lager	lager	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave your [if diapers are reflexed]bedroom[else]pad[end if] just long to pour the hurtful booze [if diapers are reflexed]down the sink[else]out the window you forgot was there[end if]. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio Alger!"	false	301731271
-noise	noise	"ignore"	"ignore"	"'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark.[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."	false	433982545	"There is nothing left to ignore except your destiny. Which would be morally wrong to ignore."
+noise	noise	"ignore"	"ignore"	"'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."	false	433982545	"There is nothing left to ignore except your destiny. Which would be morally wrong to ignore."
 salt	song	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure St. Al watched over you. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! You see there was a playbill under the salt."	false	255385641	"You already have. Now is the time to make way for a new motivat-ee."
 stream	stream	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP."	false	478776867	"The stream has nurtured you spiritually[if lobster is in lalaland]. The lobster nurtured you physically. Time to move on[else]. If you look at it right, the lobster can nurture you physically[end if]."
 lobster	lobster	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. After all, the cost of the lobster is probably less a percent of YOUR income than your underlings['] food is of theirs."	false	559099217	"Your dreams of more lobster dinners acquire rapidly diminishing returns to scale."
@@ -14642,6 +15018,8 @@ the rubbish story is part of the Regal Lager. the rubbish story is cluey and aux
 
 a-text of rubbish story is "RRYRY". b-text of rubbish story is "RRYRY".
 
+understand "alger" as a mistake ("What would an Alger hero DO to such foul spirits as the lager, though?") when lager is visible
+
 instead of scaning rubbish story:
 	try scaning Large Regal Lager instead;
 
@@ -14975,6 +15353,12 @@ check putting salt on:
 	if second noun is lobster:
 		say "That'd ruin it." instead;
 	say "The salt is there for ornamental and inspirational purposes. Plus, there's nothing here to eat[if lobster is visible], except the lobster, which doesn't need it[end if]." instead;
+
+understand "alts" as a mistake ("There are no alts. You must become worth your salt.") when salt is visible
+
+understand "slat" as a mistake ("You're not in the window making business.") when salt is visible
+
+understand "lsat" as a mistake ("Oh dear. Is a standardized lawyers['] aptitude test really less tedious than this? Well, I guess both have a lot of logic chopping. Ouch.") when salt is visible
 
 chapter final action 1 of 2
 
@@ -15815,6 +16199,10 @@ to say lrblab:
 
 chapter whassuping
 
+understand "asswhup" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And violence isn't how to get rid of them.[else if Leo is washed up or Rand is washed up]You don't exactly have a physical advantage here.[otherwise]No chance.[end if]") when Leo is visible
+
+understand "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And violence isn't how to get rid of them.[else if Leo is washed up or Rand is washed up]It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the dumpster.[otherwise]Leo and Rand won't give you the time to look in the dumpster for a spare can to put it in.[end if]") when Leo is visible
+
 whassuping is an action applying to nothing.
 
 understand the command "whassup" as something new.
@@ -16244,7 +16632,7 @@ for writing a paragraph about a thing (called gbg) in hacks' shack:
 
 shack-mess is a list of thing variable. shack-mess is { disk, coal, socks, gum, scratch paper, flea, escaroles, casserole }.
 
-chapter coal
+chapter coal and cola
 
 the pile of coal is a super-easy thing in shack. description is "Black and disgusting as rotted teeth. Good for energy, apparently.". "Coal lies here in a corner."
 
@@ -16256,6 +16644,10 @@ a-text of coal is "RYRY". b-text of coal is "PGRY".
 understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in this situation.") when coal is visible or fizzy cola is visible or bottle of cola is visible.
 
 the fizzy cola is a singular-named thing. description is "The mug it's in seems to make it is more than usual, too. Cool.". the indefinite article of fizzy cola is "some"
+
+understand "pop" as a mistake ("It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.") when dirty looking cola is visible.
+
+understand "soda" as a mistake ("Don't be a sod. It's cola. It has to be.") when dirty looking cola is visible.
 
 Instead of doing something with the fizzy cola:
 	if action is procedural:
@@ -19193,6 +19585,12 @@ the rude door is a thing in Lapsin' plains. "You see a door leading [if player i
 
 the rude door is fixed in place.
 
+understand "odor" as a mistake ("The door kind of stinks as a semi-living entity, and anyway, the reverse of this puzzle happened last game.") when rude door is visible.
+
+understand "rood" as a mistake ("The door's already rood. I mean rude. Try seeing what's around it, instead.") when rude door is visible.
+
+understand "rued" as a mistake ("You can't have rued the door until you've got beyond it. Try seeing what's around it, instead.") when rude door is visible.
+
 instead of taking rude door:
 	say "It's obnoxious but not THAT unhinged."
 
@@ -19326,6 +19724,8 @@ the heaps are reflexive plural-named semi-easy LLPish scenery. "[if heaps are re
 a-text of heaps is "RRYRY". b-text of heaps is "RRGPY".
 
 the rigged digger is a thing. description is "It is, unsurprisingly, a product of Shovel Hovels. It looks suited to its advertised purpose.". understand "shovel" as digger.
+
+understand "bury [text]" as a mistake ("Nothing worth burying.") when player has digger and ruby is off-stage.
 
 understand "dig" and "dig [text]" as a mistake ("[dig-purpose].") when player has digger.
 
@@ -23351,6 +23751,12 @@ book Rote-Moan Anteroom
 
 Rote-Moan Anteroom is south of Bleary Barley. Anteroom is part of otters. Anteroom is innie. "[if whiners are visible]The noise here is just unbearable--men guarding the way south and not shutting up about it[else]This room is quieter now, just a north-south passage[end if]."
 
+the shrewin' whiners are plural-named flippable people in Anteroom. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if ram1 is reflexive]tallyhoing[else]babbling[end if][if ram2 is reflexive] with great callosity[end if] here[if ram3 is reflexive]. They restyle why they can't let you go south[end if][if inhib is false]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if]."
+
+a-text of whiners is "BUG". b-text of whiners is "BUG".
+
+section dummy scenery
+
 [3 dummy sceneries. Loathingly, stoically, tersely]
 
 ram1 is privately-named unscannable reflexive ssno scenery in Anteroom. ram1 is undesc. printed name of ram1 is "the men's shouting".
@@ -23403,6 +23809,8 @@ understand "hornet" as thrones.
 instead of taking the thrones:
 	say "They seem abnormally sharp, as if they could sting you again and again.";
 
+chapter pines and snipe
+
 the pines are a plural-named thing in perverse Preserve. description is "The bases of the pines look almost like birds['] feet."
 
 the pines are fixed in place.
@@ -23417,6 +23825,12 @@ the snipe is an animal. description is "It has a long needle-like bill.". "A sni
 
 a-text of pines is "RRYRY". b-text of pines is "RRYRY".
 
+understand "penis" as a mistake ("[one of]Huh huh huh, Beavis. That was cool[or]Dammit, Beavis. You like have a game to solve[stopping].") when pines are visible or snipe is visible
+
+understand "spine" as a mistake ("You don't need to grow a spine. You've gotten this far.") when pines are visible or snipe is visible
+
+chapter nails and snail
+
 Some nails are semi-easy plural-named things in Preserve. "Some nails are lying all over the floor here."
 
 understand "slain" and "as nil" as a mistake ("[if nails are visible]The nails are already dead as a doornail[else]You're trying to SAVE the animals, actually[end if].") when player is in preserve
@@ -23429,10 +23843,6 @@ instead of taking nails:
 a-text of nails is "RRYYR". b-text of nails is "RRYYR".
 
 the snail is an animal. description is "It's quite spiky and seems to move faster than your average snail.". "The spiky snail you summoned is slithering impatiently in a circle."
-
-the shrewin' whiners are plural-named flippable people in Anteroom. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if ram1 is reflexive]tallyhoing[else]babbling[end if][if ram2 is reflexive] with great callosity[end if] here[if ram3 is reflexive]. They restyle why they can't let you go south[end if][if inhib is false]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if]."
-
-a-text of whiners is "BUG". b-text of whiners is "BUG".
 
 check scaning imp:
 	say "The settler seems to jump around with the imp a bit before stabilizing. The imp's [if silence-tally is 0]patience is legendary and butlery--but it's moving rangily[else if imp1 is in lalaland]patience is legendary and butlery[else if imp3 is in lalaland]It has a butlery air as it moves rangily[else if imp2 is in lalaland]patience feels legendary as it moves rangily[end if].";
@@ -25096,7 +25506,7 @@ instead of doing something with Talks Stalk:
 
 The Shall Halls are scenery in Peek Keep. "You can't get a very good look at the shall-halls, but they fill you with wonder and anticipation all the same. Really!"
 
-volume dometables
+chapter dometables
 
 [dmt]
 
@@ -25275,44 +25685,6 @@ after fliptoing a fruit (this is the fruit cue rule):
 	if number of carried fruits > 5:
 		say "You can carry all those fruits in your super purse, but they might get mushed. Maybe you should unload what you have on Curtis[if player has droll dollar], even if he might not give you any more goodies[end if].";
 	continue the action;
-
-volume talky
-
-quiet-warn is a truth state that varies.
-talk-quiet is a truth state that varies.
-
-chapter uhhsing
-
-uhhsing is an action out of world.
-
-understand the command "uhhs" as something new.
-
-understand "uhhs" as uhhsing.
-
-carry out uhhsing:
-	if talk-quiet is false:
-		say "You already can hear random dialogue.";
-	else:
-		say "Random dialogue on again.";
-	now talk-quiet is false;
-	the rule succeeds;
-
-chapter hushing
-
-hushing is an action out of world.
-
-understand the command "hush" as something new.
-
-understand "hush" as hushing.
-
-carry out hushing:
-	if talk-quiet is true:
-		say "You already can't hear random dialogue." instead;
-	else:
-		say "HUSH on.[paragraph break]";
-		ital-say "you will still hear the first random dialogue in an area, but it will be noted as such.";
-	now talk-quiet is true;
-	the rule succeeds;
 
 volume random text blurb tables [vrt]
 
@@ -27701,6 +28073,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Seitz: It's E-Z!"	true
 "Seligman Mealings"
 "Selkind Kindles" []
+"Scout-Pile Poultices"
 "Selvio-Voiles Olives"
 "Seneca's Seances"
 "The Senor Seth Reno: There's No Honester!"	true
@@ -27931,7 +28304,6 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "ToilCo: Loci to Cool It!"	true
 "Tom Lee's Omelets."
 "Tom's Gag Maggots"
-"Tomb-Hall's Mothballs"
 "Tomkin's OK mints"
 "Tonita's Station"
 "Too Happy Pay Photo"
@@ -32436,6 +32808,8 @@ blurb	prio
 "Abbey Cho's Sobby Ache[r], by [if player is male]Cobey Bash[else]Sheya Cobb[end if]"
 "Abbie's Babies[r], by Seb Iba"
 "ABC is Basic![r] by Cassi Babic"
+"Spy Beams, Pass Me By[r], by Mab Sypes"
+"Rebel-Mass Assembler[r], by [if player is male]Elmer Bass[else]Sam Belser[end if]"
 "ABCDEFGHI Chafed Big[r], by Fidge Bach"
 "Abhorrent, Earth-Born[r], by [if player is male]Robert Han[else]Berna Roth[end if]" []
 "Abide Inert, Inebriated[r], by Benita Reid" []
@@ -38230,6 +38604,8 @@ blurb
 "I, Soul-Iced, Delicious."
 "I Take Katie." []
 "I Want Tawni Twain."
+"My Maid Dim May."
+"Sin Cove Novices."
 "I'd Bare a Bride."
 "I'd Do Dido."
 "I'd Goose Doogie's Goodies."
@@ -39902,6 +40278,8 @@ blurb
 "WISDOM? NO, DOOM WINS"
 "A WTF = A FATWA"
 "YO, A SIN? I SAY NO"
+"WRITE PORN? WORN TRIPE"
+"STALE MIND, DISMANTLE ID-LAMENTS"
 "YOUR SIDE IS RUDE, YO"
 "YOUTHFUL? UH, FLY OUT"
 "YUP, I TRIM IMPURITY"
@@ -42068,6 +42446,7 @@ blurb
 "'[d-word-u]! Elf Feldman fled, man.'"
 "'A-ok, mob? KABOOM!'"
 "'Aargh! Graah! Hagar!'"
+"'A trump-up mart? Um, trap!'"
 "'Ace, hi!' 'Eh...ice! I ache!'"
 "'Ach, conk Hancock.'"
 "'Ach so! A cosh! Chaos!'"
@@ -51414,6 +51793,9 @@ table of research topics [xxp5]
 blurb
 "[if player is male]Craig Abel[else]Alica Berg[end if][']s Algebraics"
 "abstrusest substrates"
+"snoop-crimes compression" []
+"minor scopes['] compression"
+"Menelaus's un-measles"
 "Achilles helicals" []
 "Acme Bros. Macrobes"
 "Adriance canaried radiance" []
@@ -55608,239 +55990,6 @@ carry out spamobjing:
 		try asking PEO about the topic understood;
 	the rule succeeds;
 
-
-book other hinty commands - not for release
-
-chapter dbing
-
-dbing is an action applying to nothing.
-
-understand the command "db" as something new.
-
-understand "db" as dbing.
-
-carry out dbing:
-	if debug-state is false:
-		say "Debug state is on now.";
-		now debug-state is true instead;
-	else:
-		say "Debug state is off now.";
-		now debug-state is false instead;
-
-volume parser abuse and other utilities
-
-book disambiguation
-
-rule for clarifying the parser's choice when discerning: do nothing.
-
-Rule for clarifying the parser's choice of super purse: do nothing.
-
-Rule for clarifying the parser's choice of Store Z: do nothing.
-
-rule for supplying a missing second noun while unlocking:
-	now second noun is super purse.
-
-book after reading a command
-
-period-warned is a truth state that varies.
-
-ignore-transcript-nag is a truth state that varies.
-
-say-warn is a truth state that varies.
-
-scan-nag is a truth state that varies.
-
-block-north is a truth state that varies.
-
-long-sent-warn is a truth state that varies.
-
-yurt-plurtry is a truth state that varies.
-scanwith is a truth state that varies.
-
-after reading a command:
-	let XX be indexed text;
-	now block-north is false; [?! remove if fixed later. N during Z.Z.Z.Z is annoying]
-	let XX be the player's command in lower case;
-	change the text of the player's command to XX;
-	if scan-nag is false and settler is visible:
-		if the player's command includes "scanner":
-			say "(Fourth wall dumb joke: the letters settler isn't a scanner made for canners. It's for text adventurers.)";
-			now scan-nag is true;
-	if XX matches the regular expression "^(say|think|shout|speak|yell) ":
-		if say-warn is false:
-			say "If you want to say or think a magic word, you can just type it. So instead of SAY XYZZY, you can use the command XYZZY.[paragraph break]You can ASK someone ABOUT something, if you want to talk to them. So this game will snip SAY/THINK/SHOUT/SPEAK/YELL from the start of all future commands.";
-			pad-rec "saying";
-			now say-warn is true;
-			reject the player's command;
-		say "(cutting off the trailing '[word number 1 in the player's command]')[line break]";
-		let XX be the player's command;
-		replace the regular expression "^(say|think|shout|speak|yell) " in XX with "";
-		change the text of the player's command to XX;
-	if XX matches the regular expression "scan.*with" and player has settler:
-		if scanwith is false:
-			ital-say "you don't need the prepostion WITH. You can just say SCAN, as the settler is the only item that can scan.";
-			now scanwith is true;
-		pad-rec-q "long commands";
-		replace the regular expression "with.*" in XX with "";
-		change the text of the player's command to XX;
-	if the player's command matches the regular expression "^\p" or the player's command matches the regular expression "^<\*;>":
-		if hint-to-file is true:
-			append "COMMENT: [the player's command]" to the file of roilhints;
-		if currently transcripting:
-			say "Noted.";
-		otherwise:
-			if ignore-transcript-nag is false:
-				say "You've made a comment-style command, but Transcript is off. Type TRANSCRIPT to turn it on, if you wish to make notes.[paragraph break]The long version of this nag will only appear once. You may press any key to continue.";
-				wait for any key;
-				now ignore-transcript-nag is true;
-			else:
-				say "(Comment not sent to transcript.)";
-		reject the player's command;
-	if period-warned is false:
-		if the player's command matches the regular expression "\.":
-			say "Small warning--this shouldn't be a problem, but if you use periods to separate a command to do your magic, the parser will have problems. I couldn't find a way around it. Sorry. That said, normal commands will work okay.[wfak]";
-			now period-warned is true;
-	if number of words in player's command is 5 and long-sent-warn is false:
-		ital-say "you probably don't need more than four words per command. The most complex ones are PUT X ON Y or ASK X ABOUT Y, and a compound item like GIANT PIN can use GIANT or PIN. Adjectives usually aren't necessary, and GET ALL will never take anything harmful or lethal.";
-		now long-sent-warn is true;
-		pad-rec "long commands";
-	if word number 1 in player's command is "a":
-		if ask-warn is false:
-			say "Replacing 'a' with 'ask about.' Saying 'a' is not required for any puzzle.";
-			now ask-warn is true;
-		replace the regular expression "^a " in XX with "ask about";
-		change the text of the player's command to XX;
-		d "Changing text to [XX].";
-	if mrlp is routes:
-		if word number 1 in player's command is "go":
-			unless word number 2 in player's command is "to":
-				if go-warned is false:
-					ital-say "you don't need to start a command with go in Routes. One word should be fine.";
-					now go-warned is true;
-				let XX be the player's command;
-				replace the regular expression "^go " in XX with "";
-				change the text of the player's command to XX;
-	repeat with QQ running through fungible things:
-		if QQ is a the-from listed in the table of anagrams:
-			if the player's command matches right-cmd entry:
-				try fliptoing the-to entry;
-				consider the notify score changes rule;
-				[save-present-input;]
-				consider the hint flags checkoff rule;
-				consider the scam rule instead;
-	if Gunter is off-stage and peephole is unexamined:
-		if the player's command includes "Gunter":
-			say "[if peephole is unexamined]Who?[else]Gunter's outside, but to interact meaningfully, you should open the door and let him in.[end if]" instead;
-	if e-s is visible:
-		if the player's command includes "presto":
-			unless the player's command includes "test":
-				say "Presto is the word you said to reveal the, er, spot." instead;
-	if the player's command includes "tickle" and Elmo is in Basement:
-		say "Really. This is a juvenile computer game, not a juvenile toy." instead;
-	if player is in evoc-cove and the player's command includes "page":
-		let XX be the player's command;
-		replace the regular expression "page" in XX with "";
-		ital-say "you don't need to say PAGE, just give a number.";
-		change the text of the player's command to XX;
-	if the player's command includes "under":
-		if number of words in the player's command > 1:
-			if old giant is visible:
-				if rude 'n nuder is visible:
-					say "Truncating to one word.";
-					change the text of the player's command to "under";
-	if player is in collapsed and ruby is in lalaland:
-		if the player's command includes "ruby":
-			say "Don't worry about the ruby any more[if haunter is in lalaland], or the haunter[else]. It's someone else's worry. Or someTHING's[end if].";
-			reject the player's command;
-	if the player is in strip of profits:
-		repeat through table of skipcmds:
-			if word number 1 in the player's command is "[lastcmd entry]":
-				if storedest entry is visible or portdest entry is visible:
-					if storedest entry is store t:
-						say "Sorry. I can't let you do that. But if you want to go back to the Dusty Study and ROVE OVER, that will work.";
-						reject the player's command;
-					if old-rel entry > 0:
-						say "The [go-region of portdest entry] region for this final command may've changed since you last played, which is probably release [old-rel entry][if old-rel entry > 1] or earlier[end if]. Go ahead?";
-						if the player consents:
-							do nothing;
-						else:
-							say "It'll be fun. And worth it. I hope!";
-							reject the player's command;
-					say "You declare cleared [go-region of portdest entry] and watch [if portdest entry is visible][portdest entry][else][storedest entry][end if] dissolve.";
-					if storedest entry is visible:
-						reg-inc;
-					now storedest entry is in lalaland;
-					now portdest entry is in lalaland;
-					now go-region of portdest entry is shortcircuited;
-					see-about-patcher;
-					reject the player's command;
-				say "You already took care of [go-region of portdest entry].";
-				reject the player's command;
-	if the player is in uaah and digger is off-stage:
-		if the player's command includes "shovel":
-			say "Hmm. No shovel yet. Or anything like it. Maybe you'll find one, though.";
-			reject the player's command;
-	if hydra-known is true and player is in alcoves and Inclosure is unvisited:
-		if the player's command matches the regular expression "\b(hardy|hydra)\b":
-			say "You don't want to THINK about taking on the hydra by yourself. You need something much bigger.";
-			reject the player's command;
-	if pirates are not plurtry:
-		if the player's command matches the regular expression "\bpirate\b" and pirates are visible:
-			now pirates are plurtry;
-			ital-say "there are too many pirates, and they're too uniform in their uniforms, to examine just one. But you don't need to.";
-	if natives are not plurtry:
-		if the player's command matches the regular expression "\bnative\b" and natives are visible:
-			now natives are plurtry;
-			ital-say "there are too many natives to deal with one at a time.";
-	if yurt-plurtry is false:
-		if the player's command matches the regular expression "\byurt\b" and yurts are visible:
-			now yurt-plurtry is true;
-			ital-say "there are too many yurts, and they're too uniform, to examine just one. But you don't need to.";
-	if deacons are not plurtry:
-		if the player's command matches the regular expression "\bdeacon\b" and deacons are visible:
-			now deacons are plurtry;
-			ital-say "there are too many deacons, and they're too uniform, to examine just one. But you don't need to.";
-	if diners are not plurtry:
-		if the player's command matches the regular expression "\bdiner\b" and diners are visible:
-			now diners are plurtry;
-			ital-say "there are too many diners, and they're too uniform, to examine just one. But you don't need to.";
-	if ingrates are not plurtry:
-		if the player's command matches the regular expression "\bingrate\b" and ingrates are visible:
-			now ingrates are plurtry;
-			ital-say "there are too many ingrates, and they're too uniform, to examine just one. But you don't need to.";
-	if the player's command matches the regular expression "\bsmell\b" and word number 1 in the player's command is not "smell":
-		say "You can just type SMELL.";
-		reject the player's command;
-	if getall-warn is false:
-		if the player's command matches the regular expression "\ball$":
-			if the player's command matches the regular expression "^(get|take)":
-				say "Multiple item-pull!";
-				now getall-warn is true;
-
-table of skipcmds
-lastcmd	storedest	portdest	old-rel [old release is last one where this command worked]
-"through"	store u	routes-x	0
-"between"	store u	routes-x	0
-"bus"	store p	e-s	0
-"sub"	store p	e-s	0
-"debug"	store p	e-s	1
-"redial"	store y	oyster-x	0
-"destroy"	store y	oyster-x	1
-"spectacular"	store w	towers-x	0
-"decide"	store v	troves-x	0
-"resign"	store v	troves-x	0
-"quickly"	store t	otters-x	-1
-
-ask-warn is a truth state that varies.
-
-go-warned is a truth state that varies.
-
-definition: a thing (called xx) is fungible:
-	if xx is held, yes;
-	if xx is palm and xx is in dusty study, yes;
-	if xx is visible, yes;
-	no.
-
 volume end of story
 
 book listlisting
@@ -56545,45 +56694,9 @@ rule for showing what the player missed: [there may be a way to do things withou
 	if anything-missed is false:
 		say "CONGRATULATIONS, YOU FOUND EVERYTHING is written on it, with confetti drawn all around, too[one of][or]. It just doesn't get old, looking at it. Hey, you deserve to feel good[stopping].";
 
-chapter troves
+book epilogue transition
 
-understand "alts" as a mistake ("There are no alts. You must become worth your salt.") when salt is visible
-
-understand "slat" as a mistake ("You're not in the window making business.") when salt is visible
-
-understand "lsat" as a mistake ("Oh dear. Is a standardized lawyers['] aptitude test really less tedious than this? Well, I guess both have a lot of logic chopping. Ouch.") when salt is visible
-
-understand "alger" as a mistake ("What would an Alger hero DO to such foul spirits as the lager, though?") when lager is visible
-
-chapter otters
-
-understand "penis" as a mistake ("[one of]Huh huh huh, Beavis. That was cool[or]Dammit, Beavis. You like have a game to solve[stopping].") when pines are visible or snipe is visible
-
-understand "spine" as a mistake ("You don't need to grow a spine. You've gotten this far.") when pines are visible or snipe is visible
-
-chapter oyster
-
-understand "odor" as a mistake ("The door kind of stinks as a semi-living entity, and anyway, the reverse of this puzzle happened last game.") when rude door is visible.
-
-understand "rood" as a mistake ("The door's already rood. I mean rude. Try seeing what's around it, instead.") when rude door is visible.
-
-understand "rued" as a mistake ("You can't have rued the door until you've got beyond it. Try seeing what's around it, instead.") when rude door is visible.
-
-understand "bury [text]" as a mistake ("Nothing worth burying.") when player has digger and ruby is off-stage.
-
-chapter presto
-
-understand "asswhup" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And violence isn't how to get rid of them.[else if Leo is washed up or Rand is washed up]You don't exactly have a physical advantage here.[otherwise]No chance.[end if]") when Leo is visible
-
-understand "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And violence isn't how to get rid of them.[else if Leo is washed up or Rand is washed up]It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the dumpster.[otherwise]Leo and Rand won't give you the time to look in the dumpster for a spare can to put it in.[end if]") when Leo is visible
-
-understand "pop" as a mistake ("It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.") when dirty looking cola is visible.
-
-understand "soda" as a mistake ("Don't be a sod. It's cola. It has to be.") when dirty looking cola is visible.
-
-[placed above the not-for-release since I want this visible]
-
-volume epilogue jazz
+book epilogue bugfixes to i6
 
 Include (-
 
@@ -56617,120 +56730,6 @@ This is the epilogue rule:
 	fully resume the story;
 	say "You decide, why not ROVE OVER?";
 	clean-for-roving;
-
-volume stubs
-
-chapter cting
-
-[* c=t=cheat=teach=push tcb/cheat button]
-
-cting is an action applying to nothing.
-
-understand the command "c/t/cheat/teach" as something new.
-
-understand "c" and "t" and "cheat" and "teach" as cting.
-
-understand "cheat on/off" and "teach on/off" as a mistake ("Just type c/t or cheat/teach to toggle. Note: settler is currently in [unless cheat-on is true]non-[end if]cheat mode.") when player has settler.
-
-carry out cting:
-	if settler is not visible:
-		say "[reject]" instead;
-	try pushing tcb instead;
-
-chapter ssing
-
-[* SS scans an object forcing no-cheat mode]
-
-ssing is an action applying to nothing.
-
-understand the command "ss" as something new.
-
-understand "ss" as ssing.
-
-understand the command "shake" as something new.
-
-understand "shake [thing]" as ss0ing.
-
-ss0ing is an action applying to one thing.
-
-carry out ss0ing:
-	if noun is not settler:
-		say "That doesn't really work." instead;
-	try ssing instead;
-
-carry out ssing:
-	if settler is not visible:
-		say "[reject]" instead;
-	try switching on the settler instead;
-
-chapter sying
-
-[* SY scans an object forcing no-cheat mode]
-
-sying is an action applying to one thing.
-
-understand the command "sy [something]" as something new.
-
-understand "sy [something]" as sying.
-
-carry out sying:
-	if player does not have settler and settler is visible:
-		try taking settler;
-	if player does not have settler:
-		say "You need the settler for this shortcut." instead;
-	now cheat-on is false;
-	now squee is false;
-	try scaning noun;
-	if squee was true:
-		say "You reset the equals sign.";
-		now squee is true;
-	if cheat-on was true:
-		say "You reset the cheat/teach button.";
-		now cheat-on is true;
-	the rule succeeds.
-
-chapter sning
-
-[* SN scans an object forcing no-cheat mode]
-
-sning is an action applying to one thing.
-
-understand the command "sn [something]" as something new.
-
-understand "sn [something]" as sning.
-
-carry out sning:
-	if player does not have settler and settler is visible:
-		try taking settler;
-	if player does not have settler:
-		say "You need the settler for this shortcut." instead;
-	now cheat-on is false;
-	now squee is false;
-	try scaning noun;
-	if squee was true:
-		say "You reset the equals sign.";
-		now squee is true;
-	if cheat-on was false:
-		say "You re-unset the cheat/teach button.";
-		now cheat-on is true;
-	the rule succeeds;
-
-chapter laing
-
-[* LA looks at the last thing scanned. It should not be relevant unless you are vision impaired. ]
-
-last-scanned-thing is a thing that varies.
-
-scanlasting is an action out of world.
-
-understand the command "la" as something new.
-
-understand "la" as scanlasting.
-
-carry out scanlasting:
-	if last-scanned-thing is yourself or last-scanned-thing is nothing:
-		say "You haven't successfully scanned anything yet." instead;
-	say "The [last-scanned-thing][if last-scanned-thing is in lalaland], which are now out of play,[end if] scanned [full-monty of last-scanned-thing]." instead;
 
 volume beta testing - not for release
 
@@ -56996,6 +56995,24 @@ carry out egalling:
 	the rule succeeds;
 
 volume testing - not for release
+
+book dbing
+
+[debug tracking, turning on and off. Useful to me but not others]
+
+dbing is an action applying to nothing.
+
+understand the command "db" as something new.
+
+understand "db" as dbing.
+
+carry out dbing:
+	if debug-state is false:
+		say "Debug state is on now.";
+		now debug-state is true instead;
+	else:
+		say "Debug state is off now.";
+		now debug-state is false instead;
 
 book basic tests
 
@@ -57700,7 +57717,7 @@ chapter tuting
 
 [* TUT allows you to see Elmo and alter the scannedness of everything. 1 = no more scans and 2 = all scans. Should change to 0 for no scans, 1=ncscan, 2=cscan, 3=allscan]
 
-understand "tut" as a mistake ("tut 1 = tutorial with nonthing scanned, tut 2 = with all scanned.")
+understand "tut" as a mistake ("tut 1 = tutorial with nothing scanned, tut 2 = with all scanned.")
 
 tuting is an action applying to one number.
 

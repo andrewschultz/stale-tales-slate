@@ -14680,6 +14680,8 @@ blurb
 "Zorilda Lizardo"
 "Zorrie Rozier"
 "Zuri Ruiz"
+"Lancelot Contella"
+"Glyn Lyng"
 
 book forest
 
@@ -14687,7 +14689,9 @@ table of evil locations [xxf]
 blurb
 "Absorbing-Brains Bog"
 "the AH! Heath"
+"Mothball Tomb-Hall"
 "All-Down Lowland"
+"Demon Pit Piedmont"
 "the all-grey gallery"
 "Any-Con Canyon"
 "the asp spa"
@@ -14819,6 +14823,7 @@ table of poem codas [xxi]
 blurb
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
+"Gnomic tiles. Gimlet icons. Closing time."
 "Act four: fur coat. Our fact."
 "Act so! O, CAST!"
 "Acted immoral? Melodramatic? Calm mediator!"
@@ -16279,6 +16284,7 @@ blurb
 table of nerd natter [xxm3]
 blurb
 "'Aliterate tail eater!' / 'Retaliate!'"
+"'A math trick? Karmic, that!'"
 "'Any D&D? Dandy?' The nerds laugh."
 "'The APIs ape this!' / 'Ha, spite!'"
 "'App? Pap!'"
