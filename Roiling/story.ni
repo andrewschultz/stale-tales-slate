@@ -38133,6 +38133,7 @@ blurb
 "admits [i]Wendie's Sin Weed Dies New[r] is weak, but it's not WRONG."
 "agrees [i]Fop, Indeed? Dope Fiend[r] is funny, well, TIL IT ISN'T."
 "almost weeps at the simple truth of [i]Ah, Vilest, the Vials[r]."
+"recounts the trauma and relief of the protagonist of [i]Other Kids Risked, Tho['][r]."
 "analyzes the dystopian backdrop of [i]Czar-Urged Drug Craze[r]."
 "analyzes the mix of social and hard sciences in [i]The New Drug, Hunted, Grew[r]."
 "applauds the cautious optimism of [i]Rehab is Bearish[r]."

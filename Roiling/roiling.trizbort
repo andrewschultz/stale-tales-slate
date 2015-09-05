@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<trizbort version="1.5.9.1">
+<trizbort version="1.5.9.2">
 	<info>
 		<title>A Roiling Original</title>
 		<author>Andrew Schultz</author>
@@ -51,40 +51,40 @@ version 3 March 2015</history>
 		<room id="17" name="(Uh, at) a Hut" subtitle="" x="224" y="-320" w="96" h="64" region="Oyster" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw">           Tubs</objects>
 		</room>
-		<line id="18" color="#0000FF" style="dashed">
+		<line id="18" color="#000000" style="dashed">
 			<dock index="0" id="8" port="w" />
 			<dock index="1" id="11" port="e" />
 		</line>
-		<line id="19" color="#0000FF" style="dashed">
+		<line id="19" color="#000000" style="dashed">
 			<dock index="0" id="12" port="s" />
 			<dock index="1" id="11" port="n" />
 		</line>
-		<line id="20" color="#0000FF" style="dashed" startText="in" endText="out">
+		<line id="20" color="#000000" style="dashed" startText="in" endText="out">
 			<dock index="0" id="12" port="n" />
 			<dock index="1" id="15" port="s" />
 		</line>
-		<line id="21" color="#0000FF" style="dashed" flow="oneWay" startText="in" endText="out">
+		<line id="21" color="#000000" style="dashed" flow="oneWay" startText="in" endText="out">
 			<dock index="0" id="12" port="nw" />
 			<dock index="1" id="14" port="se" />
 		</line>
-		<line id="22" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="22" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="14" port="e" />
 			<dock index="1" id="15" port="w" />
 		</line>
 		<room id="23" name="Collapsed Old Places" subtitle="" x="-160" y="-224" w="96" h="64" region="Oyster" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="24" color="#0000FF">
+		<line id="24" color="#000000">
 			<dock index="0" id="12" port="w" />
 			<dock index="1" id="23" port="e" />
 		</line>
-		<line id="26" color="#0000FF" style="dashed">
+		<line id="26" color="#000000" style="dashed">
 			<dock index="0" id="16" port="s" />
 			<dock index="1" id="8" port="n" />
 		</line>
-		<line id="28" color="#0000FF" style="dashed" startText="in" endText="out">
+		<line id="28" color="#000000" style="dashed" startText="in" endText="out">
 			<dock index="0" id="16" port="ne" />
 			<dock index="1" id="17" port="sw" />
 		</line>
-		<line id="27" color="#0000FF" style="dashed" startText="in" endText="out">
+		<line id="27" color="#000000" style="dashed" startText="in" endText="out">
 			<dock index="0" id="12" port="ne" />
 			<dock index="1" id="13" port="sw" />
 		</line>
@@ -112,27 +112,27 @@ version 3 March 2015</history>
 		<room id="36" name="Hacks' Shack" subtitle="End Presto" x="-416" y="256" w="96" h="64" region="Presto" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Labs Slab</objects>
 		</room>
-		<line id="37" color="#0000FF" style="dashed">
+		<line id="37" color="#000000" style="dashed">
 			<dock index="0" id="33" port="s" />
 			<dock index="1" id="32" port="n" />
 		</line>
-		<line id="38" color="#0000FF" style="dashed">
+		<line id="38" color="#000000" style="dashed">
 			<dock index="0" id="32" port="e" />
 			<dock index="1" id="31" port="w" />
 		</line>
-		<line id="39" color="#0000FF" style="dashed">
+		<line id="39" color="#000000" style="dashed">
 			<dock index="0" id="32" port="w" />
 			<dock index="1" id="30" port="e" />
 		</line>
-		<line id="40" color="#0000FF">
+		<line id="40" color="#000000">
 			<dock index="0" id="32" port="s" />
 			<dock index="1" id="34" port="n" />
 		</line>
-		<line id="41" color="#0000FF" style="dashed">
+		<line id="41" color="#000000" style="dashed">
 			<dock index="0" id="33" port="n" />
 			<dock index="1" id="36" port="s" />
 		</line>
-		<line id="42" color="#0000FF">
+		<line id="42" color="#000000">
 			<dock index="0" id="34" port="s" />
 			<dock index="1" id="35" port="n" />
 		</line>
@@ -144,13 +144,13 @@ version 3 March 2015</history>
 		<room id="46" name="Savager Ravages" subtitle="" x="352" y="448" w="96" h="64" region="Towers" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Weeds/Denim</objects>
 		</room>
-		<room id="47" name="Topside Deposit" subtitle="" x="224" y="640" w="96" h="64" region="Towers" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="47" name="Topside Deposit" subtitle="" x="224" y="640" w="96" h="64" region="Towers" handDrawn="no" ellipse="no" roundedCorners="yes" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Yacker Ray Eck</objects>
 		</room>
 		<room id="48" name="Unblest Sunbelt" subtitle="" x="352" y="544" w="96" h="64" region="Towers" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="49" name="Salted Deltas" subtitle="" x="352" y="352" w="96" h="64" region="Towers" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="50" name="Actionless Coastline" subtitle="" x="480" y="352" w="96" h="64" region="Towers" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Smart Kid</objects>
+		<room id="50" name="Actionless Coastline" subtitle="" x="480" y="352" w="96" h="64" region="Towers" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects>Smart Kid (Dirk Stam/Kim Darst)</objects>
 		</room>
 		<room id="51" name="Ole Shrine Shoreline" subtitle="" x="480" y="448" w="96" h="64" region="Towers" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="52" name="Danger/Gander Garden" subtitle="" x="480" y="544" w="96" h="64" region="Towers" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
@@ -169,29 +169,29 @@ version 3 March 2015</history>
 		<room id="57" name="Cleric Circle" subtitle="" x="-416" y="-32" w="96" h="64" region="Routes" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n">Brother Horbert</objects>
 		</room>
-		<line id="58" color="#0000FF" style="dashed" startText="in(*)" endText="out">
+		<line id="58" color="#000000" style="dashed" startText="in(*)" endText="out">
 			<dock index="0" id="54" port="nw" />
 			<dock index="1" id="57" port="se" />
 		</line>
-		<line id="59" color="#0000FF" style="dashed" startText="in(*)" endText="out">
+		<line id="59" color="#000000" style="dashed" startText="in(*)" endText="out">
 			<dock index="0" id="54" port="n" />
 			<dock index="1" id="55" port="s" />
 		</line>
 		<room id="61" name="Sun-Spared Underpass" subtitle="" x="-416" y="160" w="96" h="64" region="Routes" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="62" name="Ripe Pier" subtitle="" x="-288" y="160" w="96" h="64" region="Routes" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="63" name="Cripple Clipper" subtitle="End Routes" x="-160" y="160" w="96" h="64" region="Routes" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="64" color="#0000FF" style="dashed">
+		<line id="64" color="#000000" style="dashed">
 			<dock index="0" id="47" port="n" />
 			<dock index="1" id="45" port="s" />
 		</line>
-		<line id="65" color="#0000FF" style="dashed">
+		<line id="65" color="#000000" style="dashed">
 			<dock index="0" id="66" port="e" />
 			<dock index="1" id="45" port="w" />
 		</line>
 		<room id="66" name="Campiest Campsite" subtitle="" x="96" y="544" w="96" h="64" region="Towers" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Rapier Repair</objects>
 		</room>
-		<line id="67" color="#0000FF" style="dashed">
+		<line id="67" color="#000000" style="dashed">
 			<dock index="0" id="48" port="w" />
 			<dock index="1" id="45" port="e" />
 		</line>
@@ -222,47 +222,47 @@ version 3 March 2015</history>
 		<room id="76" name="Perverse Preserve" subtitle="" x="608" y="64" w="96" h="64" region="Otters" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Raptor</objects>
 		</room>
-		<line id="78" color="#0000FF" style="dashed">
+		<line id="78" color="#000000" style="dashed">
 			<dock index="0" id="69" port="e" />
 			<dock index="1" id="72" port="w" />
 		</line>
-		<line id="79" color="#0000FF" style="dashed">
+		<line id="79" color="#000000" style="dashed">
 			<dock index="0" id="74" port="s" />
 			<dock index="1" id="72" port="n" />
 		</line>
-		<line id="80" color="#0000FF" style="dashed">
+		<line id="80" color="#000000" style="dashed">
 			<dock index="0" id="72" port="s" />
 			<dock index="1" id="73" port="n" />
 		</line>
-		<line id="81" color="#0000FF" style="dashed">
+		<line id="81" color="#000000" style="dashed">
 			<dock index="0" id="73" port="s" />
 			<dock index="1" id="76" port="n" />
 		</line>
-		<line id="82" color="#0000FF" style="dashed">
+		<line id="82" color="#000000" style="dashed">
 			<dock index="0" id="75" port="s" />
 			<dock index="1" id="74" port="n" />
 		</line>
-		<line id="83" color="#0000FF">
+		<line id="83" color="#000000">
 			<dock index="0" id="71" port="s" />
 			<dock index="1" id="69" port="n" />
 		</line>
-		<line id="84" color="#0000FF">
+		<line id="84" color="#000000">
 			<dock index="0" id="69" port="s" />
 			<dock index="1" id="70" port="n" />
 		</line>
-		<line id="85" color="#0000FF" style="dashed" flow="oneWay" startText="P" endText="P">
+		<line id="85" color="#000000" style="dashed" flow="oneWay" startText="P" endText="P">
 			<dock index="0" id="1" port="sw" />
 			<dock index="1" id="32" port="ne" />
 		</line>
-		<line id="86" color="#0000FF" style="dashed" flow="oneWay" startText="U" endText="U">
+		<line id="86" color="#000000" style="dashed" flow="oneWay" startText="U" endText="U">
 			<dock index="0" id="1" port="w" />
 			<dock index="1" id="54" port="e" />
 		</line>
-		<line id="87" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="87" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="54" port="sw" />
 			<dock index="1" id="61" port="ne" />
 		</line>
-		<line id="88" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="88" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="61" port="e" />
 			<dock index="1" id="62" port="w" />
 		</line>
@@ -285,137 +285,137 @@ version 3 March 2015</history>
 		<room id="99" name="Rustic Citrus" subtitle="Start Others" x="-32" y="352" w="96" h="64" region="Others" handDrawn="no" ellipse="no" roundedCorners="yes" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="97" name="Scape Space" subtitle="" x="96" y="160" w="96" h="64" region="Others" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Red Rat Art Erd</objects>
+		<room id="97" name="Scape Space" subtitle="" x="96" y="160" w="96" h="64" region="Others" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects>Red Rat Art Erd/|Dr. Tera Darter</objects>
 		</room>
-		<line id="100" color="#0000FF" style="dashed">
+		<line id="100" color="#000000" style="dashed">
 			<dock index="0" id="99" port="n" />
 			<dock index="1" id="98" port="s" />
 		</line>
-		<line id="101" color="#0000FF" style="dashed">
+		<line id="101" color="#000000" style="dashed">
 			<dock index="0" id="90" port="s" />
 			<dock index="1" id="43" port="n" />
 		</line>
-		<line id="102" color="#0000FF" style="dashed">
+		<line id="102" color="#000000" style="dashed">
 			<dock index="0" id="43" port="s" />
 			<dock index="1" id="44" port="n" />
 		</line>
-		<line id="103" color="#0000FF" style="dashed">
+		<line id="103" color="#000000" style="dashed">
 			<dock index="0" id="43" port="e" />
 			<dock index="1" id="49" port="w" />
 		</line>
-		<line id="104" color="#0000FF" style="dashed">
+		<line id="104" color="#000000" style="dashed">
 			<dock index="0" id="49" port="e" />
 			<dock index="1" id="50" port="w" />
 		</line>
-		<line id="105" color="#0000FF" style="dashed">
+		<line id="105" color="#000000" style="dashed">
 			<dock index="0" id="50" port="s" />
 			<dock index="1" id="51" port="n" />
 		</line>
-		<line id="106" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="106" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="50" port="e" />
 			<dock index="1" id="91" port="w" />
 		</line>
-		<line id="107" color="#0000FF" style="dashed">
+		<line id="107" color="#000000" style="dashed">
 			<dock index="0" id="52" port="e" />
 			<dock index="1" id="53" port="w" />
 		</line>
-		<line id="108" color="#0000FF" style="dashed">
+		<line id="108" color="#000000" style="dashed">
 			<dock index="0" id="52" port="w" />
 			<dock index="1" id="48" port="e" />
 		</line>
-		<line id="109" color="#0000FF" style="dashed">
+		<line id="109" color="#000000" style="dashed">
 			<dock index="0" id="51" port="s" />
 			<dock index="1" id="52" port="n" />
 		</line>
-		<line id="110" color="#0000FF" style="dashed">
+		<line id="110" color="#000000" style="dashed">
 			<dock index="0" id="46" port="s" />
 			<dock index="1" id="48" port="n" />
 		</line>
-		<line id="111" color="#0000FF" style="dashed">
+		<line id="111" color="#000000" style="dashed">
 			<dock index="0" id="46" port="e" />
 			<dock index="1" id="51" port="w" />
 		</line>
-		<line id="112" color="#0000FF" style="dashed">
+		<line id="112" color="#000000" style="dashed">
 			<dock index="0" id="49" port="s" />
 			<dock index="1" id="46" port="n" />
 		</line>
-		<line id="113" color="#0000FF" style="dashed">
+		<line id="113" color="#000000" style="dashed">
 			<dock index="0" id="46" port="w" />
 			<dock index="1" id="44" port="e" />
 		</line>
-		<line id="114" color="#0000FF" style="dashed">
+		<line id="114" color="#000000" style="dashed">
 			<dock index="0" id="44" port="s" />
 			<dock index="1" id="45" port="n" />
 		</line>
 		<room id="115" name="Mislit Limits" subtitle="End Towers" x="608" y="256" w="96" h="64" region="Towers" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dash" description="(end TOWERS)" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n">Curst Palace|present serpent|Succor Crocus</objects>
 		</room>
-		<line id="118" color="#0000FF">
+		<line id="118" color="#000000">
 			<dock index="0" id="98" port="w" />
 			<dock index="1" id="94" port="e" />
 		</line>
-		<line id="119" color="#0000FF">
+		<line id="119" color="#000000">
 			<dock index="0" id="98" port="n" />
 			<dock index="1" id="95" port="s" />
 		</line>
-		<line id="120" color="#0000FF">
+		<line id="120" color="#000000">
 			<dock index="0" id="96" port="w" />
 			<dock index="1" id="98" port="e" />
 		</line>
 		<room id="121" name="Admit-Us Stadium" subtitle="End Others" x="96" y="64" w="96" h="64" region="Others" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dot" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<line id="122" color="#0000FF" style="dashed" flow="oneWay">
+		<line id="122" color="#000000" style="dashed" flow="oneWay">
 			<dock index="0" id="95" port="n" />
 			<dock index="1" id="121" port="s" />
 		</line>
-		<line id="123" color="#0000FF" startText="down" endText="up">
+		<line id="123" color="#000000" startText="down" endText="up">
 			<dock index="0" id="98" port="ne" />
 			<dock index="1" id="97" port="sw" />
 		</line>
-		<line id="127" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="127" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="29" port="nnw" />
 			<dock index="1" id="8" port="ssw" />
 		</line>
-		<line id="128" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="128" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="2" port="w" />
 			<dock index="1" id="3" port="e" />
 		</line>
-		<line id="129" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="129" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="3" port="n" />
 			<dock index="1" id="4" port="s" />
 		</line>
-		<line id="130" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="130" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="4" port="n" />
 			<dock index="1" id="5" port="s" />
 		</line>
-		<line id="131" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="131" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="5" port="se" />
 			<dock index="1" id="6" port="nw" />
 		</line>
-		<line id="133" color="#0000FF" style="dashed" flow="oneWay" startText="H" endText="H">
+		<line id="133" color="#000000" style="dashed" flow="oneWay" startText="H" endText="H">
 			<dock index="0" id="1" port="se" />
 			<dock index="1" id="99" port="nw" />
 		</line>
-		<line id="126" color="#0000FF" style="dashed" flow="oneWay" startText="Y" endText="Y">
+		<line id="126" color="#000000" style="dashed" flow="oneWay" startText="Y" endText="Y">
 			<dock index="0" id="1" port="ne" />
 			<dock index="1" id="9" port="sw" />
 		</line>
-		<line id="135" color="#0000FF" style="dashed" flow="oneWay" startText="W" endText="W">
+		<line id="135" color="#000000" style="dashed" flow="oneWay" startText="W" endText="W">
 			<dock index="0" id="1" port="ese" />
 			<dock index="1" id="47" port="nw" />
 		</line>
-		<line id="136" color="#0000FF" style="dashed" flow="oneWay" startText="T" endText="T">
+		<line id="136" color="#000000" style="dashed" flow="oneWay" startText="T" endText="T">
 			<dock index="0" id="1" port="e" />
 			<dock index="1" id="72" port="sw" />
 		</line>
-		<line id="137" color="#0000FF" style="dashed" flow="oneWay" startText="V" endText="V">
+		<line id="137" color="#000000" style="dashed" flow="oneWay" startText="V" endText="V">
 			<dock index="0" id="1" port="nw" />
 			<dock index="1" id="2" port="se" />
 		</line>
 		<room id="138" name="Outer Route" subtitle="" x="96" y="352" w="96" h="64" region="Towers" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="139" color="#0000FF" style="dashed">
+		<line id="139" color="#000000" style="dashed">
 			<dock index="0" id="43" port="w" />
 			<dock index="1" id="138" port="e" />
 		</line>
@@ -432,47 +432,47 @@ version 3 March 2015</history>
 		<room id="144" name="Carven Cavern" subtitle="End Manor" x="-32" y="448" w="96" h="64" region="Manor" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>plaster/plates</objects>
 		</room>
-		<line id="145" color="#0000FF" style="dashed" startText="in" endText="out">
+		<line id="145" color="#000000" style="dashed" startText="in" endText="out">
 			<dock index="0" id="140" port="w" />
 			<dock index="1" id="141" port="e" />
 		</line>
-		<line id="146" color="#0000FF" style="dashed" startText="in" endText="out">
+		<line id="146" color="#000000" style="dashed" startText="in" endText="out">
 			<dock index="0" id="140" port="n" />
 			<dock index="1" id="143" port="s" />
 		</line>
-		<line id="147" color="#0000FF" style="dashed" startText="in" endText="out">
+		<line id="147" color="#000000" style="dashed" startText="in" endText="out">
 			<dock index="0" id="140" port="e" />
 			<dock index="1" id="142" port="w" />
 		</line>
-		<line id="148" color="#0000FF" style="dashed" flow="oneWay" startText="in">
+		<line id="148" color="#000000" style="dashed" flow="oneWay" startText="in">
 			<dock index="0" id="143" port="n" />
 			<dock index="1" id="144" port="s" />
 		</line>
-		<line id="149" color="#0000FF" style="dashed" flow="oneWay" startText="in">
+		<line id="149" color="#000000" style="dashed" flow="oneWay" startText="in">
 			<dock index="0" id="144" port="nw" />
 			<dock index="1" id="1" port="s" />
 		</line>
 		<room id="150" name="E-Z Ol' Av (TM) Volt Maze" subtitle="" x="-288" y="352" w="96" h="64" region="Presto" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="151" color="#0000FF" startText="in" endText="out">
+		<line id="151" color="#000000" startText="in" endText="out">
 			<dock index="0" id="32" port="n" />
 			<dock index="1" id="150" port="s" />
 		</line>
 		<room id="152" name="Cruelest Lectures" subtitle="" x="-160" y="-32" w="96" h="64" region="Stores" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw">   Ian, Max P Lee</objects>
 		</room>
-		<line id="153" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="153" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="152" port="s" />
 			<dock index="1" id="1" port="n" />
 		</line>
-		<line id="154" color="#0000FF" style="dashed" flow="oneWay" startText="in">
+		<line id="154" color="#000000" style="dashed" flow="oneWay" startText="in">
 			<dock index="0" id="1" port="nnw" />
 			<dock index="1" id="152" port="ssw" />
 		</line>
-		<line id="155" color="#0000FF" style="dashed" startText="down" endText="up">
+		<line id="155" color="#000000" style="dashed" startText="down" endText="up">
 			<dock index="0" id="141" port="ne" />
 			<dock index="1" id="143" port="sw" />
 		</line>
-		<line id="156" color="#0000FF" style="dashed" startText="down" endText="up">
+		<line id="156" color="#000000" style="dashed" startText="down" endText="up">
 			<dock index="0" id="142" port="nw" />
 			<dock index="1" id="143" port="se" />
 		</line>
@@ -481,117 +481,117 @@ version 3 March 2015</history>
 		</room>
 		<room id="158" name="Ned's Dens" subtitle="" x="224" y="160" w="96" h="64" region="Demo Dome" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="159" name="Hows-Show" subtitle="" x="352" y="64" w="96" h="64" region="Demo Dome" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="160" color="#0000FF">
+		<line id="160" color="#000000">
 			<dock index="0" id="157" port="n" />
 			<dock index="1" id="159" port="s" />
 		</line>
-		<line id="161" color="#0000FF">
+		<line id="161" color="#000000">
 			<dock index="0" id="157" port="w" />
 			<dock index="1" id="158" port="e" />
 		</line>
 		<room id="162" name="Intel Inlet" subtitle="" x="480" y="64" w="96" h="64" region="Demo Dome" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="163" name="Evoc-Cove" subtitle="" x="480" y="160" w="96" h="64" region="Demo Dome" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="164" color="#0000FF">
+		<line id="164" color="#000000">
 			<dock index="0" id="157" port="e" />
 			<dock index="1" id="163" port="w" />
 		</line>
-		<line id="165" color="#0000FF" startText="in" endText="out">
+		<line id="165" color="#000000" startText="in" endText="out">
 			<dock index="0" id="157" port="ne" />
 			<dock index="1" id="162" port="sw" />
 		</line>
 		<room id="166" name="Lost Lots" subtitle="" x="480" y="640" w="96" h="64" region="Towers" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="167" color="#0000FF" style="dashed">
+		<line id="167" color="#000000" style="dashed">
 			<dock index="0" id="166" port="n" />
 			<dock index="1" id="52" port="s" />
 		</line>
-		<line id="168" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="168" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="63" port="nnw" />
 			<dock index="1" id="1" port="ssw" />
 		</line>
-		<line id="132" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="132" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="6" port="se" />
 			<dock index="1" id="7" port="nw" />
 		</line>
-		<line id="169" color="#0000FF" style="dashed" flow="oneWay" startText="End">
+		<line id="169" color="#000000" style="dashed" flow="oneWay" startText="End">
 			<dock index="0" id="7" port="sse" />
 			<dock index="1" id="1" port="nne" />
 		</line>
-		<line id="170" color="#0000FF" style="dashed" flow="oneWay" startText="End">
+		<line id="170" color="#000000" style="dashed" flow="oneWay" startText="End">
 			<dock index="0" id="15" port="sw" />
 			<dock index="1" id="1" port="ene" />
 		</line>
 		<room id="134" name="Olde Lode" subtitle="" x="96" y="-32" w="96" h="64" region="Oyster" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw">     Clam, Urn</objects>
 		</room>
-		<line id="171" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="171" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="9" port="e" />
 			<dock index="1" id="134" port="w" />
 		</line>
-		<line id="172" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="172" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="134" port="e" />
 			<dock index="1" id="29" port="w" />
 		</line>
-		<line id="116" color="#0000FF" style="dashed" flow="oneWay" startText="out" endText="in">
+		<line id="116" color="#000000" style="dashed" flow="oneWay" startText="out" endText="in">
 			<dock index="0" id="92" port="w" />
 			<dock index="1" id="47" port="e" />
 		</line>
-		<line id="117" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="117" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="50" port="ne" />
 			<dock index="1" id="115" port="sw" />
 		</line>
-		<line id="125" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="125" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="91" port="n" />
 			<dock index="1" id="115" port="s" />
 		</line>
 		<room id="173" name="Handsome Sand Home" subtitle="" x="224" y="-224" w="96" h="64" region="Oyster" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw">      Aunt Tuna</objects>
 		</room>
-		<line id="174" color="#0000FF" style="dashed">
+		<line id="174" color="#000000" style="dashed">
 			<dock index="0" id="173" port="wsw" />
 			<dock index="1" id="8" port="ene" />
 		</line>
-		<line id="60" color="#0000FF" style="dashed" startText="in(*)" endText="out">
+		<line id="60" color="#000000" style="dashed" startText="in(*)" endText="out">
 			<dock index="0" id="54" port="w" />
 			<dock index="1" id="56" port="e" />
 		</line>
-		<line id="124" color="#0000FF" style="dashed">
+		<line id="124" color="#000000" style="dashed">
 			<dock index="0" id="115" port="w" />
 			<dock index="1" id="93" port="e" />
 		</line>
 		<room id="176" name="Fighter Freight" subtitle="" x="352" y="-32" w="96" h="64" region="Oyster" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw">   Scary Crays</objects>
 		</room>
-		<line id="177" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="177" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="29" port="e" />
 			<dock index="1" id="176" port="w" />
 		</line>
-		<line id="178" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="178" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="176" port="wnw" />
 			<dock index="1" id="8" port="ese" />
 		</line>
 		<room id="179" name="Lean Lane" subtitle="" x="352" y="-224" w="96" h="64" region="Oyster" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw">      Cans, Eeks</objects>
 		</room>
-		<line id="10" color="#0000FF" style="dashed" flow="oneWay" midText="To">
+		<line id="10" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="179" port="w" />
 			<dock index="1" id="173" port="e" />
 		</line>
-		<line id="25" color="#0000FF" style="dashed">
+		<line id="25" color="#000000" style="dashed">
 			<dock index="0" id="8" port="e" />
 			<dock index="1" id="179" port="wsw" />
 		</line>
 		<room id="77" name="Coevals' Alcoves" subtitle="" x="352" y="-128" w="96" h="64" region="Otters" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>    Elmer/Merle</objects>
 		</room>
-		<line id="175" color="#0000FF" style="dashed">
+		<line id="175" color="#000000" style="dashed">
 			<dock index="0" id="68" port="e" />
 			<dock index="1" id="77" port="w" />
 		</line>
-		<line id="180" color="#0000FF" style="dashed">
+		<line id="180" color="#000000" style="dashed">
 			<dock index="0" id="77" port="e" />
 			<dock index="1" id="69" port="w" />
 		</line>
-		<line id="89" color="#0000FF" style="dashed" flow="oneWay" startText="End">
+		<line id="89" color="#000000" style="dashed" flow="oneWay" startText="End">
 			<dock index="0" id="62" port="se" />
 			<dock index="1" id="63" port="s" />
 		</line>
@@ -600,13 +600,13 @@ version 3 March 2015</history>
 		<colors>
 			<canvas>White</canvas>
 			<fill>White</fill>
-			<border>MidnightBlue</border>
-			<line>MidnightBlue</line>
+			<border>Black</border>
+			<line>Black</line>
 			<selectedLine>SteelBlue</selectedLine>
 			<hoverLine>DarkOrange</hoverLine>
-			<largeText>MidnightBlue</largeText>
-			<smallText>MidnightBlue</smallText>
-			<lineText>MidnightBlue</lineText>
+			<largeText>Black</largeText>
+			<smallText>Black</smallText>
+			<lineText>Black</lineText>
 			<grid>#F5F5F5</grid>
 		</colors>
 		<regions>
@@ -618,7 +618,7 @@ version 3 March 2015</history>
 			<Oyster Name="Oyster" TextColor="White">#0080FF</Oyster>
 			<Presto Name="Presto" TextColor="Black">Red</Presto>
 			<Routes Name="Routes" TextColor="Black">#FF8000</Routes>
-			<Stores Name="Stores" TextColor="MidnightBlue">#707070</Stores>
+			<Stores Name="Stores" TextColor="Black">#707070</Stores>
 			<Towers Name="Towers" TextColor="White">#804000</Towers>
 			<Troves Name="Troves" TextColor="Black">Yellow</Troves>
 		</regions>
@@ -644,6 +644,7 @@ version 3 March 2015</history>
 			<objectListOffset>4</objectListOffset>
 			<connectionStalkLength>8</connectionStalkLength>
 			<preferredDistanceBetweenRooms>32</preferredDistanceBetweenRooms>
+			<defaultRoomName />
 		</rooms>
 		<ui>
 			<handleSize>12</handleSize>
