@@ -25747,6 +25747,7 @@ blurb
 "Go share rages, oh!"
 "Goin['] red? Ignored!"
 "Gosh! Into hootings?"
+"Groan is Soaring!"
 "Grow nervy? Very wrong!"
 "A grumble? Lame grub."
 "Hi, curse? Uh, cries? Such ire!"
@@ -27506,6 +27507,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Korhonen's Nonkosher"
 "KorTech: THE ROCK!"	true
 "Krewson Knowers"
+"Kris Best Brishets"
 "Kubik's Bikkus"
 "Kumari Rumaki"
 "La Niche Chilean"
@@ -31335,6 +31337,7 @@ blurb
 "Like, Grin Kinglier"
 "Live Swear Reviewals" []
 "A Log Hut to Laugh"
+"Lon Lew's New LOLs" []
 "Mandel's Slam Den"
 "Mass Glib Big Slams"
 "Noisier Ironies"
@@ -31846,6 +31849,7 @@ blurb
 "Rock Can Crack On"
 "Rock on or Conk"
 "Rock Out, Ruck Too"
+"Rock Solid Crook Slid"
 "Rouse Euros"
 "Sad Lu Lauds U Lads"
 "Scan, Hit a Snitch" []
@@ -33483,6 +33487,7 @@ blurb	prio
 "Cicero's Co-Cries: Soccer, I?[r], by Ceci Ros"
 "Cinema Fit to Naif Totemic Metafiction[r], by Camie Fitton"
 "Cinnamon Icon Mann[r], by Mina Conn"
+"Circles of Serf Colic[r], by Cecil Fors"
 "Citatory Atrocity[r], by Cory Tait"
 "Cite Thy Itch, Yet: the City, Ye Titch[r], by Ty Teich"
 "Cito's Tic So Stoic[r], by Coco Tsitis"
@@ -35176,6 +35181,7 @@ blurb	prio
 "A Liked Dalek, I[r], by Ed Kail"
 "A Likely Kill, Aye: Leakily, I Key All[r], by Kai Lyle"
 "A Limner's Minerals[r], by Ren Smail"
+"The Limo Moileth[r], by Theo Lim"
 "Linda's Island[r], by Sad Lin Landis" []
 "Line Gangs['] Gleanings[r], by [if player is male]Nigel Gans[else]Agnes Ling[end if]"
 "Lingo, OK-Looking[r], by Gil Koon"
@@ -35506,6 +35512,7 @@ blurb	prio
 "Mootest Mottoes[r], by Tom Seto"
 "Mopey Else Ye Sleep Mo['], Employees[r], by Posey Elem"
 "Mopheads['] Mad Hopes[r], by Pam Hodes"
+"Mopiest Man Pantomimes[r], by Noemi Stamp"
 "Morally Loyal Mr. Ray Moll[r], by Mary Oll"
 "Morbid Dim Rob[r], by Mo Bird"
 "More-Class Scams Lore[r], by [if player is male]Carl Moses[else]Elma Cross[end if]"
@@ -35816,6 +35823,7 @@ blurb	prio
 "Nota Bene: Beaten? No[r], by Bee Anton"
 "Notarise, Notaries, in a Store[r], by Senorita Tina-Rose Restaino" []
 "Note, Dear Ex: Exonerated[r], by Roxane Deet"
+"Notice a Poor Cooperation[r], by Orion Capote"
 "Novelty-Envy Lot[r], by Ty Loven"
 "Novice Con, Vie[r], by [if player is male]Evon Vicencio[else]Vivienne Coco[end if]"
 "Now Art's Tons Raw[r], by Stan Row" []
@@ -35897,6 +35905,7 @@ blurb	prio
 "Oh, Darby, Hard Yob[r], by Brad Hoy"
 "Oh, Drear Hoarder Dr. O'Hare[r], by Ro Heard"
 "Oh, Gents Hog Tens: the Song[r], by Seth Ngo" []
+"Oh, I Grunt Our Thing[r], by Gino Hurt"
 "Oh, Inmates, In to Shame[r], by Thomasine Mathieson" []
 "Oh, Man, Ham On[r], by Mahon Homan"
 "Oh, Mentor the Moron[r], by Tom Horne & Nemo Roth"
@@ -35975,6 +35984,7 @@ blurb	prio
 "On a Quiet Equation[r], by Teo Quain"
 "On a Trial, Rational[r], by [if player is male]Ira Alton[else]Iola Tran[end if]"
 "On a Warm Man O['] War[r], by [if player is male]Wm. Aaron[else]Nora Maw[end if]"
+"On Bets So Bent[r], by Bo Enst"
 "On Bums So Numb[r], by Bub Musso-Monn"
 "On, Cadet, to Dance[r], by Ned Cato & Tad Cone"
 "On Calicos So Laconic[r], by Laci Coons"
@@ -35988,8 +35998,10 @@ blurb	prio
 "On, Micro-Moronic Room, Inc[r], by Ric Moon"
 "On Nests [']N Stones: Notness Sonnets[r], by Stenson Stesnon"
 "On, Rascal, to Root Canals[r], by [if player is male]Oscar Alton[else]Cora Lantos[end if]"
+"On, Scary Crayons: Scorn, Ay[r], by Caryn So"
 "On Selling Long Lines[r], by Lois Glenn Ellingson"
 "On She Shone[r], by Shoe Henson"
+"On Swell New LOLs[r], by Wes Noll"
 "On the Ethno-Net, Ho[r], by Theo Henton"
 "On-the-Ropes Phone Store[r], by Nestor Hope"
 "On This Day a Tidy Nosh[r], by Dinah Yost"
@@ -36148,6 +36160,7 @@ blurb	prio
 "Pals Once, Clean Sop[r], by Len Pasco"
 "Pam is a Simp[r], by Masii Mapps"
 "Panic at a Tin Cap[r], by Pat Cain"[]
+"Pantomime, Mint a Poem[r], by [if player is male]Tommie Pan[else]Emma Ponti[end if]"
 "Paradigms: a Dim Grasp[r], by Dr. Pam Agis"
 "Paradiso Diaspora[r], by [if player is male]Rod Sapia[else]Pia Roads[end if]"
 "Paragon or Pagan[r], by Rao Pang"
@@ -36313,6 +36326,7 @@ blurb	prio
 "Priestly Sly Tripe[r], by Ty Perlis"
 "Prim Days Amid Spry Pyramids[r], by [if player is male]Sid Rampy[else]Sam Pirdy[end if]"
 "Prim Eva, Vampire[r], by Ravi Pem, Vera Pim & Pam Evri"
+"Print-Game Tampering[r], by Petra Ming"
 "Priority: I Rip Troy[r], by Torri Yip"
 "Probation's Absorption[r], by [if player is male]Pat Robison[else]Iona Probst[end if]"
 "A Problem Re: Aplomb[r], by Rob Maple"
@@ -39308,6 +39322,7 @@ blurb
 "To Have Hot Eva."
 "To Sandy: Do Nasty." []
 "To Siring So Tiring."
+"To Slurps, Lust Pros."
 "To Want No Twat." []
 "Toned Mr. Redmont."
 "Tongues Get on Us."
@@ -40053,6 +40068,7 @@ blurb
 "FEELING UP? FIE! PLUNGE"
 "FERULE? RE-FUEL"
 "FIB? RELY BREIFLY"
+"A FIDDLE: ADD LIFE? IDLE FAD"
 "FILM SET? LEFTISM"
 "FILTH AS TEXT? LET'S FIX THAT"
 "FITNESS FEST = SIN"
@@ -41662,6 +41678,7 @@ blurb
 "Beat Spud 'Budapest' Bupstead." []
 "Beat Trey Attebery."
 "Belabor Rob Bale, Bob Lear."
+"Belay Al Bey."
 "Belt Arch Albrecht-Batchler."
 "Betray Ty Baer."
 "Bin old Blondi Boldin."
@@ -43121,6 +43138,7 @@ blurb
 "'Libeler, eh? I'll be here!'"
 "'Lift-op! To flip! Flop it.'"
 "'Like that? HALT, tike!'"
+"'The limo (hot lime) hit Elmo!'"
 "'Line up! Un-pile!'"
 "'Lip, eh?' / 'I...HELP!'" []
 "'The lip! It...HELP!'"
@@ -43376,6 +43394,7 @@ blurb
 "'Phil set the slip! He split!'"
 "'A phone? Ah, nope! Ha, peon!' / 'Heap on!'"
 "'Piss off, spiffos!'"
+"'Pits, men! I'm spent!'"
 "'A pity. Pay it!'"
 "'Plaid? Al, dip da lip. Pal, I'd...'"
 "'Plan four: a flop! Run!'"
@@ -44938,6 +44957,7 @@ blurb
 "'So, dolt! Do lots?' / 'Old sot!'"
 "'So, Etta, to eats!'" []
 "'So, Herby!' / 'Hey, bros!'"
+"'So huggy? Gosh, guy!'"
 "'So, Hugh, go!' / 'Hush.'"
 "'So, Ida, do as I...' / 'Adios!'"
 "'So, Mikey!' / 'Yikes, Mo!'"
@@ -49984,6 +50004,7 @@ blurb
 "Sighshire Highrises"
 "Sin-Mason Mansions"
 "Singular Snug Lair" []
+"Slap-Ennui Peninsula"
 "Snoot-So-Ton" []
 "Snotston" []
 "Social-Pro Acropolis" []
@@ -54687,6 +54708,7 @@ blurb
 "a perchin['] phrenic pincher"
 "peril-set reptiles"
 "a postural pulsator"
+"a pound-em-up demon"
 "a PrisonCo Scorpion"
 "a pro-tec copter"
 "a proctal caltrop"
