@@ -1247,6 +1247,9 @@ to say fs:
 to say i-n:
 	say "[if player is male]Ian[else]Nia[end if]"
 
+to say mle:
+	say "[one of]Mel[or]Lem[in random order]"
+
 to say sic: [for when I totally have to bail out]
 	if player is female:
 		say " (sic) "
@@ -25841,6 +25844,7 @@ blurb
 "So icky! Yoicks!"
 "So profane, oaf-person!"
 "Soilure? Lousier."
+"Some racy scream, oy!"
 "Sour hate? Rue oaths!"
 "Sow epic cow pies!"
 "Sow hard, raw-shod words? Ha."
@@ -27310,6 +27314,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Gervasi Gravies" []
 "Gesualdi's Gladiuses"
 "Get KASS Gaskets"
+"Get on GoNet!"	true
 "Get Oscar's Escargots"
 "Get SAKS Gaskets!"	true
 "Get Taube's Baguettes"
@@ -27760,6 +27765,8 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Nip's Spin & Snip"
 "Nitschke Kitchens"
 "Nitzsche Chintzes"
+"Al's IV Vials"
+"Paw/Mum's Wampums"
 "No date? Note ad! Do neat! Donate to Dean!"	true
 "No-Daze Ad Zone"
 "No-Glitch Clothing"
@@ -28879,6 +28886,7 @@ blurb
 "Wack Butler Buckwalter"
 "Wack Flop Wolfpack"
 "Wack Min Wickman"
+"No-Cred Ed Corn"
 "Wack Mo Womack"
 "Wack Roby Brockway"
 "Wack Ron Warnock"
@@ -30058,6 +30066,9 @@ blurb
 "Mastering Emigrants" []
 "Mean Ex-Axemen"
 "Mega GI Maggie"
+"Myth Court: Much to Try"
+"Ugh, Test the Guts"
+"Mug the Gem Hut"
 "Mm Yeah Mayhem"
 "Mob-Cast Combats"
 "Mock a Whale, Whack a Mole"
@@ -31061,6 +31072,7 @@ blurb
 "Worser Rowers"
 "Wry Eve is Very Wise"
 "Yacking Nick Gay"
+"The Arg Rageth"
 "Yang is Saying"
 "Ye Kewl Weekly"
 "Yeller Ellery"
@@ -31778,6 +31790,7 @@ blurb
 "Now Turn, Worn Nut"
 "Now Wish Who Wins"
 "Number Six Burn Mixes"
+"Cool Down Now O Clod"
 "O It's the Hotties"
 "O Town to Own"
 "Oaths by Hats Boy"
@@ -32844,18 +32857,23 @@ this-book is a number that varies. this-book is usually 0.
 table of random books [xxm4] [tob]
 blurb	prio
 "[a-b], Russ: ABUSERS[r], by Bess Rau"	0
-"[A-word-u] Zit Zen: Snazziest[r], by Issa Zentz"
+"[a-word-u] Zit Zen: Snazziest[r], by Issa Zentz"
 "[d-t] Shed the Odds[r], by Ted Dosh"
 "[d-t], Snub Not Buds[r], by Stu Bond"
 "[d-word-u], Girl, Grim Land[r], by [if player is male]Dr. Gilman[else]Marg Lind[end if]"
 "[if player is male]He Resents[else]She Enters[end if] Thereness[r], by Tess Neher"
-"[one of]Mel[or]Lem[in random order], a Lame Male[r], by Elma Elam" [x]
+"[mle], a Lame Male[r], by Elma Elam" [x]
 "[sturd], [sturd], [sturd]!!![r] by Dr. Stu Durst"
 "[tt] Favre, Favorite to Vie Far[r], by Iva Forte"
 "A'Ight, Git? Ha[r], by Gita Haight"
 "A'Rite, I Tear a Tire[r], by Artie Etria" []
 "Abbey Cho's Sobby Ache[r], by [if player is male]Cobey Bash[else]Sheya Cobb[end if]"
 "Abbie's Babies[r], by Seb Iba"
+"Dark Shadow: How Sad, Dork[r], by Dash Dworak"
+"At Voices So Active[r], by [if player is male]Vito Case[else]Vi Coates[end if]"
+"Of Drunk Dork Fun[r], by Rod Funk"
+"On, Regaled Golden Era[r], by [if player is male]Leon Edgar[else]Eden Largo[end if]"
+"Soured on Underoos, Soon Rude[r], by Don Rouse"
 "ABC is Basic![r] by Cassi Babic"
 "ABCDEFGHI Chafed Big[r], by Fidge Bach"
 "Abhorrent, Earth-Born[r], by [if player is male]Robert Han[else]Berna Roth[end if]" []
@@ -34816,6 +34834,7 @@ blurb	prio
 "I, Vegan? A Given[r], by Vin Gea"
 "I Versus Viruses[r], by Su Siver"
 "I Voted to Dive[r], by Dottie DeVivo"
+"I Ward the Weird Hat[r], by Eda Wirth"
 "I, Weaver: a Review[r], by Eva Weir"
 "I Wend Into a Wide Nation[r], by [if player is male]Dwain Nieto[else]Tonia Edwin[end if]"
 "I Won't Be Tebowin['][r], by Bo Twine"
@@ -35581,7 +35600,7 @@ blurb	prio
 "My Cats['] Sty, Mac[r], by Ms. Tacy St. Macy"
 "My Clean Clay Men[r], by Len Macy & Al McNey" []
 "My Clear Calm Rye[r], by Marc Ley"
-"My Coarse Sycamore[r], and its sequel, [i]Some Racy Sycamore[r], by Rose Macy"
+"My Coarse Sycamore[r], by Rose Macy"
 "My Dirt, Dmitry[r], by Dry Tim"
 "My Drug: Dry Gum[r], by DRM GUY"
 "My Earth Era Myth[r], by Mr. Hatey"
@@ -36710,7 +36729,7 @@ blurb	prio
 "Scranton Con Rants, Narcs Not[r], by Stan Corn-Cranston" []
 "Screamin['] Man Cries[r], by Ric Means"
 "Screams: a Massacre[r], by Mac Sears"
-"Screamy [if player is female]Mr. Casey[r], by Ms. Carey[else]Ms. Carey[r], by Mr. Casey[end if] Caymers" [x]
+"Screamy [if player is male]Ms. Carey[else]Mr. Casey[end if][r], by [if player is male]Mr. Casey[else]Ms. Carey[end if] Caymers" [x]
 "A Screen Careens[r], by Ren Case"
 "Screw It, Crew. Sit[r], by Ric West"
 "A Scried Sidecar[r], by Eric Das"
@@ -36729,6 +36748,7 @@ blurb	prio
 "Sedated Deadest[r], by Tad Dees"
 "See, Chap, a Speech[r], by Peaches Paesche"
 "See-Gigs Inn: Genie Sings[r], by Signe Gines"
+"See Math the Same[r], by Ema Tesh"
 "See, Mine Enemies[r], by Enis Mee"
 "See Papa's Apse[r], by Asa Eppes"
 "Seed-Tent Detentes[r], by Ted Steen"
@@ -37033,6 +37053,7 @@ blurb	prio
 "Some Lip Impels O, Spoil Me[r], by Slim Poe"
 "Some Rain: Moan, Sire[r], by [if player is male]Ian Morse[else]Erin Amos[end if]" []
 "Son, Abet no Beast at Bones[r], by Ben Sato" []
+"Son to Satan[r], by Antos Stano" []
 "Son, Ye On, Yes?[r] by Osney Noyes"
 "Songlike Ego-Links[r], by [if player is male]Les Konig[else]Inge Klos[end if]"
 "Sonneted Endnotes[r], by Don Steen"
@@ -37212,6 +37233,7 @@ blurb	prio
 "Synthetic Ethnic Sty[r], by Ty Nitsche"
 "T. Osozaki, a Zitso, OK Kazooist[r], by Tisa Zook"
 "Tacit Snipe Antiseptic[r], by Cain Pettis"
+"Tacky Slur: Ask Curtly, Lay Struck[r], by Lucy Trask"
 "Tactics of Stoic Fact[r], by Cisco Taft"
 "Tag-Along-a-Lot Gang[r], by Olga Gant"
 "Tainted Aid Tent[r], by Ned Tait"
@@ -38133,7 +38155,6 @@ blurb
 "admits [i]Wendie's Sin Weed Dies New[r] is weak, but it's not WRONG."
 "agrees [i]Fop, Indeed? Dope Fiend[r] is funny, well, TIL IT ISN'T."
 "almost weeps at the simple truth of [i]Ah, Vilest, the Vials[r]."
-"recounts the trauma and relief of the protagonist of [i]Other Kids Risked, Tho['][r]."
 "analyzes the dystopian backdrop of [i]Czar-Urged Drug Craze[r]."
 "analyzes the mix of social and hard sciences in [i]The New Drug, Hunted, Grew[r]."
 "applauds the cautious optimism of [i]Rehab is Bearish[r]."
@@ -38214,6 +38235,7 @@ blurb
 "recommends [i]Coke! Rad? CROAKED[r]."
 "recommends [i]Fustian Howl, a Wishful Ton: His Own Fault[r], for people who love hearing their own excuses."
 "recommends the hard-hitting simplicity of [i]So, Meth Shot Me[r]."
+"recounts the trauma and relief of the protagonist of [i]Other Kids Risked, Tho['][r]."
 "refers to [i]Bo's Thing: Bong Hits? Sob Night[r]."
 "rehashes [i]No Weed! End Woe[r]."
 "reiterates the FACTS of [i]The Polls: Pot's HELL[r]."
@@ -38259,7 +38281,7 @@ blurb
 
 table of sicko movies [xxs3]
 blurb
-"[A-word-u]-Hump Smash-Up."
+"[a-word-u]-Hump Smash-Up."
 "[a-word-u] Porn Parsons."
 "[d-word-u] Hoes Had Men So Handsome." []
 "[if player is male]SOB Seth[else]Hot Bess[end if] the Boss."
@@ -39141,6 +39163,7 @@ blurb
 "Sergey's GEYSERS."
 "The Sergio Het-Orgies."
 "Servin[']-Sin Rev."
+"Sex Doc Sed Cox."
 "Sex-in-Pools Explosions."
 "Sex Party Extra/Spy."
 "Sextin[']: Next Is SIN, Tex."
@@ -40386,6 +40409,7 @@ blurb
 "YO, A SIN? I SAY NO"
 "YOUR SIDE IS RUDE, YO"
 "YOUTHFUL? UH, FLY OUT"
+"SIN FEARS FAIRNESS"
 "YUP, I TRIM IMPURITY"
 
 table of missing deli foods [xxu4]
@@ -42551,6 +42575,7 @@ blurb
 "'*Sob* gin!' / 'Gibson!'" []
 "'[d-word-u]! Elf Feldman fled, man.'"
 "'A-ok, mob? KABOOM!'"
+"'Oh, Gene?' / 'He gone!'"
 "'Aargh! Graah! Hagar!'"
 "'Ace, hi!' 'Eh...ice! I ache!'"
 "'Ach, conk Hancock.'"
@@ -45227,7 +45252,7 @@ blurb
 table of posse bosses [xxv7]
 blurb
 "[a-word-u]hat Shasta" []
-"[A-word-u]hole Sal Shoe" []
+"[a-word-u]hole Sal Shoe" []
 "[crap-u] Kid Pickard" []
 "[crap-u]-Kind Pinckard"
 "[d-word-u]-Why Wyndham" []
@@ -45250,6 +45275,7 @@ blurb
 "Abused Bad Sue"
 "Ace Lord DeCarlo" []
 "Ace Rogue Oceguera"
+"Any-Hat Nat Hay"
 "'Achoo' Ochoa"
 "Acne Lord Calderon" []
 "Actorly Cal Troy" []
@@ -50325,6 +50351,9 @@ blurb
 
 table of songs you could write [xxvx]
 blurb
+"Timid, Gone, Doing Time"
+"Ride it Off Fortified"
+"Sky Mo['] Smoky"
 "A-Holes So Hale"
 "A-One St.: So Neat" []
 "Ace, Pine in Peace"
@@ -54115,7 +54144,9 @@ blurb
 "Oppression? Props! Noise!" []
 "OUR DESTINY: IT'S YOUR END!"
 "Our life: foul ire!"
+"Our snivel unveils our revulsion!"
 "Our Trip: Con to Incur Corruption."
+"Our way: YOU! WAR!"
 "Overthink, ho? Vent! Irk!"
 "Permit venom? IMPROVEMENT!"
 "Prudes? Us? Derp!"
@@ -54874,6 +54905,7 @@ blurb
 "'The machine hath icemen!'"
 "'Me, I'd unite in due time!'"
 "'Mo['] debates: BEAST MODE!'"
+"'The party...they TRAP!'"
 "'PROMISE SO PRIME!'" []
 "'Promissive improvisers miss. I PROVE!'"
 "'Reformist firestorm!'"

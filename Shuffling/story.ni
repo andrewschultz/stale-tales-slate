@@ -14691,6 +14691,7 @@ blurb
 "Zoren Enzor"
 "Zorilda Lizardo"
 "Zorrie Rozier"
+"Armelia Laramie"
 "Zuri Ruiz"
 
 book forest
@@ -14835,6 +14836,8 @@ table of poem codas [xxi]
 blurb
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
+"The bones behest on: 'Be honest!'"
+"No stagier iron gates tearing so into rages."
 "Act four: fur coat. Our fact."
 "Act so! O, CAST!"
 "Acted immoral? Melodramatic? Calm mediator!"
@@ -15969,6 +15972,7 @@ book metros
 table of camp chants [xxm1]
 blurb
 "'Abusive USA vibe!'"
+"Hating echo: 'High octane? Oh, cheating.'"
 "'Account, U-Can't-Co!'"
 "'The ad: hated!'"
 "'Ad-pest adepts: PASTED!'"
@@ -16312,6 +16316,7 @@ table of nerd natter [xxm3]
 blurb
 "'Aliterate tail eater!' / 'Retaliate!'"
 "'Any D&D? Dandy?' The nerds laugh."
+"They discuss the weekly SciNet insect."
 "'The APIs ape this!' / 'Ha, spite!'"
 "'App? Pap!'"
 "'Ar, I'd raid a dir!'"
