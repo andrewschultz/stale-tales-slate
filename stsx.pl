@@ -56,7 +56,7 @@ sub addIdeas
 
 sub cleanUpLoneFile()
 {
-  my $anaDel = "c:/games/inform/roiling.inform/Source/lones.bak";
+  my $anaDel = "c:/writing/dict/sts-bak.txt";
   my $inTable = 0;
 
   open(A, "$anaIdeas");
