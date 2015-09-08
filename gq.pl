@@ -56,13 +56,13 @@ elsif ($roiling)
 processStory("sa");
 processStory("roiling");
 processNotes("games.otl");
-processNotes("lones.txt");
+processNotes("sts.txt");
 #processNotes("lists.otl");
 }
 
 sub processNotes
 {
-  open(A, "c:/writing/$_[0]") || open(A, "c:/games/inform/roiling.inform/source/$_[0]") || die ("Can't open games file.");
+  open(A, "c:/writing/$_[0]") || open(A, "c:/writing/dict/$_[0]") || open(A, "c:/games/inform/roiling.inform/source/$_[0]") || die ("Can't open $_[0] file.");
   print "For $_[0]:\n"; $foundSomething = 0;
   $section = "";
   $lines = 0;
