@@ -5,22 +5,31 @@
 # mainly to help with the bookbot
 #
 
-open(A, "c:/games/inform/roiling.inform/source/story.ni");
 open(B, ">c:/games/inform/roiling.inform/source/alfies.txt");
 
-print B "{\n\torigin: \[\"#onebook#\"\],\n\tonebook: \[";
+readBeforeAfter();
+
+#die($initstring);
+print B @genStr[0];
+
+open(A, "c:/games/inform/roiling.inform/source/story.ni");
+
+@arstr = ("litbook", "motbook");
+
+@toAlt = ("a-b", "d-t", "i-n", "mle", "n-t", "sim", "ta", "toti", "tt");
 
 while ($a = <A>)
 {
-  if ($a =~ /^table of random books /)
-  {
+  if (($a =~ /^table of (self-help bestsellers|random books) /) && ($a !~ /\t/))
+  { print B "\t\"@arstr[$arind]\": \["; $arind++;
     <A>;
     $inTable = 1;
+	$notTheFirst = 0;
     next;
   }
   if ($inTable)
   {
-    if ($a !~ /[0-9a-z]/) { $inTable = 0; last; }
+    if ($a !~ /[0-9a-z]/) { $inTable = 0; print B " ],\n"; next; }
 	chomp($a);
     $b = $a;
     $b =~ s/^\"//g; $b =~ s/\".*//g;
@@ -31,15 +40,9 @@ while ($a = <A>)
     $b =~ s/\[end if]/\)/g;
 
 ####NAMES
-    $b =~ s/\[a-b\]/Abe\/Bea/g;
-    $b =~ s/\[d-t\]/Dot\/Tod/g;
-    $b =~ s/\[n-t\]/Nate\/Tena/g;
-    $b =~ s/\[toti\]/Tino\/Toni/g;
-    $b =~ s/\[tt\]/Tio\/Toi/g;
-    $b =~ s/\[i-n\]/Ian\/Nia/g;
-    $b =~ s/\[ta\]/Tai\/Tia/g;
-    $b =~ s/\[mle\]/Mel\/Lem/g;
-    $b =~ s/\[sim\]/Simeon\/Simone/g;
+    for $q (@toAlt) { $b =~ s/\[$q\]/#$q#/g; }
+
+####Special for Dr. Stu Durst
     $b =~ s/\[sturd\]/TURDS/g;
 
 ####NON TEXTY STUFF. CENSOR SWEARS
@@ -51,15 +54,33 @@ while ($a = <A>)
 	if ($b =~ /\[/) { print "TITLE WITH BRACKETS: $b\n"; }
 	else
 	{
-	if ($notTheFirst) { print B ","; }
+	if ($notTheFirst) { print B ","; } else { $notTheFirst = 1; }
 	print B "\n";
     print B "\t\"$b\"";
-	$notTheFirst = 1;
 	}
   }
 }
 
-print B "\n\t\]\n\}\n";
+print B @genStr[1];
 
 close(A);
 close(B);
+
+#########################
+#sub readBeforeAfte
+#reads the strings before and after the random text
+#
+#genStr[0] = prefix, genStr[1] = postfix
+#
+
+sub readBeforeAfter()
+{
+  $json = "c:/games/inform/roiling.inform/source/bot-json.txt";
+  open(A, $json) || die ("Couldn't read json file $json.");
+  my $idx = 0;
+  while ($a = <A>)
+  {
+    if ($a =~ /=====/) { $idx++; } else { @genStr[$idx] = @genStr[$idx] . $a; }
+  }
+  close(A);
+}
