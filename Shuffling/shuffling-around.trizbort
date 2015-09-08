@@ -1,46 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<trizbort version="1.5.9.2">
+<trizbort version="1.5.9.3">
 	<info>
 		<title>Shuffling Around</title>
 		<author>Andrew Schultz (Ned Yompus)</author>
 		<description>Map for my IFComp 2012 entry</description>
 	</info>
 	<map>
-		<room id="1" name="Self-ID Fields" subtitle="" x="-288" y="0" w="96" h="64" region="Forest" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="1" name="Self-ID Fields" subtitle="" x="-288" y="0" w="96" h="64" region="Forest" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="2" name="Cruel Ones' Enclosure" subtitle="" x="-288" y="-96" w="96" h="64" region="Forest" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="2" name="Cruel Ones' Enclosure" subtitle="" x="-288" y="-96" w="96" h="64" region="Forest" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="e">Liches</objects>
 		</room>
-		<room id="3" name="Sorted 'Trodes" subtitle="" x="-160" y="0" w="96" h="64" region="Forest" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="3" name="Sorted 'Trodes" subtitle="" x="-160" y="0" w="96" h="64" region="Forest" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Bubble|Bucket|Shell</objects>
 		</room>
-		<room id="4" name="Stored, er, Dots" subtitle="" x="-416" y="0" w="96" h="64" region="Forest" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="4" name="Stored, er, Dots" subtitle="" x="-416" y="0" w="96" h="64" region="Forest" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="w">Cow/Chicken liver|Sandwich</objects>
 		</room>
 		<line id="6">
 			<dock index="0" id="1" port="w" />
 			<dock index="1" id="4" port="e" />
 		</line>
-		<room id="8" name="Ghouls' Slough" subtitle="" x="-288" y="-192" w="96" h="64" region="Forest" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="9" name="Frost Forts" subtitle="End Forest" x="-160" y="-192" w="96" h="64" region="Forest" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="8" name="Ghouls' Slough" subtitle="" x="-288" y="-192" w="96" h="64" region="Forest" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="9" name="Frost Forts" subtitle="End Forest" x="-160" y="-192" w="96" h="64" region="Forest" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="e">Vowels</objects>
 		</room>
-		<room id="10" name="Ug, Frenetic Centrifuge" subtitle="Start Sortie" x="-32" y="96" w="96" h="64" region="Sortie" handDrawn="no" ellipse="no" roundedCorners="yes" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="10" name="Ug, Frenetic Centrifuge" subtitle="Start Sortie" x="-32" y="96" w="96" h="64" region="Sortie" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="yes" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>(Becomes|A Round Den,|Unadorned)</objects>
 		</room>
-		<room id="11" name="Room" subtitle="" x="96" y="96" w="96" h="64" region="Sortie" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="11" name="Room" subtitle="" x="96" y="96" w="96" h="64" region="Sortie" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Cask</objects>
 		</room>
-		<room id="12" name="Moor" subtitle="End Sortie" x="224" y="96" w="96" h="64" region="Sortie" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="12" name="Moor" subtitle="End Sortie" x="224" y="96" w="96" h="64" region="Sortie" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Woeful Pat|Roadblock</objects>
 		</room>
-		<room id="13" name="Kitchen" subtitle="" x="-32" y="0" w="96" h="64" region="Sortie" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="13" name="Kitchen" subtitle="" x="-32" y="0" w="96" h="64" region="Sortie" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Fridge</objects>
 		</room>
-		<room id="14" name="Stiller Trellis (Crashing Archings)" subtitle="" x="96" y="0" w="96" h="64" region="Sortie" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="15" name="The Nick" subtitle="" x="-32" y="-96" w="96" h="64" region="Sortie" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="16" name="Sacred Cedars" subtitle="" x="224" y="0" w="96" h="64" region="Sortie" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="14" name="Stiller Trellis (Crashing Archings)" subtitle="" x="96" y="0" w="96" h="64" region="Sortie" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="15" name="The Nick" subtitle="" x="-32" y="-96" w="96" h="64" region="Sortie" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="16" name="Sacred Cedars" subtitle="" x="224" y="0" w="96" h="64" region="Sortie" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n">Stoup/Spout|(Oils) (Lois)</objects>
 		</room>
 		<line id="18" color="#000000" style="dashed" flow="oneWay">
@@ -55,44 +55,44 @@
 			<dock index="0" id="13" port="e" />
 			<dock index="1" id="14" port="w" />
 		</line>
-		<room id="25" name="Cordoned Red Condo" subtitle="" x="-416" y="192" w="96" h="64" region="Metros" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="25" name="Cordoned Red Condo" subtitle="" x="-416" y="192" w="96" h="64" region="Metros" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="e">Dry Cake</objects>
 		</room>
-		<room id="26" name="Cramped Red Camp" subtitle="" x="-416" y="288" w="96" h="64" region="Metros" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="26" name="Cramped Red Camp" subtitle="" x="-416" y="288" w="96" h="64" region="Metros" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Clover</objects>
 		</room>
-		<room id="27" name="A Yell Alley" subtitle="" x="-544" y="288" w="96" h="64" region="Metros" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="27" name="A Yell Alley" subtitle="" x="-544" y="288" w="96" h="64" region="Metros" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>A Motto</objects>
 		</room>
-		<room id="28" name="Elf Row's Flowers" subtitle="" x="-288" y="288" w="96" h="64" region="Metros" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="28" name="Elf Row's Flowers" subtitle="" x="-288" y="288" w="96" h="64" region="Metros" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n">Heaths|Begonias|Brocade</objects>
 		</room>
-		<room id="29" name="Undesired Underside" subtitle="Start Metros" x="-416" y="384" w="96" h="64" region="Metros" handDrawn="no" ellipse="no" roundedCorners="yes" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="29" name="Undesired Underside" subtitle="Start Metros" x="-416" y="384" w="96" h="64" region="Metros" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="yes" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Drainage</objects>
 		</room>
-		<room id="30" name="The Ol' Hotel" subtitle="" x="-544" y="384" w="96" h="64" region="Metros" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="30" name="The Ol' Hotel" subtitle="" x="-544" y="384" w="96" h="64" region="Metros" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Night Thing</objects>
 		</room>
-		<room id="31" name="Elm Train Terminal" subtitle="" x="-416" y="480" w="96" h="64" region="Metros" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="31" name="Elm Train Terminal" subtitle="" x="-416" y="480" w="96" h="64" region="Metros" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Neon Pig</objects>
 		</room>
-		<room id="32" name="Bassy Abyss" subtitle="End Metros" x="-288" y="480" w="96" h="64" region="Metros" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="32" name="Bassy Abyss" subtitle="End Metros" x="-288" y="480" w="96" h="64" region="Metros" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Siren</objects>
 		</room>
-		<room id="33" name="Tiles/Islet" subtitle="Start Resort" x="-32" y="288" w="96" h="64" region="Resort" handDrawn="no" ellipse="no" roundedCorners="yes" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="33" name="Tiles/Islet" subtitle="Start Resort" x="-32" y="288" w="96" h="64" region="Resort" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="yes" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n">Rock|Swing</objects>
 		</room>
-		<room id="34" name="An Odd Low Woodland" subtitle="" x="96" y="288" w="96" h="64" region="Resort" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="34" name="An Odd Low Woodland" subtitle="" x="96" y="288" w="96" h="64" region="Resort" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n">Riot</objects>
 		</room>
-		<room id="35" name="Roman Manor" subtitle="End Resort/Game" x="224" y="288" w="96" h="64" region="Resort" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="35" name="Roman Manor" subtitle="End Resort/Game" x="224" y="288" w="96" h="64" region="Resort" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n">Exits</objects>
 		</room>
 		<line id="37" color="#000000" style="dashed" flow="oneWay">
 			<dock index="0" id="34" port="e" />
 			<dock index="1" id="35" port="w" />
 		</line>
-		<room id="38" name="Anti-Cool Location" subtitle="" x="-288" y="384" w="96" h="64" region="Metros" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="38" name="Anti-Cool Location" subtitle="" x="-288" y="384" w="96" h="64" region="Metros" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Lit-Up Tulip</objects>
 		</room>
 		<line id="39" color="#000000" style="dashed">
@@ -155,14 +155,14 @@
 			<dock index="0" id="26" port="n" />
 			<dock index="1" id="25" port="s" />
 		</line>
-		<room id="48" name="A Dry Yard" subtitle="" x="-32" y="480" w="96" h="64" region="Intro" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="48" name="A Dry Yard" subtitle="" x="-32" y="480" w="96" h="64" region="Intro" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="e">Odor</objects>
 		</room>
-		<room id="49" name="Notices Section" subtitle="End Intro" x="-160" y="288" w="96" h="64" region="Intro" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="49" name="Notices Section" subtitle="End Intro" x="-160" y="288" w="96" h="64" region="Intro" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Gateway|Broad Board</objects>
 		</room>
-		<room id="50" name="Busiest Subsite" subtitle="Start Intro" x="96" y="480" w="96" h="64" region="Intro" handDrawn="no" ellipse="no" roundedCorners="yes" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="51" name="Trips Strip" subtitle="" x="-160" y="192" w="96" h="64" region="NoRegion" handDrawn="no" ellipse="yes" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="50" name="Busiest Subsite" subtitle="Start Intro" x="96" y="480" w="96" h="64" region="Intro" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="yes" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="51" name="Trips Strip" subtitle="" x="-160" y="192" w="96" h="64" region="NoRegion" handDrawn="no" allcornersequal="no" ellipse="yes" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="e">Store F, I, M, R</objects>
 		</room>
 		<line id="52" color="#000000" flow="oneWay" startText="in">
@@ -189,7 +189,7 @@
 			<dock index="0" id="33" port="e" />
 			<dock index="1" id="34" port="w" />
 		</line>
-		<room id="56" name="Softer/Rest of Forest" subtitle="Start Forest" x="-288" y="96" w="96" h="64" region="Forest" handDrawn="no" ellipse="no" roundedCorners="yes" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="56" name="Softer/Rest of Forest" subtitle="Start Forest" x="-288" y="96" w="96" h="64" region="Forest" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="yes" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="w" />
 		</room>
 		<line id="59" color="#000000" style="dashed" flow="oneWay" startText="in (F)">
@@ -204,7 +204,7 @@
 			<dock index="0" id="8" port="e" />
 			<dock index="1" id="9" port="w" />
 		</line>
-		<room id="53" name="Thickest Thickets" subtitle="" x="-160" y="480" w="96" h="64" region="Intro" handDrawn="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="53" name="Thickest Thickets" subtitle="" x="-160" y="480" w="96" h="64" region="Intro" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Toga|Darnels</objects>
 		</room>
 		<line id="62" color="#000000" style="dashed" flow="oneWay" startText="In">
@@ -267,7 +267,7 @@
 			<objectListOffset>4</objectListOffset>
 			<connectionStalkLength>8</connectionStalkLength>
 			<preferredDistanceBetweenRooms>32</preferredDistanceBetweenRooms>
-			<defaultRoomName />
+			<defaultRoomName>Zone O' Zen</defaultRoomName>
 		</rooms>
 		<ui>
 			<handleSize>12</handleSize>

@@ -28,8 +28,10 @@ sub addIdeas
 {
   $storyFile = "c:/games/inform/$_[0].inform/Source/story.ni";
   $addedFile = "c:/games/inform/$_[0].inform/Source/story.add";
+  print "copy $addedFile $storyFile\n"; return;
   open(A, $storyFile) || die ("Can't open $storyFile!");
   open(B, ">$addedFile") || die ("Can't open $storyFile!");
+  binmode(B);
 
   while ($a = <A>)
   {
@@ -45,7 +47,7 @@ sub addIdeas
 
   close(A);
   close(B);
-  
+  `copy "$addedFile" "$storyFile"`;
 }
 
 ################################
@@ -61,6 +63,8 @@ sub cleanUpLoneFile()
 
   open(A, "$anaIdeas");
   open(B, ">$anaDel");
+  
+  print "copy $anaDel $anaIdeas"; return;
 
   while ($a = <A>)
   {
@@ -80,4 +84,6 @@ sub cleanUpLoneFile()
 
   close(A);
   close(B);
+  
+  `copy $anaDel" "$anaIdeas"`;
 }

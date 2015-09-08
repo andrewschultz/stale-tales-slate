@@ -1,8 +1,4 @@
 table of random books [xxm4] [tob]
-"Variety: I've a Try[r], by Ty Viera"
-"Wan Times, Same Twin[r], by Stew Main"
-"To Pass by Bay Spots[r], by Pat Bossy"
-"Bleat at a Battle[r], by Lea Batt"
 
 table of posse bosses [xxv7]
 
@@ -13,7 +9,6 @@ table of posh dialogue [xxv6]
 table of gritty dialogue [xxv4]
 
 table of ad slogans [xxm1]
-"Rod Gump's Gumdrops"
 
 table of to-sort=========================================
 
@@ -42,7 +37,6 @@ table of wait responses [xxg10]
 table of yessage [xxg11]
 
 table of bad rappers [xxm2]
-"Slowfast Flowstas"
 
 table of biopics [xxm3]
 
@@ -53,8 +47,6 @@ table of elmo emo [xxm5]
 table of lame computer games [xxm6]
 
 table of lame movies [xxm7]
-"Our Jr.  Juror"
-"The IRS Riseth"
 
 table of lame talk shows [xxm8]
 
@@ -63,7 +55,6 @@ table of lame tv shows [xxm9]
 table of laughhouses [xxm0]
 
 table of lousy hit songs [xxm01]
-"More Fine, I'm on Fire"
 
 table of mob chants [xxm02]
 
@@ -156,7 +147,6 @@ table of selly yells [xxh2]
 =====SA
 
 table of job searcher names [xxx]
-"Aundre Urenda-Renaud"
 
 table of evil locations [xxf]
 

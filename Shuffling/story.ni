@@ -13613,6 +13613,7 @@ book intro
 
 table of job searcher names [xxx]
 blurb
+"Aundre Urenda-Renaud"
 "Aaron Orana"
 "Abdul Bauld-Lubda"
 "Abel Beal"
@@ -14698,8 +14699,10 @@ book forest
 
 table of evil locations [xxf]
 blurb
+"Squirmage Quagmires"
 "Absorbing-Brains Bog"
 "the AH! Heath"
+"Tall-Odor Toll Road"
 "All-Down Lowland"
 "the all-grey gallery"
 "Any-Con Canyon"
@@ -14834,6 +14837,7 @@ book sortie
  
 table of poem codas [xxi]
 blurb
+"Fallowest tales flow at fellows of wallets."
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
 "The bones behest on: 'Be honest!'"

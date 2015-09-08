@@ -26265,6 +26265,8 @@ blurb
 
 table of nonviolence messages [xxg6]
 blurb
+"Phat now: whap not."
+"So, have a shove? Oh, SAVE."
 "Aggression? Go! Reassign!"
 "Ah, these hates, eh? Sheathe!"
 "Aha, testy? STAY, HATE! That easy."
@@ -26685,6 +26687,7 @@ book manor
 
 table of ad slogans [xxm1]
 blurb	blare	[random sad ads: the blare field designates whether you have an exclamation point at the end]
+"Rod Gump's Gumdrops"
 "[d-t] Saffo Fast Food"
 "[if player is male]Aaron Colt[else]Lora Acton[end if]'s Root Canals" [p]
 "[if player is male]Alec Pino[else]Loni Cape[end if]'s Special on Pecan Oils!"	true [p]
@@ -28466,6 +28469,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 
 table of bad rappers [xxm2]
 blurb
+"Slowfast Flowstas"
 "All Time Ill Mate Tim Leal"
 "Art Sopp, Rap's Top Pop Star"
 "Artsome Maestro Moe Rast"
@@ -30317,6 +30321,8 @@ blurb
 
 table of lame movies [xxm7]
 blurb
+"Our Jr.  Juror"
+"The IRS Riseth"
 "[if player is male]Burt Oakes[else]Tresa Kubo[end if] Breaks Out"
 "[n-t]'s Pets: Past Tense"
 "Abdul's Bud Sal"
@@ -31396,6 +31402,7 @@ blurb
 
 table of lousy hit songs [xxm01]
 blurb
+"More Fine, I'm on Fire"
 "[d-word-u], Be Bad Men"
 "A-OK We Awoke"
 "Abby, Baby"
@@ -32859,6 +32866,12 @@ this-book is a number that varies. this-book is usually 0.
 
 table of random books [xxm4] [tob]
 blurb	prio
+"Medal of Old Fame[r], by Flo Mead"
+"Poke at Topeka[r], by Kat Poe"
+"Variety: I've a Try[r], by Ty Viera"
+"Wan Times, Same Twin[r], by Stew Main"
+"To Pass by Bay Spots[r], by Pat Bossy"
+"Bleat at a Battle[r], by Lea Batt"
 "[a-b], Russ: ABUSERS[r], by Bess Rau"	0
 "[a-word-u] Zit Zen: Snazziest[r], by Issa Zentz"
 "[d-t] Shed the Odds[r], by Ted Dosh"
@@ -38094,6 +38107,7 @@ book stores
 
 table of idiotic lecture points [xxs1]
 blurb
+"yells 'smoke shop: Hemp, ok? SOS!'"
 "asks, how do you want your life? Bald? Acne? Or BALANCED?"
 "asks the crowd to chant 'Hemp? So po[']. Mehs.'"
 "avoids neater points in his presentation."
@@ -42310,6 +42324,7 @@ blurb
 
 table of DIVORCES articles [xxv2]
 blurb
+"Leibniz Biz-Line."
 "[if player is male]Lawrence Li[else]Cari Newell[end if]'s Wine Cellars" [p]
 "Aerologists['] astrologies."
 "Aging an['] you: Young again?"
@@ -42466,6 +42481,7 @@ blurb
 
 table of ethics advice [xxv3]
 blurb
+"Got funded? Don't fudge!"
 "Ad month? Hot [d-word]!"
 "Advice on the brightest, right bets."
 "All games distract a true leader, even the socially logical [i]Beggar Bagger[r]."
@@ -42575,6 +42591,7 @@ blurb
 
 table of gritty dialogue [xxv4]
 blurb
+"Espionage? Go see pain!"
 "'*Sob* gin!' / 'Gibson!'" []
 "'[d-word-u]! Elf Feldman fled, man.'"
 "'A-ok, mob? KABOOM!'"
@@ -43956,6 +43973,7 @@ blurb
 
 table of posh dialogue [xxv6]
 blurb
+"'A fur next? Extra fun!'"
 "'[d-t]? A Toad!'"
 "'[d-word-u] shy, hm, Sandy?'" []
 "'[if player is female]Gwennie, win Gene[else]Gene, win Gwennie[end if]!'"
@@ -45254,6 +45272,7 @@ blurb
 
 table of posse bosses [xxv7]
 blurb
+"Whap-a-Ton Powhatan"
 "[a-word-u]hat Shasta" []
 "[a-word-u]hole Sal Shoe" []
 "[crap-u] Kid Pickard" []
@@ -51362,6 +51381,7 @@ blurb
 
 table of Leo-Rand idols [xxp4]
 blurb
+"Sockiner Erickson"
 "[n-t] 'Bam' Bateman" []
 "[tt] 'Thud' Douthit"
 "Abe 'Grr' Garber" []
@@ -52517,6 +52537,7 @@ blurb
 
 table of smartypants [xxp6]
 blurb
+"Devster Dr. Steve"
 "Acute Arlen Laracuente" []
 "Acute Rod Courtade" []
 "Acute Sal Lacuesta" []
