@@ -1247,6 +1247,9 @@ to say fs:
 to say i-n:
 	say "[if player is male]Ian[else]Nia[end if]"
 
+to say m-e:
+	say "[one of]Me[or][']Em[in random order]"
+
 to say mle:
 	say "[one of]Mel[or]Lem[in random order]"
 
@@ -50282,7 +50285,7 @@ blurb
 "Shlep-Helps[r], by Shepp Shell"
 "Shy? Up! Pushy[r], by Sy Phu" []
 "Sing Wealth With Angels[r], by [if player is male]Ewing Stahl[else]Twila Sheng[end if]" []
-"Slip [one of]Me[or][']Em[in random order] Simple Impels[r], by [if player is male]Emil Lepp-Sims[else]Ms. Millie Epps[end if]" [x]
+"Slip [m-e] Simple Impels[r], by [if player is male]Emil Lepp-Sims[else]Ms. Millie Epps[end if]" [x]
 "Slouch-Free, So Cheerful[r], by [if player is male]Les Foucher[else]Loree Fuchs[end if]"
 "Smarting Wit, Arm Twisting[r], by Matt Wirsing & Grits Witman"
 "So Meek? Seem OK? Seek Mo['][r], by Em Seko"
