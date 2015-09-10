@@ -13613,19 +13613,6 @@ book intro
 
 table of job searcher names [xxx]
 blurb
-"Indira Radini"
-"Manolo Looman"
-"Gennadi Deignan"
-"Myrana Aramyn"
-"Yegor Gorey"
-"Denis Sedin"
-"Joakim Kojima" [must use elsewhere]
-"Pavel Pleva"
-"Oleg Gloe"
-"Sergei Griese"
-"Ossip Sipos"
-"Aleksi Lesiak"
-"Aundre Urenda-Renaud"
 "Aaron Orana"
 "Abdul Bauld-Lubda"
 "Abel Beal"
@@ -13648,6 +13635,7 @@ blurb
 "Albert Bartle"
 "Albie Biela"
 "Alegra Regala"
+"Aleksi Lesiak"
 "Alethia Hietala"
 "Alfonso Olafson"
 "Alfred Fardle"
@@ -13692,6 +13680,7 @@ blurb
 "Arby Bray"
 "Archibald Brachaldi"
 "Ardell Ladler" []
+"Armelia Laramie"
 "Arminda Maranid"
 "Arnold Roland"
 "Arth Rath-Hart"
@@ -13702,6 +13691,7 @@ blurb
 "Asia Asai"
 "Audrey Yeruda"
 "Audria Dauria"
+"Aundre Urenda-Renaud"
 "Austin Unitas"
 "Avram Marva"
 "Avril Vilar" []
@@ -13878,6 +13868,7 @@ blurb
 "Dedrick Reddick"
 "Delsie Seidel"
 "Dena Nead"
+"Denis Sedin"
 "Denise Seiden-Deines"
 "Denny Nyden"
 "Deon Oden"
@@ -13992,6 +13983,7 @@ blurb
 "Gaspar Pargas"
 "Gaynell Langley"
 "Gena Egan"
+"Gennadi Deignan"
 "Georgia Aggerio"
 "Gerald LeGard-Gradel"
 "Geraldo DeLargo"
@@ -14076,6 +14068,7 @@ blurb
 "Imari Raimi"
 "Imelda DeLima"
 "Imogen Megino"
+"Indira Radini"
 "Indra Darin"
 "Ines Nies"
 "Inge Negi"
@@ -14097,6 +14090,7 @@ blurb
 "Jareth Hartje"
 "Jaros Rojas"
 "Jemica Maciej"
+"Joakim Kojima" [must use elsewhere]
 "Joaquin Quijano"
 "Johannes Johansen"
 "Joran Onjar"
@@ -14241,6 +14235,7 @@ blurb
 "Mandie Demian" []
 "Manifred Friedman"
 "Mannie Nieman"
+"Manolo Looman"
 "Mara Amar-Rama"
 "Marci Maric"
 "Marcia Macari"
@@ -14324,6 +14319,7 @@ blurb
 "Muriel Lumrie-LeMuir"
 "Murph Rumph"
 "Myessa Massey"
+"Myrana Aramyn"
 "Myrna Ryman"
 "Myrona Raymon"
 "Nadya Dayan"
@@ -14374,6 +14370,7 @@ blurb
 "O'Bryant Brayton"
 "Obadiah Habadio"
 "Odessa Essado"
+"Oleg Gloe"
 "Olen Elon"
 "Olga Lago"
 "Oliver Voleri"
@@ -14390,6 +14387,7 @@ blurb
 "Osborne Robeson"
 "Oscar Arcos"
 "Oskram Markos"
+"Ossip Sipos"
 "Osvaldo Davolos"
 "Otelia Leitao"
 "Otis Tosi"
@@ -14399,6 +14397,7 @@ blurb
 "Partina Trapani"
 "Patti Piatt"
 "Paul Lupa"
+"Pavel Pleva"
 "Pearl LaPre"
 "Percy Pryce"
 "Perina Napier"
@@ -14518,6 +14517,7 @@ blurb
 "Scottie Sicotte"
 "Serban Nabers-Barnes"
 "Serge Seger"
+"Sergei Griese"
 "Seth Tesh"
 "Sevan Evans-Snave"
 "Shabir Bashir"
@@ -14688,6 +14688,7 @@ blurb
 "Yaron Ronay"
 "Yasser Sayers"
 "(Ye Hon.) Honey Hoyne"
+"Yegor Gorey"
 "Yeshua Hausey"
 "Yolande Delanoy"
 "Yussef Fussey"
@@ -14704,17 +14705,14 @@ blurb
 "Zoren Enzor"
 "Zorilda Lizardo"
 "Zorrie Rozier"
-"Armelia Laramie"
 "Zuri Ruiz"
 
 book forest
 
 table of evil locations [xxf]
 blurb
-"Squirmage Quagmires"
 "Absorbing-Brains Bog"
 "the AH! Heath"
-"Tall-Odor Toll Road"
 "All-Down Lowland"
 "the all-grey gallery"
 "Any-Con Canyon"
@@ -14816,13 +14814,14 @@ blurb
 "So-Dead Odd Sea"
 "sogger-gorges"
 "the Spook Pets Hook"
-"squirmage quagmires"
+"Squirmage Quagmires"
 "stale-dawn wasteland"
 "the Stepanski Snakepits"
 "stiff tiffs"
 "Stop-Win Snow-Tip"
 "the Suasory Ossuary"
 "Suffering-Rung Fiefs"
+"Tall-Odor Toll Road"
 "the tallowy tollway"
 "the thieves['] set hive"
 "To Tomb-Bottom"
@@ -14849,13 +14848,8 @@ book sortie
  
 table of poem codas [xxi]
 blurb
-"Crime: get a magic tree, great mice!"
-"Roar, flu of rural furor! La!"
-"Fallowest tales flow at fellows of wallets."
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
-"The bones behest on: 'Be honest!'"
-"No stagier iron gates tearing so into rages."
 "Act four: fur coat. Our fact."
 "Act so! O, CAST!"
 "Acted immoral? Melodramatic? Calm mediator!"
@@ -14936,6 +14930,7 @@ blurb
 "Blush. Let the bull's best hull-bell shut."
 "Bold. True. Troubled."
 "A bomb peril? Improbable! Blam! I probe."
+"The bones behest on: 'Be honest!'"
 "Boost for robots of frost. BOO!"
 "Bother the Orb? Oh, Bret!"
 "Boy, detours. Yo, doubters, do your best."
@@ -14975,6 +14970,7 @@ blurb
 "Coward, lush! Such a world would crash!"
 "Coy? I burst, rustic boy! Bury stoic obscurity!" []
 "A coy pit: icy atop! Ay, optic opacity."
+"Crime: get a magic tree, great mice!"
 "Cross? Mute? Customers must score!"
 "Crudest crusted set curd."
 "Cry Last, Crystal!"
@@ -15087,6 +15083,7 @@ blurb
 "The fairy! I fear thy airy heft!"
 "The fairy rift? Yeah, if hearty." []
 "Fake sons of snakes! Sank foes!"
+"Fallowest tales flow at fellows of wallets."
 "The falls! Halt, self! Hell, fast?!"
 "Fan row: Fawn, or a frown?"
 "Far east, a faster fear sat."
@@ -15487,6 +15484,7 @@ blurb
 "No lower lore now. Woe, lorn!"
 "No, oiled eidolon!"
 "No seafront afternoons resonant of arson often."
+"No stagier iron gates tearing so into rages."
 "No vocal volcano."
 "Noblesse, snob, else: be lesson!" []
 "North star? Short rant: tart, shorn."
@@ -15684,6 +15682,7 @@ blurb
 "Rise, my misery!"
 "Roam, for armor of far moor."
 "Roam on, a moron, or moan."
+"Roar, flu of rural furor! La!"
 "A rock's croaks."
 "The rod: red hot to herd!"
 "The rods, shot red, to shred her dots."
@@ -15990,7 +15989,6 @@ book metros
 table of camp chants [xxm1]
 blurb
 "'Abusive USA vibe!'"
-"Hating echo: 'High octane? Oh, cheating.'"
 "'Account, U-Can't-Co!'"
 "'The ad: hated!'"
 "'Ad-pest adepts: PASTED!'"
@@ -16089,6 +16087,7 @@ blurb
 "'Gus Tom Must Go!'"
 "'Halls of power? Shallower fop!'"
 "'Hate art at heart? A threat!'"
+"Hating echo: 'High octane? Oh, cheating.'"
 "'Hedge fund: defend? Ugh!'"
 "'Hi, GOP?' / 'Oh, pig!'"
 "'Hip's PISH!'"
@@ -16332,10 +16331,8 @@ blurb
 
 table of nerd natter [xxm3]
 blurb
-"'Do-Blacker Ad-Blocker Lab Rocked!'"
 "'Aliterate tail eater!' / 'Retaliate!'"
 "'Any D&D? Dandy?' The nerds laugh."
-"They discuss the weekly SciNet insect."
 "'The APIs ape this!' / 'Ha, spite!'"
 "'App? Pap!'"
 "'Ar, I'd raid a dir!'"
@@ -16370,6 +16367,7 @@ blurb
 "'The disc ditches ID techs!'"
 "'Discounted duds, notice! Deductions!'"
 "A discussion whether Nerdier Derrien Ridener goes too far."
+"'Do-Blacker Ad-Blocker Lab Rocked!'"
 "'Don't open that malig-Gmail!'"
 "'Dope build! Double dip!'"
 "'Dub THEM the dumb!'"
@@ -16541,6 +16539,7 @@ blurb
 "They denounce one dunce."
 "They discuss admissions for the Brilliant-Brain Till."
 "They discuss submissions to the Upgrades-Surge Pad."
+"They discuss the weekly SciNet insect."
 "They disparage Maze-Gain Magazine."
 "They evaluate various like-stats talk sites."
 "They quote lyrics from the Rap Nerds Pardners."

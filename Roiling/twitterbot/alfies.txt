@@ -1,6 +1,21 @@
 {
 	"origin": ["Literature: #litbook#", "Literature: #litbook#", "Literature: #litbook#", "Literature: #litbook#", "Motivational: #motbook#"],
 	"litbook": [
+	"A PSA ASAP , by Asa Papas",
+	"By Luck, Eh, Huckleby, by (Kyle Chub/Becky Luh)",
+	"Snag Evil Leavings, by Gil Evans-Vangelis",
+	"Well, I Think He Will Knit, by Wilt Hinkle",
+	"Opinionated Idea, No Point, by Antoine Diop",
+	"Eat Slop to Lapse, by Sal Peto",
+	"Tithe, Tithe, Tithe, by Hetti Hiett",
+	"Hero Stu, the Sour Shouter, by (Theo Rus/Ruth Ose)",
+	"Yo, Groups: Gory Opus, by Guy Spoor",
+	"Medal of Old Fame, by Flo Mead",
+	"Poke at Topeka, by Kat Poe",
+	"Variety: I've a Try, by Ty Viera",
+	"Wan Times, Same Twin, by Stew Main",
+	"To Pass by Bay Spots, by Pat Bossy",
+	"Bleat at a Battle, by Lea Batt",
 	"#a-b#, Russ: ABUSERS, by Bess Rau",
 	"*** Zit Zen: Snazziest, by Issa Zentz",
 	"#d-t# Shed the Odds, by Ted Dosh",
@@ -5171,6 +5186,7 @@
 	"A Zine's Zanies: Ian Sez, by Sean Zi",
 	"Zorinho's Horizons, by Roz Hoins" ],
 	"motbook": [
+	"Oh, Acuter Outreach: Euro-Chat, a Retouch, by Hector Au",
 	"(Fears, Mr/Fear, Mrs)? Torn? TRANSFORMER, by Storm Ferran",
 	"Able to Be a Lot, by Beata Botello",
 	"Absolutely All-Best You, by (Les Baluyot/Betsy Ulloa)",
@@ -5455,7 +5471,13 @@
 	"Yo, Click Cockily, by Colicky Coy Lick",
 	"Yo, Meek Man, Make Money, by Yankee Mom Emmy O'Kane",
 	"You Mo' Often Out of Money? by Mouton Foye" ],
-	"mel": ["Mel", "Lem"],
 	"a-b": ["Abe", "Bea"],
-	"d-t": ["Dot", "Tod"]
+	"d-t": ["Dot", "Tod"],
+	"i-n": ["Ian", "Nia"],
+	"mle": ["Mel", "Lem"],
+	"n-t": ["Nate", "Tena"],
+	"sim": ["Simeon", "Simone"]
+    "ta": ["Tai", "Tia"],
+	"toti": ["Tino", "Toni"],
+    "tt": ["Tio", "Toi"],
 }
