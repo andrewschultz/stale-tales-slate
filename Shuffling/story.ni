@@ -13613,6 +13613,18 @@ book intro
 
 table of job searcher names [xxx]
 blurb
+"Indira Radini"
+"Manolo Looman"
+"Gennadi Deignan"
+"Myrana Aramyn"
+"Yegor Gorey"
+"Denis Sedin"
+"Joakim Kojima" [must use elsewhere]
+"Pavel Pleva"
+"Oleg Gloe"
+"Sergei Griese"
+"Ossip Sipos"
+"Aleksi Lesiak"
 "Aundre Urenda-Renaud"
 "Aaron Orana"
 "Abdul Bauld-Lubda"
@@ -14837,6 +14849,8 @@ book sortie
  
 table of poem codas [xxi]
 blurb
+"Crime: get a magic tree, great mice!"
+"Roar, flu of rural furor! La!"
 "Fallowest tales flow at fellows of wallets."
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
@@ -14859,7 +14873,7 @@ blurb
 "Ah, Otto! Oath to a tooth: hat, too."
 "Ah, outs a shout so haut!"
 "Ah, pony, hop! Nay? A phony!"
-"Ah, quester! The square queer hats!"
+"Ah, quester! Hat's queer? Quash tree!"
 "Ah, Rose! So hear a shore!"
 "Ah, sire! A shire, I share!"
 "Ah, trek the ark!"
@@ -16318,6 +16332,7 @@ blurb
 
 table of nerd natter [xxm3]
 blurb
+"'Do-Blacker Ad-Blocker Lab Rocked!'"
 "'Aliterate tail eater!' / 'Retaliate!'"
 "'Any D&D? Dandy?' The nerds laugh."
 "They discuss the weekly SciNet insect."

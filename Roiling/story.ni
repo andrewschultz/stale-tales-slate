@@ -25700,6 +25700,7 @@ book general
 
 table of cussing rejects [xxg1]
 blurb
+"Obtrusive vibe-roust."
 "[if player is male]Mr. Taunt-Tantrum[else]Mrs. Taunt-Tantrums[end if]!"
 "A-ah! Not an oath!"
 "Absolutely lousy bleat!"
@@ -28941,6 +28942,9 @@ blurb	fave
 
 table of comedians [xxm4]
 blurb
+"So Vulgar Gus Orval"
+"Dry Fat Tad Fry"
+"Yuck-Bleh Huckleby"
 "Absurdist Trudi Bass" []
 "Acerbic Ric Cabe"
 "Adrenalin-Riled Erlinda Ladnier-Ireland"
@@ -31326,6 +31330,7 @@ blurb
 
 table of laughhouses [xxm0]
 blurb
+"Stop-Gap Gag Post"
 "Ace LOL Locale"
 "Ahh, Met the Ham"
 "Alf's Lafs"
@@ -32866,6 +32871,15 @@ this-book is a number that varies. this-book is usually 0.
 
 table of random books [xxm4] [tob]
 blurb	prio
+"A PSA ASAP [r], by Asa Papas"
+"By Luck, Eh, Huckleby[r], by [if player is male]Kyle Chub[else]Becky Luh[end if]"
+"Snag Evil Leavings[r], by Gil Evans-Vangelis"
+"Well, I Think He Will Knit[r], by Wilt Hinkle"
+"Opinionated Idea, No Point[r], by Antoine Diop"
+"Eat Slop to Lapse[r], by Sal Peto"
+"Tithe, Tithe, Tithe[r], by Hetti Hiett"
+"Hero Stu, the Sour Shouter[r], by [if player is male]Theo Rus[else]Ruth Ose[end if]"
+"Yo, Groups: Gory Opus[r], by Guy Spoor"
 "Medal of Old Fame[r], by Flo Mead"
 "Poke at Topeka[r], by Kat Poe"
 "Variety: I've a Try[r], by Ty Viera"
@@ -38298,6 +38312,9 @@ blurb
 
 table of sicko movies [xxs3]
 blurb
+"Anatoly, LaTonya."
+"Grand Old Lard-Dong Rand Gold."
+"Goo Syrup Orgy Opus."
 "[a-word-u]-Hump Smash-Up."
 "[a-word-u] Porn Parsons."
 "[d-word-u] Hoes Had Men So Handsome." []
@@ -40431,6 +40448,7 @@ blurb
 
 table of missing deli foods [xxu4]
 blurb
+"Panic-Set Picantes"
 "Appealing lagniappe"
 "Artichoke, heck, a trio"
 "Beef or beer of before"
@@ -43973,6 +43991,8 @@ blurb
 
 table of posh dialogue [xxv6]
 blurb
+"'I.e. RSVP, vipers!'"
+"'As to how? Aw, shoot.'"
 "'A fur next? Extra fun!'"
 "'[d-t]? A Toad!'"
 "'[d-word-u] shy, hm, Sandy?'" []
@@ -45272,6 +45292,7 @@ blurb
 
 table of posse bosses [xxv7]
 blurb
+"Viler-Lot Tolliver"
 "Whap-a-Ton Powhatan"
 "[a-word-u]hat Shasta" []
 "[a-word-u]hole Sal Shoe" []
@@ -50085,6 +50106,7 @@ blurb
 
 table of self-help bestsellers [xxv0]
 blurb
+"Oh, Acuter Outreach: Euro-Chat, a Retouch[r], by Hector Au"
 "[if player is male]Fears, Mr[else]Fear, Mrs[end if]? Torn? TRANSFORMER[r], by Storm Ferran"
 "Able to Be a Lot[r], by Beata Botello"
 "Absolutely All-Best You[r], by [if player is male]Les Baluyot[else]Betsy Ulloa[end if]" []

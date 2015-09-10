@@ -1,4 +1,4 @@
-$anaIdeas = "c:/writing/dict/sts.txt";
+$anaIdeas = "c:\\writing\\dict\\sts.txt";
 
 open(A, $anaIdeas) || die ("No ideas file $anaIdeas.");
 
@@ -26,11 +26,13 @@ cleanUpLoneFile();
 
 sub addIdeas
 {
-  $storyFile = "c:/games/inform/$_[0].inform/Source/story.ni";
-  $addedFile = "c:/games/inform/$_[0].inform/Source/story.add";
-  print "copy $addedFile $storyFile\n"; return;
+  $storyFile = "c:\\games\\inform\\$_[0].inform\\Source\\story.ni";
+  $addedFile = "c:\\games\\inform\\$_[0].inform\\Source\\story.add";
+
+  if ($justPrintCmds) { print "copy $addedFile $storyFile\n"; return; }
+
   open(A, $storyFile) || die ("Can't open $storyFile!");
-  open(B, ">$addedFile") || die ("Can't open $storyFile!");
+  open(B, ">$addedFile") || die ("Can't open $addedFile!");
   binmode(B);
 
   while ($a = <A>)
@@ -47,7 +49,9 @@ sub addIdeas
 
   close(A);
   close(B);
-  `copy "$addedFile" "$storyFile"`;
+  $cmd = "copy \"$addedFile\" \"$storyFile\"";
+  print "$cmd\n";
+  `$cmd`;
 }
 
 ################################
@@ -58,13 +62,13 @@ sub addIdeas
 
 sub cleanUpLoneFile()
 {
-  my $anaDel = "c:/writing/dict/sts-bak.txt";
+  my $anaDel = "c:\\writing\\dict\\sts-bak.txt";
   my $inTable = 0;
 
   open(A, "$anaIdeas");
   open(B, ">$anaDel");
   
-  print "copy $anaDel $anaIdeas"; return;
+  if ($justPrintCmds) { print "copy $anaDel $anaIdeas"; return; }
 
   while ($a = <A>)
   {
@@ -85,5 +89,7 @@ sub cleanUpLoneFile()
   close(A);
   close(B);
   
-  `copy $anaDel" "$anaIdeas"`;
+  $cmd = "copy $anaDel $anaIdeas";
+  print "$cmd\n";
+  `$cmd`;
 }

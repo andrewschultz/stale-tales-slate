@@ -1,7 +1,13 @@
 {
 	"origin": ["Literature: #litbook#", "Literature: #litbook#", "Literature: #litbook#", "Literature: #litbook#", "Motivational: #motbook#"],
 =========================================
-	"mel": ["Mel", "Lem"],
 	"a-b": ["Abe", "Bea"],
-	"d-t": ["Dot", "Tod"]
+	"d-t": ["Dot", "Tod"],
+	"i-n": ["Ian", "Nia"],
+	"mle": ["Mel", "Lem"],
+	"n-t": ["Nate", "Tena"],
+	"sim": ["Simeon", "Simone"]
+    "ta": ["Tai", "Tia"],
+	"toti": ["Tino", "Toni"],
+    "tt": ["Tio", "Toi"],
 }
