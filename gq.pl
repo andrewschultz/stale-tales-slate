@@ -89,6 +89,12 @@ sub cromu
   {
     if (($_[0] !~ /^\"@thisAry[0]/i) && ($_[0] !~ /'@thisAry[0]'/i)){ return 0; }
   }
+  
+  #lumped together
+  if ($_[0] =~ /@thisAry[0]@thisAry[1]/) { return 1; }
+  if ($_[0] =~ /@thisAry[1]@thisAry[0]/) { return 1; }
+  
+  #words apart
   for $tomatch (@thisAry)
   {
     if ($_[0] !~ /\b$tomatch\b/i) { if (($headersToo) && (myHeader =~ /\b$toMatch\b/i)) { next; } return 0; }

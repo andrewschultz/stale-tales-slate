@@ -7,7 +7,7 @@
 	"mle": ["Mel", "Lem"],
 	"n-t": ["Nate", "Tena"],
 	"sim": ["Simeon", "Simone"]
-    "ta": ["Tai", "Tia"],
+	"ta": ["Tai", "Tia"],
 	"toti": ["Tino", "Toni"],
-    "tt": ["Tio", "Toi"],
+	"tt": ["Tio", "Toi"],
 }
