@@ -3,7 +3,6 @@ table of random books [xxm4] [tob]
 table of posse bosses [xxv7]
 
 table of self-help bestsellers [xxv0]
-
 table of posh dialogue [xxv6]
 
 table of gritty dialogue [xxv4]
@@ -51,7 +50,6 @@ table of lame movies [xxm7]
 table of lame talk shows [xxm8]
 
 table of lame tv shows [xxm9]
-"Dolts of Flood St."
 
 table of laughhouses [xxm0]
 
@@ -96,7 +94,6 @@ table of non-checklists [xxv5]
 table of prestigious bums [xxv8]
 
 table of real estate ads [xxv9]
-"I, Empress Premises"
 
 table of songs you could write [xxvx]
 

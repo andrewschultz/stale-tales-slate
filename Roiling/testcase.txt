@@ -14,3 +14,5 @@ This is a text file of test cases that I can and should look at.
 --bypass a region and try to win and look at descriptions
 --examine OTTERS twice. Anything weird happen?
 --SS in the anteroom and north, and other places with privately-named reflexive/vanishing scenery
+--try each possible exit. 1) stable, out 2) chimney, out 3) basement, out 4) stable, basement, up 5) basement, up 6) stable, basement, up/out
+--conversation with elmo. Does cutting off early make sense?

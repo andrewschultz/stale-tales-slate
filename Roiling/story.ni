@@ -1136,7 +1136,7 @@ use MAX_OBJECTS of 900.
 
 use MAX_SYMBOLS of 120000.
 
-use SYMBOLS_CHUNK_SIZE of 12000
+use SYMBOLS_CHUNK_SIZE of 12800
 
 use MAX_VERBSPACE of 10240.
 
@@ -3607,11 +3607,11 @@ sports-quip	"Sports banter follows.[paragraph break][twiddle of table of sports 
 artsy-quip	"'Where do I look?'[paragraph break]'Spry prys say end of the alphabet. The start's tourist traps. Especially the sortie and forest and metros you solved. The tour guides are a bit, uh, revisionist.'[paragraph break]'What's the bare mi...uh, most efficient way through?'[paragraph break]'Well, stores U and V at the Strip seem the most easy. P is not too bad. Y--well, lots to do but it's simple. W is--I can't quite describe it. T--you might be weak when you get there.'"
 leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [if player is female]wo[end if]man! Ego hurt? Er, tough!'[paragraph break]Gunter pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manor.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end GUNTER text]
 curb-quip	"'It's not your fault you didn't have a super perfect story when you rescued Yorpwald. That's the fault of -- someone above -- if they even exist. Maybe if you fix what's wrong here, it'll be a more compelling story and pontificators won't turn against you. Or get bored.' Elmo turns to the fourth wall. 'Or have an excuse to pretend they're bored.'" [start ELMO text]
-interr-quip	"'Information on the Strip of Profits. It's thriving now. People buy stuff from the stores! They're so occupied, they won't notice YOU! But I think you've got a trial trail ahead. Elvira's got her toy theory started. About you being bad for Yorpwald.'"
+interr-quip	"'The Strip of Profits is--well, it's tied up with Old Warpy again. You know, how Old Warpy sent you to the forest and metros and sortie? Yeah, there's people buying stuff from the stores, but they're so occupied, they won't notice YOU! Still, you've got a trial trail ahead. Elvira's got her toy theory started. About you being bad for Yorpwald.'"
 toy-theory-quip	"You've sort of heard it, and you've sort of thought it, but yeah. She really did backhand-compliment you (big deal, boring mathy stuff, not a SHRED of excitement, but you did the job, she guessed) while saying people needed someone more exciting to mythologize about.[wfak][paragraph break]Like, gosh, HER! 'Her united con continued unnoticed. But it's too perfect. Tough to--ugh. Something messes up, she denounces it right away. SHATTER-THREATS is so specific to you, too. That's why I don't like it.[paragraph break]'She at the very least SEEMS to think you're behind the influx of annoying anagrams. But then, she might be trolling us by framing you. That's an...other-y theory, eh, tyro?'"
 strip-quip	"'Yeah, lots to explore. But I bet observing and talking to people will help. Even if they don't want to help. There also may be some--illegal types around stores K and N. You don't need them, but they can't hurt.'"
 clues-quip	"'Examine everything. People and things blocking you. Try to get by them. Just plain listen, or smell. Dialogues also guide. Oh, and if you can find Gretta Garett-Tatger, bonus.'"
-gretta-quip	"'She's a good investigative reporter, the best. She's dug further into Elvira's doings than anyone else. But she's become a bit of a--target.' You both cringe. 'No, it's not your fault. Just, she may have found something, even left a cue in the Strip of Profits.' Elmo shows you a picture of her."
+gretta-quip	"'She's a good investigative reporter, the best. She's dug further into Elvira's doings than anyone else. But she's become a bit of a--target.' You both cringe. 'No, her name's not your fault. Just, she may have found something, even left a cue in the Strip of Profits.' Elmo shows you a picture of her."
 trial-trail-quip	"'More trouble, more stores. Six of [']em. But you can't just switch stuff to other stuff. That'd be more hokey and homeworky. You'll have to infer finer things to upset the setup.' You ask what's ahead.[paragraph break]'You probably remember tackling F, I and M. Now it's P, T, U, V, W and Y. Oh, and H, if you get by Elvira.'[paragraph break]That's a lot. You probably don't need to grill him about all the stores. But some general hints could be nice."
 shortcut-quip	"'Hm, maybe a covert vector after you solve two...[paragraph break]'Oh, hey, if you want to complain about random stuff, go ahead. It might not give any practical help, but I don't mind listening. I've thrown a lot at you.'"
 p-quip	"Elmo stammers a bit. 'I know I asked you to ask about it. But I can't think of what to say about it in polite company. This is a hint that's not a hint, though. Or vice-versa. Honest. I hear ProcCorp is behind it. Or is it PorcCorp or CropCorp? Or all of them? There's a hacks['] shack immune to shatter-threats somewhere there.'"
@@ -3714,7 +3714,7 @@ prompt	response	enabled
 "Ask Elmo about her toy theory"	toy-theory-quip	0
 "Ask Elmo about your trial trail"	trial-trail-quip	0
 "Strip of Profits? Was that the Trips Strip? What's at the...?"	trips-quip	0
-"Ask Elmo how he'd get artsy with strategy"	artsy-quip	0
+"Strategy-try stage? Get artsy?"	artsy-quip	0
 "Poss. Clue? Closeups?"	clues-quip	0
 "Gretta Garett-Tatger?"	gretta-quip	0
 "Jumbo, um, job. Six of [']em? Some fix!"	shortcut-quip	0
@@ -3883,8 +3883,12 @@ before quipping when current quip is bye-Elmo-quip (this is the Elmo pulls you b
 		say "You shake your head and go back to thinking why the settler might flicker yellow/green on the lamp and so forth.[no line break]";
 		now hold-it-up is true instead;
 	if interr-quip is not mowered:
-		say "Hm, maybe Elmo has something useful to say. Start the conversation?";
+		say "Hm, maybe Elmo has something useful to say. Skip to that part of the conversation?";
 		if the player consents:
+			say "Elmo notices your haste and nods. 'Okay, first things first, I think I know where you need to go.'";
+			enact bye-elmo-quip;
+			disable the orange-dunno-quip quip;
+			disable the orange-know-quip quip;
 			now current quip is interr-quip;
 
 to decide whether its-all-scanned:
@@ -3915,6 +3919,18 @@ to another-Elmo-hint:
 		continue the action;
 	let myq2 be a random clue-acc quip;
 	enact myq2;
+
+to open-elmos-hints:
+		enact the strip-quip;
+		enact the artsy-quip;
+		enact the clues-quip;
+		enact the trips-quip;
+		enact the p-quip;
+		enact the t-quip;
+		enact the u-quip;
+		enact the v-quip;
+		enact the w-quip;
+		enact the y-quip;
 
 ramabits is a list of things variable. ramabits is { farm plot, platform, event map, pavement, brass crag, crabgrass, pedestal, steel pad }
 
@@ -3969,16 +3985,7 @@ after quipping: [qa]
 		now talked-to-Elmo is true;
 		disable the orange-dunno-quip quip;
 	else if current quip is trial-trail-quip:
-		enact the strip-quip;
-		enact the artsy-quip;
-		enact the clues-quip;
-		enact the trips-quip;
-		enact the p-quip;
-		enact the t-quip;
-		enact the u-quip;
-		enact the v-quip;
-		enact the w-quip;
-		enact the y-quip;
+		open-elmos-hints;
 	else if current quip is clues-quip:
 		enact the gretta-quip;
 		pad-rec-p "clues";
@@ -10352,7 +10359,7 @@ carry out fliptoing:
 					min-up;
 				else if number of supporting stos < 4:
 					min-up;
-			if the-to entry is not in lalaland:
+			if the-to entry is not in lalaland or the-to entry is satchel:
 				if the-from entry is boats and raft is reflexed:
 					do nothing;	[a bailout if you type RAFT and BOAST]
 				else if the-from entry is coins and the-to entry is s-i:
@@ -10376,8 +10383,6 @@ carry out fliptoing:
 				move player to roomjump entry;
 				consider the show blues rule; [for debugging]
 				consider the process random dialogue rule instead;
-			else if the-to entry is satchel:
-				move satchel to location of player;
 			else if taked entry is true or player has the-from entry:
 				now player has the-to entry;
 			else if the-from entry is part of the diorama:
@@ -11091,7 +11096,7 @@ to say tables-beams:
 	if tables are in study:
 		say "[if tables are in study]tables (the spreadsheety kind) on one wall[else]a way OUT where the tables were[end if], and [if t-b are in study]beams on another wall[else]a way down where those beams were[end if]";
 
-Dusty Study is an innie room in Roman Manor. "[one of]Your study's not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move, [tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if thinko is false and gunter is off-stage]. It's a good place to just THINK[end if][if Gunter is in lalaland]. After your sleep, you remember you built some secret passages[end if][if gunter is in lalaland]. You'll want to take them[else]. You came in through your super-secret side door, and you don't feel like going back out, yet.[end if][if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
+Dusty Study is an innie room in Roman Manor. "[one of]Your study's not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move, [tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if thinko is false and gunter is off-stage]. It's a good place to just THINK[end if][if Gunter is in lalaland]. After your sleep, you remember you built some secret passages[end if][if gunter is in lalaland]. You'll want to take them[else]. You came in through your super-secret side door, and you don't feel like going back out, yet[end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
 
 rule for printing the name of a dark room: say "No light-glint, oh!"
 
@@ -11099,9 +11104,9 @@ rule for printing the description of a dark room: say "[one of]You can't see muc
 
 the player is in Dusty Study.
 
-a rich chair is useless scenery in Dusty Study. "You thought you preferred a recliner but this is real. Nicer. It guards against cushionless slouchiness. Its backrest is shaped like brackets, and it's from Art Beck's. Small things can get lost in it[if pedanto-notepad is on chair]. Like your pedanto-notepad, just sitting on it[end if][if latches are off-stage]. In fact, it seems a bit lumpy now[end if]."
+a rich chair is useless scenery in Dusty Study. "You thought you preferred a recliner but this is real. Nicer. It guards against cushionless slouchiness. Its backrest is shaped like brackets, and it's from Art Beck's. Small things (like those sad ads) can get stuck in it, or even lost[if pedanto-notepad is on chair]. Like your pedanto-notepad, just sitting on it[end if][if latches are off-stage]. In fact, it seems a bit lumpy now[end if]."
 
-the sad ads are plural-named scenery. "[one of]The ads aren't sad because they're drab but rather because so many people fall for them. And they're not even magically possessed. This is the price of prosperity, and yet... One[or]Another[stopping] ad [hawk-blare]."
+the sad ads are plural-named scenery in Dusty Study. "[one of]The ads aren't sad because they're drab but rather because so many people fall for them. And they're not even magically possessed. This is the price of prosperity, and yet... One[or]Another[stopping] ad [hawk-blare]."
 
 this-ad is a number that varies. this-ad is usually 0.
 
@@ -11121,7 +11126,7 @@ to say hawk-blare:
 understand "ad" as sad ads.
 
 instead of taking sad ads:
-	say "You're not in the mood for bargains. You can examine them if you like."
+	say "They aren't actual coupons, only ads, so they're not worth taking. You can examine them if you like."
 
 instead of doing something with the sad ads:
 	if action is procedural:
@@ -11501,6 +11506,7 @@ check taking tables:
 
 after fliptoing tables:
 	now study is mapped inside stable;
+	now study is mapped outside stable;
 	now stable is mapped inside study;
 	continue the action;
 
@@ -11909,6 +11915,9 @@ check going up in Basement:
 			now player is in dusty study instead;
 		else:
 			say "Ok, probably best to find a way out." instead;
+	else:
+		say "You go back to the study.";
+		now player is in study;
 
 settler-x-nag is a truth state that varies.
 
@@ -12189,7 +12198,7 @@ after fliptoing rifle:
 
 book stable
 
-Stable is a stairy innie room in Roman Manor. "You never actually used this stable to, say, let a foal named Olaf loaf, and you couldn't think of anything else to do with it[if stair is visible]. The stair you made leads down[end if]. But despite disuse, it is blest with privacy and not falling apart.";
+Stable is a stairy innie room in Roman Manor. "You never actually used this stable to, say, let a foal named Olaf loaf, and you couldn't think of anything else to do with it[if stair is visible]. The stair you made leads down[end if]. But despite disuse, it is blest with privacy and not falling apart[if tables are in lalaland]. You can go IN or OUT back to the study--it doesn't matter which[end if].";
 
 printed name of stable is "A Blest Stable"
 
@@ -13160,7 +13169,7 @@ does the player mean entering disamb-store: it is likely.
 
 chapter store a
 
-there is a sto named Store A. it is privately-named and useless.
+Store A is a sto. it is privately-named and useless.
 
 chapter store b
 
@@ -16962,6 +16971,8 @@ before exiting (this is the exiting is the only way out rule):
 		d "Going [XY].";
 		if XY is not the noun:
 			try going XY instead;
+		else:
+			move player to the room outside of location of the player;
 	if location of player is cripple clipper:
 		say "Drowning ails or roils a sailor." instead;
 	if mrlp is troves:
@@ -16974,6 +16985,8 @@ before going outside (this is the out is the only way rule):
 		let XY be a random viable direction;
 		if XY is not the noun:
 			try going XY instead;
+		else:
+			move player to the room outside of location of the player;
 	if location of player is cripple clipper:
 		say "Drowning ails or roils a sailor." instead;
 	if mrlp is troves:
@@ -16982,7 +16995,7 @@ before going outside (this is the out is the only way rule):
 check an actor exiting (this is the custom not in anything rule):
 	let the local room be the location of the actor;
 	if the container exited from is the local room:
-		say "EXIT/OUT isn't usable here--it's used when there's only one direction, or you are told you can go OUT.";
+		say "EXIT/OUT isn't usable here--it's used when there's only one direction, or you are told you can go OUT." instead;
 
 the custom not in anything rule is listed before the can't exit when not inside anything rule in the check exiting rulebook.
 
@@ -25353,7 +25366,7 @@ after doing something with perl wall:
 	now last-wall is perl wall;
 	continue the action;
 
-description of PERL wall is "You read some more of the PERL 7 wall. Some of this might be useful if you make your own game. But not a lot.[paragraph break][this-perl]"
+description of PERL wall is "You read some more of the PERL wall. Some of this might be useful if you make your own game. But not a lot.[paragraph break][this-perl]"
 
 perl-row is a number that varies.
 
@@ -25531,45 +25544,55 @@ thiscal [x calendar] [tdm1]
 "Part eleven: nerve leapt. Vent. Repeal[paragraph break]One of the huge problems I had with testing was the inefficiency of adding one anagram. But with the major issues out of the way, I found ways to do stuff better. How to add names to anagram checking. This caused my bookshelf to add 1000 titles for release 3 and let me name all the authors. I found a way to centralize all the anagram tables so you could see them at the end. I thought I wouldn't use it much, but I wound up adding ten tables more. I used Notepad++ to load quickly and add anagrams when I didn't need to compile, and for my own vanity, I tracked the number of anagrams in the randomized tables and even checked if they conformed to Benford's Law and Zipf's Law. I wrote an anagram-checker. PERL even helped me to detect bad punctuation, capitals or quotes. All this helped me focus on technical stuff. There's so much I thought I'd only use once, but I reused it. All sorts of internal checks (like the table of anagrams and David White's hashes--in some cases, I wasn't checking right) cleared up. The Table of Nudges grew by several hundreds as I wrote a program to check for the hash value and dump it in a text file for later use. I even managed to write a silly program to check the relative difficulties of the areas. Towers is, by far, the toughest. But I think the most important thing I did was to try and play through one or two areas seriously per week. I needed to let testers['] suggestions soak in. Some puzzles, I thought, weren't perfect, but I didn't have better. But I would up cleaning them up later."
 "Part twelve: twerp valet varlet wept[paragraph break]It turns out there's nothing here that was any good, but I liked this sentence."
 "Part thirteen: inert? Phatter! Prettier than...[paragraph break]Just having time pass and being able to tighten up puzzles and think of things has been revealing. I write down my notes, look them over, and get on with it. I've never worked as hard at a creative project as I did with this game, but so many times I thought I'd run out of things to do before finding one more. While I figured 'Demo dome mode' shortly before release 2, I never got around to it because there was always something else in the game."
-"Final part: plan a rift[paragraph break]I'll have to move on. I had fun with this game as a thought experiment. I enjoyed looking at a phrase, saying I bet that'll anagram, and being right. I also enjoyed finding that a simple anagram could fit nicely in the game's flow. But it all has a diminishing return to scale. I want to move on, but hopefully I'll be able to add new silly books or dialogue when there's enough. Oh, and if people find bugs (still) I can roll that up, too."
+"Final part: plan a rift[paragraph break]I'll have to move on. I had fun with this game as a thought experiment. I enjoyed looking at a phrase, saying I bet that'll anagram, and being right. I also enjoyed finding that a simple anagram could fit nicely in the game's flow. But it all has a diminishing return to scale. I want to move on, but hopefully I'll be able to add new silly books or dialogue on a whim. Github makes it easy to add things--and I wish I'd had it earlier, so I could've tracked other changes. Oh, and if people find bugs (still) I can roll that up, too."
 
 [teenager pith part eighteen]
 
 table of informcode
 thiscode [x inform wall] [tdm2]
-"A chunk of code starting with CheckTranscriptStatus notes how the author was able to nag his testers to take a transcript if they left a comment without transcripting on--or to thank them."
+"A chunk of code starting with CheckTranscriptStatus (courtesy of Zarf) notes how the author was able to nag his testers to take a transcript if they left a comment without transcripting on--or to thank them."
 "You read various testing commands used in writing the game, including ones to show the exits every move, hint everything visible every move, and track hints without spoiling things for the player. Other commands include jumping to the Strip of Profits, clearing all but Otters, and even jumping to just before the Gates Stage."
 "You stare at the start of the Table of Nudges. It's really big! Like, [number of rows in table of nudges] big! That's over double Shuffling Around! The numbers look confusing and arbitrary, but you recognize the anagram-strings that the game checks for, as well as how room anagrams seem to point to the same error messages."
-"You stare at the start of the Table of Random Books. Wow, [number of rows in table of random books]! That's a lot of books! The second column seems to give a book a priority, so the player is likely to see certain ones first. Those seem to cover certain puzzles that occur later."
-"You see some specialized Inform 6 code from Andrew Plotkin, Climbing Stars (for disabling TRACE for the Oyster puzzle, and for restarting the game after winning) and other people."
+"You stare at the start of the Table of Random Books. Wow, [number of rows in table of random books]! That's a lot of books! The second column seems to give a book a priority, so the player is likely to see certain ones first. Those seem to cover certain puzzles that occur later. It seems like a lot, but there's a note that it was well over two years, and the author just wrote a few neat words from each book to poke at."
+"You see some specialized Inform 6 code from Zarf (again,) Climbing Stars (in more than one place--for disabling TRACE for the Oyster puzzle, and for restarting the game after winning) and other people."
 "You see a bit more Inform 6 code the author scratched out himself. The main chunk is at https://www.intfic.com/t/i6-stubs-for-i7-programmers/83/6."
-"You read more various miscellaneous testing commands, like ones that zap all the guardians, see all the fruits or even show what the player would've missed or alternat paths every move."
+"You read more various miscellaneous testing commands, like ones that zap all the guardians, see all the fruits or even show what the player would've missed or alternate paths every move."
 "You stare at the various tables of random text. A voice from behind a fourth wall mentions they used to be in lists, and worse, not even alphabetized so that some duplicates could be caught easily."
 
 table of perlcode
 thiscode [x perl wall] [tdm3]
+"#things to do before release:[line break]1. alphabetize tables and check for duplicates[line break]2. make sure anagrams are valid, especially books[line break]3. make sure duplicate anagrams are weeded out or checked[line break]4. check punctuation"
+"#generating silly names with honorific titles cheaply[line break]for ($x in %firstNames) { if ($isLastNameAnagram{alf('$x$ext')}) { print '$ext $x $isLastNameAnagram{alf('$x$ext')}'; # print for instance Mean Roy Maroney"
 "$alf = join('', sort(split(//, lc($a)))); if ($ana{$alf}) { print '$a=$ana{$alf}'; } $ana{$alf} .= ' $a'; # anagram find code"
 "if ($a =~ /^\'[bracket]a-z[close bracket]'/ { print 'bad quotes line $line: $a' } # quote tracking"
 "if (firstWord($a) eq firstWord($last) { print 'Possible duplicate: $line, $a = $last.\n'; }"
 "There's a reference to http://www.intfiction.org/forum/viewtopic.php?f=38&t=17095 which describes how to detect orphan text in Inform source."
-"The perl code is a bit complex, but it involves splitting a string in two, then assigning each a value. Manage, for instance, is 20001010000011000000000000. Mega Game is 30003030000030000000000000, which gets simplified to 1's. It looks like this piece of code detects if two strings are anagrams. There's commentary below."
-"In particular, the code seems to account for if the book titles and the author names are anagrams. A note below mentions about 70% had matching names before the try, and 10% just had bad anagrams, before that was all fixed. And many former author names were shipped off to Shuffling Around to make room for new ones here."
+"The perl code is a bit complex, but it seems to involve reducing strings to smaller things. #Mega Mage Game = a3e3g3m3."
+"if (($startsWithCapital{$currentTable} == 1) && ($thisString =~ /^[bracket]a-z[close bracket]/)) { print 'Bad capitalization!' # other test cases for if it's -1 (needs to start with lower case) or 0 (doesn't matter) and there are even tests for quotes or punctuation at the end."
+"Below the code for reducing strings are various comparisons to detect if an anagram has been used, if a book anagram is proper, or if the book matches its author(s)."
+"In the book/author notes, there's a few comments about 70% had matching names before the try, and 10% just had bad anagrams, before that was all fixed. And many former author names were shipped off to Shuffling Around to make room for new ones here."
+"while ($a = <A>) { if (($a =~ /@ARGV[0]/) && ($a =~ /@ARGV[1]/)) { print '$a matches.'; } } # simple check for if I wrote something already"
 "There's simpler code below just detecting if any anagrams are found in table entries. It's tough to follow, with exceptions for if two of the same word are in an entry, with the same hash as above."
-"Other things I put on [my-repo] include scripts to verify random text anagrams, to create the cheat and non-cheat text and even track geometric means."
+"There's code of what appears to be copying critical files to a GitHub directory. Shuffling Around and Roiling files are sent to sister directories, along with the compiled release binaries and lots of utilities."
+"The rest is too archaic, but it includes other things I put on [my-repo] include scripts to verify random text anagrams, to create the cheat and non-cheat text in the settler, and even track geometric means of table lengths."
 
 table of observations
 obser [from chic loner chronicle] [tdm4]
 "I found so many ridiculous anagrams just reading a book on the way to work, or working out, and then I'd just feed them into the anagram server. If ten thousand seems like a lot, well, that is over two years, so that is fifteen per day. That is not so bad when you consider one takes a minute, and I can waste a lot of time in any case."
-"A simple I <3 BLOCKSITE FOR FIREFOX. Well, that's not very philosophical or motivational, but it could be practical."
+"One of the best parts of using the anagram server was that I kept seeing cool quotes on the right. These added up to ideas for future games, or even funny jokes, or even more authors to read. It's always a treat when one project gives you spin-off projects."
+"A simple I <3 BLOCKSITE FOR FIREFOX. AND GOOGLE CHROME. Well, that's not very philosophical or motivational, but it could be practical."
 "It's difficult to describe when an idea has critical weight to branch out. For things like the responses to waiting or blank commands, I maybe had a few in one of/or loops, until I sat down and concentrated on words that meant doing nothing. It took a while to find, but once I had, say, six, I sat down and tried to stretch it to ten, when I put it in a table for the player to see at the end."
 "Many of my ideas come from everyday things. I didn't pay religious attention to my file of anagrams once I put down the initial puzzles. However, having two testers say, this seemed a bit wobbly, got me thinking. There were puzzles I liked, and I recruited the best talent available, so to speak. But like on a sports team, the most impressive athlete doesn't necessarily fit. It was hard to retire favorite anagrams or demote them, but it was necessary. And I got some good mileage with ones I'd passed up because I thought I had enough good ones. The diners in release 3 are probably the best example of this."
 "It wasn't until I established an assembly line for writing things up that I really started getting the anagrams in place. Before, I sent things to my daily writing, which sorted ideas to a big file by region. Once I cemented ARO as a big project to dedicate time to directly, I didn't have that hurdle, and things went faster."
-"I'm still amazed how much organization helped me. Before, I might see an anagram and wonder where it went. Once I organized the anagram types into the Table of Megachatter, it became a lot clearer what would go where, and I could add a new category if I wanted. The one of/or constructions--where things cycled every three times you observed--billowed out to tables. I figured how to make a final note, too, before cycling."
-"Once the anagrams started flowing, and I started adding alternate solutions, ARO started taking a long time to compile. Like 30 seconds. So I tried to place in random text and so forth while I built, since that was low-risk for recompiling. I had one rather bad bug which the Inform 6.32 compiler didn't track (http://www.ifarchive.org/indexes/if-archiveXinfocomXcompilersXinform6Xexecutables.html got the new version) but mostly it was just a matter of writing stuff down and feeding it to a computer. It was much more fun procrastination than others."
+"I'm still amazed how much organization helped me. Before, I might see an anagram and wonder where it went. Once I organized the anagram types into the Table of Megachatter, it became a lot clearer what would go where, and I could add a new category if I wanted. The one of/or constructions--where things cycled every three times you observed--billowed out to tables. As did lists, where it was tough just to insert one idea. I figured how to make a final note, too, before cycling."
+"I even found it easy to add new or break-off tables. For instance, the schematic catechism (one of the last anagrams I wanted to do something with but I didn't know what) originally just had random ideas. Then it had research topics. Then it had Brainy People. Again, none of this would've happened if I hadn't also written code that let me shift between tables."
+"Once the anagrams started flowing, and I started adding alternate solutions, ARO started taking a long time to compile. Like 30 seconds. So I tried to place in random text and so forth while I built, since that was low-risk for recompiling. I had one rather bad bug which the Inform 6.32 compiler didn't track (http://www.ifarchive.org/indexes/if-archiveXinfocomXcompilersXinform6Xexecutables.html got the new version) but mostly it was just a matter of writing stuff down and feeding it to a computer. It was much more fun procrastination than others. I found stuff to do (book reading) while something compiled, and that made having to raise an in-program constant less unbearable."
 "Many of the puzzles just didn't make sense in the first version. But I was able to sort them out by ones that needed to be changed and ones that would be nice to. I found a lot of times I had to let a tester's observation sit for about two weeks before changing something: gee, it'd be nice to..."
 "Perhaps the last thing I enjoyed looking up was that my data roughly obeyed both Zipf's and Benford's Law. I put the megachatter table rows and byte totals as data points into a graph at http://benford.jplusplus.org/, and while each looked pretty good by itself, together they gave a very low z-statistic. Zipf's law was a little trickier--the upper and lower halves of the data had different trend lines. I impart this to how I just sort of added a bunch of tables late, so of course thouse would sink to the bottom. While a few later tables gained traction (posse bosses, lame talk shows and comedians,) many were just neat to get to ten, and I didn't add to them."
+"I also found that, by the end, I spent more time adding anagrams than actual bug fixes to Shuffling and Roiling. But it was fun, and I felt I was doing something every day. Still, it got to be time consuming, and it took a while before I figured a way to add stuff to a separate text file, push a button, and add it to source."
 "Learned Helplessness is a powerful thing, and you can always be sucked back down into it: there's that silly voice in my head saying 'Haven't you gotten enough shortcuts?' Larry Wall's delightful oversimplification of the three programming virtues has helped me a lot, here, but I think the real way to frame things is: with the tools I have now, X would be too tough. I don't see how to fix it, yet, but I will."
-
+"One thing I wish I'd done earlier, that would've given me more shortcuts, was setting up my GitHub account. The simple graph of what you've done today (green vs. grey) is great motivation to do something/anything, and if it isn't much, that's motivation to do more next time."
+"Finally, I'm just grateful I had so much fun exploring so many alleys and polishing so many odd things. I hope you had even half as much fun playing as I did writing the Stale Tales Slate."
 
 table of pagelist [from novella] [tdm5]
 pgtxt	read-yet	comprehensible
@@ -25801,6 +25824,7 @@ blurb
 "Next move, vex me not."
 "No arts? So, rant: a snort."
 "Nose-virus souvenirs!"
+"Notes: crud, don't curse!"
 "O, brash abhors!"
 "O, sip on poison!"
 "O, Spiter Riposte!"
@@ -25992,6 +26016,7 @@ blurb
 "To my bane? Maybe not."
 "Top Update: TAPPED OUT!"
 "Um, right-ho, I'm through!"
+"Undone right in the ground!"
 "Unfortunate Run Unto Fate."
 "Virulent, Vile Turn!"
 "Watch out! ... Uh, act two?"
@@ -26472,6 +26497,7 @@ blurb
 "'Reader, at a retread.'"
 "'Redacting? Can get rid.'"
 "'Redaction? I don't care.'" []
+"Redo-so rodeos!"
 "'Redoin['].' / 'Ride on.'" []
 "'Rein in, er...'"
 "'Rent-up? Re-punt.'"
@@ -27875,6 +27901,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Penfold Flop Den"
 "Peon Tim's Nepotism Pimentos"
 "Pepi's Pipes"
+"Pepito's Top Pies"
 "Perdue Pureed"
 "Perkins's Skin-Resp"
 "Perlin's Pilsner"
@@ -28078,6 +28105,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Scavenger Van Creeg's" []
 "Scheirer-Riechers Cherries"
 "Schiavone Anchovies"
+"Schomer Chromes"
 "Schubert Butchers"
 "Sci-Vault Victuals"
 "Scofield Doc-Files"
@@ -28597,6 +28625,12 @@ blurb
 "Dope Teri Depietro"
 "Dope Ula DePaulo"
 "Dopeness Den Posse"
+"Down Al Waldon"
+"Down Aldo Woodland"
+"Down Ed Dowden"
+"Down Gil Dowling"
+"Down Hal Howland"
+"Down Rik Dworkin"
 "Dr. Yo It's So Dirty"
 "drug enthusiasts EPMH" [p]
 "Dub's Buds"
@@ -28875,6 +28909,7 @@ blurb
 "Sold-Out Lost Duo"
 "Sound Man Amundson"
 "Stink-It Kittins"
+"Stoner Mo Montrose"
 "Street Mix Extremist Mister Tex"
 "Streetwise [if player is male]Stew Steier[else]Tessie Wert[end if]"
 "Swell Bo Bellows" []
@@ -28924,9 +28959,11 @@ blurb	fave
 "Hero Tasks? Ask Others[r], by [if player is male]Theo Krass[else]Kathe Ross[end if]"	false
 "Home Again: Oh, I Manage[r], by [if player is male]Noah Megia[else]Naomi Hage[end if]"	true
 "I Ran Out on Our Nation[r], by [toti] Ruano"	false
+"In Steady: a Destiny[r], by [if player is male]Ty Daines & Ted Yasin[else]Nita Syed & Sade Tiny[end if]"	true
 "Influential? I, Fallen Unit[r], by Tuan Finelli"	false
 "Letter Swap? Stale Twerp[r], by [if player is male]Stew Alpert[else]Pearl Swett[end if]"	false
 "Lion Heart? No, the Liar[r], by [if player is male]Ali Theron[else]Lori Ethan[end if]"	false
+"Nostalgi-Gloatins[r], by [if player is male]Otis Lang[else]Lois Gant[end if]"	true
 "Notoriety to Inert, Yo[r], by [if player is male]Otto Eryin[else]Tori Toney[end if]"	false
 "OK, Words, Do Works[r], by Rod Skow"	true
 "Older and wiser, I Learned Words[r], by Delores Darwin"	true
@@ -29518,6 +29555,7 @@ blurb
 "Rude Verla Laverdure"
 "Rude Yan Reynaud"
 "Sailor Lorisa Larios-Solari"
+"Sardonic Rico Sand"
 "Sauced Su Cade"
 "Shallow-LOL Shaw"
 "She-Lout Sue Holt"
@@ -30100,6 +30138,7 @@ blurb
 "Narc Pad and [crap-u]"
 "Nasty Foe, No Safety"
 "NatureNauter"
+"Neanderthal Earth Land"
 "Neutronic Continuer Centurion"
 "Nifty Fytin[']"
 "Night Foe in the Fog"
@@ -30545,6 +30584,7 @@ blurb
 "Non-Insect Innocents"
 "Nope, Dr. Penrod"
 "Nuts St. Stunts"
+"Of Fans So Naff"
 "Of Stu Foust" []
 "Ol['] Bart's Borstal"
 "Old Seer Delores"
@@ -30733,6 +30773,7 @@ blurb
 "Aw, I've a View"
 "Bad Dog's Odd Gabs"
 "Banter at Bren: Rant, Be"
+"Bantery Art Byer"
 "Bantery Nat Byer"
 "Barthel's Blathers"
 "Beau's Din, Unbiased"
@@ -31604,6 +31645,7 @@ blurb
 "Good Try, Tyro Dog"
 "Goonin['] Goin['] On"
 "Gosh, Nuts, Gunshots"
+"Got Lies So Legit"
 "Got Sin to Sing"
 "Got Soul, Lo, Gusto"
 "Got The Ghetto"
@@ -32097,6 +32139,7 @@ blurb
 "A protest, pro-state."
 "'Push in! PUNISH!'"
 "'RADICAL! CAD! LIAR!'" []
+"'Rep, tots! Protest!'"
 "'Roguery now! You're wrong!'"
 "'Solitude's dissolute!'"
 "Surging Urgings."
@@ -33317,6 +33360,7 @@ blurb	prio
 "Blog Friend, Blind Gofer[r], by Ford Ebling"
 "Blog Loud, Dull Goob[r], by Doug Boll"
 "Blood Bay, Ol['] Bad Boy[r], by Lady Bobo"
+"Blow One Low Bone[r], by Ben Wool"
 "A Blowgun Bungalow[r], by [if player is male]Blu Wogan[else]Ang Bulow[end if]"
 "Blue Words, Rude Blows[r], by Bud Rowles"
 "A Blur of Our Flab[r], by [if player is male]Rob Lauf[else]Flo Baur[end if]-Balfour"
@@ -33357,6 +33401,7 @@ blurb	prio
 "A Bottle to Bleat[r], by [a-b] Lott"
 "Bottled Up Debut Plot[r], by Bud Pottle"
 "Boundless Soul Bends[r], by Eldon Buss"
+"A Bounty, Buoyant[r], by Una Toby"
 "Bourbon Run[r], by Bruno Bourn"
 "Bowden's Snow Bed[r], by Wes Bond"
 "The Bowl Blew Hot[r], by Beth Low"
@@ -33379,6 +33424,7 @@ blurb	prio
 "Brick Safe Backfires[r], by [if player is male]Abe Fricks[else]Beck Faris[end if]"
 "Brides['] Debris, Biders['] Rebids[r], by Sid Erb"
 "A Bridge, Rage-Bid[r], by Ida Berg" []
+"A Bright Brag Hit[r], by Garth Raith-Gibb"
 "Bring Me Mr. Being[r], by Ben Grim"
 "Bring Un-Burning[r], by Bri Gunn-Ninburg"
 "A Brittle Trite Lab[r], by Brett Ali"
@@ -33543,6 +33589,7 @@ blurb	prio
 "Clearly, Carlyle[r], by Ella Cyr"
 "Clematis Climates[r], by [if player is male]Alec Smit[else]Laci Smet[end if]"
 "A Cleric Pro-Reciprocal[r], by [if player is male]Rico Parcel[else]Carol Price[end if]"
+"Clings to a Nostalgic Antic Slog[t], by Gil Cantos"
 "Cloak a Lock[r], by Kao Allcock"
 "Clochards, Arch-Clods[r], by Cal Dorsch"
 "Clod Ed's Scolded Coddles[r], by Ced Olds"
@@ -33828,6 +33875,7 @@ blurb	prio
 "The Dirt's Third Set[r], by Sid Rhett"
 "Dirty Room Dormitory[r], by Roy Ditmor"
 "Disaster Dares Sit[r], by Tad Siers"
+"Discourses Cruised So[r], by Susie Cord"
 "Discriminators['] Doctrinairisms[r], by Smart Di Corsini"
 "Disgrace Acre Digs[r], by Cid Sager"
 "Dismalest Medalists[r], by Tad Smiles"
@@ -34143,6 +34191,7 @@ blurb	prio
 "Evil Laws Will Save[r], by [if player is male]Val Lewis[else]Liv Wales[end if]"
 "Evil Lord Dolliver[r], by Reid Voll"
 "Evil Twins Wilt Vines[r], by Wes Litvin"
+"Evildoers So Reviled[r], by [if player is male]Elrod Ives[else]Ilse Dover[end if]"
 "The Evils Hit Elves[r], by Les Veith"
 "Evita's Vitaes[r], by Ev Tsai"
 "Ew, Dorky Keyword[r], by Drew Koy"
@@ -34348,6 +34397,7 @@ blurb	prio
 "Ghost Mine Hosting Me[r], by Tim Goshen" []
 "Giant Gnat, I[r], by Gianni Gatt"
 "Gift Fair Graffiti[r], by Gita Riff"
+"Gift: Soul of Guilt[r], by Gil Fouts"
 "Gig Re-Rises[r], by Sergi Giers"
 "Gigante's Naggiest Gang Site[r], by Gia Tseng"
 "Gil, Cease Elegaics['] Legacies[r], by Alec Geis"
@@ -34880,6 +34930,7 @@ blurb	prio
 "I'll Break, Bilk Earl[r], by Lila Berk"
 "I'll Mew I'l Well[r], by Lew Lim"
 "I'll Push His Pull[r], by Lips Uhl" []
+"I'll See Ellie's[r], by Les Eli"
 "I'll See Ellie's[r], by Liesel Leslie"
 "I'll Take Li'l Kate[r], by Elli Tak"
 "I'm a Drab Barmaid[r], by Ida Bram"
@@ -35184,6 +35235,7 @@ blurb	prio
 "Lend Drama, Dreamland Ladder Man[r], by Nedd Lamar"
 "Lend Ire, Dr. Eline[r], by [if player is male]Len Reid[else]Lin Deer[end if]"
 "A Lend-Laden, Leaden Land[r], by [if player is male]Dean Leland[else]Deanna Dell[end if]" []
+"A Lens Leans[r], by [if player is male]Sean Ansell[else]Lenna Sales[end if]"
 "LeRon or Len[r], by Errol Nolen"
 "Lest God Gets Old[r], by Del Gost"
 "Lestat's Stalest[r], by Tess Tal"
@@ -35293,6 +35345,7 @@ blurb	prio
 "Loony Em[r], by Lo-Money Moloney"
 "The Loop Hotel Op[r], by Holt Poe"
 "Loose Bandit Blaine Stood[r], by Leonida Bost"
+"Loose Lips Spool Lies[r], by [if player is male]Sol Pelosi[else]Lois Lopes[end if]"
 "Loot Inset on Toilets Too Silent[r], by [if player is male]Otis Nolte[else]Lois Otten[end if]"
 "A Looter Too Real[r], by Lea Root"
 "Lootery: Toy Lore[r], by Ry Toole"
@@ -35396,6 +35449,7 @@ blurb	prio
 "Manly Cheek? Many Heckle[r], by Helen McKay"
 "Manor O['] Maroon[r], by Namoor Romano"
 "Many Cited Mendacity[r], by Dita McNey"
+"Many of Us May So Fun[r], by Fay Munos"
 "Many Tell Mentally[r], by [if player is male]Ly Mantel[else]Lyn Telma[end if]"
 "Map in Desk: Speak, Mind[r], by Skip Amend"
 "Maples['] Elm Sap Sample, Slap Me[r], by Pam Les" []
@@ -35428,6 +35482,7 @@ blurb	prio
 "Me, Iris, I See Mr. Miseri[r], by Em Iris"
 "Me, Mayor: a Memory[r], by [if player is male]Roy Emma[else]Mary Moe[end if]" []
 "Me, Tiny Enmity, Ye Mint[r], by Tim Ney"
+"Mea, Mad, Man-Made[r], by Dan Emma"
 "Meager Mr. Agee[r], by Meg Rea"
 "Mean-Guts Aunt Meg's[r], by Gus Ament"
 "Mean Ol['] Man Leo Malone[r], by Len Mao"
@@ -35778,6 +35833,7 @@ blurb	prio
 "No Depth the Pond[r], by Ned Hopt & Ted Phon"
 "No Dreams or Amends as Modern[r], by Mad Soren Soderman"
 "No Eclat to Clean[r], by Al Conte & Nat Cole"
+"No Eighth High Note[r], by Theo Hing"
 "No Email, I'm Alone[r], by Mae Olin"
 "No Emir in Rome[r], by Normie Merino"
 "No Fakers: Forsaken Foe Ranks[r], by [if player is male]Frank Seo[else]Fern Sako[end if]"
@@ -36087,6 +36143,7 @@ blurb	prio
 "One Simp, Mo['] Spine: in Poems[r], by Enos Pim"
 "One Throng Gone North[r], by Rog Henton"
 "One Tip to Pine[r], by Pepine Totino"
+"One Twit I Went To[r], by [tt] Wen"
 "One Year or an Eye[r], by Rona Yee"
 "One's Nose Seen Soon[r], by Enos Eson"
 "Oneness [']N Nonsense[r], by Enos Senn"
@@ -36122,6 +36179,7 @@ blurb	prio
 "Or Pablo, Pool-Bar Boor-Pal[r], by Rob Opal"
 "Or Paint on a Trip[r], by Pat Rino"
 "Or Sadden Road's End[r], by Dan Erdos"
+"Or Sketch the Rocks: Her Stock[r], by Ros Ketch"
 "Or Stake a Stroke[r], by Art Seko"
 "Or Still I Stroll[r], by Tris Oll"
 "Or Vice I Cover[r], by Cicero Vivero"
@@ -36175,6 +36233,7 @@ blurb	prio
 "Outing Real Regulation: Nil Outrage[r], by [if player is male]Louie Grant[else]Rina Goulet[end if]"
 "Outlander Daunt-Lore[r], by Neal Tudor"
 "Outlive No Evolution[r], by Louie Vont"
+"The Ovals Have Lost[r], by [if player is male]Sol Vaeth[else]Tosha Lev[end if]"
 "Ovations to So Vain[r], by Otis Nova"
 "Overbearing Baron, Grieve[r], by Verona Grieb & Iva Bergeron"
 "Overbearing Brave Regino[r], by [if player is male]Ringo Beaver[else]Vernia Borge[end if]" []
@@ -36351,6 +36410,7 @@ blurb	prio
 "Portrayed Predatory[r], by Perry Toad"
 "Portugal's Sugar Plot[r], by Proust Gal Opal Gurst"
 "Poseidon is No Dope[r], by Odo Ipsen"
+"Poser Court Prosecutor[r], by Sue Proctor"
 "Posh Tim's Mosh Pits[r], by Toph Sims"
 "Posin['] to Stoop in: Options[r], by Otis Pon" []
 "The Posse Ops Sheet[r], by Tess Hope"
@@ -37004,6 +37064,7 @@ blurb	prio
 "A Snot Sat On So Tan: Son to Satan?[r] by Anton Tasso"
 "Snotbag Nagbots[r], by Bo Tsang"
 "Snotty St. Tony[r], by Ty Nost"
+"Snow, Ice: We Icons['] Wise Con[r], by Wes Cino"
 "Snowbird, Wind-Orbs[r], by Sid Brown & Bri Downs"
 "Snowglobe Bones, Glow[r], by Gwen Sobol"
 "Snub Theo on the Bus[r], by Ben South" []
@@ -38042,6 +38103,7 @@ blurb	prio
 "Yet Roughen the Younger[r], by Theo Gurney" []
 "Yet Shirk the Risky, eh, Kristy[r], by Trish Key"
 "Yet Walls Ally West[r], by Sly Ewalt" []
+"Yet Whilst With Style[r], by Sly Hewitt"
 "Yo, Bold Bloody Old Boy[r], by Bo Loyd"
 "Yo, Drop Droopy or Dopy[r], by Rod Yop"
 "Yo, Frauds, Your Fads[r], by Fay D'Urso" []
@@ -38086,11 +38148,13 @@ to say an-other:
 table of sports chatter [xxm05]
 blurb
 "'Bad calls, ball-cads!'"
+"'Bad team? Beat dem!'"
 "'Bears are BS!'" []
 "'Cal won?! A clown!'"
 "'Checked out? Cute. CHOKED.'"
 "'Cons rig scoring!'"
 "'Dam['] ref. Framed!'"
+"'Denton's tendons...'"
 "'Ducks suck'd!'"
 "'Ed Ford? Odd ref. Fodder.'" []
 "'Eh, umps push me.'"
@@ -38256,6 +38320,7 @@ blurb
 "mentions hip pop-culture allusions in [i]Just One More Neuters Mojo[r]."
 "mentions nobody better laugh at [i]LSD: I Slid[r]."
 "mentions the balance of sympathy and fact in [i]Ol['] Sots So Lost[r]."
+"mentions the message of [i]Meth Day: My Death[r]."
 "moves on from drugs for a moment to [i]Reality of a Toy Rifle[r]."
 "name-checks an actor from [i]Joints Cue No Justice[r]."
 "name-drops the latest didactic work [i]Bo's Free of Beers[r]."
@@ -38585,6 +38650,7 @@ blurb
 "Elysian Ainsley."
 "Employ My Pole."
 "Encounter None Cuter."
+"Enhanced Dee Chan."
 "Enjoy Jen, Yo."
 "Enrique's Queer Sin."
 "Enticers In Secret."
@@ -39756,6 +39822,7 @@ blurb
 "'O yep! Poey!'"
 "'Oblong ol['] bong!'" []
 "'Oh Petey, the poey poet, hey!'"
+"'OK, Poets spoke to toke-ops!'"
 "'OK, set, stoke!'"
 "'OK! Ted toked!'"
 "One moans, 'Men, fail life, man! Inflame!'"
@@ -39971,6 +40038,7 @@ blurb
 "lustin, d'oh! I shouldn't." []
 "mad ire? Dim era." []
 "make use of famous? Eek."
+"man, sense meanness."
 "'Me, sir:' mires."
 "melee pits? Sleep time."
 "mend soul un-seldom."
@@ -40051,6 +40119,7 @@ blurb
 "Virtues rivet us."
 "vulgarities['] guilt varies."
 "wannabe? Naw, bane." []
+"wish elite? White lies."
 "you hate? Yeah, out!"
 "zap ire: a prize!"
 "zen: fry frenzy."
@@ -40481,6 +40550,7 @@ blurb
 "Appealing lagniappe"
 "Artichoke, heck, a trio"
 "Beef or beer of before"
+"blast-meal meatballs"
 "Buffest buffets"
 "Cold-meat-meld taco"
 "Crud-Curd"
@@ -42291,6 +42361,19 @@ blurb
 "Tolerate to relate."
 "Traduce Decatur Curated." []
 "Transfer Fran Rest."
+"Trap Chae Capehart."
+"Trap Devon Davenport."
+"Trap Ernie Trepanier."
+"Trap Ian Partain-Trapani."
+"Trap Ida Partida."
+"Trap Lea Peralta."
+"Trap Leo Laporte."
+"Trap Les Stapler-Plaster."
+"Trap Maile Palmatier."
+"Trap Mel Lampert."
+"Trap Sana Pastrana."
+"Trap Shon Sharpton."
+"Trap Stone Patterson."
 "Trap/ail partial liar Pat."
 "'Treat yon no-treaty, tony-rate attorney.'"
 "Try out Ruy Ott."
@@ -43760,6 +43843,7 @@ blurb
 "'There, Al! The real heel! Rat!'"[]
 "'They amp empathy. Pay them.' / 'Empty.' / 'HA!'"
 "'They ARE teary, eh?'" []
+"'They mad! My death!'"
 "'They won? Note why. Won't, hey?'"
 "'Thinkers!' / 'Shtinker!'"
 "'Thirties? [s-w]tier.'"
@@ -43848,6 +43932,7 @@ blurb
 "'Un-tired? Intrude! Under it!'" []
 "'Uncle! Pa! Clean up!'" []
 "'Unheroic? Nice Hour!'" []
+"'Unwell, sot? Tell us now!' / 'Two sullen...'"
 "'Up ahead...aha, dupe!'"
 "'Up, cat! Act up!'"
 "'Up my...I...Ow!' / 'You wimp!'"
@@ -46607,6 +46692,7 @@ blurb
 "Limper Mr. Pile"
 "Listener Eli Ernst"
 "Literal Liar Tel" []
+"Lither Hitter Hiller"
 "Litigous Sot Luigi"
 "Litterbug [if player is male]Gilbert Tu[else]Britt Guel[end if]"
 "Lo-Grade Real Dog Geraldo" []
@@ -47162,6 +47248,7 @@ blurb
 "Patchy Chap Ty"
 "Patriotic Capriotti"
 "Pauser Prause"
+"Payer Peary"
 "Peaked Deepak"
 "Pearlier LaPierre"
 "Peckish Pischke"
@@ -47482,6 +47569,7 @@ blurb
 "Silent Roge Oesterling" []
 "Silent-Yawn Winstanley"
 "Sin Kid Sin Diskin"
+"Sin-Large Salinger"
 "Sin-Mouth Humiston"
 "Sir Erv Rivers"
 "Sir Paul Luprisa"
@@ -50045,6 +50133,7 @@ blurb
 "Hope Sunset Penthouses"
 "A Hut, Haut"
 "I-Arrive Riviera"
+"I, Empress Premises"
 "I'm-docile Domicile"
 "Icon-Set Section"
 "Idle-Cat Citadel"
@@ -50103,6 +50192,7 @@ blurb
 "Relog-Focus Golf Course"
 "Republic's Club Spire"
 "Rest Homes Most Sheer"
+"Riverside Rise Drive"
 "Rope Vista So Private"
 "Rose-Theme Tree Homes" []
 "Rosendale Oleanders" []
@@ -50128,6 +50218,7 @@ blurb
 "Tannest-Tenants St. Annet"
 "Tastee-Estate"
 "Tons-Hep Hot Pens"
+"Tons New Now Nest"
 "Too-Plush Pool Huts"
 "Top Dens to Spend"
 "Top-Floor Roof-Plot/Pool-Fort"
@@ -50266,6 +50357,7 @@ blurb
 "I'd Org, Rig, Do[r], by Rodd Giorgi"
 "I'm-Pert Permit: PR Time[r], by Emmitt Ripper"
 "Ideals: Sad Lie[r], by Dessie Dalila & Alesia Siddle" []
+"Ideas Open: an Episode[r], by Sandie Poe"
 "If in Lag, Failing[r], by Gil Fina"
 "Imagine: Me, I Gain[r], by Mia Inge" []
 "Imposs.? So Simp[r], by Pi Moss"
@@ -50297,6 +50389,7 @@ blurb
 "Mooninesses['] Noisomeness[r], by [sim] Esson"
 "Moored? Demo or Do More[r], by Rod Moe"
 "Motiv-Vomit[r], by Vi Tom"
+"Nail Down an Old Win[r], by [if player is male][else]Diann Low, Dawn Olin & Nona Wild[end if]"
 "Nearly Earn, Yen, Rally[r], by Arlyne Larney"
 "New Haters: the Answer[r], by Stew Ahern"
 "New Life? Few Line[r], by Ewin Elf"
@@ -50323,6 +50416,7 @@ blurb
 "One's Rant, Resonant: EARN TONS[r], by [if player is male]Art Sonne[else]Rose Tann[end if]" []
 "Ooh, Weep: Woe, Hope, Whoopee[r], by Howe Poe"
 "Oops, Hello Loopholes[r], by Loo Heslop"
+"Or Thrice to Richer Rhetoric[r], by [if player is male]Eric Hort[else]Terri Cho[end if]"
 "Organized? Zing! A Doer![r], by [if player is male]Ezra Godin & Edgar Zion[else]Zoe Gardin & Zona Ridge[end if]"
 "Out, Grhh, Through[r], by [if player is male]Hugh Ort[else]Ruth Goh[end if]"
 "Out, Man! AMOUNT![r] by Mo Tuan"
@@ -51071,6 +51165,7 @@ blurb
 "Wish Ren Her Wins" []
 "Woe, Hurt: How True"
 "Woman Mo['] Wan, Man. Ow"
+"Won't Lose Low Notes"
 "Working King Row" []
 "Worldly Wry Doll"
 "Worn-Out-Now Rout" []
@@ -52452,6 +52547,7 @@ blurb
 "Rossiter's resistors"
 "Rupal's Pulsar"
 "the Saito Iotas"
+"Salinger-Lerangis aligners" []
 "Salminen melanins" []
 "Salonga analogs" []
 "Sammel lemmas"
@@ -53989,6 +54085,7 @@ blurb
 "Us-R-Lo-IQ Liquors"
 "Wan Gin Awning"
 "Wardless Sal Drew's"
+"Wastin['] Tawni's"
 "Wastrel Art Lew's" []
 "Webster's Brew Sets"
 "Wild Gus Ludwig's"

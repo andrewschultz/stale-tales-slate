@@ -91,8 +91,11 @@ sub cromu
   }
   
   #lumped together
+  if ($#thisAry)
+  {
   if ($_[0] =~ /@thisAry[0]@thisAry[1]/) { return 1; }
   if ($_[0] =~ /@thisAry[1]@thisAry[0]/) { return 1; }
+  }
   
   #words apart
   for $tomatch (@thisAry)

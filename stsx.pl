@@ -5,7 +5,7 @@ open(A, $anaIdeas) || die ("No ideas file $anaIdeas.");
 while ($a = <A>)
 {
   if ($a =~ /^table of/) { chomp($a); $currentTable = $a; next; }
-  if ($a !~ /[a-z0-9]/) { $currentTable = ""; next; }
+  if ($a !~ /[a-z0-9]/i) { $currentTable = ""; next; } # could also check for no start quote
   if ($currentTable)
   {
     #print "$currentTable gets $a";
