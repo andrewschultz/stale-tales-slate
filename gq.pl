@@ -21,6 +21,8 @@ $printUntabbed = 1;
 $pwd = getcwd();
 
 if ($pwd =~ /oafs/) { $oafs = 1; $roiling = 0; }
+elsif ($pwd =~ /threed/) { $threed = 1; $roiling = 0; }
+elsif ($pwd =~ /Compound/) { $compound = 1; $roiling = 0; }
 else
 { $roiling = 1; }
 
@@ -50,6 +52,14 @@ if (!@thisAry[0]) { die ("Need an argument."); }
 if ($oafs)
 {
 processStory("uglyoafs");
+}
+elsif ($threed)
+{
+processStory("threediopolis");
+}
+elsif ($compound)
+{
+processStory("compound");
 }
 elsif ($roiling)
 {

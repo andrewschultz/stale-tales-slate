@@ -32,10 +32,11 @@ $proj{"-pc"} = "compound";
 $proj{"-p"} = "compound";
 
 #which projects are z machine? Default is glulx
+$zmac{"compound"} = 1;
 $zmac{"threediopolis"} = 1;
 $zmac{"dirk"} = 1;
 
-$use6l{"compound"} = 1;
+$use6l{"compound"} = 0;
 
 $runBeta = 0;
 $debug = 0;
@@ -168,6 +169,10 @@ system("\"$infDir/Compilers/$i6x\" -kw~S~D$iflag +include_path=$base,$bdir $bdir
 #system("\"C:/Program Files (x86)/Inform 7/Compilers/cblorb\" -windows Release.blurb Build/output.gblorb");
 printf "Bundling for release.\n";
 system("\"$infDir/Compilers/cblorb\" -windows $base/Release.blurb $bdir/output.$gz");
+$fileShort = getFile("$base/Release.blurb");
+$rdir = "$base\\Release";
+$rdir =~ s/\.inform/ Materials/g;
+$cpString = "copy $bdir\\output.$gz \"$rdir\\$fileShort\""; `$cpString`;
 if ($execute) { $execute = 0; `$bdir/output.$gz`; }
 }
 }
