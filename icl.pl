@@ -32,7 +32,7 @@ $proj{"-pc"} = "compound";
 $proj{"-p"} = "compound";
 
 #which projects are z machine? Default is glulx
-$zmac{"compound"} = 1;
+$zmac{"compound"} = 0;
 $zmac{"threediopolis"} = 1;
 $zmac{"dirk"} = 1;
 

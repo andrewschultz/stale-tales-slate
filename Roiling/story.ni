@@ -27382,6 +27382,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Goodwill's Wild Logos"
 "Gordon C.'s Corndogs"
 "Gordon Facio Organic Food"
+"Gorin's O-Rings"
 "Gorsline-Olinger's Resoling"
 "Gosman Mangos"
 "Got new? Get now!!!!"	true
@@ -27661,6 +27662,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Lyman H.'s Hymnals" []
 "Ma Blink's Lambskin"
 "Ma Lucci's Accu-Slim"
+"Ma's Queer Marquees"
 "Mac Bly's Cymbals"
 "Mac's Scam-Cams"
 "Macrae's Cameras"
@@ -28164,6 +28166,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Sign Up! Ed's Dispunges Pudginess!"	true
 "Signature Great Unis"
 "Signeur Guerin's Reusing"
+"Signor Ringo's"
 "Silbernagel Relabelings"
 "Silken-April Painkillers"
 "Simcox's Comix"
@@ -30208,6 +30211,7 @@ blurb
 "Regentship Spree-Thing"
 "Reichs['] Riches"
 "Ribs Gone? Sobering"
+"Rid a Raid"
 "A Rider-Raider" []
 "Rifle Op Profile of Peril"
 "Ring of Forgin[']"
@@ -30528,6 +30532,7 @@ blurb
 "The IRS Riseth"
 "It Opts to Spit"
 "Jem or Mr. Joe"
+"Jim's Boy is My Job"
 "Joe Bay's Easy Job"
 "Kid of OK Dif"
 "Lab Tot Talbot"
@@ -32022,6 +32027,7 @@ blurb
 "To Enjoy on Yo['] Jet"
 "To Flay Yo['] Flat"
 "To Hit it, Tho[']"
+"To Hos So Hot"
 "To I the Hottie"
 "To Make OK, Mate, Take Mo[']" []
 "To Sift Fo['] Tits"
@@ -33213,6 +33219,7 @@ blurb	prio
 "Aw, Urged, We Guard[r], by Gerda Wu"
 "Awe-Smit, It was Me[r], by Mia West"
 "Awesome Mesa Woe[r], by Wee Amos"
+"Awesomely Measly Woe[r], by [if player is male]Wesley Mao[else]Salome Yew[end if]"
 "Axe Sully Sexually[r], by Elsy Laux"
 "Axioms: So, a Mix[r], by Amos Xi"
 "Ay, Funds: Fun Days[r], by Sandy Fu"
@@ -33634,6 +33641,7 @@ blurb	prio
 "Computersd['] Cute Romps[r], by Tom Spruce"
 "Comrades['] Co-Dreams[r], by Ed Marcos"
 "Conceal Rarely Yon Cry Alone[r], by Carolyne Roylance"
+"Concertos, Not Soccer[r], by [if player is male]Scot Crone[else]Coco Ernst[end if]"
 "Confession Confines So[r], by [if player is male]Ennis Fosco[else]Connie Foss[end if]"
 "Confide, Def Icon[r], by Doc Fine"
 "Congruity Outcrying[r], by [if player is male]Guy Citron & Cyr Guiton[else]Ying Turco[end if]"
@@ -33853,6 +33861,7 @@ blurb	prio
 "Diagnose San Diego? Agonised[r], by [if player is male]Dino Sage[else]Isa Ogden[end if]"
 "Diagnosis: God is a Sin[r], by India Goss" []
 "Dial Tone, To Denial Not Ideal[r], by Donte Ali & Ida Elton"
+"Diastole, Isolated[r], by [if player is male]Del Saito[else]Lois Date[end if]"
 "The Dice He Cited[r], by Ted Eich"
 "Dicer Deric Cried[r], by Cedric Reid" []
 "Dictatorship, Ditch a Ripost[r], by Picardi Shott"
@@ -34240,6 +34249,7 @@ blurb	prio
 "Far Moths, Hats From Shamfort Hot Farms[r], by Sam Forth"
 "Far North Front, Rah[r], by Fran Hort"
 "Farmy Ma Fry[r], by Mr. Fay Afrym"
+"Fast Firm Stiffarm[r], by Tim Sarff"
 "Fasties['] Fiestas: [']Tis Safe, Sis. Fate[r], by Tia Fess"
 "Fat Fence: an Effect[r], by Cate Neff"
 "Fat-i-vores['] Favorites[r], by Avi Foster" []
@@ -34739,6 +34749,7 @@ blurb	prio
 "Hovel Ten, then Love: the Novel[r], by Neel Voth"
 "How Guys Go Why Us?[r] by Gus Yhow"
 "How I Feel: Whole, Fie![r], by Leif Howe"
+"How I Met With Moe[r], by Tom Hwei"
 "Howard's Rad Show: Ah, Words, Raw Dosh[r], by Rod Shaw" []
 "Howls Due: She Would, We Should[r], by Welsh Duo Huw DeLos & Su DeWohl"
 "Howry St., Why Sort Thy Rows[r], by Hy Worst"
@@ -36054,6 +36065,7 @@ blurb	prio
 "Oi, Snaps! Sonia P's Passion Pains So[r], by San Piso"[]
 "Oil Baron: I Rob, Loan[r], by Nia Bloor"
 "Oil Castle, Coal Islet[r], by [if player is male]Ollie Cast[else]Elli Coats[end if]"
+"OK At the Hot Take[r], by [if player is male]Theo Tak[else]Kath Teo[end if]"
 "OK Bein['] Ken: Bio[r], by Ben Oki"
 "OK Fate to Fake[r], by Fae Kot"
 "OK, I Scold Cool Kids[r], by Solo Dick Cid Sokol"
@@ -36240,6 +36252,7 @@ blurb	prio
 "Our Nine Inure No Reunion[r], by Nino Ure"
 "Our Poets: Poseur to Too Super[r], by Rupe Soto"
 "Our Stuff: Surf, Tofu[r], by Stu Ruffo"
+"Our Sweat Wears Out[r], by Esau Trow"
 "Our Times Suit More Moisture[r], by Sue Mitro & Tim Rouse"
 "Oust-Outs Sous Tout[r], by Stu Souto"
 "Out, Crimson Consortium[r], by Curtis Moon" []
@@ -37695,6 +37708,7 @@ blurb	prio
 "Top Hex: the Pox[r], by Tex Pho"
 "Top Itch, Po['] Titch[r], by Chip Ott"
 "Top Poetry Prototype[r], by Toto Pyper"
+"Top Secret Pet Sector[r], by Scott Peer"
 "Top-Shore Hoopster Hopes Rot[r], by [if player is male]Seth Roop[else]Sher Toop[end if]"
 "Topically? Lo, Typical[r], by [if player is male]Ty Cipolla[else]Lacy Pilot[end if]"
 "A Torch to Char[r], by Art Cho"
@@ -37776,6 +37790,7 @@ blurb	prio
 "Twilights With St. Gil[r], by Stig Wilth" []
 "Twin Lakes: Like, Wants[r], by [if player is male]Nat Wilkes[else]Lin Swatek[end if]" []
 "Twin Lakes: Wink's Tale[r], by [if player is male]Lew Atkins[else]Tena Wilks[end if]"
+"A Twist: [']Twas It[r], by Si Watt"
 "Two Doors: Words, Too[r], by Tor Woods"
 "Two Hands Won't Dash[r], by [d-t] Shawn"
 "Two Males['] Last Meow[r], by Les Mowat"
@@ -38778,6 +38793,7 @@ blurb
 "Hard Long Horn, Glad."
 "Hard Ol['] Harold."
 "Hardon Rhonda."
+"Harem for Farm Hero"
 "Harem Trek: Mark There."
 "Harriet's Rare Hits."
 "Having a Vain Hag."
@@ -39373,6 +39389,7 @@ blurb
 "Sin-Haste Shanties." []
 "Sin Lady Lindsay."
 "Sin-Rent Interns."
+"Sin Toy So Tiny"
 "Sinful Tera Saintfleur."
 "Singlet-Tingles."
 "Sir, Do Doris or Sid." []
@@ -41691,6 +41708,17 @@ blurb
 "Strident Ned Ritts"
 "Superior [if player is male]Rupe Rios[else]Rose Puri[end if]" []
 "Superior Prior Sue" []
+"Sure Brenton Stoneburner"
+"Sure Colin Cornelius"
+"Sure Coy Coursey"
+"Sure Deana Dansereau"
+"Sure Delta Truesdale"
+"Sure Eli Leisure"
+"Sure Hank Hunsaker"
+"Sure Leif Fuselier"
+"Sure Olga Salguero"
+"Sure Sol Roussel"
+"Sure Star Strauser"
 "Swami Nelli Williamsen"
 "Swami Wasim"
 "Take-Charge [if player is male]Hack Gartee[else]Kathe Grace[end if]"
@@ -45898,6 +45926,7 @@ blurb
 "Curb Kid Burdick"
 "Cure-All Cruella LaLucre" []
 "Cutesie Eustice"
+"Czar Racz"
 "Da Fool Adolfo"
 "Daimonic Dominica"
 "Dale-Dog Delgado"
@@ -50457,6 +50486,7 @@ blurb
 "Not Enough? On, TOUGHEN[r], by Teno Huong"
 "Not Huge? Toughen[r], by Geo Hunt" []
 "Not-Scary CAN Story[r], by [if player is male]Ron Stacy[else]Caryn Tso[end if]"
+"Now Let's: Lots New[r], by Lon West"
 "Oftener, I Grip Profiteering[r], by Rini Goepfert"
 "Oh, Acuter Outreach: Euro-Chat, a Retouch[r], by Hector Au"
 "Oh, Get the Go HE Got[r], by Theoto Hegg"
@@ -50506,6 +50536,7 @@ blurb
 "Salaries Assailer[r], by [if player is male]Les Arias[else]Ali Sears[end if]"
 "Saving Vs. Agin['][r], by Vi Gans" []
 "See Bills: Less Bile[r], by Lee Bliss"
+"Sell Hard, Shred All[r], by Red Halls"
 "Sell More Junk? More Sullen (J/K)[r], by Joker Mullens"
 "Semi-Private Imperatives[r], by Mavis Petrie"
 "Servitude Divesture[r], by Trudi Eves"
@@ -50557,6 +50588,7 @@ blurb
 "Up, Lead: Due, Pal[r], by Ed Paul"
 "Up to Par? Pop a Rut[r], by Art Pupo"
 "Using Suing[r], by Suggins Niu" []
+"Very Nice Icy Nerve[r], by Vic Neyer"
 "Vie, Each: Achieve[r], by Evie Cha"
 "Waste Life? Fail, Sweet[r], by [if player is male]Lewis Fate[else]Fleta Wise[end if]" []
 "Weak No More: O, Remake Now[r], by Ewen Koroma"
@@ -53744,6 +53776,7 @@ blurb
 "A snafu-hit tuna fish babbles and broods."
 "'Sneak in Annike's!'"
 "Snickers as someone orders Dr. Ice Riced Cider."
+"So-Lazy Ol['] Yaz's"
 "'Sober up? O, pure BS!'" []
 "'Sobriety bites, Roy.'"
 "'Soda? Whiskey?' / 'Yikes, shadow!'"
@@ -55065,6 +55098,7 @@ blurb
 "'Hastily alit. Shy?'"
 "'A hasty stay, ha!'"
 "'Head over, evader! Ho!'"
+"'Honour? Ooh...run.'"
 "'A hurry? Hurray!'"
 "'I, abler bailer!'"
 "'I stunk of fink-outs!'" []
@@ -55142,6 +55176,7 @@ blurb
 "'Eh, reform from here!'"
 "'Ensure it reunites us entire!'"
 "'Ever solid, I RESOLVED!'"
+"'Hear from reform, ah!'"
 "'A hell-proof hope for all!'"
 "'Here's my plan. Many helpers?'"
 "'Hm, we're for reform! Hew! From where? Me! Feh! Rowr!'"

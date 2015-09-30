@@ -14295,6 +14295,7 @@ blurb
 "Melinha Hamelin-Heilman"
 "Mellisa Maselli"
 "Melonie LeMoine"
+"Menelaus Suleeman"
 "Mercer Cremer"
 "Merinda De Marin"
 "Merisa Samier"
@@ -15237,6 +15238,7 @@ blurb
 "Grievin['], Genivir? Grin! Vie!" []
 "A grim old marigold!"
 "Gunfire rung! Fie!"
+"Gus dies? I'd guess Sue digs."
 "A gym, gamy. My gay mag."
 "Hag dens gnashed!"
 "Hag sat aghast."
@@ -15562,6 +15564,7 @@ blurb
 "Oh, Mastery: the Mayor's myth arose more hasty!"
 "Oh, me! Home!"
 "Oh, Pat's so phat."
+"Oh, read or head a horde!"
 "Oh, rent throne!"
 "Oh, sin or honor is SO, rhino."
 "Oh, Sir Don! Dishonor!"
@@ -15896,6 +15899,7 @@ blurb
 "To warrens near-worst! Narrowest!"
 "To Wear a Tower? Woe, art!" []
 "To Wharf-Fort? Haw? For what?"
+"To whiff off with Tiff: who?"
 "Togas of oafs got a soft go."
 "Too Hep to Hope, oh Poet."
 "Torn legs? Slog-rent? Rest long!"
@@ -17849,25 +17853,6 @@ understand "boot [any thing]" as booting.
 
 carry out booting:
 	now noun is in lalaland;
-	the rule succeeds;
-
-chapter feating
-
-feating is an action applying to one visible thing.
-
-understand the command "feat [any thing]" as something new.
-
-understand "feat [any thing]" as feating.
-
-carry out feating:
-	let Q be the number of things that anagram the noun;
-	if Q is 0:
-		say "Warning no anagrams.";
-	otherwise:
-		now all things that anagram noun are in lalaland;
-		say "[list of all things that anagram noun] swept away.";
-	now noun is in location of player;
-	say "[noun] is in the room.";
 	the rule succeeds;
 
 chapter met
