@@ -34640,6 +34640,7 @@ blurb	prio
 "He Rocks Chokers[r], by Ros Heck"
 "He Tames Math: See the Same[r], by Semetha Teesham" []
 "He Trumps Thumpers[r], by Seth Rump"
+"He Won't Be On the Web[r], by Beth Owen"
 "He'll Bat the Ball[r], by Bet Hall"
 "He's All a Shell[r], by Hal Les"
 "He's Past the Pass[r], by Pat Hess"
@@ -34847,6 +34848,7 @@ blurb	prio
 "I Lay Aily[r], by Ilya Y. Ali"
 "I Learn, Linear, in Real[r], by Arline Lanier"
 "I Led, Idle[r], by Edie Dill"
+"I, Let So to Lies[r], by Ossie Elliott"
 "I Loan Ol['] Ian a Lion[r], by Ilona O'Lain"
 "I Lower, We Roil[r], by Lew Rio"
 "I, Lynnea, Inanely[r], by [if player is male]Neal Yin[else]Lani Ney[end if]"
@@ -35830,6 +35832,7 @@ blurb	prio
 "Nicely Slam Miscellany[r], by [if player is male]Lyman Celis[else]Elsy McLain[end if]"
 "Nicer Song Censoring Rings Once, Cringes On[r], by Ren Scogin"
 "Nicest Boy Obscenity[r], by Tyson Bice"
+"A Night Nigh At Hating[r], by [if player is male]Ian High-Gantt[else]Gigi Thanh-Tan[end if]"
 "Nightless Lightness[r], by St. English"
 "Nil-Anger Learning[r], by Ira Glenn"
 "Nine Loser One-Liners[r], by Lorie Senn" []
@@ -36429,6 +36432,7 @@ blurb	prio
 "The Poor Troop, Eh[r], by Thor Poe"
 "Pop Thee The Pope, Hep Poet[r], by [if player is male]Theo Epp[else]Pet Hope[end if]"
 "Pop's Oral Proposal: Spar-Pool[r], by Pal Spoor"
+"The Pope's Hot Peeps[r], by Theo Epps & Pepe Tosh"
 "Populist to Pupils: Up, Spoilt![r] by Otis Pulp"
 "Porcelain Pelican or Replica? NO[r], by [if player is male]Leon Capri[else]Clare Pino[end if]"
 "Porcelain[r], by [if player is male]Colin Earp[else]Roni Capel[end if]"
@@ -37320,6 +37324,7 @@ blurb	prio
 "Strife of FireSoft: Forfeits[r], by Riff Seto" []
 "StriveCo Covers It[r], by Vic Oster"
 "Strober Orb, Rest[r], by Roberts Berrost"
+"Strum, Strum[r], by Mr. Stu Sturm"
 "Stuck Echo Checks Out[r], by Kutch Esco"
 "Studio M Dims Out[r], by Mo Dusti & Sid Muto"
 "Studying Tidy Guns[r], by Dingy Stu"
@@ -37951,6 +37956,7 @@ blurb	prio
 "The War Wreath Thawer[r], by Art Hew" []
 "The Ward: Wet, Hard[r], by Tad Rhew"
 "Wardle's War Sled[r], by Sal Drew"
+"Wariest, Swear It[r], by Ira West"
 "Wariest Waiters[r], by Ari West" []
 "Warlocks['] Laws Rock[r], by Cal Skrow"
 "Warm Boy Mowbray[r], by Mary Bow"
@@ -41640,6 +41646,7 @@ blurb
 "Right One [if player is male]Thor Egin[else]Inge Hort[end if]"
 "Right Ronna Harrington"
 "Righteous Geri South"
+"Rigorously-Sour Gilroy"
 "Rios 'Bzt' Zobrist"
 "Rivaling Virginal [if player is male]Gil Arvin[else]Avril Ing[end if]"
 "Ro 'Bzt' Bortz-Brotz"
@@ -50439,6 +50446,7 @@ blurb
 "I Snag Gains[r], by Ana Siggins" []
 "I'd Org, Rig, Do[r], by Rodd Giorgi"
 "I'm-Pert Permit: PR Time[r], by Emmitt Ripper"
+"I'm Stuck? Um, STICK[r], by [if player is male]Stu Mick[else]Kim Cust[end if]"
 "Ideals: Sad Lie[r], by Dessie Dalila & Alesia Siddle" []
 "Ideas Open: an Episode[r], by Sandie Poe"
 "If in Lag, Failing[r], by Gil Fina"
@@ -50531,6 +50539,7 @@ blurb
 "Richen Up, Punchier[r], by Rupe Chin"
 "Right Stuff: Turf Fights, Guff, Thirst[r], by Griff Shutt"
 "Risk on or Sink[r], by Rossini Kronk"
+"Rotting-Not Grit[r], by Tri Tong"
 "The Rules Hurt, Else[r], by [if player is male]Rush Leet[else]Hester Lu[end if]" []
 "Run With Hurt, Win[r], by Huw Rint"
 "Salaries Assailer[r], by [if player is male]Les Arias[else]Ali Sears[end if]"
