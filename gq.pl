@@ -1,10 +1,12 @@
 #gq.pl: stands for "grep quick"
 #this shows where certain text I may've already used pops up in Roiling or Shuffling. It pegs them both as Shuffling << Roiling.
+#-tb1 = table random, start with that word
 #-tb = table random
 #-t = table only
 #usage
 #gq.pl -tb rosco coors (matches both)
 #gq.pl -tb rosco (matches one)
+#gq.pl -tb1 rosco (matches starting with rosco)
 #gq.pl -m 10 yes (matches 1st 10 yes's)
 #
 #

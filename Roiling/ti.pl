@@ -59,6 +59,10 @@ $uStr = ucfirst($addStr);
 
 open(A, "$dictDir/$initFile") || die ("No $initFile.");
 
+open(C, ">>c:/games/inform/roiling.inform/Source/ppl-scratch.txt");
+
+print C "=======$uStr\n";
+
 while ($a = <A>)
 {
   chomp($a);
@@ -104,11 +108,13 @@ while ($a = <A>)
   }
   if ($middleName)
   {
+  if (lc("$a$uStr") eq lc($last{$q})) { next; }
   $this = "$a '$uStr' $last{$q}";
   $this =~ s/^([a-z])/uc($1)/ge;
   }
   else
   {
+  if (lc("$uStr$a") eq lc($last{$q})) { next; }
   $this = "$uStr $a $last{$q}";
   }
   $this =~ s/-([a-z])/-uc($1)/ge;
@@ -116,6 +122,7 @@ while ($a = <A>)
   $count++;
   $cs++;
   print "\"$this\"\n";
+  print C "\"$this\"\n";
   }
 }
 

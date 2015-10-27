@@ -179,7 +179,7 @@ sub sortTheTable
 	$num = () = $a =~ /\"/gi;
 	if (($num % 2) || (!$num)) { $quoteWarn .= "  -- $thisTable: $a\n"; }
   }
-  print "$count: Sorting $thisTable, " . ($#ary+1) . " total elements.\n";
+  printf("%2d: Sorting $thisTable, " . ($#ary+1) . " total elements.\n", $count);
   if ($#ary < 23)
   { print "********UH OH, THERE ARE WAY TOO FEW, $#ary********\n"; }
   @ary2 = sort {lch($a) cmp lch($b)} @ary;

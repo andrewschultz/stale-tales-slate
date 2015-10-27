@@ -9,7 +9,7 @@ while ($a = <A>)
   if ($currentTable)
   {
     #print "$currentTable gets $a";
-    $toAdd{$currentTable} .= $a;
+    $toAdd{$currentTable} .= $a; $totalAdded++;
   }
 }
 
@@ -17,6 +17,8 @@ addIdeas("roiling");
 addIdeas("sa");
 
 cleanUpLoneFile();
+
+printStats();
 
 ##################################
 #addIdeas
@@ -44,6 +46,9 @@ sub addIdeas
       $c = <A>;
       print B $c;
       print B $toAdd{$b};
+	  @x = split(/\n/, $toAdd{$b});
+	  $toFiles{$_[0]} += $#x + 1;
+	  print "$b added " . ($#x + 1) . " entries.\n";
     }
   }
 
@@ -92,4 +97,13 @@ sub cleanUpLoneFile()
   $cmd = "copy $anaDel $anaIdeas";
   print "$cmd\n";
   `$cmd`;
+}
+
+sub printStats
+{
+  print "$totalAdded total names/ideas added.\n";
+  for $x (sort keys %toFiles)
+  {
+    print "$x had $toFiles{$x} entries.\n";
+  }
 }
