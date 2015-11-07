@@ -38,10 +38,11 @@ while ($count <= $#ARGV)
   {
   /-m/ && do { $middleName = 1; $count++; next; };
   /-p/ && do { $printCmds = 1; $count++; next; };
+  /-d/ && do { $allowDupe = 1; $count++; next; };
   /-f/ && do { $lastsFile = "firsts.txt"; $firstsFile = "lastbig.txt"; $count++; next; };
   /-r/ && do { $reverses = 1; $count++; next; };
   /-\?/ && do { usage(); $count++; next; };
-  /^[a-z]/ && do { $fullStr = $a; $count++; next; };
+  /^[a-z]/i && do { $fullStr = $a; $count++; next; };
   }
 }
 
@@ -56,6 +57,20 @@ if ($firstNames) { $initFile = "$firstsFile"; } else
 }
 $addStr = lc($fullStr); $addStr =~ s/\.//g;
 $uStr = ucfirst($addStr);
+
+if (!$allowDupe)
+{
+  open(A, "c:/games/inform/roiling.inform/Source/ppl-scratch.txt");
+  while ($a = <A>)
+  {
+    if ($a =~ /===$fullStr$/i)
+	{
+	  close(A);
+	  die("According to ppl-scratch.txt, you've already searched for $fullStr. If you want to allow duplicates, try -d.\n");
+	}
+  }
+  close(A);
+}
 
 open(A, "$dictDir/$initFile") || die ("No $initFile.");
 
@@ -79,8 +94,8 @@ close(A);
 
 #for $x (sort keys %last) { print "$x: $last{$x}\n"; } die;
 
-readUp("firsts.txt");
-readUp("$lastsFile");
+readUp("firsts.txt", 0);
+readUp("$lastsFile", 1);
 
 sub readUp
 {
@@ -98,9 +113,12 @@ while ($a = <A>)
   $a = lc($a);
   $b = "$addStr$a";
   $q = alf($b);
-  if ($first{$q}) { next; }
-  $first{$q} = 1;
-  if ($last{$q})
+  $aalf = alf($a);
+  if ($first{$aalf} && ($_[0] == 0)) { next; } #skip over 2 first names
+  if ($pinged{$q} && $first{$a}) { next; }
+  $pinged{$q} = 1;
+  $first{$aalf} = 1;
+  if ($last{$q} || $first{$q})
   {
   if ($printCmds)
   {
@@ -127,7 +145,7 @@ while ($a = <A>)
 }
 
 print "$count total names found.\n";
-if ($cs < $count) { print "$cs this go-round.\n"; }
+if ($cs < $count) { print "$cs this go-round.\n"; } else { print C "~~~~~~~~~~\n"; }
 print "============\n";
 close(A);
 

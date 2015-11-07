@@ -14892,6 +14892,7 @@ book sortie
  
 table of poem codas [xxi]
 blurb
+"Era custom: out-scream a customer."
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
 "Act four: fur coat. Our fact."

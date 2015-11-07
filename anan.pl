@@ -87,7 +87,7 @@ while ($a = <A>)
   $toAdd = "";
   for $q (keys %times) { if ($mytimes{$q} > 0) { $toAdd .= uc($q) x $mytimes{$q}; } }
   
-  if (!$eqOnly) { if (!$toAdd) { print "!"; $matches .= " $a"; } print "/" . alfo($toAdd); } else { if ($matchFlag) { $matches .= " $a"; } }
+  if (!$eqOnly) { if (!$toAdd) { print "!"; $matches .= " $a"; } print "/" . alfo($toAdd); } else { if ($matchFlag && !$toAdd) { $matches .= " $a"; } }
   if ($linked{alfo($a)}) { print "=$nameType{alfo($a)}|$linked{alfo($a)}/$bkwd{alfo($a)}"; if ($eqOnly) { $count++; if ($count == 5) { print "\n"; $count = 0; } else { print ", "; } } }
   else
   {
