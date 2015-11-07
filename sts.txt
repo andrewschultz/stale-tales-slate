@@ -1,14 +1,34 @@
 table of random books [xxm4] [tob]
+"Stand it Distant[r], by Sid Tant"
+"Old Bones Bled Soon[r], by Leo Bonds"
+"OK, I Bent: Bike Not[r], by Kit Bone"
+"A Rodent Not Dear[r], by Nate Ord"
+"Adorbs Sad Bro[r], by Bossard Bardo"
+"Most Lie to Smile[r], by Mel Otis"
+"Brain-Sim Mini-Bars[r], by Si Barmin"
+"She, Fool of Holes[r], by Flo Shoe"
+"Threw a Hit With Heart[r], by Rhea Whitt"
+"A Germ-Gamer[r], by Gemma Grear"
+"Compromise: Micro Poems[r], by Cooper Mims"
+"Trips to Stir Pot[r], by Ros Pitt"
+"Earbuds? Bad, Sure[r], by Sue Bard"
+"To Fine One Fit[r], by Toni Fife-Neto"
 
 table of posse bosses [xxv7]
+"One-Flog Flo Egon"
+"One-Plant Napleton"
 
 table of self-help bestsellers [xxv0]
+"Thus, Be In, But Shine[r], by Nib Shute"
+"One Raise: No Easier[r], by [if player is male]Rao Niese[else]Iona Rees[end if]"
 
 table of posh dialogue [xxv6]
 
 table of gritty dialogue [xxv4]
 
 table of ad slogans [xxm1]
+"Bert Snow Brownest Snot-Brew"
+"Rose Gupta Great Soup"
 
 table of to-sort=========================================
 
@@ -41,6 +61,7 @@ table of bad rappers [xxm2]
 table of biopics [xxm3]
 
 table of comedians [xxm4]
+"So-Nutty Tony Tsu"
 
 table of elmo emo [xxm5]
 
@@ -79,6 +100,8 @@ table of horbert farewells [xxu1]
 table of horbert musings [xxu2]
 
 table of mantle laments [xxu3]
+"FLOUT-PRAY? PARTY FOUL"
+"PAR-TAY? AY, TRAP! PAY, RAT"
 
 table of missing deli foods [xxu4]
 
@@ -87,6 +110,7 @@ table of moralizers [xxu5]
 table of checklist items [xxv1]
 
 table of DIVORCES articles [xxv2]
+"Posh dinner endorphins."
 
 table of ethics advice [xxv3]
 
@@ -103,6 +127,7 @@ table of bedding brands [xxp1]
 table of catechism pages [xxp2]
 
 table of Leo-Rand chitchat [xxp3]
+"They recount the best of [i]Pissant Pastins[r]."
 
 table of Leo-Rand idols [xxp4]
 
@@ -131,6 +156,7 @@ table of gizmo parts [xxw1]
 table of rodney bluster [xxw2]
 
 table of animal friends [xxt1]
+"a zz-more mozzer"
 
 table of Elmer and Merle squabbles [xxt2]
 
@@ -143,6 +169,7 @@ table of Elvira taunts [xxt5]
 table of political slogans [xxh1]
 
 table of selly yells [xxh2]
+"'Extra value! A rave! Exult!'"
 
 =====SA
 
@@ -151,12 +178,21 @@ table of job searcher names [xxx]
 table of evil locations [xxf]
 
 table of poem codas [xxi]
+"So grief fogs ire. Serf, I go."
+"Golf one? Go, felon, long foe!"
+"On my plate: lo, payment! Mo['] penalty!"
+"Get manic, magnetic magic net."
+"To miss moss: it smit so."
 
 table of camp chants [xxm1]
+"'Anti-beef: a benefit!'"
+"'Settle for tree lofts, freest lot!'"
 
 table of condo dialogue [xxm2]
 
 table of nerd natter [xxm3]
+"'On, up, geeky! Keep young!'"
+"'Sign up! Ping us!'"
 
 table of psas [xxm4]
 
