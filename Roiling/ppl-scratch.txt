@@ -1,1 +1,444 @@
-=======================scratch file for ti.pl writing out people. Should be kept empty, but just in case...
+=======================scratch file for ti.pl writing out people. Should be kept empty, except for things that have been already tried.
+=======Foul
+=======The
+=======Busy
+=======Trip
+=======Blind
+=======Grand
+=======Fat
+=======Good
+=======Swell
+=======Chill
+=======Darin
+=======Def
+=======DJ
+=======Dope
+=======Down
+=======Fly
+=======Fresh
+=======Hater
+=======Hood
+=======Ice
+=======Ill
+=======MC
+=======Neo
+=======New
+=======No
+=======Poet
+=======Wack
+=======Boor
+=======Bro
+=======Card
+=======Cheap
+=======Crass
+=======Fool
+=======Fun
+=======Goof
+=======Ham
+=======Lout
+=======No
+=======Not
+=======Nuts
+=======Oaf
+=======Rad
+=======Rash
+=======Raw
+=======Rude
+=======Sick
+=======Sicko
+=======So
+=======Too
+=======Wag
+=======Wild
+=======Wit
+=======Wry
+=======Yob
+=======Alto
+=======Blue
+=======Boy
+=======Cool
+=======Cute
+=======Deep
+=======Dire
+=======Hick
+=======Hip
+=======Hot
+=======Idol
+=======Kind
+=======Loner
+=======Lorn
+=======Loser
+=======Lost
+=======Mug
+=======Old
+=======Plain
+=======Po
+=======Poor
+=======Posh
+=======Sad
+=======Schmo
+=======Shmoe
+=======Slow
+=======Smooth
+=======So
+=======Sweet
+=======Swell
+=======Tenor
+=======Tramp
+=======Worn
+=======Blamer
+=======Bore
+=======Chider
+=======Clot
+=======Crank
+=======Cured
+=======Dolt
+=======Dork
+=======Drag
+=======Drip
+=======Drone
+=======Dry
+=======Dull
+=======Glum
+=======Goob
+=======Green
+=======Grim
+=======Guide
+=======Hatin
+=======Holy
+=======Meek
+=======Monk
+=======Nice
+=======No
+=======Nosy
+=======Not
+=======Nun
+=======Pain
+=======Pill
+=======Pope
+=======Priest
+=======Prig
+=======Prim
+=======Pure
+=======Rev
+=======Right
+=======Sane
+=======Snitch
+=======Stale
+=======Sure
+=======Too
+=======Trite
+=======Troll
+=======Twit
+=======Whiner
+=======Wonk
+=======Wrong
+=======Ax
+=======Axe
+=======Be
+=======Beat
+=======Bug
+=======Burn
+=======Call
+=======Cut
+=======Dis
+=======Fire
+=======Get
+=======Hire
+=======Hurt
+=======Nag
+=======Rip
+=======Ruin
+=======Scam
+=======Sell
+=======Slime
+=======Stop
+=======Tag
+=======Tip
+=======Trap
+=======Vet
+=======Whack
+=======Bad
+=======Bald
+=======Big
+=======Bony
+=======Bored
+=======Boss
+=======Bum
+=======Calm
+=======Cheat
+=======Cold
+=======Coy
+=======Creep
+=======Cruel
+=======Dark
+=======Domo
+=======Dour
+=======Drab
+=======Dumb
+=======Evil
+=======Fake
+=======Fast
+=======Fat
+=======Felon
+=======Flag
+=======Gaunt
+=======Goon
+=======Gory
+=======Grand
+=======Green
+=======Hard
+=======Hated
+=======Herr
+=======Ill
+=======In
+=======Kid
+=======King
+=======Lean
+=======Lewd
+=======Liar
+=======Loud
+=======Low
+=======Mad
+=======Made
+=======Mean
+=======Mo
+=======New
+=======No
+=======No
+=======Not
+=======Odd
+=======Ogre
+=======Old
+=======On
+=======Paid
+=======Pig
+=======Pro
+=======Red
+=======Sarge
+=======Scum
+=======Sham
+=======Shark
+=======Sharp
+=======Silent
+=======Slick
+=======Slob
+=======Sly
+=======Snide
+=======So
+=======SOB
+=======Sore
+=======Sour
+=======Thick
+=======Thin
+=======Too
+=======Tough
+=======Ugly
+=======Un
+=======Vain
+=======Well
+=======Wired
+=======Worst
+=======Ace
+=======Amb
+=======Big
+=======Bold
+=======Brain
+=======CEO
+=======Cmdr
+=======Coach
+=======Col
+=======DDS
+=======Dead
+=======Dir
+=======Doer
+=======Esq
+=======Gen
+=======Gov
+=======Great
+=======Hero
+=======Hon
+=======Icon
+=======Lady
+=======Lord
+=======Master
+=======Mensch
+=======Mogul
+=======Mr
+=======Mrs
+=======Ms
+=======Pro
+=======Rep
+=======Rich
+=======Scion
+=======Sec
+=======Sir
+=======Solon
+=======Super
+=======Supt
+=======VP
+=======Winner
+=======Wise
+=======A
+=======A
+=======How
+=======One
+=======A
+=======A
+=======Tips
+=======Why
+=======You
+=======Brute
+=======Fit
+=======Giant
+=======Huge
+=======Hunk
+=======Pro
+=======Rough
+=======Strong
+=======Stud
+=======Tank
+=======Thug
+=======TKO
+=======Tuf
+=======Tuff
+=======Vast
+=======Dev
+=======Doc
+=======Dr
+=======Geek
+=======Genius
+=======Hack
+=======MFA
+=======Neat
+=======Nerd
+=======PhD
+=======Savant
+=======Wiz
+=======Being
+=======Snot
+"Snot Name Stoneman"
+"Snot John Johnston"
+"Snot Peter Petterson"
+"Snot Roger Torgerson"
+"Snot Albert Rosenblatt"
+"Snot Roy Royston"
+"Snot Harry Strayhorn"
+"Snot Raul Raulston"
+"Snot Ian Nations"
+"Snot Mack Stockman"
+"Snot Al Alston-Slaton-Latson"
+"Snot Caleb Constable"
+"Snot Erick Ricketson"
+"Snot Boyd Boydston"
+"Snot Ernie Orenstein"
+"Snot Nigel Singleton"
+"Snot Bo Boston"
+"Snot King Kingston"
+"Snot Ruth Thurston"
+"Snot Angela Santangelo"
+"Snot Marie Sarmiento"
+"Snot Rachel Charleston"
+"Snot Ida Disanto"
+"Snot Irma Stromain"
+"Snot Erma Osterman"
+"Snot Lila Santillo"
+"Snot Tami Mattison"
+"Snot Ora Santoro"
+"Snot Petra Patterson"
+"Snot Amie Maisonet"
+"Snot Ma Matson-Maston"
+"Snot Cari Cortinas-Nicastro"
+"Snot Hanna Nathanson"
+"Snot Mirna Martinson"
+"Snot Kia Atkison"
+"Snot Meta Matteson"
+"Snot Li Liston-Tilson"
+"Snot Cherri Chronister"
+"Snot Lue Uselton"
+"Snot Yu Younts"
+"Snot Nga Sonntag"
+"Snot Ha Ashton-Haston"
+"Snot Le Elston-Letson"
+"Snot Tam Mattson"
+"Snot Maye Maysonet"
+"Snot Lili Tillison"
+"Snot Fe Fontes"
+"Snot Ka Stanko"
+"Snot Ara Santora"
+"Snot Barrie Barrientos"
+"Snot Kina Atkinson"
+"Snot Chia Atchison"
+"Snot Ta Staton"
+"Snot Lang Langston"
+"Snot Tu Sutton"
+"Snot Elli Elliston"
+"Snot Black Blackston"
+"Snot Patel Stapleton"
+"Snot Law Walston"
+"Snot Lay Slayton"
+"Snot Butcher Cuthbertson"
+"Snot Hammer Smotherman"
+"Snot Gold Goldston"
+"Snot Rader Ostrander"
+"Snot Harp Sharpton"
+"Snot Arce Conatser"
+"Snot Tan Stanton"
+"Snot Do Dotson"
+"Snot Lo Tolson"
+"Snot Mares Masterson"
+"Snot Her Thorsen"
+"Snot Limon Tomlinson"
+"Snot Evers Steverson"
+"Snot Lew Townsel"
+"Snot Hair Hairston"
+"Snot Hu Huston-Hutson"
+"Snot Brien Bronstein-Bornstein"
+"Snot Bigler Gilbertson"
+"Snot Pare Paterson"
+"Snot Tse Stetson"
+"Snot Sim Stimson"
+"Snot Rager Garretson"
+"Snot Hom Thomson"
+"Snot Heil Holstein"
+"Snot Cao Toscano"
+"Snot Bank Bankston"
+"Snot Tart Stratton"
+"Snot Neves Stevenson"
+"Snot Pink Pinkston"
+"Snot Mori Ormiston"
+"Snot Peer Peterson"
+"Snot Lor Rolston"
+"Snot Shim Smithson"
+"Snot Benites Bissonnette"
+"Snot Yao Santoyo"
+"Snot Fu Fuston"
+"Snot Feather Featherston"
+"Snot He Heston"
+"Snot Eisner Rosenstein"
+"Snot Ewart Watterson"
+"Snot Casella Castellanos"
+"Snot Mahr Horstman"
+"Snot Legge Eggleston"
+"Snot Alber Albertson"
+"Snot Gills Stollings"
+"Snot Mar Marston-Stroman"
+"Snot Hice Etchison"
+"Snot Calle Castellon"
+"Snot Loh Holston"
+"Snot Lis Stilson"
+"Snot Ye Stoney"
+"Snot Sin Stinson"
+"Snot Hou Houston"
+"Snot Heap Stanhope"
+"Snot Giunta Tousignant"
+"Snot Won Townson"
+"Snot Sea Tassone"
+"Snot Re Stoner-Nestor"
+"Snot Tay Stayton"
+"Snot Reith Rothstein"
+"Snot Glade Gladstone"
+"Snot Rohe Thoreson"
+"Snot Imai Tomasini"
+"Snot Huddle Huddleston"
+"Snot Carn Scranton-Cranston"

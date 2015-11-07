@@ -151,6 +151,7 @@ table of job searcher names [xxx]
 table of evil locations [xxf]
 
 table of poem codas [xxi]
+"Era custom: out-scream a customer."
 
 table of camp chants [xxm1]
 

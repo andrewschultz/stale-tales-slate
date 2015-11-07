@@ -11,7 +11,8 @@ for $thisarg (0..$#ARGV)
   if (@ARGV[$thisarg] eq "-p") { $plurals = 1;  next; }
   $thisMatch = lc(@ARGV[$thisarg]);
 
-if ($thisMatch =~ /=/) { $eqOnly = 1; $thisMatch =~ s/=//g; }
+if ($thisMatch =~ /==/) { $eqOnly = 1; $matchFlag = 0; $thisMatch =~ s/=//g; }
+elsif ($thisMatch =~ /=/) { $eqOnly = 1; $matchFlag = 1; $thisMatch =~ s/=//g; }
 
 if ($thisMatch =~ /-/) { $toSub = $thisMatch; $toSub =~ s/.*-([a-z]+).*/$1/g; $thisMatch =~ s/-[a-z]+//g; }
 
@@ -86,7 +87,7 @@ while ($a = <A>)
   $toAdd = "";
   for $q (keys %times) { if ($mytimes{$q} > 0) { $toAdd .= uc($q) x $mytimes{$q}; } }
   
-  if (!$eqOnly) { if (!$toAdd) { print "!"; $matches .= " $a"; } else { print "/" . alfo($toAdd); } }
+  if (!$eqOnly) { if (!$toAdd) { print "!"; $matches .= " $a"; } print "/" . alfo($toAdd); } else { if ($matchFlag) { $matches .= " $a"; } }
   if ($linked{alfo($a)}) { print "=$nameType{alfo($a)}|$linked{alfo($a)}/$bkwd{alfo($a)}"; if ($eqOnly) { $count++; if ($count == 5) { print "\n"; $count = 0; } else { print ", "; } } }
   else
   {

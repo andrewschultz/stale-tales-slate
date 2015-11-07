@@ -99,6 +99,8 @@ $nuSize = -s "$outFileName";
 
 if ($niSize != $nuSize) { print "Something went wrong. File sizes aren't equal! New=$nuSize Old=$niSize. Maybe check CR's."; die; }
 
+if ($badError) { print "BAD ERRORS FOUND, ABORTING\n$badError\n"; die; }
+
 postProcess("$thisDir");
 
 }
@@ -165,12 +167,12 @@ sub sortTheTable
   while ($a = <A>)
   {
     @c = split(/\"/,  $a);
-	if (($#c ==1) || ($#c > 2)) { die ("Uh-oh, wrong # of quotes at line " . ($lines+$#ary+2) . "\n$#c:$a"); }
-    if ($a =~ /^'/) { die ("Uh-oh, single quote line start at line " . ($lines+$#ary+2) . ", bailing."); }
+	if (($#c ==1) || ($#c > 2)) { $badError .= ("Uh-oh, wrong # of quotes at line " . ($lines+$#ary+2) . "\n$#c:$a"); }
+    if ($a =~ /^'/) { $badError .= ("Uh-oh, single quote line start at line " . ($lines+$#ary+2) . ", bailing."); }
     if ($a !~ /^\"/) {
-	  if ($a =~ /^[a-z]/i) { die ("Uh-oh, you started a table line with a character: # " .  ($lines+$#ary+2) . ", bailing."); }
+	  if ($a =~ /^[a-z]/i) { $badError .= ("Uh-oh, you started a table line with a character: # " .  ($lines+$#ary+2) . ", bailing."); }
 	  $ch = chr(0xe2);
-	  if ($a =~ /^$ch/) { die ("Uh-oh, smart quote found at line " . ($lines+$#ary+2) . ", bailing."); }
+	  if ($a =~ /^$ch/) { $badError .= ("Uh-oh, smart quote found at line " . ($lines+$#ary+2) . ", bailing."); }
 	  #print "Final = $a";
 	  last;
 	}
