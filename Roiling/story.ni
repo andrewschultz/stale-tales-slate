@@ -26728,6 +26728,10 @@ book manor
 
 table of ad slogans [xxm1]
 blurb	blare	[random sad ads: the blare field designates whether you have an exclamation point at the end]
+"Barnaby Bay Bran"
+"Bert Snow Brownest Snot-Brew"
+"Rose Gupta Great Soup"
+"Your Pets['] Super Toy"
 "[d-t] Saffo Fast Food"
 "[if player is male]Aaron Colt[else]Lora Acton[end if]'s Root Canals" [p]
 "[if player is male]Alec Pino[else]Loni Cape[end if]'s Special on Pecan Oils!"	true [p]
@@ -29155,6 +29159,8 @@ blurb	fave
 
 table of comedians [xxm4]
 blurb
+"Any-Barb Barnaby"
+"So-Nutty Tony Tsu"
 "Snot Roger Torgerson"
 "Snot Albert Rosenblatt"
 "Snot Harry Strayhorn"
@@ -30107,6 +30113,8 @@ blurb
 
 table of lame computer games [xxm6]
 blurb
+"Ports-O-Troops"
+"Pas-Mal Plasma"
 "Ace For a Force"
 "Ace vs. Caves"
 "Adrenaline-Lined Arena" []
@@ -31441,6 +31449,7 @@ blurb
 
 table of lame tv shows [xxm9]
 blurb
+"I'm Joe Emoji"
 "[if player is male]Mr. Simes[else]Ms. Rimes[end if] Simmers"
 "Add Dad"
 "Agent Tegan"
@@ -31680,6 +31689,7 @@ blurb
 
 table of laughhouses [xxm0]
 blurb
+"Her Famous Safe Humor Farmhouse"
 "Ace LOL Locale"
 "Ahh, Met the Ham"
 "Alf's Lafs"
@@ -31758,6 +31768,8 @@ blurb
 
 table of lousy hit songs [xxm01]
 blurb
+"New Ego Now, Gee"
+"LOL, Rave All Over"
 "[d-word-u], Be Bad Men"
 "A-OK We Awoke"
 "Abby, Baby"
@@ -33340,6 +33352,38 @@ this-book is a number that varies. this-book is usually 0.
 
 table of random books [xxm4] [tob]
 blurb	prio
+"Farmhouse Four Shame[r], by Amos Rhufe"
+"Die Calm, Mild Ace[r], by Cam Idle"
+"Moth-Eaten to Methane: Not a Theme[r], by Moe Hatten"
+"Elf Ross, Flosser for Less[r], by Ros Self"
+"A Grumpy Pray-Mug[r], by Ray Gump"
+"Waster of Wafers: to Swear, Oft[r], by Ewa Frost"
+"Matheis: His Mate, Tame-Ish[r], by Tim Shea"
+"Leprechauns['] Chapel Runes[r], by Claus Hepner"
+"Leprechaun: Her Cleanup[r], by Prue Chanel"
+"To Lash a Sloth[r], by LaTosha Holst"
+"A Dog is Sad: I Go[r], by Sid Gao"
+"Ah, Claim Malachi[r], by Hal Maci"
+"Torn Wing: Grin Nowt[r], by Wirt Nong"
+"Roy's Hit: Shy Tiro Sir Hoyt[r], by Troy Shi"
+"Flow, Sea of Wales[r], by Sol Efaw"
+"Run-Down Dunn Row Word Nun[r], by Dru Wonn"
+"Ker-Blam, Mr. Blake[r], by Mel Bark"
+"Vines-Gate: It Avenges Negatives[r], by Evan Geist"
+"Stand it Distant[r], by Sid Tant"
+"Old Bones Bled Soon[r], by Leo Bonds"
+"OK, I Bent: Bike Not[r], by Kit Bone"
+"A Rodent Not Dear[r], by Nate Ord"
+"Adorbs Sad Bro[r], by Bossard Bardo"
+"Most Lie to Smile[r], by Mel Otis"
+"Brain-Sim Mini-Bars[r], by Si Barmin"
+"She, Fool of Holes[r], by Flo Shoe"
+"Threw a Hit With Heart[r], by Rhea Whitt"
+"A Germ-Gamer[r], by Gemma Grear"
+"Compromise: Micro Poems[r], by Cooper Mims"
+"Trips to Stir Pot[r], by Ros Pitt"
+"Earbuds? Bad, Sure[r], by Sue Bard"
+"To Fine One Fit[r], by Toni Fife-Neto"
 "[a-b], Russ: ABUSERS[r], by Bess Rau"	0
 "[a-word-u] Zit Zen: Snazziest[r], by Issa Zentz"
 "[d-t] Shed the Odds[r], by Ted Dosh"
@@ -38977,6 +39021,8 @@ blurb
 
 table of sicko movies [xxs3]
 blurb
+"Husband Had Buns!"
+"Fee-Boys So Beefy."
 "[a-word-u]-Hump Smash-Up."
 "[a-word-u] Porn Parsons."
 "[d-word-u] Hoes Had Men So Handsome." []
@@ -40217,6 +40263,7 @@ blurb
 
 table of store c competitors [xxs5]
 blurb
+"Our Types['] SuperToy"
 "Agony Thus So Naughty"
 "ArtCo IE Erotica" []
 "Brassiere Brasserie"
@@ -40724,6 +40771,8 @@ blurb
 
 table of mantle laments [xxu3]
 blurb
+"FLOUT-PRAY? PARTY FOUL"
+"PAR-TAY? AY, TRAP! PAY, RAT"
 "ABET?! BEAT"
 "ABNORMAL BAN = MORAL"
 "ADS KILL ALL KIDS"
@@ -41192,6 +41241,7 @@ blurb
 
 table of moralizers [xxu5]
 blurb
+"Right-Way Gary Whit"
 "A. Turnip, Puritan" []
 "Abjured Jeb Radu"
 "Abjurer Jae Burr"
@@ -43469,6 +43519,8 @@ blurb
 
 table of DIVORCES articles [xxv2]
 blurb
+"Very fun fur envy."
+"Posh dinner endorphins."
 "[if player is male]Lawrence Li[else]Cari Newell[end if]'s Wine Cellars" [p]
 "Aerologists['] astrologies."
 "Aging an['] you: Young again?"
@@ -43738,6 +43790,7 @@ blurb
 
 table of gritty dialogue [xxv4]
 blurb
+"'Much set, the scum.'"
 "'*Sob* gin!' / 'Gibson!'" []
 "'[d-word-u]! Elf Feldman fled, man.'"
 "'A-ok, mob? KABOOM!'"
@@ -45132,6 +45185,8 @@ blurb
 
 table of posh dialogue [xxv6]
 blurb
+"'Fit? Sham. Him: Fats. Ham-fist.'"
+"'Dollar store? Adore, trolls! Stellar odor!'"
 "'[d-t]? A Toad!'"
 "'[d-word-u] shy, hm, Sandy?'" []
 "'[if player is female]Gwennie, win Gene[else]Gene, win Gwennie[end if]!'"
@@ -46446,6 +46501,8 @@ blurb
 
 table of posse bosses [xxv7]
 blurb
+"One-Flog Flo Egon"
+"One-Plant Napleton"
 "[a-word-u]hat Shasta" []
 "[a-word-u]hole Sal Shoe" []
 "[crap-u] Kid Pickard" []
@@ -51575,6 +51632,10 @@ blurb
 
 table of self-help bestsellers [xxv0]
 blurb
+"Thus, Be In, But Shine[r], by Nib Shute"
+"Pot O['] Gold: Good Plot[r], by [d-t] Ploog"
+"Up, Slam, um, Slap a Slump[r], by Su Lamp"
+"One Raise: No Easier[r], by [if player is male]Rao Niese[else]Iona Rees[end if]"
 "[if player is male]Fears, Mr[else]Fear, Mrs[end if]? Torn? TRANSFORMER[r], by Storm Ferran"
 "Able to Be a Lot[r], by Beata Botello"
 "Absolutely All-Best You[r], by [if player is male]Les Baluyot[else]Betsy Ulloa[end if]" []
@@ -51892,6 +51953,7 @@ blurb
 
 table of songs you could write [xxvx]
 blurb
+"Tone Deaf Note, Fade"
 "A-Holes So Hale"
 "A-One St.: So Neat" []
 "Ace, Pine in Peace"
@@ -52799,6 +52861,7 @@ blurb
 
 table of Leo-Rand chitchat [xxp3]
 blurb
+"They recount the best of [i]Pissant Pastins[r]."
 "[l-r] admits he couldn't handle the regimen of Thickener Kent Reich-Kitchener."
 "[l-r] considers ordering Buffs to Bust Off."
 "[l-r] considers re-reading [i]The New You, Thou Weeny[r], by Huey Towne."
@@ -55168,6 +55231,7 @@ blurb
 
 table of competing bars [xxy4]
 blurb
+"Charybdis Shady Crib"
 "[a-b]'s Base" [p]
 "Absorbing Bingo Bars" []
 "Ageless Lesage's" []
@@ -55647,6 +55711,8 @@ blurb
 
 table of theses [xxy6]
 blurb
+"Nag thou not a gun-oath."
+"Thug row? WROUGHT!"
 "Alert, clown: we can troll!"
 "All We Do: ALLOWED!" []
 "ARM! RAM! MAR!"
@@ -56074,6 +56140,7 @@ book otters
 
 table of animal friends [xxt1]
 blurb
+"a zz-more mozzer"
 "acid-snarl cardinals"
 "an agreeable bear-eagle"
 "an ambient mine-bat"
@@ -56365,6 +56432,8 @@ blurb
 
 table of Elvira taunts [xxt5]
 blurb
+"'Riddance--and cried! Acid, nerd? Candider!'"
+"'We gone now, gee?'"
 "'[if player is male]His foot hoofs it[else]Her foot, oft hero of other[end if]!'" []
 "'Act bold, bad clot!'"
 "'Adroit? Oaf, too afraid!'"
@@ -56514,6 +56583,7 @@ blurb
 
 table of selly yells [xxh2]
 blurb
+"'Extra value! A rave! Exult!'"
 "'All deserve deals. Revel!'"
 "'Aw, yep, we pay.'"
 "'Bargain! Baring a grin, bag!'"

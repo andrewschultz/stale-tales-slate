@@ -1,9 +1,7 @@
 A
 I
-AA
-AB
+O
 AD
-AE
 AG
 AH
 AI

@@ -14892,6 +14892,13 @@ book sortie
  
 table of poem codas [xxi]
 blurb
+"So grief fogs ire. Serf, I go."
+"Golf one? Go, felon, long foe!"
+"On my plate: lo, payment! Mo['] penalty!"
+"Get manic, magnetic magic net."
+"To miss moss: it smit so."
+"Feathery, they fear the faery."
+"Crazy old lard cozy. Lazy cord."
 "Era custom: out-scream a customer."
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
@@ -16080,6 +16087,8 @@ book metros
 
 table of camp chants [xxm1]
 blurb
+"'Anti-beef: a benefit!'"
+"'Settle for tree lofts, freest lot!'"
 "'Abusive USA vibe!'"
 "'Account, U-Can't-Co!'"
 "'The ad: hated!'"
@@ -16432,6 +16441,9 @@ blurb
 
 table of nerd natter [xxm3]
 blurb
+"'On, up, geeky! Keep young!'"
+"'Sign up! Ping us!'"
+"'Craft glue: gruel. FACT!'"
 "'Aliterate tail eater!' / 'Retaliate!'"
 "'Any D&D? Dandy?' The nerds laugh."
 "'The APIs ape this!' / 'Ha, spite!'"
@@ -16674,6 +16686,7 @@ blurb
 
 table of psas [xxm4]
 blurb
+"TAFFIES? FIE! FATS!"
 "11+2=12+1"
 "ABLEISM'S MISSABLE"
 "ACID TRIPS => RAPID TICS"
