@@ -13,8 +13,6 @@ my %ary;
 
 $printIfThere = 0;
 
-$tabString = "reg\t--\tseen\t--";
-
 $ary{"a"} = 2187818;
 $ary{"b"} = 18418905;
 $ary{"c"} = 19005585;
@@ -60,9 +58,32 @@ open(B, ">>c:/writing/dict/hv.txt");
 $doShuf = 1;
 $doRoil = 1;
 
+$regHash{"-rf"} = "forest";
+$rmHash{"-rf"} = "fields";
+$regHash{"-ri"} = "sortie";
+$rmHash{"-ri"} = "moor";
+$regHash{"-rm"} = "metros";
+$rmHash{"-rm"} = "underside";
+
+$regHash{"-ru"} = "routes";
+$rmHash{"-ru"} = "mesa";
+$regHash{"-rp"} = "presto";
+$rmHash{"-rp"} = "gyre";
+$regHash{"-rv"} = "troves";
+$rmHash{"-rv"} = "rathole";
+$regHash{"-rw"} = "towers";
+$rmHash{"-rw"} = "trefoil";
+$regHash{"-ry"} = "oyster";
+$rmHash{"-ry"} = "hops shop";
+$regHash{"-rt"} = "otters";
+$rmHash{"-rt"} = "inclosure";
+
+$region = "myreg"; $rm = "myrm";
+
 for $idx (0..$#ARGV)
 {
   $this = @ARGV[$idx];
+  if ($this =~ /-r[a-z]/) { $region = $regHash{$this}; if (!$region) { $region = "myreg"; } $rm = $rmHash{$this}; if (!$rm) { $rm = "myrm"; } next; }
   if ($this =~ /-p/) { $printIfThere = 1; next; }
   if ($this =~ /[0-9]/) { wordit($this); next; }
   if ($this =~ /-o/) { $myRegion = $this; $myRegion =~ s/^-o//g; if ($myRegion eq "") { die("Need to munge the region with -o."); } next; }
@@ -71,6 +92,8 @@ for $idx (0..$#ARGV)
   if ($this =~ /,/) { $tabString =$this; $tabString =~ s/,/\t/g; $tabString =~ s/_/ /g; next; }
 #print "$idx $this\n";
 if ($this eq "-t") { print B "TEMPLATE string hashval region room? whatseen? rule? gametext:\n"; next; }
+
+$tabString = "$region\t--\t$rm\t--";
 
 $hash = 0;
 #if ($this > 0)

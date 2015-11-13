@@ -14892,6 +14892,7 @@ book sortie
  
 table of poem codas [xxi]
 blurb
+"Meats of some fat: feast mo[']."
 "So grief fogs ire. Serf, I go."
 "Golf one? Go, felon, long foe!"
 "On my plate: lo, payment! Mo['] penalty!"

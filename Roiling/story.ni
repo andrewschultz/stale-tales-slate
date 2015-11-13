@@ -2078,8 +2078,8 @@ persuasion rule for asking an animal to try doing something:
 
 [routes]
 
-persuasion rule for asking church sign to try doing something:
-	say "If it could speak, it'd probably tell you you need to look inside yourself, anyway.";
+persuasion rule for asking scripture picturers to try doing something:
+	say "If they could speak, they'd probably tell you you need to look inside yourself, anyway.";
 	persuasion fails;
 
 persuasion rule for asking the-b to try doing something:
@@ -5492,10 +5492,17 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "profits"	512034065	stores	strip of profits	--	--	"[locname]."
 "profit"	415760099	stores	strip of profits	--	--	"[locname]."
 "orcas"	277143749	routes	same mesa	--	--	"[if adobe is visited]No further secrets[else]Hm, it's Oscar'S[end if]." [start ROUTES] [tonu]
-"mark"	204519952	routes	same mesa	--	--	"[name-worry]."
-"dilapidated"	523644520	routes	same mesa	--	--	"[name-worry]."
 "dingy"	289888397	routes	same mesa	--	--	"[name-worry]."
 "dwelling"	510897705	routes	same mesa	--	--	"[name-worry]."
+"scripture"	748407896	routes	--	mesa	--	"[picturer-change]."
+"cripture"	652133930	routes	--	mesa	--	"[picturer-change]."
+"picture"	566810127	routes	--	mesa	--	"[picturer-change]."
+"pictures"	663084093	routes	--	mesa	--	"[picturer-change]."
+"lairage"	348911935	routes	--	mesa	--	"Besides, lairage regalia is already tailored to the resident's style. So it's not yours to change[if adobe is visited], and you don't need to[else], but maybe examining it will help you get in[end if]."
+"adsorbing"	444086214	routes	--	mesa	--	"[board-change]."
+"signboard"	444086214	routes	--	mesa	--	"[board-change]."
+"sign"	242774022	routes	--	mesa	--	"[board-change]."
+"board"	201312192	routes	--	mesa	--	"[board-change]."
 "satin"	315472156	routes	same mesa	--	--	"The church's name is not as important as its mission."
 "worst"	466995137	routes	--	worst ad	--	"If you change the ad from the worst, maybe you won't make it better. Maybe you'll make something else even worse. So, focus on the whole."
 "list"	298190669	routes	cleric circle	--	--	"[follow-the-list]."
@@ -5521,7 +5528,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "past"	283037761	routes	same mesa	--	--	"[if deli is unvisited]Pat's seems slightly less forbidding for a moment[else]You don't need to do any more trickery with Pat's[end if]." [?! create vanishing scenery in the mesa that kicks you to Pat's]
 "elbows"	478600169	routes	--	giant's elbow	--	"Thankfully, the giant's only really swinging one elbow, so--less to deal with, yay?"
 "oscars"	373417715	routes	same mesa	--	--	"[if adobe is visited]Oscar's seems slightly less forbidding for a moment[else]You don't need to do more[end if]." [?! create vanishing scenery in the mesa that kicks you to Oscar's]
-"marquee"	596710416	routes	mesa	--	--	"[name-worry]."
+"adsorbing signboard"	596710416	routes	mesa	--	--	"[name-worry]."
 "grubby"	382226374	routes	mesa	--	--	"[name-worry]."
 "restaurant"	779336668	routes	same mesa	--	--	"[name-worry]."
 "seed"	372915273	routes	idle deli	--	--	"[pit-full]."
@@ -6460,6 +6467,12 @@ chapter table of nudges rules and text
 
 [ton-]
 
+to say picturer-change:
+	say "It's more likely that scripture can change you[if picturers are reflexive], or help you see something a bit simpler to say[else], and it already has, whether or not you believe[end if]";
+
+to say board-change:
+	say "It's what's on the board you need[if signboard is reflexed]ed[end if] to fix."
+	
 to say ruts-pull:
 	say "The ruts will pull you down if you look too far into them"
 
@@ -7934,7 +7947,7 @@ does the player mean objhinting the grouchy giant when mrlp is routes:
 
 carry out routes-hinting:
 	if cur-score of routes is 0 and prep-spoil is false:
-		all-say "[one of]You maybe haven't figured out what sort of word is needed in this zone yet. Oscar's, Pat's, and the church sign are clues.[plus][or]They're relatively short words, so maybe you can guess from them.[plus][or]Did you notice you can't seem to go in any compass direction?[plus][or]What's another sort of word that can describe a direction?[plus][or]It anagrams Poison Stripe.[plus][or]Prepositions[p-spo].[minus][cycling]" instead;
+		all-say "[one of]You maybe haven't figured out what sort of word is needed in this zone yet. Oscar's, Pat's, and the scripture picturers are clues.[plus][or]They're relatively short words, so maybe you can guess from them.[plus][or]Did you notice you can't seem to go in any compass direction?[plus][or]What's another sort of word that can describe a direction?[plus][or]It anagrams Poison Stripe.[plus][or]Prepositions[p-spo].[minus][cycling]" instead;
 	if huge thing is in Same Mesa:
 		if player is in same mesa:
 			try objhinting huge thing instead;
@@ -7944,7 +7957,7 @@ carry out routes-hinting:
 		try objhinting the-b instead;	[end global stuff]
 	if location of player is Same Mesa:
 		if cleric circle is unvisited:
-			try objhinting church sign instead;
+			try objhinting scripture picturers instead;
 		if bench is reflexive:
 			try objhinting bench instead;
 		if bench-end is reflexive:
@@ -7956,11 +7969,11 @@ carry out routes-hinting:
 		if old giant is in Same Mesa:
 			try objhinting old giant instead;
 		if Cleric Circle is unvisited:
-			try objhinting church sign instead;
+			try objhinting scripture picturers instead;
 		if Idle Deli is unvisited:
-			try objhinting marquee instead;
+			try objhinting adsorbing signboard instead;
 		if Adobe Abode is unvisited:
-			try objhinting decrepit mark instead;
+			try objhinting lairage regalia instead;
 	if location of player is cleric circle:
 		if list o toils is unexamined:
 			all-say "[if spoilit is true]The spoon reflects to[else]You will want to examine[end if] the list-o-toils.";
@@ -8883,15 +8896,7 @@ instead of attacking:
 to say sign-r-or-b:
 	say "[if sign-other is true]black[else]red[end if]";
 
-ever-pushed is a truth state that varies.
 sign-other is a truth state that varies.
-
-to say flipsine:
-	now ever-pushed is true;
-	if sign-other is true:
-		now sign-other is false;
-	else:
-		now sign-other is true:
 
 to say dont-hit of (fi - a person):
 	say "[if fi is fightin]Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. Think. Or, rather, out-think.)[else if fi is washed up]He'd still beat you up, even though he really doesn't want to fight. Wouldn't change that he and [other-guy of fi] are still [i]washups[r]. Maybe a talk with them would break their funk.[else]Slug lugs? As d-u-m as mud.[end if]"
@@ -8904,7 +8909,7 @@ paperwall	"It's still too thick, even though some of the plastter is peeled away
 Elmo	"[if rifle is visible]Elmo kind of has the upper hand here[else]No, he's here to help[end if]."
 drama armada	"That'd be a silly way to die." [START routes]
 Brother Horbert	"Yorpwald's already got a St. Lip-Split."
-church sign	"You kick the sign down the middle. It rocks back and forth slightly. Perhaps you'd be better off PUSHing it. Maybe it could swivel."
+scripture picturers	"A shameful attempt at vandalism."
 the-b	"It's like a dense metal or something. It's more likely it would make something else crack."
 old giant	"You don't have a weapon big enough to take him. One won't appear in your super purse."
 Pa Egg Pea	"It deserves to be ripped to shreds, but that'd just be littering." [START troves]
@@ -9128,8 +9133,6 @@ check pushing (this is the new can't push rule) :
 		say "Pushing live things is probably even less effective than attacking." instead;
 	if noun is skid:
 		say "You need to specify a direction to push the skid." instead;
-	if noun is church sign:
-		push-church-sign instead;
 	if noun is fixed in place or noun is scenery:
 		say "You give a few hups but fail to push." instead;
 
@@ -9142,14 +9145,8 @@ check pulling (this is the new can't pull rule) :
 		say "You don't need to corral people." instead;
 	if noun is skid:
 		say "You need to specify a direction to pull the skid." instead;
-	if noun is church sign:
-		say "(push, pull, same thing...)[line break]";
-		push-church-sign instead;
 	if noun is fixed in place:
 		say "Ullp! You can't pull..." instead;
-
-to push-church-sign:
-	say "You push the sign, and it flips around. You see a different message is on the other side[one of][or], one you're familiar with[stopping], as [dssd] becomes [flipsine][dssd][if circle is visited], though you don't really need to see it, any more[end if]."
 
 report pulling:
 	say "Ullp! You can't pull...";
@@ -9203,7 +9200,7 @@ check singing:
 	if player is in campsite:
 		say "[one of]'Oh sappy! So happy!' The birds go chürp chürp chëëp chëëp[or]Best not encourage cheeps-speech. The dirt itself might burst into song[stopping]!" instead;
 	if player is in same mesa:
-		say "You look at the church sign for a clue what to sing, and it says [dssd]. Hmm. You don't know any songs like that." instead;
+		say "You look at the scripture picturers for clues, and swirling in the design you see [dssd]. Hmm. You don't know any songs like that." instead;
 	if player is in cleric circle:
 		say "You don't know any appropriate songs, here." instead;
 	say "[randbla][line break]" instead;
@@ -10455,6 +10452,9 @@ Store V	troves-x	"troves"	"troves"	"You look more closely at Store V. Yes, those
 Store W	towers-x	"towers"	"towers"	"The store becomes a pair of twin towers, connected at the base where you can enter them."	false	594801246
 Store Y	oyster-x	"oyster"	"oyster"	"Blam! The store flattens a bit, rounds out, and becomes an oyster."	false	609225725	[end of the whole Strip of Profits flip bit]
 worst ad	worst ad	"towards"	"towards"	"You walk towards the ad to see what it says, and when you do, you find yourself not caring what direction you are going in. Then you hear a crackle, and someone yells, 'Catch that intruder!'[paragraph break]Ow! Darts! You pass out and wake up in the center of the same mesa again. The ad is gone. [if armada is in mesa]The armada murmurs--you were so close! Maybe you can find another way to get out[end if]You may not be closer to saving Yorpwald, but you've made it fractionally more livable, so yay there."	false	490212044	[start routes flip]
+picturers	picturers	"inside"	"inside"	"The church resigns ingress."	false	404002364	--	cleric circle
+lairage regalia	lairage regalia	"across"	"across"	"You walk across, not worrying about what is in front of you. Oscar's appears in front of you. You walk in."	false	373417715	--	adobe abode
+adsorbing signboard	adsorbing signboard	"past"	"past"	"You decide to walk past Pat's. Then, you turn and enter the alley just past it. The building lurches sideways toward you, and you manage to jump through the doorway with only a minor bump as it slams into you. You hear taps spat as you enter."	false	283037761	--	idle deli
 bench-end	bench-end	"astride"	"astride"	"You sit right on the end of the bench, prepared for a tired tirade. The brokest sob-trek ever--and yet, even with your yelling, 'Nag it, giant!' he wants his space. He shakes his arms, but you sense he would like to swing them--and he can't, without his elbow hitting you."	false	480723649
 elbow	Rude 'N Nuder	"below"	"below"	"You watch how the giant swings his elbows as he rants and when. There's a pattern and timing--disappointingly simple--maybe a few words he overemphasizes. He's able to get it all out, and he's kind of exhausted now. He pulls out a book labeled Rude [']N Nuder and proceeds to babble about how this is what Yorpwald is reduced to these days."	false	382326203
 bench	old giant	"against"	"against"	"Quakes squeak as the giant approaches, and you back off, because he is a lot bigger than you. He sits down and begins some angst-ail, which segues into tirades. 'Tantrums! Must rant!' The buggin['] biggun wants you to listen."	false	350259676	"[if old giant is visible]It wouldn't be wise to argue against the giant[else if old giant is in lalaland]You had your conversation for the day[else][bug-report][end if]."
@@ -12531,7 +12531,7 @@ definition: a thing (called candi) is bluable:
 	if candi is reflexed, no;
 	if candi is ghostly, no;
 	if candi is uncluing, no;
-	if candi is decrepit mark or candi is decrepit mark, no;
+	if candi is lairage regalia or candi is lairage regalia, no;
 	if candi is tunes, no;
 	if candi is crate:
 		if c2 is in plains, yes;
@@ -12651,7 +12651,6 @@ does the player mean objasking about the dingy dwelling:
 	if mrlp is routes:
 		it is very likely;
 	it is very unlikely.
-
 
 understand the commands "consult pad" and and "consult about" and "pad" as something new.
 
@@ -13727,9 +13726,9 @@ book Same Mesa
 
 understand "seam" as a mistake ("You can't find any crack in the Same Mesa that you could follow[if the-b is visible], except maybe under the bean[end if].") when player is in same mesa.
 
-understand "ames" as a mistake ("Ames, Iowa is less nowhere than here for sure. But you can't just up and leave.") when player is in same mesa.
+understand "ames" as a mistake ("Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys from rival Big Twelve schools might say. But you can't just up and leave.") when player is in same mesa.
 
-Same Mesa is a room in Routes. "Routes lead in all directions here, but they seem to twist before going anywhere. There's a plain old church here, replete with a church sign. You see [if bench is in lalaland]that bench the giant sat on[else if old giant is visible]the giant's bench[else]a bench, which looks to be a giant's[end if].[paragraph break]A grubby dwelling[if adobe is visited and pipe soot is in abode] (ACROSS to go back)[end if] and a dilapidated restaurant[if idle deli is visited and mushrooms are off-stage] (PAST to go back,)[else],[end if] each with its own sign, are here[if worst ad is visible], and far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if]."
+Same Mesa is a room in Routes. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the cleric circle[else]A cleric circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's a dingy dwelling with lairage regalia[end if], and [if deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with adsorbing signage[end if].[paragraph break]Finally, [if old giant is in lalaland]that bench the giant sat on still lies here[else if old giant is visible]the giant's bench[else]there's a bench, which is rather big, so it must be a giant's[end if]."
 
 check going in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
 	if old giant is visible:
@@ -13750,7 +13749,7 @@ check going in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
 							else:
 								move player to idle deli instead;
 				now in-try is true;
-				say "You just can't make it through the door to the plain old church. Something blocks you--you seemed a bit too glib about getting in, and they're not sure you're on their side[if abode is visited or deli is visited]--note, for where you already visited, you need to use [aop][end if]." instead;
+				say "You just can't make it through to the cleric circle. Err, well, maybe THROUGH isn't right. Something blocks you--you seemed a bit too glib about getting in, and they're not sure you're on their side[if abode is visited or deli is visited]--note, for where you already visited, you need to use [aop][end if]." instead;
 			move player to cleric circle instead;
 		say "You try going [noun] and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the same mesa[one of] (thank you, I'm here all game,)[or],[stopping] from the [opposite of noun], after several minutes." instead;
 	otherwise:
@@ -13768,71 +13767,27 @@ understand "inside" as insideing.
 
 carry out insideing:
 	if player is in mesa:
-		if drama armada is in mesa or the-b is in mesa:
-			say "[but-armada]" instead;
-	if old giant is visible:
-		say "Walking away would upset the giant. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help." instead;
-	if player is in Same Mesa:
-		say "[if Cleric Circle is unvisited]The church resigns ingress.[else]You go back inside, being a bit over-cautious with protocol. You could've just said IN.[end if]";
-		if Cleric Circle is unvisited:
-			reg-inc;
-		now player is in Cleric Circle instead;
+		try fliptoing picturers instead;
 	try going inside instead;
 
-chapter acrossing
-
-acrossing is an action applying to nothing.
-
-understand the command "across" as something new.
-
-understand "across" as acrossing.
-
-to say listen-cue:
-	say "Walking away would upset the giant. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help";
-
-carry out acrossing:
-	if player is not in Same Mesa:
-		say "[reject]" instead;
-	if huge thing is in mesa:
-		say "That huge thing is distracting you. Maybe you can deal with it now." instead;
-	if drama armada is in mesa or the-b is in mesa:
-		say "[but-armada]" instead;
-	if old giant is visible:
-		say "[listen-cue]." instead;
-	if Adobe Abode is unvisited:
-		say "You walk across, not worrying about what is in front of you. Oscar's appears in front of you. You walk in.";
-		reg-inc;
-	otherwise:
-		say "Yeah, ACROSS is fewer keystrokes than ENTER OSCAR'S, so hey...";
-	now player is in Adobe Abode instead;
-
-chapter pasting
-
-to say but-armada:
-	say "But... [if the-b is in mesa]THE BEAN[else]the huge thing[end if]! What to do with it[if armada is in mesa]? The armada mumbles nervously.[else]?[end if]"
-
-pasting is an action applying to nothing.
-
-understand the command "past" as something new.
-
-understand "past" as pasting.
-
-carry out pasting:
-	if player is not in Same Mesa:
-		say "[reject]" instead;
-	if huge thing is in mesa:
-		say "That huge thing is distracting you. Maybe you can deal with it now." instead;
-	if drama armada is in mesa or the-b is in mesa:
-		say "[but-armada]" instead;
-	if old giant is visible:
-		say "[listen-cue]." instead;
-	if Idle Deli is unvisited:
-		say "You decide to walk past Pat's. Then, you turn and enter the alley just past it. The building lurches sideways toward you, and you manage to jump through the doorway with only a minor bump as it slams into you. You hear taps spat as you enter.";
-		reg-inc;
-	otherwise:
-		say "You try the walking into the alley trick again, but the building stays still. You're a bit disappointed you can just walk in like that.";
-	now player is in Idle Deli;
-	the rule succeeds;
+check fliptoing when player is in same mesa (this is the allow entry for fancy verbs commands rule):
+	if noun is reflexed:
+		if noun is picturers or noun is lairage or noun is signboard:
+			if old giant is visible:
+				say "Walking away would upset the giant. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help" instead;
+			if drama armada is in mesa or the-b is in mesa:
+				say "But... [if the-b is in mesa]THE BEAN[else]the huge thing[end if]! What to do with it[if armada is in mesa]? The armada mumbles nervously.[else]?[end if]" instead;
+			if huge thing is in mesa:
+				say "That huge thing is distracting you. Maybe you should deal with it now." instead;
+		if noun is picturers:
+			say "You go back inside, being a bit over-cautious with protocol. You could've just said IN.";
+			move player to cleric circle instead;
+		if noun is lairage:
+			say "Yeah, ACROSS is fewer keystrokes than ENTER OSCAR'S, so hey...";
+			move player to Adobe Abode instead;
+		if noun is adsorbing signboard:
+			say "You try the walking into the alley trick again, but the building stays still. You're a bit disappointed you can just walk in like that.";
+			move player to idle deli instead;
 
 part people and things
 
@@ -13916,11 +13871,11 @@ description of poison stripe is "You can't really see it, but you can FEEL it."
 instead of doing something with the poison stripe:
 	say "You can really only sense the poison stripe, which is all you need to do. You will need to look around for a way out."
 
-chapter plain old church
+chapter cler-scen
 
-the plain old church is a backdrop. the plain old church is in Same Mesa and Cleric Circle. "It shows signs of decent upkeep but nothing special."
+the cler-scen is scenery in Same Mesa. "The scripture picturers, a staple for any Yorpwaldian place of worship, are particularly nice here[if picturers are not reflexed]. Maybe they can show you the way in[else]. You feel you almost understand them[end if]."
 
-check entering plain old church:
+check entering cler-scen:
 	if player is in cleric circle:
 		try going outside instead;
 	else:
@@ -13941,34 +13896,48 @@ instead of doing something with rs:
 	if action is procedural, continue the action;
 	say "They're painful to think about for too long. They wind together and go off in the distance and loop around."
 
-chapter church sign
+chapter scripture picturers
 
-A church sign is reflexive flippable scenery in Same Mesa. "Parish of Satin Saint Astin[paragraph break][if Cleric Circle is unvisited]Six letters below: [dssd][kickhint][otherwise]Pal, Meet a Temple! Hubris-b-rubbish![end if]".
+Scripture picturers are reflexive flippable scenery in Same Mesa. "[do-i-switch]Parish of Satin Saint Astin[paragraph break][if Cleric Circle is unvisited]Six letters below: [dssd][otherwise]Pal, Meet a Temple! Hubris-b-rubbish![end if]".
 
-a-text of church sign is "YRRYRY". b-text of church sign is "YRRYR[if sign-other is true]Y[else]G[end if]".
+switch-pic-next is a truth state that varies.
 
-check taking the church sign:
+to say do-i-switch:
+	if picturers are not reflexive:
+		if switch-pic-next is true:
+			now sign-other is whether or not sign-other is false;
+			say "The picturers changed since you last saw them.";
+
+understand "scripture picture/picturers/picturer" as picturers.
+understand "picture/picturers/picturer" as picturers.
+
+after examining when mrlp is routes (this is the switch picturers rule) :
+	if noun is not picturers:
+		now switch-pic-next is true;
+	continue the action;
+
+after examining picturers:
+	if picturers are reflexive:
+		say "You can see how the SIN DIE and DIE SIN blend back and forth to make a clever illusion. You feel clever for seeing it, but not too clever. That'd be un-pious.";
+		continue the action;
+
+a-text of scripture picturers is "YRRYRY". b-text of scripture picturers is "YRRYR[if sign-other is true]Y[else]G[end if]".
+
+check taking the scripture picturers:
 	say "Appropriation of church property! [if circle is visited]Brother Horbert[else]Whoever's in there[end if] wouldn't deserve that." instead;
-
-does the player mean entering plain old church: it is likely.
-does the player mean doing something with the plain old church: it is unlikely.
 
 sign-pushed-prompt is a truth state that varies.
 
-after scaning church sign:
+after scaning scripture picturers:
 	if cheat-on is true and sign-pushed-prompt is false:
 		now sign-pushed-prompt is true;
 		say "Man! That wasn't helpful at all! The sign does look a bit wobbly, though, and you know these things are two-sided. Give it a push?";
 		if the player consents:
-			try pushing church sign instead;
+			try pushing scripture picturers instead;
 		otherwise:
 			say "Well, if you feel like it later, the sign or whoever put it there will forgive you."
 
-to say kickhint:
-	if ever-pushed is false:
-		say "[paragraph break]The sign does look a bit wobbly, though. Perhaps you could PUSH it.[no line break]";
-
-understand "indies" as a mistake ("You don't need to worry about art, here.") when church sign is visible.
+understand "indies" as a mistake ("You don't need to worry about art, here.") when scripture picturers is visible.
 
 to say dssd:
 	say "[if sign-other is false]SIN DIE[else]DIE SIN (in red)[end if]"
@@ -13980,7 +13949,7 @@ in-try is a truth state that varies.
 to say aop:
 	say "[if abode is not visited]PAST[else if deli is not visited]ACROSS[else]PAST or ACROSS[end if]";
 
-before entering the plain old church:
+before entering the cler-scen:
 	if Cleric Circle is unvisited:
 		say "Its doors are open to all, but one does not enter it by brute forcing directions." instead;
 	otherwise:
@@ -13988,11 +13957,11 @@ before entering the plain old church:
 
 chapter dingy dwelling
 
-the dingy dwelling is semi-easy auxiliary scenery in Same Mesa. "The mark above it says Oscar's."
+the dingy dwelling is semi-easy auxiliary scenery in Same Mesa. "The lairage regalia above it says Oscar's."
 
 check entering dingy dwelling:
 	if old giant is in mesa:
-		try acrossing instead;
+		try fliptoing lairage instead;
 	if Adobe Abode is unvisited:
 		now oscar-annoy is true;
 		say "You try going directly to Oscar's, but the place curves away from you." instead;
@@ -14007,30 +13976,35 @@ does the player mean scaning dingy dwelling: it is likely.
 
 understand "oscar's/oscars" as the dingy dwelling.
 
-the decrepit mark is semi-easy auxiliary scenery in Same Mesa. "***Oscar's***"
+the lairage regalia is semi-easy reflexive scenery in Same Mesa. "[one of]As Yorpwaldian lairage regalia go, it's cheerless and unwelcoming. It says: [or][stopping][b][ast]Oscar's[ast][r]"
+
+to say ast:
+	say "[if screenread is true]****[end if]"
 
 a-text of dingy dwelling is "YRRYRR". b-text of dingy dwelling is "YRRYRP".
 
-a-text of decrepit mark is "YRRYRR". b-text of decrepit mark is "YRRYRP".
+a-text of lairage regalia is "YRRYRR". b-text of lairage regalia is "YRRYRP".
 
 instead of entering mark:
 	try entering dingy dwelling instead;
 
 chapter grubby restaurant
 
-the grubby restaurant is super-easy auxiliary scenery in Same Mesa. "The marquee above it says Pat's."
+the grubby restaurant is super-easy auxiliary scenery in Same Mesa. "It looks terribly plain. There's a signboard indicating whose it is."
 
 check entering grubby restaurant:
 	if Idle Deli is unvisited:
 		say "You try to do so, but the building shifts further away." instead;
 	if old giant is in same mesa:
-		try pasting instead;
+		try fliptoing signboard instead;
 	say "You walk back into Pat's idle deli more confidently the second time. The building does not shift.";
 	now player is in Idle Deli instead;
 
 does the player mean scaning grubby restaurant: it is likely.
 
-the marquee is super-easy auxiliary scenery in Same Mesa. "***Pat's***[paragraph break]Only the fliest filets![paragraph break]Hopefully, that's figurative and not literal."
+the adsorbing signboard is super-easy reflexive scenery in Same Mesa. "[b][ast]Pat's[ast][r][paragraph break]Only the fliest filets![paragraph break]Hopefully, that's figurative and not literal."
+
+understand "sign/board" and "adsorbing sign/board" as signboard.
 
 understand "pat's/pats" as the grubby restaurant.
 
@@ -14038,16 +14012,20 @@ understand "taps" as a mistake ("You have no bugle. Well, not in this game.") wh
 
 understand "spat" as a mistake ("Picking a fight--or spitting--is uncouth.") when player is in Same Mesa or player is in Idle Deli.
 
+understand "psat" as a mistake ("You have enough word juggling now. You don't need a standardized test, too.") when player is in Same Mesa or player is in Idle Deli.
+
+understand "ptas" as a mistake ("Concerned parents won't be able to help you here.") when player is in Same Mesa or player is in Idle Deli.
+
 a-text of grubby restaurant is "RYRR". b-text of grubby restaurant is "PGRR".
 
-a-text of marquee is "RYRR". b-text of marquee is "PGRR".
+a-text of adsorbing signboard is "RYRR". b-text of adsorbing signboard is "PGRR".
 
 does the player mean entering the dingy dwelling: it is very likely.
 does the player mean entering the grubby restaurant: it is very likely.
 does the player mean examining the dingy dwelling: it is likely.
 does the player mean examining the grubby restaurant: it is likely.
 
-instead of entering marquee:
+instead of entering adsorbing signboard:
 	try entering grubby restaurant instead;
 
 chapter bench
@@ -26571,6 +26549,7 @@ blurb
 
 table of wait responses [xxg10]
 blurb
+"O, loaf, aloof!"
 "Act, cat!"
 "'Actin[']? I can't!'"
 "Ah, so: net no haste."
@@ -26728,6 +26707,8 @@ book manor
 
 table of ad slogans [xxm1]
 blurb	blare	[random sad ads: the blare field designates whether you have an exclamation point at the end]
+"All-Sweet Swell Tea"
+"Man-I-Dare Marinade"
 "Barnaby Bay Bran"
 "Bert Snow Brownest Snot-Brew"
 "Rose Gupta Great Soup"
@@ -33352,6 +33333,18 @@ this-book is a number that varies. this-book is usually 0.
 
 table of random books [xxm4] [tob]
 blurb	prio
+"I Gain Sin: Insignia[r], by Nina Gisi & Gia Innis"
+"Dabbler Drabble[r], by Del Barb"
+"And No Wait Into a Dawn[r], by Ada Winton"
+"As Tho['] a Shot[r], by Tosha Athos"
+"Glib, Bray, Baby Girl[r], by Lyra Gibb"
+"A Vogue's So Vague[r], by Su Govea"
+"Tacky Bro's Back Story[r], by [if player is male]Rocky Bast[else]Stacy Bork[end if]"
+"Clio's Coils[r], by Colli Sisco"
+"To Secure Rote Cues[r], by Sue Ector"
+"One's Nose Soon Seen[r], by Noe Esson"
+"One More Moon Ere[r], by Moe Reno"
+"Bold Sin So Blind[r], by Lis Bond"
 "Farmhouse Four Shame[r], by Amos Rhufe"
 "Die Calm, Mild Ace[r], by Cam Idle"
 "Moth-Eaten to Methane: Not a Theme[r], by Moe Hatten"
@@ -38222,7 +38215,7 @@ blurb	prio
 "To Snap on Past[r], by Patton Spanos" []
 "To Snare No Tears[r], by Nat Rose" []
 "To Snark Rants, OK[r], by Ron Kast"
-"To Sneak One Task[r], by Ken Satoo"
+"To Sneak One Task[r], by Ken Sato"
 "To Sniff off Nits[r], by Toffins Tiffson"
 "To Sob, Sot Bo Boots[r], by Bobo Stoots"
 "To Spin No Tips[r], by Postin['] Piston Si Pont" []
@@ -38886,6 +38879,7 @@ blurb
 
 table of overdone movies [xxs2]
 blurb
+"sympathizes with Fay Klos, the main character in [i]Yo, Flask? So Flaky[r]."
 "admits [i]Wendie's Sin Weed Dies New[r] is weak, but it's not WRONG."
 "agrees [i]Fop, Indeed? Dope Fiend[r] is funny, well, TIL IT ISN'T."
 "almost weeps at the simple truth of [i]Ah, Vilest, the Vials[r]."
@@ -39021,6 +39015,7 @@ blurb
 
 table of sicko movies [xxs3]
 blurb
+"Go Welsh Leg Show."
 "Husband Had Buns!"
 "Fee-Boys So Beefy."
 "[a-word-u]-Hump Smash-Up."
@@ -40771,6 +40766,7 @@ blurb
 
 table of mantle laments [xxu3]
 blurb
+"SEX JOINT? TO JINXES! JOT NIXES"
 "FLOUT-PRAY? PARTY FOUL"
 "PAR-TAY? AY, TRAP! PAY, RAT"
 "ABET?! BEAT"
@@ -46501,6 +46497,7 @@ blurb
 
 table of posse bosses [xxv7]
 blurb
+"Pasty Sap Ty"
 "One-Flog Flo Egon"
 "One-Plant Napleton"
 "[a-word-u]hat Shasta" []
@@ -51632,6 +51629,9 @@ blurb
 
 table of self-help bestsellers [xxv0]
 blurb
+"I, Once on Ice[r], by Connie Ocie"
+"Posit Goal, Apologist[r], by Gita Sloop & Gail Spoto"
+"Birth of a Habit for Faith, Bro[r], by Tobi Fahr"
 "Thus, Be In, But Shine[r], by Nib Shute"
 "Pot O['] Gold: Good Plot[r], by [d-t] Ploog"
 "Up, Slam, um, Slap a Slump[r], by Su Lamp"
@@ -55989,6 +55989,7 @@ book towers
 
 table of gizmo parts [xxw1]
 blurb
+"all-portion pollinator"
 "a-parted data pre-adapter"
 "anti-slam talisman"
 "Anytime Amenity"
@@ -56791,7 +56792,7 @@ definition: a thing (called hintcand) is hintrelevant:
 		if maze entry is visited:
 			decide yes;
 		decide no;
-	if hintcand is plain old church:
+	if hintcand is cler-scen:
 		if mrlp is routes:
 			decide yes;
 		decide no;
@@ -56884,9 +56885,9 @@ carry out objhinting (this is the pick object to hint rule) :
 		all-say "[one of]It's kind of a hint[if r10 is unvisited], and you'll find more later in the maze[else if r24 is unvisited], and you've certainly seen a lot through the maze, which seems to end here[else], and they seem to be in alphabetical order[end if].[or]I've said a lot with that clue. If you've gotten through the maze, you'll know it's from L to V.[or]Maze, L to V, don't congratulate yourself?[or]MAZEL TOV.[cycling]" instead;
 	if noun is question mark:
 		all-say "[one of]The question mark in the settler seems to give no information, but its ambiguity is actually a potentially huge help. The question mark only appears during cheat mode. It also usually occurs when you have a thing and a description that anagrams it. An example follows.[plus][or]Let's say you ran across SACRED CEDARS and got ??????. This looks completely unhelpful. But it is not![plus][or]The ? indicates the S and C give different readings, as do the A and E, etc. But that means one of them must be right.[plus][or]So we get SC/AE/CD/RA/ER/DS.[plus][or]There are actually only a few possibilities, here. You have S-C--D or C-D--S and -A-RE- or -E-AR-. Two of these are the original words, but there's SECARD and CADRES. So CADRES would be the word. Another example follows with an ESPRIT STRIPE[qmsp].[plus][or]Believe it or not, nearly everything falls out with the clue ?R??R?.[plus][or]The first letter is e/s, the second p/r, the third p/r, the fourth i/r, the fifth r/p/s, and the sixth is e/t.[plus][or]If letter 4 were r, #2 and 3 would both be p. So #4 is i. Also, #5 is r, p or t. If it were r or p, we'd have the same problem again. #5 is t. But #6 must be e or t, so it is e. #1 is e or s, so it must be s. That leaves SRPITE or SPRITE. Maybe it's a can of sprite, a pixel or a spirit. Either way, you have the answer.[minus][cycling]" instead;
-	if noun is plain old church:
+	if noun is cler-scen:
 		if cleric circle is unvisited:
-			try objhinting church sign instead;
+			try objhinting scripture picturers instead;
 		all-say "The church isn't so special now you've been in it." instead;
 	if noun is closets:
 		all-say "The closets are just for transporting around the manor quicker, to or from the study." instead;
@@ -57092,7 +57093,7 @@ prai	"[by-rivets]."
 rivets	"[by-rivets]."
 painting of the stream	"The painting inspired you enough, [if lobster is in lalaland]though you can knock off that lobster if you want[else]as much as the lobster, in fact[end if]." [end TROVES]
 store b	"You're a hero[if player is female]ine[end if] and all, but only one sample per day. [if otters is not solved]Just think of the field day Elvira'd have if she found out[else]Yorpwald is democratic, and stuff[end if]!" [start/end STORES]
-church sign	"The church sign helped you get in, but it's just there to help other people now. Maybe." [start ROUTES]
+scripture picturers	"The scripture picturers helped you get in, but they're just there to help other people now. Maybe." [start ROUTES]
 bench	"You got the giant to the bench. Now you need to deal with the giant."
 bench-end	"You positioned yourself well to duck the giant and put up with his elbow."
 giant's elbow	"You ducked the giant's elbow successfully. Now about that book..."
@@ -57235,19 +57236,19 @@ idg	"[one of]You need to get Ian and the lecturer out of the way. Nouns won't wo
 lecturer	--	idg	[end stores hinting]
 poison stripe	"[one of]The poison stripe's name is a clue to what to do here.[plus][or][if cur-score of routes > 0]You've already figured one word[else]It's a certain sort of word[end if].[plus][or]Directions are confusing here, and standard ones don't work, but there's another way to get around.[plus][or]PREPOSITIONS.[minus][cycling]"
 bench	"[one of]The bench-end indicates the bench is A GIANT'S. You probably can't touch it wrong.[plus][or]Touching the bench does nothing. How to cover more of it?[plus][or]Lean AGAINST.[minus][cycling]"	--	"AGAINST"	[start ROUTES hinting]
-church sign	"[one of]Going in to the church is not so easy. Simply saying IN isn't churchy enough.[plus][or]You need to be a little more flowery to enter the church. Is there any clue?[plus][or]DIE SIN becomes something new.[plus][or]You can kick the sign to change it to SIN DIE for another clue.[plus][or]INSIDE.[minus][cycling]"	--	"INSIDE"
-plain old church	--	church sign
-plain old church	--	church sign
+scripture picturers	"[one of]Going in to the church is not so easy. Simply saying IN isn't churchy enough.[plus][or]You need to be a little more flowery to enter the church. Is there any clue?[plus][or]DIE SIN becomes something new.[plus][or]You can kick the sign to change it to SIN DIE for another clue.[plus][or]INSIDE.[minus][cycling]"	--	"INSIDE"
+cler-scen	--	scripture picturers
+cler-scen	--	scripture picturers
 Brother Horbert	"He'll mix the reagents once you get them."
 summary	"It's there for background: why you're doing what you're doing. Oh, about Mum Ray, I can't tell you. It's too sad/confidential/unbelievable."
 snoop spoon	"Examine the snoop spoon for a hint when you need it."
 list o toils	"The list-o-toils tells what you need[if mushrooms are in lalaland]ed[end if] to get. There is one item in each aboveground Routes location besides the Cleric Circle."
 rs	"They're there to re-enforce your lack of direction."
 worst ad	"[one of]How would you approach the worst ad?[plus][or]RADWOST is what the ad sells, whatever that is. That plus the settler gets you the vowels. A big clue for this Last Lousy Point.[plus][or][if cur-score of routes is 0]I'll check if you want to find what sort of words work here before going on[else]There are only so many prepositions in the English language[end if].[plus][or]TOWARDS.[minus][cycling]"	--	"TOWARDS"
-marquee	"[one of]You can't walk into Pat's as normal. It moves, and you never seem to get to the door.[plus][or]You just need to flip two letters to enter Pat's.[plus][or]PAST works.[minus][cycling]"	--	"PAST"
-grubby restaurant	--	marquee
-decrepit mark	"[one of]You can't walk into Oscar's as normal. It moves to the other side.[plus][or]What's a preposition that's anagrammatic to Oscar's?[plus][or]Not down to enter Oscar's--perpendicular.[plus][or]ACROSS.[minus][cycling]"	--	"ACROSS"
-dingy dwelling	--	decrepit mark
+adsorbing signboard	"[one of]You can't walk into Pat's as normal. It moves, and you never seem to get to the door.[plus][or]You just need to flip two letters to enter Pat's.[plus][or]PAST works.[minus][cycling]"	--	"PAST"
+grubby restaurant	--	adsorbing signboard
+lairage regalia	"[one of]You can't walk into Oscar's as normal. It moves to the other side.[plus][or]What's a preposition that's anagrammatic to Oscar's?[plus][or]Not down to enter Oscar's--perpendicular.[plus][or]ACROSS.[minus][cycling]"	--	"ACROSS"
+dingy dwelling	--	lairage regalia
 grouchy old giant	"[if old giant is off-stage]The giant is not in view yet. You need to examine the list-o-toils in the church[else if old giant is in lalaland]You're done with him[else]BUG. You should be directed to the bench or bench part you need to figure, now[end if]."
 bench-end	"[one of]The giant seems to want you to listen to his tirades.[plus][or]This is a bit tricky--but the letters settler may help quite a bit. You know where the T is, and three consonants in a row aren't common.[plus][or]ASTRIDE.[minus][cycling]"	--	"ASTRIDE"
 giant's elbow	"[if elbow is reflexive][one of]Having trouble ducking the giant's elbow there, eh?[plus][or]The giant swings his elbow sort of high...[plus][or]...so you should be BELOW it.[minus][cycling][else]You dealt with the giant's elbow.[end if]"	--	"BELOW"
