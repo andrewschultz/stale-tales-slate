@@ -392,7 +392,6 @@ slimytea,steamily
 ###################OTHERS
 #### CITRUS
 !mimesporn,persimmon
-!esppal,apples
 !quince,cinque
 !coins,icons
 !icons,sonic
@@ -407,10 +406,11 @@ slimytea,steamily
 !eerie blurbs,blueberries
 !bieber rules,blueberries
 !mad train,tamarind
+!pagers,grapes
+#filed field
 !bar pryers,raspberry
 !rapt figure,grapefruit
 !pipe panel,pineapple
-!pagers,grapes
 !buried raft,breadfruit
 !briar screen,cranberries
 !barren cries,cranberries
@@ -419,6 +419,8 @@ slimytea,steamily
 !rampage note,pomegranate
 !mopeage rant,pomegranate
 ##swell wells
+!esp pal,apples
+miser ruble,mulberries
 !riot cap,apricot
 !sorer bogey,gooseberry
 #advance

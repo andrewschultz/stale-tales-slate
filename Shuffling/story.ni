@@ -14739,6 +14739,7 @@ blurb
 "Zerbina Brienza"
 "Zerina Arinze" []
 "Zino Zion"
+"Zlatan Anzalt"
 "Zofia Fazio"
 "Zog Zgo"
 "Zola Lazo"
@@ -14892,15 +14893,6 @@ book sortie
  
 table of poem codas [xxi]
 blurb
-"Meats of some fat: feast mo[']."
-"So grief fogs ire. Serf, I go."
-"Golf one? Go, felon, long foe!"
-"On my plate: lo, payment! Mo['] penalty!"
-"Get manic, magnetic magic net."
-"To miss moss: it smit so."
-"Feathery, they fear the faery."
-"Crazy old lard cozy. Lazy cord."
-"Era custom: out-scream a customer."
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
 "Act four: fur coat. Our fact."
@@ -15027,6 +15019,7 @@ blurb
 "Coward, lush! Such a world would crash!"
 "Coy? I burst, rustic boy! Bury stoic obscurity!" []
 "A coy pit: icy atop! Ay, optic opacity."
+"Crazy old lard cozy. Lazy cord."
 "Crime: get a magic tree, great mice!"
 "Cross? Mute? Customers must score!"
 "Crudest crusted set curd."
@@ -15128,6 +15121,7 @@ blurb
 "Epidemic Piece: Dim."
 "Epistler Repliest."
 "Er, chap, a perch. Chap, re-preach!"
+"Era custom: out-scream a customer."
 "Erase a seer!"
 "Ere far, a freer re-fear."
 "Ere nags as green, Saenger enrages!"
@@ -15163,8 +15157,10 @@ blurb
 "Fear sight: great fish! Shift gear."
 "Fear, Sir Frasier, a Ferris..."
 "The fears: fresh tea, feathers."
+"Feathery, they fear the faery."
 "Feel a cup fuel pace, peacful."
 "Fest Four: Foe Turfs to suffer-effort us."
+"Fetch a fork off the rack. Hack effort!"
 "Fever or Forever."
 "Few rats far west? Aw, frets."
 "Fey growl, grey wolf. Few glory."
@@ -15251,6 +15247,7 @@ blurb
 "Gee a foul league of ego. A fuel."
 "Gee, as to goatees?"
 "Get half the flag, gal! Heft!"
+"Get manic, magnetic magic net."
 "Get off the hog. Go heft the fog!"
 "Get sour! Sore gut got sure to surge."
 "Ghostly thy slog, sly goth!"
@@ -15262,6 +15259,7 @@ blurb
 "Glib, yon? No! Bilgy!" [p]
 "Glint of flint. Go to fling!"
 "Gloomy My Logo."
+"Gnar, gnar. Gran rang!"
 "Gnomic tiles. Gimlet icons. Closing time."
 "Go draw, war god!"
 "Go, earnest great ones! Tons agree!"
@@ -15274,6 +15272,7 @@ blurb
 "Go suave, as vogue so vague."
 "Go then, oh, gent!"
 "Goats tag so to gas."
+"Golf one? Go, felon, long foe!"
 "Golly, a nap. Play along? Nay, gallop."
 "A gone age on an ego!"
 "Good fans and goofs snag food. Sad fog? No."
@@ -15497,6 +15496,7 @@ blurb
 "Math sucks: much tasks! Smack thus."
 "Mead Dame Edma Made Edam."
 "Mean bosom bemoans mo['] moonbeams."
+"Meats of some fat: feast mo[']."
 "Meld, ye medley!"
 "Merely sob, leery mobs? Be more sly!"
 "Mess and Madness!"
@@ -15643,6 +15643,7 @@ blurb
 "Ole rant to learn lean rot no later."
 "On Elves so Elven: lo, seven!"
 "On, group...goop! Run!"
+"On my plate: lo, payment! Mo['] penalty!"
 "On, runic unicorn!"
 "One's evil lies oven: even soil levies no sole vein. Novelise?"
 "Only fools fly on, solo. Folly soon!"
@@ -15839,6 +15840,7 @@ blurb
 "So, faith! This oaf has it, of fiats, oh!"
 "So go, elf of legos! Slog, foe!"
 "So grant a strong art-song."
+"So grief fogs ire. Serf, I go."
 "So Kevin invokes no skive."
 "So Laud Da Soul as Loud, Aldous."
 "So, Lefty! Lost fey elf toys of style."
@@ -15959,6 +15961,7 @@ blurb
 "To Lose Les Too? Ole Sot!"
 "To marry my art or army? Rot."
 "To miss mist so is most... it... moss!"
+"To miss moss: it smit so."
 "To refuse fee-tours, refute so. Use forte! Reuse oft! Our fetes! Euro-fest!"
 "To sad toads, a toast's odd."
 "To vipers sportive, it proves I rep TV so."
@@ -16088,8 +16091,6 @@ book metros
 
 table of camp chants [xxm1]
 blurb
-"'Anti-beef: a benefit!'"
-"'Settle for tree lofts, freest lot!'"
 "'Abusive USA vibe!'"
 "'Account, U-Can't-Co!'"
 "'The ad: hated!'"
@@ -16099,6 +16100,7 @@ blurb
 "'Advice-of-Fad voice, face void!'"
 "'All-Eco Locale!'"
 "'Alms for ol['] farms!'"
+"'Anti-beef: a benefit!'"
 "'Anti-serf fine arts!' they cry, mumbling about a snifter and a rain fest."
 "'Argus Sugar? Us? ARG!'"
 "'ArmCos Scar Mo[']!'"
@@ -16304,6 +16306,7 @@ blurb
 "'Sell oil? Lose! Ill!'"
 "'Sellin's illness!'"
 "'Semirigid dirigisme is grim! Die!'"
+"'Settle for tree lofts, freest lot!'"
 "A severest 'Save trees! Asset ever!'"
 "'Sexism: heft? Fix the mess!'"
 "'Shave? Oy, so heavy!'"
@@ -16442,9 +16445,6 @@ blurb
 
 table of nerd natter [xxm3]
 blurb
-"'On, up, geeky! Keep young!'"
-"'Sign up! Ping us!'"
-"'Craft glue: gruel. FACT!'"
 "'Aliterate tail eater!' / 'Retaliate!'"
 "'Any D&D? Dandy?' The nerds laugh."
 "'The APIs ape this!' / 'Ha, spite!'"
@@ -16466,6 +16466,7 @@ blurb
 "'CleanSoft Conflates lone facts!'"
 "'Cold dark-clad dork!'"
 "A conceders['] crescendo follows a claim nerds'd LIKE to help everyday stupid people."
+"'Craft glue: gruel. FACT!'"
 "'A cretin! Certain!' / 'I recant!'"
 "Critiques on [i]Somber Fun of Numbers[r], by Murf Bones."
 "Croupiness percussion. Almost supersonic."
@@ -16612,6 +16613,7 @@ blurb
 "'Oh, Dirk's dorkish.'"
 "Oh, prates: 'Pros hate heap sort!'"
 "'Oleg, go Google!'"
+"'On, up, geeky! Keep young!'"
 "One nerd boldly proclaims 'Tech is ETHICS!'"
 "One nerd describes building an Ion-Duct Conduit."
 "One nerd downloads a U-Adept Update."
@@ -16639,6 +16641,7 @@ blurb
 "'A script.' / 'Scrap it. It's...'"
 "'Sell short shell sort? She trolls!'"
 "Several nerds agree Le Site is leet."
+"'Sign up! Ping us!'"
 "'Since I'm not omniscient...' Ish, note his tone. Sarcastic, arctic ass."
 "'Sir-Tech is...RETCH!' / 'Rec this!'"
 "'Sky-Tech? Sketchy!'"
@@ -16687,7 +16690,6 @@ blurb
 
 table of psas [xxm4]
 blurb
-"TAFFIES? FIE! FATS!"
 "11+2=12+1"
 "ABLEISM'S MISSABLE"
 "ACID TRIPS => RAPID TICS"
@@ -16786,6 +16788,7 @@ blurb
 "SUPER HIGH !-> HIGHER UPS"
 "SWAMP FEVER REVAMPS FEW"
 "TAFFIES? FATS! FIE"
+"TAFFIES? FIE! FATS!"
 "TEENAGERS! EAT GREENS"
 "TETRIS? [']S TRITE! REST IT"
 "THC? TCH, TCH"

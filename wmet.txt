@@ -86,7 +86,7 @@ raspberry/pineapple/reversed/mango
 sonic/icons/prep/review
 Store H (max)
 limes/grapes/pears/plums/compass
-apples/apricot/nabana/gonear
+apples/apricot/nabana/gonear/mulberries
 cheap/cripes/solemn/solemn
 rhubarb/tamarind/tangerine/nectarine
 raspberry/pineapple/reversed/mango/persimmon

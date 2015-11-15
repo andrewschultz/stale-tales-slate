@@ -7,21 +7,33 @@ There are some items which give a hint what to do next. If you have used the hin
 There was also other miscellaneous stuff and even a few features that fell out when my mind wandered. I cheated and used a program to generate a lot, but I hope they're still fun.
 
 --five new random lists
-  --the Catechism now has a bunch of eminent Ph.D.s along with research topics and general information.
-  --Leo and Rand now have idols in fighting.
-  --yes and no now have longer cycles of responses that you can see in the endgame.
-  --there are now random brands of sleepables if you examine the futon in the shack.
+  --the Catechism now has a bunch of eminent Ph.D.s along with research topics and general information. (P)
+  --Leo and Rand now have idols in fighting. (P)
+  --a double: yes and no now have longer cycles of responses that you can see in the endgame. (general)
+  --there are now random brands of sleepables if you examine the futon in the shack. (P)
 --over half of the random lists now have 100+ entries. Almost 60%, in fact: 43 of 72.
 --all random lists now have 25+ entries. Including the new yes and no responses.
---27000+ total elements in the random lists.
+--30000+ total elements in the random lists.
+--I also decided to reveal the code names of the updates. They're rather silly, but I hope you enjoy them.
+
+Store U:
+--the scenery in the Same Mesa is now better-named.
+
+Store W:
 --a few more clues for the Lone Duck
 --the trader is now female if you are, with a new name
 --the smart kid is now female if you are
 --Dr. Yow is now female if you are
---new fruit in the Field
---I also decided to reveal the code names of the updates. They're rather silly, but I hope you enjoy them.
+
+Store H:
+--new fruits in the Field
+
+Store V:
 --the Bedroom in Store V now has a new name
+
+Store T:
 --the macks' idiocy in Store T is now refactored to be one of 7, drawn from pods, much like the warriors in Store W
+
 --tweaks to the Trizbort map
 
 ??Demo Dome Mode is now more robust

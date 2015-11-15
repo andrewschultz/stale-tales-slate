@@ -117,23 +117,24 @@ while ($a = <A>)
   if ($first{$aalf} && ($_[0] == 0)) { next; } #skip over 2 first names
   if ($pinged{$q} && $first{$a}) { next; }
   $pinged{$q} = 1;
-  $first{$aalf} = 1;
+  $first{$aalf} = alf($aalf);
   if ($last{$q} || $first{$q})
   {
+  $lasty = $last{$q}; if (!$lasty) { $lasty = $first{$q}; }
   if ($printCmds)
   {
   print "gq $addStr $a > doccheck.txt\n";
   }
   if ($middleName)
   {
-  if (lc("$a$uStr") eq lc($last{$q})) { next; }
-  $this = "$a '$uStr' $last{$q}";
+  if (lc("$a$uStr") eq lc($lasty)) { next; }
+  $this = "$a '$uStr' $lasty";
   $this =~ s/^([a-z])/uc($1)/ge;
   }
   else
   {
-  if (lc("$uStr$a") eq lc($last{$q})) { next; }
-  $this = "$uStr $a $last{$q}";
+  if (lc("$uStr$a") eq lc($lasty)) { next; }
+  $this = "$uStr $a $lasty";
   }
   $this =~ s/-([a-z])/-uc($1)/ge;
   $this =~ s/([\.\?!]?\s+[a-z])/uc($1)/ge;

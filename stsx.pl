@@ -2,6 +2,19 @@ $anaIdeas = "c:\\writing\\dict\\sts.txt";
 
 open(A, $anaIdeas) || die ("No ideas file $anaIdeas.");
 
+$runTableSort = 1;
+
+while ($count <= $#ARGV)
+{
+  $a = @ARGV[$count];
+  for ($a)
+  {
+  /^-n/ && do { $runTableSort = 0; $count++; next; };
+  usage();
+  }
+
+}
+
 while ($a = <A>)
 {
   if ($a =~ /^table of/) { chomp($a); $currentTable = $a; next; }
@@ -17,6 +30,8 @@ addIdeas("roiling");
 addIdeas("sa");
 
 cleanUpLoneFile();
+
+if ($runTableSort) { `tsh.pl -b`; }
 
 printStats();
 
@@ -106,4 +121,13 @@ sub printStats
   {
     print "$x had $toFiles{$x} entries.\n";
   }
+}
+
+sub usage
+{
+print<<EOT;
+The only current flag for stsx.pl is -n.
+Otherwise it automatically runs tsh.pl -b.
+EOT
+exit;
 }

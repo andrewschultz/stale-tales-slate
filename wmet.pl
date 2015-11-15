@@ -4,12 +4,17 @@ $printSettler = 1;
 
 $settlerToo = 1;
 
-open(B, ">metrics.htm");
+$inFile = "c:/writing/dict/wmet.txt";
+$outFile = "c:/games/inform/roiling.inform/Source/metrics.htm";
+
+if (@ARGV[0] eq "-d") { $debug = 1; }
+
+open(A, $inFile) || die ("Can't open $inFile.");
+open(B, ">$outFile");
 
 print B "<html>\n<title>Stale Tales Slate Difficulty Metrics</title><body>\n<center><font size=+3>Stale Tales Slate Possibilities Metrics (RMS = root mean square)</font><br><font size=+2>Shuffling Around</font><table border=1>\n";
 
 print B "<tr><th>test run<th>Anagrams<th>Letters<th>&Sigma;Letters^2<th>Average<th>RMS<th>&Sigma;Log(poss., no device)<th>Average<th>&Sigma;Log(poss. with gadget)<th>Average\n";
-open(A, "wmet.txt");
 
 @fact[0] = 1;
 
@@ -19,20 +24,14 @@ while ($a = <A>)
 {
   chomp($a); #$a = lc($a);
   if ($debug) { print "$a\n"; }
-  if ($a !~ /\//) #this is bad code as I may want to have just 1 item on a line. Maybe eliminate spaces or caps
+  if ($a =~ /^;/) { last; }
+  if ($a =~ /^#/) { last; }
+  if ($a !~ /\//) #this is risky code but it catches if there is just 1 item on a line.
   {
     evaluate();
     $header = $a;
   if ($a =~ /^==/) { print B "</table>\n<font size=+2>A Roiling Original</font><table border=1>\n";
   print B "<tr><th>test run<th>Anagrams<th>Letters<th>&Sigma;Letters^2<th>Average<th>RMS<th>&Sigma;Log(poss., no device)<th>Average<th>&Sigma;Log(poss. with settler)<th>Average\n"; }
-  }
-  elsif ($a =~ /^#/)
-  {
-    next;
-  }
-  elsif ($a =~ /^;/)
-  {
-    last;
   }
   else
   {
