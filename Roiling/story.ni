@@ -10702,6 +10702,7 @@ peanut cola	cantaloupe	"cantaloupe"	"cantaloupe"	"The cola bottle turns into a s
 mad train	tamarind	"tamarind"	"tamarind"	"Well, you aren't sure if it is that much of an improvement, but a fruit is a fruit. Curtis seems pleased. Everybody gets suckered into buying one of these once, and after a few months, they forget how nasty it was and buy it again."	true	391814053
 silly shirt	apples	"apples"	"apples"	"The t-shirt crumples into a few apples. Well, you may not have ESP, but it's something almost as good. You remember a pen pal called Papa Len, too."	true	443013650
 riot cap	apricot	"apricot"	"apricot"	"The riot cap rounds into an apricot, which you take."	true	410438606
+sorer bogey	gooseberry	"gooseberry"	"gooseberry"	"A howling from the well, and the reddish letters fly off! A rather large gooseberry falls on the ground. You pick it up."	true	844616803
 miser ruble	mulberries	"mulberries"	"mulberries"	"The ruble blossoms in your hand, turning to a more pleasant sight: a clump of berries."	true	808940340
 barber sickle	blackberries	"blackberries"	"blackberries"	"The barber sickle grows into a bunch of vines which sprout black fruits, and a basket pops out to hold them. How convenient."	true	732304866
 pryer bars	raspberry	"raspberry"	"raspberry"	"The drupelets in the pryer bars pop out and multiply, leaving you with raspberries."	true	704483418
@@ -10721,7 +10722,6 @@ nectarine	nectarine	"ancienter"	"ancienter"	"The unripe nectarine becomes salabl
 tangerine	tangerine	"argentine"	"argentine"	"Your fake knowledge pays off! You now have a tangerine."	true	661641421
 reserved	guava	"reversed"	"reversed"	"The sign wobbles over and falls. You take a guava you found behind it. [greedy-person] nods, impressed."	true	778533808
 pugnacious plant	rhubarb	"rhubarb"	"rhubarb"	"The plant's arms turn to stalks of rhubarb, which fall off. What looks like an evil spirit departs from it as it slinks into a corner. [greedy-s] sniffs at the rhubarb with disdain. Yay, more fruit for you."	true	352061340
-sorer bogey	gooseberry	"gooseberry"	"gooseberry"	"A howling from the well, and the reddish letters fly off! A rather large gooseberry falls on the ground. You pick it up."	true	844616803
 b-r	breadfruit	"breadfruit"	"breadfruit"	"You decide the raft would be better as breadfruit, whatever that is. The raft swirls into something more spherical, but still nothing close to what you expected. It's odd and bumpy, but you take it."	true	619813094
 briar screen	cranberries	"cranberries"	"cranberries"	"The prickly screen turns into (you hope) less prickly cranberries."	true	761370255 [briar + cranberries]
 an-a	small yellow banana	"nab an a" or "nab"	"nab an a"	"The A expands and curves in your hands, the middle-bar melting into the legs, and you have a banana."	true	162797375
@@ -23094,7 +23094,7 @@ before doing something when Gretta is visible and macks are not visible:
 the litany of Gretta Garett-Tatger is the table of Gretta comments.
 
 to say but-stuck:
-	say "[if try-fail-animal is true], but I got chased after that[end if]"
+	say "[if try-fail-animal], but I got chased after that[end if]"
 
 table of Gretta comments
 prompt	response	enabled
@@ -23477,6 +23477,11 @@ section otters flipto and min points
 to de-inhib:
 	now inhib is false;
 	say "You hear voices[one of][or], again[stopping]. 'Revil-a-Elvira?' / 'Yes, her.' / 'HERESY!'";
+	if atmo-moat is prefigured:
+		say "You feel strong enough to tackle the moat, now";
+		if try-fail-pit-north is true or try-fail-anteroom-south is true:
+			say ", and maybe even the [if try-fail-pit-north is false]owls[else if try-fail-anteroom-south is false]raptor[else]owls and raptor[end if] that wouldn't let you by back east, too";
+		say ".";
 
 check fliptoing ghoul hat:
 	if player does not have medals:
@@ -23537,13 +23542,19 @@ understand "simply" as a mistake ("He's already simply annoying, so that has no 
 
 understand "implys" as a mistake ("You will have to be subtle here, but you'll want to work on actions, instead.") when sly imp is visible
 
-try-fail-animal is a truth state that varies.
+try-fail-pit-north is a truth state that varies.
+try-fail-anteroom-south is a truth state that varies.
+
+to decide whether try-fail-animal:
+	if try-fail-pit-north is true, decide yes;
+	if try-fail-anteroom-south is true, decide yes;
+	decide no;
 
 check going north in Anger Pit:
 	if imp is visible:
 		say "The imp gives a sidle-slide, then idles in front of you. He's too smooth for you right now." instead;
 	if inhib is true:
-		now try-fail-animal is true;
+		now try-fail-pit-north is true;
 		say "You hear a dangerous hooting as you go north. You run from a bunch of owls before they can carve at you with their beaks, but boy, they were quick, and it was close. You don't want to risk it again, with your powers drained." instead;
 
 Wickeder Wire Deck is north of Anger Pit. Wickeder Wire Deck is part of otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south."
@@ -23862,7 +23873,7 @@ check going south in Anteroom:
 	if whiners are visible:
 		say "The whiners can't imagine why anyone would want to go there. They block you, for your own good. They seem to have all sorts of reasons, and there's no way past the quantity, if not the quality, of their arguments." instead;
 	if inhib is true:
-		now try-fail-animal is true;
+		now try-fail-anteroom-south is true;
 		say "A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have your full powers." instead;
 
 to say shout-check:
@@ -55128,7 +55139,7 @@ blurb
 "'No vibes? Bovines.'"
 "'Nor I'm minor!' yells someone the trolls frisk for IDs." []
 "'Oh no! Sick chinooks!'"
-"'Oik-Koi!'"
+"'Oik-Koi! I KO!'"
 "'Ok, cry, Rocky.'"
 "The ol['] bar labor mistakenly changes a TV to 'A Fish Has Info on Fashion.'"
 "'Ole Burt Boulter,' you hear loud-whispered. 'Trouble.'"
@@ -59112,7 +59123,7 @@ test qw1 with "ts/y/a5/otters/test otters"
 
 test qw2 with "gonear gates/purloin settler/purloin passport/review/research/n"
 
-test others with "others/in/tamarind/maraschino/plums/pears/grapes/blueberries/cranberries/x stand/limes/pomegranate/cantaloupe/compass/persimmon/n/apples/apricot/gooseberry/d/go near/nab an a/reversed/rhubarb/u/w/blackberries/pineapple/grapefruit/strawberries/raspberry/e/s/n/e/listen/among/solemn/solemn/argentine/ancienter/cheap/cinque/cripes/papayas/w/s/icons/sonic/n/d/give dollar to trader/u/put icons in slot/review/research/n/n/coff"
+test others with "others/in/tamarind/maraschino/plums/pears/grapes/blueberries/cranberries/x stand/limes/pomegranate/cantaloupe/compass/persimmon/n/apples/apricot/mulberries/gooseberry/d/go near/nab an a/reversed/rhubarb/u/w/blackberries/pineapple/grapefruit/strawberries/raspberry/e/s/n/e/listen/among/solemn/solemn/argentine/ancienter/cheap/cinque/cripes/papayas/w/s/icons/sonic/n/d/give dollar to trader/u/put icons in slot/review/research/n/n/coff"
 
 test others-oops with "srehto/others/srehto/in/dniramat/tamarind/dniramat/onihcsaram/maraschino/onihcsaram/smulp/plums/smulp/sraep/pears/sraep/separg/grapes/separg/seirrebeulb/blueberries/seirrebeulb/seirrebnarc/cranberries/seirrebnarc/x stand/persimmon/nommisrep/semil/limes/semil/etanargemop/pomegranate/etanargemop/epuolatnac/cantaloupe/epuolatnac/ssapmoc/compass/ssapmoc/n/selppa/apples/selppa/tocirpa/apricot/tocirpa/yrrebesoog/gooseberry/yrrebesoog/d/go near/nab an a/desrever/reversed/desrever/brabuhr/rhubarb/brabuhr/u/w/seirrebkcalb/blackberries/seirrebkcalb/elppaenip/pineapple/elppaenip/tiurfeparg/grapefruit/tiurfeparg/seirrebwarts/strawberries/seirrebwarts/yrrebpsar/raspberry/yrrebpsar/e/e/gnoma/among/gnoma/nmelos/solemn/nmelos/nmelos/solemn/nmelos/enitnegra/argentine/enitnegra/retneicna/ancienter/retneicna/paehc/cheap/cinqeu/cinque/paehc/sepirc/cripes/sepirc/w/s/snoci/icons/snoci/cinos/sonic/cinos/n/d/give dollar to trader/u/put icons in slot/weiver/review/weiver/research/hcraesern/n/coff"
 

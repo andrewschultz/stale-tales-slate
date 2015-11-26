@@ -34,6 +34,8 @@ Store V:
 Store T:
 --the macks' idiocy in Store T is now refactored to be one of 7, drawn from pods, much like the warriors in Store W
 
+Meta-stuff:
+--metrics HTML file updated with new solution
 --tweaks to the Trizbort map
 
 ??Demo Dome Mode is now more robust

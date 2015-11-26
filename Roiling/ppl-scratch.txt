@@ -376,3 +376,13 @@
 "Trim Rayo Moriarty"
 "Trim Ek Eikmrt"
 "Trim Sy Imrsty"
+=======Phat
+"Phat Olin Oliphant"
+"Phat Arce Capehart"
+"Phat Enos Stanhope"
+"Phat Lor Lathrop"
+"Phat Eisen Aeehinpst"
+"Phat Saine Aaehinpst"
+"Phat Re Tharpe"
+"Phat Nees Aeehnpst"
+"Phat Ro Porath"
