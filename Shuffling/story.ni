@@ -430,24 +430,7 @@ to say reject:
 to say bug-report:
 	say "BUG. Contact me at [email] with a transcript or description of where you are/what you did. Use up arrow to see previous commands. Or use UNDO several times and hit TRANSCRIPT to show me how you got here, what your inventory was, etc."
 
-the air is a proper-named backdrop. the air is everywhere. understand "room" as air.
-
-understand "nick" as air when player is in nick.
-
-description of air is "[bug-report]";
-
-instead of examining the air:
-	if player is in busiest subsite:
-		say "Reasonably busy here. Motivation is in the air! (Gag.)" instead;
-	if player is in Dry Yard:
-		say "You always hated the cheesy 'magic's in the air' phrase, but something's odd here." instead;
-	if player has gadget:
-		say "You've seen pretty much everything you need, so you look down at your gadget.";
-		if player has gadget:
-			try examining the gadget instead;
-	say "You can't see much. It'd be nice if you had some sort of tool to gauge anything weird[if trips strip is visited], like back by Old Man Almond[end if].";
-
-a room can be airscanned. a room is usually not airscanned.
+understand "nick" as nick when player is in nick.
 
 a room can be noisy. a room is usually not noisy.
 
@@ -1040,7 +1023,7 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is in lalaland, decide no;
 	if hintcand is in bullpen:
 		decide yes;
-	if hintcand is air, decide yes;
+	if hintcand is location of player, decide no;
 	if hintcand is beats:
 		if mrlp is metros:
 			decide yes;
@@ -1094,7 +1077,7 @@ cur-item is a thing that varies.
 carry out objhinting:
 	now ever-obj-hinted is true;
 	now cur-item is noun;
-	if noun is air:
+	if noun is location:
 		all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
 	if location of noun is nothing and noun is not a backdrop:
 		all-say "[noun]: you probably shouldn't know about that object, yet. And if you do, try asking about objects you can see." instead;
@@ -1142,7 +1125,6 @@ cratered bits	"The cratered bits clue what the cabinet can become[if strip is un
 name list	"The list hints what Shuffling Around is all about."
 above-sign	"The sign seems to be mis-printed, which is a clue what Shuffling Around is all about."
 odd side passage	"You can ENTER the odd side passage, or go IN."
-air	"Well, you probably don't need hints to breathe it. But [if player has gadget]your gadget[else]a later hint device[end if] may be able to scan it for hints, if there's something general to do."
 odor	"[one of]What can the odor turn into? Your random thoughts are not so random. [plus][or]The clues and distractions collapse to anagrams. [plus][or]If you get to the end, you'll notice two rather forced ones. They both anagram odor. What else do they anagram? [plus][or]A door. [minus][cycling]"
 musical chord	"The chord clues what to do [if bulge is in lalaland]with the bugle[else]with the bulge[end if]."
 bulge	"[one of]You don't have any key, but that bulge shouldn't be part of the door [plus][or]The musical chord is a clue [plus][or]You want to change the bulge into a BUGLE [minus][cycling]."
@@ -3463,8 +3445,6 @@ section magenta nametag
 
 the magenta nametag is a thing. rgtext of magenta nametag is "[rcn][gc][rc][gc][rc]*[rc]". lgth of nametag is 7. gpos of nametag is 7. rpos of nametag is 1.
 
-does the player mean listening to the air: it is likely.
-
 does the player mean doing something with the magenta nametag:
 	if notices section is not visited:
 		it is possible;
@@ -4016,7 +3996,7 @@ carry out xmxing:
 		if saltine is in lalaland:
 			say "You lost your x-ray vision." instead;
 		try examining the noun instead;
-	if noun is air:
+	if noun is the location:
 		if player is in the nick:
 			say "Your vision swirls, and you see a kitchen.";
 			ditch-saltine instead;
@@ -4119,7 +4099,7 @@ carry out xmxing:
 		preef hallway;
 		ditch-saltine instead;
 	if noun is poem and pat is in the moor:
-		try xmxing air instead;
+		try xmxing the location instead;
 	if noun is dig flier or noun is can of beer or noun is soggy love letter:
 		say "Your focus shifts to the drainage, instead.";
 		try xmxing drainage instead;
@@ -4325,7 +4305,7 @@ the gadget-screen is undesc. it is part of the tagged gadget. the gadget-screen 
 
 instead of examining gadget-screen:
 	say "You see if the gadget registers anything by default.";
-	try scaning the air;
+	try scaning the location;
 
 instead of doing something with gadget-screen:
 	if current action is not scaning:
@@ -6716,7 +6696,7 @@ to say tagit:
 	if player has gadget:
 		say "[one of]. Your gadget seems to vibrate a bit[or][cycling]";
 
-check scaning air (this is the air scan rule):
+check scaning location (this is the air scan rule):
 	if player does not have gadget:
 		continue the action;
 	if player is in the nick or player is in Anti-Cool Location or player is in moor or player is in roomroom or player is in manor:
@@ -7552,7 +7532,7 @@ carry out rooming:
 	if player is in roomroom:
 		say "You're definitely in a room[if moor is unvisited]. But there's no sense running in place. Well, even less sense than going in reverse[end if]." instead;
 	if player is not in moor:
-		try examining the air instead;
+		try examining the location instead;
 	say "'The room's smoother,' you muse...'";
 	move player to roomroom;
 
@@ -8145,7 +8125,7 @@ the yellow kernels are part of the lost corn. understand "buttons" as kernels.
 
 does the player mean doing something with the discolored buttons when lost corn is visible: it is likely.
 
-does the player mean examining the air: it is very likely.
+does the player mean examining the location: it is very likely.
 
 description of kernels is "Most are yellow but others are discolored--red and black and white."
 
@@ -9737,7 +9717,7 @@ check going outside in Manor:
 	say "You just want to BE, now. You don't want to have anything to do with exits." instead;
 
 check scaning final-exits:
-	try scaning air instead;
+	try scaning the location instead;
 
 the final-exits are privately-named plural-named scenery in roman manor. "They are tempting you to adventure, but you'd rather be than do."
 
@@ -10236,10 +10216,16 @@ understand "gat" as a mistake("Hey! Guns are dangerous! It [if shotgun is not of
 
 chapter scaning
 
-does the player mean rectifying the air: it is very likely;
-does the player mean scaning the air: it is very likely;
-does the player mean certifying the air: it is very likely;
-does the player mean cring the air: it is very likely;
+does the player mean rectifying the location: it is very likely;
+
+does the player mean scaning the location:
+	if player is in trips strip:
+		it is likely;
+	else:
+		it is very likely;
+
+does the player mean certifying the location: it is very likely;
+does the player mean cring the location: it is very likely;
 
 does the player mean scaning a sto: it is very likely;
 
@@ -10330,7 +10316,7 @@ carry out scaning:
 		say "You sense that would be a breach of some magical etiquette you don't understand." instead;
 	if noun is jail cell graffiti or noun is grate:
 		say "You see nothing new other than scanning the air.";
-		try scaning air instead;
+		try scaning location of player instead;
 	if noun is night thing:
 		say "No way you're getting close enough." instead;
 	if noun is nerds:
@@ -11201,7 +11187,7 @@ understand "gt [any room]" as roomgoing.
 
 carry out roomgoing:
 	let myrm be a location;
-	if noun is air and mrlp is sortie:
+	if noun is location and mrlp is sortie:
 		let myrm be roomroom;
 	if noun is not a room:
 		let myrm be the location of noun;
@@ -12116,7 +12102,7 @@ check reading (this is the reading is almost examining rule):
 	if noun is gadget:
 		try examining tag instead;
 	if noun is gadget-screen:
-		try scaning air instead;
+		try scaning location of player instead;
 	if noun is op and controls are not in op:
 		say "You notice that it's underwritten (in red) by Orton LSC, whoever they are." instead;
 	if noun is gateway:
@@ -17148,7 +17134,7 @@ understand "xray" as xraying.
 
 carry out xraying:
 	repeat with ABC running through visible things:
-		if ABC is flippable or ABC is air:
+		if ABC is flippable or ABC is the location:
 			say "Xraying [ABC]:";
 			try xmxing ABC;
 	the rule succeeds;

@@ -3187,14 +3187,11 @@ check going:
 
 book the air
 
-the air is a proper-named backdrop. the air is everywhere. description is "Yup. Still breathable."
-
-does the player mean scaning air:
+rule for supplying a missing noun when scaning:
 	if player is in lean lane and cans are in lean lane:
-		it is unlikely;
-	it is very likely.
-
-rule for supplying a missing noun when scaning: now the noun is the air.
+		now the noun is the cans;
+	else:
+		now the noun is the location of the player.
 
 book reading (vs just examining)
 
@@ -4177,9 +4174,6 @@ check taking scenery:
 	if location of player is fiefco:
 		say "You don't need to take that. Just take inspiration from it." instead;
 	say "You don't need to take any of the scenery here. Or, well, anywhere. Unless you change it to something else first." instead;
-
-check taking air:
-	say "You do so every move, even without thinking." instead;
 
 chapter d
 
@@ -7367,7 +7361,7 @@ check scaning cold:
 
 bogus-plains is an undesc. a-text of bogus-plains is "RRRYYR". b-text of bogus-plains is "RRRY??".
 
-check scaning air (this is the air scan based on room rule) : [?! possible to define air based on where it is e.g. a-text/b-text for mango/voltmaze but silly]
+check scaning location of the player (this is the location rule): 
 	if location is Sun-Spared Underpass: [start routes]
 		if darkness is visible:
 			try scaning darkness instead;
@@ -7422,12 +7416,12 @@ check scaning air (this is the air scan based on room rule) : [?! possible to de
 	if location of player is Posh Hops Shop: [start oyster]
 		say "The settler points towards the door and the trolls.";
 		try scaning trolls instead;
-	if player is in freight:
+	if location of player is freight:
 		try scaning pale plea instead;
-	if player is in lean lane:
+	if location of player is lean lane:
 		say "The air's full of eeks, which your settler picks up." instead;
 		try scaning eeks instead;
-	if player is in plains:
+	if location of player is plains:
 		if splained is false:
 			say "[full-monty of bogus-plains]" instead;
 	if location of player is bleary barley and b-b is reflexive: [start otters]
@@ -7435,7 +7429,7 @@ check scaning air (this is the air scan based on room rule) : [?! possible to de
 	if location of player is clangier: [start others]
 		if mango is off-stage:
 			say "As you listen to the crowds, you notice [full-monty of dummy-mango] on your settler." instead;
-	if player is in swell wells:
+	if location of player is swell wells:
 		if sorer bogey is visible:
 			try scaning sorer bogey instead;
 	say "You can't find anything specific to scan, and nothing shows up on your settler." instead;
@@ -12388,8 +12382,8 @@ the output display is undesc. the output display is part of the letters settler.
 the receptors are part of the settler. description is "You know little about electronics and magic theory, and you have no time to find out."
 
 check examining output display:
-	say "You look at the display, not really expecting to see anything unless you SCAN something. Maybe there's something in the air.";
-	try scaning air instead;
+	say "You look at the display, not really expecting to see anything unless you SCAN something. So you wave the settler around, hoping to pick up something.";
+	try scaning the location instead;
 
 the colorful logo is undesc. the colorful logo is part of the settler.
 
@@ -17838,7 +17832,7 @@ understand the command "spit" as something new.
 understand "spit [something]" as spiting.
 understand "spit in/at/on [something]" as spiting.
 
-does the player mean spiting air: it is very likely;
+does the player mean spiting the location: it is very likely.
 
 carry out spiting:
 	if noun is tumblers:
@@ -18679,7 +18673,7 @@ rule for supplying a missing noun when unearthing:
 		if thin hint is in collapsed:
 			now noun is thin hint;
 		else:
-			now noun is air;
+			now noun is location;
 
 unearthing is an action applying to one visible thing.
 
@@ -18710,7 +18704,7 @@ carry out unearthing:
 	if mrlp is not oyster:
 		say "[reject]";
 	if player is in collapsed old places:
-		if noun is air:
+		if noun is location:
 			say "You haven't buried anything, and you're not aware of treasure here. Plus, if you dig too long without knowing what to look for, you might attract attention." instead;
 		if noun is ruby:
 			say "That is wasted work." instead;
@@ -56800,7 +56794,7 @@ before objhinting for the first time:
 	if hintcand is off-stage, decide no;
 	if hintcand is in lalaland, decide no;
 	if hintcand is useless, decide no;
-	if hintcand is air, decide yes;
+	if hintcand is the location, decide no;
 	if hintcand is the diorama or hintcand is part of the diorama: [if hintcand is out of play?]
 		decide no;
 [	if hintcand is rude door or hintcand is knob:		[Bad Coding. if hintcand is enclosed by a thing: now R1 is map region of location of a thing that encloses hintcand;]
@@ -56822,7 +56816,7 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is off-stage, decide no;
 	if hintcand is in lalaland, decide no;
 	if hintcand is useless, decide no;
-	if hintcand is air, decide yes;
+	if hintcand is the location, decide no;
 	if hintcand is the diorama or hintcand is part of the diorama: [if hintcand is out of play?]
 		if player is in basement or player is in study:
 			decide yes;
@@ -56930,6 +56924,8 @@ carry out objhinting (this is the pick object to hint rule) :
 	now cur-item is noun;
 	if spoilit is false:
 		d "[noun] hinting.";
+	if noun is a room:
+		say "You need to hint things in a location, not a location. Also, you can just type HINT for the current puzzle to look at." instead;
 	if noun is the player:
 		all-say "[if cur-score of manor < 3]You have, or had, a special power you may remember from Shuffling Around. If you haven't figured it, hopefully, you soon will, from looking around[else]You're as good looking as ever! I can't tell you how to be a better you than you already are[end if]." instead;
 	if noun is a fruit and player has noun:
@@ -56945,7 +56941,7 @@ carry out objhinting (this is the pick object to hint rule) :
 		all-say "The church isn't so special now you've been in it." instead;
 	if noun is closets:
 		all-say "The closets are just for transporting around the manor quicker, to or from the study." instead;
-	if noun is air:
+	if noun is the location:
 		all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
 	if location of noun is nothing and noun is not a backdrop:
 		all-say "[noun]: you probably shouldn't know about that object, yet. And if you do, try asking about objects you can see." instead;
@@ -57193,7 +57189,6 @@ to say by-bee:
 
 table of hintobjs [toh]
 hint-entry	advice-entry	parallel-entry	spoil-entry
-air	"[one of]You should be able to scan the air with [if player does not have settler]an object you'll find[else]the letters settler[end if] for clues. You shouldn't even need to SCAN AIR, just SCAN.[plus][or]Other than that, you don't need any special commands to, like, breathe it or anything.[minus][cycling]"
 red writing	"The red writing provides a clue of what the letters can't be."
 pedanto-notepad	"You can CONSULT the notepad about things. It contains no game-critical hints, but it can help you remember a lot of shortcuts and such, so you can think sharper."
 Urgent Gunter	"You can pump him for information if you want."
@@ -59585,7 +59580,7 @@ carry out cruing:
 
 section saeing
 
-[* SAE toggles scanning the air every turn]
+[* SAE toggles scanning the location every turn]
 
 saeing is an action out of world.
 
@@ -59604,7 +59599,7 @@ carry out saeing:
 
 every turn when sae is true and player has settler:
 	say "AIR SCAN: [no line break]";
-	try scaning air;
+	try scaning the location;
 
 chapter tuting
 
