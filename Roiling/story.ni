@@ -3608,7 +3608,7 @@ social-quip	"You complain about social forces in general. More downers than wond
 girls-quip	"You listen about [twiddle of table of elmo emo and 3]. No friend finder or lovers solver found the woman for Elmo. He looks happier for having complained, though."
 weather-quip	"That's always a safe one. You say 'How [']bout that weather, geez,' not realizing you haven't gotten out enough to know if it's been too hot, cold, rainy or dry. But fortunately, you haven't gotten out enough to remember those details don't matter.[paragraph break]Elmo seems ready to listen to deeper concerns, even if they probably aren't germane to what you need to do."
 sports-quip	"Sports banter follows.[paragraph break][twiddle of table of sports chatter and 2]'Chokers.' / 'Shocker.'"
-artsy-quip	"'Where do I look?'[paragraph break]'Spry prys say end of the alphabet. The start's tourist traps. Especially the sortie and forest and metros you solved. The tour guides are a bit, uh, revisionist.'[paragraph break]'What's the bare mi...uh, most efficient way through?'[paragraph break]'Well, stores U and V at the Strip seem the most easy. P is not too bad. Y--well, lots to do but it's simple. W is--I can't quite describe it. T--you might be weak when you get there.'"
+artsy-quip	"'Where do I look? Is there a bare min--uh, most efficient way through?'[paragraph break]'Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. But the remaining stuff. You can maybe take care of them later."
 leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [if player is female]wo[end if]man! Ego hurt? Er, tough!'[paragraph break]Gunter pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manor.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end GUNTER text]
 curb-quip	"'It's not your fault you didn't have a super perfect story when you rescued Yorpwald. That's the fault of -- someone above -- if they even exist. Maybe if you fix what's wrong here, it'll be a more compelling story and pontificators won't turn against you. Or get bored.' Elmo turns to the fourth wall. 'Or have an excuse to pretend they're bored.'" [start ELMO text]
 interr-quip	"'The Strip of Profits is--well, it's tied up with Old Warpy again. You know, how Old Warpy sent you to the forest and metros and sortie? Yeah, there's people buying stuff from the stores, but they're so occupied, they won't notice YOU! Still, you've got a trial trail ahead. Elvira's got her toy theory started. About you being bad for Yorpwald.'"
@@ -3616,14 +3616,8 @@ toy-theory-quip	"You've sort of heard it, and you've sort of thought it, but yea
 strip-quip	"'Yeah, lots to explore. But I bet observing and talking to people will help. Even if they don't want to help. There also may be some--illegal types around stores K and N. You don't need them, but they can't hurt.'"
 clues-quip	"'Examine everything. People and things blocking you. Try to get by them. Just plain listen, or smell. Dialogues also guide. Oh, and if you can find Gretta Garett-Tatger, bonus.'"
 gretta-quip	"'She's a good investigative reporter, the best. She's dug further into Elvira's doings than anyone else. But she's become a bit of a--target.' You both cringe. 'No, her name's not your fault. Just, she may have found something, even left a cue in the Strip of Profits.' Elmo shows you a picture of her."
-trial-trail-quip	"'More trouble, more stores. Six of [']em. But you can't just switch stuff to other stuff. That'd be more hokey and homeworky. You'll have to infer finer things to upset the setup.' You ask what's ahead.[paragraph break]'You probably remember tackling F, I and M. Now it's P, T, U, V, W and Y. Oh, and H, if you get by Elvira.'[paragraph break]That's a lot. You probably don't need to grill him about all the stores. But some general hints could be nice."
+trial-trail-quip	"'More trouble, more stores. Six of [']em. But you can't just switch stuff to other stuff. That'd be more hokey and homeworky. You'll have to infer finer things to upset the setup. But I have some basic notes.' Elmo hands you a paper. 'It's a Gird Grid. More details there. Read it later.'"
 shortcut-quip	"'Hm, maybe a covert vector after you solve two...[paragraph break]'Oh, hey, if you want to complain about random stuff, go ahead. It might not give any practical help, but I don't mind listening. I've thrown a lot at you.'"
-p-quip	"Elmo stammers a bit. 'I know I asked you to ask about it. But I can't think of what to say about it in polite company. This is a hint that's not a hint, though. Or vice-versa. Honest. I hear ProcCorp is behind it. Or is it PorcCorp or CropCorp? Or all of them? There's a hacks['] shack immune to shatter-threats somewhere there.'"
-t-quip	"'Store T, well, I've never seen anyone even try to buy stuff. People walk away. Like there's an Or-Not-O-Tron near it. I'd wait on it. But it might have hints about the other stores.'"
-u-quip	"'Store U used to hold all sorts of road maps, telling people where to go without directions. I hear it's hooked up to some place where people can't think or walk straight. More have been popping up over Yorpwald. But the worst is the Same Mesa. A poison stripe around it.'[paragraph break]'Who? How?'[paragraph break]'Rev. Ali and his go-mad dogma about St. Rich, the god of lie, the good life has left people without directions.'"
-v-quip	"'Store V used to hold a bunch of self-help books that taught you how to think wrong. But the proprietor moved on to lectures. More lucrative. Self-help industries have overrun Yorpwald. Spoiloplis is the big hub. Mayor's Irv Lea. But you may not even need to meet him.'"
-w-quip	"'Store W, well, everyone seems to have a different word to describe what's going on there in the Bland Sad Badlands. People protecting their territory just because. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. They say it's being torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow...'"
-y-quip	"'Store Y, well, it connects to the sea somehow. A seashore seahorse told me about seaside dis-ease you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU.'"
 flier-quip	"'Hmm. Well, my last name's not Stetler, but I can give it a shot.' You and Elmo scan the flier, which is [if setspace is true]R Y R R Y[else]RYRRY[end if] with cheat or teach mode. 'I saw your settler was [if setspace is true]R R Y Y R[else]RRYYR[end if] when I had the rifle.' Elmo speed-reads your treatise. 'So the colors tell you what stuff should become. That gives us five letters.'[paragraph break]'I and E are yellow for the rifle AND the flier, and R and F and L are red. Hm. Dunno if that's enough. I have some other supplies Old Man Almond gave me.' You note a PLUG of nutrients, laces, and an ELMO nametag." [check what's scanned]
 scale-quip	"You experiment with changing the laces to a scale and back. Laces to scale is [if setspace is true]R Y R R Y[else]RYRRY[end if], scale to laces is [if setspace is true]R Y R Y R[else]RYRYR[end if].  [mo-data]."
 gulp-quip	"The plug becomes a gulp, then back to a plug, no more unappetizing than before. You note plug to gulp is [if setspace is true]R Y R R[else]RYRR[end if], gulp to plug is [if setspace is true]R R Y R[else]RRYR[end if], and cheat mode changes nothing. [mo-data]."
@@ -3722,12 +3716,6 @@ prompt	response	enabled
 "Poss. Clue? Closeups?"	clues-quip	0
 "Gretta Garett-Tatger?"	gretta-quip	0
 "Jumbo, um, job. Six of [']em? Some fix!"	shortcut-quip	0
-"Ask Elmo about Store P"	p-quip	0
-"Ask Elmo about Store T"	t-quip	0
-"Ask Elmo about Store U"	u-quip	0
-"Ask Elmo about Store V"	v-quip	0
-"Ask Elmo about Store W"	w-quip	0
-"Ask Elmo about Store Y"	y-quip	0
 "Ask Elmo about the Strip of Profits"	strip-quip	0
 "Complain about the weather [bracket]NOTE: complaining, or listening to Elmo complain, is possibly therapeutic, but utterly unproductive[close bracket]"	weather-quip	0
 "Complain about your favorite sports team"	sports-quip	0
@@ -3929,12 +3917,7 @@ to open-elmos-hints:
 		enact the artsy-quip;
 		enact the clues-quip;
 		enact the trips-quip;
-		enact the p-quip;
-		enact the t-quip;
-		enact the u-quip;
-		enact the v-quip;
-		enact the w-quip;
-		enact the y-quip;
+		now player has the Gird Grid
 
 ramabits is a list of things variable. ramabits is { farm plot, platform, event map, pavement, brass crag, crabgrass, pedestal, steel pad }
 
@@ -4110,23 +4093,13 @@ after quipping: [qa]
 		disable the orange-dunno-quip quip;
 	else if current quip is dio-quip or current quip is trips-quip or current quip is dio-all-quip or current quip is dio-2-quip or current quip is satchel-quip or current quip is yorp-quip or current quip is settler-quip or current quip is strip-quip or current quip is weather-quip or current quip is girls-quip or current quip is sports-quip or current quip is curb-quip or current quip is social-quip or current quip is media-quip-2 or current quip is clues-quip:
 		do nothing;
-	else if current quip is p-quip:
-		pad-rec-p "store p";
-	else if current quip is t-quip:
-		pad-rec-p "store t";
-	else if current quip is u-quip:
-		pad-rec-p "store u";
-	else if current quip is v-quip:
-		pad-rec-p "store v";
-	else if current quip is w-quip:
-		pad-rec-p "store w";
-	else if current quip is y-quip:
-		pad-rec-p "store y";
 	else if current quip is toy-theory-quip:
 		do nothing;
 	else if current quip is bye-Elmo-quip:
 		lawnmower table of Elmo comments;
 		terminate the conversation;
+		if player does not have gird grid and do-i-chat is false:
+			say "Hm. Maybe Elmo had some information for you that a conversation couldn't bring out. Well, it's all really just anagramming from here on out--you think/hope.";
 		now Elmo is in lalaland;
 		now satchel is in lalaland;
 		if do-i-chat is true: [this is a cheat bypass]
@@ -6416,6 +6389,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "purse"	495975644	--	--	super purse	--	"The purse is just fine as it is."
 "space"	326739437	--	--	super purse	--	"You don't want to mess with the space-capes. They work.."
 "treatise"	690610687	--	--	treatise	--	"The treatise [if settler is off-stage]is[else]was[end if] there as help to discover [if settler is off-stage]what's in the latches[else]the satchel. It has only sentimental value, now[end if]."
+"gird"	183945440	--	--	gird grid	--	"The grid already contains pretty much everything Elmo was able to find out."
 "writing"	487861496	--	--	red writing	--	"[red-wri]."
 "redwriting"	722020497	--	--	red writing	--	"[red-wri]."
 "red"	234159001	--	--	red writing	--	"[red-wri]."
@@ -12200,6 +12174,41 @@ after fliptoing rifle:
 	now high sign is in lalaland;
 	try talking to Mole Elmo instead;
 	continue the action;
+
+section Gird Grid
+
+the Gird Grid is a warpable thing. "[bug-report]"
+
+check eating grid:
+	say "Well, maybe if you were a spy like Elmo. Rather, you should digest the information written therein." instead;
+
+check examining the Gird Grid:
+	now gird grid is examined;
+	say "The Gird Grid [one of]is the real thing--endorsed by Dr. Ridrig! It [or][stopping]is divided 2x3, into sections labeled, not quite in alphabetical order, U(1), V(2), P(3), Y(4), W(6) and T(6).[paragraph break]Just type in the part you wish to examine, (case insensitive) letter or number.";
+	let cho be the chosen letter;
+	if cho - 32 is a uc-ascii listed in the table of griddiness: [switch to lower case]
+		now cho is cho - 32;
+	if cho is a uc-ascii listed in the table of griddiness:
+		choose row with uc-ascii of cho in table of griddiness;
+	else if cho is a num-ascii listed in the table of griddiness:
+		choose row with num-ascii of cho in table of griddiness;
+	else:
+		say "You need to chose 1-6, or one of PTUVWY. Case insensitive." instead;
+	if reg-match entry is solved or reg-match entry is bypassed:
+		say "You're pretty sure you don't need to deal with the [reg-match entry], any more. Still, you re-read the description and take time to feel pleased with what you fixed." instead;
+	say "[reg-blurb entry][line break]";
+	if mrlp is reg-match entry:
+		say "[if cur-score of mrlp is 0]Hm. Maybe you'll figure out what do do, and how[else]Hm. The hints make a bit more sense, now[end if].";
+	the rule succeeds;
+
+table of griddiness
+num-ascii	uc-ascii	reg-match	reg-blurb
+49	85	routes	"The Poison Stripe surrounding the Same Mesa has caused people there to lose all sense of direction, physically and mentally. If one person could escape, that would change. The Oopsin['] Priest may be able to help you."
+50	86	troves	"Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order."
+51	80	presto	"There is rumor of a Hacks['] Shack immune to Elvira's Shatter-Threats legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks['] Shack, you may feel a sense of normality that gets you back to how things were before Elvira."
+52	89	oyster	"A seashore seahorse mentioned aseaside dis-ease you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it."
+53	87	towers	"The Bland Sad Badlands are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow..."
+54	84	otters	"Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!"
 
 book stable
 
