@@ -25,6 +25,8 @@ TRE = table of readables
 TSX  = differences between sexes
 TSH = table of spechelp, so you can see the specialized help for an item
 TSR = table of specreject, which gives specialized responses for if you try to flip something that doesn't need it any more
+TQT = table of quip texts for GRetta, elMO, ELvira, GUnter. Separated with hyphen
+TCO = table of conversations for GRetta, elMO, ELvira, GUnter. Separated with hyphen
 DMT = dome tables, text from Demo Dome section
 
 VRT = VOLUME RANDOM TEXT BLURB TABLES has the random text.
@@ -3586,155 +3588,6 @@ to say check-started-yet:
 	else if prefigs is 1:
 		say ". Maybe you can go back to the [if p-2 is prefigured or ghoul hat is prefigured]barn[else]pool[end if] and do some work now";
 
-table of quip texts (continued)
-quip	quiptext
-null-quip	"This shouldn't be part of the conversation."
-summary-quip	"'Must I sum it? It's, um...' / 'Condense it.' / 'So indecent.'[paragraph break]Gunter glosses over your successes in the forest (store F,) the sortie (store I,) and the metros (store M) and how anyone with a little dorky thinkery could've done it, but whatever. Then he gets to Elvira. How before she arrived, Yorpwald was a bit boring, but now it has more reality shows, advertisers and loud opinions than ever.[paragraph break]And how--well, she pointed out it was nice of you to save Yorpwald the first time, but a bunch of pedants looked through dictionaries to ensure there wasn't much left TO change. And how your choosing not to be A Personality was suspicious for sure. And how SHATTER-THREATS would check the anagrammability of stuff so Red Bull Burdell wouldn't happen again. Plus you never helped create cool new slang. But you, of all people, are most likely to form a polit-i-plot. He ends with a yawny anyway, mentioning how liking Elvira is what makes us different from animals, and you should totally write that in your pedanto-notepad.[paragraph break]You already sort of knew this, but Elvira seems to want you out of the way, seriously. As to Gunter, you'll probably annoy him equally by turning him out (if you want to get on with things) or failing to agree with all he has to say." [start GUNTER text]
-powers-quip	"'Humble-brag, bumbler? Agh! Snake oil. So like an aloneski! You could ply a word! Change Yorpwald from untied to united! Change clover to Velcro! Noughts to a shotgun! Words, no sword! Aarg. Man. With whatsits.'"
-necro-quip	"'No rec!' Gunter goes from dynamic to [d-word] icy, flashing an off-grace frog face. A pouty payout![paragraph break]'You irk, heel. You LIKE her? I can't can it! What she did...shaded with...'[paragraph break]'No, glib goblin! The slob lobs BS, lo! Poisonin['] Opinions! That BS idea abides, biased!' Gunter glosses over Blue Frog Urbfogel, Bugler of Foulberg, and how he beat up monsters that came back anyway til he could beat her up? Talked to people who knew where hidden items like the horn-o-honor and gavel of Fogvale were. It was rigged! Now, with her dynamite, tidy name, oh, the soaring signora! Her vast harvest, her mystic chemistry-, her tact-chatter. Her lean elan's made Yorpwald go real galore--be aliver--a praised paradise--with her ReaLiv initiative for the Sunnier Unrisen Inner Us! From arsey years to so sane season! Had us voting her overnight the roving virgo then! Became a rowdy pal! Yorpwald was old, warpy, but now it's more wordy, pal! A Yapworld and Payworld! Oh, her good deeds!'"
-clown-quip	"Scathing sigh. 'Can't.'[paragraph break]Yet she's an a-lister realist. To suggest such a reform-former is a viler...it was censor-crones who tried to quiet HER, the defamed made def! You're probably upset she pointed out anyone with your powers would've figured what to do...eventually...unless they got bored. But she is a wonder. You're a downer.'"
-sit-quip	"'Going personal? Sore plan! No gig!' She's not perfect but that helps us see... 'Mr. Quasi-Marquis...you have to admit, not even a reruns nurser thinks you could save Yorpwald turning stuff into stuff again. Pedants did research! So one do-rite editor rioted.'"
-gustave-quip	"'Once you came along, it was clear Gustave was the vaguest. A denser sender. Very idle delivery. But, well MY initiative kept me Optimal Top Mail. So well I have time for my pouter troupe.'"	[option 4-1, fork of 4]
-pouter-quip	"'Why, they came around about the time Elvira did! I didn't believe them at first! But then they became spouter troupes. No offense, you deserve your no-spine pension and all, but ... there's not much of a story behind what you did. Nothing award-winning. Why, it gives me headaches to think about some things you did and saw! No offense. Anyone with a calculator or whatever could've done it. They just...spoke the truth. And were more interesting about it! Now Elvira is more interesting. I mean, you're not funny, or anything.'"
-pun-quip	"'Eh, punt the pun,' you think. The paunchy, achy pun--a painful pun-fail--hardly cleans up on the pun scale. You picture a generic cringee at [twiddle of table of laughhouses and -3]. 'Rad irony? Ordinary.'"
-ahem-quip	"Gunter intones tension. Refusal earfuls. 'Cad, no can do. [d-word-u], uh, DUH, man.' Refusal earfuls."	[end option 4-4] [??]
-trips-quip	"'No shame,' he moans. 'Some? Nah.' ... he makes the money gesture with his hands but notes you won't get ID'd unless you visit during rush hour."
-media-quip	"Somehow, the media aimed you for trying to do way too much and way too little. You chart the flattery, the backhanded compliments, the first rifts, the outright disrespect. 'His charisma is archaism.' / 'Cagiest toil made him egotistical.' / 'He will make this realm lamer to save it again.' How the only things you [i]did[r] were saving your skin against Red Bull Burdell--and exist at the end."
-media-quip-2	"You recall Walt Koh's and Kath Low's howl-task host-walk, among other 'informational' shows...[twiddle of table of lame talk shows and 4]Folks co-spit topics, you're mashed, shamed. '[if player is male]He's [else]She... [end if]mad! Trashed, [if player is female]she'd...rat[else]he darts[end if]!' And the rubbish biopics, good ([biop of true]). or bad ([biop of false]). You did nothing to prepare Yorpwald against technically sophisticated attacks like the exciting ones Elvira warns about, the ones that helped her gain a role of Save/Rid Adviser. Many a tearful faulter did not want to blame you--but they had to."
-social-quip	"You complain about social forces in general. More downers than wonders. How you're no longer a secure cursee."
-girls-quip	"You listen about [twiddle of table of elmo emo and 3]. No friend finder or lovers solver found the woman for Elmo. He looks happier for having complained, though."
-weather-quip	"That's always a safe one. You say 'How [']bout that weather, geez,' not realizing you haven't gotten out enough to know if it's been too hot, cold, rainy or dry. But fortunately, you haven't gotten out enough to remember those details don't matter.[paragraph break]Elmo seems ready to listen to deeper concerns, even if they probably aren't germane to what you need to do."
-sports-quip	"Sports banter follows.[paragraph break][twiddle of table of sports chatter and 2]'Chokers.' / 'Shocker.'"
-artsy-quip	"'Where do I look? Is there a bare min--uh, most efficient way through?'[paragraph break]'Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. But the remaining stuff. You can maybe take care of them later."
-leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [if player is female]wo[end if]man! Ego hurt? Er, tough!'[paragraph break]Gunter pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manor.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end GUNTER text]
-curb-quip	"'It's not your fault you didn't have a super perfect story when you rescued Yorpwald. That's the fault of -- someone above -- if they even exist. Maybe if you fix what's wrong here, it'll be a more compelling story and pontificators won't turn against you. Or get bored.' Elmo turns to the fourth wall. 'Or have an excuse to pretend they're bored.'" [start ELMO text]
-interr-quip	"'The Strip of Profits is--well, it's tied up with Old Warpy again. You know, how Old Warpy sent you to the forest and metros and sortie? Yeah, there's people buying stuff from the stores, but they're so occupied, they won't notice YOU! Still, you've got a trial trail ahead. Elvira's got her toy theory started. About you being bad for Yorpwald.'"
-toy-theory-quip	"You've sort of heard it, and you've sort of thought it, but yeah. She really did backhand-compliment you (big deal, boring mathy stuff, not a SHRED of excitement, but you did the job, she guessed) while saying people needed someone more exciting to mythologize about.[wfak][paragraph break]Like, gosh, HER! 'Her united con continued unnoticed. But it's too perfect. Tough to--ugh. Something messes up, she denounces it right away. SHATTER-THREATS is so specific to you, too. That's why I don't like it.[paragraph break]'She at the very least SEEMS to think you're behind the influx of annoying anagrams. But then, she might be trolling us by framing you. That's an...other-y theory, eh, tyro?'"
-strip-quip	"'Yeah, lots to explore. But I bet observing and talking to people will help. Even if they don't want to help. There also may be some--illegal types around stores K and N. You don't need them, but they can't hurt.'"
-clues-quip	"'Examine everything. People and things blocking you. Try to get by them. Just plain listen, or smell. Dialogues also guide. Oh, and if you can find Gretta Garett-Tatger, bonus.'"
-gretta-quip	"'She's a good investigative reporter, the best. She's dug further into Elvira's doings than anyone else. But she's become a bit of a--target.' You both cringe. 'No, her name's not your fault. Just, she may have found something, even left a cue in the Strip of Profits.' Elmo shows you a picture of her."
-trial-trail-quip	"'More trouble, more stores. Six of [']em. But you can't just switch stuff to other stuff. That'd be more hokey and homeworky. You'll have to infer finer things to upset the setup. But I have some basic notes.' Elmo hands you a paper. 'It's a Gird Grid. More details there. Read it later.'"
-shortcut-quip	"'Hm, maybe a covert vector after you solve two...[paragraph break]'Oh, hey, if you want to complain about random stuff, go ahead. It might not give any practical help, but I don't mind listening. I've thrown a lot at you.'"
-flier-quip	"'Hmm. Well, my last name's not Stetler, but I can give it a shot.' You and Elmo scan the flier, which is [if setspace is true]R Y R R Y[else]RYRRY[end if] with cheat or teach mode. 'I saw your settler was [if setspace is true]R R Y Y R[else]RRYYR[end if] when I had the rifle.' Elmo speed-reads your treatise. 'So the colors tell you what stuff should become. That gives us five letters.'[paragraph break]'I and E are yellow for the rifle AND the flier, and R and F and L are red. Hm. Dunno if that's enough. I have some other supplies Old Man Almond gave me.' You note a PLUG of nutrients, laces, and an ELMO nametag." [check what's scanned]
-scale-quip	"You experiment with changing the laces to a scale and back. Laces to scale is [if setspace is true]R Y R R Y[else]RYRRY[end if], scale to laces is [if setspace is true]R Y R Y R[else]RYRYR[end if].  [mo-data]."
-gulp-quip	"The plug becomes a gulp, then back to a plug, no more unappetizing than before. You note plug to gulp is [if setspace is true]R Y R R[else]RYRR[end if], gulp to plug is [if setspace is true]R R Y R[else]RRYR[end if], and cheat mode changes nothing. [mo-data]."
-elmomole-quip	"You flip the nametag to MOLE and back, tracking the scanner. Elmo to Mole is [if setspace is true]R Y R Y[else]RYRY[end if], Mole to Elmo is [if setspace is true]Y R R Y[else]YRRY[end if]. [mo-data]."
-got-red-yellow-quip	"'Yyupp. Vowels. But we haven't found anything where the cheat button actually does anything.' You try and think of something where it might."
-still-busted-quip	"You shake your head. 'Duh, I'm humid.'[paragraph break]'A, e, i, o, u,' Elmo points out. 'Vowels.'[paragraph break]'Maybe other letters too...nah, too many consonants go to red. Yeah. Vowels and consonants.' You figure the cheat button might be a good idea to learn for the future. Might be a good idea to start small. Like--with the lamp."
-showset-quip	"'Hint agent thing! NEAT!' You show him what the red and yellow mean, then the green and purple. He asks if there are any other colors, like orange."
-lamp-quip	"'Yeah, sorry about the lamp.' You say no worries--you're trying to figure what it means. Elmo doesn't judge. 'Yeah, you been under stress, I bet, let's work it out.' The settler vaguely goes Red, yellow/green, red and red near the fragments. 'Hm, cheat mode changes A from yellow to green. That must mean something.'"
-gp-quip	"'Awesome! Yeah, cheating turns the reds and yellows blue.'"
-settler-quip	"'LETTERS SETTLER. Hm, the E-T-T change color when you switch cheat mode on. Maybe that's because they are in the right places. Yellow e to green, red t to purple. Not clear if it's e and t specifically that change, though.'"
-yorp-quip	"'Hm, [if chimney-quip is mowered]more orange letters to Y[else]the D in Yorpwald and W in Wordplay are orange. Or maybe it's what the letters can become. Orange, we haven't seen much of that[end if]. Also, interesting, the O-R change colors when you go cheat mode. Looks like they're already in the right place.'[paragraph break]'Gotcha, doc. Good catch.'"
-stable-quip	"You remember cheat mode did not change the tables when you scanned them before entering the stable--there was lots of red writing, too, which your pedanto-notepad says was wrong letters. But there were some yellows, too. They were probably wrong, but a different sort of wrong."
-basement-quip	"You remember cheat mode did not change the ten beams when you scanned them before entering the basement--there was lots of red writing, too, which your pedanto-notepad says was wrong letters. But there were some yellows, too. They were probably wrong, but a different sort of wrong."
-chimney-quip	"You remember cheat mode did not change the 'my niche' text when you scanned it before entering the chimney--there was lots of red writing, too, which your pedanto-notepad says was wrong letters. But there were some yellows, too. And an orange. You suddenly realize the orange mapped to Y[y-know]."
-ramp-quip	"You recall red, yellow, red, red for the ramp, cheat or no."
-painting-quip	"You recall R Y Y R R Y R R for non-cheat mode, with the center two going purple."
-stair-quip	"You recall R R Y Y R with one tile changing color with cheat mode. But it is probably best to focus on non-cheat mode."
-dio-quip	"Elmo looks at your diorama notes for the [list of hinthelpy escanned things].[paragraph break][dior-scan][if crabgrass is cscanned or brass crag is cscanned or steel pad is cscanned or pedestal is cscanned]You and Elmo notice a few entries changed color when and where letters were the same. You decide to isolate what they mean[else]Hmm, all reds and yellows[end if][unless its-all-scanned]. You realize you could get more data, so maybe you could sneak up to the study and try again[end if]."
-dio-all-quip	"You backtrack to scan everything remaining: the [list of hinthelpy not escanned things]."
-dio-elm-quip	"You backtrack to scan everything remaining: the [list of hinthelpy not escanned things]."
-dio-elm-2-quip	"With everything scanned now, you take a closer look.[paragraph break][dior-scan][paragraph break]You focus on the rare greens and purples. Elmo coughs, as if cuing you to something--how the greens and purples are in the same position between flipped diorama parts."
-dio-2-quip	"You hash the purples and greens out some more.[paragraph break]You focus on the rare greens and purples. Crabgrass and brass crag, letters two and three. Pedestal and steel pad, letters four and seven. You think on what is special about these, in both words."
-satchel-quip	"'Ach, let's...' you say. You [satchel-extra]notice the two end characters are red, but the rest switch from red and yellow to purple and green on cheat mode. That's the most purple and green you've seen yet."
-still-no-gp-quip	"Elmo notes that individual letters can be either red-or-purple or yellow-or-green. All green letters in cheat mode were yellow in non-cheat, and the same for purple to red. Then the ones that are purple/green--are in the right place.[paragraph break]Elmo thinks a minute and notes red plus blue is purple, and yellow plus blue is green."
-got-it-quip	"'Excellent! So, yeah, the settler adds blues when you're in cheat mode and the letters are right. Purple consonants, green vowels.'[if y-orange is false] Elmo looks over your settler once more. 'Hmm. What's the orange for? On Yorpwald/wordplay?'[else] You and Elmo note orange is for Y's, and you suspect correct oranges become brown or something.[end if]"
-orange-know-quip	"You've got this one--Yorpwald, wordplay, the orange D at the end goes to Y, the orange W at the start to Y, too[y-know]."
-orange-dunno-quip	"You [if backside is examined]re-[end if]examine the backside of settler and note how Yorpwald lines up with Wordplay--those two orange letters MEAN something. Then you both realize both orange letters go to a Y that's not in the right place[y-know]."
-bye-Elmo-quip	"[if hold-it-up is false][note-gretta]A pause. 'Go, you doer. You're good. Un-retire, reuniter. Re-shift it fresh. Disable bad lies. There's an evac-cave over thataway. You'll know what to do. I think. Forsake fears, ok?'[paragraph break]You leave, feeling less resave-averse, but run as you hear 'Get Elmo!' / 'Get ol['] me? Let me go!' 'Sympathy?' / 'My hat, spy!' ... 'A spy yaps, pays...'[paragraph break]You crawl through the evac-cave, which exits to writing behind a dune, man. UNNAMED: MUNDANE, but you look closer and see RETRAIN TERRAIN. Behind is a carven cavern. It looks as good a place as any to visit.[end if]" [end ELMO text]
-gre-macks-quip	"She introduces herself as Gretta. 'I was just trying to explain what Elvira's about, why to fight her. They started telling me they were all socially conscious--then they started hitting on me.' It's true--Elvira's brand of 'magic without magic,' which places excitement over boring honesty, has been captured in the horrid [i]OK, Be Hot: The Book[r], by Beth Koo and Theo Bok. It mentions anyone can learn its techniques--sadly, that's the truest part of the book by far.[paragraph break]You let slip it's the sort of word twisting that you can't and won't do. She pauses, then realizes how you managed to disrupt the macks without doing anything. You're that Shuffling Around person, with those powers. 'Hmm, I guess Elvira hates you even more than she hates me. I mean, she actually said I was almost as bad as you, to my face.'" [start GRETTA text]
-gre-elv-quip	"'Elvira backstabbed me. [']A nice gal? An ICE gal!['] Being called a gal was bad enough. But she used to rent the bulwark from me. Then SHATTER-THREATS somehow let her not pay rent in the name of national security. Then own it. It's hard to get ONE person to go up there, much less many. I found out she's--well, [i]augmenting[r] animals.'"
-gre-what-quip	"'You can't rely on people coming together. They're either too scared to resist, or too eager to kiss up. But animals might be willing to help. She's still training the ones she made.' Gretta looks nervously around."
-gre-north-quip	"'Maybe you will figure how to help the eels to the north and their spirit, Le Mer. They're suspicious of people, though, after Elvira failed to recruit them.'"
-gre-south-quip	"'Mr. Lee is ready to blame his failed crops on anyone. Elvira's got him convinced it's not her, but if you help him, he could be swayed back. Plus, he's a farmer, so, more animals.'"
-gre-east-quip	"'There are animal pens back east.' [if Anteroom is visited and Tapering Anger Pit is visited]You nod your head[else if Anteroom is unvisited and Tapering Anger Pit is unvisited]You cough a bit, realizing you didn't look there[else]You make a note to check the other pen[end if]. 'Perhaps animals can succeed where people failed, because Elvira won't be able to charm them with words. Well, not all of them. She captured and changed some, but you'd win their gratitude--and their friends[']--if you changed them back. Even, or especially, the ones guarding the pens.'"
-gre-animals-quip	"'The animals aren't just imprisoned but reduced to mockeries of their real selves--whether they know it or not. Maybe one reason she wanted to discredit you was, you might be able to change them back.'"
-gre-go-quip	"[if hold-it-up is false]'Here. Take these. They are ancient emblems of magic and power--damsel medals--from long before people cringed at words like damsel.' She removes her medals and hands them to you. '[gre-other].' She nods and walks off[check-started-yet].[end if]" [end GRETTA text]
-logical-quip	"'Pick a nit? Pack it in! Drone-o-nerd!' she laughs, hypnotic, pythonic. 'I? Spoon Poison? Overbearing, raving bore!' Your reply is undone in innuendo." [start ELVIRA text]
-wtf-quip	"WTF is swift. 'Egad, an agenda. Rugged Grudge. Reactions so certain. A sincerest resistance! Dayum, Y U MAD?' / 'Say, fits satisfy?' She gives a plain man's mansplain of her main plans and gets to clamp into a compliant calm point about your complaint. Manic plot? Progress! She also points out that it's probably for the best. You were feeling useless, weren't you? And if you just attack her and get it over with, you can die feeling heroic. She's sure you worked hard to get here."
-hollow-quip	"An ol['] howl. 'Me? Rocky mockery! Petulant late punt! [if player is male]Ach, Mr. Charm[else]Ms. Arch-Charms[end if]!' She laughs with mindless mildness. 'Uber-Rube! Delicate, elite cad! Deny it's destiny? Evasion! So naive!' You cork a croak."
-abhor-quip	"'Recoil, O Relic!' / 'Nuh-unh, hun! Solicit colitis!' Wow. Oww."
-strong-quip	"'So pure? Poseur! Soppy psy-op!' Dang, your spoonerism got double-trumped, there."
-sneer-quip	"'Obliged old gibe. Bilge OD!' Coughs co-gush, chug so. 'Be a god? Bad ego!' you try back, but she's a serener sneerer. 'How silly! Why so ill?'"
-bald-quip	"'Ow, sloth. Low shot.' She laughs. You probably shouldn't be worrying about looks, now."
-sinister-quip	"'Sinister RESISTIN[']. Loutier Outlier!' she calls back. There's a brief scuffle over whose insult was less creative, but you kind of shuffled a lower percentage of letters, there. So she wins.[paragraph break]But don't worry. You're still the good guy. You just lost a style point."
-final-quip	"'No mercy, my crone! Corny, me?' She flinches at your pure re-up, responding 'Oh, cute. Touché.' A truce, acuter. 'Careful now, awful crone.' 'Woeful narc!' Eugh. No. Enough." [end ELVIRA text]
-
-section individual comments
-
-table of Gunter comments
-prompt	response	enabled
-"Say, Mr., um... summary?"	summary-quip	1
-"Elvira...necro-crone recon?"	necro-quip	0
-"Shil-lish. Sit on it, son."	sit-quip	0
-"Powers? Me? Spew more!"	powers-quip	0
-"Why so showy? Calm down, mad clown!"	clown-quip	0
-"Ask Gunter how business is"	gustave-quip	0
-"Pouter troupe?"	pouter-quip	0
-"Lighten the mood with a joke"	pun-quip	0
-"Er, ahem, hear me"	ahem-quip	0
-"One Beg: begone!"	leave-quip	0
-
-table of Elmo comments
-prompt	response	enabled
-"Ask Elmo about how to use your Settler, because you're not sure yet"	flier-quip	1
-"Show Elmo the sweet Settler you know how to use"	showset-quip	1
-"Check the scale that can flip to laces and back."	scale-quip	0
-"Check the ELMO nametag that could show him up as a mole."	elmomole-quip	0
-"Check the PLUG of nutrients that could become a GULP bottle."	gulp-quip	0
-"Recall the tables/stable flip."	stable-quip	0
-"Recall the my niche/chimney flip."	chimney-quip	0
-"Recall the ten beams/basement flip."	basement-quip	0
-"Recall the pram/ramp flip."	ramp-quip	0
-"Recall the giant pin/painting flip."	painting-quip	0
-"Recall the stair flip."	stair-quip	0
-"Recall what you tried with the diorama."	dio-quip	0
-"See about all you could try with the diorama."	dio-all-quip	0
-"Look through all the diorama data."	dio-2-quip	0
-"Oh, cool, I know what the reds and yellows are for, now."	got-red-yellow-quip	0
-"Geez. I'm still busted. Kinda shaken by...well, the excitement."	still-busted-quip	0
-"Ask Elmo about the lamp"	lamp-quip	0
-"Explain you know what the colors besides red and yellow mean"	gp-quip	0
-"Ask Elmo about the 'Letters Settler' text"	settler-quip	0
-"Ask Elmo about the 'Yorpwald-Wordplay' text on the laced decal"	yorp-quip	0
-"Ask Elmo about what you remember from the diorama."	dio-elm-quip	0
-"Scan everything about the diorama."	dio-elm-2-quip	0
-"Yeah, I see what orange means."	orange-know-quip	0
-"Hmm, I don't see what orange means."	orange-dunno-quip	0
-"Oh, hey. The satchel. [unless satchel is escanned]Maybe I could scan it[else if satchel is bscanned]I scanned it with cheat on and off[else]I could scan it some more[end if]!"	satchel-quip	0
-"Hm, still not clear on the green/purple."	still-no-gp-quip	0
-"Tell Elmo you got what the cheat button does, thanks!"	got-it-quip	0
-"[unless y-orange is true]Hm, I even see what orange is for. [end if]Got some reinvestigator interrogatives, hustle-sleuth."	interr-quip	0
-"Ask Elmo about her toy theory"	toy-theory-quip	0
-"Ask Elmo about your trial trail"	trial-trail-quip	0
-"Strip of Profits? Was that the Trips Strip? What's at the...?"	trips-quip	0
-"Strategy-try stage? Get artsy?"	artsy-quip	0
-"Poss. Clue? Closeups?"	clues-quip	0
-"Gretta Garett-Tatger?"	gretta-quip	0
-"Jumbo, um, job. Six of [']em? Some fix!"	shortcut-quip	0
-"Ask Elmo about the Strip of Profits"	strip-quip	0
-"Complain about the weather [bracket]NOTE: complaining, or listening to Elmo complain, is possibly therapeutic, but utterly unproductive[close bracket]"	weather-quip	0
-"Complain about your favorite sports team"	sports-quip	0
-"Complain about the media"	media-quip	0
-"Complain about the media some more"	media-quip-2	0
-"Complain about how more exciting people and stories pushed you to the curb"	curb-quip	0
-"Complain about social forces in general"	social-quip	0
-"Let Elmo complain about his lack of success with women"	girls-quip	0
-"Finish Fishin[']."	bye-Elmo-quip	1
-
-table of Elvira comments
-prompt	response	enabled
-"Fool us? So foul of soul! (Lay things out logically, hopefully without getting overemotional or boring)"	logical-quip	1
-"WTF FTW"	wtf-quip	1
-"LOL, how hollow!"	hollow-quip	1
-"Play God? Dopy gal!"	sneer-quip	1
-"Abhorsive Behaviors!"	abhor-quip	1
-"Strong will? Still wrong. At bay, ya bat."	strong-quip	1
-"Go bald, old bag!"	bald-quip	0
-"Sinister Insister. Hypno-phony."	sinister-quip	0
-"Scourge-curse, go! (yeah, yeah, get on with it)"	final-quip	1
-
 before QBC responding with (this is the warn you before bailing from a convo rule):
 	let cur-act be a number; [this is kind of cutesy code. Basically, it checks to see if Player Choice is equal to the # of available choices. If so, it warns you.]
 	now cur-act is 0;
@@ -3918,23 +3771,7 @@ to open-elmos-hints:
 
 ramabits is a list of things variable. ramabits is { farm plot, platform, event map, pavement, brass crag, crabgrass, pedestal, steel pad }
 
-after quipping: [qa]
-	if hold-it-up is true:
-		if player is in fro:
-			choose row with response of gre-go-quip in the table of Gretta comments;
-			now enabled entry is 1;
-		else:
-			choose row with response of bye-Elmo-quip in the table of Elmo comments;
-			now enabled entry is 1;
-		now hold-it-up is false instead;
-	d "[current quip].";
-	if current quip is showset-quip:
-		ital-say "if you didn't mean to do this, you can UNDO to get a bit more help from Elmo.";
-	else:
-		if debug-state is false:
-			prevent undo;
-		now undo-code is -1;
-	now current quip is mowered;
+after quipping when qbc_litany is the table of Gunter comments:
 	if current quip is summary-quip:
 		pad-rec-lump "Elvira";
 		pad-rec "SHATTER-THREATS";
@@ -3951,6 +3788,8 @@ after quipping: [qa]
 		enact the ahem-quip;
 	else if current quip is necro-quip:
 		enact the sit-quip;
+	else if current quip is sit-quip or current quip is powers-quip or current quip is clown-quip or current quip is ahem-quip:
+		do nothing;
 	else if current quip is leave-quip:
 		lawnmower the table of Gunter comments;
 		terminate the conversation;
@@ -3961,9 +3800,14 @@ after quipping: [qa]
 			move player to Basement;
 			now rifle is in lalaland;
 			now qbc_litany is litany of Mole Elmo; [may be delete-able] [end Gunter's dialogue]
-	else if current quip is sit-quip or current quip is powers-quip or current quip is clown-quip or current quip is ahem-quip:
-		do nothing;
-	else if current quip is interr-quip:	[Elmo's dialogue below here]
+	else:
+		debug-fallthrough;
+
+after quipping when qbc_litany is the table of Elmo comments:
+	if hold-it-up is true:
+		choose row with response of bye-Elmo-quip in the table of Elmo comments;
+		now enabled entry is 1;
+	if current quip is interr-quip:
 		enact toy-theory-quip;
 		enact the trial-trail-quip;
 		now talked-to-Elmo is true;
@@ -4105,26 +3949,20 @@ after quipping: [qa]
 		else:
 			now poss-score of manor is cur-score of manor + 3;
 			move the player to Carven Cavern;	[end Elmo's dialogue]
-	else if current quip is gre-macks-quip:
-		enact gre-elv-quip;
-		enact gre-what-quip;
-		enact gre-go-quip;
-	else if current quip is gre-elv-quip or current quip is gre-what-quip:
-		if gre-elv-quip is mowered and gre-what-quip is mowered:
-			say "'Not everyone here loves Elvira. Some are willing to help, if they're just treated right. I can tell you who, or what's, where.' Gretta looks around, worried the macks will narc her out to Elvira, even though none of them headed west to the bulwark, but you can probably grill her for quick information.[paragraph break]";
-			enact gre-north-quip;
-			enact gre-east-quip;
-			enact gre-south-quip;
-	else if current quip is gre-east-quip:
-		enact gre-animals-quip;
-	else if current quip is gre-animals-quip:
-		do nothing;
-	else if current quip is gre-go-quip:
-		now Gretta is in lalaland;
-		terminate the conversation;
-	else if current quip is gre-north-quip or current quip is gre-south-quip or current quip is gre-elv-quip:
-		do nothing;
-	else if current quip is hollow-quip or current quip is sinister-quip: [Elvira's dialogue below here]
+	else:
+		debug-fallthrough;
+			
+after quipping (this is the usually don't undo convos rule):
+	now current quip is mowered;
+	if current quip is showset-quip:
+		ital-say "if you didn't mean to do this, you can UNDO to get a bit more help from Elmo.";
+	else:
+		if debug-state is false:
+			prevent undo;
+		now undo-code is -1;
+
+after quipping when qbc_litany is the table of Elvira comments:
+	if current quip is hollow-quip or current quip is sinister-quip: [Elvira's dialogue below here]
 		do nothing;
 	else if current quip is logical-quip or current quip is wtf-quip or current quip is hollow-quip or current quip is sneer-quip or current quip is abhor-quip or current quip is strong-quip:
 		if one-Elvira is false:
@@ -4134,10 +3972,10 @@ after quipping: [qa]
 		lawnmower table of Elvira comments;
 		terminate the conversation;
 	else:
-		if debug-state is true:
-			say "FALLTHROUGH BUG in after-quipping code. Put [current quip] somewhere in the after quipping rule.";
-		else:
-			do nothing;
+		debug-fallthrough;
+
+to debug-fallthrough:
+	say "FALLTHROUGH BUG in after-quipping code. Put [current quip] somewhere in the after quipping rule.";
 
 chapter quip-rule-mod
 
@@ -11563,6 +11401,42 @@ every turn when location of player is dusty study and stuff-found >= 3 (this is 
 to say it-door:
 	set the pronoun it to the side door;
 
+section gunter dialogue
+
+table of Gunter comments [tco-gu]
+prompt	response	enabled
+"Say, Mr., um... summary?"	summary-quip	1
+"Elvira...necro-crone recon?"	necro-quip	0
+"Shil-lish. Sit on it, son."	sit-quip	0
+"Powers? Me? Spew more!"	powers-quip	0
+"Why so showy? Calm down, mad clown!"	clown-quip	0
+"Ask Gunter how business is"	gustave-quip	0
+"Pouter troupe?"	pouter-quip	0
+"Lighten the mood with a joke"	pun-quip	0
+"Er, ahem, hear me"	ahem-quip	0
+"One Beg: begone!"	leave-quip	0
+
+table of quip texts (continued) [tqt-gu]
+quip	quiptext
+summary-quip	"'Must I sum it? It's, um...' / 'Condense it.' / 'So indecent.'[paragraph break]Gunter glosses over your successes in the forest (store F,) the sortie (store I,) and the metros (store M) and how anyone with a little dorky thinkery could've done it, but whatever. Then he gets to Elvira. How before she arrived, Yorpwald was a bit boring, but now it has more reality shows, advertisers and loud opinions than ever.[paragraph break]And how--well, she pointed out it was nice of you to save Yorpwald the first time, but a bunch of pedants looked through dictionaries to ensure there wasn't much left TO change. And how your choosing not to be A Personality was suspicious for sure. And how SHATTER-THREATS would check the anagrammability of stuff so Red Bull Burdell wouldn't happen again. Plus you never helped create cool new slang. But you, of all people, are most likely to form a polit-i-plot. He ends with a yawny anyway, mentioning how liking Elvira is what makes us different from animals, and you should totally write that in your pedanto-notepad.[paragraph break]You already sort of knew this, but Elvira seems to want you out of the way, seriously. As to Gunter, you'll probably annoy him equally by turning him out (if you want to get on with things) or failing to agree with all he has to say." [start GUNTER text]
+powers-quip	"'Humble-brag, bumbler? Agh! Snake oil. So like an aloneski! You could ply a word! Change Yorpwald from untied to united! Change clover to Velcro! Noughts to a shotgun! Words, no sword! Aarg. Man. With whatsits.'"
+necro-quip	"'No rec!' Gunter goes from dynamic to [d-word] icy, flashing an off-grace frog face. A pouty payout![paragraph break]'You irk, heel. You LIKE her? I can't can it! What she did...shaded with...'[paragraph break]'No, glib goblin! The slob lobs BS, lo! Poisonin['] Opinions! That BS idea abides, biased!' Gunter glosses over Blue Frog Urbfogel, Bugler of Foulberg, and how he beat up monsters that came back anyway til he could beat her up? Talked to people who knew where hidden items like the horn-o-honor and gavel of Fogvale were. It was rigged! Now, with her dynamite, tidy name, oh, the soaring signora! Her vast harvest, her mystic chemistry-, her tact-chatter. Her lean elan's made Yorpwald go real galore--be aliver--a praised paradise--with her ReaLiv initiative for the Sunnier Unrisen Inner Us! From arsey years to so sane season! Had us voting her overnight the roving virgo then! Became a rowdy pal! Yorpwald was old, warpy, but now it's more wordy, pal! A Yapworld and Payworld! Oh, her good deeds!'"
+clown-quip	"Scathing sigh. 'Can't.'[paragraph break]Yet she's an a-lister realist. To suggest such a reform-former is a viler...it was censor-crones who tried to quiet HER, the defamed made def! You're probably upset she pointed out anyone with your powers would've figured what to do...eventually...unless they got bored. But she is a wonder. You're a downer.'"
+sit-quip	"'Going personal? Sore plan! No gig!' She's not perfect but that helps us see... 'Mr. Quasi-Marquis...you have to admit, not even a reruns nurser thinks you could save Yorpwald turning stuff into stuff again. Pedants did research! So one do-rite editor rioted.'"
+gustave-quip	"'Once you came along, it was clear Gustave was the vaguest. A denser sender. Very idle delivery. But, well MY initiative kept me Optimal Top Mail. So well I have time for my pouter troupe.'"	[option 4-1, fork of 4]
+pouter-quip	"'Why, they came around about the time Elvira did! I didn't believe them at first! But then they became spouter troupes. No offense, you deserve your no-spine pension and all, but ... there's not much of a story behind what you did. Nothing award-winning. Why, it gives me headaches to think about some things you did and saw! No offense. Anyone with a calculator or whatever could've done it. They just...spoke the truth. And were more interesting about it! Now Elvira is more interesting. I mean, you're not funny, or anything.'"
+pun-quip	"'Eh, punt the pun,' you think. The paunchy, achy pun--a painful pun-fail--hardly cleans up on the pun scale. You picture a generic cringee at [twiddle of table of laughhouses and -3]. 'Rad irony? Ordinary.'"
+ahem-quip	"Gunter intones tension. Refusal earfuls. 'Cad, no can do. [d-word-u], uh, DUH, man.' Refusal earfuls."	[end option 4-4] [??]
+trips-quip	"'No shame,' he moans. 'Some? Nah.' ... he makes the money gesture with his hands but notes you won't get ID'd unless you visit during rush hour."
+media-quip	"Somehow, the media aimed you for trying to do way too much and way too little. You chart the flattery, the backhanded compliments, the first rifts, the outright disrespect. 'His charisma is archaism.' / 'Cagiest toil made him egotistical.' / 'He will make this realm lamer to save it again.' How the only things you [i]did[r] were saving your skin against Red Bull Burdell--and exist at the end."
+media-quip-2	"You recall Walt Koh's and Kath Low's howl-task host-walk, among other 'informational' shows...[twiddle of table of lame talk shows and 4]Folks co-spit topics, you're mashed, shamed. '[if player is male]He's [else]She... [end if]mad! Trashed, [if player is female]she'd...rat[else]he darts[end if]!' And the rubbish biopics, good ([biop of true]). or bad ([biop of false]). You did nothing to prepare Yorpwald against technically sophisticated attacks like the exciting ones Elvira warns about, the ones that helped her gain a role of Save/Rid Adviser. Many a tearful faulter did not want to blame you--but they had to."
+social-quip	"You complain about social forces in general. More downers than wonders. How you're no longer a secure cursee."
+girls-quip	"You listen about [twiddle of table of elmo emo and 3]. No friend finder or lovers solver found the woman for Elmo. He looks happier for having complained, though."
+weather-quip	"That's always a safe one. You say 'How [']bout that weather, geez,' not realizing you haven't gotten out enough to know if it's been too hot, cold, rainy or dry. But fortunately, you haven't gotten out enough to remember those details don't matter.[paragraph break]Elmo seems ready to listen to deeper concerns, even if they probably aren't germane to what you need to do."
+sports-quip	"Sports banter follows.[paragraph break][twiddle of table of sports chatter and 2]'Chokers.' / 'Shocker.'"
+artsy-quip	"'Where do I look? Is there a bare min--uh, most efficient way through?'[paragraph break]'Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. But the remaining stuff. You can maybe take care of them later."
+leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [if player is female]wo[end if]man! Ego hurt? Er, tough!'[paragraph break]Gunter pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manor.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end GUNTER text]
+
 book diorama
 
 before examining when Gunter is off-stage and stuff-found is 3:
@@ -12161,13 +12035,101 @@ instead of doing something with the high sign:
 check scaning when rifle is visible:
 	say "Elmo might shoot you if you went for the settler, which you notice is blinking [spacies of a-text of rifle]. Which has to be the rifle. You hope." instead;
 
-the litany of Mole Elmo is the table of Elmo comments.
-
 after fliptoing rifle:
 	pad-rec-q "rove over";
 	now high sign is in lalaland;
 	try talking to Mole Elmo instead;
 	continue the action;
+
+section elmo dialogue
+
+the litany of Mole Elmo is the table of Elmo comments.
+
+table of Elmo comments [tco-mo]
+prompt	response	enabled
+"Ask Elmo about how to use your Settler, because you're not sure yet"	flier-quip	1
+"Show Elmo the sweet Settler you know how to use"	showset-quip	1
+"Check the scale that can flip to laces and back."	scale-quip	0
+"Check the ELMO nametag that could show him up as a mole."	elmomole-quip	0
+"Check the PLUG of nutrients that could become a GULP bottle."	gulp-quip	0
+"Recall the tables/stable flip."	stable-quip	0
+"Recall the my niche/chimney flip."	chimney-quip	0
+"Recall the ten beams/basement flip."	basement-quip	0
+"Recall the pram/ramp flip."	ramp-quip	0
+"Recall the giant pin/painting flip."	painting-quip	0
+"Recall the stair flip."	stair-quip	0
+"Recall what you tried with the diorama."	dio-quip	0
+"See about all you could try with the diorama."	dio-all-quip	0
+"Look through all the diorama data."	dio-2-quip	0
+"Oh, cool, I know what the reds and yellows are for, now."	got-red-yellow-quip	0
+"Geez. I'm still busted. Kinda shaken by...well, the excitement."	still-busted-quip	0
+"Ask Elmo about the lamp"	lamp-quip	0
+"Explain you know what the colors besides red and yellow mean"	gp-quip	0
+"Ask Elmo about the 'Letters Settler' text"	settler-quip	0
+"Ask Elmo about the 'Yorpwald-Wordplay' text on the laced decal"	yorp-quip	0
+"Ask Elmo about what you remember from the diorama."	dio-elm-quip	0
+"Scan everything about the diorama."	dio-elm-2-quip	0
+"Yeah, I see what orange means."	orange-know-quip	0
+"Hmm, I don't see what orange means."	orange-dunno-quip	0
+"Oh, hey. The satchel. [unless satchel is escanned]Maybe I could scan it[else if satchel is bscanned]I scanned it with cheat on and off[else]I could scan it some more[end if]!"	satchel-quip	0
+"Hm, still not clear on the green/purple."	still-no-gp-quip	0
+"Tell Elmo you got what the cheat button does, thanks!"	got-it-quip	0
+"[unless y-orange is true]Hm, I even see what orange is for. [end if]Got some reinvestigator interrogatives, hustle-sleuth."	interr-quip	0
+"Ask Elmo about her toy theory"	toy-theory-quip	0
+"Ask Elmo about your trial trail"	trial-trail-quip	0
+"Strip of Profits? Was that the Trips Strip? What's at the...?"	trips-quip	0
+"Strategy-try stage? Get artsy?"	artsy-quip	0
+"Poss. Clue? Closeups?"	clues-quip	0
+"Gretta Garett-Tatger?"	gretta-quip	0
+"Jumbo, um, job. Six of [']em? Some fix!"	shortcut-quip	0
+"Ask Elmo about the Strip of Profits"	strip-quip	0
+"Complain about the weather [bracket]NOTE: complaining, or listening to Elmo complain, is possibly therapeutic, but utterly unproductive[close bracket]"	weather-quip	0
+"Complain about your favorite sports team"	sports-quip	0
+"Complain about the media"	media-quip	0
+"Complain about the media some more"	media-quip-2	0
+"Complain about how more exciting people and stories pushed you to the curb"	curb-quip	0
+"Complain about social forces in general"	social-quip	0
+"Let Elmo complain about his lack of success with women"	girls-quip	0
+"Finish Fishin[']."	bye-Elmo-quip	1
+
+table of quip texts (continued) [tqt-mo]
+quip	quiptext
+curb-quip	"'It's not your fault you didn't have a super perfect story when you rescued Yorpwald. That's the fault of -- someone above -- if they even exist. Maybe if you fix what's wrong here, it'll be a more compelling story and pontificators won't turn against you. Or get bored.' Elmo turns to the fourth wall. 'Or have an excuse to pretend they're bored.'" [start ELMO text]
+interr-quip	"'The Strip of Profits is--well, it's tied up with Old Warpy again. You know, how Old Warpy sent you to the forest and metros and sortie? Yeah, there's people buying stuff from the stores, but they're so occupied, they won't notice YOU! Still, you've got a trial trail ahead. Elvira's got her toy theory started. About you being bad for Yorpwald.'"
+toy-theory-quip	"You've sort of heard it, and you've sort of thought it, but yeah. She really did backhand-compliment you (big deal, boring mathy stuff, not a SHRED of excitement, but you did the job, she guessed) while saying people needed someone more exciting to mythologize about.[wfak][paragraph break]Like, gosh, HER! 'Her united con continued unnoticed. But it's too perfect. Tough to--ugh. Something messes up, she denounces it right away. SHATTER-THREATS is so specific to you, too. That's why I don't like it.[paragraph break]'She at the very least SEEMS to think you're behind the influx of annoying anagrams. But then, she might be trolling us by framing you. That's an...other-y theory, eh, tyro?'"
+strip-quip	"'Yeah, lots to explore. But I bet observing and talking to people will help. Even if they don't want to help. There also may be some--illegal types around stores K and N. You don't need them, but they can't hurt.'"
+clues-quip	"'Examine everything. People and things blocking you. Try to get by them. Just plain listen, or smell. Dialogues also guide. Oh, and if you can find Gretta Garett-Tatger, bonus.'"
+gretta-quip	"'She's a good investigative reporter, the best. She's dug further into Elvira's doings than anyone else. But she's become a bit of a--target.' You both cringe. 'No, her name's not your fault. Just, she may have found something, even left a cue in the Strip of Profits.' Elmo shows you a picture of her."
+trial-trail-quip	"'More trouble, more stores. Six of [']em. But you can't just switch stuff to other stuff. That'd be more hokey and homeworky. You'll have to infer finer things to upset the setup. But I have some basic notes.' Elmo hands you a paper. 'It's a Gird Grid. More details there. Read it later.'"
+shortcut-quip	"'Hm, maybe a covert vector after you solve two...[paragraph break]'Oh, hey, if you want to complain about random stuff, go ahead. It might not give any practical help, but I don't mind listening. I've thrown a lot at you.'"
+flier-quip	"'Hmm. Well, my last name's not Stetler, but I can give it a shot.' You and Elmo scan the flier, which is [if setspace is true]R Y R R Y[else]RYRRY[end if] with cheat or teach mode. 'I saw your settler was [if setspace is true]R R Y Y R[else]RRYYR[end if] when I had the rifle.' Elmo speed-reads your treatise. 'So the colors tell you what stuff should become. That gives us five letters.'[paragraph break]'I and E are yellow for the rifle AND the flier, and R and F and L are red. Hm. Dunno if that's enough. I have some other supplies Old Man Almond gave me.' You note a PLUG of nutrients, laces, and an ELMO nametag." [check what's scanned]
+scale-quip	"You experiment with changing the laces to a scale and back. Laces to scale is [if setspace is true]R Y R R Y[else]RYRRY[end if], scale to laces is [if setspace is true]R Y R Y R[else]RYRYR[end if].  [mo-data]."
+gulp-quip	"The plug becomes a gulp, then back to a plug, no more unappetizing than before. You note plug to gulp is [if setspace is true]R Y R R[else]RYRR[end if], gulp to plug is [if setspace is true]R R Y R[else]RRYR[end if], and cheat mode changes nothing. [mo-data]."
+elmomole-quip	"You flip the nametag to MOLE and back, tracking the scanner. Elmo to Mole is [if setspace is true]R Y R Y[else]RYRY[end if], Mole to Elmo is [if setspace is true]Y R R Y[else]YRRY[end if]. [mo-data]."
+got-red-yellow-quip	"'Yyupp. Vowels. But we haven't found anything where the cheat button actually does anything.' You try and think of something where it might."
+still-busted-quip	"You shake your head. 'Duh, I'm humid.'[paragraph break]'A, e, i, o, u,' Elmo points out. 'Vowels.'[paragraph break]'Maybe other letters too...nah, too many consonants go to red. Yeah. Vowels and consonants.' You figure the cheat button might be a good idea to learn for the future. Might be a good idea to start small. Like--with the lamp."
+showset-quip	"'Hint agent thing! NEAT!' You show him what the red and yellow mean, then the green and purple. He asks if there are any other colors, like orange."
+lamp-quip	"'Yeah, sorry about the lamp.' You say no worries--you're trying to figure what it means. Elmo doesn't judge. 'Yeah, you been under stress, I bet, let's work it out.' The settler vaguely goes Red, yellow/green, red and red near the fragments. 'Hm, cheat mode changes A from yellow to green. That must mean something.'"
+gp-quip	"'Awesome! Yeah, cheating turns the reds and yellows blue.'"
+settler-quip	"'LETTERS SETTLER. Hm, the E-T-T change color when you switch cheat mode on. Maybe that's because they are in the right places. Yellow e to green, red t to purple. Not clear if it's e and t specifically that change, though.'"
+yorp-quip	"'Hm, [if chimney-quip is mowered]more orange letters to Y[else]the D in Yorpwald and W in Wordplay are orange. Or maybe it's what the letters can become. Orange, we haven't seen much of that[end if]. Also, interesting, the O-R change colors when you go cheat mode. Looks like they're already in the right place.'[paragraph break]'Gotcha, doc. Good catch.'"
+stable-quip	"You remember cheat mode did not change the tables when you scanned them before entering the stable--there was lots of red writing, too, which your pedanto-notepad says was wrong letters. But there were some yellows, too. They were probably wrong, but a different sort of wrong."
+basement-quip	"You remember cheat mode did not change the ten beams when you scanned them before entering the basement--there was lots of red writing, too, which your pedanto-notepad says was wrong letters. But there were some yellows, too. They were probably wrong, but a different sort of wrong."
+chimney-quip	"You remember cheat mode did not change the 'my niche' text when you scanned it before entering the chimney--there was lots of red writing, too, which your pedanto-notepad says was wrong letters. But there were some yellows, too. And an orange. You suddenly realize the orange mapped to Y[y-know]."
+ramp-quip	"You recall red, yellow, red, red for the ramp, cheat or no."
+painting-quip	"You recall R Y Y R R Y R R for non-cheat mode, with the center two going purple."
+stair-quip	"You recall R R Y Y R with one tile changing color with cheat mode. But it is probably best to focus on non-cheat mode."
+dio-quip	"Elmo looks at your diorama notes for the [list of hinthelpy escanned things].[paragraph break][dior-scan][if crabgrass is cscanned or brass crag is cscanned or steel pad is cscanned or pedestal is cscanned]You and Elmo notice a few entries changed color when and where letters were the same. You decide to isolate what they mean[else]Hmm, all reds and yellows[end if][unless its-all-scanned]. You realize you could get more data, so maybe you could sneak up to the study and try again[end if]."
+dio-all-quip	"You backtrack to scan everything remaining: the [list of hinthelpy not escanned things]."
+dio-elm-quip	"You backtrack to scan everything remaining: the [list of hinthelpy not escanned things]."
+dio-elm-2-quip	"With everything scanned now, you take a closer look.[paragraph break][dior-scan][paragraph break]You focus on the rare greens and purples. Elmo coughs, as if cuing you to something--how the greens and purples are in the same position between flipped diorama parts."
+dio-2-quip	"You hash the purples and greens out some more.[paragraph break]You focus on the rare greens and purples. Crabgrass and brass crag, letters two and three. Pedestal and steel pad, letters four and seven. You think on what is special about these, in both words."
+satchel-quip	"'Ach, let's...' you say. You [satchel-extra]notice the two end characters are red, but the rest switch from red and yellow to purple and green on cheat mode. That's the most purple and green you've seen yet."
+still-no-gp-quip	"Elmo notes that individual letters can be either red-or-purple or yellow-or-green. All green letters in cheat mode were yellow in non-cheat, and the same for purple to red. Then the ones that are purple/green--are in the right place.[paragraph break]Elmo thinks a minute and notes red plus blue is purple, and yellow plus blue is green."
+got-it-quip	"'Excellent! So, yeah, the settler adds blues when you're in cheat mode and the letters are right. Purple consonants, green vowels.'[if y-orange is false] Elmo looks over your settler once more. 'Hmm. What's the orange for? On Yorpwald/wordplay?'[else] You and Elmo note orange is for Y's, and you suspect correct oranges become brown or something.[end if]"
+orange-know-quip	"You've got this one--Yorpwald, wordplay, the orange D at the end goes to Y, the orange W at the start to Y, too[y-know]."
+orange-dunno-quip	"You [if backside is examined]re-[end if]examine the backside of settler and note how Yorpwald lines up with Wordplay--those two orange letters MEAN something. Then you both realize both orange letters go to a Y that's not in the right place[y-know]."
+bye-Elmo-quip	"[if hold-it-up is false][note-gretta]A pause. 'Go, you doer. You're good. Un-retire, reuniter. Re-shift it fresh. Disable bad lies. There's an evac-cave over thataway. You'll know what to do. I think. Forsake fears, ok?'[paragraph break]You leave, feeling less resave-averse, but run as you hear 'Get Elmo!' / 'Get ol['] me? Let me go!' 'Sympathy?' / 'My hat, spy!' ... 'A spy yaps, pays...'[paragraph break]You crawl through the evac-cave, which exits to writing behind a dune, man. UNNAMED: MUNDANE, but you look closer and see RETRAIN TERRAIN. Behind is a carven cavern. It looks as good a place as any to visit.[end if]" [end ELMO text]
 
 section Gird Grid
 
@@ -23099,7 +23061,7 @@ the litany of Gretta Garett-Tatger is the table of Gretta comments.
 to say but-stuck:
 	say "[if try-fail-animal], but I got chased after that[end if]"
 
-table of Gretta comments
+table of Gretta comments [tco-gr]
 prompt	response	enabled
 "Boy, those macks, huh?"	gre-macks-quip	1
 "What's your history with Elvira?"	gre-elv-quip	0
@@ -23110,12 +23072,49 @@ prompt	response	enabled
 "Rescuing animals? How?"	gre-animals-quip	0
 "[if optleft of Gretta is 1]Wow! You've been a big help[else if gre-go-warn is true]That's really all, now[else]Um, that's all, I guess[end if]. Thanks."	gre-go-quip	0
 
+table of quip texts (continued) [tqt-gr]
+quip	quiptext
+gre-macks-quip	"She introduces herself as Gretta. 'I was just trying to explain what Elvira's about, why to fight her. They started telling me they were all socially conscious--then they started hitting on me.' It's true--Elvira's brand of 'magic without magic,' which places excitement over boring honesty, has been captured in the horrid [i]OK, Be Hot: The Book[r], by Beth Koo and Theo Bok. It mentions anyone can learn its techniques--sadly, that's the truest part of the book by far.[paragraph break]You let slip it's the sort of word twisting that you can't and won't do. She pauses, then realizes how you managed to disrupt the macks without doing anything. You're that Shuffling Around person, with those powers. 'Hmm, I guess Elvira hates you even more than she hates me. I mean, she actually said I was almost as bad as you, to my face.'" [start GRETTA text]
+gre-elv-quip	"'Elvira backstabbed me. [']A nice gal? An ICE gal!['] Being called a gal was bad enough. But she used to rent the bulwark from me. Then SHATTER-THREATS somehow let her not pay rent in the name of national security. Then own it. It's hard to get ONE person to go up there, much less many. I found out she's--well, [i]augmenting[r] animals.'"
+gre-what-quip	"'You can't rely on people coming together. They're either too scared to resist, or too eager to kiss up. But animals might be willing to help. She's still training the ones she made.' Gretta looks nervously around."
+gre-north-quip	"'Maybe you will figure how to help the eels to the north and their spirit, Le Mer. They're suspicious of people, though, after Elvira failed to recruit them.'"
+gre-south-quip	"'Mr. Lee is ready to blame his failed crops on anyone. Elvira's got him convinced it's not her, but if you help him, he could be swayed back. Plus, he's a farmer, so, more animals.'"
+gre-east-quip	"'There are animal pens back east.' [if Anteroom is visited and Tapering Anger Pit is visited]You nod your head[else if Anteroom is unvisited and Tapering Anger Pit is unvisited]You cough a bit, realizing you didn't look there[else]You make a note to check the other pen[end if]. 'Perhaps animals can succeed where people failed, because Elvira won't be able to charm them with words. Well, not all of them. She captured and changed some, but you'd win their gratitude--and their friends[']--if you changed them back. Even, or especially, the ones guarding the pens.'"
+gre-animals-quip	"'The animals aren't just imprisoned but reduced to mockeries of their real selves--whether they know it or not. Maybe one reason she wanted to discredit you was, you might be able to change them back.'"
+gre-go-quip	"[if hold-it-up is false]'Here. Take these. They are ancient emblems of magic and power--damsel medals--from long before people cringed at words like damsel.' She removes her medals and hands them to you. '[gre-other].' She nods and walks off[check-started-yet].[end if]" [end GRETTA text]
+
 to decide what number is optleft of (myp - a person):
 	let mytemp be 0;
 	let myt be the litany of myp;
 	repeat through myt:
 		increase mytemp by enabled entry;
 	decide on mytemp;
+
+after quipping when qbc_litany is the table of Gretta comments:
+	if hold-it-up is true:
+		choose row with response of gre-go-quip in the table of Gretta comments;
+		now enabled entry is 1;
+	else if current quip is gre-macks-quip:
+		enact gre-elv-quip;
+		enact gre-what-quip;
+		enact gre-go-quip;
+	else if current quip is gre-elv-quip or current quip is gre-what-quip:
+		if gre-elv-quip is mowered and gre-what-quip is mowered:
+			say "'Not everyone here loves Elvira. Some are willing to help, if they're just treated right. I can tell you who, or what's, where.' Gretta looks around, worried the macks will narc her out to Elvira, even though none of them headed west to the bulwark, but you can probably grill her for quick information.[paragraph break]";
+			enact gre-north-quip;
+			enact gre-east-quip;
+			enact gre-south-quip;
+	else if current quip is gre-east-quip:
+		enact gre-animals-quip;
+	else if current quip is gre-animals-quip:
+		do nothing;
+	else if current quip is gre-go-quip:
+		now Gretta is in lalaland;
+		terminate the conversation;
+	else if current quip is gre-north-quip or current quip is gre-south-quip or current quip is gre-elv-quip:
+		do nothing;
+	else:
+		debug-fallthrough;
 
 chapter smacking
 
@@ -24053,7 +24052,36 @@ check talking to Elvira when current quip is final-quip:
 every turn when current quip is final-quip and player is in Inclosure:
 	say "Cordial, cold air. [one of]'Make a diss, punk? Kiss and make up!' She pauses. 'Enough of this anagram nonsense! That's playing YOUR game. It's not like YOU ALONE can kill me. No person is brave enough to join you.' [or][stopping][one of]Elvira points out you're just jealous she got here on charisma.[or]Elvira mentions she's making others happy, a more exciting happy than yours.[or]Elvira complains social engineering is not as easy as it looks![or]'I'm still vaguely worried you have something up your sleeve, like Blue Frog Urbfogel!'[or]'It would be kind of exciting to lose, you know. Versus just growing old and dying bored and boring. I get the kingdom I want, too. Win-win.' It all has a lilt.[in random order]";
 
+section Elvira dialogue
+
 the litany of Elvira is the table of Elvira comments.
+
+table of quip texts (continued) [tqt-el]
+quip	quiptext
+null-quip	"This shouldn't be part of the conversation."
+logical-quip	"'Pick a nit? Pack it in! Drone-o-nerd!' she laughs, hypnotic, pythonic. 'I? Spoon Poison? Overbearing, raving bore!' Your reply is undone in innuendo." [start ELVIRA text]
+wtf-quip	"WTF is swift. 'Egad, an agenda. Rugged Grudge. Reactions so certain. A sincerest resistance! Dayum, Y U MAD?' / 'Say, fits satisfy?' She gives a plain man's mansplain of her main plans and gets to clamp into a compliant calm point about your complaint. Manic plot? Progress! She also points out that it's probably for the best. You were feeling useless, weren't you? And if you just attack her and get it over with, you can die feeling heroic. She's sure you worked hard to get here."
+hollow-quip	"An ol['] howl. 'Me? Rocky mockery! Petulant late punt! [if player is male]Ach, Mr. Charm[else]Ms. Arch-Charms[end if]!' She laughs with mindless mildness. 'Uber-Rube! Delicate, elite cad! Deny it's destiny? Evasion! So naive!' You cork a croak."
+abhor-quip	"'Recoil, O Relic!' / 'Nuh-unh, hun! Solicit colitis!' Wow. Oww."
+strong-quip	"'So pure? Poseur! Soppy psy-op!' Dang, your spoonerism got double-trumped, there."
+sneer-quip	"'Obliged old gibe. Bilge OD!' Coughs co-gush, chug so. 'Be a god? Bad ego!' you try back, but she's a serener sneerer. 'How silly! Why so ill?'"
+bald-quip	"'Ow, sloth. Low shot.' She laughs. You probably shouldn't be worrying about looks, now."
+sinister-quip	"'Sinister RESISTIN[']. Loutier Outlier!' she calls back. There's a brief scuffle over whose insult was less creative, but you kind of shuffled a lower percentage of letters, there. So she wins.[paragraph break]But don't worry. You're still the good guy. You just lost a style point."
+final-quip	"'No mercy, my crone! Corny, me?' She flinches at your pure re-up, responding 'Oh, cute. Touché.' A truce, acuter. 'Careful now, awful crone.' 'Woeful narc!' Eugh. No. Enough." [end ELVIRA text]
+
+table of Elvira comments [tco-el]
+prompt	response	enabled
+"Fool us? So foul of soul! (Lay things out logically, hopefully without getting overemotional or boring)"	logical-quip	1
+"WTF FTW"	wtf-quip	1
+"LOL, how hollow!"	hollow-quip	1
+"Play God? Dopy gal!"	sneer-quip	1
+"Abhorsive Behaviors!"	abhor-quip	1
+"Strong will? Still wrong. At bay, ya bat."	strong-quip	1
+"Go bald, old bag!"	bald-quip	0
+"Sinister Insister. Hypno-phony."	sinister-quip	0
+"Scourge-curse, go! (yeah, yeah, get on with it)"	final-quip	1
+
+chapter hydra
 
 The hardy hydra is an animal in Reclusion Inclosure. description is "One whiff of the decayin['] cyanide smell proves he melts helmets."
 
