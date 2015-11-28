@@ -1,39 +1,20 @@
 table of random books [xxm4] [tob]
-"Erstwhile Wilts Here[r], by [if player is male]Stew Riehl[else]Teri Welsh[end if]"
-"Or Mild, Milord[r], by Rod Lim"
-"Wood Hunts Down South[r], by Stu Howdon"
-"Cloud the Old Chute[r], by Ludo Echt"
-"Some Rays Says More[r], by Ross Maye"
-"Darn, a DNR[r], by Dann Darr"
-"To a Lass at a Loss[r], by Sol Sato"
-"Alight Me, Megalith[r], by [if player is male]Tim Hagel[else]Gita Helm[end if]"
-"Loud Brave Boulevard[r], by Bud Valero"
-"It Spoke to Spike[r], by Kip Seto"
-"Taking So, Stoking a Goatskin[r], by [if player is male]Otis Kang[else]Kati Song[end if]"
-"Impose Not Some Point[r], by Noemi Post"
 
 table of posse bosses [xxv7]
-"Lois the Hostile"
 
 table of self-help bestsellers [xxv0]
-"Aches: To Teach So[r], by Chet Sao"
-"Back Up to Pot a Buck[r], by Pat Kubco"
 
 table of posh dialogue [xxv6]
 
 table of gritty dialogue [xxv4]
 
 table of ad slogans [xxm1]
-"Try Pat's Party St.!"	true
 
 table of to-sort=========================================
 
 table of cussing rejects [xxg1]
-"Ooh, galled? Hella good."
 
 table of death messages [xxg2]
-"Big Plans Slip. BANG!"
-"Undo the end, thou!"
 
 table of empty command rejects [xxg3]
 
@@ -48,7 +29,6 @@ table of singing rejects [xxg7]
 table of sleep rejects [xxg8]
 
 table of undo allows [xxg9]
-"The undo: uh, noted."
 
 table of undo rejects [xxg0]
 
@@ -69,22 +49,16 @@ table of lame computer games [xxm6]
 table of lame movies [xxm7]
 
 table of lame talk shows [xxm8]
-"Jed, Gus: Judges"
 
 table of lame tv shows [xxm9]
 
 table of laughhouses [xxm0]
-"Josh'n John's"
 
 table of lousy hit songs [xxm01]
-"Fat Chance Chant Cafe"
-"Seek, Plow, Keep Slow"
-"So Timid? Dis it Mo[']"
 
 table of mob chants [xxm02]
 
 table of oldies singers [xxm03]
-"Snakebit Skint [a-b]"
 
 table of sports chatter [xxm05]
 
@@ -93,10 +67,6 @@ table of idiotic lecture points [xxs1]
 table of overdone movies [xxs2]
 
 table of sicko movies [xxs3]
-"The Prof's Hot Prefs."
-"Milky, My Ilk."
-"Di Sims: Miss Id."
-"Fred 'Bod' Bedford."
 
 table of store c ads [xxs4]
 
@@ -137,19 +107,14 @@ table of Leo-Rand chitchat [xxp3]
 table of Leo-Rand idols [xxp4]
 
 table of research topics [xxp5]
-"Easton neatos"
-"Raase Areas"
-"Bessing Bigness"
 
 table of smartypants [xxp6]
 
 table of aunt tuna chatter [xxy1]
-"'Hobbled bod. Bleh.'"
 
 table of bar dialogue [xxy2]
 
 table of Casper mumbles [xxy3]
-"'Flaubert? Flat rube!'"
 
 table of competing bars [xxy4]
 
@@ -160,15 +125,12 @@ table of theses [xxy6]
 table of tuna gossip [xxy7]
 
 table of unpopular girls [xxy8]
-"Yellowish Holly Wise"
 
 table of gizmo parts [xxw1]
 
 table of rodney bluster [xxw2]
-"says it'd be good to be half as brave as Afar Rafa."
 
 table of animal friends [xxt1]
-"a pholdin['] dolphin"
 
 table of Elmer and Merle squabbles [xxt2]
 
@@ -177,7 +139,6 @@ table of Elvira battle cries [xxt3]
 table of Elvira machines [xxt4]
 
 table of Elvira taunts [xxt5]
-"Going? I gong!"
 
 table of political slogans [xxh1]
 
@@ -186,26 +147,18 @@ table of selly yells [xxh2]
 =====SA
 
 table of job searcher names [xxx]
-"Chandler Rechnald"
-"Sureya Rausey"
-"Noora Orano"
-"Yoda O'Day"
 
 table of evil locations [xxf]
 
 table of poem codas [xxi]
-"Eyepatch, thy peace, cheap yet."
-"My ship: spy him, shy imp."
 
 table of camp chants [xxm1]
 
 table of condo dialogue [xxm2]
 
 table of nerd natter [xxm3]
-"'Ported.' / 'De trop! To derp!'"
 
 table of psas [xxm4]
-"NATTY ICE? TENACITY"
 
 table of red bull taunts [xxr1]
 

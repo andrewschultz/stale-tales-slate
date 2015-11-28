@@ -19,6 +19,7 @@ while ($count <= $#ARGV)
 	/^-?s$/ && do { @dirs = (@dirs, $s); $count++; next; };
 	/^-?b$/ && do { @dirs = (@dirs, $r, $s); $count++; next; }; # both: roiling goes first due to more debug text
 	/^-?o$/ && do { $outFileName = "$b"; $count += 2; next; };
+	/^-?v$/ && do { $verbose = 1; $count++; next; };
 	/^-?f$/ && do { $fileName = "$b"; if ($fileName !~ /\.ni/) { $fileName .= ".ni"; } $count += 2; next; };
 	usage();
   }
@@ -181,9 +182,9 @@ sub sortTheTable
 	$num = () = $a =~ /\"/gi;
 	if (($num % 2) || (!$num)) { $quoteWarn .= "  -- $thisTable: $a\n"; }
   }
-  printf("%2d: Sorting $thisTable, " . ($#ary+1) . " total elements.\n", $count);
+  if ($verbose) { printf("%2d: Sorting $thisTable, " . ($#ary+1) . " total elements.\n", $count); }
   if ($#ary < 23)
-  { print "********UH OH, THERE ARE WAY TOO FEW, $#ary********\n"; }
+  { print "********UH OH, THERE ARE WAY TOO FEW in $thisTable, $#ary********\n"; }
   @ary2 = sort {lch($a) cmp lch($b)} @ary;
   for (@ary2)
   {
@@ -239,6 +240,7 @@ print <<EOT;
 -r roiling (default unless story.ni in PWD)
 -s shuffling
 -f file name
+-v verbose (show what tables sorted)
 -x don't copy over
 EOT
 exit;
