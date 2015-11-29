@@ -72,7 +72,7 @@ ashen/coyer/weedy/tenser/achier/recreant/yonder/rustled/creaky/rusty/clumsy/weir
 Store T (min) (adjusted)
 bare/reedi/seedi/steami/tedious/because/else/atom/angri/brute/slow/coolest/artsy/garbed/stoical/terse/parrot/snail/snipe/racoon/honest/raptor/deep/quick
 Store T (max) (adjusted)
-bare/rescind/reedi/sobbing/emotional/despairing/tedious/because/else/atom/although/however/angri/brute/slow/paroled/coolest/artsy/garbed/loathing/stoical/parrot/snail/hornets/snipe/racoon/honest/raptor/deep/quick
+bare/rescind/reedi/sobbing/emotional/despairing/because/else/atom/although/however/angri/brute/slow/paroled/coolest/artsy/garbed/loathing/stoical/parrot/snail/hornets/snipe/racoon/honest/raptor/deep/quick
 Store T (min)
 barely/reedily/seedily/steamily/tediously/because/else/atom/angrily/brutely/slow/coolest/artsy/garbed/stoically/tersely/parrot/snail/snipe/racoon/honestly/raptor/deeply/quickly
 Store T (max)

@@ -22,7 +22,7 @@ Any comments on this game, or transcripts, can go to blurglecruncheon@gmail.com.
 
 Conversely you can also report issues at https://github.com/andrewschultz/stale-tales-slate/ and they don't have to be professional or anything. I'd appreciate typos/stylistic stuff being lumped together, but other than that, individual bugs--or feature requests--that aren't obviously similar can be chopped up.
 
-This walkthrough is for versions 3 and up of the game. I recommend this over both version 2 and the comp release, as the puzzles and cluing make much more sense. Major differences in the walkthrough are labeled at the end.
+This walkthrough is for versions 3 and up of the game. I recommend this over both version 2 and the comp release, as the puzzles and cluing make much more sense. Major differences in the walkthrough are labeled at the end. Version 4 has minor changes, and NPCs may be named differently. Some are female. But the abstract puzzles have not changed.
 
 For those who played the comp version and want to see the new area(s) at the end, you can skip to that area to see the command to start the game with before you chat with Gunter. The implication being, the knocker's come back to snivel his way into your good graces.
 
@@ -1338,7 +1338,7 @@ Incidentally, you can do something with the raves saver, since it calls itself a
 
 > GIVE GIZMO TO KID
 
-Now there are two ways to do things. You can repair the jetskis all the way, or you can get stuck in the water.
+Now there are two ways to do things. You can repair the boat all the way, or you can get stuck in the water.
 
 > STABLER
 > ROBUST
@@ -1820,6 +1820,7 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
 4 TOWERS:
  * release 2: guardians are moved around, with the ingrates (more appropriate for the right word) replacing the yapper, who is optioned to the Oyster's final room where he makes more sense. The nebula now guards items in the topside. You must also get rid of both the prefect (swaps with pirates) and the deacons so the kid appears. The bonker is new as well. The sweatier wait-seer replaces the thug and clues the right word better. Many guardians are moved around. You could skip certain things with the kid before, like giving him the Gizmo, but you can't now.
  * release 3: the tavern was moved to the start, to give you a clearer idea what to do and give more of a storyline. You need to dispel three of six random guardians before Rodney goes, not 2 of 4, Daltho has his own room, and DYING is switched back from a solution to what it is. The nebula now guards Daltho's own room. You go back there instead of to the tavern. Andrew, Archie, Barney, Bredo, Dewey, Goldy, Marcel, Marlon (I didn't find the relatively simple code to override "normal,") Royce and Wade are also not present in the comp release. Most were in release 2 as well, though I'm too lazy to research which. RIP the slobb-blobs. The snider diners and natives are new, with greedy Ed Yerg replacing the greedy gnome. The atheists and yacker are new, too, with the serpent replacing the nebula. The yurts are now a last lousy point. Curst Palace now has a name--Castle Apcur.
+ * release 4: the jetskis are gone, and you now ENTER BOAT to get where you need.
  5 TROVES
  * release 2: you now have a new action near the end in addition to dealing with the singer. Eddie C was not in release 1. The lager was also moved from the Very Top/Office. DIVORCES did not appear in release 1.
  * release 3: you had only one way to find the cellar (the direct way) in release 2. Now you have another. LLP with the book the guy gives you at the start. It's renamed, with an author, Peg A. Page. There's now a different puzzle to enter the skyscraper (PERNOD vs STEW)
@@ -1885,13 +1886,13 @@ The game has point totals for each region, but how do they compare in size? I de
 
 I think that this isn't fully accurate since complexity varies as perhaps (letters ^ 2) or something. So a sum is not so useful. But this gives a bit extra to look at. If you're very interested, a heat map should be attached with this release.
 
-Manor has a minimum of 37 and a maximum of 67. Hit the basement and ignore the giant pin.
+Manor has a minimum of 40 and a maximum of 67. Hit the basement and ignore the giant pin for the minimum score.
 
 Stores has a minimum of 36 and a maximum of 61. It is 18 if you use the patcher. You have six stores to open. The Lectures quest gives 19, and Store B gives 6.
 
-Store V has a minimum of 80 and a maximum of 117. The five Last Lousy Points account for all the difference. The alternate ways through have words of the same length.
+Store V has a minimum of 82 and a maximum of 119. The five Last Lousy Points account for all the difference. The alternate ways through have words of the same length.
 
-Store U has a minimum of 107 and a maximum of 114. The last lousy point gives you seven letters. The alternate ways through have words of the same length. It's debatable here whether U is harder than V. U clearly has fewer choices for words.
+Store U has a minimum of 107 and a maximum of 114. The last lousy point gives you seven letters. The alternate ways through have words of the same length. It's debatable here whether U is harder than V. U clearly has fewer choices for words. V may be a bit tougher to clear completely, though.
 
 Store P has a minimum of 136 and a maximum of 164. You can save a letter with the right good-bye to Leo and Rand. The lamb, TBA, and ROM sticks go, too. You can save 15 moves with the crust (volt maze, washups.) This has a moderate amount of points, but many solutions are relatively short. Again, the actual words are restricted as in Store U.
 
@@ -1899,11 +1900,13 @@ Store Y has a minimum of 125 and a maximum of 178. Many solutions are short word
 
 Store W has a minimum of 155+ and a maximum of 277++. Both the "H" and "I" paths through the guardians are 36 letters. You can save keystrokes, too. Fussier vs. unlocked. The tavern may take an extra keystroke or two since one group of enemies has 4 or 5 letters, and another has 7 or 8. That is why I put plusses in the totals. The warriors are randomly determined at the start of the game, so you can't undo to get easier ones. You can skip a lot, like three of the warriors, the strudel, the denim and other LLPs and, of course, five central guardians and two outlying ones. But even at a minimum, W has you solve more letters than some store maximums. Combined with a big map, you can see why this is the toughest region.
 
-Store T has a minimum of 150 and a maximum of 196. The bran barn forces more letters, and you can LLP Elmer and Merle, two animals, and the cinders. Also, you can pick the long options for the men (19) vs the minimum (16) or decide whether to pick the long option for the imp (16). The macks also can swing from 21 to 28. Also, this range is not fully representative of the difficulty, since you can deduct a lot of points for when letters end in LY.
+Store T has a minimum of 153 and a maximum of 200. The bran barn forces more letters, and you can LLP Elmer and Merle, two animals, and the cinders. Also, you can pick the long options for the men (19) vs the minimum (16) or decide whether to pick the long option for the imp (16). The macks also can swing from 22 to 31. Also, this range is not fully representative of the difficulty, since you can deduct a lot of points for when letters end in LY. That drops it to 129 to 183.
+
+Store H has a minimum of 160 and a maximum of 313. But its theme is easy enough, I think, that it shouldn't be too tough.
 
 LAST LOUSY POINTS
  
-Note that I'm not really going to address cases like finding 3/3 things when you only need 2/3 or, in OTHERS, where you can avoid flipping a lot. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things.
+Note that I'm not really going to address cases like finding 3/3 things when you only need 2/3 or, in OTHERS, where you can avoid flipping a lot. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things. I'm also not including the other things to change in OTHERS, as none are really "last lousy."
 
 Hints are in ROT13.
 

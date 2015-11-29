@@ -124,7 +124,7 @@ Towers is a region. max-score of towers is 44. min-score of towers is 24.
 2 for Dr Yow
 1 for lone duck
 1 for tentative
-2 for jetskis
+2 for a bot boat
 1 for the palace] [1 non-anagram for rapier repair]
 [3 for the extra warriors
 1 for strudel
@@ -2249,8 +2249,8 @@ persuasion rule for asking smart kid to try gotoing subsector:
 persuasion rule for asking smart kid to try doing something (this is the block kid to subsector rule) :
 	if the player's command matches the regular expression "gizmo" and kid is reflexive and player has gizmo:
 		try giving gizmo to smart kid instead;
-	if the player's command matches the regular expression "jetski" and kid is reflexive:
-		try objasking smart kid about jetskis instead;
+	if the player's command matches the regular expression "(boat|bot)" and kid is reflexive:
+		try objasking smart kid about bot boat instead;
 	if the player's command matches the regular expression "\b(doctor|dr|yow)":
 		if subsector is unvisited:
 			say "You don't know about that area yet.";
@@ -2559,7 +2559,7 @@ aunt tuna	"She's talking about herself every move, pretty much[if trout is refle
 sardine	"[one of]The sardine spends time babbling about his sensitive hearing, saying you couldn't possibly understand. But you sort of do[or]You don't want to hear the sardine on himself again[stopping]."
 walleyes	"Now's not the time to upbraid baddies for being bad. Sneak past them instead."
 yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what.' He winks."
-smart kid	"'I like gadgets and building things! [if jetskis are not off-stage]I just need one more cool tool[else]I'd love you to try the jetskis, here[end if]!'" [reflex TOWERS]
+smart kid	"'I like gadgets and building things! [if bot boat is not off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
 pester'n serpent	"The serpent ."
 inapt paint	--
 muscly hulk	--
@@ -2697,7 +2697,7 @@ ant	"The ant twitches silently but menacingly."
 dialer	"Your voice would be recognized as not evil enough, even if you got through."
 intercom	"Your voice would be recognized as not evil enough, even if you got through."
 spec-o-scope	"Try looking in it instead."
-smart kid	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not in lalaland]'Boy! If only I had a tool to create jetskis!'[else]'Man! If I [jetskis-work], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]" [begin TOWERS]
+smart kid	"[if duck is not returned]'Hey! Do you know anything about making stuff? I read in the Turbine Tribune about making stuff that could cross the water! I wonder what's beyond there!'[paragraph break]'IDK, kid.'[paragraph break]'Oh, wait, you're just an adventurer, not someone who knows anything technical. Gosh, I didn't mean it like that. I just...don't have any information for you.'[else if gizmo is not in lalaland]'Boy! If only I had a tool to create a bot boat!'[else]'Man! If I [boat-works], that'd be awesome! I wouldn't even care if they got lost. Just making stuff.'[end if]" [begin TOWERS]
 doc-y	"[if ropins is reflexive][doc-in-prison].[else]'Ah yes! My rescuer! Thanks again! Are you interested in detailed technological phenomena? No?' [he-she-c] begins calculating on [his-her] fingers and working on an abstruse problem. [he-she-c]'s probably not going to help you much, but [he-she] could help someone technical help you.[end if]"
 drama armada	"The drama armada doesn't seem to respond to conversation. Maybe if you just boom out one word, they'll go along with it."
 plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe you could yell at him the right way to make him move."
@@ -2778,8 +2778,8 @@ Art Erd	"[his-her-c] mumbles 'er, drat' and something about how money is very, v
 salesmen	"They utterly ignore your inquiry and instead talk about anything and talk about how they can talk about anything. They talk about how just one word has the power to change things. And finally, they get around to how great Nerd-Aid is, and you shouldn't be ashamed if you need a little Nerd-Aid."
 passport	"Try using its features instead."
 
-to say jetskis-work:
-	say "[if kid has gizmo]could make some jetskis here[else]could see if these jetskis work[end if]";
+to say boat-works:
+	say "[if kid has gizmo]could make a bot boat here[else]could see if that boat works[end if]";
 
 casper-talk is a truth state that varies.
 
@@ -2810,8 +2810,8 @@ to say doc-on-lake:
 		continue the action;
 	say "'My student will help you--there may be some risk. The carelessness of youth. You may be surprised what he can overlook.'"
 
-check objasking kid about jetskis:
-	try taking jetskis instead;
+check objasking kid about bot boat:
+	try entering bot boat instead;
 
 table of default-sub-blather	[dsb] [ask x about Gunter]
 him-who	him-say
@@ -2938,11 +2938,11 @@ yapper	Casper	"'Too much violence in his books, not enough money making.'"
 yapper	Elvira	"'She's called on the dialer a few times.'"
 salesmen	Nerd-Aid	"The salesmen [one of]are more than happy to talk about Nerd-Aid. They're not nerdy themselves, but they just want to HELP people, because yay tolerance. They [or][stopping]mention [one of]it's much better than that red Rind-Ade, and if you ask again, they'll tell you who endorses Nerd-Aid[or][endorse-aid][cycling]." [start TOWERS]
 kid	doc-y	"[if kid is lonely and doc-y is in ropins]'I heard [he-she] was imprisoned. But I'd love to learn from [him-her].'[else if kid is lonely][one of]'Wow! You rescued [him-her]? You're almost as awesome as [he-she] is!' [kid-fol][or]'Tell me something I don't know. Or get Dr. Yow to. No offense'[stopping][else if kid is following]'I wanna see Dr. Yow!'[else][he-she-c]'s zoned you out, what with Dr. Yow [around-gone].[end if]"
-kid	jetskis	"'Man, I'm learning to build stuff! [if jetskis are off-stage]Like jetskis! [end if]But I need someone to try them.'"
+kid	bot boat	"'Man, I'm learning to build stuff! [if bot boat are off-stage]Like a bot boat! [end if]But I need someone to try them.'"
 kid	keycar	"'I'd love to make one of them! But that man said I wasn't grown up enough.'"
 kid	Atheists	"'Boy! Tell them religion has a point, and they get huffy. Thanks for deep-sixin['] [']em!'"
 kid	deacons	"'Boy! Ask one question about their religion, they get huffy. Thanks for deep-sixin['] [']em!'"
-kid	settler	"'Wow! I'm real impressed with who built this! Whatever it is. [if jetskis are visible]All I can build is mechanical stuff[else]I'd like to build something, too[end if].'"
+kid	settler	"'Wow! I'm real impressed with who built this! Whatever it is. [if bot boat is visible]All I can build is mechanical stuff[else]I'd like to build something, too[end if].'"
 kid	gizmo	"[if gizmo is off-stage]'I could use a weird tool to build things.'[else if player has gizmo]'Wow! Maybe if I knew how to build something, I could have it?' You could probably GIVE it to the kid, once [he-she]'s inspired to build something.[else]It's be kind of rude to ask for it back. The kid'll use it better anyway."
 kid	duck	"'I'm not real big on biology. But I guess ducks are cute.'"
 kid	toaster	"[if toaster is in coastlines]'Gee, thanks for it! I'll do something cool with, I mean to, it!''[else if toaster is in Danger Garden]You think back to the toaster in the garden. It might be worth giving the kid, as a nice gift, if you ever leave.[else]You show the toaster to the kid, who's very interested, but [he-she] says [he-she]'d feel guilty taking it before actually helping you.[end if]"
@@ -4612,7 +4612,7 @@ icons	"The icons rattle and hum promisingly."
 s-c	"The sonic coins hum almost questioningly."
 
 to say jet-nq:
-	say "Despite your lack of technical knowledge, you think you almost did...something to improve the jetskis";
+	say "Despite your lack of technical knowledge, you think you almost did...something to improve the boat";
 
 to say imp-nag:
 	say "The imp looks slightly annoyed for a second. You may be on the right track";
@@ -5842,19 +5842,18 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "wordy"	410999494	towers	--	doc-y	--	"Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if doc-y has been rowdy and doc-y has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if doc-y has not been rowdy and doc-y has not been wordy]--but [he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]."
 "tentative"	788195264	towers	--	--	kid-not-learnt rule	"The kid fidgets a bit but can't keep focused, though [he-she] wants to."
 "dirk stam"	469925871	towers	--	smart kid	--	"The kid looks at you curiously. You probably don't need to change [his-her] name or intelligence."
-"smart"	350970758	towers	--	smart kid	--	"[dirk-no]."
-"kid"	118955113	towers	--	smart kid	--	"[dirk-no]."
-"dirk"	204278916	towers	--	--	kid-male rule	"[dirk-no]."
-"stam"	265646955	towers	--	--	kid-male rule	"[dirk-no]."
-"kim"	162001177	towers	--	--	kid-female rule	"[dirk-no]."
-"darst"	307924694	towers	--	--	kid-female rule	"[dirk-no]."
+"smart"	350970758	towers	--	smart kid	--	"[smart-kid-no]."
+"kid"	118955113	towers	--	smart kid	--	"[smart-kid-no]."
+"dirk"	204278916	towers	--	--	kid-male rule	"[smart-kid-no]."
+"stam"	265646955	towers	--	--	kid-male rule	"[smart-kid-no]."
+"kim"	162001177	towers	--	--	kid-female rule	"[smart-kid-no]."
+"darst"	307924694	towers	--	--	kid-female rule	"[smart-kid-no]."
 "gizmo"	338989896	towers	--	gizmo	--	"[giz-tex]."
 "zomg"	293997050	towers	--	gizmo	--	"[giz-tex]."
 "turbo"	386311110	towers	--	turbos	--	"You [if turbos are reflexed]already dealt[else]need to deal[end if] with both turbos."
-"jetski"	474076642	towers	--	jetskis	--	"[j-no]."
-"jetskis"	570350608	towers	--	jetskis	--	"[j-no]."
-"skis"	290473956	towers	--	jetskis	--	"[j-no]."
-"ski"	194199990	towers	--	jetskis	--	"[j-no]."
+"bot"	195881500	towers	--	bot boat	--	"[fix-boat-parts]."
+"boat"	198069318	towers	--	bot boat	--	"[fix-boat-parts]."
+"boatbot"	393950818	towers	--	bot boat	--	"[fix-boat-parts]."
 "waster"	522636487	towers	--	eastern shore	--	"Ew. Rats. You do feel like a waster, doing something with the waters. Perhaps the northern--or eastern--shore can work better."
 "spray"	387610798	towers	rawest waters	--	--	"The spray will still drown you if you don't figure a way to move somewhere."
 "water"	426362521	towers	rawest waters	--	--	"The water is too elemental and generic to change. Plus the badlands are dry enough. How to get closer to a shore?"
@@ -6277,6 +6276,17 @@ chapter table of nudges rules and text
 
 [ton-]
 
+to say fix-boat-parts:
+	if blaster is off-stage:
+		say "The boat's hull seems okay. It needs some sort of motor, though";
+	else:
+		if blaster is reflexed and turbos are reflexed:
+			say "You fixed what you can of the boat";
+		else if blaster is not reflexed and turbos are not reflexed:
+			say "Hmm. It might be better to fix what the boat runs";
+		else:
+			say "You've fixed part of the boat's mechanical bits. Maybe fix the other, instead of the whole boat, instead"
+
 to say picturer-change:
 	say "It's more likely that scripture can change you[if picturers are reflexive], or help you see something a bit simpler to say[else], and it already has, whether or not you believe[end if]";
 
@@ -6305,7 +6315,7 @@ to say ei2pg:
 	say "It's good to be on anagramming terms with the book's title, but [if Pa Egg Pea is reflexive]maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle[else]your session soaking in the book's 'knowledge' was 'useful' enough[end if]"
 
 to say j-no:
-	say "It's too late to muck with the general design of the jetskis, ";
+	say "It's too late to muck with the general design of the boat, ";
 	if turbos are reflexed and blaster is reflexed:
 		say "and they're probably stable enough to take, so you can get across the water.";
 		continue the action;
@@ -6638,8 +6648,8 @@ to say trimsox:
 to say papwall:
 	say "The paperwall is unmoved. Maybe the stuff [if plaster is in lalaland and plates are in lalaland]that came from it[else if plaster is in Basement and plates are in Basement]in the wall[else]in and out of the wall[end if]  could help you more, here";
 
-to say dirk-no:
-	say "The kid looks at you curiously. You probably don't need to change [his-her] name or intelligence";
+to say smart-kid-no:
+	say "[kid-first] looks at you curiously. You probably don't need to change [his-her] name or intelligence";
 
 to say dir-rej:
 	say "This game usually doesn't require you to mess with cardinal directions";
@@ -8646,7 +8656,7 @@ Tenfold	"While you can go back outside, you can just finish things here[unless-m
 Loftier Trefoil	"[if rodney is visible]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to go out[end if]." [towers]
 Topside Deposit	"The badlands are too dangerous any way but[if scope copse is visited] back[end if] north[if Ray Eck is visible], and Ray Eck's in the way right now[end if]."
 Campsite	"Oh! This is such a nice place! But other than back east, all ways are perilous! Perilous!"
-Coastlines	"You can't get across Leak Lake without some sort of craft[if jetskis are visible], like the jetskis, which Dirk will let you take[end if]."
+Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is visible], like the boat, which [kid-first] will let you enter[end if]."
 Outer Route	"The route can't lead anywhere good. Or at least anywhere nearer the castle."
 Lost Lots	"Going anywhere but north would get you really...lost."
 Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
@@ -10000,11 +10010,11 @@ check fliptoing when inhib is true:
 
 preserve-animals is a number that varies.
 
-check scaning jetskis:
+check scaning boat:
 	if blaster is reflexive and turbos are reflexive:
-		say "Weird--the settler flips about, as if the components of the jetskis would give different readings." instead;
+		say "Weird--the settler flips about, as if the components of the boat would give different readings." instead;
 	if blaster is reflexed and turbos are reflexed:
-		say "Nothing any more. You may've fixed the jetskis.";
+		say "Nothing any more. You probably fixed the boat all you can.";
 	if blaster is reflexed:
 		try scaning turbos instead;
 	try scaning blaster instead;
@@ -10407,8 +10417,8 @@ denim	start tarts	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut a
 fissure	fissure	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."	false	582291393	"fussier"
 prison ropins	prison ropins	"unlocked"	"unlocked"	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."	false	522953692	"It already is. Dr. Yow is free."
 kid	kid	"attentive"	"attentive"	"[kid-full] snaps to attention. [he-she-c]'s more ready to learn, now."	false	788195264	"That'd be kind of schoolmarmish. [kid-first]'s ready to learn."
-turbos	turbos	"robust"	"robust"	"The turbos whir a bit and grow shinier. Robust or bust! You'd feel [if blaster is reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the jetskis now."	false	482585076	"The turbos are working fine now."
-blaster	blaster	"stabler"	"stabler"	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the jetskis now."	false	486934458	"The blaster is working fine now."
+turbos	turbos	"robust"	"robust"	"The turbos whir a bit and grow shinier. Robust or bust! You'd feel [if blaster is reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."	false	482585076	"The turbos are working fine now."
+blaster	blaster	"stabler"	"stabler"	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."	false	486934458	"The blaster is working fine now."
 eastern shore	eastern shore	"nearest"	"nearest"	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the flowerpot, too, and maybe you have the time to drop off a gift...wherever Daltho's friend may be."	false	611415331	"nearest"	Mislit Limits
 Andres	Andres	"snared"	"snared"	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Trefoil. It's nothing lethal, but enough to make him flee."	false	401528293	"snared"
 Andrew	Andrew	"warned"	"warned"	"Andrew suddenly gulps, as if he hadn't realized the downside of this venture. 'Darn, we...raw end!' he mumbles, then flees. Rodney mumbles 'Aw, nerd.'"	false	413189100	"warned"
@@ -15917,7 +15927,7 @@ check burning:
 		say "Even if the badlands weren't desolate enough, you don't have anything incendiary." instead;
 	if noun is ropins:
 		say "The ropins aren't actual rope, so they don't burn. Even if they did, [if doc-y is in prison ropins]Dr. Yow might die inside[else]you don't need to any more[end if]." instead;
-	if noun is jetskis:
+	if noun is bot boat:
 		say "Destroy a possible way to the Palace and hurt a kid's feeling at once? That's a special kind of spiteful meanness. Congratulations!" instead;
 	if noun is flowerpot or noun is crocus:
 		say "Daltho would be so upset." instead;
@@ -20149,9 +20159,9 @@ check xraying:
 			now undo-code is 2;
 			prevent undo;
 		do nothing instead;
-	if noun is jetskis:
+	if noun is bot boat:
 		if turbos are reflexed and blaster is reflexed:
-			say "The jetskis appear as workable as they can be." instead;
+			say "The bot boat and its parts appear as workable as it can be." instead;
 		if t-or-b is reflexive:
 			try xraying t-or-b instead;
 		if blaster is reflexive:
@@ -20955,7 +20965,7 @@ to say kid-first:
 
 a smart kid is a reflexive person. "[if met-kid is false]'Hi! I'm [kid-full]! Thanks for getting rid of those big mean adults!' It's the kid you rescued. You exchange greetings[meet-kid][else if doc-y is in lalaland][what-kid-sez][else]Your friend [kid-full] the smart kid is here[if-tent][end if]."
 
-the jetskis are plural-named scenery. understand "jetski/skis/ski" as jetskis.
+a bot boat is a thing. understand "botboat" and "bot-boat" as a bot boat.
 
 to say if-tent:
 	if player is in coastlines:
@@ -20983,16 +20993,17 @@ check scaning smart kid:
 met-kid is a truth state that varies.
 
 to say what-kid-sez:
-	say "[if kid has gizmo][kid-full] now has the jetskis [he-she] made. [he-she-c] looks nervously at you--[he-she] can't bring himself to ask you to try them.[no line break][else]The smart kid potters around here. 'Aww man! I have a wicked awesome plan for some jetskis! But I don't have the right tools.' [he-she-c] kicks at the ground[end if]";
+	say "[if kid has gizmo][kid-full] stands proudly by a bot-boat [he-she] made. [he-she-c] looks nervously at you--[he-she] can't bring [him-her]self to ask you to try them.[no line break][else]The smart kid potters around here. 'Aww man! I have a wicked awesome plan for a bot-boat! But I don't have the right tools.' [he-she-c] kicks at the ground[end if]";
 	now met-kid is true;
 
 to say what-kid-does:
 	if doc-y is visible:
 		say "looking [if smart kid is reflexed]attentive[else]tentative[end if]ly at Dr. Yow";
 		continue the action;
-	say "drawing in the air and mouthing ideas[one of]. 'Hey! I'm Dirk Stam! They tell me I'm a smart kid but never let me learn the cool stuff. Those mean adults kept bugging me about religion! Bo-ring! Maybe you can teach me? Or find someone who can?' You never were good at that technical stuff, but maybe you [if prison ropins is reflexed]have found[else]can find[end if] someone else who is[meet-kid][or][stopping]"
+	say "drawing in the air and mouthing ideas[one of]. 'Hey! I'm [kid-full]! They tell me I'm a smart kid but never let me learn the cool stuff. Those mean adults kept bugging me about religion! Bo-ring! Maybe you can teach me? Or find someone who can?' You never were good at that technical stuff, but maybe you [if prison ropins is reflexed]have found[else]can find[end if] someone else who is[meet-kid][or][stopping]"
 
-understand "dirk stam" and "dirk" and "stam" as smart kid.
+understand "dirk stam" and "dirk" and "stam" as smart kid when player is male.
+understand "kim darst" and "kim" and "darst" as smart kid when player is female.
 
 before taking gizmo:
 	if smart kid has gizmo:
@@ -21031,11 +21042,11 @@ to say heat-remain:
 
 check giving gizmo to smart kid:
 	if doc-y is in lalaland:
-		say "He takes the gizmo. 'Gee! Not as stone age...stage one...' He activates the gizmo's pliers, ignoring design perils--but he doesn't have enough. You [if player has toaster]offer your toaster[heat-remain][else]remember that toaster in the garden[end if]--the toaster would've caused an electric shock in the water anyway. After frantic craftin['], the spare parts just allow him to tacks on turbos and a blaster to his jetskis. They don't look TOO sturdy, but maybe you can fix that.";
+		say "He takes the gizmo. 'Gee! Not as stone age...stage one...' He activates the gizmo's pliers, ignoring design perils--but he doesn't have enough. You [if player has toaster]offer your toaster[heat-remain][else]remember that toaster in the garden[end if]--the toaster would've caused an electric shock in the water anyway. After frantic craftin['], the spare parts just allow [him-her] craft a bot boat, with turbos and a blaster. They don't look TOO sturdy, but maybe you can fix that.";
 		now smart kid has gizmo;
 		now toaster is in lalaland;
-		now blaster is part of jetskis;
-		now turbos are part of jetskis instead;
+		now blaster is part of bot boat;
+		now turbos are part of bot boat instead;
 	else:
 		say "'Wow! That'd be neat if I have something to build.'" instead;
 
@@ -21365,7 +21376,7 @@ to kid-gets-it:
 	now doc-y is in lalaland;
 	now duck is in lalaland;
 	now kid is in Actionless Coastlines;
-	now jetskis are in actionless coastlines;
+	now bot boat is in actionless coastlines;
 
 after fliptoing smart kid:
 	if doc-y is wordy:
@@ -21513,15 +21524,13 @@ instead of doing something with spray:
 
 understand "prays" as a mistake ("Too late to be a prayers sprayer.") when player is in rawest.
 
-chapter jetskis
+chapter a bot boat
 
-the jetskis are a plural-named thing.
+check examining bot boat:
+	if turbos are not part of bot boat:
+		say "The bot boat seem bare-bones at the moment, not ready to ride." instead;
 
-check examining jetskis:
-	if turbos are not part of jetskis:
-		say "The jetskis seem bare-bones at the moment, not ready to ride." instead;
-
-description of jetskis is "You don't see much on the jetskis you understand, except some turbos and a blaster. [if turbos are reflexed]The turbos seem robust enough[otherwise]A pair of turbos doesn't look quite ...hardy? No, some other word ... to help propel you across the river[end if]. [if blaster is reflexed]The blaster seems stabler than it used to be[otherwise]The blaster hums and shakes erratically[end if]."
+description of bot boat is "You don't see much on the boat you understand, except some turbos and a blaster. [if turbos are reflexed]The turbos seem robust enough[otherwise]A pair of turbos doesn't look quite ...hardy? No, some other word ... to help propel you across the river[end if]. [if blaster is reflexed]The blaster seems stabler than it used to be[otherwise]The blaster hums and shakes erratically[end if]."
 
 the turbos are a reflexive plural-named thing. description of turbos is "You're not sure how they should work, but [if turbos are reflexed]you managed to[else]maybe you can[end if] counter the kid's technical knowledge by tweaking it."
 
@@ -21574,8 +21583,11 @@ check taking toaster:
 	if toaster is in coastlines:
 		say "Best leave it with the kid." instead;
 
-check taking jetskis:
-	if turbos are not part of jetskis:
+check taking bot boat:
+	try entering bot boat instead;
+
+check entering bot boat:
+	if turbos are not part of bot boat:
 		say "'It's not even built yet, [mrmaam]! I need a tool to get the blaster and turbos working!'" instead;
 	if player has toaster:
 		say "'Hey! [mrmamu]! It'd be dangerous to take that toaster across the water!' [he-she-c]'s right[if number of carried hintpastries > 0]. But you decide to heat up what you have[end if]. You leave the toaster--you bet the kid could do some cool stuff with it. It will be a decent enough payment for [his-her] time and efforts. The kid leaves the toaster on the sand.[line break]";
@@ -21586,8 +21598,8 @@ check taking jetskis:
 			say "You heat up the food you found since you were last here.";
 		now all carried hintpastries are heated;
 	if turbos are reflexive and blaster is reflexive:
-		say "[one of]'Go, [mrmaam]!' You strap parts of the jetskis as instructed and head vaguely northeast, but the turbos that propel it conk out barely after you leave the shore, and the blaster fizzes, too. 'Dang! What do I need to do?' the kid mutters to himself.[or]Unfortunately, nothing's changed since the last time you were here. 'Man! I still need to fix the blaster. Or the turbos. Maybe both.'[stopping]" instead;
-	say "BRRRRM! The jetskis work great. 'I'll make a glider girdle next!' the kid shouts, out of view.";
+		say "[one of]'Go, [mrmaam]!' The boat sinks as you enter it. You fiddle with the controls--but they choke. The turbos conk out, and the blaster fizzes, too. 'Dang! What do I need to do?' the kid mutters to herself.[or]Unfortunately, nothing's changed since the last time you were here. 'Man! I still need to fix the blaster. Or the turbos. Maybe both.'[stopping]" instead;
+	say "BRRRRM! The boat works great. 'I'll make a glider girdle next!' the kid shouts, out of view.";
 	if turbos are reflexed and blaster is reflexed:
 		say "You speed across the deeps of the rawest waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the kid anyway. You've made it!";
 		towers-min-adj;
@@ -21736,8 +21748,8 @@ the impressive cliff is a useless backdrop. it is in Blasted Saltbed, anemic cin
 Leak Lake is a useless backdrop. it is in salted deltas, Actionless Coastlines, Ole Shrine Shoreline. "Leak Lake is so named because many bodies of water leak into it, and it leaks into others. It smells strongly of kale. At least it does not smell of carp."
 
 check entering leak lake:
-	if jetskis are visible:
-		try taking jetskis instead;
+	if player is in coastlines and bot boat is in coastlines:
+		try entering bot boat instead;
 	say "Go out, eh? Too huge!" instead;
 
 understand "kale" as a mistake ("It'd take all your energy to turn the whole lake into kale. Plus, then, the kale would have no water to survive.") when leak lake is visible.
@@ -25781,6 +25793,7 @@ blurb
 "Annoyance? Anyone can..."
 "Another hater? No!" []
 "Arise, thy hysteria! Yeah, stir!"
+"Aversion varies on, so, vainer."
 "Bah, ye [t-w]. Be that way!"
 "Base ur-abuser!"
 "Be caring. Gab nicer!"
@@ -25916,6 +25929,7 @@ blurb
 "Screed? No! CENSORED!"
 "Seagulls['] sullages!"
 "Searing rage-sin!"
+"Serving ace grievances!"
 "A silly say-ill."
 "Sin-oaths astonish!"
 "Sink peace? Seek panic? Speak NICE!"
@@ -25999,6 +26013,7 @@ blurb
 "Fell, and It Flatlined!"
 "Fie! I Fell! Life...LIFE!"
 "Fie, Solver! Life's Over!"
+"Final opus! So painful!"
 "Final Word: Fail, Drown, Flow...Nadir."
 "Finale's Yields: Elysian Fields."
 "Flatlines! Fine stall! It's fallen!"
@@ -27027,6 +27042,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Caisson Casinos"
 "Cal Berg's Crab Legs"
 "Cal Crown's Clown Cars"
+"Calder's Cradles"
 "Caleb's Cables"
 "Calo-Cola: All Cocoa!"	true
 "Calumet's Muscatel"
@@ -27038,6 +27054,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Capell's Scalpel"
 "Capelli's All-Spice"
 "Capozzoli Cool Pizza"
+"Capps-Baker Paperbacks"
 "Captain-A and Cap'n It Catnip"
 "Caravan Nav-a-Car"
 "Cardozo's Zoo Cards"
@@ -29144,6 +29161,7 @@ blurb
 "Sellout Lout Les"
 "Slowfast Flowstas"
 "Sly Abe Beasly"
+"Smoking Hot King Smooth"
 "Smooth Host Mo"
 "Smoother Moe Short"
 "So-Money Mo Noyes"
@@ -29190,6 +29208,7 @@ blurb	fave
 "[if player is female]One Man, No Name[else]I, Hereon, Heroine[end if][r], by [if player is male]Ann Moe[else]Irene Ho[end if][an-other]"	true
 "All Those Words: Shallow Doters, Worthless Load[r], by Stowell Rhoads"	false
 "Another Try, Hero-Tyrant[r], by Roy Harnett & [if player is male]Tony Erhart[else]Thora Tyner[end if]"	false
+"A Curse Causer[r], by Cara-Sue Cruse"    false
 "Da Lingo Be No Big Deal[r], by Deb Alongi"	false
 "Dim-Worths Wordsmith[r], by Dr. Tim Show & Dr. Tom Wish"	false
 "A Fly Debut...BY DEFAULT[r], by Fleta Duby"	false
@@ -30315,6 +30334,7 @@ blurb
 "Ents Sent: Tens"
 "Epic Rash Parchesi"
 "Err, Nag Ranger Garner"
+"Espionage: a Genie's Op"
 "Explo-o-Plex"
 "Fabled Bad Elf"
 "Far Totem of Matter"
@@ -30610,6 +30630,7 @@ blurb
 "Slopy Ploys, Po['] Sly Ol['] Spy" []
 "Slur the Hustler"
 "Smack [']Em Down, Scammed Wonk"
+"Smokin['] Hot Mosh-Tokin[']"
 "Sniper En Pris"
 "Snipers or Prisoners"
 "So Draw a Sword"
@@ -32075,6 +32096,7 @@ blurb
 "Holla, LOL, Ha"
 "Honest, Wham, Who's the Man"
 "A Hook, Ho! A-OK"
+"Hoopla Loop, Ah"
 "Hot Into Too Thin"
 "Hot Rex Rox the Exhort"
 "How Long I Go Howlin[']"
@@ -32518,6 +32540,7 @@ blurb
 "'Evil-gripe pig, revile privilege!'"
 "Furores for sure."
 "'Graded now: Dead wrong! Downgrade!'"
+"Hear out our hate!"
 "'In your shell? Sly, unholier!'"
 "'Leading? Dang lie!'"
 "'Lecherous Recluse, oh!'"
@@ -32529,6 +32552,7 @@ blurb
 "Mobs['] cries. 'Some cribs, crime boss!'"
 "'More spew EMPOWERS!'"
 "'Neutrals run stale!'"
+"No saint: sin a ton!"
 "'Not happy, phony? Apt!'"
 "'One-ups us? Nope!'"
 "'Pour ires or rise up, superior!'"
@@ -32537,6 +32561,7 @@ blurb
 "'RADICAL! CAD! LIAR!'" []
 "'Rep, tots! Protest!'"
 "'Roguery now! You're wrong!'"
+"Saint? A snit!"
 "'Solitude's dissolute!'"
 "Surging Urgings."
 "'TYRANT'S RANT STY!'"
@@ -33774,9 +33799,11 @@ blurb	prio
 "Baum, a Bum[r], by Babu Muma"
 "Bayern Nearby[r], by [if player is male]Barnaby Neyer[else]Bryanne Beyer[end if]"
 "Be Afraid: a Bad Fire[r], by Deb Faria"
+"Be Apart: Bar a Pet[r], by Pat Baer"
 "Be Cool, Ole Cob[r], by Bo Cole"
 "Be Cut on But Once[r], by Ben Cuto"
 "Be Drony, Nerd Boy Ed Byron[r], by Rey Bond"
+"Be-Far Faber[r], by [if player is male]Raffa Beber[else]Barbee Raff[end if]"
 "Be Loved, Bold Eve[r], by [if player is male]Del Bevo[else]Bev Odle[end if]"
 "Be Merry, Mr. Beyer[r], by Bry Meer"
 "Be Moany Mean Boy[r], by [if player is male]Ben Mayo[else]May Bone[end if]"
@@ -34155,6 +34182,7 @@ blurb	prio
 "Come to Me, Coot[r], by Tom Coe"
 "Commenter Rec-Moment[r], by Tom McNeer & Mort Nemec"
 "A Common Ammo Con[r], by Mac Moon"
+"A Complex Calm Expo[r], by Max Cople"
 "Compromise: Micro Poems[r], by Cooper Mims"
 "Computersd['] Cute Romps[r], by Tom Spruce"
 "Comrades['] Co-Dreams[r], by Ed Marcos"
@@ -34988,6 +35016,7 @@ blurb	prio
 "Glee Dan Gleaned[r], by Dee Lang" []
 "Glee Lost Now? Get Well Soon[r], by Gwen Sotello"
 "Glib, Bray, Baby Girl[r], by Lyra Gibb"
+"Glib Fonder Bold Finger[r], by Gil Benford & Fred Bolding"
 "Glibster Gilbert's Best Girl[r], by Reg Bilst"
 "Glide, Gelid[r], by Ed-Gil Lidge"
 "Gloater Got Real to Glare[r], by Reo Galt"
@@ -35981,6 +36010,7 @@ blurb	prio
 "Loud Ice is Delicious[r], by Luci Desio"
 "Loudish? I should[r], by Lu Doshi"
 "Lovable Bo Valle[r], by Abe Voll"
+"Love for Rev. Olof[r], by Flo Vore"
 "Love Has a Shovel[r], by [if player is male]Sal Hove & Hal Vose[else]Eva Losh & Val Shoe[end if]"
 "Love Hate Vote Heal[r], by Theo Vale"
 "Lovebirds['] Sob-Drivel[r], by Bevis Lord"
@@ -36020,6 +36050,7 @@ blurb	prio
 "The Magic Game Itch[r], by Meg Chait"
 "Magic Key: a Gem, Icky[r], by Mick Gaye"
 "Magic World? Go, Crawl Dim, Low Grim Cad[r], by Lido McGraw"
+"Magpies, Sage Imp, Same Pig[r], by [if player is male]Sam Gipe[else]Peg Amis[end if]"
 "The Maid Had Time Amid the Dim Hate[r], by Tad Heim"[]
 "Maid Lee Emailed Limeade[r], by Imelda E"
 "Maiden, I Amend[r], by Maddie Nieman"
@@ -36103,11 +36134,13 @@ blurb	prio
 "Medaling, Maligned[r], by [if player is male]Al Deming[else]Madge Lin[end if]"
 "Mediocre Micro Dee[r], by Moe Redic" []
 "Meet, Sojourn: Just One More[r], by Jo-Sue Merton & Junee Ostrom"
+"The Mega-Heat Gem[r], by Tam Ghee"
 "Mega-Snivel Evangelism[r], by [if player is male]Melvin Sage[else]Megan Slive[end if]"
 "Meh, Crabs['] Chambers[r], by Mab Resch"
 "Meh, Toss Moss the Hot Mess[r], by Tom Hess" []
 "Meinhardt's Hardiments[r], by [if player is male]Dash Minter[else]Mandi Herst[end if]"
 "Melba's Ambles[r], by Lem Bas"
+"Melbourne: One Rumble, Bluer Omen[r], by xxx"
 "Melisa Emails a Smile[r], by Amelia Lessim"
 "Melisa Emails Ma Lies[r], by Esmail Maisel" []
 "A Mellow Lame Owl: Allow Me[r], by Moe Wall"
@@ -36911,6 +36944,7 @@ blurb	prio
 "Pal, to a Plot[r], by Ol['] Pat Plato"
 "Pal to Apt Ol['] Plato[r], by Paolo Platt" []
 "Pale Enos, Asleep on Lone Apse[r], by [if player is male]Lee Spano[else]Opal Nees[end if]"
+"The Pale Heaplet[r], by Pete Ahl"
 "Pale Lace: Peace, All[r], by Lea Capel"
 "Pale Ms. Plame's[r], by Pam Les" []
 "Pale Sedan Esplanade[r], by Adele Snap"
@@ -36995,6 +37029,7 @@ blurb	prio
 "A Pig Man's Paganism[r], by [if player is male]Pa Sigman[else]Pam Gains[end if]"
 "Pigs and Spading[r], by Pa Dings"
 "Pigs Need Speeding[r], by Peg Snide"
+"Pilgrims' Grim Lips[r], by Lis Grimp"
 "The Pill-Hell Pit[r], by Pet Hill"
 "Pills for Ill Profs[r], by Flor Lips"
 "The Pills Help List[r], by Phil Elst"
@@ -38022,6 +38057,7 @@ blurb	prio
 "Switcheroo: Two Heroics[r], by Torie Schow"
 "A Swollen Slow Lane[r], by Noe Walls"
 "The Sword She'd Trow[r], by Des Worth"
+"A Symmetric Creamy Mist[r], by[if player is male]Timmy Cesar[else]Mamie Cryst"
 "Synthetic Ethnic Sty[r], by Ty Nitsche"
 "T. Osozaki, a Zitso, OK Kazooist[r], by Tisa Zook"
 "Tacit Snipe Antiseptic[r], by Cain Pettis"
@@ -38205,6 +38241,7 @@ blurb	prio
 "To Breach a Botcher[r], by [if player is male]Herb Cato[else]Echo Bart[end if]"
 "To Brush Thus, Bro[r], by Bo Hurst"
 "To Burst Tut's Orb[r], by Burt Ost"
+"To Cal, a Clot[r], by Tat Allocco"
 "To Care at Core[r], by [if player is male]Art Coe[else]Coretta Corea[end if]"
 "To Carry Racy Rot[r], by Art Cory"
 "To Charm or Match[r], by Mart Cho & Mac Hort"
@@ -38235,6 +38272,7 @@ blurb	prio
 "To Fray Fat Roy[r], by Art Foy"
 "To Freeze Zero Feet[r], by Zoe Efret"
 "To Get a Toe Tag[r], by Og Tate"
+"To Groan or Tango[r], by [if player is male]Art Goon[else]Tora Ong[end if]"
 "To Hack OKChat[r], by Kat Cho"
 "To Hammer Math More[r], by [if player is male]Tom Maher[else]Emma Roth[end if]"
 "To Hamper Metaphor[r], by Mart Hope"
@@ -38614,6 +38652,7 @@ blurb	prio
 "A Vixen, Ex-Vain[r], by Eva Nix"
 "Vlog in Nil-Gov[r], by Gil Von Ingvol" []
 "A Vogue's So Vague[r], by Su Govea"
+"The Voices Echoise TV[r], by Steve Choi"
 "Voracity: A Victory[r], by Racy Vito"
 "Vote Loser Roosevelt[r], by Loo Everts"
 "Vs. Mean Mavens[r], by Nev Sam"
@@ -39719,6 +39758,7 @@ blurb
 "Lisa, Mona, Also Mina."
 "Lo-Girth Hot Girl."
 "Lo-Hint Hot Lin Hilton."
+"Loch Ness Lech Sons."
 "Loin Grab Laboring."
 "The LOIN Hotline." []
 "Lon's Gal, All Snog."
@@ -39898,6 +39938,7 @@ blurb
 "On, Triad Not Arid."
 "Onanism Mansion." []
 "One Bang Began On, Gonna Be."
+"One Bed Be Done."
 "One-Dozen-Done Zone."
 "One Goth Gone Hot."
 "One Limb's So Nimble."
@@ -40267,6 +40308,7 @@ blurb
 "Tut, Sly." [x]
 "Twerk-On Network."
 "The Two: Hot, Wet."
+"Ty, Bo, Toby."
 "U Crave a Curve."
 "UK Bekka." [x]
 "Um, Hot Mouth."
@@ -40447,6 +40489,7 @@ blurb
 "Nas-T Nat's"
 "Nastier Renita's" []
 "Nasty Tyna's" []
+"Nik-Nik's Sin-Kink"
 "Nikki's is Kink"
 "No-Maid Domain" []
 "No-Rules Ron Lue's" []
@@ -41333,6 +41376,7 @@ blurb
 "Crumpets Spectrum"
 "dunes of fondues"
 "Filet I left"
+"Hug-food of dough"
 "Idleness Linseeds" []
 "Kelpic Pickle"
 "A Lad's Salad"
@@ -41393,6 +41437,7 @@ blurb
 "Ax-Lies Alexis" []
 "Axe-Grind [if player is male]Rex Gadin[else]Regan Dix[end if]"
 "Badgerer [if player is male]Edgar Erb[else]Edra Berg[end if]"
+"Ban-a-trope Bonaparte"
 "Ban-Wild Baldwin"
 "Be-Civil [if player is male]Vic Lieb[else]Bev Ilic[end if]"
 "Beat-Sin Bastien"
@@ -42122,6 +42167,7 @@ blurb
 "No-Hate [n-t] Ho"
 "No-Lie Oline O'Neil" []
 "No-Lies Elison"
+"No-No Hal O'Hanlon"
 "No-Salt St. Lona" []
 "No-Smut Tom Sun" []
 "No-Swears Rose Swan"
@@ -44057,6 +44103,7 @@ blurb
 "'Bust [']im!' / 'Submit!'"
 "'But looky! Too bulky!'"
 "'But...' / 'Go to bug Bogut!'"
+"'Cackle mob? We welcome back!'"
 "'Cake? Sly, Lackeys!'"
 "'Calamity? Calm it, ya...!'"
 "'Call it. I'll act.'"
@@ -44185,6 +44232,7 @@ blurb
 "'Eh, jort, Jethro?'"
 "'Eh, man? Me? Nah.'"
 "'Eh, poor Hooper.'"
+"'Eh, scat, cheats!'"
 "'Ehh, but the hub, Beth!' / 'Uh?'"
 "'Elect turd, deter cult.' Cluttered logic."
 "'Elijah, eh? Jail!'"
@@ -44311,6 +44359,7 @@ blurb
 "'Halt! Bestow the last bow!'"
 "'Halt, dolt! That'll do.'"
 "'Hang [']em, Meghan!'" []
+"'Hard booze!' 'Zebra-Hood? Hazed Boor? Razed Hobo?' / 'A bozo herd.'"
 "'Hard work.' / 'Hark! Word!'"
 "'Hardman Dan, harm!' / 'Hand? Arm?'"
 "'Hash [']im, Hamish!'"
@@ -44450,6 +44499,7 @@ blurb
 "'Ill gig, Gil!'"
 "'Ill, Mike. Milk lie? I kill [']em!'"
 "'Impeding! Impinged! Pin [']em, dig?'"
+"'In summation: ammunition's a must, minion.'"
 "'Infirm, Mr.? Fini!'"
 "'Info? ACT, faint co-faction!'" []
 "Interrogatives. Tergiversation." [p]
@@ -46682,6 +46732,7 @@ blurb
 "Annoyer Ronayne" []
 "Anthemic Teichman" []
 "Any-Hat Nat Hay"
+"Any-Musk Manusky"
 "Ara 'Mo['] Aroma' Amaro" [p]
 "Arm-Twist Tim Straw"
 "Arm-Twister [if player is male]Master Wirt[else]Star Witmer[end if]"
@@ -51952,6 +52003,7 @@ blurb
 "Not Enough? On, TOUGHEN[r], by Teno Huong"
 "Not Huge? Toughen[r], by Geo Hunt" []
 "Not-Scary CAN Story[r], by [if player is male]Ron Stacy[else]Caryn Tso[end if]"
+"Not Sure: to Nurse One's Rut[r], by Ron Suet"
 "Now Let's: Lots New[r], by Lon West"
 "Oftener, I Grip Profiteering[r], by Rini Goepfert"
 "Oh, Acuter Outreach: Euro-Chat, a Retouch[r], by Hector Au"
@@ -53857,6 +53909,7 @@ blurb
 "feudalist disulfate"
 "Filbertio's Fibrolites"
 "Fingold's Foldings"
+"flat-tire filtrate"
 "flouriest fluorites"
 "Fraioli's airfoils"
 "Frist rifts"
@@ -56768,6 +56821,7 @@ blurb
 "Low prices relic swop!"
 "'A melon mo['] lean? No, lame!'" []
 "'Miss, a free...?' / 'Seems fair.'"
+"'Money back!' / 'My, a beckon!'"
 "'No-credit doctrine, tired con!'"
 "'No wallets? STONEWALL!'" []
 "'Oafs fled. Deal's off.'"
@@ -57636,7 +57690,7 @@ Ray Eck	"[one of]Ray Eck and his car are in tip-top shape, but maybe you can cha
 keycar	--	Ray Eck
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
 pirates	"[one of]The pirates are very sun-burnt, and they like it that way.[plus][or]The pirates make fun of your own pale skin.[plus][or]Why not make the pirates PASTIER?[minus][cycling]"
-smart kid	"[if obscurest subsector is unvisited][kid-full]'s not important right now.[else if doc-y is in prison ropins][kid-full] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if kid is lonely][one of][kid-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK KID ABOUT DOCTOR.[minus][cycling][else if kid is reflexive and kid is in subsector][one of]Dirk is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if kid does not have gizmo]You need to give Dirk something to build with. A tool.[else]Dirk's jetskis are more important.[end if]"
+smart kid	"[if obscurest subsector is unvisited][kid-full]'s not important right now.[else if doc-y is in prison ropins][kid-full] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if kid is lonely][one of][kid-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK KID ABOUT DOCTOR.[minus][cycling][else if kid is reflexive and kid is in subsector][one of][kid-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if kid does not have gizmo]You need to give [kid-first] something to build with. A tool.[else][kid-first]'s bot boat is more important.[end if]"
 Reed's Ale	"[one of]The RELEASED poem is awful, isn't it?[plus][or]The zip-lock bag is a bit of a clue.[plus][or]RESEALED.[minus][cycling]"
 ego drains	"[one of]They're organised, but perhaps if they were hyperbole, they wouldn't be as effective.[plus][or]How could you make them over-the-top?[plus][or]Say, GRANDIOSE?[minus][cycling]"
 admirer	"[one of]She needs someone to be attached to.[plus][or]Why stop at just engaged?[plus][or]MARRIED.[minus][cycling]"
@@ -57663,7 +57717,7 @@ ropins	"[one of]The prison ropins are locked.[plus][or]What could change that?[p
 lone duck	"[one of]You need to bring it back to its owner.[plus][or]In the Obscurest Subsector.[plus][or]It won't follow you, though.[plus][or]If you have the Raves Saver, you can record Dr. Yow while [he-she]'s wordy.[plus][or]This will make the duck follow back to Dr. Yow.[plus][or]The duck can open the lock.[plus][or]How? It is a lone duck.[plus][or]The lone duck can make the gaol UNLOCKED.[minus][cycling]"
 rapier repair	"[one of]The rapier repair machine looks like it could use something.[plus][or]Have you seen anything that looks like a rapier and needs repair?[plus][or]That ragged dagger[if player does not have ragged dagger] you left in the ravages[end if].[plus][or]Put the dagger in the machine.[plus][or]The gizmo may help the kid build something.[minus][cycling]"
 o-s	"The ole shrine is just sort of there, for a clue. You don't need to do anything with it."
-jetskis	"Two parts of the jetskis were broken. The blaster and turbos."
+bot boat	"Two parts of a bot boat are broken. The blaster and turbos."
 blaster	"[one of]The blaster isn't quite as solid as it could be.[plus][or]Maybe you could make the blaster STABLER?[minus][cycling]"
 turbos	"[one of]The turbos aren't quite as solid as they could be.[plus][or]Maybe you could make the turbos ROBUST?[minus][cycling]"
 spray	"The spray isn't as important as any of the shores you need to reach."
@@ -58414,7 +58468,7 @@ rule for showing alternate routes:
 			say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] the Reed's Ale guy and given him a different outlook on life.";
 		if natives are in lalaland:
 			say "[2da]you could've also made the natives [if naiv-nat is true]VAINEST[else]NAIVEST[end if] to uproot them.";
-		say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired the jetskis, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST[else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster STABLER[else]you'd have passed Rawest Waters if you'd have made the turbos ROBUST[end if].";
+		say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired the boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST[else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster STABLER[else]you'd have passed Rawest Waters if you'd have made the turbos ROBUST[end if].";
 		if bredo is in lalaland:
 			say "[2da]Bredo could've become [if bredo-bored is true]ROBED[else]BORED[instead].";
 	if otters is solved:
@@ -59110,15 +59164,15 @@ chapter towers
 
 [* this includes tests for towers, towers with mistakes, towers min-points and towers max-points]
 
-test towers with "towers/towers/enter towers/y/z/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/gone/godly/learned/calmer/normal/pronest/eggier/coyer/ashen/recreant/stony/awed/yonder/out/rustled/creaky/n/rusty/weirder/clumsy/rinsed/n/punier/pastier/coiled/n/married/weariest/angstier/n/s/e/marginal/s/himself/sewed/mined/resealed/w/s/w/put dagger in rapier repair/x gizmo/e/e/unreal/drained/e/naivest/grandiose/broken/e/wordy/push retape/pearly/go to duck/push repeat/go to yow/unlocked/w/n/holiest/n/hastiest/ask kid about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/take jetskis/nearest/present/dingy/w/greyed/give flowerpot/e/spectacular/coff 1"
+test towers with "towers/towers/enter towers/y/z/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/gone/godly/learned/calmer/normal/pronest/eggier/coyer/ashen/recreant/stony/awed/yonder/out/rustled/creaky/n/rusty/weirder/clumsy/rinsed/n/punier/pastier/coiled/n/married/weariest/angstier/n/s/e/marginal/s/himself/sewed/mined/resealed/w/s/w/put dagger in rapier repair/x gizmo/e/e/unreal/drained/e/naivest/grandiose/broken/e/wordy/push retape/pearly/go to duck/push repeat/go to yow/unlocked/w/n/holiest/n/hastiest/ask kid about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/enter boat/nearest/present/dingy/w/greyed/give flowerpot/e/spectacular/coff 1"
 
-test towers-nogo with "towers/towers/enter towers/y/rustled/docile/n/pastier/clumsy/rinsed/n/punier/weirder/mistier/n/married/weariest/angstier/e/marginal/s/himself/sewed/mined/resealed/get all/w/s/w/put dagger in rapier repair/e/e/unreal/drained/e/rusty/grandiose/broken/e/wordy/push retape/pearly/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/unlocked/w/n/holiest/n/creaky/ask kid about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/take jetskis/nearest/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/foldy/gone/godly/learned/calmer/normal/pronest/eggier/yonder/coyer/ashen/recreant/stony/awed/yonder/out/unable/w/dingy/e/spectacular/coff 1"
+test towers-nogo with "towers/towers/enter towers/y/rustled/docile/n/pastier/clumsy/rinsed/n/punier/weirder/mistier/n/married/weariest/angstier/e/marginal/s/himself/sewed/mined/resealed/get all/w/s/w/put dagger in rapier repair/e/e/unreal/drained/e/rusty/grandiose/broken/e/wordy/push retape/pearly/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/unlocked/w/n/holiest/n/creaky/ask kid about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/enter boat/nearest/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/foldy/gone/godly/learned/calmer/normal/pronest/eggier/yonder/coyer/ashen/recreant/stony/awed/yonder/out/unable/w/dingy/e/spectacular/coff 1"
 
-test towers-oops with "srewot/towers/srewot/srewot/towers/srewot/enter towers/deltsur/rustled/deltsur/elicod/docile/elicod/n/denim/mined/denim/reitsap/pastier/reitsap/deyerg/greyed/deyerg/reinup/punier/reinup/n/ysmulc/clumsy/ysmulc/redriew/weirder/redriew/reitsim/mistier/reitsim/n/deirram/married/deirram/tseiraew/weariest/tseiraew/reitsgna/angstier/reitsgna/e/lanigram/marginal/lanigram/s/flesmih/himself/flesmih/elbanu/unable/elbanu/delaeser/resealed/delaeser/get all/w/s/w/put dagger in rapier repair/e/e/laernu/unreal/laernu/deniard/drained/deniard/e/ytsur/rusty/ytsur/esoidnarg/grandiose/esoidnarg/nekorb/broken/nekorb/e/ydrow/wordy/ydrow/push retape/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/dekcolnu/unlocked/dekcolnu/w/n/tseiloh/holiest/tseiloh/n/enicrop/porcine/enicrop/ask kid about doctor/s/s/e/evitnetta/attentive/evitnetta/ydwor/rowdy/ydwor/w/n/n/give gizmo to kid/tsubor/robust/tsubor/take jetskis/tseraen/nearest/tseraen/derans/snared/derans/denraw/warned/denraw/reihca/achier/reihca/ybraen/nearby/ybraen/kaelb/bleak/kaelb/dekcirc/cricked/dekcirc/ydral/lardy/ydral/redimit/timider/redimit/ydeew/weedy/ydeew/deniw/wined/deniw/nedlo/olden/nedlo/resnet/tenser/resnet/ydlof/foldy/ydlof/enog/gone/enog/yldog/godly/yldog/denrael/learned/denrael/remlac/calmer/remlac/lamron/normal/lamron/tsenorp/pronest/tsenorp/reigge/eggier/reigge/reyoc/coyer/reyoc/nehsa/ashen/nehsa/tnaercer/recreant/tnaercer/ynots/stony/ynots/dewa/awed/dewa/rednoy/yonder/rednoy/rednoy/yonder/rednoy/gniyd/dying/gniyd/tuo/out/tuo/ralucatceps/spectacular/ralucatceps/coff 1"
+test towers-oops with "srewot/towers/srewot/srewot/towers/srewot/enter towers/deltsur/rustled/deltsur/elicod/docile/elicod/n/denim/mined/denim/reitsap/pastier/reitsap/deyerg/greyed/deyerg/reinup/punier/reinup/n/ysmulc/clumsy/ysmulc/redriew/weirder/redriew/reitsim/mistier/reitsim/n/deirram/married/deirram/tseiraew/weariest/tseiraew/reitsgna/angstier/reitsgna/e/lanigram/marginal/lanigram/s/flesmih/himself/flesmih/elbanu/unable/elbanu/delaeser/resealed/delaeser/get all/w/s/w/put dagger in rapier repair/e/e/laernu/unreal/laernu/deniard/drained/deniard/e/ytsur/rusty/ytsur/esoidnarg/grandiose/esoidnarg/nekorb/broken/nekorb/e/ydrow/wordy/ydrow/push retape/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/dekcolnu/unlocked/dekcolnu/w/n/tseiloh/holiest/tseiloh/n/enicrop/porcine/enicrop/ask kid about doctor/s/s/e/evitnetta/attentive/evitnetta/ydwor/rowdy/ydwor/w/n/n/give gizmo to kid/tsubor/robust/tsubor/enter boat/tseraen/nearest/tseraen/derans/snared/derans/denraw/warned/denraw/reihca/achier/reihca/ybraen/nearby/ybraen/kaelb/bleak/kaelb/dekcirc/cricked/dekcirc/ydral/lardy/ydral/redimit/timider/redimit/ydeew/weedy/ydeew/deniw/wined/deniw/nedlo/olden/nedlo/resnet/tenser/resnet/ydlof/foldy/ydlof/enog/gone/enog/yldog/godly/yldog/denrael/learned/denrael/remlac/calmer/remlac/lamron/normal/lamron/tsenorp/pronest/tsenorp/reigge/eggier/reigge/reyoc/coyer/reyoc/nehsa/ashen/nehsa/tnaercer/recreant/tnaercer/ynots/stony/ynots/dewa/awed/dewa/rednoy/yonder/rednoy/rednoy/yonder/rednoy/gniyd/dying/gniyd/tuo/out/tuo/ralucatceps/spectacular/ralucatceps/coff 1"
 
 test towers-h with "fixtow/poss/towers/towers/enter towers/docile/n/punier/n/weirder/e/get all/e/resealed/e/grandiose/s/married/e/wordy/push retape/w/n/w/w/clumsy/n/unable/n/push repeat/s/s/e/e/s/e/unlocked/w/n/pastier/n/ask kid about doctor/s/s/e/attentive/rowdy/w/n/n/stabler/robust/take skis/nearest/gone/lardy/bleak/olden/yonder/out/spectacular"
 
-test towers-i with "fixtow/poss/towers/towers/enter towers/docile/n/greyed/e/himself/n/get all/s/drained/e/married/e/wordy/push retape/w/w/n/marginal/n/weariest/w/unable/n/push repeat/s/e/s/s/e/e/unlocked/w/w/n/n/holiest/e/ask kid about doctor/w/s/s/e/e/attentive/rowdy/w/w/n/n/e/robust/take jetskis/eastern/gone/lardy/bleak/olden/yonder/out/spectacular"
+test towers-i with "fixtow/poss/towers/towers/enter towers/docile/n/greyed/e/himself/n/get all/s/drained/e/married/e/wordy/push retape/w/w/n/marginal/n/weariest/w/unable/n/push repeat/s/e/s/s/e/e/unlocked/w/w/n/n/holiest/e/ask kid about doctor/w/s/s/e/e/attentive/rowdy/w/w/n/n/e/robust/enter boat/eastern/gone/lardy/bleak/olden/yonder/out/spectacular"
 
 test towers-part with "towers/towers/enter towers/docile/n/poncier/greyed/punier/n/clumsy/weirder/n/unable/weariest/angstier/e/marginal/s/himself/resealed/get dagger and saver/w/s/w/put dagger in rapier repair/e/e/drained/e/rusty/grandiose/married/e/wordy/push retape/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/unlocked/w/n/pastier/n/holiest"
 
@@ -59233,9 +59287,9 @@ test qw1 with "ts/y/a5/otters/test otters"
 
 test qw2 with "gonear gates/purloin settler/purloin passport/review/research/n"
 
-test others with "others/in/tamarind/maraschino/plums/pears/grapes/blueberries/cranberries/x stand/limes/pomegranate/cantaloupe/compass/persimmon/n/apples/apricot/mulberries/gooseberry/d/go near/nab an a/reversed/rhubarb/u/w/blackberries/pineapple/grapefruit/strawberries/raspberry/e/s/n/e/listen/among/solemn/solemn/argentine/ancienter/cheap/cinque/cripes/papayas/w/s/icons/sonic/n/d/give dollar to trader/u/put icons in slot/review/research/n/n/coff"
+test others with "others/in/tamarind/maraschino/plums/pears/grapes/blueberries/cranberries/x stand/limes/pomegranate/cantaloupe/compass/persimmon/n/apples/apricot/mulberries/gooseberry/d/go near/nab an a/reversed/rhubarb/u/w/blackberries/pineapple/watermelon/grapefruit/strawberries/raspberry/e/s/n/e/listen/among/solemn/solemn/argentine/ancienter/cheap/cinque/cripes/papayas/w/s/icons/sonic/n/d/give dollar to trader/u/put icons in slot/review/research/n/n/coff"
 
-test others-oops with "srehto/others/srehto/in/dniramat/tamarind/dniramat/onihcsaram/maraschino/onihcsaram/smulp/plums/smulp/sraep/pears/sraep/separg/grapes/separg/seirrebeulb/blueberries/seirrebeulb/seirrebnarc/cranberries/seirrebnarc/x stand/persimmon/nommisrep/semil/limes/semil/etanargemop/pomegranate/etanargemop/epuolatnac/cantaloupe/epuolatnac/ssapmoc/compass/ssapmoc/n/selppa/apples/selppa/tocirpa/apricot/tocirpa/yrrebesoog/gooseberry/yrrebesoog/d/go near/nab an a/desrever/reversed/desrever/brabuhr/rhubarb/brabuhr/u/w/seirrebkcalb/blackberries/seirrebkcalb/elppaenip/pineapple/elppaenip/tiurfeparg/grapefruit/tiurfeparg/seirrebwarts/strawberries/seirrebwarts/yrrebpsar/raspberry/yrrebpsar/e/e/gnoma/among/gnoma/nmelos/solemn/nmelos/nmelos/solemn/nmelos/enitnegra/argentine/enitnegra/retneicna/ancienter/retneicna/paehc/cheap/cinqeu/cinque/paehc/sepirc/cripes/sepirc/w/s/snoci/icons/snoci/cinos/sonic/cinos/n/d/give dollar to trader/u/put icons in slot/weiver/review/weiver/research/hcraesern/n/coff"
+test others-oops with "srehto/others/srehto/in/dniramat/tamarind/dniramat/onihcsaram/maraschino/onihcsaram/smulp/plums/smulp/sraep/pears/sraep/separg/grapes/separg/seirrebeulb/blueberries/seirrebeulb/seirrebnarc/cranberries/seirrebnarc/x stand/persimmon/nommisrep/semil/limes/semil/etanargemop/pomegranate/etanargemop/epuolatnac/cantaloupe/epuolatnac/ssapmoc/compass/ssapmoc/n/selppa/apples/selppa/tocirpa/apricot/tocirpa/mulberrsei/mulberries/mulberrsei/yrrebesoog/gooseberry/yrrebesoog/d/go near/nab an a/desrever/reversed/desrever/brabuhr/rhubarb/brabuhr/u/w/seirrebkcalb/blackberries/seirrebkcalb/elppaenip/pineapple/elppaenip/awtermelno/awtermelno/tiurfeparg/grapefruit/tiurfeparg/seirrebwarts/strawberries/seirrebwarts/yrrebpsar/raspberry/yrrebpsar/e/e/gnoma/among/gnoma/nmelos/solemn/nmelos/nmelos/solemn/nmelos/enitnegra/argentine/enitnegra/retneicna/ancienter/retneicna/paehc/cheap/cinqeu/cinque/paehc/sepirc/cripes/sepirc/w/s/snoci/icons/snoci/cinos/sonic/cinos/n/d/give dollar to trader/u/put icons in slot/weiver/review/weiver/research/hcraesern/n/coff"
 
 [currently o04 is not possible without cheating]
 
@@ -60325,7 +60379,7 @@ carry out skiing:
 		now all guardians are in lalaland;
 		now smart kid is in coastlines;
 		now gizmo is in lalaland;
-		now smart kid has jetskis;
+		now bot boat is in actionless coastlines;
 		move player to actionless coastlines;
 		ital-say "moving south or west from here will make the game kind of goofy. Also, the score is wrong, because this is a test command. You pretty much want to get the skis from the kid." instead;
 	the rule succeeds;

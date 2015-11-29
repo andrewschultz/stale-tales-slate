@@ -24,6 +24,7 @@ Store W:
 --the trader is now female if you are, with a new name
 --the smart kid is now female if you are
 --Dr. Yow is now female if you are
+--the jetskis are replaced with a more appropriate conveyance
 
 Store H:
 --new fruits in the Field
@@ -32,7 +33,7 @@ Store V:
 --the Bedroom in Store V now has a new name
 
 Store T:
---the macks' idiocy in Store T is now refactored to be one of 7, drawn from pods, much like the warriors in Store W
+--the macks' idiocy in Store T is now refactored to be drawn from seven pods (7/8 duplicate/unduplicate, 9, 10, and 12--which has one item,) much like the warriors in Store W. You still only need to choose three, but I think this is less overwhelming
 
 Meta-stuff:
 --metrics HTML file updated with new solution

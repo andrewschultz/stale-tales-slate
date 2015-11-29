@@ -102,6 +102,7 @@ sub cromu
     if (($_[0] !~ /^\"@thisAry[0]/i) && ($_[0] !~ /'@thisAry[0]'/i)){ return 0; }
   }
   
+  if ($_[0] =~ /^test|volume|chapter|book|part|section/) { return 0; }
   #lumped together
   if ($#thisAry)
   {

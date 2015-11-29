@@ -5,7 +5,7 @@ $printSettler = 1;
 $settlerToo = 1;
 
 $inFile = "c:/writing/dict/wmet.txt";
-$outFile = "c:/games/inform/roiling.inform/Source/metrics.htm";
+$outFile = "c:/writing/dict/metrics.htm";
 
 if (@ARGV[0] eq "-d") { $debug = 1; }
 
