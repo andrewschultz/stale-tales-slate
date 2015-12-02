@@ -17,8 +17,14 @@ while ($count <= $#ARGV)
 
 while ($a = <A>)
 {
+  $thisLine++;
   if ($a =~ /^table of/) { chomp($a); $currentTable = $a; next; }
-  if ($a !~ /[a-z0-9]/i) { $currentTable = ""; next; } # could also check for no start quote
+  if ($currentTable)
+  {
+    if ($a =~ /^['`]/) { chomp($a); print "WARNING $a not properly quoted, line $thisLine table $currentTable\n"; }
+    if ($a =~ /^[a-z0-9]/i) { chomp($a); print "WARNING $a does not start with a quote, line $thisLine table $currentTable\n"; }
+  }
+  if (($a !~ /^\"/) || ($a !~ /[a-z0-9]/i)) { $currentTable = ""; next; }
   if ($currentTable)
   {
     #print "$currentTable gets $a";
@@ -72,6 +78,7 @@ sub addIdeas
   $cmd = "copy \"$addedFile\" \"$storyFile\"";
   print "$cmd\n";
   `$cmd`;
+  print "File copied\n";
 }
 
 ################################
@@ -83,12 +90,15 @@ sub addIdeas
 sub cleanUpLoneFile()
 {
   my $anaDel = "c:\\writing\\dict\\sts-bak.txt";
+  my $anaLast = "c:\\writing\\dict\\sts-last.txt";
   my $inTable = 0;
+
+  if ($justPrintCmds) { print "copy $anaDel $anaIdeas"; return; }
+
+  `copy $anaDel $anaLast`;
 
   open(A, "$anaIdeas");
   open(B, ">$anaDel");
-  
-  if ($justPrintCmds) { print "copy $anaDel $anaIdeas"; return; }
 
   while ($a = <A>)
   {

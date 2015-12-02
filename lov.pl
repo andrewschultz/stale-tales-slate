@@ -297,6 +297,26 @@ close(A);
 
 print "Table of Nudges has $myLines.\n";
 
+open(B, "c:/writing/dict/lov.txt");
+while ($b = <B>)
+{
+  if ($b =~ /^#/) { next; }
+  @c = split(/,/, $b);
+  $ang{@c[0]} = @c[1];
+}
+$shortName = $_[0]; $shortName =~ s/\.inform.*//g; $shortName =~ s/.*[\\\/]//g;
+if ($ang{$shortName} == $sums) { print "No progress since last time!\n"; }
+else
+{
+@localtime = localtime(time);
+$dateForm = sprintf("%4d-%02d-%02d-%02d-%02d-%02d",
+@localtime[5]+1900, @localtime[4]+1, @localtime[3], @localtime[2], @localtime[1], @localtime[0]);
+
+open(B, ">>c:/writing/dict/lov.txt");
+print B "$shortName,$sums,$prod,$dateForm\n";
+close(B);
+}
+
 if ($warning) { print "WARNING: $warning"; }
  return;
 }

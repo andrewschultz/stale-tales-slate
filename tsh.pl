@@ -49,6 +49,8 @@ sub alphSource
 
 print "Alphabetizing $_[0].\n";
 
+
+
 $findy{lc("$_[0]/story.ni")} = 1; #print "Adding $_[0] to findy.\n";
 
 $lines = 0;
@@ -98,9 +100,9 @@ if ($dupes) { print "$dupes duplicate(s) found. Results below.\n$dupeString"; } 
 $niSize = -s "$fileName";
 $nuSize = -s "$outFileName";
 
-if ($niSize != $nuSize) { print "Something went wrong. File sizes aren't equal! New=$nuSize Old=$niSize. Maybe check CR's."; die; }
+if ($niSize != $nuSize) { die "Something went wrong. File sizes aren't equal! New=$nuSize Old=$niSize. Maybe check CR's."; }
 
-if ($badError) { print "BAD ERRORS FOUND, ABORTING\n$badError\n"; die; }
+if ($badError) { die "BAD ERRORS FOUND, ABORTING\n$badError\n"; }
 
 postProcess("$thisDir");
 
@@ -168,12 +170,12 @@ sub sortTheTable
   while ($a = <A>)
   {
     @c = split(/\"/,  $a);
-	if (($#c ==1) || ($#c > 2)) { $badError .= ("Uh-oh, wrong # of quotes at line " . ($lines+$#ary+2) . "\n$#c:$a"); }
-    if ($a =~ /^'/) { $badError .= ("Uh-oh, single quote line start at line " . ($lines+$#ary+2) . ", bailing."); }
+	if (($#c ==1) || ($#c > 2)) { $badError .= ("Uh-oh, wrong # of quotes at $short line " . ($lines+$#ary+2) . "\n$#c:$a"); }
+    if ($a =~ /^'/) { $badError .= ("Uh-oh, single quote line start at $short line " . ($lines+$#ary+2) . ", bailing."); }
     if ($a !~ /^\"/) {
-	  if ($a =~ /^[a-z]/i) { $badError .= ("Uh-oh, you started a table line with a character: # " .  ($lines+$#ary+2) . ", bailing."); }
+	  if ($a =~ /^[a-z]/i) { $badError .= ("Uh-oh, you started a table line with a character: $short # " .  ($lines+$#ary+2) . ", bailing."); }
 	  $ch = chr(0xe2);
-	  if ($a =~ /^$ch/) { $badError .= ("Uh-oh, smart quote found at line " . ($lines+$#ary+2) . ", bailing."); }
+	  if ($a =~ /^$ch/) { $badError .= ("Uh-oh, smart quote found at $short line " . ($lines+$#ary+2) . ", bailing."); }
 	  #print "Final = $a";
 	  last;
 	}
