@@ -3561,9 +3561,12 @@ to say part-list of (tt - a table-name) and (fi - a number):
 
 to say biop of (ts - a truth state):
 	repeat through table of biopics:
-		if fave entry is ts:
-			say "[blurb entry]";
-			continue the action;
+		if there is a fave entry:
+			if fave entry is ts:
+				say "[blurb entry]";
+				continue the action;
+		else:
+			say "BUG should not be neutral"
 	say "BUG no biopic found";
 
 to say check-started-yet:
@@ -5084,11 +5087,19 @@ when play begins (this is the basic initialization rule):
 	move the curst palace backdrop to all towery rooms;
 	add-errs manor;
 	let convo-holes be false;
-	repeat through table of ad slogans:
+	repeat through table of ad slogans: [initialize--typing FALSE all the time annoying]
 		if there is no blare entry:
 			increment temp;
 			now blare entry is false;
 	d "[temp] unblared slogans of [number of rows in table of ad slogans] total slogans.";
+	let temp be 0;
+	repeat through table of biopics: [biopics are hostile by default]
+		if there is no fave entry:
+			d "[blurb entry]" needs bias. Defaulting to false.";
+			now blare entry is false;
+		else if fave entry is true:
+			increment temp;
+	d "[temp] biopics favorable to you of [number of rows in table of biopics] total.";
 	repeat through table of subject-blather:
 		if there is no him-say entry:
 			say "[him-who entry] / [person-subj entry] needs entry.";
@@ -28266,6 +28277,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Seitz: It's E-Z!"	true
 "Seligman Mealings"
 "Selkind Kindles" []
+"Selkirk Likkers"
 "Selvio-Voiles Olives"
 "Seneca's Seances"
 "The Senor Seth Reno: There's No Honester!"	true
@@ -29248,6 +29260,7 @@ blurb	fave
 "Dim-Worths Wordsmith[r], by Dr. Tim Show & Dr. Tom Wish"	false
 "Drab Howl, Blah-Word Blowhard[r], by W. Harbold"
 "A Fly Debut...BY DEFAULT[r], by Fleta Duby"	false
+"Gawd, S'More Word Games[r], by [if player is male]Drew Gamos[else]Margo Dews[end if]"	false
 "A Genius in Usage[r], by Gina-Sue Seguain"	true
 "Go, O. G., Go[r], by Og G. Goo"	true
 "Good [if player is male]M[else]Wom[end if]an? Mad Goon[r], by [if player is male]Dan[else]Wonda[end if] Moog"	false
@@ -29270,7 +29283,7 @@ blurb	fave
 "St. Be-Best[r], by Bess Bett"	true
 "There Rots the Sorter[r], by Ros Threet"	false
 "Titan's Taints[r], by Si Tant"	false
-"To Bull: Easy, Absolutely, by a Sellout[r], by [if player is male]Solly Taube[else]Tula Boyles[end if]"
+"To Bull: Easy, Absolutely, by a Sellout[r], by [if player is male]Solly Taube[else]Tula Boyles[end if]"	false
 "Upstream Into Permutations Use: Important[r], by [if player is male]Rupe Mattison[else]Simona Pruett[end if]"	true
 "We Call a, Well, Ace[r], by Alec Law"	true
 "Whoa, Heart, What a Hero[r], by Tarah Howe"	true
@@ -29446,6 +29459,7 @@ blurb
 "Crass Toi Cossairt"
 "Crass Toni Croissant" []
 "Crass Yue Syracuse"
+"Cray-Cray Aryc Cary"
 "Crude Al Caulder"
 "Crude Sam DeMarcus"
 "Crude Seth Deutscher"
@@ -32642,6 +32656,7 @@ blurb
 "Avid Diva Vida"
 "Avowedly Way-Loved Davy Lowe"
 "Bad-Shape-Bashed Pa"
+"Banjo Rae Bejarano"
 "Bass Ely Bayless"
 "Bass Haugen Sensabaugh"
 "Bearded Bard Dee" []
@@ -33379,6 +33394,7 @@ blurb
 "Shmoe Tina Mathieson"
 "Shmoe Twan Mathewson" []
 "Shmoe Una Houseman"
+"Silk-Banjo  Jablonski"
 "Simple Ann Spielmann"
 "Simple Erick Picklesimer"
 "Simple Gena Spiegelman"
@@ -33809,6 +33825,7 @@ blurb	prio
 "Aw, Flo: Law of a Wolf[r], by Alf Faw-Wool"
 "Aw, Nerd, Ew--Darn[r], by Andrew Ardwen" []
 "Aw, Urged, We Guard[r], by Gerda Wu"
+"Awareness Earns Awes[r], by Wes Arenas"
 "Awe-Smit, It was Me[r], by Mia West"
 "Awesome Mesa Woe[r], by Wee Amos"
 "Awesomely Measly Woe[r], by [if player is male]Wesley Mao[else]Salome Yew[end if]"
@@ -34086,6 +34103,7 @@ blurb	prio
 "A Butler's Baluster[r], by [if player is male]Bert Saul[else]Rea Blust[end if]"
 "Buy Ann a Bunny[r], by Nun Bay Bunyan"
 "By a Third Birthday[r], by Thad Irby"
+"By Best BBS Yet[r], by Ty Ebbs"
 "By Dear, a Derby[r], by [if player is male]Ray Bey-Bedard[else]Deb Ray[end if]" []
 "By Lingo Ignobly[r], by [if player is male]Gino Bly[else]Glyn Obi[end if]" []
 "By Luck, Eh, Huckleby[r], by [if player is male]Kyle Chub[else]Becky Luh[end if]"
@@ -35675,6 +35693,7 @@ blurb	prio
 "The Icy City, eh: Ye Itch[r], by Chet Yi"
 "Icy Denser Residency[r], by [if player is male]Cris Edney[else]Cyndi Rees[end if]"
 "Id-Theism Times Hid[r], by [if player is male]Sid Theim[else]Edi Smith[end if]"
+"Idealism to Modalities[r], by [if player is male]Otis DeLima[else]Melodi Tsai[end if]"
 "Ideas of Oafs Die[r], by Si Dafoe & Ed Sofia"
 "Ideology? Goody! Lie![r], by Diego Loy"
 "An IDK, Kinda[r], by Kandi Dakin"
@@ -36152,6 +36171,7 @@ blurb	prio
 "Mad Bones, Bad Omens[r], by [if player is male]Bo Madsen[else]Bea Monds[end if]"
 "Mad Cash Dash-Cam[r], by Chad Sam"
 "Mad Glee Gleamed[r], by Meg Dale"
+"Mad Grace's Card Games[r], by Cam DeGras"
 "Mad Liar Admiral[r], by Mila Ard" []
 "The Magic Game Itch[r], by Meg Chait"
 "Magic Key: a Gem, Icky[r], by Mick Gaye"
@@ -37748,6 +37768,7 @@ blurb	prio
 "Sheesh, Re-Prep, Sphere[r], by Herr Shep Espe"
 "Shen Clan Channels[r], by Nan Lesch"
 "Shiest Heists Thesis[r], by Si Tesh"
+"Shift Around, Faint Shroud: Author Finds[r], by [if player is male]Stanford Hui[else]Frida Huston[end if]"
 "Shingle, English[r], by Gil Shen"
 "Shockwave, Skew Havoc[r], by Wes Kovach"
 "Shoot Mr. Storm, Oh[r], by Mo Short"
@@ -39274,6 +39295,7 @@ blurb
 "recounts the sad denouement of [i]Phenom on Hemp[r]."
 "recounts the trauma and relief of the protagonist of [i]Other Kids Risked, Tho['][r]."
 "refers to [i]Bo's Thing: Bong Hits? Sob Night[r]."
+"reflects [i]RIP Moe's Semi-Pro Promise[r] has been overall good for society--BUT THAT DOESN'T HELP MOE."
 "rehashes [i]No Weed! End Woe[r]."
 "reiterates the FACTS of [i]The Polls: Pot's HELL[r]."
 "relates comparisons of pro- and anti-jokes in [i]Drum Rough Drug Humor[r]."
@@ -39656,6 +39678,7 @@ blurb
 "Gen-X is Sexing."
 "Get Horny Then Orgy."
 "Get Lucky Ty Glueck."
+"Get Physical, Sightly Pace: Ghastly Epic."
 "A Ghost Has Got to Shag." []
 "Gil Roth's Hot Girls."
 "Gimpel's Glimpse."
@@ -40460,6 +40483,7 @@ blurb
 "A Tryst: Whoa, What a Story."
 "Tut, Sly." [x]
 "Twerk-On Network."
+"Twin Peaks Spite Wank: Pew, a Stink."
 "The Two: Hot, Wet."
 "Ty, Bo, Toby."
 "U Crave a Curve."
@@ -41211,6 +41235,7 @@ blurb
 "GAY PRIDE? GRIPE DAY"
 "GEISHAS? HISSAGE" []
 "GENTILES? STEELING" []
+"GET PHYSICAL? CHASTELY, PIG. PITCH SAGELY"
 "GIN HATE GAINETH" []
 "A GIN LUSH? LANGUISH"
 "GO BET? BE GOT"
@@ -41690,6 +41715,7 @@ blurb
 "Chider Skeet Ketcherside"
 "Chosen Schoen" []
 "Citator [if player is male]Art Coit[else]Cari Ott[end if]-Ricotta" []
+"Civil Man McIlvain"
 "Clarion Carolin"
 "Clean Fun Fan Uncle"
 "Clear Clare" []
@@ -42314,6 +42340,14 @@ blurb
 "Nice Tora Caterino" []
 "Nice Trish Christine"
 "Nice Vilma McIlvaine"
+"Nicer Alda Cardinale"
+"Nicer Bo Briceno"
+"Nicer Ham Reichman"
+"Nicer Loma Marcelino"
+"Nicer Mac McCranie"
+"Nicer Petra Carpentier"
+"Nicer Tim McIntire"
+"Nicer Zack Czarnecki"
 "Nippers snipper Ren Sipp" []
 "Nitpicker Kit Prince"
 "No-Bad Abdon"
@@ -42332,6 +42366,12 @@ blurb
 "No-Salt St. Lona" []
 "No-Smut Tom Sun" []
 "No-Swears Rose Swan"
+"Nono Chad Anchondo"
+"Nono Dell O'donnell"
+"Nono Gil Longino"
+"Nono Hal O'Hanlon"
+"Nono Miss Simonson"
+"Nono Tia Antonio"
 "Nosy Al Layson"
 "Nosy Balik Yablonski"
 "Nosy Belt Blystone"
@@ -42433,6 +42473,8 @@ blurb
 "Pest Shen Stephens"
 "Pete Marr, Mr. Repeat-Tamperer" []
 "Petulant [if player is male]Neal Putt[else]Lu Patten[end if]"
+"Phat Enos Stanhope"
+"Phat Olin Oliphant"
 "Phony Jett Pettyjohn"
 "Pill Ace Capelli"
 "Pill Ada Padilla"
@@ -42799,6 +42841,7 @@ blurb
 "Snitch Rosina Christianson"
 "Snitch Serina Christiansen"
 "So-Careful [if player is male]Lucas Fore[else]Flo Surace[end if]"
+"So-Nicer Ericson"
 "So-Right Og Hirst"
 "Sobering Giberson" []
 "Sorehead [if player is male]Dre O'Shea[else]Dee Haros[end if]"
@@ -43478,6 +43521,71 @@ blurb
 "Nag Will Walling." []
 "Nag Yael Galyean"
 "'Name Sy my sane yes-man.'"
+"Neg Al Lange"
+"Neg Ali Eaglin"
+"Neg Almeda Magdalene"
+"Neg Alvin Langevin"
+"Neg Ara Reagan"
+"Neg Art Garten"
+"Neg Astrid Grinstead"
+"Neg Aura Garneau"
+"Neg Bart Bangert"
+"Neg Bo Bogen"
+"Neg Bristol Gilbertson"
+"Neg Carlo Longacre"
+"Neg Dan Degnan"
+"Neg Delisa Deangelis"
+"Neg Dori Doering"
+"Neg Dorian Digennaro"
+"Neg Eda Deegan"
+"Neg Elsa Angeles"
+"Neg Erica Carnegie"
+"Neg Ha Hagen"
+"Neg Ira Gainer"
+"Neg Irma Germain"
+"Neg Irwin Wininger"
+"Neg Karri Kerrigan"
+"Neg Kati Keating"
+"Neg Keli Keeling"
+"Neg Lea Neagle"
+"Neg Les Engels"
+"Neg Lila Gallien"
+"Neg Lisa Gelinas-Sinegal"
+"Neg Lora Lagrone"
+"Neg Lori Olinger"
+"Neg Lorna Lonergan"
+"Neg Lu Leung"
+"Neg Lyda Gladney"
+"Neg Lyla Langley"
+"Neg Man Engman"
+"Neg Marc Mcgrane"
+"Neg Maren Greenman"
+"Neg Mary Germany"
+"Neg Mel Mengel"
+"Neg Miss Messing"
+"Neg Odis Godines"
+"Neg Piper Eppinger"
+"Neg Ray Garney"
+"Neg Reid Deering-Edinger"
+"Neg Rhea Henegar"
+"Neg Rhoda Hagedorn"
+"Neg Rob Borgen-Bogner"
+"Neg Rod Gorden"
+"Neg Rolf Lofgren"
+"Neg Rose Greeson"
+"Neg Roy Gorney"
+"Neg Rubi Breunig"
+"Neg Rubin Bruening"
+"Neg Ruth Gunther"
+"Neg Sam Manges"
+"Neg Seth Hentges"
+"Neg Sid Dinges"
+"Neg Talbert Greenblatt"
+"Neg Terra Gaertner"
+"Neg Twyla Gwaltney"
+"Neg Walter Greenwalt"
+"Neg Will Welling"
+"Neg Yun Nguyen"
 "Negate ol['] Eagleton. Elongate glee a ton." []
 "Next Day: Deny Tax."
 "Nip Matt Pittman."
@@ -45754,6 +45862,7 @@ blurb
 "'Clams? Po['] slop, Mac!' / 'Ol['] scamp!' Mo['] claps."
 "'Class! Now!' / '[a-word-u]-clown.'"
 "'Claudine's uncle said dunces ail.'"
+"'Clean lunch? Null chance!'"
 "'Clearly. Call yer cell, Ray.'" []
 "'Clever rec, Lev!'"
 "'A client! Can I let...?' / 'Clean it.'"
@@ -47249,6 +47358,7 @@ blurb
 "Cider Kid Redic"
 "Cigar Man Ragin['] Mac"
 "Cigar Nut Traci Ung" []
+"Civil Alan Villicana"
 "Clan-Herd Chandler"
 "Clayborn's carbonyls"
 "Clear VIP Percival" []
@@ -50549,6 +50659,7 @@ blurb
 "Great Niles Easterling" []
 "Great Rhea Gearheart"
 "Great Salmon Mastrangelo" []
+"Hair Snob Harbison"
 "The Harley Heatherly"
 "Hero Amy Haymore"
 "Hero Ben Boehner"
@@ -51819,6 +51930,25 @@ blurb
 "Sir Rogan Garrison"
 "Sir Slate Lassiter" []
 "Slick 'Buy' Cybulski"
+"Snob Cleta Constable"
+"Snob Cutler Culbertson"
+"Snob Doty Boydston"
+"Snob Eula Banuelos"
+"Snob Gent Bengtson"
+"Snob Greer Rosenberg-Bergerson"
+"Snob Kori Brookins"
+"Snob Mara Abramson"
+"Snob Mario Ambrosino"
+"Snob Mauer Rosenbaum"
+"Snob McRae Branscome"
+"Snob Ola Bolanos"
+"Snob Rae Seaborn"
+"Snob Ron Bronson"
+"Snob Roni Robinson"
+"Snob Tierra Barrientos"
+"Snob Torre Robertson"
+"Snob Ulmer Rosenblum"
+"Snob Zane Bezanson"
 "Solon Chin Nicholson"
 "Solon Dan Donalson"
 "Solon Felt Tollefson"
@@ -51959,6 +52089,7 @@ blurb
 "Nice Solo Colonies" []
 "Nicest Tonier Intersection"
 "No-Law-Bug Bungalow" []
+"No-Quarters-Torn Square"
 "No-Recluse Enclosure"
 "No-Rube-Bourne"
 "Notice-Us/Cut-Noise Counties"
@@ -52255,6 +52386,7 @@ blurb
 "Out, Man! AMOUNT![r] by Mo Tuan"
 "Outraced, Educator[r], by Ace Tudor" []
 "Overcome-More Cove[r], by Em Coover & Eve Croom"
+"Overmatched? Devote Charm[r], by Ahmed Vector"
 "Pad, Pen and Pep: Append[r], by Dan Epp"
 "Parasite? Aspirate![r] by [if player is male]Asa Tripe[else]Pia Tesar[end if]" []
 "Parkings? Sparking[r], by [if player is male]Kip Garns[else]Kris Pang[end if]"
@@ -53956,6 +54088,26 @@ blurb
 "Tran 'Ouch' Cauthorn"
 "Tran 'Pow' Prowant"
 "Trey 'Blam' Lamberty" []
+"Trim Agnes Stgermain"
+"Trim Alline Martinelli"
+"Trim Ana Martina"
+"Trim Celsa McAlister"
+"Trim Delana Martindale"
+"Trim Diane Demartini"
+"Trim Ella Martelli"
+"Trim Evie Metivier"
+"Trim Haden Meinhardt"
+"Trim Ian Martini"
+"Trim Lea Latimer"
+"Trim Noble Tomberlin"
+"Trim Omer Mortimer"
+"Trim Sean Martines"
+"Trim Soon Ormiston"
+"Trim Stan Stmartin"
+"Trim Tad Dittmar"
+"Trim Ted Dittmer"
+"Trim Tora Marriott"
+"Trim Zane Martinez"
 "Trinh 'Pow' Winthrop" []
 "Trish 'Wham' Whitmarsh"
 "Tse 'Wham' Mathews" []
@@ -56208,6 +56360,7 @@ blurb
 "Kids, rebel! Risk! Bleed!"
 "Kindness-sinks? END!"
 "Know math? WHAM! TONK!"
+"Lawfulness? Fallen wuss!"
 "Legalize the Noisier ioniser!"
 "The libe BELIETH!"
 "Listen to the Cad-Spot Podcast!"

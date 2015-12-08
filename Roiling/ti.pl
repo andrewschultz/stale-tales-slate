@@ -117,10 +117,12 @@ while ($a = <A>)
   if ($first{$aalf} && ($_[0] == 0)) { next; } #skip over 2 first names
   if ($pinged{$q} && $first{$a}) { next; }
   $pinged{$q} = 1;
-  $first{$aalf} = alf($aalf);
+  $first{$aalf} = $a;
   if ($last{$q} || $first{$q})
   {
-  $lasty = $last{$q}; if (!$lasty) { $lasty = $first{$q}; }
+  $lasty = $last{$q};
+  if (!$lasty) { $lasty = $first{$q}; }
+  if ($a =~ /(aline|ange)/) { print "$q to $lasty from $a, but is $b\n"; }
   if ($printCmds)
   {
   print "gq $addStr $a > doccheck.txt\n";

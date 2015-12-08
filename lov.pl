@@ -257,11 +257,11 @@ $totAvg = $totalSize / $sums;
   #printf ("About %.3f anagrams to reach Blue Lacuna ($tlt) and can lose %.3f/gain %.3f & still be in $lbound. Avg = %.3f\n", $toLac, $canlose, $mustgain, $totAvg);
   # this was to calculate pace for 10000
   #$remai = 10000; $td = POSIX::mktime(0,0,0,0,0,115) - time(); $td /= 86400; $remai -= $sums; $remai /= $td; print "$remai per day ($td) for 10k.\n";
-  if ($calcGeom)
-  {
   $prod /= ($#lists+1); $prod = exp($prod);
   $q = ceil($prod); $q /= $prod; $q **= ($#lists + 1); $qq = 1 / ($q - 1);
   $qqq = floor($prod); $qqq = $prod / $qqq; $qqq **= ($#lists + 1);
+  if ($calcGeom)
+  {
   print "Geometric Mean = " . $prod . " ratio = $q lines = $qq above = $qqq\n";
   }
   if ($calcGeomPlus) { $prod1 /= ($#lists+1); $prod1 = exp($prod1); $prodif = $prod1 - $prod; print "Add 1 each: $prod1, difference = $prodif\n"; }
