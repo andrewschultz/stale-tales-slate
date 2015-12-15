@@ -4,6 +4,8 @@ open(A, $anaIdeas) || die ("No ideas file $anaIdeas.");
 
 $runTableSort = 1;
 
+$runTableChomp = 1;
+
 while ($count <= $#ARGV)
 {
   $a = @ARGV[$count];
@@ -38,6 +40,7 @@ addIdeas("sa");
 cleanUpLoneFile();
 
 if ($runTableSort) { `tsh.pl -b`; }
+if ($runTableChomp) { `notab.pl -b`; }
 
 printStats();
 

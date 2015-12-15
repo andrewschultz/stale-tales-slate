@@ -19,6 +19,7 @@ $myProj = "roiling";
 
 #sensible abbreviations
 $proj{"-3"} = "threediopolis";
+$proj{"-3d"} = "threediopolis";
 $proj{"-d"} = "dirk";
 $proj{"-r"} = "roiling";
 $proj{"-s"} = "sa";
