@@ -1,6 +1,7 @@
 table of random books [xxm4] [tob]
 
 table of posse bosses [xxv7]
+"Fondling Finngold"
 
 table of self-help bestsellers [xxv0]
 
@@ -157,8 +158,10 @@ table of camp chants [xxm1]
 table of condo dialogue [xxm2]
 
 table of nerd natter [xxm3]
+"'A broom? Roomba!'"
 
 table of psas [xxm4]
+"DO A THINK? KINDA HOT"
 
 table of red bull taunts [xxr1]
 

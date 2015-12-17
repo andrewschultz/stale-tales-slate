@@ -1,36 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<trizbort>
+<trizbort version="1.5.9.4">
 	<info />
 	<map>
-		<room id="1" name="Maze Room" x="-224" y="-128" w="96" h="64" region="" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="2" name="Maze Room" x="-96" y="-128" w="96" h="64" region="" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="3" name="V" x="32" y="-128" w="96" h="64" region="WayThrough" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF">
-			<objects at="wsw">          End</objects>
+		<room id="1" name="Maze Room" subtitle="" x="-224" y="-128" w="96" h="64" region="Wrong Way" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="2" name="Maze Room" subtitle="" x="-96" y="-128" w="96" h="64" region="Wrong Way" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="3" name="V" subtitle="End" x="32" y="-128" w="96" h="64" region="WayThrough" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="wsw" />
 		</room>
-		<room id="4" name="Maze Room" x="160" y="-128" w="96" h="64" region="" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="5" name="Maze Room" x="288" y="-128" w="96" h="64" region="" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="6" name="Maze Room" x="-224" y="-32" w="96" h="64" region="" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="7" name="Maze Room" x="-96" y="-32" w="96" h="64" region="" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="8" name="U" x="32" y="-32" w="96" h="64" region="WayThrough" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="9" name="T" x="160" y="-32" w="96" h="64" region="WayThrough" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="10" name="Maze Room" x="288" y="-32" w="96" h="64" region="" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="11" name="P" x="-224" y="64" w="96" h="64" region="WayThrough" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="12" name="Q" x="-96" y="64" w="96" h="64" region="WayThrough" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="13" name="R" x="32" y="64" w="96" h="64" region="WayThrough" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="14" name="S" x="160" y="64" w="96" h="64" region="WayThrough" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="15" name="Maze Room" x="288" y="64" w="96" h="64" region="" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="16" name="O" x="-224" y="160" w="96" h="64" region="WayThrough" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="17" name="Maze Room" x="-96" y="160" w="96" h="64" region="NoRegion" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="18" name="Maze Room" x="32" y="160" w="96" h="64" region="" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="19" name="Maze Room" x="160" y="160" w="96" h="64" region="" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="20" name="Maze Room" x="288" y="160" w="96" h="64" region="" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="21" name="N" x="-224" y="256" w="96" h="64" region="WayThrough" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="22" name="M" x="-96" y="256" w="96" h="64" region="WayThrough" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="23" name="L" x="32" y="256" w="96" h="64" region="WayThrough" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF">
-			<objects at="wsw">        Start</objects>
+		<room id="4" name="Maze Room" subtitle="" x="160" y="-128" w="96" h="64" region="Wrong Way" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="5" name="Maze Room" subtitle="" x="288" y="-128" w="96" h="64" region="Wrong Way" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="6" name="Maze Room" subtitle="" x="-224" y="-32" w="96" h="64" region="Wrong Way" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="7" name="Maze Room" subtitle="" x="-96" y="-32" w="96" h="64" region="Wrong Way" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="8" name="U" subtitle="" x="32" y="-32" w="96" h="64" region="WayThrough" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="9" name="T" subtitle="" x="160" y="-32" w="96" h="64" region="WayThrough" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="10" name="Maze Room" subtitle="" x="288" y="-32" w="96" h="64" region="Wrong Way" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="11" name="P" subtitle="" x="-224" y="64" w="96" h="64" region="WayThrough" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="12" name="Q" subtitle="" x="-96" y="64" w="96" h="64" region="WayThrough" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="13" name="R" subtitle="" x="32" y="64" w="96" h="64" region="WayThrough" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="14" name="S" subtitle="" x="160" y="64" w="96" h="64" region="WayThrough" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="15" name="Maze Room" subtitle="" x="288" y="64" w="96" h="64" region="Wrong Way" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="16" name="O" subtitle="" x="-224" y="160" w="96" h="64" region="WayThrough" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="17" name="Maze Room" subtitle="" x="-96" y="160" w="96" h="64" region="Wrong Way" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="18" name="Maze Room" subtitle="" x="32" y="160" w="96" h="64" region="Wrong Way" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="19" name="Maze Room" subtitle="" x="160" y="160" w="96" h="64" region="Wrong Way" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="20" name="Maze Room" subtitle="" x="288" y="160" w="96" h="64" region="Wrong Way" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="21" name="N" subtitle="" x="-224" y="256" w="96" h="64" region="WayThrough" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="22" name="M" subtitle="" x="-96" y="256" w="96" h="64" region="WayThrough" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="23" name="L" subtitle="Start" x="32" y="256" w="96" h="64" region="WayThrough" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" isStartRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="wsw" />
 		</room>
-		<room id="24" name="Maze Room" x="160" y="256" w="96" h="64" region="" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
-		<room id="25" name="Maze Room" x="288" y="256" w="96" h="64" region="" description="" roomFill="#FFFFFF" secondFill="#FFFFFF" secondFillLocation="Bottom" roomBorder="#FFFFFF" roomLargeText="#FFFFFF" roomSmallText="#FFFFFF" />
+		<room id="24" name="Maze Room" subtitle="" x="160" y="256" w="96" h="64" region="Wrong Way" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="25" name="Maze Room" subtitle="" x="288" y="256" w="96" h="64" region="Wrong Way" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="26">
 			<dock index="0" id="23" port="w" />
 			<dock index="1" id="22" port="e" />
@@ -127,6 +127,13 @@
 			<dock index="0" id="12" port="s" />
 			<dock index="1" id="17" port="n" />
 		</line>
+		<room id="48" name="Grey Gyre" subtitle="" x="32" y="384" w="96" h="64" region="NoRegion" handDrawn="no" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="None" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="wsw" />
+		</room>
+		<line id="51">
+			<dock index="0" id="23" port="s" />
+			<dock index="1" id="48" port="n" />
+		</line>
 	</map>
 	<settings>
 		<colors>
@@ -140,15 +147,17 @@
 			<smallText>MidnightBlue</smallText>
 			<lineText>MidnightBlue</lineText>
 			<grid>#F5F5F5</grid>
+			<startRoom>Yellow</startRoom>
 		</colors>
 		<regions>
-			<NoRegion TextColor="Black">White</NoRegion>
-			<WayThrough TextColor="White">Green</WayThrough>
+			<NoRegion Name="NoRegion" TextColor="Black">White</NoRegion>
+			<WayThrough Name="WayThrough" TextColor="White">Green</WayThrough>
+			<Wrong____Way Name="Wrong Way" TextColor="Black">Red</Wrong____Way>
 		</regions>
 		<fonts>
-			<room size="13">Comic Sans MS</room>
-			<object size="11">Comic Sans MS</object>
-			<line size="9">Comic Sans MS</line>
+			<room size="11.25">Microsoft Sans Serif</room>
+			<object size="10">Arial MS</object>
+			<line size="8">Arial MS</line>
 		</fonts>
 		<grid>
 			<snapTo>yes</snapTo>
@@ -167,11 +176,17 @@
 			<objectListOffset>4</objectListOffset>
 			<connectionStalkLength>32</connectionStalkLength>
 			<preferredDistanceBetweenRooms>64</preferredDistanceBetweenRooms>
+			<defaultRoomName>Cave</defaultRoomName>
 		</rooms>
 		<ui>
 			<handleSize>12</handleSize>
 			<snapToElementSize>16</snapToElementSize>
 		</ui>
+		<margins>
+			<documentSpecific>yes</documentSpecific>
+			<horizontal>96</horizontal>
+			<vertical>96</vertical>
+		</margins>
 		<keypadNavigation>
 			<creationModifier>control</creationModifier>
 			<unexploredModifier>alt</unexploredModifier>
