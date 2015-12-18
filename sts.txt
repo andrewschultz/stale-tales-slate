@@ -1,7 +1,6 @@
 table of random books [xxm4] [tob]
 
 table of posse bosses [xxv7]
-"Fondling Finngold"
 
 table of self-help bestsellers [xxv0]
 
@@ -48,6 +47,7 @@ table of elmo emo [xxm5]
 table of lame computer games [xxm6]
 
 table of lame movies [xxm7]
+"Felix's Elf Six"
 
 table of lame talk shows [xxm8]
 
@@ -158,10 +158,8 @@ table of camp chants [xxm1]
 table of condo dialogue [xxm2]
 
 table of nerd natter [xxm3]
-"'A broom? Roomba!'"
 
 table of psas [xxm4]
-"DO A THINK? KINDA HOT"
 
 table of red bull taunts [xxr1]
 

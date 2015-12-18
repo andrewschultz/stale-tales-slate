@@ -52,8 +52,10 @@ printStats();
 
 sub addIdeas
 {
-  $storyFile = "c:\\games\\inform\\$_[0].inform\\Source\\story.ni";
-  $addedFile = "c:\\games\\inform\\$_[0].inform\\Source\\story.add";
+  #$storyFile = "c:\\games\\inform\\$_[0].inform\\Source\\story.ni";
+  #$addedFile = "c:\\games\\inform\\$_[0].inform\\Source\\story.add";
+  $storyFile = "c:\\Program Files (x86)\\Inform 7\\Inform7\\Extensions\\Andrew Schultz\\$_[0] Random Text.i7x";
+  $addedFile = "c:\\Program Files (x86)\\Inform 7\\Inform7\\Extensions\\Andrew Schultz\\temp.i7x";
 
   if ($justPrintCmds) { print "copy $addedFile $storyFile\n"; return; }
 

@@ -1,12 +1,12 @@
 use Cwd;
 
 $fileName = "story.ni";
-$outFileName = "story.nu";
+$outFileName = "c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/temp.i7x";
 
 $dupes = 0;
 
-$s = "c:/games/inform/sa.inform/Source";
-$r = "c:/games/inform/roiling.inform/Source";
+$s = "sa";
+$r = "roiling";
 
 while ($count <= $#ARGV)
 {
@@ -49,7 +49,7 @@ sub alphSource
 
 print "Alphabetizing $_[0].\n";
 
-
+$fileName = fileOf($_[0]);
 
 $findy{lc("$_[0]/story.ni")} = 1; #print "Adding $_[0] to findy.\n";
 
@@ -59,9 +59,6 @@ my $thisDir = lc($_[0]);
 
 $short = $thisDir;
 $short =~ s/\.inform.*//g; $short =~ s/.*[\\\/]//g;
-
-my $fileName = "$thisDir/$fileName";
-my $outFileName = "$thisDir/$outFileName";
 
 if (! -f "$fileName") { die("No $fileName, bailing."); }
 
@@ -114,6 +111,12 @@ sub postProcess
   my $updateFound = 0;
   my $outString = $thisOutString = "";
   my $quoteWarn = 0;
+  my $modFile = fileOf($_[0]);
+  my $modFileShort = $modFile; $modFileShort =~ s/.*[\\\/]//g;
+  #my $outFileName = "$_[0].bak";
+  my $outFileName = "c:\\Program Files (x86)\\Inform 7\\Inform7\\Extensions\\Andrew Schultz\\temp.i7x";
+
+  
 if (!$dontcopy)
 {
   print "Copying .nu to .ni\n";
@@ -137,7 +140,7 @@ if (!$dontcopy)
   @localtime = localtime(time);
   $dateForm = sprintf("%4d-%02d-%02d-%02d-%02d-%02d",
   @localtime[5]+1900, @localtime[4]+1, @localtime[3], @localtime[2], @localtime[1], @localtime[0]);
-  $thisOutString = "$_[0]/story.ni," . (-s "$_[0]/story.ni") . ",$dupes,$dateForm\n";
+  $thisOutString = "$modFileShort," . (-s "$modFile") . ",$dupes,$dateForm\n";
   $outString .= $thisOutString;
 
   print "Now:\n$outString";
@@ -146,7 +149,7 @@ if (!$dontcopy)
   open(B, ">c:/games/inform/tsh.txt");
   print B $outString;
   close(B);
-  $cmd = "copy $thisDir/$outFileName $thisDir/$fileName";
+  $cmd = "copy \"$outFileName\" \"$modFile\"";
   $cmd =~ s/\//\\/g;
   #print "$cmd\n";
   if (!$seriouslyTesting) { `$cmd`; print "Copying over $outFileName $fileName.\n$cmd\n"; } else { print "Testing means I didn't copy.\n"; exit; }
@@ -233,6 +236,15 @@ sub lch
   $temp =~ s/^\"//g; $temp =~ s/\".*//g;
   $temp =~ s/-/ /g; $temp =~ s/[\.\?\!]//g; $temp =~ s/,//g; $temp =~ s/\'$//g;
   return $temp;
+}
+
+#######################################
+#converts dir prefix to header file
+#
+sub fileOf
+{
+  #return "c:/games/inform/$_[0].inform/Source"; 
+  return "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] Random Text.i7x";
 }
 
 sub usage

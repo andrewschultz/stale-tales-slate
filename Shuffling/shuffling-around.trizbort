@@ -4,6 +4,7 @@
 		<title>Shuffling Around</title>
 		<author>Andrew Schultz (Ned Yompus)</author>
 		<description>Map for my IFComp 2012 entry</description>
+		<history>This is for release 5 of the game. This test file was also used to test shuffling around (ha! Ha!) I7 export code in Trizbort.</history>
 	</info>
 	<map>
 		<room id="1" name="Self-ID Fields" subtitle="" x="-288" y="0" w="96" h="64" region="Forest" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">

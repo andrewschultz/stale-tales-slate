@@ -14,6 +14,9 @@ $newClip = Win32::Clipboard::new();
 $clip = $newClip->GetText;
 chomp($clip);
 
+$inExt{"roiling"} = 1;
+$inExt{"sa"} = 1;
+
 #globals here. Maybe move them to init function?
 $genderChars = 34; #34 chars for [if male][else]
 $downup = 1;
@@ -22,8 +25,7 @@ $gender = 0; # do we count gender ifdefs?
 #this determines which first digits should be shown
 @doable = (0, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
-$defDir = "c:/games/inform/roiling.inform/source";
-$fileName = "story.ni";
+$defLook = "roiling";
 
 if ($clip !~ /^\"/) { $clip = "\"$clip\", "; }
 
@@ -55,9 +57,9 @@ while (@ARGV[$count])
   /^-e$/i && do { $expected = 2; $count++; next; }; #show expected Benford-values
   /^-eh$/i && do { $expected = 1; $count++; next; }; #show expected Benford-half-values
   /^-rv/i && do { $warning .= "RV deprecated, use DU/UD instead.\n"; $count++; next; }; #deprecated option
-  /^-?s$/i && do { @dirs = (@dirs, "c:/games/inform/sa.inform/source/story.ni"); $count++; next; }; # SA
-  /^-?r$/i && do { @dirs = (@dirs, "c:/games/inform/roiling.inform/source/story.ni"); $count++; next; }; # ARO
-  /^-b$/i && do { @dirs = (@dirs, "c:/games/inform/sa.inform/source/story.ni", "c:/games/inform/roiling.inform/source/story.ni"); $count++; next; }; #both Stale Tales Slate
+  /^-?s$/i && do { @dirs = (@dirs, "sa"); $count++; next; }; # SA
+  /^-?r$/i && do { @dirs = (@dirs, "roiling"); $count++; next; }; # ARO
+  /^-b$/i && do { @dirs = (@dirs, "sa", "roiling"); $count++; next; }; #both Stale Tales Slate
   /^-\?$/i && do { usage(); exit; };
   print "Bad argument $a in position $count.\n"; usage(); exit;
   }
@@ -68,7 +70,7 @@ while (@ARGV[$count])
     if (-f "$fileName") { @dirs = ("$fileName"); if (getcwd() =~ /(sa|roiling)\.inform/) { $printBytes = 1; } }
 	else
 	{
-	@dirs = ("c:/games/inform/roiling.inform/source/story.ni");
+	@dirs = ("roiling");
 	}
   }
 
@@ -79,13 +81,17 @@ for $myStory (@dirs) { findAna($myStory); }
 sub findAna()
 {
 
+my $fileToOpen = "c:/games/inform/$_[0].inform/Source/story.ni";
+
+if ($inExt{$_[0]}) { $fileToOpen = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] Random Text.i7x"; }
+
 $sums = 0;
 $totalSize = 0;
 @digs = ();
 @lists = ();
 #my %lines;
 
-open(A, $_[0]) || die ("No $_[0].");
+open(A, $fileToOpen) || die ("No $fileToOpen.");
 while ($a = <A>)
 {
   if ($a =~ /Array my/) #special case for undos

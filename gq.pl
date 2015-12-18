@@ -65,8 +65,10 @@ processStory("compound");
 }
 elsif ($roiling)
 {
-processStory("sa");
-processStory("roiling");
+processStory("sa", 0);
+processStory("sa", 1);
+processStory("roiling", 0);
+processStory("roiling", 1);
 processNotes("games.otl");
 processNotes("sts.txt");
 #processNotes("lists.otl");
@@ -75,7 +77,7 @@ processNotes("sts.txt");
 sub processNotes
 {
   open(A, "c:/writing/$_[0]") || open(A, "c:/writing/dict/$_[0]") || open(A, "c:/games/inform/roiling.inform/source/$_[0]") || die ("Can't open $_[0] file.");
-  print "For $_[0]:\n"; $foundSomething = 0;
+  print "In notes file $_[0]:\n"; $foundSomething = 0;
   $section = "";
   $lines = 0;
   while ($a = <A>)
@@ -121,7 +123,7 @@ sub cromu
 sub processStory
 {
   $shortName = $_[0];
-  $fileName = "c:/games/inform/$_[0].inform/Source/story.ni";
+  if ($_[1] == 1) { $fileName = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] Random Text.i7x"; } else { $fileName = "c:/games/inform/$_[0].inform/Source/story.ni"; }
   open(A, "$fileName") || die ("No $fileName.");
   $foundSomething = 0;
   $count = 0;
@@ -145,7 +147,8 @@ sub processStory
 		    { print "======================$myHeader\n"; $lastHeader = $myHeader; }
 		}
 		if (isPrintable())
-		{ print "$shortName L$count ";
+		{ if (!$foundSomething) { print "In $fileName:\n"; }
+		print "$shortName L$count ";
 		$totalFind++;
 		  if ($thisTable)
 		  { $tr2 = $tabrow - 2; print "/$tr2"; }
@@ -162,7 +165,7 @@ sub processStory
   }
 
   close(A);
-  if (!$foundSomething) { print "Nothing.\n"; }
+  if (!$foundSomething) { print "Nothing in $fileName.\n"; }
 
 }
 

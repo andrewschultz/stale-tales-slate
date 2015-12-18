@@ -155,9 +155,9 @@
 			<Wrong____Way Name="Wrong Way" TextColor="Black">Red</Wrong____Way>
 		</regions>
 		<fonts>
-			<room size="11.25">Microsoft Sans Serif</room>
-			<object size="10">Arial MS</object>
-			<line size="8">Arial MS</line>
+			<room size="12">Arial</room>
+			<object size="9.75">Arial</object>
+			<line size="8.25">Arial</line>
 		</fonts>
 		<grid>
 			<snapTo>yes</snapTo>
