@@ -20,6 +20,7 @@ book intro
 
 table of job searcher names [xxx]
 blurb
+"Bri-Beth Hibbert"
 "Aaron Orana"
 "Abdul Bauld-Lubda"
 "Abel Beal"
@@ -1346,6 +1347,9 @@ book sortie
  
 table of poem codas [xxi]
 blurb
+"[d-word-u] Men, Add Mad End."
+"Bring sod, songbird. Sob. Grind."
+"Play up a pulpy lap? Yup, lay, pup."
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
 "Act four: fur coat. Our fact."
@@ -2909,6 +2913,7 @@ blurb
 
 table of condo dialogue [xxm2]
 blurb
+"'Going up? Ug, no, pig!'"
 "'Art deco! DO react, redcoat!'"
 "Art ethic. Their chat: chattier, theatric."
 "A badly dressed fellow deplores the skankiness of snakeskins."
@@ -2965,6 +2970,8 @@ blurb
 
 table of nerd natter [xxm3]
 blurb
+"'Stupefy-fest?' / 'Yup!'"
+"'Apply a PayPal app, Aly!'"
 "'Aliterate tail eater!' / 'Retaliate!'"
 "'Any D&D? Dandy?' The nerds laugh."
 "'The APIs ape this!' / 'Ha, spite!'"
@@ -3347,6 +3354,9 @@ book resort
 
 table of red bull taunts [xxr1]
 blurb
+"'MATCH UP? TA, CHUMP!'"
+"'FIE! DROP, PRIDE OF DRIP-FOE!'"
+"'BIG PLANS SLIP. BANG!'"
 "'Ace? I flip: epic fail!'"
 "'Aha! Deft? Fathead!'"
 "'Argument, mega-runt?'"

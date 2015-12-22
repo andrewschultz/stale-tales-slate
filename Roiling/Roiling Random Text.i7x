@@ -915,6 +915,7 @@ blurb
 "'Undoers, resound sounder!'"
 "'Was void! Disavow!'"
 "'Went awry? Aw, new try.'"
+"'Word one: redo NOW!'"
 "'Wrong foot. I now go for it.'"
 "'Yo, retro, men! One more try!'"
 
@@ -3578,6 +3579,7 @@ blurb	fave
 "Upstream Into Permutations Use: Important[r], by [if player is male]Rupe Mattison[else]Simona Pruett[end if]"	true
 "We Call a, Well, Ace[r], by Alec Law"	true
 "Whoa, Heart, What a Hero[r], by Tarah Howe"	true
+"A Wit, Hedged: Dead Weight[r], by Dwight Eade"	false
 "Word Game: Go Ward [']Em[r], by [if player is male]Drew Goma[else]Marge Dow[end if]"	true
 
 table of comedians [xxm4]
@@ -4679,6 +4681,7 @@ blurb
 "Ent Net Ten"
 "Ents Sent: Tens"
 "Epic Rash Parchesi"
+"Erase, Kill, Laser Like"
 "Err, Nag Ranger Garner"
 "Espionage: a Genie's Op"
 "Explo-o-Plex"
@@ -5203,6 +5206,7 @@ blurb
 "Evil Lag Village"
 "Favorites for Evita's"
 "Fearing Fangier Fergina"
+"Felix's Elf Six"
 "Felix's Elf Six"
 "Fiddler Dr. Field"
 "Figure Out: I Go Future"
@@ -7876,6 +7880,7 @@ blurb	prio
 "Adroit Clean Declaration: Radical Note[r], by [if player is male]Tad Naclerio[else]Tracie Dolan[end if]" []
 "African Francia[r], by Cara Fin"
 "Afterlife Felt Afire[r], by Effie Tarl"
+"Aged Crib, Bird Cage[r], by Deb Craig"
 "Ageism Images[r], by Maggie Massie"
 "Ageless Sage Les[r], by Lee Gass" []
 "Ages and Agendas[r], by Dan Gase-Sandage"
@@ -8160,6 +8165,8 @@ blurb	prio
 "A Baneful Moth, Unfathomable[r], by Afton Ambuehl"
 "Bar Me a Berm[r], by Mr. Abe Embar"
 "The Bard Bret Had Breadth[r], by Rad Beth DeBarth"
+"The Bard of Far Hotbed[r], by Beth Foard"
+"The Bard's Breadths[r], by Bert Dash"
 "Barefoot Oaf Berto: Boor Fate[r], by Bao Forte"
 "Barmy Mr. Bay[r], by Byram Mabry"
 "Barnet's Banters[r], by Stan Erb" []
@@ -8302,6 +8309,7 @@ blurb	prio
 "Boing Boing[r], by Gino Gibbon"
 "Bold Euro Blue Door[r], by Lou Brode"
 "Bold Greg Goldberg[r], by Blogger D"
+"Bold Hate, Bad Hotel[r], by Theobald Bhat-Dole"
 "Bold Heat, Theobald[r], by [if player is male]Thad Loeb[else]Beth Aldo[end if]" []
 "Bold Sin So Blind[r], by Lis Bond"
 "Bolder Bro Del Led Rob[r], by Deb Lor"
@@ -8862,6 +8870,7 @@ blurb	prio
 "Do Well, Low-Led Old Lew[r], by Ed Woll"
 "Do Worry, Rory Dow[r], by Roy Word"
 "Doc Beth Botched BodTech[r], by Ted Boch"
+"Doc Tries So Direct[r], by Edric Tso"
 "Documents I Miscounted[r], by Donte Music" []
 "Dodging Ammonia in Dogma[r], by Dominga Mandigo"
 "A Dog is Sad: I Go[r], by Sid Gao"
@@ -9772,6 +9781,7 @@ blurb	prio
 "I, a Soul, Louisa[r], by Ola Sui"
 "I: Agnes Gaines[r], by Gia Sen"
 "I am Grainy, Imaginary[r], by [if player is male]Gary Amini[else]Maria Ying[end if]"
+"I am Hound-Humanoid[r], by Damon Hui"
 "I Aptly Play It[r], by Tal Yip"
 "I, Aviva, Via Avi[r], by Vi Avia"
 "I Ban to Obtain[r], by Bo Tian"
@@ -10263,6 +10273,7 @@ blurb	prio
 "Learn by Blarney[r], by [if player is male]Al Byrne[else]Lyn Baer[end if]"
 "Learn'd Randle Aldner[r], by Darnel Lander"
 "Leased, Sealed[r], by Deedee Sallas"
+"Leashing Healings[r], by Nigel Ash"
 "Lebanon's Neon Labs[r], by Al Benson"
 "Led of Ego? Feel good[r], by Flo Goede" []
 "Lee IX, Exile[r], by Lexie Xiele"
@@ -12356,6 +12367,7 @@ blurb	prio
 "Soured on Underoos, Soon Rude[r], by Don Rouse"
 "South Side Heist Duos: Eh, Studios[r], by Odis Shute"
 "Southbound Soundbooth[r], by Bud Houston"
+"Souvenir: I, Nervous[r], by Vin Rouse"
 "Souvenir: One Virus, I, Nervous[r], by Venus Rio"
 "Space-Time Spite Mace: See Impact[r], by Pete Simac"
 "Spain or Paris? No, a Prison[r], by Soprina Sarpino" []
@@ -12540,6 +12552,7 @@ blurb	prio
 "Taipan Pinata[r], by Pia Tan"[]
 "Take Four: Freak Out![r] by Tor Kaufe"
 "Take Home Meek Oath[r], by [if player is male]Moe Keath[else]Temeka Ho[end if]"
+"Take No Token: A KO Next[r], by Keaton Katone"
 "Take, Own, Know, Eat[r], by Owen Tak"
 "Take Rib, Break It[r], by Kit Baer"
 "Takey Katey, a Tyke[r], by Katt Yeakey"
@@ -14325,6 +14338,7 @@ blurb
 "MILF Film."
 "A Milfy Family--of course, riffing on A Filmy Family."
 "Milky, My Ilk."
+"Mindless Sins-Meld."
 "Miss Ex-Sexism: Mess IX."
 "Miss W. Swims."
 "Mister P Permits: Strip [']Em!"
@@ -14424,6 +14438,7 @@ blurb
 "OK, Want to Wank."
 "Ol['] Chef of Lech."
 "Ol['] Thad's Hot Lads Had Lots."
+"Old Vices: Close Vid."
 "Ole Tart Loretta."
 "Oleg's Ogles." []
 "On I Tug, Outing Guiton."
@@ -17268,6 +17283,7 @@ blurb
 "Vocalizer [if player is male]Levi Zarco[else]Liz Cavero[end if]"
 "Wailer Yen Earlywine"
 "Wan-Mood Woodman"
+"Warnin['] Winnar Arn Win"
 "Warnin['] WINNAR Narwin"
 "Wee Crank Warnecke" []
 "Whiner Coe Icenhower"
@@ -20091,6 +20107,7 @@ blurb
 "'The beach, eh?' / 'Betcha!'"
 "'Beaten? Be neat! Be a TEN!'"
 "'Beauty's easy, but...'"
+"'A beer snob? Bare bones!'"
 "'Beg tent, get bent.'"
 "'Beggin[']? Biggen? N/G gibe!'"
 "'Behave, Eve!' / 'Bah!'"
@@ -20589,6 +20606,7 @@ blurb
 "'iPhone, eh? No IP?'" [p]
 "'IQ? Gun, too? Go! No quit!'"
 "'IQ un-apt? Piquant quip, Nat!'"
+"'Ire task, sir? Take a strike!'"
 "'IRS, sir!'"
 "'Is coy Ben nice, boys?'"
 "'Is CPR PC, sir?'" []
@@ -20662,6 +20680,7 @@ blurb
 "'Looks OK, Sol.'" []
 "'Loonies soil one.'"
 "'Lost dog got sold to Gold's.'"
+"'Lost rarest artless rot? Last resort...'"
 "'Loud toy? You dolt!'" []
 "'Low-bred bowdler!'"
 "'Luci, don't!' / 'I couldn't!'"
@@ -21330,6 +21349,7 @@ blurb
 "[crap-u] Kid Pickard" []
 "[crap-u]-Kind Pinckard"
 "[d-word-u]-Why Wyndham" []
+"[d-word-u]ed Dedman"
 "[dick-u] Elsie Siedlecki"
 "[dick-u] Fern Fendrick"
 "[dick-u] Ian Kincaid" []
@@ -22789,6 +22809,7 @@ blurb
 "Mad Else Ledesma"
 "Mad Erich Demarchi"
 "Mad Ewen Weedman"
+"Mad-Eye [if player is male]Ed Maye[else]Dee May[end if]"
 "Mad Felix Maxfield"
 "Mad Fern Fredman"
 "Mad Gil Migdal" []
@@ -27395,6 +27416,7 @@ blurb
 "Somnolescent Consolements"
 "Son, Ain't No Saint" []
 "Song for No Frogs"
+"Song of No Fogs"
 "Sonless Lessons"
 "Soul Be Un-Nebulous"
 "Soul-Took Lookouts"
@@ -27411,9 +27433,11 @@ blurb
 "Sullenness, Nullnesses"
 "Sunset Sent Us"
 "Suntime Minutes"
+"Swallow All Wows"
 "Team, I'd Made It" []
 "Tearstain Attainers"
 "TGIF Gift"
+"Tha Raw Hat War"
 "Them of Mo['] Heft"
 "Theology Got Holey"
 "There, Miss Hermitess"
