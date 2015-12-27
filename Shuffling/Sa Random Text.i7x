@@ -1347,7 +1347,7 @@ book sortie
  
 table of poem codas [xxi]
 blurb
-"[d-word-u] Men, Add Mad End."
+"****ed Men, Add Mad End."
 "Bring sod, songbird. Sob. Grind."
 "Play up a pulpy lap? Yup, lay, pup."
 "About-face, oaf at cube!"

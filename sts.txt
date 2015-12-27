@@ -1,8 +1,10 @@
 table of random books [xxm4] [tob]
+"I, Mr. Galore Rigmarole[r], by Roger Lima"
 
 table of posse bosses [xxv7]
 
 table of self-help bestsellers [xxv0]
+"Grow Thin Right Now[r], by Gwin Roth"
 
 table of posh dialogue [xxv6]
 
@@ -13,6 +15,7 @@ table of ad slogans [xxm1]
 table of to-sort=========================================
 
 table of cussing rejects [xxg1]
+"Oral grime. Rigmarole."
 
 table of death messages [xxg2]
 
