@@ -86,6 +86,7 @@ book general
 
 table of cussing rejects [xxg1]
 blurb
+"Oral grime. Rigmarole."
 "[if player is male]Mr. Taunt-Tantrum[else]Mrs. Taunt-Tantrums[end if]!"
 "A-ah! Not an oath!"
 "Absolutely lousy bleat!"
@@ -1121,6 +1122,9 @@ book manor
 
 table of ad slogans [xxm1]
 blurb	blare	[random sad ads: the blare field designates whether you have an exclamation point at the end]
+"Ty Rose's Oysters"
+"Savaric Caviars"
+"Lignum Vitae Time-Valuing Vitamin-Glue"
 "[d-t] Saffo Fast Food"
 "[if player is male]Aaron Colt[else]Lora Acton[end if]'s Root Canals" [p]
 "[if player is male]Alec Pino[else]Loni Cape[end if]'s Special on Pecan Oils!"	true [p]
@@ -3584,6 +3588,7 @@ blurb	fave
 
 table of comedians [xxm4]
 blurb
+"Sickhead Dick Ashe"
 "Absurdist Trudi Bass" []
 "Acerbic Ric Cabe"
 "Adrenalin-Riled Erlinda Ladnier-Ireland"
@@ -5471,6 +5476,7 @@ blurb
 
 table of lame talk shows [xxm8]
 blurb
+"Chum Tim Mitchum"
 "[if player is male]Elmo Stark[else]Selma Tork[end if] Talks More"
 "[if player is male]Gene Vest[else]Eve Tseng[end if] Gets Even"
 "[if player is male]Mr. Easy-Smeary[else]Smeary Ms. Raye[end if]"
@@ -7823,6 +7829,26 @@ this-book is a number that varies. this-book is usually 0.
 
 table of random books [xxm4] [tob]
 blurb	prio
+"Prodigal Gold Pair[r], by Gil Prado"
+"I, Slayer of Lies, Foray[r], by Risa Foley"
+"Sneak, New Keen Swan[r], by Wes Kenna"
+"I May Hunt Humanity[r], by Tami Hyun"
+"Bayonets be a Stony Bane's Toy[r], by Toby Sean"
+"Bein['] Less Sensible[r], by Ben Siles"
+"Ahh, Tourist at This Hour[r], by Ruth Oshita"
+"Tigris Rigs It[r], by Si Girt"
+"Hush, Riot This Hour?[r] by Thor Shui"
+"Wise Woman is Mean, Wow[r], by Wei Mawson"
+"Very Old Dry Love[r], by Rod Levy"
+"Wrong Time, Grime Town[r], by Tom Winger"
+"No Hair: Oh, I Ran[r], by Rina Ho-Hirano"
+"Sovereign Son, Grieve[r], by [if player is male]Gino Evers[else]Ines Grove[end if]"
+"Majorities['] Armies: I Jot[r], by Josie Tamir"
+"Tacy Was a Castaway[r], by Wyat Casa"
+"Boy, Barf for Baby[r], by Bob Fray"
+"Dire Howls, Wild Horse[r], by [if player is male]Lewis Hord[else]Dori Welsh[end if]"
+"A Musty, Um, Stay[r], by Stu May"
+"A Wish For Fair Show[r], by Rofi Shaw"
 "[a-b], Russ: ABUSERS[r], by Bess Rau"	0
 "[a-word-u] Zit Zen: Snazziest[r], by Issa Zentz"
 "[d-t] Shed the Odds[r], by Ted Dosh"
@@ -13198,7 +13224,7 @@ blurb	prio
 "We Refill Free Will[r], by Lew Friel"
 "We, Sad as Dew[r], by Dawes Sweda"
 "We Seek Skew[r], by Eskew Weeks"
-"We Shall[r], by Wes Hall"
+"Ah, Swell, We Shall[r], by Wes Hall"
 "We Share Her Awes[r], by Ash Ewer & Wash Ree" []
 "We-So-Mad Meadows[r], by Mo Dawes"
 "We Soak So Weak[r], by [if player is male]Wes Kao[else]Ewa Kos[end if]"
@@ -13673,6 +13699,7 @@ blurb
 
 table of sicko movies [xxs3]
 blurb
+"The Crowds Doth Screw."
 "[a-word-u]-Hump Smash-Up."
 "[a-word-u] Porn Parsons."
 "[d-word-u] Hoes Had Men So Handsome." []
@@ -14938,6 +14965,7 @@ blurb
 
 table of store c competitors [xxs5]
 blurb
+"An Edgy Gay Den"
 "Agony Thus So Naughty"
 "ArtCo IE Erotica" []
 "Brassiere Brasserie"
@@ -21344,6 +21372,8 @@ blurb
 
 table of posse bosses [xxv7]
 blurb
+"Zeroing Ozinger"
+"Grunty Ty Rung"
 "[a-word-u]hat Shasta" []
 "[a-word-u]hole Sal Shoe" []
 "[crap-u] Kid Pickard" []
@@ -26521,6 +26551,9 @@ blurb
 
 table of self-help bestsellers [xxv0]
 blurb
+"Freezing, Grief, Zen[r], by Inez Ferg"
+"Sob-Mire? Be Mo['], Sir[r], by Rob Mies"
+"Grow Thin Right Now[r], by Gwin Roth"
 "[if player is male]Fears, Mr[else]Fear, Mrs[end if]? Torn? TRANSFORMER[r], by Storm Ferran"
 "Able to Be a Lot[r], by Beata Botello"
 "Absolutely All-Best You[r], by [if player is male]Les Baluyot[else]Betsy Ulloa[end if]" []
@@ -28505,6 +28538,8 @@ blurb
 
 table of research topics [xxp5]
 blurb
+"Old Slicer Colliders"
+"Vitner's Inverts"
 "[if player is male]Craig Abel[else]Alica Berg[end if][']s Algebraics"
 "abstrusest substrates"
 "Achilles helicals" []
@@ -31102,6 +31137,7 @@ book otters
 
 table of animal friends [xxt1]
 blurb
+"pal-comrades camelopards"
 "acid-snarl cardinals"
 "an agreeable bear-eagle"
 "an ambient mine-bat"

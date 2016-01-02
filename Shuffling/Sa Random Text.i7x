@@ -20,6 +20,9 @@ book intro
 
 table of job searcher names [xxx]
 blurb
+"Salvatore Verastola"
+"Lysander Darnsley"
+"Janele LeJean"
 "Bri-Beth Hibbert"
 "Aaron Orana"
 "Abdul Bauld-Lubda"
@@ -1198,6 +1201,8 @@ book forest
 
 table of evil locations [xxf]
 blurb
+"Sneak Fords of Darkness"
+"Top-Drawer-Twerp Road"
 "Absorbing-Brains Bog"
 "the AH! Heath"
 "All-Down Lowland"
@@ -1347,6 +1352,13 @@ book sortie
  
 table of poem codas [xxi]
 blurb
+"Shiv free, fish ever feverish."
+"A dodgy odd gay dog day."
+"Fan, shirk his frank shark fin."
+"Near-lit latrine. Real tin!"
+"Pride came. Carpe diem!"
+"Dagger too? Good! Great!"
+"Ply often, lofty pen of plenty!"
 "****ed Men, Add Mad End."
 "Bring sod, songbird. Sob. Grind."
 "Play up a pulpy lap? Yup, lay, pup."
