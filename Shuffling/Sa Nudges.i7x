@@ -153,6 +153,9 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "naughts"	445467118	forest	--	noughts	--	"You [one of]start to get lost in thought, then notice[or]remember[stopping] it's nOughts, not nAughts."
 "zeros"	506726073	forest	--	noughts	--	"They're noughts, not zeros."
 "zeroes"	634532182	forest	--	noughts	--	"They're noughts, not zeroes."
+"naught"	349193152	myreg	--	myrm	--	"[nau-zer-enuf]."
+"naughts"	445467118	myreg	--	myrm	--	"[nau-zer-enuf]."
+"nought"	421357911	myreg	--	myrm	--	"There's more than one nought."
 "turnstile"	788443914	forest	--	turnstile	--	"You don't need to do anything with the turnstile except get through it."
 "sandwich"	397613884	forest	--	sandwich	--	"It would be easier to just pick it apart."
 "canister"	547607653	forest	--	grinder	--	"The canister is too solid[if canister is broken], despite being broken[end if]."
@@ -517,6 +520,9 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 
 book text details
 
+to say nau-zer-enuf:
+	say "The naughts, err, noughts seem zero-y enough to contain an o.";
+
 to say psa-vand:
 	say "Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road"
 
@@ -581,9 +587,6 @@ to say what-b-says:
 
 to say faded-ad:
 	say "The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there"
-
-to say guider-content:
-	say "No, that's not the [i]essence[r] of the thing."
 
 to say guider-content:
 	say "No, that's not the [i]essence[r] of the thing."

@@ -690,9 +690,10 @@ to say post-brk:
 	if resort is solved:
 		say "[paragraph break]";
 		
-to say post-lb:
+[in case I need to use this, it's here]
+[to say post-lb:
 	if resort is solved:
-		say "[line break]";
+		say "[line break]";]
 
 bull-taunt is a number that varies.
 
@@ -3081,12 +3082,6 @@ to say tell-macros:
 	if h-short-told is true:
 		say "ANGLE=AN to see changeable items, GLEAN=GL to see the story ahead."
 
-to say whatever-they-are:
-	if store f is in trips strip:
-		if store i is in trips strip:
-			if store m is in trips strip:
-				say ", though you've found none."
-
 to say how-many-notices:
 	if gateman is in notices section:
 		if getaway is in notices section:
@@ -4798,19 +4793,6 @@ instead of searching:
 		say "It's closed and locked, so you take a look at it.";
 		try examining the noun;
 
-to say vac-lot:
-	say "Just a vacant lot.[no line break]";
-	if all-seen is false:
-		say "[paragraph break]It might take some time to inspect all 26 stores in order. Would you like a general overview?";
-		if the player consents:
-			now all-seen is true;
-			try examining storeall;
-			the rule succeeds;
-		otherwise:
-			say "Ok. You can X STORES again if you change your mind.[run paragraph on]"
-
-all-seen is a truth state that varies. all-seen is usually false.
-
 section stores
 
 to say store-summary:
@@ -5062,6 +5044,10 @@ understand "pictures" and "picture" and "prime minister" as tories when tories a
 
 description of store i is "It has pictures of famous political figures in the window--Winston Churchill, Benjamin Disraeli and that great charmer, Margaret Thatcher[one of] (*)[or][stopping]. You think you remember what party they belonged to. The pictures are big enough to obscure--almost--the outline of a trap door behind them[one of].[paragraph break](*) semantically, too good to pass up. Feel free and welcome to picture it being said sarcastically[or][stopping]."
 
+after examining store i for the first time:
+	say "[one of][i][bracket]NOTE: this is not a political statement on their party.[close bracket][r][line break][or][stopping]";
+	now td is in trips strip;
+
 Margaret Thatcher is part of the Tories. description of Margaret is "Her looks are not important. Okay, the Iron Lady, etc[tory-clue].";
 
 Winston Churchill is part of the Tories. description of Winston Churchill is "His looks are not important. Okay, bulldogish face, cigar, etc[tory-clue].";
@@ -5190,10 +5176,6 @@ does the player mean examining a direction when player is in trips strip: it is 
 check examining a direction in trips strip:
 	if player's command matches the regular expression "\b<a-z>$", case insensitively:
 		try examining the store instead;
-
-to say see-tories:
-	say "[one of][i][bracket]NOTE: this is not a political statement on their party.[close bracket][r][line break][or][stopping]";
-	now td is in trips strip;
 
 td is privately-named scenery in trips strip. printed name of td is "trap door". understand "trap/ door" and "trapdoor" and "place" and "outline" as td.
 
@@ -6038,7 +6020,19 @@ check turning the dial:
 
 initial appearance of the dial is "There's a dial laid in the middle of the room. It is at [numset of the dial] and [if centrifuge-stopped is true]should probably be kept it that way. There's nothing else of note here[one of], so you may wish to explore elsewhere[or][stopping][otherwise]is not spinning with the rest of the room, so you can probably turn it[end if]."
 
-description of dial is "You see EXITS [if numset of dial is 16]N E [otherwise]? ?--you can see two letters, but they're scrolling through the four cardinal directions--[end if]written in the center of its circle. It's currently set to [numset of dial], and you [if numset of dial is 16]want to keep it that way, thank you very much[otherwise]can set it anywhere from 0 to 99[end if]."
+description of dial is "You see EXITS [if numset of dial is 16]N E [otherwise]? ?--you can see two letters, but they're scrolling through the four cardinal directions--[end if]written in the center of its circle. It's currently set to [numset of dial], and you [if numset of dial is 16]want to keep it that way, thank you very much[otherwise]can set it anywhere from 0 to 99[end if][dial-hints]."
+
+to say dial-hints:
+	if numset of dial is 16:
+		the rule succeeds;
+	if odd-dial-hint is false:
+		now odd-dial-hint is true;
+		say ".";
+		the rule succeeds;
+	now odd-dial-hint is false;
+	say "[one of]. Maybe [if dial is examined]you should look at the dial again for a partial hint about the number[otherwise]there is a partial hint to the number on the dial[end if].[or]. You glance over at the dial and briefly wonder what numbers have X's in them.[or]. The dial seems to indicate there are seven letters--one is X, and two are a direction. But you haven't had to go diagonally a lot. That leaves four possibilities.[or]. Where, abbreviated, should the exits point?[or]. The room NEXT IS Easier.[stopping]"
+
+odd-dial-hint is a truth state that varies. odd-dial-hint is usually false.
 
 section dial setting
 
@@ -6125,9 +6119,6 @@ to binary-eval:
 successful-binary-tries is a number that varies. successful-binary-tries is usually 0.
 total-tries is a number that varies. total-tries is usually 0.
 
-to say slowdown:
-	say ", but the room seemed to slow down for a moment as you moved the dial [if numset of dial < number understood]up[otherwise]down"
-
 to decide whether (a - a number) and (b - a number) skip:
 	if a < 16 and b < 16:
 		decide no;
@@ -6149,16 +6140,6 @@ the indefinite article of straw is "some"
 does the player mean giving the straw to the peasant: it is very likely.
 
 description of straw is "Yellowy, rough edges, semi-musty. Just straw."
-
-to say dial-hints:
-	if odd-dial-hint is false:
-		now odd-dial-hint is true;
-		say ".";
-		the rule succeeds;
-	now odd-dial-hint is false;
-	say "[one of]. Maybe [if dial is examined]you should look at the dial again for a partial hint about the number[otherwise]there is a partial hint to the number on the dial[end if].[or]. You glance over at the dial and briefly wonder what numbers have X's in them.[or]. The dial seems to indicate there are seven letters--one is X, and two are a direction. But you haven't had to go diagonally a lot. That leaves four possibilities.[or]. Where, abbreviated, should the exits point?[or]. The room NEXT IS Easier.[stopping]"
-
-odd-dial-hint is a truth state that varies. odd-dial-hint is usually false.
 
 check setting the dial to:
 	say "Try a number instead. Or, if you typed out a number more than twenty, use the digits." instead;
@@ -7975,9 +7956,6 @@ check giving to deadbeat:
 instead of giving cake to dead beat deadbeat:
 	say "'I didn't, like, want the cake, man. I just, like, wanted a symbolic blow against... (insert class-warfare cliche here.) Plus, totally not enough icing.'"
 
-to say corn-vis:
-	say "[one of]. He points to the corn, says 'You've earned it, dude,' and shrugs. Wow, you got promoted from man to dude[or]. He looks over at the corn, motions to pick it up, but gets tired and curses litterbugs in general[stopping]";
-
 instead of showing emitter to deadbeat:
 	try objasking deadbeat about emitter instead;
 
@@ -8268,7 +8246,7 @@ check going south in Cordoned Red Condo:
 		if player does not have dry cake and player does not have keycard:
 			say "A caveat before you vacate: some loot here may be a tool later. [run paragraph on]";
 			try taking the dry cake;
-		say "You migrate, ragtime music in your head. From the south, some camped folks decamp for har-hars and rah-rahs. 'Roaches scare! Ho!'[paragraph break]You're the camp's scamp now, so to speak. I bet you could even take that corn now!";
+		say "You migrate, ragtime music in your head. From the south, some camped folks decamp for har-hars and rah-rahs. 'Roaches scare! Ho!'[paragraph break]You're the camp's scamp now, so to speak. Why, the deadbeat has promoted you from The Man to Dude. I bet you could even take that corn now!";
 		now condo-barred is true;
 
 report taking the dry cake:
@@ -10000,9 +9978,6 @@ Rule for printing a parser error when the latest parser error is didn't understa
 			reject the player's command;
 	say "That's not something you can say, do or see here[if player has the tagged gadget or tagged gadget is visible][warn-inc][end if].";]
 
-to say youlose:
-	end the story;
-
 check going nowhere in Dry Yard:
 	if yard-door is off-stage:
 		say "You wander around a bit, but outside of the shrub and brush, there's nothing. It would be too easy to get totally lost. And it's not like you NEED to get away from the odor." instead;
@@ -10798,9 +10773,6 @@ before asking nerds about:
 	if player has tulip:
 		say "They don't want to be bugged any more. You have what you wanted.";
 
-to say bull-blather:
-	say "[one of]'Do nice? No dice!'[or]'Eat granite, ingrate!' You're not fooled. There's none around.[or]'You are the ANGRIEST of the INGRATES so far!'[or]'They will feel my anger in Germany!'[or]'If a STINKER TINKERS by me: NET RISK!'[or]'You're not courageous! You just have a raucous ego![or]'EVIL? VILE? I just LIVE! And you will not OVERTAKE my TAKEOVER!'[or]'You are but a flea on a leaf!'[or]'The MAN CITES SEMANTICS!'[or]'The NERVE! NEVER!' he yells, with arching chagrin.[at random][line break]His bluster won't get subtler. Probably best to take action instead."
-
 to say riot-trio-blather:
 	say "You're not going to reason with them. Maybe reason about them, though.[no line break]"
 
@@ -10999,9 +10971,12 @@ understand "0s" and "zeros" and "zeroes" as noughts.
 
 description of the noughts is "One look at them makes you feel like solving silly word puzzles, shooting stuff and chewing bubble gum.[paragraph break]There is no bubble gum in this game."
 
-to say nau-nou:
-	if the player's command matches "naughts":
-		say ". You also remember some nonsense about there being two ways to spell naughts/noughts";
+after doing something with noughts:
+	if nau-nou is false and the player's command matches "naughts":
+		say "You also remember some nonsense about there being two ways to spell naughts/noughts.";
+		now nau-nou is true;
+		
+nau-nou is a truth state that varies.
 
 the shotgun is a container. understand "shot/ gun" as shotgun when shotgun is visible.
 
@@ -11032,13 +11007,7 @@ the shades are a plural-named disguise-piece. the elevation of the shades is 2.
 
 understand "shade" and "glasses" as shades when shades are visible.
 
-description of shades is "They're not dark enough to prevent you seeing anything. You suspect they'd fit your face just fine. They also have a small hook between the lens bits[if shades are part of beard]. A fake beard hangs snugly over the stems[end if]."
-
-to say nose-shades:
-	if shades are part of nose:
-		say ", which link the shades with a nose";
-	if shades are part of beard and nose is part of beard:
-		say ", which link the shades with a nose";
+description of shades is "They're not dark enough to prevent you seeing anything. You suspect they'd fit your face just fine. They also have a small hook between the lens bits[if shades are part of the nose] and are attached to a nose[else if shades are part of beard]. A fake beard hangs snugly over the stems[end if]."
 
 part nose-ones
 
@@ -11888,12 +11857,7 @@ to item-warp:
 		now all carried not warpable things are in lalaland;
 		now all worn not warpable things are in lalaland;
 
-[museum muse. Um. Those Extras. Taxers. Tributes I'd distribute]
-
-
-to say is-it-all:
-	if number of solved regions is 3:
-		say ". Don't worry about that last one, if you don't want to. Someone apprentice adventurer can clean it up"
+[??museum muse. Um. Those Extras. Taxers. Tributes I'd distribute]
 
 to reset-regions:
 	repeat through table of lastlocs:
