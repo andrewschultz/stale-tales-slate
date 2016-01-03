@@ -2,12 +2,7 @@
 
 volume 1 - the main program
 
-[instructions for building, if you're curious enough to do so:
-
-Required = test modules available on
-http://code.google.com/p/shuffling-around/downloads/list
-
-or inform7.com if not listed.
+[I don't recommend building, though it is possible. You'll need a 6G version of Flexible windows. Most everything should be in https://github.com/andrewschultz/stale-tales-slate/, but I won't give much help building my own programs. I have trouble enough myself!
 
 Glulx Text Effects.i7x
 Flexible Windows.i7x
@@ -17,16 +12,19 @@ are modified versions.
 You may have some problems with Glulx Text Effects.i7x / Glulx Text Effects - New.i7x naming and getting duplicate tables. If you are getting an already defined table, make sure other extensions all point to one of the two. This is the big hurdle to building. I may need to sort this out or update modules if there are new ones.
 ]
 
-[Given that this source file is on its way to 900000 bytes, I've tried to provide a rough outline as well as places to look to find the tricky bits. The standard method of searching game text in the source will probably get you pretty far, but also, I used some searchies repeatedly when I needed to change something in this game.
+[Given that the total source is over 900000 bytes, I've tried to provide a rough outline as well as places to look to find the tricky bits. The standard method of searching game text in the source will probably get you pretty far, but also, I used some search markers repeatedly when I needed to change something in this game.
+
+Sa Random Text.i7x includes all the random text. It is searchable by xx(f,m,i,r,x) -- x is introductory names, and the others are the store the region is behind.
+
+Sa Nudges.i7x includes all the nudges for good guesses. By good guesses I mean trying objects that can't be anagrammed.
 
 TMC=table of megachatter, where all the random text is forked.
-TON=table of nudges, where a good try is rejected, so the player knows they are on the wrong track.
+TON=table of nudges, where a good try is rejected, so the player knows they are on the wrong track. It's in Sa Nudges.i7x now.
 TOA=table of anagrams, or the big one.
 TOH=table of hint objects
-TOSH=table of specialized help (for specific rejects)
+TOSH=table of specialized help (for specific rejects, e.g. ELCISH for the liches)
 AIP=check if action is procedural
 
-You can also search for various random tables with bracket-xx-(region abbreviation) -- this should go much quicker than in A Roiling Original. But m=metros and r=roster. 3 x's = names.
 ]
 
 book disambig

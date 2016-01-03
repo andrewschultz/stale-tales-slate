@@ -2,7 +2,11 @@
 
 volume browsing and building notes
 
-[This initial section is to try and organize the source code. Of course, with a 2.5 million+ byte file, it's sort of tough to figure where to start. I can't promise that my code is super-readable, but I hope you find it interesting. It's been vetted all the way through, once.
+[This initial section is to try and organize the source code. Of course, with 2.7 million+ bytes of source, it's sort of tough to figure where to start. I can't promise that my code is super-readable, but I hope you find it interesting. It's been vetted all the way through, once.
+
+Your favorite goofy random tables are in Roiling Random Text.i7x.
+
+The nudges are in Roiling Nudges.i7x.
 
 To search for your favorite goofy random tables, use ^blurb with a regular-expression search for editors that allow them, such as notepad++ in Windows, which is well worth a download for other reasons. You can also search for (bracket) then xx(first letter) with g = general (for example, blank command/wait responses) or m=manor (for example, comedians Gunter mentions) or v = gritty dialogue, and so forth. XX alone is a (poorly-named) variable in some places, but searching with the bracket and then XX will cover everything.
 
@@ -11,7 +15,6 @@ The new Inform IDE may allow you to search this way, too. For A Roiling Original
 You can place a bracket before any of the other text chunks below to search. They're ordered in approximate priority I used and how often I searched for them.
 TOA = the table of big point scoring changes, table of anagrams
 TOH = table of hint logic
-TON = nudge for good guesses (note: the subsection for each store has its letter after it e.g. tonw = store w) and TON- is the end.
 TSH = specific help for specific items you have the right anagram for
 TMC = mega-chatter, which logs all the tables I search lists for
 TAF = after-texts, which logs everything said after scanning stuff. Used to help clue the player if something is confusing, whether it's a question mark or vowels/consonants not lining up
@@ -29,7 +32,9 @@ TQT = table of quip texts for GRetta, elMO, ELvira, GUnter. Separated with hyphe
 TCO = table of conversations for GRetta, elMO, ELvira, GUnter. Separated with hyphen
 DMT = dome tables, text from Demo Dome section
 
-VRT = VOLUME RANDOM TEXT BLURB TABLES has the random text.
+The table of nudges should have "towers nudges" and so forth for the various sections.
+
+VRT = VOLUME RANDOM TEXT BLURB TABLES has the random text, though it's now in the new file.
 
 Volumes are divided by region for the most part.
 ]
@@ -427,13 +432,6 @@ to say indic of (reg - a region):
 	if last-loc of reg is unvisited:
 		say " ([reg])"
 
-to say lby: [stupid and awkward looking, but needed to make line breaks only when necessary. Basically, at the end of game, always break. Some megachatter doesn't need a break at the end. All lasties entries have LBY or LBN.]
-	say "[if current action is liliing][paragraph break][else][line break][end if]";
-
-to say lbn:
-	if current action is liliing:
-		say "[paragraph break]";
-
 die-trigger is a number that varies.
 die-to-us is a truth state that varies.
 
@@ -454,11 +452,11 @@ to say randexc:
 		say "[line break]";
 
 [below for if list line breaks don't match up with what's in the game]
-to say post-brk:
+to say post-brk: [unused]
 	if otters is solved:
 		say "[paragraph break]";
 
-to say post-lb:
+to say post-lb: [unused]
 	if otters is solved:
 		say "[line break]";
 
@@ -1220,7 +1218,7 @@ to say his-her:
 to say he-she-c:
 	say "[if player is male]He[else]She[end if]"
 
-to say him-her-c:
+to say him-her-c: [unused]
 	say "[if player is male]Him[else]Her[end if]"
 
 to say his-her-c:
@@ -1463,7 +1461,7 @@ Include (-
 
 chapter charnum
 
-to say character number (N - a number): (- print (char) {N}; -)
+to say character number (N - a number): (- print (char) {N}; -) [unused]
 
 chapter save-present
 
@@ -3018,12 +3016,6 @@ to say maze-before:
 to say maze-later:
 	say "'Oh! He'll drop by later. I hope you don't need his help too much.'"
 
-to say gave-give-curt:
-	if banana is in lalaland or orange is in lalaland or guava is in lalaland or rhubarb is in lalaland:
-		say "gave";
-	else:
-		say "give";
-
 check objasking a warrior about a warrior:
 	if noun is rodney:
 		if second noun is in lalaland:
@@ -3481,7 +3473,7 @@ section quip random useless fun text
 
 [the part-list takes from 5x+1 to 5x+(fi-1)%5 + 1 & is useful for when I want to display a few things at once. The 5 is for when I need 2 short lists.]
 
-to say part-list of (tt - a table-name) and (fi - a number):
+to say part-list of (tt - a table-name) and (fi - a number): [unused]
 	let lonum be fi - (the remainder after dividing fi - 1 by 5);
 	repeat with idx running from lonum to fi:
 		choose row idx in tt;
@@ -5738,9 +5730,6 @@ to say k-and-c:
 to say maze-solve:
 	say "[one of]You don't need to enter the maze to solve it[or]There's a magic word[or]Congratulate yourself before you enter. But nothing pedestrian[or]Note the Yiddish clues if you solve it[or]MAZELTOV[cycling]";
 
-to say red-stump-clue:
-	say "[if location of player is not Burnt Brunt]A good first puzzle is by the red stump.[otherwise][one of]That star is embedded in a crack in the stump. [or]You say dang, but that's a bit too much. You will need to soften your tone. [or]You know the drill--anagram what you need. RATS =~ ?[or]STAR.[cycling][end if]";
-
 to say wash-up:
 	say "[one of]Rand and Leo are a bit upset you beat them, but you can fix that.[no line break][plus][or]They think they're washups.[no line break][plus][or]What could show the washups you meant no harm?[no line break][plus][or]You can talk to the washups for clues of something nice to say.[no line break][plus][or]They're not interested in stuff. Not perfect grammar here, but they're not exactly grammar cops...[no line break][plus][or]Say WHASSUP.[no line break][minus][cycling]"
 
@@ -6266,18 +6255,12 @@ carry out otters-hinting:
 			if player is in perverse preserve:
 				all-say "You've re-summoned all the animals you need to[if number of pre-animal things in preserve is 1], though you can also try to fix the [random visible pre-animal thing][end if].";
 			else:
-				all-say "You've helped all the animals you need to[if number of reflexive animals in wire deck > 0], but you can still try to help the [list of reflexive animals in wire deck][end if].";
+				all-say "You've helped all the animals you need to[if number of reflexive animals in wire deck > 0], but you can still try to help the [random visible reflexive animal][end if].";
 	else if player is in alcoves:
 		all-say "Your destiny awaits west. Hopefully you will have enough allies for the big fight.";
 	else:
 		all-say "There seems to be nothing to do here.";
 	the rule succeeds;
-
-to say to-make-ani:
-	if number of pre-animal things > 0:
-		let MY be a random visible pre-animal thing;
-		choose row with the-from of MY in table of anagrams;
-		say "The [MY] can become a [the-to entry].[line break]";
 
 definition: a thing (called X) is pre-animal:
 	if X is corona or X is nails or X is thrones or X is pines, decide yes;
@@ -6708,9 +6691,6 @@ instead of attacking:
 	if player has lance:
 		say "Wrong enemy for the lance." instead;
 	say "[randbla][line break]" instead;
-
-to say sign-r-or-b:
-	say "[if sign-other is true]black[else]red[end if]";
 
 sign-other is a truth state that varies.
 
@@ -7981,7 +7961,7 @@ carry out retrying:
 		say "Fortunately, [if tokers are not in strip]Nestor didn't see[else]none of the tokers saw[end if] you zap back, or you'd probably be forced to explain things, which would take a while.";
 	the rule succeeds;
 
-to say rs-left:
+to say rs-left: [unused]
 	say "[7 - number of solved regions in words] region[if number of solved regions is 5]s[end if] left";
 
 a thing can be warpable. a thing is usually not warpable.
@@ -8676,13 +8656,6 @@ to say remap-or-unset:
 	else:
 		say "You brave the electrical underpinnings of the perma-amper to create an ampish mishap";
 
-to say all-warriors:
-	repeat with Q running through warriors in trefoil:
-		if Q is Rodney:
-			do nothing;
-		else:
-			say "[printed name of Q in upper case]! ";
-
 to say troend:
 	say "Something about the song reminds you of that townhome in your hometown. O glum mogul! [iced-reigns]. Writing songs is your sort of doing nothing. Fortunately, you're skilled enough in the art of doing nothing to make the switch fairly quickly. Once you have irreversibly adjusted your quit note quotient and signed a short-week worksheet, you reenact gloom you remembered in this conglomerate. Is life I, Self, I? Lies, if...[paragraph break]Your condensed rise to the top of this business business makes you efficient writing songs too. [twiddle of table of songs you could write and 4]The satirical edge you didn't mean to put in is a big hit in Spoiloplis and beyond. Your songs fully restore the spirit of a common man and shred the oligarchs['] rash logic[xtra-help]. And no censorship will enrich sops.[paragraph break]Exhausted, you realize you have no way home. But you meet a fellow called Tristan, startin['] a company called Tin Star Transit. You pay with stolen knick-knacks from your office. The ride's low frills but extremely fast--to the Strip of Profits. So ends your paydirt day trip: poverty to the very top, IOU phear to euphoria."
 
@@ -8768,12 +8741,6 @@ check taking stripey pyrites:
 after fliptoing un-road:
 	now stripey pyrites are in underpass;
 	continue the action;
-
-to say pooh-phooey:
-	if the player's command includes "pooh":
-		say "Maybe you don't get full style points, but you got what you needed";
-	else:
-		say "And you did it with extra panache"
 
 to say get-censer:
 	if the player's command includes "pooh":
@@ -8910,10 +8877,34 @@ volume manor
 book Dusty Study
 
 to say tables-beams:
-	if tables are in study:
-		say "[if tables are in study]tables (the spreadsheety kind) on one wall[else]a way OUT where the tables were[end if], and [if t-b are in study]beams on another wall[else]a way down where those beams were[end if]";
+	if tables are in study or t-b are in study:
+		say ", ";
+		say "[if tables are in study]tables (the spreadsheety kind) on one wall[else]a way OUT where the tables were[end if]";
+		say ", and [if t-b are in study]beams on another wall[else]a way down where those beams were[end if]";
 
-Dusty Study is an innie room in Roman Manor. "[one of]Your study's not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move, [tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if thinko is false and gunter is off-stage]. It's a good place to just THINK[end if][if Gunter is in lalaland]. After your sleep, you remember you built some secret passages[end if][if gunter is in lalaland]. You'll want to take them[else]. You came in through your super-secret side door, and you don't feel like going back out, yet[end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
+Dusty Study is an innie room in Roman Manor. "[one of]Your study's not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if thinko is false and gunter is off-stage]. It's a good place to just THINK[end if][if Gunter is in lalaland]. After your sleep, you remember you built some secret passages[end if][if gunter is in lalaland]. You'll want to take them[else]. You came in through your super-secret side door, and you don't feel like going back out, yet[end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
+
+to determine which number is study-outs:
+	let q be 0;
+	if tables are in lalaland:
+		increment q;
+	if t-b are in lalaland:
+		increment q;
+	if my niche is in lalaland:
+		increment q;
+	decide on q.
+
+after printing the locale description when player is in dusty study and gunter is in lalaland:
+	if tables are in lalaland or t-b is in lalaland or my niche is in lalaland:
+		say "You take stock of your way[unless study-outs is 1]s[end if] out: ";
+		if tables are not visible:
+			say "You could probably go [b]in[r], to the stable, with the tables gone. ";
+		if t-b are in lalaland:
+			say "You also cleared a path [b]down[r] to the basement[end if]. ";
+		if my niche is in lalaland:
+			say "There's [if study-outs > 1]also [end if]a chimney leading [b]up[r]. ";
+		say "[line break]";
+	continue the action;
 
 rule for printing the name of a dark room: say "No light-glint, oh!"
 
@@ -8982,10 +8973,6 @@ instead of doing something with chair:
 			say "You climb on the chair to go up.";
 			try going up instead;
 	say "[if gunter is in lalaland]The chair can't hide an exit out of here[else]It's nice, but you can't do much with it, and you're too antsy to sit in it[end if]."
-
-to say study-blah:
-	if Gunter is in lalaland:
-		say "[if tables are not visible]. You could probably go [b]in[r], to the stable, with the tables gone[otherwise]. Some tables are propped up against a side wall[end if][if t-b is visible]. Some beams on one wall seem worth looking closer at[else]. You also cleared a path [b]down[r] to the basement[end if]"
 
 report taking pedanto-notepad:
 	say "Good choice taking the notepad. It'll help you tame lots that's meta, mate.";
@@ -10531,7 +10518,7 @@ definition: a thing (called candi) is outlinable:
 	if candi is uncluing, no;
 	if candi is visible, yes;
 
-to say outline-invis:
+to say outline-invis: [unused]
 	if number of outlinable things > 0:
 		say "You can also briefly see outlines of [a list of outlinable things]. ";
 
@@ -11291,9 +11278,6 @@ rule for printing a locale paragraph about tokers:
 	now nestor is mentioned;
 	continue the action;
 
-to say smocloud:
-	say "[if lectures is unvisited]can enter that[else]figure you should avoid that[end if]"
-
 to say if-nest:
 	if nestor is visible:
 		say ", your friend Nestor participating fervently"
@@ -11329,9 +11313,6 @@ rule for printing a locale paragraph about nestor:
 	if smoke cloud is visible or tokers are visible:
 		do nothing instead;
 	continue the action;
-
-to say no-stoner:
-	say "";
 
 understand "stoner" as a mistake ("[if nestor is visible]Being a stoner isn't treason. Use his real name.[else][one of]'Hey, man! Don't depersonalize me! Or I'll throw something at you!' You hear from inside Store N.[or]'Like, don't do it again, dude, or I will literally totally throw these empty bottles at you.'[or]The door to Store N opens, and two bottles whizz in your direction but nowhere close. They're bright red, and they appear to be lotions or something.[or]You've teased him enough. You should have enough clues to figure his name now, anyway.[stopping][end if]") when player is in Strip of Profits
 
@@ -11927,7 +11908,7 @@ after scaning scripture picturers:
 understand "indies" as a mistake ("You don't need to worry about art, here.") when scripture picturers is visible.
 
 to say dssd:
-	say "[if sign-other is false]SIN DIE[else]DIE SIN (in red)[end if]"
+	say "[if sign-other is false]SIN DIE (in black)[else]DIE SIN (in red)[end if]"
 
 inwarn is a truth state that varies.
 
@@ -17307,9 +17288,6 @@ instead of doing something with the reward drawer:
 
 understand "redraw" as a mistake ("Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.") when drawer is visible.
 
-to say teach-tortu:
-	say "[if trout is reflexive]if you teach[else]now you taught[end if]"
-
 the raw red reward drawer is scenery in handsome sand home. the reward drawer is a supporter.
 
 check putting on reward drawer:
@@ -20623,13 +20601,6 @@ does the player mean discerning the player: it is likely.
 	try discerning cinders;
 	now player has cinders;]
 
-to say orish of (myl - a list of text):
-	repeat with lelt running from 1 to number of entries in myl:
-		if lelt < number of entries in myl:
-			say "[entry lelt in myl], ";
-		else:
-			say "or [entry lelt in myl]";
-
 to say rand-to-go:
 	let mysc be random reflexive scenery in location of player;
 	repeat through table of anagrams:
@@ -20942,7 +20913,9 @@ carry out playing:
 			abide by the check final region action rule for Elvira;
 			if the rule failed:
 				say "OK." instead;
-			say "As you blow the whistle, you feel a deep vibration on the ground. You hear a cacophony of animal noises in the distance. '[randbla]!' Elvira's voice still lilts as she calls for slayer layers relays. 'Gash, hags! Groupies, uprise! Go!'[paragraph break]'Ahh, get the hag!' you yell. The battle is on![wfak]Elvira cries 'New aid? Naw, die!' then 'To arms! A storm!' at...all the lethal: [twiddle of table of elvira machines and 3]. 'No mischance mechanics on...'[paragraph break]But animals from the fabled Odd Pack Paddock find valence in this enclave: [twiddle of table of animal friends and 5]Even ticks stick to Elvira's monsters and manage to triage a tiger, too. You see her wit wither, writhe, grow whiter. 'Strafe faster! Ye slack lackeys!' She and her creations fall with a prime thud as you triumph in their dump. The fiendish is FINISHED--influential, until...FINALE.";
+			say "As you blow the whistle, you feel a deep vibration on the ground. You hear a cacophony of animal noises in the distance. '[randbla]!' Elvira's voice still lilts as she calls for slayer layers relays. 'Gash, hags! Groupies, uprise! Go!'[paragraph break]'Ahh, get the hag!' you yell. The battle is on!";
+			say "[lee-or-eels][wfak]";
+			say "Elvira cries 'New aid? Naw, die!' then 'To arms! A storm!' at...all the lethal: [twiddle of table of elvira machines and 3]. 'No mischance mechanics on...'[paragraph break]But animals from the fabled Odd Pack Paddock find valence in this enclave: [twiddle of table of animal friends and 5]Even ticks stick to Elvira's monsters and manage to triage a tiger, too. You see her wit wither, writhe, grow whiter. 'Strafe faster! Ye slack lackeys!' She and her creations fall with a prime thud as you triumph in their dump. The fiendish is FINISHED--influential, until...FINALE.";
 			now otters is solved;
 			now last-solved-region is otters;
 			first-status;
@@ -20958,6 +20931,16 @@ carry out playing:
 			say "You don't need to call anyone in this area." instead;
 	say "That doesn't seem like a toy or an instrument." instead;
 	the rule succeeds;
+
+to say lee-or-eels:
+	say "[wfak]";
+	if p-2 is in lalaland:
+		if eels are in lalaland:
+			say "You're surprised to see Mr. Lee and the eels together, 'LEE'S EELS,' alongside--yes, Gretta with animals of her own.";
+		else:
+			say "Some eels tag long behind Mr. Lee. You [if loop pool is visited]don't recognize them[else]look away sheepishly--you didn't convince them[end if], and they glare briefly as if to say, you should've TOLD us about the fun.";
+	else:
+		say "A man tags along behind the eels you rescued. [if bran barn is visited]It's Mr. Lee, whom you couldn't befriend[hat-gone], but he salutes you in half-apology[else]It's Mr. Lee! He salutes you, and he's little more than a spectator, but he smiles at the machine-slaughter he hopes is ahead.";
 
 to clean-for-roving:
 	now roved is true;
@@ -20976,16 +20959,6 @@ to clean-for-roving:
 		say "Moving [list of portals in strip of profits] out of the Strip. They shouldn't be there.";
 		say "[bug-report]";
 		now every portal in strip of profits is in lalaland;
-
-to say lee-or-eels:
-	say "[wfak]";
-	if p-2 is in lalaland:
-		if eels are in lalaland:
-			say "You're surprised to see Mr. Lee and the eels together, 'LEE'S EELS,' alongside--yes, Gretta with animals of her own.";
-		else:
-			say "Some eels tag long behind Mr. Lee. You [if loop pool is visited]don't recognize them[else]look away sheepishly--you didn't convince them[end if], and they glare briefly as if to say, you should've TOLD us about the fun.";
-	else:
-		say "A man tags along behind the eels you rescued. [if bran barn is visited]It's Mr. Lee, whom you couldn't befriend[hat-gone], but he salutes you in half-apology[else]He salutes you, and he's little more than a spectator, but he smiles at the slaughter he hopes is ahead.";
 
 to say hat-gone:
 	say "[if ghoul hat is in lalaland] despite zapping that ghoul hat[else], though his ghoul hat's gone[end if]";
@@ -24016,9 +23989,6 @@ to say qmsp:
 
 a thing can be thruhinted. a thing is usually not thruhinted. [This is to check if we got through hinting]
 
-to say forcethru: [in case we reveal an answer before the end of a hint cycle]
-	now cur-item is thruhinted;
-
 cur-item is a thing that varies.
 
 carry out objhinting (this is the pick object to hint rule) :
@@ -25456,9 +25426,6 @@ to say remaining-actions of (fd - a number): [remaining actions minus FD]
 			say "or [entry mytemp in poshact]";
 		else:
 			say "[entry mytemp in poshact][if mytemp is not number of entries in poshact - 1],[end if] ";
-
-to say comcyc:
-	say "[one of], [or], [or][cycling]";
 
 doublecheat is a truth state that varies.
 
