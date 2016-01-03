@@ -6,7 +6,7 @@ book nudge table
 
 table of nudges [ton]
 this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
-"noentry"	650766775	intro	subsite	--	--	"You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter..." [tonx]
+"noentry"	650766775	intro	subsite	--	--	"You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter..."	[intro nudges]
 "elevator"	681565093	intro	--	subsite	--	"[word-games]."
 "terraces"	646837211	intro	--	subsite	--	"[word-games]."
 "banner"	371551651	intro	--	subsite	--	"[word-games]."
@@ -37,7 +37,7 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "notices"	534448609	intro	notices section	--	--	"[loc-rej]."
 "thickets"	584514019	intro	thickest thickets	--	--	"[loc-rej]."
 "intro"	376686752	intro	--	--	degen-true rule	"[reg-rej]."
-"malls"	270164615	stores	trips strip	--	--	"[say-which]." [tons]
+"malls"	270164615	stores	trips strip	--	--	"[say-which]."	[store nudges]
 "mall"	173890649	stores	trips strip	--	--	"[say-which]."
 "lots"	327550400	stores	trips strip	--	--	"You can manipulate each individual store."
 "lot"	231276434	stores	trips strip	--	--	"[lotmaso]."
@@ -127,7 +127,7 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "thatcher"	515107949	stores	store i	--	--	"[dead-pols]."
 "subway"	452280521	stores	--	store m	--	"[no-store-m]."
 "subwaymap"	600009451	stores	--	store m	--	"[no-store-m]."
-"conifer"	446903324	forest	--	--	degen-true rule	"[no-con]." [tonf]
+"conifer"	446903324	forest	--	--	degen-true rule	"[no-con]."	[forest nudges]
 "conifers"	543177290	forest	--	--	degen-true rule	"[no-con]."
 "rambling"	370319574	forest	--	rambling shout	--	"[guider-content]."
 "whiff"	243239710	forest	--	whiff of stew	--	"[guider-content]."
@@ -153,9 +153,9 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "naughts"	445467118	forest	--	noughts	--	"You [one of]start to get lost in thought, then notice[or]remember[stopping] it's nOughts, not nAughts."
 "zeros"	506726073	forest	--	noughts	--	"They're noughts, not zeros."
 "zeroes"	634532182	forest	--	noughts	--	"They're noughts, not zeroes."
-"naught"	349193152	myreg	--	myrm	--	"[nau-zer-enuf]."
-"naughts"	445467118	myreg	--	myrm	--	"[nau-zer-enuf]."
-"nought"	421357911	myreg	--	myrm	--	"There's more than one nought."
+"naught"	349193152	forest	--	noughts	--	"[nau-zer-enuf]."
+"naughts"	445467118	forest	--	noughts	--	"[nau-zer-enuf]."
+"nought"	421357911	forest	--	noughts	--	"There's more than one nought."
 "turnstile"	788443914	forest	--	turnstile	--	"You don't need to do anything with the turnstile except get through it."
 "sandwich"	397613884	forest	--	sandwich	--	"It would be easier to just pick it apart."
 "canister"	547607653	forest	--	grinder	--	"The canister is too solid[if canister is broken], despite being broken[end if]."
@@ -202,7 +202,7 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "forest"	513381369	forest	rf	--	--	"[loc-rej]."
 "rest"	412513896	forest	rf	--	--	"[loc-rej]."
 "forest"	513381369	forest	--	--	degen-true rule	"[reg-rej]."
-"sortie"	531859319	sortie	--	--	degen-true rule	"[reg-rej]." [toni]
+"sortie"	531859319	sortie	--	--	degen-true rule	"[reg-rej]."	[sortie nudges]
 "sextien"	681664637	sortie	--	--	cent-spin rule	"The spinning seems to slow a bit."
 "exitsnw"	661793301	sortie	--	--	cent-spin rule	"The room seems almost ready to start to slow down. Maybe the exits aren't quite that way."
 "exitssw"	689159759	sortie	--	--	cent-spin rule	"The room seems to spin faster, as if you are totally on the wrong track."
@@ -290,7 +290,7 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "centrifuge"	741172383	sortie	--	--	b4-cent rule	"[loc-rej]."
 "frenetic"	603466874	sortie	--	--	b4-cent rule	"[loc-rej]."
 "aroundden"	574649308	sortie	--	--	af-cent rule	"[loc-rej]."
-"metros"	550941626	metros	--	--	degen-true rule	"[reg-rej]." [tonm]
+"metros"	550941626	metros	--	--	degen-true rule	"[reg-rej]."	[metros nudges]
 "arena"	286413056	metros	--	arena dig	--	"The invite's for an ARENA DIG."
 "dig"	98621637	metros	--	arena dig	--	"The invite's for an ARENA DIG."
 "soggy"	358185199	metros	--	soggy love	--	"It's just garbage."
@@ -411,7 +411,7 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "camp"	166734515	metros	red camp	--	--	"[loc-rej]."
 "yell"	357793039	metros	alley	--	--	"[loc-rej]."
 "condo"	257647336	metros	cordoned	--	--	"[loc-rej]."
-"resort"	572190276	resort	--	--	degen-true rule	"[reg-rej]." [tonr]
+"resort"	572190276	resort	--	--	degen-true rule	"[reg-rej]."	[resort nudges]
 "sand"	188398381	resort	islet	--	--	"[the-sand]."
 "thesand"	456596807	resort	islet	--	--	"[the-sand]."
 "tiles"	425996778	resort	tiles	--	--	"The tiles seem to shift a bit, but not enough."
@@ -453,7 +453,7 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "hotsopt"	569947414	resort	hotspot	--	--	"[loc-rej]."
 "woodland"	423607270	resort	woodland	--	--	"[loc-rej]."
 "roman"	294846859	resort	roman manor	--	--	"You like your manor just fine now. No need to change it. It's just all the EXITS you don't want to worry about."
-"flier"	338451493	--	--	--	see-flier rule	"[if-rifle]." [tong]
+"flier"	338451493	--	--	--	see-flier rule	"[if-rifle]."	[general nudges]
 "tinfoil"	416684530	--	--	info-lit	--	"You can't change paranoid ramblings."
 "tagged"	319332438	--	--	gadget	--	"Bad idea to mess with electronics you don't understand."
 "lemon"	388955186	--	--	gadget	--	"That's just an example, for CERTIFY."
@@ -513,12 +513,13 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "think"	307225849	--	--	--	degen-true rule	"Whenever you just try to too hard to think, things always get jumbled."
 "score"	402762040	--	--	--	degen-true rule	"There's no way to scramble your score. And scoring another point won't help you solve things, anyway."
 "about"	303175125	--	--	--	degen-true rule	"There's no special addition to the 'about' section, but I'm flattered you looked for it."
-"credits"	497541416	--	--	--	degen-true rule	"There's no special addition to the 'credits' section, but I'm flattered you looked for it."
-[the rules/texts below are organized in the order I thought up the nudges above, which is to say, more or less random. But nothing there below is game-critical, or in need of ordering.]
-
-[ton-]
+"credits"	497541416	--	--	--	degen-true rule	"[no-cred-spec]."
+"credit"	401267450	--	--	--	degen-true rule	"[no-cred-spec]."
 
 book text details
+
+to say no-cred-spec:
+	say "There's no special addition to the 'credits' section, but I'm flattered you looked for it"
 
 to say nau-zer-enuf:
 	say "The naughts, err, noughts seem zero-y enough to contain an o.";
@@ -645,11 +646,11 @@ to say no-warpy:
 
 to say dead-pols:
 	say "There's no way to change them, or their legacy. They're all dead now"
-	
+
 to say dead-help:
 	if condo-evac is true:
 		say ". Perhaps you can ask the deadbeat about the lost corn for more help";
-		
+
 to say fix-rail:
 	say "[if controls are in op]You fixed the rail[else]You need to fix the rails electronically[end if]";
 
@@ -704,13 +705,13 @@ this is the see-flier rule:
 	if go rest flier is visible or expo flier is visible or arena dig flier is visible:
 		the rule succeeds;
 	the rule fails;
-	
+
 to say if-rifle:
 	if the player's command includes "rifle":
 		say "Shooting things up is not the answer";
 	else:
 		say "The flier has helpful information"
-		
+
 to say what-for:
 	say "[if notices section is unvisited]You mess around with all the possibilities for a bit[else]You don't want to make your notepad vanish. It might be more useful to take notes on what to change[end if]"
 
@@ -819,103 +820,6 @@ this is the no-d rule:
 	if player is in trodes or player is in fields or player is in s-e-d:
 		the rule succeeds;
 	the rule fails;
-
-this is the no-cause rule:
-	if player is in kitchen:
-		if HOTSAUCE is in kitchen or cathouse is in kitchen:
-			the rule succeeds;
-	the rule fails;
-
-this is the no-thorn rule:
-	if player is in Dry Yard and thorn is in Dry Yard:
-		the rule succeeds;
-	the rule fails;
-
-part anagrams
-
-to say drop-straw:
-	say ", which is too heavy to carry. You drop it";
-	choose row with short of "warts" in table of pad-stuff;
-	if known entry is true:
-		say ". You run a big line through your entry on warts in your dope tan notepad";
-		now known entry is false;
-	move straw to location of the player;
-
-to say trap-check:
-	now tories are in lalaland;
-	if td is visible:
-		say ", collapsing the trap door";
-	otherwise:
-		say ", collapsing a trap door you hadn't noticed otherwise";
-	now td is in lalaland;
-
-to say give-sword:
-	if stickyhanded is true:
-		say "leaps into your hand";
-		now player has the sword;
-	otherwise:
-		say "jumps and slides out of your hand";
-		now sword is in Abyss;
-
-to say which-roar:
-	now noise bag is in lalaland;
-	say "[if beats are visible]loud beats[otherwise]beast's roaring[end if]"
-
-to say process-sandwich:
-	if sandwich is visible:
-		say "[if player has sandwich]You juggle the bread and spam, but neither part falls[else]You decide to pick up the sandwich so the other part doesn't fall[end if] to the floor. ";
-		now sandwich is in lalaland;
-		if the player's command matches the text "beard":
-			now player has spam;
-		if the player's command matches the text "maps":
-			now player has bread;
-
-to say move-toeholds:
-	if toeholds are part of the poles:
-		now toeholds are part of the slope;
-
-to say holds-1:
-	reg-inc;
-	if poles are visible:
-		say "poles";
-		now toeholds are part of the poles;
-	otherwise:
-		say "slope";
-		now toeholds are part of the slope;
-
-to say now-chain:
-	now chain links are in Potshot Hotspot;
-
-to say rope-worn:
-	now player has the ropes;
-
-to say pat-off-stage:
-	now woeful pat is in lalaland;
-
-to say beast-beats:
-	say "[if beast is visible]beats[otherwise]beats";
-
-to say tool-clue:
-	if grips are visible and ropes are visible:
-		say ". The combination of grips and ropes is probably enough to make climbing gear[if tool shed is visible]. You can probably try to mess with the tool shed, but it doesn't seem like you need to[end if]";
-
-to say ropes-grips-lying:
-	if ropes are visible and grips are visible:
-		say ". You probably don't need those tools you made";
-	otherwise if ropes are visible:
-		say ". The ropes won't be necessary";
-	otherwise if grips are visible:
-		say ". The grips won't be necessary";
-
-after fliptoing sheath:
-	now player wears sheath;
-
-to say what-about-gate:
-	say ". [if player has gadget]Not much left to do for you here[otherwise]You got the attics, but other stuff'll be tougher. Have a look in that cabinet, maybe[end if]"
-
-to say check-plur:
-	if player's command does not include "attics":
-		say "(Okay, no need to be pedantic about plurals.) [run paragraph on]";
 
 Sa Nudges ends here.
 

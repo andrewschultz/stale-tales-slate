@@ -2825,8 +2825,21 @@ understand "silver" as a mistake ("The livers are too dull to do anything like t
 to say liv-preef:
 	preef silver;
 
+after fliptoing peasant:
+	now pat is in lalaland;
+	continue the action;
+
 after fliptoing chisel:
 	now spread is in Enclosure;
+	continue the action;
+
+after fliptoing protest:
+	now chain links are in hotspot;
+	continue the action;
+
+after fliptoing slope:
+	if toeholds are part of the poles:
+		now toeholds are part of the slope;
 	continue the action;
 
 check fliptoing panel:
@@ -2907,7 +2920,7 @@ taco	coat	"coat"	"taco"	"Before changing the hot-to-your-tongue taco to a warm-t
 cask	sack	"sack"	--	"The cask retains its color but looks visibly frayed as its wood turns to burlap. The sack it has become collapses in a heap on the floor. You pick it up."	true	170400547
 sack	cask	"cask"	--	"The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright[if straw was in sack]. The straw falls out[end if][if hay was in sack]. The hay falls out[end if]."	true	170400547
 hoses	shoes	"shoes"	"hoses"	"The pair of rubber hoses bends and opens and become a comfortable pair of shoes that swallows your old shoes--you'd forgotten how ratty they were. A few steps show walking's much smoother. So smooth, you forget you're wearing them. And the price is right, too."	false	431988917
-anapest	peasant	"peasant"	"anapest"	"Nothing happens. You worry your magic powers have failed, until a peasant strides out from the edge of the moor, carrying a bale of hay and singing a cheery song about nothing in particular. Distracted, you look over and smile.[paragraph break]'Oh, does THAT resonate with your stone ear?' whines Woeful Pat.[paragraph break]You notice his papers have crumbled (but don't worry, he has PLENTY of written drafts.) He storms off, claiming you will make a perfect arch-villain in his new socially significant blank-verse epic. Or another poor henchman who deserves but one line before a horrible fate--or a mega-rip of an epigram[pat-off-stage]!"	false	481939196	"You're better off changing what the peasant has than what he is."
+anapest	peasant	"peasant"	"anapest"	"Nothing happens. You worry your magic powers have failed, until a peasant strides out from the edge of the moor, carrying a bale of hay and singing a cheery song about nothing in particular. Distracted, you look over and smile.[paragraph break]'Oh, does THAT resonate with your stone ear?' whines Woeful Pat.[paragraph break]You notice his papers have crumbled (but don't worry, he has PLENTY of written drafts.) He storms off, claiming you will make a perfect arch-villain in his new socially significant blank-verse epic. Or another poor henchman who deserves but one line before a horrible fate--or a mega-rip of an epigram!"	false	481939196	"You're better off changing what the peasant has than what he is."
 roadblock	black door	"black door" or "blackdoor"	"roadblock" or "road block"	"Bam! The fissure in the roadblock covers up, and a black door appears where it was. It's light but bulky--you can probably put or push it where it needs to go[if pat is visible]. Woeful Pat shows commendable concentration ignoring all this[else if peasant is visible]. The Peasant cheers in appreciation, momentarily dropping his hay, which he's none too eager to pick up[end if]."	false	401417371
 poem	panel	"panel"	--	"Poof! The paper plane becomes a panel. It's light enough to carry, you suppose[if player has poem or player has panel]. Well, it doesn't cause an immediate hernia[end if]."	false	334181233
 smilies	missile	"missile"	"smilies"	"The smilies seem to waver. But they sever from the verse, grow, and clump together to form a big yellow missile! You reread the poem. You didn't think it would change much without the smilies, but it's snappier now, pointed, warlike--a restrained, plain-language indictment of not just bad poetry but nastiness and elitism in general!"	false	528228725
@@ -2932,13 +2945,83 @@ words	sword	"sword"	"words"	"[if player has sheath]The words go slippery, claimi
 rock	cork	"cork"	"rock"	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143	[start resort flips]
 swing	wings	"wings"	"swing"	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
 sprig	grips	"grips"	"sprig"	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
-spore	ropes	"ropes"	"spore"	"The spore grows more quickly than you could imagine, into a couple of long ropes tied together. You wind one around your waist[rope-worn][tool-clue]."	false	465222414
-poles	slope	"slope"	"poles"	"The poles rumble and slide. You run away, fearing they come crashing down on you--but when they stop, you're a bit disappointed to see they're still at a forty-five degree angle[move-toeholds]."	false	433712450
+spore	ropes	"ropes"	"spore"	"The spore grows more quickly than you could imagine, into a couple of long ropes tied together. You wind one around your waist[tool-clue]."	true	465222414
+poles	slope	"slope"	"poles"	"The poles rumble and slide. You run away, fearing they come crashing down on you--but when they stop, you're a bit disappointed to see they're still at a forty-five degree angle."	false	433712450
 tool shed	toeholds	"toeholds" or "toe holds"	"toolshed" or "tool shed"	"That'll do it! The tool shed crumbles, leaving only the small outcroppings--which somehow fly into the [holds-1].They're plentiful and stable. You could probably climb up now[if poles are visible] if the poles weren't so vertical[end if][ropes-grips-lying]."	false	588020474
-riot	protest	"trio"	"riot"	"Your word seems to have no effect. But that's just because the least enthusiastic people in the back leave first. Others follow--one of them even drops some chain links[now-chain]. And soon, just three people remain. The most energetic and dedicated, of course, but altering that triangle can't be too hard. While it's still a protest, they don't seem fully into it."	false	307779244
+riot	protest	"trio"	"riot"	"Your word seems to have no effect. But that's just because the least enthusiastic people in the back leave first. Others follow--one of them even drops some chain links. And soon, just three people remain. The most energetic and dedicated, of course, but altering that triangle can't be too hard. While it's still a protest, they don't seem fully into it."	false	307779244
 protest	potters	"potters"	"protest" or "riot"	"The trio grows even more lethargic. A fellow in a smock mocks the whole charade before throwing the smock in a corner. He talks with his two friends[if kilns are visible]. Shortly, they see the kilns nearby. They go to work happily[otherwise]. They still aren't happy, though. They'd sort of like something to do that'll help them forget their protesting phase[end if]."	false	671442450
 links	china	"china"	"china"	"The chain, or part of it, bursts into fine china, which rolls away from you. 'Hi, can...?' [if potters are visible]The potters take it immediately--'Hm! Not our thing, but very nice! If only we had something to make pottery with!' [else if protest is visible]The protesters pocket the china interestedly, saying they won't be bribed, but they did seem artsy enough to appreciate the design. [else if riot is visible]The crowd immediately tramples the china, then blames you for causing them to. [end if]Maybe you can do something with the links, instead."	false	172376056
 links	kilns	"kilns"	"links"	"The links burst and swell into luxury kilns[if potters are visible]. 'Ohmigod! Him! Good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Sir, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[otherwise]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337	[end resort flips]
+
+chapter say commands from anagrams
+
+to say beast-beats:
+	say "[if beast is visible]beats[otherwise]beats";
+
+to say check-plur:
+	if player's command does not include "attics":
+		say "(Okay, no need to be pedantic about plurals.) [run paragraph on]";
+
+to say drop-straw:
+	say ", which is too heavy to carry. You drop it";
+	choose row with short of "warts" in table of pad-stuff;
+	if known entry is true:
+		say ". You run a big line through your entry on warts in your dope tan notepad";
+		now known entry is false;
+	move straw to location of the player;
+
+to say give-sword:
+	if stickyhanded is true:
+		say "leaps into your hand";
+		now player has the sword;
+	otherwise:
+		say "jumps and slides out of your hand";
+		now sword is in Abyss;
+
+to say holds-1:
+	reg-inc;
+	if poles are visible:
+		say "poles";
+		now toeholds are part of the poles;
+	otherwise:
+		say "slope";
+		now toeholds are part of the slope;
+
+to say process-sandwich:
+	if sandwich is visible:
+		say "[if player has sandwich]You juggle the bread and spam, but neither part falls[else]You decide to pick up the sandwich so the other part doesn't fall[end if] to the floor. ";
+		now sandwich is in lalaland;
+		if the player's command matches the text "beard":
+			now player has spam;
+		if the player's command matches the text "maps":
+			now player has bread;
+
+to say ropes-grips-lying:
+	if ropes are visible and grips are visible:
+		say ". You probably don't need those tools you made";
+	otherwise if ropes are visible:
+		say ". The ropes won't be necessary";
+	otherwise if grips are visible:
+		say ". The grips won't be necessary";
+
+to say tool-clue:
+	if grips are visible and ropes are visible:
+		say ". The combination of grips and ropes is probably enough to make climbing gear[if tool shed is visible]. You can probably try to mess with the tool shed, but it doesn't seem like you need to[end if]";
+
+to say trap-check:
+	now tories are in lalaland;
+	if td is visible:
+		say ", collapsing the trap door";
+	otherwise:
+		say ", collapsing a trap door you hadn't noticed otherwise";
+	now td is in lalaland;
+
+to say what-about-gate:
+	say ". [if player has gadget]Not much left to do for you here[otherwise]You got the attics, but other stuff'll be tougher. Have a look in that cabinet, maybe[end if]"
+
+to say which-roar:
+	now noise bag is in lalaland;
+	say "[if beats are visible]loud beats[otherwise]beast's roaring[end if]"
 
 book start and notepad
 
@@ -8375,6 +8458,10 @@ stems are part of the heaths. understand "narrow tube" as stems when stems are v
 description of stems is "The stems seem to be forming a narrow tube. It's weird--you can't see anything holding the flowers together."
 
 the sheath is a wearable container.
+
+after fliptoing sheath:
+	now player wears sheath;
+	continue the action;
 
 after taking sheath:
 	say "It's a bit awkward, but fortunately it can hook on to your pants or shorts or whatever you're wearing.";

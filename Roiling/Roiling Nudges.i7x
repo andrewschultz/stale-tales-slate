@@ -6,7 +6,7 @@ book the table itself
 
 table of nudges [ton]
 this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
-"basement"	608585586	manor	Basement	--	--	"[locname]." [start MANOR] [tonm]
+"basement"	608585586	manor	Basement	--	--	"[locname]." [manor nudges]
 "rove"	394647309	manor	--	--	gunter-onstage rule	"That's not a way to sneak around and avoid the knock at the door."
 "meet"	422797389	manor	--	--	is-unbent rule	"[locname-part]."
 "bans"	185788197	manor	--	--	is-unbent rule	"[locname-part]."
@@ -82,7 +82,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "sadsad"	238981746	manor	--	sad ads	--	"[w-twi]."
 "evac"	256164332	manor	Basement	--	--	"The evac-cave is your way out. It'd be a bad idea to change it."
 "manor"	294846859	manor	--	--	degen-true rule	"[not-the-reg]."
-"others"	524148772	stores	--	store h	--	"No--it's a weird place you need to get to, sort of--the rest." [start STORES] [tons]
+"others"	524148772	stores	--	store h	--	"No--it's a weird place you need to get to, sort of--the rest."	[stores nudges]
 "window"	425151566	stores	--	windows	--	"Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new."
 "windows"	521425532	stores	--	windows	--	"Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new."
 "storea"	489054291	stores	--	store a	--	"[no-cand]."
@@ -136,7 +136,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "strip"	411166592	stores	profits	--	--	"[locname]."
 "profits"	512034065	stores	strip of profits	--	--	"[locname]."
 "profit"	415760099	stores	strip of profits	--	--	"[locname]."
-"orcas"	277143749	routes	same mesa	--	--	"[if adobe is visited]No further secrets[else]Hm, it's Oscar'S[end if]." [start ROUTES] [tonu]
+"orcas"	277143749	routes	same mesa	--	--	"[if adobe is visited]No further secrets[else]Hm, it's Oscar'S[end if]."	[routes nudges]
 "dingy"	289888397	routes	same mesa	--	--	"[name-worry]."
 "dwelling"	510897705	routes	same mesa	--	--	"[name-worry]."
 "scripture"	748407896	routes	--	mesa	--	"[picturer-change]."
@@ -236,7 +236,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "clipper"	493874100	routes	cripple clipper	--	--	"[locname]."
 "storeu"	591972280	routes	--	--	degen-true rule	"[not-the-reg]."
 "route"	495698314	routes	--	--	degen-true rule	"[not-the-reg]."
-"spoil"	350899187	troves	--	--	degen-true rule	"[no-spoil]." [start TROVES] [tonv]
+"spoil"	350899187	troves	--	--	degen-true rule	"[no-spoil]." [troves nudges]
 "spoiloplis"	701798374	troves	--	--	degen-true rule	"[no-spoil]."
 "pothole"	552183378	troves	rathole	--	--	"[p-hole]."
 "potholes"	648457344	troves	rathole	--	--	"[p-hole]."
@@ -313,7 +313,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "poverty"	701582538	troves	--	--	degen-true rule	"There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details."
 "trove"	497757327	troves	--	--	degen-true rule	"[not-the-reg]."
 "storev"	594031293	troves	--	--	degen-true rule	"[not-the-reg]."
-"crust"	408819179	presto	--	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food." [start PRESTO] [tonp]
+"crust"	408819179	presto	--	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food."	[presto nudges]
 "plaque"	454785149	presto	--	plaque	--	"It's the maze you need to change, not the plaque."
 "entry"	507506690	presto	--	plaque	--	"It's the maze you need to change, not the plaque."
 "mazeentry"	824545388	presto	--	plaque	--	"It's the maze you need to change, not the plaque."
@@ -452,7 +452,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "shack"	207682846	presto	shack	--	--	"[locname]."
 "hack"	111408880	presto	shack	--	--	"[locname]."
 "storep"	568332432	presto	--	--	degen-true rule	"[not-the-reg]."
-"tine"	344816481	oyster	--	stein	--	"Just one tine doesn't seem up to much." [start OYSTER] [tony]
+"tine"	344816481	oyster	--	stein	--	"Just one tine doesn't seem up to much."	[oyster nudges]
 "troll"	370414076	oyster	hops shop	--	--	"Dealing with just one troll would cause the rest to call you a bully and beat you up. Gotta take [']em all, somehow."
 "recap"	315789274	oyster	hops shop	--	--	"Casper glares at you, as if he knows you're thinking all his recaps are the same. No. You [if recaps are reflexive]need to deal[else]already dealt[end if] with them all."
 "patrons"	511621649	oyster	hops shop	--	--	"[patron]."
@@ -572,7 +572,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "ahut"	247685942	oyster	uaah	--	--	"[locname]."
 "hut"	245498124	oyster	uaah	--	--	"[locname-part]."
 "storey"	609225725	oyster	--	--	degen-true rule	"[not-the-reg]."
-"badlands"	283848032	towers	--	--	degen-true rule	"[bland-sad]."	[start TOWERS] [tonw]
+"badlands"	283848032	towers	--	--	degen-true rule	"[bland-sad]."	[towers nudges]
 "sad"	119490873	towers	--	--	degen-true rule	"[bland-sad]."
 "bland"	164357159	towers	--	--	degen-true rule	"[bland-sad]."
 "curst"	408819179	towers	--	--	degen-true rule	"It's not just that it's curst, it's a PALACE, too."
@@ -756,7 +756,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "cure"	337241304	towers	--	talc spa cure	--	"[focus-castle]."
 "mislit"	407258668	towers	limits	--	--	"[towersloc]."
 "storew"	594801246	towers	--	--	degen-true rule	"[not-the-reg]."
-"ly"	176173091	otters	--	--	degen-true rule	"Yup, that's the idea here in Otters[if inhib is false], even with your powers back[end if]." [start OTTERS] [tont]
+"ly"	176173091	otters	--	--	degen-true rule	"Yup, that's the idea here in Otters[if inhib is false], even with your powers back[end if]."	[otters nudges]
 "bare"	233736635	otters	--	b-b	--	"[adj-needs-ly]?"
 "cinder"	367064940	otters	--	cinders	--	"You'll need to change more than one cinder."
 "bulwark"	425718123	otters	--	bulwark	--	"The whole bulwark? No, you [if inhib is true]couldn't do much with it at full strength[else]can't do much[end if]. [if Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if inhib is true] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to, well, a bulwark."
@@ -827,8 +827,8 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "iq"	129398463	otters	--	medals	--	"[both-medals]."
 "lucky"	353217661	otters	--	medals	--	"[both-medals]."
 "island"	287205066	otters	loop pool	--	--	"Even if you could change it, the way across the loop pool is too treacherous."
-"sea"	226267893	otters	--	sea cube	--	"The whole sea cube."
-"cube"	270336406	otters	--	sea cube	--	"The whole sea cube."
+"sea"	226267893	otters	--	sea cube	--	"[cube-whole]."
+"cube"	270336406	otters	--	sea cube	--	"[cube-whole]."
 "rev"	320294732	otters	--	p-2	--	"The [i]whole[r] picture."
 "howe"	347375758	otters	--	p-2	--	"The [i]whole[r] picture."
 "medal"	268912008	otters	--	medals	--	"It's what the medals say that makes them special."
@@ -891,7 +891,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "preserve"	838970678	otters	perverse preserve	--	--	"[locname]."
 "otter"	493702525	otters	--	--	degen-true rule	"[not-the-reg]."
 "storet"	589976491	otters	--	--	degen-true rule	"[not-the-reg]."
-"pear"	296783689	others	--	spear	--	"[plur-fruit]." [start OTHERS] [tonh]
+"pear"	296783689	others	--	spear	--	"[plur-fruit]." [others nudges]
 "plum"	304460758	others	--	lumps	--	"[plur-fruit]."
 "pager"	329383391	others	--	pagers	--	"[plur-fruit]."
 "lime"	290687947	others	--	slime	--	"[plur-fruit]."
@@ -960,6 +960,8 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "auction"	417662159	others	--	caution	--	"[papay]."
 "banner"	371551651	others	--	caution	--	"[papay]."
 "trader"	424780640	others	scape space	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is in scape]you got what you wanted[else][he-she] might trade that storage box[end if]."
+"art"	190621639	others	--	Art Erd	--	"[1st-name]."
+"tera"	318427748	others	--	Tera Darter	--	"[1st-name]."
 "orange"	391177517	others	--	orange	--	"[if player has orange]You got it, already[else]That doesn't seem sneaky enough to get the orange."
 "plant"	309485142	others	--	pugnacious plant	--	"[plant-no]."
 "red"	234159001	others	scape space	--	--	"[no-art]."
@@ -994,7 +996,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "admit"	235394924	others	gates stage	--	--	"[stad-chg]."
 "other"	427874806	others	--	--	degen-true rule	"[not-the-reg]."
 "storeh"	524148772	others	--	--	degen-true rule	"[not-the-reg]."
-"peek"	390011355	demo dome	peek keep	--	--	"[dome-rm]." [start DEMO DOME]
+"peek"	390011355	demo dome	peek keep	--	--	"[dome-rm]." [demo dome nudges]
 "evoc"	328329091	demo dome	evoc-cove	--	--	"[dome-rm]."
 "hows"	315843615	demo dome	hows show	--	--	"[dome-rm]."
 "perl"	348409710	demo dome	hows show	--	--	"[its-a-museum]."
@@ -1097,6 +1099,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "listen"	494904286	--	--	--	degen-true rule	"Trying to change how you listen gives no intels."
 "about"	303175125	--	--	--	degen-true rule	"The 'about' [dir-cut]."
 "credits"	497541416	--	--	--	degen-true rule	"The 'credits' [dir-cut]."
+"credit"	401267450	--	--	--	degen-true rule	"The 'credits' [dir-cut]."
 "history"	563694761	--	--	--	degen-true rule	"The 'history' [dir-cut]."
 "hush"	275944371	--	--	--	degen-true rule	"[meta-rej]."
 "spaceon"	469999522	--	--	--	degen-true rule	"[meta-rej]."
@@ -1107,23 +1110,19 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "exit"	388677054	--	--	--	degen-true rule	"[meta-rej]."
 "exits"	484951020	--	--	--	degen-true rule	"[meta-rej]."
 
-book table of nudges rules and text
-
-[the rules/texts below are organized in the order I thought up the nudges above, which is to say, more or less random. But nothing there is game-critical enough that it needs to be sorted. I hope.]
-
-[ton-]
+book text details
 
 to say boing-clue:
 	say "[if boing is reflexive]Hmm. It's not the popgun itself that's cracked but the boing mechanism inside[else]The popgun is just fine[end if]"
 
 to say fix-boat-parts:
 	if blaster is off-stage:
-		say "The boat's hull seems okay. It needs some sort of motor, though";
+		say "The boat seems okay, except for not being able to propel itself. Maybe you can help the kid figure that out";
 	else:
 		if blaster is reflexed and turbos are reflexed:
 			say "You fixed what you can of the boat";
 		else if blaster is not reflexed and turbos are not reflexed:
-			say "Hmm. It might be better to fix what the boat runs";
+			say "Hmm. It might be better to fix parts of the boat--the turbos and blaster";
 		else:
 			say "You've fixed part of the boat's mechanical bits. Maybe fix the other, instead of the whole boat, instead"
 
@@ -1132,7 +1131,7 @@ to say picturer-change:
 
 to say board-change:
 	say "It's what's on the board you need[if signboard is reflexed]ed[end if] to fix."
-	
+
 to say ruts-pull:
 	say "The ruts will pull you down if you look too far into them"
 
@@ -1153,13 +1152,6 @@ to say knob-skis:
 
 to say ei2pg:
 	say "It's good to be on anagramming terms with the book's title, but [if Pa Egg Pea is reflexive]maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle[else]your session soaking in the book's 'knowledge' was 'useful' enough[end if]"
-
-to say j-no:
-	say "It's too late to muck with the general design of the boat, ";
-	if turbos are reflexed and blaster is reflexed:
-		say "and they're probably stable enough to take, so you can get across the water.";
-		continue the action;
-	say "but maybe you could tune up the [if turbos are reflexive and blaster is reflexive]blaster or the turbos[else if turbos are reflexive]turbos[else]blaster[end if]"
 
 to say if-no-pad:
 	if player does not have pedanto-notepad:
@@ -1446,9 +1438,6 @@ to say no-lam:
 to say vs-oped:
 	say "You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh"
 
-to say preef-page:
-	preef Pa Egg Pea;
-
 to say chanty:
 	say "The chant doesn't change. Chants are good at that"
 
@@ -1536,9 +1525,6 @@ this is the pas-vis rule:
 	if number of visible hintpastries > 0:
 		the rule succeeds;
 	the rule fails;
-
-to say prevrev:
-	say "Scrambling the guy who left the mess won't work. You need to work with what is here, in the routes, now"
 
 to say scrapap:
 	say "It's what's on the scratch paper that [if scratch is reflexed]was[else]is[end if] important."
@@ -1736,9 +1722,6 @@ to say no-no:
 to say xyzzys:
 	say "A hollow voice booms, 'Lo! Of...'[no line break]"
 
-to say cussy:
-	say "You're not fooling ME. Shame on you"
-
 to say just-letter:
 	say "It's just one letter in the maze. You may want to focus on the whole volt maze."
 
@@ -1773,18 +1756,6 @@ to say slab-score:
 		increment slab-pts;
 	say "[if slab-pts > 5]+++ (tired yet?)[run paragraph on][else][slab-pts][end if]";
 
-slab-pts is a number that varies.
-
-this is the in-median rule:
-	if player is in fro and Gretta is in fro:
-		the rule succeeds;
-	the rule fails;
-
-this is the in-domain rule:
-	if player is in fro and Gretta is not in fro:
-		the rule succeeds;
-	the rule fails;
-
 this is the eelmr rule:
 	if player is in alcoves and Elmer is in alcoves:
 		the rule succeeds;
@@ -1814,11 +1785,6 @@ this is the wise-to-sleep rule:
 		if scratch paper is visible and scratch paper is reflexive:
 			if slept is false:
 				the rule succeeds;
-	the rule fails;
-
-this is the in-med rule:
-	if player is in fro:
-		the rule succeeds;
 	the rule fails;
 
 this is the plains rule:
@@ -1896,11 +1862,6 @@ this is the time-to-debug rule:
 		the rule succeeds;
 	the rule fails.
 
-this is the lamb-blam rule:
-	if lamb is visible and current action is not eating crust:
-		the rule succeeds;
-	the rule fails.
-
 this is the volt-maze-visible rule:
 	if ether is off-stage and player is in Grey Gyre:
 		the rule succeeds;
@@ -1938,13 +1899,17 @@ this is the gun-broken rule:
 		the rule fails;
 	the rule succeeds;
 
-this is the troves-hate rule:
-	if cold is visible:
-		the rule succeeds;
-	the rule fails.
-
 this is the degen-true rule:
 	the rule succeeds.
+
+section support
+
+[these are used elsewhere throughout the nudges file]
+
+slab-pts is a number that varies.
+
+to say cussy:
+	say "You're not fooling ME. Shame on you"
 
 this is the degen-false rule:
 	the rule fails.

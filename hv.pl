@@ -111,8 +111,8 @@ for $q (@x)
 
 $anyFound = 0;
 
-if ($doShuf) { lookFor($hash, "c:/games/inform/sa.inform/Source/story.ni"); }
-if ($doRoil) { lookFor($hash, "c:/games/inform/roiling.inform/Source/story.ni"); }
+if ($doShuf) { lookFor($hash, "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/sa nudges.i7x"); }
+if ($doRoil) { lookFor($hash, "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/roiling nudges.i7x"); }
 
 if (($printIfThere) || ($anyFound == 0)) { print B "\"$this\"\t$hash\t$tabString\t\"some text\"\n"; }
 else { print "Instance found in file, not printing externally. Use -p.\n"; }

@@ -14790,7 +14790,7 @@ blurb
 "Tan Bod: Not Bad."
 "Tania, Anita, Tiana an['] Tia."
 "Tara's a STAR!"
-"A Tarty Show: What a Story.";
+"A Tarty Show: What a Story."
 "Tayra's Astray." []
 "Team Duo Made Out."
 "A Tease At Ease."
