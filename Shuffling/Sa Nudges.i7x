@@ -518,281 +518,40 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 
 book text details
 
-to say no-cred-spec:
-	say "There's no special addition to the 'credits' section, but I'm flattered you looked for it"
-
-to say nau-zer-enuf:
-	say "The naughts, err, noughts seem zero-y enough to contain an o.";
-
-to say psa-vand:
-	say "Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road"
-
-to say kern-push:
-	say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
-
-to say beat-man:
-	say "He hasn't let the MAN change his clothes, and he won't let you"
-
-to say mits-are:
-	say "The mittens are as comfortable as they're going to be"
-
-to say ug-bug:
-	say "Ugh. Too messy. Mentally and physically"
-
-to say woe-all:
-	say "Pat will always be woeful. He sort of likes it that way. Focus on his poetry"
-
-to say to-trio:
-	say "The chefs are all lumped together--a tall trio"
-
-to say vand-art:
-	say "Don't vandalize the art, man"
-
-to say no-store-m:
-	say "No, it's a map of something behind Store M, it looks like."
-
-to say road-sign:
-	say "Hmm...you get the feeling the store itself holds more adventure"
+to say word-games:
+	say "A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave"
 
 to say nope-odor:
 	say "You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor"
 
-to say no-wire:
-	say "Despite the magic you can do, electricity still feels like, well, total magic. Plus you don't want to mess those wires up";
-
-this is the riot-gone rule:
-	if player is in hotspot and riot is in lalaland:
-		the rule succeeds;
-	the rule fails;
-
-to say lotmaso:
-	say "You need to manipulate each store as a store, not a mall or a lot"
-
-to say tack-heap:
-	say "No need to try to turn the stack into a heap. Ho ho ho"
-
 to say com-chor:
 	say "It's a pretty complex chord[if cur-score of intro is 3]. But you don't seem to need to deal with it[else]. Maybe you can work with something simpler[end if]"
 
-to say dir-rej:
-	say "This game usually doesn't require you to mess with cardinal directions";
-
-to say diag-dir-rej:
-	say "This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief";
-
-to say forest-no:
-	say "You can't seem to make anything physical to tell you which direction to go"
-
-to say what-b-says:
-	say "Hm, no, that'd be too abstruse. It's what the button [i]says[r], probably."
-
-to say faded-ad:
-	say "The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there"
-
-to say guider-content:
-	say "No, that's not the [i]essence[r] of the thing."
-
-to say no-con:
-	say "No conifers appear. Maybe you can just use your senses, and it's easier than that"
-
-to say nnww:
-	say "Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more"
-
-to say nerd-nah:
-	say "The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds"
-
-this is the know-point rule:
-	if pointcue is true:
-		the rule succeeds;
-	the rule fails.
-
-this is the spread-drapes rule:
-	if player is in Enclosure:
-		if drapes are in Enclosure or spread is in Enclosure:
-			the rule succeeds;
-	the rule fails;
-
-this is the af-cent rule:
-	if player is in Centrifuge and centrifuge-stopped is true:
-		the rule succeeds;
-	the rule fails;
-
-this is the b4-cent rule:
-	if player is in Centrifuge and centrifuge-stopped is false:
-		the rule succeeds;
-	the rule fails;
-
-to say drivwy:
-	say "[if dry cake is in condo]You should probably just walk in and see what's there[else]You've caused enough trouble there[end if]"
-
-to say ded-chg:
-	say "He may mumble about change, but he's amazingly resistant to change, himself"
-
-this is the past-strip rule:
-	if self-id fields is visited or underside is visited or Centrifuge is visited:
-		decide yes;
-	decide no;
-
-to say the-sand:
-	say "The sand is just--well, sand. It won't help you get off the island";
-
-this is the past-intro rule:
-	if notices section is visited:
-		the rule succeeds;
-	the rule fails;
-
-to say no-warpy:
-	say "You can't change Old Warpy. You have to just trust it";
-
-to say dead-pols:
-	say "There's no way to change them, or their legacy. They're all dead now"
-
-to say dead-help:
-	if condo-evac is true:
-		say ". Perhaps you can ask the deadbeat about the lost corn for more help";
-
-to say fix-rail:
-	say "[if controls are in op]You fixed the rail[else]You need to fix the rails electronically[end if]";
-
-this is the panel-in-silo rule:
-	if player is in moor and panel is part of the silo:
-		the rule succeeds;
-	the rule fails;
-
-to say peas-poe:
-	say "The peasant's poem is about as good as it can be, for what it is. It's better than Pat's"
-
-to say pat-poe:
-	say "Pat won't react kindly to modifications of his poem"
-
-to say titenot:
-	say "It's a bit too thick to mess with. Both because of the consonants, and, well...you don't need to remove the knot, anyway";
-
-to say simple-riot:
-	say "Perhaps it's best to keep it simple and cut down the riot"
-
-to say marsh-lake:
-	say "The marsh and lake are symptoms of--whatever evil is beyond here"
-
-to say no-pen:
-	say "If you changed the pen, you'd have nothing to write with";
-
-to say no-hot:
-	say "You can't restore the hotel[if drainage is visible] or even scrub off what's written on it[end if]";
-
-to say ennui:
-	say "You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the [i]exits[r] here";
-
-to say label-no:
-	say "The tall trio is probably what you want to change, but the label may have information";
-
-to say no-un:
-	say "You can't do much to change the undead. You're not THAT powerful. Maybe specific undead";
-
-to say stat-at:
-	say "[if static is visible]The static crackles[else]The attics shake slightly[end if]."
-
-to say no-2:
-	say "You can't really second-guess the help on the prep paper";
-
-to say gad-part:
-	say "You don't need to mess with the gadget or any part of it. It's probably better not to try"
+to say loc-rej:
+	say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway"
 
 to say thorn-inst:
 	say "[if thorn is visible]No, you dealt with the thorn--now to deal with the space past it[else]Find a way to deal with the thorn. It seems to be blocking a way out. The other vegetation isn't[end if]"
 
-this is the see-flier rule:
-	if go rest flier is visible or expo flier is visible or arena dig flier is visible:
-		the rule succeeds;
-	the rule fails;
+to say no-warpy:
+	say "You can't change Old Warpy. You have to just trust it";
 
-to say if-rifle:
-	if the player's command includes "rifle":
-		say "Shooting things up is not the answer";
-	else:
-		say "The flier has helpful information"
-
-to say what-for:
-	say "[if notices section is unvisited]You mess around with all the possibilities for a bit[else]You don't want to make your notepad vanish. It might be more useful to take notes on what to change[end if]"
-
-to say word-games:
-	say "A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave"
+to say stat-at:
+	say "[if static is visible]The static crackles[else]The attics shake slightly[end if]."
 
 to say reg-rej:
 	say "You don't want to change a region while you're in it"
 
-this is the got-plane rule:
-	if the player has the poem and the poem is folded:
-		the rule succeeds;
-	the rule fails;
+this is the degen-true rule:
+	the rule succeeds;
 
-to say best-not-defile:
-	say "Best not defile this shrine. Or even try to. The oils from the spout are gift enough";
-
-to say chem-bad:
-	say "Bad idea to mess with chemical compounds you don't understand"
-
-to say hway-hint:
-	say "The scraped wall doesn't respond or come any closer to being a hallway";
-
-this is the has-lube rule:
-	if the player has the blue lube:
-		the rule succeeds;
-	the rule fails;
-
-to say no-ketch:
-	say "It [if night thing is in lalaland]isn't useful now with the night thing gone[else]doesn't bend, but maybe it's a clue what the night thing likes to eat[end if]"
-
-this is the see-meats rule:
-	if chicken is visible or Spam is visible or cow is visible or player is in s-e-d:
-		the rule succeeds;
-	the rule fails;
-
-to say spec-meat:
-	say "You'll need to be more specific about the meat to poke at"
-
-to say bothlivers:
-	say "The one liver seems inactive by itself"
-
-to say perf-brand:
-	say "It's the full name brand that really catches your eye"
-
-to say ck-p:
-	say "It's not a cake, and it's not quite a pan--it's a cake pan";
-
-to say but-but:
-	say "It's the buttons['] purposes that need[if steer button is visible and shoot button is visible]ed[end if] changing";
-
-to say a-nother:
-	say "a[if Hotel is visited]nother[end if]";
-
-this is the angst rule:
-	if player has emitter and emitter is angstgnatted:
-		the rule succeeds;
-	the rule fails;
-
-this is the cent-spin rule:
-	if the player is in Centrifuge and centrifuge-stopped is false:
-		the rule succeeds;
-	the rule fails;
-
-to say froz-ha-ha:
-	say "The scenery here's mostly frozen that way. Ha ha ha[if vowels are visible]. Except those vowels[end if]";
+section store nudges
 
 to say say-which:
 	say "You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X"
 
-to say in-sort of (q - a thing):
-	say "[if q is in lalaland]You already got [the q] from there[else]It doesn't rattle, but [the q] seem to[end if]"
-
-to say cussy:
-	say "You're not fooling ME. Shame on you!";
-
-to say xyzzys:
-	say "A hollow voice booms, 'Lo! Of...'[no line break]"
-
-to say loc-rej:
-	say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway"
+to say lotmaso:
+	say "You need to manipulate each store as a store, not a mall or a lot"
 
 to say no-cand:
 	say "Nothing happens. You'd think that store could be a good candidate to change, but it isn't"
@@ -803,23 +562,276 @@ to say no-way:
 to say no-mb:
 	say "Nothing happens. Maybe if Yorpwald were in even more danger, it would";
 
-this is the no-beats rule:
-	if player is in anti-cool or player is in red condo:
+to say road-sign:
+	say "Hmm...you get the feeling the store itself holds more adventure"
+
+to say dead-pols:
+	say "There's no way to change them, or their legacy. They're all dead now"
+
+to say no-store-m:
+	say "No, it's a map of something behind Store M, it looks like."
+
+section forest nudges
+
+to say no-con:
+	say "No conifers appear. Maybe you can just use your senses, and it's easier than that"
+
+to say guider-content:
+	say "No, that's not the [i]essence[r] of the thing."
+
+to say forest-no:
+	say "You can't seem to make anything physical to tell you which direction to go"
+
+to say no-un:
+	say "You can't do much to change the undead. You're not THAT powerful. Maybe specific undead";
+
+to say in-sort of (q - a thing):
+	say "[if q is in lalaland]You already got [the q] from there[else]It doesn't rattle, but [the q] seem to[end if]"
+
+to say tack-heap:
+	say "No need to try to turn the stack into a heap. Ho ho ho"
+
+to say vand-art:
+	say "Don't vandalize the art, man"
+
+to say nau-zer-enuf:
+	say "The naughts, err, noughts seem zero-y enough to contain an o.";
+
+to say spec-meat:
+	say "You'll need to be more specific about the meat to poke at"
+
+this is the see-meats rule:
+	if chicken is visible or Spam is visible or cow is visible or player is in s-e-d:
 		the rule succeeds;
 	the rule fails;
+
+to say bothlivers:
+	say "The one liver seems inactive by itself"
+
+this is the spread-drapes rule:
+	if player is in Enclosure:
+		if drapes are in Enclosure or spread is in Enclosure:
+			the rule succeeds;
+	the rule fails;
+
+to say froz-ha-ha:
+	say "The scenery here's mostly frozen that way. Ha ha ha[if vowels are visible]. Except those vowels[end if]";
+
+to say marsh-lake:
+	say "The marsh and lake are symptoms of--whatever evil is beyond here"
+
+section sortie nudges
+
+this is the no-d rule:
+	if player is in trodes or player is in fields or player is in s-e-d:
+		the rule succeeds;
+	the rule fails;
+
+this is the cent-spin rule:
+	if the player is in Centrifuge and centrifuge-stopped is false:
+		the rule succeeds;
+	the rule fails;
+
+to say to-trio:
+	say "The chefs are all lumped together--a tall trio"
+
+to say ck-p:
+	say "It's not a cake, and it's not quite a pan--it's a cake pan";
+
+to say perf-brand:
+	say "It's the full name brand that really catches your eye"
+
+to say label-no:
+	say "The tall trio is probably what you want to change, but the label may have information";
 
 this is the rm-or-moor rule:
 	if player is in room or player is in moor:
 		the rule succeeds;
 	the rule fails;
 
-this is the degen-true rule:
-	the rule succeeds;
+to say woe-all:
+	say "Pat will always be woeful. He sort of likes it that way. Focus on his poetry"
 
-this is the no-d rule:
-	if player is in trodes or player is in fields or player is in s-e-d:
+to say hway-hint:
+	say "The scraped wall doesn't respond or come any closer to being a hallway";
+
+to say peas-poe:
+	say "The peasant's poem is about as good as it can be, for what it is. It's better than Pat's"
+
+to say pat-poe:
+	say "Pat won't react kindly to modifications of his poem"
+
+to say no-wire:
+	say "Despite the magic you can do, electricity still feels like, well, total magic. Plus you don't want to mess those wires up";
+
+to say but-but:
+	say "It's the buttons['] purposes that need[if steer button is visible and shoot button is visible]ed[end if] changing";
+
+this is the panel-in-silo rule:
+	if player is in moor and panel is part of the silo:
 		the rule succeeds;
 	the rule fails;
+
+to say what-b-says:
+	say "Hm, no, that'd be too abstruse. It's what the button [i]says[r], probably."
+
+to say best-not-defile:
+	say "Best not defile this shrine. Or even try to. The oils from the spout are gift enough";
+
+this is the got-plane rule:
+	if the player has the poem and the poem is folded:
+		the rule succeeds;
+	the rule fails;
+
+this is the b4-cent rule:
+	if player is in Centrifuge and centrifuge-stopped is false:
+		the rule succeeds;
+	the rule fails;
+
+section metros nudges
+
+this is the af-cent rule:
+	if player is in Centrifuge and centrifuge-stopped is true:
+		the rule succeeds;
+	the rule fails;
+
+to say no-hot:
+	say "You can't restore the hotel[if drainage is visible] or even scrub off what's written on it[end if]";
+
+to say ded-chg:
+	say "He may mumble about change, but he's amazingly resistant to change, himself"
+
+to say kern-push:
+	say "The buttons and kernels don't need pushing. Or they won't until they're a part of something useful"
+
+to say no-ketch:
+	say "It [if night thing is in lalaland]isn't useful now with the night thing gone[else]doesn't bend, but maybe it's a clue what the night thing likes to eat[end if]"
+
+to say ug-bug:
+	say "Ugh. Too messy. Mentally and physically"
+
+this is the angst rule:
+	if player has emitter and emitter is angstgnatted:
+		the rule succeeds;
+	the rule fails;
+
+to say nerd-nah:
+	say "The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds"
+
+to say nnww:
+	say "Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more"
+
+to say fix-rail:
+	say "[if controls are in op]You fixed the rail[else]You need to fix the rails electronically[end if]";
+
+to say psa-vand:
+	say "Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road"
+
+to say faded-ad:
+	say "The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there"
+
+to say drivwy:
+	say "[if dry cake is in condo]You should probably just walk in and see what's there[else]You've caused enough trouble there[end if]"
+
+to say beat-man:
+	say "He hasn't let the MAN change his clothes, and he won't let you"
+
+to say dead-help:
+	if condo-evac is true:
+		say ". Perhaps you can ask the deadbeat about the lost corn for more help";
+
+to say mits-are:
+	say "The mittens are as comfortable as they're going to be"
+
+this is the no-beats rule:
+	if player is in anti-cool or player is in red condo:
+		the rule succeeds;
+	the rule fails;
+
+section resort nudges
+
+to say a-nother:
+	say "a[if Hotel is visited]nother[end if]";
+
+to say the-sand:
+	say "The sand is just--well, sand. It won't help you get off the island";
+
+to say simple-riot:
+	say "Perhaps it's best to keep it simple and cut down the riot"
+
+this is the riot-gone rule:
+	if player is in hotspot and riot is in lalaland:
+		the rule succeeds;
+	the rule fails;
+
+to say ennui:
+	say "You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the [i]exits[r] here";
+
+to say if-rifle:
+	if the player's command includes "rifle":
+		say "Shooting things up is not the answer";
+	else:
+		say "The flier has helpful information"
+
+section general nudges
+
+this is the see-flier rule:
+	if go rest flier is visible or expo flier is visible or arena dig flier is visible:
+		the rule succeeds;
+	the rule fails;
+
+to say chem-bad:
+	say "Bad idea to mess with chemical compounds you don't understand"
+
+this is the has-lube rule:
+	if the player has the blue lube:
+		the rule succeeds;
+	the rule fails;
+
+to say gad-part:
+	say "You don't need to mess with the gadget or any part of it. It's probably better not to try"
+
+to say titenot:
+	say "It's a bit too thick to mess with. Both because of the consonants, and, well...you don't need to remove the knot, anyway";
+
+to say no-2:
+	say "You can't really second-guess the help on the prep paper";
+
+this is the past-strip rule:
+	if self-id fields is visited or underside is visited or Centrifuge is visited:
+		decide yes;
+	decide no;
+
+this is the past-intro rule:
+	if notices section is visited:
+		the rule succeeds;
+	the rule fails;
+
+to say what-for:
+	say "[if notices section is unvisited]You mess around with all the possibilities for a bit[else]You don't want to make your notepad vanish. It might be more useful to take notes on what to change[end if]"
+
+to say no-pen:
+	say "If you changed the pen, you'd have nothing to write with";
+
+to say diag-dir-rej:
+	say "This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief";
+
+to say dir-rej:
+	say "This game usually doesn't require you to mess with cardinal directions";
+
+to say xyzzys:
+	say "A hollow voice booms, 'Lo! Of...'[no line break]"
+
+to say cussy:
+	say "You're not fooling ME. Shame on you!";
+
+this is the know-point rule:
+	if pointcue is true:
+		the rule succeeds;
+	the rule fails.
+
+to say no-cred-spec:
+	say "There's no special addition to the 'credits' section, but I'm flattered you looked for it"
 
 Sa Nudges ends here.
 

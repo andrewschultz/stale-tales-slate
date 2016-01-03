@@ -10,6 +10,7 @@ use strict;
 nudgesort("roiling");
 nudgesort("sa");
 
+my $sizeMatters = 0;
 my %full;
 my %outs;
 
@@ -22,6 +23,7 @@ sub nudgesort
   my $idx = 0;
   my $veryEnd = 0;
   my @bigAry;
+  my @prefix;
   my $lastString;
   
   my $fileName = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] nudges.i7x";
@@ -33,6 +35,7 @@ sub nudgesort
   while ($a = <A>)
   {
     if (($a =~ /ends here\.$/) || ($a =~ /^section support/) || ($veryEnd)) { $veryEnd = 1; $lastString .= $a; next; }
+	if ($a =~ /^section/) { <A>; next; }
     if ($nudgeEnded == 0) { print B $a; }
 	else
 	{
@@ -75,31 +78,41 @@ sub nudgesort
       #print "$quo => $idx\n";
       }
       my $rul = $ary[5];
-	  $rul = "this is the $rul";
       if ($rul =~ /[a-z]/)
       {
+	    $rul = "this is the $rul";
         if (!$outs{$rul}) { $idx++; $outs{$rul} = $idx; @bigAry[$idx] = $rul; }
       }
+	  if ($#ary >= 7)
+	  {
+	    my $chap = $ary[7]; $chap =~ s/[\[\]]//g; chomp($chap);
+		$chap = "section $chap\n\n";
+		@prefix[$idx] = "$chap";
+	  }
     }
   }
-  for my $curI (1..$idx)
+  for my $q (1..$idx)
   {
-	#print "before: $bigAry[$curI]\n";
-	#if (undef($full{$bigAry[$curI]})) { print "$bigAry[$curI] undef\n"; }
-	#print $full{$bigAry[$curI]};
-	if (!defined($full{$bigAry[$curI]})) { print "WARNING $bigAry[$curI] may be defined elsehwere\n"; }
-	else { print B $full{$bigAry[$curI]}; }
+	if (!defined($full{$bigAry[$q]})) { print "WARNING $bigAry[$q] may be defined elsehwere\n"; }
+	else
+	{
+	  if (defined($prefix[$q])) { print B "$prefix[$q]"; }
+	  print B $full{$bigAry[$q]};
+	}
 	#print "after\n";
   }
   print B $lastString;
-  #for my $x (sort keys %outs) { print "$x should match.\n"; }
   close(B);
   close(A);
-  return;
-  if (-s "$tempFile" == -s "$fileName")
+
+  if ((!$sizeMatters) || (-s "$tempFile" == -s "$fileName"))
   {
-  `copy \"$tempFile\" \"$fileName\"`;
-  `rm \"$tempFile\"`;
+  my $cmd = "copy \"$tempFile\" \"$fileName\""; $cmd =~ s/\//\\/g;
+  print "Copying...\n$cmd\n";
+  `$cmd`;
+  $cmd = "erase \"$tempFile\""; $cmd =~ s/\//\\/g;
+  print "Erasing...\n$cmd\n";
+  `$cmd`;
   }
-  else { print "Didn't copy temp file over--file size difference.\n"; }
+  else { print "Didn't copy $tempFile to $fileName file over--file size difference(" . (-s "$tempFile") . " vs " . (-s "$fileName") . ").\n"; }
 }
