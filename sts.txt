@@ -1,10 +1,7 @@
 table of random books [xxm4] [tob]
-"Looming in Gloom[r], by Gil Moon & Milo Ong"
-"Manic-Gasp Campaigns[r], by Mica Spang"
 
 table of posse bosses [xxv7]
-"Tzaddik Kid Datz"
-"Dang Rube Bared-Gun Brundage"
+
 table of self-help bestsellers [xxv0]
 
 table of posh dialogue [xxv6]
@@ -98,7 +95,6 @@ table of non-checklists [xxv5]
 table of prestigious bums [xxv8]
 
 table of real estate ads [xxv9]
-"Thompson Posh Mont"
 
 table of songs you could write [xxvx]
 
@@ -155,7 +151,6 @@ table of job searcher names [xxx]
 table of evil locations [xxf]
 
 table of poem codas [xxi]
-"Laws, torts, straw lots: slow start."
 
 table of camp chants [xxm1]
 
