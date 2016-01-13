@@ -22,7 +22,7 @@ my $printTimer = 1;
 my $hashy;
 my $calls;
 
-while ($count < $#ARGV)
+while ($count <= $#ARGV)
 {
   $a = $ARGV[$count];
   $b = $ARGV[$count+1];
