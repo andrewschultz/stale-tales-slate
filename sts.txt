@@ -1,11 +1,8 @@
 table of random books [xxm4] [tob]
-"Below One: Noble Woe[r], by Leo Bowen"
-"Tots['] Brief Frostbite[r], by Boris Fett"
 
 table of posse bosses [xxv7]
 
 table of self-help bestsellers [xxv0]
-"Employed Mo['] Deeply[r], by Dom Epley"
 
 table of posh dialogue [xxv6]
 
@@ -16,7 +13,6 @@ table of ad slogans [xxm1]
 table of to-sort=========================================
 
 table of cussing rejects [xxg1]
-"Yelp mode employed!"
 
 table of death messages [xxg2]
 
@@ -59,7 +55,6 @@ table of lame tv shows [xxm9]
 table of laughhouses [xxm0]
 
 table of lousy hit songs [xxm01]
-"Gamin['] the Hang Time"
 
 table of mob chants [xxm02]
 

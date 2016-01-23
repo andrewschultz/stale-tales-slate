@@ -4926,7 +4926,7 @@ carry out possing:
 chapter bugtracking
 
 to say my-repo:
-	say "http://github.com/andrewschultz/stale-tales-slate";
+	say "http://github.com/andrewschultz/stale-tales-slate/Roiling";
 
 to say bug-report:
 	abort-if-bugfind;

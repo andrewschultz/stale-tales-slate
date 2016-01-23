@@ -432,7 +432,7 @@ to say reject:
 	say "That's not something you can say, do or see here."
 
 to say bug-report:
-	say "BUG. Contact me at [email] with a transcript or description of where you are/what you did. Use up arrow to see previous commands. Or use UNDO several times and hit TRANSCRIPT to show me how you got here, what your inventory was, etc."
+	say "BUG. Contact me at [email] with a transcript or description of where you are/what you did, or report a bug at [ghsite]. Use up arrow to see previous commands. Or use UNDO several times and hit TRANSCRIPT to show me how you got here, what your inventory was, etc."
 
 understand "nick" as nick when player is in nick.
 
@@ -458,6 +458,9 @@ to say r:
 
 to say email:
 	say "blurglecruncheon@gmail.com";
+
+to say ghsite:
+	say "http://github.com/andrewschultz/stale-tales-slate/Shuffling"
 
 to ital-say (x - indexed text):
 	say "[italic type][bracket]NOTE: [x][close bracket][roman type][line break]";
@@ -11782,9 +11785,6 @@ understand "about" as abouting.
 carry out abouting:
 	say "This game, the first of two in [if cur-score of intro is 0]a series[else]the Stale Tales Slate[end if], is about[if cur-score of Intro is 0], well, I don't want to spoil that yet until you get your first point, which I hope isn't too hard. It's a bit different from other text adventures, being a wordplay game, but the hope is that the right sort of (one-word) command to solve certain puzzles is clued in more than one way.[paragraph break]This is much simpler than it sounds, and I think/hope I've made efforts to make it less guess-the-verb. No, not verb. That's the sequel.[otherwise] a certain sort of wordplay. I think you know it, now that your score is positive?[paragraph break]It's a tribute to Infocom's [i]Nord and Bert Couldn't Make Head or Tail of It[r] and something they didn't do. Probably not due to lack of creativity--either they thought something like this would be a mess, or maybe it was just due to technical or disk space limitations.[paragraph break]I hope it is the latter, and it's enough to be its own game, and I hope you find so too.[end if]You can see the testers who gave me transcripts with the CREDITS, which are rather long. Thanks, guys! If you want to see technical contributions, type TECH. For general release information, type RELEASE.[paragraph break]Also, I still appreciate transcripts! So, if you like, type TRANSCRIPT, then send reports--especially ones with transcripts--to [email].[paragraph break]And finally, a warning: if this game drove you up the wall, you will find A Roiling Original utterly painful. It has seven areas to explore from [unless trips strip is visited]the main world-hub[else]what the Trips Strip becomes[end if].";
 	the rule succeeds;
-
-to say ghsite:
-	say "http://github.com/andrewschultz/stale-tales-slate";
 
 report switching the story transcript on:
 	say "Thanks for taking this transcript! If you've never made a transcript before, it's not hard. Type TRANSCRIPT and save to a text file and start any comments with ; or * or ?. Then locate the file and mail it to me at [email]. Don't worry if you don't make many comments--I can often see ways I didn't mean for the player to get stuck.[paragraph break]	While Shuffling Around's puzzles are rather stable, I'm interested in anything from 'this is broken' or 'this was hinted poorly' to 'you missed this joke.' Authors enjoy getting transcripts--I mean, after we realize what we did wrong, we can learn a lot.[paragraph break]You can also report and see issues at [ghsite].[paragraph break]Again, my email address is [email]. Thanks!";
