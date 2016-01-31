@@ -87,9 +87,11 @@ for $idx (0..$#ARGV)
   if ($this =~ /-p/) { $printIfThere = 1; next; }
   if ($this =~ /[0-9]/) { wordit($this); next; }
   if ($this =~ /-o/) { $myRegion = $this; $myRegion =~ s/^-o//g; if ($myRegion eq "") { die("Need to munge the region with -o."); } next; }
+  if ($this =~ /-f/) { $openPost = 1; next; }
   if ($this =~ /-s/) { $doShuf = 1; $doRoil = 0; next; }
   if ($this =~ /-r/) { $doShuf = 0; $doRoil = 1; next; }
   if ($this =~ /,/) { $tabString =$this; $tabString =~ s/,/\t/g; $tabString =~ s/_/ /g; next; }
+  if ($this =~ /^\?/ { usage(); exit; }
 #print "$idx $this\n";
 if ($this eq "-t") { print B "TEMPLATE string hashval region room? whatseen? rule? gametext:\n"; next; }
 
@@ -114,11 +116,12 @@ $anyFound = 0;
 if ($doShuf) { lookFor($hash, "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/sa nudges.i7x"); }
 if ($doRoil) { lookFor($hash, "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/roiling nudges.i7x"); }
 
-if (($printIfThere) || ($anyFound == 0)) { print B "\"$this\"\t$hash\t$tabString\t\"some text\"\n"; }
+if (($printIfThere) || ($anyFound == 0)) { print B "\"$this\"\t$hash\t$tabString\t\"some text\"\n"; $worthOpening = 1; }
 else { print "Instance found in file, not printing externally. Use -p.\n"; }
 }
 
 close(B);
+if ($worthOpening && $openPost) { `c:\\writing\\dict\\hv.txt`; } 
 
 sub wordit
 {
@@ -191,4 +194,11 @@ sub findHash
 	  if ($temp >= $ary{$q}) { findHash($temp - $ary{$q}, "$_[1]$q", $maxlength, $ary{$q}); }
 	}
   }
+}
+
+sub usage
+{
+print <<EOT;
+EOT
+exit;
 }

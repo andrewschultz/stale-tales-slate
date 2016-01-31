@@ -358,6 +358,7 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "tracks"	358834368	metros	terminal	--	--	"[fix-rail]."
 "psa"	179927743	metros	terminal	--	--	"[psa-vand]."
 "psapsa"	359855486	metros	terminal	--	--	"[psa-vand]."
+"pass"	276201709	metros	--	terminal	--	"[psa-vand]."
 "art"	190621639	metros	terminal	--	--	"There aren't many ways to look at THIS art, and none are constructive, you sense."
 "faded"	198567001	metros	terminal	--	--	"[faded-ad]."
 "fadedad"	221783908	metros	terminal	--	--	"[faded-ad]."

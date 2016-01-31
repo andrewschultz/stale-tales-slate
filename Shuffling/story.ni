@@ -503,23 +503,34 @@ to say bluetext:
 to say hc-sp:
 	if hc-acc is true, say " ";
 
-to say bc:
-	say "[bluetext][hc-sp]B[r]";
+[the syntax here is, only screen-reader space for *c, neither for *cn, forced space for *cf]
 
-to say bcn:
+to say bc:
 	say "[bluetext]B[r]";
 
-to say gc:
-	say " [second custom style][hc-sp]G[r]"
+to say bcn:
+	say "[hc-sp][bluetext]B[r]";
 
-to say gcn:
+to say bcf:
+	say " [bluetext]B[r]";
+
+to say gc:
 	say "[second custom style]G[r]"
 
+to say gcn:
+	say "[hc-sp][second custom style]G[r]"
+
+to say gcf:
+	say " [second custom style]G[r]"
+
 to say rc:
-	say " [first custom style][hc-sp]R[r]"
+	say "[first custom style][hc-sp]R[r]"
 
 to say rcn:
-	say "[first custom style]R[r]"
+	say "[hc-sp][first custom style]R[r]"
+
+to say rcf:
+	say " [first custom style]R[r]"
 
 to say ast:
 	say "[if hc-acc is true] [end if]"
@@ -1044,12 +1055,24 @@ definition: a thing (called hintcand) is hintrelevant:
 	if R1 is not R2:
 		decide no;
 	if R1 is R2:
-		if location of R1 is visited:
+		if location of hintcand is visited:
 			decide yes;
 	decide no;
 
 [does the player mean objasking about a hintrelevant thing: it is likely;]
 [does the player mean objasking generically a hintrelevant thing: it is likely;]
+
+section hling
+
+hling is an action out of world.
+
+understand the command "hl" as something new.
+
+understand "hl" as hling.
+
+carry out hling:
+	say "[list of hintrelevant things].";
+	the rule succeeds;
 
 section objhinting
 
@@ -1060,9 +1083,9 @@ check objhinting a deregioned object:
 
 understand the command "hint/hints/info/help [any thing]" as something new.
 
-understand "hint [text]" as a mistake ("There's nothing relevant around like that.")
-
 understand "hint [any hintrelevant thing]" as objhinting. understand "hints [any hintrelevant thing]" as objhinting. understand "info [any hintrelevant thing]" as objhinting. understand "help [any hintrelevant thing]" as objhinting.
+
+[understand "hint [text]" as a mistake ("There's nothing relevant around like that.")]
 
 ever-obj-hinted is a truth state that varies.
 
@@ -2023,8 +2046,6 @@ check touching:
 		say "The spread lashes back--it turns into a red asp! You back off quickly, but fortunately, the asp is only a vicious guardian, not a vicious attacker[red-to]." instead;
 	say "Touch's not [i]tons[r] couth." instead;
 
-test toma with "gonear underside/n/w/tomato/e/s/w/throw tomato"
-
 chapter throwing
 
 understand the command "throw" as something new.
@@ -2447,16 +2468,26 @@ understand "cert [something]" as certifying.
 understand "cer [something]" as certifying.
 understand "c [something]" as certifying.
 
+does the player mean certifying the gadget: it is likely.
+
+certify-short is a truth state that varies.
+
 carry out certifying:
 	if gadget is rect:
 		if gadget-secured is true:
 			say "CERTIFY/RECTIFY has been locked in for [if button-locked is true]good. You can only RECTIFY[else]for now, but you can PUSH SECURE to change that[end if].." instead;
-		say "(switching to certify first)";
 		increment annoying-switches;
 		now gadget is cert;
+		if noun is gadget:
+			say "Switching gadget to CERTIFY.";
+			continue the action;
+		say "(switching to certify first)";
+	if certify-short is false:
+		if the player's command matches the text "certify":
+			say "(NOTE: when using CERTIFY, you can shorten it to CERT/CER/C in the future.)";
+			now certify-short is true;
 	try scaning noun;
-	if annoying-switches > 3 and marcos-trumped is false and location of player is not notices section:
-		intro-marcos;
+	intro-marcos;
 	the rule succeeds;
 
 chapter rectifying
@@ -2470,15 +2501,27 @@ understand "rect [something]" as rectifying.
 understand "rec [something]" as rectifying.
 understand "r [something]" as rectifying.
 
+does the player mean rectifying the gadget: it is likely.
+
+rectify-short is a truth state that varies.
+
 carry out rectifying:
 	if gadget is cert:
 		if gadget-secured is true:
 			say "CERTIFY/RECTIFY has been locked in for [if button-locked is true]good. You can only CERTIFY[else]now, but you can PUSH SECURE to change that[end if].." instead;
-		say "(switching to rectify first)";
 		now gadget is rect;
-	if annoying-switches > 3 and marcos-trumped is false and location of player is not notices section:
-		intro-marcos;
-	try scaning noun instead;
+		increment annoying-switches;
+		if noun is gadget:
+			say "Switching gadget to RECTIFY.";
+			continue the action;
+		say "(switching to rectify first)";
+	if rectify-short is false:
+		if the player's command matches the text "rectify":
+			say "(NOTE: when using RECTIFY, you can shorten it to RECT/REC/R in the future.)";
+			now rectify-short is true;
+	try scaning noun;
+	intro-marcos;
+	the rule succeeds;
 
 chapter cring
 
@@ -3253,13 +3296,12 @@ when play begins (this is the don't use any other besides status window when pla
 		say "Shuffling Around has accessibility features for the vision impaired that make a hinting device more readable. Would you like to activate them?";
 		if the player consents:
 			now hc-acc is true;
-		else:
-			say "OK. This can be toggled at any time with the three-letter commands NOS (off) or SON (on).";
+		say "OK. This can be toggled at any time with the three-letter commands NOS (off) or SON (on).";
 	say "So you just got fired from the best company ever, but it's the best day of your life. Because, new opportunities! New horizons! New ways to look at things! Like calling this stupid kiss-off job fair a 'convention.' As you are stuffed in a slow slow elevator up to the next lecture, you hope there's some way out...";
 	move player to Busiest Subsite, without printing a room description;
 	now player wears magenta nametag;
 	now player has the dope tan notepad;
-	now left hand status line is "[location of player] ([mrlp])";
+	now left hand status line is "[location of player] ([mrlp])[last-scan-thing]";
 	now right hand status line is "[cur-score of mrlp]/[if possibles is true][poss-range][else][max-score of mrlp][end if][if Trips Strip is visited] [bracket][number of solved regions][close bracket][end if]";
 	repeat with Q running through regions:
 		now poss-score of Q is max-score of Q;
@@ -3272,6 +3314,17 @@ when play begins (this is the don't use any other besides status window when pla
 	shuffle-chat-lists;
 	now red bull is in bullpen;
 	now redness is in bullpen;
+
+last-was-cert is a truth state that varies.
+scan-to-header is a truth state that varies.
+
+to say last-scan-thing:
+	if last-scan is nothing or last-scan is in lalaland:
+		continue the action;
+	now scan-to-header is true;
+	say " || ";
+	say "[last-scan]:[if last-was-cert is true][rgtext of last-scan][else][rgbtext of last-scan][end if]";
+	now scan-to-header is false;
 
 to shuffle-chat-lists:
 	repeat through table of megachatter:
@@ -3786,7 +3839,7 @@ the snarled darnels are scenery in Thickest Thickets. "Well, they're tangled eno
 
 understand "sandler" as a mistake ("I award you zero points for that anagramming try, and may God have mercy on your soul[if darn-slan is false]. Okay, actually, you're close to one point[end if].") when player is in Thickest Thickets.
 
-understand "landers" as a mistake ("There will be better hints than a manners advice column once you move on[if darn-slan is false], though you can do something with the darnels[end if].") when player is in Thickest Thickets.
+understand "landers" as a mistake ("There will be better hints than a manners advice column once you move on[if darn-slan is false], though the darnels make you see red for a bit[end if].") when player is in Thickest Thickets.
 
 the rgtext of snarled darnels is "[rcn][rc][rc][rc][rc][rc][rc]". the lgth of darnels is 5. gpos of darnels is 7. rpos of darnels is 3.
 
@@ -4100,7 +4153,7 @@ carry out xmxing:
 			say "You don't need to unlock any further mysteries of the gateway." instead;
 		try xmxing nametag instead;
 	if noun is thruhinted:
-		say "You already hinted through for that. Are you sure you want to use your saltine?";
+		say "You already hinted through for that. Are you sure you want to use the x-ray vision from your saltine?";
 		unless the player consents:
 			say "Ok." instead;
 	if noun is static:
@@ -4260,6 +4313,9 @@ to say logic-cracks:
 section tagged gadget
 
 a tagged gadget is in acne-bit cabinet. the tagged gadget is warpable. the tagged gadget can be broken. the tagged gadget is not broken.
+
+after printing the name of the tagged gadget when taking inventory:
+	say " ([if button-locked is true]locked into [end if][if gadget is cert]CERTIFY[else]RECTIFY[end if] mode)";
 
 check taking gadget:
 	if gadget is in hotspot and red bull is in hotspot:
@@ -4606,9 +4662,10 @@ carry out recuseing:
 chapter intro-marcos
 
 to intro-marcos:
-	say "A shady figure sidles up to you. 'Hey! Pal! The name's Marcos. Sellin['] macros. Ways to lump actions together. Streamline your thinking. Actually, not selling them at all, just hoping you remember me once you fix things here and are an acclaimed hero with clout.'[paragraph break]He takes the gadget away from you, fiddles with it, and gives it back. You are impressed with his dexterity, and yet, you feel it would not be too tough to imitate him.[paragraph break]'Just, if you think of one scan as R or C--you can make both of them with RC. Or CR. I won't judge.'[paragraph break]As you note this in your notepad, he pops out of view.";
-	pad-rec "macros";
-	now marcos-trumped is true;
+	if annoying-switches > 5 and marcos-trumped is false and location of player is not notices section:
+		say "A shady figure sidles up to you. 'Hey! Pal! The name's Marcos. Sellin['] macros. Ways to lump actions together. Streamline your thinking. Actually, not selling them at all, just hoping you remember me once you fix things here and are an acclaimed hero with clout.'[paragraph break]He takes the gadget away from you, fiddles with it, and gives it back. You are impressed with his dexterity, and yet, you feel it would not be too tough to imitate him.[paragraph break]'Just, if you think of one scan as R or C--you can make both of them with RC. Or CR. I won't judge.'[paragraph break]As you note this in your notepad, he pops out of view.";
+		pad-rec "macros";
+		now marcos-trumped is true;
 
 chapter gleaning
 
@@ -6079,7 +6136,7 @@ to say maybe-shift:
 
 the cfuge is privately-named scenery in Centrifuge. understand "centrifuge" as cfuge.
 
-description of cfuge is "[if centrifuge-stopped is false]You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it[else]N thing's spinning any more, thankfully[end if]."
+description of cfuge is "[if centrifuge-stopped is false]You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it[else]Nothing's spinning any more, thankfully[end if]."
 
 the printed name of Frenetic Centrifuge is "[if centrifuge-stopped is true]A Round Den, Unadorned[else]Ug, Frenetic Centrifuge[end if]".
 
@@ -7557,7 +7614,7 @@ check putting it on (this is the silo-put rule):
 		if noun is panel:
 			now panel is part of the silo;
 			now dotted rectangle is in lalaland;
-			say "The panel fits into that rectangle handily and even starts to glow. Two buttons appear on it--one says HOOTS, the other TREES.";
+			say "The panel fits into that rectangle handily and even starts to glow. Two buttons appear on it--one says HOOTS, the other TREES. 'Panel fits. Final step,' you muse.";
 			now the hoots button is part of the panel;
 			now the trees button is part of the panel instead;
 		if noun is missile:
@@ -7568,7 +7625,6 @@ check putting it on (this is the silo-put rule):
 		say "That'd crush [the second noun]." instead;
 	if noun is the missile:
 		say "You roll the missile around, but you can't find anywhere to put it." instead;
-
 
 before doing something with the missile when the missile is visible:
 	if missile is in lalaland:
@@ -9051,6 +9107,8 @@ the dead-fad faded ad is amusing scenery in Elm Train Terminal. "It proclaims TR
 
 Pa's PSA is scenery in Elm Train Terminal. "[randbla]."
 
+understand "psas" as pa's psa.
+
 the fuzzy looking wall is scenery in Elm Train Terminal. "The wall looks and feels like steel wool, from top to bottom."
 
 the fuzzy looking wall is a supporter.
@@ -9899,11 +9957,13 @@ understand "amps" as a mistake ("You are trying to save a magic world, not start
 
 section metros
 
-understand "sap" as a mistake ("The PSA is sappy, but it's not literally sappy. And sticky stuff won't get you up the wall.") when PSA is visible.
+understand "sap" and "saps" as a mistake ("The PSA is sappy, but it's not literally sappy. And sticky stuff won't get you up the wall.") when player is in Terminal.
 
-understand "asp" as a mistake ("That's just what you need, a snake chasing you with everything else going on.") when PSA is visible.
+understand "asp" and "asps" as a mistake ("That's just what you need, a snake chasing you with everything else going on.") when player is in Terminal.
 
-understand "spa" as a mistake ("You haven't earned a break yet.") when PSA is visible.
+understand "spa" and "spas" as a mistake ("You haven't earned a break yet.") when player is in Terminal.
+
+understand "pass" as a mistake ("You take a pass on etiquette advice. You need results right now!") when player is in Terminal.
 
 understand "smitten" as a mistake ("No matter how hard you try to convince yourself they[are-were] useful, you're not smitten with them. They're just ugly. But they could stick really good on the right surface.") when player has Velcro.
 
@@ -10354,6 +10414,8 @@ to say check-other-nt:
 	if nt-rect is false or nt-cert is false:
 		say ". Maybe the gadget's other setting will give you more information, or maybe the ambiguous information is giving you more than you think"
 
+last-scan is an object that varies. last-scan is nothing.
+
 carry out scaning:
 	if notices section is not visited and mrlp is not intro:
 		say "[bug-report] You should not get to this code before the notices section. You probably jumped away from the intro." instead;
@@ -10397,36 +10459,22 @@ carry out scaning:
 		say "'Fie!' yells Pat. 'My poem transcends technology! I am sure such a fancy gadget could not even tell me its meter!' Then he gets back to recitation." instead;
 	if noun is td:
 		say "Not likely--it's inside the store." instead;
-	if noun is oils and gadget is rect:
-		say "You stick the gadget down the cask's hole so it's almost touching the oils[if silo is in moor]. It's stuck on [rcn][bc][bc][gc][otherwise]. It goes to [bcn][bc][rc][gc] -- then [rcn][bc][bc][gc] -- and back[end if]." instead;
-	if noun is oils and gadget is cert:
-		say "You stick the gadget halfway into the cask, and it reads [if silo is in moor][rc][gc][gc][rc][otherwise][rc]**[rc], the middle two dots flipping from both red to both green and back[end if]." instead;
+	if noun is the broad board:
+		say "The gadget makes no noise[if gateman is visible][cant-change][otherwise]." instead;
 	if noun is the player:
 		if warts are visible:
 			say "Hm, the warts are registering. [no line break]";
 			try scaning warts instead;
 		say "The gadget remains silent as you scan yourself. You're either too awesome for any funny changes, or too boring and inflexible. Whichever." instead;
 	if noun is gateman:
-		say "The gadget buzzes.[paragraph break]'What?! Were you hoping to change me back?' harrumphs Old Man Almond." instead;
-	if noun is the broad board:
-		say "The gadget makes no noise[if gateman is visible][cant-change][otherwise]." instead;
-	if noun is tiles:
-		say "It's [if gadget is cert][rc][rc][gc][gc][rc][otherwise][rc][gc][bc][bc][bc][end if], all up and down the tiles." instead;
+		say "The gadget buzzes.[paragraph break]'What?! Were you hoping to change me back?' harrumphs Old Man Almond. 'Maybe ask me questions instead.'" instead;
 	if noun is the yard-door:
 		say "You see no activity until you wave your gadget over the bulge. So you leave it there, and you pick something up.[line break]";
 		try scaning bulge instead;
 	if noun is sandwich:
 		say "Your gadget refuses to remain stable. As if it's trying to read two things at once. Perhaps if you pulled the components apart?" instead;
-	if noun is chicken liver or noun is cow liver:
-		say "You see five red lights in a row--but you only see the [if noun is cow liver]bottom[else]top[end if] half of them. Odd." instead;
-	if noun is oils:
-		say "The feedback from the cask seems to interfere, and you don't want to drop your toy IN the oils--but really, there are only so many possibilities. You're pretty sure you can figure them.";
 	if noun is candelabra:
 		say "Way too high up." instead;
-	if noun is dial:
-		if numset of dial is 16:
-			say "Your gadget is silent. You've figured what to do with the dial." instead;
-		say "The gadget, when over the EXITS part, reads[if player has gadget][rcn][rc][rc][rc][rc] ? ?--flipping between [rcn][rc] and [gcn][gc][otherwise][bcn][bc][bc][bc][gc] ? ?--flipping reds and blues[end if]. The dial's solution probably has the letters EXITS in it, somehow." instead;
 	if noun is doll house:
 		if attics are visible:
 			try scaning attics instead;
@@ -10438,18 +10486,40 @@ carry out scaning:
 	if noun is part of the gadget:
 		say "If that part of the gadget were detectable, you'd have gone crazy from the beeping by now." instead;
 	if noun is gadget:
-		say "If it were detectable, you'd have gone crazy from the beeping by now." instead;
-	if noun is the gateman:
-		say "The gadget buzzes[one of]. 'It'd be easier to ask me questions than scan me.'[or]. 'What've you got against me? If you're ever a nametag, you'll feel sorry you even THOUGHT it.'[stopping]" instead;
-	if noun is cabinet:
-		say "Two beeps. It's [rcn][rc][rc][rc][rc][rc][gc] over most of the cabinet but[if number of solved regions < 2] the cabinet seems sensitive about its acne[otherwise] [rcn][rc][rc][gc][gc][rc][gc] over the bits[end if]." instead;
-	if noun is subway map:
-		say "The reading's different over the map of Mt. Rose than the store proper.[if gadget is cert][gcn][rc][rc][rc][rc][rc][else if gadget is rect][gcn][bc][bc][bc][rc][bc][end if]." instead;
+		if the player's command matches "scan":
+			say "If the gadget were detectable, you'd have gone crazy from the beeping by now.";
+		else if button-locked is true:
+			say "You can't modify the gadget now it's locked in.";
+		else:
+			say "You don't need to use a command to set the gadget specifically. You can RECTIFY or CERTIFY it as you please.";
+		the rule succeeds;
 	if noun is poem and poem is not folded:
 		if smilies are part of the poem:
 			say "The gadget is more active on the right edge where the smilies are, so you move it over there.";
 			try examining the smilies instead;
 		say "The gadget makes an odd noise. Perhaps it's in some weird state between forms. If poems can mean different things, they can probably become different things." instead;
+	if noun is inflexible:
+		say "The gadget registers nothing. Maybe you don't need to shuffle [if noun is plural-named]those[else]that[end if] around." instead;
+	now last-scan is noun; [DIVIDING LINE FOR SUCCESSFUL SCAN]
+	now last-was-cert is whether or not gadget is cert;
+	if noun is oils and gadget is rect:
+		say "You stick the gadget down the cask's hole so it's almost touching the oils[if silo is in moor]. It's stuck on [rcn][bc][bc][gc][otherwise]. It goes to [bcn][bc][rc][gc] -- then [rcn][bc][bc][gc] -- and back[end if]." instead;
+	if noun is oils:
+		say "The feedback from the cask seems to interfere, and you don't want to drop your toy IN the oils--but really, there are only so many possibilities. You're pretty sure you can figure them.";
+	if noun is oils and gadget is cert:
+		say "You stick the gadget halfway into the cask, and it reads [if silo is in moor][rc][gc][gc][rc][otherwise][rc]**[rc], the middle two dots flipping from both red to both green and back[end if]." instead;
+	if noun is tiles:
+		say "It's [if gadget is cert][rc][rc][gc][gc][rc][otherwise][rc][gc][bc][bc][bc][end if], all up and down the tiles." instead;
+	if noun is chicken liver or noun is cow liver:
+		say "You see five red lights in a row--but you only see the [if noun is cow liver]bottom[else]top[end if] half of them. Odd." instead;
+	if noun is dial:
+		if numset of dial is 16:
+			say "Your gadget is silent. You've figured what to do with the dial." instead;
+		say "The gadget, when over the EXITS part, reads[if player has gadget][rcn][rc][rc][rc][rc] ? ?--flipping between [rcn][rc] and [gcn][gc][otherwise][bcn][bc][bc][bc][gc] ? ?--flipping reds and blues[end if]. The dial's solution probably has the letters EXITS in it, somehow." instead;
+	if noun is cabinet:
+		say "Two beeps. It's [rcn][rc][rc][rc][rc][rc][gc] over most of the cabinet but[if number of solved regions < 2] the cabinet seems sensitive about its acne[otherwise] [rcn][rc][rc][gc][gc][rc][gc] over the bits[end if]." instead;
+	if noun is subway map:
+		say "The reading's different over the map of Mt. Rose than the store proper.[if gadget is cert][gcn][rc][rc][rc][rc][rc][else if gadget is rect][gcn][bc][bc][bc][rc][bc][end if]." instead;
 	if gadget is cert:
 		if noun is the motto:
 			say "Your gadget gives [rcn][rc][rc][rc][gc][gc]. Hmm, motto is only five letters. But then you remember it's A MOTTO." instead;
@@ -10459,7 +10529,7 @@ carry out scaning:
 		if noun is the odor:
 			say "You hear occasional beeping. [rcn][rc][gc][gc] flashes on and off, faintly." instead;
 		if noun is not inflexible:
-			say "[if noun is begonias or noun is roadblock or noun is acne-bit cabinet]You notice the gadget beeps twice. Hmm[otherwise]The gadget beeps once[end if]. A series of lights comes across:[rgtext of noun][one of] (R = red, G = green. NOTE: C/CER/CERT are accepted shortcuts)[prqc][or][stopping][if noun is drainage and player has gadget]. Uh, oh. Not really helpful at all. Maybe you'll find a hint elsewhere, or in the stuff floating in the drainage[else if noun is tall trio]. You scan each of the tall trio to make sure nothing changes. It doesn't[else if noun is Tories]. Each portrait looks the same, and you note six letters--probably Tories[end if].";
+			say "[if noun is begonias or noun is roadblock or noun is acne-bit cabinet]You notice the gadget beeps twice. Hmm[otherwise]The gadget beeps once[end if]. A series of lights comes across:[if hc-acc is false] [end if][rgtext of noun][one of] (R = red, G = green)[prqc][or][stopping][if noun is drainage and player has gadget]. Uh, oh. Not really helpful at all. Maybe you'll find a hint elsewhere, or in the stuff floating in the drainage[else if noun is tall trio]. You scan each of the tall trio to make sure nothing changes. It doesn't[else if noun is Tories]. Each portrait looks the same, and you note six letters--probably Tories[end if].";
 			check-marcos instead;
 	if gadget is rect:
 		if noun is the motto:
@@ -10470,22 +10540,27 @@ carry out scaning:
 		if noun is the odor:
 			say "You hear occasional beeping--[bcn][gc][bc][rc] appears on and off." instead;
 		if noun is not inflexible:
-			say "Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize:";
-			repeat with Q running from 1 to lgth of noun:
-				say "[if gpos of noun is Q][gc][else if rpos of noun is Q][rc][otherwise][bc]";
+			say "Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: ";
+			say "[rgbtext of noun]";
 			if rgb-yet is false:
-				say " (R = red, G = green, B = blue. NOTE: you can shorten RECTIFY to RECT/REC/R)";
+				say " (R = red, G = green, B = blue).";
 				now rgb-yet is true;
 				pad-rec-q "rectify";
-			say ".";
 			if noun is tories:
 				say "Hm, six letters to Store I--probably mainly important they're Tories.";
 			if noun is tall trio:
 				say "You scanned each of the tall trio, and the readout didn't change.";
 			check-marcos instead;
-	if noun is inflexible:
-		say "The gadget registers nothing. Maybe you don't need to shuffle around [if noun is plural-named]those[else]that[end if]." instead;
 	buzz-or-no-noise noun instead;
+
+to say rgbtext of (sca - a thing):
+	if scan-to-header is true:
+		repeat with Q running from 1 to lgth of sca:
+			say "[if hc-acc is true] [end if][if gpos of sca is Q]G[else if rpos of sca is Q]R[otherwise]B[end if]";
+		continue the action;
+	say "[if gpos of sca is 1][gc][else if rpos of sca is 1][rc][otherwise][bc][end if]";
+	repeat with Q running from 2 to lgth of sca:
+		say "[if gpos of sca is Q][gcn][else if rpos of sca is Q][rcn][otherwise][bcn]";
 
 yes-scans is a number that varies.
 
@@ -13382,6 +13457,8 @@ test formin with "forest/enter forest/smell/fo/fo/e/nose/shades/shotgun/put shad
 chapter metros
 
 [* this is the trickiest. There are 5 ways through. The noise bag allows you to open it by the nerds, which the sheath doesn't. For both, can release the gnats or ask about darkness]
+
+test toma with "gonear underside/n/w/tomato/e/s/w/throw tomato"
 
 test metbasic with "test intro/metros/g/g/gardenia/n/w/tomato/e/s/w/give tomato to thing/x mattress/e/n/n/switch emitter/get cake/keycard/s/velcro/controls" in subsite
 
