@@ -91,7 +91,7 @@ for $idx (0..$#ARGV)
   if ($this =~ /-s/) { $doShuf = 1; $doRoil = 0; next; }
   if ($this =~ /-r/) { $doShuf = 0; $doRoil = 1; next; }
   if ($this =~ /,/) { $tabString =$this; $tabString =~ s/,/\t/g; $tabString =~ s/_/ /g; next; }
-  if ($this =~ /^\?/ { usage(); exit; }
+  if ($this =~ /^\?/) { usage(); exit; }
 #print "$idx $this\n";
 if ($this eq "-t") { print B "TEMPLATE string hashval region room? whatseen? rule? gametext:\n"; next; }
 
@@ -199,6 +199,15 @@ sub findHash
 sub usage
 {
 print <<EOT;
+-r(letter) = force room and region name
+-p = print if there, override if the hash is already in the source
+# = reverse-lookup a hash number
+-oREGION = force region name
+-f = file open after
+-s = Shuffling only
+-r = Roiling only
+comma separated list gives several words
+? = usage
 EOT
 exit;
 }

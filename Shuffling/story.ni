@@ -4315,7 +4315,8 @@ section tagged gadget
 a tagged gadget is in acne-bit cabinet. the tagged gadget is warpable. the tagged gadget can be broken. the tagged gadget is not broken.
 
 after printing the name of the tagged gadget when taking inventory:
-	say " ([if button-locked is true]locked into [end if][if gadget is cert]CERTIFY[else]RECTIFY[end if] mode)";
+	if tagged gadget is examined or ever-scan is true:
+		say " ([if button-locked is true]locked into [end if][if gadget is cert]CERTIFY[else]RECTIFY[end if] mode)";
 
 check taking gadget:
 	if gadget is in hotspot and red bull is in hotspot:
@@ -4415,7 +4416,7 @@ instead of switching on gadget:
 
 understand "device" as tagged gadget.
 
-the tagged gadget can be cert or rect. the tagged gadget is rect.
+the tagged gadget can be cert or rect. the tagged gadget is cert.
 
 the cratered bits are part of the cabinet. understand "acne" and "bit" as cratered bits.
 
@@ -10416,6 +10417,8 @@ to say check-other-nt:
 
 last-scan is an object that varies. last-scan is nothing.
 
+ever-scan is a truth state that varies.
+
 carry out scaning:
 	if notices section is not visited and mrlp is not intro:
 		say "[bug-report] You should not get to this code before the notices section. You probably jumped away from the intro." instead;
@@ -10501,6 +10504,9 @@ carry out scaning:
 	if noun is inflexible:
 		say "The gadget registers nothing. Maybe you don't need to shuffle [if noun is plural-named]those[else]that[end if] around." instead;
 	now last-scan is noun; [DIVIDING LINE FOR SUCCESSFUL SCAN]
+	if gadget is not examined or ever-scan is false:
+		say "Before scanning for the first time, you fumble with the gadget and note it is set to [if gadget is cert]CERTIFY[else]RECTIFY[end if].";
+	now ever-scan is true;
 	now last-was-cert is whether or not gadget is cert;
 	if noun is oils and gadget is rect:
 		say "You stick the gadget down the cask's hole so it's almost touching the oils[if silo is in moor]. It's stuck on [rcn][bc][bc][gc][otherwise]. It goes to [bcn][bc][rc][gc] -- then [rcn][bc][bc][gc] -- and back[end if]." instead;
@@ -12813,6 +12819,7 @@ description of main-window is "bug"
 
 when play begins (this is the please remove before release rule):
 	say "This version of the game involves special tricks for the player to warp through the game. It is 'volume beta testing' in the source and should be marked as NOT FOR RELEASE before release. However, it's okay now.[paragraph break]Type [b]dc[r] for all debug commands, but the one most helpful to me is [b]hd[r], which tracks the hints you receive. Shufhints.glkdata is a text file created and appended every move that you can send to me to make sure hints are valid. It's 2 dirs up in Windows and in /home in Mac."
+	say "After pushing a key, you'll be asked to save to a transcript file immediately, so you don't forget. Thanks for Beta testing![wfak]"
 
 chapter sring
 

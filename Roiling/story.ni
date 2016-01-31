@@ -8884,24 +8884,24 @@ to say tables-beams:
 
 Dusty Study is an innie room in Roman Manor. "[one of]Your study's not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if thinko is false and gunter is off-stage]. It's a good place to just THINK[end if][if Gunter is in lalaland]. After your sleep, you remember you built some secret passages[end if][if gunter is in lalaland]. You'll want to take them[else]. You came in through your super-secret side door, and you don't feel like going back out, yet[end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
 
-to determine which number is study-outs:
+to decide which number is study-outs:
 	let q be 0;
 	if tables are in lalaland:
 		increment q;
 	if t-b are in lalaland:
 		increment q;
-	if my niche is in lalaland:
+	if niche is in lalaland:
 		increment q;
 	decide on q.
 
 after printing the locale description when player is in dusty study and gunter is in lalaland:
-	if tables are in lalaland or t-b is in lalaland or my niche is in lalaland:
+	if tables are in lalaland or t-b is in lalaland or niche is in lalaland:
 		say "You take stock of your way[unless study-outs is 1]s[end if] out: ";
 		if tables are not visible:
 			say "You could probably go [b]in[r], to the stable, with the tables gone. ";
 		if t-b are in lalaland:
-			say "You also cleared a path [b]down[r] to the basement[end if]. ";
-		if my niche is in lalaland:
+			say "You [if tables are in lalaland]also [end if]cleared a path [b]down[r] to the basement. ";
+		if niche is in lalaland:
 			say "There's [if study-outs > 1]also [end if]a chimney leading [b]up[r]. ";
 		say "[line break]";
 	continue the action;
