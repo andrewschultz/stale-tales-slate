@@ -701,7 +701,7 @@ to say randbla:
 to say post-brk:
 	if resort is solved:
 		say "[paragraph break]";
-
+		
 [in case I need to use this, it's here]
 [to say post-lb:
 	if resort is solved:
@@ -1001,7 +1001,7 @@ does the player mean objasking generically redness when player is in notices: it
 does the player mean objasking about redness when player is in notices: it is very likely.
 
 does the player mean objasking generically when noun is enclosed by location of the player: it is very likely.
-
+	
 does the player mean objasking about when second noun is enclosed by location of the player: it is very likely.
 
 check objhinting red bull burdell:
@@ -1118,7 +1118,7 @@ carry out objhinting:
 
 to say no-sto:
 	say "Nothing is hidden in that store";
-
+	
 to say nxt-g:
 	say "Maybe next game";
 
@@ -1520,7 +1520,7 @@ section metros
 
 carry out objhinting faeries when fairy-worthy is true:
 	say "You've done all you can for the faeries." instead;
-
+	
 carry out objhinting begonias when fairy-worthy is false:
 	try objhinting faeries instead;
 
@@ -1707,7 +1707,7 @@ carry out objhinting oils when oils are in cask and player is not in moor:
 
 carry out objhinting cask when sack is off-stage:
 	all-say "[one of]The cask is versatile. Did you look at it? [plus][or]The tagged gadget gives it away. [plus][or]It is also a SACK, which can carry different things. [minus][cycling]" instead;
-
+ 
 carry out objhinting an ingredient:
 	all-say "[The noun] can become part of a meal." instead;
 
@@ -1929,7 +1929,7 @@ instead of waving hands:
 
 instead of jumping:
 	if player is in subsite:
-		say "Apparently, it's your career that needs the jump, not you." instead;
+		say "Apparently, it's your career that needs the jump, not you." instead; 
 	if player is on fuzzy wall:
 		say "Bad idea. Just climb down instead." instead;
 	if player is in woodland:
@@ -2114,7 +2114,7 @@ check pushing:
 	if noun is drapes:
 		say "The drapes almost seem to enfold you as you get close. You may need to cut your way through." instead;
 	say "You give a few hups but fail to push." instead;
-
+	
 the can't pull people rule is not listed in any rulebook.
 the can't pull scenery rule is not listed in any rulebook.
 
@@ -2430,7 +2430,7 @@ carry out optining:
 		say "Now pointing you with an additional hint when you have the right anagram letters.";
 		now point is true;
 	the rule succeeds.
-
+	
 chapter notiping
 
 notiping is an action out of world.
@@ -2446,7 +2446,7 @@ carry out notiping:
 		say "Now hiding tips in favor of a generic response.";
 		now point is false;
 	the rule succeeds.
-
+	
 chapter certifying
 
 annoying-switches is a number that varies.
@@ -3349,7 +3349,7 @@ to place-random-garbage:
 	d "[random guider in sf] in SF.";
 	move random off-stage guider to rf;
 	d "[random guider in rf] in RF.";
-
+	
 check going when player is in sf or player is in rf:
 	if player is in sf or player is in rf:
 		let mygu be a random visible guider;
@@ -3443,7 +3443,9 @@ the caterers' terraces are plural-named amusing scenery in subsite. "You can't s
 
 The banner is amusing scenery in Busiest Subsite. "'This way: BEING FIRED!'[one of] People walk by, discussing how the DEBRIEFING should make Mondays dynamos again.[or] You're run over by people saying 'This talk will be a FINE BRIDGE to a new job!'[or] Has nobody else noticed this sign? Or what it says?[stopping]"
 
-the slim neat name list is scenery in Busiest Subsite. description of name list is "[one of]The list is slim, but it's long. Several names[or]More names[stopping]: [randbla][unless cycled-yet]. [one of]A list of names has always left you feeling like you wouldn't fit in, but this is a step beyond[or]Okay, maybe your name will stand out among these others. Maybe even the right way[or]It's as if someone, or something, is hinting you don't really belong at this job fair[or]Man! So many applicants, so few jobs[or]The names can't all be like this. It's just one more obstacle against you getting re-hired. Grr[or]This is a joke, right? Then someone else writes their name down, and yup, it's in tune with the others[or]You half expect Candid Camera to pop up, or maybe your old psychology professor[or]What is the deal here? Did some computer drudge run a PERL script and spit these names out as a joke? If so, you wonder what their problem is, and if they have anything better to do, and if they got canned like you did. You definitely would hate to be stuck sifting through their work or jokes for a few hours. That'd be painful[or]You're slightly disappointed and glad that there's nobody with the same last and first names, yet[or]Maybe there's a really weird Fermi question in here somewhere, or it's like that freshman year high school 'quiz' that said read everything before doing anything, then the final step was, sign your name[or]Your morbid curiosity is, apparently, not dead yet[stopping][end if]."
+cycled-yet is a truth state that varies. cycled-yet is false.
+
+the slim neat name list is scenery in Busiest Subsite. description of name list is "[one of]The list is slim, but it's long. Several names[or]More names[stopping]: [randbla][unless cycled-yet is true]. [one of]A list of names has always left you feeling like you wouldn't fit in, but this is a step beyond[or]Okay, maybe your name will stand out among these others. Maybe even the right way[or]It's as if someone, or something, is hinting you don't really belong at this job fair[or]Man! So many applicants, so few jobs[or]The names can't all be like this. It's just one more obstacle against you getting re-hired. Grr[or]This is a joke, right? Then someone else writes their name down, and yup, it's in tune with the others[or]You half expect Candid Camera to pop up, or maybe your old psychology professor[or]What is the deal here? Did some computer drudge run a PERL script and spit these names out as a joke? If so, you wonder what their problem is, and if they have anything better to do, and if they got canned like you did. You definitely would hate to be stuck sifting through their work or jokes for a few hours. That'd be painful[or]You're slightly disappointed and glad that there's nobody with the same last and first names, yet[or]Maybe there's a really weird Fermi question in here somewhere, or it's like that freshman year high school 'quiz' that said read everything before doing anything, then the final step was, sign your name[or]Your morbid curiosity is, apparently, not dead yet[stopping][end if]."
 
 after examining name list for the first time:
 	say "Someone mutters, 'Bob Smith. Joe White. Bill Jones. Sure they're nice people, but not worth staring at...'[paragraph break]You're not seeing that at ALL. Hmm.";
@@ -3593,7 +3595,7 @@ check taking off magenta nametag (this is the remove your tag or gadget tag rule
 
 report taking off magenta nametag when player has gadget:
 	say "You remove the magenta nametag, which seems safer and easier than futzing with the gadget's [if tag is examined]show hows [end if]tag.";
-
+	
 to say nametag-desc:
 	if player is in Dry Yard:
 		say "[one of]You were the only person stuck with this color. Others got plain white or grey. Surely that can't mean anything...can it?[paragraph break]Because it seems totally useless now [if player wears nametag]on your shirt[otherwise]it's detached[end if][if goat is visible]. But after what you did to the goat, maybe it'll be useful somewhere[otherwise]. You'd like it to be useful for more than identification[end if][or]An ugly magenta[stopping].[no line break]";
@@ -3619,7 +3621,7 @@ chapter A Dry Yard
 There is a room called A Dry Yard.
 
  A Dry Yard is in Intro.
-
+ 
 understand "dray" as a mistake ("You don't have enough possessions to need a cart. You probably need somewhere to go, instead.") when player is in Dry Yard.
 
 instead of exiting in Dry Yard:
@@ -3637,7 +3639,7 @@ every turn when player is in dry yard and odor is in dry yard and player was in 
 
 to say final-hint:
 	say "[one of]You know you need to find the right thing to think, [i]or do[r].[or]You suddenly wish someone would come by to help, so you could be all [one of]'Dr.! Oo!'[or]'Oo! Dr.!'[cycling][cycling]"
-
+	
 description of Dry Yard is "This is the center of a wide-open space. There's only a shrub and brush for vegetation[if odor is visible]. You definitely smell an odor, though[else]. A door stands here, too[end if]."
 
 the shrub is scenery in Dry Yard. "[shru-bru]."
@@ -4278,7 +4280,7 @@ to say v-b:
 
 instead of eating the saltine:
 	if gateman is visible:
-		say "[one of]Old Man Almond coughs. 'You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static [if static is in lalaland or attics are in lalaland]was[else]is[end if] just practice[or]You reckon you can wait until the real quest[stopping].'";
+		say "[one of]Old Man Almond coughs. 'You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static [if static is in lalaland or attics are in lalaland]was[else]is[end if] just practice[or]You reckon you can wait until the real quest[stopping].'"; 
 		pad-rec "xx" instead;
 	if faeries are visible:
 		say "As you open the packet, the faeries buzz. It'd be rude to eat in here, so you step out, eat and come back.";
@@ -5481,7 +5483,7 @@ section guiders
 [guiders are items that cue the direction to go. There are four.]
 
 a guider is a kind of thing. a guider is usually scenery. a guider has a direction called godir.
-
+ 
 check taking a guider:
 	if noun is thorn:
 		say "You'd just poke yourself. Maybe you can take a hint from it.";
@@ -5508,7 +5510,7 @@ understand "tea" as aroma of teas.
 a rambling shout is a guider. godir of rambling shout is south. description of shout is "It's gibberish, but it has to be coming from somewhere."
 
 understand "noise/sound" as rambling shout when rambling shout is in location of player.
-
+ 
 chapter Rest of Forest
 
 rf is a privately-named room in Forest. the printed name of rf is "Rest of Forest". "The forest feels a bit thinner here, so you must be close to somewhere new. Here, [vis-hint]."
@@ -5716,7 +5718,7 @@ the dots are useless scenery in s-e-d. "They are probably just ice, but they, er
 
 check taking dots:
 	say "[one of]You touch one, and it melts. But there are plenty others[or]The next dot would just melt, too[stopping]." instead;
-
+	
 check examining the flesh shelf:
 	ignore the examine supporters rule.
 
@@ -5894,7 +5896,7 @@ instead of doing something with the stack of tacks:
 
 Instead of taking the notes stone:
 	say "it seems to be glued to the tacks stack. Anyway, you probably only need it for its information."
-
+	
 understand "tones" as a mistake ("You aren't sure you need a booming voice telling you what you can EXAMINE.") when player is in trodes.
 
 description of notes stone is "'[i]Attention, word-boy/girl/woman/man! You may think letters are the basic building blocks of everything, but the computer age has shown it's 1[']s and 0[']s! We don't stow twos here! You won't find simpler piles, Mr.! Or a simpler pile, Mrs.![r]'"
@@ -6742,14 +6744,14 @@ instead of doing something with grist when fridge-open is false:
 	say "You guess what is in the fridge, and you are right! There is a cake pan, too.";
 	now fridge-open is true;
 	continue the action;
-
+		
 instead of doing something with cake pan when fridge-open is false:
 	if the current action is taking:
 		say "Yes, that's in the fridge, but it's someone else's." instead;
 	say "You guess what is in the fridge, and you are right! There is some grist, too.";
 	now fridge-open is true;
 	continue the action;
-
+		
 check opening obligatory fridge:
 	now fridge-open is true;
 	now fridge is transparent;
@@ -8159,7 +8161,7 @@ check taking off velcro:
 		say "You'd fall. Best get down from the wall, first." instead;
 	if player is in abyss:
 		say "Maybe if you had something that gave you an even better grip, you could. But that siren is distracting." instead;
-
+		
 check wearing velcro:
 	if player is in abyss:
 		say "[if siren is in abyss]That's not useful in this sticky situation[else]The resin is more useful for you to grab stuff[end if]." instead;
@@ -10113,7 +10115,7 @@ check going nowhere in Dry Yard:
 		say "You just unlocked that door[if bugle-played is true and blot is visible], not once, but twice[end if]. Walking away from it would be copping out." instead;
 	if yard-door is visible:
 		say "That'd feel a bit odd, making a door then walking away from it. Maybe there's a way to unlock it, maybe as easy as changing it from an odor in the first place." instead;
-
+	
 check going nowhere:
 	say "This is a generic message to say you can't go that way. It should be changed to add variety and flavor.";
 	the rule succeeds;
@@ -10186,11 +10188,10 @@ after reading a command:
 			all-say "[the player's command]";
 			now just-print is true;
 		reject the player's command;
-[	if the player's command matches the regular expression "\..*<\w\d>":
-		if period-warned is false:
-			say "I noticed you used a period to separate commands. Unfortunately, the parser in Inform seems to have an extremely obscure bug (#1011 at inform7.com) that interacts with the solution to this game if you separate commands with periods. It was noticed near the release deadline, and it manifests itself when you refer to an in-game item or person or thing as one in a series of commands, usually three or more.[paragraph break]I do this not to call out the people who've worked so hard on making Inform 7 robust and accessible but to warn you that there are certain commands you may wish to type by themselves, because this game taxes the parser[if two-of-three is true]. I accept if you choose to downgrade this game as a judge because of this, or because I may be wrong that the bug is on Inform's end[end if].[paragraph break]This warning won't appear again. Hit any key to continue.";
+	if period-warned is false:
+		if the player's command matches the regular expression "\.":
+			say "Small warning--this shouldn't be a problem, but if you use periods to separate a command to do your magic, the parser will have problems. This is fixed in later versions of Inform, but moving ahead proved too sticky. Sorry. That said, normal commands will work okay.[wfak]";
 			now period-warned is true;
-			wait for any key;]
 	remove stray punctuation;
 	let XX be indexed text;
 	let XX be the player's command in lower case;
@@ -10936,7 +10937,7 @@ to say roo:
 
 to say ask-red:
 	pad-rec "red"
-
+	
 table of general-blather
 him-who	topic	him-say
 deadbeat	"beats"	"They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, [if condo-evac is true]dude[otherwise]you square, yo[end if]."
@@ -11123,7 +11124,7 @@ after doing something with noughts:
 	if nau-nou is false and the player's command matches "naughts":
 		say "You also remember some nonsense about there being two ways to spell naughts/noughts.";
 		now nau-nou is true;
-
+		
 nau-nou is a truth state that varies.
 
 the shotgun is a container. understand "shot/ gun" as shotgun when shotgun is visible.
@@ -13972,7 +13973,7 @@ carry out specsing:
 			increment qq;
 			if the-from entry is not a backdrop:
 				if the-from entry is not off-stage and the-from entry is not in lalaland:
-					now reg is map region of location of the-from entry;
+					now reg is map region of location of the-from entry;				
 			say "[qq]. [the-from entry] -> [the-to entry] [reg] : [spec-help of the-from entry]";
 	if qq is 0:
 		say "Yay! All things are clued.";
