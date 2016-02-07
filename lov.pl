@@ -49,6 +49,7 @@ while (@ARGV[$count])
   /^-dbr$/i && do { @dirs = ("c:/users/dropbox/andrew/roil/roil.ni"); $count++; next; }; #dropbox roiling
   /^-a$/i && do { $average = 1; $count++; next; }; #show averages
   /^-as$/i && do { $average = 1; $sortbyaverage = 1; if ($a =~ /aS/) { $sortbyaverage = -1; } $count++; next; }; #show averages
+  /^-?cg$/i && do { $countGenders = 1; $count++; next; }; #count genders in total
   /^-du$/i && do { $downup = 1; $count++; next; }; # reverse order arrays in (default = most first)
   /^-ud$/i && do { $downup = 0; $count++; next; }; # reverse order arrays in
   /^-f$/i && do { $fileName = $b; $count += 2; next; }; # define new file name
@@ -303,6 +304,8 @@ close(A);
 
 print "Table of Nudges has $myLines.\n";
 
+if (!$countGenders)
+{
 open(B, "c:/writing/dict/lov.txt");
 while ($b = <B>)
 {
@@ -322,6 +325,7 @@ open(B, ">>c:/writing/dict/lov.txt");
 print B "$shortName,$sums,$prod,$dateForm\n";
 close(B);
 }
+} else { print "Not counting gender-if anagrams.\n"; }
 
 if ($warning) { print "WARNING: $warning"; }
  return;
@@ -414,7 +418,12 @@ sub countTables
     $a =~ s/\".*//g;
 	
 	$lgth = length($a);
-    if ($a =~ /\[if player is (fe)?male\]/i) { $genderLines++; if (!$gender) { $lgth -= $genderChars;  } }
+    if ($a =~ /\[if player is (fe)?male\]/i)
+	{
+	  $genderLines++;
+	  if (!$gender) { $lgth -= $genderChars;  }
+	  if ($countGenders) { $lines{$b}++; }
+	}
 
 	$size{$b} += $lgth;
 	$totalSize += $lgth;

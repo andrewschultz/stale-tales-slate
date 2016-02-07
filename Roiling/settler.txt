@@ -440,7 +440,7 @@ miser ruble,mulberries
 !melons,solemn
 !peach,cheap
 !nectarine,ancienter
-!tangerine,argentine
+greenstain,tangerines
 !deserver,reversed
 !reserved,reversed
 !harmonicas,maraschino

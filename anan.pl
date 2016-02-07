@@ -14,6 +14,8 @@ for $thisarg (0..$#ARGV)
 if ($thisMatch =~ /==/) { $eqOnly = 1; $matchFlag = 0; $thisMatch =~ s/=//g; }
 elsif ($thisMatch =~ /=/) { $eqOnly = 1; $matchFlag = 1; $thisMatch =~ s/=//g; }
 
+if ($thisMatch =~ /!/) { $mustFirstLast = 1; $thisMatch =~ s/!//g; }
+
 if ($thisMatch =~ /-/) { $toSub = $thisMatch; $toSub =~ s/.*-([a-z]+).*/$1/g; $thisMatch =~ s/-[a-z]+//g; }
 
 if ($thisMatch =~ /\./) { print "$thisMatch has periods, removing.\n"; $thisMatch =~ s/\.//g; }
@@ -88,7 +90,11 @@ while ($a = <A>)
   for $q (keys %times) { if ($mytimes{$q} > 0) { $toAdd .= uc($q) x $mytimes{$q}; } }
   
   if (!$eqOnly) { if (!$toAdd) { print "!"; $matches .= " $a"; } print "/" . alfo($toAdd); } else { if ($matchFlag && !$toAdd) { $matches .= " $a"; } }
-  if ($linked{alfo($a)}) { print "=$nameType{alfo($a)}|$linked{alfo($a)}/$bkwd{alfo($a)}"; if ($eqOnly) { $count++; if ($count == 5) { print "\n"; $count = 0; } else { print ", "; } } }
+  if ($linked{alfo($a)})
+  {
+    if (($mustFirstLast) && ($nameType{alfo($a)} eq "L")) { next; }
+    print "=$nameType{alfo($a)}|$linked{alfo($a)}/$bkwd{alfo($a)}"; if ($eqOnly) { $count++; if ($count == 5) { print "\n"; $count = 0; } else { print ", "; } }
+  }
   else
   {
   $linked{alfo($toAdd)} = $toAdd;

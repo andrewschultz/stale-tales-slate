@@ -930,6 +930,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "silly"	371253742	others	--	silly shirt	--	"[shirt-sez]."
 "shirt"	366982932	others	--	silly shirt	--	"[shirt-sez]."
 "sillyshirt"	738236674	others	--	silly shirt	--	"[shirt-sez]."
+"tangerine"	661641421	others	--	green stain	--	"The green stain could make just one fruit, but why not think bigger? It could become many."
 "rapt"	272087598	others	--	rapt figure	--	"[whole-item]."
 "figure"	422343163	others	--	rapt figure	--	"[whole-item]."
 "utensil"	600010093	others	--	rapt figure	--	"[rapt-glare]."

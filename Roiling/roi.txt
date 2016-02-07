@@ -1281,6 +1281,8 @@ An APRICOT.
 GOOSEBERRY.
 ?And the miser ruble?
 MULBERRIES.
+?And the green stain?
+TANGERINES.
 >>Filed Field
 ?Anything besides fruit here?
 No.
@@ -1340,9 +1342,6 @@ SOLEMN.
 SOLEMN, again.
 ?The peach?
 CHEAP.
-?Tangerine?
-Looks like Jorge Luis Borges if you examine it twice.
-ARGENTINE.
 ?Nectarine?
 Needs to be older.
 ANCIENTER.

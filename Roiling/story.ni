@@ -4510,7 +4510,7 @@ harmonicas	"The harmonicas whistle, as if something happened."
 pagers	"The pagers light up slightly. Maybe give it another go."
 riot cap	"Nothing happens. Your magic skills feel like the pits for a second."
 nectarine	"The nectarine seems a little less shiny and new. But not enough."
-tangerine	"You try and remember your geography. You must be close!"
+green stain	"Parts of the green stain turn orange-ish but is too small to be oranges."
 peanut cola	"The peanut cola smells slightly fruity for a minute."
 rapt figure	"The rapt figure frowns as if it's eaten something sour."
 briar screen	"The briar screen briefly turns darker."
@@ -5508,6 +5508,8 @@ carry out others-hinting:
 			try objhinting riot cap instead;
 		if sorer bogey is visible:
 			try objhinting sorer bogey instead;
+		if green stain is in swell wells:
+			try objhinting green stain instead;
 	if player is in filed field:
 		if pryer bars are visible:
 			try objhinting pryer bars instead;
@@ -5530,8 +5532,6 @@ carry out others-hinting:
 			try objhinting melons instead;
 		if nectarine is in clearing:
 			try objhinting nectarine instead;
-		if tangerine is in clearing:
-			try objhinting tangerine instead;
 		all-say "There's nothing left to do here." instead;
 	if player is in Scape Space:
 		if storage box is in Scape Space:
@@ -8511,7 +8511,7 @@ melons	melons	"solemn"	"solemn"	"You half-frown at the melons, and Len, groaning
 rapt figure	grapefruit	"grapefruit"	"grapefruit"	"The figure gives a look as if it's eaten something sour before it rolls into itself, into a lumpy yellow ball--a grapefruit!"	true	694430761
 mean trowel	watermelon	"watermelon"	"watermelon"	"The trowel seems to inflate from within and take on a much greener shade. It becomes a watermelon--not a big one, but healthy looking enough."	true	815317707
 nectarine	nectarine	"ancienter"	"ancienter"	"The unripe nectarine becomes salable. You swipe your tekno-token, taking only one: multiple nectarines might have transience."	true	648047304
-tangerine	tangerine	"argentine"	"argentine"	"Your fake knowledge pays off! You now have a tangerine."	true	661641421
+green stain	tangerines	"tangerines" or "tangerine"	"tangerines"	"The green stain coalesces and brightens...and becomes a few tangerines! It changed color, too. Every single one ain't green."	true	757915387
 reserved	guava	"reversed"	"reversed"	"The sign wobbles over and falls. You take a guava you found behind it. [greedy-person] nods, impressed."	true	778533808
 pugnacious plant	rhubarb	"rhubarb"	"rhubarb"	"The plant's arms turn to stalks of rhubarb, which fall off. What looks like an evil spirit departs from it as it slinks into a corner. [greedy-s] sniffs at the rhubarb with disdain. Yay, more fruit for you."	true	352061340
 b-r	breadfruit	"breadfruit"	"breadfruit"	"You decide the raft would be better as breadfruit, whatever that is. The raft swirls into something more spherical, but still nothing close to what you expected. It's odd and bumpy, but you take it."	true	619813094
@@ -22486,6 +22486,14 @@ check climbing s-w:
 check going to Swell Wells for the first time:
 	say "'Ramble, ambler!' Curtis calls.";
 
+chapter tangerines
+
+the green stain is scenery in Swell Wells. "It makes you see red even before looking closely at you, and when you do, it seems to be sneering at you. As if to resent gain."
+
+a-text of green stain is "RYRRYRYRYR". b-text of green stain is "RYRRYRYRYR".
+
+the tangerines are plural-named fruit. "You can't tell where they're from. If you look at one, you'd guess Argentine. Or all of them, Energistan."
+
 chapter mulberries
 
 the miser ruble is a thing in Swell Wells. "The miser ruble the swell wells coughed up lies here.". description of miser ruble is "It's an odd purplish-blue, even more oddly engraved with BEMIRE! SLUR! in red."
@@ -22860,20 +22868,15 @@ Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "There
 
 after choosing notable locale objects when player is in clangier clearing:
 	set the locale priority of len craig to 1;
-	if tangerine is visible and tangerine is not carried:
-		set the locale priority of tangerine to 3;
 	repeat with froo running through fruits in clearing:
-		if froo is not tangerine and froo is not carried:
+		if froo is not carried:
 			set the locale priority of froo to 6;
 
 for writing a paragraph about a fruit (called froo) in Clangier Clearing:
-	if froo is tangerine:
-		continue the action;
-	say "[if tangerine is in clearing]Also[else]Still[end if] for barter: [a list of not mentioned fruits in clearing].";
+	say "Still for barter: [a list of not mentioned fruits in clearing].";
 	now lemons are mentioned;
 	now melons are mentioned;
 	now nectarine is mentioned;
-	now tangerine is mentioned;
 
 understand "cigar" as a mistake ("That'd be out of place among fresh fruits. Plus, whether or not Len deserves a cigar, he doesn't deserve to be turned into one.") when player is in clearing.
 
@@ -22953,14 +22956,6 @@ A nectarine is a reflexive fruit in Clangier Clearing.
 a-text of nectarine is "YRRYYRRYR". b-text of nectarine is "YRPYYRRYR".
 
 The description of the nectarine is "[if nectarine is reflexed]It's greener than green and could use aging, maybe a little wrinkling[else]It looks fully ripe[end if]." [ancienter/ancienter]
-
-the tangerine is a reflexive fruit in Clangier Clearing. "A tangerine is here. Its wrinkles remind you of [one of]someone you'll remember if you examine again[or]Jorge Luis Borges's face[stopping]. It's stamped with some small lettering."
-
-description of tangerine is "It says GUESS MY NATIONALITY (WIKIPEDIA IS USELESS HERE)"
-
-a-text of tangerine is "YRRYRRYRY". b-text of tangerine is "YRRYRRGPG".
-
-the small lettering is part of the tangerine. description is "GUESS MY NATIONALITY (WIKIPEDIA IS USELESS HERE)"
 
 A quince is a reflexive fruit in Clangier Clearing. description of quince is "[if quince is reflexive]Written on it is NAME A PRICE IN ITALIAN[else]Nothing too special about it[end if]. It looks like your average combination of an apple and a pear."
 
@@ -24749,8 +24744,7 @@ peach	"[one of]The peach too expensive.[plus][or]The settler knocks the peach ou
 lemons	"[if lemons are not in clearing and melons are not in clearing]You don't need to hint this.[else if lemons are not in clearing]Do what you did with the lemons[else if melons are not in clearing]Do what you did with the melons[else][one of]The price, as is, makes you frown.[plus][or]Maybe being depressing will depress prices.[plus][or]Get SOLEMN.[minus][cycling][end if]"
 melons	--	lemons
 reserved sign	"[one of]RESERVED for a DESERVER.[plus][or]The settler makes the sign pretty clear.[plus][or]However, if you take or examine the sign, you're told it's the opposite of an invitation to take it.[plus][or]How do you make the sign the opposite of what it is?[plus][or]REVERSED.[minus][cycling]"
-tangerine	"[one of]Hm, the tangerine has a nationality.[plus][or]The settler gives the last three letters for the tangerine, or you can notice the tangerine reminds you of Jorge Luis Borges.[plus][or][plus][or]ARGENTINE.[minus][cycling]"
-small lettering	--	tangerine
+green stain	"[one of]If you try to decipher it, you see red, but it almost seems orange-ish, too.[plus][or]Small orange-ish fruits that are not oranges.[plus][or][plus][or]TANGERINES.[minus][cycling]"
 nectarine	"[one of]The nectarine's not too old, but if it were, you might get it cheaper. Cheaperer.[plus][or]Len Craig suddenly starts using bad grammar describing the nectarine.[plus][or]ANCIENTER.[minus][cycling]"
 quince	"[if quince is reflexed][frootz][else][one of]How do you count in Italian, to name a price? [plus][or]Uno, duo, tre, quattro, ... [plus][or] ...CINQUE. [minus][cycling][end if]"
 pears	"[frootz]"
@@ -25633,8 +25627,8 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]you could've gotten the peach CHEAP.";
 		if l-o-p is not reflexed:
 			say "[2dmiss of cur-reg]you could've said CRIPES at the prices.";
-		if tangerine is not in lalaland:
-			say "[2dmiss of cur-reg]you could've noted the tangerine was ARGENTINE.";
+		if green stain is not in lalaland:
+			say "[2dmiss of cur-reg]you could've made the green stain TANGERINES.";
 		if nectarine is not in lalaland:
 			say "[2dmiss of cur-reg]you could've made the nectarine ANCIENTER.";
 		if orange is not in lalaland: [mr ice]
