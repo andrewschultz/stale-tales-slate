@@ -2931,7 +2931,7 @@ store f	forest-x	"forest"	"store f"	"The greens and browns of Store F coagulate 
 store i	sortie-x	"sortie"	"store i"	"The store rumbles, destroying the portraits of famous Tories (this is not a political statement) and revealing the small sortie down[trap-check]. A stairway down remains, but that's about it."	false	531859319
 store m	metros-x	"metros"	"store m"	"The store rumbles, with the collections of small-scale cities disappearing. You see an escalator leading--well, somewhere populated."	false	550941626
 store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! You see, for a brief moment, a manor that seems made for you. 'I know what you're looking at!' calls some random well-wisher. 'You've earned it! For defeating Red Bull Burdell!'[paragraph break]Before you reply you haven't, he's already run behind store G, yelling 'Go! Rest!'"	false	572190276
-cabinet	nice bat	"nice bat"	"cabinet"	"The cabinet seems to expand like an amoeba, then, POP! It becomes a rather large bat, which jumps up and down excitedly. It's clearly grateful it has become more than just something to store things in."	false	384428789	[end trips strip anagrams]
+cabinet	nice bat	"nice bat" or "be actin"	"cabinet"	"The cabinet seems to expand like an amoeba, then, POP! It becomes a rather large bat, which jumps up and down excitedly. It's clearly grateful it has become active, alive--more than just something to store things in."	false	384428789	[end trips strip anagrams]
 ones	nose	"nose"	"ones"	"The ones line up next to each other in a pair of not quite v-shaped semicircles. Then they melt into a nose. You take it."	true	367340160
 dashes	shades	"shades"	"dashes"	"Most of the dashes reform into a pair of eyeglass rims, and the remaining one fill in as lenses. They lighten a little, and you have fully functioning shades."	true	380853247
 noughts	shotgun	"shotgun"	"noughts"	"Bam! The noughts slink together to form a gun barrel, then a whole big powerful gun."	true	517631877
@@ -3977,7 +3977,7 @@ description of the attics is "They fit perfectly on what was once the top of the
 
 section acne-bit cabinet
 
-the acne-bit cabinet is an open openable transparent container in notices section. It is fixed in place. "[one of]It can't be... can it be...? A cabinet floating in mid-air. It looks acne-bit. It's open, too[or]The acne-bit cabinet is still floating [if player is in notices]and squeaking [end if]here[if player is in notices section]. It contains [a list of things in cabinet][end if][stopping]."
+the acne-bit cabinet is an open openable transparent container in notices section. It is fixed in place. "[one of]It can't be... can it be...? A cabinet floating in mid-air. It looks acne-bit. It's open, too[or]The acne-bit cabinet is still floating [if player is in notices]and squeaking, maybe shuddering as if trying to move meaningfully [end if]here[if player is in notices section]. It contains [a list of things in cabinet][end if][stopping]."
 
 rgtext of cabinet is "[rcn][rc][rc][rc][ast][rc][rc][gc]". rpos of cabinet is 7. gpos of cabinet is 5.
 

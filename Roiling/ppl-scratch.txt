@@ -343,16 +343,13 @@
 "Out Minna Mountain"
 "Out Cris Turcios"
 "Out Myrl Moultry"
-"Out Gill Guillot"
-"Out Berg Bourget"
-"Out Land Outland-Daulton"
+"Out Dan'l Daulton"
 "Out Arce Croteau"
 "Out Barnhill Halliburton"
 "Out Faber Beaufort"
 "Out Book Bookout"
 "Out Brehm Humberto"
 "Out Mceachern Courtemanche"
-"Out Render Roundtree"
 "Out Halls Southall"
 "Out Liss Stlouis"
 "Out Imler Moultrie"
@@ -360,11 +357,7 @@
 "Out Cerny Courtney"
 "Out Hard Hurtado"
 "Out Poli Pouliot"
-"Out Lever Truelove"
-"Out Tann Taunton"
-"Out Pry Prouty"
 "Out Flanery Fauntleroy"
-"Out Sher Souther"
 "Out Riner Ritenour"
 "Out Stoehr Osterhout"
 "Out Hy Tuohy"
@@ -667,3 +660,4 @@
 =======Fang
 =======Buy
 =======Oust
+=======Don

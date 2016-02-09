@@ -289,6 +289,7 @@ blurb
 "Deac Cade"
 "Deandra Andrade"
 "DeAndre Dearden"
+"DeAngelo Eagledon"
 "Deborah Hebrado"
 "Debra Breda"
 "Declan Dancel"
@@ -2847,6 +2848,7 @@ blurb
 "'Populace! Coup plea! A cue: plop!'"
 "'Posh foe of hopes? Eh, spoof!'"
 "'Posh trots stop short!'"
+"'Power games? Sewage romp!'"
 "'Pressures repress us!'"
 "'Pro-money? Yep? Moron!' Prey no mo[']!"
 "'Rallies! All rise!'"
@@ -3209,6 +3211,7 @@ blurb
 "'Oo! Ban a noob!'"
 "Opinions about Nerd Renn Redd. You want to disagree with them all." []
 "'Panic, I? CPAN!'"
+"'Patric's pics-art? A script!'"
 "'PeerSci Creep is Precise!' they admit, exhaustedly."
 "'A perfect fact-peer? Fat creep!'"
 "'Ping Ned.' / 'Pending.'"

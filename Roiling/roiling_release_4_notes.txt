@@ -16,6 +16,9 @@ There was also other miscellaneous stuff and even a few features that fell out w
 --30000+ total elements in the random lists.
 --I also decided to reveal the code names of the updates. They're rather silly, but I hope you enjoy them.
 
+Store H:
+--changed one puzzle to be a little less abstruse (green stain in Wells)
+
 Store U:
 --the scenery in the Same Mesa is now better-named.
 
