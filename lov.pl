@@ -77,7 +77,7 @@ while (@ARGV[$count])
 
 if (@dirs[0] =~ /(sa|roiling)\.inform/) { $printBytes = 1; }
 
-for $myStory (@dirs) { findAna($myStory); }
+for $myStory (@dirs) { findNudges($myStory); findAna($myStory); }
 
 sub findAna()
 {
@@ -286,20 +286,6 @@ $totAvg = $totalSize / $sums;
   print "Total bytes $x + $y = $z.\n";
   }
 
-open(A, $_[0]); $myLines = 0;
-$inNudgeTable = 0;
-while ($a = <A>)
-{
-  if ($a =~ /^table of nudges/i)
-  {
-    $inNudgeTable = 1;
-	<A>;
-	next;
-  }
-  if (($inNudgeTable) && ($a !~ /^\"/)) { last; }
-  if ($inNudgeTable) { $myLines++; }
-}
-
 close(A);
 
 print "Table of Nudges has $myLines.\n";
@@ -370,6 +356,28 @@ sub tableWorthy
 	}
   }
   return 0;
+}
+
+sub findNudges
+{
+
+my $nudgeFile = "c:\\Program Files (x86)\\Inform 7\\Inform7\\Extensions\\Andrew Schultz\\$_[0] Nudges.i7x";
+$myLines = 0;
+if (! -f "$nudgeFile") { return; }
+open(A, $nudgeFile);
+$inNudgeTable = 0;
+while ($a = <A>)
+{
+  if ($a =~ /^table of nudges/i)
+  {
+    $inNudgeTable = 1;
+	<A>;
+	next;
+  }
+  if (($inNudgeTable) && ($a !~ /^\"/)) { last; }
+  if ($inNudgeTable) { $myLines++; }
+}
+
 }
 
 sub listWorthy

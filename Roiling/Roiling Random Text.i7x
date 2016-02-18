@@ -416,6 +416,7 @@ blurb
 
 table of empty command rejects [xxg3]
 blurb
+"Omit talks? Total skim. Milk toast."
 "'[one of]On, ho[or]Ho, on[in random order]?' Oh, no!"
 "'Actions? Coastin['].'"
 "Ah, lots o['] halts."
@@ -1131,6 +1132,11 @@ book manor
 
 table of ad slogans [xxm1]
 blurb	blare	[random sad ads: the blare field designates whether you have an exclamation point at the end]
+"Try Pa's Pastry!"	true
+"Equitos: QUITE SO!"    true
+"Thaler's Slather-Lathers"
+"Brad Coe's Barcodes"
+"SaberDoc Barcodes"
 "[d-t] Saffo Fast Food"
 "[if player is male]Aaron Colt[else]Lora Acton[end if]'s Root Canals" [p]
 "[if player is male]Alec Pino[else]Loni Cape[end if]'s Special on Pecan Oils!"	true [p]
@@ -5136,6 +5142,9 @@ blurb
 
 table of lame movies [xxm7]
 blurb
+"Boor Jeff's Job Offers"
+"Kostner Treks On"
+"Kept From Fort Kemp"
 "[if player is male]Burt Oakes[else]Tresa Kubo[end if] Breaks Out"
 "[n-t]'s Pets: Past Tense"
 "Abdul's Bud Sal"
@@ -6256,6 +6265,8 @@ blurb
 
 table of lousy hit songs [xxm01]
 blurb
+"I Perform For Prime"
+"The Riffs: Fit, Fresh"
 "[d-word-u], Be Bad Men"
 "A-OK We Awoke"
 "Abby, Baby"
@@ -7869,6 +7880,24 @@ this-book is a number that varies. this-book is usually 0.
 
 table of random books [xxm4] [tob]
 blurb	prio
+"Steam On, Mean Sot[r], by Stan Moe"
+"None Rib Bro Nine[r], by Ben Niro"
+"Pain, Hold a Dolphin[r], by Opal Hind"
+"Hermit, Atone Another Time[r], by [if player is male]Theo Reitman[else]Ettie Harmon[end if]"
+"A Curly Elf, Carefully[r], by Lucy Faler"
+"Any Glow? Long Way[r], by Aly Wong"
+"To Search: At Chores[r], by [if player is male]Thor Case[else]Rosa Echt[end if]"
+"Lost Fey Style of[r], by Ty Foles"
+"Virtual Art I Luv[r], by Val Turi"
+"Refund a Rude Fan[r], by [if player is male]Andre Fu[else]Fae Rund[end if]-Dufrane"
+"Nag, Howl, Hang Low[r], by Hal Wong"
+"A Top Scum Camps Out[r], by Pat Musco"
+"Greg Won't Get Wrong[r], by Gwen Gort"
+"Lame Candy: A Calm Deny[r], by Clay Maden"
+"New Pig in Winnipeg[r], by Gwen Pini"
+"I Pan Pain[r], by Nina Paip"
+"Sal Ewing's Wineglass[r], by Giles Swan"
+"But Reach a Butcher[r], by [if player is male]Bret Chau[else]Ruth Cabe[end if]"
 "[a-b], Russ: ABUSERS[r], by Bess Rau"	0
 "[a-word-u] Zit Zen: Snazziest[r], by Issa Zentz"
 "[d-t] Shed the Odds[r], by Ted Dosh"
@@ -13884,6 +13913,9 @@ blurb
 
 table of sicko movies [xxs3]
 blurb
+"Mr. FUPA, Farm Up a Frump."
+"Le Brusque Burlesque."
+"Burlesque Rub: Sequel."
 "[a-word-u]-Hump Smash-Up."
 "[a-word-u] Porn Parsons."
 "[d-word-u] Hoes Had Men So Handsome." []
@@ -16152,6 +16184,9 @@ blurb
 
 table of moralizers [xxu5]
 blurb
+"Hassler Les Rash"
+"Shh-I'm-Pure Humphries"
+"Slandery Lysander"
 "A. Turnip, Puritan" []
 "Abjured Jeb Radu"
 "Abjurer Jae Burr"
@@ -20320,6 +20355,8 @@ blurb
 
 table of posh dialogue [xxv6]
 blurb
+"'Stinkeyes sent? Yikes!'"
+"Yo, chaps, a psycho!"
 "'[d-t]? A Toad!'"
 "'[d-word-u] shy, hm, Sandy?'" []
 "'[if player is female]Gwennie, win Gene[else]Gene, win Gwennie[end if]!'"
@@ -21657,6 +21694,7 @@ blurb
 
 table of posse bosses [xxv7]
 blurb
+"Fried-Calf Radcliffe"
 "[a-word-u]hat Shasta" []
 "[a-word-u]hole Sal Shoe" []
 "[crap-u] Kid Pickard" []
@@ -26932,6 +26970,13 @@ blurb
 
 table of self-help bestsellers [xxv0]
 blurb
+"Then Bag the BANG[r], by Ben Gath"
+"Naievete? Lo, Live, Atone, Elevation[r], by [if player is male]Vito Neale[else]Eve Latino[end if]"
+"Up Well for Full Power[r], by Wolf Ruple"
+"Lie, Wreath: The Wailer, Wealthier[r], by Earl White"
+"Ad of Bein['] Bona Fide[r], by Fae Bodin"
+"Sync Amid Dynamics[r], by Cindy Sam"
+"Fie, Trash This Fear: Shift Era[r], by [if player is male]Seth Fair[else]Fae Hirst[end if]"
 "[if player is male]Fears, Mr[else]Fear, Mrs[end if]? Torn? TRANSFORMER[r], by Storm Ferran"
 "Able to Be a Lot[r], by Beata Botello"
 "Absolutely All-Best You[r], by [if player is male]Les Baluyot[else]Betsy Ulloa[end if]" []
@@ -27292,6 +27337,8 @@ blurb
 
 table of songs you could write [xxvx]
 blurb
+"I, Infected, Deficient"
+"Cads Won't Cast Down"
 "A-Holes So Hale"
 "A-One St.: So Neat" []
 "Ace, Pine in Peace"
@@ -28321,6 +28368,8 @@ blurb
 
 table of Leo-Rand idols [xxp4]
 blurb
+"Clobbering Bob Clinger"
+"Backbone-Conk Babe"
 "[n-t] 'Bam' Bateman" []
 "[tt] 'Thud' Douthit"
 "Abe 'Grr' Garber" []
@@ -28946,6 +28995,7 @@ blurb
 
 table of research topics [xxp5]
 blurb
+"Nattier Nitrate"
 "[if player is male]Craig Abel[else]Alica Berg[end if][']s Algebraics"
 "abstrusest substrates"
 "Achilles helicals" []
@@ -30594,6 +30644,7 @@ blurb
 
 table of Casper mumbles [xxy3]
 blurb
+"'Meta-fiction faction time: am I confetti?'"
 "[if player is male]Lon Veist[else]Lois Vent[end if], novelist? Vile snot!" []
 "Author? Or haut?"
 "Bar-Quotes? Art Bosque? Square-bot!" []
@@ -31787,6 +31838,7 @@ blurb
 
 table of Elvira machines [xxt4]
 blurb
+"hassler-lashers"
 "all-techs hellcats"
 "baser Sabre Bears" []
 "a blast-soar albatross"
@@ -31852,6 +31904,7 @@ blurb
 
 table of Elvira taunts [xxt5]
 blurb
+"'Ho, terminate another time.'"
 "'[if player is male]His foot hoofs it[else]Her foot, oft hero of other[end if]!'" []
 "'Act bold, bad clot!'"
 "'Adroit? Oaf, too afraid!'"

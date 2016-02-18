@@ -23,6 +23,8 @@ book intro
 
 table of job searcher names [xxx]
 blurb
+"Luisa Aulis"
+"Elena Neale"
 "Aaron Orana"
 "Abdul Bauld-Lubda"
 "Abel Beal"
@@ -1217,6 +1219,8 @@ book forest
 
 table of evil locations [xxf]
 blurb
+"Cold-Night Long Ditch"
+"Stencher Trenches"
 "Absorbing-Brains Bog"
 "the AH! Heath"
 "All-Down Lowland"
@@ -1369,6 +1373,8 @@ book sortie
  
 table of poem codas [xxi]
 blurb
+"Quest, oi! Quote is quite so!"
+"Porn, claim a moral panic! Pain! Clamor!"
 "****ed Men, Add Mad End."
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
@@ -2649,6 +2655,7 @@ book metros
 
 table of camp chants [xxm1]
 blurb
+"'Eat pure, up a tree!'"
 "'Abusive USA vibe!'"
 "'Account, U-Can't-Co!'"
 "'The ad: hated!'"
@@ -2967,6 +2974,7 @@ blurb
 
 table of condo dialogue [xxm2]
 blurb
+"Mildew? I'd MEWL!"
 "'Art deco! DO react, redcoat!'"
 "Art ethic. Their chat: chattier, theatric."
 "A badly dressed fellow deplores the skankiness of snakeskins."
@@ -3024,6 +3032,8 @@ blurb
 
 table of nerd natter [xxm3]
 blurb
+"'Bold mocks? Block, mods!'"
+"'A bug not out? BANG!'"
 "'Aliterate tail eater!' / 'Retaliate!'"
 "'Any D&D? Dandy?' The nerds laugh."
 "'The APIs ape this!' / 'Ha, spite!'"
@@ -3415,6 +3425,7 @@ book resort
 
 table of red bull taunts [xxr1]
 blurb
+"'FOE: BULLIED? DOUBLE LIFE? BLUE? FOILED!'"
 "'Ace? I flip: epic fail!'"
 "'Aha! Deft? Fathead!'"
 "'Argument, mega-runt?'"

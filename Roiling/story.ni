@@ -6609,7 +6609,6 @@ stable	"No time for mooching around the manor. You probably need to take [if sit
 highest heights	"You can go back IN to the study, though you don't need to, or you could try [if ramp is visible]to get the pram out of the way[else]going DOWN the ramp[end if]."
 Strip of Profits	"Why run off for fun? See [if number of visible portals is 0]what one of those stores can become[else]what's in one of those portals[end if] instead." [manor]
 Cruelest Lectures	"The trumped-up charges and the teleological lectures have totally conked your sense of direction. You can, however, TRY to go outside."
-Lost Lots	"Outback. You back out."
 Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat." [routes]
 Sun-Spared Underpass	"Far into A rift? No. You can't [if darkness is visible]see far enough to [end if]rely on directions, here[if darkness is visible]. You just need to find No-Gal Logan[end if]."
 Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel on below.[else]Drowning ails or roils a sailor.[end if]"
@@ -6636,8 +6635,8 @@ Loftier Trefoil	"[if rodney is visible]One look from Rodney, and you stay put[el
 Topside Deposit	"The badlands are too dangerous any way but[if scope copse is visited] back[end if] north[if Ray Eck is visible], and Ray Eck's in the way right now[end if]."
 Campsite	"Oh! This is such a nice place! But other than back east, all ways are perilous! Perilous!"
 Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is visible], like the boat, which [kid-first] will let you enter[end if]."
-Outer Route	"The route can't lead anywhere good. Or at least anywhere nearer the castle."
-Lost Lots	"Going anywhere but north would get you really...lost."
+Outer Route	"Unorg'd ground is every way except back east."
+Lost Lots	"You can only back out of this outback to the north."
 Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
 Alcoves	"You sway to the side, not ready to face the menace to the west." [otters]
