@@ -100,23 +100,24 @@ readUp("$lastsFile", 1);
 sub readUp
 {
 
-print "$lastsFile.\n";
-print "Reading $_[0].\n";
+print "Reading $_[0] vs $lastsFile.\n";
 
 open(A, "$dictDir/$_[0]") || die ("No writing/dict/$_[0]!");
 
 $cs = 0;
 
+$line = 0;
 while ($a = <A>)
 {
+  $line++; #for debug purposes in the last names file
   chomp($a);
   $a = lc($a);
+  if ($a =~ /[^a-z]/) { print ("Line $line in $_[0] is not alphabetical.\n"); }
   $b = "$addStr$a";
   $q = alf($b);
   $aalf = alf($a);
   if ($first{$aalf} && ($_[0] == 0)) { next; } #skip over 2 first names
   if ($pinged{$q} && $first{$a}) { next; }
-  $pinged{$q} = 1;
   $first{$aalf} = $a;
   if ($last{$q} || $first{$q})
   {
@@ -148,7 +149,8 @@ while ($a = <A>)
 }
 
 print "$count total names found.\n";
-if ($cs < $count) { print "$cs this go-round.\n"; } else { print C "~~~~~~~~~~\n"; }
+print C "$count total names found.\n";
+if ($cs < $count) { print "$cs this go-round.\n"; print C "$cs this go-round.\n=================\n"; } else { print C "~~~~~~~~~~\n"; }
 print "============\n";
 close(A);
 

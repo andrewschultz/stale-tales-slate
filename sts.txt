@@ -1,4 +1,16 @@
 table of random books [xxm4] [tob]
++"Spotlight Tots['] Plight[r], by Phil Gotts"
+"Punt the Pen-Hunt[r], by Pet Hunn"
+"Big Cedar Bird Cage[r], by Deb Craig"
+"A Sultry Lust-Ray[r], by Ty Rasul"
+"I Shag: a Sigh[r], by Aisha Higgs"
+"Step, Sane Peasants[r], by Tess Pena"
+"Dante, Tend a Den at AdNet[r], by Ada Dennett"
+"Dope Will Lope Wild[r], by Di Powell"
+"Hay Among Mahogany[r], by Gay Homan"
+"Astatine, in a State[r], by [if player is male]Sean Tait[else]Nita East[end if]"
+"Tiny Gourd: Yon Turgid Drying Out[r], by Tori Dungy"
+"Like Milk Deli Milk Killed Me[r], by Mike Dill"
 
 table of posse bosses [xxv7]
 

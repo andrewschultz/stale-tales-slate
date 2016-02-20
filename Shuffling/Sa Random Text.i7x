@@ -23,8 +23,6 @@ book intro
 
 table of job searcher names [xxx]
 blurb
-"Luisa Aulis"
-"Elena Neale"
 "Aaron Orana"
 "Abdul Bauld-Lubda"
 "Abel Beal"
@@ -345,6 +343,7 @@ blurb
 "Egbert Etberg"
 "Elayne Nealey"
 "Eleanor Arleone-O'Leeran"
+"Elena Neale"
 "Elfrida Aldifer"
 "Elke Klee"
 "Ella Leal"
@@ -679,6 +678,7 @@ blurb
 "Lucila Ciulla"
 "Lucinda Alducin"
 "Lui-Uli Liu"
+"Luisa Aulis"
 "Lukas Saulk"
 "Lura Raul" []
 "Luzi Luiz"
@@ -1004,6 +1004,7 @@ blurb
 "Scoby Cosby"
 "Scott Cotts"
 "Scottie Sicotte"
+"Searle Easler"
 "Selya Ayles"
 "Serban Nabers-Barnes"
 "Serge Seger"
@@ -1219,8 +1220,6 @@ book forest
 
 table of evil locations [xxf]
 blurb
-"Cold-Night Long Ditch"
-"Stencher Trenches"
 "Absorbing-Brains Bog"
 "the AH! Heath"
 "All-Down Lowland"
@@ -1242,6 +1241,7 @@ blurb
 "Castle of Lost Face"
 "the Chilling Lichling"
 "Chop-Down-Chow Pond"
+"Cold-Night Long Ditch"
 "Cold Rainy Nordic Lay"
 "the deathless slate shed"
 "Demon Pit Piedmont"
@@ -1338,6 +1338,7 @@ blurb
 "the Spook Pets Hook"
 "Squirmage Quagmires"
 "stale-dawn wasteland"
+"Stencher Trenches"
 "the Stepanski Snakepits"
 "stiff tiffs"
 "Stop-Win Snow-Tip"
@@ -1373,8 +1374,6 @@ book sortie
  
 table of poem codas [xxi]
 blurb
-"Quest, oi! Quote is quite so!"
-"Porn, claim a moral panic! Pain! Clamor!"
 "****ed Men, Add Mad End."
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
@@ -1472,6 +1471,7 @@ blurb
 "Bring mates? Bang, mister! Being smart: best arming."
 "Bring sod, songbird. Sob. Grind."
 "Bro, it's Brito's Bistro! To Ribs!"
+"Bronze age began: zero brazen ego."
 "A brown bar now? Warn Bo!"
 "Bruin-hogs? Rough nibs? No big rush!"
 "Burble, lubber!"
@@ -1771,6 +1771,7 @@ blurb
 "A giver's grave is rags. Vie!"
 "Glib, yon? No! Bilgy!" [p]
 "Glint of flint. Go to fling!"
+"Globe, not to belong: gone, blot!"
 "Gloomy My Logo."
 "Gnar, gnar. Gran rang!"
 "Gnomic tiles. Gimlet icons. Closing time."
@@ -2093,6 +2094,7 @@ blurb
 "Now bar a brown wan orb." []
 "Now ten went on non-wet, not new."
 "Now the hot new went, oh!"
+"Now, then: hen town not hewn."
 "A Nth Wow: what now? Want? How?"
 "Number? Burn [']em!"
 "Nuns go: no guns sung on!"
@@ -2242,6 +2244,7 @@ blurb
 "Poke at a pet OK? Po['] take."
 "Pollutions? Lo, unspoilt sunlit pool. Loon! Tulips! Spout no ill!"
 "Poor boy, Roy Boop."
+"Porn, claim a moral panic! Pain! Clamor!"
 "A portal, polar, at a tarp, lo!"
 "A posse: Aesop's!"
 "Possibly, boys slip. Yip, slobs!"
@@ -2272,6 +2275,7 @@ blurb
 "A pushed, u-shaped sud-heap. Up, a shed."
 "Pyramid may drip rapid. My!"
 "Queen sits. See, squint: quietness."
+"Quest, oi! Quote is quite so!"
 "Question in quotes."
 "Quietly, ye quilt."
 "The quills quell this. Hell quits!"
@@ -2387,6 +2391,7 @@ blurb
 "So go, elf of legos! Slog, foe!"
 "So grant a strong art-song."
 "So grief fogs ire. Serf, I go."
+"So I crept, cripes, to ice ports."
 "So Kevin invokes no skive."
 "So Laud Da Soul as Loud, Aldous."
 "So, Lefty! Lost fey elf toys of style."
@@ -2515,6 +2520,7 @@ blurb
 "To field! Do it, elf! Told! Fie!"
 "To flush, flu-shot lush, oft."
 "To hiss so this is shot: Hi, toss!"
+"To hiss so this is shot: hit, SOS."
 "To Lose Les Too? Ole Sot!"
 "To marry my art or army? Rot."
 "To miss mist so is most... it... moss!"
@@ -2655,7 +2661,6 @@ book metros
 
 table of camp chants [xxm1]
 blurb
-"'Eat pure, up a tree!'"
 "'Abusive USA vibe!'"
 "'Account, U-Can't-Co!'"
 "'The ad: hated!'"
@@ -2675,6 +2680,7 @@ blurb
 "'Aw, tamely melt away, meaty law!'"
 "'AWFUL LAW F U!'"
 "'Back No BankCo!'"
+"'Bailouts?! No absolution!' Obtain soul!"
 "'Ban more? Bore, man!'"
 "'BandCo? Bad Con!'"
 "'Believers be servile. Rebels, vie!'"
@@ -2714,6 +2720,7 @@ blurb
 "'Down, greed! Wrong deed, edged, worn.'"
 "'DuesCorp produces rude cops!'"
 "'A dumb ad-bum? Um, bad!'"
+"'Eat pure, up a tree!'"
 "'Eat pure, up a tree!'"
 "'Eccentrics! Crescentic!'"
 "'Eco-cash coaches, cache so!'"
@@ -2807,6 +2814,7 @@ blurb
 "'Militation limitation!'"
 "'Min-Wage: Mega Win!'"
 "'Monied? I'm DONE!'"
+"'Morale of fear, loom! Loaf more!'"
 "'More fuel? Mere foul!'"
 "'More life moil-free!'"
 "'Most people melt, oppose Pope motels!'"
@@ -2974,7 +2982,6 @@ blurb
 
 table of condo dialogue [xxm2]
 blurb
-"Mildew? I'd MEWL!"
 "'Art deco! DO react, redcoat!'"
 "Art ethic. Their chat: chattier, theatric."
 "A badly dressed fellow deplores the skankiness of snakeskins."
@@ -2996,6 +3003,7 @@ blurb
 "'Lower class calls worse, loses. CRAWL!'"
 "'Maureen's Username?' Um, a sneer."
 "'Mercantile? Malice-rent!'"
+"Mildew? I'd MEWL!"
 "Obvious points are repeatedly flayed deafly."
 "'On bums? So numb! Snub mo[']!'"
 "Parleys about parsley that deserve no replays."
@@ -3032,8 +3040,6 @@ blurb
 
 table of nerd natter [xxm3]
 blurb
-"'Bold mocks? Block, mods!'"
-"'A bug not out? BANG!'"
 "'Aliterate tail eater!' / 'Retaliate!'"
 "'Any D&D? Dandy?' The nerds laugh."
 "'The APIs ape this!' / 'Ha, spite!'"
@@ -3050,8 +3056,10 @@ blurb
 "Bewarin['] a brewin['] webinar."
 "'Blue screen? Serene club!'"
 "'Bold ideas? Bad. Soiled. Old. Biased.'"
+"'Bold mocks? Block, mods!'"
 "A brief argument over the Hax-o-Gen Hexagon: good or bad?"
 "'A broom? Roomba!'"
+"'A bug not out? BANG!'"
 "'...butler I rebuilt!'"
 "'Citin['] of fiction!'"
 "'CleanSoft Conflates lone facts!'"
@@ -3355,6 +3363,7 @@ blurb
 "'IT' DRUG: TURGID RUT, DIG"
 "KNOW ROT? WORK NOT"
 "LIBEL BE ILL"
+"LIE, STEAL: ILL TASTE"
 "LOGIC? OF CIG? FOOL"
 "LOITERING? TIRING OLE TOIL, REIGN"
 "LUNCHTIME: LET IN MUCH? MUNCH LITE"
@@ -3363,6 +3372,7 @@ blurb
 "MORE ASK: OK, SMEAR A SMOKER"
 "MUCH POT: TOP CHUM TO CHUMP"
 "NATTY ICE? TENACITY"
+"NICOTINE'S NICE? IS NOT"
 "NICOTINED? INCONDITE"
 "NO BLISS IN SLOBS"
 "NO METH = HOT MEN"
@@ -3374,6 +3384,7 @@ blurb
 "A PILL'S 'ILL?' SAP"
 "POLYMATH = AMPLY HOT"
 "POT IS PITS-O"
+"POT-RENT = NOT PERT"
 "POT SMOKER? MOOT PERKS"
 "POT USE => TOES UP"
 "POUNDED? DUD PEON"
@@ -3425,7 +3436,6 @@ book resort
 
 table of red bull taunts [xxr1]
 blurb
-"'FOE: BULLIED? DOUBLE LIFE? BLUE? FOILED!'"
 "'Ace? I flip: epic fail!'"
 "'Aha! Deft? Fathead!'"
 "'Argument, mega-runt?'"
@@ -3453,6 +3463,7 @@ blurb
 "'FIE! DROP, PRIDE OF DRIP-FOE!'"
 "'A fight? Ha, gift!'"
 "'FIND LOSER-NERDS. FOIL!'"
+"'FOE: BULLIED? DOUBLE LIFE? BLUE? FOILED!'"
 "'Frump face! Creampuff!'"
 "'Fumble, elf-bum!'"
 "'Give out, yo! I've got you!'"
