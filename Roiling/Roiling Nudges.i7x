@@ -470,6 +470,8 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "remap"	360858842	oyster	--	jukebox	--	"You can't change the bad music selection[if tunes are reflexive]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
 "unset"	501203408	oyster	--	jukebox	--	"You can't change the bad music selection[if tunes are reflexive]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
 "canoe"	292259597	oyster	--	canoe	--	"The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river."
+"soak"	225747539	oyster	--	shore	--	"[raft-is]."
+"oak"	129473573	oyster	--	shore	--	"[raft-is]."
 "fish"	205064007	oyster	Hero's shore	--	--	"T'fish won't shift nowt."
 "herring"	482236070	oyster	Hero's shore	--	--	"Nothing doing. It is, after all, a RED herring. Ba dum bum."
 "sculpture"	777010893	oyster	Hero's shore	--	--	"[sculpt]."
@@ -1495,6 +1497,9 @@ to say no-dsk:
 to say patron:
 	say "They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that"
 
+to say raft-is:
+	say "No, best concentrate on what the raft is"
+	
 to say sculpt:
 	say "That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for"
 
