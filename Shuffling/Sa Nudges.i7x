@@ -255,6 +255,7 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "scraped"	433092329	sortie	--	scraped wall	--	"[hway-hint]."
 "rubble"	408887368	sortie	--	crashing archings	--	"The rubble is too dense to rearrange, physically or magically. You should have as much of the oils as you need."
 "oil"	173159262	sortie	--	oils	--	"[if caskfillings is 2]They're OILS, but you're done with them, anyway[else]Really, they're oils. There's so much more you can do with oils than oil. Well, two things YOU can do[end if]."
+"anapests"	578213162	sortie	--	anapest	--	"Well, there are many, but the poem is [i]in[r] anapest."
 "poem"	347699798	sortie	--	poem	--	"[peas-poe]."
 "poetry"	594417718	sortie	--	poem	--	"[peas-poe]."
 "poem"	347699798	sortie	--	pat	--	"[pat-poe]."
@@ -514,6 +515,9 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "pockets"	554947392	--	--	--	degen-true rule	"You don't need to mess with your pockets."
 "jump"	299607444	--	--	--	degen-true rule	"You consider the benefits of collapsing in an impressively uncoordinated heap, then decide against doing so."
 "point"	372828908	--	--	--	know-point rule	"There's no secret cheat between NO TIP and POINT."
+"parse"	393057655	--	--	--	can-i-parse rule	"There's no inbetween for the PARSE and SPARE commands for the gadget."
+"verb"	338713637	--	--	--	degen-true rule	"[no-special-verb]."
+"verbs"	434987603	--	--	--	degen-true rule	"[no-special-verb]."
 "think"	307225849	--	--	--	degen-true rule	"Whenever you just try to too hard to think, things always get jumbled."
 "score"	402762040	--	--	--	degen-true rule	"There's no way to scramble your score. And scoring another point won't help you solve things, anyway."
 "about"	303175125	--	--	--	degen-true rule	"There's no special addition to the 'about' section, but I'm flattered you looked for it."
@@ -655,6 +659,9 @@ this is the rm-or-moor rule:
 
 to say woe-all:
 	say "Pat will always be woeful. He sort of likes it that way. Focus on his poetry"
+
+to say expo-or-anapest:
+	say "Thinking of the flier leads you back to the anapest";
 
 to say hway-hint:
 	say "The scraped wall doesn't respond or come any closer to being a hallway";
@@ -833,6 +840,15 @@ this is the know-point rule:
 	if pointcue is true:
 		the rule succeeds;
 	the rule fails.
+
+this is the can-i-parse rule:
+	if hows tag is in lalaland, the rule fails;
+	if player has gadget:
+		the rule succeeds;
+	the rule fails.
+
+to say no-special-verb:
+	say "There's no secret verb or verbs to find trying that"
 
 to say no-cred-spec:
 	say "There's no special addition to the 'credits' section, but I'm flattered you looked for it"

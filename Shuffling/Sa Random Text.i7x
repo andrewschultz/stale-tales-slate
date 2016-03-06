@@ -23,6 +23,21 @@ book intro
 
 table of job searcher names [xxx]
 blurb
+"Hanna Nahan"
+"Helena Leehan"
+"Pattey Pyeatt"
+"Veresa Seaver"
+"Aneke Keane"
+"Myrana Aramyn"
+"Gladwin Walding"
+"Enrica Racine"
+"Watty Wyatt"
+"Mariano Romania"
+"Hussain Sushani"
+"Lou-Bert Boulter"
+"Fermina Reifman"
+"McNee Nemec"
+"Carmino Marconi"
 "Aaron Orana"
 "Abdul Bauld-Lubda"
 "Abel Beal"
@@ -59,7 +74,6 @@ blurb
 "Alonso Solano"
 "Alonzo Lozano"
 "Alridge Daigler"
-"Alston Lantos"
 "Alton Tolan-Lanto"
 "Alvado Davola"
 "Alvera Varela-LaVear"
@@ -1223,6 +1237,8 @@ book forest
 
 table of evil locations [xxf]
 blurb
+"Freshwater-Wraths Reef"
+"Malice-On Coal Mine"
 "Absorbing-Brains Bog"
 "the AH! Heath"
 "All-Down Lowland"
@@ -1379,6 +1395,17 @@ book sortie
  
 table of poem codas [xxi]
 blurb
+"Champ? Dolt! Damp cloth! Mold patch!"
+"Heat pangs: the pagans['] pen, aghast!"
+"A Far Odd Radar of Fad Road."
+"We fled elf-dew, few-led."
+"Urgent-smit mutterings: resign, mutt!"
+"Vie: gold? Give, old vile dog."
+"Dew hilt: led with the wild."
+"Weeds of feed sof few does."
+"The brand, then drab, bent hard."
+"This dude died thus: dud heist!"
+"Social men, claim one coal mine!"
 "****ed Men, Add Mad End."
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
@@ -2671,6 +2698,7 @@ book metros
 
 table of camp chants [xxm1]
 blurb
+"'CEOs for cores of force, so!'"
 "'Abusive USA vibe!'"
 "'Account, U-Can't-Co!'"
 "'The ad: hated!'"
@@ -2999,6 +3027,8 @@ blurb
 
 table of condo dialogue [xxm2]
 blurb
+"'Oval rugs? So vulgar!'"
+"'Condoles.' / 'Consoled.'"
 "'Art deco! DO react, redcoat!'"
 "Art ethic. Their chat: chattier, theatric."
 "A badly dressed fellow deplores the skankiness of snakeskins."
@@ -3057,6 +3087,10 @@ blurb
 
 table of nerd natter [xxm3]
 blurb
+"'He slants less than SlashNet!'"
+"'Gosh, belt the blogs!'"
+"'Complicated topic calmed. Placid comet.'"
+"'Pen this: ShipNet!'"
 "'Aliterate tail eater!' / 'Retaliate!'"
 "'Any D&D? Dandy?' The nerds laugh."
 "'The APIs ape this!' / 'Ha, spite!'"
@@ -3324,6 +3358,8 @@ blurb
 
 table of psas [xxm4]
 blurb
+"VOW: DO NICE, VOICE DOWN"
+"NAG ALL? TRY GALLANTRY"
 "11+2=12+1"
 "ABLEISM'S MISSABLE"
 "ACID TRIPS => RAPID TICS"
@@ -3455,6 +3491,7 @@ book resort
 
 table of red bull taunts [xxr1]
 blurb
+"'ME: a right-might era!'"
 "'Ace? I flip: epic fail!'"
 "'Aha! Deft? Fathead!'"
 "'Argument, mega-runt?'"
