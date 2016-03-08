@@ -110,7 +110,7 @@ chapter region definition
 
 Roman Manor is an unsolved region. max-score of Roman Manor is 13. min-score of Roman Manor is 8. [giant pin, stable/stair, chimney/ramp, basement] [non-anagram = staple wall]
 
-Others is an unsolved region. max-score of Others is 39. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits + compass + icons/sonic + passport x 2. FRUI checks what fruit is where.]
+Others is an unsolved region. max-score of Others is 40. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits + compass + icons/sonic + passport x 2. FRUI checks what fruit is where.]
 
 Routes is a region. max-score of Routes is 18. min-score of Routes is 17. [worst ad]
 
@@ -8494,6 +8494,7 @@ mad train	tamarind	"tamarind"	"tamarind"	"Well, you aren't sure if it is that mu
 silly shirt	apples	"apples"	"apples"	"The t-shirt crumples into a few apples. Well, you may not have ESP, but it's something almost as good. You remember a pen pal called Papa Len, too."	true	443013650
 riot cap	apricot	"apricot"	"apricot"	"The riot cap rounds into an apricot, which you take."	true	410438606
 sorer bogey	gooseberry	"gooseberry"	"gooseberry"	"A howling from the well, and the reddish letters fly off! A rather large gooseberry falls on the ground. You pick it up."	true	844616803
+stucco	coconuts	"coconuts"	"coconuts"	"The stucco that was part of the well congeals into a hairy ball (don't ASK where the hair came from) and rolls on the ground."	true	560113623
 miser ruble	mulberries	"mulberries"	"mulberries"	"The ruble blossoms in your hand, turning to a more pleasant sight: a clump of berries."	true	808940340
 barber sickle	blackberries	"blackberries"	"blackberries"	"The barber sickle grows into a bunch of vines which sprout black fruits, and a basket pops out to hold them. How convenient."	true	732304866
 pryer bars	raspberry	"raspberry"	"raspberry"	"The drupelets in the pryer bars pop out and multiply, leaving you with raspberries."	true	704483418
@@ -22468,7 +22469,21 @@ book Swell Wells
 
 Swell Wells is north of Rustic Citrus. "Wells, err, swell from this [one of]lowland[or]old lawn[cycling]. You can go east to a loud clearing, or down the wells, or west to a filed field[if sorer bogey is visible]. You think you hear something from the wells[end if].". Swell Wells is in Others.
 
-s-w are privately-named scenery in swell wells. printed name of s-w is "the wells". understand "wells" and "swell wells" as s-w. "'Ye borers, GO!' is written in red on the wells."
+s-w are privately-named scenery in swell wells. printed name of s-w is "the wells". understand "wells" and "swell wells" as s-w. "It's been vandalized in oh so many ways. [what-clear]."
+
+to say what-clear:
+	if sorer bogey is not in swell wells and stucco is not in swell wells:
+		say "You got rid of some of it, but that's probably all there is";
+	else if stucco is not in swell wells:
+		say "'Ye Borers, go!' is written in red";
+	else if sorer bogey is not in swell wells:
+		say "The advertisement for ScoutCon is ion stucco and in red";
+	else:
+		say "Two prominent ones in red: 'Ye borers, go!' and ScoutCon on stucco."
+
+the stucco is scenery in swell wells. "There's an advertisement for ScoutCon, whatever that is, in red, on stucco, on the side of one of the wells.". a-text of stucco is "RYRYRYRR". b-text of stucco is "RYRYRYRR".
+
+the coconuts are a plural-named fruit in swell wells.
 
 after printing the locale description for swell wells when swell wells is unvisited:
 	say "And what's this? The wells cough up an unexpected wish-coin. It looks like...why, yes it is! A miser ruble!";
@@ -25606,6 +25621,8 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]the riot cap could've become an apricot.";
 		if sorer bogey is not in lalaland:
 			say "[2dmiss of cur-reg]the sorer bogey could've become a gooseberry.";
+		if stucco is not in lalaland:
+			say "[2dmiss of cur-reg]the message on stucco could've become coconuts.";
 		if rapt figure is not in lalaland:
 			say "[2dmiss of cur-reg]the rapt figure could've become a grapefruit.";
 		if barber sickle is not in lalaland:

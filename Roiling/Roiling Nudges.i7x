@@ -932,6 +932,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "silly"	371253742	others	--	silly shirt	--	"[shirt-sez]."
 "shirt"	366982932	others	--	silly shirt	--	"[shirt-sez]."
 "sillyshirt"	738236674	others	--	silly shirt	--	"[shirt-sez]."
+"stucco"	416853538	others	--	stucco	--	"Stucco? No. ScoutCon, the message... (You see red recognizing what you should be chasing)."
 "tangerine"	661641421	others	--	green stain	--	"The green stain could make just one fruit, but why not think bigger? It could become many."
 "rapt"	272087598	others	--	rapt figure	--	"[whole-item]."
 "figure"	422343163	others	--	rapt figure	--	"[whole-item]."
@@ -1096,6 +1097,9 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "ground"	387318486	--	--	--	degen-true rule	"Changing the ground beneath your feet is too dangerous a proposition."
 "jump"	299607444	--	--	--	degen-true rule	"You consider the costs and benefits of collapsing in an impressively uncoordinated heap, then decide against doing so."
 "point"	372828908	--	--	--	know-point rule	"There's no secret cheat between NO TIP and OPT IN."
+"parse"	393057655	--	--	--	can-i-parse rule	"There's no in-between for the PARSE and SPARE commands for the settler."
+"verb"	338713637	--	--	--	degen-true rule	"[no-special-verb]."
+"verbs"	434987603	--	--	--	degen-true rule	"[no-special-verb]."
 "think"	307225849	--	--	--	degen-true rule	"Whenever you just try to too hard to think, things always get jumbled."
 "score"	402762040	--	--	--	degen-true rule	"There's no way to scramble your score. And scoring another point won't help you solve things, anyway."
 "poss"	348366468	--	--	--	degen-true rule	"You can't jumble the possible scores any other way."
@@ -1914,6 +1918,9 @@ this is the know-point rule:
 		the rule succeeds;
 	the rule fails;
 
+to say no-special-verb:
+	say "There's no secret verb or verbs to find trying that"
+
 to say dir-cut:
 	say "There's no special addition to the 'about' section[if mrlp is demo dome], but you're at the director's cut bit right now[end if]"
 
@@ -1928,6 +1935,10 @@ slab-pts is a number that varies.
 
 to say cussy:
 	say "You're not fooling ME. Shame on you"
+
+this is the can-i-parse rule:
+	if elmo is in lalaland:
+		the rule succeeds;
 
 this is the degen-false rule:
 	the rule fails.

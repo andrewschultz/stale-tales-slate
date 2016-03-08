@@ -23,6 +23,8 @@ book intro
 
 table of job searcher names [xxx]
 blurb
+"Lilse Liles"
+"DeLana Andale"
 "Hanna Nahan"
 "Helena Leehan"
 "Pattey Pyeatt"
@@ -1395,6 +1397,9 @@ book sortie
  
 table of poem codas [xxi]
 blurb
+"Hatred mask, death marks, staked harm."
+"Got fear of great fat ogre at forge."
+"Never say any verse? Very sane."
 "Champ? Dolt! Damp cloth! Mold patch!"
 "Heat pangs: the pagans['] pen, aghast!"
 "A Far Odd Radar of Fad Road."
@@ -3087,6 +3092,7 @@ blurb
 
 table of nerd natter [xxm3]
 blurb
+"'Prudent, nut? Derp.'"
 "'He slants less than SlashNet!'"
 "'Gosh, belt the blogs!'"
 "'Complicated topic calmed. Placid comet.'"

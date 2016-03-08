@@ -1695,6 +1695,7 @@ Some goofy puzzles here. You probably figured the general theme.
 > APPLES
 > APRICOT
 > GOOSEBERRY
+> COCONUTS
 
 > S
 
@@ -1711,7 +1712,6 @@ You can do a lot of things here.
 > SOLEMN
 > CRIPES
 > ANCIENTER
-> ARGENTINE
  
 > W
 > W
@@ -1902,7 +1902,7 @@ Store W has a minimum of 155+ and a maximum of 277++. Both the "H" and "I" paths
 
 Store T has a minimum of 153 and a maximum of 200. The bran barn forces more letters, and you can LLP Elmer and Merle, two animals, and the cinders. Also, you can pick the long options for the men (19) vs the minimum (16) or decide whether to pick the long option for the imp (16). The macks also can swing from 22 to 31. Also, this range is not fully representative of the difficulty, since you can deduct a lot of points for when letters end in LY. That drops it to 129 to 176.
 
-Store H has a minimum of 160 and a maximum of 313. But its theme is easy enough, I think, that it shouldn't be too tough.
+Store H has a minimum of 160 and a maximum of 321. But its theme is easy enough, I think, that it shouldn't be too tough.
 
 LAST LOUSY POINTS
  
