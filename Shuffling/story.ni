@@ -3216,7 +3216,7 @@ to verbsplain (t - text):
 table of pad-stuff
 topic (topic)	known	blurb	short	verify
 "notepad/pad/note" or "note pad"	true	"You keep the date you started using your notebooks on the inner front cover. This one's from three years ago."	"notepad"	false
-"verbs"	true	"[verb-list]"	"verbs"	false
+"verbs/verb"	true	"[verb-list]"	"verbs"	false
 "lecture"	true	"An hour-long pre-lunch lecture by some fellow named Curt Lee netted you three pages of doodles. You remember him saying how ONE WORD could open a NEW DOOR in this age of technological innovation if you picked the right one, and that's more magic than real magic, if real magic existed, which it doesn't.[paragraph break]But hey, at least lunch was nice."	"lecture"
 "store/stores/malls/shop/shops/lots/mall"	false	"--[if forest-x is visible]Forest[found-status of forest][otherwise]Store F[end if][line break]--[if sortie-x is visible]Sortie[found-status of sortie][otherwise]Store I[end if][line break]--[if metros-x is visible]Metros[found-status of metros][otherwise]Store M[end if][line break]--[if resort is visible]Resort[found-status of resort][otherwise]Store R[reso-maybe][end if]"	"stores"
 "opt in" or "opt/notip/optin/tip" or "no tip"	false	"OPT IN gives you more detail when you are on the right track. NO TIP gives you less detail but lets you know you have the right anagram."	"opt in/no tip"	false
@@ -12886,6 +12886,33 @@ check fliptoing china when china is in lalaland:
 book undo tags
 
 undo-code is a number that varies. undo-code is usually 0.
+
+volume in-game map
+
+[intro region]
+index map with notices section mapped south of trips strip.
+index map with thickets mapped south of notices section.
+index map with dry yard mapped east of thickets.
+index map with subsite mapped east of dry yard.
+
+[forest]
+index map with slough mapped north of enclosure.
+index map with forts mapped east of slough.
+index map with sf mapped south of fields.
+index map with rf mapped east of fields.
+index map with rf mapped north of strip.
+
+[sortie]
+index map with the nick mapped north of kitchen.
+index map with moor mapped east of roomroom.
+
+[metros]
+index map with elf row's flowers mapped west of notices section.
+index map with abyss mapped east of terminal.
+
+[roster]
+index map with tiles mapped east of notices section.
+index map with islet mapped south of tiles.
 
 volume beta testing - not for release
 

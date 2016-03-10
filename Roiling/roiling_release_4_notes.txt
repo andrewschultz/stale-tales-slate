@@ -15,6 +15,9 @@ There was also other miscellaneous stuff and even a few features that fell out w
 --all random lists now have 25+ entries. Including the new yes and no responses.
 --30000+ total elements in the random lists.
 --I also decided to reveal the code names of the updates. They're rather silly, but I hope you enjoy them.
+--last scan now appears/stays in header until solved
+--you now have the ability to interpret gadget showings with PARSE or turn it off with SPARE
+--VERB/VERBS and PAD VERBS now give general help
 
 Store H:
 --changed one puzzle to be a little less abstruse (green stain in Wells)

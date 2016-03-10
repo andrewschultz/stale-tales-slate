@@ -7891,6 +7891,17 @@ carry out abouting:
 	say "A Roiling Original is the sequel to Shuffling Around and part 2 in my Stale Tales Slate. I doubt there'll be a third, since I've milked the concept dry.[paragraph break]ARO was initially written for Spring Thing 2013 and contains the same mechanics as Shuffling Around but hopefully is different enough to make for a new, original, and enjoyable story, especially since I focused on story in the post-comp release. You can see more abut the people who helped the game come to be by typing CREDITS. There are a lot of them!";
 	ital-say "I really appreciate transcripts (even though this is a post-comp version,) as it's cool to tinker with what I made--or to be able to squash a bug, or to make a puzzle clearer. If you wish to send a transcript, you can do so by typing TRANSCRIPT at the command line, then mailing me that text file at [email]. ;, * and ? at the line's start will indicate comments.[paragraph break]You can directly report bugs or annoyances at [my-repo]--no need for an account." instead;
 
+chapter verbing
+
+verbing is an action out of world.
+
+understand the command "verb" as something new.
+
+understand "verb" as verbing.
+
+carry out verbing:
+	pad-rec "verbs" instead;
+
 chapter opt in/no tip
 
 section notiping
@@ -10698,9 +10709,19 @@ instead of taking the pen:
 
 qmspoil is a truth state that varies.
 
+to say verb-list:
+	verbsplain "access";
+
+to verbsplain (t - text):
+	choose row with short of t in table of pad-stuff;
+	if known entry is true:
+		say "[2da][blurb entry][line break]";
+
 [top]
 table of pad-stuff
 topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
+"verbs/verb"	true	"[verb-list]"	"verbs"	false	--	false
+"parse/spare"	false	"PARSE processes the settler's data for you, but SPARE hides it."
 "access"	true	"Typing ACCESS toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently [if screenread is true]on[else]off[end if]."	"access"	false	--	false
 "free turns" or "free/turns"	true	"Some actions do not take a turn. For instance, examining, looking or taking inventory, or 'out of world' actions like SCORE, will not cost you time if you are in a tight situation."	"free turns"	false
 "saying"	false	"Instead of SAYing or THINKing, you can just type the word."	"saying"	false
@@ -22574,9 +22595,6 @@ check going inside in gates stage:
 check entering gs:
 	try going north instead;
 
-check entering d-d:
-	try going north instead;
-
 does the player mean entering gs: it is likely;
 
 instead of doing something with a near arena:
@@ -22595,10 +22613,6 @@ the halt lath is part of the gs. the halt lath is undesc.
 
 instead of doing something with the halt lath:
 	say "[if player has passport]You don't need to do anything with the halt lath[else]The halt lath looks sturdy and won't be budging[end if].";
-
-d-d is north of gates stage. d-d is privately-named. "You've reached the Admit-Us Stadium, but you shouldn't be seeing this text."
-
-printed name of d-d is "Admit-Us Stadium".
 
 understand "gates" as gs.
 
@@ -22868,6 +22882,10 @@ carry out researching:
 	say "You conduct thorough research. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought.";
 	now searcher is reflexed;
 	upgrade-passport instead;
+
+book Admit-Us Stadium
+
+Admit-Us Stadium is north of gates stage. Admit-Us Stadium is privately-named. "You've reached the Admit-Us Stadium, but you shouldn't be seeing this text."
 
 book Clangier Clearing
 
@@ -25696,6 +25714,67 @@ This is the epilogue rule:
 	fully resume the story;
 	say "You decide, why not ROVE OVER?";
 	clean-for-roving;
+
+volume mapping
+
+index map with stable mapped west of study.
+index map with heights mapped east of study.
+index map with basement mapped north of study.
+index map with carven cavern mapped north of basement.
+
+[presto]
+index map with dirge ridge mapped west of stable.
+index map with phat path mapped north of austerer.
+
+[others]
+index map with rustic citrus mapped north of carven cavern.
+index map with scape space mapped north of clearing.
+index map with Admit-Us Stadium mapped north of scape space.
+
+[towers]
+index map with deposit mapped east of heights.
+index map with rawest waters mapped east of coastlines.
+index map with mislit limits mapped north of rawest waters
+
+[demo dome]
+index map with ned's dens mapped north of shaven havens.
+
+[otters]
+index map with preserve mapped east of intel inlet.
+
+[routes]
+index map with cripple clipper mapped west of gates stage.
+index map with ripe pier mapped west of cripple clipper.
+index map with underpass mapped west of ripe pier.
+index map with adobe mapped north of underpass.
+index map with cleric circle mapped north of adobe.
+index map with idle deli mapped east of cleric circle.
+index map with same mesa mapped south of idle deli.
+
+[stores]
+index map with strip of profits mapped north of cripple clipper.
+index map with cruelest lectures mapped north of strip of profits.
+
+[troves]
+index map with used lot mapped north of cleric circle.
+index map with pallid mapped north of used lot.
+index map with rotunda mapped north of pallid.
+index map with econ cone mapped east of pallid.
+index map with rathole mapped east of loudest.
+index map with fiefco office mapped east of rathole.
+
+[oyster]
+index map with posh hops shop mapped east of cruelest lectures.
+index map with olde lode mapped east of posh hops shop.
+index map with hero's shore mapped east of olde lode.
+index map with fighter freight mapped east of hero's shore.
+index map with anger range mapped north of olde lode.
+index map with scum ant sanctum mapped north of old places.
+index map with tenfold teflon'd mapped north of horned hedron.
+index map with end den mapped north of plains.
+index map with uaah mapped east of end den.
+index map with sand home mapped east of plains.
+index map with lean lane mapped east of sand home.
 
 volume beta testing - not for release
 
