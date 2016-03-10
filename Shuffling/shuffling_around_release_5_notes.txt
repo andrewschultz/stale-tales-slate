@@ -11,3 +11,5 @@ This fixed one bug Sean M. Shore found in A Roiling Original. The problem was th
 --you can now see only 30 names or maps unless you win
 --certify/rectify usage tweaks
 --last scan now appears/stays in header until solved
+--you now have the ability to interpret gadget showings with PARSE or turn it off wit SPARE
+--VERB/VERBS and PAD VERBS now give general help

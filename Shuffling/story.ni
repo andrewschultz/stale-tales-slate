@@ -3187,9 +3187,36 @@ to say reso-maybe:
 	if store r is prefigured:
 		say " (resort, not opened)[run paragraph on]";
 
+to say verb-list:
+	say "[2dn]X or EXAMINE an object. If an object has writing, READ it instead of X WRITING.";
+	say "[2dn]The four directions, north, south, east and west.";
+	say "[2dn]PAD to see a list of topics. Then PAD VERBS, for example.";
+	say "[2dn]Meta-commands include ABOUT, CREDITS, TECH, SITES, and, of course, VERBS.";
+	consider the gadget-okay rule;
+	if the rule succeeded:
+		say "[2dn]PARSE interprets the gadget's clues, and SPARE hides them. PARSE is currently [on-off of parse-output].";
+	choose row with short of "rectify" in table of pad-stuff;
+	if known entry is true:
+		say "[2dn]RECTIFY[if rectify-short is true], or RECT/REC/R for short,[end if] has the gadget rectify the first and last letters of what you need.";
+	choose row with short of "certify" in table of pad-stuff;
+	if known entry is true:
+		say "[2dn]CERTIFY[if certify-short is true], or CERT/CER/C for short,[end if] has the gadget certify which letters are correct in the thing you wish to change.";
+	choose row with short of "angle" in table of pad-stuff;
+	if known entry is true:
+		say "[2dn]ANGLE lets you see what can be changed, while GLEAN gives you more general hints about your direction.";
+	verbsplain "opt in/no tip";
+	verbsplain "xx";
+	verbsplain "random dialogue";
+
+to verbsplain (t - text):
+	choose row with short of t in table of pad-stuff;
+	if known entry is true:
+		say "[2dn][blurb entry][line break]";
+
 table of pad-stuff
 topic (topic)	known	blurb	short	verify
 "notepad/pad/note" or "note pad"	true	"You keep the date you started using your notebooks on the inner front cover. This one's from three years ago."	"notepad"	false
+"verbs"	true	"[verb-list]"	"verbs"	false
 "lecture"	true	"An hour-long pre-lunch lecture by some fellow named Curt Lee netted you three pages of doodles. You remember him saying how ONE WORD could open a NEW DOOR in this age of technological innovation if you picked the right one, and that's more magic than real magic, if real magic existed, which it doesn't.[paragraph break]But hey, at least lunch was nice."	"lecture"
 "store/stores/malls/shop/shops/lots/mall"	false	"--[if forest-x is visible]Forest[found-status of forest][otherwise]Store F[end if][line break]--[if sortie-x is visible]Sortie[found-status of sortie][otherwise]Store I[end if][line break]--[if metros-x is visible]Metros[found-status of metros][otherwise]Store M[end if][line break]--[if resort is visible]Resort[found-status of resort][otherwise]Store R[reso-maybe][end if]"	"stores"
 "opt in" or "opt/notip/optin/tip" or "no tip"	false	"OPT IN gives you more detail when you are on the right track. NO TIP gives you less detail but lets you know you have the right anagram."	"opt in/no tip"	false
@@ -4103,10 +4130,10 @@ check entering the getaway gateway:
 	if player does not have tagged gadget and gadget-warned is false:
 		say "'Dang adventurers these days. It's not demo mode out there. If I'd had doohickeys nice as that gadget in the cabinet when I saved that ONE world...I'd of took it! And saved two or three worlds!' He gives a warning, wan grin.";
 		now gadget-warned is true instead;
-	say "Your path is clear. [if player has gadget]'Eh, get at the gate.' Old Man Almond gets his hanky out. 'Okay, hunt.'[paragraph break]'Thank you,' you say.[paragraph break]'Plod wary through warpy old Yorpwald!' he say, also handing you a prep paper. 'This all--what I know--very theoretical. But you'll figure it. Oh--remember. If you SECURE the tip to either CERTIFY or RECTIFY, you can RECUSE yourself from the last of the three stores you need to enter. But you don't have to choose [']til the button starts flashing.'[otherwise]'A fool! Aloof! Ol['] oaf!' cries Old Man Almond as you mutter 'rely on only...er...' As you walk through, you hear 'Oh, nope! No hope!'[end if]";
+	say "Your path is clear. [if player has gadget]'Eh, get at the gate.' Old Man Almond gets his hanky out. 'Okay, hunt.'[paragraph break]'Thank you,' you say.[paragraph break]'Plod wary through warpy old Yorpwald!' he say, also handing you a prep paper. 'This all--what I know--very theoretical. But you'll figure it. Oh--remember. If you SECURE the tip to either CERTIFY or RECTIFY, you can RECUSE yourself from the last of the three stores you need to enter. But you don't have to choose [']til the button starts flashing. Also, you can RETRY at any point for Terry to return you to the Strip.'[pad-sec][otherwise]'A fool! Aloof! Ol['] oaf!' cries Old Man Almond as you mutter 'rely on only...er...' As you walk through, you hear 'Oh, nope! No hope!'[end if]";
 	if player has gadget:
 		now player has a prep paper;
-		pad-rec-q "secure";
+		pad-rec-q "retry";
 	say "[line break]The gate disappears behind you[if static is visible] as you hear Old Man Almond grumble about being stuck with the static[end if], and you walk down a pathway, then yap 'What?!' when you see...";
 	say "[wfak]...a few strip malls. Ugh. There's nothing adventurous about THAT.[no line break]";
 	solve-region intro instead;
@@ -11922,7 +11949,7 @@ carry out creditsing:
 	if the player consents:
 		say "John Nitchals = Wade Clarke.[line break]Gavin Myers-Leman = Melvin Rangasamy.[line break]Tomie Campf = Kevin Jackson-Mead, who used 'Pam Comfite' as an anagram of 'IFComp Meta' the year before--it's worth checking out the 2011 competition for those games alone.[paragraph break]Hulk Handsome is also a cool pseudonym, but it's one he uses lots of places."
 
-chapter releaseing
+part releaseing
 
 releaseing is an action out of world.
 
@@ -11938,7 +11965,7 @@ carry out releaseing:
 	say "[line break]The current edition of Shuffling Around should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, and a list of changes from the previous release."
 
 
-chapter teching
+part teching
 
 teching is an action out of world.
 
@@ -11950,7 +11977,7 @@ carry out teching:
 	say "Many people helped with technical aspects of Shuffling Around. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinkg that bugged both me and the player. This is not in release 1 and is probably the biggest fix. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts spilled into this game's sequel[if cur-score of intro > 0] in the Stale Tales Slate[end if], A Roiling Original. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's trizbort map for release 3 (black and white) and Jason Lautzenheiser's modifications for build 4 (color) helped me, and maybe you, visualize things that much better.";
 	the rule succeeds;
 
-chapter sitesing
+part sitesing
 
 sitesing is an action out of world.
 
@@ -11967,6 +11994,19 @@ carry out sitesing:
 			say "Ok. Back to the game." instead;
 	say "http://wordsmith.org/anagram/ -- Anu Garg's Rearrangement Server at wordsmith.org was invaluable to me. Hard to believe I've known about it for fifteen years. You've probably seen it before, too, but it's the big one for the main game mechanic. The sayings that go with each anagram have also helped me in many other ways. It's still fun after all these years.[line break]http://www.anagrammy.com/anagrams/faq6.html[line break]http://www.english-for-students.com/One-Word-Anagrams.html[line break]http://www.enchantedlearning.com/english/anagram/ was quite nice for common anagrams by subject.[line break]http://www2.vo.lu/homepages/phahn/anagrams/oneword.htm[line break]http://www.ssynth.co.uk/~gay/anagram.html[line break]http://www.wellho.net/resources/ex.php4?item=p669/anagram (basic succinct PERL anagram finder)[line break]http://boards.straightdope.com/sdmb/archive/index.php/t-291149.html for specific words and also ideas how to script more complex stuff[line break]http://www.rinkworks.com/words/oddities.shtml[line break]http://www.sporcle.com/ had many puzzles that helped me determine what was fair and what wasn't[line break]http://jamesgart.com/anagram/[line break]PERL for letting me parse through word-to-word anagrams and also helping me break one promising word into two.[paragraph break]I'd be interested if someone from France can ref these sites to make a similar game, someone from Spain could take pains, or a German manager could do so too. It'd be interesting to see.";
 	the rule succeeds; [forgot where I found the names from]
+
+part verbing
+
+verbing is an action out of world.
+
+understand the command "verb" as something new. understand the command "verbs" as something new.
+
+understand "verb" as verbing. understand "verbs" as verbing.
+
+carry out verbing:
+	say "You read about verbs in your dope tan notepad.";
+	try padding "verbs";
+	the rule succeeds;
 
 part possing
 

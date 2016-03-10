@@ -1,4 +1,6 @@
 table of random books [xxm4] [tob]
+"Set a Seat East[r], by Essa Tate"
+"Boy, Ban No Baby[r], by Bob Yan"
 "Ow, I Fell: Low-Life Will Foe[r], by Eli Wolf"
 "To Clicks, Slick Tot[r], by Colt Kist"
 "Sorry Hike, Yorkshire Risky Hero[r], by Kris Hoyer"
@@ -150,6 +152,7 @@ table of Elmer and Merle squabbles [xxt2]
 table of Elvira battle cries [xxt3]
 
 table of Elvira machines [xxt4]
+"a pink-dots stink-pod"
 
 table of Elvira taunts [xxt5]
 
