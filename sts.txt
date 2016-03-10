@@ -1,8 +1,17 @@
 table of random books [xxm4] [tob]
+"Ow, I Fell: Low-Life Will Foe[r], by Eli Wolf"
+"To Clicks, Slick Tot[r], by Colt Kist"
+"Sorry Hike, Yorkshire Risky Hero[r], by Kris Hoyer"
+"Seen With the Wines[r], by Stew Hein"
+"I'd Have Hid Eva[r], by Vi Head"
+"Actless Castles[r], by Sal Stec"
+"One Rad Read-On[r], by Ed Roan"
 
 table of posse bosses [xxv7]
+"Seamy Mayes"
 
 table of self-help bestsellers [xxv0]
+"One Must: Us, Not Me[r], by Su Monet"
 
 table of posh dialogue [xxv6]
 
@@ -41,12 +50,14 @@ table of bad rappers [xxm2]
 table of biopics [xxm3]
 
 table of comedians [xxm4]
+"Fooling Fogolin"
 
 table of elmo emo [xxm5]
 
 table of lame computer games [xxm6]
 
 table of lame movies [xxm7]
+"Halloween: a New Hello"
 
 table of lame talk shows [xxm8]
 
@@ -71,6 +82,7 @@ table of sicko movies [xxs3]
 table of store c ads [xxs4]
 
 table of store c competitors [xxs5]
+"Coy Kat's So-Tacky Toy Sack"
 
 table of tokers nonsense [xxs6]
 
@@ -125,6 +137,7 @@ table of theses [xxy6]
 table of tuna gossip [xxy7]
 
 table of unpopular girls [xxy8]
+"Frog-Face Off-Grace"
 
 table of gizmo parts [xxw1]
 
@@ -147,10 +160,13 @@ table of selly yells [xxh2]
 =====SA
 
 table of job searcher names [xxx]
+"Lorissa Solaris"
+"Isak Saki"
 
 table of evil locations [xxf]
 
 table of poem codas [xxi]
+"Couthdom? Much to do, Doc Mouth."
 
 table of camp chants [xxm1]
 

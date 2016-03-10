@@ -208,12 +208,13 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "exitssw"	689159759	sortie	--	--	cent-spin rule	"The room seems to spin faster, as if you are totally on the wrong track."
 "exitsse"	709031095	sortie	--	--	cent-spin rule	"The room seems almost ready to start to slow down. Maybe the exits aren't quite that way."
 "exits"	484951020	sortie	--	--	cent-spin rule	"You can't do much to the exits when you don't even know which way they are."
+"sixteen"	681664637	sortie	--	--	kitch-visit rule	"You don't need to re-stop the centrifuge."
+"kitchen"	454037543	sortie	--	--	kitch-visit rule	"You can just walk to the kitchen, and there's no need to revisit the nick, and there's no third location."
 "dial"	122023592	sortie	Centrifuge	--	--	"[if centrifuge-stopped is false]Messing up the dial would leave you trapped here[else]The dial did its part for you[end if]."
 "graffiti"	366236825	sortie	the nick	--	--	"The graffiti's etched in. It's here to help, anyway."
 "greta"	351027450	sortie	the nick	--	--	"The grate remains impassive."
 "nick"	185839117	sortie	the nick	--	--	"Maybe there is a way out of the nick. Not of nick, but the nick. It's probably too much to think yourself in K.C."
-"thenick"	454037543	sortie	the nick	--	--	"You feel disoriented, and it seems there's a rip in the walls for a minute."
-"kitchen"	454037543	sortie	kitchen	--	--	"Nothing happens. There's probably no third room to look for."
+"kitchen"	454037543	sortie	kitchen	--	--	"Nothing happens. Well, you didn't really want to go back, and there's probably no third room to look for[if moor is unvisited]. Maybe you need to escape this bunker in another room[end if]."
 "okrapot"	473725930	sortie	kitchen	--	--	"Aigh! It's a catchy tune, but really, it won't help you figure anything out."
 "fridge"	338266445	sortie	kitchen	--	--	"The fridge is just a fridge."
 "obligatory"	611511337	sortie	kitchen	--	--	"The fridge will always be what it is. Generally what is or was inside is more interesting, anyway."
@@ -637,6 +638,11 @@ this is the no-d rule:
 
 this is the cent-spin rule:
 	if the player is in Centrifuge and centrifuge-stopped is false:
+		the rule succeeds;
+	the rule fails;
+
+this is the kitch-visit rule:
+	if kitchen is visited:
 		the rule succeeds;
 	the rule fails;
 

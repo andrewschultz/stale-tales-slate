@@ -7934,7 +7934,7 @@ this-book is a number that varies. this-book is usually 0.
 
 table of random books [xxm4] [tob]
 blurb	prio
-"Daughters Dug Haters[r], by [if player is male]Garth Deus[else]Ruth Degas[end if]
+"The Guards['] Daughters Dug Haters[r], by [if player is male]Garth Deus[else]Ruth Degas[end if]"
 "Labors of Bar Fools[r], by Flor Sabo"
 "Colt Saw Claws to Scowl At[r], by Cal Stow"
 "A Sneer-Snaree[r], by Serena Ranese"

@@ -248,7 +248,7 @@ use MAX_ACTIONS of 280.
 
 use MAX_VERBS of 360.
 
-use MAX_SYMBOLS of 30000.
+use MAX_SYMBOLS of 33000.
 
 section about the player
 
@@ -463,6 +463,12 @@ to say b:
 
 to say r:
 	say "[roman type]";
+
+to say on-off of (t - a truth state):
+	say "[if t is true]on[else]off[end if]";
+
+to say off-on of (t - a truth state):
+	say "[if t is true]off[else]on[end if]";
 
 to say email:
 	say "blurglecruncheon@gmail.com";
@@ -1750,7 +1756,7 @@ carry out sortie-hinting:
 	if player is in roomroom:
 		if hoses are in roomroom:
 			try objhinting hoses instead;
-		if moor is not visited and moored is false:
+		if r2 is prefigured:
 			all-say "[one of]The room is just a plain room. You feel like you want to get out, though. [plus][or]Like the kitchen, the name doesn't anagram, so maybe there's another location that does. [plus][or]The MOOR. [minus][cycling]" instead;
 		if player does not have coat:
 			if kitchen is unvisited:
@@ -2744,14 +2750,17 @@ carry out fliptoing (this is the main flipping rule) :
 				the rule succeeds;
 			now got-yet is true;
 			say "[from-msg entry][line break]";
-			if the-to entry is not in lalaland and the-to entry is not in bullpen:
+			if the-to entry is a room:
+				if the-to entry is unvisited:
+					reg-inc;
+			else if the-to entry is not in lalaland and the-to entry is not in bullpen:
 				reg-inc;
 				if the-to entry is attics:
 					min-up;
+				if force-take entry is true or player has the-from entry:
+					now player carries the-to entry;
 			if the-to entry is prefigured:
 				now the-to entry is done-for;
-			if force-take entry is true or player has the-from entry:
-				now player carries the-to entry;
 			if the-from entry is oils:
 				move the-from entry to sacred cedars;
 			if vanish entry is true:
@@ -2762,7 +2771,7 @@ carry out fliptoing (this is the main flipping rule) :
 						move the-from entry to bullpen;
 					else:
 						move the-from entry to lalaland;
-	if player does not have the noun and noun is not visible:
+	if noun is not a room and player does not have the noun and noun is not visible:
 		if noun is shoes:
 			move noun to lalaland;
 		else:
@@ -2974,8 +2983,8 @@ check fliptoing beast:
 chapter the anagram table
 
 table of anagrams [toa] [NOTE: PUT NON SCENERY FIRST]
-the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish
-bulge	bugle	"bugle"	"bulge"	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is visible]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362
+the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
+bulge	bugle	"bugle"	"bulge"	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is visible]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362	--	--	nowhere
 odor	yard-door	"door"	"odor"	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start intro anagrams]
 bolt	blot	"blot"	"bolt"	"The bolt retracts, and slowly a blot spreads over the door, which swings in and out[if bugle-played is true] just as when you played the bugle[else]. You can probably enter now[end if]."	false	249695339	"You don't want to re-lock the door."
 toga	goat	"goat"	"toga"	"The dingy toga shudders. It seems to rip, make legs, and twist around, like one of those balloon animals you were never good at. All this twisting has left him with an appetite, and he walks over to the delicious thorns and brambles.[paragraph break]He finds a relatively weak spot in the thickets and goes at it. Enough branches make way so that you could make it through if you crouch. Exhausted, he turns around three times and falls asleep.[paragraph break]Man! You actually made something living, this time. And you can even go IN through the darnels, now too[if darn-slan is true]--the ones you slandered nicely. You really took full advantage of this first bit[else], which you could maybe trash right if you think about it. Or you could just move on[end if]."	false	212250115	"The goat seems content enough as-is."
@@ -3002,6 +3011,7 @@ Spam	maps	"maps"	"spam"	"[process-sandwich]With a sickening SCHLURP, the [spam] 
 vowels	wolves	"wolves"	"vowels"	"Well, you've done it now. The imposing vowels become werewolves--but they notice your shotgun and stand back. The first forward gets shot--or so they imagine."	false	567346084	"You don't need magic. You have a weapon."	[end forest anagrams]
 warts	straw	"straw"	"warts"	"The warts quickly peel off and lengthen into straw[drop-straw]."	false	394830378	[start sortie anagrams]
 skate	steak	"steak"	"skate"	"The skate turns reddish, and the blade cuts up the meaty bits before vanishing--how convenient!"	false	382311089
+the nick	kitchen	"the nick"	"kitchen"	"That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if]."	false	454037543
 cult tee	lettuce	"lettuce"	"lettuce"	"The t-shirt crumples and then shreds before turning into a light green head of lettuce."	false	639757485
 spearman	Parmesan	"parmesan"	"spearman"	"The spearman transforms into something cheesier--Parmesan cheese! Unfortunately, it doesn't have one of those cute plastic spears sticking from it, but you can't have everything."	false	528228134
 cathouse	HOTSAUCE	"hotsauce" or "hot sauce"	"cathouse" or "cat house"	"The CATHOUSE perfume turns into a packet of equally over-capitalized and under-spaced hot sauce."	false	565124179
@@ -3012,6 +3022,8 @@ taco	coat	"coat"	"taco"	"Before changing the hot-to-your-tongue taco to a warm-t
 cask	sack	"sack"	--	"The cask retains its color but looks visibly frayed as its wood turns to burlap. The sack it has become collapses in a heap on the floor. You pick it up."	true	170400547
 sack	cask	"cask"	--	"The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright[if straw was in sack]. The straw falls out[end if][if hay was in sack]. The hay falls out[end if]."	true	170400547
 hoses	shoes	"shoes"	"hoses"	"The pair of rubber hoses bends and opens and become a comfortable pair of shoes that swallows your old shoes--you'd forgotten how ratty they were. A few steps show walking's much smoother. So smooth, you forget you're wearing them. And the price is right, too."	false	431988917
+r2	moor	"room"	"moor"	"[moor-jump]"	false	298104110	--	--	moor
+moor	roomroom	"moor"	"room"	"[if woeful pat is in moor][one of]As you pop back to the room, Woeful Pat looks visibly shocked. You have left him speechless, which is good news, but he is reaching for his pen, which is bad news for some poor soul in the future[or]Woeful Pat is less impressed this time, sniffing that it's been done[stopping].[else]'The room's smoother,' you muse...'"	false	298104110
 anapest	peasant	"peasant"	"anapest"	"Nothing happens. You worry your magic powers have failed, until a peasant strides out from the edge of the moor, carrying a bale of hay and singing a cheery song about nothing in particular. Distracted, you look over and smile.[paragraph break]'Oh, does THAT resonate with your stone ear?' whines Woeful Pat.[paragraph break]You notice his papers have crumbled (but don't worry, he has PLENTY of written drafts.) He storms off, claiming you will make a perfect arch-villain in his new socially significant blank-verse epic. Or another poor henchman who deserves but one line before a horrible fate--or a mega-rip of an epigram!"	false	481939196	"You're better off changing what the peasant has than what he is."
 roadblock	black door	"black door" or "blackdoor"	"roadblock" or "road block"	"Bam! The fissure in the roadblock covers up, and a black door appears where it was. It's light but bulky--you can probably put or push it where it needs to go[if pat is visible]. Woeful Pat shows commendable concentration ignoring all this[else if peasant is visible]. The Peasant cheers in appreciation, momentarily dropping his hay, which he's none too eager to pick up[end if]."	false	401417371
 poem	panel	"panel"	--	"Poof! The paper plane becomes a panel. It's light enough to carry, you suppose[if player has poem or player has panel]. Well, it doesn't cause an immediate hernia[end if]."	false	334181233
@@ -3229,7 +3241,7 @@ keycard	"dry cake -> keycard"
 nametag	"nametag -> gateman"
 hallway	"[if hay is in lalaland]wall -> HAYWALL[else]WALL -> haywall[end if] -> hallway"
 drapes	"spread -> [if red asp is in Enclosure]RED ASP -> [end if]drapes"
-m2	"room -> moor"
+r2	"room -> moor"
 
 to say what-can-flip:
 	if pf-warn is false:
@@ -3317,18 +3329,6 @@ carry out padding:
 
 part begin-play
 
-table of odd-lgths
-odd-ana	which-word
-magenta nametag	2
-fuzzy clover	2
-hoots button	1
-trees button	1
-pair of hoses	3
-cheesy spearman	2
-bottle of cathouse perfume	3
-chain links	2
-acne-bit cabinet	3
-
 hc-acc is a truth state that varies.
 
 when play begins (this is the don't use any other besides status window when play begins rule):
@@ -3354,7 +3354,8 @@ when play begins (this is the don't use any other besides status window when pla
 	repeat with Q running through regions:
 		now poss-score of Q is max-score of Q;
 	repeat through table of anagrams:
-		now the-from entry is flippable;
+		if the-from entry is not a room:
+			now the-from entry is flippable;
 		if there is no force-take entry:
 			d "no force-take for [the-from entry]/[the-to entry].[line break]";
 			now force-take entry is false;
@@ -6437,23 +6438,10 @@ to say last-store:
 	if sortie is visible:
 		say "the sortie";
 
-section kitchening
-
-[roiling had the vanishing attribute for an anagrammable but this doesn't]
-
-kitchening is an action applying to nothing.
-
-understand the command "kitchen" as something new.
-
-understand "kitchen" as kitchening when player is in the nick.
-
-carry out kitchening:
-	reg-inc;
-	say "That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if].";
+after fliptoing kitchen:
 	if straw is in the nick:
 		now straw is in kitchen;
-	now player is in kitchen;
-	the rule succeeds;
+	continue the action;
 
 to say gad:
 	say "Your gadget's not near anything, but it's registering ";
@@ -6642,7 +6630,7 @@ check taking an ingredient:
 the cult tee is a pregredient in Kitchen. rgtext of cult tee is "[rcn][rc][rc][gc][rc][rc][gc]". lgth of cult tee is 7. gpos of cult tee is 3. rpos of cult tee is 7. the cert-text of cult tee is "-[d1]-[d1]-[ast]T[d1]-[d1]-[ast]E". the rect-text of cult tee is "L[d1][d1][d1][d1][d1][ast]E".
 
 instead of wearing cult tee:
-	say "You appreciate the drawing, but [if moored is true]it's not warm enough to get you to the moor, and [end if]you never were one for bold t-shirts anyway."
+	say "You appreciate the drawing, but [if r2 is prefigured]it's not warm enough to get you to the moor, and [end if]you never were one for bold t-shirts anyway."
 
 instead of wearing skate:
 	say "You can't skate, and there's only one of it."
@@ -6729,7 +6717,7 @@ the coat is a wearable thing.
 does the player mean wearing the coat: it is likely.
 
 report wearing the coat:
-	say "It's nice and warm. Not enough to make you sweat. But handy if you [if moored is true and moor is unvisited]try to poke around the moor[otherwise]find a way outside of here. There must be one[end if].";
+	say "It's nice and warm. Not enough to make you sweat. But handy if you [if r2 is prefigured]try to poke around the moor[otherwise]find a way outside of here. There must be one[end if].";
 	the rule succeeds;
 
 description of coat is "It's warm and fuzzy and shapeless and as multi-colored as the taco you made it from."
@@ -7144,58 +7132,46 @@ carry out pouring:
 
 section moor
 
-mooring is an action applying to nothing.
+r2 is a privately-named backdrop. description of m2 is "[bug]". r2 is useless. printed name of r2 is "moor". r2 is in roomroom.
 
-understand the command "moor" as something new.
+definition: a room is moory:
+	if it is moor, decide no;
+	if it is in Sortie, decide yes;
+	decide no;
 
-understand "moor" as mooring.
+after printing the locale description for moor when moor is unvisited:
+	move r2 backdrop to all moory rooms;
+	continue the action;
 
-moored is a truth state that varies. moored is usually false.
+check fliptoing moor:
+	if shoes are not in lalaland:
+		say "You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.";
+		preef r2 instead;
+	if player carries coat and player is not wearing coat:
+		now player wears the coat;
+	if player is not wearing coat:
+		say "You see a flash and get a glimpse of a moor, but it is just too cold. You blink and find yourself back in the room[if coat is off-stage]. You'll need to pierce the recipe to build something warm that can cover the rest of your body than just the shoes[otherwise]. That coat you made would be handy[end if].";
+		preef r2 instead;
+	if moor is unvisited:
+		if sortie-warn is false and button-locked is false and player has gadget and hows tag is part of gadget:
+			now sortie-warn is true;
+			say "[gadact] once you jump to the moor. Is this okay?";
+			if the player consents:
+				do nothing;
+			else:
+				say "Okay. Next time, you won't see this warning." instead;
+			now button-locked is true;
 
-m2 is a privately-named undesc. m2 is useless. printed name of m2 is "moor".
-
-carry out mooring:
-	if mrlp is not sortie:
-		say "[reject]" instead;
-	if location of player is moor:
-		say "Yes, it is a moor. At least, right now, it is." instead;
+to say moor-jump:
 	if moor is visited:
 		if location of player is cedars and caskfillings is 2:
 			say "You hear a crash as you teleport. Maybe you'll find what it was about when you return.";
 		otherwise:
-			say "'The mire, I'm there,' you muse[if moored is true]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if][if player is in cedars]. You step out of Sacred Cedars to perform your magic, out of respect for Lois[end if].";
-		now player is in moor instead;
-	if player is in roomroom:
-		if shoes are not in lalaland:
-			say "You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.";
-			preef m2 instead;
-		if player carries coat and player is not wearing coat:
-			now player wears the coat;
-		if player is not wearing coat:
-			now moored is true;
-			say "You see a flash and get a glimpse of a moor, but it is just too cold. You blink and find yourself back in the room[if coat is off-stage]. You'll need to pierce the recipe to build something warm that can cover the rest of your body than just the shoes[otherwise]. That coat you made would be handy[end if].";
-			preef m2 instead;
-		[if cask is in roomroom or cask is in Centrifuge or sack is in roomroom or sack is in Centrifuge:
-			say "You might want to take a souvenir along." instead;]
-		if moor is unvisited:
-			if sortie-warn is false and button-locked is false and player has gadget and hows tag is part of gadget:
-				now sortie-warn is true;
-				say "[gadact] once you jump to the moor. Is this okay?";
-				if the player consents:
-					do nothing;
-				else:
-					say "Okay. Next time, you won't see this warning." instead;
-				now button-locked is true;
-			say "There you go! You're outside, now. Your coat keeps you warm[if player was not wearing coat]--you managed to slip it on as the scenery changed and the temperature dropped[end if].";
-			reg-inc;
-			consider the notify score changes rule;
-			now moored is false;
-			now player is in moor;
-		otherwise:
-			say "Oh, hey, teleporting's easier with experience[if player was not wearing coat]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if].";
-			now player is in moor;
-		do nothing instead;
-	say "[reject]" instead;
+			say "'The mire, I'm there,' you muse[if r2 is prefigured and moor is unvisited]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if][if player is in cedars]. You step out of Sacred Cedars to perform your magic, out of respect for Lois[end if].";
+	if moor is unvisited:
+		say "There you go! You're outside, now. Your coat keeps you warm[if player was not wearing coat]--you managed to slip it on as the scenery changed and the temperature dropped[end if].";
+	else:
+		say "Oh, hey, teleporting's easier with experience[if player was not wearing coat]. Of course, you know what to expect, and you put your coat back on first[end if][if player has been in moor and woeful pat is in moor][one of]. Woeful Pat seems hurt that you did not return with a larger audience[or][stopping][end if].";
 
 chapter Stiller Trellis / Crashing Archings
 
@@ -7279,6 +7255,14 @@ instead of doing something with the hallway:
 chapter moor
 
 Moor is a room in Sortie. description of moor is "You're on a moor. Woods all around don't look inviting. In fact, they'd leave you feeling sort of trapped, without your powers to reverse up out of here[if anapest is in moor][one of][or]. You hear bad poetry[stopping][end if]."
+
+room-flip is a truth state that varies.
+
+after fliptoing roomroom:
+	if room-flip is false:
+		say "[paragraph break][i][bracket]NOTE: you can now teleport back to the moor from any inside location.[close bracket][line break]";
+		now room-flip is true;
+	continue the action;
 
 every turn when player is in moor and pat is in moor:
 	say "The poem [one of]establishes its singsong rhythm early[or][drones][stopping].";
@@ -7695,15 +7679,6 @@ understand the command "room" as something new.
 
 understand "room" as rooming.
 
-carry out rooming:
-	if woeful pat is visible:
-		say "[one of]As you pop back to the room, Woeful Pat looks visibly shocked. You have left him speechless, which is good news, but he is reaching for his pen, which is bad news for some poor soul in the future[or]Woeful Pat is less impressed this time, sniffing that it's been done[stopping].";
-	if player is in roomroom:
-		say "You're definitely in a room[if moor is unvisited]. But there's no sense running in place. Well, even less sense than going in reverse[end if]." instead;
-	if player is not in moor:
-		try examining the location instead;
-	say "'The room's smoother,' you muse...'";
-	move player to roomroom;
 
 section stuff for after cedars
 
@@ -8246,7 +8221,7 @@ the hooks are part of the Velcro. the hooks are plural-named. description of hoo
 
 the Velcro is wearable.
 
-some lost corn is a singular-named thing. rgtext of lost corn is "[rcn][gc][rc][gc][rc][gc][rc][rc]". lgth of lost corn is 8. gpos of lost corn is 5. rpos of lost corn is 3. the cert-text of lostcorn is "-[ast]O[d1]-[ast]T[d1]-[ast]O[d1]-[d1]-". the rect-text of lostcorn is "C[d1][d1][d1][d1][d1][d1][ast]S".
+some lost corn is a singular-named thing. rgtext of lost corn is "[rcn][gc][rc][gc][rc][gc][rc][rc]". lgth of lost corn is 8. gpos of lost corn is 5. rpos of lost corn is 3. the cert-text of lost corn is "-[ast]O[d1]-[ast]T[d1]-[ast]O[d1]-[d1]-". the rect-text of lost corn is "C[d1][d1][d1][d1][d1][d1][ast]S".
 
 the indefinite article of lost corn is "some".
 
@@ -9545,7 +9520,7 @@ check climbing slope:
 
 section tool shed - toeholds
 
-the tool shed is scenery in woodland. rgtext of tool shed is "[gcn][gc][rc][rc][rc][rc][rc][rc]". the lgth of toolshed is 8. gpos of toolshed is 1. rpos of toolshed is 5. the cert-text of toolshed is "T[ast]O[d1]-[d1]-[d1]-[d1]-[d1]-[d1]-". the rect-text of toolshed is "T[d1][d1][d1][d1][d1][d1][ast]S".
+the tool shed is scenery in woodland. rgtext of tool shed is "[gcn][gc][rc][rc][rc][rc][rc][rc]". the lgth of tool shed is 8. gpos of tool shed is 1. rpos of tool shed is 5. the cert-text of tool shed is "T[ast]O[d1]-[d1]-[d1]-[d1]-[d1]-[d1]-". the rect-text of tool shed is "T[d1][d1][d1][d1][d1][d1][ast]S".
 
 description of tool shed is "It's metal, with no visible entry or even windows. A forbidding u-lock (a padlock could become an old pack, after all,) is welded to it, just to make sure. You notice outcroppings scattered around the tool shed walls.". lgth of tool shed is 8. gpos of tool shed is 1. rpos of tool shed is 5. understand "toolshed" as tool shed.
 
@@ -10332,9 +10307,12 @@ after reading a command:
 			now tell-flag is true;
 	let myh be the hash of the player's command;
 	let myh2 be the hash of word number 1 in the player's command;
+	let should-work be false;
 	repeat through table of anagrams:	[this code vacuums up  the 2nd use of the oils as well as the alternate use of the chain links. It also allows for basic checks of retries etc.]
 		if myh is hashkey entry or myh2 is hashkey entry:
+			d "[myh] [the-from entry] [the-to entry] try.";
 			if the-from entry is visible:
+				d "[myh] [the-from entry] visible.";
 				if there is an exact-text entry and the player's command matches exact-text entry:
 					d "2nd loop Fliptoing from anagram loop: [the-from entry].";
 					try fliptoing the-to entry;
@@ -10343,6 +10321,7 @@ after reading a command:
 					d "2nd loop Flipfroming from anagram loop: [the-from entry].";
 					try fliptoing the-from entry instead;
 			if the-to entry is visible and the-to entry is not reversible:
+				d "[myh] [the-to entry] visible.";
 				if there is a dubdip entry:
 					say "[dubdip entry][line break]";
 				else:
@@ -10355,13 +10334,15 @@ after reading a command:
 					else:
 						say "Nothing at all seems to happen this time. You've probably done what you can.";
 				do nothing instead;
+			d "[myh] [the-from entry] [the-to entry] failed.";
+			now should-work is false;
 	repeat through table of anagrams: [this is for an extreme case where you have "attic" instead of "attics"]
 		if the-to entry is visible:
 			if there is an exact-text entry and the player's command matches exact-text entry:
 				d "3rd pass through: [the-to entry].";
 				try fliptoing the-to entry instead;
 	continue the action;
-
+	
 tell-flag is a truth state that varies.
 
 table of warpcmds
@@ -11148,7 +11129,7 @@ instead of doing something with the spread:
 		say "The spread is too large and too heavy. Maybe you can examine it, to figure what to do with it." instead;
 	continue the action;
 
-the red asp is a flippable thing. lgth of red asp is 6. gpos of red asp is 6. rpos of red asp is 1. rgtext of red asp is "[rcn][rc][rc][rc][rc][rc]". the cert-text of redasp is "-[d1]-[d1]-[d1]-[d1]-[d1]-". the rect-text of redasp is "D[d1][d1][d1][d1][ast]S".
+the red asp is a flippable thing. lgth of red asp is 6. gpos of red asp is 6. rpos of red asp is 1. rgtext of red asp is "[rcn][rc][rc][rc][rc][rc]". the cert-text of red asp is "-[d1]-[d1]-[d1]-[d1]-[d1]-". the rect-text of red asp is "D[d1][d1][d1][d1][ast]S".
 
 description of red asp is "It's fortunately attached to the north side of the enclosure, much like the spread was before you disturbed it. It's fast, mean, vicious and very red, and you'd be no match for it even with [if player has sliver]that sliver[else]a weapon[end if]."
 
