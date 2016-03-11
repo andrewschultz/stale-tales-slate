@@ -524,6 +524,13 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "about"	303175125	--	--	--	degen-true rule	"There's no special addition to the 'about' section, but I'm flattered you looked for it."
 "credits"	497541416	--	--	--	degen-true rule	"[no-cred-spec]."
 "credit"	401267450	--	--	--	degen-true rule	"[no-cred-spec]."
+"sites"	468456905	--	--	--	degen-true rule	"[meta-rej]"
+"tech"	287204011	--	--	--	degen-true rule	"[meta-rej]"
+"son"	239534051	--	--	--	degen-true rule	"[meta-rej]"
+"spaceon"	469999522	--	--	--	degen-true rule	"[meta-rej]"
+"access"	360553029	--	--	--	degen-true rule	"[meta-rej]"
+"opts"	355202520	--	--	--	degen-true rule	"[meta-rej]"
+"options"	543455451	--	--	--	degen-true rule	"[meta-rej]"
 
 book text details
 
@@ -858,6 +865,9 @@ to say no-special-verb:
 
 to say no-cred-spec:
 	say "There's no special addition to the 'credits' section, but I'm flattered you looked for it"
+
+to say meta-rej:
+	say "Meta-commands don't have any easter eggs, sadly"
 
 Sa Nudges ends here.
 

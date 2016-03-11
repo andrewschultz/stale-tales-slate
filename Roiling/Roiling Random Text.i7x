@@ -3596,7 +3596,7 @@ blurb	fave
 "A Curse Causer[r], by Cara-Sue Cruse"	false
 "Da Lingo Be No Big Deal[r], by Deb Alongi"	false
 "Dim-Worths Wordsmith[r], by Dr. Tim Show & Dr. Tom Wish"	false
-"Drab Howl, Blah-Word Blowhard[r], by W. Harbold"
+"Howl, Drab Blah-Word Blowhard[r], by W. Harbold"	false
 "Epic Fail: a Life Pic[r], by Ace Filip"	false
 "A Fly Debut...BY DEFAULT[r], by Fleta Duby"	false
 "Gawd, S'More Word Games[r], by [if player is male]Drew Gamos[else]Margo Dews[end if]"	false

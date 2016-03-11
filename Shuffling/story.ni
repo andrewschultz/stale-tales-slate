@@ -244,11 +244,13 @@ section compiler adjust constant section
 
 use MAX_STATIC_DATA of 300000.
 
-use MAX_ACTIONS of 280.
+use MAX_ACTIONS of 290.
 
-use MAX_VERBS of 360.
+use MAX_VERBS of 370.
 
 use MAX_SYMBOLS of 33000.
+
+use MAX_PROP_TABLE_SIZE of 240000.
 
 section about the player
 
@@ -437,7 +439,7 @@ to say reject:
 					if this-item entry is visible:
 						say "[this-clue entry][line break]";
 						continue the action;
-	say "That's not something you can say, do or see here."
+	say "That's not something you can say, do or see here. For a list of common verbs, type VERBS."
 
 to say bug-report:
 	say "BUG. Contact me at [email] with a transcript or description of where you are/what you did, or report a bug at [ghsite]. Use up arrow to see previous commands. Or use UNDO several times and hit TRANSCRIPT to show me how you got here, what your inventory was, etc."
@@ -547,13 +549,13 @@ to say rcf:
 	say " [first custom style]R[r]"
 
 to say ast:
-	say "[if hc-acc is true] [end if]"
+	say "[if hc-acc is true or spaces-on is true] [end if]"
 
 to say d1:
-	say "[if hc-acc is true] [end if]-";
+	say "[ast]-";
 
 to say d2:
-	say "[if hc-acc is true] [end if]-[if hc-acc is true] [end if]";
+	say "[ast]-[ast]";
 
 book hashcodes
 
@@ -2363,7 +2365,22 @@ this is the gadget-okay rule:
 		the rule fails;
 	the rule succeeds;
 
+chapter accessing
+
+accessing is an action out of world.
+
+understand the command "access" as something new.
+
+understand "access" as accessing.
+
+carry out accessing:
+	now hc-acc is whether or not hc-acc is false;
+	say "Screen reader accessible text is now [on-off of hc-acc].";
+	the rule succeeds;
+
 chapter soning
+
+spaces-on is a truth state that varies.
 
 soning is an action out of world.
 
@@ -2372,8 +2389,12 @@ understand the command "son" as something new.
 understand "son" as soning.
 
 carry out soning:
-	say "Screen reader accessibility is [if hc-acc is true]already[else]now[end if] on.";
-	now hc-acc is true;
+	if hc-acc is true:
+		say "Spaces are on by default with screen readers." instead;
+	if player does not have gadget:
+		say "This option means nothing until you have acquired the gadget." instead;
+	say "Spaces in gadget output are [if hc-acc is true]already[else]now[end if] on.";
+	now spaces-on is true;
 	the rule succeeds;
 
 chapter nosing
@@ -2385,8 +2406,12 @@ understand the command "nos" as something new.
 understand "nos" as nosing.
 
 carry out nosing:
-	say "Screen reader accessibility is [if hc-acc is false]already[else]now[end if] off.";
-	now hc-acc is false;
+	if hc-acc is true:
+		say "Spaces are on by default with screen readers." instead;
+	if player does not have gadget:
+		say "This option means nothing until you have acquired the gadget." instead;
+	say "Spaces in gadget output are [if spaces-on is false]already[else]now[end if] off.";
+	now spaces-on is false;
 	the rule succeeds;
 
 chapter uhhsing
@@ -3187,14 +3212,24 @@ to say reso-maybe:
 	if store r is prefigured:
 		say " (resort, not opened)[run paragraph on]";
 
+to say opts-list:
+	consider the gadget-okay rule;
+	if the rule succeeded:
+		say "[2dn]PARSE interprets the gadget's clues, and SPARE hides them. PARSE is currently [on-off of parse-output].";
+	verbsplain "opt in/no tip";
+	verbsplain "random dialogue";
+
 to say verb-list:
 	say "[2dn]X or EXAMINE an object. If an object has writing, READ it instead of X WRITING.";
 	say "[2dn]The four directions, north, south, east and west.";
 	say "[2dn]PAD to see a list of topics. Then PAD VERBS, for example.";
-	say "[2dn]Meta-commands include ABOUT, CREDITS, TECH, SITES, and, of course, VERBS.";
+	say "[2dn]VERBS shows this, OPTIONS shows options you can change, and informational meta-commands include ABOUT, CREDITS, TECH, SITES.";
 	consider the gadget-okay rule;
 	if the rule succeeded:
-		say "[2dn]PARSE interprets the gadget's clues, and SPARE hides them. PARSE is currently [on-off of parse-output].";
+		if button-locked is false:
+			choose row with short of "macros" in table of pad-stuff;
+			if known entry is true:
+				say "[2dn]RC or CR lets you scan both ways.";
 	choose row with short of "rectify" in table of pad-stuff;
 	if known entry is true:
 		say "[2dn]RECTIFY[if rectify-short is true], or RECT/REC/R for short,[end if] has the gadget rectify the first and last letters of what you need.";
@@ -3204,9 +3239,7 @@ to say verb-list:
 	choose row with short of "angle" in table of pad-stuff;
 	if known entry is true:
 		say "[2dn]ANGLE lets you see what can be changed, while GLEAN gives you more general hints about your direction.";
-	verbsplain "opt in/no tip";
 	verbsplain "xx";
-	verbsplain "random dialogue";
 
 to verbsplain (t - text):
 	choose row with short of t in table of pad-stuff;
@@ -3217,6 +3250,7 @@ table of pad-stuff
 topic (topic)	known	blurb	short	verify
 "notepad/pad/note" or "note pad"	true	"You keep the date you started using your notebooks on the inner front cover. This one's from three years ago."	"notepad"	false
 "verbs/verb"	true	"[verb-list]"	"verbs"	false
+"options/option" or "post opts" or "ops"	true	"[opts-list]"	"options"	false
 "lecture"	true	"An hour-long pre-lunch lecture by some fellow named Curt Lee netted you three pages of doodles. You remember him saying how ONE WORD could open a NEW DOOR in this age of technological innovation if you picked the right one, and that's more magic than real magic, if real magic existed, which it doesn't.[paragraph break]But hey, at least lunch was nice."	"lecture"
 "store/stores/malls/shop/shops/lots/mall"	false	"--[if forest-x is visible]Forest[found-status of forest][otherwise]Store F[end if][line break]--[if sortie-x is visible]Sortie[found-status of sortie][otherwise]Store I[end if][line break]--[if metros-x is visible]Metros[found-status of metros][otherwise]Store M[end if][line break]--[if resort is visible]Resort[found-status of resort][otherwise]Store R[reso-maybe][end if]"	"stores"
 "opt in" or "opt/notip/optin/tip" or "no tip"	false	"OPT IN gives you more detail when you are on the right track. NO TIP gives you less detail but lets you know you have the right anagram."	"opt in/no tip"	false
@@ -3371,7 +3405,7 @@ when play begins (this is the don't use any other besides status window when pla
 		say "Shuffling Around has accessibility features for the vision impaired that make a hinting device more readable. Would you like to activate them?";
 		if the player consents:
 			now hc-acc is true;
-		say "OK. This can be toggled at any time with the three-letter commands NOS (off) or SON (on).";
+		say "OK. This can be toggled at any time with ACCESS.";
 	say "So you just got fired from the best company ever, but it's the best day of your life. Because, new opportunities! New horizons! New ways to look at things! Like calling this stupid kiss-off job fair a 'convention.' As you are stuffed in a slow slow elevator up to the next lecture, you hope there's some way out...";
 	move player to Busiest Subsite, without printing a room description;
 	now player wears magenta nametag;
@@ -8494,6 +8528,8 @@ chapter Elf Row's Flowers
 
 Elf Row's Flowers is east of Cramped Red Camp. "You're in a flower shop manned (elfed?) by faeries. You can go back west to the camp."
 
+Elf Row's Flowers is in Metros.
+
 check going to elf row's flowers for the first time:
 	say "'Main goal, magnolia... what low serf seeks our flowers?' you hear as you enter. 'He must do better than that primrose promiser! A rose leaves us sore! No succor in a crocus either! Players with parsley are rewarded sparely! Peony? Nopey!'";
 
@@ -9138,9 +9174,9 @@ chapter Elm Train Terminal
 to say if-piggy:
 	say "[if neon pig is visible]neon pig embedded in the wall seems even sillier[else if controls are in op]controls are working nicely in the opening you made[otherwise]empty opening you made needs something to fit[end if][run paragraph on]"
 
-Elm Train Terminal is south of Undesired Underside. "You're in a disused train station with, err, min-alert customer service[one of], but at least the stop's labeled ELM, so you finally know what street you're on[or][stopping][if power-shut is false]. It's a bit dark, but not as bad as to the east, where noise seems to be echoing[otherwise]. The tracks are east and, it seems, so is the noise[end if]--it's louder here than anywhere else. You reckon you should strain for the darkness to the east, with more rats in than trains.[paragraph break]You could go back north, [if player is on fuzzy looking wall]though you may need to get off the wall[pigcon] first[otherwise]and there's a fuzzy looking wall you can climb, and a scrolling display reads PA'S PSA[if-fade], but the [if-piggy][end if]. A rail is to the east[if power-shut is false]--it seems to be sparking quite a bit, so best not to step on it, yet[otherwise]--it's no longer sparking[end if]."
+Elm Train Terminal is south of Undesired Underside. "You're in a disused train station with, err, min-alert customer service[one of], but at least the stop's labeled ELM, so you finally know what street you're on[or][stopping][if power-shut is false]. It's a bit dark, but not as bad as below, where noise seems to be echoing[otherwise]. The tracks are east and, it seems, so is the noise[end if]--it's louder here than anywhere else. You reckon you should strain for the darkness below, with more rats in than trains.[paragraph break]You could go back north, [if player is on fuzzy looking wall]though you may need to get off the wall[pigcon] first[otherwise]and there's a fuzzy looking wall you can climb, and a scrolling display reads PA'S PSA[if-fade], but the [if-piggy][end if]. A rail is to the east[if power-shut is false]--it seems to be sparking quite a bit, so best not to step on it, yet[otherwise]--it's no longer sparking[end if]."
 
-Elm Train is south of Underside.
+Elm Train is in Metros.
 
 to say if-fade:
 	say "[if faded ad is unexamined], along with a dead-fad faded ad on it[end if]"
@@ -9157,7 +9193,7 @@ check going west in Elm Train Terminal:
 	say "The big fuzzy wall is that way." instead;
 
 check going nowhere in Elm Train Terminal:
-	say "The tracks lead east, and the city is back north." instead;
+	say "The tracks lead down, and the city is back north." instead;
 
 the dead-fad faded ad is amusing scenery in Elm Train Terminal. "It proclaims TRANSIT FOR ARTISAN AND TSARINA and also that it's an anti-sot station."
 
@@ -9180,10 +9216,10 @@ check going up in underside:
 
 power-shut is a truth state that varies. power-shut is usually false.
 
-east-tried is a truth state that varies. east-tried is usually true.
+down-tried is a truth state that varies. down-tried is usually true.
 
-check going east in Elm Train Terminal:
-	now east-tried is true;
+check going down in Elm Train Terminal:
+	now down-tried is true;
 	if power-shut is false:
 		say "There may be an evil lair that way, but it's behind a live rail in the darkness. You'd touch it before you got there[if shoes are in lalaland]. Even those rubber shoes won't insulate you[end if]." instead;
 	if player does not have tulip:
@@ -10584,34 +10620,48 @@ carry out scaning:
 		say "Two beeps. It's [rcn][rc][rc][rc][rc][rc][gc] over most of the cabinet but[if number of solved regions < 2] the cabinet seems sensitive about its acne[otherwise] [rcn][rc][rc][gc][gc][rc][gc] over the bits[end if]." instead;
 	if noun is subway map:
 		say "The reading's different over the map of Mt. Rose than the store proper.[if gadget is cert][gcn][rc][rc][rc][rc][rc][else if gadget is rect][gcn][bc][bc][bc][rc][bc][end if]." instead;
-	if gadget is cert:
-		if noun is the motto:
-			say "Your gadget gives [rcn][rc][rc][rc][gc][gc]. Hmm, motto is only five letters. But then you remember it's A MOTTO." instead;
-		if noun is the magenta nametag:
+	if noun is magenta nametag:
+		if gadget is cert:
 			now nt-cert is true;
-			say "You see lights form on the screen: [rcn][gc][rc][gc][rc] *[rc]. The sixth light starts red, then flashes to green and back[check-other-nt]." instead;
+		if gadget is rect:
+			now nt-rect is true;
+	if gadget is cert:
 		if noun is not inflexible:
-			say "[if noun is begonias or noun is roadblock or noun is acne-bit cabinet]You notice the gadget beeps twice. Hmm[otherwise]The gadget beeps once[end if]. A series of lights comes across:[if hc-acc is false] [end if][rgtext of noun][one of] (R = red, G = green)[prqc][or][stopping][if noun is drainage and player has gadget]. Uh, oh. Not really helpful at all. Maybe you'll find a hint elsewhere, or in the stuff floating in the drainage[else if noun is tall trio]. You scan each of the tall trio to make sure nothing changes. It doesn't[else if noun is Tories]. Each portrait looks the same, and you note six letters--probably Tories[end if].";
+			say "[if noun is begonias or noun is roadblock or noun is acne-bit cabinet]You notice the gadget beeps twice. Hmm[otherwise]The gadget beeps once[end if]. A series of lights comes across:[if hc-acc is false] [end if][rgtext of noun][one of] (R = red, G = green)[or][stopping]. ";
+			if parse-output is true:
+				say "Hmm, that means [cert-text of noun]. ";
+			pad-rec-q "certify";
+			kibitz noun;
 			check-marcos instead;
-	if gadget is rect:
-		if noun is the motto:
-			say "Your gadget gives [bcn][bc][bc][bc][gc][rc]. Since Motto is only five letters, you wonder what's up, but it's labeled A MOTTO." instead;
+	else if gadget is rect:
 		if noun is the magenta nametag:
 			now nt-rect is true;
-			say "The gadget's display is a bit of a mess. It starts at [bcn][bc][rc][bc][gc][bc][bc] and goes to [gcn][bc][bc][bc][bc][bc][rc] and back. Like there are two aspects to the magenta nametag worth considering[check-other-nt]." instead;
+			say "The gadget's display is a bit of a mess. It starts at [bcn][bc][rc][bc][gc][bc][bc] and goes to [gcn][bc][bc][bc][bc][bc][rc] and back. [check-other-nt]." instead;
 		if noun is not inflexible:
 			say "Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: ";
-			say "[rgbtext of noun]";
+			say "[rgbtext of noun]. ";
 			if rgb-yet is false:
 				say " (R = red, G = green, B = blue).";
 				now rgb-yet is true;
 				pad-rec-q "rectify";
-			if noun is tories:
-				say "Hm, six letters to Store I--probably mainly important they're Tories.";
-			if noun is tall trio:
-				say "You scanned each of the tall trio, and the readout didn't change.";
+			kibitz noun;
 			check-marcos instead;
 	buzz-or-no-noise noun instead;
+
+to kibitz (sca - a thing):
+	repeat through table of kibitzes:
+		if sca is kib entry:
+			say "[helpy entry][line break]";
+			the rule succeeds;
+	say "[line break]";
+
+table of kibitzes
+kib	helpy
+motto	"Since Motto is only five letters, you wonder what's up, but it's labeled A MOTTO."
+tall trio	"You scanned each of the tall trio, and the readout didn't change."
+tories	"Six letters to Store I--probably mainly important they're Tories."
+drainage	"[if gadget is cert]Uh, oh. Not really helpful at all[else]Not bad, but still[end if]. Maybe you'll find a hint elsewhere, or in the stuff floating in the drainage."
+magenta nametag	"[if gadget is cert]The sixth light starts red, then flashes to green and back[else]Hmm, two aspects to the magenta nametag to consider[end if][check-other-nt]."
 
 to say rgbtext of (sca - a thing):
 	if scan-to-header is true:
@@ -10622,7 +10672,7 @@ to say rgbtext of (sca - a thing):
 	repeat with Q running from 2 to lgth of sca:
 		say "[if gpos of sca is Q][gcn][else if rpos of sca is Q][rcn][otherwise][bcn]";
 	if parse-output is true:
-		say ". Hmm, that means [if gadget is cert][cert-text of sca][else][rect-text of sca]";
+		say "Hmm, that means [if gadget is cert][cert-text of sca][else][rect-text of sca]. ";
 
 yes-scans is a number that varies.
 
@@ -11050,9 +11100,6 @@ peasant	"straw"	"'I could use some[if straw is in sack]. And it looks like you'v
 peasant	"hay"	"'I can't use it. But I could use some straw.'"
 woeful pat	"beat/rhythm/meter"	"[anapest-clue][run paragraph on]"
 woeful pat	"st paean" or "paean"	"'It will be my best reading yet. Even better than this[if player does not have flier]. Here you go, just to make sure[give-flier].'"
-
-to say prqc:
-	pad-rec-q "certify";
 
 to say prcer:
 	pad-rec "certify";
@@ -11995,6 +12042,19 @@ carry out sitesing:
 	say "http://wordsmith.org/anagram/ -- Anu Garg's Rearrangement Server at wordsmith.org was invaluable to me. Hard to believe I've known about it for fifteen years. You've probably seen it before, too, but it's the big one for the main game mechanic. The sayings that go with each anagram have also helped me in many other ways. It's still fun after all these years.[line break]http://www.anagrammy.com/anagrams/faq6.html[line break]http://www.english-for-students.com/One-Word-Anagrams.html[line break]http://www.enchantedlearning.com/english/anagram/ was quite nice for common anagrams by subject.[line break]http://www2.vo.lu/homepages/phahn/anagrams/oneword.htm[line break]http://www.ssynth.co.uk/~gay/anagram.html[line break]http://www.wellho.net/resources/ex.php4?item=p669/anagram (basic succinct PERL anagram finder)[line break]http://boards.straightdope.com/sdmb/archive/index.php/t-291149.html for specific words and also ideas how to script more complex stuff[line break]http://www.rinkworks.com/words/oddities.shtml[line break]http://www.sporcle.com/ had many puzzles that helped me determine what was fair and what wasn't[line break]http://jamesgart.com/anagram/[line break]PERL for letting me parse through word-to-word anagrams and also helping me break one promising word into two.[paragraph break]I'd be interested if someone from France can ref these sites to make a similar game, someone from Spain could take pains, or a German manager could do so too. It'd be interesting to see.";
 	the rule succeeds; [forgot where I found the names from]
 
+chapter optionsing
+
+optionsing is an action out of world.
+
+understand the command "options" as something new.
+
+understand "options" as optionsing.
+
+carry out optionsing:
+	say "You read about options in your dope tan notepad.";
+	try padding "options";
+	the rule succeeds;
+
 part verbing
 
 verbing is an action out of world.
@@ -12890,29 +12950,33 @@ undo-code is a number that varies. undo-code is usually 0.
 volume in-game map
 
 [intro region]
-index map with notices section mapped south of trips strip.
-index map with thickets mapped south of notices section.
+index map with notices section mapped east of trips strip.
+index map with thickets mapped east of notices section.
 index map with dry yard mapped east of thickets.
-index map with subsite mapped east of dry yard.
+index map with subsite mapped south of dry yard.
 
 [forest]
-index map with slough mapped north of enclosure.
+index map with forts mapped west of strip.
 index map with forts mapped east of slough.
-index map with sf mapped south of fields.
-index map with rf mapped east of fields.
-index map with rf mapped north of strip.
+index map with slough mapped north of enclosure.
+index map with sf mapped south of strip.
+index map with rf mapped west of strip.
 
 [sortie]
+index map with centrifuge mapped north of notices section.
 index map with the nick mapped north of kitchen.
 index map with moor mapped east of roomroom.
 
 [metros]
-index map with elf row's flowers mapped west of notices section.
-index map with abyss mapped east of terminal.
+index map with terminal mapped north of slough.
+index map with abyss mapped west of elm train terminal.
 
 [roster]
-index map with tiles mapped east of notices section.
-index map with islet mapped south of tiles.
+index map with tiles mapped east of sf.
+index map with islet mapped south of sf.
+index map with woodland mapped east of islet.
+index map with hotspot mapped east of woodland.
+index map with roman manor mapped east of hotspot.
 
 volume beta testing - not for release
 

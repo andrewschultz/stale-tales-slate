@@ -1068,7 +1068,7 @@ use MAX_OBJECTS of 900.
 
 use MAX_SYMBOLS of 120000.
 
-use SYMBOLS_CHUNK_SIZE of 12800
+use SYMBOLS_CHUNK_SIZE of 14000
 
 use MAX_VERBSPACE of 10240.
 
@@ -1078,7 +1078,7 @@ use MAX_VERBS of 640.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
-use MAX_NUM_STATIC_STRINGS of 70000.
+use MAX_NUM_STATIC_STRINGS of 80000.
 
 use MAX_PROP_TABLE_SIZE of 540000.
 
@@ -4703,7 +4703,15 @@ to say reject:
 		if the player's command matches the regular expression "^<a-z>+ly":
 			say "[if whistle is reflexed and medals are reflexed]You don't know if you need to do any more of that[anicheck][else]You think you're on to something, but no--you can't find anything to focus on, thinking that.";
 			continue the action;
-	say "That's not something you can say, do or see here[if elmo is visible or gunter is visible]. Besides, there's someone to deal with[end if][if cur-score of manor > 0][one of]. (If you are trying to flip something back, you almost never need to.)[or].[stopping][else].[end if][if last-hash is my-key and last-hash > 0][line break]It looks like you're a bit stuck. You may need to take a step back and examine things, [mb-ss-ped]to see what you can change[trickier].[end if]";
+	say "That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. ";
+	unless qbc_litany is Table of No Conversation:
+		say "Besides, there's someone to deal with.";
+	else if cur-score of manor > 0:
+		say "(If you are trying to flip something back, you almost never need to.)[line break]";
+	else if last-hash is my-key and last-hash > 0:
+		say "[paragraph break]Though it looks like you're a bit stuck. You may need to take a step back and examine things, [mb-ss-ped]to see what you can change. The trickier stuff should have more than one clue.";
+	else:
+		say "[line break]";
 	now last-hash is my-key;
 
 to say anicheck:
@@ -4712,10 +4720,6 @@ to say anicheck:
 	say ", but you're worried you don't have enough allies";
 
 settler-try is a truth state that varies;
-
-to say trickier:
-	if strip of profits is visited:
-		say "[2da]the trickier stuff should have more than one clue";
 
 to say mb-ss-ped:
 	if player has settler:
@@ -5016,7 +5020,7 @@ when play begins (this is the basic initialization rule):
 	repeat through table of biopics: [biopics are hostile by default]
 		if there is no fave entry:
 			d "[blurb entry] needs bias. Defaulting to false.";
-			now blare entry is false;
+			now fave entry is false;
 		else if fave entry is true:
 			increment temp;
 	d "[temp] biopics favorable to you of [number of rows in table of biopics] total.";
@@ -7891,16 +7895,37 @@ carry out abouting:
 	say "A Roiling Original is the sequel to Shuffling Around and part 2 in my Stale Tales Slate. I doubt there'll be a third, since I've milked the concept dry.[paragraph break]ARO was initially written for Spring Thing 2013 and contains the same mechanics as Shuffling Around but hopefully is different enough to make for a new, original, and enjoyable story, especially since I focused on story in the post-comp release. You can see more abut the people who helped the game come to be by typing CREDITS. There are a lot of them!";
 	ital-say "I really appreciate transcripts (even though this is a post-comp version,) as it's cool to tinker with what I made--or to be able to squash a bug, or to make a puzzle clearer. If you wish to send a transcript, you can do so by typing TRANSCRIPT at the command line, then mailing me that text file at [email]. ;, * and ? at the line's start will indicate comments.[paragraph break]You can directly report bugs or annoyances at [my-repo]--no need for an account." instead;
 
+chapter optionsing
+
+optionsing is an action out of world.
+
+understand the command "options" as something new.
+understand the command "opts" as something new.
+understand the command "post opts" as something new.
+
+understand "options" as optionsing.
+understand "opts" as optionsing.
+understand "post opts" as optionsing.
+
+carry out optionsing:
+	try padding "options" instead;
+	if player is in used lot and stop post is reflexive:
+		if word number 1 in the player's command is "opts" or word number 2 in the player's command is "opts":
+			say "(You have 24 opts for what to do with the stop post, but this doesn't quite work.)";
+	the rule succeeds;
+
 chapter verbing
 
 verbing is an action out of world.
 
 understand the command "verb" as something new.
+understand the command "verbs" as something new.
 
 understand "verb" as verbing.
+understand "verbs" as verbing.
 
 carry out verbing:
-	pad-rec "verbs" instead;
+	try padding "verbs" instead;
 
 chapter opt in/no tip
 
@@ -10710,7 +10735,23 @@ instead of taking the pen:
 qmspoil is a truth state that varies.
 
 to say verb-list:
+	say "[2da]N, S, E and W are the basic directions.";
+	say "[2da]TALK to an NPC gives general information, while ASK X ABOUT gives detailed information.";
+	say "[2da]OPTIONS or OPTS or POST OPTS gives you a list of game options that can simplify play or add detail.";
+	verbsplain "xray";
+	verbsplain "go to";
+	verbsplain "rove over";
+	verbsplain "retry";
+	if player has settler:
+		say "[2da]Settler shortcuts: la=recall what you scanned last, sl=turns slider on, sy=scan with cheat on, sn=scan with cheat off, ss=shake settler to see what needs to change.";
+
+
+to say opts-list:
 	verbsplain "access";
+	verbsplain "random dialogue";
+	verbsplain "parse";
+	verbsplain "poss";
+	verbsplain "opt in/no tip"
 
 to verbsplain (t - text):
 	choose row with short of t in table of pad-stuff;
@@ -10721,7 +10762,8 @@ to verbsplain (t - text):
 table of pad-stuff
 topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "verbs/verb"	true	"[verb-list]"	"verbs"	false	--	false
-"parse/spare"	false	"PARSE processes the settler's data for you, but SPARE hides it."
+"options" or "opts" or "post opts"	true	"[opts-list]"	"options"	false	--	false
+"parse/spare"	false	"PARSE processes the settler's data for you, but SPARE hides it."	"parse"	false	--	false
 "access"	true	"Typing ACCESS toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently [if screenread is true]on[else]off[end if]."	"access"	false	--	false
 "free turns" or "free/turns"	true	"Some actions do not take a turn. For instance, examining, looking or taking inventory, or 'out of world' actions like SCORE, will not cost you time if you are in a tight situation."	"free turns"	false
 "saying"	false	"Instead of SAYing or THINKing, you can just type the word."	"saying"	false

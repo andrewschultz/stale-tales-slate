@@ -1,4 +1,7 @@
 table of random books [xxm4] [tob]
+"A Supple Seal Pup Leaps Up[r], by Su Apple"
+"A Doubter, Obdurate[r], by Bo Duarte"
+"A Wobble, Low Babe[r], by Ola Webb"
 "Set a Seat East[r], by Essa Tate"
 "Boy, Ban No Baby[r], by Bob Yan"
 "Ow, I Fell: Low-Life Will Foe[r], by Eli Wolf"
@@ -11,6 +14,7 @@ table of random books [xxm4] [tob]
 
 table of posse bosses [xxv7]
 "Seamy Mayes"
+"Crafty Cat Fry"
 
 table of self-help bestsellers [xxv0]
 "One Must: Us, Not Me[r], by Su Monet"
@@ -24,6 +28,7 @@ table of ad slogans [xxm1]
 table of to-sort=========================================
 
 table of cussing rejects [xxg1]
+"Blustery? Try blues!"
 
 table of death messages [xxg2]
 

@@ -1116,6 +1116,9 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "access"	360553029	--	--	--	degen-true rule	"[meta-rej]."
 "exit"	388677054	--	--	--	degen-true rule	"[meta-rej]."
 "exits"	484951020	--	--	--	degen-true rule	"[meta-rej]."
+"access"	360553029	--	--	--	degen-true rule	"[meta-rej]"
+"opts"	355202520	--	--	--	degen-true rule	"[meta-rej]"
+"options"	543455451	--	--	--	degen-true rule	"[meta-rej]"
 
 book text details
 
@@ -1922,7 +1925,7 @@ to say no-special-verb:
 	say "There's no secret verb or verbs to find trying that"
 
 to say dir-cut:
-	say "There's no special addition to the 'about' section[if mrlp is demo dome], but you're at the director's cut bit right now[end if]"
+	say "section has no easter eggs[if mrlp is demo dome], though you're at the director's cut bit right now[end if]"
 
 to say meta-rej:
 	say "Meta-commands don't have any easter eggs, sadly"
