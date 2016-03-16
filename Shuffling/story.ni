@@ -379,6 +379,9 @@ spore	"You briefly wonder what the spore could grow into, given time. Time you d
 protest	"The protesters mumble at you for trying to exert mind control. You've struck a nerve."
 chain links	"The links rattle slightly. Perhaps they are chaining others' creativity as well as your own, as they are now."
 riot	"The riot's still a crowd. A BIG crowd."
+r2	"The room sways a bit but snaps back to normal."
+m2	"The moor sways a bit but snaps back to normal."
+t-n	"The nick blurs a little but snaps back to normal."
 
 to say red-to:
 	now red asp is in Enclosure;
@@ -439,7 +442,10 @@ to say reject:
 					if this-item entry is visible:
 						say "[this-clue entry][line break]";
 						continue the action;
-	say "That's not something you can say, do or see here. For a list of common verbs, type VERBS."
+	say "[verb-cue]."
+
+to say verb-cue:
+	say "That's not something you can say, do or see here. For a list of common verbs, type VERBS"
 
 to say bug-report:
 	say "BUG. Contact me at [email] with a transcript or description of where you are/what you did, or report a bug at [ghsite]. Use up arrow to see previous commands. Or use UNDO several times and hit TRANSCRIPT to show me how you got here, what your inventory was, etc."
@@ -517,7 +523,7 @@ to say bluetext:
 	(- glk_set_style(style_BlockQuote); -)
 
 to say hc-sp:
-	if hc-acc is true, say " ";
+	if sr-acc is true, say " ";
 
 [the syntax here is, only screen-reader space for *c, neither for *cn, forced space for *cf]
 
@@ -549,7 +555,7 @@ to say rcf:
 	say " [first custom style]R[r]"
 
 to say ast:
-	say "[if hc-acc is true or spaces-on is true] [end if]"
+	say "[if sr-acc is true or spaces-on is true] [end if]"
 
 to say d1:
 	say "[ast]-";
@@ -802,7 +808,7 @@ to say 2da of (rg - a region):
 	say "[2dn]";
 
 to say 2dn:
-	say "[unless hc-acc is true]--[end if]";
+	say "[unless sr-acc is true]--[end if]";
 
 rule for showing what the player missed:
 	let missed-points be 0;
@@ -2374,8 +2380,25 @@ understand the command "access" as something new.
 understand "access" as accessing.
 
 carry out accessing:
-	now hc-acc is whether or not hc-acc is false;
-	say "Screen reader accessible text is now [on-off of hc-acc].";
+	now sr-acc is whether or not sr-acc is false;
+	say "Screen reader accessible text is now [on-off of sr-acc].";
+	the rule succeeds;
+
+chapter spaceing
+
+spaceing is an action out of world.
+
+understand the command "space" as something new.
+
+understand "space" as spaceing.
+
+carry out spaceing:
+	if sr-acc is true:
+		say "This can't be toggled in screen reader mode." instead;
+	now spaces-on is whether or not spaces-on is true;
+	say "Spaces in gadget output are now [on-off of spaces-on].";
+	pad-rec-q "spaces";
+	now son-nos is true;
 	the rule succeeds;
 
 chapter soning
@@ -2385,16 +2408,22 @@ spaces-on is a truth state that varies.
 soning is an action out of world.
 
 understand the command "son" as something new.
+understand the command "space on" as something new.
+understand the command "spaces on" as something new.
 
 understand "son" as soning.
+understand "space on" as soning.
+understand "spaces on" as soning.
 
 carry out soning:
-	if hc-acc is true:
+	if sr-acc is true:
 		say "Spaces are on by default with screen readers." instead;
 	if player does not have gadget:
 		say "This option means nothing until you have acquired the gadget." instead;
-	say "Spaces in gadget output are [if hc-acc is true]already[else]now[end if] on.";
+	say "Spaces in gadget output are [if spaces-on is true]already[else]now[end if] on.";
 	now spaces-on is true;
+	pad-rec-q "spaces";
+	now son-nos is true;
 	the rule succeeds;
 
 chapter nosing
@@ -2402,16 +2431,22 @@ chapter nosing
 nosing is an action out of world.
 
 understand the command "nos" as something new.
+understand the command "no space" as something new.
+understand the command "no spaces" as something new.
 
 understand "nos" as nosing.
+understand "no space" as nosing.
+understand "no spaces" as nosing.
 
 carry out nosing:
-	if hc-acc is true:
+	if sr-acc is true:
 		say "Spaces are on by default with screen readers." instead;
 	if player does not have gadget:
 		say "This option means nothing until you have acquired the gadget." instead;
 	say "Spaces in gadget output are [if spaces-on is false]already[else]now[end if] off.";
 	now spaces-on is false;
+	pad-rec-q "spaces";
+	now son-nos is true;
 	the rule succeeds;
 
 chapter uhhsing
@@ -2775,31 +2810,34 @@ carry out fliptoing (this is the main flipping rule) :
 				the rule succeeds;
 			now got-yet is true;
 			say "[from-msg entry][line break]";
-			if the-to entry is a room:
-				if the-to entry is unvisited:
+			if the-to entry is teleporter:
+				d "Teleporter is in [location of teleporter].";
+				if to-room entry is unvisited:
 					reg-inc;
-			else if the-to entry is not in lalaland and the-to entry is not in bullpen:
-				reg-inc;
-				if the-to entry is attics:
-					min-up;
+				move player to to-room entry;
+			else:
+				if the-to entry is not in lalaland and the-to entry is not in bullpen:
+					reg-inc;
+					if the-to entry is attics:
+						min-up;
 				if force-take entry is true or player has the-from entry:
 					now player carries the-to entry;
-			if the-to entry is prefigured:
-				now the-to entry is done-for;
-			if the-from entry is oils:
-				move the-from entry to sacred cedars;
-			if vanish entry is true:
-				if the-from entry is a backdrop:
-					move the-from entry to lll;
-				else:
-					if the-from entry is reversible:
-						move the-from entry to bullpen;
+				if the-to entry is prefigured:
+					now the-to entry is done-for;
+				if the-from entry is oils:
+					move the-from entry to sacred cedars;
+				if vanish entry is true:
+					if the-from entry is a backdrop:
+						move the-from entry to lll;
 					else:
-						move the-from entry to lalaland;
-	if noun is not a room and player does not have the noun and noun is not visible:
+						if the-from entry is reversible:
+							move the-from entry to bullpen;
+						else:
+							move the-from entry to lalaland;
+	if player does not have the noun and noun is not visible:
 		if noun is shoes:
 			move noun to lalaland;
-		else:
+		else if noun is not teleporter:
 			move noun to location of player; [may need special case for slippery sword]
 	if noun is shoot button or noun is steer button:
 		now noun is part of panel;
@@ -3036,7 +3074,7 @@ Spam	maps	"maps"	"spam"	"[process-sandwich]With a sickening SCHLURP, the [spam] 
 vowels	wolves	"wolves"	"vowels"	"Well, you've done it now. The imposing vowels become werewolves--but they notice your shotgun and stand back. The first forward gets shot--or so they imagine."	false	567346084	"You don't need magic. You have a weapon."	[end forest anagrams]
 warts	straw	"straw"	"warts"	"The warts quickly peel off and lengthen into straw[drop-straw]."	false	394830378	[start sortie anagrams]
 skate	steak	"steak"	"skate"	"The skate turns reddish, and the blade cuts up the meaty bits before vanishing--how convenient!"	false	382311089
-the nick	kitchen	"the nick"	"kitchen"	"That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if]."	false	454037543
+t-n	teleporter	"kitchen"	"the nick"	"That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if]."	false	454037543	--	--	kitchen
 cult tee	lettuce	"lettuce"	"lettuce"	"The t-shirt crumples and then shreds before turning into a light green head of lettuce."	false	639757485
 spearman	Parmesan	"parmesan"	"spearman"	"The spearman transforms into something cheesier--Parmesan cheese! Unfortunately, it doesn't have one of those cute plastic spears sticking from it, but you can't have everything."	false	528228134
 cathouse	HOTSAUCE	"hotsauce" or "hot sauce"	"cathouse" or "cat house"	"The CATHOUSE perfume turns into a packet of equally over-capitalized and under-spaced hot sauce."	false	565124179
@@ -3047,8 +3085,8 @@ taco	coat	"coat"	"taco"	"Before changing the hot-to-your-tongue taco to a warm-t
 cask	sack	"sack"	--	"The cask retains its color but looks visibly frayed as its wood turns to burlap. The sack it has become collapses in a heap on the floor. You pick it up."	true	170400547
 sack	cask	"cask"	--	"The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright[if straw was in sack]. The straw falls out[end if][if hay was in sack]. The hay falls out[end if]."	true	170400547
 hoses	shoes	"shoes"	"hoses"	"The pair of rubber hoses bends and opens and become a comfortable pair of shoes that swallows your old shoes--you'd forgotten how ratty they were. A few steps show walking's much smoother. So smooth, you forget you're wearing them. And the price is right, too."	false	431988917
-r2	moor	"room"	"moor"	"[moor-jump]"	false	298104110	--	--	moor
-moor	roomroom	"moor"	"room"	"[if woeful pat is in moor][one of]As you pop back to the room, Woeful Pat looks visibly shocked. You have left him speechless, which is good news, but he is reaching for his pen, which is bad news for some poor soul in the future[or]Woeful Pat is less impressed this time, sniffing that it's been done[stopping].[else]'The room's smoother,' you muse...'"	false	298104110
+r2	teleporter	"moor"	--	"[moor-jump]"	false	298104110	--	--	moor
+m2	teleporter	"room"	--	"[if woeful pat is in moor][one of]As you pop back to the room, Woeful Pat looks visibly shocked. You have left him speechless, which is good news, but he is reaching for his pen, which is bad news for some poor soul in the future[or]Woeful Pat is less impressed this time, sniffing that it's been done[stopping].[else]'The room's smoother,' you muse...'"	false	298104110	--	--	roomroom
 anapest	peasant	"peasant"	"anapest"	"Nothing happens. You worry your magic powers have failed, until a peasant strides out from the edge of the moor, carrying a bale of hay and singing a cheery song about nothing in particular. Distracted, you look over and smile.[paragraph break]'Oh, does THAT resonate with your stone ear?' whines Woeful Pat.[paragraph break]You notice his papers have crumbled (but don't worry, he has PLENTY of written drafts.) He storms off, claiming you will make a perfect arch-villain in his new socially significant blank-verse epic. Or another poor henchman who deserves but one line before a horrible fate--or a mega-rip of an epigram!"	false	481939196	"You're better off changing what the peasant has than what he is."
 roadblock	black door	"black door" or "blackdoor"	"roadblock" or "road block"	"Bam! The fissure in the roadblock covers up, and a black door appears where it was. It's light but bulky--you can probably put or push it where it needs to go[if pat is visible]. Woeful Pat shows commendable concentration ignoring all this[else if peasant is visible]. The Peasant cheers in appreciation, momentarily dropping his hay, which he's none too eager to pick up[end if]."	false	401417371
 poem	panel	"panel"	--	"Poof! The paper plane becomes a panel. It's light enough to carry, you suppose[if player has poem or player has panel]. Well, it doesn't cause an immediate hernia[end if]."	false	334181233
@@ -3213,19 +3251,28 @@ to say reso-maybe:
 		say " (resort, not opened)[run paragraph on]";
 
 to say opts-list:
-	consider the gadget-okay rule;
-	if the rule succeeded:
+	if gadget-active:
 		say "[2dn]PARSE interprets the gadget's clues, and SPARE hides them. PARSE is currently [on-off of parse-output].";
 	verbsplain "opt in/no tip";
 	verbsplain "random dialogue";
+	verbsplain "access";
+	verbsplain "space"
+
+to decide whether gadget-active:
+	if show hows tag is in lalaland:
+		decide no;
+	if notices section is unvisited:
+		decide no;
+	if player does not have gadget:
+		decide no;
+	decide yes;
 
 to say verb-list:
 	say "[2dn]X or EXAMINE an object. If an object has writing, READ it instead of X WRITING.";
 	say "[2dn]The four directions, north, south, east and west.";
 	say "[2dn]PAD to see a list of topics. Then PAD VERBS, for example.";
 	say "[2dn]VERBS shows this, OPTIONS shows options you can change, and informational meta-commands include ABOUT, CREDITS, TECH, SITES.";
-	consider the gadget-okay rule;
-	if the rule succeeded:
+	if gadget-active:
 		if button-locked is false:
 			choose row with short of "macros" in table of pad-stuff;
 			if known entry is true:
@@ -3251,6 +3298,8 @@ topic (topic)	known	blurb	short	verify
 "notepad/pad/note" or "note pad"	true	"You keep the date you started using your notebooks on the inner front cover. This one's from three years ago."	"notepad"	false
 "verbs/verb"	true	"[verb-list]"	"verbs"	false
 "options/option" or "post opts" or "ops"	true	"[opts-list]"	"options"	false
+"access"	true	"ACCESS toggles screen reader accessibility."	"access"	false
+"space/spaces"	false	"SPACES toggles whether you have an extra space in raw gadget results. SPACE(S) ON/SON forces it on, while NO SPACE(S)/NOS forces it off."	"spaces"	false
 "lecture"	true	"An hour-long pre-lunch lecture by some fellow named Curt Lee netted you three pages of doodles. You remember him saying how ONE WORD could open a NEW DOOR in this age of technological innovation if you picked the right one, and that's more magic than real magic, if real magic existed, which it doesn't.[paragraph break]But hey, at least lunch was nice."	"lecture"
 "store/stores/malls/shop/shops/lots/mall"	false	"--[if forest-x is visible]Forest[found-status of forest][otherwise]Store F[end if][line break]--[if sortie-x is visible]Sortie[found-status of sortie][otherwise]Store I[end if][line break]--[if metros-x is visible]Metros[found-status of metros][otherwise]Store M[end if][line break]--[if resort is visible]Resort[found-status of resort][otherwise]Store R[reso-maybe][end if]"	"stores"
 "opt in" or "opt/notip/optin/tip" or "no tip"	false	"OPT IN gives you more detail when you are on the right track. NO TIP gives you less detail but lets you know you have the right anagram."	"opt in/no tip"	false
@@ -3390,7 +3439,7 @@ carry out padding:
 
 part begin-play
 
-hc-acc is a truth state that varies.
+sr-acc is a truth state that varies.
 
 when play begins (this is the don't use any other besides status window when play begins rule):
 	repeat with Q running through things:
@@ -3404,7 +3453,7 @@ when play begins (this is the don't use any other besides status window when pla
 	if debug-state is false:
 		say "Shuffling Around has accessibility features for the vision impaired that make a hinting device more readable. Would you like to activate them?";
 		if the player consents:
-			now hc-acc is true;
+			now sr-acc is true;
 		say "OK. This can be toggled at any time with ACCESS.";
 	say "So you just got fired from the best company ever, but it's the best day of your life. Because, new opportunities! New horizons! New ways to look at things! Like calling this stupid kiss-off job fair a 'convention.' As you are stuffed in a slow slow elevator up to the next lecture, you hope there's some way out...";
 	move player to Busiest Subsite, without printing a room description;
@@ -4622,13 +4671,13 @@ check taking show hows tag:
 description of show hows tag is "'This gadget is certified untransmogrifiable. It can be used to SCAN objects to determine their transmogrification states. Removing tag invalidates warranty. One beep indicates changeabilty. Two mean a compound word.'[paragraph break]Above a small print disclaimer you see two helpful examples."
 
 to say lemon-melon:
-	if hc-acc is true:
+	if sr-acc is true:
 		say "LEMON, two way arrow, and MELON. The m's and l's are red, but the other letters are green";
 	else:
 		say "[first custom style]L[r][second custom style]E[r][first custom style]M[r][second custom style]O[r][second custom style]N[r] <-> [first custom style]M[r][second custom style]E[r][first custom style]L[r][second custom style]O[r][second custom style]N[r][one of]. A little thought and you realize only two reds on the gadget makes things trivial[or][stopping]"
 
 to say paste-tapes:
-	if hc-acc is true:
+	if sr-acc is true:
 		say "PASTE, two-way arrow, TAPES. The ST of paste is red and green, with the PE of tapes being green and red. Hm, Tapes starts with T and ends with S, while Paste starts with P and ends with E.";
 	else:
 		say "[bluetext]PA[r][first custom style]S[r][second custom style]T[r][bluetext]E[r] <-> [bluetext]TA[r][second custom style]P[r][first custom style]E[r][bluetext]S[r][one of]. The red S/green T in PASTE and green P/red E in TAPES are, you realize, the first and last letters in the other word[or][stopping]";
@@ -6414,6 +6463,8 @@ chapter The Nick
 
 The Nick is a room in Sortie. "You're locked in this arty suite of austerity by a great grate. It's a more forbidding version of the gateway in the Notices Section. You doubt even Old Man Almond could magic it open. There appears to be no standard way out. It has no accommodations, not even unsoft futons. This is a saner snare than the centrifuge, but it doesn't look like you'll drug a guard or reveal a lever to escape. At least there is some graffiti[if player has gadget][beepity-nick][end if]."
 
+t-n is privately-named scenery in the nick. printed name of t-n is "the nick". understand "nick" as t-n. t-n is undesc.
+
 section how to get here
 
 check going to kitchen when kitchen is unvisited:
@@ -7193,7 +7244,7 @@ carry out pouring:
 
 section moor
 
-r2 is a privately-named backdrop. description of m2 is "[bug]". r2 is useless. printed name of r2 is "moor". r2 is in roomroom.
+r2 is privately-named backdrop. description of r2 is "[bug-report]". r2 is useless. printed name of r2 is "room". r2 is in roomroom.
 
 definition: a room is moory:
 	if it is moor, decide no;
@@ -7316,6 +7367,8 @@ instead of doing something with the hallway:
 chapter moor
 
 Moor is a room in Sortie. description of moor is "You're on a moor. Woods all around don't look inviting. In fact, they'd leave you feeling sort of trapped, without your powers to reverse up out of here[if anapest is in moor][one of][or]. You hear bad poetry[stopping][end if]."
+
+m2 is privately-named scenery in moor. printed name of m2 is "moor". m2 is undesc.
 
 room-flip is a truth state that varies.
 
@@ -7576,7 +7629,7 @@ check examining poem:
 
 to say smy:
 	if missile is off-stage:
-		say " [if hc-acc is true]SMILIES[else]:) :)[end if]";
+		say " [if sr-acc is true]SMILIES[else]:) :)[end if]";
 
 section pushing the buttons
 
@@ -7731,15 +7784,6 @@ check inserting missile into silo:
 		now missile is in silo instead;
 	otherwise:
 		say "No way to put the missile in or on the silo--and nothing on the side to attach it to. If there were any way into the silo, you could put the missile in there." instead;
-
-section rooming
-
-rooming is an action applying to nothing.
-
-understand the command "room" as something new.
-
-understand "room" as rooming.
-
 
 section stuff for after cedars
 
@@ -10006,6 +10050,8 @@ chapter bullpen
 
 Bullpen is a room in LLL. "This is the bullpen. You should not see it."
 
+teleporter is privately-named scenery in Bullpen.
+
 book error checking
 
 rewarn-val is a number that varies. rewarn-val is usually 0.
@@ -10233,7 +10279,7 @@ Rule for printing a parser error when the latest parser error is the can't see a
 		say "[one of]There's a lot of writing in this game[if notices section is visited], especially red writing[end if]. If you're trying to read writing, you may want to READ what the writing is on, instead. This is slight laziness on my part, but it's tricky code. I hope you understand[or]Try to READ the object you want, instead[stopping].";
 		pad-rec "writing";
 		the rule succeeds;
-	say "You can't see anything like that here.";
+	say "You can't see anything like that here. If you're trying to view the room, L or LOOK should work.";
 	the rule succeeds;
 
 Rule for printing a parser error when the latest parser error is the only understood as far as error:
@@ -10377,11 +10423,11 @@ after reading a command:
 			if the-from entry is visible:
 				d "[myh] [the-from entry] visible.";
 				if there is an exact-text entry and the player's command matches exact-text entry:
-					d "2nd loop Fliptoing from anagram loop: [the-from entry].";
+					d "2nd loop Fliptoing from anagram loop: [the-from entry] with command [the player's command].";
 					try fliptoing the-to entry;
 					consider the notify score changes rule instead;
 				if there is a text-back entry and the player's command matches text-back entry:
-					d "2nd loop Flipfroming from anagram loop: [the-from entry].";
+					d "2nd loop Flipfroming from anagram loop: [the-from entry] with command [the player's command].";
 					try fliptoing the-from entry instead;
 			if the-to entry is visible and the-to entry is not reversible:
 				d "[myh] [the-to entry] visible.";
@@ -10449,16 +10495,16 @@ understand the command "scan [something]" as something new.
 
 understand "scan [something]" as scaning.
 
-understand "scan" as a mistake ("[reject]") when notices section is unvisited.
-understand "scan [text]" as a mistake ("[reject]") when notices section is unvisited.
-understand "c" as a mistake ("[reject]") when notices section is unvisited.
-understand "c [text]" as a mistake ("[reject]") when notices section is unvisited.
-understand "r" as a mistake ("[reject]") when notices section is unvisited.
-understand "r [text]" as a mistake ("[reject]") when notices section is unvisited.
-understand "cr" as a mistake ("[reject]") when notices section is unvisited.
-understand "cr [text]" as a mistake ("[reject]") when notices section is unvisited.
-understand "rc" as a mistake ("[reject]") when notices section is unvisited.
-understand "rc [text]" as a mistake ("[reject]") when notices section is unvisited.
+understand "scan" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "scan [text]" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "c" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "c [text]" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "r" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "r [text]" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "cr" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "cr [text]" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "rc" as a mistake ("[verb-cue].") when notices section is unvisited.
+understand "rc [text]" as a mistake ("[verb-cue].") when notices section is unvisited.
 
 does the player mean scaning the player:
 	if notices section is visited:
@@ -10601,6 +10647,7 @@ carry out scaning:
 	if gadget is not examined or ever-scan is false:
 		say "Before scanning for the first time, you fumble with the gadget and note it is set to [if gadget is cert]CERTIFY[else]RECTIFY[end if].";
 	now ever-scan is true;
+	now gadget is examined;
 	now last-was-cert is whether or not gadget is cert;
 	if noun is oils and gadget is rect:
 		say "You stick the gadget down the cask's hole so it's almost touching the oils[if silo is in moor]. It's stuck on [rcn][bc][bc][gc][otherwise]. It goes to [bcn][bc][rc][gc] -- then [rcn][bc][bc][gc] -- and back[end if]." instead;
@@ -10627,7 +10674,7 @@ carry out scaning:
 			now nt-rect is true;
 	if gadget is cert:
 		if noun is not inflexible:
-			say "[if noun is begonias or noun is roadblock or noun is acne-bit cabinet]You notice the gadget beeps twice. Hmm[otherwise]The gadget beeps once[end if]. A series of lights comes across:[if hc-acc is false] [end if][rgtext of noun][one of] (R = red, G = green)[or][stopping]. ";
+			say "[if noun is begonias or noun is roadblock or noun is acne-bit cabinet]You notice the gadget beeps twice. Hmm[otherwise]The gadget beeps once[end if]. A series of lights comes across:[if sr-acc is false] [end if][rgtext of noun][one of] (R = red, G = green)[or][stopping]. ";
 			if parse-output is true:
 				say "Hmm, that means [cert-text of noun]. ";
 			pad-rec-q "certify";
@@ -10648,12 +10695,18 @@ carry out scaning:
 			check-marcos instead;
 	buzz-or-no-noise noun instead;
 
+son-nos is a truth state that varies.
+
 to kibitz (sca - a thing):
 	repeat through table of kibitzes:
 		if sca is kib entry:
 			say "[helpy entry][line break]";
 			the rule succeeds;
 	say "[line break]";
+	if son-nos is false and sr-acc is false:
+		say "You can toggle spaces between the letters with SPACE(S), or you can set them directly with SPACE(S) ON/NO SPACE(S), or SON/NOS for short.";
+		now son-nos is true;
+		pad-rec-q "spaces";
 
 table of kibitzes
 kib	helpy
@@ -10666,7 +10719,7 @@ magenta nametag	"[if gadget is cert]The sixth light starts red, then flashes to 
 to say rgbtext of (sca - a thing):
 	if scan-to-header is true:
 		repeat with Q running from 1 to lgth of sca:
-			say "[if hc-acc is true] [end if][if gpos of sca is Q]G[else if rpos of sca is Q]R[otherwise]B[end if]";
+			say "[if sr-acc is true] [end if][if gpos of sca is Q]G[else if rpos of sca is Q]R[otherwise]B[end if]";
 		continue the action;
 	say "[if gpos of sca is 1][gc][else if rpos of sca is 1][rc][otherwise][bc][end if]";
 	repeat with Q running from 2 to lgth of sca:
