@@ -3271,7 +3271,7 @@ to say verb-list:
 	say "[2dn]X or EXAMINE an object. If an object has writing, READ it instead of X WRITING.";
 	say "[2dn]The four directions, north, south, east and west.";
 	say "[2dn]PAD to see a list of topics. Then PAD VERBS, for example.";
-	say "[2dn]VERBS shows this, OPTIONS shows options you can change, and informational meta-commands include ABOUT, CREDITS, TECH, SITES.";
+	say "[2dn]VERBS shows this, OPTIONS shows options you can change, and informational meta-commands include ABOUT, CREDITS, TECH, SITES, and RELEASE.";
 	if gadget-active:
 		if button-locked is false:
 			choose row with short of "macros" in table of pad-stuff;
@@ -12058,12 +12058,12 @@ understand the command "release" as something new.
 understand "release" as releaseing.
 
 carry out releaseing:
+	say "Each version of Shuffling Around should contain release notes, but here is a brief summary:[paragraph break]";
 	say "Shuffling Around's first release was for IFComp 2012, on September 29th.";
 	say "Shuffling Around's second release was mushier--I intended to make an open beta, but that didn't work, so we'll call it January 2013. It included Heartless Zombie's hash tables.";
 	say "Shuffling Around's third release went out in August of 2014. It was on the back burner a bit, but I refined the hash tables, added error checking, and also nailed down things like Last Lousy Points and in-game hints, both with the paper and with item descriptions. I finally fixed some blocker bugs in Store M, and I also normalized random text, adding things like map locations in Store F.";
 	say "Shuffling Around's fourth release went out in March of 2015. It was largely a maintenance release, but it simplified the introduction, put a random puzzle in Store F, and added object-based hinting.";
 	say "[line break]The current edition of Shuffling Around should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, and a list of changes from the previous release."
-
 
 part teching
 
@@ -12074,7 +12074,8 @@ understand the command "tech" as something new.
 understand "tech" as teching.
 
 carry out teching:
-	say "Many people helped with technical aspects of Shuffling Around. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinkg that bugged both me and the player. This is not in release 1 and is probably the biggest fix. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts spilled into this game's sequel[if cur-score of intro > 0] in the Stale Tales Slate[end if], A Roiling Original. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's trizbort map for release 3 (black and white) and Jason Lautzenheiser's modifications for build 4 (color) helped me, and maybe you, visualize things that much better.";
+	say "Many people helped with technical aspects of Shuffling Around. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinking that bugged both me and the player. This is not in release 1 and is probably the biggest fix. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts spilled into this game's sequel[if cur-score of intro > 0] in the Stale Tales Slate[end if], A Roiling Original. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's Trizbort app helped me create the map for release 3 (black and white) and Jason Lautzenheiser's modifications for release 4 (region color, borders and more) helped me, and maybe you, visualize things that much better.";
+	say "And it's already mentioned in the credits, but [ghsite] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
 	the rule succeeds;
 
 part sitesing
@@ -12093,6 +12094,7 @@ carry out sitesing:
 		otherwise:
 			say "Ok. Back to the game." instead;
 	say "http://wordsmith.org/anagram/ -- Anu Garg's Rearrangement Server at wordsmith.org was invaluable to me. Hard to believe I've known about it for fifteen years. You've probably seen it before, too, but it's the big one for the main game mechanic. The sayings that go with each anagram have also helped me in many other ways. It's still fun after all these years.[line break]http://www.anagrammy.com/anagrams/faq6.html[line break]http://www.english-for-students.com/One-Word-Anagrams.html[line break]http://www.enchantedlearning.com/english/anagram/ was quite nice for common anagrams by subject.[line break]http://www2.vo.lu/homepages/phahn/anagrams/oneword.htm[line break]http://www.ssynth.co.uk/~gay/anagram.html[line break]http://www.wellho.net/resources/ex.php4?item=p669/anagram (basic succinct PERL anagram finder)[line break]http://boards.straightdope.com/sdmb/archive/index.php/t-291149.html for specific words and also ideas how to script more complex stuff[line break]http://www.rinkworks.com/words/oddities.shtml[line break]http://www.sporcle.com/ had many puzzles that helped me determine what was fair and what wasn't[line break]http://jamesgart.com/anagram/[line break]PERL for letting me parse through word-to-word anagrams and also helping me break one promising word into two.[paragraph break]I'd be interested if someone from France can ref these sites to make a similar game, someone from Spain could take pains, or a German manager could do so too. It'd be interesting to see.";
+	say "And it's already mentioned in the credits, but [ghsite] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
 	the rule succeeds; [forgot where I found the names from]
 
 chapter optionsing

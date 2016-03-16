@@ -7895,6 +7895,53 @@ carry out abouting:
 	say "A Roiling Original is the sequel to Shuffling Around and part 2 in my Stale Tales Slate. I doubt there'll be a third, since I've milked the concept dry.[paragraph break]ARO was initially written for Spring Thing 2013 and contains the same mechanics as Shuffling Around but hopefully is different enough to make for a new, original, and enjoyable story, especially since I focused on story in the post-comp release. You can see more abut the people who helped the game come to be by typing CREDITS. There are a lot of them!";
 	ital-say "I really appreciate transcripts (even though this is a post-comp version,) as it's cool to tinker with what I made--or to be able to squash a bug, or to make a puzzle clearer. If you wish to send a transcript, you can do so by typing TRANSCRIPT at the command line, then mailing me that text file at [email]. ;, * and ? at the line's start will indicate comments.[paragraph break]You can directly report bugs or annoyances at [my-repo]--no need for an account." instead;
 
+part releaseing
+
+releaseing is an action out of world.
+
+understand the command "release" as something new.
+
+understand "release" as releaseing.
+
+carry out releaseing:
+	say "Each version of Shuffling Around should contain release notes, but here is a brief summary:[paragraph break]";
+	say "A Roiling Original's first release was for Spring Thing 2013, on April 1st.";
+	say "A Roiling Original's second release went out in January 2014. It fixed a lot of puzzles and bugs and also opened up a new region. Many areas were renamed, and many puzzles were redone.";
+	say "A Roiling Original's third release went out in March of 2015. It included the 'director's cut' Demo Dome Mode. Puzzles were tweaked, and hinting was made more robust.";
+	say "[line break]The current edition of A Roiling Original should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, and a list of changes from the previous release."
+
+part teching
+
+teching is an action out of world.
+
+understand the command "tech" as something new.
+
+understand "tech" as teching.
+
+carry out teching:
+	say "Many people helped with technical aspects of A Roiling Original. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinking that bugged both me and the player. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts are also present in the first game[if cur-score of intro > 0] in the Stale Tales Slate[end if], Shuffling Around. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's Trizbort app helped me create the map for release 3 (black and white) and Jason Lautzenheiser's modifications for release 4 (region color, borders and more) helped me, and maybe you, visualize things that much better.";
+	say "And it's already mentioned in the credits, but [my-repo] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
+	the rule succeeds;
+
+part sitesing
+
+sitesing is an action out of world.
+
+understand the command "sites" as something new.
+
+understand "sites" as sitesing.
+
+carry out sitesing:
+	if cur-score of intro is 0:
+		say "Last chance spoiler warning. Sure you want to look?";
+		if the player consents:
+			do nothing;
+		otherwise:
+			say "Ok. Back to the game." instead;
+	say "http://wordsmith.org/anagram/ -- Anu Garg's Rearrangement Server at wordsmith.org was invaluable to me. Hard to believe I've known about it for fifteen years. You've probably seen it before, too, but it's the big one for the main game mechanic. The sayings that go with each anagram have also helped me in many other ways. It's still fun after all these years.[line break]http://www.anagrammy.com/anagrams/faq6.html[line break]http://www.english-for-students.com/One-Word-Anagrams.html[line break]http://www.enchantedlearning.com/english/anagram/ was quite nice for common anagrams by subject.[line break]http://www2.vo.lu/homepages/phahn/anagrams/oneword.htm[line break]http://www.ssynth.co.uk/~gay/anagram.html[line break]http://www.wellho.net/resources/ex.php4?item=p669/anagram (basic succinct PERL anagram finder)[line break]http://boards.straightdope.com/sdmb/archive/index.php/t-291149.html for specific words and also ideas how to script more complex stuff[line break]http://www.rinkworks.com/words/oddities.shtml[line break]http://www.sporcle.com/ had many puzzles that helped me determine what was fair and what wasn't[line break]http://jamesgart.com/anagram/[line break]PERL for letting me parse through word-to-word anagrams and also helping me break one promising word into two.[paragraph break]I'd be interested if someone from France can ref these sites to make a similar game, someone from Spain could take pains, or a German manager could do so too. It'd be interesting to see.";
+	say "And it's already mentioned in the credits, but [my-repo] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
+	the rule succeeds; [forgot where I found the names from]
+
 chapter optionsing
 
 optionsing is an action out of world.
@@ -10738,12 +10785,15 @@ to say verb-list:
 	say "[2da]N, S, E and W are the basic directions.";
 	say "[2da]TALK to an NPC gives general information, while ASK X ABOUT gives detailed information.";
 	say "[2da]OPTIONS or OPTS or POST OPTS gives you a list of game options that can simplify play or add detail.";
+	say "[2da]PAD to see a list of topics. Then PAD VERBS, for example.";
+	say "[2da]VERBS shows this, OPTIONS shows options you can change, and informational meta-commands include ABOUT, CREDITS, TECH, SITES, and RELEASE.";
+	if player has settler:
+		say "[2da]SCAN various things to see if they can be changed and how.";
+		say "[2da]Settler shortcuts: la=recall what you scanned last, sl=turns slider on, sy=scan with cheat on, sn=scan with cheat off, ss=shake settler to see what needs to change.";
 	verbsplain "xray";
 	verbsplain "go to";
 	verbsplain "rove over";
 	verbsplain "retry";
-	if player has settler:
-		say "[2da]Settler shortcuts: la=recall what you scanned last, sl=turns slider on, sy=scan with cheat on, sn=scan with cheat off, ss=shake settler to see what needs to change.";
 
 
 to say opts-list:
