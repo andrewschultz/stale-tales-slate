@@ -157,6 +157,8 @@ a thing can be reflexive, reflexed, vanishing, or nonreflexive. a thing is usual
 
 a thing can be ssok, ssno, ssblur or ssclear. a thing is usually ssok.
 
+a thing can be parse-spoilable. a thing is usually not parse-spoilable.
+
 a thing can be attempted. a thing is usually not attempted.
 
 a thing can be unscannable. a thing is usually not unscannable.
@@ -165,7 +167,7 @@ a thing can be prefigured or unfigured. a thing is usually unfigured.
 
 a thing can be uncheated, cheatitemed, or cheathinted. a thing is usually uncheated.
 
-a thing has text called a-text. a thing has text called b-text.
+a thing has text called a-text. a thing has text called b-text. a thing has text called parse-text.
 
 a thing can be warpable. a thing is usually not warpable.
 
@@ -1574,6 +1576,8 @@ to say full-monty of (myobj - a thing):
 		increase D by 13;
 	draw a rectangle (R 255 G 255 B 255) in current graphics window at 13 by 30 with size 220 by 20;
 	paint bitmap text (color g-Black) of "[myobj]: cheat [if cheat-on is true]on[else]off[end if]" in current graphics window at 13 by 30 using Glimmr C&C with size 1;
+	if parse-now is true and cheat-on is true:
+		say ". You figure out what you can: [parse-text of myobj]";
 	say "[spacies of A][if qnf is true and questions-not-flagged is false]--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode[end if][if sw is true and space-warned is false and myobj is not curst palace]. The black cells would indicate spaces, you guess[end if]";
 	if qnf is true:
 		if questions-not-flagged is false:
@@ -7688,6 +7692,38 @@ carry out scanlasting:
 	say "The [last-scanned-thing][if last-scanned-thing is in lalaland], which are now out of play,[end if] scanned [full-monty of last-scanned-thing]." instead;
 
 part accessibility
+
+parse-now is a truth state that varies.
+
+chapter parseing
+
+parseing is an action out of world.
+
+understand the command "parse" as something new.
+
+understand "parse" as parseing when strip of profits is visited.
+
+carry out parseing:
+	say "Parsing output is [if parse-now is false]now[else]already[end if] on.";
+	now parse-now is true;
+	the rule succeeds;
+
+to say but-if-parse:
+	if cheat-on is false:
+		say ", but it isn't very effective with teach/cheat off."
+
+chapter spareing
+
+spareing is an action out of world.
+
+understand the command "spare" as something new.
+
+understand "spare" as spareing when strip of profits is visited.
+
+carry out spareing:
+	say "Parsing output is [if parse-now is true]now[else]already[end if] off[but-if-parse].";
+	now parse-now is false;
+	the rule succeeds;
 
 chapter accessing
 
@@ -19299,6 +19335,21 @@ check examining ropins:
 check scaning ropins:
 	say "The settler does very little until you get near [if ropins are examined]a fissure you didn't see at first[else]the fissure[end if]. The result makes you think you don't need to do anything to the prison as a whole.";
 	now ropins are examined;
+
+before scaning (this is the knock down cheats rule):
+	if noun is parse-spoilable and parse-now is true and cheat-on is true:
+		say "This may be a total spoiler. Go ahead anyway?";
+		if the player consents:
+			continue the action;
+		else:
+			say "OK." instead;
+	if noun is super-easy:
+			say "You hear loud squealings from the equals sign. Go ahead anyway?";
+		if the player consents:
+			continue the action;
+		else:
+			say "OK." instead;
+
 
 before scaning a reflexed thing:
 	if noun is not dialer and noun is not bench:
