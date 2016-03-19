@@ -157,6 +157,10 @@ a thing can be reflexive, reflexed, vanishing, or nonreflexive. a thing is usual
 
 a thing can be ssok, ssno, ssblur or ssclear. a thing is usually ssok.
 
+a thing can by any-spoilable. a thing is usually not any-spoilable.
+
+a thing can by cheat-spoilable. a thing is usually not cheat-spoilable.
+
 a thing can be parse-spoilable. a thing is usually not parse-spoilable.
 
 a thing can be attempted. a thing is usually not attempted.
@@ -19336,20 +19340,27 @@ check scaning ropins:
 	say "The settler does very little until you get near [if ropins are examined]a fissure you didn't see at first[else]the fissure[end if]. The result makes you think you don't need to do anything to the prison as a whole.";
 	now ropins are examined;
 
+to decide whether (n - a thing) is spoilable:
+	if n is cheat-spoilable and cheat-on is true, decide yes;
+	if n is any-spoilable, decide yes;
+	if n is parse-spoilable and parse-now is true and cheat-on is true, decide yes;
+	decide no.
+
 before scaning (this is the knock down cheats rule):
-	if noun is parse-spoilable and parse-now is true and cheat-on is true:
-		say "This may be a total spoiler. Go ahead anyway?";
-		if the player consents:
-			continue the action;
-		else:
-			say "OK." instead;
-	if noun is super-easy:
-			say "You hear loud squealings from the equals sign. Go ahead anyway?";
+	if noun is spoilable-now and squee is true:
+		say "You hear loud squealings from the equals sign. This may be a near or total spoiler. Go ahead anyway?";
 		if the player consents:
 			continue the action;
 		else:
 			say "OK." instead;
 
+check-spoil is a truth state that varies.
+
+after scaning (this is the note equals sign rule):
+	if noun is spoilable-now and squee is true and check-spoil is false:
+		say "NOTE: if you want to disable/warn a spoiler like this in the future, push the equals sign.";
+		now check-spoil is true;
+	continue the action;
 
 before scaning a reflexed thing:
 	if noun is not dialer and noun is not bench:
