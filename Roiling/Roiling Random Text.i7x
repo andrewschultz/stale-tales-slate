@@ -894,6 +894,7 @@ blurb
 "'Much done. Ouch, mend, undo-mech!'"
 "'No! A slip so plain!'"
 "'No gain, Ace? Once Again!'"
+"'Nullify'n funnily!'"
 "'O, unrest! Not sure!'"
 "'Odd! I've...voided.'"
 "'Oh, dear!' / 'Ah, redo!'"
@@ -3620,6 +3621,7 @@ blurb	fave
 "Notoriety to Inert, Yo[r], by [if player is male]Otto Eryin[else]Tori Toney[end if]"	false
 "OK, Words, Do Works[r], by Rod Skow"	true
 "Older and wiser, I Learned Words[r], by Delores Darwin"	true
+"One Cold Neo-Clod[r], by Don Cole"	false
 "Permutations? Imposter, a Nut[r], by [if player is male]Tatum Pierson[else]Maurine Potts[end if]"	false
 "Permuting, Urgent Imp[r], by Meg Turpin"	false
 "Rogue at our gate: Outrage[r], by U. Ortega"	false
@@ -8605,6 +8607,7 @@ blurb	prio
 "Carcinogen: Cancer, Go In[r], by Nanci Groce"
 "The Cards Herd Cats[r], by Dre Tasch"
 "Care? Groan, Arrogance or Carnage[r], by [if player is male]Reg Carano[else]Cora Agner[end if]"
+"Carer on a Corner[r], by Noe Carr"
 "Carl W is Sir Claw, I Scrawl[r], by Ric Laws"
 "Carlsen Left Crestfallen[r], by Frances Tell"
 "Carmelo's Scam-Role Clamores[r], by Sam LeRoc"
@@ -10949,6 +10952,7 @@ blurb	prio
 "Mini Lols? Millions[r], by Slim Olin" []
 "Mini-Moon, I'm On[r], by Moni Mino"
 "Mink-Dog Kingdom[r], by Kim Gond"
+"Minks Leak Snake Milk[r], by Ken Klimas"
 "The Minor Hero Mint[r], by [if player is male]Tim Horne[else]Mei North[end if]"
 "Minotaurs? I, a Nostrum[r], by Naomi Rust"
 "The Mire: I'm There[r], by Tim Rhee"
@@ -12642,6 +12646,7 @@ blurb	prio
 "Snob Lad So Bland[r], by Al Bonds"
 "Snob Lad So Bland[r], by Sal Bond"
 "A Snooty No to Say To Sonya: Nays, Too[r], by [if player is male]Stan Yoo[else]Tonya So[end if]"
+"A Snooty NO to Say[r], by [if player is male]Tonya So[else]Stan Yoo[end if]"
 "Snoring Rings On[r], by Ros Ginn"
 "Snortiest Tenorists[r], by [if player is male]Otis Stern[else]Ines Trost[end if]"
 "Snot-Red Rodents[r], by Donster St. Endor" []
@@ -13302,6 +13307,7 @@ blurb	prio
 "To Surlier Or Lustier[r], by Tori Luers"
 "To Survey Your Vest[r], by Rus Tovey"
 "To Swing on Twigs[r], by [if player is male]Tig Snow[else]Gwin Tso[end if]" []
+"To Swipe Two Pies[r], by Otis Pew"
 "To Syphon Typhoons So, Python[r], by Hy Poston"
 "To Tackle Cott Lake[r], by Katt Cole & Kate Colt"
 "To Thresh the Short[r], by Seth Roth"
@@ -15207,6 +15213,7 @@ blurb
 "So Buff, Boff Us!"
 "So-Lean Sloane On Sale."
 "So Leer or Else."
+"So Meaty Teams, Yo!"
 "So Naked Soak Den."
 "So, Relax!" [x]
 "So Steamy, Most Easy."
@@ -15316,6 +15323,7 @@ blurb
 "Trampy Try, Pam."
 "Treat Us, Tart Sue."
 "Tree Homes Threesome."
+"Trim-Id Dmitri."
 "Trouser Rouster Su Torre."
 "Trouser Routers." []
 "True Ladies['] Real Duties."
@@ -15690,6 +15698,7 @@ blurb
 "'Stoner so rent!' one of the tokers overacts."
 "'Such poey! Chop suey!' Yups echo."
 "'SunFit: it's fun!' / 'If NUTS!'" []
+"'Take-home toke, me? Ha!'"
 "'Ten-high night, eh?'"
 "They croon 'O Drug Gourd Ur-God.'"
 "They discuss smart neon stoner man ornaments."
@@ -15833,6 +15842,7 @@ blurb
 "get meaner?! AGREEMENT." []
 "get rid of ego. Drift." []
 "get vicious? Scout, I give."
+"givin['] ... invig..."
 "Goad a god? O gad!"
 "the goal's hog least."
 "God's nice. Cognised. Co-signed."
@@ -23236,6 +23246,7 @@ blurb
 "Isolater Lita Rose"
 "Iva 'Ranch' Chavarin"
 "Jackhole [if player is male]Joe Chalk[else]Jae Holck[end if]"
+"Jalapeno Joel Pena"
 "Jaywalker Jake Lawry"
 "Jealous Joe Saul" []
 "Jen-Dog DeJong" []
@@ -27405,6 +27416,7 @@ blurb
 "Generating Greatening[r], by [if player is male][n-t] Ginger[else]Nina Eggert[end if]"
 "Generic? Bah, Begin, Reach, Be in Charge[r], by [if player is male]Brice Hagen[else]China Grebe[end if]"
 "Get Done, Teen-Dog[r], by [if player is male]Ted Goen[else]Dee Tong[end if]" []
+"Get Lean: a Gentle Neg-Tale[r], by Lee Gant"
 "Get Mo[']? Got [']Em[r], by Meg 'OMG' Otte" []
 "Get Money, Net My Ego[r], by [if player is male]Monty Gee[else]Toy Menge[end if]"
 "Get More to Merge[r], by [if player is male]Tom Eger[else]Meg Rote[end if]"
@@ -27653,6 +27665,7 @@ blurb
 "Using Suing[r], by Suggins Niu" []
 "Very Nice Icy Nerve[r], by Vic Neyer"
 "Vie, Each: Achieve[r], by Evie Cha"
+"Vows: Duel Would'ves[r], by Ev Sudlow"
 "Waste Life? Fail, Sweet[r], by [if player is male]Lewis Fate[else]Fleta Wise[end if]" []
 "We All Can Claw, Lean[r], by Lance Law"
 "Weak No More: O, Remake Now[r], by Ewen Koroma"

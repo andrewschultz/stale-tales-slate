@@ -167,6 +167,8 @@ v:whassup,uswhaps,pahwuss,hawpuss,saw push,pushaws,SshUpaw
 !ebaydork,keyboard
 !yobedark,keyboard
 ###############################TOWERS
+!serpent,present
+!diners,rinsed
 v:nearest,stearne,strenae,ernesta
 v:stabler,alberts
 v:rustled,dreltus,sledrut
@@ -253,6 +255,7 @@ Terrance,recreant
 !Dewey,weedy
 !barney,nearby
 !marcel,calmer
+!terrance,recreant
 !royce,coyer
 !wade,awed
 !archie,achier
@@ -269,11 +272,17 @@ Terrance,recreant
 !cactus pearl,spectacular
 !pearl cactus,spectacular
 !accu-plaster,spectacular
+!talc spa cure,spectacular
+!last acre cup,spectacular
+!capsule cart,spectacular
 v:greyed,edyerg,eegdry,regedy
 v:weariest,sweatier,treesawi
 v:released,dreleesa,lardeese
 v:docile,liedoc,olecid,ecolid,idleco,cledio
 ###############################OYSTER
+!casper,scrape
+!capers,scrape
+!canoe,ocean
 !papery,prepay
 !yapper,prepay
 !skis,kiss
@@ -313,6 +322,7 @@ v:swipe,wipes,i-spew
 !crate,trace
 !crate,react
 !heaps,shape
+!oltrap,patrol
 !portal,patrol
 !eeks,seek
 !tea,eat
@@ -384,11 +394,14 @@ slimytea,steamily
 !sea cube,because
 !eels,else
 !hola thug,although
+ghoul hat,although
 !revhowe,however
 !vowhere,however
 !yltsenoh,honestly=merle
 !bridally,ribaldly
 !yelped,deeply=whistle
+!iqlucky,quickly
+!luckyiq,quickly
 ###################OTHERS
 #### CITRUS
 !mimesporn,persimmon
@@ -418,6 +431,7 @@ slimytea,steamily
 !magenta rope,pomegranate
 !rampage note,pomegranate
 !mopeage rant,pomegranate
+!megaton pear,pomegranate
 ##swell wells
 !esp pal,apples
 miser ruble,mulberries
@@ -446,3 +460,4 @@ greenstain,tangerines
 !harmonicas,maraschino
 #### final point
 !viewer,review
+!searcher,research
