@@ -9751,6 +9751,7 @@ kind-of-cool is a truth state that varies.
 spacy-hint is a truth state that varies.
 
 parse-hint-yet is a truth state that varies.
+
 after scaning (this is the init-scan rule) :
 	if first-good-scan is true and kind-of-cool is false and noun is not held:
 		say "And hey. That was kind of cool. You didn't have to press the settler all up in anything, or anyone's personal space.";
@@ -10538,8 +10539,11 @@ the equals sign is part of the Letters Settler. description is "The equals sign 
 
 squee is a truth state that varies.
 
+equals-pushed is a truth state that varies.
+
 check pushing the equals sign:
 	say "You push the equals sign, and it [if squee is false]lights up[otherwise]darkens[end if].";
+	now equals-pushed is true;
 	if squee is true:
 		now squee is false;
 	otherwise:
@@ -19362,13 +19366,24 @@ to decide whether (n - a thing) is spoilable-now:
 	if n is parse-spoilable and parse-now is true and cheat-on is true, decide yes;
 	decide no.
 
+squee-warn is a truth state that varies.
+
 before scaning (this is the knock down cheats rule):
-	if noun is spoilable-now and squee is true:
-		say "You hear loud squealings from the equals sign. This may be a near or total spoiler. Go ahead anyway?";
-		if the player consents:
-			continue the action;
-		else:
-			say "OK." instead;
+	if noun is spoilable-now:
+		if squee is true:
+			say "You hear loud squealings from the equals sign. This may be a near or total spoiler. Go ahead anyway?";
+			if the player consents:
+				continue the action;
+			else:
+				say "OK." instead;
+		if squee-warn is false or equals-pushed is false:
+			now squee-warn is true;
+			ital-say "this may be a bit of a spoiler. If you want to disable it, you can push the equals sign. This warning will not appear again.";
+			say "Do you want to see the settler reading?";
+			if the player consents:
+				continue the action;
+			else:
+				say "OK." instead;
 
 check-spoil is a truth state that varies.
 
