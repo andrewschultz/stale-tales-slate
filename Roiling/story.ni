@@ -15,7 +15,6 @@ The new Inform IDE may allow you to search this way, too. For A Roiling Original
 You can place a bracket before any of the other text chunks below to search. They're ordered in approximate priority I used and how often I searched for them.
 TOA = the table of big point scoring changes, table of anagrams
 TOH = table of hint logic
-TSH = specific help for specific items you have the right anagram for
 TMC = mega-chatter, which logs all the tables I search lists for
 TAF = after-texts, which logs everything said after scanning stuff. Used to help clue the player if something is confusing, whether it's a question mark or vowels/consonants not lining up
 TOR = reflexive blather, asking people about themselves (this is often a default)table of reflexive-blather      [ask x about x] [tor]
@@ -27,7 +26,7 @@ TNW = messages for "you can't go that way"
 TRE = table of readables
 TSX  = differences between sexes
 TSH = table of spechelp, so you can see the specialized help for an item
-TSR = table of specreject, which gives specialized responses for if you try to flip something that doesn't need it any more
+TDR = table of donereject, which gives specialized responses for if you try to flip something that doesn't need it any more
 TQT = table of quip texts for GRetta, elMO, ELvira, GUnter. Separated with hyphen
 TCO = table of conversations for GRetta, elMO, ELvira, GUnter. Separated with hyphen
 DMT = dome tables, text from Demo Dome section
@@ -4087,7 +4086,7 @@ this is the oyster-left rule:
 		the rule succeeds;
 	if aunt-tuna-cross is false and lance is not in lalaland:
 		the rule succeeds;
-	if splained is false:
+	if bogus-plains is in plains:
 		the rule succeeds;
 	the rule fails;
 
@@ -4316,8 +4315,8 @@ to say doc-try:
 
 table of spechelp [tsh] [this is for specific error messages for specific items]
 xtrhelp	helptxt
-t-b	"The ten beams creak slightly. Maybe not all of them. But a few." [START manor]
-palm	"[if dusty study is lit]The palm remains upright but seems slightly brighter[else]The darkness recedes for a second[end if]."
+t-b	"The ten beams creak slightly. Maybe not all of them. But a few."
+palm	"The palm remains upright but seems slightly brighter."
 niche	"Hm, no, the niche--my niche--won't unfold that way."
 latches	"You think you feel static through the latches. But they remain the same."
 tables	"The tables seem to shift a bit."
@@ -4426,6 +4425,8 @@ sign	"Nobody pays attention to your performance as you disobey the sign. Or try 
 clam	"The clam still seems enraged."
 boats	"Perhaps if you were louder and more confident, the boats would hear you."
 carps	"The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things."
+pikes
+wipes	"You try to take the wipes, but you worry you're not fast enough."
 tunes	"The tunes grow slightly less annoying, for a moment."
 wrap	"That's not quite the way to pop the wrap."
 trolls	"The trolls laugh at you a bit, but nervously."
@@ -4434,6 +4435,9 @@ raft	"The raft rocks slightly."
 oars	"You see bubbling under the oars."
 eeks	"You guess the eeks must be there--no, there!"
 haunter	"Hm, not quite the right way to dig, dig?"
+c2	"The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled."
+crate	"The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet."
+skis	"The skis momentarily seem more polished."
 waste	"You realize you didn't quite psyche yourself to fix the waste."
 heaps	"The heaps still look ugly as ever."
 gleaner	"The gleaner remains too small to read."
@@ -4590,6 +4594,7 @@ to say spec-help of (itm - a thing):
 	if itm is a mack-idea:
 		say "[if itm is ment]The macks seem to waver a bit, but not enough.[else][reject]";
 		continue the action;
+	d "You may want to put in special text here in the table of spechelp, tsh. Or not.";
 	say "You feel a slight psychic push-pull coming from [the itm]. That's a decent omen.";
 
 to decide whether can-prog-hint:
@@ -4604,20 +4609,31 @@ doublewarn is a truth state that varies.
 to say them-that of (tt - a thing):
 	say "[if tt is a female person]her[else if tt is a person]him[else]that[end if]";
 
-table of specreject [TSR - this can use a lot more entries]
+table of donereject [TDR - this can use a lot more entries]
 specdone	spectalk
-log ons	"[no-rehash]"
-alert	"[no-rehash]"
-ought	"[no-rehash]"
+star	"[if player has star]No need for additional arts.[else]The star doesn't budge.[end if]"
+popgun	"If you overthought things, you might break it again."
+log ons	"[no-rehash]."
+alert	"[no-rehash]."
+ought	"[no-rehash]."
+leaf	"You can't bring the flea back to life--or do anything else to the leaf."
+cola	"No need to go technologically backwards."
+futon	"The futon could be a little less lumpy, sure, but that's beyond your magic powers."
+caps lock	"YOU HAVE WHAT YOU NEED."
+mug	"[if fizzy cola is visible]You'd get cola all over you if you tried anything with the mug[else]The mug is no longer manipulable[end if]."
+computer screen	"The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle."
+keyboard	"You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke."
+wipes	"You better not fiddle with the wipes wrong, or they'll tear and disintegrate."
 
 to say no-rehash:
-	say "That'd be an awkward rehash. You need another way to say good-bye."
+	say "That'd be an awkward rehash. You need another way to say good-bye"
 
 to say good-enuf of (goody - a thing):
-	if goody is a specdone listed in table of specreject:
-		choose row with specdone of goody in table of specreject;
+	if goody is a specdone listed in table of donereject:
+		choose row with specdone of goody in table of donereject;
 		say "[spectalk entry]";
 		continue the action;
+	d "The table of donereject could use a lot more entries, like here. Search for TDR in the source.";
 	say "You've already changed [them-that of goody] enough.";
 
 to say reject:
@@ -5267,7 +5283,7 @@ check scaning location of the player (this is the location rule):
 		say "The air's full of eeks, which your settler picks up." instead;
 		try scaning eeks instead;
 	if location of player is plains:
-		if splained is false:
+		if bogus-plains is in plains:
 			say "[full-monty of bogus-plains]" instead;
 	if location of player is bleary barley and b-b is reflexive: [start otters]
 		try scaning b-b instead;
@@ -8427,6 +8443,7 @@ c2	c2	"trace"	"trace"	"Based on where you got hit and how fast it hit you, you t
 crate	crate	"react"	"react"	"This time you're ready. You turn around and know when to look when the crate is about to hit you. You knock it down in mid-air and, in a fit of rage, fling it back into the tall weeds and hit the en-pris sniper. You hear an expression of anger, then scurrying. You won't need to recast the crates."	false	337433333
 skis	skis	"kiss"	"kiss"	"As you kiss them, they pull up--and dissolve."	false	290473956
 knob	knob	"bonk"	"bonk"	"BONK! You hit the knob just right."	false	214612168
+bogus-plains	bogus-plains	"splain"	"splain"	"[if door-sux is true]You brag, to nobody and everyone in particular, how you SHOWED that door. It's in no shape to argue[else if bonkies is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the rude door how you'll get by anyway[end if]. You feel better after this, now you stated what your plan is."	false	347641936
 bubble wrap	ruby	"warp"	"warp"	"You warp the bubble wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"	false	276912353
 a-s	a-s	"search"	"search"	"'Reach, acher,' you say, stretching a bit more to find something interesting."	false	367879580
 o-t	a-p	"patrol"	"patrol"	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap. It's a portal now."	false	400254014	"Waste of time. You already disabled the ol['] trap--you can just enter the portal."
@@ -8447,7 +8464,7 @@ hump	hump	"umph"	"umph"	"You ham up 'Hup, ma!' to get over a hump, which vanishe
 star	star	"rats"	"rats"	"You're frustrated you can't reach that star in the stump, and you bang your fists on the stump and say RATS! Then you wiggle a finger in absent-mindedly, and while you're not thinking of it, or of getting your fingers stuck in a cut in the stump, pop, the star comes out! It's the sort you can affix to your clothes and look important with, so you do."	true	286895605
 dart	dart	"drat"	"drat"	"The extra adrenaline provided by the mild swear allows you to be all 'Reach, acher!' And you reach the dart--but not enough to fall in the dumpster."	true	211650728	"Drat, what to do with the dart?"
 plebe	plebe	"bleep"	"bleep"	"You let forth something bleepy. I can't say it here. You know what it is, because you know what your 'favorite' swears, combos thereof, or half-swear portmanteaux are[if player is not wearing star]. But the plebe looks at your chest and smirks a bit. His old CO swore worse, with sager sarge rages[otherwise]. It's no worse than his legions['] lingoes, but man, the WAY you said it. How you built up to it, making the threat stronger than the execution, then BAM![paragraph break]You keep up the abuse by yelling how he can't even stand his bleeping ground to bleeping second rate verbal abuse. The Marine does not remain[end if]. He whines 'Sir, mean reamins['][if player is female],' so disoriented he forgets your gender.[else].'[end if]"	false	409310921
-boing	boing	"bingo"	"bingo"	"You don't have much experience with this sort of thig, but you take a deep breath and realize there are only so many ways to do it wrong. Futzing with the popgun, you mumble 'Aah... aah... a-ha! I loc coil-loci!' You push the trigger just to make sure, and you hear the familiar BOING[if popgun was not held]. You decide to keep it, now that you fiddled with it[end if]. But now, to load it."	false	239271538	"You can't force another revelation, but you don't need to."
+boing	boing	"bingo"	"bingo"	"You don't have much experience with this sort of thing, but you take a deep breath and realize there are only so many ways to do it wrong. Futzing with the popgun, you mumble 'Aah... aah... a-ha! I loc coil-loci!' You push the trigger just to make sure, and you hear the familiar BOING[if popgun was not held]. You decide to keep it, now that you fiddled with it[end if]. But now, to load it."	false	239271538	"You can't force another revelation, but you don't need to."
 Leo	Leo	"ole"	"ole"	"You set yourself near the vile veil and avoid Leo as he charges at you! He trips over a stump or root and cries, 'I...sprain! Aspirin!'[paragraph break]Leo's yelling attracts a fellow very much like him. 'Am Rand! Rad man!'[paragraph break]Leo looks up a second. 'Hey! A twin!' each cheers, before glaring at you. 'IN THE WAY!' Looks like you've got another challenge."	false	255972525	"Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already."
 Rand	Rand	"darn"	"darn"	"You pretend to trip and tie your shoe. 'Darn.' Rand has seen this trick before, but it was a month ago, so he forgot. He dives at you, and you trip him. It would be merely demoralizing to someone more mentally resilient than Rand, but he is crushed by this loss.[paragraph break]Rand and Leo begin to commiserate together, mumbling about being washups. Maybe they could use a nice word, or a little chat, about anything."	false	177448218	"Giving Rand flashbacks to his humiliating loss would be a bad idea."
 ye hoop	censer	"pooh"	"pooh"	"[get-censer]."	true	267453412
@@ -8770,9 +8787,12 @@ to say if-plus:
 		say "You worry about changing stuff to stuff, and how that violates SHATTER-THREATS, but it's abstract all around, so nobody can detect it. You feel your brain crackle with increased problem-solving skills and realize the pulses may be unreal. ";
 	say "You recognize that any neural pain can be unreal if you only have the right mindset and that the pulses can be pluses, making you more pat/apt to act, cat.[no line break]";
 
+unset-not-remap is a truth state that varies.
+
 to say remap-or-unset:
 	if word number 1 in the player's command is "unset":
 		say "You fiddle with the knobs and such on the jukebox according to the instructions";
+		now unset-not-remap is true;
 	else:
 		say "You brave the electrical underpinnings of the perma-amper to create an ampish mishap";
 
@@ -10127,7 +10147,7 @@ before talking to (this is the default talking to rule):
 				now selftalk-warn is true;
 			try objasking noun about noun instead;
 	if noun is door:
-		say "The door seems to grumble and curse very quietly[if splained is false]. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical[else]. Well, you already splained to it[end if]." instead;
+		say "The door seems to grumble and curse very quietly[if bogus-plains is in plains]. Perhaps you could find a way of lecturing it without explicitly talking, but it's probably not critical[else]. Well, you already splained to it[end if]." instead;
 		repeat through table of default-gen-blather:
 			if noun is default-talker entry:
 				say "[gen-blah entry][line break]" instead;
@@ -16011,7 +16031,7 @@ carry out unseting:
 	if noun is jukebox:
 		say "The jukebox--or the tunes?" instead;
 	if tunes are in lalaland:
-		say "You already dealt with the tunes when you mucked up the perma-amper." instead;
+		say "You already dealt with the tunes[if unset-not-remap is false] when you mucked up the perma-amper[end if]." instead;
 	say "That doesn't quite make sense here." instead;
 
 chapter scrapeing
@@ -17556,11 +17576,11 @@ carry out cleaning:
 
 book Lapsin' plains
 
-Lapsin' Plains is north of anger range. Lapsin' plains is in oyster. "[if rude door is visible]A rude door guards some shut huts here[else]Huts lie thus here[end if][if fragments are visible]. You see debris from a crate[end if][if splained is false], and you have this weird urge to say something, even with nobody around[end if]."
+Lapsin' Plains is north of anger range. Lapsin' plains is in oyster. "[if rude door is visible]A rude door guards some shut huts here[else]Huts lie thus here[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is in plains], and you have this weird urge to say something, even with nobody around[end if]."
 
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin' Plains
 
-c2 is scenery in lapsin' plains. c2 is undesc. c2 is privately-named. c2 is vanishing.
+c2 is scenery in lapsin' plains. c2 is undesc. c2 is privately-named. c2 is vanishing. printed name of c2 is "wherever the crate is coming from"
 
 a-text of c2 is "RRYRY". b-text of c2 is "RPGRG". parse-text of c2 is "x[sp]r[sp]a[sp][sp]e". c2 is parse-spoilable.
 
@@ -17678,34 +17698,11 @@ understand "embrace [text]" and "embrace" as a mistake ("Hug? Ugh. Guh.")
 
 chapter splaining
 
-splaining is an action out of world.
-
-understand the command "splain" as something new.
-
-understand "splain" as splaining.
-
-splained is a truth state that varies.
-
-bogus-plains is privately-named scenery in lapsin' plains. understand "plains" as bogus-plains when player is in plains.
+bogus-plains is privately-named vanishing LLPish scenery in lapsin' plains. understand "plains" as bogus-plains when player is in plains.
 
 a-text of bogus-plains is "RRRYYR". b-text of bogus-plains is "RRRY??". parse-text of bogus-plains is "x[sp]x[sp]x[sp]a[sp]?[sp]?".
 
-carry out splaining:
-	if player is not in plains:
-		say "Here is not the place." instead;
-	if door-sux is true:
-		say "You brag, to nobody and everyone in particular, how you SHOWED that door. It's in no shape to argue";
-	else if bonkies is true and crate is reflexive:
-		say "You yell to whoever's throwing those crates, you'll figure them out";
-	else:
-		say "You explain to the rude door how you'll get by anyway";
-	if splained is false:
-		say ". You feel better after this, now you stated what your plan is.";
-		now splained is true;
-		min-and instead;
-	else:
-		say ", but you feel something spinal and think 'I...plans.' Time to move on.";
-	the rule succeeds;
+understand "splain" as a mistake ("You start up a grand lecture again, but you feel something spinal and think 'I...plans.' Time to move on.") when player is in plains and bogus-plains is in lalaland;
 
 chapter bonking
 
@@ -25892,7 +25889,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]you could've tried to TAN the ant.";
 		else if ant is not in lalaland:
 			say "[2dmiss of cur-reg]you passed by the side-quest to TAN the ant in the scum ant sanctum.";
-		if splained is false:
+		if bogus-plains is in plains:
 			say "[2dmiss of cur-reg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 	now cur-reg is towers;
 	if Towers is solved:
@@ -27869,6 +27866,29 @@ every turn when exitall is true:
 after fliptoing when exitall is true:
 	try exitsing;
 	continue the action;
+
+chapter rejching
+
+[* this checks for adequate rejects]
+
+rejching is an action out of world.
+
+understand the command "rejch" as something new.
+
+understand "rejch" as rejching.
+
+carry out rejching:
+	repeat through table of anagrams:
+		rej-analyze the-from entry;
+
+to rej-analyze (x - a thing):
+	unless x is an xtrhelp listed in table of spechelp:
+		say "Whoops, [x] could also be in table of spechelp.";
+	unless x is a specdone listed in table of donereject:
+		if x is reflexive:
+			say "Strong possibility: [x] could also be in table of donereject.";
+		else if x is not vanishing:
+			say "Weak possibility: [x] could also be in table of donereject.";
 
 chapter twiding
 

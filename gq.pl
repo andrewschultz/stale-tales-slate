@@ -108,14 +108,14 @@ sub cromu
   #lumped together
   if ($#thisAry)
   {
-  if ($_[0] =~ /@thisAry[0]@thisAry[1]/i) { return 1; }
-  if ($_[0] =~ /@thisAry[1]@thisAry[0]/i) { return 1; }
+  if ($_[0] =~ /\b@thisAry[0]@thisAry[1]\b/i) { return 1; }
+  if ($_[0] =~ /\b@thisAry[1]@thisAry[0]\b/i) { return 1; }
   }
   
   #words apart
   for $tomatch (@thisAry)
   {
-    if ($_[0] !~ /\b$tomatch\b/i) { if (($headersToo) && (myHeader =~ /\b$toMatch\b/i)) { next; } return 0; }
+    if ($_[0] !~ /\b$tomatch\b/i) { if (($headersToo) && ($myHeader =~ /\b$tomatch\b/i)) { next; } return 0; }
   }
   return 1;
 }

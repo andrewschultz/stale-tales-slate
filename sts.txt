@@ -33,6 +33,7 @@ table of undo allows [xxg9]
 table of undo rejects [xxg0]
 
 table of wait responses [xxg10]
+"Loafin[']? No! Fail!'"
 
 table of yessage [xxg11]
 
@@ -61,6 +62,7 @@ table of mob chants [xxm02]
 table of oldies singers [xxm03]
 
 table of sports chatter [xxm05]
+"'Our team's so mature.'"
 
 table of idiotic lecture points [xxs1]
 

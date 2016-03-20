@@ -83,6 +83,7 @@ $region = "myreg"; $rm = "myrm";
 for $idx (0..$#ARGV)
 {
   $this = @ARGV[$idx];
+  if ($this =~ /!/) { $cmd = "start \"\" \"C:/Program Files (x86)/Notepad++/notepad++.exe\" c:/writing/dict/hv.txt"; `$cmd`; exit; }
   if ($this =~ /-r[a-z]/) { $region = $regHash{$this}; if (!$region) { $region = "myreg"; } $rm = $rmHash{$this}; if (!$rm) { $rm = "myrm"; } next; }
   if ($this =~ /-p/) { $printIfThere = 1; next; }
   if ($this =~ /[0-9]/) { wordit($this); next; }
@@ -90,6 +91,7 @@ for $idx (0..$#ARGV)
   if ($this =~ /-f/) { $openPost = 1; next; }
   if ($this =~ /-s/) { $doShuf = 1; $doRoil = 0; next; }
   if ($this =~ /-r/) { $doShuf = 0; $doRoil = 1; next; }
+  if ($this =~ /-m/) { matchHash("sa"); matchHash("roiling"); exit; }
   if ($this =~ /,/) { $tabString =$this; $tabString =~ s/,/\t/g; $tabString =~ s/_/ /g; next; }
   if ($this =~ /^\?/) { usage(); exit; }
 #print "$idx $this\n";
@@ -113,8 +115,8 @@ for $q (@x)
 
 $anyFound = 0;
 
-if ($doShuf) { lookFor($hash, "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/sa nudges.i7x"); }
-if ($doRoil) { lookFor($hash, "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/roiling nudges.i7x"); }
+if ($doShuf) { lookBoth($hash, "sa"); }
+if ($doRoil) { lookBoth($hash, "roiling"); }
 
 if (($printIfThere) || ($anyFound == 0)) { print B "\"$this\"\t$hash\t$tabString\t\"some text\"\n"; $worthOpening = 1; }
 else { print "Instance found in file, not printing externally. Use -p.\n"; }
@@ -138,6 +140,41 @@ sub wordit
    }
   close(A);
   print "No matches for $_[0].\n";
+}
+
+#####################################
+#compare story.ni with nudges to check overlap
+sub matchHash
+{
+my %inFile;
+print "Matching hashes for $_[0].\n";
+open(A, "c:/games/inform/$_[0].inform/source/story.ni") || die ("No source file");
+while ($a = <A>) #first read in the source with table of anagrams
+{
+  $lineNum++;
+  if ($a =~ /^table of anagrams/) { $inTable = 1; }
+  if ($inTable && ($a =~ /\t[0-9]/)) { chomp($a); $b = $a; $b =~ s/.*\t//g; $b =~ s/[^0-9].*//g; $inFile{$b} = $lineNum; $inLong{$b} = $a; }
+  if ($a !~ /[a-z]/i) { $inTable = 0; }
+}
+close(A);
+open(A, "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] nudges.i7x") || die ("No nudge file");
+while ($a = <A>) #first read in the source with table of anagrams
+{
+  if ($a =~ /^table of nudges/) { $inTable = 1; }
+  if ($inTable && ($a =~ /\t[0-9]/))
+  {
+    @b = split(/\t/, $a); $c = @b[1];
+	if ($inFile{$c}) { print "We have a potential duplicate with hash value $c:\n--$inLong{$c}\n--$a\n"; }
+  }
+  if ($a !~ /[a-z]/i) { $inTable = 0; }
+}
+
+}
+
+sub lookBoth #save some code looking for source and side file
+{
+lookFor($_[0], "c:/games/inform/$_[1].inform/source/story.ni");
+lookFor($_[0], "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[1] nudges.i7x");
 }
 
 sub lookFor
@@ -208,6 +245,8 @@ print <<EOT;
 -r = Roiling only
 comma separated list gives several words
 ? = usage
+-m = match anagram table and nudge table
+! = edit the output file hv.txt
 EOT
 exit;
 }

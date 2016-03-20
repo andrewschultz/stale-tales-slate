@@ -10,6 +10,8 @@
 
 use Algorithm::Permute;
 
+my $printResults = 0;
+
 $myMax = 1000;
 $maxLetters = 20;
 
@@ -26,8 +28,8 @@ while ($cur <= $#ARGV)
   {
   /-a/ && do { $lookDif = 1; $cur++; next; };
   /-f/ && do { $fileName = @ARGV[$cur+1]; $cur += 2; next; };
-  /^-y$/ && do { $fileName = "reds.txt"; $settler = 1; $cur++; next; };
-  /^-n$/ && do { $fileName = "reds.txt"; $settler = 0; $cur++; next; };
+  /^-y$/ && do { $fileName = "c:/writing/dict/reds.txt"; $settler = 1; $cur++; next; };
+  /^-n$/ && do { $fileName = "c:/writing/dict/reds.txt"; $settler = 0; $cur++; next; };
   /-l/ && do {$maxLetters = @ARGV[$cur+1]; $cur += 2; next; };
   /-m/ && do {$myMax = @ARGV[$cur+1]; $cur += 2; next; };
   /-np/ && do {$showPoss = 0; $cur++; next; };
@@ -42,12 +44,14 @@ if (!$fileName) { $printResults = 1; @letArray = split(//, "@ARGV[$firstString]"
 else
 {
   $printResults = 0;
-  open(A, $fileName);
+  open(A, $fileName) || die ("No $fileName");
   while ($a = <A>)
   {
     chomp($a);
-	if ($a =~ /^#/) { next; }
+	if ($a =~ /^\|/) { $sectionIgnore = !$sectionIgnore; next; }
+	if ($a =~ /^#/) { $sectionIgnore = 0; next; }
 	if ($a =~ /^;/) { last; }
+	if ($sectionIgnore) { next; }
 	@array=split(/,/, $a);
 	if ($settler) { $foundPct = 0; for (@array) { if ($_ =~ /%/) { $foundPct = 1; } } if (!$foundPct) { @array = (@array, "%"); } }
 	@letArray = split(//, @array[0]);
@@ -122,6 +126,8 @@ while (@perm = $p_iterator->next)
 
 if (($succ > $myMax) || (!$printResults)) { print "@array[0]: $succ found total.\n"; }
 
+if ($printResults)
+{
 print "Stats:";
 
 $firstLet = "";
@@ -151,6 +157,7 @@ for $a (sort keys %statFin)
 if ($showRemain) { print "\n"; for (0..$#poss) { print "" . ($_+1) . ": @poss[$_] "; } }
 
 if ($succ == 0) { print "We didn't find any possibilities. Sorry.\n" }
+}
 }
 
 sub isOops

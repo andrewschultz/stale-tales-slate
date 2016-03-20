@@ -28,7 +28,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "ceiling"	392118435	manor	dusty study	--	--	"[if niche is visible]You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed[else]You already built the chimney. If the ceiling caved, yo'd be buried[end if]."
 "subpoena"	574518649	manor	--	--	Gunter-left rule	"Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting."
 "lamp"	201542769	manor	--	lamp	--	"If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either."
-"palm"	201542769	manor	--	--	is-study-dark rule	"You think you feel the palm shake a but, but nothing terribly magical happens."
+"palm"	201542769	manor	--	--	is-study-dark rule	"You think you feel the palm shake a bit, but nothing terribly magical happens."
 "gape"	244059588	manor	--	op-ed	--	"You feel like you physically want to crumple up the page, but you just stare blankly at it."
 "nitro"	376686752	manor	--	op-ed	--	"[vs-oped]."
 "questin"	630601871	manor	--	op-ed	--	"[vs-oped]."
@@ -363,29 +363,23 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "fine"	268221359	presto	--	dirty looking cola	--	"[caffeine-no]."
 "cafe"	175514408	presto	--	dirty looking cola	--	"[caffeine-no]."
 "rope"	368948448	presto	--	skid	--	"You don't need to do anything with the skid's rope."
-"coal"	149359819	presto	--	--	my-cola rule	"No need to go technologically backwards."
 "soda"	193843450	presto	--	--	my-cola rule	"[cola-is-cola]."
 "pop"	237284495	presto	--	--	my-cola rule	"[cola-is-cola]."
-"gum"	201780662	presto	--	mug	--	"[if fizzy cola is visible]You'd get cola all over you if you tried anything with the mug[else]The mug is no longer manipulable[end if]."
-"flea"	210322662	presto	--	leaf	--	"You can't bring the flea back to life--or do anything else to the leaf."
 "trim"	297501820	presto	--	trim socks	--	"[trimsox]."
 "sock"	242565306	presto	--	trim socks	--	"[trimsox]."
 "socks"	338839272	presto	--	trim socks	--	"[trimsox]."
 "sticks"	412589559	presto	--	rom sticks	--	"[romstix]."
 "rom"	223751533	presto	--	rom sticks	--	"[romstix]."
 "stick"	316315593	presto	--	rom sticks	--	"[romstix]."
+"trimsock"	540067126	presto	--	rom sticks	--	"[romstix]."
 "compiled"	486541157	presto	--	compiled code	--	"The code won't BUDGE."
 "code"	242193360	presto	--	compiled code	--	"The code won't BUDGE."
 "dongle"	378508824	presto	--	dongle	--	"It's built to be sturdy. You don't want to mess with it."
 "bored yak"	504410731	presto	--	--	bookvis rule	"The book is unchangably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. [kboard-det]"
-"bored yak"	504410731	presto	--	keyboard	--	"You don't need to resummon the yak. And this programming exercise is enough of a yoke."
-"fount"	377990806	presto	--	futon	--	"The futon could be a little less lumpy, sure, but that's beyond your magic powers."
 "sleep"	487165982	presto	--	--	wise-to-sleep rule	"Your mind is a tired jumble right now, yes."
 "onyx"	378387418	presto	--	onyx censer	--	"You consider the odd letters in such a short word, then  think 'X, Y, ... no.' Maybe the censer is just a censer, and the coloring is a clue to what it can be."
-"censer"	525123080	presto	--	computer screen	--	"That screen is the best you'll get."
 "onyxcenser"	903510498	presto	--	onyx censer	--	"You let out a string of something that feels good to say, but it doesn't mean anything. Maybe you're overthinking, and the color doesn't matter."
 "trim socks"	636341092	presto	--	rom sticks	--	"The ROM sticks can probably make your computer go faster. Why fiddle further?"
-"clock sap"	399038507	presto	--	caps lock	--	"YOU HAVE WHAT YOU NEED."
 "floor"	314357692	presto	--	big-let	--	"You think about doing something to the floor. But making it disappear would probably be fatal. Best find another angle."
 "yak"	177480248	presto	--	yak	--	"The yak doesn't seem to react to three plain letters thrown around like that. His look indicates not only that he is bored, but that he wants to let people know he's bored, but he's too bored to do that actively. The drab yoke he is wearing probably does not help."
 "yoke"	377451116	presto	--	drab yoke	--	"It's not just any yoke. It's a drab yoke. I mean, a particularly drab yoke. On the bored yak."
@@ -397,14 +391,12 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "maze"	317038698	presto	--	--	volt-maze-visible rule	"That can't be it. It's a VOLT maze."
 "drat"	211650728	presto	--	dart	--	"[if dart is in marines]Some 4-letter word or other will get the dart.[else]Don't need to do anything else.[end if]"
 "bingo"	239271538	presto	--	--	gun-broken rule	"Not quite. You're close to an a-ha moment, though."
-"rats"	286895605	presto	--	star	--	"[if player has star]No need for additional arts.[else]The star doesn't budge.[end if]"
 "spa"	179927743	presto	--	clock sap	--	"C'est [i]pas[r] sap. C'est du CLOCK SAP."
 "fountain"	494078978	presto	--	fount	--	"It's too small to be a fountain--really, just a fount."
 "ole"	255972525	presto	--	--	Leo-mad rule	"There are only six possibilities. Leo's not too bright, and he can figure it out."
 "darn"	177448218	presto	--	--	Rand-mad rule	"Use the settler. This is a, err, regional word."
 "leorand"	433420743	presto	--	Rand	--	"[if Rand is fightin]You don't need to create a monster[else]Leo and Rand look similar, but combining them would mean they couldn't have a friend[end if]."
 "whassup"	526524588	presto	--	--	washup rule	"That's not the slangiest way to greet washups or make them feel better."
-"bleep"	409310921	presto	--	plebe	--	"You're mangling it a bit. Louder, more authoritative, and more general."
 "there"	481328338	presto	--	--	enemy-lines rule	"You point towards the ether, but you aren't focused on any one place enough."
 "what"	250514908	presto	--	lawl wall	--	"Ehh? Whazzat?"
 "lawl"	217750269	presto	--	lawl wall	--	"It's too expansive for you to use any mental energy on."
@@ -483,8 +475,6 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "boat"	198069318	oyster	Hero's shore	--	--	"No one boat seems better than the others. Maybe you should widen your focus to all the boats."
 "pike"	307198092	oyster	--	pikes	--	"[all-fish]."
 "carp"	187983165	oyster	--	carps	--	"[all-fish]."
-"scrap"	284257131	oyster	--	carps	--	"Hm, yeah, you could probably tackle the carps or the pikes."
-"spike"	403472058	oyster	--	pikes	--	"Hm, you could probably tackle the pikes or the carps."
 "crays"	325150424	oyster	freight	--	--	"[no-cray]."
 "cray"	228876458	oyster	freight	--	--	"[no-cray]."
 "tutor"	471002223	oyster	--	reward drawer	--	"[if player is in range]Deal with the attackers, not the trout[else if wrap is off-stage]You try to describe how to fight, but that's not it[else]You can't find any other way to describe fighting[end if]."
@@ -501,8 +491,8 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "tray"	312980891	oyster	--	tea tray	--	"[just-tea]."
 "teatray"	546084836	oyster	--	tea tray	--	"[just-tea]."
 "trace"	337433333	oyster	--	--	crates-menace rule	"[if crate is reflexed]Yes, one more thing to do with the crate--you know where they're from, and you know what to do. Instinctively[else]That won't quite help you figure where the crate is coming from[end if]."
-"plain"	251367970	oyster	--	--	plains rule	"[if splained is true]You had your say.[else]'I...plan,' you think, then in a fit of confidence, 'I...PLANS!'[end if]"
-"splain"	347641936	oyster	--	--	plains rule	"[if splained is true]You had your say[else]You feel like making a big speech about what you've done and what you plan to do, but not quite like that[end if]."
+"plain"	251367970	oyster	--	--	plains rule	"[if bogus-plains is in lalaland]You had your say.[else]'I...plan,' you think, then in a fit of confidence, 'I...PLANS!'[end if]"
+"splain"	347641936	oyster	--	--	plains rule	"[if bogus-plains is in lalaland]You had your say[else]You feel like making a big speech about what you've done and what you plan to do, but not quite like that[end if]."
 "rude"	339264808	oyster	--	rude door	--	"It's not the rudeness[knob-skis]."
 "door"	255058046	oyster	--	rude door	--	"It's not the doorness[knob-skis]."
 "rudedoor"	594322854	oyster	--	rude door	--	"It's not the whole[knob-skis]."
@@ -513,7 +503,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "pearl"	350597528	oyster	--	paler pearl	--	"The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit..."
 "digger"	344351251	oyster	--	rigged digger	--	"It's what it needs to be, you imagine."
 "doorknob"	469670214	oyster	--	knob	--	"It's just a knob. Which thankfully cuts down the possibilities."
-"acters"	433707299	oyster	--	--	crates-menace rule	"Hmm, no, it's only one crate at a time..."
+"acters"	433707299	oyster	lapsin' plains	--	--	"Hmm, no, it[if crate is reflexed] was[else]'s[end if] only one crate at a time..."
 "reachs"	367879580	oyster	achers' arches	--	--	"[if a-s is reflexed]You did enough with the arches[else]That's not quite what to do with the arches[end if]."
 "hedron"	414701385	oyster	achers' arches	--	--	"You'll probably need to destroy the hedron from within."
 "hint"	254292671	oyster	--	thin hint	--	"The thin hint doesn't reveal anything else."
@@ -528,8 +518,6 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "arch"	143799505	oyster	arches	--	--	"[ache-plur]."
 "acher"	271605614	oyster	arches	--	--	"[ache-plur]."
 "wipe"	362199687	oyster	--	wipes	--	"It'd be easier to [if player has wipes]use them all[else]steal all the wipes[end if] at once. Pulling them out and so forth--tiring."
-"swipe"	458473653	oyster	wipes	--	--	"[if player has wipes]You better not fiddle with the wipes wrong, or they'll tear and disintegrate[else]You try to take the wipes, but you worry you're not fast enough[end if]."
-"kiss"	290473956	oyster	--	skis	--	"Hmm, what can you do to the skis, though?"
 "isk"	194199990	oyster	--	skis	--	"But you need to remove both skis."
 "ubt"	226634730	oyster	--	tubs	--	"Clear ALL the tubs!"
 "bust"	322908696	oyster	--	tubs	--	"That didn't make anything go boom."
@@ -1126,7 +1114,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 book text details
 
 to say locname:
-	say "You don't need to riff on any location names to win the game[if splained is false and oyster is needed], though you may get a last lousy point from doing so if you're observant[end if]"
+	say "You don't need to riff on any location names to win the game[if bogus-plains is in plains and oyster is needed], though you may get a last lousy point from doing so if you're observant[end if]"
 
 this is the gunter-onstage rule:
 	if player is in study and gunter is off-stage:
@@ -1134,7 +1122,7 @@ this is the gunter-onstage rule:
 	the rule fails;
 
 to say locname-part:
-	say "You should never need to riff on part of a location name[if splained is false and oyster is needed], though you may get a last lousy point from doing so if you're observant[end if][one of], so that's one less thing to worry about, I hope[or][stopping]"
+	say "You should never need to riff on part of a location name[if bogus-plains is in plains and oyster is needed], though you may get a last lousy point from doing so if you're observant[end if][one of], so that's one less thing to worry about, I hope[or][stopping]"
 
 this is the is-unbent rule:
 	if player is in Basement and basement-been is false:
@@ -1152,10 +1140,6 @@ this is the Gunter-left rule:
 	the rule fails.
 
 this is the is-study-dark rule:
-	if player is in study:
-		say "In study.";
-	if study is not lit:
-		say "Study not lit.";
 	if player is in study and study is not lit:
 		the rule succeeds;
 	the rule fails;
