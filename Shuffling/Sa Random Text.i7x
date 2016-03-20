@@ -1991,6 +1991,7 @@ blurb
 "Lack Duly Lady Luck? All Ducky!"
 "Lack of a flock? OK, calf."
 "Lacrosse scares ol['] solacers."
+"Lame duck, calm duke: deal muck!"
 "Lash deck held cask. Shackled."
 "Latin's in last, I slant--la, snit."
 "Latte so stale to eat lots."
@@ -3038,6 +3039,7 @@ blurb
 "'Art deco! DO react, redcoat!'"
 "Art ethic. Their chat: chattier, theatric."
 "A badly dressed fellow deplores the skankiness of snakeskins."
+"'Be boring? BINGE, bro!'"
 "'Being poor? Bore? No, pig! Gripe boon!'"
 "'Bub, Russ? Suburbs!'"
 "'Cadge, sir? Disgrace!'"
@@ -3067,6 +3069,7 @@ blurb
 "People complain how tacky it is a restaurant like Ascot Coast now serves tacos."
 "People discuss poss. sops for a new business deal." [p]
 "People sound grateful the condo serves no cod."
+"'Pools-Perch Prep School? Poor schlep!'"
 "'Porcelain replica? NO! Nicer opal!'"
 "'Prate APTER!'" []
 "'Serf! Got frets? Go! Forgets! Erg, SOFT!'"
