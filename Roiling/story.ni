@@ -9750,6 +9750,7 @@ kind-of-cool is a truth state that varies.
 
 spacy-hint is a truth state that varies.
 
+parse-hint-yet is a truth state that varies.
 after scaning (this is the init-scan rule) :
 	if first-good-scan is true and kind-of-cool is false and noun is not held:
 		say "And hey. That was kind of cool. You didn't have to press the settler all up in anything, or anyone's personal space.";
@@ -9764,6 +9765,9 @@ after scaning (this is the init-scan rule) :
 	if noun is spacy and spacy-hint is false:
 		say "You also notice the black dot (*) -- hmm, the [noun] should become something with a space.";
 		now spacy-hint is true;
+	if parse-now is true and parse-hint-yet is false:
+		ital-say "x's indicate consonants, as nothing changes to x in the game, and dashes mean vowels you don't know.";
+		now parse-hint-yet is true;
 	continue the action;
 
 book basement
