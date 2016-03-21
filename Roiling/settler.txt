@@ -169,6 +169,7 @@ v:whassup,uswhaps,pahwuss,hawpuss,saw push,pushaws,SshUpaw
 ###############################TOWERS
 !serpent,present
 !diners,rinsed
+!snider,rinsed
 v:nearest,stearne,strenae,ernesta
 v:stabler,alberts
 v:rustled,dreltus,sledrut

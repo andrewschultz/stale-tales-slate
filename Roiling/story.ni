@@ -4348,6 +4348,9 @@ Store Y	"You hear grinding, then a slimy gulp, from store Y. But nothing definit
 lecturer	"The lecturer coughs and shakes his head, looking for someone who almost disrupted his speech. He doesn't close to finger you."
 the-b	"The bean rolls back and forth a bit." [START routes]
 worst ad	"The ad seems slightly nearer, for a moment."
+scripture picturers	"You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that."
+lairage regalia	"You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close."
+adsorbing signboard	"You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you."
 bench	"You hang around the bench, hoping for something to happen, but nothing happens. Though it seems like it should."
 bench-end	"Oof! You fail to jump on the bench end. Try mixing things up from what you just did."
 giant's elbow	"[if bench-end is reflexive]You're nowhere close to the giant's elbow[else]You seem like you should be able to avoid the elbow, but maybe mix things up a bit[end if]."
@@ -4425,7 +4428,7 @@ sign	"Nobody pays attention to your performance as you disobey the sign. Or try 
 clam	"The clam still seems enraged."
 boats	"Perhaps if you were louder and more confident, the boats would hear you."
 carps	"The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things."
-pikes
+pikes	"The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things."
 wipes	"You try to take the wipes, but you worry you're not fast enough."
 tunes	"The tunes grow slightly less annoying, for a moment."
 wrap	"That's not quite the way to pop the wrap."
@@ -4438,6 +4441,9 @@ haunter	"Hm, not quite the right way to dig, dig?"
 c2	"The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled."
 crate	"The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet."
 skis	"The skis momentarily seem more polished."
+tubs	"Hm. The tubs rattle a bit, but you need to do something strong."
+prod	"You juggle the prod a bit, but it doesn't change into anything. Well, not like that."
+ruby	"You futz with the ruby a bit, and it almost seems to hide itself."
 waste	"You realize you didn't quite psyche yourself to fix the waste."
 heaps	"The heaps still look ugly as ever."
 gleaner	"The gleaner remains too small to read."
@@ -4445,7 +4451,33 @@ dialer	"[di-cli]."
 lever	"You look at the lever, wishing it would be a little more fun to pull."
 d2	"[di-cli]."
 yapper	"'Eh? What?' says the yapper. 'Speak up, you were about to make sense there.'"
-serpent	"The serpent calms down for a split-second[doc-try]." [START towers]
+Ray Eck	"The keycar slows down for a minute. Ray Eck frowns at you." [START towers]
+Andres	"Andres looks a bit more tied up at the moment."
+Andrew	"Andrew suddenly looks as if he's been told he did something wrong."
+Archie	"Archie looks a bit pained."
+Barney	"Barney looks around a bit."
+Blake	"Blake looks a bit sadder."
+Bredo	"Bredo yawns."
+Cedrick	"Cedrick cringes slightly."
+Daryl	"Daryl pinches his sides and shakes his head."
+Demitri	"Demitri shivers a bit."
+Dewey	"Dewey seems momentarily less muscular."
+Edwin	"Edwin hiccups."
+Eldon	"Eldon looks slightly wrinkled for a moment."
+Ernest	"Ernest seizes up."
+Geno	"Geno looks around, as if he's about to bolt."
+Goldy	"Goldy starts to fold his hands in prayer but thinks better of it."
+Leander	"Leander makes an a-ha gesture--no, only for a second."
+Marcel	"Marcel breathes slower for a second."
+Marlon	"Marlon looks a little less weird for a moment."
+Preston	"Preston almost slips for a second."
+Reggie	"Reggie sniffs the air."
+Royce	"Royce looks a bit less aggressive."
+Shane	"Some color drains from Shane's face."
+Terrance	"Terrance looks around as if he wants to run off."
+Tyson	"Tyson looks slightly less emotional."
+Wade	"Wade's eyes get bigger for a second."
+Sir Rodney	"Rodney looks around, as if he is sick of this place."
 diners	"The diners glare at you, then look up at the sky, slightly worried."
 pirates	"The pirates blanch a bit but quickly regain their swagger."
 serpent	"The serpent shakes its head and tail a bit."
@@ -4467,8 +4499,8 @@ nameless salesmen	"The salesmen grow momentarily protective of their Nerd-Aid su
 Reed's Ale	"The Reed's Ale man listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch."
 wait-seer	"The wait-seer looks bored and distracted for a second."
 rewired robot	"The robot almost looked a bit odd there for a moment."
+atheists	"The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal."
 deacons	"The deacons ponder for a minute before going back to their scheming. But they looked scared--worried--you were close to exposing their ol['] heist."
-Ray Eck	"The keycar slows down for a minute. Ray Eck frowns at you."
 ropins	"The ropins remains secure, with no easy way to open it."
 smart kid	"[kid-first] seems to be trying so hard to concentrate, but [he-she] hasn't found it yet."
 denim	"The denim bends and warps, but not enough to cut it."
@@ -4477,8 +4509,9 @@ old ice	"The old ice seems to glimmer a bit."
 turbos	"[jet-nq]."
 blaster	"[jet-nq]."
 eastern shore	"Maybe it's you, but the eastern shore seemed slightly closer."
+serpent	"The serpent calms down for a split-second[doc-try]." 
 Ed Yerg	"Ed looks slightly less avaricious."
-crocus	"The crocus almost seems to perk up."
+flowerpot	"The crocus almost seems to perk up."
 curst palace	"Hmm...[if player is in limits]no rumbling from the curst palace. You're going to need a big word, here[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 b-b	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
 Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertaste."
@@ -4519,7 +4552,11 @@ videotape	"You must be on the right track--but nothing happens. Yet."
 barren cries	"The cries seem like they could change--or is it a dream to you?"
 harmonicas	"The harmonicas whistle, as if something happened."
 pagers	"The pagers light up slightly. Maybe give it another go."
-riot cap	"Nothing happens. Your magic skills feel like the pits for a second."
+riot cap	"Nothing happens. Your magic skills feel like the pits for a second.
+stucco	"The stucco looks almost hairy for a second."
+miser ruble	"The miser ruble turns a bit purpler."
+buried raft	"You loaf a bit after thinking that, hoping for something to happen. It doesn't."
+mean trowel	"You had the seed of an idea there, you thought."
 nectarine	"The nectarine seems a little less shiny and new. But not enough."
 green stain	"Parts of the green stain turn orange-ish but is too small to be oranges."
 peanut cola	"The peanut cola smells slightly fruity for a minute."
@@ -4611,7 +4648,19 @@ to say them-that of (tt - a thing):
 
 table of donereject [TDR - this can use a lot more entries]
 specdone	spectalk
-star	"[if player has star]No need for additional arts.[else]The star doesn't budge.[end if]"
+wipes	"You better not fiddle with the wipes wrong, or they'll tear and disintegrate."
+store b	"No more freebies. Sorry."	[stores]
+lecturer	"He's already been changed enough."
+picturers	"They're pretty strict about what they suggested. Not much else you can do with them."	[routes]
+lairage regalia	"You twist your mind a bit, but no, there's probably only one way to enter."
+adsorbing signboard	"No, you don't see any other way around the signboard to enter. You don't need one, either."
+pier sign	"You try to follow the instructions on the pier sign, but maybe you'd wind up in the water."
+da mist	"Hm, not quite--you'd like to be absolutely SURE you don't get too lost in da mist. Oh, and that you get lost enough."
+ship controls	"There are so many combinations to manipulate the controls. That didn't quite work, though. But maybe if you shift a little..."
+Thor
+New Beet
+Pa Egg Pea	[troves]
+star	"[if player has star]No need for additional arts.[else]The star doesn't budge.[end if]"	[presto]
 popgun	"If you overthought things, you might break it again."
 log ons	"[no-rehash]."
 alert	"[no-rehash]."
@@ -4623,7 +4672,22 @@ caps lock	"YOU HAVE WHAT YOU NEED."
 mug	"[if fizzy cola is visible]You'd get cola all over you if you tried anything with the mug[else]The mug is no longer manipulable[end if]."
 computer screen	"The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle."
 keyboard	"You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke."
-wipes	"You better not fiddle with the wipes wrong, or they'll tear and disintegrate."
+knob	"You should leave the knob to b'n OK."
+a-s	"Further searching proves fruitless."
+Merle	"He's not going to be any more honest. Or anything nice or good, really." [otters]
+ocelots	"The ocelots are doing great as is."
+leopard	"The leopard's doing great as is."
+badger	"The badger's doing great as is."
+satyr	"The satyr's doing great as is."
+whistle	"The whistle's already in tune."
+medals	"You already got a boost from them."
+l-o-p	"You corrected the list enough."
+auction caution	"You hear a sap yap about the sign and figure it can't be changed any more."
+quince	"The quince is fine as is. No need to bargain for more."
+peach	"The peach was cheap enough. Best not to meddle with it more."
+lemons	"You sour on changing the lemons further."
+melons	"The melons are fine as-is. You already got a two-fer, getting them, anyway."
+nectarine	"The nectarine's already perfectly ripe."
 
 to say no-rehash:
 	say "That'd be an awkward rehash. You need another way to say good-bye"
@@ -27882,13 +27946,15 @@ carry out rejching:
 		rej-analyze the-from entry;
 
 to rej-analyze (x - a thing):
+	choose row with the-from of x in table of anagrams;
+	let y be the-to entry;
 	unless x is an xtrhelp listed in table of spechelp:
-		say "Whoops, [x] could also be in table of spechelp.";
+		say "Whoops, [x] could also be in table of spechelp, to [y].";
 	unless x is a specdone listed in table of donereject:
 		if x is reflexive:
-			say "Strong possibility: [x] could also be in table of donereject.";
+			say "Strong possibility: [x] could also be in table of donereject, to [y].";
 		else if x is not vanishing:
-			say "Weak possibility: [x] could also be in table of donereject.";
+			say "Weak possibility: [x] could also be in table of donereject, to [y].";
 
 chapter twiding
 
