@@ -8887,11 +8887,11 @@ the cruel ulcer is part of the night thing. description of cruel ulcer is "It's 
 
 understand "lucre" as a mistake ("[if player is in Enclosure]If there were any treasure here, it'd probably do something terrible to you once you took it[else]Ugg. You're not sure what kind of lucre you need, but maybe something that hasn't been in the night thing. Even something the night thing was sitting on[end if].") when cruel ulcer is visible or player is in Enclosure.
 
-understand "cluer" as a mistake ("[if player is in Enclosure]This place is too stark to offer clues[else]Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing[end if].") when cruel ulcer is visible or player is in Enclosure.
+understand "cluer" as a mistake ("[if player is in Enclosure]This place is too stark to offer clues--well, maybe it'd offer WRONG clues[else]Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing[end if].") when cruel ulcer is visible or player is in Enclosure.
 
 the ketchup bottle is a thing in Hotel. "A ketchup bottle lies here, torn apart--and you have a prime suspect in the Night Thing that [if night thing is visible]is roaring nearby[otherwise]was here[end if]."
 
-the description of the ketchup bottle is "It is THE PUCK brand ketchup. They apparently put, heck, whatever they want in it! And you'll like it that way!"
+the description of the ketchup bottle is "It is THE PUCK brand ketchup. And it's shaped that way, too. They apparently put, heck, whatever they want in it! And you'll like it that way!"
 
 instead of taking the ketchup bottle:
 	if night thing is not visible:
@@ -10019,7 +10019,7 @@ section existing
 
 [the final verb, of course]
 
-understand "sex it" as a mistake ("[if player is not in manor]Quit screwing around and take the exits[else]You're not even up for THAT, now. You just want to BE[end if].")
+understand "sex it" as a mistake ("[if player is not in manor]Quit screwing around and focus on yourself. NO, not like THAT. Geez[else]You're not even up for THAT, now. You just want to BE[end if].")
 
 existing is an action applying to nothing.
 
@@ -10141,7 +10141,7 @@ understand "lair" and "lairs" as a mistake ("That might work, if the rail did no
 
 understand "liar" and "liars" as a mistake ("The number of liars the rails would create would be shocking.") when player is in terminal.
 
-understand "lira" as a mistake ("You don't need money.") when player is in terminal.
+understand "lira" as a mistake ("But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which don't use lira any more anyway. Plus, you don't need money.") when player is in terminal.
 
 section resort
 
@@ -12885,33 +12885,41 @@ book endgame
 chapter amusing
 
 to say nfi:
-	say "[one of]? [or]? (not fully inclusive--search the source for 'as a mistake')[stopping]"
+	say "[one of]? [or]? (region suggestions are not fully inclusive--search the source for 'as a mistake')[stopping]"
 
 table of big yucks
 reg	yux
 --	"XYZZY several times?"
---	"Changing the toga to a gato?"
+--	"In the intro, trying SANDLER or LANDERS around the snarled darnels, or changing the toga to a gato[nfi]"
 --	"Reading the name list until the editorializing doesn't change?"
 --	"Examining store c? Several times?"
-forest	"The following anagrams in the forest where appropriate: amps, steam, padres, rasped, spader[nfi]"
+--	"STROBE in the Trips Strip?"
+forest	"The following anagrams in the forest where appropriate: Nile, File, DESTRO, amps, steam, padres, rasped, spader[nfi]"
 forest	"Saying GOD or GOB in the ghouls['] slough?"
 sortie	"Eating the hot sauce or the taco?"
+sortie	"Examining the parmesan cheese?"
 sortie	"Praying in Sacred Cedars?"
 sortie	"Throwing the paper plane?"
-sortie	"The following anagrams in the sortie: stake, takes, teaks, pears, limes, thicken, lacy, mope or tap (by Pat), similes, sever, serve, POTUS[nfi]"
+sortie	"The following anagrams in the sortie where appropriate: stake, takes, teaks, pears, limes, thicken, lacy, mope or tap (by Pat), similes, sever, serve, POTUS[nfi]"
 metros	"Trying to explore the condo before you cleared it?"
 metros	"Putting the barcode on the tomato?"
 metros	"Scanning the deadbeat?"
 metros	"Asking the beats anything?"
-metros	"The following anagrams in the metros: sap, asp, smitten, stalker, snores, senors, tar, lair(s), lira, liar(s), bates? (not fully inclusive--search the source for 'as a mistake')"
+metros	"The following anagrams in the metros where appropriate: sap, asp, smitten, trounce, stalker, snores, senors, tar, reins, risen, lair(s), lira, liar(s), bates[nfi]"
+--	"the following anagrams in the resort where appropriate: slite, poser, prose, achin, roister, sex it"
 --	"Converting the sprig to prigs in the woodland?"
 --	"Any anagrams I missed? Let me know. I'll credit you. Or if you find another silly joke to throw in, tell me. I enjoy them."
 
 Rule for amusing a victorious player:
+	let totals be 0;
 	say "Have you tried:[paragraph break]";
 	repeat through table of big yucks:
 		if there is no reg entry or reg entry is solved:
 			say "--[yux entry][line break]";
+		else unless there is no reg entry:
+			increment totals;
+	if totals > 0:
+		say "There were [totals] funny things in the region you missed."
 
 last-list is a number that varies.
 
