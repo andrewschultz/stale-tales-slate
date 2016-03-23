@@ -37,7 +37,7 @@ else {
 OUTER: while ($exit == 0)
 {
   print "File: $fi screen: $sc\n";
-  print "Grepquick: $gq Nicknaming: $ti Anagram Names: $an My anagram: $my\n";
+  print "Grepquick (gq): $gq Nicknaming (ni): $ti Anagram Names (an): $an My anagram (my): $my (- before means ignore)\n";
   print "Type in next thing(s) to anagram (! = both words to name too)\n"; 
   $a = <STDIN>;
   readLine($a);
@@ -77,7 +77,9 @@ sub readLine
   if ($c1 eq "an") { $an = 1; scr("Anagram names $toggle[$an]\n"); next; }
   if ($c1 eq "my") { $my = 1; scr("My-anagram $toggle[$my]\n"); next; }
   if ($c1 eq "fi") { $fi = 1; scr("To-file $toggle[$fi]\n"); next; }
+  if ($c1 eq "f") { $fi = 1- $fi; scr("To-file $toggle[$fi]\n"); next; }
   if ($c1 eq "sc") { $sc = 1; scr("To-screen $toggle[$sc]\n"); next; }
+  if ($c1 eq "s") { $sc = 1 - $sc; scr("To-screen $toggle[$sc]\n"); next; }
   if ($c1 eq "-gq") { $gq = 0; scr("Grepquick $toggle[$gq]\n"); next; }
   if ($c1 eq "-ti") { $ti = 0; scr("Nicknaming $toggle[$ti]\n"); next; }
   if ($c1 eq "-an") { $an = 0; scr("Anagram names $toggle[$an]\n"); next; }
@@ -118,12 +120,13 @@ sub usage
 {
 print "Error in command: $_[0]\n";
 print<<EOT;
-f = file toggle
-s = screen toggle
+f = file toggle, fi/-fi = file on off
+s = screen toggle, sc/-sc = screen on off
 q = quit
 = = anagram a full name
 default = GQ through files
 ti = use ti.bat
+an = anagram name, my = my anagram, gq = grep quick
 EOT
 }
 

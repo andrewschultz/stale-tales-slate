@@ -4515,6 +4515,32 @@ flowerpot	"The crocus almost seems to perk up."
 curst palace	"Hmm...[if player is in limits]no rumbling from the curst palace. You're going to need a big word, here[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 b-b	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
 Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertaste."
+t-nastily	"[mack-dealt]."
+t-seedily	"[mack-dealt]."
+t-shadily	"[mack-dealt]."
+t-snidely	"[mack-dealt]."
+t-starkly	"[mack-dealt]."
+t-cattily	"[mack-dealt]."
+t-tearily-irately	"[mack-dealt]."
+t-blearily	"[mack-dealt]."
+t-ribaldly	"[mack-dealt]."
+t-formally	"[mack-dealt]."
+t-coitally	"[mack-dealt]."
+t-modestly	"[mack-dealt]."
+t-shabbily	"[mack-dealt]."
+t-shoddily	"[mack-dealt]."
+t-steamily	"[mack-dealt]."
+t-suddenly	"[mack-dealt]."
+t-stupidly	"[mack-dealt]."
+t-martially	"[mack-dealt]."
+t-sincerely	"[mack-dealt]."
+t-sobbingly	"[mack-dealt]."
+t-tediously	"[mack-dealt]."
+t-wearingly	"[mack-dealt]."
+t-drawlingly	"[mack-dealt]."
+t-emotionally	"[mack-dealt]."
+t-despairingly	"[mack-dealt]."
+t-silently	"[mack-dealt]."
 imp1	"[imp-nag]."
 imp2	"[imp-nag]."
 imp3	"[imp-nag]."
@@ -4581,6 +4607,9 @@ coin	"The coin looks a bit more artistic for a moment--no, it's too drab, again.
 coins	"The coins rattle and hum promisingly."
 icons	"The icons rattle and hum promisingly."
 s-c	"The sonic coins hum almost questioningly."
+
+to say mack-dealt:
+	say "You've already exposed the macks for that";
 
 to say jet-nq:
 	say "Despite your lack of technical knowledge, you think you almost did...something to improve the boat";

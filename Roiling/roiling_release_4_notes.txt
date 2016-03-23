@@ -17,13 +17,16 @@ There was also other miscellaneous stuff and even a few features that fell out w
 --I also decided to reveal the code names of the updates. They're rather silly, but I hope you enjoy them.
 --last scan now appears/stays in header until solved
 --you now have the ability to interpret gadget showings with PARSE or turn it off with SPARE
+  --the game also tracks better if it is a complete spoiler, and the commands to check off are clearer
 --VERB/VERBS and PAD VERBS now give general help
+--all items have individual clues if you try to change them and you fail, and all items should give individual messages if they don't need to be changed
 
 Store H:
+--new fruits in the Field and Wells
 --changed one puzzle to be a little less abstruse (green stain in Wells)
 
 Store U:
---the scenery in the Same Mesa is now better-named.
+--the scenery in the Same Mesa is now better-named
 
 Store W:
 --a few more clues for the Lone Duck
@@ -31,9 +34,6 @@ Store W:
 --the smart kid is now female if you are
 --Dr. Yow is now female if you are
 --the jetskis are replaced with a more appropriate conveyance
-
-Store H:
---new fruits in the Field
 
 Store V:
 --the Bedroom in Store V now has a new name

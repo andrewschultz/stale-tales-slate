@@ -941,6 +941,7 @@ blurb
 "'Word one: redo NOW!'"
 "'Wrong foot. I now go for it.'"
 "'Yo, retro, men! One more try!'"
+"'Yo, start to stray...'"
 
 table of undo rejects [xxg0]
 blurb
@@ -1046,6 +1047,7 @@ blurb
 "Latence's cleanest."
 "Leady delay dealy..."
 "Let time pass? Simplest taste. I step lamest!"
+"Loafin[']? No! Fail!'"
 "Loitering? Toil, Reign!"
 "Long pause plagues on."
 "Me: torpor promoter."
@@ -2899,6 +2901,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Tsao/Sato Oats" []
 "Tuckahoe's Tack House"
 "Tucker Tek-Cru"
+"Turano Naruto"
 "Twin Peaks Weak Pints"
 "Twin Pigs Wing Tips"
 "Ty Rose's Oysters"
@@ -5956,6 +5959,7 @@ blurb
 "Trite-Matters Streitmatter"
 "A True Go to Argue"
 "True to Re-Tout"
+"Twee Fan Nate Few"
 "Uncensored Denouncers" []
 "Up-Late Pat Lue"
 "Updater Rude Pat"
@@ -8033,7 +8037,7 @@ blurb	prio
 "Ahh, Tourist at This Hour[r], by Ruth Oshita"
 "Ahh, Twisty That-is-Why[r], by Whitt Hays"
 "Ahoy, Sir So Hairy[r], by Rio Hays"
-"Ail, Ail, Ail[r], by Lia Ali."
+"Ail, Ail, Ail[r], by Lia Ali"
 "Ail Earlier[r], by Ariel Reali"
 "Aimless Plot, Lamest Spoil[r], by Salome Spilt"
 "Air-Lust Rituals Trail Us[r], by Lurista St. Lauri"
@@ -8572,6 +8576,7 @@ blurb	prio
 "Bye, Bath: the Baby[r], by Beth Bay"
 "Bye Now, New Boy[r], by Ben Yow"
 "Bye, Souls: Bless You[r], by [if player is male]Loy Busse[else]Su Bosley[end if]"
+"Byroads So Bardy[r], by Rob Days"
 "Cab-Only Balcony, Boy Clan[r], by Lyn Coba"
 "Cabin Fever: France Vibe[r], by Vince Faber"
 "Cadger-Graced Dr. Cage[r], by Edgar C. DeCrag"
@@ -8706,7 +8711,7 @@ blurb	prio
 "Clearly, Carlyle[r], by Ella Cyr"
 "Clematis Climates[r], by [if player is male]Alec Smit[else]Laci Smet[end if]"
 "A Cleric Pro-Reciprocal[r], by [if player is male]Rico Parcel[else]Carol Price[end if]"
-"Clings to a Nostalgic Antic Slog[t], by Gil Cantos"
+"Clings to a Nostalgic Antic Slog[r], by Gil Cantos"
 "Clio's Coils[r], by Colli Sisco"
 "Cloak a Lock[r], by Kao Allcock"
 "Clochards, Arch-Clods[r], by Cal Dorsch"
@@ -8889,6 +8894,7 @@ blurb	prio
 "Dawkins Wadkins Was Kind[r], by Sid Kwan" []
 "The Dawn Had Went: What End?[r] by Ted Hawn"
 "Day-Bother: Breathy Do By the Road[r], by Debra Hoyt"
+"Day-Rob Byroad[r], by Bo Rady"
 "Day Ten: And Yet Tend, Ay[r], by Ty Dean"
 "Daydream-Made Yard May Dread[r], by [if player is male]Adam Dyer[else]Mara Eddy[end if]"
 "Daymares? Yes, Drama[r], by Ada Myers & Myra Sade"
@@ -9951,7 +9957,7 @@ blurb	prio
 "His Urgent, Hungriest Sure Thing[r], by Sig Hunter" []
 "History of Fishy Root[r], by Io Forsyth & Sofyi Hort"
 "Hit Knot to Think[r], by Nik Toth"
-"Hitler's a Real ****[r], by [if player is male]Seth Rail[else]Ilse Hart[end if]"
+"Hitler's a Real ****[r], by [if player is male]Seth Rail[else]Ilse Hart[end if]" [x]
 "Ho, Nigh on High Noon[r], by Nino Hogh"
 "Hobert's Bothers[r], by Rob Tesh"
 "Hobo Rey, Boy Hero[r], by Herb Yoo"
@@ -9988,6 +9994,7 @@ blurb	prio
 "How I Feel: Whole, Fie![r], by Leif Howe"
 "How I Met With Moe[r], by Tom Hwei"
 "Howard's Rad Show: Ah, Words, Raw Dosh[r], by Rod Shaw" []
+"Howl-Clue? Well, Ouch[r], by Lou Welch"
 "Howls Due: She Would, We Should[r], by Welsh Duo Huw DeLos & Su DeWohl"
 "Howry St., Why Sort Thy Rows[r], by Hy Worst"
 "The Hub's Best, Huh[r], by Beth Shu"
@@ -10183,6 +10190,7 @@ blurb	prio
 "I, To Queer Erotique[r], by Teo Quire"
 "I Treat: a Trite Attire[r], by Tatia Reitter"
 "I, Trivial: a Travail[r], by Iva Trail"
+"I Trust Sir Tut[r], by Su Ritt"
 "I Trusted Detritus[r], by [if player is male]Titus Erd[else]Teri Dust[end if]"
 "I Try Real Literary[r], by [if player is male]Terry Ali[else]Lita Ryer[end if]"
 "I Turned Under It[r], by Teri Dun"
@@ -10988,7 +10996,7 @@ blurb	prio
 "A Modern Dream: No Admen or No Armed Roadmen[r], by Ed Moran & Dan Rome" []
 "Modern Teens Need Mentors['] Endorsement[r], by [if player is male]Emerson Dent[else]Deneen Storm[end if]"
 "Moisture's Mouse, Stir[r], by Teri Musso"
-"Molassess Lassos Me[r], by Sal Moses"
+"Molasses Lassos Me[r], by Sal Moses"
 "Molby's Symbol[r], by Sy Blom"
 "Mold in the Moth-Lined Nil-Method Idle Month[r], by Tim Holden"
 "Mold Thy Old Myth[r], by Tom Hyld"
@@ -11103,7 +11111,7 @@ blurb	prio
 "My Lone Elm Yon[r], by Lemony Lyn Moe"
 "My Lone Only Me[r], by Len Moy"
 "My Matrices, Asymmetric[r], by [if player is male]Timmy Cesar[else]Misty McRae[end if]"
-"My, Maud, a Dummy[t], by Adam Yu"
+"My, Maud, a Dummy[r], by Adam Yu"
 "My Name is Sam Yenim[r], by Mia Mynes"
 "My Oath: Yo, Math[r], by Tom Hay"
 "My Other Home Try[r], by Tom Hyre"
@@ -11368,6 +11376,7 @@ blurb	prio
 "Novelty-Envy Lot[r], by Ty Loven"
 "Novice Con, Vie[r], by [if player is male]Evon Vicencio[else]Vivienne Coco[end if]"
 "Now Art's Tons Raw[r], by Stan Row" []
+"Now I Net One Twin[r], by [toti] Wen"
 "Now I See, Wise One[r], by Wes Oien"
 "Now I've No View[r], by Vi Owen"
 "Nowhere's Sown Here[r], by [if player is male]Wes Horne[else]Wren Shoe[end if]"
@@ -12343,6 +12352,7 @@ blurb	prio
 "Saliva Avails[r], by Al Avis"
 "Sallying Slangily[r], by Lila Syng"
 "The Salon Heals Not[r], by Elton Ash" []
+"Salt-Mine Sent Mail[r], by [if player is male]Nat Miles[else]Nita Elms[end if]"
 "Salts Go to Glass[r], by Sol Gast & Tal Goss"
 "Sam Is Amiss[r], by Ms. Isis Maas"
 "Sam's Den: Sad Men's Madness[r], by Em Sands"
@@ -12738,6 +12748,7 @@ blurb	prio
 "Solemn Lit Millstone[r], by Les Milton"
 "A Solid Sad Oil Laid So[r], by Odalis Salido"
 "Solitary Royalist[r], by Lisa Troy"
+"Solitary Sailor Ty: Ail-Story[r], by Lyra Otis"
 "Solo Knife Looks Fine[r], by Leif Koons"
 "Solon of No Fools[r], by Olfonso Olofson"
 "A Somber Mobs Era[r], by Ambrose Boersma"
@@ -13856,7 +13867,7 @@ blurb	prio
 "Yo, Rent: One Try[r], by Rotney-Tyrone Toyner"
 "Yo, Rogue, Your Ego[r], by Reo Yugo"
 "Yo, Shut Out, Shy[r], by Ty Toy Hsu"
-"Yo Soy Yo-Yos[r], by St Too"
+"Yo Soy Yo-Yos[r], by Sy Yoo"
 "Yo, Word, a Doorway[r], by Ray Wood"
 "Yoke and a Donkey[r], by [if player is male]Deon Kay[else]Ken O'Day[end if]"
 "Yokel Herd Keyholder[r], by [if player is male]Kyle Herod[else]Keely Hord[end if]"
@@ -13878,6 +13889,7 @@ blurb	prio
 "You Led His Lousy Hide Hideously[r], by Doyle Shiu"
 "Your Choice, Our Icy Echo[r], by Corey Chiou"
 "Your Death, Dear Youth[r], by Hearty Duo Theo Audry & Doretha Yu"
+"Your Fad's Four Days[r], by [if player is male]Rudy Faso[else]Fay D'Urso[end if]"
 "Your Heart, Rare Youth[r], by Arturo Yeh"
 "Your Kind, You Drink[r], by Koy Rudin"
 "Your Neat Any-Route: Year Unto a Tourney[r], by Tony Auer"
@@ -13926,6 +13938,7 @@ blurb
 "'Oh, ream a homer more, ha!'"
 "On impulse: 'No! Umps lie!'"
 "'Our refs? Furores!'" []
+"'Our team's so mature.'"
 "Pompous umps: 'Oops!'"
 "'The prize? Three-zip.'"
 "'Puck-fu [f-w]-up!'"
@@ -13933,7 +13946,7 @@ blurb
 "'The refs? Eh, frets!'"
 "'Ridiculous! I...ludicrous!'"
 "'Ruined. Ref under fire.'"
-"'The scorer? Rochester."
+"'The scorer? Rochester.'"
 "'See-not-ONE-set Osteen? Ee, snot.'"
 "'SIX ump mix ups! Sum pix!'"
 "So-agile Goalies['] egos ail." []
@@ -14974,6 +14987,7 @@ blurb
 "Our Sally, All Yours."
 "Overland Lover Dan."
 "Overpictured Reproductive."
+"Oy, Tarts So Ratty or Tasty!"
 "Pa's Got to Gasp."
 "Pamela's a Sample."
 "The Pansy Nat Hypes Stephany."
@@ -16106,6 +16120,7 @@ blurb
 "GO SOBER, GOOBERS" []
 "GOD BANS BAD SONG"
 "GONE BAD? GOD BANE! NO BADGE" []
+"GORGIN['] IN GROG? GRINGO"
 "GOT LINGERIE, ELITE GRINGO? GET RELIGION"
 "GRACE = LIES/SACRILEGE"
 "GREED, CATS? GET SCARED"
@@ -21010,6 +21025,7 @@ blurb
 "'Ew, no, Owen!'" []
 "'Ew, smut! Um, Stew, MUST we?'"
 "'Fat-Anon? Not a fan.'"
+"'Fat, Zig? ZAFTIG!'"
 "'Fatima, am I fat?'"
 "'A fax? [']Sup? Faux pas!'"
 "'Feasibly? FAILS! Bye!'"
@@ -31019,6 +31035,7 @@ blurb
 "Bar-Quotes? Art Bosque? Square-bot!" []
 "Crates of farces to forecast oft scare. Sore fact. Cost: fear."
 "Distraction, sardonic tit? Roast! Indict!"
+"'Ego attic-cottage. I cogitate.'"
 "Extraordinary intro? Dreary. Ax."
 "'Flaubert? Flat rube!'"
 "Grey men, my genre."
@@ -31838,6 +31855,7 @@ blurb
 "Centroidal Declinator"
 "Clasper Placers" []
 "clutters scuttler"
+"collapse-all scope"
 "coolant loot-can" []
 "CoreOps Scooper"
 "Corpsman crampons"
@@ -32477,8 +32495,8 @@ blurb
 "'Loaned? No deal!' / 'Lad, one...'" []
 "'Lost head? Deal shot!'"
 "'Low deal!' / 'Allowed!'" []
-"Low prices relic swop!"
-"'Mac, seekin['] nice makes?"
+"'Low prices relic swop!'"
+"'Mac, seekin['] nice makes?'"
 "'A melon mo['] lean? No, lame!'" []
 "'Miss, a free...?' / 'Seems fair.'"
 "'Money back!' / 'My, a beckon!'"

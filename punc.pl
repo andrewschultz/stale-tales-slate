@@ -52,14 +52,14 @@ elsif (@ARGV[0]) { $proj = @ARGV[0]; }
 
 if (@ARGV[0] eq "b")
 {
-  storyTables("c:/games/inform/roiling.inform/Source/story.ni", "roiling");
-  storyTables("c:/games/inform/sa.inform/Source/story.ni", "sa");
+  storyTables("c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/Roiling random text.i7x", "roiling");
+  storyTables("c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/Sa random text.i7x", "sa");
   exit;
 }
 
 print "b=both r=roiling s=shuffling\n";
 
-$storyFile = "c:/games/inform/$proj.inform/Source/story.ni";
+$storyFile = "c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/$proj random text.i7x";
 
 if (@ARGV[1] eq "-i") { $matchQuotes = 0; }
 
@@ -68,9 +68,11 @@ storyTables($storyFile, "$proj");
 sub storyTables
 {
 
+my $totalErrors = 0;
+
 open(A, $_[0]) || die ("Can't open $_[0].");
 
-$allLines = 0;
+my $allLines = 0;
 
 print "Table parsing for $_[0]:\n";
 
@@ -101,7 +103,7 @@ while ($a = <A>)
 	  next;
 	}
 	}
-	if ($inTable == 1) { if ($a !~ /^\"/i) { if ($errs) { print "===============Finished $head. $errs errors.\n"; } else { $noerr .= " $head"; } $errs = 0; $inTable = 0; $lineNum = 0; next; } }
+	if ($inTable == 1) { if ($a !~ /^\"/i) { if ($errs) { print "===============Finished $head. $errs errors.\n"; $totalErrors += $errs; } else { $noerr .= " $head"; } $errs = 0; $inTable = 0; $lineNum = 0; next; } }
     if ($inTable)
 	{
 	  $lineNum++;
@@ -123,6 +125,7 @@ if (!$anyerr) { print "No tables had errors!\n"; }
 else
 {
 if ($showOK) { print "OK tables:$noerr.\n"; }
+print "$totalErrors total errors in $_[0].\n";
 }
 
 close(A);

@@ -1,17 +1,22 @@
 #bma.pl
 #this simply tries all book anagrams and checks them. These are the most likely to fail.
 
-open(A, "c:/games/inform/roiling.inform/Source/story.ni");
+open(A, "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Roiling Random Text.i7x");
 
 $cc = 0;
 
+if ($#ARGV > -1)
+{
 if (@ARGV[0] eq "-x") { $lines = 1; }
+else { usage(); }
+}
 
 while ($a = <A>)
 {
+  $totalLines++;
   chomp($a);
-  if ($a =~ /^table of random books \[/) { $books = 1; <A>; next; }
-  if ($a =~ /^table of self-help bestsellers \[/) { $books = 2; <A>; next; }
+  if ($a =~ /^table of random books \[/) { $books = 1; print "$a\n==========\n"; <A>; next; }
+  if ($a =~ /^table of self-help bestsellers \[/) { $books = 2; print "$cc to clean up.\n\n$a\n==========\n"; $cc = 0; $count = 0; <A>; next; }
   if ($a !~ /[a-z]/) { $books = 0; next; }
   if ($books)
   {
@@ -22,7 +27,7 @@ while ($a = <A>)
 	$a =~ s/\[if player is male\]//g;
     $a =~ s/\[a-b\]/Abe/g;
     $a =~ s/\[i-n\]/Ian/g;
-    $a =~ s/\[tt\]/Nate/g;
+    $a =~ s/\[n-t\]/Nate/g;
     $a =~ s/\[tt\]/Tio/g;
     $a =~ s/\[ta\]/Tia/g;
 	$a =~ s/\[a-word(-u)?\]/ass/gi;
@@ -61,7 +66,7 @@ while ($a = <A>)
     }
 
     $count++;
-    if (!$match) { $cc++; if ($lines) { print "$count ($cc): "; }
+    if (!$match) { $cc++; if ($lines) { print "$count ($cc) ($totalLines): "; }
 	$sp = wout($start);
 	$ep = wout($end);
 	print "$a: $sp vs $ep\n";
@@ -91,4 +96,12 @@ sub wout
   if ($total) { $out .= "$_"; if ($total > 1) { $out .= $total; } }
   }
   return $out;
+}
+
+sub usage
+{
+print <<EOT;
+-x is the only flag right now. It shows line numbers.
+EOT
+exit;
 }
