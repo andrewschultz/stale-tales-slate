@@ -1,3 +1,8 @@
+##########################################################
+#tsh.pl
+#table sorter app for Roiling Original etc.
+#
+
 use Cwd;
 
 $fileName = "story.ni";

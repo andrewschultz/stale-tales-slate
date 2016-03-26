@@ -5,10 +5,15 @@ open(A, "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Roili
 
 $cc = 0;
 
-if ($#ARGV > -1)
+while ($count <= $#ARGV)
 {
-if (@ARGV[0] eq "-x") { $lines = 1; }
-else { usage(); }
+  $a = @ARGV[$count];
+  for ($a)
+  {
+    /-x/ && do { $lines = 1; $count++; next; };
+	/-[0-9]/ && do { $maxNum = $a; $maxNum =~ s/^-//g; $count++; next; };
+	usage();
+  }
 }
 
 while ($a = <A>)
@@ -66,10 +71,15 @@ while ($a = <A>)
     }
 
     $count++;
-    if (!$match) { $cc++; if ($lines) { print "$count ($cc) ($totalLines): "; }
+    if (!$match)
+	{ $cc++;
+	if ((!$maxNum) || ($cc < $maxNum))
+	{
+	if ($lines) { print "$count ($cc) ($totalLines): "; }
 	$sp = wout($start);
 	$ep = wout($end);
 	print "$a: $sp vs $ep\n";
+	}
 	}
   }
 

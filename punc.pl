@@ -12,6 +12,8 @@
 # overridden by [p] in the source file
 #
 
+my $allLines;
+
 $showOK = 0;
 
 if (-f "punc.txt") 
@@ -72,7 +74,7 @@ my $totalErrors = 0;
 
 open(A, $_[0]) || die ("Can't open $_[0].");
 
-my $allLines = 0;
+$allLines = 0;
 
 print "Table parsing for $_[0]:\n";
 
