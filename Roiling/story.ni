@@ -1193,9 +1193,6 @@ to say sic: [for when I totally have to bail out]
 to say sim:
 	say "[if player is male]Simeon[else]Simone[end if]"
 
-to say sturd:
-	say "[if censor-minor is true]Stur-D[else]Turds[end if]"
-
 to say toti:
 	say "[if player is male]Tino[else]Toni[end if]"
 

@@ -270,6 +270,10 @@ $totAvg = $totalSize / $sums;
   if ($calcGeom)
   {
   print "Geometric Mean = " . $prod . " ratio = $q lines = $qq above = $qqq\n";
+  my $xxx = floor($prod);
+  my $xxx2 = (($prod+1)/$prod) ** ($#lists+1);
+  my $xxx3 = 1 / ($xxx2 - 1);
+  printf("Ratio between whole numbers: %.3f, %.3f row table gets a point.\n", $xxx2, $xxx3);
   }
   if ($calcGeomPlus) { $prod1 /= ($#lists+1); $prod1 = exp($prod1); $prodif = $prod1 - $prod; print "Add 1 each: $prod1, difference = $prodif\n"; }
   $runTot += $sums;

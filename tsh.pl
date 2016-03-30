@@ -206,7 +206,7 @@ sub sortTheTable
   {
     $lines2 = $lines + $_;
     $temp = lch(@ary2[$_]); chomp($temp); 
-    if ($isDone{$temp}) { print "$temp ($lines2-$short) is duplicated from line $isDone{$temp}.\n"; $dupes++; $dupeString .= "$thisTable ($lines2-$short from $isDone{$temp}): $temp\n"; }
+    if ($isDone{$temp}) { print "$temp ($lines2-$short) is duplicated from line $isDone{$temp} table $table{$temp}.\n"; $dupes++; $dupeString .= "$thisTable ($lines2-$short from $isDone{$temp}, $table{$temp}): $temp\n"; }
 	elsif ($_ > 0)
 	{
 	  if (@ary2[$_] =~ /\Q@ary2[$_-1]/i)
@@ -215,6 +215,7 @@ sub sortTheTable
 	  }
 	}
 	$isDone{$temp} = "$lines2-$short";
+	$table{$temp} = $thisTable;
   }
   $lines += $#ary2 + 2;
   

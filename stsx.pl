@@ -2,6 +2,8 @@ $anaIdeas = "c:\\writing\\dict\\sts.txt";
 
 open(A, $anaIdeas) || die ("No ideas file $anaIdeas.");
 
+$stsGame = "A Roiling Original";
+
 $runTableSort = 1;
 
 $runTableChomp = 1;
@@ -21,6 +23,7 @@ while ($a = <A>)
 {
   $thisLine++;
   if ($a =~ /^table of/) { chomp($a); $currentTable = $a; next; }
+  if ($a =~ /=shuffling/i) { $stsGame = "Shuffling Around"; }
   if ($currentTable)
   {
     if ($a =~ /^['`]/) { chomp($a); print "WARNING $a not properly quoted, line $thisLine table $currentTable\n"; }
@@ -30,7 +33,7 @@ while ($a = <A>)
   if ($currentTable)
   {
     #print "$currentTable gets $a";
-    $toAdd{$currentTable} .= $a; $totalAdded++;
+    $toAdd{$currentTable} .= $a; $totalAdded++; $bytesAdded{$stsGame} += length($a);
   }
 }
 
@@ -135,6 +138,10 @@ sub printStats
   for $x (sort keys %toFiles)
   {
     print "$x had $toFiles{$x} entries.\n";
+  }
+  for $x (sort keys %bytesAdded)
+  {
+    print "$x gained $bytesAdded{$x} bytes.\n";
   }
 }
 
