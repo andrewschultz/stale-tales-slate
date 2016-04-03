@@ -109,7 +109,7 @@ print OUTFILE $q;
 
 close(OUTFILE);
 
-if ($nmod) { print "Taking anagram list data.\n"; `lov.pl g`; `love.pl g s`; }
+if ($nmod) { print "Taking anagram list data.\n"; `lov.pl g`; `lov.pl g s`; }
 
 my $command = "copy $outfile $datefile";
 $command =~ s/\//\\/g;

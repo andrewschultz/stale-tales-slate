@@ -23,7 +23,7 @@ $printUntabbed = 1;
 $pwd = getcwd();
 
 if ($pwd =~ /oafs/) { $oafs = 1; $roiling = 0; }
-elsif ($pwd =~ /threed/) { $threed = 1; $roiling = 0; $compound = 0; }
+elsif ($pwd =~ /(threed|fourd)/) { $threed = 1; $roiling = 0; $compound = 0; }
 elsif ($pwd =~ /Compound/) { $compound = 1; $roiling = 0; $threed = 0; }
 elsif ($pwd =~ /slicker/) { $compound = 1; $roiling = 0; $threed = 0; }
 else

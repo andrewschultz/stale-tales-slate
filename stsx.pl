@@ -37,8 +37,16 @@ while ($a = <A>)
   }
 }
 
+if ($totalAdded)
+{
 addIdeas("roiling");
 addIdeas("sa");
+}
+else
+{
+print("No ideas to add.\n");
+exit;
+}
 
 cleanUpLoneFile();
 

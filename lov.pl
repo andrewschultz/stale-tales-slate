@@ -1,7 +1,7 @@
 #lov.pl: "list of values"
 #
 #this tells me how much content each random table list has. It looks at really mathy stuff like average, geometric mean, and so forth.
-#it even compares to expected values from Benford's Law.
+#it even compares to expected values from Benford's Law and Zipf's Law.
 #
 #uses are lov.pl g s / lov.pl g r (roiling is default)
 #
@@ -34,14 +34,18 @@ $count = 0;
 while (@ARGV[$count])
 {
   $a = @ARGV[$count];
+  $b = @ARGV[$count+1];
   
   for ($a)
   {
-  /^-x/i && do { $exclude = 1; $x = $a; $x =~ s/^-x//g; $x =~ s/[^0-9]//g; @y = split(//, $x); for (@y) { if ($_ > 0) { @doable[$_] = 0; } } $count++; next; }; #eXclude
+  /^-x[0-9]/i && do { $exclude = 1; $x = $a; $x =~ s/^-x//g; $x =~ s/[^0-9]//g; @y = split(//, $x); for (@y) { if ($_ > 0) { @doable[$_] = 0; } } $count++; next; }; #eXclude
   /^-oo[0-9]/i && do { $onlyNext = 1; $x = $a; $x =~ s/^-oo//g; $x =~ s/[^0-9]//g; @y = split(//, $x); for (@doable) { $_ = 0; }; for (@y) { if ($_ >= 0) { @doable[$_] = 1; } } $count++; next; }; #only
   /^-o[0-9]/i && do { $onlies = 1; $x = $a; $x =~ s/^-o//g; $x =~ s/[^0-9]//g; @y = split(//, $x); for (@doable) { $_ = 0; }; for (@y) { if ($_ >= 0) { @doable[$_] = 1; } } $count++; next; }; #only
+  /^-?max$/i && do { $maxVal = $b; $count+= 2; next; }; #maximum # shown in lists
+  /^-?min$/i && do { $minVal = $b; $count+= 2; next; }; #maximum # shown in lists
   /^-?g$/i && do { $calcGeom = 1; $count++; next; }; #calculate geometric mean
-  /^-gp$/i && do { $calcGeomPlus = $calcGeom = 1; $count++; next; }; #calculate geometric mean plus
+  /^-?g$/i && do { $calcGeom = 1; $count++; next; }; #calculate geometric mean
+  /^-?gp$/i && do { $calcGeomPlus = $calcGeom = 1; $count++; next; }; #calculate geometric mean plus
   /^-pr$/i && do { $procReg = 1; $count++; next; }; #add extra besides ARO/SA
   /^-p$/i && do { @dirs = (@dirs, "./story.ni"); $count++; next; }; #add extra besides ARO/SA
   /^-t?n$/i && do { $alfy = 1; $count++; next; }; #show sorted by table name
@@ -53,8 +57,8 @@ while (@ARGV[$count])
   /^-du$/i && do { $downup = 1; $count++; next; }; # reverse order arrays in (default = most first)
   /^-ud$/i && do { $downup = 0; $count++; next; }; # reverse order arrays in
   /^-f$/i && do { $fileName = $b; $count += 2; next; }; # define new file name
-  /^-?gy/i && do { $gender = 1; $count++; next; }; #gender-ifs counted
-  /^-?gn/i && do { $gender = 0; $count++; next; }; #gender-ifs not counted
+  /^-?gy/i && do { $gender = 1; $count++; next; }; #gender-ifs counted in character count
+  /^-?gn/i && do { $gender = 0; $count++; next; }; #gender-ifs not counted in character count
   /^-e$/i && do { $expected = 2; $count++; next; }; #show expected Benford-values
   /^-eh$/i && do { $expected = 1; $count++; next; }; #show expected Benford-half-values
   /^-rv/i && do { $warning .= "RV deprecated, use DU/UD instead.\n"; $count++; next; }; #deprecated option
@@ -178,7 +182,7 @@ for (0..$#lists)
 	#print "$linedig $sizedig\n";
     if (@doable[$linedig] || @doable[$sizedig])
 	{
-    print $baseStr;
+    printcond($baseStr, $lines{@lists[$_]});
 	}
   }
   elsif ($onlyNext)
@@ -187,19 +191,19 @@ for (0..$#lists)
   $size2 = $size{@lists[$_]}; $size2 = substr($size2, 1, 1);
     if (@doable[$line2] || @doable[$size2])
 	{
-    print $baseStr;
+    printcond($baseStr, $lines{@lists[$_]});
 	}
   }
   elsif ($exclude)
   {
     if (@doable[$linedig] && @doable[$sizedig])
 	{
-    print $baseStr;
+    printcond($baseStr, $lines{@lists[$_]});
 	}
   }
   else
   {
-    print $baseStr;
+    printcond($baseStr, $lines{@lists[$_]});
 	#if (@lists[$_] =~ /random books/) { $atg = $size{@lists[$_]}/$lines{@lists[$_]}; $dif = (100000 - $size{@lists[$_]}) / ($atg); print "Avg = $atg, $dif entries to go.\n"; }
   }
   if ($calcGeomPlus) { $prod1 += log($lines{@lists[$_]} + 1); }
@@ -264,18 +268,21 @@ $totAvg = $totalSize / $sums;
   #printf ("About %.3f anagrams to reach Blue Lacuna ($tlt) and can lose %.3f/gain %.3f & still be in $lbound. Avg = %.3f\n", $toLac, $canlose, $mustgain, $totAvg);
   # this was to calculate pace for 10000
   #$remai = 10000; $td = POSIX::mktime(0,0,0,0,0,115) - time(); $td /= 86400; $remai -= $sums; $remai /= $td; print "$remai per day ($td) for 10k.\n";
+  if ($calcGeom)
+  {
   $prod /= ($#lists+1); $prod = exp($prod);
   $q = ceil($prod); $q /= $prod; $q **= ($#lists + 1); $qq = 1 / ($q - 1);
   $qqq = floor($prod); $qqq = $prod / $qqq; $qqq **= ($#lists + 1);
-  if ($calcGeom)
-  {
   print "Geometric Mean = " . $prod . " ratio = $q lines = $qq above = $qqq\n";
-  my $xxx = floor($prod);
-  my $xxx2 = (($prod+1)/$prod) ** ($#lists+1);
-  my $xxx3 = 1 / ($xxx2 - 1);
-  printf("Ratio between whole numbers: %.3f, %.3f row table gets a point.\n", $xxx2, $xxx3);
   }
-  if ($calcGeomPlus) { $prod1 /= ($#lists+1); $prod1 = exp($prod1); $prodif = $prod1 - $prod; print "Add 1 each: $prod1, difference = $prodif\n"; }
+  if ($calcGeomPlus)
+  {
+    my $xxx = floor($prod);
+    my $xxx2 = (($xxx+1)/$xxx) ** ($#lists+1);
+    my $xxx3 = 1 / ($xxx2 - 1);
+    printf("Ratio between whole numbers: %.3f, %.3f row table gets a point.\n", $xxx2, $xxx3);
+    $prod1 /= ($#lists+1); $prod1 = exp($prod1); $prodif = $prod1 - $prod; print "Add 1 each: $prod1, difference = $prodif\n";
+  }
   $runTot += $sums;
   if ($runTot > $sums) { print "$runTot overall.\n"; }
   for $q (keys %lines) { delete $lines{$q}; }
@@ -304,6 +311,7 @@ while ($b = <B>)
   $ang{@c[0]} = @c[1];
 }
 $shortName = $_[0]; $shortName =~ s/\.inform.*//g; $shortName =~ s/.*[\\\/]//g;
+
 if ($ang{$shortName} == $sums) { print "No progress since last time!\n"; }
 else
 {
@@ -315,7 +323,7 @@ open(B, ">>c:/writing/dict/lov.txt");
 print B "$shortName,$sums,$prod,$dateForm\n";
 close(B);
 }
-} else { print "Not counting gender-if anagrams.\n"; }
+} else { print "Not recording stats as we were counting if/female anagrams in addition.\n"; }
 
 if ($warning) { print "WARNING: $warning"; }
  return;
@@ -446,6 +454,14 @@ sub countTables
 sub firstDigit
 {
   return substr($_[0], 0, 1);
+}
+
+sub printcond
+{
+  if ($maxVal && ($_[1] > $maxVal)) { return; }
+  if ($minVal && ($_[1] < $minVal)) { return; }
+  print "$_[0]";
+  return;
 }
 
 sub usage
