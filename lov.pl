@@ -55,6 +55,7 @@ while (@ARGV[$count])
   /^-as$/i && do { $average = 1; $sortbyaverage = 1; if ($a =~ /aS/) { $sortbyaverage = -1; } $count++; next; }; #show averages
   /^-?cg$/i && do { $countGenders = 1; $count++; next; }; #count genders in total
   /^-du$/i && do { $downup = 1; $count++; next; }; # reverse order arrays in (default = most first)
+  /^-?d$/i && do { `c:/writing/dict/lov.txt`; exit; }; # open the data file
   /^-ud$/i && do { $downup = 0; $count++; next; }; # reverse order arrays in
   /^-f$/i && do { $fileName = $b; $count += 2; next; }; # define new file name
   /^-?gy/i && do { $gender = 1; $count++; next; }; #gender-ifs counted in character count
@@ -417,7 +418,7 @@ sub findHeaders
 	  #if ($#g >= 8) { print ("$#g @g[0]: #8 = @g[8]\n"); }
 	  if (@g[9] =~ /[a-z]/i)
 	  { print " @g[0]";
-	    $lines{$b} = 1;
+	    $lines{$b} = 1; # this is because we have a final anagram that says we're starting over. It seems arbitrary, but some lists recycle, and some don't.
 	  } else { $nolast .= " @g[0]"; }
 	  #if ($lasttab =~ /[a-z]/) { $lines{$b} = 1;  print " $b"; }
 	  	} elsif ($a !~ /[a-z]/) { last; }

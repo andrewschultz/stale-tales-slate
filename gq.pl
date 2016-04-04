@@ -36,9 +36,10 @@ while (@ARGV[$count])
   for ($a)
   {
   if (@thisAry[0] =~ /^\//) { @thisAry[0] =~ s/^\///g; $onlyTables = 1; $onlyRand = 1; $firstStart = 1; $count++; next; };
+  if (@thisAry[0] eq "-a") { $threed = 1; $roiling = 1; $oafs = 1; $compound = 1; shift(@thisAry); $count++; next; }; # oafs?
   if (@thisAry[0] eq "-o") { $oafs = 1; shift(@thisAry); $count++; next; }; # oafs?
   if (@thisAry[0] eq "-3") { $threed = 1; shift(@thisAry); $count++; next; }; # oafs?
-  if (@thisAry[0] eq "-a") { $compound = 1; shift(@thisAry); $count++; next; }; # oafs?
+  if (@thisAry[0] eq "-as") { $compound = 1; shift(@thisAry); $count++; next; }; # oafs?
   if (@thisAry[0] eq "-r") { $roiling = 1; shift(@thisAry); $count++; next; }; # roiling original? (default)
   if (@thisAry[0] eq "-h") { $showHeaders = 1; shift(@thisAry); $count++; next; };
   if (@thisAry[0] eq "-p") { $headersToo = 1; shift(@thisAry); $count++; next; };
