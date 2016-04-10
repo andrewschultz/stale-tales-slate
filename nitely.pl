@@ -15,15 +15,46 @@ my $alec = 0;
 my $force = 0;
 my $sts = 0;
 my $build = 0;
+my $opo = 0;
 
 getArgs();
 
 my $boxMsg = "";
 
+if ($opo) { opoNightly(); }
 if ($alec) { alecNightly(); }
 if ($sts) { stsNightly(); }
 
+if ($opo + $alec + $sts == 0) { usage(); }
+
 Win32::MsgBox("$boxMsg");
+
+sub opoNightly
+{
+my $q;
+my $outfile = "c:/writing/dict/nightly/opolis-latest.txt";
+my $datefile = strftime "c:/writing/dict/nightly/opolis-errs-%m-%d-%Y.txt", localtime;
+
+my $threed = "c:/games/inform/threediopolis.inform/source/story.ni";
+my $fourd = "c:/games/inform/fourdiopolis.inform/source/story.ni";
+
+my $mod3 = (-M "$threed") < 1;
+my $mod4 = (-M "$fourd") < 1;
+
+if ($mod3 || $mod4 || $force)
+{
+open(OUTFILE, ">$outfile");
+printboth("Source code checking:");
+sourceCheck("threediopolis");
+sourceCheck("fourdiopolis");
+$boxMsg .= "Results in $outfile or $datefile.\n";
+}
+else
+{
+$boxMsg .= "No Opolis files modified in the last day.\n"; return;
+}
+
+}
 
 sub alecNightly
 {
@@ -49,6 +80,10 @@ $command =~ s/\//\\/g;
 `$command`;
 $q = `conc.pl`;
 printboth("Concept match checking:\n$q");
+
+printboth("Source code checking:");
+sourceCheck("compound");
+sourceCheck("slicker-city");
 }
 else
 {
@@ -82,6 +117,10 @@ open(OUTFILE, ">$outfile") || die ("Can't make $outfile");
 
 if (newIdeas()) { printboth("Wrote in new ideas, so I'm sending them to random files."); `stsx.pl`; }
 else { print "No new ideas written in, but there's still stuff to sort.\n"; }
+
+printboth("Source code checking:");
+sourceCheck("sa");
+sourceCheck("roiling");
 
 printboth("Hash value checking:");
 
@@ -144,10 +183,12 @@ sub getArgs
 	  /-f/ && do { $force = 1; $count++; next; };
 	  /-b/ && do { $build = 1; $count++; next; };
 	  /-nb/ && do { $build = -1; $count++; next; };
+	  /-(3|4|34)/ && do { $opo = 1; $count++; next; };
 	  /-a/ && do { $alec = 1; $count++; next; };
 	  /-s/ && do { $sts = 1; $count++; next; };
-	  /-oa/ && do { openLatest("alec"); last; };
-	  /-os/ && do { openLatest("sts"); last; };
+	  /-o(3|4|34)/ && do { openLatest("opolis"); $count++; };
+	  /-oa/ && do { openLatest("alec"); $count++; };
+	  /-os/ && do { openLatest("sts"); $count++; };
 	  /-\?/ && do { usage(); exit; };
 	  print "Invalid flag $a specified.\n";
 	  usage();
@@ -164,8 +205,9 @@ sub usage
 {
 print <<EOT;
 -f = force a nightly check
--b = force a build (individual projects turn it off and on: on for Alec, off for Stale Tales Slate0
+-b = force a build (individual projects turn it off and on: on for Alec, off for Stale Tales Slate, off for opolis)
 -nb = force no build
+-3|4|34 = Opolis (Threediopolis, Fourdiopolis)
 -a = Alec (Slicker city, Problems Compound)
 -s = Stale Tales Slate (Shuffling Around, Roiling Original)
 -oa = open latest Alec file
@@ -200,4 +242,17 @@ sub newIdeas
   }
 
   return 0;
+}
+
+sub sourceCheck
+{
+  open(A, "c:/games/inform/$_[0].inform/source/story.ni");
+  my $count = 0;
+  my $ques = 0;
+  while ($a = <A>)
+  {
+    $count++;
+	if ($a =~ /\?\?/) { printboth("Line $count in $_[0] has a coding question.\n$a"); $ques++; }
+  }
+  printboth("TEST RESULT:source-$_[0],$ques\n");
 }

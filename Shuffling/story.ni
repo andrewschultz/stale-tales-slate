@@ -7323,7 +7323,7 @@ instead of climbing scraped wall:
 instead of climbing trel-priv:
 	say "No good handholds, and it goes up too high anyway."
 
-the crashing archings are plural-named scenery. "The archings blocked the passage to the east once they crashed down. You burble like a lubber when you think of what you cannot see again and that there is no way back."
+the crashing archings are plural-named scenery. "The archings blocked the passage to the east once they crashed down. You burble like a lubber at the rubble that now blocks the way east."
 
 understand "rubble" as crashing archings.
 

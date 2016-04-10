@@ -7,12 +7,13 @@ There are some items which give a hint what to do next. If you have used the hin
 There was also other miscellaneous stuff and even a few features that fell out when my mind wandered. I cheated and used a program to generate a lot, but I hope they're still fun.
 
 --five new random lists
-  --the Catechism now has a bunch of eminent Ph.D.s along with research topics and general information. (P)
-  --Leo and Rand now have idols in fighting. (P)
+  --the Catechism now has a bunch of eminent Ph.D.s along with research topics and general information. (store P area)
+  --Leo and Rand now have idols in fighting. (store P area)
   --a double: yes and no now have longer cycles of responses that you can see in the endgame. (general)
-  --there are now random brands of sleepables if you examine the futon in the shack. (P)
---over half of the random lists now have 100+ entries. Almost 60%, in fact: 43 of 72.
+  --there are now random brands of sleepables if you examine the futon in the shack. (store P area)
+--over two-thirds of the random lists now have 100+ entries. At last tally, it is 49.
 --all random lists now have 25+ entries. Including the new yes and no responses.
+--lists are cut off after ~30 responses, forcing you to win the game to see them all. Or go through the source code
 --30000+ total elements in the random lists.
 --I also decided to reveal the code names of the updates. They're rather silly, but I hope you enjoy them.
 --last scan now appears/stays in header until solved
@@ -24,13 +25,13 @@ There was also other miscellaneous stuff and even a few features that fell out w
 Store H:
 --new fruits in the Field and Wells
 --changed one puzzle to be a little less abstruse (green stain in Wells)
+--the trader is now female if you are, with a new name
 
 Store U:
 --the scenery in the Same Mesa is now better-named
 
 Store W:
 --a few more clues for the Lone Duck
---the trader is now female if you are, with a new name
 --the smart kid is now female if you are
 --Dr. Yow is now female if you are
 --the jetskis are replaced with a more appropriate conveyance
@@ -39,7 +40,7 @@ Store V:
 --the Bedroom in Store V now has a new name
 
 Store T:
---the macks' idiocy in Store T is now refactored to be drawn from seven pods (7/8 duplicate/unduplicate, 9, 10, and 12--which has one item,) much like the warriors in Store W. You still only need to choose three, but I think this is less overwhelming
+--the macks' idiocy in Store T is now refactored to be drawn from seven pods (7/8 letters with or without repeating letters, 9, 10, and 12--which has one item,) much like the warriors in Store W. You still only need to figure only three, but I think this is less overwhelming
 
 Meta-stuff:
 --metrics HTML file updated with new solution
