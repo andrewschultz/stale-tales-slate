@@ -1,168 +1,170 @@
-table of random books [xxm4] [tob]
+table of random books [xxm4] [tob] [CAPS nopunc noquot]
 
-table of posse bosses [xxv7]
+table of posse bosses [xxv7] [CAPS nopunc noquot]
 
-table of self-help bestsellers [xxv0]
+table of self-help bestsellers [xxv0] [CAPS nopunc noquot]
 
-table of posh dialogue [xxv6]
+table of posh dialogue [xxv6] [CAPS PUNC QUOT]
 
-table of gritty dialogue [xxv4]
+table of gritty dialogue [xxv4] [CAPS PUNC QUOT]
 
-table of ad slogans [xxm1]
+table of ad slogans [xxm1] [CAPS n/a noquot]
 
 table of to-sort=========================================
 
-table of cussing rejects [xxg1]
+table of cussing rejects [xxg1] [CAPS PUNC noquot]
 
-table of death messages [xxg2]
+table of death messages [xxg2] [CAPS PUNC noquot]
 
-table of empty command rejects [xxg3]
+table of empty command rejects [xxg3] [CAPS n/a n/a]
 
-table of help companies [xxg4]
+table of help companies [xxg4] [CAPS PUNC noquot] [CAPS PUNC noquot]
 
-table of noage [xxg5]
+table of noage [xxg5] [CAPS PUNC noquot]
 
-table of nonviolence messages [xxg6]
+table of nonviolence messages [xxg6] [CAPS PUNC noquot]
 
-table of singing rejects [xxg7]
+table of singing rejects [xxg7] [CAPS PUNC n/a]
 
-table of sleep rejects [xxg8]
+table of sleep rejects [xxg8] [CAPS PUNC n/a]
 
-table of undo allows [xxg9]
+table of undo allows [xxg9] [CAPS PUNC QUOT]
 
-table of undo rejects [xxg0]
+table of undo rejects [xxg0] [CAPS nopunc noquot]
 
-table of wait responses [xxg10]
+table of wait responses [xxg10] [CAPS PUNC n/a]
 
-table of yessage [xxg11]
+table of yessage [xxg11] [CAPS PUNC noquot]
 
-table of bad rappers [xxm2]
+table of bad rappers [xxm2] [CAPS nopunc noquot]
 
-table of biopics [xxm3]
+table of biopics [xxm3] [CAPS nopunc noquot]
 
-table of comedians [xxm4]
+table of comedians [xxm4] [CAPS nopunc noquot]
 
-table of elmo emo [xxm5]
+table of elmo emo [xxm5] [n/a nopunc noquot]
 
-table of lame computer games [xxm6]
+table of lame computer games [xxm6] [CAPS nopunc noquot]
 
-table of lame movies [xxm7]
+table of lame movies [xxm7] [CAPS nopunc noquot]
 
-table of lame talk shows [xxm8]
+table of lame talk shows [xxm8] [CAPS nopunc noquot]
 
-table of lame tv shows [xxm9]
+table of lame tv shows [xxm9] [CAPS nopunc noquot]
 
-table of laughhouses [xxm0]
+table of laughhouses [xxm0] [CAPS nopunc noquot]
 
-table of lousy hit songs [xxm01]
+table of lousy hit songs [xxm01] [CAPS nopunc noquot]
+"Hard to Be Hated, Bro"
 
-table of mob chants [xxm02]
+table of mob chants [xxm02] [CAPS PUNC n/a]
 
-table of oldies singers [xxm03]
+table of oldies singers [xxm03] [CAPS nopunc noquot]
 
-table of sports chatter [xxm05]
+table of sports chatter [xxm05] [n/a PUNC n/a]
 
-table of idiotic lecture points [xxs1]
+table of idiotic lecture points [xxs1] [nocaps PUNC n/a]
 
-table of overdone movies [xxs2]
+table of overdone movies [xxs2] [n/a PUNC noquot]
 
-table of sicko movies [xxs3]
+table of sicko movies [xxs3] [CAPS PUNC noquot]
 
-table of store c ads [xxs4]
+table of store c ads [xxs4] [CAPS PUNC n/a]
 
-table of store c competitors [xxs5]
+table of store c competitors [xxs5] [CAPS n/a noquot]
 
-table of tokers nonsense [xxs6]
+table of tokers nonsense [xxs6] [CAPS PUNC n/a]
 
-table of horbert farewells [xxu1]
+table of horbert farewells [xxu1] [CAPS PUNC QUOT]
 
-table of horbert musings [xxu2]
+table of horbert musings [xxu2] [n/a PUNC n/a]
 
-table of mantle laments [xxu3]
+table of mantle laments [xxu3] [CAPS nopunc noquot]
 
-table of missing deli foods [xxu4]
+table of missing deli foods [xxu4] [CAPS nopunc noquot]
 
-table of moralizers [xxu5]
+table of moralizers [xxu5] [CAPS nopunc noquot]
 
-table of checklist items [xxv1]
+table of checklist items [xxv1] [CAPS PUNC n/a]
 
-table of DIVORCES articles [xxv2]
+table of DIVORCES articles [xxv2] [CAPS PUNC noquot]
 
-table of ethics advice [xxv3]
+table of ethics advice [xxv3] [CAPS PUNC n/a]
 
-table of non-checklists [xxv5]
+table of non-checklists [xxv5] [CAPS nopunc noquot]
 
-table of prestigious bums [xxv8]
+table of prestigious bums [xxv8] [CAPS nopunc noquot]
 
-table of real estate ads [xxv9]
+table of real estate ads [xxv9] [CAPS nopunc noquot]
 
-table of songs you could write [xxvx]
+table of songs you could write [xxvx] [CAPS nopunc noquot]
 
-table of bedding brands [xxp1]
+table of bedding brands [xxp1] [CAPS nopunc noquot]
 
-table of catechism pages [xxp2]
+table of catechism pages [xxp2] [CAPS PUNC n/a]
 
-table of Leo-Rand chitchat [xxp3]
+table of Leo-Rand chitchat [xxp3] [CAPS PUNC n/a]
 
-table of Leo-Rand idols [xxp4]
+table of Leo-Rand idols [xxp4] [CAPS nopunc noquot]
 
-table of research topics [xxp5]
+table of research topics [xxp5] [n/a nopunc noquot]
 
-table of smartypants [xxp6]
+table of smartypants [xxp6] [CAPS nopunc noquot]
 
-table of aunt tuna chatter [xxy1]
+table of aunt tuna chatter [xxy1] [nocaps PUNC n/a]
 
-table of bar dialogue [xxy2]
+table of bar dialogue [xxy2] [CAPS PUNC n/a]
 
-table of Casper mumbles [xxy3]
+table of Casper mumbles [xxy3] [CAPS nopunc noquot]
 
-table of competing bars [xxy4]
+table of competing bars [xxy4] [CAPS PUNC noquot]
 
-table of fish fries [xxy5]
+table of fish fries [xxy5] [CAPS PUNC n/a]
 
-table of theses [xxy6]
+table of theses [xxy6] [CAPS PUNC noquot]
 
-table of tuna gossip [xxy7]
+table of tuna gossip [xxy7] [n/a PUNC n/a]
 
-table of unpopular girls [xxy8]
+table of unpopular girls [xxy8] [CAPS nopunc noquot]
 
-table of gizmo parts [xxw1]
+table of gizmo parts [xxw1] [n/a nopunc noquot]
 
-table of rodney bluster [xxw2]
+table of rodney bluster [xxw2] [nocaps nopunc noquot]
 
-table of animal friends [xxt1]
+table of animal friends [xxt1] [n/a nopunc noquot]
 
-table of Elmer and Merle squabbles [xxt2]
+table of Elmer and Merle squabbles [xxt2] [CAPS PUNC n/a]
 
-table of Elvira battle cries [xxt3]
+table of Elvira battle cries [xxt3] [CAPS n/a n/a]
 
-table of Elvira machines [xxt4]
+table of Elvira machines [xxt4] [nocaps nopunc noquot]
 
-table of Elvira taunts [xxt5]
+table of Elvira taunts [xxt5] [CAPS PUNC QUOT]
 
-table of political slogans [xxh1]
+table of political slogans [xxh1] [CAPS PUNC QUOT]
 
-table of selly yells [xxh2]
+table of selly yells [xxh2] [CAPS PUNC QUOT]
+"'Swap meet map? SWEET!'"
 
-=====SA
+=====Shuffling
 
-table of job searcher names [xxx]
+table of job searcher names [xxx] [CAPS nopunc noquot]
 
-table of evil locations [xxf]
+table of evil locations [xxf] [n/a nopunc noquot]
 
-table of poem codas [xxi]
+table of poem codas [xxi] [CAPS PUNC noquot]
 
-table of camp chants [xxm1]
+table of camp chants [xxm1] [CAPS PUNC QUOT]
 
-table of condo dialogue [xxm2]
+table of condo dialogue [xxm2] [CAPS PUNC n/a]
 
-table of nerd natter [xxm3]
+table of nerd natter [xxm3] [CAPS PUNC n/a]
 
-table of psas [xxm4]
+table of psas [xxm4] [CAPS nopunc noquot]
 
-table of red bull taunts [xxr1]
+table of red bull taunts [xxr1] [CAPS PUNC n/a]
 
-table of riot slogans [xxr2]
+table of riot slogans [xxr2] [CAPS PUNC n/a]
 
 \ro3
 Mild Sand Midlands <= not badlands
@@ -176,8 +178,11 @@ trainees site near
 design-deigns = demo dome
 allow-lots-tools wall
 owl-decal code wall
-
+flashed-ad shelf
+sure as nilbog is goblin spelled backwards
 Note that Eldon: led on?
+ad purge = upgrade
+write up = put wire
 
 \anag=remaining anagrams
 table of garbage [xx1]

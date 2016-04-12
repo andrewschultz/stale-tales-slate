@@ -1406,7 +1406,7 @@ heaths	"[one of]You can change the heaths into something that can hold something
 stems	"The stems clue what the heaths can be."
 begonias	"[one of]Two words on the gadget. Something that holds something. [plus][or]Also, one word is related to sound. [plus][or]Create a NOISE BAG. [minus][cycling]"
 noise bag	"[if player is in alley and words are in alley]OPEN the noise bag to get the words.[else if words are in alley]The noise bag, if opened, can contain sounds.[else if player is in abyss and beast is in abyss]You can OPEN the noise bag to defeat the beast.[else if player is in abyss]The words in the noise bag can't match up to the beats, but they could, to something physical.[else]You don't need to open the noise bag yet.[end if]"
-words	"[if begonias are in flowers and heaths are in flowers]What you do with the words depends on what reward you get from the fairies[else if heaths are in flowers]Since you got the heaths, you can change the words right away[else]With the begonias, you can't change the words until the end of your adventure[end if]." [?? could be better]
+words	"[if player is in abyss]This is the place to change the words[else if begonias are in flowers and heaths are in flowers]What you do with the words depends on what reward you get from the fairies[else if heaths are in flowers]Since you got the heaths, you can change the words right away[else]With the begonias, you can't change the words until the end of your adventure[end if]."
 sword	"[if beast is visible and siren is not visible]Attack the beast[else if beast is visible]You need a better grip on the sword[else if sheath contains sword]You should draw the sword around the source of the noise[else]The sword can't be used, yet. You can't go waving it in the city[end if]."
 soundproofed walls	"Not useful for you but for the nerds, so they can think."
 faeries	"The faeries want a flower. [if player has gardenia]You have one in your inventory[else]Maybe you can clean up some place in the city to get one[end if]."
@@ -2648,10 +2648,6 @@ understand "rc [something]" as cring.
 
 understand "cr [something]" as cring.
 
-[?? if something is not flippable, this rejects it. Perhaps what I really want to do is check for a scan, and if nothing happens, don't worry about it or don't try the next bit. Have a per-turn checklist for this.]
-
-[?? 2 disambig in a row are a bug to consider]
-
 marcos-trumped is a truth state that varies.
 
 to buzz-or-no-noise (ana - a thing):
@@ -2667,7 +2663,7 @@ carry out cring:
 	if noun is inflexible:
 		buzz-or-no-noise noun instead;
 	now marcos-trumped is true;
-	if noun is pig and player is not on fuzzy looking wall: [?? this is not perfect code. It is duplicated elsewhere.]
+	if noun is pig and player is not on fuzzy looking wall:
 		say "You are too far away at the moment." instead;
 	if gadget is cert:
 		say "You get to scanning, twiddling from certify to rectify and back.";
@@ -5056,7 +5052,7 @@ cool-index is a number that varies.
 check smelling in Trips Strip:
 	say "There's a mixture of smells coming from the shops. You could probably go up to one and examine it." instead;
 
-the wooden sign is scenery in the Trips Strip. description of wooden sign is "'A store is not a shop.' Beneath is scribbled 'hopes, chops, hoops, ??? ... no other words, anyway.'"
+the wooden sign is scenery in the Trips Strip. description of wooden sign is "'A store is not a shop.' Beneath is scribbled 'hopes, chops, hoops, well, that's it.' ... no other words, anyway.'"
 
 instead of taking the wooden sign:
 	say "It's too heavy. And besides, what would you do with it?"
@@ -5205,13 +5201,6 @@ does the player mean examining disamb-store:it is likely.
 does the player mean entering disamb-store: it is likely.
 [does the player mean doing something to disamb-store: it is likely.]
 
-[last-sto-done is a sto that varies. last-sto-done is usually store-a.
-
-understand "store" as a store when player is in trips strip.
-understand "store" as a store when the item described is last-sto-done.
-
-does the player mean doing something ]
-
 description of disamb-store is "[sto-desc]".
 
 instead of burning:
@@ -5230,8 +5219,6 @@ instead of entering a sto:
 
 check taking a sto:
 	say "[ment-not-phys]." instead;
-
-[understand "window" as the pronoun it when it is set to a sto.?? does the player mean doing something with last-sto: it is likely.]
 
 to say store-overview:
 	if number of visible flippable stos is 0:
@@ -7806,8 +7793,6 @@ the silo is a transparent container. it is fixed in place. "That silo you poured
 
 does the player mean shooting the missile when the missile is visible: it is likely;
 
-[?? L/SHOOT MISSILE at lots of points in the walkthrough]
-
 check shooting the missile:
 	if silo is not visible:
 		say "Not on your own you won't shoot the missile." instead;
@@ -8027,8 +8012,6 @@ check going east in undesired underside:
 	if player has the keycard and barcode is part of the keycard:
 		now metallic door is open;
 		say "You [if keycard-put is true]re-scan your keycard and[else if Anti-Cool Location is unvisited]decide swiping the keycard might work, and what do you know, it does. You[otherwise]swipe your keycard and[end if] go east as the door opens.";
-
-[?? 3 code paths. Can I conglomerate them?]
 
 chapter alley
 
@@ -8611,7 +8594,6 @@ report going west in Elf Row's Flowers when violets is false:
 check going east in Elf Row's Flowers:
 	say "[one of]'Back rooms? Smack boor!' you imagine the faeries saying[or]You wouldn't want to disturb them while they're measuring geraniums or anything back there[or]That's where all the magic happens. It'll happen to you if you get nosy[at random]." instead;
 
-[A loner loaner is a person in Elf Row's Flowers.??]
 Some freesia faeries are people in Elf Row's Flowers. "Freesia faeries fly around here [if heaths are in flowers and begonias are in flowers]anxiously[else]randomly[end if]."
 
 understand "freesia fairies" and "fairies" as faeries.
@@ -9119,7 +9101,12 @@ check pushing metallic door:
 check pulling metallic door:
 	say "It's an automatic door." instead;
 
-[? 3 code paths: open door, put keycard on sensor, go east]
+[?? 3 code paths: open door, put keycard on sensor, go east
+check putting keycard on sensor:
+check opening the metallic door:
+check going east in undesired underside:
+east-through-door can be an action
+]
 
 check opening the metallic door:
 	if location of player is Anti-Cool Location:
@@ -10197,8 +10184,6 @@ understand "try" as a mistake ("You're sure the lecture to the east will be abou
 
 part parser errors
 
-[??]
-
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error: [verb guess]
 	if mrlp is forest:
 		let pieces be 0;
@@ -10553,8 +10538,6 @@ to say asknerds:
 
 to say nerdsask:
 	say "[if gadget is cert][rcn][rc][gc][rc][rc][rc][gc][rc][otherwise][bcn][bc][bc][gc][rc][bc][bc][bc][end if]";
-
-breadco is a truth state that varies. [??]
 
 rgb-yet is a truth state that varies.
 
@@ -12216,14 +12199,12 @@ to item-warp:
 		if mrlp is solved:
 			if mrlp is intro:
 				say "This game just removed an item it should not have. [bug-report]! => ([list of carried not warpable things]) ([list of worn not warpable things]).";
-			otherwise: [?? needs testing]
+			otherwise:
 				say "Out of nowhere swoops the [if cabinet is in lalaland]nice bat[otherwise]cabinet[end if]. [run paragraph on][if number of solved regions is 2]You're about to complain, but then you realize it's helping you not carry all that junk around. It sits there, out of reach[else if cabinet is in lalaland]You're still a little spooked, but grateful, as it swoops away[otherwise]The cabinet's trying its best to be good and helpful, even making enthusiastic squeaky noises, and you wonder if maybe you can do something for it[end if][espec-xtra].";
 				if cabinet is in notices section:
 					now cabinet is in trips strip;
 		now all carried not warpable things are in lalaland;
 		now all worn not warpable things are in lalaland;
-
-[??museum muse. Um. Those Extras. Taxers. Tributes I'd distribute]
 
 to reset-regions:
 	repeat through table of lastlocs:
@@ -12597,11 +12578,11 @@ carry out folding:
 		say "That might be fun, but it won't do much." instead;
 	if smilies are part of the poem:
 		now tried-smilies is true;
-		say "You're about to fold the poem up, but those smilies launch into a surprising display of emotion. It's an impressive passive resistance--they do it all without any violence." instead;
+		say "You're about to fold the poem up, but those smilies launch into a surprising display of emotion. It's an impressive passive resistance--they do it all without any violence. Maybe they can do more than just be part of a poem." instead;
 	if poem is folded:
 		say "It already is." instead;
 	now noun is folded;
-	say "You fold the paper, and it looks sort of like a paper plane."; [?? smilies clue]
+	say "You fold the paper, and it looks sort of like a paper plane.";
 	now printed name of poem is "folded paper plane";
 	now creases are in lalaland;
 	the rule succeeds;
@@ -14251,6 +14232,27 @@ carry out hintvising:
 		try objhinting VTH;
 	the rule succeeds;
 
+chapter evting
+
+[* this specifies what to do every turn ]
+
+ettest is a truth state that varies.
+
+evting is an action out of world.
+
+understand the command "evt" as something new.
+
+understand "evt" as evting.
+
+carry out evting:
+	now ettest is whether or not ettest is true;
+	say "Every-turn-test is now [if ettest is true]on[else]off[end if]."
+	the rule succeeds;
+
+every turn when ettest is true:
+	if missile is visible:
+		try shooting the missile;
+
 chapter hintalling
 
 [* HINTALL detects which items still need hinting]
@@ -14410,5 +14412,3 @@ every turn when player has prep paper (this is the prep-rehash rule):
 		say "====END PREP PAPER[line break]";
 
 book notes to delete before release
-
-[bug hay cask sack spills out ??]

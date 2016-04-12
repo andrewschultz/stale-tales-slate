@@ -22,20 +22,23 @@ while ($count <= $#ARGV)
 while ($a = <A>)
 {
   $thisLine++;
-  if ($a =~ /^table of/) { chomp($a); $currentTable = $a; next; }
+  if ($a =~ /^table of/) { chomp($a); $currentTable = $a; $currentTable =~ s/\].*/\]/g; next; }
   if ($a =~ /=shuffling/i) { $stsGame = "Shuffling Around"; }
   if ($currentTable)
   {
-    if ($a =~ /^['`]/) { chomp($a); print "WARNING $a not properly quoted, line $thisLine table $currentTable\n"; }
-    if ($a =~ /^[a-z0-9]/i) { chomp($a); print "WARNING $a does not start with a quote, line $thisLine table $currentTable\n"; }
+    if ($a =~ /^['`]/) { chomp($a); print "WARNING $a not properly quoted, line $thisLine table $currentTable\n"; $bail = 1; }
+    if ($a =~ /^[a-z0-9]/i) { chomp($a); print "WARNING $a does not start with a quote, line $thisLine table $currentTable\n"; $bail = 1; }
   }
   if (($a !~ /^\"/) || ($a !~ /[a-z0-9]/i)) { $currentTable = ""; next; }
+  if ($bail) { next; }
   if ($currentTable)
   {
     #print "$currentTable gets $a";
     $toAdd{$currentTable} .= $a; $totalAdded++; $bytesAdded{$stsGame} += length($a);
   }
 }
+
+if ($bail) { die("Fix mistakes before continuing."); }
 
 if ($totalAdded)
 {
