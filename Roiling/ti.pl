@@ -36,11 +36,12 @@ while ($count <= $#ARGV)
   
   for ($a)
   {
-  /-m/ && do { $middleName = 1; $count++; next; };
-  /-p/ && do { $printCmds = 1; $count++; next; };
-  /-d/ && do { $allowDupe = 1; $count++; next; };
-  /-f/ && do { $lastsFile = "firsts.txt"; $firstsFile = "lastbig.txt"; $count++; next; };
-  /-r/ && do { $reverses = 1; $count++; next; };
+  /^-d$/ && do { $allowDupe = 1; $count++; next; };
+  /^-f$/ && do { $lastsFile = "firsts.txt"; $firstsFile = "lastbig.txt"; $count++; next; };
+  /^-m$/ && do { $middleName = 1; $count++; next; };
+  /^-p$/ && do { $period = 1; $count++; next; };
+  /^-pc$/ && do { $printCmds = 1; $count++; next; };
+  /^-r$/ && do { $reverses = 1; $count++; next; };
   /-\?/ && do { usage(); $count++; next; };
   /^[a-z]/i && do { $fullStr = $a; $count++; next; };
   }
@@ -143,6 +144,7 @@ while ($a = <A>)
   $this =~ s/([\.\?!]?\s+[a-z])/uc($1)/ge;
   $count++;
   $cs++;
+  if ($period) { $this .= "."; }
   print "\"$this\"\n";
   print C "\"$this\"\n";
   }
@@ -167,6 +169,13 @@ sub alf
 sub usage
 {
 print<<EOT;
+ti.pl big = Big Ernest Steinberg
+-d allow duplicates
+-f switch lasts and firsts files
+-m big = Ernest 'Big' Steinberg
+-p period after text
+-pc print commands
+-r reverses too
 EOT
 exit;
 }

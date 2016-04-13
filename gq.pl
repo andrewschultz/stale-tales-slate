@@ -116,6 +116,15 @@ sub cromu
   {
   if ($_[0] =~ /\b@thisAry[0]@thisAry[1]\b/i) { return 1; }
   if ($_[0] =~ /\b@thisAry[1]@thisAry[0]\b/i) { return 1; }
+  if ($_[0] =~ /\b@thisAry[0]@thisAry[1]s\b/i) { return 2; }
+  if ($_[0] =~ /\b@thisAry[1]@thisAry[0]s\b/i) { return 2; }
+  if (($_[0] =~ /\b@thisAry[0]/) && ($_[0] =~ /@thisAry[1]s\b/i)) { return 2; }
+  if (($_[0] =~ /\b@thisAry[0]s/) && ($_[0] =~ /@thisAry[1]\b/i)) { return 2; }
+  }
+  elsif ($#thisAry == 0)
+  {
+  if ($_[0] =~ /\b@thisAry[0]s\b/i) { return 2; }
+  if ($_[0] =~ /\b@thisAry[0]\b/i) { return 1; }
   }
   
   #words apart
@@ -141,7 +150,8 @@ sub processStory
     $count++; $tabrow++;
     if ($a =~ /`/) { print "WARNING: Line $count has back-quote!\n$a"; }
 	if ($a =~ /^table of /i) { $a =~ s/ *\[[^\]]*\].*//g; $thisTable = "($a) "; } elsif ($a !~ /[a-z]/i) { $thisTable = ""; }
-    if (cromu($a))
+	my $tmp = cromu($a);
+    if ($tmp)
     {
       if ($a =~ /list of text variable/i)
       { processList($a); }
@@ -161,7 +171,9 @@ sub processStory
 		  if ($showHeaders) { print ": $a\n"; }
 		  else
 		  {
-		  print ": $thisTable$a\n";
+		  print ": $thisTable$a";
+		  if ($tmp == 2) { print "****PLURAL****"; }
+		  print "\n";
 		  }
 		if ($maxFind == $totalFind) { print "Hit the limit.\n"; }
 		  $foundSomething = 1;
@@ -200,8 +212,9 @@ sub processList
     @b = split(/\", \"/, $a);
     for (@b)
     {
-      if (cromu($_))
-      { $yep = 1; $foundSomething = 1; print "$listName (L$count): $_\n"; }
+	  my $temp = cromu($_);
+      if ($temp)
+      { $yep = 1; $foundSomething = 1; print "$listName (L$count): $_"; if ($temp == 2) { print " (PLURAL)"; } print "\n"; }
     }
     return;
   }

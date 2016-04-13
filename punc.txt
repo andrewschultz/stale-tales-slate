@@ -9,7 +9,7 @@ VALUE=roiling
 ########general
 cussing rejects	1	1	-1
 death messages	1	1	-1
-empty command rejects	1	0	0
+empty command rejects	1	1	0
 help companies	1	1	-1
 noage	1	1	-1
 nonviolence messages	1	1	-1

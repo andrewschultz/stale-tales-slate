@@ -13573,6 +13573,8 @@ test hinttest with "hint/y/ask me about 1 should not show/hint/hf/ask me about 2
 
 section randtext
 
+[* this tests the random text being put out, which loops every 11 times so we see the end text.]
+
 test randtext with "cap 11/x list/g/g/g/purloin maps/x maps/g/g/g/g/g/cap 4/gonear moor/z/z/z/z/z/gonear psa/x psa/g/g/g/g/g/n/n/z/z/z/z/z/n/z/z/z/z/z/gonear nerds/z/z/z/z/z/gonear hotspot/z/z/z/z/z/trio/potters/chain/kilns/z/z/z/z/z/z"
 
 section big-picture
@@ -13637,7 +13639,9 @@ test hb with "hd/z/l/hf/x me/l/hd/x myself/l/hf/xyzzy/l"
 
 chapter odd verbs
 
-test ts with "ts/metros/in/gardenia/retry/in/i"
+[* this tests that retrying preserves items in the bullpen, for the simpelst case, in the Metros ]
+
+test ts with "ts/metros/in/gardenia/retryi//in/i"
 
 chapter win
 
@@ -13670,6 +13674,8 @@ test intro with "in/door/blot/bugle/in/goat/slander/in/gateman/ask gateman about
 test nos with "in/door/blot/bugle/in/goat/slander/in"
 
 chapter stores tests
+
+[* this is a big long test for every store by number and first letter]
 
 test store-mega with "j/x 1/x 2/x 3/x 4/x 5/x 6/x 7/x 8/x 9/x 10/x 11/x 12/x 13/x 14/x 15/x 16/x 17/x 18/x 19/x 20/x 21/x 22/x 23/x 24/x 25/x 26/x a/x b/x c/x d/x e/x f/x g/x h/x i/x j/x k/x l/x m/x n/x o/x p/x q/x r/x s/x t/x u/x v/x w/x x/x y/x z/x one/x two/x three/x four/x five/x six/x seven/x eight/x nine/x ten/x eleven/x twelve/x thirteen/x fourteen/x fifteen/x sixteen/x seventeen/x eighteen/x nineteen/x twenty/x twentyone/x twentytwo/x twentythree/x twentyfour/x twentyfive/x twentysix"
 

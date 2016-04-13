@@ -3222,6 +3222,9 @@ blurb
 "Dub's Buds"
 "Dukes of KO Feuds"
 "Eliot Hogg the Gigolo"
+"Fallen Ira Farinella"
+"Fallen Iva Villafane"
+"Fallen Tiger Lingafelter"
 "Festive Set Five"
 "Finally-Fly Lani"
 "Flashy Fly Ash"
@@ -4240,6 +4243,7 @@ blurb
 "Nuts Ted Student"
 "Nuts Thor Thurston"
 "Nuts Zach Anschutz"
+"Nutty Echo Honeycutt"
 "Nutty Ol['] Ty Luton"
 "Oaf Ali Faiola"
 "Oaf Andra Afanador"
@@ -6752,6 +6756,7 @@ blurb
 "Halls O['] Hollas (Ah, LOLs)"
 "Hands Up And Push"
 "Hard As Rashad"
+"Hard to Be Hated, Bro"
 "Hat Crew We Chant"
 "A Hat Hata[']"
 "Hat Men Anthem: Meh, Tan the Man"
@@ -7293,6 +7298,7 @@ table of oldies singers [xxm03]
 blurb
 "Abject Cat Jeb"
 "Absurd Bard Su"
+"Al 'Hips' Haslip"
 "Alto Ben Labonte" []
 "Alto Bo Lobato"
 "Alto Cyr Claytor"
@@ -7367,6 +7373,7 @@ blurb
 "Broody Boy Rod"
 "Bulbous Bob Sulu"
 "Bulbous Soul Bub" []
+"Cain 'Hips' Schipani"
 "California [if player is male]Olin Faraci[else]Fiona Clair[end if]"
 "Careworn [if player is male]Owen Carr[else]Cora Wren[end if]"
 "Cheated Cath Dee"
@@ -7451,6 +7458,7 @@ blurb
 "Cool Sinner Cornelison"
 "Cool Star Locastro" []
 "Cool Vita Colavito"
+"Cora 'Hips' Schapiro"
 "Croonings Consignor Ron Scogin"
 "Croony Conroy"
 "Cry-Sob Crosby"
@@ -7601,6 +7609,7 @@ blurb
 "Harmonistic Harmonicist [if player is male]Mo Christian[else]Simona Richt[end if]"
 "Haunted Tan-Hued [if player is male]Ned Auth[else]Eda Hunt[end if]" []
 "Hearty Ty Hare"
+"Hector 'Hips' Christophe"
 "Helpless Shep Ells"
 "Hick Alma Michalak"
 "Hick Bart Bickhart"
@@ -7763,6 +7772,7 @@ blurb
 "Li'l Bess Bissell"
 "Li'l Kip Killip"
 "Lively Vi Lyle"
+"Lon 'Hips' Philson"
 "Lone Wolf Flo Enlow"
 "Loner April Parrinello"
 "Loner Bast Albertson"
@@ -7955,6 +7965,7 @@ blurb
 "Musical Ms. Lucia"
 "Mutual Umlaut"
 "Natch-Loser Charleston"
+"Natural See Arseneault"
 "Nervy Ervyn Vyner"
 "New Fly Elfwyn"
 "Next-Door [d-t] Oxner"
@@ -8183,12 +8194,14 @@ blurb
 "Recreator Carretero"
 "Red Hot Ed Roth"
 "Rejected Jed Crete"
+"Rena 'Hips' Einspahr-Seraphin"
 "Resonant [if player is male]Stan Nero[else]Ann Oster[end if]"
 "Retread Art Reed"
 "Riven Ervin Viner"
 "Rob-Ray Yarbro" []
 "Rolling Ron Gill" []
 "Romantic Carin['] Tom" []
+"Rowena 'Hips' Spainhower"
 "Rude Tenor Roundtree"
 "Sad Alan Saldana"
 "Sad Alderson D'Alessandro"
@@ -8340,6 +8353,7 @@ blurb
 "Teary Bert Atteberry"
 "Teary Em Metayer"
 "Teary Hack Thackeray"
+"Tena 'Hips' Stephani"
 "Tenor Chris Chronister"
 "Tenor Dahl Leonhardt" []
 "Tenor Dan Anderton"
@@ -15096,6 +15110,7 @@ blurb
 "Ed's New Sick Wickedness."
 "Eden's Needs."
 "Eek, Rev. Keever."
+"Eep, Males Please Me!"
 "Eh, Fat is a Fetish."
 "Eh, Go Try the Orgy."
 "Eh, Not on the Net, Ho."
@@ -15916,6 +15931,7 @@ blurb
 "So-Lean Sloane On Sale."
 "So Leer or Else."
 "So Meaty Teams, Yo!"
+"So Naked on a Desk."
 "So Naked Soak Den."
 "So, Relax!" [x]
 "So Steamy, Most Easy."
@@ -18988,6 +19004,25 @@ blurb
 "Force RefCo Coercer Off."
 "Foster fad tradeoffs."
 "Fred I. Freid: if Red, Fired!" []
+"Fry Ada Fayard."
+"Fry Alan Flanary."
+"Fry Delia Rayfield."
+"Fry Dora Rayford."
+"Fry Eli Friley."
+"Fry Gale Flygare."
+"Fry Gato Fogarty."
+"Fry Heintz Fitzhenry."
+"Fry Ida Friday."
+"Fry Lea Farley."
+"Fry Leann Flannery."
+"Fry Leo Florey."
+"Fry Letha Flaherty."
+"Fry Lowe Wolfrey."
+"Fry Maren Ferryman."
+"Fry Neal Flanery."
+"Fry Noe Forney."
+"Fry Tera Raftery."
+"Fry Thea Faherty."
 "Gag Bab, gab-bag."
 "Gall Adrian Gandarilla"
 "Gall Arie Allgaier"
@@ -25330,6 +25365,7 @@ blurb
 "Slimeball [if player is male]Ellis Lamb[else]Elba Mills[end if]"
 "Slimier Iris Lem"
 "Slimy Hack Michalsky"
+"Slimy Hack Michalsky"
 "Slimy Sy Lim"
 "Slithery Trish Ley"
 "Slob Ace Belasco"
@@ -28368,6 +28404,7 @@ blurb
 "Holier? Cruder, Louder, Richer[r], by [if player is male]Ulrich Roeder[else]Corrie Hurdle[end if]"
 "Hone Best: Be Honest[r], by [if player is male]Seth Bone[else]Beth Enos[end if]"
 "How-Tiny Whiny to Why Not I[r], by Hoyt Win" []
+"How to Ask OK, So What[r], by Hawk Soto"
 "Hup! Rise, Pushier[r], by Pei Rush"
 "I Bash Po['] Phobias[r], by Pia Bosh" []
 "I Can! I Can![r] by Nica Cain"
@@ -32860,6 +32897,7 @@ blurb
 "pinnacled candlepin"
 "Plastic Scalp-It" []
 "platinum lamp-unit"
+"plus-case capsules"
 "porcelain ion placer" []
 "posterior repositor"
 "pre-war warper"
@@ -33495,16 +33533,19 @@ blurb
 "'Sale has hassles.'"
 "'See if fee is...'"
 "'Size four fez? I sour.'"
+"'Spex? Lame examples!'"
 "'Splendid peddlins[']!'"
 "'Spree, per se?'" []
 "'Sprocket!' / 'Pet rocks!' / 'Stock rep?'" []
 "'Stall gone. Lost, angel. Legal?' 'Tons.'"
 "'Stare? Nod? Trade, son!'"
 "'Super deal!?' / 'Sure!' / 'PLEAD.'" []
+"'Swap meet map? SWEET!'"
 "'Ten pounds?' / 'Dunno, pest.'"
 "'Three pounds? Thou spender!'" []
 "'Two pounds. Put down, so.'"
 "'Un-bilk in bulk!'"
+"'The walls sell WHAT, Stew Hall?'"
 "'Well, son? Sell now!'" []
 "'What a price!' / 'Ware a pitch!'"
 "'What soup, southpaw! Swap thou...?'"

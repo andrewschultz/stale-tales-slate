@@ -16,18 +16,107 @@ my $force = 0;
 my $sts = 0;
 my $build = 0;
 my $opo = 0;
+my $quiet = 0;
+my %cmd;
+my %subs;
+my $before;
 
+my @projs = ();
+my $proj;
+
+projMap();
 getArgs();
+
+for $proj (@projs)
+{
+  runProj($proj);
+}
 
 my $boxMsg = "";
 
-if ($opo) { opoNightly(); }
-if ($alec) { alecNightly(); }
-if ($sts) { stsNightly(); }
+if (!$quiet) { Win32::MsgBox("$boxMsg"); }
 
-if ($opo + $alec + $sts == 0) { usage(); }
+sub projMap
+{
+  my $longStr = "";
+  my $curLong = "";
+  my $curProj = "";
+  open(A, "c:/writing/dict/nitely.txt");
+  
+  while ($a = <A>)
+  {
+    chomp($a);
+    if ($a =~ /~/)
+	{
+	  my @b = split(/~/, $a);
+	  $subs{$b[0]} = $b[1];
+	  next;
+	}
+	if ($a =~ /=/)
+	{
+	  my @b = split(/=/, $a);
+	  $curProj = $b[0];
+	  $curLong = $b[1];
+	  next;
+	}
+	if ($a =~ /^>/)
+	{
+	  $a =~ s/^>//g;
+	  $longStr = "c:/games/inform/$curLong.inform/Source";
+	  $a =~ s/\$\$/$curProj/g;
+	  $a =~ s/\$l/$curLong/g;
+	  $a =~ s/\$d/$longStr/g;
+	  if ($cmd{$curProj}) { $cmd{$curProj} .= "\n"; }
+	  $cmd{$curProj} .= $a;
+	  #print "Command: $a\n";
+	  print "$curProj added command $a.\n";
+	  next;
+	}
+  }
+}
 
-Win32::MsgBox("$boxMsg");
+sub runProj
+{
+  $before = time();
+  print "Running $_[0].\n";
+  my $logtext = "";
+  my @cmds = split(/\n/, $cmd{$_[0]});
+  for (@cmds) { print "RUNNING $_\n"; $logtext .= `$_`; }
+  procIt($_[0], $logtext);
+}
+
+sub procIt
+{
+  my $x = "c:/writing/dict/nightly/$_[0].htm";
+  my $y = "c:/writing/dict/nightly/$_[0].txt";
+  open(B, ">$y"); print B $_[1]; close(B);
+  my @c;
+  my $thisfail = 0;
+  my $thissucc = 0;
+  
+  my @parseAry = split(/\n/, $_[1]);
+
+  open(B, ">$x");
+  print B "<html><title>$_[0] Test Results</title><body><center><table border=1><tr><td>Test Name</td><td>Failures</td><td>Passes</td><td>Comments</td></tr>\n";
+  for $a (@parseAry)
+  {
+    if ($a =~ /^TEST ?RESULT(S?):/)
+    {
+	  $b = $a; $b =~ s/.*RESULT(S?)://; @c = split(/,/, $b);
+	  print "@c from $b\n";
+	  print B "<tr><td ";
+	  if ($c[1] == 0) { print B "bgcolor=green"; $thissucc++; } else { print B "bgcolor=red"; $thisfail++; }
+	  print B ">" . join("</td><td>", @c) . "</td></tr>\n";
+	}
+  }
+  print B "</table border=1></center>\n";
+  print B "<center><font size=+3>$thisfail failures, $thissucc successes.</font><br \/>\n";
+  my $secs = time() - $before;
+  print B $secs . " seconds taken.";
+  print B "</center>\n</body></html>";
+  close(B);
+  `$x`;
+}
 
 sub opoNightly
 {
@@ -48,12 +137,14 @@ printboth("Source code checking:");
 sourceCheck("threediopolis");
 sourceCheck("fourdiopolis");
 $boxMsg .= "Results in $outfile or $datefile.\n";
+close(OUTFILE);
 }
 else
 {
 $boxMsg .= "No Opolis files modified in the last day.\n"; return;
 }
 
+procIt($outfile);
 }
 
 sub alecNightly
@@ -173,6 +264,7 @@ $boxMsg .= "Nightly Stale Tales Slate Script wrote over a debug log to $outfile 
 sub getArgs
 {
   my $a, my $b;
+  my $x;
   my $count = 0;
   while ($count <= $#ARGV)
   {
@@ -183,12 +275,10 @@ sub getArgs
 	  /-f/ && do { $force = 1; $count++; next; };
 	  /-b/ && do { $build = 1; $count++; next; };
 	  /-nb/ && do { $build = -1; $count++; next; };
-	  /-(3|4|34)/ && do { $opo = 1; $count++; next; };
-	  /-a/ && do { $alec = 1; $count++; next; };
-	  /-s/ && do { $sts = 1; $count++; next; };
-	  /-o(3|4|34)/ && do { openLatest("opolis"); $count++; };
-	  /-oa/ && do { openLatest("alec"); $count++; };
-	  /-os/ && do { openLatest("sts"); $count++; };
+	  /-aa/ && do { for $x (sort keys %cmd) { push(@projs, $x); } $count++; next; };
+	  /-a/ && do { @projs = ("3d", "4d", "pc", "sc", "roi", "sa"); $count++; next; };
+	  /-t/ && do { my @mylist = split(/,/, $b); for $x (@mylist) { if ($subs{$x}) { @projs = (@projs, split(/,/, $subs{$x})); } else { @projs = (@projs, $x); } } $count += 2; next; };
+	  /-q/ && do { $quiet = 1; $count++; next; };
 	  /-\?/ && do { usage(); exit; };
 	  print "Invalid flag $a specified.\n";
 	  usage();
@@ -242,17 +332,4 @@ sub newIdeas
   }
 
   return 0;
-}
-
-sub sourceCheck
-{
-  open(A, "c:/games/inform/$_[0].inform/source/story.ni");
-  my $count = 0;
-  my $ques = 0;
-  while ($a = <A>)
-  {
-    $count++;
-	if ($a =~ /\?\?/) { printboth("Line $count in $_[0] has a coding question.\n$a"); $ques++; }
-  }
-  printboth("TEST RESULT:source-$_[0],$ques\n");
 }

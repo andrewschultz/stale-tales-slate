@@ -26466,7 +26466,7 @@ volume testing - not for release
 
 book dbing
 
-[debug tracking, turning on and off. Useful to me but not others]
+[* debug tracking, turning on and off. Useful to me but not others]
 
 dbing is an action applying to nothing.
 

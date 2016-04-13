@@ -2574,6 +2574,7 @@ blurb
 "Thimbles blest him."
 "Thin Gloom Moonlight."
 "This be his bet: she bit!"
+"This bodes both sides those dibs."
 "This Dare is hatred. Die, Trash!"
 "This dude died thus: dud heist!"
 "This elf left his fishlet."
