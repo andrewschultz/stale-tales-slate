@@ -67,7 +67,9 @@ processStory("fourdiopolis");
 elsif ($compound)
 {
 processStory("compound");
+processStory("c:/games/inform/triz/mine/compound-directors-cut.trizbort");
 processStory("slicker-city");
+processStory("c:/games/inform/triz/mine/slicker-city.trizbort");
 }
 elsif ($roiling)
 {
@@ -137,8 +139,15 @@ sub cromu
 
 sub processStory
 {
+  if ($_[0] =~ /trizbort/i)
+  {
+    $fileName = $_[0];
+  }
+  else
+  {
   $shortName = $_[0];
   if ($_[1] == 1) { $fileName = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] Random Text.i7x"; } else { $fileName = "c:/games/inform/$_[0].inform/Source/story.ni"; }
+  }
   open(A, "$fileName") || die ("No $fileName.");
   $foundSomething = 0;
   $count = 0;
