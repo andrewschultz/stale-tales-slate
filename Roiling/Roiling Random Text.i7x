@@ -3678,13 +3678,13 @@ blurb	fave
 "Nostalgi-Gloatins[r], by [if player is male]Otis Lang[else]Lois Gant[end if]"	true
 "Notoriety to Inert, Yo[r], by [if player is male]Otto Eryin[else]Tori Toney[end if]"	false
 "OK, Words, Do Works[r], by Rod Skow"	true
-"Older and wiser, I Learned Words[r], by Delores Darwin"	true
+"Older and Wiser, I Learned Words[r], by Delores Darwin"	true
 "One Cold Neo-Clod[r], by Don Cole"	false
 "Permutations? Imposter, a Nut[r], by [if player is male]Tatum Pierson[else]Maurine Potts[end if]"	false
 "Permuting, Urgent Imp[r], by Meg Turpin"	false
-"Rogue at our gate: Outrage[r], by U. Ortega"	false
+"Rogue at Our Gate: Outrage[r], by U. Ortega"	false
 "Royal Asset? So Last Year[r], by Rosa Staley"	false
-"Sainted? Stained instead[r], by Sid Etna"	false
+"Sainted? Stained Instead[r], by Sid Etna"	false
 "Sedentary, Needy Star[r], by [if player is male]Ernest Day[else]Tyra Sneed[end if]"	false
 "Shoo, Mere Emo Hoser: Some Hero[r], by Romeo Esh"	false
 "St. Be-Best[r], by Bess Bett"	true
@@ -14511,7 +14511,7 @@ blurb	prio
 "Yes, Arm My Ears[r], by Sam Rey"
 "Yes, Bart Betrays By Tears[r], by Rey Bast"
 "Yes, Bill, Be Silly[r], by Sly Lieb"
-"Yes, Both Bytes, Oh, they Sob[r], by Seth-Boy Sotheby" []
+"Yes, Both Bytes, Oh, They Sob[r], by Seth-Boy Sotheby" []
 "Yes, Both the Boys[r], by [if player is male]Toby Esh[else]Betsy Ho[end if]" []
 "Yes, Ewen Sweeney, New Eyes[r], by Swen Yee" []
 "Yes, Farm My Fears, Mrs. Faye[r], by Sam Frey"
@@ -14562,7 +14562,7 @@ blurb	prio
 "Yon Pitch Hypnotic[r], by Tony Chip"
 "Yon Seed So Needy: Done, Yes[r], by Ed Noyes"
 "Yon Tearful Funeral Toy[r], by Tony 'Earful' Fauntleroy"
-"Yon urge on ye Rug[r], by Geno Ruy"
+"Yon urge on Ye Rug[r], by Geno Ruy"
 "Yon Valet, a Novelty[r], by Val Toney"
 "Yon Wish So Whiny: I, Shy Now[r], by Swin Hoy"
 "Yon Wrath Way North[r], by Troy Hawn"
@@ -16876,7 +16876,7 @@ blurb
 "HOPING? ROT. POOR THING"
 "HOPING'S NIGH? SOP"
 "HOT DIVE = THE VOID"
-"HOT SIN? [s-w] NO" []
+"HOT SIN? [S-W] NO" []
 "HOT TUBS? TUT! BOSH"
 "HUMANISM? SHUN! MAIM"
 "HURT GOD? DROUGHT"
@@ -28327,7 +28327,7 @@ blurb
 "Dave Can Advance[r], by Ned Vaca"
 "Day Job Joy? Bad[r], by AJ Boyd"
 "Days Won't Stay Down[r], by [if player is male]Ty Dawson[else]Sandy Tow[end if]"
-"Dear, Got Aged? Rot, Do great[r], by [d-t] Ager" []
+"Dear, Got Aged? Rot, Do Great[r], by [d-t] Ager" []
 "Dirt Cheap: Adept Rich[r], by [if player is male]Thad Price[else]Adi Precht[end if]"
 "Distance: Ascend It[r], by Ted Cains"
 "Do Drop a Poor Dad[r], by Rodd Pao"
@@ -28395,7 +28395,7 @@ blurb
 "Goal, Gent: Get Along[r], by Teo Gangl" []
 "Got Broke? A Great Book[r], by Kao Gobert & Bok Ortega"
 "Got Dreams? Rest, Dogma[r], by [if player is male]Edgar Most[else]Madge Rost[end if]"
-"Got it Wrong? Grit won't Go?[r] by Orton Twigg"
+"Got it Wrong? Grit Won't Go?[r] by Orton Twigg"
 "Got Need? Get Done[r], by Ted Goen" []
 "Grab Dimes? Big Dreams[r], by [if player is male]Sid Amberg[else]Ma Bridges[end if]"
 "Grannies['] Earnings[r], by Erin Gans"
@@ -28413,7 +28413,7 @@ blurb
 "Hater Wile? Healer Wit Wealthier[r], by [if player is male]Earl White[else]Leia Werth[end if]"
 "Heat-Flow of Wealth[r], by Flo Wheat"
 "Heed, Get the Edge[r], by Ted Ghee"
-"Hep, else Sheeple[r], by Shep Lee"
+"Hep, Else Sheeple[r], by Shep Lee"
 "Hi-Fats: a Shift[r], by Si Haft"
 "His Two So With-it Hows to Wish[r], by Otis Show-Whit" []
 "Holier? Cruder, Louder, Richer[r], by [if player is male]Ulrich Roeder[else]Corrie Hurdle[end if]"
@@ -28450,7 +28450,7 @@ blurb
 "Ill Mews? I'm Swell[r], by Slim Lew"
 "Imagine: Me, I Gain[r], by Mia Inge" []
 "Imposs.? So Simp[r], by Pi Moss"
-"In a fog of GAIN[r], by Gio Fan"
+"In a Fog of GAIN[r], by Gio Fan"
 "Income Nut? Count Me In[r], by [toti] Munce"
 "Increased Ardencies[r], by [if player is male]Eric Snead[else]Enid Cesar[end if]"
 "Inept Force, Frenetic Op, PERFECTION[r], by Pierce Font"
@@ -28516,7 +28516,7 @@ blurb
 "OK, Stir to Risk[r], by Kristo Kortis"
 "Ol['] Law of Low Loaf[r], by [if player is male]Al Woolf[else]Ola Fowl[end if]"
 "Omni-Range Enamoring[r], by Mina Rogen"
-"On the Path: ahh, Potent[r], by Ethan Hopt"
+"On the Path: Ahh, Potent[r], by Ethan Hopt"
 "On Turgid Doing-Rut? Grind Out[r], by [if player is male]Rudi Tong[else]Tori Gund[end if]" []
 "Once, Louts Uncoolest[r], by [if player is male]Leo Counts[else]Su LoConte[end if]"
 "One Dream, Enamored[r], by [if player is male]Ramon Dee[else]Dena Rome[end if]"
@@ -28618,11 +28618,11 @@ blurb
 "Stuck In? Un-Stick[r], by Nick Tsu"
 "Suck, Pal? Up Slack[r], by Cap Lusk & Luc Spak"
 "Suffice, Pep: Puff Pieces[r], by Effie Cupps"
-"Sullen? Un-sell[r], by Les Lun"
+"Sullen? Un-Sell[r], by Les Lun"
 "Sworn: DO. No Words[r], by Don Swor" []
 "Sync Amid Dynamics[r], by Cindy Sam"
 "Task on Me: Make Tons[r], by [if player is male]Kent Amos[else]Mena Kost[end if]"
-"Task-Worth that Works[r], by [if player is male]Hawk Trost[else]Kath Worst[end if]"
+"Task-Worth That Works[r], by [if player is male]Hawk Trost[else]Kath Worst[end if]"
 "Tell So to Sell"
 "Tenacity's Intact, Yes[r], by [if player is male]Tiny Cates[else]Stacy Tien[end if]"
 "Then Bag the BANG[r], by Ben Gath"
@@ -28656,7 +28656,7 @@ blurb
 "Um, Slap/Slam Up a Slump[r], by [if player is male]Al Sump[else]Su Palm[end if]"
 "Unaware? New Aura[r], by Ranae Wu" []
 "Up, Lead: Due, Pal[r], by Ed Paul"
-"Up, Slam, um, Slap a Slump[r], by Su Lamp"
+"Up, Slam, Um, Slap a Slump[r], by Su Lamp"
 "Up to Par? Pop a Rut[r], by Art Pupo"
 "Up Well for Full Power[r], by Wolf Ruple"
 "Using Suing[r], by Suggins Niu" []
@@ -28693,7 +28693,7 @@ blurb
 "Yo, Click Cockily[r], by Colicky Coy Lick"
 "Yo, Meek Man, Make Money[r], by Yankee Mom Emmy O'Kane"
 "Yo, Mild, My Idol[r], by Milo Liddy-Moy"
-"Yo when? Now, hey![r] by Hy Owen"
+"Yo, When? Now, Hey![r] by Hy Owen"
 "You Mo['] Often Out of Money?[r] by Mouton Foye"
 
 table of songs you could write [xxvx]

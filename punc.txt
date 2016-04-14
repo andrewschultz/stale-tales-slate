@@ -22,7 +22,7 @@ yessage	1	1	-1
 ########intro
 ad slogans	1	0	-1
 bad rappers	1	-1	-1
-biopics	1	-1	-1
+biopics	2	-1	-1
 comedians	1	-1	-1
 elmo emo	0	-1	-1
 lame computer games	1	-1	-1
@@ -33,7 +33,7 @@ laughhouses	1	-1	-1
 lousy hit songs	1	-1	-1
 oldies singers	1	-1	-1
 mob chants	1	1	0
-random books	1	-1	-1
+random books	2	-1	-1
 sports chatter	1	1	0
 ########stores
 idiotic lecture points	-1	1	0
@@ -43,7 +43,7 @@ store c ads	1	1	0
 store c competitors	1	0	-1
 tokers nonsense	1	1	0
 ########store u
-mantle laments	1	-1	-1
+mantle laments	3	-1	-1
 missing deli foods	1	-1	-1
 moralizers	1	-1	-1
 horbert farewells	1	1	1
@@ -58,7 +58,7 @@ posh dialogue	1	1	1
 posse bosses	1	-1	-1
 prestigious bums	1	-1	-1
 real estate ads	1	-1	-1
-self-help bestsellers	1	-1	-1
+self-help bestsellers	2	-1	-1
 songs you could write	1	-1	-1
 ########store p
 bedding brands	1	-1	-1
@@ -104,7 +104,7 @@ poem codas	1	1	-1
 ######m
 camp chants	1	1	1
 condo dialogue	1	1	0
-psas	1	-1	-1
+psas	3	-1	-1
 nerd natter	1	1	0
 ######r
 riot slogans	1	1	0

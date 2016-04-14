@@ -14,6 +14,9 @@
 
 my $allLines;
 
+@titleWords = ("by", "a", "the", "in", "if", "is", "it", "as", "of", "on", "to", "or", "and", "at", "an", "oh", "for", "be", "not", "no", "nor");
+addTitles();
+
 $showOK = 0;
 
 if (-f "punc.txt") 
@@ -161,6 +164,8 @@ sub lookUp
 	  if ($temp =~ /\[\]/) { err(); print "$allLines($lineNum): $temp brackets with nothing in them.\n"; }
 	  if (($temp =~ /[a-zA-Z][\.!\?] +[a-z]/) && ($temp !~ /[!\?] by/)) { if ($temp !~ /(i\.e|e\.g)\./i) { err(); print "$allLines($lineNum): $temp starts sentence with lower-case.\n"; }}
 	  if ($temp =~ /â€œ/) { err(); print "$allLines($lineNum): $temp has smart quotes, which you may not want\n"; }
+	  if (($capCheck == 3) && ($temp =~ /[a-z]/)) { err(); print "$allLines($lineNum): $temp needs to be ALL CAPS.\n"; }
+	  if (($capCheck == 2) && (!titleCase($temp))) { err(); print "$allLines($lineNum): $temp needs to be Title Case, change $wrongString.\n"; }
 	  if (($capCheck == 1) && ($temp =~ /^[a-z]/)) { err(); print "$allLines($lineNum): $temp need caps.\n"; return; }
 	  if (($capCheck == -1) && ($temp =~ /^[A-Z]/)) { err(); print "$allLines($lineNum): $temp wrong caps.\n"; return; }
 	  if ($quoCheck == 1) { $count = ($temp =~ tr/'//); if (($count < 2) || (($temp !~ /^'/) && ($temp !~ /'$/))) { err(); print "$allLines($lineNum): $temp not enough quotes.\n"; return; } }
@@ -185,6 +190,25 @@ sub err
     $errsyet = 1;
 	$anyerr = 1;
 	push (@lineList, $allLines);
+}
+
+sub addTitles
+{
+  for $x (@titleWords) { $titleLC{$x} = 1; }
+}
+
+sub titleCase
+{
+  my $temp = $_[0]; $temp =~ s/\[.*?\]//g; $temp =~ s/'[a-z]+//g;
+  my @q = split(/\b/, $temp);
+  my @wrongs = ();
+  for my $word (@q)
+  {
+    if (($word =~ /^[a-z]/) && ($titleLC{$word} == 0)) { push(@wrongs, $word); }
+  }
+  if ($#wrongs == -1) { return 1; }
+  $wrongString = join("/", @wrongs);
+  return 0;
 }
 
 sub usage
