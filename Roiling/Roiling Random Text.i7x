@@ -3652,7 +3652,7 @@ blurb
 
 table of biopics [xxm3]
 blurb	fave
-"[if player is female]One Man, No Name[else]I, Hereon, Heroine[end if][r], by [if player is male]Ann Moe[else]Irene Ho[end if][an-other]"	true
+"[if player is male]One Man, No Name[else]I, Hereon, Heroine[end if][r], by [if player is male]Ann Moe[else]Irene Ho[end if]"	true
 "All Those Words: Shallow Doters, Worthless Load[r], by Stowell Rhoads"	false
 "Another Try, Hero-Tyrant[r], by Roy Harnett & [if player is male]Tony Erhart[else]Thora Tyner[end if]"	false
 "A Curse Causer[r], by Cara-Sue Cruse"	false
@@ -3663,7 +3663,7 @@ blurb	fave
 "Gawd, S'More Word Games[r], by [if player is male]Drew Gamos[else]Margo Dews[end if]"	false
 "A Genius in Usage[r], by Gina-Sue Seguain"	true
 "Go, O. G., Go[r], by Og G. Goo"	true
-"Good [if player is male]M[else]Wom[end if]an? Mad Goon[r], by [if player is male]Dan[else]Wonda[end if] Moog"	false
+"Good [if player is male]Man? [else]Woman? Ow, [end if]Mad Goon[r], by [if player is male]Dan[else]Wonda[end if] Moog"	false
 "Here Trots the Sorter[r], by Ester Hort"	true
 "Hero, Get There: GO[r], by Thor Gee"	true
 "Hero Tasks? Ask Others[r], by [if player is male]Theo Krass[else]Kathe Ross[end if]"	false
@@ -3692,7 +3692,7 @@ blurb	fave
 "Titan's Taints[r], by Si Tant"	false
 "To Bull: Easy, Absolutely, by a Sellout[r], by [if player is male]Solly Taube[else]Tula Boyles[end if]"	false
 "Upstream Into Permutations Use: Important[r], by [if player is male]Rupe Mattison[else]Simona Pruett[end if]"	true
-"We Call a, Well, Ace[r], by Alec Law"	true
+"Aw, We All Call Ace[r], by Alec Law-Wallace"	true
 "Whoa, Heart, What a Hero[r], by Tarah Howe"	true
 "A Wit, Hedged: Dead Weight[r], by Dwight Eade"	false
 "Word Game: Go Ward [']Em[r], by [if player is male]Drew Goma[else]Marge Dow[end if]"	true
@@ -8536,7 +8536,7 @@ blurb	prio
 "Aldo Wu's Wouldas[r], by Saul Dow"
 "Ale, Latte: Let a Late Tale[r], by Ella Tate"
 "Alert Us: a Result-Lust Era[r], by Lea Rust"
-"Alerting to Retotaling Tolerating[r], by [if player is male][else]Regina Lott[end if]"
+"Alerting to Retotaling Tolerating[r], by [if player is male]Al Ottinger[else]Regina Lott[end if]"
 "Aleuts Salute Alt-Use[r], by Sue Tal"
 "Alfie's Life as Falsie[r], by Isaias Leffel"
 "Alfredo, Deal For Dr. LaFoe[r], by [if player is male]Ed Flora[else]Flo Ader, Lea Dorf & Fae Lord[end if]"
@@ -9649,7 +9649,7 @@ blurb	prio
 "Dragons So Grand[r], by Rod Gans"
 "Dramatise, Armistead[r], by [if player is male]Sid Matera[else]Mae Astrid[end if]"
 "Drastic St. Darci[r], by [if player is male]Sid Cart[else]Cris Tad[end if]" []
-"Drawn Olden Wonderland[r], by [if player is male]Ned Waldron[else][end if]"
+"Drawn Olden Wonderland[r], by [if player is male]Ned Waldron[else]Wendra Nold[end if]"
 "Dread Adder Dared[r], by Dedra Edard"
 "Dream County Documentary[r], by Myrna Doucet"
 "Dream Logic: Old Grimace, Miracle-God[r], by [if player is male]Gil Mercado & Ced Milagro[else]Carol Midge & Marcie Gold[end if]"
@@ -10850,7 +10850,7 @@ blurb	prio
 "If Elfs Be Fibs, FEEL[r], by Biff Lees"
 "If Felon, Offline[r], by Flo Fine"
 "If Lame, Fail [']Em[r], by Mia Elf"
-"If Lost in Tinfoils[r], by [tt] Fils"
+"If Lost in Tinfoils[r], by [toti] Fils"
 "If Met of Time Off[r], by Tom Fife"
 "If No Info[r], by Fifi Noon"
 "If Starved, Drive Fast[r], by [if player is male]Dave First[else]Frida Vest[end if]"
@@ -12155,7 +12155,7 @@ blurb	prio
 "On, Cadet, to Dance[r], by Ned Cato & Tad Cone"
 "On Calicos So Laconic[r], by Laci Coons"
 "On Deep Den, Open-Ended[r], by Ned Pedone"
-"On Dreams Ransomed, Ma Drones[r], by [if player is male]Ned Ramos[else]Ros DeMan" []
+"On Dreams Ransomed, Ma Drones[r], by [if player is male]Ned Ramos[else]Ros DeMan[end if]" []
 "On Fears of Saner Far Eons[r], by [if player is male]Fran Ose[else]Rose Fan[end if]"
 "On Fever of Nerve[r], by Vern Foe"
 "On Fevers of Nerves[r], by Von Frees"
@@ -12474,7 +12474,7 @@ blurb	prio
 "Placated Cadet Pal, Tape-Clad[r], by Tad Capel"
 "Plain Blade, and Pliable: a Bland Pile[r], by [if player is male]Ben Padilla[else]Belinda Pal[end if]"
 "Plain Mature Lame Puritan Manipulater[r], by Ariel Putnam" []
-"Plain Shorty Sharply Into Rhinoplasty[r], by [if player is male][else]Paris Hylton[end if]"
+"Plain Shorty Sharply Into Rhinoplasty[r], by [if player is male]Rolph Yantis[else]Paris Hylton & Shirl Payton[end if]"
 "A Plainer Airplane[r], by Nia Pearl"	100
 "The Planet Lept Neath[r], by Ethan Pelt"
 "A Planet's Pleasant[r], by [if player is male]Pat Ansel[else]Stan Leap[end if]"
@@ -12886,7 +12886,7 @@ blurb	prio
 "Rotations Strain Too[r], by Otto Nasir"
 "Rote Mood: More To Do[r], by [d-t] Moore"
 "Rotten Hack Tank Hector on the Track: Reckon That[r], by [if player is male]Chet Kantor[else]Retta Knoch[end if]"
-"Rotten St. Torrents[r], by Ren Stott"
+"Torrent is Rotten, Sir[r], by [if player is male]Ron Strite[else]Ros Ittner[end if]"
 "A Rotten Tot Near[r], by Ron Tate"
 "Round Bay Boundary[r], by Dan Rubyo"
 "Round Topic Production[r], by [if player is male]Tudor Picon[else]Cori DuPont[end if]"
@@ -13360,7 +13360,7 @@ blurb	prio
 "So Trend Rodents[r], by DT Rosen & DO Stern" []
 "So, Try: Tory's Story[r], by Sy Ort"
 "So, Tut Stout Touts[r], by Su Ott"
-"So: Tutor or Trust[r], by Otto Sur"
+"So: Tutor or Touts[r], by Otto Sur"
 "So Untidy Tiny Duos[r], by Sid Yount"
 "So-Urgent Runt Egos[r], by Stu Groen" []
 "So Venom Moves On[r], by Mo Ovens"
@@ -13491,7 +13491,7 @@ blurb	prio
 "Stand it Distant[r], by Sid Tant"
 "Standard Dad Rants[r], by Tad Rands"
 "Standifer's draftiness[r], by [if player is male]Anders Fist[else]Astrid Senf[end if]"
-"Star-Shine Tarnishes[r], by [if player is male]Seth Rains[else][end if]"
+"Star-Shine Tarnishes[r], by [if player is male]Seth Rains[else]Tresa Shin[end if]"
 "Starside Disaster[r], by Tad Reiss" []
 "Starve Vaster[r], by Vesta Travers"
 "State-Run Stunt Era[r], by [if player is male]Nat Suter[else]Sue Trant[end if]"
@@ -13604,7 +13604,7 @@ blurb	prio
 "A Suspect: Cute Saps['] Past Cues[r], by Stu Capes"
 "Swanbane Wannabes[r], by Nana Bews"
 "Swank Ol['] Sank Owl Walks On[r], by Al Knows"
-"Swat-Hopes Sweatshop[r], by [if player is male]Wes Potash[else][end if]"
+"Swat-Hopes Sweatshop[r], by [if player is male]Wes Potash[else]Pet Sowash[end if]"
 "Swat Lax Tax Laws[r], by Walt Sax"
 "Swear Not, Straw One, to Answer[r], by [if player is male]Art Owens[else]Rona West[end if]" []
 "Swear Words Sow Rewards[r], by Wes Darrows"
@@ -13617,7 +13617,7 @@ blurb	prio
 "Switcheroo: Two Heroics[r], by Torie Schow"
 "A Swollen Slow Lane[r], by Noe Walls"
 "The Sword She'd Trow[r], by Des Worth"
-"A Symmetric Creamy Mist[r], by [if player is male]Timmy Cesar[else]Mamie Cryst"
+"A Symmetric Creamy Mist[r], by [if player is male]Timmy Cesar[else]Mamie Cryst[end if]"
 "Synthetic Ethnic Sty[r], by Ty Nitsche"
 "T. Osozaki, a Zitso, OK Kazooist[r], by Tisa Zook"
 "Tacit Snipe Antiseptic[r], by Cain Pettis"
@@ -13843,7 +13843,7 @@ blurb	prio
 "To Farms of Smart Formats[r], by [if player is male]Sam Fort[else]Ma Frost[end if]"
 "To Farts at Forts, Far Tots, Fo['] Start[r], by Ros Taft"
 "To Fear A Forte or Fate For Tea[r], by Frere Afotota"
-"To Fearing No Frigate[r], by [if player is male][else]Inga Forte[end if]"
+"To Fearing No Frigate[r], by [if player is male]Gino Tafer[else]Inga Forte[end if]"
 "To Feels So Fleet[r], by Leo Fest" []
 "To Fine One Fit[r], by Toni Fife-Neto"
 "To Finish This Info[r], by [toti] Fish"
@@ -14167,7 +14167,7 @@ blurb	prio
 "Unbreathable Burnable Hate[r], by [if player is male]Beale Rathbun[else]Anabel Hubert[end if]"
 "Uncle Sam: Lean Scum[r], by Len Camus"
 "Uncover No Curve[r], by Coren Vu"
-"Underrated, Unretarded[r], by [if player is male]Reed Durant[else]Edda Turner"
+"Underrated, Unretarded[r], by [if player is male]Reed Durant[else]Edda Turner[end if]"
 "Undre My, Um, Nerdy Dry Menu[r], by Rudy Men"
 "Undress-Sunders[r], by Ned Russ"
 "Uneasy Sun, Aye[r], by Sean Yu"
@@ -14457,7 +14457,7 @@ blurb	prio
 "Worked-On Dork Owen[r], by Drew Koon"
 "World, Go Grow Old[r], by Lord Gow"
 "The World, Wroth-Led[r], by Drew Holt"
-"A Worldly Wry Doll[r], by [if player is male]Daryl Low[else]Lyla Word[end if]"
+"A Worldly Wary Doll[r], by [if player is male]Daryl Low[else]Lyla Word[end if]"
 "A Worm's So Warm[r], by Sam Row" []
 "Worms Feed From Weeds[r], by Ford Mewes"
 "A Wormy Elf May Flower[r], by Mary Wolfe"
@@ -28493,7 +28493,7 @@ blurb
 "Motivation: Vitamin Too[r], by Tito Aminov & Matt Iovino"
 "My Neo-Money[r], by Emmy Nooney"
 "My Road's Mad Rosy[r], by Rod Mays"
-"Nail Down an Old Win[r], by [if player is male][else]Diann Low, Dawn Olin & Nona Wild[end if]"
+"Nail Down an Old Win[r], by [if player is male]Lon Dwain[else]Diann Low, Dawn Olin & Nona Wild[end if]"
 "Naivete? Lo, Live, Atone, Elevation[r], by [if player is male]Vito Neale[else]Eve Latino[end if]"
 "Nearly Earn, Yen, Rally[r], by Arlyne Larney"
 "New Haters: the Answer[r], by Stew Ahern"
@@ -28645,7 +28645,7 @@ blurb
 "Too Nervy to VERY ON[r], by Troy Evon & Roy Vento" []
 "Tradin[']: Dart in, Darn it[r], by Dr. Tina Ridant" []
 "Train On: an Intro[r], by [if player is male]Nat Niro[else]Roni Tan[end if]"
-"Train One: Intro, Era Anterior[r], by Trina Roe"
+"O, Retrain: Intro, Era Anterior[r], by Trina Roe"
 "Trained in Trade[r], by [if player is male]Ira Dent[else]Tia Dern[end if]"
 "Trend Up: Prudent[r], by Red Punt"
 "Try Out as You Start[r], by [if player is male]Ray Stout[else]Toya Rust[end if]"
@@ -28681,7 +28681,7 @@ blurb
 "Whittle the Wilt[r], by Lew Hitt"
 "Whole Heart Wealth Hero[r], by [if player is male]Lee Horwath[else]Heather Low[end if]" []
 "Why Me: a Meh Way[r], by Wm. Haye-Mayhew"
-"Will Not, Til Now[r], by Lon Wilt"
+"Will Not, Till Now[r], by Lon Wilt"
 "Win, Dog: Now, Dig?[r] by Di Wong-Godwin"
 "Wins Erase Weariness[r], by [if player is male]Wes Raines[else]Erna Weiss[end if]"
 "Wins Logo: Goin['] Slow[r], by Lois Wong"

@@ -5,6 +5,8 @@ open(A, "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Roili
 
 $cc = 0;
 
+print "Remember Tio=tt and Tino=toti\n";
+
 while ($count <= $#ARGV)
 {
   $a = @ARGV[$count];
@@ -25,36 +27,68 @@ while ($a = <A>)
 {
   $totalLines++;
   chomp($a);
-  if ($a =~ /^table of biopics \[/) { $books = 1;  <A>; next; }
-  if ($a =~ /^table of random books \[/) { $books = 2; printTest("Roiling biopics"); <A>; next; }
+  if ($a =~ /^table of biopics \[/) { $books = 1;  printTest(); next; }
+  if ($a =~ /^table of random books \[/) { $books = 2; printTest("Roiling biopics"); next; }
   if ($a =~ /^table of self-help bestsellers \[/)
   {
     $books = 3;
-	printTest("Roiling random books"); <A>; next; }
+	printTest("Roiling random books"); next; }
   if ($a !~ /[a-z]/) { $books = 0; next; }
   if ($books)
   {
-    if (($a !~ /\[r\]/) && ($books == 2)) { print "$a has no [r].\n"; $cc++; next; }
-    if ($a =~ /\[x\]/) { next; } # [x] is a skip because something was too odd to parse
-	$a =~ s/\[else\]/\//g;
-	$a =~ s/\[end if\]//g;
-	$a =~ s/\[if player is male\]//g;
-    $a =~ s/\[a-b\]/Abe/g;
-    $a =~ s/\[i-n\]/Ian/g;
-    $a =~ s/\[n-t\]/Nate/g;
-    $a =~ s/\[tt\]/Tio/g;
-    $a =~ s/\[ta\]/Tia/g;
-	$a =~ s/\[a-word(-u)?\]/ass/gi;
-	$a =~ s/\[crap(-u)?\]/crap/gi;
-	$a =~ s/\[d-word(-u)?\]/damn/gi;
-    $a =~ s/\[d-t\]/Dot/g;
-    $a =~ s/\[sim\]/Simone/g;
-    $a =~ s/\[toti\]/Tino/g;
-	$a =~ s/^\"//g;
-	$a =~ s/\".*//g;
-    $start = $a; $start =~ s/\[r\].*//g; $s2 = $start;
+    $count++;
+	$orig = $a;
+    checkBookString($a);
+  }
+}
+
+printTest("Roiling self-help books");
+
+sub checkBookString
+{
+    if (($_[0] !~ /\[r\]/) && ($books == 2)) { print "$_[0] has no [r].\n"; $cc++; next; }
+    if ($_[0] =~ /\[x\]/) { next; } # [x] is a skip because something was too odd to parse
+	if ($_[0] =~ /\]\[(end if|else)/) { print "$_[0] BLANK IF CLAUSE\n"; $cc++; next; }
+	if ($_[0] =~ /\[if/)
+	{
+	  my $b = $_[0];
+	  my $c = $_[0];
+	  if ($_[0] =~ /if player is male/)
+	  {
+	    $c =~ s/\[if player is male.*?\[else\]//g;
+	    $c =~ s/\[end if\]//g;
+	    $b =~ s/\[else\].*?\[end if\]//g;
+	    $b =~ s/\[if.*?\]//g;
+	    checkBookString($b, 1);
+	    checkBookString($c, 1);
+	    #if ($books == 1) { print "$_[0]\n--B=$b\n--C=$c\n"; }
+	    return;
+	  }
+	  $c =~ s/\[if.*?\[else\]//;
+	  $c =~ s/\[end if\]//;
+	  $b =~ s/\[else\].*?\[end if\]//;
+	  $b =~ s/\[if.*?\]//;
+	  #print "$_[0]\n--$b\n--$c\n"; die;
+	  checkBookString($b, 1);
+	  checkBookString($c, 1);
+	  return;
+	}
+    $_[0] =~ s/\[a-b\]/Abe/g;
+    $_[0] =~ s/\[i-n\]/Ian/g;
+    $_[0] =~ s/\[n-t\]/Nate/g;
+    $_[0] =~ s/\[tt\]/Tio/g;
+    $_[0] =~ s/\[ta\]/Tia/g;
+	$_[0] =~ s/\[a-word(-u)?\]/ass/gi;
+	$_[0] =~ s/\[crap(-u)?\]/crap/gi;
+	$_[0] =~ s/\[d-word(-u)?\]/damn/gi;
+    $_[0] =~ s/\[d-t\]/Dot/g;
+    $_[0] =~ s/\[sim\]/Simone/g;
+    $_[0] =~ s/\[toti\]/Tino/g;
+	$_[0] =~ s/^\"//g;
+	$_[0] =~ s/\".*//g;
+    $start = $_[0]; $start =~ s/\[r\].*//g; $s2 = $start;
     $start = sortit($start);
-    $end = $a; $end =~ s/.*\[r\]//g; $end =~ s/,? by //g; $end = sortit($end);
+    $end = $_[0]; $end =~ s/.*\[r\]//g; $end =~ s/,? by //g; $end = sortit($end);
     $match = 0;
     for (1..8)
     {
@@ -79,7 +113,6 @@ while ($a = <A>)
     }
     }
 
-    $count++;
     if (!$match)
 	{ $cc++;
 	if ((!$maxNum) || ($cc < $maxNum))
@@ -87,18 +120,18 @@ while ($a = <A>)
 	if ($lines) { print "$count ($cc) ($totalLines): "; }
 	$sp = wout($start);
 	$ep = wout($end);
-	print "$a: $sp vs $ep\n";
+	print "$_[0]: $sp vs $ep";
+	if ($_[1]) { print " (from $orig)"; }
+	print "\n";
 	}
 	}
 	else { $success++; }
-  }
-
 }
-
-printTest("Roiling self-help books");
 
 sub printTest
 {
+  $totalLines++; <A>;
+  if (!$_[0]) { return; }
   print "TEST RESULTS:$_[0],3,$cc,$success,$lineConc\n";
   if ($cc) { print "$cc to clean up.\n";  } else { print "Everything looks good!\n"; }
   $cc = 0; $success = 0; $count = 0;
