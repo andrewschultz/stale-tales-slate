@@ -16,16 +16,25 @@ while ($count <= $#ARGV)
   }
 }
 
+#############################################
+# the order of books is biopics, random books, self-help
+# well, in the source anyway. So that's why they're in the order they're in, below.
+#
+
 while ($a = <A>)
 {
   $totalLines++;
   chomp($a);
-  if ($a =~ /^table of random books \[/) { $books = 1; print "$a\n==========\n"; <A>; next; }
-  if ($a =~ /^table of self-help bestsellers \[/) { $books = 2; print "$cc to clean up.\n\n$a\n==========\n"; $cc = 0; $count = 0; <A>; next; }
+  if ($a =~ /^table of biopics \[/) { $books = 1;  <A>; next; }
+  if ($a =~ /^table of random books \[/) { $books = 2; printTest("Roiling biopics"); <A>; next; }
+  if ($a =~ /^table of self-help bestsellers \[/)
+  {
+    $books = 3;
+	printTest("Roiling random books"); <A>; next; }
   if ($a !~ /[a-z]/) { $books = 0; next; }
   if ($books)
   {
-    if (($a !~ /\[r\]/) && ($books == 1)) { print "$a has no [r].\n"; $cc++; next; }
+    if (($a !~ /\[r\]/) && ($books == 2)) { print "$a has no [r].\n"; $cc++; next; }
     if ($a =~ /\[x\]/) { next; } # [x] is a skip because something was too odd to parse
 	$a =~ s/\[else\]/\//g;
 	$a =~ s/\[end if\]//g;
@@ -81,11 +90,20 @@ while ($a = <A>)
 	print "$a: $sp vs $ep\n";
 	}
 	}
+	else { $success++; }
   }
 
 }
 
-if ($cc) { print "$cc to clean up.\n";  } else { print "Everything looks good!\n"; }
+printTest("Roiling self-help books");
+
+sub printTest
+{
+  print "TEST RESULTS:$_[0],$cc,$success,$lineConc\n";
+  if ($cc) { print "$cc to clean up.\n";  } else { print "Everything looks good!\n"; }
+  $cc = 0; $success = 0; $count = 0;
+}
+
 
 sub sortit
 {

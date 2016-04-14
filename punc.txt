@@ -15,8 +15,8 @@ noage	1	1	-1
 nonviolence messages	1	1	-1
 singing rejects	1	1	0
 sleep rejects	1	1	0
-undo allows	1	1	1
-undo rejects	1	-1	-1
+undo allows	1	1	0
+undo rejects	1	1	0
 wait responses	1	1	0
 yessage	1	1	-1
 ########intro
@@ -34,10 +34,10 @@ lousy hit songs	1	-1	-1
 oldies singers	1	-1	-1
 mob chants	1	1	0
 random books	1	-1	-1
-sports chatter	0	1	0
+sports chatter	1	1	0
 ########stores
-overdone movies	0	1	-1
 idiotic lecture points	-1	1	0
+overdone movies	0	1	-1
 sicko movies	1	1	-1
 store c ads	1	1	0
 store c competitors	1	0	-1

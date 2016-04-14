@@ -20,8 +20,8 @@ while ($count <= $#ARGV)
   for ($a)
   {
     /^-?x$/ && do { $dontcopy = 1; $count++; next; };
-	/^-?r$/ && do { @dirs = (@dirs, $r); $count++; next; };
-	/^-?s$/ && do { @dirs = (@dirs, $s); $count++; next; };
+	/^-?(r|ro|roi)$/ && do { @dirs = (@dirs, $r); $count++; next; };
+	/^-?(s|sa)$/ && do { @dirs = (@dirs, $s); $count++; next; };
 	/^-?b$/ && do { @dirs = (@dirs, $r, $s); $count++; next; }; # both: roiling goes first due to more debug text
 	/^-?o$/ && do { $outFileName = "$b"; $count += 2; next; };
 	/^-?v$/ && do { $verbose = 1; $count++; next; };

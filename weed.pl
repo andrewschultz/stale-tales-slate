@@ -83,6 +83,9 @@ $sta = time();
 $exp{"r"} = $exp{"-r"} = "roiling";
 $exp{"s"} = $exp{"-s"} = $exp{""} = "sa";
 
+$roi = "c:/games/inform/roiling.inform/Source";
+$sa = "c:/games/inform/sa.inform/Source";
+
 $pwd = getcwd();
 
 @weedDir = ();
@@ -101,8 +104,8 @@ while ($count <= $#ARGV)
   /^-l/ && do { $launch = 1; $count++; next; };
   /^-!/ && do { $remains = 1; $count++; next; };
   /^-w/ && do { $weirdLine = $b; $notWeirdYet = 1; $count++; next; };
-  /^-?r/ && do { @weedDir = (@weedDir, $roi); $count++; next; };
-  /^-?s/ && do { @weedDir = (@weedDir, $sa); $count++; next; };
+  /^(-?)(r|ro|roi)/ && do { @weedDir = (@weedDir, $roi); $count++; next; };
+  /^(-s|s|-sa|sa)$/ && do { @weedDir = (@weedDir, $sa); $count++; next; };
   /^-?2/ && do { @weedDir = (@weedDir, $sa, $roi); $count++; next; };
   usage();
   }

@@ -46,6 +46,7 @@ close(A);
 $proj = "roiling";
 
 $map{"s"} = "sa";
+$map{"roi"} = "roiling";
 
 if (@ARGV[0] eq "-h") { usage(); }
 
@@ -59,7 +60,7 @@ if (@ARGV[0] eq "b")
   exit;
 }
 
-print "b=both r=roiling s=shuffling\n";
+print "b=both r/roi=roiling s/sa=shuffling\n";
 
 $storyFile = "c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/$proj random text.i7x";
 
@@ -71,6 +72,8 @@ sub storyTables
 {
 
 my $totalErrors = 0;
+$totalSuccesses = 0;
+@lineList = ();
 
 open(A, $_[0]) || die ("Can't open $_[0].");
 
@@ -105,7 +108,8 @@ while ($a = <A>)
 	  next;
 	}
 	}
-	if ($inTable == 1) { if ($a !~ /^\"/i) { if ($errs) { print "===============Finished $head. $errs errors.\n"; $totalErrors += $errs; } else { $noerr .= " $head"; } $errs = 0; $inTable = 0; $lineNum = 0; next; } }
+	if ($inTable == 1) { if ($a !~ /^\"/i) { if ($errs) { print "===============Finished $head. $errs errors.\n"; $totalErrors += $errs; } else { $noerr .= " $head"; } $errsyet = 0; $errs = 0; $inTable = 0; $lineNum = 0; next; }
+	}
     if ($inTable)
 	{
 	  $lineNum++;
@@ -127,8 +131,10 @@ if (!$anyerr) { print "No tables had errors!\n"; }
 else
 {
 if ($showOK) { print "OK tables:$noerr.\n"; }
-print "$totalErrors total errors in $_[0].\n";
 }
+my $listOut = join(" / ", @lineList);
+
+print "TEST RESULTS:$_[1] punctuation,$totalErrors,$totalSuccesses,$listOut\n";
 
 close(A);
 
@@ -137,7 +143,7 @@ close(A);
 sub lookUp
 {
       $temp = $_[0];
-	  if ($temp =~ /\[p\]/i) { next; }
+	  if ($temp =~ /\[p\]/i) { $totalSuccesses++; next; }
       $temp =~ s/^\"//gi;
       $temp =~ s/\".*//g;
 	  $temp =~ s/' \/ '/ /g;
@@ -170,6 +176,7 @@ sub lookUp
       if (($temp =~ /^'/) && ($temp =~ /'$/)) { $temp =~ s/'//g; }
       if ($temp =~ /^ /) { err(); print "$allLines($lineNum): $temp leading space.\n"; }
       if ($temp =~ /''/) { err(); print "$allLines($lineNum): $temp two single quotes.\n"; }
+	  $totalSuccesses++;
 }
 
 sub err
@@ -177,6 +184,7 @@ sub err
     if (!$errsyet) { print "ERRORS IN $head:=================================\n"; } $errs++;
     $errsyet = 1;
 	$anyerr = 1;
+	push (@lineList, $allLines);
 }
 
 sub usage
