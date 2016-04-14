@@ -99,7 +99,7 @@ printTest("Roiling self-help books");
 
 sub printTest
 {
-  print "TEST RESULTS:$_[0],$cc,$success,$lineConc\n";
+  print "TEST RESULTS:$_[0],3,$cc,$success,$lineConc\n";
   if ($cc) { print "$cc to clean up.\n";  } else { print "Everything looks good!\n"; }
   $cc = 0; $success = 0; $count = 0;
 }

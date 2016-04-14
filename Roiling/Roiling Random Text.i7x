@@ -24929,6 +24929,7 @@ blurb
 "Once-Dumb Duncombe"
 "Once-Tall Lancelot"
 "One-Arm Ramone Merona" []
+"One-Cap Capone"
 "One-Flog Flo Egon"
 "One-Hat Heaton"
 "One-Plant Napleton"
@@ -28460,6 +28461,7 @@ blurb
 "Last Once, Can't Lose[r], by Stan Cole"
 "Laws: Do Sow, Lad[r], by Sol Daw"
 "Lead Yon: No Delay[r], by [if player is male]Dean Loy & Leo Nady[else]Ola Endy[end if]"
+"Learn Now, Wan Loner[r], by Len Rowan"
 "Lie, Wreath: The Wailer, Wealthier[r], by Earl White"
 "Lo-Debt: Be Told[r], by Deb Olt" []
 "Lo! Snap! On, Pals[r], by Sol Sapp-Nolan" []
@@ -29382,7 +29384,6 @@ table of bedding brands [xxp1]
 blurb
 "[if player is male]Mr. Blue's[else]Ms. Ruble[end if] Slumber"
 "Artiste Mr. A's Air Mattress"
-"Slob-Daze Dozables"
 "Bastien's Bassinet"
 "Best-Rig Big Rest"
 "Big Nedd's Beddings"
@@ -29418,6 +29419,7 @@ blurb
 "Safe-Bod Sofa-Bed"
 "Sal Pelt Pallets"
 "Sertin-Restin['] Insert"
+"Slob-Daze Dozables"
 "SNOOZE-EZ-SOON" []
 "Sure-Lie Leisure" []
 "These-Plus Sleep Huts"
@@ -32072,7 +32074,6 @@ table of competing bars [xxy4]
 blurb
 "[a-b]'s Base" [p]
 "Absorbing Bingo Bars" []
-"Sez-No Enzo's"
 "Ageless Lesage's" []
 "Aimless Ismael's" []
 "Ales Dr. Adler's" []
@@ -32298,6 +32299,7 @@ blurb
 "Sensist Stiens's"
 "Sentry Teryn's"
 "Seraphim Ephraim's"
+"Sez-No Enzo's"
 "Shakey Hayek's"
 "Sharon Horan's" []
 "Sheer Rhee's"
@@ -33400,7 +33402,7 @@ blurb
 "'Of course! Scour, foe!'"
 "'Oi, stuck? Out sick?'"
 "'Oy, far foray for ya!'"
-"'Part? Truce? Utter [c-word]!'"
+"'Part? Truce? Utter [crap-u]!'"
 "'A patsy! We step away!'"
 "'A perfect farce, pet!'" []
 "'Petulant, late punt!'" []

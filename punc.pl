@@ -134,7 +134,7 @@ if ($showOK) { print "OK tables:$noerr.\n"; }
 }
 my $listOut = join(" / ", @lineList);
 
-print "TEST RESULTS:$_[1] punctuation,$totalErrors,$totalSuccesses,$listOut\n";
+print "TEST RESULTS:$_[1] punctuation,0,$totalErrors,$totalSuccesses,$listOut\n";
 
 close(A);
 

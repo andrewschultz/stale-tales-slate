@@ -99,6 +99,10 @@ close(B);
 
 if ($dupes) { print "$dupes duplicate(s) found. Results below.\n$dupeString"; } else { print "No duplicates found. Hooray!\n"; }
 
+$errSlash = join(" / ", @errLines);
+
+print "TEST RESULTS:$_[0] duplicates,0,$dupes,0,$errSlash\n";
+
 $niSize = -s "$fileName";
 $nuSize = -s "$outFileName";
 
@@ -206,12 +210,22 @@ sub sortTheTable
   {
     $lines2 = $lines + $_;
     $temp = lch(@ary2[$_]); chomp($temp); 
-    if ($isDone{$temp}) { print "$temp ($lines2-$short) is duplicated from line $isDone{$temp} table $table{$temp}.\n"; $dupes++; $dupeString .= "$thisTable ($lines2-$short from $isDone{$temp}, $table{$temp}): $temp\n"; }
+    if ($isDone{$temp})
+	{
+	  $dupes++;
+	  push (@errLines, $lines2);
+	  if ($lines2 - $isDone{$temp} == 1) { $addDupe = "$temp ($lines2-$short) is a duplicate line in the same table.\n"; }
+	  else
+	  {
+      $addDupe = "$temp ($lines2-$short) is duplicated from line $isDone{$temp} table $table{$temp}.\n";
+	  }
+	  $dupeString .= $addDupe;
+    }
 	elsif ($_ > 0)
 	{
 	  if (@ary2[$_] =~ /\Q@ary2[$_-1]/i)
 	  {
-	    print "$temp ($lines2-$short) is duplicated from line $isDone{$temp}.\n"; $dupes++; $dupeString .= "$thisTable ($lines2 from $isDone{$temp}): $temp\n";
+	    print "$temp ($lines2-$short) is *duplicated from line $isDone{$temp}.\n"; $dupes++; $dupeString .= "$thisTable ($lines2 from $isDone{$temp}): $temp\n";
 	  }
 	}
 	$isDone{$temp} = "$lines2-$short";
