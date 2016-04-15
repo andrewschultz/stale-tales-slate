@@ -86,41 +86,31 @@ sub checkBookString
     $_[0] =~ s/\[toti\]/Tino/g;
 	$_[0] =~ s/^\"//g;
 	$_[0] =~ s/\".*//g;
-    $start = $_[0]; $start =~ s/\[r\].*//g; $s2 = $start;
-    $start = sortit($start);
-    $end = $_[0]; $end =~ s/.*\[r\]//g; $end =~ s/,? by //g; $end = sortit($end);
-    $match = 0;
-    for (1..8)
-    {
-      if ($start eq sortit($end x $_)) { $match = 1; last; }
-    }
-    if (!$match)
-    {
-    for (1, 3, 5, 7)
-    {
-      if (sortit($start x 2) eq sortit($end x $_)) { $match = 1; last; }
-    }
-    }
-    if (!$match)
-    {
-    for (1, 2, 4, 5)
-    {
-      if (sortit($start x 3) eq sortit($end x $_)) { $match = 1; last; }
-    }
-    for (1, 2, 3, 5)
-    {
-      if (sortit($start x 4) eq sortit($end x $_)) { $match = 1; last; }
-    }
-    }
+	my $ratio = 0;
+	my %stl;
+	my %el;
+	my $errorString;
+	my $flagError = 0;
+    $start = lc($_[0]); $start =~ s/\[r\].*//g; $s2 = $start;
+    $start;
+    $end = lc($_[0]); $end =~ s/.*\[r\]//g; $end =~ s/,? by //g;
+	for ('a'..'z')
+	{
+	  $stl = () = $start =~ /$_/g;
+	  $el = () = $end =~ /$_/g;
+	  if ($stl && $el)
+	  {
+	    if (!$ratio) { $ratio = $stl / $el; }
+		else { if ($ratio != $stl / $el) { $flagError = 1; $errorString .= " $_ $stl/$el != $ratio"; } }
+	  } elsif ($stl || $el) { $errorString = "$_(missing)"; }
+	}
 
-    if (!$match)
+    if ($flagError)
 	{ $cc++;
 	if ((!$maxNum) || ($cc < $maxNum))
 	{
 	if ($lines) { print "$count ($cc) ($totalLines): "; }
-	$sp = wout($start);
-	$ep = wout($end);
-	print "$_[0]: $sp vs $ep";
+	print "$_[0]: $errorString";
 	if ($_[1]) { print " (from $orig)"; }
 	print "\n";
 	}

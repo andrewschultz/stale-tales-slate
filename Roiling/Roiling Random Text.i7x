@@ -13006,7 +13006,7 @@ blurb	prio
 "Say, Get Stagey[r], by Ty Sage"
 "Say, Rot or Stay: a Story[r], by Roy Ast"
 "Scald, Ire, Rile Cads[r], by Ric Dales"
-"Scale, Sour Carousel[r], by [if player is male]Lucas Rose[else]Eula Cross[end if]"
+"Scale, Sour Carousels[r], by [if player is male]Lucas Rose[else]Eula Cross[end if]"
 "The Scaly Sly Cheat, Chastely[r], by Seth Clay" []
 "Scan Yon Canyons So Canny[r], by Nancy So"
 "Scant Dice Accidents[r], by Cid Casten" []
