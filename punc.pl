@@ -5,16 +5,20 @@
 #
 # each table has field values: start capital, punctuation and quotes
 #
+# 3 means ALL CAPS
+# 2 means Title Case
 # 1 means yes, always
 # 0 means doesn't matter
 # -1 means no, never
 #
 # overridden by [p] in the source file
 #
+# -? gives usage
+#
 
 my $allLines;
 
-@titleWords = ("by", "a", "the", "in", "if", "is", "it", "as", "of", "on", "to", "or", "and", "at", "an", "oh", "for", "be", "not", "no", "nor");
+@titleWords = ("by", "a", "the", "in", "if", "is", "it", "as", "of", "on", "to", "or", "and", "at", "an", "oh", "for", "be", "not", "no", "nor", "into", "with");
 addTitles();
 
 $showOK = 0;

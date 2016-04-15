@@ -22,7 +22,7 @@ while ($count <= $#ARGV)
 while ($a = <A>)
 {
   $thisLine++;
-  if ($a =~ /^table of/) { chomp($a); $currentTable = $a; $currentTable =~ s/\].*/\]/g; next; }
+  if ($a =~ /^table of/) { chomp($a); $currentTable = $a; $currentTable =~ s/ *\[[^\]]*\]$//; print "Current table now $currentTable.\n"; next; }
   if ($a =~ /=shuffling/i) { $stsGame = "Shuffling Around"; }
   if ($currentTable)
   {
@@ -84,13 +84,18 @@ sub addIdeas
     if ($toAdd{$b})
     {
       $c = <A>;
+	  print "Adding $c, $toAdd{$b}\n";
       print B $c;
       print B $toAdd{$b};
 	  @x = split(/\n/, $toAdd{$b});
+	  delete $toAdd{$b}; print "$b hash deleted.\n";
 	  $toFiles{$_[0]} += $#x + 1;
 	  print "$b added " . ($#x + 1) . " entries.\n";
     }
   }
+  
+  $undone = "c:/writing/scripts/sts-undone.txt";
+  for $x (keys %toAdd) { print "$x hash not deleted. This should never happen, but it did. Look in $undone."; open(C, ">$undone"); print C "$x:\n$toAdd{$x}\n"; close(C); }
 
   close(A);
   close(B);
