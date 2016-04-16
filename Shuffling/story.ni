@@ -13767,7 +13767,7 @@ when play begins (this is the check objects and rooms rule):
 
 chapter yacking
 
-[this goes through all the subjects]
+[ * this goes through all the subjects]
 
 yacking is an action applying to nothing.
 
@@ -14284,6 +14284,8 @@ carry out hintalling:
 
 section so hintall works ok
 
+[ * this is to work with the flexible windows extension so we cna check everything is hinted and abstract tiems/ideas don't show ]
+
 main-window is abstract.
 
 Null-bitmap-typeface is abstract.
@@ -14416,5 +14418,3 @@ every turn when player has prep paper (this is the prep-rehash rule):
 		say "====PREP PAPER SAYS[line break]";
 		try examining prep paper;
 		say "====END PREP PAPER[line break]";
-
-book notes to delete before release

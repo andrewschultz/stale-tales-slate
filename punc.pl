@@ -18,7 +18,7 @@
 
 my $allLines;
 
-@titleWords = ("by", "a", "the", "in", "if", "is", "it", "as", "of", "on", "to", "or", "and", "at", "an", "oh", "for", "be", "not", "no", "nor", "into", "with");
+@titleWords = ("by", "a", "the", "in", "if", "is", "it", "as", "of", "on", "to", "or", "and", "at", "an", "oh", "for", "be", "not", "no", "nor", "into", "with", "from");
 addTitles();
 
 $showOK = 0;
