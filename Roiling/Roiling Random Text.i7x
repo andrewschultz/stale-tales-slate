@@ -288,6 +288,7 @@ blurb
 "Yelp mode employed!"
 "Yikes! Net stink-eye!"
 "Yo['] wrath's trashy. Ow!"
+"Your act: Racy! Out!"
 
 table of death messages [xxg2]
 blurb
@@ -969,7 +970,6 @@ blurb
 "'Undo, trow?' / 'Round two.'"
 "'The undo: uh, noted.'"
 "'Undoers, resound sounder!'"
-"The vigor's oversight trove. Sigh."
 "The vigor's oversight trove. Sigh."
 "'Was void! Disavow!'"
 "'We earn a renew!'"
@@ -5083,6 +5083,7 @@ blurb
 "Lost Pig Pit Slog"
 "Lotion Lootin[']" []
 "Lou, Swat Outlaws"
+"Lurk, Spy, Sulk, Pry"
 "Lyssa Slays Alyss"
 "Mac Reest Creamtes Meercats"
 "Macabre Beam Car Race, BAM"
@@ -5667,7 +5668,6 @@ blurb
 "Seed-Pod, Deposed"
 "Seine's Sensei is Seen"
 "Senor Norse" []
-"Sensing Ensigns"
 "Sensing Ensigns"
 "Shafter-Fathers" []
 "She Leads, Headless"
@@ -12797,6 +12797,7 @@ blurb	prio
 "Rest Home Theorems[r], by Tom Sheer"
 "Rest Ill, Lilters[r] by Lilster Stiller"
 "Rest, Maid, Die Smart[r], by Tim Sader"
+"Rest, Pained Pedestrian[r], by [if player is male]Denis Pater[else]Dina Streep[end if]"
 "Rest, Sour or Surest Trousers[r], by [if player is male]Ross True[else]Rose Rust[end if]" []
 "Resting Worm Mister Wrong: Smit, Regrown[r], by [if player is male]Storm Winger[else]Ming Worster[end if]"
 "Retain the Inert Hate[r], by Teri Ethan" []
@@ -14645,6 +14646,7 @@ blurb
 "'Starkey? Streaky!'"
 "'Sub them, the bums!'"
 "'Sucky ol[']...so lucky!' Coy sulk."
+"Super lucky? Purely suck! Ruckus, yelp!"
 "'Super? Poorest! Preposterous!'" []
 "'That loss. Last shot...'"
 "'Throw it to Wirth!'"
@@ -16781,7 +16783,6 @@ blurb
 "DANCE = CEDE DECADENCE"
 "DEALINGS = DANG LIES"
 "DEBAUCHERY CURBED, YEAH"
-"DEBAUCHERY CURBED, YEAH"
 "DEISM NOW, MR? SIMMER DOWN"
 "DESIST, DEISTS"
 "THE DEVIL: A VILE DEATH"
@@ -17133,7 +17134,6 @@ blurb
 "UNCLEAR EVILS? SURVEILLANCE"
 "UNTOWARD? DRAWN OUT"
 "UP! I SO PIOUS"
-"UP TO SIN? SPIN OUT"
 "UP TO SIN? SPIN OUT" []
 "UR-SIN: RUINS"
 "URGENT! SIN INSURGENT" []
@@ -20887,7 +20887,6 @@ blurb
 "'Out yon! ... Not you!'"
 "'Overpays? Say, PROVE!'"
 "'Oversight thrives. Go.'"
-"'Oversight thrives. Go.'"
 "'Ow, a gay! Go away!'"
 "'Ow! Ain't...?' / 'Wait on it now, a...'"
 "'Ow, my ears! Easy!' / 'Worm!'"
@@ -20920,7 +20919,6 @@ blurb
 "'Peel out?' / 'Up to Lee.'"
 "'Penknife? Keep, Finn!'"
 "'The pens, Stephen.'"
-"'A pension? Inane sop!'"
 "'A pension? Inane sop!'"
 "'Perry, a prayer?' / 'Err, PAY.'"
 "'Pesos for spoofers of posers?'"
@@ -22306,7 +22304,6 @@ blurb
 "'Newt did. We didn't!'"
 "'Next git texting? Tix, gent.'"
 "'Next step: pen texts?' / 'Spent, Tex.'"
-"'Next step: pen texts?' / 'Spent, Tex.'"
 "'Nicety, sir: insert icy sincerity!'"
 "'Nick, Jo! Jockin['] Jon? Ick!'"
 "'NIGEL'S single.' / 'Is Glen?'"
@@ -22536,7 +22533,6 @@ blurb
 "'Scoundrel unscolder!'"
 "'Scry it, Cristy!'"
 "'See, Hirsch cherishes Cheshires!'"
-"'See, pro? Repose so, peer.'"
 "'See, pro? Repose so, peer.'"
 "'See, Tom? Emotes seem to meet so.'"
 "'See, um, ... ' / 'Sue me!'"
@@ -25391,7 +25387,6 @@ blurb
 "Slick Una Caulkins" []
 "Slimeball [if player is male]Ellis Lamb[else]Elba Mills[end if]"
 "Slimier Iris Lem"
-"Slimy Hack Michalsky"
 "Slimy Hack Michalsky"
 "Slimy Sy Lim"
 "Slithery Trish Ley"
@@ -29307,8 +29302,6 @@ blurb
 "A Third Hat Rid"
 "This City, It's Itchy"
 "This Dang Sad Thing"
-"This Dang Sad Thing"
-"This Dang Sad Thing"
 "This Desk the Skids"
 "This Kid's Skids-Hit"
 "This Pledge Light-Speed"
@@ -32604,6 +32597,7 @@ blurb
 "Do bilge? Bile, dog? Obliged!"
 "Do not REVIAL ELVIRA!"
 "A doc's god good acts? Gad, scoot!"
+"Dodgin['] sin? Ding-dongs!"
 "Dorks['] Way: Workdays!"
 "Down with the Snuf-Funs league!"
 "Drub oafs bad for us!"

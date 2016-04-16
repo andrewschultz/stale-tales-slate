@@ -1,6 +1,15 @@
+#############################################
+#stsx.pl
+#no arguments needed
+#dumps random text into the appropriate tables and goes to a dump file if any is unaccounted for
+#
+#also checks to see how many local updates to go through
+
 $anaIdeas = "c:\\writing\\dict\\sts.txt";
 
 open(A, $anaIdeas) || die ("No ideas file $anaIdeas.");
+
+my $updatesToCheck = 0;
 
 $stsGame = "A Roiling Original";
 
@@ -21,6 +30,7 @@ while ($count <= $#ARGV)
 
 while ($a = <A>)
 {
+  if ($a =~ /^\\ro3/) { $inUpdates = 1; next; }
   $thisLine++;
   if ($a =~ /^table of/) { chomp($a); $currentTable = $a; $currentTable =~ s/ *\[[^\]]*\]$//; print "Current table now $currentTable.\n"; next; }
   if ($a =~ /=shuffling/i) { $stsGame = "Shuffling Around"; }
@@ -29,6 +39,7 @@ while ($a = <A>)
     if ($a =~ /^['`]/) { chomp($a); print "WARNING $a not properly quoted, line $thisLine table $currentTable\n"; $bail = 1; }
     if ($a =~ /^[a-z0-9]/i) { chomp($a); print "WARNING $a does not start with a quote, line $thisLine table $currentTable\n"; $bail = 1; }
   }
+  if ($inUpdates) { if ($a !~ /[a-z]/i) { $inUpdates = 0; }  $updatesToCheck++; next; }
   if (($a !~ /^\"/) || ($a !~ /[a-z0-9]/i)) { $currentTable = ""; next; }
   if ($bail) { next; }
   if ($currentTable)
@@ -37,6 +48,8 @@ while ($a = <A>)
     $toAdd{$currentTable} .= $a; $totalAdded++; $bytesAdded{$stsGame} += length($a);
   }
 }
+
+print "TEST RESULTS:update ideas,3,$updatesToCheck,0,nothing\n";
 
 if ($bail) { die("Fix mistakes before continuing."); }
 
@@ -84,18 +97,20 @@ sub addIdeas
     if ($toAdd{$b})
     {
       $c = <A>;
-	  print "Adding $c, $toAdd{$b}\n";
+	  printDebug ("Adding $b, $toAdd{$b}\n");
       print B $c;
       print B $toAdd{$b};
 	  @x = split(/\n/, $toAdd{$b});
-	  delete $toAdd{$b}; print "$b hash deleted.\n";
+	  delete $toAdd{$b}; printDebug("$b hash deleted.\n");
 	  $toFiles{$_[0]} += $#x + 1;
-	  print "$b added " . ($#x + 1) . " entries.\n";
+	  print "$b added " . ($#x + 1) . " ";
+	  if ($#x == 0) { print "entry"; } else { print "entries"; }
+	  print ".\n";
     }
   }
   
   $undone = "c:/writing/scripts/sts-undone.txt";
-  for $x (keys %toAdd) { print "$x hash not deleted. This should never happen, but it did. Look in $undone."; open(C, ">$undone"); print C "$x:\n$toAdd{$x}\n"; close(C); }
+  for $x (keys %toAdd) { print "$x hash not deleted. This should never happen, but it did. Look in $undone."; open(C, ">>$undone"); print C "$x:\n$toAdd{$x}\n"; close(C); }
 
   close(A);
   close(B);
@@ -168,4 +183,9 @@ The only current flag for stsx.pl is -n.
 Otherwise it automatically runs tsh.pl -b.
 EOT
 exit;
+}
+
+sub printDebug
+{
+  if ($debug) { print $_[0]; }
 }

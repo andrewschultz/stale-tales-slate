@@ -3877,7 +3877,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 			move the player to Carven Cavern;	[end Elmo's dialogue]
 	else:
 		debug-fallthrough;
-			
+
 after quipping (this is the usually don't undo convos rule):
 	now current quip is mowered;
 	if current quip is showset-quip:
@@ -4506,7 +4506,7 @@ old ice	"The old ice seems to glimmer a bit."
 turbos	"[jet-nq]."
 blaster	"[jet-nq]."
 eastern shore	"Maybe it's you, but the eastern shore seemed slightly closer."
-serpent	"The serpent calms down for a split-second[doc-try]." 
+serpent	"The serpent calms down for a split-second[doc-try]."
 Ed Yerg	"Ed looks slightly less avaricious."
 flowerpot	"The crocus almost seems to perk up."
 curst palace	"Hmm...[if player is in limits]no rumbling from the curst palace. You're going to need a big word, here[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
@@ -5312,7 +5312,7 @@ check scaning heat:
 check scaning cold:
 	say "You look for a clue how to make some heat..."
 
-check scaning location of the player (this is the location rule): 
+check scaning location of the player (this is the location rule):
 	if location is Sun-Spared Underpass: [start routes]
 		if darkness is visible:
 			try scaning darkness instead;
