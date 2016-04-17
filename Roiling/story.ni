@@ -82,9 +82,6 @@ release along with cover art.
 the release number is 4.
 
 [for the purposes of amusement, I'd like to list the release updates.
---Past-Due Updates
---Sustinent nuttiness
---Gad! Super Upgrades!
 --Gasp! Rude Upgrades!]
 
 chapter region specs
@@ -5165,7 +5162,7 @@ definition: a room (called myrm) is ominous:
 			decide no;
 		decide yes;
 
-last-wall is a thing that varies. last-wall is usually inform 7 code wall.
+last-wall is a thing that varies. last-wall is usually owl-decal code wall.
 
 when play begins (this is the hint and other randomization rule):
 	let myrand be 0;
@@ -5201,9 +5198,9 @@ when play begins (this is the hint and other randomization rule):
 	sort table of animal randomness in random order;
 	sort the table of xibits in random order;
 	if a random chance of 1 in 2 succeeds:
-		now last-wall is inform 7 wall;
+		now last-wall is owl-decal code wall;
 	else:
-		now last-wall is perl wall;
+		now last-wall is allow-lots-tools wall;
 	let mycount be 0;
 	d "[list of exhibits].";
 
@@ -8046,9 +8043,10 @@ understand "release" as releaseing.
 carry out releaseing:
 	say "Each version of Shuffling Around should contain release notes, but here is a brief summary:[paragraph break]";
 	say "A Roiling Original's first release was for Spring Thing 2013, on April 1st.";
-	say "A Roiling Original's second release went out in January 2014. It fixed a lot of puzzles and bugs and also opened up a new region. Many areas were renamed, and many puzzles were redone.";
-	say "A Roiling Original's third release went out in March of 2015. It included the 'director's cut' Demo Dome Mode. Puzzles were tweaked, and hinting was made more robust.";
-	say "[line break]The current edition of A Roiling Original should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, and a list of changes from the previous release."
+	say "A Roiling Original's second release went out in January 2014. It fixed a lot of puzzles and bugs and also opened up a new region. Many areas were renamed, and many puzzles were redone. The code name was [i]Gad! Super Upgrades![r]";
+	say "A Roiling Original's third release went out in March of 2015. It included the 'director's cut' Demo Dome Mode. Puzzles were tweaked, and hinting was made more robust. The code name was Past-Due Updates.";
+	say "[line break]The current edition of A Roiling Original should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, and a list of changes from the previous release. The code name was [i]Sustinent Nuttiness[r].";
+	say "Any future update will be called Fiddly Did Fly, because I don't expect to do much more.";
 
 part teching
 
@@ -8520,7 +8518,7 @@ recaps	recaps	"scrape"	"scrape"	"Skr-r-r-r. You give [i]Capers Recaps[r] a good 
 trolls	trolls	"stroll"	"stroll"	"Well, you fake confidence as you walk past. It's all about being cool, but once out, you bolt this blot. As you run down Diver Drive, you hear the trolls yelling 'The rests of youse ain't freeloading cheapskates like [him-her], are you? Buy up and drink up!'[if player has stein][stein-drop].[end if]"	false	466688042	--	olde lode
 clam	urn	"calm"	"calm"	"You try some odd combination of singing and storytelling and jokes which really shouldn't work at all, but then, clams aren't very smart, so it goes over okay. The clam ...(cl)ambulates...off. You notice what it was guarding so aggressively: a beautiful urn you feel pulled to and you can't walk away from!"	false	139082395
 urn	urn	"run"	"run"	"You speed away from the evil urn. You don't have time for riches right now! And while you don't feel you did anything heroic, you wind up at..."	false	259337118	--	Hero's shore
-boats	boats	"boast"	"boast"	"You start yelling about how great you are and how you deserve a free ride. Eventually a fighter freight ('Her Gift') sees you, and they pick you up. Boaters like a boaster, and they hope your settler can provide soaky kayos. But when they ask to see how it can zap things--well, you become less welcome. Some scary crays chase you to the edge of the ship. You'll need a way out!"	false	294343284	--	Fighter Freight
+boats	boats	"boast"	"boast"	"You start yelling about how great you are and how you deserve a free ride. A beat-foil lifeboat (not shippish) passes you by, but eventually a fighter freight ('Her Gift') sees you, and they pick you up. Boaters like a boaster, and they hope your settler can provide soaky kayos. But when they ask to see how it can zap things--well, you become less welcome. Some scary crays chase you to the edge of the ship. You'll need a way out!"	false	294343284	--	Fighter Freight
 pale plea	pale plea	"leap"	"leap"	"You're a bit scared to jump, but when it's a majestic leap--whee! You jump overboard, and nobody can really follow you, since the boat is moving away, and they don't want to be left behind. Even if they could swim better. Your super purse remains water-tight, so no possessions get soaked."	false	265273725	--	Anger Range
 oars	oars	"soar"	"soar"	"The oars seem to have thrusters underneath. Physics! Technology! Energy conservation! In a burst of methane, the raft dances, and you ascend, landing just past the boats, who throw up a cry of 'You sail lousy! Ai!' A second wind carries you to the other shore. When you land, a fish growls, 'Weirdo. I rowed.'"	false	258138164	--	anger range
 raft	raft	"fart"	"fart"	"Channeling frat, uh, co-eds['] humor, you fail to keep your tush shut, thus. Your gust-guts cause the oars, of all things, to grow larger, as if they have gained the gas for propulsion.[paragraph break]It's kind of disgusting, but at least it's not wasteful!"	false	217136535	"Quit rafting around. That raft has oars. Use them. Even if they're stuck in place."
@@ -8650,7 +8648,7 @@ Ed Yerg	Ed Yerg	"greyed"	"greyed"	"[yergy]."	false	516924064	"That might be crue
 Ed Yerg	Ed Yerg	"grey"	"grey"	"[yergy]"	false	368088866	"That might be cruel. Ed's on the level, now."
 yurts	brownies	"rusty"	"rusty"	"The yurts grow tarnished and crumble. Behind them, you see and take some 'nutrition' as cheap as the yurts that held it: Owers[']-Bin Brownies! The snack of choice for people who prefer quantity over quality!"	true	512172846	"The yurts should be gone."
 pester'n serpent	pester'n serpent	"present"	"present"	"The serpent gradually relaxes, then slinks to where it's just there, but you can't see it. It's present but through pester'n."	false	690693472
-Curst Palace	Curst Palace	"spectacular"	"spectacular"	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The towers crumble as you fly through."	false	695286307	"spectacular"	Strip of Profits	[end TOWERS flip]
+Curst Palace	Curst Palace	"spectacular"	"spectacular"	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The Bland Sad Badlands are already on their way back to being the Mild Sand Midlands. The towers crumble as you fly back through to the Trips Strip."	false	695286307	"spectacular"	Strip of Profits	[end TOWERS flip]
 b-b	b-b	"barely"	"barely"	"You alertly retally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the barley becomes ragin['] grain, seared, then erased. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. The barley to the east is still too thick but looks a bit different now, and cinders remain from all around."	false	409909726	[start OTTERS flip]
 cinders	cinders	"rescind"	"rescind"	"You formally scatter the cinders all about. You will not use any luck or fate in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."	false	463338906
 Ed Riley	Ed Riley	"reedily"	"reedily"	"'WHAT ARE You...'[paragraph break]'What are you...'[paragraph break]'Hey, man!' he mouths words silently for a bit, his booming voice gone. 'Well--at least you didn't make me share my sandwich! That's...something!' he whines, as he slinks away in embarrassment."	false	583131047
@@ -8679,6 +8677,7 @@ t-coitally	t-coitally	"coitally"	"coitally"	"Sometimes you just have to let idio
 t-modestly	t-modestly	"modestly"	"modestly"	"Modesty is a good thing--well, in the long term. In the short term, the macks['] backtracking is too brazen, and it ruins any hope of impressing anyone with false humility or braggadocio."	false	662820003
 t-shabbily	t-shabbily	"shabbily"	"shabbily"	"The mack discussing his lab tries to supply details, but the more he makes up, the easier it is for others to pounce on his inconsistencies--but their trolling is so crude, nobody comes out looking too good."	false	393747830
 t-shoddily	t-shoddily	"shoddily"	"shoddily"	"The two macks can't keep up their production. They mutter 'D'oh! Sly is...' realizing they've worked into a dead end."	false	471132957
+t-silently	t-silently	"silently"	"silently"	"The macks run out of words to describe their style nit, and they begin miming, but that just makes them look a parody of themselves. With time to think, Gretta is able to say how sad they look."	false	671077377
 t-steamily	t-steamily	"steamily"	"steamily"	"The macks begin to discuss the disgraceful commercial in much more detail than is necessary, and their facade of refined alcohol palette, etc., is broken."	false	614619001
 t-suddenly	t-suddenly	"suddenly"	"suddenly"	"The macks['] timing is ruined. They started well, but the slightest disruption and--wham! They're just not as good as the paid actors who've been practicing way more."	false	616324659
 t-stupidly	t-stupidly	"stupidly"	"stupidly"	"The macks reiterate how they don't let duty slip, but it's way too heavy-handed. Gretta has to laugh a bit."	false	628150776
@@ -8690,9 +8689,8 @@ t-wearingly	t-wearingly	"wearingly"	"wearingly"	"They start repeating their argu
 t-drawlingly	t-drawlingly	"drawlingly"	"drawlingly"	"The macks begin talking slower, and suddenly, their conversational hold is broken. Gretta realizes there's no good way to make home repair discussions more exciting and says so. She looks relieved."	false	592962469 [begin MACKS 10]
 t-emotionally	t-emotionally	"emotionally"	"emotionally"	"Their matter-of-factness is disrupted. They had to play it straight, but they aren't able to. Gretta shoos them away with her hand, cringing to think she was suckered in the first place."	false	789771536
 t-despairingly	t-despairingly	"despairingly"	"despairingly"	"The macks become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the macks."	false	781752737 [begin MACKS 11]
-t-silently	t-silently	"silently"	"silently"	"The macks run out of words to describe their style nit, and they begin miming, but that just makes them look a parody of themselves. With time to think, Gretta is able to say how sad they look."	false	671077377
 Merle	Merle	"honestly"	"honestly"	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."	false	683905568	"'Fine, be beefin['],' you think, not willing to run up the score--or the volume."
-raptor	parrot	"parrot"	"parrot"	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place."	false	431763978
+raptor	parrot	"parrot"	"parrot"	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place. You try and thank it for the whistle, but you realize you never asked its name. So you sort of wave, and just as it leaves, you figure it was probably Pat Orr."	false	431763978
 parrot	raptor	"raptor"	"raptor"	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west! Merle and Elmer are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]The parrot's revenge sated, you return it to its normal form. 'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]You hear a female scream. 'Nemesis seems in,' you mutter. But maybe that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."	false	431763978
 pines	snipe	"snipe"	"snipe"	"The tip of one pine becomes a snipe's bill, the trunk becomes the spine--and you have a snipe."	false	419446388
 corona	racoon	"racoon" or "raccoon"	"racoon"	"[extra-c]The corona grows wider, becoming a living thing."	false	324129868
@@ -12226,9 +12224,6 @@ a-text of dingy dwelling is "YRRYRR". b-text of dingy dwelling is "YRRYRP". pars
 
 a-text of lairage regalia is "YRRYRR". b-text of lairage regalia is "YRRYRP". parse-text of lairage regalia is "-[sp]x[sp]x[sp]-[sp]x[sp]s".
 
-instead of entering mark:
-	try entering dingy dwelling instead;
-
 chapter grubby restaurant
 
 the grubby restaurant is auxiliary scenery in Same Mesa. "It looks terribly plain. There's a signboard indicating whose it is."
@@ -12459,7 +12454,7 @@ check going in Cleric Circle:
 
 chapter brother horbert
 
-Brother Horbert is a person in Cleric Circle. description is "Slightly anxious, and in the usual black clerical garb.". "[one of]You see a man muttering, 'Only hope? Holy peon!' He turns and blinks. 'Greetings! I am Brother Horbert. Father Hafter and Veteran Rev. [n-t] are not here to help with the colossal local SOS.'[paragraph break]'Some people call me the Oopsin['] Priest because...oops!'[or]Brother Horbert, the oopsin['] priest, paces about here.[stopping]"
+Brother Horbert is a person in Cleric Circle. description is "Slightly anxious, and in the usual black clerical garb.". "[one of]You see a man muttering, 'Only hope? Holy peon!' He turns and blinks. 'Greetings! I am Brother Horbert. Father Hafter and Veteran Rev. [n-t] are not here to help with the colossal local SOS from the previous viperous pious rev.'[paragraph break]'Some people call me the Oopsin['] Priest because...oops!'[or]Brother Horbert, the oopsin['] priest, paces about here.[stopping]"
 
 understand "oopsin priest" and "oopsin/priest" as Brother Horbert
 
@@ -14774,7 +14769,7 @@ a-text of ought is "RYYRR". b-text of ought is "RYYRR". parse-text of ought is "
 rebuked is a truth state that varies.
 
 to say lrshoo:
-	say "[if Leo is visible]The same way would mean staler laters. A long SOS would have no gloss. You don't want it to sound like Toughs, Go Thus[else]They're already off getting to know each other better[end if]";
+	say "[if Leo is visible]Hmm...staler, alters. A long SOS would have no gloss. You don't want it to sound like Toughs, Go Thus. So, try to do something different[else]They're already off getting to know each other better[end if]";
 
 to say increm:
 	if the player's command includes "tough":
@@ -17130,7 +17125,7 @@ check going inside when player is in Lapsin' plains:
 	if knob is not reflexed:
 		say "'NOPE, PEON!' the rude door booms, somehow. The knob seems stuck." instead;
 	if uaah is unvisited:
-		say "You ignore a dour 'Redo?' as you walk in.[paragraph break]But you have a new problem. You need a hut in the circle of huts. But how to identify it? Disturbing a resident could be troublesome. They are in all shapes and sizes. Hmm, a hut, a hut...[wfak][paragraph break]Wait! Maybe it's this one, or...[wfak][paragraph break]That one! A hut shaped like Utah! Of course! You'd recognize that rectangle with a rectangle bitten out of one corner anywhere.";
+		say "You ignore a dour 'Redo?' as you walk in.[paragraph break]But you have a new problem. You need a hut in the circle of huts. But how to identify it? Disturbing a resident could be troublesome. They are in all shapes and sizes. Hmm, a hut, a hut...[wfak][paragraph break]Wait! Maybe it's this one, or...[wfak][paragraph break]That one! A hut shaped like Utah! Of course! You'd recognize that rectangle with a rectangle bitten out of one corner anywhere. You feel slightly...haut.";
 	else:
 		say "You go back into a hut shaped like Utah."
 
@@ -20560,7 +20555,7 @@ snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed 
 iPrune	Blasted Saltbed	north	"The iPrune rumbles over to block your way. [one of]It asks where you're going, and you mumble, red-faced, 'Er, up in...' but you can't say where, ultimately[or]'REIN UP!' it yells, making you see red[in random order][one of]. Maybe if you tried to pass again, both sides could have their say[or][stopping]."	"Looking at the iPrune, you are intimidated by how unnaturally big it is. Maybe the solution is easier than you're worried it is."
 pirates	Blasted Saltbed	east	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	--	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
 ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."
-an admirer	Anemic Cinema	north	"Your admirer, a rampant mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."
+an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."
 sweatier wait-seer	Anemic Cinema	east	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."
 man covered in inapt paint	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."
 nameless salesmen	Unblest Sunbelt	east	"You try to sneak by, but you don't have the energy to resist their waves of faux-politeness as they offer up some Nerd-Aid, which seems just right for someone like you--don't take it the wrong way--that they're [i]dandier[r] than. The energy just radiates from their shirts as their stream of yannos annoys you into...gnh...nothing."
@@ -20791,7 +20786,7 @@ Edwin is a warrior. description is "Edwin looks sober and focused, except when h
 
 a-text of Edwin is "RYRYR". b-text of Edwin is "RYRYR". parse-text of edwin is "x[sp]-[sp]x[sp]-[sp]x". edwin is cheat-spoilable.
 
-Eldon is a warrior. description is "Eldon looks vigorous and youthful. Perhaps it's a bit put-on.".
+Eldon is a warrior. description is "Eldon looks vigorous. Perhaps he's been led on by youthful follies.".
 
 a-text of Eldon is "YRRYR". b-text of Eldon is "YPPYP". parse-text of eldon is "-[sp]l[sp]d[sp]-[sp]n". eldon is parse-spoilable. pod-num of Eldon is 2. pod-ord of Eldon is 2.
 
@@ -23828,10 +23823,10 @@ check going up in peek keep:
 
 table of xibits
 exhib
-Inform 7 Wall
-Perl Wall
+owl-decal code wall
+allow-lots-tools wall
 Chic Loner Chronicle
-Code Walls
+written walls
 Calendar
 Novella
 
@@ -23844,25 +23839,31 @@ check going east in evoc-cove:
 
 chapter Hows Show
 
-Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "The walls have snatches of Inform 7 code and PERL code written all over them. They may be too technical, but maybe you can get a general feel for the silly tricks that went into A Roiling Original. You can go back south."
+Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "You see two walls here with snatches of code written all over them. They may be too technical, but maybe you can get a general feel for the silly tricks that went into A Roiling Original. You can go back south."
 
-the code walls are plural-named scenery in hows show. "There's an Inform 7 code wall [if any-walls is true and last-wall is inform 7]you've been browsing recently[end if]and a PERL code wall[if any-walls is true and last-wall is perl]you've been browsing recently[end if][if any-walls is false], and each looks about as interesting as the other."
+For printing a locale paragraph about a thing (called the item) when player is in Hows Show:
+	if the item is owl-decal or the item is allow-lots-tools, set the locale priority of the item to 0;
+	continue the activity.
 
-check examining code walls for the first time:
-	ital-say "it may help to have a copy of the source handy as you read for this. I'll often be pointing you to things to search for.";
+the written walls are plural-named scenery in hows show. "There's an owl-decal wall [if any-walls is true and last-wall is owl-decal]you've been browsing recently[else if owl-decal is examined]full of Inform 7 code[end if] and an allow-lots-tools wall[if any-walls is true and last-wall is allow-lots-tools]you've been browsing recently[else if allow-lots-tools is examined]full of PERL tricks[end if][if any-walls is false], and each looks about as interesting as the other."
+
+understand "written walls" as written walls.
+
+check examining written walls for the first time:
+	ital-say "it may help slightly to have a copy of the source handy as you read for this. I'll often be pointing you to things to search for.";
 
 any-walls is a truth state that varies.
 
 section inform wall
 
-the Inform 7 wall is an exhibit in hows show. "[this-inform]"
+the owl-decal code wall is an exhibit in hows show. "[this-inform]"
 
-after doing something with inform 7 wall:
+after doing something with owl-decal code wall:
 	now any-walls is true;
-	now last-wall is inform 7 wall;
+	now last-wall is owl-decal code wall;
 	continue the action;
 
-description of inform 7 wall is "You read some more of the Inform 7 wall.[paragraph break][this-inform]"
+description of owl-decal code wall is "You read some more of the owl-decal code wall.[paragraph break][this-inform]"
 
 inform-row is a number that varies.
 
@@ -23871,20 +23872,20 @@ to say this-inform:
 	if inform-row > number of rows in table of informcode:
 		ital-say "you've read all the way through.";
 		now inform-row is 1;
-		now inform 7 wall is exhausted;
+		now owl-decal code wall is exhausted;
 	choose row inform-row in table of informcode;
 	say "[thiscode entry]";
 
-section perl wall
+section allow-lots-tools wall
 
-the PERL wall is an exhibit in hows show. "[this-perl]"
+the allow-lots-tools wall is an exhibit in hows show. "[this-perl]"
 
-after doing something with perl wall:
+after doing something with allow-lots-tools wall:
 	now any-walls is true;
-	now last-wall is perl wall;
+	now last-wall is allow-lots-tools wall;
 	continue the action;
 
-description of PERL wall is "You read some more of the PERL wall. Some of this might be useful if you make your own game. But not a lot.[paragraph break][this-perl]"
+description of allow-lots-tools wall is "You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. But not a lot.[paragraph break][this-perl]"
 
 perl-row is a number that varies.
 
@@ -23893,7 +23894,7 @@ to say this-perl:
 	if perl-row > number of rows in table of perlcode:
 		ital-say "you've read all the way through.";
 		now perl-row is 1;
-		now perl wall is exhausted;
+		now allow-lots-tools wall is exhausted;
 	choose row perl-row in table of perlcode;
 	say "[thiscode entry]";
 
@@ -24041,7 +24042,15 @@ instead of doing something with Talks Stalk:
 		continue the action;
 	say "You can't do much with the stalk on the other side of the Grate. And the author hasn't, yet. One day.";
 
-The Shall Halls are scenery in Peek Keep. "You can't get a very good look at the shall-halls, but they fill you with wonder and anticipation all the same. Really!"
+chapter Flashed Ad Shelf
+
+The Flashed Ad Shelf is scenery in Peek Keep. "There is a rotating ad saying visit sunny Threediopolis and Fourdiopolis--well, the edges are sunny. It then changes to tout following the adventures of Alec Smart through the Problems Compound and, eventually, Slicker City."
+
+chapter Shall Halls
+
+The Shall Halls are scenery in Peek Keep. "You can't get a very good look at the shall-halls, but the design-deigns scratched at the end fill you with wonder and anticipation all the same. Really!"
+
+The Design Deigns are scenery in Peek Keep. "They're illegible from this far away. They might be illegible up close. The author is, sadly, like that."
 
 chapter dometables
 
@@ -24078,7 +24087,7 @@ thiscode [x inform wall] [tdm2]
 "You stare at the various tables of random text. A voice from behind a fourth wall mentions they used to be in lists, and worse, not even alphabetized so that some duplicates could be caught easily."
 
 table of perlcode
-thiscode [x perl wall] [tdm3]
+thiscode [x allow-lots-tools wall] [tdm3]
 "#things to do before release:[line break]1. alphabetize tables and check for duplicates[line break]2. make sure anagrams are valid, especially books[line break]3. make sure duplicate anagrams are weeded out or checked[line break]4. check punctuation"
 "#generating silly names with honorific titles cheaply[line break]for ($x in %firstNames) { if ($isLastNameAnagram{alf('$x$ext')}) { print '$ext $x $isLastNameAnagram{alf('$x$ext')}'; # print for instance Mean Roy Maroney"
 "$alf = join('', sort(split(//, lc($a)))); if ($ana{$alf}) { print '$a=$ana{$alf}'; } $ana{$alf} .= ' $a'; # anagram find code"
@@ -25295,9 +25304,9 @@ novella	"You can read the novella from pages 1 to 100."
 entry sign	"[dome-blab]"
 Spy Dial Display	"[dome-blab]"
 Shall Halls	"[dome-blab]"
-Inform 7 Code Wall	"[dome-blab]"
-code walls	"[dome-blab]"
-PERL wall	"[dome-blab]"
+owl-decal Code Wall	"[dome-blab]"
+written walls	"[dome-blab]"
+allow-lots-tools wall	"[dome-blab]"
 larded ladder	"[dome-blab]"
 
 to say dome-blab:

@@ -83,7 +83,8 @@ $region = "myreg"; $rm = "myrm";
 for $idx (0..$#ARGV)
 {
   $this = @ARGV[$idx];
-  if ($this =~ /!/) { $cmd = "start \"\" \"C:/Program Files (x86)/Notepad++/notepad++.exe\" c:/writing/dict/hv.txt"; `$cmd`; exit; }
+  if ($this =~ /^-?(e|!)$/) { $cmd = "start \"\" \"C:/Program Files (x86)/Notepad++/notepad++.exe\" c:/writing/dict/hv.txt"; `$cmd`; exit; }
+  if ($this =~ /^-?(c|cl|clean)$/) { cleanUp(); exit; }
   if ($this =~ /-r[a-z]/) { $region = $regHash{$this}; if (!$region) { $region = "myreg"; } $rm = $rmHash{$this}; if (!$rm) { $rm = "myrm"; } next; }
   if ($this =~ /-p/) { $printIfThere = 1; next; }
   if ($this =~ /[0-9]/) { wordit($this); next; }
@@ -123,7 +124,7 @@ else { print "Instance found in file, not printing externally. Use -p.\n"; }
 }
 
 close(B);
-if ($worthOpening && $openPost) { `c:\\writing\\dict\\hv.txt`; } 
+if ($worthOpening && $openPost) { `c:/writing/dict/hv.txt`; } 
 
 sub wordit
 {
@@ -233,6 +234,17 @@ sub findHash
   }
 }
 
+sub cleanUp
+{
+  my $toClean = 0;
+  open(A, "c:/writing/dict/hv.txt") || do { print "TEST RESULTS:HV.TXT wasn't read,-1,0.0\n"; return; };
+  while ($a = <A>)
+  {
+    if ($a =~ /\t[0-9]/) { $toClean++; }
+  }
+  print "TEST RESULTS:HV.TXT clean,3,$toClean,0\n";
+}
+
 sub usage
 {
 print <<EOT;
@@ -240,6 +252,7 @@ print <<EOT;
 -p = print if there, override if the hash is already in the source
 # = reverse-lookup a hash number
 -oREGION = force region name
+-c = clean up hv.txt or see how much is left
 -f = file open after
 -s = Shuffling only
 -r = Roiling only

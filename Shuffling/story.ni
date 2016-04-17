@@ -4022,7 +4022,7 @@ check going inside in thickest:
 		say "There's nowhere to go in." instead;
 	if darn-slan is false:
 		poss-d;
-	say "You leave behind the goat and the thickets. The path opens up. The yard was too empty, and the thickets were too cluttered, but this--this seems right.";
+	say "You leave behind the goat and the thickets. The path opens up. The yard was too empty, and the thickets were too cluttered, but this--this seems right. You think you hear a voice saying 'Trainees site near!'";
 	move player to notices section instead;
 
 section slandering

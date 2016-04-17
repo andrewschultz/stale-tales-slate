@@ -80,7 +80,7 @@ $inDir = "";
 
 $sta = time();
 
-$exp{"r"} = $exp{"-r"} = "roiling";
+$exp{"roi"} = $exp{"ro"} = $exp{"r"} = $exp{"-r"} = "roiling";
 $exp{"s"} = $exp{"-s"} = $exp{""} = "sa";
 
 $roi = "c:/games/inform/roiling.inform/Source";
@@ -104,8 +104,8 @@ while ($count <= $#ARGV)
   /^-l/ && do { $launch = 1; $count++; next; };
   /^-!/ && do { $remains = 1; $count++; next; };
   /^-w/ && do { $weirdLine = $b; $notWeirdYet = 1; $count++; next; };
-  /^(-?)(r|ro|roi)/ && do { @weedDir = (@weedDir, $roi); $count++; next; };
-  /^(-s|s|-sa|sa)$/ && do { @weedDir = (@weedDir, $sa); $count++; next; };
+  /^(-?)(r|ro|roi)/ && do { @weedDir = (@weedDir, "roiling"); $count++; next; };
+  /^(-s|s|-sa|sa)$/ && do { @weedDir = (@weedDir, "sa"); $count++; next; };
   /^-?2/ && do { @weedDir = (@weedDir, $sa, $roi); $count++; next; };
   usage();
   }
@@ -113,11 +113,11 @@ while ($count <= $#ARGV)
 
 `copy badana.txt badana.bak`;
 
-open(A2, ">dupes.htm");
-open(A3, ">dshort.txt");
-open(B, ">oddmatch.txt");
-open(B2, ">falsepos.txt");
-open(C, ">badana.txt");
+open(A2, ">dupes-@weedDir[0].htm");
+open(A3, ">dshort-@weedDir[0].txt");
+open(B, ">oddmatch-@weedDir[0].txt");
+open(B2, ">falsepos-@weedDir[0].txt");
+open(C, ">badana-@weedDir[0].txt");
 
 print A2 "<html><body><table width=69% border=1><th width=23%><th width=23%><th width=23%>\n";
 
@@ -126,7 +126,8 @@ if (!@weedDir[0])
 
 if ($pwd =~ /(sa|roiling)\.inform/)
 {
-@weedDir[0] = $pwd;
+  my $temp = $pwd; $temp =~ s/\.inform.*//g; $temp =~ s/.*[\\\/]//g;
+@weedDir[0] = $temp;
 }
 }
 
@@ -134,7 +135,7 @@ if (!@weedDir[0]) { die "No suitable directory found. -s, -r or -2."; }
 
 for $thisDir(@weedDir)
 {
-  weedOneSource($thisDir);
+  weedOneSource($thisDir, 1);
 }
 
 if ($remains) { weedOneSource("!!"); }
@@ -143,6 +144,8 @@ if ($di + $sm) { $s1 = "(DUPES.HTM/DSHORT.TXT) $di total differences (disable wi
 if ($posBad) { $s2 = "(ODDMATCH.TXT) $posBad interesting cases.\n"; } else { $s2 = "ODDMATCH.TXT has nothing. Wow!\n"; }
 if ($falsePos) { $s2 = "(FALSEPOS.TXT) $falsePos \[\]'s.\n"; } else { $s2 = "FALSEPOS.TXT has nothing. Good!\n"; }
 if ($badans) { $s3 = "(BADANA.TXT) $badans total likely bad anagrams, disable with \[x\].\n"; } else { $s3 = "You have no bad anagrams. Well done!\n"; }
+
+print "TEST RESULTS:@weedDir[0] bad anagrams,10,$badans,0,<a href=\"badana-@weedDir[0].txt\">The Culprits</a>\n";
 
 print A2 "$s1";
 
@@ -546,7 +549,8 @@ if ($_[0] =~ /!!/)
 }
 else
 {
-  $myfi = "$_[0]/story.ni";
+  $myfi = "C:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Sa Random Text.i7x";
+  if ($_[1] == 1) { $myfi = "C:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] Random Text.i7x"; }
 }
 
 open(A, "$myfi") || die ("No $_[0]/$myfi.");
@@ -554,7 +558,7 @@ print "Weeding out $myfi\n";
 
 $ch = chr(0xe2);
 
-my $line = 0;
+$line = 0;
 
 while (($a = <A>) && (stillWorth()))
 {

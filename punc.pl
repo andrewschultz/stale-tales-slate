@@ -1,5 +1,7 @@
 ﻿# punc.pl
 #
+# e edits punc.txt
+#
 # with punc.txt, makes sure there are no gross punctuation errors in the Stale Tales Slate random entries
 # punc.txt has more annotations on what things mean
 #
@@ -17,6 +19,8 @@
 #
 
 my $allLines;
+
+if (@ARGV[0] eq "e") { `c:\\writing\\dict\\punc.txt`; exit; }
 
 @titleWords = ("by", "a", "the", "in", "if", "is", "it", "as", "of", "on", "to", "or", "and", "at", "an", "oh", "for", "be", "not", "no", "nor", "into", "with", "from");
 addTitles();
@@ -149,8 +153,10 @@ close(A);
 
 sub lookUp
 {
+      $adNotTitle = 0;
       $temp = $_[0];
 	  if ($temp =~ /\[p\]/i) { $totalSuccesses++; next; }
+	  if ($temp =~ /\ttrue/) { $adNotTitle = 1; }
       $temp =~ s/^\"//gi;
       $temp =~ s/\".*//g;
 	  $temp =~ s/' \/ '/ /g;
@@ -169,7 +175,7 @@ sub lookUp
 	  if (($temp =~ /[a-zA-Z][\.!\?] +[a-z]/) && ($temp !~ /[!\?] by/)) { if ($temp !~ /(i\.e|e\.g)\./i) { err(); print "$allLines($lineNum): $temp starts sentence with lower-case.\n"; }}
 	  if ($temp =~ /â€œ/) { err(); print "$allLines($lineNum): $temp has smart quotes, which you may not want\n"; }
 	  if (($capCheck == 3) && ($temp =~ /[a-z]/)) { err(); print "$allLines($lineNum): $temp needs to be ALL CAPS.\n"; }
-	  if (($capCheck == 2) && (!titleCase($temp))) { err(); print "$allLines($lineNum): $temp needs to be Title Case, change $wrongString.\n"; }
+	  if (($capCheck == 2) && ($adNotTitle == 0) && (!titleCase($temp))) { err(); print "$allLines($lineNum): $temp needs to be Title Case, change $wrongString.\n"; }
 	  if (($capCheck == 1) && ($temp =~ /^[a-z]/)) { err(); print "$allLines($lineNum): $temp need caps.\n"; return; }
 	  if (($capCheck == -1) && ($temp =~ /^[A-Z]/)) { err(); print "$allLines($lineNum): $temp wrong caps.\n"; return; }
 	  if ($quoCheck == 1) { $count = ($temp =~ tr/'//); if (($count < 2) || (($temp !~ /^'/) && ($temp !~ /'$/))) { err(); print "$allLines($lineNum): $temp not enough quotes.\n"; return; } }

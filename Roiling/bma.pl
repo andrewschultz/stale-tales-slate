@@ -110,6 +110,7 @@ sub checkBookString
 	if ((!$maxNum) || ($cc < $maxNum))
 	{
 	if ($lines) { print "$count ($cc) ($totalLines): "; }
+	push (@lineList, $totalLines);
 	print "$_[0]: $errorString";
 	if ($_[1]) { print " (from $orig)"; }
 	print "\n";
@@ -122,6 +123,8 @@ sub printTest
 {
   $totalLines++; <A>;
   if (!$_[0]) { return; }
+  $lineConc = join(" / ", @lineList);
+  @lineList = ();
   print "TEST RESULTS:$_[0],3,$cc,$success,$lineConc\n";
   if ($cc) { print "$cc to clean up.\n";  } else { print "Everything looks good!\n"; }
   $cc = 0; $success = 0; $count = 0;

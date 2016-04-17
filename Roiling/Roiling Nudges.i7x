@@ -57,6 +57,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "closet"	474362094	manor	--	closets	--	"The closets are there to warp space a bit. You don't need to mess with them."
 "plates"	464657709	manor	--	staple	--	"Those plates were a mess, and now they're a tidy staple. It's better that way."
 "plate"	368383743	manor	--	plates	--	"You have no idea which plate to focus on, so maybe you should focus on the plates."
+"tapler"	453707546	manor	--	plaster	--	"What you need is singular, but you sense it's all the plaster that matters."
 "plaster"	549981512	manor	--	stapler	--	"The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again."
 "painting"	447164205	manor	--	painting	--	"The painting really goes better with the study than the giant pin."
 "abstract"	429617931	manor	--	painting	--	"The painting is abstract enough. Don't mess it further."
@@ -126,6 +127,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "cloud"	273306897	stores	--	smoke cloud	--	"[just-smoke]."
 "smokecloud"	688747880	stores	--	smoke cloud	--	"[just-smoke]."
 "seats"	425651877	stores	lectures	--	--	"That might cause a bit too much commotion. Maybe you can just get rid of the lecturer, pay attention to your feelings, and maybe even Ian."
+"highway"	384638989	stores	cruelest	--	--	"You can't see the way high highway any more, and you'd rather deal with the lecturer. Tedious."
 "example"	569923068	stores	--	lecturer	--	"[lec-un]."
 "lecture"	621971270	stores	--	lecturer	--	"[lec-un]."
 "lectures"	718245236	stores	--	lecturer	--	"[lec-un]."
@@ -414,6 +416,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "alb"	74420562	presto	--	labs slab	--	"The labs slab remains sturdy. Technology [slab-score], Wordplay Magic 0."
 "dead"	172052105	presto	--	flea	--	"There must be a more eco-friendly way to reincarnate the flea."
 "clock"	219110764	presto	--	clock sap	--	"You can't make much out of a clock, but clock sap, maybe."
+"puddle"	410249892	presto	--	clock sap	--	"You can't make much out of a clock, but clock sap, maybe."
 "reboot"	483363989	presto	--	--	time-to-reboot rule	"You need to give that computer another (figurative) kick."
 "nottobe"	570057712	presto	shack	--	--	"Even more nothing happens than you expected. The blue button really is too broken. [if rebooted is true]You got the orange button to work, anyway[else]But the orange is not[end if]."
 "compile"	465512068	presto	--	--	time-to-compile rule	"You've assembled the letters incorrectly."
@@ -473,6 +476,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "rivera"	452799199	oyster	Hero's shore	--	--	"[river-no]."
 "oar"	161864198	oyster	Hero's shore	--	--	"If you looked at just one oar, the raft would do no better than go in circles."
 "boat"	198069318	oyster	Hero's shore	--	--	"No one boat seems better than the others. Maybe you should widen your focus to all the boats."
+"interlocking"	776745519	oyster	--	oars	--	"Whoah, they're just oars. Think simpler. Much simpler."
 "pike"	307198092	oyster	--	pikes	--	"[all-fish]."
 "carp"	187983165	oyster	--	carps	--	"[all-fish]."
 "crays"	325150424	oyster	freight	--	--	"[no-cray]."
@@ -657,6 +661,8 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "bottles"	576885432	towers	--	Nerd-Aid	--	"They're not just bottles! They're bottles of NERD-AID!"
 "liam"	165069656	towers	--	grailman	--	"[grail-name]."
 "garn"	189018831	towers	--	grailman	--	"[grail-name]."
+"rampant"	407258077	towers	--	admirer	--	"No, just an admirer, really."
+"womantrap"	589545427	towers	--	--	see-female-admirer rule	"No, just an admirer, really."
 "native"	454169119	towers	--	natives	--	"[plutry of natives]You'll need to deal with more than one native to make your way south."
 "neuralpulses"	1003884530	towers	--	neural pulses	--	"Man, biochemistry's way complex. Complex isomers and such are worse than anagrams! You may be more successful breaking the neural pulses down into components."
 "geese"	512291995	towers	--	--	bonker-gone rule	"The geese are fine as they are. They're just there for scenery, and stuff."
@@ -752,36 +758,40 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "bulwark"	425718123	otters	--	bulwark	--	"The whole bulwark? No, you [if inhib is true]couldn't do much with it at full strength[else]can't do much[end if]. [if Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if inhib is true] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to, well, a bulwark."
 "bossy"	407678666	otters	--	t-bossily	--	"[adj-needs-ly]?"
 "bossi"	330312260	otters	--	t-bossily	--	"[adj-needs-ly]?"
+"nasti"	315472156	otters	--	t-seedily	--	"[adj-needs-ly]?"
+"nasty"	392838562	otters	--	t-seedily	--	"[adj-needs-ly]?"
 "seedi"	417908119	otters	--	t-seedily	--	"[adj-needs-ly]?"
 "seedy"	495274525	otters	--	t-seedily	--	"[adj-needs-ly]?"
+"shadi"	201766018	otters	--	t-shadily	--	"[adj-needs-ly]?"
+"shady"	279132424	otters	--	t-shadily	--	"[adj-needs-ly]?"
+"snide"	359009518	otters	--	t-snidely	--	"[adj-needs-ly]?"
+"stark"	339828783	otters	--	t-starkly	--	"[adj-needs-ly]?"
 "tacit"	272406285	otters	--	t-cattily	--	"[adj-needs-ly]?"
 "teari"	363420594	otters	--	t-tearily-irately	--	"[adj-needs-ly]?"
 "teary"	440787000	otters	--	t-tearily-irately	--	"[adj-needs-ly]?"
-"stark"	339828783	otters	--	t-starkly	--	"[adj-needs-ly]?"
-"snide"	359009518	otters	--	t-snidely	--	"[adj-needs-ly]?"
-"shady"	279132424	otters	--	t-shadily	--	"[adj-needs-ly]?"
-"shadi"	201766018	otters	--	t-shadily	--	"[adj-needs-ly]?"
-"saint"	315472156	otters	--	t-nastily	--	"[adj-needs-ly]?"
-"modest"	486646912	otters	--	t-modestly	--	"[adj-needs-ly]?"
-"steami"	438445910	otters	--	t-steamily	--	"[adj-needs-ly]?"
-"steamy"	515812316	otters	--	t-steamily	--	"[adj-needs-ly]?"
-"stupid"	451977685	otters	--	t-stupidly	--	"[adj-needs-ly]?"
 "bleary"	409909726	otters	--	t-blearily	--	"[adj-needs-ly]?"
 "bleari"	332543320	otters	--	t-blearily	--	"[adj-needs-ly]?"
-"coital"	297462683	otters	--	t-coitally	--	"[adj-needs-ly]?"
 "ribald"	225766300	otters	--	t-ribaldly	--	"[adj-needs-ly]?"
 "formal"	306268086	otters	--	t-formally	--	"[adj-needs-ly]?"
+"coital"	297462683	otters	--	t-coitally	--	"[adj-needs-ly]?"
+"modest"	486646912	otters	--	t-modestly	--	"[adj-needs-ly]?"
 "shabbi"	217574739	otters	--	t-shabbily	--	"[adj-needs-ly]?"
 "shabby"	294941145	otters	--	t-shabbily	--	"[adj-needs-ly]?"
 "shoddi"	294959866	otters	--	t-shoddily	--	"[adj-needs-ly]?"
 "shoddy"	372326272	otters	--	t-shoddily	--	"[adj-needs-ly]?"
 "silent"	494904286	otters	--	t-silently	--	"[adj-needs-ly]?"
+"steami"	438445910	otters	--	t-steamily	--	"[adj-needs-ly]?"
+"steamy"	515812316	otters	--	t-steamily	--	"[adj-needs-ly]?"
 "sudden"	440151568	otters	--	t-suddenly	--	"[adj-needs-ly]?"
+"stupid"	451977685	otters	--	t-stupidly	--	"[adj-needs-ly]?"
 "martial"	355691295	otters	--	t-martially	--	"[adj-needs-ly]?"
 "sincere"	570115926	otters	--	t-sincerely	--	"[adj-needs-ly]?"
 "sobbing"	353964409	otters	--	t-sobbingly	--	"[adj-needs-ly]?"
-"wearing"	469752559	otters	--	t-wearingly	--	"[adj-needs-ly]?"
 "tedious"	572670412	otters	--	t-tediously	--	"[adj-needs-ly]?"
+"wearing"	469752559	otters	--	t-wearingly	--	"[adj-needs-ly]?"
+"drawling"	416789378	otters	--	t-drawlingly	--	"[adj-needs-ly]?"
+"emotional"	613598445	otters	--	t-emotionally	--	"[adj-needs-ly]?"
+"despairing"	605579646	otters	--	t-despairingly	--	"[adj-needs-ly]?"
 "corona"	324129868	otters	--	racoon	--	"[poor-animal]."
 "nails"	266175977	otters	--	snail	--	"[poor-animal]."
 "thrones"	593056280	otters	--	hornets	--	"[poor-animal]."
@@ -824,6 +834,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "medal"	268912008	otters	--	medals	--	"It's what the medals say that makes them special."
 "medals"	365185974	otters	--	medals	--	"It's what the medals say that makes them special."
 "averts"	521866534	otters	--	sly imp	--	"You need to focus on HOW the imp averts, vaster."
+"avert"	425592568	otters	--	sly imp	--	"You need to focus on HOW the imp averts, vaster."
 "monstery"	742208386	otters	alcoves	--	--	"[w-change]."
 "monastery"	744396204	otters	alcoves	--	--	"[w-change]."
 "eelmr"	458825013	otters	--	--	eelmr rule	"[eelmry]."
@@ -939,9 +950,10 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "banana"	162797375	others	--	an-a	--	"You try to poke at an A, but nothing comes from it."
 "tekno"	427109390	others	--	tekno-token	--	"Best not to mess with official currency."
 "icon"	207258516	others	--	coins	--	"Hmm. You could probably do something with just one coin, or you could do something with all of them."
-"drol"	234519308	others	--	dollar	--	"[count-enuf]."
-"droll"	288333147	others	--	dollar	--	"[count-enuf]."
-"dollar"	290520965	others	--	dollar	--	"[count-enuf]."
+"lola"	184168073	others	--	dr lola	degen-true rule	"[count-enuf]."
+"drol"	234519308	others	--	lord al	degen-true rule	"[count-enuf]."
+"droll"	288333147	others	--	dollar	degen-true rule	"[count-enuf]."
+"dollar"	290520965	others	--	dollar	degen-true rule	"[count-enuf]."
 "storage"	521653993	others	--	so-great	--	"You might break what is in the storage."
 "great"	351027450	others	--	so-great	--	"You might break what is in the storage. Then it would be neither great nor so great."
 "passport"	620454066	others	--	passport	--	"The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the [if viewer is reflexed]searcher[else if searcher is reflexed]viewer[else]viewer or searcher[end if] might contain more information."
@@ -992,6 +1004,9 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "evoc"	328329091	demo dome	evoc-cove	--	--	"[dome-rm]."
 "hows"	315843615	demo dome	hows show	--	--	"[dome-rm]."
 "perl"	348409710	demo dome	hows show	--	--	"[its-a-museum]."
+"flashed"	364908016	demo dome	--	peek keep	--	"[its-a-museum]."
+"shelf"	341691109	demo dome	--	peek keep	--	"[its-a-museum]."
+"design"	391609220	demo dome	--	peek keep	--	"[its-a-museum]."
 "inform"	364166783	demo dome	hows show	--	--	"[its-a-museum]."
 "perlwall"	566159979	demo dome	hows show	--	--	"[its-a-museum]."
 "informwall"	581917052	demo dome	hows show	--	--	"[its-a-museum]."
@@ -1034,6 +1049,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "Elvira"	421289235	--	--	--	elvira-here rule	"Changing Elvira is impossible, [if player is in Inclosure]even now you've resisted her first attack[else]and you certainly don't want to summon her[end if]." [start GENERAL STUFF]
 "yorpwald"	548467110	--	--	--	degen-true rule	"You can't just unjumble Yorpwald with just one word. You need to deal with individual things."
 "settler"	697243862	--	--	settler	--	"[no-set]."
+"mark"	204519952	--	--	settler	--	"[no-set]."
 "recoded"	476352361	--	--	settler	--	"[no-set]."
 "deviser"	610396742	--	--	settler	--	"[no-set]."
 "backside"	382647496	--	--	settler	--	"[no-set]."
@@ -1110,6 +1126,8 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "access"	360553029	--	--	--	degen-true rule	"[meta-rej]"
 "opts"	355202520	--	--	--	degen-true rule	"[meta-rej]"
 "options"	543455451	--	--	--	degen-true rule	"[meta-rej]"
+"version"	604821629	--	--	--	degen-true rule	"[meta-rej]"
+"something"	649400178	--	--	--	degen-true rule	"Instead of messing with SOMETHING, maybe you can examine what the something is on."
 
 book text details
 
@@ -1623,6 +1641,11 @@ to say nerd-a:
 to say grail-name:
 	say "His full name, Liam Garn"
 
+this is the see-female-admirer rule:
+	if player is female and admirer is visible:
+		the rule succeeds;
+	the rule fails;
+
 this is the bonker-gone rule:
 	if player is in Danger Garden and bonker is in lalaland:
 		the rule succeeds;
@@ -1786,6 +1809,9 @@ to say part-of-lots:
 to say whole-item:
 	say "Nothing happens. Perhaps it's the whole item that's important"
 
+to say count-enuf:
+	say "It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it"
+
 to say shirt-sez:
 	say "Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle"
 
@@ -1794,9 +1820,6 @@ to say rapt-glare:
 
 to say no-pryer:
 	say "No, it's the whole pryer bars"
-
-to say count-enuf:
-	say "It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it"
 
 this is the need-mango rule:
 	if player is in clearing and mango is off-stage:

@@ -7,6 +7,10 @@ book nudge table
 table of nudges [ton]
 this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "noentry"	650766775	intro	subsite	--	--	"You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter..."	[intro nudges]
+"slim"	259155804	intro	subsite	--	--	"[name-list]."
+"neat"	302011453	intro	subsite	--	--	"[name-list]."
+"name"	262976588	intro	subsite	--	--	"[name-list]."
+"list"	298190669	intro	subsite	--	--	"[name-list]."
 "elevator"	681565093	intro	--	subsite	--	"[word-games]."
 "terraces"	646837211	intro	--	subsite	--	"[word-games]."
 "banner"	371551651	intro	--	subsite	--	"[word-games]."
@@ -113,6 +117,7 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "storex"	599634554	stores	--	store x	--	"[no-way]."
 "storey"	609225725	stores	--	store y	--	"[no-mb]."
 "storez"	609836091	stores	--	store z	--	"[no-way]."
+"marquee"	596710416	stores	--	store b	--	"You don't need to change the marquee[unless sorbet is in lalaland], but maybe it's a clue[else] now that you figured what it means[end if]."
 "stairs"	428162417	stores	--	sortie-x	--	"No way. That's how you get to the sortie."
 "escalator"	564061533	stores	--	metros-x	--	"No way. It's your way down to the metros."
 "trips"	411166592	stores	trips strip	--	--	"[loc-rej]."
@@ -278,11 +283,13 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "arching"	290299561	sortie	--	crashing archings	--	"Neither arching shakes. They're probably too sturdy, and you're probably not meant to go back."
 "crashing"	386573527	sortie	--	crashing archings	--	"[loc-rej]."
 "cedars"	351626370	sortie	cedars	--	--	"[loc-rej]."
+"cedar"	255352404	sortie	cedars	--	--	"[loc-rej]."
 "drawing"	362975539	sortie	cedars	--	--	"[best-not-defile]."
 "drawings"	459249505	sortie	cedars	--	--	"[best-not-defile]."
 "verse"	544374807	sortie	cedars	--	--	"[best-not-defile]."
 "holyverse"	832182774	sortie	cedars	--	--	"[best-not-defile]."
 "spout"	460308327	sortie	cedars	--	--	"[best-not-defile]."
+"pout"	364034361	sortie	cedars	--	--	"[best-not-defile]."
 "minerva"	500458057	sortie	cedars	--	--	"[best-not-defile]."
 "chalice"	304094081	sortie	cedars	--	--	"[best-not-defile]."
 "candle"	292749948	sortie	cedars	--	--	"[best-not-defile]."
@@ -292,6 +299,8 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "lois"	269433228	sortie	cedars	--	--	"Changing Lois is highly unlikely. You have magic powers, but not godlike powers."
 "folded"	324545599	sortie	--	--	got-plane rule	"It's a plane, now, for sure."
 "paper"	378249648	sortie	--	--	got-plane rule	"It's a plane, now, for sure."
+"papers"	474523614	sortie	--	--	got-plane rule	"It's a plane, now, for sure."
+"sheet"	492278501	--	--	prep paper	--	"[no-2]."
 "centrifuge"	741172383	sortie	--	--	b4-cent rule	"[loc-rej]."
 "frenetic"	603466874	sortie	--	--	b4-cent rule	"[loc-rej]."
 "aroundden"	574649308	sortie	--	--	af-cent rule	"[loc-rej]."
@@ -317,6 +326,7 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "yellow"	540080389	metros	--	lost corn	--	"[kern-push]."
 "kernels"	612864512	metros	--	lost corn	--	"[kern-push]."
 "kernel"	516590546	metros	--	lost corn	--	"[kern-push]."
+"control"	478865907	metros	--	controls	--	"You've already changed the lost corn into the controls, and you don't need to do more."
 "candelabra"	400868292	metros	red condo	--	--	"Interior decorating is not your strength."
 "carpets"	515173258	metros	red condo	--	--	"Interior decorating is not your strength."
 "carpet"	418899292	metros	red condo	--	--	"Interior decorating is not your strength."
@@ -421,6 +431,7 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "sand"	188398381	resort	islet	--	--	"[the-sand]."
 "thesand"	456596807	resort	islet	--	--	"[the-sand]."
 "tiles"	425996778	resort	tiles	--	--	"The tiles seem to shift a bit, but not enough."
+"tile"	329722812	resort	tiles	--	--	"You need to deal with all the tiles."
 "islet"	425996778	resort	islet	--	--	"The island's sands don't shift, but there's more here than on the tiles."
 "eter"	444046039	resort	islet	--	--	"The tree sits there[if swing is visible], but the swing rocks a bit[end if]."
 "oflat"	259979148	resort	islet	--	--	"[if cork is visible and wings are visible]You can just use either the cork or the wings to leave to the east[else if cork is visible or wings are visible]You have a way off this island to the east, though you can make the other for fun, too[else if tree is examined or rock is examined]Mangling the word you read did nothing. Maybe go with what it's written on[else]You notice writing on the rock and swing similar to what you just said. Or tried to say[end if]. Also, no need to make anything lo-fat here."
@@ -483,7 +494,9 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "examples"	666197034	--	--	gadget	--	"[gad-part]."
 "salient"	497092104	--	--	salient saltine	--	"The saltine's there to help you. Changing it might work against you."
 "aprep"	378249648	--	--	prep paper	--	"[no-2]."
+"papers"	474523614	--	--	prep paper	--	"[no-2]."
 "prep"	376061830	--	--	prep paper	--	"[no-2]."
+"sheet"	492278501	--	--	prep paper	--	"[no-2]."
 "firm"	220906698	--	--	prep paper	--	"FIMR is just a mnemonic for the [if trips strip is unvisited]places[else]stores[end if] you need to explore[if cur-score of stores is 0], somehow[end if]."
 "angle"	285314976	--	--	--	has-lube rule	"There's nothing between ANGLE and GLEAN that you can do with the blue lube."
 "terry"	523922985	--	--	--	past-strip rule	"You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no."
@@ -534,8 +547,13 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "access"	360553029	--	--	--	degen-true rule	"[meta-rej]"
 "opts"	355202520	--	--	--	degen-true rule	"[meta-rej]"
 "options"	543455451	--	--	--	degen-true rule	"[meta-rej]"
+"version"	604821629	--	--	--	degen-true rule	"[meta-rej]"
+"something"	649400178	--	--	--	degen-true rule	"Instead of messing with SOMETHING, maybe you can examine what the something is on."
 
 book text details
+
+to say name-list:
+	say "You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet"
 
 to say word-games:
 	say "A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave"
