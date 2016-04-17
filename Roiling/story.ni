@@ -2256,7 +2256,7 @@ objasking generically is an action applying to one visible thing.
 Understand "tell about [any thing]" or "ask about [any thing]" or "talk about [any thing]" or "a [any thing]" as objasking generically.
 
 check objasking generically (This is the check for only one sensible object converser rule):
-	if the number of persons enclosed by the location is one: [?? talkable vs ...]
+	if the number of persons enclosed by the location is one:
 		repeat with X running through visible scenery:
 			repeat through table of default-gen-blather:
 				if X is the default-talker entry:
@@ -2428,7 +2428,6 @@ check asking about (This is the check for specific topics rule):
 		if noun is a person and noun is superchatty:
 			if him-who entry is the noun:
 				say "[him-say entry][line break]" instead;
-				[would like to pad-rec "[what-pad-gen entry]" instead; but inform is confused with 2 tables??]
 	if the topic understood is a topic listed in the table of popular-blather:
 		if there is a right-region entry:
 			if right-region entry is not mrlp:
@@ -3452,8 +3451,6 @@ my-let	my-rule	v-c-y [vowel=2 consonant=1 Y=3]
 " X"	got-x rule	1
 " Y"	got-y rule	3
 " Z"	got-z rule	1
-
-[??canit-quip	"'That BS idea abides, biased! Blue Frog Urbfogel. Bugler of Foulberg? So long ago! And what did he do? Beat up monsters that came back anyway til he could beat her up? Talked to people who knew where hidden items like the horn-o-honor and gavel of Fogvale were? Lucky they were there! He'd never have, on his own! And they'd have killed her off if she was that bad! But she's built herself back up, with only common sense and charisma! Her tact-chatter is nothing to YOUR word power! She was detest-tested over Blue Frog Urbfogel! She even led education reforms to force kids to--well, see how you did things! It's not HER fault kids find you a pro-rote trooper! But Yorpwald will be REMADE! With the help of her GOOD DEEDS!'" Reamed? Remade!]
 
 y-orange is a truth state that varies.
 
@@ -6629,7 +6626,7 @@ Rule for printing a parser error when the latest parser error is the didn't unde
 		if the player's command matches "\b(wrap|bubble)\b":
 			say "Hm, maybe that's not quite what to do with the wrap. As fun as it'd be to pop all those bubbles one by one, you may need to just rip them all up at once.";
 			the rule succeeds;
-	repeat through table of anagrams: [?????]
+	repeat through table of anagrams:
 		if the player's command matches right-cmd entry:
 			if the-from entry is fungible:
 				try fliptoing the-to entry;
@@ -7208,7 +7205,7 @@ check pushing the skid to (this is the yak-oof rule):
 		pad-del "Leo and Rand";
 		now skid is in hacks' shack;
 		now drab yoke is in hacks' shack;
-		move player to hacks' shack; [?? why not MOVE PLAYER TO X INSTEAD]
+		move player to hacks' shack;
 		the rule succeeds;
 	if player was in brunt and second noun is south and yak is on skid:
 		try going south instead;
@@ -9647,7 +9644,7 @@ sit-quip	"'Going personal? Sore plan! No gig!' She's not perfect but that helps 
 gustave-quip	"'Once you came along, it was clear Gustave was the vaguest. A denser sender. Very idle delivery. But, well MY initiative kept me Optimal Top Mail. So well I have time for my pouter troupe.'"	[option 4-1, fork of 4]
 pouter-quip	"'Why, they came around about the time Elvira did! I didn't believe them at first! But then they became spouter troupes. No offense, you deserve your no-spine pension and all, but ... there's not much of a story behind what you did. Nothing award-winning. Why, it gives me headaches to think about some things you did and saw! No offense. Anyone with a calculator or whatever could've done it. They just...spoke the truth. And were more interesting about it! Now Elvira is more interesting. I mean, you're not funny, or anything.'"
 pun-quip	"'Eh, punt the pun,' you think. The paunchy, achy pun--a painful pun-fail--hardly cleans up on the pun scale. You picture a generic cringee at [twiddle of table of laughhouses and -3]. 'Rad irony? Ordinary.'"
-ahem-quip	"Gunter intones tension. Refusal earfuls. 'Cad, no can do. [d-word-u], uh, DUH, man.' Refusal earfuls."	[end option 4-4] [??]
+ahem-quip	"Gunter intones tension. Refusal earfuls. 'Cad, no can do. [d-word-u], uh, DUH, man.' Refusal earfuls."	[end option 4-4]
 trips-quip	"'No shame,' he moans. 'Some? Nah.' ... he makes the money gesture with his hands but notes you won't get ID'd unless you visit during rush hour."
 media-quip	"Somehow, the media aimed you for trying to do way too much and way too little. You chart the flattery, the backhanded compliments, the first rifts, the outright disrespect. 'His charisma is archaism.' / 'Cagiest toil made him egotistical.' / 'He will make this realm lamer to save it again.' How the only things you [i]did[r] were saving your skin against Red Bull Burdell--and exist at the end."
 media-quip-2	"You recall Walt Koh's and Kath Low's howl-task host-walk, among other 'informational' shows...[twiddle of table of lame talk shows and 4]Folks co-spit topics, you're mashed, shamed. '[if player is male]He's [else]She... [end if]mad! Trashed, [if player is female]she'd...rat[else]he darts[end if]!' And the rubbish biopics, good ([biop of true]). or bad ([biop of false]). You did nothing to prepare Yorpwald against technically sophisticated attacks like the exciting ones Elvira warns about, the ones that helped her gain a role of Save/Rid Adviser. Many a tearful faulter did not want to blame you--but they had to."
@@ -11016,13 +11013,23 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "die" or "die thou" or "hideout" or "hangout"	false	"If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them."	"hangout"	true	oyster
 "progress"	false	"You note the following: manor = stuff[other-areas]."	"progress"	false
 "curst/palace" or "curst palace"	false	"You apparently can't scan the curst palace fully with the settler [']til you're all the way there. But maybe you can guess."	"curst palace"	true	towers
-"xray" or "xraying"	false	"You can XRAY something you can't describe to see what it can or should be[if xrayvision is false], but you need to put a pastry in the toaster first[else], and that pastry you ate will help. You can wait as long as you need to use it[end if]."	"xray"	false	towers [?? all are gone?]
+"xray" or "xraying"	false	"[xray-help]."	"xray"	false	towers
 "hit/ win/ button/" or "ben/ hid"	false	"Ben hid a HIT WIN button somewhere. Where?"	"hit win button"	false	routes
 "scenery"	false	"Ed Yerg told you to look for [the entry clue-index in nextclue]."	"scenery"	false	towers
 "flips" or "flip" or "pf"	false	"[what-can-flip]"	"flips"	false
 "rove" or "over" or "rove over"	false	"You can just ROVE OVER to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
 "talking"	false	"[if number of terse-warned hintrelevant people > 0]You got nothing from [list of terse-warned hintrelevant people][else]Nobody nearby seems useless...YET[end if]."	"talking"	false	--
 "badlands" or "bland/sad badlands" or "bland sad badlands"	false	"Old Hat Daltho told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the flowerpot was for a friend called Ed."	"badlands"	false	towers
+
+to say xray-help:
+	if xrayvision is true:
+		say "You can XRAY something you can't describe to see what it can or should be, with that pastry you ate. You can wait as long as you want/need";
+	else if all hintpastries are in lalaland:
+		say "You've used all the possible XRAYs";
+	else if toaster is in lalaland:
+		say "You can't put any more pastries in the toaster to XRAY them";
+	else:
+		say "You can put a[if number of hintpastries in lalaland > 1]nother[end if] pastry in the toaster to get XRAY vision to be able to describe what something can or should be"
 
 pf-warn is a truth state that varies.
 
@@ -13351,7 +13358,7 @@ instead of doing something with rivets:
 	if current action is taking:
 		say "Petty theft is not big thinking! You'd do better to take a message from the rivets.[paragraph break]Plus, you don't have the right tool." instead;
 
-check scaning statue for the first time:	[let statue be the first thing you scan] [?? weird flips]
+check scaning statue for the first time: [let statue be the first thing you scan]
 	say "You're pretty sure Trevis Vister did his best to make his statue couldn't be melted down by some silly mind-game, but maybe the settler will turn up something...hmm, nothing, except for the rivets.";
 
 check scaning statue:
@@ -14767,7 +14774,7 @@ a-text of ought is "RYYRR". b-text of ought is "RYYRR". parse-text of ought is "
 rebuked is a truth state that varies.
 
 to say lrshoo:
-	say "[if Leo is visible]You need to find some other way to shoo Leo and Rand[else]They're already off getting to know each other better[end if]"; [?? staler laters, sought, long sos, no gloss]
+	say "[if Leo is visible]The same way would mean staler laters. A long SOS would have no gloss. You don't want it to sound like Toughs, Go Thus[else]They're already off getting to know each other better[end if]";
 
 to say increm:
 	if the player's command includes "tough":
@@ -15593,9 +15600,9 @@ check fliptoing scratch paper:
 		preef scratch paper instead;
 	if keyboard is not visible:
 		say "Good idea, but tough to program without a keyboard.";
-		preef scratch paper instead; [?? if player has keyboard]
+		preef scratch paper instead;
 	if keyboard is not on slab:
-		say "You probably want to put the keyboard on the slab." instead;
+		say "You probably want to put the keyboard on the slab first." instead;
 	if caps lock is not part of the keyboard:
 		say "You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile.";
 		preef scratch paper instead;
@@ -15652,8 +15659,12 @@ chapter showing
 
 block showing rule is not listed in any rulebook.
 
-carry out showing it to: [?? show = give]
-	say "(Showing usually means giving. I'll try that.)";
+show-warn is a truth state that varies.
+
+carry out showing it to:
+	if show-warn is false:
+		say "(Showing usually means giving. I'll try that. Either will work okay.)[paragraph break]";
+		now show-warn is true;
 	try giving noun to second noun instead;
 
 chapter keyboarding
@@ -20046,7 +20057,7 @@ the shoals aslosh are a useless plural-named backdrop. they are in salted deltas
 
 chapter Old One's Solo Den
 
-Solo Den is west of Mislit Limits. printed name of Solo Den is "[if ed yerg is reflexive]Lone Sod[else]Old One's[end if] Solo Den". Solo Den is an innie room in towers. "You see some writing on the wall here, and you smell something, too."
+Solo Den is west of Mislit Limits. printed name of Solo Den is "[if ed yerg is reflexive]Lone Sod[else]Old One's[end if] Solo Den". Solo Den is an innie room in towers. "You [one of]look around and are led soon to[or]see[stopping] some writing on the wall here, and you smell something, too."
 
 Ed Yerg is a person in Solo Den. description is "[if ed is reflexive]Despite a wrinkled face, his hair is gleaming and dark[else if crocus is not in lalaland]Ed looks a little sad[else]Ed looks relaxed and ready to chat[end if]."
 
@@ -20059,8 +20070,6 @@ check going east in solo den (this is the force give flowerpot rule):
 		say "Before you leave, you remember Old Hat Daltho's speech--the flowerpot seems like a nice gift for Ed, now that Ed is nicer. You give it to him.[paragraph break]'Come back if you need help with Castle Apcur!' he says, as he goes to set the crocus out somewhere nice.";
 		now flowerpot is in lalaland;
 	continue the action;
-
-[??led soon]
 
 Old Hat Daltho is an undesc.
 
@@ -20574,7 +20583,10 @@ a room can be accessible, sideview, mightaswell or inaccessible. a room is usual
 
 after fliptoing a guardian (this is the track guardian progress rule):
 	let G be up;
-	choose row with guy of noun in table of guard-org;
+	if noun is not natives and noun is not ingrates:
+		choose row with guy of noun in table of guard-org;
+		now room blockdir entry of loc entry is tower-accessible;
+		now loc entry is tower-accessible;
 	if location of player is loc entry:
 		now G is blockdir entry;
 	else:
@@ -20621,14 +20633,14 @@ after fliptoing a guardian (this is the track guardian progress rule):
 		if any-cleared is false:
 			now any-cleared is true;
 			say "Well, this is the first place you cleared all the guardians from, which feels nice. [if spec-o-scope is unexamined]You don't know if you need any area completely cleared, but maybe you can check the scope[bak-copse] for more guidance[end if].";
-		else if RG is 0 or BG is 0:
+		else if number of guardians not in lalaland is 0:
+			say "That's all the pesky guardians gone! You're free to move around. But now, you want to move beyond. To the other side of the lake.";
+		else if number of tower-accessible rooms is 11:
 			if clear-warn is false:
 				say "You can move everywhere, now, but maybe you can clear a few more passages, if you want.";
 				now clear-warn is true;
-		else if RG + BG < 6:
+		else if number of tower-accessible rooms >= 9:
 			say "You probably don't have much left to do, to get everywhere you need.";
-		else if number of guardians not in lalaland is 0:
-			say "You've gotten rid of everyone! Now to get across the lake."; [?? tighten up a bit]
 	continue the action;
 
 clear-warn is a truth state that varies.
@@ -22257,7 +22269,7 @@ understand "throne" as thrones.
 
 description of thrones is "They're made out of, not metal, but locusts. Well, not quite that."
 
-understand "hornet" as a mistake ("The thrones are plural. Besides, just one hornet--what could it do?") when thrones are visible. [?? move to ToA]
+understand "hornet" as a mistake ("The thrones are plural. Besides, just one hornet--what could it do?") when thrones are visible.
 
 understand "shorten" as a mistake ("[if thrones are visible]Well--not shorten, but break it down...you see red from the effort[else]They're more likely to shorten you with a few stings[end if].") when thrones are visible or hornets are visible.
 
@@ -23100,6 +23112,18 @@ does the player mean doing something with icon when icon is off-stage: it is lik
 the coin is a thing. description is "The coin really looks more omen-y than money. Perhaps its value is only symbolic, and it could help you with the stuff money can't buy. There's a singed design on it, which is signed."
 
 [giving it to: coin, icon, coins, icons??]
+
+check giving coin to when mrlp is others:
+	if noun is coin or noun is icon or noun is coins or noun is icons or noun is s-i or noun is s-c:
+		if second noun is storage:
+			try inserting noun into second noun instead;
+	if second noun is curtis:
+		say "No, it's all yours[unless noun is coin or noun is coins], especially now that you've changed things a bit[end if]!" instead;
+	if second noun is len craig:
+		say "Not Len's sort of currency." instead;
+	if second noun is Red Rat Art Erd or second noun is Dr Tera Darter:
+		say "[second noun] is probably interested in something much more obviously valuable." instead;
+	say "No, that's yours. A present from Curtis[unless noun is coin or noun is coins], well, in its old form[end if]. But what to do next with it?" instead;
 
 a-text of coin is "YRYR". b-text of coin is "YRYP". parse-text of coin is "i[sp]c[sp]o[sp]n". coin is cheat-spoilable.
 
@@ -24906,7 +24930,7 @@ vile veil	"The vile veil is just a cheapo to explain why you can only go back no
 popgun	"[if dart is in popgun]The popgun's locked and loaded.[else if boing is reflexed]Put the dart in the popgun.[else]The popgun is broken. More precisely, its boing mechanism is broken.[end if]"
 boing mechanism	"[one of]So, the mechanism doesn't go BOING.[plus][or]A eureka moment could change the boing mechanism's brokenness.[plus][or]Or, if you notice the mechanism's serial number...[plus][or]BINGO.[minus][cycling]"	--	"BINGO"
 camo-coma	"The camo-coma is just a barrier to prevent you going any way but west from the seminar."
-smart people sign	"[one of]The sign indicates Rand and Leo don't belong in the shack. But if you've tried going north, you know they'll want to try[if rebuked is true], and they've been persistent, so maybe you need another way to say things[end if].[plus][or]It's time to [if rebuked is true]find another way to [end if]say good-bye to Rand and Leo, but you can't be all 'Obey, Dog.'[plus][or]Maybe the sign can help you say [if rebuked is true]one more thing[else]what[end if] you need to, to ditch Rand and Leo?[plus][or][sl-t-l].[minus][cycling]"	--	"[if entry 1 of byebyes is log ons]SO LONG[else if entry 1 of byebyes is alert]LATER[else]TOUGH[end if]"	[??]
+smart people sign	"[one of]The sign indicates Rand and Leo don't belong in the shack. But if you've tried going north, you know they'll want to try[if rebuked is true], and they've been persistent, so maybe you need another way to say things[end if].[plus][or]It's time to [if rebuked is true]find another way to [end if]say good-bye to Rand and Leo, but you can't be all 'Obey, Dog.'[plus][or]Maybe the sign can help you say [if rebuked is true]one more thing[else]what[end if] you need to, to ditch Rand and Leo?[plus][or][sl-t-l].[minus][cycling]"	--	"[if entry 1 of byebyes is log ons]SO LONG[else if entry 1 of byebyes is alert]LATER[else]TOUGH[end if]"
 alert letters	"[one of]The sign indicates you may want to get rid of Rand and Leo, who are not very smart.[plus][or]Say LATER.[minus][cycling]"
 log ons letters	"[one of]The sign indicates you may want to get rid of Rand and Leo, who are not very smart.[plus][or]Say SO LONG.[minus][cycling]"
 ought letters	"[one of]The sign indicates you may want to get rid of Rand and Leo, who are not very smart.[plus][or]Say TOUGH.[minus][cycling]"
@@ -25250,7 +25274,7 @@ Lord Al	"[ollard-hint]"
 Dr Lola	"[ollard-hint]"
 tekno-token	"The tekno-token is currency to help you buy stuff after haggling in the Clangier Clearing."
 lost slot	"[if player has s-i]You need to put the sonic icons in the slot to open the So-Great Storage[else if s-i are in lalaland]You've used the slot already[else]You need to reform the coins Curtis gave you to put something in the lost slot[end if]."
-passport	"The passport will get you through the gates in the Gates Stage, but you need to study it to enter the Admit-Us Stadium safely. The viewer and searcher can help, as can the message if you go north and fail." [??PREP]
+passport	"The passport will get you through the gates in the Gates Stage, but you need to study it to enter the Admit-Us Stadium safely. The viewer and searcher can help, as can the message if you go north and fail."
 a near arena	"You can't change the [if near arena is examined]arena[else]Admit-Us Stadium[end if], but you can enter it  via the gates."
 viewer	"[one of]You can't seem to focus on the viewer. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the viewer.[plus][or]The other is to see how not to be called a perp.[plus][or]REVIEW the viewer, or...[plus][or]...PREP so you are not a perp.[minus][cycling]"
 searcher	"[one of]You can't seem to focus on the searcher. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the searcher.[plus][or]The other is to see how not to be called a perp.[plus][or]RESEARCH the searcher, or...[plus][or]...PREP so you are not a perp.[minus][cycling]"	[end others hinting]
@@ -25422,7 +25446,7 @@ carry out liliing:
 	if there is a maxbeforepause entry:
 		now threshold is maxbeforepause entry;
 	let cur-e be 0;
-	now my-table is mytab entry; [?? what about last first]
+	now my-table is mytab entry;
 	let jjk be descr entry;
 	if there is a lasties entry:
 		say "LAST: [lasties entry][paragraph break]";
@@ -26947,7 +26971,7 @@ every turn when hinteachmove is true:
 
 chapter heing
 
-[* HE verifies that everything in the current room is hinted. HE vs HINTVIS??]
+[* HE verifies that everything in the current room is hinted. Versus, say, hintall/hintvis, which tries to go hint a ton of stuff.]
 
 heing is an action out of world.
 
