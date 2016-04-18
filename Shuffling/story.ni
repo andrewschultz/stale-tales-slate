@@ -14252,7 +14252,7 @@ understand "evt" as evting.
 
 carry out evting:
 	now ettest is whether or not ettest is true;
-	say "Every-turn-test is now [if ettest is true]on[else]off[end if]."
+	say "Every-turn-test is now [if ettest is true]on[else]off[end if].";
 	the rule succeeds;
 
 every turn when ettest is true:

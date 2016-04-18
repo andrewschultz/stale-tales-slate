@@ -146,6 +146,9 @@ if ($falsePos) { $s2 = "(FALSEPOS.TXT) $falsePos \[\]'s.\n"; } else { $s2 = "FAL
 if ($badans) { $s3 = "(BADANA.TXT) $badans total likely bad anagrams, disable with \[x\].\n"; } else { $s3 = "You have no bad anagrams. Well done!\n"; }
 
 print "TEST RESULTS:@weedDir[0] bad anagrams,10,$badans,0,<a href=\"badana-@weedDir[0].txt\">The Culprits</a>\n";
+print "TEST RESULTS:@weedDir[0] soft duplicates,100,$di,0,<a href=\"dupes-@weedDir[0].htm\">The Culprits</a>\n";
+print "TEST RESULTS:@weedDir[0] false positives,100,$falsePos,0,<a href=\"falsepos-@weedDir[0].txt\">The Culprits</a>\n";
+print "TEST RESULTS:@weedDir[0] odd matches,100,$falsePos,0,<a href=\"oddmatch-@weedDir[0].txt\">The Culprits</a>\n";
 
 print A2 "$s1";
 
@@ -320,7 +323,7 @@ sub mash
 	}
 	else
 	{
-	$posBad++;
+	$posBad++; push (@badPos, $line);
 	if (!$notWeirdYet)
 	{
 	print B "$posBad ($line) $_[0]: " . cromstring($_[0]) . "\n";
@@ -590,7 +593,7 @@ while (($a = <A>) && (stillWorth()))
 	{
 	  if (!$dupes{$acrom})
 	  {
-	    $falsePos++; print B2 "false \[\] $falsePos on $a line $line\n"; $fapo{$acrom} = "$a-$line";
+	    $falsePos++; print B2 "false \[\] $falsePos on $a line $line\n"; $fapo{$acrom} = "$a-$line"; push (@false, $falsePos);
 	  }
 	  next;
 	} #move this after mash ($a) or back to the top to see about duplicated stuff

@@ -561,6 +561,7 @@ blurb
 "Cheaters['] Hectares."
 "Clear-Cut Clue-Trac."
 "Clue a Ton, Clean Out!"
+"Cold Hearts Cheat Lords."
 "Cued-Gain Guidance."
 "Cynthia's Hints Cay."
 "D'Onofrio Info Door."
@@ -2759,6 +2760,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "So Unfed? No-Feuds Fondues!"	true
 "So-Urgent Gun Store"
 "Soapy Spa, Yo--So Pay!"	true
+"Sobol Bolos"
 "SoCal Colas" []
 "Socko Cooks"
 "Socrates Coasters" []
@@ -9016,6 +9018,7 @@ blurb	prio
 "Bravest Star Bev[r], by Rav Best"
 "Brawl On, Barn Owl[r], by Al Brown"
 "Bray Oft, Frat Boy[r], by Fab Troy Bayfort"
+"Bray Soft, Frat Boys[r], by Fay Borst"
 "Brazen Guile, Gaberlunzie[r], by [if player is male]Bazil Gurnee[else]Zenia Bulger & Eliza Gruben[end if]"
 "Break Down, Woken Bard[r], by [if player is male]Andrew Bok[else]Kendra Bow[end if]"
 "Breaking King Bear[r], by [if player is male]Ben Kigra[else]Inge Bark & Angi Berk[end if]"
@@ -9179,6 +9182,7 @@ blurb	prio
 "Cholesterol: Tolls Cohere[r], by Rochelle Tso"
 "Chorale Cholera[r], by Carole H. LaRoche"
 "A Chore, Horace: Oh, Care or Ache![r] by Rao Che"
+"Chortled a Cold Heart[r], by [if player is male]Chad Toler[else]Dot Rachel[end if]"
 "Chosen Boy: One Shy Cob[r], by [if player is male]Shon Boyce[else]Ebony Ochs[end if]"
 "A Chosen Has Once[r], by [if player is male]Sean Cho[else]Noe Cash[end if]"
 "Christoper's Rectorships[r], by Horst Crespi & Itch Prosser"
@@ -14051,6 +14055,7 @@ blurb	prio
 "Total Held Death Toll[r], by Odell Hatt"
 "Totally Tall Toy[r], by Lyla Ott"
 "Tote Bag Got Beat[r], by Gabe Ott"
+"Tots Held the Dolts[r], by Ted Holst"
 "Tots['] Brief Frostbite[r], by Boris Fett"
 "Tough Ones Not So Huge Gone South[r], by Hugo Osten"
 "Tough Shire, Our Heights: The Roguish Eight Hours[r], by [if player is male]Sergio Huth[else]Tori Hughes[end if]"
@@ -21592,7 +21597,6 @@ blurb
 "'Aw, Fern!' / 'Fawner.'"
 "'Aw, may I?' / 'I'm away.'"
 "'Ay, Doug's so gaudy.'"
-"'Ay, rude one! You are done!'"
 "'Ay, Sid. I'd say Daisy Day is.'" []
 "'Ay, that's tasty! Ah!'"
 "'Bad Leon!' / 'Bald one, old bean!' ... 'A blonde! Lean bod!'" []
@@ -22412,6 +22416,7 @@ blurb
 "'Ow, not by Town, Boy.'"
 "'Owe? Woe!'"
 "'Owners, dis rowdiness.'"
+"'Oy, a rude one! You are done!'"
 "'Oy, a wag? Go away!'" []
 "'Oy, Bill's silly, Bo!'" []
 "'Oy. Sad.' / 'Do say.'"
@@ -33531,6 +33536,7 @@ blurb
 "'Banter! Rig bartering!'"
 "'Bargain! Baring a grin, bag!'"
 "'Best price!' / 'Creeps bit!'"
+"'Betray me? MY REBATE!'"
 "'Bilge as big sale? Base, Gil!'"
 "'Boonies! Soon, I be...'"
 "'Buy em!' / 'Um, bye!'"

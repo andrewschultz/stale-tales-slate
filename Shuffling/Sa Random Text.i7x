@@ -1826,7 +1826,7 @@ blurb
 "Ghosted, the dogs get shod."
 "Ghostly thy slog, sly goth!"
 "Giant Toll Allotting: a Long Tilt."
-"Gift, ha? A fight, fit hag!"
+"Gifts, ha? Fist, hag!"
 "Gild grungy dry lugging, grudgingly."
 "Give way, gay view!"
 "A giver's grave is rags. Vie!"
@@ -2446,6 +2446,7 @@ blurb
 "Shove? Low. Oh, wolves, show love!"
 "Shrub fire. Brief rush. Refurbish."
 "Si Post posits: to piss is tops!"
+"Sick, Stu is stuck. It sucks."
 "Sigh. Renter rings there, green shirt."
 "Silent St. Neil!"
 "The silly hills yet yell this, lithe, sly."
@@ -3070,7 +3071,7 @@ blurb
 "'Tuxedos? Detox us!'"
 "'Tycoon firm? CONFORMITY!'"
 "'Um, to ire! Our time!'"
-"'Un-Jail Julian!'"
+"'Un-Jail Julian!'" []
 "'Unbar Urban Braun!'" []
 "'Unbiased? Rot! Subordinate!'"
 "'Underfed? Refunded!'"
@@ -3172,7 +3173,7 @@ blurb
 "'Aliterate tail eater!' / 'Retaliate!'"
 "'Any D&D? Dandy?' The nerds laugh."
 "'The APIs ape this!' / 'Ha, spite!'"
-"'The APIs it heaps: ah, spite!'"
+"'The APIs it heaps: phase it!'" []
 "'App? Pap!'"
 "'Apply a PayPal app, Aly!'"
 "'Ar, I'd raid a dir!'"
@@ -3346,7 +3347,7 @@ blurb
 "The nerds revere AV Nerd Dr. Evan Vander."
 "The nerds sing, off-key, 'Let's hate athletes.'"
 "The nerds wonder who is too dumb to use the Navster Servant to find taverns."
-"'Nerdy teas? Sedentary easy trend!'"
+"'Nerdy teas? Sedentary easy trend!'" []
 "'A network! Rate/know!' / 'Weak. Torn.'"
 "'Neuromancy? NO! Numeracy!'"
 "'Neurons non-user!'"
@@ -3371,7 +3372,7 @@ blurb
 "'Oo! Ban a noob!'"
 "Opinions about Nerd Renn Redd. You want to disagree with them all." []
 "'Optimality! Limit a typo!'"
-"'Panic, I? CPAN!'"
+"'Panic, I? CPAN!'" []
 "'Patric's pics-art? A script!'"
 "'PeerSci Creep is Precise!' they admit, exhaustedly."
 "'Pen this: ShipNet!'"
@@ -3394,6 +3395,7 @@ blurb
 "'Ron Isom? Moron is SO minor!'"
 "'Rut?' / 'Echo. Retouch our tech.'"
 "'Sad. Forget dafter gos to defrags.'"
+"'Sad purge? UPGRADES!'"
 "Scathe-tone: 'NOT THE CASE!'"
 "'A script.' / 'Scrap it. It's...'"
 "'Sell short shell sort? She trolls!'"
@@ -3435,7 +3437,7 @@ blurb
 "'Threading hit danger? Read THING.'"
 "Thunder, the durn nerd hut."
 "'To us be obtuse? Bust! E-o!'"
-"'To use IQ? Quite so!'"
+"'To use IQ? Quite so!'" []
 "'Two-bit-wit bot!'"
 "'UI, Tom? I'm out!' moans one hard-core programmer."
 "'Un-hack a chunk? Uck, nah.'"
@@ -3595,7 +3597,7 @@ blurb
 "'Argument, mega-runt?'"
 "'At rut, man? ARM! TAUNT! A TANTRUM!'"
 "'Bad egg: BAGGED!'"
-"'Blockader-clod, break!'"
+"'Blockader-clod, break!'" []
 "'Boast, runt? Toast! Burn!'"
 "BRAG? FIE! BIG FEAR!"
 "'Bull good, dull goob!'"
@@ -3615,7 +3617,7 @@ blurb
 "'Fail now, low naif wan foil!'"
 "'Feel my too-plain pain tool! Optional? Oi, pal! NOT!'"
 "'Feints--finest? Intense? Stiff!'" []
-"'FIE! DROP, PRIDE OF DRIP-FOE!'"
+"'FIE! DROP, PRIDE OF DRIP-FOE!'" []
 "'A fight? Ha, gift!'"
 "'FIND LOSER-NERDS. FOIL!'"
 "'FOE: BULLIED? DOUBLE LIFE? BLUE? FOILED!'"
@@ -3671,10 +3673,9 @@ blurb
 "'No muscle, lone scum!'"
 "'Not just da prominent. PREDOMINANT!'"
 "'Oh, a fade ahead of a foe! Dah!'"
-"'Oh, prone no-hoper!'"
 "Oh, to rebut the brute!"
 "'One of those pesty types, eh?'"
-"'One sour onerous rue--soon!'"
+"'One sour onerous rue--soon!'" []
 "'One turf, foe-runt!'"
 "'Oof, rat! Too far!'"
 "'Pasty patsy!'"
@@ -3699,7 +3700,7 @@ blurb
 "'Spar? Tut, upstart!'"
 "'Spoil me? Some lip! Lose, imp!'"
 "'Step to me, mote-pest? Meet STOP!'"
-"'STINKER TINKERS? NET RISK!'"
+"'STINKER TINKERS? NET RISK!'" []
 "'Strike, cad? Sidetrack!'"
 "'Stud? NO! Dust on donuts!'"
 "'Stupid-smart upstart dims!'"
@@ -3738,7 +3739,7 @@ blurb
 "The [ri-tri] decry The Villain In The Villa. The one they're blocking you from. Hooray, mob logic."
 "The [ri-tri] discuss what to hate next. A 'BINGO! AMEN!' restarts their bemoaning."
 "The [ri-tri] seem particularly upset you destroyed store I & R[if store i is in trips strip] (okay, they're wrong about I)[end if]."
-"'Ah, set hates! Haste!'"
+"'Ah, set hates! Haste!'" []
 "'Alien scum! Nice? MAULS!' Masculine calumnies."
 "'Apology? A ploy! Go!'"
 "'Assistant satanists!' someone yells. Nobody sees any, so they go back to you."
