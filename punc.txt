@@ -39,7 +39,7 @@ sports chatter	1	1	0
 idiotic lecture points	-1	1	0
 overdone movies	0	1	-1
 sicko movies	2	1	-1
-store c ads	2	1	0
+store c ads	1	1	0
 store c competitors	2	0	-1
 tokers nonsense	1	1	0
 ########store u

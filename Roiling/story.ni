@@ -23108,10 +23108,13 @@ the coin is a thing. description is "The coin really looks more omen-y than mone
 
 [giving it to: coin, icon, coins, icons??]
 
-check giving coin to when mrlp is others:
-	if noun is coin or noun is icon or noun is coins or noun is icons or noun is s-i or noun is s-c:
-		if second noun is storage:
-			try inserting noun into second noun instead;
+a thing can be final-puz. a thing is usually not final-puz.
+
+s-i is final-puz. s-c is final-puz. coin is final-puz. coins are final-puz. icon is final-puz. icons are final-puz.
+
+check giving a final-puz thing to when mrlp is others:
+	if second noun is storage:
+		try inserting noun into second noun instead;
 	if second noun is curtis:
 		say "No, it's all yours[unless noun is coin or noun is coins], especially now that you've changed things a bit[end if]!" instead;
 	if second noun is len craig:

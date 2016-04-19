@@ -53,6 +53,7 @@ blurb
 "Algey Yagle"
 "Aline Laine"
 "Alisha Salahi"
+"Alister Lasiter-Artiles"
 "Aliyah Hayali"
 "Allegra Allgaer"
 "Allie Leali"
@@ -133,7 +134,7 @@ blurb
 "Betlyne Bentley"
 "Beula Aubel"
 "Bianca Bacani"
-"Bionca Cobain"
+"Bionca Cobain-Bianco"
 "Bitsy Tisby"
 "Blain Albin-Balin"
 "Blaine Niebla"
@@ -232,7 +233,6 @@ blurb
 "Cleo Cole"
 "Cletus St. Luce"
 "Clorinda Alcindor"
-"Cobain Bianco"
 "Cobey Boyce"
 "Coley Loyce-Coyle"
 "Colin Nicol"
@@ -244,7 +244,7 @@ blurb
 "Cordelia DeLorica"
 "Cordie D'Erico"
 "Corella Callero"
-"Corella LoClare"
+"Corella LoClare" []
 "Corene Cereno"
 "Cori Rico"
 "Corinda Conradi"
@@ -301,7 +301,7 @@ blurb
 "DeLana Andale"
 "Delsie Seidel"
 "Dena Nead"
-"Denard Darden"
+"Denard Darden" []
 "Denis Sedin"
 "Denise Seiden-Deines"
 "Denny Nyden"
@@ -329,13 +329,11 @@ blurb
 "Dorinda DiNardo"
 "Dorine DeNiro"
 "Doron Rondo"
-"Dorrian Riordan"
 "Doug Dugo"
 "Doug Von Godunov"
 "Dougal O'Glaud-Lugado"
 "Draco Acord"
 "Drago Goard"
-"Drake Kader"
 "Drake Kader-Darke"
 "Duane Auden"
 "DuShon Hudson"
@@ -379,7 +377,7 @@ blurb
 "Enola O'Neal"
 "Enos J. Jones"
 "Enrica Craine" []
-"Enrica Racine"
+"Enrica Racine" []
 "Erby Byer-Brey"
 "Eric Rice"
 "Erich Reich" []
@@ -442,7 +440,7 @@ blurb
 "Giana Nagai"
 "Gibby Bigby"
 "Gideon DiGeno"
-"Gideon Endigo"
+"Gideon Endigo" []
 "Gilberto Toilberg"
 "Giles Sigel-Selig"
 "Giorgi Riggio"
@@ -476,7 +474,6 @@ blurb
 "Haley Healy-Leahy"
 "Hana Haan"
 "Hank Khan"
-"Hanna Hanan"
 "Hanna Nahan"
 "Hannes Hansen"
 "Hans Nash"
@@ -489,8 +486,7 @@ blurb
 "Hedy Hyde"
 "Hektor Rothke"
 "Helen Ehlen"
-"Helena Leehan"
-"Helena Lehane"
+"Helena Lehane-Leehan"
 "Helga Hagel"
 "Helgi-Leigh Heigl"
 "Henri Rhine"
@@ -499,7 +495,7 @@ blurb
 "Herbert Berreth"
 "Herbie Hieber"
 "Hercules Luchrese"
-"Hercules Schueler"
+"Hercules Schueler" []
 "Herm Rehm"
 "Herma Maher"
 "Hermes Mesher"
@@ -668,11 +664,11 @@ blurb
 "Lew Roth-Whortle"
 "Lewis Wiles"
 "Lexina Axline"
-"Leyland Yelland-Landley"
+"Leyland Yelland-Landley" []
 "Libby Bilby"
 "Lida Dial"
 "Lilla Lalli"
-"Lilse Liles"
+"Lilse Liles" []
 "Linda Landi-Dalin"
 "Linne Lenin"
 "Linsey Selyin-Insley"
@@ -727,9 +723,9 @@ blurb
 "Mariah Hamari"
 "Mariam Ammari"
 "Mariano Inamora-Amorani"
-"Mariano Romania"
+"Mariano Romania" []
 "Marie Maier"
-"Mariela Laramie"
+"Mariela Laramie" []
 "Marietta Amaretti"
 "Marilu Rumali"
 "Marion Marino"
@@ -785,7 +781,7 @@ blurb
 "Merrie Reimer"
 "Mica Maci"
 "Micah-Chaim Amich"
-"Micha Chima"
+"Micha Chima" []
 "Michel Chmiel"
 "Michels McLeish"
 "Mikhail Il-Hakim"
@@ -796,12 +792,11 @@ blurb
 "Mladen Mandel"
 "Mohamed De Mahom"
 "Moises Simoes"
-"Mona Amon"
-"Mona Oman"
+"Mona Amon-Oman"
 "Monnie Menino"
 "Monserrate Armenteros"
 "Monte Monet-Moten"
-"Montel Melton"
+"Montel Melton" []
 "Monti Minot"
 "Mordecai DeMarcio"
 "Morgan Gorman"
@@ -884,10 +879,10 @@ blurb
 "Oscar Arcos"
 "Oskar Kosar"
 "Oskar Sroka" []
-"Oskram Markos"
+"Oskram Markos" []
 "Ossip Sipos"
 "Osvaldo Davolos"
-"Osvaldo Lovados"
+"Osvaldo Lovados" []
 "Otelia Leitao"
 "Otis Tosi"
 "Ottis Tosti"
@@ -930,6 +925,7 @@ blurb
 "Ravi Ivar"
 "Reba Baer"
 "Rebeca Bearce"
+"Reesy Reyes"
 "Reeves Seever"
 "Reg-Ben Engber-Bergen"
 "Reg Greger"
@@ -978,9 +974,8 @@ blurb
 "Rona Aron" []
 "Ronald Orland" []
 "Ronda Ardon-Rando"
-"Rondel Nolder"
-"Rosalie Erisola"
-"Rosalie Osrelia"
+"Rondel Nolder" []
+"Rosalie Erisola-Osrelia"
 "Rosamond Doorsman"
 "Rosana Aarons"
 "Rosann Ranson"
@@ -1025,14 +1020,14 @@ blurb
 "Sanjoy Jayson"
 "Sargent Stanger"
 "Sarina Ansari"
-"Sarina Arians"
+"Sarina Arians" []
 "Sash Hass"
 "Scobie Biscoe"
 "Scoby Cosby"
 "Scott Cotts"
 "Scottie Sicotte"
 "Searle Easler"
-"Selya Ayles"
+"Selya Ayles" []
 "Serban Nabers-Barnes"
 "Serge Seger"
 "Sergei Griese"
@@ -1068,7 +1063,7 @@ blurb
 "Shelton Holsten"
 "Shene Sheen-Hense"
 "Shenita-Tinesha Sineath"
-"Shenna Hansen"
+"Shenna Hansen" []
 "Sheri Hiser-Isher"
 "Sherinda Sheridan"
 "Sherman Harmsen-Mashner"
@@ -1152,7 +1147,7 @@ blurb
 "Tisha Haist"
 "Titus Suitt"
 "Tobias Bosita"
-"Tobias Saboti"
+"Tobias Saboti" []
 "Tomas Matos"
 "Tomesa Moates"
 "Tonbert Robnett-Bottner"
@@ -1311,7 +1306,7 @@ blurb
 "Icy Vat Cavity"
 "Ill-Shock Hillocks"
 "the ill-stink lit kilns"
-"Impaled Mad Pile"
+"Impaled Mad Pile" []
 "Infernal Feral Inn"
 "the Ivy's Sty-Hive"
 "Joint-Corpse Projections"
@@ -1499,7 +1494,6 @@ blurb
 "Bias of Fabio's: I so fab!"
 "Big note: I go, bent, to being bit, gone."
 "Big screen begs nicer, recs being."
-"Big top bog pit."
 "A big town's wan bigots sat bowing."
 "Bingo! Mo['] booming big moon."
 "A Bird, Rabid!"
@@ -1525,7 +1519,7 @@ blurb
 "A brown bar now? Warn Bo!"
 "Bruin-hogs? Rough nibs? No big rush!"
 "Burble, lubber!"
-"Burble, rubble, burble!"
+"Burble, rubble, burble!" []
 "Busy elk, blue sky: be sulky!"
 "Buy not bounty!"
 "A cabin, Bianca!" []
@@ -1643,8 +1637,7 @@ blurb
 "Earn us a nurse-sun-era!"
 "Eat. Flirt. Flat tire. Late rift."
 "Eat snow, Sea Town? No sweat!"
-"Ed, spun, ends up un-sped."
-"Ed's pun ends up un-sped."
+"Ed's pun, ends up un-sped. Ed? Spun."
 "Ego, fret. Get roof to forge. Ferg, too."
 "Egos, drag! Go, grades so ragged!"
 "Eh, drips. His derp perish'd."
@@ -1743,8 +1736,7 @@ blurb
 "Find your foundry. I unify, Rod."
 "Finer cold corn field: Nordic elf frolic den."
 "Fireballs befall, sir. Rifles lab?"
-"First a fart is far. Sit, fat sir!"
-"First, a frat is fat, sir!"
+"First a fart is far. Sit, fat sir!" []
 "The first frets hit. Theft, sir!"
 "First hot, this fort, it froths of thirst!"
 "Firstly, voice: victory flies, city of silver!"
@@ -1823,7 +1815,6 @@ blurb
 "Get manic, magnetic magic net."
 "Get off the hog. Go heft the fog!"
 "Get sour! Sore gut got sure to surge."
-"Ghosted, the dogs get shod."
 "Ghostly thy slog, sly goth!"
 "Giant Toll Allotting: a Long Tilt."
 "Gifts, ha? Fist, hag!"
@@ -1942,7 +1933,7 @@ blurb
 "Hyenas row, snowy hare? Wars, honey."
 "I am God, I go mad!"
 "I, cactus, caustic."
-"I cast, TIC as Staci."
+"I cast, TIC as Staci." []
 "I conform! O, confirm! Co-inform!"
 "I crush his cur."
 "I crushed his crude cries. DUH!"
@@ -1961,7 +1952,7 @@ blurb
 "I love Leo IV! O, evil!"
 "I nosh on his shin, o!"
 "I, rankest, streak in, a stinker."
-"I, relay yer ail? Ya rile, ye liar!"
+"I, relay yer ail? Ya rile, ye liar!" []
 "I sally a silly, ill say. Ail, sly!"
 "I sent off fine soft feints of InfoFest." []
 "I sent off fine sotf feints of one stiff info fest!"
@@ -1970,7 +1961,7 @@ blurb
 "I, Thug of Hugo, fit, if tough."
 "I, to differ, fortified."
 "I'd unloose loud noise: DIE ON, SOUL!"
-"I'm soft motifs? Mist of mo['] fist!"
+"I'm soft motifs? Mist of mo['] fist!" []
 "I'm sore, Sir Moe."
 "Ice-Malt Climate."
 "Icy altar. A tail-cry: ALACRITY!"
@@ -2091,6 +2082,7 @@ blurb
 "Mean bosom bemoans mo['] moonbeams."
 "Meats of some fat: feast mo[']."
 "Meld, ye medley!"
+"Men fret, ferment."
 "Merely sob, leery mobs? Be more sly!"
 "Mess and Madness!"
 "Midst hype, my depth is empty dish, shy, dim pet."
@@ -2236,7 +2228,7 @@ blurb
 "Oh was a show so wah."
 "Oh, wits to wish so with-it. Show!"
 "Oi, best it be so."
-"Oi, last I lost a sail to soil at it, also!"
+"Oi, last I lost a sail to soil at it, also!" []
 "Oi! Last to sail at soil, St. Iola!" []
 "OK! Awe awoke!"
 "OK, go find food, king."
@@ -2306,7 +2298,7 @@ blurb
 "The Pinto, tho['] inept, thine opt."
 "Pioneer! I reopen one pier!"
 "Pip fled, flipped!"
-"The pire pit here: pheer it!"
+"The pire pit here: pheer it!" []
 "A pithy yap hit. Ah, pity!"
 "Plain sad paladins."
 "Play up a pulpy lap? Yup, lay, pup."
@@ -2383,8 +2375,8 @@ blurb
 "A rhino! No hair! Oh, I ran!"
 "Rid now, in word or wind I drown!"
 "Riffed-on, friend of Fen-fiord?"
-"The rifts! The first theft, Sir."
-"Right, foes. Forget his foresight!"
+"The rifts! The first theft, Sir." []
+"Right, foes. Forget his foresight!" []
 "Rigid fate. Gift aired: gratified."
 "Ripeness or repression re-opens, sir!"
 "Rise, bad seabird! A bride's bread is braised!"
@@ -2406,7 +2398,7 @@ blurb
 "The Royal Ray Hotel? Ye harlot!"
 "Sad egg Ed's gag sagged."
 "Sad green grenades!"
-"Sad moron so random. Moods ran."
+"Sad moron so random. Moods ran." []
 "Sad, riven invaders."
 "Sad then the sand had sent hat dens."
 "Safe to east of fate, so!"
@@ -2487,7 +2479,7 @@ blurb
 "So snow swoons."
 "So sourly your loss, Roy's soul."
 "So, tea, Oates? Eat so. To sea! O, east!"
-"So there, the rose? Oh, trees!"
+"So there, the rose? Oh, trees!" []
 "So, turf of rust to furs."
 "So wanted down east? No, wasted, new toads!"
 "So weak, we soak. Awe's OK."
@@ -2495,8 +2487,8 @@ blurb
 "Social men, claim one coal mine!"
 "Soda fury? Yo, frauds, your fad's four days!"
 "Sods pace, sad copes, passcode."
-"The sofa: oh, a fest of hates!"
-"Soft hint: shift not this font!"
+"The sofa: oh, a fest of hates!" []
+"Soft hint: shift not this font!" []
 "Soft-worn snow fort, oft sworn to frowns."
 "Solemn days. Nosy damsel, slay demons!"
 "A solid sad oil, laid so."
@@ -2525,8 +2517,6 @@ blurb
 "Spoils is SLOP!"
 "A sportive era pivots. Pastor, vie."
 "Spry, him? Shy, prim, shrimpy!"
-"Spy him, my ship."
-"Spy him my ship, shy imp!"
 "Squint, St. Quin!"
 "Stain'd, I stand in Tad's."
 "Stall, if it falls ill fast!"
@@ -2570,7 +2560,7 @@ blurb
 "Their vow: over with! Vie, wroth!"
 "A theme's the same, eh, mates?" []
 "Then was the swan sat, hewn."
-"There is her site, sire. The ether is here. Sit."
+"There is her site, sire. The ether is here. Sit." []
 "Therese the Seer."
 "Thimbles blest him."
 "Thin Gloom Moonlight."
@@ -2590,7 +2580,6 @@ blurb
 "Thy Erased Three Days: Ye Trashed."
 "Thy grim myth-rig, my right."
 "Thy real earthly heal-try."
-"Thy row, worthy tho['] wry."
 "Thy row: wry, tho['] worthy."
 "Thy urge: try huge theurgy? Ugh, Trey! Yer...thug!"
 "Tied finely, yet infidel: definitely, tidy feline!"
@@ -2612,8 +2601,8 @@ blurb
 "To hiss so this is shot: Hi, toss! Hit! SOS!"
 "To Lose Les Too? Ole Sot!"
 "To marry my art or army? Rot."
-"To miss mist so is most... it... moss!"
-"To miss moss: it smit so."
+"To miss mist so is most... SOS, Tim!"
+"To miss moss: it smit so." []
 "To Pop Ferry, poetry prof: rot, foppery of property!"
 "To refuse fee-tours, refute so. Use forte! Reuse oft! Our fetes! Euro-fest!"
 "To ride or diet? Do tire."
@@ -2704,7 +2693,7 @@ blurb
 "Wild, short, this world dost whirl! (Doth swirl?) Dirt howls!"
 "A wimp's truth: up with smart! Swat! Triumph!"
 "Win, fog of wing offing/wowing!"
-"The wind hid, went with Ned: thin dew."
+"The wind hid, went with Ned: thin dew." []
 "Wind tower, wired town: write down! Won't? Weird!"
 "The winds hint dews. Wend: this wish, tend."
 "Wined, in dew? Win-win deed!"
@@ -2961,7 +2950,7 @@ blurb
 "'Or mass arms so? Morass!'"
 "'Orgs Won? So wrong!'"
 "'Ouch! Got ToughCo to cough!'"
-"'Own org? WRONG-O!'"
+"'Own org? WRONG-O!'" []
 "'Pardon po['] darn Dr. Napo!' / 'Darn po['] and pro-pardon!'"
 "'Parity? I party!'"
 "'Pay gold, goad, ply: PLAY GOD!'"
@@ -2979,6 +2968,7 @@ blurb
 "'Posh trots stop short!'"
 "'Power games? Sewage romp!'"
 "'Power lines renew? SPOIL! Wiles-prone! Replies, NOW!'"
+"'Pragmatic? A grim pact!'"
 "'Pressures repress us!'"
 "'Pro-money? Yep? Moron!' Prey no mo[']!"
 "'Rallies! All rise!'"
@@ -2987,7 +2977,7 @@ blurb
 "'A raw sinful law's unfair!'"
 "'Re-infest, ferniest!'"
 "'Refuse Feuer's Sur-Fee!'" []
-"'Refusing gunfire's fringe? Us?'"
+"'Refusing gunfire's fringe? Us?'" []
 "'Regimen: I'm green! Merge in!'"
 "'Release Al Reese.'"
 "'Repression? No reprises!'" []

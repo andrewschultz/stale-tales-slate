@@ -22,7 +22,7 @@ my $allLines;
 
 if (@ARGV[0] eq "e") { `c:\\writing\\dict\\punc.txt`; exit; }
 
-@titleWords = ("by", "a", "the", "in", "if", "is", "it", "as", "of", "on", "to", "or", "and", "at", "an", "oh", "for", "be", "not", "no", "nor", "into", "with", "from");
+@titleWords = ("but", "by", "a", "the", "in", "if", "is", "it", "as", "of", "on", "to", "or", "and", "at", "an", "oh", "for", "be", "not", "no", "nor", "into", "with", "from");
 addTitles();
 
 $showOK = 0;
@@ -33,7 +33,7 @@ open(A, "punc.txt") || die ("Can't open punc.txt.");
 }
 else
 {
-open(A, "c:/writing/dict/punc.txt") || die ("Can't open c:/writing/dict/punc.txt.");
+open(A, "c:/writing/dict/punc.txt") || do { print ("Can't open c:/writing/dict/punc.txt."); usage(); }
 }
 
 while ($a = <A>)
@@ -161,6 +161,8 @@ sub lookUp
       $temp =~ s/\".*//g;
 	  $temp =~ s/' \/ '/ /g;
 	  $temp =~ s/\[[^\]]\]//g;
+	  $temp =~ s/\[a-word-u\]/Ass/g;
+	  $temp =~ s/\[d-word-u\]/Damn/g;
 	  $temp =~ s/\[n-t\]/Nate/g;
 	  if ($head =~ /ad slogans/)
 	  {
@@ -225,6 +227,9 @@ sub usage
 {
 print<<EOT;
 start capital/punctuation/quotes
+
+Caps-only
+3 = ALL CAPS 2 = title case
 
 1 = necc 0 = either way -1 = *don't* include
 EOT
