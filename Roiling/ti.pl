@@ -61,13 +61,13 @@ $uStr = ucfirst($addStr);
 
 if (!$allowDupe)
 {
-  open(A, "c:/games/inform/roiling.inform/Source/ppl-scratch.txt");
+  open(A, "c:/games/inform/roiling.inform/Source/ppl-done.txt");
   while ($a = <A>)
   {
     if ($a =~ /===$fullStr$/i)
 	{
 	  close(A);
-	  die("According to ppl-scratch.txt, you've already searched for $fullStr. If you want to allow duplicates, try -d.\n");
+	  die("According to ppl-done.txt, you've already searched for $fullStr. If you want to allow duplicates, try -d.\n");
 	}
   }
   close(A);
@@ -75,9 +75,15 @@ if (!$allowDupe)
 
 open(A, "$dictDir/$initFile") || die ("No $initFile.");
 
+open(D, ">>c:/games/inform/roiling.inform/Source/ppl-done.txt");
+
+print D "=======$uStr\n";
+
+close(D);
+
 open(C, ">>c:/games/inform/roiling.inform/Source/ppl-scratch.txt");
 
-print C "=======$uStr\n";
+print D "=======$uStr\n";
 
 while ($a = <A>)
 {

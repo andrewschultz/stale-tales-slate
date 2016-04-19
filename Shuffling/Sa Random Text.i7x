@@ -29,7 +29,7 @@ blurb
 "Abele Beale-Albee"
 "Addie de Dia"
 "Adele DeLea"
-"Adeline Ledenia" []
+"Adeline Ledenia"
 "Adolf Faldo"
 "Adolph Opdahl"
 "Adrell Ellard"
@@ -38,7 +38,7 @@ blurb
 "Agnes Segan"
 "Agnus Sunga-Ganus"
 "Aisha Sahia"
-"Aitch Chait" []
+"Aitch Chait"
 "Akiba Ibaka"
 "Alanis Salina"
 "Alaya Ayala"
@@ -68,7 +68,7 @@ blurb
 "Alyce Lacey"
 "Alyne Layne-Nealy"
 "Amaris Samari"
-"Amir Mari" []
+"Amir Mari"
 "Anais Asani"
 "Andra Randa"
 "Andrae Adrean"
@@ -109,7 +109,7 @@ blurb
 "Aundre Urenda-Renaud"
 "Austin Unitas"
 "Avram Marva"
-"Avril Vilar" []
+"Avril Vilar"
 "Bachus Schaub"
 "Barny Bryan"
 "Barrett Trabert"
@@ -238,8 +238,7 @@ blurb
 "Colin Nicol"
 "Concha Chacon"
 "Conchita Tacchoni"
-"Connie Conine-Encino" []
-"Connie Ennico"
+"Connie Conine-Encino"
 "Conrad Conard"
 "Cordelia DeLorica"
 "Cordie D'Erico"
@@ -261,7 +260,7 @@ blurb
 "Damian Madani"
 "Damien Medina"
 "Damion Amidon"
-"Daniele DeLaine"
+"Daniele DeLaine" []
 "Danilo Oldani"
 "Danna Anand"
 "Danyel Yandle-Danley"
@@ -530,7 +529,7 @@ blurb
 "Inger Negri"
 "Iola Liao"
 "Irina Irani"
-"Irma Rami"
+"Irma Rami" []
 "Irmela Mariel" []
 "Irshad Rashid"
 "Isaak Sakai"
@@ -639,7 +638,7 @@ blurb
 "Leisa Alesi"
 "Lelah Halle"
 "LeMont Melton"
-"Lena Alen" []
+"Lena Alen"
 "Lenard Randle" []
 "Lenaud Undale-DeLuna"
 "Lenhard Handler"
@@ -652,7 +651,7 @@ blurb
 "Leopold DelPolo"
 "Leota Olate"
 "Lerisa Alires" []
-"LeRoi Loire" []
+"LeRoi Loire"
 "LeRoy Royle" []
 "Lesli Ellis"
 "Lesly Lyles"
@@ -683,11 +682,11 @@ blurb
 "Lorel Rolle"
 "Lorelei Oreille"
 "Loreta Olarte"
-"Lorie Oiler"
+"Lorie Oiler" []
 "Lorinda Rinaldo"
 "Lorine-Elinor LeNoir"
 "Lorissa Solaris"
-"LoRonda Arnoldo" []
+"LoRonda Arnoldo"
 "Lou-Bert Boulter"
 "Luc-Tre Cutler"
 "Luci Ciul"
@@ -696,7 +695,7 @@ blurb
 "Lui-Uli Liu"
 "Luisa Aulis"
 "Lukas Saulk"
-"Lura Raul" []
+"Lura Raul"
 "Luzi Luiz"
 "Lynda Dylan-Danly"
 "Lynice Cliyne-Nicley"
@@ -818,7 +817,7 @@ blurb
 "Natalie Elatian"
 "Natasha Athanas"
 "Navin Vanni"
-"Neal Lane"
+"Neal Lane" []
 "Nedra Nader" []
 "Nella Allen"
 "Nellie Linlee"
@@ -874,7 +873,7 @@ blurb
 "Orestes Sestero"
 "Oriel Loire" []
 "Orion Noori"
-"Orlando Rooland"
+"Orlando Rooland" []
 "Osborne Robeson"
 "Oscar Arcos"
 "Oskar Kosar"
@@ -921,7 +920,7 @@ blurb
 "Randolph Phorland"
 "Ransome Amerson"
 "Rashida Saradhi"
-"Raul Laur"
+"Raul Laur" []
 "Ravi Ivar"
 "Reba Baer"
 "Rebeca Bearce"
@@ -942,7 +941,7 @@ blurb
 "Rene Erne"
 "Renetta Arnette"
 "Renoldo Noodler"
-"Renzo Rozen-Zenor" []
+"Renzo Rozen-Zenor"
 "Retta Tarte"
 "Reya Ayer"
 "Rhea Hare"
@@ -1231,14 +1230,14 @@ blurb
 "Zana Naaz"
 "Zander DeZarn"
 "Zerbina Brienza"
-"Zerina Arinze" []
+"Zerina Arinze"
 "Zino Zion"
 "Zlatan Anzalt"
 "Zofia Fazio"
 "Zog Zgo"
 "Zola Lazo"
 "Zora-Roza Razo"
-"Zoren Enzor"
+"Zoren Enzor" []
 "Zorilda Lizardo"
 "Zorrie Rozier"
 "Zuri Ruiz"
@@ -1306,7 +1305,7 @@ blurb
 "Icy Vat Cavity"
 "Ill-Shock Hillocks"
 "the ill-stink lit kilns"
-"Impaled Mad Pile" []
+"Impaled Mad Pile"
 "Infernal Feral Inn"
 "the Ivy's Sty-Hive"
 "Joint-Corpse Projections"
@@ -1406,7 +1405,7 @@ blurb
 "Very Weird Dewy River"
 "Vile Rust Rivulets"
 "Wary-Ado Roadway"
-"Waste-link twin lakes" []
+"Waste-link twin lakes"
 "Weak-Evil Lake View"
 "Wexton, ex-Town"
 "Wood-Fen of no Dew"
@@ -1531,7 +1530,7 @@ blurb
 "Careful, flea-cur!"
 "Cast iron can roist."
 "Catastrophe! React! Pathos!"
-"Caton's cantos: o, scant to scan!" []
+"Caton's cantos: o, scant to scan!"
 "Cats, if fact is as fict..."
 "Champ? Dolt! Damp cloth! Mold patch!"
 "Chap, set the caps: Cheap St.!"
@@ -1555,7 +1554,7 @@ blurb
 "Couple days you clasped: cloudy apse. Solaced, yup."
 "Couthdom? Much to do, Doc Mouth."
 "Coward, lush! Such a world would crash!"
-"Coy? I burst, rustic boy! Bury stoic obscurity!" []
+"Coy? I burst, rustic boy! Bury stoic obscurity!"
 "A coy pit: icy atop! Ay, optic opacity."
 "Crazy old lard cozy. Lazy cord."
 "Creeps at pest care cap trees."
@@ -1591,7 +1590,7 @@ blurb
 "Descent, go! Congested? Get second."
 "Dew hilt: led with the wild."
 "Diagnose: Agonised!"
-"Dial for a florid lord of fair old Florida!" []
+"Dial for a florid laird of fair old Florida!"
 "Did elf fiddle, defil'd? I'd fled."
 "Die first, fit Sir Ed!"
 "A digit met, a timid get: mitigated!"
@@ -1638,7 +1637,7 @@ blurb
 "Eat. Flirt. Flat tire. Late rift."
 "Eat snow, Sea Town? No sweat!"
 "Ed's pun, ends up un-sped. Ed? Spun."
-"Ego, fret. Get roof to forge. Ferg, too."
+"Get roof to forge ego-fort. Ferg, too."
 "Egos, drag! Go, grades so ragged!"
 "Eh, drips. His derp perish'd."
 "Eh, Dusted, the Dude's Deeds Hut."
@@ -1795,7 +1794,7 @@ blurb
 "Fun feuds to snuffed out: nut OFFED us!"
 "Fun to redo? Often dour underfoot."
 "Future days: a rusty feud, a deft usury."
-"Fêters fester." []
+"Fêters fester."
 "Gad! Elk of fake gold!"
 "Gaea's a Sage."
 "Gal's Ruin: a Ruling's Singular."
@@ -1954,7 +1953,6 @@ blurb
 "I, rankest, streak in, a stinker."
 "I, relay yer ail? Ya rile, ye liar!" []
 "I sally a silly, ill say. Ail, sly!"
-"I sent off fine soft feints of InfoFest." []
 "I sent off fine sotf feints of one stiff info fest!"
 "I square a squire!"
 "I Stare at Sire."
@@ -2070,7 +2068,7 @@ blurb
 "The mace! Teach [']em!"
 "Mad Cyr! My Card, Dr. Macy, Mr. Cady."
 "Mad galls? Slam glad, glam lads."
-"Mad pile, dim leap: IMPALED!"
+"Mad pile, dim leap: IMPALED!" []
 "Made hay. Yeah, mad."
 "Madman sensed amends, sad men."
 "The Mage's Heat Gems."
@@ -2137,7 +2135,7 @@ blurb
 "The new wet hen, he went then. Ew!"
 "News Story? To wryness, worst yens."
 "Newt mold won't meld, melt down."
-"Newton went on. ‘Net now!’ Not new." []
+"Newton went on. ‘Net now!’ Not new."
 "A nice spew: wee panics? Epics anew: Peace wins!"
 "Nicest eras: resistance sat sincere."
 "Night is in Sight."
@@ -2150,15 +2148,15 @@ blurb
 "No seafront afternoons resonant of arson often."
 "No stagier iron gates tearing so into rages."
 "No vocal volcano."
-"Noblesse, snob, else: be lesson!" []
+"Noblesse, snob, else: be lesson!"
 "North star? Short rant: tart, shorn."
 "Not super, prose nut! Poets run!"
 "Note from mentor of Fort Nemo? Not for me!"
-"Note harm? Ah, mentor the manor or another."
+"Note harm? Ah, mentor the manor or The Man."
 "Notify of tiny fit, yon!"
 "Nourish, oh, ruins! I rush on!"
 "Now bar a brown wan orb." []
-"Now ten went on non-wet, not new."
+"Now ten went on non-wet, not new." []
 "Now the hot new went, oh!"
 "Now, then: hen town not hewn."
 "A Nth Wow: what now? Want? How?"
@@ -2376,7 +2374,7 @@ blurb
 "Rid now, in word or wind I drown!"
 "Riffed-on, friend of Fen-fiord?"
 "The rifts! The first theft, Sir." []
-"Right, foes. Forget his foresight!" []
+"Right, foes. Forget his foresight!"
 "Rigid fate. Gift aired: gratified."
 "Ripeness or repression re-opens, sir!"
 "Rise, bad seabird! A bride's bread is braised!"
@@ -2488,7 +2486,7 @@ blurb
 "Soda fury? Yo, frauds, your fad's four days!"
 "Sods pace, sad copes, passcode."
 "The sofa: oh, a fest of hates!" []
-"Soft hint: shift not this font!" []
+"Soft hint: shift not this font!"
 "Soft-worn snow fort, oft sworn to frowns."
 "Solemn days. Nosy damsel, slay demons!"
 "A solid sad oil, laid so."
@@ -2508,7 +2506,7 @@ blurb
 "Speakin['] Pink Sea."
 "Spell-woken knolls weep, skew pollen."
 "Sperduto strode up, sprouted, Postured. 'Deport us? Po['] rusted sot! Duper! Rude! Stop!'"
-"Spider man! Spin dreams, amend rips, snared imp!"
+"Spider man! Spin dream, amend rips, snared imp!"
 "Spin, world! Swirl, pond! Drown, slip!"
 "Spine to spite, in poets? NO!" []
 "Spires. I press."
@@ -2546,7 +2544,7 @@ blurb
 "Switch off Tiff Chow's fifth cows."
 "Swoon! Greed worsened! Go, green woods!"
 "Swoon, them hometowns, to show men."
-"Take two to tweak, weak too!"
+"Take two to tweak, weak tot!"
 "Tarnished, it hardens."
 "Ted rung. DrugNet grunted."
 "Ten from Men Fort front me often, Mr."
@@ -2609,7 +2607,7 @@ blurb
 "To sad toads, a toast's odd."
 "To vipers sportive, it proves I rep TV so."
 "To warrens near-worst! Narrowest!"
-"To Wear a Tower? Woe, art!" []
+"To Wear a Tower? Woe, art!"
 "To Wharf-Fort? Haw? For what?"
 "To whiff off with Tiff: who?"
 "Togas of oafs got a soft go."
@@ -2617,7 +2615,7 @@ blurb
 "Torn legs? Slog-rent? Rest long!"
 "Touchy Rick's Schtick: your outcry, hicks!"
 "Tourin['] our tin unit, or, to ruin."
-"A Tower! O, water! Woe, rat!"
+"A Tower! O, water! Woe, rat!" []
 "Tragedy Gyrated."
 "Trapezes: reap zest, raze pest."
 "Trees at a street: rest, eat."
@@ -2759,7 +2757,7 @@ blurb
 "'Alms for ol['] farms!'"
 "'Aloud, lines! Delusional soul denial!'"
 "'Anti-beef: a benefit!'"
-"'Anti-serf fine arts!' they cry, mumbling about a snifter and a rain fest."
+"'Anti-serf fine arts!' they cry, mumbling about a snifter and a rain fest." [x]
 "'Argus Sugar? Us? ARG!'"
 "'ArmCos Scar Mo[']!'"
 "'Austerity's rustiest, ay!'"
@@ -2780,7 +2778,7 @@ blurb
 "'Boeing? Ego bin! Big one!'"
 "'Break-sweat task? BEWARE!'"
 "'Bring back King Crabb!'"
-"'Bush! Uh, BS!' (Who?)"
+"'Bush! Uh, BS!'"
 "'Capitalism: impact ails!'"
 "'Censorin's corniness!'"
 "'Censorship, Enrich Sops!'"
@@ -2841,7 +2839,7 @@ blurb
 "'Filth-wage? Few alight white flag.'"
 "'Fire guns? Finger us? REFUSING!'"
 "'Fired top tired fop PROFITED!'"
-"'Follower of Orwell!' they yell, missing the point."
+"'Follower of Orwell!' they yell, missing the point." [x]
 "'A force of CARE, FearCo!'"
 "'Forces, to sector of eco-forts.'"
 "'Forestall fare tolls!'"
@@ -2883,7 +2881,7 @@ blurb
 "'Inactive ain't vice!'"
 "'Incite it NICE!'"
 "'InfoTeams? Some faint manifesto to famines!'"
-"'Interest? Resent it!'" []
+"'Interest? Resent it!'"
 "'Irate guns['] signature: tearing us!'"
 "'Juice? TONS! No justice!'"
 "'Kissing-up pig is sunk!'"
@@ -2929,7 +2927,7 @@ blurb
 "'Nepotists['] pottiness: inept sots!'"
 "'New large green law!'"
 "'Next, go rip exporting!'"
-"'No, Cats! NastCo so can't scan to...'"
+"'No, Cats! NastCo so can't scan to...'" []
 "'No crime, MinerCo?!'"
 "'No direr orderin[']!'"
 "'No greed nor edge! End gore!'"
@@ -2976,7 +2974,7 @@ blurb
 "'Raw fuel? Awfuler!'"
 "'A raw sinful law's unfair!'"
 "'Re-infest, ferniest!'"
-"'Refuse Feuer's Sur-Fee!'" []
+"'Refuse Feuer's Sur-Fee!'"
 "'Refusing gunfire's fringe? Us?'" []
 "'Regimen: I'm green! Merge in!'"
 "'Release Al Reese.'"
@@ -2992,7 +2990,7 @@ blurb
 "'Scam-worn warm cons, scram now!'"
 "'Scare mob? Sober, mac!'"
 "'Scurvy SUV, cry!'"
-"'See fur? Refuse!'"
+"'See fur? Refuse!'" []
 "'See labor? Be a loser!'"
 "'Sell oil? Lose! Ill!'"
 "'Sellin's illness!'"
@@ -3142,7 +3140,7 @@ blurb
 "Someone agrees with Kramer's remarks entirely, whatever they are."
 "Someone asks if they can arrest that starer."
 "Someone babbles about a new frozen fish that filets itself."
-"Someone bemoans the cheese sechée." []
+"Someone bemoans the cheese sechée."
 "Someone complains about the rudest duster they ever employed."
 "Someone complains they've never had a plainer praline than THIS."
 "Someone decries a reckless clerkess who is lucky to have a job."
@@ -3313,21 +3311,20 @@ blurb
 "The nerds jock Dr. Blane, of the Blander Nerd-Lab."
 "The nerds jokingly design a No-Art-a-Tron. Or is it a No-Tar-a-Tron?"
 "The nerds mention the cult webcomic Techy's Scythe."
-"The nerds mimic abrasive NaOH Noah's catch phrase 'Ah, NO!'"
-"The nerds mock weakest e-tweaks."
+"'Ah! No NaOH, Noah!'"
+"'Weakest e-tweaks!'"
 "The nerds mock Ye Pod Dopey."
 "The nerds nitpick Global Blog Al."
 "The nerds overanalyze e-filer relief."
 "The nerds pontificate about the EZLab Blaze."
-"The nerds praise Leet Ty Tetley."
-"The nerds praise the new DualOps Uploads."
-"The nerds quote from Nerds Use Rudeness."
-"The nerds quote jokes from DIE, IDE by Edi Eid."
-"The nerds rave about the popular show Hardcore Card Hero."
-"The nerds recap Cool-Ed Doc Leo."
-"The nerds recap dreadful MIT TMI."
-"The nerds recap the latest snark from Glib Nerd Lindberg."
-"The nerds recap Vin's Net Invents."
+"The nerds praise the new DualOps Uploads." [x]
+"The nerds quote from Nerds Use Rudeness." [x]
+"The nerds quote jokes from DIE, IDE by Edi Eid." [x]
+"The nerds rave about the popular show Hardcore Card Hero." [x]
+"The nerds recap Cool-Ed Doc Leo." [x]
+"The nerds recap dreadful MIT TMI." [x]
+"The nerds recap the latest snark from Glib Nerd Lindberg." [x]
+"The nerds recap Vin's Net Invents." [x]
 "The nerds recite lines from the cult so-bad-it's-good flick Bad Beth's Death BBS and discuss whether it's bad on purpose."
 "The nerds recite lyrics from Mr. Sonic and the Crimson Microns."
 "The nerds recite rap lyrics from Sysop Possy hits like 'So, Spy!'"
@@ -3336,7 +3333,7 @@ blurb
 "The nerds report research from BlueStar TrueLabs to ward off a blase rut. It's not a real bust."
 "The nerds revere AV Nerd Dr. Evan Vander."
 "The nerds sing, off-key, 'Let's hate athletes.'"
-"The nerds wonder who is too dumb to use the Navster Servant to find taverns."
+"The nerds wonder who is too dumb to use the Navster Servant to find taverns." [x]
 "'Nerdy teas? Sedentary easy trend!'" []
 "'A network! Rate/know!' / 'Weak. Torn.'"
 "'Neuromancy? NO! Numeracy!'"
@@ -3353,14 +3350,15 @@ blurb
 "Oh, prates: 'Pros hate heap sort!'"
 "'Oleg, go Google!'"
 "'On, up, geeky! Keep young!'"
-"One nerd boldly proclaims 'Tech is ETHICS!'"
-"One nerd describes building an Ion-Duct Conduit."
-"One nerd downloads a U-Adept Update."
+"'Tech is ETHICS!'"
+"One nerd describes building an Ion-Duct Unit-Doc Conduit." [x]
+"One nerd downloads a U-Adept Update." [x]
 "One nerd relates disturbing AcidSoft factoids."
-"One nerd relates the latest Coolidge's Logic Dose."
-"One nerd yells 'I, Doug! UI God! Guido?!'"
+"'Dog, coils! Disc logo!' / '[']S cool. Dig.'"
+"'Coolidge's Logic Odes slice GOOD!'"
+"'I, Doug! UI God! Guido?!'"
 "'Oo! Ban a noob!'"
-"Opinions about Nerd Renn Redd. You want to disagree with them all." []
+"Opinions about Nerd Renn Redd. You want to disagree with them all." [x]
 "'Optimality! Limit a typo!'"
 "'Panic, I? CPAN!'" []
 "'Patric's pics-art? A script!'"

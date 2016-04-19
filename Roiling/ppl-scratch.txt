@@ -2635,7 +2635,6 @@
 127 this go-round.
 =================
 =======Saintly
-"Saintly Wen Winstanley"
 2 total names found.
 1 this go-round.
 =================
@@ -2650,8 +2649,6 @@
 0 this go-round.
 =================
 =======Earnest
-"Earnest Gil Easterling"
-"Earnest Leigh Siegenthaler"
 "Earnest Hui Steinhauer"
 "Earnest In Ernestina"
 "Earnest Ula Arseneault"
@@ -2670,9 +2667,6 @@
 7 this go-round.
 =================
 =======Actual
-"Actual Rene Laracuente"
-"Actual Herb Lauterbach"
-"Actual Sina Santalucia"
 4 total names found.
 3 this go-round.
 =================
@@ -2684,8 +2678,6 @@
 4 this go-round.
 =================
 =======Artless
-"Artless Eden Latendresse"
-"Artless Pa Lastrapes"
 3 total names found.
 2 this go-round.
 =================
@@ -2711,26 +2703,10 @@
 0 this go-round.
 =================
 =======Slimy
-1 total names found.
-0 this go-round.
-=================
-"Slimy Hack Michalsky"
-"Slimy Sink Myslinski"
-"Slimy Re Simerly"
-"Slimy Te Smitley"
-5 total names found.
-4 this go-round.
 =================
 =======Tricky
-1 total names found.
-0 this go-round.
-=================
-"Tricky Wa Traywick"
-2 total names found.
-1 this go-round.
 =================
 =======Natural
-"Natural See Arseneault"
 2 total names found.
 1 this go-round.
 =================
@@ -2738,168 +2714,12 @@
 0 this go-round.
 =================
 =======Nutty
-"Nutty Echo Honeycutt"
-2 total names found.
-1 this go-round.
-=================
-2 total names found.
-0 this go-round.
-=================
 =======Fry
-"Fry Name Freyman"
-"Fry Alan Flanary"
-"Fry Leo Florey"
-"Fry Neal Flanery"
-"Fry Eli Friley"
-"Fry Noe Forney"
-"Fry Gale Flygare"
-"Fry Ida Friday"
-"Fry Dora Rayford"
-"Fry Ada Fayard"
-"Fry Delia Rayfield"
-"Fry Lea Farley-Fraley-Alfrey"
-"Fry Leann Flannery"
-"Fry Letha Flaherty-Halferty"
-"Fry Rae Frayer-Frayre-Farrey"
-"Fry Elia Fairley-Fairley-Frailey"
-"Fry Tera Raftery"
-"Fry Thea Faherty"
-"Fry Ena Farney-Franey-Frayne"
-"Fry Lu Flury"
-"Fry Eun Furney"
-"Fry Maren Ferryman"
-"Fry Altha Flaharty"
-"Fry So Forys"
-"Fry Meri Frymire"
-"Fry Theola Oflaherty"
-"Fry Tona Fantroy"
-"Fry Fleta Lafferty"
-"Fry Tien Finerty"
-"Fry Ai Fairy"
-31 total names found.
-30 this go-round.
-=================
-"Fry Lowe Wolfrey"
-"Fry Roe Forrey"
-"Fry Goebel Breyfogle"
-"Fry Peel Pelfrey"
-"Fry Heintz Fitzhenry"
-"Fry Tse Syfert"
-"Fry Wine Winfrey"
-"Fry Go Forgy"
-"Fry Hose Forshey"
-"Fry Keo Forkey"
-"Fry Tosh Forsyth"
-"Fry Ro Forry"
-"Fry Re Ferry-Fryer"
-"Fry Due Durfey"
-"Fry Aller Farrelly"
-"Fry Hane Fahrney"
-"Fry Brereton Fortenberry-Fortenberry"
-"Fry Diel Fridley-Friedly"
-"Fry Eick Frickey"
-"Fry Ra Frary-Farry"
-"Fry Ba Fabry"
-"Fry Old Lyford"
-"Fry Fate Raffety"
-"Fry Lauth Fluharty"
-"Fry Ree Freyer-Freyre"
-"Fry Dues Dreyfus"
-"Fry Klann Franklyn"
-"Fry Seidner Reifsnyder"
-"Fry Feig Griffey"
-"Fry Code Fordyce"
-"Fry Goe Forgey"
-"Fry Seide Seyfried"
-"Fry Hoda Hayford"
-"Fry Bu Furby"
-"Fry Fei Riffey"
-"Fry Wale Frawley"
-"Fry Fejes Jeffreys-Jefferys"
-"Fry Frate Rafferty"
-"Fry Face Caffrey-Caffery"
-"Fry Gato Fogarty"
-71 total names found.
-40 this go-round.
-=================
 =======Fallen
-"Fallen Ira Farinella"
-"Fallen Iva Villafane"
-"Fallen Tona Fontanella"
-4 total names found.
-3 this go-round.
-=================
-"Fallen Deng Langenfeld"
-"Fallen Boes Follansbee"
-"Fallen Tiger Lingafelter"
-"Fallen Kump Fullenkamp"
-"Fallen Imig Fillingame"
-9 total names found.
-5 this go-round.
-=================
 =======Hips
-"Name 'Hips' Shampine"
-"Hector 'Hips' Christophe"
-"Al 'Hips' Haslip"
-"Ali 'Hips' Haislip"
-"Lon 'Hips' Philson"
-"Bo 'Hips' Bishop"
-"Man 'Hips' Shipman-Manship"
-"Cora 'Hips' Schapiro"
-"Ora 'Hips' Shapiro"
-"Rena 'Hips' Einspahr-Seraphin"
-"Lea 'Hips' Heaslip"
-"Rowena 'Hips' Spainhower"
-"Tena 'Hips' Stephani"
-"Teena 'Hips' Stephanie"
-"Carri 'Hips' Schirripa"
-"Jone 'Hips' Josphine"
-"Joane 'Hips' Josephina"
-"Herma 'Hips' Hampshire"
-20 total names found.
-18 this go-round.
+=======Leet
+39 total names found.
+38 this go-round.
 =================
-"Cain 'Hips' Schipani"
-"Novak 'Hips' Pinkhasov"
-"Gore 'Hips' Grieshop"
-"Ly 'Hips' Phylis"
-"Lay 'Hips' Hayslip"
-"Lo 'Hips' Hislop"
-"Rector 'Hips' Christoper"
-"Ely 'Hips' Shipley"
-"Her 'Hips' Hipsher"
-"Eck 'Hips' Pischke"
-"Lett 'Hips' Shiplett"
-"Ung 'Hips' Shuping"
-"Ruano 'Hips' Spainhour"
-"Pye 'Hips' Shippey"
-"Ton 'Hips' Shipton"
-"Mauk 'Hips' Kamphuis"
-"Sly 'Hips' Phyliss"
-"Lipp 'Hips' Philipps"
-"Calle 'Hips' Palleschi"
-"Pilon 'Hips' Philipson"
-"Luper 'Hips' Pulsipher"
-"Lauck 'Hips' Puchalski"
-"Kin 'Hips' Hipkins"
-"Ra 'Hips' Parish-Pharis"
-"Win 'Hips' Winship"
-"Tea 'Hips' Hietpas"
-"Rom 'Hips' Morphis"
-"Enck 'Hips' Schnipke"
-"Sar 'Hips' Phariss"
-"Te 'Hips' Spieth"
-"Tun 'Hips' Sutphin"
-"Kon 'Hips' Hopkins"
-"Blanken 'Hips' Blankenship"
-"Creps 'Hips' Schippers"
-"Lacko 'Hips' Pacholski"
-"Mamone 'Hips' Phimmasone"
-"Laake 'Hips' Peshlakai"
-"Pee 'Hips' Shippee"
-"Gren 'Hips' Pershing"
-"Roehrs 'Hips' Shropshire"
-60 total names found.
-40 this go-round.
+133 this go-round.
 =================
-=======Rank

@@ -1838,7 +1838,6 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Gencarelli's Allergenics"
 "Gendreau's Dungarees" []
 "Gennie's Engines"
-"Get-Lean: A Gentle, Elegant, Neat Gel"
 "Gerlach's Schlager"
 "Germain's Smearing"
 "Gerri's Re-Rigs"
@@ -1849,6 +1848,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Gervasi Gravies" []
 "Gesualdi's Gladiuses"
 "Get KASS Gaskets"
+"Get-Lean: A Gentle, Elegant, Neat Gel"
 "Get on GoNet!"	true
 "Get Oscar's Escargots"
 "Get SAKS Gaskets!"	true
@@ -2172,6 +2172,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Lyman H.'s Hymnals" []
 "Ma Blink's Lambskin"
 "Ma Lucci's Accu-Slim"
+"Ma Otto's Tomatos"
 "Ma's Queer Marquees"
 "Mac Bly's Cymbals"
 "Mac's Scam-Cams"
@@ -2397,7 +2398,6 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "P Sawyer: We Spray/Swap yer Spyware!"	true
 "Pa Krum's Markups"
 "Pa Otto's Potatos"
-"Ma Otto's Tomatos"
 "Pa Phelps Help Apps"
 "Pa Reg's Grapes"
 "Pa's Spa"
@@ -3073,7 +3073,6 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 table of bad rappers [xxm2]
 blurb
 "[d-word-u] Crews Mcandrews"
-"Cool Loc'd Doc L (Clod)"
 "[d-word-u] Earl Alderman"
 "[d-word-u] Ed Madden"
 "[d-word-u] Erick Dickerman"
@@ -3125,6 +3124,7 @@ blurb
 "Club Ripe Republic"
 "Cold Loc'd Clod Doc L"
 "Comped Dope MC"
+"Cool Loc'd Doc L (Clod)"
 "Cra-Z-Czar Zac R"
 "Criswell Ills Crew"
 "Darin['] Alec Cardinale"
@@ -5198,7 +5198,6 @@ blurb
 "Raids On Inroads"
 "RamTek Market"
 "Rapidest Pest Raid"
-"Retool, Looter"
 "Reach Thy Hatchery"
 "Reamings, Smearing" []
 "Recessed Seceders"
@@ -5208,6 +5207,7 @@ blurb
 "Refine Op, Open Fire"
 "Regentship Spree-Thing"
 "Reichs['] Riches"
+"Retool, Looter"
 "Ribs Gone? Sobering"
 "Rid a Raid"
 "A Rider-Raider" []
@@ -6204,7 +6204,6 @@ blurb
 "Add Dad"
 "Agent Tegan"
 "Ah, Mrs. Marsh"
-"A Filmy Family"
 "All Cheer Rachelle"
 "Angi Li's Ailings"
 "Anthoney Annoyeth"
@@ -6271,6 +6270,7 @@ blurb
 "Everyday Davey Rey"
 "Exciter Tex Rice"
 "Faboo Oaf Bo"
+"A Filmy Family"
 "Flossie's SOS Files"
 "For-Peril Profiler"
 "A Fortune of Nature"
@@ -10140,6 +10140,7 @@ blurb	prio
 "Gangs of Fog Sang[r], by GG Fason"
 "Gankery: Keg Yarn[r], by Ken Gray"
 "Gant's Angst[r], by Stann Stagg"
+"Garages Are Gags[r], by Asa Gerg"
 "Garden Home Harmed, Gone[r], by [if player is male]Herman Doge & Ahmed Groen[else]Merna Hodge & Madge Horne[end if]"
 "Gardener Garnered Red Anger[r], by [if player is male]Ed Garner[else]Gena Derr[end if]"
 "A Garment Mega-Rant? Great, Man[r], by [if player is male]Art Megan[else]Marge Tan[end if]"
@@ -15880,6 +15881,7 @@ blurb
 "Shag Ellis Hillegass."
 "Shag Enid Headings."
 "Shag Gino Higgason."
+"Shag Hags."
 "Shag Idell Dalgleish."
 "Shag Lin Singhal."
 "Shag Lu Slaugh." []
@@ -15934,7 +15936,6 @@ blurb
 "Sixties Sex is It."
 "Skeevy Eve Sky."
 "Slag Gals."
-"Shag Hags."
 "Slam by My Slab, Sam Bly."
 "Slave Andra VanArsdale." []
 "Slave Ben Venables."
@@ -16557,10 +16558,10 @@ blurb
 "'Show faith! Ah, wish oft!'"
 "'Showing wings, oh!'"
 "'So, go send goodness!'"
+"'Stem venom movements.'"
 "'To-do: big good bit.'"
 "'Walk soft: flow, task.'"
 "'Yea, trust, stay true.'"
-"'Stem venom movements.'"
 
 table of horbert musings [xxu2]
 blurb
@@ -17233,6 +17234,7 @@ blurb
 table of moralizers [xxu5]
 blurb
 "A-Grade Adager Ed Agar"
+"New-Saintly Winstanley"
 "A. Turnip, Puritan" []
 "Abjured Jeb Radu"
 "Abjurer Jae Burr"
@@ -28362,6 +28364,7 @@ blurb
 "Ego Rusty? Get Yours[r], by Roy Guest & Guy Oster" []
 "Eh, Target the Great[r], by Garth Tee"
 "Eh, Zesty Idea: Seize the Day[r], by Haydee Seitz"
+"Ehh, Most Meh-Shot[r], by Thom Esh"
 "Eminence's Scene: MINE[r], by Ines Nemec"
 "Employed Mo['] Deeply[r], by Dopey Mel"
 "End the Now, Then Do New[r], by Newt Hoden"
@@ -28505,7 +28508,6 @@ blurb
 "Money, Power: Weeny Promo, Weepy Moron[r], by Ewen Pomroy"
 "Mooninesses['] Noisomeness[r], by [sim] Esson"
 "Moored? Demo or Do More[r], by Rod Moe"
-"The Most Meh-Shot[r], by Thom Esh"
 "Motiv-Vomit[r], by Vi Tom"
 "Motivation: Vitamin Too[r], by Tito Aminov & Matt Iovino"
 "My Neo-Money[r], by Emmy Nooney"
@@ -30394,30 +30396,8 @@ blurb
 "[if player is male]Craig Abel[else]Alica Berg[end if][']s Algebraics"
 "abstrusest substrates"
 "Achilles helicals" []
-"Giardini's diarising"
-"Edington's denotings"
-"Emmaline's melamines"
-"Death-ish Tad Hsieh" []
-"Consalvo volcanos"
-"Contini's nicotins"
-"Coopersmith's mesotrophics"
-"Coppinger coppering" []
-"Cedeno's encodes"
-"Clayborn's carbonyls"
-"Colasanti's scalations"
-"Comeau's mucosae"
 "Acme Bros. Macrobes"
 "Adriance canaried radiance" []
-"Bertlesen's trebleness"
-"Carhart's catarrhs"
-"Carpenito's recaptions"
-"Catone's octanes" []
-"Evanson novenas"
-"Everard's adverser"
-"Fasching chafings"
-"Tercero's secretor"
-"Toledano's loadstone"
-"Epperson propenes"
 "Adroit Tirado Ardito"
 "adsorb-boards" []
 "age-verse veerages"
@@ -30454,6 +30434,7 @@ blurb
 "Bavaleri's Variables"
 "Belmares's assembler"
 "Ben Chu's bunches"
+"Bertlesen's trebleness"
 "Bessing Bigness"
 "Blauler Rubella"
 "the Blomper Problem"
@@ -30476,8 +30457,12 @@ blurb
 "Capsin panics"
 "the Capster Spectra"
 "Caradine's radiances"
+"Carhart's catarrhs"
+"Carpenito's recaptions"
 "Casterline centralise-interlaces"
 "Castlean analects"
+"Catone's octanes" []
+"Cedeno's encodes"
 "the centroid doctrine"
 "Ceroli's Recoils"
 "Cerrato's reactors"
@@ -30485,13 +30470,20 @@ blurb
 "Chemists['] Techisms"
 "Cindie's indices"
 "Cittrano Traction"
+"Clayborn's carbonyls"
 "Cletrone's electrons"
 "clothiers['] chlorites"
 "coarsening ignorances"
+"Colasanti's scalations"
 "Columbo's Coulombs"
+"Comeau's mucosae"
 "Comic Sans scam coins" []
+"Consalvo volcanos"
+"Contini's nicotins"
 "coolant octanol"
 "Coombs-Boscom Combos" []
+"Coopersmith's mesotrophics"
+"Coppinger coppering" []
 "cornitude reduction" []
 "Cortesian Creations Reactions" []
 "cosseted cestodes"
@@ -30519,6 +30511,7 @@ blurb
 "Daws wads"
 "Dearing's readings"
 "Deason anodes" []
+"Death-ish Tad Hsieh" []
 "Debrosse bedsores" []
 "Deighan's headings" []
 "DeMarinis meridians" []
@@ -30542,19 +30535,25 @@ blurb
 "Easton neatos"
 "Ederra's readers"
 "Edilsy's Lysides"
+"Edington's denotings"
 "Egen's Genes"
 "Eisenbarth's breathiness"
 "Eison-Trent Retentions"
 "Eliason's anisoles"
 "Emerson's moreness"
 "emigrants streaming" []
+"Emmaline's melamines"
+"Epperson propenes"
 "Erickson's rockiness"
 "Ericsson-Cisneros necrosis" []
 "Escalante elastance" []
 "Esposito isotopes" []
 "Estragon Orangest Negators"
 "Etsui's tissue suites" []
+"Evanson novenas"
+"Everard's adverser"
 "farmost formats" []
+"Fasching chafings"
 "faultiest fistulate"
 "Feinstein's finiteness"
 "Feldhaus headfuls"
@@ -30581,6 +30580,7 @@ blurb
 "the Germi-Grime-IMGer"
 "Gerrindo Ordering" []
 "Giancola's analogics"
+"Giardini's diarising"
 "Giardino-Giordani radioing"
 "Gibson boings"
 "Girton's sorting"
@@ -30952,6 +30952,7 @@ blurb
 "Szemeny enzymes"
 "tainted ions['] destination" []
 "Tallerico's allosteric"
+"Tercero's secretor"
 "Teresa's Tessera"
 "the TerraCo Reactor"
 "Tessi-Estis sites"
@@ -30967,6 +30968,7 @@ blurb
 "Tiscareno reactions" []
 "Tisdale Details"
 "titration attrition"
+"Toledano's loadstone"
 "toluidin dilution"
 "Tomas Stamo-Mota's Atoms" []
 "Tomasic's acosmist massicot"

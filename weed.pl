@@ -148,7 +148,7 @@ if ($badans) { $s3 = "(BADANA.TXT) $badans total likely bad anagrams, disable wi
 print "TEST RESULTS:@weedDir[0] bad anagrams,10,$badans,0,<a href=\"badana-@weedDir[0].txt\">The Culprits</a>\n";
 print "TEST RESULTS:@weedDir[0] soft duplicates,100,$di,0,<a href=\"dupes-@weedDir[0].htm\">The Culprits</a>\n";
 print "TEST RESULTS:@weedDir[0] false positives,100,$falsePos,0,<a href=\"falsepos-@weedDir[0].txt\">The Culprits</a>\n";
-print "TEST RESULTS:@weedDir[0] odd matches,100,$falsePos,0,<a href=\"oddmatch-@weedDir[0].txt\">The Culprits</a>\n";
+print "TEST RESULTS:@weedDir[0] odd matches,100,$posBad,0,<a href=\"oddmatch-@weedDir[0].txt\">The Culprits</a>\n";
 
 print A2 "$s1";
 
@@ -583,7 +583,8 @@ while (($a = <A>) && (stillWorth()))
 	print B "==$thisTable\n"; next;
   }
   if (!$inTable) { next; }
-  
+
+  $a =~ s/[ικ]/e/g;  
   if ($a !~ /[a-z]/) { $inTable = 0; next; }
   if ($a =~ / \[[px]\]/) { next; } # deliberately ignore
   if (($a =~ /^\"/) && ($a !~ /\t/) && ($a =~ /[a-z]/))
