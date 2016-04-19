@@ -966,6 +966,7 @@ blurb
 "Rolando Dalorno" []
 "Rolf Flor"
 "Roma Ramo" []
+"Romanelli Marinello"
 "Romanov VanMoor"
 "Romelia Almeiro"
 "Romelle Moeller"
@@ -1637,7 +1638,6 @@ blurb
 "Eat. Flirt. Flat tire. Late rift."
 "Eat snow, Sea Town? No sweat!"
 "Ed's pun, ends up un-sped. Ed? Spun."
-"Get roof to forge ego-fort. Ferg, too."
 "Egos, drag! Go, grades so ragged!"
 "Eh, drips. His derp perish'd."
 "Eh, Dusted, the Dude's Deeds Hut."
@@ -1813,6 +1813,7 @@ blurb
 "Get half the flag, gal! Heft!"
 "Get manic, magnetic magic net."
 "Get off the hog. Go heft the fog!"
+"Get roof to forge ego-fort. Ferg, too."
 "Get sour! Sore gut got sure to surge."
 "Ghostly thy slog, sly goth!"
 "Giant Toll Allotting: a Long Tilt."
@@ -3158,6 +3159,7 @@ blurb
 
 table of nerd natter [xxm3]
 blurb
+"'Ah! No NaOH, Noah!'"
 "'Aliterate tail eater!' / 'Retaliate!'"
 "'Any D&D? Dandy?' The nerds laugh."
 "'The APIs ape this!' / 'Ha, spite!'"
@@ -3186,6 +3188,7 @@ blurb
 "'Cold dark-clad dork!'"
 "'Complicated topic calmed. Placid comet.'"
 "A conceders['] crescendo follows a claim nerds'd LIKE to help everyday stupid people."
+"'Coolidge's Logic Odes slice GOOD!'"
 "'Craft glue: gruel. FACT!'"
 "'A cretin! Certain!' / 'I recant!'"
 "Critiques on [i]Somber Fun of Numbers[r], by Murf Bones."
@@ -3206,6 +3209,7 @@ blurb
 "A discussion whether Nerdier Derrien Ridener goes too far."
 "'Do-Blacker Ad-Blocker Lab Rocked!'"
 "'Do patches! Code paths!' / 'Patched, so!'"
+"'Dog, coils! Disc logo!' / '[']S cool. Dig.'"
 "'Don't open that malig-Gmail!'"
 "'Dope build! Double dip!'"
 "'Dour flat loud fart at Rudolf!'"
@@ -3235,6 +3239,7 @@ blurb
 "'His tip? Ship it!'"
 "'...How I do it, idiot.' / 'Who?'"
 "Huge stir over Guthrie's right-use. 'Urge this!'"
+"'I, Doug! UI God! Guido?!'"
 "'I fax a fix!'"
 "'I, flunk link-fu? Flukin[']!'"
 "'I refract, craftier,' one nerd says, showing some gadget."
@@ -3311,8 +3316,6 @@ blurb
 "The nerds jock Dr. Blane, of the Blander Nerd-Lab."
 "The nerds jokingly design a No-Art-a-Tron. Or is it a No-Tar-a-Tron?"
 "The nerds mention the cult webcomic Techy's Scythe."
-"'Ah! No NaOH, Noah!'"
-"'Weakest e-tweaks!'"
 "The nerds mock Ye Pod Dopey."
 "The nerds nitpick Global Blog Al."
 "The nerds overanalyze e-filer relief."
@@ -3350,13 +3353,9 @@ blurb
 "Oh, prates: 'Pros hate heap sort!'"
 "'Oleg, go Google!'"
 "'On, up, geeky! Keep young!'"
-"'Tech is ETHICS!'"
 "One nerd describes building an Ion-Duct Unit-Doc Conduit." [x]
 "One nerd downloads a U-Adept Update." [x]
 "One nerd relates disturbing AcidSoft factoids."
-"'Dog, coils! Disc logo!' / '[']S cool. Dig.'"
-"'Coolidge's Logic Odes slice GOOD!'"
-"'I, Doug! UI God! Guido?!'"
 "'Oo! Ban a noob!'"
 "Opinions about Nerd Renn Redd. You want to disagree with them all." [x]
 "'Optimality! Limit a typo!'"
@@ -3405,6 +3404,7 @@ blurb
 "'Surly? Us? RLY!'"
 "'Tampered, ha? Parade them! Permadeath!'"
 "'Tech books boost. Heck! Be shock to...'"
+"'Tech is ETHICS!'"
 "'Technical clan ethic: I can't lech!'"
 "'A theorem remote? Ah. Ahem. ROTE.'"
 "'Theory? Hey, rot!'"
@@ -3436,6 +3436,7 @@ blurb
 "'Wait done! Wade into Idea Town!'"
 "'Wash? LOL. Shallow.'"
 "'We radio a weirdo. Arid woe!'"
+"'Weakest e-tweaks!'"
 "'Web logic? Cow bilge!'"
 "'Wittiness: witness it!'"
 "'Yes, I sum my issue: MESSY UI!'"

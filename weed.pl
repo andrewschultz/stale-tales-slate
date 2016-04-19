@@ -584,7 +584,7 @@ while (($a = <A>) && (stillWorth()))
   }
   if (!$inTable) { next; }
 
-  $a =~ s/[ικ]/e/g;  
+  $a =~ s/[ικ]/e/g;
   if ($a !~ /[a-z]/) { $inTable = 0; next; }
   if ($a =~ / \[[px]\]/) { next; } # deliberately ignore
   if (($a =~ /^\"/) && ($a !~ /\t/) && ($a =~ /[a-z]/))

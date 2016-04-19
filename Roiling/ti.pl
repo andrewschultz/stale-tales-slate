@@ -16,6 +16,8 @@
 #table of posse bosses [xxv7]
 #table of prestigious bums [xxv8]
 
+$scr = "c:/games/inform/roiling.inform/Source/ppl-scratch.txt";
+$don = "c:/games/inform/roiling.inform/Source/ppl-done.txt";
 
 $dictDir = "c:/writing/dict";
 
@@ -36,6 +38,7 @@ while ($count <= $#ARGV)
   
   for ($a)
   {
+  /^-?w$/ && do { findWhat(); exit; };
   /^-d$/ && do { $allowDupe = 1; $count++; next; };
   /^-f$/ && do { $lastsFile = "firsts.txt"; $firstsFile = "lastbig.txt"; $count++; next; };
   /^-m$/ && do { $middleName = 1; $count++; next; };
@@ -43,7 +46,7 @@ while ($count <= $#ARGV)
   /^-pc$/ && do { $printCmds = 1; $count++; next; };
   /^-r$/ && do { $reverses = 1; $count++; next; };
   /-\?/ && do { usage(); $count++; next; };
-  /^[a-z]/i && do { $fullStr = $a; $count++; next; };
+  /^[a-z]/i && do { if (length($a) == 1) { die ("Won't process 1-word string."); } $fullStr = $a; $count++; next; };
   }
 }
 
@@ -61,7 +64,7 @@ $uStr = ucfirst($addStr);
 
 if (!$allowDupe)
 {
-  open(A, "c:/games/inform/roiling.inform/Source/ppl-done.txt");
+  open(A, "$don");
   while ($a = <A>)
   {
     if ($a =~ /===$fullStr$/i)
@@ -75,13 +78,13 @@ if (!$allowDupe)
 
 open(A, "$dictDir/$initFile") || die ("No $initFile.");
 
-open(D, ">>c:/games/inform/roiling.inform/Source/ppl-done.txt");
+open(D, ">>$don");
 
 print D "=======$uStr\n";
 
 close(D);
 
-open(C, ">>c:/games/inform/roiling.inform/Source/ppl-scratch.txt");
+open(C, ">>$scr");
 
 print D "=======$uStr\n";
 
@@ -103,6 +106,20 @@ close(A);
 
 readUp("firsts.txt", 0);
 readUp("$lastsFile", 1);
+
+sub findWhat
+{
+  my %used;
+  open(A, "$scr");
+  while ($a = <A>)
+  {
+    if ($a =~ /^[#=]/) { next; }
+    if ($a =~ /^\"/) { $a =~ s/^.//g; $a =~ s/ .*//g; $a = lc($a); $a =~ s/[^a-z]//g; }
+	if (!$used{$a}) { $used{$a} = 1; print "----$a\n"; }
+  }
+  my $prefs = scalar(keys %used);
+  if (!$prefs) { print "Yay, all clean.\n"; } else { print "$prefs to sort through.\n"; }
+}
 
 sub readUp
 {
