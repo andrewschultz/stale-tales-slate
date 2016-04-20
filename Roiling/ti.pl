@@ -119,6 +119,9 @@ sub findWhat
   }
   my $prefs = scalar(keys %used);
   if (!$prefs) { print "Yay, all clean.\n"; } else { print "$prefs to sort through.\n"; }
+  print "TEST RESULTS:Roiling Names,$prefs,0,0,";
+  if (!$prefs) { print "None"; } else { print "<a href=\"c:/games/inform/roiling.inform/source/ppl-scratch.txt\">Culprits</a>"; }
+  print "\n";
 }
 
 sub readUp
