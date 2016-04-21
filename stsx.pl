@@ -121,7 +121,7 @@ sub addIdeas
   open(A, "$undone");
   while ($a = <A>) { if ($a =~ /^\"/) { $unsorted++; } }
   close(A);
-  print "TEST RESULTS:STS unsorted,0,$unsorted,0,<a href=\"$undone\">Culprits</a>\n";
+  print "TEST RESULTS:$_[0] unsorted,0,$unsorted,0,<a href=\"$undone\">Culprits</a>\n";
   if ($_[1] == 0) { print "Not processing results til both files are written.\n"; return; }
   $undone = "c:/writing/dict/sts-undone.txt";
   for $x (keys %toAdd) { print "$x hash not deleted. This should never happen, but it did. Look in $undone."; open(C, ">>$undone"); print C "$x:\n$toAdd{$x}\n"; close(C); }

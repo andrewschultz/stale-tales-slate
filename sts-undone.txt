@@ -1,0 +1,6 @@
+################################################
+#sts-undone.txt
+#this should always be empty unless something goes terribly wrong
+#it tracks stuff not caught by stsx.pl
+#
+

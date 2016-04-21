@@ -7379,6 +7379,9 @@ blurb
 "Alto Toal"
 "Angsty Ty Gans"
 "Any-Clot Clayton"
+"Ara 'Dish' Rashida"
+"Arnett 'Dish' Steinhardt"
+"Aron 'Dish' Hardison"
 "Avid Diva Vida"
 "Avowedly Way-Loved Davy Lowe"
 "Bad-Shape-Bashed Pa"
@@ -7450,6 +7453,7 @@ blurb
 "Cheated Cath Dee"
 "Chiptune Ute Pinch"
 "Chronic-Chic Ron"
+"Clair 'Dish' Schiraldi"
 "Clear Al Carella"
 "Clear Alva Caravella"
 "Clear Bo Barcelo"
@@ -7655,6 +7659,7 @@ blurb
 "Dulce Ced Lu"
 "Earnest Gil Easterling"
 "Earnest Leigh Siegenthaler"
+"Ella 'Dish' Dashiell"
 "Emmitt 'Hope' Petithomme"
 "Emo Boy Bo Moye"
 "Emo Moe"
@@ -7668,6 +7673,7 @@ blurb
 "Friendly Fly Derin"
 "Funk Loser Fulkerson"
 "Gamed Madge"
+"Gena 'Dish' Headings"
 "Glittery Ly Rettig"
 "Good Time Diego Tom"
 "Gramophonist-Monographist Gari Thompson"
@@ -7783,6 +7789,7 @@ blurb
 "Howler Wohler"
 "I-So-Hep Sophie"
 "I'm-Hope Opheim"
+"Ian 'Dish' Nishida"
 "Idol Ann Landino"
 "Idol Anna Andolina"
 "Idol Arlen Nardiello"
@@ -7813,6 +7820,7 @@ blurb
 "Isolated [if player is male]Otis Dale[else]Leda Tsoi[end if]"
 "Jinxed Jed Nix"
 "Jumbled Jed Blum"
+"Kern 'Dish' Hendriks"
 "Kewl Welk" []
 "Kind Alber Birkeland"
 "Kind Amos Domanski"
@@ -7845,6 +7853,7 @@ blurb
 "Klif's Filks"
 "Lachrymose [if player is male]Myles Roach[else]Cary Holmes[end if]"
 "Lad Nash Ashland"
+"Les 'Dish' Shields"
 "Li'l Bess Bissell"
 "Li'l Kip Killip"
 "Lively Vi Lyle"
@@ -8040,6 +8049,7 @@ blurb
 "Muse Roy Seymour" []
 "Musical Ms. Lucia"
 "Mutual Umlaut"
+"Na 'Dish' Danish"
 "Natch-Loser Charleston"
 "Natural See Arseneault"
 "Nervy Ervyn Vyner"
@@ -8207,6 +8217,7 @@ blurb
 "Posh Mona Shoopman"
 "Posh Nola Alphonso"
 "Posh Sherri Shropshire"
+"Rana 'Dish' Sardinha"
 "Ray-the-Earthy Thayer" []
 "Real Abe Larabee"
 "Real Abel Abellera"
@@ -8273,7 +8284,9 @@ blurb
 "Recreator Carretero"
 "Red Hot Ed Roth"
 "Rejected Jed Crete"
+"Rena 'Dish' Sheridan"
 "Rena 'Hips' Einspahr-Seraphin"
+"Renate 'Dish' Eisenhardt"
 "Resonant [if player is male]Stan Nero[else]Ann Oster[end if]"
 "Retread Art Reed"
 "Riven Ervin Viner"
@@ -8470,9 +8483,12 @@ blurb
 "Swell Nenita Wallenstein"
 "Swell-Note Wellstone"
 "Swell Tea Sawtelle"
+"Tam 'Dish' Stidham"
 "Teary Bert Atteberry"
 "Teary Em Metayer"
 "Teary Hack Thackeray"
+"Telma 'Dish' Delashmit"
+"Tena 'Dish' Hiestand"
 "Tena 'Hips' Stephani"
 "Tenor Chris Chronister"
 "Tenor Dahl Leonhardt" []
@@ -8483,6 +8499,7 @@ blurb
 "Tenor Mo Montero"
 "Tenor Sam Osterman" []
 "Tenor Whiting Witherington"
+"Terra 'Dish' Hardister"
 "Tiemless Lee Smits"
 "Tired Agnus Staudinger"
 "Tired Arch Reichardt"
@@ -8526,6 +8543,7 @@ blurb
 "Tramp Rene Parmenter"
 "Tres Beau Bret Esau"
 "Twangy Wygant"
+"Tyra 'Dish' Hardisty"
 "Underdog Geno Rudd" []
 "Unsocial Icon Saul"
 "Using-Gin Su"
@@ -8538,6 +8556,7 @@ blurb
 "Way-Lost Twyla So"
 "Weathered [if player is male]Reed Wheat[else]Thea Wrede[end if]"
 "Welcomer Clem Rowe"
+"Wert 'Dish' Dewhirst"
 "Wistful Lu Swift"
 "Worn Alec Lowrance" []
 "Worn Bell Brownell"
@@ -23921,6 +23940,7 @@ blurb
 "Decorated Ector Dade"
 "Decoyer Cory Dee"
 "Decried Decider Cid Reed"
+"Dee 'Drawl' Delawder"
 "Dee 'Nah' Headen"
 "Dee 'Specs' Cespedes"
 "Deep Jon Pendejo"
@@ -24132,6 +24152,8 @@ blurb
 "Drab Una Brandau" []
 "Dragon Gordan Dorgan" []
 "Drawin['] Darwin" []
+"Drawl Teel Treadwell-Treadwell"
+"Drawl Ung Grunwald"
 "Drawling Ringwald" []
 "Dreaded Red Dade"
 "Dreadful Dude Ralf" []
@@ -24200,6 +24222,7 @@ blurb
 "Engrosser Roger Ness"
 "Enigma Geiman"
 "Enigmatic Macie Ting"
+"Enos 'Drawl' Rosenwald"
 "Ensilaged DeAngelis" []
 "Ensnared Andersen"
 "Ephemerist Peter Sheim"
@@ -24210,6 +24233,7 @@ blurb
 "Erratic Art Rice" []
 "Evader [if player is male]Dav Ree[else]Eve Ard[end if]" []
 "Evaders-Adverse Deavers" []
+"Evan 'Drawl' Vanderwal"
 "Evil [n-t] Valiente" []
 "Evil Aaron Valeriano"
 "Evil Ada Deavila" []
@@ -24403,6 +24427,7 @@ blurb
 "Gaunt Moe Montague"
 "Gazer Zager"
 "Geathers the Sarge" []
+"Gene 'Drawl' Greenwald"
 "Generous [if player is male]Gene Urso[else]Sue Groen[end if]"
 "Genial-Linage Angeli"
 "Get-Hard Ed Garth"
@@ -24771,6 +24796,7 @@ blurb
 "Leanna's Anneals"
 "Leathery Atherley"
 "Lee Smith the Slime"
+"Leer-Dish Shideler"
 "Lem 'Lots-to-Smell' Mostell" [p]
 "Leo 'Frat' Laforte"
 "Leprous Sproule"
@@ -24778,8 +24804,10 @@ blurb
 "Less-Mean Esselman"
 "Lesser Dr. Dressler"
 "Lethargic Chari Gelt" []
+"Levan 'Drawl' Vanderwall"
 "Level-Head [if player is male]Dave Helle[else]Delva Ehle[end if]"
 "Leveler Revelle"
+"Lew 'Drawl' Wardwell"
 "Lew 'Nah' Whalen"
 "Lewd Ann Newland"
 "Lewd Anson Lansdowne" []
@@ -24903,6 +24931,7 @@ blurb
 "Long-Mad Goldman"
 "Long-Revels Snellgrove"
 "Long Stan 'Not-Slang' Langston" [p]
+"Loo 'Drawl' Woollard"
 "Lost Heir [if player is male]Eli Short[else]Teri Sohl[end if]" []
 "Loud Ben Boulden" []
 "Loud Berna Abdelnour" []
@@ -25232,6 +25261,7 @@ blurb
 "Nameless Sam Elsen"
 "Narrow Raw Ron"
 "Natty Ty Tan"
+"Neal 'Drawl' Wallander"
 "Neal 'Nah' Lenahan"
 "Near-Top Patreon Paterno"
 "Neckbeard Daren Beck"
@@ -26530,6 +26560,7 @@ blurb
 "Violent [toti] Lev"
 "Voiders Devisor [if player is male]Edris Vo[else]Vi Erdos[end if]"
 "Volatile [if player is male]Al Violet[else]Iva Tolle[end if]"
+"Wack-Dish Shadwick"
 "Wade 'Sneer' Wandersee"
 "Wan Lord Rowland"
 "Wan Toad Towanda"
