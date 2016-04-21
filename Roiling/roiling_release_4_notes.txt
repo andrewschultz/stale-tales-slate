@@ -11,7 +11,7 @@ There was also other miscellaneous stuff and even a few features that fell out w
   --Leo and Rand now have idols in fighting. (store P area)
   --a double: yes and no now have longer cycles of responses that you can see in the endgame. (general)
   --there are now random brands of sleepables if you examine the futon in the shack. (store P area)
---over two-thirds of the random lists now have 100+ entries. At last tally, it is 49.
+--over two-thirds of the random lists now have 100+ entries. At last tally, it is 50.
 --all random lists now have 25+ entries. Including the new yes and no responses.
 --lists are cut off after ~30 responses, forcing you to win the game to see them all. Or go through the source code
 --30000+ total elements in the random lists.

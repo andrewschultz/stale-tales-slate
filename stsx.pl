@@ -9,19 +9,19 @@ $anaIdeas = "c:\\writing\\dict\\sts.txt";
 
 open(A, $anaIdeas) || die ("No ideas file $anaIdeas.");
 
+my $stsGame = "A Roiling Original";
+
+my $runTableSort = 1;
+my $runTableChomp = 1;
+my $debug = 0;
 my $updatesToCheck = 0;
-
-$stsGame = "A Roiling Original";
-
-$runTableSort = 1;
-
-$runTableChomp = 1;
 
 while ($count <= $#ARGV)
 {
   $a = @ARGV[$count];
   for ($a)
   {
+  /^-d/ && do { $debug = 1; $count++; next; };
   /^-n/ && do { $runTableSort = 0; $count++; next; };
   usage();
   }
@@ -55,8 +55,8 @@ if ($bail) { die("Fix mistakes before continuing."); }
 
 if ($totalAdded)
 {
-addIdeas("roiling");
-addIdeas("sa");
+addIdeas("roiling", 0);
+addIdeas("sa", 1);
 }
 else
 {
@@ -86,6 +86,7 @@ sub addIdeas
 
   if ($justPrintCmds) { print "copy $addedFile $storyFile\n"; return; }
 
+  #for $x (sort keys %toAdd) { print "$x :: $toAdd{$x}\n"; } die;
   open(A, $storyFile) || die ("Can't open $storyFile!");
   open(B, ">$addedFile") || die ("Can't open $addedFile!");
   binmode(B);
@@ -109,8 +110,6 @@ sub addIdeas
     }
   }
   
-  $undone = "c:/writing/scripts/sts-undone.txt";
-  for $x (keys %toAdd) { print "$x hash not deleted. This should never happen, but it did. Look in $undone."; open(C, ">>$undone"); print C "$x:\n$toAdd{$x}\n"; close(C); }
 
   close(A);
   close(B);
@@ -118,6 +117,14 @@ sub addIdeas
   print "$cmd\n";
   `$cmd`;
   print "File copied\n";
+  my $unsorted = 0;
+  open(A, "$undone");
+  while ($a = <A>) { if ($a =~ /^\"/) { $unsorted++; } }
+  close(A);
+  print "TEST RESULTS:STS unsorted,0,$unsorted,0,<a href=\"$undone\">Culprits</a>\n";
+  if ($_[1] == 0) { print "Not processing results til both files are written.\n"; return; }
+  $undone = "c:/writing/dict/sts-undone.txt";
+  for $x (keys %toAdd) { print "$x hash not deleted. This should never happen, but it did. Look in $undone."; open(C, ">>$undone"); print C "$x:\n$toAdd{$x}\n"; close(C); }
 }
 
 ################################

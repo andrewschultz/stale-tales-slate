@@ -39,6 +39,7 @@ while ($count <= $#ARGV)
   for ($a)
   {
   /^-?w$/ && do { findWhat(); exit; };
+  /^-?e$/ && do { `$scr`; };
   /^-d$/ && do { $allowDupe = 1; $count++; next; };
   /^-f$/ && do { $lastsFile = "firsts.txt"; $firstsFile = "lastbig.txt"; $count++; next; };
   /^-m$/ && do { $middleName = 1; $count++; next; };

@@ -1,8 +1,6 @@
 table of random books [xxm4] [tob] [TITLE nopunc noquot]
 
 table of posse bosses [xxv7] [TITLE nopunc noquot]
-"Artless Eden Latendresse"
-"Artless Pa Lastrapes"
 
 table of self-help bestsellers [xxv0] [TITLE nopunc noquot]
 
@@ -11,9 +9,8 @@ table of posh dialogue [xxv6] [CAPS PUNC QUOT]
 table of gritty dialogue [xxv4] [CAPS PUNC QUOT]
 
 table of ad slogans [xxm1] [TITLE n/a noquot]
-"Egleston's Leet Songs"
 
-table of to-sort=========================================
+table of to-sort========================================= (note the order is g, m, s, u, v, p, y, w, t, h if something clashes & we'd like to avoid a few [] inserts later]
 
 table of cussing rejects [xxg1] [CAPS PUNC noquot]
 
@@ -58,16 +55,10 @@ table of lame tv shows [xxm9] [TITLE nopunc noquot]
 table of laughhouses [xxm0] [TITLE nopunc noquot]
 
 table of lousy hit songs [xxm01] [TITLE nopunc noquot]
-"Strong Leet Long Street"
 
 table of mob chants [xxm02] [CAPS PUNC n/a]
 
 table of oldies singers [xxm03] [TITLE nopunc noquot]
-"Actual Rene Laracuente"
-"Actual Herb Lauterbach"
-"Actual Sina Santalucia"
-"Earnest Gil Easterling"
-"Earnest Leigh Siegenthaler"
 
 table of sports chatter [xxm05] [CAPS PUNC n/a]
 
@@ -102,49 +93,6 @@ table of ethics advice [xxv3] [CAPS PUNC n/a]
 table of non-checklists [xxv5] [TITLE nopunc noquot]
 
 table of prestigious bums [xxv8] [TITLE nopunc noquot]
-"Leet Carl Cretella"
-"Leet Tom Molette"
-"Leet Sam Maltese"
-"Leet Rick Terlecki"
-"Leet Nat Lanette"
-"Leet Handy Delehanty"
-"Leet Syed Steedley"
-"Leet Mister Settlemire"
-"Leet Navin Valentine"
-"Leet Mart Marlette"
-"Leet Signor Oesterling"
-"Leet Grad Ratledge"
-"Leet Rawling Gillenwater"
-"Leet Ivan Valiente"
-"Leet Amos Altemose"
-"Leet Van Valente"
-"Leet Denis Edelstein"
-"Leet Rob Boelter"
-"Leet Ty Tetley"
-"Leet Mary Altmeyer"
-"Leet Art Letarte"
-"Leet Vito Violette"
-"Leet Blair Laliberte"
-"Leet Reid Dieterle"
-"Leet Rich Treichel"
-"Leet Les Estelle"
-"Leet Tad Delatte"
-"Leet Lou Ouellet"
-"Leet Chet Chelette"
-"Leet Bo Belote"
-"Leet Sid Steidle"
-"Leet Rose Oesterle"
-"Leet Kay Keatley"
-"Leet Toni Leonetti"
-"Leet Gay Gateley"
-"Leet Liz Leitzel"
-"Leet Sandi Adelstein"
-"Leet Mirna Leiterman"
-"Leet Tresa Satterlee"
-"Leet Shani Haseltine"
-"Leet Erinn Enterline"
-"Leet Linn Tennille"
-"Leet Kimbra Timberlake"
 
 table of real estate ads [xxv9] [TITLE nopunc noquot]
 
@@ -217,8 +165,7 @@ table of red bull taunts [xxr1] [CAPS PUNC n/a]
 table of riot slogans [xxr2] [CAPS PUNC n/a]
 
 \ro3
-
-\anag=remaining anagrams
+cold nuke/unlocked/luck done
 
 table of garbage [xx1]
 
