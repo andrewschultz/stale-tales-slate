@@ -1969,7 +1969,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Heuring's Ushering"
 "Hi-Copes Hospice"
 "Hi-Glare Hair Gel"
-"Higton's Thingos" []
+"Higton's Thingos"
 "Hilgdon's: Holdings Sold Nigh!"	true
 "Hilgert's Slighter Lighters"
 "Hip Cons Shop, Inc." []
@@ -2072,7 +2072,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Korhonen's Nonkosher"
 "KorTech: THE ROCK!"	true
 "Kosar Okras"
-"Krewson Knowers" []
+"Krewson Knowers"
 "Kris Best Briskets"
 "Kubik's Bikkus"
 "Kumari Rumaki"
@@ -2935,6 +2935,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Tom's Gag Maggots"
 "Tomkin's OK Mints"
 "Tonita's Station"
+"Tony-Shape Pantyhose"
 "Too Happy Pay Photo"
 "Tootles's Toolsets"
 "Top-Cert-Protect" []
@@ -3096,7 +3097,7 @@ blurb
 "[d-word-u] Gia Madigan"
 "[d-word-u] Hellen Mendenhall"
 "[d-word-u] Ira Miranda"
-"[d-word-u] Karl Markland"
+"[d-word-u] Karl Markland" []
 "[d-word-u] Lea Adelman"
 "[d-word-u] Leah Haldeman"
 "[d-word-u] Lee Edelman"
@@ -3108,10 +3109,10 @@ blurb
 "[d-word-u] Ray Maynard"
 "[d-word-u] Rhea Hardeman"
 "[d-word-u] Roe Medrano-Dameron"
-"[d-word-u] Ron Normand-Nordman"
+"[d-word-u] Ron Normand-Nordman" []
 "[d-word-u] Ronni Normandin"
 "[d-word-u] Roy Raymond"
-"[d-word-u] Zoe Mendoza"
+"[d-word-u] Zoe Mendoza" []
 "All Time Ill Mate Tim Leal"
 "Art Sopp, Rap's Top Pop Star"
 "Artsome Maestro Moe Rast"
@@ -3183,7 +3184,7 @@ blurb
 "Def Lucia Caufield"
 "Def Maren Freedman"
 "Def Mirna Friedman-Manfredi"
-"Def Nasir Sandifer"
+"Def Nasir Sandifer" []
 "Def Neil Fielden"
 "Def Norah Forehand"
 "Def Nurse Dufresne"
@@ -3202,7 +3203,7 @@ blurb
 "DJ [n-t] Tjaden"
 "DJ Amee Majeed"
 "DJ Aron Jordan"
-"DJ Astor Jorstad"
+"DJ Astor Jorstad" []
 "DJ Cesena Cendejas"
 "DJ Erminia Demirjian"
 "DJ Eva Javed"
@@ -3256,7 +3257,7 @@ blurb
 "Fallen Iva Villafane"
 "Fallen Tiger Lingafelter"
 "Festive Set Five"
-"Finally-Fly Lani"
+"Finally-Fly Lani" []
 "Flashy Fly Ash"
 "Fly Arie Frailey"
 "Fly Debi Byfield"
@@ -3270,7 +3271,7 @@ blurb
 "Fly Madie Mayfield"
 "Fly Peer Pelfrey"
 "Fly Rae Farley"
-"Fly Rana Flanary"
+"Fly Rana Flanary" []
 "Fly Reid Fridley"
 "Fly Rena Flanery"
 "Fly Renna Flannery"
@@ -3325,7 +3326,7 @@ blurb
 "I-Ill-Hard Hilliard"
 "I-Roll-[']Em Morelli"
 "Ice Don Condie"
-"Ice Kam Mackie"
+"Ice Kam Mackie" []
 "Ice Kym Mickey"
 "Ice Leah Aichele"
 "Ice Lyn Nicely"
@@ -3333,23 +3334,23 @@ blurb
 "Ice Randal Cardinale"
 "Ice Regan Carnegie"
 "Ice Rolanda Candelario"
-"Ice Sean Necaise"
+"Ice Sean Necaise" []
 "Ice Sha Chiesa"
 "Ice Shavon Schiavone"
-"Ice Son Enciso"
+"Ice Son Enciso" []
 "Ice Sona Asencio"
 "Ice Tona Atencio"
 "Ice Trish Christie"
 "Ill Abe Laible"
 "Ill Al Lalli"
-"Ill Alvera Villareal"
+"Ill Alvera Villareal" []
 "Ill Amy Millay"
 "Ill Andre Nardelli"
 "Ill Angel Langille"
 "Ill Annie Iannelli"
 "Ill Archie Chiarelli" []
 "Ill Ash Sillah"
-"Ill Bee Liebel"
+"Ill Bee Liebel" []
 "Ill Ben Bellin"
 "Ill Brad Billard"
 "Ill Bree Liebler"
@@ -3381,7 +3382,7 @@ blurb
 "Ill Evan Villena"
 "Ill Evans Sanville"
 "Ill Ewan Allwein"
-"Ill Genna Nelligan"
+"Ill Genna Nelligan" []
 "Ill German Mallinger"
 "Ill Gina Gillian"
 "Ill Glenda Gilleland"
@@ -3396,7 +3397,7 @@ blurb
 "Ill Horace Chiarello"
 "Ill Huong Loughlin"
 "Ill Ivan Villani"
-"Ill Joe Jollie"
+"Ill Joe Jollie" []
 "Ill Lavon Villalon"
 "Ill Mack Mallick"
 "Ill Mara Mallari"
@@ -3407,7 +3408,7 @@ blurb
 "Ill Nevada Villaneda"
 "Ill-Nice Cellini"
 "Ill Noe O'Neill"
-"Ill Nordine Rondinelli"
+"Ill Nordine Rondinelli" []
 "Ill Omer Morelli" []
 "Ill One Lionel" []
 "Ill Paolo Paolillo"
@@ -3415,7 +3416,7 @@ blurb
 "Ill Regan Allinger"
 "Ill Regena Langelier"
 "Ill Remona Marinello"
-"Ill Retta Litteral"
+"Ill Retta Litteral" []
 "Ill Rey Reilly"
 "Ill Rico Cirillo"
 "Ill Rose Ellisor"
@@ -3473,27 +3474,27 @@ blurb
 "MC Garth Mcgrath"
 "MC Ike Mckie"
 "MC Ira Macri"
-"Mc Kandi Dickman"
+"Mc Kandi Dickman" []
 "MC Karena Ackerman"
 "MC Karin Rickman"
 "Mc Kathe Ketcham"
 "MC Kena Eckman"
-"MC Kerri Merrick"
+"MC Kerri Merrick" []
 "MC Kia Amick"
 "MC KO-Mock"
 "MC Larisa Mariscal"
 "MC Layne Mcnealy"
-"MC Leona Coleman"
+"MC Leona Coleman" []
 "MC Leonore Colmenero"
 "MC Lulu Cullum"
 "MC Niki Minick"
 "MC Push-Chumps"
 "MC Rena Carmen-Mcnear"
-"MC Reyna Mcraney"
+"MC Reyna Mcraney" []
 "MC Rheba Chamber"
 "MC Rina Mcnair"
-"MC Rosa Marcos"
-"MC Rush Schrum"
+"MC Rosa Marcos" []
+"MC Rush Schrum" []
 "MC Ryan Mcnary"
 "MC Seaborn Branscome"
 "MC Serena Cremeans"
@@ -3508,24 +3509,24 @@ blurb
 "MC Visit-Victims"
 "Miracle MC Ariel"
 "Molten Montel"
-"Mosh Man Hammons"
+"Mosh Man Hammons" []
 "Mr. Hear-Harmer"
 "Ms. Play-My-Pals Sly Pam"
 "Neo Al Oneal"
-"Neo Amy Yeoman"
+"Neo Amy Yeoman" []
 "Neo Bart Boatner"
 "Neo Bill Bellino-Bonelli"
 "Neo Bo Boone"
 "Neo Britt Robinett"
 "Neo Chas Acheson"
 "Neo Chris Richeson"
-"Neo Coy Cooney"
+"Neo Coy Cooney" []
 "Neo Cris Ericson-Recinos"
-"Neo Curt Cureton"
-"Neo Del Deleon"
+"Neo Curt Cureton" []
+"Neo Del Deleon" []
 "Neo Dorla Leonardo"
 "Neo Emil Lemoine"
-"Neo Gala Galeano"
+"Neo Gala Galeano" []
 "Neo Gay Gonyea"
 "Neo Irma Romaine"
 "Neo Kris Erikson"
@@ -3535,8 +3536,8 @@ blurb
 "Neo Lew Loewen"
 "Neo Lida Odaniel"
 "Neo Lisa Eliason"
-"Neo Marc Cameron-Marenco"
-"Neo Mary Maroney"
+"Neo Marc Cameron-Marenco" []
+"Neo Mary Maroney" []
 "Neo Ming Mignone"
 "Neo Pat Aponte"
 "Neo Rand Nardone"
@@ -3545,7 +3546,7 @@ blurb
 "Neo Rosy Reynoso"
 "Neo Roy Rooney"
 "Neo Sal Sloane-Leanos"
-"Neo Sam Seamon"
+"Neo Sam Seamon" []
 "Neo Sid Edison-Eidson"
 "Neo Sol Oleson"
 "Neo Tad Deaton"
@@ -3563,13 +3564,13 @@ blurb
 "New Clare Lawrence"
 "New Dee Weeden"
 "New G Gwen"
-"New Gerald Greenwald"
+"New Gerald Greenwald" []
 "New Gita Wingate"
-"New Hal Whalen-Whelan"
+"New Hal Whalen-Whelan" []
 "New Irma Wireman"
 "New Kirk Newkirk"
 "New Leo Loewen"
-"New Lida Weiland"
+"New Lida Weiland" []
 "New Lon Newlon"
 "New Mac Mcewan"
 "New Madie Wiedeman"
@@ -3577,7 +3578,7 @@ blurb
 "New Mina Weinman"
 "New Minna Weinmann"
 "New Reid Weidner-Widener-Redwine"
-"New Rick Renwick"
+"New Rick Renwick" []
 "New Rob Browne"
 "New Robin Winborne"
 "New Robt Brewton"
@@ -3592,12 +3593,12 @@ blurb
 "No-Cred Ed Corn"
 "No Cute Tune Co"
 "No-Flaws [if player is male]Alf Snow[else]Flo Swan[end if]"
-"No-Rhyme Mo Henry"
+"No-Rhyme Mo Henry" []
 "No-Rhymes Shon Emry"
 "Noble L-Bone"
-"Not-Swell Townsell"
+"Not-Swell Townsell" []
 "Nuclear Cur Neal"
-"Null-Rep Purnell"
+"Null-Rep Purnell" []
 "On-Beats Bastone"
 "Our Rap Uproar"
 "Pamperin['] Pimp Rena"
@@ -3624,11 +3625,11 @@ blurb
 "Rad Les Sadler"
 "Raggae Garage"
 "Raw Ern Warren"
-"Real Butch Culbreath"
+"Real Butch Culbreath" []
 "Real Earl Lear"
 "Real MC Marcel McLear"
 "Red Hot Ed Hort"
-"Reggae Tart Greta Gater"
+"Reggae Tart Greta Gater" []
 "Rockin[']-on Rick"
 "Rollin['] Ill Ron"
 "Schooling Lois Chong"
@@ -3676,7 +3677,7 @@ blurb
 "West Arch Hats Crew"
 "Wild Free Life Drew"
 "Wino Dog Goodwin"
-"Words-Poet Prestwood"
+"Words-Poet Prestwood" []
 "Yo['] Bust Boy Stu"
 "Yolo Al Loyola"
 "Yolo Ed Dooley"
@@ -6251,7 +6252,7 @@ blurb
 "Aw, Dr. Ward"
 "Aw, Li'l Willa"
 "Ay, Mr. Army"
-"Bad-Odor Boor Dad"
+"Bad-Odor Boor Dad" []
 "Bad Velour Boulevard"
 "Baking Chum Buckingham"
 "Beilman's Minables" []
@@ -6269,7 +6270,7 @@ blurb
 "The Cats at Chet's"
 "Cats Like Kastelic" []
 "Cesar Arce's Acres"
-"Chef King Keg Finch"
+"Chef King Keg Finch" []
 "Chief Chef, I"
 "Common Con Mom"
 "Conway Can, Yow"
@@ -6305,7 +6306,7 @@ blurb
 "Ed Nurses Rudeness"
 "Ed's Rec Screed"
 "Erwin HS Whiners"
-"Everdaunt's Undersea TV Adventures"
+"Everdaunt's Undersea TV Adventures" []
 "Everyday Davey Rey"
 "Exciter Tex Rice"
 "Faboo Oaf Bo"
@@ -6327,20 +6328,20 @@ blurb
 "Gwyn Luis Wins Ugly"
 "Hal Gets the Gals"
 "Hearst Hearts Sather"
-"Herb at the Bar: Be Thar"
+"Herb at the Bar: Be Thar" []
 "Hev-Gut the Guv"
 "Hey Dr. Hyder"
 "Hey, Twin Whitney"
-"Horrid Dr. Hiro"
+"Horrid Dr. Hiro" []
 "Horse Dr. Sherrod"
 "Hot News Show Net" []
 "I Bet on Benito"
-"I Know Dr. Dworkin"
-"I-Swerve Reviews" []
+"I Know Dr. Dworkin" []
+"I-Swerve Reviews" [] []
 "I'm Joe Emoji"
 "Initiated Dietitian Nidia Teti"
 "Ira and Adrian"
-"Join Sam Jamison"
+"Join Sam Jamison" []
 "Karim's Mark is a Smirk"
 "Keen Dr. Denker"
 "Know Eric's Nice Works"
@@ -6349,7 +6350,7 @@ blurb
 "Le Kid, Liked"
 "Lea's BFF Baffles"
 "Learned Lad Rene"
-"Leavitt's Vital Set" []
+"Leavitt's Vital Set" [] []
 "Let's Be Mr. Trembles"
 "Let's Ring Sterling"
 "Li'l Ms. Mills"
@@ -6363,7 +6364,7 @@ blurb
 "Majority: Tim or Jay"
 "Make Fun, Ma Funke"
 "Mathew is the Swami"
-"Me: the Theme"
+"Me: the Theme" []
 "Mean Dr. Cho, Macho Nerd"
 "Mediocre Doc Meier"
 "Meet Rex Extreme"
@@ -6376,7 +6377,7 @@ blurb
 "Mr. Casa's Sarcasm"
 "Mr I-Stop-Imports"
 "Mr Sosa & Ms Rosa"
-"Much-Apt Matchup" []
+"Much-Apt Matchup" [] []
 "My Bro Mr. Yob" []
 "New Kid Ed Wink"
 "Newsgirl Swingler-Wersling"
@@ -6387,10 +6388,10 @@ blurb
 "Nurse Unser"
 "Oh Noes Mr. Hormones"
 "Oh, Saw a Show"
-"Ol['] Pat is a Pistol"
+"Ol['] Pat is a Pistol" []
 "Olof Dover, Food Lover"
 "Or Be OK, Booker"
-"Osby Boys"
+"Osby Boys" []
 "Phear Her Pa"
 "Pip Carlin, Principal"
 "Pip Loves Evil Opps"
@@ -6401,13 +6402,13 @@ blurb
 "Prior Pirro"
 "Rasheed: He Dares" []
 "Rathbone The Baron"
-"Real Spy Players"
+"Real Spy Players" []
 "Real Wives, Wee Rivals"
 "Real World or, Well, Rad"
 "Realistic Ice Trials"
 "Reg and Danger"
 "Reluct-Cutler"
-"Reset, Tour Our Street"
+"Reset, Tour Our Street" []
 "Resident Red Stein"
 "Rhoads Hoards So Hard" []
 "Rifts First"
@@ -6455,7 +6456,7 @@ blurb
 "Tot-Can-Act-Not Octant"
 "Tots Lyin['] Snottily"
 "Train [']Em, Martine"
-"Trek Show: the Works"
+"Trek Show: the Works" []
 "Trooper Portero"
 "Trounce-Counter" []
 "Trouper Ruperto" []
@@ -6468,16 +6469,16 @@ blurb
 "Un-Tribal Lunar Bit" []
 "Up-Gro Group"
 "Vallero All Over"
-"Voisin-Vision"
+"Voisin-Vision" []
 "Wallace's Case Wall"
 "Weak-Bosh Bo Hawke's Bake Show"
 "Weatherly The Lawyer"
 "Weird Wired Dr. Wei"
-"Whittle With Tel"
+"Whittle With Tel" []
 "Whoa, Dr. Howard, How Rad"
 "Wilder Dr. Liew" []
 "With a Wit, Ah"
-"Wizardly Liz Wydra"
+"Wizardly Liz Wydra" []
 "Xia's Axis"
 "Ye Chap Peachy: Ach, Yep"
 "Yo, Dares So Ready"
@@ -15088,6 +15089,7 @@ blurb
 "Adore: a Redo."
 "Ah, Dr. Hard."
 "Ah, So, Men: No Shame." []
+"Ahoy, Spent Pantyhose!"
 "Aidan's Naiads."
 "Aiden, Edina, Andie, Diane."
 "Air-Smut Atriums."
@@ -23327,6 +23329,7 @@ blurb
 "'Want now?' / 'Won't. Naw.'"
 "'Want sex?' / 'Tax news was next!'"
 "'Way hot hat, yow!'"
+"'Way too big? Yow! A bigot!'"
 "'We can go once. Wag.'"
 "'We hire where I wire, eh?'" []
 "'We know Ken!' / 'Wow!'" []

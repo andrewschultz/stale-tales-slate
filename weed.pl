@@ -166,6 +166,7 @@ for $thisDir(@weedDir)
 
   close(A2);
   close(B);
+  print B2 "aq.pl -d " . join(",", @false) . "\n";
   close(B2);
   close(C);
   close(A3)
@@ -599,7 +600,7 @@ while (($a = <A>) && (stillWorth()))
 	{
 	  if (!$dupes{$acrom})
 	  {
-	    $falsePos++; print B2 "false \[\] line $line $falsePos on $a\n"; $fapo{$acrom} = "$a-$line"; push (@false, $falsePos);
+	    $falsePos++; print B2 "false \[\] line $line $falsePos on $a\n"; $fapo{$acrom} = "$a-$line"; push (@false, $line);
 	  }
 	  next;
 	} #move this after mash ($a) or back to the top to see about duplicated stuff
@@ -610,7 +611,6 @@ while (($a = <A>) && (stillWorth()))
     $badAnaSoFar = 0;
     $old = $a;
     $a = cutDown($a);
-	#if ($a =~ /tjaden/i) { die ("$old -> $a"); }
 	if (!checkFullAna($a))
 	{
 	  mash($a);
@@ -646,14 +646,14 @@ while (($a = <A>) && (stillWorth()))
 	$dupeRows++;
 	#old way
 	#print A3 "$a ($line)\n";
-	if ($numberYet) { print A3 ", "; }
+	if ($numberYet) { print A3 ","; }
 	$numberYet = 1;
 	print A3 "$line";
     $dupCount{"$thisTable"}++;
 	}
 	else
 	{
-    $dupes{$b} = $a;
+    $dupes{$b} = $a; if ($_[0] == "sa") { $dupes{$b} = "sa-$dupes{$b}"; }
 	$ln{$b} = $line;
 	$ta{$b} = $thisTable;
 	}

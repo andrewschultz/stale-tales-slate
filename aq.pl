@@ -9,8 +9,11 @@ while ($count <= $#ARGV)
 	@lines = (@lines, @temp);
   }
   if ($a =~ /-s/) { $game = "sa"; }
+  if ($a =~ /-d/) { $delete = 1; }
   $count++;
 }
+
+if ($#lines == -1) { print ("Nothing done.\n"); exit; }
 
 doLines();
 
@@ -25,15 +28,30 @@ sub doLines
   {
     $line++;
     chomp($a);
-    if ($line == @lines[0]) { print B "$a \[\]\n"; print "Had @lines[0], now "; shift(@lines); print "@lines[0].\n"; } else { print B "$a\n"; }
+    if ($line == @lines[0]) { processLine(); } else { print B "$a\n"; }
   }
   close(A);
   close(B);
   if (! -f "$fileString.bak") { die; }
   if (! -f "$fileString") { die; }
-  if ((-s "$fileString.bak") < (-s "$fileString")) { die ("Oops, data got deleted.\n"); }
+  if (((-s "$fileString.bak") < (-s "$fileString")) && (!$delete)) { die ("Oops, data got deleted.\n"); }
   $cmd = "xcopy /y /q \"$fileString.bak\" \"$fileString\"";
   print "Copying over...\n$cmd\n";
   $output = `$cmd`;
   print "$output";
+}
+
+sub processLine
+{
+  if ($delete)
+  {
+    $a =~ s/ ?\[\]//i;
+	print B "$a\n";
+	shift(@lines);
+  }
+  else
+  {
+  print B "$a \[\]\n";
+  shift(@lines);
+  }
 }
