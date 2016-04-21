@@ -51,7 +51,11 @@ sub processLine
   }
   else
   {
+  if ($a =~ / \[\]/) { print "@lines[0] $a already commented\n"; print B "$a\n"; }
+  else
+  {
   print B "$a \[\]\n";
+  }
   shift(@lines);
   }
 }

@@ -2570,6 +2570,7 @@ blurb
 "Then was the swan sat, hewn."
 "There is her site, sire. The ether is here. Sit." []
 "Therese the Seer."
+"They sack a sketchy shack, yet."
 "Thimbles blest him."
 "Thin Gloom Moonlight."
 "This be his bet: she bit!"

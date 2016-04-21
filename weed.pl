@@ -90,6 +90,8 @@ $pwd = getcwd();
 
 @weedDir = ();
 
+my $divider = 5000;
+
 while ($count <= $#ARGV)
 {
   $a = @ARGV[$count];
@@ -572,6 +574,7 @@ $line = 0;
 while (($a = <A>) && (stillWorth()))
 {
   $line++;
+  if ($line % $divider == 0) { print "At line $line\n"; }
   $tableRows++;
   if ($a =~ /$ch/) { print("BIG WARN line $line has a smart quote or apostrophe.\n"); }
   if ($notWeirdYet)
@@ -629,8 +632,10 @@ while (($a = <A>) && (stillWorth()))
 	if (!$tableYetA2)
 	{
 	  $tableYetA2 = 1;
-	  print A2 "</tr><tr colspan=3 background=grey><td><center>$thisTable</center></td></tr>\n";
 	  if ($numberYet) { print A3 "\n"; }
+	  if ($#localLineNums > -1) { print A2 "<tr><td>aq.pl " . join(" ", @localLineNums) . "</td></tr>\n"; }
+	  print A2 "</tr><tr colspan=3 background=grey><td><center>$thisTable</center></td></tr>\n";
+	  @localLineNums = ();
 	  print A3 "==$thisTable\n";
 	  $numberYet = 0;
 	}
@@ -646,14 +651,12 @@ while (($a = <A>) && (stillWorth()))
 	$dupeRows++;
 	#old way
 	#print A3 "$a ($line)\n";
-	if ($numberYet) { print A3 ","; }
-	$numberYet = 1;
-	print A3 "$line";
+	push(@localLineNums, $line);
     $dupCount{"$thisTable"}++;
 	}
 	else
 	{
-    $dupes{$b} = $a; if ($_[0] == "sa") { $dupes{$b} = "sa-$dupes{$b}"; }
+    $dupes{$b} = $a; if ($_[0] eq "sa") { $dupes{$b} = "<b>SA:</b>$dupes{$b}"; }
 	$ln{$b} = $line;
 	$ta{$b} = $thisTable;
 	}
@@ -661,7 +664,7 @@ while (($a = <A>) && (stillWorth()))
   }
 }
 
-if ($numberYet) { print "\n"; }
+if ($#localLineNums > -1) { print A2 "<tr><td>" . join(" ", @localLineNums) . "</td></tr>\n"; }
 
 }
 
