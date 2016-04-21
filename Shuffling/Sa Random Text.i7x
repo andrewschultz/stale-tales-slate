@@ -1417,7 +1417,7 @@ book sortie
  
 table of poem codas [xxi]
 blurb
-"****ed Men, Add Mad End."
+"****ed Men, Add Mad End." [x]
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
 "Act four: fur coat. Our fact."
@@ -1593,7 +1593,7 @@ blurb
 "Descent, go! Congested? Get second."
 "Dew hilt: led with the wild."
 "Diagnose: Agonised!"
-"Dial for a florid laird of fair old Florida!"
+"Dial for a florid laird of fair old Florida!" []
 "Did elf fiddle, defil'd? I'd fled."
 "Die first, fit Sir Ed!"
 "A digit met, a timid get: mitigated!"
@@ -1701,7 +1701,8 @@ blurb
 "Far east, a faster fear sat."
 "A far fen: fanfare? Naff era!"
 "Far lout of ultra fault or loaf-rut."
-"A Far Odd Radar of Fad Road."
+"A far odd fad road."
+"Far road of radar."
 "Fat Greg's egg-farts fest! Argg!"
 "Fat lord! Old fart!"
 "Fat Sir Trafis: A First, Fair St.!"
@@ -1716,7 +1717,7 @@ blurb
 "Fear, Sir Frasier, a Ferris..."
 "The fears: fresh tea, feathers."
 "Feathery, they fear the faery."
-"Feel a cup fuel pace, peacful."
+"Feel a cup fuel pace, peaceful."
 "Fest Four: Foe Turfs to suffer-effort us."
 "Fetch a fork off the rack. Hack effort!"
 "Fetid nosy fiend toys of destiny edify tons!"
@@ -1786,7 +1787,6 @@ blurb
 "Fred, his red fish."
 "Free TV, eh? The fever!"
 "Fresh air. Far shire. Rare Fish. Eh, friars?"
-"Freshest, I sift here the fries. This, free!"
 "Freshie, his reef: he fires ere fish."
 "Frettier tree rift? Refitter!"
 "The frog forgeth! Fret, hog!"
@@ -1881,7 +1881,7 @@ blurb
 "He eats the sea as thee."
 "He oinks. No sheik hikes on. OK, he's in!"
 "He parps: ah, preps, perhaps?"
-"He pats the apes. Ah! Pets!"
+"He pats the asp. Ah! Pets!"
 "He Stands the Sands."
 "He's As Ashes!"
 "Hearties! There is a satire, eh?"
@@ -1902,6 +1902,7 @@ blurb
 "Hewer? Where? WHERE?"
 "Hewn. WHEN???"
 "Hey, a knot! Okay then. Ho, Nat, key!"
+"Hi, fester! Sift here the fries. This, free!"
 "Hi, revert the river! Re-thrive!"
 "Hi, St. Peter! The priest spit there."
 "High water! Writhe, hag! Hear, wight!"
@@ -2005,7 +2006,7 @@ blurb
 "It's a hike. I shake it...shiitake!"
 "It's a hot dog! That is good. This too? Gad!"
 "Itch-sower, score with witches or echos writ. Hits! Cower, wise torch!"
-"Its themes: the times meet this."
+"Its theme: the times meet this."
 "Journalism, mourn jails! Slam, junior! Join murals!"
 "July of flu? Joy!"
 "Kin? Foe? OK. Fine."
@@ -2149,6 +2150,7 @@ blurb
 "No holes shone, lo! Eh, loons?"
 "No, I ran. A ronin!"
 "No lower lore now. Woe, lorn!"
+"No malice, claim one coal mine!" []
 "No, oiled eidolon!"
 "No seafront afternoons resonant of arson often."
 "No stagier iron gates tearing so into rages."
@@ -2256,7 +2258,7 @@ blurb
 "Oo, see fury of our eyes!"
 "Oof! Not on foot!"
 "Or ask it: a risk to art is OK."
-"Or be on Borneo. One reb: bore? No!"
+"Or be on Borneo. One orb: bore? No!"
 "Or do us odours so dour? O, sour'd!"
 "Or know no work? OK, worn."
 "Or ploy poorly, ol['] pyro."
@@ -2285,7 +2287,7 @@ blurb
 "Pater's repast tapers."
 "Paternity titan, prey. Rain petty."
 "Patronise a separation? No, parasite!"
-"Peaceful puce leaf."
+"Peaceful puce leaf." []
 "Peer! Frere! Freer Pere!"
 "Pen hordes? Red phones? Nope, shred."
 "A Pert, Apter Paper Treat? Repeat trap!"
@@ -2427,8 +2429,8 @@ blurb
 "Seedpod, Deposed, Do Speed."
 "Seek truth, thee Turks! Tusk, there."
 "Seek War! A skewer? [']S weaker."
-"Self pity? Split, fey tipsy elf!" []
-"Self pity, yep, lifts spite. Fly!"
+"Self pity? Split, fey tipsy elf!"
+"Self pity, yep, lifts spite. Fly!" []
 "The selfish heel shifts!"
 "Semi-Pro Mr. Poise-Promise is MOPER!"
 "Send some enmossed demoness!"
@@ -2490,7 +2492,6 @@ blurb
 "So wanted down east? No, wasted, new toads!"
 "So weak, we soak. Awe's OK."
 "Soar, tense era's onset! Eons stare! Tens arose!"
-"Social men, claim one coal mine!"
 "Soda fury? Yo, frauds, your fad's four days!"
 "Sods pace, sad copes, passcode."
 "The sofa: oh, a fest of hates!" []
@@ -2592,8 +2593,8 @@ blurb
 "Tied finely, yet infidel: definitely, tidy feline!"
 "A tiff now, fan of wit? Waft info!"
 "Tike Sol likes to lose Kit."
-"The times smit thee!"
-"Tipsy elf felt yips, self-pity. Fly, spite!"
+"The times smit thee!" []
+"Tipsy elf felt yips, self-pity. Fly, spite!" []
 "Tirade. Read it!"
 "[']Tis Red, Direst Sir Ted!"
 "To a wren, worn: eat! [']Ware not!"
@@ -2677,7 +2678,7 @@ blurb
 "A Wart at War."
 "We fled elf-dew, few-led."
 "Wear this with ears. Rewash it!"
-"Weeds of feed sof few does."
+"Weeds of feed sow few does."
 "The well's shell: wet."
 "Wendi H. Hid New When I'd Whined."
 "West, a waste sat. Ew!"
@@ -2730,7 +2731,7 @@ blurb
 "Ye oak? OK, yea, a yoke."
 "Yeah, let thee lay. Heal yet late, hey?"
 "Yeah, Nick. Each inky keychain."
-"Yeah, okay, a hokey oak, hey?"
+"Yeah, OK, a hokey oak, hey?"
 "Yep, worm: wry poem, my power!"
 "Yes, eight siege thy eyesight."
 "Yes, HEAL, eyelash! Seal? Hey!"
@@ -2863,8 +2864,8 @@ blurb
 "'God bless you? Bogus yodels!'"
 "'Good fun? No, God, F U!'"
 "'Got a roof? Go too far!'"
-"'Got spin, pig? TONS!'"
-"'Grasso? A gross-*** org! Arg! SOS!'"
+"'Got spin, pig? TONS!'" [x]
+"'Grasso? A gross-*** org! Arg! SOS!'" [x]
 "'Greed in use? Under siege. Dirge, ensue!'"
 "'GREEN CITY! Cringe yet, icy regent?'"
 "'Gro Food for Good!'"
@@ -2908,7 +2909,7 @@ blurb
 "'Liefest lefties! Sit! Feel!'"
 "'Life's fouls: fossil fuel!'"
 "'Lifestyle elites? Fly, silly feet!'"
-"'Lo, act! Lo, act! Total-Local!'"
+"'Lo, act! Lo, act! Catcall, too!'"
 "'Lo, pacts to scalp! Act, pols!'"
 "'Lo, Swine! Lies Won!'"
 "'Loser flow-followers!'"
@@ -2967,8 +2968,8 @@ blurb
 "'Perish now, ownership!'"
 "'Plot, as to slap at pols!'"
 "'Policeman? Open claim: Menial cop!'"
-"'Poll tax? Lax plot!' Then, all topx."
-"'Polluters['] super tolls. Upset? ROLL!'"
+"'Poll tax? Lax plot!' Then, all topx." [x]
+"'Polluters['] super toll. Upset? ROLL!'"
 "'Pollution? I'll pout on!'"
 "'Poor! New Power! On!'"
 "'Populace! Coup plea! A cue: plop!'"
@@ -3010,7 +3011,7 @@ blurb
 "'Sexism: heft? Fix the mess!'"
 "'Shave? Oy, so heavy!'"
 "'Sheeple, see help!'"
-"'Show the MAN when to sham!"
+"'Show the MAN when to sham!'"
 "'Sick of FiskCo!'"
 "'Silence? NO! Insolence!'"
 "'Slobbery lobbyers!'"
@@ -3065,7 +3066,7 @@ blurb
 "'Tradition, idiot? Rant!'"
 "'Tribalism: stir a limb!'"
 "'True coal clout era? Clear out! A cloture, acuter, lo!'"
-"'True polls: polluters rule plots! Upset? Roll! Pull store!'"
+"'True polls: polluters rule plots! Upset? Roll! Pull store!'" []
 "'TruLab: BRUTAL!'"
 "'Tuxedos? Detox us!'"
 "'Tycoon firm? CONFORMITY!'"
@@ -3093,7 +3094,7 @@ blurb
 "'Web-view vibe? Eww!'"
 "'WenthOrg: the wrong worth-gen!'"
 "'What? Cable WATCHABLE?'"
-"'Widen, outcry! Cower, untidy weird country!'"
+"'Widen, outcry! Cower, untidy weird county!'"
 "'Win-Lose Wiles? No Lies, Now!'" []
 "'WorldCo? Cold Row!'"
 "A worn 'No war.'"
@@ -3105,8 +3106,8 @@ blurb
 table of condo dialogue [xxm2]
 blurb
 "'Art deco! DO react, redcoat!'"
-"Art ethic. Their chat: chattier, theatric."
-"A badly dressed fellow deplores the skankiness of snakeskins."
+"Art ethic. Their act: chattier, theatric."
+"A badly dressed fellow deplores the skankiness of snakeskins." [x]
 "'Be boring? BINGE, bro!'"
 "'Being poor? Bore? No, pig! Gripe boon!'"
 "'Bub, Russ? Suburbs!'"
@@ -3114,16 +3115,16 @@ blurb
 "'Cake, ho! Ah, coke!'"
 "Chat! Soothe toothaches! Taste hooch!"
 "'Condoles.' / 'Consoled.'"
-"The conversationalists decry conservationalists."
-"Discussion of groats via gastro-argots."
+"The conversationalists decry conservationalists." [x]
+"Discussion of groats via gastro-argots." [x]
 "'Entitled, idle tent? I, nettled!'"
 "'Gathered THERE. GAD!'"
 "'Going up? Ug, no, pig!'"
-"'Gotwin Towing charges poor people the same as us rich people. And yet poor folks still whine!'"
+"'Gotwin Towing charges poor people the same as us rich people. And yet poor folks still whine!'" [x]
 "'His crops? Oh, crisps!' Rich sops."
 "'If a guest fatigues, use a gift.'"
 "Integrant nattering."
-"'It can't be a real toxin. It gives relaxation!'"
+"'It can't be a real toxin. It gives relaxation!'" [x]
 "'Liquor cues our cliques.'"
 "'Long time to mingle! Moil, gent!'"
 "'Lower class calls worse, loses. CRAWL!'"
@@ -3132,15 +3133,15 @@ blurb
 "Mildew? I'd MEWL!"
 "'Money-rec ceremony? ONE? Mercy!'"
 "'More limes, sommelier!'"
-"Obvious points are repeatedly flayed deafly."
+"Obvious points are repeatedly flayed deafly." [x]
 "'On bums? So numb! Snub mo[']!'"
 "'Oval rugs? So vulgar!'"
-"Parleys about parsley that deserve no replays."
+"Parleys about parsley that deserve no replays." [x]
 "'Penury: run? Yep!'"
-"People complain about the slacker-lackers outside."
-"People complain how tacky it is a restaurant like Ascot Coast now serves tacos."
-"People discuss poss. sops for a new business deal." [p]
-"People sound grateful the condo serves no cod."
+"People complain about the slacker-lackers outside." [x]
+"People complain how tacky it is a restaurant like Ascot Coast now serves tacos." [x]
+"People discuss poss. sops for a new business deal." [x] [p]
+"People sound grateful the condo serves no cod." [x]
 "'Pools-Perch Prep School? Poor schlep!'"
 "'Porcelain replica? NO! Nicer opal!'"
 "'Prate APTER!'" []
@@ -3148,31 +3149,31 @@ blurb
 "Silken coo. 'Loose Nick looks nice!'"
 "Slimiest elitisms."
 "Snatchiest chattiness."
-"Some posher hopers think domestics should cost dimes."
-"Someone agrees with Kramer's remarks entirely, whatever they are."
-"Someone asks if they can arrest that starer."
-"Someone babbles about a new frozen fish that filets itself."
-"Someone bemoans the cheese sechée."
-"Someone complains about the rudest duster they ever employed."
-"Someone complains they've never had a plainer praline than THIS."
-"Someone decries a reckless clerkess who is lucky to have a job."
-"Someone mentions distrust of those with slanted dentals."
+"Some posher hopers think domestics should cost dimes." [x]
+"Someone agrees with Kramer's remarks entirely, whatever they are." [x]
+"Someone asks if they can arrest that starer." [x]
+"Someone babbles about a new frozen fish that filets itself. Fliest!" [x]
+"Someone bemoans the cheese sechée." [x]
+"Someone complains about the rudest duster they ever employed." [x]
+"Someone complains they've never had a plainer praline than THIS." [x]
+"Someone decries a reckless clerkess who is lucky to have a job." [x]
+"Someone mentions distrust of those with slanted dentals." [x]
 "'Stoneham-Matheson? Mean host!'"
 "Their callow white collar lowlier chat. 'Article! Howl! Allow thrice? Wail! Chortle!'"
-"They argue over who has subtler butlers."
+"They argue over who has subtler butlers." [x]
 "'Time to lose, moot elites!'"
 "'Too pricy? Poor city!'"
 "'Top inn rec: Princeton!'"
 "'Tosh, host! Hot? [']S shot!'"
 "'Whoa, style so wealthy, stay whole!'"
-"'Wines, swine!' yells a visitor, snapping his fingers at a waiter. Of [i]course[r] that had several layers of irony."
-"You learn they're scared of lunatics that don't cut nails."
+"'Wines, swine!' yells a visitor, snapping his fingers at a waiter. Of [i]course[r] that had several layers of irony." [x]
+"You learn they're scared of lunatics that don't cut nails." [x]
 
 table of nerd natter [xxm3]
 blurb
 "'Ah! No NaOH, Noah!'"
 "'Aliterate tail eater!' / 'Retaliate!'"
-"'Any D&D? Dandy?' The nerds laugh."
+"'Any D&D? Dandy?' The nerds laugh." [x]
 "'The APIs ape this!' / 'Ha, spite!'"
 "'The APIs it heaps: phase it!'" []
 "'App? Pap!'"
@@ -3180,7 +3181,7 @@ blurb
 "'Ar, I'd raid a dir!'"
 "'Ari's PC is crap!'"
 "'Armor class calms roars.'"
-"'Asocial? Us? SALACIOUS!' Eww."
+"'Asocial? Us? SALACIOUS!' Eww." [x]
 "'Bam! Stop, spambot!'"
 "'BBS? Yah, shabby.'"
 "'Berated, debater!'"
@@ -3190,7 +3191,7 @@ blurb
 "'Blue screen? Serene club!'"
 "'Bold ideas? Bad. Soiled. Old. Biased.'"
 "'Bold mocks? Block, mods!'"
-"A brief argument over the Hax-o-Gen Hexagon: good or bad?"
+"A brief argument over the Hax-o-Gen Hexagon: good or bad?" [x]
 "'A broom? Roomba!'"
 "'A bug fix: big? FAUX!'"
 "'A bug not out? BANG!'"
@@ -3199,15 +3200,16 @@ blurb
 "'CleanSoft Conflates lone facts!'"
 "'Cold dark-clad dork!'"
 "'Complicated topic calmed. Placid comet.'"
-"A conceders['] crescendo follows a claim nerds'd LIKE to help everyday stupid people."
+"A conceders['] crescendo follows a claim nerds'd LIKE to help everyday stupid people." [x]
 "'Coolidge's Logic Odes slice GOOD!'"
 "'Craft glue: gruel. FACT!'"
 "'A cretin! Certain!' / 'I recant!'"
-"Critiques on [i]Somber Fun of Numbers[r], by Murf Bones."
-"Croupiness percussion. Almost supersonic."
+"Critiques on [i]Somber Fun of Numbers[r], by Murf Bones." [x]
+"Croupiness percussion. Almost supersonic." [x]
 "'Cyborgs cry?' / 'Gobs.'"
-"A debate flares up on the relevance of Trendy Nerd Ty."
-"Debate over the efficacy of Top-Ed Depot."
+"'Dark-side disk read? Dead risk!'"
+"A debate flares up on the relevance of Trendy Nerd Ty." [x]
+"Debate over the efficacy of Top-Ed Depot." [x]
 "'Debian? I abend!' / 'Ban! Die!'"
 "'Delete leet Ed!'"
 "'Deliver e-drivel? Er, devil!'"
@@ -3215,14 +3217,14 @@ blurb
 "'Derive tons! Inverted so, send it over.'"
 "'Dev-kits! Vet, kids!'"
 "'Dim peer? I derp [']em per diem.' / 'Prime, Ed!'"
-"A disagreement over the taste of Boolean Noob Ale."
+"A disagreement over the taste of Boolean Noob Ale." [x]
 "'The disc ditches ID techs!'"
 "'Discounted duds, notice! Deductions!'"
-"A discussion whether Nerdier Derrien Ridener goes too far."
+"A discussion whether Nerdier Derrien Ridener goes too far." [x]
 "'Do-Blacker Ad-Blocker Lab Rocked!'"
 "'Do patches! Code paths!' / 'Patched, so!'"
 "'Dog, coils! Disc logo!' / '[']S cool. Dig.'"
-"'Don't open that malig-Gmail!'"
+"'Don't open that malig-Gmail!'" [x]
 "'Dope build! Double dip!'"
 "'Dour flat loud fart at Rudolf!'"
 "'Dub THEM the dumb!'"
@@ -3244,17 +3246,18 @@ blurb
 "'GitHub? Bug-hit!'"
 "'Gosh, belt the blogs!'"
 "'Graphics? Sigh. Crap.'" []
+"'Grisly hate? Light years are sightly.' / 'Yes, alright.'"
 "'A grok-ok arg.'"
 "'The GUI's ... it's huge!'"
 "'Ha! Orc!' / 'Roach!'"
 "'He slants less than SlashNet!'"
 "'His tip? Ship it!'"
 "'...How I do it, idiot.' / 'Who?'"
-"Huge stir over Guthrie's right-use. 'Urge this!'"
+"Huge stir over Guthrie's right-use. 'Urge this!'" [x]
 "'I, Doug! UI God! Guido?!'"
 "'I fax a fix!'"
 "'I, flunk link-fu? Flukin[']!'"
-"'I refract, craftier,' one nerd says, showing some gadget."
+"'I refract, craftier,' one nerd says, showing some gadget." [x]
 "'I stop no options. Posit on!'"
 "'I'm lost, Milt.' / 'So?'"
 "'IBM? Punk! Bumpkin!'"
@@ -3270,8 +3273,7 @@ blurb
 "'The latest! That's leet!'"
 "'Leap-Tech: the PLACE!'"
 "'Learn everything! Inherently grave! Eternal very nigh!'"
-"A lengthy coo over Holy Cogent Technology."
-"'Light years are slightly alright, yes.'"
+"A lengthy coo over Holy Cogent Technology." [x]
 "'A limit on us? Simulation!'"
 "'Limp, sad plasmid! Mad slip, dim pals!'"
 "'List-U-Utils? I lust!'"
@@ -3284,7 +3286,7 @@ blurb
 "'Malware? Lame! Raw!'"
 "'Math set? That's me!'"
 "'A math trick? Karmic, that!'"
-"'Mediums are for dummies!'"
+"'Mediums are for dummies!'" [x]
 "'Mental math, hmm? A talent!'"
 "'Merry Devon? Myron Dever? Very modern nerdy mover.'"
 "'Microsoft, son? So conformist!'"
@@ -3294,45 +3296,44 @@ blurb
 "'My group's so grumpy! Guys, ROMP!'"
 "'Neat code anecdote noted, Ace!'"
 "Needy smirk. 'Nerdy Mike's Skin Remedy? My! Deerskin!'"
-"Nerd-forts['] trends for front ends."
-"A nerd says WLOG with a glow."
-"The nerds argue: Acier Erica, Chat-Less Tech Lass, Brainiac Cari Bain, Learned Darlene the Nerd-Ale girl, Admin Mandi, Nerd Gal Dr. Angel LeGrand, Thin Reba the Brain, or Gamer Marge."
-"The nerds argue details of Art's Tech Chatters."
-"The nerds argue how minuter runtime is, um, inert."
-"The nerds babble, 'Obtuse? Use bot to be us!'"
-"The nerds believe the Discworld crowd slid."
-"The nerds berate naif slobs['] final-boss info slabs."
-"The nerds boast of SNES-ness."
-"The nerds cite Math Dork Thad Krom."
-"The nerds co-spit about TopSci Optics Topics."
-"The nerds debate whether Andrea's Sane Rad Nerd Asa riffs on, or extends, nerd stereotypes."
-"The nerds debate whether dumb people deserve clamor or calm."
-"The nerds debate whether RiderNet is part of the Trendier Nerd Tier."
-"The nerds discuss a high-powered consortium of Tim Courson, Rico Mounts, and Simon Turco."
-"The nerds discuss Bros to Robots and E-Haven Heaven, two popular science fiction books."
-"The nerds discuss Geekiness, by Gene Sikes."
-"The nerds discuss levels of irony in Doc Pat's Top Cads['] Podcast."
-"The nerds discuss Phreak Parekh's role in hacker lore."
-"The nerds discuss the methods of SatNav Savant St. Vana Van Ast."
-"The nerds discuss the Montrose Mesotron tons more than you thought possible."
-"The nerds discuss the salty lyrics of the NaCl Clan."
-"The nerds discuss the thriller Bad Beth's Death BBS."
-"The nerds discuss the upcoming Vast File Festival."
-"The nerds discuss vaccines/immunity to the Frivolous Fool Virus."
-"The nerds dismiss fans of the band TrueSonic as cretinous neurotics."
-"The nerds dream of a job with Maguire Gamer UI."
-"The nerds extol the simple cleverness of the show 'Dave, a Dev.'"
-"The nerds fantasize about Dr. Irene and her I-Render-Nerdier makeovers."
-"The nerds find AnyBizNet byzantine."
-"The nerds give amens that MENSA Manse isn't as smart as they are."
-"The nerds gush over the new Mac program, Grammar Cop, by Margo Cramp."
-"The nerds jock Dr. Blane, of the Blander Nerd-Lab."
-"The nerds jokingly design a No-Art-a-Tron. Or is it a No-Tar-a-Tron?"
-"The nerds mention the cult webcomic Techy's Scythe."
-"The nerds mock Ye Pod Dopey."
-"The nerds nitpick Global Blog Al."
-"The nerds overanalyze e-filer relief."
-"The nerds pontificate about the EZLab Blaze."
+"Nerd-forts['] trends for trod ferns."
+"A nerd says WLOG with a glow." [x]
+"The nerds argue: Acier Erica, Chat-Less Tech Lass, Brainiac Cari Bain, Learned Darlene the Nerd-Ale girl, Admin Mandi, Nerd Gal Dr. Angel LeGrand, Thin Reba the Brain, or Gamer Marge." [x]
+"The nerds argue details of Art's Tech Chatters." [x]
+"The nerds argue how minuter runtime is, um, inert." [x]
+"The nerds babble, 'Obtuse? Use bot to be us!'" [x]
+"The nerds believe the Discworld crowd slid." [x]
+"The nerds berate naif slobs['] final-boss info slabs." [x]
+"The nerds boast of SNES-ness." [x]
+"The nerds cite Math Dork Thad Krom." [x]
+"The nerds co-spit about TopSci Optics Topics." [x]
+"The nerds debate whether Andrea's Sane Rad Nerd Asa riffs on, or extends, nerd stereotypes." [x]
+"The nerds debate whether dumb people deserve clamor or calm." [x]
+"The nerds debate whether RiderNet is part of the Trendier Nerd Tier." [x]
+"The nerds discuss a high-powered consortium of Tim Courson, Rico Mounts, and Simon Turco." [x]
+"The nerds discuss Bros to Robots and E-Haven Heaven, two popular science fiction books." [x]
+"The nerds discuss Geekiness, by Gene Sikes." [x]
+"The nerds discuss levels of irony in Doc Pat's Top Cads['] Podcast." [x]
+"The nerds discuss Phreak Parekh's role in hacker lore." [x]
+"The nerds discuss the methods of SatNav Savant St. Vana Van Ast." [x]
+"The nerds discuss the Montrose Mesotron tons more than you thought possible." [x]
+"The nerds discuss the salty lyrics of the NaCl Clan." [x]
+"The nerds discuss the upcoming Vast File Festival." [x]
+"The nerds discuss vaccines/immunity to the Frivolous Fool Virus." [x]
+"The nerds dismiss fans of the band TrueSonic as cretinous neurotics." [x]
+"The nerds dream of a job with Maguire Gamer UI." [x]
+"The nerds extol the simple cleverness of the show 'Dave, a Dev.'" [x]
+"The nerds fantasize about Dr. Irene and her I-Render-Nerdier makeovers." [x]
+"The nerds find AnyBizNet byzantine." [x]
+"The nerds give amens that MENSA Manse isn't as smart as they are." [x]
+"The nerds gush over the new Mac program, Grammar Cop, by Margo Cramp." [x]
+"The nerds jock Dr. Blane, of the Blander Nerd-Lab." [x]
+"The nerds jokingly design a No-Art-a-Tron. Or is it a No-Tar-a-Tron?" [x]
+"The nerds mention the cult webcomic Techy's Scythe." [x]
+"The nerds mock Ye Pod Dopey." [x]
+"The nerds nitpick Global Blog Al." [x]
+"The nerds overanalyze e-filer relief." [x]
+"The nerds pontificate about the EZLab Blaze." [x]
 "The nerds praise the new DualOps Uploads." [x]
 "The nerds quote from Nerds Use Rudeness." [x]
 "The nerds quote jokes from DIE, IDE by Edi Eid." [x]
@@ -3341,14 +3342,14 @@ blurb
 "The nerds recap dreadful MIT TMI." [x]
 "The nerds recap the latest snark from Glib Nerd Lindberg." [x]
 "The nerds recap Vin's Net Invents." [x]
-"The nerds recite lines from the cult so-bad-it's-good flick Bad Beth's Death BBS and discuss whether it's bad on purpose."
-"The nerds recite lyrics from Mr. Sonic and the Crimson Microns."
-"The nerds recite rap lyrics from Sysop Possy hits like 'So, Spy!'"
-"The nerds recite their favorites of Rheah's Harsh E-Rehash."
-"The nerds recount happy times at Research-Career HS."
-"The nerds report research from BlueStar TrueLabs to ward off a blase rut. It's not a real bust."
-"The nerds revere AV Nerd Dr. Evan Vander."
-"The nerds sing, off-key, 'Let's hate athletes.'"
+"The nerds recite lines from the cult so-bad-it's-good flick Bad Beth's Death BBS and discuss whether it's bad on purpose." [x]
+"The nerds recite lyrics from Mr. Sonic and the Crimson Microns." [x]
+"The nerds recite rap lyrics from Sysop Possy hits like 'So, Spy!'" [x]
+"The nerds recite their favorites of Rheah's Harsh E-Rehash." [x]
+"The nerds recount happy times at Research-Career HS." [x]
+"The nerds report research from BlueStar TrueLabs to ward off a blase rut. It's not a real bust." [x]
+"The nerds revere AV Nerd Dr. Evan Vander." [x]
+"The nerds sing, off-key, 'Let's hate athletes.'" [x]
 "The nerds wonder who is too dumb to use the Navster Servant to find taverns." [x]
 "'Nerdy teas? Sedentary easy trend!'" []
 "'A network! Rate/know!' / 'Weak. Torn.'"
@@ -3358,7 +3359,7 @@ blurb
 "'No ROM, moron!'"
 "'Node on top? Do not open!'"
 "'Noel?' / 'EOLN, Leon!'" []
-"'Non-Mac? Con man!' one booms."
+"'Non-Mac? Con man!' one booms." [x]
 "'Not like Tolkein? Ten-kilo oinklet!'"
 "'NPC AI panic!'"
 "'Numerology? You mongrel!'"
@@ -3368,24 +3369,24 @@ blurb
 "'On, up, geeky! Keep young!'"
 "One nerd describes building an Ion-Duct Unit-Doc Conduit." [x]
 "One nerd downloads a U-Adept Update." [x]
-"One nerd relates disturbing AcidSoft factoids."
+"One nerd relates disturbing AcidSoft factoids." [x]
 "'Oo! Ban a noob!'"
 "Opinions about Nerd Renn Redd. You want to disagree with them all." [x]
 "'Optimality! Limit a typo!'"
 "'Panic, I? CPAN!'" []
 "'Patric's pics-art? A script!'"
-"'PeerSci Creep is Precise!' they admit, exhaustedly."
+"'PeerSci Creep is Precise!' they admit, exhaustedly." [x]
 "'Pen this: ShipNet!'"
 "'A perfect fact-peer? Fat creep!'"
 "'Ping Ned.' / 'Pending.'"
-"'Plenism's Limpness,' argues one philosophical type."
+"'Plenism's Limpness,' argues one philosophical type." [x]
 "'Plenty-demo deployment? Olden! Empty!'"
 "'Portable Table Pro? Or PetLab?'"
 "'Ported.' / 'De trop! To derp!'"
-"Praise, backhanded and sincere, for Link Bro Kilborn."
+"Praise, backhanded and sincere, for Link Bro Kilborn." [x]
 "'Prudent, nut? Derp.'"
 "'Quadratics? A cad! Squirt!'"
-"A quick stark-fact fast-track."
+"A quick stark-fact fast-track." [x]
 "'Quitano's isoquant? So quaint!'"
 "'Rapid API Dr.? A drip!'"
 "'Refactor: force art? Farce! Rot!'"
@@ -3398,23 +3399,23 @@ blurb
 "'Sad. Forget dafter gos to defrags.'"
 "'Sad purge? UPGRADES!'"
 "Scathe-tone: 'NOT THE CASE!'"
-"'A script.' / 'Scrap it. It's...'"
+"'A script.' / 'Scrap it. It's...'" [x]
 "'Sell short shell sort? She trolls!'"
-"Several nerds agree Le Site is leet."
+"Several nerds agree Le Site is leet." [x]
 "'Sign up! Ping us!'"
 "'Since I'm not omniscient...' Ish, note his tone. Sarcastic, arctic ass."
 "'Sir-Tech is...RETCH!' / 'Rec this!'"
 "'Sky-Tech? Sketchy!'"
-"'Snider Nerd is Snider!' they laugh, with fake self-awareness."
+"'Snider Nerd is Snider!' they laugh, with fake self-awareness." [x]
 "'Sod DOS!'"
 "'Some tend. Most need DemosNet.'"
-"Someone details a dark-side disk read."
 "'Source code, coerce us, do!'"
 "'Sport? No! Protons!'"
 "'Step two: test! Pow!'"
 "'Stolid dolt is stolid!' / 'It's old.'"
 "'Stupefy-fest?' / 'Yup!'"
 "'Super brain? Burn! Aspire!'"
+"'Sure ruse? Err, use us!'"
 "'Surly? Us? RLY!'"
 "'Tampered, ha? Parade them! Permadeath!'"
 "'Tech books boost. Heck! Be shock to...'"
@@ -3422,18 +3423,18 @@ blurb
 "'Technical clan ethic: I can't lech!'"
 "'A theorem remote? Ah. Ahem. ROTE.'"
 "'Theory? Hey, rot!'"
-"They all agree this is the best nerd-bred nest."
-"They berate a grade-f defrag."
-"They debate if the mental math of Number Bum Ren is worth it."
-"They denounce one dunce."
-"They discuss admissions for the Brilliant-Brain Till."
-"They discuss submissions to the Upgrades-Surge Pad."
-"They discuss the weekly SciNet insect."
-"They disparage Maze-Gain Magazine."
-"They evaluate various like-stats talk sites."
-"They quote lyrics from the Rap Nerds Pardners."
-"They recall a pilgrimage to the Cognato-Octagon."
-"They vow to boycott Cobb's BBS Co."
+"They all agree this is the best nerd-bred nest." [x]
+"They berate a grade-f defrag." [x]
+"They debate if the mental math of Number Bum Ren is worth it." [x]
+"They denounce one dunce." [x]
+"They discuss admissions for the Brilliant-Brain Till." [x]
+"They discuss submissions to the Upgrades-Surge Pad." [x]
+"They discuss the weekly SciNet insect. Nicest!" [x]
+"They disparage Maze-Gain Magazine." [x]
+"They evaluate various like-stats talk sites." [x]
+"They quote lyrics from the Rap Nerds Pardners." [x]
+"They recall a pilgrimage to the Cognato-Octagon." [x]
+"They vow to boycott Cobb's BBS Co." [x]
 "'Thick profs? PITCHFORKS!'"
 "'Think-rugs stink. Urgh!'"
 "'Threading hit danger? Read THING.'"
@@ -3441,7 +3442,7 @@ blurb
 "'To us be obtuse? Bust! E-o!'"
 "'To use IQ? Quite so!'" []
 "'Two-bit-wit bot!'"
-"'UI, Tom? I'm out!' moans one hard-core programmer."
+"'UI, Tom? I'm out!' moans one hard-core programmer." [x]
 "'Un-hack a chunk? Uck, nah.'"
 "'Up, math! Thump a path, um...'"
 "'Urgent e-grunt? Erg. Nut.'"
@@ -3455,8 +3456,8 @@ blurb
 "'Wittiness: witness it!'"
 "'Yes, I sum my issue: MESSY UI!'"
 "'Yon BBS? Snobby!'"
-"You hear a MENSA-y yesman encourage someone to repeat himself."
-"You hear a WTF waft."
+"You hear a MENSA-y yesman encourage someone to repeat himself." [x]
+"You hear a WTF waft." [x]
 
 table of psas [xxm4]
 blurb
@@ -3602,24 +3603,25 @@ blurb
 "'At rut, man? ARM! TAUNT! A TANTRUM!'"
 "'Bad egg: BAGGED!'"
 "'Blockader-clod, break!'" []
+"'BLUSH, SHLUB!'"
 "'Boast, runt? Toast! Burn!'"
 "BRAG? FIE! BIG FEAR!"
+"'BRUTE?! REBUT!'"
 "'Bull good, dull goob!'"
 "'Bull is great! Blast uglier!' Guilt blares. Liberal gust."
 "'A BULL: NEVER VULNERABLE!'"
 "'Coda, o cad!'"
 "'Coy appeals? APOCALYPSE!'"
+"'Da prominent? PREDOMINANT!'"
 "'Decay, ye cad!'"
 "'DEEM HARM! HAMMERED!'"
 "'Dethrone me?! Need mother! Eh, MENTORED!'"
 "'DO NICE? NO DICE!'"
-"'Don't lose, dolt-nose!' he mutters."
 "'A DRILL: RID ALL! ILL, RAD!'"
 "'Dull! BAM, Bull mad!'"
 "'Evasion so naive!'"
 "'Fade until in default, failed nut!'"
 "'Fail now, low naif wan foil!'"
-"'Feel my too-plain pain tool! Optional? Oi, pal! NOT!'"
 "'Feints--finest? Intense? Stiff!'" []
 "'FIE! DROP, PRIDE OF DRIP-FOE!'" []
 "'A fight? Ha, gift!'"
@@ -3629,16 +3631,16 @@ blurb
 "'Fumble, elf-bum!'"
 "'Give out, yo! I've got you!'"
 "'Goddamn era...armageddon...'"
-"'GOTCHA! ACT, HOG!' he yells, prematurely."
+"'GOTCHA! ACT, HOG!' he yells, prematurely." [x]
 "'Gr, nice cringe!'"
 "Great skill strike? GALL!"
 "'GRIN? EAT GRANITE, INGRATE!'"
-"A grunt 'Oi!' instead of routing you."
+"'Grunt! Oi! Routing!'"
 "'Gusto, oaf? Out of gas!'"
-"'Ha, slide a shield!' he brags, pretending you attacked."
-"He points at himself. 'BAD!' Then at you. 'SAD ABS!'"
-"He points at himself. 'BEEF!' Then at you. 'FEEB!'"
-"'Heftier free hit if there...' / 'The fire!' you yell, distracting his swing."
+"'Ha, slide a shield!' he brags, pretending you attacked." [x]
+"He points at himself. 'BAD!' Then at you. 'SAD ABS!'" [x]
+"He points at himself. 'BEEF!' Then at you. 'FEEB!'" [x]
+"'Heftier free hit if there...' / 'The fire!' you yell, distracting his swing." [x]
 "'Hi, lost? Lo, HITS!'"
 "'Hi, runt! Hurtin[']!'"
 "'Ho, prone no-hoper!'"
@@ -3650,18 +3652,17 @@ blurb
 "'I frown for win!'"
 "'I kneecap, peacenik!'"
 "'I tame a mite!'"
-"'I thrust! It hurts!' He doesn't LOOK in pain."
-"'I'll win flat-out, fat lout!'"
-"'I'm A TREE EATER and you like YOGURT, RUG TOY!'"
+"'I thrust! It hurts!' He doesn't LOOK in pain." [x]
+"'I'm A TREE EATER and you like YOGURT, RUG TOY!'" [x]
 "'I'm strong, STORMING, grim snot!'"
-"'I'm the ULTIMATER MUTILATER!' And not just of language."
-"'I'm too sure for any ruse!'"
+"'I'm the ULTIMATER MUTILATER!' And not just of language." [x]
 "'I'm tops! I stomp!'"
 "'I'm tough! Go hit [']um!'"
 "'Intrude, rude nit? Untried runt, die!'"
 "'KNOW FEAR NOW, FAKER!'"
 "'LAME CHURLS! CRUSH [']EM ALL!'"
 "'Lay out, ya lout!'"
+"'Loots end, dolt-nose! Don't! Lose!'"
 "'LORD! FOE, FLOORED!'"
 "'Lose now, slow one!'"
 "'Lurch, churl!'"
@@ -3673,26 +3674,24 @@ blurb
 "'MY spot! Stompy, stompy!'"
 "'Nerd?! REND!!'"
 "'Nice? Wrong! Cringe now!'"
-"'No DETOUR from getting ROUTED!'"
 "'No muscle, lone scum!'"
-"'Not just da prominent. PREDOMINANT!'"
 "'Oh, a fade ahead of a foe! Dah!'"
-"Oh, to rebut the brute!"
-"'One of those pesty types, eh?'"
 "'One sour onerous rue--soon!'" []
 "'One turf, foe-runt!'"
 "'Oof, rat! Too far!'"
 "'Pasty patsy!'"
+"'Pesty types spy,  yet STEP.'"
 "'Plumage? Pale mug! Lame pug!'"
 "'Pup came once: comeuppance!'"
 "'Quit, rash squirt! Ha!'"
 "'Rash imp! A shrimp! I'm sharp!'"
 "'Reedy sort destroyer!'"
+"'ROUTED! Rude to detour!'"
 "'Run at a runt!'"
-"'See how A Red Bull draws REAL BLUD!' Stunned by his terrible spelling, you almost do."
+"'See how A Red Bull draws REAL BLUD!' Stunned by his terrible spelling, you almost do." [x]
 "'Sew shut the wuss!'"
 "'Shift-a-word show adrift!'"
-"The shover hovers, shifting a bit."
+"The shover hovers, shifting a bit." [x]
 "'Sit around? Adios, runt!'"
 "'Sit, bum! Submit!'"
 "'Slap down lands, POW!'"
@@ -3713,8 +3712,10 @@ blurb
 "'TAME WISH: HAW, SMITE THE SWAMI!'"
 "'THAT IS DUMB, BAD! MUST HIT!'"
 "'This be met: I'm the best!'"
-"'Thrill as I trash still. RAH!'"
+"'Thrill as I'll trash still. RAH!'"
 "'A tickle? I TACKLE!'"
+"'To fault, flat-out, fat lout!'"
+"'Too-plain pain tool! Optional? Oi, pal! NOT!'"
 "'Trash ME? Terms? Ha!'"
 "'Tremendous to sunder [']em!'"
 "'Turn, dire intruder!'"
@@ -3728,27 +3729,26 @@ blurb
 "'Without wit, thou! How I tut!'"
 "'Word-gamer? Worm-grade!'"
 "'Wordplay's low, dry sap!'"
-"'Yep, Bull!' He points at you. 'Belly up!'"
+"'Yep, Bull!' He points at you. 'Belly up!'" [x]
 "'Yo, mite! Omit ye!'"
-"You need actions as tonic but think 'I so can't.' You're not coastin[']."
-"'You should BLUSH, SHLUB!'"
-"'You're for HURTSHURST!' he yells, making a rush-thrust."
+"You need actions as tonic but think 'I so can't.' You're not coastin[']." [x]
+"'You're for HURTSHURST!' he yells, making a rush-thrust." [x]
 "'Your end is noisy! Rude!'"
 "'Your LAST, lousy rat!'"
 
 table of riot slogans [xxr2]
 blurb
-"The [ri-tri] accuse you of animal cruelty: making monotremes into metronomes."
-"The [ri-tri] characterize you as a leper to repeal or repel."
-"The [ri-tri] claim none will CAGE OUR COURAGE."
-"The [ri-tri] continue their bashin['], hoping to banish you."
-"The [ri-tri] decry The Villain In The Villa. The one they're blocking you from. Hooray, mob logic."
-"The [ri-tri] discuss what to hate next. A 'BINGO! AMEN!' restarts their bemoaning."
-"The [ri-tri] seem particularly upset you destroyed store I & R[if store i is in trips strip] (okay, they're wrong about I)[end if]."
+"The [ri-tri] accuse you of animal cruelty: making monotremes into metronomes." [x]
+"The [ri-tri] characterize you as a leper to repeal or repel." [x]
+"The [ri-tri] continue their bashin['], hoping to banish you." [x]
+"The [ri-tri] decry The Villain In The Villa. The one they're blocking you from. Hooray, mob logic." [x]
+"The [ri-tri] discuss what to hate next. A 'BINGO! AMEN!' restarts their bemoaning." [x]
+"The [ri-tri] seem particularly upset you destroyed store I & R[if store i is in trips strip] (okay, they're wrong about I)[end if]." [x]
 "'Ah, set hates! Haste!'" []
 "'Alien scum! Nice? MAULS!' Masculine calumnies."
 "'Apology? A ploy! Go!'"
-"'Assistant satanists!' someone yells. Nobody sees any, so they go back to you."
+"'ARCH SAINT? ANARCHIST? NAH, RACIST!'"
+"'CAGE OUR COURAGE? A cure: GO!'"
 "'Disperse, despiser!'"
 "Fanatics. Naif acts."
 "'Fooling us? Fog in soul so fouling!'"
@@ -3756,25 +3756,25 @@ blurb
 "'GO, CURSE-SCOURGE!'"
 "'The goal: log hate!'"
 "'Hate you? Yeah! Out!'"
-"'HILLSIDE SHILL, DIE!' they chant."
+"'HILLSIDE SHILL, DIE!'"
 "'Litterbug! Tut, gerbil! Bitter lug!'"
 "'LOOK SNUG, GOON? SULK!'"
-"The mob rages at teargas you'll never fire."
+"The mob rages at teargas you'll never fire." [x]
 "'Nerve, clot! Not clever!'"
-"No skeptic pickets the picketers."
+"No skeptic pickets the picketers." [x]
 "'No, usurper! Run, poseur! Sour prune!'"
 "'Now clue [']em! Unwelcome!'"
-"One carries an AVENGE GENEVA sign. You've never been there."
-"One person, in a total existential crisis, waves an 'ARREST SARTRE' sign." [p]
-"One sign calls you COP-SHY PSYCHO."
-"One sign says 'Can't BEAR US, ABUSER?' Actually, it's a rebus, drawn with a corny crayon. Clever, really."
+"One carries an AVENGE GENEVA sign. You've never been there." [x]
+"One person, in a total existential crisis, waves an 'ARREST SARTRE' sign." [x] [p]
+"One sign calls you COP-SHY PSYCHO." [x]
+"One sign says 'Can't BEAR US, ABUSER?' Actually, it's a rebus, drawn with a corny crayon. Clever, really." [x]
 "'Roist or sit? Riots! Riots!'"
+"'Satanists['] Assistant!'"
 "'Shouting into hugs? Ugh! Sin to!'"
 "'Shouting on, tough-on-sin!'"
 "'Solidarity! Daily riots!'"
-"Some total fruit loop's sign says ANARCHIST? NAH, RACIST!"
 "'Stirred-up disrupter! Super dirt!'"
-"They lambaste blames at you, then yell 'Beat! Slam!' and keep lame tabs on your reaction."
+"They lambaste blames at you, then yell 'Beat! Slam!' and keep lame tabs on your reaction." [x]
 "'Threatening neater thing, then? Ingrate!'"
 "'Torridest distorter!'"
 "'Vile scar! Evil arcs!' Visceral cavilers."

@@ -2,7 +2,7 @@
 #this detects possible false anagrams or bad anagrams or duplicates
 #
 #Usage flags:
-#-r -s -b = roiling, shuffling, both
+#-r -s -2 = roiling, shuffling, both
 #
 #[] in the source indicates to ignore duplicates
 #It only focuses on table text
@@ -103,23 +103,16 @@ while ($count <= $#ARGV)
   /^-g/ && do { $read2nd = 1; $count++; next; };
   /^-l/ && do { $launch = 1; $count++; next; };
   /^-!/ && do { $remains = 1; $count++; next; };
+  /^-n/ && do { chdir("c:/writing/dict/nightly"); next; };
   /^-w/ && do { $weirdLine = $b; $notWeirdYet = 1; $count++; next; };
   /^(-?)(r|ro|roi)/ && do { @weedDir = (@weedDir, "roiling"); $count++; next; };
   /^(-s|s|-sa|sa)$/ && do { @weedDir = (@weedDir, "sa"); $count++; next; };
-  /^-?2/ && do { @weedDir = (@weedDir, $sa, $roi); $count++; next; };
+  /^-?2/ && do { @weedDir = (@weedDir, "sa", "roiling"); $count++; next; };
   usage();
   }
 }
 
 `copy badana.txt badana.bak`;
-
-open(A2, ">dupes-@weedDir[0].htm");
-open(A3, ">dshort-@weedDir[0].txt");
-open(B, ">oddmatch-@weedDir[0].txt");
-open(B2, ">falsepos-@weedDir[0].txt");
-open(C, ">badana-@weedDir[0].txt");
-
-print A2 "<html><body><table width=69% border=1><th width=23%><th width=23%><th width=23%>\n";
 
 if (!@weedDir[0])
 {
@@ -135,37 +128,49 @@ if (!@weedDir[0]) { die "No suitable directory found. -s, -r or -2."; }
 
 for $thisDir(@weedDir)
 {
+  open(A2, ">dupes-$thisDir.htm");
+  open(A3, ">dshort-$thisDir.txt");
+  open(B, ">oddmatch-$thisDir.txt");
+  open(B2, ">falsepos-$thisDir.txt");
+  open(C, ">badana-$thisDir.txt");
+
+  print A2 "<html><body><table width=69% border=1><th width=23%><th width=23%><th width=23%>\n";
+
   weedOneSource($thisDir, 1);
+
+  if ($remains) { weedOneSource("!!"); }
+
+  if ($di + $sm) { $s1 = "(DUPES.HTM/DSHORT.TXT) $di total differences (disable with \[\]). $sm size mismatches.\n"; } else { $s1 = "DUPES.HTM/DSHORT.TXT will be blank. Hooray!\n"; }
+  if ($posBad) { $s2 = "(ODDMATCH.TXT) $posBad interesting cases.\n"; } else { $s2 = "ODDMATCH.TXT has nothing. Wow!\n"; }
+  if ($falsePos) { $s2 = "(FALSEPOS.TXT) $falsePos \[\]'s.\n"; } else { $s2 = "FALSEPOS.TXT has nothing. Good!\n"; }
+  if ($badans) { $s3 = "(BADANA.TXT) $badans total likely bad anagrams, disable with \[x\].\n"; } else { $s3 = "You have no bad anagrams. Well done!\n"; }
+
+  print "TEST RESULTS:$thisDir bad anagrams,10,$badans,0,<a href=\"badana-$thisDir.txt\">The Culprits</a>\n";
+  print "TEST RESULTS:$thisDir soft duplicates,100,$di,0,<a href=\"dupes-$thisDir.htm\">The Culprits</a> <a href=\"dshort-$thisDir.txt\"short vers\">Short Vers</a>\n";
+  print "TEST RESULTS:$thisDir false positives,100,$falsePos,0,<a href=\"falsepos-$thisDir.txt\">The Culprits</a>\n";
+  print "TEST RESULTS:$thisDir odd matches,100,$posBad,0,<a href=\"oddmatch-$thisDir.txt\">The Culprits</a>\n";
+
+  print A2 "$s1";
+
+  print B "$s2";
+
+  print B2 "$s2a";
+
+  print C "$s3";
+
+  close(A);
+
+  print A2 "</table></body></html>";
+  
+  for $x (sort keys %dupCount) { print A3 "$x: $dupCount{$x}\n"; }
+
+  close(A2);
+  close(B);
+  close(B2);
+  close(C);
+  close(A3)
+
 }
-
-if ($remains) { weedOneSource("!!"); }
-
-if ($di + $sm) { $s1 = "(DUPES.HTM/DSHORT.TXT) $di total differences (disable with \[\]). $sm size mismatches.\n"; } else { $s1 = "DUPES.HTM/DSHORT.TXT will be blank. Hooray!\n"; }
-if ($posBad) { $s2 = "(ODDMATCH.TXT) $posBad interesting cases.\n"; } else { $s2 = "ODDMATCH.TXT has nothing. Wow!\n"; }
-if ($falsePos) { $s2 = "(FALSEPOS.TXT) $falsePos \[\]'s.\n"; } else { $s2 = "FALSEPOS.TXT has nothing. Good!\n"; }
-if ($badans) { $s3 = "(BADANA.TXT) $badans total likely bad anagrams, disable with \[x\].\n"; } else { $s3 = "You have no bad anagrams. Well done!\n"; }
-
-print "TEST RESULTS:@weedDir[0] bad anagrams,10,$badans,0,<a href=\"badana-@weedDir[0].txt\">The Culprits</a>\n";
-print "TEST RESULTS:@weedDir[0] soft duplicates,100,$di,0,<a href=\"dupes-@weedDir[0].htm\">The Culprits</a>\n";
-print "TEST RESULTS:@weedDir[0] false positives,100,$falsePos,0,<a href=\"falsepos-@weedDir[0].txt\">The Culprits</a>\n";
-print "TEST RESULTS:@weedDir[0] odd matches,100,$posBad,0,<a href=\"oddmatch-@weedDir[0].txt\">The Culprits</a>\n";
-
-print A2 "$s1";
-
-print B "$s2";
-
-print B2 "$s2a";
-
-print C "$s3";
-
-close(A);
-
-print A2 "</table></body></html>";
-
-close(A2);
-close(B);
-close(B2);
-close(C);
 
 if ($launch) { `dupes.htm`; }
 
@@ -594,7 +599,7 @@ while (($a = <A>) && (stillWorth()))
 	{
 	  if (!$dupes{$acrom})
 	  {
-	    $falsePos++; print B2 "false \[\] $falsePos on $a line $line\n"; $fapo{$acrom} = "$a-$line"; push (@false, $falsePos);
+	    $falsePos++; print B2 "false \[\] line $line $falsePos on $a\n"; $fapo{$acrom} = "$a-$line"; push (@false, $falsePos);
 	  }
 	  next;
 	} #move this after mash ($a) or back to the top to see about duplicated stuff
@@ -637,6 +642,7 @@ while (($a = <A>) && (stillWorth()))
 	  $curA2Table %= 3;
 	  $dupeRows++;
 	print A3 "$a ($line)\n";
+    $dupCount{"$thisTable"}++;
 	}
 	else
 	{

@@ -255,6 +255,8 @@ sub lch
   }
   $temp =~ s/^\"//g; $temp =~ s/\".*//g;
   $temp =~ s/-/ /g; $temp =~ s/[\.\?\!]//g; $temp =~ s/,//g; $temp =~ s/\'$//g;
+  $temp =~ s/ +/ /g;
+  if ($temp =~ /anyhow/i) { print "$temp!\n"; }
   return $temp;
 }
 
