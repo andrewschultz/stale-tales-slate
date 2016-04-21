@@ -1580,7 +1580,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Curt Uden's Undercuts"
 "Customiser Costumiers"
 "CuteLab's Blue Cats"
-"Dale's Deals"
+"Dale's Deals" []
 "Dalton's Sandlot"
 "Damage Bros. Board Games"
 "Dario's Radios"
@@ -1635,7 +1635,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "DISCOUNTER REDUCTIONS!!!!!"	true
 "Discover VidScore!"	true
 "DiveNet: Evident!"	true []
-"Doane's Anodes"
+"Doane's Anodes" []
 "Doc Hume's Does-Much Ouch-Meds"
 "Doc Tom Dot Com"
 "Doc's Cult Cold Cuts"
@@ -1671,7 +1671,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "DuCharme Cured Ham"
 "Duds By Buddy's"
 "Duerst's Trussed Dusters"
-"Dufner's Refunds"
+"Dufner's Refunds" []
 "DuFrein's: Friend Us, Find Sure Fun Rides!"	true
 "Duggar's Drug-Gas"
 "Dunegan Dunnage"
@@ -1688,7 +1688,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Earl's Fake Leaf Rakes"
 "Earl's Laser"
 "EarnSol Loaners"
-"Easler Leaser Resale"
+"Easler Leaser Resale" []
 "Eat Rod's Roasted!"	true
 "Ebert's BESTER Berets"
 "Eckart's Rackets"
@@ -1713,14 +1713,14 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Ehinger's Greenish Sheering" []
 "Ehler St. Shelter"
 "Elan-Shot Ethanols"
-"Eleas Easel-Lease"
+"Eleas Easel-Lease" []
 "Elf Wine: Feel Win, New Life!"	true
 "Eli Ott's Toilets"
 "Elidia's Dailies"
 "Ella Cheng's Challenges"
 "Elrod's Solder"
 "Elsa's Sales"
-"Elva's Salve"
+"Elva's Salve" []
 "Em Heick Kimchee"
 "Emert's Meters"
 "An Empty Payment" []
@@ -1737,10 +1737,10 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Ernest Tian Entertains Tenantries"	true
 "Ernestina Tanneries"
 "Err, beg Gerber/Berger Law Firm!"	true
-"Esau Eaus"
+"Esau Eaus" []
 "Esberth Sherbet"
 "Estala's Atlases"
-"Estrich Richest Cithers"
+"Estrich Richest Cithers" []
 "Etc.-Tec"
 "Etland Dental"
 "Ettina's Tea Tins: In Taste It's Neat!"	true
@@ -1768,7 +1768,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Faintest Fine Tats"
 "Fake Rustic Fruitcakes"
 "Fake-Vite: Take Five!"	true
-"False-Obit Lifeboats"
+"False-Obit Lifeboats" []
 "Fan Moods? Man's Food!"	true
 "Fancy Do of Candy"
 "FartsCo Factors Far Cost! O, Crafts!"	true
@@ -1827,7 +1827,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Fungal-Unflag"
 "Funk Dojo Junk Food"
 "Furlham Rum: HALF harmful!"	true
-"G. Crosby Cyborgs"
+"G. Crosby Cyborgs" []
 "G. Frei Grief-Refig"
 "Gaal's Galas"
 "Gabe Sand Bandages"
@@ -1857,8 +1857,8 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Germain's Smearing"
 "Gerri's Re-Rigs"
 "Gerrity's Registry"
-"GerryCo Grocery"
-"Gervais Gravies"
+"GerryCo Grocery" []
+"Gervais Gravies" []
 "Gervase Greaves"
 "Gervasi Gravies" []
 "Gesualdi's Gladiuses"
@@ -1917,16 +1917,15 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Graydon Organdy"
 "Greatest Rates-Get! Gee, Start!"	true
 "GreenSci Generics"
-"Greenwood's Newer Goods"
+"Greenwood's Newer Goods" []
 "Greg Mota's Mortgages"
 "Grierson Ignorers"
 "Grigson Gorgins"
 "Grimaldo's Marigolds"
-"Grin-Wit Writing"
+"Grin-Wit Writing" []
 "Groomsman Monograms"
 "GrowTek: Get Work!"	true
 "Grub Harem's Hamburgers"
-"Grub Harems Hamburgers"
 "Gruber's Burgers"
 "Gruden's Rug Dens"
 "Grundy's Dry Guns"
@@ -1943,7 +1942,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Hamlyn's Hymnals"
 "Handy Wm Wyndham"
 "Hansen Hennas"
-"Hardesty Hydrates!"	true
+"Hardesty Hydrates!"	true []
 "Haring's Garnish"
 "Harrison Air Horns"
 "Harwick's Rickshaw"
@@ -1964,13 +1963,13 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Henderson Nosher Den"
 "Henry Gloop Nephrology/Phrenology"
 "Hep Cats['] Patches"
-"Hep? No? PHENO-PHONE!"	true
+"Hep? No? PHENO-PHONE!"	true []
 "Her Best Sherbet" []
 "Herbalist Hair-Belts"
 "Heuring's Ushering"
 "Hi-Copes Hospice"
 "Hi-Glare Hair Gel"
-"Higton's Thingos"
+"Higton's Thingos" []
 "Hilgdon's: Holdings Sold Nigh!"	true
 "Hilgert's Slighter Lighters"
 "Hip Cons Shop, Inc." []
@@ -2073,7 +2072,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Korhonen's Nonkosher"
 "KorTech: THE ROCK!"	true
 "Kosar Okras"
-"Krewson Knowers"
+"Krewson Knowers" []
 "Kris Best Briskets"
 "Kubik's Bikkus"
 "Kumari Rumaki"
@@ -2102,7 +2101,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Lavages Salvage" []
 "LaVonda's Load-Vans"
 "Le Apt Plate"
-"Le Cap Place"
+"Le Cap Place" []
 "Le Seven-Elevens"
 "Le Vest Svelte"
 "Lea's Ales Sale"
@@ -2155,9 +2154,8 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Lo-Bust U-Bolts Sub-Lot"
 "Lo-Caste Eco-Salt"
 "Lo, cat! AltCo!"	true
-"Lo-Fi Foil"
 "Lo, Get a Gelato!"	true
-"Loaded Odd Ale"
+"Loaded Odd Ale" []
 "Loafers For Sale"
 "Local Bros['] Robo-Calls"
 "LoCastro Locators"
@@ -2170,6 +2168,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Long Street Lorgnettes"
 "Longfoot's Font Logos"
 "Lonny's Nylons"
+"Loo Iliff Lo-Fi Foil"
 "Loo's PROVEN Provolones"
 "Loose Oleos"
 "Lori Hass Hair Loss/Rash Oils"
@@ -2198,7 +2197,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Maddie's Diadems"
 "Maier's Armies"
 "Malbrough Rough Balm"
-"Malia's Salami"
+"Malia's Salami" []
 "Malisa's Salamis"
 "Malvina's Mail Vans"
 "Mama's Den Manmades"
@@ -2215,11 +2214,11 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Mart Law's Raw Malts"
 "Marv's VRAMs"
 "Masoner Ransome"
-"Massimo Mimosas"
+"Massimo Mimosas" []
 "Massingale Magnesials"
 "Mastroianni Marinations"
 "Match-Up Chum Pat"
-"Mathiesen Hematines"
+"Mathiesen Hematines" []
 "Matt's Jar Jam Tarts"
 "Mattoon's Ottomans"
 "Maurer's Armures"
@@ -2248,10 +2247,10 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Melius Muesli"
 "Meloni Moline Lo Mein"
 "Melting Mint Gel"
-"Meltser's Smelters"
+"Meltser's Smelters" []
 "Mentioner's Minsetrone"
 "Mercantile-Mint Cereal"
-"Mesko's Smokes"
+"Mesko's Smokes" []
 "Messiah Mashies"
 "Meyerson Moneyers"
 "Millage's Legalism"
@@ -2336,9 +2335,9 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Nice-Thing Ethnic Gin"
 "Nice Zits, Citizens? Zinc-Ites!"	true
 "Niceham's Machines"
-"Nichelle's Chenilles"
+"Nichelle's Chenilles" []
 "Nicola's Oilcans"
-"Nik Grey's Key Rings"
+"Nik Grey's Key Rings" []
 "Nik, Wes: We Sink Skewin[']"
 "Nik's Skin Inks"
 "Nilsen-Enslin Linens" []
@@ -2387,7 +2386,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Olga Hu's Goulash"
 "Olga Mohr's Holograms"
 "Olympus Slop, Yum: Plum, Soy!"	true
-"One-Swap Weapons"
+"One-Swap Weapons" []
 "Oompah's Shampoo"
 "Ooz-Rich Chorizo"
 "Opal-Jane's Jalapenos" []
@@ -2402,7 +2401,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Osaki is A-OK!"	true
 "Oscoli Silo Co is Cool!"	true
 "Osseter Stereos"
-"Osterkamp Top Makers"
+"Osterkamp Top Makers" []
 "Osterman-Sarmento MAN STORE"
 "Ostermann-Martenson Ornaments"
 "Ostermeier Eriometers"
@@ -2440,7 +2439,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Patterson Patentors"
 "Paw/Mum's Wampums"
 "Peaceful Cape Fuel"
-"Pecina's Inscape"
+"Pecina's Inscape" []
 "Pedlar Lepard"
 "Peete's Tepees"
 "Peg Hiatt's Past-Eight Spaghetti"
@@ -2462,7 +2461,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Peshram Hampers"
 "Pessard Spreads"
 "Pest-Clean Pentacles"
-"Petrisa's Raspiest Pastries"
+"Petrisa's Raspiest Pastries" []
 "Pettey's Typeset"
 "Pettinger's Pre-Testing"
 "Pfister's Pre-Sifts"
@@ -2490,7 +2489,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Plain-Blots Ballpoints"
 "Planets St. Test Plans"
 "Plato's Postal"
-"Playsome Maypoles"
+"Playsome Maypoles" []
 "Please Do Dale Poe's Dope Sale!"	true
 "A Plebe Cot: Place to Be!"	true
 "Pluck-O Lockup"
@@ -2564,7 +2563,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Rebuildy Bud Riley"
 "Recursions Co-Insurers"
 "Red Bay Bad Rye"
-"Red Inn Dinner Rendin[']"
+"Red Inn Dinner Rendin[']" []
 "Red Oafs['] Fedoras"
 "Redleaf Federal"
 "Reebok OK Beer"
@@ -2598,34 +2597,34 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Ritson Nitros"
 "Rob Lew's Bowlers"
 "Robotham's Bathrooms"
-"Robur's Burros"
+"Robur's Burros" []
 "Rod Gump's Gumdrops"
 "Roddis Droids"
 "Roden's Drones"
-"Roger's Reorgs"
+"Roger's Reorgs" []
 "Rolling-On Grill"
 "Rome Clan Corn Meal"
 "Ron Copp Popcorn Op-N-Proc"
 "Roper St. Porters"
 "Rose Gupta Great Soup"
 "Ross Belt Lobsters"
-"Ross Tye Oysters"
+"Ross Tye Oysters" []
 "Rosy-Set Oysters"
-"Rote Fun Fortune"
-"Roundtree's Outrenders"
+"Rote Fun Fortune" []
+"Roundtree's Outrenders" []
 "Roussette's Tutoresses"
 "Rousting Tourings"
 "Rullo/Ruoff Flour"
 "Rummager Margerum"
 "Rumstad Mustard"
 "Ruscanti Curtains"
-"Russ Fulop Surplus of Plus Fours"
+"Russ Fulop Surplus of Plus Fours" []
 "Russet's Trusses"
 "Rust-O-Roust Tours"
 "Ruthie's New Wiener Huts"
 "Rutner's Returns"
 "SaberDoc Barcodes"
-"Sabic's Basics"
+"Sabic's Basics" []
 "Sabino Bonsai"
 "Sabo Boas"
 "Sad Al's Salads"
@@ -2641,7 +2640,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Sam Funke Makes Fun Fake Nums!"	true
 "Samaroo's Amorosas"
 "Samson Masons"
-"Sandoval Vanloads O'Vandals" []
+"Sandoval Vanloads O'Vandals" [] []
 "Santa Fe Fan Eats"
 "Santa Fe's Safe Tans"
 "Santillo Stallion Allotins"
@@ -2650,8 +2649,8 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Sara Long Granolas"
 "Saracino Ocarinas"
 "Sastre Tasers"
-"Sato Oats"
-"Saunders Danseurs"
+"Sato Oats" []
+"Saunders Danseurs" []
 "Savaric Caviars"
 "Savile's Valises" []
 "Saw-Vine Weavins"
@@ -2671,16 +2670,16 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Scofield Doc-Files"
 "Scooter Store Co"
 "Scooter StoreCo"
-"Scooting-Go Tonics"
+"Scooting-Go Tonics" []
 "Scorpion PrisonCo"
 "Scout-Pile Poultices"
 "Screen-Free References"
 "Scudder's Duds Recs"
 "Sea-Bulb Baubles" []
 "Seabird Darbies"
-"Seagull Ale-Slug"
+"Seagull Ale-Slug" []
 "Seagull-Slug Ale"
-"Seattle Lattees: Le Taste!" 	true
+"Seattle Lattees: Le Taste!" 	true []
 "Seaward Adwares"
 "Sedgwick Wigs Deck"
 "Seed-Mart Red Meats"
@@ -2700,10 +2699,10 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Serpico Copiers" []
 "Sewer Br. Brewers" []
 "Shagband Handbags"
-"Shamon's Hansoms" []
+"Shamon's Hansoms" [] []
 "Shamrock OK Charms"
 "Shapiro Airshop"
-"Sharee's Hearses"
+"Sharee's Hearses" []
 "Sharpest Hat Press"
 "Shawnda's Handsaws"
 "Shay's Art Ashtrays"
@@ -2727,9 +2726,9 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Sicko Hater Artichokes"
 "Sign Up! Ed's Dispunges Pudginess!"	true
 "Signature Great Unis"
-"Signeur Guerin's Reusing"
+"Signeur Guerin's Reusing" []
 "Signor Ringo's"
-"Silbernagel Relabelings"
+"Silbernagel Relabelings" []
 "Silken-April Painkillers"
 "Simcox's Comix"
 "Siminski Miniskis"
@@ -2747,7 +2746,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Sir-or-Mr. Mirrors"
 "Sir Thunder's Undershirts"
 "Sir Turbo Burritos Ur-Bistro"
-"Sistare's Assister"
+"Sistare's Assister" []
 "Sitek Tikes['] Kites"
 "Sivertsen: Nerviest? Reinvest!"	true
 "Six-Lire Elixirs"
@@ -2765,7 +2764,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Slick Thom, Locksmith"
 "Slick-Tips Lipsticks"
 "Sloan Loans Salon"
-"SlopArt Plastro-Portals"
+"SlopArt Plastro-Portals" []
 "Sly Pup Pulpy's Supply"
 "Smart Marts"
 "Smedley Medleys"
@@ -2778,9 +2777,9 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "So-Low Wools"
 "So Unfed? No-Feuds Fondues!"	true
 "So-Urgent Gun Store"
-"Soapy Spa, Yo--So Pay!"	true
+"Soapy Spa, Yo--So Pay!"	true []
 "Sobol Bolos"
-"SoCal Colas" []
+"SoCal Colas" [] []
 "Socko Cooks"
 "Socrates Coasters" []
 "Soft Sal Salts of Fat Loss"
@@ -2891,7 +2890,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Tabitha's Habitats"
 "Tacos Inn: Contains No Actins!"	true
 "Talley's LA Style"
-"Tanaka's Katanas" []
+"Tanaka's Katanas" [] []
 "Tapani's Pinatas"
 "TarverCo Cover Art"
 "Tas-T-Tats"
@@ -2908,29 +2907,29 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Tech-Sol Clothes" []
 "Ted Blan Belt and Dent Lab"
 "Ted's Gag Gadgets"
-"TeensyNet: Yes!"	true
+"TeensyNet: Yes!"	true []
 "Telma's Metals"
 "Temporal Metal Pro [if player is male]Tom Pearl[else]Pam Toler[end if]"
 "TendsUmCo Documents"
 "Tenisha's Shanties" []
 "Teschner Trenches"
-"Tesla's Steals" []
+"Tesla's Steals" [] []
 "Tessman Stamens"
 "Thaler's Slather-Lathers"
 "ThemesCo: Some Tech to Scheme"
 "Thielbar's Herbalist"
-"ThingCo's Hint Cogs"
+"ThingCo's Hint Cogs" []
 "Thirsty? Try this!"	true
 "Thoop's: Oh, Stop to Shop!"	true
 "Tiger-Man's Mean Grits"
-"Time/Place Elite Camp"
+"Time/Place Elite Camp" []
 "Tingly's Styling"
 "TiredCo's Cot Rides"
 "Titfer Fitter"
 "To Fix it: FOX!"	true
 "To Score: Cooter's StoreCo!"	true
 "Tobie's So-Be-It Boites"
-"Tofu's so TUF!"	true
+"Tofu's so TUF!"	true []
 "ToilCo: Loci to Cool It!"	true
 "Tom Lee's Omelets."
 "Tom's Gag Maggots"
@@ -2948,8 +2947,8 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Torres's Resorts"
 "Tortorelli's Rototillers"
 "Tosca Coats"
-"Tot-Gro Grotto"
-"Totem Inn Ointment"
+"Tot-Gro Grotto" []
+"Totem Inn Ointment" []
 "Toy Lords['] Dry Tools"
 "Trades at Red's"
 "TransCo Cartons"
@@ -2962,7 +2961,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Trig's Grits/Grist"
 "TriMax MixArt Matrix"
 "Trino's No-Stir Storin[']"
-"Trish's Shirts"
+"Trish's Shirts" []
 "A Trite Attire: I Treat!"	true
 "Tropic Trip Co"
 "TroveCo: To Cover or Covet!"	true
@@ -2982,7 +2981,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Twin Peaks Weak Pints"
 "Twin Pigs Wing Tips"
 "Ty Rose's Oysters"
-"Ty Sato's: Tots Say So Tasty!"	true
+"Ty Sato's: Tots Say So Tasty!"	true []
 "Ty Tao's: O, Tasty to Stay!"	true
 "Ty's Good Dog Toys"
 "Typographic Pictography"
@@ -2991,7 +2990,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "U. Sanchez Szechuan" []
 "Uby's: Busy Buys BY US!!!!"	true
 "Ug's Rad Guards"
-"UltCo = CLOUT!"	true
+"UltCo = CLOUT!"	true []
 "UltCorps Plus ROTC Sculptor"
 "Ultimate Multi-Tea"
 "Un-Brite Tribune"
@@ -3043,7 +3042,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Weidner Red Wine"
 "Weigand Windage"
 "Weird Tom's Worm Diets"
-"Wendi's New IDs"
+"Wendi's New IDs" []
 "Weninger Renewing"
 "Wes Roof Woofers"
 "Wesserman Menswears"
@@ -3072,9 +3071,9 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Yawpers['] Spyware" []
 "Ye Fast Safety"
 "Ye Rustic Security"
-"Yeats Yeast"
+"Yeats Yeast" []
 "Yenter's Styrene"
-"Yeo's Gum: Some Guy Goes Yum!"	true
+"Yeo's Gum: Some Guy Goes Yum!"	true []
 "Yesterday's Dessert: Yay!"	true
 "Yo['] Ma's Mayos"
 "Yong Gyno"
@@ -21159,7 +21158,6 @@ blurb
 "'Jest, bud? Or just bored?'" []
 "'Job [']im, Jimbo!'"
 "'The joke? Eh, ok.' / 'Jet!'"
-"'Jostler!' / 'Jolters!'" []
 "'KC is sick! Icks!'"
 "'Keen knee!'"
 "'Kelly, I kill ye?' / 'Likely.'"

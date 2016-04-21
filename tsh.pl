@@ -210,11 +210,12 @@ sub sortTheTable
   {
     $lines2 = $lines + $_;
     $temp = lch(@ary2[$_]); chomp($temp); 
-    if ($isDone{$temp})
+	$temp2 = $temp; $temp2 =~ s/'//g;
+    if ($isDone{$temp2})
 	{
 	  $dupes++;
 	  push (@errLines, $lines2);
-	  if ($lines2 - $isDone{$temp} == 1) { $addDupe = "$temp ($lines2-$short) is a duplicate line in the same table.\n"; }
+	  if ($lines2 - $isDone{$temp2} == 1) { $addDupe = "$temp ($lines2-$short) is a duplicate line in the same table.\n"; }
 	  else
 	  {
       $addDupe = "$temp ($lines2-$short) is duplicated from line $isDone{$temp} table $table{$temp}.\n";
@@ -228,8 +229,8 @@ sub sortTheTable
 	    print "$temp ($lines2-$short) is *duplicated from line $isDone{$temp}.\n"; $dupes++; $dupeString .= "$thisTable ($lines2 from $isDone{$temp}): $temp\n";
 	  }
 	}
-	$isDone{$temp} = "$lines2-$short";
-	$table{$temp} = $thisTable;
+	$isDone{$temp2} = "$lines2-$short";
+	$table{$temp2} = $thisTable;
   }
   $lines += $#ary2 + 2;
   
@@ -256,7 +257,6 @@ sub lch
   $temp =~ s/^\"//g; $temp =~ s/\".*//g;
   $temp =~ s/-/ /g; $temp =~ s/[\.\?\!]//g; $temp =~ s/,//g; $temp =~ s/\'$//g;
   $temp =~ s/ +/ /g;
-  if ($temp =~ /anyhow/i) { print "$temp!\n"; }
   return $temp;
 }
 

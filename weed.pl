@@ -176,7 +176,7 @@ if ($launch) { `dupes.htm`; }
 
 $totTime = time() - $sta;
 
-print "$totTime total seconds. Output to dupes.htm, dshort.txt and badana.txt and oddmatch.txt.\n$s1$s2$s3";
+print "$totTime total seconds. Output to dupes.htm, dshort-?.txt and badana-?.txt and oddmatch-?.txt.\n$s1$s2$s3";
 
 #cmp would put 93 above 111
 for $x (sort { $dupCount{$b} <=> $dupCount{$a} } keys %dupCount)
@@ -629,7 +629,10 @@ while (($a = <A>) && (stillWorth()))
 	if (!$tableYetA2)
 	{
 	  $tableYetA2 = 1;
-	  print A2 "</tr><tr colspan=3 background=grey><td><center>$thisTable</center></td></tr>\n"; print A3 "==$thisTable\n";
+	  print A2 "</tr><tr colspan=3 background=grey><td><center>$thisTable</center></td></tr>\n";
+	  if ($numberYet) { print A3 "\n"; }
+	  print A3 "==$thisTable\n";
+	  $numberYet = 0;
 	}
 	  if ($curA2Table == 0)
 	  {
@@ -637,11 +640,15 @@ while (($a = <A>) && (stillWorth()))
 	  }
 	  $dif = $line - $oldline;
 	print A2 "<td bgcolor=@color[$curA2Table] halign=center>$a ($line,+$dif)<br>$dupes{$b} ($ln{$b})</td>\n"; $di++;
-	  $oldline = $line;
-	  $curA2Table++;
-	  $curA2Table %= 3;
-	  $dupeRows++;
-	print A3 "$a ($line)\n";
+	$oldline = $line;
+	$curA2Table++;
+	$curA2Table %= 3;
+	$dupeRows++;
+	#old way
+	#print A3 "$a ($line)\n";
+	if ($numberYet) { print A3 ", "; }
+	$numberYet = 1;
+	print A3 "$line";
     $dupCount{"$thisTable"}++;
 	}
 	else
@@ -653,6 +660,8 @@ while (($a = <A>) && (stillWorth()))
 	#print "$b -> $a\n";
   }
 }
+
+if ($numberYet) { print "\n"; }
 
 }
 
