@@ -136,7 +136,7 @@ for $thisDir(@weedDir)
   open(B2, ">falsepos-$thisDir.txt");
   open(C, ">badana-$thisDir.txt");
 
-  print A2 "<html><body><table width=69% border=1><th width=23%><th width=23%><th width=23%>\n";
+  print A2 "<html><body>\n";
 
   weedOneSource($thisDir, 1);
 
@@ -212,7 +212,7 @@ sub cutDown
 {
   my $temp = $_[0];
   $temp =~ s/\"\s.*/\"/g;
-  $temp =~ s/(,|\[r\]) by / /g;
+  $temp =~ s/(\[r\]),? +by / /g;
   $temp =~ s/\&//g;
   if ($temp =~ /\[if/)
   {
@@ -249,14 +249,9 @@ sub checkFullAna
   $fullAna = 0;
   $fullAna |= quikAna($_[0]);
   if ($fullAna) { return $fullAna; }
-  if ($_[0] =~ /^\"the[^a-z]/i)
+  if ($_[0] =~ /^\"(the|an|a) /i)
   {
-    $b = $_[0]; $b =~ s/^\"the//gi; $fullAna |= quikAna($b);
-    if ($fullAna) { return $fullAna; }
-  }
-  if ($_[0] =~ /^\"a[^a-z]/i)
-  {
-    $b = $_[0]; $b =~ s/^\"a//gi; $fullAna |= quikAna($b);
+    $b = $_[0]; $b =~ s/^\"(the|an|a) //gi; $fullAna |= quikAna($b);
     if ($fullAna) { return $fullAna; }
   }
   return 0;
@@ -486,6 +481,7 @@ sub gotAna
   }
   #if ($temp =~ /hillside/i) { for (0..$#words) { print "$_ @words[$_]\n"; } print $temp; $die = 1;}
   #die(join("/", @words));
+  $partAna = 0;
   for $i (0..$#words)
   {
     $runTote = 0;
@@ -531,6 +527,7 @@ sub gotAna
 		if (!$notWeirdYet)
 		{
 		print B "$anaStr\n";
+		$partAna = 1;
 		}
 		}
 	    #print B "$_[0] $combo maps to $runTote : $totes{$runTote}\n";
@@ -540,6 +537,7 @@ sub gotAna
 	  #if ($die) { print "Tried $i-$j, total = $runTote\n";}
 	}
   }
+  if (!$partAna) { print "The below may have nothing at all.\n"; }
   #if ($die) { for $g (sort keys %totes) { print B "$_[0]: $g $totes{$g}\n"; } $g = "0-0"; print "0=$totes{$g}"; die; }
 }
 
@@ -633,21 +631,16 @@ while (($a = <A>) && (stillWorth()))
 	{
 	  $tableYetA2 = 1;
 	  if ($numberYet) { print A3 "\n"; }
-	  if ($#localLineNums > -1) { print A2 "<tr><td>aq.pl " . join(" ", @localLineNums) . "</td></tr>\n"; }
-	  print A2 "</tr><tr colspan=3 background=grey><td><center>$thisTable</center></td></tr>\n";
+	  if ($#localLineNums > -1) { print A2 "<br>" . ($#localLineNums+1) . " elements:<br /><font size=+3><b>aq.pl " . join(" ", @localLineNums) . "</b></font>\n"; }
+	  print A2 "<font size=+4><center>$thisTable</center></font>\n";
 	  @localLineNums = ();
 	  print A3 "==$thisTable\n";
 	  $numberYet = 0;
 	}
-	  if ($curA2Table == 0)
-	  {
-	  print A2 "<tr>\n";
-	  }
 	  $dif = $line - $oldline;
-	print A2 "<td bgcolor=@color[$curA2Table] halign=center>$a ($line,+$dif)<br>$dupes{$b} ($ln{$b})</td>\n"; $di++;
+	print A2 "$a ($line,+$dif) =? $dupes{$b} ($ln{$b})<br />\n"; $di++;
 	$oldline = $line;
 	$curA2Table++;
-	$curA2Table %= 3;
 	$dupeRows++;
 	#old way
 	#print A3 "$a ($line)\n";
@@ -664,7 +657,7 @@ while (($a = <A>) && (stillWorth()))
   }
 }
 
-if ($#localLineNums > -1) { print A2 "<tr><td>" . join(" ", @localLineNums) . "</td></tr>\n"; }
+if ($#localLineNums > -1) { print A2 "<br>" . ($#localLineNums+1) . " elements:<br /><font size=+3><b>aq.pl " . join(" ", @localLineNums) . "</b></font>\n<br />\n"; }
 
 }
 

@@ -9,11 +9,20 @@ while ($count <= $#ARGV)
 	@lines = (@lines, @temp);
   }
   if ($a =~ /-s/) { $game = "sa"; }
+  if ($a =~ /-a/) { $sortAuto = 1; }
   if ($a =~ /-d/) { $delete = 1; }
+  if ($a =~ /-x/) { $inString = "x"; }
   $count++;
 }
 
 if ($#lines == -1) { print ("Nothing done.\n"); exit; }
+
+$lastLine = 0;
+for (0..$#lines)
+{
+  if ((@lines[$_] < $lastLine) && (!$sortAuto)) { die("Out of numerical order at item " . ($_+1) . " or @lines[$_]. Use -a to sort."); }
+  $lastLine = @lines[$_];
+}
 
 doLines();
 
@@ -45,17 +54,21 @@ sub processLine
 {
   if ($delete)
   {
-    $a =~ s/ ?\[\]//i;
+    if ($a !~ / ?\[\]/) { print "Oops, no \[\].\n"; }
+	else
+	{ $a =~ s/ ?\[\]//i; }
 	print B "$a\n";
 	shift(@lines);
   }
   else
   {
-  if ($a =~ / \[\]/) { print "@lines[0] $a already commented\n"; print B "$a\n"; }
+  if ($a =~ / \[$inString\]/) { print "@lines[0] $a already commented\n"; print B "$a\n"; }
   else
   {
-  print B "$a \[\]\n";
+  print "$a \[$inString\]\n";
+  print B "$a \[$inString\]\n";
   }
   shift(@lines);
+  print "@lines\n";
   }
 }
