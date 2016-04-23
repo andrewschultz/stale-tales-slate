@@ -69,7 +69,9 @@ $repl{"t-w"} = "watt";
 $repl{"s-w"} = "this";
 $repl{"f-w"} = "ukcf";
 
-$di = $sm = $badans = $posBad = 0;
+my $breakNum = 50;
+
+$di = $sm = $badans = $posBad = $falsePos = 0;
 
 $badana = 1;
 
@@ -214,6 +216,7 @@ sub cutDown
   $temp =~ s/\"\s.*/\"/g;
   $temp =~ s/(\[r\]),? +by / /g;
   $temp =~ s/\&//g;
+  $temp =~ s/[,\?!:]//g;
   if ($temp =~ /\[if/)
   {
     #so that an if statement with 2 different texts doesn't put them both into the anagram.
@@ -537,7 +540,7 @@ sub gotAna
 	  #if ($die) { print "Tried $i-$j, total = $runTote\n";}
 	}
   }
-  if (!$partAna) { print "The below may have nothing at all.\n"; }
+  if (!$partAna) { print B "The below may have nothing at all.\n"; }
   #if ($die) { for $g (sort keys %totes) { print B "$_[0]: $g $totes{$g}\n"; } $g = "0-0"; print "0=$totes{$g}"; die; }
 }
 
@@ -550,6 +553,8 @@ sub stillWorth
 
 sub weedOneSource
 {
+
+@localLineNums = ();
 
 my $myfi;
 if ($_[0] =~ /!!/)
@@ -630,15 +635,17 @@ while (($a = <A>) && (stillWorth()))
 	if (!$tableYetA2)
 	{
 	  $tableYetA2 = 1;
-	  if ($numberYet) { print A3 "\n"; }
-	  if ($#localLineNums > -1) { print A2 "<br>" . ($#localLineNums+1) . " elements:<br /><font size=+3><b>aq.pl " . join(" ", @localLineNums) . "</b></font>\n"; }
-	  print A2 "<font size=+4><center>$thisTable</center></font>\n";
-	  @localLineNums = ();
-	  print A3 "==$thisTable\n";
+	  checkFinalLineNums();
 	  $numberYet = 0;
 	}
 	  $dif = $line - $oldline;
-	print A2 "$a ($line,+$dif) =? $dupes{$b} ($ln{$b})<br />\n"; $di++;
+	$first = $a; $first =~ s/ .*//g;
+	$second = $dupes{$b}; $second =~ s/ .*//g;
+	$first =~ s/^\"//g; $second =~ s/(SA:)?\"//g;
+	if ($first eq $second) { print A2 "<i>"; }
+	print A2 "$a ($line) =? $dupes{$b} ($ln{$b}) (FIRSTS: $first vs $second)";
+	if ($first eq $second) { print A2 "</i>"; }
+	print A2 "<br />\n"; $di++;
 	$oldline = $line;
 	$curA2Table++;
 	$dupeRows++;
@@ -646,6 +653,12 @@ while (($a = <A>) && (stillWorth()))
 	#print A3 "$a ($line)\n";
 	push(@localLineNums, $line);
     $dupCount{"$thisTable"}++;
+	if ($curA2Table % $breakNum == 0)
+	{
+	  print A2 "<hr>run of 50, " . ($#localLineNums - $breakNum + 1) . " to $curA2Table: <b>aq.pl \n";
+	  print A2 join(" ", @localLineNums[($#localLineNums - $breakNum + 1)..$#localLineNums]);
+	  print A2 "</b>\n<br />\n";
+	}
 	}
 	else
 	{
@@ -657,8 +670,40 @@ while (($a = <A>) && (stillWorth()))
   }
 }
 
-if ($#localLineNums > -1) { print A2 "<br>" . ($#localLineNums+1) . " elements:<br /><font size=+3><b>aq.pl " . join(" ", @localLineNums) . "</b></font>\n<br />\n"; }
+print "$#localLineNums this go round for $thisTable.\n";
 
+if ($#localLineNums > -1)
+{
+  my $roundDown = $curA2Table - ($curA2Table % $breakNum);
+  if ($roundDown)
+  {
+  print A2 "Going from $roundDown to $#localLineNums.<br />\n";
+  $roundDown--;
+  print A2 "<br>" . ($#localLineNums+1) . " elements:<br /><font size=+3><b>aq.pl " . join(" ", @localLineNums[$roundDown..$#localLineNums]) . "</b></font>\n<br />\n"; }
+  }
+
+  $thisTable = "";
+  checkFinalLineNums();
+}
+
+sub checkFinalLineNums
+{
+	  if ($numberYet) { print A3 "\n"; }
+	  if ($#localLineNums > -1)
+	  {
+	      my $roundDown = $#localLineNums - ($#localLineNums % $breakNum);
+		  my $remain = $#localLineNums % $breakNum;
+		  if ($remain < $breakNum - 1)
+		  {
+		  print A2 "<br>" . ($#localLineNums+1) . " elements, showing last " . ($remain + 1) . ":<br /><font size=+3><b>aq.pl " . join(" ", @localLineNums[($#localLineNums - $remain)..$#localLineNums]) . "</b></font>\n";
+		  }
+	  }
+	  if ($thisTable)
+	  {
+	  print A2 "<font size=+4><center>$thisTable</center></font>\n";
+	  }
+	  @localLineNums = ();
+	  print A3 "==$thisTable\n";
 }
 
 ###########################
