@@ -20,7 +20,12 @@
 
 my $allLines;
 
+my $roi = "c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/Roiling random text.i7x";
+my $sa = "c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/Sa random text.i7x";
+
 if (@ARGV[0] eq "e") { `c:\\writing\\dict\\punc.txt`; exit; }
+
+if (@ARGV[0] eq "cl") { fixChecklist(); exit; }
 
 @titleWords = ("but", "by", "a", "the", "in", "if", "is", "it", "as", "of", "on", "to", "or", "and", "at", "an", "oh", "for", "be", "not", "no", "nor", "into", "with", "from");
 addTitles();
@@ -66,8 +71,8 @@ elsif (@ARGV[0]) { $proj = @ARGV[0]; }
 
 if (@ARGV[0] eq "b")
 {
-  storyTables("c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/Roiling random text.i7x", "roiling");
-  storyTables("c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/Sa random text.i7x", "sa");
+  storyTables($roi, "roiling");
+  storyTables($sa, "sa");
   exit;
 }
 
@@ -221,6 +226,32 @@ sub titleCase
   if ($#wrongs == -1) { return 1; }
   $wrongString = join("/", @wrongs);
   return 0;
+}
+
+sub fixChecklist
+{
+  open(A, "$roi");
+  open(B, ">$roi-bak");
+  while ($a = <A>)
+  {
+    if ($a =~ /table of checklist items.*xx/) { $addPeriod = 1; }
+    if ($a !~ /[a-z]/) { $addPeriod = 0; }
+	if (($addPeriod == 1) && ($a =~ /[a-z]\"/i))
+	{
+	  $a =~ s/([a-z])\"/$1\.\"/g;
+	  $changes++;
+	}
+    print B $a;
+  }
+  close(A);
+  close(B);
+  if ($changes)
+  {
+  $cmd = "copy \"$roi-bak\" \"$roi\""; $cmd =~ s/\//\\/g;
+  `$cmd`;
+  print "$changes total changes.\n";
+  }
+  else { print "No changes.\n"; }
 }
 
 sub usage

@@ -144,7 +144,7 @@ for $thisDir(@weedDir)
 
   if ($remains) { weedOneSource("!!"); }
 
-  if ($di + $sm) { $s1 = "(DUPES.HTM/DSHORT.TXT) $di total differences (disable with \[\]). $sm size mismatches.\n"; } else { $s1 = "DUPES.HTM/DSHORT.TXT will be blank. Hooray!\n"; }
+  if ($di + $sm) { $s1 = "<br>(DUPES.HTM/DSHORT.TXT) $di total differences (disable with \[\]). $sm size mismatches.\n"; } else { $s1 = "DUPES.HTM/DSHORT.TXT will be blank. Hooray!\n"; }
   if ($posBad) { $s2 = "(ODDMATCH.TXT) $posBad interesting cases.\n"; } else { $s2 = "ODDMATCH.TXT has nothing. Wow!\n"; }
   if ($falsePos) { $s2 = "(FALSEPOS.TXT) $falsePos \[\]'s.\n"; } else { $s2 = "FALSEPOS.TXT has nothing. Good!\n"; }
   if ($badans) { $s3 = "(BADANA.TXT) $badans total likely bad anagrams, disable with \[x\].\n"; } else { $s3 = "You have no bad anagrams. Well done!\n"; }
@@ -157,6 +157,8 @@ for $thisDir(@weedDir)
   print A2 "$s1";
 
   print B "$s2";
+  
+  if (keys %pbad > 0) { print B "Missing stuff by table:\n"; for $tname (sort keys %pbad) { print B "$tname : $pbad{$tname}\n"; } }
 
   print B2 "$s2a";
 
@@ -329,6 +331,7 @@ sub mash
 	}
 	else
 	{
+	$pbad{$thisTable}++;
 	$posBad++; push (@badPos, $line);
 	if (!$notWeirdYet)
 	{
@@ -598,7 +601,7 @@ while (($a = <A>) && (stillWorth()))
 
   $a =~ s/[ικ]/e/g;
   if ($a !~ /[a-z]/) { $inTable = 0; next; }
-  if ($a =~ / \[[px]\]/) { next; } # deliberately ignore
+  if ($a =~ / \[x\]/) { next; } # deliberately ignore. This is not perfect, as bad punctuation stuff may avoid bad anagrams, and vice versa, but it gets close.
   if (($a =~ /^\"/) && ($a !~ /\t/) && ($a =~ /[a-z]/))
   {
    $acrom = cromstring(cutDown($a));
@@ -684,6 +687,10 @@ if ($#localLineNums > -1)
 
   $thisTable = "";
   checkFinalLineNums();
+  if (@smallStuff > -1)
+  {
+    print A2 "<br><b>BITS AND PIECES:</b> aq.pl " . join(" ", @smallStuff) . "<br>\n";
+  }
 }
 
 sub checkFinalLineNums
@@ -698,6 +705,7 @@ sub checkFinalLineNums
 		  print A2 "<br>" . ($#localLineNums+1) . " elements, showing last " . ($remain + 1) . ":<br /><font size=+3><b>aq.pl " . join(" ", @localLineNums[($#localLineNums - $remain)..$#localLineNums]) . "</b></font>\n";
 		  }
 	  }
+	  if ($#localLineNums < 10) { @smallStuff = (@smallStuff, @localLineNums); }
 	  if ($thisTable)
 	  {
 	  print A2 "<font size=+4><center>$thisTable</center></font>\n";

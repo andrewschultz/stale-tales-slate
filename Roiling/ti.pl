@@ -39,13 +39,14 @@ while ($count <= $#ARGV)
   for ($a)
   {
   /^-?w$/ && do { findWhat(); exit; };
-  /^-?e$/ && do { `$scr`; };
+  /^-?e$/ && do { `$scr`; exit; };
   /^-d$/ && do { $allowDupe = 1; $count++; next; };
   /^-f$/ && do { $lastsFile = "firsts.txt"; $firstsFile = "lastbig.txt"; $count++; next; };
   /^-m$/ && do { $middleName = 1; $count++; next; };
   /^-p$/ && do { $period = 1; $count++; next; };
   /^-pc$/ && do { $printCmds = 1; $count++; next; };
   /^-r$/ && do { $reverses = 1; $count++; next; };
+  /^-t$/ && do { runScratchTest(); exit; };
   /-\?/ && do { usage(); $count++; next; };
   /^[a-z]/i && do { if (length($a) == 1) { die ("Won't process 1-word string."); } $fullStr = $a; $count++; next; };
   }
@@ -65,13 +66,22 @@ $uStr = ucfirst($addStr);
 
 if (!$allowDupe)
 {
+  @alphAry = split(//, lc($fullStr));
+  $alphStr = join("", sort(@alphAry));
   open(A, "$don");
   while ($a = <A>)
   {
-    if ($a =~ /===$fullStr$/i)
+    if ($a =~ /===$alphStr/i)
 	{
 	  close(A);
+	  if ($a =~ /$fullStr$/i)
+	  {
 	  die("According to ppl-done.txt, you've already searched for $fullStr. If you want to allow duplicates, try -d.\n");
+	  }
+	  else
+	  {
+	  die("According to ppl-done.txt, you've already searched for an anagram of $fullStr. If you want to allow duplicates, try -d.\n");
+	  }
 	}
   }
   close(A);
@@ -81,13 +91,11 @@ open(A, "$dictDir/$initFile") || die ("No $initFile.");
 
 open(D, ">>$don");
 
-print D "=======$uStr\n";
+print D "=======$alphStr/$uStr\n";
 
 close(D);
 
 open(C, ">>$scr");
-
-print D "=======$uStr\n";
 
 while ($a = <A>)
 {
@@ -114,14 +122,25 @@ sub findWhat
   open(A, "$scr");
   while ($a = <A>)
   {
-    if ($a =~ /^[#=]/) { next; }
+    if ($a =~ /^[#=0-9]/) { next; }
     if ($a =~ /^\"/) { $a =~ s/^.//g; $a =~ s/ .*//g; $a = lc($a); $a =~ s/[^a-z]//g; }
-	if (!$used{$a}) { $used{$a} = 1; print "----$a\n"; }
+	else { next; }
+	chomp($a);
+	if (!$used{$a})
+	{
+	  $used{$a} = 1; #print "----$a\n";
+	}
   }
   my $prefs = scalar(keys %used);
-  if (!$prefs) { print "Yay, all clean.\n"; } else { print "$prefs to sort through.\n"; }
-  print "TEST RESULTS:Roiling Names,$prefs,0,0,";
-  if (!$prefs) { print "None"; } else { print "<a href=\"c:/games/inform/roiling.inform/source/ppl-scratch.txt\">Culprits</a>"; }
+  if (!$prefs) { print "Yay, all clean.\n"; } else { $q = "$prefs to sort through:";
+  for $x (sort keys %used) { $q .= " $x"; }
+  print "$q\n";
+  open(ERR, ">ppl-err.txt");
+  print ERR $q;
+  close(ERR);
+  }
+  print "TEST RESULTS:Roiling Names,0,$prefs,0,0,";
+  if (!$prefs) { print "None"; } else { print "<a href=\"file://$scr\">Raw File</a>, <a href=\"ppl-err.txt\">Overview</a>\n"; }
   print "\n";
 }
 
@@ -203,6 +222,7 @@ ti.pl big = Big Ernest Steinberg
 -p period after text
 -pc print commands
 -r reverses too
+-w sees what is left
 EOT
 exit;
 }

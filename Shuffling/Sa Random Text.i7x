@@ -77,6 +77,7 @@ blurb
 "Andria Ardani"
 "Andru Duran"
 "Aneke Keane"
+"Anelise Selenia"
 "Angali Galina"
 "Angel Lange"
 "Angela Galena"
@@ -92,6 +93,7 @@ blurb
 "April Pilar"
 "Arabel Bealar"
 "Arby Bray"
+"Archibald Bardlich"
 "Archibald Brachaldi"
 "Ardell Ladler" []
 "Ariadne Dariane"
@@ -808,6 +810,7 @@ blurb
 "Myrana Aramyn"
 "Myrna Ryman"
 "Myrona Raymon"
+"Myrtle Tylmer"
 "Nadya Dayan"
 "Nancie Encina"
 "Narvel Alvern"
@@ -1022,6 +1025,7 @@ blurb
 "Sarina Ansari"
 "Sarina Arians" []
 "Sash Hass"
+"Schuyler Crushley"
 "Scobie Biscoe"
 "Scoby Cosby"
 "Scott Cotts"
@@ -1330,6 +1334,7 @@ blurb
 "Malice-Nest Lemniscate"
 "Malice-On Coal Mine"
 "melting Mt. Elgin"
+"Mermaids['] Mad Mires"
 "Mind-Rays Sandy Rim"
 "the mirage-hermitage"
 "Mist of Mo['] Fits"
@@ -2511,6 +2516,7 @@ blurb
 "Soon the one shot on those!"
 "Sorrowful slow furor."
 "Sour mild oil drums! Rum! Idols!"
+"Sovereign, given rose, goes, riven."
 "Sow fine wines of few ions? Foes win!"
 "Speakin['] Pink Sea."
 "Spell-woken knolls weep, skew pollen."
@@ -3049,8 +3055,8 @@ blurb
 "'Tax bunker? Extra bunk, tux-banker!'"
 "'Theft laws? A twelfth's what's left!'"
 "'ThemCo Cometh!'"
-"They brag of prowess at Clear-BBS Scrabble." [p]
-"They mention subverts vs. brutes." [p]
+"They brag of prowess at Clear-BBS Scrabble." [p] [x]
+"They mention subverts vs. brutes." [p] [x]
 "'Throats to trash torts, ah!'"
 "'Tiptoe in? PETITION!'"
 "'Title is elitist.'"
@@ -3277,6 +3283,7 @@ blurb
 "'Leap-Tech: the PLACE!'"
 "'Learn everything! Inherently grave! Eternal very nigh!'"
 "A lengthy coo over Holy Cogent Technology." [x]
+"'Let's keep a leetspeak!'"
 "'A limit on us? Simulation!'"
 "'Limp, sad plasmid! Mad slip, dim pals!'"
 "'List-U-Utils? I lust!'"
@@ -3295,6 +3302,7 @@ blurb
 "'Microsoft, son? So conformist!'"
 "'Mirth-goals algorithms['] glamor hits!'"
 "More chats. Some chart. Math score. Smart echo." []
+"'More true retro-emu!'"
 "'My bug? By gum!'"
 "'My group's so grumpy! Guys, ROMP!'"
 "'Neat code anecdote noted, Ace!'"
@@ -3421,6 +3429,7 @@ blurb
 "'Sure ruse? Err, use us!'"
 "'Surly? Us? RLY!'"
 "'Tampered, ha? Parade them! Permadeath!'"
+"A tan, mad, adamant data man!"
 "'Tech books boost. Heck! Be shock to...'"
 "'Tech is ETHICS!'"
 "'Technical clan ethic: I can't lech!'"
@@ -3705,6 +3714,7 @@ blurb
 "'So plucky? Lucky sop!'"
 "'So, REP, poser!'" []
 "'So thin? No hits shot in!'"
+"'Some heart? HORSEMEAT!'" []
 "'Some large MEGA-LOSER!'"
 "'Spar? Tut, upstart!'"
 "'Spoil me? Some lip! Lose, imp!'"
