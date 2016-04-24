@@ -6,6 +6,7 @@
 use strict;
 use warnings;
 
+my $flagString = "TEST CASE UNCHECKED\n";
 my $fi = 0;
 my $sc = 1;
 my $gq = 1;
@@ -29,9 +30,12 @@ checkCmds();
 
 open(B, ">>$writeFile");
 
-print $ARGV[0];
-if (($#ARGV > 0) && ($ARGV[0] eq "-f")) { $loadFile = $ARGV[1]; readFile($loadFile); }
-elsif (($#ARGV >= 0) && ($ARGV[0] eq "-df")) { readFile($loadFile); }
+if (($#ARGV > 0) && ($ARGV[0] eq "-f")) { $loadFile = $ARGV[1]; readFile($loadFile); pareFile($loadFile); exit; }
+elsif (($#ARGV >= 0) && (($ARGV[0] eq "e") || ($ARGV[0] eq "-e"))) { `$writeFile`; }
+elsif (($#ARGV >= 0) && (($ARGV[0] eq "l") || ($ARGV[0] eq "-l"))) { `$loadFile`; }
+elsif (($#ARGV >= 0) && ($ARGV[0] eq "-t")) { testWriteFile(); }
+elsif (($#ARGV >= 0) && ($ARGV[0] eq "-df")) { readFile($loadFile); pareFile($loadFile); exit; }
+elsif (($#ARGV >= 0) && ($ARGV[0] eq "-?")) { usage(); }
 else {
 
 OUTER: while ($exit == 0)
@@ -47,15 +51,47 @@ OUTER: while ($exit == 0)
 close(A);
 close(B);
 
+sub testWriteFile
+{
+close(B);
+open(B, "$writeFile");
+my $tcase = 0;
+while ($a = <A>)
+{
+  if ($a =~ /^TEST CASE UNCHECKED/) { $tcase++; }
+}
+close(B);
+
+print "TEST RESULTS:anagram raw data,10,$tcase,0,<a href=\"file:///c:/writing/dict/anjunk.txt\">\n";
+
+}
+
 sub readFile
 {
   my $b;
   open(A, "$_[0]") || die ("No file $_[0] to read.");
   while ((!$exit) && defined($b = <A>))
   {
+    if ($b =~ /^#/) { next; }
+    if ($b =~ /^;/) { last; }
     print "Parsing $b\n";
     readLine($b);
   }
+  close(A);
+}
+
+sub pareFile
+{
+  my $paredString;
+  open(A, "$_[0]") || die ("No file $_[0] to read.");
+  while ($a = <A>)
+  {
+    if ($a !~ /^[a-z]/i) { $paredString .= $a; }
+  }
+  close(A);
+  open(A, ">$_[0]");
+  print A $paredString;
+  close(A);
 }
 
 sub readLine
@@ -64,7 +100,7 @@ sub readLine
   my $output = "";
   my $input = "";
   my @op;
-  $cmd = lc($cmd); chomp($cmd);
+  $cmd = lc($cmd); chomp($cmd); $cmd =~ s/^!+//g;
   my @c = split(/[;,]/, $cmd);
   for my $c1 (@c)
   {
@@ -74,9 +110,9 @@ sub readLine
   if ($c1 eq "a") { $gq = 1; $ti = 1; $an = 1; $my = 1; next; }
   if ($c1 eq "gq") { $gq = 1; scr("Grepquick $toggle[$gq]\n"); next; }
   if ($c1 eq "ti") { $ti = 1; scr("Nicknaming $toggle[$ti]\n"); next; }
-  if ($c1 eq "an") { $an = 1; scr("Anagram names $toggle[$an]\n"); next; }
-  if ($c1 eq "my") { $my = 1; scr("My-anagram $toggle[$my]\n"); next; }
-  if ($c1 eq "fi") { $fi = 1; scr("To-file $toggle[$fi]\n"); next; }
+  if (($c1 eq "an") || ($c1 eq "an+")) { $an = 1; scr("Anagram names $toggle[$an]\n"); next; }
+  if (($c1 eq "my") || ($c1 eq "my+")) { $my = 1; scr("My-anagram $toggle[$my]\n"); next; }
+  if (($c1 eq "fi") || ($c1 eq "fi+")) { $fi = 1; scr("To-file $toggle[$fi]\n"); next; }
   if ($c1 eq "f") { $fi = 1- $fi; scr("To-file $toggle[$fi]\n"); next; }
   if ($c1 eq "sc") { $sc = 1; scr("To-screen $toggle[$sc]\n"); next; }
   if ($c1 eq "s") { $sc = 1 - $sc; scr("To-screen $toggle[$sc]\n"); next; }
@@ -101,9 +137,9 @@ sub readLine
 	my @op = split(/\n/, $input);
 	for (@op) { if (($_ =~ /^nothing in/i) || ($_ =~ /^in /i)) {} else { $output .= "$_\n"; } }
   }
-  if ($an) { $output .= `anan.pl $nospc=`; }
-  if ($ti) { $output .= `ti $nospc`; }
-  if ($my) { $output .= `myan.pl $c1`; }
+  if ($an) { $output .= ($flagString . `anan.pl $nospc=`); }
+  if ($ti) { $output .= ($flagString . `ti $nospc`); }
+  if ($my) { $output .= ($flagString . `myan.pl $c1`); }
   if ($fi) { print B "COMMAND: $c1\n$output\n"; }
   if ($sc) { print "Results of $c1:\n$output\n"; }
   }
@@ -120,6 +156,7 @@ sub usage
 {
 print "Error in command: $_[0]\n";
 print<<EOT;
+===========================for use in anjunk.pl or command line
 f = file toggle, fi/-fi = file on off
 s = screen toggle, sc/-sc = screen on off
 q = quit
@@ -127,6 +164,10 @@ q = quit
 default = GQ through files
 ti = use ti.bat
 an = anagram name, my = my anagram, gq = grep quick
+===========================command line options below
+-l = open write-to file in notepad
+-e = open load-from file in notepad
+-t = test the writing file
 EOT
 }
 
