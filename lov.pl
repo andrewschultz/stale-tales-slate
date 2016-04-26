@@ -21,6 +21,7 @@ $inExt{"sa"} = 1;
 $genderChars = 34; #34 chars for [if male][else]
 $downup = 1;
 $gender = 0; # do we count gender ifdefs?
+$ascend = 0; # this can be changed to 1 if we want the default. -an and -dn change it
 
 #this determines which first digits should be shown
 @doable = (0, 1, 1, 1, 1, 1, 1, 1, 1, 1);
@@ -58,6 +59,8 @@ while (@ARGV[$count])
   /^-?d$/i && do { `c:/writing/dict/lov.txt`; exit; }; # open the data file
   /^-ud$/i && do { $downup = 0; $count++; next; }; # reverse order arrays in
   /^-f$/i && do { $fileName = $b; $count += 2; next; }; # define new file name
+  /^-?an$/i && do { $ascend = 1; $count++; next; }; #whether list numbers ascend
+  /^-?dn$/i && do { $ascend = 0; $count++; next; }; #whether list numbers ascend
   /^-?gy/i && do { $gender = 1; $count++; next; }; #gender-ifs counted in character count
   /^-?gn/i && do { $gender = 0; $count++; next; }; #gender-ifs not counted in character count
   /^-e$/i && do { $expected = 2; $count++; next; }; #show expected Benford-values
@@ -167,7 +170,7 @@ $prod = 0;
 
 for (0..$#lists)
 {
-  $c = $_ + 1;
+  if ($ascend) { $c = $_ + 1; } else { $c = $#lists - $_ + 1; }
   $linedig = $lines{@lists[$_]}; $linedig = substr($linedig, 0, 1);
   $sizedig = $size{@lists[$_]}; $sizedig = substr($sizedig, 0, 1);
 

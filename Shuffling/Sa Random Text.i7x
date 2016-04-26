@@ -1483,6 +1483,7 @@ blurb
 "As thy hasty sty, HA!"
 "As to taos? So, a toast!"
 "Assign one seasoning. Noses gain."
+"Aw, Go, Stuff, to Guffaws."
 "Aw, sire, I swear."
 "Aw, the wheat, wet, ah!"
 "AWOL? Fob a bowl of fab wool."
@@ -3280,6 +3281,7 @@ blurb
 "Jock-hate joke-chat."
 "'The jock joke? Tch.'"
 "'The latest! That's leet!'"
+"'Lean on one LAN? No, Neal!'"
 "'Leap-Tech: the PLACE!'"
 "'Learn everything! Inherently grave! Eternal very nigh!'"
 "A lengthy coo over Holy Cogent Technology." [x]
@@ -3402,6 +3404,7 @@ blurb
 "'Rapid API Dr.? A drip!'"
 "'Refactor: force art? Farce! Rot!'"
 "'Rev. Sid Dervis Drives ... er ... vids? Serv'd! I...'"
+"'Rhetoric? Tech-riot!'"
 "'Rip not portin[']! No trip!'"
 "'Ripe claim! Empirical!'"
 "'Ron Isom? Moron is SO minor!'"
