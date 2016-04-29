@@ -13,6 +13,9 @@ $dupes = 0;
 $s = "sa";
 $r = "roiling";
 
+$totBad = 0;
+$badError = "";
+
 while ($count <= $#ARGV)
 {
   $a = @ARGV[$count];  
@@ -22,7 +25,7 @@ while ($count <= $#ARGV)
     /^-?x$/ && do { $dontcopy = 1; $count++; next; };
 	/^-?(r|ro|roi)$/ && do { @dirs = (@dirs, $r); $count++; next; };
 	/^-?(s|sa)$/ && do { @dirs = (@dirs, $s); $count++; next; };
-	/^-?b$/ && do { @dirs = (@dirs, $r, $s); $count++; next; }; # both: roiling goes first due to more debug text
+	/^-?b$/ && do { @dirs = (@dirs, $s, $r); $count++; next; }; # both: roiling goes first due to more debug text
 	/^-?o$/ && do { $outFileName = "$b"; $count += 2; next; };
 	/^-?v$/ && do { $verbose = 1; $count++; next; };
 	/^-?f$/ && do { $fileName = "$b"; if ($fileName !~ /\.ni/) { $fileName .= ".ni"; } $count += 2; next; };
@@ -108,9 +111,19 @@ $nuSize = -s "$outFileName";
 
 if ($niSize != $nuSize) { die "Something went wrong. File sizes aren't equal! New=$nuSize Old=$niSize. Maybe check CR's."; }
 
-if ($badError) { die "BAD ERRORS FOUND, ABORTING\n$badError\n"; }
-
+if ($badError)
+{
+  my @temp = split(/\n/, $badError);
+  @temp = grep { $_ =~ /\"/ } @temp;
+  print join "<br/>", @temp;
+  print "TEST RESULTS:$_[0] quotes,0,$totBad,0,$errLines\n";
+  print "BAD ERRORS FOUND, NOT POST-PROCESSING\n$badError\n";
+  return;
+}
+else
+{
 postProcess("$thisDir");
+}
 
 }
 
@@ -182,12 +195,12 @@ sub sortTheTable
   while ($a = <A>)
   {
     @c = split(/\"/,  $a);
-	if (($#c ==1) || ($#c > 2)) { $badError .= ("Uh-oh, wrong # of quotes at $short line " . ($lines+$#ary+2) . "\n$#c:$a"); }
-    if ($a =~ /^'/) { $badError .= ("Uh-oh, single quote line start at $short line " . ($lines+$#ary+2) . ", bailing."); }
+	if (($#c ==1) || ($#c > 2)) { $totBad++; $badError .= ("Uh-oh, wrong # of quotes at $short line " . ($lines+$#ary+2) . "\n$#c:$a"); }
+    if ($a =~ /^'/) { $totBad++; $badError .= ("Uh-oh, single quote line start at $short line " . ($lines+$#ary+2) . ", bailing."); }
     if ($a !~ /^\"/) {
-	  if ($a =~ /^[a-z]/i) { $badError .= ("Uh-oh, you started a table line with a character: $short # " .  ($lines+$#ary+2) . ", bailing."); }
+	  if ($a =~ /^[a-z]/i) { $totBad++; $badError .= ("Uh-oh, you started a table line with a character: $short # " .  ($lines+$#ary+2) . ", bailing."); }
 	  $ch = chr(0xe2);
-	  if ($a =~ /^$ch/) { $badError .= ("Uh-oh, smart quote found at $short line " . ($lines+$#ary+2) . ", bailing."); }
+	  if ($a =~ /^$ch/) { $totBad++; $badError .= ("Uh-oh, smart quote found at $short line " . ($lines+$#ary+2) . ", bailing."); }
 	  #print "Final = $a";
 	  last;
 	}

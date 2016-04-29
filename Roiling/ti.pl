@@ -216,6 +216,7 @@ sub usage
 {
 print<<EOT;
 ti.pl big = Big Ernest Steinberg
+-e opens the scratch file
 -d allow duplicates
 -f switch lasts and firsts files
 -m big = Ernest 'Big' Steinberg

@@ -143,6 +143,7 @@ blurb
 "Blaize Bazile"
 "Boaz S. Szabo"
 "Bograkis Graboski"
+"Bonnie Benoni"
 "Bosric Brisco"
 "Boyd Doby"
 "Brandee Bearden-Bardeen"
@@ -300,6 +301,7 @@ blurb
 "Dedra Radde"
 "Dedrick Reddick"
 "DeLana Andale"
+"Delilah Hallide"
 "Delsie Seidel"
 "Dena Nead"
 "Denard Darden" []
@@ -1357,6 +1359,7 @@ blurb
 "Phantomhampton"
 "the pits, pest-hit"
 "Plagues-Gulp Sea"
+"Praecox-Pox Acre"
 "the primeval vile ramp"
 "A Region Air-Gone"
 "Retain-Flu Alien Turf" []
@@ -1386,7 +1389,7 @@ blurb
 "Sour Milk Murk Soil"
 "the Spook Pets Hook"
 "Squirmage Quagmires"
-"stale-dawn wasteland"
+"Stale-Dawn Wasteland"
 "Stencher Trenches"
 "the Stepanski Snakepits"
 "stiff tiffs"
@@ -2328,6 +2331,7 @@ blurb
 "Poetic Eco-Pit."
 "Poke at a pet OK? Po['] take."
 "Pollutions? Lo, unspoilt sunlit pool. Loon! Tulips! Spout no ill!"
+"Ponies in Pose Pine So"
 "Poor boy, Roy Boop."
 "Porn, claim a moral panic!"
 "A portal, polar, at a tarp, lo!"
@@ -2397,8 +2401,10 @@ blurb
 "Rise, bad seabird! A bride's bread is braised!"
 "The rise, it's here! His tree, he tires!"
 "Rise, my misery!"
+"Rite two: to write-it tower? Ow, trite!"
 "Roam, for armor of far moor."
 "Roam on, a moron, or moan."
+"Roar aptly: royal part portrayal"
 "Roar, flu of rural furor! La!"
 "A rock's croaks."
 "The rod: red hot to herd!"
@@ -2447,6 +2453,7 @@ blurb
 "Seriously lousy, sire!"
 "Sewer slop slow spree. Powerless!"
 "Shack o['] Cask? Oh, a shock!"
+"Sharp net? Then spar, panthers!"
 "Sheer meow somewhere. Sewer? Home?"
 "A shifty or soft, hairy forsythia."
 "Shipmate, the map is, ahem, PITS."
@@ -2513,6 +2520,7 @@ blurb
 "Some heart hates more hero teams!"
 "Some Long Ol['] Gnomes['] Englooms: Go Solemn."
 "Some toad set a mood as mooted."
+"Some trip! More pits, po['] mister!"
 "Soon, Emit Emotions!"
 "Soon the one shot on those!"
 "Sorrowful slow furor."
@@ -2523,6 +2531,7 @@ blurb
 "Spell-woken knolls weep, skew pollen."
 "Sperduto strode up, sprouted, Postured. 'Deport us? Po['] rusted sot! Duper! Rude! Stop!'"
 "Spider man! Spin dream, amend rips, snared imp!"
+"Spin, frog of spring!"
 "Spin, world! Swirl, pond! Drown, slip!"
 "Spine to spite, in poets? NO!" []
 "Spires. I press."
@@ -2538,6 +2547,7 @@ blurb
 "Sterile, it leers."
 "Sting hut! Tin thugs shutting thin guts."
 "Stone claw cleans two. Neat scowl!"
+"Stop, foe of poets! Oof, step!"
 "A storied asteroid, it soared! Sit, adore! Read it so!"
 "Stormy plea, ample story: poetry slam!"
 "A strict tract is (sic) tart."
@@ -2592,6 +2602,7 @@ blurb
 "Tho['] seen, he notes the nose. Oh, tense!"
 "Threadbare Earth-Beard!"
 "A thrill? Rah, till I thrall!"
+"Thumbelina? Blah. Minute."
 "Thy Erased Three Days: Ye Trashed."
 "Thy grim myth-rig, my right."
 "Thy real earthly heal-try."
@@ -2721,6 +2732,7 @@ blurb
 "Wood, match, watch: DOOM!"
 "Wooded odd woe, dodo? Ew."
 "The woods do stew, oh!" []
+"Woody galas? Always good!"
 "Wool gins! Go in slow!"
 "A world of raw flood. Wolf road. Draw, fool!"
 "A worm mo['] raw! Ow, ram!"
@@ -2943,6 +2955,7 @@ blurb
 "'MouthCo: too much!'"
 "'Mr Suit's Truisms!'"
 "'MushCo: so much scum, oh!'"
+"'My! Bin? NIMBY!'"
 "'Narcotism, not racism, romantics!'"
 "'Nepotists['] pottiness: inept sots!'"
 "'New large green law!'"
@@ -2951,6 +2964,7 @@ blurb
 "'No crime, MinerCo?!'"
 "'No direr orderin[']!'"
 "'No greed nor edge! End gore!'"
+"'No, libeler! Rebellion!'"
 "'Northwest Worth-Nets threw TONS!'"
 "'Now bash who bans: show, nab!'"
 "'Now-Org? Wrongo!'" []
@@ -2959,6 +2973,7 @@ blurb
 "'O, blast bloats!'"
 "'O yes! Cap CEOs['] pay!'"
 "'Obey? Yo, Be!'"
+"'Occupying! Up, cynic, go!'"
 "'Oi, glib Big Oil!'"
 "'Oil is SCAM! Socialism!'"
 "'OK, writ now: I won't work!'"
@@ -2992,6 +3007,7 @@ blurb
 "'Rallies! All rise!'"
 "'Rat race: a crater!'"
 "'Raw fuel? Awfuler!'"
+"'Raw love over law!'"
 "'A raw sinful law's unfair!'"
 "'Re-infest, ferniest!'"
 "'Refuse Feuer's Sur-Fee!'"
@@ -3305,6 +3321,8 @@ blurb
 "'Mirth-goals algorithms['] glamor hits!'"
 "More chats. Some chart. Math score. Smart echo." []
 "'More true retro-emu!'"
+"'Morse code demo? SCORE!'"
+"'Mr. Big's grim BS!'"
 "'My bug? By gum!'"
 "'My group's so grumpy! Guys, ROMP!'"
 "'Neat code anecdote noted, Ace!'"
@@ -3386,6 +3404,7 @@ blurb
 "'Oo! Ban a noob!'"
 "Opinions about Nerd Renn Redd. You want to disagree with them all." [x]
 "'Optimality! Limit a typo!'"
+"'The OS? Oh, set THOSE.'"
 "'Panic, I? CPAN!'" []
 "'Patric's pics-art? A script!'"
 "'PeerSci Creep is Precise!' they admit, exhaustedly." [x]
@@ -3403,6 +3422,7 @@ blurb
 "'Quitano's isoquant? So quaint!'"
 "'Rapid API Dr.? A drip!'"
 "'Refactor: force art? Farce! Rot!'"
+"'Relisted dirs? LEET!'"
 "'Rev. Sid Dervis Drives ... er ... vids? Serv'd! I...'"
 "'Rhetoric? Tech-riot!'"
 "'Rip not portin[']! No trip!'"
@@ -3425,6 +3445,7 @@ blurb
 "'Some tend. Most need DemosNet.'"
 "'Source code, coerce us, do!'"
 "'Sport? No! Protons!'"
+"'Spruce the super-tech! Uh, respect! Cheers, put!'"
 "'Step two: test! Pow!'"
 "'Stolid dolt is stolid!' / 'It's old.'"
 "'Stupefy-fest?' / 'Yup!'"
@@ -3782,6 +3803,7 @@ blurb
 "No skeptic pickets the picketers." [x]
 "'No, usurper! Run, poseur! Sour prune!'"
 "'Now clue [']em! Unwelcome!'"
+"'Now! Foil low-info fool! Win!'"
 "One carries an AVENGE GENEVA sign. You've never been there." [x]
 "One person, in a total existential crisis, waves an 'ARREST SARTRE' sign." [x] [p]
 "One sign calls you COP-SHY PSYCHO." [x]
