@@ -37,7 +37,10 @@ if ($#dirs == -1)
 {
   if (-f "story.ni")
   {
-  @dirs = (lc(getcwd()));
+  $shortDir = getcwd();
+  $shortDir =~ s/\.inform.*//g; $shortDir =~ s/.*[\\\/]//g;
+
+  @dirs = ($shortDir);
   }
   else
   {

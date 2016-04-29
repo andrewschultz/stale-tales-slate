@@ -31313,6 +31313,7 @@ blurb
 "Refute a feature, rue fate."
 "Reproduce Procedure, Dour Creep! Purer code."
 "A review of [i]APIs, APIS[r], by Issa Paip." [x]
+"A review of [i]Reborn AI, Airborne[r], by Robin Rea."
 "A review of Fathom of Math, by Mo Fath." [x]
 "A review of Mr. Gee's Merges, by Ms. Eger." [x]
 "A review of Ow to Woot, Yorpwald's seminal book on programming tricks." [x]

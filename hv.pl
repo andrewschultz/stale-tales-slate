@@ -1,9 +1,15 @@
 #hv.pl
 #this is probably one of the odder utilities. It simply searches for if an anagram is accounted for in my tables--of nudges, anagrams, etc.
+#it dumps output to hv.txt
 #
 #usage:
 #
 #hv.pl mack macks
+#hv.pl -p mack macks
+#(to force output. It does not duplicate output)
+#
+#test for hv.txt file being clean
+#hv.pl -c
 #
 #Prints out a sample line for the table of nudges
 #
@@ -237,7 +243,7 @@ sub findHash
 sub cleanUp
 {
   my $toClean = 0;
-  open(A, "c:/writing/dict/hv.txt") || do { print "TEST RESULTS:HV.TXT wasn't read,-1,0.0\n"; return; };
+  open(A, "c:/writing/dict/hv.txt") || do { print "TEST RESULTS:HV.TXT wasn't read,grey,0.0\n"; return; };
   while ($a = <A>)
   {
     if ($a =~ /\t[0-9]/) { $toClean++; }
