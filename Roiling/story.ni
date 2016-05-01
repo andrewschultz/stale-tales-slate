@@ -2631,7 +2631,7 @@ plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that s
 muscly hulk	"He kind of stumbles with dialogue. Maybe you can make him stumble physically."
 iPrune	"[one of]'I?! Prune?!' it cries, turning red at a perceived slight[or]'I may be UNRIPE, but I'm bigger than you!' it cries. 'If I was the same size, maybe you could use words to get me to let you by. But we aren't, so I'm not.' Hmph[cycling]."
 robot	"'I have been REWIRED to let you by!'"
-snider diners	"They talk about Dr. Enis until they're red."
+snider diners	"They [one of]ignore you, asking is DERN coming[or]talk about Dr. Enis[or]mention NERD IS something unintelligible[in random order], until they're red[one of], but you sense they have a bit more to say[or], but maybe they have one more rant[stopping]."
 organised ego drains	"The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go [if player is in campsite]north[else]south[end if][if campsite is visited and shoreline is visited], especially since you walked around before[end if]."
 pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to converse.[or]'Yarrh, Harry,' they shout, and one of them makes fun of your skin tone. You feel like a spiter, hoping they get skin cancer.[in random order]"
 reed's ale	"'He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
@@ -4924,7 +4924,7 @@ when play begins (this is the define-status-line and intro text rule):
 	now left hand status line is "[lhs]";
 	now right hand status line is "[cur-score of mrlp]/[if possibles is true][poss-range][else][max-score of mrlp][end if][if Strip of Profits is visited] [bracket][number of solved regions][close bracket][end if]";
 	ital-say "this game is a sequel to Shuffling Around. It has the same mechanics. But the back story is not important.";
-	say "[wfak][line break]Yorpwald's been peaceful for a long time after your turn shuffling around. You weren't tabbed to lead the kingdom--but those in charge did a decent enough job, until along came Elvira. Nobody took her seriously at first, since it slipped that she was once branded the Necro-Crone.[wfak][line break]That was before she came out with a proposal she said you could not resist: ELVIRA'S REVISAL! You had to admit, if you didn't think it worked, then your shuffling around only went so far. But if you did, then obviously she was the right person to execute it, and so forth. Either way, the way you rescued Yorpwald was so silly and formulated, it couldn't happen again, and no bad guy would be dumb enough to leave things that way! There would be new, bold defenses against the next big challenge.[wfak][line break]Thus Elvira gained prominence, vowing to fight the scourge of stupid wordplay armed only with her charisma. 'ELVIRA'S REVISAL? I SLAVER!' became the chant. And people did. Oh, how they laughed at her plea 'UNRATIFIED? INFURIATED?' After that, pro- and anti-anagram types had to agree she was a more exciting conversationalist than you, weighing in on spoonerism elitists and the viability of anagrammig acronyms (pro and con), and implementing other 'improvements' such as Reality TV ('TTY Elvira' was a big hit) and gossip columns.[wfak][line break]Then one day she suggested the possibility you might become jealous of her popularity! And who could blame you?[wfak][line break]Her being the Necro-Crone was all in the past! She was way more exciting and social than you, and didn't people deserve a second chance? Of course they did![wfak]"
+	say "[wfak][line break]Yorpwald's been peaceful for a long time after your turn shuffling around. You weren't tabbed to lead the kingdom--but those in charge did a decent enough job, until along came Elvira. Nobody took her seriously at first, since it slipped that she was once branded the Necro-Crone.[wfak][line break]That was before she came out with a proposal she said you could not resist: ELVIRA'S REVISAL! You had to admit, if you didn't think it worked, then your shuffling around only went so far. But if you did, then obviously she was the right person to execute it, and so forth. Either way, the way you rescued Yorpwald was so silly and formulated, it couldn't happen again, and no bad guy would be dumb enough to leave things that way, for some egghead to grind things out! There would be new, bold defenses against the next big challenge.[wfak][line break]Thus Elvira gained prominence, vowing to fight the scourge of stupid wordplay armed only with her charisma. 'ELVIRA'S REVISAL? I SLAVER!' became the chant. And people did. Oh, how they laughed at her plea 'UNRATIFIED? INFURIATED?' After that, pro- and anti-anagram types had to agree she was a more exciting conversationalist than you, weighing in on spoonerism elitists and the viability of anagramming acronyms (pro and con) and whether accents count, and implementing other 'improvements' such as Reality TV ('TTY Elvira' was a big hit) and gossip columns.[wfak][line break]Then one day she suggested the possibility you might become jealous of her popularity! And who could blame you?[wfak][line break]Her being the Necro-Crone was all in the past! She was way more exciting and social than you, and didn't people deserve a second chance? Of course they did![wfak]"
 
 to say lhs:
 	if mrlp is not troves:
@@ -6735,7 +6735,7 @@ Dour Tan Rotunda	"You are definitely going places, but you aren't going places b
 Econ Cone	"That could lead to ransom manors."
 FiefCo Office	"You're at the very top. You don't really want to change that without really good motivation."
 Burnt Brunt	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
-Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge. Lucky you!"
+Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge. You couldn't leg such gulches."
 Austerer Treasure	"The treasure room has no secret passages--so you can only go back east."
 Marines Seminar	"The camo-coma fields are just obvious enough to anyone paying attention, for legal reasons. Plus, either you are awake enough to see them, or you get too tired to walk into the center. West is the only way out."
 Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]."
@@ -6759,6 +6759,7 @@ Reclusion Inclosure	"Even without the raw-bulk bulwark that way, Elvira wouldn't
 Rustic Citrus	"[unless player has compass]You try to go north by not going north, but everywhere's a border, arbored[else if swell wells are unvisited]That's not north, according to your compass[else]You can only go back north to the wells[end if]." [others]
 filed field	"[if b-w are visible and noun is west]The barriers west block you. Maybe you can get rid of them.[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east.[end if]"
 Scape Space	"The scape space is pretty sparse. No spare rooms, restrooms, anything. You can only go back up."
+Clangier Clearing	"You could get lost in whatever's not back west."
 
 to say if-fence:
 	say "[if ppf is visible]the pipe panel fence too[else]even without the fence[end if]"
@@ -8053,7 +8054,7 @@ carry out releaseing:
 	say "A Roiling Original's second release went out in January 2014. It fixed a lot of puzzles and bugs and also opened up a new region. Many areas were renamed, and many puzzles were redone. The code name was [i]Gad! Super Upgrades![r]";
 	say "A Roiling Original's third release went out in March of 2015. It included the 'director's cut' Demo Dome Mode. Puzzles were tweaked, and hinting was made more robust. The code name was Past-Due Updates.";
 	say "[line break]The current edition of A Roiling Original should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, and a list of changes from the previous release. The code name was [i]Sustinent Nuttiness[r].";
-	say "Any future update could  be called Fiddly Did Fly, because I don't expect to do much more. Tweakings Take Wings and We Task Tweaks are possibilities, but they feel kindof cheap.";
+	say "Any future update could be called Fiddly Did Fly, because I don't expect to do much more. Tweakings Take Wings and We Task Tweaks are possibilities, but they feel kindof cheap.";
 
 part teching
 
@@ -10840,7 +10841,7 @@ chapter teariest treatise
 
 book pedanto-notepad
 
-the pedanto-notepad is a warpable thing on a rich chair. understand "pad/note" and "note pad" and "pedanto/ notepad/" as pedanto-notepad.
+the pedanto-notepad is a warpable thing on a rich chair. understand "pad/note/notebook/pedanto/notepad" and "note book" and "note pad" and "pedanto notepad" as pedanto-notepad.
 
 understand "book" as pedanto-notepad when player is not in shack.
 
@@ -14556,7 +14557,18 @@ a-text of hump is "YRRR". b-text of hump is "YRRR". parse-text of hump is "u[sp]
 
 book Marines Seminar
 
-Marines Seminar is in presto. Marines Seminar is east of Grey Gyre. "The seminar must be on break now, because [if popgun is in seminar]nothing besides a popgun[else]not much[end if] remains. Camo-coma forcefields are probably every way except back west."
+Marines Seminar is in presto. Marines Seminar is east of Grey Gyre. "The seminar must be on break now, because [if popgun is in seminar]nothing besides a popgun[else]not much[end if] remains. Camo-coma forcefields are probably every way except back west, and even without them, you'd never keep your balance on the sway-ways."
+
+sway ways are plural-named scenery in Marines Seminar. "Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security."
+
+understand "yaws" and "sway-ways" as sway ways.
+
+instead of doing something with sway ways:
+	if action is entering:
+		try going east instead;
+	if action is procedural:
+		continue the action;
+	say "There's not much to be done with the sway-ways. They're there for security."
 
 after printing the locale description for seminar when seminar is unvisited:
 	say "You hear a loud voice yell 'REISMAN! Snare [']im!' / 'Mean, sir!' Uh oh. That plebe might be in trouble. But it's nice to know his name. You resolve to do what you can to give him amnesty, when you can, once Elvira's out of the way.";
@@ -23353,7 +23365,7 @@ check fliptoing when player is in clearing and player does not have tekno-token:
 		preef noun;
 		do nothing instead;
 
-Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "There's lots of noise among traders here, though most of them pay you no attention. That leaves you time to notice a list of prices and another banner saying AUCTION CAUTION. It looks like people are using all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow."
+Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "There's lots of noise among traders here, though most of them pay you no attention. That leaves you time to notice a list of prices and another banner saying AUCTION CAUTION. It looks like people are using all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow.[paragraph break]You'd probably get lost if you go any way but back east."
 
 after choosing notable locale objects when player is in clangier clearing:
 	set the locale priority of len craig to 1;
