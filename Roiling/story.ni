@@ -1066,7 +1066,9 @@ use MAX_OBJECTS of 930.
 
 use MAX_SYMBOLS of 140000.
 
-use SYMBOLS_CHUNK_SIZE of 14000
+use SYMBOLS_CHUNK_SIZE of 14000.
+
+use ALLOC_CHUNK_SIZE of 35000.
 
 use MAX_VERBSPACE of 10240.
 
@@ -1080,7 +1082,7 @@ use MAX_NUM_STATIC_STRINGS of 80000.
 
 use MAX_PROP_TABLE_SIZE of 540000.
 
-use MAX_STATIC_DATA of 700000.
+use MAX_STATIC_DATA of 750000.
 
 Use MAX_LABELS of 16000.
 
@@ -4922,7 +4924,7 @@ when play begins (this is the define-status-line and intro text rule):
 	now left hand status line is "[lhs]";
 	now right hand status line is "[cur-score of mrlp]/[if possibles is true][poss-range][else][max-score of mrlp][end if][if Strip of Profits is visited] [bracket][number of solved regions][close bracket][end if]";
 	ital-say "this game is a sequel to Shuffling Around. It has the same mechanics. But the back story is not important.";
-	say "[wfak][line break]Yorpwald's been peaceful for a long time after your turn shuffling around. You weren't tabbed to lead the kingdom--but those in charge did a decent enough job, until along came Elvira. Nobody took her seriously at first, since it slipped that she was once branded the Necro-Crone.[wfak][line break]That was before she came out with a proposal she said you could not resist: ELVIRA'S REVISAL! You had to admit, if you didn't think it worked, then your shuffling around only went so far. But if you did, then obviously she was the right person to execute it, and so forth. Either way, the way you rescued Yorpwald was so silly, it couldn't happen again, and no bad guy would be dumb enough to leave things that way! There would be new, bold defenses against the next big challenge.[wfak][line break]Thus Elvira gained prominence, vowing to fight the scourge of stupid wordplay armed only with her charisma. 'ELVIRA'S REVISAL? I SLAVER!' became the chant. And people did. Oh, how they laughed at her plea 'UNRATIFIED? INFURIATED?' After that, pro- and anti-anagram types had to agree she was a more exciting conversationalist than you, weighing in on spoonerism elitists (pro and con), and implementing other 'improvements' such as Reality TV and gossip columns.[wfak][line break]Then one day she suggested the possibility you might become jealous of her popularity! And who could blame you?[wfak][line break]Her being the Necro-Crone was all in the past! She was way more exciting and social than you, and didn't people deserve a second chance? Of course they did![wfak]"
+	say "[wfak][line break]Yorpwald's been peaceful for a long time after your turn shuffling around. You weren't tabbed to lead the kingdom--but those in charge did a decent enough job, until along came Elvira. Nobody took her seriously at first, since it slipped that she was once branded the Necro-Crone.[wfak][line break]That was before she came out with a proposal she said you could not resist: ELVIRA'S REVISAL! You had to admit, if you didn't think it worked, then your shuffling around only went so far. But if you did, then obviously she was the right person to execute it, and so forth. Either way, the way you rescued Yorpwald was so silly and formulated, it couldn't happen again, and no bad guy would be dumb enough to leave things that way! There would be new, bold defenses against the next big challenge.[wfak][line break]Thus Elvira gained prominence, vowing to fight the scourge of stupid wordplay armed only with her charisma. 'ELVIRA'S REVISAL? I SLAVER!' became the chant. And people did. Oh, how they laughed at her plea 'UNRATIFIED? INFURIATED?' After that, pro- and anti-anagram types had to agree she was a more exciting conversationalist than you, weighing in on spoonerism elitists and the viability of anagrammig acronyms (pro and con), and implementing other 'improvements' such as Reality TV ('TTY Elvira' was a big hit) and gossip columns.[wfak][line break]Then one day she suggested the possibility you might become jealous of her popularity! And who could blame you?[wfak][line break]Her being the Necro-Crone was all in the past! She was way more exciting and social than you, and didn't people deserve a second chance? Of course they did![wfak]"
 
 to say lhs:
 	if mrlp is not troves:
@@ -6174,7 +6176,7 @@ carry out towers-hinting:
 	if duck is aloof:
 		all-say "[one of]That duck [if duck is not visible]in the havens seemed[else]seems[end if] awfully lonely. Maybe you can bring it home?[or]It won't follow you. It doesn't trust your voice.[or]Someone else's voice, then, maybe?[or]Find anything that could record that?[or][if ravages is unvisited]Something's in the ravages.[else if player does not have raves saver]The raves saver you saw is useful.[else]Your raves saver.[end if][or]It's actually a tape recorder.[or]It has two buttons, RETAPE and REPEAT, and you can probably figure what does what.[or]If you RETAPE Dr. Yow when [he-she] is [if doc-y has been wordy]WORDY[else]in a certain state[end if], that gets [his-her] voice.[cycling]" instead;
 	if duck is not returned:
-		all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or]UNLOCKED.[cycling]" instead;
+		all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck? And its name, Loud Neck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or]UNLOCKED.[cycling]" instead;
 	if actionless coastlines is unvisited:
 		all-say "[one of]You need to find the Actionless Shoreline.[or]It's in the northeast of the Scope Copse map.[or][if deacons are in lalaland or pirates are in lalaland]You've already cleared who you need to[else]You've got at least another guardian to get rid of[end if].[cycling]" instead;
 	if kid is lonely:
@@ -6586,7 +6588,10 @@ Rule for clarifying the parser's choice of super purse: do nothing.
 Rule for clarifying the parser's choice of Store Z: do nothing.
 
 rule for supplying a missing second noun while unlocking:
-	now second noun is super purse.
+	if ropins are visible:
+		now second noun is ropins;
+	else:
+		now second noun is super purse.
 
 section commands to skip previously solved areas
 
@@ -6798,6 +6803,8 @@ instead of attacking:
 		say "You need to see into this blocker's nature instead[if player has dagger]--that dagger would just make things murder[end if]." instead;
 	if player has lance:
 		say "Wrong enemy for the lance." instead;
+	if noun is duck:
+		say "The poor thing doesn't have a clonk due." instead;
 	say "[randbla][line break]" instead;
 
 sign-other is a truth state that varies.
@@ -9634,7 +9641,7 @@ prompt	response	enabled
 
 table of quip texts (continued) [tqt-gu]
 quip	quiptext
-summary-quip	"'Must I sum it? It's, um...' / 'Condense it.' / 'So indecent.'[paragraph break]Gunter glosses over your successes in the forest (store F,) the sortie (store I,) and the metros (store M) and how anyone with a little dorky thinkery could've done it, but whatever. Then he gets to Elvira. How before she arrived, Yorpwald was a bit boring, but now it has more reality shows, advertisers and loud opinions than ever.[paragraph break]And how--well, she pointed out it was nice of you to save Yorpwald the first time, but a bunch of pedants looked through dictionaries to ensure there wasn't much left TO change. And how your choosing not to be A Personality was suspicious for sure. And how SHATTER-THREATS would check the anagrammability of stuff so Red Bull Burdell wouldn't happen again. Plus you never helped create cool new slang. But you, of all people, are most likely to form a polit-i-plot. He ends with a yawny anyway, mentioning how liking Elvira is what makes us different from animals, and you should totally write that in your pedanto-notepad.[paragraph break]You already sort of knew this, but Elvira seems to want you out of the way, seriously. As to Gunter, you'll probably annoy him equally by turning him out (if you want to get on with things) or failing to agree with all he has to say." [start GUNTER text]
+summary-quip	"'Must I sum it? It's, um...' / 'Condense it.' / 'So indecent.'[paragraph break]Gunter glosses over your successes in the forest (store F,) the sortie (store I,) and the metros (store M) and how anyone with a little dorky thinkery could've done it, but whatever. Not really a compelling personal story, you have to admit! Then he gets to Elvira. How before she arrived, Yorpwald was a bit boring, but now it has more reality shows, advertisers and loud opinions than ever.[paragraph break]And how--well, she pointed out it was nice of you to save Yorpwald the first time, but a bunch of pedants looked through dictionaries to ensure there wasn't much left TO change. And how your choosing not to be A Personality was suspicious for sure. And how SHATTER-THREATS would check the anagrammability of stuff so Red Bull Burdell wouldn't happen again. Plus you never helped create cool new slang. But you, of all people, are most likely to form a polit-i-plot. He ends with a yawny anyway, mentioning how liking Elvira is what makes us different from animals, and you should totally write that in your pedanto-notepad.[paragraph break]You already sort of knew this, but Elvira seems to want you out of the way, seriously. As to Gunter, you'll probably annoy him equally by turning him out (if you want to get on with things) or failing to agree with all he has to say." [start GUNTER text]
 powers-quip	"'Humble-brag, bumbler? Agh! Snake oil. So like an aloneski! You could ply a word! Change Yorpwald from untied to united! Change clover to Velcro! Noughts to a shotgun! Words, no sword! Aarg. Man. With whatsits.'"
 necro-quip	"'No rec!' Gunter goes from dynamic to [d-word] icy, flashing an off-grace frog face. A pouty payout![paragraph break]'You irk, heel. You LIKE her? I can't can it! What she did...shaded with...'[paragraph break]'No, glib goblin! The slob lobs BS, lo! Poisonin['] Opinions! That BS idea abides, biased!' Gunter glosses over Blue Frog Urbfogel, Bugler of Foulberg, and how he beat up monsters that came back anyway til he could beat her up? Talked to people who knew where hidden items like the horn-o-honor and gavel of Fogvale were. It was rigged! Now, with her dynamite, tidy name, oh, the soaring signora! Her vast harvest, her mystic chemistry-, her tact-chatter. Her lean elan's made Yorpwald go real galore--be aliver--a praised paradise--with her ReaLiv initiative for the Sunnier Unrisen Inner Us! From arsey years to so sane season! Had us voting her overnight the roving virgo then! Became a rowdy pal! Yorpwald was old, warpy, but now it's more wordy, pal! A Yapworld and Payworld! Oh, her good deeds!'"
 clown-quip	"Scathing sigh. 'Can't.'[paragraph break]Yet she's an a-lister realist. To suggest such a reform-former is a viler...it was censor-crones who tried to quiet HER, the defamed made def! You're probably upset she pointed out anyone with your powers would've figured what to do...eventually...unless they got bored. But she is a wonder. You're a downer.'"
@@ -10433,7 +10440,7 @@ after going when heights are visited and strip of profits is unvisited:
 		move closets backdrop to all visited rooms;
 	continue the action;
 
-the closest closets are a backdrop. "You can't quite see where they are going. They are weird to look inside. But they probably lead back to the [if player is in study]Highest Heights[else]dusty study[end if]."
+the closest closets are a backdrop. "You can't quite see where they are going. They are weird to look inside. St. Cole's designed them meticulously. But they probably lead back to the [if player is in study]Highest Heights[else]dusty study[end if]."
 
 understand "closet" as closets.
 
@@ -13271,7 +13278,7 @@ Dour Tan Rotunda is an innie room in Troves. "This could also be a rotund rotund
 
 chapter brochure
 
-a brochure is vanishing scenery in Dour Tan Rotunda. "[one of]'Got here? No debt to bend? Go there!'[paragraph break][or][stopping][randbla]. The page-end reads RESIDE! RESIDE! RESIDE!"
+a brochure is vanishing scenery in Dour Tan Rotunda. "[one of]'Got here? No debt to bend? Go there!'[paragraph break][or][stopping][randbla]. [one of]Obviously no un-go-ish housing here. [or][stopping]The page-end reads RESIDE! RESIDE! RESIDE!"
 
 a-text of brochure is "RYRYRY". b-text of brochure is "R???RG". parse-text of brochure is "x[sp]e[sp]s[sp]i[sp]x[sp]e". brochure is cheat-spoilable.
 
@@ -18718,6 +18725,10 @@ book Loftier Trefoil
 
 Loftier Trefoil is an innie room in Towers. "This opt-outs['] outpost is slightly classier than servant taverns. Still, you can't afford to stay, and you can't leave it with Rodney around. It has other rooms, but since this isn't an RPG, the cellar below and rooms upstairs are off-limits.".
 
+after printing the locale description for trefoil when trefoil is unvisited:
+	say "The ambience here makes you think 'Lo, I fret.'";
+	continue the action;
+
 rule for printing a locale paragraph about a warrior (called ww):
 	if ww is not Rodney:
 		The rule succeeds;
@@ -19383,14 +19394,14 @@ instead of taking the duck:
 		say "It's Dr. Yow's. No stealing." instead;
 	say "It gives you a wobbly blowby [if lone duck is friendly]despite your raves saver[otherwise]and gives a warning honk. Maybe you need to find some way to befriend it[end if]."
 
-description of lone duck is "A pretty normal duck, but it doesn't seem that interested in you. It's not running away, though. So it's probably domesticated, but a bit timid--so don't make any loud noises[one of]. It pecks at a speck you can't see[or][stopping]."
+description of lone duck is "A pretty normal duck, but it doesn't seem that interested in you. It's not running away, though. So it's probably domesticated, but a bit timid--so don't make any loud noises[one of]. It pecks at a speck you can't see[or][stopping][if ropins are reflexive].[paragraph break]You see red at how lonely it seems[end if]."
 
 the ID tag is part of the lone duck.
 
 instead of taking the ID tag:
 	say "It's for identification. It's not worth removing."
 
-description of the ID tag is "'  Lone Noel[paragraph break]Dr. Yow's Duck'"
+description of the ID tag is "'  Loud Neck (in red)[paragraph break]Dr. Yow's Duck'"
 
 the lone duck can be aloof, friendly or returned. the lone duck is aloof.
 
@@ -19508,7 +19519,8 @@ check opening ropins:
 	say "It's too sturdy, and you've no reason to believe what's behind it is worth visiting." instead;
 
 check unlocking ropins with duck:
-	say "Almost. You're going about it wrong, though. What do you want the fence to BE? Or be described AS?" instead;
+	if prison ropins is reflexed:
+		say "Almost. You're going about it wrong, though. What do you want the fence to BE? Or be described AS?" instead;
 
 before locking (this is the yow unlock rule) :
 	if noun is ropins or noun is fissure:
@@ -19536,7 +19548,7 @@ check unlocking:
 				say "The duck looks curiously at what you're trying to do. You can't pick it up, but maybe you can coax the duck with the right word..." instead;
 			if noun is fissure:
 				say "Nothing you have seems to fit in there." instead;
-			say "The prison doesn't seem like something you can unlock--well, not with a key. There's nothing that resembles a keyhole. That weird fissure, maybe..." instead;
+			say "The prison doesn't seem like something you can unlock--well, not with a key. 'Luck...done,' you mumble as you try. 'Done, luck.' You see red. There's nothing that resembles a keyhole. That weird fissure, maybe..." instead;
 	if noun is drab yoke:
 		say "It doesn't seem to have a key or anything. But whatever's inside it might." instead;
 	if noun is side door:
@@ -19547,7 +19559,7 @@ check unlocking:
 		say "[if duck is returned]You already did[else]Yes. There should be a way to open it...but you haven't found a key, or anything like it, anywhere[end if]." instead;
 	say "You don't have anything resembling a key, and that doesn't seem to need to be unlocked." instead;
 
-the fissure is part of the ropins. description is "It's rounded, more ovular than elliptical. It doesn't seem to fit any sort of keycard--and you can't see any tumblers in it. It's shaped like a mouth mid-complaint. A name by the fissure reads [one of]Doc Lunke[or]Ned Lucko[or]Ed Clunko[or]O'Klenduc[in random order]". the fissure is vanishing and auxiliary.
+the fissure is part of the ropins. description is "It's rounded, more ovular than elliptical. It doesn't seem to fit any sort of keycard--and you can't see any tumblers in it. It's shaped like a mouth mid-complaint. A name by the fissure reads [one of]Doc Lunke[or]Ned Lucko[or]Ed Clunko[or]O'Kendluc[or]Ockeldun[in random order]". the fissure is vanishing and auxiliary.
 
 a-text of fissure is "RYRRYYR". b-text of fissure is "PYPPYYR". parse-text of fissure is "f[sp]u[sp]s[sp]s[sp]i[sp]e[sp]r". fissure is parse-spoilable.
 
@@ -24053,7 +24065,7 @@ chapter Shall Halls
 
 The Shall Halls are scenery in Peek Keep. "You can't get a very good look at the shall-halls, but the design-deigns scratched at the end fill you with wonder and anticipation all the same. Really!"
 
-The Design Deigns are scenery in Peek Keep. "They're illegible from this far away. They might be illegible up close. The author is, sadly, like that."
+The Design Deigns are scenery in Peek Keep. "They're illegible from this far away. They might be illegible up close. The author is, sadly, like that. So you can't make out evidence for or against a Questionable Sequel-Obtain."
 
 chapter dometables
 
@@ -24067,7 +24079,7 @@ thiscal [x calendar] [tdm1]
 "Part four: tap furor[paragraph break]Nobody was really furious at the game, but I certainly got to work when I learned about David White's hashing. Immediately it made ARO more accessible, in theory. I had a lot to whip into shape. I tried to fix a few things per day. I was disappointed in the bigger mistakes I made, and after getting SA into a decent beta (or so I thought,) I started on ARO."
 "Part five: pave rift[paragraph break]The only problem was, once I got back to ARO, it didn't make sense. I had an idea that nouns would only feature in the intro. Oyster was just entering a house and leaving. Routes didn't let you underground. Troves--well, I didn't get the concept of what it should be in the first release, though I had a few passive verbs. I had to look through my master document of anagrams, and I found that a lot I dismissed as too simple wound up fitting just right, and testers particularly liked them. I also figured on interjections for Presto as the last area, because interjections are EXCITING. Towers--well, more on that later. I also wasn't sure what to do with OTHERS, which I had after the manor and before the strip. I eventually decided to chuck it for release 1, as it wasn't as good an introduction as I thought. The diorama was created 2 weeks before 2013 Spring Thing, and I think it was relatively successful. But I left so much to do at the last minute with exiling a region I'd worked on that I missed some big things."
 "Part six: star pix[paragraph break]I had hoped to put graphics into the game, and it turned out trickier than I thought. Thankfully Glimmr for Glulx works pretty well, but I would up losing valuable time not using the fonts correctly, due to a dumb mistake. I also failed to stop a buffer overrun in some cases, but that's another story. This was something automation could not catch. I also experimented with some pictures and colored text (Yorpwald/wordplay) but didn't get cover art. I couldn't think of anything simple."
-"Part seven: vaster pen[paragraph break]The big problem, though, was what to do with Towers. Originally they were a mess of acronyms like STANCH and CHANTS you had to guess, and you got clues of what was where, and some choices were good and some were evil, and you hacked through the Thickest Thickets. One guy, Elmer, was good, and Merle was evil, and the Coevals['] Alcoves had an elevator where you could go to the various floors and try puzzles. I liked this when OYSTER was small, but Oyster started getting bigger, and Towers became too abstruse with its actions.[paragraph break]It did have hinting, though, and this hinting eventually got repurposed more powerfully and elementally to the settler, but until then, it was a mess. I figured adjectives would be the trickiest things to look at, but a look through my master document gave a lot. At least they weren't as bad as adverbs. I couldn't do anything with them, right? Adverbs were so--powerless."
+"Part seven: vaster pen[paragraph break]The big problem, though, was what to do with Towers. Originally they were a mess of anagrams like STANCH and CHANTS you had to guess, and you got clues of what was where, and some choices were good and some were evil, and you hacked through the Thickest Thickets. One guy, Elmer, was good, and Merle was evil, and the Coevals['] Alcoves had an elevator where you could go to the various floors and try puzzles. I liked this when OYSTER was small, but Oyster started getting bigger, and Towers became too abstruse with its actions.[paragraph break]It did have hinting, though, and this hinting eventually got repurposed more powerfully and elementally to the settler, but until then, it was a mess. I figured adjectives would be the trickiest things to look at, but a look through my master document gave a lot. At least they weren't as bad as adverbs. I couldn't do anything with them, right? Adverbs were so--powerless."
 "Part eight: that gripe, gather pit, tiger path[paragraph break]And that's when it hit me--I could just GREP my anagram file for ly\b, or words that end in LY, and of course you could be powerless near your great foe. The bleary barley came first, then a way to regain your powers--conjunctions were another word that could be very powerful. Then I noticed a slew of animals which hadn't been anagrammed, mostly because I didn't see how to in SA without crowding the game. Things started to click. I even had an enemy to defeat, but she had no character or name. The necro-crone wasn't Elvira til after Spring Thing."
 "Part nine: inert nap, pain rent[paragraph break]I was able to get the game working with a walkthrough, and I submitted it okay. Greg Boettcher noted it worked, and he liked the idea, though he diplomatically noted that the walkthrough's cuing helped (translated, this meant I forgot to cue SEVERAL exits.)  I found a few easy bugs post-release and didn't see any reviews for a while. I was at least glad one liked the pedanto-notepad. But I was still frustrated. I was grateful to place second to a very entertaining game (Geoff Moore and I have since helped each other with other works,) and I knew I wanted a post-release fix, but I didn't know the scope. What probably kicked me in the butt was an email from someone named Toby Ott who thanked me for the game. He explained he was blind and liked games like this, but he'd found a few bugs. This moved me from 'I better fix my mistakes' to 'I can make this better for people who like this sort of thing.' I also saw a very good walkthrough with bug reports from David Welbourn. I was happy to note I'd fixed some of the bugs, but he provided cuing beyond the good stuff my testers found, including some help-code that hung the game. I think what they found helped him be able to find stuff without getting TOO frustrated. But again, it was nice people were PLAYING."
 "Part ten: pet rant pattern[paragraph break]I thought I'd get the first release out before IFComp 2013, but there were always new bugs to find or puzzles to touch up. I'd fix an area, then move to the next, then be sure the area was paved over smoothly--only to find several 'I saw that, right?' issues. The thing was, there was so much I needed to do, I couldn't get down to the fun aesthetic stuff in good conscience. Eventually I decided on a drop-dead release date early in 2014, but unfortunately I couldn't get to some good transcripts. I left some huge bugs in--ones my testers found--but release 2 made a lot more sense."

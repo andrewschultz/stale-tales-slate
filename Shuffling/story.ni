@@ -2480,7 +2480,7 @@ understand "hush" as hushing.
 
 carry out hushing:
 	if red bull burdell is visible:
-		say "[one of]Being the main villain, Red Bull Burdell's just too loud. Bupt perhaps you can make the Talking Villain pay for his big mouth[or]You may want to pay attention to what Red Bull Burdell says every turn, since you can't zone it out[stopping]." instead;
+		say "[one of]Being the main villain, Red Bull Burdell's just too loud. But perhaps you can make the Talking Villain pay for his big mouth[or]You may want to pay attention to what Red Bull Burdell says every turn, since you can't zone it out[stopping]." instead;
 	if talk-quiet is true:
 		say "You already can't hear random dialogue." instead;
 	else:
@@ -3580,6 +3580,8 @@ book intro
 chapter Busiest Subsite
 
 Busiest Subsite is a room in Intro. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an ominous name list tacked on by it.[paragraph break]There's a sign over an odd side passage the bustling, babbling masses seem to be ignoring."
+
+understand "salt mine" and "saltmine" as a mistake ("Oh, a new job wouldn't be THAT dreary. But what if there is something else?") when the player is in Busiest Subsite.
 
 last-loc of Intro is Busiest Subsite.
 
@@ -6219,6 +6221,8 @@ chapter Frost Forts
 
 Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]All exits seem to lead somewhere even darker[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if][one of]. You steel yourself against the sleet[or][stopping]."
 
+understand "unpile" as a mistake ("They'd be much less dangerous left in a pile. Maybe you have something that can do that!") when player is in frost forts.
+
 the ipecac icecap is amusing scenery in frost forts. "Yechier, icy, here."
 
 instead of doing something with icecap:
@@ -6884,7 +6888,7 @@ instead of doing something with the manila animal:
 instead of examining the manila animal:
 	say "Written on it: '? No, too stupid a fad. I put soot on warts.' But you've seen no soot, and you're not sure what should be behind the question mark."
 
-description of obligatory fridge is "A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything[end if]."
+description of obligatory fridge is "A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything[end if][one of]. It's probably a Def-Rig brand, though you doubt that's important[or][stopping]."
 
 fridge-open is a truth state that varies.
 
@@ -8569,7 +8573,7 @@ Elf Row's Flowers is east of Cramped Red Camp. "You're in a flower shop manned (
 Elf Row's Flowers is in Metros.
 
 check going to elf row's flowers for the first time:
-	say "'Main goal, magnolia... what low serf seeks our flowers?' you hear as you enter. 'He must do better than that primrose promiser! A rose leaves us sore! No succor in a crocus either! Players with parsley are rewarded sparely! Peony? Nopey!'";
+	say "'Main goal, magnolia... what low serf seeks for all floral?' you hear as you enter. 'He must do better than that primrose promiser! A rose leaves us sore! No succor in a crocus either! Players with parsley are rewarded sparely! Peony? Nopey!'";
 
 after choosing notable locale objects when player is in elf row's:
 	set the locale priority of the faeries to 2;
@@ -9241,6 +9245,10 @@ the dead-fad faded ad is amusing scenery in Elm Train Terminal. "It proclaims TR
 
 Pa's PSA is scenery in Elm Train Terminal. "[randbla]."
 
+after examining Pa's PSA for the first time:
+	say "'I'm learnt,' you think, after reading that.";
+	continue the action;
+
 understand "psas" as pa's psa.
 
 the fuzzy looking wall is scenery in Elm Train Terminal. "The wall looks and feels like steel wool, from top to bottom."
@@ -9885,6 +9893,9 @@ instead of doing something other than examining cutlery:
 Red Bull Burdell is a person.
 
 Red Bull Burdell wears the Thirst T-Shirt. understand "thirst/-- tshirt" and "rage/gear" as t-shirt.
+
+before asking red bull burdell about:
+	say "Realizing he's not going to help you, you mutter, ineffectually, 'Ego? Tut!'" instead;
 
 understand "rbb" as Red Bull Burdell.
 
@@ -10988,7 +10999,7 @@ gateman	shrub	"[goat-toga]"
 gateman	brush	"[goat-toga]"
 gateman	thorn	"'Sorry if it scratched you. And by you I mean your nametag. And by your nametag I mean me.'"
 gateman	getaway	"[oma-gate]"
-gateman	gadget	"'Powerful. Not as a weapon. Won't be many fights. But it tells what you can make of an object, and it won't break down from over-use. Ask about a specific button if you're interested. Not your only source of clues, either. There's also the color red.'"
+gateman	gadget	"'[one of]Powerful. Not as a weapon. Won't be many fights. But you can SCAN an object with it, and it won't break down from over-use. Use it as much or as little as you want. There's concrete problems, then there's how many hints make your quest most fun, and that's up to you[or]It can SCAN other things[stopping]. Ask about a specific button if you're interested. Not your only source of clues, either. There's also the color red.'"
 gateman	s-r	"'Could make things tougher at first, but then easier for you. Forces you into only CERTIFYing or RECTIFYing if you push it. But you can RECUSE yourself later from one of the three areas to conquer. It'll warn you, too, by flashing before it locks. Magic fields might do that, midway through an adventure or so.'[pad-sec]"
 gateman	noise bag	"'Cities gotta have noise but there's one just constantly has it. Burdell's behind it, too, claiming he couldn't have leveled up without that techno-piffle and people get used to it if they try. Actually calls it music. He's got a lieutenant to enforce it.'" [!! HACK ... NOISE BAG comes before NOISE]
 gateman	saltine	"'Miniscule, but more than mini-clues. The next item that baffles you, eat that and eXamine extra hard and it'll make sense. Oh, apologies in advance: good flavors and good magic don't mix.'"
@@ -12041,7 +12052,7 @@ carry out creditsing:
 	say "Also, thanks to Google Code and BitBucket, which contained original source control and issues, and GitHub, where I currently have a repository: [ghsite].";
 	say "Oh, hey, do you wish to see what the pen names are right now? Some people were kind enough to take them at my request.";
 	if the player consents:
-		say "John Nitchals = Wade Clarke.[line break]Gavin Myers-Leman = Melvin Rangasamy.[line break]Tomie Campf = Kevin Jackson-Mead, who used 'Pam Comfite' as an anagram of 'IFComp Meta' the year before--it's worth checking out the 2011 competition for those games alone.[paragraph break]Hulk Handsome is also a cool pseudonym, but it's one he uses lots of places."
+		say "John Nitchals = Wade Clarke.[line break]Gavin Myers-Leman = Melvin Rangasamy.[line break]Tomie Campf = Kevin Jackson-Mead, who used 'Pam Comfite' as an anagram of 'IFComp Meta' the year before--it's worth checking out the 2011 competition for those games alone.[paragraph break]Hulk Handsome is also a cool pseudonym, but it's one he uses lots of places. Oh, and I guess 'Lupe Lea' could've been an anagram for Paul Lee, but I never asked him, and I didn't have my anagram name cranker til I got serious with Roiling."
 
 part releaseing
 
@@ -12057,7 +12068,9 @@ carry out releaseing:
 	say "Shuffling Around's second release was mushier--I intended to make an open beta, but that didn't work, so we'll call it January 2013. It included Heartless Zombie's hash tables.";
 	say "Shuffling Around's third release went out in August of 2014. It was on the back burner a bit, but I refined the hash tables, added error checking, and also nailed down things like Last Lousy Points and in-game hints, both with the paper and with item descriptions. I finally fixed some blocker bugs in Store M, and I also normalized random text, adding things like map locations in Store F.";
 	say "Shuffling Around's fourth release went out in March of 2015. It was largely a maintenance release, but it simplified the introduction, put a random puzzle in Store F, and added object-based hinting.";
-	say "[line break]The current edition of Shuffling Around should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, and a list of changes from the previous release."
+	say "[line break]The current edition of Shuffling Around should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, and a list of changes from the previous release.";
+	say "The project 'super-secret' code names are A Purged Upgrade (2), Version I Revision (3), Le Redux Deluxer (4), and Few Neat New Feat (5). The last is a spoonerism, but I was running out of options.";
+
 
 part teching
 

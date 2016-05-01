@@ -3219,6 +3219,7 @@ blurb
 "'Bold mocks? Block, mods!'"
 "A brief argument over the Hax-o-Gen Hexagon: good or bad?" [x]
 "'A broom? Roomba!'"
+"'Bud bags bad bugs!'"
 "'A bug fix: big? FAUX!'"
 "'A bug not out? BANG!'"
 "'...butler I rebuilt!'"

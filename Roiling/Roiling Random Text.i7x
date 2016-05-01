@@ -1986,7 +1986,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Hempiest Epithems"
 "Henderson Nosher Den"
 "Henry Gloop Nephrology/Phrenology"
-"Hep Cats['] Patches" [[]
+"Hep Cats['] Patches" []
 "Hep? No? PHENO-PHONE!"	true []
 "Her Best Sherbet" []
 "Herbalist Hair-Belts"
@@ -12086,6 +12086,7 @@ blurb	prio
 "My Boat By Moat[r], by Tom Bay"
 "My Cap, Campy[r], by MC Yap"
 "My Card, Dry Mac[r], by Maddy McCrary" []
+"My Care: a Mercy[r], by [if player is male]Mac Rey[else]Maye McCreary[end if]"
 "My Cat is a Mystic[r], by Tim Casy"
 "My Cats['] Sty, Mac[r], by Ms. Tacy St. Macy"
 "My Clean Clay Men[r], by Len Macy & Al McNey" []
@@ -12454,6 +12455,7 @@ blurb	prio
 "Odd Fret[r], by Ted Ford"
 "Odd Game God Made[r], by Meg Doda"
 "Odd Lyla, Old Lady[r], by Doll Day & Addy Oll"
+"Odd Mice Did Come[r], by Mei Codd"
 "Odder Snug Underdogs[r], by Ed Grounds"
 "Odes to DeSoto: Sed, Too[r], by Ted Soo" []
 "Oeuvres['] Overuse[r], by Sour Eve"
@@ -14548,6 +14550,7 @@ blurb	prio
 "A Try As Astray[r], by Ty Saar"
 "Try Bein['] Tiny Reb Britney[r], by Brent Yi"
 "Try Caring, Crying Rat[r], by Caryn Trig & Tracy Ring"
+"Try Nodes So Trendy[r], by [if player is male]Ned Story[else]Rosy Dent[end if]"
 "Try On, Ron, Ty[r], by Toryn Yornt"
 "Try? Oy, Rot[r], by Tyro Tory Troy"
 "Tube So Obtuse[r], by Su Tebo" []
@@ -22515,6 +22518,7 @@ blurb
 "'Yo, louse! You lose!'"
 "'Yo, man. May...' / 'NO!'" []
 "'Yo, Nell? Lonely?' / 'NO, Lyle!'" []
+"'Yo, pawn! Pay now!'"
 "'Yo! Seen one?' / 'Yes! Eyes on...'"
 "'Yo, SOB!' / 'Me?' / 'Yes!' / BOOM!" []
 "'Yo, tend, lad. Don't delay.'" []

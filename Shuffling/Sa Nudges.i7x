@@ -437,6 +437,7 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "oflat"	259979148	resort	islet	--	--	"[if cork is visible and wings are visible]You can just use either the cork or the wings to leave to the east[else if cork is visible or wings are visible]You have a way off this island to the east, though you can make the other for fun, too[else if tree is examined or rock is examined]Mangling the word you read did nothing. Maybe go with what it's written on[else]You notice writing on the rock and swing similar to what you just said. Or tried to say[end if]. Also, no need to make anything lo-fat here."
 "tool"	305629011	resort	--	tool shed	--	"Hm, no, the whole tool shed."
 "shed"	282391463	resort	--	tool shed	--	"Hm, no, the whole tool shed."
+"ashed"	284579281	resort	--	tool shed	--	"A shed may provide shade, but you need a way up."
 "pole"	337438484	resort	--	poles	--	"Only changing one pole would still leave a vertical barrier."
 "window"	425151566	resort	--	tool shed	--	"They remain still. Maybe the toolshed itself."
 "windows"	521425532	resort	--	tool shed	--	"They remain still. Maybe the toolshed itself."
