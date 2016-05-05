@@ -3430,6 +3430,7 @@ blurb
 "'Rhetoric? Tech-riot!'"
 "'Rip not portin[']! No trip!'"
 "'Ripe claim! Empirical!'"
+"'RNG? I grin!'"
 "'Ron Isom? Moron is SO minor!'"
 "'Rover-App Approver? Rave Prop!'"
 "'Rut?' / 'Echo. Retouch our tech.'"

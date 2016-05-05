@@ -5069,6 +5069,7 @@ blurb
 "Gore Cave Coverage"
 "Gory Orgy" []
 "Got a Row, Go to War"
+"The Grand Prix: Next Hard Grip"
 "Grim Mr. GI"
 "Gringo Goring"
 "Groin-Gorin['] rig: ON" [p]
@@ -6048,6 +6049,7 @@ blurb
 "Industrial Diurnalist [if player is male]Dustin Rail[else]Trudi Nails[end if]"
 "It's Clear Articles"
 "It's EZ: Seitz Sez It"
+"It's Jen in Jest"
 "It's Len: Listen" []
 "Jed, Gus: Judges"
 "Jigsawn Jawings"
@@ -9216,6 +9218,7 @@ blurb	prio
 "Beach [']N a Bench[r], by Bec Han"
 "Beady Hot Body Heat[r], by Beth O'Day"
 "Beam Dry, My Bread[r], by Em Brady"
+"Bear Day, Bad Year[r], by Ada Brey"
 "Bear no Bane or One Bar[r], by Robena Barone" []
 "Bear to Eat, Bro[r], by [if player is male]Roberto Abate[else]Barbee Totaro[end if]"
 "Bearcat Cabaret[r], by Ace Brat Art Cabe"
@@ -9279,6 +9282,7 @@ blurb	prio
 "Big Note to Begin: I Go Bent[r], by Tobie Ng" []
 "Big Red Bridge[r], by Brigid Edberg & Di Berg"
 "Big Throne, Both Reign[r], by [if player is male]Bo Enright[else]Beth Gorin[end if]"
+"Bigotry's Gory Bits[r], by Rigby Tso"
 "Bile Libe[r], by Billi-Bee Lieb" []
 "Bile, Wit: I Blew It[r], by Tib Weil"
 "Biled, I Bled[r], by Bill Dedbie"
@@ -23903,6 +23907,7 @@ blurb
 "'True, Simon?' 'I'm not sure.'"
 "'True, son. Not sure? Rue tons.'" []
 "'A true, uh, hauteur!'"
+"'Tut, dear, rude tat!' / 'True dat! [']Tude, Art!'"
 "'Tut! Lie, to let it out?'"
 "'Tut, sis! It's stu!'"
 "'Ty! Half-fly hat!'"
@@ -24326,6 +24331,7 @@ blurb
 "Bull-Neck Bucknell"
 "Bulldozer [if player is male]Ozell Burd[else]Luz Dobler[end if]"
 "Bullish Bill Hsu"
+"Bully Coia Coulibaly"
 "Bully Lu Bly"
 "Bum Anna Baumann"
 "Bum Arn Barnum"
@@ -25458,17 +25464,21 @@ blurb
 "Lame-Pry Parmley" []
 "Lame Rebel Bellemare" []
 "Laming Gilman" []
+"Lan 'Zoo' Alonzo"
 "Land Ace Candela"
 "Landlord Droll Dan"
+"Lang 'Zoo' Gonzalo"
 "Larcenous Len Caruso" []
 "Lardy Ben Brandley" []
 "Large Don Glendora"
 "Larksome Marsolek"
+"Larson 'Zoo' Solorzano"
 "Larue 'Legs' Arguelles"
 "Lassoer Rosales" []
 "Lastin['] Lantis" []
 "Laughing Gil Huang"
 "Laurence's Ceruleans"
+"Lay 'Zoo' Lozoya"
 "Lazy Bum Luz Byam"
 "Le Bum Blume"
 "Le Weird Drew, Lie Wielder" []
@@ -25602,6 +25612,10 @@ blurb
 "Lither Hitter Hiller" []
 "Litigous Sot Luigi"
 "Litterbug [if player is male]Gilbert Tu[else]Britt Guel[end if]" []
+"Little Bo Bellotti"
+"Little Em Millette"
+"Little Eve Veillette"
+"Little Verne Netterville"
 "Lo-Grade Real Dog Geraldo" []
 "Lo-Tint Litton" []
 "Loan Shark Noah Sklar"
@@ -25826,6 +25840,7 @@ blurb
 "Maybe-Not Abe Monty" []
 "Maybe-Not Ty Beamon" []
 "Mcshea 'Sneer' Essenmacher" []
+"Me-Shy Hymes"
 "Meager Graeme" []
 "Meagrest Gamester Tam Egers"
 "Mean Al Leaman" []
@@ -25921,6 +25936,7 @@ blurb
 "Mina 'Legs' Seligman"
 "Mind-Fear Friedman" []
 "Mind-Gamer [if player is male]Dean Grimm[else]Enid Gramm[end if]"
+"Ming 'Zoo' Mozingo"
 "Missoula Sam Louis"
 "Mo-Gun No-Mug Mungo"
 "Mo['] Belly Bellomy"
@@ -26511,6 +26527,7 @@ blurb
 "Saintly [if player is female]Sly Tina[else]Tiny Sal[r]" []
 "Sallow Slow Al"
 "Sam 'Nah' Ashman" []
+"Sam 'Zoo' Somoza"
 "Samesy Massey" []
 "Sane-Munch Schuneman"
 "Sane Pro Pearson" []
@@ -27395,6 +27412,8 @@ blurb
 "Zia 'Legs' Szeliga"
 "Zoe 'Plod' Delpozo"
 "Zona 'Legs' Gonzales"
+"Zoo-Call Collazo"
+"Zoo-Land D'Alonzo"
 "Zooming Mozingo"
 
 table of prestigious bums [xxv8]
@@ -30731,6 +30750,7 @@ blurb
 "Jalopy Joy, Pal"
 "J/K Yer Jerky"
 "Jokey Stuff Just Off-Key"
+"Kept Pals['] Pep Talks"
 "The Late Athlete"
 "Late Shift: That's Life" []
 "Lazy Song, Zany Slog"

@@ -11437,7 +11437,7 @@ description of Store C is "[one of]To porn! Pronto! [or][stopping][randbla]".
 
 check examining Store C for the first time:
 	say "You look in, noticing a corset ideal for the escort sector--and that the doorbell if you're (lol) bored is in the basement--but She Bop Phobes cry 'Skeezer! Eekzers! Sicko! So ick!'[paragraph break]";
-	ital-say "store C is a no gamier mirage but a pro-sin prison--enough smut you must need Tums--so this fun fort may be a turnoff to examine again[if censor-minor is true], especially since you have profanity disabled[end if]. So, pardon da porn (hetero or the other) or call pornog no-prog. I'm not judging. I just discovered them all by intellectual curiosity and guesswork, so stop saying that. Go on. Harp. Pry.";
+	ital-say "store C is no gamier mirage but a pro-sin prison--enough smut you must need Tums--so this fun fort may be a turnoff to examine again[if censor-minor is true], especially since you have profanity disabled[end if]. So, pardon da porn (hetero or the other) or call pornog no-prog. I'm not judging. I just discovered them all by intellectual curiosity and guesswork, so stop saying that. Go on. Harp. Pry.";
 	the rule fails;
 
 chapter store d
@@ -14564,7 +14564,7 @@ sway ways are plural-named scenery in Marines Seminar. "Just looking at the yaws
 understand "yaws" and "sway-ways" as sway ways.
 
 instead of doing something with sway ways:
-	if action is entering:
+	if current action is entering:
 		try going east instead;
 	if action is procedural:
 		continue the action;
@@ -23691,7 +23691,7 @@ understand "tarred trader" and "tarred/trader" as Dr Tera when player is female.
 
 understand "retard" as a mistake ("You can picture people like [greedy-person] calling you, or people he 'provided financial services to,' that, but two wrongs don't make a right. Besides, if anything, he was being too clever.") when player is in scape space
 
-understand "red rat" as a mistake ("Dr. Tera Trader is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.") when player is in scape space and greedy-person is Dr Tera
+understand "red rat" as a mistake ("Dr. Tera Darter is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.") when player is in scape space and greedy-person is Dr Tera
 
 understand "darter" as a mistake ("Art Erd has nowhere to run[if storage box is in scape space], and you don't know if you want him taking that storage box with him[end if].") when player is in scape space and greedy-person is Art Erd
 
