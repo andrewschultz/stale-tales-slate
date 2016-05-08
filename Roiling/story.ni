@@ -1770,7 +1770,7 @@ to eval-fruits:
 	if fruits-got >= next-goal:
 		say "You may want to go see Curtis for a new reward. Or you can keep getting new fruits.";
 	else:
-		say "You need [next-goal - fruits-got] more fruit[if next-goal - fruits-got > 1]s[end if] to get something new from Curtis.";
+		say "You need [next-goal - fruits-got in words] more fruit[if next-goal - fruits-got > 1]s[end if] to get something new from Curtis.";
 
 wfak-yet is a truth state that varies.
 
@@ -2286,10 +2286,6 @@ understand the command "ask [thing] about [text]" as something new.
 understand "ask [thing] about [text]" as asking it about.
 understand the command "tell [thing] about [text]" as something new.
 understand "tell [thing] about [text]" as asking it about.
-
-[does the player mean asking generically casper: it is very likely.
-does the player mean objasking generically casper: it is very likely.
-?? we should put relative importance on a person, or last-asking]
 
 Check asking generically (This is the check for only one sensible converser rule):
 	if the number of persons enclosed by the location is one:
@@ -4945,6 +4941,12 @@ to say poss-range:
 carry out requesting the score:
 	if mrlp is nothing:
 		say "BUG: This location needs a region." instead;
+	if roved is true:
+		if player is in strip of profits:
+			say "[if store h is in strip of profits]You need to figure how to get to store H[else]Enter the hoster for the final region[end if]." instead;
+		say "You have [cur-score of mrlp] of [max-score of mrlp] total points for the post-Elvira Others region[if min-score of mrlp < max-score of mrlp], but you only need [min-score of mrlp][end if].";
+		eval-fruits;
+		the rule succeeds;
 	if mrlp is Demo Dome:
 		say "You don't need a score in the Demo Dome. You just need to look around.";
 		left-to-see instead;
@@ -5028,7 +5030,7 @@ carry out possing:
 	otherwise:
 		now min-alert is true;
 		now possibles is true;
-	say "Switching [if possibles is true]on[else]off[end if] minimum/maximum available point notification. ";
+	say "Switching [if possibles is true]on[else]off[end if] minimum/maximum available point notification in the header. ";
 	if min-alert is false:
 		ital-say "this is a quasi-spoiler of sorts, since watching the maximum possible score drop may mean you have missed an easter egg. Or watching the minimum score increase may mean you found one.";
 	else:
@@ -16328,7 +16330,6 @@ every turn when mrlp is oyster:
 	d "Current hint item = [oyster-item].";
 
 carry out spilling:
-	let oi be oyster-item;
 	if noun is not pills:
 		say "You can't spill that. Or you can, but it won't help you or distract your opponent." instead;
 	if jar-empty is true:
@@ -16340,8 +16341,19 @@ carry out spilling:
 		if the player's command does not include "pills":
 			say "You can't spill the jar--just what's in it.";
 	now cheated-guy is nothing;
+	if player is in Den Loft:
+		if d2 is in den loft:
+			say "No--this one, you shouldn't need pills for. DERAIL was the hard one. You just need to dial again..." instead;
+	if player is in Achers' Arches:
+		if a-s is prefigured:
+			say "You remember that SEARCHing might've worked better with the sardine gone." instead;
+	if location of haunter is location of player:
+		if haunter is reflexed:
+			say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]." instead;
 	if player is in End Den:
 		say "Unfortunately, the pills won't roll off and lead the way to where you need to go. You need some sort of map[if player has gleaner and gleaner is reflexed]. One might be in your inventory, and you just need to examine it[end if]." instead;
+	let oi be oyster-item;
+	d "Spilling [oi].";
 	if pill-warned is false and scams is false:
 		say "[if anger range is not visited]You briefly wonder if the pill jar might be better saved for later[else]You have a brief vision of Elvira trolling '[he-she-c] needed DRUGS!' which is silly, but yeah[end if]. Release the pills anyway?";
 		now pill-warned is true;
@@ -16404,140 +16416,6 @@ carry out spilling:
 	else:
 		say "You should be able to spill the pills to work on the [oi] but you can't. This is a BUG and I need to put an entry in a table for the [oi].";
 	the rule succeeds;
-[	if player is in Lean Lane:
-		say
-		reg-inc;
-		guy-cheat eeks;
-		now player is in sand home;
-		bowl-to-home;
-		now eeks are in lalaland instead;
-	if aunt tuna is visible and trout is reflexive:
-		say ;
-		reg-inc;
-		move player to anger range instead;
-	if player is in lapsin' plains:
-		if traced is false:
-			guy-cheat crate;
-			now traced is true;
-			say ;
-			reg-inc;
-			check-rude-door instead;
-		if reacted is false:
-			guy-cheat rude door;
-			now reacted is true;
-			say ;
-			reg-inc;
-			check-rude-door instead;
-		if knob is reflexive:
-			guy-cheat knob;
-			now knob is reflexed;
-			say ;
-			reg-inc;
-			check-rude-door instead;
-		if skis are in plains:
-			guy-cheat skis;
-			now skis are in lalaland;
-			say
-			reg-inc;
-			check-rude-door instead;
-	if clam is visible: [?? which point is dropped?]
-		say ;
-		reg-inc;
-		guy-cheat clam;
-		now clam is in lalaland instead;
-	if urn is visible:
-		say ;
-		reg-inc;
-		guy-cheat urn;
-		now urn is in lalaland instead;
-	if player is in shore:
-		reg-inc;
-		say "The pills drop in the sand and fizz crazily. The mud bubbling up creates a signal, and one of the boats picks you up and dumps you on the other shore.";
-		if oars are not part of raft:
-			poss-d;
-		guy-cheat boats;
-		move player to anger range instead;
-	if carps are visible:
-		say ;
-		reg-inc;
-		guy-cheat carps;
-		try fliptoing carps instead;
-	if lance is visible and lance is not cleaned:
-		say ;
-		guy-cheat lance;
-		now lance is cleaned;
-		now player has lance;
-		reg-inc instead;
-	if player is in uaah:
-		if tubs are in uaah:
-			say ;
-			reg-inc;
-			now tubs are in lalaland;
-			now waste is in uaah;
-			now player has prod;
-			guy-cheat tubs;
-			now heaps are in uaah instead;
-		if player has prod:
-			say ;
-			now player has digger;
-			now prod is in lalaland;
-			guy-cheat prod;
-			reg-inc instead;
-		if waste is in uaah and waste is reflexive:
-			now waste is reflexed;
-			guy-cheat waste;
-			say ;
-			now lance is in uaah;
-			reg-inc;
-			now waste is in lalaland instead;
-	if ant is visible:
-		say ;
-		reg-inc;
-		guy-cheat ant;
-		now lance is in lalaland;
-		move player to Den Loft instead;
-	if player is in Achers' Arches:
-		if sardine is in Achers' Arches:
-			say  instead;
-		if a-s is prefigured:
-			say "You remember that SEARCHing might've worked better with the sardine gone." instead;
-
-		pearl-check;
-		now a-s is reflexed;
-		reg-inc;
-		guy-cheat a-s instead;
-	if location of haunter is location of player:
-		if haunter is reflexed:
-			say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]." instead;
-		reg-inc;
-		guy-cheat o-t;
-		now o-t is in lalaland;
-		now a-p is in hedron instead;
-	if player is in collapsed:
-		if player has ruby:
-			now thin hint is in collapsed;
-			now ruby is in lalaland;
-			guy-cheat ruby;
-			reg-inc instead;
-	if player is in Den Loft:
-		if d2 is in den loft:
-			say "No--this one, you shouldn't need pills for. DERAIL was the hard one. You just need to dial again..." instead;
-		if yapper is visible:
-			say ;
-			guy-cheat yapper;
-			now yapper is in lalaland;
-			reg-inc instead;
-		say ;
-		if dialer is reflexive:
-			now doublecheat is true;
-		guy-cheat dialer;
-		increment poss-score of oyster; [so not 2 ++scores]
-		increment cur-score of oyster;
-		now dialer is reflexed;
-		now d2 is in tenfold;
-		now lev-pull is true instead;
-	say "Those pills wouldn't create enough of a mess here.";
-	the rule succeeds.]
 
 chapter produceredocuping
 
@@ -19068,7 +18946,7 @@ understand "tape recorder" and "tape/recorder" as raves saver.
 check opening raves saver:
 	say "It's cheap and rickety enough, the tapes are stuck in like paste. It has no open button or mechanism." instead;
 
-a-text of saver is "RYYRRO". b-text of saver is "???RR?". parse-text of replay player is "?[sp]?[sp]?[sp]l[sp]a[sp]?".
+a-text of saver is "RYYRRO". b-text of saver is "???RR?". parse-text of saver is "?[sp]?[sp]?[sp]l[sp]a[sp]?".
 
 description of raves saver is "[if saver is reflexive]It has an inscription REPLAY PLAYER, which is a violation of copyright law--those have video--but nobody's going to sue or care. But[else]It's slightly more polished now you made it pearly, and[end if] it also has a REPEAT button and a RETAPE button[one of].[paragraph break]It doesn't even have a socket for Hears-Share earphones.[stopping]"
 
@@ -22141,7 +22019,7 @@ instead of taking inventory:
 			say "Boy! this is a seedy area. You're worried you might get robbed of what you have.";
 		if purse-stolen is true:
 			say "All you have is [i]Pa, Egg, Pea[r] and your pedanto-notepad and your settler[if player has fretful truffle] and that fretful truffle[end if]. You still need to get your super purse back." instead;
-	if number of things enclosed by the player is 0:
+	if number of things carried by the player is 0:
 		say "Just your powers, at the moment. Nothing tangible." instead;
 	now all things carried by the player are marked for listing;
 	if player has lamp and player has super purse:
@@ -22164,7 +22042,7 @@ instead of taking inventory:
 	if mrlp is otters and inhib is true:
 		say "You also DON'T have your full powers. You'll need to fix that before hitting the bulwark to the west.";
 	if player has compass:
-		say "You also have a compass to tell direction.";
+		say "[line break]You also have a compass to tell direction.";
 
 silence-tally is a number that varies.
 
@@ -22852,6 +22730,8 @@ after examining abandoned drinks stand (this is the three fruits in drinks stand
 		now magenta rope is in Rustic Citrus;
 		now rampage note is in Rustic Citrus;
 		now mopeage rant is in Rustic Citrus;
+	if videotape collection is off-stage:
+		now videotape collection is in Rustic Citrus;
 	continue the action;
 
 chapter blueberries
@@ -22889,7 +22769,7 @@ chapter persimmon
 
 the persimmon is a fruit.
 
-the videotape collection is scenery in Rustic Citrus. description is "A bunch of weird films in this collection. One title, in red, is [one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order]."
+the videotape collection is scenery. description is "A bunch of weird films in this collection. One title, in red, is [one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order]."
 
 a-text of videotape is "RYRRYRRYR". b-text of videotape is "RYRRYRRYR". parse-text is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]n".
 
@@ -22949,13 +22829,13 @@ to say what-clear:
 	else if sorer bogey is not in swell wells:
 		say "The advertisement for ScoutCon is ion stucco and in red";
 	else:
-		say "Two prominent ones in red: 'Ye borers, go!' and ScoutCon on stucco."
+		say "Two prominent ones in red: 'Ye borers, go!' and ScoutCon on stucco"
 
 the stucco is scenery in swell wells. "There's an advertisement for ScoutCon, whatever that is, in red, on stucco, on the side of one of the wells.".
 
 a-text of stucco is "RYRYRYRR". b-text of stucco is "RYRYRYRR". parse-text of stucco is "x[sp]-[sp]x[sp]o[sp]x[sp]-[sp]x[sp]x".
 
-the coconuts are a plural-named fruit in swell wells.
+the coconuts are a plural-named fruit.
 
 after printing the locale description for swell wells when swell wells is unvisited:
 	say "And what's this? The wells cough up an unexpected wish-coin. It looks like...why, yes it is! A miser ruble!";
@@ -22982,7 +22862,7 @@ the tangerines are plural-named fruit. "You can't tell where they're from. If yo
 
 chapter mulberries
 
-the miser ruble is a thing in Swell Wells. "The miser ruble the swell wells coughed up lies here.". description of miser ruble is "It's an odd purplish-blue, even more oddly engraved with BEMIRE! SLUR! in red."
+the miser ruble is a thing. "The miser ruble the swell wells coughed up lies here.". description of miser ruble is "It's an odd purplish-blue, even more oddly engraved with BEMIRE! SLUR! in red."
 
 the mulberries are a plural-named fruit.
 
@@ -23130,22 +23010,20 @@ does the player mean doing something with icon when icon is off-stage: it is lik
 
 the coin is a thing. description is "The coin really looks more omen-y than money. Perhaps its value is only symbolic, and it could help you with the stuff money can't buy. There's a singed design on it, which is signed."
 
-[giving it to: coin, icon, coins, icons??]
-
 a thing can be final-puz. a thing is usually not final-puz.
 
-s-i is final-puz. s-c is final-puz. coin is final-puz. coins are final-puz. icon is final-puz. icons are final-puz.
+s-i is final-puz. s-c is final-puz. coin is final-puz. coins are final-puz. icon is final-puz. icons are final-puz. tekno-token is final-puz.
 
 check giving a final-puz thing to when mrlp is others:
 	if second noun is storage:
 		try inserting noun into second noun instead;
 	if second noun is curtis:
-		say "No, it's all yours[unless noun is coin or noun is coins], especially now that you've changed things a bit[end if]!" instead;
+		say "No, [if second noun is plural-named]they're[else]it's[end if] all yours[unless noun is coin or noun is coins], especially now that you've changed things a bit[end if]!" instead;
 	if second noun is len craig:
-		say "Not Len's sort of currency." instead;
+		say "[if noun is tekno-token]Maybe decide what to buy, or how[else]Not Len's sort of currency[end if]." instead;
 	if second noun is Red Rat Art Erd or second noun is Dr Tera Darter:
 		say "[second noun] is probably interested in something much more obviously valuable." instead;
-	say "No, that's yours. A present from Curtis[unless noun is coin or noun is coins], well, in its old form[end if]. But what to do next with it?" instead;
+	say "No, that's yours. Payment from Curtis[unless noun is coin or noun is coins], well, in its old form[end if]. But what to do next with it?" instead;
 
 a-text of coin is "YRYR". b-text of coin is "YRYP". parse-text of coin is "i[sp]c[sp]o[sp]n". coin is cheat-spoilable.
 
@@ -23365,7 +23243,7 @@ check fliptoing when player is in clearing and player does not have tekno-token:
 		preef noun;
 		do nothing instead;
 
-Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "There's lots of noise among traders here, though most of them pay you no attention. That leaves you time to notice a list of prices and another banner saying AUCTION CAUTION. It looks like people are using all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow.[paragraph break]You'd probably get lost if you go any way but back east."
+Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "There's lots of noise among traders here, though most of them pay you no attention. That leaves you time to notice a list of prices and another banner saying AUCTION CAUTION. It looks like people are using all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow.[paragraph break]You'd probably get lost if you go any way but back west."
 
 after choosing notable locale objects when player is in clangier clearing:
 	set the locale priority of len craig to 1;
