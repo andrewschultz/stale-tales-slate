@@ -8912,7 +8912,7 @@ to say what-about-ed:
 	if Ed Yerg is reflexed:
 		say "Ed Yerg comes out to see the results of your magicking. 'Did OK, kiddo!' he yells, shaking your hand";
 	else if serpent is reflexive:
-		say "The serpent slinks away into the den to the west, to avoid the rumbling";
+		say "The serpent slinks away behind the den to the west, to avoid the rumbling";
 	else:
 		say "From inside the den to the west, you hear some bozo yelling about property values. Good for him, you guess"
 
@@ -20180,7 +20180,7 @@ check going in Mislit Limits:
 
 check going west in mislit limits:
 	if pester'n serpent is in limits:
-		say "Not with that serpent pester'n." instead;
+		say "'Step near a serpent... you muse, then 'TRAP SEEN.'" instead;
 
 section serpent
 

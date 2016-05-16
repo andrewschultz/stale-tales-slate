@@ -2829,6 +2829,7 @@ blurb
 "'Control us, loco runts? Lout? Scorn!'"
 "'Corporate Rat Cooper: react, poor!'"
 "'Crass law: class war!'"
+"'The crime: hermetic rich meet!'"
 "'Crucify Fyrucci!'"
 "'CrudeOil Co ur-lied!'"
 "'Cubicles-R-Crucibles!'"
@@ -3478,6 +3479,7 @@ blurb
 "'Thick profs? PITCHFORKS!'"
 "'Think-rugs stink. Urgh!'"
 "'Threading hit danger? Read THING.'"
+"Three cups! Uh, respect super tech!"
 "Thunder, the durn nerd hut."
 "'To us be obtuse? Bust! E-o!'"
 "'To use IQ? Quite so!'" []
