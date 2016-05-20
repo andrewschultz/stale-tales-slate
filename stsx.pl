@@ -32,7 +32,13 @@ while ($a = <A>)
 {
   if ($a =~ /^\\ro3/) { $inUpdates = 1; next; }
   $thisLine++;
-  if ($a =~ /^table of/) { chomp($a); $currentTable = $a; $currentTable =~ s/ *\[[^\]]*\]$//; print "Current table now $currentTable.\n"; next; }
+  if ($a =~ /^table of/)
+  {
+    chomp($a);
+    $currentTable = $a; $currentTable =~ s/ *\[[^\]]*\]$//;
+	#print "Current table now $currentTable.\n";
+	next;
+  }
   if ($a =~ /=shuffling/i) { $stsGame = "Shuffling Around"; }
   if ($currentTable)
   {
