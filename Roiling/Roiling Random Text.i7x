@@ -304,6 +304,7 @@ blurb
 
 table of death messages [xxg2]
 blurb
+"Ahh, WORD. How hard"
 "[d-word-u]! (You MAY Undo.)"
 "Aground? Arg. Undo!" []
 "Ah, dim! I'm had!" []
@@ -561,6 +562,7 @@ blurb
 
 table of help companies [xxg4]
 blurb
+"The Plot-Help Tot."
 "Acing-the-Cheating Hint Cage."
 "Ah, DON'T I Do a Hint."
 "Aleph-A Help!"
@@ -838,6 +840,7 @@ blurb
 
 table of singing rejects [xxg7]
 blurb
+"Desultory yodels-rut."
 "Bad voice vibe, o cad."
 "Be tonal? Not able."
 "Blottier libretto."
@@ -870,6 +873,7 @@ blurb
 
 table of sleep rejects [xxg8]
 blurb
+"'Tired now' won't ride!"
 "Sleep, man? Pense mal."
 "To yawns? Say, won't! Stay, now!"
 "[if player is male]Senor Snore[else]Senora, a snore[end if]!" []
@@ -904,6 +908,9 @@ blurb
 
 table of undo allows [xxg9]
 blurb
+"Fault now? Not awful."
+"And touche! Cheat, undo."
+"Last move? Slam! Veto!"
 "'Action over? Revocation!'"
 "'Adjourn? Jar! Undo!'"
 "'Anyhow, it's THIS way, no?'"
@@ -1232,6 +1239,12 @@ book manor
 
 table of ad slogans [xxm1]
 blurb	blare	[random sad ads: the blare field designates whether you have an exclamation point at the end]
+"Touhy Youth"
+"Literary Ale: Try It!"	true
+"Devine's Endives"
+"Asprey's Spayers"
+"Sapp Apps"
+"Selfridge Dregs-Life"
 "Gord Fu's Drugs of Dog Furs"
 "Marsden Damners"
 "Carlsbad Lab Cards"
@@ -3736,6 +3749,7 @@ blurb
 
 table of biopics [xxm3]
 blurb	fave
+"Love-in? No, Evil[r], by Vonnie Levivo"	false
 "[if player is male]One Man, No Name[else]I, Hereon, Heroine[end if][r], by [if player is male]Ann Moe[else]Irene Ho[end if]"	true
 "All Those Words: Shallow Doters, Worthless Load[r], by Stowell Rhoads"	false
 "Another Try, Hero-Tyrant[r], by Roy Harnett & [if player is male]Tony Erhart[else]Thora Tyner[end if]"	false
@@ -3792,6 +3806,8 @@ blurb	fave
 
 table of comedians [xxm4]
 blurb
+"Anarchy Ray Chan"
+"Gonged Ned Ogg"
 "Absurdist Trudi Bass" []
 "Acerbic Ric Cabe"
 "Actor Ann Cantoran"
@@ -4886,6 +4902,7 @@ blurb
 
 table of lame computer games [xxm6]
 blurb
+"Go Mental to Mangle"
 "Ace For a Force" []
 "Ace Vs. Caves"
 "Ad-Rid Air Raid" []
@@ -5483,6 +5500,10 @@ blurb
 
 table of lame movies [xxm7]
 blurb
+"No Fan of Ann"
+"Pip the Hip Pet"
+"Pip's the Hippest"
+"Is Prom So Prim"
 "Ms. Kelli Kills [']Em"
 "[if player is male]Burt Oakes[else]Tresa Kubo[end if] Breaks Out"
 "[n-t]'s Pets: Past Tense"
@@ -5880,6 +5901,8 @@ blurb
 
 table of lame talk shows [xxm8]
 blurb
+"Hogarth's Got Harsh"
+"Elston Lets On"
 "[if player is male]Elmo Stark[else]Selma Tork[end if] Talks More"
 "[if player is male]Gene Vest[else]Eve Tseng[end if] Gets Even"
 "[if player is male]Mr. Easy-Smeary[else]Smeary Ms. Raye[end if]" []
@@ -6691,6 +6714,9 @@ blurb
 
 table of lousy hit songs [xxm01]
 blurb
+"Our Styled Sultry Ode" []
+"Desultory Sultry Ode"
+"Exert it: My Extremity"
 "[d-word-u], Be Bad Men"
 "A-OK We Awoke" []
 "Abby, Baby"
@@ -8837,6 +8863,30 @@ this-book is a number that varies. this-book is usually 0.
 
 table of random books [xxm4] [tob]
 blurb	prio
+"Mom, Deny My Demon[r], by Don Emmy"
+"He Carts the Scar[r], by Tre Asch"
+"Eat Fast at Feast[r], by Asa Fett"
+"I, Dapper, Prepaid[r], by Pip Ader"
+"And Flow, Wan Fold[r], by [if player is male]Dan Wolf[else]Flo Dawn[end if]"
+"Stay, Bot So Batty[r], by Sy Batto"
+"Flashy Shy Alf[r], by Ash Fly"
+"Sit, Clerk-Stickler[r], by Rick Elst"
+"Viva Addi[r], by Iva David"
+"Our Set So True[r], by Sue Ort"
+"Or a Glum Glamour[r], by Lu Margo"
+"A Plucky Luck-Pay[r], by Kay Culp & Lucy Pak"
+"My Nickel McKinley[r], by Kim Clyne"
+"Heavy Rains Year, Vanish[r], by Avisa Henry"
+"A Swollen Nose Wall[r], by Leon Laws"
+"Lone Dismal Medallions[r], by [if player is male]Damon Lisla[else]Dione Small[end if]"
+"Guns Sung, Nun Suggs[r], by Guss Gunn"
+"Hellacious Allies, Ouch[r], by [if player is male]Lucio Shale[else]Luisa Loche[end if]"
+"Yo, Stunt So Nutty[r], by Tony Tsu"
+"Very Safe Fay Verse[r], by Eve Fryas"
+"Toy Cars at Cory's[r], by [if player is male]Ty Oscar[else]Cary Tso[end if]"
+"No Friend of Dinner[r], by Dino Fern"
+"Calgary's Scary Gal[r], by Rags Clay"
+"Round Malta's Laundromats[r], by [if player is male]Amos Rutland[else]Maud Ralston[end if]"
 "Bait Luck's Black Suit[r], by Basil Tuck"
 "Unchained, Chide a Nun[r], by [if player is male]Duane Chin[else]Nina Hudec[end if]"
 "He Mutes the Muse[r], by Su Theme"
@@ -15437,6 +15487,9 @@ blurb
 
 table of sicko movies [xxs3]
 blurb
+"I'd Ogle Goldie!"
+"Mega-Sin Enigmas."
+"This Load is Hot, Lad!"
 "Uniforms Firm on Us!"
 "Really Odd Older Lady."
 "[a-word-u]-Hump Smash-Up."
@@ -17146,6 +17199,7 @@ blurb
 
 table of horbert musings [xxu2]
 blurb
+"life's short? Selfish rot."
 "ah, yon, Mr. A hymn or harmony." []
 "Aid Ida, Adi..."
 "and sellin['], all sinned."
@@ -17773,6 +17827,9 @@ blurb
 
 table of missing deli foods [xxu4]
 blurb
+"Li[']l fest fillets"
+"Belch-chleb"
+"Zoo-rich chorizo"
 "Appealing lagniappe"
 "Apposed peapods"
 "Artichoke, heck, a trio"
@@ -19428,6 +19485,7 @@ book troves
 
 table of checklist items [xxv1]
 blurb
+"Sack Tut Attucks."
 "Firstly, rift, sly. Stir. Fly."
 "Accost ScatCo."
 "Acy CYA."
@@ -21275,6 +21333,7 @@ blurb
 
 table of gritty dialogue [xxv4]
 blurb
+"'Rote slam. More salt!'"
 "'*Sob* gin!' / 'Gibson!'" []
 "'[d-word-u]! Elf Feldman fled, man.'"
 "'A-ok, mob? KABOOM!'"
@@ -22754,6 +22813,11 @@ blurb
 
 table of posh dialogue [xxv6]
 blurb
+"'Meek clap. Keep calm.'"
+"'Who's in?' / 'Wish on!'"
+"'Open house? Hope on, Sue.'you will"
+"'Ye dull one. You'll need...'"
+"'Bagel chips? Bilge, chaps!'"
 "'So, cured, Doc?' / 'Sure.'"
 "'Spumoni, son?' / 'I'm up!'"
 "'[d-t]? A Toad!'"
@@ -24149,6 +24213,14 @@ blurb
 
 table of posse bosses [xxv7]
 blurb
+"Now-Lethal Lowenthal"
+"Relenting-Nil Regent [if player is male]Len Tigner[else]Teri Glenn[end if]"
+"'Triggers' Greg Rist"
+"Bone-Dry Ren Boyd"
+"Yesnik Kinsey"
+"Sink-Ye Kinsey"
+"Egg-Farts Ferg Gast"
+"Gropin['] Pig Ron"
 "Mustier Sturmie"
 "Colonel Lon Cole"
 "Heckling Hick Glen"
@@ -30102,6 +30174,12 @@ blurb
 
 table of self-help bestsellers [xxv0]
 blurb
+"Yup, Now a Way on Up[r], by Wu-Yan Po"
+"Inkblots Bilk Tons[r], by Link Bost"
+"He Lacks Hackles[r], by Sal Heck"
+"Bleh, Toss the Slobs[r], by Bess Holt"
+"Yay, Buds, Busy Day[r], by Dy Sauby"
+"The Way Is Easy With Wits, Yeah[r], by Isa Whyte & Tisha Yew"
 "Alimony: Any Limo[r], by Loni May"
 "Hun, I Can Unchain[r], by [if player is male]Ian Chun[else]Anni Chu[end if]"
 "Pivotal Vital Op[r], by Val Poti"
@@ -30608,6 +30686,8 @@ blurb
 
 table of songs you could write [xxvx]
 blurb
+"Fine Bog of Being"
+"Deck Full, Luck Fled"
 "Might Be Big, Them"
 "[if player is male]She,[else]He's[end if] My Base: Shames, Bye"
 "A-Holes So Hale"
@@ -31321,6 +31401,7 @@ book presto
 
 table of bedding brands [xxp1]
 blurb
+"Panache-Each-Nap"
 "[if player is male]Mr. Blue's[else]Ms. Ruble[end if] Slumber"
 "Artiste Mr. A's Air Mattress"
 "Bastien's Bassinet"
@@ -32329,6 +32410,11 @@ blurb
 
 table of research topics [xxp5]
 blurb
+"Kaschel hackles"
+"ions-races scenarios"
+"Baldwin's Wind Labs"
+"Golic's logics"
+"Doc Poe's opcodes"
 "shlumpy phylums"
 "Halpern's Shrapnel"
 "[if player is male]Craig Abel[else]Alica Berg[end if][']s Algebraics"
@@ -34575,6 +34661,7 @@ blurb
 
 table of theses [xxy6]
 blurb
+"Hell's rad! Hard sell!"
 "Our 'D': DOUR!"
 "Alert, clown: we can troll!"
 "All We Do: ALLOWED!" []
@@ -34876,6 +34963,8 @@ book towers
 
 table of gizmo parts [xxw1]
 blurb
+"gypsum spy mug"
+"spares-passer"
 "a-parted data pre-adapter"
 "all-portion pollinator"
 "anti-slam talisman"
@@ -35045,6 +35134,9 @@ book otters
 
 table of animal friends [xxt1]
 blurb
+"sad sourin['] dinosaurs"
+"a hymn-mynah"
+"a snipe, sepian"
 "acid-snarl cardinals"
 "an agreeable bear-eagle"
 "an ambient mine-bat"

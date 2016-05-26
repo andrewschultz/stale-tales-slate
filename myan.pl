@@ -8,8 +8,13 @@
 use strict;
 use warnings;
 
+my $anno = "c:/writing/dict/anagram-notes.txt";
+
 use Time::HiRes qw(time);
 use POSIX qw(strftime);
+
+my $toFile = 1;
+my $checkAfter = 1;
 
 #global initializations
 my @isWord;
@@ -22,7 +27,6 @@ my $count = 0;
 my $printTimer = 1;
 my $hashy;
 my $calls;
-my $toFile = 0;
 my $curMax;
 
 while ($count <= $#ARGV)
@@ -31,9 +35,12 @@ while ($count <= $#ARGV)
   $b = $ARGV[$count+1];
   for ($a)
   {
+  /^-t$/ && do { noteCheck(); exit; };
   /^-ma$/ && do { $maxAn = $b; $count += 2; next; };
-  /^-p$/ && do { $printTimer = 1; $count++; next; };
+  /^-nc$/ && do { $checkAfter = 0; $count++; next; };
+  /^-c$/ && do { $checkAfter = 1; $count++; next; };
   /^-np$/ && do { $printTimer = 0; $count++; next; };
+  /^-p$/ && do { $printTimer = 1; $count++; next; };
   /^-f$/ && do { $toFile = 1; $count++; next; };
   /^-r$/ && do { my @mma = split(/,/, $b); $minWords = $mma[0]; $maxWords = $mma[1]; $count++; next; };
    /^-m$/ && do { $maxWords = $b; $count += 2; next; };
@@ -58,8 +65,23 @@ anfind($myBase);
 }
 else
 {
-my @wordAry = split(/,/, $cmdToAn);
-for my $inList (@wordAry) { $myBase = $inList; anfind($inList); }
+  my @wordAry = split(/,/, $cmdToAn);
+  for my $inList (@wordAry)
+  {
+    $myBase = $inList; anfind($inList);
+  }
+}
+
+sub noteCheck
+{
+  open(A, "$anno");
+  my $toGet = 0;
+  while ($a = <A>)
+  {
+  if ($a =~ /^=/) { $toGet++; }
+  }
+  close(A);
+  print "TEST RESULTS:10,$toGet,0,<a href=\"$anno\">results</a>\n";
 }
 
 sub anfind
@@ -70,7 +92,7 @@ my $hashy = 0;
 
 print "Trying $_[0]...$myBase\n";
 
-open(C, ">>c:/writing/dict/anagram-notes.txt");
+open(C, ">>$anno");
 
 while ($a = <A>)
 {
@@ -94,10 +116,19 @@ while ($curMax <= $maxWords)
 {
 my $prev = time();
 findAna($myBase, "", "", 0);
-if ($toFile) { print C "\n=================$myBase\n"; }
+
 $af = time() - $prev;
 if ($printTimer) { printf("\n$curMax Took %.3f seconds.\n", $af); }
 $curMax++;
+
+if ($toFile)
+  {
+    if ($checkAfter) { my $searchIt = `anin.pl $myBase`;
+	print C "\n$searchIt"; } else { print "\n"; }
+    print C "\n=================$myBase\n";
+  }
+
+close(C);
 }
 
 if ($printTimer) { $af = time() - $b4; printf("\nTook %.3f seconds.\n", $af); }
