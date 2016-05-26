@@ -1239,6 +1239,7 @@ book manor
 
 table of ad slogans [xxm1]
 blurb	blare	[random sad ads: the blare field designates whether you have an exclamation point at the end]
+"Liv Chee's Vehicles"
 "Touhy Youth"
 "Literary Ale: Try It!"	true
 "Devine's Endives"
@@ -4902,6 +4903,7 @@ blurb
 
 table of lame computer games [xxm6]
 blurb
+"Duels Led Us"
 "Go Mental to Mangle"
 "Ace For a Force" []
 "Ace Vs. Caves"
@@ -5901,6 +5903,7 @@ blurb
 
 table of lame talk shows [xxm8]
 blurb
+"Rooney's Yes or No"
 "Hogarth's Got Harsh"
 "Elston Lets On"
 "[if player is male]Elmo Stark[else]Selma Tork[end if] Talks More"
@@ -6714,6 +6717,7 @@ blurb
 
 table of lousy hit songs [xxm01]
 blurb
+"This Wolf Howl Fits"
 "Our Styled Sultry Ode" []
 "Desultory Sultry Ode"
 "Exert it: My Extremity"
@@ -8863,6 +8867,20 @@ this-book is a number that varies. this-book is usually 0.
 
 table of random books [xxm4] [tob]
 blurb	prio
+"This Golem Might Lose[r], by Mose Light"
+"Aw, Dish I'd Wash[r], by [if player is male]Sid Hwa[else]Di Shaw[end if]"
+"Bush-Dad Buddhas[r], by Bud Dash"
+"Last Day at Lady's[r], by Ty Aldas"
+"Just a Low Lout's Jaw[r], by Lu Wojtas"
+"Mac, Rub a Crumb-Bum Car[r], by Cam Bur"
+"Kit's New Wet Skin[r], by Ken Wist"
+"Rend, Nerd[r], by Renn Redd"
+"Any Fresh Hay-Ferns[r], by Shane Fry"
+"Open This Shot Pine[r], by Seth Pino"
+"Oak, Crush Our Shack[r], by Rosa Huck"
+"To Cares, Act Sore[r], by Rosette Carasco"
+"His Finer Finisher[r], by Erin Fish"
+"Right Now's This Wrong[r], by [if player is male]Wing Horst[else]Trish Wong[end if]"
 "Mom, Deny My Demon[r], by Don Emmy"
 "He Carts the Scar[r], by Tre Asch"
 "Eat Fast at Feast[r], by Asa Fett"
@@ -15333,6 +15351,7 @@ blurb
 
 table of overdone movies [xxs2]
 blurb
+"has little that needs to be said about [i]The Rum Hurt Me[r]."
 "lauds the refreshing directness of [i]Point in Pot? Tip: NO[r]."
 "admits [i]Wendie's Sin Weed Dies New[r] is weak, but it's not WRONG." [x]
 "agrees [i]Fop, Indeed? Dope Fiend[r] is funny, well, TIL IT ISN'T." [x]
@@ -15487,6 +15506,8 @@ blurb
 
 table of sicko movies [xxs3]
 blurb
+"Did WHAT with Dad?"
+"Engulf Leg Fun."
 "I'd Ogle Goldie!"
 "Mega-Sin Enigmas."
 "This Load is Hot, Lad!"
@@ -16840,6 +16861,8 @@ blurb
 
 table of store c competitors [xxs5]
 blurb
+"Sybian Sin Bay"
+"Ecstasy-Case Sty"
 "Agony Thus So Naughty"
 "ArtCo IE Erotica" []
 "At Sty Tasty"
@@ -17199,6 +17222,7 @@ blurb
 
 table of horbert musings [xxu2]
 blurb
+"untruths stun, hurt."
 "life's short? Selfish rot."
 "ah, yon, Mr. A hymn or harmony." []
 "Aid Ida, Adi..."
@@ -17386,6 +17410,7 @@ blurb
 
 table of mantle laments [xxu3]
 blurb
+"A SELFIE? FAIL, SEE"
 "ABET?! BEAT"
 "ABNORMAL BAN = MORAL" []
 "ADS KILL ALL KIDS"
@@ -24213,6 +24238,9 @@ blurb
 
 table of posse bosses [xxv7]
 blurb
+"Worsted Rod West"
+"All-Drab Ballard"
+"Big Ben Ebbing"
 "Now-Lethal Lowenthal"
 "Relenting-Nil Regent [if player is male]Len Tigner[else]Teri Glenn[end if]"
 "'Triggers' Greg Rist"
@@ -30174,6 +30202,13 @@ blurb
 
 table of self-help bestsellers [xxv0]
 blurb
+"A Top Duet, Up to Date[r], by Ed Tatupo"
+"In My Head's Mind, Ah, Yes[r], by [if player is male]Sidney Ham[else]Mindy Ashe[end if]"
+"Too Blah? Boo, Halt[r], by Hal Boot
+"Panaceas: a Sane Cap[r], by Asa Capen"
+"To Spawn Past Now[r], by Pat Snow"
+"Ah, Loom, Moolah[r], by [if player is male]Hal Moo[else]Ola Ohm[end if]"
+"But Stir, Burst It[r], by Su Britt"
 "Yup, Now a Way on Up[r], by Wu-Yan Po"
 "Inkblots Bilk Tons[r], by Link Bost"
 "He Lacks Hackles[r], by Sal Heck"
@@ -30686,6 +30721,9 @@ blurb
 
 table of songs you could write [xxvx]
 blurb
+"Singables, a Blessing"
+"Mute by My Tube"
+"Years-Old Loser Day"
 "Fine Bog of Being"
 "Deck Full, Luck Fled"
 "Might Be Big, Them"
@@ -31401,6 +31439,7 @@ book presto
 
 table of bedding brands [xxp1]
 blurb
+"Sundberg Rung-Beds"
 "Panache-Each-Nap"
 "[if player is male]Mr. Blue's[else]Ms. Ruble[end if] Slumber"
 "Artiste Mr. A's Air Mattress"
@@ -31770,6 +31809,7 @@ blurb
 
 table of Leo-Rand idols [xxp4]
 blurb
+"Hercules 'Crush' Lee"
 "[n-t] 'Bam' Bateman" []
 "[tt] 'Thud' Douthit"
 "Abe 'Grr' Garber" []
@@ -32410,6 +32450,8 @@ blurb
 
 table of research topics [xxp5]
 blurb
+"law of the heat flow"
+"set-caps['] aspects"
 "Kaschel hackles"
 "ions-races scenarios"
 "Baldwin's Wind Labs"
@@ -34170,6 +34212,8 @@ blurb
 
 table of competing bars [xxy4]
 blurb
+"Spirits of Frost-Sips"
+"Becky-Sue Buckeye's"
 "Contessa Toscane's"
 "[a-b]'s Base" [p] []
 "Absorbing Bingo Bars" []
@@ -35598,6 +35642,7 @@ book others
 
 table of political slogans [xxh1]
 blurb
+"'Let's be LE BEST!'"
 "'Bureaucrat's a curt abuser!'"
 "'Coup d'etat pact: outed!'"
 "'Darn woeful? A wonderful law founder!'"

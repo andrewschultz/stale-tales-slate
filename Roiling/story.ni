@@ -4952,13 +4952,15 @@ carry out requesting the score:
 		left-to-see instead;
 	otherwise:
 		d "# of turns = [turn count].";
-		say "Ol['] Stat Totals:[paragraph break]You have [cur-score of mrlp] out of [max-score of mrlp] total points for the [mrlp] region, where you are now[if mrlp is solved] and have solved[end if][if mrlp is otters and inhib is true]. You probably need to do something to get back your full powers, too[end if]";
+		say "Ol['] Stat Totals:[paragraph break]Score in a scenario: [cur-score of mrlp] out of [max-score of mrlp] total points in the current region, [mrlp]";
 		if mrlp is not solved and possibles is true:
 			if min-score of mrlp < poss-score of mrlp:
 				say ". Lowest score to solve is [min-score of mrlp]. Maximum score available is [poss-score of mrlp]";
 			else:
 				say ". You need [min-score of mrlp] points to win";
 		say ".[line break]";
+		if mrlp is otters and inhib is true:
+			say "[line break]You probably need to do something to get back your full powers, too.";
 	repeat with Q running through regions:
 		if number of visited rooms in Q > 0:
 			if mrlp is not Q and Q is not solved:

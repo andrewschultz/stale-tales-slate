@@ -8,6 +8,7 @@
 use strict;
 use warnings;
 
+my @wordAry = ();
 my $anno = "c:/writing/dict/anagram-notes.txt";
 
 use Time::HiRes qw(time);
@@ -35,6 +36,7 @@ while ($count <= $#ARGV)
   $b = $ARGV[$count+1];
   for ($a)
   {
+  /^-a$/ && do { `$anno`; exit; };
   /^-t$/ && do { noteCheck(); exit; };
   /^-ma$/ && do { $maxAn = $b; $count += 2; next; };
   /^-nc$/ && do { $checkAfter = 0; $count++; next; };
@@ -54,22 +56,29 @@ if (!$cmdToAn) { die ("I need a word to anagram."); }
 
 if ((length($cmdToAn) > 16) && ($cmdToAn !~ /,/)) { die ("16 chars or fewer please."); }
 
-if ($cmdToAn =~ /[^,a-z]/i) { print "Wiping out non-letter characters.\n"; $cmdToAn =~ s/[^,a-z]//gi; }
+if ($cmdToAn =~ /[^,a-z=\+]/i) { print "Wiping out non-letter characters.\n"; $cmdToAn =~ s/[^,a-z]//gi; }
 
 $cmdToAn = lc($cmdToAn);
 
 if ($cmdToAn !~ /,/)
 {
 $myBase = $cmdToAn;
-anfind($myBase);
+@wordAry = ($myBase);
 }
 else
 {
-  my @wordAry = split(/,/, $cmdToAn);
-  for my $inList (@wordAry)
-  {
-    $myBase = $inList; anfind($inList);
-  }
+  @wordAry = split(/,/, $cmdToAn);
+}
+
+my $lastOne;
+
+for my $inList (@wordAry)
+{
+  $myBase = $inList;
+  if ($inList =~ /=/) { $myBase =~ s/=//g; $inList =~ s/=//g; print "= indicates plurals, trying both.\n"; anfind($myBase); $myBase = "s$inList"; anfind($myBase . "s"); }
+  if ($inList =~ /\+/) { $myBase = $inList; $myBase =~ s/\+/$lastOne/g; print "Tacking on $inList.\n"; anfind($myBase); }
+  else { anfind($myBase); }
+  $lastOne = $myBase;
 }
 
 sub noteCheck
