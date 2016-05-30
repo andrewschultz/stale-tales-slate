@@ -16,6 +16,7 @@ use POSIX qw(strftime);
 
 my $toFile = 1;
 my $checkAfter = 1;
+my $checkNames = 1;
 
 #global initializations
 my @isWord;
@@ -39,6 +40,8 @@ while ($count <= $#ARGV)
   /^-a$/ && do { `$anno`; exit; };
   /^-t$/ && do { noteCheck(); exit; };
   /^-ma$/ && do { $maxAn = $b; $count += 2; next; };
+  /^-nn$/ && do { $checkNames = 0; $count++; next; };
+  /^-cn$/ && do { $checkNames = 1; $count++; next; };
   /^-nc$/ && do { $checkAfter = 0; $count++; next; };
   /^-c$/ && do { $checkAfter = 1; $count++; next; };
   /^-np$/ && do { $printTimer = 0; $count++; next; };
@@ -134,6 +137,7 @@ if ($toFile)
   {
     if ($checkAfter) { my $searchIt = `anin.pl $myBase`;
 	print C "\n$searchIt"; } else { print "\n"; }
+	if ($checkNames) { my $getNames = `anan.pl $myBase=`; print C "\n$getNames"; }
     print C "\n=================$myBase\n";
   }
 
@@ -225,5 +229,9 @@ sub wd
 sub usage
 {
 print<<EOT;
+You need to have a CSV of anagrams.
++ = tack on to previous
+= = do plural as well
 EOT
+exit;
 }

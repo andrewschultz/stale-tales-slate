@@ -6,10 +6,15 @@
 #an equals sign means only look for matching pairs of names. pairs are divided by first-first or last-(first/last)
 #
 
+#set this, I use it so much
+$eqOnly = 1; $matchFlag = 1;
+
 for $thisarg (0..$#ARGV)
 {
   if (@ARGV[$thisarg] eq "-p") { $plurals = 1;  next; }
   $thisMatch = lc(@ARGV[$thisarg]);
+
+if ($thisMatch =~ /\\/) { $eqOnly = 0; $matchFlag = 0; $thisMatch =~ s/=//g; $thisMatch =~ s/\\//g; }
 
 if ($thisMatch =~ /==/) { $eqOnly = 1; $matchFlag = 0; $thisMatch =~ s/=//g; }
 elsif ($thisMatch =~ /=/) { $eqOnly = 1; $matchFlag = 1; $thisMatch =~ s/=//g; }
