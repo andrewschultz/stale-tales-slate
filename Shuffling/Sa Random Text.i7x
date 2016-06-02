@@ -183,6 +183,7 @@ blurb
 "Caren Crean"
 "Carisa Sciara"
 "Carli-Clair Crail"
+"Carlile LeClair"
 "Carline Lancier"
 "Carlota Alcorta"
 "Carlyn Cranly"
@@ -2445,6 +2446,7 @@ blurb
 "The rot! Hotter!"
 "Rouse life of leisure? I sour! Flee!"
 "Rouse no onerous sour eon? Rue soon." []
+"Roust About, Robust Auto!"
 "Royal ol['] Ray."
 "The Royal Ray Hotel? Ye harlot!"
 "Sad egg Ed's gag sagged."

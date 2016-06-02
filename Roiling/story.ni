@@ -3685,7 +3685,7 @@ to open-elmos-hints:
 		enact the artsy-quip;
 		enact the clues-quip;
 		enact the trips-quip;
-		now player has the Gird Grid
+		now player has the Gird Grid;
 
 ramabits is a list of things variable. ramabits is { farm plot, platform, event map, pavement, brass crag, crabgrass, pedestal, steel pad }
 
@@ -10366,7 +10366,7 @@ bye-Elmo-quip	"[if hold-it-up is false][note-gretta]A pause. 'Go, you doer. You'
 
 section Gird Grid
 
-the Gird Grid is a warpable thing. "[bug-report]"
+the Gird Grid is a warpable thing. description is "[bug-report]"
 
 check eating grid:
 	say "Well, maybe if you were a spy like Elmo. Rather, you should digest the information written therein." instead;
@@ -12172,7 +12172,7 @@ after examining picturers:
 		say "You can see how the SIN DIE and DIE SIN blend back and forth to make a clever illusion. You feel clever for seeing it, but not too clever. That'd be un-pious.";
 		continue the action;
 
-a-text of scripture picturers is "YRRYRY". b-text of scripture picturers is "YRRYR[if sign-other is true]Y[else]G[end if]". parse-text of die sin is "-[sp]x[sp]x[sp]-[sp]x[sp][if sign-other is true]x[else]e[end if]".
+a-text of scripture picturers is "YRRYRY". b-text of scripture picturers is "YRRYR[if sign-other is true]Y[else]G[end if]". parse-text of scripture picturers is "-[sp]x[sp]x[sp]-[sp]x[sp][if sign-other is true]x[else]e[end if]".
 
 check taking the scripture picturers:
 	say "Appropriation of church property! [if circle is visited]Brother Horbert[else]Whoever's in there[end if] wouldn't deserve that." instead;
@@ -12345,7 +12345,7 @@ instead of doing something to Rude 'N Nuder:
 		say "You can't do much with Rude 'N Nuder until you have it." instead;
 	say "You don't need to do anything special with Rude [']N Nuder. Well, maybe apart from the special stuff you've been doing so far this game." instead;
 
-a-text of Rude 'N Nuder is "YRRYR". b-text of Rude 'N Nuder is "YRPG?". parse-text of rude 'n nuder is "u[sp]x[sp]x[sp]e[sp]x". runed is cheat-spoilable.
+a-text of Rude 'N Nuder is "YRRYR". b-text of Rude 'N Nuder is "YRPG?". parse-text of Rude 'N Nuder is "u[sp]x[sp]x[sp]e[sp]x". Rude 'n Nuder is cheat-spoilable.
 
 check fliptoing Rude 'N Nuder:
 	if bench-end is reflexive:
@@ -14731,7 +14731,7 @@ description of lawl wall is "A spams-spasm of bad jokes, and I'd tell you a few,
 
 the keys are part of the lawl wall. the keys are reflexive. description is "You're pretty sure the keys open the lawl wall, since the hogs are keeping an eye on them, but you can't be sure."
 
-a-text of keys is "RORY". b-text of keys is "RORY". parse-text of keys is "x[sp]y[sp]x[sp]e". syke is any-spoilable.
+a-text of keys is "RORY". b-text of keys is "RORY". parse-text of keys is "x[sp]y[sp]x[sp]e". keys is any-spoilable.
 
 the hogs are reflexive plural-named people in Phat Path. description is "They're as big as Leo and Rand but meaner. Plus there are three of them. They look a little smarter, too--but maybe you can use reverse psychology to get under their skin or sneak those keys on the wall.". "Hogs are stretched against the lawl wall, in no hurry to try to get by. They look like tough customers, ones who might get annoyed by the sort of words that got you here."
 
@@ -15454,7 +15454,7 @@ a-text of eBay Dork is "RYORYYRR". b-text of eBay Dork is "RYORYYPR". parse-text
 
 Yo Be Dark is a badbook. author of Yo Be Dark is "Dr. Bo Kaye". theme of Yo Be Dark is "the hopelessness of hopelessness". printed name of Yo Be is "Yo, Be Dark".
 
-a-text of Yo Be Dark is "RYORYYRR". b-text of Yo Be Dark is "RYORYGPR". parse-text of yobedark is "x[sp]-[sp]y[sp]x[sp]-[sp]a[sp]r[sp]x". yo be dark is cheat-spoilable.
+a-text of Yo Be Dark is "RYORYYRR". b-text of Yo Be Dark is "RYORYGPR". parse-text of Yo Be Dark is "x[sp]-[sp]y[sp]x[sp]-[sp]a[sp]r[sp]x". yo be dark is cheat-spoilable.
 
 description of a badbook is "[the item described], by [author], is a hopelessly simplistic look at [theme of item described] that rose to inexplicable bestsellerdom and consequent bestseller-movie adaptation. You've never read it, though you recall it's even worse than [ev-worse]. Or maybe it's the other way around. Or maybe it's true both ways, somehow."
 
@@ -15734,9 +15734,9 @@ m-l is a privately-named person. understand "matzo/ lev/" as m-l. printed name o
 
 m-l is a person. "[one of]A man introducing himself as[or][stopping] Matzo Lev is here, more scannable than Lev Matzo."
 
-Tom Alvez is a person. "[one of]A man introducing himself as[or][stopping] Matzo Lev is here, more scannable than his predecessors."
+Tom Alvez is a person. "[one of]A man introducing himself as[or][stopping] Tom Alvez is here, more scannable than his predecessors."
 
-a-text of m-l is "RYRYRRYR". b-text of m-l is "PGRYRRYP". parse-text of matzo lev is "m[sp]a[sp]x[sp]-[sp]x[sp]x[sp]-[sp]v". matzo lev is cheat-spoilable.
+a-text of m-l is "RYRYRRYR". b-text of m-l is "PGRYRRYP". parse-text of m-l is "m[sp]a[sp]x[sp]-[sp]x[sp]x[sp]-[sp]v". m-l is cheat-spoilable.
 
 a-text of l-m is "RYRYRRYR". b-text of l-m is "RYRYRPYR". parse-text of l-m is "x[sp]-[sp]x[sp]-[sp]x[sp]t[sp]-[sp]x".
 
@@ -16895,7 +16895,7 @@ understand "sausage" as haunter.
 
 understand "ghost" as haunter when haunter is visible.
 
-a-text of haunter is "YRRYYRY". b-text of haunter is "YRRYGPG". parse-text of sausage is "-[sp]x[sp]x[sp]-[sp]a[sp]g[sp]e". sausage is cheat-spoilable.
+a-text of haunter is "YRRYYRY". b-text of haunter is "YRRYGPG". parse-text of haunter is "-[sp]x[sp]x[sp]-[sp]a[sp]g[sp]e". haunter is cheat-spoilable.
 
 check going when location of haunter is location of player:
 	if haunter is reflexive:
@@ -17693,7 +17693,7 @@ understand "embrace [text]" and "embrace" as a mistake ("Hug? Ugh. Guh.")
 
 chapter splaining
 
-bogus-plains is privately-named vanishing LLPish scenery in lapsin' plains. understand "plains" as bogus-plains when player is in plains.
+bogus-plains is privately-named vanishing LLPish scenery in lapsin' plains. understand "plains" as bogus-plains when player is in plains. bogus-plains is undesc.
 
 a-text of bogus-plains is "RRRYYR". b-text of bogus-plains is "RRRY??". parse-text of bogus-plains is "x[sp]x[sp]x[sp]a[sp]?[sp]?".
 
@@ -18657,7 +18657,7 @@ Ray Eck is a proper-named purple guardian in Topside Deposit.  description is "H
 check taking a guardian:
 	say "Sadly, you can't just move anyone or anything out of the way in the Badlands." instead;
 
-a-text of ray eck is "RRYYRO". b-text of ray eck is "RRYYRO". parse-text of rayeck is "x[sp]x[sp]-[sp]-[sp]x[sp]y". ray eck is cheat-spoilable.
+a-text of ray eck is "RRYYRO". b-text of ray eck is "RRYYRO". parse-text of ray eck is "x[sp]x[sp]-[sp]-[sp]x[sp]y". ray eck is cheat-spoilable.
 
 the keycar is auxiliary scenery. description of keycar is "It zips around as Ray fiddles with his remote. It appears to have its designer's name written in red. You'd be able to read it with out too much difficulty.". understand "key" and "key car" and "car" as keycar.
 
@@ -19960,7 +19960,7 @@ Solo Den is west of Mislit Limits. printed name of Solo Den is "[if ed yerg is r
 
 Ed Yerg is a person in Solo Den. description is "[if ed is reflexive]Despite a wrinkled face, his hair is gleaming and dark[else if crocus is not in lalaland]Ed looks a little sad[else]Ed looks relaxed and ready to chat[end if]."
 
-parse-text of ed yerg is "x[sp]x[sp]e[sp]y[sp]e[sp]x". greedy is cheat-spoilable.
+parse-text of ed yerg is "x[sp]x[sp]e[sp]y[sp]e[sp]x". ed yerg is cheat-spoilable.
 
 understand "gyre" as a mistake ("Ed doesn't deserve THAT for his past sins. Plus, you'd get sucked in.") when player is in solo den.
 
@@ -20349,7 +20349,7 @@ understand "granites" and "granite" as a mistake ("They're already stonewalling 
 
 description of ingrates is "They're spouting some of the [i]angriest[r] ranting you've heard, though it doesn't make you see red right away. And yet, angriest is so close to whining."
 
-a-text of ingrates is "YRRRRYYR". b-text of ingrates is "?PPRRYGR". parse-text of angriest is "?[sp]n[sp]g[sp]x[sp]x[sp]-[sp]-[sp]x".
+a-text of ingrates is "YRRRRYYR". b-text of ingrates is "?PPRRYGR". parse-text of ingrates is "?[sp]n[sp]g[sp]x[sp]x[sp]-[sp]-[sp]x".
 
 description of pester'n serpent is "It's coiled and ready to strike anyone who tries to go by it."
 
@@ -20384,7 +20384,7 @@ before doing something with costume:
 
 description of the Reed's Ale costume man is "He is in a REED'S ALE costume so annoyingly huge and bright you'd surely remember the ad and not his name if you saw him again. The costume seems half on, half off--and it seems he doesn't know which way would be best. Get canned and be free, or suffer humiliation for a paycheck? Maybe you can help."
 
-a-text of reed's ale is "RYRYYRYR". b-text of reed's ale is "PGRYYRYR". parse-text of reed'sale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
+a-text of reed's ale is "RYRYYRYR". b-text of reed's ale is "PGRYYRYR". parse-text of reed's ale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
 rese is a truth state that varies.
 
@@ -21670,9 +21670,9 @@ t-stupidly is a mack-idea. pod-num is 4. pod-ord is 3. a-text is "RRYRYRRO". b-t
 [pod 5 is 9 letters]
 t-martially is a mack-idea. pod-num is 5. pod-ord is 1. a-text is "RYRRYYRRO". b-text is "PGPRYGPPB". parse-text is "m[sp]a[sp]r[sp]t[sp]i[sp]a[sp]l[sp]l[sp]y". mack-move is "Some of the macks even begin to talk maritally.". mack-brief is "blabbing maritally".
 
-t-maritally is parse-spoilable.
+t-martially is parse-spoilable.
 
-t-sincerely is a mack-idea. pod-num is 5. pod-ord is 2. a-text is "RYRRYRYRO". b-text is "RYRRYRYRO". parse-text of sincerely is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "Someone shouts 'Celery's in, yes! [']N slice yer...' / 'Rec, Lin, yes!' You cringe and see red at how forced and fake it is.". mack-brief is "speaking too sincerely".
+t-sincerely is a mack-idea. pod-num is 5. pod-ord is 2. a-text is "RYRRYRYRO". b-text is "RYRRYRYRO". parse-text of t-sincerely is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "Someone shouts 'Celery's in, yes! [']N slice yer...' / 'Rec, Lin, yes!' You cringe and see red at how forced and fake it is.". mack-brief is "speaking too sincerely".
 
 t-sobbingly is a mack-idea. pod-num is 5. pod-ord is 3. a-text is "RYRRYRRRO". b-text is "RGPPYRRRO". parse-text is "x[sp]o[sp]b[sp]b[sp]i[sp]x[sp]x[sp]x[sp]y". mack-move is "The macks continuing their lobbyings, far too cheery and confident.". mack-brief is "making lobbyings".
 
@@ -21761,7 +21761,7 @@ printed name of p-2 is "painting of Rev. Howe".
 
 understand "painting" and "rev howe" and "rev/howe" as p-2 when player is in bran barn.
 
-a-text of p-2 is "RYRYRYR". b-text of p-2 is "RYRYRYR". parse-text of revhowe is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x".
+a-text of p-2 is "RYRYRYR". b-text of p-2 is "RYRYRYR". parse-text of p-2 is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x".
 
 understand "whoever" as a mistake ("Actually, Mr. Lee is wondering whoever you might be. Tweak things, and you'll convince him.") when ghoul hat is in lalaland and p-2 is reflexive.
 
@@ -22868,7 +22868,7 @@ the miser ruble is a thing. "The miser ruble the swell wells coughed up lies her
 
 the mulberries are a plural-named fruit.
 
-a-text of miser ruble is "RYRRYRRYYR". b-text of miser ruble is "PYRRYPRYYR". parse-text of miserruble is "m[sp]-[sp]x[sp]x[sp]-[sp]r[sp]x[sp]-[sp]-[sp]x".
+a-text of miser ruble is "RYRRYRRYYR". b-text of miser ruble is "PYRRYPRYYR". parse-text of miser ruble is "m[sp]-[sp]x[sp]x[sp]-[sp]r[sp]x[sp]-[sp]-[sp]x".
 
 chapter gooseberry
 
@@ -23287,7 +23287,7 @@ understand "list/of/prices/" or "price list" or "list of prices" as l-o-p.
 
 the printed name of l-o-p is "the list of prices".
 
-a-text of l-o-p is "RRYRYR". b-text of l-o-p is "RPGRGP". parse-text of prices is "x[sp]r[sp]i[sp]x[sp]e[sp]s". prices is parse-spoilable.
+a-text of l-o-p is "RRYRYR". b-text of l-o-p is "RPGRGP". parse-text of l-o-p is "x[sp]r[sp]i[sp]x[sp]e[sp]s". l-o-p is parse-spoilable.
 
 understand "precis" as a mistake ("It's already a precis, of sorts. Less pretentious words will work better here.") when l-o-p is visible.
 
@@ -23613,7 +23613,7 @@ check giving something to greedy-person:
 
 description of Art Erd is "[gree-desc]."
 
-description of Dr Tara is "[gree-desc]."
+description of Dr Tera is "[gree-desc]."
 
 to say gree-desc:
 	say "Tarred literally and figuratively, [he-she] gives off an 'I'm sly. Slimy.' air. Grease agrees with [him-her]"
@@ -23853,7 +23853,7 @@ chapter Sparse Spares
 
 Sparse Spares is below Peek Keep. Sparse Spares is in Demo Dome. "All sorts of weird tools and paraphernalia that couldn't fit into the game proper lie here, likely impulse purchases from Bulk-Klub. You can go back up."
 
-the parcels clasper is a thing in Sparse Spares.
+the parcels clasper is a thing in Sparse Spares. description is "Oh, man! It's handy for picking stuff up and moving it around. It looks a bit odd, but boy, if you look for a minute, THAT's how it works."
 
 the bolt case is a transparent closed container in Sparse Spares. description is "It contains an obstacle, and it's also not openable, since it's--well-bolted. There's also a can of Best Cola in there."
 

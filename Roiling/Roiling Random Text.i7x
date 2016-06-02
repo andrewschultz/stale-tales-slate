@@ -3760,7 +3760,7 @@ blurb	fave
 "Another Try, Hero-Tyrant[r], by Roy Harnett & [if player is male]Tony Erhart[else]Thora Tyner[end if]"	false
 "Arriviste: it Arrives[r], by Teri Rivas"	false
 "Aw, We All Call Ace[r], by Alec Law-Wallace"	true
-"Being Good Bio? GONGED[r], by Ned Boggio"
+"Being Good Bio? GONGED[r], by Ned Boggio"	false
 "Contemn a 'Hero' More Than Once[r], by Chante Monroe"	false
 "A Curse Causer[r], by Cara-Sue Cruse"	false
 "Da Lingo Be No Big Deal[r], by Deb Alongi"	false
@@ -3785,7 +3785,7 @@ blurb	fave
 "Letter Swap? Stale Twerp[r], by [if player is male]Stew Alpert[else]Pearl Swett[end if]"	false
 "Lion Heart? No, the Liar[r], by [if player is male]Ali Theron[else]Lori Ethan[end if]"	false
 "Love-in? No, Evil[r], by Viviol Leonel"	false
-"My Trail: I'm To Immortality[r], by Timmy Lorita"
+"My Trail: I'm To Immortality[r], by Timmy Lorita"	true
 "Nostalgi-Gloatins[r], by [if player is male]Otis Lang[else]Lois Gant[end if]"	true
 "Notoriety to Inert, Yo[r], by [if player is male]Otto Eryin[else]Tori Toney[end if]"	false
 "OK, Words, Do Works[r], by Rod Skow"	true
@@ -3793,7 +3793,7 @@ blurb	fave
 "One Cold Neo-Clod[r], by Don Cole"	false
 "Permutations? Imposter, a Nut[r], by [if player is male]Tatum Pierson[else]Maurine Potts[end if]"	false
 "Permuting, Urgent Imp[r], by Meg Turpin"	false
-"Re-Grow, Mad Word Gamer[r], by [if player is male]Drew Magro[else]Meg Darrow[end if]" []
+"Re-Grow, Mad Word Gamer[r], by [if player is male]Drew Magro[else]Meg Darrow[end if]"	true []
 "Rogue at Our Gate: Outrage[r], by U. Ortega"	false
 "Royal Asset? So Last Year[r], by Rosa Staley"	false
 "Sainted? Stained Instead[r], by Sid Etna"	false
@@ -5701,6 +5701,7 @@ blurb
 "Larceny-Cry Lane" []
 "Last-Fog Gas Loft"
 "Last King Talkings"
+"Last Stop Lost Past"
 "Last Time Mist Tale"
 "Latte St. Tattles"
 "Law Firm Raw Film" []
@@ -7190,6 +7191,7 @@ blurb
 "One Fly Felony"
 "One Good Goon Ode"
 "One Kiss Skies On"
+"One Self Guy Feels Young"
 "One Slick Close Kin"
 "One So I'd Die Soon"
 "Only Big Bling, Yo" []
@@ -7341,6 +7343,7 @@ blurb
 "This Got So Tight"
 "This Keg By the Big Sky"
 "This Love Lives Hot"
+"This Lung's Hustlings"
 "This Man Has Mint"
 "This One So Thine"
 "This Punk Thinks Up"
@@ -7436,6 +7439,7 @@ blurb
 "Yo Dames Someday Say Do Me"
 "Yo Fueling Young Life"
 "Yo Girl I Glory"
+"Yo, Glee, Fun: Feel Young"
 "Yo, Hater, a Theory" []
 "Yo, He's So Hey-Oh-Yes"
 "Yo, Hikes is Hokey"
@@ -10599,6 +10603,7 @@ blurb	prio
 "Free Song for Gene's Fen-Ogres[r], by Rose Feng"
 "Freeload for Adele[r], by Lea Forde"
 "Fresca-Facers['] Farces[r], by Cesare Scarff"
+"A Fresh Pink Sharp Knife[r], by Kip Fansher"
 "Freshly, O Horsefly[r], by [if player is male]Roy Shelf[else]Flo Hyser[end if]"
 "Fret, Guile, Guilt-Free[r], by Gil Fuerte"
 "Fret, Pooh: the Proof of Pother[r], by Hope Fort"
@@ -24424,6 +24429,7 @@ blurb
 "Banal Laban Alban"
 "Bane Lord Bolander" []
 "Banged-Up Gabe Pund"
+"Bankrupt Punk Bart"
 "Bankrupt Punk Bart" []
 "Bar Kid Drabik"
 "Barb 'Clunk' Blackburn"
@@ -35208,6 +35214,7 @@ blurb
 "having more of a clue than Mess-it-Up Septimus" [x]
 "keeping in shape unlike Lardo Roald" [x]
 "keeping it simple as possible, like Able Abel."
+"keeping motivated unlike Jader Jared"
 "keeping sharp unlike Mangier Germain" [x]
 "labels Fearin['] Efrain naifer and fainer" [x]
 "needing to go all Cursy Cyrus on everyone here" [x]
@@ -35285,6 +35292,7 @@ blurb
 "horse-flies so fleshier"
 "horsin['] rhinos (horns shorn)"
 "a husky shy auk"
+"hustling thin slug"
 "a hybrid haybird"
 "a hymn-mynah"
 "a hypnot-python"
