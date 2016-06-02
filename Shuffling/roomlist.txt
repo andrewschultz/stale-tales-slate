@@ -1,0 +1,57 @@
+## roomlist.txt for Shuffling Around
+##
+
+** game: /home/andrew/prt/debug-sa.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+nodiag
+
+reject:Sorry, I understood the verb, but I didn't understand the noun.
+
+prefix:sa
+
+#forest
+#forest1/forest2/room1 are cheat-named in the source so I can jump to them in debug mode.
+!forest1
+!forest2
+!Self-ID Fields
+!Cruel Ones' Enclosure
+!Sorted 'Trodes
+!Stored, er, Dots
+!Ghouls' Slough
+!Frost Forts
+
+#sortie
+!Centrifuge
+!The Nick
+!Kitchen
+room1
+!Moor
+!Stiller Trellis
+!Sacred Cedars
+
+#metros
+!Cordoned Red Condo
+!Cramped Red Camp
+!A Yell Alley
+!Elf Row's Flowers
+!Undesired Underside
+!The Ol' Hotel
+!Elm Train Terminal
+!Bassy Abyss
+!Anti-Cool Location
+
+#resort
+!Tiles
+!Woodland
+!Roman Manor
+!Potshot Hotspot
+
+#intro
+!A Dry Yard
+!Notices Section
+!Busiest Subsite
+!Thickest Thickets
+
+#stores
+!Trips Strip

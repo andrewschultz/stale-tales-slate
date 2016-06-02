@@ -2698,6 +2698,7 @@ Elvira	"'I watch a witch,' you mutter. 'Nice try. Tiny rec. Y'cretin.' You're no
 Curtis	"'I'm a busy man!' yells Curtis. 'I have confidence in you, dealing with fruit. I mean, you saved the whole COUNTRY already. This can't take too long." [begin others]
 Len Craig	"[one of]Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge[or]Your magic powers do not, alas, expand to straightforward bargaining[stopping]."
 Art Erd	"[his-her-c] mumbles 'er, drat' and something about how money is very, very nice."
+Dr Tera	"[his-her-c] mumbles 'er, drat' and something about how money is very, very nice."
 salesmen	"They utterly ignore your inquiry and instead talk about anything and talk about how they can talk about anything. They talk about how just one word has the power to change things. And finally, they get around to how great Nerd-Aid is, and you shouldn't be ashamed if you need a little Nerd-Aid."
 passport	"Try using its features instead."
 
@@ -2908,6 +2909,7 @@ curtis	Art Erd	"[one of]Curtis breathes deeply and gives a look of contempt and 
 Art Erd	curtis	"'There's people with silly science ideas like him, then there's businessmen like ME. Pfft.'"
 Art Erd	storage box	"'[if storage box is in scape space]It's...umm...worth something.[else]You bought it[end if].'"
 Art Erd	len craig	"'Nicely? Len? Icy!' he mutters. 'Cut Len's cluster...'"
+Dr Tera	len craig	"'Nicely? Len? Icy!' he mutters. 'Cut Len's cluster...'" [this just gets rid of an annoying error at the start]
 len craig	curtis	"[one of]'Nice fella, lots of ideas about agriculture, but no business sense. Just sits looking for someone to do his dirty work for him. You don't...'[or]You don't want to admit Curtis has you gofering. Though, really, it's been not too bad, with your powers.[stopping]"
 len craig	tekno-token	"[if tekno-token is off-stage]'We accept tekno-tokens, yes.'[else][one of]He inspects the token and says it's valid[or]If you ask again, Len might question its validity[stopping].[end if]"
 len craig	Art Erd	"Len snorts and shakes his head. 'What a weasel.'" [end OTHERS]

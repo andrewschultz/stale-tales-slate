@@ -3449,11 +3449,10 @@ when play begins (this is the don't use any other besides status window when pla
 	now last-loc of metros is underside;
 	now last-loc of forest is sf;
 	now the peasant has the hay;
-	if debug-state is false:
-		say "Shuffling Around has accessibility features for the vision impaired that make a hinting device more readable. Would you like to activate them?";
-		if the player consents:
-			now sr-acc is true;
-		say "OK. This can be toggled at any time with ACCESS.";
+	say "Shuffling Around has accessibility features for the vision impaired that make a hinting device more readable. Would you like to activate them?";
+	if the player no-consents:
+		now sr-acc is true;
+	say "OK. This can be toggled at any time with ACCESS.";
 	say "So you just got fired from the best company ever, but it's the best day of your life. Because, new opportunities! New horizons! New ways to look at things! Like calling this stupid kiss-off job fair a 'convention.' As you are stuffed in a slow slow elevator up to the next lecture, you hope there's some way out...";
 	move player to Busiest Subsite, without printing a room description;
 	now player wears magenta nametag;
@@ -3650,7 +3649,7 @@ check going north in Busiest Subsite:
 
 check going east in Busiest Subsite:
 	say "That way's an hour or two of listening to an under-action denunciator. You sure?";
-	if the player consents:
+	if the player no-consents:
 		say "You look back at the [if above-sign is examined]NONE TRY passage[otherwise]passage you ignored--NONE TRY above it[end if]. Well, obviously it should say NO ENTRY. You hope whatever new job you find has a decent vision plan. But you realize you can't be fussy.[paragraph break]One more look back as you sit in one of the asset-seats. Someone else walks through--he's wearing the same color nametag you are. During the talk--based on a horrendous bowdlerization of Robert Frost's [i]The Road Less Traveled[r]--you mark the feedback survey 'gave core coverage' and try to convince yourself you weren't really missing anything. It doesn't quite work. Maybe you could've done something else?";
 		end the story;
 	otherwise:
@@ -3664,11 +3663,29 @@ check going south in Busiest Subsite:
 check going outside in Busiest Subsite:
 	if above-sign is examined or passage is examined:
 		say "Do you mean trying the passage?";
-		if the player consents:
+		if the player yes-consents:
 			try entering the passage instead;
 		otherwise:
 			say "Well, it's still there, if you want to enter it." instead;
 	say "There are many ways out. You may want to be more specific or have somewhere interesting or unusual in mind." instead;
+
+to decide whether the player yes-consents:
+	(- YesOrNoExt(1) -).
+
+to decide whether the player no-consents:
+	(- YesOrNoExt(0) -).
+	
+Include (-
+
+[ YesOrNoExt yn;
+	if ( (+ debug-state +) == 1)
+	{
+	    return yn;
+	}
+	return YesOrNo();
+];
+
+-)
 
 the overlate elevator is amusing scenery in Busiest Subsite.
 
@@ -5278,11 +5295,11 @@ description of store b is "It seems to catch a rainbow every now and then, and y
 
 understand "strobe" as a mistake ("You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. You suspect Store B may have better refreshment to add.")
 
-rgtext of store b is "[gcn][rc][rc][rc][gc][rc]". lgth of store b is 6. gpos of store b is 1. rpos of store b is 2. cert-text of storeb is "S[d1][d1][d1][ast]E[d1]". rect-text of storeb is "S[d1][d1][d1][d1][ast]T".
+rgtext of store b is "[gcn][rc][rc][rc][gc][rc]". lgth of store b is 6. gpos of store b is 1. rpos of store b is 2. cert-text of store b is "S[d1][d1][d1][ast]E[d1]". rect-text of store b is "S[d1][d1][d1][d1][ast]T".
 
 the marquee is part of store b. the marquee is auxiliary. description of the marquee is "BERTO'S fine (the rest is cut off.)"
 
-rgtext of marquee is "[rcn][rc][gc][rc][rc][rc]". lgth of store b is 6. gpos of marquee is 6. rpos of marquee is 4. cert-text of bertos is "-[d1][ast]R[d1][d1][d1]". rect-text of bertos is "S[d1][d1][d1][d1][ast]T".
+rgtext of marquee is "[rcn][rc][gc][rc][rc][rc]". lgth of store b is 6. gpos of marquee is 6. rpos of marquee is 4. cert-text of marquee is "-[d1][ast]R[d1][d1][d1]". rect-text of marquee is "S[d1][d1][d1][d1][ast]T".
 
 the sorbet is an undesc. the sorbet is amusing.
 
@@ -5327,7 +5344,7 @@ Store H is a sto. understand "store/ 8/eight" as store h. [description of store 
 
 description of store h is "Inside store H you see such a miscellany that you doubt it was successful even in better times."
 
-Store I is a sto. understand "store/ 9/nine" as store i. lgth of store i is 6. gpos of store i is 1. rpos of store i is 5. rgtext of store i is "[gcn][rc][rc][rc][rc][rc]". cert-text of store i is "S[d1][d1][d1][d1][d1]". rect-text of storei is "S[d1][d1][d1][d1][ast]E".
+Store I is a sto. understand "store/ 9/nine" as store i. lgth of store i is 6. gpos of store i is 1. rpos of store i is 5. rgtext of store i is "[gcn][rc][rc][rc][rc][rc]". cert-text of store i is "S[d1][d1][d1][d1][d1]". rect-text of store i is "S[d1][d1][d1][d1][ast]E".
 
 the Tories are plural-named auxiliary scenery in trips strip. lgth of tories is 6. gpos of tories is 6. rpos of tories is 5. rgtext of tories is "[rcn][gc][gc][rc][rc][rc]". cert-text of tories is "-[ast]O[ast]R[d1][d1][d1]". rect-text of tories is "S[d1][d1][d1][d1][ast]E".
 
@@ -5619,6 +5636,8 @@ chapter Softer Forest (sf)
 
 sf is a privately-named room in Forest. the printed name of sf is "Softer Forest".
 
+understand "forest1" as sf when debug-state is true.
+
 understand "softer" and "softer forest" as sf when mrlp is forest.
 
 check going in sf:
@@ -5675,6 +5694,8 @@ chapter Rest of Forest
 rf is a privately-named room in Forest. the printed name of rf is "Rest of Forest". "The forest feels a bit thinner here, so you must be close to somewhere new. Here, [vis-hint]."
 
 understand "rest of" and "rest of forest" as rf when mrlp is forest.
+
+understand "forest2" as rf when debug-state is true.
 
 the forest-leaves are a privately-named useless backdrop. "They've already undergone nature's transformation, so they're beautiful rather than useful. They don't leave any clues.". printed name of forest-leaves is "leaves".
 
@@ -6959,6 +6980,8 @@ chapter ROOM
 
 roomroom is a privately-named room in Sortie. the printed name of roomroom is "Room". "[if moor is unvisited]This room is a little too undescribed. It's nice to have a break from all this puzzling, but it's almost too easy a break[tagit][otherwise]Zapping yourself to the moor hasn't made this room any more exciting[end if].[paragraph break]A passage leads west back to the centrifuge, and another leads north."
 
+understand "room1" as roomroom when debug-state is true.
+
 to say tagit:
 	if kitchen is visited:
 		say ". It's almost as nondescript as the nick, but at least you're not trapped";
@@ -7266,7 +7289,7 @@ check fliptoing moor:
 		if sortie-warn is false and button-locked is false and player has gadget and hows tag is part of gadget:
 			now sortie-warn is true;
 			say "[gadact] once you jump to the moor. Is this okay?";
-			if the player consents:
+			if the player yes-consents:
 				do nothing;
 			else:
 				say "Okay. Next time, you won't see this warning." instead;
@@ -7993,7 +8016,7 @@ instead of doing something with the soggy letter:
 		continue the action;
 	say "You don't really want to get close to it." instead;
 
-the arena dig flier is auxiliary scenery. lgth of dig flier is 8. gpos of dig flier is 8. rpos of dig flier is 1. rgtext of dig flier is "[rcn][rc][rc][rc][rc][rc][gc][rc]". cert-text of arena dig flyer is "-[d1][d1][d1][d1][d1][ast]I[d1]". rect-text of arena dig flyer is "G[d1][d1][d1][d1][d1][d1][ast]A". description of arena dig flier is "The flier seems like an invitation to an ARENA DIG--perhaps an arena that never got built, or a shindig in some arena. A reading makes you see red."
+the arena dig flier is auxiliary scenery. lgth of dig flier is 8. gpos of dig flier is 8. rpos of dig flier is 1. rgtext of dig flier is "[rcn][rc][rc][rc][rc][rc][gc][rc]". cert-text of arena dig flier is "-[d1][d1][d1][d1][d1][ast]I[d1]". rect-text of arena dig flier is "G[d1][d1][d1][d1][d1][d1][ast]A". description of arena dig flier is "The flier seems like an invitation to an ARENA DIG--perhaps an arena that never got built, or a shindig in some arena. A reading makes you see red."
 
 the arena dig flier is fixed in place.
 
@@ -8162,7 +8185,7 @@ check going east in cramped red camp when flowers is unvisited and player has ga
 	if metros-warn is false and button-locked is false:
 		now metros-warn is true;
 		say "[gadact] once you go east. Do you continue?";
-		if the player consents:
+		if the player yes-consents:
 			do nothing;
 		else:
 			say "Okay. This warning won't appear next time you go east." instead;
@@ -8178,7 +8201,7 @@ check going north in self-id fields when Enclosure is unvisited and player has g
 		if forest-warn is false and button-locked is false:
 			now forest-warn is true;
 			say "[gadact] once you go north. Do you continue?";
-			if the player consents:
+			if the player yes-consents:
 				do nothing;
 			else:
 				say "Okay. This warning won't appear next time you go north." instead;
@@ -9340,7 +9363,7 @@ description of neon pig is "This flashing half-sign is [if player is not on fuzz
 after examining the neon pig:
 	if player is on fuzzy looking wall:
 		say "The 'artist' seems to have signed his name--do you want a look?";
-		if the player consents:
+		if the player yes-consents:
 			say "The swine who conceived this is, according to the red glowing cursive script, named [first custom style]INPENGO[r].";
 		otherwise:
 			say "Don't blame you.";
@@ -9660,7 +9683,7 @@ instead of doing something with the u-lock:
 	if current action is scaning or current action is cring or current action is certifying or current action is rectifying:
 		say "The gadget is silent. It's probably the tool shed.";
 	say "The u-lock is too strong to break. You have nothing sharp. Maybe you can get a clue from its brand name. Take a look?";
-	if the player consents:
+	if the player yes-consents:
 		say "It's from the [first custom style]OLD, THOSE[r] company. Locks should be functional and not beautiful, apparently.";
 	otherwise:
 		say "You don't bother with it."
@@ -10059,7 +10082,7 @@ chapter bullpen
 
 Bullpen is a room in LLL. "This is the bullpen. You should not see it."
 
-teleporter is privately-named scenery in Bullpen.
+teleporter is privately-named scenery in Bullpen. description is "this is just to signify that flipping an item makes a jump."
 
 book error checking
 
@@ -10217,7 +10240,7 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 				do nothing;
 			else:
 				say "It looks like you may be trying to combine the two items. PUT X ON Y is the recommended verb. Would you like to do so right now?";
-				if the player consents:
+				if the player yes-consents:
 					if bin-try is 3:
 						try putting nose on shades instead;
 					if bin-try is 5:
@@ -10226,7 +10249,7 @@ Rule for printing a parser error when the latest parser error is the not a verb 
 						try putting beard on shades instead;
 	if the player's command includes "bugle" and player has the bugle:
 		say "Hm, I didn't recognize that verb...maybe you want to PLAY the bugle?";
-		if the player consents:
+		if the player yes-consents:
 			try playing the bugle instead;
 		else:
 			say "OK." instead;
@@ -10340,7 +10363,7 @@ after reading a command:
 		otherwise:
 			if ignore-transcript-nag is false:
 				say "You've made a comment-style command, but Transcript is off. Type TRANSCRIPT to turn it on, if you wish to make notes. Or if you want to eliminate this nag, for instance if you have an interpreter that does so independently, say yes now.";
-				if the player consents:
+				if the player yes-consents:
 					now ignore-transcript-nag is true;
 		if helpdebugflag is true and hintfull is false:
 			now just-print is false;
@@ -10373,7 +10396,7 @@ after reading a command:
 				if number of unsolved regions is 6 and button-locked is false and player has gadget and cheat-lock-warn is false: [this has to be 6: 3 unsolved stores, roster, LLL (blank area) and STORES itself.]
 					now cheat-lock-warn is true;
 					say "The SECURE/RECUSE button starts blinking. You may need to make sure the gadget's setting is as you want it. Currently, it [if gadget-secured is false]has SECURE/RECUSE off, so you'll need to pick off the remaining store[else if gadget is cert]is set to CERTIFY with SECURE/RECUSE on, and you can skip the final store[else]is set to RECTIFY with SECURE/RECUSE on, and you can skip the final store[end if]. Is this okay?";
-					if the player consents:
+					if the player yes-consents:
 						do nothing;
 					else:
 						say "Okay, take time to adjust the gadget as you need. The above warning won't appear again.";
@@ -11055,7 +11078,7 @@ to say book-in-nerds:
 
 check examining the utterly unreadable book:
 	say "Even the author names are pretentious and important sounding. Think they're worth remembering?";
-	if the player consents:
+	if the player yes-consents:
 		say "[rcn]Srs. Ek and Rensskad-Knessard";
 	otherwise:
 		say "Hm, yes. The nerds may give a less cryptic hint."
@@ -11710,7 +11733,7 @@ carry out requesting the score:
 	say ". You have the rank of [b][decide-rank][r].";
 	if debug-state is true:
 		say "(Only seen in debug) See the total scores possible?";
-		if the player consents:
+		if the player yes-consents:
 			repeat with Q running through regions:
 				if max-score of Q > 0:
 					say "[Q] [max-score of Q][line break]";
@@ -12051,7 +12074,7 @@ carry out creditsing:
 	say "[if cur-score of Intro > 0]Tester Street residents ('no on tiredness:')[paragraph break][end if]Adri, Anthony Hope, DJ Hastings, Gavin Myers-Leman, Hulk Handsome ([if cur-score of intro > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[otherwise][i]shout-out not spoiled til you score a point[r][end if],) Joey Jones, John Nitchals, Paul Lee, Robert Patten and Tomie Campf, in alphabetical first-name order. They found 700+ bugs.[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: David Wilkins, Jason Orendorff, Matt Weiner, Sean M. Shore and Toby Ott. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or this game's IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type SITES for a list of sites that helped[if cur-score of intro is 0], which will totally spoil things right now[end if].";
 	say "Also, thanks to Google Code and BitBucket, which contained original source control and issues, and GitHub, where I currently have a repository: [ghsite].";
 	say "Oh, hey, do you wish to see what the pen names are right now? Some people were kind enough to take them at my request.";
-	if the player consents:
+	if the player yes-consents:
 		say "John Nitchals = Wade Clarke.[line break]Gavin Myers-Leman = Melvin Rangasamy.[line break]Tomie Campf = Kevin Jackson-Mead, who used 'Pam Comfite' as an anagram of 'IFComp Meta' the year before--it's worth checking out the 2011 competition for those games alone.[paragraph break]Hulk Handsome is also a cool pseudonym, but it's one he uses lots of places. Oh, and I guess 'Lupe Lea' could've been an anagram for Paul Lee, but I never asked him, and I didn't have my anagram name cranker til I got serious with Roiling."
 
 part releaseing
@@ -12096,7 +12119,7 @@ understand "sites" as sitesing.
 carry out sitesing:
 	if cur-score of intro is 0:
 		say "Last chance spoiler warning. Sure you want to look?";
-		if the player consents:
+		if the player yes-consents:
 			do nothing;
 		otherwise:
 			say "Ok. Back to the game." instead;
