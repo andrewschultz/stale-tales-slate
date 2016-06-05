@@ -527,7 +527,8 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "heck"	237027171	--	--	--	degen-true rule	"[cussy]!"
 "smell"	395782906	--	--	--	degen-true rule	"Your sense of smell doesn't change."
 "writing"	487861496	--	--	--	degen-true rule	"You don't need to do anything with writing besides EXAMINE or READ it for possible hints."
-"pockets"	554947392	--	--	--	degen-true rule	"You don't need to mess with your pockets."
+"pockets"	554947392	--	--	--	degen-true rule	"[no-pock]."
+"pocket"	458673426	--	--	--	degen-true rule	"[no-pock]."
 "jump"	299607444	--	--	--	degen-true rule	"You consider the benefits of collapsing in an impressively uncoordinated heap, then decide against doing so."
 "point"	372828908	--	--	--	know-point rule	"There's no secret cheat between NO TIP and POINT."
 "parse"	393057655	--	--	--	can-i-parse rule	"There's no inbetween for the PARSE and SPARE commands for the gadget."
@@ -881,6 +882,9 @@ this is the can-i-parse rule:
 	if player has gadget:
 		the rule succeeds;
 	the rule fails.
+
+to say no-pock:
+	say "You don't need to mess with your pockets"
 
 to say no-special-verb:
 	say "There's no secret verb or verbs to find trying that"

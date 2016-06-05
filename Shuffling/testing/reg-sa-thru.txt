@@ -1,0 +1,719 @@
+## reg-sa-nudges.txt
+## nudges for Shuffling Around: the big test
+##
+## nudgeleft.txt is the file to look for
+
+
+** game: /home/andrew/prt/debug-sa.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* _intro
+
+>in
+A Dry Yard
+
+>door
+Your score has just gone up by one point.
+
+>score
+1 out of 7
+reduced deducer
+
+>blot
+Your score has just gone up by one point.
+
+>bugle
+Your score has just gone up by one point.
+
+>in
+Thickest Thickets
+
+>goat
+Your score has just gone up by one point.
+
+>slander
+Your score has just gone up by one point.
+
+>in
+
+>attics
+Your score has just gone up by one point.
+
+>gateman
+Your score has just gone up by one point.
+
+>score
+7 out of 7
+stunted student
+
+>get gadget
+go-hint thingo
+
+>ask about gadget
+Scan something
+
+>scan attics
+beeps once
+
+>ask about gadget
+Powerful. Not as a weapon.
+
+>in
+Trips Strip
+
+* _trips
+
+>sorbet
+Your score has just gone up by one point.
+
+>score
+1 out of 6
+
+>resort
+seems like it should work
+maybe, soon, you will
+
+* _forest
+
+>sr ne
+>enter forest
+
+>n
+Your score has just gone up by one point.
+Rest of Forest
+
+>score
+1 out of 16 total
+me, a nervy
+
+>e
+
+>score
+2 out of 16
+Self-ID Fields
+
+>e
+Sorted Trodes
+
+>nose
+Your score has just gone up by one point.
+
+>shades
+Your score has just gone up by one point.
+
+>shotgun
+Your score has just gone up by one point.
+
+>score
+5 out of 16 total
+
+>w
+>w
+Stored, er, Dots
+
+>open sandwich
+bread from the Spam
+
+>eat spam
+spasm
+
+>maps
+Your score has just gone up by one point.
+
+>beard
+Your score has just gone up by one point.
+
+>put shades on beard
+>put nose on beard
+You've made a full disguise now!
+
+>e
+>n
+Your score has just gone up by one point.
+Cruel Ones' Enclosure
+
+>hasbeen
+Your score has just gone up by one point.
+
+>score
+9 out of 16
+
+>chisel
+Your score has just gone up by one point.
+
+>s
+>w
+>peel cow
+Cr-r-r-r-k.
+
+>peel chicken
+Cr-r-r-r-k.
+
+>put cow in canister
+>put chicken in canister
+LIVERS.
+Your score has just gone up by one point.
+
+>sliver
+Your score has just gone up by one point.
+
+>e
+>n
+>n
+red asp!
+
+>drapes
+Your score has just gone up by one point.
+
+>n
+The drapes are too thick.
+
+>cut drapes
+revealing a doorway
+
+>n
+You don't know what's
+
+>silver
+Your score has just gone up by one point.
+
+>put silver in shotgun
+
+>n
+Slough
+
+>x maps
+Frost Forts
+
+>wolves
+Your score has just gone up by one point.
+
+>shoot wolves
+Your score has just gone up by one point.
+Trips Strip
+
+* _sortie
+
+>sortie
+Your score has just gone up by one point.
+
+>enter sortie
+Centrifuge
+
+>score
+0 out of 27 total points
+
+>16
+round den, unadorned
+Your score has just gone up by one point.
+
+>e
+The Nick
+
+>undo
+>n
+The Nick
+
+>kitchen
+Your score has just gone up by one point.
+
+>open fridge
+grist and a cake pan
+
+>hotsauce
+Your score has just gone up by one point.
+
+>tortilla
+Your score has just gone up by one point.
+
+>lettuce
+Your score has just gone up by one point.
+
+>steak
+Your score has just gone up by one point.
+
+>parmesan
+Your score has just gone up by one point.
+
+>put steak on taco
+a good start
+
+>put sauce on taco
+The tortilla's coming together
+
+>put lettuce on taco
+almost there!
+
+>put parmesan on taco
+A full-blown taco
+Your score has just gone up by one point.
+
+>coat
+Your score has just gone up by one point.
+
+>grits
+Your score has just gone up by one point.
+
+>pancake
+Your score has just gone up by one point.
+
+>e
+Stiller Trellis
+
+>s
+a little too undescribed
+
+>straw
+Your score has just gone up by one point.
+
+>score
+12 out of 27
+
+>shoes
+Your score has just gone up by one point.
+
+>sack
+Your score has just gone up by one point.
+
+>put straw in sack
+
+>get sack
+
+>moor
+Moor
+Your score has just gone up by one point.
+
+>peasant
+Your score has just gone up by one point.
+
+>black door
+Your score has just gone up by one point.
+
+>give straw to peasant
+Your score has just gone up by one point.
+
+>x poetry
+lots of smilies
+
+>similes
+more forced than the smilies
+
+>missile
+Your score has just gone up by one point.
+
+>fold paper
+>i
+folded paper plane
+
+>panel
+Your score has just gone up by one point.
+
+>room
+
+>n
+>put hay in wall
+Your score has just gone up by one point.
+
+>hallway
+Your score has just gone up by one point.
+
+>e
+Sacred Cedars
+
+>fill cask
+Gainly laying
+
+>fill cask
+already full
+
+>moor
+>soil
+Your score has just gone up by one point.
+
+>room
+>n
+>e
+>pour oils
+Gainly laying
+SO NOW HALLS SHALL SWOON
+
+>pour oils
+already full
+
+>w
+Crashing Archings
+
+>s
+>moor
+>silo
+Your score has just gone up by one point.
+
+>put missile in silo
+No way to
+
+>put door on silo
+perfectly, swinging
+
+>put missile in silo
+RESULT WITH LUSTER
+
+>put panel on silo
+
+>steer
+ester pervades
+Your score has just gone up by one point.
+
+>shoot
+changes to a shoot
+Your score has just gone up by one point.
+
+>push shoot
+You hear a loud siren!
+
+>push steer
+AMUSING GUNS
+
+>push shoot
+Your score has just gone up by one point.
+Trips Strip
+
+* _metstart
+
+>metros
+>enter metros
+Undesired Underside
+
+>gardenia
+Your score has just gone up by one point.
+1 out of 18 total points
+
+>n
+Cramped Red Camp
+
+>w
+A Yell Alley
+
+>tomato
+Your score has just gone up by one point.
+
+>e
+>velcro
+Your score has just gone up by one point.
+
+>s
+>w
+The Ol' Hotel
+
+>throw tomato at thing
+Your score has just gone up by one point.
+
+>x mattress
+>e
+>n
+>n
+>rental
+Your score has just gone up by one point.
+
+>undo
+>rentals
+Your score has just gone up by one point.
+
+>switch emitter
+Your score has just gone up by one point.
+
+>controls
+Your score has just gone up by one point.
+
+>e
+Elf Row's Flowers
+
+>give gardenia to faeries
+Powerful pure flow
+
+>barcode
+Your score has just gone up by one point.
+
+>keycard
+Your score has just gone up by one point.
+
+>put barcode on keycard
+
+>w
+>s
+>s
+>u
+(on the fuzzy-looking wall)
+
+>opening
+Your score has just gone up by one point.
+
+>put controls in opening
+Your score has just gone up by one point.
+
+>n
+>n
+>e
+
+* _metros-heaths-darkness
+
+>get heaths
+>sheath
+Your score has just gone up by one point.
+
+>w
+>w
+>sword
+Your score has just gone up by one point.
+
+>e
+>give emitter to deadbeat
+Dude! So you
+
+>give emitter to deadbeat
+Man, I've done enough work today !!! double lines
+
+>s
+>e
+Your score has just gone up by one point.
+
+>ask nerds about darkness
+>s
+>e
+Bassy Abyss
+
+>resin
+Your score has just gone up by one point.
+
+>beast
+Your score has just gone up by one point.
+
+>get sword
+Your score has just gone up by one point.
+
+>attack beast
+
+* _metros-heaths-gnats
+
+>get heaths
+>sheath
+Your score has just gone up by one point.
+
+>w
+>w
+>sword
+Your score has just gone up by one point.
+
+>e
+>give emitter to deadbeat
+Dude! So you
+
+>give emitter to deadbeat
+Man, I've done enough work today !!! double lines
+
+>s
+>e
+Your score has just gone up by one point.
+
+>switch emitter
+>s
+>e
+Bassy Abyss
+
+>resin
+Your score has just gone up by one point.
+
+>beast
+Your score has just gone up by one point.
+
+>get sword
+Your score has just gone up by one point.
+
+>attack beast
+Your score has just gone up by one point.
+Trips Strip
+
+* _metros-begonias-darkness
+
+>get begonias
+>noise bag
+Your score has just gone up by one point.
+
+>w
+>w
+>open bag
+Your score has just gone up by one point.
+
+>e
+>give emitter to deadbeat
+Dude! So you
+
+>give emitter to deadbeat
+Man, I've done enough work today !!! double lines
+
+>s
+>e
+Your score has just gone up by one point.
+
+>ask nerds about darkness
+Your score has just gone up by one point.
+
+>s
+>e
+Bassy Abyss
+
+>resin
+Your score has just gone up by one point.
+
+>beast
+Your score has just gone up by one point.
+
+>sword
+Your score has just gone up by one point.
+
+>attack beast
+Your score has just gone up by one point.
+Trips Strip
+
+* _metros-begonias-gnats
+
+>get begonias
+>noise bag
+Your score has just gone up by one point.
+
+>w
+>w
+>open bag
+Your score has just gone up by one point.
+
+>e
+>give emitter to deadbeat
+Dude! So you
+
+>give emitter to deadbeat
+Man, I've done enough work today !!! double lines
+
+>s
+>e
+Your score has just gone up by one point.
+
+>switch emitter
+Your score has just gone up by one point.
+
+>s
+>e
+Bassy Abyss
+
+>resin
+Your score has just gone up by one point.
+
+>beast
+Your score has just gone up by one point.
+
+>sword
+Your score has just gone up by one point.
+
+>attack beast
+Your score has just gone up by one point.
+Trips Strip
+
+* _metros-begonias-noise
+
+>get begonias
+>noise bag
+Your score has just gone up by one point.
+
+>w
+>w
+>open bag
+Your score has just gone up by one point.
+
+>e
+>give emitter to deadbeat
+Dude! So you
+
+>give emitter to deadbeat
+Man, I've done enough work today !!! double lines
+
+>s
+>e
+Your score has just gone up by one point.
+
+>open bag
+Your score has just gone up by one point.
+
+>s
+>e
+Bassy Abyss
+
+>resin
+Your score has just gone up by one point.
+
+>beast
+Your score has just gone up by one point.
+
+>sword
+Your score has just gone up by one point.
+
+>attack beast
+Your score has just gone up by one point.
+Trips Strip
+
+* _resort
+
+>resort
+Your score has just gone up by one point.
+
+>enter resort
+
+>islet
+Your score has just gone up by one point.
+
+>score
+1 out of 14 total
+
+>cork
+Your score has just gone up by one point.
+
+>wings
+Your score has just gone up by one point.
+
+>e
+An Odd Low Woodland
+
+>slope
+Your score has just gone up by one point.
+
+>grips
+Your score has just gone up by one point.
+
+>ropes
+Your score has just gone up by one point.
+
+>toeholds
+Your score has just gone up by two points.
+
+>e
+Potshot Hotspot
+
+>trio
+Your score has just gone up by one point.
+
+>china
+Your score has just gone up by one point.
+
+>kilns
+Your score has just gone up by one point.
+
+>potters
+Your score has just gone up by one point.
+
+>tug toe
+Your score has just gone up by one point.
+
+>e
+Roman Manor
+
+>exist
+Your score has just gone up by one point.
+
+

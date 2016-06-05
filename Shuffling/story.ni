@@ -2281,6 +2281,8 @@ instead of attacking:
 				if player has sword:
 					metro-victory instead;
 				do nothing instead;
+		if player has sword:
+			metro-victory instead;
 		say "You are stuck. [bug-report] Sorry it's so near the end of the game. All I can do is ask your help to weed it out." instead;
 	if noun is riot: [resort]
 		say "You don't want to see the mob act in combat." instead;
@@ -2782,7 +2784,7 @@ Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27.
 
 Metros is a region. min-score of Metros is 17. max-score of Metros is 18.
 
-Resort is a region. min-score of Resort is 11. max-score of Resort is 14.
+Resort is a region. min-score of Resort is 10. max-score of Resort is 14.
 
 book fliptoing
 
@@ -2863,7 +2865,7 @@ after fliptoing (this is the when to increase min points after flip rule): [stat
 		min-up;
 	if noun is banshee: [FOREST]
 		min-up;
-	if noun is antlers: [METROS]
+	if noun is rentals: [METROS]
 		min-up;
 	if noun is cork or noun is wings: [begin RESORT min]
 		if rock is in lalaland and swing is in lalaland:
@@ -2871,11 +2873,11 @@ after fliptoing (this is the when to increase min points after flip rule): [stat
 	if noun is china:
 		min-up;
 	if noun is toeholds:
-		if sprig is off-stage:
+		if sprig is in lalaland:
 			min-up;
-		if spore is off-stage:
+		if spore is in lalaland:
 			min-up;
-	if noun is sprig or noun is spore:
+	if noun is grips or noun is ropes:
 		if toeholds are in woodland:
 			min-up;
 	continue the action;
@@ -3674,7 +3676,7 @@ to decide whether the player yes-consents:
 
 to decide whether the player no-consents:
 	(- YesOrNoExt(0) -).
-	
+
 Include (-
 
 [ YesOrNoExt yn;
@@ -5755,7 +5757,7 @@ every turn when player is in Self-ID Fields (this is the turnstile-guys-through 
 		say "[guy-by-description]";
 
 to say guy-by-description:
-	say "Dude, an undead! He walks by through the turnstile, which glows briefly. He's got [burns] and is wearing [glasstype] and [nosey]."
+	say "Dude, an undead! It's got [burns] and is wearing [glasstype] and [nosey]. The turnstile glows briefly as the undead walks through."
 
 to say burns:
 	say "[one of]muttonchop sideburns[or]a fu-manchu mustache[or]a glorious handlebar mustache[or]a carefully-trimmed Vandyke[or]a mustache your high school buddies derisively referred to as a 'molestache'[or]general patchy scuzz[or]one of those thin beards mostly along the jawline[or]a pencil-thin mustache[or]a soul patch[or]a goatee, no mustache[at random]"
@@ -6190,9 +6192,10 @@ to say agn:
 
 check going north in Self-ID Fields:
 	say "'Scopers! Process corpses!' you hear.[paragraph break]";
-	if player has beard and shades are part of beard and nose is part of the beard:
-		say "'Improper facial...' you quickly slip on your disguise.[paragraph break]";
-		now player wears the beard;
+	unless player wears beard:
+		if player has beard and shades are part of beard and nose is part of the beard:
+			say "'Improper facial...' you quickly slip on your disguise.[paragraph break]";
+			now player wears the beard;
 	if player wears the beard:
 		say "You are[agn] 'recognized' and let through. A voice whispers 'Many vowels, one flow.'";
 		if turnstile-score is false:
@@ -8524,7 +8527,7 @@ Instead of eating the dry cake:
 
 check taking the dry cake:
 	if condo-evac is false:
-		say "[one of]You overhear tales of what happens to those that steal. [or]You feel a slap on your hand from someone who mentions Doc Bleak gave a creep a crepe once. A bold cake blockade! [or]Someone shakes a can of Best Cola and points it at you. Obstacle! [or]'Greedbag! Er, bad egg!' someone calls out. [or][cycling]Someone else takes a turn watching you." instead;
+		say "[one of]You overhear steal-tales and think, alas, settle. [or]You feel a slap on your hand from someone who mentions Doc Bleak gave a creep a crepe once. A bold cake blockade! [or]Someone shakes a can of Best Cola and points it at you. Obstacle! [or]'Greedbag! Er, bad egg!' someone calls out. [or][cycling]Someone else takes a turn watching you." instead;
 
 after taking dry cake:
 	say "You take care not to let the cake tear as you pick it up.";
@@ -9292,6 +9295,9 @@ power-shut is a truth state that varies. power-shut is usually false.
 down-tried is a truth state that varies. down-tried is usually true.
 
 check going down in Elm Train Terminal:
+	try going east instead;
+	
+check going east in Elm Train Terminal:
 	now down-tried is true;
 	if power-shut is false:
 		say "There may be an evil lair that way, but it's behind a live rail in the darkness. You'd touch it before you got there[if shoes are in lalaland]. Even those rubber shoes won't insulate you[end if]." instead;
@@ -11197,7 +11203,7 @@ to say try-flies:
 		now flies-in-emitter is true;
 		now termite emitter is angstgnatted;
 	otherwise:
-		say "'Man, I've done enough work today. I don't want to catch any more angst gnats. Even for you.'";
+		say "'Man, I've done enough work today. I don't want to catch any more angst gnats. Even for you.'[no line break]";
 
 talktoing is an action applying to one thing.
 
@@ -13147,6 +13153,8 @@ carry out sring:
 			say "Zapping you back to the Trips Strip, with new directions to plow through.";
 		now player is in trips strip;
 		decrease cur-score of forest by 2;
+	say "Softer Forest: [godir of random guider in sf].";
+	say "Rest of Forest: [godir of random guider in rf].";
 	the rule succeeds;
 
 table of srdir

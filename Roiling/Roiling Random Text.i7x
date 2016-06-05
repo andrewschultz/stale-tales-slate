@@ -12472,6 +12472,7 @@ blurb	prio
 "No Riven Environ[r], by [if player is male]Ron Vine[else]Erin Von[end if]"
 "No Sea: Aeons as One[r], by Asase Noone"
 "No Seamy Yeomans[r], by Amos Ney"
+"No Secret to Screen[r], by Ernst Coe"
 "No Seeds So Dense[r], by Sed Enos"
 "No Shade Had Eons as Honed[r], by Deon Ash"
 "No-Skore Snooker[r], by Ken Roos"
@@ -22294,6 +22295,7 @@ blurb
 "'Phew, Lon! Help now?' / 'No, whelp!'"
 "'Phil set the slip! He split!'"
 "'A phone? Ah, nope! Ha, peon!' / 'Heap on!'"
+"'A photo? Oo, phat.'"
 "'Piss off, spiffos!'"
 "'Pits, men! I'm spent!'" []
 "'A pity. Pay it!'"
@@ -35288,6 +35290,7 @@ blurb
 "headstrong gnat hordes" []
 "a hero-within white rhino"
 "hip [']n old dolphin" []
+"hip sad aphids"
 "a hoedown woodhen"
 "horse-flies so fleshier"
 "horsin['] rhinos (horns shorn)"

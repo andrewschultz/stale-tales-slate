@@ -1162,6 +1162,26 @@ to decide whether (cho - a number) is irrelevant:
 	if cho is 77 or cho is 109, decide no;
 	decide yes;
 
+section yes/no debug stubs
+
+to decide whether the player yes-consents:
+	(- YesOrNoExt(1) -).
+
+to decide whether the player no-consents:
+	(- YesOrNoExt(0) -).
+
+Include (-
+
+[ YesOrNoExt yn;
+	if ( (+ debug-state +) == 1)
+	{
+	    return yn;
+	}
+	return YesOrNo();
+];
+
+-)
+
 section gender specific stubs and/or silliness
 
 to say a-b:
@@ -1514,10 +1534,12 @@ to force-all-rules:
 chapter glulx header
 
 when play begins (this is the top window rule):
+	d "Starting graphics stuff.";
 	open up the graphics-window;
 	change the current graphics window to the graphics-window;
 	change the current background-color to (R 0 G 0 B 0);
 	change the current foreground-color to (R 255 G 0 B 0);
+	d "Ending graphics stuff.";
 
 The graphics-window is a graphics g-window spawned by the main-window. the position is g-placeabove. The scale method of the graphics-window is g-proportional. The measurement of the graphics-window is 10.
 
@@ -6708,13 +6730,13 @@ upwarned is a truth state that varies.
 check going nowhere (this is the spam can't go that way rule) :
 	if upwarned is false:
 		if noun is up or noun is down:
-			say "You can't go that way[if mrlp is demo dome and player is not in sparse spares], though Sparse Spares is a room away and down[else]. In fact, you almost never have to go up or down in this game[end if].";
+			say "You can't go [noun] here[if mrlp is demo dome and player is not in sparse spares], though Sparse Spares is a room away and down[else]. In fact, you almost never have to go up or down in this game[end if].";
 			now upwarned is true instead;
 	repeat through table of nowheres:
 		if theloc entry is location of player:
 			say "[thereject entry][line break]" instead;
 	if number of viable directions is 0:
-		say "You can't go that way--in fact, you can't go any way here. This is a sort of puzzle room." instead;
+		say "You can't go--well, any way here. This is a sort of puzzle room." instead;
 	else if number of viable directions is 1:
 		say "You can only go [if room noun of location of player is visited]back [end if][list of viable directions] here." instead;
 	else:
@@ -9971,7 +9993,7 @@ check going in stable:
 		if backcheck is false:
 			now backcheck is true;
 			say "You shouldn't need to go back unless you need to figure out the diorama and how the settler works. Do you want or need to do this?";
-			if the player consents:
+			if the player yes-consents:
 				now player is in dusty study instead;
 			else:
 				say "Ok, probably best to [if pram is not in lalaland]find a way out. Clean out that pram, maybe[else]see about that ramp[end if]." instead;
@@ -23721,7 +23743,7 @@ check going south in peek keep:
 		end the story;
 	else:
 		say "Are you sure you want to leave before looking at everything?";
-		if the player consents:
+		if the player no-consents:
 			say "It's--yes, you've sort of lived it, already. You're just too busy for frivolity.";
 			end the story;
 		else:

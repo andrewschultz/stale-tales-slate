@@ -1,0 +1,1557 @@
+## roomlist.txt for Shuffling Around
+##
+
+** game: /home/andrew/prt/debug-sa.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* dirtest-noway-forest1
+
+> gonear forest1
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-forest2
+
+> gonear forest2
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Self-ID-Fields
+
+> gonear Self-ID Fields
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Cruel-Ones'-Enclosure
+
+> gonear Cruel Ones' Enclosure
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Sorted-'Trodes
+
+> gonear Sorted 'Trodes
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Stored,-er,-Dots
+
+> gonear Stored, er, Dots
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Ghouls'-Slough
+
+> gonear Ghouls' Slough
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Frost-Forts
+
+> gonear Frost Forts
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Centrifuge
+
+> gonear Centrifuge
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-The-Nick
+
+> gonear The Nick
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Kitchen
+
+> gonear Kitchen
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-room1
+
+> gonear room1
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Moor
+
+> gonear Moor
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Stiller-Trellis
+
+> gonear Stiller Trellis
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Sacred-Cedars
+
+> gonear Sacred Cedars
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Cordoned-Red-Condo
+
+> gonear Cordoned Red Condo
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Cramped-Red-Camp
+
+> gonear Cramped Red Camp
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-A-Yell-Alley
+
+> gonear A Yell Alley
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Elf-Row's-Flowers
+
+> gonear Elf Row's Flowers
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Undesired-Underside
+
+> gonear Undesired Underside
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-The-Ol'-Hotel
+
+> gonear The Ol' Hotel
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Elm-Train-Terminal
+
+> gonear Elm Train Terminal
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Bassy-Abyss
+
+> gonear Bassy Abyss
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Anti-Cool-Location
+
+> gonear Anti-Cool Location
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Tiles
+
+> gonear Tiles
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Woodland
+
+> gonear Woodland
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Roman-Manor
+
+> gonear Roman Manor
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Potshot-Hotspot
+
+> gonear Potshot Hotspot
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-A-Dry-Yard
+
+> gonear A Dry Yard
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Notices-Section
+
+> gonear Notices Section
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Busiest-Subsite
+
+> gonear Busiest Subsite
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Thickest-Thickets
+
+> gonear Thickest Thickets
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Trips-Strip
+
+> gonear Trips Strip
+
+!Which do you mean,
+!Sorry, I understood the verb, but I didn't understand the noun.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+

@@ -1,0 +1,113 @@
+## reg-sa-nudges.txt
+## nudges for Shuffling Around: the big test
+##
+
+
+** game: /home/andrew/prt/debug-sa.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* dirtest-noway-forest1
+
+>xyyzz
+A hollow voice booms
+>gluph
+A hollow voice booms
+>provel
+A hollow voice booms
+
+>itsh
+You're not fooling ME.
+>kcuf
+You're not fooling ME.
+>mand
+You're not fooling ME.
+>lelh
+You're not fooling ME.
+>parc
+You're not fooling ME.
+>hekc
+You're not fooling ME.
+
+>smell
+Your sense of smell doesn't change
+
+>writign
+do anything with writing besides EXAMINE
+
+>pocktes
+You don't need to mess with your pockets.
+>pockte
+You don't need to mess with your pockets.
+
+>jmpu
+impressively uncoordinated
+
+>ption
+no scret cheat between NO TIP
+
+>parse
+no inbetween for the PARSE
+
+>verb
+There's no secret verb or verbs to find trying that
+
+>verbs
+There's no secret verb or verbs to find trying that
+
+>thikn
+things always get jumbled
+
+>scoer
+There's no way to scramble your score
+
+>abotu
+"about" section, but I'm flattered you looked for it
+
+>credist
+"credits" section, but I'm flattered you looked for it
+
+>credti
+"credits" section, but I'm flattered you looked for it
+
+>sites
+Meta-commands don't have any easter eggs, sadly
+
+>tech
+Meta-commands don't have any easter eggs, sadly
+
+>son
+Meta-commands don't have any easter eggs, sadly
+
+>spaceon
+Meta-commands don't have any easter eggs, sadly
+
+>spaceson
+Meta-commands don't have any easter eggs, sadly
+
+>spaces
+Meta-commands don't have any easter eggs, sadly
+
+>space
+Meta-commands don't have any easter eggs, sadly
+
+>access
+Meta-commands don't have any easter eggs, sadly
+
+>opts
+Meta-commands don't have any easter eggs, sadly
+
+>options
+Meta-commands don't have any easter eggs, sadly
+
+>version
+Meta-commands don't have any easter eggs, sadly
+
+>something
+Instead of messing with SOMETHING
+
+>toda
+If you changed the pen,
+
+>enp
+If you changed the pen,
+
