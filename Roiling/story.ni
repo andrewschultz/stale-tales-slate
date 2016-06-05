@@ -1709,7 +1709,7 @@ to decide what indexed text is the filtered name of (t - a value of kind K):
 	replace the regular expression "<^abcdefghijklmnopqrstuvwxyz>" in s with "";	[ a-z would include accented characters]
 	decide on s;
 
-to decide what number is the hash of (t - a value of kind K):
+to decide which number is the hash of (t - a value of kind K):
 	let s be the filtered name of t;
 	let hash be 0;
 	repeat with c running from 1 to the number of characters in s:
@@ -1856,6 +1856,8 @@ carry out gotoing:
 		say "You have disposed of what you're trying to get to." instead;
 	if last-loc of noureg is unvisited:
 		say "You haven't made it to that region, yet." instead;
+	if noureg is not mrlp:
+		say "You can't jump across game regions." instead;
 	if noun is strip and mrlp is not stores:
 		say "This is equivalent to the RETRY command, so that's what I'll do.";
 		try retrying instead;
@@ -2691,7 +2693,7 @@ Terrance	"[war-duh]"
 Tyson	"[war-duh]"
 Wade	"[war-duh]"
 Sir Rodney	"This standoff won't be resolved with diplomacy."
-Ed Yerg	"[if ed yerg is reflexive]Ed Yerg babbles about how he's not GREEDY (and here he sees red) like Reg Edy, but if you're looking to restore the palace, he would like an assistant's fee. Or if you want to buy his land, it will cost a bit. Not that you seem to have anything valuable enough in your inventory[else if crocus is reflexed]Ed laments the fall of the curst palace--as lifeless as that succor crocus you're carrying[else if player has crocus]Ed looks at the crocus while wondering if you might be The One[else]'Old clues, eh?' He colludes--babbles, spectacled, avuncular, a polite ole tip about the palace. Make it [3-random] 'No closure, counselor,' you lament, but his general tone and how he says it seem to do something for you. Maybe it'll help something pop in your head[new-yerg-thing][end if]."
+Ed Yerg	"[if ed yerg is reflexive]Ed Yerg babbles about how he's not GREEDY (and here he sees red) like Reg Edy, but if you're looking to restore the palace, he would like an assistant's fee. Or if you want to buy his land, it will cost a bit. Not that you seem to have anything valuable enough in your inventory[else if flowerpot is reflexed]Ed laments the fall of the curst palace--as lifeless as that succor crocus you're carrying[else if player has crocus]Ed looks at the crocus while wondering if you might be The One[else]'Old clues, eh?' He colludes--babbles, spectacled, avuncular, a polite ole tip about the palace. Make it [3-random] 'No closure, counselor,' you lament, but his general tone and how he says it seem to do something for you. Maybe it'll help something pop in your head[new-yerg-thing][end if]."
 Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice to quiet him down, somehow."	[start otters]
 cinders	"You need to find the right way to ask them. One without speaking."
 Le Mer	"[one of]It's kind of single-minded, but it's impressive the moat talks at all[or]Again, ethereal babbling[stopping]. '[if sea cube is visible]You must convince me to unlock the sea cube[tho-need].[else if eels are visible]The eels still distrust you[tho-need].[else]Your powers are regained. Go to your destiny![end if]'"
@@ -3276,14 +3278,14 @@ to say current-known:
 			consider the my-rule entry;
 			if the rule succeeded:
 				increment yays;
-				say "[my-let entry]";
+				say "[my-let entry][no line break]";
 	say "[line break]Yellow: ";
 	repeat through table of known-letters:
 		if v-c-y entry is 2:
 			consider the my-rule entry;
 			if the rule succeeded:
 				increment yays;
-				say "[my-let entry]";
+				say "[my-let entry][no line break]";
 	consider the got-y rule;
 	if the rule succeeded:
 		increment yays;
@@ -3566,13 +3568,13 @@ before quipping when player is in fro (this is the Gretta checks rule):
 					now missed-one is true;
 			if missed-one is true:
 				say "'Oh--um, yeah, don't feel you're holding me back. I sort of want to get away, but I know a few things that could help you,' Gretta says. Stay and ask a bit more?";
-				unless the player consents:
+				unless the player yes-consents:
 					say "OK.";
 					continue the action;
 				say "A bit of awkward silence follows, but it's nowhere near as awkward as the macks['] conversation.[no line break]";
-				now hold-it-up is true;
+				choose row with response of gre-go-quip in the table of Gretta comments;
+				now enabled entry is 1;
 				reject the player's command;
-		now the player has medals;
 
 instead of abouting or creditsing or xyzzying or requesting the score when rq is active:
 	say "[convoforce]." instead;
@@ -4215,7 +4217,7 @@ check entering a portal:
 					say "The towers are imposing enough that you look back at the patcher and feel relieved you can just RETRY and zap your way through in case you get stuck.";
 				else:
 					say "Man, those towers are imposing! They are easily bigger than the other stores, maybe as big as any two [if number of visible portals is 1]stores[else if number of visible flippable stores is 0]portals[else]stores or portals[end if] combined. You may want to chip away at [if number of solved regions is 1]a couple easier places[else]another easier place[end if] first[if oyster is solved]--the towers look way more re-enforced than even the oyster[end if]. Proceed anyway?";
-					unless the player consents:
+					unless the player yes-consents:
 						say "You decide to look around a bit more." instead;
 	if noun is oyster-x:
 		if number of solved regions < 2:
@@ -4528,6 +4530,7 @@ flowerpot	"The crocus almost seems to perk up."
 curst palace	"Hmm...[if player is in limits]no rumbling from the curst palace. You're going to need a big word, here[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 b-b	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
 Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertaste."
+t-bossily	"[mack-dealt]."
 t-nastily	"[mack-dealt]."
 t-seedily	"[mack-dealt]."
 t-shadily	"[mack-dealt]."
@@ -4830,7 +4833,7 @@ to say reject:
 			continue the action;
 	if mrlp is otters:
 		if the player's command matches the regular expression "^<a-z>+ly":
-			say "[if whistle is reflexed and medals are reflexed]You don't know if you need to do any more of that[anicheck][else]You think you're on to something, but no--you can't find anything to focus on, thinking that.";
+			say "[if whistle is reflexed and medals are reflexed]You don't know if you need to do any more of that[anicheck][else][ly-ish].";
 			continue the action;
 	say "That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. ";
 	unless qbc_litany is Table of No Conversation:
@@ -4842,6 +4845,9 @@ to say reject:
 	else:
 		say "[line break]";
 	now last-hash is my-key;
+
+to say ly-ish:
+	say "You think you're on to something, but no--you can't find anything to focus on, thinking that"
 
 to say anicheck:
 	if nounsolve > 2 or adjsolve > 2:
@@ -4954,7 +4960,7 @@ to say lhs:
 	let QQQ be the number of visited rooms in Troves;
 	repeat with QQQQ running from 1 to 6:
 		say "[if QQQQ is QQQ]*[else]-[end if]";
-	say "Very Top (Troves)"
+	say "Very Top (Troves, [location of player])"
 
 to say poss-range:
 	if poss-score of mrlp > min-score of mrlp:
@@ -4981,7 +4987,7 @@ carry out requesting the score:
 			if min-score of mrlp < poss-score of mrlp:
 				say ". Lowest score to solve is [min-score of mrlp]. Maximum score available is [poss-score of mrlp]";
 			else:
-				say ". You need [min-score of mrlp] points to win";
+				say ". You've found all the secrets here, so you need all [min-score of mrlp] points to win";
 		say ".[line break]";
 		if mrlp is otters and inhib is true:
 			say "[line break]You probably need to do something to get back your full powers, too.";
@@ -5245,7 +5251,11 @@ scaning is an action applying to one thing.
 understand the command "scan [something]" as something new.
 understand the command "scan [something]" as something new.
 
-understand "scan [something]" as scaning.
+understand "scan" as scaning.
+
+rule for supplying a missing noun while scaning:
+	if player is in lean lane and cans are in lean lane:
+		now noun is cans
 
 does the player mean scaning the player: it is unlikely.
 
@@ -7199,16 +7209,16 @@ check giving something to:
 		if second noun is ray eck:
 			say "'That's real generous, but I got my hands full with this keycar!'" instead;
 		say "No response. It looks like a gift won't be enough to get by. But you won't need one, based on what you've done so far." instead;
-		if second noun is kid:
-			if noun is a hintpastry:
-				say "Giving sweets to kids? Really." instead;
-			if doc-y is not in lalaland:
-				say "The kid seems like [he-she]'d rather have the gift of knowledge." instead;
-			if noun is settler:
-				say "The kid seems impressed, but [he-she]'s more mechanically than magically inclined." instead;
-			unless noun is gizmo:
-				say "That's not technical enough for the kid." instead;
-			continue the action;
+	if second noun is kid:
+		if noun is a hintpastry:
+			say "Giving sweets to kids? Really." instead;
+		if doc-y is not in lalaland:
+			say "The kid seems like [he-she]'d rather have the gift of knowledge." instead;
+		if noun is settler:
+			say "The kid seems impressed, but [he-she]'s more mechanically than magically inclined." instead;
+		unless noun is gizmo:
+			say "That's not technical enough for the kid." instead;
+		continue the action;
 	if second noun is ed yerg:
 		say "[if ed yerg is reflexive]He mumbles, nonsensically, 'Eeg, dry,' and rejects your offer. You go red-faced at offering such a paltry gift--and his reaction[else]Ed is a reformed character. He needs no gifts of monetary value[end if]." instead;
 	if noun is flowerpot:
@@ -7389,7 +7399,7 @@ before listening (this is the you can hear stuff some places rule):
 		try examining babblings instead;
 	if player is in Used Lot:
 		unless what-a-bee is reflexive and bee's head is reflexive:
-			say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!'[in random order] You see red a bit at getting no direct help, yourself." instead;
+			say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!'[in random order][run paragraph on] You see red a bit at getting no direct help, yourself." instead;
 	if player is in rathole or player is in used lot:
 		say "[if talk-quiet is false]You shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if player is in rotunda or player is in econ cone:
@@ -8321,8 +8331,6 @@ check fliptoing (this is the portal palm and reflexive flip rule):
 			check-get-pad;
 			now noun is prefigured;
 			pad-rec "flips" instead;
-		if noun is part of diorama:
-			now diorama-flip is true;
 
 check fliptoing when player is in dusty study and gunter is off-stage (this is the don't flip til you should at start rule) :
 	repeat through table of anagrams:
@@ -8419,7 +8427,6 @@ carry out fliptoing:
 					else:
 						now basement-backpedal is true;
 				else if the-to entry is onyx censer and the player's command includes "phooey":
-					min-up;
 					two-up;
 				else if the-from entry is not part of the diorama:
 					reg-inc;
@@ -8436,6 +8443,7 @@ carry out fliptoing:
 				now player has the-to entry;
 			else if the-from entry is part of the diorama:
 				now the-to entry is part of the diorama;
+				now diorama-flip is true;
 			else if the-to entry is not visible:	[components aren't broken off]
 				if the-to entry is not the-from entry:
 					move the-to entry to location of player;
@@ -8564,7 +8572,7 @@ c2	c2	"trace"	"trace"	"Based on where you got hit and how fast it hit you, you t
 crate	crate	"react"	"react"	"This time you're ready. You turn around and know when to look when the crate is about to hit you. You knock it down in mid-air and, in a fit of rage, fling it back into the tall weeds and hit the en-pris sniper. You hear an expression of anger, then scurrying. You won't need to recast the crates."	false	337433333
 skis	skis	"kiss"	"kiss"	"As you kiss them, they pull up--and dissolve."	false	290473956
 knob	knob	"bonk"	"bonk"	"BONK! You hit the knob just right."	false	214612168
-bogus-plains	bogus-plains	"splain"	"splain"	"[if door-sux is true]You brag, to nobody and everyone in particular, how you SHOWED that door. It's in no shape to argue[else if bonkies is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the rude door how you'll get by anyway[end if]. You feel better after this, now you stated what your plan is."	false	347641936
+bogus-plains	bogus-plains	"splain"	"splain"	"[if door-sux is true]You brag, to nobody and everyone in particular, how you SHOWED that door. It's in no shape to argue[else if bonkies is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the rude door how you'll get by anyway. It's short on detail, but it sounds impressive[end if]. You feel better after this, now you bragged a bit."	false	347641936
 bubble wrap	ruby	"warp"	"warp"	"You warp the bubble wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"	false	276912353
 a-s	a-s	"search"	"search"	"'Reach, acher,' you say, stretching a bit more to find something interesting."	false	367879580
 o-t	a-p	"patrol"	"patrol"	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap. It's a portal now."	false	400254014	"Waste of time. You already disabled the ol['] trap--you can just enter the portal."
@@ -8612,7 +8620,7 @@ steel pad	pedestal	"pedestal"	"pedestal"	"The steel pad intertwines into a margi
 flea	leaf	"leaf"	"leaf"	"The hopefully only recently dead giant flea becomes a recently dead giant leaf, which looks much better due to all the pretty colors it's turned. It's light for its size, so you pick it up."	true	210322662
 gum	mug	"mug"	"mug"	"The gum, being gum, morphs easily into a new shape -- a mug with annoying smile. Smug Mugs are, sadly, still in fashion in Yorpwald. But they often have a right to be--some even replenish what's in them."	true	201780662
 coal	dirty looking cola	"cola"	"cola"	"The cheap-and-dirty physical energy-giving coal turns into cheap-and-dirty mental energy giving cola, which you take."	true	149359819
-fount	futon	"futon"	"futon"	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh? you think, looking at it[if scratch paper is reflexive], though you're not really tired yet[end if]."	false	377990806
+fount	futon	"futon"	"futon"	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh?[r] you think, looking at it[if scratch paper is reflexive], though you're not really tired yet[end if]."	false	377990806
 onyx censer	computer screen	"screen"	"screen"	"The onyx censer and its green dots swirl around and reform into a black screen! With green text!"	true	525123080
 drab yoke	keyboard	"keyboard" or "key board"	"keyboard"	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."	true	504410731
 t-key	t-key	"tab" or "tab key"	"tab"	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."	false	123716741
@@ -8620,7 +8628,7 @@ scratch paper	scratch paper	"compile"	"compile"	"You[if player has rom sticks] f
 trim socks	ROM sticks	"romsticks/romstick" or "rom stick/sticks"	"romsticks"	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."	true	636341092
 escaroles	casserole	"casserole"	"casserole"	"The escaroles become a much more calorie-infused casserole. Not your sort of casserole, but more active gourmand types might gobble it down."	false	682843772
 trim socks	ROM sticks	"romstick" or "rom stick"	"romstick"	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."	true	540067126
-compiled code	USB	"debug"	"debug"	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Ponder no derp,' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if t-key is reflexive], despite not realizing what the TBA key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break] 'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, revealing a plain old USB. You need a way out!"	false	304959612
+compiled code	USB	"debug"	"debug"	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Ponder no derp,' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if t-key is reflexive], despite not realizing what the TBA key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break]'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, revealing a plain old USB. You need a way out!"	false	304959612
 USB	USB	"sub/bus"	"sub"	"[sub-bus]!"	false	219798678	"sub"	Strip of Profits	[end of the PRESTO flip bit]
 snider diners	snider diners	"rinsed"	"rinsed"	"The diners['] dry wit and mood dampen as a water spray erupts from nowhere--and gets them! Their outdoor dining experience has been ruined. They skulk away to somewhere safer."	false	444333321[start towers flip bit]
 ingrates	ingrates	"angstier"	"angstier"	"The ingrates suddenly develops the mooniest emotions--why bother to stop you from doing whatever? After a final snit-rage about you not caring about their problems, they decide to go whine by themselves."	false	561201770	"angstier"
@@ -8699,6 +8707,7 @@ p-2	p-2	"however"	"however"	"Mr. Lee doesn't seem willing to discuss the paintin
 sea cube	sea cube	"because"	"because"	"'Well, now that you put it that way...' You hear a rush of water. Le Mer has unlocked the sea cube. Eels come out. They look up at you--they may be able to understand you."	false	496604299
 eels	eels	"else"	"else"	"The eels seem to understand you. They squirm across the pool and gaze at you as if to stay still. You feel a shock through your body[if inhib is false] much like in Mr. Lee's bran barn[else], and your mordant skills are no longer dormant[end if]."	false	405700023
 atmo-moat	atmo-moat	"atom"	"atom"	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom."	false	243725566
+t-bossily	t-bossily	"bossily"	"bossily"	"The macks cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now."	false	506485351
 t-nastily	t-nastily	"nastily"	"nastily"	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. They scramble to assure her they didn't mean it that way, but she's not fooled."	false	491645247 [begin MACKS 7]
 t-seedily	t-seedily	"seedily"	"seedily"	"That thing they were doing? With their eyelids? Well, Gretta seems to have caught on, now. She laughs and groans a bit, and the macks accuse each other of being too obvious."	false	594081210
 t-shadily	t-shadily	"shadily"	"shadily"	"You manage to make them let slip a mean dis of other maidens."	false	377939109
@@ -8957,7 +8966,7 @@ instead of doing something with satchel when player has satchel:
 	say "You've gotten the settler from the satchel, and you don't need to do more." instead;
 
 to say eicond:
-	say "[if cur-score of troves is 0]You can picture yourself, successful, extolling this book as what got you started[else if player is in rathole]You feel you can and will do better than here[else if player is in Used Lot]You dare to feel superior to whoever might be walking around here[else if player is in Pallid Li'l Pad]The book convinces you that average is not enough for a thinker like you, as long as you are thinking like it. You buck up[else if player is in Dour Tan Rotunda]Someone semi-important-looking walks by and commends your choice of reading material, and you say you love it[else if player is in Econ Cone]You even successfully turn back an insult from someone who is all LESS READING MORE DOING[else if player is in fiefco]You turbo-speed-read, since you've LIVED a lot of this advice[end if], ignoring how useless the book is for helping you figure what to do right now"
+	say "[if cur-score of troves is 0]You can picture yourself, successful, extolling this book as what got you started[else if player is in rathole]You feel you can and will do better than here[else if player is in Used Lot]You dare to feel superior to whoever might be walking around here[else if player is in Pallid Li'l Pad]The book convinces you that average is not enough for a thinker like you, as long as you are thinking like it. You buck up[else if player is in Dour Tan Rotunda]Someone semi-important-looking walks by and commends your choice of reading material, and you say you love it[else if player is in Econ Cone]You even successfully turn back an insult from someone who is all LESS READING MORE DOING[else if player is in fiefco]You turbo-speed-read, since you've LIVED a lot of this advice[end if], ignoring how useless the book is for helping you figure what to do right now. Eh well, you've got a spiel to tell others how THEY better use it"
 
 to say rscheck:
 	if word number 1 in the player's command is "resealed":
@@ -9143,7 +9152,10 @@ to say tables-beams:
 		say "[if tables are in study]tables (the spreadsheety kind) on one wall[else]a way OUT where the tables were[end if]";
 		say ", and [if t-b are in study]beams on another wall[else]a way down where those beams were[end if]";
 
-Dusty Study is an innie room in Roman Manor. "[one of]Your study's not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if thinko is false and gunter is off-stage]. It's a good place to just THINK[end if][if Gunter is in lalaland]. After your sleep, you remember you built some secret passages[end if][if gunter is in lalaland]. You'll want to take them[else]. You came in through your super-secret side door, and you don't feel like going back out, yet[end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
+Dusty Study is an innie room in Roman Manor. "[one of]Your study's not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is in lalaland]. After your sleep, you remember you built some secret passages[end if][if gunter is in lalaland]. You'll want to take them[else]. You came in through your super-secret side door, and you don't feel like going back out, yet[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
+
+to say think-cue:
+	say "[if thinko is false and gunter is off-stage]. It's a good place to just THINK[end if]"
 
 to decide which number is study-outs:
 	let q be 0;
@@ -9237,11 +9249,9 @@ instead of doing something with chair:
 
 report taking pedanto-notepad:
 	say "Good choice taking the notepad. It'll help you tame lots that's meta, mate.";
-	move-ads instead;
-
-to move-ads:
-	now sad ads are in dusty study;
-	say "Taking the pedanto-notepad uncovered some sad ads on the chair.";
+	if sad ads are not in dusty study:
+		now sad ads are in dusty study;
+		say "[line break]Taking the pedanto-notepad uncovered some sad ads on the chair.";
 
 instead of pushing or pulling or searching or opening or closing bookshelf:
 	say "There's no secret passage behind it. And if there were, you couldn't move it. It's got about [book-est] books, after all."
@@ -9626,7 +9636,7 @@ diorama-flip is a truth state that varies.
 
 tried-flip is a truth state that varies.
 
-to decide what number is stuff-found:
+to decide which number is stuff-found:
 	let mytemp be 0;
 	if gunter is in lalaland, decide on 3;
 	if thinko is true, increase mytemp by 2;
@@ -9920,7 +9930,11 @@ understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a m
 
 basement-been is a truth state that varies.
 
-Basement is a stairy innie privately-named room in Roman Manor. printed name of Basement is "[bsmnt]". "[one of]Aw, man! This basement was supposed to be a place for solitude, but it was so good at being inconspicuous, even you forgot about it! You see and remember the evac-cave now. It's your way out[or]You can go into the evac-cave here[stopping][if cur-score of manor < 9], though if you're a completist, you may want to poke around the study and such first[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
+rule for supplying a missing noun when entering:
+	if player is in basement:
+		now the noun is the evac-cave.
+
+Basement is a stairy innie privately-named room in Roman Manor. printed name of Basement is "[bsmnt]". "[one of]Aw, man! This basement was supposed to be a place for solitude, but it was so good at being inconspicuous, even you forgot about it! You see and remember the evac-cave now. It's your way out[or]You can enter the evac-cave here[stopping][if min-score of manor < max-score of manor], though if you're a completist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
 
 understand "basement" as Basement.
 
@@ -10573,7 +10587,7 @@ instead of showing settler to smart kid:
 	try objasking kid about settler;
 
 after examining settler for the first time:
-	say "You figure up some heuristics to make the settler easier to use.";
+	say "You figure up some heuristics to make the settler easier to use and write them in your notepad.";
 	pad-rec "the settler";
 	continue the action;
 
@@ -11706,7 +11720,7 @@ description of f-o-b is "You look behind the otters at the field of barley. [if 
 check entering otters-x:
 	if number of needed regions > 0:
 		d "[list of needed regions].";
-		say "As you step between them, you feel mess-up spumes from the otters--maybe a passive sap-vise--drain you to a nadir. 'I...darn![paragraph break]You could take your powers going dormant, but they might get mordant. Maybe you need to build them up by fixing things elsewhere[if patcher is in strip of profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
+		say "As you step between them, you feel mess-up spumes from the otters--maybe a passive sap-vise--drain you to a nadir. 'I...darn!'[paragraph break]You could take your powers going dormant, but they might get mordant. Maybe you need to build them up by fixing things elsewhere[if patcher is in strip of profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
 	if eels are not in lalaland:
 		now inhib is true;
 	say "You begin to feel drained, and you let out a 'darn, I...' you slow down but just make it. 'Rad! In!'"
@@ -11815,7 +11829,9 @@ Store Z is a useless sto. understand "store/ 26/twentysix" as Store Z when playe
 
 chapter megaton magneto montage
 
-the megaton magneto montage is useless scenery in Strip of Profits. printed name of montage is "megaton magneto montage"
+the megaton magneto montage is useless scenery in Strip of Profits. printed name of montage is "megaton magneto-montage"
+
+understand "mmm/mm" as megaton magneto montage when player is in Strip of Profits.
 
 instead of doing something with the megaton magneto montage:
 	if current action is scaning:
@@ -11824,7 +11840,7 @@ instead of doing something with the megaton magneto montage:
 		continue the action;
 	say "The magneto-montage's not good for much besides looking at. But it's a useful guide.";
 
-description of megaton magneto montage is "It's a sort of directory of all the stores[one of]. You read it through, but you can gloss through it for interesting bits (or even call it LM,) later[or]. You gloss through for what interests you[stopping].[paragraph break][b]CLOSED ON YORPDAY (that's today)[r]: A, D, E, G, J, L, O, Q, S, X, Z[if store b is reflexive][line break][b]FREE SAMPLES: B[r][end if][if store c is not examined][line break][b]NO PRUDES, USED !!!!: C[r][end if][line break][b]DON'T BOTHER UNLESS YOU'VE NOTHING, I MEAN NOTHING, TO DO[r]: H[one of][line break][b]OF HISTORICAL SIGNIFICANCE[r]: F/Forest, I/Sortie, M/Metros, R/Resort[or][stopping][if store k is in strip or store k is in strip][line break]CONDEMNED: K, N[line break][end if][b]NOT ELVIRA-APPROVED. ENTER AT OWN RISK[r]: P, U, V, W, Y[if store t is in profits][line break][b]ELVIRA SAYS KEEP EXTRA DOUBLE OUT[r]: T[paragraph break][engrav-note]."
+description of megaton magneto montage is "It's a sort of directory of all the stores[one of]. You read it through, but you can gloss through it for interesting bits (or even call it LM,) later[or]. You gloss through for what interests you[stopping].[paragraph break][b]CLOSED ON YORPDAY (that's today)[r]: A, D, E, G, J, L, O, Q, S, X, Z[if store b is reflexive][line break][b]FREE SAMPLES: B[r][end if][if store c is not examined][line break][b]NO PRUDES, USED !!!!: C[r][end if][line break][b]DON'T BOTHER UNLESS YOU'VE NOTHING, I MEAN NOTHING, TO DO[r]: H[one of][line break][b]OF HISTORICAL SIGNIFICANCE[r]: F/Forest, I/Sortie, M/Metros, R/Resort[or][stopping][if store k is in strip or store k is in strip][line break][b]CONDEMNED[r]: K, N[line break][end if][b]NOT ELVIRA-APPROVED. ENTER AT OWN RISK[r]: P, U, V, W, Y[if store t is in profits][line break][b]ELVIRA SAYS KEEP EXTRA DOUBLE OUT[r]: T[paragraph break][engrav-note]."
 
 to say engrav-note:
 	say "[if engravings are examined]Those engravings are at the bottom, too[else]You note engravings craftily hidden below all this[end if]"
@@ -11987,6 +12003,13 @@ after printing the name of a quest-item while taking inventory:
 	if read-list is true:
 		say " (for Brother Horbert)";
 
+after taking inventory:
+	if number of carried quest-items is 3:
+		say "You should go back to the Cleric Circle now.";
+	if number of carried quest-items > 0:
+		say "You're on your way to helping Brother Horbert.";
+	continue the action;
+
 the specification of quest-item is "One of three items needed for Brother Horbert's potion."
 
 check objasking brother horbert about a quest-item:
@@ -12047,7 +12070,7 @@ check fliptoing when player is in same mesa (this is the allow entry for fancy v
 	if noun is reflexed:
 		if noun is picturers or noun is lairage or noun is signboard:
 			if old giant is visible:
-				say "Walking away would upset the giant. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help" instead;
+				say "Walking away would upset the giant. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help." instead;
 			if drama armada is in mesa or the-b is in mesa:
 				say "But... [if the-b is in mesa]THE BEAN[else]the huge thing[end if]! What to do with it[if armada is in mesa]? The armada mumbles nervously.[else]?[end if]" instead;
 			if huge thing is in mesa:
@@ -12769,7 +12792,7 @@ after printing the locale description for Sun-Spared Underpass when Sun-Spared U
 	if worst ad is not in lalaland:
 		poss-d;
 
-description of Sun-Spared Underpass is "[if darkness is visible]This room was always unlit... but things don't always have to be in the past...[else]Now, you need to find No-Gal Logan. You need to find a good unroad...because roads and inroads will loop back.[end if]"
+description of Sun-Spared Underpass is "[if darkness is visible]This room was always unlit... but things don't always have to be in the past...[else if un-road is in underpass]Now you've found the un-road to get to No-Gal Logan, how to navigate it?[else]Now, you need to find No-Gal Logan. You need to find a good unroad...because roads and inroads will loop back.[end if]"
 
 chapter darkness
 
@@ -13427,6 +13450,7 @@ after fliptoing when location of player is Econ Cone (this is the Pernod appears
 after fliptoing pernod:
 	if rivets are reflexive or prai is reflexive:
 		decrement poss-score of troves;
+	consider the region-knock rule;
 	continue the action;
 
 description of bottle of pernod is "It says [if label is in lalaland]N-E-Prod below where the label was[else]PERNOD on the label, which looks a bit loose[end if]. There's also a card you could read."
@@ -13563,7 +13587,7 @@ instead of doing something with the noise:
 
 chapter DIVORCES magazine
 
-DIVORCES Magazine is vanishing scenery in FiefCo Office. "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla]"
+DIVORCES Magazine is vanishing LLPish scenery in FiefCo Office. "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla]"
 
 a-text of divorces is "RYRRYRYR". b-text of divorces is "PGRRYRGR". parse-text of divorces is "d[sp]i[sp]x[sp]x[sp]o[sp]x[sp]e[sp]x".
 
@@ -14449,7 +14473,7 @@ for writing a paragraph about a bruisin person:
 	if Leo is eager:
 		say "Leo and Rand are here, [if rebuked is true]tentatively[else]eagerly[end if] waiting to follow you[if smart people sign is visible] into that computer area they probably don't need to be[end if]." instead;
 	if Rand is washed up and Leo is washed up:
-		say "Leo and Rand are here[r][one of], commiserating. Maybe a talk with them would help, or the right word might help them feel less like [i]washups[r][or], half wanting a third party to drop a nice word and assure them they aren't [i]washups[r][stopping]." instead;
+		say "Leo and Rand are here[r][one of], commiserating. Maybe a bit of a talk and listen would help, or the right word might help them feel less like [i]washups[r][or], half wanting a third party to drop a nice word, maybe listen a bit, and assure them they aren't [i]washups[r][stopping]." instead;
 
 every turn when player is in dirge ridge:
 	if Leo is fightin:
@@ -14720,7 +14744,10 @@ check going west in Phat Path:
 	say "Harm's Marsh would make quick work of even [if Leo is in dirge ridge]your old friends [end if]Leo and Rand[swan-puma], with or without a goop-pogo[exwall]." instead;
 
 to say exwall:
-	say ". The [if wall is in phat]ex-[end if]wall north is an easier proposition.";
+	if shack is visited:
+		say ". The shack seems to be where it's ultimately at, anyway";
+	else:
+		say ". The [unless wall is in phat]ex-[end if]wall north is an easier proposition";
 
 to say swan-puma:
 	say "[one of], with or without the fabled Sawn Swan and Ampu-Puma[or][stopping]";
@@ -16262,7 +16289,7 @@ check fliptoing when player is in Posh Hops Shop:
 
 to check-silly-death:
 	say "You've caused enough damage for the trolls to kick you out. Any more and they might just kick you. Still, you sure?";
-	unless the player consents:
+	unless the player yes-consents:
 		say "The trolls nod as if they were the ones who stopped you from further nonsense.";
 		continue the action;
 	say "The patrons still stare in belief, but the trolls are onto you. They give you a (self-) righteous beat-down. As the trolls beat you up, they mention you're probably the sort of punk who needs to undo stuff a lot to win a game, and that's not really hardcore.[paragraph break]Perhaps you should've played it cool and fled, instead.";
@@ -16383,7 +16410,7 @@ carry out spilling:
 	if pill-warned is false and scams is false:
 		say "[if anger range is not visited]You briefly wonder if the pill jar might be better saved for later[else]You have a brief vision of Elvira trolling '[he-she-c] needed DRUGS!' which is silly, but yeah[end if]. Release the pills anyway?";
 		now pill-warned is true;
-		unless the player consents:
+		unless the player yes-consents:
 			do nothing instead;
 		say "Okay.";
 	if player is in sand home:
@@ -16399,6 +16426,7 @@ carry out spilling:
 			say "You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of bubble wrap[if tea is not in lalaland] and the tea tray, too[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel don't know how. Anyway, once you left, she kept muttering how she wanted to get rid of this bubble wrap to somebody. So I snuck it for you.'";
 			guy-cheat trout;
 			now aunt-tuna-cross is true;
+			move player to anger range;
 			do nothing instead;
 		else:
 			say "That would be a rude parting gift. You've claimed your reward--the bubble wrap[if tea tray is not in lalaland]. Though it would seem polite--and straightforward--to try something from the tea tray[end if]." instead;
@@ -17016,23 +17044,12 @@ after fliptoing when player is in plains: [everything except "splain"]
 
 a-text of crate is "RYYRR". b-text of crate is "RYGRR". parse-text of crate is "x[sp]r[sp]a[sp]x[sp]t". crate is parse-spoilable.
 
-chapter reacting
-
-reacting is an action applying to nothing.
-
-understand the command "react" as something new.
-
-understand "react" as reacting.
-
-carry out reacting:
-	if location of player is not Lapsin' plains:
-		say "[reject]" instead;
-	if c2 is in plains:
-		say "You don't yet know how, or why, to react." instead;
-	if crate is reflexed:
-		say "Already did." instead;
-	try fliptoing crate instead;
-
+check fliptoing crate:
+	if c2 is in lapsin' plains:
+		say "That's a good idea, but you're not sure HOW to react. You need a bit of data, first.";
+		preef crate;
+		the rule succeeds;
+		
 understand "odor" as a mistake ("[if Gunter is off-stage]You'd stink as a host, trying that[else]The smell would gag you before the shouty youths[end if].") when side door is visible.
 
 understand "rood" as a mistake ("[if Gunter is off-stage]No need to surprise a guest like that. Just open the door[else]It'd be your own crucifix if you let the shouty youths outside in[end if].") when side door is visible.
@@ -17131,6 +17148,10 @@ after scaning tray:
 the paler pearl is an undesc. description is "It's a nice pearl but too small to be valuable on its own."
 
 the general gleaner is a reflexive thing. description is "[if gleaner is reflexed]You see a map of all the paths in the Horned Hedron. They twist around a lot, and once you re-angle, it dilates details so you can see the way to get to...the Tenfold Teflon'd Den Loft (avec evac-cave,) with even a separate pest area on the side[oy-can-win][otherwise]You hope to have peered deeper for a vision, but it's too small. All you can make out in the morbid dim orb is [ho-he] and the words GENERAL GLEANER, though if you look closely you may be able to read some red writing--the artist's name, too[end if]."
+
+after printing the name of the general gleaner while taking inventory:
+	say " ([if gleaner is reflexed]neat but small[else]enlarged[end if])";
+	continue the action;
 
 check examining gleaner when player is in loft:
 	say "You found the way in and know the way out. Better deal with the [if yapper is visible]yapper and [end if]dialer, now." instead;
@@ -17977,7 +17998,7 @@ instead of doing something with h-h:
 		try examining h-h instead;
 	continue the action;
 
-the a-s are plural-named privately-named auxiliary scenery in arches. description of a-s is "[if a-s is reflexed]You already searched the arches and found something[else]A quick examination turns up nothing, but maybe if you were more methodical, something might turn up[end if].". the printed name of the a-s is "arches"
+the a-s are plural-named privately-named reflexive scenery in arches. description of a-s is "[if a-s is reflexed]You already searched the arches and found something[else]A quick examination turns up nothing, but maybe if you were more methodical, something might turn up[end if].". the printed name of the a-s is "arches"
 
 check taking a-s:
 	say "[if a-s are reflexed]You got enough from the arches[else]You might find something in there. How to do that without taking them[end if]." instead;
@@ -18140,7 +18161,7 @@ check entering a-p:
 to check-sanctum:
 	if player has lance:
 		say "You use your gleaner to [one of][or]re[stopping]trace the path to the Den Loft. Halfway through, your lance begins to glow as you pass a small passage. Explore?";
-		if the player consents:
+		if the player yes-consents:
 			now ant is in Scum Ant Sanctum;
 			now player is in Scum Ant Sanctum;
 		otherwise:
@@ -18400,7 +18421,7 @@ when play begins (this is the place guardians rule):
 
 book which room is how far
 
-to decide what number is palace-let: [I could've defined a new variable but it's nice to have this in one place. This shows how many letters the settler gives.]
+to decide which number is palace-let: [I could've defined a new variable but it's nice to have this in one place. This shows how many letters the settler gives.]
 	if location of player is topside or location of player is campsite, decide on 4;
 	if location of player is copse, decide on 5;
 	if location of player is lots or location of player is route or location of player is sunbelt or location of player is saltbed, decide on 6;
@@ -20011,7 +20032,7 @@ check giving to Ed Yerg:
 		say "With an edgy 'Er...' that makes you see red, Ed turns his nose up at your meager offering[if noun is flowerpot] but mentions he might've liked it when he was less ambitious[end if]." instead;
 	unless noun is flowerpot:
 		say "Ed thanks you, but that's not quite what he wants[if flowerpot is in lalaland]. The flowerpot was probably enough[end if]." instead;
-	if crocus is reflexive:
+	if flowerpot is reflexive:
 		say "You consider giving the flowerpot to Ed Yerg, but there's nothing in it, yet. You think back to the crocus you saw outside." instead;
 	say "Ed smiles at the flowerpot and looks less tense. He realizes whom the gift must be from. He sighs, nods hangs his new flower out back where it can get better, then returns, thanking you.";
 	min-and;
@@ -20029,13 +20050,13 @@ to say edlook:
 	else if crocus is not in flowerpot:
 		say "at your flowerpot";
 	else:
-		say "at your [if crocus is reflexed]dying [end if]crocus";
+		say "at your [if flowerpot is reflexive]dying [end if]crocus";
 
 the welt-proof flowerpot is a reflexive and LLPish container. description of flowerpot is "You don't know what good welt-proofing will do, but it might help you read the red writing on the flowerpot a bit better[if-crocus]."
 
 to say if-crocus:
 	if crocus is in flowerpot:
-		say "[if crocus is reflexed], though it's probably less useful now with the crocus in decent shape[else], which can maybe help with the dying crocus[end if]";
+		say "[if flowerpot is reflexed], though it's probably less useful now with the crocus in decent shape[else], which can maybe help with the dying crocus[end if]";
 	else:
 		say ". The flowerpot is empty";
 
@@ -20063,11 +20084,11 @@ check putting on the flowerpot:
 instead of taking crocus:
 	if crocus is in limits:
 		say "It looks a bit TOO colorful for a flower, almost radioactive. In fact, from what you know about the species, that means it's close to DYING. Maybe you could tone it down." instead;
-	say "It's been through enough [if crocus is reflexive]bad times[else]upheaval[end if]."
+	say "It's been through enough [if flowerpot is reflexive]bad times[else]upheaval[end if]."
 
 the succor crocus is an auxiliary thing in mislit limits. "A succor crocus lies here, full of livid colors that don't make you happier."
 
-description of crocus is "[if crocus is reflexive]From what you know, the brighter a succor crocus is, the less it works. Right now, it's far too bright, and it's close to dying[else]Looking much better now[end if]."
+description of crocus is "[if flowerpot is reflexive]From what you know, the brighter a succor crocus is, the less it works. Right now, it's far too bright, and it's close to dying[else]Looking much better now[end if]."
 
 check fliptoing flowerpot:
 	if crocus is not visible:
@@ -20097,7 +20118,7 @@ understand "plant [something]" as planting.
 carry out planting:
 	if noun is not crocus:
 		say "You can only plant a, well, plant." instead;
-	if crocus is reflexive:
+	if flowerpot is reflexive:
 		say "It already is. But maybe you could fix it and replant it." instead;
 	say "The crocus is already in the flowerpot. That is planted enough." instead;
 
@@ -20506,15 +20527,20 @@ a room can be accessible, sideview, mightaswell or inaccessible. a room is usual
 
 after fliptoing a guardian (this is the track guardian progress rule):
 	let G be up;
-	if noun is not natives and noun is not ingrates:
+	let MR be Topside Deposit;
+	if noun is ingrates:
+		now MR is outer route;
+	else if noun is natives:
+		now MR is lost lots;
+	else:
 		choose row with guy of noun in table of guard-org;
 		now room blockdir entry of loc entry is tower-accessible;
 		now loc entry is tower-accessible;
-	if location of player is loc entry:
-		now G is blockdir entry;
-	else:
-		now G is opposite of blockdir entry;
-	let MR be the room G of location of player;
+		if location of player is loc entry:
+			now G is blockdir entry;
+		else:
+			now G is opposite of blockdir entry;
+		now  MR is the room G of location of player;
 	now noun is prodded;
 	if noun is ray eck:
 		now topside is accessible;
@@ -20714,9 +20740,9 @@ Edwin is a warrior. description is "Edwin looks sober and focused, except when h
 
 a-text of Edwin is "RYRYR". b-text of Edwin is "RYRYR". parse-text of edwin is "x[sp]-[sp]x[sp]-[sp]x". edwin is cheat-spoilable.
 
-Eldon is a warrior. description is "Eldon looks vigorous. Perhaps he's been led on by youthful follies.".
+Eldon is a warrior. description is "Eldon looks vigorous. Perhaps he's been led on by youthful follies.". pod-num of Eldon is 2. pod-ord of Eldon is 2.
 
-a-text of Eldon is "YRRYR". b-text of Eldon is "YPPYP". parse-text of eldon is "-[sp]l[sp]d[sp]-[sp]n". eldon is parse-spoilable. pod-num of Eldon is 2. pod-ord of Eldon is 2.
+a-text of Eldon is "YRRYR". b-text of Eldon is "YPPYP". parse-text of eldon is "-[sp]l[sp]d[sp]-[sp]n". eldon is parse-spoilable.
 
 Goldy is a warrior. description is "Goldy has an amoral, mercenary look about him.". pod-num of Goldy is 2. pod-ord of Goldy is 3.
 
@@ -21434,7 +21460,7 @@ gre-east-quip	"'There are animal pens back east.' [if Anteroom is visited and Ta
 gre-animals-quip	"'The animals aren't just imprisoned but reduced to mockeries of their real selves--whether they know it or not. Maybe one reason she wanted to discredit you was, you might be able to change them back.'"
 gre-go-quip	"[if hold-it-up is false]'Here. Take these. They are ancient emblems of magic and power--damsel medals--from long before people cringed at words like damsel.' She removes her medals and hands them to you. '[gre-other].' She nods and walks off[check-started-yet].[end if]" [end GRETTA text]
 
-to decide what number is optleft of (myp - a person):
+to decide which number is optleft of (myp - a person):
 	let mytemp be 0;
 	let myt be the litany of myp;
 	repeat through myt:
@@ -21442,15 +21468,12 @@ to decide what number is optleft of (myp - a person):
 	decide on mytemp;
 
 after quipping when qbc_litany is the table of Gretta comments:
-	if hold-it-up is true:
-		choose row with response of gre-go-quip in the table of Gretta comments;
-		now enabled entry is 1;
-	else if current quip is gre-macks-quip:
+	if current quip is gre-macks-quip:
 		enact gre-elv-quip;
 		enact gre-what-quip;
 		enact gre-go-quip;
 	else if current quip is gre-elv-quip or current quip is gre-what-quip:
-		if gre-elv-quip is mowered and gre-what-quip is mowered:
+		if gre-elv-quip is mowered or gre-what-quip is mowered: [this seems a bit odd, but marking a quip as mowered doesn't happen til the "after quipping" which fires afterwards]
 			say "'Not everyone here loves Elvira. Some are willing to help, if they're just treated right. I can tell you who, or what's, where.' Gretta looks around, worried the macks will narc her out to Elvira, even though none of them headed west to the bulwark, but you can probably grill her for quick information.[paragraph break]";
 			enact gre-north-quip;
 			enact gre-east-quip;
@@ -21460,8 +21483,9 @@ after quipping when qbc_litany is the table of Gretta comments:
 	else if current quip is gre-animals-quip:
 		do nothing;
 	else if current quip is gre-go-quip:
-		now Gretta is in lalaland;
 		terminate the conversation;
+		now the player has medals;
+		now Gretta is in lalaland;
 	else if current quip is gre-north-quip or current quip is gre-south-quip or current quip is gre-elv-quip:
 		do nothing;
 	else:
@@ -21535,8 +21559,11 @@ ladying is an action applying to nothing.
 irately is a truth state that varies.
 
 check fliptoing a mack-idea (this is the NO ESP rule):
+	if debug-state is true:
+		say "The player can't know this yet, but since you're testing, I'll let it fly.";
+		continue the action;
 	if noun is not ment:
-		say "[reject]" instead;
+		say "[ly-ish]." instead;
 
 after fliptoing a mack-idea:
 	if uber-rand-cheat is true:
@@ -21627,6 +21654,8 @@ definition: a mack-idea (called mm) is unprioritized:
 	decide no;
 
 to assign-mack-priority:
+	repeat with B running through mack-ideas:
+		now mack-prio of B is 0;
 	let C be number of mack-ideas in fro; [should be 7, but yeah]
 	repeat with B running from 1 to C:
 		let thismack be a random unprioritized mack-idea;
@@ -21725,7 +21754,7 @@ this is the find-mack-idea rule:
 every turn when player is in fro and macks are in fro (this is the macks hitting on rule):
 	repeat with Q running through mack-ideas in fro:
 		if debug-state is true:
-			say "[q]: [mack-prio of q].";
+			say "DEBUG NOTES: [q]: [mack-prio of q].";
 	let loop be false;
 	while cur-pod-num is unworkable:
 		increment cur-mack-blab;
@@ -22610,7 +22639,7 @@ a tamarind is a fruit. description is "It looks more like a potato than any frui
 
 chapter coin-give
 
-to decide what number is curtis-level:
+to decide which number is curtis-level:
 	if number of fruits in lalaland < 8:
 		decide on 0;
 	if number of fruits in lalaland < 12:
@@ -23174,7 +23203,7 @@ instead of doing something to the searcher:
 
 chapter preping
 
-to decide what number is gate-level:
+to decide which number is gate-level:
 	let A be 0;
 	if viewer is reflexed:
 		increment A;
@@ -24588,7 +24617,7 @@ to say give-croc:
 		say "[if serpent is in limits]You need to get behind the serpent[else if solo den is unvisited]You can, but you don't have to, visit the den to the west[else if ed yerg is reflexive]You need to make Ed Yerg nicer, first[else]You need to give Ed Yerg the crocus[end if]"
 
 to say if-cro:
-	if crocus is reflexive:
+	if flowerpot is reflexive:
 		say ", if you figure what to do with the crocus";
 
 to say casp-cap:
@@ -25075,7 +25104,7 @@ Shane	"[one of]Shane's skin has a healthy sun-kissed glow.[plus][or]Not if he's 
 Terrance	"[one of]Terrance seems stuck to his task.[plus][or]What if you could make him more RECREANT?[minus][cycling]"
 Tyson	"[one of]Tyson seems quite cheery about this whole adventure, like it's fun. Make him frowny.[plus][or]Or STONY.[minus][cycling]"
 Wade	"[one of]Wade seems very confident, unintimidated.[plus][or]He can be AWED.[minus][cycling]"
-succor crocus	"[if crocus is reflexive][one of]The crocus looks like it is--well, dying. He just needs a little healthy color back, not a ton.[plus][or]Or he could lose the livid color he has.[plus][or]From DYING to...[plus][or]...DINGY.[minus][cycling][else][one of]You can give the crocus to someone.[plus][or][give-croc].[minus][cycling][end if]"
+succor crocus	"[if flowerpot is reflexive][one of]The crocus looks like it is--well, dying. He just needs a little healthy color back, not a ton.[plus][or]Or he could lose the livid color he has.[plus][or]From DYING to...[plus][or]...DINGY.[minus][cycling][else][one of]You can give the crocus to someone.[plus][or][give-croc].[minus][cycling][end if]"
 flowerpot	--	succor crocus
 Old Hat Daltho	"[if crocus is not in lalaland]The succor crocus Daltho gave you may be of some use.[else]You've taken care of Old Hat Daltho's gift.[end if]"
 Ed Yerg	"[if ed yerg is reflexive][one of]Ed Yerg seems to be, well, GREEDY.[plus][or]But he looks suspiciously old despite his hair.[plus][or]Make him GREYED.[minus][cycling][else if player has flowerpot][one of]Ed may still want something, but little of what you have interests him.[plus][or]The succor crocus may help him feel better about himself.[plus][or]Give it to him[if-cro].[minus][cycling]"
@@ -25965,7 +25994,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]the denim in Savager Ravages could've been MINED.";
 		if saver is reflexive:
 			say "[2dmiss of cur-reg]the REPLAY PLAYER letters on the saver could've become PEARLY.";
-		if crocus is reflexive:
+		if flowerpot is reflexive:
 			say "[2dmiss of cur-reg]you could've made the succor crocus DINGY to stop it dying.";
 		if serpent is in limits:
 			say "[2dmiss of cur-reg]you could've made the serpent PRESENT and maybe saved the fellow who died happy.";
@@ -27454,59 +27483,76 @@ understand "seed [number]" as seeding.
 to place-warrior (myp - a number) and (myi - a number):
 	let temp-ord be 0;
 	let cur-war be Rodney;
+	let max-pod be 0;
 	repeat with Q running through warriors:
-		if pod-num of Q is myp and pod-ord of Q is myi:
+		if pod-num of Q is myp:
+			if pod-ord of Q > max-pod:
+				now max-pod is pod-ord of Q;
+	let myi2 be myi;
+	if myi2 > max-pod:
+		say "[b]Cutting [myi2] to [max-pod] for pod [myp]:[r] ";
+		now myi2 is max-pod;
+	repeat with Q running through warriors:
+		if pod-num of Q is myp and pod-ord of Q is myi2:
+			if Q is in trefoil:
+				say "Oops, we placed [Q] twice. [myp] [myi2].";
 			now Q is in Trefoil;
 			say "[Q] to trefoil.";
 			the rule succeeds;
-		if pod-num of Q is myp and pod-ord of Q > temp-ord:
-			now cur-war is Q;
-	if cur-war is in trefoil:
-		say "Oops, we placed Rodney twice. [myp] [myi].";
-	say "[cur-war] to trefoil.";
-	now cur-war is in trefoil;
+	say "BUG: didn't get anything for pod [myp] index [myi2]."
 
 to place-idea (myp - a number) and (myi - a number):
 	let temp-ord be 0;
 	let cur-idea be t-despairingly;
+	let max-pod be 0;
+	let myi2 be myi;
 	repeat with Q running through mack-ideas:
-		if pod-num of Q is myp and pod-ord of Q is myi:
+		if pod-num of Q is myp:
+			if pod-ord of Q > max-pod:
+				now max-pod is pod-ord of Q;
+	if myi2 > max-pod:
+		say "[b]Cutting [myi2] to [max-pod] for pod [myp]:[r] ";
+		now myi2 is max-pod;
+	repeat with Q running through mack-ideas:
+		if pod-num of Q is myp and pod-ord of Q is myi2:
+			if Q is in fro:
+				say "Oops, placed [Q] twice. [myp] [myi2].";
 			now Q is in fro;
 			say "[Q] to frontage.";
 			the rule succeeds;
-		if pod-num of Q is myp and pod-ord of Q > temp-ord:
-			now cur-idea is Q;
-	say "[cur-idea] to frontage.";
-	if cur-idea is in fro:
-		say "Oops, placed DESPAIRINGLY twice. [myp] [myi].";
-	now cur-idea is in fro;
+	say "BUG: didn't get anything for pod [myp] index [myi2].";
 
 carry out seeding:
 	let temp be 0;
 	let G be Rodney;
 	let found-yet be false;
 	let act-index be the number understood;
+	if act-index > 8:
+		say "[b]WARNING: this is probably out of range.[r][paragraph break]";
 	if act-index < 1:
 		say "Need a positive act index.";
 		the rule fails;
 	if trefoil is visited: [first, seed the start of TOWERS]
 		say "Skipping Trefoil seeding as you've already been there. Restart if you wish to re-seed.";
 	else:
-		if act-index > 4:
-			say "Decreasing index to 4 for the Trefoil.";
+		if act-index > 5:
+			say "Decreasing index to 5 for the Trefoil.";
 			now act-index is 4;
 		now all warriors are off-stage;
 		repeat with J running from 1 to 7:
 			place-warrior J and act-index;
+	let act-index be the number understood;
 	if fro is visited: [next, seed the macks in OTTERS]
 		say "Skipping Frontage seeding as you've already been there. Restart if you wish to re-seed.";
 	else:
+		now all mack-ideas are off-stage;
 		now act-index is number understood;
 		if act-index > 4:
 			say "Decreasing index to 4 for the Frontage.";
 		now all mack-ideas are off-stage;
 		repeat with J running from 1 to max-pod-num:
 			place-idea J and act-index;
+		assign-mack-priority;
 
 chapter cap
 

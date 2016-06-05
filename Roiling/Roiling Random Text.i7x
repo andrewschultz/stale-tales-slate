@@ -15774,6 +15774,7 @@ blurb
 "Doable Old [a-b]."
 "Doc Luck, Cuckold."
 "Doin['] Dion." []
+"Doing So-Good Sin!"
 "Domina Domain." []
 "Domination Admonition."
 "Don, Be Boned."

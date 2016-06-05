@@ -9296,7 +9296,7 @@ down-tried is a truth state that varies. down-tried is usually true.
 
 check going down in Elm Train Terminal:
 	try going east instead;
-	
+
 check going east in Elm Train Terminal:
 	now down-tried is true;
 	if power-shut is false:
