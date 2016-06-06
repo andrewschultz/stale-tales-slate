@@ -94,7 +94,7 @@ sexdif	--
 townarr	--
 ####SA
 # this list is shorter, consisting of Pat's codas, the deadbeat camp, condo chatter, PSAs, nerd chat, Red Bull Burdell's taunts, the riot chants and the names on the graffiti in the strip.
-VALUE=sa
+VALUE=shuffling
 ######intro
 job searcher names	1	-1	-1
 ######f

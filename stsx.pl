@@ -63,7 +63,7 @@ if ($bail) { die("Fix mistakes before continuing."); }
 if ($totalAdded)
 {
 addIdeas("roiling", 0);
-addIdeas("sa", 1);
+addIdeas("shuffling", 1);
 }
 else
 {

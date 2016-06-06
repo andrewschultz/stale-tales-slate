@@ -15,7 +15,7 @@ $clip = $newClip->GetText;
 chomp($clip);
 
 $inExt{"roiling"} = 1;
-$inExt{"sa"} = 1;
+$inExt{"shuffling"} = 1;
 
 #globals here. Maybe move them to init function?
 $genderChars = 34; #34 chars for [if male][else]
@@ -66,9 +66,9 @@ while (@ARGV[$count])
   /^-e$/i && do { $expected = 2; $count++; next; }; #show expected Benford-values
   /^-eh$/i && do { $expected = 1; $count++; next; }; #show expected Benford-half-values
   /^-rv/i && do { $warning .= "RV deprecated, use DU/UD instead.\n"; $count++; next; }; #deprecated option
-  /^-?s$/i && do { @dirs = (@dirs, "sa"); $count++; next; }; # SA
+  /^-?s$/i && do { @dirs = (@dirs, "shuffling"); $count++; next; }; # SA
   /^-?r$/i && do { @dirs = (@dirs, "roiling"); $count++; next; }; # ARO
-  /^-b$/i && do { @dirs = (@dirs, "sa", "roiling"); $count++; next; }; #both Stale Tales Slate
+  /^-b$/i && do { @dirs = (@dirs, "shuffling", "roiling"); $count++; next; }; #both Stale Tales Slate
   /^-\?$/i && do { usage(); exit; };
   print "Bad argument $a in position $count.\n"; usage(); exit;
   }
@@ -76,14 +76,14 @@ while (@ARGV[$count])
 
   if ($#dirs == -1) # if no args point to a directory, assume ARO
   {
-    if (-f "$fileName") { @dirs = ("$fileName"); if (getcwd() =~ /(sa|roiling)\.inform/) { $printBytes = 1; } }
+    if (-f "$fileName") { @dirs = ("$fileName"); if (getcwd() =~ /(shuffling|roiling)\.inform/) { $printBytes = 1; } }
 	else
 	{
 	@dirs = ("roiling");
 	}
   }
 
-if (@dirs[0] =~ /(sa|roiling)\.inform/) { $printBytes = 1; }
+if (@dirs[0] =~ /(shuffling|roiling)\.inform/) { $printBytes = 1; }
 
 for $myStory (@dirs) { findNudges($myStory); findAna($myStory); }
 
@@ -296,7 +296,7 @@ $totAvg = $totalSize / $sums;
   if ($printBytes)
   {
   $x = -s "C:/games/inform/roiling.inform/Source/story.ni";
-  $y = -s "C:/games/inform/sa.inform/Source/story.ni";
+  $y = -s "C:/games/inform/shuffling.inform/Source/story.ni";
   $z = $x + $y;
   print "Total bytes $x + $y = $z.\n";
   }

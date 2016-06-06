@@ -1,12 +1,13 @@
 ## reg-sa-nudges.txt
 ## nudges for Shuffling Around: the big test
 ##
+## nudgeleft.txt is the file to look for
 
 
 ** game: /home/andrew/prt/debug-sa.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* dirtest-noway-forest1
+* dirtest-general-intro
 
 >xyyzz
 A hollow voice booms
@@ -42,9 +43,11 @@ You don't need to mess with your pockets.
 >jmpu
 impressively uncoordinated
 
+#if point-cue is true
 >ption
 no scret cheat between NO TIP
 
+# if player has gadget
 >parse
 no inbetween for the PARSE
 

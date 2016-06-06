@@ -195,6 +195,7 @@ blurb
 "Moany, man? Oy!"
 "More-than-harm tone!" []
 "Much ado! Ouch! Mad!"
+"My dear! Yer mad!"
 "'My TAILS, I'm salty!'" [p]
 "Nag ruder? Darn urge."
 "Nasty, kid. Stay kind."
@@ -1957,6 +1958,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Gracia's Agarics"
 "Gracie's E-Cigars"
 "Graefe's Serfage"
+"Gramps Vine Revampings"
 "Grandison Adornings"
 "Granier's Earrings"
 "Granieri's Reraising"
@@ -3761,6 +3763,7 @@ blurb	fave
 "Arriviste: it Arrives[r], by Teri Rivas"	false
 "Aw, We All Call Ace[r], by Alec Law-Wallace"	true
 "Being Good Bio? GONGED[r], by Ned Boggio"	false
+"A Blot-Bloat[r], by Lola Abbott"	false
 "Contemn a 'Hero' More Than Once[r], by Chante Monroe"	false
 "A Curse Causer[r], by Cara-Sue Cruse"	false
 "Da Lingo Be No Big Deal[r], by Deb Alongi"	false
@@ -3803,6 +3806,7 @@ blurb	fave
 "St. Be-Best[r], by Bess Bett"	true
 "There Rots the Sorter[r], by Ros Threet"	false
 "Titan's Taints[r], by Si Tant"	false
+"Titled? TILTED[r], by Ed Litt"	false
 "To Bull: Easy, Absolutely, by a Sellout[r], by [if player is male]Solly Taube[else]Tula Boyles[end if]"	false
 "Upstream Into Permutations Use: Important[r], by [if player is male]Rupe Mattison[else]Simona Pruett[end if]"	true
 "Whoa, Heart, What a Hero[r], by Tarah Howe"	true
@@ -4953,6 +4957,7 @@ blurb
 "Beating Big [n-t]"
 "Beer-Clash Bleachers"
 "Behold a Bad Hole"
+"Blam, Set, Bam, Let's Blast [']Em"
 "BLAM! The Meth Lab" []
 "Bling/Rug Burgling"
 "Blings O['] Goblins"
@@ -5573,6 +5578,7 @@ blurb
 "Coward War Doc" []
 "Creep St. Specter"
 "Creepier Creperie"
+"Crept a Carpet"
 "Cults O['] Clouts"
 "Cute Romp, Computer"
 "Dad, Ann and Dan"
@@ -7404,6 +7410,7 @@ blurb
 "We Style Sweetly" []
 "We're Back. Er, Be Wack"
 "Wham, Note the Woman" []
+"What a Ride With a Dare"
 "What No Hat Now"
 "Where Can I Care, Whine"
 "Where I Hew Ire"
@@ -7488,6 +7495,7 @@ blurb
 "Mobs['] cries. 'Some cribs, crime boss!'"
 "'More spew EMPOWERS!'"
 "'Neutrals run stale!'"
+"A new role: learn woe!"
 "No saint: sin a ton!" []
 "'Not happy, phony? Apt!'"
 "'Obtuse, be? OUST!'" []
@@ -7501,6 +7509,7 @@ blurb
 "'Roguery now! You're wrong!'"
 "'Sad soon, so-and-so!'"
 "Saint? A snit!"
+"'Say no to a snot, yo!'"
 "'A seedy story! So yesterday! Destroy easy!'"
 "'So, a turnip, in our past!'"
 "'Soft? Rosy? So frosty!'"
@@ -9761,6 +9770,7 @@ blurb	prio
 "Consul to CLOUT, Son? Cult Soon[r], by Su Colton"
 "Contemporary Contrary Poem[r], by Payton Cromer & Marco Poynter"
 "Contessa Doli Consolidates, Disconsolate[r], by DeLois Caston"
+"Contrary Art, Cry On[r], by Ty Carron"
 "Coo Spite So Poetic[r], by Otis Cope" []
 "Cook Quit Too Quick[r], by K. C. O'Quoit"
 "Cool Duped Odd Couple[r], by Luc DePodo"
@@ -11234,6 +11244,7 @@ blurb	prio
 "I Rank a Rink[r], by Karin Arkin"
 "I Rant in Art[r], by Trina Narti" []
 "I, Rarer Barbie[r], by Barrie Ribera"
+"I Re-Hatch the Chair[r], by Ari Hechet"
 "I Re-Stand, Strained[r], by Ned Raist"
 "I Reek, I Reek[r], by Kiree Eiker"
 "I Remand a Minder, Name-Rid: Drain Me, [d-word-u] Ire and Mire[r], by Near-Dim Merinda" [x]
@@ -15254,6 +15265,7 @@ blurb	prio
 "Yup, I Roister: Superiority[r], by Roy Espiritu"
 "Yup, Loft to Fly Up[r], by Ty Plouf"
 "Yup, Roam Your Map[r], by Roy Puma"
+"Zap Each Haze-Cap[r], by Chaz Pea"
 "Zap, I Use a Size Up[r], by Su Paiez"
 "Zap, Lie or Polarize[r], by Zoe Plair"
 "Zen Chat Chez Nat[r], by Zach Ent"
@@ -15566,6 +15578,7 @@ blurb
 "Ah, Dr. Hard."
 "Ah, So, Men: No Shame." []
 "Ahoy, Spent Pantyhose!" []
+"Aid-Men Maiden!"
 "Aidan's Naiads."
 "Aiden, Edina, Andie, Diane."
 "Air-Smut Atriums."
@@ -21288,6 +21301,7 @@ blurb
 "Vapid VIP Ad."
 "Very fun fur envy."
 "Vestal Valets." []
+"Vi, Top VIP"
 "Vitreous voitures."
 "Voguiest Give-Outs."
 "Waistlines, A-List Wines."
@@ -30554,6 +30568,7 @@ blurb
 "New, Tried, Rent Wide[r], by Ed Winter"
 "No Habits to Banish[r], by [toti] Bash & [if player is male]Ash Tobin[else]Sion Bhat[end if]"
 "No-I-Won't Into NOW[r], by Noni Two"
+"No Joy? Resume Some Journey[r], by Jon Seymoure"
 "No, Oldest Don't Lose[r], by Ted Olson" []
 "No Place Once, Pal[r], by Al Ponce"
 "No Spite? So Inept! To Spine[r], by Tippie Ostenson" []
@@ -30605,6 +30620,7 @@ blurb
 "Petulant? Up, Talent[r], by [if player is male]Paul Nett[else]Lupe Tant[end if]" []
 "Phat Me: the Map[r], by Empath Hammett Happe" []
 "Piles of Life-Ops[r], by [if player is male]Si Pfoel[else]Flo Sipe[end if]"
+"Pivot to VIP[r], by Viv Pipo-Ott"
 "Pivotal Vital Op[r], by Val Poti"
 "Plain Zeroes, Lazier Peons: Personalize[r], by [if player is male]Zino Perales & Ron Speziale[else]Roseline Paz & Alison Perez[end if]"
 "Plan Oft, Flap Not[r], by Flo Pant"
@@ -30780,6 +30796,7 @@ blurb
 "You Mo['] Often Out of Money?[r] by Mouton Foye"
 "Your Mistake: a Tourism Key[r], by [if player is male]Seymour Taki[else]Yuriko Samet[end if]"
 "Yup, Now a Way on Up[r], by Wu-Yan Po"
+"Zen for Frozen[r], by Oz Fern"
 "Zooms! She Shmoozes[r], by Shomo Sze"
 
 table of songs you could write [xxvx]
@@ -34332,6 +34349,7 @@ blurb
 "Corsair Carrio's"
 "Desirer Dreier's"
 "Diasporic Dicaprio's"
+"Diffuse Duffie's"
 "Diseur Rudie's"
 "Don Lew's Low Dens" []
 "Dork Scum Murdock's"
@@ -35772,6 +35790,7 @@ blurb
 "'Bulk rates? Talk, rubes! Leak! Burst!'"
 "'Buy em!' / 'Um, bye!'"
 "'Buy, sell? Yes!' / 'Bull.'"
+"'Buying? Woo! You won big!'"
 "'Cauliflower? Our face will recoil! Awful!'" []
 "'Cheap bulk!' / 'Buck, eh, pal?'"
 "'Cheap bum! Be a chump!'" []

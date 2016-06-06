@@ -61,7 +61,8 @@ close(A);
 
 $proj = "roiling";
 
-$map{"s"} = "sa";
+$map{"s"} = "shuffling";
+$map{"sa"} = "shuffling";
 $map{"roi"} = "roiling";
 
 if (@ARGV[0] eq "-h") { usage(); }
@@ -72,7 +73,7 @@ elsif (@ARGV[0]) { $proj = @ARGV[0]; }
 if (@ARGV[0] eq "b")
 {
   storyTables($roi, "roiling");
-  storyTables($sa, "sa");
+  storyTables($sa, "shuffling");
   exit;
 }
 

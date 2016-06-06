@@ -1555,6 +1555,7 @@ blurb
 "Burble, rubble, burble!" []
 "Busy elk, blue sky: be sulky!"
 "Buy not bounty!"
+"Bye, icons, icy bones, nice boys."
 "A cabin, Bianca!" []
 "Cabins, cede a scenic bed. Science, bad!"
 "Cad of hope fed a pooch cheap food!"
@@ -2371,6 +2372,7 @@ blurb
 "A post to Pa's past, o!"
 "Posture, Proteus? Super to Erupt, So!"
 "Potty mouth myth? Opt out!"
+"Poultice, epic lout? Couple it."
 "Pow! Rent, Ron wept."
 "Power of proof: we owe, Prof!"
 "Precious ices pour our spice."
@@ -2969,6 +2971,7 @@ blurb
 "'Layin['] quiet?! INEQUALITY!'"
 "'Lazy life. Zeal? I fly!'"
 "'Leadership: Lies Harped!'"
+"Leadership's phrased lies!'"
 "'LeadingCo: Genocidal!'"
 "'Leiferman's reinflames!'"
 "'Let silage legislate? Elite slag? It's GALL, ee!'"
@@ -3469,6 +3472,7 @@ blurb
 "'Plenty-demo deployment? Olden! Empty!'"
 "'Portable Table Pro? Or PetLab?'"
 "'Ported.' / 'De trop! To derp!'"
+"'Post back, pack-bots.'"
 "Praise, backhanded and sincere, for Link Bro Kilborn." [x]
 "'Prudent, nut? Derp.'"
 "'Quadratics? A cad! Squirt!'"

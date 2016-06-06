@@ -152,6 +152,7 @@ this-cmd	hashval	this-reg	this-rm	this-item	this-rule	this-clue
 "tacks"	273510565	forest	sorted trodes	--	--	"[tack-heap]."
 "tack"	177236599	forest	sorted trodes	--	--	"[tack-heap]."
 "notes"	470450178	forest	sorted trodes	--	--	"The notes are just for reading."
+"muzzle"	596740144	forest	--	shotgun	--	"You don't want to mess the muzzle up. You can fire bullets through it, and that's good enough."
 "stick"	316315593	forest	trodes	--	--	"[vand-art]."
 "figure"	422343163	forest	trodes	--	--	"[vand-art]."
 "figures"	518617129	forest	trodes	--	--	"[vand-art]."

@@ -10,7 +10,7 @@ $outFileName = "c:/program files (x86)/inform 7/inform7/extensions/andrew schult
 
 $dupes = 0;
 
-$s = "sa";
+$s = "shuffling";
 $r = "roiling";
 
 $totBad = 0;

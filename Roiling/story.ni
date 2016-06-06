@@ -4980,7 +4980,7 @@ carry out requesting the score:
 	if mrlp is nothing:
 		say "BUG: This location needs a region." instead;
 	if mrlp is Demo Dome:
-		say "You don't need a score in the Demo Dome. You just need to look around.";
+		say "There's no score in the Demo Dome. You just need to look around.";
 		left-to-see instead;
 	if roved is true:
 		if player is in strip of profits:
@@ -5019,7 +5019,7 @@ carry out requesting the score:
 possibles is a truth state that varies. min-alert is a truth state that varies.
 
 report requesting the score for the first time:
-	if possibles is false and min-alert is false:
+	if possibles is false and min-alert is false and mrlp is not demo dome:
 		ital-say "You can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing POSS. This is a potential meta-spoiler, since the minimum score increasing indicates you found a fun side quest, and the maximum score decreasing means you left something behind, but it may be helpful.";
 		now min-alert is true;
 
@@ -5207,7 +5207,7 @@ definition: a room (called myrm) is ominous:
 			decide no;
 		decide yes;
 
-last-wall is a thing that varies. last-wall is usually owl-decal code wall.
+last-wall is a thing that varies. last-wall is usually owl decal code wall.
 
 when play begins (this is the hint and other randomization rule):
 	let myrand be 0;
@@ -5248,9 +5248,9 @@ when play begins (this is the hint and other randomization rule):
 		increment wt;
 	sort the table of xibits in orwt order;
 	if a random chance of 1 in 2 succeeds:
-		now last-wall is owl-decal code wall;
+		now last-wall is owl decal code wall;
 	else:
-		now last-wall is allow-lots-tools wall;
+		now last-wall is allow lots tools wall;
 	let mycount be 0;
 	d "[list of exhibits].";
 
@@ -17065,7 +17065,7 @@ check fliptoing crate:
 		say "That's a good idea, but you're not sure HOW to react. You need a bit of data, first.";
 		preef crate;
 		the rule succeeds;
-		
+
 understand "odor" as a mistake ("[if Gunter is off-stage]You'd stink as a host, trying that[else]The smell would gag you before the shouty youths[end if].") when side door is visible.
 
 understand "rood" as a mistake ("[if Gunter is off-stage]No need to surprise a guest like that. Just open the door[else]It'd be your own crucifix if you let the shouty youths outside in[end if].") when side door is visible.
@@ -22394,7 +22394,7 @@ after printing the locale description for Inclosure when Inclosure is unvisited:
 	else:
 		say "'Serious issue, or...?'";
 
-Reclusion Inclosure is an innie room in otters. Reclusion Inclosure is west of Alcoves. "You feel as slowed here as you did on entering the barley field. Vast vats emit sour moisture over a prey pyre. The room is cluttered with a stocked stockade, a torpid tripod (slowing you down,) and entrances to a warpish warship and becharm-chamber. That nacht-chant could be coming from any of them. You can leave to the east."
+Reclusion Inclosure is an innie room in otters. Reclusion Inclosure is west of Alcoves. "You feel as slowed here as you did on entering the barley field. Vast vats emit sour moisture over a prey pyre. The room is cluttered with a stocked stockade, a torpid tripod (slowing you down,) and entrances to a warpish warship and becharm-chamber. That nacht-chant could be coming from any of them, or maybe even the enerve-veneer present all around. You can leave to the east."
 
 understand "nicer soul" as a mistake ("[one of]'O, nice slur!' Elvira counters. 'Cruel is ON!' Dang! She's come prepared with defense of her own too. I guess finding the redemption in all of us isn't the way to go, her[or]You don't want to hear 'Cruel is on!' again[stopping].") when player is in inclosure.
 
@@ -22404,8 +22404,16 @@ understand "coins lure" as a mistake ("[one of]Elvira momentarily sniffs. 'Money
 
 the torpid tripod is amusing scenery in Inclosure. tripod is an undesc.
 
+to say one-more-evil:
+	say "It's too far away to do anything with and survive. For your purposes, it's just one more bit of evil scenery"
+
 instead of doing something with the torpid tripod:
-	say "It's too far away to do anything with and survive. For your purposes, it's just one more bit of evil scenery."
+	say "[one-more-evil]."
+
+the enerve veneer is amusing scenery in Inclosure. veneer is an undesc.
+
+instead of doing something with enerve veneer:
+	say "[one-more-evil]."
 
 the becharm chamber is amusing scenery in Inclosure. chamber is an undesc.
 
@@ -23769,7 +23777,7 @@ carry out demoing:
 		say "[reject]";
 	say "[if knockage is true]You ignore Gunter's emo'd voice[else]You decide to, umm, use the Me-Um-Us Museum[end if]. You pull out your discreet, secret ID to enter.";
 	move player to peek keep;
-	now right hand status line is "[location of player]";
+	now right hand status line is "Poking Around";
 	the rule succeeds;
 
 Demo Dome is a region.
@@ -23801,10 +23809,9 @@ check going up in peek keep:
 
 table of xibits
 exhib	orwt
-owl-decal code wall	1
-allow-lots-tools wall	1
+owl decal code wall	1
+allow lots tools wall	1
 Chic Loner Chronicle	1
-written walls	1
 Calendar	1
 Novella	10
 
@@ -23815,15 +23822,110 @@ Evoc-Cove is east of peek keep. Evoc-cove is in Demo Dome. "A welcoming place fu
 check going east in evoc-cove:
 	say "You quickly run into a bunch of boxes you could probably push around to make a path to a bigger room, but that just wasn't your specialty. Wrong sort of thinking game." instead;
 
+section novella
+
+The novella is an exhibit in Evoc-Cove. "A novella is here. You can READ it without taking it.". description is "It's called Venal Ol['] Novella, by Evan Oll. That's probably a pseudonym. It's got a hundred pages, which you can examine by READ (number)[lowest-unread]. You can also speed-read with [i]rr[r]."
+
+check taking novella:
+	say "Don't take the art." instead;
+
+turbo-novella is a truth state that varies.
+
+understand the command "rr" as something new
+
+understand "rr" as tenpgreading when player is in evoc-cove
+
+tenpgreading is an action applying to nothing.
+
+carry out tenpgreading:
+	let count be 0;
+	now turbo-novella is true;
+	if novella is exhausted:
+		say "You already read through. You could read individual pages again, I guess.";
+		the rule succeeds;
+	while novella is not exhausted and count < 10:
+		increment count;
+		read-lowest-page;
+	if novella is exhausted:
+		say "Well, that's all. Hooray for speed-reading.";
+
+to read-lowest-page:
+	let xyz be 1;
+	let nonsense be false;
+	repeat through table of pagelist:
+		if read-yet entry is true or comprehensible entry is false:
+			now nonsense is true;
+			increment xyz;
+		else:
+			if turbo-novella is false:
+				say "[if nonsense is true]You have to skip a bit to get to a sensible page ([xyz])[else]The next page ([xyz]) makes enough sense, you guess[end if].";
+			else:
+				say "[b]PAGE [xyz]: [r]";
+			try numreading xyz;
+			the rule succeeds;
+	say "You've read through everything that makes sense, so you may want to look at a specific page.";
+
+to say lowest-unread:
+	let xyz be 1;
+	repeat through table of pagelist:
+		if read-yet entry is true or comprehensible entry is false:
+			increment xyz;
+		else:
+			say "--the lowest page you haven't read that looks comprehensible is [xyz]";
+			continue the action;
+	say "--though you've read everything of interest, you'd guess"
+
+understand "read [number]" as numreading when player is in Evoc-Cove.
+understand "r [number]" as numreading when player is in Evoc-Cove.
+understand "x [number]" as numreading when player is in Evoc-Cove.
+understand "examine [number]" as numreading when player is in Evoc-Cove.
+
+numreading is an action applying to one number.
+
+does the player mean reading novella: it is very likely.
+
+carry out numreading:
+	if the number understood is 0:
+		say "Introductions? Boring." instead;
+	if the number understood < 0:
+		say "You can't un-read the book, but you can leave it un-read." instead;
+	if the number understood > 100:
+		say "The book is only 100 pages long." instead;
+	choose row number understood in table of pagelist;
+	now read-yet entry is true;
+	if number of characters in pgtxt entry > 2:
+		say "You glance over page [number understood]. The most interesting bit seems to be [pgtxt entry][line break]";
+	else:
+		say "The author strained not to be incomprehensible and failed.";
+	now novella is examined;
+	repeat through table of pagelist:
+		if read-yet entry is false and comprehensible entry is true:
+			the rule succeeds;
+	now novella is exhausted;
+	the rule succeeds;
+
+when play begins (this is the seed novella rule) :
+	repeat through table of pagelist:
+		now read-yet entry is false;
+		if number of characters in pgtxt entry > 2:
+			now comprehensible entry is true;
+		else:
+			now comprehensible entry is false;
+
 chapter Hows Show
 
-Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "You see two walls here with snatches of code written all over them. They may be too technical, but maybe you can get a general feel for the silly tricks that went into A Roiling Original. You can go back south."
+Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "You see two walls here with snatches of code written all over them[if nuf-hows-examined]: the owl decal code wall and the allow-lots-tools wall[end if]. They may be too technical, but maybe you can get a general feel for the silly tricks that went into A Roiling Original. You can go back south."
+
+to decide whether nuf-hows-examined:
+	if written walls are examined, decide yes;
+	if tools wall is examined and code wall is examined, decide yes;
+	decide no;
 
 For printing a locale paragraph about a thing (called the item) when player is in Hows Show:
-	if the item is owl-decal or the item is allow-lots-tools, set the locale priority of the item to 0;
+	if the item is owl decal or the item is allow lots tools, set the locale priority of the item to 0;
 	continue the activity.
 
-the written walls are plural-named scenery in hows show. "There's an owl-decal wall [if any-walls is true and last-wall is owl-decal]you've been browsing recently[else if owl-decal is examined]full of Inform 7 code[end if] and an allow-lots-tools wall[if any-walls is true and last-wall is allow-lots-tools]you've been browsing recently[else if allow-lots-tools is examined]full of PERL tricks[end if][if any-walls is false], and each looks about as interesting as the other."
+the written walls are plural-named scenery in hows show. "There's an owl decal code wall[if any-walls is true and last-wall is owl decal] you've been browsing recently[else if owl decal is examined] full of Inform 7 code[end if] and an allow-lots-tools wall[if any-walls is true and last-wall is allow lots tools] you've been browsing recently[else if allow lots tools is examined] full of PERL tricks[end if][if any-walls is false], and each looks about as interesting as the other[end if]."
 
 understand "written walls" as written walls.
 
@@ -23834,45 +23936,57 @@ any-walls is a truth state that varies.
 
 section inform wall
 
-the owl-decal code wall is an exhibit in hows show. "[this-inform]"
+the owl decal code wall is an exhibit in hows show. "[this-inform]"
 
-after doing something with owl-decal code wall:
+printed name of owl decal code wall is "owl-decal code wall"
+
+understand "owl-decal wall" and "owl-decal code wall" as owl decal code wall.
+
+after doing something with owl decal code wall:
 	now any-walls is true;
-	now last-wall is owl-decal code wall;
+	now last-wall is owl decal code wall;
 	continue the action;
 
-description of owl-decal code wall is "You read some more of the owl-decal code wall.[paragraph break][this-inform]"
+description of owl decal code wall is "You read some [one of]more [or][stopping]of the owl decal code wall.[paragraph break][this-inform]"
 
 inform-row is a number that varies.
 
 to say this-inform:
 	increment inform-row;
-	if inform-row > number of rows in table of informcode:
-		ital-say "you've read all the way through.";
-		now inform-row is 1;
-		now owl-decal code wall is exhausted;
+	if owl decal code wall is unnoted:
+		now owl decal code wall is perused;
 	choose row inform-row in table of informcode;
 	say "[thiscode entry]";
+	if inform-row is number of rows in table of informcode:
+		ital-say "you've read all the way through.";
+		now owl decal code wall is exhausted;
+		now inform-row is 0;
 
 section allow-lots-tools wall
 
-the allow-lots-tools wall is an exhibit in hows show. "[this-perl]"
+the allow lots tools wall is an exhibit in hows show. "[this-perl]".
 
-after doing something with allow-lots-tools wall:
+printed name of allow lots tools wall is "alliow-lots-tools wall".
+
+understand "alliow-lots-tools wall" as tools wall.
+
+after doing something with allow lots tools wall:
 	now any-walls is true;
-	now last-wall is allow-lots-tools wall;
+	now last-wall is allow lots tools wall;
 	continue the action;
 
-description of allow-lots-tools wall is "You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. But not a lot.[paragraph break][this-perl]"
+description of allow lots tools wall is "You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. But not a lot.[paragraph break][this-perl]"
 
 perl-row is a number that varies.
 
 to say this-perl:
+	if allow lots tools wall is unnoted:
+		now allow lots tools wall is perused;
 	increment perl-row;
 	if perl-row > number of rows in table of perlcode:
 		ital-say "you've read all the way through.";
 		now perl-row is 1;
-		now allow-lots-tools wall is exhausted;
+		now allow lots tools wall is exhausted;
 	choose row perl-row in table of perlcode;
 	say "[thiscode entry]";
 
@@ -23898,7 +24012,8 @@ to say part-one-thru:
 	choose row calendar-part in table of calparts;
 	say "[thiscal entry][line break]";
 	if calendar-part is number of rows in table of calparts:
-		say "[line  break]That's the end of the calendar."
+		say "[line  break]That's the end of the calendar.";
+		now careland calendar is exhausted;
 
 chapter Ned's Dens
 
@@ -23912,7 +24027,8 @@ chron-row is a number that varies.
 
 to say one-chron:
 	increment chron-row;
-	now chic loner chronicle is perused;
+	if chic loner chronicle is unnoted:
+		now chic loner chronicle is perused;
 	if chron-row > number of rows in table of observations:
 		now chron-row is 1;
 	choose row chron-row in table of observations;
@@ -23947,68 +24063,6 @@ the rudest duster is a thing in spares. description is "Helped me clean up--or a
 
 check taking something in spares:
 	say "That's a museum exhibit. About all you can/should do is examine it." instead;
-
-The novella is an exhibit in Evoc-Cove. "A novella is here. You can READ it without taking it.". description is "It's called Venal Ol['] Novella, by Evan Oll. That's probably a pseudonym. It's got a hundred pages, which you can examine by READ (number)[lowest-unread]."
-
-check taking novella:
-	say "Don't take the art." instead;
-
-to read-lowest-page:
-	let xyz be 1;
-	repeat through table of pagelist:
-		if read-yet entry is true or comprehensible entry is false:
-			increment xyz;
-		else:
-			say "You page through til you find a page that makes sense.";
-			try numreading xyz;
-			the rule succeeds;
-	say "You've read through everything that makes sense, so you may want to look at a specific page.";
-
-to say lowest-unread:
-	let xyz be 1;
-	repeat through table of pagelist:
-		if read-yet entry is true or comprehensible entry is false:
-			increment xyz;
-		else:
-			say "--the lowest page you haven't read that looks comprehensible is [xyz]";
-			continue the action;
-	say "--though you've read everything of interest, you'd guess"
-
-understand "read [number]" as numreading when player is in Evoc-Cove.
-understand "r [number]" as numreading when player is in Evoc-Cove.
-understand "x [number]" as numreading when player is in Evoc-Cove.
-understand "examine [number]" as numreading when player is in Evoc-Cove.
-
-numreading is an action applying to one number.
-
-does the player mean reading novella: it is very likely.
-
-carry out numreading:
-	if the number understood is 0:
-		say "Introductions? Boring." instead;
-	if the number understood < 0:
-		say "You can't un-read the book, but you can leave it un-read." instead;
-	if the number understood > 100:
-		say "The book is only 100 pages long." instead;
-	choose row number understood in table of pagelist;
-	now read-yet entry is true;
-	if number of characters in pgtxt entry > 2:
-		say "You glance over it. The most interesting bit seems to be [pgtxt entry][line break]";
-	else:
-		say "The author strained not to be incomprehensible and failed.";
-	repeat through table of pagelist:
-		if read-yet entry is false and comprehensible entry is true:
-			the rule succeeds;
-	now novella is exhausted;
-	the rule succeeds;
-
-when play begins (this is the seed novella rule) :
-	repeat through table of pagelist:
-		now read-yet entry is false;
-		if number of characters in pgtxt entry > 2:
-			now comprehensible entry is true;
-		else:
-			now comprehensible entry is false;
 
 chapter Great Grate
 
@@ -24124,7 +24178,7 @@ pgtxt	read-yet	comprehensible
 "'Get-hip age? The PIG age!'"
 "'Inane Peg? Pain, Gene.'"
 "'Nag Pete? Apt, Gene.'"
-"'Glen, a peeve.' / '"
+"'Glen, a peeve.' / 'Even gap, Lee?"
 "-"
 "Tether in thin tree, then tire."
 "Outer fen: tureen of rue often / refute? no. There's also something about utter profane rapture, often."
@@ -24182,7 +24236,7 @@ pgtxt	read-yet	comprehensible
 "-"
 "Sexist envy."
 "'I, sexy, tight.'"
-"Tiny nixes"
+"Tiny nixes."
 "Avenge types['] tangy peeves. Spy eventage."
 "Something testy-woven."
 "Blather about testy women."
@@ -25295,9 +25349,9 @@ novella	"You can read the novella from pages 1 to 100."
 entry sign	"[dome-blab]"
 Spy Dial Display	"[dome-blab]"
 Shall Halls	"[dome-blab]"
-owl-decal Code Wall	"[dome-blab]"
+owl decal Code Wall	"[dome-blab]"
 written walls	"[dome-blab]"
-allow-lots-tools wall	"[dome-blab]"
+allow lots tools wall	"[dome-blab]"
 larded ladder	"[dome-blab]"
 
 to say dome-blab:
@@ -26770,13 +26824,18 @@ test see-c with "cap 7/ts/x c/g/g/g/g/g/g/g/g/g/g/g/g"
 chapter demo dome
 
 [* basic tests. Not much to see here.]
-test gg with "g/g/g/g/g/g/g/g/g/g"
 
-test dome-inlet with "x calendar/g/g/g/g/g/g/g/g/g/g/g/g/g/g/x thesis/test gg"
+test dome-xp with "x it/x it/x it/x it/x it/x it/x it/x it/x it/x it"
 
-test dome-show with "x inform/test gg/x perl/test gg"
+test dome-inlet with "in/x calendar/test dome-xp/test dome-xp/x thesis/out"
 
-test dome-dens with "x chronicle/test gg"
+test dome-show with "n/x tools wall/test dome-xp/test dome-xp/x owl wall/test dome-xp/test dome-xp/s"
+
+test dome-dens with "w/x chronicle/test dome-xp/test dome-xp/e"
+
+test dome-nov with "e/rr/rr/rr/rr/rr/rr/rr/rr/rr/rr/rr/w"
+
+test dome-all with "test dome-inlet/test dome-show/test dome-dens/test dome-nov"
 
 chapter coffing
 

@@ -8,7 +8,7 @@ while ($count <= $#ARGV)
     @temp = split(/,/, $a);
 	@lines = (@lines, @temp);
   }
-  if ($a =~ /-s/) { $game = "sa"; }
+  if ($a =~ /-s/) { $game = "shuffling"; }
   if ($a =~ /-a/) { $sortAuto = 1; }
   if ($a =~ /-d/) { $deleteBracket = 1; }
   if ($a =~ /-x/) { $inString = "x"; }

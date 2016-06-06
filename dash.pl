@@ -1,5 +1,11 @@
-$roil = "c:/games/inform/roiling.inform/source/story.ni";
-$sa = "c:/games/inform/sa.inform/source/story.ni";
+#########################################################################
+#dash.pl
+#check hyphens and dashes to see if they're excessive
+#
+#no arguments needed
+
+$roil = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Roiling Random Text.i7x";
+$sa = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Shuffling Random Text.i7x";
 
 readHash($sa);
 readHash($roil);

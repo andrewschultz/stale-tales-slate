@@ -1,14 +1,19 @@
+###########################################
+#ancl.pl
+#
+#this looks for strings in tables with similar anagram classes (ANagram CLasses)
+
 use lib "c:/writing/dict";
 use wutil;
 
-fiPro("sa");
+fiPro("shuffling");
 fiPro("roiling");
 
 for $x (sort keys %dupes) { $count++; print "$x: ($count)\n$classes{$x}"; }
 
 sub fiPro
 {
-  $toread = "c:/games/inform/$_[0].inform/source/story.ni";
+  $toread = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] Random Text.i7x";
   open(A, "$toread") || die ("No $toread.\n");
   my $line = 0;
  

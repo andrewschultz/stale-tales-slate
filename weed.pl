@@ -83,10 +83,10 @@ $inDir = "";
 $sta = time();
 
 $exp{"roi"} = $exp{"ro"} = $exp{"r"} = $exp{"-r"} = "roiling";
-$exp{"s"} = $exp{"-s"} = $exp{""} = "sa";
+$exp{"sa"} = $exp{"s"} = $exp{"-s"} = $exp{""} = "shuffling";
 
 $roi = "c:/games/inform/roiling.inform/Source";
-$sa = "c:/games/inform/sa.inform/Source";
+$sa = "c:/games/inform/shuffling.inform/Source";
 
 $pwd = getcwd();
 
@@ -110,8 +110,8 @@ while ($count <= $#ARGV)
   /^-n/ && do { chdir("c:/writing/dict/nightly"); next; };
   /^-w/ && do { $weirdLine = $b; $notWeirdYet = 1; $count++; next; };
   /^(-?)(r|ro|roi)/ && do { @weedDir = (@weedDir, "roiling"); $count++; next; };
-  /^(-s|s|-sa|sa)$/ && do { @weedDir = (@weedDir, "sa"); $count++; next; };
-  /^-?2/ && do { @weedDir = (@weedDir, "sa", "roiling"); $count++; next; };
+  /^(-s|s|-sa|sa)$/ && do { @weedDir = (@weedDir, "shuffling"); $count++; next; };
+  /^-?2/ && do { @weedDir = (@weedDir, "shuffling", "roiling"); $count++; next; };
   usage();
   }
 }
@@ -121,7 +121,7 @@ while ($count <= $#ARGV)
 if (!@weedDir[0])
 {
 
-if ($pwd =~ /(sa|roiling)\.inform/)
+if ($pwd =~ /(shuffling|roiling)\.inform/)
 {
   my $temp = $pwd; $temp =~ s/\.inform.*//g; $temp =~ s/.*[\\\/]//g;
 @weedDir[0] = $temp;
@@ -566,7 +566,7 @@ if ($_[0] =~ /!!/)
 }
 else
 {
-  $myfi = "C:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Sa Random Text.i7x";
+  $myfi = "C:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/shuffling Random Text.i7x";
   if ($_[1] == 1) { $myfi = "C:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] Random Text.i7x"; }
 }
 
@@ -665,7 +665,7 @@ while (($a = <A>) && (stillWorth()))
 	}
 	else
 	{
-    $dupes{$b} = $a; if ($_[0] eq "sa") { $dupes{$b} = "<b>SA:</b>$dupes{$b}"; }
+    $dupes{$b} = $a; if ($_[0] eq "shuffling") { $dupes{$b} = "<b>SA:</b>$dupes{$b}"; }
 	$ln{$b} = $line;
 	$ta{$b} = $thisTable;
 	}

@@ -74,9 +74,9 @@ Include (-
 
 book separate modules
 
-include Sa Random Text by Andrew Schultz.
+include Shuffling Random Text by Andrew Schultz.
 
-include Sa Nudges by Andrew Schultz.
+include Shuffling Nudges by Andrew Schultz.
 
 book debug modules - not for release
 
@@ -3528,7 +3528,7 @@ check going when player is in sf or player is in rf:
 				move player to rf;
 				the rule succeeds;
 			else:
-				say "You follow the path some more, feeling vainer. Until you tumble into a ravine! It's too steep to climb, so you walk on some more...";
+				say "You follow the path some more, really getting somewhere. 'Mastery of a forest, my!' you say, feeling vainer and promptly tumbling into a ravine! It's too steep to climb, so you walk on some more...";
 				reg-inc;
 				move player to self-id fields;
 				the rule succeeds;
@@ -11343,7 +11343,7 @@ the shotgun can be loaded. the shotgun is not loaded.
 
 understand "gnu" as a mistake ("Shotgun to gnu? Tosh!") when player has shotgun.
 
-description of shotgun is "It's pretty dingy but still intimidating. For whatever reason, it's six-barreled at the muzzle end[if shotgun is not loaded]. Not loaded, though[otherwise]. It's loaded[end if]."
+description of shotgun is "It's pretty dingy but still intimidating, and it's stamped NO THUGS in red. For whatever reason, it's six-barreled at the muzzle end[if shotgun is not loaded]. Not loaded, though[otherwise]. It's loaded[end if]."
 
 the muzzle is part of the shotgun. description of muzzle is "Six-barreled. Weird."
 
