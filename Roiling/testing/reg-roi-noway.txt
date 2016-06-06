@@ -1,0 +1,476 @@
+## C:\writing\scripts\noway.py -- a regtest.py file for detecting generic can't go that way errors
+##
+
+** game: /home/andrew/prt/debug-roil.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* dirtest-noway-Stable
+
+> gonear Stable
+
+!Which do you mean,
+!There seems to be no such object anywhere in the model world.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Econ-Cone
+
+> gonear Econ Cone
+
+!Which do you mean,
+!There seems to be no such object anywhere in the model world.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Danger-Garden
+
+> gonear Danger Garden
+
+!Which do you mean,
+!There seems to be no such object anywhere in the model world.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Shaven-Havens
+
+> gonear Shaven Havens
+
+!Which do you mean,
+!There seems to be no such object anywhere in the model world.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Solo-Den
+
+> gonear Solo Den
+
+!Which do you mean,
+!There seems to be no such object anywhere in the model world.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Peek-Keep
+
+> gonear Peek Keep
+
+!Which do you mean,
+!There seems to be no such object anywhere in the model world.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Ned's-Dens
+
+> gonear Ned's Dens
+
+!Which do you mean,
+!There seems to be no such object anywhere in the model world.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Hows-Show
+
+> gonear Hows-Show
+
+!Which do you mean,
+!There seems to be no such object anywhere in the model world.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Intel-Inlet
+
+> gonear Intel Inlet
+
+!Which do you mean,
+!There seems to be no such object anywhere in the model world.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+
+* dirtest-noway-Evoc-Cove
+
+> gonear Evoc-Cove
+
+!Which do you mean,
+!There seems to be no such object anywhere in the model world.
+
+> n
+!You can't go that way.
+
+> undo
+
+> e
+!You can't go that way.
+
+> undo
+
+> s
+!You can't go that way.
+
+> undo
+
+> w
+!You can't go that way.
+
+> undo
+
+> in
+!You can't go that way.
+
+> undo
+
+> out
+!You can't go that way.
+
+> undo
+
+> u
+!You can't go that way.
+
+> undo
+
+> d
+!You can't go that way.
+
+> undo
+

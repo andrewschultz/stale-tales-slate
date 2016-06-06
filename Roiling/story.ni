@@ -1139,6 +1139,8 @@ when play begins (this is the screenread gender swears and precursor rule) :
 			now doc-y is male;
 			now coin-person is Lord Al;
 			now greedy-person is Red Rat;
+		now coin-person is part of droll dollar;
+		move greedy-person to swell wells;
 		if the player is male:
 			now i trash his art is part of the dope op-ed;
 		else:
@@ -3147,6 +3149,9 @@ Understand the commands "r" and "read" as something new.
 Understand "r [something]" and "read [something]" as reading. Reading is an action applying to one thing, requiring light.
 
 carry out reading:
+	if noun is novella:
+		read-lowest-page;
+		the rule succeeds;
 	if noun is red writing:
 		if number of readable things is 0:
 			say "No writing around here on anything." instead;
@@ -4835,6 +4840,9 @@ to say reject:
 		if the player's command matches the regular expression "^<a-z>+ly":
 			say "[if whistle is reflexed and medals are reflexed]You don't know if you need to do any more of that[anicheck][else][ly-ish].";
 			continue the action;
+	if mrlp is demo dome:
+		say "There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.";
+		continue the action;
 	say "That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. ";
 	unless qbc_litany is Table of No Conversation:
 		say "Besides, there's someone to deal with.";
@@ -4971,15 +4979,15 @@ to say poss-range:
 carry out requesting the score:
 	if mrlp is nothing:
 		say "BUG: This location needs a region." instead;
+	if mrlp is Demo Dome:
+		say "You don't need a score in the Demo Dome. You just need to look around.";
+		left-to-see instead;
 	if roved is true:
 		if player is in strip of profits:
 			say "[if store h is in strip of profits]You need to figure how to get to store H[else]Enter the hoster for the final region[end if]." instead;
 		say "You have [cur-score of mrlp] of [max-score of mrlp] total points for the post-Elvira Others region[if min-score of mrlp < max-score of mrlp], but you only need [min-score of mrlp][end if].";
 		eval-fruits;
 		the rule succeeds;
-	if mrlp is Demo Dome:
-		say "You don't need a score in the Demo Dome. You just need to look around.";
-		left-to-see instead;
 	otherwise:
 		d "# of turns = [turn count].";
 		say "Ol['] Stat Totals:[paragraph break]Score in a scenario: [cur-score of mrlp] out of [max-score of mrlp] total points in the current region, [mrlp]";
@@ -5023,6 +5031,7 @@ definition: a region is markable:
 an exhibit is a kind of thing. an exhibit can be unnoted, perused or exhausted. an exhibit is usually unnoted.
 
 to left-to-see:
+	say "[line break]";
 	if number of unnoted exhibits is 0:
 		let q be number of unexamined things in peek keep;
 		if q > 0:
@@ -5233,6 +5242,11 @@ when play begins (this is the hint and other randomization rule):
 	now a random badbook is in hacks' shack;
 	sort table of animal randomness in random order;
 	sort the table of xibits in random order;
+	let wt be 0;
+	repeat through table of xibits:
+		increase orwt entry by wt;
+		increment wt;
+	sort the table of xibits in orwt order;
 	if a random chance of 1 in 2 succeeds:
 		now last-wall is owl-decal code wall;
 	else:
@@ -7288,6 +7302,8 @@ instead of thinking:
 			say "Hard to think with that knocking." instead;
 	if pernod is visible:
 		say "No, you need to t hink a little more soulfully. ";
+	if mrlp is demo dome:
+		try requesting the score instead;
 	say "If you need help, just say HINT. K?";
 
 chapter touching
@@ -23032,7 +23048,7 @@ check going north in Gates Stage:
 		say "You try to sneak through--you're backstage at the Admit-Us Stadium! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
 	else if gate-level is 1:
 		say "[one of]You try to sneak into the Admit-Us Stadium, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells 'PERP!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
-	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Admit-Us Stadium. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragment spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! 'I shut a hiatus!' By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Roman Manor becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. There's not much more to do, except visit DEMO DOME MODE, if you want, which is a look behind the scenes.";
+	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Admit-Us Stadium. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragment spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! 'I shut a hiatus!' By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Roman Manor becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. But wait: there's a little more, if you can't get enough. DEMO DOME MODE, if you want, which is a puzzleless look behind the scenes, featuring items that didn't fit in and random musings about building code and so forth. You can access it now or when you restart.";
 	now others is solved;
 	if debug-state is true:
 		append "Test passed for Others.[line break]" to the file of debuggery;
@@ -23050,7 +23066,7 @@ check going north in Gates Stage:
 	now final response activity entry is showing regional lists;
 	choose the row with final response activity of ddming in the table of final question options;
 	now final response activity entry is demo dome moding;
-	end the story finally instead;
+	end the story finally saying "A Giddy Route: You Did Great" instead;
 
 every turn when player is in gates stage and perp-check is true and passport is not reflexed (this is the perp-clue rule):
 	if a random chance of 1 in 2 succeeds:
@@ -23329,7 +23345,7 @@ after fliptoing when player is in clearing:
 		increment clearing-fruits;
 	continue the action;
 
-a tekno-token is a thing. description of tekno-token is "It bears the stamp of OKNet, who control its production and so forth. You have no clue how much is left on it, but though it looks like a bluer ruble, it's decent enough to barter with.". understand "tekno/ token" and "tekno" as tekno-token.
+a tekno-token is an improper-named thing. description of tekno-token is "It bears the stamp of OKNet, who control its production and so forth. You have no clue how much is left on it, but though it looks like a bluer ruble, it's decent enough to barter with.". understand "tekno/ token" and "tekno" as tekno-token.
 
 the l-o-p is privately-named proper-named reflexive scenery in Clangier Clearing. "Reading the list, the kumquat [if kumquat is reflexive]in particular seems too expensive and probably easiest to barter down, or whatever[else]is the most reasonably priced item on the list[end if], though other prices almost make you want to curse."
 
@@ -23559,6 +23575,9 @@ book Scape Space
 
 Scape Space is an innie room in Others. Scape Space is below Swell Wells.
 
+check going down in swell wells when scape space is unvisited:
+	move greedy-person to scape space;
+
 The reserved sign is auxiliary scenery in Scape Space. "RESERVED for the DESERVER."
 
 check taking reserved sign:
@@ -23750,7 +23769,6 @@ carry out demoing:
 		say "[reject]";
 	say "[if knockage is true]You ignore Gunter's emo'd voice[else]You decide to, umm, use the Me-Um-Us Museum[end if]. You pull out your discreet, secret ID to enter.";
 	move player to peek keep;
-	ital-say "This area was only programmer-tested as of release 3, and I'm sure I have more and better stuff to add for release 4. There was so much else to fix. But I hope you like what is here.";
 	now right hand status line is "[location of player]";
 	the rule succeeds;
 
@@ -23782,13 +23800,13 @@ check going up in peek keep:
 	say "The great grate blocks you." instead;
 
 table of xibits
-exhib
-owl-decal code wall
-allow-lots-tools wall
-Chic Loner Chronicle
-written walls
-Calendar
-Novella
+exhib	orwt
+owl-decal code wall	1
+allow-lots-tools wall	1
+Chic Loner Chronicle	1
+written walls	1
+Calendar	1
+Novella	10
 
 chapter Evoc-Cove
 
@@ -23888,19 +23906,20 @@ Ned's Dens is west of Peek Keep. Ned's Dens is in Demo Dome. "You feel a hush he
 
 understand "send" as a mistake ("Maybe in another game, you could do that, if you walked around right. But not this one.") when player is in ned's dens.
 
-The Chic Loner Chronicle is an exhibit in Ned's Dens. description is "[one of]The Chronicle has a list of silly things the author thought of while writing this game. One[or]Another thought[stopping] reads: [one-chron]".
+The Chic Loner Chronicle is an exhibit in Ned's Dens. description is "[one of]The Chronicle has a list of silly things the author thought of while writing this game. The first one[or]Another thought[stopping] reads: [one-chron]".
 
 chron-row is a number that varies.
 
 to say one-chron:
 	increment chron-row;
+	now chic loner chronicle is perused;
 	if chron-row > number of rows in table of observations:
 		now chron-row is 1;
-		now chic loner chronicle is perused;
 	choose row chron-row in table of observations;
 	say "[obser entry]";
 	if chron-row is number of rows in table of observations:
-		say "[paragraph break]That's the end of the Chronicle. You can read it again, if you want.";
+		now chic loner chronicle is exhausted;
+		say "[paragraph break]That's the end of the Chronicle. You can read it again, if you want.[no line break]";
 
 chapter Sparse Spares
 
@@ -23934,6 +23953,17 @@ The novella is an exhibit in Evoc-Cove. "A novella is here. You can READ it with
 check taking novella:
 	say "Don't take the art." instead;
 
+to read-lowest-page:
+	let xyz be 1;
+	repeat through table of pagelist:
+		if read-yet entry is true or comprehensible entry is false:
+			increment xyz;
+		else:
+			say "You page through til you find a page that makes sense.";
+			try numreading xyz;
+			the rule succeeds;
+	say "You've read through everything that makes sense, so you may want to look at a specific page.";
+
 to say lowest-unread:
 	let xyz be 1;
 	repeat through table of pagelist:
@@ -23961,6 +23991,7 @@ carry out numreading:
 	if the number understood > 100:
 		say "The book is only 100 pages long." instead;
 	choose row number understood in table of pagelist;
+	now read-yet entry is true;
 	if number of characters in pgtxt entry > 2:
 		say "You glance over it. The most interesting bit seems to be [pgtxt entry][line break]";
 	else:

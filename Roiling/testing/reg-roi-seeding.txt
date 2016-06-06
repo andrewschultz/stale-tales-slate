@@ -1,0 +1,250 @@
+## reg-roi-seeding.txt: testing seeding for various puzzles
+## specifically the towers/trefoil and otters/frontage
+##
+
+
+** game: /home/andrew/prt/debug-roil.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+
+* seed-1
+
+>seed 1
+>gonear trefoil
+Your score has just gone up by one point
+>gone
+Your score has just gone up by one point
+>wined
+Your score has just gone up by one point
+>bleak
+Your score has just gone up by one point
+>tenser
+Your score has just gone up by one point
+>snared
+Your score has just gone up by one point
+>cricked
+Your score has just gone up by one point
+>yonder
+Your score has just gone up by one point
+Topside Deposit
+
+>gonear frontage
+
+>bossily
+Your score has just gone up by one point
+
+>undo
+>nastily
+Your score has just gone up by one point
+
+>undo
+>blearily
+Your score has just gone up by one point
+
+>undo
+>nodestly
+Your score has just gone up by one point
+
+>undo
+>martially
+Your score has just gone up by one point
+
+>drawlingly
+Your score has just gone up by one point
+
+>despairingly
+Your score has just gone up by one point
+Boy, those macks, huh?
+
+* seed-2
+
+>seed 2
+>gonear trefoil
+Your score has just gone up by one point
+>ashen
+Your score has just gone up by one point
+>olden
+Your score has just gone up by one point
+>bored
+Your score has just gone up by one point
+>calmer
+Your score has just gone up by one point
+>warned
+Your score has just gone up by one point
+>timider
+Your score has just gone up by one point
+>yonder
+Your score has just gone up by one point
+Topside Deposit
+
+>gonear frontage
+
+>seedily
+Your score has just gone up by one point
+
+>undo
+>shadily
+Your score has just gone up by one point
+
+>undo
+>formally
+Your score has just gone up by one point
+
+>steamily
+Your score has just gone up by one point
+
+>sincerely
+Your score has just gone up by one point
+
+>undo
+>emotionally
+Your score has just gone up by one point
+Boy, those macks, huh?
+
+* seed-3
+
+>seed 3
+>gonear trefoil
+>stony
+Your score has just gone up by one point
+>godly
+Your score has just gone up by one point
+>lardy
+Your score has just gone up by one point
+>normal
+Your score has just gone up by one point
+>achier
+Your score has just gone up by one point
+>learned
+Your score has just gone up by one point
+>yonder
+Your score has just gone up by one point
+Topside Deposit
+
+>gonear frontage
+>cattily
+Your score has just gone up by one point
+
+>undo
+>snidely
+Your score has just gone up by one point
+
+>undo
+>coitally
+Your score has just gone up by one point
+
+>stupidly
+Your score has just gone up by one point
+
+>sobbingly
+Your score has just gone up by one point
+Boy, those macks, huh?
+
+* seed-4
+
+>seed 4
+>gonear trefoil
+>awed
+Your score has just gone up by one point
+>coyer
+Your score has just gone up by one point
+>weedy
+Your score has just gone up by one point
+>eggier
+Your score has just gone up by one point
+>nearby
+Your score has just gone up by one point
+>pronest
+Your score has just gone up by one point
+>yonder
+Your score has just gone up by one point
+Topside Deposit
+
+>gonear frontage
+>tearily
+Your score has just gone up by one point
+
+>undo
+>irately
+Your score has just gone up by one point
+
+>undo
+>starkly
+Your score has just gone up by one point
+>ribaldly
+Your score has just gone up by one point
+>wearingly
+Your score has just gone up by one point
+Boy, those macks, huh?
+
+* seed-5
+
+>seed 5
+>gonear trefoil
+>awed
+Your score has just gone up by one point
+>coyer
+Your score has just gone up by one point
+>weedy
+Your score has just gone up by one point
+>eggier
+Your score has just gone up by one point
+>nearby
+Your score has just gone up by one point
+>recreant
+Your score has just gone up by one point
+>yonder
+Your score has just gone up by one point
+Topside Deposit
+
+>gonear frontage
+>tediously
+Your score has just gone up by one point
+
+>shabbily
+Your score has just gone up by one point
+
+>despairingly
+Boy, those macks, huh?
+
+* seed-6
+
+>seed 6
+>gonear frontage
+>silently
+Your score has just gone up by one point
+
+>emotionally
+Your score has just gone up by one point
+
+>despairingly
+Your score has just gone up by one point
+Boy, those macks, huh?
+
+* seed-7
+
+>seed 7
+>gonear frontage
+>suddenly
+Your score has just gone up by one point
+
+>emotionally
+Your score has just gone up by one point
+
+>despairingly
+Your score has just gone up by one point
+Boy, those macks, huh?
+
+* seed-8
+
+>seed 8
+>gonear frontage
+>shoddily
+Your score has just gone up by one point
+
+>emotionally
+Your score has just gone up by one point
+
+>despairingly
+Your score has just gone up by one point
+Boy, those macks, huh?
