@@ -4,7 +4,7 @@
 ##
 
 
-** game: /home/andrew/prt/debug-sa.ulx
+** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
 * _manor
@@ -142,12 +142,6 @@ Strip of Profits
 
 * _routes
 
->routes
-Your score has just gone up by one point
-
->in
-Same Mesa
-
 >score
 0 out of 18 total points in the current region, Routes
 
@@ -192,6 +186,7 @@ Your score has just gone up by one point
 
 ##no-gal needs a line break ??
 
+>in
 >out
 >from
 Your score has just gone up by one point
@@ -236,10 +231,7 @@ Strip of Profits
 
 * _troves
 
->troves
-Your score has just gone up by one point
-
->in
+>l
 Loather Rathole
 
 >gape
@@ -344,10 +336,7 @@ Strip of Profits
 
 * _presto
 
->presto
-Your score has just gone up by one point
-
->in
+>l
 Grey Gyre
 
 >blam
@@ -537,6 +526,7 @@ Diver time
 Your score has just gone up by one point
 Strip of Profits
 
+>undo
 >bus
 Drive time
 Your score has just gone up by one point
@@ -544,9 +534,8 @@ Strip of Profits
 
 * _oyster
 
->oyster
-Your score has just gone up by one point
->in
+>l
+Posh Hops Shop
 
 >stroll
 haven't had any fun at all
@@ -556,6 +545,8 @@ Your score has just gone up by one point
 >remap
 already been altered
 
+>undo
+>undo
 >remap
 Your score has just gone up by one point
 >unset
@@ -694,7 +685,7 @@ Your score has just gone up by one point
 
 >search
 Your score has just gone up by one point
-gleaner
+GENERAL GLEANER engulf it
 
 >enlarge
 Your score has just gone up by one point
@@ -826,6 +817,8 @@ Your score has just gone up by one point
 >angstier
 Your score has just gone up by one point
 
+>n
+>s
 >e
 Salted Deltas
 
@@ -893,7 +886,13 @@ Your score has just gone up by one point
 >unlocked
 Your score has just gone up by one point
 
+>w
+>n
+>n
 >ask kid about doctor
+>s
+>s
+>e
 
 >attentive
 Your score has just gone up by one point
@@ -974,7 +973,14 @@ Strip of Profits
 >barely
 Your score has just gone up by one point
 
+>score
+1 out of 29
+
 >reedily
+Your score has just gone up by one point
+
+>rescind
+Adding a min point
 Your score has just gone up by one point
 
 >w
@@ -984,6 +990,14 @@ Gent-Fora Frontage
 >nastily
 >blearily
 
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
 
 >n
 >because
@@ -1030,6 +1044,7 @@ Your score has just gone up by one point
 >artsy
 Your score has just gone up by one point
 >garbed
+Adding a min point
 Your score has just gone up by one point
 
 >s
@@ -1062,6 +1077,7 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >n
+>n
 >w
 >w
 >w
@@ -1077,146 +1093,229 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >w
+Elvira hears them and ambushes you!
+
+>undo
+>quickly
+Your score has just gone up by one point
+
+>w
+WTF FTW
+
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+
 >play whistle
+A MONSTER ROTS. AMEN.
 
 * _others
 
-> rove over
->others
-Your score has just gone up by one point
-
->in
->poss
-
 >maraschino
-1 of 40 total points
-but you only need 25
-
+Your score has just gone up by one point.
 >grapes
-Your score has just gone up by one point
->tamareind
-Your score has just gone up by one point
+Your score has just gone up by one point.
+>cranberries
+Your score has just gone up by one point.
+>tamarind
+Your score has just gone up by one point.
+Hmm. Probably
+
+>compass
+Your score has just gone up by one point.
+
+>plums
+Your score has just gone up by one point.
+
 >pears
-Your score has just gone up by one point
-moss grows on the north
+Your score has just gone up by one point.
 
->moss cap
-Your score has just gone up by one point
-
->lumps
-Your score has just gone up by one point
-
->x drinks
->limes
-Your score has just gone up by one point
-
->pomegranate
-Your score has just gone up by one point
-
-* _others-123
-
+>x stand
 >blueberries
+Your score has just gone up by one point.
+>pomegranate
+Your score has just gone up by one point.
 Take on a token
-
->i
-tekno-token
+>cantaloupe
+Your score has just gone up by one point.
+>persimmon
+Your score has just gone up by one point.
+>limes
+Your score has just gone up by one point.
 
 >n
 >apricot
-Your score has just gone up by one point
-
->mulberries
-Your score has just gone up by one point
-
+Your score has just gone up by one point.
 >apples
-Your score has just gone up by one point
-
+Your score has just gone up by one point.
+>mulberries
+Your score has just gone up by one point.
+>gooseberry
+Your score has just gone up by one point.
+>s
+scru-it
+>n
+>coconuts
+Your score has just gone up by one point.
+>icon
+Your score has just gone up by one point.
+>s
+You fiddle with the coin you got
+>n
+>tangerines
+Your score has just gone up by one point.
 >w
 >blackberries
-Your score has just gone up by one point
-
+Your score has just gone up by one point.
 >watermelon
-Your score has just gone up by one point
-
+Your score has just gone up by one point.
+>pineapple
+Your score has just gone up by one point.
+>strawberries
+Your score has just gone up by one point.
+>grapefruit
+Your score has just gone up by one point.
 >raspberry
-Your score has just gone up by one point
-
+Your score has just gone up by one point.
+>breadfruit
+Your score has just gone up by one point.
 >e
 >s
-scru-it. We're getting somewhere
-
->i
-a coin
-
->cantaloupe
-Your score has just gone up by one point
-
->persimmon
-Your score has just gone up by one point
-citric critic
-
->i
-coins
-
->n
->e
-
->solemn
-Your score has just gone up by one point
-
->solemn
-Your score has just gone up by one point
-
->cheap
-Your score has just gone up by one point
-
->ancienter
-Your score has just gone up by one point
-
->w
->s
-I never could quite spend. It looks kind of illegal.
-
->n
->d
-
-#icons here causes line break ???
->icons
-Your score has just gone up by one point
+Nice going.
 
 >sonic
-Your score has just gone up by one point
+Blam!
+Your score has just gone up by one point.
 
+>n
+>e
+>cinque
+Your score has just gone up by one point.
+>cheap
+Your score has just gone up by one point.
+>papayas
+Your score has just gone up by one point.
+>among
+Your score has just gone up by one point.
+>ancienter
+Your score has just gone up by one point.
+>solemn
+Your score has just gone up by one point.
+>solemn
+Your score has just gone up by one point.
+>cripes
+Your score has just gone up by one point.
+
+>w
+>d
+>nab an a
+Your score has just gone up by one point.
+>go near
+Your score has just gone up by one point.
+>rhubarb
+Your score has just gone up by one point.
+>reversed
+Your score has just gone up by one point.
 >give dollar
-# should not say to yourself ??
-#needs line break after you take the storage box ??
-#give dollar
-
 >put icons in slot
-
 >u
 >n
-
->prep
-Your score has just gone up by one point
-
->undo
->research
-Your score has just gone up by one point
 >review
-Your score has just gone up by one point
+Your score has just gone up by one point.
+>research
+Your score has just gone up by one point.
+>score
+41 out of 41
+>n
 You Did Great
 
->n
-
-* big-go
+* _big-go
 
 >{include} _manor
+
+>routes
+Your score has just gone up
+>in
+Same Mesa
 >{include} _routes
+
+>troves
+Your score has just gone up
+Loather Rathole
+>in
 >{include} _troves
+
+>presto
+Your score has just gone up
+Grey Gyre
+>in
 >{include} _presto
+
+>oyster
+Your score has just gone up
+Posh Hops Shop
+>in
 >{include} _oyster
+
+>towers
+Your score has just gone up
+>in
+Loftier Trefoil
 >{include} _towers
+
+>otters
+Your score has just gone up
+Bleary Barley
+>in
 >{include} _otters
+
+>rove over
+Your score has just gone up
+>others
+Rustic Citrus
+>in
 >{include} _others
 
+* _only-routes
+
+>gonear same mesa
+>{include} _routes
+
+* _only-troves
+
+>gonear rathole
+>{include} _troves
+
+* _only-presto
+
+>gonear gyre
+>{include} _presto
+
+* _only-oyster
+
+>purloin settler
+>gonear posh hops shop
+>{include} _oyster
+
+* _only-towers
+
+>seed 1
+>gonear trefoil
+>{include} _towers
+
+* _only-otters
+
+>seed 1
+>gonear barley
+>{include} _otters
+
+* only-others
+
+>gonear rustic citrus
+>{include} _others

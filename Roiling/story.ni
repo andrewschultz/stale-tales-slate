@@ -106,7 +106,7 @@ chapter region definition
 
 Roman Manor is an unsolved region. max-score of Roman Manor is 13. min-score of Roman Manor is 8. [giant pin, stable/stair, chimney/ramp, basement] [non-anagram = staple wall]
 
-Others is an unsolved region. max-score of Others is 40. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits + compass + icons/sonic + passport x 2. FRUI checks what fruit is where.]
+Others is an unsolved region. max-score of Others is 41. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits + compass + icons/sonic + passport x 2. FRUI checks what fruit is where.]
 
 Routes is a region. max-score of Routes is 18. min-score of Routes is 17. [worst ad]
 
@@ -1158,6 +1158,10 @@ when play begins (this is the screenread gender swears and precursor rule) :
 		now i trash his art is part of the dope op-ed;
 		now the player is male;
 		now the admirer is female;
+		now smart kid is male;
+		now doc-y is male;
+		now coin-person is Lord Al;
+		now greedy-person is Red Rat;
 
 to decide whether (cho - a number) is irrelevant:
 	if cho is 70 or cho is 102, decide no;
@@ -4053,7 +4057,7 @@ this is the check final region action rule:
 					now warned-yet entry is true;
 					ital-say-n "[pointwarn entry]";
 					say " Continue anyway?";
-					if the player consents:
+					if the player yes-consents:
 						the rule succeeds;
 					else:
 						say "OK, this won't appear again for this section.";
@@ -4613,8 +4617,9 @@ pryer bars	"The pryer bars briefly turn very red."
 magenta rope	"The magenta rope and other items you uncovered briefly seem as one."
 spear	"The spear stays as-is. But it can't be that hard to change."
 slime	"The slime shifts about slightly, but not enough--yet."
-lemons	"Len frowns at the lemons."
-melons	"Len frowns at the melons."
+lemons	"[l-frown]lemons."
+melons	"[l-frown]melons."
+mango	"Snag mo['] mangos? No mas, G."
 quince	"That certainly sounds foreign--but it doesn't seem to sway Len."
 silly shirt	"You don't quite have ESP, pal, but with the right logic skills you can seem like you do. That shirt's still resisting."
 eerie blurbs	"The blurbs turn a few shades of purple before settling again."
@@ -4628,6 +4633,9 @@ coin	"The coin looks a bit more artistic for a moment--no, it's too drab, again.
 coins	"The coins rattle and hum promisingly."
 icons	"The icons rattle and hum promisingly."
 s-c	"The sonic coins hum almost questioningly."
+
+to say l-frown:
+	say "[if player is in clearing]Len frowns[else]you frown[end if] at the ";
 
 to say mack-dealt:
 	say "You've already exposed the macks for that";
@@ -4945,8 +4953,9 @@ oyster	1	"You've started to get some action in."
 oyster	2	"Bam! More action! You'll still sort of be guessing the verb, but it's sort of just reacting, too."
 towers	1	"Well! You kind of cost him a few macho points, but you didn't, like, name-call him. He's probably better off being described that way in the long run."
 towers	2	"Most of these fellows seem short-named and not too complex. I mean, if they got suckered by Rodney... things will probably get tougher to describe outside the Trefoil, but this is good practice."
-others	1	"You've used pretty much every kind of word in the dictionary to get here. You have a strong idea what's left. Maybe you can test that hypothesis on Ed!"
+otters	1	"You've used pretty much every kind of word in the dictionary to get here. You have a strong idea what's left. Maybe you can test that hypothesis on Ed!"
 otters	2	"Barley, [if player is in bleary barley]reedily[else]then another l-y. Ed Riley seems a bit less intimidating--you dinged up the [imp-or-whiners] here[end if]. Until you get your full powers back, your restriction has made a bit of a pattern, here. For now."
+others	1	"Hmm. It looks pretty clear what sort of stuff you're trying to make, here."
 
 to say imp-or-whiners:
 	if player is in anteroom:
@@ -7322,6 +7331,11 @@ to say a-r:
 	say "[one of]Ingera[or]Reagin[or]Rigena[in random order]"
 
 before listening (this is the you can hear stuff some places rule):
+	if player is in clearing:
+		if mango is off-stage:
+			say "Selly yells. [randbla][paragraph break]Amidst the hustle and haggling, a small voice is saying, 'Go, man!' You see red as it begins to nag mo[']. Where? How?" instead;
+		else:
+			say "Selly yells. [randbla][paragraph break]" instead;
 	if player has s-i or player has s-c:
 		say "A low buzzing from your [if player has s-c]sonic coins[else]sonic icons[end if]--odd. What could they do, or buy?" instead;
 	if sorer bogey is visible:
@@ -7390,11 +7404,6 @@ before listening (this is the you can hear stuff some places rule):
 		say "[if nestor is visible]Conversation from the tokers you don't want to listen TOO closely to[else]The tokers bemoan their lost friend[end if]." instead;
 	if nestor is visible:
 		say "Nestor periodically mumbles about his lost buddies." instead;
-	if player is in clearing:
-		if mango is off-stage:
-			say "Selly yells. [randbla] Amidst the hustle and haggling, a small voice is saying, 'Go, man!' You see red as it begins to nag mo[']. Where? How?" instead;
-		else:
-			say "Selly yells. [randbla][paragraph break]" instead;
 	if lecturer is visible:
 		say "You're hearing enough without trying, sadly." instead;
 	if e-s is visible:
@@ -8789,6 +8798,7 @@ l-o-p	kumquat	"cripes"	"cripes"	"Man! The way you said it, man, Len Craig has an
 caution	papayas	"papayas"	"papayas"	"You point at the auction caution and wave down someone passing by who's relieved SOMEONE here seems to know the rules. He gives you some fruits for your troubles."	true	388128590	"You've already established yourself as a prompt payer."
 quince	quince	"cinque"	"cinque"	"You hold up five fingers and repeat 'five' in several languages. Italian finally works. Len pauses, then nods his head. He wipes off the NAME A PRICE markering with a rag."	true	450223472
 peach	peach	"cheap"	"cheap"	"You go for a direct approach, which works great. Probably won't work again, but you feel a better patron for this potent barter."	true	267747770	"You got a good enough deal."
+pre-mang	mango	"among"	"among"	"You mingle among the shoppers for a while. Eventually you find somewhere you didn't see before. You stifle an OMG when you see a mango. You stop to haggle. It goes well."	true	242122758
 lemons	lemons	"solemn"	"solemn"	"Thinking all 'I frown for win' at the lemons, you mind-trick Len into lowing his price. 'Enjoy your rickets sticker.'"	true	485229152
 melons	melons	"solemn"	"solemn"	"You half-frown at the melons, and Len, groaning slightly, lowers his price. You take a few."	true	485229152
 rapt figure	grapefruit	"grapefruit"	"grapefruit"	"The figure gives a look as if it's eaten something sour before it rolls into itself, into a lumpy yellow ball--a grapefruit!"	true	694430761
@@ -20923,6 +20933,9 @@ check fliptoing medals:
 	if Merle is visible:
 		say "Elmer and Merle's stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts[med-unf]. [if hydra-known is true]You probably need force to get west, too[else]You might need that speed in the final combat, instead[end if].";
 		preef medals instead;
+	if player is in wire deck and owls are in wire deck:
+		say "The owls seem like they can be dealt with more simply. The medals should be saved for something bigger[med-unf].";
+		preef medals instead;
 	if player is not in alcoves:
 		say "There's nothing you really need to attack or avoid quickly here or nearby[med-unf].";
 		 preef medals instead;
@@ -21308,8 +21321,8 @@ carry out playing:
 			now otters is solved;
 			now last-solved-region is otters;
 			first-status;
-			say "Elmo and Gretta are waiting for you back at your manor with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you could show...you don't just swoop in to avert disaster? If you could ROVE OVER and help him...but if you need a break, no problem.";
-			unless the player consents:
+			say "Elmo and Gretta are waiting for you back at your manor with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you ROVE OVER and help him. If you need a break, no problem, but maybe you wouldn't mind going over there?";
+			unless the player yes-consents:
 				say "Yeah. Maybe later. If you want to help him, you can ROVE OVER from your dusty study next time someone knocks. Or you can just UNDO at the next command.";
 				end the story finally saying "A MONSTER ROTS. AMEN.";
 				follow the shutdown rules instead;
@@ -22538,6 +22551,7 @@ after fliptoing a fruit (this is the check minimum fruits and score rule) :
 
 to check-fruit-min:
 	increment fruits-flipped;
+	d "[fruits-flipped] fruits flipped so far.";
 	if fruits-flipped > 20:
 		min-up;
 
@@ -22746,14 +22760,14 @@ to say if-clear:
 table of coingiving
 levb4	levaf	get-token	get-coin	get-coins	get-dollar	blabber
 0	1	1	0	0	0	"'Ok. Neat. Take on a token. There's a clearing some ways away[if-clear]where you can swipe it to trade for things. Haggle. That sort of thing.'"
-0	2	1	1	0	0	"'Wow! You got a lot done on that errand. Here's a tekno-token AND a coin. If you go to this clearing[if-clear]the token'll last you a bit. More deals. Coin'll be useful for...something.'"
-0	3	1	0	1	0	"'Surprised you can lug all that back! Here's a tekno-token to use in a clearing[if-clear] and some coins. Maybe you'll find what to do with them. Keep it up!'"
+0	2	1	1	0	0	"'Wow! You got a lot done on that errand. Here's a tekno-token AND a coin. If you go to the clearing east of the wells, the token'll last you a bit. More deals. Coin'll be useful for...something.'"
+0	3	1	0	1	0	"'Surprised you can lug all that back! Here's a tekno-token to use in the clearing east of the wells, along with some coins. Maybe you'll find what to do with them. Keep it up!'"
 0	4	1	0	1	1	"'Wow! Impressive! I'm half curious if you cheated somehow! Here's a tekno-token for the clearing up north and east--not that you may need it--and a couple coins, and a dollar. Don't know if I can give you anything else.'"
 1	2	0	1	0	0	"'Glad you didn't say scru-it. We're getting somewhere[if player has moss cap]. Maybe if you physically get somewhere, we can get further[end if].' Curtis hands you a coin for your efforts."
 1	3	0	0	1	0	"'Wow. So much done at once.' Curtis hands you two coins for your efforts."
 1	4	0	0	1	1	"'Spurtin['] turnips! All that at once? I--well, here's the rest of my junk I don't know what to do with.' Curtis, looking very pleased, hands you two coins and some sort of dollar."
 2	3	0	0	1	0	"Curtis, looking quite the citric critic, hands you another coin identical to the one he gave you before."
-2	4	0	0	1	1	"Curtis hands you a coin and a suspicious looking dollar. He nods as if to say, that's all you'll get from him."
+2	4	0	0	1	1	"Curtis hands you another coin and a suspicious looking dollar. He nods as if to say, that's all you'll get from him."
 3	4	0	0	0	1	"'Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you.'"
 
 chapter moss cap
@@ -22790,7 +22804,7 @@ check going north in Rustic Citrus:
 
 chapter drinks stand
 
-the abandoned drinks stand is scenery in Rustic Citrus. "[one of]It's pretty easy to see why it's abandoned. Unfortunately, it's not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant, and plans for a megaton pear, under some magenta rope. And there's a lame video collection.[or]There's no other nasty cola, or writing, or 'art,' to find.[or][stopping][if eerie blurbs are visible] You notice some eerie blurbs written on the stand.[end if]"
+the abandoned drinks stand is scenery in Rustic Citrus. "[one of]It's pretty easy to see why it's abandoned. Unfortunately, it's not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant, and plans for a megaton pear, under some magenta rope. And there's a lame video collection.[or]There's no other nasty cola, or writing, or 'art,' to find.[or]You've searched the stand pretty thoroughly.[stopping][if eerie blurbs are visible] You notice some eerie blurbs written on the stand.[end if]"
 
 check taking drinks stand:
 	say "The drinks stand is too big to take[if slime is off-stage], but maybe it's worth examining[else], and you sort of ransacked it anyway[end if]." instead;
@@ -22896,7 +22910,7 @@ after fliptoing pomegranate: [the magenta rope is already flipped]
 
 book Swell Wells
 
-Swell Wells is north of Rustic Citrus. "Wells, err, swell from this [one of]lowland[or]old lawn[cycling]. You can go east to a loud clearing, or down the wells, or west to a filed field[if sorer bogey is visible]. You think you hear something from the wells[end if].". Swell Wells is in Others.
+Swell Wells is north of Rustic Citrus. "Wells, err, swell from this [one of]lowland[or]old lawn[cycling]. You can go east to a loud clearing, or down the wells, or west to a filed field[if sorer bogey is visible]. You think you hear something from the wells[end if][if green stain is visible]. There's also a green stain among the wells[end if].". Swell Wells is in Others.
 
 s-w are privately-named scenery in swell wells. printed name of s-w is "the wells". understand "wells" and "swell wells" as s-w. "It's been vandalized in oh so many ways. [what-clear]."
 
@@ -23436,7 +23450,7 @@ check taking (this is the shoplift in clearing rule) :
 
 understand "solemn" as a mistake ("Why so grouchy? You got a good price on the lemons AND the melons.") when player is in clangier clearing.
 
-chapter amonging
+the pre-mang is privately-named scenery in Clangier Clearing. pre-mang is undesc.
 
 understand "among" as a mistake ("Maybe if there were mango trees around.") when mrlp is routes.
 
@@ -23446,32 +23460,17 @@ understand "nag mo" as a mistake ("[one of]You get all red faced asking people h
 
 understand "an omg" as a mistake ("Lashing out that way leaves you feeling you must be close to the right way to get a mango.") when player is in clearing and mango is off-stage.
 
-amonging is an action applying to nothing.
-
-understand the command "among" as something new.
-
-understand "among" as amonging.
-
-carry out amonging:
-	if player is in clearing:
-		if mango is off-stage:
-			if player does not have tekno-token:
-				say "You'd look a little too suspicious mingling without anything of value to trade. Maybe when you have something, though.";
-				preef mango;
-				the rule succeeds;
-			say "You mingle among the shoppers for a while. Eventually you find somewhere you didn't see before. You stifle an OMG when you see a mango. You stop to haggle. It goes well.";
-			reg-inc;
-			now player has mango instead;
-		else:
-			say "Snag mo['] mangos? No mas, G." instead;
-	say "[reject]" instead;
-	the rule succeeds;
+check fliptoing mango:
+	if player does not have tekno-token:
+		say "You'd look a little too suspicious mingling without anything of value to trade. Maybe when you have something, though.";
+		preef mango;
+		the rule succeeds;
 
 book Filed Field
 
 chapter where it is, and scenery
 
-Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Foliage cause foilage all directions except east. [if b-w are visible]Barriers west block you. [end if][if ppf is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries[end if][if ppf is in lalaland and briar screen is in lalaland and b-w is in lalaland and rapt figure is in lalaland]. You've gotten rid of all the junk here--good job![else].[end if]". Filed Field is in Others.
+Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Foliage cause foilage all directions except east. [if b-w are visible]Barriers west block you. [end if][if ppf is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries. [end if][if b-r is visible]A buried raft lies here, too. [end if][if ppf is in lalaland and briar screen is in lalaland and b-w is in lalaland and rapt figure is in lalaland and b-r is in lalaland]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others.
 
 the foliage is useless scenery in filed field. "It'll still block you going anywhere but back east, even with the more man-made obstacles gone."
 
@@ -23583,8 +23582,9 @@ book Scape Space
 
 Scape Space is an innie room in Others. Scape Space is below Swell Wells.
 
-check going down in swell wells when scape space is unvisited:
-	move greedy-person to scape space;
+check going down in swell wells:
+	if scape space is unvisited:
+		move greedy-person to scape space;
 
 The reserved sign is auxiliary scenery in Scape Space. "RESERVED for the DESERVER."
 
@@ -23644,7 +23644,7 @@ to say trader-clue:
 the printed name of Dr Tera is "Dr. Tera Darter".
 
 to say gree-app:
-	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her] bailed out because [he-she] was being interesting and creative, or something. Some people tarred [him-her], and, well, [he-she] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c] probably got kicked out [if clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if storage box is in scape space]--[he-she]'s sort of holding out a box labeled So-Great Storage[end if]"
+	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her] bailed out because [he-she] was being interesting and creative, or something. Some people tarred [him-her], and, well, [he-she] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c] probably got kicked out [if clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if storage box is in scape space]--[he-she]'s sort of holding out a box labeled So-Great Storage[end if][if guava is off-stage], and [he-she] is only partially hiding a sign[end if]"
 
 understand "tarred trader" and "tarred/trader" as Red Rat when player is male.
 understand "tarred trader" and "tarred/trader" as Dr Tera when player is female.
@@ -23685,6 +23685,7 @@ check giving something to greedy-person:
 		say "He consults an imaginary calendar. 'Sell date. All's teed. Let's deal.' On receiving the dollar, he cries 'Monies so mine!'[paragraph break]You take the storage box.";
 		now greedy-person has dollar;
 		if player has s-i:
+			say "[line break]";
 			slot-appear;
 		now player has storage instead;
 	if noun is tekno-token:
@@ -26209,7 +26210,7 @@ To fully resume the story:
 
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic	final response rule	final response activity
-"see what's behind STORE H"	true	"store h"	epilogue rule	--
+"ROVE OVER to see what's behind STORE H"	true	"store h" or "rove/over" or "rove over"	epilogue rule	--
 
 This is the epilogue rule:
 	fully resume the story;
