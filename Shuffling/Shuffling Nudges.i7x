@@ -1,4 +1,4 @@
-Version 1/151226 of Sa Nudges by Andrew Schultz begins here.
+Version 1/151226 of Shuffling Nudges by Andrew Schultz begins here.
 
 volume nudges
 
@@ -896,6 +896,6 @@ to say no-cred-spec:
 to say meta-rej:
 	say "Meta-commands don't have any easter eggs, sadly"
 
-Sa Nudges ends here.
+Shuffling Nudges ends here.
 
 ---- DOCUMENTATION ----

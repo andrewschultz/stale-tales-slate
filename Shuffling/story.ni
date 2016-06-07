@@ -14,12 +14,12 @@ You may have some problems with Glulx Text Effects.i7x / Glulx Text Effects - Ne
 
 [Given that the total source is over 900000 bytes, I've tried to provide a rough outline as well as places to look to find the tricky bits. The standard method of searching game text in the source will probably get you pretty far, but also, I used some search markers repeatedly when I needed to change something in this game.
 
-Sa Random Text.i7x includes all the random text. It is searchable by xx(f,m,i,r,x) -- x is introductory names, and the others are the store the region is behind.
+Shuffling Random Text.i7x includes all the random text. It is searchable by xx(f,m,i,r,x) -- x is introductory names, and the others are the store the region is behind.
 
-Sa Nudges.i7x includes all the nudges for good guesses. By good guesses I mean trying objects that can't be anagrammed.
+Shuffling Nudges.i7x includes all the nudges for good guesses. By good guesses I mean trying objects that can't be anagrammed, but they're descibed prominently enough.
 
 TMC=table of megachatter, where all the random text is forked.
-TON=table of nudges, where a good try is rejected, so the player knows they are on the wrong track. It's in Sa Nudges.i7x now.
+TON=table of nudges, where a good try is rejected, so the player knows they are on the wrong track. It's in Shuffling Nudges.i7x now.
 TOA=table of anagrams, or the big one.
 TOH=table of hint objects
 TOSH=table of specialized help (for specific rejects, e.g. ELCISH for the liches)
@@ -7253,7 +7253,7 @@ carry out pouring:
 		say "You can't see any such thing." instead;
 	if noun is oils and location of player is sacred cedars:
 		if oils are in cask:
-			say "You've already got some oils in the cask." instead;
+			say "[cask-full]." instead;
 		otherwise:
 			try filling cask instead;
 	if noun is oils or noun is cask:
@@ -7263,6 +7263,9 @@ carry out pouring:
 		try filling the cask instead;
 	say "You can't pour that!";
 	the rule succeeds;
+
+to say cask-full:
+	say "The cask is already full of oils"
 
 section moor
 
@@ -12702,7 +12705,7 @@ carry out filling:
 	if silo is in moor and soil is in moor:
 		say "A voice. It must be Lois. 'WIN,' she whines[one of]. You won't be getting any more oils[or][stopping]." instead;
 	if oils are in cask:
-		say "The cask is already full." instead;
+		say "[cask-full]." instead;
 	say "Gainly laying the cask under the spout, you pour in some oils.";[check for 3rd time]
 	increment caskfillings;
 	if caskfillings is 2:

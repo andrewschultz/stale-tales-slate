@@ -1,4 +1,4 @@
-Version 1/151216 of Sa Random Text by Andrew Schultz begins here.
+Version 1/151216 of Shuffling Random Text by Andrew Schultz begins here.
 
 volume megachatter table
 
@@ -3886,6 +3886,6 @@ blurb
 "'We are right! Rage! Writhe!'"
 "'Witchery: why rec it?'"
 
-Sa Random Text ends here.
+Shuffling Random Text ends here.
 
 ---- DOCUMENTATION ----

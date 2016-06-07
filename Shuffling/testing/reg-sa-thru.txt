@@ -4,7 +4,7 @@
 ## nudgeleft.txt is the file to look for
 
 
-** game: /home/andrew/prt/debug-sa.ulx
+** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
 * _intro
@@ -66,8 +66,11 @@ Trips Strip
 >sorbet
 Your score has just gone up by one point.
 
+>nice bat
+Your score has just gone up by one point.
+
 >score
-1 out of 6
+out of 6
 
 >resort
 seems like it should work
@@ -76,6 +79,9 @@ maybe, soon, you will
 * _forest
 
 >sr ne
+>forest
+Your score has just gone up by one point.
+
 >enter forest
 
 >n
@@ -84,13 +90,12 @@ Rest of Forest
 
 >score
 1 out of 16 total
-me, a nervy
 
 >e
+Self-ID Fields
 
 >score
 2 out of 16
-Self-ID Fields
 
 >e
 Sorted Trodes
@@ -320,6 +325,7 @@ Your score has just gone up by one point.
 >e
 Sacred Cedars
 
+>cask
 >fill cask
 Gainly laying
 
@@ -379,12 +385,10 @@ Trips Strip
 
 * _metstart
 
->metros
->enter metros
-Undesired Underside
-
 >gardenia
 Your score has just gone up by one point.
+
+>score
 1 out of 18 total points
 
 >n
@@ -421,6 +425,9 @@ Your score has just gone up by one point.
 >switch emitter
 Your score has just gone up by one point.
 
+>get cake
+>s
+
 >controls
 Your score has just gone up by one point.
 
@@ -442,7 +449,7 @@ Your score has just gone up by one point.
 >s
 >s
 >u
-(on the fuzzy-looking wall)
+(on the fuzzy looking wall)
 
 >opening
 Your score has just gone up by one point.
@@ -470,7 +477,8 @@ Your score has just gone up by one point.
 Dude! So you
 
 >give emitter to deadbeat
-Man, I've done enough work today !!! double lines
+Man, I've done enough work today
+#double lines
 
 >s
 >e
@@ -488,9 +496,11 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >get sword
-Your score has just gone up by one point.
+The sword is yours
 
 >attack beast
+Your score has just gone up by one point.
+Trips Strip
 
 * _metros-heaths-gnats
 
@@ -508,7 +518,8 @@ Your score has just gone up by one point.
 Dude! So you
 
 >give emitter to deadbeat
-Man, I've done enough work today !!! double lines
+Man, I've done enough work today
+#double lines
 
 >s
 >e
@@ -526,7 +537,7 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >get sword
-Your score has just gone up by one point.
+The sword is yours
 
 >attack beast
 Your score has just gone up by one point.
@@ -541,14 +552,15 @@ Your score has just gone up by one point.
 >w
 >w
 >open bag
-Your score has just gone up by one point.
+swirling into the bag
 
 >e
 >give emitter to deadbeat
 Dude! So you
 
 >give emitter to deadbeat
-Man, I've done enough work today !!! double lines
+Man, I've done enough work today
+#double lines
 
 >s
 >e
@@ -583,14 +595,15 @@ Your score has just gone up by one point.
 >w
 >w
 >open bag
-Your score has just gone up by one point.
+swirling into the bag
 
 >e
 >give emitter to deadbeat
 Dude! So you
 
 >give emitter to deadbeat
-Man, I've done enough work today !!! double lines
+Man, I've done enough work today
+#double lines
 
 >s
 >e
@@ -625,20 +638,22 @@ Your score has just gone up by one point.
 >w
 >w
 >open bag
-Your score has just gone up by one point.
+swirling into the bag
 
 >e
 >give emitter to deadbeat
 Dude! So you
 
 >give emitter to deadbeat
-Man, I've done enough work today !!! double lines
+Man, I've done enough work today
+#double lines
 
 >s
 >e
 Your score has just gone up by one point.
 
 >open bag
+BE FAIR
 Your score has just gone up by one point.
 
 >s
@@ -716,4 +731,45 @@ Roman Manor
 >exist
 Your score has just gone up by one point.
 
+################################main tests below here
+
+* _plow-through
+
+>{include} _intro
+>{include} _forest
+>{include} _trips
+>{include} _sortie
+>metros
+Your score has just gone up by one point.
+
+>enter metros
+Underside
+
+>{include} _metstart
+>{include} _metros-heaths-darkness
+>{include} _resort
+
+* metros-2
+
+>gonear underside
+>{include} _metstart
+>{include} _metros-heaths-gnats
+
+* metros-3
+
+>gonear underside
+>{include} _metstart
+>{include} _metros-begonias-darkness
+
+* metros-4
+
+>gonear underside
+>{include} _metstart
+>{include} _metros-begonias-gnats
+
+* metros-5
+
+>gonear underside
+>{include} _metstart
+>{include} _metros-begonias-noise
 

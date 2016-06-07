@@ -13174,7 +13174,7 @@ blurb	prio
 "The Price's Three Pics[r], by Chet Piers"
 "A Pricy Piracy: I Cry, Pa![r], by Pia Cyr"
 "Pride as a Paradise[r], by Sid Parea" []
-"Pride Came: Carpe Diem[r], by Meda Price"
+"Cad Empire: Carpe Diem[r], by Meda Price"
 "Pride Into Perdition[r], by [d-t] Perini" []
 "Pride, Pried: I'd Rep[r], by Deidre Ripp"
 "A Pride, Repaid[r], by Dr. Pia Pereida"

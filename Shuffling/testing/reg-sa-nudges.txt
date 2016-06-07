@@ -4,7 +4,7 @@
 ## nudgeleft.txt is the file to look for
 
 
-** game: /home/andrew/prt/debug-sa.ulx
+** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
 * dirtest-general-intro
