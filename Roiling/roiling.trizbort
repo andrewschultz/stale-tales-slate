@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<trizbort version="1.5.9.4">
+<trizbort version="1.5.9.5">
 	<info>
 		<title>A Roiling Original</title>
 		<author>Andrew Schultz</author>
@@ -9,589 +9,589 @@ version 2 January 2014
 version 3 March 2015</history>
 	</info>
 	<map>
-		<room id="1" name="Strip of Profits" subtitle="Start Stores" x="-160" y="64" w="96" h="64" region="Stores" handDrawn="no" allcornersequal="no" ellipse="yes" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="1" name="Strip of Profits" subtitle="Start Stores" x="-160" y="64" w="96" h="64" region="Stores" handDrawn="yes" allcornersequal="no" ellipse="yes" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="2" name="Loather Rathole" subtitle="Start Troves" x="-288" y="-128" w="96" h="64" region="Troves" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="2" name="Loather Rathole" subtitle="Start Troves" x="-288" y="-128" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="3" name="Loudest Used Lot" subtitle="" x="-416" y="-128" w="96" h="64" region="Troves" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="3" name="Loudest Used Lot" subtitle="" x="-416" y="-128" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw"> (Rustin' Ruin St.)</objects>
 		</room>
-		<room id="4" name="Pallid Li'l Pad" subtitle="(Boredom Bedroom)" x="-416" y="-224" w="96" h="64" region="Troves" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects> Lager</objects>
+		<room id="4" name="Pallid Li'l Pad" subtitle="(Boredom Bedroom)" x="-416" y="-224" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects>   Lager</objects>
 		</room>
-		<room id="5" name="Dour Tan Rotunda" subtitle="" x="-416" y="-320" w="96" h="64" region="Troves" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="6" name="Econ-Cone" subtitle="" x="-288" y="-224" w="96" h="64" region="Troves" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects at="n">Astute Statue</objects>
+		<room id="5" name="Dour Tan Rotunda" subtitle="" x="-416" y="-320" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="6" name="Econ-Cone" subtitle="" x="-288" y="-224" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-32" customDown="0">Astute Statue</objects>
 		</room>
 		<room id="7" name="FiefCo Office" subtitle="End Troves" x="-160" y="-128" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="8" name="Anger Range" subtitle="" x="96" y="-128" w="96" h="64" region="Oyster" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="8" name="Anger Range" subtitle="" x="96" y="-128" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw">Carps/Pikes/Trout</objects>
 		</room>
-		<room id="9" name="Posh Hops Shop" subtitle="Start Oyster" x="-32" y="-32" w="96" h="64" region="Oyster" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="9" name="Posh Hops Shop" subtitle="Start Oyster" x="-32" y="-32" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="11" name="Achers' Arches" subtitle="" x="-32" y="-128" w="96" h="64" region="Oyster" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Sandier Sardine</objects>
+		<room id="11" name="Achers' Arches" subtitle="" x="-32" y="-128" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-40" customDown="0">Sandier Sardine</objects>
 		</room>
-		<room id="12" name="Horned Hedron" subtitle="" x="-32" y="-224" w="96" h="64" region="Oyster" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="12" name="Horned Hedron" subtitle="" x="-32" y="-224" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Weaselly|Walleyes</objects>
 		</room>
-		<room id="13" name="End Den" subtitle="" x="96" y="-320" w="96" h="64" region="Oyster" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="14" name="Scum Ant Sanctum" subtitle="" x="-160" y="-320" w="96" h="64" region="Oyster" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="15" name="TenfoldTeflon'd Den/Loft" subtitle="End Oyster" x="-32" y="-320" w="96" h="64" region="Oyster" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="13" name="End Den" subtitle="" x="96" y="-320" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="14" name="Scum Ant Sanctum" subtitle="" x="-160" y="-320" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="15" name="TenfoldTeflon'd Den/Loft" subtitle="End Oyster" x="-32" y="-320" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="16" name="Lapsin' Plains" subtitle="" x="96" y="-224" w="96" h="64" region="Oyster" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Crate, Huts</objects>
+		<room id="16" name="Lapsin' Plains" subtitle="" x="96" y="-224" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-28" customDown="0">Crate, Huts</objects>
 		</room>
-		<room id="17" name="(Uh, at) a Hut" subtitle="" x="224" y="-320" w="96" h="64" region="Oyster" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects at="wsw">           Tubs</objects>
+		<room id="17" name="(Uh, at) a Hut" subtitle="" x="224" y="-320" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-16" customDown="0">Tubs</objects>
 		</room>
-		<line id="18" color="#000000" style="dashed">
+		<line id="18" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="8" port="w" />
 			<dock index="1" id="11" port="e" />
 		</line>
-		<line id="19" color="#000000" style="dashed">
+		<line id="19" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="12" port="s" />
 			<dock index="1" id="11" port="n" />
 		</line>
-		<line id="20" color="#000000" style="dashed" startText="in" endText="out">
+		<line id="20" name="" description="" color="#000000" style="dashed" startText="in" endText="out">
 			<dock index="0" id="12" port="n" />
 			<dock index="1" id="15" port="s" />
 		</line>
-		<line id="21" color="#000000" style="dashed" flow="oneWay" startText="in" endText="out">
+		<line id="21" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="in" endText="out">
 			<dock index="0" id="12" port="nw" />
 			<dock index="1" id="14" port="se" />
 		</line>
-		<line id="22" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="22" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="14" port="e" />
 			<dock index="1" id="15" port="w" />
 		</line>
-		<room id="23" name="Collapsed Old Places" subtitle="" x="-160" y="-224" w="96" h="64" region="Oyster" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="24" color="#000000">
+		<room id="23" name="Collapsed Old Places" subtitle="" x="-160" y="-224" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="24" name="" description="" color="#000000">
 			<dock index="0" id="12" port="w" />
 			<dock index="1" id="23" port="e" />
 		</line>
-		<line id="26" color="#000000" style="dashed">
+		<line id="26" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="16" port="s" />
 			<dock index="1" id="8" port="n" />
 		</line>
-		<line id="28" color="#000000" style="dashed" startText="in" endText="out">
+		<line id="28" name="" description="" color="#000000" style="dashed" startText="in" endText="out">
 			<dock index="0" id="16" port="ne" />
 			<dock index="1" id="17" port="sw" />
 		</line>
-		<line id="27" color="#000000" style="dashed" startText="in" endText="out">
+		<line id="27" name="" description="" color="#000000" style="dashed" startText="in" endText="out">
 			<dock index="0" id="12" port="ne" />
 			<dock index="1" id="13" port="sw" />
 		</line>
-		<room id="29" name="Hero's Shore" subtitle="" x="224" y="-32" w="96" h="64" region="Oyster" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects at="wsw">      Raft, Boats</objects>
+		<room id="29" name="Hero's Shore" subtitle="" x="224" y="-32" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-28" customDown="0">Raft, Boats</objects>
 		</room>
-		<room id="30" name="Austerer Treasure" subtitle="" x="-416" y="448" w="96" h="64" region="Presto" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>(Ye) Hoop</objects>
+		<room id="30" name="Austerer Treasure" subtitle="" x="-416" y="448" w="96" h="64" region="Presto" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-26" customDown="0">(Ye) Hoop</objects>
 		</room>
-		<room id="31" name="Marines Seminar" subtitle="" x="-160" y="448" w="96" h="64" region="Presto" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>PG-on-up|Popgun</objects>
+		<room id="31" name="Marines Seminar" subtitle="" x="-160" y="448" w="96" h="64" region="Presto" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-42" customDown="0">PG-on-up Popgun</objects>
 		</room>
-		<room id="32" name="Grey Gyre" subtitle="Start Presto" x="-288" y="448" w="96" h="64" region="Presto" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="32" name="Grey Gyre" subtitle="Start Presto" x="-288" y="448" w="96" h="64" region="Presto" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Plebe, Lamb</objects>
 		</room>
-		<room id="33" name="Phat Path" subtitle="" x="-416" y="352" w="96" h="64" region="Presto" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects at="wsw">      Lawl Wall</objects>
+		<room id="33" name="Phat Path" subtitle="" x="-416" y="352" w="96" h="64" region="Presto" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="w" custom="yes" customRight="0" customDown="-12">Lawl|Wall</objects>
 		</room>
-		<room id="34" name="Burnt Brunt" subtitle="" x="-288" y="544" w="96" h="64" region="Presto" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Yak, star, dumpster</objects>
+		<room id="34" name="Burnt Brunt" subtitle="" x="-288" y="544" w="96" h="64" region="Presto" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="e" custom="yes" customRight="0" customDown="-18">Yak|Star|Dumpster</objects>
 		</room>
-		<room id="35" name="Dirge Ridge" subtitle="" x="-288" y="640" w="96" h="64" region="Presto" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Leo, Rand</objects>
+		<room id="35" name="Dirge Ridge" subtitle="" x="-288" y="640" w="96" h="64" region="Presto" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-24" customDown="0">Leo, Rand</objects>
 		</room>
-		<room id="36" name="Hacks' Shack" subtitle="End Presto" x="-416" y="256" w="96" h="64" region="Presto" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="Schematic catechism and labs slab are also here" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Coal, gum, clock sap, fount</objects>
+		<room id="36" name="Hacks' Shack" subtitle="End Presto" x="-416" y="256" w="96" h="64" region="Presto" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="Schematic catechism and labs slab are also here" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="e" custom="yes" customRight="0" customDown="-24">Coal|Gum|Clock sap|Fount</objects>
 		</room>
-		<line id="37" color="#000000" style="dashed">
+		<line id="37" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="33" port="s" />
 			<dock index="1" id="32" port="n" />
 		</line>
-		<line id="38" color="#000000" style="dashed">
+		<line id="38" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="32" port="e" />
 			<dock index="1" id="31" port="w" />
 		</line>
-		<line id="39" color="#000000" style="dashed">
+		<line id="39" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="32" port="w" />
 			<dock index="1" id="30" port="e" />
 		</line>
-		<line id="40" color="#000000">
+		<line id="40" name="" description="" color="#000000">
 			<dock index="0" id="32" port="s" />
 			<dock index="1" id="34" port="n" />
 		</line>
-		<line id="41" color="#000000" style="dashed">
+		<line id="41" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="33" port="n" />
 			<dock index="1" id="36" port="s" />
 		</line>
-		<line id="42" color="#000000">
+		<line id="42" name="" description="" color="#000000">
 			<dock index="0" id="34" port="s" />
 			<dock index="1" id="35" port="n" />
 		</line>
-		<room id="43" name="Anemic Cinema" subtitle="" x="224" y="352" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="44" name="Baldest Blasted Saltbed" subtitle="" x="224" y="448" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="45" name="Scope Copse" subtitle="" x="224" y="544" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Spec-o-Scope|Yurts</objects>
+		<room id="43" name="Anemic Cinema" subtitle="" x="224" y="352" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="44" name="Baldest Blasted Saltbed" subtitle="" x="224" y="448" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="45" name="Scope Copse" subtitle="" x="224" y="544" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-36" customDown="0">Yurts    Spec-o-Scope</objects>
 		</room>
-		<room id="46" name="Savager Ravages" subtitle="" x="352" y="448" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Weeds/Denim</objects>
+		<room id="46" name="Savager Ravages" subtitle="" x="352" y="448" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-44" customDown="0">Weeds    Denim</objects>
 		</room>
-		<room id="47" name="Topside Deposit" subtitle="" x="224" y="640" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Yacker Ray Eck</objects>
+		<room id="47" name="Topside Deposit" subtitle="" x="224" y="640" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-40" customDown="0">Yacker Ray Eck</objects>
 		</room>
-		<room id="48" name="Unblest Sunbelt" subtitle="" x="352" y="544" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="49" name="Salted Deltas" subtitle="" x="352" y="352" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="50" name="Actionless Coastline" subtitle="" x="480" y="352" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Smart Kid (Dirk Stam/Kim Darst)</objects>
+		<room id="48" name="Unblest Sunbelt" subtitle="" x="352" y="544" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="49" name="Salted Deltas" subtitle="" x="352" y="352" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="50" name="Actionless Coastline" subtitle="" x="480" y="352" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="Dirk Stam/Kim Darst" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-24" customDown="0">Smart Kid</objects>
 		</room>
-		<room id="51" name="Ole Shrine Shoreline" subtitle="" x="480" y="448" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="52" name="Danger/Gander Garden" subtitle="" x="480" y="544" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="53" name="Obscurest Subsector" subtitle="" x="608" y="544" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Dr. Yow</objects>
+		<room id="51" name="Ole Shrine Shoreline" subtitle="" x="480" y="448" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="52" name="Danger/Gander Garden" subtitle="" x="480" y="544" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="53" name="Obscurest Subsector" subtitle="" x="608" y="544" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-22" customDown="0">Dr. Yow</objects>
 		</room>
-		<room id="54" name="Same Mesa" subtitle="Start Routes" x="-288" y="64" w="96" h="64" region="Routes" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="You need to figure the directions into the circle, abode and deli." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="54" name="Same Mesa" subtitle="Start Routes" x="-288" y="64" w="96" h="64" region="Routes" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="You need to figure the directions into the circle, abode and deli." roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="55" name="Idle Deli" subtitle="" x="-288" y="-32" w="96" h="64" region="Routes" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="55" name="Idle Deli" subtitle="" x="-288" y="-32" w="96" h="64" region="Routes" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw">   Pat, Seed Pit</objects>
 		</room>
-		<room id="56" name="Adobe Abode" subtitle="" x="-416" y="64" w="96" h="64" region="Routes" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="56" name="Adobe Abode" subtitle="" x="-416" y="64" w="96" h="64" region="Routes" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw"> Oscar, Ashtray</objects>
 		</room>
-		<room id="57" name="Cleric Circle" subtitle="" x="-416" y="-32" w="96" h="64" region="Routes" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects at="n">Brother Horbert</objects>
+		<room id="57" name="Cleric Circle" subtitle="" x="-416" y="-32" w="96" h="64" region="Routes" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-38" customDown="0">Brother Horbert</objects>
 		</room>
-		<line id="58" color="#000000" style="dashed" startText="in(*)" endText="out">
+		<line id="58" name="" description="" color="#000000" style="dashed" startText="in(*)" endText="out">
 			<dock index="0" id="54" port="nw" />
 			<dock index="1" id="57" port="se" />
 		</line>
-		<line id="59" color="#000000" style="dashed" startText="in(*)" endText="out">
+		<line id="59" name="" description="" color="#000000" style="dashed" startText="in(*)" endText="out">
 			<dock index="0" id="54" port="n" />
 			<dock index="1" id="55" port="s" />
 		</line>
-		<room id="61" name="Sun-Spared Underpass" subtitle="" x="-416" y="160" w="96" h="64" region="Routes" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="62" name="Ripe Pier" subtitle="" x="-288" y="160" w="96" h="64" region="Routes" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="63" name="Cripple Clipper" subtitle="End Routes" x="-160" y="160" w="96" h="64" region="Routes" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="64" color="#000000" style="dashed">
+		<room id="61" name="Sun-Spared Underpass" subtitle="" x="-416" y="160" w="96" h="64" region="Routes" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="62" name="Ripe Pier" subtitle="" x="-288" y="160" w="96" h="64" region="Routes" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="63" name="Cripple Clipper" subtitle="End Routes" x="-160" y="160" w="96" h="64" region="Routes" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="64" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="47" port="n" />
 			<dock index="1" id="45" port="s" />
 		</line>
-		<line id="65" color="#000000" style="dashed">
+		<line id="65" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="66" port="e" />
 			<dock index="1" id="45" port="w" />
 		</line>
-		<room id="66" name="Campiest Campsite" subtitle="" x="96" y="544" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Rapier Repair</objects>
+		<room id="66" name="Campiest Campsite" subtitle="" x="96" y="544" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-32" customDown="0">Rapier Repair</objects>
 		</room>
-		<line id="67" color="#000000" style="dashed">
+		<line id="67" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="48" port="w" />
 			<dock index="1" id="45" port="e" />
 		</line>
-		<room id="68" name="Reclusion Inclosure" subtitle="End Otters" x="224" y="-128" w="96" h="64" region="Otters" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="68" name="Reclusion Inclosure" subtitle="End Otters" x="224" y="-128" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="69" name="Gent-Fora/ Frat-Gone Frontage" subtitle="" x="480" y="-128" w="96" h="64" region="Otters" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="69" name="Gent-Fora/ Frat-Gone Frontage" subtitle="" x="480" y="-128" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n">Gretta, Macks, Moat</objects>
 		</room>
-		<room id="70" name="Bran Barn" subtitle="" x="480" y="-32" w="96" h="64" region="Otters" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects at="wsw">      (Mr. Lee)</objects>
+		<room id="70" name="Bran Barn" subtitle="" x="480" y="-32" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-24" customDown="0">(Mr. Lee)</objects>
 		</room>
-		<room id="71" name="Loop Pool" subtitle="" x="480" y="-224" w="96" h="64" region="Otters" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects at="wsw">  Eels, Sea Cube</objects>
+		<room id="71" name="Loop Pool" subtitle="" x="480" y="-224" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-32" customDown="0">Eels, Sea Cube</objects>
 		</room>
-		<room id="72" name="Bleary Barley" subtitle="Start Otters" x="608" y="-128" w="96" h="64" region="Otters" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="72" name="Bleary Barley" subtitle="Start Otters" x="608" y="-128" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="73" name="Rote-Moan/ Near-Moot Anteroom" subtitle="" x="608" y="-32" w="96" h="64" region="Otters" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="73" name="Rote-Moan/ Near-Moot Anteroom" subtitle="" x="608" y="-32" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Shrewin' Whiners</objects>
 		</room>
-		<room id="74" name="Tapering Anger Pit/ Inert Gap" subtitle="" x="608" y="-224" w="96" h="64" region="Otters" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="74" name="Tapering Anger Pit/ Inert Gap" subtitle="" x="608" y="-224" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Sly Imp</objects>
 		</room>
-		<room id="75" name="Wickeder Wire Deck" subtitle="" x="608" y="-320" w="96" h="64" region="Otters" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Owls</objects>
+		<room id="75" name="Wickeder Wire Deck" subtitle="" x="608" y="-320" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-14" customDown="0">Owls</objects>
 		</room>
-		<room id="76" name="Perverse Preserve" subtitle="" x="608" y="64" w="96" h="64" region="Otters" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Raptor</objects>
+		<room id="76" name="Perverse Preserve" subtitle="" x="608" y="64" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-20" customDown="0">Raptor</objects>
 		</room>
-		<line id="78" color="#000000" style="dashed">
+		<line id="78" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="69" port="e" />
 			<dock index="1" id="72" port="w" />
 		</line>
-		<line id="79" color="#000000" style="dashed">
+		<line id="79" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="74" port="s" />
 			<dock index="1" id="72" port="n" />
 		</line>
-		<line id="80" color="#000000" style="dashed">
+		<line id="80" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="72" port="s" />
 			<dock index="1" id="73" port="n" />
 		</line>
-		<line id="81" color="#000000" style="dashed">
+		<line id="81" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="73" port="s" />
 			<dock index="1" id="76" port="n" />
 		</line>
-		<line id="82" color="#000000" style="dashed">
+		<line id="82" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="75" port="s" />
 			<dock index="1" id="74" port="n" />
 		</line>
-		<line id="83" color="#000000">
+		<line id="83" name="" description="" color="#000000">
 			<dock index="0" id="71" port="s" />
 			<dock index="1" id="69" port="n" />
 		</line>
-		<line id="84" color="#000000">
+		<line id="84" name="" description="" color="#000000">
 			<dock index="0" id="69" port="s" />
 			<dock index="1" id="70" port="n" />
 		</line>
-		<line id="85" color="#000000" style="dashed" flow="oneWay" startText="P" endText="P">
+		<line id="85" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="P" endText="P">
 			<dock index="0" id="1" port="sw" />
 			<dock index="1" id="32" port="ne" />
 		</line>
-		<line id="86" color="#000000" style="dashed" flow="oneWay" startText="U" endText="U">
+		<line id="86" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="U" endText="U">
 			<dock index="0" id="1" port="w" />
 			<dock index="1" id="54" port="e" />
 		</line>
-		<line id="87" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="87" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="54" port="sw" />
 			<dock index="1" id="61" port="ne" />
 		</line>
-		<line id="88" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="88" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="61" port="e" />
 			<dock index="1" id="62" port="w" />
 		</line>
-		<room id="90" name="Shaven Havens" subtitle="" x="224" y="256" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Lone Duck</objects>
+		<room id="90" name="Shaven Havens" subtitle="" x="224" y="256" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-24" customDown="0">Lone Duck</objects>
 		</room>
-		<room id="91" name="Rawest Waters" subtitle="" x="608" y="352" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="Only if you don't fix the kid's skis fully" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="92" name="Loftier Trefoil" subtitle="Start Towers" x="352" y="640" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>(Rodney ++)</objects>
+		<room id="91" name="Rawest Waters" subtitle="" x="608" y="352" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="Only if you don't fix the kid's skis fully" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="92" name="Loftier Trefoil" subtitle="Start Towers" x="352" y="640" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-54" customDown="0">Rodney and six others</objects>
 		</room>
-		<room id="93" name="Old One's Solo Den" subtitle="" x="480" y="256" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Ed Yerg</objects>
+		<room id="93" name="Old One's Solo Den" subtitle="" x="480" y="256" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-22" customDown="0">Ed Yerg</objects>
 		</room>
-		<room id="94" name="Filed Field" subtitle="" x="-160" y="256" w="96" h="64" region="Others" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="95" name="Gates Stage" subtitle="" x="-32" y="160" w="96" h="64" region="Others" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="96" name="Clangier Clearing" subtitle="" x="96" y="256" w="96" h="64" region="Others" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Len Craig</objects>
+		<room id="94" name="Filed Field" subtitle="" x="-160" y="256" w="96" h="64" region="Others" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="95" name="Gates Stage" subtitle="" x="-32" y="160" w="96" h="64" region="Others" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="96" name="Clangier Clearing" subtitle="" x="96" y="256" w="96" h="64" region="Others" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-24" customDown="0">Len Craig</objects>
 		</room>
-		<room id="98" name="Swell Wells" subtitle="" x="-32" y="256" w="96" h="64" region="Others" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="99" name="Rustic Citrus" subtitle="Start Others" x="-32" y="352" w="96" h="64" region="Others" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects at="wsw" />
+		<room id="98" name="Swell Wells" subtitle="" x="-32" y="256" w="96" h="64" region="Others" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="99" name="Rustic Citrus" subtitle="Start Others" x="-32" y="352" w="96" h="64" region="Others" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n">Curtis</objects>
 		</room>
-		<room id="97" name="Scape Space" subtitle="" x="96" y="160" w="96" h="64" region="Others" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Red Rat Art Erd/|Dr. Tera Darter</objects>
+		<room id="97" name="Scape Space" subtitle="" x="96" y="160" w="96" h="64" region="Others" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="Red Rat Art Erd/&#xD;&#xA;Dr. Tera Darter" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-34" customDown="0">Tarred Trader</objects>
 		</room>
-		<line id="100" color="#000000" style="dashed">
+		<line id="100" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="99" port="n" />
 			<dock index="1" id="98" port="s" />
 		</line>
-		<line id="101" color="#000000" style="dashed">
+		<line id="101" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="90" port="s" />
 			<dock index="1" id="43" port="n" />
 		</line>
-		<line id="102" color="#000000" style="dashed">
+		<line id="102" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="43" port="s" />
 			<dock index="1" id="44" port="n" />
 		</line>
-		<line id="103" color="#000000" style="dashed">
+		<line id="103" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="43" port="e" />
 			<dock index="1" id="49" port="w" />
 		</line>
-		<line id="104" color="#000000" style="dashed">
+		<line id="104" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="49" port="e" />
 			<dock index="1" id="50" port="w" />
 		</line>
-		<line id="105" color="#000000" style="dashed">
+		<line id="105" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="50" port="s" />
 			<dock index="1" id="51" port="n" />
 		</line>
-		<line id="106" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="106" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="50" port="e" />
 			<dock index="1" id="91" port="w" />
 		</line>
-		<line id="107" color="#000000" style="dashed">
+		<line id="107" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="52" port="e" />
 			<dock index="1" id="53" port="w" />
 		</line>
-		<line id="108" color="#000000" style="dashed">
+		<line id="108" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="52" port="w" />
 			<dock index="1" id="48" port="e" />
 		</line>
-		<line id="109" color="#000000" style="dashed">
+		<line id="109" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="51" port="s" />
 			<dock index="1" id="52" port="n" />
 		</line>
-		<line id="110" color="#000000" style="dashed">
+		<line id="110" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="46" port="s" />
 			<dock index="1" id="48" port="n" />
 		</line>
-		<line id="111" color="#000000" style="dashed">
+		<line id="111" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="46" port="e" />
 			<dock index="1" id="51" port="w" />
 		</line>
-		<line id="112" color="#000000" style="dashed">
+		<line id="112" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="49" port="s" />
 			<dock index="1" id="46" port="n" />
 		</line>
-		<line id="113" color="#000000" style="dashed">
+		<line id="113" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="46" port="w" />
 			<dock index="1" id="44" port="e" />
 		</line>
-		<line id="114" color="#000000" style="dashed">
+		<line id="114" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="44" port="s" />
 			<dock index="1" id="45" port="n" />
 		</line>
-		<room id="115" name="Mislit Limits" subtitle="End Towers" x="608" y="256" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dash" description="(end TOWERS)" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects at="n">Curst Palace|present serpent|Succor Crocus</objects>
+		<room id="115" name="Mislit Limits" subtitle="End Towers" x="608" y="256" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="(end TOWERS)" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-40" customDown="0">Curst Palace|present serpent|Succor Crocus</objects>
 		</room>
-		<line id="118" color="#000000">
+		<line id="118" name="" description="" color="#000000">
 			<dock index="0" id="98" port="w" />
 			<dock index="1" id="94" port="e" />
 		</line>
-		<line id="119" color="#000000">
+		<line id="119" name="" description="" color="#000000">
 			<dock index="0" id="98" port="n" />
 			<dock index="1" id="95" port="s" />
 		</line>
-		<line id="120" color="#000000">
+		<line id="120" name="" description="" color="#000000">
 			<dock index="0" id="96" port="w" />
 			<dock index="1" id="98" port="e" />
 		</line>
-		<room id="121" name="Admit-Us Stadium" subtitle="End Others" x="96" y="64" w="96" h="64" region="Others" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dot" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="121" name="Admit-Us Stadium" subtitle="End Others" x="96" y="64" w="96" h="64" region="Others" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dot" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<line id="122" color="#000000" style="dashed" flow="oneWay">
+		<line id="122" name="" description="" color="#000000" style="dashed" flow="oneWay">
 			<dock index="0" id="95" port="n" />
 			<dock index="1" id="121" port="s" />
 		</line>
-		<line id="123" color="#000000" startText="down" endText="up">
+		<line id="123" name="" description="" color="#000000" startText="down" endText="up">
 			<dock index="0" id="98" port="ne" />
 			<dock index="1" id="97" port="sw" />
 		</line>
-		<line id="127" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="127" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="29" port="nnw" />
 			<dock index="1" id="8" port="ssw" />
 		</line>
-		<line id="128" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="128" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="2" port="w" />
 			<dock index="1" id="3" port="e" />
 		</line>
-		<line id="129" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="129" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="3" port="n" />
 			<dock index="1" id="4" port="s" />
 		</line>
-		<line id="130" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="130" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="4" port="n" />
 			<dock index="1" id="5" port="s" />
 		</line>
-		<line id="131" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="131" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="5" port="se" />
 			<dock index="1" id="6" port="nw" />
 		</line>
-		<line id="133" color="#000000" style="dashed" flow="oneWay" startText="H" endText="H">
+		<line id="133" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="H" endText="H">
 			<dock index="0" id="1" port="se" />
 			<dock index="1" id="99" port="nw" />
 		</line>
-		<line id="126" color="#000000" style="dashed" flow="oneWay" startText="Y" endText="Y">
+		<line id="126" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="Y" endText="Y">
 			<dock index="0" id="1" port="ne" />
 			<dock index="1" id="9" port="sw" />
 		</line>
-		<line id="135" color="#000000" style="dashed" flow="oneWay" startText="W" endText="W">
+		<line id="135" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="W" endText="W">
 			<dock index="0" id="1" port="ese" />
 			<dock index="1" id="47" port="nw" />
 		</line>
-		<line id="136" color="#000000" style="dashed" flow="oneWay" startText="T" endText="T">
+		<line id="136" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="T" endText="T">
 			<dock index="0" id="1" port="e" />
 			<dock index="1" id="72" port="sw" />
 		</line>
-		<line id="137" color="#000000" style="dashed" flow="oneWay" startText="V" endText="V">
+		<line id="137" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="V" endText="V">
 			<dock index="0" id="1" port="nw" />
 			<dock index="1" id="2" port="se" />
 		</line>
-		<room id="138" name="Outer Route" subtitle="" x="96" y="352" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="139" color="#000000" style="dashed">
+		<room id="138" name="Outer Route" subtitle="" x="96" y="352" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="139" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="43" port="w" />
 			<dock index="1" id="138" port="e" />
 		</line>
-		<room id="140" name="Dusty Study" subtitle="Start Manor" x="-32" y="640" w="96" h="64" region="Manor" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="140" name="Dusty Study" subtitle="Start Manor" x="-32" y="640" w="96" h="64" region="Manor" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="141" name="A Blest Stable" subtitle="" x="-160" y="640" w="96" h="64" region="Manor" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Sitar</objects>
+		<room id="141" name="A Blest Stable" subtitle="" x="-160" y="640" w="96" h="64" region="Manor" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-14" customDown="0">Sitar</objects>
 		</room>
-		<room id="142" name="Highest Heights" subtitle="" x="96" y="640" w="96" h="64" region="Manor" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>Pram</objects>
+		<room id="142" name="Highest Heights" subtitle="" x="96" y="640" w="96" h="64" region="Manor" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-12" customDown="0">Pram</objects>
 		</room>
-		<room id="143" name="Meet-Bans / Same Bent Basement" subtitle="" x="-32" y="544" w="96" h="64" region="Manor" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="144" name="Carven Cavern" subtitle="End Manor" x="-32" y="448" w="96" h="64" region="Manor" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>plaster/plates</objects>
+		<room id="143" name="Meet-Bans / Same Bent Basement" subtitle="" x="-32" y="544" w="96" h="64" region="Manor" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="144" name="Carven Cavern" subtitle="End Manor" x="-32" y="448" w="96" h="64" region="Manor" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-34" customDown="0">plaster/plates</objects>
 		</room>
-		<line id="145" color="#000000" style="dashed" startText="in" endText="out">
+		<line id="145" name="" description="" color="#000000" style="dashed" startText="in" endText="out">
 			<dock index="0" id="140" port="w" />
 			<dock index="1" id="141" port="e" />
 		</line>
-		<line id="146" color="#000000" style="dashed" startText="in" endText="out">
+		<line id="146" name="" description="" color="#000000" style="dashed" startText="in" endText="out">
 			<dock index="0" id="140" port="n" />
 			<dock index="1" id="143" port="s" />
 		</line>
-		<line id="147" color="#000000" style="dashed" startText="in" endText="out">
+		<line id="147" name="" description="" color="#000000" style="dashed" startText="in" endText="out">
 			<dock index="0" id="140" port="e" />
 			<dock index="1" id="142" port="w" />
 		</line>
-		<line id="148" color="#000000" style="dashed" flow="oneWay" startText="in">
+		<line id="148" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="in">
 			<dock index="0" id="143" port="n" />
 			<dock index="1" id="144" port="s" />
 		</line>
-		<line id="149" color="#000000" style="dashed" flow="oneWay" startText="in">
+		<line id="149" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="in">
 			<dock index="0" id="144" port="nw" />
 			<dock index="1" id="1" port="s" />
 		</line>
-		<room id="150" name="E-Z Ol' Av (TM) Volt Maze" subtitle="" x="-288" y="352" w="96" h="64" region="Presto" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="151" color="#000000" startText="in" endText="out">
+		<room id="150" name="E-Z Ol' Av (TM) Volt Maze" subtitle="" x="-288" y="352" w="96" h="64" region="Presto" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="151" name="" description="" color="#000000" startText="in" endText="out">
 			<dock index="0" id="32" port="n" />
 			<dock index="1" id="150" port="s" />
 		</line>
-		<room id="152" name="Cruelest Lectures" subtitle="" x="-160" y="-32" w="96" h="64" region="Stores" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="152" name="Cruelest Lectures" subtitle="" x="-160" y="-32" w="96" h="64" region="Stores" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw">   Ian, Max P Lee</objects>
 		</room>
-		<line id="153" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="153" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="152" port="s" />
 			<dock index="1" id="1" port="n" />
 		</line>
-		<line id="154" color="#000000" style="dashed" flow="oneWay" startText="in">
+		<line id="154" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="in">
 			<dock index="0" id="1" port="nnw" />
 			<dock index="1" id="152" port="ssw" />
 		</line>
-		<line id="155" color="#000000" style="dashed" startText="down" endText="up">
+		<line id="155" name="" description="" color="#000000" style="dashed" startText="down" endText="up">
 			<dock index="0" id="141" port="ne" />
 			<dock index="1" id="143" port="sw" />
 		</line>
-		<line id="156" color="#000000" style="dashed" startText="down" endText="up">
+		<line id="156" name="" description="" color="#000000" style="dashed" startText="down" endText="up">
 			<dock index="0" id="142" port="nw" />
 			<dock index="1" id="143" port="se" />
 		</line>
-		<room id="157" name="Peek Keep" subtitle="Start Demo Dome" x="352" y="160" w="96" h="64" region="Demo Dome" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="157" name="Peek Keep" subtitle="Start Demo Dome" x="352" y="160" w="96" h="64" region="Demo Dome" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="158" name="Ned's Dens" subtitle="" x="224" y="160" w="96" h="64" region="Demo Dome" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="159" name="Hows-Show" subtitle="" x="352" y="64" w="96" h="64" region="Demo Dome" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="160" color="#000000">
+		<room id="158" name="Ned's Dens" subtitle="" x="224" y="160" w="96" h="64" region="Demo Dome" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="159" name="Hows-Show" subtitle="" x="352" y="64" w="96" h="64" region="Demo Dome" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="160" name="" description="" color="#000000">
 			<dock index="0" id="157" port="n" />
 			<dock index="1" id="159" port="s" />
 		</line>
-		<line id="161" color="#000000">
+		<line id="161" name="" description="" color="#000000">
 			<dock index="0" id="157" port="w" />
 			<dock index="1" id="158" port="e" />
 		</line>
-		<room id="162" name="Intel Inlet" subtitle="" x="480" y="64" w="96" h="64" region="Demo Dome" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="163" name="Evoc-Cove" subtitle="" x="480" y="160" w="96" h="64" region="Demo Dome" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="164" color="#000000">
+		<room id="162" name="Intel Inlet" subtitle="" x="480" y="64" w="96" h="64" region="Demo Dome" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="163" name="Evoc-Cove" subtitle="" x="480" y="160" w="96" h="64" region="Demo Dome" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="164" name="" description="" color="#000000">
 			<dock index="0" id="157" port="e" />
 			<dock index="1" id="163" port="w" />
 		</line>
-		<line id="165" color="#000000" startText="in" endText="out">
+		<line id="165" name="" description="" color="#000000" startText="in" endText="out">
 			<dock index="0" id="157" port="ne" />
 			<dock index="1" id="162" port="sw" />
 		</line>
-		<room id="166" name="Lost Lots" subtitle="" x="480" y="640" w="96" h="64" region="Towers" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="167" color="#000000" style="dashed">
+		<room id="166" name="Lost Lots" subtitle="" x="480" y="640" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="167" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="166" port="n" />
 			<dock index="1" id="52" port="s" />
 		</line>
-		<line id="168" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="168" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="63" port="nnw" />
 			<dock index="1" id="1" port="ssw" />
 		</line>
-		<line id="132" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="132" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="6" port="se" />
 			<dock index="1" id="7" port="nw" />
 		</line>
-		<line id="169" color="#000000" style="dashed" flow="oneWay" startText="End">
+		<line id="169" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="End">
 			<dock index="0" id="7" port="sse" />
 			<dock index="1" id="1" port="nne" />
 		</line>
-		<line id="170" color="#000000" style="dashed" flow="oneWay" startText="End">
+		<line id="170" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="End">
 			<dock index="0" id="15" port="sw" />
 			<dock index="1" id="1" port="ene" />
 		</line>
-		<room id="134" name="Olde Lode" subtitle="" x="96" y="-32" w="96" h="64" region="Oyster" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects at="wsw">     Clam, Urn</objects>
+		<room id="134" name="Olde Lode" subtitle="" x="96" y="-32" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-24" customDown="0">Clam, Urn</objects>
 		</room>
-		<line id="171" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="171" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="9" port="e" />
 			<dock index="1" id="134" port="w" />
 		</line>
-		<line id="172" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="172" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="134" port="e" />
 			<dock index="1" id="29" port="w" />
 		</line>
-		<line id="116" color="#000000" style="dashed" flow="oneWay" startText="out" endText="in">
+		<line id="116" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="out" endText="in">
 			<dock index="0" id="92" port="w" />
 			<dock index="1" id="47" port="e" />
 		</line>
-		<line id="117" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="117" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="50" port="ne" />
 			<dock index="1" id="115" port="sw" />
 		</line>
-		<line id="125" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="125" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="91" port="n" />
 			<dock index="1" id="115" port="s" />
 		</line>
-		<room id="173" name="Handsome Sand Home" subtitle="" x="224" y="-224" w="96" h="64" region="Oyster" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects at="wsw">      Aunt Tuna</objects>
+		<room id="173" name="Handsome Sand Home" subtitle="" x="224" y="-224" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-24" customDown="0">Aunt Tuna</objects>
 		</room>
-		<line id="174" color="#000000" style="dashed">
+		<line id="174" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="173" port="wsw" />
 			<dock index="1" id="8" port="ene" />
 		</line>
-		<line id="60" color="#000000" style="dashed" startText="in(*)" endText="out">
+		<line id="60" name="" description="" color="#000000" style="dashed" startText="in(*)" endText="out">
 			<dock index="0" id="54" port="w" />
 			<dock index="1" id="56" port="e" />
 		</line>
-		<line id="124" color="#000000" style="dashed">
+		<line id="124" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="115" port="w" />
 			<dock index="1" id="93" port="e" />
 		</line>
-		<room id="176" name="Fighter Freight" subtitle="" x="352" y="-32" w="96" h="64" region="Oyster" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects at="wsw">   Scary Crays</objects>
+		<room id="176" name="Fighter Freight" subtitle="" x="352" y="-32" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-32" customDown="0">Scary Crays</objects>
 		</room>
-		<line id="177" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="177" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="29" port="e" />
 			<dock index="1" id="176" port="w" />
 		</line>
-		<line id="178" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="178" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="176" port="wnw" />
 			<dock index="1" id="8" port="ese" />
 		</line>
-		<room id="179" name="Lean Lane" subtitle="" x="352" y="-224" w="96" h="64" region="Oyster" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects at="wsw">      Cans, Eeks</objects>
+		<room id="179" name="Lean Lane" subtitle="" x="352" y="-224" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n" custom="yes" customRight="-32" customDown="0">Cans, Eeks</objects>
 		</room>
-		<line id="10" color="#000000" style="dashed" flow="oneWay" midText="To">
+		<line id="10" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="179" port="w" />
 			<dock index="1" id="173" port="e" />
 		</line>
-		<line id="25" color="#000000" style="dashed">
+		<line id="25" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="8" port="e" />
 			<dock index="1" id="179" port="wsw" />
 		</line>
-		<room id="77" name="Coevals' Alcoves" subtitle="" x="352" y="-128" w="96" h="64" region="Otters" handDrawn="no" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>    Elmer/Merle</objects>
+		<room id="77" name="Coevals' Alcoves" subtitle="" x="352" y="-128" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-40" customDown="0">    Elmer/Merle</objects>
 		</room>
-		<line id="175" color="#000000" style="dashed">
+		<line id="175" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="68" port="e" />
 			<dock index="1" id="77" port="w" />
 		</line>
-		<line id="180" color="#000000" style="dashed">
+		<line id="180" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="77" port="e" />
 			<dock index="1" id="69" port="w" />
 		</line>
-		<line id="89" color="#000000" style="dashed" flow="oneWay" startText="End">
+		<line id="89" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="End">
 			<dock index="0" id="62" port="se" />
 			<dock index="1" id="63" port="s" />
 		</line>
@@ -607,7 +607,7 @@ version 3 March 2015</history>
 			<largeText>Black</largeText>
 			<smallText>Black</smallText>
 			<lineText>Black</lineText>
-			<grid>#F5F5F5</grid>
+			<grid>Silver</grid>
 			<startRoom>GreenYellow</startRoom>
 		</colors>
 		<regions>
@@ -630,7 +630,7 @@ version 3 March 2015</history>
 		</fonts>
 		<grid>
 			<snapTo>yes</snapTo>
-			<visible>no</visible>
+			<visible>yes</visible>
 			<showOrigin>yes</showOrigin>
 			<size>32</size>
 		</grid>

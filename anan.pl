@@ -75,6 +75,8 @@ $l = 0;
 OUTER:
 while ($a = <A>)
 {
+  $lc = lc($a); chomp($lc);
+  if ($_[0] eq "firsts") { $first{$lc} = 1; } else { $last{$lc} = 1; }
   %mytimes = %times;
   if ($a !~ /[A-Z]/) { next; }
   $q = $a;
@@ -94,7 +96,7 @@ while ($a = <A>)
   $toAdd = "";
   for $q (keys %times) { if ($mytimes{$q} > 0) { $toAdd .= uc($q) x $mytimes{$q}; } }
   
-  if (!$eqOnly) { if (!$toAdd) { print "!"; $matches .= " $a"; } print "/" . alfo($toAdd); } else { if ($matchFlag && !$toAdd) { $matches .= " $a"; } }
+  if (!$eqOnly) { if (!$toAdd) { print "!"; $matches .= lf($a); } print "/" . alfo($toAdd); } else { if ($matchFlag && !$toAdd) { $matches .= lf($a); } }
   if ($linked{alfo($a)})
   {
     if (($mustFirstLast) && ($nameType{alfo($a)} eq "L")) { next; }
@@ -136,4 +138,12 @@ sub strdif
 	if (!$foundMatch) { die "$_[0] did not have/ran out of @b[$bi]."; }
   }
   return join("", @a);
+}
+
+sub lf
+{
+  my $retStr = " $_[0]" . "(";
+  if ($first{$_[0]}) { $retStr .= "f"; }
+  if ($last{$_[0]}) { $retStr .= "l"; }
+  return $retStr . ")";
 }

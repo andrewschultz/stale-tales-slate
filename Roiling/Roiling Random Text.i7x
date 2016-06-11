@@ -310,7 +310,7 @@ blurb
 "Aground? Arg. Undo!" []
 "Ah, dim! I'm had!" []
 "Ahh, dirt hit HARD!"
-"Ahh, WORD. How hard"
+"Ahh, WORD. How hard!"
 "Annihilated, Laid in [']Neath."
 "Apt nadir: a dirt nap!"
 "'Arh, died! / 'Ha, redid!'" [p]
@@ -387,7 +387,7 @@ blurb
 "A Mistake Takes Aim!"
 "Mm, uber-bummer!"
 "Narrow Bed. Barrow-Den."
-"Now Dealt a Let-Down"
+"Now Dealt a Let-Down!"
 "Nuts, I go sign out!"
 "O fleeing life, gone!"
 "Obitual Bail-Out."
@@ -541,6 +541,7 @@ blurb
 "Taciturn actin['] rut."
 "Talk about? Balk out at..."
 "There's a stare, eh?"
+"Throat-space catastrophe?"
 "Tut! Ever on to venture?"
 "'Type a word, dopey wart!'"
 "Type-ins yet? Spin..."
@@ -766,6 +767,7 @@ blurb
 "Hating--a thing? Nah, git."
 "A hint: hatin[']? Nah, it..."
 "Hit [']um? No! Mouthin[']!"
+"Hitter task? Strike that!"
 "How stupid is THUD-POW."
 "Huh, intent: in the hunt?"
 "Hurty, uh, try."
@@ -899,7 +901,7 @@ blurb
 "Sleep, eh? Sheeple." []
 "Sleep, man? Pense mal."
 "Some rest seems rot."
-"'Tired now' won't ride!"
+"Tired now? Won't ride!"
 "To nap: apt? No."
 "To nap is a top sin!"
 "To nap now: wanton op!"
@@ -3758,6 +3760,7 @@ blurb
 table of biopics [xxm3]
 blurb	fave
 "[if player is male]One Man, No Name[else]I, Hereon, Heroine[end if][r], by [if player is male]Ann Moe[else]Irene Ho[end if]"	true
+"Able Doing? No Big Deal: Angled Bio[r], by [if player is male]Eli Bogdan[else]Gia Bondel[end if]"
 "All Those Words: Shallow Doters, Worthless Load[r], by Stowell Rhoads"	false
 "Another Try, Hero-Tyrant[r], by Roy Harnett & [if player is male]Tony Erhart[else]Thora Tyner[end if]"	false
 "Arriviste: it Arrives[r], by Teri Rivas"	false
@@ -4697,6 +4700,7 @@ blurb
 "So-Nutty Tony Tsu"
 "So-Nutty Ty Uston" []
 "So Random Rod Mason" []
+"So Trashy Troy Hass"
 "So-Trite Rosetti"
 "So Vulgar Gus Orval" []
 "So-Well-LOL Wes" []
@@ -9572,6 +9576,7 @@ blurb	prio
 "Byroads So Bardy[r], by Rob Days"
 "Cab-Only Balcony, Boy Clan[r], by Lyn Coba" []
 "Cabin Fever: France Vibe[r], by Vince Faber"
+"Cad Empire: Carpe Diem[r], by Meda Price"
 "Cadger-Graced Dr. Cage[r], by Edgar C. DeCrag"
 "The Cads Scathed[r], by Ted Cash"
 "Cagier Gracie[r], by Erica G. Geraci"
@@ -10185,6 +10190,7 @@ blurb	prio
 "Drone by a Boneyard Brayed On[r], by [if player is male]Arne Boyd[else]Robyn Ade[end if]"
 "Drone On, Dr. Noone[r], by Ron Oden"
 "A Drone-On Read[r], by Dorena Ardone-DeNaro" [r] []
+"Drone Thy Threnody[r], by Ron Heydt"
 "Drop All, Alp Lord[r], by Droll Pa Pollard" []
 "Drowned Oath Down the Road Trodden, Whoa[r], by [if player is male]Donte Howard & Edwardo Noth[else]Dedra Howton[end if]"
 "A Drudge, Guarded[r], by Edd Gaur"
@@ -11244,7 +11250,7 @@ blurb	prio
 "I Rank a Rink[r], by Karin Arkin"
 "I Rant in Art[r], by Trina Narti" []
 "I, Rarer Barbie[r], by Barrie Ribera"
-"I Re-Hatch the Chair[r], by Ari Hechet"
+"I Re-Hatch the Chair[r], by Ari Hecht"
 "I Re-Stand, Strained[r], by Ned Raist"
 "I Reek, I Reek[r], by Kiree Eiker"
 "I Remand a Minder, Name-Rid: Drain Me, [d-word-u] Ire and Mire[r], by Near-Dim Merinda" [x]
@@ -11831,7 +11837,7 @@ blurb	prio
 "Logan's Slogan[r], by Al Song"
 "Lola's End: All's Done[r], by [if player is male]Les Dolan[else]Lena Olds[end if]"
 "LOLscape: All Copes Collapse[r], by Cal Lopes" []
-"Lone Dismal Medallions[r], by [if player is male]Damon Lisla[else]Dione Small[end if]"
+"Lone Dismal Medallions[r], by [if player is male]Damon Lisle[else]Dione Small[end if]"
 "Lone Ditch in the Cold[r], by Ted Nichol"
 "Lone Felon Freer[r], by Florene Fleenor"
 "Lone Fix: I Flex On[r], by Elin Fox"
@@ -12458,7 +12464,7 @@ blurb	prio
 "No Grit to Grin[r], by Ringo Torting"
 "No Hair: Oh, I Ran[r], by Rina Ho-Hirano" []
 "No Hot Bike in the Book[r], by Tobin Hoke"
-"No, I feel One Life[r], by Leo Fine"
+"No, I Feel One Life[r], by Leo Fine"
 "No Kids So Kind[r], by Donski Dikson"
 "No Lairds or Island[r], by Lois Rand"
 "No Light, Long Hit[r], by Gil Thon"
@@ -13174,7 +13180,6 @@ blurb	prio
 "The Price's Three Pics[r], by Chet Piers"
 "A Pricy Piracy: I Cry, Pa![r], by Pia Cyr"
 "Pride as a Paradise[r], by Sid Parea" []
-"Cad Empire: Carpe Diem[r], by Meda Price"
 "Pride Into Perdition[r], by [d-t] Perini" []
 "Pride, Pried: I'd Rep[r], by Deidre Ripp"
 "A Pride, Repaid[r], by Dr. Pia Pereida"
@@ -14100,6 +14105,7 @@ blurb	prio
 "Spur to Sort Up Po['] Ruts[r], by Proust Pro Stu Stroup"
 "Spy Beams, Pass Me By[r], by Mab Sypes"
 "Spy Had Pay: Happy Days[r], by Shady Yapp"
+"The Squads Had Quests[r], by Ted Squash"
 "The Square Queer Hats[r], by Rhea Quest" []
 "St. Amber, Mr. Beast, Be Smart: Best Arm![r] by Bert Sam" [p]
 "St. Claire Recitals[r], by Eric Alst" []
@@ -21301,7 +21307,7 @@ blurb
 "Vapid VIP Ad."
 "Very fun fur envy."
 "Vestal Valets." []
-"Vi, Top VIP"
+"Vi, Top VIP."
 "Vitreous voitures."
 "Voguiest Give-Outs."
 "Waistlines, A-List Wines."
@@ -21494,7 +21500,7 @@ blurb
 "'Atoning? Giant no!'" []
 "'Aw, beer, Reba? Ew!'"
 "'Aw, Ike, I...' / 'Weak!'"
-"Aw, it...WAIT!'"
+"'Aw, it...WAIT!'"
 "'Aw! Shot? So what?'"
 "'Aw, then. Eh, want new hat?'"
 "'Away, thug!' / 'What a guy!'"
@@ -21561,7 +21567,7 @@ blurb
 "'Bum set? Must be. Bust [']em!'"
 "'Bungles? Slug Ben!'"
 "'A burger, bug?' / 'Rare.'"
-"Burial, eh, blue-hair?'"
+"'Burial, eh, blue-hair?'"
 "'The bus be shut. Eh? BUST!'"
 "'Bus fare?' / 'Sure!' / 'Fab!'"
 "'Bust [']im!' / 'Submit!'" []
@@ -23815,7 +23821,7 @@ blurb
 "'Ooh, Meg?' / 'Go home, hog Moe!'"
 "'Ooh, Pat! A photo!'"
 "'Oop, Del!, ol['] dope!' / 'Poe, old poodle!'"
-"'Open house? Hope on, Sue.'you will"
+"'Open house? Hope on, Sue.'"
 "'Or gowns? So wrong! Grow, son!'"
 "'Or Night? Right On!'" []
 "'Or TV ops, provost...'"
@@ -30186,6 +30192,7 @@ blurb
 "No-Quarters-Torn Square"
 "No-Recluse Enclosure"
 "No-Rube-Bourne"
+"Not-Cheap Cenotaph"
 "Notice-Us/Cut-Noise Counties"
 "NOW St. Towns" []
 "Obtains-Boastin['] Bastion" []
@@ -30292,6 +30299,7 @@ blurb
 "Al, Be Able[r], by [if player is male]Abe Beall[else]Lea Babel[end if]" []
 "Alimony: Any Limo[r], by Loni May"
 "All-Glib-Now Lowballing[r], by Will Galbon"
+"Anchoring No Chagrin[r], by Rina Chong"
 "And Gee, an Edge[r], by [if player is male]Ed Egan[else]Dee Ang[end if]" []
 "And Lose No Deals[r], by Sane Old [if player is male]Ed Sloan[else]Dena Sol[end if]" []
 "Another Sale: Also Hearten, Sane Loather[r], by [if player is male]Seth Leanora[else]Sheena Toral[end if]"
@@ -30321,6 +30329,7 @@ blurb
 "Beat Them? That Be Me[r], by [if player is male]Matt Heeb[else]Bette Ham[end if]"
 "Bed-Weak? Be Waked[r], by Kade Web"
 "Being First: Fringe Bits[r], by Brigit Fens"
+"A Bench Gig? Big Change[r], by Gabe Ching"
 "Bent, Rote? On, Better[r], by [if player is male]Brett Eno[else]Rene Bott[end if]"
 "Bet, Gain: Begin at Beating[r], by Ben Taig" []
 "Big Ones: Being So[r], by Bo Gines" []
@@ -34257,10 +34266,10 @@ blurb
 "Evocator overcoat...crave too!" [x]
 "Extraordinary intro? Dreary. Ax."
 "Flaubert? Flat rube!"
-"A flourish: four hails?! Fails hour"
-"Freudian feud, rain"
+"A flourish: four hails?! Fails hour!"
+"Freudian feud, rain!"
 "Grey men, my genre."
-"Haiku, pest? Shake it up"
+"Haiku, pest? Shake it up!"
 "I draft, adrift..."
 "I Snared a Snider Sardine." []
 "Many weigh Hemingway. Enigma: why?"
@@ -34270,26 +34279,26 @@ blurb
 "My ideas dim easy. I? Mad? Yes!" []
 "Narrative, via errant tavern air."
 "Not game to nag me!"
-"Oy, adverbs? Savored by raved boys? So very bad"
+"Oy, adverbs? Savored by raved boys? So very bad!"
 "Oy, pert tropey poetry. To pyre!" []
 "People's purr: proper pulse? Purple prose!"
 "Plot lines, still? NOPE."
-"Poems? Lose some sleep"
+"Poems? Lose some sleep!"
 "Prosey Osprey Ros Pye? O, pyres!"
 "Punter's pen, RUST!" []
 "Rats, naiver narratives."
 "Rhett Weir, the Writer: Err, Twit, Eh?"
 "Rio Demps? Sid Premo? Dim prose, PROMISED!"
 "Riveter Town? Woven triter. Overwritten."
-"Sentiment intents? Me?[no line break]"
-"Sly tone? Only set. No style"
+"Sentiment intents? Me?"
+"Sly tone? Only set. No style."
 "Some poets, pose-smote, emote. SOPS!"
 "Speak to a pest? OK." []
 "Thoreau? Ah, outre!" []
 "To parse at prose, prate so." []
 "Tom Snider? Snot-mired modernist!"
 "Undersea, endure as earn dues."
-"Unto epic? Nope, I cut: unpoetic! Pout? NICE"
+"Unto epic? Nope, I cut: unpoetic! Pout? NICE."
 "Vapid prose? Disapprove!"
 "Vigor-lent grit novel? Revolting!" []
 "Writing. Wring it..." []
@@ -35234,7 +35243,7 @@ blurb
 "having more discipline than Beerin['] Bernie" [x]
 "having more of a clue than Mess-it-Up Septimus" [x]
 "keeping in shape unlike Lardo Roald" [x]
-"keeping it simple as possible, like Able Abel."
+"keeping it simple as possible, like Able Abel." [x]
 "keeping motivated unlike Jader Jared"
 "keeping sharp unlike Mangier Germain" [x]
 "labels Fearin['] Efrain naifer and fainer" [x]

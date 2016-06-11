@@ -1367,6 +1367,7 @@ blurb
 "Old Chute-Duct-Hole"
 "Old Hume's Mudholes"
 "old woman's doom lawns"
+"Once-Phat Cenotaph"
 "out-weary-you water routeway"
 "Over-Wild Devil Row"
 "Pallid Fey Playfield"
@@ -1564,6 +1565,7 @@ blurb
 "Carcinogen, once racing: cancer, go in!"
 "Careful, flea-cur!"
 "Cast iron can roist."
+"Catastrophe pastor, teach. Attach prose."
 "Catastrophe! React! Pathos!"
 "Caton's cantos: o, scant to scan!"
 "Cats, if fact is as fict..."
@@ -2835,6 +2837,7 @@ blurb
 "'Anti-serf fine arts!' they cry, mumbling about a snifter and a rain fest." [x]
 "'Argus Sugar? Us? ARG!'"
 "'ArmCos Scar Mo[']!'"
+"'Arresting ops? Anti-progress!'"
 "'Austerity's rustiest, ay!'"
 "'Autocrat actuator!'"
 "'Aw, free? We fear few are!'"
@@ -2971,7 +2974,7 @@ blurb
 "'Layin['] quiet?! INEQUALITY!'"
 "'Lazy life. Zeal? I fly!'"
 "'Leadership: Lies Harped!'"
-"Leadership's phrased lies!'"
+"'Leadership's phrased lies!'"
 "'LeadingCo: Genocidal!'"
 "'Leiferman's reinflames!'"
 "'Let silage legislate? Elite slag? It's GALL, ee!'"
@@ -3463,6 +3466,7 @@ blurb
 "'Optimality! Limit a typo!'"
 "'The OS? Oh, set THOSE.'"
 "'Panic, I? CPAN!'" []
+"'Paper? I'd ... prepaid ride-app!'"
 "'Patric's pics-art? A script!'"
 "'PeerSci Creep is Precise!' they admit, exhaustedly." [x]
 "'Pen this: ShipNet!'"
