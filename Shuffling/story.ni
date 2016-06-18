@@ -8115,11 +8115,11 @@ check opening noise bag:
 		if location of player is Anti-Cool Location:
 			say "The nerds put their hands to their ears, whining a brief 'BE FAIR!' They explain it's not their fault dumber people can't insulate themselves from the noise, but they can't STOP you ruining it for everyone. They ask if you want something, and you point to the tulip. One of them gestures for your keycard. You throw it to them. You're not coming back.[paragraph break]As you do, the nerds['] cries help assure your noise bag stays full, in case you need more words--or something else--later.";
 			now keycard is in lalaland;
-			now player has lit-up tulip;
+			now player has the lit-up tulip;
 			reg-inc;
 			choose row 2 in the table of tulip-acq;
 			now chosen entry is true;
-			move player to underside, without printing a room description instead;
+			move player to underside instead;
 		if location of player is Abyss:
 			if beast is visible:
 				say "The beast has no time for words! You need to attack it more directly, with something else.";
@@ -9236,7 +9236,7 @@ instead of switching on tulip:
 to say nerd-dark:
 	if player does not have tulip:
 		say "'What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats.'[paragraph break]'Logical call. I go.' You sneak out back west.";
-		now player has the tulip;
+		now player has the lit-up tulip;
 		reg-inc;
 		choose row 1 in the table of tulip-acq;
 		now chosen entry is true;
@@ -14092,7 +14092,7 @@ carry out meting:
 		say "1 for heaths, 2 for begonias." instead;
 	if abyss is visited:
 		say "Sorry, you need to restart to run the MET test command again.";
-	now player has lit-up tulip;
+	now player has the lit-up tulip;
 	now power-shut is true;
 	move player to terminal, without printing a room description;
 	if number understood is 1:
