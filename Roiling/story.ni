@@ -22011,6 +22011,7 @@ Wickeder Wire Deck is north of Anger Pit. Wickeder Wire Deck is part of otters. 
 after choosing notable locale objects when player is in wire deck:
 	if owls are in wire deck:
 		set locale priority of owls to 9;
+	continue the action;
 
 the ocelots are plural-named reflexive animals in wire deck. description is "[if ocelots are reflexive]They glance nervously back, as if they've done something wrong[otherwise]They glance back at you, give you a finger-point you're not cool enough to give back, then ignore you in the nicest possible way[end if].". "Ocelots are making gestures here that you'd look silly making[if ocelots are reflexive]. They do, too, with their stupid sunglasses[end if]."
 
@@ -22352,13 +22353,9 @@ the raptor is an animal in Perverse Preserve. description is "It's small for a r
 before entering thrones:
 	say "You try to sit on the thrones, by you feel a stinging." instead;
 
-Rule for choosing notable locale objects for the preserve (this is the raptor last rule):
+after choosing notable locale objects when player is in preserve (this is the raptor last rule):
 	if raptor is in preserve:
 		set the locale priority of raptor to 9;
-		set the locale priority of nails to 2;
-		set the locale priority of thrones to 2;
-		set the locale priority of pines to 2;
-		set the locale priority of corona to 2;
 	continue the action;
 
 the parrot is a vanishing animal. description is "Pretty much every color of the rainbow.". "A multi-colored parrot flutters about, here."
