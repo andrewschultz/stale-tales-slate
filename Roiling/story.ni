@@ -18407,7 +18407,7 @@ check xraying:
 	now undo-code is 2;
 	prevent undo;
 	the rule succeeds;
-	
+
 used-ray is a truth state that varies.
 
 xraytrump is a truth state that varies.

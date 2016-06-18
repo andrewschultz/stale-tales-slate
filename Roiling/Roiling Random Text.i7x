@@ -853,7 +853,6 @@ blurb
 "Desultory yodels-rut."
 "Eh, wail a while."
 "Engrossing, er, sing-song. No sniggers!"
-"Go to bed? Do be got."
 "Gonna sow a song NOW?"
 "Harmony, yon? HARM." []
 "An itch: I chant!"
@@ -861,9 +860,9 @@ blurb
 "Neat, bud! Bad tune!"
 "No melody! My noodle!"
 "The notes? Not these."
-"The result is n.g.: no good." [x]
+"Sing-ings is NG." [x]
 "Sing here? Eh, resign."
-"Sing out in gusto!" []
+"Sing out in gusto? It's, UG, No." []
 "So atonal. Nasal, too!"
 "So chanty? Yo, STANCH!"
 "A sore arose! O, ears!"
@@ -880,6 +879,7 @@ table of sleep rejects [xxg8]
 blurb
 "[if player is male]Senor Snore[else]Senora, a snore[end if]!" []
 "'Asleep? Please?' / 'See, pal...'"
+"Go to bed? Do be got."
 "Conk out: OK? No! Cut!"
 "Cop out? Up, coot!"
 "Eh, napping happening?"
@@ -25978,6 +25978,7 @@ blurb
 "Loyalist Olly Tsai"
 "Lucrative Victualer [if player is male]Avi Cutler[else]Lucia Vert[end if]" []
 "Luk 'Sneer' Kluesner"
+"Lumbering Bluminger"
 "Lustre Luster Russell Ruett"
 "Lute 'Nah' Henault"
 "Lux-Money Molyneux"
@@ -32783,6 +32784,7 @@ blurb
 "the Gulf Coast focal gust"
 "Hardee's sheared headers" []
 "Hearns's harness"
+"heinous ion hues"
 "Heintz's zeniths"
 "Hesseltine's lithenesses"
 "Hi-Stereo theories" []

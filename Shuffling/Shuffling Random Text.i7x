@@ -3330,7 +3330,7 @@ blurb
 "Focused co-feuds."
 "'For loop? Pro-fool!'"
 "'Gamin['] funk. Making fun? Fink an['] mug!'"
-"'GitHub? Bug-hit!'"
+"'GitHub? Bug-hit big hut!'"
 "'Gosh, belt the blogs!'"
 "'Graphics? Sigh. Crap.'" []
 "'Grisly hate? Light years are sightly.' / 'Yes, alright.'"
@@ -3888,7 +3888,7 @@ blurb
 "'Shouting on, tough-on-sin!'"
 "'Solidarity! Daily riots!'"
 "'Stirred-up disrupter! Super dirt!'"
-"They lambaste blames at you, then yell 'Beat! Slam!' and keep lame tabs on your reaction." [x]
+"'Lame! Bats! Lambaste! Beat! Slam!'"
 "'Threatening neater thing, then? Ingrate!'"
 "'Torridest distorter!'"
 "'Vile scar! Evil arcs!' Visceral cavilers."
