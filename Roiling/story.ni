@@ -118,7 +118,7 @@ cheated-guy is an object that varies. cheated-guy is nothing.
 
 Presto is a region. max-score of presto is 33. min-score of presto is 28. [rom stick, lamb, tab, casserole, +1 point for Phooey]
 
-Towers is a region. max-score of towers is 44. min-score of towers is 24.
+Towers is a region. max-score of towers is 45. min-score of towers is 24.
 [4 for regular warriors
 1 for Ray Eck
 1 for rewired
@@ -132,6 +132,7 @@ Towers is a region. max-score of towers is 44. min-score of towers is 24.
 2 for a bot boat
 1 for the palace] [1 non-anagram for rapier repair]
 [3 for the extra warriors
+1 for not using x-ray vision to clear every guardian
 1 for strudel
 1 for the yurts
 5 for the H/I beyond needing to clear the coastlines
@@ -18398,11 +18399,16 @@ check xraying:
 		say "You remember trying to make things [big-hint of noun], so you won't waste your x-ray vision here." instead;
 	else:
 		say "You have a good gaze, and you know what to do and say and think. Gotta be [big-hint of noun].";
+	if used-ray is false:
+		decrement poss-score of towers;
+	now used-ray is true;
 	now noun is rayed;
 	now xrayvision is false;
 	now undo-code is 2;
 	prevent undo;
 	the rule succeeds;
+	
+used-ray is a truth state that varies.
 
 xraytrump is a truth state that varies.
 
@@ -19837,6 +19843,8 @@ to towers-min-adj: [this is when you leave the mainland]
 		do nothing;
 	else:
 		increment poss-score of towers;
+	if used-ray is false:
+		increment poss-score of towers;
 	now poss-score of towers is poss-score of towers + 5; [dingy, spectacular, greyed, give flowerpot]
 	now min-score of towers is min-score of towers + 1; [4 warriors, spectacular]
 	if turbos are reflexive or blaster is reflexive: [rawest waters]
@@ -20159,6 +20167,12 @@ after printing the locale description for Mislit Limits when Mislit Limits is un
 Mislit Limits is a room in Towers. "Everything looks a bit wrong here. It is most definitely a curst place, very reddish and separate from the curst palace nearby. You're gonna need some crazy action, or word, to make it what it was. And yet--something in the air says, lo, curse or clues? There's also a den to the west."
 
 The Curst Palace is a reflexive backdrop.
+
+after fliptiong Curst Palace (this is the overall Towers LLP rule):
+	if used-ray is false:
+		ital-say "You get a bonus point for not using the toaster's x-ray vision anywhere!";
+		increment the score;
+	continue the action;
 
 understand "crust" as a mistake ("It probably needs less crust, not more. The whole curst palace.") when mrlp is towers.
 understand "a place" as a mistake ("It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.") when mrlp is towers.

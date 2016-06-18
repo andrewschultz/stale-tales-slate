@@ -225,7 +225,7 @@ sub sortTheTable
   for (0..$#ary2)
   {
     $lines2 = $lines + $_;
-    $temp = lch(@ary2[$_]); chomp($temp); 
+    $temp = lch(@ary2[$_]); chomp($temp);
 	$temp2 = $temp; $temp2 =~ s/'//g;
     if ($isDone{$temp2})
 	{
@@ -234,7 +234,7 @@ sub sortTheTable
 	  if ($lines2 - $isDone{$temp2} == 1) { $addDupe = "$temp ($lines2-$short) is a duplicate line in the same table.\n"; }
 	  else
 	  {
-      $addDupe = "$temp ($lines2-$short) is duplicated from line $isDone{$temp} table $table{$temp}.\n";
+      $addDupe = "$temp ($lines2-$short) is duplicated from line $isDone{$temp2} table $table{$temp2}.\n";
 	  }
 	  $dupeString .= $addDupe;
     }
