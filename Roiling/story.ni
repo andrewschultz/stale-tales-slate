@@ -17,7 +17,7 @@ TOA = the table of big point scoring changes, table of anagrams
 TOH = table of hint logic
 TMC = mega-chatter, which logs all the tables I search lists for
 TAF = after-texts, which logs everything said after scanning stuff. Used to help clue the player if something is confusing, whether it's a question mark or vowels/consonants not lining up
-TOR = reflexive blather, asking people about themselves (this is often a default)table of reflexive-blather      [ask x about x] [tor]
+TOR = reflexive blather, asking people about themselves (this is often a default)
 TOD = default gen blather, about general nonsense e.g. a misunderstood request
 DSB = default subject blather, about a specific topic. If an NPC has no entry, it goes to TOD.
 TOB = read ALL the book titles!
@@ -5498,7 +5498,7 @@ Merle	false	false	false	true	"Some of the entries seem to flip bluish briefly as
 sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp is maybe too active for even the settler to pin down."
 whiners	false	false	false	false	"The settler then garbles and changes. The men have ways of staying loud." [end otters]
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [others]
-pugnacious	false	false	false	false	"Wow, seven letters, odd. Maybe you need to talk to the plant or attack it or something to see what kind it might be."
+pugnacious	false	false	false	false	"Wow, seven letters, odd. Maybe you need to poke or talk to the plant or attack it or something to see what kind it might be."
 caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
 an-a	false	false	false	false	"You think you hear a taunting na-naa-b after you scan the letters."
 natives	true	true	false	false	"That's weird. They're just natives, but the blinky bit suggests there may be two possible solutions."
@@ -8807,7 +8807,7 @@ mean trowel	watermelon	"watermelon"	"watermelon"	"The trowel seems to inflate fr
 nectarine	nectarine	"ancienter"	"ancienter"	"The unripe nectarine becomes salable. You swipe your tekno-token, taking only one: multiple nectarines might have transience."	true	648047304
 green stain	tangerines	"tangerines" or "tangerine"	"tangerines"	"The green stain coalesces and brightens...and becomes a few tangerines! It changed color, too. Every single one ain't green."	true	757915387
 reserved	guava	"reversed"	"reversed"	"The sign wobbles over and falls. You take a guava you found behind it. [greedy-person] nods, impressed."	true	778533808
-pugnacious plant	rhubarb	"rhubarb"	"rhubarb"	"The plant's arms turn to stalks of rhubarb, which fall off. What looks like an evil spirit departs from it as it slinks into a corner. [greedy-s] sniffs at the rhubarb with disdain. Yay, more fruit for you."	true	352061340
+pugnacious plant	rhubarb	"rhubarb"	"rhubarb"	"The plant's arms turn to stalks of rhubarb, which fall off. What looks like an evil spirit departs from it as it slinks into a corner, and the plant begins to ... vegetate. [greedy-s] sniffs at the rhubarb with disdain. Yay, more fruit for you. Or, well, stuff that's prepared like a fruit."	true	352061340
 b-r	breadfruit	"breadfruit"	"breadfruit"	"You decide the raft would be better as breadfruit, whatever that is. The raft swirls into something more spherical, but still nothing close to what you expected. It's odd and bumpy, but you take it."	true	619813094
 briar screen	cranberries	"cranberries"	"cranberries"	"The prickly screen turns into (you hope) less prickly cranberries."	true	761370255 [briar + cranberries]
 an-a	small yellow banana	"nab an a" or "nab"	"nab an a"	"The A expands and curves in your hands, the middle-bar melting into the legs, and you have a banana."	true	162797375
@@ -23612,11 +23612,11 @@ an-a is a privately-named thing in Scape Space. printed name of the an-a is "An 
 
 understand "banana" as a mistake ("Hm, that's the fruit you want, but which letter to grab? And how?") when an-a is in scape space and player is in scape space.
 
-the pugnacious plant is a thing in Scape Space. "A pugnacious plant waits for a fight here."
+the pugnacious plant is a thing in Scape Space. "A pugnacious plant looms here, just waiting for you to do something with it."
 
 a-text of pugnacious is "RRYRYRR". b-text of pugnacious is "RRYRYRR". parse-text is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x".
 
-description of pugnacious plant is "It's completely indescribable and quite possibly mechanical. You hear a noise coming from it."
+description of pugnacious plant is "It looks like, well, an evil version of a more straightforward tomato plant. You wonder if it is a vegetable that should be a fruit, a vegetable people prepare like a fruit, or vice versa."
 
 rhubarb is a fruit.
 

@@ -98,7 +98,7 @@ for $idx (0..$#ARGV)
   if ($this =~ /-f/) { $openPost = 1; next; }
   if ($this =~ /-s/) { $doShuf = 1; $doRoil = 0; next; }
   if ($this =~ /-r/) { $doShuf = 0; $doRoil = 1; next; }
-  if ($this =~ /-m/) { matchHash("sa"); matchHash("roiling"); exit; }
+  if ($this =~ /-m/) { matchHash("shuffling"); matchHash("roiling"); exit; }
   if ($this =~ /,/) { $tabString =$this; $tabString =~ s/,/\t/g; $tabString =~ s/_/ /g; next; }
   if ($this =~ /^\?/) { usage(); exit; }
 #print "$idx $this\n";
@@ -122,7 +122,7 @@ for $q (@x)
 
 $anyFound = 0;
 
-if ($doShuf) { lookBoth($hash, "sa"); }
+if ($doShuf) { lookBoth($hash, "shuffling"); }
 if ($doRoil) { lookBoth($hash, "roiling"); }
 
 if (($printIfThere) || ($anyFound == 0)) { print B "\"$this\"\t$hash\t$tabString\t\"some text\"\n"; $worthOpening = 1; }
