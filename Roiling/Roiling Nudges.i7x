@@ -241,8 +241,8 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "clipper"	493874100	routes	cripple clipper	--	--	"[locname]."
 "storeu"	591972280	routes	--	--	degen-true rule	"[not-the-reg]."
 "route"	495698314	routes	--	--	degen-true rule	"[not-the-reg]."
-"spoil"	350899187	troves	--	--	degen-true rule	"[no-spoil]." [troves nudges]
-"spoiloplis"	701798374	troves	--	--	degen-true rule	"[no-spoil]."
+"spoiloplis"	701798374	troves	--	--	degen-true rule	"[no-spoil]." [troves nudges]
+"spoil"	350899187	troves	--	--	degen-true rule	"[no-spoil]."
 "pothole"	552183378	troves	rathole	--	--	"[p-hole]."
 "potholes"	648457344	troves	rathole	--	--	"[p-hole]."
 "pagepage"	488119176	troves	--	Pa Egg	--	"[ei2pg]."
@@ -1006,36 +1006,44 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "admit"	235394924	others	gates stage	--	--	"[stad-chg]."
 "other"	427874806	others	--	--	degen-true rule	"[not-the-reg]."
 "storeh"	524148772	others	--	--	degen-true rule	"[not-the-reg]."
-"peek"	390011355	demo dome	peek keep	--	--	"[dome-rm]." [demo dome nudges]
-"evoc"	328329091	demo dome	evoc-cove	--	--	"[dome-rm]."
-"hows"	315843615	demo dome	hows show	--	--	"[dome-rm]."
-"perl"	348409710	demo dome	hows show	--	--	"[its-a-museum]."
-"flashed"	364908016	demo dome	peek keep	--	--	"[its-a-museum]."
+"flashed"	364908016	demo dome	peek keep	--	--	"[its-a-museum]." [demo dome nudges]
 "shelf"	341691109	demo dome	peek keep	--	--	"[its-a-museum]."
 "design"	391609220	demo dome	peek keep	--	--	"[its-a-museum]."
-"inform"	364166783	demo dome	hows show	--	--	"[its-a-museum]."
-"perlwall"	566159979	demo dome	hows show	--	--	"[its-a-museum]."
-"informwall"	581917052	demo dome	hows show	--	--	"[its-a-museum]."
-"codewall"	459943629	demo dome	hows show	--	--	"[its-a-museum]."
-"codewalls"	556217595	demo dome	hows show	--	--	"[its-a-museum]."
-"code"	242193360	demo dome	hows show	--	--	"[its-a-museum]."
-"perlcode"	590603070	demo dome	hows show	--	--	"[its-a-museum]."
-"informcode"	606360143	demo dome	hows show	--	--	"[its-a-museum]."
-"neds"	314016672	demo dome	ned's dens	--	--	"This isn't Threediopolis. Which, if you haven't played yet, you should."
-"sparse"	489331621	demo dome	sparse spares	--	--	"[dome-rm]."
-"intel"	398630320	demo dome	intel inlet	--	--	"[dome-rm]."
+"deign"	295335254	demo dome	peek keep	--	--	"[its-a-museum]."
+"sign"	242774022	demo dome	peek keep	--	--	"[no-mess]."
+"entry"	507506690	demo dome	peek keep	--	--	"[no-mess]."
+"unfold"	349723716	demo dome	peek keep	--	--	"[no-mess]."
+"memoir"	460625641	demo dome	peek keep	--	--	"[no-mess]."
 "shall"	243371761	demo dome	peek keep	--	--	"You can't get near the shall halls, although you still have the nonmagical ability to change the future. Well, some day you will."
 "great"	351027450	demo dome	peek keep	--	--	"It was tested to make sure even you couldn't magic it open."
 "display"	422122769	demo dome	peek keep	--	--	"You won't figure the code. There isn't one. Muahaha."
 "spy"	300099177	demo dome	peek keep	--	--	"You won't figure the code. There isn't one. Muahaha."
 "dial"	122023592	demo dome	peek keep	--	--	"You won't figure the code. There isn't one. Muahaha."
-"boltcase"	494968817	demo dome	sparse spares	--	--	"[its-a-museum]."
 "talks"	308318819	demo dome	peek keep	--	--	"[its-a-museum]."
 "talk"	212044853	demo dome	peek keep	--	--	"[its-a-museum]."
 "spec"	324551619	demo dome	peek keep	--	--	"[its-a-museum]."
 "space"	326739437	demo dome	peek keep	--	--	"[its-a-museum]."
-"best"	345608998	demo dome	--	best cola	--	"[its-a-museum]."
-"cola"	149359819	demo dome	--	best cola	--	"[its-a-museum]."
+"novella"	488046510	demo dome	evoc-cove	--	--	"[no-no]"
+"lol"	181980255	demo dome	evoc-cove	--	--	"[no-no]."
+"neva"	306066255	demo dome	evoc-cove	--	--	"[no-no]."
+"codewall"	459943629	demo dome	hows show	--	--	"[its-a-museum]."
+"codewalls"	556217595	demo dome	hows show	--	--	"[its-a-museum]."
+"code"	242193360	demo dome	hows show	--	--	"[its-a-museum]."
+"sllaw"	314024235	demo dome	hows show	--	--	"[its-a-museum]."
+"owl"	217750269	demo dome	hows show	--	--	"[its-a-museum]."
+"decal"	223842440	demo dome	hows show	--	--	"[its-a-museum]."
+"allow"	292102846	demo dome	hows show	--	--	"[its-a-museum]."
+"lots"	327550400	demo dome	hows show	--	--	"[its-a-museum]."
+"tools"	401902977	demo dome	hows show	--	--	"[its-a-museum]."
+"allowlots"	619653246	demo dome	hows show	--	--	"[its-a-museum]."
+"wall"	217750269	demo dome	hows show	--	--	"[its-a-museum]."
+"neds"	314016672	demo dome	ned's dens	--	--	"You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one!"
+"chicloner"	530490151	demo dome	ned's	--	--	"[no-no]!"
+"icch"	120286315	demo dome	ned's	--	--	"[no-no]!"
+"ernol"	410203836	demo dome	ned's	--	--	"[no-no]!"
+"boltcase"	494968817	demo dome	sparse spares	--	--	"[its-a-museum]."
+"best"	345608998	demo dome	sparse spares	--	--	"[its-a-museum]."
+"cola"	149359819	demo dome	sparse spares	--	--	"[its-a-museum]."
 "trifle"	441561511	demo dome	sparse spares	--	--	"[its-a-museum]."
 "dustpan"	478080165	demo dome	sparse spares	--	--	"[its-a-museum]."
 "scalpit"	400850031	demo dome	sparse spares	--	--	"[its-a-museum]."
@@ -1045,12 +1053,11 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "bulk"	230271729	demo dome	sparse spares	--	--	"Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that."
 "calendar"	380261569	demo dome	intel inlet	--	--	"[these-docs]."
 "thesis"	505739204	demo dome	intel inlet	--	--	"[these-docs]."
-"chicloner"	530490151	demo dome	--	chic loner	--	"[no-no]."
-"novella"	488046510	demo dome	--	chic loner	--	"[no-no]."
-"sign"	242774022	demo dome	peek keep	--	--	"[no-mess]."
-"entry"	507506690	demo dome	peek keep	--	--	"[no-mess]."
-"unfold"	349723716	demo dome	peek keep	--	--	"[no-mess]."
-"memoir"	460625641	demo dome	peek keep	--	--	"[no-mess]."
+"peek"	390011355	demo dome	peek keep	--	--	"[dome-rm]."
+"evoc"	328329091	demo dome	evoc-cove	--	--	"[dome-rm]."
+"hows"	315843615	demo dome	hows show	--	--	"[dome-rm]."
+"sparse"	489331621	demo dome	sparse spares	--	--	"[dome-rm]."
+"intel"	398630320	demo dome	intel inlet	--	--	"[dome-rm]."
 "demo"	287262928	demo dome	--	--	degen-true rule	"Museums are designed to be impassive and impermeable, for the most part. This is full of exhibits--your questing days are over."
 "Elvira"	421289235	--	--	--	elvira-here rule	"Changing Elvira is impossible, [if player is in Inclosure]even now you've resisted her first attack[else]and you certainly don't want to summon her[end if]." [start GENERAL STUFF]
 "yorpwald"	548467110	--	--	--	degen-true rule	"You can't just unjumble Yorpwald with just one word. You need to deal with individual things."
@@ -1883,7 +1890,7 @@ to say stad-chg:
 	say "Changing the stadium with (presumably) people in it would cause great harm. Maybe you should try to sneak in, instead";
 
 to say dome-rm:
-	say "You don't need to flip anything here, really. Certainly not a room."
+	say "You don't need to flip anything here, really. Certainly not a room"
 
 to say its-a-museum:
 	say "This is a museum! No messing with the exhibits, please. Or trying to";
@@ -1892,7 +1899,7 @@ to say these-docs:
 	say "These are documents of historical records! Revisionism is so Elvira";
 
 to say no-no:
-	say "You can't change the book's writing. Well, you could, I guess. But this is a museum!"
+	say "You can't change the book's writing. Well, you could, I guess. But this is a museum"
 
 to say no-mess:
 	say "No need to mess with the helpful sign";

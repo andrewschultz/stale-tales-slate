@@ -3761,7 +3761,7 @@ blurb
 table of biopics [xxm3]
 blurb	fave
 "[if player is male]One Man, No Name[else]I, Hereon, Heroine[end if][r], by [if player is male]Ann Moe[else]Irene Ho[end if]"	true
-"Able Doing? No Big Deal: Angled Bio[r], by [if player is male]Eli Bogdan[else]Gia Bondel[end if]"
+"Able Doing? No Big Deal: Angled Bio[r], by [if player is male]Eli Bogdan[else]Gia Bondel[end if]"	false
 "All Those Words: Shallow Doters, Worthless Load[r], by Stowell Rhoads"	false
 "Another Try, Hero-Tyrant[r], by Roy Harnett & [if player is male]Tony Erhart[else]Thora Tyner[end if]"	false
 "Arriviste: it Arrives[r], by Teri Rivas"	false

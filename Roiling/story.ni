@@ -3132,6 +3132,10 @@ Understand the commands "r" and "read" as something new.
 
 Understand "r [something]" and "read [something]" as reading. Reading is an action applying to one thing, requiring light.
 
+does the player mean reading the player: it is very unlikely.
+does the player mean reading the chic loner chronicle: it is likely.
+does the player mean reading the novella: it is likely.
+
 carry out reading:
 	if noun is novella:
 		read-lowest-page;
@@ -4967,11 +4971,15 @@ to say poss-range:
 	else:
 		say "*[poss-score of mrlp]*";
 
+dome-score-not is a truth state that varies.
+
 carry out requesting the score:
 	if mrlp is nothing:
 		say "BUG: This location needs a region." instead;
 	if mrlp is Demo Dome:
-		say "There's no score in the Demo Dome. You just need to look around.";
+		if dome-score-not is false:
+			say "There's no score in the Demo Dome. You just need to look around.";
+			now dome-score-not is true;
 		left-to-see instead;
 	if roved is true:
 		if player is in strip of profits:
@@ -5034,15 +5042,18 @@ to left-to-see:
 				say "You still haven't gone [cueloc of exhib entry] from Peek Keep.";
 				continue the action;
 			if exhib entry is unexamined:
-				say "You saw the [exhib entry] in [location of exhib entry], but you didn't examine it.";
+				say "You saw the [exhib entry] [if location of exhib entry is location of player]here [end if]in [location of exhib entry], but you didn't examine it.";
 				continue the action;
 			say "You still have more of the [exhib entry] to look through.";
 			continue the action;
+	if sparse spares is unvisited:
+		say "There's some random junk below the entry to Peek Keep.";
+		continue the action;
 	repeat through table of xibits:
-		if exhib entry is perused:
+		if exhib entry is not exhausted:
 			say "You haven't looked all the way through the [exhib entry] in [location of exhib entry].";
 			continue the action;
-	say "It looks like you've looked through everything. Thanks for paying attention."
+	say "It looks like you've looked through everything. Thanks for all the time you spent, and I hope it was worth it!"
 
 to decide which direction is cueloc of (xx - an exhibit):
 	let myway be the best route from Peek Keep to the location of xx;
@@ -8571,6 +8582,24 @@ after fliptoing when player is in rustic citrus (this is the Curtis pleased rule
 		now player has moss cap instead;
 	if cur-score of others > 3:
 		coin-eval;
+	continue the action;
+
+to say check-tokers:
+	say "[if tokers are in Strip of Profits]motion to the smoke cloud.[paragraph break]'Dude! My buddies!' he shouts. 'I must've went back to the wrong store or something. Hey, I met this dude!'[no line break][otherwise]stand around nervously while he wonders where his friends are. They must be nearby.[no line break][end if]";
+
+to say check-nestor:
+	now smoke cloud is in Strip of Profits;
+	say "[paragraph break][if nestor is in Strip of Profits]What's more, you seem to have rescued their friend, Nestor! 'Hey, dudes, I like went back to the wrong store or something.'[no line break][otherwise]They spend some time complaining about their one toker friend who like went out to get the really good stuff and never like reappeared.[no line break][end if]"
+
+after fliptoing (this is the reunite gang rule) :
+	if noun is nestor or noun is tokers:
+		if nestor is in strip and tokers are in strip:
+			say "The lackers and slacker pull a tarp apart and pull out a dime bag made big and spark a tinderbox-bred toxin for tokins['] stokin[']. 'A drug to drag out!'' They offer a stupor sprout to spur Proust, and even an opiate oatpie, but you decline. They explain excitedly to you that this stuff is SO good, it's literally a like passage to a new world for certain people. You might even be able to enter the like smoke if you're way out enough.";
+	continue the action;
+
+after fliptoing a fruit (this is the fruit cue rule):
+	if number of carried fruits > 5:
+		say "You can carry all those fruits in your super purse, but they might get mushed. Maybe you should unload what you have on Curtis[if player has droll dollar], even if he might not give you any more goodies[end if].";
 	continue the action;
 
 book anagram table
@@ -23879,7 +23908,9 @@ carry out demoing:
 		say "You already are in demo dome mode." instead;
 	if Gunter is not off-stage:
 		say "[reject]";
-	say "[if knockage is true]You ignore Gunter's emo'd voice[else]You decide to, umm, use the Me-Um-Us Museum[end if]. You pull out your discreet, secret ID to enter.";
+	if player is not in dusty study or gunter is in lalaland:
+		say "For reasons of continuity, you can't visit the Demo Dome until you've restarted the game." instead;
+	say "[if knockage is true]You ignore Gunter's emo'd voice, probably looking to apologize and kiss up[else]You decide to, umm, use the Me-Um-Us Museum[end if]. You pull out your discreet, secret ID to enter.";
 	move player to peek keep;
 	now right hand status line is "Poking Around";
 	the rule succeeds;
@@ -23892,18 +23923,29 @@ For printing a locale paragraph about a thing (called the item)	(this is the don
 	if the item is an exhibit, set the locale priority of the item to 0;
 	continue the activity.
 
-Peek Keep is a room in Demo Dome. "Exhibits lie west, north and east, and even inside. The way down looks disused. The exit is south. A great grate blocks passage above.[paragraph break]A sign here welcomes you.";
+Peek Keep is a room in Demo Dome. "Exhibits lie west, north and east, and even inside. The way down looks disused. The exit is south. A great grate blocks passage abovebut there seems to be a lot behind it. A flashed ad shelf also continually changes what it's showing.[paragraph break]The entry sign here welcomes you.";
+
+instead of turning the dial:
+	say "The dial is out of reach."
+
+instead of switching on the dial:
+	say "The dial is out of reach."
+
+instead of switching off the dial:
+	say "The dial is out of reach."
 
 the entry sign is scenery in peek keep. "UNFOLD OLD FUN, MEMOIR: I'M MORE."
 
 check going south in peek keep:
-	if number of not perused exhibits is 0:
+	if debug-state is true:
+		say "[list of unnoted exhibits] unnoted, [list of perused exhibits] perused, [list of exhausted exhibits] exhausted.";
+	if number of not exhausted exhibits is 0:
 		say "You take a break and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers['] money.";
 		end the story;
 	else:
-		say "Are you sure you want to leave before looking at everything?";
+		say "Are you sure you want to leave before [if number of unnoted exhibits is 0]exhaustively [end if]looking at everything?";
 		if the player no-consents:
-			say "It's--yes, you've sort of lived it, already. You're just too busy for frivolity.";
+			say "It's--yes, you've sort of lived it, already. You're just too busy for frivolity[if number of unnoted exhibits is 0]. You've had a look at everything[end if].";
 			end the story;
 		else:
 			say "Okay, why not look around a bit more." instead;
@@ -23923,12 +23965,15 @@ chapter Evoc-Cove
 
 Evoc-Cove is east of peek keep. Evoc-cove is in Demo Dome. "A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want."
 
-check going east in evoc-cove:
-	say "You quickly run into a bunch of boxes you could probably push around to make a path to a bigger room, but that just wasn't your specialty. Wrong sort of thinking game." instead;
+check going in evoc-cove:
+	if noun is east or noun is north or noun is south:
+		say "You quickly run into a bunch of boxes you could probably push around to make a path to a bigger room, but that just wasn't your specialty. Wrong sort of thinking game." instead;
 
 section novella
 
 The novella is an exhibit in Evoc-Cove. "A novella is here. You can READ it without taking it.". description is "It's called Venal Ol['] Novella, by Evan Oll. That's probably a pseudonym. It's got a hundred pages, which you can examine by READ (number)[lowest-unread]. You can also speed-read with [i]rr[r]."
+
+understand "neva" and "lol" as a mistake ("Yeah, the novel is pretty unbelievable, but it's not there to be profound.") when player is in evoc-cove.
 
 check taking novella:
 	say "Don't take the art." instead;
@@ -24040,9 +24085,9 @@ any-walls is a truth state that varies.
 
 section inform wall
 
-the owl decal code wall is an exhibit in hows show. "[this-inform]"
+the owl decal code wall is a proper-named exhibit in hows show. "[this-inform]"
 
-printed name of owl decal code wall is "owl-decal code wall"
+printed name of owl decal code wall is "the owl-decal code wall"
 
 understand "owl-decal wall" and "owl-decal code wall" as owl decal code wall.
 
@@ -24061,16 +24106,22 @@ to say this-inform:
 		now owl decal code wall is perused;
 	choose row inform-row in table of informcode;
 	say "[thiscode entry]";
+	
+after examining owl decal code wall:
 	if inform-row is number of rows in table of informcode:
-		ital-say "you've read all the way through.";
-		now owl decal code wall is exhausted;
+		say-thru;
 		now inform-row is 0;
+		now owl decal code wall is exhausted;
+	continue the action;
+
+to say-thru:
+	ital-say "you've read all the way through.";
 
 section allow-lots-tools wall
 
-the allow lots tools wall is an exhibit in hows show. "[this-perl]".
+the allow lots tools wall is a proper-named exhibit in hows show. "[this-perl]".
 
-printed name of allow lots tools wall is "alliow-lots-tools wall".
+printed name of allow lots tools wall is "the allow-lots-tools wall".
 
 understand "alliow-lots-tools wall" as tools wall.
 
@@ -24087,12 +24138,15 @@ to say this-perl:
 	if allow lots tools wall is unnoted:
 		now allow lots tools wall is perused;
 	increment perl-row;
-	if perl-row > number of rows in table of perlcode:
-		ital-say "you've read all the way through.";
-		now perl-row is 1;
-		now allow lots tools wall is exhausted;
 	choose row perl-row in table of perlcode;
 	say "[thiscode entry]";
+
+after examining allow lots tools wall:
+	if perl-row is number of rows in table of perlcode:
+		say-thru;
+		now perl-row is 0;
+		now allow lots tools wall is exhausted;
+	continue the action;
 
 chapter Intel Inlet
 
@@ -24100,19 +24154,23 @@ Intel Inlet is inside of Peek Keep. Intel Inlet is in Demo Dome. "You feel a fou
 
 The shiest thesis is an exhibit in intel inlet. description is "It's a list of embarrassing mistakes you really shouldn't feel so embarrassed about. At first you're all, eh, this...but it's more than that.".
 
+after examining shiest thesis:
+	now shiest thesis is exhausted;
+	continue the action;
+
 The CareLand Calendar is an exhibit in intel inlet. description of Calendar is "[bug-report]".
 
 check examining CareLand Calendar:
-	now calendar is perused;
 	say "It's divided into several parts based on what is there. You read through one.[paragraph break][part-one-thru]" instead; [bulk-klub]
 
 calendar-part is a number that varies.
 
 to say part-one-thru:
+	if calendar-part is 0:
+		now careland calendar is perused;
 	increment calendar-part;
 	if calendar-part > number of rows in table of calparts:
 		now calendar-part is 1;
-		now careland calendar is perused;
 	choose row calendar-part in table of calparts;
 	say "[thiscal entry][line break]";
 	if calendar-part is number of rows in table of calparts:
@@ -24145,9 +24203,16 @@ chapter Sparse Spares
 
 Sparse Spares is below Peek Keep. Sparse Spares is in Demo Dome. "All sorts of weird tools and paraphernalia that couldn't fit into the game proper lie here, likely impulse purchases from Bulk-Klub. You can go back up."
 
+understand "spears" as a mistake ("There's nothing you need a weapon to fight against.") when player is in sparse spares.
+
 the parcels clasper is a thing in Sparse Spares. description is "Oh, man! It's handy for picking stuff up and moving it around. It looks a bit odd, but boy, if you look for a minute, THAT's how it works."
 
-the bolt case is a transparent closed container in Sparse Spares. description is "It contains an obstacle, and it's also not openable, since it's--well-bolted. There's also a can of Best Cola in there."
+the bolt case is a transparent container in Sparse Spares. description is "It contains an obstacle, and it's also not openable, since it's--well-bolted. There's also a can of Best Cola in there."
+
+Rule for printing room description details of bolt case: do nothing instead.
+
+check opening bolt case:
+	say "It's locked, but Best Cola isn't very good for you anyway. Imagine how bad Worst Cola could be." instead;
 
 the obstacle is in the bolt case. description of the obstacle is "it reads Bulk-Klub."
 
@@ -24168,11 +24233,19 @@ the rudest duster is a thing in spares. description is "Helped me clean up--or a
 check taking something in spares:
 	say "That's a museum exhibit. About all you can/should do is examine it." instead;
 
-chapter Great Grate
+section Great Grate
 
-The Great Grate is scenery in Peek Keep. "The Great Grate can't be moved. It hides the shall-halls which--well, they're under construction. You also see a spy-dial display behind it."
+The Great Grate is scenery in Peek Keep. "The Great Grate can't be moved. It hides the shall-halls which--well, they're under construction. There's also a talks stalk, design-deigns and a spec space."
 
-The Spy Dial Display is scenery in Peek Keep. "The display is currently off and out of reach."
+after examining great grate (this is the keep scenery spill rule)	:
+	move spy dial display to peek keep;
+	move spec space to peek keep;
+	move shall halls to peek keep;
+	move design deigns to peek keep;
+	move talks stalk to peek keep;
+	continue the action;
+
+The Spy Dial Display is scenery. "The display is currently off and out of reach."
 
 instead of taking Spy Dial Display:
 	say "Out of reach behind the grate.";
@@ -24182,24 +24255,44 @@ instead of doing something with Great Grate:
 		continue the action;
 	say "It was put there just to let you know there will be new stuff from the author. Of course, if you could see it, it might be too raw to be any good.";
 
-a spec space is scenery in peek keep. "It could be a spec-scape, with all that's here."
+a spec space is scenery. "It could be a spec-scape, with all that's here. It's a bit hard to read--hopefully the author will unjumble it into something fun some time soon."
 
-a talks stalk is scenery in peek keep. "From what you see on the other side of the Great Grate, it has many branches, but none appear particularly healthy yet. It symbolizes the author's grand high goal up there of one day implementing more believable NPCs."
+instead of doing something with spec space:
+	if the action is procedural:
+		continue the action;
+	say "The spec space is too ill-defined to do much with.";
+
+The Shall Halls are scenery in Peek Keep. "You can't get a very good look at the shall-halls, but the design-deigns scratched at the end fill you with wonder and anticipation all the same. Really!"
+
+instead of doing something with shall halls:
+	if the action is procedural:
+		continue the action;
+	say "I haven't figured where to go in them, and if you can, I'd be jealous.";
+
+understand "shall-halls" as Shall Halls.
+
+The Design Deigns are scenery in Peek Keep. "They're illegible from this far away. They might be illegible up close. The author is, sadly, like that. So you can't make out evidence for or against a Questionable Sequel-Obtain."
+
+instead of doing something with flashed ad shelf:
+	if the action is procedural:
+		continue the action;
+	say "I haven't figured what to do with them, so you probably don't want to do anything too complex.";
+
+a talks stalk is scenery. "From what you see on the other side of the Great Grate, it has many branches, but none appear particularly healthy yet. It symbolizes the author's grand high goal up there of one day implementing more believable NPCs."
 
 instead of doing something with Talks Stalk:
 	if the action is procedural:
 		continue the action;
 	say "You can't do much with the stalk on the other side of the Grate. And the author hasn't, yet. One day.";
 
-chapter Flashed Ad Shelf
+section Flashed Ad Shelf
 
-The Flashed Ad Shelf is scenery in Peek Keep. "There is a rotating ad saying visit sunny Threediopolis and Fourdiopolis--well, the edges are sunny. It then changes to tout following the adventures of Alec Smart through the Problems Compound and, eventually, Slicker City."
+The Flashed Ad Shelf is an exhibit in Peek Keep. "There is a rotating ad saying visit sunny Threediopolis and Fourdiopolis--well, the edges are sunny. It then changes to tout following the adventures of Alec Smart through the Problems Compound and, eventually, Slicker City."
 
-chapter Shall Halls
-
-The Shall Halls are scenery in Peek Keep. "You can't get a very good look at the shall-halls, but the design-deigns scratched at the end fill you with wonder and anticipation all the same. Really!"
-
-The Design Deigns are scenery in Peek Keep. "They're illegible from this far away. They might be illegible up close. The author is, sadly, like that. So you can't make out evidence for or against a Questionable Sequel-Obtain."
+instead of doing something with flashed ad shelf:
+	if the action is procedural:
+		continue the action;
+	say "There's not much to do with the ad shelf but examine it. Or play one of those wonderful advertised games!";
 
 chapter dometables
 
@@ -24247,7 +24340,7 @@ thiscode [x allow-lots-tools wall] [tdm3]
 "if (($startsWithCapital{$currentTable} == 1) && ($thisString =~ /^[bracket]a-z[close bracket]/)) { print 'Bad capitalization!' # other test cases for if it's -1 (needs to start with lower case) or 0 (doesn't matter) and there are even tests for quotes or punctuation at the end."
 "Below the code for reducing strings are various comparisons to detect if an anagram has been used, if a book anagram is proper, or if the book matches its author(s)."
 "In the book/author notes, there's a few comments about 70% had matching names before the try, and 10% just had bad anagrams, before that was all fixed. And many former author names were shipped off to Shuffling Around to make room for new ones here."
-"while ($a = <A>) { if (($a =~ /@ARGV[0]/) && ($a =~ /@ARGV[1]/)) { print '$a matches.'; } } # simple check for if I wrote something already"
+"while ($a = <A>) { if (($a =~ /@ARGV[bracket]0[close bracket]/) && ($a =~ /@ARGV[bracket]1[close bracket]/)) { print '$a matches.'; } } # simple check for if I wrote something already"
 "There's simpler code below just detecting if any anagrams are found in table entries. It's tough to follow, with exceptions for if two of the same word are in an entry, with the same hash as above."
 "There's code of what appears to be copying critical files to a GitHub directory. Shuffling Around and Roiling files are sent to sister directories, along with the compiled release binaries and lots of utilities."
 "The rest is too archaic, but it includes other things I put on [my-repo] include scripts to verify random text anagrams, to create the cheat and non-cheat text in the settler, and even track geometric means of table lengths."
@@ -24372,24 +24465,6 @@ pgtxt	read-yet	comprehensible
 "This has been nonsense so far--and no hinting yet."
 "Ninny Nite."
 "Undone herd endured, hon. Oh! Run Ended!"
-
-to say check-tokers:
-	say "[if tokers are in Strip of Profits]motion to the smoke cloud.[paragraph break]'Dude! My buddies!' he shouts. 'I must've went back to the wrong store or something. Hey, I met this dude!'[no line break][otherwise]stand around nervously while he wonders where his friends are. They must be nearby.[no line break][end if]";
-
-to say check-nestor:
-	now smoke cloud is in Strip of Profits;
-	say "[paragraph break][if nestor is in Strip of Profits]What's more, you seem to have rescued their friend, Nestor! 'Hey, dudes, I like went back to the wrong store or something.'[no line break][otherwise]They spend some time complaining about their one toker friend who like went out to get the really good stuff and never like reappeared.[no line break][end if]"
-
-after fliptoing (this is the reunite gang rule) :
-	if noun is nestor or noun is tokers:
-		if nestor is in strip and tokers are in strip:
-			say "The lackers and slacker pull a tarp apart and pull out a dime bag made big and spark a tinderbox-bred toxin for tokins['] stokin[']. 'A drug to drag out!'' They offer a stupor sprout to spur Proust, and even an opiate oatpie, but you decline. They explain excitedly to you that this stuff is SO good, it's literally a like passage to a new world for certain people. You might even be able to enter the like smoke if you're way out enough.";
-	continue the action;
-
-after fliptoing a fruit (this is the fruit cue rule):
-	if number of carried fruits > 5:
-		say "You can carry all those fruits in your super purse, but they might get mushed. Maybe you should unload what you have on Curtis[if player has droll dollar], even if he might not give you any more goodies[end if].";
-	continue the action;
 
 volume hinting
 
@@ -26389,7 +26464,6 @@ section instructions
 [* this is a simple list of instructions cluing a5 hintvis and ts]
 
 when play begins:
-	say "NOTE: utterly imperative to comment out volume beta testing section before releasing this game.";
 	say "Here is a list of Beta Testing commands that will facilitate passage through:[paragraph break]--a5 moves you to the Strip of Profits, solving all but Otters.[line break]--hintvis hints everything visible[line break]--ts jumps you to the Strip of Profits, with the patcher etc.[line break]blaa talks about a generic subject.";
 
 book cheatage
