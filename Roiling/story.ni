@@ -1169,26 +1169,6 @@ to decide whether (cho - a number) is irrelevant:
 	if cho is 77 or cho is 109, decide no;
 	decide yes;
 
-section yes/no debug stubs
-
-to decide whether the player yes-consents:
-	(- YesOrNoExt(1) -).
-
-to decide whether the player no-consents:
-	(- YesOrNoExt(0) -).
-
-Include (-
-
-[ YesOrNoExt yn;
-	if ( (+ debug-state +) == 1)
-	{
-	    return yn;
-	}
-	return YesOrNo();
-];
-
--)
-
 section gender specific stubs and/or silliness
 
 to say a-b:
@@ -1200,8 +1180,8 @@ to say d-t:
 to say n-t:
 	say "[if player is male]Nate[else]Tena[end if]"
 
-to say fs:
-	say "[if player is female]s[end if]";
+to say fs: [Mr/Mrs]
+	say "[if player is male][else]s[end if]";
 
 to say i-n:
 	say "[if player is male]Ian[else]Nia[end if]"
@@ -1213,8 +1193,7 @@ to say mle:
 	say "[one of]Mel[or]Lem[in random order]"
 
 to say sic: [for when I totally have to bail out]
-	if player is female:
-		say " (sic) "
+	if player is female, say " (sic) "
 
 to say sim:
 	say "[if player is male]Simeon[else]Simone[end if]"
@@ -2229,7 +2208,7 @@ persuasion rule for asking macks to try doing something:
 	say "The macks, like any good alpha males, blow you off and show Gretta Garett-Tatger SHE is most important.";
 	persuasion fails;
 
-persuasion rule for asking mr-l to try doing something:
+persuasion rule for asking Mr Lee to try doing something:
 	say "[if p-2 is reflexed]Mr. Lee can't do any more for you[else]Mr. Lee doesn't trust you enough to do anything for you[end if].";
 	persuasion fails;
 
@@ -2542,7 +2521,7 @@ macks	"Their opinion would be slightly biased. You can probably learn more about
 Gretta	"She's got enough people asking about her right now."
 Elmer	"'Slightly more interesting than my friend.'"
 Merle	"'Slightly more interesting than my friend.'"
-mr-l	--
+Mr Lee	--
 le mer	--
 eels	--
 snail	--
@@ -2705,7 +2684,7 @@ Ed Riley	"'Stay there in the rye, idle! Yielder!' he booms[ed-nonsense]. Be nice
 cinders	"You need to find the right way to ask them. One without speaking."
 Le Mer	"[one of]It's kind of single-minded, but it's impressive the moat talks at all[or]Again, ethereal babbling[stopping]. '[if sea cube is visible]You must convince me to unlock the sea cube[tho-need].[else if eels are visible]The eels still distrust you[tho-need].[else]Your powers are regained. Go to your destiny![end if]'"
 atmo-moat	"The moat has nothing to say. If it did, it'd probably just say 'KEEP OUT.'"
-mr-l	"[if p-2 is in lalaland]'You have gained my trust and your powers. Go on!'[else if ghoul hat is in lalaland]You try to convince him you're the good guy, but--bad start. Rev. Howe glares at you[tho-eels].[else]You fail to get anywhere. Between the ghoul hat and Rev. Howe's gaze, Mr. Lee seems half-possessed[tho-eels].[end if]"
+Mr Lee	"[if p-2 is in lalaland]'You have gained my trust and your powers. Go on!'[else if ghoul hat is in lalaland]You try to convince him you're the good guy, but--bad start. Rev. Howe glares at you[tho-eels].[else]You fail to get anywhere. Between the ghoul hat and Rev. Howe's gaze, Mr. Lee seems half-possessed[tho-eels].[end if]"
 Gretta	"[if player is female]The macks block you from talking to her. They redouble their conversation, expecting her to be flattered she's getting more attention than you[else]The macks manage to small-talk you down[end if]. Perhaps you need to get rid of them."
 macks	"'Talking's stalking,' they yell at you before continuing to hit on the maiden."
 eels	"'Eels...' / 'Fib-beliefs?' Their attention span seems short, and they have little to say. You need one word, useless on its own yet powerful."
@@ -2916,12 +2895,12 @@ Ed Riley	Elvira	"'She got me this job here! She's gotten lots of people jobs, te
 macks	Elvira	"'She would be too good for us.'"
 eels	Elvira	"'The eels crackle and light up menacingly at the sound of her name.'"
 Le Mer	Elvira	"'She must be defeated[if eels are reflexed]. You can lead the troops to do so[end if].'"
-mr-l	Elvira	"'She must be defeated[if p-2 is reflexed]. You must be the one to lead us[else]. If you are not with her, show me a sign[end if].'"
+Mr Lee	Elvira	"'She must be defeated[if p-2 is reflexed]. You must be the one to lead us[else]. If you are not with her, show me a sign[end if].'"
 Elmer	Merle	"'Almost as interesting as me.'"
 Merle	Elmer	"'Almost as interesting as me.'"
 Elmer	Elvira	"'She is up to something interesting to the west, you'll have to admit. And you'll have to trust us.'"
 Elvira	Gretta	"'Not as unselfish as she thought she was.'"
-Elvira	mr-l	"'Hopeless. Paranoid.'"
+Elvira	Mr Lee	"'Hopeless. Paranoid.'"
 Elvira	eels	"'Their electric shocks would be useful--but they didn't let me harness them.'"
 Elvira	Le Mer	"'Not dangerous.'"
 Elvira	Merle	"'He will get his reward. Even if he hadn't let you by.'"
@@ -4648,7 +4627,7 @@ to say imp-nag:
 	say "The imp looks slightly annoyed for a second. You may be on the right track";
 
 to say ram-nag:
-	say "The men manage to shush you more noisily than you've ever been shushed. You may be on the right track";
+	say "The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track";
 
 ana-repeats is a number that varies.
 
@@ -5263,6 +5242,83 @@ when play begins (this is the hint and other randomization rule):
 		now last-wall is allow lots tools wall;
 	let mycount be 0;
 	d "[list of exhibits].";
+
+volume yes-no substitutes
+
+[this lets the programmer skip over yes/no decides]
+
+chapter complex consents
+
+debug-auto-yes is a truth state that varies.
+
+yn-auto is a number that varies.
+
+to decide whether the player dir-consents:
+	if debug-state is true:
+		if yn-auto is 1, decide yes;
+		if yn-auto is -1, decide no;
+	if the player consents:
+		decide yes;
+	decide no;
+
+chapter auing
+
+auing is an action applying to one number.
+
+understand the command "au" as something new.
+
+understand "au [number]" as auing.
+
+carry out auing:
+	if number understood > 1 or number understood < -1:
+		say "1 = auto-yes 0 = auto-off -1 = auto-no." instead;
+	if number understood is yn-auto:
+		say "It's already set to [auto-set]." instead;
+	say "Y/N responses changed from [auto-set] to ";
+	now yn-auto is number understood;
+	say "[auto-set].";
+	the rule succeeds;
+
+to say auto-set:
+	say "[if yn-auto is 1]auto-yes[else if yn-auto is -1]auto-no[else]no auto[end if]";
+
+chapter basic consents
+	
+to decide whether the player test-consents:
+	if debug-state is true:
+		say "[line break]> ";
+	if the player consents:
+		decide yes;
+	decide no;
+		
+to decide whether the player yes-consents:
+	(- YesOrNoExt(1) -).
+
+to decide whether the player no-consents:
+	(- YesOrNoExt(0) -).
+	
+to decide whether the player switch-consents:
+	(- YesOrNoDebugForce( (+ debug-auto-yes +) ) -)
+
+Include (-
+
+[ YesOrNoDebugForce yn;
+	if ( (+ debug-state +) == 1)
+	{
+	    return ( (+ debug-auto-yes +) );
+	}
+	return YesOrNo();
+];
+
+[ YesOrNoExt yn;
+	if ( (+ debug-state +) == 1)
+	{
+	    return yn;
+	}
+	return YesOrNo();
+];
+
+-)
 
 volume anagram and hint operations
 
@@ -6917,7 +6973,7 @@ doc-y	"[if doc-y is in prison ropins]You can't reach in, and it's a bad idea any
 Ed Yerg	"Ye dreg!"
 ed riley	"'I could DRIL YEE!' Ed booms. You can just HEAR the flagrant misspelling, and it makes you see red." [START otters]
 macks	"[one of]Don't hate the player, hate the game.[paragraph break]Um, sorry about that. But b[or]b[stopping]eing outnumbered, maybe you can attack their arguments instead."
-mr-l	"Be nice. He's on your side."
+Mr Lee	"Be nice. He's on your side."
 eels	"Be nice. They're on your side."
 hornets	"[nice-to-animals]."
 snipe	"[nice-to-animals]."
@@ -7037,13 +7093,19 @@ chapter eating
 Procedural rule while eating something: ignore the carrying requirements rule.
 
 procedural rule while eating: [taking before eating]
-	if noun is lamb or noun is tea tray or noun is clam or noun is oyster-x or noun is b-b or noun is lobster or noun is clear catsup:
+	if noun is lamb or noun is tea tray or noun is clam or noun is oyster-x or noun is b-b or noun is lobster or noun is clear catsup or noun is deli rye:
 		ignore the carrying requirements rule.
 
 check eating:
 	if noun is a hintpastry:
 		say "You'll want to put the pastry in the toaster[if toaster is in Danger Garden]back in the garden[end if], first, or it'll just be calories." instead;
+	if noun is deli rye:
+		try taking deli rye instead;
 	say "That's not in a test-taste state." instead;
+
+understand the command "taste" as something new.
+
+understand "taste [something]" as eating.
 
 the can't eat unless edible rule is not listed in any rulebook.
 
@@ -7190,7 +7252,7 @@ understand the command "xyzzy" as something new.
 understand "xyzzy" as xyzzying.
 
 carry out xyzzying:
-	say "That word is a mess and holds absolutely no power for you[if cur-score of manor is 0]. Hopefully you'll find why soon enough[else]. Trust me, I checked all the other twenty-nine combinations[end if].";
+	say "That word is a mess and holds absolutely no power for you[if cur-score of manor is 0 or mrlp is not manor]. Hopefully you'll find why soon enough[else]. Trust me, I checked all the other twenty-nine combinations[end if].";
 	the rule succeeds;
 
 chapter knocking
@@ -7679,7 +7741,9 @@ check tying it to (this is the keyboard and key rule) :
 
 chapter waving
 
-instead of waving:
+understand the command "wave [something]" as something new.
+
+instead of waving hands:
 	say "A view! I wave!" instead;
 
 chapter swearing
@@ -8728,7 +8792,7 @@ imp3	imp3	"enragedly"	"enragedly"	"The imp flares up for a brief moment, explain
 ram1	ram1	"loathingly"	"loathingly"	"[shout-check]"	false	593419698
 ram2	ram2	"stoically"	"stoically"	"[shout-check]"	false	569909740
 ram3	ram3	"tersely"	"tersely"	"[shout-check]"	false	716493096
-ghoul hat	ghoul hat	"although"	"although"	"You begin explaining that you just needed a way through, and besides, the stalks wouldn't have been harvest-able anyway. Mr. Lee relaxes and breathes, and as you speak, the ghoul hat releases its hold on him. 'But--but Rev. Howe said...he would watch over the ghoul hat I was forced to wear.'[paragraph break]Mr. Lee mutters on about hard times these days, still suspicious, but he's willing to listen. He points to the picture of Rev. Howe. He's doubting it's for his safety. "	false	445734359	"You already justified yourself partially. Mr. Lee doesn't need more dialogue."
+ghoul hat	ghoul hat	"although"	"although"	"You begin explaining that you just needed a way through, and besides, the stalks wouldn't have been harvest-able anyway. Mr. Lee relaxes and breathes, and as you speak, the ghoul hat releases its hold on him. 'But--but Rev. Howe said...he would watch over the ghoul hat I was forced to wear.'[paragraph break]Mr. Lee mutters on about hard times these days, still suspicious, but he's willing to listen. He points to the picture of Rev. Howe. He's suddenly doubting it's for his safety, now. "	false	445734359	"You already justified yourself partially. Mr. Lee doesn't need more dialogue."
 p-2	p-2	"however"	"however"	"Mr. Lee doesn't seem willing to discuss the painting, but as you talk, he bends a little more. Yes--it was Elvira who put the painting there. Or her agents. To make sure he didn't use his magic powers unwisely. You promise to re-bran what is barren. He perks up. 'Then you're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' He lays his hands on you. You feel [if inhib is true]a slight shock--your mordant powers are now merely dormant![else]a shock similar to what the eels gave, and you shake exaggeratedly and nod your head in thanks.[end if][paragraph break]He also asks if you can hop in and make his seed site the seediest--once you do the whole country-saving thing. Of course you can. It's the least you can do."	false	667670490
 sea cube	sea cube	"because"	"because"	"'Well, now that you put it that way...' You hear a rush of water. Le Mer has unlocked the sea cube. Eels come out. They look up at you--they may be able to understand you."	false	496604299
 eels	eels	"else"	"else"	"The eels seem to understand you. They squirm across the pool and gaze at you as if to stay still. You feel a shock through your body[if inhib is false] much like in Mr. Lee's bran barn[else], and your mordant skills are no longer dormant[end if]."	false	405700023
@@ -18343,6 +18407,8 @@ check xraying:
 		ital-say "you already xrayed this, so you're just remembering what it was...";
 	else if xrayvision is false and xraytrump is false:
 		say "You don't have x-ray vision now." instead;
+	else if xraytrump is true:
+		d "using x-ray trump.";
 	if mrlp is not towers:
 		if Topside is unvisited:
 			say "[reject]" instead;
@@ -20168,7 +20234,7 @@ Mislit Limits is a room in Towers. "Everything looks a bit wrong here. It is mos
 
 The Curst Palace is a reflexive backdrop.
 
-after fliptiong Curst Palace (this is the overall Towers LLP rule):
+after fliptoing Curst Palace (this is the overall Towers LLP rule):
 	if used-ray is false:
 		ital-say "You get a bonus point for not using the toaster's x-ray vision anywhere!";
 		increment the score;
@@ -21029,12 +21095,16 @@ after fliptoing cinders:
 discern-warn is a truth state that varies.
 
 carry out discerning:
+	if noun is player:
+		say "Enough navel-gazing.";
+	if player is in barley and cinders are in barley:
+		try taking the cinders;
 	if noun is not cinders:
 		if mrlp is not otters:
 			say "[reject]" instead;
-		say "[if player has cinders]You can only discern the cinders--they will tell you what is most important to do next[else]You're not around the right item to do that[end if]." instead;
+		say "[if player has cinders]You can only discern the cinders--they will tell you what is most important to do next[else]You'd need the cinders for that, and they're back at Bleary Barley[end if]." instead;
 	if discern-warn is false:
-		say "You feel sort of clever finding what to do, but maybe you can be even cleverer, if you're a perfectionist and all[if ed riley is visible]. Plus, it seems a bit early[end if]. Discern anyway?";
+		say "You feel sort of clever finding what to do with the cinders, but maybe you can be even cleverer, if you're a perfectionist and all[if ed riley is visible]. Plus, it seems a bit early[end if]. Discern anyway?";
 		now discern-warn is true;
 		unless the player consents:
 			say "Okay. This nag won't appear again." instead;
@@ -21213,6 +21283,8 @@ check eating b-b:
 	say "[if b-b is reflexed]Bleah. That'd go down terribly[otherwise]Don't think gluttonously[end if]." instead;
 
 Ed Riley is a vanishing man. description is "'You won't get past Ed Riley, yielder!' he booms. For all this bluster, you get the feeling his loud voice hides an insecurity.". "Ed Riley acts as a steward here to keep you eastward. He is carrying an ER, YIELD sign and a loaf of deli rye."
+
+understand "reedy" as a mistake ("No, the adverb.") when player is in barley and ed riley is in barley.
 
 check taking ed riley:
 	say "Ed Riley raises up on his toes and booms 'I'm no YIELDER!'" instead;
@@ -21826,27 +21898,31 @@ chapter Bran Barn
 
 Bran Barn is an innie room in otters. Bran Barn is south of fro. "This is a bran barn, empty of grain right now, and it'll probably stay that way[if p-2 is in bran barn]. A painting covers a good chunk of the interior here[end if]. You can go back north."
 
-mr-l is a privately-named person in Bran Barn. description of mr-l is "He is one of those people you see nothing and everything special about at the same time[if alcoves is visited]. A less evil version of Merle and Elmer combined[end if].". "Mr. Lee stands here, undescribed."
+Mr Lee is a person in Bran Barn. description is "He is one of those people you see nothing and everything special about at the same time[if alcoves is visited]. A less evil version of Merle and Elmer combined[end if].". "Mr. Lee stands here, undescribed."
 
-mr-l wears the ghoul hat.
+Mr Lee wears the ghoul hat. printed name of Mr Lee is "Mr. Lee".
 
 the ghoul hat is vanishing. description is "red and bloody and gruesome, it seems affixed to Mr. Lee. Maybe you can help it come loose, and Mr. Lee would appreciate that."
 
-for printing a locale paragraph about mr-l:
-	say "[one of]Someone crying 'Hunger, [one of]he rung[or]rehung[cycling],' lamenting his destroyed barley and calling himself [or][stopping]Mr. Lee stands here, ";
-	if p-2 is in lalaland:
-		say "doing farmy chores.";
-	else if ghoul hat is in lalaland:
-		say "glancing nervously at the painting of Rev. Howe.";
-	else:
-		say "[one of]musing 'Here to GLOAT, HUH?'[or]looking red-eyed and growling 'Hola, thug!'[or]giving a hot laugh.[or]crying, red-eyed, 'Ugh! O, halt!'[cycling]";
-	now mr-l is mentioned.
+lee-yet is a truth state that varies.
 
-printed name of mr-l is "Mr. Lee". understand "mr/ lee" as mr-l.
+for printing a locale paragraph about Mr Lee:
+	if lee-yet is false:
+		say "Someone cries 'Hunger, [one of]he rung[or]rehung[in random order],' lamenting his destroyed barley. 'What more can you do to Mr. Lee?'";
+		now lee-yet is true;
+	else:
+		say "Mr. Lee hangs around here, ";
+		if p-2 is in lalaland:
+			say "doing farmy chores.";
+		else if ghoul hat is in lalaland:
+			say "glancing nervously at the painting of Rev. Howe.";
+		else:
+			say "[one of]musing 'Here to GLOAT, HUH?'[or]looking red-eyed and growling 'Hola, thug!'[or]giving a hot laugh.[or]crying, red-eyed, 'Ugh! O, halt!'[cycling]";
+	now Mr Lee is mentioned.
 
 a-text of ghoul hat is "YRRRYYRR". b-text of ghoul hat is "YRRRYYRR". parse-text of ghoul hat is "-[sp]x[sp]x[sp]x[sp]-[sp]-[sp]x[sp]x".
 
-check scaning mr-l:
+check scaning Mr Lee:
 	if ghoul hat is visible:
 		say "Nothing happens until the settler points to the ghoul hat.";
 		try scaning ghoul hat instead;
@@ -21861,12 +21937,12 @@ a-text of p-2 is "RYRYRYR". b-text of p-2 is "RYRYRYR". parse-text of p-2 is "x[
 
 understand "whoever" as a mistake ("Actually, Mr. Lee is wondering whoever you might be. Tweak things, and you'll convince him.") when ghoul hat is in lalaland and p-2 is reflexive.
 
-check fliptoing mr-l:
+check fliptoing Mr Lee:
 	if alcoves is not visited:
 		say "[nuh-uh]" instead;
 
 check fliptoing p-2:
-	if mr-l wears ghoul hat:
+	if Mr Lee wears ghoul hat:
 		say "Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first[if alcoves is not visited], and, perhaps, proof of what is in the bulwark[end if].";
 		preef p-2 instead;
 
@@ -21925,9 +22001,9 @@ to de-inhib:
 	now inhib is false;
 	say "You hear voices[one of][or], again[stopping]. 'Revil-a-Elvira?' / 'Yes, her.' / 'HERESY!'";
 	if atmo-moat is prefigured:
-		say "You feel strong enough to tackle the moat, now";
-		if try-fail-pit-north is true or try-fail-anteroom-south is true:
-			say ", and maybe even the [if try-fail-pit-north is false]owls[else if try-fail-anteroom-south is false]raptor[else]owls and raptor[end if] that wouldn't let you by back east, too";
+		say "[line break]You feel strong enough to tackle the moat, now";
+		if try-fail-animal:
+			say ", and maybe even the [if try-fail-pit-north is false]owls[else if try-fail-anteroom-south is false]loud roar[else]owls and loud roar[end if] that chased you away back east, too";
 		say ".";
 
 check fliptoing ghoul hat:
@@ -21964,7 +22040,13 @@ Tapering Anger Pit is an innie room in otters. Anger Pit is north of Bleary Barl
 
 understand "inert gap" and "inert/gap" as anger pit when sly imp is in lalaland.
 
-The sly imp is a flippable person in Anger Pit. "A sly imp simply zooms about [if imp1 is reflexive]rangily [end if]guarding the way north[if imp2 is reflexive], with a butlery air[end if][if imp3 is reflexive], showing legendary patience[end if] that allows vaster averts[if inhib is false]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "He looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as he can, or keep you just mad enough not to think how to get rid of him.[paragraph break]He seems to have several tricks, but that may just mean several ways to get at him."
+The sly imp is a flippable neuter person in Anger Pit. "A sly imp simply zooms about [if imp1 is reflexive]rangily [end if]guarding the way north[if imp2 is reflexive], with a butlery air[end if][if imp3 is reflexive], showing legendary patience[end if] that allows vaster averts[if inhib is false]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "He looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as he can, or keep you just mad enough not to think how to get rid of him.[paragraph break]He seems to have several tricks, but that may just mean several ways to get at him."
+
+after doing something with imp:
+	set the pronoun him to the imp;
+	set the pronoun her to the imp;
+	continue the action;
+
 
 check taking imp:
 	say "Simply much too fast." instead;
@@ -22001,10 +22083,10 @@ to decide whether try-fail-animal:
 
 check going north in Anger Pit:
 	if imp is visible:
-		say "The imp gives a sidle-slide, then idles in front of you. He's too smooth for you right now." instead;
+		say "The imp gives a sidle-slide, then idles in front of you. He's [if silence-tally is 1]still a bit [end if]too smooth for you right now." instead;
 	if inhib is true:
 		now try-fail-pit-north is true;
-		say "You hear a dangerous hooting as you go north. You run from a bunch of owls before they can carve at you with their beaks, but boy, they were quick, and it was close. You don't want to risk it again, with your powers drained." instead;
+		say "[one of]You hear a dangerous hooting as you go north. You run from a bunch of owls before they can carve at you with their beaks, but boy, they were quick, and it was close. You don't want to risk it again[or]Those owls are too much for you[stopping], with your powers drained." instead;
 
 Wickeder Wire Deck is north of Anger Pit. Wickeder Wire Deck is part of otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south."
 
@@ -22214,7 +22296,7 @@ after fliptoing an animal:
 
 book Rote-Moan Anteroom
 
-Rote-Moan Anteroom is south of Bleary Barley. Anteroom is part of otters. Anteroom is innie. "[if whiners are visible]The noise here is just unbearable--men guarding the way south and not shutting up about it[else]This room is quieter now, just a north-south passage[end if]."
+Rote-Moan Anteroom is south of Bleary Barley. Anteroom is part of otters. Anteroom is innie. "[if whiners are visible]The noise here is just unbearable--whiners guarding the way south and not shutting up about it. You feel vaguely grateful they aren't guarding the way back north, too[else]This room is quieter now, just a north-south passage[end if]."
 
 the shrewin' whiners are plural-named flippable people in Anteroom. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if ram1 is reflexive]tallyhoing[else]babbling[end if][if ram2 is reflexive] with great callosity[end if] here[if ram3 is reflexive]. They restyle why they can't let you go south[end if][if inhib is false]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if]."
 
@@ -22328,7 +22410,7 @@ check going south in Anteroom:
 		say "The whiners can't imagine why anyone would want to go there. They block you, for your own good. They seem to have all sorts of reasons, and there's no way past the quantity, if not the quality, of their arguments." instead;
 	if inhib is true:
 		now try-fail-anteroom-south is true;
-		say "A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have your full powers." instead;
+		say "[one of]A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have[or]That roar scares you. To deal with it, you'll probably need[stopping] your full powers back." instead;
 
 to say shout-check:
 	say "[one of]The din loses speed, energy, nastiness and volume. A re-count reveals several leavers. But even with them gone, too many are left blocking the way south.[no line break][or]Slowly, conversation dwindles until it leaves every hassler rahless, slasher of noise. They find another place where rioters roister.[no line break][stopping]";
@@ -22338,7 +22420,7 @@ quietness is a number that varies.
 after fliptoing when player is in Anteroom (this is the de-tallyho rule) :
 	increment quietness;
 	if quietness is 2:
-		say "As they sulk away, no more at the anteroom7, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily[if ed riley is in Bleary Barley]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
+		say "As they sulk away from the anteroom, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily[if ed riley is in Bleary Barley]. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other[end if].";
 		now printed name of Anteroom is "Near-Moot Anteroom";
 		now whiners are in lalaland;
 		now ram1 is in lalaland;
@@ -25214,7 +25296,7 @@ deli rye	"Ed Riley won't share, but the rye can share a hint with you if you sca
 yield sign	"The yield sign symbolizes Ed Riley isn't THAT in control of things. Oh, and it can share a hint with you if you scan it."
 sly imp	"[one of][if one-imp-down]You need to take the imp down another peg[else]The imp certainly does things three different ways[end if].[plus][or]You may need [if one-imp-down]yet [end if]another adverb.[plus][or][if one-imp-down]Take him out for good by making him[else]He can be made to[end if] move less gracefully and more [rand-to-go].[minus][cycling]"	--	"[rand-to-go ]"
 whiners	"[one of][if one-whine-down]They've lost a bit of steam, but they need to lose a bit more[else]The whiners have a lot of energy and exercise it many different ways[end if].[plus][or]You can soften them up a bit[if one-whine-down] more[end if].[plus][or]They'll [if one-whine-down]give up on[else]be less interested in[end if] annoying you if they start acting more [rand-to-go].[minus][cycling]"	--	"the imp can act [rand-to-go]"
-mr-l	"[loop-pool-already][if ghoul hat is not in lalaland]Try to help Mr. Lee with that ghoul hat. Or ask hints about the hat.[else if p-2 is in bran barn]Try to get rid of that painting of Rev. Howe. Or ask hints about it.[else]You've helped Mr. Lee all you can."
+Mr Lee	"[loop-pool-already][if ghoul hat is not in lalaland]Try to help Mr. Lee with that ghoul hat. Or ask hints about the hat.[else if p-2 is in bran barn]Try to get rid of that painting of Rev. Howe. Or ask hints about it.[else]You've helped Mr. Lee all you can."
 ghoul hat	"[loop-pool-already][one of]Mr. Lee's 'Hola, Thug' greeting is not very nice. He sees red and doesn't trust you.[plus][or]Mr. Lee's upset with you. But one word, useless on its own, can turn it around.[plus][or]The first one had better be a good one.[plus][or]No L-Y, so no adverb.[plus][or]ALTHOUGH.[minus][cycling]"	--	"you can say ALTHOUGH"
 p-2	"[loop-pool-already][if ghoul hat is not in lalaland]Deal with the ghoul hat first.[else][one of]The painting has a lot of writing, all in red, which cuts down what to say.[plus][or]But the painting is ultimately the same sort of thing as before.[plus][or]HOWEVER.[minus][cycling]"	--	"you can say HOWEVER"
 atmo-moat	"[one of]The moat seems to get in your way, but you sense it could be compacted.[plus][or]It's also an atmo-moat, though you see less red when you think of it that way.[plus][or]You can shrink the moat to an ATOM, [if inhib is true]but you need to have your powers back, first[else]which is possible with your powers back[end if].[minus][cycling]"	--	"you can make a MOAT"

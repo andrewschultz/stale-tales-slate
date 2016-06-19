@@ -1,0 +1,315 @@
+###############################
+#
+#reg-roi-otters.txt
+#
+#regression test for trying ways through otters
+#
+
+** game: /home/andrew/prt/debug-roil.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* min-thru
+
+#cheat commands first
+>seed 1
+>a5
+
+
+>in
+
+>w
+The barley is nearly everywhere. Without knowing where you're going, you'll get lost.
+
+>u
+You can't go up here. In fact, you almost never have to go up or down in this game.
+
+>belray
+The barley rustles in an imaginary wind--but hardly at all.
+
+>barley
+
+>e
+The barley is a bit too thick that way.
+
+>n
+Ed Riley booms, "Yielder! That's right. Go north. Not west."
+
+Tapering Anger Pit
+This north-south passage is frustratingly blocked.
+
+A sly imp simply zooms about rangily guarding the way north, with a butlery air, showing legendary patience that allows vaster averts.
+
+>bruteyl
+The imp looks slightly annoyed for a second. You may be on the right track.
+>angriyl
+The imp looks slightly annoyed for a second. You may be on the right track.
+>enragedyl
+The imp looks slightly annoyed for a second. You may be on the right track.
+
+
+>brutely
+>l
+A sly imp simply zooms about rangily guarding the way north, showing legendary patience that allows vaster averts.
+
+>undo
+>undo
+
+>angrily
+>l
+A sly imp simply zooms about guarding the way north, with a butlery air, showing legendary patience that allows vaster averts.
+
+>undo
+>undo
+
+>n
+The imp gives a sidle-slide, then idles in front of you. He's too smooth for you right now.
+
+>enragedly
+A sly imp simply zooms about rangily guarding the way north, with a butlery air that allows vaster averts.
+
+>n
+The imp gives a sidle-slide, then idles in front of you. He's still a bit too smooth for you right now.
+
+>w
+You can go north and south here.
+
+>e
+You can go north and south here.
+
+>averts
+You need to focus on HOW the imp averts, vaster.
+
+>avert
+You need to focus on HOW the imp averts, vaster.
+
+The sly imp lets out a curse. He's completely failed to keep his cool. He leaves, confidence shattered. You can go past now.
+
+>l
+Tapering Inert Gap
+
+>n
+ You run from a bunch of owls before they can carve at you
+
+>n
+Those owls are too much for you, with your powers drained.
+
+>s
+Cinders lie here
+
+Ed Riley acts as a steward here to keep you eastward. He is carrying an ER, YIELD sign and a loaf of deli rye.
+
+>take sign
+"I am not an item yielder!" Ed Riley booms.
+
+>eat rye
+"I am not an item yielder!" Ed Riley booms.
+
+>taste
+"I am not an item yielder!" Ed Riley booms.
+
+>take rye
+"I am not an item yielder!" Ed Riley booms.
+
+>sing
+Unexpectedly, Ed pulls out a lyre from somewhere and yells "LYRE! DIE!" like he's in some medieval heavy metal band or something. He's really seeing red as he stomps it to dust.
+
+>s
+Ed Riley booms, "Yielder! That's right. Go south. Not west."
+
+Shrewin' whiners are tallyhoing with great callosity here. They restyle why they can't let you go south.
+
+>callosiyt
+The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track.
+
+>tallyhoign
+The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track.
+
+>restyel
+The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track.
+
+>winher
+You can't change who whiners are, but maybe you can make them whine less...whiningly.
+
+>winhers
+You can't change who whiners are, but maybe you can make them whine less...whiningly.
+
+>loathingly
+The din loses speed, energy, nastiness and volume. A re-count reveals several leavers. But even with them gone, too many are left blocking the way south.
+
+>l
+Shrewin' whiners are babbling with great callosity here. They restyle why they can't let you go south.
+
+>undo
+>undo
+>s
+The whiners can't imagine why anyone would want to go there. They block you, for your own good. They seem to have all sorts of reasons, and there's no way past the quantity, if not the quality, of their arguments.
+
+>stoically
+>l
+
+Shrewin' whiners are tallyhoing here. They restyle why they can't let you go south.
+
+>undo
+>undo
+
+>tersely
+>l
+Shrewin' whiners are tallyhoing with great callosity here.
+
+Slowly, conversation dwindles until it leaves every hassler rahless, slasher of noise. They find another place where rioters roister.
+
+As they sulk away from the anteroom, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily. You're a bit sad you couldn't dispatch that loudmouth yet, but yay, working your enemies against each other.
+
+>undo
+>n
+>w
+"I will not re-yield! I am no longer a yielder! Ye Idler!" booms Ed Riley, and then he bangs on about not trying to sing or attack him.
+
+He's not bigger than you, but his loud voice scares you. And he could probably swat you with either that deli rye or er, yield sign. You back away.
+
+>x yield
+"Spiffy, huh? I was told I could wipe off the "er" for the first person I scared into not passing me for good."
+
+>x rye
+It looks delicious enough for Ed not to share with you.
+
+>reediyl
+Ed Riley looks askance at his deli rye, as if it had some bad aftertaste.
+
+>reedily
+"Hey, man!" he mouths words silently for a bit, his booming voice gone. "Well--at least you didn't make me share my sandwich! That's...something!" he whines, as he slinks away in embarrassment.
+
+>w
+Gent-Fora Frontage
+
+>despairingly
+The macks become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the macks.
+
+>drawlingly
+The macks begin talking slower, and suddenly, their conversational hold is broken. Gretta realizes there's no good way to make home repair discussions more exciting and says so. She looks relieved.
+
+>smack
+(the macks)
+They really, really deserve it, but keep your cool. Smack their arguments down instead and they may smack each other for you.
+
+>mckas
+Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying some more.
+
+>mcka
+If you messed with one mack, the others would gang up on you. Work on the argument, instead.
+
+>modestly
+Modesty is a good thing--well, in the long term. In the short term, the macks' backtracking is too brazen, and it ruins any hope of impressing anyone with false humility or braggadocio.
+
+>1
+>1
+>1
+>1
+>1
+>2
+
+"Oh--um, yeah, don't feel you're holding me back. I sort of want to get away, but I know a few things that could help you," Gretta says. Stay and ask a bit more?
+
+>moat
+Hm, that's not it, but it must be elemental. No, elementary.
+
+>l
+Frat-Gone Frontage
+
+>atom
+That seems like it should work, but you just can't summon the power. Someone here should be able to help you, you hope.
+[You add the information to your pedanto-notepad under FLIPS.]
+
+>e
+>s
+>loathingly
+
+>l
+Near-Moot
+
+>s
+A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have your full powers.
+
+As they sulk away from the anteroom, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily.
+!against each other
+
+>n
+>w
+n
+
+>becuase
+The sea cube shakes a bit.
+>eas
+The sea cube is unmoved. You may need to concentrate on the whole thing.
+>ubec
+The sea cube is unmoved. You may need to concentrate on the whole thing.
+
+>because
+>eles
+The eels swim a bit faster.
+>ele
+The eels swim a bit faster.
+
+>else
+
+
+>s
+>atom
+[Your score has just gone up by one point.]
+
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+>undo
+Frontage
+
+>s
+Bran Barn
+
+
+>althouhg
+Mr. Lee shakes his head and adjusts the ghoul hat.
+
+>although
+He points to the picture of Rev. Howe. He's doubting it's for his safety. 
+
+>paintign
+
+>hewo
+The whole picture.
+
+>erv
+The whole picture.
+
+>howevre
+Rev. Howe seems to snarl a bit more deeply for a moment.
+
+>however
+Rev. Howe seems to snarl a bit more deeply for a moment.
+
+You feel strong enough to tackle the moat, now, and maybe even the owls and loud roar that chased you away back east, too.
+
+>n
+>atom
+You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom.
+
+>hylontes
+Merle and Elmer look askance at each other for a bit.
+
+>emler
+You can't change Merle and Elmer, but maybe you could find a way to get rid of them.
+
+>honestly
+You entrench an enchanter with a well-timed "Honestly?" They throw out anti lying litanying but you're all "Few LOLs, fellows." It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change.
+
+>e
+>e
+>discern
+(taking the cinders first)
+You feel sort of clever finding what to do, but maybe you can be even cleverer, if you're a perfectionist and all. Discern anyway?
+The medals look less than perfect. Maybe you can find someone, or something, to help. You should explore north or south of the barley.

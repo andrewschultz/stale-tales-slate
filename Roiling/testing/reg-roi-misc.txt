@@ -1,0 +1,34 @@
+###############################
+#
+#reg-roi-misc.txt
+#
+#regression test for all kinds of silly stuff
+#
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* silliness
+
+>take me
+I'm the only one who gets to be self-referential, here. Got it? Good.
+
+>xyzzy
+That word is a mess and holds absolutely no power for you. Hopefully you'll find why soon enough.
+
+>gonear same mesa
+>xyzzy
+That word is a mess and holds absolutely no power for you. Trust me, I checked all the other twenty-nine combinations.
+
+>gonear manor
+
+>jump
+You try a jump but jam up. Boy, leaps lapse.
+
+>x chair
+
+>wave
+A view! I wave!
+
+>wave pad
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
