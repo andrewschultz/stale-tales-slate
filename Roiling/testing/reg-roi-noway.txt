@@ -1,7 +1,7 @@
 ## C:\writing\scripts\noway.py -- a regtest.py file for detecting generic can't go that way errors
 ##
 
-** game: /home/andrew/prt/debug-roil.ulx
+** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
 * dirtest-noway-Stable

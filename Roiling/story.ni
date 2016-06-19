@@ -4357,7 +4357,7 @@ lairage regalia	"You twist and tilt your head but can't figure out how to interp
 adsorbing signboard	"You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you."
 bench	"You hang around the bench, hoping for something to happen, but nothing happens. Though it seems like it should."
 bench-end	"Oof! You fail to jump on the bench end. Try mixing things up from what you just did."
-giant's elbow	"[if bench-end is reflexive]You're nowhere close to the giant's elbow[else]You seem like you should be able to avoid the elbow, but maybe mix things up a bit[end if]."
+giant's elbow	"[if bench-end is reflexive]You're nowhere close to the giant's elbow[else]You seem like you should be able to avoid the elbow, but you may need to mix things up a bit[end if]."
 huge thing form	"The huge thing form rocks in the air, as if it's about to fall."
 pipe soot	"The soot smells a bit stronger than before for a moment."
 seed pit	"The seed pit seems to bubble slightly."
@@ -4366,6 +4366,7 @@ un-road	"The un-road seems to lead somewhere, but you couldn't quite make it out
 darkness	"You feel it's ALMOST the right time for the darkness to lift."
 narrow cracks	"The cracks almost seem to lead somewhere."
 mist	"Hmm, you almost see a way through the mist."
+pier sign	"You plot a zigzag past the sign, but you don't have full confidence in it, yet."
 ship controls	"The ship controls seem to adjust themselves slightly."
 Thor	"Thor seems to gesture you by for a second."
 new beet	"The new beet seems to spin slightly away from Thor for a second."
@@ -4669,7 +4670,7 @@ to say spec-help of (itm - a thing):
 	if itm is a mack-idea:
 		say "[if itm is ment]The macks seem to waver a bit, but not enough.[else][reject]";
 		continue the action;
-	d "You may want to put in special text here in the table of spechelp, tsh. Or not.";
+	d "You may want to put in special text here in the table of spechelp, tsh, for ([noun]). Or not.";
 	say "You feel a slight psychic push-pull coming from [the itm]. That's a decent omen.";
 
 to decide whether can-prog-hint:
@@ -4689,9 +4690,10 @@ specdone	spectalk
 wipes	"You better not fiddle with the wipes wrong, or they'll tear and disintegrate."
 store b	"No more freebies. Sorry."	[stores]
 lecturer	"He's already been changed enough."
-picturers	"They're pretty strict about what they suggested. Not much else you can do with them."	[routes]
+picturers	"They picturers were pretty strict about what they suggested. Not much else you can do with them."	[routes]
 lairage regalia	"You twist your mind a bit, but no, there's probably only one way to enter."
 adsorbing signboard	"No, you don't see any other way around the signboard to enter. You don't need one, either."
+pipe soot	"Brother Horbert probably knows what to do with that."
 pier sign	"You try to follow the instructions on the pier sign, but maybe you'd wind up in the water."
 da mist	"Hm, not quite--you'd like to be absolutely SURE you don't get too lost in da mist. Oh, and that you get lost enough."
 ship controls	"There are so many combinations to manipulate the controls. That didn't quite work, though. But maybe if you shift a little..."
@@ -5328,10 +5330,9 @@ book scaning
 
 scaning is an action applying to one thing.
 
-understand the command "scan [something]" as something new.
-understand the command "scan [something]" as something new.
+understand the command "scan" as something new.
 
-understand "scan" as scaning.
+understand "scan [something]" as scaning.
 
 rule for supplying a missing noun while scaning:
 	if player is in lean lane and cans are in lean lane:
@@ -6941,7 +6942,7 @@ drama armada	"That'd be a silly way to die." [START routes]
 Brother Horbert	"Yorpwald's already got a St. Lip-Split."
 scripture picturers	"A shameful attempt at vandalism."
 the-b	"It's like a dense metal or something. It's more likely it would make something else crack."
-old giant	"You don't have a weapon big enough to take him. One won't appear in your super purse."
+old giant	"You don't have a weapon big enough to take him. One won't appear in your super purse. Anyway, he's not evil, just whiny."
 Pa Egg Pea	"It deserves to be ripped to shreds, but that'd just be littering." [START troves]
 Leo	"[dont-hit of Leo]" [START Presto]
 Rand	"[dont-hit of Rand]"
@@ -8985,7 +8986,8 @@ check fliptoing old giant:
 	if list o toils is unexamined:
 		say "You hear a giant's footsteps and hide under the bench in fear. He can't see anyone and thus runs off, complaining how he has nobody to complain to. Maybe if you had a reason to talk to him, or a purpose here, you might listen a bit better. [if circle is not visited]Maybe if you could find a way inside that church[else]Perhaps you could find something to do from Brother Horbert[end if].";
 		preef bench instead;
-	say "You hear a giant's footsteps in the distance--but your talk with Brother Horbert has helped you be fearless.";
+	if old giant is off-stage:
+		say "You hear a giant's footsteps in the distance--but your talk with Brother Horbert has helped you be fearless.";
 	if runed book is not off-stage:
 		say "You don't need or want another round of that." instead;
 
@@ -12138,8 +12140,12 @@ check going in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
 				now in-try is true;
 				say "You just can't make it through to the cleric circle. Err, well, maybe THROUGH isn't right. Something blocks you--you seemed a bit too glib about getting in, and they're not sure you're on their side[if abode is visited or deli is visited]--note, for where you already visited, you need to use [aop][end if]." instead;
 			move player to cleric circle instead;
+			if noun is down and the-b is visible:
+				say "Well, not quite DOWN..." instead;
+			if noun is up or noun is down:
+				say "That won't work right now." instead;
 		say "You try going [noun] and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the same mesa[one of] (thank you, I'm here all game,)[or],[stopping] from the [opposite of noun], after several minutes." instead;
-	otherwise:
+	else:
 		say "No matter where you try to wander, you wind up back where you are.";
 
 part verbs
@@ -12292,7 +12298,7 @@ Scripture picturers are reflexive flippable scenery in Same Mesa. "[do-i-switch]
 switch-pic-next is a truth state that varies.
 
 to say do-i-switch:
-	if picturers are not reflexive:
+	if picturers are reflexive:
 		if switch-pic-next is true:
 			now sign-other is whether or not sign-other is false;
 			say "The picturers changed since you last saw them.";
@@ -12531,7 +12537,7 @@ check taking huge thing:
 check going when huge thing is visible:
 	say "That huge thing is distracting you. Maybe you can deal with it now." instead;
 
-understand "gnash" as a mistake ("You gnash your teeth a bit thinking about how threatening the form is. Maybe if it were closer, the threat would not be so scary.") when huge thing is visible.
+understand "gnash" as a mistake ("You gnash your teeth a bit thinking about how threatening the form is. It is probably going to fall some time. Maybe you can get it over with.") when huge thing is visible.
 
 understand "night" as a mistake ("The thing can't block out THAT much of the sky. You've got the wrong word.") when thing form is visible.
 
@@ -12544,7 +12550,7 @@ after fliptoing the-b:
 		now drama armada is in Same Mesa instead;
 	continue the action;
 
-the-b is a privately-named vanishing thing. printed name of the-b is "THE BEAN". "Oh, great. A bean landed on the Same Mesa. It's utterly enormous and forbidding. [i]The bean[r] has filled a drama armada surrounding it with bane.". description of the-b is "It's not just any bean. It's stamped THE BEAN in all-red letters. In case you were wondering if it was an egg or something, I guess.". the-b is fixed in place.
+the-b is a privately-named vanishing thing. printed name of the-b is "THE BEAN". "Oh, great. A bean landed on the Same Mesa. It's utterly enormous and forbidding. [i]The bean[r] has filled a drama armada surrounding it with b...unspeakable fear.". description of the-b is "It's not just any bean. It's stamped THE BEAN in all-red letters. In case you were wondering if it was an egg or something, I guess.". the-b is fixed in place.
 
 instead of taking the-b:
 	say "You can't move it. Maybe you can find a way to get inside or under--wait, no, those have been done here.";
@@ -12563,6 +12569,8 @@ check going when the-b is visible:
 	if noun is down:
 		say "Maybe there is something below, or something. But you can't prove it." instead;
 	say "The drama armada won't let you go anywhere with the bean present." instead;
+
+understand "bane" as a mistake("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--the bean is about to fall on you![paragraph break][uurrgg]") when player is in mesa and armada is in mesa.
 
 understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when runed book is visible or elbow is visible.
 
@@ -12689,11 +12697,11 @@ check opening summary:
 Mum Ray's Summary is a thing. description of Mum Ray's Summary is "[part-of-summary]";
 
 to say part-of-summary:
+	increment summary-page;
 	choose row summary-page in the table of summary text;
 	say "[sum-page entry]";
-	increment summary-page;
 
-summary-page is a number that varies. summary-page is usually 1.
+summary-page is a number that varies. summary-page is usually 0.
 
 table of summary text
 sum-page
@@ -12721,6 +12729,8 @@ after examining summary (this is the notify last summary page rule) :
 chapter lament mantle
 
 the lament mantle is useless scenery in Cleric Circle. "[one of]It's full of regrets. Regrets Rev. Ali and his hangers-on have that people do certain things, and regrets those people will have that they did them[or]Another interdict[stopping]. [pious1][randbla][one of], full of tarnished sin-hatred and obliged god-bile for your sinner inners[or][stopping]. [one of]Their creeds-screed contains[or]Another no-heart rant, e-oh:[stopping] [pious1][randbla]"
+
+understand "man let" and "let man" as a mistake ("Your heart is in the right place, but telling the mantle to cool it won't do much good.") when player is in cleric circle.
 
 check examining lament mantle for the first time:
 	say "Just a small check-off: there's some religious stuff in here, poking fun at hot button issues. This might be annoying, and I don't want do do that. Do you wish to go ahead?";
@@ -12929,7 +12939,7 @@ understand "unroad" as un-road.
 
 understand "around" as a mistake("You can't see anything around, yet. It's too unlit, here.[preefsay of narrow cracks]") when darkness is visible and player is in Sun-Spared Underpass.
 
-understand "along" as a mistake ("[if underpass is unvisited]You aren't far enough along to, err, look along[else]There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking[end if].[paragraph break][preefsay of un-road]") when told-of-logan.
+understand "along" as a mistake ("[if underpass is unvisited]You aren't far enough along to, err, look along[else]There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking[end if].[preefsay of un-road]") when told-of-logan.
 
 to decide whether told-of-logan:
 	if mrlp is not routes, decide no;
@@ -25652,6 +25662,7 @@ reg-needed	yux
 --	"Asking for a HINT in the Inclosure?"
 routes	"Cursing twice in the Cleric Circle? Or once in the Cripple Clipper?"
 --	"[if routes is solved]Or[else]Cursing[end if] anywhere?"
+--	"Feeling BANE around the bean?"
 troves	"SCANing the skyscraper before figuring what to do with the statue?"
 troves	"Anagramming the astute STATUE?"
 presto	"Calling the cola POP or SODA?"
@@ -28175,6 +28186,22 @@ to rej-analyze (x - a thing):
 			say "Strong possibility: [x] could also be in table of donereject, to [y].";
 		else if x is not vanishing:
 			say "Weak possibility: [x] could also be in table of donereject, to [y].";
+
+chapter deprefing
+
+deprefing is an action out of world.
+
+understand the command "depref" as something new.
+
+understand "depref" as deprefing.
+
+carry out deprefing:
+	if number of prefigured things is 0:
+		say "Nothing is prefigured.";
+	else:
+		say "De-prefiguring [list of prefigured things].";
+		now all prefigured things are unfigured;
+	the rule succeeds;
 
 chapter twiding
 

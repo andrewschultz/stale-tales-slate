@@ -5,7 +5,7 @@
 #regression test for trying ways through otters
 #
 
-** game: /home/andrew/prt/debug-roil.ulx
+** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
 * min-thru
@@ -26,7 +26,7 @@ You can't go up here. In fact, you almost never have to go up or down in this ga
 >belray
 The barley rustles in an imaginary wind--but hardly at all.
 
->barley
+>barely
 
 >e
 The barley is a bit too thick that way.

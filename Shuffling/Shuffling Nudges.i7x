@@ -2,6 +2,8 @@ Version 1/151226 of Shuffling Nudges by Andrew Schultz begins here.
 
 volume nudges
 
+[remember to sort with nud.pl after changes]
+
 book nudge table
 
 table of nudges [ton]

@@ -8,7 +8,7 @@ use warnings;
 use strict;
 
 nudgesort("roiling");
-nudgesort("sa");
+nudgesort("shuffling");
 
 my $sizeMatters = 0;
 my %full;

@@ -2,6 +2,8 @@ Version 1/151226 of Roiling Nudges by Andrew Schultz begins here.
 
 volume table of nudges
 
+[remember to sort with nud.pl after changes]
+
 book the table itself
 
 table of nudges [ton]
@@ -141,48 +143,45 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "orcas"	277143749	routes	same mesa	--	--	"[if adobe is visited]No further secrets[else]Hm, it's Oscar'S[end if]."	[routes nudges]
 "dingy"	289888397	routes	same mesa	--	--	"[name-worry]."
 "dwelling"	510897705	routes	same mesa	--	--	"[name-worry]."
-"scripture"	748407896	routes	--	mesa	--	"[picturer-change]."
-"cripture"	652133930	routes	--	mesa	--	"[picturer-change]."
-"picture"	566810127	routes	--	mesa	--	"[picturer-change]."
-"pictures"	663084093	routes	--	mesa	--	"[picturer-change]."
-"lairage"	348911935	routes	--	mesa	--	"Besides, lairage regalia is already tailored to the resident's style. So it's not yours to change[if adobe is visited], and you don't need to[else], but maybe examining it will help you get in[end if]."
-"adsorbing"	444086214	routes	--	mesa	--	"[board-change]."
-"signboard"	444086214	routes	--	mesa	--	"[board-change]."
-"sign"	242774022	routes	--	mesa	--	"[board-change]."
-"board"	201312192	routes	--	mesa	--	"[board-change]."
+"scripture"	748407896	routes	same mesa	--	--	"[picturer-change]."
+"cripture"	652133930	routes	same mesa	--	--	"[picturer-change]."
+"picture"	566810127	routes	same mesa	--	--	"[picturer-change]."
+"pictures"	663084093	routes	same mesa	--	--	"[picturer-change]."
+"lairage"	348911935	routes	same mesa	--	--	"Lairage regalia is already tailored to the resident's style. So it's not yours to change[if adobe is visited], and you don't need to[else], but maybe examining it will help you get in[end if]."
+"signboard"	444086214	routes	same mesa	--	--	"[board-change]."
+"sign"	242774022	routes	same mesa	--	--	"[board-change]."
+"board"	201312192	routes	same mesa	--	--	"[board-change]."
 "satin"	315472156	routes	same mesa	--	--	"The church's name is not as important as its mission."
 "worst"	466995137	routes	--	worst ad	--	"If you change the ad from the worst, maybe you won't make it better. Maybe you'll make something else even worse. So, focus on the whole."
 "list"	298190669	routes	cleric circle	--	--	"[follow-the-list]."
 "toils"	372543246	routes	cleric circle	--	--	"[follow-the-list]."
 "kyries"	529689154	routes	cleric circle	--	--	"They aren't there. And they wouldn't be changeable if they were."
 "kyrie"	433415188	routes	cleric circle	--	--	"They aren't there. And they wouldn't be changeable if they were."
+"granos"	359645374	routes	cleric circle	--	--	"You can't change the music, but you don't need to."
+"grano"	263371408	routes	cleric circle	--	--	"You can't change the music, but you don't need to."
 "reagent"	547741067	routes	--	--	has-reag rule	"[fol-reag]."
 "reagents"	644015033	routes	--	--	has-reag rule	"[fol-reag]."
 "giantold"	400993397	routes	--	old giant	--	"[cant-giant]."
 "giant"	251797892	routes	--	old giant	--	"[cant-giant]."
 "grouchy"	476029025	routes	--	old giant	--	"[cant-giant]."
 "bench"	271420406	routes	--	bench	--	"The bench is too sturdy. You can't do anything with it, but you may be able to do something with or around it."
-"inside"	404002364	routes	mesa	--	--	"[if circle is visited]The sign has no further hidden meaning[else]The sign wavers, as if you're grokking it wrong[end if]."
 "die"	193828044	routes	mesa	--	--	"[die-sin]."
 "sin"	210174320	routes	mesa	--	--	"[die-sin]."
-"church"	303005378	routes	same mesa	--	--	"[mb-sign]."
-"churchsign"	545779400	routes	same mesa	--	--	"[mb-sign]."
-"sign"	242774022	routes	same mesa	--	--	"[mb-sign]."
 "poison"	440345433	routes	same mesa	--	--	"[not-stripe]."
 "stripe"	538972701	routes	same mesa	--	--	"[not-stripe]."
 "poisonstripe"	979318134	routes	same mesa	--	--	"[not-stripe]."
 "pat"	186763795	routes	same mesa	--	--	"[if deli is visited]No, you already went PAST to Pat's[else]That's not how to get into Pat'S, you reflect[end if]."
 "past"	283037761	routes	same mesa	--	--	"[if deli is unvisited]Pat's seems slightly less forbidding for a moment[else]You don't need to do any more trickery with Pat's[end if]." [?! create vanishing scenery in the mesa that kicks you to Pat's]
-"elbows"	478600169	routes	--	giant's elbow	--	"Thankfully, the giant's only really swinging one elbow, so--less to deal with, yay?"
+"elbows"	478600169	routes	--	giant's elbow	--	"[if elbow is reflexed]You already avoided both elbows when you avoided one.[else]Thankfully, the giant's only really swinging one elbow, so--less to deal with, yay?[end if]"
 "oscars"	373417715	routes	same mesa	--	--	"[if adobe is visited]Oscar's seems slightly less forbidding for a moment[else]You don't need to do more[end if]." [?! create vanishing scenery in the mesa that kicks you to Oscar's]
 "adsorbing signboard"	596710416	routes	mesa	--	--	"[name-worry]."
 "grubby"	382226374	routes	mesa	--	--	"[name-worry]."
 "restaurant"	779336668	routes	same mesa	--	--	"[name-worry]."
 "seed"	372915273	routes	idle deli	--	--	"[pit-full]."
 "pit"	229568823	routes	idle deli	--	--	"[pit-full]."
-"portrait"	579866842	routes	Cleric Circle	--	--	"The portrait remains unchanged."
 "pews"	413480807	routes	Cleric Circle	--	--	"No vandalizing church property."
 "pew"	317206841	routes	Cleric Circle	--	--	"No vandalizing church property."
+"lament"	419900445	routes	cleric circle	--	--	"You can't change stuff like that by brute force. But you don't need to."
 "chants"	326767194	routes	circle	--	--	"[chanty]."
 "chant"	230493228	routes	circle	--	--	"[chanty]."
 "litany"	395371281	routes	circle	--	--	"[chanty]."
@@ -199,12 +198,14 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "trashy"	446537156	routes	--	ashtray	--	"[ash-soot]."
 "rebroth"	531617514	routes	--	brother horbert	--	"It's not Brother Horbert who needs changing but the Same Mesa."
 "spoon"	395352587	routes	--	snoop spoon	--	"Instead of bending the spoon, use it to help your magic powers."
-"armada"	176991499	routes	--	drama armada	--	"They're too unruly and confused, and you probably need to get away from them, anyway."
+"armada"	176991499	routes	--	drama armada	--	"[armad-unr]."
+"armad"	176991499	routes	--	drama armada	--	"[armad-unr]."
+"bean"	217320340	routes	--	the-b	--	"THE BEAN has too much gravitas to be just a bean."
 "mushroom"	600841335	routes	--	mushrooms	--	"[horb-magic of mushrooms]."
 "mushrooms"	697115301	routes	--	mushrooms	--	"[horb-magic of mushrooms]."
 "rude"	339264808	routes	--	nuder	--	"That's not quite the book's whole title."
 "book"	220057237	routes	--	runed book	--	"[horb-magic of runed book]."
-"runedbook"	628229553	runed book	--	runed book	--	"[horb-magic of runed book]."
+"runedbook"	628229553	routes	--	runed book	--	"[horb-magic of runed book]."
 "pipe"	335730873	routes	--	pipe soot	--	"[horb-magic of pipe soot]."
 "soot"	348089138	routes	--	pipe soot	--	"[horb-magic of pipe soot]."
 "pipesoot"	683820011	routes	--	pipe soot	--	"[horb-magic of pipe soot]."
@@ -218,15 +219,17 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 "cracks"	274729935	routes	--	narrow cracks	--	"[no-logan]."
 "narrow"	424030282	routes	--	narrow cracks	--	"[no-logan]."
 "narrowcracks"	698760217	routes	--	narrow cracks	--	"[no-logan]."
-"mist"	308451983	routes	--	mist	--	"Nothing happens. Then you [if pier sign is examined]re-[end if]read the sign and, oh, it's DA MIST. You remember thinking of it that way helps someone feel more familiar with it and get less lost."
+"mist"	308451983	routes	--	mist	--	"Nothing happens. Then you [if pier sign is examined]re-[end if]read the sign and, oh, it's DA MIST. You feel more familiar with it, and more confident it leads somewhere, thinking of it that way."
 "reef"	367450917	routes	clipper	--	--	"The reef is not changed. Perhaps you can deal with what's on it."
-"betrothe"	677209838	routes	--	thor	--	"Hm! If you managed to bethrothe the two, maybe you could make them past. But that would be an unholy union."
+"betrothe"	677209838	routes	--	thor	--	"Hm! If you managed to betrothe the two, maybe you could make them past. But that would be an unholy union."
+"thor"	300068697	routes	--	thor	--	"You can't change Thor. He's too big and strong. But maybe you can get by, somehow."
 "beet"	377141141	routes	--	thor	--	"The beet shines a bit extra, as if to say, it's a NEW beet, darn it."
-"lament"	419900445	routes	cleric circle	--	--	"You can't change stuff like that by brute force. But you don't need to."
+"controls"	478865907	routes	--	thor	--	"[btn-by]."
+"control"	575139873	routes	--	thor	--	"[btn-by]."
 "piersign"	582362739	routes	ripe pier	--	--	"[pier-sign]."
 "sign"	242774022	routes	ripe pier	--	--	"[pier-sign]."
-"cleric"	349947767	routes	cleric circle	--	--	"[locname]."
 "mesa"	290343046	routes	same mesa	--	--	"[locname]."
+"cleric"	349947767	routes	cleric circle	--	--	"[locname]."
 "idle"	247641883	routes	idle deli	--	--	"[locname]."
 "adobe"	243794498	routes	adobe abode	--	--	"[locname]."
 "underpass"	684374025	routes	underpass	--	--	"[locname]."
@@ -1135,7 +1138,7 @@ this-cmd	hashval	this-reg	this-room	this-item	this-rule (rule)	this-clue
 book text details
 
 to say locname:
-	say "You don't need to riff on any location names to win the game[if bogus-plains is in plains and oyster is needed], though you may get a last lousy point from doing so if you're observant[end if]"
+	say "You don't need to riff on any location names to win the game[if bogus-plains is in plains and oyster is needed], though you may get a last lousy point from doing so in one place, if you're observant[end if]"
 
 this is the gunter-onstage rule:
 	if player is in study and gunter is off-stage:
@@ -1254,7 +1257,7 @@ to say hfre:
 	say "You're probably overthinking it. The I-USED-TO examples are just plain tedious."
 
 to say name-worry:
-	say "Perhaps it's better to focus on the names instead. Easier, too";
+	say "Perhaps it's better to focus on the proper names instead. Simpler, too";
 
 to say picturer-change:
 	say "It's more likely that scripture can change you[if picturers are reflexive], or help you see something a bit simpler to say[else], and it already has, whether or not you believe[end if]";
@@ -1276,7 +1279,7 @@ this is the has-reag rule:
 	the rule fails;
 
 to say cant-giant:
-	say "The giant is too old and set in his ways. You may just need to listen to him from several different angles"
+	say "The giant is too old and set in his ways. You may just need to listen to him from [if nuder is in same mesa]one more angle[else]several different angles[end if]"
 
 to say die-sin:
 	say "[if circle is visited]The words themselves do nothing. You found the way in[else]Nothing happens. You twiddle both words for a moment, then realize it's probably them, combined[end if]"
@@ -1288,7 +1291,7 @@ to say not-stripe:
 	say "The poison stripe is too incorporeal to do bend to your will"
 
 to say pit-full:
-	say "[if mushrooms are off-stage]The whole seed pit[else]You already got the mushrooms[end if]."
+	say "[if mushrooms are off-stage]The whole seed pit[else]You already got the mushrooms[end if]"
 
 to say chanty:
 	say "The chant doesn't change. Chants are good at that"
@@ -1309,6 +1312,9 @@ this is the first-two rule:
 to say ash-soot:
 	say "It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats[if soot is in adobe]. Maybe it's the pipe soot you want[else]. Well, you got pipe soot from it, and that's enough[end if]"
 
+to say armad-unr:
+	say "They're too unruly and confused, and you probably need to get away from them, anyway"
+
 to say horb-magic of (tt - a thing):
 	say "[if list o toils is examined]Brother Horbert will work his magic with that[else if player does not have tt]Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that[else]That seems curiously inert to your attempts[end if]";
 
@@ -1322,6 +1328,9 @@ to say dark-been:
 
 to say no-logan:
 	say "The cracks themselves give no clues as to No-Gal Logan's whereabouts";
+
+to say btn-by:
+	say "You need to find the right button on or by the controls"
 
 to say pier-sign:
 	say "That may not help you through the mist. Maybe read the sign instead"
