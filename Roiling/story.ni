@@ -31,8 +31,6 @@ TQT = table of quip texts for GRetta, elMO, ELvira, GUnter. Separated with hyphe
 TCO = table of conversations for GRetta, elMO, ELvira, GUnter. Separated with hyphen
 DMT = dome tables, text from Demo Dome section
 
-The table of nudges should have "towers nudges" and so forth for the various sections.
-
 VRT = VOLUME RANDOM TEXT BLURB TABLES has the random text, though it's now in the new file.
 
 Volumes are divided by region for the most part.
@@ -92,6 +90,8 @@ a region has a number called poss-score. a region has a number called cur-score.
 
 a region can be solved, unsolved, needed, shortcircuited, bypassed or frivolous. a region is usually needed.
 
+a region has a table name called regtab.
+
 a region has a room called last-loc.
 
 a region has a number called turns-spent. a region has a number called last-hint-turns. last-hint-turns of a region is usually 10.
@@ -104,21 +104,19 @@ a region has a list of things called item-list.
 
 chapter region definition
 
-Roman Manor is an unsolved region. max-score of Roman Manor is 13. min-score of Roman Manor is 8. [giant pin, stable/stair, chimney/ramp, basement] [non-anagram = staple wall]
+Roman Manor is an unsolved region. regtab of Roman Manor is table of roman manor nudges. max-score of Roman Manor is 13. min-score of Roman Manor is 8. [giant pin, stable/stair, chimney/ramp, basement] [non-anagram = staple wall]
 
-Others is an unsolved region. max-score of Others is 41. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits + compass + icons/sonic + passport x 2. FRUI checks what fruit is where.]
+Stores is an unsolved spoiled region. regtab of Stores is table of routes nudges. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
-Routes is a region. max-score of Routes is 18. min-score of Routes is 17. [worst ad]
+Routes is a region. regtab of Routes is table of routes nudges. max-score of Routes is 18. min-score of Routes is 17. [worst ad]
 
-Troves is a region. max-score of Troves is 21. min-score of Troves is 15. [Pa Egg Pea, lager, lobster/stream, bee, astute statue, DIVORCES]
+Troves is a region. regtab of Troves is table of troves nudges. max-score of Troves is 21. min-score of Troves is 15. [Pa Egg Pea, lager, lobster/stream, bee, astute statue, DIVORCES]
 
-Oyster is a region. max-score of oyster is 39. min-score of oyster is 27. [scan cans = 1, revel/lever=1, fart/soar=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter and pulling lever]
+Oyster is a region. regtab of Oyster is table of oyster nudges. max-score of oyster is 39. min-score of oyster is 27. [scan cans = 1, revel/lever=1, fart/soar=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter and pulling lever]
 
-cheated-guy is an object that varies. cheated-guy is nothing.
+Presto is a region. regtab of Oyster is table of oyster nudges. max-score of presto is 33. min-score of presto is 28. [rom stick, lamb, tab, casserole, +1 point for Phooey]
 
-Presto is a region. max-score of presto is 33. min-score of presto is 28. [rom stick, lamb, tab, casserole, +1 point for Phooey]
-
-Towers is a region. max-score of towers is 45. min-score of towers is 24.
+Towers is a region. regtab of Oyster is table of oyster nudges. max-score of towers is 45. min-score of towers is 24.
 [4 for regular warriors
 1 for Ray Eck
 1 for rewired
@@ -142,9 +140,11 @@ Towers is a region. max-score of towers is 45. min-score of towers is 24.
 1 for giving Ed the flowerpot NON-ANAGRAM
 3 for dying crocus/serpent/ed yerg]
 
-Otters is an unsolved region. max-score of otters is 29. min-score of otters is 23. [2 for a conjunction pair, 1 for dissing Elmer/Merle, 2 for N and S animal regions, 1 for cinders]
+Otters is an unsolved region. regtab of Otters is table of otters nudges. max-score of otters is 29. min-score of otters is 23. [2 for a conjunction pair, 1 for dissing Elmer/Merle, 2 for N and S animal regions, 1 for cinders]
 
-Stores is an unsolved spoiled region. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
+Others is an unsolved region. regtab of Others is table of others nudges. max-score of Others is 41. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits + compass + icons/sonic + passport x 2. FRUI checks what fruit is where.]
+
+Demo Dome is a frivolous region. regtab of Demo Dome is table of demo dome nudges.
 
 a thing has a region called lreg. lreg of a thing is usually manor.
 
@@ -4252,7 +4252,7 @@ check entering a portal:
 	the rule succeeds;
 
 to add-errs (reg - a region):
-	repeat through the table of nudges:
+	repeat through regtab of reg:
 		if there is no this-reg entry or this-reg entry is a region:
 			if there is no hashval entry or hashval entry is 0:
 				let XYZ be the hash of this-cmd entry;
@@ -4279,6 +4279,8 @@ to recover-items:
 chapter say "[reject]" and lalaland
 
 lalaland is a privately-named room. "[bug-report]"
+
+understand "lll" as lalaland when debug-state is true.
 
 lll is an unsolved region. lalaland is in lll.
 
@@ -4748,11 +4750,11 @@ to say reject:
 	if sss is true: [inform 7 gives extra space if I just follow the rule as-is]
 		consider the show blues rule;
 	let my-key be the hash of the player's command;
-	let my-key-a be the hash of the player's command;
+	let my-key-a be the hash of word number 1 in the player's command;
 	d "The hash of the command is [my-key].[line break]";
 	repeat through the table of anagrams:
 		if the-from entry is visible:
-			if my-key is the hashkey entry:
+			if my-key is the hashkey entry or my-key-a is the hashkey entry:
 				if Gunter is off-stage and player is in dusty study and stuff-found is 3:
 					say "You can't quite concentrate with the noise at the door.";
 					continue the action;
@@ -4799,7 +4801,7 @@ to say reject:
 						say "[spec-help of the-from entry]";
 						say "[line break](In particular, the first word seemed to have an effect, and you generally don't need a second word.)[line break]";
 					continue the action;
-	repeat through the table of nudges:
+[	repeat through regtab of mrlp:
 		if there is a hashval entry:
 			if my-key is not 0:
 				if my-key is hashval entry or my-key-a is hashval entry:
@@ -4825,6 +4827,32 @@ to say reject:
 				say "It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that [if lemons are in lalaland and melons are in lalaland]at all now you took care of the melons and lemons[else if otters is unsolved]until after you defeat Elvira[else] more than once in a special place in this region[end if].";
 				now doublewarn is true;
 				continue the action;
+	repeat through table of general nudges: [?? we need to conglomerate this with above]
+		if there is a hashval entry:
+			if my-key is not 0:
+				if my-key is hashval entry or my-key-a is hashval entry:
+					if there is no this-reg entry or this-reg entry is mrlp:
+						if there is a this-item entry:
+							if this-item entry is visible:
+								unless this-item entry is a mack-idea and this-item entry is not ment: [small hack for mack guesses that aren't present yet]
+									say "[this-clue entry][line break]";
+									continue the action;
+						else if there is a this-room entry:
+							if location of the player is this-room entry:
+								say "[this-clue entry][line break]";
+								continue the action;
+						else if there is a this-rule entry:
+							say "[run paragraph on]";
+							follow this-rule entry;
+							if the rule succeeded:
+								say "[this-clue entry][line break]";
+								continue the action;
+						else:
+							d "Need error message for [this-cmd entry] misfire.";
+			if doublewarn is false and my-key is hashval entry * 2 and my-key is not 0:
+				say "It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that [if lemons are in lalaland and melons are in lalaland]at all now you took care of the melons and lemons[else if otters is unsolved]until after you defeat Elvira[else] more than once in a special place in this region[end if].";
+				now doublewarn is true;
+				continue the action;]
 	if player has settler and settler-try is false:
 		if the player's command includes "settler":
 			say "It looks like you may be trying to do things with the settler. This game uses the simplified SCAN (OBJECT).";
@@ -8306,7 +8334,7 @@ carry out retrying:
 	if location of player is Strip of Profits:
 		if retried is true:
 			say "This is the place you go after retrying--as you probably know. So nothing happens." instead;
-		say "Nothing happens. Perhaps this is where you'd be sent back to[if Loather Rathole is visited or Posh Hops Shop is visited or Danger Garden is visited or Same Mesa is visited or Danger Garden is visited]after going somewhere like you've been[otherwise]once you're able to look around[end if]." instead;
+		say "Nothing happens. Perhaps this is where you'd be sent back to [if Loather Rathole is visited or Posh Hops Shop is visited or Danger Garden is visited or Same Mesa is visited or Danger Garden is visited]after going somewhere like you've been[otherwise]once you're able to look around[end if]." instead;
 	if Strip of Profits is unvisited:
 		say "You haven't been to the Strip of Profits yet, whatever that is, and you suspect you can't just jump ahead. Besides, you don't want to risk retrying your manor." instead;
 	if mrlp is otters:
@@ -9307,7 +9335,7 @@ rule for printing the description of a dark room: say "[one of]You can't see muc
 
 the player is in Dusty Study.
 
-a rich chair is useless scenery in Dusty Study. "You thought you preferred a recliner but this is real. Nicer. It guards against cushionless slouchiness. Its backrest is shaped like brackets, and it's from Art Beck's. Small things (like those sad ads) can get stuck in it, or even lost[if pedanto-notepad is on chair]. Like your pedanto-notepad, just sitting on it[end if][if latches are off-stage]. In fact, it seems a bit lumpy now[end if]."
+a rich chair is useless scenery in Dusty Study. "You thought you preferred a recliner but this is real. Nicer. It guards against cushionless slouchiness. Its backrest is shaped like brackets, and it's from Art Beck's. Small things can get stuck in it, or even lost[if pedanto-notepad is on chair]. Like your pedanto-notepad, just sitting on it[end if][if latches are off-stage]. In fact, it seems a bit lumpy now[end if]."
 
 the sad ads are plural-named scenery in Dusty Study. "[one of]The ads aren't sad because they're drab but rather because so many people fall for them. And they're not even magically possessed. This is the price of prosperity, and yet... One[or]Another[stopping] ad [hawk-blare]."
 
@@ -16460,6 +16488,8 @@ understand the command "spill [something]" as something new.
 understand "spill [something]" as spilling.
 
 does the player mean spilling pills: it is very likely;
+
+cheated-guy is an object that varies. cheated-guy is nothing.
 
 after spilling:
 	if pills are in lalaland and cheated-guy is nothing:
@@ -23888,8 +23918,6 @@ volume demo dome
 
 chapter the basics
 
-Demo Dome is a frivolous region.
-
 after choosing notable locale objects when mrlp is demo dome:
 	repeat with JJ running through all exhibits in location of player:
 		set the locale priority of JJ to 0;
@@ -24321,7 +24349,7 @@ table of informcode
 thiscode [x inform wall] [tdm2]
 "A chunk of code starting with CheckTranscriptStatus (courtesy of Zarf) notes how the author was able to nag his testers to take a transcript if they left a comment without transcripting on--or to thank them."
 "You read various testing commands used in writing the game, including ones to show the exits every move, hint everything visible every move, and track hints without spoiling things for the player. Other commands include jumping to the Strip of Profits, clearing all but Otters, and even jumping to just before the Gates Stage."
-"You stare at the start of the Table of Nudges. It's really big! Like, [number of rows in table of nudges] big! That's over double Shuffling Around! The numbers look confusing and arbitrary, but you recognize the anagram-strings that the game checks for, as well as how room anagrams seem to point to the same error messages."
+"You stare at the start of the Tables of Nudges. There's, like, 1000+! That's over double Shuffling Around! The numbers look confusing and arbitrary, but you recognize the anagram-strings that the game checks for, as well as how room anagrams seem to point to the same error messages." [?? sort this out]
 "You stare at the start of the Table of Random Books. Wow, [number of rows in table of random books]! That's a lot of books! The second column seems to give a book a priority, so the player is likely to see certain ones first. Those seem to cover certain puzzles that occur later. It seems like a lot, but there's a note that it was well over two years, and the author just wrote a few neat words from each book to poke at."
 "You see some specialized Inform 6 code from Zarf (again,) Climbing Stars (in more than one place--for disabling TRACE for the Oyster puzzle, and for restarting the game after winning) and other people."
 "You see a bit more Inform 6 code the author scratched out himself. The main chunk is at https://www.intfic.com/t/i6-stubs-for-i7-programmers/83/6."
@@ -27108,7 +27136,7 @@ carry out hashchecking:
 	if my-bool is false:
 		say "Hooray! No bad hashes in table of anagrams.";
 	now my-bool is false;
-	repeat through table of nudges:
+	repeat through regtab of mrlp:
 		now this-hash is the hash of this-cmd entry;
 		if this-hash is not hashval entry:
 			say "Bad nudge hash for [this-cmd entry]: [hashval entry] should be [this-hash].";

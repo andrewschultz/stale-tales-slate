@@ -445,8 +445,6 @@ DA MIST
 Nothing happens. Then you re-read the sign and, oh, it's DA MIST. You remember thinking of it that way helps someone feel more familiar with it and get less lost.
 
 >amdist
-DEBUG INFO: The hash of the command is 331668890.
-
 Hmm, you almost see a way through the mist.
 
 >aboadr

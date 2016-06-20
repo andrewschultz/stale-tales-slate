@@ -1,0 +1,316 @@
+###############################
+#
+#reg-roi-demo-dome.txt
+#
+#regression test for trying ways through troves
+#
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* cant-go
+
+>gonear strip
+>demo dome mode
+For reasons of continuity
+
+* demo-nudges
+
+>demo dome
+Peek Keep
+
+>undo
+>demo dome
+Peek Keep
+
+>undo
+>dome mode
+Peek Keep
+
+>undo
+>demo dome mode
+Peek Keep
+
+>score
+There's no score in the Demo Dome. You just need to look around.
+from Peek Keep
+
+>score
+!There's no score in the Demo Dome. You just need to look around.
+from Peek Keep
+
+>s
+Are you sure you want to leave before looking at everything?
+
+>blather
+There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
+
+>gerta
+It was tested to make sure even you couldn't magic it open.
+
+>igns
+No need to mess with that helpful sign.
+
+>unfold
+No need to mess with the helpful sign.
+
+>memoir
+No need to mess with the helpful sign.
+
+>x entry
+UNFOLD OLD FUN, MEMOIR: I'M MORE.
+
+>etrny
+No need to mess with the helpful sign.
+
+>dipslay
+!You won't figure the code
+
+>x grate
+
+>shlal
+You can't get near the shall halls, although you still have the nonmagical ability to change the future. Well, some day you will.
+
+>turn dial
+The dial is out of reach.
+
+>turn dial on
+The dial is out of reach.
+
+>turn dial off
+The dial is out of reach.
+
+>edom
+Museums are designed to be impassive and impermeable, for the most part. This is full of exhibits--your questing days are over.
+
+>dipslay
+You won't figure the code. There isn't one. Muahaha.
+
+>spy
+You won't figure the code. There isn't one. Muahaha.
+
+>dial
+You won't figure the code. There isn't one. Muahaha.
+
+>flesh
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>flashed
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>edgins
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>edgin
+This is a museum! No messing with the exhibits, please. Or trying to.
+>talks
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>stalk
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>spec
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>space
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>in
+Intel Inlet
+
+>x calendar
+>x calendar
+>x calendar
+>x calendar
+>x calendar
+>x calendar
+>x calendar
+>x calendar
+>x calendar
+>x calendar
+>x calendar
+>x calendar
+>x calendar
+>x calendar
+Final part
+
+>w
+You can only go outside here.
+
+>eltin
+You don't need to flip anything here, really. Certainly not a room.
+
+>careladn
+These are documents of historical records! Revisionism is so Elvira.
+
+>thessi
+These are documents of historical records! Revisionism is so Elvira.
+
+>n
+Hows Show
+
+>x wall
+Which do you mean, the owl-decal code wall or the allow-lots-tools wall?
+
+>sllaw
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>wall
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>owl
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>decal
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>allow
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>lots
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>tools
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>allowlots
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>x code wall
+>g
+>g
+>g
+>g
+>g
+>g
+>g
+NOTE: you've read all the way through
+
+>x tools wall
+You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. But not a lot.
+
+>g
+>g
+>g
+>g
+>g
+>g
+>g
+>g
+>g
+>g
+>g
+>g
+NOTE: you've read all the way through
+
+>w
+You can only go south here.
+
+>s
+
+>w
+Ned's Dens
+
+>read chronicle
+>g
+>g
+>g
+>g
+>g
+>g
+>g
+>g
+>g
+>g
+>g
+>g
+>g
+>g
+Another thought reads: Finally, I'm just grateful I had so much fun exploring so many alleys and polishing so many odd things. I hope you had even half as much fun playing as I did writing the Stale Tales Slate.
+
+That's the end of the Chronicle. You can read it again, if you want.
+
+>icch
+You can't change the book's writing. Well, you could, I guess. But this is a museum!
+
+>ernol
+You can't change the book's writing. Well, you could, I guess. But this is a museum!
+
+>chronicle
+You can't change the book's writing. Well, you could, I guess. But this is a museum!
+
+>edns
+You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one!
+
+Evoc-Cove
+A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want.
+
+>rr
+Page 1:
+Page 10:
+
+>rr
+Page 11:
+Page 21:
+
+>rr
+Page 23:
+Page 32:
+
+>rr
+Page 33:
+Page 43:
+
+>rr
+Page 44:
+Page 53:
+
+>rr
+Page 54:
+Page 64:
+
+>rr
+Page 65:
+Page 75:
+
+>rr
+Page 76:
+Page 85:
+
+>rr
+Page 87:
+Page 97:
+
+>rr
+Page 100:
+Well, that's all. Hooray for speed-reading.
+
+>evco
+You don't need to flip anything here, really. Certainly not a room.
+
+>tifler
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>palcer
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>rudest
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>dupstan
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>larded
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>sclipat
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>spears
+You don't need to flip anything here, really. Certainly not a room.
+
+>ublk
+Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that.
+
+>score
+It looks like you've looked through everything. Thanks for all the time you spent, and I hope it was worth it!

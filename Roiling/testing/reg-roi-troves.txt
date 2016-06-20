@@ -1,0 +1,47 @@
+###############################
+#
+#reg-roi-troves.txt
+#
+#regression test for trying ways through troves
+#
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* min-thru
+
+>gonear strip
+>purloin settler
+>troves
+>in
+Rathole
+
+>tevro
+Trying to change the current region you're in would be risky, or useless, or maybe both.
+
+>tevros
+Trying to change the current region you're in would be risky, or useless, or maybe both.
+
+>spilo
+You've got the right idea...sort of...but you're not worthy of big thoughts, yet.
+
+>spilospilo
+It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that until after you defeat Elvira.
+
+>potholes
+City Hall can't fix potholes, and neither can you. You feel a bit of lost hope as you try. You need to look out for, and look within, yourself, here.
+
+>pothole
+City Hall can't fix potholes, and neither can you. You feel a bit of lost hope as you try. You need to look out for, and look within, yourself, here.
+
+>pegagepa
+It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
+
+>gep
+You pause, then note the author's middle initial, which seems annoyingly important.
+
+>geg
+It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
+
+>epa
+It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
