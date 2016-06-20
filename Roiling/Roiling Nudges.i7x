@@ -88,7 +88,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 
 table of stores nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
-"others"	524148772	--	store h	--	"No--it's a weird place you need to get to, sort of--the rest."	[stores nudges]
+"others"	524148772	--	store h	--	"No--it's a weird place you need to get to, sort of--the rest." [stores nudges]
 "window"	425151566	--	windows	--	"Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new."
 "windows"	521425532	--	windows	--	"Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new."
 "storea"	489054291	--	store a	--	"[no-cand]."
@@ -327,7 +327,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 
 table of presto nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
-"crust"	408819179	--	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food."	[presto nudges]
+"crust"	408819179	--	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food." [presto nudges]
 "plaque"	454785149	--	plaque	--	"It's the maze you need to change, not the plaque."
 "entry"	507506690	--	plaque	--	"It's the maze you need to change, not the plaque."
 "mazeentry"	824545388	--	plaque	--	"It's the maze you need to change, not the plaque."
@@ -462,7 +462,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 
 table of oyster nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
-"tine"	344816481	--	stein	--	"Just one tine doesn't seem up to much."	[oyster nudges]
+"tine"	344816481	--	stein	--	"Just one tine doesn't seem up to much." [oyster nudges]
 "troll"	370414076	hops shop	--	--	"Dealing with just one troll would cause the rest to call you a bully and beat you up. Gotta take [']em all, somehow."
 "recap"	315789274	hops shop	--	--	"Casper glares at you, as if he knows you're thinking all his recaps are the same. No. You [if recaps are reflexive]need to deal[else]already dealt[end if] with them all."
 "patrons"	511621649	hops shop	--	--	"[patron]."
@@ -584,7 +584,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 
 table of towers nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
-"badlands"	283848032	--	--	degen-true rule	"[bland-sad]."	[towers nudges]
+"badlands"	283848032	--	--	degen-true rule	"[bland-sad]." [towers nudges]
 "sad"	119490873	--	--	degen-true rule	"[bland-sad]."
 "bland"	164357159	--	--	degen-true rule	"[bland-sad]."
 "curst"	408819179	--	--	degen-true rule	"It's not just that it's curst, it's a PALACE, too."
@@ -631,7 +631,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "pester"	621785964	--	serpent	--	"The serpent doesn't just pester, it's pester'n."
 "nameless"	637144468	--	salesmen	--	"The salesmen laugh at the sheer [i]lameness[r] of what you're saying, or trying to say, or whatever. Compared to you, their maleness, talk--and clothes--are clearly [i]dandier[r].[paragraph break]Or maybe they're just too unimaginative to be affected by any of your nonsense powers. Well, directly."
 "salesman"	511526177	--	salesmen	--	"Picking off one salesman would just make the others work harder for their commission. And it's not doable, anyway. If you got rid of their product, they might stop pestering you."
-"fissure"	582291393	--	fissure	--	"Bizarre animal noises continue to emanate from the fissure. It is beyond your control[if doc-y is not in ropins], but the duck's already figured it[else if duck is visible], but the duck seems to be poking at it[else], and you wonder who or what could tinker with it[end if]."
+"fissure"	582291393	--	fissure	--	"Bizarre animal noises continue to emanate from the fissure. It is beyond your control[if Dr Yow is not in ropins], but the duck's already figured it[else if duck is visible], but the duck seems to be poking at it[else], and you wonder who or what could tinker with it[end if]."
 "dagger"	301546223	--	dagger	--	"You feel no energy from the dagger. Perhaps it needs to be repaired mechanically."
 "shirts"	463256898	--	salesmen	--	"The shirts were built to resist the most direct of manipulations. Perhaps you can work on the salesmen themselves. Because the shirts do make them look dandier."
 "prune"	468609186	--	iPrune	--	"It's officially an iPrune, not a prune."
@@ -685,12 +685,12 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "neuralpulses"	1003884530	--	neural pulses	--	"Man, biochemistry's way complex. Complex isomers and such are worse than anagrams! You may be more successful breaking the neural pulses down into components."
 "geese"	512291995	--	--	bonker-gone rule	"The geese are fine as they are. They're just there for scenery, and stuff."
 "atheist"	514763074	--	atheists	--	"Changing only one atheist would only help you so long. The rest would restore their companion's (lack of) faith shortly."
-"yow"	304646602	--	doc-y	--	"[he-she-c]'s a doctor! Have some respect when you try to scramble [him-her] up."
-"doctor"	377173649	--	doc-y	--	"That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean."
-"locked"	348940377	--	subsector	--	"Nothing needs to be locked here, certainly not the gaol which [if doc-y is in ropins]already is[else]you unlocked[end if]."
+"yow"	304646602	--	Dr Yow	--	"[he-she-c]'s a doctor! Have some respect when you try to scramble [him-her] up."
+"doctor"	377173649	--	Dr Yow	--	"That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean."
+"locked"	348940377	--	subsector	--	"Nothing needs to be locked here, certainly not the gaol which [if Dr Yow is in ropins]already is[else]you unlocked[end if]."
 "idtag"	203919473	--	ID Tag	--	"ID tag: dig at it? Gad."
 "retape"	527699816	--	raves saver	--	"The raves saver has limited functionality, alas."
-"wordy"	410999494	--	doc-y	--	"Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if doc-y has been rowdy and doc-y has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if doc-y has not been rowdy and doc-y has not been wordy]--but [he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]."
+"wordy"	410999494	--	Dr Yow	--	"Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if Dr Yow has been rowdy and Dr Yow has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]--but [he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]."
 "tentative"	788195264	--	--	kid-not-learnt rule	"The kid fidgets a bit but can't keep focused, though [he-she] wants to."
 "dirk stam"	469925871	--	smart kid	--	"The kid looks at you curiously. You probably don't need to change [his-her] name or intelligence."
 "smart"	350970758	--	smart kid	--	"[smart-kid-no]."
@@ -925,11 +925,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "drinks"	369460390	--	drinks stand	--	"[drink-stand]."
 "stand"	291508399	--	drinks stand	--	"[drink-stand]."
 "abandoned"	404826421	--	drinks stand	--	"[drink-stand]."
-"needle"	527168763	--	compass	--	"The needle is working fine. No need to meddle."
-"foliage"	362267787	--	foliage	--	"Alas, the foliage also blocks your magical powers and not just your explorations, but [if number of flippable things in filed field > 0]there's plenty else to work at[else]no big deal. You took care of everything else[end if] here."
-"barriers"	545651053	--	b-w	--	"The barriers['] westness is important."
-"len"	250527456	clearing	--	--	"[len-part]."
-"craig"	184109754	clearing	--	--	"[len-part]."
+"eerie"	513734976	--	eerie blurbs	--	"[whole-item]."
+"blurbs"	377355225	--	eerie blurbs	--	"[whole-item]."
 "megaton"	473038885	--	mopeage rant	--	"[part-of-lots]."
 "pear"	296783689	--	mopeage rant	--	"[part-of-lots]."
 "magenta"	400874126	--	mopeage rant	--	"[part-of-lots]."
@@ -947,23 +944,40 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "video"	375345441	--	videotape	--	"[vtc]."
 "tape"	314569904	--	videotape	--	"[vtc]."
 "collection"	639160483	--	videotape	--	"[vtc]."
-"eerie"	513734976	--	eerie blurbs	--	"[whole-item]."
-"blurbs"	377355225	--	eerie blurbs	--	"[whole-item]."
-"barber"	337479343	--	barber sickle	--	"[whole-item]."
-"sickle"	394825523	--	barber sickle	--	"[whole-item]."
-"riot"	307779244	--	riot cap	--	"[whole-item]."
-"cap"	102659362	--	riot cap	--	"[whole-item]."
-"buried"	402676559	--	b-r	--	"[whole-item]."
-"raft"	217136535	--	b-r	--	"[whole-item]."
-"sorer"	469080258	--	sorer bogey	--	"[whole-item]."
-"bogey"	375536545	--	sorer bogey	--	"[whole-item]."
-"pryer"	502278926	--	pryer bars	--	"[whole-item]."
-"bars"	202204492	--	pryer bars	--	"[whole-item]."
+"peanut"	488583219	--	peanut cola	--	"[whole-item]."
+"cola"	149359819	--	peanut cola	--	"[whole-item]."
+"moss"	330975662	--	moss cap	--	"[whole-item]." [stuff gotten from Curtis]
+"cap"	102659362	--	moss cap	--	"[whole-item]."
+"needle"	527168763	--	compass	--	"The needle is working fine. No need to meddle."
+"tekno"	427109390	--	tekno-token	--	"There's enough credit on the token. Don't get greedy."
+"bluer"	390468463	--	tekno-token	--	"That doesn't really describe the Tekno-Token."
+"icon"	207258516	--	coins	--	"Hmm. You could probably do something with just one coin, or you could do something with all of them."
+"lola"	184168073	--	dr lola	degen-true rule	"[count-enuf]."
+"drol"	234519308	--	lord al	degen-true rule	"[count-enuf]."
+"droll"	288333147	--	dollar	degen-true rule	"[count-enuf]."
+"dollar"	290520965	--	dollar	degen-true rule	"[count-enuf]."
+"riot"	307779244	--	riot cap	--	"[whole-item]." [swell wells]
 "silly"	371253742	--	silly shirt	--	"[shirt-sez]."
 "shirt"	366982932	--	silly shirt	--	"[shirt-sez]."
 "sillyshirt"	738236674	--	silly shirt	--	"[shirt-sez]."
+"sorer"	469080258	--	sorer bogey	--	"[whole-item]."
+"bogey"	375536545	--	sorer bogey	--	"[whole-item]."
 "stucco"	416853538	--	stucco	--	"Stucco? No. ScoutCon, the message... (You see red recognizing what you should be chasing)."
 "tangerine"	661641421	--	green stain	--	"The green stain could make just one fruit, but why not think bigger? It could become many."
+"cap"	102659362	--	riot cap	--	"[whole-item]."
+"miser"	418471877	--	miser ruble	--	"[whole-item]."
+"ruble"	390468463	--	miser ruble	--	"[whole-item]."
+"foliage"	362267787	--	foliage	--	"Alas, the foliage also blocks your magical powers and not just your explorations, but [if number of flippable things in filed field > 0]there's plenty else to work at[else]no big deal. You took care of everything else[end if] here." [filed field]
+"barriers"	545651053	--	b-w	--	"The barriers['] westness is important."
+"barber"	337479343	--	barber sickle	--	"[whole-item]."
+"sickle"	394825523	--	barber sickle	--	"[whole-item]."
+"buried"	402676559	--	b-r	--	"[whole-item]."
+"raft"	217136535	--	b-r	--	"[whole-item]."
+"drupelet"	705460733	--	pryer bars	--	"[no-pryer]."
+"drupelets"	801734699	--	pryer bars	--	"[no-pryer]"
+"pryerbar"	608209452	--	pryer bars	--	"No, it's [i]both[r] pryer bars."
+"pryer"	502278926	--	pryer bars	--	"[whole-item]."
+"bars"	202204492	--	pryer bars	--	"[whole-item]."
 "rapt"	272087598	--	rapt figure	--	"[whole-item]."
 "figure"	422343163	--	rapt figure	--	"[whole-item]."
 "utensil"	600010093	--	rapt figure	--	"[rapt-glare]."
@@ -971,62 +985,46 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "jagged"	265182945	--	jagged spoon	--	"[rapt-glare]."
 "briar"	236247175	--	briar screen	--	"[whole-item]."
 "screen"	525123080	--	briar screen	--	"[whole-item]."
-"miser"	418471877	--	miser ruble	--	"[whole-item]."
-"ruble"	390468463	--	miser ruble	--	"[whole-item]."
-"drupelet"	705460733	--	pryer bars	--	"[no-pryer]."
-"drupelets"	801734699	--	pryer bars	--	"[no-pryer]"
-"pryerbar"	608209452	--	pryer bars	--	"No, it's [i]both[r] pryer bars"
-"peanut"	488583219	--	peanut cola	--	"[whole-item]."
-"cola"	149359819	--	peanut cola	--	"[whole-item]."
-"moss"	330975662	--	moss cap	--	"[whole-item]."
-"cap"	102659362	--	moss cap	--	"[whole-item]."
-"banana"	162797375	--	an-a	--	"You try to poke at an A, but nothing comes from it."
-"tekno"	427109390	--	tekno-token	--	"There's enough credit on the token. Don't get greedy."
-"bluer"	390468463	--	tekno-token	--	"That doesn't really describe the Tekno-Token"
-"icon"	207258516	--	coins	--	"Hmm. You could probably do something with just one coin, or you could do something with all of them."
-"lola"	184168073	--	dr lola	degen-true rule	"[count-enuf]."
-"drol"	234519308	--	lord al	degen-true rule	"[count-enuf]."
-"droll"	288333147	--	dollar	degen-true rule	"[count-enuf]."
-"dollar"	290520965	--	dollar	degen-true rule	"[count-enuf]."
-"storage"	521653993	--	so-great	--	"You might break what is in the storage."
-"great"	351027450	--	so-great	--	"You might break what is in the storage. Then it would be neither great nor so great."
-"passport"	620454066	--	passport	--	"The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the [if viewer is reflexed]searcher[else if searcher is reflexed]viewer[else]viewer or searcher[end if] might contain more information."
+"len"	250527456	clearing	--	--	"[len-part]." [clearing]
+"craig"	184109754	clearing	--	--	"[len-part]."
 "among"	242122758	--	--	need-mango rule	"Not quite the right way."
 "list"	298190669	--	l-o-p	--	"[if l-o-p is reflexed]You already messed with the list[else]The list doesn't look odd, but maybe some the prices will make you exclaim something[end if]."
 "overpriced"	774270700	--	peach	--	"[if peach is reflexed]No need to change now, and that's not the right way[else]That's over-thinking it. It's just a peach[end if]."
 "lemon"	388955186	--	--	lemmel rule	"You can't focus on just one of them."
 "auction"	417662159	--	caution	--	"[papay]."
 "banner"	371551651	--	caution	--	"[papay]."
-"trader"	424780640	scape space	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is in scape]you got what you wanted[else][he-she] might trade that storage box[end if]."
+"banana"	162797375	--	an-a	--	"You try to poke at an A, but nothing comes from it." [scape space]
+"trader"	424780640	scape space	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is not in scape]you got what you wanted[else][he-she] might trade that storage box[end if]."
 "art"	190621639	--	Art Erd	--	"[1st-name]."
+"red"	234159001	--	Art Erd	--	"[1st-name]."
 "tera"	318427748	--	Tera Darter	--	"[1st-name]."
 "orange"	391177517	--	orange	--	"[if player has orange]You got it, already[else]That doesn't seem sneaky enough to get the orange."
 "plant"	309485142	--	pugnacious plant	--	"[plant-no]."
-"red"	234159001	scape space	--	--	"[no-art]."
-"rat"	190621639	scape space	--	--	"[no-art]."
 "pugnacious"	629997575	--	pugnacious plant	--	"[plant-no]."
 "guava"	249245965	--	guava	--	"[cur-fru]."
 "kumquat"	516923398	--	kumquat	--	"[cur-fru]."
 "lots"	327550400	--	so-great storage	--	"[slot-no]."
-"lotslots"	655100800	--	so-great storage	--	"[slot-no]."
+"storage"	521653993	--	so-great	--	"You might break what is in the storage."
+"great"	351027450	--	so-great	--	"You might break what is in the storage. Then it would be neither great nor so great."
+"passport"	620454066	--	passport	--	"The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the [if viewer is reflexed]searcher[else if searcher is reflexed]viewer[else]viewer or searcher[end if] might contain more information."
 "review"	601028460	--	passport	--	"That's not the way to learn from the viewer--it's probably not that complicated. You hope."
 "popstar"	524180100	--	passport	--	"You don't know whose passport it was, but it's yours, and you need to study it, not just hope to be a pop star."
 "halt"	196393974	gates stage	--	--	"[if player has passport]The halt lath is ineffective, now you have the passport[else]The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lock action[end if]."
 "singed"	391609220	--	singed design	--	"The design is sort of glommed onto the coin[if coins are visible]s[end if]. So you should figure what to do, there."
 "research"	581009492	--	passport	--	"That's not the way to learn from the searcher--it's probably not that complicated. You hope."
 "prep"	376061830	--	--	can-i-prep rule	"It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it."
-"field"	274156779	filed field	--	--	"[locname]."
-"well"	343368560	swell wells	--	--	"[locname]."
-"wells"	439642526	swell wells	--	--	"[locname]."
-"gates"	361977613	gates stage	--	--	"[no-gate]."
-"gate"	265703647	gates stage	--	--	"[no-gate]."
-"clearing"	434637210	clangier	--	--	"[locname]."
-"rustic"	453812025	rustic citrus	--	--	"[locname]."
-"space"	326739437	scape space	--	--	"[locname]."
 "arena"	286413056	gates stage	--	--	"[stad-chg]."
 "near"	284225238	gates stage	--	--	"[stad-chg]."
 "stadium"	436774697	gates stage	--	--	"[stad-chg]."
 "admit"	235394924	gates stage	--	--	"[stad-chg]."
+"well"	343368560	swell wells	--	--	"[locname]."
+"wells"	439642526	swell wells	--	--	"[locname]."
+"field"	274156779	filed field	--	--	"[locname]."
+"clearing"	434637210	clangier	--	--	"[locname]."
+"rustic"	453812025	rustic citrus	--	--	"[locname]."
+"space"	326739437	scape space	--	--	"[locname]."
+"gates"	361977613	gates stage	--	--	"[no-gate]."
+"gate"	265703647	gates stage	--	--	"[no-gate]."
 "other"	427874806	--	--	degen-true rule	"[not-the-reg]."
 "storeh"	524148772	--	--	degen-true rule	"[not-the-reg]."
 
@@ -1708,7 +1706,7 @@ this is the bonker-gone rule:
 
 this is the kid-not-learnt rule:
 	if player is in subsector:
-		if smart kid is in subsector and doc-y is in subsector:
+		if smart kid is in subsector and Dr Yow is in subsector:
 			if smart kid is not reflexed:
 				the rule succeeds;
 	the rule fails.
@@ -1871,7 +1869,7 @@ to say shirt-sez:
 	say "Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle"
 
 to say rapt-glare:
-	say "The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. You'll have to change IT before the spoon"
+	say "The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. IT seems worth changing more than the spoon"
 
 to say no-pryer:
 	say "No, it's the whole pryer bars"

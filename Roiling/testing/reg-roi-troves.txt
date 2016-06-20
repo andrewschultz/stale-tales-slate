@@ -56,16 +56,12 @@ It's good to be on anagramming terms with the book's title, but maybe you would 
 It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
 
 >cldo
-DEBUG INFO: The hash of the command is 168201090. Hash of word 1 is 168201090.
-
 Negative thinking! You don't need to focus on the cold but how to get rid of it. To generate heat.
 
 >crea
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
 
 >htea
-DEBUG INFO: The hash of the command is 270386244. Hash of word 1 is 270386244.
-
 You think you feel less cold for a second. But you need to make it last.
 
 >hate
@@ -75,13 +71,9 @@ dropping only a fretful truffle!
 You needed a strong
 
 >tuffler
-DEBUG INFO: The hash of the command is 528189368. Hash of word 1 is 528189368.
-
 You can't change the truffle. It can help you change things, though. Or how you see things.
 
 >crea
-DEBUG INFO: The hash of the command is 234323315. Hash of word 1 is 234323315.
-
 Meh. Maybe you're closer than you think to motivation. How to make that matter?
 
 >care
@@ -98,53 +90,33 @@ You should never need to riff on part of a location name
 You should never need to riff on part of a location name
 
 >broo
-DEBUG INFO: The hash of the command is 252447862. Hash of word 1 is 252447862.
-
 You can't change a whole suburb. Better to change yourself.
 
 >gurb
-DEBUG INFO: The hash of the command is 241448217. Hash of word 1 is 241448217.
-
 You can't change a whole suburb. Better to change yourself.
 
 >broobroo
-DEBUG INFO: The hash of the command is 252447862. Hash of word 1 is 252447862.
-
 You can't change a whole suburb. Better to change yourself.
 
 >gurbgurb
-DEBUG INFO: The hash of the command is 241448217. Hash of word 1 is 241448217.
-
 You can't change a whole suburb. Better to change yourself.
 
 >rustni
-DEBUG INFO: The hash of the command is 503713948. Hash of word 1 is 503713948.
-
 The ruts will pull you down if you look too far into them.
 
 >urin
-DEBUG INFO: The hash of the command is 304329964. Hash of word 1 is 304329964.
-
 The ruts will pull you down if you look too far into them.
 
 >urst
-DEBUG INFO: The hash of the command is 389813594. Hash of word 1 is 389813594.
-
 The ruts will pull you down if you look too far into them.
 
 >babbligns
-DEBUG INFO: The hash of the command is 354032394. Hash of word 1 is 354032394.
-
 Babbling's babbling, but what stinks is, it's just so VERBOSE. Well, it doesn't stink that VERBOSE has fewer anagrams than babbling(s), settler or no, so that's something.
 
 >babblign
-DEBUG INFO: The hash of the command is 257758428. Hash of word 1 is 257758428.
-
 Babbling's babbling, but what stinks is, it's just so VERBOSE. Well, it doesn't stink that VERBOSE has fewer anagrams than babbling(s), settler or no, so that's something.
 
 >messhoel
-DEBUG INFO: The hash of the command is 677684018. Hash of word 1 is 677684018.
-
 A messhole is a messhole. You need to concentrate on thinking your way out.
 
 >asidewalk
@@ -160,8 +132,6 @@ You can't make the sidewalk crumble any more, and you probably don't want to
 You can't make the sidewalk crumble any more, and you probably don't want to
 
 >psto
-DEBUG INFO: The hash of the command is 355202520. Hash of word 1 is 355202520.
-
 You feel silly a bit. You can't let a simple stop post stop you!
 
 >observe
@@ -169,68 +139,44 @@ You feel silly a bit. You can't let a simple stop post stop you!
 >spot
 
 >eliv
-DEBUG INFO: The hash of the command is 333777614. Hash of word 1 is 333777614.
-
 The bee's description isn't important. It's how you see the bee that matters.
 
 >eeb
-DEBUG INFO: The hash of the command is 274031123. Hash of word 1 is 274031123.
-
 But it's not just any bee. It's an evil bee!
 
 >eliv
-DEBUG INFO: The hash of the command is 333777614. Hash of word 1 is 333777614.
-
 The bee's description isn't important. It's how you see the bee that matters.
 
 >eeb
-DEBUG INFO: The hash of the command is 274031123. Hash of word 1 is 274031123.
-
 But it's not just any bee. It's an evil bee!
 
 >raclle
-DEBUG INFO: The hash of the command is 341950993. Hash of word 1 is 341950993.
-
 It's...hmm...you remember all the clues, but what order to place them in, now.
 
 >deriev
-DEBUG INFO: The hash of the command is 514122776. Hash of word 1 is 514122776.
-
 It's...hmm...you remember all the clues, but what order to place them in, now.
 
 >earson
-DEBUG INFO: The hash of the command is 454851781. Hash of word 1 is 454851781.
-
 The bee shakes its head, trying to make sense of the slightly disordered magic it felt from you.
 
 >belieev
-DEBUG INFO: The hash of the command is 607808737. Hash of word 1 is 607808737.
-
 The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track.
 
 >recall
 Pallid Li'L Pad
 
 >egral
-DEBUG INFO: The hash of the command is 301731271. Hash of word 1 is 301731271.
-
 No...that is not quite the way to fight the temptation of the wicked brew.
 
 >spired
-DEBUG INFO: The hash of the command is 456891772. Hash of word 1 is 456891772.
-
 The diapers, the sad pier--the spider only fits in as *a* spider.
 
 >ictpure
-DEBUG INFO: The hash of the command is 566810127. Hash of word 1 is 566810127.
-
 It's not just any old picture. It's of a sad pier.
 
 >despair
 
 >bredomo
-DEBUG INFO: The hash of the command is 465358213. Hash of word 1 is 465358213.
-
 You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
 
 >pallid
@@ -246,13 +192,9 @@ You should never need to riff on part of a location name
 Rotunda
 
 >brochuer
-DEBUG INFO: The hash of the command is 552618888. Hash of word 1 is 552618888.
-
 It's more the blurb at the end than the brochure.
 
 >ratundo
-DEBUG INFO: The hash of the command is 460016620. Hash of word 1 is 460016620.
-
 You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
 
 >duro
@@ -262,8 +204,6 @@ You should never need to riff on part of a location name, though you may get a l
 You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
 
 >desrie
-DEBUG INFO: The hash of the command is 503231922. Hash of word 1 is 503231922.
-
 Your longing increases...but not enough.
 
 >desire
@@ -279,158 +219,102 @@ If you brought down the skyscraper like that somehow, mass panic would ensue. De
 If you brought down the skyscraper like that somehow, mass panic would ensue. Destroy it from within
 
 >skyline
-DEBUG INFO: The hash of the command is 567086698. Hash of word 1 is 567086698.
-
 You don't want to mess with the skyline. You want to get in the skyscraper!
 
 >cnoe
-DEBUG INFO: The hash of the command is 290071779. Hash of word 1 is 290071779.
-
 You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like how to be inspired by that statue.
 
 >cneter
-DEBUG INFO: The hash of the command is 531959132. Hash of word 1 is 531959132.
-
 You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like how to be inspired by that statue.
 
 >staute
-DEBUG INFO: The hash of the command is 537593736. Hash of word 1 is 537593736.
-
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. Maybe grok the writing on the statue.
 
 >strive
 
 >stateu
-DEBUG INFO: The hash of the command is 537593736. Hash of word 1 is 537593736.
-
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. You could find another way to follow the statue's message, but it's not necessary.
 
 >aspire
 
 >stteua
-DEBUG INFO: The hash of the command is 537593736. Hash of word 1 is 537593736.
-
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure.  You did what you could, anyway.
 
 >undo
 >undo
 
 >bottel
-DEBUG INFO: The hash of the command is 480611466. Hash of word 1 is 480611466.
-
 It's not just any bottle, but a bottle of Pernod.
 
 >alleb
-DEBUG INFO: The hash of the command is 256040510. Hash of word 1 is 256040510.
-
 It's not the label but what's on it.
 
 >ponder
 FiefCo Office
 
 >eniso
-DEBUG INFO: The hash of the command is 412333006. Hash of word 1 is 412333006.
-
 Hmm, no, focusing so directly on the noise to block it out is counterproductive.
 
 >divocre
-DEBUG INFO: The hash of the command is 479674829. Hash of word 1 is 479674829.
-
 If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel.
 
 >magaznie
-DEBUG INFO: The hash of the command is 465726572. Hash of word 1 is 465726572.
-
 It's not just any magazine. It's DIVORCES!
 
 >vainty
-DEBUG INFO: The hash of the command is 448722262. Hash of word 1 is 448722262.
-
 You don't need to deal with it as much as the person outside--but maybe examining will give you a clue.
 
 >mpsal
-DEBUG INFO: The hash of the command is 297816735. Hash of word 1 is 297816735.
-
 You need that light for late-night work sessions.
 
 >puctire
-DEBUG INFO: The hash of the command is 566810127. Hash of word 1 is 566810127.
-
 It's not just any old picture. There's a stream.
 
 >sherka
-DEBUG INFO: The hash of the command is 401807173. Hash of word 1 is 401807173.
-
 The shaker itself's been around a while and can't be changed easily. Plus, what if it was a pepper shaker? Can't do much with that.
 
 >ignore
 
 >vainty
-DEBUG INFO: The hash of the command is 448722262. Hash of word 1 is 448722262.
-
 You really don't need to rearrange the vanity.
 
 >vainty
-DEBUG INFO: The hash of the command is 448722262. Hash of word 1 is 448722262.
-
 You really don't need to rearrange the vanity.
 
 >fren
-DEBUG INFO: The hash of the command is 308552316. Hash of word 1 is 308552316.
-
 The fern is mentally, if not physically, unmalleable.
 
 >slikc
-DEBUG INFO: The hash of the command is 267019414. Hash of word 1 is 267019414.
-
 The checklist was built to be especially stable and singular of purpose. So, nothing happens.
 
 >midner
-DEBUG INFO: The hash of the command is 412134508. Hash of word 1 is 412134508.
-
 The checklist was built to be especially stable and singular of purpose. So, nothing happens.
 
 >stencli
-DEBUG INFO: The hash of the command is 513909871. Hash of word 1 is 513909871.
-
 The checklist was built to be especially stable and singular of purpose. So, nothing happens.
 
 >tche
-DEBUG INFO: The hash of the command is 287204011. Hash of word 1 is 287204011.
-
 The checklist was built to be especially stable and singular of purpose. So, nothing happens.
 
 >dsek
-DEBUG INFO: The hash of the command is 298042342. Hash of word 1 is 298042342.
-
 The checklist was built to be especially stable and singular of purpose. So, nothing happens.
 
 >checklits
-DEBUG INFO: The hash of the command is 554223425. Hash of word 1 is 554223425.
-
 The checklist was built to be especially stable and singular of purpose. So, nothing happens.
 
 >effico
-DEBUG INFO: The hash of the command is 319186909. Hash of word 1 is 319186909.
-
 You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
 
 >effi
-DEBUG INFO: The hash of the command is 225828747. Hash of word 1 is 225828747.
-
 You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
 
 >last
 enough to last
 
 >bostler
-DEBUG INFO: The hash of the command is 559099217. Hash of word 1 is 559099217.
-
 That's not quite the way to deserve that lobster.
 
 >matser
-DEBUG INFO: The hash of the command is 478776867. Hash of word 1 is 478776867.
-
 That's not quite the way to focus on the stream.
 
 >master
@@ -441,17 +325,11 @@ Then, oh, man! You see there was a playbill under the salt.
 You're besieged by art, in fact! What's...what's that sound? It's that song! By Eddie C.!
 
 >lpaybill
-DEBUG INFO: The hash of the command is 430866297. Hash of word 1 is 430866297.
-
 You fold and look at the playbill many different ways before figuring it's probably the writing on it that matters.
 
 >sgon
-DEBUG INFO: The hash of the command is 272133753. Hash of word 1 is 272133753.
-
 It's the song name--I'd cede.
 
 >edide
-DEBUG INFO: The hash of the command is 342663242. Hash of word 1 is 342663242.
-
 It's the song name--I'd cede.
 

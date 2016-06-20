@@ -1867,1919 +1867,1919 @@ book manor
 
 table of ad slogans [xxm1]
 blurb	blare	[random sad ads: the blare field designates whether you have an exclamation point at the end]
-"[d-t] Saffo Fast Food"
-"[if player is male]Aaron Colt[else]Lora Acton[end if]'s Root Canals" [p]
+"[d-t] Saffo Fast Food"	false
+"[if player is male]Aaron Colt[else]Lora Acton[end if]'s Root Canals"	false [p]
 "[if player is male]Alec Pino[else]Loni Cape[end if]'s Special on Pecan Oils!"	true [p]
-"[if player is male]Arie Voss[else]Eva Rossi[end if] Savories"
-"[if player is male]Ced Minton's[else]Dot McInnes[end if] Condiments"
-"[if player is male]Curt Aish[else]Traci Hsu[end if] Haircuts"
-"[if player is male]Dave Heiss[else]Vida Hesse[end if] Adhesives"
-"[if player is male]Derek Weill[else]Elke Wilder[end if] Weed Killer"
-"[if player is male]Eli Nolan[else]Nell Inoa[end if] All-in-One Loan Line"
-"[if player is male]Hal Moet[else]Mae Holt[end if]'s Hot Meals Most Hale" [p]
-"[if player is male]Ivan Coats[else]Staci Avon[end if] Vacations"
-"[if player is male]Leif Donat[else]Ida Felton[end if] Deflation Defoliant"
-"[if player is male]Leo Starr[else]Rosa Ertl[end if] Realtors"
-"[if player is male]Marc Lea's[else]Marcela's[end if] Caramels"
-"[if player is male]Ned Segura[else]Agnes Duer[end if] Ungreased Dungarees"
-"[if player is male]Omar Warfel[else]Mara Fowler[end if] Formal Wear"
-"[if player is male]Ray Lund[else]Lady-Run[end if] Laundry"
-"[if player is male]Rex Patil's[else]Lex Raptis[end if] Pixel Arts"
-"[if player is male]Sandi Doucet[else]Count Addie's[end if] Dance Studio"
-"[if player is male]Saul Fern[else]Fran Lue's[end if] Funerals"
-"[if player is male]Ted Reining's[else]Enid Ginter's[end if] Tenderising Ingredients"
-"[if player is male]Wes Prieto[else]Teri Swope[end if] Power Ties"
-"[one of]Cool[or]Loco[in random order] Hal's Alcohols" [x]
-"A-Lister Retails" []
-"A-Maze-Ing Magazine"
-"A-Sled Deals"
-"Abe Bruce Barbecue"
-"Abelson's Bonselas"
-"Abler Acre, a Cerebral Cereal Bar"
-"Abrante's Ratsbane"
-"Abs by Babsy"
-"Absurdist Drab Suits"
+"[if player is male]Arie Voss[else]Eva Rossi[end if] Savories"	false
+"[if player is male]Ced Minton's[else]Dot McInnes[end if] Condiments"	false
+"[if player is male]Curt Aish[else]Traci Hsu[end if] Haircuts"	false
+"[if player is male]Dave Heiss[else]Vida Hesse[end if] Adhesives"	false
+"[if player is male]Derek Weill[else]Elke Wilder[end if] Weed Killer"	false
+"[if player is male]Eli Nolan[else]Nell Inoa[end if] All-in-One Loan Line"	false
+"[if player is male]Hal Moet[else]Mae Holt[end if]'s Hot Meals Most Hale"	false [p]
+"[if player is male]Ivan Coats[else]Staci Avon[end if] Vacations"	false
+"[if player is male]Leif Donat[else]Ida Felton[end if] Deflation Defoliant"	false
+"[if player is male]Leo Starr[else]Rosa Ertl[end if] Realtors"	false
+"[if player is male]Marc Lea's[else]Marcela's[end if] Caramels"	false
+"[if player is male]Ned Segura[else]Agnes Duer[end if] Ungreased Dungarees"	false
+"[if player is male]Omar Warfel[else]Mara Fowler[end if] Formal Wear"	false
+"[if player is male]Ray Lund[else]Lady-Run[end if] Laundry"	false
+"[if player is male]Rex Patil's[else]Lex Raptis[end if] Pixel Arts"	false
+"[if player is male]Sandi Doucet[else]Count Addie's[end if] Dance Studio"	false
+"[if player is male]Saul Fern[else]Fran Lue's[end if] Funerals"	false
+"[if player is male]Ted Reining's[else]Enid Ginter's[end if] Tenderising Ingredients"	false
+"[if player is male]Wes Prieto[else]Teri Swope[end if] Power Ties"	false
+"[one of]Cool[or]Loco[in random order] Hal's Alcohols"	false [x]
+"A-Lister Retails"	false []
+"A-Maze-Ing Magazine"	false
+"A-Sled Deals"	false
+"Abe Bruce Barbecue"	false
+"Abelson's Bonselas"	false
+"Abler Acre, a Cerebral Cereal Bar"	false
+"Abrante's Ratsbane"	false
+"Abs by Babsy"	false
+"Absurdist Drab Suits"	false
 "Accept CapTec!"	true
-"Ace-Diet Iced Tea"
-"Ace Finn Finance"
-"Ace Finn's Finances"
-"Ace Reed's Decrease-Care Seed"
+"Ace-Diet Iced Tea"	false
+"Ace Finn Finance"	false
+"Ace Finn's Finances"	false
+"Ace Reed's Decrease-Care Seed"	false
 "Acne irks? Skin Care!"	true
-"Acne-Plus Clean Ups"
-"Adeline's Sane Deli"
-"Adless Slade's"
-"Aethers-Heaters" []
-"Agnello Galleon"
-"Agramonte Matronage"
-"Akridge Kid Gear"
-"Al Agan's Lasagna"
-"Al Rocco's Cool Cars"
-"Al Tower's Low Rates Wares Lot"
-"Al's IV Vials" []
-"Alba's Rad Salad Bar"
-"Albertsen Rentables"
-"Alda's Salad"
+"Acne-Plus Clean Ups"	false
+"Adeline's Sane Deli"	false
+"Adless Slade's"	false
+"Aethers-Heaters"	false []
+"Agnello Galleon"	false
+"Agramonte Matronage"	false
+"Akridge Kid Gear"	false
+"Al Agan's Lasagna"	false
+"Al Rocco's Cool Cars"	false
+"Al Tower's Low Rates Wares Lot"	false
+"Al's IV Vials"	false []
+"Alba's Rad Salad Bar"	false
+"Albertsen Rentables"	false
+"Alda's Salad"	false
 "AleCo's Solace!"	true
-"Alemoat Oatmeal"
-"Alemonde Lemonade"
-"Alex's Axles"
-"All-Ads Lad Sal Dallas"
-"All-Soy Alloys"
-"All-Sweet Swell Tea"
-"Aloisi Aiolis"
-"Alpert's Plaster"
-"Alph Pierre Peripheral Repair Help"
-"Alrite Retail"
-"Alterman Maternal"
-"Altidor's Dilators"
+"Alemoat Oatmeal"	false
+"Alemonde Lemonade"	false
+"Alex's Axles"	false
+"All-Ads Lad Sal Dallas"	false
+"All-Soy Alloys"	false
+"All-Sweet Swell Tea"	false
+"Aloisi Aiolis"	false
+"Alpert's Plaster"	false
+"Alph Pierre Peripheral Repair Help"	false
+"Alrite Retail"	false
+"Alterman Maternal"	false
+"Altidor's Dilators"	false
 "Altoids: Lots Aid Sad Toil!"	true
 "Alvin's Anvils: We Stay Sweaty!"	true
-"Amaro's Aromas"
-"Amortised Mediators"
-"Amos Mao's Moas"
-"Amy's Yams"
-"Ana Peck's Pancakes"
-"Angela's Lasagne"
-"Angelica's Analgesic"
-"Angelis Leasing"
-"Annetta's Tannates"
+"Amaro's Aromas"	false
+"Amortised Mediators"	false
+"Amos Mao's Moas"	false
+"Amy's Yams"	false
+"Ana Peck's Pancakes"	false
+"Angela's Lasagne"	false
+"Angelica's Analgesic"	false
+"Angelis Leasing"	false
+"Annetta's Tannates"	false
 "Annoyed? Nay, Done? Anodyne!"	true
-"Anti-Modern Ordainment"
-"Antony's Tannoys"
-"Anyone's-Aim Mayonnaise"
+"Anti-Modern Ordainment"	false
+"Antony's Tannoys"	false
+"Anyone's-Aim Mayonnaise"	false
 "Ape-Musk Makeups: Um, Speak!"	true
-"Apothecary [if player is male]Paco Thayer[else]Chaya Perot[end if]"
-"Apperson Propanes"
-"Aquino Quinoa"
+"Apothecary [if player is male]Paco Thayer[else]Chaya Perot[end if]"	false
+"Apperson Propanes"	false
+"Aquino Quinoa"	false
 "Ar, Avast! Ava's Art Avatars"	true
-"Aragon's Angoras"
-"Ardolino's Doornails"
-"Arista Tiaras"
-"Ark O['] Okra"
-"Arlinda's Laniards"
-"Armorer Marrero"
-"Arrow Slope Solar Power" []
-"Art Cho's Hot Cars"
-"Art Reed's Serrated Treaders" []
-"Artsy Logo Astrology"
-"ASAP St. Pastas"
-"Asherin Hernias Shearin[']"
-"Asich Chais"
-"Ask-Best Baskets" []
-"Ask-Bob Kabobs"
-"Ask-Kay Kayaks"
-"Asphodel Deal Shop"
-"Aspinwall Law-Splain"
-"Asprey's Spayers"
-"Associated Coast Ideas"
-"Astle's Tassle Slates"
-"Astor's Assort-Roasts"
-"At-Cost Cotta's"
-"Atari's Tiaras" []
-"Atchinson's Stanchions"
-"Atchley's Slay-Tech"
-"Atherton's Northeast"
-"Attebery's Terabytes"
-"Atwell's Wallets"
-"Auberge Gebauer"
-"Auntie Q's Antiques"
-"Aviles's Valises"
-"Avon Nova Nav-O" []
+"Aragon's Angoras"	false
+"Ardolino's Doornails"	false
+"Arista Tiaras"	false
+"Ark O['] Okra"	false
+"Arlinda's Laniards"	false
+"Armorer Marrero"	false
+"Arrow Slope Solar Power"	false []
+"Art Cho's Hot Cars"	false
+"Art Reed's Serrated Treaders"	false []
+"Artsy Logo Astrology"	false
+"ASAP St. Pastas"	false
+"Asherin Hernias Shearin[']"	false
+"Asich Chais"	false
+"Ask-Best Baskets"	false []
+"Ask-Bob Kabobs"	false
+"Ask-Kay Kayaks"	false
+"Asphodel Deal Shop"	false
+"Aspinwall Law-Splain"	false
+"Asprey's Spayers"	false
+"Associated Coast Ideas"	false
+"Astle's Tassle Slates"	false
+"Astor's Assort-Roasts"	false
+"At-Cost Cotta's"	false
+"Atari's Tiaras"	false []
+"Atchinson's Stanchions"	false
+"Atchley's Slay-Tech"	false
+"Atherton's Northeast"	false
+"Attebery's Terabytes"	false
+"Atwell's Wallets"	false
+"Auberge Gebauer"	false
+"Auntie Q's Antiques"	false
+"Aviles's Valises"	false
+"Avon Nova Nav-O"	false []
 "AwnedCo: We Can Do a New Doc!"	true
-"Axel's Vita-Laxatives"
-"B-Dry by Dr. Byrd"
+"Axel's Vita-Laxatives"	false
+"B-Dry by Dr. Byrd"	false
 "Babel E-Blab: B-Able!"	true
 "Back Pain? Nab a Pick!"	true
-"Bad Anna's Bandanas"
-"Bagels['] Gables"
-"Bags by Gabby's"
-"Ball State Table Salt"
-"The Balm, Bleah (TM)"
+"Bad Anna's Bandanas"	false
+"Bagels['] Gables"	false
+"Bags by Gabby's"	false
+"Ball State Table Salt"	false
+"The Balm, Bleah (TM)"	false
 "Bang! Ira's Bargains!"	true
-"Baquero Baroque"
-"Barclay's Lacy Bras"
-"Bardot Bod-Art"
-"Barkey-Kearby Bakery"
-"Barlow's Law Bros"
-"Barnaby Bay Bran"
-"Barros Arbors"
-"Bart's Fake Breakfast"
-"Bartolini's Librations"
-"Bartolo's Toolbars"
-"Bartolome's Motorables"
-"Bartolucci's Subcortical Caloric Bust"
-"Battershell Tetherballs"
-"Batterson Betatrons"
-"Bauder Dauber-Earbud"
-"Bawdy-Era Waybread"
-"Bea Kraft's Breakfast" []
-"Bearded Dad Beer"
-"Beat-Slop Potables"
-"Beaudry Daubery"
-"Beavins Ave. Bins"
-"Beilfuss Sub-Files"
-"Bella's Labels"
-"Beloit's Best Oil"
-"Ben Liszt Blintzes"
-"Ben Moral's Lemon Bars"
-"Ben Way's News Bay"
-"Benton's Bonnets"
-"Berdahl's Halberds"
-"Berhorst Brothers"
-"Bert Snow Brownest Snot-Brew"
-"Best Bets"
+"Baquero Baroque"	false
+"Barclay's Lacy Bras"	false
+"Bardot Bod-Art"	false
+"Barkey-Kearby Bakery"	false
+"Barlow's Law Bros"	false
+"Barnaby Bay Bran"	false
+"Barros Arbors"	false
+"Bart's Fake Breakfast"	false
+"Bartolini's Librations"	false
+"Bartolo's Toolbars"	false
+"Bartolome's Motorables"	false
+"Bartolucci's Subcortical Caloric Bust"	false
+"Battershell Tetherballs"	false
+"Batterson Betatrons"	false
+"Bauder Dauber-Earbud"	false
+"Bawdy-Era Waybread"	false
+"Bea Kraft's Breakfast"	false []
+"Bearded Dad Beer"	false
+"Beat-Slop Potables"	false
+"Beaudry Daubery"	false
+"Beavins Ave. Bins"	false
+"Beilfuss Sub-Files"	false
+"Bella's Labels"	false
+"Beloit's Best Oil"	false
+"Ben Liszt Blintzes"	false
+"Ben Moral's Lemon Bars"	false
+"Ben Way's News Bay"	false
+"Benton's Bonnets"	false
+"Berdahl's Halberds"	false
+"Berhorst Brothers"	false
+"Bert Snow Brownest Snot-Brew"	false
+"Best Bets"	false
 "Best Buy Yet: Bub's!"	true
-"Bettina's Tabinets"
-"Bettinger Bettering"
-"Betton's Bot-Nets"
-"Bevis Vibes"
-"Bhandari's Hairbands"
-"Bhat's Baths"
-"Bhutto's Hot Tubs"
-"Biel's Libes"
-"Big and Bad Gin"
-"Big Chalk St. Backlights"
-"Big Max's Mix Bags"
-"Big Nat's Basting"
-"Big Rana's Bargains"
-"Big Tank's Knit Bags"
-"Big Tent Betting"
-"Billinger Rebilling"
-"Bin-Grown Brown Gin"
-"Blacksmith Thick Balms"
-"Blair's Bold Billboards"
-"Bleak Cat Black Tea"
-"Blest Belts"
+"Bettina's Tabinets"	false
+"Bettinger Bettering"	false
+"Betton's Bot-Nets"	false
+"Bevis Vibes"	false
+"Bhandari's Hairbands"	false
+"Bhat's Baths"	false
+"Bhutto's Hot Tubs"	false
+"Biel's Libes"	false
+"Big and Bad Gin"	false
+"Big Chalk St. Backlights"	false
+"Big Max's Mix Bags"	false
+"Big Nat's Basting"	false
+"Big Rana's Bargains"	false
+"Big Tank's Knit Bags"	false
+"Big Tent Betting"	false
+"Billinger Rebilling"	false
+"Bin-Grown Brown Gin"	false
+"Blacksmith Thick Balms"	false
+"Blair's Bold Billboards"	false
+"Bleak Cat Black Tea"	false
+"Blest Belts"	false
 "Blockbuster Bulb Restock!"	true
 "Blotchy? BlythCo!"	true
 "Bo Dean's: Based on No Beans an['] Bones!"	true
 "Bo Lett's: Belts to Bottles!"	true
-"Bo Novak's Book Vans"
-"Bo Stamp's Spambots"
-"Bo's OK Books"
-"Boar's Head Rehab Soda"
+"Bo Novak's Book Vans"	false
+"Bo Stamp's Spambots"	false
+"Bo's OK Books"	false
+"Boar's Head Rehab Soda"	false
 "Bob's Grain: Absorbing!"	true
-"Bobo's Urn Bourbons"
-"Boehner's Neo-Herbs"
-"Boettcher's Brochettes"
-"Bogle's Globes"
-"Bojan's Banjos"
-"Boldest DebtSol"
-"Bonet's Bentos"
-"Boniness Benisons"
-"Booby-Fad Baby Food"
-"Boorts-Stroob Boostr-Robots"
-"Boost-Gang Toboggans"
-"Borelli's Brollies"
-"Bortles's Lobsters"
-"Bostic Bits Co"
-"Boswell Bellows"
-"Boutilier's Boiler Suit"
-"Bowdoin's Wood Bins"
-"Bowen's OK New Books"
-"Boxer Yang's Oxygen Bars"
-"Br'er Wes Brewers"
-"Brad Canton Contraband"
-"Brad Coe's Barcodes"
-"Brainer Berrian"
-"Brandey's Dry Beans"
-"Brandi's Ribands"
-"Brandley's Benadryls"
-"Brave-Win Vain Brew"
+"Bobo's Urn Bourbons"	false
+"Boehner's Neo-Herbs"	false
+"Boettcher's Brochettes"	false
+"Bogle's Globes"	false
+"Bojan's Banjos"	false
+"Boldest DebtSol"	false
+"Bonet's Bentos"	false
+"Boniness Benisons"	false
+"Booby-Fad Baby Food"	false
+"Boorts-Stroob Boostr-Robots"	false
+"Boost-Gang Toboggans"	false
+"Borelli's Brollies"	false
+"Bortles's Lobsters"	false
+"Bostic Bits Co"	false
+"Boswell Bellows"	false
+"Boutilier's Boiler Suit"	false
+"Bowdoin's Wood Bins"	false
+"Bowen's OK New Books"	false
+"Boxer Yang's Oxygen Bars"	false
+"Br'er Wes Brewers"	false
+"Brad Canton Contraband"	false
+"Brad Coe's Barcodes"	false
+"Brainer Berrian"	false
+"Brandey's Dry Beans"	false
+"Brandi's Ribands"	false
+"Brandley's Benadryls"	false
+"Brave-Win Vain Brew"	false
 "Break Down? Know Dr. [a-b]!"	true
-"Break-Sweat-Wear Basket" []
-"Bree Eber Beer"
-"Brenna's Banners"
-"Bri's Ribs"
-"Briceno's Bicornes"
-"Brigandi Braiding"
-"Brisance Carbines"
-"Brisbon-Robbins Ribbons"
-"Bristol Ribs Lot"
-"Bro Green's Born Serge Rosenberg."
-"Broch St. Borscht"
-"Brookdon's Doorknobs"
-"Brunetto's Obstruent Buttoners"
-"Bub Lea's Baubles"
+"Break-Sweat-Wear Basket"	false []
+"Bree Eber Beer"	false
+"Brenna's Banners"	false
+"Bri's Ribs"	false
+"Briceno's Bicornes"	false
+"Brigandi Braiding"	false
+"Brisance Carbines"	false
+"Brisbon-Robbins Ribbons"	false
+"Bristol Ribs Lot"	false
+"Bro Green's Born Serge Rosenberg."	false
+"Broch St. Borscht"	false
+"Brookdon's Doorknobs"	false
+"Brunetto's Obstruent Buttoners"	false
+"Bub Lea's Baubles"	false
 "Buckingham's Hick Guns. BAM!"	true
-"Bud Eley's Blue Dyes"
-"Burchette's Trebuchets"
+"Bud Eley's Blue Dyes"	false
+"Burchette's Trebuchets"	false
 "Burp-Ade's Super Bad!"	true
-"Burrage Garbure"
-"Burstein Turbines"
-"Burt Straw Bratwurst"
-"Butty by Tut"
+"Burrage Garbure"	false
+"Burstein Turbines"	false
+"Burt Straw Bratwurst"	false
+"Butty by Tut"	false
 "A Buzz: ZUBAZ!"	true
-"Cafe Do-Shop-Cheap Foods"
-"Cafe Fine Caffeine"
-"Caggiano's Anagogics"
-"Cagney Agency"
-"Cahill's Challis"
-"Caisson Casinos"
-"Cal Berg's Crab Legs"
-"Cal Crown's Clown Cars"
-"Calder's Cradles"
-"Caleb's Cables"
+"Cafe Do-Shop-Cheap Foods"	false
+"Cafe Fine Caffeine"	false
+"Caggiano's Anagogics"	false
+"Cagney Agency"	false
+"Cahill's Challis"	false
+"Caisson Casinos"	false
+"Cal Berg's Crab Legs"	false
+"Cal Crown's Clown Cars"	false
+"Calder's Cradles"	false
+"Caleb's Cables"	false
 "Calo-Cola: All Cocoa!"	true
-"Calumet's Muscatel"
-"Camara's Mascara"
-"Camden's Med-Cans"
-"Camenish Machines"
-"Camille's Micellas"
-"Canker-is-a-Snicker Skin Care"
-"Capell's Scalpel"
-"Capelli's All-Spice"
-"Capozzoli Cool Pizza"
-"Capps-Baker Paperbacks"
-"Captain-A Catnip"
-"Caravan Nav-a-Car"
-"Cardozo's Zoo Cards"
-"Care to Try Ye Tractor"
-"Cargil Garlic"
-"Carin's Scarin['] Cairns"
-"Carlee's Cereals"
-"Carleen's Cleaners"
-"Carlo's Ol['] Cars"
-"Carlsbad Lab Cards"
-"Carly's Lycras"
-"Carolee's Escarole"
-"Caroline's Real Coins"
-"Carquest Racquets"
-"Carson Acorns"
-"Carstarphen Sharp Nectar"
-"Casoni Asonic Casino" []
-"Cassel Scales"
-"Castile's Scaliest Elastics"
-"Castillo Ill Tacos/Cola List"
+"Calumet's Muscatel"	false
+"Camara's Mascara"	false
+"Camden's Med-Cans"	false
+"Camenish Machines"	false
+"Camille's Micellas"	false
+"Canker-is-a-Snicker Skin Care"	false
+"Capell's Scalpel"	false
+"Capelli's All-Spice"	false
+"Capozzoli Cool Pizza"	false
+"Capps-Baker Paperbacks"	false
+"Captain-A Catnip"	false
+"Caravan Nav-a-Car"	false
+"Cardozo's Zoo Cards"	false
+"Care to Try Ye Tractor"	false
+"Cargil Garlic"	false
+"Carin's Scarin['] Cairns"	false
+"Carlee's Cereals"	false
+"Carleen's Cleaners"	false
+"Carlo's Ol['] Cars"	false
+"Carlsbad Lab Cards"	false
+"Carly's Lycras"	false
+"Carolee's Escarole"	false
+"Caroline's Real Coins"	false
+"Carquest Racquets"	false
+"Carson Acorns"	false
+"Carstarphen Sharp Nectar"	false
+"Casoni Asonic Casino"	false []
+"Cassel Scales"	false
+"Castile's Scaliest Elastics"	false
+"Castillo Ill Tacos/Cola List"	false
 "Cat's Ill? St. Lilac!"	true
-"Catapano Caponata"
-"Catarino's Raincoats"
-"Catt Reich, Architect"
+"Catapano Caponata"	false
+"Catarino's Raincoats"	false
+"Catt Reich, Architect"	false
 "Cave Wine: a New Vice!"	true
-"Ceci Van's Vaccines"
-"Celona's Seconal"
-"Cestaro's Coarsest Coasters"
-"Chad's Wines/Sandwiches"
+"Ceci Van's Vaccines"	false
+"Celona's Seconal"	false
+"Cestaro's Coarsest Coasters"	false
+"Chad's Wines/Sandwiches"	false
 "Chamber Gin: Be Charming!"	true
-"Chandra's Handcars"
-"Chapin's Chips an['] Spinach"
-"Charest's Starches"
-"Charette's Catheters"
-"Charlie's Heli-Cars"
-"Charlie's Rich Ales" []
+"Chandra's Handcars"	false
+"Chapin's Chips an['] Spinach"	false
+"Charest's Starches"	false
+"Charette's Catheters"	false
+"Charlie's Heli-Cars"	false
+"Charlie's Rich Ales"	false []
 "Chat is at Chi's. Cash it!"	true
 "Cheesed-Off? Coffee Shed!"	true
-"Chen-Lu's Lunches"
-"Chet's Techs Chest"
-"Chez Una's Szechuan"
-"Chipotle PoliTech"
+"Chen-Lu's Lunches"	false
+"Chet's Techs Chest"	false
+"Chez Una's Szechuan"	false
+"Chipotle PoliTech"	false
 "Choose ShoeCo!"	true
-"Chopin's Phonics Shop, Inc"
-"Chopra's Car Shop"
-"Chrestman Merchants"
+"Chopin's Phonics Shop, Inc"	false
+"Chopra's Car Shop"	false
+"Chrestman Merchants"	false
 "Cigars? No. Organics!"	true
-"Cilla's Lilacs"
-"Citator Ricotta"
+"Cilla's Lilacs"	false
+"Citator Ricotta"	false
 "Citizens, Nice Zits? Zinc-Site!"	true
-"Cittadino Dictation"
-"CJ Poster Projects"
-"Clapper's Scrapple"
-"Clarkston's Corn Stalks"
-"Clem's Odd Cold Meds"
-"Clemente's Selectmen"
-"Clepski Pickles"
-"Cline Elms Smell Nice" []
-"Closer Relocs"
+"Cittadino Dictation"	false
+"CJ Poster Projects"	false
+"Clapper's Scrapple"	false
+"Clarkston's Corn Stalks"	false
+"Clem's Odd Cold Meds"	false
+"Clemente's Selectmen"	false
+"Clepski Pickles"	false
+"Cline Elms Smell Nice"	false []
+"Closer Relocs"	false
 "Coatless? Lacoste's"	true
 "Cobain's is Bacon!"	true
-"Cobra-X's Boxcars"
-"Cohan's Nachos"
+"Cobra-X's Boxcars"	false
+"Cohan's Nachos"	false
 "Coif fail official? Up, see to toupees!"	true
 "Colgin's: CLOSING!"	true
-"Colty's Costly Octyls"
-"Comic Sans Moccasins"
-"Compton's Compost'n"
-"Condit's IntDocs"
+"Colty's Costly Octyls"	false
+"Comic Sans Moccasins"	false
+"Compton's Compost'n"	false
+"Condit's IntDocs"	false
 "Consider Doc Reins!"	true
-"Consider SniderCo"
+"Consider SniderCo"	false
 "Consoled? Don Close Condoles!"	true
 "Consume Us: MenCo!"	true
 "Contact No-Tat-Co!"	true
-"Cook-OK Co"
-"Cool Story Color Toys"
-"Cooney's Econ-Soy"
-"Coons & Son Co"
-"Cooper Rope Co"
-"Coppola Alco-Pop"
-"Coppola's Loco Apps"
-"Corces Soccer Co-Recs"
-"Cordia D'Arico Cardio"
-"Cordova's Vac-Doors"
-"Corelli's Colliers"
-"CoreOp RepoCo." []
-"Coretta's Tots-Care"
-"Corzine's Zinc Ores"
-"Cosell Cellos"
-"Costa Tacos" []
-"Costean Octanes"
-"Costumer Curt Mose"
-"Cosy Fork Fry Cooks"
-"Cotner's Cornets"
+"Cook-OK Co"	false
+"Cool Story Color Toys"	false
+"Cooney's Econ-Soy"	false
+"Coons & Son Co"	false
+"Cooper Rope Co"	false
+"Coppola Alco-Pop"	false
+"Coppola's Loco Apps"	false
+"Corces Soccer Co-Recs"	false
+"Cordia D'Arico Cardio"	false
+"Cordova's Vac-Doors"	false
+"Corelli's Colliers"	false
+"CoreOp RepoCo."	false []
+"Coretta's Tots-Care"	false
+"Corzine's Zinc Ores"	false
+"Cosell Cellos"	false
+"Costa Tacos"	false []
+"Costean Octanes"	false
+"Costumer Curt Mose"	false
+"Cosy Fork Fry Cooks"	false
+"Cotner's Cornets"	false
 "Count on NoNutCo!"	true
-"Courington Contouring"
-"Couth-Hut Co"
+"Courington Contouring"	false
+"Couth-Hut Co"	false
 "Covet Eco-TV!"	true
-"Cowherd's Chowders"
-"Craig's Cigars"
-"Cred-Tips Predicts"
+"Cowherd's Chowders"	false
+"Craig's Cigars"	false
+"Cred-Tips Predicts"	false
 "Creeps['] Crepes. Respec[']!"	true
-"Cremins Mincers"
-"Crisp Alt Clip-Arts"
-"Cristobo Robotics"
-"Cropham's Camphors"
-"Crowe's Escrow"
-"Cruiser Curries"
-"Crusoe's Sucrose Sources" []
-"Cuneo's Ounces"
-"Cuper's Spruce Up Recs"
-"Curatory Carry-Out"
-"Curt Uden's Undercuts"
-"Customiser Costumiers"
-"CuteLab's Blue Cats"
-"Dale's Deals" []
-"Dalton's Sandlot"
-"Damage Bros. Board Games"
-"Dan Peck's Neck Pads"
-"Dario's Radios"
-"Darner's Errands"
-"Darrel's Larders"
-"Data Reps Adapters"
-"Dav's OK Vodkas"
-"Dawn Krom's Markdowns"
-"Deb Hooks Book Shed"
-"Deb Saxon's Sandboxes"
-"Deb's Beds"
-"Debarros's Adsorbers"
-"Debit Bidet"
-"Decent-Tec Den"
+"Cremins Mincers"	false
+"Crisp Alt Clip-Arts"	false
+"Cristobo Robotics"	false
+"Cropham's Camphors"	false
+"Crowe's Escrow"	false
+"Cruiser Curries"	false
+"Crusoe's Sucrose Sources"	false []
+"Cuneo's Ounces"	false
+"Cuper's Spruce Up Recs"	false
+"Curatory Carry-Out"	false
+"Curt Uden's Undercuts"	false
+"Customiser Costumiers"	false
+"CuteLab's Blue Cats"	false
+"Dale's Deals"	false []
+"Dalton's Sandlot"	false
+"Damage Bros. Board Games"	false
+"Dan Peck's Neck Pads"	false
+"Dario's Radios"	false
+"Darner's Errands"	false
+"Darrel's Larders"	false
+"Data Reps Adapters"	false
+"Dav's OK Vodkas"	false
+"Dawn Krom's Markdowns"	false
+"Deb Hooks Book Shed"	false
+"Deb Saxon's Sandboxes"	false
+"Deb's Beds"	false
+"Debarros's Adsorbers"	false
+"Debit Bidet"	false
+"Decent-Tec Den"	false
 "Decide on IndeedCo"	true
-"Decorations['] Co-Ordinates"
-"Def Pyre Deep-Fry"
-"Deforrest's Fortressed Defrosters"
+"Decorations['] Co-Ordinates"	false
+"Def Pyre Deep-Fry"	false
+"Deforrest's Fortressed Defrosters"	false
 "DefWear: Few Dare!"	true
-"DeGrasse Dressage"
-"Degreasant Tea Gardens"
-"DeHoios Hoodies"
+"DeGrasse Dressage"	false
+"Degreasant Tea Gardens"	false
+"DeHoios Hoodies"	false
 "Deion's is Done! So, dine!"	true
-"DeLancey's Clean Dyes"
-"Delgiorno's Gondoliers"
-"Della's Ladles"
-"Delmore's Modelers"
-"DeLoise's Oilseeds"
-"Delrossi Soldiers"
-"Deluca's Caudles"
-"Demarais Madeiras"
-"DeMarino Radio Men"
-"Demaris's Misreads"
-"Demersal Emeralds"
-"Denault's Unsalted Nuts Deal"
-"Denniston Nintendos"
+"DeLancey's Clean Dyes"	false
+"Delgiorno's Gondoliers"	false
+"Della's Ladles"	false
+"Delmore's Modelers"	false
+"DeLoise's Oilseeds"	false
+"Delrossi Soldiers"	false
+"Deluca's Caudles"	false
+"Demarais Madeiras"	false
+"DeMarino Radio Men"	false
+"Demaris's Misreads"	false
+"Demersal Emeralds"	false
+"Denault's Unsalted Nuts Deal"	false
+"Denniston Nintendos"	false
 "Dense Strainer Needs Trainers!"	true
-"Dentinger's Tenderings"
+"Dentinger's Tenderings"	false
 "Depend on Ned Epdon!"	true
-"Deponte's Pentodes"
+"Deponte's Pentodes"	false
 "DermaDream = Rad Me!"	true
-"Derrig's Girders"
+"Derrig's Girders"	false
 "Deryl can dry clean!"	true
-"Devine's Endives"
-"Di Best Bidets"
-"Di Malanta's Dalmatians"
-"DiCarlo's Cordials"
-"Diebel's Edibles"
+"Devine's Endives"	false
+"Di Best Bidets"	false
+"Di Malanta's Dalmatians"	false
+"DiCarlo's Cordials"	false
+"Diebel's Edibles"	false
 "Dig crafts? Gift cards!"	true
-"Digestional Gelatinoids"
-"Dilger's Girdles"
-"Dinkel's Kindles"
-"Diploma Mail-Pod"
-"Discarded Dad's Cider"
-"Discount Conduits"
+"Digestional Gelatinoids"	false
+"Dilger's Girdles"	false
+"Dinkel's Kindles"	false
+"Diploma Mail-Pod"	false
+"Discarded Dad's Cider"	false
+"Discount Conduits"	false
 "DISCOUNTER REDUCTIONS!!!!!"	true
 "Discover VidScore!"	true
 "DiveNet: Evident!"	true []
-"Doane's Anodes" []
-"Doc Hume's Does-Much Ouch-Meds"
-"Doc Tom Dot Com"
-"Doc's Cult Cold Cuts"
-"DocTime's Medics To Domestic"
-"Dodie's Diodes"
-"Dolinger-Reingold Older Gin"
-"Dolinger's Soldering"
-"Domestic Dime-Cost Doc-Items" []
-"Don Leitner's Tenderloins"
+"Doane's Anodes"	false []
+"Doc Hume's Does-Much Ouch-Meds"	false
+"Doc Tom Dot Com"	false
+"Doc's Cult Cold Cuts"	false
+"DocTime's Medics To Domestic"	false
+"Dodie's Diodes"	false
+"Dolinger-Reingold Older Gin"	false
+"Dolinger's Soldering"	false
+"Domestic Dime-Cost Doc-Items"	false []
+"Don Leitner's Tenderloins"	false
 "Don't Berate the Rebate Beater!"	true
-"Done-Lame Lemonade" []
-"Donuts by Bud Tony's"
-"Dood Luc's Cool Duds"
-"Door Dr. Rod Ord"
-"Dorado's Odd Oars"
-"Dori's Roids"
-"DorstCo Doctors"
-"Doss Sods"
-"Doug Roush Sourdough"
-"Downing, Wingdon [']N Godwin"
-"Dr. Core's Records"
-"Dr. Estes Dessert"
-"Dr. Oven Vendor"
+"Done-Lame Lemonade"	false []
+"Donuts by Bud Tony's"	false
+"Dood Luc's Cool Duds"	false
+"Door Dr. Rod Ord"	false
+"Dorado's Odd Oars"	false
+"Dori's Roids"	false
+"DorstCo Doctors"	false
+"Doss Sods"	false
+"Doug Roush Sourdough"	false
+"Downing, Wingdon [']N Godwin"	false
+"Dr. Core's Records"	false
+"Dr. Estes Dessert"	false
+"Dr. Oven Vendor"	false
 "Dr. Rose Orders Doser-R"	true
-"Dr. Singer Grinders"
-"Dr. Tice Credit"
+"Dr. Singer Grinders"	false
+"Dr. Tice Credit"	false
 "Drab is Bad, Sir. Baird's Braids!"	true
-"Dredwic's Cwidders"
-"Drees's Seders"
-"Dry Alan's Lanyards"
-"Duarte's True Ads"
-"Dubinsky Kind Buys"
-"DuCharme Cured Ham"
+"Dredwic's Cwidders"	false
+"Drees's Seders"	false
+"Dry Alan's Lanyards"	false
+"Duarte's True Ads"	false
+"Dubinsky Kind Buys"	false
+"DuCharme Cured Ham"	false
 "Duds? BAM! Mad Bud's Dumb Ads"	true
-"Duds By Buddy's"
-"Duerst's Trussed Dusters"
-"Dufner's Refunds" []
+"Duds By Buddy's"	false
+"Duerst's Trussed Dusters"	false
+"Dufner's Refunds"	false []
 "DuFrein's: Friend Us, Find Sure Fun Rides!"	true
-"Duggar's Drug-Gas"
-"Dunegan Dunnage"
-"Duo-Lab Lo-Baud"
-"Dusenbury Underbuys"
-"DuShane's Sunshade"
-"Dust'd Off Odd Stuff"
+"Duggar's Drug-Gas"	false
+"Dunegan Dunnage"	false
+"Duo-Lab Lo-Baud"	false
+"Dusenbury Underbuys"	false
+"DuShane's Sunshade"	false
+"Dust'd Off Odd Stuff"	false
 "Duty Free Feed Yurt: True, Defy!"	true
-"E-Sci-Dev Devices"
-"Eagle U League"
-"Eagleson Gasolene"
-"Earl Blum's Uber-Small Umbrellas"
-"Earl Hoke's Lake Shore Kosher Ale"
-"Earl's Fake Leaf Rakes"
-"Earl's Laser"
-"EarnSol Loaners"
-"Easler Leaser Resale" []
+"E-Sci-Dev Devices"	false
+"Eagle U League"	false
+"Eagleson Gasolene"	false
+"Earl Blum's Uber-Small Umbrellas"	false
+"Earl Hoke's Lake Shore Kosher Ale"	false
+"Earl's Fake Leaf Rakes"	false
+"Earl's Laser"	false
+"EarnSol Loaners"	false
+"Easler Leaser Resale"	false []
 "Eat Rod's Roasted!"	true
-"Ebert's BESTER Berets"
-"Eckart's Rackets"
-"Ed Cain's Sad Nice Candies and Ices"
-"Ed Lieb's Edibles" []
-"Ed Short Red Hots" []
-"Ed Stagg Gadgets"
+"Ebert's BESTER Berets"	false
+"Eckart's Rackets"	false
+"Ed Cain's Sad Nice Candies and Ices"	false
+"Ed Lieb's Edibles"	false []
+"Ed Short Red Hots"	false []
+"Ed Stagg Gadgets"	false
 "Ed Stone Denotes Needs to Set Done!"	true
-"Ed West Tweeds"
-"Ed Wye: Ye Wed, We Dye"
-"Ed's Twig Widgets"
+"Ed West Tweeds"	false
+"Ed Wye: Ye Wed, We Dye"	false
+"Ed's Twig Widgets"	false
 "Edgiest Tees. Dig!"	true
-"Edmonds Oddsmen"
-"Edsall Ladles" []
-"Edwards Wadders"
+"Edmonds Oddsmen"	false
+"Edsall Ladles"	false []
+"Edwards Wadders"	false
 "Eel-Hat, the Ale: ah, Leet!"	true
-"Egleston's Leet Songs"
-"Ego-Farm Fromage"
-"Egoists['] Stogies"
-"Egwin's Sewing"
+"Egleston's Leet Songs"	false
+"Ego-Farm Fromage"	false
+"Egoists['] Stogies"	false
+"Egwin's Sewing"	false
 "Eh, Debtor-Bothered? Bet-Horde!"	true
-"Ehinger's Greenish Sheering" []
-"Ehler St. Shelter"
-"Elan-Shot Ethanols"
-"Eleas Easel-Lease" []
+"Ehinger's Greenish Sheering"	false []
+"Ehler St. Shelter"	false
+"Elan-Shot Ethanols"	false
+"Eleas Easel-Lease"	false []
 "Elf Wine: Feel Win, New Life!"	true
-"Eli Ott's Toilets"
-"Elidia's Dailies"
-"Ella Cheng's Challenges"
-"Elrod's Solder"
-"Elsa's Sales"
-"Elva's Salve" []
-"Em Heick Kimchee"
-"Emert's Meters"
-"An Empty Payment" []
+"Eli Ott's Toilets"	false
+"Elidia's Dailies"	false
+"Ella Cheng's Challenges"	false
+"Elrod's Solder"	false
+"Elsa's Sales"	false
+"Elva's Salve"	false []
+"Em Heick Kimchee"	false
+"Emert's Meters"	false
+"An Empty Payment"	false []
 "Enger Green Regen, tomorrow's power source!"	true
-"Engram's Mangers"
-"Enos's Senso-Noses"
-"Enstrom Mentors"
-"Entsminger Resignment"
+"Engram's Mangers"	false
+"Enos's Senso-Noses"	false
+"Enstrom Mentors"	false
+"Entsminger Resignment"	false
 "Equitos: QUITE SO!"	true
-"Erdahl's Heralds"
-"Eric Gant Catering"
-"Eric's Fun Nice Furs"
-"Ericson Coiners"
+"Erdahl's Heralds"	false
+"Eric Gant Catering"	false
+"Eric's Fun Nice Furs"	false
+"Ericson Coiners"	false
 "Ernest Tian Entertains Tenantries"	true
-"Ernestina Tanneries"
+"Ernestina Tanneries"	false
 "Err, beg Gerber/Berger Law Firm!"	true
-"Esau Eaus" []
-"Esberth Sherbet"
-"Estala's Atlases"
-"Estrich Richest Cithers" []
-"Etc.-Tec"
-"Etland Dental"
+"Esau Eaus"	false []
+"Esberth Sherbet"	false
+"Estala's Atlases"	false
+"Estrich Richest Cithers"	false []
+"Etc.-Tec"	false
+"Etland Dental"	false
 "Ettina's Tea Tins: In Taste It's Neat!"	true
-"Ettinger's Resetting/Retesting"
-"Eubanks's Sunbakes"
-"Euro-Medal Remoulade"
-"Eustis Tissue"
-"Eutsler's Streusel"
-"Evangelist Elevatings"
-"Evanston Nav-Notes"
-"Evaristo's Assortive Savoriest"
-"Eve's Gig Veggies"
-"Evelina's Vaseline"
-"Everhart's Harvester"
-"Evon's Ovens"
-"Evrice's Ecrives Service"
-"Ewart Water"
-"Exasp-a-Spex"
+"Ettinger's Resetting/Retesting"	false
+"Eubanks's Sunbakes"	false
+"Euro-Medal Remoulade"	false
+"Eustis Tissue"	false
+"Eutsler's Streusel"	false
+"Evangelist Elevatings"	false
+"Evanston Nav-Notes"	false
+"Evaristo's Assortive Savoriest"	false
+"Eve's Gig Veggies"	false
+"Evelina's Vaseline"	false
+"Everhart's Harvester"	false
+"Evon's Ovens"	false
+"Evrice's Ecrives Service"	false
+"Ewart Water"	false
+"Exasp-a-Spex"	false
 "Excalibur: I be a luxcar!"	true
 "Excalubur: I be a LUX car!"	true
-"Experiment Re-Exemptin[']"
-"Fab Ron's Brans of no Barfs"
-"Faberge's Free Bags"
+"Experiment Re-Exemptin[']"	false
+"Fab Ron's Brans of no Barfs"	false
+"Faberge's Free Bags"	false
 "Fae Ott's: To Feast of Taste: Eats Oft!"	true
-"Faintest Fine Tats"
-"Fake Rustic Fruitcakes"
+"Faintest Fine Tats"	false
+"Fake Rustic Fruitcakes"	false
 "Fake-Vite: Take Five!"	true
-"False-Obit Lifeboats" []
+"False-Obit Lifeboats"	false []
 "Fan Moods? Man's Food!"	true
-"Fancy Do of Candy"
+"Fancy Do of Candy"	false
 "FartsCo Factors Far Cost! O, Crafts!"	true
-"Fast Life Stiff Ale"
-"Fast Paced Pat's Decaf"
-"Fastbaker Breakfast" []
-"Fat Frodo Afford-to-Fart Food"
-"Fat Jai's Fajitas"
-"Fat-O-Meal Meat Loaf"
-"Faunists['] Fustians"
-"Faustin's Fustians" []
+"Fast Life Stiff Ale"	false
+"Fast Paced Pat's Decaf"	false
+"Fastbaker Breakfast"	false []
+"Fat Frodo Afford-to-Fart Food"	false
+"Fat Jai's Fajitas"	false
+"Fat-O-Meal Meat Loaf"	false
+"Faunists['] Fustians"	false
+"Faustin's Fustians"	false []
 "Fear Plot, Mr[fs]? Platformer[fs]!"	true
-"Fechter's Fetchers"
-"Feddersen Defenders"
-"Feebler Elf Beer"
+"Fechter's Fetchers"	false
+"Feddersen Defenders"	false
+"Feebler Elf Beer"	false
 "Feel Wan? New Leaf!"	true
 "Fehringer's: Refreshing!"	true
 "Felecia's Calefies!"	true
-"Fermat's RAM Fest"
-"Ferrington Refronting"
+"Fermat's RAM Fest"	false
+"Ferrington Refronting"	false
 "Fiesta-Race Cafeterias: Easier, Fact!"	true
-"Fillmore's Lore Films"
+"Fillmore's Lore Films"	false
 "FineOrg: No Grief!"	true
-"Finer Cash Franchise"
+"Finer Cash Franchise"	false
 "Fines St. Fitness INFESTS!"	true
-"Finewood's Food & Wines"
-"Finster's Snifters"
-"Fischler Filchers"
+"Finewood's Food & Wines"	false
+"Finster's Snifters"	false
+"Fischler Filchers"	false
 "Fisher's is Fresh!"	true
-"Flattering Gift Rental"
-"Fletson Teflons"
-"Flo Goede Feel-Good Glee Food"
-"Floranti's Flatirons"
-"Florencia's Falconries"
-"Fogel's Gels of Self-Go"
-"The Food of Hot Ed"
-"A Fool's Loofas"
-"Footpads['] Apt Foods"
-"Forbis Rosbif"
-"Forensic Info-Recs"
-"A Forge of Gear"
-"Fouts So-Tuf Tofus"
-"Fowler's Flowers"
-"Fox Lake Fake Lox"
-"Fran Tait's Fast-Train"
-"Freelance Fencer Ale"
-"Freiling Refiling"
-"Fresh at Father's"
-"Freund's Refunds" []
-"Friere's Ferries"
-"Frostwood Worst Food"
-"Frugal Gal Fur"
-"Frutansky Funky Arts"
+"Flattering Gift Rental"	false
+"Fletson Teflons"	false
+"Flo Goede Feel-Good Glee Food"	false
+"Floranti's Flatirons"	false
+"Florencia's Falconries"	false
+"Fogel's Gels of Self-Go"	false
+"The Food of Hot Ed"	false
+"A Fool's Loofas"	false
+"Footpads['] Apt Foods"	false
+"Forbis Rosbif"	false
+"Forensic Info-Recs"	false
+"A Forge of Gear"	false
+"Fouts So-Tuf Tofus"	false
+"Fowler's Flowers"	false
+"Fox Lake Fake Lox"	false
+"Fran Tait's Fast-Train"	false
+"Freelance Fencer Ale"	false
+"Freiling Refiling"	false
+"Fresh at Father's"	false
+"Freund's Refunds"	false []
+"Friere's Ferries"	false
+"Frostwood Worst Food"	false
+"Frugal Gal Fur"	false
+"Frutansky Funky Arts"	false
 "Fun Bart's Burns Fat (Barf TUNS!)"	true
-"Fun-Fort Turnoff"
-"Fungal-Unflag"
-"Funk Dojo Junk Food"
+"Fun-Fort Turnoff"	false
+"Fungal-Unflag"	false
+"Funk Dojo Junk Food"	false
 "Furlham Rum: HALF harmful!"	true
-"G. Crosby Cyborgs" []
-"G. Frei Grief-Refig"
-"Gaal's Galas"
-"Gabe Sand Bandages"
-"Gail Thon's Thingolas"
+"G. Crosby Cyborgs"	false []
+"G. Frei Grief-Refig"	false
+"Gaal's Galas"	false
+"Gabe Sand Bandages"	false
+"Gail Thon's Thingolas"	false
 "Gaiman's is MANGA!"	true
 "Gamble! Be GLAM!"	true
-"Garish Grisha Hi-Rags"
-"Garlic-Soil Cigarillos"
-"Garmenture Reargument"
-"Garone's Oranges"
-"Garoutte Tutorage"
-"Gasometer Megastore"
-"Gassert Stagers"
-"Gasvale Salvage: LA, Vegas"
-"Gatepost Pottages"
-"Gaubert's Guest Bar"
-"Gavin's Saving"
-"Gawjiss Jigsaws"
-"Gay Pools Pay Logos"
-"Gayton's Nag Toys"
-"Gearhead Headgear"
-"Gecko Keg Co"
-"Gencarelli's Allergenics"
-"Gendreau's Dungarees" []
-"Gennie's Engines"
-"Gerlach's Schlager"
-"Germain's Smearing"
-"Gerri's Re-Rigs"
-"Gerrity's Registry"
-"GerryCo Grocery" []
-"Gervais Gravies" []
-"Gervase Greaves"
-"Gervasi Gravies" []
-"Gesualdi's Gladiuses"
-"Get KASS Gaskets"
-"Get-Lean: A Gentle, Elegant, Neat Gel"
+"Garish Grisha Hi-Rags"	false
+"Garlic-Soil Cigarillos"	false
+"Garmenture Reargument"	false
+"Garone's Oranges"	false
+"Garoutte Tutorage"	false
+"Gasometer Megastore"	false
+"Gassert Stagers"	false
+"Gasvale Salvage: LA, Vegas"	false
+"Gatepost Pottages"	false
+"Gaubert's Guest Bar"	false
+"Gavin's Saving"	false
+"Gawjiss Jigsaws"	false
+"Gay Pools Pay Logos"	false
+"Gayton's Nag Toys"	false
+"Gearhead Headgear"	false
+"Gecko Keg Co"	false
+"Gencarelli's Allergenics"	false
+"Gendreau's Dungarees"	false []
+"Gennie's Engines"	false
+"Gerlach's Schlager"	false
+"Germain's Smearing"	false
+"Gerri's Re-Rigs"	false
+"Gerrity's Registry"	false
+"GerryCo Grocery"	false []
+"Gervais Gravies"	false []
+"Gervase Greaves"	false
+"Gervasi Gravies"	false []
+"Gesualdi's Gladiuses"	false
+"Get KASS Gaskets"	false
+"Get-Lean: A Gentle, Elegant, Neat Gel"	false
 "Get on GoNet!"	true
-"Get Oscar's Escargots"
+"Get Oscar's Escargots"	false
 "Get SAKS Gaskets!"	true
-"Get Taube's Baguettes"
-"Geyserite Tiger-Eyes"
+"Get Taube's Baguettes"	false
+"Geyserite Tiger-Eyes"	false
 "Gia Vent Vintage: Get Vain!"	true
-"Giannotti's Stationing"
-"Gibson/Bogins Bingos"
-"Gijer's Rejigs"
-"Gil Matsko Goat's Milk"
-"Gil's Nice Ceilings"
-"Gilgath's Gaslight"
-"GimpNest Pigments"
-"Gingold Lodging"
-"Giselle Gellies"
-"Glamour-Goal Rum"
-"Glass Pen Spangles"
-"Gleaton's Tangelos"
+"Giannotti's Stationing"	false
+"Gibson/Bogins Bingos"	false
+"Gijer's Rejigs"	false
+"Gil Matsko Goat's Milk"	false
+"Gil's Nice Ceilings"	false
+"Gilgath's Gaslight"	false
+"GimpNest Pigments"	false
+"Gingold Lodging"	false
+"Giselle Gellies"	false
+"Glamour-Goal Rum"	false
+"Glass Pen Spangles"	false
+"Gleaton's Tangelos"	false
 "Glinco's, now CLOSING!"	true
-"Glintier Retiling"
-"Glum-Labs Gumballs"
-"Go-Sprint Sporting"
-"Go to Duff's: Good Stuff"
-"Goblin St. Biltongs"
-"God's-Lab Ad Blogs"
-"Godinho Hood Gin"
-"Godwin's Dowsing"
+"Glintier Retiling"	false
+"Glum-Labs Gumballs"	false
+"Go-Sprint Sporting"	false
+"Go to Duff's: Good Stuff"	false
+"Goblin St. Biltongs"	false
+"God's-Lab Ad Blogs"	false
+"Godinho Hood Gin"	false
+"Godwin's Dowsing"	false
 "Gold Cola? Good Call!"	true
-"Golding's Lodgings"
-"Goob's BOGOs"
-"Goodwill's Wild Logos"
-"Gord Fu's Drugs of Dog Furs"
-"Gordon C.'s Corndogs"
-"Gordon Facio Organic Food"
-"Gorin's O-Rings"
-"Gorsline-Olinger's Resoling"
-"Gosman Mangos"
+"Golding's Lodgings"	false
+"Goob's BOGOs"	false
+"Goodwill's Wild Logos"	false
+"Gord Fu's Drugs of Dog Furs"	false
+"Gordon C.'s Corndogs"	false
+"Gordon Facio Organic Food"	false
+"Gorin's O-Rings"	false
+"Gorsline-Olinger's Resoling"	false
+"Gosman Mangos"	false
 "Got new? Get now!!!!"	true
-"Got-Plus Lug-Pots"
+"Got-Plus Lug-Pots"	false
 "Goths['] Inn: [']S Nothing!"	true
 "Gotta love to ogle a TV!"	true
-"Gowan's No-Swag Wagons"
+"Gowan's No-Swag Wagons"	false
 "Grab Ian's Bargains!"	true
-"Gracia's Agarics"
-"Gracie's E-Cigars"
-"Graefe's Serfage"
-"Gramps Vine Revampings"
-"Grandison Adornings"
-"Granier's Earrings"
-"Granieri's Reraising"
-"Grannis Snaring"
-"Grapevine Vegan Pier"
-"Graydon Organdy"
+"Gracia's Agarics"	false
+"Gracie's E-Cigars"	false
+"Graefe's Serfage"	false
+"Gramps Vine Revampings"	false
+"Grandison Adornings"	false
+"Granier's Earrings"	false
+"Granieri's Reraising"	false
+"Grannis Snaring"	false
+"Grapevine Vegan Pier"	false
+"Graydon Organdy"	false
 "Greatest Rates-Get! Gee, Start!"	true
-"GreenSci Generics"
-"Greenwood's Newer Goods" []
-"Greg Mota's Mortgages"
-"Grierson Ignorers"
-"Grigson Gorgins"
-"Grimaldo's Marigolds"
-"Grin-Wit Writing" []
-"Gringo's Sin-Grog"
-"Groomsman Monograms"
+"GreenSci Generics"	false
+"Greenwood's Newer Goods"	false []
+"Greg Mota's Mortgages"	false
+"Grierson Ignorers"	false
+"Grigson Gorgins"	false
+"Grimaldo's Marigolds"	false
+"Grin-Wit Writing"	false []
+"Gringo's Sin-Grog"	false
+"Groomsman Monograms"	false
 "GrowTek: Get Work!"	true
-"Grub Harem's Hamburgers"
-"Gruber's Burgers"
-"Gruden's Rug Dens"
-"Grundy's Dry Guns"
-"Gueremin Meringue"
-"Guiton's Go-Units" []
-"Gus Elem Legumes"
-"Gus McNiff McGuffins"
-"Guthounds['] Doughnuts"
+"Grub Harem's Hamburgers"	false
+"Gruber's Burgers"	false
+"Gruden's Rug Dens"	false
+"Grundy's Dry Guns"	false
+"Gueremin Meringue"	false
+"Guiton's Go-Units"	false []
+"Gus Elem Legumes"	false
+"Gus McNiff McGuffins"	false
+"Guthounds['] Doughnuts"	false
 "Guy Bass Buys Gas!"	true
-"Gyro-Orgy"
-"Haberland's Handlebars"
-"Haggins Gashing"
-"Halpern's Shrapnel"
-"Hamlyn's Hymnals"
-"Handy Wm Wyndham"
-"Hansen Hennas" []
+"Gyro-Orgy"	false
+"Haberland's Handlebars"	false
+"Haggins Gashing"	false
+"Halpern's Shrapnel"	false
+"Hamlyn's Hymnals"	false
+"Handy Wm Wyndham"	false
+"Hansen Hennas"	false []
 "Hardesty Hydrates!"	true []
-"Haring's Garnish"
-"Harrison Air Horns"
-"Harwick's Rickshaw"
-"Harwood's Road Show"
-"Haselton Ethanols" []
-"Hassinger Garnishes/Shearings"
-"Hastert Hatters"
-"Hastings Stashing"
-"Hauk's Hakus"
-"Hawtin's WIN Hats"
+"Haring's Garnish"	false
+"Harrison Air Horns"	false
+"Harwick's Rickshaw"	false
+"Harwood's Road Show"	false
+"Haselton Ethanols"	false []
+"Hassinger Garnishes/Shearings"	false
+"Hastert Hatters"	false
+"Hastings Stashing"	false
+"Hauk's Hakus"	false
+"Hawtin's WIN Hats"	false
 "HeapsCo: So Cheap!"	true
-"Hebrew Mo's Homebrews"
-"Hector's Torches & Troches"
-"Heinous Uni-Hose"
-"Heisler's Heirless Relishes"
-"Helsing's Shingles"
-"Hempiest Epithems"
-"Henderson Nosher Den"
-"Henry Gloop Nephrology/Phrenology"
-"Hep Cats['] Patches" []
+"Hebrew Mo's Homebrews"	false
+"Hector's Torches & Troches"	false
+"Heinous Uni-Hose"	false
+"Heisler's Heirless Relishes"	false
+"Helsing's Shingles"	false
+"Hempiest Epithems"	false
+"Henderson Nosher Den"	false
+"Henry Gloop Nephrology/Phrenology"	false
+"Hep Cats['] Patches"	false []
 "Hep? No? PHENO-PHONE!"	true []
-"Her Best Sherbet" []
-"Herbalist Hair-Belts"
-"Heuring's Ushering"
-"Hi-Copes Hospice"
-"Hi-Glare Hair Gel" []
-"Higton's Thingos"
+"Her Best Sherbet"	false []
+"Herbalist Hair-Belts"	false
+"Heuring's Ushering"	false
+"Hi-Copes Hospice"	false
+"Hi-Glare Hair Gel"	false []
+"Higton's Thingos"	false
 "Hilgdon's: Holdings Sold Nigh!"	true
-"Hilgert's Slighter Lighters"
-"Hip Cons Shop, Inc." []
+"Hilgert's Slighter Lighters"	false
+"Hip Cons Shop, Inc."	false []
 "A hipper happier paper. Hi!"	true
-"Hiroads Hairdos"
+"Hiroads Hairdos"	false
 "His Ready Hair Dyes Are Dishy!"	true
-"Hislop Polish"
+"Hislop Polish"	false
 "HIT NOW! WIN! HOT!!!"	true
-"HoboMart's Bathrooms"
-"Holgerson's Long Horses"
-"Holistic Chits Oil"
-"Honig's Hosing"
+"HoboMart's Bathrooms"	false
+"Holgerson's Long Horses"	false
+"Holistic Chits Oil"	false
+"Honig's Hosing"	false
 "HoochCo, Ooh!"	true
-"Hopkins Ink Shop"
-"Hosman's Hansoms"
-"Hot Duds Odd Huts"
+"Hopkins Ink Shop"	false
+"Hosman's Hansoms"	false
+"Hot Duds Odd Huts"	false
 "Hot? Jet in the Joint!"	true
-"Hot-Presses Prostheses"
-"Hsiu's Sushi"
-"Huckstep Ketchups"
-"Hula-Haul"
-"I-Be-Foul Biofuel"
-"I-Bouquet Boutique"
-"I-Look-OK Oil"
+"Hot-Presses Prostheses"	false
+"Hsiu's Sushi"	false
+"Huckstep Ketchups"	false
+"Hula-Haul"	false
+"I-Be-Foul Biofuel"	false
+"I-Bouquet Boutique"	false
+"I-Look-OK Oil"	false
 "I Stake at Ike's!"	true
 "I-Steal-It Sale!"	true
 "I trust Titus R.!"	true
 "I Use Mr. I'm Sure!"	true
-"I'm-Mo[']-Super Emporiums"
-"Iannello Lanoline" []
-"Ice-So-OK Cookies"
-"Iced-Spite Pesticide"
+"I'm-Mo[']-Super Emporiums"	false
+"Iannello Lanoline"	false []
+"Ice-So-OK Cookies"	false
+"Iced-Spite Pesticide"	false
 "Icer Dome: Mediocre? Dire? Come! More Dice!"	true
-"IdleCo's EcoLids"
+"IdleCo's EcoLids"	false
 "If Acne in Face: ECAFIN!"	true
 "If ALE, a life!"	true
-"If-Stout Outfits"
-"Ilich's Chilis"
-"Imbrogno Brooming"
-"Inane Curs Insurance"
-"IndustCo Conduits" []
-"IndustCo Discount" []
-"Ink by Binky"
-"Instanter Transient Intranets"
+"If-Stout Outfits"	false
+"Ilich's Chilis"	false
+"Imbrogno Brooming"	false
+"Inane Curs Insurance"	false
+"IndustCo Conduits"	false []
+"IndustCo Discount"	false []
+"Ink by Binky"	false
+"Instanter Transient Intranets"	false
 "Insured UI Nerds!"	true
-"Intellectual Null-Ice Latte"
-"Inter-Local Citronella"
-"Intriago Rigatoni"
-"Ionic Prints Inscription"
-"Irate-Face Cafeteria"
-"Isaac Acais"
-"Isenhart Hairnets"
-"Isenhour's Nourishes"
+"Intellectual Null-Ice Latte"	false
+"Inter-Local Citronella"	false
+"Intriago Rigatoni"	false
+"Ionic Prints Inscription"	false
+"Irate-Face Cafeteria"	false
+"Isaac Acais"	false
+"Isenhart Hairnets"	false
+"Isenhour's Nourishes"	false
 "It's at Tait's!"	true
-"Ittner's Retints"
-"Ivie Garnett Integrative Vinaigrette"
-"Jane's Jeans"
-"Janey Bell's Jelly Beans"
-"Jay Ross Soy Jars"
-"JebstCo Objects"
+"Ittner's Retints"	false
+"Ivie Garnett Integrative Vinaigrette"	false
+"Jane's Jeans"	false
+"Janey Bell's Jelly Beans"	false
+"Jay Ross Soy Jars"	false
+"JebstCo Objects"	false
 "Jen Booth: on the Job!"	true
-"Jillee's Jellies"
-"Jim Gluk's Milk Jugs"
+"Jillee's Jellies"	false
+"Jim Gluk's Milk Jugs"	false
 "Joe Bond's Jobs DONE!"	true
-"JoinStar Janitors"
-"Jon's Web New Jobs"
-"Joshi's Shojis"
-"Joubert's True Jobs"
-"Julio's Oil-Jus"
-"Juniot's U-Joints"
-"Kagmin's Masking Makings"
-"Kalis Lasik"
-"Kate's Steak"
-"Katy Cash's Haystacks"
-"Kay Chen's Hackneys"
-"Keitha's Shitake"
-"Keniston's Inkstones"
+"JoinStar Janitors"	false
+"Jon's Web New Jobs"	false
+"Joshi's Shojis"	false
+"Joubert's True Jobs"	false
+"Julio's Oil-Jus"	false
+"Juniot's U-Joints"	false
+"Kagmin's Masking Makings"	false
+"Kalis Lasik"	false
+"Kate's Steak"	false
+"Katy Cash's Haystacks"	false
+"Kay Chen's Hackneys"	false
+"Keitha's Shitake"	false
+"Keniston's Inkstones"	false
 "Kershaw Hawkers: We Shark!"	true
-"Ketterman's Tentmakers"
-"Kevin's Knives"
-"Kick-Start Track-Kits"
+"Ketterman's Tentmakers"	false
+"Kevin's Knives"	false
+"Kick-Start Track-Kits"	false
 "KidScape is PACKED!"	true
-"Kiesel's Selkies"
-"Kiko's Kiosk"
-"Kilbane's Sinkable Blankies"
-"Kim Loy's Soy Milk"
-"Kimball's Silk Balm"
-"Kimura's Rumakis"
-"Kindfort's Soft Drink"
-"Kindness Inn Desks"
-"King Fear-Freak Gin"
-"Kishka Khakis"
+"Kiesel's Selkies"	false
+"Kiko's Kiosk"	false
+"Kilbane's Sinkable Blankies"	false
+"Kim Loy's Soy Milk"	false
+"Kimball's Silk Balm"	false
+"Kimura's Rumakis"	false
+"Kindfort's Soft Drink"	false
+"Kindness Inn Desks"	false
+"King Fear-Freak Gin"	false
+"Kishka Khakis"	false
 "Kissler's: Risk Less!"	true
 "Kit Sews Weskits!"	true
-"Kittner's Trinkets"
-"Klepac's Spackle"
-"Klossner Snorkels"
-"Koch's Shock Hocks"
-"KonigCo Cooking"
-"Korhonen's Nonkosher"
+"Kittner's Trinkets"	false
+"Klepac's Spackle"	false
+"Klossner Snorkels"	false
+"Koch's Shock Hocks"	false
+"KonigCo Cooking"	false
+"Korhonen's Nonkosher"	false
 "KorTech: THE ROCK!"	true
-"Kosar Okras" []
-"Krewson Knowers"
-"Kris Best Briskets"
-"Kubik's Bikkus"
-"Kumari Rumaki"
-"La Niche Chilean"
-"Laciest Elastic"
-"Lacivita's Viaticals"
-"Lacourse's Carousels"
-"Lads['] [crap-u] Placards"
-"Laffer's Raffles"
-"Laforce's Alfresco Flares Co"
-"Lame Host Mae Holt's Hot Meals" []
-"Lammert's Trammels"
-"Lankest Anklets"
-"Lannister Internals"
-"Lapser Pearls"
-"Larber's Barrels"
-"Lasco Colas"
+"Kosar Okras"	false []
+"Krewson Knowers"	false
+"Kris Best Briskets"	false
+"Kubik's Bikkus"	false
+"Kumari Rumaki"	false
+"La Niche Chilean"	false
+"Laciest Elastic"	false
+"Lacivita's Viaticals"	false
+"Lacourse's Carousels"	false
+"Lads['] [crap-u] Placards"	false
+"Laffer's Raffles"	false
+"Laforce's Alfresco Flares Co"	false
+"Lame Host Mae Holt's Hot Meals"	false []
+"Lammert's Trammels"	false
+"Lankest Anklets"	false
+"Lannister Internals"	false
+"Lapser Pearls"	false
+"Larber's Barrels"	false
+"Lasco Colas"	false
 "Lasseigne ensilages: agileness!"	true
-"Lassiter Realists"
-"Last Boy Toy Labs"
+"Lassiter Realists"	false
+"Last Boy Toy Labs"	false
 "Last Cue! Cut-Sale!"	true
-"LastOnCo Coolants"
+"LastOnCo Coolants"	false
 "Latham's Has Malt!"	true
-"Laurice Wolf Cauliflower"
-"Lauryn's Uranyls"
-"Lavages Salvage" []
-"LaVonda's Load-Vans"
-"Le Apt Plate" []
-"Le Cap Place"
-"Le Seven-Elevens"
-"Le Vest Svelte"
-"Lea's Ales Sale"
-"Leaphart's Asphalter"
-"Leavitt's 'A' Vittles"
-"Leavitt's Vile Tats" []
-"Leaworthy Holy Water"
-"LeDoux Delux-O"
-"Legato's Gelatos"
-"Legba's Bagels" []
-"Lego-Bot Bootleg"
-"Leibman's Bailsmen"
-"Leighton's Hosteling"
-"Leisinger Lingeries"
-"LeMay's Measly Yealms"
-"Len's Pic Pencils"
-"Lenin's Linens"
-"LensCare Cleanser" []
-"Lequire's Reliques"
-"Les Gray Argyles"
+"Laurice Wolf Cauliflower"	false
+"Lauryn's Uranyls"	false
+"Lavages Salvage"	false []
+"LaVonda's Load-Vans"	false
+"Le Apt Plate"	false []
+"Le Cap Place"	false
+"Le Seven-Elevens"	false
+"Le Vest Svelte"	false
+"Lea's Ales Sale"	false
+"Leaphart's Asphalter"	false
+"Leavitt's 'A' Vittles"	false
+"Leavitt's Vile Tats"	false []
+"Leaworthy Holy Water"	false
+"LeDoux Delux-O"	false
+"Legato's Gelatos"	false
+"Legba's Bagels"	false []
+"Lego-Bot Bootleg"	false
+"Leibman's Bailsmen"	false
+"Leighton's Hosteling"	false
+"Leisinger Lingeries"	false
+"LeMay's Measly Yealms"	false
+"Len's Pic Pencils"	false
+"Lenin's Linens"	false
+"LensCare Cleanser"	false []
+"Lequire's Reliques"	false
+"Les Gray Argyles"	false
 "Les Vries-Elsevier RELIEVES!"	true
-"Lesmeister Smelteries"
-"Lesniak Alkines"
-"Lesniak's Sealskin"
-"LeSport Petrols"
-"LetMeCo Telecom"
-"Letta's Latest Lattes"
-"Levitan's Ventails"
-"Levon's Novels"
-"Lew's Lens Wellness"
-"Lewey Jr. Jewelry"
-"Ley's Lyes"
-"Leyton's Soylent"
-"Li'l Reg's Grilles"
-"Li'l Stan's Installs"
+"Lesmeister Smelteries"	false
+"Lesniak Alkines"	false
+"Lesniak's Sealskin"	false
+"LeSport Petrols"	false
+"LetMeCo Telecom"	false
+"Letta's Latest Lattes"	false
+"Levitan's Ventails"	false
+"Levon's Novels"	false
+"Lew's Lens Wellness"	false
+"Lewey Jr. Jewelry"	false
+"Ley's Lyes"	false
+"Leyton's Soylent"	false
+"Li'l Reg's Grilles"	false
+"Li'l Stan's Installs"	false
 "Li'l Stew's: It's Swell!"	true
 "Lide's Delis: Sidle, Slide!"	true
-"Life Coach/Cliche Oaf [if player is male]Leif Chaco[else]Felica Cho[end if]"
+"Life Coach/Cliche Oaf [if player is male]Leif Chaco[else]Felica Cho[end if]"	false
 "Life Stinks? Niki Felts's Finest Silk"	true
-"Lignum Vitae Time-Valuing Vitamin-Glue"
-"Like-Fads Fake Lids"
-"Limbert's Timbrels"
-"Limbs-B-Slim"
-"Linares Nailers"
-"Lindauer's Laundries"
-"Lindenberg Reblending"
-"LinkPress Sprinkles"
-"Lipman's Samplin[']"
+"Lignum Vitae Time-Valuing Vitamin-Glue"	false
+"Like-Fads Fake Lids"	false
+"Limbert's Timbrels"	false
+"Limbs-B-Slim"	false
+"Linares Nailers"	false
+"Lindauer's Laundries"	false
+"Lindenberg Reblending"	false
+"LinkPress Sprinkles"	false
+"Lipman's Samplin[']"	false
 "Literary Ale: Try It!"	true
-"Little Girl's Ill Glitters"
-"Liv Chee's Vehicles"
-"Lo-Bust U-Bolts Sub-Lot"
-"Lo-Caste Eco-Salt"
+"Little Girl's Ill Glitters"	false
+"Liv Chee's Vehicles"	false
+"Lo-Bust U-Bolts Sub-Lot"	false
+"Lo-Caste Eco-Salt"	false
 "Lo, cat! AltCo!"	true
 "Lo, Get a Gelato!"	true
-"Loaded Odd Ale"
-"Loafers For Sale"
-"Local Bros['] Robo-Calls"
-"LoCastro Locators"
-"Lockheed's Helo-Decks"
-"Loco Men's Monocles"
-"Lodestar Leotards"
-"Lois Tisch Holistics"
-"Lombardi's Drab Limos"
-"Lon Ito No-Toil Lotion"
-"Long Street Lorgnettes"
-"Longfoot's Font Logos"
-"Lonny's Nylons"
-"Loo Iliff Lo-Fi Foil" []
-"Loo's PROVEN Provolones"
-"Loose Oleos"
-"Lori Hass Hair Loss/Rash Oils"
-"Lorini's Sirloin"
-"Loss-Rift Florists"
-"Lost? Rely: Ye Trolls['] Trolleys"
-"Lotspeich Chipotles"
-"Lottie's Toilets" []
-"Lou's Farm Formulas"
-"Louetta's Toluates"
-"Lowbrow Bowl Row"
-"Lu Regan's Lean Rugs"
-"Luanna's Annuals"
-"Lubeck's Buckles"
-"Luca Omega Guacamole"
-"Lunchtimes Munch Islet"
-"Lusty Ranch Lunch Trays"
-"Lyla Phipps Happy Pills"
-"Lyman H.'s Hymnals" []
-"Ma Blink's Lambskin"
-"Ma Lucci's Accu-Slim"
-"Ma Otto's Tomatos"
-"Ma's Queer Marquees"
-"Mac Bly's Cymbals"
-"Mac's Scam-Cams"
-"Macrae's Cameras"
-"Maddie's Diadems"
-"Maier's Armies" []
-"Malbrough Rough Balm"
-"Malia's Salami"
-"Malisa's Salamis"
-"Malvina's Mail Vans"
-"Mama's Den Manmades"
-"Man-I-Dare Marinade"
-"MAN SPOT Tampons"
-"Mangino's Masoning"
+"Loaded Odd Ale"	false
+"Loafers For Sale"	false
+"Local Bros['] Robo-Calls"	false
+"LoCastro Locators"	false
+"Lockheed's Helo-Decks"	false
+"Loco Men's Monocles"	false
+"Lodestar Leotards"	false
+"Lois Tisch Holistics"	false
+"Lombardi's Drab Limos"	false
+"Lon Ito No-Toil Lotion"	false
+"Long Street Lorgnettes"	false
+"Longfoot's Font Logos"	false
+"Lonny's Nylons"	false
+"Loo Iliff Lo-Fi Foil"	false []
+"Loo's PROVEN Provolones"	false
+"Loose Oleos"	false
+"Lori Hass Hair Loss/Rash Oils"	false
+"Lorini's Sirloin"	false
+"Loss-Rift Florists"	false
+"Lost? Rely: Ye Trolls['] Trolleys"	false
+"Lotspeich Chipotles"	false
+"Lottie's Toilets"	false []
+"Lou's Farm Formulas"	false
+"Louetta's Toluates"	false
+"Lowbrow Bowl Row"	false
+"Lu Regan's Lean Rugs"	false
+"Luanna's Annuals"	false
+"Lubeck's Buckles"	false
+"Luca Omega Guacamole"	false
+"Lunchtimes Munch Islet"	false
+"Lusty Ranch Lunch Trays"	false
+"Lyla Phipps Happy Pills"	false
+"Lyman H.'s Hymnals"	false []
+"Ma Blink's Lambskin"	false
+"Ma Lucci's Accu-Slim"	false
+"Ma Otto's Tomatos"	false
+"Ma's Queer Marquees"	false
+"Mac Bly's Cymbals"	false
+"Mac's Scam-Cams"	false
+"Macrae's Cameras"	false
+"Maddie's Diadems"	false
+"Maier's Armies"	false []
+"Malbrough Rough Balm"	false
+"Malia's Salami"	false
+"Malisa's Salamis"	false
+"Malvina's Mail Vans"	false
+"Mama's Den Manmades"	false
+"Man-I-Dare Marinade"	false
+"MAN SPOT Tampons"	false
+"Mangino's Masoning"	false
 "Manliest Ailments? Salt-Mine Meal-Tins!"	true
-"Marchese's Cashmeres"
-"Marg Steel Telegrams"
-"Margie's Imagers"
-"Margolis Milagros"
-"Marla's Alarms"
-"Marsden Damners"
-"Marsicano Macaronis"
-"Mart Law's Raw Malts"
-"Marv's VRAMs"
-"Masoner Ransome" []
-"Massimo Mimosas"
-"Massingale Magnesials"
-"Mastroianni Marinations"
-"Match-Up Chum Pat" []
-"Mathiesen Hematines"
-"Matt's Jar Jam Tarts"
-"Mattoon's Ottomans"
-"Maurer's Armures"
-"Maw's Real Malwares"
-"Max Eick Cake Mix"
-"McAlister Cartelism"
-"McCauli Calcium"
-"McDaniel's Medcinals"
-"McGuire Rice Gum"
-"McHeinus Nice Mush Munchies"
+"Marchese's Cashmeres"	false
+"Marg Steel Telegrams"	false
+"Margie's Imagers"	false
+"Margolis Milagros"	false
+"Marla's Alarms"	false
+"Marsden Damners"	false
+"Marsicano Macaronis"	false
+"Mart Law's Raw Malts"	false
+"Marv's VRAMs"	false
+"Masoner Ransome"	false []
+"Massimo Mimosas"	false
+"Massingale Magnesials"	false
+"Mastroianni Marinations"	false
+"Match-Up Chum Pat"	false []
+"Mathiesen Hematines"	false
+"Matt's Jar Jam Tarts"	false
+"Mattoon's Ottomans"	false
+"Maurer's Armures"	false
+"Maw's Real Malwares"	false
+"Max Eick Cake Mix"	false
+"McAlister Cartelism"	false
+"McCauli Calcium"	false
+"McDaniel's Medcinals"	false
+"McGuire Rice Gum"	false
+"McHeinus Nice Mush Munchies"	false
 "Mclean's Encalms!"	true
-"McNealy Clay Men"
-"McPoot's Compost"
+"McNealy Clay Men"	false
+"McPoot's Compost"	false
 "Me-Bod: Be Mod, Bed Mo[']!"	true
-"Meade's Edemas"
-"Meals at Almeta's Tamales"
-"Meat-Flip Flame Pit"
-"Meatiest Teatimes"
-"Medeiros Remedios"
-"Meg Graf's Egg Farms"
-"Meg's Gems"
-"Meisner Ermines"
+"Meade's Edemas"	false
+"Meals at Almeta's Tamales"	false
+"Meat-Flip Flame Pit"	false
+"Meatiest Teatimes"	false
+"Medeiros Remedios"	false
+"Meg Graf's Egg Farms"	false
+"Meg's Gems"	false
+"Meisner Ermines"	false
 "Mel, Cal McLeal: Call [']Em!"	true
-"Mel's Duo-Model-Us Modules"
-"Mel's Faint Filaments"
-"Melius Muesli"
-"Meloni Moline Lo Mein"
-"Melting Mint Gel" []
-"Meltser's Smelters"
-"Mentioner's Minsetrone"
-"Mercantile-Mint Cereal" []
-"Mesko's Smokes"
-"Messiah Mashies"
-"Meyerson Moneyers"
-"Millage's Legalism"
-"Milliken's Lime Kilns"
-"MiltonCo Cool Mint"
-"Minced Med'Cin"
-"Minde's Denims"
-"Minden Indemn-Mendin[']"
-"Mine Camp Pemmican"
-"Ming Acuff's Macguffins"
+"Mel's Duo-Model-Us Modules"	false
+"Mel's Faint Filaments"	false
+"Melius Muesli"	false
+"Meloni Moline Lo Mein"	false
+"Melting Mint Gel"	false []
+"Meltser's Smelters"	false
+"Mentioner's Minsetrone"	false
+"Mercantile-Mint Cereal"	false []
+"Mesko's Smokes"	false
+"Messiah Mashies"	false
+"Meyerson Moneyers"	false
+"Millage's Legalism"	false
+"Milliken's Lime Kilns"	false
+"MiltonCo Cool Mint"	false
+"Minced Med'Cin"	false
+"Minde's Denims"	false
+"Minden Indemn-Mendin[']"	false
+"Mine Camp Pemmican"	false
+"Ming Acuff's Macguffins"	false
 "Minty-Ade: Dynamite!"	true
-"MiscCo Cosmic Comics"
-"Mister C Metrics"
-"Mitchell's Tech Mills"
-"MixCo Comix"
-"Modglin Molding"
-"Moebius BioMuse"
-"Moilanen's Minneolas"
-"Mom Roush's Mushrooms"
-"Mom's MMOs"
-"Monstrous Sun Motors" [p]
+"MiscCo Cosmic Comics"	false
+"Mister C Metrics"	false
+"Mitchell's Tech Mills"	false
+"MixCo Comix"	false
+"Modglin Molding"	false
+"Moebius BioMuse"	false
+"Moilanen's Minneolas"	false
+"Mom Roush's Mushrooms"	false
+"Mom's MMOs"	false
+"Monstrous Sun Motors"	false [p]
 "Moody's: Be Somebody!"	true
 "More Acne? NEO-CREAM!"	true
-"More-Gut Gourmet"
-"Moreira's Armoires"
-"Morissette Meteorists"
-"Moser Bros.['] Sombreros"
-"Moss Cute Costumes"
-"Mount St. Muttons"
-"Mouse's Mousse"
-"Mr. Cha's Charms"
-"Mr. Cub's Crumbs"
-"Mr. Fatso's Fast Roms"
-"Mr. Hume's Hummers"
-"Mr. O's ROMs"
-"Mr. Pave-Revamp"
-"Mr. SoftCo Comforts"
-"Mr. Up-Fee Perfume"
-"Mr. US Rums"
-"Mr. Vose, Ms. Rove, Movers"
-"Mrs. Elli, Mr. Lisle: Millers"
-"Ms. Peal's Samples"
-"Ms. Rowe Mowers"
-"Muir Poem Emporium"
-"Mum's Gear Rummages"
-"Mum's Ripe Premiums"
-"MunchLate Lunchmeat"
-"Munster's Sternums"
-"Murton's Nostrum"
+"More-Gut Gourmet"	false
+"Moreira's Armoires"	false
+"Morissette Meteorists"	false
+"Moser Bros.['] Sombreros"	false
+"Moss Cute Costumes"	false
+"Mount St. Muttons"	false
+"Mouse's Mousse"	false
+"Mr. Cha's Charms"	false
+"Mr. Cub's Crumbs"	false
+"Mr. Fatso's Fast Roms"	false
+"Mr. Hume's Hummers"	false
+"Mr. O's ROMs"	false
+"Mr. Pave-Revamp"	false
+"Mr. SoftCo Comforts"	false
+"Mr. Up-Fee Perfume"	false
+"Mr. US Rums"	false
+"Mr. Vose, Ms. Rove, Movers"	false
+"Mrs. Elli, Mr. Lisle: Millers"	false
+"Ms. Peal's Samples"	false
+"Ms. Rowe Mowers"	false
+"Muir Poem Emporium"	false
+"Mum's Gear Rummages"	false
+"Mum's Ripe Premiums"	false
+"MunchLate Lunchmeat"	false
+"Munster's Sternums"	false
+"Murton's Nostrum"	false
 "MushCo: So Much!"	true
-"Mushrooms So Sour, Hmm" []
-"Musil's Simuls"
-"Muston Mounts"
-"Mute Al's Amulets"
-"My Abs By Sam"
+"Mushrooms So Sour, Hmm"	false []
+"Musil's Simuls"	false
+"Muston Mounts"	false
+"Mute Al's Amulets"	false
+"My Abs By Sam"	false
 "My Car: Camry!"	true
 "My Gift: Fit-Gym!"	true
-"My Suit It's YUM"
+"My Suit It's YUM"	false
 "My Thing's Smyth Gin!"	true
 "My Weight? White Gym!"	true
-"Mysterious Emory Suits"
-"Naggies Signage"
-"Nakata's Katanas"
-"Nashtier Hairnets" []
-"Nat's Limp Implants"
-"Natale's Sealant"
-"Near-Miss Seminars"
+"Mysterious Emory Suits"	false
+"Naggies Signage"	false
+"Nakata's Katanas"	false
+"Nashtier Hairnets"	false []
+"Nat's Limp Implants"	false
+"Natale's Sealant"	false
+"Near-Miss Seminars"	false
 "NeatCo: Octane at Once!"	true
-"Neil's Liens"
+"Neil's Liens"	false
 "Nelson's Data Stands Alone!"	true
-"Nemeth Menthe"
-"Neurogenic Encoignure"
-"Neustadt Dust-Neat"
-"Nevski Knives" []
-"New Age Awe-Gen"
-"New-Eyes Sweeney"
-"Ngoma's Mangos" []
-"Niagra's Sangria"
-"Nic Cave's Vaccines" []
+"Nemeth Menthe"	false
+"Neurogenic Encoignure"	false
+"Neustadt Dust-Neat"	false
+"Nevski Knives"	false []
+"New Age Awe-Gen"	false
+"New-Eyes Sweeney"	false
+"Ngoma's Mangos"	false []
+"Niagra's Sangria"	false
+"Nic Cave's Vaccines"	false []
 "Nic Fay's is Fancy!"	true
-"Nicastro's Croissant"
-"Nice-Thing Ethnic Gin"
+"Nicastro's Croissant"	false
+"Nice-Thing Ethnic Gin"	false
 "Nice Zits, Citizens? Zinc-Ites!"	true
-"Niceham's Machines" []
-"Nichelle's Chenilles"
-"Nicola's Oilcans" []
-"Nik Grey's Key Rings"
-"Nik, Wes: We Sink Skewin[']"
-"Nik's Skin Inks"
-"Nilsen-Enslin Linens" []
-"Nip's Spin & Snip"
-"Nitschke Kitchens"
-"Nitzsche Chintzes"
+"Niceham's Machines"	false []
+"Nichelle's Chenilles"	false
+"Nicola's Oilcans"	false []
+"Nik Grey's Key Rings"	false
+"Nik, Wes: We Sink Skewin[']"	false
+"Nik's Skin Inks"	false
+"Nilsen-Enslin Linens"	false []
+"Nip's Spin & Snip"	false
+"Nitschke Kitchens"	false
+"Nitzsche Chintzes"	false
 "No date? Note ad! Do neat! Donate to Dean!"	true
-"No-Daze Ad Zone"
-"No-Glitch Clothing"
-"No-Logic Cool Gin"
-"No-Sight Hosting" []
+"No-Daze Ad Zone"	false
+"No-Glitch Clothing"	false
+"No-Logic Cool Gin"	false
+"No-Sight Hosting"	false []
 "No Thaws? Hawton's Snow Hat!"	true
 "No-Wit Towin['] WON IT!"	true
 "No zip? PONZI!!!"	true
-"Noguchi's Hocusing"
-"Nokes Kenos"
-"Nola's Salon"
-"The Nook Hot Keno"
-"Nora's Sonar"
-"Nu-Place CleanUp"
-"Nuisancer Insurance" []
-"NWOT Town" []
-"O-Grade Do-Gear"
-"O. Russert Trousers"
-"O'Cain's Casino" []
-"O'Leary's Real Soy"
-"O'Riley Oilery"
-"Odd-Goof Dog Food"
+"Noguchi's Hocusing"	false
+"Nokes Kenos"	false
+"Nola's Salon"	false
+"The Nook Hot Keno"	false
+"Nora's Sonar"	false
+"Nu-Place CleanUp"	false
+"Nuisancer Insurance"	false []
+"NWOT Town"	false []
+"O-Grade Do-Gear"	false
+"O. Russert Trousers"	false
+"O'Cain's Casino"	false []
+"O'Leary's Real Soy"	false
+"O'Riley Oilery"	false
+"Odd-Goof Dog Food"	false
 "Off the Pace? Hope-Affect Coffee: Phat!"	true
-"Ogden's Sod-Gen"
+"Ogden's Sod-Gen"	false
 "Oh, stop to shop!"	true
-"Ohh, Pets: the Shop"
-"OK-Kiss Kiosks"
-"Ol['] Bo's Slob-O Bolos"
-"Ol['] Chet's Clothes"
-"Ol['] Ethan's Ethanols" []
+"Ohh, Pets: the Shop"	false
+"OK-Kiss Kiosks"	false
+"Ol['] Bo's Slob-O Bolos"	false
+"Ol['] Chet's Clothes"	false
+"Ol['] Ethan's Ethanols"	false []
 "Ol['] Ian: a Lion, I Loan!"	true
-"Ol['] Ruf's Flours"
-"Old Dog's Odd Logs"
-"Old Fool's LOL Foods"
-"Old Omega's Good Meals"
-"Oldmere's Remodels" []
-"Ole Gina's Gasoline"
-"Ole Japan's Jalapenos"
-"Oleg's LEGOs"
-"Olga Hu's Goulash"
-"Olga Mohr's Holograms" []
+"Ol['] Ruf's Flours"	false
+"Old Dog's Odd Logs"	false
+"Old Fool's LOL Foods"	false
+"Old Omega's Good Meals"	false
+"Oldmere's Remodels"	false []
+"Ole Gina's Gasoline"	false
+"Ole Japan's Jalapenos"	false
+"Oleg's LEGOs"	false
+"Olga Hu's Goulash"	false
+"Olga Mohr's Holograms"	false []
 "Olympus Slop, Yum: Plum, Soy!"	true
-"One-Swap Weapons"
-"Oompah's Shampoo"
-"Ooz-Rich Chorizo"
-"Opal-Jane's Jalapenos" []
+"One-Swap Weapons"	false
+"Oompah's Shampoo"	false
+"Ooz-Rich Chorizo"	false
+"Opal-Jane's Jalapenos"	false []
 "Ophi's: I Shop So Hip!"	true
-"Optimum Opium (TM)"
-"Opus Up-So Soup"
+"Optimum Opium (TM)"	false
+"Opus Up-So Soup"	false
 "Or Need Redone? Don Ree."	true
-"Organic Grain Co"
-"Orleans-Salerno Loaners" []
-"Orrienti's Interiors"
-"Ortega's Storage"
+"Organic Grain Co"	false
+"Orleans-Salerno Loaners"	false []
+"Orrienti's Interiors"	false
+"Ortega's Storage"	false
 "Osaki is A-OK!"	true
 "Oscoli Silo Co is Cool!"	true
-"Osgard Do-Rags"
-"Osseter Stereos" []
-"Osterkamp Top Makers"
-"Osterman-Sarmento MAN STORE"
-"Ostermann-Martenson Ornaments"
-"Ostermeier Eriometers"
-"Ostertag Garottes"
-"Ouida Audio"
-"Ouida's Audios"
-"Our Brit's Burritos"
-"Our Cute Cut-Euro Couture"
+"Osgard Do-Rags"	false
+"Osseter Stereos"	false []
+"Osterkamp Top Makers"	false
+"Osterman-Sarmento MAN STORE"	false
+"Ostermann-Martenson Ornaments"	false
+"Ostermeier Eriometers"	false
+"Ostertag Garottes"	false
+"Ouida Audio"	false
+"Ouida's Audios"	false
+"Our Brit's Burritos"	false
+"Our Cute Cut-Euro Couture"	false
 "Our Lad's Dour Sal!"	true
-"Ovide's Videos"
+"Ovide's Videos"	false
 "P Sawyer: We Spray/Swap yer Spyware!"	true
-"Pa Krum's Markups"
-"Pa Otto's Potatos"
-"Pa Phelps Help Apps"
-"Pa Reg's Grapes"
-"Pa's Spa"
-"Pacer St. Carpets"
-"Paid Loss Disposal"
-"Pain-Cost Captions"
-"Painter's Pantries" []
-"Palmerton Patrolmen"
-"Pam Tell's Pet Malls"
-"Pamila's Impalas"
-"Panic St. Catnips"
-"Paniccia's Capsaicin"
-"Pappy's Spy App"
-"Parrent's Partners"
-"Parriott's Portraits"
-"PartyCo's Crap Toys"
-"Passero Soapers"
-"Pasternak Partakens"
-"Pat Fair's Parfaits"
-"Pat Kelp's Pep Talks"
-"Pat's Hot Top Hats"
-"Pati's Pitas"
-"Patterson Patentors"
-"Paw/Mum's Wampums"
-"Peaceful Cape Fuel" []
-"Pecina's Inscape"
-"Pedlar Lepard"
-"Peete's Tepees"
-"Peg Hiatt's Past-Eight Spaghetti"
-"Peltzer's Pretzels"
-"Pena's Panes"
-"Penfold Flop Den"
-"Peon Tim's Nepotism Pimentos"
-"Pepi's Pipes"
-"Pepito's Top Pies"
-"Perdue Pureed"
-"Perkins's Skin-Resp"
-"Perlin's Pilsner"
-"Perreira's Repairers"
-"Perretta's Pre-Treats"
-"Perrin Street Interpreters"
-"Persico Copiers"
-"Persing Pingers"
+"Pa Krum's Markups"	false
+"Pa Otto's Potatos"	false
+"Pa Phelps Help Apps"	false
+"Pa Reg's Grapes"	false
+"Pa's Spa"	false
+"Pacer St. Carpets"	false
+"Paid Loss Disposal"	false
+"Pain-Cost Captions"	false
+"Painter's Pantries"	false []
+"Palmerton Patrolmen"	false
+"Pam Tell's Pet Malls"	false
+"Pamila's Impalas"	false
+"Panic St. Catnips"	false
+"Paniccia's Capsaicin"	false
+"Pappy's Spy App"	false
+"Parrent's Partners"	false
+"Parriott's Portraits"	false
+"PartyCo's Crap Toys"	false
+"Passero Soapers"	false
+"Pasternak Partakens"	false
+"Pat Fair's Parfaits"	false
+"Pat Kelp's Pep Talks"	false
+"Pat's Hot Top Hats"	false
+"Pati's Pitas"	false
+"Patterson Patentors"	false
+"Paw/Mum's Wampums"	false
+"Peaceful Cape Fuel"	false []
+"Pecina's Inscape"	false
+"Pedlar Lepard"	false
+"Peete's Tepees"	false
+"Peg Hiatt's Past-Eight Spaghetti"	false
+"Peltzer's Pretzels"	false
+"Pena's Panes"	false
+"Penfold Flop Den"	false
+"Peon Tim's Nepotism Pimentos"	false
+"Pepi's Pipes"	false
+"Pepito's Top Pies"	false
+"Perdue Pureed"	false
+"Perkins's Skin-Resp"	false
+"Perlin's Pilsner"	false
+"Perreira's Repairers"	false
+"Perretta's Pre-Treats"	false
+"Perrin Street Interpreters"	false
+"Persico Copiers"	false
+"Persing Pingers"	false
 "PertDais: Spread it Rapidest!"	true
-"Pescador's Scorepads"
-"Peshram Hampers"
-"Pessard Spreads"
-"Pest-Clean Pentacles" []
-"Petrisa's Raspiest Pastries"
-"Pettey's Typeset"
-"Pettinger's Pre-Testing"
-"Pfister's Pre-Sifts"
-"Phat Rey P. Thayer Therapy"
-"Phil Cote Chipotle" []
+"Pescador's Scorepads"	false
+"Peshram Hampers"	false
+"Pessard Spreads"	false
+"Pest-Clean Pentacles"	false []
+"Petrisa's Raspiest Pastries"	false
+"Pettey's Typeset"	false
+"Pettinger's Pre-Testing"	false
+"Pfister's Pre-Sifts"	false
+"Phat Rey P. Thayer Therapy"	false
+"Phil Cote Chipotle"	false []
 "Photos: Oh, Stop to Shop!"	true
 "Pia's IPAs: A Sip?"	true
-"Picard's Rad Pics"
+"Picard's Rad Pics"	false
 "Pick Nat's Knit Caps!"	true
 "A Pickled DeliPack @ KidPlace!"	true
-"Pie/Salad Palisade"
-"Pig-Heart Graphite"
+"Pie/Salad Palisade"	false
+"Pig-Heart Graphite"	false
 "Piles-Ups Supplies is Supple!"	true
-"Pinegar Reaping"
-"Pining Pig Inn"
+"Pinegar Reaping"	false
+"Pining Pig Inn"	false
 "Pinot's: Stop in to Spin!"	true
-"Pip Ferry Frippery"
-"Pip Hong's Shopping"
-"Pip Wang's Swapping"
-"Pirani's Aspirin"
-"Pisces Spices"
+"Pip Ferry Frippery"	false
+"Pip Hong's Shopping"	false
+"Pip Wang's Swapping"	false
+"Pirani's Aspirin"	false
+"Pisces Spices"	false
 "Pithel's: it Helps the Lips!"	true
-"Pitman's Stampin[']"
+"Pitman's Stampin[']"	false
 "A Pizza Piazza: no stopping on toppings!"	true
-"Plain-Blots Ballpoints"
-"Planets St. Test Plans"
-"Plato's Postal" []
-"Playsome Maypoles"
+"Plain-Blots Ballpoints"	false
+"Planets St. Test Plans"	false
+"Plato's Postal"	false []
+"Playsome Maypoles"	false
 "Please Do Dale Poe's Dope Sale!"	true
 "A Plebe Cot: Place to Be!"	true
-"Pluck-O Lockup"
-"Po['] Caleb's Placebos"
-"Po['] Will's Pillows"
-"Poe's Def Feed-Ops of Speed"
-"Polaris RailOps"
-"Polite Ole Pit Pie Lot"
-"Pollinger Repolling"
-"Pontiac's Captions" []
+"Pluck-O Lockup"	false
+"Po['] Caleb's Placebos"	false
+"Po['] Will's Pillows"	false
+"Poe's Def Feed-Ops of Speed"	false
+"Polaris RailOps"	false
+"Polite Ole Pit Pie Lot"	false
+"Pollinger Repolling"	false
+"Pontiac's Captions"	false []
 "Poop-o-Pop Cola is Social!"	true
-"Pop Erik's Pork Pies"
-"Pop Hawn's Pawn Shop"
-"Pop Haynes Pay Phones"
-"Pop Hull's Push Poll Pull Shop"
-"Pop's Alt Laptops"
-"Pop's Hot Top Shop"
-"Pop's Opps"
-"Pop's Rave-Approves"
-"Pops Hull's Push Polls"
-"Portia's Air Stop"
-"Posies I S'Pose"
-"Posture-Up Store" []
-"PR Pa Rapp"
-"Pram-Loft Platform"
-"President's Driest Pens"
-"Pricy Goth Copyright"
-"Priestley's Peristyles"
-"Prig Fanny's Frying Pans"
+"Pop Erik's Pork Pies"	false
+"Pop Hawn's Pawn Shop"	false
+"Pop Haynes Pay Phones"	false
+"Pop Hull's Push Poll Pull Shop"	false
+"Pop's Alt Laptops"	false
+"Pop's Hot Top Shop"	false
+"Pop's Opps"	false
+"Pop's Rave-Approves"	false
+"Pops Hull's Push Polls"	false
+"Portia's Air Stop"	false
+"Posies I S'Pose"	false
+"Posture-Up Store"	false []
+"PR Pa Rapp"	false
+"Pram-Loft Platform"	false
+"President's Driest Pens"	false
+"Pricy Goth Copyright"	false
+"Priestley's Peristyles"	false
+"Prig Fanny's Frying Pans"	false
 "Prim Sot Imports Is Top, Mr.!"	true
-"ProTec's Copters"
-"Protect-Tec Port"
-"Proust's Sprouts"
-"PSI ISP"
-"Ptacek's Packets"
-"Pulliam's Palliums"
-"Pup-Ick Pick-Up"
-"PureFem Perfume" []
-"Pursell Pullers"
-"Quentin's Quinnets"
-"Quero's Roques"
-"Quito's Quoits"
-"RaceSoft's Forecasts"
-"Rackham's Chakrams"
-"Racquel's Lacquers"
+"ProTec's Copters"	false
+"Protect-Tec Port"	false
+"Proust's Sprouts"	false
+"PSI ISP"	false
+"Ptacek's Packets"	false
+"Pulliam's Palliums"	false
+"Pup-Ick Pick-Up"	false
+"PureFem Perfume"	false []
+"Pursell Pullers"	false
+"Quentin's Quinnets"	false
+"Quero's Roques"	false
+"Quito's Quoits"	false
+"RaceSoft's Forecasts"	false
+"Rackham's Chakrams"	false
+"Racquel's Lacquers"	false
 "RaderCo: Record a Rare Doc!"	true
-"Raimondo's Main Doors"
-"Rain-Mist Martinis"
-"Rainwater's Warranties"
-"Rally-Rite Rarely-Lit Artillery"
-"Ramaker's Earmarks"
-"Rambini's Minibars"
-"Rampley's Lampreys Samplery"
-"Ramstad Mad Arts"
-"Rapport's Art Props"
-"Rapson Aprons"
-"Rare-Lit Trailer"
-"Rare-Rib Barrier"
-"Raschke Hackers"
-"Rasnic Cairns" []
-"Rattiness, Tartiness"
-"Ratto's Tats or Tarots"
-"Raw-Spite Wiretaps" [**promote to regular idea?]
-"Rawlings's Wrassling"
-"Ray Blend Benadryl"
-"Ray Lew, Lawyer"
-"Ray Pew's Spyware"
-"Raymon's Masonry"
-"RealTec's Clearest Treacles"
+"Raimondo's Main Doors"	false
+"Rain-Mist Martinis"	false
+"Rainwater's Warranties"	false
+"Rally-Rite Rarely-Lit Artillery"	false
+"Ramaker's Earmarks"	false
+"Rambini's Minibars"	false
+"Rampley's Lampreys Samplery"	false
+"Ramstad Mad Arts"	false
+"Rapport's Art Props"	false
+"Rapson Aprons"	false
+"Rare-Lit Trailer"	false
+"Rare-Rib Barrier"	false
+"Raschke Hackers"	false
+"Rasnic Cairns"	false []
+"Rattiness, Tartiness"	false
+"Ratto's Tats or Tarots"	false
+"Raw-Spite Wiretaps"	false [**promote to regular idea?]
+"Rawlings's Wrassling"	false
+"Ray Blend Benadryl"	false
+"Ray Lew, Lawyer"	false
+"Ray Pew's Spyware"	false
+"Raymon's Masonry"	false
+"RealTec's Clearest Treacles"	false
 "Reb Heet, the Beer: Be There!"	true
-"Rebier's Berries"
-"Rebuildy Bud Riley"
-"Recursions Co-Insurers"
-"Red Bay Bad Rye" []
-"Red Inn Dinner Rendin[']"
-"Red Oafs['] Fedoras"
-"Redleaf Federal"
-"Reebok OK Beer"
-"Reeknose Kerosene"
-"Reiber's Berries" []
-"Reid's Rides"
-"Reingold's Soldering" []
-"Reisz's Sizers"
-"Reitman's Raiments"
-"Reliable Lee Blair"
-"Rema Rios Armoires" []
-"Remington Mentoring"
-"Renetta's Entreats"
+"Rebier's Berries"	false
+"Rebuildy Bud Riley"	false
+"Recursions Co-Insurers"	false
+"Red Bay Bad Rye"	false []
+"Red Inn Dinner Rendin[']"	false
+"Red Oafs['] Fedoras"	false
+"Redleaf Federal"	false
+"Reebok OK Beer"	false
+"Reeknose Kerosene"	false
+"Reiber's Berries"	false []
+"Reid's Rides"	false
+"Reingold's Soldering"	false []
+"Reisz's Sizers"	false
+"Reitman's Raiments"	false
+"Reliable Lee Blair"	false
+"Rema Rios Armoires"	false []
+"Remington Mentoring"	false
+"Renetta's Entreats"	false
 "Rep. Gross: PROGRESS!"	true
-"Resiny Sin-Rye"
-"Resmoothed Hodometers"
-"ReSnubCo Bouncers"
-"Retta's Taters"
-"Rev. Erv"
-"Rex's RXes"
-"Rey's Rug Surgery"
-"Rhett Inge Tightener Tethering"
-"Rhoda's Hoards"
-"Rhodus's Shrouds"
-"Rhoney's Noshery"
-"Richeson Chorines"
-"Rierson Ironers"
-"Rifkin's Firkins"
-"Ringstad Tradings"
-"Rioch's So-Rich Choirs"
-"Ritson Nitros"
-"Rob Lew's Bowlers"
-"Robotham's Bathrooms" []
-"Robur's Burros"
-"Rod Gump's Gumdrops"
-"Roddis Droids"
-"Roden's Drones" []
-"Roger's Reorgs"
-"Rolling-On Grill"
-"Rome Clan Corn Meal"
-"Ron Copp Popcorn Op-N-Proc"
-"Roper St. Porters"
-"Rosa Long Granolas"
-"Rose Gupta Great Soup"
-"Ross Belt Lobsters" []
-"Ross Tye Oysters"
-"Rosy-Set Oysters" []
-"Rote Fun Fortune" []
-"Roundtree's Outrenders"
-"Roussette's Tutoresses"
-"Rousting Tourings"
-"Rullo/Ruoff Flour"
-"Rummager Margerum"
-"Rumstad Mustard"
-"Ruscanti Curtains" []
-"Russ Fulop Surplus of Plus Fours"
-"Russet's Trusses"
-"Rust-O-Roust Tours"
-"Ruthie's New Wiener Huts"
-"Rutner's Returns"
-"SaberDoc Barcodes" []
-"Sabic's Basics"
-"Sabino Bonsai"
-"Sabo Boas"
-"Sad Al's Salads"
-"Saeger's Greases"
-"Safe-Cut Faucets"
-"Sager Gears"
-"Saggare Garages"
-"Sal Cort Car Lots"
-"Sal Grey Argyles" []
+"Resiny Sin-Rye"	false
+"Resmoothed Hodometers"	false
+"ReSnubCo Bouncers"	false
+"Retta's Taters"	false
+"Rev. Erv"	false
+"Rex's RXes"	false
+"Rey's Rug Surgery"	false
+"Rhett Inge Tightener Tethering"	false
+"Rhoda's Hoards"	false
+"Rhodus's Shrouds"	false
+"Rhoney's Noshery"	false
+"Richeson Chorines"	false
+"Rierson Ironers"	false
+"Rifkin's Firkins"	false
+"Ringstad Tradings"	false
+"Rioch's So-Rich Choirs"	false
+"Ritson Nitros"	false
+"Rob Lew's Bowlers"	false
+"Robotham's Bathrooms"	false []
+"Robur's Burros"	false
+"Rod Gump's Gumdrops"	false
+"Roddis Droids"	false
+"Roden's Drones"	false []
+"Roger's Reorgs"	false
+"Rolling-On Grill"	false
+"Rome Clan Corn Meal"	false
+"Ron Copp Popcorn Op-N-Proc"	false
+"Roper St. Porters"	false
+"Rosa Long Granolas"	false
+"Rose Gupta Great Soup"	false
+"Ross Belt Lobsters"	false []
+"Ross Tye Oysters"	false
+"Rosy-Set Oysters"	false []
+"Rote Fun Fortune"	false []
+"Roundtree's Outrenders"	false
+"Roussette's Tutoresses"	false
+"Rousting Tourings"	false
+"Rullo/Ruoff Flour"	false
+"Rummager Margerum"	false
+"Rumstad Mustard"	false
+"Ruscanti Curtains"	false []
+"Russ Fulop Surplus of Plus Fours"	false
+"Russet's Trusses"	false
+"Rust-O-Roust Tours"	false
+"Ruthie's New Wiener Huts"	false
+"Rutner's Returns"	false
+"SaberDoc Barcodes"	false []
+"Sabic's Basics"	false
+"Sabino Bonsai"	false
+"Sabo Boas"	false
+"Sad Al's Salads"	false
+"Saeger's Greases"	false
+"Safe-Cut Faucets"	false
+"Sager Gears"	false
+"Saggare Garages"	false
+"Sal Cort Car Lots"	false
+"Sal Grey Argyles"	false []
 "Sal Hess Has Less Hassles!"	true
-"Sal Inge Gasline Sealing" []
-"Salveig Glaives"
+"Sal Inge Gasline Sealing"	false []
+"Salveig Glaives"	false
 "Sam Funke Makes Fun Fake Nums!"	true
-"Samaroo's Amorosas"
-"Samson Masons" []
-"Sandoval Vanloads O'Vandals" [] []
-"Santa Fe Fan Eats"
-"Santa Fe's Safe Tans"
-"Santillo Stallion Allotins"
-"Santillo's Stallions"
-"Sapp Apps"
+"Samaroo's Amorosas"	false
+"Samson Masons"	false []
+"Sandoval Vanloads O'Vandals"	false [] []
+"Santa Fe Fan Eats"	false
+"Santa Fe's Safe Tans"	false
+"Santillo Stallion Allotins"	false
+"Santillo's Stallions"	false
+"Sapp Apps"	false
 "Saputo's: Pass OUT!"	true
-"Sara Long Granolas"
-"Saracino Ocarinas"
-"Sastre Tasers" []
-"Sato Oats" []
-"Saunders Danseurs"
-"Savaric Caviars"
-"Savile's Valises" []
-"Saw-Vine Weavins"
+"Sara Long Granolas"	false
+"Saracino Ocarinas"	false
+"Sastre Tasers"	false []
+"Sato Oats"	false []
+"Saunders Danseurs"	false
+"Savaric Caviars"	false
+"Savile's Valises"	false []
+"Saw-Vine Weavins"	false
 "Say, Bud, Sad? BUY!"	true
-"Scag Peak Packages"
-"Scalisi Silicas"
-"Scanter Nectars"
-"Scarantino Carnations"
-"Scaturro Curators"
-"Scavenger Reg Vance's"
-"Scavenger Van Creeg's" []
-"Scheirer-Riechers Cherries"
-"Schiavone Anchovies"
-"Schomer Chromes"
-"Schubert Butchers"
-"Sci-Vault Victuals"
-"Scofield Doc-Files"
-"Scooter Store Co"
-"Scooter StoreCo" []
-"Scooting-Go Tonics"
-"Scorpion PrisonCo"
-"Scout-Pile Poultices"
-"Screen-Free References"
-"Scudder's Duds Recs"
-"Sea-Bulb Baubles" []
-"Seabird Darbies" []
-"Seagull Ale-Slug"
-"Seagull-Slug Ale" []
+"Scag Peak Packages"	false
+"Scalisi Silicas"	false
+"Scanter Nectars"	false
+"Scarantino Carnations"	false
+"Scaturro Curators"	false
+"Scavenger Reg Vance's"	false
+"Scavenger Van Creeg's"	false []
+"Scheirer-Riechers Cherries"	false
+"Schiavone Anchovies"	false
+"Schomer Chromes"	false
+"Schubert Butchers"	false
+"Sci-Vault Victuals"	false
+"Scofield Doc-Files"	false
+"Scooter Store Co"	false
+"Scooter StoreCo"	false []
+"Scooting-Go Tonics"	false
+"Scorpion PrisonCo"	false
+"Scout-Pile Poultices"	false
+"Screen-Free References"	false
+"Scudder's Duds Recs"	false
+"Sea-Bulb Baubles"	false []
+"Seabird Darbies"	false []
+"Seagull Ale-Slug"	false
+"Seagull-Slug Ale"	false []
 "Seattle Lattees: Le Taste!" 	true []
-"Seaward Adwares"
-"Sedgwick Wigs Deck"
-"Seed-Mart Red Meats"
-"Seedmen Demesne"
-"Seegerd Degrees"
+"Seaward Adwares"	false
+"Sedgwick Wigs Deck"	false
+"Seed-Mart Red Meats"	false
+"Seedmen Demesne"	false
+"Seegerd Degrees"	false
 "Segel Food Feels Good!"	true
-"Segui's Guises"
-"Seifried's Firesides"
+"Segui's Guises"	false
+"Seifried's Firesides"	false
 "Seitz: It's E-Z!"	true
-"Selfridge Dregs-Life"
-"Selfridge Fried Legs"
-"Seligman Mealings"
-"Selkind Kindles" []
-"Selkirk Likkers"
-"Selvio-Voiles Olives"
-"Seneca's Seances"
+"Selfridge Dregs-Life"	false
+"Selfridge Fried Legs"	false
+"Seligman Mealings"	false
+"Selkind Kindles"	false []
+"Selkirk Likkers"	false
+"Selvio-Voiles Olives"	false
+"Seneca's Seances"	false
 "The Senor Seth Reno: There's No Honester!"	true
-"Serif Fries"
-"Serpentries Enterprises"
-"Serpico Copiers" []
-"Sewer Br. Brewers" []
-"Shagband Handbags" []
-"Shamon's Hansoms" [] []
-"Shamrock OK Charms"
-"Shapiro Airshop" []
-"Sharee's Hearses"
-"Sharpest Hat Press"
-"Shawnda's Handsaws"
-"Shay's Art Ashtrays"
-"Shem Kalski Milkshakes"
-"Shenita's Anthesis Shanties"
+"Serif Fries"	false
+"Serpentries Enterprises"	false
+"Serpico Copiers"	false []
+"Sewer Br. Brewers"	false []
+"Shagband Handbags"	false []
+"Shamon's Hansoms"	false [] []
+"Shamrock OK Charms"	false
+"Shapiro Airshop"	false []
+"Sharee's Hearses"	false
+"Sharpest Hat Press"	false
+"Shawnda's Handsaws"	false
+"Shay's Art Ashtrays"	false
+"Shem Kalski Milkshakes"	false
+"Shenita's Anthesis Shanties"	false
 "Sheridan Ad Shrine: Yer Ad Ready!"	true
-"Sherman Dice Merchandise"
-"Shetter Tethers"
-"Shilling Hill Gins"
-"Shoes So She"
+"Sherman Dice Merchandise"	false
+"Shetter Tethers"	false
+"Shilling Hill Gins"	false
+"Shoes So She"	false
 "Shop at Potash: Ah, Tops! So Phat!"	true
-"Shop-O-Hoops"
-"Shop-Rite Trophies"
-"Shoreman Menorahs"
-"ShortCo Cohorts"
-"Show-M-Beer Homebrews" []
-"Shui's Sushi" []
-"Shula Hauls"
+"Shop-O-Hoops"	false
+"Shop-Rite Trophies"	false
+"Shoreman Menorahs"	false
+"ShortCo Cohorts"	false
+"Show-M-Beer Homebrews"	false []
+"Shui's Sushi"	false []
+"Shula Hauls"	false
 "Shy Moe's: My Shoes!"	true
-"Si Cubit's Biscuits"
-"Sick Goon Cookings"
-"Sicko Hater Artichokes"
+"Si Cubit's Biscuits"	false
+"Sick Goon Cookings"	false
+"Sicko Hater Artichokes"	false
 "Sign Up! Ed's Dispunges Pudginess!"	true
-"Signature Great Unis" []
-"Signeur Guerin's Reusing"
-"Signor Ringo's" []
-"Silbernagel Relabelings"
-"Silken-April Painkillers"
-"Simcox's Comix"
-"Siminski Miniskis"
-"Simona Amnios"
-"Sin-Bred Binders"
-"Sin-Cut Tunics"
-"Sin-Pact Catnips" []
-"Sincere Seer, Inc"
-"Sinegal's Gainless Leasings"
-"Singler's Ringless Slingers"
-"Sink Doc Dickson-Dockins"
-"Sir Beef's Frisbees"
-"Sir Hawk's Rikshaws"
-"Sir Ian's Raisins"
-"Sir Manic Mini-Cars"
-"Sir-or-Mr. Mirrors"
-"Sir Thunder's Undershirts"
-"Sir Turbo Burritos Ur-Bistro" []
-"Sistare's Assister"
-"Sitek Tikes['] Kites"
+"Signature Great Unis"	false []
+"Signeur Guerin's Reusing"	false
+"Signor Ringo's"	false []
+"Silbernagel Relabelings"	false
+"Silken-April Painkillers"	false
+"Simcox's Comix"	false
+"Siminski Miniskis"	false
+"Simona Amnios"	false
+"Sin-Bred Binders"	false
+"Sin-Cut Tunics"	false
+"Sin-Pact Catnips"	false []
+"Sincere Seer, Inc"	false
+"Sinegal's Gainless Leasings"	false
+"Singler's Ringless Slingers"	false
+"Sink Doc Dickson-Dockins"	false
+"Sir Beef's Frisbees"	false
+"Sir Hawk's Rikshaws"	false
+"Sir Ian's Raisins"	false
+"Sir Manic Mini-Cars"	false
+"Sir-or-Mr. Mirrors"	false
+"Sir Thunder's Undershirts"	false
+"Sir Turbo Burritos Ur-Bistro"	false []
+"Sistare's Assister"	false
+"Sitek Tikes['] Kites"	false
 "Sivertsen: Nerviest? Reinvest!"	true
-"Six-Lire Elixirs"
-"Skeeter's Keesters"
+"Six-Lire Elixirs"	false
+"Skeeter's Keesters"	false
 "Skeptics pick TESS!"	true
-"Skin Doc Dickson" []
-"Skipper Kippers"
-"Skit Kits"
-"Skrbic Bricks"
-"Slates's Tassels"
-"Slaymaker Malarkeys"
-"Sleeman Enamels"
+"Skin Doc Dickson"	false []
+"Skipper Kippers"	false
+"Skit Kits"	false
+"Skrbic Bricks"	false
+"Slates's Tassels"	false
+"Slaymaker Malarkeys"	false
+"Sleeman Enamels"	false
 "Sleep City: Epic Style!"	true
-"Slick-Taco Cocktails"
-"Slick Thom, Locksmith"
-"Slick-Tips Lipsticks"
-"Sloan Loans Salon" []
-"SlopArt Plastro-Portals"
-"Sly Pup Pulpy's Supply"
-"Sly's Beam Assembly"
-"Smart Marts"
-"Smedley Medleys"
-"Smolenski Moleskins"
-"Smoothback Matchbooks"
-"SniffCo Coffins"
-"Snowberger Wrong Beers"
-"Snowpea Weapons" []
-"So-Local Cool Al's"
-"So-Low Wools"
+"Slick-Taco Cocktails"	false
+"Slick Thom, Locksmith"	false
+"Slick-Tips Lipsticks"	false
+"Sloan Loans Salon"	false []
+"SlopArt Plastro-Portals"	false
+"Sly Pup Pulpy's Supply"	false
+"Sly's Beam Assembly"	false
+"Smart Marts"	false
+"Smedley Medleys"	false
+"Smolenski Moleskins"	false
+"Smoothback Matchbooks"	false
+"SniffCo Coffins"	false
+"Snowberger Wrong Beers"	false
+"Snowpea Weapons"	false []
+"So-Local Cool Al's"	false
+"So-Low Wools"	false
 "So Unfed? No-Feuds Fondues!"	true
-"So-Urgent Gun Store" []
+"So-Urgent Gun Store"	false []
 "Soapy Spa, Yo--So Pay!"	true []
-"Sobol Bolos" []
-"SoCal Colas" [] []
-"Socko Cooks"
-"Socrates Coasters" []
-"Soft Sal Salts of Fat Loss"
-"Softo Fotos"
-"Solis Silos"
-"Some-Pains Noise Amps"
-"Somers-Morse's S'Mores" [p]
-"Sontag Tangos"
-"Sorghum-Gro Mush"
+"Sobol Bolos"	false []
+"SoCal Colas"	false [] []
+"Socko Cooks"	false
+"Socrates Coasters"	false []
+"Soft Sal Salts of Fat Loss"	false
+"Softo Fotos"	false
+"Solis Silos"	false
+"Some-Pains Noise Amps"	false
+"Somers-Morse's S'Mores"	false [p]
+"Sontag Tangos"	false
+"Sorghum-Gro Mush"	false
 "Sot Herb Borseth BOTHERS!"	true
-"SotCo Scoot-O-Cots"
-"Sourvine's Souvenirs" []
-"The Space: Cheapest Tech Apse"
+"SotCo Scoot-O-Cots"	false
+"Sourvine's Souvenirs"	false []
+"The Space: Cheapest Tech Apse"	false
 "SpamCo: So Camp!"	true
-"Spangler Grapnels"
-"Sparty Pastry"
-"Spas O['] Soaps"
-"Spazzi Pizzas"
-"Speiser's Pressies"
-"Spetzler Pretzels" []
-"Spice-Tides Pesticides/Septicides"
-"Spite St. Pie"
-"Spitzer's Spritzes"
-"Sportman Portman's"
-"Sprier Priers"
-"Springsteen Presentings"
-"Sprint-Prints"
-"Spruce-It Pictures"
-"Spud Loco Cold Soup"
-"Square-Deal Resale Quad"
-"Ssh-Ware Washers"
-"St. Egan Agents"
-"St. James Jetsams"
-"St. Nico Not-Sci Scinto-Tonics"
-"St. Pam's Stamps"
-"St. Roj or J.T.'s Jorts"
-"Staap Tapas/Pasta"
-"Stagle Aglets"
-"Stale-Munch Lunch Meats"
-"Stampney Payments"
-"Stanfield Inflateds"
-"Stanhope Phaetons"
-"Stapleton Talent Ops"
-"StarrCo Carrots"
-"Steadham's Mastheads"
-"Stedwig Widgets" []
-"Steeley Eyelets"
-"Stef Hamer Fresh Meat"
-"Stef's Fests"
-"Stefan's Fastens Fatness"
-"Steinbecher's Nice Sherbets"
-"Steinert's Insetters"
-"Stella's Sallets"
-"Stelzer-Setzler Seltzer"
-"Stelzer's Seltzers"
-"Stenger Regents"
-"Stepter's Pretests"
-"Stevo's Stoves"
-"Stew Tree Tweeters"
-"Stewed Tweeds" []
-"Stillinger Trellising"
-"Stillwagon Tallowings"
-"Stinkford's Soft Drinks"
-"Stiverson Investors"
+"Spangler Grapnels"	false
+"Sparty Pastry"	false
+"Spas O['] Soaps"	false
+"Spazzi Pizzas"	false
+"Speiser's Pressies"	false
+"Spetzler Pretzels"	false []
+"Spice-Tides Pesticides/Septicides"	false
+"Spite St. Pie"	false
+"Spitzer's Spritzes"	false
+"Sportman Portman's"	false
+"Sprier Priers"	false
+"Springsteen Presentings"	false
+"Sprint-Prints"	false
+"Spruce-It Pictures"	false
+"Spud Loco Cold Soup"	false
+"Square-Deal Resale Quad"	false
+"Ssh-Ware Washers"	false
+"St. Egan Agents"	false
+"St. James Jetsams"	false
+"St. Nico Not-Sci Scinto-Tonics"	false
+"St. Pam's Stamps"	false
+"St. Roj or J.T.'s Jorts"	false
+"Staap Tapas/Pasta"	false
+"Stagle Aglets"	false
+"Stale-Munch Lunch Meats"	false
+"Stampney Payments"	false
+"Stanfield Inflateds"	false
+"Stanhope Phaetons"	false
+"Stapleton Talent Ops"	false
+"StarrCo Carrots"	false
+"Steadham's Mastheads"	false
+"Stedwig Widgets"	false []
+"Steeley Eyelets"	false
+"Stef Hamer Fresh Meat"	false
+"Stef's Fests"	false
+"Stefan's Fastens Fatness"	false
+"Steinbecher's Nice Sherbets"	false
+"Steinert's Insetters"	false
+"Stella's Sallets"	false
+"Stelzer-Setzler Seltzer"	false
+"Stelzer's Seltzers"	false
+"Stenger Regents"	false
+"Stepter's Pretests"	false
+"Stevo's Stoves"	false
+"Stew Tree Tweeters"	false
+"Stewed Tweeds"	false []
+"Stillinger Trellising"	false
+"Stillwagon Tallowings"	false
+"Stinkford's Soft Drinks"	false
+"Stiverson Investors"	false
 "Sto['] G Gots Togs!"	true
-"Stockinger Rocketings"
-"Stohler's Hostlers"
-"Stony Cedar/Nerdy Coast Candy Store"
-"Storable Bloaters"
-"Stoudemire Udometries"
-"Strachan's Trash Cans"
-"Streed's Dessert" []
-"Streperous Superstore"
+"Stockinger Rocketings"	false
+"Stohler's Hostlers"	false
+"Stony Cedar/Nerdy Coast Candy Store"	false
+"Storable Bloaters"	false
+"Stoudemire Udometries"	false
+"Strachan's Trash Cans"	false
+"Streed's Dessert"	false []
+"Streperous Superstore"	false
 "Stressed? Desserts!"	true
-"Striating Attirings"
+"Striating Attirings"	false
 "Studio B OUTBIDS!"	true
-"Sturgeon Rust-Gone" []
-"Su Brant Rust-Ban Turbans"
+"Sturgeon Rust-Gone"	false []
+"Su Brant Rust-Ban Turbans"	false
 "Su-prise! Priuses is Super!"	true
-"Su's Prep-Suppers"
-"Suarez Azures"
-"Sue and Duane's Sundae"
-"Sue Lipps Supplies"
-"Sue Profitt Top Fustier Petit Fours"
-"Sulaiman Aluminas"
-"Sum-Lab Albums"
-"Sumlin's Muslins"
-"Sun Co-Op Coupons"
-"SunPro Prunos"
-"Super Big Grub/Pies"
+"Su's Prep-Suppers"	false
+"Suarez Azures"	false
+"Sue and Duane's Sundae"	false
+"Sue Lipps Supplies"	false
+"Sue Profitt Top Fustier Petit Fours"	false
+"Sulaiman Aluminas"	false
+"Sum-Lab Albums"	false
+"Sumlin's Muslins"	false
+"Sun Co-Op Coupons"	false
+"SunPro Prunos"	false
+"Super Big Grub/Pies"	false
 "Super-Chow: Such Power!"	true
 "Super-E Purees: Peruse!"	true
-"Super-Vid Drive-Ups"
-"Superstar User Parts"
-"SureCity Security"
-"Surf Furs"
-"Surname Manures"
-"Susana Saunas"
-"Suze Chan Szechuan" []
-"Svet's Vests"
-"Swarts Straws"
-"Swensen Newness"
+"Super-Vid Drive-Ups"	false
+"Superstar User Parts"	false
+"SureCity Security"	false
+"Surf Furs"	false
+"Surname Manures"	false
+"Susana Saunas"	false
+"Suze Chan Szechuan"	false []
+"Svet's Vests"	false
+"Swarts Straws"	false
+"Swensen Newness"	false
 "Swenson: NOWNESS!"	true
-"Swine Sinew Wines"
-"Swoboda's Basswood"
-"Syed Edy's Dyes"
-"Synthetic Itchy Nets"
-"Tabitha's Habitats"
+"Swine Sinew Wines"	false
+"Swoboda's Basswood"	false
+"Syed Edy's Dyes"	false
+"Synthetic Itchy Nets"	false
+"Tabitha's Habitats"	false
 "Tacos Inn: Contains No Actins!"	true
-"Talley's LA Style" []
-"Tanaka's Katanas" [] []
-"Tapani's Pinatas"
-"TarverCo Cover Art"
-"Tas-T-Tats"
-"Taste by Beatty's"
-"Tastier/Iratest Artiste Attires"
-"Tat by Byatt"
-"Tats by Batty's"
-"Tawnier Tinware"
+"Talley's LA Style"	false []
+"Tanaka's Katanas"	false [] []
+"Tapani's Pinatas"	false
+"TarverCo Cover Art"	false
+"Tas-T-Tats"	false
+"Taste by Beatty's"	false
+"Tastier/Iratest Artiste Attires"	false
+"Tat by Byatt"	false
+"Tats by Batty's"	false
+"Tawnier Tinware"	false
 "TaxesCo: So Exact!"	true
-"Tayler-Artley Realty"
+"Tayler-Artley Realty"	false
 "Tea Park: Partake!"	true
-"Tea Scribe Beatrice's"
+"Tea Scribe Beatrice's"	false
 "Tea's Up in Petunia's!"	true
-"Tech-Sol Clothes" []
-"Ted Blan Belt and Dent Lab"
-"Ted's Gag Gadgets" []
+"Tech-Sol Clothes"	false []
+"Ted Blan Belt and Dent Lab"	false
+"Ted's Gag Gadgets"	false []
 "TeensyNet: Yes!"	true []
-"Telma's Metals"
-"Temporal Metal Pro [if player is male]Tom Pearl[else]Pam Toler[end if]"
-"TendsUmCo Documents"
-"Tenisha's Shanties" []
-"Teschner Trenches" []
-"Tesla's Steals" [] []
-"Tessman Stamens"
-"Thaler's Slather-Lathers"
-"ThemesCo: Some Tech to Scheme"
-"Thielbar's Herbalist" []
-"ThingCo's Hint Cogs"
+"Telma's Metals"	false
+"Temporal Metal Pro [if player is male]Tom Pearl[else]Pam Toler[end if]"	false
+"TendsUmCo Documents"	false
+"Tenisha's Shanties"	false []
+"Teschner Trenches"	false []
+"Tesla's Steals"	false [] []
+"Tessman Stamens"	false
+"Thaler's Slather-Lathers"	false
+"ThemesCo: Some Tech to Scheme"	false
+"Thielbar's Herbalist"	false []
+"ThingCo's Hint Cogs"	false
 "Thirsty? Try this!"	true
 "Thoop's: Oh, Stop to Shop!"	true
-"Tiger-Man's Mean Grits" []
-"Time/Place Elite Camp"
-"Tingly's Styling"
-"TiredCo's Cot Rides"
-"Titfer Fitter"
+"Tiger-Man's Mean Grits"	false []
+"Time/Place Elite Camp"	false
+"Tingly's Styling"	false
+"TiredCo's Cot Rides"	false
+"Titfer Fitter"	false
 "To Fix it: FOX!"	true
 "To Score: Cooter's StoreCo!"	true
-"Tobie's So-Be-It Boites" []
+"Tobie's So-Be-It Boites"	false []
 "Tofu's so TUF!"	true []
 "ToilCo: Loci to Cool It!"	true
-"Tom Lee's Omelets."
-"Tom's Gag Maggots"
-"Tomkin's OK Mints"
-"Tonita's Station"
-"Tony-Shape Pantyhose"
-"Too Happy Pay Photo"
-"Tootles's Toolsets"
-"Top-Cert-Protect" []
-"Top-Loan Platoon"
+"Tom Lee's Omelets."	false
+"Tom's Gag Maggots"	false
+"Tomkin's OK Mints"	false
+"Tonita's Station"	false
+"Tony-Shape Pantyhose"	false
+"Too Happy Pay Photo"	false
+"Tootles's Toolsets"	false
+"Top-Cert-Protect"	false []
+"Top-Loan Platoon"	false
 "Top opt: Pop Ott!"	true
-"Top Secure Pet Source"
+"Top Secure Pet Source"	false
 "TopNet: Potent!"	true
-"Tops Car Parts Co"
-"Torre Retro"
-"Torres's Resorts"
-"Tortorelli's Rototillers"
-"Tosca Coats" []
-"Tot-Gro Grotto" []
-"Totem Inn Ointment"
-"Touhy Youth"
-"Toy Lords['] Dry Tools"
-"Trades at Red's"
-"TransCo Cartons"
-"Traverse-Averters"
-"Treater Retreat"
-"Treatin['] Nattier"
+"Tops Car Parts Co"	false
+"Torre Retro"	false
+"Torres's Resorts"	false
+"Tortorelli's Rototillers"	false
+"Tosca Coats"	false []
+"Tot-Gro Grotto"	false []
+"Totem Inn Ointment"	false
+"Touhy Youth"	false
+"Toy Lords['] Dry Tools"	false
+"Trades at Red's"	false
+"TransCo Cartons"	false
+"Traverse-Averters"	false
+"Treater Retreat"	false
+"Treatin['] Nattier"	false
 "TreeGen's Greenest!"	true
-"Trey's Tyres"
-"Tricia's Iatrics"
-"Trig's Grits/Grist"
-"TriMax MixArt Matrix"
-"Trino's No-Stir Storin[']" []
-"Trish's Shirts"
+"Trey's Tyres"	false
+"Tricia's Iatrics"	false
+"Trig's Grits/Grist"	false
+"TriMax MixArt Matrix"	false
+"Trino's No-Stir Storin[']"	false []
+"Trish's Shirts"	false
 "A Trite Attire: I Treat!"	true
-"Tropic Trip Co"
+"Tropic Trip Co"	false
 "TroveCo: To Cover or Covet!"	true
-"TruBet Butter"
+"TruBet Butter"	false
 "TrueCo: Rec Out Our Tec to Cure!"	true
 "TrueCom's: More Cuts, Customer!!!"	true
-"TruGo Grout"
-"Trupiano's Rainspout"
-"Trust-O Tutors"
+"TruGo Grout"	false
+"Trupiano's Rainspout"	false
+"Trust-O Tutors"	false
 "Try Pa's Pastry!"	true
 "Try Pat's Party St.!"	true
 "Try Rif's Stir-Fry!"	true
-"Tsao/Sato Oats" []
-"Tuckahoe's Tack House"
-"Tucker Tek-Cru"
-"Turano Naruto"
-"Twin Peaks Weak Pints"
-"Twin Pigs Wing Tips"
-"Ty Rose's Oysters" []
+"Tsao/Sato Oats"	false []
+"Tuckahoe's Tack House"	false
+"Tucker Tek-Cru"	false
+"Turano Naruto"	false
+"Twin Peaks Weak Pints"	false
+"Twin Pigs Wing Tips"	false
+"Ty Rose's Oysters"	false []
 "Ty Sato's: Tots Say So Tasty!"	true []
 "Ty Tao's: O, Tasty to Stay!"	true
-"Ty's Good Dog Toys"
-"Typographic Pictography"
-"U-Go-Try Yogurt"
-"U-Got-Yr Grouty Yogurt" []
-"U. Sanchez Szechuan" []
+"Ty's Good Dog Toys"	false
+"Typographic Pictography"	false
+"U-Go-Try Yogurt"	false
+"U-Got-Yr Grouty Yogurt"	false []
+"U. Sanchez Szechuan"	false []
 "Uby's: Busy Buys BY US!!!!"	true
-"Ug's Rad Guards" []
-"Ult-Sav Vaults"
+"Ug's Rad Guards"	false []
+"Ult-Sav Vaults"	false
 "UltCo = CLOUT!"	true []
-"UltCorps Plus ROTC Sculptor"
-"Ultimate Multi-Tea"
-"Ultra-Fine Train Fuel" []
-"Un-Brite Tribune"
+"UltCorps Plus ROTC Sculptor"	false
+"Ultimate Multi-Tea"	false
+"Ultra-Fine Train Fuel"	false []
+"Un-Brite Tribune"	false
 "Un-Deffest? Need STUFF!"	true
 "Un-thin Nuthin[']? No-Lard Roland Ladron Edits Diets. Obesity bites, yo!"	true
 "UnitCo: I Count!"	true
-"Upcast Pa Cust Catsup"
-"Upcaste Teacups"
-"Upsner Prunes"
-"Urpy's Syrup"
-"Us-Angry Ray Guns"
+"Upcast Pa Cust Catsup"	false
+"Upcaste Teacups"	false
+"Upsner Prunes"	false
+"Urpy's Syrup"	false
+"Us-Angry Ray Guns"	false
 "Us, Preach? Purchase Reach-Ups!"	true
-"Us-Turbo TourBus"
+"Us-Turbo TourBus"	false
 "Us-Vape: Save Up!"	true
 "Use Gin, Genius!"	true
 "UsMenCo: CONSUME!"	true
-"Utech's Chutes"
-"Utter Schlock Clothes Truck"
-"VanOrden's Drone Navs"
-"Vasser Savers"
-"Ventura TrueNav"
-"Vesta's Staves"
-"Vibrant Vit-Bran"
-"Victoria TriviaCo"
-"Vidmaster Trev Midas"
-"Villacorta's Vacillators"
-"Vin Dee's Endives"
-"Vin Mani's Minivans"
+"Utech's Chutes"	false
+"Utter Schlock Clothes Truck"	false
+"VanOrden's Drone Navs"	false
+"Vasser Savers"	false
+"Ventura TrueNav"	false
+"Vesta's Staves"	false
+"Vibrant Vit-Bran"	false
+"Victoria TriviaCo"	false
+"Vidmaster Trev Midas"	false
+"Villacorta's Vacillators"	false
+"Vin Dee's Endives"	false
+"Vin Mani's Minivans"	false
 "VineGen Nine-Veg Evening!"	true
-"Vito's Tivos"
-"Voeller's Oversell"
-"Vogel's Gloves"
-"Vonnie's Venison on Vines"
-"Voorhees's Overshoes"
+"Vito's Tivos"	false
+"Voeller's Oversell"	false
+"Vogel's Gloves"	false
+"Vonnie's Venison on Vines"	false
+"Voorhees's Overshoes"	false
 "Vote Art to Avert!"	true
 "Vote for Rev. Foot!"	true
 "Vote Sol to Solve!"	true
-"Vy's Sure Surveys"
-"Wal-Mart Raw Malt"
-"Wallaby Ballway"
-"Walsh's Shawls"
-"Wang's Gnaws"
-"Warm-Voices Microwaves"
-"Warnecke Neckwear"
+"Vy's Sure Surveys"	false
+"Wal-Mart Raw Malt"	false
+"Wallaby Ballway"	false
+"Walsh's Shawls"	false
+"Wang's Gnaws"	false
+"Warm-Voices Microwaves"	false
+"Warnecke Neckwear"	false
 "Wary-Peon Weaponry: REPAY NOW!"	true
-"Way-Wiser Wireways"
+"Way-Wiser Wireways"	false
 "We trust Stu Wert!"	true
-"Wechsler Welchers"
-"Weidner Red Wine"
-"Weigand Windage"
-"Weird Tom's Worm Diets" []
-"Wendi's New IDs"
-"Weninger Renewing"
-"Wes Roof Woofers"
-"Wesserman Menswears"
-"Westering's Tree Swings"
-"Westgate's Sweet Tags"
-"Westin Twines: it's New"
-"What's-On-Now Hats"
-"Wignall Walling"
-"Winberg Brewing"
-"Winnings in Gwinn's."
-"Wm. Flair Law Firm"
-"Wogan's Wagons" []
-"Wollam's Mallows"
-"Wolters Low-Rest Trowels"
-"Wong's Gowns"
-"Wood Farm's Warm Foods"
-"Woodland's Downloads"
-"Wormscribe Microbrews"
+"Wechsler Welchers"	false
+"Weidner Red Wine"	false
+"Weigand Windage"	false
+"Weird Tom's Worm Diets"	false []
+"Wendi's New IDs"	false
+"Weninger Renewing"	false
+"Wes Roof Woofers"	false
+"Wesserman Menswears"	false
+"Westering's Tree Swings"	false
+"Westgate's Sweet Tags"	false
+"Westin Twines: it's New"	false
+"What's-On-Now Hats"	false
+"Wignall Walling"	false
+"Winberg Brewing"	false
+"Winnings in Gwinn's."	false
+"Wm. Flair Law Firm"	false
+"Wogan's Wagons"	false []
+"Wollam's Mallows"	false
+"Wolters Low-Rest Trowels"	false
+"Wong's Gowns"	false
+"Wood Farm's Warm Foods"	false
+"Woodland's Downloads"	false
+"Wormscribe Microbrews"	false
 "Worst Gin: It's WRONG!"	true
-"Wreathing Nightwear"
-"Wronski Workins[']"
-"X. Brasco Boxcars" []
-"Yaeko's Kayoes"
-"Yahnke's Hankeys"
-"Yarwood's Doorways"
-"Yawpers['] Spyware" []
-"Ye Fast Safety"
-"Ye Rustic Security" []
-"Yeats Yeast"
-"Yenter's Styrene" []
+"Wreathing Nightwear"	false
+"Wronski Workins[']"	false
+"X. Brasco Boxcars"	false []
+"Yaeko's Kayoes"	false
+"Yahnke's Hankeys"	false
+"Yarwood's Doorways"	false
+"Yawpers['] Spyware"	false []
+"Ye Fast Safety"	false
+"Ye Rustic Security"	false []
+"Yeats Yeast"	false
+"Yenter's Styrene"	false []
 "Yeo's Gum: Some Guy Goes Yum!"	true []
 "Yesterday's Dessert: Yay!"	true
-"Yo['] Ma's Mayos"
-"Yong Gyno"
-"Yost Toys"
+"Yo['] Ma's Mayos"	false
+"Yong Gyno"	false
+"Yost Toys"	false
 "You're Stuck? Sky Couture!"	true
-"Your Pets['] Super Toy"
-"Yr. Avg Gravy"
-"Yucatan Cay Tuna"
-"Yukster Turkeys"
-"Zambino's Zambonis"
-"Zanghi Hazing"
+"Your Pets['] Super Toy"	false
+"Yr. Avg Gravy"	false
+"Yucatan Cay Tuna"	false
+"Yukster Turkeys"	false
+"Zambino's Zambonis"	false
+"Zanghi Hazing"	false
 
 table of bad rappers [xxm2]
 blurb

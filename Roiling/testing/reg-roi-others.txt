@@ -304,6 +304,9 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >cripes
 Your score has just gone up by one point
+>kumquta
+Curtis is the one who
+
 >w
 >s
 >i
@@ -505,122 +508,487 @@ Well, you don't technically need plurals for this, but you're on the right track
 >grapes
 >limes
 
+>msso
+No, the whole thing. You see several...similar...items here right now.
+
+>pca
+No, the whole thing. You see several...similar...items here right now.
+
+
 >compass
 >needel
 The needle is working fine. No need to meddle.
 
 >megaton
-DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
-
 No, the whole thing. You see several...similar...items here right now.
 
 >pear
-DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
-
 No, the whole thing. You see several...similar...items here right now.
 
 >mopeage
-DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
-
 No, the whole thing. You see several...similar...items here right now.
 
 >rant
-DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
-
 No, the whole thing. You see several...similar...items here right now.
 
 >magenta
-DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
-
 No, the whole thing. You see several...similar...items here right now.
 
 >rope
-DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
-
 No, the whole thing. You see several...similar...items here right now.
 
 >rampage
-DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
-
 No, the whole thing. You see several...similar...items here right now.
 
 >note
-DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
-
 No, the whole thing. You see several...similar...items here right now.
 
 >amd
-DEBUG INFO: The hash of the command is 87292060. Hash of word 1 is 87292060.
-
 Nothing happens. Perhaps it's the whole item that's important.
 
 >intra
-DEBUG INFO: The hash of the command is 304521993. Hash of word 1 is 304521993.
-
 Nothing happens. Perhaps it's the whole item that's important.
 
 >peatun
-DEBUG INFO: The hash of the command is 488583219. Hash of word 1 is 488583219.
-
 Nothing happens. Perhaps it's the whole item that's important.
 
 >calo
-DEBUG INFO: The hash of the command is 149359819. Hash of word 1 is 149359819.
-
 Nothing happens. Perhaps it's the whole item that's important.
 
 >videotape
-DEBUG INFO: The hash of the command is 689915345. Hash of word 1 is 689915345.
-
 No, it's not just any videotape collection. It's those awful titles.
 
 >collection
-DEBUG INFO: The hash of the command is 639160483. Hash of word 1 is 639160483.
-
 No, it's not just any videotape collection. It's those awful titles.
 
 >videotape
-DEBUG INFO: The hash of the command is 689915345. Hash of word 1 is 689915345.
-
 No, it's not just any videotape collection. It's those awful titles.
 
 >collection
-DEBUG INFO: The hash of the command is 639160483. Hash of word 1 is 639160483.
-
 No, it's not just any videotape collection. It's those awful titles.
 
 >videotapes
-DEBUG INFO: The hash of the command is 786189311. Hash of word 1 is 786189311.
-
 No, it's not just any videotape collection. It's those awful titles.
 
 >video
-DEBUG INFO: The hash of the command is 375345441. Hash of word 1 is 375345441.
-
 No, it's not just any videotape collection. It's those awful titles.
 
 >videos
-DEBUG INFO: The hash of the command is 471619407. Hash of word 1 is 471619407.
-
 No, it's not just any videotape collection. It's those awful titles.
 
 >tape
-DEBUG INFO: The hash of the command is 314569904. Hash of word 1 is 314569904.
-
 No, it's not just any videotape collection. It's those awful titles.
 
 >tapes
-DEBUG INFO: The hash of the command is 410843870. Hash of word 1 is 410843870.
-
 No, it's not just any videotape collection. It's those awful titles.
 
 >bulbrs
-DEBUG INFO: The hash of the command is 377355225. Hash of word 1 is 377355225.
-
 Nothing happens. Perhaps it's the whole item that's important.
 
 >eriee
-DEBUG INFO: The hash of the command is 513734976. Hash of word 1 is 513734976.
+Nothing happens. Perhaps it's the whole item that's important.
+
+#get some more fruits why not
+>maraschino
+>pomegranate
+>cantaloupe
+>persimmon
+
+>tenok
+DEBUG INFO: The hash of the command is 427109390. Hash of word 1 is 427109390.
+
+There's enough credit on the token. Don't get greedy.
+
+>n
+Swell Wells
+
+>stucoc
+DEBUG INFO: The hash of the command is 416853538. Hash of word 1 is 416853538.
+
+Stucco? No. ScoutCon, the message... (You see red recognizing what you should be chasing).
+
+>wlle
+You don't need to riff on any location names to win the game.
+
+>swlle
+You don't need to riff on any location names to win the game.
+
+>silyl
+Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle.
+
+>silylshirt
+Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle.
+
+>arcipt
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+
+>arcipto
+Nothing happens. Your magic skills feel like the pits for a second.
+
+>trish
+Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle.
+
+>orti
+Nothing happens. Perhaps it's the whole item that's important.
+
+>pca
+Nothing happens. Perhaps it's the whole item that's important.
+
+>mersi
+DEBUG INFO: The hash of the command is 418471877. Hash of word 1 is 418471877.
 
 Nothing happens. Perhaps it's the whole item that's important.
 
+>ublre
+DEBUG INFO: The hash of the command is 390468463. Hash of word 1 is 390468463.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>srreo
+DEBUG INFO: The hash of the command is 469080258. Hash of word 1 is 469080258.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>begyo
+DEBUG INFO: The hash of the command is 375536545. Hash of word 1 is 375536545.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>grene
+Nothing happens. Perhaps it's the whole item that's important.
+
+>sinta
+Nothing happens. Perhaps it's the whole item that's important.
+
+>tangerien
+DEBUG INFO: The hash of the command is 661641421. Hash of word 1 is 661641421.
+
+The green stain could make just one fruit, but why not think bigger? It could become many.
+
+>tangerine
+>gooseberry
+>mulberries
+>apples
+>apricot
+>coconuts
+
+
+>n
+Gates Stage
+
+>gesta
+DEBUG INFO: The hash of the command is 361977613. Hash of word 1 is 361977613.
+
+The gate needs to be unlocked some other way.
+
+>geta
+DEBUG INFO: The hash of the command is 265703647. Hash of word 1 is 265703647.
+
+The gate needs to be unlocked some other way.
+
+>ltha
+DEBUG INFO: The hash of the command is 196393974. Hash of word 1 is 196393974.
+
+The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lock action.
+
+>arean
+DEBUG INFO: The hash of the command is 286413056. Hash of word 1 is 286413056.
+
+As you concentrate, you realize it's not just any arena, but the Admit-Us Stadium! Changing the stadium with (presumably) people in it would cause great harm. Maybe you should try to sneak in, instead.
+
+>nera
+DEBUG INFO: The hash of the command is 284225238. Hash of word 1 is 284225238.
+
+Changing the stadium with (presumably) people in it would cause great harm. Maybe you should try to sneak in, instead.
+
+>stadimu
+DEBUG INFO: The hash of the command is 436774697. Hash of word 1 is 436774697.
+
+Changing the stadium with (presumably) people in it would cause great harm. Maybe you should try to sneak in, instead.
+
+>amdit
+DEBUG INFO: The hash of the command is 235394924. Hash of word 1 is 235394924.
+
+Changing the stadium with (presumably) people in it would cause great harm. Maybe you should try to sneak in, instead.
+
+>s
+>w
+Filed Field
+
+>edlif
+You don't need to riff on any location names to win the game.
+
+>pryerbar
+DEBUG INFO: The hash of the command is 608209452. Hash of word 1 is 608209452.
+
+No, it's both pryer bars
+
+>pryer
+DEBUG INFO: The hash of the command is 502278926. Hash of word 1 is 502278926.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>bars
+DEBUG INFO: The hash of the command is 202204492. Hash of word 1 is 202204492.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>drupelet
+DEBUG INFO: The hash of the command is 705460733. Hash of word 1 is 705460733.
+
+No, it's the whole pryer bars.
+
+>drupelets
+DEBUG INFO: The hash of the command is 801734699. Hash of word 1 is 801734699.
+
+No, it's the whole pryer bars
+
+>barris
+DEBUG INFO: The hash of the command is 236247175. Hash of word 1 is 236247175.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>crenes
+DEBUG INFO: The hash of the command is 525123080. Hash of word 1 is 525123080.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>budrie
+DEBUG INFO: The hash of the command is 402676559. Hash of word 1 is 402676559.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>rfat
+DEBUG INFO: The hash of the command is 217136535. Hash of word 1 is 217136535.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>barbre
+DEBUG INFO: The hash of the command is 337479343. Hash of word 1 is 337479343.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>sickel
+DEBUG INFO: The hash of the command is 394825523. Hash of word 1 is 394825523.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>barriesr
+The barriers' westness is important.
+
+>foliaeg
+DEBUG INFO: The hash of the command is 362267787. Hash of word 1 is 362267787.
+
+Alas, the foliage also blocks your magical powers and not just your explorations, but there's plenty else to work at here.
+
+>rapt
+DEBUG INFO: The hash of the command is 272087598. Hash of word 1 is 272087598.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>fugire
+DEBUG INFO: The hash of the command is 422343163. Hash of word 1 is 422343163.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>utsenil
+DEBUG INFO: The hash of the command is 600010093. Hash of word 1 is 600010093.
+
+The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. IT seems worth changing more than the spoon.
+
+>spono
+DEBUG INFO: The hash of the command is 395352587. Hash of word 1 is 395352587.
+
+The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. IT seems worth changing more than the spoon.
+
+>jaggde
+DEBUG INFO: The hash of the command is 265182945. Hash of word 1 is 265182945.
+
+The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. IT seems worth changing more than the spoon.
+
+>e
+>e
+Clangier Clearing
+
+>clegnira
+DEBUG INFO: The hash of the command is 434637210. Hash of word 1 is 434637210.
+
+You don't need to riff on any location names to win the game.
+
+>eln
+DEBUG INFO: The hash of the command is 250527456. Hash of word 1 is 250527456.
+
+Len Craig doesn't change, and even if you messed with his full name, he wouldn't.
+
+>criga
+DEBUG INFO: The hash of the command is 184109754. Hash of word 1 is 184109754.
+
+Len Craig doesn't change, and even if you messed with his full name, he wouldn't.
+
+>overpriced
+DEBUG INFO: The hash of the command is 774270700. Hash of word 1 is 774270700.
+
+That's over-thinking it. It's just a peach.
+
+>elmon
+DEBUG INFO: The hash of the command is 388955186. Hash of word 1 is 388955186.
+
+You can't focus on just one of them.
+
+>uctiona
+DEBUG INFO: The hash of the command is 417662159. Hash of word 1 is 417662159.
+
+You're probably over-thinking it--just pay attention to what it says, instead.
+
+>abnner
+DEBUG INFO: The hash of the command is 371551651. Hash of word 1 is 371551651.
+
+You're probably over-thinking it--just pay attention to what it says, instead.
+
+>solemn
+>solemn
+>among
+>papayas
+>ancienter
+>cheap
+
+>w
+>s
+some sort of dollar
+
+>ubler
+DEBUG INFO: The hash of the command is 390468463. Hash of word 1 is 390468463.
+
+That doesn't really describe the Tekno-Token
+
+>icno
+DEBUG INFO: The hash of the command is 207258516. Hash of word 1 is 207258516.
+
+Hmm. You could probably do something with just one coin, or you could do something with all of them.
+
+>n
+>d
+Scape Space
+You don't need to riff on any location names to win the game.
+
+>abnana
+The A shines for a split-second.
+
+>dllor
+DEBUG INFO: The hash of the command is 288333147. Hash of word 1 is 288333147.
+
+It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
+
+>dllora
+DEBUG INFO: The hash of the command is 290520965. Hash of word 1 is 290520965.
+
+It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
+
+>egaron
+DEBUG INFO: The hash of the command is 391177517. Hash of word 1 is 391177517.
+
+That doesn't seem sneaky enough to get the orange.
+
+>go near
+>orange
+You got it, already
+
+>pantl
+DEBUG INFO: The hash of the command is 309485142. Hash of word 1 is 309485142.
+
+You may want to listen to what the plant has to say, or what it makes you say.
+
+>red
+first-name basis
+
+>rat
+first-name basis
+
+>drol
+It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
+
+>gs
+female
+
+>allo
+Lola
+
+>alol
+It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
+
+>tera
+first-name basis
+
+>drtear
+Dr. Tera is tarred real good. That's the point of tarring. But she might trade that storage box
+
+>give dollar
+
+>strogea
+DEBUG INFO: The hash of the command is 521653993. Hash of word 1 is 521653993.
+
+You might break what is in the storage.
+
+>grtea
+DEBUG INFO: The hash of the command is 351027450. Hash of word 1 is 351027450.
+
+You might break what is in the storage. Then it would be neither great nor so great.
+
+>pugnaciosu
+DEBUG INFO: The hash of the command is 629997575. Hash of word 1 is 629997575.
+
+You may want to listen to what the plant has to say, or what it makes you say.
+
+>icons
+>sonic
+
+>ltso
+DEBUG INFO: The hash of the command is 327550400. Hash of word 1 is 327550400.
+
+After all that work getting it to appear, you don't want to make the lost slot vanish.
+
+>popstra
+DEBUG INFO: The hash of the command is 524180100. Hash of word 1 is 524180100.
+
+Don't know whose
+
+>passpotr
+The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the 
+
+>reviwe
+DEBUG INFO: The hash of the command is 601028460. Hash of word 1 is 601028460.
+
+That's not the way to learn from the viewer--it's probably not that complicated. You hope.
+
+>researhc
+DEBUG INFO: The hash of the command is 581009492. Hash of word 1 is 581009492.
+
+That's not the way to learn from the searcher--it's probably not that complicated. You hope.
+
+>u
+>n
+>n
+
+>erpp
+DEBUG INFO: The hash of the command is 376061830. Hash of word 1 is 376061830.
+
+It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it.
+
+>reversde
+DEBUG INFO: The hash of the command is 778533808. Hash of word 1 is 778533808.
+
+You seem to read the sign backwards for a second.
+
+>reversed
+DEBUG INFO: Trying to flip guava.
+
+The sign wobbles over and falls. You take a guava you found behind it. Dr. Tera Darter nods, impressed.
+
+>gauva
+DEBUG INFO: The hash of the command is 249245965. Hash of word 1 is 249245965.
+
+Curtis is the one who messes with the fruits, not you.
+
+>research
+>review
+You Did Great
