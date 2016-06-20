@@ -31,6 +31,9 @@ Peek Keep
 >demo dome mode
 Peek Keep
 
+>x me
+You look just fine.
+
 >score
 There's no score in the Demo Dome. You just need to look around.
 from Peek Keep

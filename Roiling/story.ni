@@ -13,7 +13,7 @@ To search for your favorite goofy random tables, use ^blurb with a regular-expre
 The new Inform IDE may allow you to search this way, too. For A Roiling Original, I stuck with 6G60. I had enough changes to deal with.
 
 You can place a bracket before any of the other text chunks below to search. They're ordered in approximate priority I used and how often I searched for them.
-TOA = the table of big point scoring changes, table of anagrams
+TOA = the tables of big point scoring changes, table of * anagrams
 TOH = table of hint logic
 TMC = mega-chatter, which logs all the tables I search lists for
 TAF = after-texts, which logs everything said after scanning stuff. Used to help clue the player if something is confusing, whether it's a question mark or vowels/consonants not lining up
@@ -92,6 +92,8 @@ a region can be solved, unsolved, needed, shortcircuited, bypassed or frivolous.
 
 a region has a table name called regtab.
 
+a region has a table name called regana.
+
 a region has a room called last-loc.
 
 a region has a number called turns-spent. a region has a number called last-hint-turns. last-hint-turns of a region is usually 10.
@@ -104,20 +106,21 @@ a region has a list of things called item-list.
 
 chapter region definition
 
-Roman Manor is an unsolved region. regtab of Roman Manor is table of roman manor nudges. max-score of Roman Manor is 13. min-score of Roman Manor is 8. [giant pin, stable/stair, chimney/ramp, basement] [non-anagram = staple wall]
+Roman Manor is an unsolved region. regtab of Roman Manor is table of roman manor nudges. regana of Roman Manor is table of roman manor anagrams. max-score of Roman Manor is 13. min-score of Roman Manor is 8. [giant pin, stable/stair, chimney/ramp, basement] [non-anagram = staple wall]
 
-Stores is an unsolved spoiled region. regtab of Stores is table of routes nudges. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
+Stores is an unsolved spoiled region. regtab of Stores is table of routes nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
-Routes is a region. regtab of Routes is table of routes nudges. max-score of Routes is 18. min-score of Routes is 17. [worst ad]
+Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 18. min-score of Routes is 17. [worst ad]
 
-Troves is a region. regtab of Troves is table of troves nudges. max-score of Troves is 21. min-score of Troves is 15. [Pa Egg Pea, lager, lobster/stream, bee, astute statue, DIVORCES]
+Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 21. min-score of Troves is 15. [Pa Egg Pea, lager, lobster/stream, bee, astute statue, DIVORCES]
 
-Oyster is a region. regtab of Oyster is table of oyster nudges. max-score of oyster is 39. min-score of oyster is 27. [scan cans = 1, revel/lever=1, fart/soar=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter and pulling lever]
+Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 39. min-score of oyster is 27. [scan cans = 1, revel/lever=1, fart/soar=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter and pulling lever]
 
-Presto is a region. regtab of Oyster is table of oyster nudges. max-score of presto is 33. min-score of presto is 28. [rom stick, lamb, tab, casserole, +1 point for Phooey]
+Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 33. min-score of presto is 28. [rom stick, lamb, tab, casserole, +1 point for Phooey]
 
-Towers is a region. regtab of Oyster is table of oyster nudges. max-score of towers is 45. min-score of towers is 24.
-[4 for regular warriors
+Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 45. min-score of towers is 24.
+[Necessary points:
+4 for regular warriors
 1 for Ray Eck
 1 for rewired
 1 for admirer
@@ -140,9 +143,9 @@ Towers is a region. regtab of Oyster is table of oyster nudges. max-score of tow
 1 for giving Ed the flowerpot NON-ANAGRAM
 3 for dying crocus/serpent/ed yerg]
 
-Otters is an unsolved region. regtab of Otters is table of otters nudges. max-score of otters is 29. min-score of otters is 23. [2 for a conjunction pair, 1 for dissing Elmer/Merle, 2 for N and S animal regions, 1 for cinders]
+Otters is an unsolved region. regtab of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 29. min-score of otters is 23. [2 for the extra conjunction pair, 1 for dissing Elmer/Merle, 2 for all animals in both N and S animal regions, 1 for cinders]
 
-Others is an unsolved region. regtab of Others is table of others nudges. max-score of Others is 41. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits + compass + icons/sonic + passport x 2. FRUI checks what fruit is where.]
+Others is an unsolved region. regtab of Others is table of others nudges. regana of Others is table of others anagrams. max-score of Others is 41. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits + compass + icons/sonic + passport x 2. FRUI checks what fruit is where.]
 
 Demo Dome is a frivolous region. regtab of Demo Dome is table of demo dome nudges.
 
@@ -1704,10 +1707,15 @@ to decide which number is the hash of (t - a value of kind K):
 
 when play begins (this is the intro-hashes rule):
 	let wnum be 0;
-	repeat through the table of anagrams:
-		if there is no hashkey entry or hashkey entry is 0:
-			now hashkey entry is the hash of the printed name of the-from entry;
-			d "full name [the printed name of the-from entry] ~ [the-to entry]. Hash = [hashkey entry].[line break]";
+	repeat with Q running through regions:
+		if Q is not demo dome:
+			repeat through regana of Q:
+				if the-from entry is uncluing:
+					now the-from entry is flippable;
+				if there is no hashkey entry or hashkey entry is 0:
+					now hashkey entry is the hash of the printed name of the-from entry;
+					d "full name [the printed name of the-from entry] ~ [the-to entry]. Hash = [hashkey entry].[line break]";
+
 
 chapter undo allows
 
@@ -2953,7 +2961,7 @@ check objasking kid about a guardian:
 		if kid-cheat is false:
 			if second noun is curst palace:
 				say "The kid puts [his-her] hand to [his-her] face, then mumbles 'Sorry, eleven letters is too much. Maybe something shorter.'" instead;
-			choose row with the-from of second noun in the table of anagrams;
+			choose row with the-from of second noun in the table of towers anagrams;
 			now kid-guar is the-from entry;
 			now kid-cheat is true;
 			say "The kid sits and thinks a few seconds after you tell [him-her] where you were stuck. 'Yeah, you just say [right-word entry in upper case]. That'll do it.' [he-she-c] looks kind of bored, though. Probably not nice to push [him-her].";
@@ -2977,7 +2985,7 @@ check objasking doc-y about a guardian:
 		if doc-cheat is false:
 			if second noun is curst palace:
 				say "Dr. Yow scrunches [his-her] head a bit, then shrugs. 'Ouch. Eleven letters. Maybe if it was shorter.'" instead;
-			choose row with the-from of second noun in the table of anagrams;
+			choose row with the-from of second noun in the table of towers anagrams;
 			now doc-guar is the-from entry;
 			now doc-cheat is true;
 			say "Dr. Yow sits and thinks a minute after you tell [him-her] where you were stuck. 'Mm, yes. Of course, of course. I'd think Yeah, you just say [right-word entry in upper case] should work.'";
@@ -4751,8 +4759,10 @@ to say reject:
 		consider the show blues rule;
 	let my-key be the hash of the player's command;
 	let my-key-a be the hash of word number 1 in the player's command;
-	d "The hash of the command is [my-key].[line break]";
-	repeat through the table of anagrams:
+	d "The hash of the command is [my-key]. Hash of word 1 is [my-key-a].[line break]";
+	d "[regana of mrlp].";
+	repeat through regana of mrlp:
+		d "[the-from entry].";
 		if the-from entry is visible:
 			if my-key is the hashkey entry or my-key-a is the hashkey entry:
 				if Gunter is off-stage and player is in dusty study and stuff-found is 3:
@@ -4763,7 +4773,10 @@ to say reject:
 						say "[good-enuf of the-from entry]";
 						continue the action;
 				if slider is switched on:
-					match-process the player's command and the right-word entry;
+					if my-key is hashkey entry:
+						match-process the player's command and the right-word entry;
+					else:
+						match-process word number 1 in the player's command and the right-word entry;
 				else:
 					if Elmo is visible and the-from entry is not rifle:
 						say "You need to [if Elmo carries rifle]disarm[else]talk to[end if] Elmo instead.";
@@ -4772,35 +4785,12 @@ to say reject:
 						say "Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out.";
 						continue the action;
 					say "[spec-help of the-from entry]";
-				continue the action;
-	if number of words in the player's command > 1:
-		now my-key is the hash of word number 1 in the player's command;
-		d "The hash of word 1 of the command is [my-key].[line break]";
-		repeat through the table of anagrams:
-			if the-from entry is visible:
-				if my-key is the hashkey entry:
-					if Gunter is off-stage and player is in dusty study and stuff-found is 3:
-						say "You can't quite concentrate with the noise at the door.";
+					if rq is active:
+						say "With that conversation, you can't concentrate on much...";
 						continue the action;
-					if the-from entry is reflexed:
-						if the-from entry is not doc-y:
-							say "You've already changed [them-that of the-from entry] enough.";
-							continue the action;
-					if slider is switched on:
-						match-process word number 1 in the player's command and the right-word entry;
-					else:
-						if Elmo is visible:
-							say "You need to [if Elmo carries rifle]disarm[else]talk to[end if] Elmo instead.";
-							continue the action;
-						if stuff-found < 3 and player is in study:
-							say "Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out.";
-							continue the action;
-						if rq is active:
-							say "With that conversation, you can't concentrate on much...";
-							continue the action;
-						say "[spec-help of the-from entry]";
+					if my-key is not the hashkey entry:
 						say "[line break](In particular, the first word seemed to have an effect, and you generally don't need a second word.)[line break]";
-					continue the action;
+				continue the action;
 [	repeat through regtab of mrlp:
 		if there is a hashval entry:
 			if my-key is not 0:
@@ -5177,11 +5167,6 @@ when play begins (this is the basic initialization rule):
 	let temp be 0;
 	now the have-died flag is false;
 	protect the have-died flag from undo;
-	repeat with zozimus running through stos:
-		now zozimus is in Strip of Profits;
-	repeat through table of anagrams:
-		if the-from entry is uncluing:
-			now the-from entry is flippable;
 	repeat through table of pad-stuff:
 		if there is no readyet entry:
 			now readyet entry is false;
@@ -5193,11 +5178,6 @@ when play begins (this is the basic initialization rule):
 	move the curst palace backdrop to all towery rooms;
 	add-errs manor;
 	let convo-holes be false;
-	repeat through table of ad slogans: [initialize--typing FALSE all the time annoying]
-		if there is no blare entry:
-			increment temp;
-			now blare entry is false;
-	d "[temp] unblared slogans of [number of rows in table of ad slogans] total slogans.";
 	let temp be 0;
 	repeat through table of biopics: [biopics are hostile by default]
 		if there is no fave entry:
@@ -6377,7 +6357,7 @@ carry out towers-hinting:
 	all-say "There seems to be nothing to do here." instead;
 
 to decide what indexed text is the vul of (w - a warrior):
-	choose row with the-from of w in table of anagrams;
+	choose row with the-from of w in table of towers anagrams;
 	decide on "[right-word entry]";
 
 turbfirst is a truth state that varies.
@@ -6416,7 +6396,7 @@ to any-guardian-hint:
 book otters-hinting
 
 to say current-mackiness:
-	choose row with the-from of current-idea in table of anagrams;
+	choose row with the-from of current-idea in table of otters anagrams;
 	say "[right-word entry in upper case]";
 
 to decide which thing is otters-cur-item:
@@ -6616,7 +6596,7 @@ after reading a command:
 				replace the regular expression "^go " in XX with "";
 				change the text of the player's command to XX;
 	repeat with QQ running through fungible things:
-		if QQ is a the-from listed in the table of anagrams:
+		if QQ is a the-from listed in regana of mrlp:
 			if the player's command matches right-cmd entry:
 				try fliptoing the-to entry;
 				consider the notify score changes rule;
@@ -6786,7 +6766,7 @@ Rule for printing a parser error when the latest parser error is the didn't unde
 		if the player's command matches "\b(wrap|bubble)\b":
 			say "Hm, maybe that's not quite what to do with the wrap. As fun as it'd be to pop all those bubbles one by one, you may need to just rip them all up at once.";
 			the rule succeeds;
-	repeat through table of anagrams:
+	repeat through regana of mrlp:
 		if the player's command matches right-cmd entry:
 			if the-from entry is fungible:
 				try fliptoing the-to entry;
@@ -8446,7 +8426,7 @@ check fliptoing (this is the portal palm and reflexive flip rule):
 			try entering noun instead;
 		if noun is reflexive or noun is vanishing:
 			continue the action;
-		choose row with the-to of noun in table of anagrams;
+		choose row with the-to of noun in regana of mrlp;
 		if the-from entry is reflexed:
 			if there is a dubdip entry:
 				say "[dubdip entry]" instead;
@@ -8463,7 +8443,7 @@ check fliptoing (this is the portal palm and reflexive flip rule):
 			pad-rec "flips" instead;
 
 check fliptoing when player is in dusty study and gunter is off-stage (this is the don't flip til you should at start rule) :
-	repeat through table of anagrams:
+	repeat through table of roman manor anagrams:
 		if noun is the-to entry and the-from entry is cromulent:
 			if player is in dusty study and urgent Gunter is off-stage:
 				if stuff-found < 3:
@@ -8522,7 +8502,7 @@ to pill-list (pilly - a thing):
 	guy-cheat pilly;
 
 carry out fliptoing:
-	repeat through table of anagrams:
+	repeat through regana of mrlp:
 		if noun is the-to entry and the-from entry is cromulent:
 			if ff is true:
 				append "[the player's command]: [the-to entry] to [the-from entry] denied![line break]" to the file of debuggery;
@@ -8595,7 +8575,7 @@ carry out fliptoing:
 				else:
 					set the pronoun him to the-to entry;
 			follow the show blues rule instead; [for debugging]
-	repeat through table of anagrams:
+	repeat through regana of mrlp:
 		if noun is the-from entry and location of noun is location of player:
 			say "You can't seem to change things back to how they were." instead;
 	say "This case with [the player's command] in [location of player] shouldn't have happened. BUG." instead;
@@ -8634,11 +8614,19 @@ book anagram table
 
 chapter the table itself
 
-table of anagrams [toa]
+table of roman manor anagrams
 the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
 palm	lamp	"lamp" or "get lamp"	"lamp"	"Lamp. Palm. Yup. Using your old powers, you change the palm into a lamp, which gives off light. You go all Jason Scott on it, and just like that, bam, it's in your inventory.[paragraph break]You blink and look around and stare at your diorama. You remember how Old Man Almond gave it to you for one day you might need warm-ups, to get back in the groove. With unusual examples and anything. In case you had a different divining tool than the tagged gadget[if latches are off-stage]. Oh! And he gave you something else! Those--useless latches! They might be good for something. You remember the lump from sleeping on the chair--yup, there they are[end if].[paragraph break]Oh, there's that 'dope' op-ed Gunter threw at you, too[preefies]."	true	201542769	"You don't need to do any more with the lamp."	--
 latches	satchel	"satchel"	"satchel"	"The locks start fiddling with themselves--and each other--and slowly, a satchel emerges from the mess[new-thing]."	true	439479634
 giant pin	abstract painting	"painting"	"painting"	"The giant pin's edges become sharper and, before you know it, it's reformed to a portrait hanging on the wall. Whatever stuck the pin to the wall still works on the painting, which may not be High Art, but it's worth a look."	false	447164205
+pavement	event map	"event map" or "eventmap"	"event map"	"The pavement unfolds into a small map which, you remember, describes your first trip through Yorpwald."	false	682523494
+event map	pavement	"pavement"	"pavement"	"The event map folds back into a thoroughly more dull pavement[read-canflip]."	false	682523494
+crabgrass	brass crag	"brasscrag" or "brass crag"	"brasscrag"	"The crabgrass dries out and becomes a brass crag."	false	437595366
+brass crag	crabgrass	"crabgrass"	"crabgrass"	"The brass crag becomes slightly less lifeless crabgrass, again[read-canflip]."	false	437595366
+platform	farm plot	"farmplot" or "farm plot"	"farmplot"	"The platform becomes a farm plot."	false	490844063
+farm plot	platform	"platform"	"platform"	"The farm plot switches back to a platform[read-canflip]."	false	490844063
+pedestal	steel pad	"steelpad" or "steel pad"	"steelpad"	"The pedestal becomes a steel pad."	false	613492907
+steel pad	pedestal	"pedestal"	"pedestal"	"The steel pad intertwines into a marginally artistic pedestal[read-canflip]."	false	613492907
 pram	ramp	"ramp"	"ramp"	"The pram folds out -- boy, there are all sorts of compartments there -- and becomes a ramp, given revamping. [b]DOWN[r] to a basement you have forgot you had."	false	233052733
 sitar	sitar	"stair"	"stair"	"The sitar becomes one with the ground, showing you an inner path to somewhere more peaceful."	false	331888451
 stria	stria	"stair"	"stair"	"The stria glow and cascade into a stair leading back up."	false	331888451
@@ -8647,7 +8635,10 @@ t-b	t-b	"basement"	"basement"	"[if Basement is visited]You diligently set about 
 tables	tables	"stable"	"stable"	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."	false	401610655
 plates	staple	"staple"	"staple"	"The plates [if plaster is visible]fall with a clatter from the plaster[otherwise]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."	true	464657709
 plaster	stapler	"stapler"	"stapler"	"As paper appears behind, a stapler falls out. You take it[if plates are visible] as the formerly stuck plates fall[end if]. The paperwall behind looks lined but seems solid enough."	true	549981512
-rifle	rifle	"flier"	"flier"	"Duh! Snap![paragraph break]After a 'Hands Up!' and SHUP! the rifle jumps out of Elmo's hands. Turns out it was loaded, and it did have a bullet with your name on it, because it becomes a loaded propaganda flier with your name on it.[paragraph break]Elmo lowers his voice. 'Okay, we gotta play it safe here. They maybe should've figured I was a mole. Name and all. But I have stuff to tell you.'[paragraph break]Lo, a guide! Dialogue!"	false	338451493	[end of the whole Manor flip bit]
+rifle	rifle	"flier"	"flier"	"Duh! Snap![paragraph break]After a 'Hands Up!' and SHUP! the rifle jumps out of Elmo's hands. Turns out it was loaded, and it did have a bullet with your name on it, because it becomes a loaded propaganda flier with your name on it.[paragraph break]Elmo lowers his voice. 'Okay, we gotta play it safe here. They maybe should've figured I was a mole. Name and all. But I have stuff to tell you.'[paragraph break]Lo, a guide! Dialogue!"	false	338451493
+
+table of stores anagrams
+the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
 Store B	Store B	"sorbet"	"sorbet"	"You ask 'Got any sorbet?' and a seedy man beckons you in. You talk for a bit, and he talks about how he wants to be a writer and his name is Obert (O-Bert) and you suggest he might be a better writer just by calling himself OB-ert (short o.) It's the most ridiculous things he's ever heard. He thumps you eleven times and throws you out. But the free sample was delicious."	false	505285378	"You sort of made an enemy, but hey, you got a free sample."
 Store H	hoster	"others"	"others"	"You manage to discover a secret place set aside in Store H. You wonder who could be there or even if you should go there."	false	524148772
 Store K	tokers	"tokers"	"tokers"	"You concentrate on the store with all your might, but you're unable to do anything. In frustration, you bang on the window, breaking it. Smoke comes pouring out. 'Dude you must totally be the cops! We were hotboxing in there!' You assure them you are not, that you've got a rather libertarian view on it all, but it takes so long that a joint they left in there burns the store down. Fortunately, they'd grabbed everything else of value, and all things considered, they feel almost glad to be liberated from their fears of being caught. They pull a tarp apart and sit down.[check-nestor]"	false	539799651	[start stores]
@@ -8658,8 +8649,11 @@ Store T	otters-x	"otters"	"otters"	"The store divides in two until it becomes a 
 Store U	routes-x	"routes"	"routes"	"The routes coalesce and flatten and grow. You can ENTER them to see where they lead."	false	591972280
 Store V	troves-x	"troves"	"troves"	"You look more closely at Store V. Yes, those are definitely troves. Store V collapses--you duck as the walls fall out and somehow sink into the ground."	false	594031293
 Store W	towers-x	"towers"	"towers"	"The store becomes a pair of twin towers, connected at the base where you can enter them."	false	594801246
-Store Y	oyster-x	"oyster"	"oyster"	"Blam! The store flattens a bit, rounds out, and becomes an oyster."	false	609225725	[end of the whole Strip of Profits flip bit]
-worst ad	worst ad	"towards"	"towards"	"You walk towards the ad to see what it says, and when you do, you find yourself not caring what direction you are going in. Then you hear a crackle, and someone yells, 'Catch that intruder!'[paragraph break]Ow! Darts! You pass out and wake up in the center of the same mesa again. The ad is gone. [if armada is in mesa]The armada murmurs--you were so close! Maybe you can find another way to get out[end if]You may not be closer to saving Yorpwald, but you've made it fractionally more livable, so yay there."	false	490212044	[start routes flip]
+Store Y	oyster-x	"oyster"	"oyster"	"Blam! The store flattens a bit, rounds out, and becomes an oyster."	false	609225725
+
+table of routes anagrams
+the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
+worst ad	worst ad	"towards"	"towards"	"You walk towards the ad to see what it says, and when you do, you find yourself not caring what direction you are going in. Then you hear a crackle, and someone yells, 'Catch that intruder!'[paragraph break]Ow! Darts! You pass out and wake up in the center of the same mesa again. The ad is gone. [if armada is in mesa]The armada murmurs--you were so close! Maybe you can find another way to get out[end if]You may not be closer to saving Yorpwald, but you've made it fractionally more livable, so yay there."	false	490212044
 picturers	picturers	"inside"	"inside"	"The church resigns ingress."	false	404002364	--	cleric circle
 lairage regalia	lairage regalia	"across"	"across"	"You walk across, not worrying about what is in front of you. Oscar's appears in front of you. You walk in."	false	373417715	--	adobe abode
 adsorbing signboard	adsorbing signboard	"past"	"past"	"You decide to walk past Pat's. Then, you turn and enter the alley just past it. The building lurches sideways toward you, and you manage to jump through the doorway with only a minor bump as it slams into you. You hear taps spat as you enter."	false	283037761	--	idle deli
@@ -8679,7 +8673,10 @@ pier sign	pier sign	"aboard"	"aboard"	"'ABOARD!' you call out. 'ABROAD!' you hea
 ship controls	hit win	"behind/within"	"behind"	"[hit-win-behind]"	false	318436756	"You already found the Hit Win button Ben hid. But you need to find a way past the two obstacles."	[behind]
 ship controls	hit win	"behind/within"	"within"	"[hit-win-behind]"	false	407220290	"You already found the Hit Win button Ben hid. But you need to find a way past the two obstacles."	[within]
 thor	thor	"through"	"through"	"[ahoy-eh]."	false	475056505	--	Strip of Profits
-beet	beet	"between"	"between"	"[ahoy-eh]."	false	681789531	--	Strip of Profits	[end routes]
+beet	beet	"between"	"between"	"[ahoy-eh]."	false	681789531	--	Strip of Profits
+
+table of troves anagrams
+the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
 Pa Egg Pea	Pa Egg Pea	"gape"	"gape"	"You empty your mind to let the advice in Pa, Egg, Pea sink in. It--makes sense, if you don't think too hard. [eicond]."	false	244059588	"You already totally grok Pa, Egg, Pea."
 cold	fretful truffle	"hate"	"hate"	"You feel a rife fire in your heart. [paragraph break]'How neat! Hate won heat now!' you think to yourself.[paragraph break]You manage to stay toasty but you lose focus as you switch too soon from thoughts of goin['] cold to gold coin. A bogeyman takes your moneybag, dropping only a fretful truffle![purse-gone] Your thoughts are really racing now. Racing so fast you can probably do the wrong thing several times before you get it right.[paragraph break]You may need that practice, because right now you don't want your money back as much as you should."	true	270386244	[start troves flip]
 heat	heat	"care"	"care"	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, he can't have ducked out in plain sight. You thought you heard a door slam, just out of view. Emotion has gotten you this far.[wfak][paragraph break]But you will need to be more analytical to move on."	false	234323315
@@ -8701,8 +8698,48 @@ salt	song	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your
 stream	stream	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP."	false	478776867	"The stream has nurtured you spiritually[if lobster is in lalaland]. The lobster nurtured you physically. Time to move on[else]. If you look at it right, the lobster can nurture you physically[end if]."
 lobster	lobster	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. After all, the cost of the lobster is probably less a percent of YOUR income than your underlings['] food is of theirs."	false	559099217	"Your dreams of more lobster dinners acquire rapidly diminishing returns to scale."
 DIVORCES	DIVORCES	"discover"	"discover"	"On perusing DIVORCES with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. DIVORCES is not for you! You pitch it and re-focus."	false	575948795	"You need look no further at that rag. You are better than it, and you don't need to read it to prove it."
-song	troend1	"decide"	"decide"	"[troend]"	false	361668827	--	Strip of Profits[end troves flip bit]
-playbill	troend2	"resign"	"resign"	"[troend]"	false	455903934	--	Strip of Profits[end troves flip bit]
+song	troend1	"decide"	"decide"	"[troend]"	false	361668827	--	Strip of Profits
+playbill	troend2	"resign"	"resign"	"[troend]"	false	455903934	--	Strip of Profits
+
+table of presto anagrams
+the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
+lamb	lamb	"blam"	"blam"	"You make pretend the gun noises as you point your finger at the poor little lamb. It runs off, scared. But the right kind of scared! And towards greener--well, less grey--pastures[if cur-score of presto is 0]. Hmm. That was a loud word you used, there. You make a mental note of others[end if]."	false	138495715
+hump	hump	"umph"	"umph"	"You ham up 'Hup, ma!' to get over a hump, which vanishes[if Leo is visible]. Leo and Rand follow, jumping unnecessarily[end if]."	false	287929218	--	austerer treasure
+star	star	"rats"	"rats"	"You're frustrated you can't reach that star in the stump, and you bang your fists on the stump and say RATS! Then you wiggle a finger in absent-mindedly, and while you're not thinking of it, or of getting your fingers stuck in a cut in the stump, pop, the star comes out! It's the sort you can affix to your clothes and look important with, so you do."	true	286895605
+dart	dart	"drat"	"drat"	"The extra adrenaline provided by the mild swear allows you to be all 'Reach, acher!' And you reach the dart--but not enough to fall in the dumpster."	true	211650728	"Drat, what to do with the dart?"
+plebe	plebe	"bleep"	"bleep"	"You let forth something bleepy. I can't say it here. You know what it is, because you know what your 'favorite' swears, combos thereof, or half-swear portmanteaux are[if player is not wearing star]. But the plebe looks at your chest and smirks a bit. His old CO swore worse, with sager sarge rages[otherwise]. It's no worse than his legions['] lingoes, but man, the WAY you said it. How you built up to it, making the threat stronger than the execution, then BAM![paragraph break]You keep up the abuse by yelling how he can't even stand his bleeping ground to bleeping second rate verbal abuse. The Marine does not remain[end if]. He whines 'Sir, mean reamins['][if player is female],' so disoriented he forgets your gender.[else].'[end if]"	false	409310921
+boing	boing	"bingo"	"bingo"	"You don't have much experience with this sort of thing, but you take a deep breath and realize there are only so many ways to do it wrong. Futzing with the popgun, you mumble 'Aah... aah... a-ha! I loc coil-loci!' You push the trigger just to make sure, and you hear the familiar BOING[if popgun was not held]. You decide to keep it, now that you fiddled with it[end if]. But now, to load it."	false	239271538	"You can't force another revelation, but you don't need to."
+Leo	Leo	"ole"	"ole"	"You set yourself near the vile veil and avoid Leo as he charges at you! He trips over a stump or root and cries, 'I...sprain! Aspirin!'[paragraph break]Leo's yelling attracts a fellow very much like him. 'Am Rand! Rad man!'[paragraph break]Leo looks up a second. 'Hey! A twin!' each cheers, before glaring at you. 'IN THE WAY!' Looks like you've got another challenge."	false	255972525	"Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already."
+Rand	Rand	"darn"	"darn"	"You pretend to trip and tie your shoe. 'Darn.' Rand has seen this trick before, but it was a month ago, so he forgot. He dives at you, and you trip him. It would be merely demoralizing to someone more mentally resilient than Rand, but he is crushed by this loss.[paragraph break]Rand and Leo begin to commiserate together, mumbling about being washups. Maybe they could use a nice word, or a little chat, about anything."	false	177448218	"Giving Rand flashbacks to his humiliating loss would be a bad idea."
+ye hoop	censer	"pooh"	"pooh"	"[get-censer]."	true	267453412
+ye hoop	censer	"phooey"	"phooey"	"[get-censer]."	true	517618773
+walls	walls	"mazeltov" or "mazel tov"	"mazeltov"	"This space intentionally left blank."	false	655479952
+volt maze	volt maze	"mazeltov" or "mazel tov"	"mazeltov"	"You decide to congratulate yourself [if l-m is off-stage and m-l is off-stage]before you get[else]despite not getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, [paragraph break]You hear an imaginary yenta [if maze entry is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if l-m is escanned]saying you should not have had to scan that nice man to figure the puzzle, asking for any due dayenu.[else if m-l is escanned]saying you should not have had to scan those nice men to figure the puzzle, asking for any due dayenu.[else if r24 is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if plaque is unexamined]wondering how you KNEW.[else]saying SHE'D never been that clever, SHE'D have to go through the maze.[end if] [if player was not in grey gyre]When you wake up back in the gyre, you see[else]There's now[end if] ether to the north.[paragraph break]You shake the yenta's blabber off--the important thing is, you figured the maze out, and you doubt anything else here will be nearly that difficult."	false	655479952
+ether	ether	"there"	"there"	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!' [paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"	false	481328338	"'Boss, don't gotta repeat nuffink, Boss. We ain't dumb, boss. Okay, uh, we got street smarts.'"
+keys	keys	"syke"	"syke"	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow all...ow!'"	false	399372505
+hogs	hogs	"gosh"	"gosh"	"You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"	false	240508544
+log ons	log ons	"so long" or "solong"	"solong"	"[increm]"	false	400300169	"[lrshoo]."
+alert	alert	"later"	"later"	"[increm]"	false	372241587	"[lrshoo]."
+ought	ought	"tough"	"tough"	"[increm]"	false	352450403	"[lrshoo]."
+clock sap	caps lock	"capslock" or "caps lock"	"capslock"	"You think WHOAH as the clock sap becomes a capslock button, which you pick up."	true	399038507
+disk	skid	"skid"	"skid"	"[one of]By some lossless easily reversible algorithm, t[or]T[stopping]he disk changes to a skid with a floppy pop-fly[one of]. The skid's too big to carry, but you can PUSH or PULL it around[or] again[stopping]."	false	215229079
+skid	disk	"disk"	"disk"	"The skid changes back into a disk, which you take."	true	215229079
+flea	leaf	"leaf"	"leaf"	"The hopefully only recently dead giant flea becomes a recently dead giant leaf, which looks much better due to all the pretty colors it's turned. It's light for its size, so you pick it up."	true	210322662
+gum	mug	"mug"	"mug"	"The gum, being gum, morphs easily into a new shape -- a mug with annoying smile. Smug Mugs are, sadly, still in fashion in Yorpwald. But they often have a right to be--some even replenish what's in them."	true	201780662
+coal	dirty looking cola	"cola"	"cola"	"The cheap-and-dirty physical energy-giving coal turns into cheap-and-dirty mental energy giving cola, which you take."	true	149359819
+fount	futon	"futon"	"futon"	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh?[r] you think, looking at it[if scratch paper is reflexive], though you're not really tired yet[end if]."	false	377990806
+onyx censer	computer screen	"screen"	"screen"	"The onyx censer and its green dots swirl around and reform into a black screen! With green text!"	true	525123080
+drab yoke	keyboard	"keyboard" or "key board"	"keyboard"	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."	true	504410731
+t-key	t-key	"tab" or "tab key"	"tab"	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."	false	123716741
+scratch paper	scratch paper	"compile"	"compile"	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge til then[if mug is not in cola]. And the task seems daunting, without energy[end if]."	false	465512068	"Compiling regularly is second nature now that you have the hang of it. No need to remind yourself to."
+trim socks	ROM sticks	"romsticks/romstick" or "rom stick/sticks"	"romsticks"	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."	true	636341092
+escaroles	casserole	"casserole"	"casserole"	"The escaroles become a much more calorie-infused casserole. Not your sort of casserole, but more active gourmand types might gobble it down."	false	682843772
+trim socks	ROM sticks	"romstick" or "rom stick"	"romstick"	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."	true	540067126
+compiled code	USB	"debug"	"debug"	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Ponder no derp,' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if t-key is reflexive], despite not realizing what the TBA key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break]'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, revealing a plain old USB. You need a way out!"	false	304959612
+USB	USB	"sub/bus"	"sub"	"[sub-bus]!"	false	219798678	"sub"	Strip of Profits
+
+table of oyster anagrams
+the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
 tumblers	tumblers	"spit" or "spit on the/ tips"	"spit"	"Saliva avails to show your disdain for the bar staff and for generosity in general. The bar patrons, relieved to find someone seedier than themselves, look over quite menacingly, daring you to P.S. it."	false	325842789	[start oyster flip bit]
 tunes	tunes	"unset"	"unset"	"[remap-or-unset]. The music warps and slows down--everyone glares at you, even the fish who were just complaining about the lousy music here. You're nearest the jukebox, so you're the prime suspect."	false	501203408
 stein	stein	"inset" or "inset the/ stein/tines"	"inset"	"You place the stein in the tines. It disappears with a big CRUNCH. The fish around look at you suspiciously, including one who just threw a stein against the wall."	false	441090447	"You broke your free stein."
@@ -8735,49 +8772,10 @@ lever	lever	"revel"	"revel"	"Yeah. Why not feel good about yourself before figur
 gleaner	gleaner	"enlarge"	"enlarge"	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."	false	498444888
 yapper	yapper	"prepay" or "prepay the/ papery/ yapper"	"prepay"	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' He motions you to slip him the gleaner behind your back. Then he goes off to find such a judge, presumably."	false	500608900
 d2	d2	"redial"	"redial"	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range. Between Aunt Tuna, the sardine, and even the reluctant trolls--a story.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Hedron still exerted its hold. Now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."	false	335153504	--	Strip of Profits
-dialer	dialer	"derail"	"derail"	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!' Something dangerous may happen soon."	false	335153504	[end oyster flips]
-lamb	lamb	"blam"	"blam"	"You make pretend the gun noises as you point your finger at the poor little lamb. It runs off, scared. But the right kind of scared! And towards greener--well, less grey--pastures[if cur-score of presto is 0]. Hmm. That was a loud word you used, there. You make a mental note of others[end if]."	false	138495715	[start of the presto bit]
-hump	hump	"umph"	"umph"	"You ham up 'Hup, ma!' to get over a hump, which vanishes[if Leo is visible]. Leo and Rand follow, jumping unnecessarily[end if]."	false	287929218	--	austerer treasure
-star	star	"rats"	"rats"	"You're frustrated you can't reach that star in the stump, and you bang your fists on the stump and say RATS! Then you wiggle a finger in absent-mindedly, and while you're not thinking of it, or of getting your fingers stuck in a cut in the stump, pop, the star comes out! It's the sort you can affix to your clothes and look important with, so you do."	true	286895605
-dart	dart	"drat"	"drat"	"The extra adrenaline provided by the mild swear allows you to be all 'Reach, acher!' And you reach the dart--but not enough to fall in the dumpster."	true	211650728	"Drat, what to do with the dart?"
-plebe	plebe	"bleep"	"bleep"	"You let forth something bleepy. I can't say it here. You know what it is, because you know what your 'favorite' swears, combos thereof, or half-swear portmanteaux are[if player is not wearing star]. But the plebe looks at your chest and smirks a bit. His old CO swore worse, with sager sarge rages[otherwise]. It's no worse than his legions['] lingoes, but man, the WAY you said it. How you built up to it, making the threat stronger than the execution, then BAM![paragraph break]You keep up the abuse by yelling how he can't even stand his bleeping ground to bleeping second rate verbal abuse. The Marine does not remain[end if]. He whines 'Sir, mean reamins['][if player is female],' so disoriented he forgets your gender.[else].'[end if]"	false	409310921
-boing	boing	"bingo"	"bingo"	"You don't have much experience with this sort of thing, but you take a deep breath and realize there are only so many ways to do it wrong. Futzing with the popgun, you mumble 'Aah... aah... a-ha! I loc coil-loci!' You push the trigger just to make sure, and you hear the familiar BOING[if popgun was not held]. You decide to keep it, now that you fiddled with it[end if]. But now, to load it."	false	239271538	"You can't force another revelation, but you don't need to."
-Leo	Leo	"ole"	"ole"	"You set yourself near the vile veil and avoid Leo as he charges at you! He trips over a stump or root and cries, 'I...sprain! Aspirin!'[paragraph break]Leo's yelling attracts a fellow very much like him. 'Am Rand! Rad man!'[paragraph break]Leo looks up a second. 'Hey! A twin!' each cheers, before glaring at you. 'IN THE WAY!' Looks like you've got another challenge."	false	255972525	"Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already."
-Rand	Rand	"darn"	"darn"	"You pretend to trip and tie your shoe. 'Darn.' Rand has seen this trick before, but it was a month ago, so he forgot. He dives at you, and you trip him. It would be merely demoralizing to someone more mentally resilient than Rand, but he is crushed by this loss.[paragraph break]Rand and Leo begin to commiserate together, mumbling about being washups. Maybe they could use a nice word, or a little chat, about anything."	false	177448218	"Giving Rand flashbacks to his humiliating loss would be a bad idea."
-ye hoop	censer	"pooh"	"pooh"	"[get-censer]."	true	267453412
-ye hoop	censer	"phooey"	"phooey"	"[get-censer]."	true	517618773
-walls	walls	"mazeltov" or "mazel tov"	"mazeltov"	"This space intentionally left blank."	false	655479952
-volt maze	volt maze	"mazeltov" or "mazel tov"	"mazeltov"	"You decide to congratulate yourself [if l-m is off-stage and m-l is off-stage]before you get[else]despite not getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, [paragraph break]You hear an imaginary yenta [if maze entry is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if l-m is escanned]saying you should not have had to scan that nice man to figure the puzzle, asking for any due dayenu.[else if m-l is escanned]saying you should not have had to scan those nice men to figure the puzzle, asking for any due dayenu.[else if r24 is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if plaque is unexamined]wondering how you KNEW.[else]saying SHE'D never been that clever, SHE'D have to go through the maze.[end if] [if player was not in grey gyre]When you wake up back in the gyre, you see[else]There's now[end if] ether to the north.[paragraph break]You shake the yenta's blabber off--the important thing is, you figured the maze out, and you doubt anything else here will be nearly that difficult."	false	655479952
-ether	ether	"there"	"there"	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!' [paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"	false	481328338	"'Boss, don't gotta repeat nuffink, Boss. We ain't dumb, boss. Okay, uh, we got street smarts.'"
-keys	keys	"syke"	"syke"	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow all...ow!'"	false	399372505
-hogs	hogs	"gosh"	"gosh"	"You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"	false	240508544
-log ons	log ons	"so long" or "solong"	"solong"	"[increm]"	false	400300169	"[lrshoo]."
-alert	alert	"later"	"later"	"[increm]"	false	372241587	"[lrshoo]."
-ought	ought	"tough"	"tough"	"[increm]"	false	352450403	"[lrshoo]."
-clock sap	caps lock	"capslock" or "caps lock"	"capslock"	"You think WHOAH as the clock sap becomes a capslock button, which you pick up."	true	399038507
-disk	skid	"skid"	"skid"	"[one of]By some lossless easily reversible algorithm, t[or]T[stopping]he disk changes to a skid with a floppy pop-fly[one of]. The skid's too big to carry, but you can PUSH or PULL it around[or] again[stopping]."	false	215229079
-skid	disk	"disk"	"disk"	"The skid changes back into a disk, which you take."	true	215229079
-pavement	event map	"event map" or "eventmap"	"event map"	"The pavement unfolds into a small map which, you remember, describes your first trip through Yorpwald."	false	682523494
-event map	pavement	"pavement"	"pavement"	"The event map folds back into a thoroughly more dull pavement[read-canflip]."	false	682523494
-crabgrass	brass crag	"brasscrag" or "brass crag"	"brasscrag"	"The crabgrass dries out and becomes a brass crag."	false	437595366
-brass crag	crabgrass	"crabgrass"	"crabgrass"	"The brass crag becomes slightly less lifeless crabgrass, again[read-canflip]."	false	437595366
-platform	farm plot	"farmplot" or "farm plot"	"farmplot"	"The platform becomes a farm plot."	false	490844063
-farm plot	platform	"platform"	"platform"	"The farm plot switches back to a platform[read-canflip]."	false	490844063
-pedestal	steel pad	"steelpad" or "steel pad"	"steelpad"	"The pedestal becomes a steel pad."	false	613492907
-steel pad	pedestal	"pedestal"	"pedestal"	"The steel pad intertwines into a marginally artistic pedestal[read-canflip]."	false	613492907
-flea	leaf	"leaf"	"leaf"	"The hopefully only recently dead giant flea becomes a recently dead giant leaf, which looks much better due to all the pretty colors it's turned. It's light for its size, so you pick it up."	true	210322662
-gum	mug	"mug"	"mug"	"The gum, being gum, morphs easily into a new shape -- a mug with annoying smile. Smug Mugs are, sadly, still in fashion in Yorpwald. But they often have a right to be--some even replenish what's in them."	true	201780662
-coal	dirty looking cola	"cola"	"cola"	"The cheap-and-dirty physical energy-giving coal turns into cheap-and-dirty mental energy giving cola, which you take."	true	149359819
-fount	futon	"futon"	"futon"	"The fount turns into a futon, which is better off not wet. [i]There's rest, eh?[r] you think, looking at it[if scratch paper is reflexive], though you're not really tired yet[end if]."	false	377990806
-onyx censer	computer screen	"screen"	"screen"	"The onyx censer and its green dots swirl around and reform into a black screen! With green text!"	true	525123080
-drab yoke	keyboard	"keyboard" or "key board"	"keyboard"	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."	true	504410731
-t-key	t-key	"tab" or "tab key"	"tab"	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."	false	123716741
-scratch paper	scratch paper	"compile"	"compile"	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge til then[if mug is not in cola]. And the task seems daunting, without energy[end if]."	false	465512068	"Compiling regularly is second nature now that you have the hang of it. No need to remind yourself to."
-trim socks	ROM sticks	"romsticks/romstick" or "rom stick/sticks"	"romsticks"	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."	true	636341092
-escaroles	casserole	"casserole"	"casserole"	"The escaroles become a much more calorie-infused casserole. Not your sort of casserole, but more active gourmand types might gobble it down."	false	682843772
-trim socks	ROM sticks	"romstick" or "rom stick"	"romstick"	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."	true	540067126
-compiled code	USB	"debug"	"debug"	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Ponder no derp,' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if t-key is reflexive], despite not realizing what the TBA key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break]'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, revealing a plain old USB. You need a way out!"	false	304959612
-USB	USB	"sub/bus"	"sub"	"[sub-bus]!"	false	219798678	"sub"	Strip of Profits	[end of the PRESTO flip bit]
+dialer	dialer	"derail"	"derail"	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!' Something dangerous may happen soon."	false	335153504
+
+table of towers anagrams
+the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
 snider diners	snider diners	"rinsed"	"rinsed"	"The diners['] dry wit and mood dampen as a water spray erupts from nowhere--and gets them! Their outdoor dining experience has been ruined. They skulk away to somewhere safer."	false	444333321[start towers flip bit]
 ingrates	ingrates	"angstier"	"angstier"	"The ingrates suddenly develops the mooniest emotions--why bother to stop you from doing whatever? After a final snit-rage about you not caring about their problems, they decide to go whine by themselves."	false	561201770	"angstier"
 ego drains	ego drains	"grandiose"	"grandiose"	"The ego-drains suddenly leave you with too absurd of a vision of self-pity. It becomes amusing, and you almost enjoy walking among them. This is too embarrassing for them, and they vanish, having had their own egos dented."	false	553473418	"grandiose"
@@ -8841,7 +8839,10 @@ Ed Yerg	Ed Yerg	"grey"	"grey"	"[yergy]"	false	368088866	"That might be cruel. Ed
 yurts	brownies	"rusty"	"rusty"	"The yurts grow tarnished and crumble. Behind them, you see and take some 'nutrition' as cheap as the yurts that held it: Owers[']-Bin Brownies! The snack of choice for people who prefer quantity over quality!"	true	512172846	"The yurts should be gone."
 pester'n serpent	pester'n serpent	"present"	"present"	"The serpent gradually relaxes, then slinks to where it's just there, but you can't see it. It's present but through pester'n."	false	690693472
 Curst Palace	Curst Palace	"spectacular"	"spectacular"	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The Bland Sad Badlands are already on their way back to being the Mild Sand Midlands. The towers crumble as you fly back through to the Trips Strip."	false	695286307	"spectacular"	Strip of Profits	[end TOWERS flip]
-b-b	b-b	"barely"	"barely"	"You alertly retally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the barley becomes ragin['] grain, seared, then erased. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. The barley to the east is still too thick but looks a bit different now, and cinders remain from all around."	false	409909726	[start OTTERS flip]
+b-b	b-b	"barely"	"barely"	"You alertly retally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the barley becomes ragin['] grain, seared, then erased. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. The barley to the east is still too thick but looks a bit different now, and cinders remain from all around."	false	409909726
+
+table of otters anagrams
+the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
 cinders	cinders	"rescind"	"rescind"	"You formally scatter the cinders all about. You will not use any luck or fate in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."	false	463338906
 Ed Riley	Ed Riley	"reedily"	"reedily"	"'WHAT ARE You...'[paragraph break]'What are you...'[paragraph break]'Hey, man!' he mouths words silently for a bit, his booming voice gone. 'Well--at least you didn't make me share my sandwich! That's...something!' he whines, as he slinks away in embarrassment."	false	583131047
 imp1	imp1	"angrily"	"angrily"	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so he's not very intimidating. He returns to his zigzagging, but he's kind of missing the edges, now."	false	410184768
@@ -8895,8 +8896,11 @@ leopard	leopard	"paroled"	"paroled"	"The leopard perks up as his handcuffs are d
 badger	badger	"garbed"	"garbed"	"The badger looks down and realizes it is wearing clothes. B-grade, garb that won't make you grab or brag, but it can't be drobe-bored. It's less embarrassed now and nods to you gratefully. Perhaps it can return the favor some day."	false	287365426
 satyr	satyr	"artsy"	"artsy"	"The satyr shakes a bit as if he has had a vision. He begins drawing figures in the air, standing on his hind legs and conducting an imaginary orchestra. He seems less strictly focused on his own survival now."	false	409254857
 whistle	whistle	"deeply"	"deeply"	"It takes some time, but you manage to move from making shrieks to something more rumbly and enduring. Noting the writing on the whistle, though, you make sure not to use it til you need to."	false	534280357
-medals	medals	"quickly"	"quickly"	"The medals clink together. You feel infused with speed. Even your fats feel fast."	false	482616124	[end of the otters flip bit]
-moss cap	compass	"compass"	"compass"	"The moss flattens and clears. A stupid weedy bit becomes the compass needle. Congratulations. You now have something which might actually be able to tell the direction!"	true	433635024	[start of Others anagrams]
+medals	medals	"quickly"	"quickly"	"The medals clink together. You feel infused with speed. Even your fats feel fast."	false	482616124
+
+table of others anagrams
+the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
+moss cap	compass	"compass"	"compass"	"The moss flattens and clears. A stupid weedy bit becomes the compass needle. Congratulations. You now have something which might actually be able to tell the direction!"	true	433635024
 lumps	plums	"plums" or "plum"	"plums"	"The lumps grow circular and purplish, and suddenly plums are rolling all around."	true	400734724
 eerie blurbs	blueberries	"blueberries/blueberry"	"blueberries"	"Getting rid of these blurbs is almost a public service. Pulps splup as the vandalism vanishes."	true	891090201
 b-w	strawberries	"strawberries"	"strawberries"	"The barriers west collapse into a pile of strawberries."	true	980775919
@@ -8939,7 +8943,7 @@ icons	s-i	"sonic icons" or "sonic"	"sonic"	"Blam! The icons begin to rattle gent
 coins	icons	"icons"	"icons/icon"	"You vacate your mind of material thoughts. The coins become too omen-y to be money."	false	303532482
 s-c	s-i	"sonic icons" or "icons"	"sonic"	"You vacate your mind of material thoughts. The coins become too omen-y to be money."	false	303532482
 coins	icons	"icons"	"icons"	"You vacate your mind of material thoughts. The coin takes on a much cooler design."	false	303532482
-coins	s-i	"sonic icons" or "icons sonic"	"sonic icons"	"You do a little double-think-move on the coins. They become something entirely different."	false	607064964	[end of the whole Others flip bit]
+coins	s-i	"sonic icons" or "icons sonic"	"sonic icons"	"You do a little double-think-move on the coins. They become something entirely different."	false	607064964
 [etoa]
 
 chapter auxiliary text and rules
@@ -11239,12 +11243,15 @@ to say what-can-flip:
 	if number of prefigured things is 0:
 		say "You have nothing [if ever-fig is true]else [end if]you figured in advance.[no line break]";
 		continue the action;
+	if mrlp is demo dome:
+		say "This shouldn't have happened, but it did. BUG.";
+		continue the action;
 	say "Stuff you figured that may be handy later: ";
 	repeat with pft running through not unfigured things:
 		if pft is a preflip listed in table of pres:
 			say "[line break][pretodo entry]";
-		else if pft is a the-from listed in table of anagrams:
-			choose row with the-from of pft in table of anagrams;
+		else if pft is a the-from listed in regana of mrlp:
+			choose row with the-from of pft in regana of mrlp;
 			say "[line break]Deal with [the-from entry]: [right-word entry].";
 		else:
 			say "[line break]You remember you need to think [pft] at some time.";
@@ -11611,11 +11618,11 @@ does the player mean entering disamb-store: it is likely.
 
 chapter store a
 
-Store A is a sto. it is privately-named and useless.
+Store A is a sto in Strip of Profits. it is privately-named and useless.
 
 chapter store b
 
-Store B is a LLPish reflexive sto. understand "store/ 2/two" as Store B when player is in Strip of Profits.
+Store B is a LLPish reflexive sto in Strip of Profits. understand "store/ 2/two" as Store B when player is in Strip of Profits.
 
 a-text of store b is "RYRRYR". b-text of store b is "PYRRGR". parse-text of store b is "s[sp]o[sp]x[sp]x[sp]e[sp]x". store b is cheat-spoilable.
 
@@ -11623,7 +11630,7 @@ description of Store B is "It's not as greyed out as most of the other stores. I
 
 chapter store c
 
-Store C is a useless sto. understand "store/ 3/three" as Store C when player is in Strip of Profits.
+Store C is a useless sto in Strip of Profits. understand "store/ 3/three" as Store C when player is in Strip of Profits.
 
 description of Store C is "[one of]To porn! Pronto! [or][stopping][randbla]".
 
@@ -11634,11 +11641,11 @@ check examining Store C for the first time:
 
 chapter store d
 
-Store D is a useless sto. understand "store/ 4/four" as Store D when player is in Strip of Profits.
+Store D is a useless sto in Strip of Profits. understand "store/ 4/four" as Store D when player is in Strip of Profits.
 
 chapter store e
 
-Store E is a useless sto. understand "store/ 5/five" as Store E when player is in Strip of Profits.
+Store E is a useless sto in Strip of Profits. understand "store/ 5/five" as Store E when player is in Strip of Profits.
 
 description of Store E is "It's bolted up but seems to be advertising a stereo sale."
 
@@ -11654,7 +11661,7 @@ to say t-trap:
 
 chapter store g
 
-Store G is a useless sto. understand "store/ 7/seven" as Store G when player is in Strip of Profits.
+Store G is a useless sto in Strip of Profits. understand "store/ 7/seven" as Store G when player is in Strip of Profits.
 
 understand "ergots" as a mistake ("You're trying to rescue the people of Yorpwald, not give them fungus infections.") when Store G is visible.
 
@@ -11666,7 +11673,7 @@ understand "storge" as a mistake ("[one of]You have a momentary vision of an apo
 
 chapter store h
 
-Store H is a sto. understand "store/ 8/eight" as Store H when player is in Strip of Profits. [description of Store H is "Spray painted on this locked store is: others are in the throes of being reshot."]
+Store H is a sto in Strip of Profits. understand "store/ 8/eight" as Store H when player is in Strip of Profits. [description of Store H is "Spray painted on this locked store is: others are in the throes of being reshot."]
 
 description of Store H is "Store H appears broken-down. It sprawls a bit but is not particularly tall. A warning in bright red says:[paragraph break]'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'"
 
@@ -11707,11 +11714,11 @@ instead of entering sortie:
 
 chapter store j
 
-Store J is a useless sto. understand "store/ 10/ten" as Store J when player is in Strip of Profits.
+Store J is a useless sto in Strip of Profits. understand "store/ 10/ten" as Store J when player is in Strip of Profits.
 
 chapter store k
 
-Store K is a bedruggled sto. understand "store/ 11/eleven" as Store K when player is in Strip of Profits.
+Store K is a bedruggled sto in Strip of Profits. understand "store/ 11/eleven" as Store K when player is in Strip of Profits.
 
 a-text of Store K is "RYRYRR". b-text of Store K is "RYRYRR". parse-text of store k is "x[sp]-[sp]x[sp]-[sp]x[sp]x".
 
@@ -11755,7 +11762,7 @@ to say if-nest:
 
 chapter store l
 
-Store L is a useless sto. understand "store/ 12/twelve" as Store L when player is in Strip of Profits.
+Store L is a useless sto in Strip of Profits. understand "store/ 12/twelve" as Store L when player is in Strip of Profits.
 
 description of Store L is "You take a peek inside but feel loster and loster as you do."
 
@@ -11770,7 +11777,7 @@ instead of entering metros:
 
 chapter store n
 
-Store N is a bedruggled sto. understand "store/ 14/fourteen" as Store N when player is in Strip of Profits.
+Store N is a bedruggled sto in Strip of Profits. understand "store/ 14/fourteen" as Store N when player is in Strip of Profits.
 
 description of Store N is "Someone appears to be in there."
 
@@ -11791,11 +11798,11 @@ the bottles of toners are a plural-named cluey thing. understand "lotions" as to
 
 chapter store o
 
-Store O is a useless sto. understand "store/ 15/fifteen" as Store O when player is in Strip of Profits.
+Store O is a useless sto in Strip of Profits. understand "store/ 15/fifteen" as Store O when player is in Strip of Profits.
 
 chapter store p
 
-Store P is a sto. understand "store/ 16/sixteen" as Store P when player is in Strip of Profits.
+Store P is a sto in Strip of Profits. understand "store/ 16/sixteen" as Store P when player is in Strip of Profits.
 
 understand "repost" as a mistake ("That's not what you need to do with [if store p is visible]store P--you even see red trying to figure HOW you would[else]the, er, spot[end if].") when store p is visible or e-s is visible
 
@@ -11817,13 +11824,13 @@ a-text of tropes poster is "RRYRRY". b-text of tropes poster is "??YRRY". parse-
 
 chapter store q
 
-Store Q is a useless sto. understand "store/ 17/seventeen" as store Q when player is in Strip of Profits.
+Store Q is a useless sto in Strip of Profits. understand "store/ 17/seventeen" as store Q when player is in Strip of Profits.
 
 description of store Q is "This is a posh shop like many others in the Strip of Profits. It doesn't look likely to hide any sort of portal, even shared with Store U."
 
 chapter store r
 
-Store R is a useless sto. understand "store/ 18/eighteen" as Store R when player is in Strip of Profits.
+Store R is a useless sto in Strip of Profits. understand "store/ 18/eighteen" as Store R when player is in Strip of Profits.
 
 description of Store R is "It could lead back to your resort, to your Roman Manor. But you would not be welcome or safe there."
 
@@ -11831,13 +11838,13 @@ understand "resort" as a mistake ("You can't go back to the Roman Manor. Well, y
 
 chapter store s
 
-Store S is a useless sto. understand "store/ 19/nineteen" as Store S when player is in Strip of Profits.
+Store S is a useless sto in Strip of Profits. understand "store/ 19/nineteen" as Store S when player is in Strip of Profits.
 
 description of Store S is "As you get near, you hear GO AWAY YOU TOSSER. The accent doesn't sound British, so you suspect this person just needed to use a new swear and kind of forced things a bit."
 
 chapter store t
 
-Store T is a sto. understand "store/ 20/twenty" as Store T when player is in Strip of Profits.
+Store T is a sto in Strip of Profits. understand "store/ 20/twenty" as Store T when player is in Strip of Profits.
 
 understand "tortes" as a mistake ("There's no time for food! Especially fatty, non-brain food[if topside is visited]! Besides, the towers had plenty of food. There was your chance[end if]!")
 
@@ -11877,7 +11884,7 @@ check entering otters-x:
 
 chapter store u
 
-Store U is a sto. understand "store/ 21/twentyone" as Store U when player is in Strip of Profits.
+Store U is a sto in Strip of Profits. understand "store/ 21/twentyone" as Store U when player is in Strip of Profits.
 
 understand "ouster" as a mistake ("It's your job to be the ouster in Store u, but how to get there?") when Store U is visible or routes-x are visible.
 
@@ -11904,7 +11911,7 @@ description of routes-x is "They appear to branch out in all directions."
 
 chapter store v
 
-Store V is a sto. understand "store/ 22/twentytwo" as Store V when player is in Strip of Profits.
+Store V is a sto in Strip of Profits. understand "store/ 22/twentytwo" as Store V when player is in Strip of Profits.
 
 description of Store V is "Store V would be the smallest of the stores that stand out, but for Store U[if store u is not visible] before you changed it[end if]. Strange garnets lie inside. You also see a hologram of voters."
 
@@ -11918,7 +11925,7 @@ troves-x are a privately-named plural-named portal. diffic of troves-x is 3. und
 
 chapter store w
 
-Store W is a sto. understand "store/ 23/twentythree" as Store W when player is in Strip of Profits.
+Store W is a sto in Strip of Profits. understand "store/ 23/twentythree" as Store W when player is in Strip of Profits.
 
 a-text of Store W is "RYRYRR". b-text of Store W is "RYRYRR". parse-text of store w is "x[sp]-[sp]x[sp]-[sp]x[sp]x".
 
@@ -11949,11 +11956,11 @@ understand "restow" as a mistake ("[if store w is visible]Store W glows red as y
 
 chapter store x
 
-Store X is a useless sto. understand "store/ 24/twentyfour" as Store X when player is in Strip of Profits.
+Store X is a useless sto in Strip of Profits. understand "store/ 24/twentyfour" as Store X when player is in Strip of Profits.
 
 chapter store y
 
-Store Y is a sto. understand "store/ 25/twentyfive" as Store Y when player is in Strip of Profits.
+Store Y is a sto in Strip of Profits. understand "store/ 25/twentyfive" as Store Y when player is in Strip of Profits.
 
 a-text of Store Y is "YORRYR". b-text of Store Y is "YORRGR". parse-text of store y is "o[sp]y[sp]x[sp]x[sp]e[sp]x". store y is cheat-spoilable.
 
@@ -11975,7 +11982,7 @@ instead of eating oyster-x:
 
 chapter store z
 
-Store Z is a useless sto. understand "store/ 26/twentysix" as Store Z when player is in Strip of Profits.
+Store Z is a useless sto in Strip of Profits. understand "store/ 26/twentysix" as Store Z when player is in Strip of Profits.
 
 chapter megaton magneto montage
 
@@ -15240,6 +15247,8 @@ check eating the casserole:
 	say "Ugh. You're not sure what's in it, and you're probably thinking too much about what is. You'd have to be a gourmand to eat this, even after a heavy workout." instead;
 
 before fliptoing (this is the mostly presto warn against SHATTER THREATS rule) :
+	if mrlp is demo dome:
+		say "This game tried to flip something, but it should not have. BUG." instead;
 	if noun is leaf or noun is mug or noun is dirty looking cola or noun is keyboard or noun is t-key or noun is skid or noun is disk or noun is rom sticks:
 		if mrlp is not presto:
 			say "[bug-report]" instead;
@@ -16619,14 +16628,14 @@ carry out spilling:
 	if oi is a pill-thing listed in table of pill-comments:
 		let any-flip be false;
 		now pill-use is true;
-		repeat through table of anagrams:
+		repeat through table of oyster anagrams:
 			if oi is the-from entry and any-flip is false:
 				try fliptoing the-to entry;
 				now any-flip is true;
 		now pill-use is false;
 		if any-flip is false:
 			say "I should've tried to flip something, but I couldn't. BUG.";
-			d "[oi] was not a the-from in table of anagrams.";
+			d "[oi] was not a the-from in the oyster anagrams.";
 	else:
 		say "You should be able to spill the pills to work on the [oi] but you can't. This is a BUG and I need to put an entry in a table for the [oi].";
 	the rule succeeds;
@@ -18452,7 +18461,7 @@ to say if-duck:
 
 to say big-hint of (rayx - a thing) :
 	if rayx is a guardian or rayx is a warrior:
-		choose row with the-from of rayx in the table of anagrams;
+		choose row with the-from of rayx in the table of towers anagrams;
 		say "[right-word entry in upper case]";
 	else:
 		say "[if rayx is kid]attentive[else if rayx is turbos]robust[else if rayx is blaster]stabler[else if rayx is duck]unlocked--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]unlocked[if-duck][else if rayx is crocus]dingy[else if rayx is flowerpot and limits is visited]dingy[else if rayx is ed yerg]greedy[else if rayx is denim]mined[else if rayx is weeds]sewed[else if rayx is old ice]coiled[else if rayx is eastern]nearest[else if rayx is serpent]present[else if rayx is pulses]unreal[else if rayx is palace]spectacular[else if rayx is strudel]rustled[else]BUG[end if]";
@@ -18483,10 +18492,10 @@ check xraying:
 			say "[reject]" instead;
 		say "That was for the towers. It doesn't work anywhere else because, well, different areas are different." instead;
 	if noun is prefigured:
-		choose row with the-from of noun in table of anagrams;
+		choose row with the-from of noun in table of towers anagrams;
 		say "You already remember trying [right-word entry in upper case]--which seems right, just a matter of getting other things right first. Maybe they already are." instead;
 	if noun is thruhinted:
-		choose row with the-from of noun in table of anagrams;
+		choose row with the-from of noun in table of towers anagrams;
 		say "You remember, from somwhere behind a fourth wall, reading you could just say [right-word entry in upper case]." instead;
 	if noun is the player:
 		say "You might expose yourself to harmful rays and stuff, looking that close." instead;
@@ -19960,6 +19969,8 @@ a-text of turbos is "RYRYRR". b-text of turbos is "RYRYRR". parse-text of turbos
 
 a-text of blaster is "RRYRRYR". b-text of blaster is "RRGRRGP". parse-text of blaster is "x[sp]x[sp]a[sp]x[sp]x[sp]e[sp]r".
 
+no-pastries is a truth state that varies.
+
 to towers-min-adj: [this is when you leave the mainland]
 	wipe-towers-map;
 	let und be number of guardians not in lalaland;
@@ -19979,7 +19990,10 @@ to towers-min-adj: [this is when you leave the mainland]
 	else:
 		increment poss-score of towers;
 	if used-ray is false:
-		increment poss-score of towers;
+		if number of carried hintpastries > 0:
+			increment poss-score of towers;
+		else:
+			now no-pastries is true;
 	now poss-score of towers is poss-score of towers + 5; [dingy, spectacular, greyed, give flowerpot]
 	now min-score of towers is min-score of towers + 1; [4 warriors, spectacular]
 	if turbos are reflexive or blaster is reflexive: [rawest waters]
@@ -20304,8 +20318,8 @@ Mislit Limits is a room in Towers. "Everything looks a bit wrong here. It is mos
 The Curst Palace is a reflexive backdrop.
 
 after fliptoing Curst Palace (this is the overall Towers LLP rule):
-	if used-ray is false:
-		ital-say "You get a bonus point for not using the toaster's x-ray vision anywhere!";
+	if used-ray is false and no-pastries is false:
+		ital-say "You get a bonus point for not using the toaster/pastries['] x-ray vision anywhere!";
 		increment the score;
 	continue the action;
 
@@ -21149,7 +21163,7 @@ does the player mean discerning the player: it is likely.
 
 to say rand-to-go:
 	let mysc be random reflexive scenery in location of player;
-	repeat through table of anagrams:
+	repeat through table of otters anagrams:
 		if mysc is the-from entry:
 			say "[right-word entry in upper case]";
 			continue the action;
@@ -24315,7 +24329,7 @@ instead of doing something with Talks Stalk:
 
 section Flashed Ad Shelf
 
-The Flashed Ad Shelf is an exhibit in Peek Keep. "There is a rotating ad saying visit sunny Threediopolis and Fourdiopolis--well, the edges are sunny. It then changes to tout following the adventures of Alec Smart through the Problems Compound and, eventually, Slicker City."
+The Flashed Ad Shelf is an exhibit in Peek Keep. description is "There is a rotating ad saying visit sunny Threediopolis and Fourdiopolis--well, the edges are sunny. It then changes to tout following the adventures of Alec Smart through the Problems Compound and, eventually, Slicker City."
 
 instead of doing something with flashed ad shelf:
 	if the action is procedural:
@@ -24338,7 +24352,7 @@ thiscal [x calendar] [tdm1]
 "Part eight: that gripe, gather pit, tiger path[paragraph break]And that's when it hit me--I could just GREP my anagram file for ly\b, or words that end in LY, and of course you could be powerless near your great foe. The bleary barley came first, then a way to regain your powers--conjunctions were another word that could be very powerful. Then I noticed a slew of animals which hadn't been anagrammed, mostly because I didn't see how to in SA without crowding the game. Things started to click. I even had an enemy to defeat, but she had no character or name. The necro-crone wasn't Elvira til after Spring Thing."
 "Part nine: inert nap, pain rent[paragraph break]I was able to get the game working with a walkthrough, and I submitted it okay. Greg Boettcher noted it worked, and he liked the idea, though he diplomatically noted that the walkthrough's cuing helped (translated, this meant I forgot to cue SEVERAL exits.)  I found a few easy bugs post-release and didn't see any reviews for a while. I was at least glad one liked the pedanto-notepad. But I was still frustrated. I was grateful to place second to a very entertaining game (Geoff Moore and I have since helped each other with other works,) and I knew I wanted a post-release fix, but I didn't know the scope. What probably kicked me in the butt was an email from someone named Toby Ott who thanked me for the game. He explained he was blind and liked games like this, but he'd found a few bugs. This moved me from 'I better fix my mistakes' to 'I can make this better for people who like this sort of thing.' I also saw a very good walkthrough with bug reports from David Welbourn. I was happy to note I'd fixed some of the bugs, but he provided cuing beyond the good stuff my testers found, including some help-code that hung the game. I think what they found helped him be able to find stuff without getting TOO frustrated. But again, it was nice people were PLAYING."
 "Part ten: pet rant pattern[paragraph break]I thought I'd get the first release out before IFComp 2013, but there were always new bugs to find or puzzles to touch up. I'd fix an area, then move to the next, then be sure the area was paved over smoothly--only to find several 'I saw that, right?' issues. The thing was, there was so much I needed to do, I couldn't get down to the fun aesthetic stuff in good conscience. Eventually I decided on a drop-dead release date early in 2014, but unfortunately I couldn't get to some good transcripts. I left some huge bugs in--ones my testers found--but release 2 made a lot more sense."
-"Part eleven: nerve leapt. Vent. Repeal[paragraph break]One of the huge problems I had with testing was the inefficiency of adding one anagram. But with the major issues out of the way, I found ways to do stuff better. How to add names to anagram checking. This caused my bookshelf to add 1000 titles for release 3 and let me name all the authors. I found a way to centralize all the anagram tables so you could see them at the end. I thought I wouldn't use it much, but I wound up adding ten tables more. I used Notepad++ to load quickly and add anagrams when I didn't need to compile, and for my own vanity, I tracked the number of anagrams in the randomized tables and even checked if they conformed to Benford's Law and Zipf's Law. I wrote an anagram-checker. PERL even helped me to detect bad punctuation, capitals or quotes. All this helped me focus on technical stuff. There's so much I thought I'd only use once, but I reused it. All sorts of internal checks (like the table of anagrams and David White's hashes--in some cases, I wasn't checking right) cleared up. The Table of Nudges grew by several hundreds as I wrote a program to check for the hash value and dump it in a text file for later use. I even managed to write a silly program to check the relative difficulties of the areas. Towers is, by far, the toughest. But I think the most important thing I did was to try and play through one or two areas seriously per week. I needed to let testers['] suggestions soak in. Some puzzles, I thought, weren't perfect, but I didn't have better. But I would up cleaning them up later."
+"Part eleven: nerve leapt. Vent. Repeal[paragraph break]One of the huge problems I had with testing was the inefficiency of adding one anagram. But with the major issues out of the way, I found ways to do stuff better. How to add names to anagram checking. This caused my bookshelf to add 1000 titles for release 3 and let me name all the authors. I found a way to centralize all the anagram tables so you could see them at the end. I thought I wouldn't use it much, but I wound up adding ten tables more. I used Notepad++ to load quickly and add anagrams when I didn't need to compile, and for my own vanity, I tracked the number of anagrams in the randomized tables and even checked if they conformed to Benford's Law and Zipf's Law. I wrote an anagram-checker. PERL even helped me to detect bad punctuation, capitals or quotes. All this helped me focus on technical stuff. There's so much I thought I'd only use once, but I reused it. All sorts of internal checks (like the tables of anagrams and David White's hashes--in some cases, I wasn't checking right) cleared up. The Table of Nudges grew by several hundreds as I wrote a program to check for the hash value and dump it in a text file for later use. I even managed to write a silly program to check the relative difficulties of the areas. Towers is, by far, the toughest. But I think the most important thing I did was to try and play through one or two areas seriously per week. I needed to let testers['] suggestions soak in. Some puzzles, I thought, weren't perfect, but I didn't have better. But I would up cleaning them up later."
 "Part twelve: twerp valet varlet wept[paragraph break]It turns out there's nothing here that was any good, but I liked this sentence."
 "Part thirteen: inert? Phatter! Prettier than...[paragraph break]Just having time pass and being able to tighten up puzzles and think of things has been revealing. I write down my notes, look them over, and get on with it. I've never worked as hard at a creative project as I did with this game, but so many times I thought I'd run out of things to do before finding one more. While I figured 'Demo dome mode' shortly before release 2, I never got around to it because there was always something else in the game."
 "Final part: plan a rift[paragraph break]I'll have to move on. I had fun with this game as a thought experiment. I enjoyed looking at a phrase, saying I bet that'll anagram, and being right. I also enjoyed finding that a simple anagram could fit nicely in the game's flow. But it all has a diminishing return to scale. I want to move on, but hopefully I'll be able to add new silly books or dialogue on a whim. Github makes it easy to add things--and I wish I'd had it earlier, so I could've tracked other changes. Oh, and if people find bugs (still) I can roll that up, too."
@@ -26133,7 +26147,7 @@ to say how-macks:
 		if Q is t-tearily-irately:
 			say "IRATELY/TEARILY";
 		else:
-			choose row with the-from of Q in table of anagrams;
+			choose row with the-from of Q in table of otters anagrams;
 			say "[right-word entry]";
 	if t-tearily-irately is in lalaland and t-tearily-irately is not passed-on:
 		say "[if irately is true]TEARILY instead of IRATELY[else]IRATELY instead of TEARILY[end if]";
@@ -26271,7 +26285,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 	if Towers is solved:
 		if number of guardians not in lalaland > 0:
 			repeat with gua running through guardians not in lalaland:
-				choose row with the-from of gua in table of anagrams;
+				choose row with the-from of gua in table of towers anagrams;
 				let rm2 be gualoc of gua;
 				now rm2 is the room guadir of gua from rm2;
 				say "[2dmiss of cur-reg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is reed's ale]RELEASED or RESEALED[else][right-word entry in upper case][end if].";
@@ -26295,6 +26309,10 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]you could've made Ed Yerg in the Solo Den behind the serpent GREYED.";
 		else if flowerpot is not in lalaland:
 			say "[2dmiss of cur-reg]you could've given Ed Yerg the flowerpot, though that would only give you a few hints.";
+		if used-ray is true:
+			say "[2dmiss of cur-reg]you used x-ray vision from a toasted hint pastry, which cost a style point.";
+		if no-pastries is true:
+			say "[2dmiss of cur-reg]you didn't uncover any hint-pastries, so I couldn't give you the extra style point for resisting the temptation to use the x-ray vision after toasting one.";
 		if number of pinko warriors > 0:
 			repeat with pk running through pinko warriors:
 				say "[2dmiss of cur-reg][pk][one of], whom you left in the Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
@@ -26312,7 +26330,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]you could've been all 'HONESTLY?' at Merle and Elmer.";
 		if number of flippable things in perverse preserve > 0:
 			repeat with A running through flippable things in perverse preserve:
-				say "[2dmiss of cur-reg]you could've turned the [A] into [if A is plural-named]some[else]a[end if] [the-to corresponding to a the-from of A in the table of anagrams].";
+				say "[2dmiss of cur-reg]you could've turned the [A] into [if A is plural-named]some[else]a[end if] [the-to corresponding to a the-from of A in the table of otters anagrams].";
 		if number of reflexive animals in wire deck > 0:
 			repeat with A running through flippable things in wire deck:
 				say "[2dmiss of cur-reg]you could've changed the [A] to be [right-adj of A].";
@@ -27128,13 +27146,15 @@ understand "hashcheck" as hashchecking.
 carry out hashchecking:
 	let my-bool be false;
 	let this-hash be 0;
-	repeat through table of anagrams:
-		now this-hash is the hash of right-word entry;
-		 if hashkey entry is not this-hash:
-			say "Bad flip hash for [the-from entry]/[right-word entry]: [hashkey entry] should be [this-hash].";
-			now my-bool is true;
+	repeat with Q running through regions:
+		if Q is not demo dome:
+			repeat through regana of Q:
+				now this-hash is the hash of right-word entry;
+				 if hashkey entry is not this-hash:
+					say "Bad flip hash for [the-from entry]/[right-word entry]: [hashkey entry] should be [this-hash].";
+					now my-bool is true;
 	if my-bool is false:
-		say "Hooray! No bad hashes in table of anagrams.";
+		say "Hooray! No bad hashes in tables of anagrams.";
 	now my-bool is false;
 	repeat through regtab of mrlp:
 		now this-hash is the hash of this-cmd entry;
@@ -27753,17 +27773,17 @@ after fliptoing when uber-rand-cheat is true:
 	consider the uber-otters rule;
 	continue the action;
 
-every turn when player is in fro and macks are in fro and uber-rand-cheat is true (this is the uber-towers rule):
+every turn when player is in fro and macks are in fro and uber-rand-cheat is true (this is the uber-otters rule):
 	say "Adverbs available:";
 	repeat with Q running through mack-ideas in fro:
-		choose row with the-from of Q in table of anagrams;
+		choose row with the-from of Q in table of otters anagrams;
 		say " [right-word entry in upper case]";
 	say ".";
 
-every turn when player is in trefoil and uber-rand-cheat is true (this is the uber-otters rule):
+every turn when player is in trefoil and uber-rand-cheat is true (this is the uber-towers rule):
 	say "Adjectives available:";
 	repeat with Q running through warriors in trefoil:
-		choose row with the-from of Q in table of anagrams;
+		choose row with the-from of Q in table of towers anagrams;
 		say " [right-word entry in upper case]";
 	say ".";
 
@@ -28038,7 +28058,7 @@ carry out alting:
 
 chapter specsing
 
-[* this tests the spec-help of all items in table of anagrams]
+[* this tests the spec-help of all items in tables of anagrams]
 
 to decide whether (ht - a thing) is spayshul:
 	if ht is an xtrhelp listed in the table of spechelp, decide yes;
@@ -28053,13 +28073,12 @@ understand "specs" as specsing.
 carry out specsing:
 	let qq be 0;
 	let reg be manor;
-	repeat through table of anagrams:
-		unless the-from entry is spayshul:
-			increment qq;
-			if the-from entry is not a backdrop:
-				if the-from entry is not off-stage and the-from entry is not in lalaland:
-					now reg is map region of location of the-from entry;
-			say "[qq]. [the-from entry] [reg] ([right-word entry]) : [spec-help of the-from entry]";
+	repeat with Q running through regions:
+		if Q is not demo dome:
+			repeat through regana of mrlp:
+				unless the-from entry is spayshul:
+					increment qq;
+					say "[qq]. [the-from entry] [q] ([right-word entry]) : [spec-help of the-from entry]";
 	if qq is 0:
 		say "Yay! All things are clued.";
 	the rule succeeds;
@@ -28275,11 +28294,13 @@ understand the command "rejch" as something new.
 understand "rejch" as rejching.
 
 carry out rejching:
-	repeat through table of anagrams:
-		rej-analyze the-from entry;
+	repeat with Q running through regions:
+		if Q is not demo dome:
+			repeat through regana of Q:
+				rej-analyze the-from entry;
 
 to rej-analyze (x - a thing):
-	choose row with the-from of x in table of anagrams;
+	choose row with the-from of x in regana of Q;
 	let y be the-to entry;
 	unless x is an xtrhelp listed in table of spechelp:
 		say "Whoops, [x] could also be in table of spechelp, to [y].";
