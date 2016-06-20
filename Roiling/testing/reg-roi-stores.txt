@@ -1,0 +1,192 @@
+###############################
+#
+#reg-roi-manor-stores.txt
+#
+#regression test for trying ways through stores
+#also includes general tries at magic or whatever
+#
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* weird stuff
+
+>storea
+Nothing happens. You'd think that store would be a good candidate to change, but it isn't
+>storec
+Nothing happens. You'd think that store would be a good candidate to change, but it isn't
+>stored
+Nothing happens. You'd think that store would be a good candidate to change, but it isn't
+>storee
+Nothing happens. You'd think that store would be a good candidate to change, but it isn't
+>storeg
+Nothing happens. You'd think that store would be a good candidate to change, but it isn't
+>stores
+Nothing happens. You'd think that store would be a good candidate to change, but it isn't
+
+>storef
+That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures.
+>storei
+That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures.
+>storem
+That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures.
+
+>storej
+Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway
+>storex
+Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway
+>storez
+Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway
+
+>wowdins
+Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new.
+>wowdin
+Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new.
+
+>ethros
+No--it's a weird place you need to get to, sort of--the rest.
+
+>shells
+The shells don't move. Perhaps they are just a clue.
+
+>shlel
+The shells don't move. Perhaps they are just a clue.
+
+>estro
+You'll want to focus on a specific store.
+
+>egmaton
+It's probably counterproductive to change--it's more an information booth.
+
+>olster
+You search for a magic word but feel, er, lost.
+
+>treko
+They already lost one of their collective, man. It'd be a bummer
+
+>trekos
+WRONG
+
+>tokers
+>trekos
+WRONG
+
+368990052
+
+>routes
+>troves
+
+>utreo
+You don't need to do anything with an individual route. Just go in.
+
+>utreo
+WRONG
+
+>otver
+No need to focus on a specific trove. Just enter or take the troves.
+
+>otvers
+WRONG
+
+>sooter
+Nothing happens. You consider going through the other 358 possibilities, but that'd be so rote.
+
+>sooter
+Nothing happens. You consider going through yet more possibilities, but that'd be so rote.
+
+>sqerto
+Nothing happens. You didn't really expect it to since, hey, no u with the q.
+
+>strore
+Store R led back to your manor last game. It won't go anywhere new, and you don't need or want to go back, right now[if roved is false]. You wouldn't be safe there[end if].
+
+>someoen
+>nouned
+
+>towers
+
+>ivy
+What the towers are made of is not important. Just that they're big, and there's a quest behind them
+>ivory
+What the towers are made of is not important. Just that they're big, and there's a quest behind them
+>ivytower
+What the towers are made of is not important. Just that they're big, and there's a quest behind them
+>ivorytower
+What the towers are made of is not important. Just that they're big, and there's a quest behind them
+>tower
+What the towers are made of is not important. Just that they're big, and there's a quest behind them
+
+>otters
+>irdan
+Darin and Randi, the otters, don't move. You feel a nadir, a drain, even trying to manipulate them.
+
+>otter
+You can't divide and conquer, and the otters won't let you by unless you're, well, ready.
+
+>presto
+>spto
+You can't, er, stop the, er, spot. Best to go in.
+
+>engravign
+The engraving is meant to be read. You can modify it with other actions.
+
+>engravinsg
+You can only change the enrgavings by working through the other stores.
+
+>ptacher
+The patcher doesn't need to be changed. It does the changing if you point it.
+
+>ifdel
+You're not near enough to the barley to affect it. You need to ENTER through the otters
+
+>belray
+You're not near enough to the barley to affect it. You need to ENTER through the otters. 
+
+>barley
+You're not near enough to the barley to affect it. You need to ENTER through the otters. Still, that seems right, if you get there.
+
+>nestor
+>smeko
+It's just smoke. You can't control it. Heck, governments more powerful than you can't control it, and they've been trying. But you can maybe enter it.
+>cludo
+It's just smoke. You can't control it. Heck, governments more powerful than you can't control it, and they've been trying. But you can maybe enter it.
+>smekocludo
+It's just smoke. You can't control it. Heck, governments more powerful than you can't control it, and they've been trying. But you can maybe enter it.
+
+>strip
+You don't need to riff on any location names to win the game
+>profit
+You don't need to riff on any location names to win the game
+>profits
+You don't need to riff on any location names to win the game
+
+>enter cloud
+Cruelest Lectures
+
+>highwya
+You can't see the way high highway any more, and you'd rather deal with the lecturer. Tedious.
+
+>estas
+That might cause a bit too much commotion. Maybe you can just get rid of the lecturer, pay attention to your feelings, and maybe even Ian.
+
+>exampel
+The lecturer is unchangeable in his views, but maybe he is physically moveable.
+>lectuer
+The lecturer is unchangeable in his views, but maybe he is physically moveable.
+>lectuers
+The lecturer is unchangeable in his views, but maybe he is physically moveable.
+>nia
+Ian's had a big life change
+>ani
+Ian's had a big life change
+>ina
+Ian is unchangeable, but maybe he is moveable.
+
+>guardina
+Ian is unchangeable, but maybe he is moveable.
+
+>heartfetl
+You're probably overthinking it. The I-USED-TO examples are just plain tedious.
+>reflectiosn
+You're probably overthinking it. The I-USED-TO examples are just plain tedious.
+

@@ -8101,7 +8101,7 @@ onyx censer	computer screen	"screen"	"screen"	"The onyx censer and its green dot
 drab yoke	keyboard	"keyboard" or "key board"	"keyboard"	"The drab yoke rearranges itself into something more rectangular. The scratchings become bona-fide keys, too. It's a complete keyboard! Well, except for one key[if player does not have yoke]. You are pretty sure you know where this keyboard goes, so you pick it up[end if]."	true	504410731
 t-key	t-key	"tab" or "tab key"	"tab"	"Well, that wasn't too hard, but it'll be useful if you ever need to organize code."	false	123716741
 scratch paper	scratch paper	"compile"	"compile"	"You[if player has rom sticks] figure now's a good time to put those ROM sticks in. You[end if] successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The basic idea works, but the program...ug, sob, bug so bogus. Bug fixing ahead. You can't budge til then[if mug is not in cola]. And the task seems daunting, without energy[end if]."	false	465512068	"Compiling regularly is second nature now that you have the hang of it. No need to remind yourself to."
-trim socks	ROM sticks	"romsticks/romstick" or "rom stick/sticks"	"romsticks"	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."	true	636341092
+trim socks	ROM sticks	"romsticks/romstick" or "rom stick/sticks"	"romsticks"	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."	true	636341092	"The ROM sticks can probably make your computer go faster. Why fiddle further?"
 escaroles	casserole	"casserole"	"casserole"	"The escaroles become a much more calorie-infused casserole. Not your sort of casserole, but more active gourmand types might gobble it down."	false	682843772
 trim socks	ROM sticks	"romstick" or "rom stick"	"romstick"	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."	true	540067126
 compiled code	USB	"debug"	"debug"	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Ponder no derp,' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if t-key is reflexive], despite not realizing what the TBA key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break]'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, revealing a plain old USB. You need a way out!"	false	304959612
@@ -8658,7 +8658,7 @@ after fliptoing tokers:
 
 after fliptoing skid:
 	if disk is not prefigured:
-		say "You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math to be able to use it.";
+		say "You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or to remember the basics.";
 		preef disk;
 	now skid is in location of player;
 	continue the action;
@@ -11491,7 +11491,9 @@ chapter ian
 
 idg is a privately-named person in Cruelest Lectures. printed name of idg is "Ian (a Drug Guardian)". description is "'What? Those biceps are from pure hard work. And a proper diet. And the right vitamins.' He nods and points to the lecturer.". "Standing by the only exit is Ian (a Drug Guardian.)"
 
-understand "ian" and "drug/guardian" and "guardian" as idg.
+understand "ian" and "drug guardian" and "guardian" as idg.
+
+understand "ani" and "nia" as a mistake ("Ian's had a big life change, but that might be too big for him!") when player is in Cruelest Lectures.
 
 instead of doing something with idg:
 	if current action is scaning:
@@ -13428,7 +13430,7 @@ to decide whether (int - a thing) is interjective: [this is for hinting in prest
 
 book Grey Gyre
 
-Grey Gyre is a room in Presto. "It's still kind of windy here, but nothing dangerous, and the ground is just an unappetizing grey all around[if hump is visible], mostly level except for a hump to the west[end if]. It's calmer but burnt to the south, and you see a way east, too[if hump is not visible], in addition to the path west the hump doesn't block any more[end if][if volt maze is in Grey Gyre]. You see a path to what looks like a maze to the north, with a plaque by it[else if ether is visible]. The maze entrance north has been replaced by ether[otherwise]. With the ether clered, you can go north[end if]."
+Grey Gyre is a room in Presto. "It's still kind of windy here, but nothing dangerous, and the ground is just an unappetizing grey all around[if hump is visible], mostly level except for a hump to the west[end if]. It's calmer but burnt to the south, and you see a way east, too[if hump is not visible], in addition to the path west the hump doesn't block any more[end if][if volt maze is in Grey Gyre]. You see a path to what looks like a maze to the north, with a plaque by it[else if ether is visible]. The maze entrance north has been replaced by ether[otherwise]. With the ether cleared, you can go north[end if]."
 
 the ether is vanishing scenery. "It's trickier to see through than moist-o-mist. [if ether-try is true]Those three bums who did the business on you must be hiding, still[else]Anyone or anything could be waiting[end if]."
 
@@ -14246,6 +14248,10 @@ book Phat Path
 
 Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Harm's Marsh to the west. [if lawl wall is in Phat Path]There's also a big wall here, blocking the way north. It's got keys hanging from it[otherwise]There's not much left with the wall gone, except for a sign to the north and a shack beyond that[end if]. You can retreat south, too, of course."
 
+check going south in phat path:
+	if hogs are in phat path:
+	say "The hogs snicker as you walk away.";
+
 Mount Um-Not is scenery in Phat Path. understand "mount/um/not" as Mount Um-Not. "It's as huge and unwelcoming as Cupid's Cuspid isn't. You remember hearing Saps['] Pass, with all its pitfalls, cuts through it."
 
 check taking um-not:
@@ -14936,7 +14942,7 @@ to say sub-bus:
 
 does the player mean doing something with the hard drive: it is unlikely.
 
-description of hard drive is "It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a small blue button and a small orange button."
+description of hard drive is "It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a small blue button and a small orange button, as well as a golden dongle you don't want to mess with."
 
 The small blue button is part of the hard drive. it is auxiliary. understand "reboot/ button" as small blue button.
 
@@ -14968,7 +14974,7 @@ check pushing small blue button:
 	if rebooted is true:
 		say "No need to reboot twice." instead;
 	now small blue button is unfigured;
-	say "The button changes into a REBOOT button, which you press[if player has rom sticks]--though first those ROM sticks will put your PPC on PCP to code in CPP and avoid PCRam Cramp[end if]. The disk drive hums for a while, the computer screen lights up with a fractal shaped like a flatcar, and after a stallin['] install (and several booster-reboots,) some sort of program appears on the screen.";
+	say "The button changes into a REBOOT button, which you press[if player has rom sticks]--though first those ROM sticks will put your PPC on PCP to code in CPP and avoid PCRam Cramp[end if]. The disk drive hums for a while, the computer screen lights up with a fractal shaped like a flatcar, and after a stallin['] install (and several booster-reboots,) the code you saw before reappears on the screen.";
 	if player has rom sticks:
 		now rom sticks are in lalaland;
 	reg-inc;
@@ -22763,7 +22769,8 @@ check inserting into lost slot:
 	say "The icons fit just fine. The box opens up, dissolving to reveal a popstar's passport.";
 	now storage box is in lalaland;
 	now s-i is in lalaland;
-	now player has popstar's passport instead;
+	now player has popstar's passport;
+	the rule succeeds;
 
 the popstar's passport is an uncluing thing. description is "It's got a picture inside, of you. And surprisingly, it's flattering and realistic and electronic! With an artifact this rare, you feel [if viewer is reflexed or searcher is reflexed]full of[else]near to[end if] stardom most rad. It's interactive, too--there's a little viewer on the right and a searcher on the left, and once you really learn how to use it, maybe the passport can be a minder, too. Written on the bottom is some nonsense about how it's not enough to have the passport to improve quality of life--you need to use it, too."
 
@@ -27037,7 +27044,7 @@ roming is an action out of world.
 
 understand the command "rom" as something new.
 
-understand "rom" as roming.
+understand "rom" as roming when player is in manor.
 
 carry out roming:
 	oscan niche;

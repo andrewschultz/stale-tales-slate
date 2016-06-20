@@ -106,7 +106,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "storer"	572190276	--	store r	--	"Store R led back to your manor last game. It won't go anywhere new, and you don't need or want to go back, right now[if roved is false]. You wouldn't be safe there[end if]."
 "stores"	583140439	--	store s	--	"[no-cand]."
 "storex"	599634554	--	store x	--	"[no-way]."
-"shells"	465264018	--	store y	--	"The shells don't move. Perhaps they are just a clue."
+"shell"	368990052	--	store y	--	"[shell-no]."
+"shells"	465264018	--	store y	--	"[shell-no]."
 "storez"	609836091	--	store z	--	"[no-way]."
 "store"	486866473	--	store a	--	"You'll want to focus on a specific store."
 "montage"	473038885	--	magneto montage	--	"It's probably counterproductive to change--it's more an information booth."
@@ -328,10 +329,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 table of presto nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "crust"	408819179	--	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food." [presto nudges]
-"plaque"	454785149	--	plaque	--	"It's the maze you need to change, not the plaque."
-"entry"	507506690	--	plaque	--	"It's the maze you need to change, not the plaque."
-"mazeentry"	824545388	--	plaque	--	"It's the maze you need to change, not the plaque."
-"mazeentry"	824545388	maze entry	--	--	"It's the maze you need to change, not the plaque."
+"plaque"	454785149	--	plaque	--	"[mz-chg]."
+"entry"	507506690	--	plaque	--	"[mz-chg]."
+"mazeentry"	824545388	--	plaque	--	"[mz-chg]."
 "bigl"	149825292	maze entry	--	--	"The big L may be some sort of clue, but you can't do anything with it."
 "mazeroom"	615142808	--	--	in-mazeroom rule	"You can't think of any way to tackle the one room. Perhaps it is the whole maze you need to tackle."
 "dreidl"	353994775	r24	--	--	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
@@ -382,14 +382,14 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "trim"	297501820	--	trim socks	--	"[trimsox]."
 "sock"	242565306	--	trim socks	--	"[trimsox]."
 "socks"	338839272	--	trim socks	--	"[trimsox]."
+"trimsock"	540067126	--	trimsock	--	"[romstix]."
 "sticks"	412589559	--	rom sticks	--	"[romstix]."
 "rom"	223751533	--	rom sticks	--	"[romstix]."
 "stick"	316315593	--	rom sticks	--	"[romstix]."
-"trimsock"	540067126	--	rom sticks	--	"[romstix]."
 "compiled"	486541157	--	compiled code	--	"The code won't BUDGE."
 "code"	242193360	--	compiled code	--	"The code won't BUDGE."
 "dongle"	378508824	--	dongle	--	"It's built to be sturdy. You don't want to mess with it."
-"bored yak"	504410731	--	--	bookvis rule	"The book is unchangably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. [kboard-det]"
+"bored yak"	504410731	--	--	bookvis rule	"The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. [kboard-det]"
 "sleep"	487165982	--	--	wise-to-sleep rule	"Your mind is a tired jumble right now, yes."
 "onyx"	378387418	--	onyx censer	--	"You consider the odd letters in such a short word, then  think 'X, Y, ... no.' Maybe the censer is just a censer, and the coloring is a clue to what it can be."
 "onyxcenser"	903510498	--	onyx censer	--	"You let out a string of something that feels good to say, but it doesn't mean anything. Maybe you're overthinking, and the color doesn't matter."
@@ -399,8 +399,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "yoke"	377451116	--	drab yoke	--	"It's not just any yoke. It's a drab yoke. I mean, a particularly drab yoke. On the bored yak."
 "drab"	126959615	--	drab yoke	--	"It's not just drab. It's a drab yoke. On the bored yak."
 "scratchings"	604963096	--	drab yoke	--	"You may wish to decipher the scratchings, instead."
-"umph"	287929218	--	hump	--	"Wrong sort of grunt to get over the hump."
-"mazeltov"	655479952	--	--	volt-maze-visible rule	"Oy vey! This one's a bit tricky, but I hope it's not too meshugennah."
 "volt"	338441254	--	--	volt-maze-visible rule	"That can't be it. It's a volt MAZE."
 "maze"	317038698	--	--	volt-maze-visible rule	"That can't be it. It's a VOLT maze."
 "drat"	211650728	--	dart	--	"[if dart is in marines]Some 4-letter word or other will get the dart.[else]Don't need to do anything else.[end if]"
@@ -410,20 +408,18 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "ole"	255972525	--	--	Leo-mad rule	"There are only six possibilities. Leo's not too bright, and he can figure it out."
 "darn"	177448218	--	--	Rand-mad rule	"Use the settler. This is a, err, regional word."
 "leorand"	433420743	--	Rand	--	"[if Rand is fightin]You don't need to create a monster[else]Leo and Rand look similar, but combining them would mean they couldn't have a friend[end if]."
-"whassup"	526524588	--	--	washup rule	"That's not the slangiest way to greet washups or make them feel better."
-"there"	481328338	--	--	enemy-lines rule	"You point towards the ether, but you aren't focused on any one place enough."
 "what"	250514908	--	lawl wall	--	"Ehh? Whazzat?"
 "lawl"	217750269	--	lawl wall	--	"It's too expansive for you to use any mental energy on."
-"saps"	276201709	phat	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to go [if shack is visited]back [end if]north, here."
-"mount"	415551063	phat	--	--	"Mount Um, Not silently disposes of your attempts to manipulate it."
-"harms"	285143039	phat	--	--	"[h-ma]."
-"marh"	188869073	--	phat	--	"[h-ma]."
-"hog"	144234578	phat	--	--	"You need to deal with all the hogs."
+"saps"	276201709	phat path	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to go [if shack is visited]back [end if]north, here."
+"mount"	415551063	phat path	--	--	"Mount Um, Not silently disposes of your attempts to manipulate it."
+"harms"	285143039	phat path	--	--	"[h-ma]."
+"marh"	188869073	phat path	--	--	"[h-ma]."
+"hog"	144234578	phat path	--	--	"You need to deal with all the hogs."
 "key"	303098539	--	keys	--	"You aren't sure which key would work, so you need a plan to get them all."
 "entry"	507506690	phat path	--	--	"[if leo is visible]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
-"letters"	697243862	smart people sign	--	--	"You may want to focus on the highlighted letters."
-"algorithm"	497738055	shack	--	--	"[algo-no]."
-"algorithms"	594012021	shack	--	--	"[algo-no]."
+"letters"	697243862	--	smart people sign	--	"You may want to focus on the highlighted letters on the sign."
+"algorithm"	497738055	shack	--	--	"[no-txtbk]."
+"algorithms"	594012021	shack	--	--	"[no-txtbk]."
 "labs"	170694528	--	labs slab	--	"The labs slab remains sturdy. Technology [slab-score], Wordplay Magic 0."
 "alb"	74420562	--	labs slab	--	"The labs slab remains sturdy. Technology [slab-score], Wordplay Magic 0."
 "dead"	172052105	--	flea	--	"There must be a more eco-friendly way to reincarnate the flea."
@@ -431,9 +427,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "puddle"	410249892	--	clock sap	--	"You can't make much out of a clock, but clock sap, maybe."
 "reboot"	483363989	--	--	time-to-reboot rule	"You need to give that computer another (figurative) kick."
 "nottobe"	570057712	shack	--	--	"Even more nothing happens than you expected. The blue button really is too broken. [if rebooted is true]You got the orange button to work, anyway[else]But the orange is not[end if]."
-"compile"	465512068	--	--	time-to-compile rule	"You've assembled the letters incorrectly."
 "debug"	304959612	--	--	time-to-debug rule	"You need to budge the letters about."
-"blam"	138495715	--	lamb	--	"That doesn't quite scare the lamb back home."
 "shack"	207682846	--	priv-shack	--	"You'll need to [if shack is visited]re-[end if]enter the shack to take care of things here."
 "caps"	198933328	--	caps lock	--	"[caps-no]."
 "lock"	200105179	--	caps lock	--	"[caps-no]."
@@ -1261,6 +1255,9 @@ to say so-last:
 to say no-way:
 	say "Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway"
 
+to say shell-no:
+	say "The shells don't move. Perhaps they are just a clue"
+
 to say engs:
 	say "Nothing happens. You probably need to worry about the stores and/or what they become, instead"
 
@@ -1273,7 +1270,7 @@ to say not-at-barley:
 to say barley-check:
 	if the player's command includes "barley":
 		if b-b is not prefigured:
-			say "Still, that seems right, if you get there.";
+			say " Still, that seems right, if you get there.";
 			preef b-b;
 			continue the action;
 
@@ -1415,6 +1412,9 @@ this is the in-mazeroom rule:
 		the rule succeeds;
 	the rule fails;
 
+to say mz-chg:
+	say "It's the maze you need to change, not the plaque"
+
 to say ca-co:
 	say "The camo-coma remains as-is. It's sturdy, military-grade stuff"
 
@@ -1425,7 +1425,7 @@ to say no-scen:
 	say "Here in the Brunt, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster";
 
 to say just-letter:
-	say "It's just one letter in the maze. You may want to focus on the whole volt maze."
+	say "It's just one letter in the maze. You may want to focus on the whole volt maze"
 
 this is the Leo-sad rule:
 	if Leo is washed up and player is in dirge ridge and Leo is in dirge ridge:
@@ -1450,7 +1450,7 @@ to say cola-is-cola:
 	say "It's cola, not soda or pop. And you can just drink it"
 
 to say trimsox:
-	say "They're not just socks, or trim. They're trim socks."
+	say "They're not just socks, or trim. They're trim socks"
 
 to say romstix:
 	say "You'll know what to do with the sticks when you're ready to program";
@@ -1458,7 +1458,7 @@ to say romstix:
 to say kboard-det:
 	if the player's command matches "keyboard" or the player's command matches "key board":
 		if keyboard is not prefigured:
-			say "[line break]";
+			say "That seems like a decent idea for later, though.[line break]";
 			preef-nol keyboard;
 			continue the action;
 		if keyboard is not off-stage:
@@ -1518,9 +1518,6 @@ this is the enemy-lines rule:
 to say h-ma:
 	say "Despite being dangerous to walk into, Harm's Marsh serves an important ecological purpose I can't explain here. So, best not to meddle";
 
-to say algo-no:
-	say "It's more likely that that book would spin YOU around a good deal"
-
 to say slab-score:
 	if slab-pts < 10: [prevent rollover]
 		increment slab-pts;
@@ -1532,8 +1529,8 @@ this is the time-to-reboot rule:
 			if caps lock is part of the keyboard:
 				if disk is in hard drive:
 					if rebooted is false:
-						the rule fails;
-	the rule succeeds.
+						the rule succeeds;
+	the rule fails.
 
 this is the time-to-compile rule:
 	if scratch paper is reflexive and rebooted is true:
@@ -1549,7 +1546,7 @@ to say caps-no:
 	say "It'd sort of stink if a caps lock button broke in real life, so, no"
 
 to say scrapap:
-	say "It's what's on the scratch paper that [if scratch is reflexed]was[else]is[end if] important."
+	say "It's what's on the scratch paper that [if scratch is reflexed]was[else]is[end if] important"
 
 to say no-txtbk:
 	say "The catechism would be more likely to scramble YOU up. [if usb is visible]It's way more complex than what you need to do now[else]It'll be there when you need to gloss over it[end if]";
