@@ -2,10 +2,21 @@ Version 1/151216 of Roiling Random Text by Andrew Schultz begins here.
 
 volume megachatter table
 
-table of megachatter [tmc] [may not be alphabetized since some rules must come before others]
+table of megachatter [tmc] [these are general rules that must take precedence]
 mytab	eturn	curidx	maxidx	go-ahead	whichreg	descr	prefix	suffix	lasties	maxbeforepause	done-once	init-order	table-size	reps
+table of empty command rejects	false	0	20	you-said-nothing rule	lll	"Responses to an empty command"	--	""	"Go for it or I GTFO! (this is the last blank response and an empty threat to boot.)"	--	false	0	0	1
 table of undo rejects	false	0	30	undo-rej rule	lll	"Undo rejects"	--	""	"'Do-over overdo.'"
 table of undo allows	false	0	30	undo-ok rule	lll	"Successful undo responses"	--	""	"'Do? Er, re-do.' (Last one. Stale? NO.)"
+table of noage	false	0	20	am-noing rule	lll	"Rejects for saying no"	--	""	"You're so down, yow. Sour. DONE."
+table of yessage	false	0	20	am-yessing rule	lll	"Rejects for saying yes"	--	""	"A rote ego too eager!"
+table of singing rejects	false	0	20	is-singing rule	lll	"Rejects for singing"	--	""	"Sing-ings! Sing-ings!"
+table of wait responses	false	0	20	you-waited rule	lll	"Wait/Z messages"	--	""	"A gag? La, la. A lag gala.[no line break]"
+table of cussing rejects	false	0	20	you-cussed rule	lll	"How the game blocks profanity, mild or obscene"	--	""	"Screed on, [bracket]CENSORED[close bracket].[no line break]"
+table of nonviolence messages	false	0	20	you-attacked rule	lll	"How the game blocks ATTACK"	--	""	"Ill touch? Chill out till...ouch!"
+table of death messages	false	0	0	bzzt rule	lll	"Death notices"	--	""
+
+table of megachatter (continued) [this is organized by region then by alphabet, well, roughly]
+mytab	eturn	curidx	maxidx	go-ahead	whichreg	descr	prefix	suffix	lasties	maxbeforepause	done-once	init-order	table-size	reps
 table of random books	false	0	30	read-books rule	manor	"All the books in your bookshelf"	"[i]"	"[r]"	"your own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1
 table of ad slogans	true	0	30	blurby rule	manor	"All the ads in the Dope Op-Ed"	--	""	"HANKER! HARKEN! you read. With that general ad, it's back to the start."
 table of mob chants	false	0	30	mob-chanting rule	manor	"Mob chants (LISTEN post-Gunter in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"They finish fishin[']."
@@ -52,14 +63,6 @@ table of Elvira taunts	false	0	20	Elvira-taunt rule	otters	"Elvira's taunts"	--	
 table of animal friends	false	0	60	bzzt rule	otters	"Your animal friends"	--	""
 table of political slogans	false	0	20	sloganing rule	others	"Political slogans"	--	""
 table of selly yells	false	0	30	clearing-listen rule	others	"Selly Yells[indic of others]"	""	""	"A big errant inert brag pauses the bartering for a minute."
-table of noage	false	0	20	am-noing rule	lll	"Rejects for saying no"	--	""	"You're so down, yow. Sour. DONE."
-table of yessage	false	0	20	am-yessing rule	lll	"Rejects for saying yes"	--	""	"A rote ego too eager!"
-table of singing rejects	false	0	20	is-singing rule	lll	"Rejects for singing"	--	""	"Sing-ings! Sing-ings!"
-table of empty command rejects	false	0	20	you-said-nothing rule	lll	"Responses to an empty command"	--	""	"Go for it or I GTFO! (this is the last blank response and an empty threat to boot.)"	--	false	0	0	1
-table of wait responses	false	0	20	you-waited rule	lll	"Wait/Z messages"	--	""	"A gag? La, la. A lag gala.[no line break]"
-table of cussing rejects	false	0	20	you-cussed rule	lll	"How the game blocks profanity, mild or obscene"	--	""	"Screed on, [bracket]CENSORED[close bracket].[no line break]"
-table of nonviolence messages	false	0	20	you-attacked rule	lll	"How the game blocks ATTACK"	--	""	"Ill touch? Chill out till...ouch!"
-table of death messages	false	0	0	bzzt rule	lll	"Death notices"	--	""
 table of help companies	false	0	30	bzzt rule	lll	"Hint guy t-shirt writing[if have-objhinted is false] (occurs first time you request hints)[end if]"	--	""
 table of elmo emo	false	0	30	bzzt rule	manor	"Elmo's romantic complaints[if girls-quip is not mowered] (off-topic Elmo chat)[end if]"	""	""
 table of sports chatter	false	0	30	bzzt rule	manor	"Elmo's sports banter[if sports-quip is not mowered] (off-topic Elmo chat)[end if]"	""	""
@@ -77,6 +80,624 @@ table of self-help bestsellers	false	0	30	bzzt rule	troves	"Self-help bestseller
 table of songs you could write	false	0	30	bzzt rule	troves	"Songs you write on solving Troves"	--	""
 table of sleep rejects	false	0	30	am-sleeping rule	lll	"Sleeping rejects"	--	"[pre-lb]"
 [tmc]
+
+volume megachatter rules and stubs
+
+part random tables
+
+when play begins (this is the table scramble and index rule) :
+	let mycount be 0;
+	repeat through table of megachatter:
+		now done-once entry is false;
+		if there is a mytab entry:
+			sort mytab entry in random order;
+		unless there is a reps entry:
+			now reps entry is 1;
+		if there is no curidx entry:
+			now curidx entry is 0;
+		if there is no maxidx entry or maxidx entry is 0:
+			if there is a mytab entry: [just see if the maxidx entry can and should be cut down]
+				if there is a maxidx entry and maxidx entry < number of rows in mytab entry:
+					do nothing;
+				else:
+					now maxidx entry is number of rows in mytab entry;
+		if there is no maxbeforepause entry:
+			now maxbeforepause entry is 40;
+		increment mycount;
+		now init-order entry is mycount;
+		if there is a mytab entry:
+			now table-size entry is number of rows in mytab entry;
+	prio-sort table of random books: [this puts certain books in front, which may give various clues. It was probably more a thought experiment than anything.]
+
+to prio-sort (ta - table name):
+	let temp be 0;
+	repeat through ta:
+		if there is a prio entry:
+			now prio entry is a random number from 1 to prio entry;
+		else:
+			increment temp;
+			now prio entry is temp;
+	sort ta in prio order;
+
+chat-rand is a truth state that varies.
+
+every turn (this is the process random dialogue rule) :
+	if current action is hinting:
+		do nothing instead;
+	if current action is fliptoing:
+		do nothing instead;
+	now chat-rand is true;
+	consider the find-blather rule;
+	now chat-rand is false;
+
+ever-hit-last is a truth state that varies. just-hit-last is a truth state that varies.
+
+every turn when ever-hit-last is false (this is the check for loop and warn rule):
+	if just-hit-last is true:
+		ital-say "you have reached your first end of random text. If you wish to see all the random text, there will be a menu once you win the game. Or you can look in the source that should come with the game.";
+		now ever-hit-last is true;
+
+[find-blather is what is used for random dialogue. It relies on the table of megachatter.]
+
+this is the find-blather rule:
+	let zz be 0;
+	repeat through table of megachatter:
+		if eturn entry is chat-rand:
+			if there is a go-ahead entry:
+				consider the go-ahead entry;
+				if the rule succeeded:
+					if chat-rand is true and talk-quiet is true and done-once entry is true:
+						the rule succeeds;
+					now done-once entry is true;
+					increment curidx entry;
+					if curidx entry > maxidx entry:
+						if there is a lasties entry:
+							say "[lasties entry]"; [I maybe should put a paragraph break here but I think it disrupts one of the randoms, so that's no good. It'd be a better solution than pre-brk if it worked...but it's so dicey. Things work as they are.]
+							now curidx entry is 0;
+							now just-hit-last is true;
+							the rule succeeds;
+						else:
+							say "You feel a sense of deja vu.[paragraph break]";
+							now curidx entry is 1;
+					if there is a prefix entry:
+						say "[prefix entry]";
+					let whrow be curidx entry;
+					if there is no suffix entry:
+						d "WARNING NEED SUFFIX ENTRY FOR [mytab entry]";
+					let posties be suffix entry;
+					choose row whrow in mytab entry;
+					say "[blurb entry][posties][line break]";
+					if chat-rand is true:
+						if talk-quiet is true:
+							say "[line break]";
+							ital-say "the above was random dialogue that won't be repeated since you have HUSH on. You can undo this with UHHS.";
+						if quiet-warn is false:
+							ital-say "the above was random dialogue that can be turned off with HUSH or on with UHHS. If you forget this, it's in your notepad. Also, if you want all the dialogue, no need to hit Z a ton. You can read the source or, to see it formatted a bit better, solve the game.";
+							pad-rec-q "random dialogue";
+							now quiet-warn is true;
+					the rule succeeds;
+
+[randbla is used for stuff you examine.]
+
+wrap-note is a truth state that varies.
+
+wrap-note-ver is a truth state that varies.
+
+to say randbla:
+	say "[run paragraph on]";
+	let booknote be false;
+	let adnote be false;
+	repeat through table of megachatter:
+		if eturn entry is chat-rand:
+			if there is a go-ahead entry:
+				consider the go-ahead entry;
+				if the rule succeeded:
+					increment curidx entry;
+					if curidx entry > maxidx entry:
+						if there is a lasties entry:
+							say "[lasties entry]";
+							now curidx entry is 0;
+							the rule succeeds;
+						else:
+							[say "(generic note that random text is cycling)[paragraph break]";]
+							now curidx entry is 1;
+					if there is a prefix entry:
+						say "[prefix entry]";
+					let whrow be curidx entry;
+					let posties be suffix entry;
+					if mytab entry is table of random books:
+						now booknote is true;
+					if mytab entry is table of ad slogans:
+						now adnote is true;
+					if reps entry is 1 or reps entry is 0:
+						choose row whrow in mytab entry;
+						say "[blurb entry][posties]";
+					else:
+						let repnum be maxidx entry - curidx entry + 1;
+						if repnum > reps entry:
+							now repnum is reps entry;
+							increase curidx entry by repnum - 1; [this is sloppy code but I can't think of another way to take care of this special case]
+						else:
+							now curidx entry is 0;
+						d "[curidx entry] vs [maxidx entry]. Repnum is [repnum].";
+						let thistab be mytab entry;
+						increase curidx entry by repnum; [afterwards gets runtime error as inform thinks it's the new table]
+						repeat with county running from 1 to repnum:
+							choose row whrow in thistab;
+							say "[blurb entry] ";
+							increment whrow;
+					if wrap-note is false and whrow > 5: [this is a magic number, to see if the person is really examining something.]
+						now wrap-note is true;
+					the rule succeeds;
+
+every turn when wrap-note is true and wrap-note-ver is false (this is the alert you don't have to gawk rule) :
+	ital-say "you've been repeating looking up something with random text a lot--something with at least ten entries and possibly much more. If you solve the game, you can see it all. Thanks for your (apparent) interest! Oh, you can browse the source code for a chunk of text, too, and it shouldn't spoil the game, since it's all in a table. Just remember single apostrophes have a bracket on each side.";
+	now wrap-note-ver is true;
+
+to say c-c-u:
+	say " [if circle is visited]in the Cleric Circle[else](Routes)[end if]";
+
+to say indic of (reg - a region):
+	if last-loc of reg is unvisited:
+		say " ([reg])"
+
+die-trigger is a number that varies.
+die-to-us is a truth state that varies.
+
+to say ted-die:
+	if die-trigger > 0:
+		decrement die-trigger;
+		say "[if die-trigger is 0]'Die to us!' the lecturer yells, as he points at someone who may or may not be using drugs. 'To use...I'd...' the poor soul mumbles as he is slapped up and carted off. You see red at what must be either harsh injustice or appalling acting[else]Man, it's all so [i]tedious[r][end if]";
+	else if a random chance of 1 in 4 succeeds:
+		say "After that ... incident, everything is back to [i]tedious[r].";
+	else:
+		say "[line break]";
+
+to say randexc:
+	let re be a random number from 1 to 5;
+	repeat with re2 running from 1 to re:
+		say "![no line break]";
+	if talk-quiet is true:
+		say "[line break]";
+
+[below for if list line breaks don't match up with what's in the game]
+to say post-brk: [unused]
+	if otters is solved:
+		say "[paragraph break]";
+
+to say post-lb: [unused]
+	if otters is solved:
+		say "[line break]";
+
+to say pre-brk:
+	unless otters is solved:
+		say "[paragraph break]";
+
+to say pre-lb:
+	unless otters is solved:
+		say "[line break]";
+
+to say eisiping:
+	say "[if rathole is unvisited] (Troves)[else if Pa Egg Pea is unexamined] (examine Pa Egg Pea)[end if]"
+
+to say elv-art:
+	unless dope-read is true:
+		say " (read [if player is male]I Trash His Art[else]Her Arts Er Trash[end if])"
+
+part random text rules
+
+section GENERAL random text rules
+
+this is the bzzt rule:
+	the rule fails.
+
+this is the am-yessing rule:
+	if current action is saying yes:
+		the rule succeeds;
+	the rule fails.
+
+this is the am-noing rule:
+	if current action is saying no:
+		the rule succeeds;
+	the rule fails.
+
+this is the is-singing rule:
+	if current action is singing:
+		the rule succeeds;
+	the rule fails.
+
+this is the you-said-nothing rule:
+	if pardons is true:
+		the rule succeeds;
+	the rule fails;
+
+this is the you-cussed rule:
+	if current action is swearing obscenely:
+		the rule succeeds;
+	the rule fails;
+
+this is the you-waited rule:
+	if current action is waiting:
+		the rule succeeds;
+	the rule fails;
+
+this is the you-attacked rule:
+	if current action is attacking:
+		the rule succeeds;
+	the rule fails;
+
+this is the am-sleeping rule:
+	if current action is sleeping:
+		the rule succeeds;
+	the rule fails;
+
+this is the undo-ok rule:
+	if currently-undoing is true:
+		the rule succeeds;
+	the rule fails;
+
+this is the undo-rej rule:
+	if currently-rejecting is true:
+		the rule succeeds;
+	the rule fails;
+
+section MANOR random text rules
+
+this is the read-books rule:
+	if current action is examining the bookshelf:
+		the rule succeeds;
+	the rule fails.
+
+this is the pun-quip rule:
+	if current quip is pun-quip:
+		the rule succeeds;
+	the rule fails.
+
+this is the mob-chanting rule:
+	if current action is listening and player is in study and gunter is in lll:
+		the rule succeeds;
+	the rule fails;
+
+section STRIP random text rules
+
+this is the movie-over-ad rule:
+	if current action is not examining store c:
+		the rule fails;
+	if go-with-first of table of sicko movies and table of store c ads:
+		the rule succeeds;
+	the rule fails;
+
+this is the compet-over-ad rule:
+	if current action is not examining store c:
+		the rule fails;
+	if go-with-first of table of store c competitors and table of store c ads:
+		the rule succeeds;
+	the rule fails;
+
+this is the read-c rule:
+	if current action is examining store c:
+		the rule succeeds;
+	the rule fails.
+
+this is the ohai-tokers rule:
+	if player is in strip and tokers are in strip and nestor is in strip:
+		the rule succeeds;
+	the rule fails;
+
+this is the lecture-point rule:
+	if player is in cruelest:
+		if go-with-first of table of idiotic lecture points and table of overdone movies:
+			the rule succeeds;
+	the rule fails;
+
+this is the name-movie rule:
+	if player is in cruelest:
+		the rule succeeds;
+	the rule fails;
+
+section ROUTES random text rules
+
+this is the ask-deli rule:
+	if pat-whine is true:
+		the rule succeeds;
+	the rule fails;
+
+this is the read-pious-1 rule:
+	if current action is examining the lament mantle:
+		if pious-state is true:
+			the rule succeeds;
+	the rule fails.
+
+this is the read-pious-2 rule:
+	if current action is examining the lament mantle:
+		if pious-state is false:
+			the rule succeeds;
+	the rule fails.
+
+this is the horby rule:
+	if player is in cleric circle and Brother Horbert is in cleric circle:
+		the rule succeeds;
+	the rule fails;
+
+this is the horb-bye rule:
+	if current action is exiting in Cleric Circle:
+		the rule succeeds;
+	the rule fails;
+
+section TROVES random text rules
+
+this is the read-eths rule:
+	if current action is examining Pa Egg Pea:
+		the rule succeeds;
+	the rule fails.
+
+this is the say-gritty rule:
+	if player is in Used Lot or player is in Loather Rathole:
+		the rule succeeds;
+	the rule fails;
+
+this is the in-lot-or-ruin rule:
+	if player is in Used Lot:
+		the rule succeeds;
+	the rule fails;
+
+this is the read-deal rule:
+	if current action is examining ltb:
+		the rule succeeds;
+	the rule fails;
+
+this is the read-brochure rule:
+	if current action is examining the brochure:
+		the rule succeeds;
+	the rule fails;
+
+this is the say-posh rule:
+	if player is in Econ Cone or player is in Dour Tan Rotunda:
+		the rule succeeds;
+	the rule fails;
+
+this is the read-tec rule:
+	if current action is examining checklist:
+		the rule succeeds;
+	the rule fails.
+
+this is the desk-look rule:
+	if current action is examining the big important desk:
+		the rule succeeds;
+	the rule fails;
+
+this is the read-divorces rule:
+	if current action is examining DIVORCES:
+		the rule succeeds;
+	the rule fails.
+
+section PRESTO random text rules
+
+this is the chitchat-over-idols rule:
+	unless Rand is washed up and player is in ridge:
+		the rule fails;
+	if go-with-first of table of Leo-Rand chitchat and table of Leo-Rand idols:
+		the rule succeeds;
+	the rule fails;
+
+this is the Leo-Rand-cry rule:
+	if Rand is washed up and player is in ridge:
+		the rule succeeds;
+	the rule fails;
+
+this is the catechism-over-research rule:
+	if current action is not examining catechism:
+		the rule fails;
+	if go-with-first of table of catechism pages and table of research topics:
+		the rule succeeds;
+	the rule fails;
+
+this is the research-over-doctors rule:
+	if current action is not examining the catechism:
+		the rule fails;
+	if go-with-first of table of research topics and table of smartypants:
+		the rule succeeds;
+	the rule fails.
+
+this is the read-docs rule:
+	if current action is examining the catechism:
+		the rule succeeds;
+	the rule fails;
+
+this is the read-futon rule:
+	if current action is examining the futon:
+		the rule succeeds;
+	the rule fails;
+
+section OYSTER random text rules
+
+this is the in-bar rule:
+	if player is in hops shop:
+		the rule succeeds;
+	the rule fails;
+
+this is the bar-over-comp rule:
+	if player is not in hops shop:
+		the rule fails;
+	if go-with-first of table of bar dialogue and table of competing bars:
+		the rule succeeds;
+	the rule fails;
+
+this is the casper-talk rule:
+	if casper-mumble is true:
+		the rule succeeds;
+	the rule fails;
+
+this is the ohai-bullies rule:
+	if carps are in anger range and player is in anger range:
+		the rule succeeds;
+	the rule fails;
+
+this is the insult-over-girls rule:
+	if player is not in anger range or pikes are not in anger range:
+		the rule fails;
+	if go-with-first of table of fish fries and table of unpopular girls:
+		the rule succeeds;
+	the rule fails;
+
+this is the ohai-tuna rule:
+	if player is in sand home:
+		the rule succeeds;
+	the rule fails;
+
+this is the gossip-over-chatter rule:
+	if location of player is not handsome sand home:
+		the rule fails;
+	d "In sand home.";
+	if go-with-first of table of tuna gossip and table of aunt tuna chatter:
+		the rule succeeds;
+	the rule fails;
+
+this is the screed-read rule:
+	if current action is examining the theses sheets:
+		the rule succeeds;
+	the rule fails.
+
+section TOWERS random text rules
+
+this is the rodney-here rule:
+	if player is in trefoil and rodney is in trefoil:
+		the rule succeeds;
+	the rule fails;
+
+this is the examining-gizmo rule:
+	if current action is examining the gizmo:
+		the rule succeeds;
+	the rule fails;
+
+section OTTERS random text rules
+
+this is the last-battle rule:
+	if current action is playing whistle and player is in Inclosure:
+		the rule succeeds;
+	the rule fails.
+
+this is the em-sez rule:
+	if player is in alcoves and Merle is in alcoves:
+		if Merle is reflexed:
+			the rule succeeds;
+	the rule fails;
+
+this is the alcove-talk rule:
+	if player is in alcoves:
+		if Elmer is in alcoves:
+			if Merle is reflexed:
+				the rule succeeds;
+			else: [this is a bit tricky since we need the clue to get Elmer and Merle to talk "Honestly" -- so text only appears if player is in alcoves etc]
+				say "Merle and Elmer [one of]begin[or]continue[stopping] concern trolling with the whole good-is-evil-and-evil-is-good routine, [one of]exclaiming HOLY NETS![or]all, 'Sly, eh? NOT.' discussing you.[or]lamenting Elvira's no-ethyls policy.[or]dissing Shy Elton.[or]so obviously on-the-sly, but what can you do?[in random order]";
+	the rule fails;
+
+this is the Elvira-taunt rule:
+	if current action is going east and player is in Reclusion Inclosure:
+		the rule succeeds;
+	the rule fails;
+
+section OTHERS random text rules
+
+this is the sloganing rule:
+	if player is in gates stage and current action is going north:
+		the rule succeeds;
+	the rule fails;
+
+this is the clearing-listen rule:
+	if player is in clearing and current action is listening:
+		the rule succeeds;
+	the rule fails.
+
+section deciding how to weight rules
+
+[this is the random rule to decide which of 2 tables we choose if, say, examining the catechism]
+
+weighted is a truth state that varies. weighted is usually false.
+
+to decide whether go-with-first of (t1 - a table name) and (t2 - a table name):
+	choose row with mytab of t1 in table of megachatter;
+	let n1 be curidx entry;
+	let n2 be maxidx entry;
+	choose row with mytab of t2 in table of megachatter;
+	let m1 be curidx entry;
+	let m2 be maxidx entry;
+	if weighted is false:
+		now n2 is 1;
+		now m2 is 1;
+	if n1 is 0 or n1 is 1:
+		if m1 > 1: [this is not perfect but basically the larger tables come first]
+			decide no; [this lets the 2nd bit cycle]
+	d "[t1] vs [t2] is [n1] vs [m1] and [n1] * [m2] = [n1 * m2] vs [m1] * [n2] = [n2 * m1]. Also n1=[n1] vs m1=[m1].";
+	if n1 * m2 <= n2 * m1:
+		decide yes;
+	decide no;
+
+this is the blurby rule:
+	the rule fails;
+
+[end of rules to parse through]
+
+chapter text twiddling
+
+[this is the code that gives the player the option to scroll through more randoms. Sometimes X.G.G is not feasible, e.g. at the end of Troves.]
+
+twiddle-warn is a truth state that varies.
+
+to say twiddle of (tn - a table name) and (nums - a number):
+	if nums is 1: [this simply forces one name out]
+		choose row with mytab of tn in table of megachatter;
+		increment curidx entry;
+		if curidx entry > maxidx entry:
+			now curidx entry is 1;
+		let wh-row be curidx entry;
+		choose row wh-row in mytab entry;
+		say "[blurb entry]";
+		continue the action;
+	let tr be maxidx corresponding to mytab of tn in table of megachatter;
+	let cholet be 0;
+	let currow be curidx corresponding to mytab of tn in table of megachatter;
+	let thisgrp be nums;
+	let ors be false;
+	if thisgrp < 0:
+		now thisgrp is 0 - thisgrp;
+		now ors is true;
+	let skip-past be false;
+	let curcount be 0;
+	if currow > tr:
+		say "(a bunch of stuff already read)[line break]";
+		continue the action;
+	while skip-past is false:
+		if thisgrp >= tr - currow:
+			now thisgrp is tr - currow;
+			now skip-past is true;
+		repeat with counter running from 1 to thisgrp:
+			increment currow;
+			choose row currow in tn;
+			if counter is thisgrp and counter > 1:
+				say " [if ors is true]or[else]and[end if] ";
+			else if counter > 1:
+				say ", ";
+			say "[blurb entry]";
+		if currow < tr and debug-state is false:
+			say "... [i][bracket]M for more examples, any other key to move on[close bracket][r]";
+			let cholet be the chosen letter;
+			if cholet is not 77 and cholet is not 109:
+				now skip-past is true;
+			say "[line break]";
+			increment curcount;
+			if curcount is 5 and twiddle-warn is false and skip-past is false:
+				now twiddle-warn is true;
+				ital-say "you can see all this at the end, so no need to page through all [tr] entries.";
+		else:
+			if debug-state is false:
+				say " [bracket]That's all![close bracket][line break]";
+			now skip-past is true;
+	choose row with mytab of tn in table of megachatter; [reset to what's after]
+	if currow is tr:
+		now currow is 0;
+	now curidx entry is currow;
+
 
 volume random text blurb tables [vrt]
 

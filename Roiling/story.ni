@@ -270,627 +270,6 @@ chapter rules on stub
 to rulesOn: [used to turn rules on at the very start of play]
 	(- RulesOnSub(); -)
 
-part random tables
-
-when play begins (this is the table scramble and index rule) :
-	let mycount be 0;
-	repeat through table of megachatter:
-		now done-once entry is false;
-		if there is a mytab entry:
-			sort mytab entry in random order;
-		unless there is a reps entry:
-			now reps entry is 1;
-		if there is no curidx entry:
-			now curidx entry is 0;
-		if there is no maxidx entry or maxidx entry is 0:
-			if there is a mytab entry: [just see if the maxidx entry can and should be cut down]
-				if there is a maxidx entry and maxidx entry < number of rows in mytab entry:
-					do nothing;
-				else:
-					now maxidx entry is number of rows in mytab entry;
-		if there is no maxbeforepause entry:
-			now maxbeforepause entry is 40;
-		increment mycount;
-		now init-order entry is mycount;
-		if there is a mytab entry:
-			now table-size entry is number of rows in mytab entry;
-	prio-sort table of random books: [this puts certain books in front, which may give various clues. It was probably more a thought experiment than anything.]
-
-to prio-sort (ta - table name):
-	let temp be 0;
-	repeat through ta:
-		if there is a prio entry:
-			now prio entry is a random number from 1 to prio entry;
-		else:
-			increment temp;
-			now prio entry is temp;
-	sort ta in prio order;
-
-chat-rand is a truth state that varies.
-
-every turn (this is the process random dialogue rule) :
-	if current action is hinting:
-		do nothing instead;
-	if current action is fliptoing:
-		do nothing instead;
-	now chat-rand is true;
-	consider the find-blather rule;
-	now chat-rand is false;
-
-ever-hit-last is a truth state that varies. just-hit-last is a truth state that varies.
-
-every turn when ever-hit-last is false (this is the check for loop and warn rule):
-	if just-hit-last is true:
-		ital-say "you have reached your first end of random text. If you wish to see all the random text, there will be a menu once you win the game. Or you can look in the source that should come with the game.";
-		now ever-hit-last is true;
-
-[find-blather is what is used for random dialogue. It relies on the table of megachatter.]
-
-this is the find-blather rule:
-	let zz be 0;
-	repeat through table of megachatter:
-		if eturn entry is chat-rand:
-			if there is a go-ahead entry:
-				consider the go-ahead entry;
-				if the rule succeeded:
-					if chat-rand is true and talk-quiet is true and done-once entry is true:
-						the rule succeeds;
-					now done-once entry is true;
-					increment curidx entry;
-					if curidx entry > maxidx entry:
-						if there is a lasties entry:
-							say "[lasties entry]"; [I maybe should put a paragraph break here but I think it disrupts one of the randoms, so that's no good. It'd be a better solution than pre-brk if it worked...but it's so dicey. Things work as they are.]
-							now curidx entry is 0;
-							now just-hit-last is true;
-							the rule succeeds;
-						else:
-							say "You feel a sense of deja vu.[paragraph break]";
-							now curidx entry is 1;
-					if there is a prefix entry:
-						say "[prefix entry]";
-					let whrow be curidx entry;
-					if there is no suffix entry:
-						d "WARNING NEED SUFFIX ENTRY FOR [mytab entry]";
-					let posties be suffix entry;
-					choose row whrow in mytab entry;
-					say "[blurb entry][posties][line break]";
-					if chat-rand is true:
-						if talk-quiet is true:
-							say "[line break]";
-							ital-say "the above was random dialogue that won't be repeated since you have HUSH on. You can undo this with UHHS.";
-						if quiet-warn is false:
-							ital-say "the above was random dialogue that can be turned off with HUSH or on with UHHS. If you forget this, it's in your notepad. Also, if you want all the dialogue, no need to hit Z a ton. You can read the source or, to see it formatted a bit better, solve the game.";
-							pad-rec-q "random dialogue";
-							now quiet-warn is true;
-					the rule succeeds;
-
-[randbla is used for stuff you examine.]
-
-wrap-note is a truth state that varies.
-
-wrap-note-ver is a truth state that varies.
-
-to say randbla:
-	say "[run paragraph on]";
-	let booknote be false;
-	let adnote be false;
-	repeat through table of megachatter:
-		if eturn entry is chat-rand:
-			if there is a go-ahead entry:
-				consider the go-ahead entry;
-				if the rule succeeded:
-					increment curidx entry;
-					if curidx entry > maxidx entry:
-						if there is a lasties entry:
-							say "[lasties entry]";
-							now curidx entry is 0;
-							the rule succeeds;
-						else:
-							[say "(generic note that random text is cycling)[paragraph break]";]
-							now curidx entry is 1;
-					if there is a prefix entry:
-						say "[prefix entry]";
-					let whrow be curidx entry;
-					let posties be suffix entry;
-					if mytab entry is table of random books:
-						now booknote is true;
-					if mytab entry is table of ad slogans:
-						now adnote is true;
-					if reps entry is 1 or reps entry is 0:
-						choose row whrow in mytab entry;
-						say "[blurb entry][posties]";
-					else:
-						let repnum be maxidx entry - curidx entry + 1;
-						if repnum > reps entry:
-							now repnum is reps entry;
-							increase curidx entry by repnum - 1; [this is sloppy code but I can't think of another way to take care of this special case]
-						else:
-							now curidx entry is 0;
-						d "[curidx entry] vs [maxidx entry]. Repnum is [repnum].";
-						let thistab be mytab entry;
-						increase curidx entry by repnum; [afterwards gets runtime error as inform thinks it's the new table]
-						repeat with county running from 1 to repnum:
-							choose row whrow in thistab;
-							say "[blurb entry] ";
-							increment whrow;
-					if wrap-note is false and whrow > 5: [this is a magic number, to see if the person is really examining something.]
-						now wrap-note is true;
-					the rule succeeds;
-
-every turn when wrap-note is true and wrap-note-ver is false (this is the alert you don't have to gawk rule) :
-	ital-say "you've been repeating looking up something with random text a lot--something with at least ten entries and possibly much more. If you solve the game, you can see it all. Thanks for your (apparent) interest! Oh, you can browse the source code for a chunk of text, too, and it shouldn't spoil the game, since it's all in a table. Just remember single apostrophes have a bracket on each side.";
-	now wrap-note-ver is true;
-
-to ital-say (x - indexed text):
-	say "[italic type][bracket]NOTE: [x][close bracket][roman type][line break]";
-
-to ital-say-n (x - indexed text):
-	say "[italic type][bracket]NOTE: [x][close bracket][roman type]";
-
-to say c-c-u:
-	say " [if circle is visited]in the Cleric Circle[else](Routes)[end if]";
-
-to say indic of (reg - a region):
-	if last-loc of reg is unvisited:
-		say " ([reg])"
-
-die-trigger is a number that varies.
-die-to-us is a truth state that varies.
-
-to say ted-die:
-	if die-trigger > 0:
-		decrement die-trigger;
-		say "[if die-trigger is 0]'Die to us!' the lecturer yells, as he points at someone who may or may not be using drugs. 'To use...I'd...' the poor soul mumbles as he is slapped up and carted off. You see red at what must be either harsh injustice or appalling acting[else]Man, it's all so [i]tedious[r][end if]";
-	else if a random chance of 1 in 4 succeeds:
-		say "After that ... incident, everything is back to [i]tedious[r].";
-	else:
-		say "[line break]";
-
-to say randexc:
-	let re be a random number from 1 to 5;
-	repeat with re2 running from 1 to re:
-		say "![no line break]";
-	if talk-quiet is true:
-		say "[line break]";
-
-[below for if list line breaks don't match up with what's in the game]
-to say post-brk: [unused]
-	if otters is solved:
-		say "[paragraph break]";
-
-to say post-lb: [unused]
-	if otters is solved:
-		say "[line break]";
-
-to say pre-brk:
-	unless otters is solved:
-		say "[paragraph break]";
-
-to say pre-lb:
-	unless otters is solved:
-		say "[line break]";
-
-to say eisiping:
-	say "[if rathole is unvisited] (Troves)[else if Pa Egg Pea is unexamined] (examine Pa Egg Pea)[end if]"
-
-to say elv-art:
-	unless dope-read is true:
-		say " (read [if player is male]I Trash His Art[else]Her Arts Er Trash[end if])"
-
-chapter random text rules
-
-section GENERAL random text rules
-
-this is the bzzt rule:
-	the rule fails.
-
-this is the am-yessing rule:
-	if current action is saying yes:
-		the rule succeeds;
-	the rule fails.
-
-this is the am-noing rule:
-	if current action is saying no:
-		the rule succeeds;
-	the rule fails.
-
-this is the is-singing rule:
-	if current action is singing:
-		the rule succeeds;
-	the rule fails.
-
-this is the you-said-nothing rule:
-	if pardons is true:
-		the rule succeeds;
-	the rule fails;
-
-this is the you-cussed rule:
-	if current action is swearing obscenely:
-		the rule succeeds;
-	the rule fails;
-
-this is the you-waited rule:
-	if current action is waiting:
-		the rule succeeds;
-	the rule fails;
-
-this is the you-attacked rule:
-	if current action is attacking:
-		the rule succeeds;
-	the rule fails;
-
-this is the am-sleeping rule:
-	if current action is sleeping:
-		the rule succeeds;
-	the rule fails;
-
-this is the undo-ok rule:
-	if currently-undoing is true:
-		the rule succeeds;
-	the rule fails;
-
-this is the undo-rej rule:
-	if currently-rejecting is true:
-		the rule succeeds;
-	the rule fails;
-
-section MANOR random text rules
-
-this is the read-books rule:
-	if current action is examining the bookshelf:
-		the rule succeeds;
-	the rule fails.
-
-this is the pun-quip rule:
-	if current quip is pun-quip:
-		the rule succeeds;
-	the rule fails.
-
-this is the mob-chanting rule:
-	if current action is listening and player is in study and gunter is in lll:
-		the rule succeeds;
-	the rule fails;
-
-section STRIP random text rules
-
-this is the movie-over-ad rule:
-	if current action is not examining store c:
-		the rule fails;
-	if go-with-first of table of sicko movies and table of store c ads:
-		the rule succeeds;
-	the rule fails;
-
-this is the compet-over-ad rule:
-	if current action is not examining store c:
-		the rule fails;
-	if go-with-first of table of store c competitors and table of store c ads:
-		the rule succeeds;
-	the rule fails;
-
-this is the read-c rule:
-	if current action is examining store c:
-		the rule succeeds;
-	the rule fails.
-
-this is the ohai-tokers rule:
-	if player is in strip and tokers are in strip and nestor is in strip:
-		the rule succeeds;
-	the rule fails;
-
-this is the lecture-point rule:
-	if player is in cruelest:
-		if go-with-first of table of idiotic lecture points and table of overdone movies:
-			the rule succeeds;
-	the rule fails;
-
-this is the name-movie rule:
-	if player is in cruelest:
-		the rule succeeds;
-	the rule fails;
-
-section ROUTES random text rules
-
-this is the ask-deli rule:
-	if pat-whine is true:
-		the rule succeeds;
-	the rule fails;
-
-this is the read-pious-1 rule:
-	if current action is examining the lament mantle:
-		if pious-state is true:
-			the rule succeeds;
-	the rule fails.
-
-this is the read-pious-2 rule:
-	if current action is examining the lament mantle:
-		if pious-state is false:
-			the rule succeeds;
-	the rule fails.
-
-this is the horby rule:
-	if player is in cleric circle and Brother Horbert is in cleric circle:
-		the rule succeeds;
-	the rule fails;
-
-this is the horb-bye rule:
-	if current action is exiting in Cleric Circle:
-		the rule succeeds;
-	the rule fails;
-
-section TROVES random text rules
-
-this is the read-eths rule:
-	if current action is examining Pa Egg Pea:
-		the rule succeeds;
-	the rule fails.
-
-this is the say-gritty rule:
-	if player is in Used Lot or player is in Loather Rathole:
-		the rule succeeds;
-	the rule fails;
-
-this is the in-lot-or-ruin rule:
-	if player is in Used Lot:
-		the rule succeeds;
-	the rule fails;
-
-this is the read-deal rule:
-	if current action is examining ltb:
-		the rule succeeds;
-	the rule fails;
-
-this is the read-brochure rule:
-	if current action is examining the brochure:
-		the rule succeeds;
-	the rule fails;
-
-this is the say-posh rule:
-	if player is in Econ Cone or player is in Dour Tan Rotunda:
-		the rule succeeds;
-	the rule fails;
-
-this is the read-tec rule:
-	if current action is examining checklist:
-		the rule succeeds;
-	the rule fails.
-
-this is the desk-look rule:
-	if current action is examining the big important desk:
-		the rule succeeds;
-	the rule fails;
-
-this is the read-divorces rule:
-	if current action is examining DIVORCES:
-		the rule succeeds;
-	the rule fails.
-
-section PRESTO random text rules
-
-this is the chitchat-over-idols rule:
-	unless Rand is washed up and player is in ridge:
-		the rule fails;
-	if go-with-first of table of Leo-Rand chitchat and table of Leo-Rand idols:
-		the rule succeeds;
-	the rule fails;
-
-this is the Leo-Rand-cry rule:
-	if Rand is washed up and player is in ridge:
-		the rule succeeds;
-	the rule fails;
-
-this is the catechism-over-research rule:
-	if current action is not examining catechism:
-		the rule fails;
-	if go-with-first of table of catechism pages and table of research topics:
-		the rule succeeds;
-	the rule fails;
-
-this is the research-over-doctors rule:
-	if current action is not examining the catechism:
-		the rule fails;
-	if go-with-first of table of research topics and table of smartypants:
-		the rule succeeds;
-	the rule fails.
-
-this is the read-docs rule:
-	if current action is examining the catechism:
-		the rule succeeds;
-	the rule fails;
-
-this is the read-futon rule:
-	if current action is examining the futon:
-		the rule succeeds;
-	the rule fails;
-
-section OYSTER random text rules
-
-this is the in-bar rule:
-	if player is in hops shop:
-		the rule succeeds;
-	the rule fails;
-
-this is the bar-over-comp rule:
-	if player is not in hops shop:
-		the rule fails;
-	if go-with-first of table of bar dialogue and table of competing bars:
-		the rule succeeds;
-	the rule fails;
-
-this is the casper-talk rule:
-	if casper-mumble is true:
-		the rule succeeds;
-	the rule fails;
-
-this is the ohai-bullies rule:
-	if carps are in anger range and player is in anger range:
-		the rule succeeds;
-	the rule fails;
-
-this is the insult-over-girls rule:
-	if player is not in anger range or pikes are not in anger range:
-		the rule fails;
-	if go-with-first of table of fish fries and table of unpopular girls:
-		the rule succeeds;
-	the rule fails;
-
-this is the ohai-tuna rule:
-	if player is in sand home:
-		the rule succeeds;
-	the rule fails;
-
-this is the gossip-over-chatter rule:
-	if location of player is not handsome sand home:
-		the rule fails;
-	d "In sand home.";
-	if go-with-first of table of tuna gossip and table of aunt tuna chatter:
-		the rule succeeds;
-	the rule fails;
-
-this is the screed-read rule:
-	if current action is examining the theses sheets:
-		the rule succeeds;
-	the rule fails.
-
-section TOWERS random text rules
-
-this is the rodney-here rule:
-	if player is in trefoil and rodney is in trefoil:
-		the rule succeeds;
-	the rule fails;
-
-this is the examining-gizmo rule:
-	if current action is examining the gizmo:
-		the rule succeeds;
-	the rule fails;
-
-section OTTERS random text rules
-
-this is the last-battle rule:
-	if current action is playing whistle and player is in Inclosure:
-		the rule succeeds;
-	the rule fails.
-
-this is the em-sez rule:
-	if player is in alcoves and Merle is in alcoves:
-		if Merle is reflexed:
-			the rule succeeds;
-	the rule fails;
-
-this is the alcove-talk rule:
-	if player is in alcoves:
-		if Elmer is in alcoves:
-			if Merle is reflexed:
-				the rule succeeds;
-			else: [this is a bit tricky since we need the clue to get Elmer and Merle to talk "Honestly" -- so text only appears if player is in alcoves etc]
-				say "Merle and Elmer [one of]begin[or]continue[stopping] concern trolling with the whole good-is-evil-and-evil-is-good routine, [one of]exclaiming HOLY NETS![or]all, 'Sly, eh? NOT.' discussing you.[or]lamenting Elvira's no-ethyls policy.[or]dissing Shy Elton.[or]so obviously on-the-sly, but what can you do?[in random order]";
-	the rule fails;
-
-this is the Elvira-taunt rule:
-	if current action is going east and player is in Reclusion Inclosure:
-		the rule succeeds;
-	the rule fails;
-
-section OTHERS random text rules
-
-this is the sloganing rule:
-	if player is in gates stage and current action is going north:
-		the rule succeeds;
-	the rule fails;
-
-this is the clearing-listen rule:
-	if player is in clearing and current action is listening:
-		the rule succeeds;
-	the rule fails.
-
-section deciding how to weight rules
-
-[this is the random rule to decide which of 2 tables we choose if, say, examining the catechism]
-
-weighted is a truth state that varies. weighted is usually false.
-
-to decide whether go-with-first of (t1 - a table name) and (t2 - a table name):
-	choose row with mytab of t1 in table of megachatter;
-	let n1 be curidx entry;
-	let n2 be maxidx entry;
-	choose row with mytab of t2 in table of megachatter;
-	let m1 be curidx entry;
-	let m2 be maxidx entry;
-	if weighted is false:
-		now n2 is 1;
-		now m2 is 1;
-	if n1 is 0 or n1 is 1:
-		if m1 > 1: [this is not perfect but basically the larger tables come first]
-			decide no; [this lets the 2nd bit cycle]
-	d "[t1] vs [t2] is [n1] vs [m1] and [n1] * [m2] = [n1 * m2] vs [m1] * [n2] = [n2 * m1]. Also n1=[n1] vs m1=[m1].";
-	if n1 * m2 <= n2 * m1:
-		decide yes;
-	decide no;
-
-this is the blurby rule:
-	the rule fails;
-
-[end of rules to parse through]
-
-chapter text twiddling
-
-[this is the code that gives the player the option to scroll through more randoms. Sometimes X.G.G is not feasible, e.g. at the end of Troves.]
-
-twiddle-warn is a truth state that varies.
-
-to say twiddle of (tn - a table name) and (nums - a number):
-	if nums is 1: [this simply forces one name out]
-		choose row with mytab of tn in table of megachatter;
-		increment curidx entry;
-		if curidx entry > maxidx entry:
-			now curidx entry is 1;
-		let wh-row be curidx entry;
-		choose row wh-row in mytab entry;
-		say "[blurb entry]";
-		continue the action;
-	let tr be maxidx corresponding to mytab of tn in table of megachatter;
-	let cholet be 0;
-	let currow be curidx corresponding to mytab of tn in table of megachatter;
-	let thisgrp be nums;
-	let ors be false;
-	if thisgrp < 0:
-		now thisgrp is 0 - thisgrp;
-		now ors is true;
-	let skip-past be false;
-	let curcount be 0;
-	if currow > tr:
-		say "(a bunch of stuff already read)[line break]";
-		continue the action;
-	while skip-past is false:
-		if thisgrp >= tr - currow:
-			now thisgrp is tr - currow;
-			now skip-past is true;
-		repeat with counter running from 1 to thisgrp:
-			increment currow;
-			choose row currow in tn;
-			if counter is thisgrp and counter > 1:
-				say " [if ors is true]or[else]and[end if] ";
-			else if counter > 1:
-				say ", ";
-			say "[blurb entry]";
-		if currow < tr and debug-state is false:
-			say "... [i][bracket]M for more examples, any other key to move on[close bracket][r]";
-			let cholet be the chosen letter;
-			if cholet is not 77 and cholet is not 109:
-				now skip-past is true;
-			say "[line break]";
-			increment curcount;
-			if curcount is 5 and twiddle-warn is false and skip-past is false:
-				now twiddle-warn is true;
-				ital-say "you can see all this at the end, so no need to page through all [tr] entries.";
-		else:
-			if debug-state is false:
-				say " [bracket]That's all![close bracket][line break]";
-			now skip-past is true;
-	choose row with mytab of tn in table of megachatter; [reset to what's after]
-	if currow is tr:
-		now currow is 0;
-	now curidx entry is currow;
-
 every turn when strip of profits is visited (this is the region-hint on no score rule):
 	if mrlp is manor and Gunter is in lalaland:
 		increment turns-spent of mrlp;
@@ -2327,6 +1706,12 @@ check talking to (this is the hint looking not talking rule):
 	otherwise say "You may be better off examining non-living things, not talking to them." instead.
 
 section style chat stubs
+
+to ital-say (x - indexed text):
+	say "[italic type][bracket]NOTE: [x][close bracket][roman type][line break]";
+
+to ital-say-n (x - indexed text):
+	say "[italic type][bracket]NOTE: [x][close bracket][roman type]";
 
 to say i:
 	say "[italic type]";
@@ -4714,6 +4099,8 @@ ship controls	"There are so many combinations to manipulate the controls. That d
 Thor
 New Beet
 Pa Egg Pea	[troves]
+prai	"You have already expanded your goals that way, [if rivets are reflexive]but there is another, if you want[else]and the other[end if].[line break]"
+statue	"You have already expanded your goals that way, [if prai is reflexive]but there is another, if you want[else]and the other[end if]."
 star	"[if player has star]No need for additional arts.[else]The star doesn't budge.[end if]"	[presto]
 popgun	"If you overthought things, you might break it again."
 log ons	"[no-rehash]."
@@ -4754,17 +4141,47 @@ to say good-enuf of (goody - a thing):
 	d "The table of donereject could use a lot more entries, like here. Search for TDR in the source.";
 	say "You've already changed [them-that of goody] enough.";
 
+firstwordhash is a number that varies.
+cmdhash is a number that varies.
+
+to decide whether (tn - a table name) is hash-found:
+	repeat through tn:
+		if there is a hashval entry:
+			if cmdhash is not 0:
+				if cmdhash is hashval entry or firstwordhash is hashval entry:
+					if there is no this-reg entry or this-reg entry is mrlp:
+						if there is a this-item entry:
+							if this-item entry is visible:
+								unless this-item entry is a mack-idea and this-item entry is not ment: [small hack for mack guesses that aren't present yet]
+									say "[this-clue entry][line break]";
+									decide yes;
+						else if there is a this-room entry:
+							if location of the player is this-room entry:
+								say "[this-clue entry][line break]";
+								decide yes;
+						else if there is a this-rule entry:
+							say "[run paragraph on]";
+							follow this-rule entry;
+							if the rule succeeded:
+								say "[this-clue entry][line break]";
+								decide yes;
+						else:
+							d "Need error message for [this-cmd entry] misfire.";
+			if doublewarn is false and cmdhash is hashval entry * 2 and cmdhash is not 0:
+				say "It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that [if lemons are in lalaland and melons are in lalaland]at all now you took care of the melons and lemons[else if otters is unsolved]until after you defeat Elvira[else] more than once in a special place in this region[end if].";
+				now doublewarn is true;
+				decide yes;
+	decide no;
+
 to say reject:
 	if sss is true: [inform 7 gives extra space if I just follow the rule as-is]
 		consider the show blues rule;
-	let my-key be the hash of the player's command;
-	let my-key-a be the hash of word number 1 in the player's command;
-	d "The hash of the command is [my-key]. Hash of word 1 is [my-key-a].[line break]";
-	d "[regana of mrlp].";
+	now cmdhash is the hash of the player's command;
+	now firstwordhash is the hash of word number 1 in the player's command;
+	d "The hash of the command is [cmdhash]. Hash of word 1 is [firstwordhash].[line break]";
 	repeat through regana of mrlp:
-		d "[the-from entry].";
 		if the-from entry is visible:
-			if my-key is the hashkey entry or my-key-a is the hashkey entry:
+			if cmdhash is the hashkey entry or firstwordhash is the hashkey entry:
 				if Gunter is off-stage and player is in dusty study and stuff-found is 3:
 					say "You can't quite concentrate with the noise at the door.";
 					continue the action;
@@ -4773,7 +4190,7 @@ to say reject:
 						say "[good-enuf of the-from entry]";
 						continue the action;
 				if slider is switched on:
-					if my-key is hashkey entry:
+					if cmdhash is hashkey entry:
 						match-process the player's command and the right-word entry;
 					else:
 						match-process word number 1 in the player's command and the right-word entry;
@@ -4788,66 +4205,17 @@ to say reject:
 					if rq is active:
 						say "With that conversation, you can't concentrate on much...";
 						continue the action;
-					if my-key is not the hashkey entry:
+					if cmdhash is not the hashkey entry:
 						say "[line break](In particular, the first word seemed to have an effect, and you generally don't need a second word.)[line break]";
 				continue the action;
-[	repeat through regtab of mrlp:
-		if there is a hashval entry:
-			if my-key is not 0:
-				if my-key is hashval entry or my-key-a is hashval entry:
-					if there is no this-reg entry or this-reg entry is mrlp:
-						if there is a this-item entry:
-							if this-item entry is visible:
-								unless this-item entry is a mack-idea and this-item entry is not ment: [small hack for mack guesses that aren't present yet]
-									say "[this-clue entry][line break]";
-									continue the action;
-						else if there is a this-room entry:
-							if location of the player is this-room entry:
-								say "[this-clue entry][line break]";
-								continue the action;
-						else if there is a this-rule entry:
-							say "[run paragraph on]";
-							follow this-rule entry;
-							if the rule succeeded:
-								say "[this-clue entry][line break]";
-								continue the action;
-						else:
-							d "Need error message for [this-cmd entry] misfire.";
-			if doublewarn is false and my-key is hashval entry * 2 and my-key is not 0:
-				say "It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that [if lemons are in lalaland and melons are in lalaland]at all now you took care of the melons and lemons[else if otters is unsolved]until after you defeat Elvira[else] more than once in a special place in this region[end if].";
-				now doublewarn is true;
-				continue the action;
-	repeat through table of general nudges: [?? we need to conglomerate this with above]
-		if there is a hashval entry:
-			if my-key is not 0:
-				if my-key is hashval entry or my-key-a is hashval entry:
-					if there is no this-reg entry or this-reg entry is mrlp:
-						if there is a this-item entry:
-							if this-item entry is visible:
-								unless this-item entry is a mack-idea and this-item entry is not ment: [small hack for mack guesses that aren't present yet]
-									say "[this-clue entry][line break]";
-									continue the action;
-						else if there is a this-room entry:
-							if location of the player is this-room entry:
-								say "[this-clue entry][line break]";
-								continue the action;
-						else if there is a this-rule entry:
-							say "[run paragraph on]";
-							follow this-rule entry;
-							if the rule succeeded:
-								say "[this-clue entry][line break]";
-								continue the action;
-						else:
-							d "Need error message for [this-cmd entry] misfire.";
-			if doublewarn is false and my-key is hashval entry * 2 and my-key is not 0:
-				say "It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that [if lemons are in lalaland and melons are in lalaland]at all now you took care of the melons and lemons[else if otters is unsolved]until after you defeat Elvira[else] more than once in a special place in this region[end if].";
-				now doublewarn is true;
-				continue the action;]
+	if regtab of mrlp is hash-found:
+		continue the action;
+	if table of general nudges is hash-found:
+		continue the action;
 	if player has settler and settler-try is false:
 		if the player's command includes "settler":
 			say "It looks like you may be trying to do things with the settler. This game uses the simplified SCAN (OBJECT).";
 			now settler-try is true;
-			continue the action;
 	if mrlp is otters:
 		if the player's command matches the regular expression "^<a-z>+ly":
 			say "[if whistle is reflexed and medals are reflexed]You don't know if you need to do any more of that[anicheck][else][ly-ish].";
@@ -4860,11 +4228,11 @@ to say reject:
 		say "Besides, there's someone to deal with.";
 	else if cur-score of manor > 0:
 		say "(If you are trying to flip something back, you almost never need to.)[line break]";
-	else if last-hash is my-key and last-hash > 0:
+	else if last-hash is cmdhash and last-hash > 0:
 		say "[paragraph break]Though it looks like you're a bit stuck. You may need to take a step back and examine things, [mb-ss-ped]to see what you can change. The trickier stuff should have more than one clue.";
 	else:
 		say "[line break]";
-	now last-hash is my-key;
+	now last-hash is cmdhash;
 
 to say ly-ish:
 	say "You think you're on to something, but no--you can't find anything to focus on, thinking that"
@@ -5179,34 +4547,28 @@ when play begins (this is the basic initialization rule):
 	add-errs manor;
 	let convo-holes be false;
 	let temp be 0;
-	repeat through table of biopics: [biopics are hostile by default]
-		if there is no fave entry:
-			d "[blurb entry] needs bias. Defaulting to false.";
-			now fave entry is false;
-		else if fave entry is true:
-			increment temp;
-	d "[temp] biopics favorable to you of [number of rows in table of biopics] total.";
-	repeat through table of subject-blather:
-		if there is no him-say entry:
-			say "[him-who entry] / [person-subj entry] needs entry.";
-			now him-say entry is "[bug-report]";
-			now convo-holes is true;
-	repeat with PE running through people:
-		if PE is not a default-talker listed in the table of default-gen-blather:
-			d "[PE] needs default-gen-blather.";
-			now convo-holes is true;
-		else if PE is not a him-who listed in the table of default-sub-blather and PE is not terse:
-			if 1 > 2:
-				d "[PE] might want default-sub-blather.";
-		if PE is not terse:
-			if PE is not a him-who listed in the table of subject-blather:
-				if litany of PE is Table of No Conversation and PE is not a guardian:
-					d "[PE] has nothing special or specific to say.";
-			if PE is not a him-asked listed in the table of reflexive-blather:
-				if litany of PE is Table of No Conversation:
-					d "[PE] has nothing to say about themselves.";
-	if convo-holes is false:
-		d "No conversational holes.";
+	if debug-state is true:
+		repeat through table of subject-blather:
+			if there is no him-say entry:
+				say "[him-who entry] / [person-subj entry] needs entry.";
+				now him-say entry is "[bug-report]";
+				now convo-holes is true;
+		repeat with PE running through people:
+			if PE is not a default-talker listed in the table of default-gen-blather:
+				say "[PE] needs default-gen-blather.";
+				now convo-holes is true;
+			else if PE is not a him-who listed in the table of default-sub-blather and PE is not terse:
+				if 1 > 2:
+					say "[PE] might want default-sub-blather.";
+			if PE is not terse:
+				if PE is not a him-who listed in the table of subject-blather:
+					if litany of PE is Table of No Conversation and PE is not a guardian:
+						say "[PE] has nothing special or specific to say.";
+				if PE is not a him-asked listed in the table of reflexive-blather:
+					if litany of PE is Table of No Conversation:
+						say "[PE] has nothing to say about themselves.";
+		if convo-holes is false:
+			say "No conversational holes.";
 	now die-trigger is a random number from 3 to 5; [DIE TO US in Lectures]
 
 definition: a room (called myrm) is ominous:
@@ -6817,6 +6179,7 @@ Rule for printing a parser error when the latest parser error is the I beg your 
 	now pardons is true;
 	say "[randbla][line break]";
 	now pardons is false;
+	follow the alert you don't have to gawk rule;
 
 book reading a command
 
@@ -8689,8 +8052,8 @@ cellar door	cellar door	"derive"	"derive"	"[rec-der]"	false	514122776	"How ineff
 diapers	diapers	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning--and after some furnace care fun, you find a copy of LEAD, the first big motivational book in Yorpwald. You don't have time to worry whether positive thinking found it. You have too much positive thinking to do."	false	459079590	"And lose what you gained? No way."
 ltb	ltb	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."	true	204836855	"Whoah. That'd be micromanaging yourself. You're thinking big now! Or you should be."	Dour Tan Rotunda
 brochure	brochure	"desire"	"desire"	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."	false	503231922	--	econ cone
-prai	prai	"aspire"	"aspire"	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"	false	438050501	"You have already expanded your goals that way, [if rivets are reflexive]but there is another, if you want[else]and the other[end if]."
-rivets	rivets	"strive"	"strive"	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if prai is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"	false	564671562	"You have already expanded your goals that way, [if prai is reflexive]but there is another, if you want[else]and the other[end if]."
+prai	prai	"aspire"	"aspire"	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"	false	438050501
+rivets	rivets	"strive"	"strive"	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if prai is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"	false	564671562
 pernod	pernod	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through!"	false	458885045	--	FiefCo Office
 lager	lager	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave your [if diapers are reflexed]bedroom[else]pad[end if] just long to pour the hurtful booze [if diapers are reflexed]down the sink[else]out the window you forgot was there[end if]. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio Alger!"	false	301731271
 noise	noise	"ignore"	"ignore"	"'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."	false	433982545	"There is nothing left to ignore except your destiny. Which would be morally wrong to ignore."
@@ -9224,6 +8587,10 @@ after fliptoing lance:
 after fliptoing prod:
 	now waste is in uaah;
 	continue the action;
+
+after fliptoing ltb:
+	if lager is in pallid:
+		poss-d;
 
 after fliptoing b-b:
 	now Ed Riley is in Bleary Barley;
@@ -13155,6 +12522,8 @@ book Loather Rathole
 
 Loather Rathole is a room in Troves. "Under the stinky tin sky, [if heat is visible]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[otherwise]you feel nothing but bone-chilling poverty here. [i]Heat[r]. It's what you need. All you can think of[end if]. Of course, there are plenty of potholes about.". last-loc of troves is Loather Rathole.
 
+understand "real hot" as a mistake ("You need[if cold is in lalaland]ed[end if] a strong concrete emoiton to get hot.") when player is in rathole.
+
 check looking in Loather Rathole for the first time:
 	now the player has Pa Egg Pea.
 
@@ -13417,7 +12786,9 @@ check fliptoing cellar door:
 	if what-a-bee is off-stage:
 		say "You haven't forgotten anything important, yet." instead;
 	if bee's head is reflexive and what-a-bee is reflexive:
-		say "Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now." instead;
+		say "Darn it, that should work. But you can't focus on anything with that evil bee buzzing around you right now.";
+		preef cellar door;
+		the rule succeeds;
 
 book Pallid Li'l Pad
 
@@ -13614,7 +12985,7 @@ after fliptoing when location of player is Econ Cone (this is the Pernod appears
 
 after fliptoing pernod:
 	if rivets are reflexive or prai is reflexive:
-		decrement poss-score of troves;
+		poss-d;
 	consider the region-knock rule;
 	continue the action;
 
@@ -18544,7 +17915,7 @@ check xraying:
 	else:
 		say "You have a good gaze, and you know what to do and say and think. Gotta be [big-hint of noun].";
 	if used-ray is false:
-		decrement poss-score of towers;
+		poss-d;
 	now used-ray is true;
 	now noun is rayed;
 	now xrayvision is false;
@@ -22989,13 +22360,13 @@ the citrus sign is part of the abandoned drinks stand. description is "It says C
 
 after examining abandoned drinks stand (this is the three fruits in drinks stand rule) : [all 3 conditions should be all true or all false, but just in case...]
 	if slime is off-stage:
-		now slime is in Rustic Citrus;
 		say "Eww. You also brushed against some slime while looking around.";
 		now slime is in Rustic Citrus;
 	if peanut cola is off-stage:
 		now peanut cola is in rustic citrus;
 	if magenta rope is off-stage:
-		now megaton pear is in Rustic Citrus;
+		if pears are not off-stage:
+			now megaton pear is in Rustic Citrus;
 		now magenta rope is in Rustic Citrus;
 		now rampage note is in Rustic Citrus;
 		now mopeage rant is in Rustic Citrus;

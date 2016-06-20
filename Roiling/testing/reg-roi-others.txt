@@ -11,6 +11,11 @@
 >gonear rustic citrus
 >poss
 
+>streho
+Trying to change the current region you're in would be risky, or useless, or maybe both.
+>oreth
+Trying to change the current region you're in would be risky, or useless, or maybe both.
+
 >maraschino
 Your score has just gone up by one point
 
@@ -460,4 +465,162 @@ You Did Great
 >{include} _others-intro
 >{include} _others-1234
 >{include} _others-endgame
+
+* others-errs
+
+>rucsit
+You don't need to riff
+
+>pulm
+Well, you don't technically need plurals for this, but you're on the right track
+
+>prea
+Well, you don't technically need plurals for this, but you're on the right track
+
+>pears
+
+>agper
+Well, you don't technically need plurals for this, but you're on the right track
+
+>harmonica
+The harmonicas seem stuck together, so you probably have to deal with both of them.
+
+>drinksstand
+Nothing happens. Maybe just examine it.
+
+>drinks
+Nothing happens. Maybe just examine it.
+
+>x stand
+>stand
+Nothing happens. You found enough inside it, anyway.
+
+>abandoned
+Nothing happens. You found enough inside it, anyway.
+
+>elim
+Well, you don't technically need plurals for this, but you're on the right track
+
+>plums
+>grapes
+>limes
+
+>compass
+>needel
+The needle is working fine. No need to meddle.
+
+>megaton
+DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
+
+No, the whole thing. You see several...similar...items here right now.
+
+>pear
+DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
+
+No, the whole thing. You see several...similar...items here right now.
+
+>mopeage
+DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
+
+No, the whole thing. You see several...similar...items here right now.
+
+>rant
+DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
+
+No, the whole thing. You see several...similar...items here right now.
+
+>magenta
+DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
+
+No, the whole thing. You see several...similar...items here right now.
+
+>rope
+DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
+
+No, the whole thing. You see several...similar...items here right now.
+
+>rampage
+DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
+
+No, the whole thing. You see several...similar...items here right now.
+
+>note
+DEBUG INFO: The hash of the command is 473038885. Hash of word 1 is 473038885.
+
+No, the whole thing. You see several...similar...items here right now.
+
+>amd
+DEBUG INFO: The hash of the command is 87292060. Hash of word 1 is 87292060.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>intra
+DEBUG INFO: The hash of the command is 304521993. Hash of word 1 is 304521993.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>peatun
+DEBUG INFO: The hash of the command is 488583219. Hash of word 1 is 488583219.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>calo
+DEBUG INFO: The hash of the command is 149359819. Hash of word 1 is 149359819.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>videotape
+DEBUG INFO: The hash of the command is 689915345. Hash of word 1 is 689915345.
+
+No, it's not just any videotape collection. It's those awful titles.
+
+>collection
+DEBUG INFO: The hash of the command is 639160483. Hash of word 1 is 639160483.
+
+No, it's not just any videotape collection. It's those awful titles.
+
+>videotape
+DEBUG INFO: The hash of the command is 689915345. Hash of word 1 is 689915345.
+
+No, it's not just any videotape collection. It's those awful titles.
+
+>collection
+DEBUG INFO: The hash of the command is 639160483. Hash of word 1 is 639160483.
+
+No, it's not just any videotape collection. It's those awful titles.
+
+>videotapes
+DEBUG INFO: The hash of the command is 786189311. Hash of word 1 is 786189311.
+
+No, it's not just any videotape collection. It's those awful titles.
+
+>video
+DEBUG INFO: The hash of the command is 375345441. Hash of word 1 is 375345441.
+
+No, it's not just any videotape collection. It's those awful titles.
+
+>videos
+DEBUG INFO: The hash of the command is 471619407. Hash of word 1 is 471619407.
+
+No, it's not just any videotape collection. It's those awful titles.
+
+>tape
+DEBUG INFO: The hash of the command is 314569904. Hash of word 1 is 314569904.
+
+No, it's not just any videotape collection. It's those awful titles.
+
+>tapes
+DEBUG INFO: The hash of the command is 410843870. Hash of word 1 is 410843870.
+
+No, it's not just any videotape collection. It's those awful titles.
+
+>bulbrs
+DEBUG INFO: The hash of the command is 377355225. Hash of word 1 is 377355225.
+
+Nothing happens. Perhaps it's the whole item that's important.
+
+>eriee
+DEBUG INFO: The hash of the command is 513734976. Hash of word 1 is 513734976.
+
+Nothing happens. Perhaps it's the whole item that's important.
 

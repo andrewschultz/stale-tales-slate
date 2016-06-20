@@ -57,7 +57,7 @@ while ($a = <A>)
     $toAdd{$currentTable} .= $a; $totalAdded++; $bytesAdded{$stsGame} += length($a);
   }
 }
-die;
+
 if ($adAds) { print "Added FALSE to ads without them."; }
 
 print "TEST RESULTS:update ideas,3,$updatesToCheck,0,nothing\n";
