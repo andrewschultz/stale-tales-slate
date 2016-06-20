@@ -407,41 +407,51 @@ last-hash is a number that varies. last-hash is usually -1.
 num-in-row is a number that varies.
 cur-ceil is a number that varies. cur-ceil is usually 3.
 
+firstword is a number that varies. [key2]
+fullcmd is a number that varies. [key]
+
+to decide whether (nt - a table name) is hash-found:
+	say "[nt] checked.";
+	repeat through nt:
+		if firstword is the hashval entry or fullcmd is the hashval entry:
+			if there is a this-rule entry:
+				say "[run paragraph on]";
+				consider this-rule entry;
+				if the rule succeeded:
+					say "[this-clue entry][line break]";
+					decide yes;
+			if there is a this-rm entry:
+				if location of player is this-rm entry:
+					say "[this-clue entry][line break]";
+					decide yes;
+			if there is a this-item entry:
+				if this-item entry is visible:
+					say "[this-clue entry][line break]";
+					decide yes;
+	decide no;
+
 to say reject:
-	let key be the hash of the player's command;
-	let key2 be the hash of word number 1 in the player's command;
-	d "The hash of the command is [key]. The hash of word #1 is [key2].";
-	repeat through the table of anagrams:
+	now fullcmd is the hash of the player's command;
+	now firstword is the hash of word number 1 in the player's command;
+	d "The hash of the command is [fullcmd]. The hash of word #1 is [firstword].";
+	repeat through regana of mrlp:
 		if the-from entry is visible:
-			if key is the hashkey entry or key2 is the hashkey entry:
+			if firstword is the hashkey entry or fullcmd is the hashkey entry:
 				say "[spec-help of the-from entry]";
-				if last-hash is key or last-hash is key2:
+				if last-hash is fullcmd or last-hash is firstword:
 					increment num-in-row;
 					if point is false and num-in-row is cur-ceil:
 						say "[i][bracket]NOTE: it looks like you've tried a second anagram in a row. It may help to OPT IN. You can always switch back with NO TIP.[close bracket][roman type][line break]";
 						now num-in-row is 0;
 						if cur-ceil < 6:
 							increment cur-ceil;
-				now last-hash is key;
+				now last-hash is hashkey entry;
 				continue the action;
 	now num-in-row is 0;
-	repeat through the table of nudges:
-		if key is the hashval entry or key2 is the hashval entry:
-			if there is no this-reg entry or mrlp is this-reg entry:
-				if there is a this-rule entry:
-					say "[run paragraph on]";
-					consider this-rule entry;
-					if the rule succeeded:
-						say "[this-clue entry][line break]";
-						continue the action;
-				if there is a this-rm entry:
-					if location of player is this-rm entry:
-						say "[this-clue entry][line break]";
-						continue the action;
-				if there is a this-item entry:
-					if this-item entry is visible:
-						say "[this-clue entry][line break]";
-						continue the action;
+	if regnud of mrlp is hash-found:
+		continue the action;
+	if table of general nudges is hash-found:
+		continue the action;
 	say "[verb-cue]."
 
 to say verb-cue:
@@ -2653,7 +2663,7 @@ understand "cr [something]" as cring.
 marcos-trumped is a truth state that varies.
 
 to buzz-or-no-noise (ana - a thing):
-	repeat through table of anagrams:
+	repeat through regana of mrlp:
 		if the-from entry is ana:
 			say "The gadget buzzes[buz-help]";
 			continue the action;
@@ -2774,17 +2784,19 @@ a region has a number called poss-score. the poss-score of a region is usually z
 
 a region has a number called cur-score. the cur-score of a region is usually zero.
 
-Intro is a region. max-score of Intro is 7. min-score of Intro is 4.
+a region has a table name called regnud. a region has a table name called regana.
 
-Stores is a region. max-score of Stores is 6. min-score of Stores is 4.
+Intro is a region. max-score of Intro is 7. min-score of Intro is 4. regnud of Intro is table of intro nudges. regana of Intro is table of intro anagrams.
 
-Forest is a region. min-score of Forest is 15. max-score of Forest is 16.
+Stores is a region. max-score of Stores is 6. min-score of Stores is 4. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams.
 
-Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27.
+Forest is a region. min-score of Forest is 15. max-score of Forest is 16. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams.
 
-Metros is a region. min-score of Metros is 17. max-score of Metros is 18.
+Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams.
 
-Resort is a region. min-score of Resort is 10. max-score of Resort is 14.
+Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams.
+
+Resort is a region. min-score of Resort is 10. max-score of Resort is 14. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams.
 
 book fliptoing
 
@@ -2801,7 +2813,7 @@ fliptoing is an action applying to one visible thing.
 carry out fliptoing (this is the main flipping rule) :
 	let mything be the player;
 	let got-yet be false;
-	repeat through the table of anagrams:
+	repeat through regana of mrlp:
 		if the-to entry is noun and got-yet is false and the-from entry is visible:
 			if debug-scan is true and player has gadget:
 				try scaning the-from entry;
@@ -2912,7 +2924,7 @@ before fliptoing (this is the enter pray or examine rule):
 
 check fliptoing (this is the should we bother flipping rule):
 	if noun is not visible:
-		repeat through table of anagrams:
+		repeat through regana of mrlp:
 			if the-to entry is noun and the-from entry is visible:
 				continue the action;
 		if noun is sword and noise bag contains words and location of player is Abyss:
@@ -3046,7 +3058,7 @@ check fliptoing beast:
 
 chapter the anagram table
 
-table of anagrams [toa] [NOTE: PUT NON SCENERY FIRST]
+table of Intro anagrams [toa] [NOTE: PUT NON SCENERY FIRST]
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 bulge	bugle	"bugle"	"bulge"	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is visible]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362	--	--	nowhere
 odor	yard-door	"door"	"odor"	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start intro anagrams]
@@ -3054,13 +3066,19 @@ bolt	blot	"blot"	"bolt"	"The bolt retracts, and slowly a blot spreads over the d
 toga	goat	"goat"	"toga"	"The dingy toga shudders. It seems to rip, make legs, and twist around, like one of those balloon animals you were never good at. All this twisting has left him with an appetite, and he walks over to the delicious thorns and brambles.[paragraph break]He finds a relatively weak spot in the thickets and goes at it. Enough branches make way so that you could make it through if you crouch. Exhausted, he turns around three times and falls asleep.[paragraph break]Man! You actually made something living, this time. And you can even go IN through the darnels, now too[if darn-slan is true]--the ones you slandered nicely. You really took full advantage of this first bit[else], which you could maybe trash right if you think about it. Or you could just move on[end if]."	false	212250115	"The goat seems content enough as-is."
 nametag	gateman	"gateman" or "gate man"	"nametag"	"Whoah! The nametag pulses and pops in directions you didn't think something that flat could. You hear a gish, then a sigh. A tall, grouchy old man in sober robes so aged you almost say 'Egad' cries 'The eyes! They see!' He grumbles how he shoulda been a portal king in the parking lot, he's such a talking pro. 'Rote scan. Ancestor? No traces.' Then he notices you. 'You--well, you brought me back. Yorpwald's been shuffled. Almost f-flushed. I'm Old Man Almond. But this isn't some RPG where you can ask everyone on the way for help. I'm pretty much it[if attics are not off-stage]. Oh, nice job fixing the static, too. There'll be worse noise later, but you'll deal with that whenever[end if].'[paragraph break]'Er, oh...or, eh...'[paragraph break]'Brilliant! You're a natural!'"	false	400874126	--	true
 static	attics	"attics" or "attic"	--	"[check-plur]The static cuts off and seems to grow opaque. Then it forms into a small box with a cupola, pyramid, and other shapes. They fit with a click on top of the doll house[if gateman is visible]. Old Man Almond golf-claps. 'Good work, though there's worse noise later[what-about-gate].'[otherwise]. Too bad nobody was around to see it![end if]"	false	368680251	--	true
-attics	static	"static"	--	"You undo your artistic work for perhaps more practical considerations like learning how to use the new toys from the cabinet."	false	368680251	--	true	[end introduction anagrams]
+attics	static	"static"	--	"You undo your artistic work for perhaps more practical considerations like learning how to use the new toys from the cabinet."	false	368680251	--	true
+
+table of Stores anagrams
+the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 store b	sorbet	"sorbet"	--	"The store collapses into a greyish sorbet which is surprisingly tasteful. So tasteful, you eat it all at once and throw away the cup it came in. In a trash can behind one of the stores you can't change. Which? It's not worth remembering."	false	505285378	[start trips anagrams]
 store f	forest-x	"forest"	"store f"	"The greens and browns of Store F coagulate and pull apart into an actual forest."	false	513381369
 store i	sortie-x	"sortie"	"store i"	"The store rumbles, destroying the portraits of famous Tories (this is not a political statement) and revealing the small sortie down[trap-check]. A stairway down remains, but that's about it."	false	531859319
 store m	metros-x	"metros"	"store m"	"The store rumbles, with the collections of small-scale cities disappearing. You see an escalator leading--well, somewhere populated."	false	550941626
 store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! You see, for a brief moment, a manor that seems made for you. 'I know what you're looking at!' calls some random well-wisher. 'You've earned it! For defeating Red Bull Burdell!'[paragraph break]Before you reply you haven't, he's already run behind store G, yelling 'Go! Rest!'"	false	572190276
 cabinet	nice bat	"nice bat" or "be actin"	"cabinet"	"The cabinet seems to expand like an amoeba, then, POP! It becomes a rather large bat, which jumps up and down excitedly. It's clearly grateful it has become active, alive--more than just something to store things in."	false	384428789	[end trips strip anagrams]
+
+table of Forest anagrams
+the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 ones	nose	"nose"	"ones"	"The ones line up next to each other in a pair of not quite v-shaped semicircles. Then they melt into a nose. You take it."	true	367340160
 dashes	shades	"shades"	"dashes"	"Most of the dashes reform into a pair of eyeglass rims, and the remaining one fill in as lenses. They lighten a little, and you have fully functioning shades."	true	380853247
 noughts	shotgun	"shotgun"	"noughts"	"Bam! The noughts slink together to form a gun barrel, then a whole big powerful gun."	true	517631877
@@ -3072,8 +3090,11 @@ banshee	has-been	"hasbeen" or "has been" or "has-been"	"banshee"	"The banshee qu
 red asp	drapes	"drapes"	"red asp"	"Shazam! The red asp crumbles into some far less evil looking drapes. They're still too thick to walk through."	false	414086744
 spread	drapes	"drapes"	"spread"	"The spread briefly turns into a red asp that jumps at you before collapsing into thicker, but less wide, drapes. You won't be able to just walk through them."	false	414086744 [must be 2nd else you get a problem with 2 points]
 Spam	maps	"maps"	"spam"	"[process-sandwich]With a sickening SCHLURP, the [spam] curdles and flattens to form several maps."	true	244002896
-vowels	wolves	"wolves"	"vowels"	"Well, you've done it now. The imposing vowels become werewolves--but they notice your shotgun and stand back. The first forward gets shot--or so they imagine."	false	567346084	"You don't need magic. You have a weapon."	[end forest anagrams]
-warts	straw	"straw"	"warts"	"The warts quickly peel off and lengthen into straw[drop-straw]."	false	394830378	[start sortie anagrams]
+vowels	wolves	"wolves"	"vowels"	"Well, you've done it now. The imposing vowels become werewolves--but they notice your shotgun and stand back. The first forward gets shot--or so they imagine."	false	567346084	"You don't need magic. You have a weapon."
+
+table of Sortie anagrams
+the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
+warts	straw	"straw"	"warts"	"The warts quickly peel off and lengthen into straw[drop-straw]."	false	394830378
 skate	steak	"steak"	"skate"	"The skate turns reddish, and the blade cuts up the meaty bits before vanishing--how convenient!"	false	382311089
 t-n	teleporter	"kitchen"	"the nick"	"That does it! The heck with that silly old grate. Your prison dissolves, and it becomes the place you meant to go all along[if straw is in the nick]--the straw remains intact, too[end if]."	false	454037543	--	--	kitchen
 cult tee	lettuce	"lettuce"	"lettuce"	"The t-shirt crumples and then shreds before turning into a light green head of lettuce."	false	639757485
@@ -3096,8 +3117,11 @@ scraped wall	hallway	"hallway"	"haywall"	"Of course! The hay wall you made colla
 oils	silo	"silo"	--	"You empty the cask again. The oils seep into the moor, and you drop the cask as the silo appears much quicker than you imagined possible. The cask breaks and seeps into the ground."	false	269433228 [this is kludgey code, as this line must come first even though the silo flip comes second.]
 oils	soil	"soil"	--	"You empty the cask. The oils seep into the moor and make a large chunk less squishy and sandy. You could probably build something big on the moor now."	false	269433228
 hoots button	shoot button	"shoot" or "shoot button"	"hoots" or "hoots button"	"The hoots button glows--you touch it (so hot,) and it changes to a shoot button as its letters shift."	false	385371437
-trees button	steer button	"steer" or "steer button"	"trees" or "trees button"	"The smell of a chemical ester pervades the air as the trees button rewords to a steer button."	false	540320005	[end sortie anagrams]
-drainage	gardenia	"gardenia"	"drainage" or "aged rain" or "arena dig" or "dear inga"	"In a fit of ecological, aesthetic magic-slinging, you transform the drainage and all the flotsam inside it into a much prettier gardenia. The whole underside is still pretty dingy, but hey, free flower. You take it."	true	385034693	[start metros flips]
+trees button	steer button	"steer" or "steer button"	"trees" or "trees button"	"The smell of a chemical ester pervades the air as the trees button rewords to a steer button."	false	540320005
+
+table of Metros anagrams
+the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
+drainage	gardenia	"gardenia"	"drainage" or "aged rain" or "arena dig" or "dear inga"	"In a fit of ecological, aesthetic magic-slinging, you transform the drainage and all the flotsam inside it into a much prettier gardenia. The whole underside is still pretty dingy, but hey, free flower. You take it."	true	385034693
 clover	Velcro	"Velcro"	"clover"	"Pop! The clover expands and grows scratchier and darker. It is now a long strip of Velcro. The leaves appear to have expanded into something resembling mittens[if player does not have Velcro]. You pick them up[end if]."	true	467466733
 Motto	tomato	"tomato"	"motto" or "a motto"	"The motto--that is, both words and paper--curls up and bundles into a small sphere, and you almost [if motto is in alley]hesitate to pick it up[otherwise]drop it[end if]. Amazingly, it's not icky-soft or anything, and it doesn't smell TOO bad."	true	421188161
 lost corn	controls	"controls"	"lost corn"	"The different-colored kernels only flatten out as the lost corn collapses into a circuit board. The controls you possess--for whatever--seem powerful[if deadbeat is visible]. 'Whoah! DUDE!' moans the deadbeat, half staggering to his feet before he collapses from the effort[end if]."	true	575139873
@@ -3109,8 +3133,11 @@ antlers	rentals	"rentals" or "rental"	"antlers"	"Suddenly, a man walks in, point
 neon pig	op	"opening"	"neon pig"	"[if player is on fuzzy looking wall]Remembering basic electric safety rules and common sense, you move to the side before trying your magic. This saves your bacon. [run paragraph on][end if]The neon pig goes on the fritz, sparking first, then making a big POP. The neon is none! It appears you've created an opening. Now you're bakin[']. Uh, cookin[']. (Okay, no more hamming it up.)"	false	499032209
 siren	resin	"resin"	"siren"	"The siren makes some even more spastic noises before grinding into resin powder. You scoop it up and put some on your hands, which feel sticky now. You feel your chances of defeating the [beast-beats] has risen, unless you rinse."	false	423304232
 beats	beast	"beast"	"beats"	"'Our beats! Saboteur!' you hear as a beast replaces the thumping with roaring, which stops when the thing needs to breathe. It's an improvement. For your chance to best a beast."	false	347796816
-words	sword	"sword"	"words"	"[if player has sheath]The words go slippery, claiming they didn't mean themselves, giving passive-aggressive threats. But it is too late--they fade, and a sword appears materially.[paragraph break]You sensibly put the sword--as slippery as the final words--into your sheath[in-sheath][otherwise]The words explode from the noise bag, which is blown away by the [which-roar]. In their place is a shining sword that [give-sword][end if]."	false	384914208	[end metros flips]
-rock	cork	"cork"	"rock"	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143	[start resort flips]
+words	sword	"sword"	"words"	"[if player has sheath]The words go slippery, claiming they didn't mean themselves, giving passive-aggressive threats. But it is too late--they fade, and a sword appears materially.[paragraph break]You sensibly put the sword--as slippery as the final words--into your sheath[in-sheath][otherwise]The words explode from the noise bag, which is blown away by the [which-roar]. In their place is a shining sword that [give-sword][end if]."	false	384914208
+
+table of Resort anagrams
+the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
+rock	cork	"cork"	"rock"	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143
 swing	wings	"wings"	"swing"	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
 sprig	grips	"grips"	"sprig"	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
 spore	ropes	"ropes"	"spore"	"The spore grows more quickly than you could imagine, into a couple of long ropes tied together. You wind one around your waist[tool-clue]."	true	465222414
@@ -3367,9 +3394,9 @@ to say what-can-flip:
 		if pft is a preflip listed in table of preflip clues:
 			choose row with preflip of pft in table of preflip clues;
 			say "[line break][pretodo entry]";
-		else if pft is a the-to listed in table of anagrams:
+		else if pft is a the-to listed in regana of mrlp:
 			d "[line break]NEED AN ENTRY";
-			choose row with the-to of pft in table of anagrams;
+			choose row with the-to of pft in regana of mrlp;
 			say "[line break]Deal with [the-from entry]: [the-to entry]";
 		else:
 			say "[line break]You remember you need to think [pft] at some time.";
@@ -3461,18 +3488,6 @@ when play begins (this is the don't use any other besides status window when pla
 	now player has the dope tan notepad;
 	now left hand status line is "[location of player] ([mrlp])[last-scan-thing]";
 	now right hand status line is "[cur-score of mrlp]/[if possibles is true][poss-range][else][max-score of mrlp][end if][if Trips Strip is visited] [bracket][number of solved regions][close bracket][end if]";
-	repeat with Q running through regions:
-		now poss-score of Q is max-score of Q;
-	repeat through table of anagrams:
-		if the-from entry is not a room:
-			now the-from entry is flippable;
-		if there is no force-take entry:
-			d "no force-take for [the-from entry]/[the-to entry].[line break]";
-			now force-take entry is false;
-	place-random-garbage;
-	shuffle-chat-lists;
-	now red bull is in bullpen;
-	now redness is in bullpen;
 
 last-was-cert is a truth state that varies.
 scan-to-header is a truth state that varies.
@@ -3547,9 +3562,20 @@ when play begins (this is the initialise anagrams pad and beats rule) :
 	repeat through table of pad-stuff:
 		if there is no verify entry:
 			now verify entry is true;
-	repeat through table of anagrams:
-		if there is no vanish entry:
-			now vanish entry is true;
+	repeat with Q running through regions:
+		now poss-score of Q is max-score of Q;
+		repeat through regana of Q:
+			if the-from entry is not a room:
+				now the-from entry is flippable;
+			if there is no vanish entry:
+				now vanish entry is true;
+			if there is no force-take entry:
+				d "no force-take for [the-from entry]/[the-to entry].[line break]";
+				now force-take entry is false;
+	place-random-garbage;
+	shuffle-chat-lists;
+	now red bull is in bullpen;
+	now redness is in bullpen;
 
 check taking scenery:
 	say "Taking scenery is either illegal or physically impossible or both." instead;
@@ -4451,8 +4477,8 @@ carry out xmxing:
 		say "They just seem to EXIST. Maybe you can, too.";
 		ditch-saltine instead;
 	if noun is flippable: [start general stuff]
-		if there is a the-to corresponding to the-from of noun in table of anagrams:
-			say "[v-b]you see [the-to corresponding to the-from of noun in table of anagrams].";
+		if there is a the-to corresponding to the-from of noun in regana of mrlp:
+			say "[v-b]you see [the-to corresponding to the-from of noun in regana of mrlp].";
 			ditch-saltine instead;
 		else:
 			say "You give the saltine a funny look. Like you're not sure if it could give you help. This is a [bug-report]" instead;
@@ -10434,7 +10460,7 @@ after reading a command:
 			replace the regular expression "^(say|think|shout|speak|yell) " in XX with "";
 			change the text of the player's command to XX;
 	repeat with QQ running through fungible things: [this takes care of most of the cases, but when an object like the oils or links is flipped, we need an additional flip]
-		if QQ is a the-from listed in the table of anagrams:
+		if QQ is a the-from listed in regana of mrlp:
 			if the player's command matches exact-text entry:
 				d "Fliptoing from fungible loop: [qq].";
 				try fliptoing the-to entry;
@@ -10456,7 +10482,7 @@ after reading a command:
 	let myh be the hash of the player's command;
 	let myh2 be the hash of word number 1 in the player's command;
 	let should-work be false;
-	repeat through table of anagrams:	[this code vacuums up  the 2nd use of the oils as well as the alternate use of the chain links. It also allows for basic checks of retries etc.]
+	repeat through regana of mrlp:	[this code vacuums up  the 2nd use of the oils as well as the alternate use of the chain links. It also allows for basic checks of retries etc.]
 		if myh is hashkey entry or myh2 is hashkey entry:
 			d "[myh] [the-from entry] [the-to entry] try.";
 			if the-from entry is visible:
@@ -10484,7 +10510,7 @@ after reading a command:
 				do nothing instead;
 			d "[myh] [the-from entry] [the-to entry] failed.";
 			now should-work is false;
-	repeat through table of anagrams: [this is for an extreme case where you have "attic" instead of "attics"]
+	repeat through regana of mrlp: [this is for an extreme case where you have "attic" instead of "attics"]
 		if the-to entry is visible:
 			if there is an exact-text entry and the player's command matches exact-text entry:
 				d "3rd pass through: [the-to entry].";
@@ -14234,7 +14260,7 @@ to decide whether (ht - a thing) is spayshul:
 
 carry out privsing:
 	let privent be 0;
-	repeat through table of anagrams:
+	repeat through regana of mrlp:
 		if the-from entry is privately-named:
 			say "Checking [the-from entry] -> [the-to entry].";
 			if the-from entry is spayshul:
@@ -14258,13 +14284,14 @@ understand "specs" as specsing.
 carry out specsing:
 	let qq be 0;
 	let reg be intro;
-	repeat through table of anagrams:
-		unless the-from entry is spayshul:
-			increment qq;
-			if the-from entry is not a backdrop:
-				if the-from entry is not off-stage and the-from entry is not in lalaland:
-					now reg is map region of location of the-from entry;
-			say "[qq]. [the-from entry] -> [the-to entry] [reg] : [spec-help of the-from entry]";
+	repeat with Q running through regions:
+		repeat through regana of Q:
+			unless the-from entry is spayshul:
+				increment qq;
+				if the-from entry is not a backdrop:
+					if the-from entry is not off-stage and the-from entry is not in lalaland:
+						now reg is map region of location of the-from entry;
+				say "[qq]. [the-from entry] -> [the-to entry] [reg] : [spec-help of the-from entry]";
 	if qq is 0:
 		say "Yay! All things are clued.";
 	the rule succeeds;
