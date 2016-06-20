@@ -4,12 +4,12 @@ volume table of nudges
 
 [remember to sort with nud.pl after changes]
 
-book the table itself
+book the tables themselves
 
 table of roman manor nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "basement"	608585586	Basement	--	--	"[locname]."
-"rove"	394647309	--	--	gunter-onstage rule	"That's not a way to sneak around and avoid the knock at the door."
+"rove"	394647309	--	--	gunter-yet rule	"That's not a way to sneak around and avoid [if stuff-found >= 3 and gunter is off-stage]the[else]any future knock at the door."
 "meet"	422797389	--	--	is-unbent rule	"[locname-part]."
 "bans"	185788197	--	--	is-unbent rule	"[locname-part]."
 "bent"	318242540	--	--	is-bent rule	"[locname-part]."
@@ -27,18 +27,18 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "door"	255058046	--	side door	--	"No. The door's all that protects you from the outside world."
 "latch"	215399559	--	latches	--	"Not one latch. All of them."
 "table"	305336689	dusty study	--	--	"A bleat: 'tableS!'"
-"ceiling"	392118435	dusty study	--	--	"[if niche is visible]You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed[else]You already built the chimney. If the ceiling caved, yo'd be buried[end if]."
+"ceiling"	392118435	dusty study	--	--	"[if niche is visible]You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed[else]You already built the chimney. If the ceiling caved, you'd be buried[end if]."
 "subpoena"	574518649	--	--	Gunter-left rule	"Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting."
 "lamp"	201542769	--	lamp	--	"If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either."
 "palm"	201542769	--	--	is-study-dark rule	"You think you feel the palm shake a bit, but nothing terribly magical happens."
 "gape"	244059588	--	op-ed	--	"You feel like you physically want to crumple up the page, but you just stare blankly at it."
-"nitro"	376686752	--	op-ed	--	"[vs-oped]."
-"questin"	630601871	--	op-ed	--	"[vs-oped]."
-"moneyco"	550858761	--	op-ed	--	"[vs-oped]."
-"shatter"	555094031	--	op-ed	--	"[vs-oped]."
-"itrash"	369170750	--	op-ed	--	"[vs-oped]."
-"herarts"	537307816	--	op-ed	--	"[vs-oped]."
-"billy"	293398681	--	op-ed	--	"[vs-oped]."
+"nitro"	376686752	--	--	x-oped rule	"[vs-oped]."
+"questin"	630601871	--	--	x-oped rule	"[vs-oped]."
+"moneyco"	550858761	--	--	x-oped rule	"[vs-oped]."
+"shatter"	555094031	--	--	x-oped rule	"[vs-oped]."
+"itrash"	369170750	--	--	x-oped-f rule	"[vs-oped]."
+"herarts"	537307816	--	--	x-oped-m rule	"[vs-oped]."
+"billy"	293398681	--	--	x-oped rule	"[vs-oped]."
 "beams"	308761951	--	t-b	--	"Not even one of the beams rattles. You count them up again--there are ten."
 "ten"	299823635	--	t-b	--	"You change neither the number nor the makeup of the ten beams."
 "notice"	438174643	--	notice	--	"You can flip everything on the diorama except the notice."
@@ -61,8 +61,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "plate"	368383743	--	plates	--	"You have no idea which plate to focus on, so maybe you should focus on the plates."
 "tapler"	453707546	--	plaster	--	"What you need is singular, but you sense it's all the plaster that matters."
 "plaster"	549981512	--	stapler	--	"The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again."
-"painting"	447164205	--	painting	--	"The painting really goes better with the study than the giant pin."
-"abstract"	429617931	--	painting	--	"The painting is abstract enough. Don't mess it further."
+"abstract"	429617931	--	painting	--	"That is probably overthinking the painting's abstract-ness. It's really just good for examining."
 "ten beams"	608585586	--	--	basement-visible rule	"You probably just want to go DOWN to the basement."
 "chimney"	484428752	--	--	chimney-visible rule	"You probably just want to go UP the chimney."
 "stable"	401610655	--	--	stable-visible rule	"You probably just want to go IN to the stable."
@@ -82,7 +81,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "chair"	188792351	--	rich chair	--	"The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing."
 "rich"	186604533	--	rich chair	--	"The chair may be an unnecessary luxury, but you shouldn't feel bad about that."
 "sad"	119490873	--	sad ads	--	"[w-twi]."
-"sadsad"	238981746	--	sad ads	--	"[w-twi]."
 "evac"	256164332	Basement	--	--	"The evac-cave is your way out. It'd be a bad idea to change it."
 "manor"	294846859	--	--	degen-true rule	"[not-the-reg]."
 
@@ -328,7 +326,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 
 table of presto nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
-"crust"	408819179	--	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food." [presto nudges]
+"crust"	408819179	--	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food."
 "plaque"	454785149	--	plaque	--	"[mz-chg]."
 "entry"	507506690	--	plaque	--	"[mz-chg]."
 "mazeentry"	824545388	--	plaque	--	"[mz-chg]."
@@ -1169,7 +1167,7 @@ book text details
 to say locname:
 	say "You don't need to riff on any location names to win the game[if bogus-plains is in plains and oyster is needed], though you may get a last lousy point from doing so in one place, if you're observant[end if]"
 
-this is the gunter-onstage rule:
+this is the gunter-yet rule:
 	if player is in study and gunter is off-stage:
 		the rule succeeds;
 	the rule fails;
@@ -1195,6 +1193,20 @@ this is the Gunter-left rule:
 this is the is-study-dark rule:
 	if player is in study and study is not lit:
 		the rule succeeds;
+	the rule fails;
+
+this is the x-oped rule:
+	if dope op-ed is examined, the rule succeeds;
+	the rule fails;
+
+this is the x-oped-f rule:
+	if the player is male, the rule fails;
+	if dope op-ed is examined, the rule succeeds;
+	the rule fails;
+
+this is the x-oped-m rule:
+	if the player is female, the rule fails;
+	if dope op-ed is examined, the rule succeeds;
 	the rule fails;
 
 to say vs-oped:

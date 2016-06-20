@@ -265,3 +265,300 @@ Meta-commands don't have any easter eggs, sadly
 
 >semithong
 Instead of messing with SOMETHING, maybe you can examine what the something is on.
+
+* cluing and such
+
+>udsty
+You don't need to riff on any location names to win the game
+
+>dark
+You punch your fist as you realize DARK has no anagrams...right into the palm
+>darksens
+Oh no, not again. Concentrate on the palm
+
+>bowling
+It's more that it's a giant pin and not, like, a safety pin
+>bowlingpin
+It's more that it's a giant pin and not, like, a safety pin
+
+>echin
+It's not any old niche. It's your niche. And by your niche, I mean you see it as 'my niche.'
+
+>bskoo
+The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
+
+>bkoo
+The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
+
+>shelf
+The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
+
+>bkooshelf
+The bookshelf is too massively immovable. If you could magick it, all those books would probably create an avalanche, anyway.
+
+>beams
+Not even one of the beams rattles. You count them up again--there are ten.
+>ten
+You change neither the number nor the makeup of the ten beams.
+
+>ervo
+any future knock at the door
+
+>morna
+Trying to change the current region you're in would be risky, or useless, or maybe both
+
+>ervo
+That's not a way to sneak around and avoid the knock at the door.
+
+>nip
+It's one big giant pin.
+>ignat
+It's one big giant pin.
+
+>painting
+>x bookshelf
+
+>open door
+>1
+>5
+
+>palm
+You think you feel the palm shake a bit, but nothing terribly magical happens.
+
+>lamp
+
+>painting
+>painting
+goes better
+
+>abstract
+That is probably overthinking the painting's abstract-ness. It's really just good for examining and offsetting the bookcase.
+
+>basement
+>d
+
+>bamesent
+You don't need to riff on any location names to win the game
+
+>mete
+>snab
+
+You should never need to riff on part of a location name
+
+>u
+>d
+
+>same
+>bent
+
+>stair
+>u
+
+>table
+A bleat: "tableS!"
+
+>belts
+>bastle
+
+>in
+>pepehole
+You don't need to change it. It was tough enough to create.
+
+>ltcha
+Not one latch. All of them.
+
+>letchas
+WRONG
+>satchel
+
+>letchas
+You think you feel static through the latches. But they remain the same.
+
+>satchel
+
+>ceiling
+You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed.
+
+>chimney
+DEBUG INFO: Trying to flip chimney.
+
+The square saying MY NICHE rumbles and collapses to create an impromptu chimney. It's wide enough for you to climb and even appears to have ledges or whatever to grip. You can go up now.
+
+[Your score has just gone up by one point.]
+
+DEBUG INFO: Adding a min point for this flip.
+
+>cieling
+You already built the chimney. If the ceiling caved, you'd be buried.
+
+>chira
+The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing.
+
+>chir
+The chair may be an unnecessary luxury, but you shouldn't feel bad about that.
+
+>nitro
+!Elvira's
+
+>oped
+You're not going to change Elvira's opinion. Better to change Yorpwald.
+
+>x dope
+
+>nitro
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+
+>questin
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+
+>moneyco
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+
+>shatter
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+
+>billy
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+
+>itrash
+You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+>herarts
+!You try and twist
+>gs
+>itrash
+!You try and twist
+>herarts
+You try and twist
+>gs
+
+>beansoup
+Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting.
+
+>pmla
+If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
+
+>gpea
+You feel like you physically want to crumple up the page, but you just stare blankly at it.
+
+>u
+
+>hightes
+You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+
+>highte
+You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+
+>clostes
+The closets are there to warp space a bit. You don't need to mess with them.
+
+>closte
+The closets are there to warp space a bit. You don't need to mess with them.
+
+>prma
+The pram creaks back and forth slightly.
+
+>noitce
+You can flip everything on the diorama except the notice.
+
+>dioraam
+Old Man Almond assured you you couldn't change it by accident when he gave it to you. The stuff hanging from it, though...
+
+>erdaing
+You don't have time for literary criticism.
+
+>tenbeams
+You probably just want to go DOWN to the basement.
+
+>chimney
+You probably just want to go UP the chimney.
+
+>stable
+You probably just want to go IN to the stable.
+
+>dsa
+The ads have probably gone through enough word-twisting.
+
+>u
+>ramp
+>d
+
+>ceva
+The evac-cave is your way out. It'd be a bad idea to change it.
+
+>enter cave
+You look at your settler and realize you haven't really EXAMINED it.
+>x settler
+>enter cave
+
+>olem
+Changing Elmo won't work. It's his rifle.
+
+>z
+>z
+>z
+>z
+>z
+>high
+The high sign is a clue. Bad idea to change it.
+
+>sign
+The high sign is a clue. Bad idea to change it.
+
+>highsign
+The high sign is a clue. Bad idea to change it.
+
+>arfile
+Just the rifle, well, not THE rifle, or JUST, rifle, but RIFLE.
+
+>hetsago
+It's not you that needs changing but the rifle.
+
+>ugn
+It's not a gun but a rifle. And a gnu would be a gnu-sance anyway.
+
+>flier
+>3
+>y
+
+>ecvarn
+You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+
+>elptas
+The plates shine slightly and rattle.
+
+>elptasr
+The plaster crackles and shines slightly.
+
+>elptas
+The plates shine slightly and rattle.
+
+>elptasr
+The plaster crackles and shines slightly.
+
+>terrain
+Hm...it probably isn't that easy. The plaster and 
+
+>tapler
+What you need is singular, but you sense it's all the plaster that matters.
+>taple
+You have no idea which plate to focus on, so maybe you should focus on the plates.
+
+>staple
+>stapler
+As paper appears behind, a stapler falls out. You take it. The paperwall behind looks lined but seems solid enough.
+
+>elptasr
+The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again.
+
+>elptas
+Those plates were a mess, and now they're a tidy staple. It's better that way.
+
+>paperwall
+The paperwall is unmoved. Maybe the stuff that came from it  could help you more, here.
+
+>paper
+The paperwall is unmoved. Maybe the stuff that came from it  could help you more, here.
+
+>wall
+The paperwall is unmoved. Maybe the stuff that came from it  could help you more, here.
+

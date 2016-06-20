@@ -74,8 +74,6 @@ You try and cuss, but the plebe is not intimidated by your civilian clothes. Per
 No, you were right before, there. You just need some help to make that magic word in your notepad work, now. Or maybe you don't!
 
 >hmup
-DEBUG INFO: The hash of the command is 287929218. Hash of word 1 is 287929218.
-
 The hump suddenly looks a bit smaller. But not enough.
 
 >umph
@@ -89,24 +87,16 @@ Austerer Treasure
 The treasure room has no secret passages--so you can only go back east.
 
 >hoop
-DEBUG INFO: The hash of the command is 267453412. Hash of word 1 is 267453412.
-
 The hoop dips a bit as if to taunt you.
 
 >hoopey
-DEBUG INFO: The hash of the command is 517618773. Hash of word 1 is 517618773.
-
 The hoop dips a bit as if to taunt you.
 
 >phooey
 >oynx
-DEBUG INFO: The hash of the command is 378387418. Hash of word 1 is 378387418.
-
 You consider the odd letters in such a short word, then  think "X, Y, ... no." Maybe the censer is just a censer, and the coloring is a clue to what it can be.
 
 >escern
-DEBUG INFO: The hash of the command is 525123080. Hash of word 1 is 525123080.
-
 That feels right, but it's not enough yet. You don't need anything profane, here.
 
 >onyxcenser
@@ -114,8 +104,6 @@ You let out a string of something that feels good to say, but it doesn't mean an
 
 >e
 >lbma
-DEBUG INFO: The hash of the command is 138495715. Hash of word 1 is 138495715.
-
 The lamb looks confused. Maybe you could be more forceful. Verbally, not physically.
 
 >blam
@@ -134,8 +122,6 @@ Brunt
 You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
 
 >decoratiev
-DEBUG INFO: The hash of the command is 712778774. Hash of word 1 is 712778774.
-
 You consider some over-long epithet to get the star, but no, it's gotta be something quick. Visceral. Not necessarily rude.
 
 >arts
@@ -159,43 +145,31 @@ You're frustrated you can't reach that star in the stump, and you bang your fist
 The star's snazzy enough as-is.
 
 >gpas
-DEBUG INFO: The hash of the command is 212527445. Hash of word 1 is 212527445.
-
 You try, but fail, to make something out of nothing.
 
 >spag
 You don't have time to read text-adventuring magazines right now. You're too busy living them.
 
 >dma
-DEBUG INFO: The hash of the command is 87292060. Hash of word 1 is 87292060.
-
 Here in the Brunt, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster.
 
 >amaddam
 Here in the Brunt, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster.
 
 >thedma
-DEBUG INFO: The hash of the command is 355490486. Hash of word 1 is 355490486.
-
 Here in the Brunt, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster.
 
 >dumpster
-DEBUG INFO: The hash of the command is 684189904. Hash of word 1 is 684189904.
-
 The dumpster and red stump are both pretty sturdy, but you might be able to get what's in the dumpster.
 
 >dumpstera
-DEBUG INFO: The hash of the command is 686377722. Hash of word 1 is 686377722.
-
 Not even you can make that icky stuff in the dumpster worthwhile, but maybe there's something useful inside.
 
 >stmpu
 The stump just sits there, stumpy
 
->>n
+>n
 >ovelzamt
-DEBUG INFO: The hash of the command is 655479952. Hash of word 1 is 655479952.
-
 The volt maze crackles with increased energy, almost ready to break down.
 
 >bleep
@@ -278,8 +252,6 @@ You walk forward. That dangerous looking ether? It hid some dangerous looking pe
 Leo and Rand might help you win the fight, but you'll need some way to find the people in the ether .
 
 >theer
-DEBUG INFO: The hash of the command is 481328338. Hash of word 1 is 481328338.
-
 The ether pulses, but you still can't see through it.
 
 >there
@@ -299,39 +271,27 @@ Phat Path
 >phta
 
 >moutn
-DEBUG INFO: The hash of the command is 415551063. Hash of word 1 is 415551063.
-
 Mount Um, Not silently disposes of your attempts to manipulate it.
 
 >thwa
 Whazzat?
 
 >llwa
-DEBUG INFO: The hash of the command is 217750269. Hash of word 1 is 217750269.
-
 It's too expansive for you to use any mental energy on.
 
 >harms
-DEBUG INFO: The hash of the command is 285143039. Hash of word 1 is 285143039.
-
 Despite being dangerous to walk into, Harm's Marsh serves an important ecological purpose I can't explain here. So, best not to meddle.
 
 >hram
 Despite being dangerous to walk into, Harm's Marsh serves an important ecological purpose I can't explain here. So, best not to meddle.
 
 >phta
-DEBUG INFO: The hash of the command is 224046094. Hash of word 1 is 224046094.
-
 You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
 
 >gho
-DEBUG INFO: The hash of the command is 144234578. Hash of word 1 is 144234578.
-
 You need to deal with all the hogs.
 
 >kye
-DEBUG INFO: The hash of the command is 303098539. Hash of word 1 is 303098539.
-
 You aren't sure which key would work, so you need a plan to get them all.
 
 >syke
@@ -341,43 +301,27 @@ Syke-illogical
 You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an "Aw, LOL. Allow all...ow!"
 
 >ahskc
-DEBUG INFO: The hash of the command is 207682846. Hash of word 1 is 207682846.
-
 You'll need to enter the shack to take care of things here.
 
 >wanring
-DEBUG INFO: The hash of the command is 410853958. Hash of word 1 is 410853958.
-
 You can't change warnings. Warnings are there to protect you. Even offer hints if you read them.
 
 >sgin
-DEBUG INFO: The hash of the command is 242774022. Hash of word 1 is 242774022.
-
 Look at what's on the sign.
 
 >atler
-DEBUG INFO: The hash of the command is 372241587. Hash of word 1 is 372241587.
-
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 
 >snogol
-DEBUG INFO: The hash of the command is 400300169. Hash of word 1 is 400300169.
-
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 
 >outhg
-DEBUG INFO: The hash of the command is 352450403. Hash of word 1 is 352450403.
-
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 
 >spsa
-DEBUG INFO: The hash of the command is 276201709. Hash of word 1 is 276201709.
-
 You pass through all ten reshufflings of Saps' Pass, then feel like a bit of a sap, yourself. You pretty clearly need to go north, here.
 
 >ytner
-DEBUG INFO: The hash of the command is 507506690. Hash of word 1 is 507506690.
-
 No way you'll be able to meddle with the Entry from outside.
 
 >leonadr
@@ -400,76 +344,48 @@ You don't need to riff on any location names to win the game, though you may get
 to change the current region
 
 >catechism
-DEBUG INFO: The hash of the command is 513739379. Hash of word 1 is 513739379.
-
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 
 >textbook
-DEBUG INFO: The hash of the command is 666851463. Hash of word 1 is 666851463.
-
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 
 >algorithm
-DEBUG INFO: The hash of the command is 497738055. Hash of word 1 is 497738055.
-
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 
 >algorithms
-DEBUG INFO: The hash of the command is 594012021. Hash of word 1 is 594012021.
-
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 
 >rebuff
-DEBUG INFO: The hash of the command is 389684416. Hash of word 1 is 389684416.
-
 The rebuff-buffer is too technical for you, but even if it weren't, removing its protection would be unwise.
 
 >magnetic
-DEBUG INFO: The hash of the command is 462684739. Hash of word 1 is 462684739.
-
 The magnetic magic-net is too technical for you, but even if it weren't, removing its protection would be unwise.
 
 >computer
-DEBUG INFO: The hash of the command is 660245011. Hash of word 1 is 660245011.
-
 You need to fix the program in the computer, well, once you get it running.
 
 >bottun
-DEBUG INFO: The hash of the command is 473004833. Hash of word 1 is 473004833.
-
 There are buttons all over the shack, but they should remain that way. You may have to figure or change their functions, though.
 
 >bottuns
-DEBUG INFO: The hash of the command is 569278799. Hash of word 1 is 569278799.
-
 There are buttons all over the shack, but they should remain that way. You may have to figure or change their functions, though.
 
 >escarole
-DEBUG INFO: The hash of the command is 586569806. Hash of word 1 is 586569806.
-
 All the escaroles.
 
 >trim
-DEBUG INFO: The hash of the command is 297501820. Hash of word 1 is 297501820.
-
 They're not just socks, or trim. They're trim socks.
 
 >trimsock
 They're not just socks, or trim. They're trim socks.
 
 >sock
-DEBUG INFO: The hash of the command is 242565306. Hash of word 1 is 242565306.
-
 They're not just socks, or trim. They're trim socks.
 
 >socks
-DEBUG INFO: The hash of the command is 338839272. Hash of word 1 is 338839272.
-
 They're not just socks, or trim. They're trim socks.
 
 >ugm
-DEBUG INFO: The hash of the command is 201780662. Hash of word 1 is 201780662.
-
 You stare at the gum. Hm, only a few ways it can be stretched or whatever.
 
 >stick
@@ -484,8 +400,6 @@ DEBUG INFO: Trying to flip mug.
 The gum, being gum, morphs easily into a new shape -- a mug with annoying smile. Smug Mugs are, sadly, still in fashion in Yorpwald. But they often have a right to be--some even replenish what's in them.
 
 >calo
-DEBUG INFO: The hash of the command is 149359819. Hash of word 1 is 149359819.
-
 Microscopic bubbles seem to form on the coal and burst in the air.
 
 >peil
@@ -494,94 +408,60 @@ It's not just any pile--it's a pile of coal.
 >cola
 
 >caffeine
-DEBUG INFO: The hash of the command is 443735767. Hash of word 1 is 443735767.
-
 The name brand is not important. Besides, your body will break down the caffeine on its own, when needed.
 
 >fine
-DEBUG INFO: The hash of the command is 268221359. Hash of word 1 is 268221359.
-
 The name brand is not important. Besides, your body will break down the caffeine on its own, when needed.
 
 >face
-DEBUG INFO: The hash of the command is 175514408. Hash of word 1 is 175514408.
-
 The name brand is not important. Besides, your body will break down the caffeine on its own, when needed.
 
 >adso
-DEBUG INFO: The hash of the command is 193843450. Hash of word 1 is 193843450.
-
 It's cola, not soda or pop. And you can just drink it.
 
 >ppo
-DEBUG INFO: The hash of the command is 237284495. Hash of word 1 is 237284495.
-
 It's cola, not soda or pop. And you can just drink it.
 
 >trimsocks
-DEBUG INFO: The hash of the command is 636341092. Hash of word 1 is 636341092.
-
 You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
 
 >rmo
-DEBUG INFO: The hash of the command is 223751533. Hash of word 1 is 223751533.
-
 You'll know what to do with the sticks when you're ready to program.
 
 >stick
-DEBUG INFO: The hash of the command is 316315593. Hash of word 1 is 316315593.
-
 You'll know what to do with the sticks when you're ready to program.
 
 >sticks
-DEBUG INFO: The hash of the command is 412589559. Hash of word 1 is 412589559.
-
 You'll know what to do with the sticks when you're ready to program.
 
 >blas
-DEBUG INFO: The hash of the command is 170694528. Hash of word 1 is 170694528.
-
 The labs slab remains sturdy. Technology 1, Wordplay Magic 0.
 
 >bla
-DEBUG INFO: The hash of the command is 74420562. Hash of word 1 is 74420562.
-
 The labs slab remains sturdy. Technology 2, Wordplay Magic 0.
 
 >dade
-DEBUG INFO: The hash of the command is 172052105. Hash of word 1 is 172052105.
-
 There must be a more eco-friendly way to reincarnate the flea.
 
 >elfa
-DEBUG INFO: The hash of the command is 210322662. Hash of word 1 is 210322662.
-
 The flea makes a crinkly noise but still seems quite dead.
 
 >elpes
 tired jumble
 
 >bkoo
-DEBUG INFO: The hash of the command is 220057237. Hash of word 1 is 220057237.
-
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 
 >hrad
-DEBUG INFO: The hash of the command is 145823009. Hash of word 1 is 145823009.
-
 That computer probably holds important information--you just need to extract it right, by trying other things.
 
 >devirhard
 That computer probably holds important information--you just need to extract it right, by trying other things.
 
 >devir
-DEBUG INFO: The hash of the command is 386316667. Hash of word 1 is 386316667.
-
 That computer probably holds important information--you just need to extract it right, by trying other things.
 
 >fountina
-DEBUG INFO: The hash of the command is 494078978. Hash of word 1 is 494078978.
-
 It's too small to be a fountain--really, just a fount.
 
 >colck
@@ -597,8 +477,6 @@ C'est pas sap. C'est du CLOCK SAP.
 >put screen on slab
 
 >ebroot
-DEBUG INFO: The hash of the command is 483363989. Hash of word 1 is 483363989.
-
 You need to give that computer another (figurative) kick.
 
 >reboot
@@ -610,8 +488,6 @@ It's risky to boot without a disk, like that disk right there, in the disk drive
 No input device
 
 >compeli
-DEBUG INFO: The hash of the command is 465512068. Hash of word 1 is 465512068.
-
 Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
 
 >compile
@@ -620,8 +496,6 @@ Good idea, but tough to program without a keyboard.
 >undo
 
 >oftun
-DEBUG INFO: The hash of the command is 377990806. Hash of word 1 is 377990806.
-
 Hm, might be fun to try something like that again.
 
 >futon
@@ -630,8 +504,6 @@ DEBUG INFO: Trying to flip futon.
 The fount turns into a futon, which is better off not wet. There's rest, eh? you think, looking at it, though you're not really tired yet.
 
 >bekaydor
-DEBUG INFO: The hash of the command is 504410731. Hash of word 1 is 504410731.
-
 The book is unchangably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. 
 
 >keyboard
@@ -651,8 +523,6 @@ The hopefully only recently dead giant flea becomes a recently dead giant leaf, 
 [Your score has just gone up by one point.]
 
 >sdik
-DEBUG INFO: The hash of the command is 215229079. Hash of word 1 is 215229079.
-
 The disk seems to want to expand, but not quite into that. You must be close.
 
 >skid
@@ -663,8 +533,6 @@ By some lossless easily reversible algorithm, the disk changes to a skid with a 
 You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or to remember the basics.
 
 >repo
-DEBUG INFO: The hash of the command is 368948448. Hash of word 1 is 368948448.
-
 You don't need to do anything with the skid's rope.
 
 >put leaf on skid
@@ -672,31 +540,21 @@ You don't need to do anything with the skid's rope.
 Hacks' Shack
 
 >dksi
-DEBUG INFO: The hash of the command is 215229079. Hash of word 1 is 215229079.
-
 Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did.
 
 >disk
 >put disk in drive
 
 >yeko
-DEBUG INFO: The hash of the command is 377451116. Hash of word 1 is 377451116.
-
 It's not just any yoke. It's a drab yoke. I mean, a particularly drab yoke. On the bored yak.
 
 >aky
-DEBUG INFO: The hash of the command is 177480248. Hash of word 1 is 177480248.
-
 The yak doesn't seem to react to three plain letters thrown around like that. His look indicates not only that he is bored, but that he wants to let people know he's bored, but he's too bored to do that actively. The drab yoke he is wearing probably does not help.
 
 >abrd
-DEBUG INFO: The hash of the command is 126959615. Hash of word 1 is 126959615.
-
 It's not just drab. It's a drab yoke. On the bored yak.
 
 >scratchings
-DEBUG INFO: The hash of the command is 604963096. Hash of word 1 is 604963096.
-
 You may wish to decipher the scratchings, instead.
 
 >scratching
@@ -708,8 +566,6 @@ The keyboard isn't connected. This probably wouldn't be fatal, but why not do fi
 >put keyboard on slab
 
 >ntotobe
-DEBUG INFO: The hash of the command is 570057712. Hash of word 1 is 570057712.
-
 Even more nothing happens than you expected. The blue button really is too broken. But the orange is not.
 
 >compile
@@ -719,42 +575,28 @@ You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper
 successfully compile your code
 
 >tebkay
-DEBUG INFO: The hash of the command is 426815280. Hash of word 1 is 426815280.
-
 Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down.
 
 >bta
-DEBUG INFO: The hash of the command is 123716741. Hash of word 1 is 123716741.
-
 The TBA key rattles within the keyboard a bit.
 
 >bat
 You don't want to take a bat to the keyboard. Or have a bat swoop and take it. Trust me.
 
 >scartch
-DEBUG INFO: The hash of the command is 362189074. Hash of word 1 is 362189074.
-
 It's what's on the scratch paper that is important.
 
 >pprea
-DEBUG INFO: The hash of the command is 378249648. Hash of word 1 is 378249648.
-
 It's what's on the scratch paper that is important.
 
 >cpsa
-DEBUG INFO: The hash of the command is 198933328. Hash of word 1 is 198933328.
-
 It'd sort of stink if a caps lock button broke in real life, so, no.
 
 >lcko
-DEBUG INFO: The hash of the command is 200105179. Hash of word 1 is 200105179.
-
 It'd sort of stink if a caps lock button broke in real life, so, no.
 
 >s
 >shcka
-DEBUG INFO: The hash of the command is 207682846. Hash of word 1 is 207682846.
-
 You'll need to re-enter the shack to take care of things here.
 >n
 
@@ -785,18 +627,12 @@ You feel smarter
 You successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The 
 
 >compidle
-DEBUG INFO: The hash of the command is 486541157. Hash of word 1 is 486541157.
-
 The code won't BUDGE.
 
 >cedo
-DEBUG INFO: The hash of the command is 242193360. Hash of word 1 is 242193360.
-
 The code won't BUDGE.
 
 >ebdug
-DEBUG INFO: The hash of the command is 304959612. Hash of word 1 is 304959612.
-
 Hmm. Compiled code is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here.
 
 >debug
@@ -813,13 +649,9 @@ Now that the fizzy cola's in the mug, you will ration it as you need to.
 Now that the fizzy cola's in the mug, you will ration it as you need to.
 
 >dneglo
-DEBUG INFO: The hash of the command is 378508824. Hash of word 1 is 378508824.
-
 It's built to be sturdy. You don't want to mess with it.
 
 >bsu
-DEBUG INFO: The hash of the command is 219798678. Hash of word 1 is 219798678.
-
 Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
 
 >sub

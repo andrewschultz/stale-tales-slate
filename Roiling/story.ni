@@ -3056,7 +3056,7 @@ hold-it-up is a truth state that varies.
 before quipping when current quip is bye-Elmo-quip (this is the Elmo pulls you back for hints rule):
 	if got-it-quip is not mowered and showset-quip is not mowered and still-no-gp-quip is not mowered:
 		say "Elmo checks you for a second. 'You sure you know how to use the settler?'";
-		if the player consents:
+		if the player yes-consents:
 			say "You nod. 'No clues counsel.'";
 			continue the action;
 		say "You shake your head and go back to thinking why the settler might flicker yellow/green on the lamp and so forth.[no line break]";
@@ -3728,7 +3728,7 @@ xtrhelp	helptxt
 t-b	"The ten beams creak slightly. Maybe not all of them. But a few."
 palm	"The palm remains upright but seems slightly brighter."
 niche	"Hm, no, the niche--my niche--won't unfold that way."
-latches	"You think you feel static through the latches. But they remain the same."
+latches	"You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them."
 tables	"The tables seem to shift a bit."
 giant pin	"The pin wobbles."
 pavement	"[dior-hint]."
@@ -7986,8 +7986,8 @@ chapter the table itself
 table of roman manor anagrams
 the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
 palm	lamp	"lamp" or "get lamp"	"lamp"	"Lamp. Palm. Yup. Using your old powers, you change the palm into a lamp, which gives off light. You go all Jason Scott on it, and just like that, bam, it's in your inventory.[paragraph break]You blink and look around and stare at your diorama. You remember how Old Man Almond gave it to you for one day you might need warm-ups, to get back in the groove. With unusual examples and anything. In case you had a different divining tool than the tagged gadget[if latches are off-stage]. Oh! And he gave you something else! Those--useless latches! They might be good for something. You remember the lump from sleeping on the chair--yup, there they are[end if].[paragraph break]Oh, there's that 'dope' op-ed Gunter threw at you, too[preefies]."	true	201542769	"You don't need to do any more with the lamp."	--
-latches	satchel	"satchel"	"satchel"	"The locks start fiddling with themselves--and each other--and slowly, a satchel emerges from the mess[new-thing]."	true	439479634
-giant pin	abstract painting	"painting"	"painting"	"The giant pin's edges become sharper and, before you know it, it's reformed to a portrait hanging on the wall. Whatever stuck the pin to the wall still works on the painting, which may not be High Art, but it's worth a look."	false	447164205
+latches	satchel	"satchel"	"satchel"	"The locks start fiddling with themselves--and each other--and slowly, a satchel emerges from the mess[new-thing]."	true	439479634	"You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too."
+giant pin	abstract painting	"painting"	"painting"	"The giant pin's edges become sharper and, before you know it, it's reformed to a portrait hanging on the wall. Whatever stuck the pin to the wall still works on the painting, which may not be High Art, but it's worth a look."	false	447164205	"The painting really goes better with the study than the giant pin."
 pavement	event map	"event map" or "eventmap"	"event map"	"The pavement unfolds into a small map which, you remember, describes your first trip through Yorpwald."	false	682523494
 event map	pavement	"pavement"	"pavement"	"The event map folds back into a thoroughly more dull pavement[read-canflip]."	false	682523494
 crabgrass	brass crag	"brasscrag" or "brass crag"	"brasscrag"	"The crabgrass dries out and becomes a brass crag."	false	437595366
@@ -8002,8 +8002,8 @@ stria	stria	"stair"	"stair"	"The stria glow and cascade into a stair leading bac
 niche	chimney	"chimney"	"chimney"	"The square saying MY NICHE rumbles and collapses to create an impromptu chimney. It's wide enough for you to climb and even appears to have ledges or whatever to grip. You can go up now."	false	484428752
 t-b	t-b	"basement"	"basement"	"[if Basement is visited]You diligently set about making sure you've got all the points for this area[else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to the basement."	false	608585586
 tables	tables	"stable"	"stable"	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."	false	401610655
-plates	staple	"staple"	"staple"	"The plates [if plaster is visible]fall with a clatter from the plaster[otherwise]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."	true	464657709
-plaster	stapler	"stapler"	"stapler"	"As paper appears behind, a stapler falls out. You take it[if plates are visible] as the formerly stuck plates fall[end if]. The paperwall behind looks lined but seems solid enough."	true	549981512
+plates	staple	"staple"	"staple"	"The plates [if plaster is visible]fall with a clatter from the plaster[otherwise]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."	true	464657709	"Those plates were a mess, and now they're a tidy staple. It's better that way."
+plaster	stapler	"stapler"	"stapler"	"As paper appears behind, a stapler falls out. You take it[if plates are visible] as the formerly stuck plates fall[end if]. The paperwall behind looks lined but seems solid enough."	true	549981512	"The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again."
 rifle	rifle	"flier"	"flier"	"Duh! Snap![paragraph break]After a 'Hands Up!' and SHUP! the rifle jumps out of Elmo's hands. Turns out it was loaded, and it did have a bullet with your name on it, because it becomes a loaded propaganda flier with your name on it.[paragraph break]Elmo lowers his voice. 'Okay, we gotta play it safe here. They maybe should've figured I was a mole. Name and all. But I have stuff to tell you.'[paragraph break]Lo, a guide! Dialogue!"	false	338451493
 
 table of stores anagrams
@@ -9555,7 +9555,7 @@ check going up in Basement:
 	if backcheck is false:
 		now backcheck is true;
 		say "You shouldn't need to go back to your study unless you want to get more points. Do you want or need to do this?";
-		if the player consents:
+		if the player yes-consents:
 			now basement-been is true;
 			now player is in dusty study instead;
 		else:
