@@ -8,7 +8,241 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* min-thru
+* seed-1-check
+
+>seed 1
+>gonear macks
+
+>bossi
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>bossy
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>bossiyl
+WRONG
+>bossily
+by one point
+>undo
+>nasti
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>nasty
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>nastiyl
+WRONG
+>nastily
+by one point
+>undo
+>bleari
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>bleary
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>bleariyl
+WRONG
+>blearily
+by one point
+>undo
+>modest
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>modestyl
+WRONG
+>modestly
+by one point
+>undo
+>martial
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>martialyl
+WRONG
+>martially
+by one point
+>undo
+>drawling
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>drawlingyl
+WRONG
+>drawlingly
+by one point
+>despairing
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>despairingyl
+WRONG
+>despairingly
+by one point
+
+* seed-2-check
+
+>seed 2
+>gonear macks
+>seedi
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>seedy
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>seediyl
+WRONG
+>seedily
+by one point
+>shadi
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>shady
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>shadiyl
+WRONG
+>shadily
+by one point
+>formal
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>formalyl
+WRONG
+>formally
+by one point
+>steamy
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>steami
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>steamiyl
+WRONG
+>steamily
+by one point
+>sincere
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>sincereyl
+WRONG
+>sincerely
+by one point
+>emotional
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>emotionalyl
+WRONG
+>emotionally
+by one point
+
+* seed-3-check
+
+>seed 3
+>gonear macks
+>catti
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>catty
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>cattiyl
+WRONG
+>cattily
+by one point
+>snide
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>snideyl
+WRONG
+>snidely
+by one point
+>coital
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>coitalyl
+WRONG
+>coitally
+by one point
+>stupid
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>stupidyl
+WRONG
+>stupidly
+by one point
+>sobbing
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>sobbingyl
+WRONG
+>sobbingly
+by one point
+
+* seed-4-check
+
+>seed 4
+>gonear macks
+>teary
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>teari
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>teariyl
+WRONG
+>tearily
+by one point
+>undo
+>irateyl
+WRONG
+>irately
+by one point
+>undo
+>stark
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>starkyl
+WRONG
+>starkly
+by one point
+>ribald
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>ribaldyl
+WRONG
+>ribaldly
+by one point
+>wearing
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>wearingyl
+WRONG
+>wearingly
+by one point
+
+* seed-5-check
+
+>seed 5
+>gonear macks
+>shabbi
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>shabby
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>shabbiyl
+WRONG
+>shabbily
+by one point
+>tedious
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>tediousyl
+WRONG
+>tediously
+by one point
+
+* seed-6-check
+
+>seed 6
+>gonear macks
+>silent
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>silentyl
+WRONG
+>silently
+by one point
+
+* seed-7-check
+
+>seed 7
+>gonear macks
+>shoddy
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>shoddi
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>shoddiyl
+WRONG
+>shoddily
+by one point
+
+* seed-8-check
+
+>seed 8
+>gonear macks
+>sudden
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>suddenyl
+WRONG
+>suddenly
+by one point
+
+* min-thru-with-checks
 
 #cheat commands first
 >seed 1
@@ -16,6 +250,12 @@
 
 
 >in
+
+>ly
+Yup, that's the idea
+
+>brea
+Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
 
 >w
 The barley is nearly everywhere. Without knowing where you're going, you'll get lost.
@@ -28,6 +268,9 @@ The barley rustles in an imaginary wind--but hardly at all.
 
 >barely
 
+>cinder
+You'll need to change more than one cinder.
+
 >e
 The barley is a bit too thick that way.
 
@@ -39,6 +282,15 @@ This north-south passage is frustratingly blocked.
 
 A sly imp simply zooms about rangily guarding the way north, with a butlery air, showing legendary patience that allows vaster averts.
 
+>brute
+No, you need a couple more letters... a couple
+>angry
+No, you need a couple more letters... a couple
+>angri
+No, you need a couple more letters... a couple
+>enraged
+No, you need a couple more letters... a couple
+
 >bruteyl
 The imp looks slightly annoyed for a second. You may be on the right track.
 >angriyl
@@ -46,6 +298,14 @@ The imp looks slightly annoyed for a second. You may be on the right track.
 >enragedyl
 The imp looks slightly annoyed for a second. You may be on the right track.
 
+>syl
+The imp's too sly to get tricked by a word THAT short.
+
+>mpi
+The imp's too sly to get tricked by a word THAT short.
+
+>simply
+It's acting simply, but
 
 >brutely
 >l
@@ -118,6 +378,24 @@ Ed Riley booms, "Yielder! That's right. Go south. Not west."
 
 Shrewin' whiners are tallyhoing with great callosity here. They restyle why they can't let you go south.
 
+>anteroom
+You don't need to riff on any location names to win the game
+
+>loathing
+No, you need a couple more letters... 
+>stoical
+No, you need a couple more letters... 
+>terse
+No, you need a couple more letters... 
+>stoic
+Usually, you'd need to add two letters, but here you'd need to add four.
+
+>rote
+You should never need to riff on part of a location name
+
+>moan
+You should never need to riff on part of a location name
+
 >callosiyt
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track.
 
@@ -188,6 +466,21 @@ The macks become upset Gretta does not recognize just how swell they are--as a g
 >drawlingly
 The macks begin talking slower, and suddenly, their conversational hold is broken. Gretta realizes there's no good way to make home repair discussions more exciting and says so. She looks relieved.
 
+>frontage
+You don't need to riff on any location names to win the game
+
+>gent
+You should never need to riff on part of a location name
+>fora
+You should never need to riff on part of a location name
+>frat
+!You should never need to riff on part of a location name
+>gone
+!You should never need to riff on part of a location name
+
+>getns
+They aren't (spiritually) gents, and you can't change them but their arguments.
+
 >smack
 (the macks)
 They really, really deserve it, but keep your cool. Smack their arguments down instead and they may smack each other for you.
@@ -209,6 +502,20 @@ Modesty is a good thing--well, in the long term. In the short term, the macks' b
 >2
 
 "Oh--um, yeah, don't feel you're holding me back. I sort of want to get away, but I know a few things that could help you," Gretta says. Stay and ask a bit more?
+
+>meldas
+>melda
+It's what the medals say that makes them special.
+It's what the medals say that makes them special.
+
+>gent
+!You should never need to riff on part of a location name
+>fora
+!You should never need to riff on part of a location name
+>frat
+You should never need to riff on part of a location name
+>gone
+You should never need to riff on part of a location name
 
 >moat
 Hm, that's not it, but it must be elemental. No, elementary.
@@ -316,3 +623,35 @@ Warning message
 (taking the cinders first)
 You feel sort of clever finding what to do, but maybe you can be even cleverer, if you're a perfectionist and all. Discern anyway?
 The medals look less than perfect. Maybe you can find someone, or something, to help. You should explore north or south of the barley.
+
+>n
+>n
+>garbed
+by one point
+The LUCKY medal
+>garbed
+You've got a useful ally. They'll be ready just as they are when the time comes
+>coolest
+by one point
+!The LUCKY medal
+>coolest
+You've got a useful ally. They'll be ready just as they are when the time comes
+>artsy
+by one point
+>artsy
+You've got a useful ally. They'll be ready just as they are when the time comes
+>paroled
+by one point
+>paroled
+You've got a useful ally. They'll be ready just as they are when the time comes
+>undo
+>undo
+
+>s
+>s
+>s
+>s
+!nails
+>raptor
+The raptor recoils slightly.
+>parrot

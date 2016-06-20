@@ -1,0 +1,97 @@
+###############################
+#
+#reg-roi-towers.txt
+#
+#regression test for trying ways through towers
+#
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* _pod_1
+
+>seed 1
+>gonear trefoil
+
+>winde
+WRONG
+>wined
+up by a point
+>bleka
+WRONG
+>bleak
+up by a point
+>tensre
+WRONG
+>tenser
+up by a point
+>snarde
+WRONG
+>snared
+up by a point
+>crickde
+WRONG
+>cricked
+up by a point
+>redyon
+WRONG
+>droney
+up by a point
+>undo
+>yonder
+up by a point
+
+* walk-all
+>{include} _pod_1
+>ostrew
+
+
+* pod 2
+
+>seed 2
+>gonear trefoil
+
+>ashen
+>olden
+>bored
+>calmer
+>warned
+>timider
+
+>seed 3
+>gonear trefoil
+
+>stoyn
+>stony
+>godyl
+>godly
+>laryd
+>lardy
+>normla
+>normal
+>achire
+>achier
+>learnde
+>learned
+
+>seed 4
+>gonear trefoil
+
+>awed
+>awde
+>coyer
+>coyre
+>weedy
+>weeyd
+>eggier
+>eggire
+>barney
+>barnye
+>preston
+>prestno
+
+>seed 5
+>gonear trefoil
+
+>terraned
+>terrance

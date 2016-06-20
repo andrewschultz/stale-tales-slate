@@ -1481,8 +1481,8 @@ blurb
 "Neat, bud! Bad tune!"
 "No melody! My noodle!"
 "The notes? Not these."
-"Sing-ings is NG." [x]
 "Sing here? Eh, resign."
+"Sing-ings is NG." [x]
 "Sing out in gusto? It's, UG, No." []
 "So atonal. Nasal, too!"
 "So chanty? Yo, STANCH!"
@@ -1500,13 +1500,13 @@ table of sleep rejects [xxg8]
 blurb
 "[if player is male]Senor Snore[else]Senora, a snore[end if]!" []
 "'Asleep? Please?' / 'See, pal...'"
-"Go to bed? Do be got."
 "Conk out: OK? No! Cut!"
 "Cop out? Up, coot!"
 "Eh, napping happening?"
 "Fond of nod off?"
 "Forty winks? Won't! Frisky!"
 "Go to bed? Beg: to DO." []
+"Go to bed? Do be got."
 "Keel? Apter: keep alert!"
 "Let astray? Stay alert!"
 "Loafing? I flag? No."
@@ -5996,6 +5996,7 @@ blurb
 "Set Elf Fleets"
 "A Setup Up East"
 "A Sexy Ax, Yes"
+"A Shmup Mashup"
 "Shoot Down Hood Towns"
 "Simoni's Mini-SOS Mission"
 "Sing Loud, Solid Gun"
@@ -13524,6 +13525,7 @@ blurb	prio
 "Orphanages, Heap Groans[r], by Porsha Egan & Sharon Page"
 "Orzech's Scherzo[r], by Zo Resch"
 "Other Beaus Hereabouts[r], by Sheba Toure"
+"Other Bums['] Metro Hubs[r], by Burt Eshom"
 "Other Side, Theorised: Hot Desire[r], by [if player is male]Tree Doshi[else]Edith Rose[end if]"
 "Other Sun, Then Ours[r], by Sue North-Southern" []
 "Otis Held the Solid Old Heist[r], by Tish Dole"
@@ -16119,6 +16121,7 @@ blurb
 "notes all the clever implications in [i]The Pill: Help, [']Til[r]." [x]
 "notes anyone can be tempted, like in [i]Stars Go to Grass[r]." [x]
 "notes that [i]THEM, METH[r], does, indeed, 'h/t me.'" [p] [x]
+"notes the budget of [i]Hemp, Dust: The Dumps[r] was worth every penny."
 "notes the exoticism and down to earthiness of [i]The Ganja, Then a Jag[r]." [x]
 "notes the factual relevance of [i]They Said It's Heady[r]." [x]
 "notes you have to appreciate the down-home candor of [i]Nelson's Lesson'N[r] starring Sol Ness." [x]
@@ -18595,6 +18598,7 @@ blurb
 "Rain-made marinade" []
 "Roasted red oats" []
 "Sad-curst custards"
+"Safe-begun angus beef"
 "Semi-banal lima beans"
 "Sorta-Top Pot-Roast"
 "Tasto-toast-tatos"
@@ -31182,6 +31186,7 @@ blurb
 "Many Plot Not Amply[r], by [if player is male]Tony Lamp[else]Pat Lymon[end if]"
 "Mastery: Same Try[r], by Ty Mears" []
 "Me and Un-Mundane[r], by Ed Numan"
+"Me, I Plot to Impel[r], by Tim Opel & Tom Pile"
 "Me, or More[r], by Em Romero" []
 "Me? Or MORE[r], by Moe Romer" []
 "Meaningful Gainful Men[r], by [if player is male]Miguel Fann[else]Una Fleming[end if]"
@@ -31802,6 +31807,7 @@ blurb
 "Merrily I Rely, Mr"
 "Might Be Big, Them"
 "Min-Age Enigma" []
+"Minded, I'd Mend"
 "Minus Sun I'm Musin[']" []
 "Miscoiled Domiciles"
 "Mo['] Frailty: Formailty" []
@@ -31906,6 +31912,7 @@ blurb
 "Ole Music Coliseum" []
 "On, Lower, Woe-Lorn" []
 "On Sub-Rut Burnouts" []
+"On the DL, Then Old"
 "Once-Caring Carcinogen" []
 "Once-Phat Cenotaph" []
 "One Clod Old Once"
@@ -32438,6 +32445,7 @@ blurb
 "[l-r] resolves to do abs so bad." [x]
 "[l-r] talks of working at a tungsten guns tent." [x]
 "[l-r] vows to read My Abs By Sam." [x]
+"[l-r] wonder about the Of Abs So Fab regimen."
 "[l-r] wonders if Invig-Givin['] is too good to be true." [x]
 "[lrp] begin construing trouncings, but not anyone. Just abstractly." [x]
 "[lrp] both weep 'Machos? A schmo.'" [x]

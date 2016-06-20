@@ -2950,7 +2950,7 @@ before QBC responding with (this is the warn you before bailing from a convo rul
 			if the number understood is cur-act - 1:
 				say "'So rude!' says Gunter, roused, soured.";
 
-before quipping when player is in fro (this is the Gretta checks rule):
+before quipping when player is in  (this is the Gretta checks rule):
 	let missed-one be false;
 	if current quip is gre-go-quip:
 		if gre-go-warn is false:
@@ -4672,20 +4672,20 @@ to say auto-set:
 	say "[if yn-auto is 1]auto-yes[else if yn-auto is -1]auto-no[else]no auto[end if]";
 
 chapter basic consents
-	
+
 to decide whether the player test-consents:
 	if debug-state is true:
 		say "[line break]> ";
 	if the player consents:
 		decide yes;
 	decide no;
-		
+
 to decide whether the player yes-consents:
 	(- YesOrNoExt(1) -).
 
 to decide whether the player no-consents:
 	(- YesOrNoExt(0) -).
-	
+
 to decide whether the player switch-consents:
 	(- YesOrNoDebugForce( (+ debug-auto-yes +) ) -)
 
@@ -5773,10 +5773,10 @@ to decide which thing is otters-cur-item:
 			decide on b-b;
 		if Ed Riley is in Bleary Barley:
 			decide on Ed Riley;
-	if player is in fro:
-		if Macks are in fro:
+	if player is in frontage:
+		if Macks are in frontage:
 			decide on Gretta;
-		if atmo-moat is in fro and inhib is false:
+		if atmo-moat is in frontage and inhib is false:
 			decide on atmo-moat;
 	if player is in bran barn:
 		if ghoul hat is in bran barn:
@@ -5857,8 +5857,8 @@ carry out otters-hinting:
 		try objhinting otters-cur-item instead;
 	if player is in Bleary Barley: [if there is no item, see what to do next based on where we can go]
 		all-say "You made a way west. You're done here." instead;
-	else if player is in fro:
-		all-say "[if gretta is in fro]Gretta's advice may prove useful. [else]With Gretta gone, [end if]You're done here[if alcoves is unvisited], but you may want to try to go west[else if inhib is true], but you need to go north or south to regain your powers[end if].";
+	else if player is in frontage:
+		all-say "[if gretta is in frontage]Gretta's advice may prove useful. [else]With Gretta gone, [end if]You're done here[if alcoves is unvisited], but you may want to try to go west[else if inhib is true], but you need to go north or south to regain your powers[end if].";
 	else if player is in loop pool or player is in bran barn:
 		all-say "You recovered your powers, so there's nothing more to do here.";
 	else if player is in Anger Pit:
@@ -5867,7 +5867,7 @@ carry out otters-hinting:
 		all-say "The path south is cleared[if number of animals in preserve >= 3], and you've taken care of the preserve, so you can probably retreat[else][tho-work][end if].";
 	else if player is in wickeder wire deck or player is in perverse preserve:
 		if inhib is true:
-			all-say "You need to get your powers back before you do anything. Look around [if fro is visited]the frontage[else if ed riley is in barley]and try to get past Ed Riley[else]west of the barley[end if].";
+			all-say "You need to get your powers back before you do anything. Look around [if frontage is visited]the frontage[else if ed riley is in barley]and try to get past Ed Riley[else]west of the barley[end if].";
 		else:
 			if player is in perverse preserve:
 				all-say "You've re-summoned all the animals you need to[if number of pre-animal things in preserve is 1], though you can also try to fix the [random visible pre-animal thing][end if].";
@@ -6998,7 +6998,7 @@ before smelling (this is the you can smell some stuff some places rule):
 		say "[if player is in campsite]Also, t[else]T[end if]he salesmen smell of Rind-Ade, the energy drink for people with more boisterous professions. It's the red stuff." instead;
 	if deli rye is visible or noun is deli rye: [otters]
 		say "The deli rye smells good, but Ed won't share." instead;
-	if player is in fro:
+	if player is in frontage:
 		say "You can [if macks are visible]still [end if]smell the macks['] Cool-Gen Cologne, from that coy-hued bottle." instead;
 	if player is in alcoves:
 		say "A clove, likely from one alcove." instead;
@@ -8208,10 +8208,10 @@ Ed Yerg	Ed Yerg	"grey"	"grey"	"[yergy]"	false	368088866	"That might be cruel. Ed
 yurts	brownies	"rusty"	"rusty"	"The yurts grow tarnished and crumble. Behind them, you see and take some 'nutrition' as cheap as the yurts that held it: Owers[']-Bin Brownies! The snack of choice for people who prefer quantity over quality!"	true	512172846	"The yurts should be gone."
 pester'n serpent	pester'n serpent	"present"	"present"	"The serpent gradually relaxes, then slinks to where it's just there, but you can't see it. It's present but through pester'n."	false	690693472
 Curst Palace	Curst Palace	"spectacular"	"spectacular"	"That does it! The sky goes from unsightly to sunlighty. You hear lumber rumble--old stuff out, new stuff in--and watch the ground bristle and blister as the curst palace gleams, shines, turns from boney to ebony and radiates a godly day-glo. It is back to what it was and more! [what-about-ed]. You are treated to a great banquet in the castle hall before one of the local wizards offers you a chariot. Not just any one. A Raci-Hot, shaped like a haricot. As you're driven back to the Strip of Profits, you see so many things as they should be. The Bland Sad Badlands are already on their way back to being the Mild Sand Midlands. The towers crumble as you fly back through to the Trips Strip."	false	695286307	"spectacular"	Strip of Profits	[end TOWERS flip]
-b-b	b-b	"barely"	"barely"	"You alertly retally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the barley becomes ragin['] grain, seared, then erased. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. The barley to the east is still too thick but looks a bit different now, and cinders remain from all around."	false	409909726
 
 table of otters anagrams
 the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
+b-b	b-b	"barely"	"barely"	"You alertly retally the weakest figures of speech, what you've done so far--yes, an adverb can be braved. It seems each stalk talks as the barley becomes ragin['] grain, seared, then erased. After the big land balding, you see someone to the west who yells, 'You won't get past ED RILEY! I'm no YIELDER!'[paragraph break]You also carved out paths in the barley to the north and south. The barley to the east is still too thick but looks a bit different now, and cinders remain from all around."	false	409909726
 cinders	cinders	"rescind"	"rescind"	"You formally scatter the cinders all about. You will not use any luck or fate in this final stretch. It will hopefully mark a karma point saved for the next person to save Yorpwald. Which may or may not be you. You can't think that far ahead."	false	463338906
 Ed Riley	Ed Riley	"reedily"	"reedily"	"'WHAT ARE You...'[paragraph break]'What are you...'[paragraph break]'Hey, man!' he mouths words silently for a bit, his booming voice gone. 'Well--at least you didn't make me share my sandwich! That's...something!' he whines, as he slinks away in embarrassment."	false	583131047
 imp1	imp1	"angrily"	"angrily"	"The imp stops dancing about and starts hopping in place, saying 'You better not try and go by me!' You're bigger, so he's not very intimidating. He returns to his zigzagging, but he's kind of missing the edges, now."	false	410184768
@@ -10738,7 +10738,7 @@ to pad-rec-p (q - text):
 to decide whether need-line-break:
 	if player is in study and gunter is in study:
 		decide no;
-	if player is in fro and gretta is in fro:
+	if player is in frontage and gretta is in frontage:
 		decide no;
 	if player is in Basement and elmo is in Basement:
 		decide no;
@@ -14250,7 +14250,7 @@ Phat Path is a room in Presto. "This path cuts between two lethally beautiful ar
 
 check going south in phat path:
 	if hogs are in phat path:
-	say "The hogs snicker as you walk away.";
+		say "The hogs snicker as you walk away.";
 
 Mount Um-Not is scenery in Phat Path. understand "mount/um/not" as Mount Um-Not. "It's as huge and unwelcoming as Cupid's Cuspid isn't. You remember hearing Saps['] Pass, with all its pitfalls, cuts through it."
 
@@ -15365,9 +15365,9 @@ definition: a direction (called dir) is viable:
 		decide no;
 	if player is in plains and dir is inside and door-sux is false:
 		decide no;
-	if player is in fro and atmo-moat is in fro and dir is west:
+	if player is in frontage and atmo-moat is in frontage and dir is west:
 		decide no;
-	if player is in alcoves and merle is in fro and dir is west:
+	if player is in alcoves and merle is in frontage and dir is west:
 		decide no;
 	if player is in gates stage and player does not have passport and dir is north:
 		decide no;
@@ -20583,13 +20583,13 @@ carry out discerning:
 [	if ed riley is visible:
 		say "You discern Ed Riley could speak more reedily.";
 	else if player is in bran barn:
-		if macks are in fro:
+		if macks are in frontage:
 			say "You discern you don't really have Mr. Lee's trust. Maybe if you got rid of some obvious nastiness, like to the north, you could.";
 			now do-i-dis is false;
 		else:
 			say "You discern an argument [if ghoul hat is in bran barn]going although...however[else]finishing HOWEVER[end if].";
 	else if player is in loop pool and eels are visible:
-		if macks are in fro:
+		if macks are in frontage:
 			say "You discern you haven't really proved yourself in these parts. Maybe if you got rid of some obvious nastiness, like to the south, you could.";
 			now do-i-dis is false;
 		else:
@@ -20643,7 +20643,7 @@ carry out discerning:
 
 book coevals' alcoves
 
-Coevals' Alcoves is a room in otters. Alcoves is west of fro. "A monstery monastery. Laminas of mythical or extinct animals populate the walls here, along with a forces fresco. You can go back out to the east, or in to the west, if you dare."
+Coevals' Alcoves is a room in otters. Alcoves is west of frontage. "A monstery monastery. Laminas of mythical or extinct animals populate the walls here, along with a forces fresco. You can go back out to the east, or in to the west, if you dare."
 
 check going when player is in alcoves:
 	if noun is inside:
@@ -20934,9 +20934,11 @@ carry out whistleing:
 
 book Frontage
 
-fro is west of Bleary Barley. fro is part of otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. A raw-bulk bulwark is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in fro]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if inhib is false], not that you need to[end if]."
+frontage is west of Bleary Barley. frontage is part of otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. A raw-bulk bulwark is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in frontage]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if inhib is false], not that you need to[end if]."
 
-the atmo-moat is vanishing scenery in fro. understand "atmo/moat" and "atmo moat" as atmo-moat. "Nothing subtle, no bustle. It's not the bluest you've seen water--in fact, for a moat, it's really red."
+printed name of frontage is "[if Gretta is in frontage]Gent-Fora Frontage[else]Frat-Gone Frontage[end if]"
+
+the atmo-moat is vanishing scenery in frontage. understand "atmo/moat" and "atmo moat" as atmo-moat. "Nothing subtle, no bustle. It's not the bluest you've seen water--in fact, for a moat, it's really red."
 
 a-text of atmo-moat is "YRYR". b-text of atmo-moat is "??YR". parse-text of atmo-moat is "-[sp]x[sp]O[sp]M". atmo-moat is parse-spoilable.
 
@@ -20951,7 +20953,7 @@ instead of entering atmo-moat:
 	say "It's too gulfy. Things'd get fugly. You've no diver pod provided. Plus you might get poked by strident tridents."
 
 check fliptoing atmo-moat:
-	if macks are in fro:
+	if macks are in frontage:
 		say "That'd definitely tip the macks off to who you were, even if your powers were back.";
 		preef atmo-moat;
 		do nothing instead;
@@ -20960,22 +20962,17 @@ check fliptoing atmo-moat:
 		preef atmo-moat;
 		do nothing instead;
 
-after printing the locale description for fro when fro is unvisited:
+after printing the locale description for frontage when frontage is unvisited:
 	say "[line break]But whatever they call themselves, you know macks['] M.O. Jump from subject to subject, to seem 'exciting,' and capitalize on when people give the benefit of the doubt. Still, there's always a hole in their 'impressive' stories--and even if you realize it a few turns later, you can drain their perseverance."
 
-the raw bulk bulwark is a backdrop in fro. "It takes up a huge chunk of space to the west."
+the raw bulk bulwark is a backdrop in frontage. "It takes up a huge chunk of space to the west."
 
 instead of doing something with the raw bulk bulwark:
 	unless the action is procedural:
 		say "[if player is in alcoves or player is in Inclosure]Being inside the bulwark, you can't do much TO it[else]Not much to do with the bulwark but look at it and realize it must be protected for a reason[end if]." instead;
 	continue the action;
 
-fro is privately-named. printed name of fro is "[if Gretta is in fro]Gent-Fora Frontage[else]Frat-Gone Frontage[end if]"
-
-understand "frontage" as fro when fro is visited or debug-state is true.
-
-
-the sad elm is useless scenery in fro. description is "It was probably sad before the macks came along, but it's not really important."
+the sad elm is useless scenery in frontage. description is "It was probably sad before the macks came along, but it's not really important."
 
 instead of climbing sad elm:
 	if Gretta is visible:
@@ -20983,7 +20980,7 @@ instead of climbing sad elm:
 	else:
 		say "Yorpwald's still up a tree. Don't join it."
 
-the macks are plural-named flippable reflexive people in fro. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "Macks dressed all coy-hued are here, [if macked-out is 0]completely besieging[else if macked-out is 1]still trying to impress[else]desperately trying to captivate[end if] Gretta."
+the macks are plural-named flippable reflexive people in frontage. description is "'[if player is male]You can watch, but you won't LEARN[else]We're not trying to impress YOU. Geez[end if].' Their looks aren't so important--but they seem to be rotating through subjects quickly, and maybe you could catch them out on the right one. Given what you've done so far here, well, there'll be certain restrictions on what you can do--and that might actually help you narrow things down.". "Macks dressed all coy-hued are here, [if macked-out is 0]completely besieging[else if macked-out is 1]still trying to impress[else]desperately trying to captivate[end if] Gretta."
 
 understand "mack" as macks.
 
@@ -21000,7 +20997,7 @@ to say how-macked:
 	else if macked-out is 2:
 		say ", but they're wavering a bit. If you blow up their flow once more, you could probably get rid of them"
 
-Gretta Garett-Tatger is a female person in fro. "[bug-report]". description of Gretta is "She seems to be cringing at the pick-up lies, or the prospect she will let one work so she doesn't have to listen to them anymore."
+Gretta Garett-Tatger is a female person in frontage. "[bug-report]". description of Gretta is "She seems to be cringing at the pick-up lies, or the prospect she will let one work so she doesn't have to listen to them anymore."
 
 before doing something when Gretta is visible and macks are not visible:
 	if current action is examining:
@@ -21148,7 +21145,7 @@ check fliptoing a mack-idea (this is the NO ESP rule):
 
 after fliptoing a mack-idea:
 	if uber-rand-cheat is true:
-		if number of mack-ideas in fro is 0:
+		if number of mack-ideas in frontage is 0:
 			say "You're done!";
 			now macks are in lalaland;
 			try talking to Gretta;
@@ -21176,10 +21173,10 @@ after fliptoing a mack-idea:
 
 macked-out is a number that varies. macked-out is usually 0.
 
-check talking to Gretta when macks are in fro:
+check talking to Gretta when macks are in frontage:
 	say "The macks are monopolizing the conversation. They outnumber you." instead;
 
-check going in fro when Gretta is visible:
+check going in frontage when Gretta is visible:
 	if noun is north or noun is south or noun is east:
 		say "[cree-pee].";
 
@@ -21189,10 +21186,10 @@ to say cree-pee:
 check taking atmo-moat:
 	say "Way too big." instead;
 
-check going west in fro:
-	if macks are in fro:
+check going west in frontage:
+	if macks are in frontage:
 		say "One of the macks stops you from tripping the atmo-moat, and he tries to convince Gretta he's a great guy for saving you. The others yell at him for trying to play hero too obviously." instead;
-	if atmo-moat is in fro:
+	if atmo-moat is in frontage:
 		say "The moat just--scares you. It's too red, and when you recognize it as an atmo-moat, it turns blue, but it's still scary." instead;
 	if Gretta is visible:
 		say "[cree-pee]." instead;
@@ -21213,7 +21210,7 @@ to place-a-mack (x1 - a number) and (x2 - a number):
 			if one-yet is true:
 				say "Oops [XX] is a duplicate.";
 			else:
-				now XX is in fro;
+				now XX is in frontage;
 				now one-yet is true;
 	if one-yet is false:
 		say "Oops [x1] pod [x2] ord had no mack idea.";
@@ -21230,14 +21227,14 @@ when play begins (this is the mack-randomize rule):
 	now cur-pod-num is 0;
 
 definition: a mack-idea (called mm) is unprioritized:
-	if mack-prio of mm is 0 and mm is in fro:
+	if mack-prio of mm is 0 and mm is in frontage:
 		decide yes;
 	decide no;
 
 to assign-mack-priority:
 	repeat with B running through mack-ideas:
 		now mack-prio of B is 0;
-	let C be number of mack-ideas in fro; [should be 7, but yeah]
+	let C be number of mack-ideas in frontage; [should be 7, but yeah]
 	repeat with B running from 1 to C:
 		let thismack be a random unprioritized mack-idea;
 		now mack-prio of thismack is B;
@@ -21327,13 +21324,13 @@ to decide whether (n - a number) is unworkable:
 
 this is the find-mack-idea rule:
 	repeat with Q running through mack-ideas:
-		if Q is in fro and mack-prio of Q is cur-mack-blab:
+		if Q is in frontage and mack-prio of Q is cur-mack-blab:
 			now current-idea is Q;
 			the rule succeeds;
 	the rule fails;
 
-every turn when player is in fro and macks are in fro (this is the macks hitting on rule):
-	repeat with Q running through mack-ideas in fro:
+every turn when player is in frontage and macks are in frontage (this is the macks hitting on rule):
+	repeat with Q running through mack-ideas in frontage:
 		if debug-state is true:
 			say "DEBUG NOTES: [q]: [mack-prio of q].";
 	let loop be false;
@@ -21362,7 +21359,7 @@ book side passages
 
 chapter Bran Barn
 
-Bran Barn is an innie room in otters. Bran Barn is south of fro. "This is a bran barn, empty of grain right now, and it'll probably stay that way[if p-2 is in bran barn]. A painting covers a good chunk of the interior here[end if]. You can go back north."
+Bran Barn is an innie room in otters. Bran Barn is south of frontage. "This is a bran barn, empty of grain right now, and it'll probably stay that way[if p-2 is in bran barn]. A painting covers a good chunk of the interior here[end if]. You can go back north."
 
 Mr Lee is a person in Bran Barn. description is "He is one of those people you see nothing and everything special about at the same time[if alcoves is visited]. A less evil version of Merle and Elmer combined[end if].". "Mr. Lee stands here, undescribed."
 
@@ -21414,7 +21411,7 @@ check fliptoing p-2:
 
 chapter loop pool
 
-Loop Pool is a room in otters. Loop Pool is north of fro. "A pool encases a small island. The atmo-moat around the island babbles[if le mer is visible] pretentiously, [i]'Je suis le mer!'[r][else].[end if] You can go back south."
+Loop Pool is a room in otters. Loop Pool is north of frontage. "A pool encases a small island. The atmo-moat around the island babbles[if le mer is visible] pretentiously, [i]'Je suis le mer!'[r][else].[end if] You can go back south."
 
 after choosing notable locale objects when player is in loop pool:
 	set the locale priority of Le Mer to 0;
@@ -23530,7 +23527,7 @@ to say this-inform:
 		now owl decal code wall is perused;
 	choose row inform-row in table of informcode;
 	say "[thiscode entry]";
-	
+
 after examining owl decal code wall:
 	if inform-row is number of rows in table of informcode:
 		say-thru;
@@ -24050,7 +24047,7 @@ definition: a thing (called hintcand) is hintrelevant:
 			decide yes;
 		decide no;
 	if hintcand is bulwark:
-		if mrlp is otters and fro is visited:
+		if mrlp is otters and frontage is visited:
 			decide yes;
 		decide no;
 	if hintcand is leak lake or hintcand is shoals aslosh:
@@ -24372,16 +24369,20 @@ Ed Yerg	"Now Ed's not greedy, [if flowerpot is in lalaland]and you gave him a gi
 b-b	"You've cut it down enough. Leave some for next year's crop." [start OTTERS]
 medals	"The medals are in good enough shape. They will help you speed up when you need to."
 Merle	"You can't take on Merle and Elmer by yourself--you need some allies."
-ocelots	"[this-animal]"
-leopard	"[this-animal]"
-badger	"[this-animal]"
-satyr	"[this-animal]" [end OTTERS]
+racoon	"[this-animal]."
+snail	"[this-animal]."
+snipe	"[this-animal]."
+hornets	"[this-animal]."
+ocelots	"[this-animal]."
+leopard	"[this-animal]."
+badger	"[this-animal]."
+satyr	"[this-animal]." [end OTTERS]
 
 to say other-let:
 	say "Try either of the other letters. With variety, Leo and Rand will take the hint"
 
 to say this-animal:
-	say "You've got a useful ally. They'll be ready when the time comes"
+	say "You've got a useful ally. They'll be ready just as they are when the time comes"
 
 to say by-rivets:
 	say "You've been inspired enough by the statue[if prai is reflexed and rivets are reflexed], more than enough, in fact[else], though you could still get a bit more inspiration[end if]"
@@ -25910,7 +25911,7 @@ understand "ang" as anging.
 
 carry out anging:
 	now macked-out is 2;
-	move player to fro;
+	move player to frontage;
 	say "==CHEATING TO DEFEAT MACKS";
 	try fliptoing a random visible mack-idea;
 	the rule succeeds;
@@ -27132,7 +27133,7 @@ carry out ploping:
 	if uber-rand-cheat is true:
 		say "You already dumped everyone in the Trefoil and Frontage.";
 		the rule succeeds;
-	if trefoil is visited and fro is visited:
+	if trefoil is visited and frontage is visited:
 		say "You already went to the Trefoil and Frontage, so I'm going to make you restart, because reasons. It might break too much.";
 		the rule succeeds;
 	if trefoil is visited:
@@ -27144,7 +27145,7 @@ carry out ploping:
 	if macked-out > 0:
 		say "Skipping the Frontage as you've already messed with the macks a bit.";
 	else:
-		now all mack-ideas are in fro;
+		now all mack-ideas are in frontage;
 		say "Dumping every mack idea in the Frontage.";
 		say "a5, in, barely, reedily, w for otters.";
 	now uber-rand-cheat is true;
@@ -27155,9 +27156,9 @@ after fliptoing when uber-rand-cheat is true:
 	consider the uber-otters rule;
 	continue the action;
 
-every turn when player is in fro and macks are in fro and uber-rand-cheat is true (this is the uber-otters rule):
+every turn when player is in frontage and macks are in frontage and uber-rand-cheat is true (this is the uber-otters rule):
 	say "Adverbs available:";
-	repeat with Q running through mack-ideas in fro:
+	repeat with Q running through mack-ideas in frontage:
 		choose row with the-from of Q in table of otters anagrams;
 		say " [right-word entry in upper case]";
 	say ".";
@@ -27214,9 +27215,9 @@ to place-idea (myp - a number) and (myi - a number):
 		now myi2 is max-pod;
 	repeat with Q running through mack-ideas:
 		if pod-num of Q is myp and pod-ord of Q is myi2:
-			if Q is in fro:
+			if Q is in frontage:
 				say "Oops, placed [Q] twice. [myp] [myi2].";
-			now Q is in fro;
+			now Q is in frontage;
 			say "[Q] to frontage.";
 			the rule succeeds;
 	say "BUG: didn't get anything for pod [myp] index [myi2].";
@@ -27231,8 +27232,8 @@ carry out seeding:
 	if act-index < 1:
 		say "Need a positive act index.";
 		the rule fails;
-	if trefoil is visited: [first, seed the start of TOWERS]
-		say "Skipping Trefoil seeding as you've already been there. Restart if you wish to re-seed.";
+	if trefoil is visited and number of warriors in lalaland > 0: [first, seed the start of TOWERS]
+		say "Skipping Trefoil seeding as you've already disposed of one warrior. Restart if you wish to re-seed.";
 	else:
 		if act-index > 5:
 			say "Decreasing index to 5 for the Trefoil.";
@@ -27241,8 +27242,8 @@ carry out seeding:
 		repeat with J running from 1 to 7:
 			place-warrior J and act-index;
 	let act-index be the number understood;
-	if fro is visited: [next, seed the macks in OTTERS]
-		say "Skipping Frontage seeding as you've already been there. Restart if you wish to re-seed.";
+	if frontage is visited and macked-out > 0: [next, seed the macks in OTTERS]
+		say "Skipping Frontage seeding because you already started wiping the macks out.";
 	else:
 		now all mack-ideas are off-stage;
 		now act-index is number understood;

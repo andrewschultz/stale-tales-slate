@@ -61,7 +61,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "plate"	368383743	--	plates	--	"You have no idea which plate to focus on, so maybe you should focus on the plates."
 "tapler"	453707546	--	plaster	--	"What you need is singular, but you sense it's all the plaster that matters."
 "plaster"	549981512	--	stapler	--	"The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again."
-"abstract"	429617931	--	painting	--	"That is probably overthinking the painting's abstract-ness. It's really just good for examining."
+"abstract"	429617931	--	painting	--	"That is probably overthinking the painting's abstract-ness. It's really just good for examining and offsetting the bookcase."
 "ten beams"	608585586	--	--	basement-visible rule	"You probably just want to go DOWN to the basement."
 "chimney"	484428752	--	--	chimney-visible rule	"You probably just want to go UP the chimney."
 "stable"	401610655	--	--	stable-visible rule	"You probably just want to go IN to the stable."
@@ -380,7 +380,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "trim"	297501820	--	trim socks	--	"[trimsox]."
 "sock"	242565306	--	trim socks	--	"[trimsox]."
 "socks"	338839272	--	trim socks	--	"[trimsox]."
-"trimsock"	540067126	--	trimsock	--	"[romstix]."
+"trimsock"	540067126	--	trim socks	--	"[romstix]."
 "sticks"	412589559	--	rom sticks	--	"[romstix]."
 "rom"	223751533	--	rom sticks	--	"[romstix]."
 "stick"	316315593	--	rom sticks	--	"[romstix]."
@@ -769,32 +769,32 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bare"	233736635	--	b-b	--	"[adj-needs-ly]?"
 "cinder"	367064940	--	cinders	--	"You'll need to change more than one cinder."
 "bulwark"	425718123	--	bulwark	--	"The whole bulwark? No, you [if inhib is true]couldn't do much with it at full strength[else]can't do much[end if]. [if Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if inhib is true] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to, well, a bulwark."
-"bossy"	407678666	--	t-bossily	--	"[adj-needs-ly]?"
+"bossy"	407678666	--	t-bossily	--	"[adj-needs-li]?"
 "bossi"	330312260	--	t-bossily	--	"[adj-needs-ly]?"
 "nasti"	315472156	--	t-seedily	--	"[adj-needs-ly]?"
-"nasty"	392838562	--	t-seedily	--	"[adj-needs-ly]?"
+"nasty"	392838562	--	t-seedily	--	"[adj-needs-li]?"
 "seedi"	417908119	--	t-seedily	--	"[adj-needs-ly]?"
-"seedy"	495274525	--	t-seedily	--	"[adj-needs-ly]?"
+"seedy"	495274525	--	t-seedily	--	"[adj-needs-li]?"
 "shadi"	201766018	--	t-shadily	--	"[adj-needs-ly]?"
-"shady"	279132424	--	t-shadily	--	"[adj-needs-ly]?"
+"shady"	279132424	--	t-shadily	--	"[adj-needs-li]?"
 "snide"	359009518	--	t-snidely	--	"[adj-needs-ly]?"
 "stark"	339828783	--	t-starkly	--	"[adj-needs-ly]?"
 "tacit"	272406285	--	t-cattily	--	"[adj-needs-ly]?"
 "teari"	363420594	--	t-tearily-irately	--	"[adj-needs-ly]?"
-"teary"	440787000	--	t-tearily-irately	--	"[adj-needs-ly]?"
-"bleary"	409909726	--	t-blearily	--	"[adj-needs-ly]?"
+"teary"	440787000	--	t-tearily-irately	--	"[adj-needs-li]?"
+"bleary"	409909726	--	t-blearily	--	"[adj-needs-li]?"
 "bleari"	332543320	--	t-blearily	--	"[adj-needs-ly]?"
 "ribald"	225766300	--	t-ribaldly	--	"[adj-needs-ly]?"
 "formal"	306268086	--	t-formally	--	"[adj-needs-ly]?"
 "coital"	297462683	--	t-coitally	--	"[adj-needs-ly]?"
 "modest"	486646912	--	t-modestly	--	"[adj-needs-ly]?"
 "shabbi"	217574739	--	t-shabbily	--	"[adj-needs-ly]?"
-"shabby"	294941145	--	t-shabbily	--	"[adj-needs-ly]?"
+"shabby"	294941145	--	t-shabbily	--	"[adj-needs-li]?"
 "shoddi"	294959866	--	t-shoddily	--	"[adj-needs-ly]?"
-"shoddy"	372326272	--	t-shoddily	--	"[adj-needs-ly]?"
+"shoddy"	372326272	--	t-shoddily	--	"[adj-needs-li]?"
 "silent"	494904286	--	t-silently	--	"[adj-needs-ly]?"
 "steami"	438445910	--	t-steamily	--	"[adj-needs-ly]?"
-"steamy"	515812316	--	t-steamily	--	"[adj-needs-ly]?"
+"steamy"	515812316	--	t-steamily	--	"[adj-needs-li]?"
 "sudden"	440151568	--	t-suddenly	--	"[adj-needs-ly]?"
 "stupid"	451977685	--	t-stupidly	--	"[adj-needs-ly]?"
 "martial"	355691295	--	t-martially	--	"[adj-needs-ly]?"
@@ -805,17 +805,13 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "drawling"	416789378	--	t-drawlingly	--	"[adj-needs-ly]?"
 "emotional"	613598445	--	t-emotionally	--	"[adj-needs-ly]?"
 "despairing"	605579646	--	t-despairingly	--	"[adj-needs-ly]?"
-"corona"	324129868	--	racoon	--	"[poor-animal]."
-"nails"	266175977	--	snail	--	"[poor-animal]."
-"thrones"	593056280	--	hornets	--	"[poor-animal]."
-"pines"	419446388	--	snipe	--	"[poor-animal]."
 "tail"	204104521	--	a-l-t	--	"It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it."
 "steward"	543665576	--	Ed Riley	--	"Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?"
 "rye"	335489164	--	deli rye	--	"[del-ry]."
 "lied"	247641883	--	deli rye	--	"[del-ry]."
 "sandwich"	397613884	--	deli rye	--	"[del-ry]."
 "edriley"	583131047	--	Ed Riley	--	"If only Ed Riley said things less loudly, boomingly, startlingly..."
-"simply"	462981015	--	sly imp	--	"He's acting simply, but he can't be gotten rid of that simply. At least, nothing happens when you try. Maybe you need to consider more specific ways he's moving."
+"simply"	462981015	--	sly imp	--	"It's acting simply, but he can't be gotten rid of that simply. At least, nothing happens when you try. Maybe you need to consider more specific ways he's moving."
 "sly"	272447057	--	sly imp	--	"[imp-sly]."
 "imp"	190533958	--	sly imp	--	"[imp-sly]."
 "whiner"	472247338	anteroom	--	--	"[whiney]."
@@ -825,18 +821,18 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "angri"	234011677	--	imp2	--	"[add-ly]."
 "enraged"	465660138	--	imp3	--	"[add-ly]."
 "loathing"	417246607	--	ram1	--	"[add-ly]."
-"stoic"	337734992	--	ram2	--	"[add-ly]."
+"stoic"	337734992	--	ram2	--	"Usually, you'd need to add two letters, but here you'd need to add four."
 "stoical"	393736649	--	ram2	--	"[add-ly]."
-"terse"	540320005	--	ram2	--	"[add-ly]."
+"terse"	540320005	--	ram3	--	"[add-ly]."
 "mack"	138201734	--	macks	--	"If you messed with one mack, the others would gang up on you. Work on the argument, instead."
 "macks"	234475700	--	macks	--	"Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying[if macked-out > 0] some more[end if]."
 "gretta"	454137468	--	Gretta	--	"Gretta's been manipulated enough[if macks are visible]. Deal with the macks['] arguments, instead[end if]."
-"frontage"	520802431	fro	--	--	"[locname-part]."
-"gent"	332423337	fro	--	--	"[locname-part]."
-"fora"	188379094	fro	--	--	"[locname-part]."
-"frat"	217136535	fro	--	--	"[locname-part]."
-"gone"	303665896	fro	--	--	"[locname-part]."
-"gents"	428697303	fro	--	--	"They aren't (spiritually) gents, and you can't change them but their arguments."
+"frontage"	520802431	frontage	--	--	"[locname]."
+"gent"	332423337	--	--	frontage-before rule	"[locname-part]."
+"fora"	188379094	--	--	frontage-before rule	"[locname-part]."
+"frat"	217136535	--	--	frontage-after rule	"[locname-part]."
+"gone"	303665896	--	--	frontage-after rule	"[locname-part]."
+"gents"	428697303	--	macks	--	"They aren't (spiritually) gents, and you can't change them but their arguments."
 "iq"	129398463	--	medals	--	"[both-medals]."
 "lucky"	353217661	--	medals	--	"[both-medals]."
 "island"	287205066	loop pool	--	--	"Even if you could change it, the way across the loop pool is too treacherous."
@@ -900,8 +896,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "anteroom"	600115563	Anteroom	--	--	"[locname]."
 "rote"	390592507	Anteroom	--	callos-here rule	"[locname-part]."
 "moan"	209523056	Anteroom	--	callos-here rule	"[locname-part]."
-"near"	284225238	Anteroom	--	--	"[locname-part]."
-"moot"	315890325	Anteroom	--	--	"[locname-part]."
+"near"	284225238	Anteroom	--	callos-gone rule	"[locname-part]."
+"moot"	315890325	Anteroom	--	callos-gone rule	"[locname-part]."
 "preserve"	838970678	perverse preserve	--	--	"[locname]."
 "otter"	493702525	--	--	degen-true rule	"[not-the-reg]."
 "storet"	589976491	--	--	degen-true rule	"[not-the-reg]."
@@ -1775,8 +1771,8 @@ this is the cppc rule:
 to say adj-needs-ly:
 	say "Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh"
 
-to say poor-animal:
-	say "You don't need to snap the poor animal back to...whatever, wherever it was before"
+to say adj-needs-li:
+	say "Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here"
 
 to say del-ry:
 	say "The sandwich isn't just deli, or rye, or a sandwich. It's deli rye"
@@ -1788,7 +1784,17 @@ to say whiney:
 	say "You can't change who whiners are, but maybe you can make them whine [if ram3 is in lalaland or ram2 is in lalaland or ram1 is in lalaland]even [end if]less...whiningly"
 
 to say add-ly:
-	say "No, you need a couple more letters... [if inhib is true]even with your powers back, that seems to work[else]a couple to make a word weak enough to control[end if]"
+	say "No, you need a couple more letters... [if inhib is false]even with your powers back, that seems to work[else]a couple to make a word weak enough to control[end if]"
+
+this is the frontage-after rule:
+	if player is in frontage and macks are in lalaland:
+		the rule succeeds;
+	the rule fails;
+
+this is the frontage-before rule:
+	if player is in frontage and macks are in frontage:
+		the rule succeeds;
+	the rule fails;
 
 to say both-medals:
 	say "No, it's a combination of what's on both medals."
@@ -1853,6 +1859,12 @@ this is the imp-here rule:
 this is the callos-here rule:
 	if player is in anteroom:
 		if whiners are in anteroom:
+			the rule succeeds;
+	the rule fails;
+
+this is the callos-gone rule:
+	if player is in anteroom:
+		if whiners are not in anteroom:
 			the rule succeeds;
 	the rule fails;
 
