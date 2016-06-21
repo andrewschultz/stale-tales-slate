@@ -805,6 +805,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "drawling"	416789378	--	t-drawlingly	--	"[adj-needs-ly]?"
 "emotional"	613598445	--	t-emotionally	--	"[adj-needs-ly]?"
 "despairing"	605579646	--	t-despairingly	--	"[adj-needs-ly]?"
+"lit"	201916703	--	a-l-t	--	"It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it."
 "tail"	204104521	--	a-l-t	--	"It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it."
 "steward"	543665576	--	Ed Riley	--	"Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?"
 "rye"	335489164	--	deli rye	--	"[del-ry]."
@@ -847,11 +848,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "monstery"	742208386	alcoves	--	--	"[w-change]."
 "monastery"	744396204	alcoves	--	--	"[w-change]."
 "eelmr"	458825013	--	--	eelmr rule	"[eelmry]."
-"sober"	402175360	--	sober robes	--	"If you did play a prank on Elmer and Merle, they might guess who you were and take you down."
+"sober"	402175360	--	sober robes	--	"If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down."
 "low"	236101189	--	owls	--	"You probably want the owls not to swoop low. And you'll want to take care of them all."
 "clipons"	438812280	--	slopinc	--	"The ocelots would still be awkward even if they lost the clip-ons."
 "kool"	255452171	--	look-kool	--	"You're not here to mess with fashion."
-"shades"	380853247	--	look-kool	--	"You're not here to mess with fashion. Plus, the shades were last game."
+"shades"	380853247	wire deck	--	--	"You're not here to mess with fashion. Plus, the shades were last game."
 "laminas"	332438948	alcoves	--	--	"[no-lam]."
 "lamina"	236164982	alcoves	--	--	"[no-lam]."
 "forces"	429276936	alcoves	--	--	"[fresc]."
@@ -870,12 +871,13 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "roarings"	489962023	inclosure	--	--	"[Inclosure-scen]."
 "roaring"	393688057	inclosure	--	--	"[Inclosure-scen]."
 "nacht"	230493228	Inclosure	--	--	"It's annoying and unswayable, like most chants."
-"stocked"	494510522	Inclosure	--	--	"You can't release any prisoners from the stockade THAT easily. You'd need an army."
+"stocked"	494510522	Inclosure	--	--	"[no-stockade]."
 "vats"	308736622	Inclosure	--	--	"[Inclosure-scen]."
 "vat"	212462656	Inclosure	--	--	"[Inclosure-scen]."
+"moisture"	701040279	Inclosure	--	--	"[Inclosure-scen]."
 "pyre"	416955123	Inclosure	--	--	"[Inclosure-scen]."
-"stockade"	496698340	Inclosure	--	--	"[Inclosure-scen]."
-"warship"	455461464	Inclosure	--	--	"[Inclosure-scen]."
+"stockade"	496698340	Inclosure	--	--	"[no-stockade]."
+"warship"	455461464	Inclosure	--	--	"[elv-mach]."
 "amulet"	456098744	Inclosure	--	--	"[one-toy]."
 "ultimate"	604201608	Inclosure	--	--	"[one-toy]."
 "shaper"	430339954	Inclosure	--	--	"[one-toy]."
@@ -891,8 +893,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "tapering"	546393763	Tapering Anger Pit	--	--	"[locname]."
 "anger"	316824940	Tapering Anger Pit	--	imp-here rule	"[locname-part]."
 "pit"	229568823	Tapering Anger Pit	--	imp-here rule	"[locname-part]."
-"inert"	430140284	Tapering Anger Pit	--	--	"[locname-part]."
-"gap"	116253479	Tapering Anger Pit	--	--	"[locname-part]."
+"inert"	430140284	Tapering Anger Pit	--	imp-gone rule	"[locname-part]."
+"gap"	116253479	Tapering Anger Pit	--	imp-gone rule	"[locname-part]."
 "anteroom"	600115563	Anteroom	--	--	"[locname]."
 "rote"	390592507	Anteroom	--	callos-here rule	"[locname-part]."
 "moan"	209523056	Anteroom	--	callos-here rule	"[locname-part]."
@@ -1842,6 +1844,9 @@ this is the hydra-know rule:
 		the rule succeeds;
 	the rule fails.
 
+to say no-stockade:
+	say "You can't release any prisoners from the stockade THAT easily. You'd need an army"
+
 to say Inclosure-scen:
 	say "You can't just muck around with one part of Elvira's army. You need a way to find allies"
 
@@ -1853,6 +1858,11 @@ to say elv-mach:
 
 this is the imp-here rule:
 	if player is in Tapering Anger Pit and imp is in Tapering Anger Pit:
+		the rule succeeds;
+	the rule fails;
+
+this is the imp-gone rule:
+	if player is in Tapering Anger Pit and imp is not in Tapering Anger Pit:
 		the rule succeeds;
 	the rule fails;
 

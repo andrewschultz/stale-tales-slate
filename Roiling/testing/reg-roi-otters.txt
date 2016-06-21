@@ -268,6 +268,19 @@ The barley rustles in an imaginary wind--but hardly at all.
 
 >barely
 
+>edriley
+If only Ed Riley said things less loudly, boomingly, startlingly...
+
+>ettro
+DEBUG INFO: The hash of the command is 493702525. Hash of word 1 is 493702525.
+
+Trying to change the current region you're in would be risky, or useless, or maybe both.
+
+>ettros
+DEBUG INFO: The hash of the command is 589976491. Hash of word 1 is 589976491.
+
+Trying to change the current region you're in would be risky, or useless, or maybe both.
+
 >cinder
 You'll need to change more than one cinder.
 
@@ -281,6 +294,16 @@ Tapering Anger Pit
 This north-south passage is frustratingly blocked.
 
 A sly imp simply zooms about rangily guarding the way north, with a butlery air, showing legendary patience that allows vaster averts.
+
+>taperign
+You don't need to riff on any location names to win the game
+>angre
+You don't need to riff on part of
+>pti
+WRONG put in a mistake
+
+>tpi
+You don't need to riff on part of
 
 >brute
 No, you need a couple more letters... a couple
@@ -347,6 +370,21 @@ The sly imp lets out a curse. He's completely failed to keep his cool. He leaves
 >l
 Tapering Inert Gap
 
+>inetr
+You don't need to riff on part
+
+>anger
+!You don't need
+>pit
+!You don't need
+
+>gpa
+WRONG
+>pga
+WRONG
+>pag
+You don't need to riff on part
+
 >n
  You run from a bunch of owls before they can carve at you
 
@@ -357,6 +395,12 @@ Those owls are too much for you, with your powers drained.
 Cinders lie here
 
 Ed Riley acts as a steward here to keep you eastward. He is carrying an ER, YIELD sign and a loaf of deli rye.
+
+>steward
+Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?
+
+>asteward
+Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?
 
 >take sign
 "I am not an item yielder!" Ed Riley booms.
@@ -454,11 +498,23 @@ It looks delicious enough for Ed not to share with you.
 >reediyl
 Ed Riley looks askance at his deli rye, as if it had some bad aftertaste.
 
+>deli
+The sandwich isn't just deli, or rye, or a sandwich. It's deli rye
+>yer
+Yup! It's Ed's!
+>rey
+The sandwich isn't just deli, or rye, or a sandwich. It's deli rye
+>snadwich
+The sandwich isn't just deli, or rye, or a sandwich. It's deli rye
+
 >reedily
 "Hey, man!" he mouths words silently for a bit, his booming voice gone. "Well--at least you didn't make me share my sandwich! That's...something!" he whines, as he slinks away in embarrassment.
 
 >w
 Gent-Fora Frontage
+
+>bulwark
+The whole bulwark? No, you couldn't do much with it at full strength
 
 >despairingly
 The macks become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the macks.
@@ -495,6 +551,11 @@ If you messed with one mack, the others would gang up on you. Work on the argume
 Modesty is a good thing--well, in the long term. In the short term, the macks' backtracking is too brazen, and it ruins any hope of impressing anyone with false humility or braggadocio.
 
 >1
+
+#might not be able to do this while conversing
+>gretat
+Gretta's been manipulated
+
 >1
 >1
 >1
@@ -516,6 +577,11 @@ It's what the medals say that makes them special.
 You should never need to riff on part of a location name
 >gone
 You should never need to riff on part of a location name
+
+>qi
+No, it's a combination of what's on both medals.
+>ulcky
+No, it's a combination of what's on both medals.
 
 >moat
 Hm, that's not it, but it must be elemental. No, elementary.
@@ -542,7 +608,13 @@ As they sulk away from the anteroom, they whimper about that bum Ed Riley who go
 
 >n
 >w
-n
+>n
+Loop Pool
+
+>eelmr
+
+>ploo
+You don't need to riff on any location names to win the game
 
 >becuase
 The sea cube shakes a bit.
@@ -550,6 +622,9 @@ The sea cube shakes a bit.
 The sea cube is unmoved. You may need to concentrate on the whole thing.
 >ubec
 The sea cube is unmoved. You may need to concentrate on the whole thing.
+
+>ilsand
+Even if you could change it, the way across the loop pool is too treacherous.
 
 >because
 >eles
@@ -575,9 +650,17 @@ The eels swim a bit faster.
 >undo
 Frontage
 
+>gretat
+Deal with the macks, fist
+
 >s
 Bran Barn
 
+>eelmr
+WRONG
+
+>brna
+You don't need to riff on any location names to win the game
 
 >althouhg
 Mr. Lee shakes his head and adjusts the ghoul hat.
@@ -605,6 +688,65 @@ You feel strong enough to tackle the moat, now, and maybe even the owls and loud
 >atom
 You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom.
 
+>bulwark
+The whole bulwark? No, you couldn't do much with it at full strength. Maybe you can surprise Elvira in there
+
+>w
+Coevals['] Alcoves
+
+>ahdry
+DEBUG INFO: The hash of the command is 268182261. Hash of word 1 is 268182261.
+
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+
+>w
+Stricter critters restrict--wait, no, that's a hardy hydra with an HD-Ray. Er, dang. Danger. Your friend the parrot gives a helpful AWWWK as you run out of sight.
+
+>ahdry
+You try, but that doesn't do anything with, or to, the hydra to the west.
+
+>laminas
+DEBUG INFO: The hash of the command is 332438948. Hash of word 1 is 332438948.
+
+You can't change them, and even if you could, Elvira would probably be alerted.
+
+>lamina
+DEBUG INFO: The hash of the command is 236164982. Hash of word 1 is 236164982.
+
+You can't change them, and even if you could, Elvira would probably be alerted.
+
+>forces
+DEBUG INFO: The hash of the command is 429276936. Hash of word 1 is 429276936.
+
+Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second.
+
+>orfec
+DEBUG INFO: The hash of the command is 333002970. Hash of word 1 is 333002970.
+
+Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second.
+
+>
+>eelmr
+You can't change Merle and Elmer, but maybe you could find a way to get rid of them
+
+>x elmer
+
+>rebod
+If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down.
+>rebo
+If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down.
+>scowl
+If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down.
+>cowl
+If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down.
+>sbero
+If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down.
+
+>elcavos
+You don't need to riff on any location names to win the game
+>elcavo
+You don't need to riff on any location names to win the game
+
 >hylontes
 Merle and Elmer look askance at each other for a bit.
 
@@ -613,6 +755,16 @@ You can't change Merle and Elmer, but maybe you could find a way to get rid of t
 
 >honestly
 You entrench an enchanter with a well-timed "Honestly?" They throw out anti lying litanying but you're all "Few LOLs, fellows." It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change.
+
+>hylontes
+WRONG
+
+>undo
+
+>monsteyr
+You can't change the alcoves. It's what's to the west that needs changing
+>monsteyra
+You can't change the alcoves. It's what's to the west that needs changing
 
 >w
 Warning message
@@ -626,14 +778,69 @@ The medals look less than perfect. Maybe you can find someone, or something, to 
 
 >n
 >n
+Wickeder Wire Deck
+
+>low
+You probably want the owls not to swoop low. And you'll want to take care of them all.
+>swol
+WRONG
+>slow
+
+>wickedre
+You don't need to riff on any location names to win the game
+>wier
+You don't need to riff on part of
+>dekc
+You don't need to riff on part of
+
 >garbed
 by one point
 The LUCKY medal
 >garbed
 You've got a useful ally. They'll be ready just as they are when the time comes
+
+>cliposn
+The ocelots would still be awkward even if they lost the clip-ons.
+>okol
+!You're not here to mess with fashion.
+>shades
+You're not here to mess with fashion. Plus, the shades were last game.
+
+>ocelot
+The ocelots are hanging too close together for you to pick off one.
+
 >coolest
 by one point
 !The LUCKY medal
+
+>cliposn
+!The ocelots would still be awkward even if they lost the clip-ons.
+>okol
+You're not here to mess with fashion.
+>shades
+You're not here to mess with fashion. Plus, the shades were last game.
+
+>parlode
+DEBUG INFO: The hash of the command is 445979194. Hash of word 1 is 445979194.
+
+The leopard almost seems to un-cuff its hands.
+
+>atsry
+DEBUG INFO: The hash of the command is 409254857. Hash of word 1 is 409254857.
+
+The satyr puts a hand on its chin as if pondering music.
+
+>badgre
+DEBUG INFO: The hash of the command is 287365426. Hash of word 1 is 287365426.
+
+The badger flexes imaginary suit lapels, then quickly goes back to brooding.
+
+>eclosto
+The ocelots squint at you through their clip-ons.
+
+>ocelot
+The ocelots are hanging too close together for you to pick off one and make him less cool.
+
 >coolest
 You've got a useful ally. They'll be ready just as they are when the time comes
 >artsy
@@ -651,7 +858,172 @@ You've got a useful ally. They'll be ready just as they are when the time comes
 >s
 >s
 >s
+Perverse Preserve
 !nails
+
 >raptor
 The raptor recoils slightly.
 >parrot
+
+>perverse
+You don't need to riff on any location names to win the game
+
+>nail
+So many nails, hard to pick one. Might as well take care of them all.
+>pine
+So many pines, hard to pick one. Might as well take care of them all.
+
+>raccono
+The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important
+>racoon
+>racono
+You've got a useful ally. They'll be ready just as they are when the time comes
+>raccono
+The rac(c)oon's fine as it is, with one C or two
+
+>alit
+It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it.
+>ilt
+It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it.
+
+>espin
+The pines rustle as if an animal climbed through them.
+>snipe
+>snipe
+You've got a useful ally. They'll be ready just as they are when the time comes
+
+>herton
+There's more than one throne, but it doesn't matter, really, for what you need to do.
+>hornet
+by one point
+>hornets
+by one point
+>hornest
+You've got a useful ally. They'll be ready just as they are when the time comes
+
+>snlia
+One of the nails
+>snlia
+Another one of the nails
+>nails
+by one point
+
+>n
+>n
+>w
+>raptor
+
+>w
+Your medals clink
+NOTE WARNING IF TRIED QUICKLY
+
+>undo
+>quickly
+>w
+Reclusion Inclosure
+>7
+
+>ahdry
+DEBUG INFO: The hash of the command is 268182261. Hash of word 1 is 268182261.
+
+The hydra's toast. Elvira is not. Deal with her.
+
+>creno
+DEBUG INFO: The hash of the command is 375395582. Hash of word 1 is 375395582.
+
+You can't do much with Elvira's "real" name. Or her ex-hydra. You need to act.
+
+>wiltesh
+DEBUG INFO: The hash of the command is 571213850. Hash of word 1 is 571213850.
+
+You probably need to learn to play the whistle right, instead.
+
+>tiprod
+DEBUG INFO: The hash of the command is 410274292. Hash of word 1 is 410274292.
+
+You can't just muck around with one part of Elvira's army. You need a way to find allies.
+
+>bechamr
+DEBUG INFO: The hash of the command is 354099672. Hash of word 1 is 354099672.
+
+You can't just muck around with one part of Elvira's army. You need a way to find allies.
+
+>roarinsg
+DEBUG INFO: The hash of the command is 489962023. Hash of word 1 is 489962023.
+
+You can't just muck around with one part of Elvira's army. You need a way to find allies.
+
+>roarign
+DEBUG INFO: The hash of the command is 393688057. Hash of word 1 is 393688057.
+
+You can't just muck around with one part of Elvira's army. You need a way to find allies.
+
+>inclosuer
+DEBUG INFO: The hash of the command is 675582040. Hash of word 1 is 675582040.
+
+You feel blocked from doing something to the area. Elvira wouldn't be so careless to allow THAT. You figure you probably need help.
+
+>chnat
+DEBUG INFO: The hash of the command is 230493228. Hash of word 1 is 230493228.
+
+It's annoying and unswayable, like most chants.
+
+>stocked
+DEBUG INFO: The hash of the command is 494510522. Hash of word 1 is 494510522.
+
+You can't release any prisoners from the stockade THAT easily. You'd need an army.
+
+>stockeda
+DEBUG INFO: The hash of the command is 496698340. Hash of word 1 is 496698340.
+
+You can't release any prisoners from the stockade THAT easily. You'd need an army.
+
+>vsta
+DEBUG INFO: The hash of the command is 308736622. Hash of word 1 is 308736622.
+
+You can't just muck around with one part of Elvira's army. You need a way to find allies.
+
+>vta
+DEBUG INFO: The hash of the command is 212462656. Hash of word 1 is 212462656.
+
+You can't just muck around with one part of Elvira's army. You need a way to find allies.
+
+>prey
+DEBUG INFO: The hash of the command is 416955123. Hash of word 1 is 416955123.
+
+You can't just muck around with one part of Elvira's army. You need a way to find allies.
+
+>moisture
+DEBUG INFO: The hash of the command is 701040279. Hash of word 1 is 701040279.
+
+You can't just muck around with one part of Elvira's army. You need a way to find allies.
+
+>prawish
+DEBUG INFO: The hash of the command is 455461464. Hash of word 1 is 455461464.
+
+You have enough to think about without one more of Elvira's machines.
+
+>amulte
+DEBUG INFO: The hash of the command is 456098744. Hash of word 1 is 456098744.
+
+Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army.
+
+>ultimaet
+DEBUG INFO: The hash of the command is 604201608. Hash of word 1 is 604201608.
+
+Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army.
+
+>shapre
+DEBUG INFO: The hash of the command is 430339954. Hash of word 1 is 430339954.
+
+Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army.
+
+>purpel
+DEBUG INFO: The hash of the command is 534981476. Hash of word 1 is 534981476.
+
+You have enough to think about without one more of Elvira's machines.
+
+>orangre
+DEBUG INFO: The hash of the command is 476501320. Hash of word 1 is 476501320.
+
+You have enough to think about without one more of Elvira's machines.

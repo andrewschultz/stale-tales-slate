@@ -8255,11 +8255,11 @@ t-despairingly	t-despairingly	"despairingly"	"despairingly"	"The macks become up
 Merle	Merle	"honestly"	"honestly"	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."	false	683905568	"'Fine, be beefin['],' you think, not willing to run up the score--or the volume."
 raptor	parrot	"parrot"	"parrot"	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place. You try and thank it for the whistle, but you realize you never asked its name. So you sort of wave, and just as it leaves, you figure it was probably Pat Orr."	false	431763978
 parrot	raptor	"raptor"	"raptor"	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west! Merle and Elmer are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]The parrot's revenge sated, you return it to its normal form. 'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]You hear a female scream. 'Nemesis seems in,' you mutter. But maybe that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."	false	431763978
-pines	snipe	"snipe"	"snipe"	"The tip of one pine becomes a snipe's bill, the trunk becomes the spine--and you have a snipe."	false	419446388
-corona	racoon	"racoon" or "raccoon"	"racoon"	"[extra-c]The corona grows wider, becoming a living thing."	false	324129868
-nails	snail	"snail"	"snail"	"The nails arrange themselves in a sort of spiral, expand, and turn into a snail."	false	266175977
+pines	snipe	"snipe"	"snipe"	"The tip of one pine becomes a snipe's bill, the trunk becomes the spine--and you have a snipe."	false	419446388	"[this-animal]."
+corona	racoon	"racoon" or "raccoon"	"racoon"	"[extra-c]The corona grows wider, becoming a living thing."	false	324129868	"[this-animal]."
+nails	snail	"snail"	"snail"	"The nails arrange themselves in a sort of spiral, expand, and turn into a snail."	false	266175977	"[this-animal]."
 thrones	hornets	"hornets"	"hornets"	"The thrones shorten--a throne, another--HORNETS! Thankfully, they ignore your waspy yawps."	false	593056280
-owls	owls	"slow"	"slow"	"The owls['] swooping speeds hit such lows they they swoop back to their ambush place in hiding. You notice it isn't a very comfortable one, and you help them make a nest from tens of nets. They won't attack again. You refuse anything for the additional magnanimity but ask if any towels need to be changed to owlets. Thankfully not very many."	false	332375155
+owls	owls	"slow"	"slow"	"The owls['] swooping speeds hit such lows they they swoop back to their ambush place in hiding. You notice it isn't a very comfortable one, and you help them make a nest from tens of nets. They won't attack again. You refuse anything for the additional magnanimity but ask if any towels need to be changed to owlets. Thankfully not very many."	false	332375155	"[this-animal]."
 ocelots	ocelots	"coolest"	"coolest"	"The ocelots perk up and, instead of pacing aimlessly around, develop a swagger. Their SlopInc Clip-ons get close to, then are, the real thing. Yes, LookKool shades. Each pulls out a BMOC comb to fix his fur before stashing it for later use."	false	548714671
 leopard	leopard	"paroled"	"paroled"	"The leopard perks up as his handcuffs are dissolved."	false	445979194
 badger	badger	"garbed"	"garbed"	"The badger looks down and realizes it is wearing clothes. B-grade, garb that won't make you grab or brag, but it can't be drobe-bored. It's less embarrassed now and nods to you gratefully. Perhaps it can return the favor some day."	false	287365426
@@ -11251,7 +11251,7 @@ check entering otters-x:
 	if number of needed regions > 0:
 		d "[list of needed regions].";
 		say "As you step between them, you feel mess-up spumes from the otters--maybe a passive sap-vise--drain you to a nadir. 'I...darn!'[paragraph break]You could take your powers going dormant, but they might get mordant. Maybe you need to build them up by fixing things elsewhere[if patcher is in strip of profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
-	if eels are not in lalaland:
+	if eels are not in lalaland and p-2 is reflexive:
 		now inhib is true;
 	say "You begin to feel drained, and you let out a 'darn, I...' you slow down but just make it. 'Rad! In!'"
 
@@ -21101,7 +21101,7 @@ description of the medals is "They're roped together--the smaller, [tarn of noun
 to say tarn of (tlev - a number):
 	if tlev is 0:
 		say "totally ";
-	say "[if tlev is 0]extremely [else if tlev is 1]very [else if tlev is 2]somewhat[else if tlev is 3]barely [else if tlev is 4]un[else]BUG[end if]";
+	say "[if tlev is 0]extremely [else if tlev is 1]very [else if tlev is 2]somewhat [else if tlev is 3]barely [else if tlev is 4]un[else]BUG[end if]";
 
 medals-lucky-first is a truth state that varies.
 
@@ -24369,10 +24369,6 @@ Ed Yerg	"Now Ed's not greedy, [if flowerpot is in lalaland]and you gave him a gi
 b-b	"You've cut it down enough. Leave some for next year's crop." [start OTTERS]
 medals	"The medals are in good enough shape. They will help you speed up when you need to."
 Merle	"You can't take on Merle and Elmer by yourself--you need some allies."
-racoon	"[this-animal]."
-snail	"[this-animal]."
-snipe	"[this-animal]."
-hornets	"[this-animal]."
 ocelots	"[this-animal]."
 leopard	"[this-animal]."
 badger	"[this-animal]."
