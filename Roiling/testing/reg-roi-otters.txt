@@ -272,13 +272,9 @@ The barley rustles in an imaginary wind--but hardly at all.
 If only Ed Riley said things less loudly, boomingly, startlingly...
 
 >ettro
-DEBUG INFO: The hash of the command is 493702525. Hash of word 1 is 493702525.
-
 Trying to change the current region you're in would be risky, or useless, or maybe both.
 
 >ettros
-DEBUG INFO: The hash of the command is 589976491. Hash of word 1 is 589976491.
-
 Trying to change the current region you're in would be risky, or useless, or maybe both.
 
 >cinder
@@ -695,8 +691,6 @@ The whole bulwark? No, you couldn't do much with it at full strength. Maybe you 
 Coevals['] Alcoves
 
 >ahdry
-DEBUG INFO: The hash of the command is 268182261. Hash of word 1 is 268182261.
-
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
 
 >w
@@ -706,23 +700,15 @@ Stricter critters restrict--wait, no, that's a hardy hydra with an HD-Ray. Er, d
 You try, but that doesn't do anything with, or to, the hydra to the west.
 
 >laminas
-DEBUG INFO: The hash of the command is 332438948. Hash of word 1 is 332438948.
-
 You can't change them, and even if you could, Elvira would probably be alerted.
 
 >lamina
-DEBUG INFO: The hash of the command is 236164982. Hash of word 1 is 236164982.
-
 You can't change them, and even if you could, Elvira would probably be alerted.
 
 >forces
-DEBUG INFO: The hash of the command is 429276936. Hash of word 1 is 429276936.
-
 Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second.
 
 >orfec
-DEBUG INFO: The hash of the command is 333002970. Hash of word 1 is 333002970.
-
 Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second.
 
 >
@@ -821,18 +807,12 @@ You're not here to mess with fashion.
 You're not here to mess with fashion. Plus, the shades were last game.
 
 >parlode
-DEBUG INFO: The hash of the command is 445979194. Hash of word 1 is 445979194.
-
 The leopard almost seems to un-cuff its hands.
 
 >atsry
-DEBUG INFO: The hash of the command is 409254857. Hash of word 1 is 409254857.
-
 The satyr puts a hand on its chin as if pondering music.
 
 >badgre
-DEBUG INFO: The hash of the command is 287365426. Hash of word 1 is 287365426.
-
 The badger flexes imaginary suit lapels, then quickly goes back to brooding.
 
 >eclosto
@@ -924,106 +904,64 @@ Reclusion Inclosure
 >7
 
 >ahdry
-DEBUG INFO: The hash of the command is 268182261. Hash of word 1 is 268182261.
-
 The hydra's toast. Elvira is not. Deal with her.
 
 >creno
-DEBUG INFO: The hash of the command is 375395582. Hash of word 1 is 375395582.
-
 You can't do much with Elvira's "real" name. Or her ex-hydra. You need to act.
 
 >wiltesh
-DEBUG INFO: The hash of the command is 571213850. Hash of word 1 is 571213850.
-
 You probably need to learn to play the whistle right, instead.
 
 >tiprod
-DEBUG INFO: The hash of the command is 410274292. Hash of word 1 is 410274292.
-
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
 
 >bechamr
-DEBUG INFO: The hash of the command is 354099672. Hash of word 1 is 354099672.
-
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
 
 >roarinsg
-DEBUG INFO: The hash of the command is 489962023. Hash of word 1 is 489962023.
-
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
 
 >roarign
-DEBUG INFO: The hash of the command is 393688057. Hash of word 1 is 393688057.
-
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
 
 >inclosuer
-DEBUG INFO: The hash of the command is 675582040. Hash of word 1 is 675582040.
-
 You feel blocked from doing something to the area. Elvira wouldn't be so careless to allow THAT. You figure you probably need help.
 
 >chnat
-DEBUG INFO: The hash of the command is 230493228. Hash of word 1 is 230493228.
-
 It's annoying and unswayable, like most chants.
 
 >stocked
-DEBUG INFO: The hash of the command is 494510522. Hash of word 1 is 494510522.
-
 You can't release any prisoners from the stockade THAT easily. You'd need an army.
 
 >stockeda
-DEBUG INFO: The hash of the command is 496698340. Hash of word 1 is 496698340.
-
 You can't release any prisoners from the stockade THAT easily. You'd need an army.
 
 >vsta
-DEBUG INFO: The hash of the command is 308736622. Hash of word 1 is 308736622.
-
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
 
 >vta
-DEBUG INFO: The hash of the command is 212462656. Hash of word 1 is 212462656.
-
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
 
 >prey
-DEBUG INFO: The hash of the command is 416955123. Hash of word 1 is 416955123.
-
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
 
 >moisture
-DEBUG INFO: The hash of the command is 701040279. Hash of word 1 is 701040279.
-
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
 
 >prawish
-DEBUG INFO: The hash of the command is 455461464. Hash of word 1 is 455461464.
-
 You have enough to think about without one more of Elvira's machines.
 
 >amulte
-DEBUG INFO: The hash of the command is 456098744. Hash of word 1 is 456098744.
-
 Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army.
 
 >ultimaet
-DEBUG INFO: The hash of the command is 604201608. Hash of word 1 is 604201608.
-
 Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army.
 
 >shapre
-DEBUG INFO: The hash of the command is 430339954. Hash of word 1 is 430339954.
-
 Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army.
 
 >purpel
-DEBUG INFO: The hash of the command is 534981476. Hash of word 1 is 534981476.
-
 You have enough to think about without one more of Elvira's machines.
 
 >orangre
-DEBUG INFO: The hash of the command is 476501320. Hash of word 1 is 476501320.
-
 You have enough to think about without one more of Elvira's machines.

@@ -8,90 +8,302 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _pod_1
+* seed-1
 
 >seed 1
 >gonear trefoil
 
 >winde
-WRONG
+Edwin shakes his head, but a glare from Rodney sets him straight--for now.
 >wined
-up by a point
+up by one point
 >bleka
-WRONG
+Blake shakes his head, but a glare from Rodney sets him straight--for now.
 >bleak
-up by a point
+up by one point
 >tensre
-WRONG
+Ernest shakes his head, but a glare from Rodney sets him straight--for now.
 >tenser
-up by a point
+up by one point
 >snarde
-WRONG
+Anders shakes his head, but a glare from Rodney sets him straight--for now.
 >snared
-up by a point
+up by one point
 >crickde
-WRONG
+Cedrick shakes his head, but a glare from Rodney sets him straight--for now.
 >cricked
-up by a point
+up by one point
 >redyon
-WRONG
+Rodney blinks a bit, then frowns.
 >droney
-up by a point
+up by one point
 >undo
 >yonder
-up by a point
+up by one point
 
-* walk-all
->{include} _pod_1
->ostrew
-
-
-* pod 2
+* seed-2
 
 >seed 2
 >gonear trefoil
 
+>ashne
+Shane shakes his head, but a glare from Rodney sets him straight--for now.
 >ashen
+up by one point
+>oldne
+Eldon shakes his head, but a glare from Rodney sets him straight--for now.
 >olden
+up by one point
+>borde
+Bredo shakes his head, but a glare from Rodney sets him straight--for now.
 >bored
+up by one point
+>calmre
+Marcel shakes his head, but a glare from Rodney sets him straight--for now.
 >calmer
+up by one point
+>warnde
+Andrew shakes his head, but a glare from Rodney sets him straight--for now.
 >warned
+up by one point
+>timidre
+Demitri shakes his head, but a glare from Rodney sets him straight--for now.
 >timider
+up by one point
+
+* seed-3
 
 >seed 3
 >gonear trefoil
 
 >stoyn
+Tyson shakes his head, but a glare from Rodney sets him straight--for now.
 >stony
+up by one point
 >godyl
+Goldy shakes his head, but a glare from Rodney sets him straight--for now.
 >godly
+up by one point
 >laryd
+Daryl shakes his head, but a glare from Rodney sets him straight--for now.
 >lardy
+up by one point
 >normla
+Marlon shakes his head, but a glare from Rodney sets him straight--for now.
 >normal
+up by one point
 >achire
+Archie shakes his head, but a glare from Rodney sets him straight--for now.
 >achier
+up by one point
 >learnde
+Leander shakes his head, but a glare from Rodney sets him straight--for now.
 >learned
+up by one point
+
+* seed-4
 
 >seed 4
 >gonear trefoil
 
 >awed
+Daryl shakes his head, but a glare from Rodney sets him straight--for now.
 >awde
+up by one point
 >coyer
+Daryl shakes his head, but a glare from Rodney sets him straight--for now.
 >coyre
+up by one point
 >weedy
+Daryl shakes his head, but a glare from Rodney sets him straight--for now.
 >weeyd
+up by one point
 >eggier
+Daryl shakes his head, but a glare from Rodney sets him straight--for now.
 >eggire
+up by one point
 >barney
+Daryl shakes his head, but a glare from Rodney sets him straight--for now.
 >barnye
+up by one point
 >preston
+Daryl shakes his head, but a glare from Rodney sets him straight--for now.
 >prestno
+up by one point
+
+* seed-5
 
 >seed 5
 >gonear trefoil
 
->terraned
+>terranec
+Terrance shakes his head, but a glare from Rodney sets him straight--for now.
 >terrance
+up by one point
+
+* err-thru
+
+>seed 1
+>gonear trefoil
+>purloin settler
+
+>bladn
+The badlands can't be changed on their own. They must be trekked through.
+>sda
+The badlands can't be changed on their own. They must be trekked through.
+>badlansd
+The badlands can't be changed on their own. They must be trekked through.
+
+>curst
+It's not just that it's curst, it's a PALACE, too.
+
+>palace
+It's not just that it's a palace, it's CURST, too.
+
+>castle
+Not just any castle. Castle Apcur.
+
+>apcur
+Not, like, swamp Apcur or hut Apcur. Castle Apcur.
+
+>leka
+You can't see Leak Lake from here, and you couldn't do anything with it, anyway.
+
+>warriro
+One at a time. Each has his own weakness
+>warriosr
+One at a time. Each has his own weakness
+
+>wined
+by one point
+>warriro
+You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time
+>bleak
+by one point
+>warriro
+You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time
+>tenser
+>warriro
+You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time
+>cricked
+>warriro
+You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time
+>snared
+>warriro
+You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time
+>bleak
+>warriro
+You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time
+>gone
+>warriro
+There's only one warrior left, and his name is Rodney.
+>rodney
+by one point
+
+Topside Deposit
+
+>ary
+You can't do much with either part of Ray's name. Plus he has that keycar.
+
+>cke
+You can't do much with either part of Ray's name. Plus he has that keycar.
+
+>creaky
+>sled
+NONTRIVIAL REJECT
+>rut
+NONTRIVIAL REJECT
+
+>toaster
+It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it.
+
+>n
+Scope Copse
+
+>spoce
+The copse and the scope are both fine as-is, though maybe you can do something about the yurts.
+
+>spec
+The copse and the scope are both fine as-is, though maybe you can do something about the yurts.
+
+>rutys
+The yurts sway slightly. They may not be guarding much, but maybe you could do for them.
+
+>ruty
+There's more than one yurt there.
+
+>rusty
+The yurts grow tarnished and crumble. Behind them, you see and take some "nutrition" as cheap as the yurts that held it: Owers'-Bin Brownies! The snack of choice for people who prefer quantity over quality!
+
+>spec
+The copse and the scope are both fine as-is.
+
+>patrys
+You need to be specific about which pastry--or you would, if any could be changed. As is, you can just eat one at a time once it's warmed.
+
+>owers
+The pastry is for eating, not for changing. It might be more edible if you heated it up, though.
+>bin
+The pastry is for eating, not for changing. It might be more edible if you heated it up, though.
+>brownies
+The pastry is for eating, not for changing. It might be more edible if you heated it up, though.
+>brownie
+Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
+
+>weirdre
+The robot almost looked a bit odd there for a moment.
+
+>weirder
+Your score has just gone up by one point.
+
+>w
+The diners smack their lips, and you think you hear the zhk of silverware.
+Campiest Campsite
+>campsiet
+Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
+
+>rapire
+The machine is complicated enough. You probably just need to figure what to put in it.
+
+>camp
+Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
+
+>site
+Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
+
+>campsiet
+Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
+
+>angstier
+>w
+Outer Route
+>outre
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+
+>loaves
+The pastry is for eating, not for changing. It might be more edible if you heated it up, though.
+
+>solve
+The pastry is for eating, not for changing. It might be more edible if you heated it up, though.
+
+>vainest
+[Your score has just gone up by one point.]
+>undo
+>naivest
+[Your score has just gone up by one point.]
+>s
+Lots Lots
+>tol
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+
+>tols
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+>eclair
+Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
+
+>eclairs
+The pastry is for eating, not for changing. It might be more edible if you heated it up, though.
+
+#########################################################################end stuff
+>badlands
+You're beyond the badlands now.

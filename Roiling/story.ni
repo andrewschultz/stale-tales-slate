@@ -1909,7 +1909,6 @@ grailman	--
 costume man	--
 bonker	--
 ingrates	--
-iPrune	--
 organised	--
 admirer	"'But enough about me! What about you?' You need a way to make them less interested in you."
 Dr Yow	"Dr. Yow is too modest--and focused on [his-her] science--to bang on about previous achievements or imprisonment."
@@ -18229,7 +18228,7 @@ rule for printing a locale paragraph about a warrior (called ww):
 	if ww is not Rodney:
 		The rule succeeds;
 	now Rodney is mentioned;
-	say "Sir Rodney, still loud and boastful, is [if number of visible warriors is 1]making his last stand--he won't attack anyone, but nobody's going out[else][one of]calling to[or]leading[stopping] [a-bunch] of warriors blocking the way out. [they-just] [list of followy warriors][end if][one of].[paragraph break]But maybe this show of force will backfire. They don't look as gung-ho as they could, and once you pick off one weak link, you'll know what people--or things--are like, here[or][stopping].";
+	say "Sir Rodney, still loud and boastful, is [if number of visible warriors is 1]making his last stand--he won't attack anyone unprovoked, but nobody's going out with him around[else][one of]calling to[or]leading[stopping] [a-bunch] of warriors blocking the way out. [they-just] [list of followy warriors][end if][one of].[paragraph break]But maybe this show of force will backfire. They don't look as gung-ho as they could, and once you pick off one weak link, you'll know what people--or things--are like, here[or][stopping].";
 	now all visible warriors are mentioned;
 
 to say they-just:
@@ -19839,7 +19838,7 @@ to say foods of (myf - a thing):
 
 to say gd of (zz - a guardian):
 	if zz is ray eck:
-		say "[one of]A yacker using a remote to control a keycar[or]Ray Eck, with his keycar,[stopping]";
+		say "[one of]A yacker using a hidden remote to control a keycar[or]Ray Eck, with his keycar,[stopping]";
 		now zz is mentioned;
 	else:
 		say "[A zz]";
@@ -21096,7 +21095,14 @@ after printing the name of medals while taking inventory:
 
 understand "medals" as a mistake("For shame! The macks only want to make her a FIGURATIVE trophy. Do something to earn some medals, like helping Gretta Garett-Tatger.") when Gretta Garett-Tatger is visible
 
-description of the medals is "They're roped together--the smaller, [tarn of nounsolve]oxidized, says IQ, and the other, [tarn of adjsolve]tarnished, says LUCKY."
+description of the medals is "They're roped together. [medal-summary]."
+
+to say medal-summary:
+	if medals-lucky-first is true:
+		say "The larger, [tarn of adjsolve]tarnished, says LUCKY. ";
+	say "The smaller, [tarn of nounsolve]oxidized, says IQ. ";
+	if medals-lucky-first is false:
+		say "The larger, [tarn of adjsolve]tarnished, says LUCKY. ";
 
 to say tarn of (tlev - a number):
 	if tlev is 0:

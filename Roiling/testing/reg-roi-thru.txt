@@ -1037,15 +1037,33 @@ Wickeder Wire Deck
 >slow
 Your score has just gone up by one point
 
+>x medals
+The smaller, extremely oxidized, says IQ. The larger, extremely oxidized, says LUCKY.
+
 >coolest
 Your score has just gone up by one point
+
+>x medals
+The smaller, extremely oxidized, says IQ. The larger, very oxidized, says LUCKY.
+
 >paroled
 Your score has just gone up by one point
+
+>x medals
+The smaller, extremely oxidized, says IQ. The larger, somewhat oxidized, says LUCKY.
+
 >artsy
 Your score has just gone up by one point
+
+>x medals
+The smaller, extremely oxidized, says IQ. The larger, barely oxidized, says LUCKY.
+
 >garbed
 Adding a min point
 Your score has just gone up by one point
+
+>x medals
+The smaller, extremely oxidized, says IQ. The larger, unoxidized, says LUCKY.
 
 >s
 >s
@@ -1066,15 +1084,30 @@ Your score has just gone up by one point
 
 >snail
 Your score has just gone up by one point
+
+>x medals
+The smaller, extremely oxidized, says IQ. The larger, very oxidized, says LUCKY.
+
 >hornets
 Your score has just gone up by one point
+
+>x medals
+The smaller, extremely oxidized, says IQ. The larger, somewhat oxidized, says LUCKY.
+
 >raccoon
 Your score has just gone up by one point
 >undo
 >racoon
 Your score has just gone up by one point
+
+>x medals
+The smaller, extremely oxidized, says IQ. The larger, barely oxidized, says LUCKY.
+
 >snipe
 Your score has just gone up by one point
+
+>x medals
+The smaller, extremely oxidized, says IQ. The larger, unoxidized, says LUCKY.
 
 >n
 >n
