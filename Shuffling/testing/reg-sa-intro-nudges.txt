@@ -1,0 +1,123 @@
+Version 1/151226 of Shuffling Nudges by Andrew Schultz begins here.
+
+volume nudges
+
+[remember to sort with nud.pl after changes]
+
+* intro nudge test
+
+>intor
+[reg-rej].
+>busiets
+[loc-rej].
+
+>noentyr
+[intro nudges]
+>slmi
+[name-list].
+>neta
+[name-list].
+>naem
+[name-list].
+>lits
+[name-list].
+>elevatro
+[word-games].
+>terracse
+[word-games].
+>bannre
+[word-games].
+
+>in
+A Dry Yard
+>yadr
+[loc-rej].
+>ydr
+[loc-rej].
+>shrbu
+The [if goat is visible]remains of the [end if]shrub and brush waver, then point towards the [if toga is visible]toga[else if thorn is visible]thorn[else]opening where the thorn was.
+>improbabel
+You do some calculations--then you think, if things are this hard early on, MAN. It's got to be simpler.
+>breeez
+[nope-odor].
+>smell
+[nope-odor].
+
+>door
+
+>musicla
+[com-chor].
+>chodr
+[com-chor].
+
+>bugle
+
+>honr
+No, the bugle is a bugle, not just a horn. It's been changed enough.
+
+>blot
+>open door
+>enter door
+Thickest Thickets
+
+>thickest
+[loc-rej].
+>thickte
+[loc-rej]
+>darnle
+[if darn-slan is true]You already got mad at all the darnels. You need to move on[else]If it were just one darnel, there'd be no point in getting mad. But there are a bunch[end if].
+>darnesl
+[thorn-inst].
+
+>goat
+>in
+Notices Section
+
+>noticse
+[loc-rej].
+
+>dlol
+[stat-at].
+>houes
+[stat-at].
+
+>gatewya
+Nothing changes. Maybe you just need to walk through it, if and when you're prepared.
+
+>borad
+The broad board is just there to read.
+>scrawlinsg
+Those scrawlings are there to help you. Plus, ten letters, so early? Whew.
+
+>nametag
+
+>waryp
+[no-warpy].
+>odl
+[no-warpy].
+
+>oldmna
+He's too old to change. At least, in his present form.
+>dollhoues
+Thinking that doesn't do much, but the [if static is visible]static changes[else]attics seem to glow a bit[end if].[one of][paragraph break]You reflect it might be a bit too much to have to deal with nine letters so early, anyway[or][stopping].
+
+>attci
+You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back.
+>warmpu
+You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you.
+
+
+
+==================================================
+
+=============================
+====================end sortie
+====================start metros
+====================================================================
+
+
+
+
+#need to test Pat's
+
+#also need to test go rest flier

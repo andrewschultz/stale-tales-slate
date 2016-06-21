@@ -1,0 +1,415 @@
+## reg-sa-sortie-nudges.txt
+## nudges for Shuffling Around/sortie: the big test
+##
+
+
+>tosrie
+[reg-rej].
+
+>Ug, Frenetic Centrifuge
+
+>centrifuge
+[loc-rej].
+>frenetic
+[loc-rej].
+
+>esxtien
+The spinning seems to slow a bit.
+>xeitsnw
+The room seems almost ready to start to slow down. Maybe the exits aren't quite that way.
+>xeitssw
+The room seems to spin faster, as if you are totally on the wrong track.
+>xeitsse
+The room seems almost ready to start to slow down. Maybe the exits aren't quite that way.
+>extis
+You can't do much to the exits when you don't even know which way they are.
+>dial
+Messing up the dial would leave you trapped here.
+
+>n
+The Nick
+
+>graffiti
+The graffiti's etched in. It's here to help, anyway.
+>greta
+The grate remains impassive.
+>nick
+Maybe there is a way out of the nick. Not of nick, but the nick. It's probably too much to think yourself in K.C.
+
+>ixsteen
+You don't need to re-stop the centrifuge.
+
+>kitchne
+WRONG
+>kitchen
+Kitchen
+
+#####detour to check on UFR
+>s
+A Round Den, Unadorned
+
+>aroundden
+[loc-rej].
+
+>dial
+The dial did its part for you.
+
+>kitchen
+You can just walk to the kitchen, and there's no need to revisit the nick, and there's no third location.
+
+>n
+>ketchin
+Nothing happens. Well, you didn't really want to go back, and there's probably no third room to look for[if moor is unvisited]. Maybe you need to escape this bunker in another room[end if].
+
+#######dumb stuff
+>x fridge
+
+>lamian
+It actually looks pretty nice on the fridge.
+
+>pna
+[ck-p].
+>caek
+[ck-p].
+
+>okrapto
+Aigh! It's a catchy tune, but really, it won't help you figure anything out.
+>frideg
+The fridge is just a fridge.
+>obligatoyr
+The fridge will always be what it is. Generally what is or was inside is more interesting, anyway.
+
+##############ok, test tall trio and loose label that's part of them
+>middel
+[to-trio].
+>letf
+[to-trio].
+>rigth
+[to-trio].
+>middlechfe
+[to-trio].
+>leftchfe
+[to-trio].
+>rightchfe
+[to-trio].
+
+>lable
+[label-no].
+>looes
+[label-no].
+>looselable
+[label-no].
+
+>tortilla
+
+################hotsauce before & after
+
+>perfuem
+[perf-brand].
+>bottel
+[perf-brand].
+>atc
+[perf-brand].
+>houes
+[perf-brand].
+
+>hotsauce
+by one point
+>undo
+>hot sauce
+by one point
+
+>caues
+No need to do more with the hot sauce.
+>packte
+Fiddling with sauce packets is so awful! Until it's easy. And it should be, here. Just PUT the sauce on any food.
+
+###############spearman
+>cheeys
+It's more that he's a spearman--but maybe his cheesiness is a clue.
+>armro
+The armor is impervious. Maybe you can change the guy inside it, instead.
+
+>parmesan
+
+##################steak
+>steka
+WRONG
+>steak
+>cutpu
+The steak's just right as is.
+>cutupsteka
+The steak's just right as is.
+
+######################lettuce
+
+>lettuec
+WRONG
+>cutl
+The whole t-shirt.
+>eet
+The whole t-shirt.
+
+>lettuce
+
+>put lettuce on tortilla
+>put steak on tortilla
+>put parmesan on tortilla
+>put hot sauce on tortilla
+>undo
+>put hotsauce on tortilla
+
+>coat
+by one point
+
+>e
+>s
+Room
+
+>weer
+The cask is changeable, but not like that. WERE-EWER just clues it can be changed.
+
+>cska
+WRONG
+>sack
+
+>cska
+WRONG
+
+>burlpa
+The sack itself seems pliable, but its individual fibers aren't.
+
+>weer
+There's no other way to change the cask than to and from the sack. I think you got the WERE-EWER clue by now.
+
+>pari
+Many things can be a pair, but these hoses--well, a pair of HOSES is kind of odd.
+
+>wrat
+No, WARTS.
+
+>straw
+>put straw in sack
+
+>heos
+Well, HOSES...
+
+>romo
+You almost feel something picking you up and pulling you somewhere else[--there are only so many ways to figure a new place.
+
+>moor
+
+>woefulpta
+[woe-all].
+>woeflu
+[woe-all].
+>afwlu
+[woe-all].
+>peot
+[woe-all].
+
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+
+>exop
+[expo-or-anapest].
+>expoflire
+[expo-or-anapest].
+>flire
+[expo-or-anapest].
+
+>anapesst
+Well, there are many, but the poem is [i]in[r] anapest.
+
+>pome
+[pat-poe].
+>poetyr
+[pat-poe].
+
+>peasant
+
+>give straw to peasant
+
+>pome
+[peas-poe].
+>poetyr
+[peas-poe].
+
+>hya
+Hay is not terribly magical. It's more for trading or building.
+
+>graffiit
+Hm, there has to be a clue in it.
+>redgraffiit
+Hm, there has to be a clue in it.
+
+>roda
+No, the full roadblock.
+>blokc
+No, the full roadblock.
+
+>romo
+You almost feel something picking you up and pulling you somewhere else[--there are only so many ways to figure a new place.
+
+>room
+
+>romo
+You almost feel something picking you up and pulling you somewhere else--you got here and can figure how to get back.
+
+>n
+Stiller Trellis
+
+>trellsi
+[loc-rej].
+
+>wall
+[hway-hint].
+>scrapde
+[hway-hint].
+
+>put hay in wall
+>hallway
+
+>e
+Sacred Cedars
+
+>cedasr
+[loc-rej].
+>cedra
+[loc-rej].
+>drawign
+[best-not-defile].
+>drawinsg
+[best-not-defile].
+>veres
+[best-not-defile].
+>holyveres
+[best-not-defile].
+>spotu
+[best-not-defile].
+>potu
+[best-not-defile].
+>minerav
+[best-not-defile].
+>chaliec
+[best-not-defile].
+>candel
+[best-not-defile].
+>lanec
+[best-not-defile].
+>idosl
+[best-not-defile].
+>cliceh
+[best-not-defile].
+>losi
+Changing Lois is highly unlikely. You have magic powers, but not godlike powers.
+
+>foldde
+!It's a plane, now, for sure.
+>papre
+!It's a plane, now, for sure.
+>papesr
+!It's a plane, now, for sure.
+
+>fold paper
+
+>foldde
+It's a plane, now, for sure.
+>papre
+It's a plane, now, for sure.
+>papesr
+It's a plane, now, for sure.
+
+>pour oils
+OOPS!
+
+>cask
+>pour oils
+
+>lio
+Really, they're oils. There's so much more you can do with oils than oil. Well, two things YOU can do
+
+>w
+>s
+>moor
+
+>soil
+by one point
+
+>black door
+by one point
+
+>blakc
+Oops
+>droo
+>Oops
+
+>missile
+by one point
+
+>panel
+
+>warheda
+You don't want to change the missile's message, which seems rather nice.
+>wirse
+[no-wire].
+>wier
+[no-wire].
+
+>room
+>n
+>e
+
+>pour oils
+>lio
+OILS, but
+
+>w
+Crashing Archings
+
+>archign
+Neither arching shakes. They're probably too sturdy, and you're probably not meant to go back.
+>crashign
+[loc-rej].
+
+>rubbel
+The rubble is too dense to rearrange, physically or magically. You should have as much of the oils as you need.
+>trellsi
+You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.
+
+>s
+>moor
+>silo
+
+>put panel in silo
+>put door in silo
+
+>buttosn
+[but-but].
+>buttno
+[but-but].
+>leftbuttno
+[what-b-says].
+>rightbuttno
+[what-b-says].
+>letf
+[what-b-says].
+>rigth
+[what-b-says].
+>shootbuttno
+No, you're overthinking it. Just the text.
+>treesbuttno
+No, you're overthinking it. Just the text.
+
+>steer
+>shoot
+>push steer
+>push shoot

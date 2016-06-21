@@ -1,0 +1,441 @@
+## reg-sa-metros-nudges.txt
+## nudges for Shuffling Around/metros: the big test
+##
+
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* metros-random-nudge
+
+#let's test random things that it's tricky to do with a straight walkthrough
+
+>purloin arena dig
+>arena
+The invite's for an ARENA DIG.
+>dig
+The invite's for an ARENA DIG.
+
+>rifle
+Shooting things up
+>rifel
+The flier has helpful information it'd be better to act on than change.
+
+>purloin soggy love
+>soggy
+It's just garbage.
+>note
+It's just garbage.
+>beer
+It's just garbage.
+>flier
+It's just garbage.
+>letter
+It's just garbage. The writing inside, too.
+
+>purloin can of beer
+>canofbeer
+The beer is just garbage, not even organic like the drainage. But its name is interesting.
+
+>purloin noise bag
+
+>noies
+Even if you could do anything, that'd rip the noise bag open.
+>bga
+Even if you could do anything, that'd rip the noise bag open.
+
+* metros-walkthrough-nudge
+
+>gonear underside
+
+>undesirde
+[loc-rej].
+
+>mersto
+[reg-rej].
+>merto
+[reg-rej].
+
+>metallci
+No way. That thing's sturdy. The people in there know their stuff.
+
+>drawign
+You can't change the drawing, and that won't make its warnings any less relevant.
+>opticla
+Changing the beam is way out of your league.
+>bema
+Changing the beam is way out of your league.
+>escalator
+No way. It's your way up from the metros. Once you fix things.
+
+>buildign
+You can't restore the hotel or even scrub off what's written on it.
+>gardenia
+by one point
+>hotel
+You can't restore the hotel.
+>sensro
+You don't have the skill to hack the sensor electronically.
+>doro
+It can't be that easy to change. Maybe some random door in the wilderness.
+
+>theol
+You can't change the hotel, but you could have a look around.
+
+>w
+>e
+>theol
+You can't change the hotel, but you could have another look around.
+
+>n
+
+#skipping the camp right now to get the tomato from the alley
+
+>w
+A Yell Alley
+
+>placadr
+It's just junk. As itself, and for your quest. But maybe what's written on it can help.
+
+>garbaeg
+Worry about repurposing garbage after you saved Yorpwald, maybe.
+
+>ylle
+[loc-rej].
+>yllea
+[loc-rej].
+
+>motot
+It's labeled A MOTTO. So you probably have to respect the creative license, such as it is, of whoever wrote it.
+>potato
+The author twisted words enough. Perhaps you could concentrate on it.
+
+>stinkbug
+[ug-bug].
+>gunk
+[ug-bug].
+>bits
+[ug-bug].
+>stink
+[ug-bug].
+>bug
+[ug-bug].
+
+>tomato
+>e
+
+####skip the camp again for detail testing. Let's get the 
+>s
+>w
+The Ol' Hotel
+
+>helot
+[loc-rej].
+
+>thign
+The night thing is twisted beyond redemption.
+
+>potato
+The night thing would probably still be big and terrifying even if it changed its form. You need to find a way to get rid of it.
+
+>throw tomato at thing
+
+>bupm
+Just search the bump instead.
+
+>lucer
+You're a wordplayer, not a doctor, sadly. But that ulcer was the night thing's own fault, anyway.
+>bottel
+[no-ketch].
+>ketchpu
+[no-ketch].
+>catsup
+You think of how to make the ketchup slightly classier. [no-ketch].
+>mattrses
+Nothing to change the mattress to, even if you could move the night thing off.
+>throw tomato at thing
+>mattrses
+Nothing to change the mattress to, but something might be inside it.
+>x mattrses
+>mattress
+Nothing to change the mattress to, and you already looted it
+
+>emittre
+Whatever icky stuff is/was in there might come out. Eww.
+
+>e
+
+>theol
+You can't change the hotel, and you got rid of the night thing, anyway.
+
+>n
+Cramped Red Camp
+
+>capm
+[loc-rej].
+>rde
+[loc-rej].
+>crampde
+[loc-rej].
+
+>redtenst
+Not nice. It's the only home the deadbeats have.
+>driveway
+[drivwy].
+>yadr
+[drivwy].
+>viwe
+[drivwy].
+>threasd
+[beat-man].
+>threda
+[beat-man].
+>harsp
+The harps are kind of annoying, but they've got nothing on the beats.
+
+>ltso
+It's not just that it's lost, it's CORN[dead-help].
+>conr
+It's not just that it's corn, it's LOST too[dead-help]."
+
+>tenst
+As anti-personal property as the deadbeats are, that'd still annoy them.
+>deadbeta
+[ded-chg].
+>deda
+[ded-chg].
+>beta
+[ded-chg].
+
+>buttosn
+[kern-push].
+>yellwo
+[kern-push].
+>kernesl
+[kern-push].
+>kernle
+[kern-push].
+
+>controsl
+WRONG
+>controls
+The dead beat deadbeat might not beat you dead
+
+>n
+Cordoned Red Condo
+
+>cordonde
+[loc-rej]
+>rde
+[loc-rej]
+>conod
+[loc-rej]
+
+>rental
+One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers.
+
+>candelabar
+Interior decorating is not your strength.
+>carpest
+Interior decorating is not your strength.
+>carpet
+Interior decorating is not your strength.
+>talkesr
+You can't change who they are. They probably can't, either. It's sad.
+>talkre
+You can't change who they are. They probably can't, either. It's sad.
+>caek
+It isn't just any cake. It's dry cake.
+>dyr
+It isn't just any cake. It's dry cake.
+
+>switch emitter
+>get dry cake
+>s
+
+>controls
+by one point
+
+>contrlo
+You've already changed the lost corn into the controls, and you don't need to do more.
+
+>keycard
+by one point
+
+>leavse
+It's the whole clover you need to change.
+
+>fuzyz
+The fuzziness seems to be part of the clover. It might be, even if you're able to change the clover.
+
+>velcro
+by one point
+>strign
+No need to mess with the string joining the velcro mittens.
+
+>gloev
+[mits-are].
+>glovse
+[mits-are].
+>mittne
+[mits-are].
+>mittesn
+[mits-are].
+
+>e
+Elf Row's Flowers
+>elfrosw
+[loc-rej].
+
+>heaht
+Probably best not to do stuff to even one heath while the faeries have them
+>begonai
+Probably best not to do stuff to even one begonia while the faeries have them.
+
+>fairise
+They could CERTAINLY out-magic you back, and give a little extra for your misspelling, even if anagramming could have an effect on them.
+>faiyr
+The rest would mangle you back worse.
+>faeyr
+The rest would mangle you back worse.
+
+>stesm
+Deal with the whole flower, not just the stems.
+
+>trounec
+You don't need to do anything to the counter, and it's probably protected by a spell, anyway.
+
+>faerise
+They could CERTAINLY out-magic you back, and give a little extra for your misspelling, even if anagramming could have an effect on them.
+
+>give gardenia to faieirs
+>take heaths
+>heaht
+They are multiple heaths--so you should try to change just one.
+
+>take brocade
+>scratchinsg
+They're not important--the brocade probably is, though.
+
+>w
+>w
+>odrw
+You'd need to do something to all the words.
+
+>sword
+by one point
+
+>e
+
+>barcode
+>put barcode on keycard
+>give emitter to deadbeat
+>ganst
+You don't get rid of angst with just a word.
+>s
+>ebtas
+The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here.
+
+>put card on sensor
+>e
+
+Anti-Cool Location
+
+>anticolo
+[loc-rej].
+
+>beats
+!The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here.
+
+>uptil
+The nerds would gang up on you and take it back, if anything worked, which it won't.
+>nerd
+[nerd-nah].
+>nerds
+[nerd-nah].
+>dorks
+[nnww].
+>geeks
+[nnww].
+
+>dork
+[nnww].
+>geek
+[nnww].
+>asknerds
+The nerds look at you, then remark they can't decipher THAT. But maybe if you rearranged things a bit...
+>asknerd
+"You can ask us all!" one nerd blurts. "We can pool our collective knowledge in a data cloud and stuff or something!"
+
+>ask nerds about darkness
+
+>metallci
+No way. That thing's sturdy. Those nerds know their stuff.
+
+>s
+
+>s
+Elm Train Terminal
+
+>tramline
+[loc-rej].
+
+>uptil
+It's handy as is. It gives light. You can't ask for much more.
+
+>laisr
+[fix-rail].
+>lari
+[fix-rail].
+>trakc
+[fix-rail].
+>tracsk
+[fix-rail].
+>aps
+[fix-rail].
+>apss
+[fix-rail].
+>art
+There aren't many ways to look at THIS art, and none are constructive, you sense.
+
+>fadde
+>fadedda
+[faded-ad]
+[faded-ad]
+
+>noen
+It's not just that it's neon, it's that it's a pig.
+>pgi
+It's not just that it's a pig, it's that it's neon.
+
+>opening
+>recses
+You've already made nothing out of something, and instead of reversing that, you may need to put something in the opening.
+>u
+>put controls in opening
+>recses
+You've already made nothing out of something, and instead of reversing that, you did what you needed.
+
+>d
+>e
+
+Bassy Abyss
+
+>bassy
+[loc-rej].
+
+>ebta
+This racket isn't just one beat.
+
+>resin
+
+>beast
+
+>take sword
+
+>ilth
+The hilt serves a purpose, and besides, there's not much to change it to.
+
+>attack beast
+Trips Strip
+

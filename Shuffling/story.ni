@@ -3063,7 +3063,7 @@ the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey
 bulge	bugle	"bugle"	"bulge"	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is visible]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362	--	--	nowhere
 odor	yard-door	"door"	"odor"	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start intro anagrams]
 bolt	blot	"blot"	"bolt"	"The bolt retracts, and slowly a blot spreads over the door, which swings in and out[if bugle-played is true] just as when you played the bugle[else]. You can probably enter now[end if]."	false	249695339	"You don't want to re-lock the door."
-toga	goat	"goat"	"toga"	"The dingy toga shudders. It seems to rip, make legs, and twist around, like one of those balloon animals you were never good at. All this twisting has left him with an appetite, and he walks over to the delicious thorns and brambles.[paragraph break]He finds a relatively weak spot in the thickets and goes at it. Enough branches make way so that you could make it through if you crouch. Exhausted, he turns around three times and falls asleep.[paragraph break]Man! You actually made something living, this time. And you can even go IN through the darnels, now too[if darn-slan is true]--the ones you slandered nicely. You really took full advantage of this first bit[else], which you could maybe trash right if you think about it. Or you could just move on[end if]."	false	212250115	"The goat seems content enough as-is."
+toga	goat	"goat"	"toga"	"The dingy toga shudders. It seems to rip, make legs, and twist around, like one of those balloon animals you were never good at. All this twisting has left him with an appetite, and he walks over to the delicious thickets and brambles.[paragraph break]He finds a relatively weak spot in the thickets and goes at it. Enough branches make way so that you could make it through if you crouch. Exhausted, he turns around three times and falls asleep.[paragraph break]Man! You actually made something living, this time. And you can even go IN through the darnels, now too[if darn-slan is true]--the ones you slandered nicely. You really took full advantage of this first bit[else], which you could maybe trash right if you think about it. Or you could just move on[end if]."	false	212250115	"The goat seems content enough as-is."
 nametag	gateman	"gateman" or "gate man"	"nametag"	"Whoah! The nametag pulses and pops in directions you didn't think something that flat could. You hear a gish, then a sigh. A tall, grouchy old man in sober robes so aged you almost say 'Egad' cries 'The eyes! They see!' He grumbles how he shoulda been a portal king in the parking lot, he's such a talking pro. 'Rote scan. Ancestor? No traces.' Then he notices you. 'You--well, you brought me back. Yorpwald's been shuffled. Almost f-flushed. I'm Old Man Almond. But this isn't some RPG where you can ask everyone on the way for help. I'm pretty much it[if attics are not off-stage]. Oh, nice job fixing the static, too. There'll be worse noise later, but you'll deal with that whenever[end if].'[paragraph break]'Er, oh...or, eh...'[paragraph break]'Brilliant! You're a natural!'"	false	400874126	--	true
 static	attics	"attics" or "attic"	--	"[check-plur]The static cuts off and seems to grow opaque. Then it forms into a small box with a cupola, pyramid, and other shapes. They fit with a click on top of the doll house[if gateman is visible]. Old Man Almond golf-claps. 'Good work, though there's worse noise later[what-about-gate].'[otherwise]. Too bad nobody was around to see it![end if]"	false	368680251	--	true
 attics	static	"static"	--	"You undo your artistic work for perhaps more practical considerations like learning how to use the new toys from the cabinet."	false	368680251	--	true
@@ -3817,7 +3817,7 @@ to say nametag-desc:
 		say "You never noticed it before, but the nametag is made by [first custom style]TENGAMA[r], whoever they are. The red writing is odd--just like A TAN GEM on the broad board.[no line break]";
 		continue the action;
 	if player is in notices section:
-		say "It's still a bit scratched from your trip through the thorns--about 3/7 of the way from the right. It's, just, well--a nametag. For now. Maybe the broad board will have a clue what to do, nametag or not.[no line break]";
+		say "It's still a bit scratched from your trip through the thickets--about 3/7 of the way from the right. It's, just, well--a nametag. For now. Maybe the broad board will have a clue what to do, nametag or not.[no line break]";
 		continue the action;
 	if player wears nametag:
 		say "It's stuck to your shirt, all right. Somehow, you got a magenta one while most other people got plain white. It just took a tame nag to put it on, and you hate it but can't bring yourself to pull it off in public.[paragraph break]It does not make you feel like a powerful magnate, that's for sure.[no line break]";
@@ -4128,7 +4128,7 @@ check going nowhere in Notices Section:
 	if getaway is visible:
 		say "That'd be a cop-out, running away. You'd break Old Man Almond's heart, too. You probably want to go in and enter the gateway.";
 	otherwise:
-		say "You can't even remember the way you came through the thorns. And the gateway's right in front of you. You sense it's probably where you want to go.";
+		say "You can't even remember the way you came through the thickets. And the gateway's right in front of you. You sense it's probably where you want to go.";
 	the rule succeeds;
 
 section broad board
@@ -10106,7 +10106,9 @@ chapter lalaland
 
 [this region/room is for items that have been consumed, but we don't want to recycle them. It's easier to check if they're off-stage or in Lalaland than to define a boolean. Well, for me, anyway.]
 
-Lalaland is a room. "[bug-report] I have no idea how you got here. Definitely, let me know, so it doesn't happen to anyone else. This room should be inaccessible. Anything that appears here should be pretty much dealt with. Perhaps I could've used a boolean called dealt-with, but I didn't."
+Lalaland is a privately-named room. "[bug-report] I have no idea how you got here. Definitely, let me know, so it doesn't happen to anyone else. This room should be inaccessible. Anything that appears here should be pretty much dealt with. Perhaps I could've used a boolean called dealt-with, but I didn't."
+
+understand "lll" as lalaland when debug-state is true.
 
 instead of doing something in lalaland:
 	say "You probably need to undo things." instead;
@@ -10115,7 +10117,9 @@ chapter bullpen
 
 [used for the cask and sack to indicate they're not done-with yet]
 
-Bullpen is a room in LLL. "This is the bullpen. You should not see it."
+Bullpen is a privately-named room in LLL. "This is the bullpen. You should not see it."
+
+understand "bullpen" as bullpen when debug-state is true.
 
 teleporter is privately-named scenery in Bullpen. description is "this is just to signify that flipping an item makes a jump."
 
@@ -10140,14 +10144,14 @@ understand "magnet" and "a magnet" as a mistake ("[blurby][line break]") when ga
 
 understand "believe" as a mistake ("Yes, but what do you believe you can do?") when toga is visible.
 
-understand "gato" as a mistake ("Nice try, but wrong language[if toga is visible]. Another animal would be more likely to eat through the thorns[otherwise]. Plus, the goat's been through enough[end if].") when player is in thickets.
+understand "gato" as a mistake ("Nice try, but wrong language[if toga is visible]. Another animal would be more likely to eat through the thickets[otherwise]. Plus, the goat's been through enough[end if].") when player is in thickets.
 
 to say blurby:
 	if nametag is visible and location of player is notices section:
 		say "A magnet is two words--but 'a' doesn't fully count. It wouldn't be strong enough to pull the gate--you need someone to help you, not something, as the broad board says. You see red as you straing to think what or who the nametag should be. Maybe you've got it all wrong, but maybe that's a help.[run paragraph on]";
 		continue the action;
 	if nametag is visible and location of player is Dry Yard:
-		say "A magnet [if goat is visible]wouldn't have helped you[otherwise]won't help you[end if] get past the thorns[if goat is not visible]. Right idea, though. Wrong item[end if].[run paragraph on]";
+		say "A magnet [if goat is visible]wouldn't have helped you[otherwise]won't help you[end if] get past the thickets[if goat is not visible]. Right idea, though. Wrong item[end if].[run paragraph on]";
 		continue the action;
 	say "[reject][run paragraph on]";
 
@@ -10470,7 +10474,7 @@ after reading a command:
 			say "One button at a time, please." instead;
 	if goat is visible and toga is not visible:
 		if the player's command matches the regular expression "\bgoat\b":
-			say "[one of]It doesn't seem to realize it did anything for you. It's probably still confused. Probably irritable from eating all those big gigantic thorns. Don't fluster the restful[or]Don't fluster the restful[stopping].";
+			say "[one of]It doesn't seem to realize it did anything for you. It's probably still confused. Probably irritable from eating all those big gigantic thickets. Don't fluster the restful[or]Don't fluster the restful[stopping].";
 			reject the player's command;
 	if player is in elf row's flowers:
 		if the player's command matches the text "fairies":

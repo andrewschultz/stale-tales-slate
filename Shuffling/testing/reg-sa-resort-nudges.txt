@@ -1,0 +1,164 @@
+## reg-sa-resort-nudges.txt
+## nudges for Shuffling Around/resort: the big test
+##
+## nudgeleft.txt is the file to look for
+
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* resort nudges
+
+>resotr
+You don't want to change a region drastically while you're in it.
+
+>sadn
+The sand is just--well, sand. It won't help you get off the island.
+>thesadn
+The sand is just--well, sand. It won't help you get off the island.
+
+>tilse
+The tiles seem to shift a bit, but not enough.
+>tile
+You need to deal with all the tiles.
+>tilse
+
+>islte
+The island's sands don't shift, but there's more here than on the tiles.
+
+>eter
+The tree sits there, but the swing rocks a bit.
+
+>aftol
+You can just use either the cork or the wings to leave to the east
+
+>cork
+>aftol
+You have a way off this island to the east, though you can make the other for fun, too. Also, no need to make anything lo-fat here.
+
+>wings
+>eter
+The tree sits there.
+
+>e
+>loot
+ERROR
+>tolo
+Hm, no, the whole tool shed.
+>shed
+Hm, no, the whole tool shed.
+>asdeh
+A shed may provide shade, but you need a way up.
+
+
+>windwo
+They remain still. Maybe the toolshed itself.
+>windwos
+They remain still. Maybe the toolshed itself.
+
+>ulokc
+Nope. That lock's secure.
+>lokc
+Nope. That lock's secure.
+
+>pelo
+Only changing one pole would still leave a vertical barrier.
+>polse
+WRONG
+>slope
+>pelso
+WRONG
+
+>respo
+>ropes
+>repo
+Those are already useful.
+>respo
+WRONG
+
+>grisp
+WRONG
+>grips
+>pirg
+Those are already useful.
+
+>e
+>riotesr
+They're just a riot. You may lump them together for your purposes. It'll be for society's good.
+
+>peopel
+Perhaps it's best to keep it simple and cut down the riot.
+>hored
+Perhaps it's best to keep it simple and cut down the riot.
+>uprisesr
+Perhaps it's best to keep it simple and cut down the riot.
+
+>trio
+
+>protesters
+They're just a simple protest.
+
+>pottre
+Picking one person out of a crowd never works."
+
+>ether
+The trio remains unmoved. Perhaps you can give the protest more constructive aims?
+
+>potters
+
+>ether
+The trio remains unmoved. Perhaps you can get the potters something to work with?
+
+>chainlinks
+You're overthinking it. Or you hope you are. It's both a chain, and links.
+
+>ainch
+Hm, maybe you can do something with the chain. Or the links.
+
+>china
+
+>ainch
+The china's gone--see what you can do with the links.
+
+>getotu
+Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said.
+
+>get out
+
+>red
+Burdell's laugh echoes. 'You think you can change ME?!'
+>bull
+Burdell's laugh echoes. 'You think you can change ME?!'
+>burdell
+Burdell's laugh echoes. 'You think you can change ME?!'
+>boot
+The boot is already a little--modified. You can see its toe. Maybe that is a weakness.
+>toe
+But what to do with Red Bull Burdell's toe now that he's yelling GET OUT?
+>scar
+Now's not the time for cosmetic stuff!
+>crass
+Now's not the time for cosmetic stuff!
+>cutlery
+Red Bull Burdell laughs at your puny attempt. There's no weakness in the cutlery--maybe somewhere, or something, else?
+>tshirt
+You slur out a few consonants--maybe you should work with something closer, lower down.
+
+>e
+Roman Manor
+
+>roman
+You like your manor just fine now. No need to change it. It's just all the EXITS you don't want to worry about.
+>exits
+That's not quite the right sort of nothing.
+>marble
+[ennui].
+[ennui].
+>toaster
+[ennui].
+>hotspto
+[loc-rej].
+>woodland
+[loc-rej].
+
+################################################

@@ -3360,6 +3360,7 @@ blurb
 "'It's leet. I settle.'"
 "Jock-hate joke-chat."
 "'The jock joke? Tch.'"
+"'Knowing-now king? Wink Ngo!'"
 "'The latest! That's leet!'"
 "'Lean on one LAN? No, Neal!'"
 "'Leap-Tech: the PLACE!'"

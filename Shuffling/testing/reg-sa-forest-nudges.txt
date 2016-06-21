@@ -1,0 +1,267 @@
+## reg-sa-forest-nudges.txt
+## nudges for Shuffling Around/forest: the big test
+##
+
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* first-guider-test
+
+>gonear strip
+>purloin settler
+I'M GOING TO PUT THIS HERE TIL I TEST ALL THE WAYS TO MAKE THE DISGUISE
+
+>forest
+>sr ne
+>in
+>conifre
+[no-con].
+>conifesr
+[no-con].
+>forets
+[loc-rej].
+
+>norht
+[forest-no].
+
+>n
+>forets
+[loc-rej].
+>rets
+[loc-rej].
+
+>eta
+[forest-no]. Anyway, it doesn't smell like just one tea.
+>norht
+[forest-no].
+>eats
+[forest-no].
+>aroam
+[guider-content].
+>eats
+[forest-no].
+
+>leavse
+You have no time to play with leaves.
+
+>e
+Self-ID Fields
+>selfdi
+[loc-rej].
+>forets
+[reg-rej].
+
+* other-guider-test
+
+>gonear strip
+>purloin settler
+
+>forest
+>sr sw
+>in
+
+>ramblign
+[guider-content].
+>souht
+[forest-no].
+>s
+>whiff
+[guider-content].
+>wets
+[forest-no].
+>w
+Self-ID Fields
+
+>undeda
+[no-un].
+>undeasd
+[no-un].
+
+>e
+Sorted Trodes
+>storde
+You didn't need to do anything to store D in the strip, and you don't now--it'd be weird if store D fit in store F, anyway.
+
+>shell
+[in-sort of dashes].
+>buckte
+[in-sort of ones].
+>bubbel
+[in-sort of noughts].
+>eleyg
+The elegy doesn't need to be twisted any more.
+>tacsk
+[tack-heap].
+>takc
+[tack-heap].
+>notse
+The notes are just for reading.
+>stikc
+[vand-art].
+>figuer
+[vand-art].
+>figurse
+[vand-art].
+
+>turnstiel
+You don't need to do anything with the turnstile except get through it.
+
+>lien
+They're dead and not interfering with you.
+>lief
+They're dead and not interfering with you.
+>linefo
+They're dead and not interfering with you.
+
+#noughts/shotgun testing
+
+>naughst
+You [one of]start to get lost in thought, then notice[or]remember[stopping] it's nOughts, not nAughts.
+>zerso
+They're noughts, not zeros.
+>zerose
+They're noughts, not zeroes.
+>naugth
+[nau-zer-enuf].
+>naughst
+[nau-zer-enuf].
+>nougth
+There's more than one nought.
+>shotgun
+by one point
+>muzzel
+You don't want to mess the muzzle up. You can fire bullets through it, and that's good enough.
+
+>dashes
+>nose
+
+>w
+>w
+Stored, Er, Dots
+
+>storde
+You didn't need to do anything to store D in the strip, and you don't now--it'd be weird if store D fit in store F, anyway.
+
+>sandwihc
+It would be easier to just pick it apart.
+>canistre
+The canister is too solid[if canister is broken], despite being broken[end if].
+>grindre
+The grinder is too solid.
+>grni
+The ring does not bend.
+>hasm
+You think 'Hm, as...' but don't know what to do. Maybe that is just writing, and [if canister is broken]in any case, you broke the canister, anyway[else]you just put stuff in the canister[end if].
+
+>bleasd
+The blades, buried in the grinder, remain lifeless.
+>shefl
+The shelf is frozen that way. Ba dum bum.
+>dost
+The dots are really just ice. And you don't need ice or water.
+>meta
+[spec-meat].
+>meast
+[spec-meat].
+
+>open sandwich
+>beard
+>maps
+
+>livre
+[if chicken liver is in lalaland or cow liver is in lalaland]C'mon, you have it half right, don't futz with the remaining liver[else if chicken liver is not visible or cow liver is not visible]Your thoughts go to the other liver[else][bothlivers][end if].
+>chickne
+[bothlivers].
+>chickenlivre
+[bothlivers].
+>cowlivre
+[bothlivers].
+>cwo
+[bothlivers].
+
+>put beard on shades
+>put ones on shades
+
+>wear beard
+>e
+>n
+Cruel Ones' Enclosure
+>crule
+[loc-rej].
+>onse
+[loc-rej].
+>enclosuer
+[loc-rej].
+
+>cavenr
+Worry about the liches in front first.
+
+>chisel
+>s
+>w
+>peel liver
+>peel liver
+>put chicken in canister
+>put cow in canister
+
+>sliver
+>e
+>n
+>hasbeen
+
+>drapes
+>cut drapes
+>silver
+>cylindre
+It's the shape it should be. You don't need to make a key, or a charm.
+
+>put silver in shotgun
+
+>cloht
+No, the material of the [if spread is visible]spread[else]drapes[end if] isn't important, here.
+>doorwya
+You can just go through. You don't want it to change any more, really.
+
+>drapes
+
+>cut drapes
+
+>put silver in shotgun
+
+>n
+
+>slouhg
+[loc-rej].
+>marhs
+[marsh-lake].
+>laek
+[marsh-lake].
+
+>n
+>frost forts
+>frots
+[loc-rej].
+>snwo
+[froz-ha-ha].
+>icecpa
+[froz-ha-ha].
+>bumsp
+[froz-ha-ha].
+>slete
+[froz-ha-ha].
+>icde
+[froz-ha-ha].
+>iec
+[froz-ha-ha].
+
+>capitla
+You need to deal with all the capitals. And they're specific letters.
+>capitasl
+They aren't just any capitals. They're specific letters.
+>wolves
+>werewolvse
+They won't be changed with magic. Thankfully, you've got something more direct.
+>lupien
+They are the lupine lineup from your notes, but for your purpose, they're wolves.
+>shoot wolves

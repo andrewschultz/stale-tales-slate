@@ -8,6 +8,44 @@
 ** interpreter: /home/andrew/prt/glulxe -q
 
 * dirtest-general-intro
+#if point-cue is true
+>ption
+no secret cheat between NO TIP
+
+# if player has gadget
+>parse
+no inbetween for the PARSE
+
+>notepda
+You mess around with all the possibilities for a bit
+>doep
+You mess around with all the possibilities for a bit
+>tna
+You mess around with all the possibilities for a bit
+>toda
+If you changed the pen,
+>enp
+If you changed the pen,
+
+>northwets
+This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief.
+>northeats
+This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief.
+>southwets
+This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief.
+>southeats
+This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief.
+
+>donw
+This game usually doesn't require you to mess with cardinal directions
+>norht
+This game usually doesn't require you to mess with cardinal directions
+>souht
+This game usually doesn't require you to mess with cardinal directions
+>eats
+This game usually doesn't require you to mess with cardinal directions
+>wets
+This game usually doesn't require you to mess with cardinal directions
 
 >xyyzz
 A hollow voice booms
@@ -29,27 +67,19 @@ You're not fooling ME.
 >hekc
 You're not fooling ME.
 
->smell
+>smlle
 Your sense of smell doesn't change
 
 >writign
-do anything with writing besides EXAMINE
-
->pocktes
-You don't need to mess with your pockets.
+You don't need to do anything with writing besides EXAMINE or READ it for possible hints.
+>pockest
+You don't need to mess with your pockets
 >pockte
-You don't need to mess with your pockets.
+You don't need to mess with your pockets
+
 
 >jmpu
 impressively uncoordinated
-
-#if point-cue is true
->ption
-no scret cheat between NO TIP
-
-# if player has gadget
->parse
-no inbetween for the PARSE
 
 >verb
 There's no secret verb or verbs to find trying that
@@ -81,36 +111,142 @@ Meta-commands don't have any easter eggs, sadly
 >son
 Meta-commands don't have any easter eggs, sadly
 
->spaceon
+>psaceon
 Meta-commands don't have any easter eggs, sadly
 
->spaceson
+>psaceson
 Meta-commands don't have any easter eggs, sadly
 
->spaces
+>psaces
 Meta-commands don't have any easter eggs, sadly
 
->space
+>psace
 Meta-commands don't have any easter eggs, sadly
 
->access
+>accses
 Meta-commands don't have any easter eggs, sadly
 
->opts
+>opst
 Meta-commands don't have any easter eggs, sadly
 
->options
+>optiosn
 Meta-commands don't have any easter eggs, sadly
 
->version
+>versino
 Meta-commands don't have any easter eggs, sadly
 
->something
+>somethign
 Instead of messing with SOMETHING
 
->toda
-If you changed the pen,
+# gadget testing
 
->enp
-If you changed the pen,
+>purloin gadget
 
+>tightknto
+It's a bit too thick to mess with. Both because of the consonants, and, well...you don't need to remove the knot, anyway.
+>tigth
+It's a bit too thick to mess with. Both because of the consonants, and, well...you don't need to remove the knot, anyway.
+
+>tagged
+Bad idea to mess with electronics you don't understand.
+
+>lemno
+That's just an example, for CERTIFY.
+>paset
+That's just an example, for RECTIFY.
+
+>arrwo
+You don't need to mess with the gadget or any part of it. It's probably better not to try.
+>hosw
+You don't need to mess with the gadget or any part of it. It's probably better not to try.
+>blubr
+You don't need to mess with the gadget or any part of it. It's probably better not to try.
+>tga
+You don't need to mess with the gadget or any part of it. It's probably better not to try.
+>screne
+You don't need to mess with the gadget or any part of it. It's probably better not to try.
+>buttno
+You don't need to mess with the gadget or any part of it. It's probably better not to try.
+>handel
+You don't need to mess with the gadget or any part of it. It's probably better not to try.
+>exampel
+You don't need to mess with the gadget or any part of it. It's probably better not to try.
+>examplse
+You don't need to mess with the gadget or any part of it. It's probably better not to try.
+
+>certiyf
+There's no extra setting besides CERTIFY and RECTIFY.
+>secuer
+There's no extra setting besides SECURE, and you can't do anything besides RECUSE once you SECURE.
+
+>tpi
+You can just switch the gadget instead.
+
+# phail phial testing
+
+>purloin phail phial
+>angel
+WRONG
+
+>anleg
+There's nothing between ANGLE and GLEAN that you can do with the blue lube.
+
+>phila
+Bad idea to mess with chemical compounds you don't understand
+
+>bleu
+Bad idea to mess with chemical compounds you don't understand
+
+# prep paper testing
+
+>purloin prep paper
+
+>aprpe
+You can't really second-guess the help on the prep paper.
+>papesr
+You can't really second-guess the help on the prep paper.
+>prpe
+You can't really second-guess the help on the prep paper.
+>shete
+You can't really second-guess the help on the prep paper.
+>fimr
+FIMR is just a mnemonic for the places
+
+#
+# tinfoil testing
+
+>purloin tinfoil
+>tinfoli
+You can't change paranoid ramblings.
+
+#########################################change world state
+
+>gonear notices
+
+>yorpwadl
+You can't change Old Warpy. You have to just trust it
+
+>terry
+!RETRY
+
+>gonear trips strip
+
+>certify store f
+
+>pitno
+There's no secret cheat between NO TIP and POINT.
+
+>pares
+There's no inbetween for the PARSE and SPARE commands for the gadget.
+
+>yorpwadl
+You'll need to change Yorpwald one anagram at a time.
+
+>terry
+You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no.
+
+>fimr
+FIMR is just a mnemonic for the stores you need to explore, somehow.
+
+>forest
+FIMR is just a mnemonic for the stores you need to explore.

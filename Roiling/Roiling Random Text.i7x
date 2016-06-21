@@ -11331,6 +11331,7 @@ blurb	prio
 "Girl Code? Relic, Dog[r], by Eric Gold"
 "Girl, Do a Raid Log[r], by Ira Gold"
 "The Girl, Lighter[r], by Reg Hilt"
+"Girls of Log Firs[r], by [if player is male]Gil Fors[else]Lis Grof[end if]"
 "Give-All Village[r], by [if player is male]Gil Vela[else]Gail Lev[end if]" []
 "Give Away a Gay View[r], by Ivy Waage"
 "Give Link, Evil King[r], by Kevin Gil"
@@ -11711,6 +11712,7 @@ blurb	prio
 "Hope Mill, Poem Hill, Philomel[r], by Emil Pohl"
 "Hopelessness Lessons, Sheep[r], by Sponsel Hesse"
 "Hordes to the Doors[r], by [d-t] Shore"
+"Hormone, Honor Me, by Moe Horn"
 "Horncastle-Charleston Scholar Net[r], by Lance Short" []
 "Hornstein's Thorniness[r], by Nestor Shin"
 "Horridest Herd Riots[r], by [if player is male]Reid Short[else]Tish Doerr[end if]" []
@@ -12539,6 +12541,7 @@ blurb	prio
 "Low-Beg Web Log[r], by 'Bowleg' W. Goble"
 "Low Fares for Wales[r], by Wes Flora"
 "Low Grate: Waterlog[r], by Walt Gore"
+"Low Hands Shown, Lad[r], by Hal Downs"
 "Low Haters Heal Worst[r], by Theo Rawls-Showalter" []
 "Low, I Learn Orwellian[r], by Lola Erwin"
 "Low Rated Word Tale[r], by Rod Ewalt"
@@ -25201,6 +25204,7 @@ blurb
 "Boodler Robledo" []
 "Boozer Rebozo"
 "Boozing Biz-Goon Oz Gobin"
+"Boozy Boy Oz"
 "Bored Adah Broadhead"
 "Bored Ann Darbonne"
 "Bored Arlen Oberlander" []
@@ -31058,6 +31062,7 @@ blurb
 "Fie, Trash This Fear: Shift Era[r], by [if player is male]Seth Fair[else]Fae Hirst[end if]"
 "Flowering, Re-Flowing[r], by Inger Wolf" []
 "Follow Through: Ooh, Full Growth[r], by Thor Wolfghoul"
+"Fond Sure Founders: Four Dens[r], by Rod Funes"
 "Forge Yen of Energy[r], by Geno Frye"
 "Found it Fun? Do It[r], by Di Ufton" []
 "Freezing, Grief, Zen[r], by Inez Ferg"
