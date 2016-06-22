@@ -8168,7 +8168,7 @@ once-sad deacons	once-sad deacons	"holiest"	"holiest"	"The deacons shake their h
 ray eck	ray eck	"creaky"	"creaky"	"You hear a squeak from the keycar, then Ray Eck cringing and grabbing his leg. He spends some time complaining about various aches (don't worry, they're psychosomatic) and then about how he'd been ripped off purchasing stuff like the keycar before. Worried the keycar will sputter and die out here, he guides it home."	false	409615745	"creaky"
 pirates	pirates	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."	false	541160519	"pastier"
 old ice	old ice	"coiled"	"coiled"	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."	false	341000045	"coiled"
-denim	start tarts	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of start tarts in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, to keep the copse tidy. You take the tarts."	true	326810705	"mined"
+denim	Éclairs	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the ravages are, well, ravaged enough. You take the éclairs."	true	326810705	"mined"
 fissure	fissure	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."	false	582291393	"fussier"
 prison ropins	prison ropins	"unlocked"	"unlocked"	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."	false	522953692	"It already is. Dr. Yow is free."
 kid	kid	"attentive"	"attentive"	"[kid-full] snaps to attention. [he-she-c]'s more ready to learn, now."	false	788195264	"That'd be kind of schoolmarmish. [kid-first]'s ready to learn."
@@ -17426,7 +17426,7 @@ check opening prod:
 check dropping prod:
 	if word number 1 in the player's command is not "drop":
 		say "That's not the right way to abuse the prod to open it." instead;
-	try fliptoing prod instead;
+	try fliptoing prod instead; [??]
 
 the tubs are a plural-named thing in uaah. "Tubs lie here--two glued together by their tops--and perhaps there's something inside."
 
@@ -18283,22 +18283,6 @@ check going north in deposit:
 	if player does not have Rosetta Toaster and ray eck is not visible:
 		say "[one of]The Rosetta Toaster looks handy, you have to admit, looking back at it[or]You ignore the toaster, again[stopping].";
 
-section strudel
-
-the strudel is a LLPish reflexive hintpastry in Topside. "Some strudel sits here in a sled rut.". description is "It reminds you of stuff stolen from parents' cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
-
-a-text of strudel is "RYRRRYR". b-text of strudel is "RYRRRGR". parse-text of strudel is "x[sp]u[sp]x[sp]x[sp]x[sp]e[sp]x".
-
-check scaning strudel:
-	if strudel is reflexed:
-		say "You already rustled it." instead;
-	say "You don't suspect you need to do anything with the strudel, but the settler still pops something up. Maybe it'd be practice to figure how you could've taken it.";
-
-The sled rut is useless scenery in Topside. "It's flecked with red, oddly[if strudel is in Topside], and the strudel's still in it[else if strudel is reflexed], though you think you know why, now[end if]."
-
-check taking sled rut:
-	say "[if strudel is in Danger Garden]Maybe take the strudel instead[else]The sled rut is nothing and holds nothing[end if]." instead;
-
 section toaster
 
 The Rosetta Toaster is a container. It is in Topside Deposit. "A rosetta toaster rotates here."
@@ -18639,6 +18623,16 @@ after going somewhere (this is the duck-follows-you rule):
 	if duck was visible and duck is friendly:
 		say "The duck [one of]quacks along[or]waddles[or]trudges[or]schleps[in random order] behind you.";
 		move duck to location of player;
+	continue the action;
+
+chapter Éclairs
+
+a pack of Claire's Scalier Éclairs is a hintpastry. description is "To those who eat these scalier éclairs (O CALORIES,) much is clear. However, it is not recommended that you eat them cold."
+
+understand "eclair/eclairs" as Éclairs.
+
+after doing something with Éclairs:
+	set the pronoun them to Éclairs;
 	continue the action;
 
 chapter retapeing
@@ -19247,16 +19241,24 @@ Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I gu
 
 understand "slot" as a mistake ("If you made it, you might fall in the slot and never get out.") when player is in Lost Lots.
 
-a pack of Claire's Scalier Éclairs is a hintpastry in Lost Lots. description is "To those who eat these scalier éclairs (O CALORIES,) much is clear. However, it is not recommended that you eat them cold."
-
 check opening a hintpastry:
 	say "You can just try to [if player has toaster]TOAST or [end if]EAT that if you want." instead;
 
-understand "eclair/eclairs" as Éclairs.
+section strudel
 
-after doing something with Éclairs:
-	set the pronoun them to Éclairs;
-	continue the action;
+the strudel is a LLPish reflexive hintpastry in Lost Lots. "Some strudel sits here in a sled rut.". description is "It reminds you of stuff stolen from parents' cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
+
+a-text of strudel is "RYRRRYR". b-text of strudel is "RYRRRGR". parse-text of strudel is "x[sp]u[sp]x[sp]x[sp]x[sp]e[sp]x".
+
+check scaning strudel:
+	if strudel is reflexed:
+		say "You already rustled it." instead;
+	say "You don't suspect you need to do anything with the strudel, but the settler still pops something up. Maybe it'd be practice to figure how you could've taken it.";
+
+The sled rut is useless scenery in Topside. "It's flecked with red, oddly[if strudel is in Topside], and the strudel's still in it[else if strudel is reflexed], though you think you know why, now[end if]."
+
+check taking sled rut:
+	say "[if strudel is in Danger Garden]Maybe take the strudel instead[else]The sled rut is nothing and holds nothing[end if]." instead;
 
 chapter Outer Route
 

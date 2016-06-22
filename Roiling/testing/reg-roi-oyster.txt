@@ -1,319 +1,411 @@
 ###############################
 #
-#reg-roi-demo-dome.txt
+#reg-roi-oyster.txt
 #
-#regression test for trying ways through troves
+#regression test for trying ways through oyster
 #
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* cant-go
+* nudge-tries
 
->gonear strip
->demo dome mode
-For reasons of continuity
+* testing nudges
 
-* demo-nudges
+>gonear posh hops shop
+Posh Hops Shop
+>storye
+[not-the-reg].
+>pohs
+[locname].
+>tien
+Just one tine doesn't seem up to much.
+>troll
+Dealing with just one troll would cause the rest to call you a bully and beat you up. Gotta take [']em all, somehow.
+>recpa
+Casper glares at you, as if he knows you're thinking all his recaps are the same. No. You [if recaps are reflexive]need to deal[else]already dealt[end if] with them all.
+>patrosn
+[patron].
+>patrno
+[patron].
+>customre
+[patron].
+>customesr
+[patron].
+>tuen
+Eh, you know how jukeboxes are. One tune quashed, another pops up. Get rid of [']em all.
+>jra
+You suspect it's what's in the jar that's important.
+>spill
+You seem to be fumbling what to do with the pills.
+>scralw
+It's probably not just any scrawl. What the scrawl says may be important.
+>sign
+Hm, the sign doesn't strictly disallow THAT.
+>tumblre
+You can't pick out which tumbler to do something to. But you're annoyed by their tips.
+>stumblre
+Someone looks at you funny. 'What are you muttering?' [if tumblers are reflexed]You already spit, anyway[else]Maybe it's the writing on the tumblers, instead[end if].
+>jukebxo
+You can't change the jukebox. The bad music has seeped into it[if tunes are reflexive]. But maybe you can put it out of commission[else]. It's already out of commission for now[end if].
+>rempa
+You can't change the bad music selection. But you can neutralize it--the jukebox has instructions.
+>unste
+You can't change the bad music selection. But you can neutralize it--the jukebox has instructions.
+>unset
 
->demo dome
-Peek Keep
+>unste
+You can't change the bad music selection. You already got a temporary escape, and that should be good enough.
+
+>sing
+>spit
+>inset
+WRONG
 
 >undo
->demo dome
-Peek Keep
+>stroll
+Olde Lode
 
+>loed
+[locname].
+
+>caneo
+The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river.
+>hosre
+You give a few Er-ohs, oh-ers, Or Ehs. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats. [HERO'S SHORE]
+>heor
+You give an Er-oh, oh-er, or Eh. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats.
+>soka
+[raft-is].
+>oka
+[raft-is].
+>fihs
+T'fish won't shift nowt.
+>herrign
+Nothing doing. It is, after all, a RED herring. Ba dum bum.
+>sculptuer
+[sculpt].
+>cutl
+[sculpt].
+>supre
+[sculpt].
+>rivre
+[river-no].
+>rivear
+[river-no].
+>ora
+If you looked at just one oar, the raft would do no better than go in circles.
+>bota
+No one boat seems better than the others. Maybe you should widen your focus to all the boats.
+>interlockign
+Whoah, they're just oars. Think simpler. Much simpler.
+
+>bota
+WRONG
+>boast
+
+table of oyster nudges
+this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
+>freigth
+[locname].
+>crasy
+[no-cray].
+>crya
+[no-cray].
+>leap
+
+>angre
+[locname]. [ANGER RANGE]
+>piek
+[all-fish].
+>capr
+[all-fish].
+>tutro
+[if player is in range]Deal with the attackers, not the trout[else if wrap is off-stage]You try to describe how to fight, but that's not it[else]You can't find any other way to describe fighting[end if].
+
+>spike
+by a point
 >undo
->dome mode
-Peek Keep
+>scrap
 
->undo
->demo dome mode
-Peek Keep
+>hauntre
+Hmm, but how to dig up the haunter, without
 
->x me
-You look just fine.
+>e
+Lean Lane
+>lena
+[locname]. Lena and Neal do live here
+>cna
+Getting rid of one can would still leave a mess. Maybe you can deal with them all.
+>casn
+You glance at your settler, wondering what to do with the cans. Maybe you've overlooked something obvious.
+>eke
+You try to eke out an eek, but you only have one data point, and that's not enough.
 
->score
-There's no score in the Demo Dome. You just need to look around.
-from Peek Keep
+>seek
+Handsome Sand Home
 
->score
-!There's no score in the Demo Dome. You just need to look around.
-from Peek Keep
+>handsoem
+[locname].
+>hoem
+[locname-part].
+>sadn
+[locname-part].
+>rewadr
+[if wrap is off-stage]Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout[else]There's nothing else in the drawer and no way to get in by yourself[end if].
+>bubbel
+!It's just wrap, really.
+>bubblewrpa
+I!t's just wrap, really.
+>detn
+[if dent is in lalaland]You already fixed the dent. It's gone[else]That's not the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it[end if].
+>tuan
+She is a bit fussy, but she is more than okay as she is.
+>eta
+Quit playing with your food, already.
+>trya
+[just-tea].
+>teatrya
+[just-tea].
+>wiep
+It'd be easier to [if player has wipes]use them all[else]steal all the wipes[end if] at once. Pulling them out and so forth--tiring.
+>pealr
+The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit...
 
->s
-Are you sure you want to leave before looking at everything?
+>tutor
+>eat
+>bubbel
+It's just wrap, really.
+>bubblewrpa
+!t's just wrap, really.
 
->blather
-There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
+>swipe
+>w
+>n
 
->gerta
-It was tested to make sure even you couldn't magic it open.
+>plani
+'I...plan,' you think, then in a fit of confidence, 'I...PLANS!'
+>splani
+You feel like making a big speech about what you've done and what you plan to do, but not quite like that.
+>splain
+>splani
+You had your say.
+>plani
+You had your say.
 
->igns
-No need to mess with that helpful sign.
+>actesr
+Hmm, no, it[if crate is reflexed] was[else]'s[end if] only one crate at a time...
 
->unfold
-No need to mess with the helpful sign.
+>traec
+Yes, one more thing to do with the crate--you know where they're from, and you know what to do. Instinctively.
+>trace
+by one point
+>traec
+That won't quite help you figure where the crate is coming from.
+>react
+by one point
+>traec
+That's not something
 
->memoir
-No need to mess with the helpful sign.
+>actesr
+Hmm, no, it[if crate is reflexed] was[else]'s[end if] only one crate at a time...
 
->x entry
-UNFOLD OLD FUN, MEMOIR: I'M MORE.
+>rued
+It's not the rudeness[knob-skis].
+>doro
+It's not the doorness[knob-skis].
+>rudedoro
+It's not the whole[knob-skis].
+>brife
+[prob-ov].
+>messaeg
+[prob-ov].
+>intheer
+The words on the door don't change. They are just a generic taunt.
+>iks
+But you need to remove both skis.
+>sksi
+>rued
+It's not the rudeness[knob-skis].
+>doro
+It's not the doorness[knob-skis].
+>rudedoro
+It's not the whole[knob-skis].
 
->etrny
-No need to mess with the helpful sign.
+>opne
+[if door-sux is true]You already opened the door[else]The words 'Nope, peon!' sear into your brain. Perhaps it's a bit more complicated[end if].
+>doorknbo
+It's just a knob. Which thankfully cuts down the possibilities.
 
->dipslay
-!You won't figure the code
-
->x grate
-
->shlal
-You can't get near the shall halls, although you still have the nonmagical ability to change the future. Well, some day you will.
-
->turn dial
-The dial is out of reach.
-
->turn dial on
-The dial is out of reach.
-
->turn dial off
-The dial is out of reach.
-
->edom
-Museums are designed to be impassive and impermeable, for the most part. This is full of exhibits--your questing days are over.
-
->dipslay
-You won't figure the code. There isn't one. Muahaha.
-
->spy
-You won't figure the code. There isn't one. Muahaha.
-
->dial
-You won't figure the code. There isn't one. Muahaha.
-
->flesh
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->flashed
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->edgins
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->edgin
-This is a museum! No messing with the exhibits, please. Or trying to.
->talks
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->stalk
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->spec
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->space
-This is a museum! No messing with the exhibits, please. Or trying to.
+>debrsi
+You can't learn much from the debris. You're pretty sure it's from a crate.
+>fragmenst
+[if crate is reflexed]Not worth messing with the fragments[else]They're fragments of a crate--this may or may not help[end if].
+>shtu
+[if uaah is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the door[end if].
+>intheer
+You don't need to mess with the message on the rude door.
+>bokn
+That isn't quite the right way to hit the knob.
 
 >in
-Intel Inlet
+A Hut
 
->x calendar
->x calendar
->x calendar
->x calendar
->x calendar
->x calendar
->x calendar
->x calendar
->x calendar
->x calendar
->x calendar
->x calendar
->x calendar
->x calendar
-Final part
+>ahtu
+[locname]. [UH AT A HUT / AT, UH, A HUT]
+>htu
+[locname-part].
+>sweta
+The heaps are still technically waste, but you [if heaps are reflexive]may want to deal with them more delicately[else]beautified them enough[end if].
+>utb
+Clear ALL the tubs!
+>buts
+That didn't make anything go boom.
+>drpo
+You're juggling what to do with the prod, here.
+>lanec
+The lance is still itself[if lance is cleaned]--and you probably did enough cleaning it[else if player has wipes]--you can't figure how to apply the wipes[else]--but how to make it neater, now[end if].
 
->w
-You can only go outside here.
+>bust
+>drop prod
 
->eltin
-You don't need to flip anything here, really. Certainly not a room.
+>diggre
+It's what it needs to be, you imagine.
 
->careladn
-These are documents of historical records! Revisionism is so Elvira.
+>out
+>shtu
+You found the hut you needed to.
 
->thessi
-These are documents of historical records! Revisionism is so Elvira.
-
->n
-Hows Show
-
->x wall
-Which do you mean, the owl-decal code wall or the allow-lots-tools wall?
-
->sllaw
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->wall
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->owl
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->decal
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->allow
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->lots
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->tools
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->allowlots
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->x code wall
->g
->g
->g
->g
->g
->g
->g
-NOTE: you've read all the way through
-
->x tools wall
-You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. But not a lot.
-
->g
->g
->g
->g
->g
->g
->g
->g
->g
->g
->g
->g
-NOTE: you've read all the way through
-
->w
-You can only go south here.
+>sweat
+>shape
+>clean
+>get lance
 
 >s
+>w
+
+>reacsh
+[if a-s is reflexed]You did enough with the arches[else]That's not quite what to do with the arches[end if]. [ACHERS' ARCHES]
+>hedrno
+You'll probably need to destroy the hedron from within.
+>arhc
+[ache-plur].
+>achre
+[ache-plur].
+>sardien
+The sardine gives you a weird look, as if you need to stop mumbling. You're not sure you can do anything to him directly.
+
+>warp
+>search
+>enlarge
+>n
+Horned Hedron
+
+>hedrno
+[locname].
+>thesse
+The hedron's spirit will remain intact even if you meddle there. You must go into its heart.
+>thees
+It'd be fun to rip up even one, but it'd be worse if you got caught. Take down the hedron, instead.
+>tapr
+You think of changing the trap--maybe even a tarp! But maybe the trap IS a tarp that enfolds you. Scary. No, thinking of it as an ol['] trap would make it less intimidating.
+>walleey
+Just tacking one walleye won't change the crowd. They're past redemption, anyway.
+>walleyse
+The walleyes are a bad crowd, past redemption.
 
 >w
-Ned's Dens
+>bury ruby
 
->read chronicle
->g
->g
->g
->g
->g
->g
->g
->g
->g
->g
->g
->g
->g
->g
-Another thought reads: Finally, I'm just grateful I had so much fun exploring so many alleys and polishing so many odd things. I hope you had even half as much fun playing as I did writing the Stale Tales Slate.
+>collapsde
+[locname].
+>odl
+[locname-part].
+>placse
+[locname-part].
+>buyr
+That's not quite it. You file that idea six feet under.
+>hitn
+The thin hint doesn't reveal anything else.
 
-That's the end of the Chronicle. You can read it again, if you want.
+>e
+>s
+>e
+>unearht
+dig up the haunter, now that
+>unearth
+>unearht
+The haunter needs to be dealt with otherwise.
+>howlre
+Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE.
 
->icch
-You can't change the book's writing. Well, you could, I guess. But this is a museum!
+>assuaeg
+WRONG
+>assuage
+>assuaeg
+Don't oversell it! Just take the haunter to where it was probably the walleyes who buried the ruby.
+>howlre
+WRONG
 
->ernol
-You can't change the book's writing. Well, you could, I guess. But this is a museum!
+>ask haunter about ruby
+>w
+>n
+>w
 
->chronicle
-You can't change the book's writing. Well, you could, I guess. But this is a museum!
+>e
+>patrol
+>in
 
->edns
-You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one!
+End Den
+>out
+>enlarge
+by one point
+>x gleaner
 
-Evoc-Cove
-A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want.
+>in
+>scumatn
+[locname]. [SCUM ANT SANCTUM]
+>scmu
+The ant may be scum, but, well, it's DEFINITELY an ant.
 
->rr
-Page 1:
-Page 10:
+>tan
 
->rr
-Page 11:
-Page 21:
+>tenfodl
+[locname]. [DEN LOFT]
+>lotf
+[locname-part].
+>dne
+[locname-part].
+>jumbel
+It's the words on the jumble you need to mess with. With which you need to mess[if yapper is in den loft]. Well, once the yapper's out of the way[end if].
+>papeyr
+'Quit yer mumblin, ya perp!' the yapper yells, turning red. 'You here to do business or not?'
+>redila
+The yapper might alert his cronies if you try anything. Even something not quite right, like that.
+>stupdi
+[its-msg].
+>papre
+[its-msg].
+>necklaec
+[its-msg].
+>intercmo
+[i-com].
+>nto
+Changing the intercom to a ton-crime intercom would be the opposite of what you want to do.
+>criem
+[i-com].
 
->rr
-Page 23:
-Page 32:
+>prepay
+>derali
+WRONG
+>derail
+>pull lever
+>revle
+WRONG
+>revel
+>revle
+WRONG
+>derali
+WRONG
+>derail
 
->rr
-Page 33:
-Page 43:
-
->rr
-Page 44:
-Page 53:
-
->rr
-Page 54:
-Page 64:
-
->rr
-Page 65:
-Page 75:
-
->rr
-Page 76:
-Page 85:
-
->rr
-Page 87:
-Page 97:
-
->rr
-Page 100:
-Well, that's all. Hooray for speed-reading.
-
->evco
-You don't need to flip anything here, really. Certainly not a room.
-
->tifler
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->palcer
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->rudest
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->dupstan
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->larded
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->sclipat
-This is a museum! No messing with the exhibits, please. Or trying to.
-
->spears
-You don't need to flip anything here, really. Certainly not a room.
-
->ublk
-Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that.
-
->score
-It looks like you've looked through everything. Thanks for all the time you spent, and I hope it was worth it!
