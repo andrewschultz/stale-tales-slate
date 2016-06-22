@@ -1880,6 +1880,17 @@ before exiting:
 	if player is in Centrifuge and centrifuge-stopped is false:
 		try going west instead;
 
+chapter don't get a rifle
+
+understand "rifle" as a mistake ("No need for violence here!") when got-flier.
+
+to decide whether got-flier:
+	if player is in trips strip:
+		decide yes;
+	if player has arena dig or player has expo flier:
+		decide yes;
+	decide no;
+
 chapter sing-wave-jump-sleep-show
 
 the block showing rule is not listed in any rulebook.
@@ -5680,9 +5691,6 @@ to say vis-hint:
 to say nuthers:
 	unless stew is off-stage or teas are off-stage:
 		say "nother";
-
-check taking the thorn:
-	say "But it'd start poking you as you carried it around once you moved...whatever direction you need to." instead;
 
 section guiders
 

@@ -4398,6 +4398,7 @@ blurb	fave
 "Fallen Star, Flat Learns[r], by [if player is male]Stan Farell[else]Fran Stella[end if]"	false
 "Fame Rises, Seems Fair[r], by Sam Friese"	true
 "A Fly Debut...BY DEFAULT[r], by Fleta Duby"	false
+"A Fossil Fails So[r], by Flo Issa"	false
 "Gawd, S'More Word Games[r], by [if player is male]Drew Gamos[else]Margo Dews[end if]"	false
 "A Genius in Usage[r], by Gina-Sue Seguain"	true
 "Go, O. G., Go[r], by Og G. Goo"	true
@@ -10521,6 +10522,7 @@ blurb	prio
 "Darer Mutiny: Rudimentary Unity Marred[r], by Terri Munday"
 "Dares-Arsed Radar Seeds[r], by Drea Saders"
 "Daring a Grind[r], by Girard Dannig" []
+"Dark Blue Bark Duel[r], by Luke Bard"
 "Dark Corner, Rank Record, Crank Order[r], by Rand Rocker"
 "Dark Shadow: Wah, Sad Dork[r], by Dash Dworak"
 "Dark Son Drank So[r], by Don Sark"
