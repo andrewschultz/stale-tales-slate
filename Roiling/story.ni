@@ -1893,7 +1893,7 @@ sardine	"[one of]The sardine spends time babbling about his sensitive hearing, s
 walleyes	"Now's not the time to upbraid baddies for being bad. Sneak past them instead."
 yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what.' He winks."
 smart kid	"'I like gadgets and building things! [if bot boat is not off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
-pester'n serpent	"The serpent ."
+pester'n serpent	"The serpent has nothing to say."
 inapt paint	--
 muscly hulk	--
 deacons	--
@@ -2269,7 +2269,9 @@ yapper	sardine	"'Pft, foot soldiers, working for mere salary.'"
 yapper	walleyes	"'Pft, foot soldiers, working for mere salary.'"
 yapper	Casper	"'Too much violence in his books, not enough money making.'"
 yapper	Elvira	"'She's called on the dialer a few times.'"
-salesmen	Nerd-Aid	"The salesmen [one of]are more than happy to talk about Nerd-Aid. They're not nerdy themselves, but they just want to HELP people, because yay tolerance. They [or][stopping]mention [one of]it's much better than that red Rind-Ade, and if you ask again, they'll tell you who endorses Nerd-Aid[or][endorse-aid][cycling]." [start TOWERS]
+Ray Eck	start tarts	"'Not mine.'" [start TOWERS]
+Ray Eck	toaster	"'Not nearly as sophisticated as my keycar.'"
+salesmen	Nerd-Aid	"The salesmen [one of]are more than happy to talk about Nerd-Aid. They're not nerdy themselves, but they just want to HELP people, because yay tolerance. They [or][stopping]mention [one of]it's much better than that red Rind-Ade, and if you ask again, they'll tell you who endorses Nerd-Aid[or][endorse-aid][cycling]."
 kid	Dr Yow	"[if kid is lonely and Dr Yow is in ropins]'I heard [he-she] was imprisoned. But I'd love to learn from [him-her].'[else if kid is lonely][one of]'Wow! You rescued [him-her]? You're almost as awesome as [he-she] is!' [kid-fol][or]'Tell me something I don't know. Or get Dr. Yow to. No offense'[stopping][else if kid is following]'I wanna see Dr. Yow!'[else][he-she-c]'s zoned you out, what with Dr. Yow [around-gone].[end if]"
 kid	bot boat	"'Man, I'm learning to build stuff! [if bot boat are off-stage]Like a bot boat! [end if]But I need someone to try them.'"
 kid	keycar	"'I'd love to make one of them! But that man said I wasn't grown up enough.'"
@@ -5667,7 +5669,7 @@ carry out towers-hinting:
 	if player is in trefoil:
 		try objhinting h-w instead;
 	if scope copse is unvisited:
-		all-say "You can just go north[if strudel is reflexive], though you can hint the strudel if you want[end if]." instead;
+		all-say "You can just go north[if tarts are reflexive], though you can hint the tarts and toaster if you want[end if]." instead;
 	if ravages is unvisited:
 		all-say "There's an important location in the center of the Bland Sad Badlands, [to-center] of here. You'll want to [if ravages is accessible]go[else]make a path[end if] there." instead;
 	if raves saver is in ravages or ragged dagger is in ravages:
@@ -8156,7 +8158,7 @@ raves saver	raves saver	"pearly"	"pearly"	"The saver shines a bit, then goes bac
 oddly rewired robot	oddly rewired robot	"weirder/wierder"	"weirder"	"[if-wierd]The oddly rewired robot, once so proud of how it conformed to standards, now finds reason to believe it is weirder. Being weird, it can no longer move wider. 'Battery...try...beat.' It begins to melt--mottle--until it looks abysmal, almost balsamy, as it cries 'Sob, a true saboteur' slinking away in shame at its crossed Wiser-Wires."	false	600216532	"weirder"
 iPrune	iPrune	"punier"	"punier"	"Instead of being worried about how much the iPrune would block you when full-grown, you wonder about if it were the size of a normal banana. It works. The iPrune kicks you ineffectually as you walk past, then runs and hides in embarrassment."	false	513602032	"punier"
 nameless salesmen	nameless salesmen	"drained"	"drained"	"You think you've got it, how to troll their latest sales pitches. 'I'm a busy adventurer!' you shout. 'I don't have time for this! Sales? Ew! Weasels!' The right facial expressions, and you have them totally confused and beat, too drained to go on, physically and mentally.[paragraph break]What's more, the Nerd-Aid bottles themselves are drained! (Don't worry, they were really just sugar water.) You insult the salesmen's clothes as a coup de grace before they leave for good. They cry 'Gad! Upset! Upstaged!'"	false	371276262	"drained"
-strudel	strudel	"rustled"	"rustled"	"You manage to take the strudel without obviously reaching for it[if ray eck is in topside], avoiding any comments from Ray Eck in the process[end if]. Go, you."	false	592462631	"You'd have to drop it on the ground and get it germy to try that again. Eww."
+strudel	strudel	"rustled"	"rustled"	"You manage to take the strudel without obviously reaching for it. This makes no practical difference but makes you feel smoother. Go, you."	false	592462631	"You'd have to drop it on the ground and get it germy to try that again. Eww."
 an admirer	an admirer	"married" or "mardier"	"married"	"[response-based]. You're slapped sidearm for having misread them, but you're spared spouse opuses."	false	430738621	"married"
 natives	natives	"vainest" or "naivest"	"naivest"	"[vain-naiv]. Now that the natives have moved on, you can go south."	false	550443085	"The natives should be gone."
 neural pulses	neural pulses	"unreal" or "pluses"	"unreal"	"[if-plus]"	false	443144884	"unreal"
@@ -18283,6 +18285,8 @@ check going north in deposit:
 	if player does not have Rosetta Toaster and ray eck is not visible:
 		say "[one of]The Rosetta Toaster looks handy, you have to admit, looking back at it[or]You ignore the toaster, again[stopping].";
 
+the pack of start tarts is a hintpastry in Topside Deposit. description is "They are a mystery flavor. They're that breakfast pastry with goo on the inside that everyone eats but nobody admits to, or particularly likes. You remember they taste gross cold but help get your day started with a good strat. You can probably eat them whenever, though.". "A pack of start tarts lies here."
+
 section toaster
 
 The Rosetta Toaster is a container. It is in Topside Deposit. "A rosetta toaster rotates here."
@@ -18346,8 +18350,6 @@ instead of taking spec-o-scope:
 
 instead of searching spec-o-scope:
 	try examining spec-o-scope;
-
-the pack of start tarts is a hintpastry. description is "They are a mystery flavor. They're that breakfast pastry with goo on the inside that everyone eats but nobody admits to, or particularly likes. You remember they taste gross cold but help get your day started with a good strat. You can probably eat them whenever, though.". "A pack of start tarts lies here where the denim was mined."
 
 understand "copes" as a mistake ("You find it easier to cope, here, with the spec-o-scope to guide you, but you need to move on.") when player is in scope copse.
 
@@ -19246,7 +19248,7 @@ check opening a hintpastry:
 
 section strudel
 
-the strudel is a LLPish reflexive hintpastry in Lost Lots. "Some strudel sits here in a sled rut.". description is "It reminds you of stuff stolen from parents' cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
+the strudel is a LLPish reflexive hintpastry in Lost Lots. "Some strudel sits here in a sled rut[one of]. Whoever lost it probably forgot it[or][stopping].". description is "It reminds you of stuff stolen from parents' cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
 
 a-text of strudel is "RYRRRYR". b-text of strudel is "RYRRRGR". parse-text of strudel is "x[sp]u[sp]x[sp]x[sp]x[sp]e[sp]x".
 
@@ -19255,10 +19257,10 @@ check scaning strudel:
 		say "You already rustled it." instead;
 	say "You don't suspect you need to do anything with the strudel, but the settler still pops something up. Maybe it'd be practice to figure how you could've taken it.";
 
-The sled rut is useless scenery in Topside. "It's flecked with red, oddly[if strudel is in Topside], and the strudel's still in it[else if strudel is reflexed], though you think you know why, now[end if]."
+The sled rut is useless scenery in Lost Lots. "It's flecked with red, oddly[if strudel is in Lost Lots], and the strudel's still in it[else if strudel is reflexed], though you think you know why, now[end if]."
 
 check taking sled rut:
-	say "[if strudel is in Danger Garden]Maybe take the strudel instead[else]The sled rut is nothing and holds nothing[end if]." instead;
+	say "[if strudel is in Lost Lots]Maybe take the strudel instead[else]The sled rut is nothing and holds nothing[end if]." instead;
 
 chapter Outer Route
 
@@ -19829,8 +19831,8 @@ chapter guardian stubs
 report taking in Topside:
 	if noun is toaster:
 		say "[if Ray Eck is in topside]'A neat gadget. But not as fun as my keycar.'[else]You won a free toaster once, in a raffle. But getting this toaster feels cooler.[end if]";
-	else if noun is strudel and ray eck is in topside:
-		say "Ray Eck babbles on about how that food's been on the ground, even if it's been in a wrapper, and it probably has all these preservatives, and if it didn't it's probably even worse for you. You sort of wish you could've snuck it without him noticing.";
+	else if noun is tarts and ray eck is in topside:
+		say "Ray Eck babbles on about how that food's been on the ground, even if it's been in a wrapper, and it probably has all these preservatives. But he's not stopping you taking it!";
 	else:
 		say "[if number of visible guardians > 0]The [random visible Guardian] can't resist eye-rolling when you pick up something seemingly so worthless.[else][one of]Even though no one is watching, you still feel a bit silly taking something this goofy.[or]What the heck, free [foods of noun] is free [foods of noun].[stopping][end if]";
 	the rule succeeds;
@@ -27353,6 +27355,10 @@ carry out gzing:
 		increment cur-score of towers;
 	now min-score of towers is 31;
 	if strudel is reflexed:
+		increment min-score of towers;
+	if old ice is reflexed:
+		increment min-score of towers;
+	if neural pulses are reflexed:
 		increment min-score of towers;
 
 chapter diing

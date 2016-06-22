@@ -136,6 +136,9 @@ up by one point
 >seed 5
 >gonear trefoil
 
+>trefoli
+[towersloc].
+
 >terranec
 Terrance shakes his head, but a glare from Rodney sets him straight--for now.
 >terrance
@@ -202,6 +205,22 @@ by one point
 
 Topside Deposit
 
+>deposti
+[towersloc].
+
+>flowerpto
+[flow-fine].
+>flowre
+[flow-fine].
+>pto
+[flow-fine].
+>profo
+[flow-fine].
+>wetl
+[flow-fine].
+>oldhta
+You don't have time to think about, or change, Old Hat Daltho. [if crocus is in lalaland]You got his present to his friend[else if ed yerg is reflexed]. You've found his friend and made him happy[else if solo den is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he sent the gift to, anyway[end if].
+
 >ary
 You can't do much with either part of Ray's name. Plus he has that keycar.
 
@@ -209,13 +228,17 @@ You can't do much with either part of Ray's name. Plus he has that keycar.
 You can't do much with either part of Ray's name. Plus he has that keycar.
 
 >creaky
->sled
-NONTRIVIAL REJECT
->rut
-NONTRIVIAL REJECT
 
->toaster
+>toastre
 It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it.
+
+>get toaster
+>get tarts
+
+>statr
+[eat-pastry].
+>tatr
+[not-singular-hp].
 
 >n
 Scope Copse
@@ -223,7 +246,7 @@ Scope Copse
 >spoce
 The copse and the scope are both fine as-is, though maybe you can do something about the yurts.
 
->spec
+>spce
 The copse and the scope are both fine as-is, though maybe you can do something about the yurts.
 
 >rutys
@@ -250,6 +273,11 @@ The pastry is for eating, not for changing. It might be more edible if you heate
 >brownie
 Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
 
+>oddyl
+[odd-rob].
+>robto
+[odd-rob].
+
 >weirdre
 The robot almost looked a bit odd there for a moment.
 
@@ -262,7 +290,18 @@ Campiest Campsite
 >campsiet
 Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
 
+>leavse
+[fun-leaves].
+>deadleavse
+[fun-leaves].
+>deda
+[fun-leaves].
+
 >rapire
+The machine is complicated enough. You probably just need to figure what to put in it.
+>machien
+The machine is complicated enough. You probably just need to figure what to put in it.
+>shiyn
 The machine is complicated enough. You probably just need to figure what to put in it.
 
 >camp
@@ -274,36 +313,555 @@ Gosh! The campsite's about as swell as can be, as is. No need to rearrange anyth
 >campsiet
 Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
 
+>e
+>clymus
+WRONG
+>hukl
+You make some helpless-sounding noises, trying to form a sensible word. The hulk looks slightly annoyed, but completely--and rightfully--unworried. As Daltho said, four letters would be too simple.
+>musclyhukl
+You wrack your brain but quickly get the sense you're over-thinking how to ju-jitsu the hulk's strength.
+>muscly
+
+>dinre
+[plutry of diners]There's more than one diner blocking you.
+
+
+>n
+Baldest Blasted Saltbed
+
+>baldets
+[towersloc].
+
+>clfif
+The cliff remains motionless. Perhaps it's useful, after all, to block off some ways to go. This area looks big enough.
+
+>piraet
+[plutry of pirates]Changing just one pirate would not, you sense, do much. It might even ostracize him among his peers. Perhaps there's a way to deal with the lot of them. By adding an s.
+
+>old
+WRONG
+>ice
+WRONG
+
+>pruen
+It's officially an iPrune, not a prune.
+
+>ipruen
+WRONG
+>iprune
+
+>n
+Anemic Cinema
+
+>cineam
+[towersloc].
+
+>thearet
+You don't need to go looking for screens to stare at right now. You have a world to save.
+
+>wati
+[wait-see].
+>sere
+[wait-see].
+>waitsere
+WRONG
+>sweatier
+
+>angstire
+WRONG
+>ingraet
+[plutry of ingrates]There's more than one ingrate blocking you.
 >angstier
+
 >w
 Outer Route
->outre
-It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
->loaves
-The pastry is for eating, not for changing. It might be more edible if you heated it up, though.
+>ditr
+[out-rou].
+>trali
+[out-rou].
 
->solve
-The pastry is for eating, not for changing. It might be more edible if you heated it up, though.
+>outer
+[towersloc].
+>solev
+[eat-pastry].
+>loavse
+[eat-pastry].
+>lofa
+[not-singular-hp].
+>ditr
+[out-rou].
+>trali
+[out-rou].
 
->vainest
-[Your score has just gone up by one point.]
+>e
+
+>admirre
+WRONG
+
+>rampatn
+No, just an admirer, really.
+
+>womantrpa
+That's not something
+>gs
+>womantrpa
+No, just an admirer, really.
+>gs
+
+>married
+by one point
 >undo
->naivest
-[Your score has just gone up by one point.]
->s
-Lots Lots
->tol
-It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+>mardier
+by one point
 
->tols
-It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+>n
+
+Shaven Havens
+>shavne
+[towersloc].
+>havne
+[towersloc].
+
+>idtga
+ID tag: dig at it? Gad.
+>dukc
+It's not just any duck. [if duck is returned]But it's served its purpose[else]It's a LONE duck[end if].
+>unlockde
+The lone duck looks around for something to do but can't find anything. Well, not here. And not like that.
+>loen
+It's not just any lone animal. It's a lone DUCK.
+
+>s
+>e
+Salted Deltas
+
+>saltde
+[towersloc].
+>delat
+[towersloc].
+
+>shoasl
+[shoaly].
+>shola
+[shoaly].
+
+>atheits
+Changing only one atheist would only help you so long. The rest would restore their companion's (lack of) faith shortly.
+
+>lima
+[grail-name].
+>ganr
+[grail-name].
+
+>grailmna
+WRONG
+>grailman
+>s
+
+Savager Ravages
+>ravagse
+This is a weird place, being at the crossroads, but better to [if number of visible guardians is 0 and weeds are in lalaland and denim is in lalaland]mess around elsewhere[else if weeds are visible]get rid of the weeds[else if number of visible guardians > 0]tackle a guardian[else if denim is visible]see if you can get rid of the denim[end if].
+>ravaeg
+[towersloc] [SAVAGER RAVAGES 2 2]
+
+>wede
+Gumming up one weed wouldn't get the others.
+
+>sweed
+WRONG
+
+>sewed
+>medin
+WRONG
+>mined
+
 >eclair
 Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
 
 >eclairs
 The pastry is for eating, not for changing. It might be more edible if you heated it up, though.
 
+>retaep
+The raves saver has limited functionality, alas.
+>buttosn
+The raves saver's minimal capabilities are enough...just...
+>buttno
+The raves saver's minimal capabilities are enough...just...
+>saev
+[no-fril].
+>savre
+[no-fril].
+>recordre
+[no-fril].
+>taep
+[no-fril].
+>playre
+[if raves saver is reflexed]It's as bright as it'll get[else]Hm, the 'replay player' letters whiten a bit, but nothing definitive[end if].
+
+>pearly
+by one point
+
+>denmi
+You scrape at the denim fragments and wonder if there is any magic in dem. Well, not the way you thought it, apparently.
+>reesd
+[reed-ale].
+>rede
+[reed-ale].
+>ael
+[reed-ale].
+>reedael
+[reed-ale].
+
+>reedsael
+WRONG
+>resealed
+WRONG-1
+by one point
+>undo
+>released
+WRONG-2
+by one point
+
+>costuem
+You fail to cut some from the costume. Maybe it's more what the costume advertises--REED'S ALE.
+>daggre
+You feel no energy from the dagger. Perhaps it needs to be repaired mechanically.
+
+>tapni
+It won't be such a tap-in to nip at, sadly. Daltho's advice comes back: nobody will be easier than Rodney.
+
+>himsefl
+WRONG
+>himself
+
+>s
+Unblest Sunbelt
+
+>nameless
+The salesmen laugh at the sheer [i]lameness[r] of what you're saying, or trying to say, or whatever. Compared to you, their maleness, talk--and clothes--are clearly [i]dandier[r].[paragraph break]Or maybe they're just too unimaginative to be affected by any of your nonsense powers. Well, directly.
+>salesmna
+Picking off one salesman would just make the others work harder for their commission. And it's not doable, anyway. If you got rid of their product, they might stop pestering you.
+>shirst
+The shirts were built to resist the most direct of manipulations. Perhaps you can work on the salesmen themselves. Because the shirts do make them look dandier.
+>casn
+[nerd-a].
+>nedr
+[nerd-a].
+>adi
+[nerd-a].
+>weasr
+You suppress a swear as the sales pitch wears on you.
+>bottlse
+They're not just bottles! They're bottles of NERD-AID!
+
+>salesmne
+WRONG
+>salesmen
+
+>unblets
+[towersloc].
+
+>neuralpulsse
+Man, biochemistry's way complex. Complex isomers and such are worse than anagrams! You may be more successful breaking the neural pulses down into components.
+
+>e
+
+Danger Garden
+
+>gandre
+[towersloc].
+
+>organizde
+Nothing seems to happen. Then you remember organized can be spelled with an s and not a z.
+>eog
+[ego-dr].
+>draisn
+[ego-dr]. Plus, if they were boring old drains, you could just step around them.
+>egodrani
+[ego-dr].
+>drani
+[ego-dr]. Plus, if it was a boring old drain, you could just step around.
+
+>organisde
+WRONG
+>organised
+by one point
+
+>geees
+That's not a
+
+>bonkre
+WRONG
+>bonker
+
+>geees
+The geese are fine as they are. They're just there for scenery, and stuff.
+
+>natiev
+[plutry of natives]You'll need to deal with more than one native to make your way south.
+
+>vainest
+[Your score has just gone up by one point.]
+>undo
+>naivest
+[Your score has just gone up by one point.]
+
+
+>s
+Lost Lots
+>tol
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+
+>tols
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+
+>sled
+NONTRIVIAL REJECT
+>rut
+NONTRIVIAL REJECT
+>rustlde
+REJECT
+>rustled
+by a point
+>rustlde
+WRONG
+
+>n
+Gander Garden
+
+>n
+Ole Shrine Shoreline
+
+>shorelien
+[towersloc].
+
+>deacno
+[plutry of deacons]There's more than one deacon blocking you.
+>deacosn
+The deacons mumble to themselves, and you catch 'Lo! Is the...?' / 'Toils, eh.' and your calling upon supernatural powers that clearly don't exist. You feel devoid of can-does after your latest attempt, mumbling 'Eh, I lost.'[paragraph break]You get the sense the deacons have given you the run-around. They're not going to discuss their hostile ol['] heist around you[if deacons are ncscanned]--but maybe you can muddle through the odd readings from the settler[end if].
+>shrien
+The shrine is kind of sacred, and regardless of what you think of the deacons['] religion, messing with it would be a mean move.
+
+>holiets
+WRONG
+>holiest
+>n
+
+>actionless
+[towersloc].
+>coastlien
+[towersloc].
+>dirk stma
+The kid looks at you curiously. You probably don't need to change [his-her] name or intelligence.
+>smatr
+[smart-kid-no].
+>kdi
+[smart-kid-no].
+
+>dikr
+[smart-kid-no].
+>stma
+[smart-kid-no].
+
+>gs
+>kmi
+[smart-kid-no].
+>darts
+[smart-kid-no].
+
+>s
+>s
+>e
+Obscurest Subsector
+
+>obscurets
+[towersloc].
+
+>glo
+[if fissure is visible]The gaol is too sturdy to defeated by a three-word combination. Or a four-word one[else]You opened the gaol, and there's not much else to do with it[end if].
+>galo
+The gaol is too much. It's built to resist you, and unlike the curst palace far away, it was never built to be something nicer.
+>loggalo
+Nah, you're pretty sure you're overthinking things now. You [if duck is returned]opened[else]may want to open[end if] the prison.
+>jali
+It's not just any jail--but prison ropins.
+>ropni
+[no-ropin].
+>ropisn
+[no-ropin].
+>lockde
+Nothing needs to be locked here, certainly not the gaol which [if doc-y is in ropins]already is[else]you unlocked[end if].
+>ywo
+[he-she-c]'s a doctor! Have some respect when you try to scramble [him-her] up.
+>doctro
+That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean.
+>woryd
+Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if doc-y has been rowdy and doc-y has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if doc-y has not been rowdy and doc-y has not been wordy]--but [he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if].
+
+>wordy
+>push retape
+>gt lone duck
+>push repeat
+>gt yow
+>unlocked
+by one point
+>w
+>n
+>n
+
+>ask kid about yow
+>s
+>s
+>e
+
+>tentatiev
+The kid fidgets a bit but can't keep focused, though [he-she] wants to.
+
+>rowdy
+>attentive
+
+>gt campsite
+>gt coastlines
+
+>gizom
+[giz-tex].
+>zogm
+[giz-tex].
+
+>give gizmo to kid
+
+>turob
+You [if turbos are reflexed]already dealt[else]need to deal[end if] with both turbos.
+>bto
+[fix-boat-parts].
+>bota
+[fix-boat-parts].
+>boatbto
+[fix-boat-parts].
+
+===========================================================================
+
+>fissuer
+Bizarre animal noises continue to emanate from the fissure. It is beyond your control[if doc-y is not in ropins], but the duck's already figured it[else if duck is visible], but the duck seems to be poking at it[else], and you wonder who or what could tinker with it[end if].
+
 #########################################################################end stuff
+
+#########################################################################mult stuff
+
+>oldhta
+You don't have time to think about, or change, Old Hat Daltho. [if crocus is in lalaland]You got his present to his friend[else if ed yerg is reflexed]. You've found his friend and made him happy[else if solo den is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he sent the gift to, anyway[end if].
+
+============================================================
+Rawest Waters
+
+>northenr
+The northern shore does not waver. Maybe try the eastern shore.
+>shoer
+You need to focus on one specific shore.
+>shorse
+You need to focus on one shore.
+>norht
+Hmm. Concentrate on a shore--northern or eastern--not a direction.
+>eats
+Hmm. Concentrate on a shore--northern or eastern--not a direction.
+>southwets
+[diag-dir-rej].
+>wastre
+Ew. Rats. You do feel like a waster, doing something with the waters. Perhaps the northern--or eastern--shore can work better.
+>sprya
+The spray will still drown you if you don't figure a way to move somewhere.
+>watre
+The water is too elemental and generic to change. Plus the badlands are dry enough. How to get closer to a shore?
+
+>nearest
+
+Mislit Limits
+
+>occusr
+[if flowerpot is reflexive]You realize you can't change the crocus to something, but you can change its condition--it's dying[else]The crocus is OK as-is. In fact, it could make a nice gift for someone who could appreciate it[end if].
+
+>pestre
+The serpent doesn't just pester, it's pester'n.
+
+>present
+
 >badlands
 You're beyond the badlands now.
+
+>dingy
+
+>w
+Old One's Solo Den
+>noodlse
+[towersloc].
+>sool
+[locname-part].
+>odl
+[locname-part].
+>oen
+[locname-part].
+>dne
+[locname-part].
+>onse
+[locname-part].
+
+>yegr
+WRONG
+
+>gredey
+WRONG
+
+>greyed
+
+>e
+
+>purloin pearl cactus
+>purloin clear catsup
+>purloin pest accrual
+>purloin capsule cart
+>purloin accu-plaster
+>purloin last acre cup
+>purloin talc spa cure
+
+>accurts
+[focus-castle].
+>lepa
+[focus-castle].
+>clera
+[focus-castle].
+>catspu
+[focus-castle].
+>pets
+[focus-castle].
+>accrula
+[focus-castle].
+>cactsu
+[focus-castle].
+>pealr
+[focus-castle].
+>capsuel
+[focus-castle].
+>catr
+[focus-castle].
+>acuc
+[focus-castle].
+>plastre
+[focus-castle].
+>lats
+[focus-castle].
+>raec
+[focus-castle].
+>cpu
+[focus-castle].
+>tacl
+[focus-castle].
+>sap
+[focus-castle].
+>cuer
+[focus-castle].
+>mislti
+[towersloc].
+
+>spectacular
+Strip of Profits
