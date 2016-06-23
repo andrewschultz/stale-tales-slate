@@ -9,38 +9,75 @@
 
 * _intro
 
+>score
+a nervy every
+
 >in
 A Dry Yard
 
+>doro
+WRONG
 >door
 Your score has just gone up by one point.
+>doro
+WRONG
 
 >score
 1 out of 7
-reduced deducer
-
+You haven't solved any regions yet. You have the rank of reduced deducer.
+>blto
+WRONG
 >blot
 Your score has just gone up by one point.
+>blto
+WRONG
 
+>bugel
+WRONG
 >bugle
 Your score has just gone up by one point.
+>bugel
+WRONG
 
 >in
 Thickest Thickets
 
+>gota
+WRONG
 >goat
 Your score has just gone up by one point.
+>gota
+WRONG
+>
 
+>score
+You haven't solved any regions yet. You have the rank of reduced deducer.
+
+>slandre
+WRONG
 >slander
 Your score has just gone up by one point.
+>slandre
+WRONG
 
 >in
 
+>score
+You haven't solved any regions yet. You have the rank of stunted student.
+
+>attisc
+WRONG
 >attics
 Your score has just gone up by one point.
+>attisc
+WRONG
 
+>gatemna
+WRONG
 >gateman
 Your score has just gone up by one point.
+>gatemna
+WRONG
 
 >score
 7 out of 7
@@ -100,14 +137,26 @@ Self-ID Fields
 >e
 Sorted Trodes
 
+>noes
+WRONG
 >nose
 Your score has just gone up by one point.
+>noes
+WRONG
 
+>shadse
+WRONG
 >shades
 Your score has just gone up by one point.
+>shadse
+WRONG
 
+>shotgnu
+WRONG
 >shotgun
 Your score has just gone up by one point.
+>shotgnu
+WRONG
 
 >score
 5 out of 16 total
@@ -122,11 +171,19 @@ bread from the Spam
 >eat spam
 spasm
 
+>masp
+WRONG
 >maps
 Your score has just gone up by one point.
+>masp
+WRONG
 
+>beadr
+WRONG
 >beard
 Your score has just gone up by one point.
+>beadr
+WRONG
 
 >put shades on beard
 >put nose on beard
@@ -137,14 +194,22 @@ You've made a full disguise now!
 Your score has just gone up by one point.
 Cruel Ones' Enclosure
 
+>hasbene
+WRONG
 >hasbeen
 Your score has just gone up by one point.
+>hasbene
+WRONG
 
 >score
 9 out of 16
 
+>chisle
+WRONG
 >chisel
 Your score has just gone up by one point.
+>chisle
+WRONG
 
 >s
 >w
@@ -159,16 +224,28 @@ Cr-r-r-r-k.
 LIVERS.
 Your score has just gone up by one point.
 
+>slivre
+WRONG
 >sliver
 Your score has just gone up by one point.
+>slivre
+WRONG
 
 >e
 >n
+>drapes
+Your score has just gone up by one point.
+>undo
+
 >n
 red asp!
 
+>drapse
+WRONG
 >drapes
 Your score has just gone up by one point.
+>drapse
+WRONG
 
 >n
 The drapes are too thick.
@@ -179,8 +256,12 @@ revealing a doorway
 >n
 You don't know what's
 
+>silvre
+WRONG
 >silver
 Your score has just gone up by one point.
+>silvre
+WRONG
 
 >put silver in shotgun
 
@@ -190,8 +271,12 @@ Slough
 >x maps
 Frost Forts
 
+>wolvse
+WRONG
 >wolves
 Your score has just gone up by one point.
+>wolvse
+WRONG
 
 >shoot wolves
 Your score has just gone up by one point.
@@ -212,6 +297,15 @@ Centrifuge
 round den, unadorned
 Your score has just gone up by one point.
 
+>undo
+
+>sixtene
+WRONG
+>sixteen
+Your score has just gone up by one point.
+>sixtene
+WRONG
+
 >e
 The Nick
 
@@ -219,26 +313,50 @@ The Nick
 >n
 The Nick
 
+>kitchne
+WRONG
 >kitchen
 Your score has just gone up by one point.
+>kitchne
+WRONG
 
 >open fridge
 grist and a cake pan
 
+>hotsauec
+WRONG
 >hotsauce
 Your score has just gone up by one point.
+>hotsauec
+WRONG
 
+>tortilal
+WRONG
 >tortilla
 Your score has just gone up by one point.
+>tortilal
+WRONG
 
+>lettuec
+WRONG
 >lettuce
 Your score has just gone up by one point.
+>lettuec
+WRONG
 
+>steka
+WRONG
 >steak
 Your score has just gone up by one point.
+>steka
+WRONG
 
+>parmesna
+WRONG
 >parmesan
 Your score has just gone up by one point.
+>parmesna
+WRONG
 
 >put steak on taco
 a good start
@@ -253,14 +371,26 @@ almost there!
 A full-blown taco
 Your score has just gone up by one point.
 
+>cota
+WRONG
 >coat
 Your score has just gone up by one point.
+>cota
+WRONG
 
+>grist
+WRONG
 >grits
 Your score has just gone up by one point.
+>grist
+WRONG
 
+>pancaek
+WRONG
 >pancake
 Your score has just gone up by one point.
+>pancaek
+WRONG
 
 >e
 Stiller Trellis
@@ -268,31 +398,55 @@ Stiller Trellis
 >s
 a little too undescribed
 
+>strwa
+WRONG
 >straw
 Your score has just gone up by one point.
+>strwa
+WRONG
 
 >score
 12 out of 27
 
+>shose
+WRONG
 >shoes
 Your score has just gone up by one point.
+>shose
+WRONG
 
+>sakc
+WRONG
 >sack
 Your score has just gone up by one point.
+>sakc
+WRONG
 
 >put straw in sack
 
 >get sack
 
+>moro
+WRONG
 >moor
-Moor
 Your score has just gone up by one point.
+Moor
+>moro
+WRONG
 
+>peasatn
+WRONG
 >peasant
 Your score has just gone up by one point.
+>peasatn
+WRONG
 
+>blackdoro
+WRONG
 >black door
 Your score has just gone up by one point.
+>blackdoro
+WRONG
 
 >give straw to peasant
 Your score has just gone up by one point.
@@ -303,15 +457,23 @@ lots of smilies
 >similes
 more forced than the smilies
 
+>missiel
+WRONG
 >missile
 Your score has just gone up by one point.
+>missiel
+WRONG
 
 >fold paper
 >i
 folded paper plane
 
+>panle
+WRONG
 >panel
 Your score has just gone up by one point.
+>panle
+WRONG
 
 >room
 
@@ -319,8 +481,12 @@ Your score has just gone up by one point.
 >put hay in wall
 Your score has just gone up by one point.
 
+>hallwya
+WRONG
 >hallway
 Your score has just gone up by one point.
+>hallwya
+WRONG
 
 >e
 Sacred Cedars
@@ -333,8 +499,12 @@ Gainly laying
 already full
 
 >moor
+>soli
+WRONG
 >soil
 Your score has just gone up by one point.
+>soli
+WRONG
 
 >room
 >n
@@ -351,8 +521,12 @@ Crashing Archings
 
 >s
 >moor
+>siol
+WRONG
 >silo
 Your score has just gone up by one point.
+>siol
+WRONG
 
 >put missile in silo
 No way to
@@ -365,13 +539,21 @@ RESULT WITH LUSTER
 
 >put panel on silo
 
+>stere
+WRONG
 >steer
 ester pervades
 Your score has just gone up by one point.
+>stere
+WRONG
 
+>shoto
+WRONG
 >shoot
 changes to a shoot
 Your score has just gone up by one point.
+>shoto
+WRONG
 
 >push shoot
 You hear a loud siren!
@@ -385,8 +567,13 @@ Trips Strip
 
 * _metstart
 
+>gardenai
+WRONG
 >gardenia
 Your score has just gone up by one point.
+>gardenai
+WRONG
+
 
 >score
 1 out of 18 total points
@@ -397,12 +584,20 @@ Cramped Red Camp
 >w
 A Yell Alley
 
+>tomaot
+WRONG
 >tomato
 Your score has just gone up by one point.
+>tomaot
+WRONG
 
 >e
+>velcor
+WRONG
 >velcro
 Your score has just gone up by one point.
+>velcor
+WRONG
 
 >s
 >w
@@ -415,21 +610,37 @@ Your score has just gone up by one point.
 >e
 >n
 >n
+>rentla
+WRONG
 >rental
 Your score has just gone up by one point.
+>rentla
+WRONG
 
 >undo
+>rentasl
+WRONG
 >rentals
 Your score has just gone up by one point.
+>rentasl
+WRONG
 
+>switch emittre
+WRONG
 >switch emitter
 Your score has just gone up by one point.
+>switch emittre
+WRONG
 
 >get cake
 >s
 
+>controsl
+WRONG
 >controls
 Your score has just gone up by one point.
+>controsl
+WRONG
 
 >e
 Elf Row's Flowers
@@ -437,11 +648,18 @@ Elf Row's Flowers
 >give gardenia to faeries
 Powerful pure flow
 
+>barcoed
+WRONG
 >barcode
 Your score has just gone up by one point.
-
+>barcoed
+WRONG
+>keycadr
+WRONG
 >keycard
 Your score has just gone up by one point.
+>keycadr
+WRONG
 
 >put barcode on keycard
 
@@ -464,13 +682,21 @@ Your score has just gone up by one point.
 * _metros-heaths-darkness
 
 >get heaths
+>sheaht
+WRONG
 >sheath
 Your score has just gone up by one point.
+>sheaht
+WRONG
 
 >w
 >w
+>swodr
+WRONG
 >sword
 Your score has just gone up by one point.
+>swodr
+WRONG
 
 >e
 >give emitter to deadbeat
@@ -489,11 +715,18 @@ Your score has just gone up by one point.
 >e
 Bassy Abyss
 
+>resni
+WRONG
 >resin
 Your score has just gone up by one point.
-
+>resni
+WRONG
+>betsa
+WRONG
 >beast
 Your score has just gone up by one point.
+>betsa
+WRONG
 
 >get sword
 The sword is yours
@@ -505,13 +738,21 @@ Trips Strip
 * _metros-heaths-gnats
 
 >get heaths
+>sheaht
+WRONG
 >sheath
 Your score has just gone up by one point.
+>sheaht
+WRONG
 
 >w
 >w
+>swodr
+WRONG
 >sword
 Your score has just gone up by one point.
+>swodr
+WRONG
 
 >e
 >give emitter to deadbeat
@@ -530,10 +771,19 @@ Your score has just gone up by one point.
 >e
 Bassy Abyss
 
+>resni
+WRONG
 >resin
 Your score has just gone up by one point.
+>resni
+WRONG
 
+>betsa
+WRONG
 >beast
+Your score has just gone up by one point.
+>betsa
+WRONG
 Your score has just gone up by one point.
 
 >get sword
@@ -573,14 +823,28 @@ Your score has just gone up by one point.
 >e
 Bassy Abyss
 
+>resni
+WRONG
 >resin
 Your score has just gone up by one point.
+>resni
+WRONG
+>
 
+>betsa
+WRONG
 >beast
 Your score has just gone up by one point.
+>betsa
+WRONG
+>
 
+>swodr
+WRONG
 >sword
 Your score has just gone up by one point.
+>swodr
+WRONG
 
 >attack beast
 Your score has just gone up by one point.
@@ -616,14 +880,28 @@ Your score has just gone up by one point.
 >e
 Bassy Abyss
 
+>resni
+WRONG
 >resin
 Your score has just gone up by one point.
+>resni
+WRONG
+>
 
+>betsa
+WRONG
 >beast
 Your score has just gone up by one point.
+>betsa
+WRONG
+>
 
+>swodr
+WRONG
 >sword
 Your score has just gone up by one point.
+>swodr
+WRONG
 
 >attack beast
 Your score has just gone up by one point.
@@ -731,22 +1009,30 @@ Roman Manor
 >exist
 Your score has just gone up by one point.
 
+a smart gamin' anagrammist
+
 ################################main tests below here
 
 * _plow-through
 
 >{include} _intro
 >{include} _forest
+>score
+You have the rank of benigner beginner.
 >{include} _trips
+>score
+You have the rank of a mature amateur.
 >{include} _sortie
 >metros
 Your score has just gone up by one point.
 
 >enter metros
 Underside
-
 >{include} _metstart
 >{include} _metros-heaths-darkness
+>score
+new hero now here
+
 >{include} _resort
 
 * metros-2
