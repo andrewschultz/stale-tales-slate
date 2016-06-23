@@ -11038,7 +11038,7 @@ faeries	merchandise	"[faery-flower]"
 faeries	clover	"'That is just a weed! We have no use for it. But maybe it is useful to you.'"
 faeries	tomato	"'A putrid vegetable! [if player has tomato]We should kick you out right now[otherwise]It must taste terrible[end if]!'"
 faeries	tulip	"'Some flower that is!'"
-gateman	redness	"[one of]'Red writing, like Red Bull Burdell, is totally wrong in many ways. So many, it can be a help.'[paragraph break]He shows you some calculations that any such writing can be expected to eliminate 60% of your possible choices, because 1 minus 1/x to the x is 1/e--wait, no, the Inclusion-Exclusion Principle applies here, and you nod as he mentions the exact numbers aren't important, but every clue helps.[ask-red][or]'Hm. To keep it simple, red is wrong. And that helps you eliminate wrong guesses.'[stopping]"
+gateman	redness	"[one of]'Red writing, like Red Bull Burdell, is totally wrong in many ways. So many, it can be a help.'[paragraph break]He shows you some calculations that any such writing can be expected to eliminate 60% of your possible choices, because 1 minus 1/x to the x is 1/e, more if there's a duplicate letter--the Inclusion-Exclusion Principle applies here, and you nod as he mentions the exact numbers aren't important, but every clue helps.[ask-red][or]'Hm. To keep it simple, red is wrong. And that helps you eliminate wrong guesses.'[stopping]"
 gateman	board	"'Good idea to take notes on it. But I can tell you about other stuff. Like [if player has gadget]your gadget[otherwise]the gadget in the cabinet[end if]. Or even how it works.'"
 gateman	doll house	"[if attics are off-stage]'A nice warm-up puzzle, but if you're in a hurry, I'll respect that too. Not the doll house that needs changing.'[otherwise]'You don't need to take it with or anything. Nice job with it, though.'[end if]"
 gateman	static	"'[if attics are off-stage]If it's kind of annoying, you can get rid of it. Or you should be able to. But you don't have to.[else if attics are visible]Good job getting rid of it.[otherwise]Err...I know you're in a hurry, but can if you could change it back to the attics before you get going, my ears would thank you.[end if]'"
@@ -11724,17 +11724,13 @@ instead of going inside in Enclosure:
 part scoring
 
 to decide which number is player-rank:
-	let temp-rank be 3;
 	if Dry Yard is not visited:
 		decide on 1;
 	if notices section is not visited:
 		decide on 2;
 	if trips strip is not visited:
 		decide on 3;
-	if gadget-secured is true:
-		if forest-x is visited or underside is visited or Centrifuge is visited:
-			increment temp-rank;
-	decrement temp-rank;
+	let temp-rank be 4;
 	increase temp-rank by number of solved regions;
 	if mrlp is resort:
 		increment temp-rank;

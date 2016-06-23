@@ -598,9 +598,13 @@ version 3 March 2015</history>
 		<room id="181" name="Sparse Spares" subtitle="" x="352" y="256" w="96" h="64" region="Demo Dome" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<line id="182" name="" description="">
+		<line id="182" name="" description="" startText="down" endText="up">
 			<dock index="0" id="157" port="s" />
 			<dock index="1" id="181" port="n" />
+		</line>
+		<line id="183" name="" description="" style="dashed" flow="oneWay">
+			<dock index="0" id="140" port="ne" />
+			<dock index="1" id="157" port="sw" />
 		</line>
 	</map>
 	<settings>

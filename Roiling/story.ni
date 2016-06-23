@@ -14249,6 +14249,8 @@ book Phat Path
 
 Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Harm's Marsh to the west. [if lawl wall is in Phat Path]There's also a big wall here, blocking the way north. It's got keys hanging from it[otherwise]There's not much left with the wall gone, except for a sign to the north and a shack beyond that[end if]. You can retreat south, too, of course."
 
+understand "ptah" as a mistake ("[if hogs are in phat path]If we were in ancient Egypt, I'd allow that, but we aren't, so I can't.[else]No Egyptian deity comes to your rescue.[end if]") when player is in phat path.
+
 check going south in phat path:
 	if hogs are in phat path:
 		say "The hogs snicker as you walk away.";
@@ -14299,7 +14301,7 @@ to say exwall:
 		say ". The [unless wall is in phat]ex-[end if]wall north is an easier proposition";
 
 to say swan-puma:
-	say "[one of], with or without the fabled Sawn Swan and Ampu-Puma[or][stopping]";
+	say "[one of], with or without the fabled Sawn Swan (whose victims emit tearful NAWs) and Ampu-Puma (whose victims plaintively cry 'Um, PA')[or][stopping]";
 
 check going east in Phat Path:
 	say "[if Leo is visible]Leo and Rand don't have the endurance to climb Mount Um, Not. Neither do you[else]You don't want to climb Mount Um, Not[end if][exwall]." instead;
@@ -19557,14 +19559,14 @@ definition: a thing is followy:
 
 the impressive cliff is a useless backdrop. it is in Blasted Saltbed, anemic cinema, Unblest Sunbelt, danger garden. "It's impressive enough to inspire you to do something impressive, full of scaly clays."
 
-Leak Lake is a useless backdrop. it is in salted deltas, Actionless Coastlines, Ole Shrine Shoreline. "Leak Lake is so named because many bodies of water leak into it, and it leaks into others. It smells strongly of kale. At least it does not smell of carp."
+Leak Lake is a useless backdrop. it is in salted deltas, Actionless Coastlines, Ole Shrine Shoreline. "Leak Lake is so named because many bodies of water leak into it, and it leaks into others. You are glad it doesn't smell of carp, but it does smell of some sort of vegetable."
 
 check entering leak lake:
 	if player is in coastlines and bot boat is in coastlines:
 		try entering bot boat instead;
 	say "Go out, eh? Too huge!" instead;
 
-understand "kale" as a mistake ("It'd take all your energy to turn the whole lake into kale. Plus, then, the kale would have no water to survive.") when leak lake is visible.
+understand "kale" as a mistake ("More kale? Dear, did I ask for more kale? Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.") when leak lake is visible.
 
 the shoals aslosh are a useless plural-named backdrop. they are in salted deltas, Actionless Coastlines, Ole Shrine Shoreline. "They make you say 'Ah! Loss!' (or Oh! Lass! if you're feeling romantic.) And, of course, if you focus on one, you see halos."
 
@@ -25194,6 +25196,7 @@ presto	"PRESTO:"
 presto	"ELO or EOL by Leo?"
 presto	"ASSWHUP or WHUPASS when Leo and Rand are commiserating?"
 presto	"SPAG or A GPS by the gasp-gaps in Burnt Brunt?"
+presto	"PTAH in the Phat Path?"
 presto	"IDKS or KIDS around the disk or skid?"
 presto	"BAT by the keyboard's TBA key?"
 oyster	"OYSTER:"
@@ -25202,6 +25205,7 @@ oyster	"Changing the canoe to an OCEAN?"
 oyster	"CARET in the plains?"
 oyster	"PALINS in the plains?"
 towers	"TOWERS:"
+towers	"KALE by Leak Lake?"
 towers	"DOPIEST or POSITED in the topside?"
 towers	"PORIN or PORINS by the prison ropin's?"
 --	"OTTERS:"
