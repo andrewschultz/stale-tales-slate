@@ -402,7 +402,7 @@ bean-smell is a truth state that varies.
 
 do-i-chat is a truth state that varies.
 
-inhib is a truth state that varies.
+power-back is a truth state that varies.
 
 every-turn-hint is a truth state that varies. every-turn-hint is false.
 
@@ -411,7 +411,7 @@ Procedural rule: ignore the print final score rule.
 check examining player when mrlp is demo dome:
 	say "You look just fine. You don't need to be dressed too fancy for this." instead;
 
-description of player is "As every[if player is female]wo[end if]mannish as ever[if player wears star], and wearing a spiffy star, too[end if]. [one of]You'll never be a [if player is female]Fine Nefi Fein[else]Hunk Kuhn or Icon Nico[end if][one of], or even a or Dreamboat [if player is male]Brad Mateo[else]Amber Dato[end if][or][stopping], and you don't want to be. Because i[or]I[stopping]t's the power inside you that's important[if mrlp is otters and inhib is true]. Well, the power you may need to regain[end if]."
+description of player is "As every[if player is female]wo[end if]mannish as ever[if player wears star], and wearing a spiffy star, too[end if]. [one of]You'll never be a [if player is female]Fine Nefi Fein[else]Hunk Kuhn or Icon Nico[end if][one of], or even a or Dreamboat [if player is male]Brad Mateo[else]Amber Dato[end if][or][stopping], and you don't want to be. Because i[or]I[stopping]t's the power inside you that's important[if mrlp is otters and power-back is false]. Well, the power you may need to regain[end if]."
 
 does the player mean examining the player when mrlp is troves: it is very likely.
 
@@ -1949,11 +1949,11 @@ to say mon-men:
 to say war-duh: say "Rodney silences him from answering."
 
 to say tho-eels:
-	if inhib is false:
+	if power-back is true:
 		say ", though you wonder if you need a double-charge after talking to the eels"
 
 to say tho-need:
-	if inhib is false:
+	if power-back is true:
 		say ", though I feel you may not need the eels['] energy"
 
 to say left-here:
@@ -4389,7 +4389,7 @@ carry out requesting the score:
 			else:
 				say ". You've found all the secrets here, so you need all [min-score of mrlp] points to win";
 		say ".[line break]";
-		if mrlp is otters and inhib is true:
+		if mrlp is otters and power-back is false:
 			say "[line break]You probably need to do something to get back your full powers, too.";
 	repeat with Q running through regions:
 		if number of visited rooms in Q > 0:
@@ -4898,7 +4898,7 @@ chapter aftertexts
 
 table of region-spoilers
 hint-reg	spoil-expl
-otters	"adverbs[if inhib is true](weakest, due to lost powers)[else](but powers back now)[end if]"
+otters	"adverbs[if power-back is false](weakest, due to lost powers)[else](but powers back now)[end if]"
 presto	"interjections"
 routes	"prepositions"
 troves	"passive verbs"
@@ -4989,7 +4989,7 @@ routes	"[pars-trub]one word should work here, with no preface necessary. While o
 troves	"[pars-trub]one word will work here, and you won't need to specify details. A last lousy point is eight letters long, but most are five or six."
 towers	"[pars-trub]one word will work here, to make things as they should be. The final word is eleven letters long, but everything else is shorter--one necessary word has nine, as does another optional one, and a few have eight."
 oyster	"[pars-trub]one word will work here, though this game should accept fuller sentences. The longest words are seven letters, so while there's a lot to do, no one word is too long."
-otters	"[pars-trub]while some words are rather long, you [if cur-score of otters is 0]will[else]probably[end if] see how to guess a letter or two even [if inhib is true]when[else]now[end if] you've got your powers back."
+otters	"[pars-trub]while some words are rather long, you [if cur-score of otters is 0]will[else]probably[end if] see how to guess a letter or two even [if power-back is false]when[else]now[end if] you've got your powers back."
 others	"[pars-trub]you may need a variety of tricks, here, but one word will usually clinch things, and you will figure the general theme."
 demo dome	"[pars-trub]you don't need to do anything fancy here besides looking, moving, examining and reading. No puzzles at all."
 
@@ -5777,7 +5777,7 @@ to decide which thing is otters-cur-item:
 	if player is in frontage:
 		if Macks are in frontage:
 			decide on Gretta;
-		if atmo-moat is in frontage and inhib is false:
+		if atmo-moat is in frontage and power-back is true:
 			decide on atmo-moat;
 	if player is in bran barn:
 		if ghoul hat is in bran barn:
@@ -5813,7 +5813,7 @@ to decide which thing is otters-cur-item:
 			decide on parrot;
 		if Merle is in alcoves:
 			decide on Merle;
-	if inhib is true:
+	if power-back is false:
 		decide on the player;
 	if player has medals and medals are not reflexed:
 		decide on medals;
@@ -5830,7 +5830,7 @@ to say bran-barn-already:
 	say "[one of]The loop pool isn't critical since you've solved the bran barn, but it'll get extra points.[paragraph break][or][stopping]";
 
 to say tho-work:
-	say ", though you still have work there[if inhib is true], which you might not be up for yet[end if]"
+	say ", though you still have work there[if power-back is false], which you might not be up for yet[end if]"
 
 table of animal randomness
 this-animal
@@ -5859,7 +5859,7 @@ carry out otters-hinting:
 	if player is in Bleary Barley: [if there is no item, see what to do next based on where we can go]
 		all-say "You made a way west. You're done here." instead;
 	else if player is in frontage:
-		all-say "[if gretta is in frontage]Gretta's advice may prove useful. [else]With Gretta gone, [end if]You're done here[if alcoves is unvisited], but you may want to try to go west[else if inhib is true], but you need to go north or south to regain your powers[end if].";
+		all-say "[if gretta is in frontage]Gretta's advice may prove useful. [else]With Gretta gone, [end if]You're done here[if alcoves is unvisited], but you may want to try to go west[else if power-back is false], but you need to go north or south to regain your powers[end if].";
 	else if player is in loop pool or player is in bran barn:
 		all-say "You recovered your powers, so there's nothing more to do here.";
 	else if player is in Anger Pit:
@@ -5867,7 +5867,7 @@ carry out otters-hinting:
 	else if player is in Anteroom:
 		all-say "The path south is cleared[if number of animals in preserve >= 3], and you've taken care of the preserve, so you can probably retreat[else][tho-work][end if].";
 	else if player is in wickeder wire deck or player is in perverse preserve:
-		if inhib is true:
+		if power-back is false:
 			all-say "You need to get your powers back before you do anything. Look around [if frontage is visited]the frontage[else if ed riley is in barley]and try to get past Ed Riley[else]west of the barley[end if].";
 		else:
 			if player is in perverse preserve:
@@ -7726,7 +7726,7 @@ book fliptoing
 
 fliptoing is an action applying to one visible thing.
 
-check fliptoing when inhib is true:
+check fliptoing when power-back is false:
 	if player is in wickeder or player is in preserve:
 		say "[inhib]" instead;
 
@@ -7846,7 +7846,7 @@ check fliptoing (this is the reject flipping for reef and animal attack and aler
 		preef noun;
 		do nothing instead;
 	if noun is owls or noun is parrot:
-		if inhib is true:
+		if power-back is false:
 			say "You try, but you are too weak. Perhaps you should come back when your powers are recharged." instead;
 	if noun is thor or noun is beet:
 		if ship controls are reflexive:
@@ -8222,9 +8222,9 @@ ram1	ram1	"loathingly"	"loathingly"	"[shout-check]"	false	593419698
 ram2	ram2	"stoically"	"stoically"	"[shout-check]"	false	569909740
 ram3	ram3	"tersely"	"tersely"	"[shout-check]"	false	716493096
 ghoul hat	ghoul hat	"although"	"although"	"You begin explaining that you just needed a way through, and besides, the stalks wouldn't have been harvest-able anyway. Mr. Lee relaxes and breathes, and as you speak, the ghoul hat releases its hold on him. 'But--but Rev. Howe said...he would watch over the ghoul hat I was forced to wear.'[paragraph break]Mr. Lee mutters on about hard times these days, still suspicious, but he's willing to listen. He points to the picture of Rev. Howe. He's suddenly doubting it's for his safety, now. "	false	445734359	"You already justified yourself partially. Mr. Lee doesn't need more dialogue."
-p-2	p-2	"however"	"however"	"Mr. Lee doesn't seem willing to discuss the painting, but as you talk, he bends a little more. Yes--it was Elvira who put the painting there. Or her agents. To make sure he didn't use his magic powers unwisely. You promise to re-bran what is barren. He perks up. 'Then you're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' He lays his hands on you. You feel [if inhib is true]a slight shock--your mordant powers are now merely dormant![else]a shock similar to what the eels gave, and you shake exaggeratedly and nod your head in thanks.[end if][paragraph break]He also asks if you can hop in and make his seed site the seediest--once you do the whole country-saving thing. Of course you can. It's the least you can do."	false	667670490
+p-2	p-2	"however"	"however"	"Mr. Lee doesn't seem willing to discuss the painting, but as you talk, he bends a little more. Yes--it was Elvira who put the painting there. Or her agents. To make sure he didn't use his magic powers unwisely. You promise to re-bran what is barren. He perks up. 'Then you're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' He lays his hands on you. You feel [if power-back is false]a slight shock--your mordant powers are now merely dormant![else]a shock similar to what the eels gave, and you shake exaggeratedly and nod your head in thanks.[end if][paragraph break]He also asks if you can hop in and make his seed site the seediest--once you do the whole country-saving thing. Of course you can. It's the least you can do."	false	667670490
 sea cube	sea cube	"because"	"because"	"'Well, now that you put it that way...' You hear a rush of water. Le Mer has unlocked the sea cube. Eels come out. They look up at you--they may be able to understand you."	false	496604299
-eels	eels	"else"	"else"	"The eels seem to understand you. They squirm across the pool and gaze at you as if to stay still. You feel a shock through your body[if inhib is false] much like in Mr. Lee's bran barn[else], and your mordant skills are no longer dormant[end if]."	false	405700023
+eels	eels	"else"	"else"	"The eels seem to understand you. They squirm across the pool and gaze at you as if to stay still. You feel a shock through your body[if power-back is true] much like in Mr. Lee's bran barn[else], and your mordant skills are no longer dormant[end if]."	false	405700023
 atmo-moat	atmo-moat	"atom"	"atom"	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom."	false	243725566
 t-bossily	t-bossily	"bossily"	"bossily"	"The macks cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now."	false	506485351
 t-nastily	t-nastily	"nastily"	"nastily"	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. They scramble to assure her they didn't mean it that way, but she's not fooled."	false	491645247 [begin MACKS 7]
@@ -11252,8 +11252,6 @@ check entering otters-x:
 	if number of needed regions > 0:
 		d "[list of needed regions].";
 		say "As you step between them, you feel mess-up spumes from the otters--maybe a passive sap-vise--drain you to a nadir. 'I...darn!'[paragraph break]You could take your powers going dormant, but they might get mordant. Maybe you need to build them up by fixing things elsewhere[if patcher is in strip of profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
-	if eels are not in lalaland and p-2 is reflexive:
-		now inhib is true;
 	say "You begin to feel drained, and you let out a 'darn, I...' you slow down but just make it. 'Rad! In!'"
 
 chapter store u
@@ -20607,14 +20605,14 @@ carry out discerning:
 		say "You discern the men could be less intimidating acting [rand-to-go].";
 	else if player is in perverse preserve:
 		if raptor is visible:
-			say "You discern that the raptor could become a parrot[if inhib is true] with your powers back[end if].";
+			say "You discern that the raptor could become a parrot[if power-back is false] with your powers back[end if].";
 		else if nounsolve < 4:
 			say "You discern what you can still rescue. [if racoon is off-stage]A racoon. [end if][if nails are in preserve]A snail. [end if][if thrones are in preserve]Hornets. [end if][if pines are in preserve]A snipe. [end if][line break]";
 		else:
 			now do-i-dis is false;
 	else if player is in wire deck:
 		if owls are visible:
-			say "You discern that you make the owls slow[if inhib is true] with your powers back[end if].";
+			say "You discern that you make the owls slow[if power-back is false] with your powers back[end if].";
 		else if adjsolve < 4:
 			say "You discern which animals can get which help. [if leopard is reflexive]The leopard can be PAROLED. [end if][if ocelots are reflexive]The ocelots can become the COOLEST. [end if][if satyr is reflexive]The satyr can become ARTSY. [end if][if badger is reflexive]The badger can be GARBED. [end if][line break]";
 		else:
@@ -20939,7 +20937,7 @@ carry out whistleing:
 
 book Frontage
 
-frontage is west of Bleary Barley. frontage is part of otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. A raw-bulk bulwark is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in frontage]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if inhib is false], not that you need to[end if]."
+frontage is west of Bleary Barley. frontage is part of otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. A raw-bulk bulwark is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in frontage]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]."
 
 printed name of frontage is "[if Gretta is in frontage]Gent-Fora Frontage[else]Frat-Gone Frontage[end if]"
 
@@ -20962,7 +20960,7 @@ check fliptoing atmo-moat:
 		say "That'd definitely tip the macks off to who you were, even if your powers were back.";
 		preef atmo-moat;
 		do nothing instead;
-	else if inhib is true:
+	else if power-back is false:
 		say "That seems like it should work, but you just can't summon the power. Someone here should be able to help you, you hope.";
 		preef atmo-moat;
 		do nothing instead;
@@ -21428,7 +21426,7 @@ Loop Pool is a room in otters. Loop Pool is north of frontage. "A pool encases a
 after choosing notable locale objects when player is in loop pool:
 	set the locale priority of Le Mer to 0;
 
-understand "polo" as a mistake ("No time for games! [if eels are in lalaland]Even with the eels rescued/on your side[else if inhib is true]You don't have your powers back, anyway. It's what's IN the water you want to change[else]Even with your powers back[end if].") when player is in Loop Pool
+understand "polo" as a mistake ("No time for games! [if eels are in lalaland]Even with the eels rescued/on your side[else if power-back is false]You don't have your powers back, anyway. It's what's IN the water you want to change[else]Even with your powers back[end if].") when player is in Loop Pool
 
 Le Mer is a person in loop pool. description is "You can't locate where, exactly, Le Mer is."
 
@@ -21473,7 +21471,7 @@ section otters flipto and min points
 [we need to check herer ifwe are completing both pool and barn points.]
 
 to de-inhib:
-	now inhib is false;
+	now power-back is true;
 	say "You hear voices[one of][or], again[stopping]. 'Revil-a-Elvira?' / 'Yes, her.' / 'HERESY!'";
 	if atmo-moat is prefigured:
 		say "[line break]You feel strong enough to tackle the moat, now";
@@ -21515,7 +21513,7 @@ Tapering Anger Pit is an innie room in otters. Anger Pit is north of Bleary Barl
 
 understand "inert gap" and "inert/gap" as anger pit when sly imp is in lalaland.
 
-The sly imp is a flippable neuter person in Anger Pit. "A sly imp simply zooms about [if imp1 is reflexive]rangily [end if]guarding the way north[if imp2 is reflexive], with a butlery air[end if][if imp3 is reflexive], showing legendary patience[end if] that allows vaster averts[if inhib is false]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "It looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as he can, or keep you just mad enough not to think how to get rid of him.[paragraph break]He seems to have several tricks, but that may just mean several ways to get at him."
+The sly imp is a flippable neuter person in Anger Pit. "A sly imp simply zooms about [if imp1 is reflexive]rangily [end if]guarding the way north[if imp2 is reflexive], with a butlery air[end if][if imp3 is reflexive], showing legendary patience[end if] that allows vaster averts[if power-back is true]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "It looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as he can, or keep you just mad enough not to think how to get rid of him.[paragraph break]He seems to have several tricks, but that may just mean several ways to get at him."
 
 after doing something with imp:
 	set the pronoun him to the imp;
@@ -21559,7 +21557,7 @@ to decide whether try-fail-animal:
 check going north in Anger Pit:
 	if imp is visible:
 		say "The imp gives a sidle-slide, then idles in front of you. He's [if silence-tally is 1]still a bit [end if]too smooth for you right now." instead;
-	if inhib is true:
+	if power-back is false:
 		now try-fail-pit-north is true;
 		say "[one of]You hear a dangerous hooting as you go north. You run from a bunch of owls before they can carve at you with their beaks, but boy, they were quick, and it was close. You don't want to risk it again[or]Those owls are too much for you[stopping], with your powers drained." instead;
 
@@ -21626,11 +21624,11 @@ a-text of owls is "RRYR". b-text of owls is "RRYR". parse-text of owls is "x[sp]
 
 check going south in wire deck:
 	if owls are in wire deck:
-		say "[if inhib is true]You're not ready to deal with the owls yet[else]You'll deal with the owls later[end if].";
+		say "[if power-back is false]You're not ready to deal with the owls yet[else]You'll deal with the owls later[end if].";
 
 check going north in perverse:
 	if raptor is in perverse:
-		say "[if inhib is true]You're not ready to deal with the raptor yet[else]You'll deal with the raptor later[end if].";
+		say "[if power-back is false]You're not ready to deal with the raptor yet[else]You'll deal with the raptor later[end if].";
 
 every turn (this is the owls kill you rule):
 	if owls were visible and owls are visible:
@@ -21695,7 +21693,7 @@ instead of taking inventory:
 		say "You are also wearing [a list of worn things].";
 	if location of player is location of skid:
 		say "[line break]There's also that skid you can push around[if number of things on skid > 0]. It holds [the list of things on skid][end if].";
-	if mrlp is otters and inhib is true:
+	if mrlp is otters and power-back is false:
 		say "You also DON'T have your full powers. You'll need to fix that before hitting the bulwark to the west.";
 	if player has compass:
 		say "[line break]You also have a compass to tell direction.";
@@ -21757,7 +21755,7 @@ after fliptoing an animal:
 	repeat through table of animal-stuff:
 		if my-animal entry is visible:
 			if the player's command matches the text "[adjective-to-say entry]":
-				if inhib is true:
+				if power-back is false:
 					say "That would work...if you had your power back." instead;
 				if my-animal entry is adjed:
 					say "You already worked your magic." instead;
@@ -21773,7 +21771,7 @@ book Rote-Moan Anteroom
 
 Rote-Moan Anteroom is south of Bleary Barley. Anteroom is part of otters. Anteroom is innie. "[if whiners are visible]The noise here is just unbearable--whiners guarding the way south and not shutting up about it. You feel vaguely grateful they aren't guarding the way back north, too[else]This room is quieter now, just a north-south passage[end if]."
 
-the shrewin' whiners are plural-named flippable people in Anteroom. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if ram1 is reflexive]tallyhoing[else]babbling[end if][if ram2 is reflexive] with great callosity[end if] here[if ram3 is reflexive]. They restyle why they can't let you go south[end if][if inhib is false]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if]."
+the shrewin' whiners are plural-named flippable people in Anteroom. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if ram1 is reflexive]tallyhoing[else]babbling[end if][if ram2 is reflexive] with great callosity[end if] here[if ram3 is reflexive]. They restyle why they can't let you go south[end if][if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if]."
 
 a-text of whiners is "BUG". b-text of whiners is "BUG". parse-text is "BUG".
 
@@ -21883,7 +21881,7 @@ check scaning whiners:
 check going south in Anteroom:
 	if whiners are visible:
 		say "The whiners can't imagine why anyone would want to go there. They block you, for your own good. They seem to have all sorts of reasons, and there's no way past the quantity, if not the quality, of their arguments." instead;
-	if inhib is true:
+	if power-back is false:
 		now try-fail-anteroom-south is true;
 		say "[one of]A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have[or]That roar scares you. To deal with it, you'll probably need[stopping] your full powers back." instead;
 
@@ -22085,14 +22083,14 @@ final-quip	"'No mercy, my crone! Corny, me?' She flinches at your pure re-up, re
 
 table of Elvira comments [tco-el]
 prompt	response	enabled
-"Fool us? So foul of soul! (Lay things out logically, hopefully without getting overemotional or boring)"	logical-quip	1
+"Smartly done, monster lady. Fool us? So foul of soul! (Lay things out logically, hopefully without getting overemotional or boring)"	logical-quip	1
 "WTF FTW"	wtf-quip	1
 "LOL, how hollow!"	hollow-quip	1
 "Play God? Dopy gal!"	sneer-quip	1
 "Abhorsive Behaviors!"	abhor-quip	1
 "Strong will? Still wrong. At bay, ya bat."	strong-quip	1
 "Go bald, old bag!"	bald-quip	0
-"Sinister Insister. Hypno-phony."	sinister-quip	0
+"Sinister Insister. Hypno-phony. Reposed? Deposer."	sinister-quip	0
 "Scourge-curse, go! (yeah, yeah, get on with it)"	final-quip	1
 
 chapter hydra
@@ -24817,7 +24815,7 @@ whiners	"[one of][if one-whine-down]They've lost a bit of steam, but they need t
 Mr Lee	"[loop-pool-already][if ghoul hat is not in lalaland]Try to help Mr. Lee with that ghoul hat. Or ask hints about the hat.[else if p-2 is in bran barn]Try to get rid of that painting of Rev. Howe. Or ask hints about it.[else]You've helped Mr. Lee all you can."
 ghoul hat	"[loop-pool-already][one of]Mr. Lee's 'Hola, Thug' greeting is not very nice. He sees red and doesn't trust you.[plus][or]Mr. Lee's upset with you. But one word, useless on its own, can turn it around.[plus][or]The first one had better be a good one.[plus][or]No L-Y, so no adverb.[plus][or]ALTHOUGH.[minus][cycling]"	--	"you can say ALTHOUGH"
 p-2	"[loop-pool-already][if ghoul hat is not in lalaland]Deal with the ghoul hat first.[else][one of]The painting has a lot of writing, all in red, which cuts down what to say.[plus][or]But the painting is ultimately the same sort of thing as before.[plus][or]HOWEVER.[minus][cycling]"	--	"you can say HOWEVER"
-atmo-moat	"[one of]The moat seems to get in your way, but you sense it could be compacted.[plus][or]It's also an atmo-moat, though you see less red when you think of it that way.[plus][or]You can shrink the moat to an ATOM, [if inhib is true]but you need to have your powers back, first[else]which is possible with your powers back[end if].[minus][cycling]"	--	"you can make a MOAT"
+atmo-moat	"[one of]The moat seems to get in your way, but you sense it could be compacted.[plus][or]It's also an atmo-moat, though you see less red when you think of it that way.[plus][or]You can shrink the moat to an ATOM, [if power-back is false]but you need to have your powers back, first[else]which is possible with your powers back[end if].[minus][cycling]"	--	"you can make a MOAT"
 le mer	--	sea cube
 sea cube	"[bran-barn-already][one of]The sea cube in the atmo-moat/loop pool can be talked to.[plus][or]The sea gets bored if you talk to it. First words count. But they need to be useless on their own.[plus][or]The SEA CUBE draws you to it.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say BECAUSE"
 eels	"[bran-barn-already][one of]The eels need convincing, too. What will happen, otherwise?[plus][or]Again, first words count. But they need to be useless on their own.[plus][or]Tell them ELSE.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say ELSE"
@@ -27376,12 +27374,12 @@ understand the command "di" as something new.
 understand "di" as diing.
 
 carry out diing:
-	if inhib is false:
+	if power-back is true:
 		say "You're now inhibited.";
-		now inhib is true;
+		now power-back is false;
 	else:
 		say "You're now uninhibited.";
-		now inhib is false;
+		now power-back is true;
 	the rule succeeds
 
 chapter misseding

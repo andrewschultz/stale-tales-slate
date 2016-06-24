@@ -9817,6 +9817,8 @@ report going east in woodland:
 
 Potshot Hotspot is east of woodland. Hotspot is in Resort.
 
+understand "brb" as a mistake ("You don't know him that well. No riffing on his initials!") when player is in hotspot and red bull burdell is in hotspot.
+
 understand "slink" as a mistake ("[if red bull burdell is visible]You couldn't slink behind the kilns even if they were here[else if red bull burdell is in lalaland]Why slink? No one is blocking or watching you any more[else]Too many people are watching for you to slink away[end if].") when player is in hotspot
 
 description of Potshot Hotspot is "An arid, trod dirt road. East is siesta.[paragraph break][if riot is visible][one of]Oh dear. A horde. Uprisers--surprise--protesting YOU! A full-blown riot[or]There's a riot going on here! A bunch of people seem to be protesting...you, accusing you of things you'd never be brave enough to do[cycling][else if protest is visible]Three can still be a protest as well as a crowd, apparently. They're blocking your way east[else if potters are visible]The potters aren't just pottering around[pottiness][else if red bull burdell is visible]Red Bull Burdell is here, looking down at you[otherwise]It's nice and peaceful here, but it's not quite home[end if].";
@@ -10102,7 +10104,7 @@ carry out existing:
 		sort table of megachatter in reverse table-size order;
 		repeat through table of megachatter:
 			sort mytab entry in blurb order;
-		end the story finally;
+		end the story finally saying "My Adieu to You: Made It!";
 	otherwise:
 		say "You continue to exist. Perhaps this ability will come in handy some day." instead;
 

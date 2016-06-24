@@ -768,10 +768,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 
 table of otters nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
-"ly"	176173091	--	--	degen-true rule	"Yup, that's the idea here in Otters[if inhib is false], even with your powers back[end if]."
+"ly"	176173091	--	--	degen-true rule	"Yup, that's the idea here in Otters[if power-back is true], even with your powers back[end if]."
 "bare"	233736635	--	b-b	--	"[adj-needs-ly]?"
 "cinder"	367064940	--	cinders	--	"You'll need to change more than one cinder."
-"bulwark"	425718123	--	bulwark	--	"The whole bulwark? No, you [if inhib is true]couldn't do much with it at full strength[else]can't do much[end if]. [if Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if inhib is true] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to, well, a bulwark."
+"bulwark"	425718123	--	bulwark	--	"The whole bulwark? No, you [if power-back is false]couldn't do much with it at full strength[else]can't do much[end if]. [if Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if power-back is false] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to, well, a bulwark."
 "bossy"	407678666	--	t-bossily	--	"[adj-needs-li]?"
 "bossi"	330312260	--	t-bossily	--	"[adj-needs-ly]?"
 "nasti"	315472156	--	t-seedily	--	"[adj-needs-ly]?"
@@ -1789,7 +1789,7 @@ to say whiney:
 	say "You can't change who whiners are, but maybe you can make them whine [if ram3 is in lalaland or ram2 is in lalaland or ram1 is in lalaland]even [end if]less...whiningly"
 
 to say add-ly:
-	say "No, you need a couple more letters... [if inhib is false]even with your powers back, that seems to work[else]a couple to make a word weak enough to control[end if]"
+	say "No, you need a couple more letters... [if power-back is true]even with your powers back, that seems to work[else]a couple to make a word weak enough to control[end if]"
 
 this is the frontage-after rule:
 	if player is in frontage and macks are in lalaland:
