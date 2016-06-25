@@ -411,7 +411,6 @@ firstword is a number that varies. [key2]
 fullcmd is a number that varies. [key]
 
 to decide whether (nt - a table name) is hash-found:
-	say "[nt] checked.";
 	repeat through nt:
 		if firstword is the hashval entry or fullcmd is the hashval entry:
 			if there is a this-rule entry:
@@ -6375,19 +6374,12 @@ check turning the dial:
 
 initial appearance of the dial is "There's a dial laid in the middle of the room. It is at [numset of the dial] and [if centrifuge-stopped is true]should probably be kept it that way. There's nothing else of note here[one of], so you may wish to explore elsewhere[or][stopping][otherwise]is not spinning with the rest of the room, so you can probably turn it[end if]."
 
-description of dial is "You see EXITS [if numset of dial is 16]N E [otherwise]? ?--you can see two letters, but they're scrolling through the four cardinal directions--[end if]written in the center of its circle. It's currently set to [numset of dial], and you [if numset of dial is 16]want to keep it that way, thank you very much[otherwise]can set it anywhere from 0 to 99[end if][dial-hints]."
+description of dial is "You see EXITS [if numset of dial is 16]N E [otherwise]? ?--you can see two letters, but they're scrolling through the four cardinal directions--[end if]written in the center of its circle. It's currently set to [numset of dial], and you [if numset of dial is 16]want to keep it that way, thank you very much[otherwise]can set it anywhere from 0 to 99 with TURN DIAL TO or just the number[end if][dial-hints]."
 
 to say dial-hints:
 	if numset of dial is 16:
 		the rule succeeds;
-	if odd-dial-hint is false:
-		now odd-dial-hint is true;
-		say ".";
-		the rule succeeds;
-	now odd-dial-hint is false;
-	say "[one of]. Maybe [if dial is examined]you should look at the dial again for a partial hint about the number[otherwise]there is a partial hint to the number on the dial[end if].[or]. You glance over at the dial and briefly wonder what numbers have X's in them.[or]. The dial seems to indicate there are seven letters--one is X, and two are a direction. But you haven't had to go diagonally a lot. That leaves four possibilities.[or]. Where, abbreviated, should the exits point?[or]. The room NEXT IS Easier.[stopping]"
-
-odd-dial-hint is a truth state that varies. odd-dial-hint is usually false.
+	say "[one of]. You wonder if there's a partial clue here that you just need to look at right[or]. Maybe if you knew where the exits were supposed to be, that would help. There are only twelve possibilities[or]. You briefly wonder what numbers have X's in them[or]. The dial seems to indicate there are seven letters--one is X, and two are a direction. But you haven't had to go diagonally a lot. That leaves four possibilities[or]. Where, abbreviated, the exits should point[or]. The room NEXT IS Easier[or]. You may feel square for missing other solutions to this problem[or]. Worse comes to worst, you can just to a binary search with the numbers: 99, 50, 75, etc[or]. Well, maybe you can brute force things and move the dial one unit at a time. The centrifuge hasn't killed you yet[stopping]"
 
 section dial setting
 
@@ -10435,6 +10427,9 @@ after reading a command:
 		if the player's command matches "\b?i<mfr>\b":
 			say "[reject]";
 			reject the player's command;]
+	if player is in centrifuge and centrifuge-stopped is false:
+		if the player's command matches the regular expression "^<0-9>+$":
+			say "(turning the dial)[line break]";
 	if location of player is trips strip:
 		repeat through table of warpcmds:
 			if the player's command matches the regular expression "[warp-cmd entry]":
@@ -13263,9 +13258,13 @@ understand "ufc" as ufcing.
 
 carry out ufcing:
 	now centrifuge-stopped is false;
+	now numset-ever-greater is false;
+	now consecutive-binary-tries is 0;
 	decrement the cur-score of sortie;
 	d "Resetting centrifuge.";
 	now the numset of the dial is 0;
+	if player is not in centrifuge:
+		move player to centrifuge;
 	the rule succeeds;
 
 chapter askthruing
@@ -13596,9 +13595,10 @@ understand the command "disas" as something new.
 understand "disas" as disasing.
 
 carry out disasing:
-	now shades are in location of player;
-	now nose is in location of player;
-	now beard is in location of player;
+	repeat with Q running through disguise-pieces:
+		now Q is in location of player;
+		now player has Q;
+	say "The three beard parts are now all disassembled.";
 	the rule succeeds;
 
 chapter cap

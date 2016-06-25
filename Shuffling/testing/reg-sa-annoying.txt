@@ -1,0 +1,399 @@
+## reg-sa-annoying.txt
+## tests for all the ways through the two "annoying" puzzles (to test), the centrifuge and shades
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* disguise
+
+#test-2-1
+
+>disas
+>put beard on shades
+easily and naturally
+>put nose on shades
+You've made a full disguise now!
+
+#test-5-1
+
+>disas
+>put beard on nose
+easily and naturally
+>put nose on shades
+You've made a full disguise now!
+
+#test-6-1
+
+>disas
+>put shades on beard
+easily and naturally
+>put nose on shades
+You've made a full disguise now!
+
+#test-1-2
+
+>disas
+>put nose on shades
+easily and naturally
+>put beard on shades
+You've made a full disguise now!
+
+#test-3-2
+
+>disas
+>put shades on nose
+easily and naturally
+>put beard on shades
+You've made a full disguise now!
+
+#test-5-2
+
+>disas
+>put beard on nose
+easily and naturally
+>put beard on shades
+You've made a full disguise now!
+
+#test-7-2
+
+>disas
+>put nose on beard
+easily and naturally
+>put beard on shades
+You've made a full disguise now!
+
+#test-2-3
+
+>disas
+>put beard on shades
+easily and naturally
+>put shades on nose
+You've made a full disguise now!
+
+#test-6-3
+
+>disas
+>put shades on beard
+easily and naturally
+>put shades on nose
+You've made a full disguise now!
+
+#test-7-3
+
+>disas
+>put nose on beard
+easily and naturally
+>put shades on nose
+You've made a full disguise now!
+
+#test-1-5
+
+>disas
+>put nose on shades
+easily and naturally
+>put beard on nose
+You've made a full disguise now!
+
+#test-2-5
+
+>disas
+>put beard on shades
+easily and naturally
+>put beard on nose
+You've made a full disguise now!
+
+#test-6-5
+
+>disas
+>put shades on beard
+easily and naturally
+>put beard on nose
+You've made a full disguise now!
+
+#test-1-6
+
+>disas
+>put nose on shades
+easily and naturally
+>put shades on beard
+You've made a full disguise now!
+
+#test-3-6
+
+>disas
+>put shades on nose
+easily and naturally
+>put shades on beard
+You've made a full disguise now!
+
+#test-5-6
+
+>disas
+>put beard on nose
+easily and naturally
+>put shades on beard
+You've made a full disguise now!
+
+#test-7-6
+
+>disas
+>put nose on beard
+easily and naturally
+>put shades on beard
+You've made a full disguise now!
+
+#test-2-7
+
+>disas
+>put beard on shades
+easily and naturally
+>put nose on beard
+You've made a full disguise now!
+
+#test-3-7
+
+>disas
+>put shades on nose
+easily and naturally
+>put nose on beard
+You've made a full disguise now!
+
+#test-6-7
+
+>disas
+>put shades on beard
+easily and naturally
+>put nose on beard
+You've made a full disguise now!
+
+* centrifuge-by-1
+
+>gonear dial
+
+>turn dial to 1
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 2
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 3
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 4
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 5
+The room seems to spin a bit slower. You think. You feel you're getting closer. Perhaps you'll get it soon.
+
+You wonder if the dial has any sort of hint on it--an odd word or number or letter--anything.
+
+>turn dial to 6
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 7
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 8
+The room seems to spin a bit slower. You think. You feel and hope you're getting there, but maybe dividing and conquering the possible numbers left will work, if you don't understand the dial clues it'd be worth examining.
+
+>x dial
+You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 8, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. You wonder if there's a partial clue here that you just need to look at right.
+
+>turn dial to 9
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 10
+The room seems to spin a bit slower. You think. Inching along with the dial will get there, but maybe you should be--or should have been--more clinical. Each guess can cut half the numbers, though maybe there's an even quicker way.
+
+>turn dial to 11
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 12
+The room seems to spin a bit slower. You think. Well, you know you'll get there eventually. P.S. I hope you are using the up-arrow and not typing the numbers out.
+
+>turn dial to 13
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 14
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 15
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 16
+The room warps a bit. You wonder if you made things worse, but you hear strong g-trons go SNRT...you did it!
+
+The flipping bits in the dial lock in to say EXITS N E. And you see, yes, exits are north and east now. My hat, that was mathy.
+
+You find yourself in a round den, unadorned.
+
+* centrifuge-bad
+
+>gonear dial
+
+>turn dial to 2
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 1
+The room seems to spin a bit faster, and you worry you've made things worse--maybe examining the dial can help.
+
+>turn dial to 2
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 1
+You feel like you are just flailing with the numbers, now, as the room picks up speed. The room slowed down a bit when you moved up several numbers. Maybe if you keep going past the right number, you'll eventually hit it.
+
+>turn dial to 2
+The room seems to spin a bit slower. You think. 
+
+You wonder if the dial has any sort of hint on it--an odd word or number or letter--anything.
+
+>turn dial to 1
+You think that a binary search may not be a bad way to do things, even if you-the-player don't know what a binary search is.
+
+>turn dial to 2
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 1
+Getting colder.
+
+>turn dial to 2
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 1
+Getting colder.
+
+>turn dial to 2
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 1
+Getting colder.
+
+* centrifuge-binary
+
+>gonear dial
+
+>turn dial to 50
+The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
+
+>turn dial to 25
+The room seems to spin a bit slower. You think. 
+
+>turn dial to 12
+The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
+
+>turn dial to 18
+The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
+
+>turn dial to 15
+The room seems to slow down for a bit before picking up speed and spinning as fast as before. You feel you're getting closer. Perhaps you'll get it soon.
+
+You wonder if the dial has any sort of hint on it--an odd word or number or letter--anything.
+
+>turn dial to 16
+The room warps a bit. You wonder if you made things worse, but you hear strong g-trons go SNRT...you did it!
+
+You glance at the dial, see EXITS N E and wonder if it was always there. And you see, yes, exits are north and east now. My hat, that was mathy.
+
+You find yourself in a round den, unadorned.
+
+[Your score has just gone up by one point.]
+
+* centrifuge-bad-guess
+
+>gonear dial
+
+>turn dial to 99
+The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
+
+>turn dial to 100
+If you tried to spin it that high, you'd break the dial.
+
+>turn dial to -1
+This negative attitude isn't helping you solve the puzzle.
+
+>turn dial to 0
+The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
+
+>turn dial to 0
+That's where the dial's already set.
+
+>turn dial to 99
+The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
+
+>turn dial to 99
+That's where the dial's already set.
+
+>turn dial to 40
+The room seems to spin a bit slower. You think. 
+
+>turn dial 76
+You can probably TURN the dial to a number, e.g. 99.
+
+>turn dial to 76
+The room seems to spin a bit faster, and you worry you've made things worse--maybe examining the dial can help.
+
+You wonder if the dial has any sort of hint on it--an odd word or number or letter--anything.
+
+>turn dial to 77
+You feel like you are just flailing with the numbers, now, as the room picks up speed. Maybe you should try guessing some higher numbers--you might pass over the right one.
+
+>turn dial to 78
+You think that a binary search may not be a bad way to do things, even if you-the-player don't know what a binary search is.
+
+>turn dial to 79
+Getting colder.
+
+>turn dial to 80
+Getting colder.
+
+#and try using a number
+
+>90
+(turning the dial)
+Getting colder
+
+* dial-examine
+
+>gonear dial
+
+>x dial
+You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. You wonder if there's a partial clue here that you just need to look at right.
+
+>x dial
+You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. Maybe if you knew where the exits were supposed to be, that would help. There are only twelve possibilities.
+
+>x dial
+You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. You briefly wonder what numbers have X's in them.
+
+>x dial
+You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. The dial seems to indicate there are seven letters--one is X, and two are a direction. But you haven't had to go diagonally a lot. That leaves four possibilities.
+
+>x dial
+You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. Where, abbreviated, the exits should point.
+
+>x dial
+You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. The room NEXT IS Easier.
+
+>x dial
+You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. You may feel square for missing other solutions to this problem.
+
+>x dial
+You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. Worse comes to worst, you can just to a binary search with the numbers: 99, 50, 75, etc.
+
+>x dial
+You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 0, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. Well, maybe you can brute force things and move the dial one unit at a time. The centrifuge hasn't killed you yet.
+
+>16
+(turning the dial)
+
+The room warps a bit. You wonder if you made things worse, but you hear strong g-trons go SNRT...you did it!
+
+The flipping bits in the dial lock in to say EXITS N E. And you see, yes, exits are north and east now. My hat, that was mathy.
+
+You find yourself in a round den, unadorned.
+
+[Your score has just gone up by one point.]
+
+>x dial
+You see EXITS N E written in the center of its circle. It's currently set to 16, and you want to keep it that way, thank you very much.

@@ -13,7 +13,7 @@ $matches = "self-help bestsellers|random books|biopics";
 
 if (@ARGV[0] eq "taunt")
 {
-  @arstr = ("cussing", "singing", "sleeping", "mob-1", "griping", "dissin", "just-mean", "political", "mob-2", "final-fight");
+  @arstr = ("cussing", "singing", "sleeping", "mob1", "griping", "dissin", "just-mean", "political", "mob2", "final-fight");
   $class = "taunt";
   $matches = "singing rejects|sleep rejects|mob chants|riot slogans|red bull taunts|cussing rejects|mantle laments|fish fries|theses|political slogans";
   $readShuffling = 1;

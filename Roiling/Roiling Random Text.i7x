@@ -885,6 +885,7 @@ blurb
 "So edgy! Dog, yes!"
 "So icky! Yoicks!"
 "So profane, oaf-person!"
+"So scary? Oy! Crass!"
 "So unruly? Run! Lousy!"
 "Soilure? Lousier."
 "Some racy scream, oy!"
@@ -3526,6 +3527,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Stanhope Phaetons"	false
 "Stapleton Talent Ops"	false
 "StarrCo Carrots"	false
+"Staub Tubas"	false
 "Steadham's Mastheads"	false
 "Stedwig Widgets"	false []
 "Steeley Eyelets"	false
@@ -3634,6 +3636,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Tobie's So-Be-It Boites"	false []
 "Tofu's so TUF!"	true []
 "ToilCo: Loci to Cool It!"	true
+"Tolstoy's Toys Lots"	false
 "Tom Lee's Omelets."	false
 "Tom's Gag Maggots"	false
 "Tomkin's OK Mints"	false
@@ -6335,6 +6338,7 @@ blurb
 "Hutless Lushest Hustles"
 "Hypocentral Lycanthrope"
 "I Drove Over Di"
+"I Swap a Wisp"
 "I Votes Soviet"
 "I Wear a Wire"
 "I, Wrath Wraith"
@@ -6410,6 +6414,7 @@ blurb
 "My Calf's Fly Scam"
 "My Depth is Dim: the Spy" []
 "My Li'l Milly"
+"My Org is So Grimy"
 "My Sis Missy"
 "Ned Chute, the Dunce"
 "Neighbors Be Horsing"
@@ -7262,6 +7267,7 @@ blurb
 "Weak-Bosh Bo Hawke's Bake Show"
 "Weatherly The Lawyer"
 "Weird Wired Dr. Wei" []
+"Wherever Vern, WHEE"
 "Whittle With Tel"
 "Whoa, Dr. Howard, How Rad"
 "Wilder Dr. Liew" []
@@ -10640,6 +10646,7 @@ blurb	prio
 "Delaune's Unleased Used Lane[r], by Luna Dees & Adele Sun"
 "DeLaurentis Adulterines, Neutralised[r], by [if player is male]Dustin Earle[else]Adriene Lust[end if]"
 "Delete Le Deet[r], by Ted Lee" []
+"Delicacy-Aid Cycle[r], by Cecil Day"
 "Delila, Allied[r], by [if player is male]Ed Lail[else]Ida Ell[end if]"
 "Della's Dalles[r], by Lad Les Edsall" []
 "Delora's Ordeals[r], by Al DeRos & Rod Sale" []
@@ -11454,6 +11461,7 @@ blurb	prio
 "Gone Grey? Energy, Go[r], by Greg Oyen"
 "Gone Musk, Some Gunk[r], by Gus Monke"
 "Gone, Rift: to Finger Not Grief[r], by [if player is male]Oren Gift[else]Teri Fong[end if]"
+"Good Candy? A Dodgy Con[r], by Dodo Cygan"
 "Good Hues Doghouse[r], by Doug Shoe"
 "Good Kind God? No, Kid[r], by Dodo King"
 "Good Luck Duck Logo[r], by Doug Lock"
@@ -15730,6 +15738,7 @@ blurb	prio
 "We Drank New Dark[r], by Ken Ward"
 "We Drop Powder[r], by Rod Pew"
 "We Hail a While[r], by Hal Wei" []
+"We Have a Wheel[r], by Lee Hwa"
 "We Hit White[r], by Whitt Weihe"
 "We Rack a Wreck[r], by KC Ware-Wacker" []
 "We Ran to No Water[r], by Nat Rowe" []
@@ -17617,6 +17626,7 @@ blurb
 "Le Hot Hotel gives discounts to Store C shoppers." [x]
 "LEGALIZE HERB LOTS a sign reads." [x]
 "A lurid URL ID for the spiciest pics site." [x]
+"Mad Dog's Odd Mags"
 "The Mod Method is the latest 'literature.'" [p] [x]
 "No coital location? Margo's Onan-Anon!" [x]
 "No-Saint Nations are apparently a support groups for the Onanist." [x]
@@ -26165,6 +26175,7 @@ blurb
 "Goons-Pal Spagnolo"
 "Gorgeous Grouse Og" []
 "Gorgon Ron Ogg"
+"Gorilla Garrilo"
 "Gormless Gross Mel"
 "Gory Al Gaylor"
 "Gory Dan Graydon" []
@@ -31496,6 +31507,7 @@ blurb
 "To Resign One's Grit[r], by Rose Ting" []
 "To Share the SOAR[r], by Sethora Hartsoe" []
 "To Shine, This One: I, Honest[r], by [tt] Shen" []
+"To Shirk Hot Risk[r], by Kit Shor"
 "To Spawn Past Now[r], by Pat Snow"
 "Toady Today[r], by Dotty Yadao" []
 "Toil, Lad, Do It All[r], by [ta] Doll"
@@ -35255,6 +35267,7 @@ blurb
 "Pet Bear Beer Tap"
 "Pissy Ev Spivey's"
 "Plastic Cal's Pit"
+"Plausible Allies Pub"
 "Pleasant Pal [n-t]'s" []
 "Plenished Delphine's"
 "Po['] Blue Ole Pub-Pueblo"
@@ -35361,6 +35374,7 @@ blurb
 "So-Lazy Ol['] Yaz's"
 "So-Manic Mo Cain's" []
 "So-Mental Almonte's" []
+"So-Snide Edison's"
 "Sobered DeBoer's"
 "Sodaless Salsedo's"
 "Soggier Georgi's" []
@@ -35678,7 +35692,6 @@ blurb
 "Ron's Den = NO NERDS!"
 "Ruffian Funfair coming soon!" [x]
 "Saint? No! Sin a ton!" []
-"Save foul values of love, us? FA!"us? Love? Fa!
 "Save foul values of love? Us? FA!"
 "Shame only holy names!"
 "Shove-u! Huevos!"

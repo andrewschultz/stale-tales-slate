@@ -4094,10 +4094,11 @@ to say them-that of (tt - a thing):
 
 table of donereject [TDR - this can use a lot more entries]
 specdone	spectalk
-wipes	"You better not fiddle with the wipes wrong, or they'll tear and disintegrate."
+painting	"The painting really goes better with the study than the giant pin."
+ramp	"The ramp is useful now. Best keep it."
 store b	"No more freebies. Sorry."	[stores]
 lecturer	"He's already been changed enough."
-picturers	"They picturers were pretty strict about what they suggested. Not much else you can do with them."	[routes]
+picturers	"The picturers were pretty strict about what they suggested. Not much else you can do with them."	[routes]
 lairage regalia	"You twist your mind a bit, but no, there's probably only one way to enter."
 adsorbing signboard	"No, you don't see any other way around the signboard to enter. You don't need one, either."
 pipe soot	"Brother Horbert probably knows what to do with that."
@@ -4121,6 +4122,7 @@ caps lock	"YOU HAVE WHAT YOU NEED."
 mug	"[if fizzy cola is visible]You'd get cola all over you if you tried anything with the mug[else]The mug is no longer manipulable[end if]."
 computer screen	"The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle."
 keyboard	"You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke."
+wipes	"You better not fiddle with the wipes wrong, or they'll tear and disintegrate." [oyster]
 knob	"You should leave the knob to b'n OK."
 a-s	"Further searching proves fruitless."
 Merle	"He's not going to be any more honest. Or anything nice or good, really." [otters]
@@ -4142,11 +4144,11 @@ to say no-rehash:
 	say "That'd be an awkward rehash. You need another way to say good-bye"
 
 to say good-enuf of (goody - a thing):
-	if goody is a specdone listed in table of donereject:
-		choose row with specdone of goody in table of donereject;
-		say "[spectalk entry]";
-		continue the action;
-	d "The table of donereject could use a lot more entries, like here. Search for TDR in the source.";
+	repeat through table of donereject:
+		if goody is specdone entry:
+			say "[spectalk entry]";
+			continue the action;
+	d "The table of donereject could use a lot more entries, like here for the [goody]. Search for TDR in the source.";
 	say "You've already changed [them-that of goody] enough.";
 
 firstwordhash is a number that varies.
@@ -7924,6 +7926,7 @@ carry out fliptoing:
 			else if the-from entry is part of the diorama:
 				now the-to entry is part of the diorama;
 				now diorama-flip is true;
+				consider the Gunter Knocks rule;
 			else if the-to entry is not visible:	[components aren't broken off]
 				if the-to entry is not the-from entry:
 					move the-to entry to location of player;
@@ -7988,7 +7991,7 @@ table of roman manor anagrams
 the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
 palm	lamp	"lamp" or "get lamp"	"lamp"	"Lamp. Palm. Yup. Using your old powers, you change the palm into a lamp, which gives off light. You go all Jason Scott on it, and just like that, bam, it's in your inventory.[paragraph break]You blink and look around and stare at your diorama. You remember how Old Man Almond gave it to you for one day you might need warm-ups, to get back in the groove. With unusual examples and anything. In case you had a different divining tool than the tagged gadget[if latches are off-stage]. Oh! And he gave you something else! Those--useless latches! They might be good for something. You remember the lump from sleeping on the chair--yup, there they are[end if].[paragraph break]Oh, there's that 'dope' op-ed Gunter threw at you, too[preefies]."	true	201542769	"You don't need to do any more with the lamp."	--
 latches	satchel	"satchel"	"satchel"	"The locks start fiddling with themselves--and each other--and slowly, a satchel emerges from the mess[new-thing]."	true	439479634	"You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too."
-giant pin	abstract painting	"painting"	"painting"	"The giant pin's edges become sharper and, before you know it, it's reformed to a portrait hanging on the wall. Whatever stuck the pin to the wall still works on the painting, which may not be High Art, but it's worth a look."	false	447164205	"The painting really goes better with the study than the giant pin."
+giant pin	abstract painting	"painting"	"painting"	"The giant pin's edges become sharper and, before you know it, it's reformed to a portrait hanging on the wall. Whatever stuck the pin to the wall still works on the painting, which may not be High Art, but it's worth a look."	false	447164205
 pavement	event map	"event map" or "eventmap"	"event map"	"The pavement unfolds into a small map which, you remember, describes your first trip through Yorpwald."	false	682523494
 event map	pavement	"pavement"	"pavement"	"The event map folds back into a thoroughly more dull pavement[read-canflip]."	false	682523494
 crabgrass	brass crag	"brasscrag" or "brass crag"	"brasscrag"	"The crabgrass dries out and becomes a brass crag."	false	437595366
@@ -8024,7 +8027,7 @@ Store Y	oyster-x	"oyster"	"oyster"	"Blam! The store flattens a bit, rounds out, 
 table of routes anagrams
 the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
 worst ad	worst ad	"towards"	"towards"	"You walk towards the ad to see what it says, and when you do, you find yourself not caring what direction you are going in. Then you hear a crackle, and someone yells, 'Catch that intruder!'[paragraph break]Ow! Darts! You pass out and wake up in the center of the same mesa again. The ad is gone. [if armada is in mesa]The armada murmurs--you were so close! Maybe you can find another way to get out[end if]You may not be closer to saving Yorpwald, but you've made it fractionally more livable, so yay there."	false	490212044
-picturers	picturers	"inside"	"inside"	"The church resigns ingress."	false	404002364	--	cleric circle
+picturers	picturers	"inside"	"inside"	"The structure resigns ingress."	false	404002364	--	cleric circle
 lairage regalia	lairage regalia	"across"	"across"	"You walk across, not worrying about what is in front of you. Oscar's appears in front of you. You walk in."	false	373417715	--	adobe abode
 adsorbing signboard	adsorbing signboard	"past"	"past"	"You decide to walk past Pat's. Then, you turn and enter the alley just past it. The building lurches sideways toward you, and you manage to jump through the doorway with only a minor bump as it slams into you. You hear taps spat as you enter."	false	283037761	--	idle deli
 bench-end	bench-end	"astride"	"astride"	"You sit right on the end of the bench, prepared for a tired tirade. The brokest sob-trek ever--and yet, even with your yelling, 'Nag it, giant!' he wants his space. He shakes his arms, but you sense he would like to swing them--and he can't, without his elbow hitting you."	false	480723649
@@ -10412,6 +10415,9 @@ chapter teariest treatise
 book pedanto-notepad
 
 the pedanto-notepad is a warpable thing on a rich chair. understand "pad/note/notebook/pedanto/notepad" and "note book" and "note pad" and "pedanto notepad" as pedanto-notepad.
+
+report taking pedanto-notepad:
+	the rule succeeds;
 
 understand "book" as pedanto-notepad when player is not in shack.
 

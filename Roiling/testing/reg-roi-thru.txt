@@ -12,77 +12,105 @@
 >x chair
 You thought you preferred
 
->get notepad
-meta, mate
-
 >think
 CREATIVITY
-Bangish bashing
 
->undo
->pad red
-Stuff that's all red
+##############################
+# think = 2 points. x ads, get pad, x notice, x bookshelf, flip diorama, flip-not-yet, read pad = 1. 3 needed
 
 >x sad ads
-impossible to look away
+Bangish bashing
+>undo
+
+>get notepad
+meta, mate
 Bangish bashing
 
 >undo
 >x notice
-PAVEMENT
 Bangish bashing
 
 >undo
 >x bookshelf
-READING A DINGER
 Bangish bashing
 
 >undo
 >steel pad
-pedestal becomes
 Bangish bashing
 
 >undo
 >stable
-needed to sneak out
 Bangish bashing
 
 >undo
 >pad red
-Stuff that's all red
 Bangish bashing
+
+>open door
 
 >1
 >5
 
 It is now pitch dark
 
+
+>lapm
+You think you feel the palm shake a bit, but nothing terribly magical happens.
 >lamp
 Your score has just gone up by one point
+>lapm
+If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
+
+>basemetn
+The ten beams creak slightly. Maybe not all of them. But a few.
 
 >basement
+Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
+Your score has just gone up by two points
+>basemetn
+You probably just want to go DOWN to the basement.
+>paintign
+The pin wobbles.
 >painting
 DEBUG INFO: Adding a min point
+>paintign
+The painting really goes better with the study than the giant pin.
 
+>stabel
+The tables seem to shift a bit.
 >stable
 DEBUG INFO: Adding a min point
+>stabel
+You probably just want to go IN to the stable.
 
+>chimnye
+Hm, no, the niche--my niche--won't unfold that way.
 >chimney
 DEBUG INFO: Adding a min point
+>chimnye
+You probably just want to go UP the chimney.
 
 >in
 A Blest Stable
 
+>stari
+You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you think, seeing red.
 >stair
 DEBUG INFO: Adding a min point
+>stari
+WRONG
 
 >in
 You shouldn't need to go back
 
 >u
 
+>rapm
+The pram creaks back and forth slightly.
 >ramp
 DEBUG INFO: Adding a min point
+>rapm
+The ramp is useful now. Best keep it.
 
 >d
 Meet-Bans Basement
@@ -90,19 +118,28 @@ Meet-Bans Basement
 >in
 You fumble nervously
 
+>satchle
+You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them.
 >satchel
 Your score has just gone up
+>satchle
+You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too.
+
 all the secrets here
-examine the settler, first
-x settler
+haven't really EXAMINED it
+>x settler
 
 ####line break problem after X SETTLER??
 
 >in
 Hands up!
 
+>flire
+WRONG
 >flier
 Your score has just gone up
+>flire
+WRONG
 
 >1
 >1
@@ -128,11 +165,19 @@ Your score has just gone up
 >y
 Carven Cavern
 
+>stapel
+WRONG
 >staple
 Your score has just gone up by one point
+>stapel
+WRONG
 
+>staplre
+WRONG
 >stapler
 Your score has just gone up by one point
+>staplre
+WRONG
 
 >staple wall
 >in
@@ -145,44 +190,84 @@ Strip of Profits
 >score
 0 out of 18 total points in the current region, Routes
 
+>towarsd
+The ad seems slightly nearer, for a moment.
 >towards
-Adding a min point
-Your score has just gone up by one point
+DEBUG INFO: Adding a min point
+>towarsd
 
+>insied
+You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that.
 >inside
 Your score has just gone up by one point
+>out
+>insied
+There's no other way to enter the Cleric Circle.
+>in
 
 >x toils
 Precise recipes
 
 >out
+>pats
+You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you.
 >past
 Your score has just gone up by one point
+>pats
+WRONG
 Idle Deli
 
+>despiet
+WRONG
 >despite
 Your score has just gone up by one point
+>despiet
+WRONG
 
 >out
+>acrsso
+You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close.
 >across
 Your score has just gone up by one point
+>acrsso
+WRONG
 Adobe Abode
 
+>opposiet
+The soot smells a bit stronger than before for a moment.
 >opposite
 Your score has just gone up by one point
+>opposiet
+WRONG
 
 >out
+>againts
+You hang around the bench, hoping for something to happen, but nothing happens. Though it seems like it should.
 >against
 Your score has just gone up by one point
+>againts
+WRONG
 
+>astried
+Oof! You fail to jump on the bench end. Try mixing things up from what you just did.
 >astride
 Your score has just gone up by one point
+>astried
+WRONG
 
+>belwo
+You seem like you should be able to avoid the elbow, but you may need to mix things up a bit.
 >below
 Your score has just gone up by one point
+>belwo
+WRONG
 
+>undre
+The pages of Rude 'N Nuder flutter a bit.
 >under
 Your score has just gone up by one point
+>undre
+WRONG
 
 ##no-gal needs a line break ??
 
@@ -191,42 +276,82 @@ Your score has just gone up by one point
 >from
 Your score has just gone up by one point
 
+>beneaht
+WRONG
 >beneath
 Your score has just gone up by one point
+>beneaht
+WRONG
 Sun-Spared Underpass
 
+>untli
+WRONG
 >until
 Your score has just gone up by one point
+>untli
+WRONG
 
+>aroudn
+WRONG
 >around
 Your score has just gone up by one point
+>aroudn
+WRONG
 
+>alogn
+WRONG
 >along
 Your score has just gone up by one point
+>alogn
+WRONG
 Ripe Pier
 
+>amidts
+WRONG
 >amidst
 Your score has just gone up by one point
+>amidts
+WRONG
 Cripple Clipper
 
 >undo
+>aboadr
+WRONG
 >aboard
 Your score has just gone up by one point
+>aboadr
+WRONG
 Cripple Clipper
 
+>behidn
+WRONG
 >behind
 Your score has just gone up by one point
+>behidn
+WRONG
 
 >undo
+>withni
+WRONG
 >within
 Your score has just gone up by one point
+>withni
+WRONG
 
+>betwene
+WRONG
 >between
 Your score has just gone up by one point
+>betwene
+WRONG
 Strip of Profits
 
+>throuhg
+WRONG
 >through
 Your score has just gone up by one point
+>throuhg
+WRONG
 Strip of Profits
 
 * _troves
@@ -234,36 +359,68 @@ Strip of Profits
 >l
 Loather Rathole
 
+>gaep
+WRONG
 >gape
 Your score has just gone up by one point
+>gaep
+WRONG
 Adding a min point
 
+>haet
+WRONG
 >hate
 Your score has just gone up by one point
+>haet
+WRONG
 
+>caer
+WRONG
 >care
 Your score has just gone up by one point
+>caer
+WRONG
 Loudest Used Lot
 
+>obserev
+WRONG
 >observe
 Your score has just gone up by one point
+>obserev
+WRONG
 
+>spto
+WRONG
 >spot
 Your score has just gone up by one point
+>spto
+WRONG
 
 >recall
 Darn it, that should work
 
+>reasno
+WRONG
 >reason
 Your score has just gone up by one point
+>reasno
+WRONG
 
+>reclla
+WRONG
 >recall
 Pallid
+>reclla
+WRONG
 Your score has just gone up by one point
 
 >undo
+>belieev
+WRONG
 >believe
 Your score has just gone up by one point
+>belieev
+WRONG
 Adding a min point
 
 >listen
@@ -271,67 +428,127 @@ helping someone else
 
 ##line break??
 
+>deriev
+WRONG
 >derive
 Your score has just gone up by one point
+>deriev
+WRONG
 
 #extra line break?
 
+>glaer
+WRONG
 >glare
 Adding a min point
+>glaer
+WRONG
 Your score has just gone up by one point
 
+>despari
+WRONG
 >despair
 Your score has just gone up by one point
+>despari
+WRONG
 
 >l
 Boredom Bedroom
 
+>dela
+WRONG
 >deal
 Your score has just gone up by one point
+>dela
+WRONG
 Dour Tan Rotunda
 
+>desier
+WRONG
 >desire
 Your score has just gone up by one point
+>desier
+WRONG
 Econ-Cone
 
+>aspier
+WRONG
 >aspire
 Your score has just gone up by one point
+>aspier
+WRONG
 
+>pondre
+WRONG
 >ponder
 FiefCo Office
+>pondre
+WRONG
 Your score has just gone up by one point
 
 >undo
+>striev
+WRONG
 >strive
 Your score has just gone up by one point
+>striev
+WRONG
 Adding a min point
 
+>pondre
+WRONG
 >ponder
 FiefCo Office
+>pondre
+WRONG
 Your score has just gone up by one point
 
 #make sure knocking occurs first thing
 
+>ignoer
+WRONG
 >ignore
 Your score has just gone up by one point
+>ignoer
+WRONG
 
+>bolstre
+WRONG
 >bolster
 Your score has just gone up by one point
+>bolstre
+WRONG
 
+>lats
+WRONG
 >last
 Your score has just gone up by one point
+>lats
+WRONG
 
+>resing
+WRONG
 >resign
 Your score has just gone up by one point
+>resing
+WRONG
 Strip of Profits
 
 >undo
+>mastre
+WRONG
 >master
 Your score has just gone up by one point
+>mastre
+WRONG
 Adding a min point
 
+>decied
+WRONG
 >decide
 Your score has just gone up by one point
+>decied
+WRONG
 Strip of Profits
 
 * _presto
@@ -1315,12 +1532,16 @@ Rustic Citrus
 >in
 >{include} _others
 
-* _only-routes
+* only-manor
+
+>{include} _manor
+
+* only-routes
 
 >gonear same mesa
 >{include} _routes
 
-* _only-troves
+* only-troves
 
 >gonear rathole
 >{include} _troves
