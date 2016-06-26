@@ -1,4 +1,4 @@
 {
-	"origin": ["NO CUSSING: #cussing#","NO SINGING: #singing#","NO SLEEPING: #sleeping#","Crowd Taunting Enemy: #mob1#","MORALISTIC: #griping#","TEEN SLAMS: #just-mean#","EEEVVVIIILLL: #theses#","Political: #political#","Crowd Taunting Former Hero: #mob2#","Big Evil Guy Taunt: #final-fight#"], 
+	"origin": ["NO CUSSING: #cussing#","NO SINGING: #singing#","NO SLEEPING: #sleeping#","Crowd Taunting Enemy: #mob1#","MORALISTIC: #griping#","TEEN SLAMS: #dissin#","EEEVVVIIILLL: #just-mean#","Political: #political#","Crowd Taunting Former Hero: #mob2#","Big Evil Guy Taunt: #final-fight#"], 
 =========================================
 }

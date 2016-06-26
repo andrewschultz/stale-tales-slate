@@ -5607,6 +5607,7 @@ blurb
 "Beating Big [n-t]"
 "Beer-Clash Bleachers"
 "Behold a Bad Hole"
+"Bilk [']N Blink"
 "Blam, Set, Bam, Let's Blast [']Em"
 "BLAM! The Meth Lab" []
 "Bling/Rug Burgling"
@@ -11258,6 +11259,7 @@ blurb	prio
 "Fooling Gilfono-Fogolin[r], by Gino Lof" []
 "Foot-Long Goon Loft[r], by Fog Olton"
 "Footballs['] Lobs Float[r], by Flo Oblast"
+"For a Bed of Bread[r], by Bo Fader"
 "For Codes So Forced[r], by Red Fosco"
 "For Easy Years of a Serf, Yo[r], by Rose Fay"
 "For Hats or Shaft[r], by Ashfort Hofstra" []
@@ -12638,6 +12640,7 @@ blurb	prio
 "Mad Glee Gleamed[r], by Meg Dale"
 "Mad Grace's Card Games[r], by Cam DeGras"
 "Mad Liar Admiral[r], by Mila Ard" []
+"Mad Picks, Kid Scamp[r], by Pam Dicks"
 "Mafeking Megafink[r], by [if player is male]Mike Fang[else]Kim Fagen[end if]"
 "The Magic Game Itch[r], by Meg Chait"
 "Magic Key: a Gem, Icky[r], by Mick Gaye"
@@ -14556,6 +14559,7 @@ blurb	prio
 "Sit, Speak, Piss-Take[r], by Peta Sisk"
 "Sit Thereon in the Store[r], by Theo Estrin"
 "Sit, Ye Yetis[r], by Ty Eis"
+"Sits-Mum Summits[r], by Stu Mims"
 "Six Neat Tin Axes: It's Xena[r], by Anti-Sex Ex-Saint Esta Nix"
 "Six Rope Proxies[r], by Ox Pires" []
 "Sixpence to Exceptions[r], by Tex Pisceno"
@@ -19165,6 +19169,7 @@ blurb
 "Evangelist [if player is male]Nigel Stave[else]Stevie Lang[end if]" []
 "Evangelist Nate Selvig" []
 "Evict-Sin Vic Stein-Vicentis"
+"Ex-Snot Sexton"
 "Explanatory [if player is male]Early Paxton[else]Roxy LaPenta[end if]"
 "Faith-Led Hatfield"
 "Fake Saint Stefaniak"
@@ -23051,6 +23056,7 @@ blurb
 "'Penknife? Keep, Finn!'"
 "'The pens, Stephen.'"
 "'A pension? Inane sop!'"
+"'Perk? Ha, phreak! Eh, park!'"
 "'Perry, a prayer?' / 'Err, PAY.'"
 "'Pesos for spoofers of posers?'"
 "'Petard? Depart!!!'"
@@ -26087,6 +26093,7 @@ blurb
 "Formidable Abe Milford"
 "Foul-Breath [if player is male]Hobert Lauf[else]Ruthe Falbo[end if]"
 "Fouler Ulf Roe"
+"Foulest-Toes Ulf"
 "Fox Drew Wexford"
 "Fox Red Exford"
 "Fragile Eli Graf"
@@ -27002,6 +27009,7 @@ blurb
 "Mrs. Cable-Scramble"
 "Ms. Acquired-Crime-Squad"
 "Ms. Bob Bombs"
+"Mudthorn Thurmond"
 "Mumbler Brummel"
 "Munch-Good McDonough" []
 "Murderer Demurrer Red Rumer"

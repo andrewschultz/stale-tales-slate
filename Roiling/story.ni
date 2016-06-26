@@ -2672,14 +2672,14 @@ to say current-known:
 			consider the my-rule entry;
 			if the rule succeeded:
 				increment yays;
-				say "[my-let entry][no line break]";
+				say "[my-let entry][run paragraph on]";
 	say "[line break]Yellow: ";
 	repeat through table of known-letters:
 		if v-c-y entry is 2:
 			consider the my-rule entry;
 			if the rule succeeded:
 				increment yays;
-				say "[my-let entry][no line break]";
+				say "[my-let entry][run paragraph on]";
 	consider the got-y rule;
 	if the rule succeeded:
 		increment yays;
@@ -3199,6 +3199,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 		continue the action;
 		enact gp-quip;
 	else if current quip is scale-quip or current quip is gulp-quip or current quip is elmomole-quip or current quip is stable-quip or current quip is basement-quip or current quip is ramp-quip or current quip is painting-quip or current quip is chimney-quip or current quip is stair-quip:
+		now current quip is mowered;
 		say "You now know...[line break][current-known][line break]";
 		enact got-red-yellow-quip;
 		another-Elmo-hint;
@@ -3306,6 +3307,7 @@ after quipping when qbc_litany is the table of Elvira comments:
 		if one-Elvira is false:
 			now one-Elvira is true;
 			enact the sinister-quip;
+			enact the bald-quip;
 	else if current quip is final-quip:
 		lawnmower table of Elvira comments;
 		terminate the conversation;
@@ -3780,7 +3782,7 @@ new beet	"The new beet seems to spin slightly away from Thor for a second."
 Pa Egg Pea	"You stare blankly at [i]Pa, Egg, Pea[r], but you're not quite doing it right." [START troves]
 cold	"You think you feel less cold for a second. But you need to make it last."
 heat	"Meh. Maybe you're closer than you think to motivation. How to make that matter?"
-babblings	"The babbling remain verbose--mixing up subjects and making you consider things you hadn't before."
+babblings	"The babblings remain verbose--mixing up subjects and making you consider things you hadn't before."
 stop post	"You feel silly a bit. You can't let a simple stop post stop you!"
 ltb	"You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways."
 bee's head	"The bee shakes its head, trying to make sense of the slightly disordered magic it felt from you."
@@ -3788,6 +3790,7 @@ what-a-bee	"The bee's buzzing goes off-kilter for a bit. You gain a bit of faith
 cellar door	"It's...hmm...you remember all the clues, but what order to place them in, now."
 diapers	"Staring again at the diapers, you are depressed you couldn't even get being depressed right."
 rivets	"Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want."
+Pernod	"The bottle of Pernod seems to rattle and spin slightly."
 large regal lager	"No...that is not quite the way to fight the temptation of the wicked brew."
 brochure	"Your longing increases...but not enough."
 prai	"That's not quite the way to look forward to praise. But it may be a start."
@@ -4100,8 +4103,11 @@ specdone	spectalk
 lamp	"If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either."
 painting	"The painting really goes better with the study than the giant pin."
 chimney	"You probably just want to go UP the chimney."
-stair	"The stair is good for getting around. It's worth keeping(TDR)."
+stair	"The stair is good for getting around. It's worth keeping."
 ramp	"The ramp is useful now. Best keep it."
+satchel	"You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too."
+staple	"Those plates were a mess, and now they're a tidy staple. It's better that way."
+stapler	"The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again."
 store b	"No more freebies. Sorry."	[stores]
 lecturer	"He's already been changed enough."
 picturers	"The picturers were pretty strict about what they suggested. Not much else you can do with them."	[routes]
@@ -4121,9 +4127,16 @@ ship controls	"No, on to Thor or the new beet."
 hit win	"No, on to Thor or the new beet."
 Thor
 New Beet
-Pa Egg Pea	[troves]
-prai	"You have already expanded your goals that way, [if rivets are reflexive]but there is another, if you want[else]and the other[end if].[line break]"
-statue	"You have already expanded your goals that way, [if prai is reflexive]but there is another, if you want[else]and the other[end if]."
+Pa Egg Pea	"You probably did what you could. Or not-did." [troves]
+heat	"Don't need to overheat, or overhate."
+stop post	"You don't need to P.S. tweaking the post."
+bee's head	"Too much fiddling with reason is unreasonable."
+what-a-bee	"The bee's already taken enough of your in-my-heartitude."
+box of diapers	"Don't twist yourself into knots to/from REAL despair."
+prai	"You're wanting praise too much, now."
+rivets	"You're striving too hard, now."
+painting of the stream	"You can't do better than master the stream, so no use trying."
+Eddie's Song	"You've lasted long enough. There are new things to look at, now."
 star	"[if player has star]No need for additional arts.[else]The star doesn't budge.[end if]"	[presto]
 popgun	"If you overthought things, you might break it again."
 log ons	"[no-rehash]."
@@ -7852,14 +7865,6 @@ check fliptoing when player is in dusty study and gunter is off-stage (this is t
 					preef the-from entry;
 					do nothing instead;
 
-check fliptoing (this is the sitar-stria-stair rule) :
-	if noun is sitar:
-		now stria is in lalaland;
-		move stair backdrop to all stairy rooms;
-	if noun is stria:
-		now sitar is in lalaland;
-		move stair backdrop to all stairy rooms;
-
 check fliptoing (this is the reject flipping for reef and animal attack and alert sign rule):
 	if noun is not owls and owls are visible:
 		say "That's a good thought...once you've gotten rid of the owls. You don't have time to summon assistance.";
@@ -7951,7 +7956,7 @@ carry out fliptoing:
 				now diorama-flip is true;
 				consider the Gunter Knocks rule;
 			else if the-to entry is not visible:	[components aren't broken off]
-				if the-to entry is not the-from entry:
+				if the-to entry is not the-from entry and the-to entry is not a backdrop:
 					move the-to entry to location of player;
 			if the-to entry is lamp:
 				now bean-smell is true;
@@ -8024,8 +8029,8 @@ farm plot	platform	"platform"	"platform"	"The farm plot switches back to a platf
 pedestal	steel pad	"steelpad" or "steel pad"	"steelpad"	"The pedestal becomes a steel pad."	false	613492907
 steel pad	pedestal	"pedestal"	"pedestal"	"The steel pad intertwines into a marginally artistic pedestal[read-canflip]."	false	613492907
 pram	ramp	"ramp"	"ramp"	"The pram folds out -- boy, there are all sorts of compartments there -- and becomes a ramp, given revamping. [b]DOWN[r] to a basement you have forgot you had."	false	233052733	"The ramp's useful now. Best keep it."
-sitar	sitar	"stair"	"stair"	"The sitar becomes one with the ground, showing you an inner path to somewhere more peaceful."	false	331888451	"The stair is good for getting around. It's worth keeping."
-stria	stria	"stair"	"stair"	"The stria glow and cascade into a stair leading back up."	false	331888451
+sitar	stair	"stair"	"stair"	"The sitar becomes one with the ground, showing you an inner path to somewhere more peaceful."	false	331888451	"The stair is good for getting around. It's worth keeping."
+stria	stair	"stair"	"stair"	"The stria glow and cascade into a stair leading back up."	false	331888451
 niche	chimney	"chimney"	"chimney"	"The square saying MY NICHE rumbles and collapses to create an impromptu chimney. It's wide enough for you to climb and even appears to have ledges or whatever to grip. You can go up now."	false	484428752
 t-b	t-b	"basement"	"basement"	"[if Basement is visited]You diligently set about making sure you've got all the points for this area[else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to the basement."	false	608585586
 tables	tables	"stable"	"stable"	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."	false	401610655
@@ -8074,8 +8079,8 @@ beet	beet	"between"	"between"	"[ahoy-eh]."	false	681789531	--	Strip of Profits
 table of troves anagrams
 the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
 Pa Egg Pea	Pa Egg Pea	"gape"	"gape"	"You empty your mind to let the advice in Pa, Egg, Pea sink in. It--makes sense, if you don't think too hard. [eicond]."	false	244059588	"You already totally grok Pa, Egg, Pea."
-cold	fretful truffle	"hate"	"hate"	"You feel a rife fire in your heart. [paragraph break]'How neat! Hate won heat now!' you think to yourself.[paragraph break]You manage to stay toasty but you lose focus as you switch too soon from thoughts of goin['] cold to gold coin. A bogeyman takes your moneybag, dropping only a fretful truffle![purse-gone] Your thoughts are really racing now. Racing so fast you can probably do the wrong thing several times before you get it right.[paragraph break]You may need that practice, because right now you don't want your money back as much as you should."	true	270386244	[start troves flip]
-heat	heat	"care"	"care"	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, he can't have ducked out in plain sight. You thought you heard a door slam, just out of view. Emotion has gotten you this far.[wfak][paragraph break]But you will need to be more analytical to move on."	false	234323315
+cold	heat	"hate"	"hate"	"You feel a rife fire in your heart. [paragraph break]'How neat! Hate won heat now!' you think to yourself.[paragraph break]You manage to stay toasty but you lose focus as you switch too soon from thoughts of goin['] cold to gold coin. A bogeyman takes your moneybag![purse-gone] Your thoughts are really racing now. Racing so fast you can probably do the wrong thing several times before you get it right.[paragraph break]You may need that practice, because right now you don't want your money back as much as you should."	false	270386244	[start troves flip]
+heat	truffle	"care"	"care"	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, he can't have ducked out in plain sight. You thought you heard a door slam, just out of view. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical to move on."	false	234323315	--	Used Lot
 stop post	stop post	"spot"	"spot"	"There he is! You don't let on you've spotted him, but you walk near, notice him jump, and yell the magic words.[paragraph break]'Setup, stupe!' Wop! Pow! Pop! Wow! An upset! Your smackings are apt food for a footpad. He drops your purse--[i]though at that moment you realize the self-reliance you gained is better than any money.[r] Still, during all this feeling good about yourself, you let him get away. 'You won't find me in the cellar!' he yells. By then, a large bee has buzzed in and it makes you forget where the cellar entrance is."	false	355202520
 babblings	babblings	"observe"	"observe"	"Cads. Clues. Cul-de-sacs. Once you really pay attention, you see how observing them detachedly gets you closer to what you really want. You're in the zone, now. Something may or may not be moving by the stop post. Time to hone your observing."	false	637146289	"You observe that further observation would be redundant."
 bee's head	bee's head	"reason"	"reason"	"You recognize that small bumblebees flying don't make any sense. Then, therefore, neither should a much bigger one, due to the scaling paradox. The bee lets out a snore from the reason[if what-a-bee is reflexed]. You've already disposed of the bee emotionally, but hey, you might as well be sure of things[otherwise]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."	false	454851781	"You already reasoned. It stands to reason a second reasoning would be less valuable."
@@ -8650,14 +8655,6 @@ after fliptoing post (this is the cleanup after the post/thief rule) :
 	move what-a-bee to Used Lot;
 	continue the action;
 
-after fliptoing heat:
-	move player to Used Lot;
-	continue the action;
-
-after fliptoing fretful truffle:
-	move heat to Loather Rathole;
-	continue the action;
-
 after fliptoing (this is the one-of-two and min-up-plus rule):
 	if noun is keys or noun is hogs:
 		say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed. Behind the wall to the north you see a shack, with a warning sign.";
@@ -8958,7 +8955,7 @@ after fliptoing ramp (this is the check ramp min-up rule) :
 		min-up; [check if passage is made via beams or stable->stair]
 	continue the action;
 
-after fliptoing sitar (this is the check sitar min-up and exits rule) :
+after fliptoing stair (this is the check sitar min-up and exits rule) :
 	now Basement is mapped below stable;
 	if the room below study is nothing:
 		now study is mapped above Basement;
@@ -8966,6 +8963,7 @@ after fliptoing sitar (this is the check sitar min-up and exits rule) :
 		min-up;
 	else if niche is in lalaland and pram is in lalaland:
 		min-up; [check if passage is made via beams or chimney->pram]
+	move stair backdrop to all stairy rooms;
 	continue the action;
 
 chapter roveovering
@@ -9573,8 +9571,9 @@ check going down in stable:
 	move player to Basement instead;
 
 instead of doing something with stair:
-	if current action is not climbing and current action is not entering:
-		say "Can't do much but go up or down a stair." instead;
+	if current action is climbing or current action is entering or current action is fliptoing:
+		continue the action;
+	say "Can't do much but go up or down a stair." instead;
 
 check going up in Basement:
 	if stria are visible and t-b are in dusty study:
@@ -17586,6 +17585,8 @@ check taking a-s:
 
 understand "achers/arches" and "achers arches" as a-s.
 
+understand "a-s" as a-s when debug-state is true. [for showme a-s]
+
 a-text of a-s is "RYYRRR". b-text of a-s is "RY?RRR". parse-text of a-s is "x[sp]-[sp]-[sp]x[sp]x[sp]x".
 
 does the player mean searching the a-s: it is very likely.
@@ -17594,11 +17595,8 @@ instead of searching a-s:
 	if sardine is visible:
 		say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of him to have a serious look.";
 		preef a-s instead;
-	if a-s are reflexive:
-		say "You found all you could.";
-	otherwise:
-		try fliptoing a-s;
-		now a-s are unfigured;
+	try fliptoing a-s;
+	now a-s are unfigured;
 
 after fliptoing a-s:
 	pearl-check;

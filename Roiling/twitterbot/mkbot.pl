@@ -24,7 +24,10 @@ $failures = $success = $arind = 0;
 readBeforeAfter();
 
 #die($initstring);
-open(B, ">c:/games/inform/roiling.inform/source/alf-$class.txt");
+
+my $alf = "c:/games/inform/roiling.inform/source/alf-$class.txt";
+
+open(B, ">$alf");
 print B @genStr[0];
 
 readInFile("Roiling");
@@ -32,6 +35,13 @@ if ($readShuffling) { readInFile("Shuffling"); }
 
 print B @genStr[1];
 close(B);
+
+open($fh, "+<$alf") or die;
+
+seek $fh, -6, 2;
+print $fh "\n}\n";
+truncate $fh, (-s $alf) - 3;
+close($fh);
 
 $outStr = join("\n", @failLines); if (!$outStr) { $outStr = "all successful"; }
 print "TEST RESULTS:json $class errors,0,$failures,0,$outStr\n";
@@ -60,6 +70,7 @@ while ($a = <A>)
   if ($inTable)
   {
     if ($a =~ /\[x\]/) { next; }
+	if ($a =~ /\[[ts]-w\]/i) { next; } #ignore super swears
     if ($a !~ /[0-9a-z]/i) { $inTable = 0; print B " ],\n"; next; }
 	chomp($a);
     $b = $a;

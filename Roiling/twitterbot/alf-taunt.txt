@@ -1,5 +1,5 @@
 {
-	"origin": ["NO CUSSING: #cussing#","NO SINGING: #singing#","NO SLEEPING: #sleeping#","Crowd Taunting Enemy: #mob1#","MORALISTIC: #griping#","TEEN SLAMS: #just-mean#","EEEVVVIIILLL: #theses#","Political: #political#","Crowd Taunting Former Hero: #mob2#","Big Evil Guy Taunt: #final-fight#"], 
+	"origin": ["NO CUSSING: #cussing#","NO SINGING: #singing#","NO SLEEPING: #sleeping#","Crowd Taunting Enemy: #mob1#","MORALISTIC: #griping#","TEEN SLAMS: #dissin#","EEEVVVIIILLL: #just-mean#","Political: #political#","Crowd Taunting Former Hero: #mob2#","Big Evil Guy Taunt: #final-fight#"], 
 	"cussing": [
 	"(Mr. Taunt-Tantrum/Mrs. Taunt-Tantrums)!",
 	"A-ah! Not an oath!",
@@ -963,7 +963,6 @@
 	"Pun, hi? Un-hip!",
 	"Ron's Den = NO NERDS!",
 	"Saint? No! Sin a ton!",
-	"Save foul values of love, us? FA!",
 	"Save foul values of love? Us? FA!",
 	"Shame only holy names!",
 	"Shove-u! Huevos!",
@@ -1204,5 +1203,5 @@
 	"'Torridest distorter!'",
 	"'Vile scar! Evil arcs!' Visceral cavilers.",
 	"'We are right! Rage! Writhe!'",
-	"'Witchery: why rec it?'" ],
+	"'Witchery: why rec it?'" ]
 }

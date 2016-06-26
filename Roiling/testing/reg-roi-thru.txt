@@ -98,7 +98,7 @@ You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you
 >stair
 DEBUG INFO: Adding a min point
 >stari
-WRONG
+The stair is good for getting around. It's worth keeping.
 
 >in
 You shouldn't need to go back
@@ -122,10 +122,10 @@ You fumble nervously
 You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them.
 >satchel
 Your score has just gone up
+all the secrets here
 >satchle
 You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too.
 
-all the secrets here
 
 >in
 haven't really EXAMINED it
@@ -141,7 +141,7 @@ Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at
 >flier
 Your score has just gone up
 >flire
-WRONG
+Better to pump Elmo for information.
 
 >1
 >1
@@ -164,7 +164,6 @@ WRONG
 >1
 >1
 >3
->y
 Carven Cavern
 
 >stapel
@@ -363,68 +362,70 @@ Routes (18/18)
 Loather Rathole
 
 >gaep
-WRONG
+You stare blankly at Pa, Egg, Pea, but you're not quite doing it right.
 >gape
 Your score has just gone up by one point
->gaep
-WRONG
 Adding a min point
+>gaep
+You probably did what you could. Or not-did.
 
 >haet
-WRONG
+You think you feel less cold for a second. But you need to make it last.
 >hate
 Your score has just gone up by one point
 >haet
-WRONG
+Don't need to overheat, or overhate.
 
 >caer
-WRONG
+Meh. Maybe you're closer than you think to motivation. How to make that matter?
 >care
 Your score has just gone up by one point
->caer
-WRONG
 Loudest Used Lot
+>caer
+That's not something you can say, do or see here.
 
 >obserev
-WRONG
+The babblings remain verbose--mixing up subjects and making you consider things you hadn't before.
 >observe
 Your score has just gone up by one point
 >obserev
-WRONG
+You're already observing by reflex now. No need to tweak things.
 
 >spto
-WRONG
+You feel silly a bit. You can't let a simple stop post stop you!
 >spot
 Your score has just gone up by one point
 >spto
-WRONG
+You don't need to P.S. tweaking the post.
 
 >recall
 Darn it, that should work
+>undo
 
 >reasno
-WRONG
+The bee shakes its head, trying to make sense of the slightly disordered magic it felt from you.
 >reason
 Your score has just gone up by one point
 >reasno
-WRONG
+Too much fiddling with reason is unreasonable.
 
 >reclla
-WRONG
+It's...hmm...you remember all the clues, but what order to place them in, now.
 >recall
 Pallid
->reclla
-WRONG
 Your score has just gone up by one point
+>reclla
+That's not something you can say, do or see here.
 
 >undo
+>undo
 >belieev
-WRONG
+The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track.
 >believe
 Your score has just gone up by one point
->belieev
-WRONG
 Adding a min point
+>belieev
+The bee's already taken enough of your in-my-heartitude.
 
 >listen
 helping someone else
@@ -432,126 +433,131 @@ helping someone else
 ##line break??
 
 >deriev
-WRONG
+It's...hmm...you remember all the clues, but what order to place them in, now.
 >derive
 Your score has just gone up by one point
 >deriev
-WRONG
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
 
 #extra line break?
 
 >glaer
-WRONG
+No...that is not quite the way to fight the temptation of the wicked brew.
 >glare
 Adding a min point
->glaer
-WRONG
 Your score has just gone up by one point
+>glaer
+You stare into space some more but get distracted.
 
 >despari
-WRONG
+Staring again at the diapers, you are depressed you couldn't even get being depressed right.
 >despair
 Your score has just gone up by one point
 >despari
-WRONG
+Don't twist yourself into knots to/from REAL despair.
 
 >l
 Boredom Bedroom
 
 >dela
-WRONG
+You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
 >deal
 Your score has just gone up by one point
->dela
-WRONG
 Dour Tan Rotunda
+>dela
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
 
 >desier
-WRONG
+Your longing increases...but not enough.
 >desire
 Your score has just gone up by one point
->desier
-WRONG
 Econ-Cone
+>desier
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
 
 >aspier
-WRONG
+That's not quite the way to look forward to praise. But it may be a start.
 >aspire
 Your score has just gone up by one point
 >aspier
-WRONG
+You're wanting praise too much, now.
 
 >pondre
-WRONG
+The bottle of Pernod seems to rattle and spin slightly.
 >ponder
 FiefCo Office
->pondre
-WRONG
 Your score has just gone up by one point
+>pondre
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
 
 >undo
+>undo
 >striev
-WRONG
+Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want.
 >strive
 Your score has just gone up by one point
->striev
-WRONG
 Adding a min point
+>striev
+You're striving too hard, now.
 
 >pondre
-WRONG
+The bottle of Pernod seems to rattle and spin slightly.
 >ponder
 FiefCo Office
+If only you could tune that out!
 >pondre
-WRONG
-Your score has just gone up by one point
+That's not something you can say, do or see here.
 
 #make sure knocking occurs first thing
 
 >ignoer
-WRONG
+The noise seems almost bearable.
 >ignore
 Your score has just gone up by one point
 >ignoer
-WRONG
+Now that you've ignored the distraction, you want to forget it.
 
 >bolstre
-WRONG
+That's not quite the way to deserve that lobster.
 >bolster
 Your score has just gone up by one point
 >bolstre
-WRONG
+That's not something you can say, do or see here.
+
+>discovre
+DIVORCES suddenly seems more alluring and more rubbish at once.
+>discover
+Your score has just gone up by one point
+Adding a min point
+>discovre
+No! Not another second thinking about that rubbish.
 
 >lats
-WRONG
+You don't quite draw inspiration from the shaker, but there can't be that many alts.
 >last
 Your score has just gone up by one point
 >lats
-WRONG
+You've lasted long enough. There are new things to look at, now.
 
 >resing
-WRONG
+You try to imagine what the singer's songs are like, but that's not quite it.
 >resign
 Your score has just gone up by one point
->resing
-WRONG
 Strip of Profits
 
 >undo
 >mastre
-WRONG
+That's not quite the way to focus on the stream.
 >master
 Your score has just gone up by one point
->mastre
-WRONG
 Adding a min point
+>mastre
+You can't do better than master the stream, so no use trying.
 
 >decied
-WRONG
+You try to groove to Eddie's song, but that's not quite it.
 >decide
 Your score has just gone up by one point
->decied
-WRONG
 Strip of Profits
 
 >score
@@ -1815,11 +1821,11 @@ Rustic Citrus
 >n
 >missed
 
-* only-manor
+* _only-manor
 
 >{include} _manor
 
-* only-routes
+* _only-routes
 
 >gonear same mesa
 >{include} _routes
@@ -1828,6 +1834,7 @@ Rustic Citrus
 
 >gonear rathole
 >{include} _troves
+>{include} _summarize
 
 * _only-presto
 
@@ -1851,7 +1858,6 @@ Rustic Citrus
 >seed 1
 >gonear trefoil
 >{include} _towers
->{include} _summarize
 
 * _only-otters
 

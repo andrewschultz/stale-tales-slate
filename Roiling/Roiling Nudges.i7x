@@ -56,10 +56,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "niche"	297994347	--	niche	--	"It's not any old niche. It's your niche. And by your niche, I mean you see it as 'my niche.'"
 "closets"	570636060	--	closets	--	"The closets are there to warp space a bit. You don't need to mess with them."
 "closet"	474362094	--	closets	--	"The closets are there to warp space a bit. You don't need to mess with them."
-"plates"	464657709	--	staple	--	"Those plates were a mess, and now they're a tidy staple. It's better that way."
 "plate"	368383743	--	plates	--	"You have no idea which plate to focus on, so maybe you should focus on the plates."
 "tapler"	453707546	--	plaster	--	"What you need is singular, but you sense it's all the plaster that matters."
-"plaster"	549981512	--	stapler	--	"The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again."
 "abstract"	429617931	--	painting	--	"That is probably overthinking the painting's abstract-ness. It's really just good for examining and offsetting the bookcase."
 "ten beams"	608585586	--	--	basement-visible rule	"You probably just want to go DOWN to the basement."
 "stable"	401610655	--	--	stable-visible rule	"You probably just want to go IN to the stable."
@@ -75,6 +73,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "arifle"	340639311	--	rifle	--	"Just the rifle, well, not THE rifle, or JUST, rifle, but RIFLE."
 "hostage"	473612489	--	rifle	--	"It's not you that needs changing but the rifle."
 "gun"	206613017	--	rifle	--	"It's not a gun but a rifle. And a gnu would be a gnu-sance anyway."
+"flier"	338451493	--	--	elmo-chat rule	"Better to pump Elmo for information."
 "elmo"	320047678	--	Elmo	--	"Changing Elmo won't work. It's his rifle[if rifle in lalaland] that needed changing[end if]."
 "chair"	188792351	--	rich chair	--	"The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing."
 "rich"	186604533	--	rich chair	--	"The chair may be an unnecessary luxury, but you shouldn't feel bad about that."
@@ -257,6 +256,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "peg"	241871770	--	Pa Egg	--	"You pause, then note the author's middle initial, which seems annoyingly important."
 "truffle"	528189368	--	truffle	--	"You can't change the truffle. It can help you change things, though. Or how you see things."
 "cold"	168201090	--	cold	--	"Negative thinking! You don't need to focus on the cold but how to get rid of it. To generate heat."
+"hate"	
 "messhole"	677684018	Used Lot	--	--	"A messhole is a messhole. You need to concentrate on thinking your way out."
 "rustin"	503713948	Used Lot	--	--	"[ruts-pull]."
 "ruin"	304329964	Used Lot	--	--	"[ruts-pull]."
@@ -265,6 +265,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "grubburg"	482896434	Used Lot	--	--	"[boor-grub]."
 "boor"	252447862	Used Lot	--	--	"[boor-grub]."
 "grub"	241448217	Used Lot	--	--	"[boor-grub]."
+"observe"	637146289	--	--	lot-observed rule	"You're already observing by reflex now. No need to tweak things."
 "asidewalk"	509159436	Used Lot	--	--	"[sidewalk-oops]."
 "askew"	387135844	Used Lot	--	--	"[sidewalk-oops]."
 "sidewalk"	506971618	Used Lot	--	--	"[sidewalk-oops]."
@@ -275,6 +276,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "live"	333777614	--	what-a-bee	--	"The bee's description isn't important. It's how you see the bee that matters."
 "bee"	274031123	--	what-a-bee	--	"But it's not just any bee. It's a[if bee's head is reflexive and what-a-bee is reflexive]n[end if] [what-a-bee][if bee's head is reflexed and what-a-bee is reflexed]! Though, really, you've already given it the business.[else]![end if]"
 "spider"	456891772	--	diapers	--	"The diapers, the sad pier--the spider only fits in as *a* spider."
+"glare"	301731271	--	--	glaring-futile rule	"You stare into space some more but get distracted."
 "picture"	566810127	Pallid Li'l Pad	--	--	"It's not just any old picture. It's of a sad pier."
 "brochure"	552618888	--	brochure	--	"It's more the blurb at the end than the brochure."
 "cone"	290071779	Econ Cone	--	--	"[cone-rec]."
@@ -283,12 +285,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "skyscraper"	768953439	Econ Cone	--	--	"[scrapery]!"
 "perky"	469888301	Econ Cone	--	--	"[scrapery]!"
 "crass"	299065138	Econ Cone	--	--	"[scrapery]!"
-"strive"	564671562	--	astute statue	--	"Trevis Vister's statue seems to looks down on you as if to say he wouldn't waste time on word games[if rivets are reflexed], even relaxing after a success[else], and if he did, he'd go in for the right ones[end if]."
-"praise"	438050501	--	astute statue	--	"Trevis Vister's statue seems to looks down on you as if to say[if prai is reflexed], once you've got it right, don't mess it up[else], he wouldn't waste time on word games, but if he did, he'd get them right[end if]."
 "statue"	537593736	--	astute statue	--	"The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. [if prai is reflexed and rivets are reflexed]You did what you could, anyway[else if prai is reflexive and rivets are reflexive]Maybe grok the writing on the statue[else]You could find another way to follow the statue's message, but it's not necessary[end if]."
 "bottle"	480611466	--	pernod	--	"It's not just any bottle, but a bottle of [unless label is in lalaland]Pernod[else]N-E-Prod[end if]."
 "label"	256040510	--	label	--	"It's not the label but what's on it."
 "noise"	412333006	--	noise	--	"Hmm, no, focusing so directly on the noise to block it out is counterproductive."
+"ignore"	433982545	--	--	ignore-ignored rule	"Now that you've ignored the distraction, you want to forget it."
 "divorce"	479674829	--	DIVORCES	--	"If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel."
 "magazine"	465726572	--	DIVORCES	--	"It's not just any magazine. It's DIVORCES!"
 "vanity"	448722262	--	tan ivy vanity	--	"[if noise is in lalaland]You really don't need to rearrange the vanity[else if vanity is unexamined]You don't need to deal with it as much as the person outside--but maybe examining will give you a clue[else]You may want to deal with the person outside, instead of this, but examining it may've helped a bit[end if]."
@@ -302,6 +303,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "slick"	267019414	fiefco	--	--	"[list-stable]."
 "tech"	287204011	fiefco	--	--	"[list-stable]."
 "checklist"	554223425	--	checklist	--	"[list-stable]."
+"divorces"	575948795	--	--	divorces-gone rule	"No! Not another second thinking about that rubbish."
 "song"	272133753	--	song	--	"It's the song name--[i]I'd Cede[r]."
 "eddie"	342663242	--	song	--	"It's the song name--[i]I'd Cede[r]."
 "playbill"	430866297	--	playbill	--	"You fold and look at the playbill many different ways before figuring it's probably the writing on it that matters."
@@ -1246,6 +1248,11 @@ to say papwall:
 to say hisin:
 	say "The high sign is a clue. Bad idea to change it"
 
+this is the elmo-chat rule:
+	if qbc_litany is table of elmo comments:
+		the rule succeeds;
+	the rule fails;
+
 to say w-twi:
 	say "The ads have probably gone through enough word-twisting"
 
@@ -1393,14 +1400,29 @@ to say ei2pg:
 to say bab-v:
 	say "Babbling's babbling, but what stinks is, it's just so VERBOSE. Well, it doesn't stink that VERBOSE has fewer anagrams than babbling(s), settler or no, so that's something";
 
+this is the glaring-futile rule:
+	if player is in pallid and lager is in lalaland:
+		the rule succeeds;
+	the rule fails;
+
 to say cone-rec:
 	say "You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like [if prai is reflexed and rivets are reflexed]how to go west[else if prai is reflexive and rivets are reflexive]how to be inspired by that statue[else]going west or, maybe, that statue again[end if]"
 
 to say scrapery:
 	say "If you brought down the skyscraper like that somehow, mass panic would ensue. Destroy it from within";
 
+this is the ignore-ignored rule:
+	if player is in fiefco and noise is in lalaland:
+		the rule succeeds;
+	the rule fails;
+
 to say list-stable:
 	say "The checklist was built to be especially stable and singular of purpose. So, nothing happens"
+
+this is the divorces-gone rule:
+	if player is in fiefco and divorces is in lalaland:
+		the rule succeeds;
+	the rule fails;
 
 this is the pad-now-bedroom rule:
 	if player is in pallid li'l pad and diapers are reflexed:
@@ -1413,10 +1435,15 @@ to say ruts-pull:
 to say sidewalk-oops:
 	say "You can't make the sidewalk crumble any more, and you probably don't want to"
 
-section presto nudges
+this is the lot-observed rule:
+	if player is in used lot and babblings are in lalaland:
+		the rule succeeds;
+	the rule fails;
 
 to say boor-grub:
 	say "You can't change a whole suburb. Better to change yourself"
+
+section presto nudges
 
 this is the in-mazeroom rule:
 	if location of player is mazeroom:
