@@ -3811,11 +3811,12 @@ decorative star	"The star seems to wiggle a bit, but not enough to pull it out."
 plebe	"The plebe looks confused, as if you garbled what you said."
 Leo	"There aren't that many things to do with Leo. So few, you could probably brute-force how to get by his, uh, brute force."
 Rand	"There aren't that many things to do with Rand. So few, you could probably brute-force how to get by his, uh, brute force."
+wzup	"You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it."
 ether	"[if ether is prefigured]No, you definitely need to say THERE. You just need to have backup and maybe weapons[else]The ether pulses, but you still can't see through it[end if]."
 ye hoop	"The hoop dips a bit as if to taunt you."
-boing	"You try something that doesn't [i]quite[r] work, but you assure yourself it'll put you a bit closer to an a-ha moment."
+boing	"You try something that doesn't [i]quite[r] work, but now you're that much closer to an a-ha moment."
 maze walls	"The maze walls rumble a bit."
-onyx censer	"That feels right, but it's not enough yet. You don't need anything profane, here."
+onyx censer	"That feels right, but it's not enough yet. You don't need anything grumbly, here."
 Hogs	"The hogs snicker a bit, but they seem a little nervous, too."
 Keys	"The hogs snicker a bit, but they seem a little nervous, too."
 alert letters	"[l-r-bye-hint]."
@@ -4095,9 +4096,6 @@ doublewarn is a truth state that varies.
 to say them-that of (tt - a thing):
 	say "[if tt is a female person]her[else if tt is a person]him[else]that[end if]";
 
-to say giant-over:
-	say "The bench isn't important with the giant gone"
-
 table of donereject [TDR - this can use a lot more entries]
 specdone	spectalk
 lamp	"If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either."
@@ -4109,6 +4107,15 @@ satchel	"You don't need to do anything more to the satchel--and if it became lat
 staple	"Those plates were a mess, and now they're a tidy staple. It's better that way."
 stapler	"The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again."
 store b	"No more freebies. Sorry."	[stores]
+e-s	"[got-e]."
+otters-x	"[got-e]."
+routes-x	"[got-e]."
+troves-x	"[got-e]."
+towers-x	"[got-e]."
+oyster-x	"[got-e]."
+hoster	"[got-e]."
+tokers	"They are who they are[if nestor is off-stage]. You should maybe try to get their friend back[end if]."
+nestor	"You rescued him, and that's enough."
 lecturer	"He's already been changed enough."
 picturers	"The picturers were pretty strict about what they suggested. Not much else you can do with them."	[routes]
 lairage regalia	"You twist your mind a bit, but no, there's probably only one way to enter."
@@ -4137,21 +4144,37 @@ prai	"You're wanting praise too much, now."
 rivets	"You're striving too hard, now."
 painting of the stream	"You can't do better than master the stream, so no use trying."
 Eddie's Song	"You've lasted long enough. There are new things to look at, now."
-star	"[if player has star]No need for additional arts.[else]The star doesn't budge.[end if]"	[presto]
+star	"No need for additional arts."	[presto]
+dart	"The dart's just fine as-is."
+onyx censer	"You may need to change the censer differently."
+boing mechanism	"It's nice and springy as-is."
 popgun	"If you overthought things, you might break it again."
+Leo	"Leo doesn't need to be outflanked again."
+Rand	"Rand doesn't need to be outflanked again."
+wzup	"You don't need to greet Leo and Rand again."
 log ons	"[no-rehash]."
 alert	"[no-rehash]."
 ought	"[no-rehash]."
+rom sticks	"Man, it would be too easy to mess the rom sticks up. Better not tinker like that."
+casserole	"The casserole is mixed up enough."
+skid	"[sk2dsk]."
+disk	"[sk2dsk]."
 leaf	"You can't bring the flea back to life--or do anything else to the leaf."
-cola	"No need to go technologically backwards."
+dirty looking cola	"No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle."
 futon	"The futon could be a little less lumpy, sure, but that's beyond your magic powers."
 caps lock	"YOU HAVE WHAT YOU NEED."
 mug	"[if fizzy cola is visible]You'd get cola all over you if you tried anything with the mug[else]The mug is no longer manipulable[end if]."
 computer screen	"The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle."
 keyboard	"You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke."
+t-key	"No, the TAB key is what it should be."
+scratch paper	"After compiling, you often need to make small tweaks, but not like that."
+USB	"You had to consider all sorts of combinations while debugging, but things will be easier now."
 wipes	"You better not fiddle with the wipes wrong, or they'll tear and disintegrate." [oyster]
 knob	"You should leave the knob to b'n OK."
 a-s	"Further searching proves fruitless."
+raves saver	"The raves saver is as glitzed-up as it'll get." [towers]
+strudel	"You already rustled the strudel."
+smart kid	"[kid-first] is fully attentive. Don't ruin a good thing!"
 Merle	"He's not going to be any more honest. Or anything nice or good, really." [otters]
 ocelots	"The ocelots are doing great as is."
 leopard	"The leopard's doing great as is."
@@ -4167,6 +4190,15 @@ lemons	"You sour on changing the lemons further."
 melons	"The melons are fine as-is. You already got a two-fer, getting them, anyway."
 nectarine	"The nectarine's already perfectly ripe."
 
+to say got-e:
+	say "You've got an entry. No need to seal it up"
+
+to say sk2dsk:
+	say "No, skid <=> disk is about it."
+
+to say giant-over:
+	say "The bench isn't important with the giant gone"
+
 to say no-rehash:
 	say "That'd be an awkward rehash. You need another way to say good-bye"
 
@@ -4176,7 +4208,7 @@ to say good-enuf of (goody - a thing):
 			say "[spectalk entry]";
 			continue the action;
 	d "The table of donereject could use a lot more entries, like here for the [goody]. Search for TDR in the source.";
-	say "You've already changed [them-that of goody] enough.";
+	say "You've already changed [them-that of goody] enough.[no line break]";
 
 firstwordhash is a number that varies.
 cmdhash is a number that varies.
@@ -4898,8 +4930,8 @@ check scaning location of the player (this is the location rule):
 	if location of player is hacks' shack and compiled code is visible: [start presto]
 		say "As you contemplate further how to budge the code, your wave your settler at it.";
 		try scaning compiled code instead;
-	if lar is visible:
-		try scaning lar instead;
+	if wzup is visible and wzup is reflexive:
+		try scaning wzup instead;
 	if volt maze is visible:
 		try scaning volt maze instead;
 	if player is in a mazeroom:
@@ -5268,7 +5300,7 @@ carry out presto-hinting:
 		if Rand is in dirge ridge and Rand is fightin:
 			try objhinting Rand instead;
 		if Rand is washed up and Leo is washed up:
-			try objhinting lar instead;
+			try objhinting wzup instead;
 		if spoilit is true:
 			now spoilit is false;
 		all-say "[if spoilit is true]Eating the crust here would be too depressing with nothing concrete to do[else]You're done here in Dirge Ridge[end if][if Leo is in dirge ridge and ether is not in lalaland]. Maybe Leo and Rand's combined muscle could help you somewhere[end if]." instead;
@@ -7902,7 +7934,6 @@ to pill-list (pilly - a thing):
 
 carry out fliptoing:
 	repeat through regana of mrlp:
-		d "[the-to entry] [the-from entry] [whether or not the-from entry is cromulent].";
 		if noun is the-to entry and the-from entry is cromulent:
 			if ff is true:
 				append "[the player's command]: [the-to entry] to [the-from entry] denied![line break]" to the file of debuggery;
@@ -8112,6 +8143,7 @@ plebe	plebe	"bleep"	"bleep"	"You let forth something bleepy. I can't say it here
 boing	boing	"bingo"	"bingo"	"You don't have much experience with this sort of thing, but you take a deep breath and realize there are only so many ways to do it wrong. Futzing with the popgun, you mumble 'Aah... aah... a-ha! I loc coil-loci!' You push the trigger just to make sure, and you hear the familiar BOING[if popgun was not held]. You decide to keep it, now that you fiddled with it[end if]. But now, to load it."	false	239271538	"You can't force another revelation, but you don't need to."
 Leo	Leo	"ole"	"ole"	"You set yourself near the vile veil and avoid Leo as he charges at you! He trips over a stump or root and cries, 'I...sprain! Aspirin!'[paragraph break]Leo's yelling attracts a fellow very much like him. 'Am Rand! Rad man!'[paragraph break]Leo looks up a second. 'Hey! A twin!' each cheers, before glaring at you. 'IN THE WAY!' Looks like you've got another challenge."	false	255972525	"Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already."
 Rand	Rand	"darn"	"darn"	"You pretend to trip and tie your shoe. 'Darn.' Rand has seen this trick before, but it was a month ago, so he forgot. He dives at you, and you trip him. It would be merely demoralizing to someone more mentally resilient than Rand, but he is crushed by this loss.[paragraph break]Rand and Leo begin to commiserate together, mumbling about being washups. Maybe they could use a nice word, or a little chat, about anything."	false	177448218	"Giving Rand flashbacks to his humiliating loss would be a bad idea."
+wzup	wzup	"whassup"	"whassup"	"'Pshaw, us?'[paragraph break]They're touched by your simple gesture and impressed with your command of slang. Nothing too presumptuous. You tell a white lie about how you know mystic arts and they could learn it too, so losing a fight to you isn't all that bad.[paragraph break]They hail leadership qualities you didn't know you have and vow to help you if you need it. 'Not bad to band,' you mumble. 'Want us? Aw, NUTS.'[paragraph break]They'll be following you around for a bit."	false	526524588
 ye hoop	censer	"pooh"	"pooh"	"[get-censer]."	true	267453412
 ye hoop	censer	"phooey"	"phooey"	"[get-censer]."	true	517618773
 walls	walls	"mazeltov" or "mazel tov"	"mazeltov"	"This space intentionally left blank."	false	655479952
@@ -8376,6 +8408,7 @@ after fliptoing towers-x:
 	continue the action;
 
 to poss-d:
+	d "Taking away a max point.";
 	decrement poss-score of mrlp;
 
 to min-up:
@@ -10936,13 +10969,16 @@ to say which-stores:
 	now BBQ is list of flippable not bedruggled stos in Strip of Profits;
 	remove Store B from BBQ, if present;
 	remove Store H from BBQ, if present;
+	let nlt be number of entries in BBQ;
+	if nlt is 0:
+		continue the action;
 	sort BBQ;
 	let A be indexed text;
 	now A is "[BBQ]";
 	now A is "[A in title case]";
 	replace the text "store " in A with "", case insensitively;
 	replace the text "And" in A with "and";
-	say ". Stores [A] seem in decent shape[if hoster is visible], but that hoster you made looks too scary for now[end if].[no line break][tokies] Looks like near the end of the alphabet's where it's at";
+	say ". Store[if nlt > 1]s[end if] [A] seem[if nlt is 1]s[end if] in decent shape[if hoster is visible], but that hoster you made looks too scary for now[end if].[no line break][tokies] Looks like near the end of the alphabet's where it's at";
 
 to decide whether you-can-advance:
 	let Q be number of solved regions;
@@ -13344,18 +13380,16 @@ after going (this is the parrot follows you rule):
 			say "'Awk! Not sure you need to mess around there now.' The parrot does not follow you.";
 	continue the action;
 
-every turn when mrlp is presto (this is the Leo-Rand lackey rule):
-	if mrlp is presto:
-		if Leo is eager and Rand is eager:
-			if location of player is maze entry:
-				if Leo was visible:
-					say "'Oo Boss. We ain't up to dat maze. It's makes us fink too much!' Leo and Rand wait outside.";
-			otherwise:
-				if location of player is adjacent to location of Leo:
-					if Leo is not dismissed:
-						say "Leo and Rand lug after[one of], grateful[or], no fear glut[or], no flat urge[stopping].";
-						move Leo to location of player;
-						move Rand to location of player;
+every turn when mrlp is presto and Rand is eager (this is the Leo-Rand lackey rule):
+	if location of player is maze entry:
+		if Leo was visible:
+			say "'Oo Boss. We ain't up to dat maze. It's makes us fink too much!' Leo and Rand wait outside.";
+	otherwise:
+		if location of player is adjacent to location of Leo:
+			if Leo is not dismissed:
+				say "Leo and Rand lug after[one of], grateful[or], no fear glut[or], no flat urge[stopping].";
+				move Leo to location of player;
+				move Rand to location of player;
 
 chapter loading
 
@@ -13968,17 +14002,7 @@ a person can be bruisin. a person is usually not bruisin.
 
 before scaning a washed up person (this is the clue whassup if washups rule) :
 	if Leo is washed up and Rand is washed up:
-		try scaning lar instead;
-
-lar is privately-named auxiliary scenery. printed name of lar is "Leo and Rand 'washups'";
-
-lar is undesc.
-
-a-text of lar is "RRYRRYR". b-text of lar is "PRYRRYR". parse-text of lar is "w[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
-
-after fliptoing Rand:
-	now lar is in dirge ridge;
-	continue the action;
+		try scaning wzup instead;
 
 check scaning Leo when Rand is in Ridge and Rand is fightin:
 	say "It's Rand you need to deal with, now." instead;
@@ -14029,7 +14053,7 @@ persuasion rule for asking a bruisin person to try doing something:
 
 before scaning a fightin person:
 	if Rand is washed up and Leo is washed up:
-		try scaning lar instead;
+		try scaning wzup instead;
 
 for writing a paragraph about a bruisin person:
 	if Rand is not visible:
@@ -14064,23 +14088,21 @@ understand "asswhup" as a mistake ("[if Leo is eager and Rand is eager]They're o
 
 understand "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And violence isn't how to get rid of them.[else if Leo is washed up or Rand is washed up]It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the dumpster.[otherwise]Leo and Rand won't give you the time to look in the dumpster for a spare can to put it in.[end if]") when Leo is visible
 
-whassuping is an action applying to nothing.
+understand "whassup" as a mistake ("You probably want to TALK to people instead. Well, most of the time.") when Leo is not visible.
 
-understand the command "whassup" as something new.
+the wzup is a privately-named reflexive thing. Leo carries the wzup.
 
-understand "whassup" as whassuping.
+a-text of wzup is "RRYRRYR". b-text of wzup is "PRYRRYR". parse-text of wzup is "w[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
-carry out whassuping:
-	if Leo is not visible and Rand is not visible:
-		say "Nobody here understands that sort of talk." instead;
+check fliptoing wzup:
+	if Rand is fightin:
+		say "Actions first, then words." instead;
 	if Leo is eager:
 		say "You've already got their attention. You wouldn't want to get caught in an endless cycle of whassups. You'd probably need to drink a lot of cheap beer to recover from that." instead;
 	if Leo is washed up and Rand is washed up:
 		now Leo is eager;
 		now Rand is eager;
-		say "'Pshaw, us?'[paragraph break]They're touched by your simple gesture and impressed with your command of slang. Nothing too presumptuous. You tell a white lie about how you know mystic arts and they could learn it too, so losing a fight to you isn't all that bad.[paragraph break]They hail leadership qualities you didn't know you have and vow to help you if you need it. 'Not bad to band,' you mumble. 'Want us? Aw, NUTS.'[paragraph break]They'll be following you around for a bit.";
-		now lar is in lalaland;
-		reg-inc instead;
+		continue the action;
 	else if Leo is washed up:
 		say "That'd be a bad idea, what with Rand still to take care of." instead;
 	else:
@@ -14089,7 +14111,7 @@ carry out whassuping:
 
 check asking about "whassup":
 	if noun is Leo or noun is Rand:
-		try whassuping instead;
+		try fliptoing wzup instead;
 
 understand "whasup" and "whasups" as a mistake ("That feels almost right, but you remember that that word has 2 s's in a row.") when player is in dirge ridge and Leo is washed up.
 
@@ -24613,7 +24635,7 @@ plebe	"[one of]You need to get rid of that plebe.[plus][or][if player has star o
 Ye Hoop	"[one of]There are two ways to deal with the hoop, err, Ye Hoop.[plus][or]You sort of have to be impressed by the hoop, and say a little something to try harder, or say the heck with your possessions, which bog you down if you try to jump.[plus][or]You can say POOH to give your jumps a little boost.[minus][cycling]"
 Leo	"[if Leo is fightin][one of]You need to neutralize Leo.[plus][or]He charges at you like a bull.[plus][or]What do you exclaim to get out of the way of a bull?[plus][or]OLE![minus][cycling][else if Rand is fightin]Deal with Rand first.[else if Rand is washed up][wash-up][else if Rand is in hacks' shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not in lalaland]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"OLE"
 Rand	"[if Rand is fightin][one of]You need to neutralize Rand.[plus][or]Perhaps another feint can help you defeat Rand.[plus][or]What can you say to fake him out? A word of half-surrender.[plus][or]DARN![minus][cycling][else if Leo is fightin]Deal with Leo first.[else if Rand is washed up][wash-up][else if Rand is in hacks' shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not in lalaland]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"[if Rand is fightin]DARN[else]WHASSUP[end if]"
-lar	"[wash-up]"	--	"WHASSUP"
+wzup	"[wash-up]"	--	"WHASSUP"
 vile veil	"The vile veil is just a cheapo to explain why you can only go back north in Dirge Ridge."
 popgun	"[if dart is in popgun]The popgun's locked and loaded.[else if boing is reflexed]Put the dart in the popgun.[else]The popgun is broken. More precisely, its boing mechanism is broken.[end if]"
 boing mechanism	"[one of]So, the mechanism doesn't go BOING.[plus][or]A eureka moment could change the boing mechanism's brokenness.[plus][or]Or, if you notice the mechanism's serial number...[plus][or]BINGO.[minus][cycling]"	--	"BINGO"

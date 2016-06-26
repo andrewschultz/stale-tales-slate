@@ -187,7 +187,97 @@ Strip of Profits
 >score
 Won now: Roman Manor (13/13).
 
->x montage
+* _stores
+
+>sorbte
+The smell from Store B becomes fruitier and more delicious.
+>sorbet
+Your score has just gone up by one point
+DEBUG INFO: Adding a min point
+>sorbte
+No more freebies. Sorry.
+
+>presot
+You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
+>presto
+Your score has just gone up by one point
+>presot
+You've got an entry. No need to seal it up.
+
+>ottesr
+You hear various unrecognizable animal noises.
+>otters
+Your score has just gone up by one point
+>ottesr
+You've got an entry. No need to seal it up.
+
+>routse
+Store U seems to light up with lines and curves for a second, but no, that's not quite right...
+>routes
+Your score has just gone up by one point
+>routse
+You've got an entry. No need to seal it up.
+
+>trovse
+A single paper currency flutters off from Store V, lost forever.
+>troves
+Your score has just gone up by one point
+>trovse
+You've got an entry. No need to seal it up.
+
+>towesr
+Store W seems to push up from the ground and go narrower for a second.
+>towers
+Your score has just gone up by one point
+>towesr
+You've got an entry. No need to seal it up.
+
+>oystre
+You hear grinding, then a slimy gulp, from store Y. But nothing definitive.
+>oyster
+Your score has just gone up by one point
+>oystre
+You've got an entry. No need to seal it up.
+
+>othesr
+Store H looks totally different from all the other stores for a second.
+>others
+Your score has just gone up by one point
+>enter hoster
+You think about entering, but you remember Elmo saying it wasn't critical to save Yorpwald.
+>othesr
+You've got an entry. No need to seal it up.
+
+>tokesr
+An odd sweet smell from Store K, for a second.
+>tokers
+Your score has just gone up by one point
+DEBUG INFO: Adding a min point
+>tokesr
+They are who they are. You should maybe try to get their friend back.
+
+>nestro
+"Dude, you like must be close!" you hear from Store N.
+
+>nestor
+Your score has just gone up by one point
+DEBUG INFO: Adding a min point
+>nestro
+You rescued him, and that's enough.
+>tokesr
+They are who they are.
+
+>enter smoke
+>outsied
+The lecturer coughs and shakes his head, looking for someone who almost disrupted his speech. He doesn't close to finger you.
+>outside
+Your score has just gone up by one point
+DEBUG INFO: Adding a min point
+>outsied
+That's not something
+
+>score
+Score in a scenario: 11 out of 11 total points in the current region, Stores.
 
 * _routes
 
@@ -197,6 +287,7 @@ Won now: Roman Manor (13/13).
 >towarsd
 The ad seems slightly nearer, for a moment.
 >towards
+Your score has just gone up by one point
 DEBUG INFO: Adding a min point
 >towarsd
 
@@ -568,63 +659,122 @@ Troves (21/21)
 >l
 Grey Gyre
 
+>blma
+The lamb looks confused. Maybe you could be more forceful. Verbally, not physically.
 >blam
 Your score has just gone up by one point
 Adding a min point
+>blma
+That's not something
 
+>umhp
+The hump suddenly looks a bit smaller. But not enough.
 >umph
 Your score has just gone up by one point
+Austerer Treasure
 
->w
+>poho
+The hoop dips a bit as if to taunt you.
 >pooh
 Your score has just gone up by one point
+Taking away a max point.
+>poho
+You may need to change the censer differently.
 
 >undo
+>undo
+>phooye
+The hoop dips a bit as if to taunt you.
 >phooey
 Your score has just gone up by two points
+>phooye
+You may need to change the censer differently.
 
 >e
+>umhp
+That's not something
+
 >s
 Burnt Brunt
 
+>rast
+The star seems to wiggle a bit, but not enough to pull it out.
 >rats
 Your score has just gone up by one point
+>rast
+No need for additional arts.
 
+>drta
+The dart seems a bit closer, but...dang! Not quite.
 >drat
 Your score has just gone up by one point
+>drta
+The dart's just fine as-is.
 
 >n
+>blepe
+The plebe looks confused, as if you garbled what you said.
 >bleep
 Your score has just gone up by one point
+>blepe
+That's not something
 
 >e
 Marines Seminar
 
+>binog
+You try something that doesn't quite work, but now you're that much closer to an a-ha moment.
 >bingo
 Your score has just gone up by one point
+>binog
+It's nice and springy as-is.
 
 >w
+>mazeltvo
+The volt maze crackles with increased energy, almost ready to break down.
 >mazeltov
 Your score has just gone up by one point
+>mazeltvo
+The volt maze is gone. Re-forming it would not be fun.
 
 >s
 >s
 Dirge Ridge
 
+>oel
+There aren't that many things to do with Leo. So few, you could probably brute-force how to get by his, uh, brute force.
 >ole
 Your score has just gone up by one point
+>oel
+Leo doesn't need to be outflanked again.
 
+>danr
+There aren't that many things to do with Rand. So few, you could probably brute-force how to get by his, uh, brute force.
 >darn
 Your score has just gone up by one point
+>danr
+Leo doesn't need to be outflanked again.
 
+>whasspu
+You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
 >whassup
 Your score has just gone up by one point
+>whasspu
+You don't need to greet Leo and Rand again.
 
 >n
 >n
 >load gun with dart
+>theer
+The ether pulses, but you still can't see through it.
 >there
 Your score has just gone up by one point
+>theer
+You figured the ether out. Time to go north through it.
+>n
+>s
+>theer
+You figured the ether out. You should go back north through it.
 
 >n
 Phat Path
@@ -632,56 +782,117 @@ Phat Path
 ##bingo *2 = no line break
 #different message for making it to the phat path 1st time?
 
+>syek
+The hogs snicker a bit, but they seem a little nervous, too.
 >syke
 Your score has just gone up by one point
+>syek
+That's not something you
 
 >undo
+>undo
+>gohs
+The hogs snicker a bit, but they seem a little nervous, too.
 >gosh
 Your score has just gone up by one point
+>gohs
+That's not something you
 
+>latre
+It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 >later
 Your score has just gone up by one point
+>latre
+That'd be an awkward rehash. You need another way to say good-bye.
 
+>touhg
+It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 >tough
 Your score has just gone up by one point
 Hut! Go!
+>touhg
+That'd be an awkward rehash. You need another way to say good-bye.
 
 >undo
+>undo
+>undo
+>undo
+>sologn
+It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 >so long
-Dat was a good dust-up
 Your score has just gone up by one point
+>sologn
+That'd be an awkward rehash. You need another way to say good-bye.
+>tough
+Dat was a good dust-up
 
 >n
 Hacks' Shack
 
->rom sticks
+>romsticsk
+You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
+>romsticks
 Your score has just gone up by one point
 Adding a min point
+>romsticsk
+Man, it would be too easy to mess the rom sticks up. Better not tinker like that.
 
+>casseroel
+The escaroles seem slightly meatier.
 >casserole
 Your score has just gone up by one point
 Adding a min point
+>casseroel
+The casserole is mixed up enough.
 
->caps lock
+>capslokc
+NO, REARRANGE AND TRY AGAIN, you think.
+>capslock
 Your score has just gone up by one point
+>capslokc
+YOU HAVE WHAT YOU NEED.
 
+>skdi
+The disk seems to want to expand, but not quite into that. You must be close.
 >skid
 Your score has just gone up by one point
+>skdi
+No, skid <=> disk is about it.
 
+>coal
+Microscopic bubbles seem to form on the coal and burst in the air.
 >cola
 Your score has just gone up by one point
+>coal
+No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle.
 
+>mgu
+You stare at the gum. Hm, only a few ways it can be stretched or whatever.
 >mug
 Your score has just gone up by one point
+>mgu
+The mug is no longer manipulable.
 
+>lefa
+The flea makes a crinkly noise but still seems quite dead.
 >leaf
 Your score has just gone up by one point
+>lefa
+You can't bring the flea back to life--or do anything else to the leaf.
 
+>futno
+Hm, might be fun to try something like that again.
 >futon
 Your score has just gone up by one point
+>futno
+The futon could be a little less lumpy, sure, but that's beyond your magic powers.
 
+>screne
+That feels right, but it's not enough yet. You don't need anything grumbly, here.
 >screen
 Your score has just gone up by one point
+>screne
+The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle.
 
 >put screen on slab
 Only one more piece of hardware
@@ -714,8 +925,12 @@ Your score has just gone up by one point
 >push skid n
 Your score has just gone up by one point
 
+>keyboadr
+It'd take too long to type out all the possibilities, but that seems basically right. Hmm.
 >keyboard
 Your score has just gone up by one point
+>keyboadr
+You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke.
 
 >put keyboard on slab
 You can now do computery things unimpeded!
@@ -723,39 +938,69 @@ You can now do computery things unimpeded!
 >put lock on keyboard
 fits in perfectly
 
+>tba
+The TBA key rattles within the keyboard a bit.
+>bat
+You don't want to take a bat to the keyboard. Or have a bat swoop and take it. Trust me.
 >tab
 Your score has just gone up by one point
 Adding a min point
+>tba
+No, the TAB key is what it should be.
 
 >disk
 >put disk in drive
 
+>reboto
+You need to give that computer another (figurative) kick.
 >reboot
 Your score has just gone up by one point
+>reboto
+You don't need to give that computer another (figurative) kick.
 
+>slepe
+Your mind is a tired jumble right now, yes.
 >sleep
 Your score has just gone up by one point
+>slepe
+Your mind is no longer a tired jumble.
 
 >sleep
 comforts from cots
 
+>compiel
+Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
 >compile
 Your score has just gone up by one point
+>compiel
+After compiling, you often need to make small tweaks, but not like that.
 
+>debgu
+Hmm. Compiled code is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here.
 >debug
 need some sort of energy
+>debgu
+No, you were right before, there. You just need some help to make that magic word in your notepad work, now. Or maybe you don't!
+>undo
+>undo
 
 >pour cola in mug
 
 >debug
 Your score has just gone up by one point
+>debgu
+WRONG
 
+>sbu
+Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
 >sub
 Diver time
 Your score has just gone up by one point
 Strip of Profits
 
 >undo
+>bsu
+Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
 >bus
 Drive time
 Your score has just gone up by one point
@@ -772,61 +1017,101 @@ Posh Hops Shop
 >stroll
 haven't had any fun at all
 
+>unste
+The tunes grow slightly less annoying, for a moment.
 >unset
 Your score has just gone up by one point
 >remap
 already been altered
+>unste
+WRONG
 
 >undo
 >undo
+>rempa
+WRONG
 >remap
 Your score has just gone up by one point
 >unset
 mucked up the perma
+>rempa
+WRONG
 
 >stroll
 you have been kind of obnoxious
 
+>inste
+WRONG
 >inset
 Your score has just gone up by one point
+>inste
+WRONG
 
 >stroll
 you're the jerk here
 
+>scraep
+WRONG
 >scrape
 Your score has just gone up by one point
+>scraep
+WRONG
 
+>spti
+WRONG
 >spit
 You've caused enough damage
+>spti
+WRONG
 
 >undo
 
+>sign
+WRONG
 >sing
 You've caused enough damage
+>sign
+WRONG
 
 >undo
 
+>strllo
+WRONG
 >stroll
 Olde Lode
+>strllo
+WRONG
 
+>caml
+WRONG
 >calm
 Your score has just gone up by one point
+>caml
+WRONG
 
+>rnu
+WRONG
 >run
 Your score has just gone up by one point
 Hero's Shore
+>rnu
+WRONG
 
 >ocean
 is, in fact, a herring
 
 >undo
 
+>boats
+WRONG
 >boast
 Your score has just gone up by one point
 Fighter Freight
->leap
+>=leap
 Your score has just gone up by one point
 Anger Range
+>boats
+WRONG
 
 >undo
 >undo
@@ -834,35 +1119,67 @@ Anger Range
 >fart
 butterfly
 >get on raft
+>fatr
+WRONG
 >fart
 Your score has just gone up by one point
->soar
+>=soar
 Your score has just gone up by one point
+>fatr
+WRONG
 
+>scrpa
+WRONG
 >scrap
 Your score has just gone up by one point
+>scrpa
+WRONG
 
 >undo
+>spiek
+WRONG
 >spike
 Your score has just gone up by one point
+>spiek
+WRONG
 
 >e
+>scna
+WRONG
 >scan
 Your score has just gone up by one point
 min point
+>scna
+WRONG
 
+>seke
+WRONG
 >seek
 Your score has just gone up by one point
+>seke
+WRONG
 
+>eta
+WRONG
 >eat
 Your score has just gone up by one point
+>eta
+WRONG
 
+>tutro
+WRONG
 >tutor
 Your score has just gone up by one point
+>tutro
+WRONG
 
+>swiep
+WRONG
 >swipe
 Your score has just gone up by one point
 min point
+>swiep
+WRONG
 
 >w
 >n
@@ -871,56 +1188,108 @@ Lapsin' Plains
 >splain
 min point for this flip
 
+>reatc
+WRONG
 >react
 good idea, but you're not sure HOW
+>reatc
+WRONG
 
+>traec
+WRONG
 >trace
 Your score has just gone up by one point
+>traec
+WRONG
 
+>reatc
+WRONG
 >react
 Your score has just gone up by one point
+>reatc
+WRONG
 
+>kssi
+WRONG
 >kiss
 Your score has just gone up by one point
+>kssi
+WRONG
 
+>bokn
+WRONG
 >bonk
 Your score has just gone up by one point
+>bokn
+WRONG
 
 >in
 a hut
 
+>buts
+WRONG
 >bust
 Your score has just gone up by one point
+>buts
+WRONG
 
+>drpo
+WRONG
 >drop
 Your score has just gone up by one point
+>drpo
+WRONG
 
+>sweta
+WRONG
 >sweat
 Your score has just gone up by one point
 min point for
+>sweta
+WRONG
 
+>shaep
+WRONG
 >shape
 Your score has just gone up by one point
 min point for
+>shaep
+WRONG
 
+>clena
+WRONG
 >clean
 Your score has just gone up by one point
 min point for
+>clena
+WRONG
 
 >out
 >s
 >w
 Arches
 
+>wapr
+WRONG
 >warp
 Your score has just gone up by one point
+>wapr
+WRONG
 
+>searhc
+WRONG
 >search
 Your score has just gone up by one point
 GENERAL GLEANER engulf it
+>searhc
+WRONG
 
+>enlareg
+WRONG
 >enlarge
 Your score has just gone up by one point
+>enlareg
+WRONG
 
 >n
 Hedron
@@ -928,17 +1297,30 @@ Hedron
 >w
 Collapsed Old Places
 
+>buyr
+WRONG
 >bury
 Your score has just gone up by one point
+>buyr
+WRONG
 
 >e
 >s
 >e
 
+>unearht
+WRONG
 >unearth
+
+>unearht
+WRONG
+>assuaeg
+WRONG
 >assuage
 >ask haunter about ruby
 disarm it
+>assuaeg
+WRONG
 
 >undo
 >w
@@ -946,8 +1328,12 @@ disarm it
 >w
 
 >e
+>patrlo
+WRONG
 >patrol
 Your score has just gone up by one point
+>patrlo
+WRONG
 
 >in
 End Den
@@ -957,24 +1343,44 @@ End Den
 >in
 Scum Ant Sanctum
 
+>tna
+WRONG
 >tan
 Your score has just gone up by one point
 min point
 Tenfold Teflon'd
+>tna
+WRONG
 
+>prepya
+WRONG
 >prepay
 Your score has just gone up by one point
+>prepya
+WRONG
 
+>revle
+WRONG
 >revel
 Your score has just gone up by one point
 min point
+>revle
+WRONG
 
+>derali
+WRONG
 >derail
 Your score has just gone up by one point
+>derali
+WRONG
 
 >pull lever
+>redila
+WRONG
 >redial
 Your score has just gone up by one point
+>redila
+WRONG
 
 >score
 Oyster (39/39)
@@ -1209,57 +1615,122 @@ Oyster (39/39)
 >towers
 >in
 
+>goen
+Geno shakes his head, but a glare from Rodney sets him straight--for now.
 >gone
 Your score has just gone up by one point
+>goen
+That's not something
 
+>winde
+Edwin shakes his head, but a glare from Rodney sets him straight--for now.
 >wined
 Your score has just gone up by one point
+>winde
+That's not something
 
+>bleka
+Blake shakes his head, but a glare from Rodney sets him straight--for now.
 >bleak
 Your score has just gone up by one point
+>bleka
+That's not something
 
+>tensre
+Ernest shakes his head, but a glare from Rodney sets him straight--for now.
 >tenser
 Your score has just gone up by one point
+>tensre
+That's not something
 
+>snarde
+Andres shakes his head, but a glare from Rodney sets him straight--for now.
 >snared
 Your score has just gone up by one point
+>snarde
+That's not something
 
+>crickde
+Cedrick shakes his head, but a glare from Rodney sets him straight--for now.
 >cricked
 Your score has just gone up by one point
+>crickde
+That's not something
 
+>yondre
+Rodney blinks a bit, then frowns.
 >yonder
 Your score has just gone up by one point
 Topside Deposit
+>undo
+>droney
+Your score has just gone up by one point
+>yondre
+That's not something
 
+>creayk
+The keycar slows down for a minute. Ray Eck frowns at you.
 >creaky
+Your score has just gone up by one point
+>creayk
+That's not something
+
 >n
 Scope Copse
 
+>rusyt
+WRONG
 >rusty
 Your score has just gone up by one point
 min point
+>rusyt
+That's not something
 
+>rinsde
+WRONG
 >rinsed
 Your score has just gone up by one point
+>rinsde
+That's not something
 
+>weirdre
+WRONG
 >weirder
 Your score has just gone up by one point
+>weirdre
+That's not something
 
+>clumys
+WRONG
 >clumsy
 Your score has just gone up by one point
+>clumys
+That's not something
 
 >n
 Baldest Blasted Saltbed
 
+>coilde
+WRONG
 >coiled
 Your score has just gone up by one point
 Adding a min point
+>coilde
+That's not something
 
+>pastire
+WRONG
 >pastier
 Your score has just gone up by one point
+>pastire
+That's not something
 
+>punire
+WRONG
 >punier
 Your score has just gone up by one point
+>punire
+That's not something
 
 >n
 Anemic Cinema
@@ -1267,25 +1738,45 @@ Anemic Cinema
 >mardier
 Your score has just gone up by one point
 >undo
+>marride
+Your admirer looks askance, then returns to their puppy-love expression.
 >married
 Your score has just gone up by one point
+>marride
+That's not something
 
+>weariets
+WRONG
 >weariest
 Your score has just gone up by one point
+>weariets
+That's not something
 
+>angstire
+WRONG
 >angstier
 Your score has just gone up by one point
+>angstire
+That's not something
 
 >n
 >s
 >e
 Salted Deltas
 
+>hastiets
+WRONG
 >hastiest
 Your score has just gone up by one point
+>hastiets
+That's not something
 
+>marginla
+WRONG
 >marginal
 Your score has just gone up by one point
+>marginla
+That's not something
 
 >s
 Savager Ravages
@@ -1294,60 +1785,108 @@ Savager Ravages
 Your score has just gone up by one point
 
 >undo
+>releasde
+WRONG
 >released
 Your score has just gone up by one point
+>releasde
+That's not something
 
+>himsefl
+WRONG
 >himself
 Your score has just gone up by one point
+>himsefl
+That's not something
 
+>sewde
+The weeds almost seem to shrug.
 >sewed
 Your score has just gone up by one point
+>sewde
+That's not something
 
+>pearyl
+The piece-of-junk raves saver suddenly, somehow, feels more valuable, almost shiny for a second.
 >pearly
 Your score has just gone up by one point
 min point
+>pearyl
+The raves saver is as glitzed-up as it'll get.
 
+>minde
+The denim bends and warps, but not enough to cut it.
 >mined
 Your score has just gone up by one point
 min point
+>minde
+That's not something
 
 >s
+>drainde
+WRONG
 >drained
 Your score has just gone up by one point
+>drainde
+That's not something
 
+>unrela
+The pulses seem less there and less negative for a moment.
 >unreal
 Your score has just gone up by one point
 min point
+>unrela
+That's not something
 
 >e
 Danger Garden
 
+>brokne
+"TANGENTIAL HIT!" blares the bonker. "THE MARAUDING HORDES ARE ON TO US!"
 >broken
 Your score has just gone up by one point
+>brokne
+That's not something
 
+>grandioes
+The drains sizzle slightly but go back to menacing quiet.
 >grandiose
 Your score has just gone up by one point
+>grandioes
+That's not something
 
 >naivest
 Your score has just gone up by one point
 min point
 
 >undo
+>vainets
+The natives look almost ready to be suckered by flattery or just a tall tale in general, but that look passes.
 >vainest
 Your score has just gone up by one point
+>vainets
+That's not something
 
 >s
+>rustlde
+You almost expect the strudel to hop up into your arms, but the moment passes.
 >rustled
 Your score has just gone up by one point
 min point
+>rustlde
+You already rustled the strudel.
 
 >n
 
 >n
 Ole Shrine Shoreline
 
+>holiets
+The deacons ponder for a minute before going back to their scheming. But they looked scared--worried--you were close to exposing their ol' heist.
 >holiest
 Your score has just gone up by one point
+>holiets
+That's not something
 
 >n
 Actionless Coastlines
@@ -1356,8 +1895,19 @@ Actionless Coastlines
 >s
 >e
 
+>rowyd
+Dr. Yow seems to ponder something for a second but then shakes his head--but he can't break out of his shell.
+>rowdy
+Your score has just gone up by one point
+>rowyd
+Dr. Yow seems to ponder something for a second but then shakes his head--maybe there's one more way for him to be, to talk.
+
+>woryd
+Dr. Yow seems to ponder something for a second but then shakes his head--maybe there's one more way for him to be, to talk.
 >wordy
 Your score has just gone up by one point
+>woryd
+Dr. Yow seems to ponder something for a second but then shakes his head--he's probably shown his full range of emotions.
 
 >retape
 
@@ -1384,22 +1934,27 @@ Your score has just gone up by one point
 "Wow! That'd be neat if I had something to build."
 
 >ask kid about doctor
->s
->s
->e
+Obscurest Subsector
 
+>attentiev
+Dirk seems to be trying so hard to concentrate, but he hasn't found it yet.
 >attentive
 Your score has just gone up by one point
+>attentiev
+Dirk is fully attentive. Don't ruin a good thing!
 
 >rowdy
-Your score has just gone up by one point
 
 >go to kid
 Actionless Coastlines
 
 >give gizmo to kid
+>robuts
+WRONG
 >robust
 Your score has just gone up by one point
+>robuts
+WRONG
 
 >enter boat
 >nearest
@@ -1409,13 +1964,21 @@ Your score has just gone up by one point
 >undo
 >undo
 >undo
+>stablre
+WRONG
 >stabler
 Your score has just gone up by one point
+>stablre
+WRONG
 
 >enter boat
+>nearets
+WRONG
 >nearest
 Mislit Limits
 Your score has just gone up by one point
+>nearets
+That's not something
 
 >undo
 >undo
@@ -1428,15 +1991,27 @@ The turbos are working fine now.
 #### extra line breaks
 
 >enter boat
+>presetn
+WRONG
 >present
 Your score has just gone up by one point
+>presetn
+WRONG
 
+>dinyg
+WRONG
 >dingy
 Your score has just gone up by one point
+>dinyg
+WRONG
 
 >w
+>greyde
+WRONG
 >greyed
 Your score has just gone up by one point
+>greyde
+WRONG
 
 >give flowerpot
 Your score has just gone up by one point
@@ -1445,6 +2020,8 @@ Your score has just gone up by one point
 You should
 
 >e
+>spectaculra
+WRONG
 >spectacular
 Your score has just gone up by one point
 Strip of Profits
@@ -1459,26 +2036,52 @@ Towers (45/45)
 >seed 1
 >otters
 >in
+>bareyl
+WRONG
 >barely
 Your score has just gone up by one point
+>bareyl
+WRONG
 
 >score
 1 out of 29
 
+>reediyl
+WRONG
 >reedily
 Your score has just gone up by one point
+>reediyl
+WRONG
 
+>rescidn
+WRONG
 >rescind
 Adding a min point
 Your score has just gone up by one point
+>rescidn
+WRONG
 
 >w
 Gent-Fora Frontage
 
+>bossiyl
+WRONG
 >bossily
+
+>bossiyl
+WRONG
+>nastiyl
+WRONG
 >nastily
+
+>nastiyl
+WRONG
+>bleariyl
+WRONG
 >blearily
 
+>bleariyl
+WRONG
 >1
 >1
 >1
@@ -1489,36 +2092,68 @@ Gent-Fora Frontage
 >1
 
 >n
+>becaues
+WRONG
 >because
 Your score has just gone up by one point
+>becaues
+WRONG
 
+>eles
+WRONG
 >else
 Your score has just gone up by one point
+>eles
+WRONG
 
 >s
 >s
+>althouhg
+WRONG
 >although
 Your score has just gone up by one point
+>althouhg
+WRONG
 
+>howevre
+WRONG
 >however
 Your score has just gone up by one point
+>howevre
+WRONG
 
 >n
+>atmo
+WRONG
 >atom
 Your score has just gone up by one point
+>atmo
+WRONG
 
 >e
 
 >n
+>enragedyl
+WRONG
 >enragedly
 Your score has just gone up by one point
+>enragedyl
+WRONG
 
 >undo
+>angriyl
+WRONG
 >angrily
 Your score has just gone up by one point
+>angriyl
+WRONG
 
+>bruteyl
+WRONG
 >brutely
 Your score has just gone up by one point
+>bruteyl
+WRONG
 
 >n
 Wickeder Wire Deck
@@ -1529,27 +2164,43 @@ Your score has just gone up by one point
 >x medals
 The smaller, extremely oxidized, says IQ. The larger, extremely tarnished, says LUCKY.
 
+>coolets
+WRONG
 >coolest
 Your score has just gone up by one point
+>coolets
+WRONG
 
 >x medals
 The smaller, extremely oxidized, says IQ. The larger, very tarnished, says LUCKY.
 
+>parolde
+WRONG
 >paroled
 Your score has just gone up by one point
+>parolde
+WRONG
 
 >x medals
 The smaller, extremely oxidized, says IQ. The larger, somewhat tarnished, says LUCKY.
 
+>artys
+WRONG
 >artsy
 Your score has just gone up by one point
+>artys
+WRONG
 
 >x medals
 The smaller, extremely oxidized, says IQ. The larger, barely tarnished, says LUCKY.
 
+>garbde
+WRONG
 >garbed
 Adding a min point
 Your score has just gone up by one point
+>garbde
+WRONG
 
 >x medals
 The smaller, extremely oxidized, says IQ. The larger, untarnished, says LUCKY.
@@ -1557,37 +2208,61 @@ The smaller, extremely oxidized, says IQ. The larger, untarnished, says LUCKY.
 >s
 >s
 >s
+>loathingyl
+WRONG
 >loathingly
 Your score has just gone up by one point
+>loathingyl
+WRONG
 
 >undo
+>terseyl
+WRONG
 >tersely
 Your score has just gone up by one point
->stoically
+>=stoically
 Your score has just gone up by one point
 >s
 Perverse Preserve
+>terseyl
+WRONG
 
+>parrto
+WRONG
 >parrot
 Your score has just gone up by one point
+>parrto
+WRONG
 
+>snali
+WRONG
 >snail
 Your score has just gone up by one point
+>snali
+WRONG
 
 >x medals
 The smaller, very oxidized, says IQ. The larger, untarnished, says LUCKY.
 
+>hornest
+WRONG
 >hornets
 Your score has just gone up by one point
+>hornest
+WRONG
 
 >x medals
 The smaller, somewhat oxidized, says IQ. The larger, untarnished, says LUCKY.
 
+>raccono
+WRONG
 >raccoon
 Your score has just gone up by one point
 >undo
->racoon
+>=racoon
 Your score has just gone up by one point
+>raccono
+WRONG
 
 >x medals
 The smaller, barely oxidized, says IQ. The larger, untarnished, says LUCKY.
@@ -1604,22 +2279,38 @@ The smaller, unoxidized, says IQ. The larger, untarnished, says LUCKY.
 >w
 >w
 
+>honestyl
+WRONG
 >honestly
 Your score has just gone up by one point
 min point
+>honestyl
+WRONG
 
+>raptro
+WRONG
 >raptor
 Your score has just gone up by one point
+>raptro
+WRONG
 
+>deepyl
+WRONG
 >deeply
 Your score has just gone up by one point
+>deepyl
+WRONG
 
 >w
 Elvira hears them and ambushes you!
 
 >undo
+>quickyl
+WRONG
 >quickly
 Your score has just gone up by one point
+>quickyl
+WRONG
 
 >w
 WTF FTW
@@ -1647,74 +2338,192 @@ A MONSTER ROTS. AMEN.
 
 * _others
 
+>maraschion
+WRONG
 >maraschino
 Your score has just gone up by one point.
+>maraschion
+WRONG
+
+>grapse
+WRONG
 >grapes
 Your score has just gone up by one point.
+>grapse
+WRONG
+
+>cranberrise
+WRONG
 >cranberries
 Your score has just gone up by one point.
+>cranberrise
+WRONG
+
+>tamaridn
+WRONG
 >tamarind
 Your score has just gone up by one point.
 Hmm. Probably
+>tamaridn
+WRONG
 
+>compssa
+WRONG
 >compass
 Your score has just gone up by one point.
+>compssa
+WRONG
 
+>plusm
+WRONG
 >plums
 Your score has just gone up by one point.
+>plusm
+WRONG
 
+>peasr
+WRONG
 >pears
 Your score has just gone up by one point.
+>peasr
+WRONG
 
 >x stand
+>blueberrise
+WRONG
 >blueberries
 Your score has just gone up by one point.
+>blueberrise
+WRONG
+
+>pomegranaet
+WRONG
 >pomegranate
 Your score has just gone up by one point.
 Take on a token
+>pomegranaet
+WRONG
+
+>cantalouep
+WRONG
 >cantaloupe
 Your score has just gone up by one point.
+>cantalouep
+WRONG
+
+>persimmno
+WRONG
 >persimmon
 Your score has just gone up by one point.
+>persimmno
+WRONG
+
+>limse
+WRONG
 >limes
 Your score has just gone up by one point.
+>limse
+WRONG
 
 >n
+>apricto
+WRONG
 >apricot
 Your score has just gone up by one point.
+>apricto
+WRONG
+
+>applse
+WRONG
 >apples
 Your score has just gone up by one point.
+>applse
+WRONG
+
+>mulberrise
+WRONG
 >mulberries
 Your score has just gone up by one point.
+>mulberrise
+WRONG
+
+>gooseberyr
+WRONG
 >gooseberry
 Your score has just gone up by one point.
+>gooseberyr
+WRONG
+
 >s
 scru-it
 >n
 >coconuts
 Your score has just gone up by one point.
+
 >icon
 Your score has just gone up by one point.
+
 >s
 You fiddle with the coin you got
 >n
+
+>tangerinse
+WRONG
 >tangerines
 Your score has just gone up by one point.
+>tangerinse
+WRONG
+
 >w
+>blackberrise
+WRONG
 >blackberries
 Your score has just gone up by one point.
+>blackberrise
+WRONG
+
+>watermelno
+WRONG
 >watermelon
 Your score has just gone up by one point.
+>watermelno
+WRONG
+
+>pineappel
+WRONG
 >pineapple
 Your score has just gone up by one point.
+>pineappel
+WRONG
+
+>strawberrise
+WRONG
 >strawberries
 Your score has just gone up by one point.
+>strawberrise
+WRONG
+
+>grapefruti
+WRONG
 >grapefruit
 Your score has just gone up by one point.
+>grapefruti
+WRONG
+
+>raspberyr
+WRONG
 >raspberry
 Your score has just gone up by one point.
+>raspberyr
+WRONG
+
+>breadfruti
+WRONG
 >breadfruit
 Your score has just gone up by one point.
+>breadfruti
+WRONG
+
 >e
 >s
 Nice going.
@@ -1725,45 +2534,117 @@ Your score has just gone up by one point.
 
 >n
 >e
+>cinqeu
+WRONG
 >cinque
 Your score has just gone up by one point.
+>cinqeu
+WRONG
+
+>chepa
+WRONG
 >cheap
 Your score has just gone up by one point.
+>chepa
+WRONG
+
+>papaysa
+WRONG
 >papayas
 Your score has just gone up by one point.
+>papaysa
+WRONG
+
+>amogn
+WRONG
 >among
 Your score has just gone up by one point.
+>amogn
+WRONG
+
+>ancientre
+WRONG
 >ancienter
 Your score has just gone up by one point.
+>ancientre
+WRONG
+
+>solenm
+WRONG
 >solemn
 Your score has just gone up by one point.
+>solenm
+WRONG
+
+>solenm
+WRONG
 >solemn
 Your score has just gone up by one point.
+>solenm
+WRONG
+
+>cripse
+WRONG
 >cripes
 Your score has just gone up by one point.
+>cripse
+WRONG
 
 >w
 >d
+>nabaan
+WRONG
 >nab an a
 Your score has just gone up by one point.
+>nabaan
+WRONG
+
+>gonera
+WRONG
 >go near
 Your score has just gone up by one point.
+>gonera
+WRONG
+
+>rhubabr
+WRONG
 >rhubarb
 Your score has just gone up by one point.
+>rhubabr
+WRONG
+
+>reversde
+WRONG
 >reversed
 Your score has just gone up by one point.
+>reversde
+WRONG
+
 >give dollar
 >put icons in slot
 >u
 >n
+>prpe
+WRONG
+>prep
+
+>prpe
+WRONG
+>undo
+>undo
+>undo
+>reviwe
+WRONG
 >review
 Your score has just gone up by one point.
->research
+>=research
 Your score has just gone up by one point.
 >score
 41 out of 41
 >n
 You Did Great
+>reviwe
+WRONG
 
 * _big-go
 
@@ -1825,23 +2706,28 @@ Rustic Citrus
 
 >{include} _manor
 
+* _only-stores
+
+>gonear strip
+>{include} _stores
+
 * _only-routes
 
 >gonear same mesa
 >{include} _routes
 
-* only-troves
+* _only-troves
 
 >gonear rathole
 >{include} _troves
 >{include} _summarize
 
-* _only-presto
+* only-presto
 
 >gonear gyre
 >{include} _presto
 
-* _only-oyster
+* only-oyster
 
 >purloin settler
 >gonear posh hops shop
@@ -1853,7 +2739,7 @@ Rustic Citrus
 >gonear posh hops shop
 >{include} _oyster-with-subj
 
-* _only-towers
+* only-towers
 
 >seed 1
 >gonear trefoil

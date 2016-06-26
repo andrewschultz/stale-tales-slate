@@ -331,6 +331,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "entry"	507506690	--	plaque	--	"[mz-chg]."
 "mazeentry"	824545388	--	plaque	--	"[mz-chg]."
 "bigl"	149825292	maze entry	--	--	"The big L may be some sort of clue, but you can't do anything with it."
+"mazeltov"		655479952	--	--	maze-gone rule	"The volt maze is gone. Re-forming it would not be fun."
+"ether"	481328338	--	--	ether-gone rule	"The ether is gone. You can just go [if phat path is visited]back [end if]north."
 "mazeroom"	615142808	--	--	in-mazeroom rule	"You can't think of any way to tackle the one room. Perhaps it is the whole maze you need to tackle."
 "dreidl"	353994775	r24	--	--	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
 "decorative"	712778774	--	decorative star	--	"[if player wears star]The star's snazzy enough as-is[else]You consider some over-long epithet to get the star, but no, it's gotta be something quick. Visceral. Not necessarily rude[end if]."
@@ -388,7 +390,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "code"	242193360	--	compiled code	--	"The code won't BUDGE."
 "dongle"	378508824	--	dongle	--	"It's built to be sturdy. You don't want to mess with it."
 "bored yak"	504410731	--	--	bookvis rule	"The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. [kboard-det]"
-"sleep"	487165982	--	--	wise-to-sleep rule	"Your mind is a tired jumble right now, yes."
+"sleep"	487165982	--	--	wise-to-sleep rule	"Your mind is [if slept is true]no longer a tired jumble[else]a tired jumble right now, yes[end if]."
 "onyx"	378387418	--	onyx censer	--	"You consider the odd letters in such a short word, then  think 'X, Y, ... no.' Maybe the censer is just a censer, and the coloring is a clue to what it can be."
 "onyxcenser"	903510498	--	onyx censer	--	"You let out a string of something that feels good to say, but it doesn't mean anything. Maybe you're overthinking, and the color doesn't matter."
 "trim socks"	636341092	--	rom sticks	--	"The ROM sticks can probably make your computer go faster. Why fiddle further?"
@@ -423,7 +425,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "dead"	172052105	--	flea	--	"There must be a more eco-friendly way to reincarnate the flea."
 "clock"	219110764	--	clock sap	--	"You can't make much out of a clock, but clock sap, maybe."
 "puddle"	410249892	--	clock sap	--	"You can't make much out of a clock, but clock sap, maybe."
-"reboot"	483363989	--	--	time-to-reboot rule	"You need to give that computer another (figurative) kick."
+"reboot"	483363989	--	--	time-to-reboot rule	"You [if rebooted is true]don't [end if]need to give that computer another (figurative) kick."
 "nottobe"	570057712	shack	--	--	"Even more nothing happens than you expected. The blue button really is too broken. [if rebooted is true]You got the orange button to work, anyway[else]But the orange is not[end if]."
 "debug"	304959612	--	--	time-to-debug rule	"You need to budge the letters about."
 "shack"	207682846	--	priv-shack	--	"You'll need to [if shack is visited]re-[end if]enter the shack to take care of things here."
@@ -1453,6 +1455,16 @@ this is the in-mazeroom rule:
 to say mz-chg:
 	say "It's the maze you need to change, not the plaque"
 
+this is the maze-gone rule:
+	if player is in gyre and maze is in lalaland:
+		the rule succeeds;
+	the rule fails;
+
+this is the ether-gone rule:
+	if player is in gyre and ether is in lalaland:
+		the rule succeeds;
+	the rule fails;
+
 to say ca-co:
 	say "The camo-coma remains as-is. It's sturdy, military-grade stuff"
 
@@ -1512,8 +1524,7 @@ this is the bookvis rule:
 this is the wise-to-sleep rule:
 	if player is in hacks' shack:
 		if scratch paper is visible and scratch paper is reflexive:
-			if slept is false:
-				the rule succeeds;
+			the rule succeeds;
 	the rule fails;
 
 this is the volt-maze-visible rule:
@@ -1566,8 +1577,7 @@ this is the time-to-reboot rule:
 		if keyboard is on labs slab and computer screen is on labs slab:
 			if caps lock is part of the keyboard:
 				if disk is in hard drive:
-					if rebooted is false:
-						the rule succeeds;
+					the rule succeeds;
 	the rule fails.
 
 this is the time-to-compile rule:
