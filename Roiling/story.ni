@@ -1619,7 +1619,7 @@ persuasion rule for asking a henchy person to try doing something:
 	persuasion fails;
 
 persuasion rule for asking macks to try doing something:
-	say "The macks say 'You're not the boss of us!' and go on about breaking free from repression and mind control and so forth, and how if the maiden goes with them, they'll help her not be repressed by you.";
+	say "The macks say 'You're not the boss of us!' and go on about breaking free from repression and mind control and so forth, and how if Gretta goes with them, they'll help her not be repressed by you.";
 	persuasion fails;
 
 persuasion rule for asking Gretta to try doing something:
@@ -1892,7 +1892,7 @@ aunt tuna	"She's talking about herself every move, pretty much[if trout is refle
 sardine	"[one of]The sardine spends time babbling about his sensitive hearing, saying you couldn't possibly understand. But you sort of do[or]You don't want to hear the sardine on himself again[stopping]."
 walleyes	"Now's not the time to upbraid baddies for being bad. Sneak past them instead."
 yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what.' He winks."
-smart kid	"'I like gadgets and building things! [if bot boat is not off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
+smart kid	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
 pester'n serpent	"The serpent has nothing to say."
 inapt paint	--
 muscly hulk	--
@@ -2085,7 +2085,7 @@ Le Mer	"[one of]It's kind of single-minded, but it's impressive the moat talks a
 atmo-moat	"The moat has nothing to say. If it did, it'd probably just say 'KEEP OUT.'"
 Mr Lee	"[if p-2 is in lalaland]'You have gained my trust and your powers. Go on!'[else if ghoul hat is in lalaland]You try to convince him you're the good guy, but--bad start. Rev. Howe glares at you[tho-eels].[else]You fail to get anywhere. Between the ghoul hat and Rev. Howe's gaze, Mr. Lee seems half-possessed[tho-eels].[end if]"
 Gretta	"[if player is female]The macks block you from talking to her. They redouble their conversation, expecting her to be flattered she's getting more attention than you[else]The macks manage to small-talk you down[end if]. Perhaps you need to get rid of them."
-macks	"'Talking's stalking,' they yell at you before continuing to hit on the maiden."
+macks	"'Talking's stalking,' they yell at you before continuing to hit on Gretta."
 eels	"'Eels...' / 'Fib-beliefs?' Their attention span seems short, and they have little to say. You need one word, useless on its own yet powerful."
 Elmer	"[mon-men]"
 Merle	"[mon-men][no line break]"
@@ -3774,7 +3774,7 @@ darkness	"You feel it's ALMOST the right time for the darkness to lift."
 narrow cracks	"The cracks almost seem to lead somewhere."
 mist	"Hmm, you almost see a way through the mist."
 pier sign	"You plot a zigzag past the sign, but you don't have full confidence in it, yet."
-ship controls	"The ship controls seem to adjust themselves slightly."
+ship controls	"The ship controls seem to adjust themselves slightly, but not enough."
 Thor	"Thor seems to gesture you by for a second."
 new beet	"The new beet seems to spin slightly away from Thor for a second."
 Pa Egg Pea	"You stare blankly at [i]Pa, Egg, Pea[r], but you're not quite doing it right." [START troves]
@@ -4092,19 +4092,33 @@ doublewarn is a truth state that varies.
 to say them-that of (tt - a thing):
 	say "[if tt is a female person]her[else if tt is a person]him[else]that[end if]";
 
+to say giant-over:
+	say "The bench isn't important with the giant gone"
+
 table of donereject [TDR - this can use a lot more entries]
 specdone	spectalk
+lamp	"If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either."
 painting	"The painting really goes better with the study than the giant pin."
+chimney	"You probably just want to go UP the chimney."
+stair	"The stair is good for getting around. It's worth keeping(TDR)."
 ramp	"The ramp is useful now. Best keep it."
 store b	"No more freebies. Sorry."	[stores]
 lecturer	"He's already been changed enough."
 picturers	"The picturers were pretty strict about what they suggested. Not much else you can do with them."	[routes]
 lairage regalia	"You twist your mind a bit, but no, there's probably only one way to enter."
 adsorbing signboard	"No, you don't see any other way around the signboard to enter. You don't need one, either."
+bench	"[if giant is in lalaland][giant-over][else]You leaned on the bench right. Time to try more[end if]."
+bench-end	"[if giant is in lalaland][giant-over][else]You got on the bench right. Time to try more[end if]."
+giant's elbow	"[if giant is in lalaland][giant-over][else]You don't need to avoid the giant's elbow any more[end if]."
+runed book	"You don't need to do anything fancy with the runed book."
 pipe soot	"Brother Horbert probably knows what to do with that."
+seed pit	"You don't want or need to try your luck with the pit again."
+narrow cracks	"No, it's the right time to move forward."
+un-road	"You know where the un-road is, but how to navigate it?"
 pier sign	"You try to follow the instructions on the pier sign, but maybe you'd wind up in the water."
 da mist	"Hm, not quite--you'd like to be absolutely SURE you don't get too lost in da mist. Oh, and that you get lost enough."
-ship controls	"There are so many combinations to manipulate the controls. That didn't quite work, though. But maybe if you shift a little..."
+ship controls	"No, on to Thor or the new beet."
+hit win	"No, on to Thor or the new beet."
 Thor
 New Beet
 Pa Egg Pea	[troves]
@@ -4189,15 +4203,17 @@ to say reject:
 	now firstwordhash is the hash of word number 1 in the player's command;
 	d "The hash of the command is [cmdhash]. Hash of word 1 is [firstwordhash].[line break]";
 	repeat through regana of mrlp:
-		if the-from entry is visible:
-			if cmdhash is the hashkey entry or firstwordhash is the hashkey entry:
+		if cmdhash is the hashkey entry or firstwordhash is the hashkey entry:
+			if the-from entry is reflexed and the-from entry is visible:
+				say "[good-enuf of the-from entry][line break]";
+				continue the action;
+			if the-to entry is not the-from entry and the-to entry is visible:
+				say "[good-enuf of the-to entry][line break]";
+				continue the action;
+			if the-from entry is visible:
 				if Gunter is off-stage and player is in dusty study and stuff-found is 3:
 					say "You can't quite concentrate with the noise at the door.";
 					continue the action;
-				if the-from entry is reflexed:
-					if the-from entry is not Dr Yow and the-from entry is not lemons:
-						say "[good-enuf of the-from entry]";
-						continue the action;
 				if slider is switched on:
 					if cmdhash is hashkey entry:
 						match-process the player's command and the right-word entry;
@@ -4655,7 +4671,7 @@ to decide whether the player dir-consents:
 
 chapter auing
 
-auing is an action applying to one number.
+auing is an action out of world applying to one number.
 
 understand the command "au" as something new.
 
@@ -4690,7 +4706,10 @@ to decide whether the player no-consents:
 	(- YesOrNoExt(0) -).
 
 to decide whether the player switch-consents:
-	(- YesOrNoDebugForce( (+ debug-auto-yes +) ) -)
+	if yn-auto is 1, decide yes;
+	if yn-auto is -1, decide no;
+	if the player consents, decide yes;
+	decide no;
 
 Include (-
 
@@ -4723,10 +4742,13 @@ scaning is an action applying to one thing.
 understand the command "scan" as something new.
 
 understand "scan [something]" as scaning.
+understand "scan" as scaning.
 
 rule for supplying a missing noun while scaning:
 	if player is in lean lane and cans are in lean lane:
 		now noun is cans
+
+does the player mean scaning the cans: it is likely.
 
 does the player mean scaning the player: it is unlikely.
 
@@ -7875,6 +7897,7 @@ to pill-list (pilly - a thing):
 
 carry out fliptoing:
 	repeat through regana of mrlp:
+		d "[the-to entry] [the-from entry] [whether or not the-from entry is cromulent].";
 		if noun is the-to entry and the-from entry is cromulent:
 			if ff is true:
 				append "[the player's command]: [the-to entry] to [the-from entry] denied![line break]" to the file of debuggery;
@@ -8000,8 +8023,8 @@ platform	farm plot	"farmplot" or "farm plot"	"farmplot"	"The platform becomes a 
 farm plot	platform	"platform"	"platform"	"The farm plot switches back to a platform[read-canflip]."	false	490844063
 pedestal	steel pad	"steelpad" or "steel pad"	"steelpad"	"The pedestal becomes a steel pad."	false	613492907
 steel pad	pedestal	"pedestal"	"pedestal"	"The steel pad intertwines into a marginally artistic pedestal[read-canflip]."	false	613492907
-pram	ramp	"ramp"	"ramp"	"The pram folds out -- boy, there are all sorts of compartments there -- and becomes a ramp, given revamping. [b]DOWN[r] to a basement you have forgot you had."	false	233052733
-sitar	sitar	"stair"	"stair"	"The sitar becomes one with the ground, showing you an inner path to somewhere more peaceful."	false	331888451
+pram	ramp	"ramp"	"ramp"	"The pram folds out -- boy, there are all sorts of compartments there -- and becomes a ramp, given revamping. [b]DOWN[r] to a basement you have forgot you had."	false	233052733	"The ramp's useful now. Best keep it."
+sitar	sitar	"stair"	"stair"	"The sitar becomes one with the ground, showing you an inner path to somewhere more peaceful."	false	331888451	"The stair is good for getting around. It's worth keeping."
 stria	stria	"stair"	"stair"	"The stria glow and cascade into a stair leading back up."	false	331888451
 niche	chimney	"chimney"	"chimney"	"The square saying MY NICHE rumbles and collapses to create an impromptu chimney. It's wide enough for you to climb and even appears to have ledges or whatever to grip. You can go up now."	false	484428752
 t-b	t-b	"basement"	"basement"	"[if Basement is visited]You diligently set about making sure you've got all the points for this area[else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to the basement."	false	608585586
@@ -8652,7 +8675,7 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 		if stream is reflexed and lobster is in lalaland:
 			say "You feel your arch-greed recharged.";
 			min-up;
-	if noun is LLPish or noun is start tarts: [bleah. Denim isn't reflexive. Neither is giant pin]
+	if noun is LLPish or noun is claire's scalier: [bleah. Denim isn't reflexive. Neither is giant pin]
 		min-up;
 	continue the action;
 
@@ -10300,8 +10323,6 @@ sorer bogey	"an outline of the sorer bogey"
 eeks	"some cartoony representation of EEKS"
 Elmer	"Elmer and Merle"
 Merle	--
-
-test towtru with "towers/towers/enter towers/rustled/docile/n/mined/pastier/greyed/punier/n/clumsy/weirder/coiled/n/married/weariest/angstier/e/marginal/s/himself/unable/resealed/get all/w/s/w/put dagger in rapier repair/e/e/unreal/drained/e/rusty/grandiose/broken/e/wordy/push retape/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/unlocked/w/n/holiest/n/porcine/ask kid about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid"
 
 to swi-say (sst - indexed text):
 	if sss is false:
@@ -15777,7 +15798,7 @@ carry out scrapeing:
 		if capers is reflexed:
 			say "Casper would be alert to that, now." instead;
 		if noun is casper:
-			say "Hm, what he's writing on would make even more noise...try that.";
+			say "Hm, what he's writing on would make even more noise...so, let's try that.";
 		try fliptoing recaps instead;
 	try attacking noun instead;
 	the rule succeeds;
@@ -16674,8 +16695,9 @@ a-text of eeks is "RYYR". b-text of eeks is "RGYR". parse-text of eeks is "x[sp]
 
 instead of doing something to eeks:
 	if action is procedural, continue the action;
+	if current action is seeking, continue the action;
 	if current action is not listening:
-		say "Can't do much more than listen.";
+		say "Can't do much more than listen, to find how to follow.";
 	try listening instead;
 
 the eeks are vanishing scenery in Lean Lane.
@@ -17434,7 +17456,7 @@ check opening prod:
 check dropping prod:
 	if word number 1 in the player's command is not "drop":
 		say "That's not the right way to abuse the prod to open it." instead;
-	try fliptoing prod instead; [??]
+	try fliptoing rigged digger instead; [eg flipping the prod to the digger]
 
 the tubs are a plural-named thing in uaah. "Tubs lie here--two glued together by their tops--and perhaps there's something inside."
 
@@ -18810,7 +18832,7 @@ check giving gizmo to smart kid:
 		now blaster is part of bot boat;
 		now turbos are part of bot boat instead;
 	else:
-		say "'Wow! That'd be neat if I have something to build.'" instead;
+		say "'Wow! That'd be neat if I had something to build.'" instead;
 
 description of smart kid is "Freckly-faced and buck-toothed and talking to [him-her]self[if Dr Yow is visible]. [he-she-c]'s visibly [i][at-ten][r] just being around Dr. Yow[end if].";
 
@@ -19074,7 +19096,7 @@ after fliptoing (this is the yow is free rule) :
 check inserting into the fissure:
 	say "Nothing from your inventory seems to fit it. It's really oblong."
 
-Dr Yow is an auxiliary privately-named person in prison ropins. description is "[one of]You remember a slanderous (or is it libelous?) article claiming [he-she] was really Dr. Ieow, but [he-she] does look a[or]A[stopping] bit wonky, y'know? But with an intense look in [his-her] eyes[if Dr Yow is rowdy] as [he-she] yells[else if Dr Yow is wordy]as [he-she] babbles[end if][what-can-doc-say].". "Dr. Yow is pacing around semi-absent-mindedly[if Dr Yow is not in prison ropins] enjoying[otherwise] pining for[end if] [his-her] freedom."
+Dr Yow is an auxiliary person in prison ropins. description is "[one of]You remember a slanderous (or is it libelous?) article claiming [he-she] was really Dr. Ieow, but [he-she] does look a[or]A[stopping] bit wonky, y'know? But with an intense look in [his-her] eyes[if Dr Yow is rowdy] as [he-she] yells[else if Dr Yow is wordy]as [he-she] babbles[end if][what-can-doc-say].". "Dr. Yow is pacing around semi-absent-mindedly[if Dr Yow is not in prison ropins] enjoying[otherwise] pining for[end if] [his-her] freedom."
 
 printed name of Dr Yow is "Dr. Yow"
 
@@ -19091,7 +19113,7 @@ to say what-can-doc-say:
 
 a-text of Dr Yow is "RYRRO". b-text of Dr Yow is "RYRRO". parse-text of Dr Yow is "x[sp]o[sp]x[sp]x[sp]y". Dr Yow is cheat-spoilable.
 
-understand "doctor/doc yow/--" as Dr Yow.
+understand "doctor/doc yow" and "doctor/doc" as Dr Yow.
 
 understand "dowry" as a mistake ("Dr. Yow is an intellectual. [he-she-c] needs a [if duck is returned]breakout[else]willing pupil[end if], not material things or romance.") when Dr Yow is visible.
 
@@ -19712,7 +19734,7 @@ The Curst Palace is a reflexive backdrop.
 after fliptoing Curst Palace (this is the overall Towers LLP rule):
 	if used-ray is false and no-pastries is false:
 		ital-say "You get a bonus point for not using the toaster/pastries['] x-ray vision anywhere!";
-		increment the score;
+		increment cur-score of towers;
 	continue the action;
 
 understand "crust" as a mistake ("It probably needs less crust, not more. The whole curst palace.") when mrlp is towers.
@@ -20882,8 +20904,8 @@ carry out playing:
 			now otters is solved;
 			now last-solved-region is otters;
 			first-status;
-			say "Elmo and Gretta are waiting for you back at your manor with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you ROVE OVER and help him. If you need a break, no problem, but maybe you wouldn't mind going over there?";
-			unless the player yes-consents:
+			say "Elmo and Gretta are waiting for you back at your manor with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you ROVE OVER and help him. If you need a break, no problem, but maybe you might want a little more adventure?";
+			if the player switch-consents:
 				say "Yeah. Maybe later. If you want to help him, you can ROVE OVER from your dusty study next time someone knocks. Or you can just UNDO at the next command.";
 				end the story finally saying "A MONSTER ROTS. AMEN.";
 				follow the shutdown rules instead;
@@ -21110,13 +21132,11 @@ description of the medals is "They're roped together. [medal-summary]."
 to say medal-summary:
 	if medals-lucky-first is true:
 		say "The larger, [tarn of adjsolve]tarnished, says LUCKY. ";
-	say "The smaller, [tarn of nounsolve]oxidized, says IQ. ";
+	say "The smaller, [tarn of nounsolve]oxidized, says IQ";
 	if medals-lucky-first is false:
-		say "The larger, [tarn of adjsolve]tarnished, says LUCKY. ";
+		say ". The larger, [tarn of adjsolve]tarnished, says LUCKY";
 
 to say tarn of (tlev - a number):
-	if tlev is 0:
-		say "totally ";
 	say "[if tlev is 0]extremely [else if tlev is 1]very [else if tlev is 2]somewhat [else if tlev is 3]barely [else if tlev is 4]un[else]BUG[end if]";
 
 medals-lucky-first is a truth state that varies.
@@ -21176,11 +21196,11 @@ after fliptoing a mack-idea:
 		say "(Wow, you did this without seeing the macks act anything like that!) ";
 	increment macked-out;
 	if macked-out is 1:
-		say "[paragraph break]The maiden looks a bit unsure but less engaged than before, and the macks seem off-stride and unenthusiastic.";
+		say "[paragraph break]Gretta looks a bit unsure but less engaged than before, and the macks seem off-stride and unenthusiastic.";
 	otherwise if macked-out is 2:
-		say "[paragraph break]The maiden nods, able to reject the worst of the macks['] bragging, but she still listens, likely out of cognitive dissonance. Strike two for the macks.";
+		say "[paragraph break]Gretta nods, able to reject the worst of the macks['] bragging, but she still listens, likely out of cognitive dissonance. Strike two for the macks.";
 	otherwise:
-		say "[paragraph break]Suddenly, the maiden realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the bulwark in the first place. But you can't ask that straight out.";
+		say "[paragraph break]Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the bulwark in the first place. But you can't ask that straight out.";
 		now macks are in lalaland;
 		try talking to Gretta;
 		continue the action;
@@ -24858,7 +24878,7 @@ Look-Kool	"You can't do much but admire them."
 bulwark	"The bulwark is where Elvira's hiding out. You need to get [if Inclosure is visited]in[else]back[end if] there and be prepared."
 weltish whistle	"[if whistle is reflexed]PLAY it by Elvira to win.[else][one of]The whistle can summon animals when you need to, but you haven't had the practice yet.[plus][or]That'll be a big fight, though, so you need to prepare earlier.[plus][or]Examining the whistle gives a clue--who made it, etc. So does playing it, as if someone yelped[plus][or]You need to play it DEEPLY.[minus][cycling][end if]"	--	"you can play the whistle DEEPLY"
 hydra	"[if parrot is off-stage]You'd need to be pretty big to defeat the hydra. Or have a pretty big ally. But you haven't found one, yet.[else][one of]If only you had a bigger animal as an ally, to beat the hydra.[plus][or]One that almost attacked you.[plus][or]Remember what the parrot was?[plus][or]The parrot was a RAPTOR.[plus][or]Don't summon the raptor before the alcoves.[minus][cycling][end if]"
-Elvira	"[if current quip is final-quip]Just PLAY THE WHISTLE to defeat her.[else if nounsolve is 0 and adjsolve is 0]You'll need animal allies to face Elvira, the charismatic conversationalist.[else if nounsolve < 3 or adjsolve < 3]You'll need more animal allies to face Elvira, the charismatic conversationalist.[else][one of]You have enough animals to overwhelm--and ignore the charms of--Elvira, the charismatic conversationalist.[plus][or]First, you need to BLOW THE WHISTLE to summon them.[plus][or]You have one more thing that can help.[plus][or]Remember how you helped the maiden?[plus][or]The medals can make you--and your allies--go QUICKLY.[minus][cycling][end if]" [end otters hinting]	--	"you can just PLAY THE WHISTLE"
+Elvira	"[if current quip is final-quip]Just PLAY THE WHISTLE to defeat her.[else if nounsolve is 0 and adjsolve is 0]You'll need animal allies to face Elvira, the charismatic conversationalist.[else if nounsolve < 3 or adjsolve < 3]You'll need more animal allies to face Elvira, the charismatic conversationalist.[else][one of]You have enough animals to overwhelm--and ignore the charms of--Elvira, the charismatic conversationalist.[plus][or]First, you need to BLOW THE WHISTLE to summon them.[plus][or]You have one more thing that can help.[plus][or]Remember how you helped Gretta?[plus][or]The medals can make you--and your allies--go QUICKLY.[minus][cycling][end if]" [end otters hinting]	--	"you can just PLAY THE WHISTLE"
 harmonicas	"[one of]If you try to play them, your playing is the pits, and the game stems you.[or]What's a fruit that has pits and a stem?[or]A cherry, but this is a much brighter red than usual.[or]MARASCHINO.[cycling]"
 lumps	"[one of]Hmm, the lumps are purplish, maybe even a bit soft.[or]You're trying to retrieve fruit, so that should be a clue.[or]The settler will tell you where to place a vowel.[or]PLUMS.[cycling]"
 slime	"[one of]Hmm, the slime is green and knobbly and smells a bit like dishwashing detergent.[or]What can green dishwashing detergent smell like?[or]LIMES.[cycling]"
@@ -26284,11 +26304,11 @@ chapter towers
 
 [* this includes tests for towers, towers with mistakes, towers min-points and towers max-points]
 
-test towers with "towers/towers/enter towers/y/z/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/gone/godly/learned/calmer/normal/pronest/eggier/coyer/ashen/recreant/stony/awed/yonder/out/rustled/creaky/n/rusty/weirder/clumsy/rinsed/n/punier/pastier/coiled/n/married/weariest/angstier/n/s/e/marginal/s/himself/sewed/mined/resealed/w/s/w/put dagger in rapier repair/x gizmo/e/e/unreal/drained/e/naivest/grandiose/broken/e/wordy/push retape/pearly/go to duck/push repeat/go to yow/unlocked/w/n/holiest/n/hastiest/ask kid about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/enter boat/nearest/present/dingy/w/greyed/give flowerpot/e/spectacular/coff 1"
+test towers with "seed 1/towers/enter towers/y/z/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/gone/godly/learned/calmer/normal/pronest/eggier/coyer/ashen/recreant/stony/awed/yonder/out/get tarts/creaky/n/rusty/weirder/clumsy/rinsed/n/punier/pastier/coiled/n/married/weariest/angstier/n/s/e/marginal/s/himself/sewed/mined/resealed/w/s/w/put dagger in rapier repair/x gizmo/e/e/unreal/drained/e/naivest/grandiose/broken/e/wordy/push retape/pearly/go to duck/push repeat/go to yow/unlocked/w/n/holiest/n/hastiest/ask kid about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/enter boat/nearest/present/dingy/w/greyed/give flowerpot/e/spectacular/coff 1"
 
 test towers-nogo with "towers/towers/enter towers/y/rustled/docile/n/pastier/clumsy/rinsed/n/punier/weirder/coiled/n/married/weariest/angstier/e/marginal/s/himself/sewed/mined/resealed/get all/w/s/w/put dagger in rapier repair/e/e/unreal/drained/e/rusty/grandiose/broken/e/wordy/push retape/pearly/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/unlocked/w/n/holiest/n/creaky/ask kid about doctor/s/s/e/attentive/rowdy/w/n/n/give gizmo to kid/robust/enter boat/nearest/snared/warned/achier/nearby/bleak/bored/cricked/lardy/timider/weedy/wined/olden/tenser/foldy/gone/godly/learned/calmer/normal/pronest/eggier/yonder/coyer/ashen/recreant/stony/awed/yonder/out/unable/w/dingy/e/spectacular/coff 1"
 
-test towers-oops with "srewot/towers/srewot/srewot/towers/srewot/enter towers/deltsur/rustled/deltsur/elicod/docile/elicod/n/denim/mined/denim/reitsap/pastier/reitsap/deyerg/greyed/deyerg/reinup/punier/reinup/n/ysmulc/clumsy/ysmulc/redriew/weirder/redriew/reitsim/coiled/reitsim/n/deirram/married/deirram/tseiraew/weariest/tseiraew/reitsgna/angstier/reitsgna/e/lanigram/marginal/lanigram/s/flesmih/himself/flesmih/elbanu/unable/elbanu/delaeser/resealed/delaeser/get all/w/s/w/put dagger in rapier repair/e/e/laernu/unreal/laernu/deniard/drained/deniard/e/ytsur/rusty/ytsur/esoidnarg/grandiose/esoidnarg/nekorb/broken/nekorb/e/ydrow/wordy/ydrow/push retape/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/dekcolnu/unlocked/dekcolnu/w/n/tseiloh/holiest/tseiloh/n/enicrop/porcine/enicrop/ask kid about doctor/s/s/e/evitnetta/attentive/evitnetta/ydwor/rowdy/ydwor/w/n/n/give gizmo to kid/tsubor/robust/tsubor/enter boat/tseraen/nearest/tseraen/derans/snared/derans/denraw/warned/denraw/reihca/achier/reihca/ybraen/nearby/ybraen/kaelb/bleak/kaelb/dekcirc/cricked/dekcirc/ydral/lardy/ydral/redimit/timider/redimit/ydeew/weedy/ydeew/deniw/wined/deniw/nedlo/olden/nedlo/resnet/tenser/resnet/ydlof/foldy/ydlof/enog/gone/enog/yldog/godly/yldog/denrael/learned/denrael/remlac/calmer/remlac/lamron/normal/lamron/tsenorp/pronest/tsenorp/reigge/eggier/reigge/reyoc/coyer/reyoc/nehsa/ashen/nehsa/tnaercer/recreant/tnaercer/ynots/stony/ynots/dewa/awed/dewa/rednoy/yonder/rednoy/rednoy/yonder/rednoy/gniyd/dying/gniyd/tuo/out/tuo/ralucatceps/spectacular/ralucatceps/coff 1"
+test towers-oops with "srewot/towers/srewot/srewot/towers/srewot/enter towers/deltsur/rustled/deltsur/elicod/docile/elicod/n/denim/mined/denim/reitsap/pastier/reitsap/deyerg/greyed/deyerg/reinup/punier/reinup/n/ysmulc/clumsy/ysmulc/redriew/weirder/redriew/reitsim/reitsim/n/deirram/married/deirram/tseiraew/weariest/tseiraew/reitsgna/angstier/reitsgna/e/lanigram/marginal/lanigram/s/flesmih/himself/flesmih/elbanu/unable/elbanu/delaeser/resealed/delaeser/get all/w/s/w/put dagger in rapier repair/e/e/laernu/unreal/laernu/deniard/drained/deniard/e/ytsur/rusty/ytsur/esoidnarg/grandiose/esoidnarg/nekorb/broken/nekorb/e/ydrow/wordy/ydrow/push retape/w/w/w/n/n/n/push repeat/s/s/s/e/e/e/dekcolnu/unlocked/dekcolnu/w/n/tseiloh/holiest/tseiloh/n/enicrop/porcine/enicrop/ask kid about doctor/s/s/e/evitnetta/attentive/evitnetta/ydwor/rowdy/ydwor/w/n/n/give gizmo to kid/tsubor/robust/tsubor/enter boat/tseraen/nearest/tseraen/derans/snared/derans/denraw/warned/denraw/reihca/achier/reihca/ybraen/nearby/ybraen/kaelb/bleak/kaelb/dekcirc/cricked/dekcirc/ydral/lardy/ydral/redimit/timider/redimit/ydeew/weedy/ydeew/deniw/wined/deniw/nedlo/olden/nedlo/resnet/tenser/resnet/ydlof/foldy/ydlof/enog/gone/enog/yldog/godly/yldog/denrael/learned/denrael/remlac/calmer/remlac/lamron/normal/lamron/tsenorp/pronest/tsenorp/reigge/eggier/reigge/reyoc/coyer/reyoc/nehsa/ashen/nehsa/tnaercer/recreant/tnaercer/ynots/stony/ynots/dewa/awed/dewa/rednoy/yonder/rednoy/rednoy/yonder/rednoy/gniyd/dying/gniyd/tuo/out/tuo/ralucatceps/spectacular/ralucatceps/coff 1"
 
 test towers-h with "fixtow/poss/towers/towers/enter towers/docile/n/punier/n/weirder/e/get all/e/resealed/e/grandiose/s/married/e/wordy/push retape/w/n/w/w/clumsy/n/unable/n/push repeat/s/s/e/e/s/e/unlocked/w/n/pastier/n/ask kid about doctor/s/s/e/attentive/rowdy/w/n/n/stabler/robust/take skis/nearest/gone/lardy/bleak/olden/yonder/out/spectacular"
 
@@ -26389,7 +26409,7 @@ chapter hint clashes
 
 test clash-u with "routes/enter routes/against/past/out/across/out/inside/x list/out/x spoon/y"
 
-test clash-v with "troves/enter troves/ate/care/spot/observe/eat truffle/sopt/reason/recall/hint/hint/hint/hint/eat truffle/y"
+test clash-v with "troves/enter troves/hate/care/spot/observe/eat truffle/sopt/reason/recall/hint/hint/hint/hint/eat truffle/y"
 
 test clash-p with "presto/enter spot/w/e/s/hint/hint/hint/hint/eat crust/star/dart/n/umph/blam/eat crust"
 
@@ -27344,7 +27364,7 @@ carry out gsing:
 		choose-female;
 	else:
 		choose-male;
-	say "Player is now [if player is female]fe[end if]male, and all associated characters['] genders have been swapped, too.";
+	say "Player is now [if player is female]fe[end if]male, and all associated NPCs['] genders have been swapped, too.";
 	the rule succeeds;
 
 chapter gzing

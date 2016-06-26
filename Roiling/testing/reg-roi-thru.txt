@@ -126,6 +126,8 @@ Your score has just gone up
 You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too.
 
 all the secrets here
+
+>in
 haven't really EXAMINED it
 >x settler
 
@@ -135,7 +137,7 @@ haven't really EXAMINED it
 Hands up!
 
 >flire
-WRONG
+Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at you.
 >flier
 Your score has just gone up
 >flire
@@ -166,22 +168,25 @@ WRONG
 Carven Cavern
 
 >stapel
-WRONG
+The plates shine slightly and rattle.
 >staple
 Your score has just gone up by one point
 >stapel
-WRONG
+Those plates were a mess, and now they're a tidy staple. It's better that way.
 
 >staplre
-WRONG
+The plaster crackles and shines slightly.
 >stapler
 Your score has just gone up by one point
 >staplre
-WRONG
+The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again.
 
 >staple wall
 >in
 Strip of Profits
+
+>score
+Won now: Roman Manor (13/13).
 
 >x montage
 
@@ -200,10 +205,6 @@ DEBUG INFO: Adding a min point
 You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that.
 >inside
 Your score has just gone up by one point
->out
->insied
-There's no other way to enter the Cleric Circle.
->in
 
 >x toils
 Precise recipes
@@ -213,24 +214,21 @@ Precise recipes
 You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you.
 >past
 Your score has just gone up by one point
->pats
-WRONG
+
 Idle Deli
 
 >despiet
-WRONG
+The seed pit seems to bubble slightly.
 >despite
 Your score has just gone up by one point
 >despiet
-WRONG
+You don't want or need to try your luck with the pit again.
 
 >out
 >acrsso
 You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close.
 >across
 Your score has just gone up by one point
->acrsso
-WRONG
 Adobe Abode
 
 >opposiet
@@ -238,36 +236,45 @@ The soot smells a bit stronger than before for a moment.
 >opposite
 Your score has just gone up by one point
 >opposiet
-WRONG
+Brother Horbert probably knows what to do with that.
 
 >out
+
+>insied
+The picturers were pretty strict about what they suggested. Not much else you can do with them.
+>acrsso
+You twist your mind a bit, but no, there's probably only one way to enter.
+>ptsa
+No, you don't see any other way around the signboard to enter. You don't need one, either.
+
+
 >againts
 You hang around the bench, hoping for something to happen, but nothing happens. Though it seems like it should.
 >against
 Your score has just gone up by one point
 >againts
-WRONG
+You leaned on the bench right. Time to try more.
 
 >astried
 Oof! You fail to jump on the bench end. Try mixing things up from what you just did.
 >astride
 Your score has just gone up by one point
 >astried
-WRONG
+You got on the bench right. Time to try more.
 
 >belwo
 You seem like you should be able to avoid the elbow, but you may need to mix things up a bit.
 >below
 Your score has just gone up by one point
 >belwo
-WRONG
+You don't need to avoid the giant's elbow any more.
 
 >undre
 The pages of Rude 'N Nuder flutter a bit.
 >under
 Your score has just gone up by one point
 >undre
-WRONG
+You don't need to do anything fancy with the runed book.
 
 ##no-gal needs a line break ??
 
@@ -277,82 +284,78 @@ WRONG
 Your score has just gone up by one point
 
 >beneaht
-WRONG
+The bean rolls back and forth a bit.
 >beneath
 Your score has just gone up by one point
->beneaht
-WRONG
+
 Sun-Spared Underpass
 
 >untli
-WRONG
+You feel it's ALMOST the right time for the darkness to lift.
 >until
 Your score has just gone up by one point
 >untli
-WRONG
+No, it's the right time to move forward.
 
 >aroudn
-WRONG
+The cracks almost seem to lead somewhere.
 >around
 Your score has just gone up by one point
 >aroudn
-WRONG
+You know where the un-road is, but how to navigate it?
 
 >alogn
-WRONG
+The un-road seems to lead somewhere, but you couldn't quite make it out like that.
 >along
 Your score has just gone up by one point
->alogn
-WRONG
+
 Ripe Pier
 
 >amidts
-WRONG
+Hmm, you almost see a way through the mist.
 >amidst
 Your score has just gone up by one point
->amidts
-WRONG
+
 Cripple Clipper
 
 >undo
 >aboadr
-WRONG
+You plot a zigzag past the sign, but you don't have full confidence in it, yet.
 >aboard
 Your score has just gone up by one point
->aboadr
-WRONG
 Cripple Clipper
 
 >behidn
-WRONG
+The ship controls seem to adjust themselves slightly, but not enough.
 >behind
 Your score has just gone up by one point
 >behidn
-WRONG
+No, on to Thor or the new beet.
 
 >undo
+>undo
 >withni
-WRONG
+The ship controls seem to adjust themselves slightly, but not enough.
 >within
 Your score has just gone up by one point
 >withni
-WRONG
+No, on to Thor or the new beet.
 
 >betwene
-WRONG
+The new beet seems to spin slightly away from Thor for a second.
 >between
 Your score has just gone up by one point
->betwene
-WRONG
 Strip of Profits
 
+>undo
 >throuhg
-WRONG
+Thor seems to gesture you by for a second.
 >through
 Your score has just gone up by one point
->throuhg
-WRONG
 Strip of Profits
+
+>score
+Routes (18/18)
 
 * _troves
 
@@ -551,6 +554,9 @@ Your score has just gone up by one point
 WRONG
 Strip of Profits
 
+>score
+Troves (21/21)
+
 * _presto
 
 >l
@@ -748,6 +754,9 @@ Strip of Profits
 Drive time
 Your score has just gone up by one point
 Strip of Profits
+
+>score
+Presto (33/33)
 
 * _oyster
 
@@ -961,6 +970,233 @@ Your score has just gone up by one point
 >redial
 Your score has just gone up by one point
 
+>score
+Oyster (39/39)
+
+* _oyster-with-subj
+
+>l
+Posh Hops Shop
+
+>stroll
+haven't had any fun at all
+
+>unset tunes
+Your score has just gone up by one point
+>remap amper
+already been altered
+
+>undo
+>undo
+>remap amper
+Your score has just gone up by one point
+>unset tunes
+mucked up the perma
+
+>stroll
+you have been kind of obnoxious
+
+>inset tines
+Your score has just gone up by one point
+
+>stroll
+you're the jerk here
+
+>scrape casper
+Hm, what he's writing on would make even more noise...so, let's try that.
+Your score has just gone up by one point
+
+>undo
+>scrape recaps
+Your score has just gone up by one point
+
+>spit
+You've caused enough damage
+
+>undo
+
+>sing
+You've caused enough damage
+
+>undo
+
+>stroll
+Olde Lode
+
+>calm clam
+Your score has just gone up by one point
+
+>run
+Your score has just gone up by one point
+Hero's Shore
+
+>ocean
+is, in fact, a herring
+
+>undo
+
+>boast
+Your score has just gone up by one point
+Fighter Freight
+>leap
+Your score has just gone up by one point
+Anger Range
+
+>undo
+>undo
+
+>fart
+butterfly
+>get on raft
+>fart
+Your score has just gone up by one point
+>soar
+Your score has just gone up by one point
+
+>scrap carps
+Your score has just gone up by one point
+
+>undo
+>spike pikes
+Your score has just gone up by one point
+
+>e
+>scan cans
+Your score has just gone up by one point
+min point
+
+>seek eeks
+Your score has just gone up by one point
+
+>eat tea
+Your score has just gone up by one point
+
+>tutor tortu
+Your score has just gone up by one point
+
+>undo
+>tutor trout
+Your score has just gone up by one point
+
+>swipe wipes
+Your score has just gone up by one point
+min point
+
+>w
+>n
+Lapsin' Plains
+
+>splain
+min point for this flip
+
+>react
+good idea, but you're not sure HOW
+
+>trace
+Your score has just gone up by one point
+
+>react
+Your score has just gone up by one point
+
+>kiss skis
+Your score has just gone up by one point
+
+>bonk knob
+Your score has just gone up by one point
+
+>in
+a hut
+
+>bust tubs
+Your score has just gone up by one point
+
+>drop prod
+Your score has just gone up by one point
+
+>sweat
+Your score has just gone up by one point
+min point for
+
+>shape heaps
+Your score has just gone up by one point
+min point for
+
+>clean lance
+Your score has just gone up by one point
+min point for
+
+>out
+>s
+>w
+Arches
+
+>warp wrap
+Your score has just gone up by one point
+
+>search arches
+Your score has just gone up by one point
+GENERAL GLEANER engulf it
+
+>enlarge gleaner
+Your score has just gone up by one point
+
+>n
+Hedron
+
+>w
+Collapsed Old Places
+
+>bury ruby
+Your score has just gone up by one point
+
+>e
+>s
+>e
+
+>unearth haunter
+>assuage sausage
+>ask haunter about ruby
+disarm it
+
+>undo
+>w
+>n
+>w
+
+>e
+>patrol
+Your score has just gone up by one point
+
+>in
+End Den
+
+>out
+>x gleaner
+>in
+Scum Ant Sanctum
+
+>tan ant
+Your score has just gone up by one point
+min point
+Tenfold Teflon'd
+
+>prepay yapper
+Your score has just gone up by one point
+
+>revel
+Your score has just gone up by one point
+min point
+
+>derail
+Your score has just gone up by one point
+
+>pull lever
+>redial
+Your score has just gone up by one point
+
+>score
+Oyster (39/39)
+
 * _towers
 
 >seed 1
@@ -1061,6 +1297,10 @@ Your score has just gone up by one point
 >sewed
 Your score has just gone up by one point
 
+>pearly
+Your score has just gone up by one point
+min point
+
 >mined
 Your score has just gone up by one point
 min point
@@ -1068,6 +1308,10 @@ min point
 >s
 >drained
 Your score has just gone up by one point
+
+>unreal
+Your score has just gone up by one point
+min point
 
 >e
 Danger Garden
@@ -1077,6 +1321,21 @@ Your score has just gone up by one point
 
 >grandiose
 Your score has just gone up by one point
+
+>naivest
+Your score has just gone up by one point
+min point
+
+>undo
+>vainest
+Your score has just gone up by one point
+
+>s
+>rustled
+Your score has just gone up by one point
+min point
+
+>n
 
 >n
 Ole Shrine Shoreline
@@ -1104,8 +1363,20 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >w
+>w
+>w
+>w
+>put dagger in repair
+Your score has just gone up by one point
+
+>e
+>e
+>e
 >n
 >n
+>give gizmo to kid
+"Wow! That'd be neat if I had something to build."
+
 >ask kid about doctor
 >s
 >s
@@ -1117,18 +1388,10 @@ Your score has just gone up by one point
 >rowdy
 Your score has just gone up by one point
 
->w
->w
->w
->w
->put dagger in repair
-Your score has just gone up by one point
-
 >go to kid
 Actionless Coastlines
 
 >give gizmo to kid
-
 >robust
 Your score has just gone up by one point
 
@@ -1179,6 +1442,9 @@ You should
 >spectacular
 Your score has just gone up by one point
 Strip of Profits
+
+>score
+Towers (45/45)
 
 #### bug with GO TO DUCK printing the wrong error but only if I skip the Trefoil. Is there any way...?
 
@@ -1255,32 +1521,32 @@ Wickeder Wire Deck
 Your score has just gone up by one point
 
 >x medals
-The smaller, extremely oxidized, says IQ. The larger, extremely oxidized, says LUCKY.
+The smaller, extremely oxidized, says IQ. The larger, extremely tarnished, says LUCKY.
 
 >coolest
 Your score has just gone up by one point
 
 >x medals
-The smaller, extremely oxidized, says IQ. The larger, very oxidized, says LUCKY.
+The smaller, extremely oxidized, says IQ. The larger, very tarnished, says LUCKY.
 
 >paroled
 Your score has just gone up by one point
 
 >x medals
-The smaller, extremely oxidized, says IQ. The larger, somewhat oxidized, says LUCKY.
+The smaller, extremely oxidized, says IQ. The larger, somewhat tarnished, says LUCKY.
 
 >artsy
 Your score has just gone up by one point
 
 >x medals
-The smaller, extremely oxidized, says IQ. The larger, barely oxidized, says LUCKY.
+The smaller, extremely oxidized, says IQ. The larger, barely tarnished, says LUCKY.
 
 >garbed
 Adding a min point
 Your score has just gone up by one point
 
 >x medals
-The smaller, extremely oxidized, says IQ. The larger, unoxidized, says LUCKY.
+The smaller, extremely oxidized, says IQ. The larger, untarnished, says LUCKY.
 
 >s
 >s
@@ -1303,13 +1569,13 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >x medals
-The smaller, extremely oxidized, says IQ. The larger, very oxidized, says LUCKY.
+The smaller, very oxidized, says IQ. The larger, untarnished, says LUCKY.
 
 >hornets
 Your score has just gone up by one point
 
 >x medals
-The smaller, extremely oxidized, says IQ. The larger, somewhat oxidized, says LUCKY.
+The smaller, somewhat oxidized, says IQ. The larger, untarnished, says LUCKY.
 
 >raccoon
 Your score has just gone up by one point
@@ -1318,13 +1584,13 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >x medals
-The smaller, extremely oxidized, says IQ. The larger, barely oxidized, says LUCKY.
+The smaller, barely oxidized, says IQ. The larger, untarnished, says LUCKY.
 
 >snipe
 Your score has just gone up by one point
 
 >x medals
-The smaller, extremely oxidized, says IQ. The larger, unoxidized, says LUCKY.
+The smaller, unoxidized, says IQ. The larger, untarnished, says LUCKY.
 
 >n
 >n
@@ -1360,8 +1626,16 @@ WTF FTW
 >1
 >1
 >1
->1
+Cordial, cold air.
 
+>au -1
+>play whistle
+Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
+
+>undo
+>e
+>au 1
+>w
 >play whistle
 A MONSTER ROTS. AMEN.
 
@@ -1532,6 +1806,15 @@ Rustic Citrus
 >in
 >{include} _others
 
+* _summarize
+
+>purloin passport
+>gonear gates stage
+>research
+>review
+>n
+>missed
+
 * only-manor
 
 >{include} _manor
@@ -1557,11 +1840,18 @@ Rustic Citrus
 >gonear posh hops shop
 >{include} _oyster
 
+* _only-oyster-subj
+
+>purloin settler
+>gonear posh hops shop
+>{include} _oyster-with-subj
+
 * _only-towers
 
 >seed 1
 >gonear trefoil
 >{include} _towers
+>{include} _summarize
 
 * _only-otters
 
@@ -1569,7 +1859,7 @@ Rustic Citrus
 >gonear barley
 >{include} _otters
 
-* only-others
+* _only-others
 
 >gonear rustic citrus
 >{include} _others
