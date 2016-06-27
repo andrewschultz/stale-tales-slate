@@ -742,6 +742,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "southwest"	851249533	rawest waters	--	--	"[diag-dir-rej]."
 "mislit"	407258668	limits	--	--	"[towersloc]." [MISLIT LIMITS 4 4]
 "pester"	621785964	--	serpent	--	"The serpent doesn't just pester, it's pester'n."
+"present"	690693472	--	--	serpent-hiding rule	"The serpent is taken care of."
 "occurs"	399067323	--	crocus	--	"[if flowerpot is reflexive]You realize you can't change the crocus to something, but you can change its condition--it's dying[else]The crocus is OK as-is. In fact, it could make a nice gift for someone who could appreciate it[end if]."
 "accurst"	430012582	--	accurst leap	--	"[focus-castle]."
 "leap"	265273725	--	accurst leap	--	"[focus-castle]."
@@ -993,11 +994,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "art"	190621639	--	Art Erd	--	"[1st-name]."
 "red"	234159001	--	Art Erd	--	"[1st-name]."
 "tera"	318427748	--	Tera Darter	--	"[1st-name]."
-"orange"	391177517	--	orange	--	"[if player has orange]You got it, already[else]That doesn't seem sneaky enough to get the orange."
 "plant"	309485142	--	pugnacious plant	--	"[plant-no]."
 "pugnacious"	629997575	--	pugnacious plant	--	"[plant-no]."
-"guava"	249245965	--	guava	--	"[cur-fru]."
-"kumquat"	516923398	--	kumquat	--	"[cur-fru]."
 "lots"	327550400	--	so-great storage	--	"[slot-no]."
 "storage"	521653993	--	so-great	--	"You might break what is in the storage."
 "great"	351027450	--	so-great	--	"You might break what is in the storage. Then it would be neither great nor so great."
@@ -1006,8 +1004,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "popstar"	524180100	--	passport	--	"You don't know whose passport it was, but it's yours, and you need to study it, not just hope to be a pop star."
 "halt"	196393974	gates stage	--	--	"[if player has passport]The halt lath is ineffective, now you have the passport[else]The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lock action[end if]."
 "singed"	391609220	--	singed design	--	"The design is sort of glommed onto the coin[if coins are visible]s[end if]. So you should figure what to do, there."
-"research"	581009492	--	passport	--	"That's not the way to learn from the searcher--it's probably not that complicated. You hope."
-"prep"	376061830	--	--	can-i-prep rule	"It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it."
 "arena"	286413056	gates stage	--	--	"[stad-chg]."
 "near"	284225238	gates stage	--	--	"[stad-chg]."
 "stadium"	436774697	gates stage	--	--	"[stad-chg]."
@@ -1168,7 +1164,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 book text details
 
 to say locname:
-	say "You don't need to riff on any location names to win the game[if bogus-plains is in plains and oyster is needed], though you may get a last lousy point from doing so in one place, if you're observant[end if]"
+	say "You don't need to riff on any location names to win the game, unless there's not that much else to see[if bogus-plains is in plains and oyster is needed]. You may get a last lousy point from doing so in one place, if you're observant, though[end if]."
 
 this is the gunter-yet rule:
 	if player is in study and gunter is off-stage:
@@ -1783,6 +1779,11 @@ to say fix-boat-parts:
 		else:
 			say "You've fixed part of the boat's mechanical bits. Maybe fix the other, instead of the whole boat, instead"
 
+this is the serpent-hiding rule:
+	if player is in limits and serpent is in lalaland:
+		the rule succeeds;
+	the rule fails;
+
 to say flow-fine:
 	say "The flowerpot is just fine--[if crocus is reflexed]and so is the crocus in it[else if crocus is not in flowerpot]it's the crocus that needs help[else if limits are unvisited]you haven't found anything to put in it yet[else]it needs something in it, though[end if]"
 
@@ -1965,9 +1966,6 @@ to say plant-no:
 to say no-art:
 	say "You don't need to do anything to [if art erd is visible]Art[else]Dr. Tera[end if], especially since [if storage box is in scape space]you want to get that storage box[else]you got that storage box[end if]"
 
-to say cur-fru:
-	say "Curtis is the one who messes with the fruits, not you";
-
 to say vtc:
 	say "No, it's not just any videotape collection. It's those awful titles"
 
@@ -1976,11 +1974,6 @@ to say slot-no:
 		say "Nothing close to anagramming LOST is on the box right now. You may need to use something entirely different to get the slot to appear";
 	else:
 		say "After all that work getting it to appear, you don't want to make the lost slot vanish"
-
-this is the can-i-prep rule:
-	if perp-clued is true:
-		the rule succeeds;
-	the rule fails;
 
 to say no-gate:
 	say "The gate needs to be unlocked some other way"

@@ -3928,36 +3928,9 @@ eastern shore	"Maybe it's you, but the eastern shore seemed slightly closer."
 serpent	"The serpent calms down for a split-second[doc-try]."
 Ed Yerg	"Ed looks slightly less avaricious."
 flowerpot	"The crocus almost seems to perk up."
-curst palace	"Hmm...[if player is in limits]no rumbling from the curst palace. You're going to need a big word, here[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
+curst palace	"Hmm...[if player is in limits]no rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 b-b	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
 Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertaste."
-t-bossily	"[mack-dealt]."
-t-nastily	"[mack-dealt]."
-t-seedily	"[mack-dealt]."
-t-shadily	"[mack-dealt]."
-t-snidely	"[mack-dealt]."
-t-starkly	"[mack-dealt]."
-t-cattily	"[mack-dealt]."
-t-tearily-irately	"[mack-dealt]."
-t-blearily	"[mack-dealt]."
-t-ribaldly	"[mack-dealt]."
-t-formally	"[mack-dealt]."
-t-coitally	"[mack-dealt]."
-t-modestly	"[mack-dealt]."
-t-shabbily	"[mack-dealt]."
-t-shoddily	"[mack-dealt]."
-t-steamily	"[mack-dealt]."
-t-suddenly	"[mack-dealt]."
-t-stupidly	"[mack-dealt]."
-t-martially	"[mack-dealt]."
-t-sincerely	"[mack-dealt]."
-t-sobbingly	"[mack-dealt]."
-t-tediously	"[mack-dealt]."
-t-wearingly	"[mack-dealt]."
-t-drawlingly	"[mack-dealt]."
-t-emotionally	"[mack-dealt]."
-t-despairingly	"[mack-dealt]."
-t-silently	"[mack-dealt]."
 imp1	"[imp-nag]."
 imp2	"[imp-nag]."
 imp3	"[imp-nag]."
@@ -4011,12 +3984,12 @@ spear	"The spear stays as-is. But it can't be that hard to change."
 slime	"The slime shifts about slightly, but not enough--yet."
 lemons	"[l-frown]lemons."
 melon	"Hm, there must be a better melon than that, but how to ask Len, now."
-mango	"Snag mo['] mangos? No mas, G."
+pre-mang	"It would be nice to find a mango, yes. But you don't find anything that way."
 quince	"That certainly sounds foreign--but it doesn't seem to sway Len."
-silly shirt	"You don't quite have ESP, pal, but with the right logic skills you can seem like you do. That shirt's still resisting."
+silly shirt	"You don't quite have ESP, pal, but with the right logic skills you can seem like you do. The shirt remains unchanged."
 eerie blurbs	"The blurbs turn a few shades of purple before settling again."
 mad train	"The train emits some fake smoke and seems ready to blow up--but no."
-barber sickle	"The barber sickle sits there, dark, but you must be on the right track."
+barber sickle	"The barber sickle darkens a bit. You must be on the right track."
 pugnacious plant	"The plant seems to adopt a defensive position with its arms/branches."
 an-a	"The A shines for a split-second."
 lumps	"The lumps seem almost ready to burst."
@@ -4025,12 +3998,12 @@ coin	"The coin looks a bit more artistic for a moment--no, it's too drab, again.
 coins	"The coins rattle and hum promisingly."
 icons	"The icons rattle and hum promisingly."
 s-c	"The sonic coins hum almost questioningly."
+viewer	"That's not the way to learn from the viewer--it's probably not that complicated. You hope."
+searcher	"That's not the way to learn from the searcher--it's probably not that complicated. You hope."
+perp-priv	"It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it."
 
 to say l-frown:
 	say "[if player is in clearing]Len frowns[else]you frown[end if] at the ";
-
-to say mack-dealt:
-	say "You've already exposed the macks for that";
 
 to say jet-nq:
 	say "Despite your lack of technical knowledge, you think you almost did...something to improve the boat";
@@ -4059,6 +4032,9 @@ to say spec-help of (itm - a thing):
 		continue the action;
 	if itm is a warrior:
 		say "[if itm is rodney]Rodney blinks a bit, then frowns[else][itm] shakes his head, but a glare from Rodney sets him straight--for now[end if].";
+		continue the action;
+	if itm is a mack-idea:
+		say "You feel you're on the right track to expose the macks. But that's not quite it.";
 		continue the action;
 	if itm is an xtrhelp listed in the table of spechelp:
 		choose row with xtrhelp of itm in table of spechelp;
@@ -4170,25 +4146,42 @@ t-key	"No, the TAB key is what it should be."
 scratch paper	"After compiling, you often need to make small tweaks, but not like that."
 USB	"You had to consider all sorts of combinations while debugging, but things will be easier now."
 wipes	"You better not fiddle with the wipes wrong, or they'll tear and disintegrate." [oyster]
+clam	"You feel a need to panic and flee after calming the clam."
 knob	"You should leave the knob to b'n OK."
 a-s	"Further searching proves fruitless."
-raves saver	"The raves saver is as glitzed-up as it'll get." [towers]
+brownies	-- [towers]
+old ice	"Twist the ice too much, it might not look right."
+ragged dagger	--
+Claire's Scalier	--
+raves saver	"The raves saver is as glitzed-up as it'll get."
 strudel	"You already rustled the strudel."
 smart kid	"[kid-first] is fully attentive. Don't ruin a good thing!"
-Merle	"He's not going to be any more honest. Or anything nice or good, really." [otters]
+turbos	"The turbos are working. Best not tinker."
+blaster	"The blaster is working. Best not tinker."
+flowerpot	"You've got something nice in the flowerpot. Better not mess with it."
+Ed Yerg	"Ed's attitude is changed enough for the better."
+b-b	"You've dealt with the barley. You can move around a lot more, now." [otters]
+Merle	"He's not going to be any more honest. Or anything nice or good, really."
 ocelots	"The ocelots are doing great as is."
 leopard	"The leopard's doing great as is."
 badger	"The badger's doing great as is."
 satyr	"The satyr's doing great as is."
 whistle	"The whistle's already in tune."
 medals	"You already got a boost from them."
+compass	"If you changed the compass, it might wind up pointing in the wrong direction." [others]
 l-o-p	"You corrected the list enough."
 auction caution	"You hear a sap yap about the sign and figure it can't be changed any more."
-quince	"The quince is fine as is. No need to bargain for more."
-peach	"The peach was cheap enough. Best not to meddle with it more."
 lemons	"You sour on changing the lemons further."
 melon	"The melon is fine as-is. It's better than the one that was on display, for sure."
-nectarine	"The nectarine's already perfectly ripe."
+peach	"You got enough of a discount. Really."
+pre-mang	"Snag mo['] mangos? No mas, G."
+perp-priv	"Don't want to over-prep[gs-north]."
+searcher	"Research is done now[gs-north]."
+viewer	"Reviewing is done now[gs-north]."
+
+to say gs-north:
+	if gate-level is 2:
+		say ", but you can just go north"
 
 to say got-e:
 	say "You've got an entry. No need to seal it up"
@@ -4205,8 +4198,17 @@ to say no-rehash:
 to say good-enuf of (goody - a thing):
 	repeat through table of donereject:
 		if goody is specdone entry:
-			say "[spectalk entry]";
+			if there is no spectalk entry:
+				say "[generic-reject]";
+			else:
+				say "[spectalk entry]";
 			continue the action;
+	if goody is a mack-idea:
+		say "You've already dealt with the macks that way.";
+		continue the action;
+	if goody is a fruit:
+		say "Just return the fruit to Curtis. No need for another change.";
+		continue the action;
 	d "The table of donereject could use a lot more entries, like here for the [goody]. Search for TDR in the source.";
 	say "You've already changed [them-that of goody] enough.[no line break]";
 
@@ -4293,6 +4295,9 @@ to say reject:
 	if mrlp is demo dome:
 		say "There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.";
 		continue the action;
+	say "[generic-reject]";
+
+to say generic-reject:
 	say "That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. ";
 	unless qbc_litany is Table of No Conversation:
 		say "Besides, there's someone to deal with.";
@@ -4820,7 +4825,7 @@ before scaning (this is the check as scanned if player can have/take settler rul
 			silently try taking the letters settler;
 		if player does not have letters settler:
 			say "You have no scanning item[if player is not in study], and you should, unless this is a test, so this could be a BUG[else if latches is off-stage]. You probably should answer the door first[else if settler is off-stage]. Maybe figure what to do with those latches[else]. This looks like a BUG, since you should keep the settler all game[end if]." instead;
-	if noun is not a direction:
+	if noun provides the property cscanned:
 		if cheat-on is true:
 			now noun is cscanned;
 		else:
@@ -4951,7 +4956,7 @@ check scaning location of the player (this is the location rule):
 		try scaning b-b instead;
 	if location of player is clangier: [start others]
 		if mango is off-stage:
-			say "As you listen to the crowds, you notice [full-monty of dummy-mango] on your settler." instead;
+			say "As you listen to the crowds, you notice [full-monty of pre-mang] on your settler." instead;
 	if location of player is swell wells:
 		if sorer bogey is visible:
 			try scaning sorer bogey instead;
@@ -5017,7 +5022,7 @@ coins	false	false	false	false	"Even the reds and yellows seem to be blinking her
 pugnacious	false	false	false	false	"Wow, seven letters, odd. Maybe you need to poke or talk to the plant or attack it or something to see what kind it might be."
 caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
 an-a	false	false	false	false	"You think you hear a taunting na-naa-b after you scan the letters."
-melon	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two ways to get that melon."
+melon	false	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon."
 
 check scaning a prefigured thing:
 	if noun is not dialer:
@@ -7799,7 +7804,7 @@ book fliptoing
 
 fliptoing is an action applying to one visible thing.
 
-check fliptoing when power-back is false:
+check fliptoing when mrlp is otters and power-back is false:
 	if player is in wickeder or player is in preserve:
 		say "[inhib]" instead;
 
@@ -8035,7 +8040,7 @@ to say check-nestor:
 	now smoke cloud is in Strip of Profits;
 	say "[paragraph break][if nestor is in Strip of Profits]What's more, you seem to have rescued their friend, Nestor! 'Hey, dudes, I like went back to the wrong store or something.'[no line break][otherwise]They spend some time complaining about their one toker friend who like went out to get the really good stuff and never like reappeared.[no line break][end if]"
 
-after fliptoing (this is the reunite gang rule) :
+after fliptoing when player is in stores (this is the reunite gang rule) :
 	if noun is nestor or noun is tokers:
 		if nestor is in strip and tokers are in strip:
 			say "The lackers and slacker pull a tarp apart and pull out a dime bag made big and spark a tinderbox-bred toxin for tokins['] stokin[']. 'A drug to drag out!'' They offer a stupor sprout to spur Proust, and even an opiate oatpie, but you decline. They explain excitedly to you that this stuff is SO good, it's literally a like passage to a new world for certain people. You might even be able to enter the like smoke if you're way out enough.";
@@ -8342,7 +8347,7 @@ lumps	plums	"plums" or "plum"	"plums"	"The lumps grow circular and purplish, and
 eerie blurbs	blueberries	"blueberries/blueberry"	"blueberries"	"Getting rid of these blurbs is almost a public service. Pulps splup as the vandalism vanishes."	true	891090201
 b-w	strawberries	"strawberries"	"strawberries"	"The barriers west collapse into a pile of strawberries."	true	980775919
 spear	pears	"pears" or "pear"	"pears"	"The spear splatters into more pears than you can hold!"	true	393057655
-slime	limes	"limes"	"limes"	"The slime schlurps into a pile of limes too cumbersome for you to carry."	true	386961913
+slime	limes	"lime/limes"	"limes"	"The slime schlurps into a pile of limes too cumbersome for you to carry."	true	386961913
 pagers	grapes	"grapes" or "grape"	"grapes"	"Poof! The pagers turn into grapes. 'Wow, got rid of the noise AND got me more merchandise.'"	true	425657357
 barren cries	cranberries	"cranberries"	"cranberries"	"The cries and the screen swirl into a reddish mist and become cranberries."	true	761370255
 peanut cola	cantaloupe	"cantaloupe"	"cantaloupe"	"The cola bottle turns into a sort of tannish sphere, and you hear pulps splup inside."	true	637943038
@@ -8358,22 +8363,23 @@ harmonicas	maraschino cherry	"maraschino" or "maraschino cherries/cherry"	"maras
 ppf	pineapple	"pineapple"	"pineapple"	"With a plain peep, the fence collapses into a pineapple!"	true	669912106
 videotape collection	persimmon	"persimmon"	"persimmon"	"The unappetizing covers on the videotape collection schlurp together to form something better looking--a persimmon."	true	707273074
 magenta rope	pomegranate	"pomegranate"	"pomegranate"	"With a splatch, the note and rant get yellowed and ball themselves up around the rope to form a pomegranate. You have done either Curtis or society a favor by getting rid of those writings."	true	769822574
-l-o-p	kumquat	"cripes"	"cripes"	"Man! The way you said it, man, Len Craig has another look. Kumquats are indeed an order of magnitude off. He hands you one as gratitude for giving pricees precise knowledge."	true	298190669	"That'd be a bit insulting. The prices are good enough."
+l-o-p	kumquat	"cripes"	"cripes"	"Man! The way you said it, man, Len Craig has another look. Kumquats are indeed an order of magnitude off. He hands you one as gratitude for giving pricees precise knowledge."	true	454868268	"That'd be a bit insulting. The prices are good enough."
 caution	papayas	"papayas"	"papayas"	"You point at the auction caution and wave down someone passing by who's relieved SOMEONE here seems to know the rules. He gives you some fruits for your troubles."	true	388128590	"You've already established yourself as a prompt payer."
 quince	quince	"cinque"	"cinque"	"You hold up five fingers and repeat 'five' in several languages. Italian finally works. Len pauses, then nods his head. He wipes off the NAME A PRICE markering with a rag."	true	450223472
 peach	peach	"cheap"	"cheap"	"You go for a direct approach, which works great. Probably won't work again, but you feel a better patron for this potent barter."	true	267747770	"You got a good enough deal."
 pre-mang	mango	"among"	"among"	"You mingle among the shoppers for a while. Eventually you find somewhere you didn't see before. You stifle an OMG when you see a mango. You stop to haggle. It goes well."	true	242122758
 lemons	lemons	"solemn"	"solemn"	"Thinking all 'I frown for win' at the lemons, you mind-trick Len into lowing his price. 'Enjoy your rickets sticker.'"	true	485229152
-melon	melon	"mo len" or "len mo"	"melon"	"You ask Len if this is really IT. He smiles, then gives you a much nicer melon from a secret stash."	true	388955186
+melon	melon	"mo len" or "len mo"	"melon"	"You ask Len if this melon is REALLY the only one for sale. He smiles, then gives you a much nicer melon from a secret stash."	true	388955186
 rapt figure	grapefruit	"grapefruit"	"grapefruit"	"The figure gives a look as if it's eaten something sour before it rolls into itself, into a lumpy yellow ball--a grapefruit!"	true	694430761
 mean trowel	watermelon	"watermelon"	"watermelon"	"The trowel seems to inflate from within and take on a much greener shade. It becomes a watermelon--not a big one, but healthy looking enough."	true	815317707
 nectarine	nectarine	"ancienter"	"ancienter"	"The unripe nectarine becomes salable. You swipe your tekno-token, taking only one: multiple nectarines might have transience."	true	648047304
-green stain	tangerines	"tangerines" or "tangerine"	"tangerines"	"The green stain coalesces and brightens...and becomes a few tangerines! It changed color, too. Every single one ain't green."	true	757915387
+green stain	tangerines	"tangerines/tangerine"	"tangerines"	"The green stain coalesces and brightens...and becomes a few tangerines! It changed color, too. Every single one ain't green."	true	757915387
 reserved	guava	"reversed"	"reversed"	"The sign wobbles over and falls. You take a guava you found behind it. [greedy-person] nods, impressed."	true	778533808
 pugnacious plant	rhubarb	"rhubarb"	"rhubarb"	"The plant's arms turn to stalks of rhubarb, which fall off. What looks like an evil spirit departs from it as it slinks into a corner, and the plant begins to ... vegetate. [greedy-s] sniffs at the rhubarb with disdain. Yay, more fruit for you. Or, well, stuff that's prepared like a fruit."	true	352061340
 b-r	breadfruit	"breadfruit"	"breadfruit"	"You decide the raft would be better as breadfruit, whatever that is. The raft swirls into something more spherical, but still nothing close to what you expected. It's odd and bumpy, but you take it."	true	619813094
 briar screen	cranberries	"cranberries"	"cranberries"	"The prickly screen turns into (you hope) less prickly cranberries."	true	761370255 [briar + cranberries]
 an-a	small yellow banana	"nab an a" or "nab"	"nab an a"	"The A expands and curves in your hands, the middle-bar melting into the legs, and you have a banana."	true	162797375
+orange	orange	"go near"	"go near"	"You move cautiously, with moves as sneaky as [greedy-s]'s that eventually got [him-her] tarred. [he-she-c] sees you grab it but sniffs 'O anger. A goner.' Sour grapes at the orange!"	true	391177517
 coin	icon	"icon"	"icon"	"You vacate your mind of material thoughts. The coin becomes too omen-y to be money."	false	207258516
 coins	s-c	"sonic coins" or "sonic"	"sonic"	"Blam! The coins begin to rattle gently and don't stop."	false	303532482
 icons	s-i	"sonic icons" or "sonic"	"sonic"	"Blam! The icons begin to rattle gently and don't stop."	false	303532482
@@ -8381,7 +8387,9 @@ coins	icons	"icons"	"icons/icon"	"You vacate your mind of material thoughts. The
 s-c	s-i	"sonic icons" or "icons"	"sonic"	"You vacate your mind of material thoughts. The coins become too omen-y to be money."	false	303532482
 coins	icons	"icons"	"icons"	"You vacate your mind of material thoughts. The coin takes on a much cooler design."	false	303532482
 coins	s-i	"sonic icons" or "icons sonic"	"sonic icons"	"You do a little double-think-move on the coins. They become something entirely different."	false	607064964
-[etoa]
+viewer	viewer	"review"	"review"	"You conduct a thorough review. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."	false	601028460
+searcher	searcher	"research"	"research"	"You conduct thorough research. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought."	false	581009492
+perp-priv	perp-priv	"prep"	"prep"	"You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, etc. While part of it seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure."	false	376061830
 
 chapter auxiliary text and rules
 
@@ -8644,7 +8652,9 @@ after fliptoing hit win button:
 		now behinded is true;
 	continue the action;
 
-after fliptoing (this is the slot after flip rule):
+after fliptoing when mrlp is others (this is the slot and singed design appear rule):
+	if noun is s-c or noun is s-i or noun is icon or noun is icons:
+		now singed design is part of the noun;
 	if noun is s-i or noun is s-c:
 		if player has so-great storage:
 			slot-appear;
@@ -14420,7 +14430,7 @@ does the player mean doing something with entry 1 of byebyes:
 		now bye-disambig is true;
 	it is likely.
 
-after fliptoing (this is the update byebyes rule) :
+after fliptoing when player is in phat path (this is the update byebyes rule) :
 	if noun is part of the smart people sign:
 		remove noun from byebyes, if present;
 	continue the action;
@@ -14682,9 +14692,10 @@ check eating the escaroles:
 check eating the casserole:
 	say "Ugh. You're not sure what's in it, and you're probably thinking too much about what is. You'd have to be a gourmand to eat this, even after a heavy workout." instead;
 
-before fliptoing (this is the mostly presto warn against SHATTER THREATS rule) :
-	if mrlp is demo dome:
+before fliptoing when mrlp is demo dome:
 		say "This game tried to flip something, but it should not have. BUG." instead;
+
+before fliptoing when mrlp is presto (this is the warn against SHATTER THREATS rule) :
 	if noun is leaf or noun is mug or noun is dirty looking cola or noun is keyboard or noun is t-key or noun is skid or noun is disk or noun is rom sticks:
 		if mrlp is not presto:
 			say "[bug-report]" instead;
@@ -15581,7 +15592,7 @@ instead of doing something with patrons:
 		continue the action;
 	say "The patrons aren't important. They're just trying to get drunk[if silly-acts > 0], and you've already started to distract them from that[end if]."
 
-the stumbler tumblers are vanishing plural-named scenery in posh hops shop. "They are labeled TIPS but don't have any money in them. Some red writing is at the bottom of one."
+the stumbler tumblers are reflexive plural-named scenery in posh hops shop. "They are labeled TIPS but don't have any money in them. Some red writing is at the bottom of one."
 
 instead of taking tumblers:
 	say "The people who didn't give tips would notice your rudeness.";
@@ -15688,20 +15699,22 @@ understand "fish" as Casper.
 
 a-text of casper is "RRRYRY". b-text of casper is "?RRYRY". parse-text of casper is "x[sp]x[sp]x[sp]-[sp]x[sp]-".
 
-Capers Recaps is vanishing scenery in Posh Hops Shop. description of Capers is "It's Casper's latest rough draft journal. A quick glance references an OCD cod named Doc. Capers and looks to be, due to its blackboardy texture, even grittier than Consider I Scorned No Ciders, Pincer Prince or Some Urge Gruesome or This Bane Bathes in the Basin. Which Casper wrote drunk on absinthe."
+Capers Recaps is scenery in Posh Hops Shop. description of Capers is "It's Casper's latest rough draft journal. A quick glance references an OCD cod named Doc. Capers and looks to be, due to its blackboardy texture, even grittier than Consider I Scorned No Ciders, Pincer Prince or Some Urge Gruesome or This Bane Bathes in the Basin. Which Casper wrote drunk on absinthe."
 
 understand "book" as Capers Recaps.
 
-check scaning capers:
-	say "Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue."
+check scaning casper:
+	if recaps are reflexed:
+		try scaning recaps instead;
+	
+check scaning recaps:
+	if recaps is not reflexed:
+		say "Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue."
 
 a-text of capers is "RRRYRY". b-text of capers is "RRR??Y". parse-text of capers is "x[sp]x[sp]x[sp]-[sp]x[sp]-".
 
 instead of taking capers recaps:
 	say "The whole bar would beat you up for that. Think of other ways to distract the trolls. Disturb the peace more directly."
-
-check scaning capers:
-	say "Your settler registers [if screenread is true]R R R[else]RRR[end if] then [if screenread is false]YRY/GPY[else]Y R Y / G P Y[end if]. But which is capers and which is recaps?" instead;
 
 a stein is a vanishing thing in Posh Hops Shop. initial appearance is "You see a stein here by some tines. It looks like it'd almost fit in."
 
@@ -19106,7 +19119,7 @@ the fissure is part of the ropins. description is "It's rounded, more ovular tha
 
 a-text of fissure is "RYRRYYR". b-text of fissure is "PYPPYYR". parse-text of fissure is "f[sp]u[sp]s[sp]s[sp]i[sp]e[sp]r". fissure is parse-spoilable.
 
-after fliptoing (this is the yow is free rule) :
+after fliptoing when player is in subsector (this is the yow is free rule) :
 	if noun is fissure or noun is prison ropins:
 		now duck is unfigured;
 		now prison ropins is unfigured;
@@ -21226,6 +21239,7 @@ after fliptoing a mack-idea:
 	otherwise:
 		say "[paragraph break]Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the bulwark in the first place. But you can't ask that straight out.";
 		now macks are in lalaland;
+		now all mack-ideas are in lalaland;
 		try talking to Gretta;
 		continue the action;
 	consider the macks hitting on rule;
@@ -21299,7 +21313,7 @@ to assign-mack-priority:
 		let thismack be a random unprioritized mack-idea;
 		now mack-prio of thismack is B;
 
-a mack-idea is a kind of undesc. a mack-idea is usually privately-named. a mack-idea is usually vanishing. a mack-idea is usually unscannable. a mack-idea has a number called pod-num. a mack-idea has a number called pod-ord. a mack-idea has text called mack-move. a mack-idea has text called mack-brief.
+a mack-idea is a kind of undesc. a mack-idea is usually privately-named. a mack-idea is usually reflexive. a mack-idea is usually unscannable. a mack-idea has a number called pod-num. a mack-idea has a number called pod-ord. a mack-idea has text called mack-move. a mack-idea has text called mack-brief.
 
 rule for deciding whether all includes mack-ideas:
 	it does not.
@@ -21390,7 +21404,7 @@ this is the find-mack-idea rule:
 	the rule fails;
 
 every turn when player is in frontage and macks are in frontage (this is the macks hitting on rule):
-	repeat with Q running through mack-ideas in frontage:
+	repeat with Q running through reflexive mack-ideas in frontage:
 		if debug-state is true:
 			say "DEBUG NOTES: [q]: [mack-prio of q].";
 	let loop be false;
@@ -22675,7 +22689,7 @@ perp-check is a truth state that varies.
 to say two-of-three:
 	say "[if searcher is not reflexed]prep and review[else if viewer is not reflexed]research and prep[else]review and research[end if]"
 
-perp-clued is a truth state that varies.
+perp-priv is a privately-named thing.
 
 check going north in Gates Stage:
 	if player does not have passport:
@@ -22684,7 +22698,7 @@ check going north in Gates Stage:
 		say "(First returning the extra fruit[unless number of carried fruits is 1]s[end if])[paragraph break]";
 		now all carried fruits are in lalaland;
 	if gate-level is 0:
-		now perp-clued is true;
+		now perp-priv is part of the passport;
 		say "You try to sneak through--you're backstage at the Admit-Us Stadium! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
 	else if gate-level is 1:
 		say "[one of]You try to sneak into the Admit-Us Stadium, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells 'PERP!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
@@ -22744,11 +22758,6 @@ the coins are plural-named things. description is "The coins really look more om
 
 the singed design is part of the coin. description is "The singed design is some sort of amalgamation of musical notes and instruments intertwined. You can't read who wrote it, but it makes the coin look more artsy than commercial."
 
-after fliptoing (this is the shift the singed design rule) :
-	if noun is s-c or noun is s-i or noun is icon or noun is icons:
-		now singed design is part of the noun;
-	continue the action;
-
 understand "designs" as singed design when player has coins or player has icons.
 
 check reading (this is the default to singed design rule) :
@@ -22782,11 +22791,6 @@ check scaning coins:
 a-text of coins is "?????". b-text of coins is "?????". parse-text of coins is "?[sp]?[sp]?[sp]?[sp]?".
 
 a-text of icons is "RYRYR". b-text of icons is "RYRYR". parse-text of icons is "-[sp]x[sp]-[sp]x[sp]x".
-
-after fliptoing (this is the move the design rule) :
-	if noun is s-c or noun is icons:
-		now singed design is part of noun;
-	continue the action;
 
 understand "scion" as a mistake ("Money, or something like it, should not be the guide of you.") when player has s-i or player has coins or player has s-c or player has icons.
 
@@ -22845,7 +22849,7 @@ the viewer is part of the passport. the viewer is reflexive. description is "[if
 a-text of viewer is "RYRYYR". b-text of viewer is "RYRYGR". parse-text of viewer is "x[sp]-[sp]x[sp]-[sp]e[sp]x".
 
 instead of doing something to the viewer:
-	if action is procedural or current action is reviewing:
+	if action is procedural:
 		continue the action;
 	try examining the viewer instead;
 
@@ -22854,11 +22858,11 @@ the searcher is part of the passport. the searcher is reflexive. description is 
 a-text of searcher is "RYRYYRRR". b-text of searcher is "RGRYYRRR". parse-text of searcher is "x[sp]e[sp]x[sp]-[sp]-[sp]x[sp]x[sp]x".
 
 instead of doing something to the searcher:
-	if action is procedural or current action is researching:
+	if action is procedural:
 		continue the action;
 	try examining the searcher instead;
 
-chapter preping
+chapter getting through the gates
 
 to decide which number is gate-level:
 	let A be 0;
@@ -22873,74 +22877,24 @@ to decide which number is gate-level:
 to say n-gates:
 	say "[if arena is examined]in the Admit-Us Stadium[else]to the north[end if]"
 
+check fliptoing when gate-level is 2:
+	if noun is part of the passport:
+		say "No need to over-study or over-think. Through the gates!" instead;
+
 to upgrade-passport:
 	if gate-level is 2:
-		say "Man! Another things you just out and learned stuff and didn't get bogged down in mental gymnastics. You feel brief guilt until you realize you've paid your dues. SOMEthing should be simple, SOMEtime.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies [n-gates], now[if cur-score of others < max-score of others]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
+		say "[line break]Man! Another things you just out and learned stuff and didn't get bogged down in mental gymnastics. You feel brief guilt until you realize you've paid your dues. SOMEthing should be simple, SOMEtime.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies [n-gates], now[if cur-score of others < max-score of others]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
 	else if gate-level is 1:
-		say "Well! That was simpler than a lot of other things you had to figure out. Perhaps Elvira was right that anagram puzzles can make people overthink much, even if she was wrong about everything else. You feel almost ready to tackle what lies [n-gates], now. Even if you didn't get anywhere, the failure might teach you something.";
+		say "[line break]Well! That was simpler than a lot of other things you had to figure out. Perhaps Elvira was right that anagram puzzles can make people overthink much, even if she was wrong about everything else. You feel almost ready to tackle what lies [n-gates], now. Even if you didn't get anywhere, the failure might teach you something.";
 	reg-inc;
 	continue the action;
 
-preping is an action out of world.
-
-understand the command "prep" as something new.
-
-understand "prep" as preping.
-
-prepped is a truth state that varies.
-
-carry out preping:
-	if player does not have passport:
-		say "[reject]" instead;
-	if gate-level >= 2:
-		say "No need to over-study or over-think. Through the gates!" instead;
-	if passport is reflexed:
-		say "You need to fiddle with the passport differently." instead;
-	say "You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, etc. While part of it seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure.";
-	now passport is reflexed;
-	upgrade-passport instead;
-
 chapter reviewing
 
-reviewing is an action applying to one thing.
-
-understand the command "review" as something new.
-
-understand "review [something]" as reviewing.
-
-does the player mean reviewing viewer: it is very likely.
-
-carry out reviewing:
-	if noun is not viewer:
-		say "[reject]";
-	if gate-level >= 2:
-		say "No need to over-study or over-think. Through the gates!" instead;
-	if viewer is reflexed:
-		say "You need to fiddle with the passport differently." instead;
-	say "You conduct a thorough review. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought.";
-	now viewer is reflexed;
-	upgrade-passport instead;
-
-chapter researching
-
-researching is an action applying to one thing.
-
-understand the command "research" as something new.
-
-understand "research [something]" as researching.
-
-does the player mean researching searcher: it is very likely.
-
-carry out researching:
-	if noun is not searcher:
-		say "[reject]";
-	if gate-level >= 2:
-		say "No need to over-study or over-think. Through the gates!" instead;
-	if searcher is reflexed:
-		say "You need to fiddle with the passport differently." instead;
-	say "You conduct thorough research. Of hard stuff and easy stuff and what's most relevant. It's easier than you thought.";
-	now searcher is reflexed;
-	upgrade-passport instead;
+after fliptoing when player has passport (this is the part-of-passport rule):
+	if noun is searcher or noun is viewer or noun is perp-priv:
+		upgrade-passport;
+	continue the action.
 
 book Admit-Us Stadium
 
@@ -22970,10 +22924,6 @@ for writing a paragraph about a fruit (called froo) in Clangier Clearing:
 	now nectarine is mentioned;
 
 understand "cigar" as a mistake ("That'd be out of place among fresh fruits. Plus, whether or not Len deserves a cigar, he doesn't deserve to be turned into one.") when player is in clearing.
-
-the dummy-mango is useless privately-named scenery. the dummy-mango is undesc.
-
-a-text of dummy-mango is "YRYRR". b-text of dummy-mango is "YRYRR". parse-text is "-[sp]x[sp]-[sp]x[sp]x".
 
 a mango is a fruit.
 
@@ -23066,6 +23016,8 @@ check taking (this is the shoplift in clearing rule) :
 		say "No stealing. This is a marketplace!" instead;
 
 the pre-mang is privately-named scenery in Clangier Clearing. pre-mang is undesc.
+
+a-text of pre-mang is "YRYRR". b-text of pre-mang is "YRYRR". parse-text is "-[sp]x[sp]-[sp]x[sp]x".
 
 understand "among" as a mistake ("Maybe if there were mango trees around.") when mrlp is routes.
 
@@ -23347,10 +23299,8 @@ understand "go near" as gonearing.
 
 carry out gonearing:
 	if orange is in Scape Space and orange is visible:
-		say "You move cautiously, with moves as sneaky as [greedy-s]'s that eventually got [him-her] tarred. [he-she-c] sees you grab it but sniffs 'O anger. A goner.' Sour grapes at the orange!";
-		now player has orange;
-		reg-inc;
-		check-fruit-min instead;
+		try fliptoing orange;
+		the rule succeeds;
 	say "[reject]" instead;
 
 instead of dropping the orange:

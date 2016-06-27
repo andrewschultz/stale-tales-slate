@@ -142,11 +142,12 @@ sub wordit
     chomp($a); $a = lc($a);
 	@q = split(//, $a);
 	for (@q) { $total += $ary{$_}; }
-	if ($total == $_[0]) { print "$a =~ $total\n"; return; }
+	if ($total == $_[0]) { print "FOUND WORD: $a =~ $total\n"; return; }
    #if ($a eq "thing") { print "$a $total\n"; }
    }
   close(A);
-  print "No matches for $_[0].\n";
+  print "No matches for $_[0]. Trying findHash.";
+  findHash($_[0]);
 }
 
 #####################################
@@ -220,9 +221,13 @@ sub findHash
   my $temp;
   my $q;
   my $maxlength = $_[2];
+  my $starting = $_[3];
+  my $l = length($_[1]);
+  
+  #print "Parameters: $_[0] $_[1] $_[2] $_[3]...\n";
   
   if (!$maxlength) { $maxlength = 11; }
-  if ((length($_[1]) > $maxlength) || ($found)) { return; }
+  if (($l < 0) || ($found)) { return; }
   #print "Trying $_[0]/$_[1]/$_[2]\n";
   if ($_[0] == 0)
   { print "Found hash $_[1]!"; $found = 1; return; }
@@ -230,12 +235,17 @@ sub findHash
   { return; }
   else
   {
-    for $q (@alf)
+    for my $idx ($starting..$#alf)
 
 	{ #if ($ary{$q} > $_[3]) { next; }
 	  #print "$q $ary{$q}\n";
-	  $temp = $_[0];
-	  if ($temp >= $ary{$q}) { findHash($temp - $ary{$q}, "$_[1]$q", $maxlength, $ary{$q}); }
+	  $q = @alf[$idx];
+	  my $temp = $_[0];
+	  #print "$temp vs ($maxlength - $l) * $ary{$q} = " . ($maxlength - $l) * $ary{$q} . "\n";
+	  if ($temp > (($maxlength - $l) * $ary{$q})) { last; }
+	  if ($temp < $ary{$q}) { next; }
+	  
+	  findHash($temp - $ary{$q}, "$_[1]$q", $maxlength, $idx);
 	}
   }
 }

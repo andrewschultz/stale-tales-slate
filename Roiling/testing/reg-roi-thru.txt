@@ -770,11 +770,12 @@ The ether pulses, but you still can't see through it.
 >there
 Your score has just gone up by one point
 >theer
-You figured the ether out. Time to go north through it.
+The ether is gone. You can just go north.
 >n
 >s
 >theer
-You figured the ether out. You should go back north through it.
+The ether is gone. You can just go back north.
+
 
 >n
 Phat Path
@@ -990,7 +991,7 @@ No, you were right before, there. You just need some help to make that magic wor
 >debug
 Your score has just gone up by one point
 >debgu
-WRONG
+You had to consider all sorts of combinations while debugging, but things will be easier now.
 
 >sbu
 Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
@@ -1018,6 +1019,7 @@ Posh Hops Shop
 >stroll
 haven't had any fun at all
 
+##>unset tunes
 >unste
 The tunes grow slightly less annoying, for a moment.
 >unset
@@ -1025,41 +1027,48 @@ Your score has just gone up by one point
 >remap
 already been altered
 >unste
-WRONG
+You can't change the bad music selection. You already got a temporary escape, and that should be good enough.
 
 >undo
 >undo
+>undo
+
+##>remap amper
 >rempa
-WRONG
+You can't change the bad music selection. You already got a temporary escape, and that should be good enough.
 >remap
 Your score has just gone up by one point
 >unset
 mucked up the perma
 >rempa
-WRONG
+You can't change the bad music selection. You already got a temporary escape, and that should be good enough.
 
 >stroll
 you have been kind of obnoxious
 
+##>inset stein
 >inste
-WRONG
+Hm, the stein belongs somewhere you can destroy it, but not QUITE like that.
 >inset
 Your score has just gone up by one point
 >inste
-WRONG
+WRONG2
 
 >stroll
 you're the jerk here
 
+##>scrape casper
 >scraep
-WRONG
+You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe.
 >scrape
 Your score has just gone up by one point
 >scraep
 WRONG
 
+#check recaps in general
+
 >spti
-WRONG
+The tumblers wobble a bit as you try to do ... something ... to them.
 >spit
 You've caused enough damage
 >spti
@@ -1077,26 +1086,28 @@ WRONG
 >undo
 
 >strllo
-WRONG
+No, you were right before, there. You just need some help to make that magic word in your notepad work, now. Or maybe you don't!
+
 >stroll
 Olde Lode
 >strllo
-WRONG
+That's not something
 
+##>calm clam
 >caml
-WRONG
+The clam still seems enraged.
 >calm
 Your score has just gone up by one point
 >caml
-WRONG
+You feel a need to panic and flee after calming the clam.
 
 >rnu
-WRONG
+The urn sits there, daring you to walk away.
 >run
 Your score has just gone up by one point
 Hero's Shore
 >rnu
-WRONG
+That's not something
 
 >ocean
 is, in fact, a herring
@@ -1108,27 +1119,46 @@ WRONG
 >boast
 Your score has just gone up by one point
 Fighter Freight
->=leap
+
+>lepa
+>boat
+WRONG3
+>boats
+WRONG3
+>leap
 Your score has just gone up by one point
 Anger Range
->boats
-WRONG
+>lepa
+WRONG2
 
+
+>undo
+>undo
+>undo
+>undo
+>undo
 >undo
 >undo
 
 >fart
 butterfly
+>undo
 >get on raft
 >fatr
 WRONG
 >fart
 Your score has just gone up by one point
->=soar
-Your score has just gone up by one point
 >fatr
 WRONG
 
+>sora
+WRONG
+>soar
+Your score has just gone up by one point
+>sora
+WRONG
+
+##>scrap carps
 >scrpa
 WRONG
 >scrap
@@ -1137,6 +1167,8 @@ Your score has just gone up by one point
 WRONG
 
 >undo
+
+##>spike pikes
 >spiek
 WRONG
 >spike
@@ -1145,6 +1177,8 @@ Your score has just gone up by one point
 WRONG
 
 >e
+
+##>scan cans
 >scna
 WRONG
 >scan
@@ -1153,6 +1187,7 @@ min point
 >scna
 WRONG
 
+##>seek eeks
 >seke
 WRONG
 >seek
@@ -1160,6 +1195,7 @@ Your score has just gone up by one point
 >seke
 WRONG
 
+##>eat tea
 >eta
 WRONG
 >eat
@@ -1167,6 +1203,7 @@ Your score has just gone up by one point
 >eta
 WRONG
 
+##>tutor trout
 >tutro
 WRONG
 >tutor
@@ -1174,6 +1211,7 @@ Your score has just gone up by one point
 >tutro
 WRONG
 
+##>swipe wipes
 >swiep
 WRONG
 >swipe
@@ -1196,6 +1234,7 @@ good idea, but you're not sure HOW
 >reatc
 WRONG
 
+##>trace crate
 >traec
 WRONG
 >trace
@@ -1210,6 +1249,7 @@ Your score has just gone up by one point
 >reatc
 WRONG
 
+##>kiss skis
 >kssi
 WRONG
 >kiss
@@ -1217,6 +1257,7 @@ Your score has just gone up by one point
 >kssi
 WRONG
 
+##>bonk knob
 >bokn
 WRONG
 >bonk
@@ -1227,6 +1268,7 @@ WRONG
 >in
 a hut
 
+##>bust tubs
 >buts
 WRONG
 >bust
@@ -1234,6 +1276,7 @@ Your score has just gone up by one point
 >buts
 WRONG
 
+##>drop prod
 >drpo
 WRONG
 >drop
@@ -1249,6 +1292,7 @@ min point for
 >sweta
 WRONG
 
+##>shape heaps
 >shaep
 WRONG
 >shape
@@ -1257,6 +1301,7 @@ min point for
 >shaep
 WRONG
 
+##>clean lance
 >clena
 WRONG
 >clean
@@ -1270,6 +1315,7 @@ WRONG
 >w
 Arches
 
+##>warp wrap
 >wapr
 WRONG
 >warp
@@ -1277,6 +1323,7 @@ Your score has just gone up by one point
 >wapr
 WRONG
 
+##>search arches
 >searhc
 WRONG
 >search
@@ -1285,6 +1332,7 @@ GENERAL GLEANER engulf it
 >searhc
 WRONG
 
+##>enlarge gleaner
 >enlareg
 WRONG
 >enlarge
@@ -1298,6 +1346,7 @@ Hedron
 >w
 Collapsed Old Places
 
+##>bury ruby
 >buyr
 WRONG
 >bury
@@ -1309,12 +1358,14 @@ WRONG
 >s
 >e
 
+##>unearth haunter
 >unearht
 WRONG
 >unearth
-
 >unearht
 WRONG
+
+##>assuage sausage
 >assuaeg
 WRONG
 >assuage
@@ -1344,6 +1395,7 @@ End Den
 >in
 Scum Ant Sanctum
 
+##>tan ant
 >tna
 WRONG
 >tan
@@ -1353,6 +1405,7 @@ Tenfold Teflon'd
 >tna
 WRONG
 
+##>prepay yapper
 >prepya
 WRONG
 >prepay
@@ -1376,6 +1429,8 @@ Your score has just gone up by one point
 WRONG
 
 >pull lever
+
+##>redial dialer
 >redila
 WRONG
 >redial
@@ -1680,7 +1735,7 @@ That's not something
 Scope Copse
 
 >rusyt
-WRONG
+The yurts sway slightly. They may not be guarding much, but maybe you could do for them.
 >rusty
 Your score has just gone up by one point
 min point
@@ -1688,21 +1743,21 @@ min point
 That's not something
 
 >rinsde
-WRONG
+The diners glare at you, then look up at the sky, slightly worried.
 >rinsed
 Your score has just gone up by one point
 >rinsde
 That's not something
 
 >weirdre
-WRONG
+The robot almost looked a bit odd there for a moment.
 >weirder
 Your score has just gone up by one point
 >weirdre
 That's not something
 
 >clumys
-WRONG
+The hulk stumbles for a moment.
 >clumsy
 Your score has just gone up by one point
 >clumys
@@ -1712,22 +1767,22 @@ That's not something
 Baldest Blasted Saltbed
 
 >coilde
-WRONG
+The old ice seems to glimmer a bit.
 >coiled
 Your score has just gone up by one point
 Adding a min point
 >coilde
-That's not something
+Twist the ice too much, it might not look right.
 
 >pastire
-WRONG
+The pirates blanch a bit but quickly regain their swagger.
 >pastier
 Your score has just gone up by one point
 >pastire
 That's not something
 
 >punire
-WRONG
+The iPrune shrinks, slightly. I mean, it recedes, but it doesn't quite get smaller.
 >punier
 Your score has just gone up by one point
 >punire
@@ -1747,14 +1802,14 @@ Your score has just gone up by one point
 That's not something
 
 >weariets
-WRONG
+The wait-seer looks bored and distracted for a second.
 >weariest
 Your score has just gone up by one point
 >weariets
 That's not something
 
 >angstire
-WRONG
+The ingrates seem to wonder if it's worth complaining to you for a moment. You get the feeling that they may start off angriest, but if you could bend their mood, they might lose their willpower and give up.
 >angstier
 Your score has just gone up by one point
 >angstire
@@ -1766,14 +1821,14 @@ That's not something
 Salted Deltas
 
 >hastiets
-WRONG
+The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal.
 >hastiest
 Your score has just gone up by one point
 >hastiets
 That's not something
 
 >marginla
-WRONG
+The grailman seems almost average for a moment.
 >marginal
 Your score has just gone up by one point
 >marginla
@@ -1787,14 +1842,14 @@ Your score has just gone up by one point
 
 >undo
 >releasde
-WRONG
+The Reed's Ale man listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch.
 >released
 Your score has just gone up by one point
 >releasde
 That's not something
 
 >himsefl
-WRONG
+The man picks at his paint, as if he could almost peel it off.
 >himself
 Your score has just gone up by one point
 >himsefl
@@ -1825,7 +1880,7 @@ That's not something
 
 >s
 >drainde
-WRONG
+The salesmen grow momentarily protective of their Nerd-Aid supply.
 >drained
 Your score has just gone up by one point
 >drainde
@@ -1951,11 +2006,11 @@ Actionless Coastlines
 
 >give gizmo to kid
 >robuts
-WRONG
+Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
 >robust
 Your score has just gone up by one point
 >robuts
-WRONG
+The turbos are working. Best not tinker.
 
 >enter boat
 >nearest
@@ -1966,21 +2021,28 @@ Your score has just gone up by one point
 >undo
 >undo
 >stablre
-WRONG
+Despite your lack of technical knowledge, you think you almost did...something to improve the boat.
 >stabler
 Your score has just gone up by one point
 >stablre
-WRONG
+The blaster is working. Best not tinker.
+
+>enter boat
+
+>undo
+>undo
+>undo
 
 >enter boat
 >nearets
-WRONG
+Maybe it's you, but the eastern shore seemed slightly closer.
 >nearest
 Mislit Limits
 Your score has just gone up by one point
 >nearets
 That's not something
 
+>undo
 >undo
 >undo
 >robust
@@ -1993,26 +2055,29 @@ The turbos are working fine now.
 
 >enter boat
 >presetn
-WRONG
+The serpent shakes its head and tail a bit.
 >present
 Your score has just gone up by one point
 >presetn
-WRONG
+The serpent is taken care of.
 
 >dinyg
-WRONG
+The crocus almost seems to perk up.
 >dingy
 Your score has just gone up by one point
 >dinyg
-WRONG
+You've got something nice in the flowerpot. Better not mess with it.
+
+>spectaculra
+Hmm...no rumbling from the curst palace. Big words have all sorts of possibilities.
 
 >w
 >greyde
-WRONG
+Ed looks slightly less avaricious.
 >greyed
 Your score has just gone up by one point
 >greyde
-WRONG
+Ed's attitude is changed enough for the better.
 
 >give flowerpot
 Your score has just gone up by one point
@@ -2022,7 +2087,7 @@ You should
 
 >e
 >spectaculra
-WRONG
+No, you were right before, there. You just need some help to make that magic word in your notepad work, now. Or maybe you don't!
 >spectacular
 Your score has just gone up by one point
 Strip of Profits
@@ -2038,51 +2103,54 @@ Towers (45/45)
 >otters
 >in
 >bareyl
-WRONG
+The barley rustles in an imaginary wind--but hardly at all.
 >barely
 Your score has just gone up by one point
 >bareyl
-WRONG
+You've dealt with the barley. You can move around a lot more, now.
 
 >score
 1 out of 29
 
 >reediyl
-WRONG
+Ed Riley looks askance at his deli rye, as if it had some bad aftertaste.
 >reedily
 Your score has just gone up by one point
 >reediyl
-WRONG
+That's not something
 
 >rescidn
-WRONG
+The cinders glow and even warm up for a bit.
 >rescind
 Adding a min point
 Your score has just gone up by one point
 >rescidn
-WRONG
+WRONG2
 
 >w
 Gent-Fora Frontage
 
 >bossiyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >bossily
-
+Your score has just gone up by one point.
 >bossiyl
-WRONG
+You already dealt with the macks that way.
+
 >nastiyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >nastily
-
+Your score has just gone up by one point.
 >nastiyl
-WRONG
->bleariyl
-WRONG
->blearily
+You already dealt with the macks that way.
 
 >bleariyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
+>blearily
+Your score has just gone up by one point.
+>bleariyl
+That's not something
+
 >1
 >1
 >1
@@ -2094,14 +2162,14 @@ WRONG
 
 >n
 >becaues
-WRONG
+The sea cube shakes a bit.
 >because
 Your score has just gone up by one point
 >becaues
 WRONG
 
 >eles
-WRONG
+The eels swim a bit faster.
 >else
 Your score has just gone up by one point
 >eles
@@ -2221,8 +2289,14 @@ WRONG
 WRONG
 >tersely
 Your score has just gone up by one point
->=stoically
+
+>stoicalyl
+WRONG
+>stoically
 Your score has just gone up by one point
+>stoicalyl
+WRONG
+
 >s
 Perverse Preserve
 >terseyl
@@ -2260,10 +2334,16 @@ WRONG
 >raccoon
 Your score has just gone up by one point
 >undo
->=racoon
-Your score has just gone up by one point
 >raccono
 WRONG
+
+>racono
+WRONG
+>racoon
+Your score has just gone up by one point
+>racono
+WRONG
+
 
 >x medals
 The smaller, barely oxidized, says IQ. The larger, untarnished, says LUCKY.
@@ -2324,6 +2404,7 @@ WTF FTW
 >1
 >1
 >1
+>1
 Cordial, cold air.
 
 >au -1
@@ -2339,127 +2420,146 @@ A MONSTER ROTS. AMEN.
 
 * _others
 
+>z
+
 >maraschion
-WRONG
+The harmonicas whistle, as if something happened.
 >maraschino
 Your score has just gone up by one point.
 >maraschion
-WRONG
+That's not something you can
 
+>gapers
+Really, you don't need people all Damn Mister Master Mind over changing those pagers. That's not your style.
 >grapse
-WRONG
+The pagers light up slightly. Maybe give it another go.
 >grapes
 Your score has just gone up by one point.
 >grapse
-WRONG
+That's not something you can
 
 >cranberrise
-WRONG
+The cries seem like they could change--or is it a dream to you?
 >cranberries
 Your score has just gone up by one point.
 >cranberrise
-WRONG
+That's not something you can
 
 >tamaridn
-WRONG
+The train emits some fake smoke and seems ready to blow up--but no.
 >tamarind
 Your score has just gone up by one point.
 Hmm. Probably
 >tamaridn
-WRONG
+That's not something you can
 
 >compssa
-WRONG
+The cap itches for a bit, then seems to try to spin you around.
 >compass
 Your score has just gone up by one point.
 >compssa
-WRONG
+If you changed the compass, it might wind up pointing in the wrong direction.
 
+>lmpu
+Well, you don't technically need plurals for this, but you're on the right track.
+>plum
+Your score has just gone up by one point.
+>undo
 >plusm
-WRONG
+The lumps seem almost ready to burst.
 >plums
 Your score has just gone up by one point.
 >plusm
-WRONG
+That's not something
 
 >peasr
-WRONG
+The spear stays as-is. But it can't be that hard to change.
 >pears
 Your score has just gone up by one point.
 >peasr
-WRONG
+That's not something you can say, do or see here.
 
 >x stand
 >blueberrise
-WRONG
+The blurbs turn a few shades of purple before settling again.
 >blueberries
 Your score has just gone up by one point.
 >blueberrise
-WRONG
+That's not something you can
 
 >pomegranaet
-WRONG
+The magenta rope and other items you uncovered briefly seem as one.
 >pomegranate
 Your score has just gone up by one point.
 Take on a token
 >pomegranaet
-WRONG
+That's not something you can
 
 >cantalouep
-WRONG
+The peanut cola smells slightly fruity for a minute.
 >cantaloupe
 Your score has just gone up by one point.
 >cantalouep
-WRONG
+That's not something you can
 
 >persimmno
-WRONG
+You must be on the right track--but nothing happens. Yet.
 >persimmon
 Your score has just gone up by one point.
 >persimmno
-WRONG
+That's not something you can
 
+>emli
+Well, you don't technically need plurals for this, but you're on the right track.
+>lime
+Your score has just gone up by one point.
+>undo
 >limse
-WRONG
+The slime shifts about slightly, but not enough--yet.
 >limes
 Your score has just gone up by one point.
 >limse
-WRONG
+That's not something you can
 
 >n
 >apricto
-WRONG
+Nothing happens. Your magic skills feel like the pits for a second.
 >apricot
 Your score has just gone up by one point.
 >apricto
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >applse
-WRONG
+You don't quite have ESP, pal, but with the right logic skills you can seem like you do. The shirt remains unchanged.
 >apples
 Your score has just gone up by one point.
 >applse
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >mulberrise
-WRONG
+The miser ruble turns a bit purpler.
 >mulberries
 Your score has just gone up by one point.
 >mulberrise
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >gooseberyr
-WRONG
+The bogey's tone changes slightly for a second.
 >gooseberry
 Your score has just gone up by one point.
 >gooseberyr
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >s
 scru-it
 >n
+
+>coconust
+The stucco looks almost hairy for a second.
 >coconuts
 Your score has just gone up by one point.
+>coconust
+Just return the fruit to Curtis. No need for another change.
 
 >icon
 Your score has just gone up by one point.
@@ -2469,61 +2569,64 @@ You fiddle with the coin you got
 >n
 
 >tangerinse
-WRONG
+Parts of the green stain turn orange-ish but is too small to be oranges.
 >tangerines
 Your score has just gone up by one point.
+>undo
+>tangerine
+Your score has just gone up by one point.
 >tangerinse
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >w
 >blackberrise
-WRONG
+The barber sickle darkens a bit. You must be on the right track.
 >blackberries
 Your score has just gone up by one point.
 >blackberrise
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >watermelno
-WRONG
+You had the seed of an idea there, you thought.
 >watermelon
 Your score has just gone up by one point.
 >watermelno
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >pineappel
-WRONG
+The pipe panel fence sways slightly.
 >pineapple
 Your score has just gone up by one point.
 >pineappel
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >strawberrise
-WRONG
+You feel the barriers west pulling towards you.
 >strawberries
 Your score has just gone up by one point.
 >strawberrise
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >grapefruti
-WRONG
+The rapt figure frowns as if it's eaten something sour.
 >grapefruit
 Your score has just gone up by one point.
 >grapefruti
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >raspberyr
-WRONG
+The drupelets in the pryer bars pop out and multiply, leaving you with raspberries.
 >raspberry
 Your score has just gone up by one point.
 >raspberyr
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >breadfruti
-WRONG
+You loaf a bit after thinking that, hoping for something to happen. It doesn't.
 >breadfruit
 Your score has just gone up by one point.
 >breadfruti
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >e
 >s
@@ -2536,49 +2639,49 @@ Your score has just gone up by one point.
 >n
 >e
 >cinqeu
-WRONG
+That certainly sounds foreign--but it doesn't seem to sway Len.
 >cinque
 Your score has just gone up by one point.
 >cinqeu
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >chepa
-WRONG
+The peach still looks too expensive.
 >cheap
 Your score has just gone up by one point.
 >chepa
-WRONG
+You got enough of a discount. Really.
 
 >papaysa
-WRONG
+Everyone promises quick payment, but what are you promising to pay quickly FOR?
 >papayas
 Your score has just gone up by one point.
 >papaysa
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >amogn
-WRONG
+It would be nice to find a mango, yes. But you don't find anything that way.
 >among
 Your score has just gone up by one point.
 >amogn
-WRONG
+You might wind up dropping the mango looking for another. One is enough.
 
 >ancientre
-WRONG
+The nectarine seems a little less shiny and new. But not enough.
 >ancienter
 Your score has just gone up by one point.
 >ancientre
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >solenm
-WRONG
+Len frowns at the lemons.
 >solemn
 Your score has just gone up by one point.
 >solenm
-WRONG
+You sour on changing the lemons further.
 
 >lmeno
-WRONG
+Hm, there must be a better melon than that, but how to ask Len, now.
 >len mo
 You ask Len if this melon is REALLY the only one for sale. He smiles, then gives you a much nicer melon from a secret stash.
 Your score has just gone up by one point.
@@ -2592,70 +2695,85 @@ Your score has just gone up by one point.
 >mo len
 Your score has just gone up by one point.
 >lmeno
-WRONG
+The melon is fine as-is. It's better than the one that was on display, for sure.
 
 >cripse
-WRONG
+Something glints off the list of prices.
 >cripes
 Your score has just gone up by one point.
 >cripse
-WRONG
+You corrected the list enough.
 
 >w
 >d
 >nabaan
-WRONG
+The A shines for a split-second.
 >nab an a
 Your score has just gone up by one point.
 >nabaan
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >gonera
 WRONG
 >go near
 Your score has just gone up by one point.
 >gonera
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >rhubabr
-WRONG
+The plant seems to adopt a defensive position with its arms/branches.
 >rhubarb
 Your score has just gone up by one point.
 >rhubabr
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >reversde
-WRONG
+You seem to read the sign backwards for a second.
 >reversed
 Your score has just gone up by one point.
 >reversde
-WRONG
+Just return the fruit to Curtis. No need for another change.
 
 >give dollar
 >put icons in slot
 >u
 >n
 >prpe
-WRONG
->prep
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
 
+>n
 >prpe
-WRONG
+It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it.
+>prep
+Your score has just gone up by one point.
+>prpe
+Don't want to over-prep.
+
 >undo
 >undo
 >undo
+
 >reviwe
-WRONG
+That's not the way to learn from the viewer--it's probably not that complicated. You hope.
 >review
 Your score has just gone up by one point.
->=research
+>reviwe
+Reviewing is done now.
+
+>researhc
+That's not the way to learn from the searcher--it's probably not that complicated. You hope.
+>research
 Your score has just gone up by one point.
+>researhc
+Researching is done now, but you can just go north.
+
+>frui
+
 >score
 41 out of 41
+
 >n
 You Did Great
->reviwe
-WRONG
 
 * _big-go
 
@@ -2733,12 +2851,12 @@ Rustic Citrus
 >{include} _troves
 >{include} _summarize
 
-* only-presto
+* _only-presto
 
 >gonear gyre
 >{include} _presto
 
-* only-oyster
+* _only-oyster
 
 >purloin settler
 >gonear posh hops shop
@@ -2750,7 +2868,7 @@ Rustic Citrus
 >gonear posh hops shop
 >{include} _oyster-with-subj
 
-* only-towers
+* _only-towers
 
 >seed 1
 >gonear trefoil
@@ -2762,7 +2880,7 @@ Rustic Citrus
 >gonear barley
 >{include} _otters
 
-* _only-others
+* only-others
 
 >gonear rustic citrus
 >{include} _others
