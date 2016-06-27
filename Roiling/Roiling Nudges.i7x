@@ -985,7 +985,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "among"	242122758	--	--	need-mango rule	"Not quite the right way."
 "list"	298190669	--	l-o-p	--	"[if l-o-p is reflexed]You already messed with the list[else]The list doesn't look odd, but maybe some the prices will make you exclaim something[end if]."
 "overpriced"	774270700	--	peach	--	"[if peach is reflexed]No need to change now, and that's not the right way[else]That's over-thinking it. It's just a peach[end if]."
-"lemon"	388955186	--	--	lemmel rule	"You can't focus on just one of them."
+"lemon"	388955186	--	--	lemnomel rule	"You can't focus on just one of them, but you don't need to."
 "auction"	417662159	--	caution	--	"[papay]."
 "banner"	371551651	--	caution	--	"[papay]."
 "banana"	162797375	--	an-a	--	"You try to poke at an A, but nothing comes from it." [scape space]
@@ -1948,10 +1948,9 @@ this is the need-mango rule:
 		the rule succeeds;
 	the rule fails.
 
-this is the lemmel rule:
-	if player is in clearing:
-		if lemons are in clearing or melons are in clearing:
-			the rule succeeds;
+this is the lemnomel rule:
+	if lemons are visible and melon is not visible:
+		the rule succeeds;
 	the rule fails;
 
 to say papay:

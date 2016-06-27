@@ -753,7 +753,7 @@ There aren't that many things to do with Rand. So few, you could probably brute-
 >darn
 Your score has just gone up by one point
 >danr
-Leo doesn't need to be outflanked again.
+Rand doesn't need to be outflanked again.
 
 >whasspu
 You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
@@ -820,11 +820,12 @@ That'd be an awkward rehash. You need another way to say good-bye.
 >sologn
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 >so long
+Dat was a good dust-up
 Your score has just gone up by one point
 >sologn
 That'd be an awkward rehash. You need another way to say good-bye.
 >tough
-Dat was a good dust-up
+They're already off getting to know each other better.
 
 >n
 Hacks' Shack
@@ -2576,11 +2577,21 @@ Your score has just gone up by one point.
 >solenm
 WRONG
 
->solenm
+>lmeno
 WRONG
->solemn
+>len mo
+You ask Len if this melon is REALLY the only one for sale. He smiles, then gives you a much nicer melon from a secret stash.
 Your score has just gone up by one point.
->solenm
+>undo
+>len, mo
+Your score has just gone up by one point.
+>undo
+>mo, len
+Your score has just gone up by one point.
+>undo
+>mo len
+Your score has just gone up by one point.
+>lmeno
 WRONG
 
 >cripse

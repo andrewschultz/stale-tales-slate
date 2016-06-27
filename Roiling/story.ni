@@ -387,7 +387,7 @@ throw-warn is a truth state that varies.
 pun-warn is a truth state that varies.
 
 instead of eating a fruit:
-	if noun is lemons or noun is melons:
+	if noun is lemons or noun is melon:
 		say "A [if noun is lemons]lemon[else]melon[end if]? No meal!" instead;
 	say "[one of]You shouldn't eat into Curtis's profits. [or][stopping]";
 	if pun-warn is false:
@@ -4010,7 +4010,7 @@ magenta rope	"The magenta rope and other items you uncovered briefly seem as one
 spear	"The spear stays as-is. But it can't be that hard to change."
 slime	"The slime shifts about slightly, but not enough--yet."
 lemons	"[l-frown]lemons."
-melons	"[l-frown]melons."
+melon	"Hm, there must be a better melon than that, but how to ask Len, now."
 mango	"Snag mo['] mangos? No mas, G."
 quince	"That certainly sounds foreign--but it doesn't seem to sway Len."
 silly shirt	"You don't quite have ESP, pal, but with the right logic skills you can seem like you do. That shirt's still resisting."
@@ -4187,7 +4187,7 @@ auction caution	"You hear a sap yap about the sign and figure it can't be change
 quince	"The quince is fine as is. No need to bargain for more."
 peach	"The peach was cheap enough. Best not to meddle with it more."
 lemons	"You sour on changing the lemons further."
-melons	"The melons are fine as-is. You already got a two-fer, getting them, anyway."
+melon	"The melon is fine as-is. It's better than the one that was on display, for sure."
 nectarine	"The nectarine's already perfectly ripe."
 
 to say got-e:
@@ -4236,7 +4236,7 @@ to decide whether (tn - a table name) is hash-found:
 					else:
 						d "Need error message for [this-cmd entry] misfire.";
 			if doublewarn is false and cmdhash is hashval entry * 2 and cmdhash is not 0:
-				say "It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that [if lemons are in lalaland and melons are in lalaland]at all now you took care of the melons and lemons[else if otters is unsolved]until after you defeat Elvira[else] more than once in a special place in this region[end if].";
+				say "It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that.";
 				now doublewarn is true;
 				decide yes;
 	decide no;
@@ -5005,6 +5005,8 @@ man covered in inapt paint	false	true	false	false	"Hmm, painted and covered have
 old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
 Dr Yow	false	true	false	false	"[if Dr Yow has not been rowdy and Dr Yow has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her].[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]"
 ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to unlock them."
+natives	true	true	false	false	"That's weird. They're just natives, but the blinky bit suggests there may be two possible solutions."
+curst palace	true	false	false	false	"[if palace-let < 5]Wow, lots of blank data. You may want to get closer to have any hope of figuring how to restore the palace[else if palace-let is 11 and cheat-on is true]The final letter clue blinks alternately with the fifth--neither is purple at the same time[else if cheat-on is true]Hm, maybe you can figure what the fifth letter is if you know more about the later ones[else]Just the reds and yellows still leave a lot of possibilities. But maybe you'll have clues along the way[end if]."
 serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
 cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders." [otters]
 atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
@@ -5015,8 +5017,7 @@ coins	false	false	false	false	"Even the reds and yellows seem to be blinking her
 pugnacious	false	false	false	false	"Wow, seven letters, odd. Maybe you need to poke or talk to the plant or attack it or something to see what kind it might be."
 caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
 an-a	false	false	false	false	"You think you hear a taunting na-naa-b after you scan the letters."
-natives	true	true	false	false	"That's weird. They're just natives, but the blinky bit suggests there may be two possible solutions."
-curst palace	true	false	false	false	"[if palace-let < 5]Wow, lots of blank data. You may want to get closer to have any hope of figuring how to restore the palace[else if palace-let is 11 and cheat-on is true]The final letter clue blinks alternately with the fifth--neither is purple at the same time[else if cheat-on is true]Hm, maybe you can figure what the fifth letter is if you know more about the later ones[else]Just the reds and yellows still leave a lot of possibilities. But maybe you'll have clues along the way[end if]."
+melon	false	false	false	"Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two ways to get that melon."
 
 check scaning a prefigured thing:
 	if noun is not dialer:
@@ -5215,8 +5216,8 @@ carry out others-hinting:
 			try objhinting peach instead;
 		if lemons are in clearing:
 			try objhinting lemons instead;
-		if melons are in clearing:
-			try objhinting melons instead;
+		if melon is in clearing:
+			try objhinting melon instead;
 		if nectarine is in clearing:
 			try objhinting nectarine instead;
 		all-say "There's nothing left to do here." instead;
@@ -6042,7 +6043,7 @@ after reading a command:
 				consider the hint flags checkoff rule;
 				consider the scam rule instead;
 	if Gunter is off-stage and peephole is unexamined:
-		if the player's command includes "Gunter":
+		if the player's command includes "gunter":
 			say "[if peephole is unexamined]Who?[else]Gunter's outside, but to interact meaningfully, you should open the door and let him in.[end if]" instead;
 	if e-s is visible:
 		if the player's command includes "presto":
@@ -6050,6 +6051,9 @@ after reading a command:
 				say "Presto is the word you said to reveal the, er, spot." instead;
 	if the player's command includes "tickle" and Elmo is in Basement:
 		say "Really. This is a juvenile computer game, not a juvenile toy." instead;
+	if player is in clearing and melon is in clearing:
+		if the player's command matches the regular expression "\blen\b" and the player's command matches the regular expression "\bmo\b":
+			try fliptoing melon instead;
 	if player is in evoc-cove and the player's command includes "page":
 		let XX be the player's command;
 		replace the regular expression "page" in XX with "";
@@ -8360,7 +8364,7 @@ quince	quince	"cinque"	"cinque"	"You hold up five fingers and repeat 'five' in s
 peach	peach	"cheap"	"cheap"	"You go for a direct approach, which works great. Probably won't work again, but you feel a better patron for this potent barter."	true	267747770	"You got a good enough deal."
 pre-mang	mango	"among"	"among"	"You mingle among the shoppers for a while. Eventually you find somewhere you didn't see before. You stifle an OMG when you see a mango. You stop to haggle. It goes well."	true	242122758
 lemons	lemons	"solemn"	"solemn"	"Thinking all 'I frown for win' at the lemons, you mind-trick Len into lowing his price. 'Enjoy your rickets sticker.'"	true	485229152
-melons	melons	"solemn"	"solemn"	"You half-frown at the melons, and Len, groaning slightly, lowers his price. You take a few."	true	485229152
+melon	melon	"mo len" or "len mo"	"melon"	"You ask Len if this is really IT. He smiles, then gives you a much nicer melon from a secret stash."	true	388955186
 rapt figure	grapefruit	"grapefruit"	"grapefruit"	"The figure gives a look as if it's eaten something sour before it rolls into itself, into a lumpy yellow ball--a grapefruit!"	true	694430761
 mean trowel	watermelon	"watermelon"	"watermelon"	"The trowel seems to inflate from within and take on a much greener shade. It becomes a watermelon--not a big one, but healthy looking enough."	true	815317707
 nectarine	nectarine	"ancienter"	"ancienter"	"The unripe nectarine becomes salable. You swipe your tekno-token, taking only one: multiple nectarines might have transience."	true	648047304
@@ -22962,7 +22966,7 @@ after choosing notable locale objects when player is in clangier clearing:
 for writing a paragraph about a fruit (called froo) in Clangier Clearing:
 	say "Still for barter: [a list of not mentioned fruits in clearing].";
 	now lemons are mentioned;
-	now melons are mentioned;
+	now melon is mentioned;
 	now nectarine is mentioned;
 
 understand "cigar" as a mistake ("That'd be out of place among fresh fruits. Plus, whether or not Len deserves a cigar, he doesn't deserve to be turned into one.") when player is in clearing.
@@ -23024,19 +23028,17 @@ Len Craig is a person in Clangier Clearing. "[one of]A man introduces himself as
 
 description of Len Craig is "Unperturbed by the noise, he makes hand and nodding gestures at everything he has for sale."
 
-some lemons are a reflexive fruit in clearing. some melons are a reflexive fruit in clearing.
+some lemons are a reflexive fruit in clearing.
 
-check fliptoing lemons (this is the lemon-melon rule) :
-	if player has lemons and melons are visible:
-		try fliptoing melons instead;
+a melon is a reflexive fruit in clearing.
 
 description of lemons is "Sour and frowny."
 
 a-text of lemons is "RYRYRR". b-text of lemons is "RYRYRR". parse-text of lemons is "x[sp]-[sp]x[sp]-[sp]x[sp]x".
 
-description of melons is "It's pebbled so it looks sour and frowny--a cool optical illusion."
+description of melon is "[unless player carries the melon]Surely there must be a better one. It can't be the only one on display[else]It's nice and big and healthy looking[end if]."
 
-a-text of melons is "RYRYRR". b-text of melons is "RYPYRR". parse-text of melons is "x[sp]-[sp]l[sp]-[sp]x[sp]x".
+a-text of melon is "RYR??". b-text of melon is "?????". parse-text of melon is "x[sp]-[sp]l[sp]-[sp]x[sp]x".
 
 A nectarine is a reflexive fruit in Clangier Clearing.
 
@@ -23062,8 +23064,6 @@ a-text of peach is "RRYYR". b-text of peach is "RRYYR". parse-text of peach is "
 check taking (this is the shoplift in clearing rule) :
 	if noun is in clearing:
 		say "No stealing. This is a marketplace!" instead;
-
-understand "solemn" as a mistake ("Why so grouchy? You got a good price on the lemons AND the melons.") when player is in clangier clearing.
 
 the pre-mang is privately-named scenery in Clangier Clearing. pre-mang is undesc.
 
@@ -24930,8 +24930,8 @@ rampage note	--	magenta rope
 megaton pear	--	magenta rope
 barber sickle	"[one of]The barber sickle is dripping and dark. Its texture is like the pryer bars.[plus][or]BLACKBERRIES.[minus][cycling]"
 peach	"[one of]The peach too expensive.[plus][or]The settler knocks the peach out, logically, on cheat mode. Actually, just mentioning cheat mode may be a tremendous hint, here.[plus][or]How could the peach be described as less expensive?[plus][or]CHEAP.[minus][cycling]"
-lemons	"[if lemons are not in clearing and melons are not in clearing]You don't need to hint this.[else if lemons are not in clearing]Do what you did with the lemons[else if melons are not in clearing]Do what you did with the melons[else][one of]The price, as is, makes you frown.[plus][or]Maybe being depressing will depress prices.[plus][or]Get SOLEMN.[minus][cycling][end if]"
-melons	--	lemons
+lemons	"[one of]The price, as is, makes you frown.[plus][or]Maybe being depressing will depress prices.[plus][or]Get SOLEMN.[minus][cycling]"
+melon	"[one of]You need to see another, better, melon.[plus][or]Maybe you could tell Len that.[plus][or]LEN MO or MO LEN will get something better from Len.[minus][cycling]"
 reserved sign	"[one of]RESERVED for a DESERVER.[plus][or]The settler makes the sign pretty clear.[plus][or]However, if you take or examine the sign, you're told it's the opposite of an invitation to take it.[plus][or]How do you make the sign the opposite of what it is?[plus][or]REVERSED.[minus][cycling]"
 green stain	"[one of]If you try to decipher it, you see red, but it almost seems orange-ish, too.[plus][or]Small orange-ish fruits that are not oranges.[plus][or][plus][or]TANGERINES.[minus][cycling]"
 nectarine	"[one of]The nectarine's not too old, but if it were, you might get it cheaper. Cheaperer.[plus][or]Len Craig suddenly starts using bad grammar describing the nectarine.[plus][or]ANCIENTER.[minus][cycling]"
@@ -25817,8 +25817,10 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]the barriers west could've become strawberries.";
 		if barren cries are off-stage and briar screen is not in lalaland:
 			say "[2dmiss of cur-reg]the briar screen could've become cranberries.";
-		if lemons are not in lalaland or melons are not in lalaland: [clearing]
-			say "[2dmiss of cur-reg]you could've looked SOLEMN to get [if lemons are in clearing]lemons and [end if]melons.";
+		if lemons are not in lalaland: [clearing]
+			say "[2dmiss of cur-reg]you could've looked SOLEMN to get lemons.";
+		if melon is not in lalaland:
+			say "[2dmiss of cur-reg]you could've said MO LEN or LEN MO to get a melon.";
 		if mango is not in lalaland:
 			say "[2dmiss of cur-reg]you could've listened to the 'go, man' voice to go AMONG the clearing.";
 		if peach is not in lalaland:
@@ -26453,7 +26455,7 @@ test others-oops with "srehto/others/srehto/in/dniramat/tamarind/dniramat/onihcs
 
 [currently o04 is not possible without cheating]
 
-test o04 with "rove over/others/in/tamarind/plums/pears/grapes/blueberries/cranberries/x stand/limes/compass/n/apples/apricot/gooseberry/d/go near/nab an a/rhubarb/u/w/blackberries/raspberry/pineapple/grapefruit/strawberries/e/purloin melons/purloin lemons/s/n/d/give dollar/u/n/sonic/icons/put icons in slot/review viewer/research searcher/n/coff"
+test o04 with "rove over/others/in/tamarind/plums/pears/grapes/blueberries/cranberries/x stand/limes/compass/n/apples/apricot/gooseberry/d/go near/nab an a/rhubarb/u/w/blackberries/raspberry/pineapple/grapefruit/strawberries/e/purloin melon/purloin lemons/s/n/d/give dollar/u/n/sonic/icons/put icons in slot/review viewer/research searcher/n/coff"
 
 test o034 with "rove over/others/in/tamarind/plums/pears/grapes/blueberries/cranberries/x stand/limes/compass/n/apples/apricot/gooseberry/d/go near/nab an a/rhubarb/u/w/blackberries/raspberry/pineapple/grapefruit/strawberries/e/s/n/e/solemn/solemn/w/s/n/d/give dollar/u/n/sonic/icons/put icons in slot/review viewer/research searcher/n/coff"
 
