@@ -1,0 +1,2 @@
+# WinMerge sometimes dumps backup files, which is bad when I'm comparing test scripts
+**/*.txt.bak
