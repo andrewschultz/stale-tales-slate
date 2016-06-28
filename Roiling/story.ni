@@ -7930,7 +7930,7 @@ check fliptoing when player is in dusty study and gunter is off-stage (this is t
 					preef the-from entry;
 					do nothing instead;
 
-check fliptoing (this is the reject flipping for reef and animal attack and alert sign rule):
+check fliptoing (this is the reject flipping with distractions around rule):
 	if noun is not owls and owls are visible:
 		say "That's a good thought...once you've gotten rid of the owls. You don't have time to summon assistance.";
 		preef noun;
@@ -11692,7 +11692,7 @@ check going in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
 
 part verbs
 
-chapter insideing
+chapter make sure they don't clash
 
 insideing is an action applying to nothing.
 
@@ -11705,15 +11705,22 @@ carry out insideing:
 		try fliptoing picturers instead;
 	try going inside instead;
 
-check fliptoing when player is in same mesa (this is the allow entry for fancy verbs commands rule):
+check fliptoing when player is in same mesa (this is the armada keeps you in rule):
+	if noun is picturers or noun is lairage or noun is signboard or noun is worst ad:
+		if drama armada is in mesa or the-b is in mesa:
+			say "But... [if the-b is in mesa]THE BEAN[else]the huge thing[end if]! What to do with it[if armada is in mesa]? The armada mumbles nervously.[else]?[end if]" instead;
+		if huge thing is in mesa:
+			say "That huge thing is distracting you. Maybe you should deal with it now." instead;
+
+check fliptoing when player is in same mesa (this is the check giant is not in mesa rule):
+	if noun is picturers or noun is lairage or noun is signboard or noun is worst ad:
+		if old giant is visible:
+			say "Walking away would upset the giant. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help[if noun is not prefigured and noun is not reflexed], and you can move that way later[end if].";
+			preef noun;
+			do nothing instead;
+				
+check fliptoing when player is in same mesa (this is the note mesa re-exit rule):
 	if noun is reflexed:
-		if noun is picturers or noun is lairage or noun is signboard:
-			if old giant is visible:
-				say "Walking away would upset the giant. I mean, into doing something, not just talking. And he is bigger than you. Maybe listening will help." instead;
-			if drama armada is in mesa or the-b is in mesa:
-				say "But... [if the-b is in mesa]THE BEAN[else]the huge thing[end if]! What to do with it[if armada is in mesa]? The armada mumbles nervously.[else]?[end if]" instead;
-			if huge thing is in mesa:
-				say "That huge thing is distracting you. Maybe you should deal with it now." instead;
 		if noun is picturers:
 			say "You go back inside, being a bit over-cautious with protocol. You could've just said IN.";
 			move player to cleric circle instead;
@@ -12057,12 +12064,6 @@ the worst ad is LLPish vanishing scenery in Same Mesa. "Dang it, a giant ad for 
 to say go-worst:
 	if worst ad is prefigured:
 		say "--the one you tried to go TOWARDS with the giant around";
-
-check fliptoing worst ad:
-	if old giant is visible:
-		say "You can't just walk away from the giant. Well, you can, but I don't advise it. Maybe when the giant's gone.";
-		preef worst ad;
-		do nothing instead;
 
 a-text of worst ad is "RYRYRRR". b-text of worst ad is "RGRYRRR". parse-text of worst ad is "x[sp]o[sp]x[sp]a[sp]x[sp]x[sp]x".
 
@@ -14784,7 +14785,7 @@ after printing the locale description for shack when shack is unvisited:
 		say "That hard drive on the slab looks lonely without a monitor. No, not quite a monitor[if censer is prefigured]--you can probably change the onyx censer now.[else if player has the screen]--yours would do.[else if player has onyx censer]. Maybe something in your inventory can change up.[else]. Where to get one?[end if]";
 	continue the action;
 
-after fliptoing the computer screen:
+after fliptoing the computer screen (this is the turbo back to the shack rule):
 	if shack is visited and player is not in shack:
 		say "That screen would go great with the hard drive in the shack. So you go back there.";
 		go-back hacks' shack;
@@ -14830,47 +14831,45 @@ check going in shack (this is the maybe lock player in rule):
 	if noun is outside:
 		try going south instead;
 	if noun is not south:
-		if yak is in lalaland:
-			if player has censer or screen is not off-stage:
-				say "Nothing [noun], but you need to just sit and finish things here anyway." instead;
-	consider the shack-south rule;
-	if the rule failed:
-		do nothing instead;
+		if keyboard is not off-stage and censer is not off-stage:
+			say "Nothing [noun], but you need to just sit and finish things here anyway." instead;
+	else:
+		consider the shack-south rule;
+		if the rule failed:
+			do nothing instead;
+
+after printing the locale description for hacks' shack (this is the auto-screen rule):
+	if player has onyx censer:
+		if censer is prefigured:
+			say "This looks like the place for a screen. You decide to flip the censer to the screen, now.";
+			try fliptoing screen;
+			if player has screen:
+				say "You decide to put the screen you just made on the labs slab so you don't have to lug it around any more.";
+				now screen is on labs slab;
+	continue the action;
 
 this is the shack-south rule:
-	if skid is not in shack and disk is not in shack:
-		the rule succeeds;
 	if scratch paper is reflexed:
 		say "You're so close. You must be. You can't [i]budge[r] until you...";
 		the rule fails;
-	if keyboard is not off-stage:
-		if player has onyx censer:
-			if censer is not prefigured:
-				say "Hmm. You probably just need to fiddle with the censer, then you can get going in here. Everything else important is done.";
-				the rule fails;
-			say "There's a lot to do in the hacks['] shack. Perhaps you should change the censer to a screen here. Do so?";
-			if the player yes-consents:
-				try fliptoing screen;
-				if player has screen:
-					say "You decide to put the screen you just made on the labs slab so you don't have to lug it around any more.";
-					now screen is on labs slab;
-			the rule fails;
-		if computer screen is visible:
-			say "You should have what you need. It might be dangerous, or just plain distracting, to go back out with all this computer work.";
-			the rule fails;
-		say "[if ye hoop is in austerer]You feel you're missing something. You probably should see about [treas-west][else]Man, that screen in [location of computer screen] would be handy now[end if].";
-		the rule succeeds;
-	if player has screen:
-		say "There's really nothing left to do outside the shack.";
+	if keyboard is not off-stage and screen is not off-stage:
+		say "You should have what you need. It might be dangerous, or just plain distracting, to go back out with all this computer work.";
 		the rule fails;
-	if player has censer and censer is prefigured:
+	if screen is off-stage:
+		say "You feel you're missing something. You probably should see about [treas-west].";
+		if player has censer:
+			the rule fails;
+	else:
+		say "That yak. Maybe you could release it from its yoke.";
 	the rule succeeds;
 
 to say treas-west:
 	if austerer is not visited:
 		say "that area west of the hump";
+	else if hoop is in austerer treasure:
+		say "the hoop in Austerer Treasure";
 	else:
-		say "the hoop in Austerer Treasure"
+		say "what that onyx censer could become";
 
 a giant dead flea is a thing in hacks' shack. "A giant dead flea is here, probably not decomposing yet."
 

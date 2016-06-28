@@ -1,0 +1,130 @@
+###############################
+#
+#reg-roi-mesa.txt
+#
+#regression test for exhausting the mesa rejects
+#
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+
+* mesa-giant-unflipped
+
+>gonear mesa
+
+>against
+You hear a giant's footsteps and hide under the bench in fear.
+
+>inside
+>x toils
+>out
+
+>against
+>towards
+!by one point
+>past
+!by one point
+>inside
+!by one point
+>across
+!by one point
+
+>astride
+>towards
+!by one point
+>past
+!by one point
+>inside
+!by one point
+>across
+!by one point
+
+>below
+>towards
+!by one point
+>past
+!by one point
+>inside
+!by one point
+>across
+!by one point
+
+* mesa-giant-flipped
+
+>gonear mesa
+
+>inside
+>x toils
+>out
+
+>past
+>out
+>across
+>out
+
+>against
+>towards
+!by one point
+>past
+!by one point
+>inside
+!by one point
+>across
+!by one point
+
+>astride
+>towards
+!by one point
+>past
+!by one point
+>inside
+!by one point
+>across
+!by one point
+
+>below
+>towards
+!by one point
+>past
+!by one point
+>inside
+!by one point
+>across
+!by one point
+
+* mesa-armada
+
+>gonear mesa
+
+>inside
+>x toils
+>out
+
+>past
+>out
+>across
+>out
+
+>against
+>astride
+>below
+>under
+>past
+>despite
+>out
+>across
+>opposite
+>out
+>inside
+>out
+
+>past
+!Idle Deli
+>across
+!Adobe Abode
+>in
+!Cleric Circle
+>s
+>towards
+!by one point

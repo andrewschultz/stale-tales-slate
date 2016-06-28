@@ -187,19 +187,26 @@ You feel you're missing something. You probably should see about the hoop in Aus
 >gonear austerer
 >pooh
 
+>gonear hacks' shack
+>s
+You feel you're missing something. You probably should see about what that onyx censer could become.
+
+>gonear phat path
 >screen
 Back at Hacks' Shack
 
 >n
-Nothing north, but you need to just sit and finish things here anyway.
+You can only go south here.
 
 >s
-There's really nothing left to do outside the shack.
+That yak. Maybe you could release it from its yoke.
 
 >abstract yak to ll
 >abstract yoke to ll
 >purloin keyboard
+>gonear shack
+
+>n
+Nothing north, but you need to just sit and finish things here anyway.
 >s
 You should have what you need. It might be dangerous, or just plain distracting, to go back out with all this computer work.
-
-
