@@ -3304,7 +3304,7 @@ after quipping (this is the usually don't undo convos rule):
 		now undo-code is -1;
 
 after quipping when qbc_litany is the table of Elvira comments:
-	if current quip is hollow-quip or current quip is sinister-quip: [Elvira's dialogue below here]
+	if current quip is hollow-quip or current quip is sinister-quip or current quip is bald-quip: [Elvira's dialogue below here]
 		do nothing;
 	else if current quip is logical-quip or current quip is wtf-quip or current quip is hollow-quip or current quip is sneer-quip or current quip is abhor-quip or current quip is strong-quip:
 		if one-Elvira is false:
@@ -3312,6 +3312,7 @@ after quipping when qbc_litany is the table of Elvira comments:
 			enact the sinister-quip;
 			enact the bald-quip;
 	else if current quip is final-quip:
+		now final-quip is mowered;
 		lawnmower table of Elvira comments;
 		terminate the conversation;
 	else:
@@ -3553,7 +3554,7 @@ carry out zaping:
 			say "You sense that, with Elvira defeated, the patcher wouldn't work to wipe out Store H. Perhaps there isn't enough evil to defeat, so the patcher won't work." instead;
 		say "Store H isn't critical. Yet. Plus there are too many people around. You should maybe look elsewhere." instead;
 	if noun is Store K or noun is Store N:
-		say "As you point the patcher at [noun], you hear cries of 'No, man! Don't harsh [if noun is Store K]our[else]my[end if] buzz!'[paragraph break]There are people in there. [noun] may not be where it's at, according to Elmo, so that's even less reason to disintegrate it." instead;
+		say "As you point the patcher at [noun], you hear cries of 'No, man! Don't harsh [if noun is Store K]our[else]my[end if] buzz!'[paragraph break]There are people in there. [noun] may not be where it's at, according to Elmo, so that's even more reason not to disintegrate it." instead;
 	if noun is a portal:
 		say "The patcher obliterates the [noun]. Wow!";
 		now go-region of noun is bypassed;
@@ -8364,13 +8365,13 @@ t-drawlingly	t-drawlingly	"drawlingly"	"drawlingly"	"The macks begin talking slo
 t-emotionally	t-emotionally	"emotionally"	"emotionally"	"Their matter-of-factness is disrupted. They had to play it straight, but they aren't able to. Gretta shoos them away with her hand, cringing to think she was suckered in the first place."	false	789771536
 t-despairingly	t-despairingly	"despairingly"	"despairingly"	"The macks become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the macks."	false	781752737 [begin MACKS 11]
 Merle	Merle	"honestly"	"honestly"	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."	false	683905568	"'Fine, be beefin['],' you think, not willing to run up the score--or the volume."
-raptor	parrot	"parrot"	"parrot"	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place. You try and thank it for the whistle, but you realize you never asked its name. So you sort of wave, and just as it leaves, you figure it was probably Pat Orr."	false	431763978
+raptor	parrot	"parrot"	"parrot"	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place, and maybe you can help it.[paragraph break]With the raptor's bulk out of the way, you see some weird stuff behind."	false	431763978
 parrot	raptor	"raptor"	"raptor"	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west! Merle and Elmer are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]The parrot's revenge sated, you return it to its normal form. 'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]You hear a female scream. 'Nemesis seems in,' you mutter. But maybe that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."	false	431763978
 pines	snipe	"snipe"	"snipe"	"The tip of one pine becomes a snipe's bill, the trunk becomes the spine--and you have a snipe."	false	419446388	"[this-animal]."
 corona	racoon	"racoon" or "raccoon"	"racoon"	"[extra-c]The corona grows wider, becoming a living thing."	false	324129868	"[this-animal]."
 nails	snail	"snail"	"snail"	"The nails arrange themselves in a sort of spiral, expand, and turn into a snail."	false	266175977	"[this-animal]."
 thrones	hornets	"hornets"	"hornets"	"The thrones shorten--a throne, another--HORNETS! Thankfully, they ignore your waspy yawps."	false	593056280
-owls	owls	"slow"	"slow"	"The owls['] swooping speeds hit such lows they they swoop back to their ambush place in hiding. You notice it isn't a very comfortable one, and you help them make a nest from tens of nets. They won't attack again. You refuse anything for the additional magnanimity but ask if any towels need to be changed to owlets. Thankfully not very many."	false	332375155	"[this-animal]."
+owls	owls	"slow"	"slow"	"The owls['] swooping speeds hit such lows they they swoop back to their ambush place in hiding. You notice it isn't a very comfortable one, and you help them make a nest from tens of nets. They won't attack again. You refuse anything for the additional magnanimity but ask if any towels need to be changed to owlets. Thankfully not very many.[paragraph break]With the owls dispersed, you notice other, calmer animals."	false	332375155	"[this-animal]."
 ocelots	ocelots	"coolest"	"coolest"	"The ocelots perk up and, instead of pacing aimlessly around, develop a swagger. Their SlopInc Clip-ons get close to, then are, the real thing. Yes, LookKool shades. Each pulls out a BMOC comb to fix his fur before stashing it for later use."	false	548714671
 leopard	leopard	"paroled"	"paroled"	"The leopard perks up as its handcuffs are dissolved."	false	445979194
 badger	badger	"garbed"	"garbed"	"The badger looks down and realizes it is wearing clothes. B-grade, garb that won't make you grab or brag, but it can't be drobe-bored. It's less embarrassed now and nods to you gratefully. Perhaps it can return the favor some day."	false	287365426
@@ -21707,12 +21708,7 @@ check going north in Anger Pit:
 
 Wickeder Wire Deck is north of Anger Pit. Wickeder Wire Deck is part of otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south."
 
-after choosing notable locale objects when player is in wire deck:
-	if owls are in wire deck:
-		set locale priority of owls to 9;
-	continue the action;
-
-the ocelots are plural-named reflexive neuter animals in wire deck. description is "[if ocelots are reflexive]They glance nervously back, as if they've done something wrong[otherwise]They glance back at you, give you a finger-point you're not cool enough to give back, then ignore you in the nicest possible way[end if].". "Ocelots are making gestures here that you'd look silly making[if ocelots are reflexive]. They do, too, with their stupid sunglasses[end if]."
+the ocelots are plural-named reflexive neuter animals. description is "[if ocelots are reflexive]They glance nervously back, as if they've done something wrong[otherwise]They glance back at you, give you a finger-point you're not cool enough to give back, then ignore you in the nicest possible way[end if].". "Ocelots are making gestures here that you'd look silly making[if ocelots are reflexive]. They do, too, with their stupid sunglasses[end if]."
 
 understand "ocelot" as ocelots.
 
@@ -21728,7 +21724,7 @@ understand "sunglasses/glasses/shades" as Look-Kool when ocelots wear Look-Kool.
 
 a-text of ocelots is "RYYRYRR". b-text of ocelots is "RYYPYRR". parse-text of ocelots is "x[sp]-[sp]-[sp]l[sp]-[sp]x[sp]x". ocelots is cheat-spoilable.
 
-The leopard is a reflexive neuter animal in Deck. "A leopard is here--[if leopard is reflexive]its colorings make it look like it is wearing a tacky (mostly) burnt orange jumpsuit, and it seems paw-tied, too[else]it looks more camoflagued since you changed him[end if]."
+The leopard is a reflexive neuter animal. "A leopard is here--[if leopard is reflexive]its colorings make it look like it is wearing a tacky (mostly) burnt orange jumpsuit, and it seems paw-tied, too[else]it looks more camoflagued since you changed him[end if]."
 
 understand "ape lord" and "apelord" as a mistake ("You [if leopard is reflexed]already changed the leopard[else]can't change what the leopard is, but you need to release him from his captivity[end if].") when player is in deck.
 
@@ -21740,7 +21736,7 @@ description of leopard is "He's got those jumpsuit markings and appears to be [i
 
 the jumpsuit is part of the leopard. description is "The leopard looks back at you as if sorry for some inexplicable things it did, as if hoping it's served his time.". understand "markings" as jumpsuit.
 
-The badger is a reflexive neuter animal in Deck. description is "[if badger is reflexed]He looks dumber with those clothes, but you aren't about to tell him[otherwise]Despite having all that fur, he seems embarrassed with his body[end if].". "[if badger is reflexed]A garbed badger stands around confidently here[otherwise]A badger covers his naughty bits that were buried under his fur anyway[end if]."
+The badger is a reflexive neuter animal. description is "[if badger is reflexed]He looks dumber with those clothes, but you aren't about to tell him[otherwise]Despite having all that fur, he seems embarrassed with his body[end if].". "[if badger is reflexed]A garbed badger stands around confidently here[otherwise]A badger covers his naughty bits that were buried under his fur anyway[end if]."
 
 a-text of badger is "RYRRYR". b-text of badger is "RGRRGR". parse-text of badger is "x[sp]a[sp]x[sp]x[sp]e[sp]x".
 
@@ -21748,7 +21744,7 @@ understand "barged" as a mistake ("You don't want the badger to have barged into
 
 understand "b grade" and "bgrade" as a mistake ("The badger [if badger is reflexive]already[else]no longer[end if] feels second-rate, so [if badger is reflexive]you need another way to help him[else]he needs no more help[end if].") when player is in Deck.
 
-the satyr is a reflexive male animal in Deck. description is "[if satyr is reflexed]He looks like he's dreaming of a poem or something, but he doesn't want to be disturbed[else]He looks preoccupied and mistrustful. His eyes stray.[end if].". "A satyr strides here, [if satyr is reflexed]dreaming of a better Yorpwald[else]looking out for himself[end if]."
+the satyr is a reflexive male animal. description is "[if satyr is reflexed]He looks like he's dreaming of a poem or something, but he doesn't want to be disturbed[else]He looks preoccupied and mistrustful. His eyes stray.[end if].". "A satyr strides here, [if satyr is reflexed]dreaming of a better Yorpwald[else]looking out for himself[end if]."
 
 a-text of satyr is "YRRRO". b-text of satyr is "YRPRO". parse-text of satyr is "a[sp]x[sp]t[sp]x[sp]y". satyr is cheat-spoilable.
 
@@ -21761,6 +21757,13 @@ understand "trays" as a mistake ("You can't transform something living into some
 understand "ratsy" as a mistake ("You don't want a rat on your side. Or someone who says rats too much.") when satyr is visible.
 
 the owls are plural-named terse vanishing animals in Wire Deck. description of owls is "Their big owly eyes follow you.". "[one of]You hear hooting and a flapping of wings. You've probably triggered some sort of trap. You look up to see owls swooping. You can duck the first blow, and you maybe have time to look at your settler, but they're too speedy en masse[or]All those animals are nice, but the owls about to dive-bomb you here mean you'll need to think fast. I think[stopping]."
+
+after fliptoing owls:
+	now ocelots are in wire deck;
+	now badger is in wire deck;
+	now satyr is in wire deck;
+	now leopard is in wire deck;
+	continue the action;
 
 understand "lows" as a mistake ("Actually, you'd like the owls NOT to reach lows like you are. Or not to get there before you can avoid them.") when owls are visible.
 
@@ -21884,7 +21887,7 @@ after fliptoing an animal:
 		if temp is 2:
 			say "The IQ medal you're wearing clanks against the LUCKY medal. It looks a bit clearer, now.";
 		else if temp is 4:
-			say "The [list of visible animals] swarm around you in a circle a few times. You seem to have established leadership of them, whether or not you can do anything with the [random pre-animal]. Your IQ medal looks very shiny now.";
+			say "The [list of visible animals] swarm around you in a circle a few times. You seem to have established leadership of them, whether or not you can do anything with the [random pre-animal in perverse preserve]. Your IQ medal looks very shiny now.";
 		else if temp is 5:
 			min-up;
 	if noun is reflexed and location of player is wickeder:
@@ -21947,7 +21950,7 @@ to say pre-desc:
 
 Perverse Preserve is south of Rote-Moan Anteroom. Perverse Preserve is part of otters. "[pre-desc]"
 
-A corona is a thing in Preserve. the corona is fixed in place. description is "It's almost like a pair of dark scavenger's eyes. You can't locate its original light source--you try to cut it off, but you can't.". "A corona of light scurries about on the floor. It may have an extra c around its edge."
+A corona is a thing. the corona is fixed in place. description is "It's almost like a pair of dark scavenger's eyes. You can't locate its original light source--you try to cut it off, but you can't.". "A corona of light scurries about on the floor. It may have an extra c around its edge."
 
 a-text of corona is "RYRYYR". b-text of corona is "RYRGYR". parse-text of corona is "x[sp]-[sp]x[sp]o[sp]-[sp]x". corona is cheat-spoilable.
 
@@ -21958,7 +21961,7 @@ a-l-t is part of the racoon. a-l-t is undesc and amusing. printed name of a-l-t 
 instead of doing something with a-l-t:
 	say "The racoon's tail is beautiful and eerie, but useless as far as you can tell, so it's not worth bothering with."
 
-the thrones are plural-named things in Preserve. the thrones are fixed in place.
+the thrones are plural-named things. the thrones are fixed in place.
 
 understand "throne" as thrones.
 
@@ -21979,7 +21982,7 @@ instead of taking the thrones:
 
 chapter pines and snipe
 
-the pines are a plural-named thing in perverse Preserve. description is "The bases of the pines look almost like birds['] feet."
+some pines are a plural-named thing. description is "The bases of the pines look almost like birds['] feet."
 
 the pines are fixed in place.
 
@@ -21999,7 +22002,7 @@ understand "spine" as a mistake ("You don't need to grow a spine. You've gotten 
 
 chapter nails and snail
 
-Some nails are plural-named things in Preserve. "Some nails are lying all over the floor here."
+Some nails are plural-named things. "Some nails are lying all over the floor here."
 
 understand "slain" and "as nil" as a mistake ("[if nails are visible]The nails are already dead as a doornail[else]You're trying to SAVE the animals, actually[end if].") when player is in preserve
 
@@ -22067,7 +22070,7 @@ check fliptoing raptor:
 
 every turn when parrot is visible (this is the parrot-chat rule):
 	if location of player is alcoves:
-		say "The parrot hides out of sight of Elmer and Merle, eyeing them evilly.";
+		say "The parrot hides out of sight of Elmer and Merle, eyeing them fearfully.";
 	else if location of player is wire deck:
 		if number of visible reflexive animals is 0:
 			say "'Awwk! Happy animals! They might do something for you some day, adventurer!'";
@@ -22088,6 +22091,10 @@ raptor-trap is a truth state that varies. raptor-trap is false.
 
 after fliptoing parrot:
 	preef parrot;
+	now nails are in preserve;
+	now corona is in preserve;
+	now thrones are in preserve;
+	now pines are in preserve;
 	continue the action;
 
 book Reclusion Inclosure

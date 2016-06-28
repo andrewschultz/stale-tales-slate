@@ -114,7 +114,7 @@ table of aunt tuna chatter [xxy1] [nocaps PUNC n/a]
 
 table of bar dialogue [xxy2] [CAPS PUNC n/a]
 
-table of Casper mumbles [xxy3] [CAPS nopunc noquot]
+table of Casper mumbles [xxy3] [CAPS punc noquot]
 
 table of competing bars [xxy4] [TITLE PUNC noquot]
 
@@ -164,8 +164,8 @@ table of red bull taunts [xxr1] [CAPS PUNC n/a]
 
 table of riot slogans [xxr2] [CAPS PUNC n/a]
 
-\ro3
-cold nuke/unlocked/luck done
+\ro3=roiling updates
+L'Hote Helot
 
 table of garbage [xx1]
 
