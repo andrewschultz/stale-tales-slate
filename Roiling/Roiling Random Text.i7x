@@ -12184,6 +12184,7 @@ blurb	prio
 "Inspectorial Replications[r], by Nicola Priest"
 "Instant Oral Translation: Intro Aslant[r], by [if player is male]Alton Strain[else]Nita Ralston[end if]"
 "Insular Sun-Lair Urinals As Lurin['][r], by Lu Rains"
+"Insured, I Sunder[r], by Ned Rusi"
 "Intentional Online Taint[r], by Annie Litton"
 "Interim Termini[r], by Erin & Tim Mintier"
 "Internal Rant Line[r], by Elin Tran"

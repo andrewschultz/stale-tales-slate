@@ -1016,6 +1016,9 @@ Presto (33/33)
 >l
 Posh Hops Shop
 
+>strllo
+The trolls laugh at you a bit, but nervously.
+
 >stroll
 haven't had any fun at all
 
@@ -1046,43 +1049,63 @@ You can't change the bad music selection. You already got a temporary escape, an
 >stroll
 you have been kind of obnoxious
 
+#check in general
+
+##>scrape casper
+>scraep
+You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe.
+>scrape
+Your score has just gone up by one point.
+>scraep
+Casper has suffered enough indignities. You should annoy someone else.
+
+###############################try each possible point scoring
+
+>undo
+>undo
+
+>spti
+The tumblers wobble a bit as you try to do ... something ... to them.
+>spit
+Your score has just gone up by one point.
+>spti
+You can't and don't want to do anything else to the tumblers.
+
+>undo
+>undo
+
+>sign
+Hm, the sign doesn't strictly disallow THAT.
+>sing
+Your score has just gone up by one point.
+>sign
+The sign mainly just disallowed singing.
+
+>undo
+>undo
+
+###############################second point
+
 ##>inset stein
 >inste
 Hm, the stein belongs somewhere you can destroy it, but not QUITE like that.
 >inset
 Your score has just gone up by one point
 >inste
-WRONG2
+You destroyed the stein, and that's enough.
 
 >stroll
 you're the jerk here
 
-##>scrape casper
->scraep
-You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe.
->scrape
-Your score has just gone up by one point
->scraep
-WRONG
+#####################third
 
-#check recaps in general
-
->spti
-The tumblers wobble a bit as you try to do ... something ... to them.
->spit
-You've caused enough damage
->spti
-WRONG
-
->undo
-
->sign
-WRONG
 >sing
-You've caused enough damage
->sign
-WRONG
+Your score has just gone up by one point
 
+###########################overkill
+>scrape
+You've caused enough damage
+UNDO
 >undo
 
 >strllo
@@ -1090,8 +1113,6 @@ No, you were right before, there. You just need some help to make that magic wor
 
 >stroll
 Olde Lode
->strllo
-That's not something
 
 ##>calm clam
 >caml
@@ -1115,21 +1136,25 @@ is, in fact, a herring
 >undo
 
 >boats
-WRONG
+Perhaps if you were louder and more confident, the boats would hear you.
 >boast
 Your score has just gone up by one point
 Fighter Freight
 
 >lepa
+Yes, the pale plea is calling and warning you to leave. But how?
+
 >boat
-WRONG3
+Destroying the boat would be a bad idea. You need to escape it.
 >boats
-WRONG3
+Destroying the boat would be a bad idea. You need to escape it.
+
 >leap
 Your score has just gone up by one point
 Anger Range
+
 >lepa
-WRONG2
+That's not something you
 
 
 >undo
@@ -1145,80 +1170,93 @@ butterfly
 >undo
 >get on raft
 >fatr
-WRONG
+The raft rocks slightly.
 >fart
 Your score has just gone up by one point
 >fatr
-WRONG
+The raft has fuel. It needs to use that fuel, now, with the oars.
 
 >sora
-WRONG
+You see bubbling under the oars.
 >soar
 Your score has just gone up by one point
+Anger Range
+
 >sora
-WRONG
+That's not something
 
 ##>scrap carps
 >scrpa
-WRONG
+The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things.
 >scrap
 Your score has just gone up by one point
 >scrpa
-WRONG
+That's not something
 
+>undo
 >undo
 
 ##>spike pikes
 >spiek
-WRONG
+The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things.
 >spike
 Your score has just gone up by one point
 >spiek
-WRONG
+That's not something
 
 >e
 
 ##>scan cans
 >scna
-WRONG
+You glance at your settler, wondering what to do with the cans. Maybe you've overlooked something obvious.
 >scan
 Your score has just gone up by one point
 min point
 >scna
-WRONG
+That's not something
 
 ##>seek eeks
 >seke
-WRONG
+You guess the eeks must be there--no, there!
 >seek
 Your score has just gone up by one point
 >seke
-WRONG
+That's not something
 
 ##>eat tea
 >eta
-WRONG
+ETA's one move later now that you went fishing for this anagram.
+>tae
+Quit playing with your food, already.
 >eat
 Your score has just gone up by one point
 >eta
-WRONG
+That's not something
+
+##>tend dent
+>tedn
+That's not the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it.
+>tend
+Your score has just gone up by one point
+>tedn
+You already fixed the dent. It's gone.
 
 ##>tutor trout
 >tutro
-WRONG
+You try to describe how to fight, but that's not it.
 >tutor
 Your score has just gone up by one point
 >tutro
-WRONG
+You can't find any other way to describe fighting.
 
 ##>swipe wipes
 >swiep
-WRONG
+You try to take the wipes, but you worry you're not fast enough.
 >swipe
 Your score has just gone up by one point
 min point
 >swiep
-WRONG
+Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on.
 
 >w
 >n
@@ -1227,88 +1265,83 @@ Lapsin' Plains
 >splain
 min point for this flip
 
->reatc
-WRONG
->react
-good idea, but you're not sure HOW
->reatc
-WRONG
-
 ##>trace crate
 >traec
-WRONG
+The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled.
 >trace
 Your score has just gone up by one point
 >traec
-WRONG
+The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet.
 
 >reatc
-WRONG
+The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet.
 >react
 Your score has just gone up by one point
 >reatc
-WRONG
+Besides identifying it as a rect, you can't do much else with the crate.
 
 ##>kiss skis
 >kssi
-WRONG
+The skis momentarily seem more polished.
 >kiss
 Your score has just gone up by one point
 >kssi
-WRONG
+That's not something
 
 ##>bonk knob
 >bokn
-WRONG
+The knob rattles slightly.
 >bonk
 Your score has just gone up by one point
 >bokn
-WRONG
+You should leave the knob to b'n OK.
 
 >in
 a hut
 
 ##>bust tubs
 >buts
-WRONG
+You talk yourself out of any idea there is something inside the tubs, and you discourage yourself from believing you have the strength anyway. You are not fooling yourself.
+>sbtu
+Hm. The tubs rattle a bit, but you need to do something strong.
 >bust
 Your score has just gone up by one point
->buts
-WRONG
+>sbtu
+The tubs already got broken up.
 
 ##>drop prod
 >drpo
-WRONG
+You juggle the prod a bit, but it doesn't change into anything. Well, not like that.
 >drop
 Your score has just gone up by one point
 >drpo
-WRONG
+You managed to get a digger from a prod, and that's good enough.
 
 >sweta
-WRONG
+You realize you didn't quite psyche yourself to fix the waste.
 >sweat
 Your score has just gone up by one point
 min point for
 >sweta
-WRONG
+Your work turned up enough.
 
 ##>shape heaps
 >shaep
-WRONG
+The heaps still look ugly as ever.
 >shape
 Your score has just gone up by one point
 min point for
 >shaep
-WRONG
+You figure the heaps are at a point where you can't change them for the better.
 
 ##>clean lance
 >clena
-WRONG
+The lance is still itself--you can't figure how to apply the wipes.
 >clean
 Your score has just gone up by one point
 min point for
 >clena
-WRONG
+The lance is still itself--and you probably did enough cleaning it.
 
 >out
 >s
@@ -1317,28 +1350,29 @@ Arches
 
 ##>warp wrap
 >wapr
-WRONG
+That's not quite the way to pop the wrap.
 >warp
 Your score has just gone up by one point
 >wapr
-WRONG
+You already did in the wrap.
 
 ##>search arches
 >searhc
-WRONG
+Hm, you almost thought you found something. Well, not QUITE like that.
 >search
 Your score has just gone up by one point
 GENERAL GLEANER engulf it
 >searhc
-WRONG
+Further searching proves fruitless.
+
 
 ##>enlarge gleaner
 >enlareg
-WRONG
+The gleaner remains too small to read.
 >enlarge
 Your score has just gone up by one point
 >enlareg
-WRONG
+It's already been made bigger. Not much more you can do with it.
 
 >n
 Hedron
@@ -1348,11 +1382,11 @@ Collapsed Old Places
 
 ##>bury ruby
 >buyr
-WRONG
+You futz with the ruby a bit, and it almost seems to hide itself.
 >bury
 Your score has just gone up by one point
 >buyr
-WRONG
+The ruby's hidden well. No need to tinker.
 
 >e
 >s
@@ -1360,19 +1394,21 @@ WRONG
 
 ##>unearth haunter
 >unearht
-WRONG
+You start randomly digging, but you need something more specific
 >unearth
 >unearht
-WRONG
+The haunter needs to be dealt with otherwise.
 
 ##>assuage sausage
 >assuaeg
-WRONG
+You're a bit tongue-tied, but that seems close.
 >assuage
+by one point
+>assuaeg
+You've already got the haunter's attention. Now you need to show him something.
+
 >ask haunter about ruby
 disarm it
->assuaeg
-WRONG
 
 >undo
 >w
@@ -1381,11 +1417,11 @@ WRONG
 
 >e
 >patrlo
-WRONG
+Hm, no, that's not quite how to cover all the ground looking for the ol' trap.
 >patrol
 Your score has just gone up by one point
 >patrlo
-WRONG
+You discovered the portal. No need to look further.
 
 >in
 End Den
@@ -1397,46 +1433,44 @@ Scum Ant Sanctum
 
 ##>tan ant
 >tna
-WRONG
+That's close. Something brutal and direct.
 >tan
 Your score has just gone up by one point
 min point
 Tenfold Teflon'd
 >tna
-WRONG
+That's not something you
 
 ##>prepay yapper
 >prepya
-WRONG
+"Eh? What?" says the yapper. "Speak up, you were about to make sense there."
 >prepay
 Your score has just gone up by one point
 >prepya
-WRONG
+The only thing left to do here is muck with the dialer right.
 
 >revle
-WRONG
+You look at the lever, wishing it would be a little more fun to pull.
 >revel
 Your score has just gone up by one point
 min point
 >revle
-WRONG
+You riff on your previous celebrations, but it doesn't feel as cool.
 
 >derali
-WRONG
+The dialer seems to click slightly.
 >derail
 Your score has just gone up by one point
 >derali
-WRONG
+The dialer seems to click slightly. There's something more to do, but that's not quite it.
 
 >pull lever
 
 ##>redial dialer
 >redila
-WRONG
+The dialer seems to click slightly. There's something more to do, but that's not quite it.
 >redial
 Your score has just gone up by one point
->redila
-WRONG
 
 >score
 Oyster (39/39)
@@ -2013,10 +2047,16 @@ Your score has just gone up by one point
 The turbos are working. Best not tinker.
 
 >enter boat
+Rawest Waters
+
+>nearets
+Maybe it's you, but the eastern shore seemed slightly closer.
 >nearest
 Mislit Limits
 Your score has just gone up by one point
 
+>undo
+>undo
 >undo
 >undo
 >undo
@@ -2026,34 +2066,17 @@ Despite your lack of technical knowledge, you think you almost did...something t
 Your score has just gone up by one point
 >stablre
 The blaster is working. Best not tinker.
-
->enter boat
-
->undo
->undo
->undo
-
->enter boat
->nearets
-Maybe it's you, but the eastern shore seemed slightly closer.
->nearest
-Mislit Limits
-Your score has just gone up by one point
->nearets
-That's not something
-
->undo
->undo
->undo
 >robust
+Your score has just gone up by one point
+
+>enter boat
+
+Mislit Limits
 
 ######need line break?
->robust
-The turbos are working fine now.
 
 #### extra line breaks
 
->enter boat
 >presetn
 The serpent shakes its head and tail a bit.
 >present
@@ -2125,7 +2148,7 @@ The cinders glow and even warm up for a bit.
 Adding a min point
 Your score has just gone up by one point
 >rescidn
-WRONG2
+The cinders are gone for good.
 
 >w
 Gent-Fora Frontage
@@ -2135,14 +2158,14 @@ You feel you're on the right track to expose the macks. But that's not quite it.
 >bossily
 Your score has just gone up by one point.
 >bossiyl
-You already dealt with the macks that way.
+You've already dealt with the macks that way.
 
 >nastiyl
 You feel you're on the right track to expose the macks. But that's not quite it.
 >nastily
 Your score has just gone up by one point.
 >nastiyl
-You already dealt with the macks that way.
+You've already dealt with the macks that way.
 
 >bleariyl
 You feel you're on the right track to expose the macks. But that's not quite it.
@@ -2166,63 +2189,69 @@ The sea cube shakes a bit.
 >because
 Your score has just gone up by one point
 >becaues
-WRONG
+That's not something you can
 
 >eles
 The eels swim a bit faster.
 >else
 Your score has just gone up by one point
 >eles
-WRONG
+The eels have done enough.
 
 >s
 >s
 >althouhg
-WRONG
+Mr. Lee shakes his head and adjusts the ghoul hat.
 >although
 Your score has just gone up by one point
 >althouhg
-WRONG
+That's not something you can say, do or see here.
 
 >howevre
-WRONG
+Rev. Howe seems to snarl a bit more deeply for a moment.
 >however
 Your score has just gone up by one point
 >howevre
-WRONG
+That's not something
 
 >n
 >atmo
-WRONG
+Hm, that's not it, but it must be elemental. No, elementary.
 >atom
 Your score has just gone up by one point
 >atmo
-WRONG
+That's not something you can say, do or see here.
 
 >e
 
 >n
 >enragedyl
-WRONG
+The imp looks slightly annoyed for a second. You may be on the right track.
 >enragedly
 Your score has just gone up by one point
 >enragedyl
-WRONG
+The imp's already been compromised that way.
 
 >undo
+>undo
 >angriyl
-WRONG
+The imp looks slightly annoyed for a second. You may be on the right track.
 >angrily
 Your score has just gone up by one point
 >angriyl
-WRONG
+The imp's already been compromised that way.
 
+>undo
+>undo
 >bruteyl
-WRONG
+The imp looks slightly annoyed for a second. You may be on the right track.
 >brutely
 Your score has just gone up by one point
 >bruteyl
-WRONG
+The imp's already been compromised that way.
+>angrily
+Your score has just gone up by one point
+The sly imp lets out a curse. He's completely failed to keep his cool. He leaves, confidence shattered. You can go past now.
 
 >n
 Wickeder Wire Deck
@@ -2234,42 +2263,42 @@ Your score has just gone up by one point
 The smaller, extremely oxidized, says IQ. The larger, extremely tarnished, says LUCKY.
 
 >coolets
-WRONG
+The ocelots squint at you through their clip-ons.
 >coolest
 Your score has just gone up by one point
 >coolets
-WRONG
+No need to tweak the ocelots again. They're fine as is.
 
 >x medals
 The smaller, extremely oxidized, says IQ. The larger, very tarnished, says LUCKY.
 
 >parolde
-WRONG
+The leopard almost seems to un-cuff its hands.
 >paroled
 Your score has just gone up by one point
 >parolde
-WRONG
+No need to tweak the leopard again. It's fine as is.
 
 >x medals
 The smaller, extremely oxidized, says IQ. The larger, somewhat tarnished, says LUCKY.
 
 >artys
-WRONG
+The satyr puts a hand on its chin as if pondering music.
 >artsy
 Your score has just gone up by one point
 >artys
-WRONG
+No need to tweak the satyr again. He's fine as is.
 
 >x medals
 The smaller, extremely oxidized, says IQ. The larger, barely tarnished, says LUCKY.
 
 >garbde
-WRONG
+The badger flexes imaginary suit lapels, then quickly goes back to brooding.
 >garbed
 Adding a min point
 Your score has just gone up by one point
 >garbde
-WRONG
+No need to tweak the badger again. It's fine as is.
 
 >x medals
 The smaller, extremely oxidized, says IQ. The larger, untarnished, says LUCKY.
@@ -2278,72 +2307,80 @@ The smaller, extremely oxidized, says IQ. The larger, untarnished, says LUCKY.
 >s
 >s
 >loathingyl
-WRONG
+The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track.
 >loathingly
 Your score has just gone up by one point
 >loathingyl
-WRONG
+The whiners were already slowed up that way.
 
 >undo
+>undo
 >terseyl
-WRONG
+The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track.
 >tersely
 Your score has just gone up by one point
+>terseyl
+The whiners were already slowed up that way.
+
+>undo
+>undo
 
 >stoicalyl
-WRONG
+The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track.
 >stoically
 Your score has just gone up by one point
 >stoicalyl
-WRONG
+The whiners were already slowed up that way.
+
+>tersely
+As they sulk away from the anteroom, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily.
+Your score has just gone up by one point
 
 >s
 Perverse Preserve
->terseyl
-WRONG
 
 >parrto
-WRONG
+The raptor recoils slightly.
 >parrot
 Your score has just gone up by one point
 >parrto
-WRONG
+The parrot can be changed back into a raptor, but not into anything new.
 
 >snali
-WRONG
+One of the nails seems to bend a bit.
 >snail
 Your score has just gone up by one point
 >snali
-WRONG
+No need to tweak the snail again. It's fine as is.
 
 >x medals
 The smaller, very oxidized, says IQ. The larger, untarnished, says LUCKY.
 
 >hornest
-WRONG
+The thrones seem to buzz a bit.
 >hornets
 Your score has just gone up by one point
 >hornest
-WRONG
+No need to tweak the hornets again. They're fine as is.
 
 >x medals
 The smaller, somewhat oxidized, says IQ. The larger, untarnished, says LUCKY.
 
 >raccono
-WRONG
+The corona seems to waver, the "c" in it vanishing and reappearing, as if it isn't really important.
 >raccoon
 Your score has just gone up by one point
->undo
 >raccono
-WRONG
+No need to tweak the rac(c)oon again. It's fine as is.
 
+>undo
+>undo
 >racono
-WRONG
+The corona scurries about for a bit before settling down again.
 >racoon
 Your score has just gone up by one point
 >racono
-WRONG
-
+No need to tweak the racoon again. It's fine as is.
 
 >x medals
 The smaller, barely oxidized, says IQ. The larger, untarnished, says LUCKY.
@@ -2361,37 +2398,38 @@ The smaller, unoxidized, says IQ. The larger, untarnished, says LUCKY.
 >w
 
 >honestyl
-WRONG
+Merle and Elmer look askance at each other for a bit.
 >honestly
 Your score has just gone up by one point
 min point
 >honestyl
-WRONG
+Neither Merle nor Elmer is going to be any more honest. Or anything nice or good, really.
 
 >raptro
-WRONG
+The parrot can be changed back into a raptor, but not into anything new.
 >raptor
 Your score has just gone up by one point
 >raptro
-WRONG
+That's not something
 
 >deepyl
-WRONG
+The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right.
 >deeply
 Your score has just gone up by one point
 >deepyl
-WRONG
+The whistle's already in tune.
 
 >w
 Elvira hears them and ambushes you!
 
 >undo
 >quickyl
-WRONG
+The medals waver noiselessly. Hm, that's not quite it.
 >quickly
 Your score has just gone up by one point
 >quickyl
-WRONG
+You already got a boost from the medals.
+
 
 >w
 WTF FTW
@@ -2615,7 +2653,7 @@ Your score has just gone up by one point.
 Just return the fruit to Curtis. No need for another change.
 
 >raspberyr
-The drupelets in the pryer bars pop out and multiply, leaving you with raspberries.
+The pryer bars briefly turn very red.
 >raspberry
 Your score has just gone up by one point.
 >raspberyr
@@ -2657,14 +2695,14 @@ Everyone promises quick payment, but what are you promising to pay quickly FOR?
 >papayas
 Your score has just gone up by one point.
 >papaysa
-Just return the fruit to Curtis. No need for another change.
+You hear a sap yap about the sign and figure it can't be changed any more.
 
 >amogn
 It would be nice to find a mango, yes. But you don't find anything that way.
 >among
 Your score has just gone up by one point.
 >amogn
-You might wind up dropping the mango looking for another. One is enough.
+Snag mo' mangos? No mas, G.
 
 >ancientre
 The nectarine seems a little less shiny and new. But not enough.
@@ -2714,7 +2752,7 @@ Your score has just gone up by one point.
 Just return the fruit to Curtis. No need for another change.
 
 >gonera
-WRONG
+The orange seems a bit closer for a bit.
 >go near
 Your score has just gone up by one point.
 >gonera
@@ -2758,14 +2796,14 @@ That's not the way to learn from the viewer--it's probably not that complicated.
 >review
 Your score has just gone up by one point.
 >reviwe
-Reviewing is done now.
+You've done enough reviewing.
 
 >researhc
 That's not the way to learn from the searcher--it's probably not that complicated. You hope.
 >research
 Your score has just gone up by one point.
 >researhc
-Researching is done now, but you can just go north.
+You've done enough researching, but you can just go north.
 
 >frui
 
@@ -2849,14 +2887,13 @@ Rustic Citrus
 
 >gonear rathole
 >{include} _troves
->{include} _summarize
 
 * _only-presto
 
 >gonear gyre
 >{include} _presto
 
-* _only-oyster
+* only-oyster
 
 >purloin settler
 >gonear posh hops shop
@@ -2880,7 +2917,7 @@ Rustic Citrus
 >gonear barley
 >{include} _otters
 
-* only-others
+* _only-others
 
 >gonear rustic citrus
 >{include} _others

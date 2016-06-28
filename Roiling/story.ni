@@ -1802,7 +1802,7 @@ check objasking it about (This is the check for object information rule):
 			say "[gen-blah entry][line break]";
 			if noun is terse and noun is not terse-warned:
 				now noun is terse-warned;
-				say "Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.";
+				say "[line break]Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.";
 				pad-rec "talking";
 			do nothing instead;
 	if noun is not a person:
@@ -2086,7 +2086,7 @@ atmo-moat	"The moat has nothing to say. If it did, it'd probably just say 'KEEP 
 Mr Lee	"[if p-2 is in lalaland]'You have gained my trust and your powers. Go on!'[else if ghoul hat is in lalaland]You try to convince him you're the good guy, but--bad start. Rev. Howe glares at you[tho-eels].[else]You fail to get anywhere. Between the ghoul hat and Rev. Howe's gaze, Mr. Lee seems half-possessed[tho-eels].[end if]"
 Gretta	"[if player is female]The macks block you from talking to her. They redouble their conversation, expecting her to be flattered she's getting more attention than you[else]The macks manage to small-talk you down[end if]. Perhaps you need to get rid of them."
 macks	"'Talking's stalking,' they yell at you before continuing to hit on Gretta."
-eels	"'Eels...' / 'Fib-beliefs?' Their attention span seems short, and they have little to say. You need one word, useless on its own yet powerful."
+eels	"[if eels are reflexed]'Eels...' / 'Fib-beliefs?' Their attention span seems short, and they have little to say. You need one word, useless on its own yet powerful.[else]They seem to have their minds on other things now that they helped you.[end if]"
 Elmer	"[mon-men]"
 Merle	"[mon-men][no line break]"
 sly imp	"He could talk circles around you as-is. You won't convince him to let you pass."
@@ -3718,7 +3718,7 @@ to say l-r-bye-hint:
 	say "It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled"
 
 to say di-cli:
-	say "The dialer seems to click slightly"
+	say "The dialer seems to click slightly[if dialer is reflexed]. There's something more to do, but that's not quite it[end if]"
 
 docile-tried is a truth state that varies.
 
@@ -3836,26 +3836,30 @@ gum	"You stare at the gum. Hm, only a few ways it can be stretched or whatever."
 piece of scratch paper	"Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base."
 skid	"Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did."
 compiled code	"Hmm. Compiled code is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here."
-o-t	"Hm, no, that's not quite how to cover all the ground looking for the ol['] trap." [START oyster]
-Capers Recaps	"You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe."
+Capers Recaps	"You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe." [START oyster]
+gins sign	"Hm, the sign doesn't strictly disallow THAT."
 tumblers	"The tumblers wobble a bit as you try to do ... something ... to them."
-stein	"Hm, the stein belongs somewhere you can destroy it, but not QUITE like that."
+tines	"Hm, the stein belongs somewhere you can destroy it, but not QUITE like that."
 sign	"Nobody pays attention to your performance as you disobey the sign. Or try to."
+tunes	"The tunes grow slightly less annoying, for a moment."
 clam	"The clam still seems enraged."
+urn	"The urn sits there, daring you to walk away."
 boats	"Perhaps if you were louder and more confident, the boats would hear you."
+pale plea	"Yes, the pale plea is calling and warning you to leave. But how?"
 carps	"The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things."
 pikes	"The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things."
 wipes	"You try to take the wipes, but you worry you're not fast enough."
-tunes	"The tunes grow slightly less annoying, for a moment."
 wrap	"That's not quite the way to pop the wrap."
+o-t	"Hm, no, that's not quite how to cover all the ground looking for the ol['] trap."
 trolls	"The trolls laugh at you a bit, but nervously."
-urn	"The urn sits there, daring you to walk away."
 raft	"The raft rocks slightly."
 oars	"You see bubbling under the oars."
 eeks	"You guess the eeks must be there--no, there!"
-haunter	"Hm, not quite the right way to dig, dig?"
+haunter	"You're a bit tongue-tied, but that seems close."
+a-s	"Hm, you almost thought you found something. Well, not QUITE like that."
 c2	"The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled."
 crate	"The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet."
+knob	"The knob rattles slightly."
 skis	"The skis momentarily seem more polished."
 tubs	"Hm. The tubs rattle a bit, but you need to do something strong."
 prod	"You juggle the prod a bit, but it doesn't change into anything. Well, not like that."
@@ -3956,7 +3960,7 @@ leopard	"The leopard almost seems to un-cuff its hands."
 badger	"The badger flexes imaginary suit lapels, then quickly goes back to brooding."
 satyr	"The satyr puts a hand on its chin as if pondering music."
 medals	"The medals waver noiselessly. Hm, that's not quite it."
-weltish whistle	"The sound you make is experimental, in a new jazz sort of way, but it's not quite right."
+weltish whistle	"The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right."
 moss cap	"The cap itches for a bit, then seems to try to spin you around." [others]
 ppf	"The pipe panel fence sways slightly."
 b-w	"You feel the barriers west pulling towards you."
@@ -3991,6 +3995,7 @@ eerie blurbs	"The blurbs turn a few shades of purple before settling again."
 mad train	"The train emits some fake smoke and seems ready to blow up--but no."
 barber sickle	"The barber sickle darkens a bit. You must be on the right track."
 pugnacious plant	"The plant seems to adopt a defensive position with its arms/branches."
+orange	"The orange seems a bit closer for a bit."
 an-a	"The A shines for a split-second."
 lumps	"The lumps seem almost ready to burst."
 reserved sign	"You seem to read the sign backwards for a second."
@@ -4070,7 +4075,7 @@ to decide whether can-prog-hint:
 doublewarn is a truth state that varies.
 
 to say them-that of (tt - a thing):
-	say "[if tt is a female person]her[else if tt is a person]him[else]that[end if]";
+	say "[if tt is a female person]her[else if tt is a neuter person]it[else if tt is a person]him[else]that[end if]";
 
 table of donereject [TDR - this can use a lot more entries]
 specdone	spectalk
@@ -4145,10 +4150,26 @@ keyboard	"You don't need to resummon the bored yak. And programming exercises ca
 t-key	"No, the TAB key is what it should be."
 scratch paper	"After compiling, you often need to make small tweaks, but not like that."
 USB	"You had to consider all sorts of combinations while debugging, but things will be easier now."
-wipes	"You better not fiddle with the wipes wrong, or they'll tear and disintegrate." [oyster]
-clam	"You feel a need to panic and flee after calming the clam."
+stumbler tumblers	"You can't and don't want to do anything else to the tumblers." [oyster]
+capers recaps	"Casper has suffered enough indignities. You should annoy someone else."
+gins sign	"The sign mainly just disallowed singing."
+tines	"You destroyed the stein, and that's enough."
+wipes	"Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on."
+urn	"You feel a need to panic and flee after calming the clam."
+raft	"The raft has fuel. It needs to use that fuel, now, with the oars."
+crate	"Besides identifying it as a rect, you can't do much else with the crate."
 knob	"You should leave the knob to b'n OK."
+waste	"The tubs already got broken up."
+lance	"Your work turned up enough."
+rigged digger	"You managed to get a digger from a prod, and that's good enough."
+heaps	"You figure the heaps are at a point where you can't change them for the better."
 a-s	"Further searching proves fruitless."
+a-p	"You discovered the portal. No need to look further."
+ruby	"You already did in the wrap."
+haunter	"You've already got the haunter's attention. Now you need to show him something."
+thin hint	"The ruby's hidden well. No need to tinker."
+gleaner	"It's already been made bigger. Not much more you can do with it."
+lever	"You riff on your previous celebrations, but it doesn't feel as cool."
 brownies	-- [towers]
 old ice	"Twist the ice too much, it might not look right."
 ragged dagger	--
@@ -4161,23 +4182,21 @@ blaster	"The blaster is working. Best not tinker."
 flowerpot	"You've got something nice in the flowerpot. Better not mess with it."
 Ed Yerg	"Ed's attitude is changed enough for the better."
 b-b	"You've dealt with the barley. You can move around a lot more, now." [otters]
-Merle	"He's not going to be any more honest. Or anything nice or good, really."
-ocelots	"The ocelots are doing great as is."
-leopard	"The leopard's doing great as is."
-badger	"The badger's doing great as is."
-satyr	"The satyr's doing great as is."
+eels	"The eels have done enough."
+Merle	"Neither Merle nor Elmer is going to be any more honest. Or anything nice or good, really."
+parrot	"The parrot can be changed back into a raptor, but not into anything new."
 whistle	"The whistle's already in tune."
-medals	"You already got a boost from them."
+medals	"You already got a boost from the medals."
 compass	"If you changed the compass, it might wind up pointing in the wrong direction." [others]
 l-o-p	"You corrected the list enough."
 auction caution	"You hear a sap yap about the sign and figure it can't be changed any more."
 lemons	"You sour on changing the lemons further."
 melon	"The melon is fine as-is. It's better than the one that was on display, for sure."
 peach	"You got enough of a discount. Really."
-pre-mang	"Snag mo['] mangos? No mas, G."
+mango	"Snag mo['] mangos? No mas, G."
 perp-priv	"Don't want to over-prep[gs-north]."
-searcher	"Research is done now[gs-north]."
-viewer	"Reviewing is done now[gs-north]."
+searcher	"You've done enough researching[gs-north]."
+viewer	"You've done enough reviewing[gs-north]."
 
 to say gs-north:
 	if gate-level is 2:
@@ -4208,6 +4227,16 @@ to say good-enuf of (goody - a thing):
 		continue the action;
 	if goody is a fruit:
 		say "Just return the fruit to Curtis. No need for another change.";
+	if goody is an animal:
+		if goody is in perverse preserve or goody is in wickeder wire deck:
+			if goody is not the parrot:
+				say "No need to tweak [the goody] again. [if goody is plural-named]They're[else if goody is neuter]It's[else if goody is female]She's[else]He's[end if] fine as is.";
+				continue the action;
+	if goody is imp1 or goody is imp2 or goody is imp3:
+		say "The imp's already been compromised that way.";
+		continue the action;
+	if goody is ram1 or goody is ram2 or goody is ram3:
+		say "The whiners were already slowed up that way.";
 		continue the action;
 	d "The table of donereject could use a lot more entries, like here for the [goody]. Search for TDR in the source.";
 	say "You've already changed [them-that of goody] enough.[no line break]";
@@ -4243,6 +4272,9 @@ to decide whether (tn - a table name) is hash-found:
 				decide yes;
 	decide no;
 
+definition: a thing (called ge) is good-enuf:
+	decide yes.
+
 to say reject:
 	if sss is true: [inform 7 gives extra space if I just follow the rule as-is]
 		consider the show blues rule;
@@ -4251,10 +4283,10 @@ to say reject:
 	d "The hash of the command is [cmdhash]. Hash of word 1 is [firstwordhash].[line break]";
 	repeat through regana of mrlp:
 		if cmdhash is the hashkey entry or firstwordhash is the hashkey entry:
-			if the-from entry is reflexed and the-from entry is visible:
+			if the-from entry is reflexed and the-from entry is visible and the-from entry is good-enuf:
 				say "[good-enuf of the-from entry][line break]";
 				continue the action;
-			if the-to entry is not the-from entry and the-to entry is visible:
+			if the-to entry is not the-from entry and the-to entry is visible and the-from entry is good-enuf:
 				say "[good-enuf of the-to entry][line break]";
 				continue the action;
 			if the-from entry is visible:
@@ -6222,7 +6254,7 @@ Rule for printing a parser error when the latest parser error is the didn't unde
 				consider the scam rule instead;
 	if player is in Den Loft and yapper is not in Den Loft:
 		unless hash of the player's command is 501914680 or hash of the player's command is 335153504:
-			say "You can probably just say what you need to do with the dialer." instead;
+			say "The only thing left to do here is muck with the dialer right." instead;
 	say "[reject]";
 
 Rule for printing a parser error when the latest parser error is the noun did not make sense in that context error:
@@ -6666,20 +6698,7 @@ lyre-dest is a truth state that varies.
 
 check singing:
 	if player is in hops shop:
-		d "[silly-acts] acts so far.";
-		if i-sung is false:
-			if silly-acts is 3:
-				check-silly-death;
-				the rule succeeds;
-			now i-sung is true;
-			now gins sign is reflexed;
-			say "Your singing is abominable. But not as abominable as the lyrics or the 'melody' played in the bar right now. So customers only glare at you, but others order another beer because they're not as drunk as you, clearly.";
-			remove gins sign from marcitems;
-			reg-inc;
-			silly-min;
-		else:
-			say "Your testing other patrons['] patience would be abominable.";
-		continue the action;
+		try fliptoing gins sign instead;
 	if player is in peek keep:
 		say "No, this is a quieter place than the Posh Hops Shop." instead;
 	if Ed Riley is visible:
@@ -7151,6 +7170,8 @@ instead of taking a person:
 		say "They're the pick-up artists, here." instead;
 	if noun is Gretta:
 		say "You might be worse at picking Gretta up than the macks." instead;
+	if noun is eels:
+		say "[if power-back is true]They already gave you a charge[else]That might get you the wrong sort of charge[end if]." instead;
 	say "Lifting [if noun is plural-named]people[else]a person[end if] or something [if noun is plural-named]people[else]person[end if]-sized is too heavy for your superpowers. Even if your name happens to be Kate."
 
 chapter looking
@@ -8183,8 +8204,9 @@ USB	USB	"sub/bus"	"sub"	"[sub-bus]!"	false	219798678	"sub"	Strip of Profits
 table of oyster anagrams
 the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
 tumblers	tumblers	"spit" or "spit on the/ tips"	"spit"	"Saliva avails to show your disdain for the bar staff and for generosity in general. The bar patrons, relieved to find someone seedier than themselves, look over quite menacingly, daring you to P.S. it."	false	325842789	[start oyster flip bit]
+gins sign	gins sign	"sing"	"sing"	"Your singing is abominable. But not as abominable as the lyrics or the 'melody' played in the bar right now. So customers only glare at you, but others order another beer because they're not as drunk as you, clearly."	false	242774022 [not really covered in the default verb SING]
 tunes	tunes	"unset"	"unset"	"[remap-or-unset]. The music warps and slows down--everyone glares at you, even the fish who were just complaining about the lousy music here. You're nearest the jukebox, so you're the prime suspect."	false	501203408
-stein	stein	"inset" or "inset the/ stein/tines"	"inset"	"You place the stein in the tines. It disappears with a big CRUNCH. The fish around look at you suspiciously, including one who just threw a stein against the wall."	false	441090447	"You broke your free stein."
+tines	tines	"inset" or "inset stein/tines"	"inset"	"You place the stein in the tines. It disappears with a big CRUNCH. The fish around look at you suspiciously, including one who just threw a stein against the wall."	false	441090447	"You broke your free stein."
 recaps	recaps	"scrape"	"scrape"	"Skr-r-r-r. You give [i]Capers Recaps[r] a good scratch. The fish in the bar, including the trolls, all whip around. You're the only suspect, since you are the only one with anything resembling nails. Casper shoots you an inspired, snide rip. The other patrons glare at you for doing so, too."	false	412063240	"Don't push your luck. Well, not that way. Maybe another way."
 trolls	trolls	"stroll"	"stroll"	"Well, you fake confidence as you walk past. It's all about being cool, but once out, you bolt this blot. As you run down Diver Drive, you hear the trolls yelling 'The rests of youse ain't freeloading cheapskates like [him-her], are you? Buy up and drink up!'[if player has stein][stein-drop].[end if]"	false	466688042	--	olde lode
 clam	urn	"calm"	"calm"	"You try some odd combination of singing and storytelling and jokes which really shouldn't work at all, but then, clams aren't very smart, so it goes over okay. The clam ...(cl)ambulates...off. You notice what it was guarding so aggressively: a beautiful urn you feel pulled to and you can't walk away from!"	false	139082395
@@ -8200,6 +8222,7 @@ crate	crate	"react"	"react"	"This time you're ready. You turn around and know wh
 skis	skis	"kiss"	"kiss"	"As you kiss them, they pull up--and dissolve."	false	290473956
 knob	knob	"bonk"	"bonk"	"BONK! You hit the knob just right."	false	214612168
 bogus-plains	bogus-plains	"splain"	"splain"	"[if door-sux is true]You brag, to nobody and everyone in particular, how you SHOWED that door. It's in no shape to argue[else if bonkies is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the rude door how you'll get by anyway. It's short on detail, but it sounds impressive[end if]. You feel better after this, now you bragged a bit."	false	347641936
+wipes	wipes	"swipe"	"swipe"	"You swipe the wipes before Aunt Tuna notices. You can't see anything here that's dingy enough to use them--or use them the right way--on. Maybe something somewhere less well-kept."	true	458473653
 bubble wrap	ruby	"warp"	"warp"	"You warp the bubble wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"	false	276912353
 a-s	a-s	"search"	"search"	"'Reach, acher,' you say, stretching a bit more to find something interesting."	false	367879580
 o-t	a-p	"patrol"	"patrol"	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap. It's a portal now."	false	400254014	"Waste of time. You already disabled the ol['] trap--you can just enter the portal."
@@ -8293,11 +8316,11 @@ imp3	imp3	"enragedly"	"enragedly"	"The imp flares up for a brief moment, explain
 ram1	ram1	"loathingly"	"loathingly"	"[shout-check]"	false	593419698
 ram2	ram2	"stoically"	"stoically"	"[shout-check]"	false	569909740
 ram3	ram3	"tersely"	"tersely"	"[shout-check]"	false	716493096
-ghoul hat	ghoul hat	"although"	"although"	"You begin explaining that you just needed a way through, and besides, the stalks wouldn't have been harvest-able anyway. Mr. Lee relaxes and breathes, and as you speak, the ghoul hat releases its hold on him. 'But--but Rev. Howe said...he would watch over the ghoul hat I was forced to wear.'[paragraph break]Mr. Lee mutters on about hard times these days, still suspicious, but he's willing to listen. He points to the picture of Rev. Howe. He's suddenly doubting it's for his safety, now. "	false	445734359	"You already justified yourself partially. Mr. Lee doesn't need more dialogue."
-p-2	p-2	"however"	"however"	"Mr. Lee doesn't seem willing to discuss the painting, but as you talk, he bends a little more. Yes--it was Elvira who put the painting there. Or her agents. To make sure he didn't use his magic powers unwisely. You promise to re-bran what is barren. He perks up. 'Then you're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' He lays his hands on you. You feel [if power-back is false]a slight shock--your mordant powers are now merely dormant![else]a shock similar to what the eels gave, and you shake exaggeratedly and nod your head in thanks.[end if][paragraph break]He also asks if you can hop in and make his seed site the seediest--once you do the whole country-saving thing. Of course you can. It's the least you can do."	false	667670490
+ghoul hat	ghoul hat	"although"	"although"	"You begin explaining that you just needed a way through, and besides, the stalks wouldn't have been harvest-able anyway. Mr. Lee relaxes and breathes, and as you speak, the ghoul hat releases its hold on him. He tosses it aside, and it breaks and vaproizes. 'But--but Rev. Howe said...he would watch over the ghoul hat I was forced to wear.'[paragraph break]Mr. Lee mutters on about hard times these days, still suspicious, but he's willing to listen. He points to the picture of Rev. Howe. He's suddenly doubting it's for his safety, now. "	false	445734359	"You already justified yourself partially. Mr. Lee doesn't need more dialogue."
+p-2	p-2	"however"	"however"	"Mr. Lee doesn't seem willing to discuss the painting, but as you talk, he bends a little more. Yes--it was Elvira who put the painting there. Or her agents. To make sure he didn't use his magic powers unwisely. You promise to re-bran what is barren. He perks up. 'Then you're [tgw]. It's--well, I never heard your side. You didn't just change things to things. Perhaps I can help you.' He lays his hands on you. You feel [if power-back is false]a slight shock--your mordant powers are now merely dormant![else]a shock similar to what the eels gave, and you shake exaggeratedly and nod your head in thanks.[end if][paragraph break]As you two rip up the poster for fun, he also asks if you can hop in and make his seed site the seediest--once you do the whole country-saving thing. Of course you can. It's the least you can do."	false	667670490
 sea cube	sea cube	"because"	"because"	"'Well, now that you put it that way...' You hear a rush of water. Le Mer has unlocked the sea cube. Eels come out. They look up at you--they may be able to understand you."	false	496604299
 eels	eels	"else"	"else"	"The eels seem to understand you. They squirm across the pool and gaze at you as if to stay still. You feel a shock through your body[if power-back is true] much like in Mr. Lee's bran barn[else], and your mordant skills are no longer dormant[end if]."	false	405700023
-atmo-moat	atmo-moat	"atom"	"atom"	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom."	false	243725566
+atmo-moat	atmo-moat	"atom"	"atom"	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity."	false	243725566
 t-bossily	t-bossily	"bossily"	"bossily"	"The macks cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now."	false	506485351
 t-nastily	t-nastily	"nastily"	"nastily"	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. They scramble to assure her they didn't mean it that way, but she's not fooled."	false	491645247 [begin MACKS 7]
 t-seedily	t-seedily	"seedily"	"seedily"	"That thing they were doing? With their eyelids? Well, Gretta seems to have caught on, now. She laughs and groans a bit, and the macks accuse each other of being too obvious."	false	594081210
@@ -8334,7 +8357,7 @@ nails	snail	"snail"	"snail"	"The nails arrange themselves in a sort of spiral, e
 thrones	hornets	"hornets"	"hornets"	"The thrones shorten--a throne, another--HORNETS! Thankfully, they ignore your waspy yawps."	false	593056280
 owls	owls	"slow"	"slow"	"The owls['] swooping speeds hit such lows they they swoop back to their ambush place in hiding. You notice it isn't a very comfortable one, and you help them make a nest from tens of nets. They won't attack again. You refuse anything for the additional magnanimity but ask if any towels need to be changed to owlets. Thankfully not very many."	false	332375155	"[this-animal]."
 ocelots	ocelots	"coolest"	"coolest"	"The ocelots perk up and, instead of pacing aimlessly around, develop a swagger. Their SlopInc Clip-ons get close to, then are, the real thing. Yes, LookKool shades. Each pulls out a BMOC comb to fix his fur before stashing it for later use."	false	548714671
-leopard	leopard	"paroled"	"paroled"	"The leopard perks up as his handcuffs are dissolved."	false	445979194
+leopard	leopard	"paroled"	"paroled"	"The leopard perks up as its handcuffs are dissolved."	false	445979194
 badger	badger	"garbed"	"garbed"	"The badger looks down and realizes it is wearing clothes. B-grade, garb that won't make you grab or brag, but it can't be drobe-bored. It's less embarrassed now and nods to you gratefully. Perhaps it can return the favor some day."	false	287365426
 satyr	satyr	"artsy"	"artsy"	"The satyr shakes a bit as if he has had a vision. He begins drawing figures in the air, standing on his hind legs and conducting an imaginary orchestra. He seems less strictly focused on his own survival now."	false	409254857
 whistle	whistle	"deeply"	"deeply"	"It takes some time, but you manage to move from making shrieks to something more rumbly and enduring. Noting the writing on the whistle, though, you make sure not to use it til you need to."	false	534280357
@@ -8465,7 +8488,7 @@ to say read-canflip:
 
 to say stein-drop:
 	if player has stein:
-		say "[line break]Oh, you drop and break the stein. Tiens";
+		say "[paragraph break]Oh, as you leave, you drop and break the stein. Tiens";
 	now stein is in lalaland;
 
 to say rodpals:
@@ -14104,7 +14127,7 @@ understand "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're o
 
 understand "whassup" as a mistake ("You probably want to TALK to people instead. Well, most of the time.") when Leo is not visible.
 
-the wzup is a privately-named reflexive thing. Leo carries the wzup.
+the wzup is a privately-named reflexive thing. Leo carries the wzup. description of wzup is "bug".
 
 a-text of wzup is "RRYRRYR". b-text of wzup is "PRYRRYR". parse-text of wzup is "w[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -15616,7 +15639,7 @@ understand "Posh Hops Shop" and "posh/hops shop" and "posh hops" and "posh/hops/
 instead of exiting when in Posh Hops Shop:
 	try going outside;
 
-the tines are plural-named auxiliary scenery in Posh Hops Shop. "They look perfect for fitting a stein into, for refills."
+the tines are plural-named reflexive scenery in Posh Hops Shop. "They look perfect for fitting a stein into, for refills."
 
 check taking tines:
 	say "[if stein is in lalaland]You destroyed them already[else]Wrong way to vandalize things, here[end if]." instead;
@@ -15699,7 +15722,7 @@ understand "fish" as Casper.
 
 a-text of casper is "RRRYRY". b-text of casper is "?RRYRY". parse-text of casper is "x[sp]x[sp]x[sp]-[sp]x[sp]-".
 
-Capers Recaps is scenery in Posh Hops Shop. description of Capers is "It's Casper's latest rough draft journal. A quick glance references an OCD cod named Doc. Capers and looks to be, due to its blackboardy texture, even grittier than Consider I Scorned No Ciders, Pincer Prince or Some Urge Gruesome or This Bane Bathes in the Basin. Which Casper wrote drunk on absinthe."
+Capers Recaps is reflexive scenery in Posh Hops Shop. description of Capers is "It's Casper's latest rough draft journal. A quick glance references an OCD cod named Doc. Capers and looks to be, due to its blackboardy texture, even grittier than Consider I Scorned No Ciders, Pincer Prince or Some Urge Gruesome or This Bane Bathes in the Basin. Which Casper wrote drunk on absinthe."
 
 understand "book" as Capers Recaps.
 
@@ -15716,7 +15739,7 @@ a-text of capers is "RRRYRY". b-text of capers is "RRR??Y". parse-text of capers
 instead of taking capers recaps:
 	say "The whole bar would beat you up for that. Think of other ways to distract the trolls. Disturb the peace more directly."
 
-a stein is a vanishing thing in Posh Hops Shop. initial appearance is "You see a stein here by some tines. It looks like it'd almost fit in."
+a stein is a thing in Posh Hops Shop. initial appearance is "You see a stein here by some tines. It looks like it'd almost fit in."
 
 check inserting stein into tines:
 	say "It almost fits when you try to insert it. About five-sixths of the way. Perhaps you could find some other way to do things." instead;
@@ -15795,8 +15818,7 @@ carry out inseting:
 	if noun is stein:
 		if player does not have stein:
 			say "(Taking the stein)";
-			now player has stein;
-			try fliptoing stein instead;
+			try fliptoing tines instead;
 	say "You can't really inset that--you might be better off inserting it." instead;
 
 understand "inset [text]" as a mistake ("[if the number of words in the player's command > 3]You may want to INSERT x in Y instead[else]You may not be using an object in the game, and you may wish to inseRt, instead[end if].")
@@ -15827,9 +15849,9 @@ scrapeing is an action applying to one thing.
 understand the command "scrape" as something new.
 
 understand "scrape [something]" as scrapeing.
+understand "scrape" as scrapeing.
 
 does the player mean scraping capers recaps: it is very likely.
-does the player mean scraping casper when capers recaps is in lalaland: it is very likely.
 
 carry out scrapeing:
 	if noun is casper or noun is capers:
@@ -16750,6 +16772,8 @@ does the player mean eating the tea tray: it is very likely;
 
 understand "ate" as a mistake ("You're getting ahead of yourself here.") when tea tray is visible.
 
+understand "aet" as a mistake ("Oh, this region won't go into extra time unless you want to do the side quest.") when tea tray is visible
+
 understand "eta" as a mistake ("ETA's one move later now that you went fishing for this anagram.") when tea tray is visible.
 
 The tea tray is auxiliary edible scenery in Handsome Sand Home. description is "Arty, with tea on it. The meal, not the drink[one of]. And no beak-bake in it[or][stopping]. But why stare at it? That's not what food is for."
@@ -17121,7 +17145,7 @@ the dent is part of the raw red reward drawer. the dent is LLPish. description i
 
 a-text of dent is "RYRR". b-text of dent is "RGPR". parse-text of dent is "t[sp]e[sp]n[sp]d". dent is parse-spoilable.
 
-some wipes are plural-named and auxiliary. the wipes are on the raw red reward drawer.
+some wipes are plural-named and auxiliary and reflexive. the wipes are on the raw red reward drawer.
 
 description of wipes is "I-SPEW wipes is written in red on them."
 
@@ -17186,13 +17210,15 @@ understand "swipe [something]" as swipeing.
 
 does the player mean swipeing the wipes: it is likely.
 
+after fliptoing wipes:
+	min-up;
+	continue the action;
+
 carry out swipeing:
 	if noun is wipes:
 		if player has wipes:
 			say "Better to swipe the wipes across something dirty[if lance is visible]--hmm, there's that lance, there[end if]." instead;
-		say "You swipe the wipes before Aunt Tuna notices. You can't see anything here that's dingy enough to use them--or use them the right way--on. Maybe something somewhere less well-kept.";
-		now player has wipes;
-		min-and instead;
+		try fliptoing wipes instead;
 	if noun is a person:
 		say "Whether stealing from or attacking something living...that's not cool!" instead;
 	say "You don't need to take that so quickly.";
@@ -20606,7 +20632,9 @@ understand "discern [something]" as discerning.
 
 does the player mean discerning the cinders: it is very likely.
 
-does the player mean discerning the player: it is likely.
+does the player mean discerning the cinders: it is very likely.
+does the player mean discerning the player: it is 
+likely.
 
 [every turn when player has cinders (this is the stupid cinders cheat rule):
 	try discerning cinders;
@@ -20629,18 +20657,16 @@ after fliptoing cinders:
 discern-warn is a truth state that varies.
 
 carry out discerning:
-	if noun is player:
-		say "Enough navel-gazing.";
 	if player is in barley and cinders are in barley:
 		try taking the cinders;
 	if noun is not cinders:
 		if mrlp is not otters:
 			say "[reject]" instead;
-		say "[if player has cinders]You can only discern the cinders--they will tell you what is most important to do next[else]You'd need the cinders for that, and they're back at Bleary Barley[end if]." instead;
+		say "[if player has cinders]You can only discern the cinders--they will tell you what is most important to do next[else]You'd need to discern the cinders for that, and they're back at Bleary Barley[end if]." instead;
 	if discern-warn is false:
 		say "You feel sort of clever finding what to do with the cinders, but maybe you can be even cleverer, if you're a perfectionist and all[if ed riley is visible]. Plus, it seems a bit early[end if]. Discern anyway?";
 		now discern-warn is true;
-		unless the player consents:
+		unless the player yes-consents:
 			say "Okay. This nag won't appear again." instead;
 	if otters-cur-item is player:
 		say "You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet." instead;
@@ -21506,7 +21532,7 @@ Instead of doing something with the sea cube:
 		continue the action;
 	say "You aren't getting across the pool to do anything with the sea cube." instead;
 
-the eels are a plural-named vanishing person in the sea cube. description of eels is "They seem listless, as if they need a reason to do something.". "Eels squirm around waiting for your directive."
+the eels are a plural-named reflexive person in the sea cube. description of eels is "[if eels are reflexive]They seem listless, as if they need a reason to do something[else]Swimming calmly and undistractedly[end if].". "Eels [if eels are reflexive]squirm around waiting for your directive[else]swim contentedly here[end if]."
 
 understand "slee" as a mistake ("The eels aren't what needs to be reduced to rubble, here.") when eels are visible.
 
@@ -21632,7 +21658,7 @@ after choosing notable locale objects when player is in wire deck:
 		set locale priority of owls to 9;
 	continue the action;
 
-the ocelots are plural-named reflexive animals in wire deck. description is "[if ocelots are reflexive]They glance nervously back, as if they've done something wrong[otherwise]They glance back at you, give you a finger-point you're not cool enough to give back, then ignore you in the nicest possible way[end if].". "Ocelots are making gestures here that you'd look silly making[if ocelots are reflexive]. They do, too, with their stupid sunglasses[end if]."
+the ocelots are plural-named reflexive neuter animals in wire deck. description is "[if ocelots are reflexive]They glance nervously back, as if they've done something wrong[otherwise]They glance back at you, give you a finger-point you're not cool enough to give back, then ignore you in the nicest possible way[end if].". "Ocelots are making gestures here that you'd look silly making[if ocelots are reflexive]. They do, too, with their stupid sunglasses[end if]."
 
 understand "ocelot" as ocelots.
 
@@ -21648,7 +21674,7 @@ understand "sunglasses/glasses/shades" as Look-Kool when ocelots wear Look-Kool.
 
 a-text of ocelots is "RYYRYRR". b-text of ocelots is "RYYPYRR". parse-text of ocelots is "x[sp]-[sp]-[sp]l[sp]-[sp]x[sp]x". ocelots is cheat-spoilable.
 
-The leopard is a reflexive animal in Deck. "A leopard is here--[if leopard is reflexive]his colorings make it look like he is wearing a tacky (mostly) burnt orange jumpsuit, and he seems paw-tied, too[else]he looks more camoflagued since you changed him[end if]."
+The leopard is a reflexive neuter animal in Deck. "A leopard is here--[if leopard is reflexive]its colorings make it look like it is wearing a tacky (mostly) burnt orange jumpsuit, and it seems paw-tied, too[else]it looks more camoflagued since you changed him[end if]."
 
 understand "ape lord" and "apelord" as a mistake ("You [if leopard is reflexed]already changed the leopard[else]can't change what the leopard is, but you need to release him from his captivity[end if].") when player is in deck.
 
@@ -21658,9 +21684,9 @@ a-text of leopard is "RYRYRYR". b-text of leopard is "RYRYRYP". parse-text of le
 
 description of leopard is "He's got those jumpsuit markings and appears to be [if leopard is reflexed]no longer [end if]handcuffed."
 
-the jumpsuit is part of the leopard. description is "The leopard looks back at you as if sorry for some inexplicable things he did, as if hoping he's served his time.". understand "markings" as jumpsuit.
+the jumpsuit is part of the leopard. description is "The leopard looks back at you as if sorry for some inexplicable things it did, as if hoping it's served his time.". understand "markings" as jumpsuit.
 
-The badger is a reflexive animal in Deck. description is "[if badger is reflexed]He looks dumber with those clothes, but you aren't about to tell him[otherwise]Despite having all that fur, he seems embarrassed with his body[end if].". "[if badger is reflexed]A garbed badger stands around confidently here[otherwise]A badger covers his naughty bits that were buried under his fur anyway[end if]."
+The badger is a reflexive neuter animal in Deck. description is "[if badger is reflexed]He looks dumber with those clothes, but you aren't about to tell him[otherwise]Despite having all that fur, he seems embarrassed with his body[end if].". "[if badger is reflexed]A garbed badger stands around confidently here[otherwise]A badger covers his naughty bits that were buried under his fur anyway[end if]."
 
 a-text of badger is "RYRRYR". b-text of badger is "RGRRGR". parse-text of badger is "x[sp]a[sp]x[sp]x[sp]e[sp]x".
 
@@ -21668,7 +21694,7 @@ understand "barged" as a mistake ("You don't want the badger to have barged into
 
 understand "b grade" and "bgrade" as a mistake ("The badger [if badger is reflexive]already[else]no longer[end if] feels second-rate, so [if badger is reflexive]you need another way to help him[else]he needs no more help[end if].") when player is in Deck.
 
-the satyr is a reflexive animal in Deck. description is "[if satyr is reflexed]He looks like he's dreaming of a poem or something, but he doesn't want to be disturbed[else]He looks preoccupied and mistrustful. His eyes stray.[end if].". "A satyr strides here, [if satyr is reflexed]dreaming of a better Yorpwald[else]looking out for himself[end if]."
+the satyr is a reflexive male animal in Deck. description is "[if satyr is reflexed]He looks like he's dreaming of a poem or something, but he doesn't want to be disturbed[else]He looks preoccupied and mistrustful. His eyes stray.[end if].". "A satyr strides here, [if satyr is reflexed]dreaming of a better Yorpwald[else]looking out for himself[end if]."
 
 a-text of satyr is "YRRRO". b-text of satyr is "YRPRO". parse-text of satyr is "a[sp]x[sp]t[sp]x[sp]y". satyr is cheat-spoilable.
 
@@ -21871,7 +21897,7 @@ A corona is a thing in Preserve. the corona is fixed in place. description is "I
 
 a-text of corona is "RYRYYR". b-text of corona is "RYRGYR". parse-text of corona is "x[sp]-[sp]x[sp]o[sp]-[sp]x". corona is cheat-spoilable.
 
-the racoon is an animal. description is "It looks at you trustingly, seeming to understand you rescued it.". "A racoon sits up alertly here. It has a lit tail."
+the racoon is a neuter animal. description is "It looks at you trustingly, seeming to understand you rescued it.". "A racoon sits up alertly here. It has a lit tail."
 
 a-l-t is part of the racoon. a-l-t is undesc and amusing. printed name of a-l-t is "a lit tail". understand "lit/ tail" as a-l-t.
 
@@ -21890,7 +21916,7 @@ understand "shorten" as a mistake ("[if thrones are visible]Well--not shorten, b
 
 a-text of thrones is "RYRRYRR". b-text of thrones is "RYPRYRP". parse-text of thrones is "x[sp]-[sp]r[sp]x[sp]-[sp]x[sp]s".
 
-the hornets are plural-named animals. description is "Thankfully, they are not buzzing with intent to sting you.". "Hornets are buzzing around here."
+the hornets are plural-named neuter animals. description is "Thankfully, they are not buzzing with intent to sting you.". "Hornets are buzzing around here."
 
 understand "hornet" as thrones.
 
@@ -21909,7 +21935,7 @@ check taking pines:
 check taking snipe:
 	say "It will follow you when you call."
 
-the snipe is an animal. description is "It has a long needle-like bill.". "A snipe is pacing around here."
+the snipe is a neuter animal. description is "It has a long needle-like bill.". "A snipe is pacing around here."
 
 a-text of pines is "RRYRY". b-text of pines is "RRYRY". parse-text of pines is "x[sp]x[sp]-[sp]x[sp]-".
 
@@ -21930,7 +21956,7 @@ instead of taking nails:
 
 a-text of nails is "RRYYR". b-text of nails is "RRYYR". parse-text of nails is "x[sp]x[sp]-[sp]-[sp]x". nails is cheat-spoilable.
 
-the snail is an animal. description is "It's quite spiky and seems to move faster than your average snail.". "The spiky snail you summoned is slithering impatiently in a circle."
+the snail is a neuter animal. description is "It's quite spiky and seems to move faster than your average snail.". "The spiky snail you summoned is slithering impatiently in a circle."
 
 check scaning imp:
 	say "The settler seems to jump around with the imp a bit before stabilizing. The imp's [if silence-tally is 0]patience is legendary and butlery--but it's moving rangily[else if imp1 is in lalaland]patience is legendary and butlery[else if imp3 is in lalaland]It has a butlery air as it moves rangily[else if imp2 is in lalaland]patience feels legendary as it moves rangily[end if].";
@@ -22181,7 +22207,7 @@ after fliptoing a fruit (this is the check minimum fruits and score rule) :
 
 to check-fruit-min:
 	increment fruits-flipped;
-	d "[fruits-flipped] fruits flipped so far.";
+	d "[fruits-flipped] fruits flipped so far, [cur-score of others] total score, delta = [cur-score of others - fruits-flipped].";
 	if fruits-flipped > 20:
 		min-up;
 
@@ -22689,7 +22715,9 @@ perp-check is a truth state that varies.
 to say two-of-three:
 	say "[if searcher is not reflexed]prep and review[else if viewer is not reflexed]research and prep[else]review and research[end if]"
 
-perp-priv is a privately-named thing.
+perp-priv is a privately-named thing. it is reflexive. description is "bug".
+
+understand "perp-priv" as perp-priv when debug-state is true.
 
 check going north in Gates Stage:
 	if player does not have passport:
@@ -22883,10 +22911,9 @@ check fliptoing when gate-level is 2:
 
 to upgrade-passport:
 	if gate-level is 2:
-		say "[line break]Man! Another things you just out and learned stuff and didn't get bogged down in mental gymnastics. You feel brief guilt until you realize you've paid your dues. SOMEthing should be simple, SOMEtime.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies [n-gates], now[if cur-score of others < max-score of others]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
+		say "Man! Another time you just out and learned stuff and didn't get bogged down in mental gymnastics. You feel brief guilt until you realize you've paid your dues. SOMEthing should be simple, SOMEtime.[paragraph break]'Gray date? Great day!' you tell yourself. You feel ready to tackle what lies [n-gates], now[if cur-score of others < max-score of others]. You wonder if you could've helped Curtis a bit more, but that's totally up to you[end if].";
 	else if gate-level is 1:
-		say "[line break]Well! That was simpler than a lot of other things you had to figure out. Perhaps Elvira was right that anagram puzzles can make people overthink much, even if she was wrong about everything else. You feel almost ready to tackle what lies [n-gates], now. Even if you didn't get anywhere, the failure might teach you something.";
-	reg-inc;
+		say "Well! That was simpler than a lot of other things you had to figure out. Perhaps Elvira was right that anagram puzzles can make people overthink much, even if she was wrong about everything else. You feel almost ready to tackle what lies [n-gates], now. Even if you didn't get anywhere, the failure might teach you something.";
 	continue the action;
 
 chapter reviewing
@@ -23278,7 +23305,7 @@ check closing slot:
 
 The basket of blackberries is a fruit. description is "It's from Bickerers['] Lab, wherever that is."
 
-the ENGARO orange is a fruit in Scape Space. "An orange lies here next to the tarred trader. It looks like you could read the orange to find its brand name."
+the ENGARO orange is a reflexive fruit in Scape Space. "An orange lies here next to the tarred trader. It looks like you could read the orange to find its brand name."
 
 description of ENGARO is "Well, it's orange. And it's branded, so you can READ it to see what lovely company produced it."
 
@@ -24374,11 +24401,7 @@ blaster	"You fixed the blaster. Now maybe try the turbos."
 Ed Yerg	"Now Ed's not greedy, [if flowerpot is in lalaland]and you gave him a gift, he's happy[else]maybe you can give him a priceless gift of sorts. From Daltho[end if]." [end TOWERS]
 b-b	"You've cut it down enough. Leave some for next year's crop." [start OTTERS]
 medals	"The medals are in good enough shape. They will help you speed up when you need to."
-Merle	"You can't take on Merle and Elmer by yourself--you need some allies."
-ocelots	"[this-animal]."
-leopard	"[this-animal]."
-badger	"[this-animal]."
-satyr	"[this-animal]." [end OTTERS]
+Merle	"You can't take on Merle and Elmer by yourself--you need some allies." [end OTTERS]
 
 to say other-let:
 	say "Try either of the other letters. With variety, Leo and Rand will take the hint"

@@ -469,14 +469,15 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "jar"	136472146	--	pills	--	"You suspect it's what's in the jar that's important."
 "spill"	330360449	--	pills	--	"You seem to be fumbling what to do with the pills."
 "scrawl"	364539784	--	scrawl	--	"It's probably not just any scrawl. What the scrawl says may be important."
-"sing"	242774022	--	gins sign	--	"Hm, the sign doesn't strictly disallow THAT."
-"tumbler"	557653634	--	tumblers	--	"You can't pick out which tumbler to do something to. But you're annoyed by their tips."
+"tumbler"	557653634	--	tumblers	--	"You [if tumblers are reflexed]already dealt with the tumblers[else]can't pick out which tumbler to do something to. But you're annoyed by their tips, which make you see red[end if]."
 "stumbler"	653927600	--	tumblers	--	"Someone looks at you funny. 'What are you muttering?' [if tumblers are reflexed]You already spit, anyway[else]Maybe it's the writing on the tumblers, instead[end if]."
 "jukebox"	540345182	--	jukebox	--	"You can't change the jukebox. The bad music has seeped into it[if tunes are reflexive]. But maybe you can put it out of commission[else]. It's already out of commission for now[end if]."
 "remap"	360858842	--	jukebox	--	"You can't change the bad music selection[if tunes are reflexive]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
 "unset"	501203408	--	jukebox	--	"You can't change the bad music selection[if tunes are reflexive]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
 "lode"	277001614	olde lode	--	--	"[locname]." [OLDE LODE]
 "canoe"	292259597	--	canoe	--	"The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river."
+"boat"	198069318	fighter freight	--	--	"[dest-esc]."
+"boats"	294343284	fighter freight	--	--	"[dest-esc]."
 "hoser"	421038754	hero's shore	--	--	"You give a few Er-ohs, oh-ers, Or Ehs. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats." [HERO'S SHORE]
 "hero"	324764788	hero's shore	--	--	"You give an Er-oh, oh-er, or Eh. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats."
 "soak"	225747539	Hero's shore	--	--	"[raft-is]."
@@ -498,7 +499,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "pike"	307198092	--	pikes	--	"[all-fish]."
 "carp"	187983165	--	carps	--	"[all-fish]."
 "tutor"	471002223	--	reward drawer	--	"[if player is in range]Deal with the attackers, not the trout[else if wrap is off-stage]You try to describe how to fight, but that's not it[else]You can't find any other way to describe fighting[end if]."
-"haunter"	529723362	--	--	is-hauntable rule	"[if haunter is off-stage]Hmm, but how to dig up the haunter[to-dig].[else]The haunter needs to be dealt with otherwise.[end if]"
+"haunter"	529723362	--	--	is-hauntable rule	"[if haunter is off-stage]You start randomly digging, but you need something more specific[to-dig].[else]The haunter needs to be dealt with otherwise.[end if]"
 "assuage"	462435186	--	--	h-assuaged rule	"Don't oversell it! Just take the haunter to where it was probably the walleyes who buried the ruby."
 "howler"	486513400	--	haunter	--	"Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE."
 "lean"	252715274	lean lane	--	--	"[locname]." [LEAN LANE]
@@ -563,6 +564,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "end"	217742706	end den	--	--	"[locname]." [END DEN]
 "scumant"	458665855	scum ant sanctum	--	--	"[locname]." [SCUM ANT SANCTUM]
 "scum"	284460511	scum ant sanctum	--	--	"The ant may be scum, but, well, it's DEFINITELY an ant."
+"ant"	174205344	scum ant sanctum	--	--	"That's close. Something brutal and direct."
 "tenfold"	475534036	tenfold	--	--	"[locname]." [DEN LOFT]
 "loft"	257791330	tenfold	--	--	"[locname-part]."
 "den"	217742706	tenfold	--	--	"[locname-part]."
@@ -774,6 +776,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "ly"	176173091	--	--	degen-true rule	"Yup, that's the idea here in Otters[if power-back is true], even with your powers back[end if]."
 "bare"	233736635	--	b-b	--	"[adj-needs-ly]?"
 "cinder"	367064940	--	cinders	--	"You'll need to change more than one cinder."
+"cinders"	463338906	--	--	cinders-gone rule	"The cinders are gone for good."
 "bulwark"	425718123	--	bulwark	--	"The whole bulwark? No, you [if power-back is false]couldn't do much with it at full strength[else]can't do much[end if]. [if Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if power-back is false] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to, well, a bulwark."
 "bossy"	407678666	--	t-bossily	--	"[adj-needs-li]?"
 "bossi"	330312260	--	t-bossily	--	"[adj-needs-ly]?"
@@ -866,7 +869,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "hydra"	268182261	--	--	hydra-know rule	"[if player is in Inclosure]The hydra's toast. Elvira is not. Deal with her[else]You try, but that doesn't do anything with, or to, the hydra to the west[end if]."
 "pine"	323172422	--	pines	--	"So many pines, hard to pick one. Might as well take care of them all."
 "nail"	169902011	--	nails	--	"So many nails, hard to pick one. Might as well take care of them all."
-"raccoon"	343135453	preserve	--	--	"[if corona is visible]The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important[else]The rac(c)oon's fine as it is, with one C or two[end if]."
+"raccoon"	343135453	preserve	--	--	"[if corona is visible]The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important[else]No need to tweak the rac(c)oon again. It's fine as is[end if]."
 "ocelot"	452440705	--	ocelots	--	"The ocelots are hanging too close together for you to pick off one[if ocelots are reflexed] and make him less cool[end if]."
 "throne"	496782314	--	thrones	--	"There's more than one throne, but it doesn't matter, really, for what you need to do."
 "weltish"	 571213850	--	whistle	--	"You [if whistle is reflexed]already learned to play the whistle, so you don't want to change it[else]probably need to learn to play the whistle right, instead[end if]."
@@ -1603,6 +1606,9 @@ to say no-dsk:
 to say patron:
 	say "They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that"
 
+to say dest-esc:
+	say "Destroying the boat would be a bad idea. You need to escape it"
+
 to say raft-is:
 	say "No, best concentrate on what the raft is"
 	
@@ -1780,9 +1786,8 @@ to say fix-boat-parts:
 			say "You've fixed part of the boat's mechanical bits. Maybe fix the other, instead of the whole boat, instead"
 
 this is the serpent-hiding rule:
-	if player is in limits and serpent is in lalaland:
-		the rule succeeds;
-	the rule fails;
+	if player is in limits and serpent is in lalaland, the rule succeeds;
+	the rule fails.
 
 to say flow-fine:
 	say "The flowerpot is just fine--[if crocus is reflexed]and so is the crocus in it[else if crocus is not in flowerpot]it's the crocus that needs help[else if limits are unvisited]you haven't found anything to put in it yet[else]it needs something in it, though[end if]"
@@ -1811,6 +1816,10 @@ this is the cppc rule:
 
 to say adj-needs-ly:
 	say "Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh"
+
+this is the cinders-gone rule:
+	if cinders are in lalaland, the rule succeeds;
+	the rule fails.
 
 to say adj-needs-li:
 	say "Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here"
