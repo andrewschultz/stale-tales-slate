@@ -3394,6 +3394,7 @@ to solve-region (sre - a region):
 	repeat with po running through portals in Strip of Profits:
 		if go-region of po is sre:
 			move po to lalaland;
+		check-the-store po;
 	if sre is oyster and pills are in lalaland:
 		now you-used-pills is true;
 	item-warp;
@@ -3423,11 +3424,19 @@ to solve-region (sre - a region):
 	if tokers-home is true:
 		say "The tokers packed up and went home. Just as well. You'd hate to have had to explain your journeys to them.";
 
+to check-the-store (po - a portal):
+	repeat through table of stores anagrams:
+		if the-to entry is po:
+			if the-from entry is not in lalaland:
+				d "Moving [the-from entry] to lll.";
+				now the-from entry is in lalaland;
+				break;
+
 eng-change is a truth state that varies.
 
 to see-about-patcher:
-	if number of kayoed regions >= 2 and chapter patcher is off-stage:
-		say "You think, with a gay woot, 'Yow, got a way to go.' But then a voice -- 'Goal's a slog? Covert vector!' You look over and notice something behind the megaton magneto-montage. Something that wasn't there before.";
+	if number of solved regions >= 2 and chapter patcher is off-stage:
+		say "You think, with a gay woot, 'Yow, got a way to go.' But then a voice -- 'Goal's a slog? Covert vector!' You look over and notice something behind the megaton magneto-montage. Something that wasn't there before. It's...a chapter patcher.";
 		now chapter patcher is in Strip of Profits;
 
 definition: a region (called reg) is kayoed:
@@ -3535,6 +3544,8 @@ carry out zaping:
 		say "[reject]" instead;
 	if chapter patcher is not in strip of profits:
 		say "You don't have anything that can zap anything." instead;
+	if noun is tokers or noun is nestor:
+		say "You're a text adventurer, not a drug enforcement agent." instead;
 	if noun is not a sto and noun is not a portal:
 		say "The patcher can only zap stores or portals." instead;
 	if noun is store h:
@@ -3542,9 +3553,7 @@ carry out zaping:
 			say "You sense that, with Elvira defeated, the patcher wouldn't work to wipe out Store H. Perhaps there isn't enough evil to defeat, so the patcher won't work." instead;
 		say "Store H isn't critical. Yet. Plus there are too many people around. You should maybe look elsewhere." instead;
 	if noun is Store K or noun is Store N:
-		say "As you point the patcher at [noun], you hear cries of 'No, man! Don't harsh [if noun is Store K]our[else]my[end if] buzz!'[paragraph break]There are people in there. The stores may not be where it's at, according to Gunter, so that's even less reason to disintegrate others." instead;
-	if noun is tokers or noun is nestor:
-		say "You're a text adventurer, not a drug enforcement agent." instead;
+		say "As you point the patcher at [noun], you hear cries of 'No, man! Don't harsh [if noun is Store K]our[else]my[end if] buzz!'[paragraph break]There are people in there. [noun] may not be where it's at, according to Elmo, so that's even less reason to disintegrate it." instead;
 	if noun is a portal:
 		say "The patcher obliterates the [noun]. Wow!";
 		now go-region of noun is bypassed;
@@ -3626,24 +3635,23 @@ check entering a portal:
 					say "The oyster is wide enough that you look back at the patcher and feel relieved you can just RETRY and zap your way through in case you run out of gas.";
 				else:
 					say "The oyster looks very wide but not tall--it's quite possible there's a ton to do. It's not particularly magical or scary--not as much as [if store w is visible]store W[else]the towers[end if], but you may want to warm up your skills somewhere else first. Proceed anyway?";
-					unless the player consents:
+					unless the player yes-consents:
 						say "You decide to look around a bit more." instead;
-	let try-recover be false;
-	if last-loc of grn is visited:
-		now try-recover is true;
 	choose row with por of noun in table of warps;
 	say "[go-text entry]";
 	if noun is otters-x and bleary barley is unvisited:
 		say "Hmm, Elvira may be behind whatever drained you. But you don't know what she's up to. It might be a good idea to ask about her, if people are around.";
 		pad-rec "asking";
-	if last-loc of grn is unvisited:
+	let try-recover be false;
+	if last-loc of grn is visited:
+		now try-recover is true;
+	else:
+		d "Can't try recovering items yet.";
 		add-errs grn;
 		if grn is others:
 			if epilogue rule is a final response rule listed in the Table of Final Question Options:
 				choose row with final response rule of epilogue rule in the Table of Final Question Options;
 				blank out the whole row;	[blank out EPILOGUE when you are playing the epilogue]
-	else:
-		recover-items;
 	if grn is towers and last-loc of grn is not trefoil: [it's possible but not likely you can cheat your way past with constant retries otherwise]
 		d "REPO!";
 		move player to last-loc of grn, without printing a room description;
@@ -7787,11 +7795,15 @@ carry out retrying:
 		if retried is true:
 			say "This is the place you go after retrying--as you probably know. So nothing happens." instead;
 		say "Nothing happens. Perhaps this is where you'd be sent back to [if Loather Rathole is visited or Posh Hops Shop is visited or Danger Garden is visited or Same Mesa is visited or Danger Garden is visited]after going somewhere like you've been[otherwise]once you're able to look around[end if]." instead;
+	if mrlp is demo dome:
+		say "There's nothing to keep track of, here. Just explore around." instead;
+	if mrlp is others:
+		say "This is the only region left to take care of." instead;
 	if Strip of Profits is unvisited:
 		say "You haven't been to the Strip of Profits yet, whatever that is, and you suspect you can't just jump ahead. Besides, you don't want to risk retrying your manor." instead;
 	if mrlp is otters:
 		say "You shouldn't need to go anywhere else[if number of bypassed regions > 0]. While you destroyed some regions with the patcher, you can't revisit them without restarting[end if]. Are you sure?";
-		if the player consents:
+		if the player yes-consents:
 			say "Okay, back to the Strip of Profits.";
 		otherwise:
 			say "Okay, back to the endgame." instead;
@@ -8006,6 +8018,8 @@ carry out fliptoing:
 					reg-inc;
 			if the-from entry is vanishing and the-from entry is the-to entry:	[this should work unless you flip an item twice and it vanishes 2nd time. Check.]
 				now the-from entry is in lalaland;
+			if taked entry is true or player has the-from entry:
+				now player has the-to entry;
 			if there is a roomjump entry:
 				if roomjump entry is Strip of Profits:
 					solve-region the map region of the location of the player;
@@ -8013,8 +8027,6 @@ carry out fliptoing:
 				move player to roomjump entry;
 				consider the show blues rule; [for debugging]
 				consider the process random dialogue rule instead;
-			else if taked entry is true or player has the-from entry:
-				now player has the-to entry;
 			else if the-from entry is part of the diorama:
 				now the-to entry is part of the diorama;
 				now diorama-flip is true;
@@ -8144,7 +8156,7 @@ table of troves anagrams
 the-from	the-to	right-cmd (topic)	right-word	the-msg	taked	hashkey	dubdip	roomjump
 Pa Egg Pea	Pa Egg Pea	"gape"	"gape"	"You empty your mind to let the advice in Pa, Egg, Pea sink in. It--makes sense, if you don't think too hard. [eicond]."	false	244059588	"You already totally grok Pa, Egg, Pea."
 cold	heat	"hate"	"hate"	"You feel a rife fire in your heart. [paragraph break]'How neat! Hate won heat now!' you think to yourself.[paragraph break]You manage to stay toasty but you lose focus as you switch too soon from thoughts of goin['] cold to gold coin. A bogeyman takes your moneybag![purse-gone] Your thoughts are really racing now. Racing so fast you can probably do the wrong thing several times before you get it right.[paragraph break]You may need that practice, because right now you don't want your money back as much as you should."	false	270386244	[start troves flip]
-heat	truffle	"care"	"care"	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, he can't have ducked out in plain sight. You thought you heard a door slam, just out of view. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical to move on."	false	234323315	--	Used Lot
+heat	truffle	"care"	"care"	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, he can't have ducked out in plain sight. You thought you heard a door slam, just out of view. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical to move on."	true	234323315	--	Used Lot
 stop post	stop post	"spot"	"spot"	"There he is! You don't let on you've spotted him, but you walk near, notice him jump, and yell the magic words.[paragraph break]'Setup, stupe!' Wop! Pow! Pop! Wow! An upset! Your smackings are apt food for a footpad. He drops your purse--[i]though at that moment you realize the self-reliance you gained is better than any money.[r] Still, during all this feeling good about yourself, you let him get away. 'You won't find me in the cellar!' he yells. By then, a large bee has buzzed in and it makes you forget where the cellar entrance is."	false	355202520
 babblings	babblings	"observe"	"observe"	"Cads. Clues. Cul-de-sacs. Once you really pay attention, you see how observing them detachedly gets you closer to what you really want. You're in the zone, now. Something may or may not be moving by the stop post. Time to hone your observing."	false	637146289	"You observe that further observation would be redundant."
 bee's head	bee's head	"reason"	"reason"	"You recognize that small bumblebees flying don't make any sense. Then, therefore, neither should a much bigger one, due to the scaling paradox. The bee lets out a snore from the reason[if what-a-bee is reflexed]. You've already disposed of the bee emotionally, but hey, you might as well be sure of things[otherwise]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."	false	454851781	"You already reasoned. It stands to reason a second reasoning would be less valuable."
@@ -8345,7 +8357,7 @@ t-suddenly	t-suddenly	"suddenly"	"suddenly"	"The macks['] timing is ruined. They
 t-stupidly	t-stupidly	"stupidly"	"stupidly"	"The macks reiterate how they don't let duty slip, but it's way too heavy-handed. Gretta has to laugh a bit."	false	628150776
 t-martially	t-martially	"martially"	"martially"	"The men, in an effort to prove their worth, begin talking about that most manly of subjects, war. They talk very loudly and begin discussing cool ammunition and weapons and blood and guts. And shoot-em-up games. Gretta yawns conspicuously, clamming the macks up."	false	531864386 [begin MACKS 9]
 t-sincerely	t-sincerely	"sincerely"	"sincerely"	"Gretta nods as the macks make a complete u-turn and discuss what they really think of celery. While it's probably good, long-term, for them to be more sincere, their immediate aims have been foiled."	false	746289017
-t-sobbingly	t-sobbingly	"sobbingly"	"sobbingly"	"The macks change up the mood, but it is for the worst. One starts crying, then others do--and it'spathetic enough, their plucky efforts to persuade without logic fall to pieces."	false	530137500
+t-sobbingly	t-sobbingly	"sobbingly"	"sobbingly"	"The macks change up the mood, but it is for the worst. One starts crying, then others do--and it's pathetic enough, their plucky efforts to persuade without logic fall to pieces."	false	530137500
 t-tediously	t-tediously	"tediously"	"tediously"	"The macks begin whinging with the same old argument, going dreadfully off-subject, and so forth. Suddenly, their nonsense is less believable, or fun to believe."	false	748843503
 t-wearingly	t-wearingly	"wearingly"	"wearingly"	"They start repeating their arguments, and finally, Gretta draws up the courage to explain it's getting old."	false	645925650
 t-drawlingly	t-drawlingly	"drawlingly"	"drawlingly"	"The macks begin talking slower, and suddenly, their conversational hold is broken. Gretta realizes there's no good way to make home repair discussions more exciting and says so. She looks relieved."	false	592962469 [begin MACKS 10]
@@ -11051,7 +11063,7 @@ check going inside in Strip of Profits (this is the which portal rule) : [we cho
 			if diffic of EP < curdif:
 				now RP is EP;
 				now curdif is diffic of EP;
-		say "[line break]The[if RP is e-s], er, spot[else] [RP][end if] look[if RP is not plural-named]s[end if] le[if number of portals in strip is 2]ss[else]ast[end if] intimidating[if RP is smoke cloud], though maybe not even worth it[end if]--try [if RP is plural-named]them[else]it[end if]?";
+		say "[line break]The[if RP is e-s], er, spot[else if RP is oyster-x] oyster[else] [RP][end if] look[if RP is not plural-named]s[end if] le[if number of portals in strip is 2]ss[else]ast[end if] intimidating[if RP is smoke cloud], though maybe not even worth it[end if]--try [if RP is plural-named]them[else]it[end if]?";
 		if the player consents:
 			try entering RP instead;
 		say "Okay. [if RP is plural-named]They're[else]It's[end if] not going anywhere[unless patcher is off-stage], unless you fry it with the patcher[end if]." instead;
@@ -21196,7 +21208,7 @@ after quipping when qbc_litany is the table of Gretta comments:
 		do nothing;
 	else if current quip is gre-go-quip:
 		terminate the conversation;
-		now the player has medals;
+		now the player wears medals;
 		now Gretta is in lalaland;
 	else if current quip is gre-north-quip or current quip is gre-south-quip or current quip is gre-elv-quip:
 		do nothing;
@@ -21277,7 +21289,6 @@ irately is a truth state that varies.
 
 check fliptoing a mack-idea (this is the NO ESP rule):
 	if debug-state is true:
-		say "The player can't know this yet, but since you're testing, I'll let it fly.";
 		continue the action;
 	if noun is not ment:
 		say "[ly-ish]." instead;
@@ -21299,16 +21310,19 @@ after fliptoing a mack-idea:
 		say "(Wow, you did this without seeing the macks act anything like that!) ";
 	increment macked-out;
 	if macked-out is 1:
-		say "[paragraph break]Gretta looks a bit unsure but less engaged than before, and the macks seem off-stride and unenthusiastic.";
+		say "Gretta looks a bit unsure but less engaged than before, and the macks seem off-stride and unenthusiastic.";
 	otherwise if macked-out is 2:
-		say "[paragraph break]Gretta nods, able to reject the worst of the macks['] bragging, but she still listens, likely out of cognitive dissonance. Strike two for the macks.";
+		say "Gretta nods, able to reject the worst of the macks['] bragging, but she still listens, likely out of cognitive dissonance. Strike two for the macks.";
 	otherwise:
-		say "[paragraph break]Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the bulwark in the first place. But you can't ask that straight out.";
+		say "Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the bulwark in the first place. But you can't ask that straight out.";
 		now macks are in lalaland;
 		now all mack-ideas are in lalaland;
 		try talking to Gretta;
 		continue the action;
 	consider the macks hitting on rule;
+	if debug-state is true:
+		say "NOTE: The player can't have know this yet, but since you're testing, I'll let it fly.";
+		continue the action;
 	continue the action;
 
 macked-out is a number that varies. macked-out is usually 0.
@@ -21799,8 +21813,8 @@ before listing contents while taking inventory: group hintpastries together
 
 instead of taking inventory:
 	if mrlp is troves:
-		if truffle is off-stage:
-			say "Boy! this is a seedy area. You're worried you might get robbed of what you have.";
+		if truffle is off-stage and purse-stolen is false:
+			say "Boy! this is a seedy area. You're worried you might get robbed of what you have.[line break]";
 		if purse-stolen is true:
 			say "All you have is [i]Pa, Egg, Pea[r] and your pedanto-notepad and your settler[if player has fretful truffle] and that fretful truffle[end if]. You still need to get your super purse back." instead;
 	if number of things carried by the player is 0:
@@ -21824,7 +21838,7 @@ instead of taking inventory:
 	if location of player is location of skid:
 		say "[line break]There's also that skid you can push around[if number of things on skid > 0]. It holds [the list of things on skid][end if].";
 	if mrlp is otters and power-back is false:
-		say "You also DON'T have your full powers. You'll need to fix that before hitting the bulwark to the west.";
+		say "[line break]You also DON'T have your full powers. You'll need to fix that before hitting the bulwark to the west.";
 	if player has compass:
 		say "[line break]You also have a compass to tell direction.";
 
@@ -27144,7 +27158,7 @@ carry out otwining:
 		now nounsolve is 2;
 	else:
 		now player has whistle;
-		now player has medals;
+		now player wears medals;
 		now hydra is in lalaland;
 		now parrot is in lalaland;
 		now raptor is in lalaland;
@@ -27768,6 +27782,7 @@ to rej-analyze (x - a thing):
 
 chapter deprefing
 
+[ * removes all prefiguring, for testing purposes]
 deprefing is an action out of world.
 
 understand the command "depref" as something new.
@@ -27780,6 +27795,31 @@ carry out deprefing:
 	else:
 		say "De-prefiguring [list of prefigured things].";
 		now all prefigured things are unfigured;
+	the rule succeeds;
+
+chapter srqing
+
+[ * solve region quick ]
+
+srqing is an action out of world.
+
+understand the command "srq" as something new.
+
+understand "srq" as srqing.
+
+carry out srqing:
+	if mrlp is stores:
+		say "Need to do stores manually." instead;
+	if mrlp is demo dome:
+		say "Unsolvable." instead;
+	if mrlp is otters:
+		now otters is solved;
+		end the story finally saying "A MONSTER ROTS. AMEN.";
+		follow the shutdown rules instead;
+	if mrlp is others:
+		end the story finally saying "A Giddy Route: You Did Great";
+		follow the shutdown rules instead;
+	solve-region mrlp;
 	the rule succeeds;
 
 chapter twiding

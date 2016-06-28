@@ -1,0 +1,282 @@
+###############################
+#
+#reg-roi-patcher-retry.txt
+#
+#regression test for exhausting the patcher and retry
+#
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+
+* _to-strip
+
+>purloin settler
+>gonear carven cavern
+>staple
+>stapler
+>put staple in stapler
+>staple wall
+>in
+
+* _cheat-routes
+
+>gonear clipper
+>behind
+>between
+
+Strip of Profits
+
+>score
+2/18
+
+* _cheat-troves
+
+>gonear fiefco
+>ignore
+>bolster
+>last
+>resign
+
+Strip of Profits
+
+>score
+4/21
+
+* _cheat-presto
+
+>gonear hacks' shack
+>purloin usb
+>bus
+
+>score
+1/33
+
+* _cheat-oyster
+
+>gonear tenfold
+>prepay
+>derail
+>pull lever
+>redial
+
+Trips Strip
+
+>score
+3/39
+
+* _cheat-towers
+
+>gonear mislit limits
+>spectacular
+
+Trips Strip
+
+>score
+1/45
+
+########################################################Big Retry Test
+
+#######################wrong/tricky regions
+
+* unretryable-regions
+
+>retry
+You haven't been to the Strip of Profits yet, whatever that is, and you suspect you can't just jump ahead. Besides, you don't want to risk retrying your manor.
+>terry
+You haven't been to the Strip of Profits yet, whatever that is, and you suspect you can't just jump ahead. Besides, you don't want to risk retrying your manor.
+
+>demo dome
+>retry
+There's nothing to keep track of, here. Just explore around.
+>undo
+>undo
+
+>gonear rustic citrus
+>retry
+This is the only region left to take care of.
+>undo
+>undo
+
+>gonear trips strip
+
+>a5
+>seed 1
+>in
+>barely
+>reedily
+>w
+>z
+>z
+>z
+>z
+>z
+>z
+>bossily
+>nastily
+>blearily
+>1
+>3
+>i
+You are also wearing some medals
+>retry
+You shouldn't need to go anywhere else
+>i
+!You are also wearing some medals
+>enter otters
+>i
+You are also wearing some medals
+
+#######################actual real regions
+
+* _retryable-regions
+
+>{include} _to-strip
+
+>routes
+>enter routes
+>inside
+>x toils
+>out
+>past
+>despite
+>out
+>across
+>opposite
+>i
+  some mushrooms
+  some pipe soot
+  a snoop spoon
+>retry
+>i
+!  some mushrooms
+!  some pipe soot
+!  a snoop spoon
+>enter routes
+>i
+  some mushrooms
+  some pipe soot
+  a snoop spoon
+>retry
+
+>troves
+>enter troves
+>hate
+>care
+>i
+  Pa, Egg
+  fretful truffle
+>retry
+>i
+!  Pa, Egg
+!  fretful truffle
+>enter troves
+>i
+  Pa, Egg
+  fretful truffle
+>retry
+
+>presto
+>enter spot
+>s
+>drat
+>rats
+>n
+>umph
+>phooey
+>i
+  an onyx censer
+  a dart
+You are also wearing a decorative star.
+>retry
+>i
+!  an onyx censer
+!  a dart
+!You are also wearing a decorative star.
+>enter spot
+>i
+  an onyx censer
+  a dart
+You are also wearing a decorative star.
+>retry
+
+>oyster
+>enter oyster
+>get stein
+>get pills
+>i
+  a stein
+  a jr. jar of pills
+>retry
+>i
+!  a stein
+!  a jr. jar of pills
+>enter oyster
+>i
+  a stein
+  a jr. jar of pills
+>retry
+
+>seed 1
+>towers
+>enter towers
+>gone
+>wined
+>bleak
+>yonder
+>get tarts
+>get toaster
+>i
+  a Rosetta Toaster
+  a pack of start tarts (cold)
+>retry  
+>i
+!  a Rosetta Toaster
+!  a pack of start tarts (cold)
+>enter towers
+>i
+  a Rosetta Toaster
+  a pack of start tarts (cold)
+>retry  
+
+########################################################Big Patcher Test
+
+* plow-thru
+
+>{include} _to-strip
+>{include} _cheat-routes
+>{include} _cheat-troves
+>get patcher
+It'd be kind of hazardous to carry around. You can just ZAP whatever's left.
+>zap store k
+As you point the patcher at Store K, you hear cries of "No, man! Don't harsh our buzz!"
+There are people in there. Store K may not be where it's at, according to Elmo, so that's even more reason not to disintegrate it.
+>zap store n
+As you point the patcher at Store N, you hear cries of "No, man! Don't harsh my buzz!"
+There are people in there. Store N may not be where it's at, according to Elmo, so that's even more reason not to disintegrate it.
+>tokers
+>nestor
+>zap nestor
+You're a text adventurer, not a drug enforcement agent.
+>zap tokers
+You're a text adventurer, not a drug enforcement agent.
+>zap store p
+>undo
+>presto
+>zap spot
+>zap store y
+>undo
+>oyster
+>zap oyster
+>zap store w
+>undo
+>towers
+>zap towers
+>zap store t
+The energy you felt from the patcher seems to bounce off Store T and zap you back. You'll have to be a tough customer to enter Store T.
+>otters
+
+>zap otters
+
+#################
+#suddenly (3-8)/cattily (1-3) give extra space
