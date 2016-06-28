@@ -1,6 +1,6 @@
 ###############################
 #
-#reg-roi-manor-presto.txt
+#reg-roi-presto.txt
 #
 #regression test for trying ways through presto
 #also includes general tries at magic or whatever

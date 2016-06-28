@@ -1235,7 +1235,10 @@ carry out gotoing:
 	if noureg is lalaland:
 		say "You have disposed of what you're trying to get to." instead;
 	if last-loc of noureg is unvisited:
-		say "You haven't made it to that region, yet." instead;
+		if mrlp is noureg:
+			d "You probably used a debug trip to get here.";
+		else:
+			say "You haven't made it to that region, yet." instead;
 	if noureg is not mrlp:
 		say "You can't jump across game regions." instead;
 	if noun is strip and mrlp is not stores:
@@ -3683,7 +3686,7 @@ chapter say "[reject]" and lalaland
 
 lalaland is a privately-named room. "[bug-report]"
 
-understand "lll" as lalaland when debug-state is true.
+understand "ll" as lalaland when debug-state is true.
 
 lll is an unsolved region. lalaland is in lll.
 
@@ -10218,7 +10221,7 @@ understand "scanner" as settler.
 
 a-text of letters settler is "RYRRRYR". b-text of letters settler is "RGPPRYR". parse-text is "[bug-report]".
 
-description of the letters settler is "It's shaped like a hand-held vacuum, with an output display on the front. Weird receptors can SCAN things. Below a colorful logo, you also notice a button labeled TEACH/CHEAT. I guess it doesn't wish to judge.[paragraph break]You also feel a switch, some sort of slider and a decal on the backside."
+description of the letters settler is "It's shaped like a hand-held vacuum, with an output display on the front. Weird receptors can SCAN things. Below a colorful logo, you also notice a [if cheat-on is true]glowing[else]dark[end if] button labeled TEACH/CHEAT. I guess it doesn't wish to judge.[paragraph break]You also feel a switch, some sort of slider and a decal on the backside."
 
 check examining settler (this is the examine to scan under duress rule) :
 	if rifle is visible:
@@ -10612,6 +10615,8 @@ to say verb-list:
 	if player has settler:
 		say "[2da]SCAN various things to see if they can be changed and how.";
 		say "[2da]Settler shortcuts: la=recall what you scanned last, sl=turns slider on, sy=scan with cheat on, sn=scan with cheat off, ss=shake settler to see what needs to change.";
+	if player has whistle:
+		say "[2da]PLAY the whistle.";
 	verbsplain "xray";
 	verbsplain "go to";
 	verbsplain "rove over";
@@ -11822,7 +11827,7 @@ chapter rs (private routes)
 
 rs are privately-named scenery in Same Mesa. understand "routes" as rs. printed name of rs is "routes". "Staring at them makes you lose your sense of direction even further."
 
-understand "ouster" as a mistake ("You're the ouster here, trying to get by the routes.") when player is in Same Mesa.
+understand "ouster" as a mistake ("You're the ouster here, trying to get by the routes.") when mrlp is routes.
 
 instead of doing something with rs:
 	if action is procedural, continue the action;
@@ -12628,7 +12633,7 @@ book Loather Rathole
 
 Loather Rathole is a room in Troves. "Under the stinky tin sky, [if heat is visible]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[otherwise]you feel nothing but bone-chilling poverty here. [i]Heat[r]. It's what you need. All you can think of[end if]. Of course, there are plenty of potholes about.". last-loc of troves is Loather Rathole.
 
-understand "real hot" as a mistake ("You need[if cold is in lalaland]ed[end if] a strong concrete emoiton to get hot.") when player is in rathole.
+understand "real hot" as a mistake ("You need[if cold is in lalaland]ed[end if] a strong concrete emotion to get hot.") when player is in rathole.
 
 check looking in Loather Rathole for the first time:
 	now the player has Pa Egg Pea.
@@ -12690,7 +12695,7 @@ understand "care" as a mistake ("You find yourself boohooing over mumbo-jumbo ab
 
 understand "race" as a mistake ("Races scare you without the proper motivation from inside.") when player is in Loather Rathole and cold is visible.
 
-understand "acre" as a mistake ("That farm-boy terminology won't help show you give a darn in the big city.") when player is in Loather Rathole and cold is not visible.
+understand "acre" as a mistake ("That farm-[if player is male]boy[else]girl[end if] terminology won't help show you give a darn in the big city.") when player is in Loather Rathole and cold is not visible.
 
 understand "hate" as a mistake ("You don't want to get burnt up with hate[if heat is visible], and that won't get back your super purse like racing after that guy[end if].") when cold is not visible.
 
@@ -12787,8 +12792,6 @@ check fliptoing stop post:
 		say "That should work, but you--your eyes are wandering now. You're not taking it all in. The post--and some voices you hear--are too verbose.";
 		preef stop post;
 		do nothing instead;
-
-understand "observe" as a mistake ("You already did all the general observing you needed.") when player is in Used Lot and babblings are not in Used Lot.
 
 a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop post is "s[sp]x[sp]o[sp]x". stop post is parse-spoilable.
 
@@ -12920,7 +12923,7 @@ a spider is scenery in Pallid Li'l Pad. "You're don't know whether to crush it o
 
 a-text of a spider is "RYRRYYR". b-text of a spider is "RYRRYYP". parse-text of a spider is "x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]r".
 
-understand "broomed" as a mistake ("You are not rich and consequential enough to snap your fingers and watch your own mess get cleaned up. Yet.") when player is in Pallid Li'l Pad.
+understand "broomed" as a mistake ("You are not rich and consequential enough to snap your fingers and watch your own mess get cleaned up. Yet.") when player is in Pallid Li'l Pad and diapers are in lalaland.
 
 after fliptoing diapers:
 	now printed name of Pallid Li'l Pad is "Boredom Bedroom";
@@ -13317,7 +13320,7 @@ check scaning playbill for the first time:
 
 a-text of playbill is "RYRYRR". b-text of playbill is "RYRYRR". parse-text of playbill is "x[sp]-[sp]x[sp]-[sp]x[sp]x".
 
-understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when player is in FiefCo Office.
+understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when player is in FiefCo Office and playbill is in FiefCo office.
 
 instead of examining song:
 	try listening instead;
@@ -13336,7 +13339,7 @@ instead of doing something with eddie's song:
 		continue the action;
 	say "You can just listen to Eddie's song for evocative details and stuff."
 
-understand "signer" as a mistake ("No. Your eyes redden as you remember you are already a signer. The singer makes you want to do something else.") when player is in FiefCo Office.
+understand "signer" as a mistake ("No. Your eyes redden as you remember you are already a signer. The singer makes you want to do something else.") when player is in FiefCo Office and playbill is in FiefCo office.
 
 understand "resign" as a mistake ("Wrong place for that. If you must, QUIT instead.") when player is not in FiefCo Office.
 
@@ -13667,7 +13670,7 @@ after printing the locale description for burnt brunt when leaf-clue is false:
 
 understand "mad" as a mistake ("How can you feel mad, looking at such a beautiful work of nature?") when player is in Burnt Brunt.
 
-understand "cafe" as a mistake("You don't need caffeine or food here.") when player is in Burnt Brunt.
+understand "cafe" as a mistake ("You don't need caffeine or food here.") when player is in Burnt Brunt.
 
 a mad dam is useless scenery in Burnt Brunt. "The mad dam pours water on itself. The waterfall's flaws alter as you watch, though you can't do much with it. Beautiful in its own way."
 
@@ -14121,11 +14124,11 @@ to say lrblab:
 
 chapter whassuping
 
-understand "asswhup" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And violence isn't how to get rid of them.[else if Leo is washed up or Rand is washed up]You don't exactly have a physical advantage here.[otherwise]No chance.[end if]") when Leo is visible
+understand "asswhup" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And you'll need to move on from them, but not with violence.[else if Leo is washed up or Rand is washed up]You don't exactly have a physical advantage here.[otherwise]No chance.[end if]") when wzup is visible
 
-understand "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And violence isn't how to get rid of them.[else if Leo is washed up or Rand is washed up]It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the dumpster.[otherwise]Leo and Rand won't give you the time to look in the dumpster for a spare can to put it in.[end if]") when Leo is visible
+understand "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And you'll need to move on from them, but not with violence.[else if Leo is washed up or Rand is washed up]It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the dumpster.[otherwise]Leo and Rand won't give you the time to look in the dumpster for a spare can to put it in.[end if]") when wzup is visible
 
-understand "whassup" as a mistake ("You probably want to TALK to people instead. Well, most of the time.") when Leo is not visible.
+understand "whassup" as a mistake ("You probably want to TALK to people instead. Well, most of the time.") when wzup is not visible.
 
 the wzup is a privately-named reflexive thing. Leo carries the wzup. description of wzup is "bug".
 
@@ -14156,7 +14159,7 @@ book Austerer Treasure
 
 Austerer Treasure is an innie room in presto. Austerer Treasure is west of Grey Gyre. "[if ye hoop is visible]This room's pretty barren. I mean, a lot of treasure rooms generally get looted of unicorns['] coin urns and all before text adventurers without weapons make it there, but man. All that remains is an ancient-looking hoop about nine feet up labeled YE HOOP.[paragraph break]Looking at how it's out of reach sort of makes you want to give up, or maybe just pretend to give up and maybe something'll turn up[else]You've completely looted this place[end if]."
 
-understand "ooph" and "phoo" as a mistake ("Those sound almost like the sort of grunts that would help you reach the hoop, but they don't quite work.") when player is in austerer treasure and hoop is in austerer treasure.
+understand "ooph" and "phoo" as a mistake ("That sounds almost like the sort of grunt that would help you reach the hoop, but it doesn't quite work.") when player is in austerer treasure and hoop is in austerer treasure.
 
 understand "pheyoo" as a mistake ("But nothing really smells in here. Perhaps you need something more straightforward and universal.") when player is in Austerer Treasure and ye hoop is in austerer treasure.
 
@@ -14220,14 +14223,6 @@ check fliptoing the computer screen:
 		if hacks' shack is unvisited:
 			say "[one of]You don't have any apparatus to hook the screen up to. Yet. It'd get damaged on your further adventures, even in your super purse. Technology is like that. But you file the idea for later, in case you find some tech den[or]Not yet[stopping].";
 			preef onyx censer instead;
-[	if keyboard is off-stage:
-		now censer is prefigured;
-		say "The screen would be too bulky. You don't have an input device, yet. But that seems right.";
-		pad-rec "flips" instead;]
-	if player is in hacks' shack:
-		if computer screen is visible:
-			if scratch paper is reflexive:
-				say "You can't debug what you haven't even gotten to run." instead;
 
 the keyboard is a thing.
 
@@ -14321,8 +14316,6 @@ check inserting it into (this is the dart-popgun rule):
 
 chapter bingoing
 
-understand "no big" and "nobig" as a mistake ("[if boing is reflexed]Yeah, fixing the gun wasn't that big a deal[otherwise]You try to convince yourself fixing the gun would be no big deal, but really, you probably need a flash of insight[end if].") when player has popgun.
-
 check fliptoing boing mechanism (this is the take popgun to fix it rule) :
 	if player does not have the PG-on-up popgun and popgun is visible:
 		say "(taking the popgun first while you mess with the boing mechanism)[paragraph break]";
@@ -14332,7 +14325,7 @@ book Phat Path
 
 Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Harm's Marsh to the west. [if lawl wall is in Phat Path]There's also a big wall here, blocking the way north. It's got keys hanging from it[otherwise]There's not much left with the wall gone, except for a sign to the north and a shack beyond that[end if]. You can retreat south, too, of course."
 
-understand "ptah" as a mistake ("[if hogs are in phat path]If we were in ancient Egypt, I'd allow that, but we aren't, so I can't.[else]No Egyptian deity comes to your rescue.[end if]") when player is in phat path.
+understand "ptah" as a mistake ("[if hogs are in phat path]If we were in ancient Egypt, I'd allow that, but we aren't, so I can't.[else]No Egyptian deity comes to your rescue. Or needs to.[end if]") when player is in phat path.
 
 check going south in phat path:
 	if hogs are in phat path:
@@ -14496,7 +14489,7 @@ to say increm:
 		now log ons letters are reflexed;
 		now ought letters are reflexed;
 
-understand "so long" and "solong" and "tough" and "later" as a mistake ("'But we ain't ready to go yet, boss!'") when Phat Path is unvisited and Leo is eager.
+understand "so long" and "solong" and "tough" and "later" as a mistake ("'But we ain't ready to go yet, boss!'") when lawl wall is in phat path and Leo is eager.
 
 understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, before you can slog on.") when player is in Phat Path and lawl wall is in lalaland and Leo is in Phat Path.
 
@@ -14794,9 +14787,13 @@ after printing the locale description for shack when shack is unvisited:
 after fliptoing the computer screen:
 	if shack is visited and player is not in shack:
 		say "That screen would go great with the hard drive in the shack. So you go back there.";
-		move player to shack, without printing a room description;
+		go-back hacks' shack;
 		now player has screen;
 	continue the action;
+
+to go-back (rm - a room):
+	say "[bold type]Back at [rm][roman type][paragraph break]";
+	move player to rm, without printing a room description;
 
 the block tying rule is not listed in any rulebook.
 
@@ -14829,7 +14826,13 @@ after fliptoing scratch paper:
 		now rom sticks are in lalaland;
 	continue the action;
 
-check going south in shack:
+check going in shack (this is the maybe lock player in rule):
+	if noun is outside:
+		try going south instead;
+	if noun is not south:
+		if yak is in lalaland:
+			if player has censer or screen is not off-stage:
+				say "Nothing [noun], but you need to just sit and finish things here anyway." instead;
 	consider the shack-south rule;
 	if the rule failed:
 		do nothing instead;
@@ -14837,25 +14840,37 @@ check going south in shack:
 this is the shack-south rule:
 	if skid is not in shack and disk is not in shack:
 		the rule succeeds;
-	if yak is in lalaland:
-		if player has onyx censer:
-			say "Hmm. You probably just need to fiddle with the censer, then you can get going.";
-			the rule fails;
-		if computer screen is visible:
-			say "You should have what you need. It might be dangerous to go back out.";
-			the rule fails;
-		say "[if ye hoop is in austerer]You probably should see about that treasure[else]Man, that screen in the treasure room would be handy now[end if].";
-		the rule succeeds;
-	if player has screen:
-		say "You decide to put the screen on the table so you don't have to lug it around any more.";
-		the rule succeeds;
 	if scratch paper is reflexed:
 		say "You're so close. You must be. You can't [i]budge[r] until you...";
 		the rule fails;
+	if keyboard is not off-stage:
+		if player has onyx censer:
+			if censer is not prefigured:
+				say "Hmm. You probably just need to fiddle with the censer, then you can get going in here. Everything else important is done.";
+				the rule fails;
+			say "There's a lot to do in the hacks['] shack. Perhaps you should change the censer to a screen here. Do so?";
+			if the player yes-consents:
+				try fliptoing screen;
+				if player has screen:
+					say "You decide to put the screen you just made on the labs slab so you don't have to lug it around any more.";
+					now screen is on labs slab;
+			the rule fails;
+		if computer screen is visible:
+			say "You should have what you need. It might be dangerous, or just plain distracting, to go back out with all this computer work.";
+			the rule fails;
+		say "[if ye hoop is in austerer]You feel you're missing something. You probably should see about [treas-west][else]Man, that screen in [location of computer screen] would be handy now[end if].";
+		the rule succeeds;
+	if player has screen:
+		say "There's really nothing left to do outside the shack.";
+		the rule fails;
+	if player has censer and censer is prefigured:
 	the rule succeeds;
 
-Check going outside in shack:
-	try going south instead.
+to say treas-west:
+	if austerer is not visited:
+		say "that area west of the hump";
+	else:
+		say "the hoop in Austerer Treasure"
 
 a giant dead flea is a thing in hacks' shack. "A giant dead flea is here, probably not decomposing yet."
 
@@ -14928,14 +14943,6 @@ check an actor exiting (this is the custom not in anything rule):
 		say "EXIT/OUT isn't usable here--it's used when there's only one direction, or you are told you can go OUT." instead;
 
 the custom not in anything rule is listed before the can't exit when not inside anything rule in the check exiting rulebook.
-
-instead of nowhering:
-	say "[via-dir]";
-
-to say via-dir:
-	say "You can only go [list of viable directions].";
-
-going nowhere in hacks' shack is nowhering.
 
 The dripping clock is scenery in Hacks' Shack. "It's motionless[if caps lock is off-stage], except for a very slow drip from the bottom. (If you want, you can pretend it symbolizes time slowly dripping away.) A small thick opaque puddle registers how much has leaked from the clock[otherwise] and no longer leaking, and you can't see the puddle below where the clock sap used to be[end if]."
 
@@ -15205,9 +15212,9 @@ understand "puddle" as clock sap.
 
 a disk is a thing. description is "This disk is plain, chunky and 3 1/4' square. Small print indicates the disk contains not only a powerful compression algorithm that allows portability but also critical system repair programs that only run on startup."
 
-understand "idks" as a mistake ("You'll need to figure stuff out with the [if disk is visible]disk[else]skid[end if], but right now, yeah, you're all I don't know.") when skid is visible or disk is visible.
+understand "idks" as a mistake ("You'll need to figure stuff out with the [if disk is visible]disk[else]skid[end if], but right now, yeah, you're all 'I don't know.'") when skid is visible or disk is visible.
 
-understand "kids" as a mistake ("[if disk is off-stage]Kids don't need to be introduced to the sorts of words flying around here[else]Oh geez. That's what you need. Kids who'd run around screaming while you try to solve this last bit[end if]. [if disk is visible]They wouldn't know the first thing about programming[else]They wouldn't be strong or organized enough to push the skid around[end if], anyway[one of].[paragraph break]However, you do take a second to reflect that nobody told you you're doing this for the kids, so that's a plus[or][stopping].") when skid is visible or disk is visible.
+understand "kids" as a mistake ("Kids don't need to listen to the words you've used so far! They wouldn't help with [if disk is visible]programming[else]pushing the skid[end if], anyway[one of].[paragraph break]However, you do take a second to reflect that nobody told you you're doing this for the kids, so that's a plus[or][stopping].") when skid is visible or disk is visible.
 
 a-text of disk is "RRYR". b-text of disk is "RRYR". parse-text of disk is "x[sp]x[sp]i[sp]x". disk is cheat-spoilable.
 
@@ -15266,10 +15273,6 @@ after reading catechism when yak is in shack and no-yak is false:
 	say "The yak's ears perk up a little as you mumble to yourself on reading. It's all pretty neutral and over the yak's head. Perhaps something simpler would give it more of a reaction.";
 	now no-yak is true;
 	continue the action;
-
-check going south in shack:
-	if player has catechism:
-		say "The catechism belongs in the shack. Leave it there." instead;
 
 the disk is in Hacks' Shack. "[if disk is handled]You see a disk lying on the labs slab here[else]A disk is lying on the floor here[end if]."
 
@@ -15438,9 +15441,15 @@ description of Tom Alvez is "Perfectly unremarkable and unimpressed with your (n
 
 voltzap is a truth state that varies.
 
+symp-yet is a truth state that varies.
+
 check going nowhere in a mazeroom (this is the zaphint rule) :
 	now voltzap is true;
-	say "[one of]You walk into a wall, which goes ZVT. 'Lame-o,' you think, seeing red. Maybe that ZVT was a VZT[or]You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again[stopping]." instead;
+	say "[one of]You walk into a wall, which goes ZVT. 'Lame-o,' you think, seeing red. Maybe that ZVT was a VZT[or]You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory[stopping]";
+	if number of npcish people > 0 and symp-yet is false:
+		say ". [random npcish person] cringes";
+		now symp-yet is true;
+	say "." instead;
 
 before going up in a mazeroom (this is the photopia reference rule) :
 	say "You know, there was one really fun text adventure where this was the solution. I'd be plagiarizing if that was here. And if you haven't played it, I don't want to spoil it." instead;
@@ -15471,6 +15480,7 @@ definition: a direction (called dir) is viable:
 	decide no;
 
 to say exits-lead:
+	say ". The walls glow[if voltwarn is false] like an old static electricity ball from that physics classwhere you learned so much[end if]";
 	say ". [if number of viable directions is 1]The only exit leads[otherwise]Exits lead[end if] [list of viable directions]";
 
 voltwarn is a truth state that varies.
@@ -15499,8 +15509,6 @@ the big l is scenery in maze entry. "It's a decent enough example of an L. Maybe
 
 understand "glib" as a mistake ("You'll need to be glib with something like g-lib later. If you get through this maze. In fact, maybe being glib might be easier than walking through.") when player is in Maze Entry.
 
-going nowhere in maze entry is nowhering.
-
 [is a mazeroom/a mazeroom is usually in presto]
 
 big-let is a privately-named backdrop. big-let is in r10,r00,r01,r02,r12,r22,r32,r33,r23,r24. printed name of big-let is "the big letter"
@@ -15516,7 +15524,7 @@ check fliptoing walls:
 
 description of walls is "This is a volt maze, but they don't seem juiced enough to zap you good. Running into them might be a useful lesson in character building. Or an outright clue."
 
-understand "lawls" and "lawl" as a mistake ("You try to laugh at the walls, but [if cur-score of presto is 0]actions don't seem to work here[else]that Internet neologism is a hybrid action and interjection and thus fails[end if].") when walls are visible.
+understand "lawls" and "lawl" as a mistake ("You try to laugh at the walls, but [if cur-score of presto is 0]such actions don't seem to work here[else]that Internet neologism is a hybrid action and interjection and thus fails[end if].") when walls are visible.
 
 instead of touching walls:
 	say "[one of]You feel a[or]The same[stopping] small electric jolt[one of][or], again[stopping]."
@@ -15525,57 +15533,59 @@ description of big-let is "It's a letter[if r10 is visited]. Much like back to t
 
 understand "floor" and "big/ m/n/o/p/q/r/s/t/u/v" and "big/ letter" as big-let.
 
-r10 is a mazeroom in Presto. r10 is west of Maze Entry. "A big M is tiled into the floor here[exits-lead]."
+r10 is a privately-named mazeroom in Presto. r10 is west of Maze Entry. "A big M is tiled into the floor here[exits-lead]."
 
-r00 is a mazeroom in Presto. it is west of r10. "A big N is tiled into the floor here[exits-lead]."
+r00 is a privately-named mazeroom in Presto. it is west of r10. "A big N is tiled into the floor here[exits-lead]."
 
 understand "bing" as a mistake ("[if boing is reflexed]You already did that, and with 25% more word power, too[else]You come to four-fifths of a revelation, but it's not about this maze, sadly[end if].") when player is in r00.
 
-r01 is a mazeroom in Presto. it is north of r00. "A big O is tiled into the floor here[exits-lead]."
+r01 is a privately-named mazeroom in Presto. it is north of r00. "A big O is tiled into the floor here[exits-lead]."
 
-r02 is a mazeroom in Presto. it is north of r01. "A big P is tiled into the floor here[exits-lead]."
+r02 is a privately-named mazeroom in Presto. it is north of r01. "A big P is tiled into the floor here[exits-lead]."
 
-r03 is a mazeroom in Presto. it is north of r02.
+r03 is a privately-named mazeroom in Presto. it is north of r02.
 
-r12 is a mazeroom in Presto. it is east of r02. "A big Q is tiled into the floor here[exits-lead]."
+r12 is a privately-named mazeroom in Presto. it is east of r02. "A big Q is tiled into the floor here[exits-lead]."
 
-r11 is a mazeroom in Presto. it is south of r12.
+r11 is a privately-named mazeroom in Presto. it is south of r12.
 
-r21 is a mazeroom in Presto. it is east of r11.
+r21 is a privately-named mazeroom in Presto. it is east of r11.
 
-r31 is a mazeroom in Presto. it is east of r21.
+r31 is a privately-named mazeroom in Presto. it is east of r21.
 
-r22 is a mazeroom in Presto. it is east of r12. "A big R is tiled into the floor here[exits-lead]."
+r22 is a privately-named mazeroom in Presto. it is east of r12. "A big R is tiled into the floor here[exits-lead]."
 
 understand "brig" as a mistake ("There, there. This maze is much less hard to get out of than a prison.") when player is in r22.
 
-r32 is a mazeroom in Presto. it is east of r22. "A big S is tiled into the floor here[exits-lead]."
+r32 is a privately-named mazeroom in Presto. it is east of r22. "A big S is tiled into the floor here[exits-lead]."
 
-r42 is a mazeroom in Presto. it is east of r32.
+r42 is a privately-named mazeroom in Presto. it is east of r32.
 
-r41 is a mazeroom in Presto. it is south of r42.
+r41 is a privately-named mazeroom in Presto. it is south of r42.
 
-r40 is a mazeroom in Presto. it is south of r41.
+r40 is a privately-named mazeroom in Presto. it is south of r41.
 
-r30 is a mazeroom in Presto. it is west of r40.
+r30 is a privately-named mazeroom in Presto. it is west of r40.
 
-r43 is a mazeroom in Presto. it is north of r42.
+r43 is a privately-named mazeroom in Presto. it is north of r42.
 
-r44 is a mazeroom in Presto. it is north of r43.
+r44 is a privately-named mazeroom in Presto. it is north of r43.
 
-r33 is a mazeroom in Presto. it is north of r32. "A big T is tiled into the floor here[exits-lead]."
+r33 is a privately-named mazeroom in Presto. it is north of r32. "A big T is tiled into the floor here[exits-lead]."
 
-r23 is a mazeroom in Presto. it is west of r33. "A big U is tiled into the floor here[exits-lead]."
+r23 is a privately-named mazeroom in Presto. it is west of r33. "A big U is tiled into the floor here[exits-lead]."
 
-r13 is a mazeroom in Presto. it is west of r23.
+r13 is a privately-named mazeroom in Presto. it is west of r23.
 
-r14 is a mazeroom in Presto. it is north of r13.
+r14 is a privately-named mazeroom in Presto. it is north of r13.
 
-r04 is a mazeroom in Presto. it is west of r14.
+r04 is a privately-named mazeroom in Presto. it is west of r14.
 
-r24 is a mazeroom in Presto. it is north of r23. "A big V is tiled into the floor here. You can go back south, but wow, the maze exit seems to be just north[if l-m is off-stage and m-l is off-stage]![else], and maybe that riddle dreidl won't push you back this time!"
+r24 is a privately-named mazeroom in Presto. it is north of r23. "A big V is tiled into the floor here. You can go back south, but wow, the maze exit seems to be just north[if l-m is off-stage and m-l is off-stage]![else], and maybe that riddle dreidl won't push you back this time!"
 
-r34 is a mazeroom in Presto. it is west of r44.
+understand "mzend" as r24 when debug-state is true.
+
+r34 is a privately-named mazeroom in Presto. it is west of r44.
 
 to say l-or-m:
 	say "[if l-m is visible][l-m][else][m-l][end if]";
@@ -15583,15 +15593,46 @@ to say l-or-m:
 to say zztrue:
 	now voltzap is true;
 
+check going south in r24:
+	if m-l is in r24 or l-m is in r24:
+		say "'If you go north, someone might relieve me. I'm kinda getting bored here.'";
+
 check going north in r24:
-	say "The exit! [if l-m is visible]'Shalom, ol['] sham' calls [l-or-m].[paragraph break][end if]You've mapped it out...and just as you are about to cross, [one of]a[or]that[stopping] giant spinning robot dreidl pushes you back to the start of the maze as it belts riddle after riddle. It spins back with a monotone 'OY VEY.' [if l-m is off-stage]You see someone coming from the north to check on the noise, but you can't get a glimpse of them.[else][paragraph break][end if]";
+	say "The exit! [if l-m is visible]'Shalom, ol['] sham' calls [l-or-m].[paragraph break][end if]You've mapped it out...and just as you are about to cross, [one of]a[or]that[stopping] giant spinning robot dreidl pushes you back to the start of the maze as it belts riddle after riddle. It spins back with a monotone 'OY VEY.' [if l-m is off-stage]You see someone coming from the north to check on the noise, but you can't get a really good look.[else][paragraph break][end if]";
 	say "[if voltzap is false]You find the walls really are electric--not too nasty, but bad enough, and you see red and say, with each ZVT(VZT?), Lame-o[zztrue].[else][one of]You manage to avoid the walls this time, but you doubt that dreidl's going away[or]There must be a better way through[stopping].";
-	if l-m is off-stage and m-l is off-stage:
+	if l-m is off-stage:
 		now l-m is in r24;
-	else if m-l is off-stage and l-m is escanned:
-		now m-l is in r24;
-		now l-m is in lalaland;
-	now player is in Grey Gyre instead;
+	else if l-m is in r24:
+		if l-m is cscanned:
+			say "[drei-you]see someone walk into view to replace Lev Matzo.";
+			now m-l is in r24;
+			now l-m is in lalaland;
+		else:
+			say "[drei-you]see Lev Matzo throwing his hands up as if he wished he could have done more.";
+	else if m-l is in r24:
+		if m-l is cscanned:
+			say "[drei-you]see someone else walk into view to replace Matzo Lev.";
+			now m-l is in lalaland;
+			now Tom Alvez is in r24;
+		else:
+			say "[drei-you]see Matzo Lev throwing his hands up as if he wished he could have done more.";
+	else if Tom Alvez is in r24:
+		say "[drei-you]hear Tom Alvez moan 'Wait! I don't have a replacement?!'";
+	go-back grey gyre;
+	the rule succeeds;
+
+to say drei-you:
+	say "[line break]As the dreidl chases you away, you "
+
+after scaning when player is in r24 (this is the new random guy in volt maze rule):
+	d "[noun][if noun is cscanned] cscanned[end if][if noun is ncscanned] ncscanned[end if].";
+	if noun is not cscanned:
+		if noun is l-m:
+			say "That helped, but maybe cheat mode would be really useful. At eight letters for the right word, this volt maze is pretty tricky!";
+		else:
+			say "That didn't show anything new. Maybe cheat mode would be better.";
+	continue the action;
+
 
 volume oyster
 
@@ -19065,8 +19106,8 @@ before scaning (this is the knock down cheats rule):
 		if squee-warn is false or equals-pushed is false:
 			now squee-warn is true;
 			ital-say "this may be a bit of a spoiler. If you want to disable it, you can push the equals sign. This warning will not appear again.";
-			say "Do you want to see the settler reading?";
-			if the player consents:
+			say "You feel foreboding this may be a bit too much of a clue. Do you still want to see the settler reading?";
+			if the player yes-consents:
 				continue the action;
 			else:
 				say "OK." instead;

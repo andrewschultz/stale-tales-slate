@@ -1,0 +1,897 @@
+## reg-roi-thru.txt
+## nudges for Roiling Original: left and right walkthrough
+##
+##
+
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* _manor
+
+>x chair
+You thought you preferred
+
+>think
+CREATIVITY
+
+>x sad ads
+Bangish bashing
+
+>open door
+
+>1
+>5
+
+It is now pitch dark
+
+
+>lapm
+You think you feel the palm shake a bit, but nothing terribly magical happens.
+>lamp
+Your score has just gone up by one point
+>lapm
+If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
+
+>basemetn
+The ten beams creak slightly. Maybe not all of them. But a few.
+
+>basement
+Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
+Your score has just gone up by two points
+>basemetn
+You probably just want to go DOWN to the basement.
+
+>d
+
+>in
+You fumble nervously
+
+>satchel
+Your score has just gone up
+
+>in
+haven't really EXAMINED it
+>x settler
+
+####line break problem after X SETTLER??
+
+>in
+Hands up!
+
+>flier
+Your score has just gone up
+
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>3
+Carven Cavern
+
+>staple
+Your score has just gone up by one point
+
+>stapler
+Your score has just gone up by one point
+
+>staple wall
+>in
+Strip of Profits
+
+>score
+Won now: Roman Manor (8/13).
+
+* _stores
+
+>presto
+Your score has just gone up by one point
+
+>otters
+Your score has just gone up by one point
+
+>routes
+Your score has just gone up by one point
+
+>troves
+Your score has just gone up by one point
+
+>towers
+Your score has just gone up by one point
+
+>oyster
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 6 out of 11 total points in the current region, Stores.
+
+* _routes
+
+>score
+0 out of 18 total points in the current region, Routes
+
+>inside
+Your score has just gone up by one point
+
+>x toils
+Precise recipes
+
+>out
+>past
+Your score has just gone up by one point
+
+Idle Deli
+
+>despite
+Your score has just gone up by one point
+
+>out
+>across
+Your score has just gone up by one point
+
+Adobe Abode
+
+>opposite
+Your score has just gone up by one point
+
+>out
+
+>against
+Your score has just gone up by one point
+>astride
+>below
+>under
+Your score has just gone up by one point
+
+##no-gal needs a line break ??
+
+>in
+>out
+>from
+Your score has just gone up by one point
+
+>beneath
+Your score has just gone up by one point
+
+Sun-Spared Underpass
+
+>until
+Your score has just gone up by one point
+>around
+Your score has just gone up by one point
+>along
+Your score has just gone up by one point
+
+Ripe Pier
+
+>amidst
+Your score has just gone up by one point
+
+Cripple Clipper
+
+>behind
+Your score has just gone up by one point
+>through
+Your score has just gone up by one point
+
+>score
+Routes (17/18)
+
+* _troves
+
+>l
+Loather Rathole
+
+>hate
+Your score has just gone up by one point
+>care
+Your score has just gone up by one point
+Loudest Used Lot
+
+>observe
+Your score has just gone up by one point
+>spot
+Your score has just gone up by one point
+
+>reason
+Your score has just gone up by one point
+
+>derive
+Pallid Li'L Pad
+
+>despair
+Your score has just gone up by one point
+
+>l
+Boredom Bedroom
+
+>deal
+Your score has just gone up by one point
+Dour Tan Rotunda
+>desire
+Your score has just gone up by one point
+Econ-Cone
+>aspire
+Your score has just gone up by one point
+
+>ponder
+FiefCo Office
+Your score has just gone up by one point
+If only you could tune that out!
+
+>ignore
+Your score has just gone up by one point
+>bolster
+Your score has just gone up by one point
+>last
+Your score has just gone up by one point
+>resign
+Your score has just gone up by one point
+Strip of Profits
+
+>score
+15/21
+
+* _presto
+
+>l
+Grey Gyre
+
+>umph
+Your score has just gone up by one point
+Austerer Treasure
+
+>pooh
+Your score has just gone up by one point
+Taking away a max point.
+
+>e
+>s
+Burnt Brunt
+
+>rats
+Your score has just gone up by one point
+>drat
+Your score has just gone up by one point
+
+>n
+>bleep
+Your score has just gone up by one point
+
+>e
+Marines Seminar
+
+>bingo
+Your score has just gone up by one point
+
+>w
+>mazeltov
+Your score has just gone up by one point
+
+>s
+>s
+Dirge Ridge
+
+>ole
+Your score has just gone up by one point
+>darn
+Your score has just gone up by one point
+>whassup
+Your score has just gone up by one point
+
+>n
+>n
+>load gun with dart
+>there
+Your score has just gone up by one point
+>n
+Phat Path
+
+##bingo *2 = no line break
+#different message for making it to the phat path 1st time?
+
+>syke
+Your score has just gone up by one point
+
+>later
+Your score has just gone up by one point
+>tough
+Your score has just gone up by one point
+Hut! Go!
+Dat was a good dust-up
+
+>n
+Hacks' Shack
+
+>capslock
+Your score has just gone up by one point
+>skid
+Your score has just gone up by one point
+>cola
+Your score has just gone up by one point
+>mug
+>leaf
+Your score has just gone up by one point
+>futon
+Your score has just gone up by one point
+>screen
+Your score has just gone up by one point
+>put screen on slab
+Only one more piece of hardware
+
+>get book
+>push skid s
+>push skid s
+>push skid s
+
+>put leaf on skid
+
+>push skid n
+>push skid n
+>push skid n
+Your score has just gone up by one point
+
+>keyboard
+Your score has just gone up by one point
+
+>put keyboard on slab
+You can now do computery things unimpeded!
+
+>put lock on keyboard
+fits in perfectly
+
+>disk
+>put disk in drive
+>reboot
+Your score has just gone up by one point
+>sleep
+Your score has just gone up by one point
+>compile
+>pour cola in mug
+>debug
+Your score has just gone up by one point
+>sub
+Diver time
+Your score has just gone up by one point
+Strip of Profits
+
+>score
+(28/33)
+
+* _oyster
+
+>l
+Posh Hops Shop
+
+>unset
+Your score has just gone up by one point
+>sing
+Your score has just gone up by one point
+>spit
+Your score has just gone up by one point
+
+>stroll
+Olde Lode
+
+>calm
+Your score has just gone up by one point
+
+>run
+Your score has just gone up by one point
+
+Hero's Shore
+>boast
+Your score has just gone up by one point
+Fighter Freight
+
+>leap
+Your score has just gone up by one point
+
+Anger Range
+
+>scrap
+Your score has just gone up by one point
+
+>e
+>seek
+Your score has just gone up by one point
+>eat
+Your score has just gone up by one point
+
+>tutor
+Your score has just gone up by one point
+
+>w
+>n
+Lapsin' Plains
+
+>trace
+Your score has just gone up by one point
+>react
+Your score has just gone up by one point
+>kiss
+Your score has just gone up by one point
+>bonk
+Your score has just gone up by one point
+
+>in
+a hut
+
+>bust
+Your score has just gone up by one point
+>drop
+Your score has just gone up by one point
+
+>out
+>s
+>w
+Arches
+
+>warp
+Your score has just gone up by one point
+>search
+Your score has just gone up by one point
+GENERAL GLEANER engulf it
+>enlarge
+Your score has just gone up by one point
+
+>n
+Hedron
+
+>w
+Collapsed Old Places
+
+>bury
+Your score has just gone up by one point
+
+>e
+>s
+>e
+
+>unearth
+by one point
+
+>assuage
+by one point
+
+>w
+>n
+>w
+
+>e
+>patrol
+Your score has just gone up by one point
+
+>x gleaner
+
+>in
+>prepay
+Your score has just gone up by one point
+
+>derail
+Your score has just gone up by one point
+>pull lever
+>redial
+Your score has just gone up by one point
+
+>score
+Oyster (30/39)
+
+* _towers
+
+>seed 1
+>towers
+>in
+
+>gone
+Your score has just gone up by one point
+
+>wined
+Your score has just gone up by one point
+
+>bleak
+Your score has just gone up by one point
+
+>yonder
+Your score has just gone up by one point
+Topside Deposit
+
+>get tarts
+>put tarts in toaster
+>xray keycar
+
+>creaky
+Your score has just gone up by one point
+
+>n
+Scope Copse
+
+>weirder
+Your score has just gone up by one point
+>clumsy
+Your score has just gone up by one point
+
+>n
+Baldest Blasted Saltbed
+
+>pastier
+Your score has just gone up by one point
+
+>punier
+Your score has just gone up by one point
+
+>n
+Anemic Cinema
+
+>married
+Your score has just gone up by one point
+
+>n
+Shaven Havens
+
+>s
+>s
+>e
+Savager Ravages
+
+>sewed
+
+>released
+>e
+Ole Shrine Shoreline
+>holiest
+>grandiose
+>n
+Actionless Coastline
+
+>hastiest
+>s
+>s
+>broken
+>e
+
+>wordy
+>push retape
+>go to duck
+>push repeat
+
+>go to yow
+>unlocked
+
+>go to kid
+>ask kid about yow
+Obscurest
+
+>s
+>s
+>e
+>rowdy
+>attentive
+
+>go to copse
+>w
+>put dagger in machine
+
+>go to kid
+>give gizmo to kid
+>robust
+>stabler
+>enter boat
+
+>spectacular
+
+>score
+24/45
+
+* _otters
+
+>seed 1
+>otters
+>in
+>barely
+Your score has just gone up by one point
+>reedily
+Your score has just gone up by one point
+
+>w
+Gent-Fora Frontage
+
+>bossily
+Your score has just gone up by one point.
+>nastily
+Your score has just gone up by one point.
+>blearily
+Your score has just gone up by one point.
+
+>1
+>3
+
+>n
+>because
+Your score has just gone up by one point
+>else
+Your score has just gone up by one point
+
+>s
+>atom
+Your score has just gone up by one point
+
+>e
+>n
+>enragedly
+Your score has just gone up by one point
+>angrily
+Your score has just gone up by one point
+
+>n
+Wickeder Wire Deck
+
+>slow
+Your score has just gone up by one point
+
+>coolest
+Your score has just gone up by one point
+>paroled
+Your score has just gone up by one point
+>artsy
+Your score has just gone up by one point
+
+>s
+Tapering Inert Gap
+>s
+>s
+
+Rote-Moan Anteroom
+
+>loathingly
+Your score has just gone up by one point
+>tersely
+Your score has just gone up by one point
+
+>s
+Perverse Preserve
+
+>parrot
+Your score has just gone up by one point
+>snail
+Your score has just gone up by one point
+>hornets
+Your score has just gone up by one point
+>raccoon
+Your score has just gone up by one point
+
+>n
+Near-Moot Anteroom
+
+>n
+>w
+>w
+
+>raptor
+Your score has just gone up by one point
+>deeply
+Your score has just gone up by one point
+>quickly
+Your score has just gone up by one point
+
+>w
+WTF FTW
+
+>1
+>8
+>8
+>8
+
+>au -1
+>play whistle
+
+* _others
+
+>z
+
+>x stand
+
+>maraschino
+Your score has just gone up by one point.
+>grapes
+Your score has just gone up by one point.
+>cranberries
+Your score has just gone up by one point.
+>tamarind
+Your score has just gone up by one point.
+
+>compass
+Your score has just gone up by one point.
+
+>plums
+Your score has just gone up by one point.
+>pears
+Your score has just gone up by one point.
+>blueberries
+Your score has just gone up by one point.
+>pomegranate
+Your score has just gone up by one point.
+Take on a token
+
+>cantaloupe
+Your score has just gone up by one point.
+>persimmon
+Your score has just gone up by one point.
+>limes
+Your score has just gone up by one point.
+
+>n
+Swell Wells
+>apricot
+Your score has just gone up by one point.
+>apples
+Your score has just gone up by one point.
+>mulberries
+Your score has just gone up by one point.
+>gooseberry
+Your score has just gone up by one point.
+>coconuts
+Your score has just gone up by one point.
+
+>s
+>icons
+Your score has just gone up by one point.
+>sonic
+Your score has just gone up by one point.
+
+>n
+>e
+
+>tangerines
+Your score has just gone up by one point.
+>among
+Your score has just gone up by one point.
+>papayas
+Your score has just gone up by one point.
+>solemn
+Your score has just gone up by one point.
+
+>w
+>s
+>i
+a droll dollar
+
+>n
+>d
+give dollar to trader
+>put icons in slot
+>u
+>n
+>research
+Your score has just gone up by one point.
+>review
+Your score has just gone up by one point.
+>n
+You Did Great
+
+* current_focus
+#>{include} _only-towers
+>{include} _only-otters
+>undo
+>{include} _only-others
+>undo
+>{include} _only-oyster
+
+* _big-go
+
+>{include} _manor
+>{include} _stores
+
+>enter routes
+Same Mesa
+>{include} _routes
+
+>enter troves
+Loather Rathole
+>{include} _troves
+
+>enter spot
+Grey Gyre
+>{include} _presto
+
+>enter oyster
+Posh Hops Shop
+>{include} _oyster
+
+>enter towers
+Loftier Trefoil
+>{include} _towers
+
+>enter otters
+Bleary Barley
+>in
+>{include} _otters
+
+>rove over
+>others
+Your score has just gone up
+>enter hoster
+Rustic Citrus
+>{include} _others
+
+* _summarize
+
+>purloin passport
+>gonear gates stage
+>research
+>review
+>n
+>missed
+>undo
+>undo
+
+* _only-manor
+
+>{include} _manor
+
+* _only-stores
+
+>gonear strip
+>{include} _stores
+
+* _only-routes
+
+>gonear same mesa
+>{include} _routes
+>{include} _summarize
+
+* _only-troves
+
+>gonear rathole
+>{include} _troves
+>{include} _summarize
+
+* _only-presto
+
+>gonear gyre
+>{include} _presto
+>{include} _summarize
+
+* _only-oyster
+
+>purloin settler
+>gonear posh hops shop
+>{include} _oyster
+>{include} _summarize
+
+* _only-towers
+
+>seed 1
+>gonear trefoil
+>{include} _towers
+>{include} _summarize
+
+* _only-otters
+
+>seed 1
+>gonear barley
+>{include} _otters
+>{include} _summarize
+
+* _only-others
+
+>gonear rustic citrus
+>{include} _others
+>{include} _summarize
+

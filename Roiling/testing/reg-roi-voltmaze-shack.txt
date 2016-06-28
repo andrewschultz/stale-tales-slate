@@ -1,0 +1,205 @@
+###############################
+#
+#reg-roi-voltmaze-shack.txt
+#
+#regression test for exhausting the volt maze and shack-south rule in PRESTO
+#
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+
+* _ltov
+
+>w
+>w
+>n
+>n
+>e
+>e
+>e
+>n
+>w
+>n
+
+* _ltovl
+
+>l
+big L
+>bigl
+The big L may be some sort of clue, but you can't do anything with it.
+>w
+big M
+>bigm
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>w
+big N
+>bing
+You come to four-fifths of a revelation, but it's not about this maze, sadly.
+>bign
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>n
+big O
+>bigo
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>n
+big P
+>bigp
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>e
+big Q
+>bigq
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>e
+big R
+>bigr
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>e
+big S
+>bigs
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>n
+big T
+>bigt
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>w
+big U
+>bigu
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>n
+big V
+>bigv
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+
+* _maze-walk
+
+>gonear grey gyre
+>purloin settler
+
+>n
+>glib
+You'll need to be glib with something like g-lib later. If you get through this maze. In fact, maybe being glib might be easier than walking through.
+>lawls
+You try to laugh at the walls, but such actions don't seem to work here.
+>{include} _ltovl
+>n
+
+>n
+>{include} _ltovl
+>talk to lev
+"I'm here to help, just by being me, apparently."
+>e
+You walk into a wall, which goes ZVT. "Lame-o," you think, seeing red. Maybe that ZVT was a VZT.
+Lev Matzo cringes
+>e
+You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory.
+!Lev Matzo cringes
+>n
+As the dreidl chases you away, you see Lev Matzo throwing his hands up as if he wished he could have done more.
+
+>n
+>{include} _ltovl
+>talk to lev
+"I'm here to help, just by being me, apparently."
+>scan lev
+That helped, but maybe cheat mode would be really useful. At eight letters for the right word, this volt maze is pretty tricky!
+>n
+As the dreidl chases you away, you see Lev Matzo throwing his hands up as if he wished he could have done more.
+
+>cheat
+
+>n
+>{include} _ltovl
+>scan lev
+>talk to lev
+"I'm here to help, just by being me, apparently."
+>n
+As the dreidl chases you away, you see someone walk into view to replace Lev Matzo.
+
+>n
+>{include} _ltovl
+>talk to lev
+"I'm here to help, just by being me, apparently."
+>n
+As the dreidl chases you away, you see Matzo Lev throwing his hands up as if he wished he could have done more.
+
+>n
+>{include} _ltovl
+>talk to lev
+"I'm here to help, just by being me, apparently."
+>cheat
+>scan lev
+That didn't show anything new. Maybe cheat mode would be better.
+>cheat
+>scan lev
+>n
+As the dreidl chases you away, you see someone else walk into view to replace Matzo Lev.
+
+>n
+>{include} _ltovl
+>talk to tom
+"I'm here to help, just by being me, apparently."
+>n
+As the dreidl chases you away, you hear Tom Alvez moan "Wait! I don't have a replacement?!"
+
+>n
+>{include} _ltovl
+>cheat
+>scan tom
+That didn't show anything new. Maybe cheat mode would be better.
+>cheat
+>scan tom
+>talk to tom
+"I'm here to help, just by being me, apparently."
+>n
+As the dreidl chases you away, you hear Tom Alvez moan "Wait! I don't have a replacement?!"
+
+* shack-exit
+
+>gonear shack
+
+# this is not really a stable game state
+
+>undo
+>futon
+>leaf
+>mug
+>casserole
+>rom sticks
+>s
+Phat Path
+>undo
+
+>n
+You can only go south here.
+
+>abstract yak to ll
+>s
+You feel you're missing something. You probably should see about that area west of the hump.
+
+>gonear gyre
+>umph
+>gonear shack
+>s
+
+You feel you're missing something. You probably should see about the hoop in Austerer Treasure.
+
+>gonear austerer
+>pooh
+
+>screen
+Back at Hacks' Shack
+
+>n
+Nothing north, but you need to just sit and finish things here anyway.
+
+>s
+There's really nothing left to do outside the shack.
+
+>abstract yak to ll
+>abstract yoke to ll
+>purloin keyboard
+>s
+You should have what you need. It might be dangerous, or just plain distracting, to go back out with all this computer work.
+
+
