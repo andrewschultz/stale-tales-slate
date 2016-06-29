@@ -2373,7 +2373,7 @@ doc-guar is a person that varies. [doc-guar is usually nothing.]
 
 check objasking Dr Yow about a guardian:
 	if Dr Yow is in ropins:
-		say "He doesn't need the added pressure, but maybe he can give a bit of help once he's out." instead;
+		say "[he-she-c] doesn't need the added pressure, but maybe [he-she] can give a bit of help once [he-she]'s out." instead;
 	if second noun is in lalaland:
 		if second noun is not bonker:
 			say "You don't need to worry about that, now." instead;
@@ -2384,13 +2384,15 @@ check objasking Dr Yow about a guardian:
 			choose row with the-from of second noun in the table of towers anagrams;
 			now doc-guar is the-from entry;
 			now doc-cheat is true;
-			say "Dr. Yow sits and thinks a minute after you tell [him-her] where you were stuck. 'Mm, yes. Of course, of course. I'd think Yeah, you just say [right-word entry in upper case] should work.'";
+			say "Dr. Yow sits and thinks a minute after you tell [him-her] where you were stuck. 'Mm, yes. Of course, of course. I'd think you just say [right-word entry in upper case] should work.'";
 			preef the-from entry instead;
 		else:
 			if doc-guar is not noun:
 				say "Dr. Yow rubs [his-her] temples. [he-she-c]'s probably up to more technical stuff, now." instead;
 			if doc-guar is in lalaland:
 				say "You thank Dr. Yow for helping you out." instead;
+			choose row with the-from of second noun in the table of towers anagrams;
+			say "No, you remember, it was [right-word entry in upper case].";
 
 check objasking len craig about a fruit:
 	if player has second noun:
@@ -7944,17 +7946,6 @@ check fliptoing when player is in dusty study and gunter is off-stage (this is t
 					do nothing instead;
 
 check fliptoing (this is the reject flipping with distractions around rule):
-	if noun is not owls and owls are visible:
-		say "That's a good thought...once you've gotten rid of the owls. You don't have time to summon assistance.";
-		preef noun;
-		do nothing instead;
-	if noun is not parrot and raptor is visible:
-		say "That'd be nice to do, once that raptor's dealt with.";
-		preef noun;
-		do nothing instead;
-	if noun is owls or noun is parrot:
-		if power-back is false:
-			say "You try, but you are too weak. Perhaps you should come back when your powers are recharged." instead;
 	if noun is thor or noun is beet:
 		if ship controls are reflexive:
 			say "That'll be tricky, moving through or between Thor and the New Beet without being sure of the ship controls.";
@@ -9576,7 +9567,7 @@ Basement is a stairy innie privately-named room in Roman Manor. printed name of 
 
 understand "basement" as Basement.
 
-understand "sitar" as a mistake ("[if stair is visible]You already changed to what you need[else]You don't need music right now. A way to get around would be better[end if].") when player is in Basement.
+understand "sitar" as a mistake ("[if stair is visible]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Basement.
 
 to say bsmnt:
 	if Elmo is in Basement and rifle is in lalaland:
@@ -10840,6 +10831,12 @@ carry out padding:
 
 recbuffer is indexed text that varies.
 
+to say preefsay-nol of (pfy - a thing):
+	if pfy is not prefigured:
+		say "[line break]";
+		preef-nol pfy;
+		pad-rec-q "flips";
+
 to say preefsay of (pfy - a thing):
 	if pfy is not prefigured:
 		preef pfy;
@@ -11012,6 +11009,8 @@ understand "follow [text]" as a mistake ("This game doesn't allow the FOLLOW ver
 book Strip of Profits
 
 Strip of Profits is a room in Stores. "[if roved is true]Well, those stores you took care of are gone, and so is the megaton magneto-montage. [h-or-others].[else]Most of the twenty-six stores from your first time here remain, though you're not here to shop[which-stores].[paragraph break]A megaton magneto-montage[i-u] stands here.[end if]"
+
+understand "trips/profit" as strip of profits when debug-state is true.
 
 to say which-stores:
 	if number of visible flippable stos is 0:
@@ -11286,9 +11285,9 @@ rule for printing a locale paragraph about nestor:
 understand "stoner" as a mistake ("[if nestor is visible]Being a stoner isn't treason. Use his real name.[else][one of]'Hey, man! Don't depersonalize me! Or I'll throw something at you!' You hear from inside Store N.[or]'Like, don't do it again, dude, or I will literally totally throw these empty bottles at you.'[or]The door to Store N opens, and two bottles whizz in your direction but nowhere close. They're bright red, and they appear to be lotions or something[move-toners].[or]You've teased him enough. You should have enough clues to figure his name now, anyway.[stopping][end if]") when player is in Strip of Profits
 
 to say move-toners:
-	now toners are in trips strip.
+	now toners are in strip of profits.
 
-check talking toners:
+check taking toners:
 	say "They aren't yours. And you don't need to look good while adveturing." instead;
 
 the bottles of toners are a plural-named cluey thing. understand "lotions" as toners. description is "They are trial-sized red bottles of toners for skin care[one of]. Thankfully, they weren't made of Sterno, which wouldn't have helped you at all and makes you see red just imagining[or]. They're so rent you can't see a brand name[or]There's lots--er, tons--to look at if you see it right[stopping]. The bottles are disgracefully red."
@@ -11357,7 +11356,7 @@ after examining otters-x:
 	try examining engravings;
 	now f-o-b is in strip of profits;
 
-understand "barely" as a mistake ("You [one of][or]still [stopping]aren't close enough for such a weak word to affect the barley. But that seems right[one of] and worth writing in your notepad[or][stopping].[preefsay of b-b]") when f-o-b is visible.
+understand "barely" as a mistake ("You [one of][or]still [stopping]aren't close enough for such a weak word to affect the barley. But that seems right[one of] and worth writing in your notepad[or][stopping].[preefsay-nol of b-b]") when f-o-b is visible.
 
 understand "randi" and "darin" as otters-x.
 
@@ -13371,19 +13370,6 @@ troend1 is privately-named useless scenery. troend1 is undesc. printed name of t
 
 troend2 is privately-named useless scenery. troend2 is undesc. printed name of troend2 is "Singer flyer"
 
-to say unim:
-	say "But you aren't important, hard-working and enough of a fixture here for your resignation to mean much"
-
-check fliptoing troend1:
-	if lobster is visible and stream is reflexive:
-		say "[unim].";
-		preef song instead;
-
-check fliptoing troend2:
-	if lobster is visible and stream is reflexive:
-		say "[unim].";
-		preef playbill instead;
-
 decide-win is a truth state that varies.
 
 after fliptoing troend1:
@@ -14874,11 +14860,11 @@ this is the shack-south rule:
 	if keyboard is not off-stage and screen is not off-stage:
 		say "You should have what you need. It might be dangerous, or just plain distracting, to go back out with all this computer work.";
 		the rule fails;
-	if screen is off-stage:
+	if keyboard is not off-stage and screen is off-stage:
 		say "You feel you're missing something. You probably should see about [treas-west].";
 		if player has censer:
 			the rule fails;
-	else:
+	else if keyboard is off-stage:
 		say "That yak. Maybe you could release it from its yoke.";
 	the rule succeeds;
 
@@ -20610,7 +20596,7 @@ to preef (thi - a thing): [text listed in table of pres]
 	if player is in study:
 		check-get-pad;
 	if thi is not prefigured:
-		say "[i][bracket]You add the information to your pedanto-notepad under FLIPS.[close bracket][r][line break]";
+		say "[i][bracket]You add the information to your pedanto-notepad under FLIPS.[close bracket][r]";
 	now thi is prefigured;
 	if player is not in study and player does not have pedanto-notepad:
 		say "You should have your notepad, but you don't. This is a BUG, reportable at [email], and I'm giving you the notepad.";
@@ -21752,7 +21738,7 @@ a-text of satyr is "YRRRO". b-text of satyr is "YRPRO". parse-text of satyr is "
 
 understand "stary" as a mistake ("What good would the satyr be, staring all the time?") when satyr is visible.
 
-understand "stray" as a mistake ("No, you [if satyr is reflexive]can get[else]already got[end if him on your side.") when satyr is visible.
+understand "stray" as a mistake ("No, you [if satyr is reflexive]can get[else]already got[end if] him on your side.") when satyr is visible.
 
 understand "trays" as a mistake ("You can't transform something living into something dead. Besides, you don't need something that be trays. (Sorry.)") when satyr is visible.
 
