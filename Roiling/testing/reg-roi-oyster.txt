@@ -8,7 +8,229 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* nudge-tries
+* _oyster-with-subj
+
+>l
+Posh Hops Shop
+
+>stroll
+haven't had any fun at all
+
+>unset tunes
+Your score has just gone up by one point
+>remap amper
+already been altered
+
+>undo
+>undo
+>remap amper
+Your score has just gone up by one point
+>unset tunes
+mucked up the perma
+
+>stroll
+you have been kind of obnoxious
+
+>inset tines
+Your score has just gone up by one point
+
+>stroll
+you're the jerk here
+
+>scrape casper
+Hm, what he's writing on would make even more noise...so, let's try that.
+Your score has just gone up by one point
+
+>undo
+>scrape recaps
+Your score has just gone up by one point
+
+>spit
+You've caused enough damage
+
+>undo
+
+>sing
+You've caused enough damage
+
+>undo
+
+>stroll
+Olde Lode
+
+>calm clam
+Your score has just gone up by one point
+
+>run
+Your score has just gone up by one point
+Hero's Shore
+
+>ocean
+is, in fact, a herring
+
+>undo
+
+>boast
+Your score has just gone up by one point
+Fighter Freight
+>leap
+Your score has just gone up by one point
+Anger Range
+
+>undo
+>undo
+
+>fart
+butterfly
+>get on raft
+>fart
+Your score has just gone up by one point
+>soar
+Your score has just gone up by one point
+
+>scrap carps
+Your score has just gone up by one point
+
+>undo
+>spike pikes
+Your score has just gone up by one point
+
+>e
+>scan cans
+Your score has just gone up by one point
+min point
+
+>seek eeks
+Your score has just gone up by one point
+
+>eat tea
+Your score has just gone up by one point
+
+>tutor tortu
+Your score has just gone up by one point
+
+>undo
+>tutor trout
+Your score has just gone up by one point
+
+>swipe wipes
+Your score has just gone up by one point
+min point
+
+>w
+>n
+Lapsin' Plains
+
+>splain
+min point for this flip
+
+>react
+good idea, but you're not sure HOW
+
+>trace
+Your score has just gone up by one point
+
+>react
+Your score has just gone up by one point
+
+>kiss skis
+Your score has just gone up by one point
+
+>bonk knob
+Your score has just gone up by one point
+
+>in
+a hut
+
+>bust tubs
+Your score has just gone up by one point
+
+>drop prod
+Your score has just gone up by one point
+
+>sweat
+Your score has just gone up by one point
+min point for
+
+>shape heaps
+Your score has just gone up by one point
+min point for
+
+>clean lance
+Your score has just gone up by one point
+min point for
+
+>out
+>s
+>w
+Arches
+
+>warp wrap
+Your score has just gone up by one point
+
+>search arches
+Your score has just gone up by one point
+GENERAL GLEANER engulf it
+
+>enlarge gleaner
+Your score has just gone up by one point
+
+>n
+Hedron
+
+>w
+Collapsed Old Places
+
+>bury ruby
+Your score has just gone up by one point
+
+>e
+>s
+>e
+
+>unearth haunter
+>assuage sausage
+>ask haunter about ruby
+disarm it
+
+>undo
+>w
+>n
+>w
+
+>e
+>patrol
+Your score has just gone up by one point
+
+>in
+End Den
+
+>out
+>x gleaner
+>in
+Scum Ant Sanctum
+
+>tan ant
+Your score has just gone up by one point
+min point
+Tenfold Teflon'd
+
+>prepay yapper
+Your score has just gone up by one point
+
+>revel
+Your score has just gone up by one point
+min point
+
+>derail
+Your score has just gone up by one point
+
+>pull lever
+>redial
+Your score has just gone up by one point
+
+>score
+Oyster (39/39)
 
 * testing nudges
 

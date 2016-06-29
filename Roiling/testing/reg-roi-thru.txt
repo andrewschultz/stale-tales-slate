@@ -1,5 +1,5 @@
 ## reg-roi-thru.txt
-## nudges for Roiling Original: left and right walkthrough
+## nudges for Roiling Original: complete walkthrough with maximum points and alternate paths
 ##
 ##
 
@@ -9,8 +9,25 @@
 
 * _manor
 
+>walkthrough
+You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.
+>walkthru
+You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.
+
+>hint xyz
+You've come across nothing like that, yet. Or perhaps it is way in the past by now.
+
+>insert abc
+You may not be using an object in the game, and you may wish to inseRt, instead.
+
+>insert abc into def
+You may want to INSERT x in Y instead.
+
 >x chair
 You thought you preferred
+
+>consult stuff
+You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
 
 >think
 CREATIVITY
@@ -46,6 +63,12 @@ Bangish bashing
 >pad red
 Bangish bashing
 
+>odor
+You'd stink as a host, trying that.
+
+>rood
+No need to surprise a guest like that. Just open the door.
+
 >open door
 
 >1
@@ -60,15 +83,33 @@ You think you feel the palm shake a bit, but nothing terribly magical happens.
 Your score has just gone up by one point
 >lapm
 If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
+>palm
+Maybe you could, but you will need the light. You won't need the landscaping.
+
+>pedo
+Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her 'clever' games.
+>pedo
+Don't dwell on it. It's lies.
 
 >basemetn
 The ten beams creak slightly. Maybe not all of them. But a few.
 
+>basement it
+>stable it
+
+>net
+But the net would still block you.
+>best name
+Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)")
 >basement
 Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
 Your score has just gone up by two points
 >basemetn
 You probably just want to go DOWN to the basement.
+
+
+>nip
+Maybe if it weren't a giant pin. Well, giant enough to hide a wall safe.
 >paintign
 The pin wobbles.
 >painting
@@ -95,8 +136,12 @@ A Blest Stable
 
 >stari
 You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you think, seeing red.
+>astir
+You need to change that to something else, then it'll be astir.
 >stair
 DEBUG INFO: Adding a min point
+>astir
+You don't need to do any more with the stair.
 >stari
 The stair is good for getting around. It's worth keeping.
 
@@ -118,6 +163,13 @@ Meet-Bans Basement
 >in
 You fumble nervously
 
+>chalets
+You don't need a safe home, right now. You need adventure. Oh, and you don't have to switch that many letters, either.
+
+>use notepad
+The verb USE is a bit too nonspecific for the parser. VERBS gives what you need. The big ones are: you can SWITCH things, or OPEN doors. You should also be able to EXAMINE something you want to use, and the game should hint any necessary verb.
+!SCAN with
+
 >satchle
 You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them.
 >satchel
@@ -126,6 +178,11 @@ all the secrets here
 >satchle
 You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too.
 
+>paces
+The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.
+
+>use settler
+The verb USE is a bit too nonspecific for the parser. VERBS gives what you need. The big ones are: you can SWITCH things, or OPEN doors, or SCAN with the settler. You should also be able to EXAMINE something you want to use, and the game should hint any necessary verb.
 
 >in
 haven't really EXAMINED it
@@ -136,10 +193,19 @@ haven't really EXAMINED it
 >in
 Hands up!
 
+>filer
+You can't just give Elmo a desk job. Though maybe some paperwork would help.
+>lifer
+You start to educate Elmo about the penalties for murder, but he gestures at you like you've almost guessed a Charades clue or something.
+
 >flire
 Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at you.
+>mole
+You can't change Elmo into an animal. Your powers don't work that way. But maybe he is a different sort of mole.
 >flier
 Your score has just gone up
+>mole
+You can't change Elmo into an animal. Your powers don't work that way. He already seems to be a different sort of mole.
 >flire
 Better to pump Elmo for information.
 
@@ -166,6 +232,17 @@ Better to pump Elmo for information.
 >3
 Carven Cavern
 
+>trainer
+You're on your own. Perhaps you'd be better off scanning the plaster and plates to get on with things.
+
+>petals
+That's already been done, and quite well, by Alan Garner in The Owl Service. If you haven't read his Brisingamen books, you should! They're not too long and very entertaining.
+
+>pastel
+The plates are more metallic. Plus, you are a text adventurer, not an interior decorator.
+>pleats
+You are a text adventurer, not a fashion designer.
+
 >stapel
 The plates shine slightly and rattle.
 >staple
@@ -173,12 +250,18 @@ Your score has just gone up by one point
 >stapel
 Those plates were a mess, and now they're a tidy staple. It's better that way.
 
+>psalter
+You don't need prayer when you have this cool magic power.
+
 >staplre
 The plaster crackles and shines slightly.
 >stapler
 Your score has just gone up by one point
 >staplre
 The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again.
+
+>wallpaper
+You try the word-flip, to check--sadly, it doesn't work. Maybe there is another way to remove the paperwall.
 
 >staple wall
 >in
@@ -197,6 +280,35 @@ DEBUG INFO: Adding a min point
 >sorbte
 No more freebies. Sorry.
 
+>ergots
+You're trying to rescue the people of Yorpwald, not give them fungus infections.
+>go rest
+Store G is too busy to allow that these days.
+>gots er
+And what would you do with Store G when you take it?
+>storge
+You have a momentary vision of an apocryphal eighth book in the Harry Potter series sitting by a pillar, but it passes.
+>storge
+Stop trying to make Pillar of Storge happen.
+
+>tosher
+[if store h is in strip]Insults will get you nowhere. You see red at thinking such a word[else]The hoster does look a bit weird, but you need to enter it, not change it[end if].
+
+>throes
+No, you are not in your last throes. Neither is Yorpwald. Try looking at the other end of the alphabet.
+
+>hoster
+That was sort of a given from the warning on Store H, as you note E. S. Roth's signature, and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?
+
+>resort
+You can't go back to the Roman Manor. Well, you can, but it's a bad idea.
+>tortes
+There's no time for food! Especially fatty, non-brain food[if topside is visited]! Besides, the towers had plenty of food. There was your chance[end if]!")
+
+>repost
+That's not what you need to do with store P--you even see red trying to figure HOW you would.
+>pteros
+You don't need to face any predators.
 >presot
 You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
 >presto
@@ -210,6 +322,15 @@ You hear various unrecognizable animal noises.
 Your score has just gone up by one point
 >ottesr
 You've got an entry. No need to seal it up.
+
+>barely
+You aren't close enough for such a weak word to affect the barley. But that seems right and worth writing in your notepad.
+>undo
+
+>ouster
+It's your job to be the ouster in Store u, but how to get there?
+>sureto
+You'll be sure to figure it out sooner or later. You see red a bit at not quite being there yet.
 
 >routse
 Store U seems to light up with lines and curves for a second, but no, that's not quite right...
@@ -225,12 +346,20 @@ Your score has just gone up by one point
 >trovse
 You've got an entry. No need to seal it up.
 
+>restow
+Store W glows red as you try this.
+
 >towesr
 Store W seems to push up from the ground and go narrower for a second.
 >towers
 Your score has just gone up by one point
 >towesr
 You've got an entry. No need to seal it up.
+
+>toyers
+You see red at the possibility people might mess with your mind in whatever's behind store Y--especially after noting the TOYERS with the red line through in the window.
+>troyes
+Store Y does not lead to France.
 
 >oystre
 You hear grinding, then a slimy gulp, from store Y. But nothing definitive.
@@ -248,6 +377,9 @@ You think about entering, but you remember Elmo saying it wasn't critical to sav
 >othesr
 You've got an entry. No need to seal it up.
 
+>stroke
+You need a stroke of genius, but that's all wrong. You are left seeing red a bit. But this puzzle probably isn't worth risking your health over.
+
 >tokesr
 An odd sweet smell from Store K, for a second.
 >tokers
@@ -259,15 +391,32 @@ They are who they are. You should maybe try to get their friend back.
 >nestro
 "Dude, you like must be close!" you hear from Store N.
 
+>stoner
+"Hey, man! Don't depersonalize me! Or I'll throw something at you!" You hear from inside Store N.
+>stoner
+"Like, don't do it again, dude, or I will literally totally throw these empty bottles at you."
+>stoner
+The door to Store N opens, and two bottles whizz in your direction but nowhere close. They're bright red, and they appear to be lotions or something.
+>x bottles
+Sterno
+
 >nestor
 Your score has just gone up by one point
 DEBUG INFO: Adding a min point
+>stoner
+Being a stoner isn't treason. Use his real name.
 >nestro
 You rescued him, and that's enough.
+
 >tokesr
 They are who they are.
 
 >enter smoke
+
+>ani
+>nia
+Ian's had a big life change, but that might be too big for him!
+
 >outsied
 The lecturer coughs and shakes his head, looking for someone who almost disrupted his speech. He doesn't close to finger you.
 >outside
@@ -284,6 +433,14 @@ Score in a scenario: 11 out of 11 total points in the current region, Stores.
 >score
 0 out of 18 total points in the current region, Routes
 
+>ames
+Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys from rival Big Twelve schools might say. But you can't just up and leave.
+>seam
+You can't find any crack in the Same Mesa that you could follow.
+
+>among
+Maybe if there were mango trees around.
+
 >ouster
 You're the ouster here, trying to get by the routes.
 
@@ -297,6 +454,9 @@ Your score has just gone up by one point
 DEBUG INFO: Adding a min point
 >towarsd
 
+>preposition
+Yes, but WHICH prepositions?
+
 >insied
 You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that.
 >inside
@@ -304,6 +464,11 @@ Your score has just gone up by one point
 
 >x toils
 Precise recipes
+
+>noops
+The snoop spoon isn't as complicated as assembly language.
+>man let
+Your heart is in the right place, but telling the mantle to cool it won't do much good.
 
 >opposite
 Hm. The list doesn't seem to be what you need to stand opposite from. It doesn't seem offensive enough
@@ -358,6 +523,9 @@ You twist and tilt your head but can't figure out how to interpret the regalia. 
 Your score has just gone up by one point
 Adobe Abode
 
+>orcas
+But the whales would be beached.
+
 >opposiet
 The soot smells a bit stronger than before for a moment.
 >opposite
@@ -382,6 +550,23 @@ Your score has just gone up by one point
 >againts
 You leaned on the bench right. Time to try more.
 
+#quick early wrong tries
+>under
+You can't hide from the giant like that, right now.
+>satired
+Bad idea to poke fun at someone that much bigger than you.
+>bowel
+The giant's spouting enough verbal diarrhea, so, just... no.
+Also, you don't need to go THAT far down.
+>below
+Nice try, but wrong preposition for the situation.
+
+
+>staider
+Not only directions but mind games fail to work here. The giant will complain if he wants to.
+>tardies
+You can't tell the giant off for being late.
+
 >astried
 Oof! You fail to jump on the bench end. Try mixing things up from what you just did.
 >astride
@@ -389,12 +574,18 @@ Your score has just gone up by one point
 >astried
 You got on the bench right. Time to try more.
 
+>astride
+The giant's not falling for your false sympathy again.
+
 >belwo
 You seem like you should be able to avoid the elbow, but you may need to mix things up a bit.
 >below
 Your score has just gone up by one point
 >belwo
 You don't need to avoid the giant's elbow any more.
+
+>beneath
+Nice try, but wrong preposition for the situation.
 
 >undre
 The pages of Rude 'N Nuder flutter a bit.
@@ -421,12 +612,24 @@ You fill yourself with the same fear as the drama armada feels. It's really easy
 or UNDO
 >undo
 
+>follow bean
+This game doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.
+
+>along
+You aren't far enough along to, err, look along
+
 >beneaht
 The bean rolls back and forth a bit.
 >beneath
 Your score has just gone up by one point
 
 Sun-Spared Underpass
+
+>along
+There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking.
+
+>around
+You can't see anything around, yet. It's too unlit, here.
 
 >untli
 You feel it's ALMOST the right time for the darkness to lift.
@@ -1292,6 +1495,10 @@ you have been kind of obnoxious
 #check in general
 
 ##>scrape casper
+>pacers
+Casper's writing is multifaceted, but he wrote a story opposed to cars and car races and stuff.
+>parsec
+Casper doesn't take too kindly to sci-fi terminology. He writes rough and tumble nature-y stuff.
 >scraep
 You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe.
 >scrape
@@ -1326,6 +1533,12 @@ The sign mainly just disallowed singing.
 
 ###############################second point
 
+>insert
+Almost, with the stein, there.
+
+>insert stein
+Almost, with the stein, there.
+
 ##>inset stein
 >inste
 Hm, the stein belongs somewhere you can destroy it, but not QUITE like that.
@@ -1351,8 +1564,17 @@ UNDO
 >strllo
 No, you were right before, there. You just need some help to make that magic word in your notepad work, now. Or maybe you don't!
 
+>stroll xxx
+WRONG
+
 >stroll
 Olde Lode
+
+>stroll
+No, you can't just stroll back into the Posh Hops shop, and you can just plain walk anywhere else.
+
+>stroll back
+No, you can't just stroll back into the Posh Hops shop, and you can just plain walk anywhere else.
 
 ##>calm clam
 >caml
@@ -1370,8 +1592,21 @@ Hero's Shore
 >rnu
 That's not something
 
+>horse
+A horse can't cross water! You obviously did not play enough Oregon Trail in elementary school. There are plenty of craft to help you across.
+>hoser
+Saying that does not help you take off to the north.
+
+>arrive
+Easier said than done. Perhaps a river craft could help you across. Like the raft. Or the boats.
+>frat
+A frat would just sink into the river, creating more problems. Plus fratboys probably aren't big on wordgames.
+
+>a cone
+That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the raft or boats are a better bet.
 >ocean
 is, in fact, a herring
+UNDO
 
 >undo
 
@@ -1418,12 +1653,23 @@ The raft has fuel. It needs to use that fuel, now, with the oars.
 
 >sora
 You see bubbling under the oars.
+>rosa
+Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.
 >soar
 Your score has just gone up by one point
 Anger Range
 
 >sora
 That's not something
+
+###generic, but why not try here
+>boast
+Batso.
+
+>craps
+You have no dice to tempt the craps with. Or large amounts of money. Perhaps you'll need to try something more violent.
+>kepis
+If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.
 
 ##>scrap carps
 >scrpa
@@ -1445,6 +1691,13 @@ Your score has just gone up by one point
 That's not something
 
 >e
+Lean Lane
+
+>neal
+You aren't looking for anyone named Neal. Unless the trout is named Neal. (Spoiler: he's not.) Maybe you should figure how to find the eeks.
+
+>elan
+Lean Lane will never be pretty, even with those cans gone. You're looking for someone. Or maybe you should be listening.
 
 ##>scan cans
 >scna
@@ -1460,8 +1713,19 @@ That's not something
 You guess the eeks must be there--no, there!
 >seek
 Your score has just gone up by one point
+Handsome Sand Home
+
 >seke
 That's not something
+
+>a nut
+That's not nice. You are a guest.
+>ate
+You're getting ahead of yourself here.
+>aet
+Oh, this region won't go into extra time unless you want to do the side quest.
+>eta
+ETA's one move later now that you went fishing for this anagram.
 
 ##>eat tea
 >eta
@@ -1472,6 +1736,9 @@ Quit playing with your food, already.
 Your score has just gone up by one point
 >eta
 That's not something
+
+>redraw
+Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.
 
 ##>tend dent
 >tedn
@@ -1498,12 +1765,32 @@ min point
 >swiep
 Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on.
 
+>bury
+Nothing worth burying.
+>bury wipes
+Nothing worth burying.
+
 >w
 >n
 Lapsin' Plains
 
+>palins
+Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.
+>lapins
+Cute bunnies can make any game better, but having to deal with French as well would drive me crazy.
+
 >splain
 min point for this flip
+>splain
+You start up a grand lecture again, but you feel something spinal and think 'I...plans.' Time to move on.
+
+>brides
+No, no time to think about romance, now.
+
+>caret
+You need to shift letters and not sixes, here.
+>cater
+No use catering to an enemy you can't see. Besides, the crate is too smashed to cater something.
 
 ##>trace crate
 >traec
@@ -1519,6 +1806,17 @@ The crates that missed you wobble a bit. You know what'll happen, just not what 
 Your score has just gone up by one point
 >reatc
 Besides identifying it as a rect, you can't do much else with the crate.
+
+>odor
+The door kind of stinks as a semi-living entity, and anyway, the reverse of this puzzle happened last game.
+>rood
+The door's already rood. I mean rude. Try seeing what's around it, instead.
+>rued
+You can't have rued the door until you've got beyond it. Try seeing what's around it, instead.
+>pone
+The message is corny, but the door's a piece of cake [if knob is not reflexed]once you figure[else]since you figured[end if] what to do with the knob.
+>thus
+Your inactive word does nothing to the huts. Perhaps you can do something to the door.
 
 ##>kiss skis
 >kssi
@@ -1539,6 +1837,11 @@ You should leave the knob to b'n OK.
 >in
 a hut
 
+>auth
+Sorry! I'm too busy to cameo in my own game at the moment.
+>utah
+The hut only looks like Utah. However, I bet Adenville is nice. Or it would be, if it existed. Man, I loved those Great Brain books.
+
 ##>bust tubs
 >buts
 You talk yourself out of any idea there is something inside the tubs, and you discourage yourself from believing you have the strength anyway. You are not fooling yourself.
@@ -1549,6 +1852,11 @@ Your score has just gone up by one point
 >sbtu
 The tubs already got broken up.
 
+>stub
+You tap the tubs lightly with your toe. Then you tap them enough to hurt. Not even a thin crack appears, but your toe turns a bit red. Or feels like it did.
+>buts
+You talk yourself out of any idea there is something inside the tubs, and you discourage yourself from believing you have the strength anyway. You are not fooling yourself.
+
 ##>drop prod
 >drpo
 You juggle the prod a bit, but it doesn't change into anything. Well, not like that.
@@ -1556,6 +1864,12 @@ You juggle the prod a bit, but it doesn't change into anything. Well, not like t
 Your score has just gone up by one point
 >drpo
 You managed to get a digger from a prod, and that's good enough.
+
+>dig
+You need to dig to some purpose, though maybe somewhere else
+
+>sweat it up
+Don't sweat the extra words. Just sweat.
 
 >sweta
 You realize you didn't quite psyche yourself to fix the waste.
@@ -1584,11 +1898,25 @@ min point for
 The lance is still itself--and you probably did enough cleaning it.
 
 >out
+
+>troy
+"NOPE! THAT'S NOT MY NAME! AND WHY DO YOU CARE ANYWAY?" yells the rude door. At least you didn't break its spirit.
+>tory
+"NOPE! THAT'S NOT MY NAME! AND WHY DO YOU CARE ANYWAY?" yells the rude door. At least you didn't break its spirit.
+
 >s
+
+>dig
+You need to dig to some purpose, like uncovering the haunter--and not just dig.
+
 >w
 Arches
 
 ##>warp wrap
+
+>wrap stuff
+The bubble wrap is already covering something.
+
 >wapr
 That's not quite the way to pop the wrap.
 >warp
@@ -1617,8 +1945,14 @@ It's already been made bigger. Not much more you can do with it.
 >n
 Hedron
 
+>dig
+You need to dig to some purpose, though maybe somewhere else--and not just dig.
+
 >w
 Collapsed Old Places
+
+>dig
+You need to dig to some purpose, maybe hide something here to frame the walleyes--and not just dig.
 
 ##>bury ruby
 >buyr
@@ -1628,11 +1962,15 @@ Your score has just gone up by one point
 >buyr
 The ruby's hidden well. No need to tinker.
 
+>dig
+Now you've buried the ruby, you could maybe show what you've found. No point undoing what you did
+
 >e
 >s
 >e
 
 ##>unearth haunter
+
 >unearht
 You start randomly digging, but you need something more specific
 >unearth
@@ -1656,7 +1994,22 @@ disarm it
 >n
 >w
 
+>dig
+You're finished with the digger
+
 >e
+
+>tarp
+Nothing happens. You wonder if part of the ol; trap is that an ol' tarp will fall on you and suffocate you, if you walk in there.
+
+>part trap
+The ol' trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.
+>part
+The ol' trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.
+
+>tarp
+Nothing happens. You wonder if part of the ol' trap is that an ol' tarp will fall on you and suffocate you, if you walk in there.
+
 >patrlo
 Hm, no, that's not quite how to cover all the ground looking for the ol' trap.
 >patrol
@@ -1667,12 +2020,17 @@ You discovered the portal. No need to look further.
 >in
 End Den
 
+>ned
+That was my name in the first game.
+
 >out
 >x gleaner
 >in
 Scum Ant Sanctum
 
 ##>tan ant
+>nat
+You don't need to name the ant. It's not a pet.
 >tna
 That's close. Something brutal and direct.
 >tan
@@ -1683,6 +2041,8 @@ Tenfold Teflon'd
 That's not something you
 
 ##>prepay yapper
+>redial
+You can't even dial with the yapper around
 >prepya
 "Eh? What?" says the yapper. "Speak up, you were about to make sense there."
 >prepay
@@ -1698,12 +2058,17 @@ min point
 >revle
 You riff on your previous celebrations, but it doesn't feel as cool.
 
+>redial
+Maybe in a bit, but you haven't even dialed yet
 >derali
 The dialer seems to click slightly.
 >derail
 Your score has just gone up by one point
 >derali
 The dialer seems to click slightly. There's something more to do, but that's not quite it.
+
+>redial
+Maybe in a bit, but you haven't pulled the lever to activate the DERAIL command yet.
 
 >pull lever
 
@@ -1999,6 +2364,18 @@ Your score has just gone up by one point
 >yondre
 That's not something
 
+>dopiest
+You sense that Ray Eck is one of the easier people to deal with, here, but you don't want to overstate it.
+>posited
+You formulate a proof that the place you are in does actually exist.
+
+>cleats
+The castle is run-down and unromantic enough. Changing it to cleats would be even worse.
+>crust
+It probably needs less crust, not more. The whole curst palace.
+>a place
+It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.
+
 >creayk
 The keycar slows down for a minute. Ray Eck frowns at you.
 >creaky
@@ -2009,6 +2386,11 @@ That's not something
 >n
 Scope Copse
 
+>copes
+You find it easier to cope, here, with the spec-o-scope to guide you, but you need to move on.
+>pecos
+This game ain't a dadgum Western.
+
 >rusyt
 The yurts sway slightly. They may not be guarding much, but maybe you could do for them.
 >rusty
@@ -2016,6 +2398,9 @@ Your score has just gone up by one point
 min point
 >rusyt
 That's not something
+
+>worse
+The brownies don't need to taste any worse.
 
 >rinsde
 The diners glare at you, then look up at the sky, slightly worried.
@@ -2031,6 +2416,8 @@ Your score has just gone up by one point
 >weirdre
 That's not something
 
+>scumly
+Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.
 >clumys
 The hulk stumbles for a moment.
 >clumsy
@@ -2076,6 +2463,10 @@ Your score has just gone up by one point
 >marride
 That's not something
 
+>sweat
+You waste sweat and ire thinking what to do.
+>waste ire
+You waste sweat and ire thinking what to do.
 >weariets
 The wait-seer looks bored and distracted for a second.
 >weariest
@@ -2083,6 +2474,10 @@ Your score has just gone up by one point
 >weariets
 That's not something
 
+>granites
+They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't til they're gone.
+>granite
+They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't til they're gone.
 >angstire
 The ingrates seem to wonder if it's worth complaining to you for a moment. You get the feeling that they may start off angriest, but if you could bend their mood, they might lose their willpower and give up.
 >angstier
@@ -2093,9 +2488,21 @@ That's not something
 >n
 Shaven Havens
 
+>unlocked
+There's nothing here to unlock.
+[You add the information to your pedanto-notepad under FLIPS.]
+
 >s
 >e
 Salted Deltas
+
+>slated
+You're not sure what the deltas could be slated for. You're not here for geological research, anyway[vis-guar].
+>lasted
+The salted deltas have already lasted since well before you were born, and that's a verb, anyway[vis-guar].
+
+>kale
+More kale? Dear, did I ask for more kale? Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.
 
 >hastiets
 The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal.
@@ -2125,6 +2532,11 @@ Your score has just gone up by one point
 >releasde
 That's not something
 
+>swede
+That might make the weeds FROM Scandinavia, but it wouldn't SEND them there. The man who is not Flemish shakes his head, sure you're one of those people too concerned about nationalities.
+
+>tap in
+You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.
 >himsefl
 The man picks at his paint, as if he could almost peel it off.
 >himself
@@ -2147,6 +2559,8 @@ min point
 >pearyl
 The raves saver is as glitzed-up as it'll get.
 
+>i mend
+You're more interested in doing the opposite--seeing what's behind.
 >minde
 The denim bends and warps, but not enough to cut it.
 >mined
@@ -2163,6 +2577,14 @@ Your score has just gone up by one point
 >drainde
 That's not something
 
+>plusse
+WRONG
+>pluses
+Your score has just gone up by one point
+>undo
+
+>lauren
+You briefly remember a random acquaintance. If your name actually is Lauren, you savor the awkward and neat feeling of the first other Lauren you meant. Life is like that.
 >unrela
 The pulses seem less there and less negative for a moment.
 >unreal
@@ -2201,6 +2623,11 @@ Your score has just gone up by one point
 That's not something
 
 >s
+Lost Lots
+
+>slot
+If you made it, you might fall in the slot and never get out.
+
 >rustlde
 You almost expect the strudel to hop up into your arms, but the moment passes.
 >rustled
@@ -2227,7 +2654,21 @@ Actionless Coastlines
 >s
 >s
 >e
+Obscurest Subsector
 
+#mistakes first
+>goal
+You fantasize briefly about being a sports star instead of a text adventurer. But it changes nothing. You look at the poor figure in the gaol.
+>olga
+Even if the goal could become a person, they'd be kind of wooden
+>locked
+No, the opposite...
+>delock
+No, this is the wrong area for pure action.
+>dowry
+Dr. Yow is an intellectual. He needs a breakout, not material things or romance.
+
+#get the doctor talking
 >rowyd
 Dr. Yow seems to ponder something for a second but then shakes his head--but he can't break out of his shell.
 >rowdy
@@ -2255,8 +2696,14 @@ Your score has just gone up by one point
 >w
 >w
 >w
+
+>pairer
+You don't need duplicates of anything here. Besides, the machine looks complex enough. It will probably reject or accept what it needs to.
 >put dagger in repair
 Your score has just gone up by one point
+>pairer
+You don't need to repurpose the repair machine. It's done enough for you.
+
 
 >e
 >e
@@ -2292,6 +2739,11 @@ The turbos are working. Best not tinker.
 >enter boat
 Rawest Waters
 
+>prays
+Too late to be a prayers sprayer.
+
+>earnest
+The shore wants to get physically closer to you now. You can feel it. But that doesn't do any good. You feel like you made progress, though.
 >nearets
 Maybe it's you, but the eastern shore seemed slightly closer.
 >nearest
@@ -2320,6 +2772,10 @@ Mislit Limits
 
 #### extra line breaks
 
+>repents
+The serpent remains kinda chaotic evil looking, and not just because it can't understand English. You see red at using a verb and not an adjective.
+>respent
+You're not sure if the serpent's ever been spent, so you can't quite make it re-spent. You feel you have to be close, though.
 >presetn
 The serpent shakes its head and tail a bit.
 >present
@@ -2338,6 +2794,11 @@ You've got something nice in the flowerpot. Better not mess with it.
 Hmm...no rumbling from the curst palace. Big words have all sorts of possibilities.
 
 >w
+Old One's Solo Den
+
+>gyre
+Ed doesn't deserve THAT for his past sins. Plus, you'd get sucked in.
+
 >greyde
 Ed looks slightly less avaricious.
 >greyed
@@ -2377,6 +2838,16 @@ You've dealt with the barley. You can move around a lot more, now.
 
 >score
 1 out of 29
+
+>increds
+You marvel at the possible power of the cinders and even see red at the thought of giving them up.
+
+>reedy
+No, the adverb.
+>idle
+Ed Riley looks pleased he's pressured you into laziness.
+>lied
+You can't think of anything to lie about that would sucker Ed Riley. You try to tell him the people who gave him this "job" lied but realize he doesn't know who you are.
 
 >reediyl
 Ed Riley looks askance at his deli rye, as if it had some bad aftertaste.
@@ -2427,6 +2898,11 @@ That's not something
 >1
 
 >n
+Loop Pool
+
+>polo
+No time for games! You don't have your powers back, anyway. It's what's IN the water you want to change.
+
 >becaues
 The sea cube shakes a bit.
 >because
@@ -2434,6 +2910,10 @@ Your score has just gone up by one point
 >becaues
 That's not something you can
 
+>slee
+The eels aren't what needs to be reduced to rubble, here.
+>lees
+The eels would be insulted to be referred to as dregs.
 >eles
 The eels swim a bit faster.
 >else
@@ -2450,6 +2930,8 @@ Your score has just gone up by one point
 >althouhg
 That's not something you can say, do or see here.
 
+>whoever
+Actually, Mr. Lee is wondering whoever you might be. Tweak things, and you'll convince him.
 >howevre
 Rev. Howe seems to snarl a bit more deeply for a moment.
 >however
@@ -2468,6 +2950,15 @@ That's not something you can say, do or see here.
 >e
 
 >n
+Tapering Anger Pit
+
+>green lady
+You remember reading about the Green Lady in the Silver Chair, where she started nice and started acting furiously--no, that's not the word, not quite, it doesn't fit with Legendary. But it must be something like that.
+>simply
+He's already simply annoying, so that has no effect. Maybe you can alter how he does things another way.
+>implys
+You will have to be subtle here, but you'll want to work on actions, instead.
+
 >enragedyl
 The imp looks slightly annoyed for a second. You may be on the right track.
 >enragedly
@@ -2499,6 +2990,8 @@ The sly imp lets out a curse. He's completely failed to keep his cool. He leaves
 >n
 Wickeder Wire Deck
 
+>lows
+Actually, you'd like the owls NOT to reach lows like you are. Or not to get there before you can avoid them.
 >slow
 Your score has just gone up by one point
 
@@ -2515,26 +3008,50 @@ No need to tweak the ocelots again. They're fine as is.
 >x medals
 The smaller, extremely oxidized, says IQ. The larger, very tarnished, says LUCKY.
 
+>ape lord
+You can't change what the leopard is, but you need to release him from his captivity.
+>preload
+The leopard is plenty powerful as-is, but you need to get it on your side.
 >parolde
 The leopard almost seems to un-cuff its hands.
 >paroled
 Your score has just gone up by one point
 >parolde
 No need to tweak the leopard again. It's fine as is.
+>apelord
+You already changed the leopard.
+>pre load
+The leopard is plenty powerful as-is, and it's already on your side.
 
 >x medals
 The smaller, extremely oxidized, says IQ. The larger, somewhat tarnished, says LUCKY.
 
+>stary
+What good would the satyr be, staring all the time?
+>stray
+No, you can get him on your side.
 >artys
 The satyr puts a hand on its chin as if pondering music.
 >artsy
 Your score has just gone up by one point
 >artys
 No need to tweak the satyr again. He's fine as is.
+>stray
+No, you already have him on your side.
+
+>trays
+You can't transform something living into something dead. Besides, you don't need something that be trays. (Sorry.)
+>ratsy
+You don't want a rat on your side. Or someone who says rats too much.
+
 
 >x medals
 The smaller, extremely oxidized, says IQ. The larger, barely tarnished, says LUCKY.
 
+>barged
+You don't want the badger to have barged into you. Clothed or not.
+>b grade
+The badger already feels second-rate, so you need another way to help it.
 >garbde
 The badger flexes imaginary suit lapels, then quickly goes back to brooding.
 >garbed
@@ -2542,6 +3059,8 @@ Adding a min point
 Your score has just gone up by one point
 >garbde
 No need to tweak the badger again. It's fine as is.
+>bgrade
+The badger no longer feels second-rate, so it needs no more help.
 
 >x medals
 The smaller, extremely oxidized, says IQ. The larger, untarnished, says LUCKY.
@@ -2591,14 +3110,25 @@ The parrot can be changed back into a raptor, but not into anything new.
 
 >snali
 One of the nails seems to bend a bit.
+>slain
+The nails are already dead as a doornail
 >snail
 Your score has just gone up by one point
+>as nil
+You're trying to SAVE the animals, actually.
 >snali
 No need to tweak the snail again. It's fine as is.
 
 >x medals
 The smaller, very oxidized, says IQ. The larger, untarnished, says LUCKY.
 
+>hornet
+The thrones are plural. Besides, just one hornet--what could it do?
+>shorten
+Well--not shorten, but break it down...you see red from the effort
+
+>shorten
+They're more likely to shorten you with a few stings.
 >hornest
 The thrones seem to buzz a bit.
 >hornets
@@ -2631,6 +3161,13 @@ The smaller, barely oxidized, says IQ. The larger, untarnished, says LUCKY.
 >snipe
 Your score has just gone up by one point
 
+>penis
+Huh huh huh, Beavis. That was cool.
+>penis
+Dammit, Beavis. You like have a game to solve.
+>spine
+You don't need to grow a spine. You've gotten this far.
+
 >x medals
 The smaller, unoxidized, says IQ. The larger, untarnished, says LUCKY.
 
@@ -2639,6 +3176,10 @@ The smaller, unoxidized, says IQ. The larger, untarnished, says LUCKY.
 >w
 >w
 >w
+Coevals' Alcoves
+
+>drobe
+That's pretty much their whole drobe. You're not here to talk fashion, anyway.
 
 >honestyl
 Merle and Elmer look askance at each other for a bit.
@@ -2675,6 +3216,7 @@ You already got a boost from the medals.
 
 
 >w
+Reclusion Inclosure
 WTF FTW
 
 >1
@@ -2688,6 +3230,26 @@ WTF FTW
 >1
 Cordial, cold air.
 
+>nicer soul
+'O, nice slur!' Elvira counters. 'Cruel is ON!' Dang! She's come prepared with defense of her own too. I guess finding the redemption in all of us isn't the way to go, here.
+>rule scion
+Elvira smirks and shakes her head in disbelief. 'I was expecting you to give up, but...no, you're not getting a post in my secret police for that. I mean, if I ever established any.' She quickly makes sure nobody will remember hearing her slip-up.
+QUIT or UNDO the last command?
+>undo
+>coins lure
+[one of]Elvira momentarily sniffs. 'Money? Where? Mmm, I'll find it after beating this little dorkling up.'[or]Elvira's lust for power has eclipsed her lust for money. You should probably try to destroy her.[stopping]
+>aliver
+For whatever reason, you decide to give Elvira even more power. This time, you don't have the time or guts to reject her phaser."
+QUIT or UNDO the last command?
+>undo
+>drop it
+For whatever reason, you just decide to give up. Elvira cackles. 'I knew you'd see it my way.' You wind up apologizing on national TV for getting too big for your anagramming britches and accepting a general brainwashing to boot. It's not that bad, only because, well, um, it just isn't. You're thrown in a jail, which can't be anagrammed, but it's for your own good. You're cool with that.
+>undo
+>prod it
+You prod curiously at the machinery, and soon, Elvira realizes you don't have anything up your sleeve, and you won't be able to retreat in time. The purple pulper and the rest of her army subdue you easily.
+
+>sherpa
+You don't need someone to help you climb. You need help fighting Elvira.
 >au 1
 >play whistle
 >undo
@@ -2708,9 +3270,17 @@ Your score has just gone up by one point.
 That's not something you can
 
 >gapers
+Really, you don't need people all 
+>gasper
+Really, you don't need people all 
+
+>gapers
 Really, you don't need people all Damn Mister Master Mind over changing those pagers. That's not your style.
 >grapse
 The pagers light up slightly. Maybe give it another go.
+>grape
+Your score has just gone up by one point.
+>undo
 >grapes
 Your score has just gone up by one point.
 >grapse
@@ -2745,13 +3315,24 @@ Your score has just gone up by one point.
 >undo
 >plusm
 The lumps seem almost ready to burst.
+>slump
+Don't get exhausted! This area should be a bit of a break! I hope.
 >plums
 Your score has just gone up by one point.
 >plusm
 That's not something
 
+>reaps
+No, not verbs. Well, not here by Curtis.
+>spare
+No, not adjectives. Well, not here by Curtis.
+>rapes
+Some things, you can't joke about. So please, don't try that again.
 >peasr
 The spear stays as-is. But it can't be that hard to change.
+>pear
+Your score has just gone up by one point.
+>undo
 >pears
 Your score has just gone up by one point.
 >peasr
@@ -2794,6 +3375,10 @@ Your score has just gone up by one point.
 >undo
 >limse
 The slime shifts about slightly, but not enough--yet.
+>smile
+You smile at the slime. It can't be that hard to figure what to do.
+>miles
+You don't want miles and miles of slime.
 >limes
 Your score has just gone up by one point.
 >limse
@@ -2840,8 +3425,12 @@ Your score has just gone up by one point.
 >coconust
 Just return the fruit to Curtis. No need for another change.
 
+>sonic
+Maybe if you had more than one coin.
 >icon
 Your score has just gone up by one point.
+>sonic
+Maybe if you had more than one icon.
 
 >s
 You fiddle with the coin you got
@@ -2858,6 +3447,11 @@ Your score has just gone up by one point.
 Just return the fruit to Curtis. No need for another change.
 
 >w
+Filed Field
+
+>fidel
+A thin voice howls "I fled!"
+
 >blackberrise
 The barber sickle darkens a bit. You must be on the right track.
 >blackberries
@@ -2886,12 +3480,16 @@ Your score has just gone up by one point.
 >strawberrise
 Just return the fruit to Curtis. No need for another change.
 
+>fart
+This raft isn't as receptive as the one in Anger Range.
 >grapefruti
 The rapt figure frowns as if it's eaten something sour.
 >grapefruit
 Your score has just gone up by one point.
 >grapefruti
 Just return the fruit to Curtis. No need for another change.
+>fart
+You feel slightly dafter, having farted to no good purpose.
 
 >raspberyr
 The pryer bars briefly turn very red.
@@ -2915,8 +3513,21 @@ Nice going.
 Blam!
 Your score has just gone up by one point.
 
+>scion
+Money, or something like it, should not be the guide of you.
+
 >n
 >e
+Clangier Clearing
+
+>sell stuff
+You are paving the way for commerce, not interacting
+>sell
+You are paving the way for commerce, not interacting
+
+>cigar
+That'd be out of place among fresh fruits. Plus, whether or not Len deserves a cigar, he doesn't deserve to be turned into one.
+
 >cinqeu
 That certainly sounds foreign--but it doesn't seem to sway Len.
 >cinque
@@ -2938,6 +3549,15 @@ Your score has just gone up by one point.
 >papaysa
 You hear a sap yap about the sign and figure it can't be changed any more.
 
+>go man
+That's the right idea but the wrong sorts of words.
+>nag mo
+You get all red faced asking people how to trade for a mango, and asking, and asking.
+>an omg
+Lashing out that way leaves you feeling you must be close to the right way to get a mango.
+
+>mango
+That's the fruit you need to find. You see red wondering where or how?
 >amogn
 It would be nice to find a mango, yes. But you don't find anything that way.
 >among
@@ -2976,6 +3596,13 @@ Your score has just gone up by one point.
 >lmeno
 The melon is fine as-is. It's better than the one that was on display, for sure.
 
+>silt
+Dirty way to slash prices.
+>slit
+Dirty way to slash prices.
+
+>precis
+It's already a precis, of sorts. Less pretentious words will work better here.
 >cripse
 Something glints off the list of prices.
 >cripes
@@ -2985,6 +3612,21 @@ You corrected the list enough.
 
 >w
 >d
+Scape Space
+
+>retard
+You can picture people like Red Rat Art Erd calling you, or people he 'provided financial services to,' that, but two wrongs don't make a right. Besides, if anything, he was being too clever.
+>gs
+>red rat
+Dr. Tera Darter is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.
+>allo
+Lola says nothing back.
+>gs
+>darter
+Art Erd has nowhere to run, and you don't know if you want him taking that storage box with him.
+
+>banana
+Hm, that's the fruit you want, but which letter to grab? And how?
 >nabaan
 The A shines for a split-second.
 >nab an a
@@ -2992,6 +3634,8 @@ Your score has just gone up by one point.
 >nabaan
 Just return the fruit to Curtis. No need for another change.
 
+>gorean
+This game isn't about that sort of stuff. Not that there's anything wrong with that.
 >gonera
 The orange seems a bit closer for a bit.
 >go near
@@ -3014,9 +3658,19 @@ Your score has just gone up by one point.
 Just return the fruit to Curtis. No need for another change.
 
 >give dollar
+
+>lots
+You only need the one slot.
+
 >put icons in slot
 >u
 >n
+Gates Stage
+
+>knock gates
+Just KNOCK instead.
+>knock
+
 >prpe
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
 

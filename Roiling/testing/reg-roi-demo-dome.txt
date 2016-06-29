@@ -214,6 +214,9 @@ You can only go south here.
 >w
 Ned's Dens
 
+>send
+Maybe in another game, you could do that, if you walked around right. But not this one.
+
 >read chronicle
 >g
 >g
@@ -247,6 +250,10 @@ You suddenly feel a desire to play an entirely different Andrew Schultz game. Bu
 
 Evoc-Cove
 A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want.
+
+>neva
+>lol
+Yeah, the novel is pretty unbelievable, but it's not there to be profound.
 
 >rr
 Page 1:
@@ -291,6 +298,13 @@ Well, that's all. Hooray for speed-reading.
 >evco
 You don't need to flip anything here, really. Certainly not a room.
 
+>w
+>s
+Sparse Spares
+
+>spears
+There's nothing you need a weapon to fight against.
+
 >tifler
 This is a museum! No messing with the exhibits, please. Or trying to.
 
@@ -309,7 +323,7 @@ This is a museum! No messing with the exhibits, please. Or trying to.
 >sclipat
 This is a museum! No messing with the exhibits, please. Or trying to.
 
->spears
+>spresa
 You don't need to flip anything here, really. Certainly not a room.
 
 >ublk

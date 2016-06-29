@@ -13,6 +13,12 @@
 >seed 1
 >gonear trefoil
 
+>new id
+You need to make sure Edwin's new ID is something negative.
+>wendi
+Now that would be too embarrassing. Maybe you could embarrass him a little, though.
+>widen
+Now that would be too embarrassing. Maybe you could embarrass him a little, though.
 >winde
 Edwin shakes his head, but a glare from Rodney sets him straight--for now.
 >wined
@@ -21,10 +27,14 @@ up by one point
 Blake shakes his head, but a glare from Rodney sets him straight--for now.
 >bleak
 up by one point
+
 >tensre
 Ernest shakes his head, but a glare from Rodney sets him straight--for now.
+>resent
+But how could you make Ernest feel so he'd resent his position?
 >tenser
 up by one point
+
 >snarde
 Anders shakes his head, but a glare from Rodney sets him straight--for now.
 >snared
@@ -58,14 +68,24 @@ up by one point
 Bredo shakes his head, but a glare from Rodney sets him straight--for now.
 >bored
 up by one point
+
+>recalm
+Right idea, but it might work better in another area.
 >calmre
 Marcel shakes his head, but a glare from Rodney sets him straight--for now.
 >calmer
 up by one point
+
+#2 extra mistakes
+>wander
+A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead.
+>warden
+Andrew doesn't look like he has the leadership qualities necessary to become to main warden over Rodney.
 >warnde
 Andrew shakes his head, but a glare from Rodney sets him straight--for now.
 >warned
 up by one point
+
 >timidre
 Demitri shakes his head, but a glare from Rodney sets him straight--for now.
 >timider
@@ -84,6 +104,9 @@ up by one point
 Goldy shakes his head, but a glare from Rodney sets him straight--for now.
 >godly
 up by one point
+
+>radly
+Boo! That's too subtle for here. Maybe you could make Daryl look different so he feels less radly about himself.
 >laryd
 Daryl shakes his head, but a glare from Rodney sets him straight--for now.
 >lardy
