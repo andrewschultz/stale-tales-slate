@@ -7571,6 +7571,8 @@ description of bright red graffiti is "DOC OLBARK has chosen to deface this road
 
 anapest is scenery in moor. rgtext of anapest is "[rcn][rc][gc][rc][rc][rc][gc]". lgth of anapest is 7. gpos of anapest is 4. rpos of anapest is 7. cert-text of anapest is "-[d1][ast]A[d1][d1][d1][ast]T". rect-text of anapest is "P[d1][d1][d1][d1][d1][ast]T".
 
+description of anapest is "You can't help NOT paying attention to the anapest."
+
 anapest is undesc.
 
 understand "anapests" as anapest.
@@ -7905,6 +7907,9 @@ to say what-to-ask-lois:
 		say "You feel guilt at asking Lois for more"
 
 check going west in Sacred Cedars:
+	block-cedars;
+
+to block-cedars:
 	if caskfillings is 2:
 		say "You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. 'WIN,' she whines.";
 		now printed name of Trellis is "Crashing Archings";
@@ -11559,7 +11564,13 @@ carry out roomgoing:
 		let myrm be noun;
 	if myrm is location of player:
 		say "You're already here. Or there. The precise grammar's neither here nor there." instead;
+	if myrm is trips strip and trips strip is visited:
+		say "You may mean to RETRY instead. Do so?";
+		if the player yes-consents:
+			try retrying instead;
 	if map region of myrm is not mrlp:
+		if map region of myrm is solved:
+			say "You already solved that area." instead;
 		say "That'd be hyperwarping to another region. Sorry." instead;
 	if myrm is unvisited:
 		say "You haven't gotten there yet." instead;
@@ -11577,6 +11588,10 @@ carry out roomgoing:
 		say "It's time to deal with things, not run." instead;
 	if myrm is the nick: [start sortie]
 		say "No, you don't want to go back there." instead;
+	if player is in the nick:
+		say "That's not the magic way out. Sorry!" instead;
+	if player is in cedars:
+		block-cedars;
 	if myrm is cedars and caskfillings is 2: [end sortie]
 		say "You can't go back there." instead;
 	if myrm is condo and condo-evac is true: [start metros]
@@ -11585,11 +11600,13 @@ carry out roomgoing:
 		say "The nerds might outnumber you and take the tulip back. They've probably had enough of you." instead;
 	if player is in abyss: [end metros]
 		say "No going back now. This is the final confrontation." instead;
-	if player is in roman manor:
-		say "No more puttering around or dealing with exits." instead;
 	if mrlp is resort:
-		if red bull burdell is visible:
+		if red bull burdell is in hotspot:
 			say "He's saying GET OUT just to be obnoxious and intimidating." instead;
+		if player is in roman manor:
+			say "But you want to NOT go anywhere. NOT take any exits." instead;
+		if red bull burdell is in lalaland:
+			say "But you beat Red Bull Burdell! Just go east!" instead;
 		say "Gotta keep going forward." instead;
 	say "Zooomp...[line break]";
 	move player to myrm;
