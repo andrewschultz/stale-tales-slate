@@ -2,7 +2,7 @@
 #
 #reg-roi-demo-dome.txt
 #
-#regression test for trying ways through troves
+#regression test for trying ways through demo dome including nudges
 #
 
 ** game: /home/andrew/prt/debug-roiling.ulx

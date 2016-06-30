@@ -263,6 +263,11 @@ The plaster was cracking anyway, before you made it a shiny stapler. You don't n
 >wallpaper
 You try the word-flip, to check--sadly, it doesn't work. Maybe there is another way to remove the paperwall.
 
+>put staple in stapler
+The staple fits in with minimal fuss.
+
+!You put the staple into the stapler.
+
 >staple wall
 >in
 Strip of Profits

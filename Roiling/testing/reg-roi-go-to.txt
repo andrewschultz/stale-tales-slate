@@ -1,0 +1,439 @@
+###############################
+#
+#reg-roi-go-to.txt
+#
+#regression test for trying ways through demo dome including nudges
+#
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* manor-go-to
+
+>go to me
+>go to study
+>go to gunter
+Who?
+
+>go to rodney
+You haven't made it to that region, yet.
+
+>go to xxx
+That's not a room or thing I recognize.
+
+>go to elmo
+
+>think
+>x bookcase
+>open door
+>1
+>gt study
+>5
+>lamp
+>basement
+>d
+>gt study
+Dusty Study
+
+>chimney
+>u
+>gt study
+Dusty Study
+
+>stable
+>in
+A Blest Stable
+
+>gt basement
+Basement
+
+>satchel
+>x settler
+>gt cavern
+You've never been there yet, so you can't go back.
+
+>in
+>flier
+>gt study
+No need to poke around when you have someone willing to help you--especially since it means less time for him to escape afterwards.
+
+You can RECAP to see your options.
+
+>3
+Carven Cavern
+
+>gt study
+Your manor was surrounded, and you escaped. Bad idea to turn back.
+>gt basement
+Your manor was surrounded, and you escaped. Bad idea to turn back.
+>gt highest
+Your manor was surrounded, and you escaped. Bad idea to turn back.
+>gt stable
+Your manor was surrounded, and you escaped. Bad idea to turn back.
+
+>staple
+>stapler
+>put staple in stapler
+>staple
+>in
+
+* stores-go-to
+
+>ts
+
+>gt study
+WRONG
+
+>tokers
+>nestor
+
+>enter cloud
+>gt profits
+The command you may be looking for is RETRY.
+
+>in
+>outside
+
+>gt lectures
+You have better things to do than think of going back there.
+
+* routes-go-to
+
+>ts
+
+>routes
+>gt store u
+
+>enter routes
+Same Mesa
+
+>gt trips strip
+The command you may be looking for is RETRY. Do that now instead?
+>undo
+
+>inside
+>x toils
+>outside
+>gt cleric
+Cleric Circle
+
+>gt mesa
+Same Mesa
+
+>against
+>gt Circle
+WRONG
+
+>astride
+>below
+>under
+
+>past
+Idle Deli
+
+>despite
+
+>out
+
+>across
+Adobe Abode
+
+>opposite
+
+>gt horbert
+>out
+
+>gt horbert
+WRONG
+
+>from
+
+>gt horbert
+WRONG
+
+>beneath
+
+>gt mesa
+The crowd would be sad to see you return, unsuccessful.
+
+>until
+>around
+>along
+
+>gt underpass
+>gt mesa
+The crowd would be sad to see you return, unsuccessful.
+
+>amidst
+
+>gt pier
+You have no idea how to turn the cripple clipper around, and you don't want to.
+
+>behind
+>between
+Strip of Profits
+
+* troves-go-to
+
+>troves
+>in
+
+>hate
+>care
+Loudest Used Lot
+>gt rathole
+Going back would be a dereliction of your destiny.
+
+>observe
+>spot
+>believe
+>recall
+Pallid Li'L Pad
+
+>gt rathole
+Going back would be a dereliction of your destiny.
+>gt fiefco
+You must work to make your dreams of going there become reality.
+
+>despair
+>deal
+
+Dour Tan Rotunda
+>gt pallid
+Going back would be a dereliction of your destiny.
+>gt boredom
+Going back would be a dereliction of your destiny.
+>gt fiefco
+You must work to make your dreams of going there become reality.
+
+>desire
+Econ-Cone
+>gt rotunda
+Going back would be a dereliction of your destiny.
+>gt fiefco
+You must work to make your dreams of going there become reality.
+
+>aspire
+>ponder
+FiefCo Office
+>gt cone
+Going back would be a dereliction of your destiny.
+>gt fiefco
+You're already here.
+
+>ignore
+Your score has just gone up by one point
+>bolster
+Your score has just gone up by one point
+>last
+Your score has just gone up by one point
+>resign
+Your score has just gone up by one point
+
+Strip of Profits
+
+* presto-go-to
+
+>ts
+
+>enter spot
+>presto
+
+>umph
+>pooh
+>e
+>n
+>w
+>w
+>n
+>n
+>e
+>e
+>e
+>n
+>w
+>n
+>n
+
+>gt lev matzo
+You'll have to walk through the mazeroom, from L to V. Or, well, just solve the volt maze.
+
+>s
+>rats
+>drat
+>s
+>ole
+>darn
+>whassup
+>n
+>n
+>bleep
+>e
+>get gun
+>bingo
+>put dart in gun
+>w
+
+>gt lev matzo
+You'll have to walk through the mazeroom, from L to V. Or, well, just solve the volt maze.
+
+>mazeltov
+>gt lev matzo
+WRONG
+
+>there
+>n
+>syke
+>n
+>tough
+>so long
+
+>gt dirge ridge
+WRONG
+>gt leo
+WRONG
+
+>n
+>screen
+>put screen on slab
+>escaroles
+>leaf
+>skid
+>push skid s
+>g
+>g
+>put leaf on skid
+>s
+Hacks' Shack
+>gt phat path
+Phat Path
+>n
+>keyboard
+>gt Phat Path
+WRONG
+
+
+* oyster-go-to
+>spit
+>sing
+>inset
+>out
+
+>gt shop
+The trolls would not welcome you back.
+
+>calm
+>run
+Shore
+
+>gt lode
+You don't want to go back near that urn.
+
+>gt shop
+The trolls would not welcome you back, and it'd take too long to get there.
+
+>boast
+>gt shore
+If only it was that easy. Well, I hope it's not too hard to figure the right action.
+>gt lode
+If only it was that easy. Well, I hope it's not too hard to figure the right action.
+>gt shop
+If only it was that easy. Well, I hope it's not too hard to figure the right action.
+
+>gt freight
+You don't really want to revisit the crays.
+>gt shore
+No sense crossing back. There's more on this side of the shore.
+>gt lode
+You don't want to go back near that urn, and it'd be hard, being on the other side of the shore.
+>gt shop
+The trolls would not welcome you back, and it'd take too long to get there.
+
+>spike
+>e
+>scan
+>seek
+
+>gt lean lane
+Now you've visited the much-nicer Handsome Sand Home, you can't find your way back to Lean Lane, and there really wasn't anything there.
+
+>purloin gleaner
+>enlarge gleaner
+>x gleaner
+>abstract walleyes to lalaland
+>gonear hedron
+>patrol
+>in
+
+>gt anger range
+Aw, c'mon, the ant should be no problem.
+>tan
+Tenfold
+>gt sanctum
+You got rid of the ant. Nothing more to do there.
+
+* towers-go-to
+
+>seed 1
+>ts
+>towers
+>in
+
+>gone
+>wined
+>bleak
+>yonder
+Topside Deposit
+
+>gt trefoil
+You had your fun in there.
+>gonear waters
+>gt trefoil
+Progress isn't easy when you're flailing in water.
+>gt deposit
+Progress isn't easy when you're flailing in water.
+
+>nearest
+>gt waters
+No, it wasn't fun the first time.
+>gt deposit
+You don't want to cross Leak Lake again.
+>gt trefoil
+That's way in the past.
+
+* otters-go-to
+
+>a5
+>barely
+
+* others-go-to
+
+>ts
+>gonear rustic
+>pears
+>plums
+>grapes
+>tamarind
+
+>compass
+by one point
+
+>n
+>w
+>e
+>e
+>w
+>n
+>s
+>d
+>gt rustic
+Rustic Citrus
+>gt swell
+Swell Wells
+>gt filed
+Filed Field
+>gt len
+Clangier Clearing
+>gt gates
+Gates Stage
+

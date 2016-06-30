@@ -108,6 +108,8 @@ chapter region definition
 
 Roman Manor is an unsolved region. regtab of Roman Manor is table of roman manor nudges. regana of Roman Manor is table of roman manor anagrams. max-score of Roman Manor is 13. min-score of Roman Manor is 8. [giant pin, stable/stair, chimney/ramp, basement] [non-anagram = staple wall]
 
+last-loc of Roman Manor is Dusty Study. [needed for GT command]
+
 Stores is an unsolved spoiled region. regtab of Stores is table of routes nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
 Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 18. min-score of Routes is 17. [worst ad]
@@ -1219,6 +1221,10 @@ understand "goto [any room]" as gotoing.
 understand "go to [any room]" as gotoing.
 understand "gt [any room]" as gotoing.
 
+rule for supplying a missing noun while gotoing: 
+	say "That's not something in the game, yet.";
+	reject the player's command;
+
 carry out gotoing:
 	d "Trying location [noun].";
 	if noun is not a room:
@@ -1228,13 +1234,16 @@ carry out gotoing:
 		say "You're already here." instead;
 	if noun is strip and strip is visited:
 		say "The command you may be looking for is RETRY. Do that now instead?";
-		if the player consents:
+		if the player yes-consents:
 			try retrying instead;
 		else:
 			say "OK." instead;
+	if noureg is solved:
+		say "You already solved [noureg]." instead;
 	if noureg is lalaland:
 		say "You have disposed of what you're trying to get to." instead;
 	if last-loc of noureg is unvisited:
+		d "[noureg]: [last-loc of noureg].";
 		if mrlp is noureg:
 			d "You probably used a debug trip to get here.";
 		else:
@@ -1258,6 +1267,8 @@ carry out gotoing:
 		say "[if last-loc of noureg is unvisited]You haven't made it to that region, yet[else]That's in the wrong region[end if]." instead;
 	if progval of noun > progval of location of player:
 		say "You seem to be getting ahead of yourself. You shouldn't know about that, yet." instead;
+	if noun is a mazeroom:
+		say "You'll have to walk through the mazeroom[if noun is r24], from L to V[end if]. Or, well, just solve the volt maze." instead;
 	if noun is dirge ridge and mrlp is presto: [PRESTO]
 		if Leo is dismissed:
 			post-wall-brunt;
@@ -1274,12 +1285,16 @@ carry out gotoing:
 		say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
 	d "From [progval of location of player] to [progval of noun].";
 	if progval of noun < progval of location of player:
+		if location of player is rawest waters:
+			say "Progress isn't easy when you're flailing in water." instead;
+		if noun is rawest waters:
+			say "No, it wasn't fun the first time." instead;
 		repeat through table of progvals:
 			if there is a rm entry and rm entry is noun:
-				say "[why-not entry]" instead;
+				say "[why-not entry][line break]" instead;
 			if there is a regs entry and regs entry is mrlp:
 				if rmprog entry is progval of noun:
-					say "[why-not entry]" instead;
+					say "[why-not entry][line break]" instead;
 		say "There's no way back. You deserve a reason why, so this is a minor bug." instead;
 	if noun is shunned:
 		if noun is Lean Lane:
@@ -1289,6 +1304,8 @@ carry out gotoing:
 		if noun is lectures:
 			say "You have better things to do than think of going back there." instead;
 		say "That's off-limits." instead;
+	if location of player is scum ant sanctum:
+		say "Aw, c'mon, the ant should be no problem." instead;
 	if duck is in location of player and duck is friendly: [TOWERS]
 		say "(The duck follows, with quick-nag quacking, though you're walking pretty fast.)";
 		move duck to noun;
@@ -1331,16 +1348,16 @@ table of progvals [this determines which rooms are definitively ahead of others,
 rm	rmprog	regs	why-not
 --	1	manor	"Your manor was surrounded, and you escaped. Bad idea to turn back."
 carven cavern	2	--	[manor]
---	1	routes	"[if progval of location of player is 3]Not from the boat, you aren't. You're much closer to your goal right now[else]The crowd would be sad to see you return, unsuccessful[end if]."
+--	1	routes	"[if progval of location of player is 3]Not from the boat, you aren't. You're much closer to your goal right now[else]The crowd would be sad to see you return, unsuccessful. And you can't, anyway[end if]."
 underpass	2	--	"You already muddled your way out of there. [if progval of location of player is 2]There's gotta be a way to get through da mist[else]And onto the boat, which must go somewhere[end if]!"
 ripe pier	3	--	"You have no idea how to turn the cripple clipper around, and you don't want to."
 cripple clipper	4	-- [routes]
 posh hops shop	1	--	"The trolls would not welcome you back[if progval of location of player is 3], and it'd take too long to get there[end if]."
-olde lode	2	--	"You don't want to go near that urn[if progval of location of player is 3], and it'd be hard, being on the other side of the shore[end if]."
+olde lode	2	--	"You don't want to go back near that urn[if progval of location of player > 3], and it'd be hard, being on the other side of the shore[end if]."
 Hero's shore	3	--	"No sense crossing back. There's more on this side of the shore."
 Fighter Freight	4	--	"You don't really want to revisit the crays."
 --	5	oyster	[oyster]
-loftier trefoil	1	--	"[if progval of location of player is 1]You had your fun in there[else]That's way in the past[end if]."
+loftier trefoil	1	--	"[if progval of location of player is 2]You had your fun in there[else]That's way in the past[end if]."
 --	2	towers	"You don't want to cross Leak Lake again."
 rawest waters	3	--	"Leak Lake wasn't fun the first time."
 solo den	4
@@ -3288,8 +3305,10 @@ after quipping when qbc_litany is the table of Elmo comments:
 		now Elmo is in lalaland;
 		now satchel is in lalaland;
 		if do-i-chat is true: [this is a cheat bypass]
-			now hydra is in lalaland;
-			move player to Inclosure;
+			now macks are in lalaland;
+			move player to Frontage;
+			try looking;
+			now qbc_litany is table of Gretta comments;
 		else:
 			now poss-score of manor is cur-score of manor + 3;
 			move the player to Carven Cavern;	[end Elmo's dialogue]
@@ -3367,6 +3386,10 @@ to d (a - indexed text):
 	if debug-state is true:
 		say "DEBUG INFO: [a][line break]"
 
+to dl (a - indexed text):
+	if debug-state is true:
+		say "DEBUG INFO (DELETE): [a][line break]"
+
 to dn (a - indexed text):
 	if debug-state is true:
 		say "DEBUG INFO: [a]"
@@ -3415,7 +3438,7 @@ to solve-region (sre - a region):
 			now nestor is in lalaland;
 			now tokers are in lalaland;
 			now smoke cloud is in lalaland;
-	if player is not in Strip of Profits:
+	if player is not in Strip of Profits and sre is not manor:
 		d "player not currently in Strip of Profits. Player moved from [location of player].";
 		move player to Strip of Profits;
 	if sre is not spoiled and otters-x are examined:
@@ -6275,9 +6298,9 @@ Rule for printing a parser error when the latest parser error is the noun did no
 	if the player's command matches the regular expression "^hint":
 		say "That's not something in this region.";
 	else if the player's command matches the regular expression "^(gt|go to)":
-		say "That's not a room or place I recognize.";
+		say "That's not a room or thing I recognize.";
 	else:
-		say "That noun isn't in this game."
+		say "That noun isn't in this game. Or at least, not yet it isn't."
 
 Rule for printing a parser error when the latest parser error is the can't see any such thing error:
 	if location of player is study and study is dark:
@@ -9018,7 +9041,7 @@ after fliptoing when player is in dusty study (this is the more min points in st
 				d "Min point for [if sitar is in lalaland]sitar [end if][if pram is in lalaland]pram [end if].";
 				min-up; [already have way out of study]
 	else if noun is chimney:
-		if t-b is in lalaland or niche is in lalaland:
+		if t-b is in lalaland or tables are in lalaland:
 			min-up;
 	else if noun is tables:
 		if t-b is in lalaland or niche is in lalaland:
@@ -9420,7 +9443,7 @@ a-text of niche is "RRYRRYO". b-text of niche is "RRYRRYO". parse-text of niche 
 instead of doing something with niche:
 	if action is procedural:
 		continue the action;
-	say "It's too far away to meaningfully interact with.";
+	say "It's--well, it's not available.";
 
 the chimney is scenery. "It's where your niche was. You can probably put your chair on the bed, then climb the chair to reach it. I won't even make you spell out the details. Just go [b]up[r]."
 
@@ -9648,7 +9671,7 @@ check going down in stable:
 	move player to Basement instead;
 
 instead of doing something with stair:
-	if current action is climbing or current action is entering or current action is fliptoing:
+	if action is procedural:
 		continue the action;
 	say "Can't do much but go up or down a stair." instead;
 
@@ -9665,7 +9688,7 @@ check going up in Basement:
 			say "Ok, probably best to find a way out." instead;
 	else:
 		say "You go back to the study.";
-		now player is in study;
+		now player is in study instead
 
 settler-x-nag is a truth state that varies.
 
@@ -9712,9 +9735,8 @@ check going inside in cavern:
 		say "You'll probably need a way through that paperwall." instead;
 	say "You walk through the former paperwall--and through an obscure part of Old Warpy. You hear a voice: 'You! Find! Unify! Do!' It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different.";
 	now satchel is in lalaland;
-	now roman manor is solved;
-	now last-solved-region is roman manor;
-	move player to strip of profits instead;
+	solve-region roman manor;
+	the rule succeeds;
 
 chapter plaster
 
@@ -9751,7 +9773,7 @@ check inserting into stapler:
 
 after inserting staple into stapler:
 	say "The staple fits in with minimal fuss.";
-	continue the action;
+	the rule succeeds
 
 the peeling paperwall is scenery. "It's oddly lined, with one vertical stripe on the edge and a bunch of horizontal stripes. There's a small pair of holes in the upper left-hand corner. You imagine it's many layers of papers, so pulling them one by one wouldn't work."
 
@@ -13007,6 +13029,8 @@ book Econ Cone
 
 Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the perky crass skyscraper in the center forms the top of the skyline, which is itself a cone. [one of]Once here, t[or]T[stopping]he bluster from your average bustler is subtler here. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]You have lost all sense of direction, mainly because that statue nearby looks so important! [if rivets is reflexive and prai is reflexive]Maybe it will help you motivate yourself even more[else if rivets is reflexive or prai is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]That statue taught you all it could, so maybe you can move on--or in--to the skyscraper[end if]."
 
+understand "econ-cone" as Econ Cone.
+
 check going inside in Econ Cone:
 	say "You can't just walk in[if statue is reflexed or rivets are reflexed] even with your desire at its level[end if]! You need the right sort of thinking." instead;
 	try going west instead;
@@ -14750,7 +14774,7 @@ before fliptoing when mrlp is presto (this is the warn against SHATTER THREATS r
 					continue the action;
 				else:
 					say "OK, but you'll need to do so anyway to get out of here.";
-					preef disk;
+					preef screen;
 					do nothing instead;
 			say "That stupid SHATTER-THREATS law might pick you up out here. Best to go in the shack and try again.";
 			preef noun;
@@ -14866,7 +14890,7 @@ this is the shack-south rule:
 			the rule fails;
 	else if keyboard is off-stage:
 		say "That yak. Maybe you could release it from its yoke.";
-	the rule succeeds;
+	the rule succeeds; [?? drab yoke and keyboard -- pin player down more]
 
 to say treas-west:
 	if austerer is not visited:
@@ -15423,9 +15447,9 @@ a mazeroom is a kind of room. the printed name of a mazeroom is usually "Maze Ro
 
 the specification of mazeroom is "A room you don't need to visit at all but which might give clues."
 
-l-m is a privately-named person. understand "lev/ matzo/" as l-m. printed name of l-m is "Lev Matzo".
+l-m is a privately-named person. understand "lev matzo" and "lev/matzo" as l-m when l-m is in r24. printed name of l-m is "Lev Matzo".
 
-m-l is a privately-named person. understand "matzo/ lev/" as m-l. printed name of m-l is "Matzo Lev".
+m-l is a privately-named person. understand "matzo lev" and "lev/matzo" as m-l when m-l is in r24. printed name of m-l is "Matzo Lev".
 
 m-l is a person. "[one of]A man introducing himself as[or][stopping] Matzo Lev is here, more scannable than Lev Matzo."
 
@@ -16364,8 +16388,9 @@ understand "fart" as a mistake ("[if b-r is visible]This raft isn't as receptive
 
 check fliptoing raft:
 	if player is not on raft and raft is reflexive:
+		say "Like a butterfly's wings in China, your fart causes the raft to waver. Maybe if you got on the raft, something more would happen.";
 		preef raft;
-		say "Like a butterfly's wings in China, your fart causes the raft to waver. Maybe if you got on the raft, something more would happen." instead;
+		the rule succeeds;
 
 understand "boast" as a mistake ("Batso.") when player is not in shore.
 
@@ -16596,7 +16621,8 @@ carry out unearthing:
 		say "Nothing to unearth here. Maybe somewhere more wide-open." instead;
 	if player does not have rigged digger:
 		say "You need something to dig here[if uaah is visited]. Maybe something from a hut you visited[else]. You haven't found a place with that something, yet. Still, hooray for thinking ahead[end if].";
-		preef haunter instead;
+		preef haunter;
+		the rule succeeds;
 	if noun is not haunter:
 		say "Not worth unearthing." instead;
 	if haunter is not off-stage:
@@ -19676,6 +19702,7 @@ to decide whether the action is procedural: [aip]
 	if smelling, yes;
 	if reading, yes;
 	if gotoing, yes;
+	if gotothinging, yes;
 	if saying yes, yes;
 	if saying no, yes;
 	if dropping, yes;
@@ -19869,7 +19896,7 @@ check scaning curst palace (this is the nab a few letters rule) :
 		now max-pal-seen is palace-let;
 
 check fliptoing curst palace when player is not in mislit limits:
-	say "Your word, stupendous as it is, has no effect. Yet. You [if player is in solo den]may need to go back outside[else]are probably not close enough[end if].";
+	say "Your word, stupendous as it is, has no effect. Yet. You [if player is in solo den]may just need to go back outside[else]are probably not close enough[end if].";
 	preef curst palace;
 	the rule fails;
 
@@ -20384,7 +20411,7 @@ rodyon is a truth state that varies.
 check fliptoing Rodney:
 	if number of visible warriors > 4:
 		if the player's command includes "yonder":
-			say "Your attempt to bounce Rodney yonder is blocked by a few of his friends, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?";
+			say "Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?";
 			now rodyon is true;
 			preef Rodney instead;
 		say "Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?";
@@ -20615,9 +20642,6 @@ to preef-nol (thi - a thing):
 check fliptoing medals:
 	if Merle is visible:
 		say "Elmer and Merle's stupid underling chatter is bad enough at regular speed. You're worried going at super speed might drive you nuts[med-unf]. [if hydra-known is true]You probably need force to get west, too[else]You might need that speed in the final combat, instead[end if].";
-		preef medals instead;
-	if player is in wire deck and owls are in wire deck:
-		say "The owls seem like they can be dealt with more simply. The medals should be saved for something bigger[med-unf].";
 		preef medals instead;
 	if player is not in alcoves:
 		say "There's nothing you really need to attack or avoid quickly here or nearby[med-unf].";
@@ -21100,6 +21124,11 @@ check fliptoing atmo-moat:
 		do nothing instead;
 
 after printing the locale description for frontage when frontage is unvisited:
+	if do-i-chat is true:
+		now macks are in lalaland;
+		now all mack-ideas are in lalaland;
+		try talking to gretta;
+		the rule succeeds;
 	say "[line break]But whatever they call themselves, you know macks['] M.O. Jump from subject to subject, to seem 'exciting,' and capitalize on when people give the benefit of the doubt. Still, there's always a hole in their 'impressive' stories--and even if you realize it a few turns later, you can drain their perseverance."
 
 the raw bulk bulwark is a backdrop in frontage. "It takes up a huge chunk of space to the west."
@@ -21201,6 +21230,10 @@ after quipping when qbc_litany is the table of Gretta comments:
 		terminate the conversation;
 		now the player wears medals;
 		now Gretta is in lalaland;
+		if do-i-chat is true:
+			now hydra is in lalaland;
+			now whistle is reflexed;
+			move player to inclosure;
 	else if current quip is gre-north-quip or current quip is gre-south-quip or current quip is gre-elv-quip:
 		do nothing;
 	else:
@@ -21592,7 +21625,7 @@ check fliptoing eels:
 		preef eels instead;
 
 to say nuh-uh:
-	say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really. You've got no evidence you're, well, you. [if location of player is bran barn]Mr. Lee[else]Le Mer[end if] is unmoved.[line break]";
+	say "You try to argue that you're that person who saved Yorpwald in the first place, but you have no compelling reason--or evidence, really, that you're, well, YOU. [if location of player is bran barn]Mr. Lee[else]Le Mer[end if] is unmoved.[line break]";
 
 check fliptoing sea cube:
 	if player does not have medals:
