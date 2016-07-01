@@ -1,3 +1,15 @@
+## reg-sa-stores-nudges.txt
+## nudges for Shuffling Around (stores region)
+##
+## should not take long
+
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* all-stores-nudges
+
+>ts
 
 >llams
 You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X
@@ -6,7 +18,7 @@ You'll need to pick out a store to work with. Mall or Malls is too unspecific. A
 You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X
 
 >ltso
-You need to manipulate each store as a store, not a mall or a lot
+You can manipulate each individual store.
 
 >lto
 You need to manipulate each store as a store, not a mall or a lot
@@ -140,8 +152,8 @@ You need to manipulate each store as a store, not a mall or a lot
 >mallr
 You need to manipulate each store as a store, not a mall or a lot
 
->malls
-You need to manipulate each store as a store, not a mall or a lot
+>malsl
+You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X.
 
 >mallt
 You need to manipulate each store as a store, not a mall or a lot
@@ -186,36 +198,6 @@ Nothing happens. You'd think that store could be a good candidate to change, but
 Nothing happens. You'd think that store could be a good candidate to change, but it isn't.
 
 >storep
-Nothing happens. You'd think that store could be a good candidate to change, but it isn't.
-
->stores
-Nothing happens. You'd think that store could be a good candidate to change, but it isn't.
-
->storej
-Nothing happens. The store remains impassive and dark.
-
->storek
-Nothing happens. The store remains impassive and dark.
-
->storex
-Nothing happens. The store remains impassive and dark.
-
->storez
-Nothing happens. The store remains impassive and dark.
-
->marquee
-You don't need to change the marquee, but maybe it's a clue.
-
->sorbet
-by one point
-
->marquee
-You don't need to change the marquee now that you figured what it means.
-
->trips
-You won't need to do anything to the whole room unless you are trapped in a room.
-
->storet
 Nothing happens. Maybe if Yorpwald were in even more danger, it would.
 
 >storeu
@@ -230,6 +212,36 @@ Nothing happens. Maybe if Yorpwald were in even more danger, it would.
 >storey
 Nothing happens. Maybe if Yorpwald were in even more danger, it would.
 
+>storse
+Nothing happens. You'd think that store could be a good candidate to change, but it isn't.
+
+>storej
+Nothing happens. The store remains impassive and dark.
+
+>storek
+Nothing happens. The store remains impassive and dark.
+
+>storex
+Nothing happens. The store remains impassive and dark.
+
+>storez
+Nothing happens. The store remains impassive and dark.
+
+>marqeeu
+You don't need to change the marquee, but maybe it'd be fun to see what's inside.
+
+>sorbet
+by one point
+
+>marqeeu
+You don't need to change the marquee now that you figured what it means.
+
+>trips
+You won't need to do anything to the whole room unless you are trapped in a room.
+
+>storet
+Nothing happens. Maybe if Yorpwald were in even more danger, it would.
+
 >storel
 You search for a magic word but feel, er, lost.
 
@@ -239,11 +251,11 @@ Nothing happens. You consider going through the other 358 possibilities, but tha
 >storeq
 Nothing happens. You didn't really expect it to since, hey, no u with the q.
 
->roadsign
+>roadsing
 Hmm...you get the feeling the store itself holds more adventure.
->road
+>roda
 Hmm...you get the feeling the store itself holds more adventure.
->sign
+>sgin
 Hmm...you get the feeling the store itself holds more adventure.
 
 >forest
@@ -256,31 +268,69 @@ No, it's a map of something behind Store M, it looks like.
 >subwaympa
 No, it's a map of something behind Store M, it looks like.
 
->winston
+>winstno
 There's no way to change them, or their legacy. They're all dead now.
->churchill
+>churchlli
 There's no way to change them, or their legacy. They're all dead now.
->benjamin
+>benjamni
 There's no way to change them, or their legacy. They're all dead now.
->disraeli
+>disraeil
 There's no way to change them, or their legacy. They're all dead now.
->margaret
+>margarte
 There's no way to change them, or their legacy. They're all dead now.
->thatcher
+>thatchre
 There's no way to change them, or their legacy. They're all dead now.
 
 >sortie
->stairs
+>staisr
 No way. That's how you get to the sortie.
->thatcher
+>thatchre
 !There's no way to change them, or their legacy. They're all dead now.
 
 >metros
->escalator
+>escalatro
 No way. It's your way down to the metros.
 
+###################################
+#this is not STORES stuff but the 3 flier items that didn't fit anywhere else
+
 >rifle
-Shooting things
+No need for violence here!
 
 >rifel
-The flier has helpful information
+The flier's just there to tell you if you're done or not.
+
+############sortie
+
+>gonear woeful pat
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+
+>rifle
+No need for violence here!
+
+>riefl
+Thinking of the flier leads you back to the anapest
+
+>peasant
+
+###################metros
+
+>purloin dig flier
+
+>gonear yell alley
+
+>i
+!expo flier
+
+>rifle
+No need for violence here!
+
+>riefl
+It's just garbage.

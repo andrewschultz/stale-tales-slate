@@ -168,6 +168,7 @@ Your score has just gone up by one point
 
 >beneath
 Your score has just gone up by one point
+DEBUG INFO: Taking away a max point.
 
 Sun-Spared Underpass
 
@@ -214,6 +215,7 @@ Your score has just gone up by one point
 
 >derive
 Pallid Li'L Pad
+DEBUG INFO: Taking away a max point.
 
 >despair
 Your score has just gone up by one point
@@ -223,6 +225,8 @@ Boredom Bedroom
 
 >deal
 Your score has just gone up by one point
+DEBUG INFO: Taking away a max point.
+
 Dour Tan Rotunda
 >desire
 Your score has just gone up by one point
@@ -234,6 +238,7 @@ Your score has just gone up by one point
 FiefCo Office
 Your score has just gone up by one point
 If only you could tune that out!
+DEBUG INFO: Taking away a max point.
 
 >ignore
 Your score has just gone up by one point

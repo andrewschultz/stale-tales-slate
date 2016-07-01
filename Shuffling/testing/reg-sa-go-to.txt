@@ -1,0 +1,219 @@
+###############################
+#
+#reg-sc-go-to.txt
+#
+#regression test for trying ways through Shuffling Around with GO TO
+#
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* intro-go-to
+
+>in
+A Dry Yard
+
+>gt subsite
+Goodness, no.
+
+>door
+>blot
+>bugle
+>play bugle
+>in
+Thickest Thickets
+
+>gt subsite
+Goodness, no.
+
+>gt yard
+You can't see the door to get back.
+ 
+>slander
+>goat
+
+>in
+Notices Section
+
+>attics
+
+>gateman
+
+>gt yard
+You can't see the door to get back.
+
+>gt thickets
+You can't see the passage back.
+
+>gt subsite
+Goodness, no.
+
+>get gadget
+>ask about gadget
+>scan attics
+
+>in
+
+Trips Strip
+
+>gt subsite
+You already solved that area.
+
+* forest-go-to
+
+>sr ne
+>ts
+>forest
+>in
+>n
+>gt forest1
+You can't retrace your steps.
+>e
+>gt forest2
+You can't retrace your steps.
+
+>gonear slough
+>gt fields
+You've done all you could in the enclosure and before. Onward.
+
+>gonear frost
+>gt slough
+>gt fields
+
+>gt trips strip
+You may mean to RETRY instead. Do so?
+
+* sortie-go-to
+
+>ts
+>sortie
+>in
+>sixteen
+>gt centrifuge
+You're already here. Or there. The precise grammar's neither here nor there.
+
+>n
+The Nick
+>gt centrifuge
+That's not the magic way out. Sorry!
+
+>kitchen
+>gt nick
+No, you don't want to go back there.
+
+>e
+>s
+>sack
+>straw
+>shoes
+>put straw in sack
+>purloin coat
+
+>moor
+>peasant
+>give straw to peasant
+
+>gt round den
+A Round Den
+
+>n
+>e
+>put hay in wall
+>hallway
+>e
+Sacred Cedars
+
+>cask
+>pour oils
+>gt moor
+>soil
+>gt cedars
+>pour oils
+>gt moor
+You hear a creaking above as you exit. You see the trellis's archings crashing on you and quickly run from under them. The archings smash against each other, and their rubble blocks the hallway. You hear a voice. It must be Lois. "WIN," she whines.
+
+>silo
+>gt cedars
+You can't go back there.
+
+* metros-go-to
+
+>ts
+>metros
+>in
+>n
+>w
+>tomato
+>e
+>s
+>w
+>throw tomato
+>search mattress
+>e
+>n
+>n
+>switch emitter
+>get cake
+>s
+>n
+You'd probably be recognized and arrested.
+>gt condo
+You wouldn't be welcome.
+>e
+>barcode
+>keycard
+>put barcode on keycard
+>w
+>s
+>put keycard on sensor
+>e
+>ask nerds about darkness
+>gt anti-cool
+The nerds might outnumber you and take the tulip back. They've probably had enough of you.
+
+>gonear abyss
+
+>gt underside
+No going back now. This is the final confrontation.
+
+* resort-go-to
+
+>ts
+>gonear tiles
+
+>islet
+>gt tiles
+Gotta keep going forward.
+
+>cork
+>e
+>gt islet
+Gotta keep going forward.
+>gt tiles
+Gotta keep going forward.
+
+>toeholds
+>grips
+>ropes
+>slope
+>e
+
+>gt woodland
+Gotta keep going forward.
+
+>trio
+>potters
+>kilns
+
+>gt islet
+He's saying GET OUT just to be obnoxious and intimidating.
+
+>tug toe
+
+>gt islet
+But you beat Red Bull Burdell! Just go east!
+
+>e
+
+>gt islet
+But you want to NOT go anywhere. NOT take any exits.

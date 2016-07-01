@@ -11397,6 +11397,7 @@ blurb	prio
 "Gleamy Gay Elm[r], by Meg Lay"
 "Glean Up a Plunge[r], by [if player is male]Paul Eng[else]Lupe Nga[end if]"
 "Glee and a Legend Gleaned[r], by Glen Ade-DeLange" []
+"Glee and a Legend[r], by [if player is male]Lee Gand[else]Dee Lang[end if]"
 "Glee Dan Gleaned[r], by Dee Lang" []
 "Glee Lost Now? Get Well Soon[r], by Gwen Sotello"
 "Glib, Bray, Baby Girl[r], by Lyra Gibb"

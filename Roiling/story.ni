@@ -1221,7 +1221,7 @@ understand "goto [any room]" as gotoing.
 understand "go to [any room]" as gotoing.
 understand "gt [any room]" as gotoing.
 
-rule for supplying a missing noun while gotoing: 
+rule for supplying a missing noun while gotoing:
 	say "That's not something in the game, yet.";
 	reject the player's command;
 
@@ -14875,6 +14875,19 @@ after printing the locale description for hacks' shack (this is the auto-screen 
 			if player has screen:
 				say "You decide to put the screen you just made on the labs slab so you don't have to lug it around any more.";
 				now screen is on labs slab;
+	check-lamb-min;
+	continue the action;
+
+lamb-discounted is a truth state that varies.
+
+to check-lamb-min:
+	if lamb-discounted is true:
+		continue the action;
+	if player has censer or player has screen:
+		if yak is in lalaland and player is in hacks' shack:
+			if lamb is in gyre:
+				poss-d;
+				now lamb-discounted is true;
 	continue the action;
 
 this is the shack-south rule:
@@ -15412,6 +15425,7 @@ check fliptoing keyboard when yak is visible:
 
 after fliptoing keyboard:
 	now leaf is in lalaland;
+	check-lamb-min;
 	continue the action;
 
 the piece of scratch paper is a reflexive thing in hacks' shack.

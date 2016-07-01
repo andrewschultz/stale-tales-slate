@@ -357,7 +357,7 @@ hoots button	"You suppress a few minor swears as you realize that can't be right
 trees button	"Hmm, that doesn't work, but you bet you can bull your way through things."
 oils	"[if oils are in cask or oils are in cedars]That doesn't seem right, and you may need to pour the oils, anyway[else]The oils need a purpose--to build something great[end if]."
 drainage	"The drainage bubbles a bit." [metros start]
-motto	"Hm, you maybe could bend the motto a bit more."
+motto	"Hm, you maybe could bend the motto a bit differently."
 brocade	"The brocade design seems simple, yet complex, and perhaps you don't have to change a lot."
 lost corn	"You thought you heard electronic beeping from the corn."
 heaths	"You stare at the heaths, picturing them in the circle and wondering which is the 'starter.'"
@@ -365,8 +365,8 @@ begonias	"The begonias seem quiet. Almost too quiet. But surely you can find som
 antlers	"You could've sworn you the thing grew eyelids! And the eyes moved, begging you for any excuse it doesn't belong here!"
 dry cake	"You feel like can almost identify what the cake can become."
 clover	"The clover seems overcome with fuzz for a moment--but no, you missed a little something."
-words	"The words slash at the bag a bit, but they aren't tempered into something that can really do damage."
-beast	"[if player is in bassy abyss]Thud...thud...that's not quite it.[else]You might want to change the beats later, but right now, you're not close enough.[end if]"
+words	"The words [if words are in noise bag]slash at the bag a bit[else]seem to whizz around the air a bit[end if], but they aren't tempered into something that can really do damage."
+beats	"The beats shift up for a second."
 siren	"The siren continues to blind you--like it's throwing dust in your eyes."
 neon pig	"The neon pig blinks as if in last-ditch defiance."
 ts	"The tiles rattle as if to shift but settle down." [resort start]
@@ -391,10 +391,15 @@ to say spec-help of (itm - a thing):
 	if itm is oils and oils are not in cask:
 		say "You should possess the oils before doing anything with them.";
 		continue the action;
-	if itm is a xtrhelp listed in the table of spechelp and point is true:
+	if itm is a xtrhelp listed in the table of spechelp:
 		choose row with xtrhelp of itm in table of spechelp;
-		say "[helptxt entry][line break]";
+		if point is true:
+			say "[helptxt entry][line break]";
+		else:
+			say "You feel a slight psychic push-pull coming from [the itm]. Keep at it.";
+			d "There is a spechelp entry for this.";
 	else:
+		d "Add something to the table of spechelp for [the itm], maybe? Search for to[r]sh.";
 		say "You feel a slight psychic push-pull coming from [the itm]. Keep at it.";
 	if pointcue is false:
 		say "[i][bracket]NOTE: You can toggle detailed nudges when you're on the right track with OPT IN (to get them) and NO TIP (to hide them,) though they may give more hints than you want. You will always get this generic message, at least, in any case.[close bracket][roman type][line break]";
@@ -473,7 +478,32 @@ description of pockets is "This shouldn't be here since any action gives a defau
 instead of doing something with the pockets:
 	say "[if location of player is busiest subsite]That would be unprofessional in future job interviews[else if location of player is Dry Yard]You fidget nervously with your pockets for a bit .There's not much else you can do with them[otherwise][one of]Your pockets have no holes. But r[or]R[stopping]eal adventurers don't futz with their pockets. Or pocket-equivalents[end if]."
 
-section say shortcuts
+chapter done rejects
+
+table of done rejects [tdr]
+donething	donemsg
+yard-door	"The door is probably the way out. Best not change it into something else." [intro]
+bugle	"The bugle emits a sad 'don't change me back' noise."
+gateman	"Don't scramble the gateman. He's here to help."
+nose	"Don't get that nose bent out of shape."
+shades	"Anything you do to bend the shades might break them."
+shotgun	"Anything you do might violate firearm safety rules, or something."
+beard	"For a beard, it's actually pretty cool."
+maps	"The maps are probably right, you hope. No need to change them."
+chisel	"It's a perfectly good tool. Trying to refine it might break it."
+drapes	"They look forbidding, but you might turn them into something worse. Maybe you can just dispose of them physically."
+silver	"Hard to beat silver. It's what it should be."
+gardenia	"The flowers are fine as-is." [metros]
+tomato	"It's pretty gross, but you can't really change it. Maybe it can gross someone, or something, else out."
+velcro	"The velcro remains tangled."
+controls	"The controls stay as they are."
+barcode	"The barcode does not shift."
+keycard	"The keycard remains stiff. Looks like it's as it should be."
+sheath	"The sheath remains still."
+sword	"Meddling with the sword right now, you're worried it might poke you."
+beast	"You've changed the beats to something tangible, physically beatable."
+
+chapter say shortcuts
 
 to say i:
 	say "[italic type]";
@@ -2572,8 +2602,9 @@ carry out optining:
 	if point is true:
 		say "You're already being pointed to extra hints.";
 	else:
-		say "Now pointing you with an additional hint when you have the right anagram letters.";
+		say "Now pointing you with an additional hint when you have the right anagram letters. NO TIP turns this back off.";
 		now point is true;
+		now pointcue is true;
 	the rule succeeds.
 
 chapter notiping
@@ -2588,7 +2619,7 @@ carry out notiping:
 	if point is false:
 		say "You're already requesting no tip.";
 	else:
-		say "Now hiding tips in favor of a generic response.";
+		say "Now hiding tips in favor of a generic response. OPT IN turns this back on.";
 		now point is false;
 	the rule succeeds.
 
@@ -3119,7 +3150,7 @@ sack	cask	"cask"	--	"The sack stiffens, rises and becomes less blobby. It's the 
 hoses	shoes	"shoes"	"hoses"	"The pair of rubber hoses bends and opens and become a comfortable pair of shoes that swallows your old shoes--you'd forgotten how ratty they were. A few steps show walking's much smoother. So smooth, you forget you're wearing them. And the price is right, too."	false	431988917
 r2	teleporter	"moor"	--	"[moor-jump]"	false	298104110	--	--	moor
 m2	teleporter	"room"	--	"[if woeful pat is in moor][one of]As you pop back to the room, Woeful Pat looks visibly shocked. You have left him speechless, which is good news, but he is reaching for his pen, which is bad news for some poor soul in the future[or]Woeful Pat is less impressed this time, sniffing that it's been done[stopping].[else]'The room's smoother,' you muse...'"	false	298104110	--	--	roomroom
-anapest	peasant	"peasant"	"anapest"	"Nothing happens. You worry your magic powers have failed, until a peasant strides out from the edge of the moor, carrying a bale of hay and singing a cheery song about nothing in particular. Distracted, you look over and smile.[paragraph break]'Oh, does THAT resonate with your stone ear?' whines Woeful Pat.[paragraph break]You notice his papers have crumbled (but don't worry, he has PLENTY of written drafts.) He storms off, claiming you will make a perfect arch-villain in his new socially significant blank-verse epic. Or another poor henchman who deserves but one line before a horrible fate--or a mega-rip of an epigram!"	false	481939196	"You're better off changing what the peasant has than what he is."
+anapest	peasant	"peasant"	"anapest"	"Nothing happens. You worry your magic powers have failed, until a peasant strides out from the edge of the moor, carrying a bale of hay and singing a cheery song about nothing in particular. Distracted, you look over and smile.[paragraph break]'Oh, does THAT resonate with your stone ear?' whines Woeful Pat.[paragraph break]You notice his papers have crumbled (but don't worry, he has PLENTY of written drafts.) He [exp-fli]storms off, claiming you will make a perfect arch-villain in his new socially significant blank-verse epic. Or another poor henchman who deserves but one line before a horrible fate--or a mega-rip of an epigram!"	false	481939196	"You're better off changing what the peasant has than what he is."
 roadblock	black door	"black door" or "blackdoor"	"roadblock" or "road block"	"Bam! The fissure in the roadblock covers up, and a black door appears where it was. It's light but bulky--you can probably put or push it where it needs to go[if pat is visible]. Woeful Pat shows commendable concentration ignoring all this[else if peasant is visible]. The Peasant cheers in appreciation, momentarily dropping his hay, which he's none too eager to pick up[end if]."	false	401417371
 poem	panel	"panel"	--	"Poof! The paper plane becomes a panel. It's light enough to carry, you suppose[if player has poem or player has panel]. Well, it doesn't cause an immediate hernia[end if]."	false	334181233
 smilies	missile	"missile"	"smilies"	"The smilies seem to waver. But they sever from the verse, grow, and clump together to form a big yellow missile! You reread the poem. You didn't think it would change much without the smilies, but it's snappier now, pointed, warlike--a restrained, plain-language indictment of not just bad poetry but nastiness and elitism in general!"	false	528228725
@@ -3159,6 +3190,11 @@ links	china	"china"	"china"	"The chain, or part of it, bursts into fine china, w
 links	kilns	"kilns"	"links"	"The links burst and swell into luxury kilns[if potters are visible]. 'Ohmigod! Him! Good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Sir, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[otherwise]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337	[end resort flips]
 
 chapter say commands from anagrams
+
+to say exp-fli:
+	if player has expo flier:
+		say "snatches back the expo flier and ";
+		now expo flier is in lalaland;
 
 to say beast-beats:
 	say "[if beast is visible]beats[otherwise]beats";
@@ -3294,7 +3330,7 @@ to say opts-list:
 	verbsplain "opt in/no tip";
 	verbsplain "random dialogue";
 	verbsplain "access";
-	verbsplain "space"
+	verbsplain "spaces"
 
 to decide whether gadget-active:
 	if show hows tag is in lalaland:
@@ -3309,7 +3345,7 @@ to say verb-list:
 	say "[2dn]X or EXAMINE an object. If an object has writing, READ it instead of X WRITING.";
 	say "[2dn]The four directions, north, south, east and west.";
 	say "[2dn]PAD to see a list of topics. Then PAD VERBS, for example.";
-	say "[2dn]VERBS shows this, OPTIONS shows options you can change, and informational meta-commands include ABOUT, CREDITS, TECH, SITES, and RELEASE.";
+	say "[2dn]VERB/VERBS shows this, OPTIONS shows options you can change, and informational meta-commands include ABOUT, CREDITS, TECH, SITES, and RELEASE.";
 	if gadget-active:
 		if button-locked is false:
 			choose row with short of "macros" in table of pad-stuff;
@@ -3377,19 +3413,24 @@ to preef (flipper - a thing):
 	choose row with short of "flips" in table of pad-stuff;
 	now known entry is true;
 
-table of preflip clues [this cannot have scenery first]
+table of preflip clues [this must have a regular item first due to a small bug in 6g]
 preflip	pretodo
-silver	"[if livers are not in lalaland]LIVERS -> sliver[else]livers -> SLIVER[end if] -> silver"
-sack	"cask -> sack"
+nametag	"nametag -> gateman" [intro]
+cabinet	"cabinet -> nice bat" [stores]
+silver	"[if livers are not in lalaland]LIVERS -> sliver[else]livers -> SLIVER[end if] -> silver" [forest]
+drapes	"spread -> [if red asp is in Enclosure]RED ASP -> [end if]drapes"
+sack	"cask -> sack" [sortie]
+r2	"room -> moor"
+hallway	"[if hay is in lalaland]wall -> HAYWALL[else]WALL -> haywall[end if] -> hallway"
 soil	"oils -> soil"
 silo	"oils -> silo"
-sword	"words -> sword"
-cabinet	"cabinet -> nice bat"
+sword	"words -> sword" [metros]
 keycard	"dry cake -> keycard"
-nametag	"nametag -> gateman"
-hallway	"[if hay is in lalaland]wall -> HAYWALL[else]WALL -> haywall[end if] -> hallway"
-drapes	"spread -> [if red asp is in Enclosure]RED ASP -> [end if]drapes"
-r2	"room -> moor"
+store p	"store p -> PRESTO in A Roiling Original" [stores-misc]
+store u	"store u -> routes in A Roiling Original"
+store v	"store v -> troves in A Roiling Original"
+store w	"store w -> towers in A Roiling Original"
+store y	"store y -> oyster in A Roiling Original"
 
 to say what-can-flip:
 	if pf-warn is false:
@@ -4054,7 +4095,7 @@ understand "thickets/thickest" and "thickest thickets" as darnels when player is
 
 the snarled darnels are scenery in Thickest Thickets. "Well, they're tangled enough, you'd probably get hurt going through them."
 
-understand "sandler" as a mistake ("I award you zero points for that anagramming try, and may God have mercy on your soul[if darn-slan is false]. Okay, actually, you're close to one point[end if].") when player is in Thickest Thickets.
+understand "sandler" as a mistake ("I award you zero points for that anagramming try, and may God have mercy on your soul[if darn-slan is false]. Okay, actually, you're close to one point[else] for trying to sneak another point[end if].") when player is in Thickest Thickets.
 
 understand "landers" as a mistake ("There will be better hints than a manners advice column once you move on[if darn-slan is false], though the darnels make you see red for a bit[end if].") when player is in Thickest Thickets.
 
@@ -4794,7 +4835,7 @@ check taking phial:
 			now cabinet-bit-me is true;
 			say "Ow! The cabinet bites you as you try to take the phial. It didn't break your skin, so you don't need bactine[if gateman is in notices section][one of]. Old Man Almond coughs, as if he might be able to help you[or][stopping][else if gateman is off-stage]. Maybe you could use someone to help you understand the cabinet[end if]." instead;
 
-understand "bactine" as a mistake ("The cabinet bit you, but there was no lasting damage.") when cabinet is visible.
+understand "bactine" as a mistake ("The cabinet bit you, but there was no lasting damage.") when cabinet is visible and cabinet-bit-me is true.
 
 instead of opening the phail phial:
 	say "The blue lube would leak out."
@@ -5323,7 +5364,7 @@ to say gd:
 to say na:
 	say "There isn't even a store here any more--just a plot. [no line break]"
 
-there is a sto named Store A. understand "store/ 1/one" as store a.
+there is a sto named Store A. it is in trips strip. understand "store/ 1/one" as store a.
 
 description of store a is "You can't imagine anything as rote as calling itself A Store, but it did."
 
@@ -5335,7 +5376,7 @@ understand "strobe" as a mistake ("You're briefly assaulted by the colors of eve
 
 rgtext of store b is "[gcn][rc][rc][rc][gc][rc]". lgth of store b is 6. gpos of store b is 1. rpos of store b is 2. cert-text of store b is "S[d1][d1][d1][ast]E[d1]". rect-text of store b is "S[d1][d1][d1][d1][ast]T".
 
-the marquee is part of store b. the marquee is auxiliary. description of the marquee is "BERTO'S fine (the rest is cut off.)"
+the marquee is part of store b. the marquee is auxiliary. description of the marquee is "It reads: BERTO'S fine (the rest is cut off.)"
 
 rgtext of marquee is "[rcn][rc][gc][rc][rc][rc]". lgth of store b is 6. gpos of marquee is 6. rpos of marquee is 4. cert-text of marquee is "-[d1][ast]R[d1][d1][d1]". rect-text of marquee is "S[d1][d1][d1][d1][ast]T".
 
@@ -6188,7 +6229,7 @@ There is a room called Cruel Ones' Enclosure. It is in Forest.
 Enclosure is north of Self-ID Fields. "A creepy acre, yep[if liches are in Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Enclosure]. Along the north wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Enclosure]. A red asp guards the way north[else if spread is in Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Enclosure]. Nothing seems to block the way north now[end if][if banshee is visible]. A banshee also wails about his former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[otherwise][end if]."
 
 to say d-s:
-	say "[if drapes are visible]drapes[else if red asp is visible]red asp[else]spread[end if]";
+	say "[if drapes are visible]drapes make[else if red asp is visible]red asp makes[else]spread makes[end if]";
 
 understand "spared" as a mistake ("That is too passive, to ask to be spared.") when red asp is not in lalaland.
 
@@ -6211,6 +6252,11 @@ the banshee is scenery in Enclosure. rgtext of banshee is "[rcn][rc][rc][rc][rc]
 description of banshee is "You can't see him, but you can hear him."
 
 the has-been is useless scenery. the has-been is undesc. understand "has been" and "hasbeen" as has-been.
+
+after fliptoing has-been:
+	min-up;
+	now has-been is in lalaland;
+	continue the action;
 
 instead of doing something with has-been:
 	if has-been is visible:
@@ -6278,7 +6324,7 @@ chapter Frost Forts
 
 Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]All exits seem to lead somewhere even darker[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if][one of]. You steel yourself against the sleet[or][stopping]."
 
-understand "unpile" as a mistake ("They'd be much less dangerous left in a pile. Maybe you have something that can do that!") when player is in frost forts.
+understand "unpile" as a mistake ("They'd be much less dangerous left in a pile. Maybe you have something that can do that!") when player is in frost forts and wolves are in frost forts.
 
 the ipecac icecap is amusing scenery in frost forts. "Yechier, icy, here."
 
@@ -6287,7 +6333,7 @@ instead of doing something with icecap:
 
 the sleet is useless scenery in frost forts. "It's painful, almost like steel, when it hits you, but since it's rain mixed with snow, it means you won't freeze...right away."
 
-understand "steel" as a mistake ("You'd be crushed if the sleet turned to steel.") when sleet is visible
+understand "steel" as a mistake ("You'd be crushed if the sleet turned to steel.") when player is in frost forts
 
 the iced dice are plural-named amusing scenery in frost forts. "Each side seems to have a big skull-and-crossbones on it. Their fare is fear, with no warm café hidden in any face. Just don't think of them as ice caps, capisce?"
 
@@ -6395,11 +6441,19 @@ understand "switch [something] to [number]" as dialsetting it to.
 
 understand the command "turn [something] to [number]" as something new.
 
-understand "turn [text]" as a mistake ("[if dial is visible and centrifuge-stopped is false]You can probably TURN the dial to a number, e.g. 99[else]You can probably just SWITCH something with two text settings[end if].").
+understand "turn [text]" as a mistake ("[if player is in centrifuge and centrifuge-stopped is false]You can probably TURN the dial to a number, e.g. 99[else]You can probably just SWITCH something with two text settings[end if].").
 
 understand "turn [something] to [number]" as dialsetting it to.
 
 numming is an action applying to one number.
+
+understand the command "turn [number]" as something new.
+
+understand "turn [number]" as numming when player is in Centrifuge and centrifuge-stopped is false.
+
+understand the command "set [number]" as something new
+
+understand "set [number]" as numming when player is in Centrifuge and centrifuge-stopped is false.
 
 understand the command "[number]" as something new.
 
@@ -7902,7 +7956,7 @@ to say what-to-ask-lois:
 	else if caskfillings is 0:
 		say "Lois will not pour the oils in the cask for you, but she is not stopping you";
 	else if caskfillings is 1:
-		say "Lois is silent. You must do the rest";
+		say "Lois is silent. You figure what to pour, where";
 	else:
 		say "You feel guilt at asking Lois for more"
 
@@ -7951,7 +8005,7 @@ description of sc is "They look nice and even smell nice. A holy verse is carved
 
 the spout is scenery in sacred cedars. description of spout is "It can be used to FILL the appropriate receptacle here.";
 
-understand "potus" as a mistake ("This is an apolitical game, and I don't even want to get into whether the current POTUS would help or hurt in this situation, or whether they even belong in such a holy place.") when player is in cedars.
+understand "potus" as a mistake ("This is hopefully an apolitical game, and I don't even want to get into whether the current POTUS would help or hurt in this situation, or whether they even belong in such a holy place.") when player is in cedars.
 
 check switching on spout:
 	if player has cask:
@@ -9452,7 +9506,7 @@ Bassy Abyss is east of Elm Train Terminal. "Well, this is it[if beats are visibl
 
 understand "reins" as a mistake ("Horsing around like that won't hold back the [if beast is visible]beast[else]beats[end if]. You need to get a grip another way, but you're on the right track.") when player is in Bassy Abyss.
 
-understand "risen" as a mistake ("You don't need the [if siren is visible]siren's volume or [end if][if beast is visible]the beast's power [else]the beats' volume [end if]to have risen. Oh, no.") when player is in Bassy Abyss.
+understand "risen" as a mistake ("You don't need the [if siren is visible]siren's volume or [end if][if beast is visible]the beast's power [else]the beats['] volume [end if]to have risen. Oh, no.") when player is in Bassy Abyss.
 
 understand "rinse" as a mistake ("[if siren is visible]No water source. You can do better than short-circuiting the siren with water, though[else]Time for that after you sure-handedly slay the final enemy, here[end if].") when player is in Bassy Abyss.
 
@@ -9492,7 +9546,7 @@ Include (-
 	has transparent animate
 -) when defining beast.
 
-understand "bates" as a mistake ("You don't need to deal with a knife-wielding psycho [if player is in abyss]along with the beast[else if player is in Hotel or player is in underside]so near a hotel, which is close enough to a motel[else]on top of all this[end if].") when location of player is noisy.
+understand "bates" as a mistake ("You don't need to deal with a knife-wielding psycho [if player is in abyss]along with the beats[else if player is in Hotel or player is in underside]so near a hotel, which is close enough to a motel[else]on top of all this[end if].") when location of player is noisy or location of player is abyss.
 
 section siren-resin
 
@@ -10147,17 +10201,17 @@ part understanding mistakes
 
 section intro
 
-understand "magnet" and "a magnet" as a mistake ("[blurby][line break]") when gateman is visible or nametag is visible.
+understand "magnet" and "a magnet" as a mistake ("[blurby][line break]") when player wears nametag.
 
 understand "believe" as a mistake ("Yes, but what do you believe you can do?") when toga is visible.
 
-understand "gato" as a mistake ("Nice try, but wrong language[if toga is visible]. Another animal would be more likely to eat through the thickets[otherwise]. Plus, the goat's been through enough[end if].") when player is in thickets.
+understand "gato" as a mistake ("Nice try, but wrong language. Another animal would be more likely to eat through the thickets.") when player is in thickets.
 
 to say blurby:
-	if nametag is visible and location of player is notices section:
+	if location of player is notices section:
 		say "A magnet is two words--but 'a' doesn't fully count. It wouldn't be strong enough to pull the gate--you need someone to help you, not something, as the broad board says. You see red as you straing to think what or who the nametag should be. Maybe you've got it all wrong, but maybe that's a help.[run paragraph on]";
 		continue the action;
-	if nametag is visible and location of player is Dry Yard:
+	if location of player is Dry Yard:
 		say "A magnet [if goat is visible]wouldn't have helped you[otherwise]won't help you[end if] get past the thickets[if goat is not visible]. Right idea, though. Wrong item[end if].[run paragraph on]";
 		continue the action;
 	say "[reject][run paragraph on]";
@@ -10168,11 +10222,13 @@ understand "get a man" as a mistake ("[get-a-man][run paragraph on]")
 
 section forest
 
+understand "rood" as a mistake ("[if yard-door is visible]You already changed the odor[otherwise]This game is religion-neutral. Besides, a rood wouldn't lead anywhere[end if].") when player is in dry yard.
+
 understand "steam" as a mistake ("[if canister is broken]You've already done enough with the meats[else]Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam[end if].") when player is in s-e-d.
 
 understand "padres" as a mistake ("Bringing holy men down here would probably kill them.") when player is in Enclosure and red asp is not in lalaland.
 
-understand "rasped" as a mistake ("The [d-s] makes a raspy noise, but you probably need to think up something more concrete. Not, like, cement concrete.") when player is in Enclosure and red asp is not in lalaland.
+understand "rasped" as a mistake ("The [d-s] a raspy noise, but you probably need to think up something more concrete. Not, like, cement concrete.") when player is in Enclosure and red asp is not in lalaland.
 
 understand "spader" as a mistake ("James Spader is pretty cool, but he can't help with supernatural stuff. Okay, maybe he could, but I couldn't afford the appearance fee.") when player is in Enclosure and red asp is not in lalaland.
 
@@ -10202,13 +10258,13 @@ understand "baste" and "baste beats" and "baste beast" as a mistake ("I'm sorry,
 
 understand "tar" as a mistake ("That'd be neat, make the wall sticky so you could climb and deal with that [if neon pig is visible]stupid pig[otherwise]opening you made[end if]...but you might get stuck to it, too. Need something clingy but less gooey.") when player is in Elm Train Terminal.
 
-understand "rat" as a mistake ("No, you don't need a rat chasing you around.") when player is in Elm Train Terminal.
+understand "rat" as a mistake ("No, you don't need a rat chasing you around.") when player is enclosed by Elm Train Terminal.
 
-understand "lair" and "lairs" as a mistake ("That might work, if the rail did not lead to a lair already.") when player is in terminal.
+understand "lair" and "lairs" as a mistake ("That might work, if the rail did not lead to a lair already.") when player is enclosed by terminal.
 
-understand "liar" and "liars" as a mistake ("The number of liars the rails would create would be shocking.") when player is in terminal.
+understand "liar" and "liars" as a mistake ("The number of liars the rails would create would be shocking.") when player is enclosed by terminal.
 
-understand "lira" as a mistake ("But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which don't use lira any more anyway. Plus, you don't need money.") when player is in terminal.
+understand "lira" as a mistake ("But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which don't use lira any more anyway. Plus, you don't need money.") when player is enclosed by terminal.
 
 section resort
 
@@ -10238,8 +10294,6 @@ understand "thicken" as a mistake ("You might rather thin-nen to slip through th
 
 understand "black rood" and "rood" and "blackrood" as a mistake ("Hm, no, keep religion out of it[if black door is visible]--you have what you need[end if].") when roadblock is visible or black door is visible.
 
-understand "rood" as a mistake ("[if yard-door is visible]You already changed the odor[otherwise]This game is religion-neutral. Besides, a rood wouldn't lead anywhere[end if].") when player is in rf.
-
 understand "odor" and "rood" as a mistake ("That door's reinforced. [if Anti-Cool Location is visited]The nerds[otherwise]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.") when player is in underside.
 
 understand "odor" and "rood" as a mistake ("It would stink to be you if you did that. The nerds outnumber you and would crucify you.") when player is in Anti-Cool Location.
@@ -10260,7 +10314,7 @@ section other stuff
 
 understand "try" as a mistake ("That's more sensible than the five alternatives, but it's not concrete enough.") when player is not in subsite
 
-understand "try" as a mistake ("You're sure the lecture to the east will be about trying versus doing. Ugh[if above-sign is examined]. Maybe the sign means something different[end if].") when player is in subsite.
+understand "try" as a mistake ("You're sure the lecture to the east will be about trying versus doing. Ugh[if above-sign is not examined]. Maybe the sign means something different[end if].") when player is in subsite.
 
 part parser errors
 
@@ -10500,7 +10554,7 @@ after reading a command:
 		if myh is hashkey entry or myh2 is hashkey entry:
 			d "[myh] [the-from entry] [the-to entry] try.";
 			if the-from entry is visible:
-				d "[myh] [the-from entry] visible.";
+				d "the-from [myh] [the-from entry] visible.";
 				if there is an exact-text entry and the player's command matches exact-text entry:
 					d "2nd loop Fliptoing from anagram loop: [the-from entry] with command [the player's command].";
 					try fliptoing the-to entry;
@@ -10509,7 +10563,7 @@ after reading a command:
 					d "2nd loop Flipfroming from anagram loop: [the-from entry] with command [the player's command].";
 					try fliptoing the-from entry instead;
 			if the-to entry is visible and the-to entry is not reversible:
-				d "[myh] [the-to entry] visible.";
+				d "the-to [myh] [the-to entry] visible.";
 				if there is a dubdip entry:
 					say "[dubdip entry][line break]";
 				else:
@@ -10520,7 +10574,7 @@ after reading a command:
 					else if the-to entry is potters:
 						say "You cut the riot down, but you need to change their protest now.";
 					else:
-						say "Nothing at all seems to happen this time. You've probably done what you can.";
+						reject-msg the-to entry;
 				do nothing instead;
 			d "[myh] [the-from entry] [the-to entry] failed.";
 			now should-work is false;
@@ -10530,6 +10584,14 @@ after reading a command:
 				d "3rd pass through: [the-to entry].";
 				try fliptoing the-to entry instead;
 	continue the action;
+
+to reject-msg (rejitm - a thing):
+	repeat through table of done rejects:
+		if rejitm is donething entry:
+			say "[donemsg entry][line break]";
+			continue the action;
+	d "[rejitm] could use a message in t[r]dr, table of done rejects.";
+	say "Nothing at all seems to happen this time. You've probably done what you can.";
 
 tell-flag is a truth state that varies.
 
@@ -11384,7 +11446,7 @@ the shotgun is a container. understand "shot/ gun" as shotgun when shotgun is vi
 
 the shotgun can be loaded. the shotgun is not loaded.
 
-understand "gnu" as a mistake ("Shotgun to gnu? Tosh!") when player has shotgun.
+understand "gnu" as a mistake ("Shotgun: gnu? Tosh!") when player has shotgun.
 
 description of shotgun is "It's pretty dingy but still intimidating, and it's stamped NO THUGS in red. For whatever reason, it's six-barreled at the muzzle end[if shotgun is not loaded]. Not loaded, though[otherwise]. It's loaded[end if]."
 
@@ -11446,7 +11508,7 @@ before taking a disguise-piece:
 
 the beard is a disguise-piece. the beard is edible. the elevation of the beard is 0.
 
-understand "bared" as a mistake ("It's kind of cold here. Keep your clothes on.") when player has beard or player has bread.
+understand "bared" as a mistake ("It's kind of cold a lot of places here. Keep your clothes on.") when player has beard or player has bread.
 
 the printed name of the beard is "[beard-desc]".
 

@@ -9,79 +9,164 @@
 
 * _intro
 
+>opt in
+
 >score
 a nervy every
+
+>no entry
+Hm, interesting. You wonder if anything is REALLY stopping you from entering.
+>try
+You're sure the lecture to the east will be about trying versus doing. Ugh. Maybe the sign means something different.
+
+>x sign
+
+>try
+You're sure the lecture to the east will be about trying versus doing. Ugh.
+
+>saltmine
+Oh, a new job wouldn't be THAT dreary. But what if there is something else?
+
+>scan
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+>scan xyz
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+>c
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+>c xyz
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+>r
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+>r xyz
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+>cr
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+>cr xyz
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+>rc
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+>rc xyz
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 
 >in
 A Dry Yard
 
+>try
+That's more sensible than the five alternatives, but it's not concrete enough.
+
+>no entry
+You solved that puzzle already. Onward!
+
+>dray
+You don't have enough possessions to need a cart. You probably need somewhere to go, instead.
+
+>rood
+This game is religion-neutral. Besides, a rood wouldn't lead anywhere.
+
 >doro
-WRONG
+The odor doesn't seem too complex. You pause. You can figure what it should be.
 >door
 Your score has just gone up by one point.
 >doro
-WRONG
+The door is probably the way out. Best not change it into something else.
+
+>rood
+The door is probably the way out. Best not change it into something else.
 
 >score
 1 out of 7
 You haven't solved any regions yet. You have the rank of reduced deducer.
 >blto
-WRONG
+You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here.
 >blot
 Your score has just gone up by one point.
 >blto
-WRONG
+You don't want to re-lock the door.
 
 >bugel
-WRONG
+The bulge swells and makes a squeal, like it's trying to make music.
 >bugle
 Your score has just gone up by one point.
 >bugel
-WRONG
+The bugle emits a sad "don't change me back" noise.
+
+>use bugle
+Use is a bit too general for this game's parser to understand. You can SWITCH something, or PUT something IN/ON something, or even ATTACH something to something. You can PUSH a button or OPEN something, as well. Specific items should clue you what to do if you EXAMINE them.
 
 >in
 Thickest Thickets
 
+>believe
+Yes, but what do you believe you can do?
+
+>gato
+Nice try, but wrong language. Another animal would be more likely to eat through the thickets.
+
 >gota
-WRONG
+The toga blows in an unseen breeze, exposing what's written on it a bit more.
 >goat
 Your score has just gone up by one point.
 >gota
-WRONG
->
+The goat seems content enough as-is.
 
 >score
 You haven't solved any regions yet. You have the rank of reduced deducer.
 
+>sandler
+I award you zero points for that anagramming try, and may God have mercy on your soul. Okay, actually, you're close to one point.
+
+>landers
+There will be better hints than a manners advice column once you move on, though the darnels make you see red for a bit.
+
 >slandre
-WRONG
+You might be able to clear the darnels, but they're not as thick as, well, the thicket
 >slander
 Your score has just gone up by one point.
 >slandre
-WRONG
+You already messed with the darnels.
+
+>landers
+There will be better hints than a manners advice column once you move on.
+
+>sandler
+I award you zero points for that anagramming try, and may God have mercy on your soul for trying to sneak another point.
 
 >in
 
 >score
 You haven't solved any regions yet. You have the rank of stunted student.
 
+>get phial
+
+>bactine
+The cabinet bit you, but there was no lasting damage.
+
 >attisc
-WRONG
+You think a bit, and the static seems like a bad extension to the doll house.
 >attics
 Your score has just gone up by one point.
 >attisc
-WRONG
+Hm, you can't think of anything to do with the attics but change them back.
+
+>magnet
+A magnet is two words--but "a" doesn't fully count.
+
+>get a man
+Very good. Very close. But here's a meta-nag: what kind of man? What would he work with?
 
 >gatemna
-WRONG
+The nametag peels infinitesimally.
 >gateman
 Your score has just gone up by one point.
 >gatemna
-WRONG
+Don't scramble the gateman. He's here to help.
 
 >score
 7 out of 7
 stunted student
+
+>remove gadget from cabinet
+To keep things simple, I recommend TAKE as a synonym. REMOVE is also okay, but it defaults to carried or worn items, and I know no way around that.
 
 >get gadget
 go-hint thingo
@@ -99,6 +184,27 @@ Powerful. Not as a weapon.
 Trips Strip
 
 * _trips
+
+>lost
+No, you need to find your way through individual stores.
+
+>strobe
+You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. You suspect Store B may have better refreshment to add.")
+
+>presto
+Your magic is not advanced enough to change store p! Well, not this game![fake-clue of store p]
+
+>routes
+Hm, that seems right, but it doesn't work this game![fake-clue of store u]
+
+>troves
+Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.[fake-clue of store v]
+
+>towers
+That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.[fake-clue of store w]
+
+>oyster
+Nice try, but that's next game![fake-clue of store y]
 
 >sorbet
 Your score has just gone up by one point.
@@ -128,8 +234,21 @@ Rest of Forest
 >score
 1 out of 16 total
 
+>seat
+You need the opposite of a seat, here. But at the same time, you're also very close.
+
+>sate
+There's nothing around you have to sate, thankfully.
+
 >e
 Self-ID Fields
+by one point
+
+>nile
+Wrong river for the underworld.
+
+>file
+It looks like you can just cut in line. No need to stand.
 
 >score
 2 out of 16
@@ -137,26 +256,47 @@ Self-ID Fields
 >e
 Sorted Trodes
 
+>tones
+You aren't sure you need a booming voice telling you what you can EXAMINE.
+
+>destro
+It's going to get evil enough even without a high-ranking COBRA officer.
+
+>doters
+You don't need people oohing and ahing at your skill.
+
 >noes
-WRONG
+The ones rattle a bit. Maybe you can sense out what they should be.
 >nose
 Your score has just gone up by one point.
 >noes
-WRONG
+Don't get that nose bent out of shape.
 
 >shadse
-WRONG
+The dashes seemed to rattle a bit, but you feel slightly uncool.
 >shades
 Your score has just gone up by one point.
 >shadse
-WRONG
+Anything you do to bend the shades might break them.
+
+>gat
+Hey! Guns are dangerous! It won't be that easy to get one. Besides, changing the tag will break the tagged gadget.
+
+>gunshot
+You need something more tangible than that. Something that could make a gunshot, perhaps
 
 >shotgnu
-WRONG
+Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
 >shotgun
 Your score has just gone up by one point.
 >shotgnu
-WRONG
+Anything you do might violate firearm safety rules, or something.
+
+>gat
+Hey! Guns are dangerous! It wasn't that easy to get one. Besides, changing the tag will break the tagged gadget.
+
+>gnu
+Shotgun: gnu? Tosh!
 
 >score
 5 out of 16 total
@@ -171,19 +311,25 @@ bread from the Spam
 >eat spam
 spasm
 
+>amps
+You are trying to save a magic world, not start a garage band. Besides, there's too much noise behind store M anyway.
+
 >masp
-WRONG
+Nothing happens, but you think you can make out odd shapes in the Spam for a moment.
 >maps
 Your score has just gone up by one point.
 >masp
-WRONG
+The maps are probably right, you hope. No need to change them.
+
+>bared
+It's kind of cold a lot of places here. Keep your clothes on.
 
 >beadr
-WRONG
+A few crumbs fall from the bread and leave a scuzzy growth before vanishing.
 >beard
 Your score has just gone up by one point.
 >beadr
-WRONG
+For a beard, it's actually pretty cool.
 
 >put shades on beard
 >put nose on beard
@@ -194,22 +340,34 @@ You've made a full disguise now!
 Your score has just gone up by one point.
 Cruel Ones' Enclosure
 
+>lucre
+If there were any treasure here, it'd probably do something terrible to you once you took it.
+>cluer
+This place is too stark to offer clues--well, maybe it'd offer WRONG clues.
+
+>padres
+Bringing holy men down here would probably kill them.
+>rasped
+The spread makes a raspy noise, but you probably need to think up something more concrete. Not, like, cement concrete.
+>spader
+James Spader is pretty cool, but he can't help with supernatural stuff. Okay, maybe he could, but I couldn't afford the appearance fee.
+>parsed
+You can just read the spread instead. The messages here aren't cryptic enough to be parsed.
+
 >hasbene
-WRONG
+The banshee whines, sure someone is trying to kill it! Or send it to a lower ring of the death-kingdom.
 >hasbeen
 Your score has just gone up by one point.
->hasbene
-WRONG
 
 >score
 9 out of 16
 
 >chisle
-WRONG
+The liches whine, sure someone is trying to kill them! Or send it to a lower ring of the death-kingdom.
 >chisel
 Your score has just gone up by one point.
 >chisle
-WRONG
+It's a perfectly good tool. Trying to refine it might break it.
 
 >s
 >w
@@ -219,17 +377,38 @@ Cr-r-r-r-k.
 >peel chicken
 Cr-r-r-r-k.
 
+>fire shotgun at grinder
+You can either FIRE the gun, or you can SHOOT the whatever you want.
+
+>shoot grinder with shotgun
+You can either FIRE the gun, or you can SHOOT the whatever you want. No need for a second noun.
+
+>grin
+You smile confidently. You'll figure how to use the grinder.
+
+>steam
+Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam.
+
 >put cow in canister
 >put chicken in canister
 LIVERS.
 Your score has just gone up by one point.
 
+>steam
+You've already done enough with the meats.
+
+>grin
+You smirk at the grinder you trashed.
+
+>silver
+The livers are too dull to do anything like that with. Yet.
+
 >slivre
-WRONG
+The livers seem to prick you for a moment, as if to say you're not quite right.
 >sliver
 Your score has just gone up by one point.
 >slivre
-WRONG
+The sliver seems to bend, but it snaps back. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet.
 
 >e
 >n
@@ -240,12 +419,15 @@ Your score has just gone up by one point.
 >n
 red asp!
 
+>spared
+That is too passive, to ask to be spared.
+
 >drapse
-WRONG
+The red asp strikes at something you can't see, unaware it's you that's trying to change it.
 >drapes
 Your score has just gone up by one point.
 >drapse
-WRONG
+They look forbidding, but you might turn them into something worse. Maybe you can just dispose of them physically.
 
 >n
 The drapes are too thick.
@@ -257,26 +439,43 @@ revealing a doorway
 You don't know what's
 
 >silvre
-WRONG
+The sliver seems to bend, but it snaps back. Maybe you can do a bit more.
 >silver
 Your score has just gone up by one point.
 >silvre
-WRONG
+Hard to beat silver. It's what it should be.
 
 >put silver in shotgun
 
+>gunshot
+You need to SHOOT the gun.
+
 >n
-Slough
+Ghouls' Slough
+
+>god
+You want to tempt the supernatural in somewhere this hellish? Phew.
+
+>gob
+The bog expands into a big ol' gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. Fortunately, you can undo this.
+UNDO
+>undo
 
 >x maps
 Frost Forts
 
 >wolvse
-WRONG
+The vowels continue to howl in defiance. OU...AIE...like a wild animal.
 >wolves
 Your score has just gone up by one point.
 >wolvse
-WRONG
+You don't need magic. You have a weapon.
+
+>steel
+You'd be crushed if the sleet turned to steel.
+
+>unpile
+They'd be much less dangerous left in a pile. Maybe you have something that can do that!
 
 >shoot wolves
 Your score has just gone up by one point.
@@ -293,6 +492,13 @@ Centrifuge
 >score
 0 out of 27 total points
 
+>a lid
+Changing the dial would leave you stuck.
+
+>turn x
+
+You can probably TURN the dial to a number, e.g. 99
+
 >16
 round den, unadorned
 Your score has just gone up by one point.
@@ -306,12 +512,18 @@ Your score has just gone up by one point.
 >sixtene
 WRONG
 
+>turn x
+You can probably just SWITCH something with two text settings
+
 >e
 The Nick
 
 >undo
 >n
 The Nick
+
+>thicken
+You might rather thin-nen to slip through the bars, but you can't.
 
 >kitchne
 WRONG
@@ -344,12 +556,26 @@ Your score has just gone up by one point.
 >lettuec
 WRONG
 
+>keats
+This is wordplay, not poetry. But the skate does glow red.
+>stake
+A stake would have no use here. So that might be a miskate. Err...
+>takes
+You do a take, then a double take, at how odd this all is.
+>teaks
+Hm. An indoor forest. That would be neat to see. But this is a kitchen.
+
 >steka
 WRONG
 >steak
 Your score has just gone up by one point.
 >steka
 WRONG
+
+>pears
+I think you have the wrong food group. The spearman is cheesy. Plus, he wouldn't be a spearman without his spear.
+>limes
+I think you have the wrong food group. Besides, it wouldn't be nice to wipe the spearman's smile off.
 
 >parmesna
 WRONG
@@ -370,6 +596,9 @@ almost there!
 >put parmesan on taco
 A full-blown taco
 Your score has just gone up by one point.
+
+>cato
+You don't need to know your classics, here.
 
 >cota
 WRONG
@@ -392,10 +621,13 @@ Your score has just gone up by one point.
 >pancaek
 WRONG
 
->e
-Stiller Trellis
-
 >s
+A Round Den, Unadorned
+
+>a lid
+You don't need to deal with the dial, now.
+
+>e
 a little too undescribed
 
 >strwa
@@ -434,12 +666,21 @@ Moor
 >moro
 WRONG
 
+>tap
+"Ah! You are TAPping your feet to my anapest beat!"
+
+>mope
+Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.
+
 >peasatn
 WRONG
 >peasant
 Your score has just gone up by one point.
 >peasatn
 WRONG
+
+>black rood
+Hm, no, keep religion out of it.
 
 >blackdoro
 WRONG
@@ -448,14 +689,32 @@ Your score has just gone up by one point.
 >blackdoro
 WRONG
 
+>black rood
+got what you need
+
+>yah
+It's not nice to make fun of the peasant for having hay he doesn't want
+
+>trade straw to peasant
+Instead of trading, use GIVE X to Y.
+
+>trade straw
+Instead of trading, use GIVE X to Y.
+
 >give straw to peasant
 Your score has just gone up by one point.
+
+>yah
+You're glad you've got the hay, but you're not excited, and you can't fake it.
 
 >x poetry
 lots of smilies
 
 >similes
 more forced than the smilies
+
+>mope
+You try, but the smilies on the poem prevent you.
 
 >missiel
 WRONG
@@ -464,9 +723,18 @@ Your score has just gone up by one point.
 >missiel
 WRONG
 
+>mope
+You mope, but it doesn't change the poem. Or even give you an idea for one.[else]You mope, but you imagine no poem.[end if]");
+
+>similes
+You can't create something abstract from something concrete. Or plutonium. Or whatever that missile's made of.
+
 >fold paper
 >i
 folded paper plane
+
+>nepal
+Whoah! Teleporting there would be too cold even with that coat on. Plus, you have no mountain climbing gear.
 
 >panle
 WRONG
@@ -478,6 +746,11 @@ WRONG
 >room
 
 >n
+Stiller Trellis
+
+>tillers
+You aren't going to sea in this game.
+
 >put hay in wall
 Your score has just gone up by one point.
 
@@ -491,9 +764,32 @@ WRONG
 >e
 Sacred Cedars
 
+>lois
+Lois will not pour the oils in the cask for you, but she is not stopping you.
+
+>ecards
+Even if those were physical things, they'd be--well, less than religious. You don't need to change the cedars.
+>cadres
+You must do this on your own.
+
+>potus
+This is hopefully an apolitical game, and I don't even want to get into whether the current POTUS would help or hurt in this situation, or whether they even belong in such a holy place.
+
+>pray
+It's been so long, you only mouth a "Yarp!"
+
+>sever
+Violence or vandalism in such a holy place? For shame.
+
+>serve
+You must serve by going forth on your mission of warlikeness and love.
+
 >cask
 >fill cask
 Gainly laying
+
+>lois
+Lois is silent. You figure what to pour, where
 
 >fill cask
 already full
@@ -506,6 +802,9 @@ Your score has just gone up by one point.
 >soli
 WRONG
 
+>lois
+Lois may not hear you out here, and she may only give marginal hints in the cedars.
+
 >room
 >n
 >e
@@ -513,11 +812,17 @@ WRONG
 Gainly laying
 SO NOW HALLS SHALL SWOON
 
+>lois
+You feel guilt at asking Lois for more
+
 >pour oils
 already full
 
 >w
 Crashing Archings
+
+>lois
+Lois may not hear you out here--she has left you to your own devices, but you must be close
 
 >s
 >moor
@@ -539,6 +844,12 @@ RESULT WITH LUSTER
 
 >put panel on silo
 
+>terse
+All five wrong.
+
+>reset
+Unfortunately, it's not QUITE as easy as just pushing a reset button
+
 >stere
 WRONG
 >steer
@@ -547,6 +858,9 @@ Your score has just gone up by one point.
 >stere
 WRONG
 
+>terse
+Already good.
+
 >shoto
 WRONG
 >shoot
@@ -554,6 +868,9 @@ changes to a shoot
 Your score has just gone up by one point.
 >shoto
 WRONG
+
+>sooth
+Close...what you need to do will sooth, in a bit.
 
 >push shoot
 You hear a loud siren!
@@ -565,18 +882,13 @@ AMUSING GUNS
 Your score has just gone up by one point.
 Trips Strip
 
-* _metstart
+* _metstart-short
 
->gardenai
-WRONG
+###############################################
+#this gets you to the flower shop with a choice of flowers, with everything else possible taken (except how to get the tulip) care of
+
 >gardenia
 Your score has just gone up by one point.
->gardenai
-WRONG
-
-
->score
-1 out of 18 total points
 
 >n
 Cramped Red Camp
@@ -584,20 +896,12 @@ Cramped Red Camp
 >w
 A Yell Alley
 
->tomaot
-WRONG
 >tomato
 Your score has just gone up by one point.
->tomaot
-WRONG
 
 >e
->velcor
-WRONG
 >velcro
 Your score has just gone up by one point.
->velcor
-WRONG
 
 >s
 >w
@@ -610,37 +914,145 @@ Your score has just gone up by one point.
 >e
 >n
 >n
+Cordoned Red Condo
+
+>switch emitter
+Your score has just gone up by one point.
+
+>get cake
+>s
+>keycard
+Your score has just gone up by one point.
+>controls
+Your score has just gone up by one point.
+
+>e
+Elf Row's Flowers
+
+>give gardenia to faeries
+
+>barcode
+Your score has just gone up by one point.
+>put barcode on keycard
+
+>w
+>s
+
+>s
+Elm Train Terminal
+
+>u
+(on the fuzzy looking wall)
+
+>opening
+Your score has just gone up by one point.
+
+>put controls in opening
+
+>n
+>n
+>e
+
+* _metstart-long
+
+>opt in
+
+>baste
+I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
+
+>gardenai
+The drainage bubbles a bit.
+>gardenia
+Your score has just gone up by one point.
+>gardenai
+The flowers are fine as-is.
+
+>score
+1 out of 18 total points
+
+>n
+Cramped Red Camp
+
+>w
+A Yell Alley
+
+>tomaot
+Hm, you maybe could bend the motto a bit differently.
+>tomato
+Your score has just gone up by one point.
+>tomaot
+It's pretty gross, but you can't really change it. Maybe it can gross someone, or something, else out.
+
+>e
+>velcor
+The clover seems overcome with fuzz for a moment--but no, you missed a little something.
+>velcro
+Your score has just gone up by one point.
+>velcor
+The velcro remains tangled.
+
+>smitten
+No matter how hard you try to convince yourself they're useful, you're not smitten with them. They're just ugly. But they could stick really good on the right surface.
+
+>s
+Undesired Underside
+
+>snores
+Any noise would be better than the beats, but without the sensor, you're probably not getting by the door.
+>senors
+The senors you want to see are behind the door.
+
+>w
+The Ol' Hotel
+
+>lucre
+Ugg. You're not sure what kind of lucre you need, but maybe something that hasn't been in the night thing. Even something the night thing was sitting on.
+>cluer
+Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing.
+
+>throw tomato at thing
+Your score has just gone up by one point.
+
+>x mattress
+>e
+>n
+>n
+Cordoned Red Condo
+
 >rentla
-WRONG
+One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers.
 >rental
 Your score has just gone up by one point.
 >rentla
-WRONG
+That's not something
 
 >undo
+>undo
 >rentasl
-WRONG
+You could've sworn you the thing grew eyelids! And the eyes moved, begging you for any excuse it doesn't belong here!
 >rentals
 Your score has just gone up by one point.
 >rentasl
-WRONG
+Nothing at all seems to happen this time. You've probably done what you can.
 
->switch emittre
-WRONG
+>stalker
+Hm. If the talkers became a stalker, the only person to stalk would be you. You can't change who they are inside, but maybe you can give them a fright.
+
 >switch emitter
 Your score has just gone up by one point.
->switch emittre
-WRONG
 
 >get cake
 >s
 
 >controsl
-WRONG
+You thought you heard electronic beeping from the corn.
 >controls
 Your score has just gone up by one point.
 >controsl
-WRONG
+The controls stay as they are.
+
+>stent
+Medical procedures aren't necessary here. The noise is too distracting anyway.
 
 >e
 Elf Row's Flowers
@@ -649,23 +1061,45 @@ Elf Row's Flowers
 Powerful pure flow
 
 >barcoed
-WRONG
+The brocade design seems simple, yet complex, and perhaps you don't have to change a lot.
 >barcode
 Your score has just gone up by one point.
 >barcoed
-WRONG
+The barcode does not shift.
+
 >keycadr
-WRONG
+You feel like can almost identify what the cake can become.
 >keycard
 Your score has just gone up by one point.
 >keycadr
-WRONG
+The keycard remains stiff. Looks like it's as it should be.
 
 >put barcode on keycard
 
 >w
 >s
+
+>bates
+You don't need to deal with a knife-wielding psycho so near a hotel, which is close enough to a motel.
+
 >s
+Elm Train Terminal
+
+>bates
+You don't need to deal with a knife-wielding psycho on top of all this.
+
+>sap
+The PSA is sappy, but it's not literally sappy. And sticky stuff won't get you up the wall.
+>asp
+That's just what you need, a snake chasing you with everything else going on.
+>spa
+You haven't earned a break yet.
+>pass
+You take a pass on etiquette advice. You need results right now!
+
+>tar
+That'd be neat, make the wall sticky so you could climb and deal with that stupid pig...but you might get stuck to it, too. Need something clingy but less gooey.
+
 >u
 (on the fuzzy looking wall)
 
@@ -675,28 +1109,44 @@ Your score has just gone up by one point.
 >put controls in opening
 Your score has just gone up by one point.
 
+>rat
+No, you don't need a rat chasing you around.
+>lair
+That might work, if the rail did not lead to a lair already.
+>liar
+The number of liars the rails would create would be shocking.
+>lira
+But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which don't use lira any more anyway. Plus, you don't need money.
+
 >n
 >n
 >e
 
 * _metros-heaths-darkness
 
+# this is the "main line" I use to get through the game. Mainly because it was the first I thought of.
+
+>trounce
+The faeries have very magic and very demoralizing anti-vandalism spells.
+>trounce counter
+The faeries have very magic and very demoralizing anti-vandalism spells.
+
 >get heaths
 >sheaht
-WRONG
+You stare at the heaths, picturing them in the circle and wondering which is the "starter."
 >sheath
 Your score has just gone up by one point.
 >sheaht
-WRONG
+The sheath remains still.
 
 >w
 >w
 >swodr
-WRONG
+The words seem to whizz around the air a bit, but they aren't tempered into something that can really do damage.
 >sword
 Your score has just gone up by one point.
 >swodr
-WRONG
+Meddling with the sword right now, you're worried it might poke you.
 
 >e
 >give emitter to deadbeat
@@ -707,26 +1157,44 @@ Man, I've done enough work today
 #double lines
 
 >s
+
 >e
 Your score has just gone up by one point.
 
+>odor
+It would stink to be you if you did that. The nerds outnumber you and would crucify you.
+
 >ask nerds about darkness
+
+>odor
+That door's reinforced. The nerds made sure it was protected against all sorts of crazy things.
+
 >s
 >e
 Bassy Abyss
 
+>reins
+Horsing around like that won't hold back the beats. You need to get a grip another way, but you're on the right track.
+>risen
+You don't need the siren's volume or the beats' volume to have risen. Oh, no.
+>rinse
+No water source. You can do better than short-circuiting the siren with water, though
+
 >resni
-WRONG
+The siren continues to blind you--like it's throwing dust in your eyes.
 >resin
 Your score has just gone up by one point.
 >resni
-WRONG
+The dust is dust now.
+>rinse
+Time for that after you sure-handedly slay the final enemy, here.
+
 >betsa
-WRONG
+The beats shift up for a second.
 >beast
 Your score has just gone up by one point.
 >betsa
-WRONG
+You've changed the beats to something tangible, physically beatable.
 
 >get sword
 The sword is yours
@@ -738,21 +1206,13 @@ Trips Strip
 * _metros-heaths-gnats
 
 >get heaths
->sheaht
-WRONG
 >sheath
 Your score has just gone up by one point.
->sheaht
-WRONG
 
 >w
 >w
->swodr
-WRONG
 >sword
 Your score has just gone up by one point.
->swodr
-WRONG
 
 >e
 >give emitter to deadbeat
@@ -771,20 +1231,12 @@ Your score has just gone up by one point.
 >e
 Bassy Abyss
 
->resni
-WRONG
 >resin
 Your score has just gone up by one point.
->resni
-WRONG
 
->betsa
-WRONG
 >beast
 Your score has just gone up by one point.
 >betsa
-WRONG
-Your score has just gone up by one point.
 
 >get sword
 The sword is yours
@@ -798,6 +1250,9 @@ Trips Strip
 >get begonias
 >noise bag
 Your score has just gone up by one point.
+
+>gab
+That's not a powerful enough noise to fight the beats.
 
 >w
 >w
@@ -823,28 +1278,14 @@ Your score has just gone up by one point.
 >e
 Bassy Abyss
 
->resni
-WRONG
 >resin
 Your score has just gone up by one point.
->resni
-WRONG
->
 
->betsa
-WRONG
 >beast
 Your score has just gone up by one point.
->betsa
-WRONG
->
 
->swodr
-WRONG
 >sword
 Your score has just gone up by one point.
->swodr
-WRONG
 
 >attack beast
 Your score has just gone up by one point.
@@ -880,28 +1321,14 @@ Your score has just gone up by one point.
 >e
 Bassy Abyss
 
->resni
-WRONG
 >resin
 Your score has just gone up by one point.
->resni
-WRONG
->
 
->betsa
-WRONG
 >beast
 Your score has just gone up by one point.
->betsa
-WRONG
->
 
->swodr
-WRONG
 >sword
 Your score has just gone up by one point.
->swodr
-WRONG
 
 >attack beast
 Your score has just gone up by one point.
@@ -957,9 +1384,18 @@ Trips Strip
 Your score has just gone up by one point.
 
 >enter resort
+Tiles
+>lites
+Light isn't the problem here. It's not having anywhere to go.
 
 >islet
 Your score has just gone up by one point.
+Islet
+
+>lites
+Light isn't the problem here. It's getting off the islet
+>slite
+That's bad spelling, and it won't shrink your problems.
 
 >score
 1 out of 14 total
@@ -982,8 +1418,22 @@ Your score has just gone up by one point.
 >ropes
 Your score has just gone up by one point.
 
+>loot
+You don't have time for treasure with Red Bull Burdell waiting.
+
 >toeholds
 Your score has just gone up by two points.
+
+>prigs
+Grumbling about prigs, or showing those prigs, won't help now. You should probably use the grips to climb instead.
+>prigs
+Grumbling about prigs, or showing those prigs, won't help now. You should probably make the sprig into something useful instead.
+>prose
+There's not much of that left in this game, and talking won't help you up the slope.
+>pores
+No, you had it.
+>poser
+You mutter a small epithet at where Red Bull Burdell could be. No, he's not around, but he must be near.
 
 >e
 Potshot Hotspot
@@ -991,20 +1441,44 @@ Potshot Hotspot
 >trio
 Your score has just gone up by one point.
 
+>lacy
+No, the clay is a clue to what the trio really wants to do.
+
+>achin
+You don't have the ability to dish out an achin'..
+
 >china
 Your score has just gone up by one point.
+
+Too many people are watching for you to slink away
 
 >kilns
 Your score has just gone up by one point.
 
+>ether
+They're not bad people. But even bad people don't deserve to vanish like that! [if kilns are visible]Maybe they can get a purpose, able to use those kilns[else]Give them something constructive to do[end if].
+>roister
+That's what's causing the riot, and it's up to you to quiet the rioters--well, the riot.
+>lacy
+No, the clay is a clue to what the protest really wants to do.
+
 >potters
 Your score has just gone up by one point.
+
+>brb
+You don't know him that well. No riffing on his initials!
 
 >tug toe
 Your score has just gone up by one point.
 
+>sex it
+Quit screwing around and focus on yourself. NO, not like THAT. Geez
+
 >e
 Roman Manor
+
+>sex it
+You're not even up for THAT, now. You just want to BE.
 
 >exist
 Your score has just gone up by one point.
@@ -1014,6 +1488,8 @@ a smart gamin' anagrammist
 ################################main tests below here
 
 * _plow-through
+
+###############this tries all the mistakes etc.
 
 >{include} _intro
 >{include} _forest
@@ -1028,34 +1504,62 @@ Your score has just gone up by one point.
 
 >enter metros
 Underside
->{include} _metstart
+>{include} _metstart-long
 >{include} _metros-heaths-darkness
 >score
 new hero now here
 
 >{include} _resort
 
-* metros-2
+* _metros-1
+#####this is usually not run as we can rely on plow-through. But it's there if wanted.
 
 >gonear underside
->{include} _metstart
+>{include} _metstart-long
+>{include} _metros-heaths-darkness
+
+* _metros-2
+
+>gonear underside
+>{include} _metstart-short
 >{include} _metros-heaths-gnats
 
-* metros-3
+* _metros-3
 
 >gonear underside
->{include} _metstart
+>{include} _metstart-short
 >{include} _metros-begonias-darkness
 
-* metros-4
+* _metros-4
 
 >gonear underside
->{include} _metstart
+>{include} _metstart-short
 >{include} _metros-begonias-gnats
 
-* metros-5
+* _metros-5
 
 >gonear underside
->{include} _metstart
+>{include} _metstart-short
 >{include} _metros-begonias-noise
 
+* _intro-only
+
+>{include} _intro
+
+* forest-only
+
+>ts
+>opt in
+>{include} _forest
+
+* sortie-only
+
+>ts
+>opt in
+>{include} _sortie
+
+* resort-only
+
+>ts
+>opt in
+>{include} _resort
