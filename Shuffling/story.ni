@@ -1930,13 +1930,12 @@ before exiting:
 
 chapter don't get a rifle
 
-understand "rifle" as a mistake ("No need for violence here!") when got-flier.
+understand "rifle" as a mistake ("Shooting things up is not the answer.") when got-flier.
 
 to decide whether got-flier:
-	if player is in trips strip:
-		decide yes;
-	if player has arena dig or player has expo flier:
-		decide yes;
+	if player is in trips strip, decide yes;
+	if location of player is location of arena dig, decide yes;
+	if player has expo flier, decide yes;
 	decide no;
 
 chapter sing-wave-jump-sleep-show

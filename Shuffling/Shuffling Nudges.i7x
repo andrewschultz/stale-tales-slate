@@ -323,6 +323,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 table of Metros nudges
 this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "metros"	550941626	--	--	degen-true rule	"[reg-rej]."
+"metro"	454667660	--	--	degen-true rule	"[reg-rej]."
 "undesired"	698274326	underside	--	--	"[loc-rej]."
 "sensor"	548937929	underside	--	--	"You don't have the skill to hack the sensor electronically."
 "droo"	255058046	underside	--	--	"It can't be that easy to change. Maybe some random door in the wilderness."
@@ -330,9 +331,8 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "beam"	212487985	underside	--	--	"Changing the beam is way out of your league."
 "escalator"	564061533	underside	--	--	"No way. It's your way up from the metros. Once you fix things."
 "building"	389860542	underside	--	--	"[no-hot]."
-"hotel"	396364842	underside	--	--	"[no-hot]."
 "special"	425546122	underside	--	--	"[if anti-cool is visited]You don't need to perform any tricks, now you've gotten to the Anti-Cool Location[else]That's not the way to get to the special place. You need special ID[end if]."
-"theol"	396364842	underside	--	--	"You can't change the hotel, [if night thing is not in Hotel]and you got rid of the night thing, anyway[else]but you could have [a-nother] look around[end if]."
+"theol"	396364842	underside	--	--	"[no-hot]."
 "metallic"	468805207	--	metallic door	--	"No way. That thing's sturdy. [if anti-cool is visited]Those nerds[else]The people in there[end if] know their stuff."
 "scratchings"	604963096	--	scratchings	--	"They're not important--the brocade probably is, though."
 "drawing"	362975539	--	warding drawing	--	"You can't change the drawing, and that won't make its warnings any less relevant."
@@ -400,17 +400,18 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "bug"	156124414	alley	--	--	"[ug-bug]."
 "placard"	265013911	alley	--	--	"It's just junk. As itself, and for your quest. But maybe what's written on it can help."
 "garbage"	301123857	alley	--	--	"Worry about repurposing garbage after you saved Yorpwald, maybe."
+"word"	288640242	--	words	--	"You'd need to do something to all the words."
 "hilt"	239199002	--	sword	--	"The hilt serves a purpose, and besides, there's not much to change it to."
 "bump"	269065824	--	bump	--	"Just search the bump instead."
 "motto"	419000343	--	motto	--	"It's labeled A MOTTO. So you probably have to respect the creative license, such as it is, of whoever wrote it."
-"potato"	438578967	--	motto	--	"The author twisted words enough. Perhaps you could concentrate on it."
-"fairies"	428092284	elf row's flowers	--	--	"They could CERTAINLY out-magic you back, and give a little extra for your misspelling, even if that could do anything."
+"potato"	438578967	--	motto	--	"The author twisted words enough. Perhaps you could concentrate on the motto."
+"fairies"	428092284	elf row's flowers	--	--	"They could CERTAINLY out-magic you back, and give a little extra for your misspelling, even if anagramming could have an effect on them."
 "elfrows"	572019963	elf row's flowers	--	--	"[loc-rej]."
 "flower"	475745997	elf row's flowers	--	--	"[loc-rej]."
 "fairy"	281378615	elf row's flowers	--	--	"The rest would mangle you back worse."
 "faery"	364191878	elf row's flowers	--	--	"The rest would mangle you back worse."
 "trounce"	583611407	elf row's flowers	--	--	"You don't need to do anything to the counter, and it's probably protected by a spell, anyway."
-"faeries"	510905547	elf row's flowers	--	--	"They could CERTAINLY out-magic you back, even if such an utterance could do anything."
+"faeries"	510905547	elf row's flowers	--	--	"They could CERTAINLY out-magic you back, even if anagramming could have an effect on them."
 "heath"	307668543	--	heaths	--	"[if player does not have heaths]Probably best not to do stuff to even one heath while the faeries have them[else]They are multiple heaths--so you should try to change just one[end if]."
 "stems"	487539212	--	heaths	--	"Deal with the whole flower, not just the stems."
 "begonia"	369265465	--	begonias	--	"[if player does not have begonias]Probably best not to do stuff to even one begonia while the faeries have them[else]They are multiple begonias--so you should try to change just one[end if]."
@@ -425,6 +426,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "geek"	341145098	anti-cool	--	--	"[nnww]."
 "asknerds"	550735437	anti-cool	--	--	"The nerds look at you, then remark they can't decipher THAT. But maybe if you rearranged things a bit..."
 "asknerd"	454461471	anti-cool	--	--	"'You can ask us all!' one nerd blurts. 'We can pool our collective knowledge in a data cloud and stuff or something!'"
+"tulip"	388488469	--	tulip	--	"[if player has tulip]It's handy as is. It gives light. You can't ask for much more[else]The nerds would gang up on you and take it back, if anything worked, which it won't[end if]."
 "tramline"	550217094	terminal	--	--	"[loc-rej]."
 "lairs"	282592272	terminal	--	--	"[fix-rail]."
 "lair"	186318306	terminal	--	--	"[fix-rail]."
@@ -788,7 +790,7 @@ this is the af-cent rule:
 	the rule fails;
 
 to say no-hot:
-	say "You can't restore the hotel[if drainage is visible] or even scrub off what's written on it[end if]";
+	say "You can't change the hotel, [if night thing is not in Hotel]and you got rid of the night thing, anyway[else]but you could have [a-nother] look around[end if]";
 
 to say ded-chg:
 	say "He may mumble about change, but he's amazingly resistant to change, himself"
@@ -865,10 +867,7 @@ to say ennui:
 	say "You don't even want to TRY any more anagrams. You just want to BE...and not even take any of the [i]exits[r] here";
 
 to say if-rifle:
-	if the player's command includes "rifle":
-		say "Shooting things up is not the answer";
-	else:
-		say "The flier has helpful information it'd be better to act on than change"
+	say "The flier has helpful information it'd be better to act on than change"
 
 section general nudges
 

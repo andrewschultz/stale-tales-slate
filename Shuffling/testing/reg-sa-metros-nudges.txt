@@ -6,7 +6,7 @@
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* metros-random-nudge
+* _metros-random-nudge
 
 #let's test random things that it's tricky to do with a straight walkthrough
 
@@ -18,7 +18,7 @@ The invite's for an ARENA DIG.
 The invite's for an ARENA DIG.
 
 >rifle
-Shooting things up
+Shooting things up is not the answer
 >rifel
 The flier has helpful information it'd be better to act on than change.
 
@@ -26,8 +26,6 @@ The flier has helpful information it'd be better to act on than change.
 >sogyg
 It's just garbage.
 >noet
-It's just garbage.
->flire
 It's just garbage.
 >lettre
 It's just garbage. The writing inside, too.
@@ -72,11 +70,11 @@ Changing the beam is way out of your league.
 No way. It's your way up from the metros. Once you fix things.
 
 >buildign
-You can't restore the hotel or even scrub off what's written on it.
+You can't change the hotel, 
 >gardenia
 by one point
 >hotle
-You can't restore the hotel.
+You can't change the hotel, 
 >sensro
 You don't have the skill to hack the sensor electronically.
 >doro
@@ -110,8 +108,8 @@ You won't need to do anything to the whole room unless you are trapped in a room
 
 >motot
 It's labeled A MOTTO. So you probably have to respect the creative license, such as it is, of whoever wrote it.
->potato
-The author twisted words enough. Perhaps you could concentrate on it.
+>potaot
+The author twisted words enough. Perhaps you could concentrate on the motto.
 
 >stinkbgu
 Ugh. Too messy. Mentally and physically.
@@ -138,16 +136,12 @@ You won't need to do anything to the whole room unless you are trapped in a room
 >thign
 The night thing is twisted beyond redemption.
 
->potato
+>potaot
 The night thing would probably still be big and terrifying even if it changed its form. You need to find a way to get rid of it.
-
->throw tomato at thing
-
->bupm
-Just search the bump instead.
 
 >lucer
 You're a wordplayer, not a doctor, sadly. But that ulcer was the night thing's own fault, anyway.
+
 >bottel
 It doesn't bend, but maybe it's a clue what the night thing likes to eat.
 >ketchpu
@@ -156,12 +150,19 @@ It doesn't bend, but maybe it's a clue what the night thing likes to eat.
 You think of how to make the ketchup slightly classier. It doesn't bend, but maybe it's a clue what the night thing likes to eat.
 >mattrses
 Nothing to change the mattress to, even if you could move the night thing off.
+
 >throw tomato at thing
+
+>bupm
+Just search the bump instead.
+
 >mattrses
 Nothing to change the mattress to, but something might be inside it.
->x mattrses
->mattress
+>x mattress
+>mattrsse
 Nothing to change the mattress to, and you already looted it
+
+>x mattress
 
 >emittre
 Whatever icky stuff is/was in there might come out. Eww.
@@ -176,14 +177,12 @@ Cramped Red Camp
 
 >capm
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
->rde
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 >crampde
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
 >redtenst
 Not nice. It's the only home the deadbeats have.
->driveway
+>drivewya
 You should probably just walk in and see what's there.
 >yadr
 You should probably just walk in and see what's there.
@@ -222,7 +221,8 @@ The buttons and kernels don't need pushing. Or they won't until they're a part o
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
 
 >controsl
-WRONG
+electronic beeping
+
 >controls
 The dead beat deadbeat might not beat you dead
 
@@ -230,20 +230,18 @@ The dead beat deadbeat might not beat you dead
 Cordoned Red Condo
 
 >cordonde
-[loc-rej]
->rde
-[loc-rej]
+You won't need to do anything to the whole room unless you are trapped in a room.
 >conod
-[loc-rej]
+You won't need to do anything to the whole room unless you are trapped in a room.
 
->rental
+>rentla
 One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers.
 
 >candelabar
 Interior decorating is not your strength.
 >carpest
 Interior decorating is not your strength.
->carpet
+>carpte
 Interior decorating is not your strength.
 >talkesr
 You can't change who they are. They probably can't, either. It's sad.
@@ -259,9 +257,9 @@ It isn't just any cake. It's dry cake.
 >s
 
 >ltso
-It's not just that it's lost, it's CORN. Perhaps you can ask the deadbeat about the lost corn for more help".
+It's not just that it's lost, it's CORN. Perhaps you can ask the deadbeat about the lost corn for more help.
 >conr
-It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat about the lost corn for more help".
+It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat about the lost corn for more help.
 
 >controls
 by one point
@@ -319,16 +317,19 @@ Deal with the whole flower, not just the stems.
 You don't need to do anything to the counter, and it's probably protected by a spell, anyway.
 
 >faerise
-They could CERTAINLY out-magic you back, and give a little extra for your misspelling, even if anagramming could have an effect on them.
+They could CERTAINLY out-magic you back, even if anagramming could have an effect on them.
 
->give gardenia to faieirs
+>give gardenia to faeries
 >take heaths
 >heaht
 They are multiple heaths--so you should try to change just one.
 
->take brocade
->scratchinsg
+>sheath
+
+>scratchgins
 They're not important--the brocade probably is, though.
+
+>take brocade
 
 >w
 >w
@@ -347,7 +348,7 @@ by one point
 You don't get rid of angst with just a word.
 >s
 >ebtas
-The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here.
+The beats shift up for a second.
 
 >put card on sensor
 >e
@@ -358,34 +359,32 @@ Anti-Cool Location
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
 >beats
-!The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here.
+The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here.
 
 >uptil
 The nerds would gang up on you and take it back, if anything worked, which it won't.
->nerd
+>nedr
 The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds.
->nerds
+>nersd
 The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds.
->dorks
+>dorsk
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
->geeks
+>geesk
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
 
->dork
+>dokr
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
->geek
+>geke
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
->asknerds
+>asknersd
 The nerds look at you, then remark they can't decipher THAT. But maybe if you rearranged things a bit...
->asknerd
+>asknedr
 "You can ask us all!" one nerd blurts. "We can pool our collective knowledge in a data cloud and stuff or something!"
 
 >ask nerds about darkness
 
 >metallci
 No way. That thing's sturdy. Those nerds know their stuff.
-
->s
 
 >s
 Elm Train Terminal
@@ -405,9 +404,9 @@ You need to fix the rails electronically.
 >tracsk
 You need to fix the rails electronically.
 >aps
-You need to fix the rails electronically.
+Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road.
 >apss
-You need to fix the rails electronically.
+Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road.
 >art
 There aren't many ways to look at THIS art, and none are constructive, you sense.
 
