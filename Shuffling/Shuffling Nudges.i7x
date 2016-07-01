@@ -235,8 +235,8 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "graffiti"	366236825	the nick	--	--	"The graffiti's etched in. It's here to help, anyway."
 "greta"	351027450	the nick	--	--	"The grate remains impassive."
 "nick"	185839117	the nick	--	--	"Maybe there is a way out of the nick. Not of nick, but the nick. It's probably too much to think yourself in K.C."
-"kitchen"	454037543	kitchen	--	--	"[loc-rej]."
 "kitchen"	454037543	kitchen	--	--	"Nothing happens. Well, you didn't really want to go back, and there's probably no third room to look for[if moor is unvisited]. Maybe you need to escape this bunker in another room[end if]."
+"kitchen"	454037543	kitchen	--	--	"[loc-rej]."
 "okrapot"	473725930	kitchen	--	--	"Aigh! It's a catchy tune, but really, it won't help you figure anything out."
 "fridge"	338266445	kitchen	--	--	"The fridge is just a fridge."
 "obligatory"	611511337	kitchen	--	--	"The fridge will always be what it is. Generally what is or was inside is more interesting, anyway."
@@ -265,6 +265,8 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "cutupsteak"	796104265	--	steak	--	"The steak's just right as is."
 "lamina"	236164982	--	manila animal	--	"It actually looks pretty nice on the fridge."
 "pair"	213970426	--	hoses	--	"Many things can be a pair, but these hoses--well, a pair of HOSES is kind of odd."
+"shoe"	335714951	--	--	got-shoes rule	"But you're wearing the shoes. That might cause problems."
+"shoes"	431988917	--	--	got-shoes rule	"But you're wearing the shoes. That might cause problems."
 "room"	298104110	--	--	rm-or-moor rule	"You almost feel something picking you up and pulling you somewhere else[if moor is visited and player is in roomroom]--you got here and can figure how to get back[else if moor is unvisited]--there are only so many ways to figure a new place[else]--you've been there and back, though, so you should know what to do[end if]."
 "woefulpat"	682291796	--	pat	--	"[woe-all]."
 "woeful"	495528001	--	Woeful Pat	--	"[woe-all]."
@@ -340,7 +342,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "soggy"	358185199	--	soggy love	--	"It's just garbage."
 "note"	374176212	--	soggy love	--	"It's just garbage."
 "beer"	359354926	--	beer	--	"It's just garbage."
-"flier"	338451493	--	arena dig flier	--	"It's just garbage."
+"flier"	338451493	--	arena dig flier	--	"[if-rifle]."
 "letter"	600969896	--	letter	--	"It's just garbage. The writing inside, too."
 "cramped"	400893516	red camp	--	--	"[loc-rej]."
 "camp"	166734515	red camp	--	--	"[loc-rej]."
@@ -473,6 +475,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "uprisers"	722566259	--	riot	--	"[simple-riot]."
 "protesters"	980846328	--	protest	--	"They're just a simple protest."
 "potter"	575168484	--	potters	--	"Picking one person out of a crowd never works."
+"clay"	197366494	--	kilns	--	"The clay is for someone else to work with."
 "three"	481328338	--	--	riot-gone rule	"The trio remains unmoved. Perhaps you can [if potters are in hotspot]get the potters something to work with[else]give the protest more constructive aims[end if]?"
 "china"	172376056	--	chain links	--	"[if china is in lalaland]The china's gone--see what you can do with the links[else]Hm, maybe you can do something with the chain. Or the links[end if]."
 "chainlinks"	489297393	--	chain links	--	"You're overthinking it. Or you hope you are. It's both a chain, and links."
@@ -727,6 +730,11 @@ to say label-no:
 
 this is the rm-or-moor rule:
 	if player is in room or player is in moor:
+		the rule succeeds;
+	the rule fails;
+
+this is the got-shoes rule:
+	if shoes are in lalaland:
 		the rule succeeds;
 	the rule fails;
 

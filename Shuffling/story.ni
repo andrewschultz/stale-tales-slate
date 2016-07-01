@@ -337,7 +337,7 @@ Spam	"Nothing happens, but you think you can make out odd shapes in the Spam for
 hoses	"Something leaks out of the hoses. Hm. What else can be rubber, now."
 vowels	"The vowels continue to howl in defiance. OU...AIE...like a wild animal."
 wolves	"You can't change them back. But maybe you can get rid of them."
-cask	"[if sack is in lalaland]You doubt the sack/cask has a triple purpose[else]Nothing happens. Maybe you are trying to do too much to change it[end if]." [sortie]
+cask	"[if sack is in lalaland]You doubt the sack/cask has a triple purpose[else]Nothing happens. Maybe you are trying to do too much to change the cask[end if]." [sortie]
 sack	"You doubt the sack/cask has a triple purpose."
 warts	"The warts itch slightly."
 poem	"[if poem is not folded]You need to fold the poem into a plane before you can try that[else]The plane can probably become something else, but not that[end if]."
@@ -355,7 +355,7 @@ anapest	"You think you had the right idea, but your execution was poor. Maybe be
 smilies	"The smilies momentarily grow eyebrows that point aggressively, then vanish."
 hoots button	"You suppress a few minor swears as you realize that can't be right."
 trees button	"Hmm, that doesn't work, but you bet you can bull your way through things."
-oils	"[if oils are in cask or oils are in cedars]That doesn't seem right, and you may need to pour the oils, anyway[else]The oils need a purpose--to build something great[end if]."
+oils	"[if oils are not in cask and player is not in moor]That doesn't seem right, and you may need somewhere to pour the oils, anyway[else]The oils need a purpose--to build something great[end if]. You don't want to waste them."
 drainage	"The drainage bubbles a bit." [metros start]
 motto	"Hm, you maybe could bend the motto a bit differently."
 brocade	"The brocade design seems simple, yet complex, and perhaps you don't have to change a lot."
@@ -377,7 +377,7 @@ sprig	"The sprig seems to grow less fragile for a moment."
 poles	"The pols seem to start to bend at an angle."
 spore	"You briefly wonder what the spore could grow into, given time. Time you don't have. Maye something circular, or something long and stringy."
 protest	"The protesters mumble at you for trying to exert mind control. You've struck a nerve."
-chain links	"The links rattle slightly. Perhaps they are chaining others' creativity as well as your own, as they are now."
+chain links	"The links rattle slightly. Perhaps they are chaining others['] creativity as well as your own, as they are now."
 riot	"The riot's still a crowd. A BIG crowd."
 r2	"The room sways a bit but snaps back to normal."
 m2	"The moor sways a bit but snaps back to normal."
@@ -493,6 +493,22 @@ maps	"The maps are probably right, you hope. No need to change them."
 chisel	"It's a perfectly good tool. Trying to refine it might break it."
 drapes	"They look forbidding, but you might turn them into something worse. Maybe you can just dispose of them physically."
 silver	"Hard to beat silver. It's what it should be."
+HOTSAUCE	"[keep-food-simple]."
+parmesan	"[keep-food-simple]."
+steak	"[keep-food-simple]."
+lettuce	"[keep-food-simple]."
+tortilla	"[keep-food-simple]."
+grits	"[keep-food-simple]."
+pancake	"[keep-food-simple]."
+coat	"No need for fashion tweaks."
+straw	"The straw remains motionless."
+black door	"The black door just sits there."
+missile	"The missile emits an almost giggly sound but doesn't actually change."
+panel	"The panel bleeps a 'stop that' sort of warning."
+hallway	"You already have a passage east. Don't close it."
+silo	"That silo was pretty big. You probably have little more to do with the oils."
+steer button	"No, the steer button HAS to be right."
+shoot button	"No, the shoot button HAS to be right."
 gardenia	"The flowers are fine as-is." [metros]
 tomato	"It's pretty gross, but you can't really change it. Maybe it can gross someone, or something, else out."
 velcro	"The velcro remains tangled."
@@ -502,6 +518,9 @@ keycard	"The keycard remains stiff. Looks like it's as it should be."
 sheath	"The sheath remains still."
 sword	"Meddling with the sword right now, you're worried it might poke you."
 beast	"You've changed the beats to something tangible, physically beatable."
+
+to say keep-food-simple:
+	say "Best not to get too crazy with food preparation"
 
 chapter say shortcuts
 
@@ -2841,6 +2860,8 @@ Resort is a region. min-score of Resort is 10. max-score of Resort is 14. regnud
 
 book fliptoing
 
+the notify score changes rule is not listed in any rulebook.
+
 chapter the verb
 
 definition: a thing (called xx) is fungible:
@@ -2895,7 +2916,6 @@ carry out fliptoing (this is the main flipping rule) :
 			move noun to location of player; [may need special case for slippery sword]
 	if noun is shoot button or noun is steer button:
 		now noun is part of panel;
-	consider the notify score changes rule;
 	if hintfull is true or helpdebugflag is true:
 		now just-print is false;
 		try mainhelping;
@@ -2908,7 +2928,7 @@ after fliptoing (this is the set pronouns rule) :
 	if noun is plural-named:
 		set the pronoun them to noun;
 	set the pronoun it to the noun;
-	d "[noun] is now it.";
+[	d "[noun] is now it.";]
 	continue the action;
 
 after fliptoing (this is the when to increase min points after flip rule): [static is taken care of in carry out fliptoing--since you can reflip, it gets tricky]
@@ -2933,6 +2953,7 @@ after fliptoing (this is the when to increase min points after flip rule): [stat
 	if noun is grips or noun is ropes:
 		if toeholds are in woodland:
 			min-up;
+	skip upcoming rulebook break;
 	continue the action;
 
 to poss-d:
@@ -2949,7 +2970,7 @@ to min-and:
 
 chapter special cases
 
-before fliptoing (this is the tortilla check rule):
+before fliptoing when player is in kitchen (this is the tortilla check rule):
 	if noun is taco and tortilla is visible:
 		if ingredients-in-tort < 4:
 			say "[one of]The tortilla's not ENOUGH of a taco yet.[or][stopping]";
@@ -3037,8 +3058,6 @@ check fliptoing silver:
 		say "The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.";
 		preef silver;
 		do nothing instead;
-
-understand "silver" as a mistake ("The livers are too dull to do anything like that with. Yet.[liv-preef]") when player has livers.
 
 to say liv-preef:
 	preef silver;
@@ -3187,7 +3206,7 @@ tool shed	toeholds	"toeholds" or "toe holds"	"toolshed" or "tool shed"	"That'll 
 riot	protest	"trio"	"riot"	"Your word seems to have no effect. But that's just because the least enthusiastic people in the back leave first. Others follow--one of them even drops some chain links. And soon, just three people remain. The most energetic and dedicated, of course, but altering that triangle can't be too hard. While it's still a protest, they don't seem fully into it."	false	307779244
 protest	potters	"potters"	"protest" or "riot"	"The trio grows even more lethargic. A fellow in a smock mocks the whole charade before throwing the smock in a corner. He talks with his two friends[if kilns are visible]. Shortly, they see the kilns nearby. They go to work happily[otherwise]. They still aren't happy, though. They'd sort of like something to do that'll help them forget their protesting phase[end if]."	false	671442450
 links	china	"china"	"china"	"The chain, or part of it, bursts into fine china, which rolls away from you. 'Hi, can...?' [if potters are visible]The potters take it immediately--'Hm! Not our thing, but very nice! If only we had something to make pottery with!' [else if protest is visible]The protesters pocket the china interestedly, saying they won't be bribed, but they did seem artsy enough to appreciate the design. [else if riot is visible]The crowd immediately tramples the china, then blames you for causing them to. [end if]Maybe you can do something with the links, instead."	false	172376056
-links	kilns	"kilns"	"links"	"The links burst and swell into luxury kilns[if potters are visible]. 'Ohmigod! Him! Good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Sir, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[otherwise]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337	[end resort flips]
+links	kilns	"kilns"	"links"	"The links burst and swell into luxury kilns[if potters are visible]. 'Ohmigod! Him! Good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Sir, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[otherwise]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337
 
 chapter say commands from anagrams
 
@@ -5364,7 +5383,7 @@ to say gd:
 to say na:
 	say "There isn't even a store here any more--just a plot. [no line break]"
 
-there is a sto named Store A. it is in trips strip. understand "store/ 1/one" as store a.
+Store A is a sto. it is in trips strip. understand "store/ 1/one" as store a.
 
 description of store a is "You can't imagine anything as rote as calling itself A Store, but it did."
 
@@ -6690,7 +6709,7 @@ after printing the locale description for kitchen when kitchen is unvisited:
 	say "Boy. That time in the nick left you hungry. And in need of warmth. Maybe you can get a two-for-one here in the kitchen.";
 	continue the action;
 
-understand "cato" as a mistake ("You don't need to know your classics, here.") when taco is in kitchen or player has coat.
+understand "cato" as a mistake ("You don't need to know your classics, here.") when taco is enclosed by player or player carries coat.
 
 understand "keats" as a mistake ("This is wordplay, not poetry. But the skate does glow red.") when skate is visible.
 
@@ -7500,7 +7519,7 @@ after choosing notable locale objects when player is in moor:
 
 understand "reset" and "reset button" as a mistake ("[reset-goof].") when player is in moor and panel is part of silo.
 
-understand "terse" as a mistake ("[if trees button is visible]All five wrong[else]Already good[end if]") when player is in moor and panel is part of silo.
+understand "terse" as a mistake ("[if trees button is visible]All five wrong[else]Already good[end if].") when player is in moor and panel is part of silo.
 
 reset-already is a truth state that varies.
 
@@ -8082,7 +8101,7 @@ to say letter-or-flier:
 
 the can of beer is auxiliary scenery in Undesired Underside. description of can of beer is "It appears to be AGED RAIN brand beer. Hooray, truth in advertising? A reading of the small print, though, leaves you seeing red.". rgtext of can of beer is "[rcn][rc][rc][gc][rc][rc][gc][rc]". lgth of can of beer is 8. gpos of can of beer is 2. rpos of can of beer is 1. cert-text of can of beer is "-[d1][d1][ast]D[d1][d1][ast]I[d1]". rect-text of can of beer is "G[d1][d1][d1][d1][d1][d1][ast]A".
 
-understand "aged rain" and "aged" and "rain" and "beer/ can/" as can of beer when can of beer is visible.
+understand "aged rain" and "aged" and "rain" and "beer can" as can of beer.
 
 does the player mean doing something with can of beer:
 	if can of beer is not visible:
@@ -9953,7 +9972,7 @@ Include (-
 
 description of protest is "They're all smeared with--huh? Looks like clay? In any event, they don't look like their heart is in the protest."
 
-understand "lacy" as a mistake ("No, the clay is a clue to what the protest really wants to do.") when protest is visible.
+understand "lacy" as a mistake ("No, the clay is a clue to what the [if protest is visible]protest[else]trio[end if] really wants to do.") when kilns are visible.
 
 the potters are plural-named scenery. understand "trio/protest/three" as potters when potters are visible.
 
@@ -9971,16 +9990,16 @@ rule for printing a locale paragraph about kilns:
 		now kilns are mentioned;
 
 after fliptoing potters:
-	kiln-potter-check;
+	if potters are in hotspot and kilns are in hotspot:
+		hello-bull;
 	continue the action;
 
 after fliptoing kilns:
-	kiln-potter-check;
+	if potters are in hotspot and kilns are in hotspot:
+		hello-bull;
 	continue the action;
 
-to kiln-potter-check:
-	if potters are not visible or kilns are not visible:
-		continue the action;
+to hello-bull:
 	say "[wfak]Tremors re-storm. 'Eh, we fly!' / 'Why flee?' / 'Erm, it's Mister Smiter!' The potters have wheeled their kilns to a mowed meadow.[paragraph break]You hear a shout from the south and mad snorts from a sandstorm, then see a man too ham-nosed to be handsome. He washes down some walnuts of wan lust with liquid from one purple metal can labeled Sado-Soda, then a bottle of Renegade Green-Ade.[paragraph break]'I am RED BULL BURDELL!' he shouts, in a voice neither earthy nor hearty. 'From my ROOTS to my TORSO! Um, poser? Mo['] super Supremo!'[paragraph break]The size of a large hut, bellowing real thug laughter, he emits 'It's me! I'm set! Sit [']em! Mites-smite times!'";
 	if talk-quiet is true:
 		say "[line break]Boy, he's pretty loud. So loud, you can't tune him out every turn.";
@@ -10058,7 +10077,7 @@ description of chain links is "A bunch of ovular links hooked together. Out of t
 
 understand "chains" as chain links when chain links are visible.
 
-understand "achin" as a mistake ("You don't have the ability to dish out an achin['][if china is not in lalaland], but you see red from wanting to do so[end if].") when player is in hotspot and chain links are not in hotspot.
+understand "achin" as a mistake ("You don't have the ability to dish out an achin['][if china is not in lalaland], but you see red from wanting to do so[end if].") when player is in hotspot and chain links are in hotspot.
 
 instead of taking chain links:
 	say "[one of]Get chain = cheating.[paragraph break]Seriously, though. You'd still be outnumbered. They need something to do with their hands[or]Maybe you could change the links, instead[stopping]."
@@ -10155,6 +10174,7 @@ carry out existing:
 		sort table of megachatter in reverse table-size order;
 		repeat through table of megachatter:
 			sort mytab entry in blurb order;
+			now maxidx entry is number of rows in mytab entry;
 		end the story finally saying "My Adieu to You: Made It!";
 	otherwise:
 		say "You continue to exist. Perhaps this ability will come in handy some day." instead;
@@ -10169,7 +10189,7 @@ chapter lalaland
 
 Lalaland is a privately-named room. "[bug-report] I have no idea how you got here. Definitely, let me know, so it doesn't happen to anyone else. This room should be inaccessible. Anything that appears here should be pretty much dealt with. Perhaps I could've used a boolean called dealt-with, but I didn't."
 
-understand "lll" as lalaland when debug-state is true.
+understand "ll/lalaland" as lalaland when debug-state is true.
 
 instead of doing something in lalaland:
 	say "You probably need to undo things." instead;
@@ -10298,8 +10318,6 @@ understand "odor" and "rood" as a mistake ("That door's reinforced. [if Anti-Coo
 
 understand "odor" and "rood" as a mistake ("It would stink to be you if you did that. The nerds outnumber you and would crucify you.") when player is in Anti-Cool Location.
 
-understand "lacy" as a mistake ("No, the clay is a clue to what the trio really wants to do.") when trio is visible.
-
 understand "tap" and "tap [text]" as a mistake ("'Ah! You are TAPping your feet to my anapest beat!'[paragraph break](You may want to PUSH or ATTACK something instead.)") when woeful pat is visible.
 
 understand "similes" as a mistake ("[if smilies are visible]Adding similes would mean the limerick wouldn't scan. They'd be more forced than the smilies. Though forced smilies can be a powerful weapon. Hmm.[else if missile is visible]You can't create something abstract from something concrete. Or plutonium. Or whatever that missile's made of.[otherwise][reject]")
@@ -10318,7 +10336,48 @@ understand "try" as a mistake ("You're sure the lecture to the east will be abou
 
 part parser errors
 
+to skip upcoming rulebook break: (- say__pc = PARA_NORULEBOOKBREAKS | PARA_SUPPRESSPROMPTSKIP | PARA_COMPLETED; -).
+
+test lbrk with "gonear hotspot/trio/kilns"
+
 Rule for printing a parser error when the latest parser error is the not a verb I recognise error: [verb guess]
+	let myh be the hash of the player's command;
+	let myh2 be the hash of word number 1 in the player's command;
+	repeat through regana of mrlp:	[this code vacuums up the 2nd use of the oils as well as the alternate use of the chain links. It also allows for basic checks of retries etc.]
+		if myh is hashkey entry or myh2 is hashkey entry:
+			[d "[myh] [the-from entry] [the-to entry] try.";]
+			if the-from entry is visible:
+				[d "the-from [myh] [the-from entry] visible.";]
+				if there is an exact-text entry and the player's command matches exact-text entry:
+					[d "2nd loop Fliptoing from anagram loop: [the-from entry] with command [the player's command].";]
+					now ignore-line-break is true;
+					try fliptoing the-to entry;
+					the rule succeeds;
+				if there is a text-back entry and the player's command matches text-back entry:
+					[d "2nd loop Flipfroming from anagram loop: [the-from entry] with command [the player's command].";]
+					now ignore-line-break is true;
+					try fliptoing the-from entry;
+					the rule succeeds;
+			if the-to entry is visible and the-to entry is not reversible:
+				d "the-to [myh] [the-to entry] visible.";
+				if there is a dubdip entry:
+					say "[dubdip entry][line break]";
+				else:
+					if the-to entry is sliver:
+						say "The sliver seems to bend, but it snaps back[if drapes are not in lalaland]. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet[else]. Maybe you can do a bit more[end if].";
+					else if the-to entry is soil and silo is not visible:
+						say "[if oils are in cask]No, that wouldn't need the soil as a foundation[else]The soil is right as-is, but maybe something can go on it[end if].";
+					else if the-to entry is potters:
+						say "You cut the riot down, but you need to change their protest now.";
+					else:
+						reject-msg the-to entry;
+				do nothing instead;
+			d "[myh] [the-from entry] [the-to entry] failed.";
+	repeat through regana of mrlp: [this is for an extreme case where you have "attic" instead of "attics"]
+		if the-to entry is visible:
+			if there is an exact-text entry and the player's command matches exact-text entry:
+				d "3rd pass through: [the-to entry].";
+				try fliptoing the-to entry instead;
 	if mrlp is forest:
 		let pieces be 0;
 		let bin-try be 0;
@@ -10527,12 +10586,6 @@ after reading a command:
 			say "(I[one of]n the future, i[or][stopping]f you want to SAY something, you can just say the single word. To talk to someone, ASK someone ABOUT something.)";
 			replace the regular expression "^(say|think|shout|speak|yell) " in XX with "";
 			change the text of the player's command to XX;
-	repeat with QQ running through fungible things: [this takes care of most of the cases, but when an object like the oils or links is flipped, we need an additional flip]
-		if QQ is a the-from listed in regana of mrlp:
-			if the player's command matches exact-text entry:
-				d "Fliptoing from fungible loop: [qq].";
-				try fliptoing the-to entry;
-				consider the notify score changes rule instead;
 	if panel is visible and panel is part of silo:
 		if the player's command matches the regular expression "buttons":
 			say "One button at a time, please." instead;
@@ -10543,46 +10596,22 @@ after reading a command:
 	if player is in elf row's flowers:
 		if the player's command matches the text "fairies":
 			say "[one of]Something you did or thought causes the freesia faeries to buzz...I guess they're magical enough to detect your misspellings. You feel a tingling, but it passes[or]They can see in your eyes you're spelling things wrong, but they'll have to deal.[or][run paragraph on][stopping]";
+	if word number 1 in the player's command is "chisel" and player has chisel:
+		replace the regular expression "^chisel" in XX with "scrape";
+		change the text of the player's command to XX;
+	if word number 1 in the player's command is "silver" and player has liver:
+		say "The livers are too dull to do anything like that with. Yet.[liv-preef]";
+		reject the player's command;
 	if word number 1 in the player's command is "tell":
 		if tell-flag is false:
 			say "[bracket]NOTE: this game uses 'ASK X ABOUT Y,' as you don't need to order NPCs around. So the parser will attempt to convert this to asking.[close bracket][line break][wfak]";
 			now tell-flag is true;
-	let myh be the hash of the player's command;
-	let myh2 be the hash of word number 1 in the player's command;
-	let should-work be false;
-	repeat through regana of mrlp:	[this code vacuums up  the 2nd use of the oils as well as the alternate use of the chain links. It also allows for basic checks of retries etc.]
-		if myh is hashkey entry or myh2 is hashkey entry:
-			d "[myh] [the-from entry] [the-to entry] try.";
-			if the-from entry is visible:
-				d "the-from [myh] [the-from entry] visible.";
-				if there is an exact-text entry and the player's command matches exact-text entry:
-					d "2nd loop Fliptoing from anagram loop: [the-from entry] with command [the player's command].";
-					try fliptoing the-to entry;
-					consider the notify score changes rule instead;
-				if there is a text-back entry and the player's command matches text-back entry:
-					d "2nd loop Flipfroming from anagram loop: [the-from entry] with command [the player's command].";
-					try fliptoing the-from entry instead;
-			if the-to entry is visible and the-to entry is not reversible:
-				d "the-to [myh] [the-to entry] visible.";
-				if there is a dubdip entry:
-					say "[dubdip entry][line break]";
-				else:
-					if the-to entry is sliver:
-						say "The sliver seems to bend, but it snaps back[if drapes are not in lalaland]. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet[else]. Maybe you can do a bit more[end if].";
-					else if the-to entry is soil and silo is not visible:
-						say "[if oils are in cask]No, that wouldn't need the soil as a foundation[else]The soil is right as-is, but maybe something can go on it[end if].";
-					else if the-to entry is potters:
-						say "You cut the riot down, but you need to change their protest now.";
-					else:
-						reject-msg the-to entry;
-				do nothing instead;
-			d "[myh] [the-from entry] [the-to entry] failed.";
-			now should-work is false;
-	repeat through regana of mrlp: [this is for an extreme case where you have "attic" instead of "attics"]
-		if the-to entry is visible:
-			if there is an exact-text entry and the player's command matches exact-text entry:
-				d "3rd pass through: [the-to entry].";
-				try fliptoing the-to entry instead;
+	repeat with QQ running through fungible things: [this takes care of most of the cases, but when an object like the oils or links is flipped, we need an additional flip]
+		if QQ is a the-from listed in regana of mrlp:
+			if the player's command matches exact-text entry:
+				d "Found a fungible, [the-from entry].";
+				try fliptoing the-to entry;
+				the rule succeeds;
 	continue the action;
 
 to reject-msg (rejitm - a thing):
@@ -12368,9 +12397,17 @@ to reset-regions:
 
 section reg-inc
 
+ignore-line-break is a truth state that varies;
+
 to reg-inc:
-	increment the score;
 	increment the cur-score of mrlp;
+	increment the score;
+	say "[line break][bracket]Your score has just gone up by [score - last notified score in words] point[if score - last notified score > 1]s[end if].[close bracket]";
+	if ignore-line-break is true:
+		now ignore-line-break is false;
+	else:
+		say "[line break]";
+	now the last notified score is the score;
 
 part directional cleanup
 
@@ -12905,13 +12942,11 @@ test pe with "purloin chisel/gonear chicken/rules/peel liver/peel liver"
 
 peeling it with is an action applying to two things.
 
-understand the command "chisel/pry/scrape/peel [thing] with [thing]" as something new.
+understand the  command "chisel/pry/scrape/peel" as something new.
 
 understand "peel [thing] with [thing]" as peeling it with.
 understand "scrape [thing] with [thing]" as peeling it with.
 understand "pry [thing] with [thing]" as peeling it with.
-
-understand "chisel [thing] with [thing]" as peeling it with.
 
 understand "livers" as the plural of glopmeats.
 
@@ -12990,8 +13025,6 @@ understand the command "peel/pry/scrape [thing]" as something new.
 understand "peel [thing]" as peelxing.
 understand "pry [thing]" as peelxing.
 understand "scrape [thing]" as peelxing.
-
-understand "chisel [thing]" as peelxing when player has chisel.
 
 carry out peelxing:
 	if noun is barcode:
@@ -13523,6 +13556,24 @@ carry out tsing:
 	now player has the prep paper;
 	now intro is solved;
 	say "I gave you the gadget and paper.";
+	the rule succeeds;
+
+chapter tsfing
+
+[* this lets us face the resort]
+
+tsfing is an action out of world.
+
+understand the command "tsf" as something new.
+
+understand "tsf" as tsfing.
+
+carry out tsfing:
+	if player is not in trips strip:
+		move player to trips strip;
+	say "OK. You should be able to [if store r is in resort]flip store R and [end if]enter the resort, now.";
+	now player has the gadget;
+	now player has the prep paper;
 	the rule succeeds;
 
 chapter j2ing
@@ -14481,7 +14532,6 @@ carry out foing:
 		the rule succeeds;
 	let GGG be a random visible guider;
 	try going godir of GGG;
-	consider the notify score changes rule;
 	the rule succeeds;
 
 chapter dscing

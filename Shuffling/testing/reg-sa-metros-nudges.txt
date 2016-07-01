@@ -10,10 +10,11 @@
 
 #let's test random things that it's tricky to do with a straight walkthrough
 
->purloin arena dig
->arena
+>gonear terminal
+>abstract arena dig to terminal
+>arean
 The invite's for an ARENA DIG.
->dig
+>dgi
 The invite's for an ARENA DIG.
 
 >rifle
@@ -21,21 +22,21 @@ Shooting things up
 >rifel
 The flier has helpful information it'd be better to act on than change.
 
->purloin soggy love
->soggy
+>abstract soggy love to terminal
+>sogyg
 It's just garbage.
->note
+>noet
 It's just garbage.
->beer
+>flire
 It's just garbage.
->flier
-It's just garbage.
->letter
+>lettre
 It's just garbage. The writing inside, too.
 
->purloin can of beer
->canofbeer
+>abstract can of beer to terminal
+>canofbere
 The beer is just garbage, not even organic like the drainage. But its name is interesting.
+>bere
+It's just garbage.
 
 >purloin noise bag
 
@@ -46,15 +47,17 @@ Even if you could do anything, that'd rip the noise bag open.
 
 * metros-walkthrough-nudge
 
+>opt in
+
 >gonear underside
 
 >undesirde
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
 >mersto
-[reg-rej].
+You don't want to change a region drastically while you're in it.
 >merto
-[reg-rej].
+You don't want to change a region drastically while you're in it.
 
 >metallci
 No way. That thing's sturdy. The people in there know their stuff.
@@ -65,14 +68,14 @@ You can't change the drawing, and that won't make its warnings any less relevant
 Changing the beam is way out of your league.
 >bema
 Changing the beam is way out of your league.
->escalator
+>escalatro
 No way. It's your way up from the metros. Once you fix things.
 
 >buildign
 You can't restore the hotel or even scrub off what's written on it.
 >gardenia
 by one point
->hotel
+>hotle
 You can't restore the hotel.
 >sensro
 You don't have the skill to hack the sensor electronically.
@@ -101,25 +104,25 @@ It's just junk. As itself, and for your quest. But maybe what's written on it ca
 Worry about repurposing garbage after you saved Yorpwald, maybe.
 
 >ylle
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 >yllea
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
 >motot
 It's labeled A MOTTO. So you probably have to respect the creative license, such as it is, of whoever wrote it.
 >potato
 The author twisted words enough. Perhaps you could concentrate on it.
 
->stinkbug
-[ug-bug].
->gunk
-[ug-bug].
->bits
-[ug-bug].
->stink
-[ug-bug].
->bug
-[ug-bug].
+>stinkbgu
+Ugh. Too messy. Mentally and physically.
+>gukn
+Ugh. Too messy. Mentally and physically.
+>bist
+Ugh. Too messy. Mentally and physically.
+>stikn
+Ugh. Too messy. Mentally and physically.
+>bgu
+Ugh. Too messy. Mentally and physically.
 
 >tomato
 >e
@@ -130,7 +133,7 @@ The author twisted words enough. Perhaps you could concentrate on it.
 The Ol' Hotel
 
 >helot
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
 >thign
 The night thing is twisted beyond redemption.
@@ -146,11 +149,11 @@ Just search the bump instead.
 >lucer
 You're a wordplayer, not a doctor, sadly. But that ulcer was the night thing's own fault, anyway.
 >bottel
-[no-ketch].
+It doesn't bend, but maybe it's a clue what the night thing likes to eat.
 >ketchpu
-[no-ketch].
+It doesn't bend, but maybe it's a clue what the night thing likes to eat.
 >catsup
-You think of how to make the ketchup slightly classier. [no-ketch].
+You think of how to make the ketchup slightly classier. It doesn't bend, but maybe it's a clue what the night thing likes to eat.
 >mattrses
 Nothing to change the mattress to, even if you could move the night thing off.
 >throw tomato at thing
@@ -172,49 +175,51 @@ You can't change the hotel, and you got rid of the night thing, anyway.
 Cramped Red Camp
 
 >capm
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 >rde
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 >crampde
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
 >redtenst
 Not nice. It's the only home the deadbeats have.
 >driveway
-[drivwy].
+You should probably just walk in and see what's there.
 >yadr
-[drivwy].
+You should probably just walk in and see what's there.
 >viwe
-[drivwy].
+You should probably just walk in and see what's there.
 >threasd
-[beat-man].
+He hasn't let the MAN change his clothes, and he won't let you.
 >threda
-[beat-man].
+He hasn't let the MAN change his clothes, and he won't let you.
 >harsp
 The harps are kind of annoying, but they've got nothing on the beats.
 
 >ltso
-It's not just that it's lost, it's CORN[dead-help].
+It's not just that it's lost, it's CORN.
+!Perhaps you can
 >conr
-It's not just that it's corn, it's LOST too[dead-help]."
+It's not just that it's corn, it's LOST too.
+!Perhaps you can
 
 >tenst
 As anti-personal property as the deadbeats are, that'd still annoy them.
 >deadbeta
-[ded-chg].
+He may mumble about change, but he's amazingly resistant to change, himself.
 >deda
-[ded-chg].
+He may mumble about change, but he's amazingly resistant to change, himself.
 >beta
-[ded-chg].
+He may mumble about change, but he's amazingly resistant to change, himself.
 
 >buttosn
-[kern-push].
+The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
 >yellwo
-[kern-push].
+The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
 >kernesl
-[kern-push].
+The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
 >kernle
-[kern-push].
+The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
 
 >controsl
 WRONG
@@ -253,6 +258,11 @@ It isn't just any cake. It's dry cake.
 >get dry cake
 >s
 
+>ltso
+It's not just that it's lost, it's CORN. Perhaps you can ask the deadbeat about the lost corn for more help".
+>conr
+It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat about the lost corn for more help".
+
 >controls
 by one point
 
@@ -274,21 +284,21 @@ by one point
 No need to mess with the string joining the velcro mittens.
 
 >gloev
-[mits-are].
+The mittens are as comfortable as they're going to be.
 >glovse
-[mits-are].
+The mittens are as comfortable as they're going to be.
 >mittne
-[mits-are].
+The mittens are as comfortable as they're going to be.
 >mittesn
-[mits-are].
+The mittens are as comfortable as they're going to be.
 
 >e
 Elf Row's Flowers
 >elfrosw
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
 >elfrwo
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
 >heaht
 Probably best not to do stuff to even one heath while the faeries have them
@@ -345,7 +355,7 @@ The beats are still ringing in your head, yeah, and it's hard not to think about
 Anti-Cool Location
 
 >anticolo
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
 >beats
 !The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here.
@@ -353,18 +363,18 @@ Anti-Cool Location
 >uptil
 The nerds would gang up on you and take it back, if anything worked, which it won't.
 >nerd
-[nerd-nah].
+The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds.
 >nerds
-[nerd-nah].
+The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds.
 >dorks
-[nnww].
+Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
 >geeks
-[nnww].
+Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
 
 >dork
-[nnww].
+Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
 >geek
-[nnww].
+Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
 >asknerds
 The nerds look at you, then remark they can't decipher THAT. But maybe if you rearranged things a bit...
 >asknerd
@@ -381,30 +391,30 @@ No way. That thing's sturdy. Those nerds know their stuff.
 Elm Train Terminal
 
 >tramline
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
 >uptil
 It's handy as is. It gives light. You can't ask for much more.
 
 >laisr
-[fix-rail].
+You need to fix the rails electronically.
 >lari
-[fix-rail].
+You need to fix the rails electronically.
 >trakc
-[fix-rail].
+You need to fix the rails electronically.
 >tracsk
-[fix-rail].
+You need to fix the rails electronically.
 >aps
-[fix-rail].
+You need to fix the rails electronically.
 >apss
-[fix-rail].
+You need to fix the rails electronically.
 >art
 There aren't many ways to look at THIS art, and none are constructive, you sense.
 
 >fadde
+The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
 >fadedda
-[faded-ad]
-[faded-ad]
+The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
 
 >noen
 It's not just that it's neon, it's that it's a pig.
@@ -425,7 +435,7 @@ You've already made nothing out of something, and instead of reversing that, you
 Bassy Abyss
 
 >bassy
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
 >ebta
 This racket isn't just one beat.

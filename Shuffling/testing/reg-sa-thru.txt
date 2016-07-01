@@ -292,6 +292,9 @@ Your score has just gone up by one point.
 >shotgnu
 Anything you do might violate firearm safety rules, or something.
 
+>gunshot
+You need to SHOOT the gun, but you don't have a bullet yet.
+
 >gat
 Hey! Guns are dangerous! It wasn't that easy to get one. Besides, changing the tag will break the tagged gadget.
 
@@ -445,6 +448,9 @@ Your score has just gone up by one point.
 >silvre
 Hard to beat silver. It's what it should be.
 
+>gunshot
+You need to SHOOT the gun, but you don't have a bullet yet.
+
 >put silver in shotgun
 
 >gunshot
@@ -506,11 +512,11 @@ Your score has just gone up by one point.
 >undo
 
 >sixtene
-WRONG
+The spinning seems to slow a bit.
 >sixteen
 Your score has just gone up by one point.
 >sixtene
-WRONG
+That's not something you can say, do or see here.
 
 >turn x
 You can probably just SWITCH something with two text settings
@@ -526,35 +532,35 @@ The Nick
 You might rather thin-nen to slip through the bars, but you can't.
 
 >kitchne
-WRONG
+The nick blurs a little but snaps back to normal.
 >kitchen
 Your score has just gone up by one point.
 >kitchne
-WRONG
+Nothing happens. Well, you didn't really want to go back, and there's probably no third room to look for. Maybe you need to escape this bunker in another room.
 
 >open fridge
 grist and a cake pan
 
 >hotsauec
-WRONG
+The CATHOUSE perfume suddenly smells a bit spicier.
 >hotsauce
 Your score has just gone up by one point.
 >hotsauec
-WRONG
+Best not to get too crazy with food preparation.
 
 >tortilal
-WRONG
+The tall trio seem to look interested for a minute.
 >tortilla
 Your score has just gone up by one point.
 >tortilal
-WRONG
+Best not to get too crazy with food preparation.
 
 >lettuec
-WRONG
+The cult tee seems to vegetate there. Change things around and it may become something.
 >lettuce
 Your score has just gone up by one point.
 >lettuec
-WRONG
+Best not to get too crazy with food preparation.
 
 >keats
 This is wordplay, not poetry. But the skate does glow red.
@@ -566,11 +572,11 @@ You do a take, then a double take, at how odd this all is.
 Hm. An indoor forest. That would be neat to see. But this is a kitchen.
 
 >steka
-WRONG
+You thought you smelled meat there, for a minute. Hm.
 >steak
 Your score has just gone up by one point.
 >steka
-WRONG
+Best not to get too crazy with food preparation.
 
 >pears
 I think you have the wrong food group. The spearman is cheesy. Plus, he wouldn't be a spearman without his spear.
@@ -578,11 +584,11 @@ I think you have the wrong food group. The spearman is cheesy. Plus, he wouldn't
 I think you have the wrong food group. Besides, it wouldn't be nice to wipe the spearman's smile off.
 
 >parmesna
-WRONG
+The spearman's smile seems to get a bit cheesier--you may or may not need to try a few other pre-names.
 >parmesan
 Your score has just gone up by one point.
 >parmesna
-WRONG
+Best not to get too crazy with food preparation.
 
 >put steak on taco
 a good start
@@ -601,25 +607,25 @@ Your score has just gone up by one point.
 You don't need to know your classics, here.
 
 >cota
-WRONG
+Weird. The taco almost seemed to grow arms, or even sleeves.
 >coat
 Your score has just gone up by one point.
 >cota
-WRONG
+No need for fashion tweaks.
 
->grist
-WRONG
+>grtis
+The grist looks a bit less bland.
 >grits
 Your score has just gone up by one point.
->grist
-WRONG
+>grtis
+Best not to get too crazy with food preparation.
 
 >pancaek
-WRONG
+It's a cake pan, backwards and forwards.
 >pancake
 Your score has just gone up by one point.
 >pancaek
-WRONG
+Best not to get too crazy with food preparation.
 
 >s
 A Round Den, Unadorned
@@ -631,40 +637,43 @@ You don't need to deal with the dial, now.
 a little too undescribed
 
 >strwa
-WRONG
+The warts itch slightly.
 >straw
 Your score has just gone up by one point.
 >strwa
-WRONG
+The straw remains motionless.
 
 >score
 12 out of 27
 
 >shose
-WRONG
+Something leaks out of the hoses. Hm. What else can be rubber, now.
 >shoes
 Your score has just gone up by one point.
 >shose
-WRONG
+But you're wearing the shoes. That might cause problems.
 
 >sakc
-WRONG
+Nothing happens. Maybe you are trying to do too much to change the cask
 >sack
 Your score has just gone up by one point.
 >sakc
-WRONG
+You doubt the sack/cask has a triple purpose.
 
 >put straw in sack
 
 >get sack
 
+>mope
+You mope, but you imagine no poem.
+
 >moro
-WRONG
+The room sways a bit but snaps back to normal.
 >moor
 Your score has just gone up by one point.
 Moor
 >moro
-WRONG
+The moor sways a bit but snaps back to normal.
 
 >tap
 "Ah! You are TAPping your feet to my anapest beat!"
@@ -673,24 +682,24 @@ WRONG
 Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.
 
 >peasatn
-WRONG
+You think you had the right idea, but your execution was poor. Maybe be more workmanlike.
 >peasant
 Your score has just gone up by one point.
 >peasatn
-WRONG
+You're better off changing what the peasant has than what he is.
 
 >black rood
 Hm, no, keep religion out of it.
 
 >blackdoro
-WRONG
+The roadblock changes all the colors of the rainbow, but none seem appropriate.
 >black door
 Your score has just gone up by one point.
 >blackdoro
-WRONG
+The black door just sits there.
 
 >black rood
-got what you need
+Hm, no, keep religion out of it--you have what you need.
 
 >yah
 It's not nice to make fun of the peasant for having hay he doesn't want
@@ -717,14 +726,14 @@ more forced than the smilies
 You try, but the smilies on the poem prevent you.
 
 >missiel
-WRONG
+The smilies momentarily grow eyebrows that point aggressively, then vanish.
 >missile
 Your score has just gone up by one point.
 >missiel
-WRONG
+The missile emits an almost giggly sound but doesn't actually change.
 
 >mope
-You mope, but it doesn't change the poem. Or even give you an idea for one.[else]You mope, but you imagine no poem.[end if]");
+You mope, but it doesn't change the poem. Or even give you an idea for one.
 
 >similes
 You can't create something abstract from something concrete. Or plutonium. Or whatever that missile's made of.
@@ -737,11 +746,11 @@ folded paper plane
 Whoah! Teleporting there would be too cold even with that coat on. Plus, you have no mountain climbing gear.
 
 >panle
-WRONG
+The plane can probably become something else, but not that.
 >panel
 Your score has just gone up by one point.
 >panle
-WRONG
+The panel bleeps a "stop that" sort of warning.
 
 >room
 
@@ -755,15 +764,18 @@ You aren't going to sea in this game.
 Your score has just gone up by one point.
 
 >hallwya
-WRONG
+Hm, yes, a haywall might become something more passable, if you muddle it right.
 >hallway
 Your score has just gone up by one point.
 >hallwya
-WRONG
+You already have a passage east. Don't close it.
 
 >e
 Sacred Cedars
 
+>cask
+You suddenly feel discontent at your container of choice.
+>sack
 >lois
 Lois will not pour the oils in the cask for you, but she is not stopping you.
 
@@ -794,13 +806,16 @@ Lois is silent. You figure what to pour, where
 >fill cask
 already full
 
+>soli
+That doesn't seem right, and you may need somewhere to pour the oils, anyway. You don't want to waste them.
+
 >moor
 >soli
-WRONG
+The oils need a purpose--to build something great. You don't want to waste them.
 >soil
 Your score has just gone up by one point.
 >soli
-WRONG
+The soil is right as-is, but maybe something can go on it.
 
 >lois
 Lois may not hear you out here, and she may only give marginal hints in the cedars.
@@ -821,17 +836,20 @@ already full
 >w
 Crashing Archings
 
+>hallwya
+You already have a passage east. Don't close it.
+
 >lois
 Lois may not hear you out here--she has left you to your own devices, but you must be close
 
 >s
 >moor
 >siol
-WRONG
+No, that wouldn't need the soil as a foundation.
 >silo
 Your score has just gone up by one point.
 >siol
-WRONG
+That silo was pretty big. You probably have little more to do with the oils.
 
 >put missile in silo
 No way to
@@ -851,23 +869,23 @@ All five wrong.
 Unfortunately, it's not QUITE as easy as just pushing a reset button
 
 >stere
-WRONG
+Hmm, that doesn't work, but you bet you can bull your way through things.
 >steer
 ester pervades
 Your score has just gone up by one point.
 >stere
-WRONG
+No, the steer button HAS to be right.
 
 >terse
 Already good.
 
 >shoto
-WRONG
+You suppress a few minor swears as you realize that can't be right.
 >shoot
 changes to a shoot
 Your score has just gone up by one point.
 >shoto
-WRONG
+No, the shoot button HAS to be right.
 
 >sooth
 Close...what you need to do will sooth, in a bit.
@@ -1412,8 +1430,14 @@ An Odd Low Woodland
 >slope
 Your score has just gone up by one point.
 
+>prigs
+Grumbling about prigs, or showing those prigs, won't help now. You should probably make the sprig into something useful instead.
+
 >grips
 Your score has just gone up by one point.
+
+>prigs
+Grumbling about prigs, or showing those prigs, won't help now. You should probably use the grips to climb instead.
 
 >ropes
 Your score has just gone up by one point.
@@ -1424,10 +1448,6 @@ You don't have time for treasure with Red Bull Burdell waiting.
 >toeholds
 Your score has just gone up by two points.
 
->prigs
-Grumbling about prigs, or showing those prigs, won't help now. You should probably use the grips to climb instead.
->prigs
-Grumbling about prigs, or showing those prigs, won't help now. You should probably make the sprig into something useful instead.
 >prose
 There's not much of that left in this game, and talking won't help you up the slope.
 >pores
@@ -1450,13 +1470,14 @@ You don't have the ability to dish out an achin'..
 >china
 Your score has just gone up by one point.
 
+>slink
 Too many people are watching for you to slink away
 
 >kilns
 Your score has just gone up by one point.
 
 >ether
-They're not bad people. But even bad people don't deserve to vanish like that! [if kilns are visible]Maybe they can get a purpose, able to use those kilns[else]Give them something constructive to do[end if].
+They're not bad people. But even bad people don't deserve to vanish like that! Maybe they can get a purpose, able to use those kilns.
 >roister
 That's what's causing the riot, and it's up to you to quiet the rioters--well, the riot.
 >lacy
@@ -1562,4 +1583,5 @@ new hero now here
 
 >ts
 >opt in
+>tsf
 >{include} _resort

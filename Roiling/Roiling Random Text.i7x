@@ -8072,6 +8072,7 @@ blurb
 "A Vibe Hour Behaviour"
 "VIP Seen Pensive"
 "A Vision: I So Vain"
+"Voice O['] Vice"
 "Volunteers Unto Revels"
 "Way Up Aw Yup" []
 "Ways to Swat, Yo"
@@ -36687,6 +36688,7 @@ blurb
 "'Stall gone. Lost, angel. Legal?' 'Tons.'"
 "'Stare? Nod? Trade, son!'" []
 "'Super deal!?' / 'Sure!' / 'PLEAD.'" []
+"Swap [']n pawns!"
 "'Swap meet map? SWEET!'"
 "'Ten pounds?' / 'Dunno, pest.'"
 "'That price? Cheat-trip! Trite, chap!'"
