@@ -6,7 +6,7 @@
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* first-guider-test
+* _first-guider-test
 
 >ts
 >forest
@@ -14,31 +14,31 @@
 >sr ne
 >in
 >conifre
-[no-con].
+No conifers appear. Maybe you can just use your senses, and it's easier than that.
 >conifesr
-[no-con].
+No conifers appear. Maybe you can just use your senses, and it's easier than that.
 >forets
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 
 >norht
-[forest-no].
+You can't seem to make anything physical to tell you which direction to go.
 
 >n
 >forets
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 >rets
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 
 >eta
-[forest-no]. Anyway, it doesn't smell like just one tea.
+You can't seem to make anything physical to tell you which direction to go. Anyway, it doesn't smell like just one tea.
 >norht
-[forest-no].
+You can't seem to make anything physical to tell you which direction to go.
 >eats
-[forest-no].
+You can't seem to make anything physical to tell you which direction to go.
 >aroam
-[guider-content].
+No, that's not the essence of the thing.
 >eats
-[forest-no].
+You can't seem to make anything physical to tell you which direction to go.
 
 >leavse
 You have no time to play with leaves.
@@ -46,9 +46,9 @@ You have no time to play with leaves.
 >e
 Self-ID Fields
 >selfdi
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 >forets
-[reg-rej].
+You don't want to change a region drastically while you're in it.
 
 * other-guider-test
 
@@ -58,47 +58,75 @@ Self-ID Fields
 >in
 
 >ramblign
-[guider-content].
+No, that's not the essence of the thing.
 >souht
-[forest-no].
+You can't seem to make anything physical to tell you which direction to go.
 >s
->whiff
-[guider-content].
+>whffi
+No, that's not the essence of the thing.
 >wets
-[forest-no].
+You can't seem to make anything physical to tell you which direction to go.
 >w
 Self-ID Fields
 
 >undeda
-[no-un].
+You can't do much to change the undead. You're not THAT powerful. Maybe specific undead.
 >undeasd
-[no-un].
+You can't do much to change the undead. You're not THAT powerful. Maybe specific undead.
 
 >e
 Sorted Trodes
 >storde
 You didn't need to do anything to store D in the strip, and you don't now--it'd be weird if store D fit in store F, anyway.
 
->shell
-[in-sort of dashes].
+>shlle
+It doesn't rattle, but the dashes seem to.
 >buckte
-[in-sort of ones].
+It doesn't rattle, but the ones seem to.
 >bubbel
-[in-sort of noughts].
+It doesn't rattle, but the noughts seem to.
 >eleyg
 The elegy doesn't need to be twisted any more.
 >tacsk
-[tack-heap].
+No need to try to turn the stack into a heap. Ho ho ho.
 >takc
-[tack-heap].
+No need to try to turn the stack into a heap. Ho ho ho.
 >notse
 The notes are just for reading.
 >stikc
-[vand-art].
+Don't vandalize the art, man.
 >figuer
-[vand-art].
+Don't vandalize the art, man.
 >figurse
-[vand-art].
+Don't vandalize the art, man.
+
+#noughts/shotgun testing
+
+>naughst
+The naughts, err, noughts seem zero-y enough to contain an o.
+>naughst
+The naughts, err, noughts seem zero-y enough to contain an o.
+>zerso
+They're noughts, not zeros.
+>zerose
+They're noughts, not zeroes.
+>naugth
+The naughts, err, noughts seem zero-y enough to contain an o.
+>naughst
+The naughts, err, noughts seem zero-y enough to contain an o.
+>nougth
+There's more than one nought.
+>shotgun
+by one point
+>muzzel
+You don't want to mess the muzzle up. You can fire bullets through it, and that's good enough.
+
+>shades
+by one point
+>nose
+by one point
+
+>w
 
 >turnstiel
 You don't need to do anything with the turnstile except get through it.
@@ -110,31 +138,8 @@ They're dead and not interfering with you.
 >linefo
 They're dead and not interfering with you.
 
-#noughts/shotgun testing
-
->naughst
-You [one of]start to get lost in thought, then notice[or]remember[stopping] it's nOughts, not nAughts.
->zerso
-They're noughts, not zeros.
->zerose
-They're noughts, not zeroes.
->naugth
-[nau-zer-enuf].
->naughst
-[nau-zer-enuf].
->nougth
-There's more than one nought.
->shotgun
-by one point
->muzzel
-You don't want to mess the muzzle up. You can fire bullets through it, and that's good enough.
-
->dashes
->nose
-
 >w
->w
-Stored, Er, Dots
+Stored, er, Dots
 
 >storde
 You didn't need to do anything to store D in the strip, and you don't now--it'd be weird if store D fit in store F, anyway.
@@ -142,13 +147,13 @@ You didn't need to do anything to store D in the strip, and you don't now--it'd 
 >sandwihc
 It would be easier to just pick it apart.
 >canistre
-The canister is too solid[if canister is broken], despite being broken[end if].
+The canister is too solid.
 >grindre
 The grinder is too solid.
 >grni
 The ring does not bend.
 >hasm
-You think 'Hm, as...' but don't know what to do. Maybe that is just writing, and [if canister is broken]in any case, you broke the canister, anyway[else]you just put stuff in the canister[end if].
+You think "Hm, as..." but don't know what to do. Maybe that is just writing, and you just put stuff in the canister.
 
 >bleasd
 The blades, buried in the grinder, remain lifeless.
@@ -157,38 +162,40 @@ The shelf is frozen that way. Ba dum bum.
 >dost
 The dots are really just ice. And you don't need ice or water.
 >meta
-[spec-meat].
+You'll need to be more specific about the meat to poke at.
 >meast
-[spec-meat].
+You'll need to be more specific about the meat to poke at.
 
 >open sandwich
 >beard
+by one point
 >maps
+by one point
 
 >livre
-[if chicken liver is in lalaland or cow liver is in lalaland]C'mon, you have it half right, don't futz with the remaining liver[else if chicken liver is not visible or cow liver is not visible]Your thoughts go to the other liver[else][bothlivers][end if].
+The one liver seems inactive by itself.
 >chickne
-[bothlivers].
->chickenlivre
-[bothlivers].
+The one liver seems inactive by itself.
+>echickenlivr
+The one liver seems inactive by itself.
 >cowlivre
-[bothlivers].
+The one liver seems inactive by itself.
 >cwo
-[bothlivers].
+The one liver seems inactive by itself.
 
 >put beard on shades
->put ones on shades
+>put nose on shades
 
 >wear beard
 >e
 >n
 Cruel Ones' Enclosure
 >crule
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 >onse
-[loc-rej].
+Don't get that nose bent out of shape.
 >enclosuer
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 
 >cavenr
 Worry about the liches in front first.
@@ -199,23 +206,36 @@ Worry about the liches in front first.
 >peel liver
 >peel liver
 >put chicken in canister
+>livre
+C'mon, you have it half right, don't futz with the remaining liver
 >put cow in canister
+
+>canistre
+The canister is too solid, despite being broken.
 
 >sliver
 >e
 >n
 >hasbeen
 
+>cloht
+No, the material of the spread isn't important, here.
+
 >drapes
+by one point
+
+>cloht
+No, the material of the drapes isn't important, here.
+
 >cut drapes
 >silver
+by one point
+
 >cylindre
 It's the shape it should be. You don't need to make a key, or a charm.
 
 >put silver in shotgun
 
->cloht
-No, the material of the [if spread is visible]spread[else]drapes[end if] isn't important, here.
 >doorwya
 You can just go through. You don't want it to change any more, really.
 
@@ -228,28 +248,25 @@ You can just go through. You don't want it to change any more, really.
 >n
 
 >slouhg
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 >marhs
-[marsh-lake].
+The marsh and lake are symptoms of--whatever evil is beyond here.
 >laek
-[marsh-lake].
+The marsh and lake are symptoms of--whatever evil is beyond here.
 
+>x maps
 >n
 >frost forts
 >frots
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 >snwo
-[froz-ha-ha].
+The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 >icecpa
-[froz-ha-ha].
+The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 >bumsp
-[froz-ha-ha].
+The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 >slete
-[froz-ha-ha].
->icde
-[froz-ha-ha].
->iec
-[froz-ha-ha].
+The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 
 >capitla
 You need to deal with all the capitals. And they're specific letters.
@@ -260,4 +277,12 @@ They aren't just any capitals. They're specific letters.
 They won't be changed with magic. Thankfully, you've got something more direct.
 >lupien
 They are the lupine lineup from your notes, but for your purpose, they're wolves.
+
+>icde
+The scenery here's mostly frozen that way. Ha ha ha.
+!Except those vowels
+>iec
+The scenery here's mostly frozen that way. Ha ha ha.
+!Except those vowels
+
 >shoot wolves

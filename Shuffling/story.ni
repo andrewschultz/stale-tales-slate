@@ -379,17 +379,23 @@ spore	"You briefly wonder what the spore could grow into, given time. Time you d
 protest	"The protesters mumble at you for trying to exert mind control. You've struck a nerve."
 chain links	"The links rattle slightly. Perhaps they are chaining others['] creativity as well as your own, as they are now."
 riot	"The riot's still a crowd. A BIG crowd."
-r2	"The room sways a bit but snaps back to normal."
-m2	"The moor sways a bit but snaps back to normal."
+r2	"[m-r-almost]."
+m2	"[m-r-almost]."
 t-n	"The nick blurs a little but snaps back to normal."
 
+to say m-r-almost:
+	if moor is visited:
+		say "The [if player is in moor]moor[else]room[end if] sways a bit. You do some brief mental calculation. There's no third place between them";
+	else:
+		say "You almost feel something picking you up for a second. You must have been close"
+	
 to say red-to:
 	now red asp is in Enclosure;
 	now spread is in lalaland;
 
 to say spec-help of (itm - a thing):
 	if itm is oils and oils are not in cask:
-		say "You should possess the oils before doing anything with them.";
+		say "[if player is in cedars]Changing Lois is highly unlikely, and y[else]Y[end if]ou should possess the oils before doing anything with them.";
 		continue the action;
 	if itm is a xtrhelp listed in the table of spechelp:
 		choose row with xtrhelp of itm in table of spechelp;
@@ -523,7 +529,7 @@ wings	"The wings should be able to propel you enough."
 slope	"You wouldn't want to make the slope crumble away."
 ropes	"The ropes are useful for climbing, which you need to do to get east."
 grips	"You can't get ahold of anything that would be more useful than the grips."
-trio	"You can deal with three people. But you'll have to change their motivations."
+protest	"You can deal with three people. But you'll have to change their motivations."
 
 to say keep-food-simple:
 	say "Best not to get too crazy with food preparation"
@@ -2865,8 +2871,6 @@ Resort is a region. min-score of Resort is 10. max-score of Resort is 14. regnud
 
 book fliptoing
 
-the notify score changes rule is not listed in any rulebook.
-
 chapter the verb
 
 definition: a thing (called xx) is fungible:
@@ -2925,6 +2929,7 @@ carry out fliptoing (this is the main flipping rule) :
 		now just-print is false;
 		try mainhelping;
 		now just-print is true;
+	consider the notify score changes rule;
 	if mything is the player:
 		say "Something went wrong here. It should not have, but it did. [bug-report]";
 	the rule succeeds;
@@ -5881,7 +5886,7 @@ section canister / red ring
 
 the scantier canister is a fixed in place container.
 
-description of canister is "It's small, nowhere near the size of a cistern. It's got a red ring you can put stuff in, and you can see a grinder of sabled blades inside. The grinder reads [i]team meat, tame [']em at...[r] and appears to have no switch or anything. MASH SHAM HAMS is written on it."
+description of canister is "It's small, nowhere near the size of a cistern. It's got a red ring you can put stuff in, and you can see a grinder of sabled blades inside. The grinder reads [i]team meat, tame [']em at...[r] and appears to have no switch or anything. MASH SHAM HAMS is written on it[if number of glopmeats in lalaland is 1]. It's about half full[end if]."
 
 initial appearance of canister is "On the flesh shelf, there's a scantier canister [if livers are off-stage]that looks operable[else]you broke[end if][one of]. You can probably call it a acn without hurting its feelings[or][stopping]."
 
@@ -5954,7 +5959,7 @@ check inserting into the scantier canister:
 			say "There's no way to peel the meat off the flesh shelf, yet." instead;
 		if player has chisel and player does not have glopmeat:
 			say "(peeling the [noun] off the wall first)[line break]";
-		if number of glopmeats in canister is 1:
+		if number of glopmeats in lalaland is 1:
 			say "Bam! The canister chokes, sputters, and then wheezes--you see a mist arise from it and vanish. It wheezes, chokes, and coughs out--well, liver-slop spillover, but we'll call the homogenized mess LIVERS.";
 			reg-inc;
 			now chicken liver is in lalaland;
@@ -5971,7 +5976,7 @@ check inserting into the scantier canister:
 						now cur-liv is cow liver;
 					else:
 						now cur-liv is chicken liver;
-			now noun is in canister instead;
+			now noun is in lalaland instead;
 	if noun is bread:
 		say "You don't need to futz with the bread that way." instead;
 	if noun is the player:
@@ -7340,10 +7345,10 @@ does the player mean pouring the oils when player is in cedars: it is very likel
 does the player mean filling the cask: it is very likely.
 
 carry out pouring:
-	if player has sack and cask is in lalaland:
+	if player has sack and cask is in bullpen:
 		say "Fluids would leak through the sack. The cask you had would be better." instead;
 	if player does not have cask:
-		say "Nothing to pour anything out of." instead;
+		say "Nothing to pour anything into." instead;
 	if noun is cask:
 		if oils are not in cask:
 			say "Nothing in the cask to pour." instead;
@@ -7640,10 +7645,12 @@ instead of entering black door:
 
 description of roadblock is "It's about eight feet long and really dark (you pause and hope you don't need to learn COBOL) and dented about halfway through--well, four-ninths of the way from the right. You are utterly unsure what it could possibly be guarding, and you also notice bright red graffiti[one of].[paragraph break]You think back to how your nametag was creased, and how the roadblock probably doesn't change into anything too easy like a broad lock. The moor [if sack is not off-stage]and the sack [end if]already felt a bit easy[or][stopping]."
 
+the bright red graffiti is part of the roadblock.
+
 instead of doing something with the bright red graffiti:
-	if current action is examining:
+	if current action is examining or current action is reading:
 		continue the action;
-	say "You can really only examine it.";
+	say "You can really only examine or read it.";
 
 description of bright red graffiti is "DOC OLBARK has chosen to deface this roadblock, in bright red paint, no less."
 
@@ -10623,10 +10630,6 @@ after reading a command:
 
 to reject-msg (rejitm - a thing):
 	repeat through table of done rejects:
-		if tall trio is donething entry:
-			d "Oops, tall trio got snagged instead.";
-		else:
-			say "[rejitm] vs [donething entry].";
 		if rejitm is donething entry:
 			say "[donemsg entry][line break]";
 			continue the action;
@@ -12413,12 +12416,6 @@ ignore-line-break is a truth state that varies;
 to reg-inc:
 	increment the cur-score of mrlp;
 	increment the score;
-	say "[line break][bracket]Your score has just gone up by [score - last notified score in words] point[if score - last notified score > 1]s[end if].[close bracket]";
-	if ignore-line-break is true:
-		now ignore-line-break is false;
-	else:
-		say "[line break]";
-	now the last notified score is the score;
 
 part directional cleanup
 

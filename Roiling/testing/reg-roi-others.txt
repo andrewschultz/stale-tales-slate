@@ -1,6 +1,7 @@
 ## reg-roi-others.txt
 ## testing all possible passages through others, e.g. how much you can give Curtis, when
 ##
+## also tests nudges
 ##
 
 ** game: /home/andrew/prt/debug-roiling.ulx

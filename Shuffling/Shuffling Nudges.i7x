@@ -147,10 +147,10 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "whiff"	243239710	--	whiff of stew	--	"[guider-content]."
 "aroma"	228127169	--	aroma of teas	--	"[guider-content]."
 "leaves"	515052661	--	forest-leaves	--	"You have no time to play with leaves."
-"south"	416124667	--	shout	--	"[forest-no]."
-"north"	368976205	--	thorn	--	"[forest-no]."
-"west"	435124866	--	stew	--	"[forest-no]."
-"east"	329377911	--	teas	--	"[forest-no]."
+"south"	416124667	--	--	first-two-forest rule	"[forest-no]."
+"north"	368976205	--	--	first-two-forest rule	"[forest-no]."
+"west"	435124866	--	--	first-two-forest rule	"[forest-no]."
+"east"	329377911	--	--	first-two-forest rule	"[forest-no]."
 "eat"	233103945	--	teas	--	"[forest-no]. Anyway, it doesn't smell like just one tea."
 "undead"	346065420	--	gy2	--	"[no-un]."
 "undeads"	442339386	--	gy2	--	"[no-un]."
@@ -165,7 +165,6 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "stick"	316315593	trodes	--	--	"[vand-art]."
 "figure"	422343163	trodes	--	--	"[vand-art]."
 "figures"	518617129	trodes	--	--	"[vand-art]."
-"naughts"	445467118	--	noughts	--	"You [one of]start to get lost in thought, then notice[or]remember[stopping] it's nOughts, not nAughts."
 "zeros"	506726073	--	noughts	--	"They're noughts, not zeros."
 "zeroes"	634532182	--	noughts	--	"They're noughts, not zeroes."
 "naught"	349193152	--	noughts	--	"[nau-zer-enuf]."
@@ -185,7 +184,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "lineof"	396387775	self-id	--	--	"They're dead and not interfering with you."
 "meat"	297179098	--	--	see-meats rule	"[spec-meat]."
 "meats"	393453064	--	--	see-meats rule	"[spec-meat]."
-"liver"	419101417	--	chicken liver	--	"[if chicken liver is in lalaland or cow liver is in lalaland]C'mon, you have it half right, don't futz with the remaining liver[else if chicken liver is not visible or cow liver is not visible]Your thoughts go to the other liver[else][bothlivers][end if]."
+"liver"	419101417	--	--	liv-vis rule	"[if chicken liver is in lalaland or cow liver is in lalaland]C'mon, you have it half right, don't futz with the remaining liver[else if chicken liver is not visible or cow liver is not visible]Your thoughts go to the other liver[else][bothlivers][end if]."
 "chicken"	369933110	--	chicken liver	--	"[bothlivers]."
 "chickenliver"	789034527	--	chicken liver	--	"[bothlivers]."
 "cowliver"	620394352	--	cow liver	--	"[bothlivers]."
@@ -230,24 +229,25 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "exitsse"	709031095	--	--	cent-spin rule	"The room seems almost ready to start to slow down. Maybe the exits aren't quite that way."
 "exits"	484951020	--	--	cent-spin rule	"You can't do much to the exits when you don't even know which way they are."
 "sixteen"	681664637	--	--	nick-visit rule	"You don't need to re-stop the centrifuge."
-"kitchen"	454037543	--	--	kitch-visit rule	"You can just walk to the kitchen, and there's no need to revisit the nick, and there's no third location."
+"kitchen"	454037543	--	--	kitch-visit rule	"You can just walk to the kitchen, there's no need to revisit the nick, and there's no third location."
 "aroundden"	574649308	--	--	af-cent rule	"[loc-rej]."
 "graffiti"	366236825	the nick	--	--	"The graffiti's etched in. It's here to help, anyway."
 "greta"	351027450	the nick	--	--	"The grate remains impassive."
 "nick"	185839117	the nick	--	--	"Maybe there is a way out of the nick. Not of nick, but the nick. It's probably too much to think yourself in K.C."
-"kitchen"	454037543	kitchen	--	--	"Nothing happens. Well, you didn't really want to go back, and there's probably no third room to look for[if moor is unvisited]. Maybe you need to escape this bunker in another room[end if]."
+"kitchen"	454037543	kitchen	--	--	"[if moor is unvisited]Nothing happens. Well, you didn't really want to go back, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room[else]There's no room between the nick and kitchen. You already found a better way out, anyway[end if]."
 "kitchen"	454037543	kitchen	--	--	"[loc-rej]."
 "okrapot"	473725930	kitchen	--	--	"Aigh! It's a catchy tune, but really, it won't help you figure anything out."
 "fridge"	338266445	kitchen	--	--	"The fridge is just a fridge."
 "obligatory"	611511337	kitchen	--	--	"The fridge will always be what it is. Generally what is or was inside is more interesting, anyway."
-"burlap"	346316131	--	sack	--	"The sack itself seems pliable, but its individual fibers aren't."
 "middle"	332746125	--	tall trio	--	"[to-trio]."
 "left"	311244862	--	tall trio	--	"[to-trio]."
 "right"	303308668	--	tall trio	--	"[to-trio]."
 "middlechef"	543355014	--	tall trio	--	"[to-trio]."
 "leftchef"	521853751	--	tall trio	--	"[to-trio]."
 "rightchef"	513917557	--	tall trio	--	"[to-trio]."
-"were"	448870794	--	cask	--	"[if sack is in lalaland]There's no other way to change the cask than to and from the sack[else]The cask is changeable, but not like that[end if]."
+"cult"	281035249	--	cult tee	--	"The whole t-shirt."
+"tee"	358722236	--	cult tee	--	"The whole t-shirt."
+"were"	448870794	--	cask	--	"[if sack is in bullpen]There's no other way to change the cask than to and from the sack[else]The cask is changeable, but not like that[end if]. WERE-EWER just clue[if sack is in bullpen]d[else]s[end if] it can be changed."
 "pan"	152561285	--	cake pan	--	"[ck-p]."
 "cake"	201932690	--	cake pan	--	"[ck-p]."
 "cause"	350379285	--	HOTSAUCE	--	"No need to do more with the hot sauce."
@@ -264,6 +264,9 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "cutup"	413793176	--	steak	--	"The steak's just right as is."
 "cutupsteak"	796104265	--	steak	--	"The steak's just right as is."
 "lamina"	236164982	--	manila animal	--	"It actually looks pretty nice on the fridge."
+"burlap"	346316131	--	sack	--	"The sack itself seems pliable, but its individual fibers aren't."
+"wart"	298556412	--	warts	--	"Why zap just one wart? Go for all of them!"
+"shoe"	335714951	--	hoses	--	"There's more than one hose here."
 "pair"	213970426	--	hoses	--	"Many things can be a pair, but these hoses--well, a pair of HOSES is kind of odd."
 "shoe"	335714951	--	--	got-shoes rule	"But you're wearing the shoes. That might cause problems."
 "shoes"	431988917	--	--	got-shoes rule	"But you're wearing the shoes. That might cause problems."
@@ -272,6 +275,10 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "woeful"	495528001	--	Woeful Pat	--	"[woe-all]."
 "afwul"	295557133	--	pat	--	"[woe-all]."
 "peto"	386734663	--	pat	--	"[woe-all]."
+"road"	182893287	--	roadblock	--	"No, the full roadblock."
+"block"	218524084	--	roadblock	--	"No, the full roadblock."
+"blakc"	146359325	--	black door	--	"The black door is good as it is."
+"droo"	255058046	--	black door	--	"The black door is good as it is."
 "expo"	396392726	--	expo flier	--	"[expo-or-anapest]."
 "expoflier"	734844219	--	expo flier	--	"[expo-or-anapest]."
 "flier"	338451493	--	expo flier	--	"[expo-or-anapest]."
@@ -279,7 +286,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "wall"	217750269	--	scraped wall	--	"[hway-hint]."
 "scraped"	433092329	--	scraped wall	--	"[hway-hint]."
 "rubble"	408887368	--	crashing archings	--	"The rubble is too dense to rearrange, physically or magically. You should have as much of the oils as you need."
-"oil"	173159262	--	oils	--	"[if caskfillings is 2]They're OILS, but you're done with them, anyway[else if caskfillings is 1]Really, they're oils. There's so much more you can do with oils than oil. Well, one more thing YOU can do[else]Really, they're oils. There's so much more you can do with oils than oil. Well, two things YOU can do[end if]."
+"oil"	173159262	--	oils	--	"[if caskfillings > 2]They're OILS, but you're done with them, anyway[else if caskfillings is 2]Really, they're oils. There's so much more you can do with oils than oil. Well, one more thing YOU can do[else]Really, they're oils. There's so much more you can do with oils than oil. Well, two things YOU can do[end if]."
 "anapests"	578213162	--	anapest	--	"Well, there are many, but the poem is [i]in[r] anapest."
 "poem"	347699798	--	poem	--	"[peas-poe]."
 "poetry"	594417718	--	poem	--	"[peas-poe]."
@@ -288,8 +295,8 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "graffiti"	366236825	--	red graffiti	--	"Hm, there has to be a clue in it."
 "redgraffiti"	600395826	--	red graffiti	--	"Hm, there has to be a clue in it."
 "warhead"	383751709	--	missile	--	"You don't want to change the missile's message, which seems rather nice."
-"wires"	462331497	wires	--	--	"[no-wire]."
-"wire"	366057531	wires	--	--	"[no-wire]."
+"wires"	462331497	--	wires	--	"[no-wire]."
+"wire"	366057531	--	wires	--	"[no-wire]."
 "buttons"	569278799	--	--	panel-in-silo rule	"[but-but]."
 "button"	473004833	--	--	panel-in-silo rule	"[but-but]."
 "leftbutton"	784249695	--	--	panel-in-silo rule	"[what-b-says]."
@@ -315,7 +322,6 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "lance"	271720859	cedars	--	--	"[best-not-defile]."
 "idols"	290462317	cedars	--	--	"[best-not-defile]."
 "cliche"	301906263	cedars	--	--	"[best-not-defile]."
-"lois"	269433228	cedars	--	--	"Changing Lois is highly unlikely. You have magic powers, but not godlike powers."
 "folded"	324545599	--	--	got-plane rule	"It's a plane, now, for sure."
 "paper"	378249648	--	--	got-plane rule	"It's a plane, now, for sure."
 "papers"	474523614	--	--	got-plane rule	"It's a plane, now, for sure."
@@ -479,7 +485,6 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "potter"	575168484	--	potters	--	"Picking one person out of a crowd never works."
 "clay"	197366494	--	kilns	--	"The clay is for someone else to work with."
 "three"	481328338	--	--	riot-gone rule	"The trio remains unmoved. Perhaps you can [if potters are in hotspot]get the potters something to work with[else]give the protest more constructive aims[end if]?"
-"china"	172376056	--	chain links	--	"[if china is in lalaland]The china's gone--see what you can do with the links[else]Hm, maybe you can do something with the chain. Or the links[end if]."
 "chainlinks"	489297393	--	chain links	--	"You're overthinking it. Or you hope you are. It's both a chain, and links."
 "tug toe"	546084231	--	red bull burdell	--	"Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said."
 "red"	234159001	--	red bull burdell	--	"Burdell's laugh echoes. 'You think you can change ME?!'"
@@ -664,7 +669,7 @@ to say vand-art:
 	say "Don't vandalize the art, man"
 
 to say nau-zer-enuf:
-	say "The naughts, err, noughts seem zero-y enough to contain an o.";
+	say "The naughts, err, noughts seem zero-y enough to contain an o";
 
 to say spec-meat:
 	say "You'll need to be more specific about the meat to poke at"
@@ -676,6 +681,11 @@ this is the first-two-forest rule:
 
 this is the see-meats rule:
 	if chicken is visible or Spam is visible or cow is visible or player is in s-e-d:
+		the rule succeeds;
+	the rule fails;
+
+this is the liv-vis rule:
+	if chicken is visible or cow is visible:
 		the rule succeeds;
 	the rule fails;
 
@@ -747,7 +757,7 @@ to say expo-or-anapest:
 	say "Thinking of the flier leads you back to the anapest";
 
 to say hway-hint:
-	say "The scraped wall doesn't respond or come any closer to being a hallway";
+	say "The scraped wall doesn't respond or come any closer to being a hallway"
 
 to say peas-poe:
 	say "The peasant's poem is about as good as it can be, for what it is. It's better than Pat's"
