@@ -4251,6 +4251,9 @@ to say giant-over:
 to say no-rehash:
 	say "That'd be an awkward rehash. You need another way to say good-bye"
 
+to say just-c:
+	say "Just return the fruit to Curtis. No need for another change"
+
 to say good-enuf of (goody - a thing):
 	repeat through table of donereject:
 		if goody is specdone entry:
@@ -4263,7 +4266,8 @@ to say good-enuf of (goody - a thing):
 		say "You've already dealt with the macks that way.";
 		continue the action;
 	if goody is a fruit:
-		say "Just return the fruit to Curtis. No need for another change.";
+		say "[just-c].";
+		continue the action;
 	if goody is an animal:
 		if goody is in perverse preserve or goody is in wickeder wire deck:
 			if goody is not the parrot:
@@ -6171,32 +6175,32 @@ after reading a command:
 		if the player's command includes "shovel":
 			say "Hmm. No shovel yet. Or anything like it. Maybe you'll find one, though.";
 			reject the player's command;
-	if hydra-known is true and player is in alcoves and Inclosure is unvisited:
+	if hydra-known is true and player is in alcoves and player does not have whistle:
 		if the player's command matches the regular expression "\b(hardy|hydra)\b":
 			say "You don't want to THINK about taking on the hydra by yourself. You need something much bigger.";
 			reject the player's command;
-	if pirates are not plurtry:
-		if the player's command matches the regular expression "\bpirate\b" and pirates are visible:
+	if location of player is location of pirates and pirates are not plurtry:
+		if the player's command matches the regular expression "\bpirate\b":
 			now pirates are plurtry;
 			ital-say "there are too many pirates, and they're too uniform in their uniforms, to examine just one. But you don't need to.";
-	if natives are not plurtry:
-		if the player's command matches the regular expression "\bnative\b" and natives are visible:
+	if location of player is location of natives and natives are not plurtry:
+		if the player's command matches the regular expression "\bnative\b":
 			now natives are plurtry;
 			ital-say "there are too many natives to deal with one at a time.";
-	if yurt-plurtry is false:
-		if the player's command matches the regular expression "\byurt\b" and yurts are visible:
+	if yurt-plurtry is false and player is in copse and yurts are in copse:
+		if the player's command matches the regular expression "\byurt\b":
 			now yurt-plurtry is true;
 			ital-say "there are too many yurts, and they're too uniform, to examine just one. But you don't need to.";
-	if deacons are not plurtry:
-		if the player's command matches the regular expression "\bdeacon\b" and deacons are visible:
+	if location of player is location of deacons and deacons are not plurtry:
+		if the player's command matches the regular expression "\bdeacon\b":
 			now deacons are plurtry;
 			ital-say "there are too many deacons, and they're too uniform, to examine just one. But you don't need to.";
-	if diners are not plurtry:
-		if the player's command matches the regular expression "\bdiner\b" and diners are visible:
+	if location of player is location of diners and diners are not plurtry:
+		if the player's command matches the regular expression "\bdiner\b":
 			now diners are plurtry;
 			ital-say "there are too many diners, and they're too uniform, to examine just one. But you don't need to.";
-	if ingrates are not plurtry:
-		if the player's command matches the regular expression "\bingrate\b" and ingrates are visible:
+	if location of player is location of ingrates and ingrates are not plurtry:
+		if the player's command matches the regular expression "\bingrate\b":
 			now ingrates are plurtry;
 			ital-say "there are too many ingrates, and they're too uniform, to examine just one. But you don't need to.";
 	if the player's command matches the regular expression "\bsmell\b" and word number 1 in the player's command is not "smell":

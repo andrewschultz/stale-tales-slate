@@ -21,7 +21,7 @@ Trying to change the current region you're in would be risky, or useless, or may
 Your score has just gone up by one point
 
 >score
-1 out of 40 total points
+1 out of 41 total points
 Lowest score to solve is 25
 
 >grapes
@@ -110,7 +110,7 @@ coin
 >e
 >e
 >solemn
->solemn
+>mo len
 >w
 >s
 Curtis hands you another coin
@@ -229,7 +229,7 @@ Take on a token
 >cinque
 >ancienter
 >solemn
->solemn
+>len,mo
 >among
 >papayas
 >w
@@ -272,7 +272,7 @@ a tekno-token
 >e
 >solemn
 Your score has just gone up by one point
->solemn
+>mo len
 Your score has just gone up by one point
 >ancienter
 Your score has just gone up by one point
@@ -306,7 +306,7 @@ Your score has just gone up by one point
 >cripes
 Your score has just gone up by one point
 >kumquta
-Curtis is the one who
+Just return the fruit to Curtis. No need for another change.
 
 >w
 >s
@@ -368,7 +368,7 @@ coins
 >solemn
 Your score has just gone up by one point
 
->solemn
+>len mo
 Your score has just gone up by one point
 
 >cheap
@@ -422,55 +422,57 @@ You Did Great
 ###############################everything below here is a full test
 # search for (asterisk) (underscore)full and replace it with (asterisk) full, or vice versa
 
-* full-4
+* _full-4
 
 >{include} _others-intro
 >{include} _others-4
 >{include} _others-endgame
 
-* full-14
+* _full-14
 
 >{include} _others-intro
 >{include} _others-14
 >{include} _others-endgame
 
-* full-24
+* _full-24
 
 >{include} _others-intro
 >{include} _others-24
 >{include} _others-endgame
 
-* full-124
+* _full-124
 
 >{include} _others-intro
 >{include} _others-124
 >{include} _others-endgame
 
-* full-34
+* _full-34
 
 >{include} _others-intro
 >{include} _others-34
 >{include} _others-endgame
 
-* full-134
+* _full-134
 
 >{include} _others-intro
 >{include} _others-134
 >{include} _others-endgame
 
-* full-234
+* _full-234
 
 >{include} _others-intro
 >{include} _others-234
 >{include} _others-endgame
 
-* full-1234
+* _full-1234
 
 >{include} _others-intro
 >{include} _others-1234
 >{include} _others-endgame
 
 * others-errs
+
+>gonear rustic citrus
 
 >rucsit
 You don't need to riff
@@ -496,7 +498,7 @@ Nothing happens. Maybe just examine it.
 Nothing happens. Maybe just examine it.
 
 >x stand
->stand
+>stadn
 Nothing happens. You found enough inside it, anyway.
 
 >abandoned
@@ -510,11 +512,10 @@ Well, you don't technically need plurals for this, but you're on the right track
 >limes
 
 >msso
-No, the whole thing. You see several...similar...items here right now.
+Nothing happens. Perhaps it's the whole item that's important.
 
 >pca
-No, the whole thing. You see several...similar...items here right now.
-
+Nothing happens. Perhaps it's the whole item that's important.
 
 >compass
 >needel
@@ -605,10 +606,10 @@ Swell Wells
 Stucco? No. ScoutCon, the message... (You see red recognizing what you should be chasing).
 
 >wlle
-You don't need to riff on any location names to win the game.
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
 >swlle
-You don't need to riff on any location names to win the game.
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
 >silyl
 Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle.
@@ -689,7 +690,7 @@ Changing the stadium with (presumably) people in it would cause great harm. Mayb
 Filed Field
 
 >edlif
-You don't need to riff on any location names to win the game.
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
 >pryerbar
 No, it's both pryer bars
@@ -705,6 +706,9 @@ No, it's the whole pryer bars.
 
 >drupelets
 No, it's the whole pryer bars
+
+>brira
+Nothing happens. Perhaps it's the whole item that's important.
 
 >barris
 Nothing happens. Perhaps it's the whole item that's important.
@@ -750,7 +754,7 @@ The rapt figure almost seems to glare at you--or maybe its smile seems a little 
 Clangier Clearing
 
 >clegnira
-You don't need to riff on any location names to win the game.
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
 >eln
 Len Craig doesn't change, and even if you messed with his full name, he wouldn't.
@@ -761,8 +765,18 @@ Len Craig doesn't change, and even if you messed with his full name, he wouldn't
 >overpriced
 That's over-thinking it. It's just a peach.
 
+>abstract melon to ll
+
 >elmon
-You can't focus on just one of them.
+You can't focus on just one of the lemons, but you don't need to.
+
+>abstract melon to clearing
+
+>abstract lemons to ll
+>elmon
+Hm, there must be a better melon than that, but how to ask Len, now.
+
+>abstract lemons to clearing
 
 >uctiona
 You're probably over-thinking it--just pay attention to what it says, instead.
@@ -771,7 +785,7 @@ You're probably over-thinking it--just pay attention to what it says, instead.
 You're probably over-thinking it--just pay attention to what it says, instead.
 
 >solemn
->solemn
+>mo, len
 >among
 >papayas
 >ancienter
@@ -790,7 +804,9 @@ Hmm. You could probably do something with just one coin, or you could do somethi
 >n
 >d
 Scape Space
-You don't need to riff on any location names to win the game.
+
+>sceap
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
 >abnana
 The A shines for a split-second.
@@ -802,11 +818,11 @@ It's counterfeit enough as-is. You probably need to just find someone who'd actu
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
 
 >egaron
-That doesn't seem sneaky enough to get the orange.
+The orange seems a bit closer for a bit.
 
 >go near
->orange
-You got it, already
+>oraneg
+Just return the fruit to Curtis. No need for another change.
 
 >pantl
 You may want to listen to what the plant has to say, or what it makes you say.
@@ -852,8 +868,12 @@ You may want to listen to what the plant has to say, or what it makes you say.
 >ltso
 After all that work getting it to appear, you don't want to make the lost slot vanish.
 
+>u
+
+>put icons in slot
+
 >popstra
-Don't know whose
+You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star.
 
 >passpotr
 The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the 
@@ -864,24 +884,15 @@ That's not the way to learn from the viewer--it's probably not that complicated.
 >researhc
 That's not the way to learn from the searcher--it's probably not that complicated. You hope.
 
->u
 >n
 >n
 
 >erpp
 It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it.
 
->reversde
-You seem to read the sign backwards for a second.
-
->reversed
-DEBUG INFO: Trying to flip guava.
-
-The sign wobbles over and falls. You take a guava you found behind it. Dr. Tera Darter nods, impressed.
-
->gauva
-Curtis is the one who messes with the fruits, not you.
-
 >research
 >review
+
+>n
+
 You Did Great

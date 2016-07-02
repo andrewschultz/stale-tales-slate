@@ -949,7 +949,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "cap"	102659362	--	moss cap	--	"[whole-item]."
 "needle"	527168763	--	compass	--	"The needle is working fine. No need to meddle."
 "tekno"	427109390	--	tekno-token	--	"There's enough credit on the token. Don't get greedy."
-"bluer"	390468463	--	tekno-token	--	"That doesn't really describe the Tekno-Token."
 "icon"	207258516	--	coins	--	"Hmm. You could probably do something with just one coin, or you could do something with all of them."
 "lola"	184168073	--	dr lola	degen-true rule	"[count-enuf]."
 "drol"	234519308	--	lord al	degen-true rule	"[count-enuf]."
@@ -963,9 +962,12 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bogey"	375536545	--	sorer bogey	--	"[whole-item]."
 "stucco"	416853538	--	stucco	--	"Stucco? No. ScoutCon, the message... (You see red recognizing what you should be chasing)."
 "tangerine"	661641421	--	green stain	--	"The green stain could make just one fruit, but why not think bigger? It could become many."
+"green"	442443231	--	green stain	--	"[whole-item]."
+"stain"	315472156	--	green stain	--	"[whole-item]."
 "cap"	102659362	--	riot cap	--	"[whole-item]."
 "miser"	418471877	--	miser ruble	--	"[whole-item]."
 "ruble"	390468463	--	miser ruble	--	"[whole-item]."
+"bluer"	390468463	--	tekno-token	--	"That doesn't really describe the Tekno-Token." [this is put below because the ruble should trump the tekno-token]
 "foliage"	362267787	--	foliage	--	"Alas, the foliage also blocks your magical powers and not just your explorations, but [if number of flippable things in filed field > 0]there's plenty else to work at[else]no big deal. You took care of everything else[end if] here." [filed field]
 "barriers"	545651053	--	b-w	--	"The barriers['] westness is important."
 "barber"	337479343	--	barber sickle	--	"[whole-item]."
@@ -983,15 +985,18 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "spoon"	395352587	--	rapt figure	--	"[rapt-glare]."
 "jagged"	265182945	--	jagged spoon	--	"[rapt-glare]."
 "briar"	236247175	--	briar screen	--	"[whole-item]."
+"briars"	332521141	--	briar screen	--	"[whole-item]."
 "screen"	525123080	--	briar screen	--	"[whole-item]."
 "len"	250527456	clearing	--	--	"[len-part]." [clearing]
 "craig"	184109754	clearing	--	--	"[len-part]."
 "among"	242122758	--	--	need-mango rule	"Not quite the right way."
 "list"	298190669	--	l-o-p	--	"[if l-o-p is reflexed]You already messed with the list[else]The list doesn't look odd, but maybe some the prices will make you exclaim something[end if]."
 "overpriced"	774270700	--	peach	--	"[if peach is reflexed]No need to change now, and that's not the right way[else]That's over-thinking it. It's just a peach[end if]."
-"lemon"	388955186	--	--	lemnomel rule	"You can't focus on just one of them, but you don't need to."
+"lemon"	388955186	--	--	lemnomel rule	"You can't focus on just one of the lemons, but you don't need to."
 "auction"	417662159	--	caution	--	"[papay]."
 "banner"	371551651	--	caution	--	"[papay]."
+"guava"	249245965	--	guava	--	"[just-c]."
+"kumquat"	516923398	--	kumquat	--	"[just-c]."
 "banana"	162797375	--	an-a	--	"You try to poke at an A, but nothing comes from it." [scape space]
 "trader"	424780640	scape space	--	--	"[greedy-s] is tarred real good. That's the point of tarring. But [if storage is not in scape]you got what you wanted[else][he-she] might trade that storage box[end if]."
 "art"	190621639	--	Art Erd	--	"[1st-name]."
@@ -1004,7 +1009,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "great"	351027450	--	so-great	--	"You might break what is in the storage. Then it would be neither great nor so great."
 "passport"	620454066	--	passport	--	"The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the [if viewer is reflexed]searcher[else if searcher is reflexed]viewer[else]viewer or searcher[end if] might contain more information."
 "review"	601028460	--	passport	--	"That's not the way to learn from the viewer--it's probably not that complicated. You hope."
-"popstar"	524180100	--	passport	--	"You don't know whose passport it was, but it's yours, and you need to study it, not just hope to be a pop star."
+"popstar"	524180100	--	passport	--	"You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star."
 "halt"	196393974	gates stage	--	--	"[if player has passport]The halt lath is ineffective, now you have the passport[else]The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lock action[end if]."
 "singed"	391609220	--	singed design	--	"The design is sort of glommed onto the coin[if coins are visible]s[end if]. So you should figure what to do, there."
 "arena"	286413056	gates stage	--	--	"[stad-chg]."
@@ -1167,7 +1172,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 book text details
 
 to say locname:
-	say "You don't need to riff on any location names to win the game, unless there's not that much else to see[if bogus-plains is in plains and oyster is needed]. You may get a last lousy point from doing so in one place, if you're observant, though[end if]."
+	say "You don't need to riff on any location names to win the game, unless there's not that much else to see[if bogus-plains is in plains and oyster is needed]. You may get a last lousy point from doing so in one place, if you're observant, though[end if]"
 
 this is the gunter-yet rule:
 	if player is in study and gunter is off-stage:
