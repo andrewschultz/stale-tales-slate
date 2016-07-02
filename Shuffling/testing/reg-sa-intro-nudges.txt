@@ -1,54 +1,54 @@
-Version 1/151226 of Shuffling Nudges by Andrew Schultz begins here.
+## reg-sa-intro-nudges.txt
+## nudges for Shuffling Around/intro: the big test. Well, not very big, but part of the big test
+##
 
-volume nudges
 
-[remember to sort with nud.pl after changes]
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
 
 * intro nudge test
 
 >intor
-[reg-rej].
+You don't want to change a region drastically while you're in it.
 >busiets
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
 >noentyr
-[intro nudges]
+You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter...
 >slmi
-[name-list].
+You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
 >neta
-[name-list].
+You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
 >naem
-[name-list].
+You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
 >lits
-[name-list].
+You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
 >elevatro
-[word-games].
+A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 >terracse
-[word-games].
+A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 >bannre
-[word-games].
+A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 
 >in
 A Dry Yard
 >yadr
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 >ydr
-[loc-rej].
->shrbu
-The [if goat is visible]remains of the [end if]shrub and brush waver, then point towards the [if toga is visible]toga[else if thorn is visible]thorn[else]opening where the thorn was.
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 >improbabel
 You do some calculations--then you think, if things are this hard early on, MAN. It's got to be simpler.
 >breeez
-[nope-odor].
->smell
-[nope-odor].
+You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
+>smlle
+You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
 
 >door
 
 >musicla
-[com-chor].
+It's a pretty complex chord.
 >chodr
-[com-chor].
+It's a pretty complex chord.
 
 >bugle
 
@@ -57,29 +57,44 @@ No, the bugle is a bugle, not just a horn. It's been changed enough.
 
 >blot
 >open door
->enter door
 Thickest Thickets
 
->thickest
-[loc-rej].
+>thicktes
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 >thickte
-[loc-rej]
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside
 >darnle
-[if darn-slan is true]You already got mad at all the darnels. You need to move on[else]If it were just one darnel, there'd be no point in getting mad. But there are a bunch[end if].
+If it were just one darnel, there'd be no point in getting mad. But there are a bunch.
+
 >darnesl
-[thorn-inst].
+You might be able to clear the darnels, but they're not as thick as, well, the thicket.
+>slander
+
+>darnle
+You already got mad at all the darnels. You need to move on
+>darnesl
+You already messed with the darnels.
+
+>shrbu
+The shrub and brush waver, then point towards the toga.
 
 >goat
+
+>shrbu
+The remains of the shrub and brush waver, then point towards the opening in the thickets.
+
 >in
 Notices Section
 
 >noticse
-[loc-rej].
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+
+>attics
 
 >dlol
-[stat-at].
+The attics shake slightly.
 >houes
-[stat-at].
+The attics shake slightly.
 
 >gatewya
 Nothing changes. Maybe you just need to walk through it, if and when you're prepared.
@@ -89,33 +104,23 @@ The broad board is just there to read.
 >scrawlinsg
 Those scrawlings are there to help you. Plus, ten letters, so early? Whew.
 
->nametag
+>gateman
 
 >waryp
-[no-warpy].
+You can't change Old Warpy. You have to just trust it.
 >odl
-[no-warpy].
+You can't change Old Warpy. You have to just trust it.
 
 >oldmna
 He's too old to change. At least, in his present form.
 >dollhoues
-Thinking that doesn't do much, but the [if static is visible]static changes[else]attics seem to glow a bit[end if].[one of][paragraph break]You reflect it might be a bit too much to have to deal with nine letters so early, anyway[or][stopping].
+Thinking that doesn't do much, but the attics seem to glow a bit.
 
 >attci
 You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back.
+
 >warmpu
 You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you.
-
-
-
-==================================================
-
-=============================
-====================end sortie
-====================start metros
-====================================================================
-
-
 
 
 #need to test Pat's

@@ -8,11 +8,9 @@
 
 * first-guider-test
 
->gonear strip
->purloin settler
-I'M GOING TO PUT THIS HERE TIL I TEST ALL THE WAYS TO MAKE THE DISGUISE
-
+>ts
 >forest
+
 >sr ne
 >in
 >conifre
@@ -54,9 +52,7 @@ Self-ID Fields
 
 * other-guider-test
 
->gonear strip
->purloin settler
-
+>ts
 >forest
 >sr sw
 >in

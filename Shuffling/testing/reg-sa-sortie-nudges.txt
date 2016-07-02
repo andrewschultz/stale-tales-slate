@@ -3,6 +3,11 @@
 ##
 
 
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* sortie-nudges
+
 >tosrie
 [reg-rej].
 
@@ -233,6 +238,21 @@ Well, there are many, but the poem is [i]in[r] anapest.
 [pat-poe].
 >poetyr
 [pat-poe].
+
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+>z
+
+>rifle
+Shooting things up is not the answer.
+
+>riefl
+Thinking of the flier leads you back to the anapest
 
 >peasant
 

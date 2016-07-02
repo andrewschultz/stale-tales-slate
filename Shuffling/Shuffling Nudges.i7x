@@ -8,6 +8,7 @@ book nudge tables
 
 table of Intro nudges
 this-cmd	hashval	this-rm	this-item	this-rule	this-clue
+"busiest"	591981617	subsite	--	--	"[loc-rej]."
 "noentry"	650766775	subsite	--	--	"You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter..."	[intro nudges]
 "slim"	259155804	subsite	--	--	"[name-list]."
 "neat"	302011453	subsite	--	--	"[name-list]."
@@ -16,32 +17,31 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "elevator"	681565093	subsite	--	--	"[word-games]."
 "terraces"	646837211	subsite	--	--	"[word-games]."
 "banner"	371551651	subsite	--	--	"[word-games]."
-"shrub"	342404780	Dry Yard	--	--	"The [if goat is visible]remains of the [end if]shrub and brush waver, then point towards the [if toga is visible]toga[else if thorn is visible]thorn[else]opening where the thorn was."
+"yard"	230899962	Dry Yard	--	--	"[loc-rej]."
+"yrd"	228712144	Dry Yard	--	--	"[loc-rej]."
 "improbable"	570855914	Dry Yard	--	--	"You do some calculations--then you think, if things are this hard early on, MAN. It's got to be simpler."
 "breeze"	610130653	--	odor	--	"[nope-odor]."
 "smell"	395782906	--	odor	--	"[nope-odor]."
 "musical"	385455014	--	yard-door	--	"[com-chor]."
 "chord"	236993353	--	yard-door	--	"[com-chor]."
 "horn"	265866187	--	bugle	--	"No, the bugle is a bugle, not just a horn. It's been changed enough."
+"thickets"	584514019	thickest thickets	--	--	"[loc-rej]."
 "thicket"	488240053	thickest thickets	--	--	"[loc-rej]"
 "darnel"	359068166	thickest thickets	--	--	"[if darn-slan is true]You already got mad at all the darnels. You need to move on[else]If it were just one darnel, there'd be no point in getting mad. But there are a bunch[end if]."
+"shrub"	342404780	thickets	--	--	"The [if goat is visible]remains of the [end if]shrub and brush waver, then point towards the [if toga is visible]toga[else]opening in the thickets[end if]."
 "darnels"	455342132	--	darnels	--	"[darnels-inst]."
+"notices"	534448609	notices section	--	--	"[loc-rej]."
 "borda"	201312192	notices section	--	--	"The broad board is just there to read."
 "scrawlings"	607313806	notices section	--	--	"Those scrawlings are there to help you. Plus, ten letters, so early? Whew."
-"oldman"	284365984	--	gateman	--	"He's too old to change. At least, in his present form."
-"gateway"	498185490	--	getaway	--	"Nothing changes. Maybe you just need to walk through it, if and when you're prepared."
 "warpy"	399271605	notices section	--	--	"[no-warpy]."
 "old"	149195505	notices section	--	--	"[no-warpy]."
 "doll"	203009344	notices section	--	--	"[stat-at]."
 "house"	440820758	notices section	--	--	"[stat-at]."
+"warmup"	446093313	notices section	--	--	"You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you."
+"gateway"	498185490	notices section	--	--	"Nothing changes. Maybe you just need to walk through it, if and when you're prepared."
+"oldman"	284365984	--	gateman	--	"He's too old to change. At least, in his present form."
 "dollhouse"	643830102	--	doll house	--	"Thinking that doesn't do much, but the [if static is visible]static changes[else]attics seem to glow a bit[end if].[one of][paragraph break]You reflect it might be a bit too much to have to deal with nine letters so early, anyway[or][stopping]."
 "attic"	272406285	--	attics	--	"You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back."
-"warmup"	446093313	--	getaway	--	"You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you."
-"busiest"	591981617	subsite	--	--	"[loc-rej]."
-"yard"	230899962	Dry Yard	--	--	"[loc-rej]."
-"yrd"	228712144	Dry Yard	--	--	"[loc-rej]."
-"notices"	534448609	notices section	--	--	"[loc-rej]."
-"thickets"	584514019	thickest thickets	--	--	"[loc-rej]."
 "intro"	376686752	--	--	degen-true rule	"[reg-rej]."
 
 table of Stores nudges
@@ -456,7 +456,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "tile"	329722812	tiles	--	--	"You need to deal with all the tiles."
 "sand"	188398381	islet	--	--	"[the-sand]."
 "thesand"	456596807	islet	--	--	"[the-sand]."
-"islet"	425996778	islet	--	--	"The island's sands don't shift, but there's more here than on the tiles."
+"islet"	425996778	islet	--	--	"Nothing happens. You may need to deal with something specific on the islet to leave."
 "eter"	444046039	islet	--	--	"The tree sits there[if swing is visible], but the swing rocks a bit[end if]."
 "oflat"	259979148	islet	--	--	"[if cork is visible and wings are visible]You can just use either the cork or the wings to leave to the east[else if cork is visible or wings are visible]You have a way off this island to the east, though you can make the other for fun, too[else if tree is examined or rock is examined]Mangling the word you read did nothing. Maybe go with what it's written on[else]You notice writing on the rock and swing similar to what you just said. Or tried to say[end if]. Also, no need to make anything lo-fat here."
 "hotsopt"	569947414	hotspot	--	--	"[loc-rej]."
@@ -471,7 +471,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "lock"	200105179	--	tool shed	--	"Nope. That lock's secure."
 "rope"	368948448	--	ropes	--	"Those are already useful."
 "grip"	244382310	--	grips	--	"Those are already useful."
-"rioters"	617183122	--	protest	--	"They're just a riot. You may lump them together for your purposes. It'll be for society's good."
+"rioters"	617183122	--	riot	--	"They're just a riot. You may lump them together for your purposes. It'll be for society's good."
 "people"	546710552	--	riot	--	"[simple-riot]."
 "horde"	345793877	--	riot	--	"[simple-riot]."
 "uprisers"	722566259	--	riot	--	"[simple-riot]."
@@ -600,7 +600,7 @@ to say darnels-inst:
 	if darn-slan is true:
 		say "You already messed with the darnels";
 	else:
-		say "You [if darn-slan is true]already cleared[else]might be able to clear[end if] the darnels, but they're not as thick as, well, the thicket"
+		say "You might be able to clear the darnels, but they're not as thick as, well, the thicket"
 
 to say no-warpy:
 	say "You can't change Old Warpy. You have to just trust it";
@@ -857,7 +857,7 @@ to say the-sand:
 
 to say simple-riot:
 	say "Perhaps it's best to keep it simple and cut down the riot"
-
+	
 this is the riot-gone rule:
 	if player is in hotspot and riot is in lalaland:
 		the rule succeeds;

@@ -374,7 +374,7 @@ swing	"The swing goes slightly airborne."
 tool shed	"You hear an unseen hinge neigh as if in defiance."
 rock	"Hmm, a rock, but only so much you can do with it."
 sprig	"The sprig seems to grow less fragile for a moment."
-poles	"The pols seem to start to bend at an angle."
+poles	"The poles start to bend at an angle--or maybe that's the light."
 spore	"You briefly wonder what the spore could grow into, given time. Time you don't have. Maye something circular, or something long and stringy."
 protest	"The protesters mumble at you for trying to exert mind control. You've struck a nerve."
 chain links	"The links rattle slightly. Perhaps they are chaining others['] creativity as well as your own, as they are now."
@@ -518,6 +518,12 @@ keycard	"The keycard remains stiff. Looks like it's as it should be."
 sheath	"The sheath remains still."
 sword	"Meddling with the sword right now, you're worried it might poke you."
 beast	"You've changed the beats to something tangible, physically beatable."
+cork	"Your head swims then sinks as you realize the cork can't become much else."	[resort]
+wings	"The wings should be able to propel you enough."
+slope	"You wouldn't want to make the slope crumble away."
+ropes	"The ropes are useful for climbing, which you need to do to get east."
+grips	"You can't get ahold of anything that would be more useful than the grips."
+trio	"You can deal with three people. But you'll have to change their motivations."
 
 to say keep-food-simple:
 	say "Best not to get too crazy with food preparation"
@@ -4039,7 +4045,7 @@ check opening yard-door:
 	if bugle-played is false and bolt is visible:
 		say "There's no real handle to grab[if bulge is part of the yard-door]. Not even that bulge, though you probably shouldn't snub nubs like that completely[end if]." instead;
 	say "You already unlocked it. Would you like to walk through?";
-	if the player consents:
+	if the player yes-consents:
 		try entering yard-door instead;
 	otherwise:
 		say "There's nowhere else to go, though." instead;
@@ -9939,6 +9945,8 @@ section riot
 
 the riot is plural-named scenery in Potshot Hotspot. lgth of riot is 4. gpos of riot is 4. rpos of riot is 3. rgtext of riot is "[rcn][rc][rc][rc]". cert-text of riot is "-[d1][d1][d1]". rect-text of riot is "T[d1][d1][ast]O".
 
+understand "i rot" as a mistake ("Don't give up! Perhaps there are only four or fewer rioters with their heart really in it.") when player is in hotspot and riot is in hotspot.
+
 instead of taking riot:
 	say "You couldn't even 'take' a few of them.";
 
@@ -10025,7 +10033,7 @@ instead of doing something other than examining cutlery:
 		continue the action;
 	if current action is taking:
 		say "No, Red Bull Burdell's not letting go.";
-	try examining instead.
+	try examining cutlery instead.
 
 Red Bull Burdell is a person.
 
@@ -10615,6 +10623,10 @@ after reading a command:
 
 to reject-msg (rejitm - a thing):
 	repeat through table of done rejects:
+		if tall trio is donething entry:
+			d "Oops, tall trio got snagged instead.";
+		else:
+			say "[rejitm] vs [donething entry].";
 		if rejitm is donething entry:
 			say "[donemsg entry][line break]";
 			continue the action;
@@ -13571,6 +13583,12 @@ carry out tsfing:
 	if player is not in trips strip:
 		move player to trips strip;
 	say "OK. You should be able to [if store r is in resort]flip store R and [end if]enter the resort, now.";
+	now sortie is solved;
+	now forest is solved;
+	now metros is solved;
+	now store f is in lalaland;
+	now store i is in lalaland;
+	now store m is in lalaland;
 	now player has the gadget;
 	now player has the prep paper;
 	the rule succeeds;
@@ -14239,6 +14257,7 @@ understand the command "boot [any thing]" as something new.
 understand "boot [any thing]" as booting.
 
 carry out booting:
+	say "[noun] moved to lalaland.";
 	now noun is in lalaland;
 	the rule succeeds;
 

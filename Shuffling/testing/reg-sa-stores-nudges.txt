@@ -291,46 +291,10 @@ No way. That's how you get to the sortie.
 >escalatro
 No way. It's your way down to the metros.
 
-###################################
-#this is not STORES stuff but the 3 flier items that didn't fit anywhere else
+#this is not STORES stuff but the 2 flier items that didn't fit anywhere else
 
 >rifle
-No need for violence here!
+Shooting things up is not the answer.
 
 >rifel
 The flier's just there to tell you if you're done or not.
-
-############sortie
-
->gonear woeful pat
->z
->z
->z
->z
->z
->z
->z
->z
-
->rifle
-No need for violence here!
-
->riefl
-Thinking of the flier leads you back to the anapest
-
->peasant
-
-###################metros
-
->purloin dig flier
-
->gonear yell alley
-
->i
-!expo flier
-
->rifle
-No need for violence here!
-
->riefl
-It's just garbage.
