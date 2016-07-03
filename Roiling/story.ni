@@ -5560,7 +5560,7 @@ carry out routes-hinting:
 		try objhinting seed pit instead;
 	if location of player is Adobe Abode:
 		if pipe soot is in adobe:
-			try objhinting ashtray instead;
+			try objhinting pipe soot instead;
 		all-say "[if spoilit is true]The spoon points you out of[else]You're done here in[end if] Oscar's.";
 		now spoilit is false instead;
 	if location of player is Sun-Spared Underpass:
@@ -13727,7 +13727,12 @@ instead of doing something to gaps:
 		continue the action;
 	try examining gaps instead;
 
-The bored yak is an animal in Burnt Brunt. "[one of]A yak languishes here. It looks bored, and that drab yoke around it doesn't help[or]The bored yak with the drab yoke is still hanging around[stopping]."
+The bored yak is a neuter animal in Burnt Brunt. "[one of]A yak languishes here. It looks bored, and that drab yoke around it doesn't help[or]The bored yak with the drab yoke is still hanging around[stopping]."
+
+after doing something with the bored yak:
+	set the pronoun he to the bored yak;
+	set the pronoun her to the bored yak;
+	continue the action;
 
 a-text of bored yak is "RYORYYRR". b-text of bored yak is "RYORYYRR". parse-text of bored yak is "x[sp]-[sp]y[sp]x[sp]-[sp]-[sp]x[sp]x".
 
@@ -13739,7 +13744,7 @@ understand "kya" as a mistake ("The yak is unimpressed with your karate noises."
 
 check giving to yak:
 	if noun is leaf:
-		say "The yak has gotten far too lazy already. You shouldn't encourage him by giving him more food just for staying put. You feel he, or the drab yoke, might be useful elsewhere, but if you just give him the food, he'll stay put. You'd have no way to move him." instead;
+		say "The yak has gotten far too lazy already. You shouldn't encourage it by giving it more food just for staying put. You feel it, or the drab yoke, might be useful elsewhere. Just giving the yak the food would give it an excuse to stay put." instead;
 	if noun is crust:
 		say "That's borderline animal cruelty." instead;
 	say "The yak sniffs, but that's not really something edible. Well, by a yak." instead;
@@ -13769,13 +13774,13 @@ check pushing yak to:
 		try pushing skid to second noun instead;
 	say "The yak groans lazily. Maybe if it were on something you could push, that would work." instead;
 
-description of yak is "The yak eyes you [if yak is on skid]neutrally, now you fed him[else]warily[end if]. He is clearly not a shining example for beasts of burden everywhere. He has an odd reddish tinge and is carrying a small drab yoke he probably won't let you get near on principle. It doesn't look like it's on that tight, though he won't let you get close. Perhaps something sudden will be required to jar the yoke."
+description of yak is "The yak eyes you [if yak is on skid]neutrally, now you fed it[else]warily[end if]. It is clearly not a shining example for beasts of burden everywhere. In fact, its odd reddish tinge is not physically shining. The yak wears a small drab yoke it probably won't let you get near on principle."
 
 printed name of yak is "bored yak"
 
 every turn (this is the leaf-yak rule):
 	if yak is not on skid and leaf is on skid and skid is visible and yak is visible:
-		say "The yak seems interested in the leaf on your skid. He walks over and onto the skid and starts munching away.";
+		say "The yak perks up, walks over and onto the skid, and starts munching away.";
 		now yak is on skid;
 
 the yak wears a drab yoke.
@@ -14753,7 +14758,7 @@ before fliptoing when mrlp is presto (this is the warn against SHATTER THREATS r
 			if noun is keyboard:
 				now try-keyboard is true;
 			if yak is visible:
-				say "The air of apathy the yak generates spreads to his yoke, which refuses to do what it should. You will need to find a nonviolent way to separate the yak from his yoke. Maybe you can find a way to put the bored yak to sleep." instead;
+				say "The air of apathy the yak generates spreads to its yoke, which refuses to do what it should. You will need to find a nonviolent way to separate the yak from its yoke. Maybe you can find a way to put the bored yak to sleep." instead;
 			if shack is not visited:
 				say "You might not be safe from Elvira's SHATTER-THREATS legislation here. And you're not sure what to do with that, yet. But that feels right.";
 				preef noun;
@@ -24755,7 +24760,7 @@ signature	--	scratch paper
 dirty looking cola	"[one of]The cola is great for drinking (without knowing it) during a long programming session. But there's only so much of it.[plus][or]You can pour the cola in [if gum is in lalaland]the mug[else]what the gum can become[end if].[minus][cycling]"
 fizzy cola	"Cola is great for drinking (without knowing it) during a long programming session."
 scratch paper	"[if signature is reflexed]Useless now.[else][one of]The signature and the scratch paper are clues to what to do.[plus][or]You can scan them both in cheat mode to figure where the vowels go.[plus][or]Or you can think of a computer term to get a program up and running.[plus][or]You need to COMPILE.[minus][cycling][end if]"	--	"learn to COMPILE from the scratch paper"
-scratchings	"[one of]They give a clue what the drab yoke will be.[plus][or]Have you seen any apparatus with the numbers 1234567890 at the top, in order?[plus][or]One that is by you right now?[plus][or]They clue that the drab yoke can be a keyboard. But yaks aren't very magic, and he's resisting in some odd animal fashion.[minus][cycling]"
+scratchings	"[one of]They give a clue what the drab yoke will be.[plus][or]Have you seen any apparatus with the numbers 1234567890 at the top, in order?[plus][or]One that is by you right now?[plus][or]They clue that the drab yoke can be a keyboard. But yaks aren't very magic, and this one's resisting in some odd animal fashion. So you need to deal with the yak.[minus][cycling]"
 broke day	"Broke Day offers a clue as to what the drab yoke becomes."
 drab yoke	"[if yak is not in lalaland]The yak won't let you have it. You need to make the yak inattentive.[else][one of]Whatever the drab yoke should be is probably some sort of piece of computer equipment, too. Given the end puzzle.[plus][or]The settler will tell you where the Y should go. You can also figure where the O goes, on cheat mode, and two consonants fall, too.[plus][or]But the scratchings make it obvious what the yoke should be.[plus][or]Numbers on the top, letters below it, punctuation to the side.[plus][or]KEYBOARD.[minus][cycling]"	--	"make a KEYBOARD"
 compiled code	"[one of]The compiled code works but has problems.[plus][or]You need to make the code BUDGE.[plus][or]The code still has bugs to fish out.[plus][or]Therefore, you need to DEBUG.[minus][cycling]"	--	"DEBUG the compiled code"
@@ -24763,7 +24768,7 @@ slab	"You [if cpuready]already[else]can[end if] put things on the slab to build 
 USB	"[one of]The USB is pretty universal. It can become either of two things.[plus][or]The USB can become transport out of here.[plus][or]SUB or BUS.[minus][cycling]"	--	"make a BUS or USB"
 bottle of dirty looking cola	"[one of]There's not enough of the cola in the bottle for a big programming session.[plus][or]What could make the cola refill?[plus][or][if gum is in lalaland]The mug[else]The gum is never-ending, chewable, and can also be twisted around into something else. I mean, not just physically, but with words. There are five choices[end if].[plus][or]Now you've got the cola and a better receptacle, POUR COLA IN MUG.[minus][cycling]"
 caps lock	"[if caps lock is part of the keyboard]The caps lock is where it should be.[else][one of]What does a caps lock work with?[plus][or]A keyboard.[plus][or][kboard-blah].[plus][or]Put the caps lock in the keyboard.[minus][cycling]"
-yak	"[if shack is unvisited][yak-worry].[else if yak is not on skid][one of]The yak won't give up what's on his drab yoke. You need to tempt the yak onto the skid.[plus][or]What is a good way to tempt an animal?[plus][or]Food. PUT LEAF ON SKID after you pushed it.[minus][cycling][else if skid is not in shack]Push or pull the skid back to the shack.[else][one of]Now you need to find some way to make the yak just plain sleepy.[plus][or]Find any boring items?[plus][or]The catechism. SHOW BAD BOOK TO YAK.[minus][cycling][end if]"
+yak	"[if shack is unvisited][yak-worry].[else if yak is not on skid][one of]The yak won't give up what's on its drab yoke. You need to tempt the yak onto the skid.[plus][or]What is a good way to tempt an animal?[plus][or]Food. PUT LEAF ON SKID after you pushed it.[minus][cycling][else if skid is not in shack]Push or pull the skid back to the shack.[else][one of]Now you need to find some way to make the yak just plain sleepy.[plus][or]Find any boring items?[plus][or]The catechism. Or the bad book that anagrams the keyboard.[plus][or]SHOW BAD BOOK TO YAK.[minus][cycling][end if]"
 Broke Day	"[if yak is in lalaland][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]"
 Dear Koby	--	Broke Day
 Bred Okay	--	Broke Day

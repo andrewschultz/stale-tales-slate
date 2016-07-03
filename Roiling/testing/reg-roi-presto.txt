@@ -16,7 +16,7 @@
 >enter spot
 
 >custr
-You should eat your food, not play with it. Yes, even if it's only MARGINALLY food."
+You should eat your food, not play with it. Yes, even if it's only MARGINALLY food.
 
 >paquel
 It's the maze you
@@ -30,10 +30,12 @@ That can't be it. It's a VOLT maze.
 That can't be it. It's a volt MAZE.
 >n
 >mazeroom
-any way to tackle the one room
+This is just the entry
 >bigl
 The big L may be some sort of clue, but you can't do anything with it
 >w
+>mazeroom
+any way to tackle this one room
 >bigm
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >rolfo
@@ -72,7 +74,7 @@ giant spinning robot dreidl pushes you back to the start of the maze as it belts
 
 Grey Gyre
 >egry
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >blepe
 The plebe looks confused, as if you garbled what you said.
@@ -105,7 +107,7 @@ The hoop dips a bit as if to taunt you.
 You consider the odd letters in such a short word, then  think "X, Y, ... no." Maybe the censer is just a censer, and the coloring is a clue to what it can be.
 
 >escern
-That feels right, but it's not enough yet. You don't need anything profane, here.
+That feels right, but it's not enough yet. You don't need anything grumbly, here.
 
 >onyxcenser
 You let out a string of something that feels good to say, but it doesn't mean anything. Maybe you're overthinking, and the color doesn't matter.
@@ -127,7 +129,7 @@ DEBUG INFO: Adding a min point for this flip.
 Brunt
 
 >urbnt
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >decoratiev
 You consider some over-long epithet to get the star, but no, it's gotta be something quick. Visceral. Not necessarily rude.
@@ -180,21 +182,25 @@ The stump just sits there, stumpy
 >ovelzamt
 The volt maze crackles with increased energy, almost ready to break down.
 
+>s
+>drat
+>n
+
 >bleep
 >e
 Marines Seminar
 
 >masiner
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 >mainer
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >e
 The camo-coma fields are just obvious enough to anyone paying attention, for legal reasons. Plus, either you are awake enough to see them, or you get too tired to walk into the center. West is the only way out.
 
 >camo
 The camo-coma remains as-is. It's sturdy, military-grade stuff
->force
+>forec
 The camo-coma remains as-is. It's sturdy, military-grade stuff
 >forcefield
 The camo-coma remains as-is. It's sturdy, military-grade stuff
@@ -204,7 +210,7 @@ The camo-coma remains as-is. It's sturdy, military-grade stuff
 The number's got more numerals than letters
 >popgun
 Hmm. It's not the popgun itself that's cracked but the boing mechanism inside
->boing
+>bingo
 >spoilt
 The popgun is just fine
 >number
@@ -230,7 +236,7 @@ Well, they're upset, now. You need to concentrate on them being washups.
 Maybe something like that'd work with just one washup. But there are two.
 
 >upshasw
-That's not the slangiest
+You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
 
 >whassup
 
@@ -238,7 +244,7 @@ That's not the slangiest
 You don't need to combine them physically, but their physical strengths combined could be a help.
 
 >idger
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >bigon
 You try something that doesn't quite work, but you assure yourself it'll put you a bit closer to an a-ha moment.
@@ -269,8 +275,11 @@ Leo and Rand charge in. It's two-on-three, though, since your popgun doesn't hav
 >drat
 >n
 >n
-REMAP TO ETHER
+Leo and Rand might help you win the fight, but you'll need some way to find the people in the ether .
 >undo
+
+>put dart in gun
+
 >there
 
 >n
@@ -294,7 +303,7 @@ Despite being dangerous to walk into, Harm's Marsh serves an important ecologica
 Despite being dangerous to walk into, Harm's Marsh serves an important ecological purpose I can't explain here. So, best not to meddle.
 
 >phta
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >gho
 You need to deal with all the hogs.
@@ -343,10 +352,13 @@ You may want to focus on the highlighted letters on the sign.
 >so long
 
 >ashck
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >ahck
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
+
+>n
+Hacks' Shack
 
 >orstep
 to change the current region
@@ -512,17 +524,15 @@ DEBUG INFO: Trying to flip futon.
 The fount turns into a futon, which is better off not wet. There's rest, eh? you think, looking at it, though you're not really tired yet.
 
 >bekaydor
-The book is unchangably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. 
+The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. 
+!That seems like a
 
 >keyboard
-The book is unchangably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. That seems like a
+The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. That seems like a
 
 >keyboard
 You need to find something less awful that could make a keyboard. That book would probably arrange the letters worse than QWERTY.
 
->s
->s
->s
 >leaf
 DEBUG INFO: Trying to flip giant fallen leaf.
 
@@ -540,12 +550,23 @@ By some lossless easily reversible algorithm, the disk changes to a skid with a 
 
 You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or to remember the basics.
 
+by one point
+
+>put leaf on skid
+
+>push skid s
+>push skid s
+>push skid s
+
+
 >repo
 You don't need to do anything with the skid's rope.
 
->put leaf on skid
 >push skid s
-Hacks' Shack
+
+>push skid n
+>push skid n
+>push skid n
 
 >dksi
 Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did.
