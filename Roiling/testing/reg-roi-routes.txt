@@ -10,8 +10,9 @@
 
 * reg-thru
 
->along
-You aren't far enough along to, err, look along.
+>ts
+>routes
+>in
 
 >n
 You try going north and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the same mesa (thank you, I'm here all game,) from the south, after several minutes.
@@ -55,14 +56,11 @@ It's more likely that scripture can change you, or help you see something a bit 
 >pictures
 It's more likely that scripture can change you, or help you see something a bit simpler to say
 
->lairaeg
-Lairage regalia is already tailored to the resident's style. So it's not yours to change[if adobe is visited], and you don't need to[else], but maybe examining it will help you get in[end if]."
-
 >ames
 Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys from rival Big Twelve schools might say. But you can't just up and leave.
 
 >esma
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >utreo
 Trying to change the current region you're in would be risky, or useless, or maybe both.
@@ -85,11 +83,15 @@ You feel you're not quite ready to enter the Cleric Circle, thinking like that. 
 >tadrows
 The ad seems slightly nearer, for a moment.
 
+>inside
+
 >ilst
 Maybe you can use your powers to get what's on the list, but you don't need to use them on it.
 
 >ostil
 Maybe you can use your powers to get what's on the list, but you don't need to use them on it.
+
+>x toils
 
 >kyrise
 They aren't there. And they wouldn't be changeable if they were.
@@ -104,7 +106,7 @@ Maybe you can use your powers to get what's on the list, but you don't need to u
 It's not Brother Horbert who needs changing but the Same Mesa.
 
 >cicler
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >pwes
 No vandalizing church property.
@@ -119,6 +121,9 @@ You can't change stuff like that by brute force. But you don't need to.
 Your heart is in the right place, but telling the mantle to cool it won't do much good.
 
 >out
+
+>lairaeg
+Lairage regalia is already tailored to the resident's style. So it's not yours to change, but maybe noting what's on it will help you get in.
 
 >apt
 That's not how to get into Pat'S, you reflect.
@@ -148,7 +153,7 @@ You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll co
 Idle Deli
 
 >elid
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >edes
 The whole seed pit.
@@ -181,7 +186,7 @@ You have Pat's attention, already.
 You don't need to do anything with Pat, especially now you got the mushrooms.
 
 >i
-! (for Brother Horbert)
+(for Brother Horbert)
 
 >out
 >in
@@ -241,7 +246,7 @@ The poison stripe is too incorporeal to do bend to your will.
 The poison stripe is too incorporeal to do bend to your will.
 
 >restauratn
-Perhaps it's better to focus on the names instead. Easier, too.
+Perhaps it's better to focus on the proper names instead. Simpler, too.
 
 >across
 up by one point
@@ -254,7 +259,7 @@ It's one solid ashtray. You try aha's to do something, but you wind up all, yah,
 It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats. Maybe it's the pipe soot you want.
 
 >edoba
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >eppi
 Brother Horbert will work his magic with that.
@@ -270,8 +275,13 @@ You don't need to do anything with Oscar, but maybe you can sneak the pipe soot 
 
 >opposite
 
+>out
+
 >ocras
-You don't need to do anything with Oscar, and you already got the pipe soot.
+No, you found the way in, with the extra s.
+
+>lairaeg
+Lairage regalia is already tailored to the resident's style. So it's not yours to change, and you don't need to.
 
 >pepsitoo
 Brother Horbert probably knows what to do with that.
@@ -283,7 +293,7 @@ You hang around the bench, hoping for something to happen, but nothing happens. 
 The bench is too sturdy. You can't do anything with it, but you may be able to do something with or around it.
 
 >byburg
-Perhaps it's better to focus on the names instead. Easier, too.
+Perhaps it's better to focus on the proper names instead. Simpler, too.
 
 >against
 You hear a giant's footsteps in the distance--but your talk with Brother Horbert has helped you be fearless.
@@ -319,22 +329,22 @@ The pages of Rude 'N Nuder flutter a bit.
 >eblows
 You already avoided both elbows when you avoided one.
 
+>igtan
+The giant is too old and set in his ways. You may just need to listen to him from one more angle.
+
+>igtanold
+The giant is too old and set in his ways. You may just need to listen to him from one more angle.
+
+>groucyh
+The giant is too old and set in his ways. You may just need to listen to him from one more angle.
+
+>under
+
 >obok
 Brother Horbert will work his magic with that.
 
 >obokduren
 Brother Horbert will work his magic with that.
-
->igtan
-The giant is too old and set in his ways. You may just need to listen to him from several different angles.
-
->igtanold
-The giant is too old and set in his ways. You may just need to listen to him from several different angles.
-
->groucyh
-The giant is too old and set in his ways. You may just need to listen to him from several different angles.
-
->under
 
 >in
 >out
@@ -365,20 +375,25 @@ They're too unruly and confused, and you probably need to get away from them, an
 The bean rolls back and forth a bit.
 
 >bane
-with bane
+with the same fear
 
 >undo
+
+>along
+You aren't far enough along to, err, look along.
+[You add the information to your pedanto-notepad under FLIPS.]
 
 >beneath
 
 >underpssa
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >uns
 You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant, so that's one less thing to worry about, I hope.
 
 >aspred
-You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant, so that's one less thing to worry about, I hope.
+#"so that's one less" is a 1-time thing
+You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
 
 >anglo
 You think of No-Gal Logan, wondering how to find a way to him.
@@ -392,6 +407,11 @@ The darkness has always been there and always will be. You need to find a way to
 >utlin
 You feel it's ALMOST the right time for the darkness to lift.
 
+>around
+You can't see anything around, yet. It's too unlit, here.
+[You add the information to your pedanto-notepad under FLIPS.]
+>undo
+
 >until
 
 >cracsk
@@ -402,10 +422,6 @@ The cracks themselves give no clues as to No-Gal Logan's whereabouts.
 
 >narrwocracsk
 The cracks themselves give no clues as to No-Gal Logan's whereabouts.
-
->along
-There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking.
-You add the information
 
 >urdoan
 The cracks almost seem to lead somewhere.
@@ -423,13 +439,13 @@ No, you were right before, there. You just need some help to make that magic wor
 
 >depref
 >agnol
-WRONGO
+The un-road seems to lead somewhere, but you couldn't quite make it out like that.
 
 >along
 Ripe Pier
 
 >iper
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >igns
 That may not help you through the mist. Maybe read the sign instead.
@@ -442,7 +458,7 @@ ABROAD
 DA MIST
 
 >imst
-Nothing happens. Then you re-read the sign and, oh, it's DA MIST. You remember thinking of it that way helps someone feel more familiar with it and get less lost.
+Nothing happens. Then you re-read the sign and, oh, it's DA MIST. You feel more familiar with it, and more confident it leads somewhere, thinking of it that way.
 
 >amdist
 Hmm, you almost see a way through the mist.
@@ -450,14 +466,17 @@ Hmm, you almost see a way through the mist.
 >aboadr
 You plot a zigzag past the sign, but you don't have full confidence in it, yet.
 
+>aboard
+by one point
+
 >efer
 The reef is not changed. Perhaps you can deal with what's on it.
 
 >clippre
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >betrothe
-Hm! If you managed to bethrothe the two, maybe you could make them past. But that would be an unholy union.
+Hm! If you managed to betrothe the two, maybe you could make them past. But that would be an unholy union.
 
 >ebet
 The beet shines a bit extra, as if to say, it's a NEW beet, darn it.
@@ -466,10 +485,10 @@ The beet shines a bit extra, as if to say, it's a NEW beet, darn it.
 You can't change Thor. He's too big and strong. But maybe you can get by, somehow.
 
 >ithwin
-The ship controls seem to adjust themselves slightly.
+The ship controls seem to adjust themselves slightly, but not enough.
 
 >benhid
-The ship controls seem to adjust themselves slightly.
+The ship controls seem to adjust themselves slightly, but not enough.
 
 >controls
 You need to find the right button on or by the controls.
@@ -479,4 +498,12 @@ You need to find the right button on or by the controls.
 
 >behind
 >through
-Trips Strip
+Strip of Profits
+
+* routes-inventory
+
+>purloin mushrooms
+>purloin runed book
+>purloin pipe soot
+>i
+! Horbert

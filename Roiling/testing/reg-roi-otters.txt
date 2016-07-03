@@ -8,237 +8,267 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* seed-1-check
+* _seed-1-check
 
 >seed 1
 >gonear macks
 
 >bossi
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >bossy
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >bossiyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >bossily
 by one point
 >undo
+
 >nasti
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >nasty
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >nastiyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >nastily
 by one point
 >undo
 >bleari
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >bleary
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >bleariyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >blearily
 by one point
 >undo
 >modest
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >modestyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >modestly
 by one point
 >undo
 >martial
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >martialyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >martially
 by one point
 >undo
+
 >drawling
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >drawlingyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >drawlingly
 by one point
+>undo
+
 >despairing
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >despairingyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >despairingly
 by one point
 
-* seed-2-check
+* _seed-2-check
 
 >seed 2
 >gonear macks
 >seedi
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >seedy
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >seediyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >seedily
 by one point
+>undo
+
 >shadi
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >shady
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >shadiyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >shadily
 by one point
+>undo
+
 >formal
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >formalyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >formally
 by one point
->steamy
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+>undo
+
 >steami
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
+>steamy
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >steamiyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >steamily
 by one point
+>undo
+
 >sincere
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >sincereyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >sincerely
 by one point
+>undo
+
 >emotional
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >emotionalyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >emotionally
 by one point
 
-* seed-3-check
+* _seed-3-check
 
 >seed 3
 >gonear macks
 >catti
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >catty
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >cattiyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >cattily
 by one point
+>undo
+
 >snide
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >snideyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >snidely
 by one point
+>undo
+
 >coital
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >coitalyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >coitally
 by one point
+>undo
+
 >stupid
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >stupidyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >stupidly
 by one point
+>undo
+
 >sobbing
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >sobbingyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >sobbingly
 by one point
 
-* seed-4-check
+* _seed-4-check
 
 >seed 4
 >gonear macks
->teary
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
 >teari
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
+>teary
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >teariyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >tearily
 by one point
 >undo
+
 >irateyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >irately
 by one point
 >undo
+
 >stark
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >starkyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >starkly
 by one point
+>undo
+
 >ribald
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >ribaldyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >ribaldly
 by one point
+>undo
+
 >wearing
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >wearingyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >wearingly
 by one point
 
-* seed-5-check
+* _seed-5-check
 
 >seed 5
 >gonear macks
 >shabbi
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >shabby
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >shabbiyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >shabbily
 by one point
+>undo
+
 >tedious
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >tediousyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >tediously
 by one point
 
-* seed-6-check
+* _seed-6-check
 
 >seed 6
 >gonear macks
 >silent
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >silentyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >silently
 by one point
 
-* seed-7-check
+* _seed-7-check
 
 >seed 7
 >gonear macks
 >shoddy
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Not quite the usual ones, here.
 >shoddi
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >shoddiyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >shoddily
 by one point
 
-* seed-8-check
+* _seed-8-check
 
 >seed 8
 >gonear macks
 >sudden
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 >suddenyl
-WRONG
+You feel you're on the right track to expose the macks. But that's not quite it.
 >suddenly
 by one point
 
@@ -255,7 +285,7 @@ by one point
 Yup, that's the idea
 
 >brea
-Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh?
+Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley.
 
 >w
 The barley is nearly everywhere. Without knowing where you're going, you'll get lost.
@@ -269,7 +299,7 @@ The barley rustles in an imaginary wind--but hardly at all.
 >barely
 
 >edriley
-If only Ed Riley said things less loudly, boomingly, startlingly...
+Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly...
 
 >ettro
 Trying to change the current region you're in would be risky, or useless, or maybe both.
@@ -281,7 +311,7 @@ Trying to change the current region you're in would be risky, or useless, or may
 You'll need to change more than one cinder.
 
 >e
-The barley is a bit too thick that way.
+The barley is a bit too thick that way--it almost looks more like marsh plants than barley.
 
 >n
 Ed Riley booms, "Yielder! That's right. Go north. Not west."
@@ -294,12 +324,12 @@ A sly imp simply zooms about rangily guarding the way north, with a butlery air,
 >taperign
 You don't need to riff on any location names to win the game
 >angre
-You don't need to riff on part of
+You should never need to riff on part of a location name
 >pti
-WRONG put in a mistake
+You can't go fast enough to interrupt the imp, much less apologize for doing so.
 
 >tpi
-You don't need to riff on part of
+You should never need to riff on part of a location name
 
 >brute
 No, you need a couple more letters... a couple
@@ -324,7 +354,7 @@ The imp's too sly to get tricked by a word THAT short.
 The imp's too sly to get tricked by a word THAT short.
 
 >simply
-It's acting simply, but
+It's already simply annoying, so that has no effect. Maybe you can alter how it does things another way.
 
 >brutely
 >l
@@ -344,6 +374,9 @@ A sly imp simply zooms about guarding the way north, with a butlery air, showing
 The imp gives a sidle-slide, then idles in front of you. He's too smooth for you right now.
 
 >enragedly
+by one point
+
+>l
 A sly imp simply zooms about rangily guarding the way north, with a butlery air that allows vaster averts.
 
 >n
@@ -361,13 +394,14 @@ You need to focus on HOW the imp averts, vaster.
 >avert
 You need to focus on HOW the imp averts, vaster.
 
-The sly imp lets out a curse. He's completely failed to keep his cool. He leaves, confidence shattered. You can go past now.
+>brutely
+The sly imp lets out a curse. It's completely failed to keep his cool. It leaves, confidence shattered. You can go past now.
 
 >l
 Tapering Inert Gap
 
 >inetr
-You don't need to riff on part
+You should never need to riff on part of a location name
 
 >anger
 !You don't need
@@ -375,11 +409,11 @@ You don't need to riff on part
 !You don't need
 
 >gpa
-WRONG
+You don't need to worry about grades now.
 >pga
-WRONG
+No golfers appear.
 >pag
-You don't need to riff on part
+You should never need to riff on part of a location name
 
 >n
  You run from a bunch of owls before they can carve at you
@@ -404,7 +438,7 @@ Hm, you only managed to deal with adverbs so far, and steward doesn't have an L 
 >eat rye
 "I am not an item yielder!" Ed Riley booms.
 
->taste
+>taste rye
 "I am not an item yielder!" Ed Riley booms.
 
 >take rye
@@ -473,6 +507,8 @@ Shrewin' whiners are tallyhoing here. They restyle why they can't let you go sou
 >tersely
 >l
 Shrewin' whiners are tallyhoing with great callosity here.
+
+>stoically
 
 Slowly, conversation dwindles until it leaves every hassler rahless, slasher of noise. They find another place where rioters roister.
 
@@ -558,11 +594,9 @@ Gretta's been manipulated
 >1
 >2
 
-"Oh--um, yeah, don't feel you're holding me back. I sort of want to get away, but I know a few things that could help you," Gretta says. Stay and ask a bit more?
-
 >meldas
->melda
 It's what the medals say that makes them special.
+>melda
 It's what the medals say that makes them special.
 
 >gent
@@ -593,14 +627,14 @@ That seems like it should work, but you just can't summon the power. Someone her
 >s
 >loathingly
 
+As they sulk away from the anteroom, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily.
+!against each other
+
 >l
 Near-Moot
 
 >s
-A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have your full powers.
-
-As they sulk away from the anteroom, they whimper about that bum Ed Riley who got a more exciting post than they did despite his moving so weedily.
-!against each other
+A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have your full powers back.
 
 >n
 >w
@@ -625,8 +659,6 @@ Even if you could change it, the way across the loop pool is too treacherous.
 >because
 >eles
 The eels swim a bit faster.
->ele
-The eels swim a bit faster.
 
 >else
 
@@ -638,22 +670,15 @@ The eels swim a bit faster.
 >undo
 >undo
 >undo
->undo
->undo
->undo
->undo
->undo
->undo
-Frontage
 
->gretat
-Deal with the macks, fist
+>s
+Frontage
 
 >s
 Bran Barn
 
 >eelmr
-WRONG
+You just need to show Mr. Lee, not change him.
 
 >brna
 You don't need to riff on any location names to win the game
@@ -662,7 +687,7 @@ You don't need to riff on any location names to win the game
 Mr. Lee shakes his head and adjusts the ghoul hat.
 
 >although
-He points to the picture of Rev. Howe. He's doubting it's for his safety. 
+He points to the picture of Rev. Howe. He's suddenly doubting it's for his safety, now.
 
 >paintign
 
@@ -676,25 +701,28 @@ The whole picture.
 Rev. Howe seems to snarl a bit more deeply for a moment.
 
 >however
-Rev. Howe seems to snarl a bit more deeply for a moment.
+by one point
 
 You feel strong enough to tackle the moat, now, and maybe even the owls and loud roar that chased you away back east, too.
 
+>eelmr
+You managed to help Mr. Lee enough.
+
 >n
 >atom
-You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom.
+You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity.
 
 >bulwark
-The whole bulwark? No, you couldn't do much with it at full strength. Maybe you can surprise Elvira in there
+The whole bulwark? No, you can't do much. Maybe you can surprise Elvira in there, with help. Plus, Elvira checked to make sure you couldn't do anything drastic to, well, a bulwark.
 
 >w
-Coevals['] Alcoves
+Coevals' Alcoves
 
 >ahdry
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
 
 >w
-Stricter critters restrict--wait, no, that's a hardy hydra with an HD-Ray. Er, dang. Danger. Your friend the parrot gives a helpful AWWWK as you run out of sight.
+Stricter critters restrict--wait, no, that's a hardy hydra with an HD-Ray. Er, dang. Danger. You double back.
 
 >ahdry
 You try, but that doesn't do anything with, or to, the hydra to the west.
@@ -743,7 +771,7 @@ You can't change Merle and Elmer, but maybe you could find a way to get rid of t
 You entrench an enchanter with a well-timed "Honestly?" They throw out anti lying litanying but you're all "Few LOLs, fellows." It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change.
 
 >hylontes
-WRONG
+Neither Merle nor Elmer is going to be any more honest. Or anything nice or good, really.
 
 >undo
 
@@ -752,14 +780,11 @@ You can't change the alcoves. It's what's to the west that needs changing
 >monsteyra
 You can't change the alcoves. It's what's to the west that needs changing
 
->w
-Warning message
-
 >e
 >e
 >discern
 (taking the cinders first)
-You feel sort of clever finding what to do, but maybe you can be even cleverer, if you're a perfectionist and all. Discern anyway?
+You feel sort of clever finding what to do with the cinders, but maybe you can be even cleverer, if you're a perfectionist and all. Discern anyway?
 The medals look less than perfect. Maybe you can find someone, or something, to help. You should explore north or south of the barley.
 
 >n
@@ -769,21 +794,27 @@ Wickeder Wire Deck
 >low
 You probably want the owls not to swoop low. And you'll want to take care of them all.
 >swol
-WRONG
+Hmm. The owls still swarm and swirl too fast.
+
 >slow
 
 >wickedre
 You don't need to riff on any location names to win the game
 >wier
-You don't need to riff on part of
+You should never need to riff on part of a location name
 >dekc
-You don't need to riff on part of
+You should never need to riff on part of a location name
+
+>badgre
+The badger flexes imaginary suit lapels, then quickly goes back to brooding.
 
 >garbed
 by one point
 The LUCKY medal
+>garbde
+No need to tweak the badger again. It's fine as is.
 >garbed
-You've got a useful ally. They'll be ready just as they are when the time comes
+Hey! No double dipping.
 
 >cliposn
 The ocelots would still be awkward even if they lost the clip-ons.
@@ -791,6 +822,9 @@ The ocelots would still be awkward even if they lost the clip-ons.
 !You're not here to mess with fashion.
 >shades
 You're not here to mess with fashion. Plus, the shades were last game.
+
+>eclosto
+The ocelots squint at you through their clip-ons.
 
 >ocelot
 The ocelots are hanging too close together for you to pick off one.
@@ -806,31 +840,27 @@ You're not here to mess with fashion.
 >shades
 You're not here to mess with fashion. Plus, the shades were last game.
 
+#################other animals
+
 >parlode
 The leopard almost seems to un-cuff its hands.
 
 >atsry
 The satyr puts a hand on its chin as if pondering music.
 
->badgre
-The badger flexes imaginary suit lapels, then quickly goes back to brooding.
-
->eclosto
-The ocelots squint at you through their clip-ons.
-
 >ocelot
 The ocelots are hanging too close together for you to pick off one and make him less cool.
 
->coolest
-You've got a useful ally. They'll be ready just as they are when the time comes
+>coolets
+No need to tweak the ocelots again. They're fine as is.
 >artsy
 by one point
->artsy
-You've got a useful ally. They'll be ready just as they are when the time comes
->paroled
+>artys
+No need to tweak the satyr again. It's fine as is.
+>parolde
 by one point
 >paroled
-You've got a useful ally. They'll be ready just as they are when the time comes
+No need to tweak the leopard again. It's fine as is.
 >undo
 >undo
 
@@ -857,9 +887,9 @@ So many pines, hard to pick one. Might as well take care of them all.
 The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important
 >racoon
 >racono
-You've got a useful ally. They'll be ready just as they are when the time comes
+No need to tweak the racoon again. It's fine as is.
 >raccono
-The rac(c)oon's fine as it is, with one C or two
+No need to tweak the rac(c)oon again. It's fine as is.
 
 >alit
 It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it.
@@ -869,29 +899,35 @@ It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to c
 >espin
 The pines rustle as if an animal climbed through them.
 >snipe
->snipe
-You've got a useful ally. They'll be ready just as they are when the time comes
+by one point
+>sniep
+No need to tweak the snipe again. It's fine as is.
 
 >herton
 There's more than one throne, but it doesn't matter, really, for what you need to do.
 >hornet
 by one point
+>undo
 >hornets
 by one point
 >hornest
-You've got a useful ally. They'll be ready just as they are when the time comes
+No need to tweak the hornets again. They're fine as is.
 
 >snlia
 One of the nails
 >snlia
 Another one of the nails
->nails
+>snail
 by one point
+>snila
+No need to tweak the snail again. It's fine as is.
 
 >n
 >n
 >w
 >raptor
+
+>w
 
 >w
 Your medals clink

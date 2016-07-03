@@ -297,7 +297,7 @@ You have a momentary vision of an apocryphal eighth book in the Harry Potter ser
 Stop trying to make Pillar of Storge happen.
 
 >tosher
-[if store h is in strip]Insults will get you nowhere. You see red at thinking such a word[else]The hoster does look a bit weird, but you need to enter it, not change it[end if].
+Insults will get you nowhere. You see red at thinking such a word
 
 >throes
 No, you are not in your last throes. Neither is Yorpwald. Try looking at the other end of the alphabet.
@@ -377,6 +377,10 @@ You've got an entry. No need to seal it up.
 Store H looks totally different from all the other stores for a second.
 >others
 Your score has just gone up by one point
+
+>tosher
+The hoster does look a bit weird, but you need to enter it, not change it.
+
 >enter hoster
 You think about entering, but you remember Elmo saying it wasn't critical to save Yorpwald.
 >othesr
@@ -2393,12 +2397,14 @@ That's not something
 
 >naivest
 Your score has just gone up by one point
+You remember that alternate solution to the truth-teller 
 min point
 
 >undo
 >vainets
 The natives look almost ready to be suckered by flattery or just a tall tale in general, but that look passes.
 >vainest
+You convince the natives that they're really too good to be guarding THIS spot
 Your score has just gone up by one point
 >vainets
 That's not something
@@ -3012,13 +3018,18 @@ WTF FTW
 Cordial, cold air.
 
 >nicer soul
-'O, nice slur!' Elvira counters. 'Cruel is ON!' Dang! She's come prepared with defense of her own too. I guess finding the redemption in all of us isn't the way to go, here.
+"O, nice slur!" Elvira counters. "Cruel is ON!" Dang! She's come prepared with defense of her own too. I guess finding the redemption in all of us isn't the way to go, here.
+
 >rule scion
-Elvira smirks and shakes her head in disbelief. 'I was expecting you to give up, but...no, you're not getting a post in my secret police for that. I mean, if I ever established any.' She quickly makes sure nobody will remember hearing her slip-up.
+Elvira smirks and shakes her head in disbelief. "I was expecting you to give up, but...no, you're not getting a post in my secret police for that. I mean, if I ever established any." She quickly makes sure nobody will remember hearing her slip-up.
 QUIT or UNDO the last command?
 >undo
 >coins lure
-[one of]Elvira momentarily sniffs. 'Money? Where? Mmm, I'll find it after beating this little dorkling up.'[or]Elvira's lust for power has eclipsed her lust for money. You should probably try to destroy her.[stopping]
+Elvira momentarily sniffs. "Money? Where? Mmm, I'll find it after beating this little dorkling up."
+
+>coins lure
+Elvira's lust for power has eclipsed her lust for money. You should probably try to destroy her.
+
 >aliver
 For whatever reason, you decide to give Elvira even more power. This time, you don't have the time or guts to reject her phaser."
 QUIT or UNDO the last command?

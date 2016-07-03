@@ -3971,7 +3971,7 @@ Ed Yerg	"Ed looks slightly less avaricious."
 flowerpot	"The crocus almost seems to perk up."
 curst palace	"Hmm...[if player is in limits]no rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 b-b	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
-Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertaste."
+Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly..."
 imp1	"[imp-nag]."
 imp2	"[imp-nag]."
 imp3	"[imp-nag]."
@@ -4271,7 +4271,7 @@ to say good-enuf of (goody - a thing):
 	if goody is an animal:
 		if goody is in perverse preserve or goody is in wickeder wire deck:
 			if goody is not the parrot:
-				say "No need to tweak [the goody] again. [if goody is plural-named]They're[else if goody is neuter]It's[else if goody is female]She's[else]He's[end if] fine as is.";
+				say "No need to tweak [the goody] again. [if goody is plural-named]They're[else if goody is neuter]It's[else if goody is female]She's[else]He's[end if] fine as is.[no line break]";
 				continue the action;
 	if goody is imp1 or goody is imp2 or goody is imp3:
 		say "The imp's already been compromised that way.";
@@ -4292,7 +4292,7 @@ to decide whether (tn - a table name) is hash-found:
 				if cmdhash is hashval entry or firstwordhash is hashval entry:
 					if there is a this-item entry:
 						if this-item entry is visible:
-							unless this-item entry is a mack-idea and this-item entry is not ment: [small hack for mack guesses that aren't present yet]
+							unless this-item entry is a mack-idea and this-item entry is not ment and debug-state is false: [small hack for mack guesses that aren't present yet, but allow programming tests to run]
 								say "[this-clue entry][line break]";
 								decide yes;
 					else if there is a this-room entry:
@@ -8292,7 +8292,7 @@ an admirer	an admirer	"married" or "mardier"	"married"	"[response-based]. You're
 natives	natives	"vainest" or "naivest"	"naivest"	"[vain-naiv]. Now that the natives have moved on, you can go south."	false	550443085	"The natives should be gone."
 neural pulses	neural pulses	"unreal" or "pluses"	"unreal"	"[if-plus]"	false	443144884	"unreal"
 neural pulses	neural pulses	"unreal" or "pluses"	"pluses"	"[if-plus]"	false	560739646	"unreal"
-reed's ale	reed's ale	"resealed/released"	"released"	"[rscheck]You concentrate, and suddenly the man figures how to [if rese is true]re[else]un[end if]zip himself. He runs off[if rese is true], maybe to bug other guardians about the smooth taste of Reed's ale[else], looking a little more dignified[end if]."	false	642046842	"released"
+reed's ale	reed's ale	"resealed/released"	"released"	"[rscheck]You concentrate, and suddenly the man figures how to [if rese is true]re[else]un[end if]zip himself. He runs off[if rese is true], maybe to bug other guardians about the smooth taste of Reed's Ale[else], looking a little more dignified[end if]."	false	642046842	"released"
 an alarming grailman	an alarming grailman	"marginal"	"marginal"	"The grailman might still be able to block you, but he doesn't want to risk it. He seems to lose confidence visibly as you speak."	false	354088487	"marginal"
 Atheists	Atheists	"hastiest"	"hastiest"	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right!' They run off for someone else to harass."	false	611037040	"hastiest"
 once-sad deacons	once-sad deacons	"holiest"	"holiest"	"The deacons shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the shrine. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the shrine opens for him![wfak][paragraph break]Then the next deacon realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already."	false	537631654	"holiest"
@@ -11718,7 +11718,7 @@ check going in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
 							now inwarn is true;
 					else:
 						say "That isn't quite how to enter the church. Do you wish to go back to the [if adobe is visited]adobe[else]deli[end if]?";
-						if the player consents:
+						if the player yes-consents:
 							if adobe is visited:
 								move player to adobe instead;
 							else:
@@ -11726,10 +11726,10 @@ check going in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
 				now in-try is true;
 				say "You just can't make it through to the cleric circle. Err, well, maybe THROUGH isn't right. Something blocks you--you seemed a bit too glib about getting in, and they're not sure you're on their side[if abode is visited or deli is visited]--note, for where you already visited, you need to use [aop][end if]." instead;
 			move player to cleric circle instead;
-			if noun is down and the-b is visible:
-				say "Well, not quite DOWN..." instead;
-			if noun is up or noun is down:
-				say "That won't work right now." instead;
+		if noun is down and the-b is visible:
+			say "Well, not quite DOWN..." instead;
+		if noun is up or noun is down:
+			say "That won't work right now." instead;
 		say "You try going [noun] and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the same mesa[one of] (thank you, I'm here all game,)[or],[stopping] from the [opposite of noun], after several minutes." instead;
 	else:
 		say "No matter where you try to wander, you wind up back where you are.";
@@ -20743,6 +20743,7 @@ discern-warn is a truth state that varies.
 
 carry out discerning:
 	if player is in barley and cinders are in barley:
+		say "(taking the cinders first)[line break]";
 		try taking the cinders;
 	if noun is not cinders:
 		if mrlp is not otters:
@@ -20891,7 +20892,9 @@ to say if-ed:
 Bleary Barley is a room in otters. "[if b-b is reflexive]Bleary Barley blocks you completely, stretching out seamlessly, endlessly[else]You can go west past where Ed Riley was[if-ed], and though the barley's too thick to the east, north and south are okay[end if]."
 
 check going east in Bleary Barley when b-b is reflexed:
-	say "The barley is a bit too thick that way[if ed riley is in Bleary Barley]--they almost look more like marsh plants than barley[end if]." instead;
+	say "The barley is a bit too thick that way[if ed riley is in Bleary Barley]--it almost looks more like marsh plants than barley[end if]." instead;
+
+understand "yer" as a mistake ("Yup! It's Ed's!") when player is in bleary barley and ed riley is in bleary barley.
 
 [glow red as you want to get rid of them]
 
@@ -21699,11 +21702,16 @@ understand "inert gap" and "inert/gap" as anger pit when sly imp is in lalaland.
 
 The sly imp is a flippable neuter person in Anger Pit. "A sly imp simply zooms about [if imp1 is reflexive]rangily [end if]guarding the way north[if imp2 is reflexive], with a butlery air[end if][if imp3 is reflexive], showing legendary patience[end if] that allows vaster averts[if power-back is true]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "It looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as he can, or keep you just mad enough not to think how to get rid of him.[paragraph break]He seems to have several tricks, but that may just mean several ways to get at him."
 
+understand "pti" as a mistake ("You can't go fast enough to interrupt the imp, much less apologize for doing so.") when player is in tapering anger pit and imp is in tapering anger pit.
+
+understand "pga" as a mistake ("No golfers appear.") when player is in tapering anger pit and imp is not in tapering anger pit.
+
+understand "gpa" as a mistake ("You don't need to worry about grades now.") when player is in tapering anger pit and imp is not in tapering anger pit.
+
 after doing something with imp:
 	set the pronoun him to the imp;
 	set the pronoun her to the imp;
 	continue the action;
-
 
 check taking imp:
 	say "Simply much too fast." instead;
@@ -21726,7 +21734,7 @@ a-text of imp2 is "RRYRYRO". b-text of imp2 is "PRYRGRB". parse-text of imp2 is 
 
 a-text of imp3 is "YRRYRYRRO". b-text of imp3 is "YRRYRYRRB". parse-text of imp3 is "-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y".
 
-understand "simply" as a mistake ("He's already simply annoying, so that has no effect. Maybe you can alter how he does things another way.") when sly imp is visible
+understand "simply" as a mistake ("It's already simply annoying, so that has no effect. Maybe you can alter how it does things another way.") when sly imp is visible
 
 understand "implys" as a mistake ("You will have to be subtle here, but you'll want to work on actions, instead.") when sly imp is visible
 
@@ -21752,6 +21760,11 @@ the ocelots are plural-named reflexive neuter animals. description is "[if ocelo
 understand "ocelot" as ocelots.
 
 the ocelots wear the SlopInc Clip-Ons. description of clip-ons is "Just terribly un-hip. They make the ocelots look like jive turkeys and not jive cats."
+
+after fliptoing ocelots:
+	now slopinc clip-ons are in lalaland;
+	now ocelots wear look-kool shades;
+	continue the action;
 
 instead of doing something with the Clip-Ons:
 	say "Uncool. Both the clip-ons and paying too much attention to them. And by too much, I mean any. Maybe you can help the ocelots, though."
@@ -21889,7 +21902,7 @@ silence-tally is a number that varies.
 after fliptoing when player is in Anger Pit (this is the break the imp down rule) :
 	increment silence-tally;
 	if silence-tally is 2:
-		say "The sly imp lets out a curse. He's completely failed to keep his cool. He leaves, confidence shattered. You can go past now.";
+		say "The sly imp lets out a curse. It's completely failed to keep his cool. It leaves, confidence shattered. You can go past now.";
 		now imp is in lalaland;
 		now imp1 is in lalaland;
 		now imp2 is in lalaland;
@@ -22149,7 +22162,7 @@ check going west in Alcoves (this is the need quick rule):
 		continue the action;
 	if hydra is in Reclusion Inclosure:
 		now hydra-known is true;
-		say "Stricter critters restrict--wait, no, that's a hardy hydra with an HD-Ray. Er, dang. Danger[if parrot is visible]. Your friend the parrot gives a helpful AWWWK as y[else]Y[end if]ou run out of sight." instead;
+		say "Stricter critters restrict--wait, no, that's a hardy hydra with an HD-Ray. Er, dang. Danger. You[if parrot is visible]r friend the parrot gives a helpful AWWWK as y[else] double back." instead;
 	say "[one of]You pass asps and feel live evil enduringly underlying...you yell 'Time's Up! Impetus imputes...'[paragraph break]'Um, spite? I'm upset!' Elvira shrugs. 'Spume it.'[or]A punitive invite-up calls you back.[or]'Resenter re-enters!' Elvira laughs.[stopping]";
 
 after printing the locale description for Inclosure when Inclosure is unvisited:
@@ -23492,7 +23505,7 @@ the entry sign is scenery in peek keep. "UNFOLD OLD FUN, MEMOIR: I'M MORE."
 
 check going south in peek keep:
 	if debug-state is true:
-		say "[list of unnoted exhibits] unnoted, [list of perused exhibits] perused, [list of exhausted exhibits] exhausted.";
+		say "DEBUG: [list of unnoted exhibits] unnoted, [list of perused exhibits] perused, [list of exhausted exhibits] exhausted.";
 	if number of not exhausted exhibits is 0:
 		say "You take a break and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers['] money.";
 		end the story;
@@ -23692,6 +23705,7 @@ to say this-perl:
 	if allow lots tools wall is unnoted:
 		now allow lots tools wall is perused;
 	increment perl-row;
+	d "[perl-row] of [number of rows in table of perlcode].";
 	choose row perl-row in table of perlcode;
 	say "[thiscode entry]";
 

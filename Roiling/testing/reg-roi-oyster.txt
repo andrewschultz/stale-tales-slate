@@ -142,6 +142,9 @@ Your score has just gone up by one point
 >in
 a hut
 
+>utha
+!may get a last lousy point
+
 >bust tubs
 Your score has just gone up by one point
 
@@ -237,25 +240,25 @@ Oyster (39/39)
 >gonear posh hops shop
 Posh Hops Shop
 >storye
-[not-the-reg].
+Trying to change the current region you're in would be risky, or useless, or maybe both.
 >pohs
-[locname].
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 >tien
 Just one tine doesn't seem up to much.
 >troll
-Dealing with just one troll would cause the rest to call you a bully and beat you up. Gotta take [']em all, somehow.
+Dealing with just one troll would cause the rest to call you a bully and beat you up. Gotta take 'em all, somehow.
 >recpa
-Casper glares at you, as if he knows you're thinking all his recaps are the same. No. You [if recaps are reflexive]need to deal[else]already dealt[end if] with them all.
+Casper glares at you, as if he knows you're thinking all his recaps are the same. No. You need to deal with them all.
 >patrosn
-[patron].
+They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that.
 >patrno
-[patron].
+They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that.
 >customre
-[patron].
+They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that.
 >customesr
-[patron].
+They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that.
 >tuen
-Eh, you know how jukeboxes are. One tune quashed, another pops up. Get rid of [']em all.
+Eh, you know how jukeboxes are. One tune quashed, another pops up. Get rid of 'em all.
 >jra
 You suspect it's what's in the jar that's important.
 >spill
@@ -267,9 +270,9 @@ Hm, the sign doesn't strictly disallow THAT.
 >tumblre
 You can't pick out which tumbler to do something to. But you're annoyed by their tips.
 >stumblre
-Someone looks at you funny. 'What are you muttering?' [if tumblers are reflexed]You already spit, anyway[else]Maybe it's the writing on the tumblers, instead[end if].
+Someone looks at you funny. 'What are you muttering?' Maybe it's the writing on the tumblers, instead.
 >jukebxo
-You can't change the jukebox. The bad music has seeped into it[if tunes are reflexive]. But maybe you can put it out of commission[else]. It's already out of commission for now[end if].
+You can't change the jukebox. The bad music has seeped into it. But maybe you can put it out of commission. It's already out of commission for now.
 >rempa
 You can't change the bad music selection. But you can neutralize it--the jukebox has instructions.
 >unste
@@ -282,39 +285,39 @@ You can't change the bad music selection. You already got a temporary escape, an
 >sing
 >spit
 >inset
-WRONG
+UNDO
 
 >undo
 >stroll
 Olde Lode
 
 >loed
-[locname].
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
 >caneo
 The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river.
 >hosre
-You give a few Er-ohs, oh-ers, Or Ehs. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats. [HERO'S SHORE]
+You give a few Er-ohs, oh-ers, Or Ehs. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats.
 >heor
 You give an Er-oh, oh-er, or Eh. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats.
 >soka
-[raft-is].
+No, best concentrate on what the raft is.
 >oka
-[raft-is].
+No, best concentrate on what the raft is.
 >fihs
 T'fish won't shift nowt.
 >herrign
 Nothing doing. It is, after all, a RED herring. Ba dum bum.
 >sculptuer
-[sculpt].
+That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for.
 >cutl
-[sculpt].
+That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for.
 >supre
-[sculpt].
+That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for.
 >rivre
-[river-no].
+That would cause serious injury to people and property, even if it could work.
 >rivear
-[river-no].
+That would cause serious injury to people and property, even if it could work.
 >ora
 If you looked at just one oar, the raft would do no better than go in circles.
 >bota
@@ -323,27 +326,25 @@ No one boat seems better than the others. Maybe you should widen your focus to a
 Whoah, they're just oars. Think simpler. Much simpler.
 
 >bota
-WRONG
+No one boat seems better than the others. Maybe you should widen your focus to all the boats.
 >boast
 
-table of oyster nudges
-this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 >freigth
-[locname].
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 >crasy
-[no-cray].
+No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out.
 >crya
-[no-cray].
+No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out.
 >leap
 
 >angre
-[locname]. [ANGER RANGE]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 >piek
-[all-fish].
+You need to deal with all the bullies at once, somehow, not just one at a time.
 >capr
-[all-fish].
+You need to deal with all the bullies at once, somehow, not just one at a time.
 >tutro
-[if player is in range]Deal with the attackers, not the trout[else if wrap is off-stage]You try to describe how to fight, but that's not it[else]You can't find any other way to describe fighting[end if].
+Deal with the attackers, not the trout
 
 >spike
 by a point
@@ -356,7 +357,7 @@ Hmm, but how to dig up the haunter, without
 >e
 Lean Lane
 >lena
-[locname]. Lena and Neal do live here
+You would upset countless people named Lena or Neal.
 >cna
 Getting rid of one can would still leave a mess. Maybe you can deal with them all.
 >casn
@@ -368,33 +369,51 @@ You try to eke out an eek, but you only have one data point, and that's not enou
 Handsome Sand Home
 
 >handsoem
-[locname].
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 >hoem
-[locname-part].
+You should never need to riff on part of a location name.
 >sadn
-[locname-part].
+You should never need to riff on part of a location name.
 >rewadr
-[if wrap is off-stage]Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout[else]There's nothing else in the drawer and no way to get in by yourself[end if].
+Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout.
 >bubbel
 !It's just wrap, really.
 >bubblewrpa
 I!t's just wrap, really.
 >detn
-[if dent is in lalaland]You already fixed the dent. It's gone[else]That's not the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it[end if].
+That's not the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it.
+>dent
+>detn
+You already fixed the dent. It's gone
 >tuan
 She is a bit fussy, but she is more than okay as she is.
 >eta
 Quit playing with your food, already.
 >trya
-[just-tea].
+Best to think of it as just tea.
 >teatrya
-[just-tea].
+Best to think of it as just tea.
 >wiep
-It'd be easier to [if player has wipes]use them all[else]steal all the wipes[end if] at once. Pulling them out and so forth--tiring.
+It'd be easier to steal all the wipes at once. Pulling them out and so forth--tiring.
+>swipe
+
+>wiep
+It'd be easier to use them all at once. Pulling them out and so forth--tiring.
+
 >pealr
 The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit...
 
+>tutro
+You try to describe how to fight, but that's not it.
+
 >tutor
+
+>rewadr
+There's nothing else in the drawer and no way to get in by yourself.
+
+>tutro
+You can't find any other way to describe fighting.
+
 >eat
 >bubbel
 It's just wrap, really.
@@ -416,7 +435,10 @@ You had your say.
 You had your say.
 
 >actesr
-Hmm, no, it[if crate is reflexed] was[else]'s[end if] only one crate at a time...
+Hmm, no, it's only one crate at a time...
+
+>fragmenst
+Not worth messing with the fragments
 
 >traec
 Yes, one more thing to do with the crate--you know where they're from, and you know what to do. Instinctively.
@@ -430,41 +452,50 @@ by one point
 That's not something
 
 >actesr
-Hmm, no, it[if crate is reflexed] was[else]'s[end if] only one crate at a time...
+Hmm, no, it was only one crate at a time...
+
+>open
+The words 'Nope, peon!' sear into your brain. Perhaps it's a bit more complicated.
 
 >rued
-It's not the rudeness[knob-skis].
+It's not the rudeness of the door. More the knob and skis are impeding you.
 >doro
-It's not the doorness[knob-skis].
+It's not the doorness
 >rudedoro
-It's not the whole[knob-skis].
+It's not the whole
 >brife
-[prob-ov].
+You are probably over-thinking it. There's a more direct way to tackle the rude door.
 >messaeg
-[prob-ov].
+You are probably over-thinking it. There's a more direct way to tackle the rude door.
 >intheer
 The words on the door don't change. They are just a generic taunt.
 >iks
 But you need to remove both skis.
 >sksi
+
+>kiss
 >rued
-It's not the rudeness[knob-skis].
->doro
-It's not the doorness[knob-skis].
->rudedoro
-It's not the whole[knob-skis].
+It's not the rudeness of the door. More that knob is stuck.
+>undo
+>undo
+>bonk
+It's not the rudeness of the door. More the skis are blocking the door
+
+>kiss
+It's not the rudeness of the door. More isn't needed, as you managed to navigate the knob and skis.
 
 >opne
-[if door-sux is true]You already opened the door[else]The words 'Nope, peon!' sear into your brain. Perhaps it's a bit more complicated[end if].
+You already opened the door
+
 >doorknbo
 It's just a knob. Which thankfully cuts down the possibilities.
 
 >debrsi
 You can't learn much from the debris. You're pretty sure it's from a crate.
 >fragmenst
-[if crate is reflexed]Not worth messing with the fragments[else]They're fragments of a crate--this may or may not help[end if].
+They're fragments of a crate--this may or may not help.
 >shtu
-[if uaah is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the door[end if].
+The huts are too secure, but maybe you can go by the door.
 >intheer
 You don't need to mess with the message on the rude door.
 >bokn
@@ -474,11 +505,16 @@ That isn't quite the right way to hit the knob.
 A Hut
 
 >ahtu
-[locname]. [UH AT A HUT / AT, UH, A HUT]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 >htu
-[locname-part].
+You should never need to riff on part of a location name.
 >sweta
-The heaps are still technically waste, but you [if heaps are reflexive]may want to deal with them more delicately[else]beautified them enough[end if].
+The heaps are still technically waste, but you may want to deal with them more delicately.
+
+>shape
+>sweta
+The heaps are still technically waste, but you beautified them enough.
+
 >utb
 Clear ALL the tubs!
 >buts
@@ -486,7 +522,16 @@ That didn't make anything go boom.
 >drpo
 You're juggling what to do with the prod, here.
 >lanec
-The lance is still itself[if lance is cleaned]--and you probably did enough cleaning it[else if player has wipes]--you can't figure how to apply the wipes[else]--but how to make it neater, now[end if].
+The lance is still itself--you can't figure how to apply the wipes.
+
+>abstract wipes to lalaland
+>lanec
+--but how to make it neater, now.
+>purloin wipes
+
+>clean lance
+>lanec
+The lance is still itself--and you probably did enough cleaning it.
 
 >bust
 >drop prod
@@ -507,30 +552,36 @@ You found the hut you needed to.
 >w
 
 >reacsh
-[if a-s is reflexed]You did enough with the arches[else]That's not quite what to do with the arches[end if]. [ACHERS' ARCHES]
+That's not quite what to do with the arches.
+
 >hedrno
 You'll probably need to destroy the hedron from within.
 >arhc
-[ache-plur].
->achre
-[ache-plur].
+There's not just one arch, there's two. And they've made more than one person ache.
 >sardien
 The sardine gives you a weird look, as if you need to stop mumbling. You're not sure you can do anything to him directly.
 
 >warp
 >search
+
+>achre
+You already dealt with both arches--no need to deal with one.
+
+>reacsh
+You did enough with the arches
+
 >enlarge
 >n
 Horned Hedron
 
 >hedrno
-[locname].
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 >thesse
 The hedron's spirit will remain intact even if you meddle there. You must go into its heart.
 >thees
 It'd be fun to rip up even one, but it'd be worse if you got caught. Take down the hedron, instead.
 >tapr
-You think of changing the trap--maybe even a tarp! But maybe the trap IS a tarp that enfolds you. Scary. No, thinking of it as an ol['] trap would make it less intimidating.
+You think of changing the trap--maybe even a tarp! But maybe the trap IS a tarp that enfolds you. Scary. No, thinking of it as an ol' trap would make it less intimidating.
 >walleey
 Just tacking one walleye won't change the crowd. They're past redemption, anyway.
 >walleyse
@@ -540,11 +591,11 @@ The walleyes are a bad crowd, past redemption.
 >bury ruby
 
 >collapsde
-[locname].
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 >odl
-[locname-part].
+You should never need to riff on part of a location name.
 >placse
-[locname-part].
+You should never need to riff on part of a location name.
 >buyr
 That's not quite it. You file that idea six feet under.
 >hitn
@@ -586,48 +637,56 @@ by one point
 
 >in
 >scumatn
-[locname]. [SCUM ANT SANCTUM]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 >scmu
 The ant may be scum, but, well, it's DEFINITELY an ant.
 
 >tan
 
 >tenfodl
-[locname]. [DEN LOFT]
+You don't need to riff on any location names to win the game, unless there's not that much else to see.
 >lotf
-[locname-part].
+You should never need to riff on part of a location name.
 >dne
-[locname-part].
+You should never need to riff on part of a location name.
+!doing so if you're observant
 >jumbel
-It's the words on the jumble you need to mess with. With which you need to mess[if yapper is in den loft]. Well, once the yapper's out of the way[end if].
+It's the words on the jumble you need to mess with. With which you need to mess. Well, once the yapper's out of the way.
 >papeyr
 'Quit yer mumblin, ya perp!' the yapper yells, turning red. 'You here to do business or not?'
+
+>prepay
+>jumbel
+It's the words on the jumble you need to mess with. With which you need to mess.
+!once the yapper's
+
 >redila
 The yapper might alert his cronies if you try anything. Even something not quite right, like that.
 >stupdi
-[its-msg].
+You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper.
 >papre
-[its-msg].
+You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper.
 >necklaec
-[its-msg].
+You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper.
 >intercmo
-[i-com].
+The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead.
 >nto
 Changing the intercom to a ton-crime intercom would be the opposite of what you want to do.
 >criem
-[i-com].
+The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead.
 
 >prepay
+by one point
+
 >derali
-WRONG
 >derail
+by one point
+
 >pull lever
->revle
-WRONG
 >revel
->revle
-WRONG
->derali
-WRONG
+by one point
+
 >derail
+
+Strip of Profits
 

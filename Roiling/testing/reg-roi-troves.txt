@@ -20,7 +20,7 @@ Rathole
 You need a strong
 
 >reahlot
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >pevtryo
 There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details.
@@ -35,7 +35,7 @@ Trying to change the current region you're in would be risky, or useless, or may
 You've got the right idea...sort of...but you're not worthy of big thoughts, yet.
 
 >spilospilo
-It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that until after you defeat Elvira.
+You've got the right idea...sort of...but you're not worthy of big thoughts, yet.
 
 >potholes
 City Hall can't fix potholes, and neither can you. You feel a bit of lost hope as you try. You need to look out for, and look within, yourself, here.
@@ -58,6 +58,9 @@ It's good to be on anagramming terms with the book's title, but maybe you would 
 >cldo
 Negative thinking! You don't need to focus on the cold but how to get rid of it. To generate heat.
 
+>cldocldo
+It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that.
+
 >crea
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
 
@@ -65,23 +68,24 @@ That's not something you can say, do or see here. For a general list of verbs, t
 You think you feel less cold for a second. But you need to make it last.
 
 >hate
-dropping only a fretful truffle!
+by one point
 
 >real hot
 You needed a strong
-
->tuffler
-You can't change the truffle. It can help you change things, though. Or how you see things.
 
 >crea
 Meh. Maybe you're closer than you think to motivation. How to make that matter?
 
 >care
-DEBUG INFO: Trying to flip heat.
+fretful truffle, which you
+DEBUG INFO: Trying to flip fretful truffle
 Loudest Used Lot
 
+>tuffler
+You can't change the truffle. It can help you change things, though. Or how you see things.
+
 >ludesto
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >tlo
 You should never need to riff on part of a location name
@@ -162,6 +166,17 @@ The bee shakes its head, trying to make sense of the slightly disordered magic i
 >belieev
 The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track.
 
+>believe
+
+>belieev
+The bee's already taken enough of your in-my-heartitude.
+
+>undo
+>undo
+>reason
+>reasno
+Too much fiddling with reason is unreasonable.
+
 >recall
 Pallid Li'L Pad
 
@@ -177,10 +192,10 @@ It's not just any old picture. It's of a sad pier.
 >despair
 
 >bredomo
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >pallid
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >lli
 You should never need to riff on part of a location name
@@ -195,7 +210,7 @@ Rotunda
 It's more the blurb at the end than the brochure.
 
 >ratundo
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >duro
 You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
@@ -238,7 +253,7 @@ The statue can and should be changed for aesthetic purposes, but Trevis Vister's
 >aspire
 
 >stteua
-The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure.  You did what you could, anyway.
+The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. You did what you could, anyway.
 
 >undo
 >undo
@@ -303,7 +318,7 @@ The checklist was built to be especially stable and singular of purpose. So, not
 The checklist was built to be especially stable and singular of purpose. So, nothing happens.
 
 >effico
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >effi
 You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
@@ -328,8 +343,8 @@ You're besieged by art, in fact! What's...what's that sound? It's that song! By 
 You fold and look at the playbill many different ways before figuring it's probably the writing on it that matters.
 
 >sgon
-It's the song name--I'd cede.
+It's the song name--I'd Cede.
 
 >edide
-It's the song name--I'd cede.
+It's the song name--I'd Cede.
 

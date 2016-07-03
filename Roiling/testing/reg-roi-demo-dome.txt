@@ -52,7 +52,7 @@ There's nothing too tricky to do in the Demo Dome. You can THINK or request the 
 It was tested to make sure even you couldn't magic it open.
 
 >igns
-No need to mess with that helpful sign.
+No need to mess with the helpful sign.
 
 >unfold
 No need to mess with the helpful sign.
@@ -137,7 +137,7 @@ Intel Inlet
 >x calendar
 Final part
 
->w
+>n
 You can only go outside here.
 
 >eltin
@@ -149,11 +149,15 @@ These are documents of historical records! Revisionism is so Elvira.
 >thessi
 These are documents of historical records! Revisionism is so Elvira.
 
+>out
+
 >n
 Hows Show
 
 >x wall
 Which do you mean, the owl-decal code wall or the allow-lots-tools wall?
+
+>bluh
 
 >sllaw
 This is a museum! No messing with the exhibits, please. Or trying to.
@@ -192,6 +196,7 @@ NOTE: you've read all the way through
 >x tools wall
 You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. But not a lot.
 
+>g
 >g
 >g
 >g
@@ -248,6 +253,9 @@ You can't change the book's writing. Well, you could, I guess. But this is a mus
 >edns
 You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one!
 
+>e
+>e
+
 Evoc-Cove
 A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want.
 
@@ -256,50 +264,50 @@ A welcoming place full of feeling and peace and weird new ideas that it's just g
 Yeah, the novel is pretty unbelievable, but it's not there to be profound.
 
 >rr
-Page 1:
-Page 10:
+PAGE 1:
+PAGE 10:
 
 >rr
-Page 11:
-Page 21:
+PAGE 11:
+PAGE 21:
 
 >rr
-Page 23:
-Page 32:
+PAGE 23:
+PAGE 32:
 
 >rr
-Page 33:
-Page 43:
+PAGE 33:
+PAGE 43:
 
 >rr
-Page 44:
-Page 53:
+PAGE 44:
+PAGE 53:
 
 >rr
-Page 54:
-Page 64:
+PAGE 54:
+PAGE 64:
 
 >rr
-Page 65:
-Page 75:
+PAGE 65:
+PAGE 75:
 
 >rr
-Page 76:
-Page 85:
+PAGE 76:
+PAGE 85:
 
 >rr
-Page 87:
-Page 97:
+PAGE 87:
+PAGE 97:
 
 >rr
-Page 100:
+PAGE 100:
 Well, that's all. Hooray for speed-reading.
 
 >evco
 You don't need to flip anything here, really. Certainly not a room.
 
 >w
->s
+>d
 Sparse Spares
 
 >spears

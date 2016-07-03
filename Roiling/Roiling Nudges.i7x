@@ -142,14 +142,14 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 
 table of routes nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
-"orcas"	277143749	same mesa	--	--	"[if adobe is visited]No further secrets[else]Hm, it's Oscar'S[end if]."
+"orcas"	277143749	same mesa	--	--	"[if regalia is reflexed]No, you found the way in, with the extra s[else]Hm, it's Oscar'S[end if]."
 "dingy"	289888397	same mesa	--	--	"[name-worry]."
 "dwelling"	510897705	same mesa	--	--	"[name-worry]."
 "scripture"	748407896	same mesa	--	--	"[picturer-change]."
 "cripture"	652133930	same mesa	--	--	"[picturer-change]."
 "picture"	566810127	same mesa	--	--	"[picturer-change]."
 "pictures"	663084093	same mesa	--	--	"[picturer-change]."
-"lairage"	348911935	same mesa	--	--	"Lairage regalia is already tailored to the resident's style. So it's not yours to change[if adobe is visited], and you don't need to[else], but maybe examining it will help you get in[end if]."
+"lairage"	348911935	same mesa	--	--	"Lairage regalia is already tailored to the resident's style. So it's not yours to change[if regalia is reflexed], and you don't need to[else], but maybe noting what's on it will help you get in[end if]."
 "signboard"	444086214	same mesa	--	--	"[board-change]."
 "sign"	242774022	same mesa	--	--	"[board-change]."
 "board"	201312192	same mesa	--	--	"[board-change]."
@@ -173,9 +173,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "stripe"	538972701	same mesa	--	--	"[not-stripe]."
 "poisonstripe"	979318134	same mesa	--	--	"[not-stripe]."
 "pat"	186763795	same mesa	--	--	"[if deli is visited]No, you already went PAST to Pat's[else]That's not how to get into Pat'S, you reflect[end if]."
-"past"	283037761	same mesa	--	--	"[if deli is unvisited]Pat's seems slightly less forbidding for a moment[else]You don't need to do any more trickery with Pat's[end if]." [?! create vanishing scenery in the mesa that kicks you to Pat's]
 "elbows"	478600169	--	giant's elbow	--	"[if elbow is reflexed]You already avoided both elbows when you avoided one.[else]Thankfully, the giant's only really swinging one elbow, so--less to deal with, yay?[end if]"
-"oscars"	373417715	same mesa	--	--	"[if adobe is visited]Oscar's seems slightly less forbidding for a moment[else]You don't need to do more[end if]." [?! create vanishing scenery in the mesa that kicks you to Oscar's]
 "adsorbing signboard"	596710416	mesa	--	--	"[name-worry]."
 "grubby"	382226374	mesa	--	--	"[name-worry]."
 "restaurant"	779336668	same mesa	--	--	"[name-worry]."
@@ -250,13 +248,16 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "spoil"	350899187	--	--	degen-true rule	"[no-spoil]."
 "pothole"	552183378	rathole	--	--	"[p-hole]."
 "potholes"	648457344	rathole	--	--	"[p-hole]."
+"rathole"	483876463	rathole	--	--	"[locname]."
 "pagepage"	488119176	--	Pa Egg	--	"[ei2pg]."
 "egg"	193005513	--	Pa Egg	--	"[ei2pg]."
 "pea"	211459886	--	Pa Egg	--	"[ei2pg]."
 "peg"	241871770	--	Pa Egg	--	"You pause, then note the author's middle initial, which seems annoyingly important."
 "truffle"	528189368	--	truffle	--	"You can't change the truffle. It can help you change things, though. Or how you see things."
 "cold"	168201090	--	cold	--	"Negative thinking! You don't need to focus on the cold but how to get rid of it. To generate heat."
-"hate"	
+"loudest"	581491405	Used Lot	--	--	"[locname]."
+"dues"	350214971	Used Lot	--	--	"[locname-part]."
+"lot"	231276434	Used Lot	--	--	"[locname-part]."
 "messhole"	677684018	Used Lot	--	--	"A messhole is a messhole. You need to concentrate on thinking your way out."
 "rustin"	503713948	Used Lot	--	--	"[ruts-pull]."
 "ruin"	304329964	Used Lot	--	--	"[ruts-pull]."
@@ -275,9 +276,12 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "stop"	355202520	--	stop post	--	"[if stop post is reflexive]You're not seeing[else]You already saw[end if] the right way to see the stop post, here."
 "live"	333777614	--	what-a-bee	--	"The bee's description isn't important. It's how you see the bee that matters."
 "bee"	274031123	--	what-a-bee	--	"But it's not just any bee. It's a[if bee's head is reflexive and what-a-bee is reflexive]n[end if] [what-a-bee][if bee's head is reflexed and what-a-bee is reflexed]! Though, really, you've already given it the business.[else]![end if]"
+"lilpad"	257303390	pallid li'l pad	--	--	"[locname]."
+"lil"	152620524	pallid li'l pad	--	--	"[locname-part]."
+"pad"	104682866	pallid li'l pad	--	--	"[locname-part]."
+"picture"	566810127	Pallid Li'l Pad	--	--	"It's not just any old picture. It's of a sad pier."
 "spider"	456891772	--	diapers	--	"The diapers, the sad pier--the spider only fits in as *a* spider."
 "glare"	301731271	--	--	glaring-futile rule	"You stare into space some more but get distracted."
-"picture"	566810127	Pallid Li'l Pad	--	--	"It's not just any old picture. It's of a sad pier."
 "brochure"	552618888	--	brochure	--	"It's more the blurb at the end than the brochure."
 "cone"	290071779	Econ Cone	--	--	"[cone-rec]."
 "recent"	531959132	Econ Cone	--	--	"[cone-rec]."
@@ -307,13 +311,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "song"	272133753	--	song	--	"It's the song name--[i]I'd Cede[r]."
 "eddie"	342663242	--	song	--	"It's the song name--[i]I'd Cede[r]."
 "playbill"	430866297	--	playbill	--	"You fold and look at the playbill many different ways before figuring it's probably the writing on it that matters."
-"rathole"	483876463	rathole	--	--	"[locname]."
-"loudest"	581491405	Used Lot	--	--	"[locname]."
-"dues"	350214971	Used Lot	--	--	"[locname-part]."
-"lot"	231276434	Used Lot	--	--	"[locname-part]."
-"lil"	152620524	pallid li'l pad	--	--	"[locname]."
-"pad"	104682866	pallid li'l pad	--	--	"[locname-part]."
-"lilpad"	257303390	pallid li'l pad	--	--	"[locname-part]."
 "bedroom"	465358213	--	--	pad-now-bedroom rule	"[locname]."
 "office"	319186909	fiefco	--	--	"[locname]."
 "fief"	225828747	fiefco	--	--	"[locname-part]."
@@ -476,8 +473,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "unset"	501203408	--	jukebox	--	"You can't change the bad music selection[if tunes are reflexive]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
 "lode"	277001614	olde lode	--	--	"[locname]." [OLDE LODE]
 "canoe"	292259597	--	canoe	--	"The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river."
-"boat"	198069318	fighter freight	--	--	"[dest-esc]."
-"boats"	294343284	fighter freight	--	--	"[dest-esc]."
 "hoser"	421038754	hero's shore	--	--	"You give a few Er-ohs, oh-ers, Or Ehs. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats." [HERO'S SHORE]
 "hero"	324764788	hero's shore	--	--	"You give an Er-oh, oh-er, or Eh. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats."
 "soak"	225747539	Hero's shore	--	--	"[raft-is]."
@@ -493,8 +488,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "boat"	198069318	Hero's shore	--	--	"No one boat seems better than the others. Maybe you should widen your focus to all the boats."
 "interlocking"	776745519	--	oars	--	"Whoah, they're just oars. Think simpler. Much simpler."
 "freight"	457629673	freight	--	--	"[locname]." [FIGHTER FREIGHT]
-"crays"	325150424	freight	--	--	"[no-cray]."
-"cray"	228876458	freight	--	--	"[no-cray]."
+"boat"	198069318	fighter freight	--	--	"[dest-esc]."
+"boats"	294343284	fighter freight	--	--	"[dest-esc]."
+"crays"	325150424	fighter freight	--	--	"[no-cray]."
+"cray"	228876458	fighter freight	--	--	"[no-cray]."
 "anger"	316824940	anger range	--	--	"[locname]." [ANGER RANGE]
 "pike"	307198092	--	pikes	--	"[all-fish]."
 "carp"	187983165	--	carps	--	"[all-fish]."
@@ -502,7 +499,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "haunter"	529723362	--	--	is-hauntable rule	"[if haunter is off-stage]You start randomly digging, but you need something more specific[to-dig].[else]The haunter needs to be dealt with otherwise.[end if]"
 "assuage"	462435186	--	--	h-assuaged rule	"Don't oversell it! Just take the haunter to where it was probably the walleyes who buried the ruby."
 "howler"	486513400	--	haunter	--	"Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE."
-"lean"	252715274	lean lane	--	--	"[locname]." [LEAN LANE]
+"lean"	252715274	lean lane	--	--	"You would upset countless people named Lena or Neal." [LEAN LANE]
 "can"	90100911	--	cans	--	"Getting rid of one can would still leave a mess. Maybe you can deal with them all."
 "cans"	186374877	--	cans	--	"You glance at your settler, wondering what to do with the cans. Maybe you've overlooked something obvious."
 "eek"	308545396	--	eeks	--	"You try to eke out an eek, but you only have one data point, and that's not enough."
@@ -589,7 +586,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "palace"	286467128	--	--	degen-true rule	"It's not just that it's a palace, it's CURST, too."
 "castle"	402197335	--	--	degen-true rule	"Not just any castle. Castle Apcur."
 "apcur"	293088972	--	--	degen-true rule	"Not, like, swamp Apcur or hut Apcur. Castle Apcur."
-"lake"	236740944	--	--	degen-true rule	"[if player is in rawest waters]Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.[else if leak lake is visible]You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water![else if trefoil is visited]You're beyond the lake now.[else]You can't see Leak Lake yet.[end if]"
+"lake"	236740944	--	--	degen-true rule	"[if player is in rawest waters]Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.[else if leak lake is visible]You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water![else if mislit limits is visited]You're beyond the lake now.[else]You can't see Leak Lake yet.[end if]"
 "trefoil"	515914088	trefoil	--	--	"[towersloc]." [LOFTIER TREFOIL 0 0]
 "warrior"	485439423	trefoil	--	--	"[war-one]."
 "warriors"	581713389	trefoil	--	--	"[war-one]."
@@ -601,7 +598,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "welt"	392664739	--	flowerpot	--	"[flow-fine]."
 "oldhat"	291775640	--	flowerpot	--	"You don't have time to think about, or change, Old Hat Daltho. [if crocus is in lalaland]You got his present to his friend[else if ed yerg is reflexed]. You've found his friend and made him happy[else if solo den is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he sent the gift to, anyway[end if]."
 "toaster"	592164309	--	toaster	--	"It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it."
-"pastry"	490720816	--	--	pas-vis rule	"You need to be specific about which pastry--or you would, if any could be changed. As is, you can just eat one once it's warmed."
+"pastry"	490720816	--	--	pas-vis rule	"You need to be specific about which pastry--or you would, if any could be changed. All you can do with a pastry is eat it, once it's warmed."
 "ray"	209870873	--	ray eck	--	"[ray-part]."
 "eck"	199744872	--	ray eck	--	"[ray-part]."
 "start"	390005623	--	start tarts	--	"[eat-pastry]."
@@ -614,7 +611,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "musclyhulk"	709768725	--	muscly hulk	--	"You wrack your brain but quickly get the sense you're over-thinking how to ju-jitsu the hulk's strength."
 "diner"	348059355	--	diners	--	"[plutry of diners]There's more than one diner blocking you."
 "yurt"	415898880	--	yurts	--	"There's more than one yurt there."
-"brownie"	527736521	--	solve-a-loaves	--	"[not-singular-hp]."
+"brownie"	527736521	--	brownies	--	"[not-singular-hp]."
 "brownies"	624010487	--	brownies	--	"[eat-pastry]."
 "owers"	491691228	--	brownies	--	"[eat-pastry]."
 "bin"	132319259	--	brownies	--	"[eat-pastry]."
@@ -633,6 +630,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "cliff"	170842062	--	cliff	--	"The cliff remains motionless. Perhaps it's useful, after all, to block off some ways to go. This area looks big enough."
 "pirate"	444886553	--	pirates	--	"[plutry of pirates]Changing just one pirate would not, you sense, do much. It might even ostracize him among his peers. Perhaps there's a way to deal with the lot of them. By adding an s."
 "prune"	468609186	--	iPrune	--	"It's officially an iPrune, not a prune."
+"old"	149195505	--	old ice	--	"No, all the old ice."
+"ice"	191804540	--	old ice	--	"No, all the old ice."
 "cinema"	326975019	anemic cinema	--	--	"[towersloc]." [ANEMIC CINEMA 1 3]
 "theater"	586626174	anemic cinema	--	--	"You don't need to go looking for screens to stare at right now. You have a world to save."
 "wait"	258225455	--	wait-seer	--	"[wait-see]."
@@ -717,7 +716,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "wordy"	410999494	--	Dr Yow	--	"Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if Dr Yow has been rowdy and Dr Yow has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]--but [he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]."
 "tentative"	788195264	--	--	kid-not-learnt rule	"The kid fidgets a bit but can't keep focused, though [he-she] wants to."
 "shoreline"	716559056	shoreline	--	--	"[towersloc]." [OLE SHRINE SHORELINE 3 2]
-"deacons"	409562652	--	deacons	--	"The deacons mumble to themselves, and you catch 'Lo! Is the...?' / 'Toils, eh.' and your calling upon supernatural powers that clearly don't exist. You feel devoid of can-does after your latest attempt, mumbling 'Eh, I lost.'[paragraph break]You get the sense the deacons have given you the run-around. They're not going to discuss their hostile ol['] heist around you[if deacons are ncscanned]--but maybe you can muddle through the odd readings from the settler[end if]."
+"deacons"	409562652	--	deacons	--	"The deacons mumble to themselves, and you catch 'Lo! Is the...?' / 'Toils, eh.' and your calling upon supernatural powers that clearly don't exist. You feel devoid of can-does after your latest attempt, mumbling 'Eh, I lost.'[paragraph break]You get the sense the deacons have given you the run-around. They're not going to discuss their hostile ol['] heist around you[if deacons are escanned]--but maybe you can muddle through the odd readings from the settler[end if]."
 "deacon"	313288686	--	deacons	--	"[plutry of deacons]There's more than one deacon blocking you."
 "shrine"	460586531	--	o-s	--	"The shrine is kind of sacred, and regardless of what you think of the deacons['] religion, messing with it would be a mean move."
 "actionless"	686724232	coastlines	--	--	"[towersloc]." [ACTIONLESS COASTLINES 3 3]
@@ -774,53 +773,54 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 table of otters nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "ly"	176173091	--	--	degen-true rule	"Yup, that's the idea here in Otters[if power-back is true], even with your powers back[end if]."
-"bare"	233736635	--	b-b	--	"[adj-needs-ly]?"
+"bare"	233736635	--	b-b	--	"[adj-needs-ly]."
 "cinder"	367064940	--	cinders	--	"You'll need to change more than one cinder."
 "cinders"	463338906	--	--	cinders-gone rule	"The cinders are gone for good."
 "bulwark"	425718123	--	bulwark	--	"The whole bulwark? No, you [if power-back is false]couldn't do much with it at full strength[else]can't do much[end if]. [if Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if power-back is false] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to, well, a bulwark."
-"bossy"	407678666	--	t-bossily	--	"[adj-needs-li]?"
-"bossi"	330312260	--	t-bossily	--	"[adj-needs-ly]?"
-"nasti"	315472156	--	t-seedily	--	"[adj-needs-ly]?"
-"nasty"	392838562	--	t-seedily	--	"[adj-needs-li]?"
-"seedi"	417908119	--	t-seedily	--	"[adj-needs-ly]?"
-"seedy"	495274525	--	t-seedily	--	"[adj-needs-li]?"
-"shadi"	201766018	--	t-shadily	--	"[adj-needs-ly]?"
-"shady"	279132424	--	t-shadily	--	"[adj-needs-li]?"
-"snide"	359009518	--	t-snidely	--	"[adj-needs-ly]?"
-"stark"	339828783	--	t-starkly	--	"[adj-needs-ly]?"
-"tacit"	272406285	--	t-cattily	--	"[adj-needs-ly]?"
-"teari"	363420594	--	t-tearily-irately	--	"[adj-needs-ly]?"
-"teary"	440787000	--	t-tearily-irately	--	"[adj-needs-li]?"
-"bleary"	409909726	--	t-blearily	--	"[adj-needs-li]?"
-"bleari"	332543320	--	t-blearily	--	"[adj-needs-ly]?"
-"ribald"	225766300	--	t-ribaldly	--	"[adj-needs-ly]?"
-"formal"	306268086	--	t-formally	--	"[adj-needs-ly]?"
-"coital"	297462683	--	t-coitally	--	"[adj-needs-ly]?"
-"modest"	486646912	--	t-modestly	--	"[adj-needs-ly]?"
-"shabbi"	217574739	--	t-shabbily	--	"[adj-needs-ly]?"
-"shabby"	294941145	--	t-shabbily	--	"[adj-needs-li]?"
-"shoddi"	294959866	--	t-shoddily	--	"[adj-needs-ly]?"
-"shoddy"	372326272	--	t-shoddily	--	"[adj-needs-li]?"
-"silent"	494904286	--	t-silently	--	"[adj-needs-ly]?"
-"steami"	438445910	--	t-steamily	--	"[adj-needs-ly]?"
-"steamy"	515812316	--	t-steamily	--	"[adj-needs-li]?"
-"sudden"	440151568	--	t-suddenly	--	"[adj-needs-ly]?"
-"stupid"	451977685	--	t-stupidly	--	"[adj-needs-ly]?"
-"martial"	355691295	--	t-martially	--	"[adj-needs-ly]?"
-"sincere"	570115926	--	t-sincerely	--	"[adj-needs-ly]?"
-"sobbing"	353964409	--	t-sobbingly	--	"[adj-needs-ly]?"
-"tedious"	572670412	--	t-tediously	--	"[adj-needs-ly]?"
-"wearing"	469752559	--	t-wearingly	--	"[adj-needs-ly]?"
-"drawling"	416789378	--	t-drawlingly	--	"[adj-needs-ly]?"
-"emotional"	613598445	--	t-emotionally	--	"[adj-needs-ly]?"
-"despairing"	605579646	--	t-despairingly	--	"[adj-needs-ly]?"
+"bossy"	407678666	--	t-bossily	--	"[adj-needs-li]."
+"bossi"	330312260	--	t-bossily	--	"[adj-needs-ly]."
+"nasti"	315472156	--	t-nastily	--	"[adj-needs-ly]."
+"nasty"	392838562	--	t-nastily	--	"[adj-needs-li]."
+"seedi"	417908119	--	t-seedily	--	"[adj-needs-ly]."
+"seedy"	495274525	--	t-seedily	--	"[adj-needs-li]."
+"shadi"	201766018	--	t-shadily	--	"[adj-needs-ly]."
+"shady"	279132424	--	t-shadily	--	"[adj-needs-li]."
+"snide"	359009518	--	t-snidely	--	"[adj-needs-ly]."
+"stark"	339828783	--	t-starkly	--	"[adj-needs-ly]."
+"tacit"	272406285	--	t-cattily	--	"[adj-needs-ly]."
+"catty"	349772691	--	t-cattily	--	"[adj-needs-li]."
+"teari"	363420594	--	t-tearily-irately	--	"[adj-needs-ly]."
+"teary"	440787000	--	t-tearily-irately	--	"[adj-needs-li]."
+"bleary"	409909726	--	t-blearily	--	"[adj-needs-li]."
+"bleari"	332543320	--	t-blearily	--	"[adj-needs-ly]."
+"ribald"	225766300	--	t-ribaldly	--	"[adj-needs-ly]."
+"formal"	306268086	--	t-formally	--	"[adj-needs-ly]."
+"coital"	297462683	--	t-coitally	--	"[adj-needs-ly]."
+"modest"	486646912	--	t-modestly	--	"[adj-needs-ly]."
+"shabbi"	217574739	--	t-shabbily	--	"[adj-needs-ly]."
+"shabby"	294941145	--	t-shabbily	--	"[adj-needs-li]."
+"shoddi"	294959866	--	t-shoddily	--	"[adj-needs-ly]."
+"shoddy"	372326272	--	t-shoddily	--	"[adj-needs-li]."
+"silent"	494904286	--	t-silently	--	"[adj-needs-ly]."
+"steami"	438445910	--	t-steamily	--	"[adj-needs-ly]."
+"steamy"	515812316	--	t-steamily	--	"[adj-needs-li]."
+"sudden"	440151568	--	t-suddenly	--	"[adj-needs-ly]."
+"stupid"	451977685	--	t-stupidly	--	"[adj-needs-ly]."
+"martial"	355691295	--	t-martially	--	"[adj-needs-ly]."
+"sincere"	570115926	--	t-sincerely	--	"[adj-needs-ly]."
+"sobbing"	353964409	--	t-sobbingly	--	"[adj-needs-ly]."
+"tedious"	572670412	--	t-tediously	--	"[adj-needs-ly]."
+"wearing"	469752559	--	t-wearingly	--	"[adj-needs-ly]."
+"drawling"	416789378	--	t-drawlingly	--	"[adj-needs-ly]."
+"emotional"	613598445	--	t-emotionally	--	"[adj-needs-ly]."
+"despairing"	605579646	--	t-despairingly	--	"[adj-needs-ly]."
 "lit"	201916703	--	a-l-t	--	"It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it."
 "tail"	204104521	--	a-l-t	--	"It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it."
 "steward"	543665576	--	Ed Riley	--	"Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?"
+"asteward"	545853394	--	Ed Riley	--	"Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?"
 "rye"	335489164	--	deli rye	--	"[del-ry]."
 "lied"	247641883	--	deli rye	--	"[del-ry]."
 "sandwich"	397613884	--	deli rye	--	"[del-ry]."
-"edriley"	583131047	--	Ed Riley	--	"If only Ed Riley said things less loudly, boomingly, startlingly..."
 "simply"	462981015	--	sly imp	--	"It's acting simply, but he can't be gotten rid of that simply. At least, nothing happens when you try. Maybe you need to consider more specific ways he's moving."
 "sly"	272447057	--	sly imp	--	"[imp-sly]."
 "imp"	190533958	--	sly imp	--	"[imp-sly]."
@@ -858,6 +858,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "monastery"	744396204	alcoves	--	--	"[w-change]."
 "eelmr"	458825013	--	--	eelmr rule	"[eelmry]."
 "sober"	402175360	--	sober robes	--	"If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down."
+"bored"	326930483	--	sober robes	--	"[e-m-prank]."
+"bore"	305901394	--	sober robes	--	"[e-m-prank]."
+"scowl"	351380740	--	sober robes	--	"[e-m-prank]."
+"cowl"	255106774	--	sober robes	--	"[e-m-prank]."
 "low"	236101189	--	owls	--	"You probably want the owls not to swoop low. And you'll want to take care of them all."
 "clipons"	438812280	--	slopinc	--	"The ocelots would still be awkward even if they lost the clip-ons."
 "kool"	255452171	--	look-kool	--	"You're not here to mess with fashion."
@@ -1040,13 +1044,13 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "memoir"	460625641	peek keep	--	--	"[no-mess]."
 "shall"	243371761	peek keep	--	--	"You can't get near the shall halls, although you still have the nonmagical ability to change the future. Well, some day you will."
 "great"	351027450	peek keep	--	--	"It was tested to make sure even you couldn't magic it open."
-"display"	422122769	peek keep	--	--	"You won't figure the code. There isn't one. Muahaha."
-"spy"	300099177	peek keep	--	--	"You won't figure the code. There isn't one. Muahaha."
-"dial"	122023592	peek keep	--	--	"You won't figure the code. There isn't one. Muahaha."
 "talks"	308318819	peek keep	--	--	"[its-a-museum]."
 "talk"	212044853	peek keep	--	--	"[its-a-museum]."
 "spec"	324551619	peek keep	--	--	"[its-a-museum]."
 "space"	326739437	peek keep	--	--	"[its-a-museum]."
+"display"	422122769	--	spy dial display	--	"You won't figure the code. There isn't one. Muahaha."
+"spy"	300099177	--	spy dial display	--	"You won't figure the code. There isn't one. Muahaha."
+"dial"	122023592	--	spy dial display	--	"You won't figure the code. There isn't one. Muahaha."
 "novella"	488046510	evoc-cove	--	--	"[no-no]"
 "lol"	181980255	evoc-cove	--	--	"[no-no]."
 "neva"	306066255	evoc-cove	--	--	"[no-no]."
@@ -1054,7 +1058,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "codewalls"	556217595	hows show	--	--	"[its-a-museum]."
 "code"	242193360	hows show	--	--	"[its-a-museum]."
 "sllaw"	314024235	hows show	--	--	"[its-a-museum]."
-"owl"	217750269	hows show	--	--	"[its-a-museum]."
+"owl"	236101189	hows show	--	--	"[its-a-museum]."
 "decal"	223842440	hows show	--	--	"[its-a-museum]."
 "allow"	292102846	hows show	--	--	"[its-a-museum]."
 "lots"	327550400	hows show	--	--	"[its-a-museum]."
@@ -1328,10 +1332,11 @@ to say fol-reag:
 	say "[if player is in circle][follow-the-list][else]Brother Horbert will do [i]his[r] magic on the reagents at the right time";
 
 this is the has-reag rule:
-	if player is in cleric circle:
-		the rule succeeds;
-	if number of visible quest-items > 0:
-		the rule succeeds;
+	if list o toils is examined:
+		if player is in cleric circle:
+			the rule succeeds;
+		if number of visible quest-items > 0:
+			the rule succeeds;
 	the rule fails;
 
 to say cant-giant:
@@ -1643,7 +1648,7 @@ this is the plains rule:
 	the rule fails;
 
 to say knob-skis:
-	say " of the door. More [if knob is flippable and skis are in plains]the knob and skis are impeding you[else if skis are in plains]the skis are blocking the door[else if knob is flippable]that knob is stuck[else]you managed to navigate the knob and skis[end if]";
+	say " of the door. More [if knob is flippable and skis are in plains]the knob and skis are impeding you[else if skis are in plains]the skis are blocking the door[else if knob is flippable]that knob is stuck[else]isn't needed, as you managed to navigate the knob and skis[end if]";
 
 to say prob-ov:
 	say "You are probably over-thinking it. There's a more direct way to tackle the rude door"
@@ -1675,7 +1680,7 @@ to say its-msg:
 section towers nudges
 
 to say bland-sad:
-	say "[if trefoil is not visited and waters are not visited]The badlands can't be changed on their own. They must be trekked through[else]You're beyond the badlands now[end if]"
+	say "[if mislit limits is not visited and waters are not visited]The badlands can't be changed on their own. They must be trekked through[else]You're beyond the badlands now[end if]"
 
 to say war-one:
 	say "[if number of visible warriors is 1]There's only one warrior left, and his name is Rodney[else if number of warriors in lalaland > 0]You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time[else]One at a time. Each has his own weakness[end if]";
@@ -1780,25 +1785,24 @@ to say giz-tex:
 	say "It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better"
 
 to say fix-boat-parts:
-	if blaster is off-stage:
-		say "The boat seems okay, except for not being able to propel itself. Maybe you can help the kid figure that out";
+	if blaster is reflexed and turbos are reflexed:
+		say "You fixed what you can of the boat";
+	else if turbos are reflexed:
+		say "You fixed the turbos, so maybe you can tackle the blaster";
+	else if blaster is reflexed:
+		say "You fixed the blaster, so maybe you can tackle the turbos";
 	else:
-		if blaster is reflexed and turbos are reflexed:
-			say "You fixed what you can of the boat";
-		else if blaster is not reflexed and turbos are not reflexed:
-			say "Hmm. It might be better to fix parts of the boat--the turbos and blaster";
-		else:
-			say "You've fixed part of the boat's mechanical bits. Maybe fix the other, instead of the whole boat, instead"
+		say "Hmm. It might be better to fix parts of the boat--the turbos and blaster";
 
 this is the serpent-hiding rule:
 	if player is in limits and serpent is in lalaland, the rule succeeds;
 	the rule fails.
 
 to say flow-fine:
-	say "The flowerpot is just fine--[if crocus is reflexed]and so is the crocus in it[else if crocus is not in flowerpot]it's the crocus that needs help[else if limits are unvisited]you haven't found anything to put in it yet[else]it needs something in it, though[end if]"
+	say "The flowerpot is just fine--[if limits are unvisited]you haven't found anything to put in it yet[else if crocus is reflexed]and so is the crocus in it[else if crocus is not in flowerpot]maybe something around here could go in it[end if]"
 
 to say towersloc:
-	say "It's not this location you need to change, but Castle Apcur, the Curst Palace [if player is in mislit limits]right by you[else if player is in trefoil or player is in solo den]nearby[else]across Leak Lake[end if]";
+	say "It's not this location you need to change, but Castle Apcur, the Curst Palace [if location of player is mislit limits]right by you[else if location of player is solo den]nearby[else]across Leak Lake[end if]";
 	if number of guardians in location of player > 0:
 		say ". You might also want to try to deal with [the list of guardians in location of player]";
 
@@ -1820,7 +1824,7 @@ this is the cppc rule:
 	the rule fails.
 
 to say adj-needs-ly:
-	say "Your powers are so weak that you need to add a few letters to the word you need. You can guess which. Ironic, eh"
+	say "Your powers are so weak that you need to add a few letters to the word you need. Which you probably know from dealing wih Ed and the barley"
 
 this is the cinders-gone rule:
 	if cinders are in lalaland, the rule succeeds;
@@ -1862,7 +1866,7 @@ to say w-change:
 
 to say eelmry:
 	if player is in bran barn:
-		say "[if p-2 is reflexed]You managed to help Mr. Lee enough[else if eels are reflexed]It would be better to show Mr. Lee, but you don't need to, since you talked with Le Mer[else]You just need to show Mr. Lee, not change him[end if]";
+		say "[if p-2 is in lalaland]You managed to help Mr. Lee enough[else if eels are reflexed]It would be better to show Mr. Lee, but you don't need to, since you talked with Le Mer[else]You just need to show Mr. Lee, not change him[end if]";
 		continue the action;
 	if player is in loop pool:
 		say "[if eels are reflexed]You managed to help Le Mer enough[else if p-2 is reflexed]It would be better to show Le Mer, but you don't need to, since you talked with Mr. Lee[else]You just need to show Le Mer, not change it[end if]";
@@ -1875,10 +1879,13 @@ to say eelmry:
 	else:
 		say "You think back to whom you've met so far once past the frontage"
 
+to say e-m-prank:
+	say "If you did play a too-obvious prank on Elmer and Merle, they might guess who you were and get Elvira to take you down"
+
 this is the eelmr rule:
 	if player is in alcoves and Elmer is in alcoves:
 		the rule succeeds;
-	if player is in bran barn and m-l is in bran barn:
+	if player is in bran barn and mr lee is in bran barn:
 		the rule succeeds;
 	if player is in loop pool:
 		the rule succeeds;

@@ -98,7 +98,7 @@ Nothing happens. You consider going through yet more possibilities, but that'd b
 Nothing happens. You didn't really expect it to since, hey, no u with the q.
 
 >strore
-Store R led back to your manor last game. It won't go anywhere new, and you don't need or want to go back, right now[if roved is false]. You wouldn't be safe there[end if].
+Store R led back to your manor last game. It won't go anywhere new, and you don't need or want to go back, right now. You wouldn't be safe there.
 
 >someoen
 >nouned

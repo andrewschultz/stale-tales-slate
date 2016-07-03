@@ -11,6 +11,10 @@
 
 * weird stuff
 
+>ts
+>presto
+>enter spot
+
 >custr
 You should eat your food, not play with it. Yes, even if it's only MARGINALLY food."
 
@@ -49,11 +53,14 @@ It's just one letter in the maze. You may want to focus on the whole volt maze.
 >e
 >bigr
 It's just one letter in the maze. You may want to focus on the whole volt maze.
->n
+>e
 >bigs
 It's just one letter in the maze. You may want to focus on the whole volt maze.
->w
+>n
 >bigt
+It's just one letter in the maze. You may want to focus on the whole volt maze.
+>w
+>bigu
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >n
 >bigv
@@ -61,7 +68,8 @@ It's just one letter in the maze. You may want to focus on the whole volt maze.
 >iddler
 You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22.
 >n
-WRONG WRITE UP MATZO LEV CLUES ETC
+giant spinning robot dreidl pushes you back to the start of the maze as it belts riddle after riddle
+
 Grey Gyre
 >egry
 You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
@@ -233,7 +241,7 @@ You don't need to combine them physically, but their physical strengths combined
 You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
 
 >bigon
-You try something that doesn't [i]quite[r] work, but you assure yourself it'll put you a bit closer to an a-ha moment.
+You try something that doesn't quite work, but you assure yourself it'll put you a bit closer to an a-ha moment.
 
 >bingo
 I loc coil-loci
