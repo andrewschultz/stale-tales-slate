@@ -5747,8 +5747,6 @@ to decide which thing is oyster-item:
 			decide on a-s;
 		if ruby is off-stage:
 			decide on bubble wrap;
-	if player has paler pearl:
-		decide on paler pearl;
 	if player has gleaner and gleaner is reflexive:
 		decide on gleaner;
 	if player is in hedron:
@@ -16093,7 +16091,7 @@ clam	"The pills form a large maze with no dead ends. The clam goes after the bou
 urn	"The urn, being possessed of greed, seems to suck in the pills, which cause it to shake. You run in a random direction as it explodes. Hm, run, urn. You could've figured that, but, well, time to move on."
 boats	"A boat pulls over as you spill the pills. 'If ye need a ride, come aboard! We'll collect yer coins...'[paragraph break]Before you can protest, you're aboard. You hear yelling as several of the fish realize the 'coins' are pills. They don't like freeloaders..."
 oars	"The pills must've been energy pills, because they jump up and down and attach to the oars and create a reaction that blasts your raft into the air to the other side! With a bump, you tumble out and walk a bit..."
-plea	"The crays are dumb enough to think that the pills might be coins. In the ensuing hubbub, you jump over the edge and swim to shore."
+plea	"Some of the crays are dumb enough to think that the pills might be coins. In the ensuing hubbub of arguments between smart fish and dumb fish, you jump over the edge and swim to shore."
 carps	"The carps and pikes, distracted by the pills that fall out and keep jumping, ignore the trout. 'You stupid! Those pills are valuable. Out of our way, mouth-breather.' The range anger wells up in you."
 lance	"The pills somehow dissolve the ugly bits on the lance. It's the retractable sort, which is handy for carrying."
 tubs	"You spill the pills and slip on them, because no bathmat is around. In the process, you smack your elbow against the tubs. Right on the funny bone. You find it so unfunny you beat the tubs into waste. Which might be hiding more than just that prod you found inside."
@@ -16102,7 +16100,7 @@ heaps	"The pills you spill on the heaps cause a bizarre chemical reaction. You d
 waste	"The pills perform a disturbing chemical reaction with the waste, dissolving to leave a dirty lance."
 wrap	"'Man! That might just be the cure for my ears!' The sardine grabs the pills as the first one falls, and in a brief melee, your bubble wrap falls. He flees, and as you run after him, you step on the bubble wrap, causing it to tear and pop.[paragraph break]The wrap feels ruined, now, like you can't warp it, but you do notice a ruby inside. It seems valuable. So you take it."
 a-s	"The pills bounce over by the arches. You try to grab them back but wind up grabbing a hidden pearl by mistake."
-gleaner	"You absent-mindedly shake the pills out. Some bounce off the general gleaner, and as you look for cracks or damage, you see a pattern within. A way through a maze."
+gleaner	"You absent-mindedly shake the pills out. Some bounce off the general gleaner, which swells oddly, and as you look for cracks or damage, you see a pattern within. A way through a maze."
 o-t	"The pills thump all over the floor, but you notice one segment sounds hollow. You go over, look under and--voilà! You are able to defuse the ol['] trap with a switch. Alas, the pills are too scattered to replace. Some kind of spilled into the floor too, but yeah, the five second rule, anyway."
 ant	"With the pills dropping around, the ant is distracted, and your wild hacks with the lance easily chase it. But your lance breaks in the process."
 ruby	"The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint."
@@ -16156,12 +16154,11 @@ carry out spilling:
 				if wipes are in sand home:
 					decrease poss-score of oyster by 4; [swipe sweat clean shape (not part of the quest but not doable without it) tan]
 			now player has wrap;
-			if tea tray is not in lalaland:
-				now player has tea tray;
-			say "You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of bubble wrap[if tea is not in lalaland] and the tea tray, too[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel don't know how. Anyway, once you left, she kept muttering how she wanted to get rid of this bubble wrap to somebody. So I snuck it for you.'";
+			say "You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of bubble wrap[if tea is not in lalaland] and something from the tea tray, too--a paler pearl[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel don't know how. Anyway, once you left, she kept muttering how she wanted to get rid of this bubble wrap to somebody. So I snuck it for you.'";
 			guy-cheat trout;
 			now aunt-tuna-cross is true;
 			move player to anger range;
+			pearl-check;
 			do nothing instead;
 		else:
 			say "That would be a rude parting gift. You've claimed your reward--the bubble wrap[if tea tray is not in lalaland]. Though it would seem polite--and straightforward--to try something from the tea tray[end if]." instead;
@@ -16169,14 +16166,14 @@ carry out spilling:
 		say "The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.";
 		increase min-score of oyster by cur-score of oyster;
 		guy-cheat trolls;
-		if cur-score of oyster < 3:
-			now poss-score of oyster is poss-score of oyster + cur-score of oyster - 3; [you will not lose a point using the pills later to tutor Tortu the trout if you use the pills now]
 		reg-inc;
+		if cur-score of oyster < 3:
+			now poss-score of oyster is poss-score of oyster + cur-score of oyster - 3; [you can skip up to 3 points but will not lose a point using the pills later to tutor Tortu the trout if you use the pills now. So really the maximum to lose is 2.]
 		move player to olde lode instead;
 	if player is in Hedron and walleyes are in hedron: [walleyes can't really be flipped. You need to go through the sausage.]
 		say "You don't have one for everyone, and there's too many everyone, anyway. You'll need to outsmart the walleyes." instead;
 	if oi is the player:
-		say "You spill out a pill, cautiously, but nothing happens. Maybe you're done here." instead;
+		say "You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long." instead;
 	if player is in uaah:
 		if oi is waste or oi is heaps or oi is lance:
 			say "That might be a bit dirty, and you wonder if it's really worth it to use the pills on beautification (fourth wall note: this will only help with an optional side quest). Go ahead anyway?";
@@ -16187,6 +16184,7 @@ carry out spilling:
 	if oi is scrawl:
 		if ruby is not in lalaland:
 			say "As you turn the pill jar upside-down, the pills stay in--as if some supernatural force is pushing them up, because they aren't ready to come out yet.[paragraph break]Hmm. Maybe you have more to do before you find what's under, here." instead;
+		try unearthing haunter instead;
 	if oi is haunter and haunter is reflexed:
 		say "As you go to spill the pills, the haunter moans 'My ruby!' You won't need memory pills to recall where you buried it." instead;
 	if oi is d2 and lev-pull is false:
@@ -16205,6 +16203,12 @@ carry out spilling:
 	else:
 		say "You should be able to spill the pills to work on the [oi] but you can't. This is a BUG and I need to put an entry in a table for the [oi].";
 	the rule succeeds;
+
+report spilling pills:
+	if scams is true:
+		d "Let's refill the pills, since we're scam-testing.";
+		now jar-empty is false;
+		now player has pills;
 
 chapter produceredocuping
 
@@ -16442,7 +16446,7 @@ book Fighter Freight
 
 Fighter Freight is a room in Oyster. "You're near the edge of a fighter freight. You're half-paralyzed with fear. With or without that pale plea echoing from below."
 
-some scary crays are plural-named terse people in Fighter Freight. "Scary Crays hover here, on the verge of attacking.". description is "They don't have any weapons, but they are staring intently at you, ready to take you down."
+some scary crays are plural-named terse people in Fighter Freight. "Scary crays hover here, on the verge of attacking.". description is "They don't have any weapons, but they are staring intently at you, ready to take you down."
 
 understand "cray" and "scary cray" as crays.
 
@@ -18036,7 +18040,7 @@ to say big-hint of (rayx - a thing) :
 		choose row with the-from of rayx in the table of towers anagrams;
 		say "[right-word entry in upper case]";
 	else:
-		say "[if rayx is kid]ATTENTIVE[else if rayx is yurts]RUSTY[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is crocus]DINGY[else if rayx is flowerpot and limits is visited]DINGY[else if rayx is ed yerg]GREEDY[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is old ice]COILED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is pulses]UNREAL[else if rayx is palace]SPECTACULAR[else if xray is fissure]FUSSIER[else if rayx is strudel]RUSTLED[else if rayx is raves save]PEARLY[else]BUG[end if]";
+		say "[if rayx is smart kid]ATTENTIVE[else if rayx is yurts]RUSTY[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is crocus]DINGY[else if rayx is flowerpot and limits is visited]DINGY[else if rayx is ed yerg]GREEDY[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is old ice]COILED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is pulses]UNREAL[else if rayx is palace]SPECTACULAR[else if rayx is fissure]FUSSIER[else if rayx is strudel]RUSTLED[else if rayx is raves saver]PEARLY[else]BUG[end if]";
 
 xray-warn is a truth state that varies.
 
@@ -18051,6 +18055,15 @@ check giving hintpastry to a guardian:
 palace-warn is a truth state that varies.
 
 check xraying:
+	if noun is crocus:
+		try xraying flowerpot instead;
+	if noun is flowerpot:
+		if noun is reflexed:
+			say "The flowerpot has a plant in it. You decline to speculate in molecular biology or whatever." instead;
+		if mislit limits is unvisited:
+			say "Nothing, yet. Maybe you're not far enough along." instead;
+		if player is not in mislit limits:
+			say "Maybe you should go back outside." instead;
 	if noun is rayed and xraytrump is false:
 		ital-say "you already xrayed this, so you're just remembering what it was...";
 	else if xrayvision is false and xraytrump is false:
@@ -18075,7 +18088,7 @@ check xraying:
 		if strudel is visible:
 			try xraying strudel instead;
 		else:
-			say "Without the strudel, you can't really see into the sled rut." instead;	
+			say "Without the strudel, you can't really see into the sled rut." instead;
 	if noun is Dr Yow:
 		if Dr Yow has been rowdy and Dr Yow has been wordy:
 			say "You've done what you can with Dr. Yow. [he-she-c] can be rowdy or wordy." instead;
@@ -18099,8 +18112,7 @@ check xraying:
 		if turbos are reflexive:
 			try xraying turbos instead;
 	if noun is reflexed or noun is nonreflexive:
-		if noun is not crocus:
-			say "That doesn't seem to need internal changing. Maybe find something or someone else to x-ray." instead;
+		say "That doesn't seem to need internal changing. Maybe find something or someone else to x-ray." instead;
 	if noun is palace:
 		if palace-warn is false:
 			now palace-warn is true;
@@ -25723,7 +25735,7 @@ to say d-then:
 		say "pull the lever then ";
 
 to say how-pills-used:
-	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is crate]TRACE the crate[else if cheated-guy is rude door]REACT to the next crate[else if cheated-guy is a-s]SEARCH the arches[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over the river[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is o-t]PATROL for the portal[else if cheated-guy is dialer][d-then]REDIAL the dialer[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
+	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is crate]TRACE the crate[else if cheated-guy is rude door]REACT to the next crate[else if cheated-guy is a-s]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over the river[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is o-t]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
 
 a region can be tickedoff. a region is usually not tickedoff.
 

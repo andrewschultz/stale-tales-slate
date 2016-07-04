@@ -8017,6 +8017,7 @@ blurb
 "That Good at Hot, Dog"
 "That is at This"
 "That Song: Hot Angst"
+"Thin, Cute, in the Cut"
 "A Thing O['] Hot Gain"
 "This Cat, His Tact"
 "This Fellow's Fliest Howls"
@@ -11919,6 +11920,7 @@ blurb	prio
 "I, Monomania[r], by Naomi Miano"
 "I Mope, Lost, Too Simple[r], by [if player is male]Tim Spoole[else]Pet Loomis[end if]"
 "I, Mr. Galore Rigmarole[r], by Roger Lima" []
+"I Must Near a Terminus[r], by Sue Martin"
 "I: My Angst May Sting[r], by Misty Nga"
 "I: My Trial, Military[r], by Mia Tyril"
 "I, Named Maiden[r], by Mandie Medina" []

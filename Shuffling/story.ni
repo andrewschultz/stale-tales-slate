@@ -388,7 +388,7 @@ to say m-r-almost:
 		say "The [if player is in moor]moor[else]room[end if] sways a bit. You do some brief mental calculation. There's no third place between them";
 	else:
 		say "You almost feel something picking you up for a second. You must have been close"
-	
+
 to say red-to:
 	now red asp is in Enclosure;
 	now spread is in lalaland;
