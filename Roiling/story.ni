@@ -18036,7 +18036,7 @@ to say big-hint of (rayx - a thing) :
 		choose row with the-from of rayx in the table of towers anagrams;
 		say "[right-word entry in upper case]";
 	else:
-		say "[if rayx is kid]attentive[else if rayx is turbos]robust[else if rayx is blaster]stabler[else if rayx is duck]unlocked--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]unlocked[if-duck][else if rayx is crocus]dingy[else if rayx is flowerpot and limits is visited]dingy[else if rayx is ed yerg]greedy[else if rayx is denim]mined[else if rayx is weeds]sewed[else if rayx is old ice]coiled[else if rayx is eastern]nearest[else if rayx is serpent]present[else if rayx is pulses]unreal[else if rayx is palace]spectacular[else if rayx is strudel]rustled[else]BUG[end if]";
+		say "[if rayx is kid]ATTENTIVE[else if rayx is yurts]RUSTY[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is crocus]DINGY[else if rayx is flowerpot and limits is visited]DINGY[else if rayx is ed yerg]GREEDY[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is old ice]COILED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is pulses]UNREAL[else if rayx is palace]SPECTACULAR[else if xray is fissure]FUSSIER[else if rayx is strudel]RUSTLED[else if rayx is raves save]PEARLY[else]BUG[end if]";
 
 xray-warn is a truth state that varies.
 
@@ -18051,8 +18051,6 @@ check giving hintpastry to a guardian:
 palace-warn is a truth state that varies.
 
 check xraying:
-	if map region of location of noun is not towers:
-		say "You're not in the right region to x-ray anything." instead;
 	if noun is rayed and xraytrump is false:
 		ital-say "you already xrayed this, so you're just remembering what it was...";
 	else if xrayvision is false and xraytrump is false:
@@ -18073,8 +18071,11 @@ check xraying:
 		say "You might expose yourself to harmful rays and stuff, looking that close." instead;
 	if noun is kid and Dr Yow is not visible:
 		say "[if Dr Yow is not visible]'I--I don't like free candy, [mrmaam],' [he-she] says, looking scared.[paragraph break]Maybe you can't quite help [him-her] now[else]The kid seems to cringe, memories of bullying hall monitors, probably[end if]." instead;
-	if noun is reflexed or noun is nonreflexive:
-		say "That doesn't seem to need internal changing. Maybe find something or someone else to x-ray." instead;
+	if noun is sled rut:
+		if strudel is visible:
+			try xraying strudel instead;
+		else:
+			say "Without the strudel, you can't really see into the sled rut." instead;	
 	if noun is Dr Yow:
 		if Dr Yow has been rowdy and Dr Yow has been wordy:
 			say "You've done what you can with Dr. Yow. [he-she-c] can be rowdy or wordy." instead;
@@ -18097,11 +18098,14 @@ check xraying:
 			try xraying blaster instead;
 		if turbos are reflexive:
 			try xraying turbos instead;
+	if noun is reflexed or noun is nonreflexive:
+		if noun is not crocus:
+			say "That doesn't seem to need internal changing. Maybe find something or someone else to x-ray." instead;
 	if noun is palace:
 		if palace-warn is false:
 			now palace-warn is true;
-			say "Boy! This is a big one. You are overwhelmed by the superlativeness of the way to describe the castle. You are pretty sure you can handle it. Well, I'm pretty sure you are pretty sure. Are you pretty sure?";
-			if the player consents:
+			say "Boy! This is a big one. You are overwhelmed by the superlativeness of the way to describe the castle. You are pretty sure you can handle that word being spoiled. Well, I'm pretty sure you are pretty sure. Are you pretty sure you can handle the spoiler?";
+			if the player yes-consents:
 				do nothing;
 			else:
 				say "You decide to be pretty sure you can figure it on your own, instead." instead;
@@ -18502,6 +18506,7 @@ Report taking the Rosetta toaster:
 
 after fliptoing strudel:
 	now player has strudel;
+	now sled rut is in lalaland;
 	continue the action;
 
 check fliptoing strudel:
@@ -18515,7 +18520,7 @@ book Scope Copse
 
 Scope Copse is north of Topside Deposit. Scope Copse is in Towers. "A [one of]spec-o-scope (scope, for short)[or]scope[stopping] looks into the ground in the center of this wooded area[if yurts are visible], with some yurts looking out of place here[end if]. Paths lead in all directions, though things open up to the north and east."
 
-the yurts are plural-named scenery in scope copse. "The yurts, of dull sturdy metal, don't look very lived-in. They read TRY US in red letters."
+the yurts are plural-named vanishing scenery in scope copse. "The yurts, of dull sturdy metal, don't look very lived-in. They read TRY US in red letters."
 
 understand "yurt" as yurts.
 
@@ -18714,7 +18719,7 @@ a-text of denim is "RYRYR". b-text of denim is "RYPYR". parse-text of denim is "
 
 description of denim is "Too heavy for normal tools to cut."
 
-the weeds are scenery in Ravages. "They look like some sort of mutant weeds from the future, maybe a crazy one with multi-layered cities. They blow in some undetectable wind: west, then east a while, then down and south. There may be something inside them, but you can't tell."
+the weeds are vanishing scenery in Ravages. "They look like some sort of mutant weeds from the future, maybe a crazy one with multi-layered cities. They blow in some undetectable wind: west, then east a while, then down and south. There may be something inside them, but you can't tell."
 
 check taking weeds:
 	say "They spin around you like a garment before picking you up and placing you away." instead;
@@ -19920,7 +19925,7 @@ check scaning curst palace (this is the nab a few letters rule) :
 		else:
 			say "You don't see any more than you have before[if palace-let < max-pal-seen]. In fact, you have less information than when you were closer[end if].";
 	else if max-pal-seen < 11:
-		say "The entire settler lights up[if max-pal-seen is 0]--but it takes a while. You're lucky you're so close.[else], finally[end if]!";
+		say "The entire settler lights up[if max-pal-seen is 0]--but it takes a while. You're lucky you're so close[else], finally[end if]!";
 	if max-pal-seen < palace-let:
 		now max-pal-seen is palace-let;
 
