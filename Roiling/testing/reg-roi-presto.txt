@@ -210,6 +210,9 @@ The camo-coma remains as-is. It's sturdy, military-grade stuff
 The number's got more numerals than letters
 >popgun
 Hmm. It's not the popgun itself that's cracked but the boing mechanism inside
+
+>bigon
+You try something that doesn't quite work
 >bingo
 >spoilt
 The popgun is just fine
@@ -230,10 +233,10 @@ You don't need to face double the strength.
 
 >darn
 >lorenda
-Well, they're upset, now. You need to concentrate on them being washups.
+They want to be together, but that's a bit much. Try fixing what they're complaining about, calming their fears.
 
 >whasup
-Maybe something like that'd work with just one washup. But there are two.
+That feels almost right, but you remember that that word has 2 s's in a row.
 
 >upshasw
 You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
@@ -247,10 +250,11 @@ You don't need to combine them physically, but their physical strengths combined
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >bigon
-You try something that doesn't quite work, but you assure yourself it'll put you a bit closer to an a-ha moment.
+It's nice and springy as-is.
 
 >bingo
-I loc coil-loci
+You can't force another revelation
+
 >n
 >n
 >n
@@ -314,6 +318,7 @@ You aren't sure which key would work, so you need a plan to get them all.
 >syke
 Syke-illogical
 
+>undo
 >gosh
 You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an "Aw, LOL. Allow all...ow!"
 
@@ -352,13 +357,16 @@ You may want to focus on the highlighted letters on the sign.
 >so long
 
 >ashck
+You'll need to enter the shack to take care of things here.
+
+>n
+Hacks' Shack
+
+>ashck
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >ahck
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
-
->n
-Hacks' Shack
 
 >orstep
 to change the current region
@@ -393,10 +401,10 @@ There are buttons all over the shack, but they should remain that way. You may h
 >escarole
 All the escaroles.
 
->trim
-They're not just socks, or trim. They're trim socks.
-
 >trimsock
+You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
+
+>trim
 They're not just socks, or trim. They're trim socks.
 
 >sock
@@ -444,6 +452,8 @@ It's cola, not soda or pop. And you can just drink it.
 
 >trimsocks
 You don't have the available memory in your head to see all the possibilities, but yes, something like that MUST work.
+
+>rom sticks
 
 >rmo
 You'll know what to do with the sticks when you're ready to program.
@@ -495,6 +505,8 @@ C'est pas sap. C'est du CLOCK SAP.
 >caps lock
 >screen
 >put screen on slab
+>put disk in drive
+>put keyboard on slab
 
 >ebroot
 You need to give that computer another (figurative) kick.
@@ -562,18 +574,6 @@ by one point
 >repo
 You don't need to do anything with the skid's rope.
 
->push skid s
-
->push skid n
->push skid n
->push skid n
-
->dksi
-Bleah. Did all this high-tech work make you forget the skid was a disk? Yes. Yes, it did.
-
->disk
->put disk in drive
-
 >yeko
 It's not just any yoke. It's a drab yoke. I mean, a particularly drab yoke. On the bored yak.
 
@@ -589,13 +589,31 @@ You may wish to decipher the scratchings, instead.
 >scratching
 You may wish to decipher the scratchings, instead.
 
+>push skid s
+
+>push skid n
+>push skid n
+>push skid n
+
+>dksi
+No, skid <=> disk is about it. There's no tricky third way.
+
+>disk
+>put disk in drive
+
 >reboot
 The keyboard isn't connected. This probably wouldn't be fatal, but why not do first things first?
 
+>keyboard
+
 >put keyboard on slab
+
+>put disk in drive
 
 >ntotobe
 Even more nothing happens than you expected. The blue button really is too broken. But the orange is not.
+
+>reboot
 
 >compile
 You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile.
@@ -631,6 +649,8 @@ You'll need to re-enter the shack to take care of things here.
 
 >compeli
 You've assembled the letters incorrectly.
+
+>caps lock
 
 >put caps in keyboard
 It fits in perfectly, right beneath the TBA (ehh? That's not quite right) key.

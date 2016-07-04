@@ -4243,7 +4243,7 @@ to say got-e:
 	say "You've got an entry. No need to seal it up"
 
 to say sk2dsk:
-	say "No, skid <=> disk is about it."
+	say "No, skid <=> disk is about it. There's no tricky third way."
 
 to say giant-over:
 	say "The bench isn't important with the giant gone"
@@ -4730,49 +4730,46 @@ definition: a room (called myrm) is ominous:
 last-wall is a thing that varies. last-wall is usually owl decal code wall.
 
 when play begins (this is the hint and other randomization rule):
-	let myrand be 0;
+	if a random chance of 1 in 2 succeeds: [routes random clues]
+		now pier-first is true;
 	if a random chance of 1 in 2 succeeds:
-		now turbfirst is true;	[these are for random cluing]
-	if a random chance of 1 in 2 succeeds:
-		now goshy is true;
-	if a random chance of 1 in 2 succeeds:
-		now song-first is true;
-	if a random chance of 1 in 2 succeeds:
-		now viewer-first is true;
-	if a random chance of 1 in 2 succeeds:
+		now thor-first is true;
+	now wibe-count is a random number between 0 and 1; [within/behind]
+	if a random chance of 1 in 2 succeeds: [troves random clues]
 		now bee-head-first is true;
+	if a random chance of 1 in 2 succeeds:
+		now rivets-first is true;
 	if a random chance of 1 in 2 succeeds:
 		now lobster-first is true;
 	if a random chance of 1 in 2 succeeds:
-		now thor-first is true;
-	if a random chance of 1 in 2 succeeds:
-		now t-or-b is turbos;
-	else:
-		now t-or-b is blaster;
-	if a random chance of 1 in 2 succeeds:
-		now rivets-first is true;
-	sort byebyes in random order;
-	now wibe-count is a random number between 0 and 1;
-	sort marcitems in random order;
-	sort nextclue in random order;
+		now song-first is true;
+	if a random chance of 1 in 2 succeeds: [presto random clues]
+		now goshy is true;
+	sort byebyes in random order; [phat path ways to say goodbye]
+	now a random badbook is in hacks' shack;
+	sort marcitems in random order; [posh hops shop items] [oyster random clues]
 	if a random chance of 1 in 2 succeeds:
 		now carps-pref is true;
 	else:
 		now carps-pref is false;
-	now a random badbook is in hacks' shack;
-	sort table of animal randomness in random order;
-	sort the table of xibits in random order;
+	if a random chance of 1 in 2 succeeds: [towers random clues]
+		now t-or-b is turbos;
+	else:
+		now t-or-b is blaster;
+	sort table of animal randomness in random order; [otters hinting]
+	if a random chance of 1 in 2 succeeds: [others random clues]
+		now viewer-first is true;
+	sort nextclue in random order; [mislit limits items]
+	sort the table of xibits in random order; [demo dome exhibit stuff]
 	let wt be 0;
 	repeat through table of xibits:
 		increase orwt entry by wt;
 		increment wt;
 	sort the table of xibits in orwt order;
-	if a random chance of 1 in 2 succeeds:
+	if a random chance of 1 in 2 succeeds: [demo dome random pokes]
 		now last-wall is owl decal code wall;
 	else:
 		now last-wall is allow lots tools wall;
-	let mycount be 0;
-	d "[list of exhibits].";
 
 volume yes-no substitutes
 
@@ -5367,6 +5364,8 @@ carry out presto-hinting:
 			now spoilit is false instead;
 		try objhinting plebe instead;
 	if player is in austerer:
+		if ye hoop is in austerer:
+			try objhinting ye hoop instead;
 		if spoilit is false:
 			all-say "You are done here in Austerer Treasure." instead;
 	if star is visible and star is in Burnt Brunt:
@@ -5387,6 +5386,8 @@ carry out presto-hinting:
 		try objhinting boing mechanism instead;
 	if popgun is visible:
 		if dart is not in popgun:
+			if spoilit is true:
+				now spoilit is false;
 			try objhinting popgun instead;
 	if player is in marines seminar:
 		if spoilit is true:
@@ -5570,7 +5571,10 @@ carry out routes-hinting:
 			try objhinting narrow cracks instead;
 		try objhinting un-road instead;
 	if location of player is ripe pier:
-		try objhinting pier sign instead;
+		if pier-first is true:
+			try objhinting pier sign instead;
+		else:
+			try objhinting da mist instead;
 	if location of player is Cripple Clipper:
 		if ship controls are reflexive:
 			try objhinting ship controls instead;
@@ -5580,7 +5584,7 @@ carry out routes-hinting:
 	if list o toils is unexamined:
 		all-say "[if spoilit is true]The spoon reflects to[else]You will want to examine[end if] the list-o-toils." instead;
 	if player has mushrooms and player has runed book and player has pipe soot:
-		all-say "[if spoilit is true]The spoon points[else]You should return[end if] to the Cleric Circle now you have all the items.";
+		all-say "[if spoilit is true]The spoon points[else]You should return[end if] to the Cleric Circle now you have all the items." instead;
 	if spoilit is true:
 		all-say "You can't angle the spoon productively. Maybe use it later." instead;
 		now spoilit is false instead;
@@ -5602,6 +5606,8 @@ to decide whether thor-is-hinted:
 	if beet is reflexive and thor-first is false:
 		decide no;
 	decide yes.
+
+pier-first is a truth state that varies.
 
 wibe-count is a number that varies.
 
@@ -5643,11 +5649,10 @@ carry out troves-hinting:
 				try objhinting rivets instead;
 			else:
 				try objhinting prai instead;
-		if Pernod is reflexive:
-			try objhinting Pernod instead;
+		try objhinting Pernod instead;
 	if location of player is FiefCo Office:
 		if noise is in office:
-			try objhinting noise instead;
+			try objhinting vanity instead;
 		if stream is reflexive and lobster is in office:
 			if lobster-first is true:
 				try objhinting lobster instead;
@@ -5876,8 +5881,6 @@ carry out towers-hinting:
 to decide what indexed text is the vul of (w - a warrior):
 	choose row with the-from of w in table of towers anagrams;
 	decide on "[right-word entry]";
-
-turbfirst is a truth state that varies.
 
 to decide which direction is the psgdir of (gu - a guardian):
 	if gualoc of gu is not location of player:
@@ -13087,7 +13090,7 @@ check objhinting rivets:
 		try objhinting prai instead;
 	if rivets are reflexed and prai is reflexive:
 		try objhinting prai instead;
-	if rivets are reflexive and prai is reflexive:
+	if rivets are reflexed and prai is reflexed:
 		all-say "You learned all you could from the statue." instead;
 
 the prai is privately-named reflexive scenery in Econ Cone. prai is undesc. printed name of prai is "PRAISE".
@@ -13430,7 +13433,7 @@ check eating curst crust:
 	if crust-warn is false:
 		say "Ugh! This crust may help you out, but it may be--wait for it--distasteful and spoiled. Go ahead anyway?";
 		now crust-warn is true;
-		unless the player consents:
+		unless the player yes-consents:
 			say "OK, maybe later. This warning won't appear again." instead;
 	say "You wince and prepare to take a bite...";
 	now spoilit is true;
@@ -13730,7 +13733,7 @@ instead of doing something to gaps:
 The bored yak is a neuter animal in Burnt Brunt. "[one of]A yak languishes here. It looks bored, and that drab yoke around it doesn't help[or]The bored yak with the drab yoke is still hanging around[stopping]."
 
 after doing something with the bored yak:
-	set the pronoun he to the bored yak;
+	set the pronoun him to the bored yak;
 	set the pronoun her to the bored yak;
 	continue the action;
 
@@ -18103,7 +18106,7 @@ check xraying:
 			else:
 				say "You decide to be pretty sure you can figure it on your own, instead." instead;
 	if noun is guardian:
-		say "Hmm. You bet you could get past if [if noun is plural-named]those blockers[else]that blocker[end if] were [big-hint of noun].";
+		say "Hmm. You bet you could get past if [the noun] were [big-hint of noun].";
 	else if noun is warrior: [do I need this? Since warriors moved to start]
 		say "Boy! Sure would be nice if he were [big-hint of noun].";
 	else if noun is rayed:
@@ -18116,7 +18119,10 @@ check xraying:
 		poss-d;
 	now used-ray is true;
 	now noun is rayed;
-	now xrayvision is false;
+	if scams is false:
+		now xrayvision is false;
+	else:
+		d "Xray cheat retains x-ray vision.";
 	now undo-code is 2;
 	prevent undo;
 	the rule succeeds;
@@ -24333,7 +24339,7 @@ carry out objhinting (this is the pick object to hint rule) :
 				if player is in shack:
 					say "You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try [spoil-entry entry]." instead;
 				else:
-					say "You gulp the crust and can't help thinking [spoil-entry entry]. But you are too polite to say it until you've finished chewing!";
+					say "You gulp the crust and can't help thinking [spoil-entry entry]. But you are too polite and/or represssed to say it until you've finished chewing, which takes a while!";
 				if scams is false:
 					decrement swears;
 				now undo-code is 1;
