@@ -50,7 +50,7 @@ while ($count <= $#ARGV)
   /^-r$/ && do { my @mma = split(/,/, $b); $minWords = $mma[0]; $maxWords = $mma[1]; $count++; next; };
    /^-m$/ && do { $maxWords = $b; $count += 2; next; };
    /^-mm$/ && do { $minWords = $maxWords = $b; $count += 2; next; };
-   /^[a-z]/ && do { if ($cmdToAn) { die("2 possible words, bailing.\n"); } else { $cmdToAn = $a; $count++; } };
+   /^[a-z]/ && do { if ($cmdToAn) { die("2 possible words, bailing.\n"); } else { $cmdToAn = $a; $count++; next; } };
    usage();
   }
 }

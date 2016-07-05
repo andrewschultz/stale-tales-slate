@@ -68,11 +68,11 @@ There are only twenty-three possibilities.
 In fact, with the settler on cheat mode, there is only one. Without it, there are four.
 But wait! Your dusty study doesn't need a sofa...
 ...which is okay since there are no oafs, anyway. However, if you wish to play a game with oafs in it, my IFComp 2014 game Ugly Oafs has lots of them!
->>Stable
+>>A BLEST STABLE
 ?What's the sitar for?
 It could be sitars...
 Or rather STAIR or stairs.
->>Heights
+>>HIGHEST HEIGHTS
 ?What is this pram doing?
 It gives you a slow sinking feeling.
 What else is slowly sinking with the letters P-R-A-M?
@@ -153,7 +153,7 @@ That's a clue in itself, perhaps.
 My evaluations of what makes a puzzle too easy are a bit subjective. However, I wanted to mitigate total spoilers, or give the player a chance to pause and think on the easy ones, so I added this.
 >STORES
 ?Which stores are useful?
-The limestone milestone acts as a directory.
+The megaton magneto-montage acts as a directory.
 K and N are optional. P, U, V, T, W and Y are useful.
 ?What is the approximate order of difficulty?
 Of the stores you can enter right away, U is easiest, then V, then P, then Y, then W.
@@ -267,7 +267,7 @@ If you've got the skid, you can put the leaf on the skid, then push the skid sou
 ?The yak's moveable now, but how to get rid of the yoke?
 The yoke has a safety, so if it's jarred, it'll snap.
 There are three ways to do things.
-First, you can just push the skid back north. The narrow entry will unlock the yoke.
+First, you can just push the skid back north. The narrow/magnetic entry will unlock the yoke.
 Second, if you flipped the escaroles, they become good food for Leo and Rand. You can go south and give them a workout!
 Third, you can take the bad book from the shack and give it to the yak, who gets indigestion.
 You may or may not know what to do with the drab yoke. The exciting conclusion is in the Shack section.
@@ -294,7 +294,7 @@ And not into the volt maze. You have to go there yourself.
 ?Do I need to go through the volt maze? How many times?
 No. You need to figure a word. This is a tricky one, but there are a lot of clues.
 Touching the walls or reading E-Z Ol' Av will give a clue.
-Scanning the fellows at the end helps, too.
+Scanning the fellows at the end helps, too. There are three. When you scan the first two with cheats on, a new one will appear next time through.
 There should be some clues about Yiddish language.
 You can say MAZEL TOV at any time.
 >>PHAT PATH
@@ -307,7 +307,7 @@ Either way, the hogs get mad at you, tire themselves out chasing you, and leave 
 ?What's the smart people's sign for?
 Leo and Rand are nice, but they don't belong in the shack. But they have a hard time leaving.
 So do you, surprisingly. But the sign has ALERT, LOGONS and OUGHT.
-Two of these three work.
+You only need two of these three to move on.
 TOUGH...
 ...LATER...
 ...SO LONG.
@@ -320,8 +320,8 @@ Hm, THE GAME DESCRIBES IT WITHOUT LOWER CASE LETTERS.
 It makes a CAPS LOCK key.
 Once you have a keyboard, you can PUT CAPS LOCK IN KEYBOARD.
 ?The gum?
-Aw, c'mon. If you got here...
-...a MUG.
+Aw, c'mon. If you got here, this is a gimme!
+It becomes a mug.
 ?The flea?
 Something else organic.
 Make it a LEAF.
@@ -334,8 +334,8 @@ Once you've got the bottle, POUR COLA IN MUG for an endless supply.
 Well, it has portability etc.
 It can become a SKID...
 ...then flip back later.
-You'll need to move the skid around, unsurprisingly.
-However, once you've gotten rid of the yak, the game will let you flip the skid to the disk without a lot of trouble.
+You'll need to move the skid around, unsurprisingly. Use the PUSH command.
+However, once you've gotten rid of the yak, the game will let you flip the skid to the disk.
 ?The slab?
 You can put computer components on it as you find it.
 The screen, the keyboard.
@@ -344,8 +344,10 @@ It's dry but restful.
 FUTON.
 ?The trim socks?
 These aren't critical, but if you figure them, good job.
+They help the computer run a bit faster.
 ROM STICKS.
 ?The escaroles?
+They are not critical to the game, but they provide a slightly easier alternate solution.
 Make 'em into something more workmanlike, less froufrou. More nourishing.
 CASSEROLE.
 There is too much for you to eat. Maybe a friend or friends can.
@@ -360,7 +362,7 @@ It's mostly for amusement.
 It's an alternate solution.
 It also clues that you need to make a KEYBOARD.
 If you've got the yak on the skid...
-...you can GIVE BOOK TO YAK, and the yak reacts with indigestion and runs away. Click ahead for all four names of the books.
+...you can GIVE BOOK TO YAK, and the yak reacts with indigestion and runs away. Click ahead for all five book names.
 <i>Day Broke</i> by Rob Adkey, <i>eBay Dork</i> by Kary Bode, <i>Bred Okay</i> by Bad Korey, <i>Dear Koby</i> by Yoda Berk, and <i>Yo, Be Dark</i> by Dr. Bo Kaye.
 ?How do I work the hard drive?
 You need the keyboard to work, first. Then it needs to go on the slab.
@@ -390,21 +392,21 @@ Of course. It never works at first.
 Now you're awake, you've got the energy to DEBUG.
 ?What do I need to do with the USB?
 You have two options! Lucky you. It'd be nice to have transport out.
-There are only five possibilities. Come on.
-You can take a SUB or BUS out.
+There are only five possibilities. So you have a forty percent chance with a first guess.
+You can take a SUB or BUS out for slightly different alternate endings.
 >STORE U
 >>ABOVEGROUND
 >>>SAME MESA
 ?Is the worst ad good for anything?
 It's bad for society in every way. Err, I mean, it's a last lousy point.
-You can pick it off at any time, and if you get it first, you get a clue to the area. Once you know what the area's about, it can be pretty trivial.
-RADWOST shuffled gives...
+You can pick it off as long as the giant or the bean aren't present. If you get it first, you get a clue to the area. You may not need the clue, but it's there.
+RADWOST or WORST AD shuffled gives...
 TOWARDS.
 ?How do I get into the church?
 Going IN is not formal enough.
-Read the church sign.
+Read the scripture picturers.
 DIE SIN.
-You can switch it to make SIN DIE. Which helps, if you use the settler.
+You can switch them to make SIN DIE. Which helps, if you use the settler.
 Going IN is simply not enough.
 You need to go INSIDE.
 ?How do I get into the restaurant or the store?
@@ -418,6 +420,7 @@ It's <i>a giant's</i>.
 That means you can lean AGAINST it.
 But you need to have visited the cleric circle and seen the reagent list first.
 ?The giant is here. How do I do stuff with him?
+He blocks trying anything else that moves the story forward.
 You can't climb directly on the bench, but the armrest is thick enough to sit on.
 Get ASTRIDE it.
 Once you do, you can't leave, but you don't have to.
@@ -425,11 +428,11 @@ Avoid his elbow next.
 You need to go BELOW.
 Next, he pulls out a copy of Rude 'N Nuder.
 You need to hide UNDER, and he will give up and leave it behind.
-?I helped Brother Horbert! What's the thing in the sky?
-Don't develop another hint  in this question or the next unless you see it.
+?I helped Brother Horbert and came back, but what's the thing in the sky?
+Don't develop another hint in this question or the next unless you see it.
 It's a thing form above, and that's not a typo.
-Thing FROM above.
-?What's with the crowd?
+Make it a thing FROM above.
+?What's with a drama armada?
 They're all staring at the bean. What clue can it hide? Where?
 You need a good first word to tell the crowd what to do.
 THE BEAN holds something under it. Wait, we've done UNDER before.
@@ -438,6 +441,7 @@ BENEATH.
 >>>CLERIC CIRCLE
 ?What is there to do here?
 See on the wall--there's a list of three things you need for a magic potion.
+You'll need to examine it, to see what to do.
 Come back once you have all three items.
 >>>IDLE DELI
 ?What should I say to Pat?
@@ -456,10 +460,11 @@ It's holding pipe soot! But you can't just up and steal it.
 It's on the other side of Oscar.
 Position yourself OPPOSITE, and you can take it behind your back without him looking.
 >>BELOWGROUND
->>>SUN SPARED UNDERPASS
+>>>SUN-SPARED UNDERPASS
 ?Help! It's almost too dark to see!
+This is a three-part puzzle.
 You have no light, and your lamp was broken a long time ago.
-You can say it was dark and unlit, before...
+You can say it was dark and <i>unlit</i>, before...
 ...I mean, UNTIL.
 ?Where do I go? How do I find a trail?
 You need to NAG OL' NO-GAL LOGAN. There's an UN-ROAD you need to use to get there.
@@ -482,9 +487,9 @@ WITHIN will reveal it.
 As will BEHIND.
 ?How do I get past those two--things?
 You don't want a Thor-Hug, and the New Beet looks lethal, too.
-Again, you have a choice of two things.
-THROUGH will get you past Thor.
-BETWEEN will get you past the beet.
+Again, you have a choice of two things to focus on.
+THROUGH will get you past Thor and the beet.
+BETWEEN will get you past the beet and Thor.
 >STORE V
 >>LOATHER RATHOLE
 ?What do I do here?
@@ -510,8 +515,10 @@ It can't turn into POTS or TOPS. Or expand your OPTS.
 It will help you SPOT. But you need to get rid of things verbose.
 ?What do I do to make things less/more verbose?
 Zone it out. What is obverse?
+This is a seven letter word, but it requires just switching two letters.
 OBSERVE.
 ?This stupid evil bee is so near!
+There are two ways to look at it: as so near, or an evil bee. Let's go with the bee itself.
 It's an evil bee. It feeds on your doubt.
 BELIEVE.
 ?Should I do anything with the vile bee?
@@ -524,11 +531,13 @@ You can't become a caller.
 But you can RECALL. There's another solution, too.
 I'd veer...ever I'd--a way to figure where it was?
 DERIVE.
->>BOREDOM BEDROOM
+>>PALLID LI'L PAD
 ?A spider, sad pier, diapers...
 You can scan them all. But you need to hit rock bottom.
 You must give up, sort of, and not give up.
 DESPAIR.
+?The room name changed! Does that matter?
+Not really. This was the room's name in a previous release. It changed for narrative purposes. It's a little less horrid now.
 ?How do I lead?
 Some despair still lingers. Dale Elda and Leda Adle have advice on how to lead in their book.
 You need to learn to DEAL.
@@ -536,7 +545,7 @@ You need to learn to DEAL.
 Turns out you don't.
 It is upsetting to find it there. Such productivity lost!
 This is a last lousy point.
-The settler's cheat mode breaks it open since it scans 'REGAL LAGER' as red. That makes the first letter clear. Then four possibilities are left.
+The settler's cheat mode breaks it open since it scans "REGAL LAGER" as red. That makes the first letter clear. Then four possibilities are left.
 You can cut them down further reading the red text about Ergal Agler.
 Or you can GLARE at it right away.
 >>DOUR TAN ROTUNDA
@@ -545,8 +554,9 @@ You are ready to want a bigger place.
 The brochures may help you here.
 Sir Dee tells you to Reside...
 Or to DESIRE to.
->>PERKY CRASS SKYSCRAPER
+>>ECON-CONE
 ?Who is the statue? What should I do with him/it?
+Just as with the cellar, there are two things. The more visible is the statue's name.
 Trevis Vister. Hmm. And there are rivets.
 The statue is there to make people want to be like him.
 STRIVE.
@@ -562,7 +572,7 @@ PONDER.
 ?The guy I deposed is bugging me!
 What can you do to concentrate on your REGION? Your tan ivy vanity title provides some hints. As does the banging on the door.
 IGNORE him.
-?Why can't I eat the lobster?
+?Why can't I eat the lobster yet?
 You need to feel you can, you deserve it.
 The settler busts this wide open in cheat mode.
 BOLSTER.
@@ -571,7 +581,8 @@ You aren't on top of things yet. The stream should refocus you...
 ...if you MASTER things.
 ?I'm not worth my salt!
 You will be, with time.
-You need to LAST.
+If you haven't dealt with the lobster or the stream, you need to.
+Then, you need to LAST.
 ?I'm jealous of the singer! Well, there are two!
 Siren G. Grines makes you want to give it all up.
 You need to have dealt with the salt.
@@ -584,25 +595,26 @@ You can DECIDE.
 It's worse than useless from society's perspective, but hey, it gets you a last lousy point.
 You need to realize something...
 ...there's an actual magazine called the word you need...
-...DISCOVER it.
+...DISCOVER why the magazine is rubbish.
 >STORE W
 >>LOFTIER TREFOIL
 ?How do I get out?
-Get rid of Rodney and his goons.
-Get rid of three--any three--and he's more attackable.
+Get rid of Rodney and his followers.
+They're not really dedicated to him. Get rid of three--any three--and he's more malleable.
 You can get a clue what sort of word to use if you listen to his babble about people that didn't make the cut.
 He describes them with anagramming adjectives.
 Once they're gone, you can send him YONDER.
-Or you can make him DRONEY and his goons will get bored.
+Or you can make him DRONEY and his followers will get bored.
 >>>RODNEY'S GOONS
 ?Wow! That's a lot, listed below.
-Six of twenty-five are randomly chosen. Well, randomly chosen, one from each subgroup.
-Geno, Shane, Tyson, Wade
-Edwin, Eldon, Floyd, Royce
-Blake, Bredo, Daryl, Dewey
-Ernest, Marcel, Marlon, Reggie
-Andres, Andrew, Archie, Barney
+Six of twenty-five are randomly chosen. Well, randomly chosen, one from each subgroup, so that randomness doesn't make things too hard or too easy. There are no clues below, just the groups I picked warriors from.
+Geno, Shane, Tyson, Wade.
+Edwin, Eldon, Floyd, Royce.
+Blake, Bredo, Daryl, Dewey.
+Ernest, Marcel, Marlon, Reggie.
+Andres, Andrew, Archie, Barney.
 Cedrick, Demitri, Leander, Preston, Terrance.
+Andrew has a particularly silly description.
 ?Andres
 Roaming freely in his territory...
 ...until SNARED
@@ -650,7 +662,7 @@ GONE
 Not very holy.
 GODLY.
 ?Leander
-Seems kind of dumb . Give him book-smarts.
+Seems kind of dumb. Give him book-smarts.
 LEARNED.
 ?Marcel
 Very animated.
@@ -684,7 +696,6 @@ Til he's AWED.
 Nothing, until near the end.
 ?What can I do with the tarts?
 You can put them in the toaster, and it will give you the ability to XRAY something for a hint.
-It can be RUSTLED.
 ?What's the toaster for?
 It's a rosetta toaster.
 Put bready products, like the strudel, in the toaster, and you can see through stuff to what it should be.
@@ -782,10 +793,10 @@ Make it PUNIER.
 >>LOCATIONS THAT DON'T 100% MATTER
 ?Which ones have nothing besides guardians??
 Ole Shrine Shoreline and Salted Deltas.
-Danger Garden and Anemic Cinema only have guardians you need to pass.
-Baldest Blasted Saltbed and Unblest Sunbelt have LLPs.
+Danger Garden and Anemic Cinema have guardians you need to pass, but there's nothing there.
+Baldest Blasted Saltbed and Unblest Sunbelt have scenery that gives LLPs.
 Outer Route and Lost Lots have pastries (and, in the Lots, an LLP) but nothing critical.
-Of course, you must pass through one of the Shoreline/Deltas and Saltbed/Sunbelt. But you don't have to visit both.
+Of course, you must pass through one of the Shoreline/Deltas and Saltbed/Sunbelt. But you don't have to visit both to solve the Towers area or even get maximum points.
 >>SCOPE COPSE
 ?What's the scope for?
 It shows you where you need to go.
@@ -796,8 +807,9 @@ Unless, or until, they're RUSTY.
 >>CAMPIEST CAMPSITE
 ?What's the rapier repair for?
 Fixing worn down swordy things.
-There's one behind the weeds in the ravages.
+You may've found one behind the weeds in the ravages.
 The ragged dagger.
+PUT DAGGER IN REPAIR.
 >>SAVAGER RAVAGES
 ?Do I need to get rid of the weeds?
 No, but you can (and need to) make them immobile.
@@ -828,6 +840,7 @@ The duck might trust that.
 ?What can I do about the strudel?
 You can just take it. Or you can take it with style.
 Doing so is a last lousy point.
+It can be RUSTLED.
 >>OBSCUREST SUBSECTOR
 ?Who's the person in prison?
 Read the fence.
@@ -863,20 +876,20 @@ Playing the raves saver isn't enough.
 WORDY has been done. This is an exciting lecture. Or it needs to be. Kids get bored easily!
 ROWDY.
 ?The audience isn't listening!
-The kid is trying not to be in awe. Too TENTATIVE.
+The kid is trying not to be in awe but failing. Too TENTATIVE.
 Make the kid ATTENTIVE.
 >>ACTIONLESS COASTLINE
 ?Somebody seems to be hiding. What gives?
-Ray Eck and the deacons are hard to hang with.
+Ray Eck and Lois the Hostile, or the Hostile-is-He Lot, are hard to hang with.
 You need to get rid of them.
 ?What's the kid interested in?
 Technical stuff. Like Dr. Yow knows. Dr. Yow's in the subsector.
 ASK KID ABOUT DOCTOR once you rescued the doctor.
 ?The kid needs a tool. What's a good one?
-The gizmo will be useful. It baffles you--and, well, me, to be honest.
+The gizmo will be useful. It baffles you--and, well, me, to be honest. I just sort of take the best anagrams available.
 GIVE GIZMO TO KID.
-?Is the kid's contraption safe?
-Not safe enough.
+?Is the, uh, a bot-boat safe?
+Not even close, to start.
 The turbos and blaster are broken.
 You need to fix one, preferably both.
 The turbos can be more ROBUST.
@@ -888,7 +901,14 @@ The settler gives seven letters.
 What can be done to get closer to the eastern shore?
 Make it NEAREST.
 ?Hey! I never saw this location. What gives? Is this a fake clue?
-You fixed the jetskis completely. If you'd only half-fixed them, you'd have landed here. The puzzle is about as easy as the other two.
+You skip over Rawest Waters if you fix a bot-boat completely. If you'd only half-fixed them, you'd have landed here. The puzzle is about as easy as the other two.
+>>LEAK LAKE
+?What does Elk Akela want?
+Akela is waiting for Kala Keel, obviously.
+AKA Kelle.
+If you're very careful and you've already solved Store P, you can hook back to a hidden path under Harm's Marsh and Mount Um-Not to reveal a rare secret.
+It's so rare, it's not even in the game, because there's no way to get to Leak Lake. Leak Lake is just a backdrop.
+Yeah, I had to write in a joke clue.
 >>MISLIT LIMITS
 ?What can I do about the pester'n serpent?
 You don't need to get rid of it, strictly. Unless you want maximum points.
@@ -901,13 +921,15 @@ If you read the flowerpot, you may note a hint.
 The crocus is DYING, but maybe you can make it...
 DINGY.
 ?There aren't many hints here for the curst palace!
-If you opened the solo den, you can return, talk to Ed Yerg, and come back.
+If you opened the solo den, you can return, talk to Ed Yerg, and come back. There'll be new clues.
+Scan them all and eventually you can narrow it down.
 ?Eleven letters for the curst palace? Really?
-It is a big castle.
+It is a big castle. And it's a final puzzle.
 Ed Yerg, once friendly, seems to indicate it inspires generic superlatives.
 Like fantastic, incredible...
+...remember, it was great once...
 ...SPECTACULAR.
->>OLD ONE'S SOLO DEN
+>>LONE SOD'S/OLD ONE'S SOLO DEN
 ?Do I actually need to be here?
 Only if you want full points.
 ?Ed Yerg sure is greedy!
@@ -917,12 +939,12 @@ He could shrug off the veneer of false youth...
 Give him a gift.
 If the crocus is no longer dying, and it is in the flowerpot, you can do so.
 >STORE Y
->>Posh Hops Shop
+>>POSH HOPS SHOP
 ?Why do the pills have a warning?
 They're dangerous.
 Dangerously addictive, because they allow a free pass through some puzzles here.
 If you SPILL PILLS, in various places, they do different things. But you only get one use.
-Okay, more, if you save before using.
+Okay, more, if you save before using. Or you have a debug version of the binary I used to test the feature. Which was fun.
 ?What do I need to do to get by the trolls?
 Well, you need to be all cool.
 STROLL.
@@ -950,8 +972,8 @@ Well, there are tines.
 You can't quite INSERT...
 ...but you can INSET.
 ?Why can't I do more than three annoying things here?
-The trolls would get too upset.
->>Olde Lode
+The trolls would get too upset and would have an excuse to give you the business.
+>>OLDE LODE
 ?What's the clam doing?
 It's agitated.
 Perhaps you can CALM it.
@@ -959,14 +981,12 @@ Perhaps you can CALM it.
 Taking it kills you.
 You need to do something faster than walk.
 You need to RUN.
->>Heros' Shore
+>>HEROS' SHORE
 ?What're the boats for?
 You can make some noise to get their attention.
 If you SOB AT them, they're not interested.
 You need to BOAST.
-Once you're on the fighter frigate, your next action should be pretty clear.
-The scary crays aren't going to help, but the pale plea might.
-You need to LEAP.
+That gets you to the Fighter Frigate.
 ?Can I cross on the raft?
 Yes, and you get an extra point for doing so.
 The oars on the raft are odd.
@@ -979,7 +999,14 @@ Well, to see ALL the game, yes.
 You can turn it into an ocean...
 ...but that's counterproductive.
 It's just a dumb joke/Monty Python reference. You can undo the silly death.
->>Anger Range
+>>FIGHTER FRIGATE
+?How do I get out of here?
+Once you're on the fighter frigate, your next action should be pretty clear.
+The scary crays aren't going to help, but the pale plea might.
+You need to LEAP.
+?I didn't get here. How do you?
+BOAST instead of using the raft at Hero's Shore.
+>>ANGER RANGE
 ?How to stop the bullies?
 Hmm. Carps and Pikes.
 You can SCRAP...
@@ -998,14 +1025,21 @@ And the right place.
 ?Why's anger range so angry?
 The haunter lies beneath.
 You must release him to make him less angry.
-You need to UNEARTH him once you have a shovel.
-?How do I calm the ghost down?
+You need to UNEARTH him once you have a shovel. Or, well, something like it.
+Say, a rigged digger.
+?How do I calm the ghost down once he's here?
 He is a SAUSAGE.
 ASSUAGE him.
->>Blowfish Fishbowl
+>>LEAN LANE
+?What do I do with the cans?
+You don't have to do anything.
+This is maybe the second-easiest LLP in the game to Peg A. Page's revolting book.
+Easier, since it's a verb you probably already used.
+SCAN the cans.
 ?No one's here but I hear something.
 They're EEKS.
 Try to SEEK them.
+>>HANDSOME SAND HOME
 ?What does Aunt Tuna want me to do?
 She informs you her nephew the trout's name is Tortu. He hates bullies.
 He needs to be taught.
@@ -1014,6 +1048,11 @@ Then you get what's in the reward drawer.
 ?What do I do with the tea?
 You EAT it.
 The paler pearl is useful later.
+?Are the wipes usable/takeable?
+Yes and yes.
+First, let's figure how to take them.
+We need to take them quickly.
+SWIPE them.
 ?Is the dent in the desk useful?
 No, except for getting one more point.
 It's a rather easy point. Let's just say if you scan it in cheat mode, it falls out.
@@ -1024,7 +1063,10 @@ Well, not here. But it's useful against someone.
 She will tell you about her friend Valeri who gave her a packet.
 Which you can get, or you do have.
 It's what the ghost is after.
->>Lapsin' Plains
+?Can I fix the dent?
+Yes and no. You can't FIX it. That's only three letters...
+...but you can TEND it.
+>>LAPSIN' PLAINS
 ?How do I unlock the rude door?
 This is a two part question.
 The skis and knob are in the way.
@@ -1040,12 +1082,16 @@ But that's not enough. You need to avoid it.
 REACT.
 ?Anything else I can do?
 You can talk to nobody in general for a last lousy point.
->>Uh, at a Hut
+What is the location's name?
+PLAINS.
+You can do something with that. It's a bit slangy, but...
+...you can SPLAIN your goals and dreams and wishes.
+>>(UH, AT/AT, UH) A HUT
 ?What do I do with the tubs?
 Maybe there is something inside.
 You need to break them open.
 Or BUST them.
-?That's not a prod. It's a shovel!
+?What the heck can I do with a prod?
 The way to open it is simple yet annoyingly weird.
 DROP the prod.
 ?Does the waste need clearing?
@@ -1057,12 +1103,15 @@ Yes, but you don't have to.
 They're lumped inartistically.
 This is a last lousy point.
 SHAPE the heaps.
-?What do I do with the shovel?
+?What do I do with a dirty lance?
+You need the wipes from Handsome Sand Home.
+Then you can CLEAN the lance.
+?What do I do with the rigged digger?
 Two things. First, it can release the haunter...
 ...if you UNEARTH.
 Second, once you have the ruby...
 ...you can BURY it.
->>Achers' Arches
+>>ACHERS' ARCHES
 ?Do the arches hide anything?
 Yes. Examining's not enough.
 You have to SEARCH. But the sardine will block you.
@@ -1071,12 +1120,12 @@ He hates noises.
 You need something that makes noises.
 Here's where you WARP the bubble wrap.
 Now you can SEARCH.
->>Horned Hedron
+>>HORNED HEDRON
 ?How do I get rid of the weaselly walleyes?
 They're not scared of much.
 The ghost might scare them.
 If the ghost passed by them to find a ruby, they'd be scared.
->>Collapsed Old Places
+>>COLLAPSED OLD PLACES
 ?What can I do here?
 This is a good place to hide stuff.
 Like the ruby.
@@ -1113,7 +1162,7 @@ DERAIL.
 You need to pull the lever, then redo DERAIL. Try again.
 REDIAL.
 >STORE T
->>WHAT I CAN DO WHEN I'M POWERLESS
+>>WHAT I CAN DO WHEN I'M POWERLESS?
 >>>BLEARY BARLEY
 ?Help! I lost my powers! What do I do?
 You're severely weakened.
@@ -1132,22 +1181,23 @@ Showing you don't need them gets another point.
 You can also RESCIND them.
 >>>GENT-FORA FRONTAGE
 ?Why can't I go west?
-You need to help the maiden.
+You need to help Gretta Garett-Tatger, whom Elmo told you about.
 ?How do I disperse the macks?
 They're talking total rubbish.
 But how they talk it isn't failing yet.
 You can only use adverbs to take them down, so look for words with LY.
 There're many possibilities, but you only need three. You don't have to respond right away, either.
-They talk about reality a lot.
-This can make them too mad or too whiny.
-IRATELY or TEARILY.
-Also, if they start acting saintly...or even if they don't...
-...You can get them acting NASTILY.
-They compare her to Lindsey, too.
-SNIDELY. That should be enough. There are others.
-The full list is WEARINGLY, BLEARILY, NASTILY, SNIDELY, SEEDILY, COITALLY, MARTIALLY, SHADILY, IRATELY, TEARILY, RIBALDLY, CATTILY, TEDIOUSLY, STARKLY, DESPAIRINGLY, DRAWLINGLY, SOBBINGLY, SILENTLY.
+They cycle through seven things to say. These are determined randomly before the game starts. Any one word is at least seven letters long.
+DESPAIRINGLY is always there. Well, it is once they start redisplaying and redisplaying.
+One of DRAWLINGLY or EMOTIONALLY will always show up.
+One of MODESTLY, STEAMILY or STUPIDLY will also always show up.
+There are other shorter ones, too. Below is an explanation of the pods I choose the adverbs from.
+Pod 1 is seven letters, repeating. Pod 2 is seven letters, non-repeating. So you always have two seven-letter words.
+Pod 3 is eight letters, repeating. Pod 4 is eight letters, non-repeating. So you always have two eight-letter words.
+Pod 5 is nine letters, pod 6 is ten, and pod 7 is twelve.
+The pods give you slightly more letters to deal with on average, but I felt it was too confusing to have thirty-two adverbs to deal with instead of seven. The sizes are, as of release 4, 4, 4, 8, 4, 5, 2 and 1.
 ?What good are Gretta's medals?
-The IQ and Lucky medals help later. You may guess how.
+The IQ and Lucky medals help later. You may guess how. If you figure them now, the game says wait until you need thme.
 >>>TAPERING ANGER PIT
 ?The sly imp simply blocks me!
 LY-words again.
@@ -1160,11 +1210,11 @@ BRUTELY. And, for the curious...
 ?The men block me noisily!
 They restyle, tallyhoing with callosity.
 Tune their volume down.
-You need two of three. TERSELY. STOICALLY.
+You need two of three. TERSELY and STOICALLY are the two shorter.
 LOATHINGLY
 >>GETTING MY POWERS BACK
 ?Where do I go?
-You only need to go north or south of the Maiden Median. The Loop Pool is a bit easier. But going both ways gets you all the points.
+You only need to go north or south of Gent-Fora/Frat-Gone Frontage. The Loop Pool is a bit easier. But going both ways gets you all the points.
 >>>LOOP POOL
 ?The sea cube...
 You can't waste words.
@@ -1175,7 +1225,7 @@ BECAUSE.
 Tell them 'Or...
 ...ELSE.'
 >>>BRAN BARN
-?Mr. Lee says 'Hola Thug!'
+?Mr. Lee says 'Hola Thug!' as he wears a ghoul hat.
 You have one word to grab his attention...
 ...ALTHOUGH.
 ?Rev. Howe didn't quite prophecy me?
@@ -1195,10 +1245,6 @@ The satyr can be ARTSY.
 Brute force won't work.
 You need your powers back.
 Make it a PARROT.
-?What do I do with the whistle?
-Practice when nobody's around.
-It sounds like someone yelped, but you need to make it less piercing.
-Maybe if you could play it DEEPLY.
 ?Nails?
 Nothing's slain.
 Just an ex-SNAIL.
@@ -1220,11 +1266,16 @@ You need something that can beat a hydra. Seen an animal?
 The raptor.
 Your friend the ex-ex-parrot will help you...
 ...RAPTOR.
->>TORPID TRIPOD
+?What do I do with the whistle?
+Practice when nobody's around.
+It sounds like someone yelped, but you need to make it less piercing.
+Maybe if you could play it DEEPLY.
+That will help summon animal friends later.
+>>RECLUSION INCLOSURE
 ?Does the conversation with Elvira matter?
 No.
 But she has to say something, doesn't she?
-?How do I defeat Elvira?
+?Elvira is too fast for me!
 The whistle on its own doesn't work. Especially if you haven't "adjusted" it.
 You may need to retreat and come back to do so.
 See the note in the preserve if you're stuck.
@@ -1232,16 +1283,22 @@ Have any other gifts?
 The medals, IQ and LUCKY.
 Neither alone speeds you up, but they clinked together when you rescued various animals.
 So go QUICKLY.
-Then PLAY WHISTLE.
+?I need allies!
+If you haven't practiced with the whistle, it won't work.
+You can step outside if you don't know what to do.
+Play it DEEPLY back in the Alcoves. Then come back west.
+Then just PLAY WHISTLE. You win!
+?Should I explore the next area?
+Even if you don't right now, you can always ROVE OVER later.
 >STORE H
 ?What does it become?
 The clues lead you to somewhere random, different, that doesn't fit in anywhere.
 OTHERS.
 ?I don't get to enter the 'new' area if I restart the game!
-This is just a buffer so people who viewed this accidentally won't find the shortcut command.
-It's referenced when you win.
+This clue is just a buffer so people who viewed this accidentally won't find the shortcut command.
+The right command is referenced when you defeat Elvira.
 ROVE OVER.
->>Rustic Citrus
+>>RUSTIC CITRUS
 ?What do I need to do for Curtis?
 For starters, get 4 fruits. A few are easy.
 The Spear will be PEARS.
@@ -1255,12 +1312,14 @@ It doesn't work so well in its present state.
 Try making it a COMPASS.
 Now you can go north!
 ?Anything else I can do besides make fruit?
-Curtis gives you something new every four fruits.
-A tekno-token,
-A coin,
-Another coin,
-And a droll dollar.
-Beyond that, he just takes stuff.
+Curtis gives you something new every four fruits. That's a running total, not four fruits since your last transaction.
+So it's possible to bring back a bunch of fruits and get all the stuff below.
+After the moss cap for the first four, there is
+A tekno-token (4),
+A coin (8),
+Another coin (12),
+And a droll dollar (16).
+Beyond that, he just takes stuff. But you don't need it.
 ?Mad Train?
 TAMARIND.
 ?Eerie Blurbs?
@@ -1279,8 +1338,10 @@ PERSIMMON.
 ?Barren cries?
 CRANBERRIES.
 ?Harmonicas?
-MARASCHINO (cherry.)
->>Swell Wells
+MARASCHINO (cherry).
+>>SWELL WELLS
+?ScoutCon on Stucco?
+COCONUTS.
 ?ESP Pal t-shirt?
 Six letter fruit.
 APPLES.
@@ -1300,6 +1361,8 @@ No.
 ?The buried raft?
 Philip Larkin would figure this out.
 BREADFRUIT.
+?The mean trowel?
+WATERMELON.
 ?Pipe Panel fence?
 Hm, pipe panel.
 PINEAPPLE.
@@ -1334,10 +1397,18 @@ Look at it--it wants you to attack it.
 If you attack it, odd things happen. You say odd things.
 Burr, Bah, etc.
 RHUBARB.
+?What's the RESERVED sign for?
+It can be REVERSED for a fruit.
+A guava, again, something hard to anagram.
 >>Clangier Clearing
-?Why can't I trade?
-You need to have currency, and a coin isn't enough.
-Curtis gives you a tekno-token for fruit number eight.
+?What do I do with Len Craig?
+You can just trade with him, but general talking won't work.
+You'll have to specify the fruits you want or how you want them.
+?I figured out a fruit. Why can't I trade?
+You need to have currency.
+Curtis gives you a tekno-token for fruit number eight. It has credit.
+You can get eight fruits all at Rustic Citrus, or you can get them after making the compass.
+You don't really need to do anything here to win, but it may be easier than other areas.
 ?Is there any theme, beyond the obvious?
 Not really. This is a sort of runoff area.
 Though there are a lot of adjectives.
@@ -1347,25 +1418,25 @@ MANGO isn't quite it.
 You need to get AMONG.
 ?Lemons?
 SOLEMN.
-?Melons?
-SOLEMN, again.
+?The melon?
+That's not the only one Len Craig has.
+MO LEN, or any combination should work.
 ?The peach?
 CHEAP.
 ?Nectarine?
 Needs to be older.
 ANCIENTER.
 ?The auction caution?
-Says Pay ASAP.
+Says PAY ASAP.
 PAPAYAS.
 ?List of prices?
 An error makes you want to lash out at the prices.
 CRIPES!
+The kumquat is just a random fruit that was hard to anagram.
 ?The quince needs something in Italian!
 A price, or a number,
 Uno, duo, tre, quattre, ...
 CINQUE.
-?What's the RESERVED sign for?
-It can be REVERSED for a fruit.
 >>Gates Stage
 ?What's behind the gates?
 The happy ending.
@@ -1387,7 +1458,7 @@ A weird hum. Like sound waves.
 You need something to counteract that.
 Once you have two coins, you can make them SONIC.
 Similarly, ICONS can become SONIC, too.
-You can adjust the coins in any order you please to get SONIC ICONS. Well, you can't make a coin SONIC, but yeah.
+You can adjust the coins in any order you please to get SONIC ICONS. Well, you can't make a coin SONIC, but you get the idea.
 ?What do I do with the final item?
 It can take you pretty much anywhere.
 But you need to pay attention to it.
@@ -1407,7 +1478,7 @@ Benford's Law says that randomly occurring measurements' first digits occur at a
 Of course, you need enough data points to make it significant, too. With 40+, you can start to see the shape.
 In my case, the random anagram sets conform to Benford's Law, though it's probably skewed towards the ones digit.
 That's because I enjoyed working to round numbers like 1000 or 100 just to hit goals. This was particularly evident when I hit 80 entries.
-Since the books hit 2600 titles (I include both # of entries and KB of entries) I had enough orders of magnitude for Benford's Law to apply. But the general pattern is still pretty clear.
+Since the books hit 6000+ titles (I include both # of entries and KB of entries) I had enough orders of magnitude for Benford's Law to apply. But the general pattern is still pretty clear.
 Yay, scientific rules and scientific thinking why data might be skewed! See, this game isn't just about anagrams.
 ?What's Zipf's law?
 It's on Wikipedia, but basically it says naturally countable measurements (like city populations) follow x, x/2, x/3, etc. Or x, x/2^z, x/3^z.

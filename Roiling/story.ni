@@ -5249,6 +5249,8 @@ check objhinting Elmo when rifle is visible:
 
 viewer-first is a truth state that varies.
 
+enuf-fruit-poke is a truth state that varies.
+
 carry out others-hinting:
 	if cur-score of others < 4:
 		if lumps are visible:
@@ -5273,9 +5275,36 @@ carry out others-hinting:
 		try objhinting coin instead;
 	if player has coins:
 		try objhinting coins instead;
+	if fruits-flipped >= 8 and tekno-token is off-stage:
+		say "You can go back to Curtis for a reward." instead;
+	if fruits-flipped >= 12 and coin is off-stage:
+		say "You can go back to Curtis for a reward." instead;
+	if fruits-flipped >= 16 and coins are off-stage:
+		say "You can go back to Curtis for a reward." instead;
+	if fruits-flipped >= 20 and a droll dollar is off-stage:
+		say "You can go back to Curtis for a reward." instead;
 	if player is in gates stage:
 		if passport is off-stage:
-			all-say "You need ID to get past the gate." instead;
+			all-say "You need ID to get past the gate. There are no government agencies, so maybe you can get one illicitly." instead;
+	if droll dollar is not off-stage and enuf-fruit-poke is false:
+		now enuf-fruit-poke is true;
+		say "You have gotten enough fruits, so from here on out I'll just be hinting random fruits unless you go [if gates stage is visited]back north to the Gates Stage[else]north[end if]." instead;
+	if player has passport:
+		if gates stage is unvisited:
+			all-say "You haven't visited the gates stage north of the swell wells, yet. That's where you can use the passport." instead;
+		if gate-level is 2:
+			all-say "Go north to win!" instead;
+		if gate-level < 2:
+			if viewer-first is true and viewer is not reflexed:
+				try objhinting viewer instead;
+		if searcher is not reflexed:
+			try objhinting searcher instead;
+		if viewer is not reflexed:
+			try objhinting viewer instead;
+		if passport is not reflexed:
+			try objhinting passport instead;
+	if player is in gates stage:
+		all-say "[if scape space is unvisited]Try going down from the Swell Wells[else]You will find ID inside the So-Great Storage in the Scape Space[end if]." instead;
 	if player is in Swell Wells:
 		if silly shirt is visible:
 			try objhinting silly shirt instead;
@@ -5297,8 +5326,8 @@ carry out others-hinting:
 		if sickle is visible:
 			try objhinting sickle instead;
 	if player is in clangier clearing:
-		if mango is off-stage:
-			all-say "[one of]If you listen, a voice is saying 'Go, man!'[or]Maybe you should just mix with the haggling.[or]In other words, go AMONG.[cycling]" instead;
+		if pre-mang is in clearing:
+			try objhinting pre-mang instead;
 		if peach is in clearing:
 			try objhinting peach instead;
 		if lemons are in clearing:
@@ -5321,22 +5350,6 @@ carry out others-hinting:
 			try objhinting reserved instead;
 		if pugnacious plant is in Scape Space:
 			try objhinting pugnacious plant instead;
-	if player has passport:
-		if gates stage is unvisited:
-			all-say "You haven't visited the gates stage north of the swell wells, yet. That's where you can use the passport." instead;
-		if gate-level is 2:
-			all-say "Go north to win!" instead;
-		if gate-level < 2:
-			if viewer-first is true and viewer is not reflexed:
-				try objhinting viewer instead;
-		if searcher is not reflexed:
-			try objhinting searcher instead;
-		if viewer is not reflexed:
-			try objhinting viewer instead;
-		if passport is not reflexed:
-			try objhinting passport instead;
-	if player is in gates stage:
-		all-say "[if scape space is unvisited]Try going down from the Swell Wells[else]You will find ID inside the So-Great Storage in the Scape Space[end if]." instead;
 	all-say "Nothing specific left to do here[if curtis-level < 3], though you may need to give Curtis some more fruits[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if]."
 
 book stores-hinting
@@ -5397,7 +5410,9 @@ carry out presto-hinting:
 	if boing is reflexive and popgun is visible:
 		try objhinting boing mechanism instead;
 	if popgun is visible:
-		if dart is not in popgun:
+		if dart is not visible:
+			all-say "You need to find ammo for your popgun." instead;
+		if dart is not in popgun and dart is not in lalaland:
 			if spoilit is true:
 				now spoilit is false;
 			try objhinting popgun instead;
@@ -5461,6 +5476,8 @@ carry out presto-hinting:
 	if yak is visible and spoilit is false:
 		try objhinting yak instead;
 	if drab yoke is visible:
+		if yak is visible:
+			say "[if spoilit is true]You pause before eating the crust. [end if]The yak [if skid is off-stage]probably needs to be carried with something you don't have yet[else if skid is not visible]could be coaxed onto the skid you left[else if leaf is off-stage]could use some food, but you haven't found any[else if player has leaf]might like the leaf if you put it on the skid[else]needs to be pushed north[end if]." instead;
 		try objhinting drab yoke instead;
 	if hacks' shack is visited:
 		if onyx censer is not in lalaland:
@@ -5494,7 +5511,7 @@ carry out presto-hinting:
 			try objhinting compiled code instead;
 		if usb is visible:
 			try objhinting usb instead;
-	all-say "I'm sorry. I need to put a better hint in here. If you have a transcript, I'd be interested." instead;
+	all-say "[if spoilit is true]You can't see much to do here, so you save your crust for somewhere more active[else]There's not much to do here. You may need to look elsewhere[end if]." instead;
 
 to decide whether can-put-on-slab:
 	if player has keyboard and keyboard is not on slab:
@@ -9102,7 +9119,7 @@ carry out roveovering:
 		say "You're not sure where to." instead;
 	if Gunter is not off-stage:
 		say "It's not that easy. Maybe once you've returned [if player is in study]back here [end if]to your Dusty Study, you can sneak out a more usual passage. But you need to fix things in Yorpwald, first. Or restart the game." instead;
-	say "Oh man. That's right. Those adventures--the routes, the troves--and Curtis. Elmo told you to ROVE OVER. Better than Gunter's [one of]cringy-crying[or]slimey-smiley[or]bubbly-blubby[in random order] plea peal, a big tear rate about Elvira...mumbling 'Sad I said a dis.' No, you don't want a CHANCE to be suckered [if stuff-found < 3]if he comes knocking[else]by opening that door[end if]. You slip out a secret passage. Shouldn't need a last atlas for this, but...don't slow down LOTS. You eat a carbo-carob cobra for the long journey.";
+	say "Oh man. That's right. Those adventures--the routes, the troves--and Curtis. Elmo told you to ROVE OVER. Better than Gunter's [one of]cringy-crying[or]slimey-smiley[or]bubbly-blubby[in random order] plea peal, a big tear rate about Elvira...mumbling 'Sad I said a dis.' No, you don't want a CHANCE to be suckered [if stuff-found < 3]if he comes knocking[else]by opening that door[end if]. You slip out a secret passage. Shouldn't need a last atlas for this, but...don't slow down LOTS. You eat a carbo-carob cobra for the long journey[unless player has purse and player has settler and player has pedanto-notepad] and check you have your settler and notepad and super purse[end if].";
 	now roved is true;
 	now first-good-scan is true;
 	now kind-of-cool is true;
@@ -11921,9 +11938,12 @@ Scripture picturers are reflexive flippable scenery in Same Mesa. "[do-i-switch]
 
 switch-pic-next is a truth state that varies.
 
+switched-pics-yet is a truth state that varies.
+
 to say do-i-switch:
 	if picturers are reflexive:
 		if switch-pic-next is true:
+			now switched-pics-yet is true;
 			now sign-other is whether or not sign-other is false;
 			say "The picturers changed since you last saw them.";
 
@@ -11936,9 +11956,10 @@ after examining when mrlp is routes (this is the switch picturers rule) :
 	continue the action;
 
 after examining picturers:
-	if picturers are reflexive:
-		say "You can see how the SIN DIE and DIE SIN blend back and forth to make a clever illusion. You feel clever for seeing it, but not too clever. That'd be un-pious.";
-		continue the action;
+	if switched-pics-yet is true:
+		if picturers are reflexive:
+			say "You can see how the SIN DIE and DIE SIN blend back and forth to make a clever illusion. You feel clever for seeing it, but not too clever. That'd be un-pious.";
+			continue the action;
 
 a-text of scripture picturers is "YRRYRY". b-text of scripture picturers is "YRRYR[if sign-other is true]Y[else]G[end if]". parse-text of scripture picturers is "-[sp]x[sp]x[sp]-[sp]x[sp][if sign-other is true]x[else]e[end if]".
 
@@ -13716,7 +13737,7 @@ check fliptoing ether:
 		say "Leo and Rand charge in. It's two-on-three, though, since your popgun doesn't have any ammunition[if boing is reflexive] and isn't even working[end if]. You all walk back, on-ho changed to oh-no. Leo and Rand shake off their bruises.";
 		preef ether instead;
 	now dart is in gyre;
-	now dart is off-stage;
+	now dart is in lalaland;
 
 book Burnt Brunt
 
@@ -20600,7 +20621,7 @@ Andres is a warrior. description is "Andres's movements are carefree as he sways
 
 a-text of Andres is "RRYRYR". b-text of Andres is "RPYPGR". parse-text of andres is "x[sp]n[sp]a[sp]r[sp]e[sp]x". andres is any-spoilable.
 
-Andrew is a warrior. description is "Andrew has a careless look in his eyes. He does not seem to be aware of risk.". pod-num of Andrew is 5. pod-ord of Andrew is 2.
+Andrew is a warrior. description is "Andrew has a careless look in his eyes. He does not seem to be aware of risk. Just imagine the sort of bugs that would slip through if he wrote text adventures and kept adding one more feature! Oops, maybe you don't have to.". pod-num of Andrew is 5. pod-ord of Andrew is 2.
 
 a-text of Andrew is "RYRRYR". b-text of Andrew is "RYRRGR". parse-text of andrew is "x[sp]a[sp]x[sp]x[sp]e[sp]x".
 
@@ -24770,7 +24791,7 @@ sad pier	"[one of]The objects in the pallid li'l pad should give you a clue what
 diapers	"[one of]One page after saying you don't want to make any big mistakes, there's a bit about how you may need to hit rock bottom before finding your way back up[plus][or]There's lots of mumbo-jumbo about observing sentimental objects until you get sick of them, but please be sure to forget them once they've served their purpose[plus][or]DESPAIR is a last option that is hard to come back from. Except when coming back from it slingshots you past people who can't even despair[minus][cycling]."	--	"DESPAIR"
 ltb	"[one of]Feelings of despair are okay. Working through them can help you learn to lead. Unless they don't. Then you deserve more despair[plus][or]If you can't DEAL, you'll never make it[minus][cycling]."	--	"DEAL"
 brochure	"[one of]It is no sin to want a better place to RESIDE.[plus][or]Do not get too hippy-trippy on yourself. Without material DESIRE, nobody would want or build anything.[minus][cycling]"	--	"DESIRE"
-prai	"[one of]What do the rivets say? PRAISE. It should motivate you![plus][or][if rivets are reflexed]You already got what to do with the rivets, so the settler will be more merciful to you[else]The settler gives a mess because PRAISE and RIVETS go to different words, but the question mark is a clue in its own way[end if].[plus][or]How to want more without wanting more?[plus][or]You need to ASPIRE.[minus][cycling]"	--	"PRAI"
+prai	"[one of]What do the rivets say? PRAISE. It should motivate you![plus][or][if rivets are reflexed]You already got what to do with the rivets, so the settler will be more merciful to you[else]The settler gives a mess because PRAISE and RIVETS go to different words, but the question mark is a clue in its own way[end if].[plus][or]How to want more without wanting more?[plus][or]You need to ASPIRE.[minus][cycling]"	--	"ASPIRE"
 rivets	"[one of]Those rivets stand out.[plus][or][if prai is reflexed]You already figured what to do with what they say, so the settler is a bit easier on you[else]Because they say PRAISE, the settler is picking up two solutions[end if].[plus][or]The praise [i]rivets...[r] and should make you want more.[plus][or]You want to want more without just plain wanting more.[plus][or]STRIVE.[minus][cycling]"	--	"STRIVE"
 statue	--	rivets
 secure door	"Useful for keeping people out[if noise is in office], though the vanity may provide more hints what (not) to do[end if]."
@@ -24808,12 +24829,12 @@ red stump	--	star
 permadust
 hump	"[one of]Hm, you can't get over the hump.[plus][or]What's a good word before you give a bunch of effort?[plus][or]UMPH.[minus][cycling]"	--	"UMPH"
 plebe	"[one of]You need to get rid of that plebe.[plus][or][if player has star or player wears star]You've got something that will impress him[otherwise]You need to find something to impress the plebe--you may want to go visit the Burnt Brunt to the south[end if].[plus][or]What are plebes scared of? A good tongue lashing.[plus][or]The game blocks the worst profanities. But you've got a pretty general one.[plus][or]You can say BLEEP [if player has star or player wears star]now[otherwise]once[end if] you have the star.[minus][cycling]"	--	"BLEEP"
-Ye Hoop	"[one of]There are two ways to deal with the hoop, err, Ye Hoop.[plus][or]You sort of have to be impressed by the hoop, and say a little something to try harder, or say the heck with your possessions, which bog you down if you try to jump.[plus][or]You can say POOH to give your jumps a little boost.[minus][cycling]"
+Ye Hoop	"[one of]There are two ways to deal with the hoop, err, Ye Hoop.[plus][or]You sort of have to be impressed by the hoop, and say a little something to try harder, or say the heck with your possessions, which bog you down if you try to jump.[plus][or]You can say POOH to give your jumps a little boost.[minus][cycling]"	--	"POOH"
 Leo	"[if Leo is fightin][one of]You need to neutralize Leo.[plus][or]He charges at you like a bull.[plus][or]What do you exclaim to get out of the way of a bull?[plus][or]OLE![minus][cycling][else if Rand is fightin]Deal with Rand first.[else if Rand is washed up][wash-up][else if Rand is in hacks' shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not in lalaland]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"OLE"
 Rand	"[if Rand is fightin][one of]You need to neutralize Rand.[plus][or]Perhaps another feint can help you defeat Rand.[plus][or]What can you say to fake him out? A word of half-surrender.[plus][or]DARN![minus][cycling][else if Leo is fightin]Deal with Leo first.[else if Rand is washed up][wash-up][else if Rand is in hacks' shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not in lalaland]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"[if Rand is fightin]DARN[else]WHASSUP[end if]"
 wzup	"[wash-up]"	--	"WHASSUP"
 vile veil	"The vile veil is just a cheapo to explain why you can only go back north in Dirge Ridge."
-popgun	"[if dart is in popgun]The popgun's locked and loaded.[else if boing is reflexed]Put the dart in the popgun.[else]The popgun is broken. More precisely, its boing mechanism is broken.[end if]"
+popgun	"[if dart is in popgun]The popgun's locked and loaded.[else if boing is reflexed]You can just put the dart in the popgun.[else]The popgun is broken. More precisely, its boing mechanism is broken.[end if]"
 boing mechanism	"[one of]So, the mechanism doesn't go BOING.[plus][or]A eureka moment could change the boing mechanism's brokenness.[plus][or]Or, if you notice the mechanism's serial number...[plus][or]BINGO.[minus][cycling]"	--	"BINGO"
 camo-coma	"The camo-coma is just a barrier to prevent you going any way but west from the seminar."
 smart people sign	"[one of]The sign indicates Rand and Leo don't belong in the shack. But if you've tried going north, you know they'll want to try[if rebuked is true], and they've been persistent, so maybe you need another way to say things[end if].[plus][or]It's time to [if rebuked is true]find another way to [end if]say good-bye to Rand and Leo, but you can't be all 'Obey, Dog.'[plus][or]Maybe the sign can help you say [if rebuked is true]one more thing[else]what[end if] you need to, to ditch Rand and Leo?[plus][or][sl-t-l].[minus][cycling]"	--	"[if entry 1 of byebyes is log ons]SO LONG[else if entry 1 of byebyes is alert]LATER[else]TOUGH[end if]"
@@ -25798,7 +25819,7 @@ to say d-then:
 		say "pull the lever then ";
 
 to say how-pills-used:
-	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is crate]TRACE the crate[else if cheated-guy is rude door]REACT to the next crate[else if cheated-guy is a-s]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over the river[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is o-t]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
+	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is crate]TRACE the crate[else if cheated-guy is rude door]BONK the knob[else if cheated-guy is a-s]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over the river[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is o-t]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
 
 a region can be tickedoff. a region is usually not tickedoff.
 

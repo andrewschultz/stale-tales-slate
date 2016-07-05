@@ -12,7 +12,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* routes-cheat-thru
+* _routes-cheat-thru
 
 >ts
 >routes
@@ -92,7 +92,7 @@ need to be ALONG.
 
 Strip of Profits
 
-* troves-cheat-thru
+* _troves-cheat-thru
 
 >ts
 >troves
@@ -110,13 +110,13 @@ In particular, you feel the need to SPOT right now.
 /In particular, you feel the need to (BELIEVE|REASON) right now.
 
 >believe
-In particular, you feel the need to RECALL right now.
+/In particular, you feel the need to (RECALL|DERIVE) right now.
 
 >recall
 In particular, you feel the need to DESPAIR right now.
 
 >despair
-In particular, you feel the need to OBSERVE right now.
+In particular, you feel the need to DEAL right now.
 
 >deal
 In particular, you feel the need to DESIRE right now.
@@ -127,7 +127,7 @@ In particular, you feel the need to DESIRE right now.
 >strive
 In particular, you feel the need to PONDER right now.
 
->pernod
+>ponder
 In particular, you feel the need to IGNORE right now.
 
 >ignore
@@ -137,9 +137,13 @@ In particular, you feel the need to IGNORE right now.
 In particular, you feel the need to LAST right now.
 
 >last
-In particular, you feel the need to (RESIGN|DECIDE) right now.
+/In particular, you feel the need to (RESIGN|DECIDE) right now.
 
 * presto-cheat-thru
+
+>ts
+>presto
+>in
 
 >scam
 
@@ -205,7 +209,7 @@ You gulp the crust and can't help thinking BINGO
 >bingo
 
 #####
-You can just put the dart in the gun.
+You can just put the dart in the popgun.
 
 >put dart in gun
 
@@ -217,7 +221,7 @@ You gulp the crust and can't help thinking THERE. But you are too polite and/or 
 
 >there
 
-You need to go north.
+You need to go find ammo for your popgun.
 
 >n
 
@@ -230,6 +234,8 @@ You need to go north.
 >so long
 
 /You gulp the crust and can't help thinking (LATER|TOUGH). But you are too polite and/or represssed to say it until you've finished chewing, which takes a while!
+
+>tough
 
 (Favorite bad word,) you think, I'd rather see what's in that shack.
 
@@ -277,11 +283,13 @@ Even the leaf looks tastier than the crust right now. If it were put out on the 
 
 >put leaf on skid
 
-You gulp the crust and can't help thinking make a KEYBOARD. But you are too polite to say it until you've finished chewing!
+You pause before eating the crust.
 
 >push skid n
 >push skid n
 >push skid n
+
+You gulp the crust and can't help thinking make a KEYBOARD. But you are too polite and/or represssed to say it until you've finished chewing, which takes a while!
 
 >keyboard
 
@@ -331,16 +339,19 @@ Strip of Profits
 >ts
 >oyster
 >in
->scam
 >get pills
-
-Score in a scenario: 1 out of 39 total points in the current region, Oyster. Lowest score to solve is 27. Maximum score available is 37.
+>scam
 
 You've started to get some action in.
 
 Olde Lode
 
---instead of using the pills, you could've tried to STROLL after SCRAPE, SPIT, SING or INSET.
+--instead of using the pills, you could've tried to STROLL after 
+
+>poss
+
+>score
+Score in a scenario: 1 out of 39 total points in the current region, Oyster. Lowest score to solve is 27. Maximum score available is 37.
 
 >z
 
@@ -355,12 +366,14 @@ The pills form a large maze with no dead ends. The clam goes after the bouncing 
 The urn, being possessed of greed, seems to suck in the pills, which cause it to shake. You run in a random direction as it explodes. Hm, run, urn. You could've figured that, but, well, time to move on.
 [Your score has just gone up by one point.]
 
+--instead of using the pills, you could've tried to RUN from the urn.
+
 Hero's Shore
+
+>z
 
 Before you can protest, you're aboard. You hear yelling as several of the fish realize the "coins" are pills. They don't like freeloaders...
 [Your score has just gone up by one point.]
-
->z
 
 Fighter Freight
 You're near the edge of a fighter freight. You're half-paralyzed with fear. With or without that pale plea echoing from below.
@@ -379,7 +392,7 @@ This place manages to n-rage you, as well as the fish who live here. You see pla
 
 Some carps and pikes re-nag and re-nag a poor little trout here. Another reason for anger!
 
---instead of using the pills, you could've tried to ...oops, I left something out for the pale plea. Sorry.
+--instead of using the pills, you could've tried to LEAP after the pale plea.
 
 >z
 
@@ -399,7 +412,7 @@ Handsome Sand Home
 
 You spill the pills. "That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!" clucks Aunt Tuna. "I will thank you to leave immediately."
 
-You do, but soon after, Tortu hands you a pack of bubble wrap and the tea tray, too. "Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel don't know how. Anyway, once you left, she kept muttering how she wanted to get rid of this bubble wrap to somebody. So I snuck it for you."
+You do, but soon after, Tortu hands you a pack of bubble wrap and something from the tea tray, too--a paler pearl. "Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel don't know how. Anyway, once you left, she kept muttering how she wanted to get rid of this bubble wrap to somebody. So I snuck it for you."
 
 Anger Range
 
@@ -414,14 +427,12 @@ The pills fly to the skis with a bizarre smooching noise. The skis dissolve, per
 
 The pills jump over to the debris and then off somewhere. You think they showed you where the throwing came from.
 [Your score has just gone up by one point.]
-
---instead of using the pills, you could've tried to ...oops, I left something out for wherever the crate is coming from. Sorry.
+--instead of using the pills, you could've tried to TRACE the crate.
 
 >z
 The pills jump over to the debris and then swarm in the air like bees, causing your hidden tormentor to shriek and run away.
 [Your score has just gone up by one point.]
-
---instead of using the pills, you could've tried to TRACE the crate.
+--instead of using the pills, you could've tried to REACT to the next crate.
 
 >z
 The pills gravitate to the knob and turn it forcefully. It won't act up again.
@@ -457,10 +468,10 @@ The wrap feels ruined, now, like you can't warp it, but you do notice a ruby ins
 >z
 
 >z
-You absent-mindedly shake the pills out. Some bounce off the general gleaner, and as you look for cracks or damage, you see a pattern within. A way through a maze.
+You absent-mindedly shake the pills out. Some bounce off the general gleaner, which swells oddly, and as you look for cracks or damage, you see a pattern within. A way through a maze.
 [Your score has just gone up by one point.]
 
---instead of using the pills, you could've tried to ...oops, I left something out for the general gleaner. Sorry.
+--instead of using the pills, you could've tried to ENLARGE the gleaner.
 
 >n
 >w
@@ -481,7 +492,14 @@ The haunter stays your hand. Perhaps it had a sad incident in its past which sen
 >n
 >w
 
->gonear tenfold
+>e
+WRONG
+--instead of using the pills, you could've tried to PATROL for the portal.
+
+>in
+Scum Ant Sanctum
+WRONG
+
 >z
 The yapper begins bellyaching about picking up the pills. He complains about how it's HIS job to clean things up. He goes off to look for a wastebasket--but you think you see him popping a pill as he leaves.
 [Your score has just gone up by one point.]
@@ -516,7 +534,10 @@ You spill the pills and hook yourself on the dialer trying to catch them. You wi
 >put tarts in toaster
 
 >xray
+(Ray Eck)
 Hmm. You bet you could get past if Ray Eck were CREAKY.
+>creaky
+>n
 
 >xray diners
 Hmm. You bet you could get past if the snider diners were RINSED.
@@ -724,6 +745,7 @@ The pills scatter all over the bar, leaving everyone to slip and fall. You make 
 
 * otters-cheat-thru
 
+>seed 1
 >a5
 >in
 >barely
@@ -756,10 +778,23 @@ You're not able to discern anything right here and now. Maybe move somewhere wit
 
 >n
 >w
-As you gaze into the cinders, they blow away, leaving you feeling the macks can talk BLEARILY.
+As you gaze into the cinders, they blow away, leaving you feeling the macks can talk
 
 >blearily
 >cattily
+>z
+/!(BLEARILY|CATTILY)
+>z
+/!(BLEARILY|CATTILY)
+>z
+/!(BLEARILY|CATTILY)
+>z
+/!(BLEARILY|CATTILY)
+>z
+/!(BLEARILY|CATTILY)
+>z
+/!(BLEARILY|CATTILY)
+
 >nastily
 
 #reject for discerning during Gretta chat
@@ -859,8 +894,18 @@ As you gaze into the cinders, they blow away, leaving you feeling you can just P
 
 >play whistle
 
+*others-cheat-thru
+
+>rove over
+
+
+########################presto bug
+what if I hint keyboard twice? That would suck for the player
+
 ########################bugs from first run through
 
 #fix random hinting for the macks, both mentioned and not (it hints something gone, and it also hints something not shown up yet)
 
 #fix hinting random something every time
+
+#randomize OTHERS hints once you are done with the basics
