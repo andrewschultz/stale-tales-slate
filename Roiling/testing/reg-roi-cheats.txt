@@ -1,0 +1,866 @@
+###############################
+#
+#reg-roi-cheats.txt
+#
+#regression test for trying cheats for the various regions
+#
+# routes/troves/presto written
+# oyster/towers started
+# otters to go
+
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* routes-cheat-thru
+
+>ts
+>routes
+>in
+
+>inside
+>scam
+reflects to the list-o-toils
+
+>x toils
+
+points back outside
+
+
+>out
+need to be AGAINST.
+
+
+>against
+need to be ASTRIDE.
+
+>astride
+need to be BELOW.
+
+>below
+need to be UNDER.
+
+>under
+need to be PAST.
+
+>past
+need to be DESPITE.
+
+>despite
+out of the idle deli
+
+>out
+need to be ACROSS.
+
+>across
+need to be OPPOSITE.
+
+>opposite
+out of Oscar's.
+
+>out
+Cleric Circle now you have all
+
+>inside
+outside to the commotion.
+
+>out
+need to be FROM.
+
+>from
+need to be BENEATH.
+
+>beneath
+need to be UNTIL.
+
+>until
+need to be AROUND.
+
+>around
+need to be ALONG.
+
+>along
+/need to be (ABOARD|AMIDST).
+
+>aboard
+/need to be (BEHIND|WITHIN).
+
+>within
+/need to be (THROUGH|BETWEEN).
+
+>through
+
+Strip of Profits
+
+* troves-cheat-thru
+
+>ts
+>troves
+>in
+>hate
+>care
+ 
+ >scam
+In particular, you feel the need to OBSERVE right now.
+ 
+ >observe
+In particular, you feel the need to SPOT right now.
+ 
+ >spot
+/In particular, you feel the need to (BELIEVE|REASON) right now.
+
+>believe
+In particular, you feel the need to RECALL right now.
+
+>recall
+In particular, you feel the need to DESPAIR right now.
+
+>despair
+In particular, you feel the need to OBSERVE right now.
+
+>deal
+In particular, you feel the need to DESIRE right now.
+
+>desire
+/In particular, you feel the need to (ASPIRE|STRIVE) right now.
+
+>strive
+In particular, you feel the need to PONDER right now.
+
+>pernod
+In particular, you feel the need to IGNORE right now.
+
+>ignore
+/In particular, you feel the need to (BOLSTER|MASTER) right now.
+
+>bolster
+In particular, you feel the need to LAST right now.
+
+>last
+In particular, you feel the need to (RESIGN|DECIDE) right now.
+
+* presto-cheat-thru
+
+>scam
+
+You gulp the crust and can't help thinking UMPH
+
+>umph
+
+You gulp the crust and can't help thinking POOH
+
+>pooh
+
+Before taking a bite, you wonder if you've visited everywhere you can yet.
+
+>e
+
+The plebe grimaces as you try to eat the crust. He doesn't seem to respect your authority enough to keep a straight face yet.
+
+>s
+
+You gulp the crust and can't help thinking RATS
+
+>rats
+
+You gulp the crust and can't help thinking DRAT
+
+>drat
+
+Before taking a bite, you wonder if you've visited everywhere you can yet.
+
+>s
+
+You gulp the crust and can't help thinking OLE
+
+>ole
+
+You gulp the crust and can't help thinking DARN
+
+>darn
+
+You gulp the crust and can't help thinking WHASSUP
+
+>whassup
+
+You're done here in Dirge Ridge. Maybe Leo and Rand's combined muscle could help you somewhere.
+
+>n
+>n
+
+You gulp the crust and can't help thinking BLEEP
+
+>bleep
+
+You gulp the crust and can't help thinking MAZEL TOV
+
+>mazeltov
+
+The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through.
+
+>e
+
+You gulp the crust and can't help thinking BINGO
+
+>bingo
+
+#####
+You can just put the dart in the gun.
+
+>put dart in gun
+
+Ugh. The crust feels like army rations. Not now.
+
+>w
+
+You gulp the crust and can't help thinking THERE. But you are too polite and/or represssed to say it until you've finished chewing, which takes a while!
+
+>there
+
+You need to go north.
+
+>n
+
+/You gulp the crust and can't help thinking (GOSH|SYKE). But you are too polite and/or represssed to say it until you've finished chewing, which takes a while!
+
+>gosh
+
+/You gulp the crust and can't help thinking (SO LONG|LATER|TOUGH). But you are too polite and/or represssed to say it until you've finished chewing, which takes a while!
+
+>so long
+
+/You gulp the crust and can't help thinking (LATER|TOUGH). But you are too polite and/or represssed to say it until you've finished chewing, which takes a while!
+
+(Favorite bad word,) you think, I'd rather see what's in that shack.
+
+>n
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make COLA.
+
+>cola
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a LEAF.
+
+>leaf
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a MUG.
+
+>mug
+
+No, you'd rather pour the cola in the mug. It's slightly less nasty than the crust.
+
+>pour cola in mug
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a FUTON.
+
+>futon
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a CAPS LOCK key.
+
+>caps lock
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a SKID.
+
+>skid
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a SCREEN.
+
+>screen
+
+Ugh, the crust looks worse than yak food. You wonder what to do with the yak you left back...wherever.
+
+>push skid s
+>push skid s
+>push skid s
+
+Even the leaf looks tastier than the crust right now. If it were put out on the skid, the yak would find it tasty.
+
+>put leaf on skid
+
+You gulp the crust and can't help thinking make a KEYBOARD. But you are too polite to say it until you've finished chewing!
+
+>push skid n
+>push skid n
+>push skid n
+
+>keyboard
+
+You would rather change the skid back to the disk, then put the disk in the disk drive.
+
+>disk
+
+You would rather put the disk in the disk drive.
+
+>put disk in drive
+
+You would rather put the keyboard and screen on the slab.
+
+>put screen on slab
+
+You would rather put the keyboard on the slab.
+
+>put keyboard on slab
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try REBOOT with the blue button.
+
+>reboot
+You curse yourself for not putting the caps lock button in the keyboard.
+
+>put caps lock in keyboard
+
+Yeech. You're full. You need to SLEEP.
+
+>sleep
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try learn to COMPILE from the scratch paper.
+
+>compile
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try DEBUG the compiled code.
+
+>debug
+
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a BUS or USB.
+
+>bus
+
+Strip of Profits
+
+* oyster-cheat-thru
+
+>ts
+>oyster
+>in
+>scam
+>get pills
+
+Score in a scenario: 1 out of 39 total points in the current region, Oyster. Lowest score to solve is 27. Maximum score available is 37.
+
+You've started to get some action in.
+
+Olde Lode
+
+--instead of using the pills, you could've tried to STROLL after SCRAPE, SPIT, SING or INSET.
+
+>z
+
+The pills form a large maze with no dead ends. The clam goes after the bouncing pills and eats some, zigzags crazily, and runs himself tired tracking new ones down. Then, suddenly, it looks as if it's seen a ghost. It shrivels to a point with a sad deflating noise, then vanishes with a pop!
+
+[Your score has just gone up by one point.]
+
+--instead of using the pills, you could've tried to CALM the clam.
+
+>z
+
+The urn, being possessed of greed, seems to suck in the pills, which cause it to shake. You run in a random direction as it explodes. Hm, run, urn. You could've figured that, but, well, time to move on.
+[Your score has just gone up by one point.]
+
+Hero's Shore
+
+Before you can protest, you're aboard. You hear yelling as several of the fish realize the "coins" are pills. They don't like freeloaders...
+[Your score has just gone up by one point.]
+
+>z
+
+Fighter Freight
+You're near the edge of a fighter freight. You're half-paralyzed with fear. With or without that pale plea echoing from below.
+
+Scary crays hover here, on the verge of attacking.
+
+--instead of using the pills, you could've tried to BOAST to get over the river.
+
+>z
+
+Some of the crays are dumb enough to think that the pills might be coins. In the ensuing hubbub of arguments between smart fish and dumb fish, you jump over the edge and swim to shore.
+[Your score has just gone up by one point.]
+
+Anger Range
+This place manages to n-rage you, as well as the fish who live here. You see plains to the north, and you can go west or east, too. You think back to someone annoying named Regan.
+
+Some carps and pikes re-nag and re-nag a poor little trout here. Another reason for anger!
+
+--instead of using the pills, you could've tried to ...oops, I left something out for the pale plea. Sorry.
+
+>z
+
+The carps and pikes, distracted by the pills that fall out and keep jumping, ignore the trout. "You stupid! Those pills are valuable. Out of our way, mouth-breather." The range anger wells up in you.
+[Your score has just gone up by one point.]
+
+--instead of using the pills, you could've tried to SCRAP or SPIKE the carps/pikes.
+
+>e
+Lean Lane
+The pills make a racket as they bounce around. A matronly tuna sticks her head out a window and yells IF YOU PLEASE. You notice your friend the trout behind her. He waves to you. The tuna invites you up.
+Handsome Sand Home
+
+--instead of using the pills, you could've tried to SEEK the eeks.
+
+>swipe wipes
+
+You spill the pills. "That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!" clucks Aunt Tuna. "I will thank you to leave immediately."
+
+You do, but soon after, Tortu hands you a pack of bubble wrap and the tea tray, too. "Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel don't know how. Anyway, once you left, she kept muttering how she wanted to get rid of this bubble wrap to somebody. So I snuck it for you."
+
+Anger Range
+
+--instead of using the pills, you could've tried to TUTOR the trout.
+
+>n
+Lapsin' Plains
+The pills fly to the skis with a bizarre smooching noise. The skis dissolve, perhaps out of inanimate shame.
+--instead of using the pills, you could've tried to KISS the skis.
+
+>z
+
+The pills jump over to the debris and then off somewhere. You think they showed you where the throwing came from.
+[Your score has just gone up by one point.]
+
+--instead of using the pills, you could've tried to ...oops, I left something out for wherever the crate is coming from. Sorry.
+
+>z
+The pills jump over to the debris and then swarm in the air like bees, causing your hidden tormentor to shriek and run away.
+[Your score has just gone up by one point.]
+
+--instead of using the pills, you could've tried to TRACE the crate.
+
+>z
+The pills gravitate to the knob and turn it forcefully. It won't act up again.
+Your last act seems to have broken the door's will to block you. It emits a rude odor, rued briefly, and it creaks open with a hinge-neigh and grumpy "Open door? Done poor." You're all "Postpone? Stop? Nope."
+--instead of using the pills, you could've tried to BONK the knob.
+
+>z
+You spill out a pill, cautiously, but nothing happens. Maybe you're done here.
+
+>in
+
+You spill the pills and slip on them, because no bathmat is around. In the process, you smack your elbow against the tubs. Right on the funny bone. You find it so unfunny you beat the tubs into waste. Which might be hiding more than just that prod you found inside.
+--instead of using the pills, you could've tried to BUST the tubs.
+
+>z
+You spill the pills, which bounce around at your legs until you're annoyed enough to start hitting at them with the prod. Foomp! A hidden switch triggers, and the prod transforms to a rigged digger.
+--instead of using the pills, you could've tried to DROP the prod.
+
+>shape
+>sweat
+>clean
+
+>out
+>s
+>w
+
+"Man! That might just be the cure for my ears!" The sardine grabs the pills as the first one falls, and in a brief melee, your bubble wrap falls. He flees, and as you run after him, you step on the bubble wrap, causing it to tear and pop.
+
+The wrap feels ruined, now, like you can't warp it, but you do notice a ruby inside. It seems valuable. So you take it.
+
+--instead of using the pills, you could've tried to WARP the wrap.
+
+>z
+
+>z
+You absent-mindedly shake the pills out. Some bounce off the general gleaner, and as you look for cracks or damage, you see a pattern within. A way through a maze.
+[Your score has just gone up by one point.]
+
+--instead of using the pills, you could've tried to ...oops, I left something out for the general gleaner. Sorry.
+
+>n
+>w
+
+The pills swarm your ruby so you drop it. They sink into the dirt, the ruby close behind. The dirt fills, leaving a thin hint.
+--instead of using the pills, you could've tried to BURY the ruby.
+
+>e
+>s
+>e
+
+>z
+The haunter stays your hand. Perhaps it had a sad incident in its past which sent it to earth sooner--or made it lose its ruby. It nods at you in understanding.
+[Your score has just gone up by one point.]
+--instead of using the pills, you could've tried to ASSUAGE the sausage.
+
+>w
+>n
+>w
+
+>gonear tenfold
+>z
+The yapper begins bellyaching about picking up the pills. He complains about how it's HIS job to clean things up. He goes off to look for a wastebasket--but you think you see him popping a pill as he leaves.
+[Your score has just gone up by one point.]
+
+--instead of using the pills, you could've tried to PREPAY the yapper.
+
+>z
+You spill the pills on the dialer, and they change DIALER to enough of the 720 possibilities that they settle on DERAIL.
+[Your score has just gone up by one point.]
+
+--instead of using the pills, you could've tried to DERAIL with the dialer.
+
+>z
+You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the hedron, and the hedron accuses her.
+
+--instead of using the pills, you could've tried to REDIAL with the dialer.
+
+
+* towers-cheat-thru
+
+>ts
+>towers
+>seed 1
+>in
+
+>gone
+>bleak
+>wined
+>yonder
+
+>get tarts
+>put tarts in toaster
+
+>xray
+Hmm. You bet you could get past if Ray Eck were CREAKY.
+
+>xray diners
+Hmm. You bet you could get past if the snider diners were RINSED.
+
+>xray hulk
+Hmm. You bet you could get past if the muscly hulk were CLUMSY.
+
+>xray rewired
+Hmm. You bet you could get past if the oddly rewired robot were WEIRDER.
+
+>xray yurts
+You have a good gaze, and you know what to do and say and think. Gotta be RUSTY.
+
+>rusty
+
+>rinsed
+>clumsy
+>weirder
+
+>w
+>e
+
+>n
+
+>xray iprune
+Hmm. You bet you could get past if the unripe iPrune were PUNIER.
+
+>xray pirates
+Hmm. You bet you could get past if the pirates were PASTIER.
+
+>punier
+>pastier
+
+>n
+
+>xray ingrates
+Hmm. You bet you could get past if the ingrates were ANGSTIER.
+>xray admirer
+Hmm. You bet you could get past if the admirer were MARRIED.
+>xray wait-seer
+Hmm. You bet you could get past if the sweatier wait-seer were WEARIEST.
+
+>angstier
+>married
+>weariest
+
+>n
+>s
+>e
+
+>xray atheists
+Hmm. You bet you could get past if the Atheists were HASTIEST.
+>xray grailman
+Hmm. You bet you could get past if the alarming grailman were MARGINAL.
+>hastiest
+>marginal
+
+>s
+
+>xray weeds
+SEWED
+WRONG
+
+>xray denim
+MINED
+WRONG
+
+>xray reed's ale
+Hmm. You bet you could get past if the man in a REED'S ALE costume were RELEASED.
+>xray inapt paint
+Hmm. You bet you could get past if the man covered in inapt paint were HIMSELF.
+
+>released
+>mined
+>himself
+>sewed
+
+>xray raves saver
+PEARLY.
+WRONG
+
+
+>s
+>xray salesmen
+Hmm. You bet you could get past if the salesmen were DRAINED.
+
+>drained
+>e
+
+>xray bonker
+Hmm. You bet you could get past if the bonker were BROKEN.
+>xray natives
+Hmm. You bet you could get past if the natives were NAIVEST.
+>xray natives
+[NOTE: you already xrayed this, so you're just remembering what it was...]
+Hmm. You bet you could get past if the natives were NAIVEST.
+>xray drains
+Hmm. You bet you could get past if the organised ego drains were GRANDIOSE.
+
+>broken
+>naivest
+>grandiose
+>e
+
+>xray fissure
+You have a good gaze, and you know what to do and say and think. Gotta be FUSSIER.
+
+>xray ropins
+You have a good gaze, and you know what to do and say and think. Gotta be unlocked--but nothing here seems to fit with UNLOCKED.
+
+>xray yow
+You see Dr. Yow has both a wordy and rowdy side that have been crushed by prison.
+
+>undo
+
+>rowdy
+>xray yow
+You realize Dr. Yow has a wordy side, too.
+>undo
+
+>undo
+>wordy
+>xray yow
+You realize Dr. Yow has a rowdy side, too.
+>undo
+
+>rowdy
+>xray yow
+You've done what you can with Dr. Yow. He can be rowdy or wordy.
+
+>wordy
+>push retape
+>gt duck
+>push repeat
+>gt yow
+>unlocked
+
+>w
+>n
+
+>xray deacons
+Hmm. You bet you could get past if the once-sad deacons were HOLIEST.
+>holiest
+>n
+
+>xray dirk
+"I--I don't like free candy, mister," he says, looking scared.
+
+Maybe you can't quite help him now.
+
+>ask kid about yow
+
+>attentive
+>rowdy
+
+>gt repair
+>put dagger in repair
+>gt kid
+
+>give gizmo to kid
+
+>xray turbos
+You have a good gaze, and you know what to do and say and think. Gotta be ROBUST.
+>xray blaster
+You have a good gaze, and you know what to do and say and think. Gotta be STABLER.
+
+>xray bot boat
+The bot boat and its parts appear as workable as it can be.
+
+>gonear rawest waters
+
+>xray
+(eastern shore)
+You have a good gaze, and you know what to do and say and think. Gotta be NEAREST.
+
+>nearest
+
+>xray crocus
+You have a good gaze, and you know what to do and say and think. Gotta be DINGY.
+>xray flowerpot
+You have a good gaze, and you know what to do and say and think. Gotta be DINGY.
+
+>xray serpent
+You have a good gaze, and you know what to do and say and think. Gotta be PRESENT.
+
+>xray palace
+Boy! This is a big one.
+You have a good gaze, and you know what to do and say and think. Gotta be SPECTACULAR.
+
+>present
+>w
+
+>xray ed
+You have a good gaze, and you know what to do and say and think. Gotta be GREEDY.
+
+>e
+
+>xray flowerpot
+[NOTE: you already xrayed this, so you're just remembering what it was...]
+You remember you could still think dingy.
+
+The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.
+
+[Your score has just gone up by one point.]
+
+* otters-cheat-thru
+
+>a5
+>in
+>barely
+>scam
+
+As you gaze into the cinders, they blow away, leaving you feeling Ed can speak REEDILY.
+
+>reedily
+You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet.
+
+>n
+WRONG
+
+>angrily
+/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|ANGRILY|BRUTELY).
+>z
+/Hm, it'd still be fun to see the imp act (ENRAGEDLY|ANGRILY|BRUTELY).
+
+>brutely
+
+>s
+>s
+As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk 
+>z
+>z
+It still might peg the whiners back a bit if they talked more the imp can act TERSELY.
+>tersely
+>loathingly
+You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet.
+
+>n
+>w
+As you gaze into the cinders, they blow away, leaving you feeling the macks can talk BLEARILY.
+
+>blearily
+>cattily
+>nastily
+
+#reject for discerning during Gretta chat
+That can wait until you've finished talking.
+
+>1
+>3
+
+>n
+As you gaze into the cinders, they blow away, leaving you feeling you can say BECAUSE.
+
+>because
+As you gaze into the cinders, they blow away, leaving you feeling you can say ELSE.
+
+>else
+You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet.
+
+>s
+As you gaze into the cinders, they blow away, leaving you feeling you can make an ATOM.
+
+>atom
+The medals need refurbishing in the areas north and south of the Barley.
+
+>s
+As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
+
+>although
+As you gaze into the cinders, they blow away, leaving you feeling you can say HOWEVER.
+
+>n
+>e
+>n
+>n
+
+As you gaze into the cinders, they blow away, leaving you feeling you can make the owls SLOW.
+
+>slow
+/make the (badger|ocelots|leopard|satyr)
+
+>garbed
+/make the (ocelots|leopard|satyr)
+
+>coolest
+/make the (leopard|satyr)
+
+>paroled
+# not sure about this!
+make the satyr ARTSY
+WRONG
+
+
+# if I nail the "right" animal first, it needs to switch from there
+
+>s
+>s
+>s
+>s
+you can make the raptor a PARROT
+
+>parrot
+
+/(SNAIL|RACOON|SNIPE|HORNETS)
+>n
+>n
+>w
+>w
+RAPTOR
+
+>raptor
+>e
+>e
+>s
+>s
+>snail
+/(RACOON|SNIPE|HORNETS)
+
+>racoon
+/(SNIPE|HORNETS)
+
+>snipe
+QUICKLY
+
+>n
+>n
+>w
+>w
+
+DEEPLY
+>deeply
+QUICKLY
+>quickly
+
+>w
+>7
+
+As you gaze into the cinders, they blow away, leaving you feeling you can just PLAY THE WHISTLE.
+
+>play whistle
+
+########################bugs from first run through
+
+#fix random hinting for the macks, both mentioned and not (it hints something gone, and it also hints something not shown up yet)
+
+#fix hinting random something every time

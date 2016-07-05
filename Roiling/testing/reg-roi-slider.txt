@@ -1,0 +1,120 @@
+###############################
+#
+#reg-roi-cheats.txt
+#
+#regression test for trying cheats for the various regions
+#
+# routes/troves/presto written
+# oyster/towers started
+# otters to go
+
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* slider-exhaustive
+
+>ts
+>i
+You're carrying your letters settler, to help with hints. Cheat/teach mode is off, and idlers' slider is off.
+
+>switch slider
+SL
+
+>switch slider
+You switch the slider off.
+
+>switch slider
+You switch the slider on.
+
+>push slider
+You switch the slider off.
+
+>push slider
+You switch the slider on.
+
+>pull slider
+You switch the slider off.
+
+>pull slider
+You switch the slider on.
+
+>sebrot
+
+Your settler throws out a bunch of beeps:  HIGH LOW LOW LOW LOW HIGH.
+Ugh. Those high notes gave you a migraine mini-rage. You switch off the slider.
+
+>orbets
+The smell from Store B becomes fruitier and more delicious.
+
+>pull slider
+You switch the slider on.
+
+>orbets
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+>sorbte
+Your settler throws out a bunch of beeps:  HIGH HIGH HIGH HIGH LOW LOW
+You figure you can take that noise eight more times.
+
+>pull slider
+>sorbte
+>pull slider
+>sorbte
+
+>i
+You're carrying your letters settler, to help with hints. Cheat/teach mode is off, idlers' slider is off, and you can put up with its beepings six more times.
+
+>pull slider
+>sorbte
+
+>pull slider
+>sorbte
+
+>pull slider
+>sorbte
+
+>pull slider
+>sorbte
+
+>pull slider
+>sorbte
+
+>pull slider
+>sorbte
+
+You're sick of those high notes.
+
+>pull slider
+You can't afford any more headaches.
+
+>i
+You're carrying your letters settler, to help with hints. Cheat/teach mode is off, idlers' slider is off, and you can't put up with the slider's beeps any more.
+
+>tokers
+>nestor
+>in
+>outside
+
+You can use the slider again, now.
+
+>i
+You're carrying your letters settler, to help with hints. Cheat/teach mode is off, idlers' slider is off, and you can put up with its beepings ten more times.
+
+#make sure negative testing works
+
+>pull slider
+>sorbte
+
+* munchies-right-away
+
+>ts
+
+>tokers
+>nestor
+>in
+>outside
+
+>i
+You're carrying your letters settler, to help with hints. Cheat/teach mode is off, idlers' slider is off, and you can put up with its beepings twenty more times.
+

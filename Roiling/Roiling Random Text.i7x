@@ -36323,7 +36323,7 @@ blurb
 "Ruler is surlier"
 "Shoo-in is on, ho"
 "Snooper so prone" []
-"'So-gritty try is GOT!'" []
+"So-gritty try is GOT!" []
 "A surety, too: You're toast"
 "Surrender surer, nerd"
 "Terminated, inert, tamed" []
@@ -36334,7 +36334,7 @@ blurb
 "Toughen? No, not enough" []
 "Troublin['] runt, boil"
 "Try hovers, very short"
-"A try so stray, o! Roasty, roasty!" []
+"A try so stray, o! Roasty, roasty" []
 "Un-loser rules on" []
 "'Way to be beat, yow!'"
 "Woo! Tense! Now to see woe onset"

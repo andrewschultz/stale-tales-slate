@@ -2,10 +2,12 @@ out=roiling-invisiclues.htm
 !A Roiling Original HTML Clues
 >General
 ?Does the male/female option have any practical difference?
-No. It just changes the names/genders of some people you'll meet or hear of.
+Well, one. It changes one guardian in one area. It also changes the names/genders of some people you'll meet or hear of.
 Spoilers ahead.
-The tarred trader, Dr. Yow, the smart kid, the tarred trader, and the person on a droll dollar.
+The tarred trader, Dr. Yow, the smart kid, and the person on a droll dollar change names.
+The south exit from the Coastline, in Store W, features either Lois the Hostile or the Hostile-Is-He Lot.
 There may be an embarrassing bug where a female NPC is referred to as male, but I hope not. I searched pretty thoroughly, I guess/think. If you find one, I'll fix it and give you credit.
+Also, if any animals are referred to as male, let me know, as that's a potential bug.
 >MANOR
 >>Study
 ?What do I do here?
@@ -17,11 +19,11 @@ You may note the book titles as well.
 The diorama probably clinches it.
 You need to find three pieces of evidence that tell you about your power to further the story.
 You can look at the bookshelf, take the notepad, consult the notepad, try to "flip" something successfully, examine the diorama, or flip something in the diorama.
-You can also THINK.
+You can also THINK, which acts as two pieces of evidence.
 You may also notice something curious about the location names, if you looked ahead in this document.
 You probably figured it out by now, but your power is to turn things into anagrams of themselves.
 ?Short answer: what is my power, anyway?
-You have the ability to magically anagram things.
+You have the ability to anagram things magically.
 ?What is the knock at the door?
 Someone to see you. You can find out if you open it, or you can wait a few turns.
 ?What should I talk to Gunter about?
@@ -55,7 +57,7 @@ The tables and the ten beams hide ways out. So is "my niche" on the ceiling.
 What are other rooms in a mansion? And what is something that leads up
 The TABLES become a STABLE you can enter, but it's intermediary...
 ...and so is the CHIMNEY...
-...because you can just go directly to the BASEMENT.
+...because you can just bypass them and go directly to the BASEMENT, which is a longer/harder puzzle to find.
 ?What is the giant pin for?
 It's an optional last lousy point.
 If you use the settler on it, in cheat mode, it may be obvious what it is.
@@ -87,12 +89,12 @@ STAIR.
 Figure how the letters settler works, though you don't have to, as you'll get a tutorial.
 Then go IN.
 ?Help! There's a guy with a gun!
-He doesn't have a gun. It's a RIFLE.
+Well, it's not just any gun. It's a RIFLE.
 You won't make it to the rifle in time, and he doesn't seem too enthusiastic to shoot it, so maybe you can use some magic?
 The name is in red, which may help eliminate possibilities.
 The rifle with the bullet with your name on it...
 ...can become a FLIER with your name on it.
-Now that you've shown your powers, your former antagonist will be more friendly to you.
+Now that you've shown your powers, your former (apparent) antagonist will be more friendly to you.
 ?What can Elmo tell me? Do I need to listen?
 You can solve the game without Elmo, but he can tell you how to use the settler if you're not sure. It's a de facto tutorial about the settler
 You can also ask Elmo about the areas ahead.
@@ -162,7 +164,7 @@ You can't do anything with it until after you solved the game.
 The "extra good ending" is behind it, but the hoster won't let you in.
 You may've guessed it was OTHERS.
 ?What does store P become?
-Well, it becomes a vortex, but you need a magic word, according to the poster.
+Well, it becomes a sort of vortex, but you need a magic word, according to the poster.
 Store P, Poster...
 P-E--O with the settler on cheat mode. And you can eliminate others to get...
 ...PRESTO!
@@ -204,7 +206,7 @@ NESTOR.
 ?What's in the cloud?
 The start of your "quest." Enter it to find out.
 >>>CRUELEST LECTURES
-?What's with the tedious lecture and studio E and 'I used to?'
+?What's with the tedious lecture and studio E and "I used to?"
 They're clues to how to disrupt this whole joint. Ha ha. Joint, geddit?
 This is a wild card word.
 Your settler gives a huge clue if you look in studio E.
@@ -225,9 +227,13 @@ Interjections are what work here.
 Maybe you can scare him off without being mean.
 Turning him into balm won't give him balm.
 You can, however, make a scary noise.
+BLAM.
 ?How to get over the hump?
 You're grunting wrong.
 UMPH.
+>Do I have to tackle that maze to the north?
+You don't even have to set foot in it, if you figure the right word. It's a tricky one, but there are a lot of clues. You may even wish to eat the crust once you've cleared everything else.
+See the Volt Maze section below.
 ?The maze is gone now. Why can't I go north?
 The ether hides enemies. If only you could point them out...
 ...saying THERE.
@@ -267,7 +273,7 @@ Third, you can take the bad book from the shack and give it to the yak, who gets
 You may or may not know what to do with the drab yoke. The exciting conclusion is in the Shack section.
 >>MARINES SEMINAR
 ?What do I do with the pop-gun?
-It's pg-on-up, but twiddling that does nothing.
+It's PG-on-up, but twiddling that does nothing.
 The boing mechanism could use a moment of discovery.
 So say BINGO to get it working.
 >>DIRGE RIDGE

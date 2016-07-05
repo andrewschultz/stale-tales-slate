@@ -3005,7 +3005,7 @@ to say convoforce:
 	else if Elvira is visible:
 		say "'Good fail of dialog!' Elvira can negotiate awkward silence better than you can.[paragraph break]You can RECAP to see your options";
 	else if Gretta is visible:
-		say "She looks around uneasily, but she doesn't seem to be glaring at you. So you should probably listen up, or you can RECAP to see your options";
+		say "Gretta looks around uneasily, but she doesn't seem to be glaring at you. So you should probably listen up, or you can RECAP to see your options";
 
 to decide whether the action is blathery:
 	if asking about, yes;
@@ -3732,21 +3732,33 @@ to match-process (it1 - indexed text) and (it2 - indexed text):
 	let it1a be filtered name of it1;
 	let it2a be filtered name of it2;
 	let lost-one be 0;
-	say "Your settler begins to make noises: ";
+	repeat with myc running from 1 to number of characters in it1a:
+		if "[character number myc in it1a]" exactly matches the text "[character number myc in it2a]":
+			increment lost-one;
+	if lost-one is 0:
+		say "Your settler begins to make noises: a low hum, but nothing really piercing.";
+		the rule succeeds;
+	say "Your settler throws out a bunch of beeps: ";
 	repeat with myc running from 1 to number of characters in it1a:
 		if "[character number myc in it1a]" exactly matches the text "[character number myc in it2a]":
 			say " HIGH";
 			increment lost-one;
 		else:
 			say " LOW";
-	if lost-one > 0:
-		say "Ugh. [if lost-one > 0]Those high notes[else]That high note[end if] gave you caused a migraine mini-rage. You switch off the slider.";
-		now slider is switched off;
-		decrement headaches;
-		now undo-code is 5;
-		prevent undo;
-	if headaches is 0:
-		say "[line break]You're sick of those notes.";
+	say ".";
+	say "[line break]Ugh. [if lost-one > 0]Those high notes[else]That high note[end if] gave you a migraine mini-rage. You switch off the slider.";
+	now slider is switched off;
+	decrement headaches;
+	now list-headache is true;
+	now undo-code is 5;
+	prevent undo;
+	say "[line break]";
+	if headaches > 0:
+		say "You figure you can take that noise [headaches in words] more time[if headaches > 1]s[end if].";
+	else:
+		say "You're sick of those high notes.";
+
+list-headache is a truth state that varies.
 
 to say dior-hint:
 	say "That's not quite it. You can probably look at the diorama to see what to do"
@@ -5929,7 +5941,7 @@ to decide which thing is otters-cur-item:
 		if atmo-moat is in frontage and power-back is true:
 			decide on atmo-moat;
 	if player is in bran barn:
-		if ghoul hat is in bran barn:
+		if Mr Lee wears ghoul hat:
 			decide on ghoul hat;
 		if p-2 is in bran barn:
 			decide on p-2;
@@ -5952,9 +5964,7 @@ to decide which thing is otters-cur-item:
 	if player is in perverse preserve:
 		if raptor is visible:
 			decide on raptor;
-		if number of visible pre-animal things is 0:
-			decide on player;
-		if number of visible pre-animal things is 1:
+		if number of visible pre-animal things < 2:
 			decide on player;
 		decide on animal-to-hint;
 	if player is in alcoves:
@@ -5964,10 +5974,10 @@ to decide which thing is otters-cur-item:
 			decide on Merle;
 	if power-back is false:
 		decide on the player;
-	if player has medals and medals are not reflexed:
-		decide on medals;
 	if player has whistle and whistle is not reflexed:
 		decide on whistle;
+	if player has medals and medals are not reflexed and player is in alcoves:
+		decide on medals;
 	if current quip is final-quip:
 		decide on elvira;
 	decide on the player;
@@ -5995,11 +6005,13 @@ badger
 last-thing-hinted is a thing that varies. last-thing-hinted is the palm.
 
 to decide which thing is animal-to-hint:
-	if last-thing-hinted is in location of player:
+	if last-thing-hinted is in location of player and last-thing-hinted is reflexive:
 		decide on last-thing-hinted;
 	repeat through table of animal randomness:
-		if this-animal entry is in location of player and this-animal entry is reflexive:
-			decide on this-animal entry;
+		if this-animal entry is in location of player:
+			if this-animal entry is reflexive or this-animal entry is flippable:
+				decide on this-animal entry;
+	d "bad fallthrough in animal-to-hint.";
 	decide on the player; [this should never happen]
 
 carry out otters-hinting:
@@ -8140,7 +8152,7 @@ Store B	Store B	"sorbet"	"sorbet"	"You ask 'Got any sorbet?' and a seedy man bec
 Store H	hoster	"others"	"others"	"You manage to discover a secret place set aside in Store H. You wonder who could be there or even if you should go there."	false	524148772
 Store K	tokers	"tokers"	"tokers"	"You concentrate on the store with all your might, but you're unable to do anything. In frustration, you bang on the window, breaking it. Smoke comes pouring out. 'Dude you must totally be the cops! We were hotboxing in there!' You assure them you are not, that you've got a rather libertarian view on it all, but it takes so long that a joint they left in there burns the store down. Fortunately, they'd grabbed everything else of value, and all things considered, they feel almost glad to be liberated from their fears of being caught. They pull a tarp apart and sit down.[check-nestor]"	false	539799651	[start stores]
 Store N	nestor	"nestor"	"nestor"	"The store rumbles and collapses! But the rubble falls in a circle around the poor fellow inside. He gives a duh-eyed 'Hey dude.' A long pause. 'What happened?' He wouldn't believe the truth, so you just [check-tokers]"	false	555773981
-lecturer	lecturer	"go outside" or "outside"	"outside"	"Ian and the lecturer are swept from the doorway and stage, respectively, by something unseen. The lecturer frantically babbles something about how this is why we need to fight drugs, but he is too busy backwards somersaulting to establish eye contact with his audience. You stumble out yourself, back onto the way high highway.[paragraph break]'Whoah, dude! You totally stuck it to guard-on-a-ground Durango! Dour nag!' The tokers give you the sauciest suitcase you could imagine (tie-dyed, not spaghetti sauce) and encourage you to eat the nice mush munchies therein. You protest at first, worrying the munchies might be 'special,' but no, the tokers assure you that'd waste money. They explain the munchies help reduce migraines['] mini-rages, like (after some experiments with the settler) that annoying noise from the slider. You can use the slider [if headaches is 0]again[else]more[end if], now."	false	572670412	--	Strip of Profits
+lecturer	lecturer	"go outside" or "outside"	"outside"	"Ian and the lecturer are swept from the doorway and stage, respectively, by something unseen. The lecturer frantically babbles something about how this is why we need to fight drugs, but he is too busy backwards somersaulting to establish eye contact with his audience. You stumble out yourself, back onto the way high highway.[paragraph break]'Whoah, dude! You totally stuck it to guard-on-a-ground Durango! Dour nag!' The tokers give you the sauciest suitcase you could imagine (tie-dyed, not spaghetti sauce) and encourage you to eat the nice mush munchies therein. You protest at first, worrying the munchies might be 'special,' but no, the tokers assure you that'd waste money. They explain the munchies help reduce migraines['] mini-rages, like [if headaches is 10](after some experiments with the settler) [end if]that annoying noise from the slider. You can use the slider [if headaches is 0]again[else]more[end if], now."	false	572670412	--	Strip of Profits
 Store P	e-s	"presto"	"presto"	"You say the magic word! An unseen voice lauds, 'SALUD!'[paragraph break]You feel yourself swirling, lifted from the ground, and you see the words in the poster blur as first the store, then the poster swirls into--well, not a blotch. Call it an, er, spot. Nothing escapes, except for an odd, unappealing hunk of bread, which you take. You nibble it. It's disgusting, and you bite your tongue before a nasty word slips out[get-crust]."	false	568332432
 Store T	otters-x	"otters"	"otters"	"The store divides in two until it becomes a path with gargoyles on each side. I mean, otters."	false	589976491
 Store U	routes-x	"routes"	"routes"	"The routes coalesce and flatten and grow. You can ENTER them to see where they lead."	false	591972280
@@ -8695,6 +8707,7 @@ to say ahoy-eh:
 
 after fliptoing lecturer:
 	now smoke cloud is not maingame;
+	now list-headache is true;
 	continue the action;
 
 misted is a truth state that varies.
@@ -8750,7 +8763,7 @@ after fliptoing raptor:
 	now hydra is in lalaland;
 	now Merle is in lalaland;
 	now Elmer is in lalaland;
-	if Elmer is reflexive:
+	if Merle is flippable:
 		poss-d;
 	reg-inc;
 	continue the action;
@@ -10497,6 +10510,10 @@ slider-toggle is a truth state that varies.
 
 to toggle-slider-note:
 	if slider-toggle is false:
+		if word number 1 in the player's command is "sl":
+			now slider-toggle is true;
+			pad-rec-q "sl";
+			continue the action;
 		ital-say "You can type SL to toggle the slider in the future.";
 		pad-rec-q "sl";
 		now slider-toggle is true;
@@ -10506,6 +10523,18 @@ after entering oyster-x:
 	say "You hear a click from the slider[if slider is switched on] as it switches off[else] and you notice it's jammed[end if][if cur-score of oyster is 0]. Hopefully thinking will not be at a premium here[else]. But you know action counts more here[end if].";
 	continue the action;
 
+check pushing slider:
+	twiddle-slider instead;
+
+check pulling slider:
+	twiddle-slider instead;
+
+to twiddle-slider:
+	if slider is switched on:
+		try switching off slider;
+	else:
+		try switching on slider;
+
 check switching on slider:
 	if mrlp is oyster:
 		say "Geez. It's jammed[if cur-score of oyster > 0]. Well, it's harder for the slider to ascertain actions instead of ideas[else]. Hm, maybe thinking is less important than other things, here[end if]." instead;
@@ -10514,6 +10543,7 @@ check switching on slider:
 		say "It already is." instead;
 	if headaches is 0:
 		say "You can't afford any more headaches." instead;
+	now slider is switched on;
 	say "You switch the slider on." instead;
 
 check switching off slider:
@@ -20782,6 +20812,8 @@ carry out discerning:
 		now discern-warn is true;
 		unless the player yes-consents:
 			say "Okay. This nag won't appear again." instead;
+	if player is in alcoves and medals are reflexed and whistle is reflexed:
+		say "Your destiny awaits to the west! You have everything you need." instead;
 	if otters-cur-item is player:
 		say "You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet." instead;
 	now spoilit is true;
@@ -21084,7 +21116,7 @@ carry out playing:
 			now last-solved-region is otters;
 			first-status;
 			say "Elmo and Gretta are waiting for you back at your manor with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you ROVE OVER and help him. If you need a break, no problem, but maybe you might want a little more adventure?";
-			if the player switch-consents:
+			unless the player switch-consents:
 				say "Yeah. Maybe later. If you want to help him, you can ROVE OVER from your dusty study next time someone knocks. Or you can just UNDO at the next command.";
 				end the story finally saying "A MONSTER ROTS. AMEN.";
 				follow the shutdown rules instead;
@@ -21221,6 +21253,8 @@ before doing something when Gretta is visible and macks are not visible:
 		say "She's on your side." instead;
 	if action is blathery:
 		say "She's heard enough rambling conversation on others['] terms, here." instead;
+	if current action is discerning:
+		say "That can wait until you've finished talking." instead;
 	if current action is not talking to Gretta and current action is not QBC responding with:
 		say "[convoforce].";
 		reject the player's command;
@@ -21564,7 +21598,7 @@ every turn when player is in frontage and macks are in frontage (this is the mac
 		if cur-mack-blab > max-pod-num:
 			if loop is true:
 				say "The macks seem to be out of ideas! [bug-report]";
-				the rule succeeds;
+				continue the action;
 			now loop is true;
 			now cur-mack-blab is 1;
 		consider the find-mack-idea rule;
@@ -21575,7 +21609,8 @@ every turn when player is in frontage and macks are in frontage (this is the mac
 					say "The macks take a break. They've [one of][or]once again [stopping]babbled for long enough, and about enough, they can repeat their 'exciting' conversation all over again[if macked-out > 0], except for what you managed to alter[end if].";
 			now current-idea is ment;
 			say "[mack-move of current-idea][line break]";
-			the rule succeeds;
+			continue the action;
+	continue the action;
 
 check scaning macks:
 	try scaning current-idea instead;
@@ -21783,7 +21818,7 @@ check going north in Anger Pit:
 
 Wickeder Wire Deck is north of Anger Pit. Wickeder Wire Deck is part of otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south."
 
-the ocelots are plural-named reflexive neuter animals. description is "[if ocelots are reflexive]They glance nervously back, as if they've done something wrong[otherwise]They glance back at you, give you a finger-point you're not cool enough to give back, then ignore you in the nicest possible way[end if].". "Ocelots are making gestures here that you'd look silly making[if ocelots are reflexive]. They do, too, with their stupid sunglasses[end if]."
+the ocelots are plural-named reflexive neuter animals. description is "[if ocelots are reflexive]They glance nervously back, as if they've done something wrong[otherwise]They glance back at you, give you a finger-point you're not cool enough to give back, then ignore you in the nicest possible way[end if].". "Ocelots are making gestures here that you'd look silly making[if ocelots are reflexive]. They do, too, with their stupid sunglasses[else]. But they don't, thanks to your help[end if]."
 
 understand "ocelot" as ocelots.
 
@@ -21804,9 +21839,9 @@ understand "sunglasses/glasses/shades" as Look-Kool when ocelots wear Look-Kool.
 
 a-text of ocelots is "RYYRYRR". b-text of ocelots is "RYYPYRR". parse-text of ocelots is "x[sp]-[sp]-[sp]l[sp]-[sp]x[sp]x". ocelots is cheat-spoilable.
 
-The leopard is a reflexive neuter animal. "A leopard is here--[if leopard is reflexive]its colorings make it look like it is wearing a tacky (mostly) burnt orange jumpsuit, and it seems paw-tied, too[else]it looks more camoflagued since you changed him[end if]."
+The leopard is a reflexive neuter animal. "A leopard is here--[if leopard is reflexive]its colorings make it look like it is wearing a tacky (mostly) burnt orange jumpsuit, and it seems paw-tied, too[else]it looks more camoflagued since you changed it[end if]."
 
-understand "ape lord" and "apelord" as a mistake ("You [if leopard is reflexed]already changed the leopard[else]can't change what the leopard is, but you need to release him from his captivity[end if].") when player is in deck.
+understand "ape lord" and "apelord" as a mistake ("You [if leopard is reflexed]already changed the leopard[else]can't change what the leopard is, but you need to release it from its captivity[end if].") when player is in deck.
 
 understand "preload" and "pre-load" and "pre load" as a mistake ("The leopard is plenty powerful as-is, [if leopard is reflexed]and it's already on your side[else]but you need to get it on your side[end if].") when player is in deck.
 
@@ -21880,7 +21915,15 @@ After printing the name of a hintpastry (called the curfood) while taking invent
 	say " [if curfood is heated](heated)[else](cold)[end if]";
 
 to say set-det:
-	say "[unless player has purse]: [end if]Cheat/teach mode is [if cheat-on is true]on[else]off[end if], slider is [if slider is switched on]on[else]off[end if] with level [headaches]";
+	say "[unless player has purse]: [end if]Cheat/teach mode is [if cheat-on is true]on[else]off[end if], [if list-headache is false]and [end if]idlers['] slider is [if slider is switched on]on[else]off[end if][slider-detail]";
+
+to say slider-detail:
+	if list-headache is false:
+		continue the action;
+	if headaches is 0:
+		say ", and you can't put up with the slider's beeps any more";
+	else:
+		say ", and you can put up with its beepings [headaches in words] more time[if headaches > 1]s[end if]"
 
 After printing the name of the satchel while taking inventory:
 	say " (somewhere in the purse)";
@@ -22135,9 +22178,11 @@ the raptor is an animal in Perverse Preserve. description is "It's small for a r
 before entering thrones:
 	say "You try to sit on the thrones, by you feel a stinging." instead;
 
-after choosing notable locale objects when player is in preserve (this is the raptor last rule):
+after choosing notable locale objects when player is in preserve (this is the raptor and parrot last rule):
 	if raptor is in preserve:
 		set the locale priority of raptor to 9;
+	if parrot is in preserve:
+		set the locale priority of parrot to 9;
 	continue the action;
 
 the parrot is a vanishing animal. description is "Pretty much every color of the rainbow.". "A multi-colored parrot flutters about, here."
@@ -24385,13 +24430,31 @@ carry out objhinting (this is the pick object to hint rule) :
 				say "Chewing on the fretful truffle gives you a Pensive Peevins face--and an idea of what and how to think. In particular, you feel the need to [spoil-entry entry] right now." instead;
 			if player has cinders:
 				if noun is thruhinted or noun is prefigured:
-					say "You pause, realizing you do not need to discern. Perhaps now is a good time to remember [spoil-entry entry]." instead;
-				say "As you gaze into the cinders, they blow away, leaving you feeling [spoil-entry entry].";
+					if player is in tapering and imp is in tapering:
+						say "Hm, it'd still be fun to see the imp act";
+					else if player is in anteroom and whiners are in anteroom:
+						say "It still might peg the whiners back a bit if they talked more";
+					else:
+						say "You pause, realizing you do not need to discern. Perhaps now is a good time to remember";
+					say " [spoil-entry entry]." instead;
+				say "As you gaze into the cinders, they blow away, leaving you feeling ";
+				if player is in tapering and imp is in tapering:
+					say "the imp could act ";
+				else if player is in anteroom and whiners are in anteroom:
+					say "the whiners could talk ";
+				say "[spoil-entry entry].";
 				prevent undo;
 				now undo-code is 7;
-				poss-d;
+				if scams is false:
+					if noun is medals: [ugh. This is a lousy hack to say, if we just find out about te medals, don't do anything. ]
+						if nounsolve > 2 and adjsolve > 2:
+							poss-d;
+							now cinders are in lalaland;
+					else:
+						poss-d;
+						now cinders are in lalaland;
 				now noun is cheatitemed;
-				now cinders are in lalaland;
+				the rule succeeds;
 	if there is hint-entry of noun in the table of hintobjs:
 		if noun is reflexed: [first check if it's solved already]
 			if there is hint-entry of noun in the table of youre-done:
@@ -24969,12 +25032,12 @@ macks	--	Gretta
 Ed Riley	"[one of]A steward won't let you go eastward--but he is too emphatically denying he is a YIELDER.[plus][or]The settler logically knocks this one out, but also consider his booming voice. You want the opposite of that.[plus][or]REEDILY.[minus][cycling]"	--	"Ed can speak REEDILY"
 deli rye	"Ed Riley won't share, but the rye can share a hint with you if you scan it."
 yield sign	"The yield sign symbolizes Ed Riley isn't THAT in control of things. Oh, and it can share a hint with you if you scan it."
-sly imp	"[one of][if one-imp-down]You need to take the imp down another peg[else]The imp certainly does things three different ways[end if].[plus][or]You may need [if one-imp-down]yet [end if]another adverb.[plus][or][if one-imp-down]Take him out for good by making him[else]He can be made to[end if] move less gracefully and more [rand-to-go].[minus][cycling]"	--	"[rand-to-go ]"
-whiners	"[one of][if one-whine-down]They've lost a bit of steam, but they need to lose a bit more[else]The whiners have a lot of energy and exercise it many different ways[end if].[plus][or]You can soften them up a bit[if one-whine-down] more[end if].[plus][or]They'll [if one-whine-down]give up on[else]be less interested in[end if] annoying you if they start acting more [rand-to-go].[minus][cycling]"	--	"the imp can act [rand-to-go]"
+sly imp	"[one of][if one-imp-down]You need to take the imp down another peg[else]The imp certainly does things three different ways[end if].[plus][or]You may need [if one-imp-down]yet [end if]another adverb.[plus][or][if one-imp-down]Take him out for good by making him[else]He can be made to[end if] move less gracefully and more [rand-to-go].[minus][cycling]"	--	"[rand-to-go]"
+whiners	"[one of][if one-whine-down]They've lost a bit of steam, but they need to lose a bit more[else]The whiners have a lot of energy and exercise it many different ways[end if].[plus][or]You can soften them up a bit[if one-whine-down] more[end if].[plus][or]They'll [if one-whine-down]give up on[else]be less interested in[end if] annoying you if they start acting more [rand-to-go].[minus][cycling]"	--	"[rand-to-go]"
 Mr Lee	"[loop-pool-already][if ghoul hat is not in lalaland]Try to help Mr. Lee with that ghoul hat. Or ask hints about the hat.[else if p-2 is in bran barn]Try to get rid of that painting of Rev. Howe. Or ask hints about it.[else]You've helped Mr. Lee all you can."
 ghoul hat	"[loop-pool-already][one of]Mr. Lee's 'Hola, Thug' greeting is not very nice. He sees red and doesn't trust you.[plus][or]Mr. Lee's upset with you. But one word, useless on its own, can turn it around.[plus][or]The first one had better be a good one.[plus][or]No L-Y, so no adverb.[plus][or]ALTHOUGH.[minus][cycling]"	--	"you can say ALTHOUGH"
 p-2	"[loop-pool-already][if ghoul hat is not in lalaland]Deal with the ghoul hat first.[else][one of]The painting has a lot of writing, all in red, which cuts down what to say.[plus][or]But the painting is ultimately the same sort of thing as before.[plus][or]HOWEVER.[minus][cycling]"	--	"you can say HOWEVER"
-atmo-moat	"[one of]The moat seems to get in your way, but you sense it could be compacted.[plus][or]It's also an atmo-moat, though you see less red when you think of it that way.[plus][or]You can shrink the moat to an ATOM, [if power-back is false]but you need to have your powers back, first[else]which is possible with your powers back[end if].[minus][cycling]"	--	"you can make a MOAT"
+atmo-moat	"[one of]The moat seems to get in your way, but you sense it could be compacted.[plus][or]It's also an atmo-moat, though you see less red when you think of it that way.[plus][or]You can shrink the moat to an ATOM, [if power-back is false]but you need to have your powers back, first[else]which is possible with your powers back[end if].[minus][cycling]"	--	"you can make an ATOM"
 le mer	--	sea cube
 sea cube	"[bran-barn-already][one of]The sea cube in the atmo-moat/loop pool can be talked to.[plus][or]The sea gets bored if you talk to it. First words count. But they need to be useless on their own.[plus][or]The SEA CUBE draws you to it.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say BECAUSE"
 eels	"[bran-barn-already][one of]The eels need convincing, too. What will happen, otherwise?[plus][or]Again, first words count. But they need to be useless on their own.[plus][or]Tell them ELSE.[plus][or]BECAUSE.[minus][cycling]"	--	"you can say ELSE"
@@ -24989,7 +25052,7 @@ satyr	"[one of]The satyr seems set on blood and guts, fighting for the sake of i
 badger	"[one of]The badger is embarrassed to be naked.[plus][or]How could it be clothed?[plus][or]Or GARBED?[minus][cycling]"	--	"you can make the badger GARBED"
 leopard	"[one of]The leopard is orangish and jumpsuited, with its paws bound together by some invisible handcuffs.[plus][or]Like the leopard's in jail. Well, it sort of is.[plus][or]But the leopard's been well behaved. Can you get them out early?[plus][or]Yup. If they're PAROLED.[minus][cycling]"	--	"you can make the leopard PAROLED"
 ocelots	"[one of]Those clip on shades aren't very suave on the ocelots.[plus][or]You're not going to find any shades for the ocelots.[plus][or]But you can make the ocelots cooler.[plus][or]Or, better, make the ocelots the COOLEST.[minus][cycling]"	--	"you can make the ocelots COOLEST"
-raptor	"[one of]You only have one move to tackle the raptor.[plus][or]Its roars are worse than the squawking below.[plus][or]Make the raptor a PARROT. This hints what else to do here.[minus][cycling]"
+raptor	"[one of]You only have one move to tackle the raptor.[plus][or]Its roars are worse than the squawking below.[plus][or]Make the raptor a PARROT. This hints what else to do here.[minus][cycling]"	--	"you can make the raptor a PARROT"
 nails	"[one of]They're arranged in a circular pattern, spiraling out.[plus][or]What's an animal whose shell is like that?[plus][or]A SNAIL.[minus][cycling]"	--	"you can make a SNAIL"
 pines	"[one of]They're shaped like a long bird's bill or something.[plus][or]If you listen, you hear bickering.[plus][or]SNIPE.[minus][cycling]"	--	"you can make a SNIPE"
 corona	"[one of]Black and whitish, easy to hide in the dark.[plus][or]RACOON.[minus][cycling]"	--	"you can make a RACOON"
@@ -24997,14 +25060,14 @@ thrones	"[one of]Sit on them and they'll sting you.[plus][or]What animals sting?
 Elmer	--	Merle
 snail	"The snail will help you when the time comes."
 snipe	"The snipe will help you when the time comes."
-raptor	"[one of]The raptor can be changed to something much less vicious.[plus][or]The raptor has rather odd bright coloring doesn't it? Like a tropical bird?[plus][or]Make the raptor a PARROT.[minus][cycling]"	--	"you can make a PARROT"
+raptor	"[one of]The raptor can be changed to something much less vicious.[plus][or]The raptor has rather odd bright coloring doesn't it? Like a tropical bird?[plus][or]Make the raptor a PARROT.[minus][cycling]"	--	"you can make the raptor a PARROT"
 hornets	"It will help you when the time comes."
 racoon	"It will help you when the time comes."
 parrot	"[one of]The parrot is scared of Merle and Elmer, as they're a lot bigger.[plus][or]Maybe if the parrot got bigger. Wait, it was![plus][or]You can change it back to a RAPTOR to help you get past another fearsome beast.[minus][cycling]"	--	"you can re-make a RAPTOR"
 cinders	"[one of]The cinders can be used for two things.[plus][or]You can take them and use them to hint through one thing with one passive verb.[plus][or]You can DISCERN (no nouns,) but that won't get you full points.[plus][or]You can get rid of the cinders--not by dropping them.[plus][or]RESCIND.[minus][cycling]"
 Merle	"[if parrot is in alcoves]You can't change Elmer or Merle directly, but you may want to mess with the parrot[else]You can't really deal with Elmer and Merle until you have an ally[end if]. [if merle is reflexed][one of]You can, however, make Elmer and Merle change for a Last Lousy Point.[plus][or]What is the opposite of on-the-sly?[plus][or]Elmer and Merle can be made to speak HONESTLY.[minus][cycling][else]You can just enjoy their random squabbles as you figure what the parrot needs to do or become.[end if]"	--	"Elmer and Merle can speak HONESTLY"
 sober robes	"Elmer and Merle can't be naked, and I felt like trawling for a cheap anagram. Win-win! (Oh. The robes aren't important to the game.)"
-medals	"[if nounsolve < 3 or adjsolve < 3][medal-help].[else][one of]The medals are thanks for your smarts and quick thinking.[plus][or]The medals are more powerful together than apart.[plus][or]IQ and LUCKY mean something.[plus][or]You can use them to go QUICKLY, but the question is, where?[plus][or]If you have gotten rid of Merle and Elmer, going QUICKLY to the west will help you deal with Elvira's initial attack.[minus][cycling][end if]"	--	"the medals can make you go QUICKLY"
+medals	"[if nounsolve < 3 or adjsolve < 3][medal-help].[else][one of]The medals are thanks for your smarts and quick thinking.[plus][or]The medals are more powerful together than apart.[plus][or]IQ and LUCKY mean something.[plus][or]You can use them to go QUICKLY, but the question is, where?[plus][or]If you have gotten rid of Merle and Elmer, going QUICKLY to the west will help you deal with Elvira's initial attack.[minus][cycling][end if]"	--	"the medals [if nounsolve < 3 or adjsolve < 3]need refurbishing in the areas north and south of the Barley[else]can make you go QUICKLY[end if]"
 jumpsuit	--	leopard
 SlopInc	"They aren't the hippest, are they? Change the ocelots to make them cooler."
 Look-Kool	"You can't do much but admire them."
@@ -27526,7 +27589,7 @@ carry out gzing:
 
 chapter diing
 
-[* DI zaps all the guardians.]
+[* DI regains your powers in Otters.]
 
 diing is an action out of world.
 
