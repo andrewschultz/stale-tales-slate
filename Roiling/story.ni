@@ -5253,6 +5253,8 @@ viewer-first is a truth state that varies.
 
 enuf-fruit-poke is a truth state that varies.
 
+wells-hintables is a list of things variable. wells-hintable is { silly shirt, riot cap, sorer bogey, green stain, stucco }.
+
 carry out others-hinting:
 	if cur-score of others < 4:
 		if lumps are visible:
@@ -5284,7 +5286,7 @@ carry out others-hinting:
 	if fruits-flipped >= 16 and coins are off-stage:
 		say "You can go back to Curtis for a reward." instead;
 	if fruits-flipped >= 20 and a droll dollar is off-stage:
-		say "You can go back to Curtis for a reward." instead;
+		say "You can go back to Curtis for a reward[if curtis-level < 3]--well, more than one. You've gotten all the fruits you need[end if]." instead;
 	if player is in gates stage:
 		if passport is off-stage:
 			all-say "You need ID to get past the gate. There are no government agencies, so maybe you can get one illicitly." instead;
@@ -20801,14 +20803,7 @@ understand the command "discern" as something new.
 understand "discern [something]" as discerning.
 
 does the player mean discerning the cinders: it is very likely.
-
-does the player mean discerning the cinders: it is very likely.
-does the player mean discerning the player: it is
-likely.
-
-[every turn when player has cinders (this is the stupid cinders cheat rule):
-	try discerning cinders;
-	now player has cinders;]
+does the player mean discerning the player: it is likely.
 
 to say rand-to-go:
 	let mysc be entry 1 of tapering-items;
@@ -21617,7 +21612,23 @@ this is the find-mack-idea rule:
 			the rule succeeds;
 	the rule fails;
 
+to decide which mack-idea is mack-hint:
+	let cur-prio be 10;
+	let got-mack be false;
+	let cur-mack be t-despairingly;
+	repeat with Q running through ment mack-ideas in frontage:
+		d "[Q] [mack-prio of Q].";
+		if mack-prio of Q < cur-prio:
+			d "Switching to [Q].";
+			now cur-mack is Q;
+			now cur-prio is mac-prio of Q;
+			now got-mack is true;
+	if got-mack is false:
+		say "(BUG in mack-idea code) ";
+	decide on cur-mack.
+
 every turn when player is in frontage and macks are in frontage (this is the macks hitting on rule):
+	d "Macks hitting on rule:[line break]";
 	repeat with Q running through reflexive mack-ideas in frontage:
 		if debug-state is true:
 			say "DEBUG NOTES: [q]: [mack-prio of q].";
@@ -25060,7 +25071,7 @@ Old Hat Daltho	"[if crocus is not in lalaland]The succor crocus Daltho gave you 
 Ed Yerg	"[if ed yerg is reflexive][one of]Ed Yerg seems to be, well, GREEDY.[plus][or]But he looks suspiciously old despite his hair.[plus][or]Make him GREYED.[minus][cycling][else if player has flowerpot][one of]Ed may still want something, but little of what you have interests him.[plus][or]The succor crocus may help him feel better about himself.[plus][or]Give it to him[if-cro].[minus][cycling]"
 Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]Ed Yerg might, [yerg-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]" [end towers hinting]
 b-b	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"	[start otters hinting]
-Gretta	"[one of]The macks are [if macked-out > 0]still [end if]bugging Gretta Garett-Tatger. They're doing so effectiveLY.[plus][or]You can make the macks act more [current-mackiness].[minus][cycling]"	--	"the macks can talk [current-mackiness]"
+Gretta	"[one of]The macks are [if macked-out > 0]still [end if]bugging Gretta Garett-Tatger. They're doing so effectiveLY.[plus][or]You can make the macks act more [mackiness-hint].[minus][cycling]"	--	"the macks can talk [mackiness-hint]"
 macks	--	Gretta
 Ed Riley	"[one of]A steward won't let you go eastward--but he is too emphatically denying he is a YIELDER.[plus][or]The settler logically knocks this one out, but also consider his booming voice. You want the opposite of that.[plus][or]REEDILY.[minus][cycling]"	--	"Ed can speak REEDILY"
 deli rye	"Ed Riley won't share, but the rye can share a hint with you if you scan it."
@@ -25218,6 +25229,10 @@ owl decal Code Wall	"[dome-blab]"
 written walls	"[dome-blab]"
 allow lots tools wall	"[dome-blab]"
 larded ladder	"[dome-blab]"
+
+to say mackiness-hint:
+	choose row with the-from of mack-hint in table of otters anagrams;
+	say "[right-word entry in upper case]";
 
 to say dome-blab:
 	say "This is just here for fun.";
