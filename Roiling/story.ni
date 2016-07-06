@@ -4759,7 +4759,7 @@ when play begins (this is the hint and other randomization rule):
 		now goshy is true;
 	sort byebyes in random order; [phat path ways to say goodbye]
 	now a random badbook is in hacks' shack;
-	sort marcitems in random order; [posh hops shop items] [oyster random clues]
+	sort shop-hint-items in random order; [posh hops shop items] [oyster random clues]
 	if a random chance of 1 in 2 succeeds:
 		now carps-pref is true;
 	else:
@@ -4769,6 +4769,8 @@ when play begins (this is the hint and other randomization rule):
 	else:
 		now t-or-b is blaster;
 	sort table of animal randomness in random order; [otters hinting]
+	sort tapering-items in random order;
+	sort anteroom-items in random order;
 	if a random chance of 1 in 2 succeeds: [others random clues]
 		now viewer-first is true;
 	sort nextclue in random order; [mislit limits items]
@@ -5712,9 +5714,9 @@ to decide which thing is oyster-item:
 	if player is in posh hops shop:
 		if trolls-hinted is false and cur-score of oyster is 0:
 			decide on trolls;
-		if number of entries in marcitems is 2:
+		if number of entries in shop-hint-items is 2:
 			decide on trolls;
-		decide on entry 1 of marcitems;
+		decide on entry 1 of shop-hint-items;
 	if player is in lode:
 		if clam is in lode:
 			decide on clam;
@@ -6030,6 +6032,10 @@ to decide which thing is animal-to-hint:
 				decide on this-animal entry;
 	d "bad fallthrough in animal-to-hint.";
 	decide on the player; [this should never happen]
+
+tapering-items is a list of things variable. tapering-items is {imp1, imp2, imp3}.
+
+anteroom-items is a list of things variable. anteroom-items is {ram1, ram2, ram3}.
 
 carry out otters-hinting:
 	unless otters-cur-item is player:
@@ -15892,7 +15898,7 @@ a-text of stein is "YRRYR". b-text of stein is "YRRYR". parse-text of stein is "
 
 description of stein is "It's undoubtedly from the Set-In-Nites corporation, mostly black but with red writing[one of]. You mentally compare it to the tines, and you reckon if you inserted it, it'd be 20% too big[or][stopping]."
 
-marcitems is a list of thing variable. marcitems is { stein, stumbler tumblers, recaps, gins sign, tunes }.
+shop-hint-items is a list of thing variable. shop-hint-items is { stein, stumbler tumblers, recaps, gins sign, tunes }.
 
 chapter min up rule
 
@@ -16043,7 +16049,7 @@ to annoy-trolls:
 after fliptoing when player is in Posh Hops Shop:
 	if noun is not trolls:
 		annoy-trolls;
-		remove noun from marcitems, if present;
+		remove noun from shop-hint-items, if present;
 	continue the action;
 
 to say gloaty:
@@ -20805,7 +20811,9 @@ likely.
 	now player has cinders;]
 
 to say rand-to-go:
-	let mysc be random reflexive scenery in location of player;
+	let mysc be entry 1 of tapering-items;
+	if player is in anteroom:
+		now mysc is entry 1 of anteroom-items;
 	repeat through table of otters anagrams:
 		if mysc is the-from entry:
 			say "[right-word entry in upper case]";
@@ -21999,6 +22007,8 @@ after fliptoing when player is in Anger Pit (this is the break the imp down rule
 		now imp1 is in lalaland;
 		now imp2 is in lalaland;
 		now imp3 is in lalaland;
+	else:
+		remove noun from tapering-items, if present;
 	continue the action;
 
 section debug - not for release
@@ -22190,6 +22200,8 @@ after fliptoing when player is in Anteroom (this is the de-tallyho rule) :
 		now ram1 is in lalaland;
 		now ram2 is in lalaland;
 		now ram3 is in lalaland;
+	else:
+		remove noun from anteroom-items, if present;
 	continue the action;
 
 chapter raptor trap
@@ -25891,7 +25903,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 	if oyster is solved:
 		if you-used-pills is true:
 			say "[how-pills-used].";
-		if number of entries in marcitems > 2:
+		if number of entries in shop-hint-items > 2:
 			say "[2dmiss of cur-reg][remaining-actions of 2].";
 		else if oars are reflexive:
 			say "[2dmiss of cur-reg]you could've used the oars to SOAR.";
