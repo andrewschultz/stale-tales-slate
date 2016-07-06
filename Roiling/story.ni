@@ -2253,7 +2253,7 @@ patrons	trolls	"'They rather keep us in and make us spend more than kick us out.
 Casper	haunter	"'I heard it's buried on the other side of the shore. Need to bring it something lost."
 Casper	trolls	"'They are rough and ready types. I will include some of their gritty dialogue in Capers Recaps. With their permission, of course.'"
 Casper	capers recaps	"Casper wants you to acknowledge he's writing it, but he's not going to hand out spoilers."
-Casper	Elvira	"'She certainly knows how to seek out power. She showed that anagram chump what's what.c [if player is female]She's no woman[else]He's no man[end if] of action.'"
+Casper	Elvira	"'She certainly knows how to seek out power. She showed that anagram chump what's what. [if player is female]She's no woman[else]He's no man[end if] of action.'"
 carps	trout	"[mean-fish]!" [chum=pikes]
 carps	Aunt Tuna	"[mean-fish]!"
 carps	Casper	"They probably like books more violent than Casper Spacer's. If they read at all.'"
@@ -4135,7 +4135,7 @@ ramp	"The ramp is useful now. Best keep it."
 satchel	"You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too."
 staple	"Those plates were a mess, and now they're a tidy staple. It's better that way."
 stapler	"The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again."
-store b	"No more freebies. Sorry."	[stores]
+store b	"You're a hero[if player is female]ine[end if] and all, but only one sample per day. [if otters is not solved]Just think of the field day Elvira'd have if she found out[else]Yorpwald is democratic, and stuff[end if]!"	[stores]
 e-s	"[got-e]."
 otters-x	"[got-e]."
 routes-x	"[got-e]."
@@ -7901,7 +7901,7 @@ e-s	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visi
 oyster-x	Oyster	Posh Hops Shop	"[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
 towers-x	Towers	Loftier Trefoil	"[one of]As you attempt to enter the towers, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
 otters-x	Otters	Bleary Barley	"[if b-b is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Bleary Barley is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[otherwise]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]"
-hoster	others	rustic citrus	"After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, that dude[if player is female], uh, dude-ess[end if]? With those powers? Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it.'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices."
+hoster	others	rustic citrus	"After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it.'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices."
 
 book fliptoing
 
@@ -8667,7 +8667,7 @@ to say rscheck:
 		now rese is true;
 
 to say tgw:
-	say "that dude[if player is female], uh, dudess[end if]. With those powers";
+	say "that dude[if player is female], uh, dudess[end if], with those powers";
 
 to say preefies:
 	if number of prefigured things > 0:
@@ -17494,7 +17494,7 @@ before kissing:
 	if noun is smart kid:
 		say "Okay, we're close to creepy territory here.";
 	if noun is Elvira:
-		say "'[if player is female]Superwoman? Wane, rum sop![else]Me? Spurn a superman?[end if]' She flatters you for admitting you were wrong about her, not recognizing she was socially out of your league. As she talks ('I lure! I rule!') suddenly you realize what your quest was about. Your test run showed SHATTER-THREATS was not enough...you are talked into [if player is female]Chuck-Ms.-Schmuck[else]being Mr. Arty Martyr[end if] for a newer better Yorpwald. The last thing you hear is Elvira saying: 'A big help? Pah! Bilge!'";
+		say "'[if player is female]Superwoman? Wane, rum sop![else]Me? Spurn a superman?[end if]' She flatters you for admitting you were wrong about her, not recognizing she was socially out of your league. As she talks ('I lure! I rule!') suddenly you realize what your quest was about. Your test run showed SHATTER-THREATS was not enough...you are talked into being [if player is female]Chuck-Ms.-Schmuck[else]Mr. Arty Martyr[end if] for a newer better Yorpwald. The last thing you hear is Elvira saying: 'A big help? Pah! Bilge!'";
 		get-dead instead;
 	if noun is not skis and noun is not a person:
 		say "That can't really respond to your affection." instead;
@@ -24624,8 +24624,7 @@ bee's head	"[by-bee]."
 diapers	"[by-bee]."
 prai	"[by-rivets]."
 rivets	"[by-rivets]."
-painting of the stream	"The painting inspired you enough, [if lobster is in lalaland]though you can knock off that lobster if you want[else]as much as the lobster, in fact[end if]." [end TROVES]
-store b	"You're a hero[if player is female]ine[end if] and all, but only one sample per day. [if otters is not solved]Just think of the field day Elvira'd have if she found out[else]Yorpwald is democratic, and stuff[end if]!" [start/end STORES]
+painting of the stream	"The painting inspired you enough, [if lobster is in lalaland]though you can knock off that lobster if you want[else]as much as the lobster, in fact[end if]." [end TROVES] [nothing for STORES]
 scripture picturers	"The scripture picturers helped you get in, but they're just there to help other people now. Maybe." [start ROUTES]
 bench	"You got the giant to the bench. Now you need to deal with the giant."
 bench-end	"You positioned yourself well to duck the giant and put up with his elbow."
@@ -25593,35 +25592,43 @@ rule for sexsorting:
 
 table of sexdif [tsx]
 examp
-"(Not) making [if gates stage is unvisited]something in the first room in OTHERS[else]PAGERS in Rustic Citrus[end if]."
 "[bold type](general)[r] Dropping something."
 "Examining yourself."
-"[bold type](manor)[r] The note from Old Man Almond about the purse."
+"[bold type](manor)[r] The note from Old Man Almond about the purse, and the purse itself too"
 "Ditching Gunter."
+"Complain about the media to Elmo."
 "Many of the books (300+) have alternate authors. Many other random texts adjust for your gender, but books are the main one. Some names are switched, such as Abe/Bea, Dot/Tod, Tio/Toi, Tino/Toni, and Simeon/Simone."
 "One page of the dope op-ed is named differently."
 "The clues for the ramp are different, but the name Mr. Pa is still cringy either way. I hope it's the right sort of cringy."
-"[bold type](oyster)[r] The win-text for the OYSTER region."
-"[bold type](presto)[r] The plebe stops you a different way."
+"The message for solving the manor."
+"[bold type](stores)[r] The hoarder/acuter curate says something different when you return."
+"Double dipping on sorbet in Store B."
 "[bold type](routes)[r] Cursing in Cleric Circle."
 "Going a direction in Same Mesa."
-"[bold type](stores)[r] The hoarder says something different."
-"[bold type](towers)[r] The admirer reacts differently."
-"Examining the neural pulses."
-"The smart kid is Dirk Stam or Kim Darst."
-"Dr. Yow is male/female."
+"[bold type](troves)[r] Reading LEAD, or saying ACRE."
+"[bold type](presto)[r] The plebe stops you or lets you by with different text."
+"[bold type](oyster)[r] The win-text for the OYSTER region."
+"Shoer Osher changes gender too."
+"Attacking the pikes/carps."
+"[bold type](towers)[r] The admirer reacts differently to TALKing/KISSing, etc."
+"The rapier repair reminds you of Boy/Girl Scouts."
+"Examining the neural pulses and your opinion of Lauren."
+"The ego drains drain you a bit more if you're female."
+"The smart kid is Dirk Stam or Kim Darst, with a (sic) for when the kid makes a bot-boat."
+"Dr. Yow is male/female, and people's insults for Mr. or Ms. Yow are different."
 "Trying to run through the ego drains."
 "[bold type](troves)[r] Reading DEAL."
 "When entering the FiefCo Office."
-"[bold type](otters)[r] KISSing the macks."
+"[bold type](otters)[r] KISSing, EXAMINEing the macks, talking/dispelling/attacking or leaving while they're in the Frontage."
+"KISSing Gretta or taking to her with the macks around."
 "Elvira calls you (Ach,) Mr. Charm or Ms. Arch-Charms."
-"Interacting with the macks--talking, dispelling, attacking."
-"KISSing Elvira."[]
+"KISSing Elvira or losing to her in battle."[]
 "The win text."
 
 table of others sexdif
 examp
-"[bold type](others)[r] The win-text for beating OTHERS[if gates stage is unvisited], the area you didn't visit yet[end if]."
+"[bold type](others)[r] Trying to make GAPERS in Rustic Citrus."
+"The win-text for beating OTHERS."
 "Lord Al Ollard or Dr. Lola Ollard appears on a droll dollar."
 "Red Rat Art Erd or Dr. Tera Darter is the Tarred Trader."
 
