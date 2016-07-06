@@ -702,6 +702,9 @@ every turn when scams is true (this is the scam rule):
 	else if mrlp is oyster:
 		now player has pills;
 		try spilling pills;
+	else if mrlp is others:
+		d "Basic hints.";
+		try hinting instead;
 
 section long form of verbs
 
@@ -1095,9 +1098,9 @@ to decide which number is the hash of (t - a value of kind K):
 
 when play begins (this is the intro-hashes rule):
 	let wnum be 0;
-	repeat with Q running through regions:
-		if Q is not demo dome:
-			repeat through regana of Q:
+	repeat with QQ running through regions:
+		if QQ is not demo dome:
+			repeat through regana of QQ:
 				if the-from entry is uncluing:
 					now the-from entry is flippable;
 				if there is no hashkey entry or hashkey entry is 0:
@@ -3674,10 +3677,6 @@ check entering a portal:
 	else:
 		d "Can't try recovering items yet.";
 		add-errs grn;
-		if grn is others:
-			if epilogue rule is a final response rule listed in the Table of Final Question Options:
-				choose row with final response rule of epilogue rule in the Table of Final Question Options;
-				blank out the whole row;	[blank out EPILOGUE when you are playing the epilogue]
 	if grn is towers and last-loc of grn is not trefoil: [it's possible but not likely you can cheat your way past with constant retries otherwise]
 		d "REPO!";
 		move player to last-loc of grn, without printing a room description;
@@ -4544,10 +4543,10 @@ carry out requesting the score:
 		say ".[line break]";
 		if mrlp is otters and power-back is false:
 			say "[line break]You probably need to do something to get back your full powers, too.";
-	repeat with Q running through regions:
-		if number of visited rooms in Q > 0:
-			if mrlp is not Q and Q is not solved:
-				say "You have scored [cur-score of Q] out of [max-score of Q] total points for the (unsolved[if Q is stores] hub[end if]) [Q] region.";
+	repeat with QQ running through regions:
+		if number of visited rooms in QQ > 0:
+			if mrlp is not QQ and QQ is not solved:
+				say "You have scored [cur-score of QQ] out of [max-score of QQ] total points for the (unsolved[if QQ is stores] hub[end if]) [QQ] region.";
 	if there is a solved region:
 		let temp be 0;
 		say "[line break]Won now:";
@@ -4598,6 +4597,10 @@ to left-to-see:
 	repeat through table of xibits:
 		if exhib entry is not exhausted:
 			say "You haven't looked all the way through the [exhib entry] in [location of exhib entry].";
+			continue the action;
+	repeat with QQ running through things in sparse spares:
+		if QQ is not player and QQ is not examined:
+			say "You could still examine [the QQ][if player is not in sparse spares] in Sparse Spares[end if].";
 			continue the action;
 	say "It looks like you've looked through everything. Thanks for all the time you spent, and I hope it was worth it!"
 
@@ -4773,6 +4776,10 @@ when play begins (this is the hint and other randomization rule):
 	sort anteroom-items in random order;
 	if a random chance of 1 in 2 succeeds: [others random clues]
 		now viewer-first is true;
+	sort wells-hintables in random order;
+	sort field-hintables in random order;
+	sort clearing-hintables in random order;
+	sort scapespace-hintables in random order;
 	sort nextclue in random order; [mislit limits items]
 	sort the table of xibits in random order; [demo dome exhibit stuff]
 	let wt be 0;
@@ -5253,8 +5260,6 @@ viewer-first is a truth state that varies.
 
 enuf-fruit-poke is a truth state that varies.
 
-wells-hintables is a list of things variable. wells-hintable is { silly shirt, riot cap, sorer bogey, green stain, stucco }.
-
 carry out others-hinting:
 	if cur-score of others < 4:
 		if lumps are visible:
@@ -5310,51 +5315,45 @@ carry out others-hinting:
 	if player is in gates stage:
 		all-say "[if scape space is unvisited]Try going down from the Swell Wells[else]You will find ID inside the So-Great Storage in the Scape Space[end if]." instead;
 	if player is in Swell Wells:
-		if silly shirt is visible:
-			try objhinting silly shirt instead;
-		if riot cap is visible:
-			try objhinting riot cap instead;
-		if sorer bogey is visible:
-			try objhinting sorer bogey instead;
-		if green stain is in swell wells:
-			try objhinting green stain instead;
+		hintlistproc wells-hintables;
+		if the rule succeeded:
+			the rule succeeds;
 	if player is in filed field:
-		if pryer bars are visible:
-			try objhinting pryer bars instead;
-		if ppf is visible:
-			try objhinting ppf instead;
-		if rapt figure is visible:
-			try objhinting rapt figure instead;
-		if b-w are visible:
-			try objhinting b-w instead;
-		if sickle is visible:
-			try objhinting sickle instead;
+		hintlistproc field-hintables;
+		if the rule succeeded:
+			the rule succeeds;
 	if player is in clangier clearing:
-		if pre-mang is in clearing:
-			try objhinting pre-mang instead;
-		if peach is in clearing:
-			try objhinting peach instead;
-		if lemons are in clearing:
-			try objhinting lemons instead;
-		if melon is in clearing:
-			try objhinting melon instead;
-		if nectarine is in clearing:
-			try objhinting nectarine instead;
-		all-say "There's nothing left to do here." instead;
+		hintlistproc clearing-hintables;
+		if the rule succeeded:
+			the rule succeeds;
 	if player is in Scape Space:
 		if storage box is in Scape Space:
 			if player has droll dollar:
 				try objhinting storage box instead;
 			try objhinting Curtis instead;
-		if orange is in Scape Space:
-			try objhinting orange instead;
-		if banana is in Scape Space:
-			try objhinting banana instead;
-		if reserved is in Scape Space:
-			try objhinting reserved instead;
-		if pugnacious plant is in Scape Space:
-			try objhinting pugnacious plant instead;
+		hintlistproc scapespace-hintables;
+		if the rule succeeded:
+			the rule succeeds;
 	all-say "Nothing specific left to do here[if curtis-level < 3], though you may need to give Curtis some more fruits[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if]."
+
+section random hinting
+
+[ !! if you add a fruit, change one of these lists]
+
+wells-hintables is a list of things variable. wells-hintables is { green stain, riot cap, silly shirt, sorer bogey, stucco }.
+
+field-hintables is a list of things variable. field-hintables is { b-r, b-w, barber sickle, mean trowel, ppf, pryer bars, rapt figure }.
+
+clearing-hintables is a list of things variable. clearing-hintables is { auction caution, l-o-p, lemons, melon, nectarine, peach, pre-mang, quince }.
+
+scapespace-hintables is a list of things variable. scapespace-hintables is { an-a, orange, pugnacious plant, reserved sign }
+
+to hintlistproc (j - a list of things):
+	repeat with hobj running through j:
+		if hobj is in location of player:
+			try objhinting hobj;
+			the rule succeeds;
+	the rule fails;
 
 book stores-hinting
 
@@ -7717,7 +7716,7 @@ understand the command "credits" as something new.
 understand "credits" as creditsing.
 
 carry out creditsing:
-	say "I must direct credit to my testers for finding bugs and making sure this game was not mega (redacted).Thanks to Heartless Zombie (David White) for his hash code and suggestions, which removed many technical barriers.[paragraph break]More generally, thanks to people involved with Inform 7. Sparser parsers couldn't have hacked this game.[paragraph break]More personally, thanks to my testers who beat my Beta. They are, in first-name alphabetical order: David White, Jason Ermer, Kevin Jackson-Mead, Paul Lee, Peter Butter, Melvin Rangasamy, and Wade Clarke. Robert DeFord provided moral support and proofread game documents.[paragraph break]Potsy typos and possibly a tyro's story are not their fault.[paragraph break]Out of the blue help post-release came from Toby Ott, who went through the game several times, and David Welbourn, whose walkthrough at www.plover.net/~davidw/sol/r/roili13.html inspired many bug, hint and user-friendliness fixes. Hanon Ondricek helped with user-friendliness issues and found the wonderful name Dawn Churlzest, Streever helped with a Heisenbug and lots of release 2/3 stuff, and Marshal Winter found cool stuff. For release 3, Elizabeth McDonald, Joel Webster, Lydia Q. Dames, Sean M. Shore and Steven Watson provided testing too, and Matt Weiner noted a debug-text bug that helped me overhaul under the hood stuff.[paragraph break]Jason Lautzenheiser did some code review for release 4.[paragraph break]Thanks to Hanon Ondricek for finding the Electric Slide font and to Wade Clarke for consulting on the new release 3 cover art. If you hate the main idea, that's on me, but they helped me bring it out as best I could.[paragraph break]Thanks to the organizers of IFComp 2012 and Spring Thing 2013, Stephen Granade and Greg Boettcher. Thanks to Greg for checking up on me when I forgot to confirm my entry fee payment.[paragraph break]Thanks to bitbucket for posting a project that let me organize bugs privately and github for letting me organize post-comp releases. If you want to write something, just having a place to write down issues is fabulous.[paragraph break]You can see the current project status at [my-repo]." instead;
+	say "I must direct credit to my testers for finding bugs and making sure this game was not mega (redacted).Thanks to Heartless Zombie (David White) for his hash code and suggestions, which removed many technical barriers.[paragraph break]More generally, thanks to people involved with Inform 7. Sparser parsers couldn't have hacked this game.[paragraph break]More personally, thanks to my testers who beat my Beta. They are, in first-name alphabetical order: David White, Jason Ermer, Kevin Jackson-Mead, Paul Lee, Peter Butter, Melvin Rangasamy, and Wade Clarke. Robert DeFord provided moral support and proofread game documents.[paragraph break]Potsy typos and possibly a tyro's story are not their fault.[paragraph break]Out of the blue help post-release came from Toby Ott, who went through the game several times, and David Welbourn, whose walkthrough at www.plover.net/~davidw/sol/r/roili13.html inspired many bug, hint and user-friendliness fixes. Hanon Ondricek helped with user-friendliness issues and found the wonderful name Dawn Churlzest, Streever helped with a Heisenbug and lots of release 2/3 stuff, and Marshal Winter found cool stuff. For release 3, Elizabeth McDonald, Joel Webster, Lydia QQ. Dames, Sean M. Shore and Steven Watson provided testing too, and Matt Weiner noted a debug-text bug that helped me overhaul under the hood stuff.[paragraph break]Jason Lautzenheiser did some code review for release 4.[paragraph break]Thanks to Hanon Ondricek for finding the Electric Slide font and to Wade Clarke for consulting on the new release 3 cover art. If you hate the main idea, that's on me, but they helped me bring it out as best I could.[paragraph break]Thanks to the organizers of IFComp 2012 and Spring Thing 2013, Stephen Granade and Greg Boettcher. Thanks to Greg for checking up on me when I forgot to confirm my entry fee payment.[paragraph break]Thanks to bitbucket for posting a project that let me organize bugs privately and github for letting me organize post-comp releases. If you want to write something, just having a place to write down issues is fabulous.[paragraph break]You can see the current project status at [my-repo]." instead;
 
 chapter abouting
 
@@ -10852,7 +10851,7 @@ ghoul hat	otters	"You can say ALTHOUGH to Mr. Lee and his ghoul hat [if player h
 p-2	otters	"You can say HOWEVER to deal with Mr. Lee and Rev. Howe."
 atmo-moat	otters	"You can collapse the atmo-moat to an ATOM once you have the power."
 medals	otters	"The medals can help you go QUICKLY[if adjsolve < 3 or nounsolve < 3], though they may not be fully magical, yet[end if]."
-mango	others	"You can look AMONG once you have currency to haggle in the clearing."
+pre-mang	others	"You can look AMONG once you have currency to haggle in the clearing."
 
 to say other-areas:
 	repeat through table of region-spoilers:
@@ -10983,7 +10982,8 @@ to pad-rec-q (q - text): [pad-rec without saying, you add the info]
 to pad-del (q - text):
 	repeat through the table of pad-stuff:
 		if there is no short entry:
-			say "[bug-report] need short entry for [q].";
+			say "[bug-report] need short entry for 
+			.";
 		else if short entry is q:
 			if known entry is true:
 				now known entry is false;
@@ -11117,9 +11117,9 @@ to say which-stores:
 	say ". Store[if nlt > 1]s[end if] [A] seem[if nlt is 1]s[end if] in decent shape[if hoster is visible], but that hoster you made looks too scary for now[end if].[no line break][tokies] Looks like near the end of the alphabet's where it's at";
 
 to decide whether you-can-advance:
-	let Q be number of solved regions;
-	increase Q by number of bypassed regions;
-	if Q < 5:
+	let QQ be number of solved regions;
+	increase QQ by number of bypassed regions;
+	if QQ < 5:
 		decide no;
 	decide yes.
 
@@ -20454,18 +20454,18 @@ check going (this is the guardian reposition before rule):
 	if mrlp is Towers:
 		if noun is not a direction:
 			say "You need to specify a direction, not a place." instead;
-		repeat with Q running through guardians:
-			if Q is in location of player:
-				choose row with guy of Q in table of guard-org;
-				if Q is not in lalaland:
-					now Q is passtried;
+		repeat with QQ running through guardians:
+			if QQ is in location of player:
+				choose row with guy of QQ in table of guard-org;
+				if QQ is not in lalaland:
+					now QQ is passtried;
 					if loc entry is location and blockdir entry is noun:
-						say "You're blocked going [noun] by [unless Q is proper-named]the [end if][Q]. [blokzorz entry][line break]" instead;
+						say "You're blocked going [noun] by [unless QQ is proper-named]the [end if][QQ]. [blokzorz entry][line break]" instead;
 					if loc entry is not location and blockdir entry is opposite of noun:
-						say "You're blocked going [noun] by [unless Q is proper-named]the [end if][Q]. [blokzorz entry][line break]" instead;
+						say "You're blocked going [noun] by [unless QQ is proper-named]the [end if][QQ]. [blokzorz entry][line break]" instead;
 		if number of taunty guardians > 0:
-			let Q be a random taunty guardian;
-			choose row with guy of Q in table of guard-org;
+			let QQ be a random taunty guardian;
+			choose row with guy of QQ in table of guard-org;
 			say "[taunt entry][line break]";
 			continue the action;
 
@@ -20667,8 +20667,8 @@ max-war-pods is a number that varies. max-war-pods is usually 7.
 
 to decide which number is war-count of (wc - a number):
 	let temp be 0;
-	repeat with Q running through warriors:
-		if pod-num of Q is wc:
+	repeat with QQ running through warriors:
+		if pod-num of QQ is wc:
 			increment temp;
 	decide on temp.
 
@@ -20678,9 +20678,9 @@ when play begins (this is the distribute warriors rule) :
 		let G be the war-count of mypod;
 		[say "[mypod] has war-count of [G].";]
 		let H be a random number from 1 to G;
-		repeat with Q running through warriors:
-			if pod-num of Q is mypod and pod-ord of Q is H:
-				now Q is in Trefoil;
+		repeat with QQ running through warriors:
+			if pod-num of QQ is mypod and pod-ord of QQ is H:
+				now QQ is in Trefoil;
 	now h-w is a random not leaderly warrior in Trefoil;
 
 [This pulls 1 guy from each wargroup. As of release 3 there are 26 distinct guys with 5.65 letters on average--the shuffling was previously totally random but now it's weighted down to ~5.61 with a more uniform distribution. You are sure to get 2 6's, 2 5's, a 7-8 and a 4-5.]
@@ -21481,8 +21481,8 @@ chapter nasty things guys do
 
 to decide which number is mack-count of (mc - a number):
 	let temp be 0;
-	repeat with Q running through mack-ideas:
-		if pod-num of Q is mc:
+	repeat with QQ running through mack-ideas:
+		if pod-num of QQ is mc:
 			increment temp;
 	decide on temp.
 
@@ -21606,9 +21606,9 @@ to decide whether (n - a number) is unworkable:
 	decide yes;
 
 this is the find-mack-idea rule:
-	repeat with Q running through mack-ideas:
-		if Q is in frontage and mack-prio of Q is cur-mack-blab:
-			now current-idea is Q;
+	repeat with QQ running through mack-ideas:
+		if QQ is in frontage and mack-prio of QQ is cur-mack-blab:
+			now current-idea is QQ;
 			the rule succeeds;
 	the rule fails;
 
@@ -21616,12 +21616,12 @@ to decide which mack-idea is mack-hint:
 	let cur-prio be 10;
 	let got-mack be false;
 	let cur-mack be t-despairingly;
-	repeat with Q running through ment mack-ideas in frontage:
-		d "[Q] [mack-prio of Q].";
-		if mack-prio of Q < cur-prio:
-			d "Switching to [Q].";
-			now cur-mack is Q;
-			now cur-prio is mac-prio of Q;
+	repeat with QQ running through ment mack-ideas in frontage:
+		d "[QQ] [mack-prio of QQ].";
+		if mack-prio of QQ < cur-prio:
+			d "Switching to [QQ].";
+			now cur-mack is QQ;
+			now cur-prio is mack-prio of QQ;
 			now got-mack is true;
 	if got-mack is false:
 		say "(BUG in mack-idea code) ";
@@ -21629,9 +21629,9 @@ to decide which mack-idea is mack-hint:
 
 every turn when player is in frontage and macks are in frontage (this is the macks hitting on rule):
 	d "Macks hitting on rule:[line break]";
-	repeat with Q running through reflexive mack-ideas in frontage:
+	repeat with QQ running through reflexive mack-ideas in frontage:
 		if debug-state is true:
-			say "DEBUG NOTES: [q]: [mack-prio of q].";
+			say "DEBUG NOTES: [qq]: [mack-prio of qq].";
 	let loop be false;
 	while cur-pod-num is unworkable:
 		increment cur-mack-blab;
@@ -22808,7 +22808,7 @@ to say what-clear:
 	else if stucco is not in swell wells:
 		say "'Ye Borers, go!' is written in red";
 	else if sorer bogey is not in swell wells:
-		say "The advertisement for ScoutCon is ion stucco and in red";
+		say "The advertisement for ScoutCon is on stucco and in red";
 	else:
 		say "Two prominent ones in red: 'Ye borers, go!' and ScoutCon on stucco"
 
@@ -22964,6 +22964,9 @@ check going north in Gates Stage:
 	now others is solved;
 	if debug-state is true:
 		append "Test passed for Others.[line break]" to the file of debuggery;
+	if epilogue rule is a final response rule listed in the Table of Final Question Options:
+		choose row with final response rule of epilogue rule in the Table of Final Question Options;
+		blank out the whole row; [don't let the player ROVE OVER again]
 	choose the row with final response activity of putzing about in the table of final question options;
 	now final response activity entry is nextlisting; [this is an awful hack but I'd rather not reveal this til after you beat OTHERS]
 	choose the row with final response activity of putzing around in the table of final question options;
@@ -23627,8 +23630,8 @@ check going south in peek keep:
 		say "You take a break and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers['] money.";
 		end the story;
 	else:
-		say "Are you sure you want to leave before [if number of unnoted exhibits is 0]exhaustively [end if]looking at everything?";
-		if the player no-consents:
+		say "Are you sure you want to leave before [if number of unnoted exhibits is 0]exhaustively [end if]looking at everything? You can type SCORE to see what you still haven't done.";
+		if the player switch-consents:
 			say "It's--yes, you've sort of lived it, already. You're just too busy for frivolity[if number of unnoted exhibits is 0]. You've had a look at everything[end if].";
 			end the story;
 		else:
@@ -23837,7 +23840,7 @@ chapter Intel Inlet
 
 Intel Inlet is inside of Peek Keep. Intel Inlet is in Demo Dome. "You feel a fourth wall closing in on bugs and features here. A CareLand Calendar is on the wall, as is a shiest thesis--whoever wrote it is probably half embarrassed of what's on there."
 
-The shiest thesis is an exhibit in intel inlet. description is "It's a list of embarrassing mistakes you really shouldn't feel so embarrassed about. At first you're all, eh, this...but it's more than that.".
+The shiest thesis is an exhibit in intel inlet. description is "It's a list of embarrassing mistakes you really shouldn't feel so embarrassed about. At first you're all, eh, this...but it's more than that. You resolve to feel less bad about your own mistakes, reading all the things the author let slip in a release, or just in general, while making this project. He's obviously still a little embarrassed about it all.".
 
 after examining shiest thesis:
 	now shiest thesis is exhausted;
@@ -24331,6 +24334,7 @@ definition: a thing (called hintcand) is hintrelevant:
 objhinting is an action applying to one visible thing.
 
 check objhinting a deregioned object:
+	d "[noun] is deregioned.";
 	say "That's not something in this region[one of]--also, as a further note, locations are not considered hint objects[or][stopping]." instead;
 
 understand the command "hint/hints/info/help [any thing]" as something new.
@@ -25120,45 +25124,52 @@ weltish whistle	"[if whistle is reflexed]PLAY it by Elvira to win.[else][one of]
 hydra	"[if parrot is off-stage]You'd need to be pretty big to defeat the hydra. Or have a pretty big ally. But you haven't found one, yet.[else][one of]If only you had a bigger animal as an ally, to beat the hydra.[plus][or]One that almost attacked you.[plus][or]Remember what the parrot was?[plus][or]The parrot was a RAPTOR.[plus][or]Don't summon the raptor before the alcoves.[minus][cycling][end if]"
 Elvira	"[if current quip is final-quip]Just PLAY THE WHISTLE to defeat her.[else if nounsolve is 0 and adjsolve is 0]You'll need animal allies to face Elvira, the charismatic conversationalist.[else if nounsolve < 3 or adjsolve < 3]You'll need more animal allies to face Elvira, the charismatic conversationalist.[else][one of]You have enough animals to overwhelm--and ignore the charms of--Elvira, the charismatic conversationalist.[plus][or]First, you need to BLOW THE WHISTLE to summon them.[plus][or]You have one more thing that can help.[plus][or]Remember how you helped Gretta?[plus][or]The medals can make you--and your allies--go QUICKLY.[minus][cycling][end if]" [end otters hinting]	--	"you can just PLAY THE WHISTLE"
 harmonicas	"[one of]If you try to play them, your playing is the pits, and the game stems you.[or]What's a fruit that has pits and a stem?[or]A cherry, but this is a much brighter red than usual.[or]MARASCHINO.[cycling]"
-lumps	"[one of]Hmm, the lumps are purplish, maybe even a bit soft.[or]You're trying to retrieve fruit, so that should be a clue.[or]The settler will tell you where to place a vowel.[or]PLUMS.[cycling]"
 slime	"[one of]Hmm, the slime is green and knobbly and smells a bit like dishwashing detergent.[or]What can green dishwashing detergent smell like?[or]LIMES.[cycling]"
 spear	"[one of]The spear is particularly out of place in Rustic Citrus.[plus][or]The settler can clue the vowels for the spear.[plus][or]The spear's an odd light greenish. Hmm.[plus][or]The spear becomes PEARS.[minus][cycling]."
 pagers	"[one of]The pagers should be something more agrarian.[plus][or]They come in different colors: red, green and black, which looks more purple, really.[plus][or]The comment on seediness is a hint, too.[plus][or]They keep you on the communications vine.[plus][or]GRAPES.[minus][cycling]"
-pryer bars	"[one of]If you know what drupelets are, the pryer bars may be a bit easier. If not, consider this edutainment.[plus][or]The bars are a bit reddish, which clues the fruit's color.[plus][or]The pryer bars can become a raspberry.[minus][cycling]"
-b-r	"[one of]Philip Larkin would know what to do with the buried raft right away.[plus][or]You may or may not know what the fruit actually looks or tastes like, but it IS a fruit, in fact...[plus][or]It's breadfruit.[minus][cycling]"
-drupelets	"They clue you as to what the pryer bars should be. If not, then maybe this game will actually help you with your vocabulary! (I didn't know what they were before I Googled.)"
-jagged spoon	"The spoon's weird shape clues you as to what the rapt figure should be."
-b-w	"[one of]Barriers West can be another fruit.[plus][or]They're reddish, with a seedy outside and leaves on top?[plus][or]STRAWBERRIES.[minus][cycling]"
-ppf	"[one of]These are meant to keep the cows out.[plus][or]You need only worry about PIPE PANEL.[plus][or]PINEAPPLE.[minus][cycling]"
-rapt figure	"[one of]The jagged spoon the figure is holding is a clue.[plus][or]Plus, the figure is whitish and semi-reddish and yellowish.[plus][or]GRAPEFRUIT.[minus][cycling]"
-barren cries	"[one of]The barren cries are sour and bitter and tiny. What fruit is sour and bitter and tiny? Well, there are a lot, but...[plus][or]The barren cries can become CRANBERRIES.[minus][cycling]"
-peanut cola	"[one of]The peanut cola has a neat cupola on it.[plus][or]Tan and pinkish-orange.[plus][or]CANTALOUPE.[minus][cycling]"
-silly shirt	"[one of]You may not need ESP to guess what ESP, PAL on the shirt becomes.[plus][or]APPLES.[minus][cycling]"
-riot cap	"[one of]The riot cap's not a very tough color for a combat helmet. What fruit can it become?[plus][or]APRICOT.[minus][cycling]"
-sorer bogey	"[one of]The sorer bogey makes your skin break out in--well, not pimples, they'll go away in a bit.[plus][or]Bumps, more like.[plus][or]Goosebumps.[plus][or]GOOSEBERRY.[minus][cycling]"
-s-w	--	sorer bogey
-eerie blurbs	"[one of]They're stained purplish.[plus][or]The settler will give you a few letters, and the rest may be clear--what fruit is that?[plus][or]BLUEBERRIES.[minus][cycling]"
-abandoned drinks stand	"[if drinks stand is unexamined]Examine the drinks stand. You'll find more raw materials.[else]The drinks stand is only there to be examined.[end if]"
-mad train	"[one of]This is an odd one, but the mad train can become a fruit. The train is pod-like. It seems to be from some place far away.[plus][or]The settler knocks out the vowels.[plus][or]Dr. Nimata tells you the other thing.[plus][or]TAMARIND.[minus][cycling]"
-briar screen	"[one of]What's a darkish red, bitter fruit?[plus][or]The settler helps a bit.[plus][or]CRANBERRIES.[minus][cycling]"
 moss cap	"[one of]That moss cap is useless as-is. Curtis claimed it helped you tell directions, but it doesn't.[plus][or]Anything similarly-named that does?[plus][or]Perhaps a rose would make you feel less sore.[plus][or]You can make a COMPASS.[minus][cycling]"
 compass	"You don't actually need to use the compass from the command line. You'll never be lost, with it."
+abandoned drinks stand	"[if drinks stand is unexamined]Examine the drinks stand. You'll find more raw materials.[else]The drinks stand is only there to be examined.[end if]"
+lumps	"[one of]Hmm, the lumps are purplish, maybe even a bit soft.[or]You're trying to retrieve fruit, so that should be a clue.[or]The settler will tell you where to place a vowel.[or]PLUMS.[cycling]"
+mad train	"[one of]This is an odd one, but the mad train can become a fruit. The train is pod-like. It seems to be from some place far away.[plus][or]The settler knocks out the vowels.[plus][or]Dr. Nimata tells you the other thing.[plus][or]TAMARIND.[minus][cycling]"
+briar screen	"[one of]What's a darkish red, bitter fruit?[plus][or]The settler helps a bit.[plus][or]CRANBERRIES.[minus][cycling]"
+barren cries	"[one of]The barren cries are sour and bitter and tiny. What fruit is sour and bitter and tiny? Well, there are a lot, but...[plus][or]The barren cries can become CRANBERRIES.[minus][cycling]"
+peanut cola	"[one of]The peanut cola has a neat cupola on it.[plus][or]Tan and pinkish-orange.[plus][or]CANTALOUPE.[minus][cycling]"
+eerie blurbs	"[one of]They're stained purplish.[plus][or]The settler will give you a few letters, and the rest may be clear--what fruit is that?[plus][or]BLUEBERRIES.[minus][cycling]"
 videotape collection	"[one of]You know the drill by now. The movies have similar names and can eliminate a few letters.[plus][or]PERSIMMON.[minus][cycling]"
 magenta rope	"[one of]The megaton pear, mopeage rant, rampage note and magenta rope are all related.[plus][or]You have four things that anagram each other, so yes, there is a fruit they can become.[plus][or]POMEGRANATE.[minus][cycling]"
 mopeage rant	--	magenta rope
 rampage note	--	magenta rope
 megaton pear	--	magenta rope
+b-r	"[one of]Philip Larkin would know what to do with the buried raft right away.[plus][or]You may or may not know what the fruit actually looks or tastes like, but it IS a fruit, in fact...[plus][or]It's breadfruit.[minus][cycling]" [begin filed field hints]
+b-w	"[one of]Barriers West can be another fruit.[plus][or]They're reddish, with a seedy outside and leaves on top?[plus][or]STRAWBERRIES.[minus][cycling]"
 barber sickle	"[one of]The barber sickle is dripping and dark. Its texture is like the pryer bars.[plus][or]BLACKBERRIES.[minus][cycling]"
-peach	"[one of]The peach too expensive.[plus][or]The settler knocks the peach out, logically, on cheat mode. Actually, just mentioning cheat mode may be a tremendous hint, here.[plus][or]How could the peach be described as less expensive?[plus][or]CHEAP.[minus][cycling]"
+mean trowel	"[one of]The mean trowel mentions three names if you READ it.[plus][or]There's no physical clue as to what the mean trowel is, so it's a bit tricky unless you just plow through all the fruits that might be.[plus][or]WATERMELON.[minus][cycling]"
+ppf	"[one of]These are meant to keep the cows out.[plus][or]You need only worry about PIPE PANEL.[plus][or]PINEAPPLE.[minus][cycling]"
+pryer bars	"[one of]If you know what drupelets are, the pryer bars may be a bit easier. If not, consider this edutainment.[plus][or]The bars are a bit reddish, which clues the fruit's color.[plus][or]The pryer bars can become a raspberry.[minus][cycling]"
+drupelets	"They clue you as to what the pryer bars should be. If not, then maybe this game will actually help you with your vocabulary! (I didn't know what they were before I Googled.)"
+jagged spoon	"The spoon's weird shape clues you as to what the rapt figure should be."
+rapt figure	"[one of]The jagged spoon the figure is holding is a clue.[plus][or]Plus, the figure is whitish and semi-reddish and yellowish.[plus][or]GRAPEFRUIT.[minus][cycling]"
+green stain	"[one of]If you try to decipher the green stain, you see red, but it almost seems orange-ish, too.[plus][or]Small orange-ish fruits that are not oranges.[plus][or][plus][or]TANGERINES.[minus][cycling]" [begin swell wells hinting]
+riot cap	"[one of]The riot cap's not a very tough color for a combat helmet. What fruit can it become?[plus][or]APRICOT.[minus][cycling]"
+silly shirt	"[one of]You may not need ESP to guess what ESP, PAL on the shirt becomes.[plus][or]APPLES.[minus][cycling]"
+sorer bogey	"[one of]The sorer bogey makes your skin break out in--well, not pimples, they'll go away in a bit.[plus][or]Bumps, more like.[plus][or]Goosebumps.[plus][or]GOOSEBERRY.[minus][cycling]"
+s-w	--	sorer bogey
+stucco	"[one of]A message is written ON STUCCO, in red. Plus it's for ScoutCon. Those are two clues right there.[plus][or]COCONUTS.[minus][cycling]"
+Len Craig	"Len Craig wants to haggle. You need to poke around, see what fruits and things are in the clearing, and bargain accordingly." [clangier clearing hints]
+auction caution	"[one of]The Auction Caution says you need to PAY ASAP.[plus][or]What could you buy with that message?[plus][or]PAPAYAS.[minus][cycling]"
+l-o-p	"[one of]The list of prices has an error that makes you exclaim something.[plus][or]The mistake in the list won't drive you to profanity, but...[plus][or]CRIPES.[minus][cycling]"
 lemons	"[one of]The price, as is, makes you frown.[plus][or]Maybe being depressing will depress prices.[plus][or]Get SOLEMN.[minus][cycling]"
 melon	"[one of]You need to see another, better, melon.[plus][or]Maybe you could tell Len that.[plus][or]LEN MO or MO LEN will get something better from Len.[minus][cycling]"
-reserved sign	"[one of]RESERVED for a DESERVER.[plus][or]The settler makes the sign pretty clear.[plus][or]However, if you take or examine the sign, you're told it's the opposite of an invitation to take it.[plus][or]How do you make the sign the opposite of what it is?[plus][or]REVERSED.[minus][cycling]"
-green stain	"[one of]If you try to decipher it, you see red, but it almost seems orange-ish, too.[plus][or]Small orange-ish fruits that are not oranges.[plus][or][plus][or]TANGERINES.[minus][cycling]"
 nectarine	"[one of]The nectarine's not too old, but if it were, you might get it cheaper. Cheaperer.[plus][or]Len Craig suddenly starts using bad grammar describing the nectarine.[plus][or]ANCIENTER.[minus][cycling]"
-quince	"[if quince is reflexed][frootz][else][one of]How do you count in Italian, to name a price? [plus][or]Uno, duo, tre, quattro, ... [plus][or] ...CINQUE. [minus][cycling][end if]"
-pears	"[frootz]"
-auction caution	"[one of]The Auction Caution says you need to PAY ASAP.[plus][or]What could you buy with that message?[plus][or]PAPAYAS.[minus][cycling]"
-Len Craig	"Len Craig wants to haggle. You need to poke around, see what fruits and things are in the clearing, and bargain accordingly."
+peach	"[one of]The peach is currently too expensive, but there's a way to fix that.[plus][or]The settler knocks the peach out, logically, on cheat mode. Actually, just mentioning cheat mode may be a tremendous hint, here.[plus][or]How could the peach be described as less expensive?[plus][or]CHEAP.[minus][cycling]"
+pre-mang	"[one of]'Go, man!' What sort of fruit anagrams that?[plus][or]A mango. But you need to find a way to get to it.[plus][or]This didn't quite fit anywhere in Routes.[plus][or]AMONG.[minus][cycling]"
+quince	"[if quince is reflexed][frootz][else][one of]How do you count in Italian, to name a price for the quince? [plus][or]Uno, duo, tre, quattro, ... [plus][or] ...CINQUE. [minus][cycling][end if]"
+an-a	"[one of]You need to take an a the right way.[plus][or]An a, not the a--and it's six letters if you scan it. It's also very yellow, part of a bunch of letters.[plus][or]If you NAB AN A, everything else comes out and you find a banana underneath.[minus][cycling]" [scape space fruit hints]
+orange	"[if player has orange][frootz][else][one of]You can't just take the orange directly.[plus][or]You probably need to get closer to it slowly.[plus][or]GO NEAR to get the orange.[minus][cycling]"
+pugnacious plant	"[one of]Burr, bah, you say if you examine/attack it.[plus][or]It seems to be making a weird mumbling.[plus][or]RHUBARB.[minus][cycling]"
+reserved sign	"[one of]RESERVED for a DESERVER.[plus][or]The settler makes the sign pretty clear.[plus][or]However, if you take or examine the sign, you're told it's the opposite of an invitation to take it.[plus][or]How do you make the sign the opposite of what it is?[plus][or]REVERSED.[minus][cycling]"
+pears	"[frootz]" [you already have these fruits and they don't appear before you solve them, so no need to hint]
 tamarind	--	pears
 plums	--	pears
 limes	--	pears
@@ -25184,11 +25195,7 @@ gooseberry	--	pears
 persimmon	--	pears
 papayas	--	pears
 breadfruit	--	pears
-an-a	"[one of]You need to take an a the right way.[plus][or]An a, not the a--and it's six letters if you scan it. It's also very yellow, part of a bunch of letters.[plus][or]If you NAB AN A, everything else comes out and you find a banana underneath.[minus][cycling]"
-orange	"[if player has orange][frootz][else][one of]You can't just take the orange directly.[plus][or]You probably need to get closer to it slowly.[plus][or]GO NEAR to get the orange.[minus][cycling]"
-l-o-p	"[one of]The list of prices has an error that makes you exclaim something.[plus][or]The mistake in the list won't drive you to profanity, but...[plus][or]CRIPES.[minus][cycling]"
-pugnacious plant	"[one of]Burr, bah, you say if you examine/attack it.[plus][or]It seems to be making a weird mumbling.[plus][or]RHUBARB.[minus][cycling]"
-singed design	"The singed design gives you a clue what the [if player has coin]coin[else if player has coins]coins[else if player has icon]icon[else if player has icons]icons[else if player has s-c]sonic coins[end if] can become."
+singed design	"The singed design gives you a clue what the [if player has coin]coin[else if player has coins]coins[else if player has icon]icon[else if player has icons]icons[else if player has s-c]sonic coins[end if] can become." [begin very endgame item hints]
 coin	"[one of]You ultimately need another coin, but perhaps it can be converted to something of intrinsic worth.[plus][or]Make the coin an ICON. Once you get another coin, you will make ICONS automatically.[minus][cycling]"
 coins	"[one of]There are two things to do with the coins.[plus][or]The coins can become another thing, or they can change in quality.[plus][or]The thing coins can become is ICONS.[plus][or]The coins can also become SONIC.[minus][cycling]"
 icon	"You've done what you can with the icon. You need to [if number of fruits in lalaland < 8]get more fruits[else]return to Curtis[end if] to get another coin and make ICONS."
@@ -25208,7 +25215,7 @@ passport	"The passport will get you through the gates in the Gates Stage, but yo
 a near arena	"You can't change the [if near arena is examined]arena[else]Admit-Us Stadium[end if], but you can enter it  via the gates."
 viewer	"[one of]You can't seem to focus on the viewer. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the viewer.[plus][or]The other is to see how not to be called a perp.[plus][or]REVIEW the viewer, or...[plus][or]...PREP so you are not a perp.[minus][cycling]"
 searcher	"[one of]You can't seem to focus on the searcher. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the searcher.[plus][or]The other is to see how not to be called a perp.[plus][or]RESEARCH the searcher, or...[plus][or]...PREP so you are not a perp.[minus][cycling]"	[end others hinting]
-Great Grate	"The Great Grate is immovable."
+Great Grate	"The Great Grate is immovable." [start demo dome hinting, though there's really not much]
 chic loner chronicle	"[dome-blab]"
 shiest thesis	"[dome-blab]"
 calendar	"[dome-blab]"
@@ -25523,7 +25530,7 @@ Rule for amusing a victorious player:
 		if others is solved or there is no reg-needed entry or reg-needed entry is solved:
 			say "[2da][yux entry][line break]";
 	say "[line break]Would you like to see a list of the least tedious non-game-critical anagram jokes?";
-	if the player consents:
+	if the player switch-consents:
 		repeat through table of anayux:
 			if others is solved or there is no reg-needed entry or reg-needed entry is solved:
 				if there is no do-i-print entry:
@@ -25571,15 +25578,18 @@ final question wording	only if victorious	topic		final response rule		final resp
 --	false	"la/lh/lm/lp/ls/lt/lu/lv/lw/ly"	--	reging about
 --	false	"nr/lr"	--	nrling about
 "[one of]FORM (OF MR)[or](M OR F) FORM[in random order] to see where your sex matters"	true	"form" or "form of mr" or "m or f form"	--	sexsorting
-"L(IST) to see random dialogues, etc., L(IST) (NUMBER) for a particular one, LN/NL for the next or L(store name) for one region, or LR for the region's next list"	false	"l/list [number]"	--	potzing around
-"DEMO DOME MODE (director's cut)"	false	"demo/dome/mode" or "demo dome/mode" or "dome mode" or "demo dome mode"	--	ddming
+"L(IST) to see random dialogues, etc., L(IST) (NUMBER) for a particular one, LN/NL for the next or L(store name) for one region (LA for general), or LR for the region's next list"	false	"l/list [number]"	--	potzing around
+"DEMO DOME MODE (director's cut, can't undo)"	false	"demo/dome/mode" or "demo dome/mode" or "dome mode" or "demo dome mode"	--	ddming
 
 sexsorting is an activity.
 
 rule for sexsorting:
 	say "Here is what the game treats differently: (* = trivial)[line break]";
 	repeat through table of sexdif:
-		say "--[examp entry][line break]";
+		say "[2da][examp entry][line break]";
+	if others is solved:
+		repeat through table of others sexdif:
+			say "[2da][examp entry][line break]";
 
 table of sexdif [tsx]
 examp
@@ -25598,7 +25608,8 @@ examp
 "[bold type](stores)[r] The hoarder says something different."
 "[bold type](towers)[r] The admirer reacts differently."
 "Examining the neural pulses."
-"Talking to the smart kid."
+"The smart kid is Dirk Stam or Kim Darst."
+"Dr. Yow is male/female."
 "Trying to run through the ego drains."
 "[bold type](troves)[r] Reading DEAL."
 "When entering the FiefCo Office."
@@ -25607,7 +25618,12 @@ examp
 "Interacting with the macks--talking, dispelling, attacking."
 "KISSing Elvira."[]
 "The win text."
+
+table of others sexdif
+examp
 "[bold type](others)[r] The win-text for beating OTHERS[if gates stage is unvisited], the area you didn't visit yet[end if]."
+"Lord Al Ollard or Dr. Lola Ollard appears on a droll dollar."
+"Red Rat Art Erd or Dr. Tera Darter is the Tarred Trader."
 
 demo dome moding is an activity.
 
@@ -25802,13 +25818,13 @@ rule for showing alternate routes:
 
 to say how-macks:
 	let got-yet be false;
-	repeat with Q running through passed-on mack-ideas:
+	repeat with QQ running through passed-on mack-ideas:
 		say "[unless got-yet is true] or [end if]";
 		now got-yet is true;
-		if Q is t-tearily-irately:
+		if QQ is t-tearily-irately:
 			say "IRATELY/TEARILY";
 		else:
-			choose row with the-from of Q in table of otters anagrams;
+			choose row with the-from of QQ in table of otters anagrams;
 			say "[right-word entry]";
 	if t-tearily-irately is in lalaland and t-tearily-irately is not passed-on:
 		say "[if irately is true]TEARILY instead of IRATELY[else]IRATELY instead of TEARILY[end if]";
@@ -26723,7 +26739,7 @@ test dome-dens with "w/x chronicle/test dome-xp/test dome-xp/e"
 
 test dome-nov with "e/rr/rr/rr/rr/rr/rr/rr/rr/rr/rr/rr/w"
 
-test dome-all with "test dome-inlet/test dome-show/test dome-dens/test dome-nov"
+test dome-all with "demo dome/test dome-inlet/test dome-show/test dome-dens/test dome-nov"
 
 chapter coffing
 
@@ -26809,9 +26825,9 @@ understand "hashcheck" as hashchecking.
 carry out hashchecking:
 	let my-bool be false;
 	let this-hash be 0;
-	repeat with Q running through regions:
-		if Q is not demo dome:
-			repeat through regana of Q:
+	repeat with QQ running through regions:
+		if QQ is not demo dome:
+			repeat through regana of QQ:
 				now this-hash is the hash of right-word entry;
 				 if hashkey entry is not this-hash:
 					say "Bad flip hash for [the-from entry]/[right-word entry]: [hashkey entry] should be [this-hash].";
@@ -26852,8 +26868,8 @@ understand the command "plural" as something new.
 understand "plural" as pluraling.
 
 carry out pluraling:
-	repeat with Q running through things:
-		say "[Q] = [if Q is plural-named]plural[otherwise]singular[end if] and [if Q is fixed in place]fixed[otherwise]takeable[end if].";
+	repeat with QQ running through things:
+		say "[QQ] = [if QQ is plural-named]plural[otherwise]singular[end if] and [if QQ is fixed in place]fixed[otherwise]takeable[end if].";
 	the rule succeeds;
 
 chapter hintalling
@@ -27438,15 +27454,15 @@ after fliptoing when uber-rand-cheat is true:
 
 every turn when player is in frontage and macks are in frontage and uber-rand-cheat is true (this is the uber-otters rule):
 	say "Adverbs available:";
-	repeat with Q running through mack-ideas in frontage:
-		choose row with the-from of Q in table of otters anagrams;
+	repeat with QQ running through mack-ideas in frontage:
+		choose row with the-from of QQ in table of otters anagrams;
 		say " [right-word entry in upper case]";
 	say ".";
 
 every turn when player is in trefoil and uber-rand-cheat is true (this is the uber-towers rule):
 	say "Adjectives available:";
-	repeat with Q running through warriors in trefoil:
-		choose row with the-from of Q in table of towers anagrams;
+	repeat with QQ running through warriors in trefoil:
+		choose row with the-from of QQ in table of towers anagrams;
 		say " [right-word entry in upper case]";
 	say ".";
 
@@ -27464,20 +27480,20 @@ to place-warrior (myp - a number) and (myi - a number):
 	let temp-ord be 0;
 	let cur-war be Rodney;
 	let max-pod be 0;
-	repeat with Q running through warriors:
-		if pod-num of Q is myp:
-			if pod-ord of Q > max-pod:
-				now max-pod is pod-ord of Q;
+	repeat with QQ running through warriors:
+		if pod-num of QQ is myp:
+			if pod-ord of QQ > max-pod:
+				now max-pod is pod-ord of QQ;
 	let myi2 be myi;
 	if myi2 > max-pod:
 		say "[b]Cutting [myi2] to [max-pod] for pod [myp]:[r] ";
 		now myi2 is max-pod;
-	repeat with Q running through warriors:
-		if pod-num of Q is myp and pod-ord of Q is myi2:
-			if Q is in trefoil:
-				say "Oops, we placed [Q] twice. [myp] [myi2].";
-			now Q is in Trefoil;
-			say "[Q] to trefoil.";
+	repeat with QQ running through warriors:
+		if pod-num of QQ is myp and pod-ord of QQ is myi2:
+			if QQ is in trefoil:
+				say "Oops, we placed [QQ] twice. [myp] [myi2].";
+			now QQ is in Trefoil;
+			say "[QQ] to trefoil.";
 			the rule succeeds;
 	say "BUG: didn't get anything for pod [myp] index [myi2]."
 
@@ -27486,19 +27502,19 @@ to place-idea (myp - a number) and (myi - a number):
 	let cur-idea be t-despairingly;
 	let max-pod be 0;
 	let myi2 be myi;
-	repeat with Q running through mack-ideas:
-		if pod-num of Q is myp:
-			if pod-ord of Q > max-pod:
-				now max-pod is pod-ord of Q;
+	repeat with QQ running through mack-ideas:
+		if pod-num of QQ is myp:
+			if pod-ord of QQ > max-pod:
+				now max-pod is pod-ord of QQ;
 	if myi2 > max-pod:
 		say "[b]Cutting [myi2] to [max-pod] for pod [myp]:[r] ";
 		now myi2 is max-pod;
-	repeat with Q running through mack-ideas:
-		if pod-num of Q is myp and pod-ord of Q is myi2:
-			if Q is in frontage:
-				say "Oops, placed [Q] twice. [myp] [myi2].";
-			now Q is in frontage;
-			say "[Q] to frontage.";
+	repeat with QQ running through mack-ideas:
+		if pod-num of QQ is myp and pod-ord of QQ is myi2:
+			if QQ is in frontage:
+				say "Oops, placed [QQ] twice. [myp] [myi2].";
+			now QQ is in frontage;
+			say "[QQ] to frontage.";
 			the rule succeeds;
 	say "BUG: didn't get anything for pod [myp] index [myi2].";
 
@@ -27738,15 +27754,15 @@ understand the command "specs" as something new.
 understand "specs" as specsing.
 
 carry out specsing:
-	let qq be 0;
+	let locidx be 0;
 	let reg be manor;
-	repeat with Q running through regions:
-		if Q is not demo dome:
+	repeat with QQ running through regions:
+		if QQ is not demo dome:
 			repeat through regana of mrlp:
 				unless the-from entry is spayshul:
-					increment qq;
-					say "[qq]. [the-from entry] [q] ([right-word entry]) : [spec-help of the-from entry]";
-	if qq is 0:
+					increment locidx;
+					say "[locidx]. [the-from entry] [QQ] ([right-word entry]) : [spec-help of the-from entry]";
+	if locidx is 0:
 		say "Yay! All things are clued.";
 	the rule succeeds;
 
@@ -27960,14 +27976,17 @@ understand the command "rejch" as something new.
 
 understand "rejch" as rejching.
 
+temp-reg is a region that varies.
+
 carry out rejching:
-	repeat with Q running through regions:
-		if Q is not demo dome:
-			repeat through regana of Q:
+	repeat with QQ running through regions:
+		if QQ is not demo dome:
+			now temp-reg is QQ;
+			repeat through regana of QQ:
 				rej-analyze the-from entry;
 
 to rej-analyze (x - a thing):
-	choose row with the-from of x in regana of Q;
+	choose row with the-from of x in regana of temp-reg;
 	let y be the-to entry;
 	unless x is an xtrhelp listed in table of spechelp:
 		say "Whoops, [x] could also be in table of spechelp, to [y].";

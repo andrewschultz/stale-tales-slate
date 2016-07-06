@@ -912,9 +912,9 @@ rule for showing what the player missed:
 	if swing is in islet:
 		say "[2da of resort]the swing on the islet was changeable to WINGS.";
 	if spore is in woodland:
-		say "[2da of resort]the spore in the woodland was changeable to ROPES. Though you got the tougher tool shed.";
+		say "[2da of resort]the spore in the woodland was changeable to ROPES[toolwood].";
 	if sprig is in woodland:
-		say "[2da of resort]the sprig in the woodland was changeable to GRIPS. Though you got the tougher tool shed.";
+		say "[2da of resort]the sprig in the woodland was changeable to GRIPS[toolwood].";
 	if tool shed is in woodland:
 		say "[2da of resort]the tool shed in the woodland was changeable to TOEHOLDS.";
 	if china is off-stage:
@@ -934,6 +934,9 @@ rule for showing what the player missed:
 		say "[line break]Also, while the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.";
 		say "[2dn]the [if begonias are in elf row's flowers]begonias could've made a noise bag[otherwise]heaths could've made a sheath[end if].";
 		say "[2dn]the other ways to get the tulip are to [alt-sols].";
+
+to say toolwood:
+	say "[if tool shed is in woodland]. Though you got the tougher tool shed[end if]"
 
 to say alt-sols:
 	let firsty be false;
@@ -13062,7 +13065,7 @@ book endgame
 chapter amusing
 
 to say nfi:
-	say "[one of]? [or]? (region suggestions are not fully inclusive--search the source for 'as a mistake')[stopping]"
+	say "[one of]? [or]? (region suggestions are not fully inclusive--search the source for 'as a mistake' in case I missed something, if you want to be exhaustive)[stopping]"
 
 table of big yucks
 reg	yux
@@ -13083,7 +13086,7 @@ metros	"Putting the barcode on the tomato?"
 metros	"Scanning the deadbeat?"
 metros	"Asking the beats anything?"
 metros	"The following anagrams in the metros where appropriate: sap, asp, smitten, trounce, stalker, snores, senors, tar, reins, risen, lair(s), lira, liar(s), bates[nfi]"
---	"the following anagrams in the resort where appropriate: slite, poser, prose, achin, roister, sex it"
+--	"the following anagrams in the resort where (in)appropriate: slite, poser, prose, achin, roister, sex it"
 --	"Converting the sprig to prigs in the woodland?"
 --	"Any anagrams I missed? Let me know. I'll credit you. Or if you find another silly joke to throw in, tell me. I enjoy them."
 
@@ -13611,6 +13614,33 @@ carry out j2ing:
 	say "Moving player to trips strip, with gadget.";
 	the rule succeeds;
 
+chapter getbying
+
+getbying is an action applying to one number.
+
+understand the command "getby" as something new.
+
+understand "getby [number]" as getbying.
+
+carry out getbying:
+	if number understood is 0:
+		toggle-solve intro;
+	if number understood is 1:
+		toggle-solve forest;
+	if number understood is 2:
+		toggle-solve sortie;
+	if number understood is 3:
+		toggle-solve metros;
+	the rule succeeds;
+
+to toggle-solve (re - a region):
+	if re is solved or re is bypassed:
+		now re is unsolved;
+		say "Now [re] is unsolved.";
+	else:
+		now re is solved;
+		say "Now [re] is solved.";
+
 chapter ggading
 
 [* gets the gadget, shorthand for purloining it]
@@ -13857,6 +13887,10 @@ get straw]
 test pl8 with "j/sortie/d/e/n/ne/16/straw/get straw/e/sack/w/get straw/cask/put straw in cask/sack/e/n/w/kitchen/tortilla/sauce/hot sauce/lettuce/parmesan/steak/put lettuce on steak/put tortilla in lettuce//put tortilla on lettuce/put tortilla in lettuce/put sauce on lettuce/put steak in lettuce/coat/e/scrape wall/i/pad/s/pad" in subsite
 
 test pl7 with "x brazier/m/f/r/hd/hf/hd/hf/in/x cat/pet cat/pet goat/gato/x gato/man/north/goat/go north/x new land/x gateway/open gateway/gate man/open gateway/in/l/x new land/x gadget/x slider/x flipside/x example/get slider/attack small slider/x device/swap/x device/swap/swap gadget/swap slider/swap slider/swap gadget/in/get a way/talk to man/ask about mumbletypeg/ask about toga/ask about goat/ask about slider/ask about gadget/ask about game/x gateway/attack gateman/attack old man/attack gadget/attack slider/attack almond/scan attic/scan attics/scan static/scan doll house/in/x trapdoor/x roster/m/f/r/forest/in/x leaves/m/f/r/smell/door/n/x leaves/x device/door/scan door/x music/x note/x musical chord/scan bulge/scan bugle/bugle/play bugle/in/e/x shell/x bubble/x bucket/nose/shades/hook nose to shades/w/w/open sandwich/beard/hook shades to beard/wear beard/e/n/chisel/s/w/get chicken/get cow/put chicken in canister/put cow in canister" in subsite
+
+chapter ending-testing
+
+test end-test with "gonear manor/exist"
 
 chapter for-testers
 
@@ -14616,6 +14650,20 @@ this is the in-roman-manor rule:
 	if player is in roman manor:
 		the rule succeeds;
 	the rule fails;
+
+chapter shomising
+
+[ * shomis lets you see what the player missed after solving a region. It's obviously imperfect but it's useful for testing when I don't want to jump to the very end. ]
+
+shomising is an action applying to nothing.
+
+understand the command "shomis" as something new.
+
+understand "shomis" as shomising.
+
+carry out shomising:
+	carry out the showing what the player missed activity;
+	the rule succeeds;
 
 chapter apping
 
