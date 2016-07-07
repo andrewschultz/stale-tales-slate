@@ -180,7 +180,7 @@ The stump just sits there, stumpy
 
 >n
 >ovelzamt
-The volt maze crackles with increased energy, almost ready to break down.
+The volt maze crackles with increased energy, almost ready to break down. Oy vey! I hope this one's not too meshuggenah.
 
 >s
 >drat
@@ -502,6 +502,11 @@ You can't make much out of a clock, but clock sap, maybe.
 >aps
 C'est pas sap. C'est du CLOCK SAP.
 
+>s
+>shcka
+You'll need to re-enter the shack to take care of things here.
+>n
+
 >caps lock
 >screen
 >put screen on slab
@@ -512,12 +517,12 @@ C'est pas sap. C'est du CLOCK SAP.
 You need to give that computer another (figurative) kick.
 
 >reboot
-It's risky to boot without a disk, like that disk right there, in the disk drive. Much less reboot.
+It's risky to boot without a disk, like that skid used to be, in the disk drive. Much less reboot.
 [You add the information to your pedanto-notepad under FLIPS.]
 
 >get disk
 >put disk in drive
-No input device
+Specifically, no input device
 
 >compeli
 Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
@@ -578,7 +583,7 @@ You don't need to do anything with the skid's rope.
 It's not just any yoke. It's a drab yoke. I mean, a particularly drab yoke. On the bored yak.
 
 >aky
-The yak doesn't seem to react to three plain letters thrown around like that. His look indicates not only that he is bored, but that he wants to let people know he's bored, but he's too bored to do that actively. The drab yoke he is wearing probably does not help.
+The yak doesn't seem to react to three plain letters thrown around like that. Its look indicates not only that it is bored, but it wants to let people know it's bored, too bored to do so actively. The drab yoke it is wearing probably does not help.
 
 >abrd
 It's not just drab. It's a drab yoke. On the bored yak.
@@ -602,9 +607,13 @@ No, skid <=> disk is about it. There's no tricky third way.
 >put disk in drive
 
 >reboot
-The keyboard isn't connected. This probably wouldn't be fatal, but why not do first things first?
+It's risky to boot without a disk, like that skid used to be, in the disk drive. Much less reboot.
 
 >keyboard
+by one point
+
+>reboot
+The keyboard isn't connected. This probably wouldn't be fatal, but why not do first things first?
 
 >put keyboard on slab
 
@@ -642,13 +651,11 @@ It'd sort of stink if a caps lock button broke in real life, so, no.
 >lcko
 It'd sort of stink if a caps lock button broke in real life, so, no.
 
->s
->shcka
-You'll need to re-enter the shack to take care of things here.
->n
+>depref
+#this lets us try to recompile
 
 >compeli
-You've assembled the letters incorrectly.
+Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
 
 >caps lock
 
@@ -656,7 +663,9 @@ You've assembled the letters incorrectly.
 It fits in perfectly, right beneath the TBA (ehh? That's not quite right) key.
 
 >compile
-You get one of those annoying NEGLECT A CLEAN GET?! errors that proclaims this version so riven needs a raged-up upgrade with autolibs' bailouts. The automatic installer is on nil-alerts. They'll need a manual un-maul. Perhaps you need to do something to reset the computer--a look at the drive might help.
+You get an NEED IF-DEFINE error the first time you try to compile. "Up late, a letup," you think restlessly and dreamily to yourself, "Then fail the final!"
+
+You're just too exhausted to put up with another compiling speel (you're too tired to check if that's spelt right)...slipping on virtual peels...probably you just switched something or got something backwards.
 
 >x screen
 A bunch of nonsense code that might not even work.
@@ -665,9 +674,7 @@ A bunch of nonsense code that might not even work.
 A bunch of nonsense code that might not even work.
 
 >compile
-You get an NEED IF-DEFINE error the first time you try to compile. "Up late, a letup," you think restlessly and dreamily to yourself, "Then fail the final!"
-
-You're just too exhausted to put up with another compiling speel (you're too tired to check if that's spelt right)...slipping on virtual peels...probably you just switched something or got something backwards.
+That stupid NEED IF-DEFINE and that speel, still. You're slipping on peels, unsure what you switched or got backwards.
 
 >sleep
 You feel smarter
@@ -700,10 +707,11 @@ Now that the fizzy cola's in the mug, you will ration it as you need to.
 >dneglo
 It's built to be sturdy. You don't want to mess with it.
 
+>debug
+
 >bsu
 Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
 
 >sub
 Strip of Profits
-"mazeltov"	655479952	presto	--	--	volt-maze-visible rule	"Oy vey! This one's a bit tricky, but I hope it's not too meshugennah."
 

@@ -350,6 +350,7 @@ You wrack your brain but quickly get the sense you're over-thinking how to ju-ji
 >dinre
 There's more than one diner blocking you.
 
+>rinsed
 
 >n
 Baldest Blasted Saltbed
@@ -369,10 +370,14 @@ No, all the old ice.
 >ice
 No, all the old ice.
 
+>coiled
+
 >pruen
 It's officially an iPrune, not a prune.
 
 >punier
+by one point
+>pastier
 by one point
 
 >n
@@ -480,13 +485,18 @@ His full name, Liam Garn.
 
 Savager Ravages
 >ravagse
-This is a weird place, being at the crossroads, but better to tackle a guardian.
+This is a weird place, being at the crossroads, but better to get rid of the weeds.
 
 >wede
 Gumming up one weed wouldn't get the others.
 
 >sewed
 
+>ravagse
+This is a weird place, being at the crossroads, but better to tackle a guardian.
+
+>denmi
+The denim bends and warps, but you hear no tearing noise.
 >mined
 
 >eclair
@@ -512,14 +522,12 @@ The saver is hopelessly no-frills. It'll never be anything better. But maybe you
 The saver is hopelessly no-frills. It'll never be anything better. But maybe you could revisit its brand name to make it look nicer. Not that looks matter.
 
 >playre
-Hm, the 'replay player' letters whiten a bit, but nothing definitive.
+The "replay player" letters brighten for a second.
 >pearly
 by one point
 >playre
-It's as bright as it'll get.
+The raves saver is as glitzed-up as it'll get.
 
->denmi
-You scrape at the denim fragments and wonder if there is any magic in dem. Well, not the way you thought it, apparently.
 >reesd
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 >rede
@@ -581,6 +589,9 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 >neuralpulsse
 Man, biochemistry's way complex. Complex isomers and such are worse than anagrams! You may be more successful breaking the neural pulses down into components.
 
+>unreal
+by one point
+
 >e
 
 Danger Garden
@@ -603,7 +614,7 @@ Until you see the ego-drains themselves as organised, you probably won't see how
 by one point
 
 >geees
-That's not a
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
 
 >broken
 by one point
@@ -635,7 +646,7 @@ Work on the whole sled rut.
 Work on the whole sled rut.
 
 >rustled
-by a point
+by one point
 
 >n
 Gander Garden
@@ -688,6 +699,7 @@ Dirk looks at you curiously. You probably don't need to change his name or intel
 Kim looks at you curiously. You probably don't need to change her name or intelligence.
 >darts
 Kim looks at you curiously. You probably don't need to change her name or intelligence.
+>gs
 
 >s
 >s
@@ -695,7 +707,7 @@ Kim looks at you curiously. You probably don't need to change her name or intell
 Obscurest Subsector
 
 >fissuer
-Bizarre animal noises continue to emanate from the fissure. It is beyond your control, and you wonder who or what could tinker with it.
+Bizarre animal noises continue to emanate from the fissure. It is beyond your control, and you wonder who or what could tinker with it
 
 >obscurets
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
@@ -709,9 +721,9 @@ Nah, you're pretty sure you're overthinking things now. You may want to open the
 >jali
 It's not just any jail--but prison ropins.
 >ropni
-The prison ropins are too sturdy. You'll have to focus on a part that might open.
+The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open.
 >ropisn
-The prison ropins are too sturdy. You'll have to focus on a part that might open.
+The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open.
 >lockde
 Nothing needs to be locked here, certainly not the gaol which already is.
 >ywo
@@ -733,11 +745,16 @@ Dr. Yow seems to ponder something for a second but then shakes his head--maybe t
 >fissuer
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control, but the duck seems to be poking at it
 
+>ropni
+The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open.
+>ropisn
+The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open.
+
 >unlocked
 by one point
 
 >fissuer
-Bizarre animal noises continue to emanate from the fissure. It is beyond your control, but the duck's already figured it
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
 
 >glo
 You opened the gaol, and there's not much else to do with it
@@ -745,7 +762,7 @@ You opened the gaol, and there's not much else to do with it
 >lockde
 Nothing needs to be locked here, certainly not the gaol which you unlocked.
 
->ropnio
+>ropni
 No need to mess with the ropins any more
 >ropisn
 No need to mess with the ropins any more
@@ -763,7 +780,7 @@ It's not just any duck. But it's served its purpose.
 >e
 
 >tentatiev
-The kid fidgets a bit but can't keep focused, though he wants to.
+Dirk fidgets a bit but can't keep focused, though he clearly wants to.
 
 >rowdy
 by one point
@@ -774,6 +791,10 @@ Dr. Yow seems to ponder something for a second but then shakes his head--he's pr
 >attentive
 
 >gt campsite
+
+>put dagger in rapier repair
+by one point
+
 >gt coastlines
 
 >gizom
@@ -799,8 +820,11 @@ You fixed the turbos, so maybe you can tackle the blaster
 >undo
 >undo
 >stabler
+>bota
 You fixed the blaster, so maybe you can tackle the turbos
->blaster
+>blastre
+The blaster is working. Best not tinker.
+>robust
 >bota
 You fixed what you can of the boat
 >undo
@@ -833,6 +857,9 @@ The water is too elemental and generic to change. Plus the badlands are dry enou
 
 Mislit Limits
 
+>mislti
+It's not this location you need to change, but Castle Apcur, the Curst Palace right by you.
+
 >occusr
 You realize you can't change the crocus to something, but you can change its condition--it's dying.
 
@@ -845,7 +872,7 @@ The serpent doesn't just pester, it's pester'n.
 You're beyond the badlands now.
 
 >flowerpto
-The flowerpot is just fine--maybe something around here could go in it.
+The flowerpot itself is just fine--maybe something around here could go in it.
 
 >dingy
 
@@ -853,12 +880,12 @@ The flowerpot is just fine--maybe something around here could go in it.
 The crocus is OK as-is. In fact, it could make a nice gift for someone who could appreciate it.
 
 >flowerpto
-The flowerpot is just fine--and so is the crocus in it.
+The flowerpot itself is just fine--and so is the crocus in it.
 
 >w
-Old One's Solo Den
+Lone Sod Solo Den
 >noodlse
-It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+It's not this location you need to change, but Castle Apcur, the Curst Palace nearby.
 >sool
 You should never need to riff on part of a location name
 >odl
@@ -877,21 +904,25 @@ You don't have time to think about, or change, Old Hat Daltho. His friend is sti
 by one point
 
 >oldhta
-You don't have time to think about, or change, Old Hat Daltho. You've found his friend and made him happy.
+You don't have time to think about, or change, Old Hat Daltho. You've found and made his friend a bit happier, but maybe you can do even more.
 
 >give flowerpot to ed yerg
-You don't have time to think about, or change, Old Hat Daltho. You got his present to his friend.
+by one point
 
+>oldhta
+You don't have time to think about, or change, Old Hat Daltho. You got his present to his friend.
 
 >e
 
->purloin pearl cactus
+>abstract pearl cactus to limits
+>abstract cactus pearl to limits
 >purloin clear catsup
 >purloin pest accrual
 >purloin capsule cart
 >purloin accu-plaster
 >purloin last acre cup
 >purloin talc spa cure
+>abstract accurst leap to limits
 
 >accurts
 Nah, that's just garbage. It's the curst palace you need to focus on.
@@ -929,8 +960,13 @@ Nah, that's just garbage. It's the curst palace you need to focus on.
 Nah, that's just garbage. It's the curst palace you need to focus on.
 >cuer
 Nah, that's just garbage. It's the curst palace you need to focus on.
->mislti
-It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
 >spectacular
 Strip of Profits
+
+>score
+(45/45)
+
+>missed
+
+

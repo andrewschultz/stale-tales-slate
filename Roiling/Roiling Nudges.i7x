@@ -397,6 +397,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "yoke"	377451116	--	drab yoke	--	"It's not just any yoke. It's a drab yoke. I mean, a particularly drab yoke. On the bored yak."
 "drab"	126959615	--	drab yoke	--	"It's not just drab. It's a drab yoke. On the bored yak."
 "scratchings"	604963096	--	drab yoke	--	"You may wish to decipher the scratchings, instead."
+"scratching"	508689130	--	drab yoke	--	"You may wish to decipher the scratchings, instead."
 "volt"	338441254	--	--	volt-maze-visible rule	"That can't be it. It's a volt MAZE."
 "maze"	317038698	--	--	volt-maze-visible rule	"That can't be it. It's a VOLT maze."
 "drat"	211650728	--	dart	--	"[if dart is in marines]Some 4-letter word or other will get the dart.[else]Don't need to do anything else.[end if]"
@@ -423,7 +424,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "dead"	172052105	--	flea	--	"There must be a more eco-friendly way to reincarnate the flea."
 "clock"	219110764	--	clock sap	--	"You can't make much out of a clock, but clock sap, maybe."
 "puddle"	410249892	--	clock sap	--	"You can't make much out of a clock, but clock sap, maybe."
-"reboot"	483363989	--	--	time-to-reboot rule	"You [if rebooted is true]don't [end if]need to give that computer another (figurative) kick."
+"reboot"	483363989	shack	--	--	"You [if rebooted is true]don't [end if]need to give that computer another (figurative) kick."
 "nottobe"	570057712	shack	--	--	"Even more nothing happens than you expected. The blue button really is too broken. [if rebooted is true]You got the orange button to work, anyway[else]But the orange is not[end if]."
 "debug"	304959612	--	--	time-to-debug rule	"You need to budge the letters about."
 "shack"	207682846	--	priv-shack	--	"You'll need to [if shack is visited]re-[end if]enter the shack to take care of things here."
@@ -466,12 +467,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "tune"	404929442	--	tunes	--	"Eh, you know how jukeboxes are. One tune quashed, another pops up. Get rid of [']em all."
 "jar"	136472146	--	pills	--	"You suspect it's what's in the jar that's important."
 "spill"	330360449	--	pills	--	"You seem to be fumbling what to do with the pills."
-"scrawl"	364539784	--	scrawl	--	"It's probably not just any scrawl. What the scrawl says may be important."
 "tumbler"	557653634	--	tumblers	--	"You [if tumblers are reflexed]already dealt with the tumblers[else]can't pick out which tumbler to do something to. But you're annoyed by their tips, which make you see red[end if]."
 "stumbler"	653927600	--	tumblers	--	"Someone looks at you funny. 'What are you muttering?' [if tumblers are reflexed]You already spit, anyway[else]Maybe it's the writing on the tumblers, instead[end if]."
-"jukebox"	540345182	--	jukebox	--	"You can't change the jukebox. The bad music has seeped into it[if tunes are reflexive]. But maybe you can put it out of commission[else]. It's already out of commission for now[end if]."
-"remap"	360858842	--	jukebox	--	"You can't change the bad music selection[if tunes are reflexive]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
-"unset"	501203408	--	jukebox	--	"You can't change the bad music selection[if tunes are reflexive]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
+"jukebox"	540345182	--	jukebox	--	"You can't change the jukebox. The bad music has seeped into it[if tunes are in posh hops shop]. But maybe you can put it out of commission[else]. It's already out of commission for now[end if]."
+"remap"	360858842	--	jukebox	--	"You can't change the bad music selection[if tunes are in posh hops shop]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
+"unset"	501203408	--	jukebox	--	"You can't change the bad music selection[if tunes are in posh hops shop]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
 "lode"	277001614	olde lode	--	--	"[locname]." [OLDE LODE]
 "canoe"	292259597	--	canoe	--	"The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river."
 "hoser"	421038754	hero's shore	--	--	"You give a few Er-ohs, oh-ers, Or Ehs. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats." [HERO'S SHORE]
@@ -494,11 +494,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "crays"	325150424	fighter freight	--	--	"[no-cray]."
 "cray"	228876458	fighter freight	--	--	"[no-cray]."
 "anger"	316824940	anger range	--	--	"[locname]." [ANGER RANGE]
+"scrawl"	364539784	--	scrawl	--	"It's probably not just any scrawl. What the scrawl says may be important."
 "pike"	307198092	--	pikes	--	"[all-fish]."
 "carp"	187983165	--	carps	--	"[all-fish]."
-"tutor"	471002223	--	reward drawer	--	"[if player is in range]Deal with the attackers, not the trout[else if wrap is off-stage]You try to describe how to fight, but that's not it[else]You can't find any other way to describe fighting[end if]."
-"haunter"	529723362	--	--	is-hauntable rule	"[if haunter is off-stage]You start randomly digging, but you need something more specific[to-dig].[else]The haunter needs to be dealt with otherwise.[end if]"
-"assuage"	462435186	--	--	h-assuaged rule	"Don't oversell it! Just take the haunter to where it was probably the walleyes who buried the ruby."
+"haunter"	529723362	--	--	is-hauntable rule	"[if haunter is off-stage]You start randomly digging, but [to-dig]you probably aren't doing it quite right.[else]The haunter needs to be dealt with otherwise.[end if]"
 "howler"	486513400	--	haunter	--	"Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE."
 "lean"	252715274	lean lane	--	--	"You would upset countless people named Lena or Neal." [LEAN LANE]
 "can"	90100911	--	cans	--	"Getting rid of one can would still leave a mess. Maybe you can deal with them all."
@@ -517,8 +516,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "teatray"	546084836	--	tea tray	--	"[just-tea]."
 "wipe"	362199687	--	wipes	--	"It'd be easier to [if player has wipes]use them all[else]steal all the wipes[end if] at once. Pulling them out and so forth--tiring."
 "pearl"	350597528	--	paler pearl	--	"The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit..."
-"splain"	347641936	--	--	plains rule	"[if bogus-plains is in lalaland]You had your say[else]You feel like making a big speech about what you've done and what you plan to do, but not quite like that[end if]." [LAPSIN PLAINS]
-"plain"	251367970	--	--	plains rule	"[if bogus-plains is in lalaland]You had your say.[else]'I...plan,' you think, then in a fit of confidence, 'I...PLANS!'[end if]"
+"plain"	251367970	plains	--	--	"[if bogus-plains is reflexed]You had your say.[else]'I...plan,' you think, then in a fit of confidence, 'I...PLANS!'[end if]" [LAPSIN PLAINS]
 "trace"	337433333	--	--	crates-menace rule	"[if crate is reflexed]Yes, one more thing to do with the crate--you know where they're from, and you know what to do. Instinctively[else]That won't quite help you figure where the crate is coming from[end if]."
 "rude"	339264808	--	rude door	--	"It's not the rudeness[knob-skis]."
 "door"	255058046	--	rude door	--	"It's not the doorness[knob-skis]."
@@ -531,13 +529,13 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "doorknob"	469670214	--	knob	--	"It's just a knob. Which thankfully cuts down the possibilities."
 "acters"	433707299	lapsin' plains	--	--	"Hmm, no, it[if crate is reflexed] was[else]'s[end if] only one crate at a time..."
 "debris"	393844718	--	crate	--	"You can't learn much from the debris. You're pretty sure it's from a crate."
-"fragments"	606798973	--	fragments	--	"[if crate is reflexed]Not worth messing with the fragments[else]They're fragments of a crate--this may or may not help[end if]."
+"fragments"	606798973	--	fragments	--	"[crate-frag]."
+"fragment"	510525007	--	fragments	--	"[crate-frag]."
 "shut"	341772090	plains	--	--	"[if uaah is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the door[end if]."
 "inthere"	595228692	plains	--	--	"You don't need to mess with the message on the rude door."
 "bonk"	214612168	--	knob	--	"That isn't quite the right way to hit the knob."
 "ahut"	247685942	uaah	--	--	"[locname]." [UH AT A HUT / AT, UH, A HUT]
 "hut"	245498124	uaah	--	--	"[locname-part]."
-"sweat"	437312684	--	heaps	--	"The heaps are still technically waste, but you [if heaps are reflexive]may want to deal with them more delicately[else]beautified them enough[end if]."
 "ubt"	226634730	--	tubs	--	"Clear ALL the tubs!"
 "bust"	322908696	--	tubs	--	"That didn't make anything go boom."
 "drop"	262171428	--	prod	--	"You're juggling what to do with the prod, here."
@@ -567,8 +565,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "loft"	257791330	tenfold	--	--	"[locname-part]."
 "den"	217742706	tenfold	--	--	"[locname-part]."
 "jumble"	418180338	Den Loft	--	--	"It's the words on the jumble you need to mess with. With which you need to mess[if yapper is in den loft]. Well, once the yapper's out of the way[end if]."
-"papery"	500608900	--	yapper	--	"'Quit yer mumblin, ya perp!' the yapper yells, turning red. 'You here to do business or not?'"
-"redial"	335153504	--	yapper	--	"The yapper might alert his cronies if you try anything. Even something not quite right, like that."
 "stupid"	451977685	--	yapper	--	"[its-msg]."
 "paper"	378249648	--	yapper	--	"[its-msg]."
 "necklace"	471465731	--	yapper	--	"[its-msg]."
@@ -587,7 +583,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "palace"	286467128	--	--	degen-true rule	"It's not just that it's a palace, it's CURST, too."
 "castle"	402197335	--	--	degen-true rule	"Not just any castle. Castle Apcur."
 "apcur"	293088972	--	--	degen-true rule	"Not, like, swamp Apcur or hut Apcur. Castle Apcur."
-"lake"	236740944	--	--	degen-true rule	"[if player is in rawest waters]Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.[else if leak lake is visible]You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water![else if mislit limits is visited]You're beyond the lake now.[else]You can't see Leak Lake yet.[end if]"
+"lake"	236740944	--	--	degen-true rule	"[if player is in rawest waters]Nothing you think of could get you out of this mess, and even if it could, you'd totally have upset the ecosystem.[else if leak lake is visible]You can't drain the lake. It would probably upset the ecosystem anyway. People would be without water![else if mislit limits is visited]You're beyond the lake now.[else]You can't see Leak Lake from here, and you couldn't do anything with it, anyway.[end if]"
 "trefoil"	515914088	trefoil	--	--	"[towersloc]." [LOFTIER TREFOIL 0 0]
 "warrior"	485439423	trefoil	--	--	"[war-one]."
 "warriors"	581713389	trefoil	--	--	"[war-one]."
@@ -597,7 +593,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "pot"	258928554	--	flowerpot	--	"[flow-fine]."
 "proof"	342009812	--	flowerpot	--	"[flow-fine]."
 "welt"	392664739	--	flowerpot	--	"[flow-fine]."
-"oldhat"	291775640	--	flowerpot	--	"You don't have time to think about, or change, Old Hat Daltho. [if crocus is in lalaland]You got his present to his friend[else if ed yerg is reflexed]. You've found his friend and made him happy[else if solo den is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he sent the gift to, anyway[end if]."
+"oldhat"	291775640	--	--	got-pot rule	"You don't have time to think about, or change, Old Hat Daltho. [if flowerpot is in lalaland]You got his present to his friend[else if ed yerg is reflexed]You've found and made his friend a bit happier, but maybe you can do even more[else if solo den is visited]His friend is still unreceptive, though[else]You haven't yet found his friend he sent the gift to, anyway[end if]."
 "toaster"	592164309	--	toaster	--	"It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it."
 "pastry"	490720816	--	--	pas-vis rule	"You need to be specific about which pastry--or you would, if any could be changed. All you can do with a pastry is eat it, once it's warmed."
 "ray"	209870873	--	ray eck	--	"[ray-part]."
@@ -663,7 +659,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "tapin"	300664149	--	man covered in	--	"It won't be such a tap-in to nip at, sadly. Daltho's advice comes back: nobody will be easier than Rodney."
 "shirts"	463256898	--	salesmen	--	"The shirts were built to resist the most direct of manipulations. Perhaps you can work on the salesmen themselves. Because the shirts do make them look dandier."
 "neuralpulses"	1003884530	--	neural pulses	--	"Man, biochemistry's way complex. Complex isomers and such are worse than anagrams! You may be more successful breaking the neural pulses down into components."
-"ravage"	357270070	ravages	--	--	"[towersloc]" [SAVAGER RAVAGES 2 2]
+"ravages"	453544036	ravages	--	--	"[rav-rej]." [SAVAGER RAVAGES 2 2]
+"ravage"	357270070	ravages	--	--	"[rav-rej]."
 "scalier"	429403966	--	Éclairs	--	"[eat-pastry]."
 "eclair"	333130000	--	Éclairs	--	"[not-singular-hp]."
 "denim"	326810705	--	denim	--	"You scrape at the denim fragments and wonder if there is any magic in dem. Well, not the way you thought it, apparently."
@@ -677,7 +674,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "saver"	418756516	--	raves saver	--	"[no-fril]."
 "recorder"	625970878	--	raves saver	--	"[no-fril]."
 "tape"	314569904	--	raves saver	--	"[no-fril]."
-"player"	472956780	--	raves saver	--	"[if raves saver is reflexed]It's as bright as it'll get[else]Hm, the 'replay player' letters whiten a bit, but nothing definitive[end if]."
 "buttons"	569278799	--	raves saver	--	"The raves saver's minimal capabilities are enough...just..."
 "button"	473004833	--	raves saver	--	"The raves saver's minimal capabilities are enough...just..."
 "retape"	527699816	--	raves saver	--	"The raves saver has limited functionality, alas."
@@ -686,7 +682,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "weed"	384576080	--	weeds	--	"Gumming up one weed wouldn't get the others."
 "salted"	404220839	deltas	--	--	"[towersloc]." [SALTED DELTAS 2 3]
 "delta"	307946873	deltas	--	--	"[towersloc]."
-"ravages"	453544036	ravages	--	--	"This is a weird place, being at the crossroads, but better to [if number of visible guardians is 0 and weeds are in lalaland and denim is in lalaland]mess around elsewhere[else if weeds are visible]get rid of the weeds[else if number of visible guardians > 0]tackle a guardian[else if denim is visible]see if you can get rid of the denim[end if]."
 "shoals"	360184465	--	shoals	--	"[shoaly]."
 "shoal"	263910499	--	shoals	--	"[shoaly]."
 "atheist"	514763074	--	atheists	--	"Changing only one atheist would only help you so long. The rest would restore their companion's (lack of) faith shortly."
@@ -701,8 +696,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "lost"	327550400	lost lots	--	--	"[towersloc]." [LOST LOTS 3 0]
 "lot"	231276434	lost lots	--	--	"[towersloc]."
 "strudel"	592462631	--	--	strood rule	"[eat-pastry]."
-"sled"	298923003	--	--	strood rule	"Work on the whole sled rut."
-"rut"	293539628	--	--	strood rule	"Work on the whole sled rut."
+"sled"	298923003	--	sled rut	--	"Work on the whole sled rut."
+"rut"	293539628	--	sled rut	--	"Work on the whole sled rut."
 "obscurest"	725670736	subsector	--	--	"[towersloc]." [OBSCUREST SUBSECTOR 4 1]
 "locked"	348940377	subsector	--	--	"Nothing needs to be locked here, certainly not the gaol which [if Dr Yow is in ropins]already is[else]you unlocked[end if]."
 "gol"	160766118	subsector	--	--	"[if fissure is visible]The gaol is too sturdy to defeated by a three-word combination. Or a four-word one[else]You opened the gaol, and there's not much else to do with it[end if]."
@@ -711,7 +706,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "jail"	149955028	subsector	--	--	"It's not just any jail--but prison ropins."
 "ropin"	355042693	subsector	--	--	"[no-ropin]."
 "ropins"	451316659	subsector	--	--	"[no-ropin]."
-"fissure"	582291393	--	fissure	--	"Bizarre animal noises continue to emanate from the fissure. It is beyond your control[if Dr Yow is not in ropins], but the duck's already figured it[else if duck is visible], but the duck seems to be poking at it[else], and you wonder who or what could tinker with it[end if]."
 "yow"	304646602	--	Dr Yow	--	"[he-she-c]'s a doctor! Have some respect when you try to scramble [him-her] up."
 "doctor"	377173649	--	Dr Yow	--	"That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean."
 "wordy"	410999494	--	Dr Yow	--	"Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if Dr Yow has been rowdy and Dr Yow has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]--but [he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]."
@@ -1177,7 +1171,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 book text details
 
 to say locname:
-	say "You don't need to riff on any location names to win the game, unless there's not that much else to see[if bogus-plains is in plains and oyster is needed]. You may get a last lousy point from doing so in one place, if you're observant, though[end if]"
+	say "You don't need to riff on any location names to win the game, unless there's not that much else to see[if bogus-plains is reflexive and oyster is needed]. You may get a last lousy point from doing so in one place, if you're observant, though[end if]"
 
 this is the gunter-yet rule:
 	if player is in study and gunter is off-stage:
@@ -1185,7 +1179,7 @@ this is the gunter-yet rule:
 	the rule fails;
 
 to say locname-part:
-	say "You should never need to riff on part of a location name[if bogus-plains is in plains and oyster is needed], though you may get a last lousy point from doing so if you're observant[end if][one of], so that's one less thing to worry about, I hope[or][stopping]"
+	say "You should never need to riff on part of a location name[if bogus-plains is reflexive and oyster is needed], though you may get a last lousy point from doing so if you're observant[end if][one of], so that's one less thing to worry about, I hope[or][stopping]"
 
 this is the is-unbent rule:
 	if player is in Basement and basement-been is false:
@@ -1582,14 +1576,6 @@ to say slab-score:
 		increment slab-pts;
 	say "[if slab-pts > 5]+++ (tired yet?)[run paragraph on][else][slab-pts][end if]";
 
-this is the time-to-reboot rule:
-	if player is in hacks' shack:
-		if keyboard is on labs slab and computer screen is on labs slab:
-			if caps lock is part of the keyboard:
-				if disk is in hard drive:
-					the rule succeeds;
-	the rule fails.
-
 this is the time-to-compile rule:
 	if scratch paper is reflexive and rebooted is true:
 		the rule succeeds;
@@ -1649,10 +1635,13 @@ this is the plains rule:
 	the rule fails;
 
 to say knob-skis:
-	say " of the door. More [if knob is flippable and skis are in plains]the knob and skis are impeding you[else if skis are in plains]the skis are blocking the door[else if knob is flippable]that knob is stuck[else]isn't needed, as you managed to navigate the knob and skis[end if]";
+	say " of the door. More [if knob is reflexive and skis are in plains]the knob and skis are impeding you[else if skis are in plains]the skis are blocking the door[else if knob is reflexive]that knob is stuck[else]isn't needed, as you managed to navigate the knob and skis[end if]";
 
 to say prob-ov:
 	say "You are probably over-thinking it. There's a more direct way to tackle the rude door"
+
+to say crate-frag:
+	say "[if crate is reflexed]Not worth messing with the fragments any more[else]They're fragments of a crate--this may or may not help[end if]"
 
 to say i-com:
 	say "The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead"
@@ -1661,7 +1650,7 @@ to say ache-plur:
 	say "[if sardine is in arches]There's not just one arch, there's two. And they've made more than one person ache[else]You already dealt with both arches--no need to deal with one[end if]"
 
 to say to-dig:
-	say "[if player has digger]? You have the tools[else], without even anything that could dig[end if]";
+	say "[if player has digger]despite having a good digger,[else]you don't have a good instrument, and[end if] ";
 
 this is the is-hauntable rule:
 	if player is in anger range and haunter is off-stage:
@@ -1735,7 +1724,7 @@ this is the duck-cant rule:
 	the rule fails;
 
 to say no-ropin:
-	say "[if duck is returned]No need to mess with the ropins any more[else]The prison ropins are too sturdy. You'll have to focus on a part that might open[end if]";
+	say "[if duck is returned]No need to mess with the ropins any more[else]The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open[end if]";
 
 to say ray-part:
 	say "You can't do much with either part of Ray's name. Plus he has that keycar"
@@ -1748,6 +1737,9 @@ to say shoaly:
 
 to say nerd-a:
 	say "You think a bit. The salesmen don't emphasize one word over the other during their sales pitches, so the NERD and AID of Nerd-Aid seem equally ludicrous. I mean important"
+
+to say rav-rej:
+	say "This is a weird place, being at the crossroads, but better to [if number of visible guardians is 0 and weeds are in lalaland and denim is in lalaland]mess around elsewhere[else if weeds are visible]get rid of the weeds[else if number of visible guardians > 0]tackle a guardian[else if denim is visible]see if you can get rid of the denim[end if]";
 
 to say grail-name:
 	say "His full name, Liam Garn"
@@ -1800,7 +1792,12 @@ this is the serpent-hiding rule:
 	the rule fails.
 
 to say flow-fine:
-	say "The flowerpot is just fine--[if limits are unvisited]you haven't found anything to put in it yet[else if crocus is reflexed]and so is the crocus in it[else if crocus is not in flowerpot]maybe something around here could go in it[end if]"
+	say "The flowerpot [if crocus is visible]itself [end if]is just fine--[if limits are unvisited]you haven't found anything to put in it yet[else if flowerpot is reflexed]and so is the crocus in it[else]maybe something around here could go in it[end if]"
+
+this is the got-pot rule:
+	if flowerpot is not off-stage:
+		the rule succeeds;
+	the rule fails;
 
 to say towersloc:
 	say "It's not this location you need to change, but Castle Apcur, the Curst Palace [if location of player is mislit limits]right by you[else if location of player is solo den]nearby[else]across Leak Lake[end if]";

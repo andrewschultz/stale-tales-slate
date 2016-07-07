@@ -8,7 +8,10 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* oyster-with-subj
+* _oyster-with-subj
+
+>ts
+>gonear posh hops shop
 
 >l
 Posh Hops Shop
@@ -26,7 +29,7 @@ already been altered
 >remap amper
 Your score has just gone up by one point
 >unset tunes
-mucked up the perma
+The tunes are gone, now that you messed with the jukebox.
 
 >stroll
 you have been kind of obnoxious
@@ -111,6 +114,9 @@ Your score has just gone up by one point
 
 >undo
 >tutor trout
+Your score has just gone up by one point
+
+>tend dent
 Your score has just gone up by one point
 
 >swipe wipes
@@ -235,8 +241,11 @@ Your score has just gone up by one point
 >score
 Oyster (39/39)
 
+>missed
+
 * testing nudges
 
+>ts
 >gonear posh hops shop
 Posh Hops Shop
 >storye
@@ -261,24 +270,30 @@ They would resist change. Not that they wouldn't mind a bit of drinking tales fo
 Eh, you know how jukeboxes are. One tune quashed, another pops up. Get rid of 'em all.
 >jra
 You suspect it's what's in the jar that's important.
->spill
+>splil
 You seem to be fumbling what to do with the pills.
->scralw
-It's probably not just any scrawl. What the scrawl says may be important.
->sign
+>snig
 Hm, the sign doesn't strictly disallow THAT.
 >tumblre
-You can't pick out which tumbler to do something to. But you're annoyed by their tips.
+You can't pick out which tumbler to do something to. But you're annoyed by their tips, which make you see red.
 >stumblre
-Someone looks at you funny. 'What are you muttering?' Maybe it's the writing on the tumblers, instead.
+Someone looks at you funny. "What are you muttering?" Maybe it's the writing on the tumblers, instead.
 >jukebxo
-You can't change the jukebox. The bad music has seeped into it. But maybe you can put it out of commission. It's already out of commission for now.
+You can't change the jukebox. The bad music has seeped into it. But maybe you can put it out of commission.
 >rempa
 You can't change the bad music selection. But you can neutralize it--the jukebox has instructions.
 >unste
-You can't change the bad music selection. But you can neutralize it--the jukebox has instructions.
+The tunes grow slightly less annoying, for a moment.
+
 >unset
 
+>unste
+You can't change the bad music selection. You already got a temporary escape, and that should be good enough.
+
+>jukebxo
+You can't change the jukebox. The bad music has seeped into it. It's already out of commission for now.
+>rempa
+You can't change the bad music selection. You already got a temporary escape, and that should be good enough.
 >unste
 You can't change the bad music selection. You already got a temporary escape, and that should be good enough.
 
@@ -293,6 +308,11 @@ Olde Lode
 
 >loed
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
+>calm
+
+>run
+Hero's Shore
 
 >caneo
 The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river.
@@ -336,9 +356,11 @@ No way. You're not changing the crays--and if you changed one, the others would 
 >crya
 No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out.
 >leap
+Anger Range
 
 >angre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
+
 >piek
 You need to deal with all the bullies at once, somehow, not just one at a time.
 >capr
@@ -347,12 +369,15 @@ You need to deal with all the bullies at once, somehow, not just one at a time.
 Deal with the attackers, not the trout
 
 >spike
-by a point
+by one point
 >undo
 >scrap
 
+>scralw
+It's probably not just any scrawl. What the scrawl says may be important.
+
 >hauntre
-Hmm, but how to dig up the haunter, without
+You start randomly digging, but you don't have a good instrument, and you probably aren't doing it quite right.
 
 >e
 Lean Lane
@@ -365,30 +390,42 @@ You glance at your settler, wondering what to do with the cans. Maybe you've ove
 >eke
 You try to eke out an eek, but you only have one data point, and that's not enough.
 
+>scan
+by one point
+
 >seek
 Handsome Sand Home
 
 >handsoem
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 >hoem
-You should never need to riff on part of a location name.
+You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant, so that's one less thing to worry about, I hope.
 >sadn
-You should never need to riff on part of a location name.
+You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
 >rewadr
 Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout.
+
+>tutro
+You try to describe how to fight, but that's not it.
+
+>tutor
+>rewadr
+There's nothing else in the drawer and no way to get in by yourself.
+
 >bubbel
-!It's just wrap, really.
+It's just wrap, really.
 >bubblewrpa
-I!t's just wrap, really.
+It's just wrap, really.
 >detn
 That's not the way to futz with the dent, though it felt good to grunt while saying it. Or thinking it.
->dent
+>tend
 >detn
 You already fixed the dent. It's gone
 >tuan
 She is a bit fussy, but she is more than okay as she is.
->eta
+>tae
 Quit playing with your food, already.
+
 >trya
 Best to think of it as just tea.
 >teatrya
@@ -400,32 +437,27 @@ It'd be easier to steal all the wipes at once. Pulling them out and so forth--ti
 >wiep
 It'd be easier to use them all at once. Pulling them out and so forth--tiring.
 
->pealr
-The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit...
-
->tutro
-You try to describe how to fight, but that's not it.
-
 >tutor
-
->rewadr
-There's nothing else in the drawer and no way to get in by yourself.
+Hey! No double dipping.
 
 >tutro
-You can't find any other way to describe fighting.
+Retutor? Torture. Rot. True!
 
 >eat
 >bubbel
 It's just wrap, really.
 >bubblewrpa
-!t's just wrap, really.
+It's just wrap, really.
+
+>pealr
+The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit...
 
 >swipe
 >w
 >n
 
 >plani
-'I...plan,' you think, then in a fit of confidence, 'I...PLANS!'
+"I...plan," you think, then in a fit of confidence, "I...PLANS!"
 >splani
 You feel like making a big speech about what you've done and what you plan to do, but not quite like that.
 >splain
@@ -438,26 +470,39 @@ You had your say.
 Hmm, no, it's only one crate at a time...
 
 >fragmenst
-Not worth messing with the fragments
+They're fragments of a crate--this may or may not help.
+>fragmetn
+They're fragments of a crate--this may or may not help.
 
 >traec
-Yes, one more thing to do with the crate--you know where they're from, and you know what to do. Instinctively.
+The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled.
 >trace
 by one point
 >traec
-That won't quite help you figure where the crate is coming from.
+The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet.
 >react
 by one point
 >traec
-That's not something
+Besides identifying it as a rect, you can't do much else with the crate.
+
+>fragmenst
+Not worth messing with the fragments any more.
+>fragmetn
+Not worth messing with the fragments any more.
 
 >actesr
 Hmm, no, it was only one crate at a time...
 
 >open
-The words 'Nope, peon!' sear into your brain. Perhaps it's a bit more complicated.
+Those skis block the door pretty handily.
 
->rued
+>bonk
+>urde
+It's not the rudeness of the door. More the skis are blocking the door.
+>undo
+>undo
+
+>urde
 It's not the rudeness of the door. More the knob and skis are impeding you.
 >doro
 It's not the doorness
@@ -474,15 +519,15 @@ But you need to remove both skis.
 >sksi
 
 >kiss
->rued
+
+>open
+"NOPE, PEON!" the rude door booms, somehow. The knob seems stuck.
+
+>redu
 It's not the rudeness of the door. More that knob is stuck.
 >undo
 >undo
 >bonk
-It's not the rudeness of the door. More the skis are blocking the door
-
->kiss
-It's not the rudeness of the door. More isn't needed, as you managed to navigate the knob and skis.
 
 >opne
 You already opened the door
@@ -492,39 +537,47 @@ It's just a knob. Which thankfully cuts down the possibilities.
 
 >debrsi
 You can't learn much from the debris. You're pretty sure it's from a crate.
->fragmenst
-They're fragments of a crate--this may or may not help.
 >shtu
 The huts are too secure, but maybe you can go by the door.
 >intheer
-You don't need to mess with the message on the rude door.
+The words on the door don't change. They are just a generic taunt.
 >bokn
-That isn't quite the right way to hit the knob.
+You should leave the knob to b'n OK.
 
 >in
-A Hut
+a Hut
 
 >ahtu
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 >htu
 You should never need to riff on part of a location name.
->sweta
-The heaps are still technically waste, but you may want to deal with them more delicately.
-
->shape
->sweta
-The heaps are still technically waste, but you beautified them enough.
-
 >utb
 Clear ALL the tubs!
->buts
-That didn't make anything go boom.
+>sbtu
+Hm. The tubs rattle a bit, but you need to do something strong.
+
+>bust
+by one point
+>sbtu
+The tubs already got broken up.
+
+>sweta
+The heaps are still technically waste, but you may want to deal with them more delicately
+
+>shape
+
+>sweat
+by one point
+
+>sweta
+Your work turned up enough.
+
 >drpo
-You're juggling what to do with the prod, here.
+You juggle the prod a bit, but it doesn't change into anything. Well, not like that.
 >lanec
 The lance is still itself--you can't figure how to apply the wipes.
 
->abstract wipes to lalaland
+>abstract wipes to ll
 >lanec
 --but how to make it neater, now.
 >purloin wipes
@@ -533,7 +586,6 @@ The lance is still itself--you can't figure how to apply the wipes.
 >lanec
 The lance is still itself--and you probably did enough cleaning it.
 
->bust
 >drop prod
 
 >diggre
@@ -552,7 +604,7 @@ You found the hut you needed to.
 >w
 
 >reacsh
-That's not quite what to do with the arches.
+Hm, you almost thought you found something. Well, not QUITE like that.
 
 >hedrno
 You'll probably need to destroy the hedron from within.
@@ -568,7 +620,7 @@ The sardine gives you a weird look, as if you need to stop mumbling. You're not 
 You already dealt with both arches--no need to deal with one.
 
 >reacsh
-You did enough with the arches
+Further searching proves fruitless.
 
 >enlarge
 >n
@@ -588,6 +640,10 @@ Just tacking one walleye won't change the crowd. They're past redemption, anyway
 The walleyes are a bad crowd, past redemption.
 
 >w
+
+>buyr
+No, that's not quite it. The ruby dulls as if covered by dirt.
+
 >bury ruby
 
 >collapsde
@@ -597,7 +653,8 @@ You should never need to riff on part of a location name.
 >placse
 You should never need to riff on part of a location name.
 >buyr
-That's not quite it. You file that idea six feet under.
+The ruby's hidden well. No need to tinker.
+
 >hitn
 The thin hint doesn't reveal anything else.
 
@@ -605,7 +662,7 @@ The thin hint doesn't reveal anything else.
 >s
 >e
 >unearht
-dig up the haunter, now that
+You start randomly digging, but despite having a good digger, you probably aren't doing it quite right.
 >unearth
 >unearht
 The haunter needs to be dealt with otherwise.
@@ -613,12 +670,12 @@ The haunter needs to be dealt with otherwise.
 Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE.
 
 >assuaeg
-WRONG
+You're a bit tongue-tied, but that seems close.
 >assuage
 >assuaeg
-Don't oversell it! Just take the haunter to where it was probably the walleyes who buried the ruby.
+Don't oversell it! Just take the haunter to where it was probably (heh) the walleyes who buried the ruby.
 >howlre
-WRONG
+Anything can howl, but this is a haunter--and, in fact, it's not just a haunter but a SAUSAGE.
 
 >ask haunter about ruby
 >w
@@ -632,7 +689,8 @@ WRONG
 End Den
 >out
 >enlarge
-by one point
+You just need to examine the gleaner to figure what to do with it.
+
 >x gleaner
 
 >in
@@ -653,12 +711,11 @@ You should never need to riff on part of a location name.
 >jumbel
 It's the words on the jumble you need to mess with. With which you need to mess. Well, once the yapper's out of the way.
 >papeyr
-'Quit yer mumblin, ya perp!' the yapper yells, turning red. 'You here to do business or not?'
+"Quit yer mumblin, ya perp!" the yapper yells, turning red. "You here to do business or not?"
 
->prepay
 >jumbel
 It's the words on the jumble you need to mess with. With which you need to mess.
-!once the yapper's
+once the yapper's
 
 >redila
 The yapper might alert his cronies if you try anything. Even something not quite right, like that.
@@ -678,6 +735,10 @@ The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe w
 >prepay
 by one point
 
+>jumbel
+It's the words on the jumble you need to mess with. With which you need to mess.
+!once the yapper's
+
 >derali
 >derail
 by one point
@@ -686,7 +747,11 @@ by one point
 >revel
 by one point
 
->derail
+>redial
 
 Strip of Profits
 
+>score
+(39/39)
+
+>missed

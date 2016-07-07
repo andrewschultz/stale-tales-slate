@@ -12208,6 +12208,7 @@ blurb	prio
 "Ironside's Derisions[r], by Enid Rossi"
 "IRS Vs Irv[r], by Viv Sirrs"
 "Is My Blog Slimy Gob[r], by Gil Mosby"
+"Is Plot to Slip[r], by Isis Lott-Lopp"
 "Is Valor So Viral[r], by Val Rios"
 "Isenhower: Hero/Swine[r], by Erin Howes & Sheri Owen"
 "Island-Booted, Bloodstained Bandit Loosed[r], by [if player is male]Addison Bolte[else]Soledad Tobin[end if]"
@@ -13353,6 +13354,7 @@ blurb	prio
 "Of Rules Fer Soul[r], by [if player is male]Les Rufo[else]Sue Rolf[end if]"
 "Of Sales So False[r], by [if player is male]Les Faso[else]Lea Foss[end if]"
 "Of Slain: So Final[r], by Flo Sian"
+"Of Snug Fun Gos[r], by Su Fong"
 "Of So-Bold Slob Food[r], by Flo Bodos" []
 "Of Stale Ol['] Fates[r], by Leo Fast" []
 "Of Theory or Thy Foe[r], by Roy Hoeft"

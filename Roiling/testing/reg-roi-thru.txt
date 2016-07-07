@@ -2581,7 +2581,7 @@ You've got something nice in the flowerpot. Better not mess with it.
 Hmm...no rumbling from the curst palace. Big words have all sorts of possibilities.
 
 >w
-Old One's Solo Den
+Lone Sod Solo Den
 
 >gyre
 Ed doesn't deserve THAT for his past sins. Plus, you'd get sucked in.
@@ -2592,6 +2592,9 @@ Ed looks slightly less avaricious.
 Your score has just gone up by one point
 >greyde
 Ed's attitude is changed enough for the better.
+
+>l
+Old One's Solo Den
 
 >give flowerpot
 Your score has just gone up by one point

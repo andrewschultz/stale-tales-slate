@@ -4,15 +4,14 @@
 #
 #regression test for trying cheats for the various regions
 #
-# routes/troves/presto written
-# oyster/towers started
-# otters to go
+# routes/troves/presto/oyster/towers/otters written
+# others to go, but it only has hints not cheats
 
 
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _routes-cheat-thru
+* routes-cheat-thru
 
 >ts
 >routes
@@ -25,7 +24,6 @@ reflects to the list-o-toils
 >x toils
 
 points back outside
-
 
 >out
 need to be AGAINST.
@@ -92,7 +90,7 @@ need to be ALONG.
 
 Strip of Profits
 
-* _troves-cheat-thru
+* troves-cheat-thru
 
 >ts
 >troves
@@ -221,7 +219,7 @@ You gulp the crust and can't help thinking THERE. But you are too polite and/or 
 
 >there
 
-You need to go find ammo for your popgun.
+You need to find ammo for your popgun.
 
 >n
 
@@ -279,17 +277,17 @@ Ugh, the crust looks worse than yak food. You wonder what to do with the yak you
 >push skid s
 >push skid s
 
-Even the leaf looks tastier than the crust right now. If it were put out on the skid, the yak would find it tasty.
+You pause before eating the crust. The yak might like the leaf if you put it on the skid.
 
 >put leaf on skid
 
-You pause before eating the crust.
+You pause before eating the crust. The yak needs to be pushed north.
 
 >push skid n
 >push skid n
 >push skid n
 
-You gulp the crust and can't help thinking make a KEYBOARD. But you are too polite and/or represssed to say it until you've finished chewing, which takes a while!
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try make a KEYBOARD.
 
 >keyboard
 
@@ -467,11 +465,15 @@ The wrap feels ruined, now, like you can't warp it, but you do notice a ruby ins
 
 >z
 
+--instead of using the pills, you could've tried to SEARCH the arches.
+
 >z
 You absent-mindedly shake the pills out. Some bounce off the general gleaner, which swells oddly, and as you look for cracks or damage, you see a pattern within. A way through a maze.
 [Your score has just gone up by one point.]
 
 --instead of using the pills, you could've tried to ENLARGE the gleaner.
+
+>x gleaner
 
 >n
 >w
@@ -483,6 +485,8 @@ The pills swarm your ruby so you drop it. They sink into the dirt, the ruby clos
 >s
 >e
 
+--instead of using the pills, you could've tried to UNEARTH the haunter.
+
 >z
 The haunter stays your hand. Perhaps it had a sad incident in its past which sent it to earth sooner--or made it lose its ruby. It nods at you in understanding.
 [Your score has just gone up by one point.]
@@ -493,12 +497,13 @@ The haunter stays your hand. Perhaps it had a sad incident in its past which sen
 >w
 
 >e
-WRONG
 --instead of using the pills, you could've tried to PATROL for the portal.
 
 >in
 Scum Ant Sanctum
-WRONG
+--instead of using the pills, you could've tried to TAN the ant.
+
+Tenfold Teflon'd Den Loft
 
 >z
 The yapper begins bellyaching about picking up the pills. He complains about how it's HIS job to clean things up. He goes off to look for a wastebasket--but you think you see him popping a pill as he leaves.
@@ -515,8 +520,7 @@ You spill the pills on the dialer, and they change DIALER to enough of the 720 p
 >z
 You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the hedron, and the hedron accuses her.
 
---instead of using the pills, you could've tried to REDIAL with the dialer.
-
+--instead of using the pills, you could've tried to REDIAL the dialer.
 
 * towers-cheat-thru
 
@@ -532,6 +536,8 @@ You spill the pills and hook yourself on the dialer trying to catch them. You wi
 
 >get tarts
 >put tarts in toaster
+
+>scam
 
 >xray
 (Ray Eck)
@@ -598,12 +604,10 @@ Hmm. You bet you could get past if the alarming grailman were MARGINAL.
 >s
 
 >xray weeds
-SEWED
-WRONG
+You have a good gaze, and you know what to do and say and think. Gotta be SEWED.
 
 >xray denim
-MINED
-WRONG
+You have a good gaze, and you know what to do and say and think. Gotta be MINED.
 
 >xray reed's ale
 Hmm. You bet you could get past if the man in a REED'S ALE costume were RELEASED.
@@ -616,13 +620,11 @@ Hmm. You bet you could get past if the man covered in inapt paint were HIMSELF.
 >sewed
 
 >xray raves saver
-PEARLY.
-WRONG
-
+You have a good gaze, and you know what to do and say and think. Gotta be PEARLY.
 
 >s
 >xray salesmen
-Hmm. You bet you could get past if the salesmen were DRAINED.
+Hmm. You bet you could get past if the nameless salesmen were DRAINED.
 
 >drained
 >e
@@ -646,7 +648,7 @@ Hmm. You bet you could get past if the organised ego drains were GRANDIOSE.
 You have a good gaze, and you know what to do and say and think. Gotta be FUSSIER.
 
 >xray ropins
-You have a good gaze, and you know what to do and say and think. Gotta be unlocked--but nothing here seems to fit with UNLOCKED.
+You have a good gaze, and you know what to do and say and think. Gotta be UNLOCKED--but nothing here seems to fit with UNLOCKED.
 
 >xray yow
 You see Dr. Yow has both a wordy and rowdy side that have been crushed by prison.
@@ -704,6 +706,24 @@ You have a good gaze, and you know what to do and say and think. Gotta be ROBUST
 >xray blaster
 You have a good gaze, and you know what to do and say and think. Gotta be STABLER.
 
+>undo
+>undo
+>xray bot boat
+/You have a good gaze, and you know what to do and say and think. Gotta be (ROBUST|STABLER).
+>undo
+
+>blaster
+>xray bot boat
+You have a good gaze, and you know what to do and say and think. Gotta be ROBUST.
+
+>undo
+>undo
+
+>robust
+>xray bot boat
+You have a good gaze, and you know what to do and say and think. Gotta be STABLER.
+
+>stabler
 >xray bot boat
 The bot boat and its parts appear as workable as it can be.
 
@@ -717,6 +737,8 @@ You have a good gaze, and you know what to do and say and think. Gotta be NEARES
 
 >xray crocus
 You have a good gaze, and you know what to do and say and think. Gotta be DINGY.
+
+>undo
 >xray flowerpot
 You have a good gaze, and you know what to do and say and think. Gotta be DINGY.
 
@@ -737,14 +759,11 @@ You have a good gaze, and you know what to do and say and think. Gotta be GREEDY
 
 >xray flowerpot
 [NOTE: you already xrayed this, so you're just remembering what it was...]
-You remember you could still think dingy.
-
-The pills scatter all over the bar, leaving everyone to slip and fall. You make a break.
-
-[Your score has just gone up by one point.]
+You remember you could still think DINGY.
 
 * otters-cheat-thru
 
+>au 1
 >seed 1
 >a5
 >in
@@ -757,45 +776,52 @@ As you gaze into the cinders, they blow away, leaving you feeling Ed can speak R
 You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet.
 
 >n
-WRONG
+/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|ANGRILY|BRUTELY).
 
 >angrily
-/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|ANGRILY|BRUTELY).
->z
-/Hm, it'd still be fun to see the imp act (ENRAGEDLY|ANGRILY|BRUTELY).
+/As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|BRUTELY).
 
 >brutely
 
 >s
 >s
-As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk 
+/As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk (TERSELY|LOATHINGLY|STOICALLY).
+
 >z
->z
-It still might peg the whiners back a bit if they talked more the imp can act TERSELY.
+/As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk (TERSELY|LOATHINGLY|STOICALLY).
+
 >tersely
+/As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk (LOATHINGLY|STOICALLY).
+
 >loathingly
 You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet.
 
 >n
 >w
-As you gaze into the cinders, they blow away, leaving you feeling the macks can talk
+/As you gaze into the cinders, they blow away, leaving you feeling the macks can talk (BOSSILY|NASTILY|BLEARILY|MODESTLY|MARTIALLY|DRAWLINGLY|DESPAIRINGLY)
+
+>bossily
+>nastily
+>z
+!/can talk (BOSSILY|NASTILY)
+/can talk (BLEARILY|MODESTLY|MARTIALLY|DRAWLINGLY|DESPAIRINGLY)
+>z
+!/can talk (BOSSILY|NASTILY)
+/can talk (BLEARILY|MODESTLY|MARTIALLY|DRAWLINGLY|DESPAIRINGLY)
+>z
+!/can talk (BOSSILY|NASTILY)
+/can talk (BLEARILY|MODESTLY|MARTIALLY|DRAWLINGLY|DESPAIRINGLY)
+>z
+!/can talk (BOSSILY|NASTILY)
+/can talk (BLEARILY|MODESTLY|MARTIALLY|DRAWLINGLY|DESPAIRINGLY)
+>z
+!/can talk (BOSSILY|NASTILY)
+/can talk (BLEARILY|MODESTLY|MARTIALLY|DRAWLINGLY|DESPAIRINGLY)
+>z
+!/can talk (BOSSILY|NASTILY)
+/can talk (BLEARILY|MODESTLY|MARTIALLY|DRAWLINGLY|DESPAIRINGLY)
 
 >blearily
->cattily
->z
-/!(BLEARILY|CATTILY)
->z
-/!(BLEARILY|CATTILY)
->z
-/!(BLEARILY|CATTILY)
->z
-/!(BLEARILY|CATTILY)
->z
-/!(BLEARILY|CATTILY)
->z
-/!(BLEARILY|CATTILY)
-
->nastily
 
 #reject for discerning during Gretta chat
 That can wait until you've finished talking.
@@ -810,13 +836,13 @@ As you gaze into the cinders, they blow away, leaving you feeling you can say BE
 As you gaze into the cinders, they blow away, leaving you feeling you can say ELSE.
 
 >else
-You're not able to discern anything right here and now. Maybe move somewhere with things you haven't tackled yet.
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of the Barley.
 
 >s
 As you gaze into the cinders, they blow away, leaving you feeling you can make an ATOM.
 
 >atom
-The medals need refurbishing in the areas north and south of the Barley.
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of the Barley.
 
 >s
 As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
@@ -841,12 +867,8 @@ As you gaze into the cinders, they blow away, leaving you feeling you can make t
 /make the (leopard|satyr)
 
 >paroled
-# not sure about this!
-make the satyr ARTSY
-WRONG
-
-
-# if I nail the "right" animal first, it needs to switch from there
+# note that with 3 animals down we don't want to hint a semi-useless 4th. DISCERN/HINT should go to getting on with the game.
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of the Barley.
 
 >s
 >s
@@ -875,15 +897,17 @@ RAPTOR
 /(SNIPE|HORNETS)
 
 >snipe
-QUICKLY
+DEEPLY
 
 >n
 >n
->w
->w
 
 DEEPLY
 >deeply
+
+>w
+>w
+
 QUICKLY
 >quickly
 
@@ -894,18 +918,232 @@ As you gaze into the cinders, they blow away, leaving you feeling you can just P
 
 >play whistle
 
-*others-cheat-thru
+* others-cheat-thru
 
+>au 1
 >rove over
 
+>gonear rustic
 
-########################presto bug
-what if I hint keyboard twice? That would suck for the player
+Rustic Citrus
 
-########################bugs from first run through
+>scam
+/(lumps|pagers|spear)
+>plums
+>pears
+>grapes
 
-#fix random hinting for the macks, both mentioned and not (it hints something gone, and it also hints something not shown up yet)
+Examine the drinks stand. You'll find more raw materials.
 
-#fix hinting random something every time
+>x stand
 
-#randomize OTHERS hints once you are done with the basics
+Hmm, the slime is green and knobbly and smells a bit like dishwashing detergent.
+
+>limes
+
+That moss cap is useless as-is. Curtis claimed it helped you tell directions, but it doesn't. (+)
+
+>compass
+
+Nothing specific left to do here, though you may need to give Curtis some more fruits.
+
+>cantaloupe
+
+Curtis relieves you of your burden you found.
+Nothing specific left to do here, though you may need to give Curtis some more fruits.
+
+>n
+Swell Wells
+
+/DEBUG INFO: (green stain|riot cap|silly shirt|sorer bogey|stucco) hinting
+
+>coconuts
+/DEBUG INFO: (green stain|riot cap|silly shirt|sorer bogey) hinting
+
+>tangerines
+/DEBUG INFO: (riot cap|silly shirt|sorer bogey) hinting
+
+>apricot
+
+You can go back to Curtis for a reward.
+
+>s
+>n
+
+/DEBUG INFO: (silly shirt|sorer bogey) hinting
+
+>gooseberry
+DEBUG INFO: silly shirt hinting
+
+>apples
+Nothing specific left to do here, though you may need to give Curtis some more fruits.
+
+>w
+Filed Field
+
+/DEBUG INFO: (buried raft|barriers west|barber sickle|mean trowel|pipe panel fence|pryer bars|rapt figure)
+
+>breadfruit
+/DEBUG INFO: (barriers west|barber sickle|mean trowel|pipe panel fence|pryer bars|rapt figure)
+
+>raspberry
+You can go back to Curtis for a reward.
+
+>e
+>s
+You ultimately need another coin, but perhaps it can be converted to something of intrinsic worth. (+)
+
+>n
+>w
+
+You ultimately need another coin
+
+>icon
+/DEBUG INFO: (barriers west|barber sickle|mean trowel|pipe panel fence|rapt figure)
+
+>strawberries
+/DEBUG INFO: (barber sickle|mean trowel|pipe panel fence|rapt figure)
+
+>blackberries
+/DEBUG INFO: (mean trowel|pipe panel fence|rapt figure)
+
+>watermelon
+/DEBUG INFO: (pipe panel fence|rapt figure)
+
+>pineapple
+You can go back to Curtis for a reward.
+
+>e
+>s
+The icons are too inert.
+
+>sonic
+
+>n
+>w
+DEBUG INFO: rapt figure
+
+>grapefruit
+Nothing specific left to do here.
+
+>e
+Nothing specific left to do here.
+
+>e
+
+/DEBUG INFO: (auction caution|the list of prices|lemons|melon|nectarine|overpriced peach|pre-mang|quince)
+
+>papayas
+/DEBUG INFO: (the list of prices|lemons|melon|nectarine|overpriced peach|pre-mang|quince)
+
+>cripes
+/DEBUG INFO: (lemons|melon|nectarine|overpriced peach|pre-mang|quince)
+
+>solemn
+You can go back to Curtis for a reward.
+
+>w
+>s
+"Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you."
+
+>n
+>e
+/DEBUG INFO: (melon|nectarine|overpriced peach|pre-mang|quince)
+
+>mo len
+/DEBUG INFO: (nectarine|overpriced peach|pre-mang|quince)
+
+>ancienter
+/DEBUG INFO: (peach|pre-mang|quince)
+
+>cheap
+/DEBUG INFO: (pre-mang|quince)
+
+>among
+DEBUG INFO: quince
+
+>cinque
+Nothing specific left to do here, though you will want to trade that dollar.
+
+>w
+>s
+
+>n
+>d
+You can trade the dollar for the storage box.
+
+>give dollar to art erd
+You probably want to put the icons in the storage.
+
+>u
+>put sonic in slot
+
+>n
+/DEBUG INFO: (viewer|searcher) hinting.
+
+>n
+>research
+DEBUG INFO: viewer hinting.
+>undo
+
+>review
+DEBUG INFO: searcher hinting.
+
+>research
+Go north to win!
+
+>n
+
+You Did Great
+
+* others-scape-space
+
+>au 1
+>rove over
+
+>gonear rustic
+
+Rustic Citrus
+
+>scam
+/(lumps|pagers|spear)
+>plums
+>pears
+>grapes
+
+Examine the drinks stand. You'll find more raw materials.
+
+>x stand
+
+Hmm, the slime is green and knobbly and smells a bit like dishwashing detergent.
+
+>limes
+
+That moss cap is useless as-is. Curtis claimed it helped you tell directions, but it doesn't. (+)
+
+>compass
+
+Nothing specific left to do here, though you may need to give Curtis some more fruits.
+
+>n
+
+>d
+/DEBUG INFO: (An a|orange|pugnacious plant|reserved sign|)
+>go near
+/DEBUG INFO: (An a|pugnacious plant|reserved sign|)
+>rhubarb
+/DEBUG INFO: (An a|reserved sign|)
+>nab an a
+DEBUG INFO: reserved sign
+
+>reversed
+You can go back to Curtis for a reward.
+
+>u
+>s
+>n
+>d
+Nothing specific left to do here, though you may need to give Curtis some more fruits.
+
+########################presto to-check
+#what if I hint keyboard twice? That would suck for the player

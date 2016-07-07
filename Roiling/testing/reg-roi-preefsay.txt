@@ -191,11 +191,21 @@ Like a butterfly's wings in China, your fart causes the raft to waver. Maybe if 
 >fart
 >soar
 
+>scrap
+>n
+>kiss
+[You add the information to your pedanto-notepad under FLIPS.]
+>bonk
+[You add the information to your pedanto-notepad under FLIPS.]
+>react
+That's a good idea, but you're not sure HOW to react. You need a bit of data, first.
+[You add the information to your pedanto-notepad under FLIPS.]
+>s
+
 >unearth
 You need something to dig here. You haven't found
 [You add the information to your pedanto-notepad under FLIPS.]
 >undo
->scrap
 >e
 >seek
 >tutor
