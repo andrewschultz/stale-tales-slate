@@ -785,7 +785,7 @@ You can't change the alcoves. It's what's to the west that needs changing
 >discern
 (taking the cinders first)
 You feel sort of clever finding what to do with the cinders, but maybe you can be even cleverer, if you're a perfectionist and all. Discern anyway?
-The medals look less than perfect. Maybe you can find someone, or something, to help. You should explore north or south of the barley.
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of the barley.
 
 >n
 >n
@@ -856,10 +856,10 @@ No need to tweak the ocelots again. They're fine as is.
 >artsy
 by one point
 >artys
-No need to tweak the satyr again. It's fine as is.
->parolde
-by one point
+No need to tweak the satyr again. He's fine as is.
 >paroled
+by one point
+>parolde
 No need to tweak the leopard again. It's fine as is.
 >undo
 >undo
@@ -884,7 +884,7 @@ So many nails, hard to pick one. Might as well take care of them all.
 So many pines, hard to pick one. Might as well take care of them all.
 
 >raccono
-The corona seems to waver, the 'c' in it vanishing and reappearing, as if it isn't really important
+The corona seems to waver, the "c" in it vanishing and reappearing, as if it isn't really important
 >racoon
 >racono
 No need to tweak the racoon again. It's fine as is.
@@ -906,8 +906,7 @@ No need to tweak the snipe again. It's fine as is.
 >herton
 There's more than one throne, but it doesn't matter, really, for what you need to do.
 >hornet
-by one point
->undo
+The thrones are plural. Besides, just one hornet--what could it do?
 >hornets
 by one point
 >hornest
@@ -925,15 +924,32 @@ No need to tweak the snail again. It's fine as is.
 >n
 >n
 >w
+>quickly
 >raptor
+"Awk! I'd just kill you in that form. Try that around some bad guys."
 
 >w
 
 >w
-Your medals clink
-NOTE WARNING IF TRIED QUICKLY
+Stricter critters restrict--wait, no, that's a hardy hydra with an HD-Ray. Er, dang. Danger. Your friend the parrot gives a helpful AWWWK as y
+
+>ahdry
+You try, but that doesn't do anything with, or to, the hydra to the west.
+
+>raptor
+by one point
+
+>w
+Your medals clink as you go west. Elvira hears them and ambushes you! She touches what you recognize as the Ultimate Mutilate-It Amulet and fires the legendary Phrase Shaper Phaser at you. You think of possible replies, of ways to block her, as you slump to the ground. But you are not fast enough. The last thing you hear as you slump to the ground is Gretta's medals clanking--the ones you never quite used, though you sort of figured how, earlier.
 
 >undo
+
+>depref
+>w
+Your medals clink as you go west. Elvira hears them and ambushes you! She touches what you recognize as the Ultimate Mutilate-It Amulet and fires the legendary Phrase Shaper Phaser at you. You think of possible replies, of ways to block her, as you slump to the ground. But you are not fast enough. The last thing you hear as you slump to the ground is Gretta's medals clanking--the ones you never quite used.
+
+>undo
+
 >quickly
 >w
 Reclusion Inclosure

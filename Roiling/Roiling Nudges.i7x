@@ -1073,6 +1073,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "dustpan"	478080165	sparse spares	--	--	"[its-a-museum]."
 "scalpit"	400850031	sparse spares	--	--	"[its-a-museum]."
 "placer"	369603113	sparse spares	--	--	"[its-a-museum]."
+"scalper"	465877079	sparse spares	--	--	"[its-a-museum]."
 "rudest"	538648792	sparse spares	--	--	"[its-a-museum]."
 "ladder"	311189747	sparse spares	--	--	"[its-a-museum]."
 "bulk"	230271729	sparse spares	--	--	"Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that."

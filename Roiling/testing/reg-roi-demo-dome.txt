@@ -8,7 +8,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* cant-go
+* demo-not-past-strip
 
 >gonear strip
 >demo dome mode
@@ -20,7 +20,7 @@ For reasons of continuity
 Peek Keep
 
 >undo
->demo dome
+>demo mode
 Peek Keep
 
 >undo
@@ -34,16 +34,19 @@ Peek Keep
 >x me
 You look just fine.
 
->score
-There's no score in the Demo Dome. You just need to look around.
-from Peek Keep
+#don't let the player go outside
+>au -1
 
->score
-!There's no score in the Demo Dome. You just need to look around.
-from Peek Keep
+#let's turn on auto scoring every move
+>scam
+There's no score in the Demo Dome. You just need to look around.
 
 >s
+!There's no score in the Demo Dome. You just need to look around.
+
 Are you sure you want to leave before looking at everything?
+
+>x ad shelf
 
 >blather
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
@@ -120,6 +123,8 @@ This is a museum! No messing with the exhibits, please. Or trying to.
 
 >in
 Intel Inlet
+
+>x thesis
 
 >x calendar
 >x calendar
@@ -319,16 +324,28 @@ This is a museum! No messing with the exhibits, please. Or trying to.
 >palcer
 This is a museum! No messing with the exhibits, please. Or trying to.
 
+>palcers
+This is a museum! No messing with the exhibits, please. Or trying to.
+
 >rudest
 This is a museum! No messing with the exhibits, please. Or trying to.
 
 >dupstan
 This is a museum! No messing with the exhibits, please. Or trying to.
 
->larded
+>lardde
 This is a museum! No messing with the exhibits, please. Or trying to.
 
 >sclipat
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>blto
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>scea
+This is a museum! No messing with the exhibits, please. Or trying to.
+
+>boltcaes
 This is a museum! No messing with the exhibits, please. Or trying to.
 
 >spresa
@@ -339,3 +356,62 @@ Bulk-Klub's credibility took a hit once Elvira got on their board of directors, 
 
 >score
 It looks like you've looked through everything. Thanks for all the time you spent, and I hope it was worth it!
+
+>au 1
+>u
+>s
+You take a break, ignoring the final seven things in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers' money.
+
+>x trifle
+>x placer
+>x duster
+>x dustpan
+>x ladder
+>x plastic
+>x bolt case
+
+>au 1
+>u
+>s
+You take a break, ignoring the parcel clasper in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers' money.
+
+>undo
+>d
+>x clasper
+
+>u
+>s
+You take a break and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers' money.
+
+* demo-saw-some
+
+>demo dome
+>au -1
+>scam
+
+>x shelf
+>n
+>x owl
+>x tools
+
+>out
+>in
+>x calendar
+>x thesis
+
+>out
+>w
+>x chronicle
+>e
+>e
+>x novella
+>w
+>s
+Are you sure you want to leave before exhaustively looking at everything? You can type SCORE to see what you still haven't done.
+>au 1
+>s
+It's--yes, you've sort of lived it, already. You're just too busy for frivolity. You've had a look at everything.
+Epilogue's Up! Lie, Ego
+
+>undo
+

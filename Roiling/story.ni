@@ -705,6 +705,8 @@ every turn when scams is true (this is the scam rule):
 	else if mrlp is others:
 		d "Basic hints.";
 		try hinting instead;
+	else if mrlp is demo dome:
+		try requesting the score instead;
 
 section long form of verbs
 
@@ -4583,12 +4585,13 @@ definition: a region is markable:
 an exhibit is a kind of thing. an exhibit can be unnoted, perused or exhausted. an exhibit is usually unnoted.
 
 to left-to-see:
-	say "[line break]";
+	if scams is false:
+		say "[line break]";
 	if number of unnoted exhibits is 0:
-		let q be number of unexamined things in peek keep;
-		if q > 0:
-			say "You can still go see stuff [if sparse spares is visited]in Sparse Spares[else]below Peek Keep[end if].";
-			continue the action;
+		repeat with QQ running through things in sparse spares:
+			if QQ is not player and QQ is not examined and QQ is not red writing:
+				say "You could still examine [the QQ] [if player is  in sparse spares]here[else]in Sparse Spares[end if].";
+				continue the action;
 	repeat through table of xibits:
 		if exhib entry is unnoted:
 			if location of exhib entry is unvisited:
@@ -4603,12 +4606,8 @@ to left-to-see:
 		say "There's some random junk below the entry to Peek Keep.";
 		continue the action;
 	repeat through table of xibits:
-		if exhib entry is not exhausted:
-			say "You haven't looked all the way through the [exhib entry] in [location of exhib entry].";
-			continue the action;
-	repeat with QQ running through things in sparse spares:
-		if QQ is not player and QQ is not examined:
-			say "You could still examine [the QQ][if player is not in sparse spares] in Sparse Spares[end if].";
+		if exhib entry is perused:
+			say "You haven't looked all the way through the [exhib entry] [if location of player is location of exhib entry]here [end if]in [location of exhib entry].";
 			continue the action;
 	say "It looks like you've looked through everything. Thanks for all the time you spent, and I hope it was worth it!"
 
@@ -22293,7 +22292,7 @@ check going west in Alcoves (this is the need quick rule):
 		continue the action;
 	if hydra is in Reclusion Inclosure:
 		now hydra-known is true;
-		say "Stricter critters restrict--wait, no, that's a hardy hydra with an HD-Ray. Er, dang. Danger. You[if parrot is visible]r friend the parrot gives a helpful AWWWK as y[else] double back." instead;
+		say "Stricter critters restrict--wait, no, that's a hardy hydra with an HD-Ray. Er, dang. Danger. You[if parrot is visible]r friend the parrot gives a helpful AWWWK as you[end if] double back." instead;
 	say "[one of]You pass asps and feel live evil enduringly underlying...you yell 'Time's Up! Impetus imputes...'[paragraph break]'Um, spite? I'm upset!' Elvira shrugs. 'Spume it.'[or]A punitive invite-up calls you back.[or]'Resenter re-enters!' Elvira laughs.[stopping]";
 
 after printing the locale description for Inclosure when Inclosure is unvisited:
@@ -23633,6 +23632,7 @@ carry out demoing:
 		say "For reasons of continuity, you can't visit the Demo Dome until you've restarted the game." instead;
 	say "[if knockage is true]You ignore Gunter's emo'd voice, probably looking to apologize and kiss up[else]You decide to, umm, use the Me-Um-Us Museum[end if]. You pull out your discreet, secret ID to enter.";
 	move player to peek keep;
+	now red writing is examined; [this is a silly hack to make sure sparse spares is tracked ok]
 	now right hand status line is "Poking Around";
 	the rule succeeds;
 
@@ -23661,26 +23661,36 @@ check going south in peek keep:
 	if debug-state is true:
 		say "DEBUG: [list of unnoted exhibits] unnoted, [list of perused exhibits] perused, [list of exhausted exhibits] exhausted.";
 	if number of not exhausted exhibits is 0:
-		say "You take a break and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers['] money.";
+		say "You take a break[unex-left] and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers['] money.";
 		end the story;
 	else:
 		say "Are you sure you want to leave before [if number of unnoted exhibits is 0]exhaustively [end if]looking at everything? You can type SCORE to see what you still haven't done.";
 		if the player switch-consents:
-			say "It's--yes, you've sort of lived it, already. You're just too busy for frivolity[if number of unnoted exhibits is 0]. You've had a look at everything[end if].";
-			end the story;
+			say "It's--yes, you've sort of lived it, already. You're just too busy for frivolity[if number of unnoted exhibits is 0]. You've had a look at everything, just not in total detail[end if].";
+			end the story saying "Epilogue's Up! Lie, Ego";
 		else:
 			say "Okay, why not look around a bit more." instead;
+
+to say unex-left:
+	let Y be the number of unexamined things in sparse spares;
+	if Y is 0:
+		continue the action;
+	if Y is 1:
+		say ", ignoring the [random unexamined thing in sparse spares],";
+	else:
+		say ", ignoring the final [number of unexamined things in sparse spares in words],";
 
 check going up in peek keep:
 	say "The great grate blocks you." instead;
 
 table of xibits
 exhib	orwt
-owl decal code wall	1
-allow lots tools wall	1
-Chic Loner Chronicle	1
-Calendar	1
-Novella	10
+owl decal code wall	5
+allow lots tools wall	5
+Chic Loner Chronicle	5
+Calendar	5
+Novella	15
+Flashed Ad Shelf	1
 
 chapter Evoc-Cove
 
@@ -23768,6 +23778,8 @@ carry out numreading:
 	else:
 		say "The author strained not to be incomprehensible and failed.";
 	now novella is examined;
+	if novella is unnoted:
+		now novella is perused;
 	repeat through table of pagelist:
 		if read-yet entry is false and comprehensible entry is true:
 			the rule succeeds;
@@ -23995,11 +24007,6 @@ understand "shall-halls" as Shall Halls.
 
 The Design Deigns are scenery in Peek Keep. "They're illegible from this far away. They might be illegible up close. The author is, sadly, like that. So you can't make out evidence for or against a Questionable Sequel-Obtain."
 
-instead of doing something with flashed ad shelf:
-	if the action is procedural:
-		continue the action;
-	say "I haven't figured what to do with them, so you probably don't want to do anything too complex.";
-
 a talks stalk is scenery. "From what you see on the other side of the Great Grate, it has many branches, but none appear particularly healthy yet. It symbolizes the author's grand high goal up there of one day implementing more believable NPCs."
 
 instead of doing something with Talks Stalk:
@@ -24015,6 +24022,9 @@ instead of doing something with flashed ad shelf:
 	if the action is procedural:
 		continue the action;
 	say "There's not much to do with the ad shelf but examine it. Or play one of those wonderful advertised games!";
+
+check examining Flashed Ad Shelf:
+	now Flashed Ad Shelf is exhausted;
 
 chapter dometables
 
@@ -24097,7 +24107,7 @@ pgtxt	read-yet	comprehensible
 "'Get-hip age? The PIG age!'"
 "'Inane Peg? Pain, Gene.'"
 "'Nag Pete? Apt, Gene.'"
-"'Glen, a peeve.' / 'Even gap, Lee?"
+"'Glen, a peeve.' / 'Even gap, Lee?'"
 "-"
 "Tether in thin tree, then tire."
 "Outer fen: tureen of rue often / refute? no. There's also something about utter profane rapture, often."
@@ -25166,7 +25176,7 @@ hornets	"It will help you when the time comes."
 racoon	"It will help you when the time comes."
 parrot	"[one of]The parrot is scared of Merle and Elmer, as they're a lot bigger.[plus][or]Maybe if the parrot got bigger. Wait, it was![plus][or]You can change it back to a RAPTOR to help you get past another fearsome beast.[minus][cycling]"	--	"you can re-make a RAPTOR"
 sober robes	"Elmer and Merle can't be naked, and I felt like trawling for a cheap anagram. Win-win! (Oh. The robes aren't important to the game.)"
-medals	"[if nounsolve < 3 or adjsolve < 3][medal-help].[else][one of]The medals are thanks for your smarts and quick thinking.[plus][or]The medals are more powerful together than apart.[plus][or]IQ and LUCKY mean something.[plus][or]You can use them to go QUICKLY, but the question is, where?[plus][or]If you have gotten rid of Merle and Elmer, going QUICKLY to the west will help you deal with Elvira's initial attack.[minus][cycling][end if]"	--	"the medals [if nounsolve < 3 or adjsolve < 3]need refurbishing. Maybe in the areas north and south of the Barley[else]can make you go QUICKLY[but-in-alcoves][end if]"
+medals	"[if nounsolve < 3 or adjsolve < 3][medal-help].[else][one of]The medals are thanks for your smarts and quick thinking.[plus][or]The medals are more powerful together than apart.[plus][or]IQ and LUCKY mean something.[plus][or]You can use them to go QUICKLY, but the question is, where?[plus][or]If you have gotten rid of Merle and Elmer, going QUICKLY to the west will help you deal with Elvira's initial attack.[minus][cycling][end if]"	--	"the medals [if nounsolve < 3 or adjsolve < 3][need-refurb][else]can make you go QUICKLY[but-in-alcoves][end if]"
 jumpsuit	--	leopard
 SlopInc	"They aren't the hippest, are they? Change the ocelots to make them cooler."
 Look-Kool	"You can't do much but admire them."
@@ -25287,6 +25297,19 @@ owl decal Code Wall	"[dome-blab]"
 written walls	"[dome-blab]"
 allow lots tools wall	"[dome-blab]"
 larded ladder	"[dome-blab]"
+
+to say need-refurb:
+	say "need refurbishing. Maybe in the ";
+	if nounsolve >= 3:
+		say "[if wire deck is visited]Wickeder Wire Deck[else]area north of the barley[end if]";
+	else if adjsolve >= 3:
+		say "[if preserve is visited]Perverse Preserve[else]area south of the barley[end if]";
+	else if wire deck is unvisited and preserve is visited:
+		say "Preserve or north of the barley";
+	else if preserve is unvisited and wire deck is visited:
+		say "Wire Deck or south of the barley";
+	else:
+		say "areas north and south of the barley";
 
 to say but-in-alcoves:
 	if player is not in alcoves:
@@ -26832,7 +26855,9 @@ test dome-dens with "w/x chronicle/test dome-xp/test dome-xp/e"
 
 test dome-nov with "e/rr/rr/rr/rr/rr/rr/rr/rr/rr/rr/rr/w"
 
-test dome-all with "demo dome/test dome-inlet/test dome-show/test dome-dens/test dome-nov"
+test dome-spares with "d/x clasper/x bolt case/x ladder/x filter/x dustpan/x plastic/x placer/x duster/u"
+
+test dome-all with "demo dome/x ad shelf/test dome-inlet/test dome-show/test dome-dens/test dome-nov/test dome-spares"
 
 chapter coffing
 
