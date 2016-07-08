@@ -7094,6 +7094,8 @@ before listening (this is the you can hear stuff some places rule):
 		say "You hear the clam snapping." instead;
 	if player is in freight:
 		try examining the pale plea instead;
+	if player is in anger range and carps are in lalaland and haunter is off-stage:
+		say "A cry. 'Eh ... a runt...' you turn red on hearing it." instead;
 	if player is in pallid li'l pad:
 		say "The dead air inspires no rad idea." instead;
 	if old giant is in lalaland and player is in Same Mesa:
@@ -8374,7 +8376,7 @@ prod	digger	"drop"	"drop"	"It rattles as you drop it. You try every which way. H
 waste	lance	"sweat"	"sweat"	"You make real effort to clean up the waste. And you do! You pile them into heaps, in the process finding a very dirty lance."	false	437312684
 heaps	heaps	"shape" or "shape the/ heaps"	"shape"	"You channel your inner artist and make something beautiful out of the heaps."	false	345016151	"You spend time criticizing your own art--no, it's about as good as it'll be."
 ruby	thin hint	"ruby"	"ruby"	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to."	false	331207767	"You already buried the ruby."
-haunter	haunter	"assuage"	"assuage"	"'How sad, shadow,' you explain, and you think you might know where someone hid his rubies. You explain some bad guys have buried his ruby. He nods. He is willing to follow."	false	462435186	"The ghost needs no further convincing."
+haunter	haunter	"assuage"	"assuage"	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. The hedron is full of no-good-niks. The haunter waits on your next move."	false	462435186	"The ghost needs no further convincing."
 lever	lever	"revel"	"revel"	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."	false	501914680	"I said run up the score on those bullies a bit, not a lot."
 gleaner	gleaner	"enlarge"	"enlarge"	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."	false	498444888
 yapper	yapper	"prepay" or "prepay the/ papery/ yapper"	"prepay"	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' He motions you to slip him the gleaner behind your back. Then he goes off to find such a judge, presumably."	false	500608900
@@ -8657,7 +8659,7 @@ spikes is a truth state that varies.
 to say spike-scrap:
 	if word number 1 in the player's command is "spike":
 		now spikes is true;
-	say "'Err, boys? Be sorry.' After the rotters['] retorts, you start a scrap and spike the carps and pikes into a nearby wall. A few cuffs and they scuff, spout pouts and become tense teens. You lash out 'Ha, louts!' then 'Scoot, coots! Scat, cats! Cower, o crew!' for emphasis. 'Shlep-helps from a Pedo-dope! [if player is male]He's[else]She...[end if] a loss.' one yells back, seeing you comforting the trout.[paragraph break]The little trout, bruised, gives a side rub and looks up gratefully. 'My aunt Tuna will be proud of me! Or you! C'mon. I'll set a seat! Tea's east!' He runs that way.[paragraph break]Done fighting, you notice a scrawl crawls across the ground. You feel angry for taking so long to see this. Maybe there is some other angry force around the Anger Range"
+	say "'Err, boys? Be sorry.' After the rotters['] retorts, you start a scrap and spike the carps and pikes into a nearby wall. A few cuffs and they scuff, spout pouts and become tense teens. You lash out 'Ha, louts!' then 'Scoot, coots! Scat, cats! Cower, o crew!' for emphasis. 'Shlep-helps from a Pedo-dope! [if player is male]He's[else]She...[end if] a loss.' one yells back, seeing you comforting the trout.[paragraph break]The little trout, bruised, gives a side rub and looks up gratefully. 'My aunt Tuna will be proud of me! Or you! C'mon. I'll set a seat! Tea's east!' He runs that way.[paragraph break]Done fighting, you notice a scrawl crawls across the ground. You feel angry for taking so long to see this. Maybe there is some other angry force around the Anger Range. You even think you hear something"
 
 check fliptoing old giant:
 	if list o toils is unexamined:
@@ -16769,7 +16771,7 @@ ueyet is a truth state that varies.
 before doing something with haunter when haunter is off-stage:
 	if current action is unearthing or current action is objhinting or current action is assuageing:
 		continue the action;
-	say "You can feel the haunter, but [if ueyet is false]you've no clue how to summon him[else if player has digger and ruby is in lalaland]he can't rise until you try to UNEARTH him again[else if player has digger]you don't know what you'd do if you'd unearth him[else]you haven't found something that can unearth him[end if]." instead;
+	say "You can feel the haunter, but [if ueyet is false]you've no clue how to summon t[else if player has digger and ruby is in lalaland]it can't rise until you try to UNEARTH it again[else if player has digger]you don't know what you'd do if you'd unearth it[else]you haven't found something that can unearth it[end if]." instead;
 
 before doing something with ruby when ruby is in lalaland:
 	if current action is unearthing or current action is objhinting:
@@ -16814,9 +16816,7 @@ carry out unearthing:
 	now scrawl is in lalaland;
 	the rule succeeds;
 
-[anagram haunter when he is present = no, already did that]
-
-the haunter is a reflexive person. description is "It's a seven-foot tall sausage--or, rather, a stick figure of several sausages tied together, with a bacon comb-over, a ham hock shield and a pork chop bone for a weapon."
+the haunter is a reflexive neuter person. description is "It's a seven-foot tall sausage--or, rather, a stick figure of several sausages tied together, with a bacon comb-over, a ham hock shield and a pork chop bone for a weapon."
 
 check taking haunter:
 	say "It's incorporeal. But maybe you can take it somewhere." instead;
@@ -17883,7 +17883,7 @@ carry out burying:
 	if player does not have ruby:
 		say "Nothing you have is valuable enough to bury." instead;
 	if player is in anger range:
-		say "That would reunite the haunter with the ruby, but he might suspect you of taking it." instead;
+		say "That would reunite the haunter with the ruby, but you might be a prime suspect for taking it. Maybe you can use the haunter to take out an enemy." instead;
 	if player is in hedron:
 		say "The walleyes would find the ruby and take it, and you'd be out--but maybe you could frame them for its theft by burying the ruby somewhere near." instead;
 	if player is not in Collapsed Old Places:
@@ -25022,7 +25022,7 @@ tea tray	"[one of]Tea looks tasty. And easy to dispose of.[plus][or]You can EAT 
 trout	"[if trout is in range]You can't help the trout fight, but you can deal with the carps--or pikes.[else if trout is reflexive][one of]Aunt Tuna wants you to show her trout what you did.[plus][or]You can't attack anyone in someone's home.[plus][or]You can TUTOR the trout.[minus][cycling][else]You've helped the trout all you can.[end if]"
 reward drawer	"[if wrap is off-stage]You need to please Aunt Tuna to get what's in the drawer[else]You got what's in the drawer[end if]."
 cans	"[one of]You can get rid of them for a last lousy point.[plus][or]If you've been using the settler, you really should know this verb.[plus][or]SCAN the cans.[minus][cycling]"
-ruby	"[one of]The ruby is useful.[plus][or]The ruby is the haunter's, and he's upset someone stole it.[plus][or]You don't want to be caught with the ruby, but maybe if you can frame someone or some other people...[plus][or]You can BURY the ruby in the Collapsed Old Places[if rigged digger is off-stage], though you need something to bury it with[end if].[minus][cycling]"
+ruby	"[one of]The ruby is useful.[plus][or]The ruby is the haunter's. The haunter is someone stole the ruby.[plus][or]You don't want to be caught with the ruby, but maybe if you can frame someone or some other people...[plus][or]You can BURY the ruby in the Collapsed Old Places[if rigged digger is off-stage], though you need something to bury it with[end if].[minus][cycling]"
 wrap	"[if warp-try is true][one of]You know the verb but not where to warp the wrap.[plus][or]Where could you annoy someone with the wrap? Someone with sensitive ears?[plus][or]The sandier sardine in Achers['] Arches will run if you warp the wrap near him.[minus][cycling][else][one of]So what's the verb to pop the wrap?[plus][or]Twenty-four choices. Six if you scan it. One if you cheat.[plus][or]You need to WARP the wrap.[plus][or]But you can't warp the wrap any old place. It might be fun and useful to annoy somefish.[plus][or]Who has sensitive hearing the wrap would annoy?[plus][or]WARP the wrap by the sardine.[minus][cycling]"
 rude door	"[one of]The rude door has several puzzles.[plus][or]You need to dispose of the door's knob.[plus][or]You need to get rid of the skis on the door.[plus][or]The crate you keep getting hit with is a pain, too.[plus][or]See each sub-part for individual clues.[cycling]"
 shut huts	--	rude door
@@ -25036,7 +25036,7 @@ haunter	"[if haunter is reflexed][one of]Now you've gained its trust, you will w
 walleyes	"[one of]The walleyes won't let you explore the Hedron. You need to get rid of them.[plus][or]If you talk to the walleyes, they'll mention how you'd need to be a big scary ghost or something.[plus][or]You need a ghost to come along for the ride to scare the walleyes.[plus][or]Hide something the ghost wants in Collapsed Old Places.[minus][cycling]"
 o-t	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or]You need to cover the area to disable the ol['] trap, but not with spies watching you. The haunter can take care of them.[plus][or]Once the haunter's scared everyone away, what's an action to scour for a switch for the ol['] trap?[plus][or]PATROL.[cycling]"
 a-p	"[one of]You can just enter the portal.[plus][or]You won't know where to go through the portal without a gleaner.[plus][or]Find the two pearl pieces, by the arches and from Aunt Tuna's gift.[plus][or]The gleaner can't tell you how to use the portal til it's bigger.[plus][or]ENLARGE the gleaner to make the portal work for you.[cycling]"
-scrawl	"[one of]The haunter is beneath here. You may need to recover him.[plus][or]What do you often do with the undead?[plus][or]ETAHN RU is his name, and he is NEAR HUT.[plus][or]You should be able to UNEARTH him, once you have the proper equipment.[plus][or]You'll also need to have a reason to do so, or something to show him.[minus][cycling]"
+scrawl	"[one of]The haunter is beneath here. You may need to recover it.[plus][or]What do you often do with the undead?[plus][or]ETAHN RU is the haunter's name, and it is NEAR HUT.[plus][or]You should be able to UNEARTH it, once you have the proper equipment.[plus][or]You'll also need to have a reason to do so, or something to show it.[minus][cycling]"
 thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The haunter[if haunter is off-stage], once you find it, [end if]will be glad to see what is under the thin hint.[minus][cycling]"
 paler pearl	"[if tea tray is not in lalaland][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the handsome sand home.[plus][or][a-t-check][plus][or]EAT TEA.[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Arches.[plus][or]How would you comb through the arches?[plus][or]SEARCH.[minus][cycling][end if]"
 gleaner	"[one of]The gleaner may help you with the last bit, but it is too small.[plus][or]What could you do to make the GLEANER bigger?[plus][or]The settler gives you where the vowels are.[plus][or]ENLARGE the gleaner.[minus][cycling]"
