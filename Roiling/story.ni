@@ -110,7 +110,7 @@ Roman Manor is an unsolved region. regtab of Roman Manor is table of roman manor
 
 last-loc of Roman Manor is Dusty Study. [needed for GT command]
 
-Stores is an unsolved spoiled region. regtab of Stores is table of routes nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
+Stores is an unsolved spoiled region. regtab of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
 Routes is a region. regtab of Routes is table of routes nudges. regana of Routes is table of routes anagrams. max-score of Routes is 18. min-score of Routes is 17. [worst ad]
 
@@ -3807,7 +3807,7 @@ plaster	"The plaster crackles and shines slightly."
 pram	"The pram creaks back and forth slightly."
 rifle	"Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at you."
 Store B	"The smell from Store B becomes fruitier and more delicious." [START stores]
-Store H	"Store H looks totally different from all the other stores for a second."
+Store H	"Store H looks totally different for a second."
 Store K	"An odd sweet smell from Store K, for a second."
 Store N	"'Dude, you like must be close!' you hear from Store N."
 Store P	"You hear old forgotten magic words which seem like they might almost apply if they were in the right order."
@@ -6708,18 +6708,78 @@ check dropping something:
 
 chapter eating
 
+understand the command "eat" as something new.
+understand "eat [something]" as eating.
+
 Procedural rule while eating something: ignore the carrying requirements rule.
 
 procedural rule while eating: [taking before eating]
 	if noun is lamb or noun is tea tray or noun is clam or noun is oyster-x or noun is b-b or noun is lobster or noun is clear catsup or noun is deli rye:
 		ignore the carrying requirements rule.
 
-check eating:
+check eating (this is the general eating rule):
 	if noun is a hintpastry:
 		say "You'll want to put the pastry in the toaster[if toaster is in Danger Garden]back in the garden[end if], first, or it'll just be calories." instead;
+	if noun is escaroles:
+		say "They aren't nearly substantial enough." instead;
+	if noun is casserole:
+		say "Ugh. You're not sure what's in it, and you're probably thinking too much about what is. You'd have to be a gourmand to eat this, even after a heavy workout." instead;
 	if noun is deli rye:
 		try taking deli rye instead;
 	say "That's not in a test-taste state." instead;
+
+check eating grid:
+	say "Well, maybe if you were a spy like Elmo. Rather, you should digest the information written therein." instead;
+
+check eating fretful truffle:
+	if truf-warn is false and scams is false:
+		now truf-warn is true;
+		ital-say "this chocolate is a cool cheat that tells you what to [if cur-score of troves is 0]type[else]think next[end if]. Are you sure you want to do this?";
+		unless the player consents:
+			say "Okay. This warning won't appear again." instead;
+	now spoilit is true;
+	try troves-hinting;
+	now spoilit is false instead;
+
+rule for supplying a missing noun when eating:
+	if player is in sand home and tea tray is in sand home:
+		now the noun is the tea tray;
+
+check eating (this is the try to eat a hint tart rule) :
+	If noun is a hintpastry:
+		if xrayvision is true:
+			say "You're already under the influence of a pastry. XRAY something before continuing.";
+		if diners are visible:
+			say "The diners scoff at you eating something like that cold--well, eating that at all--and you're too embarrassed to do so[if toaster is visible]. But maybe you can put it in the toaster[end if]." instead;
+		if salesmen are visible:
+			say "'You know what would go great with that? NERD-AID!' says one salesman. The others agree, quickly." instead;
+		if noun is not heated:
+			if toaster is visible:
+				say "You figure you'd better heat that up in the toaster first. So you do. Mmm, not bad[if diners are visible]. The diners let loose some dry wit about people who enjoy something THAT unrefined[end if].";
+				try inserting noun into toaster instead;
+			say "You should probably heat [if noun is plural-named]those[else]that[end if] up first. Like, put it in [if player has toaster]that toaster you have[else if player is in Danger Garden]the toaster on the ground[else]some household appliance for warming pastries[end if]." instead;
+
+check eating b-b:
+	say "[if b-b is reflexed]Bleah. That'd go down terribly[otherwise]Don't think gluttonously[end if]." instead;
+
+check eating curst crust:
+	if swears < 1:
+		say "[bug-report]" instead;
+	if mrlp is stores:
+		say "You should probably eat it when you're beyond the, er, spot." instead;
+	if mrlp is not presto:
+		say "The crust fell from the remains of store P. Perhaps it's best to eat it there." instead;
+	if crust-warn is false:
+		say "Ugh! This crust may help you out, but it may be--wait for it--distasteful and spoiled. Go ahead anyway?";
+		now crust-warn is true;
+		unless the player yes-consents:
+			say "OK, maybe later. This warning won't appear again." instead;
+	say "You wince and prepare to take a bite...";
+	now spoilit is true;
+	try presto-hinting;
+	now spoilit is false instead;
+
+section taste means eat
 
 understand the command "taste" as something new.
 
@@ -9886,8 +9946,9 @@ check going inside in cavern:
 		say "You'll probably need a way through that plaster." instead;
 	if paperwall is visible:
 		say "You'll probably need a way through that paperwall." instead;
-	say "You walk through the former paperwall--and through an obscure part of Old Warpy. You hear a voice: 'You! Find! Unify! Do!' It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different.";
+	say "You walk through the former paperwall--and through an obscure part of Old Warpy. You hear a voice: 'You! Find! Unify! Do!' Is it Old Man Almond? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
 	now satchel is in lalaland;
+	now teariest treatise is in lalaland;
 	solve-region roman manor;
 	the rule succeeds;
 
@@ -10210,9 +10271,6 @@ bye-Elmo-quip	"[if hold-it-up is false][note-gretta]A pause. 'Go, you doer. You'
 section Gird Grid
 
 the Gird Grid is a warpable thing. description is "[bug-report]"
-
-check eating grid:
-	say "Well, maybe if you were a spy like Elmo. Rather, you should digest the information written therein." instead;
 
 check examining the Gird Grid:
 	now gird grid is examined;
@@ -12873,16 +12931,6 @@ the fretful truffle is a thing. description is "It's probably a character buildi
 
 truf-warn is a truth state that varies.
 
-check eating fretful truffle:
-	if truf-warn is false and scams is false:
-		now truf-warn is true;
-		ital-say "this chocolate is a cool cheat that tells you what to [if cur-score of troves is 0]type[else]think next[end if]. Are you sure you want to do this?";
-		unless the player consents:
-			say "Okay. This warning won't appear again." instead;
-	now spoilit is true;
-	try troves-hinting;
-	now spoilit is false instead;
-
 spoilit is a truth state that varies. spoilit is false.
 
 chapter potholes
@@ -13590,23 +13638,6 @@ swears is a number that varies. swears is usually 2.
 section crust parsing
 
 crust-warn is a truth state that varies.
-
-check eating curst crust:
-	if swears < 1:
-		say "[bug-report]" instead;
-	if mrlp is stores:
-		say "You should probably eat it when you're beyond the, er, spot." instead;
-	if mrlp is not presto:
-		say "The crust fell from the remains of store P. Perhaps it's best to eat it there." instead;
-	if crust-warn is false:
-		say "Ugh! This crust may help you out, but it may be--wait for it--distasteful and spoiled. Go ahead anyway?";
-		now crust-warn is true;
-		unless the player yes-consents:
-			say "OK, maybe later. This warning won't appear again." instead;
-	say "You wince and prepare to take a bite...";
-	now spoilit is true;
-	try presto-hinting;
-	now spoilit is false instead;
 
 track-crust is a truth state that varies.
 
@@ -14911,12 +14942,6 @@ check putting the casserole on the skid:
 
 check taking the escaroles:
 	say "Bleah. They seem like useless garnish." instead;
-
-check eating the escaroles:
-	say "They aren't nearly substantial enough." instead;
-
-check eating the casserole:
-	say "Ugh. You're not sure what's in it, and you're probably thinking too much about what is. You'd have to be a gourmand to eat this, even after a heavy workout." instead;
 
 before fliptoing when mrlp is demo dome:
 		say "This game tried to flip something, but it should not have. BUG." instead;
@@ -17095,6 +17120,8 @@ to say oy-can-win:
 
 after fliptoing eeks:
 	bowl-to-home;
+	if cans are in lean lane:
+		poss-d;
 	continue the action;
 
 to bowl-to-home:
@@ -19432,24 +19459,6 @@ instead of eating a person:
 		try swearing obscenely instead;
 	say "You have no fork, or anything that could become a fork. Plus, gross." instead;
 
-rule for supplying a missing noun when eating:
-	if player is in sand home and tea tray is in sand home:
-		now the noun is the tea tray;
-
-check eating (this is the try to eat a hint tart rule) :
-	If noun is a hintpastry:
-		if xrayvision is true:
-			say "You're already under the influence of a pastry. XRAY something before continuing.";
-		if diners are visible:
-			say "The diners scoff at you eating something like that cold--well, eating that at all--and you're too embarrassed to do so[if toaster is visible]. But maybe you can put it in the toaster[end if]." instead;
-		if salesmen are visible:
-			say "'You know what would go great with that? NERD-AID!' says one salesman. The others agree, quickly." instead;
-		if noun is not heated:
-			if toaster is visible:
-				say "You figure you'd better heat that up in the toaster first. So you do. Mmm, not bad[if diners are visible]. The diners let loose some dry wit about people who enjoy something THAT unrefined[end if].";
-				try inserting noun into toaster instead;
-			say "You should probably heat [if noun is plural-named]those[else]that[end if] up first. Like, put it in [if player has toaster]that toaster you have[else if player is in Danger Garden]the toaster on the ground[else]some household appliance for warming pastries[end if]." instead;
-
 section rowdying
 
 every turn (this is the cool rowdy rule):
@@ -21069,9 +21078,6 @@ check scaning b-b:
 
 instead of taking b-b:
 	say "[if b-b is reflexed]It'll be barely useful[otherwise]Your inventory doesn't expand infinitely[end if]."
-
-check eating b-b:
-	say "[if b-b is reflexed]Bleah. That'd go down terribly[otherwise]Don't think gluttonously[end if]." instead;
 
 Ed Riley is a vanishing man. description is "'You won't get past Ed Riley, yielder!' he booms. For all this bluster, you get the feeling his loud voice hides an insecurity.". "Ed Riley acts as a steward here to keep you eastward. He is carrying an ER, YIELD sign and a loaf of deli rye."
 

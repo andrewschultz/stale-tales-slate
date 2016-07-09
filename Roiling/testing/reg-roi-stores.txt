@@ -1,6 +1,6 @@
 ###############################
 #
-#reg-roi-manor-stores.txt
+#reg-roi-stores.txt
 #
 #regression test for trying ways through stores
 #also includes general tries at magic or whatever
@@ -10,6 +10,8 @@
 ** interpreter: /home/andrew/prt/glulxe -q
 
 * weird stuff
+
+>ts
 
 >storea
 Nothing happens. You'd think that store would be a good candidate to change, but it isn't
@@ -25,11 +27,11 @@ Nothing happens. You'd think that store would be a good candidate to change, but
 Nothing happens. You'd think that store would be a good candidate to change, but it isn't
 
 >storef
-That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures.
+That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures!
 >storei
-That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures.
+That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures!
 >storem
-That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures.
+That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures!
 
 >storej
 Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway
@@ -44,7 +46,7 @@ Sadly, trying to change the windows wouldn't actually change the stores enough t
 Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new.
 
 >ethros
-No--it's a weird place you need to get to, sort of--the rest.
+Store H looks totally different for a second.
 
 >shells
 The shells don't move. Perhaps they are just a clue.
@@ -61,17 +63,16 @@ It's probably counterproductive to change--it's more an information booth.
 >olster
 You search for a magic word but feel, er, lost.
 
+>trekos
+An odd sweet smell from Store K, for a second.
+
+>tokers
+
 >treko
 They already lost one of their collective, man. It'd be a bummer
 
 >trekos
-WRONG
-
->tokers
->trekos
-WRONG
-
-368990052
+They are who they are. You should maybe try to get their friend back.
 
 >routes
 >troves
@@ -79,20 +80,14 @@ WRONG
 >utreo
 You don't need to do anything with an individual route. Just go in.
 
->utreo
-WRONG
-
 >otver
 No need to focus on a specific trove. Just enter or take the troves.
 
 >otvers
-WRONG
+You've got an entry. No need to seal it up.
 
 >sooter
 Nothing happens. You consider going through the other 358 possibilities, but that'd be so rote.
-
->sooter
-Nothing happens. You consider going through yet more possibilities, but that'd be so rote.
 
 >sqerto
 Nothing happens. You didn't really expect it to since, hey, no u with the q.
@@ -133,9 +128,11 @@ The engraving is meant to be read. You can modify it with other actions.
 >engravinsg
 You can only change the enrgavings by working through the other stores.
 
+>purloin patcher
 >ptacher
 The patcher doesn't need to be changed. It does the changing if you point it.
 
+>x otters
 >ifdel
 You're not near enough to the barley to affect it. You need to ENTER through the otters
 

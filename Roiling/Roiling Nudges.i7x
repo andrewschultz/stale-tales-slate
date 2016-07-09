@@ -1306,7 +1306,7 @@ to say lec-un:
 	say "The lecturer is unchangeable in his views, but maybe he is physically moveable"
 
 to say ian-un:
-	say "Ian is unchangeable, but maybe he is moveable.";
+	say "Ian is unchangeable, but maybe he is moveable";
 
 section routes nudges
 
