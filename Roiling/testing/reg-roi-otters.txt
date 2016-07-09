@@ -8,7 +8,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _seed-1-check
+* seed-1-check
 
 >seed 1
 >gonear macks
@@ -71,7 +71,7 @@ You feel you're on the right track to expose the macks. But that's not quite it.
 >despairingly
 by one point
 
-* _seed-2-check
+* seed-2-check
 
 >seed 2
 >gonear macks
@@ -128,7 +128,7 @@ You feel you're on the right track to expose the macks. But that's not quite it.
 >emotionally
 by one point
 
-* _seed-3-check
+* seed-3-check
 
 >seed 3
 >gonear macks
@@ -173,7 +173,7 @@ You feel you're on the right track to expose the macks. But that's not quite it.
 >sobbingly
 by one point
 
-* _seed-4-check
+* seed-4-check
 
 >seed 4
 >gonear macks
@@ -216,7 +216,7 @@ You feel you're on the right track to expose the macks. But that's not quite it.
 >wearingly
 by one point
 
-* _seed-5-check
+* seed-5-check
 
 >seed 5
 >gonear macks
@@ -237,7 +237,7 @@ You feel you're on the right track to expose the macks. But that's not quite it.
 >tediously
 by one point
 
-* _seed-6-check
+* seed-6-check
 
 >seed 6
 >gonear macks
@@ -248,7 +248,7 @@ You feel you're on the right track to expose the macks. But that's not quite it.
 >silently
 by one point
 
-* _seed-7-check
+* seed-7-check
 
 >seed 7
 >gonear macks
@@ -261,7 +261,7 @@ You feel you're on the right track to expose the macks. But that's not quite it.
 >shoddily
 by one point
 
-* _seed-8-check
+* seed-8-check
 
 >seed 8
 >gonear macks

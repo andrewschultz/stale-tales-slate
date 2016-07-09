@@ -422,49 +422,49 @@ You Did Great
 ###############################everything below here is a full test
 # search for (asterisk) (underscore)full and replace it with (asterisk) full, or vice versa
 
-* _full-4
+* full-4
 
 >{include} _others-intro
 >{include} _others-4
 >{include} _others-endgame
 
-* _full-14
+* full-14
 
 >{include} _others-intro
 >{include} _others-14
 >{include} _others-endgame
 
-* _full-24
+* full-24
 
 >{include} _others-intro
 >{include} _others-24
 >{include} _others-endgame
 
-* _full-124
+* full-124
 
 >{include} _others-intro
 >{include} _others-124
 >{include} _others-endgame
 
-* _full-34
+* full-34
 
 >{include} _others-intro
 >{include} _others-34
 >{include} _others-endgame
 
-* _full-134
+* full-134
 
 >{include} _others-intro
 >{include} _others-134
 >{include} _others-endgame
 
-* _full-234
+* full-234
 
 >{include} _others-intro
 >{include} _others-234
 >{include} _others-endgame
 
-* _full-1234
+* full-1234
 
 >{include} _others-intro
 >{include} _others-1234

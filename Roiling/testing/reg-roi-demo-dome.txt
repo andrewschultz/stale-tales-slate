@@ -355,25 +355,38 @@ You don't need to flip anything here, really. Certainly not a room.
 Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that.
 
 >score
-It looks like you've looked through everything. Thanks for all the time you spent, and I hope it was worth it!
+/You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|trifle filter|stand-up dustpan|plastic scalp-it|rudest duster) here.
 
 >au 1
 >u
+/You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|trifle filter|stand-up dustpan|plastic scalp-it|rudest duster) in Sparse Spares.
 >s
-You take a break, ignoring the final seven things in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers' money.
+You take a break, ignoring the final eight things in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers' money.
+
+>undo
+>d
 
 >x trifle
+/You could still examine the (parcel placer|parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it|rudest duster) here.
 >x placer
+/You could still examine the (parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it|rudest duster) here.
 >x duster
+/You could still examine the (parcels clasper|bolt case|larded ladder|stand-up dustpan|plastic scalp-it) here.
 >x dustpan
+/You could still examine the (parcels clasper|bolt case|larded ladder|plastic scalp-it) here.
 >x ladder
+/You could still examine the (parcels clasper|bolt case|plastic scalp-it) here.
 >x plastic
+/You could still examine the (parcels clasper|bolt case) here.
 >x bolt case
+You could still examine the parcels clasper here.
 
 >au 1
 >u
+You could still examine the parcels clasper in Sparse Spares.
+
 >s
-You take a break, ignoring the parcel clasper in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers' money.
+You take a break, ignoring the parcels clasper in Sparse Spares, and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers' money.
 
 >undo
 >d
@@ -382,6 +395,7 @@ You take a break, ignoring the parcel clasper in Sparse Spares, and get back to,
 >u
 >s
 You take a break and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers' money.
+!ignoring
 
 * demo-saw-some
 
@@ -405,13 +419,19 @@ You take a break and get back to, well, running Yorpwald. The museum was about t
 >e
 >e
 >x novella
+>read novella
 >w
 >s
 Are you sure you want to leave before exhaustively looking at everything? You can type SCORE to see what you still haven't done.
 >au 1
 >s
-It's--yes, you've sort of lived it, already. You're just too busy for frivolity. You've had a look at everything.
+It's--yes, you've sort of lived it, already. You're just too busy for frivolity. You've had a look at everything, just not in total detail.
 Epilogue's Up! Lie, Ego
 
 >undo
 
+>d
+>x clasper
+>u
+>s
+busy for frivolity.

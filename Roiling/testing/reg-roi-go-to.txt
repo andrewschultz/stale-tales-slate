@@ -8,7 +8,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* manor-go-to
+* _manor-go-to
 
 >go to me
 >go to study
@@ -24,7 +24,7 @@ That's not a room or thing I recognize.
 >go to elmo
 
 >think
->x bookcase
+>x shelf
 >open door
 >1
 >gt study
@@ -77,12 +77,12 @@ Your manor was surrounded, and you escaped. Bad idea to turn back.
 >staple
 >in
 
-* stores-go-to
+* _stores-go-to
 
 >ts
 
 >gt study
-WRONG
+You already solved Roman Manor.
 
 >tokers
 >nestor
@@ -95,9 +95,9 @@ The command you may be looking for is RETRY.
 >outside
 
 >gt lectures
-You have better things to do than think of going back there.
+You already took care of things there.
 
-* routes-go-to
+* _routes-go-to
 
 >ts
 
@@ -122,7 +122,7 @@ Same Mesa
 
 >against
 >gt Circle
-WRONG
+You can't run from the giant!
 
 >astride
 >below
@@ -144,12 +144,15 @@ Adobe Abode
 >out
 
 >gt horbert
-WRONG
+That person has served the necessary purpose.
 
 >from
 
 >gt horbert
-WRONG
+That person has served the necessary purpose.
+
+>gt runed book
+That has served the necessary purpose.
 
 >beneath
 
@@ -169,12 +172,16 @@ The crowd would be sad to see you return, unsuccessful.
 >gt pier
 You have no idea how to turn the cripple clipper around, and you don't want to.
 
+>gt mesa
+Not from the boat, you aren't. You're much closer to your goal right now.
+
 >behind
 >between
 Strip of Profits
 
-* troves-go-to
+* _troves-go-to
 
+>ts
 >troves
 >in
 
@@ -232,12 +239,13 @@ Your score has just gone up by one point
 
 Strip of Profits
 
-* presto-go-to
+* _presto-go-to
 
 >ts
 
 >enter spot
 >presto
+>in
 
 >umph
 >pooh
@@ -279,7 +287,7 @@ You'll have to walk through the mazeroom, from L to V. Or, well, just solve the 
 
 >mazeltov
 >gt lev matzo
-WRONG
+You don't want to go back to or through the volt maze you solved.
 
 >there
 >n
@@ -289,16 +297,18 @@ WRONG
 >so long
 
 >gt dirge ridge
-WRONG
+"Nyurgh! Hungry!" you recall Leo and Rand saying. Maybe if you can make some food, and if once you have some manual labor they'd be better suited for, you can visit them.
 >gt leo
-WRONG
+"Nyurgh! Hungry!" you recall Leo and Rand saying. Maybe if you can make some food, and if once you have some manual labor they'd be better suited for, you can visit them.
 
 >n
 >screen
 >put screen on slab
->escaroles
+>casserole
 >leaf
 >skid
+>gt disk
+You can flip back to the disk.
 >push skid s
 >g
 >g
@@ -310,14 +320,23 @@ Phat Path
 >n
 >keyboard
 >gt Phat Path
-WRONG
+You should have what you need. It might be dangerous, or just plain distracting, to go back out with all this computer work.
+>put keyboard on slab
+>put screen on slab
+>disk
+>gt skid
+You can flip back to the skid.
 
+* _oyster-go-to
 
-* oyster-go-to
+>ts
+>oyster
+>in
+
 >spit
 >sing
 >inset
->out
+>stroll
 
 >gt shop
 The trolls would not welcome you back.
@@ -340,6 +359,7 @@ If only it was that easy. Well, I hope it's not too hard to figure the right act
 >gt shop
 If only it was that easy. Well, I hope it's not too hard to figure the right action.
 
+>leap
 >gt freight
 You don't really want to revisit the crays.
 >gt shore
@@ -360,19 +380,23 @@ Now you've visited the much-nicer Handsome Sand Home, you can't find your way ba
 >purloin gleaner
 >enlarge gleaner
 >x gleaner
->abstract walleyes to lalaland
+>abstract ruby to ll
+>abstract walleyes to ll
 >gonear hedron
 >patrol
+>purloin lance
+>purloin wipes
+>clean lance
 >in
 
 >gt anger range
 Aw, c'mon, the ant should be no problem.
->tan
+>tan ant
 Tenfold
 >gt sanctum
 You got rid of the ant. Nothing more to do there.
 
-* towers-go-to
+* _towers-go-to
 
 >seed 1
 >ts
@@ -403,10 +427,61 @@ That's way in the past.
 
 * otters-go-to
 
+>seed 1
 >a5
+>in
 >barely
+>reedily
+>w
+>nastily
+>blearily
+>bossily
+>1
+>gt barley
+Gretta looks around uneasily, but she doesn't seem to be glaring at you. So you should probably listen up, or you can RECAP to see your options.
+>3
+>n
+>because
+>else
+>s
+>e
+>n
+>angrily
+>brutely
+>n
+>slow
+>coolest
+>garbed
+>artsy
+>s
+>s
+>s
+>loathingly
+>stoically
+>s
+>parrot
+>snail
+>snipe
+>hornets
+>n
+>n
+>w
+>atom
+>w
+>raptor
+>deeply
+>quickly
+>w
+>gt barley
+"Good fail of dialog!" Elvira can negotiate awkward silence better than you can.
 
-* others-go-to
+>7
+>gt barley
+You leave her sin shrine with extra quickness before getting a shiner.
+
+Bleary Barley
+
+* _others-go-to
 
 >ts
 >gonear rustic

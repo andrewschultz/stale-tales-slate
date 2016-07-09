@@ -1574,7 +1574,7 @@ UNDO
 No, you were right before, there. You just need some help to make that magic word in your notepad work, now. Or maybe you don't!
 
 >stroll xxx
-WRONG
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
 
 >stroll
 Olde Lode
@@ -1591,7 +1591,7 @@ The clam still seems enraged.
 >calm
 Your score has just gone up by one point
 >caml
-You feel a need to panic and flee after calming the clam.
+Odd, how you feel a need to panic and flee after calming the clam.
 
 >rnu
 The urn sits there, daring you to walk away.
@@ -1613,6 +1613,7 @@ A frat would just sink into the river, creating more problems. Plus fratboys pro
 
 >a cone
 That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the raft or boats are a better bet.
+
 >ocean
 is, in fact, a herring
 UNDO
@@ -1706,7 +1707,7 @@ Lean Lane
 You aren't looking for anyone named Neal. Unless the trout is named Neal. (Spoiler: he's not.) Maybe you should figure how to find the eeks.
 
 >elan
-Lean Lane will never be pretty, even with those cans gone. You're looking for someone. Or maybe you should be listening.
+Lean Lane will never be pretty, even if those cans disappeared. You're looking for someone. Or maybe you should be listening.
 
 ##>scan cans
 >scna
@@ -1763,7 +1764,7 @@ You try to describe how to fight, but that's not it.
 >tutor
 Your score has just gone up by one point
 >tutro
-You can't find any other way to describe fighting.
+Retutor? Torture. Rot. True!
 
 ##>swipe wipes
 >swiep
@@ -1775,9 +1776,9 @@ min point
 Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on.
 
 >bury
-Nothing worth burying.
+That's not something worth BURYing.
 >bury wipes
-Nothing worth burying.
+That's not something worth BURYing.
 
 >w
 >n
@@ -1823,7 +1824,7 @@ The door's already rood. I mean rude. Try seeing what's around it, instead.
 >rued
 You can't have rued the door until you've got beyond it. Try seeing what's around it, instead.
 >pone
-The message is corny, but the door's a piece of cake [if knob is not reflexed]once you figure[else]since you figured[end if] what to do with the knob.
+The message is corny, but the door's a piece of cake once you figure what to do with the knob.
 >thus
 Your inactive word does nothing to the huts. Perhaps you can do something to the door.
 
@@ -1843,6 +1844,12 @@ Your score has just gone up by one point
 >bokn
 You should leave the knob to b'n OK.
 
+>thus
+Your inactive word does nothing to the huts. But you don't need to do any more, since you can walk in.
+
+>pone
+The message is corny, but the door's a piece of cake since you figured what to do with the knob.
+
 >in
 a hut
 
@@ -1852,6 +1859,8 @@ Sorry! I'm too busy to cameo in my own game at the moment.
 The hut only looks like Utah. However, I bet Adenville is nice. Or it would be, if it existed. Man, I loved those Great Brain books.
 
 ##>bust tubs
+>stub
+You tap the tubs lightly with your toe. Then you tap them enough to hurt. Not even a thin crack appears, but your toe turns a bit red. Or feels like it did.
 >buts
 You talk yourself out of any idea there is something inside the tubs, and you discourage yourself from believing you have the strength anyway. You are not fooling yourself.
 >sbtu
@@ -1861,8 +1870,6 @@ Your score has just gone up by one point
 >sbtu
 The tubs already got broken up.
 
->stub
-You tap the tubs lightly with your toe. Then you tap them enough to hurt. Not even a thin crack appears, but your toe turns a bit red. Or feels like it did.
 >buts
 You talk yourself out of any idea there is something inside the tubs, and you discourage yourself from believing you have the strength anyway. You are not fooling yourself.
 
@@ -1881,7 +1888,7 @@ You need to dig to some purpose, though maybe somewhere else
 Don't sweat the extra words. Just sweat.
 
 >sweta
-You realize you didn't quite psyche yourself to fix the waste.
+The heaps are still technically waste, but you may want to deal with them more delicately.
 >sweat
 Your score has just gone up by one point
 min point for
@@ -1916,7 +1923,7 @@ The lance is still itself--and you probably did enough cleaning it.
 >s
 
 >dig
-You need to dig to some purpose, like uncovering the haunter--and not just dig.
+You need to dig to some purpose, maybe to hide something here to frame the walleyes--and not just dig.
 
 >w
 Arches
@@ -1965,14 +1972,14 @@ You need to dig to some purpose, maybe hide something here to frame the walleyes
 
 ##>bury ruby
 >buyr
-You futz with the ruby a bit, and it almost seems to hide itself.
+No, that's not quite it. The ruby dulls as if covered by dirt.
 >bury
 Your score has just gone up by one point
 >buyr
 The ruby's hidden well. No need to tinker.
 
 >dig
-Now you've buried the ruby, you could maybe show what you've found. No point undoing what you did
+You managed to bury the ruby. On to the next bit.
 
 >e
 >s
@@ -1981,7 +1988,7 @@ Now you've buried the ruby, you could maybe show what you've found. No point und
 ##>unearth haunter
 
 >unearht
-You start randomly digging, but you need something more specific
+You start randomly digging, but despite having a good digger, you probably aren't doing it quite right.
 >unearth
 by one point
 >unearht
@@ -1989,7 +1996,7 @@ The haunter needs to be dealt with otherwise.
 
 ##>assuage sausage
 >assuaeg
-You're a bit tongue-tied, but that seems close.
+Don't oversell it! Just take the haunter to where it was probably (heh) the walleyes who buried the ruby.
 >assuage
 by one point
 >assuaeg
@@ -2009,7 +2016,7 @@ You're finished with the digger
 >e
 
 >tarp
-Nothing happens. You wonder if part of the ol; trap is that an ol' tarp will fall on you and suffocate you, if you walk in there.
+Nothing happens. You wonder if part of the ol' trap is that an ol' tarp will fall on you and suffocate you, if you walk in there.
 
 >part trap
 The ol' trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.
@@ -2053,7 +2060,7 @@ That's not something you
 >redial
 You can't even dial with the yapper around
 >prepya
-"Eh? What?" says the yapper. "Speak up, you were about to make sense there."
+"Quit yer mumblin, ya perp!" the yapper yells, turning red. "You here to do business or not?"
 >prepay
 Your score has just gone up by one point
 >prepya
@@ -2074,16 +2081,16 @@ The dialer seems to click slightly.
 >derail
 Your score has just gone up by one point
 >derali
-The dialer seems to click slightly. There's something more to do, but that's not quite it.
+There's something more to do, but that's not quite it.
 
 >redial
-Maybe in a bit, but you haven't pulled the lever to activate the DERAIL command yet.
+Hm. Nothing happened. You may need to reset things, here.
 
 >pull lever
 
 ##>redial dialer
 >redila
-The dialer seems to click slightly. There's something more to do, but that's not quite it.
+There's something more to do, but that's not quite it.
 >redial
 Your score has just gone up by one point
 
@@ -3503,7 +3510,7 @@ You've done enough researching, but you can just go north.
 >n
 You Did Great
 
-* _big-go
+* big-go
 
 >{include} _manor
 
@@ -3550,7 +3557,7 @@ Rustic Citrus
 >in
 >{include} _others
 
-* _summarize
+* summarize
 
 >purloin passport
 >gonear gates stage
@@ -3559,26 +3566,26 @@ Rustic Citrus
 >n
 >missed
 
-* _only-manor
+* only-manor
 
 >{include} _manor
 
-* _only-stores
+* only-stores
 
 >gonear strip
 >{include} _stores
 
-* _only-routes
+* only-routes
 
 >gonear same mesa
 >{include} _routes
 
-* _only-troves
+* only-troves
 
 >gonear rathole
 >{include} _troves
 
-* _only-presto
+* only-presto
 
 >gonear gyre
 >{include} _presto
@@ -3589,19 +3596,19 @@ Rustic Citrus
 >gonear posh hops shop
 >{include} _oyster
 
-* _only-towers
+* only-towers
 
 >seed 1
 >gonear trefoil
 >{include} _towers
 
-* _only-otters
+* only-otters
 
 >seed 1
 >gonear barley
 >{include} _otters
 
-* _only-others
+* only-others
 
 >gonear rustic citrus
 >{include} _others

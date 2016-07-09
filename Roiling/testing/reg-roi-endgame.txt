@@ -21,13 +21,13 @@
 
 !ROVE OVER
 
-Would you like to RESTART, RESTORE a saved game, 
+You can also RESTART, RESTORE a saved game, QUIT, or UNDO the last command.
 
 >alt
 you only needed two ways to work the passport. The other was to PREP after you are called a perp.
 
 >lm
-Here is a list of all the general lists.
+Here's a rehash of the meta-stuff you may find interesting listed below.
 
 >lm
 Here is a list of all the lists for Roman Manor.
@@ -65,7 +65,7 @@ An all-feat leaflet flutters over the fourth wall.
 
 > form
 Here is what the game treats differently: (* = trivial)
---(Not) making PAGERS in Rustic Citrus.
+--(others) Trying to make GAPERS in Rustic Citrus.
 --(general) Dropping something.
 --Examining yourself.
 

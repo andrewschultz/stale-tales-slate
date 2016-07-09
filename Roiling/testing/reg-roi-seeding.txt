@@ -11,7 +11,6 @@
 
 >seed 1
 >gonear trefoil
-Your score has just gone up by one point
 >gone
 Your score has just gone up by one point
 >wined
@@ -42,7 +41,7 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >undo
->nodestly
+>modestly
 Your score has just gone up by one point
 
 >undo
@@ -60,7 +59,6 @@ Boy, those macks, huh?
 
 >seed 2
 >gonear trefoil
-Your score has just gone up by one point
 >ashen
 Your score has just gone up by one point
 >olden
@@ -225,7 +223,7 @@ Boy, those macks, huh?
 
 >seed 7
 >gonear frontage
->suddenly
+>shoddily
 Your score has just gone up by one point
 
 >emotionally
@@ -239,7 +237,7 @@ Boy, those macks, huh?
 
 >seed 8
 >gonear frontage
->shoddily
+>suddenly
 Your score has just gone up by one point
 
 >emotionally

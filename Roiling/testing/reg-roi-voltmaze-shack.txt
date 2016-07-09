@@ -9,7 +9,7 @@
 ** interpreter: /home/andrew/prt/glulxe -q
 
 
-* _ltov
+* ltov
 
 >w
 >w
@@ -73,7 +73,7 @@ big V
 >bigv
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 
-* _maze-walk
+* maze-walk
 
 >gonear grey gyre
 >purloin settler
@@ -158,57 +158,95 @@ As the dreidl chases you away, you hear Tom Alvez moan "Wait! I don't have a rep
 
 * shack-exit
 
->gonear shack
+>au 1
+>gonear gyre
 
-# this is not really a stable game state
+>s
+>drat
+>rats
+>s
+>ole
+>darn
+>whassup
+>n
+>n
+>bleep
+>e
+>bingo
+>put dart in gun
+>w
+>mazeltov
+>there
+>n
+>gosh
+>later
+>so long
 
->undo
+>n
+Hacks' Shack
+
+>s
+You feel you're missing something. You probably should see about the area west of the hump you didn't get past yet.
+
+>s
+>umph
+>e
+>n
+>n
+>s
+You feel you're missing something. You probably should see about the hoop in Austerer Treasure.
+
+>s
+>w
+>pooh
+>e
+>n
+>n
+>s
+You feel you're missing something. You probably should see about what the onyx censer could become.
+
+>n
+>skid
+>leaf
+>push skid s
+>g
+>g
+>put leaf on skid
+>push skid n
+>push skid n
+>push skid n
+
+Hacks' Shack
+
+>s
+You feel you're missing something. You probably should see about what the onyx censer could become.
+
+>screen
+Back at Hacks' Shack
+
+>n
+
+>s
+That drab yoke. What could it become?
+
+>n
+
+>keyboard
+
+>s
+You should have what you need. It might be dangerous, or just plain distracting, to go back out with all this computer work.
+!Phat Path
+
+>n
+
 >futon
 >leaf
 >mug
 >casserole
 >rom sticks
->s
-Phat Path
->undo
-
->n
-You can only go south here.
-
->abstract yak to ll
->s
-You feel you're missing something. You probably should see about that area west of the hump.
-
->gonear gyre
->umph
->gonear shack
->s
-
-You feel you're missing something. You probably should see about the hoop in Austerer Treasure.
-
->gonear austerer
->pooh
-
->gonear hacks' shack
->s
-You feel you're missing something. You probably should see about what that onyx censer could become.
-
->gonear phat path
->screen
-Back at Hacks' Shack
-
->n
-You can only go south here.
-
->s
-That yak. Maybe you could release it from its yoke.
-
->abstract yak to ll
->abstract yoke to ll
->purloin keyboard
->gonear shack
 
 >n
 Nothing north, but you need to just sit and finish things here anyway.
+
 >s
 You should have what you need. It might be dangerous, or just plain distracting, to go back out with all this computer work.

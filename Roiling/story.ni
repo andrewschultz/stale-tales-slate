@@ -1208,7 +1208,7 @@ to item-warp:
 	if number of carried not warpable things > 0 or number of worn not warpable things > 0:
 		if mrlp is solved:
 			if mrlp is Roman Manor or mrlp is others:
-				say "This game just removed an item it should not have. [bug-report]! => ([list of carried not warpable things]) ([list of worn not warpable things]).";
+				say "This game just removed an item it should not have: ([list of carried not warpable things]) ([list of worn not warpable things]). [bug-report]";
 			otherwise:
 				say "[one of]An acuter curate relieves you of the items you won't need any more. He points at himself. 'Rod Hare, Hoarder.' He [if player is female]mumbles pensively, 'Her road...[run paragraph on][else]points at you. 'Rad, hero.[run paragraph on][end if]' He points away. 'I scour curios.'[or]The hoarder takes your surplus stuff again.[stopping]";
 		now all carried not warpable things are in lalaland;
@@ -1243,23 +1243,27 @@ carry out gotoing:
 			try retrying instead;
 		else:
 			say "OK." instead;
-	if noureg is solved:
+	if noureg is solved and noureg is not stores:
 		say "You already solved [noureg]." instead;
-	if noureg is lalaland:
-		say "You have disposed of what you're trying to get to." instead;
 	if last-loc of noureg is unvisited:
 		d "[noureg]: [last-loc of noureg].";
 		if mrlp is noureg:
 			d "You probably used a debug trip to get here.";
 		else:
 			say "You haven't made it to that region, yet." instead;
+	if noureg is lll:
+		say "You should've gotten a different reject than this, but somehow you found a way through my code. This is a BUG I'd be interested to hear about, but fortunately, whatever you wanted to visit isn't relevant to solving the game." instead;
 	if noureg is not mrlp:
 		say "You can't jump across game regions." instead;
+	if noun is lectures and player is in strip of profits:
+		say "[if stores is solved]You already took care of things there[else]Just enter the smoke cloud[end if]." instead;
 	if noun is strip and mrlp is not stores:
 		say "This is equivalent to the RETRY command, so that's what I'll do.";
 		try retrying instead;
 	if mrlp is routes: [ROUTES]
 		if player is in mesa:
+			if grouchy old giant is in mesa:
+				say "You can't run from the giant!" instead;
 			if the-b is in mesa:
 				say "You can't go anywhere with the bean and the crowd around!" instead;
 			if thing form above is in mesa:
@@ -1273,6 +1277,8 @@ carry out gotoing:
 	if progval of noun > progval of location of player:
 		say "You seem to be getting ahead of yourself. You shouldn't know about that, yet." instead;
 	if noun is a mazeroom:
+		if volt maze is in lalaland:
+			say "You don't want to go back to or through the volt maze you solved." instead;
 		say "You'll have to walk through the mazeroom[if noun is r24], from L to V[end if]. Or, well, just solve the volt maze." instead;
 	if noun is dirge ridge and mrlp is presto: [PRESTO]
 		if Leo is dismissed:
@@ -1306,8 +1312,6 @@ carry out gotoing:
 			say "Now you've visited the much-nicer Handsome Sand Home, you can't find your way back to Lean Lane, and there really wasn't anything there." instead;
 		if noun is Scum Ant Sanctum:
 			say "You got rid of the ant. Nothing more to do there." instead;
-		if noun is lectures:
-			say "You have better things to do than think of going back there." instead;
 		say "That's off-limits." instead;
 	if location of player is scum ant sanctum:
 		say "Aw, c'mon, the ant should be no problem." instead;
@@ -1315,7 +1319,7 @@ carry out gotoing:
 		say "(The duck follows, with quick-nag quacking, though you're walking pretty fast.)";
 		move duck to noun;
 	if player is in inclosure: [OTTERS]
-		elvira-flee-taunt instead;
+		elvira-flee-taunt;
 	if mrlp is demo dome:
 		say "You rush, despite having nothing urgent to do.";
 	move player to noun;
@@ -1334,6 +1338,10 @@ carry out gotothinging:
 	d "Trying person/thing [newrm].";
 	if noun is a guardian:
 		ital-say "this could be a bit vague, since each guardian can be seen from two rooms.";
+	if noun is in lalaland:
+		if noun is skid or noun is disk:
+			say "You can flip back to [the noun]." instead;
+		say "That [if noun is a person]person [end if]has served the necessary purpose." instead;
 	try gotoing newrm instead;
 
 when play begins (this is the seed room progress for GO TO rule) :
@@ -1353,11 +1361,11 @@ table of progvals [this determines which rooms are definitively ahead of others,
 rm	rmprog	regs	why-not
 --	1	manor	"Your manor was surrounded, and you escaped. Bad idea to turn back."
 carven cavern	2	--	[manor]
---	1	routes	"[if progval of location of player is 3]Not from the boat, you aren't. You're much closer to your goal right now[else]The crowd would be sad to see you return, unsuccessful. And you can't, anyway[end if]."
+--	1	routes	"[if progval of location of player is 4]Not from the boat, you aren't. You're much closer to your goal right now[else]The crowd would be sad to see you return, unsuccessful. And you can't, anyway[end if]."
 underpass	2	--	"You already muddled your way out of there. [if progval of location of player is 2]There's gotta be a way to get through da mist[else]And onto the boat, which must go somewhere[end if]!"
 ripe pier	3	--	"You have no idea how to turn the cripple clipper around, and you don't want to."
 cripple clipper	4	-- [routes]
-posh hops shop	1	--	"The trolls would not welcome you back[if progval of location of player is 3], and it'd take too long to get there[end if]."
+posh hops shop	1	--	"The trolls would not welcome you back[if progval of location of player > 2], and it'd take too long to get there[end if]."
 olde lode	2	--	"You don't want to go back near that urn[if progval of location of player > 3], and it'd be hard, being on the other side of the shore[end if]."
 Hero's shore	3	--	"No sense crossing back. There's more on this side of the shore."
 Fighter Freight	4	--	"You don't really want to revisit the crays."
@@ -3420,7 +3428,7 @@ to solve-region (sre - a region):
 	say "Congratulations! [sre] node: done![paragraph break]";
 	if sre is otters and debug-state is true:
 		append "Test passed for Otters." to the file of debuggery;
-	if sre is stores or sre is roman manor:
+	if sre is stores:
 		continue the action;
 	repeat with po running through portals in Strip of Profits:
 		if go-region of po is sre:
@@ -3443,7 +3451,7 @@ to solve-region (sre - a region):
 			now nestor is in lalaland;
 			now tokers are in lalaland;
 			now smoke cloud is in lalaland;
-	if player is not in Strip of Profits and sre is not manor:
+	if player is not in Strip of Profits:
 		d "player not currently in Strip of Profits. Player moved from [location of player].";
 		move player to Strip of Profits;
 	if sre is not spoiled and otters-x are examined:
@@ -3466,7 +3474,7 @@ to check-the-store (po - a portal):
 eng-change is a truth state that varies.
 
 to see-about-patcher:
-	if number of solved regions >= 2 and chapter patcher is off-stage:
+	if number of solved regions > 2 and chapter patcher is off-stage:
 		say "You think, with a gay woot, 'Yow, got a way to go.' But then a voice -- 'Goal's a slog? Covert vector!' You look over and notice something behind the megaton magneto-montage. Something that wasn't there before. It's...a chapter patcher.";
 		now chapter patcher is in Strip of Profits;
 
@@ -4600,7 +4608,7 @@ to left-to-see:
 			if exhib entry is unexamined:
 				say "You saw the [exhib entry] [if location of exhib entry is location of player]here [end if]in [location of exhib entry], but you didn't examine it.";
 				continue the action;
-			say "You still have more of the [exhib entry] to look through.";
+			say "You still have more of the [exhib entry][if exhib entry is novella and novella is examined] (examined by not read)[end if] to look through.";
 			continue the action;
 	if sparse spares is unvisited:
 		say "There's some random junk below the entry to Peek Keep.";
@@ -5492,6 +5500,8 @@ carry out presto-hinting:
 			say "[if spoilit is true]You pause before eating the crust. [end if]The yak [if skid is off-stage]probably needs to be carried with something you don't have yet[else if skid is not visible]could be coaxed onto the skid you left[else if leaf is off-stage]could use some food, but you haven't found any[else if player has leaf]might like the leaf if you put it on the skid[else]needs to be pushed north[end if]." instead;
 		try objhinting drab yoke instead;
 	if hacks' shack is visited:
+		if hump is not in lalaland:
+			try objhinting hump instead;
 		if onyx censer is not in lalaland:
 			try objhinting onyx censer instead;
 		if yak is not in lalaland: [?! rearrange this]
@@ -6141,6 +6151,7 @@ after reading a command:
 		ital-say "you probably don't need more than four words per command. The most complex ones are PUT X ON Y or ASK X ABOUT Y, and a compound item like GIANT PIN can use GIANT or PIN. Adjectives usually aren't necessary, and GET ALL will never take anything harmful or lethal.";
 		now long-sent-warn is true;
 		pad-rec "long commands";
+	consider-trailing-a;
 	if word number 1 in player's command is "a":
 		if ask-warn is false:
 			say "Replacing 'a' with 'ask about.' Saying 'a' is not required for any puzzle.";
@@ -6265,6 +6276,18 @@ after reading a command:
 				say "Multiple item-pull!";
 				now getall-warn is true;
 
+section special cases
+
+to consider-trailing-a:
+	if location of player is hero's shore:
+		if the player's command exactly matches the text "a cone":
+			say "That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the raft or boats are a better bet.";
+			reject the player's command;
+	else if location of player is handsome sand home:
+		if the player's command exactly matches the text "a nut":
+			say "That's not nice. You are a guest.";
+			reject the player's command;
+
 section command reader booleans
 
 period-warned is a truth state that varies.
@@ -6379,7 +6402,11 @@ Rule for printing a parser error when the latest parser error is the only unders
 				if the player's command includes "wall":
 					say "You think about jumping off the wall, but you wonder if that'd just be violating something sacred, and you might get zapped for that. You need a way to say, the heck with that." instead;
 				say "That's maybe not how to jump to reach Ye Hoop. Maybe you sort of need to jump a certain way to get there, and not care how." instead;
-	say "I understood the first word, but it can just stand on its own as a verb. If you were trying to do something tricky with it, you shouldn't need to. So just '[word number 1 in the player's command]' should work.";
+	if number of words in the player's command > 1:
+		say "I understood the first word, but it can just stand on its own as a verb. If you were trying to do something tricky with it, you shouldn't need to. So just '[word number 1 in the player's command]' should work.";
+	else:
+		say "This should not have happened. You wrote in a valid verb, or try, but the game didn't accept it. Sorry about that.";
+	the rule succeeds;
 
 pardons is a truth state that varies.
 
@@ -6887,7 +6914,9 @@ understand the command "xyzzy" as something new.
 understand "xyzzy" as xyzzying.
 
 carry out xyzzying:
-	say "That word is a mess and holds absolutely no power for you[if cur-score of manor is 0 or mrlp is not manor]. Hopefully you'll find why soon enough[else]. Trust me, I checked all the other twenty-nine combinations[end if].";
+	dl "[cur-score of manor].";
+	d "[mrlp].";
+	say "That word is a mess and holds absolutely no power for you[if player is in dusty study and cur-score of manor is 0]. Hopefully you'll find why soon enough[else]. Trust me, I checked all the other twenty-nine combinations[end if].";
 	the rule succeeds;
 
 chapter knocking
@@ -7380,7 +7409,11 @@ check tying it to (this is the keyboard and key rule) :
 
 chapter waving
 
+understand the command "wave" as something new.
+
 understand the command "wave [something]" as something new.
+
+understand "wave" as waving hands.
 
 instead of waving hands:
 	say "A view! I wave!" instead;
@@ -13997,7 +14030,7 @@ to post-wall-brunt:
 			continue the action;
 		say "You'd like to ask for help, but you don't have enough muscle food for Leo and Rand after they pull the skid. Those escaroles simply aren't meaty enough.";
 		continue the action;
-	say "'Nyurgh! Hungry!' you catch Leo and Rand saying. [if casserole is off-stage]Maybe if you can make some food, and if[else]You've made food they might like, so[end if] once you have some manual labor they'd be better suited for, you can visit them.";
+	say "'Nyurgh! Hungry!' you recall Leo and Rand saying. [if casserole is off-stage]Maybe if you can make some food, and if[else]You've made food they might like, so[end if] once you have some manual labor they'd be better suited for, you can visit them.";
 
 section dumpster
 
@@ -14656,7 +14689,7 @@ to say increm:
 		say "'But we ain't bored yet, boss!' You convince them they sort of are, what they are getting there, and it works a bit, without using any too-charged words. A bit more, and you'll veto their vote.[no line break]";
 		now rebuked is true;
 	else:
-		say "'Us? Lot louts?' You manage to be firm but fair. You convince Leo and Rand that the computers inside may have viruses, and they understand.[paragraph break]'Real brave of ya, boss.'[paragraph break]'Dat was a good dust-up, wadn't it, boss? We'se sure glad we could helps ya. Tanks for makin['] us stuges feel like guests. You do good in da Sekret Sekter, now. Friend finder.' They go back to Dirge Ridge, muttering about workouts and high-powered workout food. Maybe you can bribe them later to help you.[no line break]";
+		say "'Us? Lot louts?' You manage to be firm but fair. You convince Leo and Rand that the computers inside may have viruses, and they understand.[paragraph break]'Real brave of ya, boss.'[paragraph break]'Dat was a good dust-up, wadn't it, boss? We'se sure glad we could helps ya. Tanks for makin['] us stuges feel like guests. You do good in da Sekret Sekter, now. Friend finder.' They go back to Dirge Ridge, muttering about workouts and high-powered workout food. 'Nyurgh! Hungry!' Maybe you can bribe them later to help you.[no line break]";
 		pad-rec-q "Leo and Rand";
 		now Leo is in Dirge Ridge;
 		now Rand is in Dirge Ridge;
@@ -15044,21 +15077,22 @@ this is the shack-south rule:
 	if keyboard is not off-stage and screen is not off-stage:
 		say "You should have what you need. It might be dangerous, or just plain distracting, to go back out with all this computer work.";
 		the rule fails;
-	if keyboard is not off-stage and screen is off-stage:
+	if screen is off-stage:
 		say "You feel you're missing something. You probably should see about [treas-west].";
-		if player has censer:
-			the rule fails;
 	else if keyboard is off-stage:
-		say "That yak. Maybe you could release it from its yoke.";
+		if yak is not in lalaland:
+			say "That yak. Maybe you could release it from its yoke.";
+		else:
+			say "That drab yoke. What could it become?";
 	the rule succeeds; [?? drab yoke and keyboard -- pin player down more]
 
 to say treas-west:
 	if austerer is not visited:
-		say "that area west of the hump";
+		say "the area west of the hump you didn't get past yet";
 	else if hoop is in austerer treasure:
 		say "the hoop in Austerer Treasure";
 	else:
-		say "what that onyx censer could become";
+		say "what the onyx censer could become";
 
 a giant dead flea is a thing in hacks' shack. "A giant dead flea is here, probably not decomposing yet."
 
@@ -16165,7 +16199,7 @@ to check-silly-death:
 	get-dead;
 	follow the shutdown rules;
 
-understand "stroll [text]" as a mistake ("No, you can't just stroll back into the Posh Hops shop, and you can just plain walk anywhere else.") when mrlp is oyster and player is not in Posh Hops Shop
+understand "stroll [text]" and "stroll" as a mistake ("No, you can't just stroll back into the Posh Hops shop, and you can just plain walk anywhere else.") when mrlp is oyster and player is not in Posh Hops Shop
 
 chapter spilling
 
@@ -16466,8 +16500,6 @@ a-text of canoe is "YRYYR". b-text of canoe is "YRYYR". parse-text of canoe is "
 
 understand "ocean" as a mistake ("As you seek to change the canoe, you hear a rush of water[if canoe is unexamined], quickly examine the canoe,[end if] and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.[paragraph break][uurrgg]") when location of player is Hero's shore.
 
-understand "a cone" as a mistake ("That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the raft or boats are a better bet.") when location of player is Hero's shore.
-
 Shoer Osher is scenery in Hero's Shore. "Everyone knows the story of Shoer Osher and [if player is male]his[else]her[end if] rise to fame from humble farm life, and everyone knows it's sort of fake, but nobody can say much. The statue itself improves Osher's looks and muscle tone. It's quite frankly creepy enough, making you wonder if perhaps you should be looking in the river instead for ways to cross it."
 
 Understand "sculpture" and "super cult sculpture" and "super/cult sculpture" as Osher.
@@ -16651,7 +16683,7 @@ understand "fish" and "bullies" as carps when carps-pref is true.
 
 the carps are plural-named nasty vanishing people in Anger Range. "They are sneering and teasing the poor trout."
 
-understand "craps" as a mistake ("You have no dice to tempt the craps with. Or large amounts of money. Perhaps you'll need to try something more violent.") when carps are visible.
+understand "craps" as a mistake ("You have no dice to tempt the craps with. Or large amounts of money. Perhaps you'll need to try something more violent.") when player is in anger range and carps are in anger range.
 
 description of carps is "They are sneering and teasing the poor trout."
 
@@ -16681,7 +16713,7 @@ the chum of the pikes is the carps.
 
 understand "fish" and "bullies" as pikes when carps-pref is false.
 
-understand "kepis" as a mistake ("If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.") when pikes are visible.
+understand "kepis" as a mistake ("If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.") when pikes are in anger range and player is in anger range.
 
 a-text of pikes is "RRYRY". b-text of pikes is "RRYRY". parse-text of pikes is "x[sp]x[sp]-[sp]x[sp]-".
 
@@ -17217,6 +17249,11 @@ taning is an action applying to one thing.
 understand the command "tan" as something new.
 
 understand "tan [something]" as taning.
+understand "tan" as taning.
+
+rule for supplying a missing noun when taning:
+	if location of player is scum ant sanctum:
+		now noun is ant;
 
 does the player mean taning the ant: it is very likely;
 
@@ -17498,7 +17535,7 @@ understand "debris" and "crates" as crate.
 
 understand "brides" as a mistake ("No, no time to think about romance, now.") when crate is visible.
 
-understand "thus" as a mistake ("Your inactive word does nothing to the huts[if knob is not reflexive]. Perhaps you can do something to the door[else]. But you don't need to do any more, since you can walk in[end if].") when shut huts are visible.
+understand "thus" as a mistake ("Your inactive word does nothing to the huts[if door-sux is false]. Perhaps you can do something to the door[else]. But you don't need to do any more, since you can walk in[end if].") when shut huts are visible.
 
 the shut huts are plural-named scenery in Lapsin' plains. "They're shaped like a big ol['] upended tush.". understand "tush" and "hut" as shut huts.
 
@@ -17552,11 +17589,9 @@ understand "embrace [text]" and "embrace" as a mistake ("Hug? Ugh. Guh.")
 
 chapter splaining
 
-bogus-plains is privately-named LLPish reflexive scenery in lapsin' plains. understand "plains" as bogus-plains when player is in plains. bogus-plains is undesc.
+bogus-plains is privately-named LLPish reflexive scenery in lapsin' plains. understand "plains" as bogus-plains when player is in plains and debug-state is true. bogus-plains is undesc.
 
 a-text of bogus-plains is "RRRYYR". b-text of bogus-plains is "RRRY??". parse-text of bogus-plains is "x[sp]x[sp]x[sp]a[sp]?[sp]?".
-
-understand "splain" as a mistake ("You start up a grand lecture again, but you feel something spinal and think 'I...plans.' Time to move on.") when player is in plains and bogus-plains is in lalaland;
 
 chapter bonking
 
@@ -17723,6 +17758,9 @@ to say dig-purpose:
 	if haunter is in lalaland and ruby is in lalaland:
 		say "You're finished with the digger";
 		continue the action;
+	if ruby is in lalaland:
+		say "You managed to bury the ruby. On to the next bit.";
+		continue the action;
 	if player is in old places and hint is in old places:
 		say "Now you've buried the ruby, you could maybe show what you've found. No point undoing what you did";
 		continue the action;
@@ -17857,6 +17895,7 @@ burying is an action applying to one thing.
 understand the command "bury [something]" as something new.
 
 understand "bury [something]" as burying.
+understand "bury" as burying.
 
 does the player mean burying the ruby:
 	it is very likely;
@@ -17864,6 +17903,8 @@ does the player mean burying the ruby:
 rule for supplying a missing noun when burying:
 	if player has ruby:
 		now noun is ruby;
+	else:
+		now noun is the player;
 
 a ruby is an auxiliary thing.
 
@@ -17873,7 +17914,7 @@ description of ruby is "[one of]See ruby, rub eyes. [or][stopping]You feel heat 
 
 carry out burying:
 	if noun is not ruby:
-		say "That's not something to BURY." instead;
+		say "That's not something worth BURYing." instead;
 	if player does not have rigged digger:
 		if player has prod:
 			say "Your prod from a hut should be able to bury stuff if you tinker right. Jar it the right way." instead;
@@ -19391,6 +19432,10 @@ instead of eating a person:
 		try swearing obscenely instead;
 	say "You have no fork, or anything that could become a fork. Plus, gross." instead;
 
+rule for supplying a missing noun when eating:
+	if player is in sand home and tea tray is in sand home:
+		now the noun is the tea tray;
+
 check eating (this is the try to eat a hint tart rule) :
 	If noun is a hintpastry:
 		if xrayvision is true:
@@ -19819,8 +19864,9 @@ to decide whether the action is procedural: [aip]
 	if xraying, yes;
 	if smelling, yes;
 	if reading, yes;
-	if gotoing, yes;
-	if gotothinging, yes;
+	if qbc_litany is table of no conversation:
+		if gotoing, yes;
+		if gotothinging, yes;
 	if saying yes, yes;
 	if saying no, yes;
 	if dropping, yes;
@@ -22358,7 +22404,7 @@ to elvira-flee-taunt:
 	if do-i-chat is true:
 		say "This should not happen in full release mode, but all you can do is blow the whistle to win.";
 		continue the action;
-	say "You leave her sin shrine before getting a shiner.[paragraph break]Elvira mocks you[one of], but makes no attack[or] again[stopping]: [randbla][paragraph break]";
+	say "You leave her sin shrine [if current action is not going east]with extra quickness [end if]before getting a shiner.[paragraph break]Elvira mocks you[one of], but makes no attack[or] again[stopping]: [randbla][paragraph break]";
 	now Elvira-delay is 0;
 
 the roarings garrison is amusing scenery in Inclosure. garrison is undesc.
@@ -23675,10 +23721,7 @@ to say unex-left:
 	let Y be the number of unexamined things in sparse spares;
 	if Y is 0:
 		continue the action;
-	if Y is 1:
-		say ", ignoring the [random unexamined thing in sparse spares],";
-	else:
-		say ", ignoring the final [number of unexamined things in sparse spares in words],";
+	say ", ignoring the [if Y is 1][random unexamined thing in sparse spares][else]final [number of unexamined things in sparse spares in words] things[end if] in Sparse Spares,";
 
 check going up in peek keep:
 	say "The great grate blocks you." instead;
@@ -24549,26 +24592,19 @@ carry out objhinting (this is the pick object to hint rule) :
 						now cinders are in lalaland;
 				now noun is cheatitemed;
 				the rule succeeds;
-	dl "7.";
 	if there is hint-entry of noun in the table of hintobjs:
-		dl "7a.";
 		if noun is reflexed: [first check if it's solved already]
-			dl "7a-1.";
 			repeat through table of youre-done:
 				if hint-entry entry is noun:
 					all-say "[advice-entry entry]";
 					the rule succeeds;
 		choose row with hint-entry of noun in the table of hintobjs;
 		if there is a parallel-entry entry:
-			dl "7b: [parallel-entry entry].";
 			try objhinting parallel-entry entry instead;
-		dl "7c: [parallel-entry entry].";
 		if player has Pa Egg Pea and eisihint is false:
 			now eisihint is true;
 			all-say "You try and imagine what [i]Pa, Egg, Pea[r] might say if it were actually about helping everyday people. Here's what you come up with.[line break]";
-		dl "7d: [parallel-entry entry].";
 		choose row with hint-entry of noun in the table of hintobjs;
-		dl "7e: [parallel-entry entry].";
 		now last-thing-hinted is noun; [for the special case HINT LEOPARD.HINT where SATYR might be the first in the random table. Less jarring this way.]
 		if noun is cheatitemed:
 			ital-say "these hints may be redundant, with the hint spoiler item you used.";
@@ -24703,6 +24739,7 @@ scratch paper	"You got things compiling. No more worries there."
 t-key	"[if t-key is part of keyboard]It's fit in now[else]It's part of the keyboard. You can put it in[end if]."
 raft	"Now you're on the raft, you need to find a way to use the oars." [start OYSTER]
 knob	"The knob's been dealt with."
+bogus-plains	"You start up a grand lecture again, but you feel something spinal and think 'I...plans.' Time to move on."
 heaps	"I can't give any artistic advice. They're--good enough, I guess. Better than before."
 lance	"I can't give you details on how to fight, but now your lance is clean, you'll be able to use it when need be."
 gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figure what to do with it[else if sanctum is visited or tenfold is visited]The gleaner's not particularly valuable to you any more. But maybe it could be to someone else[end if]."

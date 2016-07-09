@@ -761,10 +761,10 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >n
->e
-
 >tangerines
 Your score has just gone up by one point.
+
+>e
 >among
 Your score has just gone up by one point.
 >papayas
@@ -779,7 +779,7 @@ a droll dollar
 
 >n
 >d
-give dollar to trader
+>give dollar to trader
 >put icons in slot
 >u
 >n
@@ -790,13 +790,17 @@ Your score has just gone up by one point.
 >n
 You Did Great
 
-* current_focus
+* _current_focus
+#>{include} _only-manor
+#>{include} _only-routes
+#>{include} _only-troves
+#>{include} _only-presto
 #>{include} _only-towers
->{include} _only-otters
->undo
+#>{include} _only-otters
+#>undo
 >{include} _only-others
->undo
->{include} _only-oyster
+#>undo
+#>{include} _only-oyster
 
 * _big-go
 
@@ -846,7 +850,7 @@ Rustic Citrus
 >undo
 >undo
 
-* _only-manor
+* only-manor
 
 >{include} _manor
 
@@ -873,7 +877,7 @@ Rustic Citrus
 >{include} _presto
 >{include} _summarize
 
-* _only-oyster
+* only-oyster
 
 >purloin settler
 >gonear posh hops shop
@@ -898,5 +902,4 @@ Rustic Citrus
 
 >gonear rustic citrus
 >{include} _others
->{include} _summarize
 

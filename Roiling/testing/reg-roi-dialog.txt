@@ -224,7 +224,7 @@ You need something to dig here. You haven't found
 That would be fun but useless here. Perhaps you could annoy someone with it. Someone worth getting rid of.
 [You add the information to your pedanto-notepad under FLIPS.]
 
-* _towers-preef
+* towers-preef
 
 >z
 >purloin notepad
@@ -289,7 +289,7 @@ The kid puts his hand to his face, then mumbles "Sorry, eleven letters is too mu
 >ask kid about grailman
 MARGINAL
 
-* _otters-preef
+* otters-preef
 
 >z
 >seed 1

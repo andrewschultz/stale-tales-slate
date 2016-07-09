@@ -473,6 +473,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "remap"	360858842	--	jukebox	--	"You can't change the bad music selection[if tunes are in posh hops shop]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
 "unset"	501203408	--	jukebox	--	"You can't change the bad music selection[if tunes are in posh hops shop]. But you can neutralize it--the jukebox has instructions[else]. You already got a temporary escape, and that should be good enough[end if]."
 "lode"	277001614	olde lode	--	--	"[locname]." [OLDE LODE]
+"calm"	139082395	--	--	clam-gone rule	"Odd, how you feel a need to panic and flee after calming the clam."
 "canoe"	292259597	--	canoe	--	"The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river."
 "hoser"	421038754	hero's shore	--	--	"You give a few Er-ohs, oh-ers, Or Ehs. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats." [HERO'S SHORE]
 "hero"	324764788	hero's shore	--	--	"You give an Er-oh, oh-er, or Eh. You'll probably need to say or do something entirely different to cross the river. There's the raft--those boats."
@@ -1603,6 +1604,11 @@ to say no-dsk:
 
 to say patron:
 	say "They would resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that"
+
+this is the clam-gone rule:
+	if player is in lode and clam is not in lode:
+		the rule succeeds;
+	the rule fails;
 
 to say dest-esc:
 	say "Destroying the boat would be a bad idea. You need to escape it"

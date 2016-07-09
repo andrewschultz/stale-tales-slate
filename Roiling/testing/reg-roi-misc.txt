@@ -16,11 +16,9 @@ I'm the only one who gets to be self-referential, here. Got it? Good.
 >xyzzy
 That word is a mess and holds absolutely no power for you. Hopefully you'll find why soon enough.
 
->gonear same mesa
+>ts
 >xyzzy
 That word is a mess and holds absolutely no power for you. Trust me, I checked all the other twenty-nine combinations.
-
->gonear manor
 
 >jump
 You try a jump but jam up. Boy, leaps lapse.
@@ -30,5 +28,11 @@ You try a jump but jam up. Boy, leaps lapse.
 >wave
 A view! I wave!
 
->wave pad
+>yux pad
+The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
+
+>yux pad
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+
+>wave pad
+I understood the first word, but it can just stand on its own as a verb. If you were trying to do something tricky with it, you shouldn't need to. So just "wave" should work.

@@ -593,8 +593,10 @@ this is the alcove-talk rule:
 	the rule fails;
 
 this is the Elvira-taunt rule:
-	if current action is going east and player is in Reclusion Inclosure:
-		the rule succeeds;
+	if player is in Reclusion Inclosure:
+		if current action is going east or current action is gotoing:
+			if qbc_litany is not table of Elvira comments:
+				the rule succeeds;
 	the rule fails;
 
 section OTHERS random text rules

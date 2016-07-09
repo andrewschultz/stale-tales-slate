@@ -8,7 +8,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _oyster-with-subj
+* oyster-with-subj
 
 >ts
 >gonear posh hops shop

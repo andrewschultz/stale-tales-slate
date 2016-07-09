@@ -8,7 +8,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _seed-1
+* seed-1
 
 >seed 1
 >gonear trefoil
@@ -51,7 +51,7 @@ up by one point
 >yonder
 up by one point
 
-* _seed-2
+* seed-2
 
 >seed 2
 >gonear trefoil
@@ -91,7 +91,7 @@ Demitri shakes his head, but a glare from Rodney sets him straight--for now.
 >timider
 up by one point
 
-* _seed-3
+* seed-3
 
 >seed 3
 >gonear trefoil
@@ -124,7 +124,7 @@ Leander shakes his head, but a glare from Rodney sets him straight--for now.
 >learned
 up by one point
 
-* _seed-4
+* seed-4
 
 >seed 4
 >gonear trefoil
@@ -154,7 +154,7 @@ Preston shakes his head, but a glare from Rodney sets him straight--for now.
 >pronest
 up by one point
 
-* _seed-5
+* seed-5
 
 >seed 5
 >gonear trefoil

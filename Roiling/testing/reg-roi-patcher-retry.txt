@@ -43,7 +43,7 @@ Strip of Profits
 >score
 4/21
 
-* _cheat-presto
+* cheat-presto
 
 >gonear hacks' shack
 >purloin usb
@@ -52,7 +52,7 @@ Strip of Profits
 >score
 1/33
 
-* _cheat-oyster
+* cheat-oyster
 
 >gonear tenfold
 >prepay
@@ -65,7 +65,7 @@ Trips Strip
 >score
 3/39
 
-* _cheat-towers
+* cheat-towers
 
 >gonear mislit limits
 >spectacular
@@ -129,7 +129,7 @@ You are also wearing some medals
 
 #######################actual real regions
 
-* _retryable-regions
+* retryable-regions
 
 >{include} _to-strip
 

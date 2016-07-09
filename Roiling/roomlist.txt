@@ -1,111 +1,121 @@
 ## C:\writing\scripts\noway.py -- a regtest.py file for detecting generic can't go that way errors
 ##
 
-** game: /home/andrew/prt/debug-roil.ulx
+** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
 nodiag
 
-prefix:ro
+prefix:roi
 
-#intro
-!Dusty Study
+* intro
+>au -1
+Dusty Study
 Stable
-!Highest Heights
-!Basement
-!Carven Cavern
+Highest Heights
+Basement
+Carven Cavern
 
-#stores
-!Strip of Profits
-!Cruelest Lectures
+* stores
+>au -1
+Strip of Profits
+Cruelest Lectures
 
-#troves
-!Loather Rathole
-!Loudest Used Lot
-!Pallid
-!Dour Tan Rotunda
+* troves
+>au -1
+Loather Rathole
+Loudest Used Lot
+Pallid
+Dour Tan Rotunda
 Econ Cone
-!FiefCo Office
+FiefCo Office
 
-#oyster
-!Anger Range
-!Posh Hops Shop
-!Achers' Arches
-!Horned Hedron
-!End Den
-!Scum Ant Sanctum
-!Tenfold
-!Lapsin' Plains
-!Hut
-!Collapsed Old Places
-!Hero's Shore
-!Olde Lode
-!Handsome Sand Home
-!Fighter Freight
-!Lean Lane
+* oyster
+>au -1
+Anger Range
+Posh Hops Shop
+Achers' Arches
+Horned Hedron
+End Den
+Scum Ant Sanctum
+Tenfold
+Lapsin' Plains
+Hut
+Collapsed Old Places
+Hero's Shore
+Olde Lode
+Handsome Sand Home
+Fighter Freight
+Lean Lane
 
-#presto
-!Grey Gyre
-!Austerer Treasure
-!Marines Seminar
-!Phat Path
-!Burnt Brunt
-!Dirge Ridge
-!Hacks' Shack
-!Volt Maze
+* presto
+>au -1
+Grey Gyre
+Austerer Treasure
+Marines Seminar
+Phat Path
+Burnt Brunt
+Dirge Ridge
+Hacks' Shack
+Volt Maze
 
-#towers
-!Lost Lots
-!Anemic Cinema
-!Baldest Blasted Saltbed
-!Scope Copse
-!Savager Ravages
-!Topside Deposit
-!Unblest Sunbelt
-!Salted Deltas
-!Actionless Coastline
-!Ole Shrine Shoreline
+* towers
+>au -1
+Lost Lots
+Anemic Cinema
+Baldest Blasted Saltbed
+Scope Copse
+Savager Ravages
+Topside Deposit
+Unblest Sunbelt
+Salted Deltas
+Actionless Coastline
+Ole Shrine Shoreline
 Danger Garden
-!Obscurest Subsector
-!Campiest Campsite
+Obscurest Subsector
+Campiest Campsite
 Shaven Havens
-!Rawest Waters
-!Loftier Trefoil
+Rawest Waters
+Loftier Trefoil
 Solo Den
-!Mislit Limits
-!Outer Route
+Mislit Limits
+Outer Route
 
-#routes
-!Same Mesa
-!Idle Deli
-!Adobe Abode
-!Cleric Circle
-!Sun-Spared Underpass
-!Ripe Pier
-!Cripple Clipper
+* routes
+>au -1
+Same Mesa
+Idle Deli
+Adobe Abode
+Cleric Circle
+Sun-Spared Underpass
+Ripe Pier
+Cripple Clipper
 
-#otters
-!Reclusion Inclosure
-!Frontage
-!Bran Barn
-!Loop Pool
-!Bleary Barley
-!Anteroom
-!Tapering
-!Wickeder Wire Deck
-!Perverse Preserve
-!Coevals' Alcoves
+* otters
+>au -1
+Reclusion Inclosure
+Frontage
+Bran Barn
+Loop Pool
+Bleary Barley
+Anteroom
+Tapering
+Wickeder Wire Deck
+Perverse Preserve
+Coevals' Alcoves
 
-#others
-!Filed Field
-!Gates Stage
-!Clangier Clearing
-!Swell Wells
-!Rustic Citrus
-!Scape Space
+* others
+>au -1
+Filed Field
+Gates Stage
+Clangier Clearing
+Swell Wells
+Rustic Citrus
+Scape Space
 #Admit-Us Stadium
 
-#demo dome
+* demo dome
+>au -1
 Peek Keep
 Ned's Dens
 Hows-Show
