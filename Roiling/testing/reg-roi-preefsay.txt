@@ -34,6 +34,10 @@
 
 * routes-preef
 
+>ts
+>routes
+>in
+
 >against
 [You add the information to your pedanto-notepad under FLIPS.]
 
@@ -60,7 +64,10 @@ That'll be tricky, moving through or between Thor and the New Beet without being
 
 * troves-preef
 
->gonear rathole
+>ts
+>troves
+>in
+
 >hate
 >care
 
@@ -86,9 +93,7 @@ Thud, thud, thud. You might be able to do that properly later, but not now, with
 >discover
 Thud, thud, thud. You might be able to do that properly later, but not now, with the noise distracting you from your new job listed on your vanity.
 [You add the information to your pedanto-notepad under FLIPS.]
->undo
->undo
->undo
+>depref
 >ignore
 >last
 Man. That seems right. But you haven't improved yourself enough to last, yet.
@@ -96,7 +101,9 @@ Man. That seems right. But you haven't improved yourself enough to last, yet.
 
 * presto-preef
 
->gonear gyre
+>ts
+>presto
+>in
 >umph
 >pooh
 >screen
@@ -104,20 +111,16 @@ Man. That seems right. But you haven't improved yourself enough to last, yet.
 You don't have any apparatus to hook the screen up to. Yet. It'd get damaged on your further adventures, even in your super purse. Technology is like that. But you file the idea for later, in case you find some tech den.
 >screen
 Not yet.
+>e
 >bleep
 [You add the information to your pedanto-notepad under FLIPS.]
 >bleep
 ![You add the information to your pedanto-notepad under FLIPS.]
->abstract leo to grey gyre
->there
-"Oo Boss! We ain't goin['] there. Mazes make our brains hurt."
-[You add the information to your pedanto-notepad under FLIPS.]
->undo
->undo
 >mazel tov
 >there
-You suspect someone is in the mist where the maze was. 'THERE!' you yell. But you doubt you fooled or intimidated them. You need backup.
+You suspect someone is in the mist where the maze was. "THERE!" you yell. But you doubt you fooled or intimidated them. You need backup.
 [You add the information to your pedanto-notepad under FLIPS.]
+>undo
 >undo
 >s
 >s
@@ -128,23 +131,23 @@ You suspect someone is in the mist where the maze was. 'THERE!' you yell. But yo
 >rats
 >drat
 >n
+>depref
+>mazel tov
 >there
-Leo and Rand charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. You all walk back, slightly beaten up, muttering 'Ah, ow, whoa.' Leo and Rand shake off their bruises. Still, you note you started things right.
+Leo and Rand charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. You all walk back, slightly beaten up, muttering "Ah, ow, whoa." Leo and Rand shake off their bruises. Still, you note you started things right.
 [You add the information to your pedanto-notepad under FLIPS.]
->undo
 >bleep
 >e
 >get popgun
 >w
+>depref
 >there
 [You add the information to your pedanto-notepad under FLIPS.]
 Leo and Rand charge in. It's two-on-three, though, since your popgun doesn't have any ammunition and isn't even working. You all walk back, on-ho changed to oh-no. Leo and Rand shake off their bruises.
->undo
+>depref
 >bingo
 >there
 Leo and Rand charge in. It's two-on-three, though, since your popgun doesn't have any ammunition. You all walk back, on-ho changed to oh-no. Leo and Rand shake off their bruises.
-
->there
 [You add the information to your pedanto-notepad under FLIPS.]
 
 >gonear shack
@@ -164,21 +167,21 @@ You make a note you can flip the disk back based on the lossless compression alg
 >gonear hops shop
 >stroll
 [You add the information to your pedanto-notepad under FLIPS.]
->undo
 The trolls seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside
 
+>depref
 >sing
 >stroll
 The trolls seem concerned you have been kind of obnoxious, and what better way to make up for that than to order a little something, to get on management's good side, now
 [You add the information to your pedanto-notepad under FLIPS.]
->undo
 
+>depref
 >scrape
 >stroll
 The trolls make you feel like you're the jerk here and maybe you can spend some money to make up for the nuisance you caused
 [You add the information to your pedanto-notepad under FLIPS.]
->undo
 
+>depref
 >unset
 >stroll
 
@@ -210,10 +213,11 @@ You need something to dig here. You haven't found
 >seek
 >tutor
 >warp
-'Goodness me!' cries Aunt Tuna. 'I do not approve of warping the bubble wrap! You ought to be sent from THIS nest for that noise!'[paragraph break]Like all good bubble wrap, maybe it needs to be saved til you find the right person to annoy.
+"Goodness me!" cries Aunt Tuna. "I do not approve of warping the bubble wrap! You ought to be sent from THIS nest for that noise!"
+Like all good bubble wrap, maybe it needs to be saved til you find the right person to annoy.
 [You add the information to your pedanto-notepad under FLIPS.]
->undo
 
+>depref
 >w
 >warp
 That would be fun but useless here. Perhaps you could annoy someone with it. Someone worth getting rid of.
@@ -221,20 +225,28 @@ That would be fun but useless here. Perhaps you could annoy someone with it. Som
 
 * towers-preef
 
->z
->purloin notepad
+>au 1
+>ts
+>towers
+>in
 
 >spectacular
+![You add the information to your pedanto-notepad under FLIPS.]
+>gonear topside
+>spectacular
 Your word, stupendous as it is, has no effect. Yet. You are probably not close enough.
->undo
+[You add the information to your pedanto-notepad under FLIPS.]
+>depref
 >gonear solo den
 >spectacular
 Your word, stupendous as it is, has no effect. Yet. You may just need to go back outside.
+>depref
 
 >gonear trefoil
 >droney
 Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?
 [You add the information to your pedanto-notepad under FLIPS.]
+>depref
 >yonder
 Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?
 [You add the information to your pedanto-notepad under FLIPS.]
@@ -250,7 +262,7 @@ Your attempt to bounce Rodney yonder is blocked by a few of his followers, who s
 >s
 >drained
 >e
->bonker
+>broken
 >e
 >wordy
 >push retape
@@ -266,6 +278,9 @@ Your attempt to bounce Rodney yonder is blocked by a few of his followers, who s
 >push repeat
 >gonear yow
 >unlocked
+>gonear duck
+>gt yow
+>unlocked
 >ask yow about curst palace
 Dr. Yow scrunches his head a bit, then shrugs. "Ouch. Eleven letters. Maybe if it was shorter."
 >ask yow about robot
@@ -273,11 +288,11 @@ WEIRDER
 >ask yow about ingrates
 rubs his temples
 >w
->organised
+>grandiose
 >n
 >holiest
 >n
-hastiest
+>hastiest
 >n
 >ask kid about castle
 The kid puts his hand to his face, then mumbles "Sorry, eleven letters is too much. Maybe something shorter."
@@ -314,11 +329,14 @@ That'd definitely tip the macks off to who you were, even if your powers were ba
 >nastily
 >bossily
 >blearily
+>1
+>3
+>depref
 >atom
 That seems like it should work, but you just can't summon the power. Someone here should be able to help you, you hope.
 [You add the information to your pedanto-notepad under FLIPS.]
 >quickly
-There's nothing you really need to attack or avoid quickly here or nearby.
+There's nothing you really need to attack or avoid quickly here or nearby, but that feels right. You note what to do for later.
 [You add the information to your pedanto-notepad under FLIPS.]
 
 >n
@@ -327,16 +345,17 @@ You consider the end to an argument, but you don't have a start. The eels rattle
 [You add the information to your pedanto-notepad under FLIPS.]
 
 >gonear alcoves
+>depref
 >quickly
 underling chatter
 [You add the information to your pedanto-notepad under FLIPS.]
 >undo
 >abstract merle to lalaland
 >abstract elmer to lalaland
+>depref
 >quickly
-underling chatter
-[You add the information to your pedanto-notepad under FLIPS.]
 You feel a surge, but not enough.
+[You add the information to your pedanto-notepad under FLIPS.]
 
 >gonear bran barn
 >however
@@ -345,6 +364,7 @@ Mr. Lee pulls on his ghoul hat
 
 >di
 >gonear preserve
+>raptor
 >parrot
 [You add the information to your pedanto-notepad under FLIPS.]
 

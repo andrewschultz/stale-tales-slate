@@ -790,7 +790,7 @@ Your score has just gone up by one point.
 >n
 You Did Great
 
-* _current_focus
+* current_focus
 #>{include} _only-manor
 #>{include} _only-routes
 #>{include} _only-troves
@@ -802,7 +802,7 @@ You Did Great
 #>undo
 #>{include} _only-oyster
 
-* _big-go
+* big-go
 
 >{include} _manor
 >{include} _stores
@@ -854,7 +854,7 @@ Rustic Citrus
 
 >{include} _manor
 
-* _only-stores
+* only-stores
 
 >gonear strip
 >{include} _stores

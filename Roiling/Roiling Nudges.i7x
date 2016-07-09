@@ -9,7 +9,7 @@ book the tables themselves
 table of roman manor nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "basement"	608585586	Basement	--	--	"[locname]."
-"rove"	394647309	--	--	gunter-yet rule	"That's not a way to sneak around and avoid [if stuff-found >= 3 and gunter is off-stage]the[else]any future knock at the door."
+"rove"	394647309	--	--	gunter-yet rule	"That's not a way to sneak around and avoid [if stuff-found >= 3 and gunter is off-stage]the[else]any future[end if] knock at the door."
 "meet"	422797389	--	--	is-unbent rule	"[locname-part]."
 "bans"	185788197	--	--	is-unbent rule	"[locname-part]."
 "bent"	318242540	--	--	is-bent rule	"[locname-part]."
@@ -35,8 +35,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "questin"	630601871	--	--	x-oped rule	"[vs-oped]."
 "moneyco"	550858761	--	--	x-oped rule	"[vs-oped]."
 "shatter"	555094031	--	--	x-oped rule	"[vs-oped]."
-"itrash"	369170750	--	--	x-oped-f rule	"[vs-oped]."
-"herarts"	537307816	--	--	x-oped-m rule	"[vs-oped]."
+"itrash"	369170750	--	--	x-oped-m rule	"[vs-oped]."
+"herarts"	537307816	--	--	x-oped-f rule	"[vs-oped]."
 "billy"	293398681	--	--	x-oped rule	"[vs-oped]."
 "beams"	308761951	--	t-b	--	"Not even one of the beams rattles. You count them up again--there are ten."
 "ten"	299823635	--	t-b	--	"You change neither the number nor the makeup of the ten beams."
@@ -83,7 +83,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 
 table of stores nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
-"others"	524148772	--	store h	--	"No--it's a weird place you need to get to, sort of--the rest." [stores nudges]
 "window"	425151566	--	windows	--	"Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new."
 "windows"	521425532	--	windows	--	"Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new."
 "storea"	489054291	--	store a	--	"[no-cand]."

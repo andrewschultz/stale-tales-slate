@@ -967,6 +967,9 @@ Strip of Profits
 >score
 (45/45)
 
+>tortes
+There's no time for food! Especially fatty, non-brain food! Besides, the towers had plenty of food. There was your chance!
+
 >missed
 
 

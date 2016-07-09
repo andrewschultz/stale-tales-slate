@@ -2377,37 +2377,39 @@ to say fish-these-days:
 kid-cheat is a truth state that varies. kid-cheat is false.
 kid-guar is a person that varies. [kid-guar is usually nothing.]
 
-check objasking kid about a guardian:
+check objasking kid about (this is the kid can spoil rule):
 	if second noun is in lalaland:
-		if second noun is not ray eck and second noun is not deacons:
+		if second noun is not atheists and second noun is not deacons:
 			say "That's out of the way." instead;
 		else:
 			say "The kid doesn't want to be reminded, probably." instead;
+	unless second noun is guardian or second noun is curst palace:
+		continue the action;
+	dl "1.";
+	if kid-cheat is false:
+		if second noun is curst palace:
+			say "The kid puts [his-her] hand to [his-her] face, then mumbles 'Sorry, eleven letters is too much. Maybe something shorter.'" instead;
+		choose row with the-from of second noun in the table of towers anagrams;
+		now kid-guar is the-from entry;
+		now kid-cheat is true;
+		say "The kid sits and thinks a few seconds after you tell [him-her] where you were stuck. 'Yeah, you just say [right-word entry in upper case]. That'll do it.' [he-she-c] looks kind of bored, though. Probably not nice to push [him-her].";
+		preef the-from entry instead;
 	else:
-		if kid-cheat is false:
-			if second noun is curst palace:
-				say "The kid puts [his-her] hand to [his-her] face, then mumbles 'Sorry, eleven letters is too much. Maybe something shorter.'" instead;
-			choose row with the-from of second noun in the table of towers anagrams;
-			now kid-guar is the-from entry;
-			now kid-cheat is true;
-			say "The kid sits and thinks a few seconds after you tell [him-her] where you were stuck. 'Yeah, you just say [right-word entry in upper case]. That'll do it.' [he-she-c] looks kind of bored, though. Probably not nice to push [him-her].";
-			preef the-from entry instead;
-		else:
-			if kid-guar is not noun:
-				say "The kid mumbles [he-she]'s bored with word games." instead;
-			if kid-guar is in lalaland:
-				say "You thank the kid for helping you out." instead;
+		if kid-guar is not noun:
+			say "The kid mumbles [he-she]'s bored with word games." instead;
+		if kid-guar is in lalaland:
+			say "You thank the kid for helping you out." instead;
 
 doc-cheat is a truth state that varies. doc-cheat is false.
 doc-guar is a person that varies. [doc-guar is usually nothing.]
 
-check objasking Dr Yow about a guardian:
+check objasking Dr Yow about:
 	if Dr Yow is in ropins:
 		say "[he-she-c] doesn't need the added pressure, but maybe [he-she] can give a bit of help once [he-she]'s out." instead;
 	if second noun is in lalaland:
 		if second noun is not bonker:
 			say "You don't need to worry about that, now." instead;
-	else:
+	else if second noun is a guardian or second noun is curst palace:
 		if doc-cheat is false:
 			if second noun is curst palace:
 				say "Dr. Yow scrunches [his-her] head a bit, then shrugs. 'Ouch. Eleven letters. Maybe if it was shorter.'" instead;
@@ -4177,6 +4179,7 @@ Thor
 New Beet
 Pa Egg Pea	"You probably did what you could. Or not-did." [troves]
 heat	"Don't need to overheat, or overhate."
+fretful truffle	"Caring and all its offshoots only go so far."
 stop post	"You don't need to P.S. tweaking the post."
 bee's head	"Too much fiddling with reason is unreasonable."
 what-a-bee	"The bee's already taken enough of your in-my-heartitude."
@@ -5760,12 +5763,12 @@ to decide which thing is oyster-item:
 	if haunter is reflexed and location of player is location of haunter:
 		decide on haunter;
 	if player is in plains:
-		if skis are in plains:
-			decide on skis;
 		if c2 is in plains:
 			decide on c2;
 		if crate is reflexive:
 			decide on crate;
+		if skis are in plains:
+			decide on skis;
 		if knob is reflexive:
 			decide on knob;
 	if player is in Lean Lane:
@@ -6156,7 +6159,7 @@ after reading a command:
 		if ask-warn is false:
 			say "Replacing 'a' with 'ask about.' Saying 'a' is not required for any puzzle.";
 			now ask-warn is true;
-		replace the regular expression "^a " in XX with "ask about";
+		replace the regular expression "^a " in XX with "ask about ";
 		change the text of the player's command to XX;
 		d "Changing text to [XX].";
 	if mrlp is routes:
@@ -6283,9 +6286,21 @@ to consider-trailing-a:
 		if the player's command exactly matches the text "a cone":
 			say "That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the raft or boats are a better bet.";
 			reject the player's command;
+	else if location of player is loather rathole:
+		if the player's command exactly matches the text "a rec":
+			say "You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.";
+			reject the player's command;
 	else if location of player is handsome sand home:
 		if the player's command exactly matches the text "a nut":
 			say "That's not nice. You are a guest.";
+			reject the player's command;
+	else if mrlp is towers and player is not in trefoil:
+		if the player's command exactly matches the text "a place":
+			say "It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.";
+			reject the player's command;
+	else if player is in burnt brunt:
+		if the player's command exactly matches the text "a gps":
+			say "A GPS might point you to the gasp-gaps, but it wouldn't help you survive them. It wouldn't even help you if I forgot to list an exit elsewhere, which totally only happened in the first release and is fixed everywhere now, I hope.";
 			reject the player's command;
 
 section command reader booleans
@@ -8385,7 +8400,7 @@ what-a-bee	what-a-bee	"believe"	"believe"	"You remind yourself bees smell fear, 
 cellar door	cellar door	"recall"	"recall"	"[rec-der]"	false	341950993	"How inefficient! You already know where it is."	Pallid Li'l Pad
 cellar door	cellar door	"derive"	"derive"	"[rec-der]"	false	514122776	"How inefficient! You already know where it is."	Pallid Li'l Pad
 diapers	diapers	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning--and after some furnace care fun, you find a copy of LEAD, the first big motivational book in Yorpwald. You don't have time to worry whether positive thinking found it. You have too much positive thinking to do."	false	459079590	"And lose what you gained? No way."
-ltb	ltb	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."	true	204836855	"Whoah. That'd be micromanaging yourself. You're thinking big now! Or you should be."	Dour Tan Rotunda
+ltb	ltb	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."	false	204836855	"Whoah. That'd be micromanaging yourself. You're thinking big now! Or you should be."	Dour Tan Rotunda
 brochure	brochure	"desire"	"desire"	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."	false	503231922	--	econ cone
 prai	prai	"aspire"	"aspire"	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"	false	438050501
 rivets	rivets	"strive"	"strive"	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if prai is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"	false	564671562
@@ -8434,7 +8449,7 @@ scratch paper	scratch paper	"compile"	"compile"	"You[if player has rom sticks] f
 trim socks	ROM sticks	"romsticks/romstick" or "rom stick/sticks"	"romsticks"	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."	true	636341092	"The ROM sticks can probably make your computer go faster. Why fiddle further?"
 escaroles	casserole	"casserole"	"casserole"	"The escaroles become a much more calorie-infused casserole. Not your sort of casserole, but more active gourmand types might gobble it down."	false	682843772
 trim socks	ROM sticks	"romstick" or "rom stick"	"romstick"	"The socks unravel and re-ravel into a pair of ROM sticks that will surely fit into the computer when you need them to."	true	540067126
-compiled code	USB	"debug"	"debug"	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Ponder no derp,' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if t-key is reflexive], despite not realizing what the TBA key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break]'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, revealing a plain old USB. You need a way out!"	false	304959612
+compiled code	compiled code	"debug"	"debug"	"[if player has rom sticks]It's a long task, so you figure the memory from those ROM sticks will speed things up. [run paragraph on][end if]'Ponder no derp,' you say after some initial setting testing on your Do-Rite Editor and Repro Roper. 'Be rugged, debugger! Sweat for software. Stow fear. Go, black backlog. Can't rig tracing... my bug, by gum. DIE, BUG! I DEBUG!' You sow faster softwares[if t-key is reflexive], despite not realizing what the TBA key should have been and thus needing to use the space bar to organize your code[end if]. You note freeways['] fees awry--for a few years. You find bad asset databases conflating the apparently competing CropCorp, ProcCorp and PorcCorp--and the JetCorp Project--all to E-Viral Computing. The longest sent-log of an imperial email rip. It's just flagrant, but then, you remember how Elvira established code reviews as too boring--'Test log? Get lost!'[paragraph break]'On, self! F'n lose, Felons!' you say. 'Redo, doer!' But you slip. The screen flashes an alarm. 'ION RIG ORIGIN located!' The golden dongle's cover fries, revealing a plain old USB. You need a way out!"	false	304959612
 USB	USB	"sub/bus"	"sub"	"[sub-bus]!"	false	219798678	"sub"	Strip of Profits
 
 table of oyster anagrams
@@ -9830,7 +9845,7 @@ the stria are plural-named vanishing LLPish scenery in Basement. "You never knew
 
 a-text of stria is "RRYYR". b-text of stria is "PPYGR". parse-text of stria is "s[sp]t[sp]a[sp]i[sp]r". stria is parse-spoilable.
 
-understand "astir" as a mistake ("[if stair is visible]You don't need to do any more with the stair[else]You need to change that to something else, then it'll be astir[end if]") when stair is visible or stria is visible or sitar is visible.
+understand "astir" as a mistake ("[if stair is visible]You don't need to do any more with the stair[else]You need to change that to something else, then it'll be astir[end if].") when stair is visible or stria is visible or sitar is visible.
 
 check taking stria:
 	say "Too high up." instead;
@@ -12058,7 +12073,7 @@ chapter tirades
 
 tirades are scenery. "They're not very good tirades[if nuder is visible], but they're all about Rude [']N Nuder[else if bench-end is reflexed], and you're more concerned about the giant's elbow[else], but maybe you could position yourself better to listen to them[end if]."
 
-understand "staider" as a mistake ("[if bench-end is reflexive]You already did your best with the tirades[else]Not only directions but mind games fail to work here[end if]. The giant will complain if he wants to.") when old giant is visible.
+understand "staider" as a mistake ("[if bench-end is reflexed]You already did your best with the tirades[else]Not only directions but mind games fail to work here[end if]. The giant will complain if he wants to.") when old giant is visible.
 
 understand "tardies" as a mistake ("You can't tell the giant off for being late.") when old giant is visible.
 
@@ -12290,12 +12305,7 @@ check fliptoing bench-end:
 	if old giant is not visible:
 		say "You'd get lonely up there without company." instead;
 
-understand "astride" as a mistake ("[if bench-end is reflexed]The giant's not falling for your false sympathy again[else if old giant is not visible]Nobody or nothing big enough to get astride of[else]Not quite the right way to position yourself, yet[end if].") when cant-get-astride.
-
-to decide whether cant-get-astride:
-	if bench-end is reflexed, yes;
-	unless old giant is visible, yes;
-	decide no;
+understand "astride" as a mistake ("[if bench-end is reflexed]Nobody or nothing else big enough to get astride of[else]Not quite the right way to position yourself, yet[end if].") when player is in mesa and giant is not in mesa.
 
 chapter Rude N Nuder
 
@@ -12303,7 +12313,7 @@ Rude 'N Nuder is a thing.
 
 description of Rude 'N Nuder is "You aren't able to see the inside, and that's probably a good thing. People do tend to get worked up a bit more than they should about this sort of 'work,' whether extolling freedom of speech or saying how tasteless it is."
 
-understand "under" as a mistake ("[if giant is visible]You can't hide from the giant like that, right now[else]There's nobody to hide from, though you could fit under the bench[end if].") when player is in mesa and Rude 'N Nuder is not visible.
+understand "under" as a mistake ("[if grouchy old giant is visible]You can't hide from the giant like that, right now[else]There's nobody to hide from, though you could fit under the bench[end if].") when player is in mesa and Rude 'N Nuder is not visible.
 
 instead of doing something to Rude 'N Nuder:
 	if action is procedural, continue the action;
@@ -12942,8 +12952,6 @@ instead of doing something with the potholes:
 
 potholes are undesc.
 
-understand "a rec" as a mistake ("You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.") when player is in rathole and heat is in rathole.
-
 chapter cold
 
 the cold is flippable scenery in Loather Rathole. "[one of]Even though you wasted time watching weathercasts as a kid (boo!) and never learned to small-talk about it with important people (boo!) t[or]T[stopping]he cold's still just...cold."
@@ -13187,7 +13195,7 @@ a spider is scenery in Pallid Li'l Pad. "You're don't know whether to crush it o
 
 a-text of a spider is "RYRRYYR". b-text of a spider is "RYRRYYP". parse-text of a spider is "x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]r".
 
-understand "broomed" as a mistake ("You are not rich and consequential enough to snap your fingers and watch your own mess get cleaned up. Yet.") when player is in Pallid Li'l Pad and diapers are in lalaland.
+understand "broomed" as a mistake ("You are not rich and consequential enough to snap your fingers and watch your own mess get cleaned up. Yet.") when player is in Pallid Li'l Pad and diapers are reflexed.
 
 after fliptoing diapers:
 	now printed name of Pallid Li'l Pad is "Boredom Bedroom";
@@ -13877,9 +13885,6 @@ check fliptoing ether:
 	if Leo is not in Grey Gyre:
 		say "You suspect someone is in the mist where the maze was. 'THERE!' you yell. But you doubt you fooled or intimidated them. You need backup.";
 		preef ether instead;
-	if the room north of Grey Gyre is not Phat Path:
-		say "'Oo Boss! We ain't goin['] there. Mazes make our brains hurt.'";
-		preef ether instead;
 	if player does not have popgun:
 		say "Leo and Rand charge in. It's two-on-three, though, since you don't even have a weapon--and the enemies are bigger than you. You all walk back, slightly beaten up, muttering 'Ah, ow, whoa.' Leo and Rand shake off their bruises. Still, you note you started things right.";
 		preef ether instead;
@@ -13894,7 +13899,6 @@ book Burnt Brunt
 Burnt Brunt is a room in Presto. "You see gasp-gaps to the west an a mad dam east, though north-south is unimpeded. And there's a dumpster here, too."
 
 understand "spag" as a mistake ("You don't have time to read text-adventuring magazines right now. You're too busy living them.") when player is in burnt brunt.
-understand "a gps" and "gps" as a mistake ("A GPS might point you to the gasp-gaps, but it wouldn't help you survive them. It wouldn't even help you if I forgot to list an exit elsewhere, which totally only happened in the first release and is fixed everywhere now, I hope.") when player is in burnt brunt.
 
 leaf-clue is a truth state that varies.
 
@@ -14305,7 +14309,7 @@ understand "eol" as a mistake ("Somehow, you doubt Leo is into computers.") when
 
 Rand is a fightin bruisin reflexive person. description is "Rand is Leo's mirror image, loutish and muscular and taller than you[if Rand is washed up]. He seems upset[else if rand is fightin]. He looks over-focused, like he can be suckered by a feint, but nothing TOO subtle[end if]."
 
-understand "leonard" and "renaldo" and "leandro" and "rolande" as a mistake ("That'd be some crazy Voltron stuff beyond your magic powers. And it would deny Leo and Rand their individuality[if Rand is fightin]. Oh, and it'd probably get you beaten up[end if].") when Rand is visible.
+understand "leonard" and "renaldo" and "leandro" and "rolande" as a mistake ("That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You [if rand is fightin]just need to outsmart them[else]wouldn't want that, now they're your friends[end if].") when Rand is visible.
 
 a-text of Leo is "YRY". b-text of Leo is "YRY". parse-text of leo is "o[sp]l[sp]e". leo is any-spoilable.
 
@@ -14497,7 +14501,7 @@ instead of doing something with camo-coma:
 
 The PG-on-up popgun is a container in Marines Seminar.
 
-understand "oppugn [text]" as a mistake ("You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.") when popgun is visible.
+understand "oppugn [text]" and "oppugn" as a mistake ("You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.") when popgun is visible.
 
 understand "PG-on-up gun" and "gun" as popgun.
 
@@ -14987,8 +14991,8 @@ before fliptoing when mrlp is presto (this is the warn against SHATTER THREATS r
 
 the compiled code is a thing. description is "It's too much to consider, at once. It--doesn't quite work, but it does something, but it needs to budge."
 
-after fliptoing usb:
-	now compiled code is in lalaland;
+after fliptoing compiled code:
+	now USB is in shack;
 	now golden dongle is in lalaland;
 	continue the action;
 
@@ -15250,11 +15254,6 @@ instead of doing something with dongle:
 	if current action is taking:
 		say "You need the dongle to connect the hard drive to other computer parts." instead;
 	say "You don't need to do anything fancy with the dongle."
-
-check fliptoing USB:
-	if scratch paper is not reflexed:
-		say "No hope of debugging when you can't even build! No, what is it? Something in the polemic, all garbled.";
-		preef compiled code instead;
 
 the USB is a vanishing thing. description is "It's an ordinary USB. Or it would be, around anyone but you.". "The USB that the golden dongle degenerated into lies here."
 
@@ -15604,9 +15603,10 @@ check putting on the keyboard (this is the complete-keyboard rule):
 	otherwise:
 		say "That's not a key that needs to fit in the keyboard." instead;
 
-check fliptoing usb:
-	if scratch paper is reflexive:
-		say "You don't even have the program running. You don't know what to fix." instead;
+check fliptoing compiled code:
+	if scratch paper is not reflexed:
+		say "No hope of debugging when you can't even build! No, what is it? Something in the polemic, all garbled.";
+		preef compiled code instead;
 	if fizzy cola is not in mug:
 		say "The process of debugging is going to take a while. You will need some sort of energy[if dirty looking cola is visible]. That bottle of cola just won't be enough for the task ahead[otherwise]. That coal won't cut it. Too early 20th century[end if].";
 		preef compiled code instead;
@@ -19049,7 +19049,7 @@ to say vis-guar:
 	if number of guardians in salted deltas > 0:
 		say ". Might be more productive to deal with [the list of guardians in salted deltas], instead";
 		if atheists are in deltas:
-			say ". Especially the atheists";
+			say ". Especially the Atheists";
 	else:
 		say ". You've gotten rid of all nuisances here, anyway";
 
@@ -19435,7 +19435,7 @@ a-text of Dr Yow is "RYRRO". b-text of Dr Yow is "RYRRO". parse-text of Dr Yow i
 
 understand "doctor/doc yow" and "doctor/doc" as Dr Yow.
 
-understand "dowry" as a mistake ("Dr. Yow is an intellectual. [he-she-c] needs a [if duck is returned]breakout[else]willing pupil[end if], not material things or romance.") when Dr Yow is visible.
+understand "dowry" as a mistake ("Dr. Yow is an intellectual. [he-she-c] needs a [if duck is returned]willing pupil[else]breakout[end if], not material things or romance.") when Dr Yow is visible.
 
 Dr Yow can be rowdy, wordy or calm. Dr Yow is calm.
 
@@ -20043,8 +20043,7 @@ after fliptoing Curst Palace (this is the overall Towers LLP rule):
 		increment cur-score of towers;
 	continue the action;
 
-understand "crust" as a mistake ("It probably needs less crust, not more. The whole curst palace.") when mrlp is towers.
-understand "a place" as a mistake ("It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.") when mrlp is towers.
+understand "crust" as a mistake ("It probably needs less crust, not more. The whole curst palace.") when mrlp is towers and player is not in trefoil.
 
 understand "castle apcur" and "castle/apcur" as the curst palace.
 
@@ -21763,7 +21762,7 @@ understand "painting" and "rev howe" and "rev/howe" as p-2 when player is in bra
 
 a-text of p-2 is "RYRYRYR". b-text of p-2 is "RYRYRYR". parse-text of p-2 is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x".
 
-understand "whoever" as a mistake ("Actually, Mr. Lee is wondering whoever you might be. Tweak things, and you'll convince him.") when ghoul hat is in lalaland and p-2 is reflexive.
+understand "whoever" as a mistake ("Actually, Mr. Lee is wondering whoever you might be. Tweak things, and you'll convince him.") when player is in bran barn and p-2 is in bran barn.
 
 check fliptoing Mr Lee:
 	if alcoves is not visited:
@@ -22078,7 +22077,7 @@ silence-tally is a number that varies.
 after fliptoing when player is in Anger Pit (this is the break the imp down rule) :
 	increment silence-tally;
 	if silence-tally is 2:
-		say "The sly imp lets out a curse. It's completely failed to keep his cool. It leaves, confidence shattered. You can go past now.";
+		say "The sly imp lets out a curse. It's completely failed to keep its cool. It leaves, confidence shattered. You can go past now.";
 		now imp is in lalaland;
 		now imp1 is in lalaland;
 		now imp2 is in lalaland;
@@ -22384,7 +22383,7 @@ the becharm chamber is amusing scenery in Inclosure. chamber is an undesc.
 instead of doing something with the becharm chamber:
 	say "It's too far away to do anything with. For your purposes, it's just one more bit of evil scenery."
 
-understand "aliver" as a mistake ("For whatever reason, you decide to give Elvira even more power. This time, you don't have the time or guts to reject her phaser.[uurrgg]") when player is in Inclosure.
+understand "aliver" as a mistake ("[if player is in inclosure]For whatever reason, you decide to give Elvira even more power. This time, you don't have the time or guts to reject her phaser.[uurrgg][else]You don't want to risk anything that would make Elvira more powerful.[end if]")
 
 understand "drop it" as a mistake ("For whatever reason, you just decide to give up. Elvira cackles. 'I knew you'd see it my way.' You wind up apologizing on national TV for getting too big for your anagramming britches and accepting a general brainwashing to boot. It's not that bad, only because, well, um, it just isn't. You're thrown in a jail, which can't be anagrammed, but it's for your own good. You're cool with that.[uurrgg]") when player is in Inclosure.
 
@@ -22544,7 +22543,9 @@ to say mami:
 	else:
 		say "[if player is in citrus]Named It[else]AND TIME,[end if] Mrs Master Mind";
 
-understand "gapers" and "gasper" as a mistake ("Really, you don't need people all [mami] over changing those pagers into anything else. That's not your style.") when player is in rustic citrus and pagers are in rustic citrus
+understand "gapers" as a mistake ("Really, you don't need people all [mami] over changing those pagers into anything else. That's not your style.") when player is in rustic citrus and pagers are in rustic citrus.
+
+understand "gasper" as a mistake ("Not as healthy as fruit, to be sure!") when player is in rustic citrus and pagers are in rustic citrus.
 
 instead of taking pagers:
 	say "As much as you'd like to bash them, there's another way to shut them up."
@@ -23372,7 +23373,7 @@ understand "nag mo" as a mistake ("[one of]You get all red faced asking people h
 
 understand "an omg" as a mistake ("Lashing out that way leaves you feeling you must be close to the right way to get a mango.") when player is in clearing and mango is off-stage.
 
-check fliptoing mango:
+before fliptoing mango:
 	if player does not have tekno-token:
 		say "You'd look a little too suspicious mingling without anything of value to trade. Maybe when you have something, though.";
 		preef mango;

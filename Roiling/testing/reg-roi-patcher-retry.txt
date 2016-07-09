@@ -49,6 +49,8 @@ Strip of Profits
 >purloin usb
 >bus
 
+Strip of Profits
+
 >score
 1/33
 
@@ -60,17 +62,17 @@ Strip of Profits
 >pull lever
 >redial
 
-Trips Strip
+Strip of Profits
 
 >score
-3/39
+4/39
 
 * cheat-towers
 
 >gonear mislit limits
 >spectacular
 
-Trips Strip
+Strip of Profits
 
 >score
 1/45

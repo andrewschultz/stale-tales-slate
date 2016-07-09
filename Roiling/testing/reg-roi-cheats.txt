@@ -418,11 +418,6 @@ Anger Range
 
 >n
 Lapsin' Plains
-The pills fly to the skis with a bizarre smooching noise. The skis dissolve, perhaps out of inanimate shame.
---instead of using the pills, you could've tried to KISS the skis.
-
->z
-
 The pills jump over to the debris and then off somewhere. You think they showed you where the throwing came from.
 [Your score has just gone up by one point.]
 --instead of using the pills, you could've tried to TRACE the crate.
@@ -431,6 +426,10 @@ The pills jump over to the debris and then off somewhere. You think they showed 
 The pills jump over to the debris and then swarm in the air like bees, causing your hidden tormentor to shriek and run away.
 [Your score has just gone up by one point.]
 --instead of using the pills, you could've tried to REACT to the next crate.
+
+>z
+The pills fly to the skis with a bizarre smooching noise. The skis dissolve, perhaps out of inanimate shame.
+--instead of using the pills, you could've tried to KISS the skis.
 
 >z
 The pills gravitate to the knob and turn it forcefully. It won't act up again.
@@ -836,13 +835,13 @@ As you gaze into the cinders, they blow away, leaving you feeling you can say BE
 As you gaze into the cinders, they blow away, leaving you feeling you can say ELSE.
 
 >else
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of the Barley.
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of the barley.
 
 >s
 As you gaze into the cinders, they blow away, leaving you feeling you can make an ATOM.
 
 >atom
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of the Barley.
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of the barley.
 
 >s
 As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
@@ -867,8 +866,7 @@ As you gaze into the cinders, they blow away, leaving you feeling you can make t
 /make the (leopard|satyr)
 
 >paroled
-# note that with 3 animals down we don't want to hint a semi-useless 4th. DISCERN/HINT should go to getting on with the game.
-As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of the Barley.
+As you gaze into the cinders, they glint slightly off the medals, leaving you feeling the medals need refurbishing. Maybe in the area south of the barley.
 
 >s
 >s
@@ -981,10 +979,10 @@ Nothing specific left to do here, though you may need to give Curtis some more f
 >w
 Filed Field
 
-/DEBUG INFO: (buried raft|barriers west|barber sickle|mean trowel|pipe panel fence|pryer bars|rapt figure)
+/DEBUG INFO: (buried raft|the barriers west|barber sickle|mean trowel|pipe panel fence|pryer bars|rapt figure)
 
 >breadfruit
-/DEBUG INFO: (barriers west|barber sickle|mean trowel|pipe panel fence|pryer bars|rapt figure)
+/DEBUG INFO: (the barriers west|barber sickle|mean trowel|pipe panel fence|pryer bars|rapt figure)
 
 >raspberry
 You can go back to Curtis for a reward.
@@ -999,7 +997,7 @@ You ultimately need another coin, but perhaps it can be converted to something o
 You ultimately need another coin
 
 >icon
-/DEBUG INFO: (barriers west|barber sickle|mean trowel|pipe panel fence|rapt figure)
+/DEBUG INFO: (the barriers west|barber sickle|mean trowel|pipe panel fence|rapt figure)
 
 >strawberries
 /DEBUG INFO: (barber sickle|mean trowel|pipe panel fence|rapt figure)

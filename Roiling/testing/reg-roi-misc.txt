@@ -36,3 +36,17 @@ That's not something you can say, do or see here. For a general list of verbs, t
 
 >wave pad
 I understood the first word, but it can just stand on its own as a verb. If you were trying to do something tricky with it, you shouldn't need to. So just "wave" should work.
+
+* oyster-weird-verbs
+
+>inset abc
+You may not be using an object in the game, and you may wish to inseRt, instead.
+
+>inset abc into def
+You may want to INSERT x in Y instead.
+
+>purloin settler
+>gonear sand home
+
+>eat
+by one point

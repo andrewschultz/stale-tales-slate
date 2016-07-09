@@ -12,9 +12,7 @@
 * weird stuff
 
 >aliver
-For whatever reason,
-
->undo
+You don't want to risk anything that would make Elvira more powerful.
 
 >alvire
 Changing Elvira is impossible, and you certainly don't want to summon her.
@@ -22,13 +20,21 @@ Changing Elvira is impossible, and you certainly don't want to summon her.
 >yalpdrow
 You can't just unjumble Yorpwald with just one word. You need to deal with individual things.
 
+#done before you see the space capes
+>spaec
+Meta-commands don't have any easter eggs, sadly.
+
+>purloin settler
+>purloin purse
+>purloin treatise
+
 >ettlers
 You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
 
 >kram
 You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
 
->recodedd
+>recodde
 You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
 
 >deviser
@@ -43,22 +49,13 @@ You won't gain anything trying to magic the settler, or parts of it, about. It's
 >button
 You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
 
->
-Omit talks? Total skim. Milk toast.
-
->
-A nod at no data.
-
->
-Eek! Let's try letter keys.
-
 >receptor
 You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
 
 >receptors
 You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
 
->outputd
+>outptu
 You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
 
 >displya
@@ -82,7 +79,7 @@ This game almost never requires you to mess with cardinal directions.
 >esta
 This game almost never requires you to mess with cardinal directions.
 
->down
+>donw
 This game doesn't usually require you to mess with directions you can go.
 
 >southwets
@@ -93,7 +90,6 @@ This game doesn't require you to mess with diagonal directions, so I hope that's
 
 >northeats
 This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
-WRONG make sure to test this in rawest waters
 
 >southeats
 This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
@@ -111,22 +107,22 @@ A hollow voice booms, "Lo! Of..."
 A hollow voice booms, "Lo! Of..."
 
 >iths
-You're not fooling ME. Shame on you.
+You're not fooling ME. Shame on you!
 
 >kcuf
-You're not fooling ME. Shame on you.
+You're not fooling ME. Shame on you!
 
 >mand
-You're not fooling ME. Shame on you.
+You're not fooling ME. Shame on you!
 
 >lleh
-You're not fooling ME. Shame on you.
+You're not fooling ME. Shame on you!
 
 >parc
-You're not fooling ME. Shame on you.
+You're not fooling ME. Shame on you!
 
 >hcek
-You're not fooling ME. Shame on you.
+You're not fooling ME. Shame on you!
 
 >llaw
 You don't need to, and can't, do anything drastic to the walls when inside. That'd be kind of dangerous, anyway.
@@ -147,7 +143,7 @@ You can just switch the slider if you want to manipulate it.
 The purse is just fine as it is.
 
 >aspec
-You don't want to mess with the space-capes. They work..
+You don't want to mess with the space-capes. They work.
 
 >treaties
 The treatise was there as help to discover the satchel. It has only sentimental value, now.
@@ -166,7 +162,7 @@ Red writing is a just clue of what to change.
 Red writing is a just clue of what to change.
 
 >ryter
-You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.
+!You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.
 
 >warning
 You can't change warnings. Warnings are there to protect you. Even offer hints if you read them.
@@ -233,9 +229,6 @@ Meta-commands don't have any easter eggs, sadly.
 >spaces
 Meta-commands don't have any easter eggs, sadly.
 
->space
-Meta-commands don't have any easter eggs, sadly.
-
 >sno
 Meta-commands don't have any easter eggs, sadly.
 
@@ -266,15 +259,38 @@ Meta-commands don't have any easter eggs, sadly
 >semithong
 Instead of messing with SOMETHING, maybe you can examine what the something is on.
 
+>ts
+>ryter
+You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.
+
 * cluing and such
+
+>ervo
+That's not a way to sneak around and avoid any future knock at the door
 
 >udsty
 You don't need to riff on any location names to win the game
+
+>think
+>x bookshelf
+
+#rove over anagram while G knocks
+>ervo
+That's not a way to sneak around and avoid the knock at the door.
+
+>open door
+>1
+>5
 
 >dark
 You punch your fist as you realize DARK has no anagrams...right into the palm
 >darksens
 Oh no, not again. Concentrate on the palm
+
+>palm
+You think you feel the palm shake a bit, but nothing terribly magical happens.
+
+>lamp
 
 >bowling
 It's more that it's a giant pin and not, like, a safety pin
@@ -282,7 +298,7 @@ It's more that it's a giant pin and not, like, a safety pin
 It's more that it's a giant pin and not, like, a safety pin
 
 >echin
-It's not any old niche. It's your niche. And by your niche, I mean you see it as 'my niche.'
+It's not any old niche. It's your niche. And by your niche, I mean you see it as "my niche."
 
 >bskoo
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
@@ -301,16 +317,10 @@ Not even one of the beams rattles. You count them up again--there are ten.
 >ten
 You change neither the number nor the makeup of the ten beams.
 
->ervo
-any future knock at the door
-
 >morna
 Trying to change the current region you're in would be risky, or useless, or maybe both
 
->ervo
-That's not a way to sneak around and avoid the knock at the door.
-
->nip
+>npi
 It's one big giant pin.
 >ignat
 It's one big giant pin.
@@ -318,21 +328,12 @@ It's one big giant pin.
 >painting
 >x bookshelf
 
->open door
->1
->5
-
->palm
-You think you feel the palm shake a bit, but nothing terribly magical happens.
-
->lamp
-
 >painting
 >painting
 goes better
 
->abstract
-That is probably overthinking the painting's abstract-ness. It's really just good for examining and offsetting the bookcase.
+>abstratc
+That is probably overthinking the painting's abstract-ness. It's really just good for examining.
 
 >basement
 >d
@@ -368,25 +369,18 @@ You don't need to change it. It was tough enough to create.
 Not one latch. All of them.
 
 >letchas
-WRONG
+You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them.
+
 >satchel
 
 >letchas
-You think you feel static through the latches. But they remain the same.
-
->satchel
+You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too.
 
 >ceiling
 You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed.
 
 >chimney
-DEBUG INFO: Trying to flip chimney.
-
-The square saying MY NICHE rumbles and collapses to create an impromptu chimney. It's wide enough for you to climb and even appears to have ledges or whatever to grip. You can go up now.
-
 [Your score has just gone up by one point.]
-
-DEBUG INFO: Adding a min point for this flip.
 
 >cieling
 You already built the chimney. If the ceiling caved, you'd be buried.
@@ -443,10 +437,10 @@ You feel like you physically want to crumple up the page, but you just stare bla
 >u
 
 >hightes
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >highte
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >clostes
 The closets are there to warp space a bit. You don't need to mess with them.
@@ -457,6 +451,8 @@ The closets are there to warp space a bit. You don't need to mess with them.
 >prma
 The pram creaks back and forth slightly.
 
+>d
+
 >noitce
 You can flip everything on the diorama except the notice.
 
@@ -466,13 +462,14 @@ Old Man Almond assured you you couldn't change it by accident when he gave it to
 >erdaing
 You don't have time for literary criticism.
 
->tenbeams
+>tenbeasm
 You probably just want to go DOWN to the basement.
 
->chimney
+>chimnye
 You probably just want to go UP the chimney.
 
 >stable
+>stabel
 You probably just want to go IN to the stable.
 
 >dsa
@@ -521,7 +518,7 @@ It's not a gun but a rifle. And a gnu would be a gnu-sance anyway.
 >y
 
 >ecvarn
-You don't need to riff on any location names to win the game, though you may get a last lousy point from doing so in one place, if you're observant.
+You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
 >elptas
 The plates shine slightly and rattle.
@@ -561,4 +558,3 @@ The paperwall is unmoved. Maybe the stuff that came from it  could help you more
 
 >wall
 The paperwall is unmoved. Maybe the stuff that came from it  could help you more, here.
-

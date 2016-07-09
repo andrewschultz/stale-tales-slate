@@ -8,7 +8,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _manor-go-to
+* manor-go-to
 
 >go to me
 >go to study
@@ -77,7 +77,7 @@ Your manor was surrounded, and you escaped. Bad idea to turn back.
 >staple
 >in
 
-* _stores-go-to
+* stores-go-to
 
 >ts
 
@@ -97,7 +97,7 @@ The command you may be looking for is RETRY.
 >gt lectures
 You already took care of things there.
 
-* _routes-go-to
+* routes-go-to
 
 >ts
 
@@ -179,7 +179,7 @@ Not from the boat, you aren't. You're much closer to your goal right now.
 >between
 Strip of Profits
 
-* _troves-go-to
+* troves-go-to
 
 >ts
 >troves
@@ -239,7 +239,7 @@ Your score has just gone up by one point
 
 Strip of Profits
 
-* _presto-go-to
+* presto-go-to
 
 >ts
 
@@ -327,7 +327,7 @@ You should have what you need. It might be dangerous, or just plain distracting,
 >gt skid
 You can flip back to the skid.
 
-* _oyster-go-to
+* oyster-go-to
 
 >ts
 >oyster
@@ -396,7 +396,7 @@ Tenfold
 >gt sanctum
 You got rid of the ant. Nothing more to do there.
 
-* _towers-go-to
+* towers-go-to
 
 >seed 1
 >ts
@@ -481,7 +481,7 @@ You leave her sin shrine with extra quickness before getting a shiner.
 
 Bleary Barley
 
-* _others-go-to
+* others-go-to
 
 >ts
 >gonear rustic

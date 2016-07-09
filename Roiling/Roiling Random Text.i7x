@@ -31309,6 +31309,7 @@ blurb
 "Legs of Self, Go[r], by Egloff Goessl"
 "Leverage! Rave! Glee[r], by [if player is male]Lee Grave[else]Eve Agler[end if]"
 "Lie, Wreath: The Wailer, Wealthier[r], by Earl White" []
+"Lo, and We Deal Now[r], by Lon Wade"
 "Lo-Debt: Be Told[r], by Deb Olt" []
 "Lo! Snap! On, Pals[r], by Sol Sapp-Nolan" []
 "Lo, Woken! New Look![r], by Ken Wool"
@@ -34876,6 +34877,7 @@ blurb
 "'Bus stop sots['] pub? [']S sub-opt.'"
 "'By darn, brandy!' calls a patron." [x]
 "'Champagne, chap? Nag [']em!'"
+"A chirp: 'I parch!'"
 "'A coke OK, Ace?'"
 "'Cost us to cuss? Scouts!' moans a patron." [x]
 "'Coward! Raw cod!'" []
