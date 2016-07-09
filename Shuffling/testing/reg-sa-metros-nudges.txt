@@ -6,7 +6,7 @@
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _metros-random-nudge
+* metros-random-nudge
 
 #let's test random things that it's tricky to do with a straight walkthrough
 

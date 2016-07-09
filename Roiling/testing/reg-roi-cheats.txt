@@ -322,7 +322,7 @@ You gulp the crust, mouthing your favorite profanity (minor or major, I won't ju
 
 >compile
 
-You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try DEBUG the compiled code.
+You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to DEBUG the compiled code.
 
 >debug
 
@@ -711,7 +711,7 @@ You have a good gaze, and you know what to do and say and think. Gotta be STABLE
 /You have a good gaze, and you know what to do and say and think. Gotta be (ROBUST|STABLER).
 >undo
 
->blaster
+>stabler
 >xray bot boat
 You have a good gaze, and you know what to do and say and think. Gotta be ROBUST.
 

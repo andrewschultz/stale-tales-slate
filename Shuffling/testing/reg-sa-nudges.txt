@@ -8,13 +8,6 @@
 ** interpreter: /home/andrew/prt/glulxe -q
 
 * dirtest-general-intro
-#if point-cue is true
->ption
-no secret cheat between NO TIP
-
-# if player has gadget
->parse
-no inbetween for the PARSE
 
 >notepda
 You mess around with all the possibilities for a bit
@@ -81,10 +74,10 @@ You don't need to mess with your pockets
 >jmpu
 impressively uncoordinated
 
->verb
+>vebr
 There's no secret verb or verbs to find trying that
 
->verbs
+>versb
 There's no secret verb or verbs to find trying that
 
 >thikn
@@ -102,14 +95,14 @@ There's no way to scramble your score
 >credti
 "credits" section, but I'm flattered you looked for it
 
->sites
+>sitse
 Meta-commands don't have any easter eggs, sadly
 
->tech
+>tehc
 Meta-commands don't have any easter eggs, sadly
 
 >son
-Meta-commands don't have any easter eggs, sadly
+This option means nothing until you have acquired the gadget.
 
 >psaceon
 Meta-commands don't have any easter eggs, sadly
@@ -140,14 +133,26 @@ Instead of messing with SOMETHING
 
 # gadget testing
 
+>gonear notices section
+
 >purloin gadget
+
+>sno
+Meta-commands don't have any easter eggs, sadly
+
+>opt in
+>ption
+no secret cheat between NO TIP
+
+>pares
+no inbetween for the PARSE
 
 >tightknto
 It's a bit too thick to mess with. Both because of the consonants, and, well...you don't need to remove the knot, anyway.
 >tigth
 It's a bit too thick to mess with. Both because of the consonants, and, well...you don't need to remove the knot, anyway.
 
->tagged
+>taggde
 Bad idea to mess with electronics you don't understand.
 
 >lemno
@@ -186,8 +191,8 @@ You can just switch the gadget instead.
 
 >purloin phail phial
 >angel
-WRONG
-
+You've got enough practical help. You don't need anything supernatural.
+ 
 >anleg
 There's nothing between ANGLE and GLEAN that you can do with the blue lube.
 
@@ -234,7 +239,7 @@ You can't change Old Warpy. You have to just trust it
 >certify store f
 
 >pitno
-There's no secret cheat between NO TIP and POINT.
+There's no secret cheat between NO TIP and OPT IN.
 
 >pares
 There's no inbetween for the PARSE and SPARE commands for the gadget.
@@ -243,10 +248,17 @@ There's no inbetween for the PARSE and SPARE commands for the gadget.
 You'll need to change Yorpwald one anagram at a time.
 
 >terry
-You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no.
+Nothing happens. Perhaps this is where you'd be sent back to once you're able to look around.
 
 >fimr
 FIMR is just a mnemonic for the stores you need to explore, somehow.
 
 >forest
-FIMR is just a mnemonic for the stores you need to explore.
+>in
+
+>ryter
+You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no.
+
+>retry
+>ryter
+You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no.

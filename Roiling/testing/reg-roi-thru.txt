@@ -565,7 +565,7 @@ Bad idea to poke fun at someone that much bigger than you.
 The giant's spouting enough verbal diarrhea, so, just... no.
 Also, you don't need to go THAT far down.
 >below
-Nice try, but wrong preposition for the situation.
+You're already below, but if you were close enough to listen, that could work.
 
 
 >staider
@@ -581,7 +581,8 @@ Your score has just gone up by one point
 You got on the bench right. Time to try more.
 
 >astride
-The giant's not falling for your false sympathy again.
+You positioned yourself well to duck the giant and put up with his elbow. Try something else.
+
 >staider
 You already did your best with the tirades. The giant will complain if he wants to.
 
@@ -628,6 +629,9 @@ This game doesn't allow the FOLLOW verb--you should ENTER a road or something if
 
 >along
 You aren't far enough along to, err, look along
+
+>below
+Nice try, but wrong preposition for the situation.
 
 >beneaht
 The bean rolls back and forth a bit.
@@ -1048,8 +1052,6 @@ Burnt Brunt
 You don't have time to read text-adventuring magazines right now. You're too busy living them.
 
 >a gps
-A GPS might point you to the gasp-gaps, but it wouldn't help you survive them. It wouldn't even help you if I forgot to list an exit elsewhere, which totally only happened in the first release and is fixed everywhere now, I hope.
->gps
 A GPS might point you to the gasp-gaps, but it wouldn't help you survive them. It wouldn't even help you if I forgot to list an exit elsewhere, which totally only happened in the first release and is fixed everywhere now, I hope.
 
 >mad
@@ -2789,7 +2791,7 @@ Your score has just gone up by one point
 The imp's already been compromised that way.
 >angrily
 Your score has just gone up by one point
-The sly imp lets out a curse. It's completely failed to keep his cool. It leaves, confidence shattered. You can go past now.
+The sly imp lets out a curse. It's completely failed to keep its cool. It leaves, confidence shattered. You can go past now.
 
 >n
 Wickeder Wire Deck
@@ -3087,7 +3089,7 @@ That's not something you can
 Really, you don't need people all Damn Mister Master Mind over changing those pagers into anything else. That's not your style.
 >gs
 >gapers
-Really, you don't need people all Damn Mister Master Mind over changing those pagers into anything else. That's not your style.
+Really, you don't need people all Named It Mrs. Master Mind over changing those pagers into anything else. That's not your style.
 >gs
 
 >gasper
@@ -3525,7 +3527,7 @@ You've done enough researching, but you can just go north.
 >n
 You Did Great
 
-* _big-go
+* big-go
 
 >{include} _manor
 
@@ -3581,11 +3583,11 @@ Rustic Citrus
 >n
 >missed
 
-* _only-manor
+* only-manor
 
 >{include} _manor
 
-* _only-stores
+* only-stores
 
 >ts
 >{include} _stores

@@ -246,7 +246,7 @@ use MAX_STATIC_DATA of 300000.
 
 use MAX_ACTIONS of 290.
 
-use MAX_VERBS of 370.
+use MAX_VERBS of 375.
 
 use MAX_SYMBOLS of 33000.
 
@@ -355,7 +355,7 @@ anapest	"You think you had the right idea, but your execution was poor. Maybe be
 smilies	"The smilies momentarily grow eyebrows that point aggressively, then vanish."
 hoots button	"You suppress a few minor swears as you realize that can't be right."
 trees button	"Hmm, that doesn't work, but you bet you can bull your way through things."
-oils	"[if oils are not in cask and player is not in moor]That doesn't seem right, and you may need somewhere to pour the oils, anyway[else]The oils need a purpose--to build something great[end if]. You don't want to waste them."
+oils	"The oils need a purpose--to build something great. You don't want to waste them." [separate if statement below takes other cases]
 drainage	"The drainage bubbles a bit." [metros start]
 motto	"Hm, you maybe could bend the motto a bit differently."
 brocade	"The brocade design seems simple, yet complex, and perhaps you don't have to change a lot."
@@ -2808,7 +2808,7 @@ carry out retrying:
 	if location of player is trips strip:
 		if retried is true:
 			say "This is the place you go after retrying--as you probably know. So nothing happens." instead;
-		say "Nothing happens. Perhaps this is where you'd be sent back to[if sf is visited or underside is visited or Centrifuge is visited]after going somewhere like you've been[otherwise]once you're able to look around[end if]." instead;
+		say "Nothing happens. Perhaps this is where you'd be sent back to [if sf is visited or underside is visited or Centrifuge is visited]after going somewhere like you've been[otherwise]once you're able to look around[end if]." instead;
 	if trips strip is unvisited:
 		say "You haven't been to the Trips Strip yet, whatever that is, and you suspect you can't just jump ahead. Besides, you don't want to risk retrying the busiest subsite." instead;
 	if mrlp is resort:
@@ -4959,6 +4959,8 @@ to intro-marcos:
 		now marcos-trumped is true;
 
 chapter gleaning
+
+understand "angel" as a mistake ("You've got enough practical help. You don't need anything supernatural.") when phial is visible.
 
 gleaning is an action out of world.
 
@@ -9989,8 +9991,6 @@ Include (-
 
 description of protest is "They're all smeared with--huh? Looks like clay? In any event, they don't look like their heart is in the protest."
 
-understand "lacy" as a mistake ("No, the clay is a clue to what the [if protest is visible]protest[else]trio[end if] really wants to do.") when kilns are visible.
-
 the potters are plural-named scenery. understand "trio/protest/three" as potters when potters are visible.
 
 Include (-
@@ -10616,9 +10616,10 @@ after reading a command:
 	if word number 1 in the player's command is "chisel" and player has chisel:
 		replace the regular expression "^chisel" in XX with "scrape";
 		change the text of the player's command to XX;
-	if word number 1 in the player's command is "silver" and player has liver:
-		say "The livers are too dull to do anything like that with. Yet.[liv-preef]";
-		reject the player's command;
+	if word number 1 in the player's command is "silver":
+		if player has livers or cow liver is visible or chicken liver is visible:
+			say "The livers are too dull to do anything like that with. Yet.[liv-preef]";
+			reject the player's command;
 	if word number 1 in the player's command is "tell":
 		if tell-flag is false:
 			say "[bracket]NOTE: this game uses 'ASK X ABOUT Y,' as you don't need to order NPCs around. So the parser will attempt to convert this to asking.[close bracket][line break][wfak]";
@@ -12677,7 +12678,7 @@ carry out playing:
 		say "Nothing further happens." instead;
 	the rule succeeds;
 
-understand "gunshot" as a mistake ("[if noughts are visible]You need something more tangible than that. Something that could make a gunshot, perhaps[else]You need to SHOOT the gun[end if][if shotgun is visible and silver is not visible], but you don't have a bullet yet[end if].") when noughts are visible or shotgun is visible.
+understand "gunshot" as a mistake ("[if noughts are visible]You need something more tangible than that. Something that could make a gunshot, perhaps[else]You need to SHOOT the gun[end if][if shotgun is visible and silver is off-stage], but you don't have a bullet yet[else if shotgun is visible and player has silver], but you need to load it first[end if].") when noughts are visible or shotgun is visible.
 
 chapter lifting
 

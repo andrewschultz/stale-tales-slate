@@ -449,7 +449,7 @@ Your score has just gone up by one point.
 Hard to beat silver. It's what it should be.
 
 >gunshot
-You need to SHOOT the gun, but you don't have a bullet yet.
+You need to SHOOT the gun, but you need to load it first.
 
 >put silver in shotgun
 
@@ -536,7 +536,7 @@ The nick blurs a little but snaps back to normal.
 >kitchen
 Your score has just gone up by one point.
 >kitchne
-Nothing happens. Well, you didn't really want to go back, and there's probably no third room to look for. Maybe you need to escape this bunker in another room.
+Nothing happens. Well, you didn't really want to go back to the nick, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room.
 
 >open fridge
 grist and a cake pan
@@ -668,12 +668,12 @@ You doubt the sack/cask has a triple purpose.
 You mope, but you imagine no poem.
 
 >moro
-The room sways a bit but snaps back to normal.
+You almost feel something picking you up for a second. You must have been close.
 >moor
 Your score has just gone up by one point.
 Moor
 >moro
-The moor sways a bit but snaps back to normal.
+The moor sways a bit. You do some brief mental calculation. There's no third place between them.
 
 >tap
 "Ah! You are TAPping your feet to my anapest beat!"
@@ -774,10 +774,15 @@ You already have a passage east. Don't close it.
 Sacred Cedars
 
 >cask
-You suddenly feel discontent at your container of choice.
->sack
+The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright.
+
 >lois
 Lois will not pour the oils in the cask for you, but she is not stopping you.
+
+>sack
+>lois
+You suddenly feel discontent at your container of choice.
+
 
 >ecards
 Even if those were physical things, they'd be--well, less than religious. You don't need to change the cedars.
@@ -796,6 +801,9 @@ Violence or vandalism in such a holy place? For shame.
 >serve
 You must serve by going forth on your mission of warlikeness and love.
 
+>soli
+Changing Lois is highly unlikely, and you should possess the oils before doing anything with them.
+
 >cask
 >fill cask
 Gainly laying
@@ -803,11 +811,14 @@ Gainly laying
 >lois
 Lois is silent. You figure what to pour, where
 
+>soli
+The oils need a purpose--to build something great. You don't want to waste them.
+
 >fill cask
 already full
 
 >soli
-That doesn't seem right, and you may need somewhere to pour the oils, anyway. You don't want to waste them.
+The oils need a purpose--to build something great. You don't want to waste them.
 
 >moor
 >soli
@@ -1458,6 +1469,9 @@ You mutter a small epithet at where Red Bull Burdell could be. No, he's not arou
 >e
 Potshot Hotspot
 
+>lacy
+No, the clay is a clue to what the protest really wants to do.
+
 >trio
 Your score has just gone up by one point.
 
@@ -1465,7 +1479,7 @@ Your score has just gone up by one point.
 No, the clay is a clue to what the trio really wants to do.
 
 >achin
-You don't have the ability to dish out an achin'..
+You don't have the ability to dish out an achin', but you see red from wanting to do so.
 
 >china
 Your score has just gone up by one point.
@@ -1480,8 +1494,6 @@ Your score has just gone up by one point.
 They're not bad people. But even bad people don't deserve to vanish like that! Maybe they can get a purpose, able to use those kilns.
 >roister
 That's what's causing the riot, and it's up to you to quiet the rioters--well, the riot.
->lacy
-No, the clay is a clue to what the protest really wants to do.
 
 >potters
 Your score has just gone up by one point.
@@ -1508,7 +1520,7 @@ a smart gamin' anagrammist
 
 ################################main tests below here
 
-* _plow-through
+* plow-through
 
 ###############this tries all the mistakes etc.
 
@@ -1532,38 +1544,38 @@ new hero now here
 
 >{include} _resort
 
-* _metros-1
+* metros-1
 #####this is usually not run as we can rely on plow-through. But it's there if wanted.
 
 >gonear underside
 >{include} _metstart-long
 >{include} _metros-heaths-darkness
 
-* _metros-2
+* metros-2
 
 >gonear underside
 >{include} _metstart-short
 >{include} _metros-heaths-gnats
 
-* _metros-3
+* metros-3
 
 >gonear underside
 >{include} _metstart-short
 >{include} _metros-begonias-darkness
 
-* _metros-4
+* metros-4
 
 >gonear underside
 >{include} _metstart-short
 >{include} _metros-begonias-gnats
 
-* _metros-5
+* metros-5
 
 >gonear underside
 >{include} _metstart-short
 >{include} _metros-begonias-noise
 
-* _intro-only
+* intro-only
 
 >{include} _intro
 

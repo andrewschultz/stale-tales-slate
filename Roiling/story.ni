@@ -4212,7 +4212,7 @@ computer screen	"The screen is less ancient than the censer, but you can't do an
 keyboard	"You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke."
 t-key	"No, the TAB key is what it should be."
 scratch paper	"After compiling, you often need to make small tweaks, but not like that."
-USB	"You had to consider all sorts of combinations while debugging, but things will be easier now."
+compiled code	"You had to consider all sorts of combinations while debugging, but things will be easier now."
 stumbler tumblers	"You can't and don't want to do anything else to the tumblers." [oyster]
 capers recaps	"Casper has suffered enough indignities. You should annoy someone else."
 gins sign	"The sign mainly just disallowed singing."
@@ -5532,7 +5532,7 @@ carry out presto-hinting:
 			try objhinting scratch paper instead;
 		if fizzy cola is not in mug:
 			try objhinting mug;
-		if compiled code is visible:
+		if compiled code is reflexive:
 			try objhinting compiled code instead;
 		if usb is visible:
 			try objhinting usb instead;
@@ -6154,7 +6154,9 @@ after reading a command:
 		ital-say "you probably don't need more than four words per command. The most complex ones are PUT X ON Y or ASK X ABOUT Y, and a compound item like GIANT PIN can use GIANT or PIN. Adjectives usually aren't necessary, and GET ALL will never take anything harmful or lethal.";
 		now long-sent-warn is true;
 		pad-rec "long commands";
-	consider-trailing-a;
+	consider the trailing-a rule;
+	if the rule succeeded:
+		reject the player's command;
 	if word number 1 in player's command is "a":
 		if ask-warn is false:
 			say "Replacing 'a' with 'ask about.' Saying 'a' is not required for any puzzle.";
@@ -6281,27 +6283,28 @@ after reading a command:
 
 section special cases
 
-to consider-trailing-a:
+this is the trailing-a rule:
 	if location of player is hero's shore:
 		if the player's command exactly matches the text "a cone":
 			say "That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the raft or boats are a better bet.";
-			reject the player's command;
+			the rule succeeds;
 	else if location of player is loather rathole:
 		if the player's command exactly matches the text "a rec":
 			say "You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.";
-			reject the player's command;
+			the rule succeeds;
 	else if location of player is handsome sand home:
 		if the player's command exactly matches the text "a nut":
 			say "That's not nice. You are a guest.";
-			reject the player's command;
+			the rule succeeds;
 	else if mrlp is towers and player is not in trefoil:
 		if the player's command exactly matches the text "a place":
 			say "It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.";
-			reject the player's command;
+			the rule succeeds;
 	else if player is in burnt brunt:
 		if the player's command exactly matches the text "a gps":
 			say "A GPS might point you to the gasp-gaps, but it wouldn't help you survive them. It wouldn't even help you if I forgot to list an exit elsewhere, which totally only happened in the first release and is fixed everywhere now, I hope.";
-			reject the player's command;
+			the rule succeeds;
+	the rule fails;
 
 section command reader booleans
 
@@ -12063,9 +12066,9 @@ to say flail:
 understand "below" as a mistake ("Nice try, but wrong preposition for the situation.") when below-is-wrong.
 
 to decide whether below-is-wrong:
-	if player is in Adobe Abode and runed book is in Adobe Abode:
+	if player is in same mesa and runed book is in same mesa:
 		decide yes;
-	if the-b is in stripe and player is in stripe:
+	if the-b is in same mesa and player is in same mesa:
 		decide yes;
 	decide no.
 
@@ -12303,9 +12306,7 @@ check taking bench-end:
 
 check fliptoing bench-end:
 	if old giant is not visible:
-		say "You'd get lonely up there without company." instead;
-
-understand "astride" as a mistake ("[if bench-end is reflexed]Nobody or nothing else big enough to get astride of[else]Not quite the right way to position yourself, yet[end if].") when player is in mesa and giant is not in mesa.
+		say "[if bench-end is reflexed]Nobody or nothing else big enough to get astride of[else]Not quite the right way to position yourself, yet[end if]." instead
 
 chapter Rude N Nuder
 
@@ -14989,7 +14990,7 @@ before fliptoing when mrlp is presto (this is the warn against SHATTER THREATS r
 			preef noun;
 			do nothing instead;
 
-the compiled code is a thing. description is "It's too much to consider, at once. It--doesn't quite work, but it does something, but it needs to budge."
+the compiled code is a reflexive thing. description is "It's too much to consider, at once. It--doesn't quite work, but it does something, but it needs to budge."
 
 after fliptoing compiled code:
 	now USB is in shack;
@@ -22541,7 +22542,7 @@ to say mami:
 	if player is male:
 		say "[d-word-u] Mister Master Mind";
 	else:
-		say "[if player is in citrus]Named It[else]AND TIME,[end if] Mrs Master Mind";
+		say "[if player is in citrus]Named It[else]AND TIME,[end if] Mrs. Master Mind";
 
 understand "gapers" as a mistake ("Really, you don't need people all [mami] over changing those pagers into anything else. That's not your style.") when player is in rustic citrus and pagers are in rustic citrus.
 
@@ -24731,7 +24732,7 @@ rivets	"[by-rivets]."
 painting of the stream	"The painting inspired you enough, [if lobster is in lalaland]though you can knock off that lobster if you want[else]as much as the lobster, in fact[end if]." [end TROVES] [nothing for STORES]
 scripture picturers	"The scripture picturers helped you get in, but they're just there to help other people now. Maybe." [start ROUTES]
 bench	"You got the giant to the bench. Now you need to deal with the giant."
-bench-end	"You positioned yourself well to duck the giant and put up with his elbow."
+bench-end	"You positioned yourself well to duck the giant and put up with his elbow. Try something else."
 giant's elbow	"You ducked the giant's elbow successfully. Now about that book..."
 seed pit	"You got what you needed from the seed pit."
 ship controls	"The ship controls are working. You need to figure how to shoot the gap, now." [end ROUTES]
@@ -25002,7 +25003,7 @@ scratch paper	"[if signature is reflexed]Useless now.[else][one of]The signature
 scratchings	"[one of]They give a clue what the drab yoke will be.[plus][or]Have you seen any apparatus with the numbers 1234567890 at the top, in order?[plus][or]One that is by you right now?[plus][or]They clue that the drab yoke can be a keyboard. But yaks aren't very magic, and this one's resisting in some odd animal fashion. So you need to deal with the yak.[minus][cycling]"
 broke day	"Broke Day offers a clue as to what the drab yoke becomes."
 drab yoke	"[if yak is not in lalaland]The yak won't let you have it. You need to make the yak inattentive.[else][one of]Whatever the drab yoke should be is probably some sort of piece of computer equipment, too. Given the end puzzle.[plus][or]The settler will tell you where the Y should go. You can also figure where the O goes, on cheat mode, and two consonants fall, too.[plus][or]But the scratchings make it obvious what the yoke should be.[plus][or]Numbers on the top, letters below it, punctuation to the side.[plus][or]KEYBOARD.[minus][cycling]"	--	"make a KEYBOARD"
-compiled code	"[one of]The compiled code works but has problems.[plus][or]You need to make the code BUDGE.[plus][or]The code still has bugs to fish out.[plus][or]Therefore, you need to DEBUG.[minus][cycling]"	--	"DEBUG the compiled code"
+compiled code	"[one of]The compiled code works but has problems.[plus][or]You need to make the code BUDGE.[plus][or]The code still has bugs to fish out.[plus][or]Therefore, you need to DEBUG.[minus][cycling]"	--	"to DEBUG the compiled code"
 slab	"You [if cpuready]already[else]can[end if] put things on the slab to build a computer."
 USB	"[one of]The USB is pretty universal. It can become either of two things.[plus][or]The USB can become transport out of here.[plus][or]SUB or BUS.[minus][cycling]"	--	"make a BUS or USB"
 bottle of dirty looking cola	"[one of]There's not enough of the cola in the bottle for a big programming session.[plus][or]What could make the cola refill?[plus][or][if gum is in lalaland]The mug[else]The gum is never-ending, chewable, and can also be twisted around into something else. I mean, not just physically, but with words. There are five choices[end if].[plus][or]Now you've got the cola and a better receptacle, POUR COLA IN MUG.[minus][cycling]"

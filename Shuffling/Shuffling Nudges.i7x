@@ -234,7 +234,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "graffiti"	366236825	the nick	--	--	"The graffiti's etched in. It's here to help, anyway."
 "greta"	351027450	the nick	--	--	"The grate remains impassive."
 "nick"	185839117	the nick	--	--	"Maybe there is a way out of the nick. Not of nick, but the nick. It's probably too much to think yourself in K.C."
-"kitchen"	454037543	kitchen	--	--	"[if moor is unvisited]Nothing happens. Well, you didn't really want to go back, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room[else]There's no room between the nick and kitchen. You already found a better way out, anyway[end if]."
+"kitchen"	454037543	kitchen	--	--	"[if moor is unvisited]Nothing happens. Well, you didn't really want to go back to the nick, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room[else]There's no room between the nick and kitchen. You already found a better way out, anyway[end if]."
 "kitchen"	454037543	kitchen	--	--	"[loc-rej]."
 "okrapot"	473725930	kitchen	--	--	"Aigh! It's a catchy tune, but really, it won't help you figure anything out."
 "fridge"	338266445	kitchen	--	--	"The fridge is just a fridge."
@@ -483,7 +483,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "uprisers"	722566259	--	riot	--	"[simple-riot]."
 "protesters"	980846328	--	protest	--	"They're just a simple protest."
 "potter"	575168484	--	potters	--	"Picking one person out of a crowd never works."
-"clay"	197366494	--	kilns	--	"The clay is for someone else to work with."
+"clay"	197366494	--	--	hotspot-no-kilns rule	"No, the clay is a clue to what the [if riot is visible]protest[else]trio[end if] really wants to do."
 "three"	481328338	--	--	riot-gone rule	"The trio remains unmoved. Perhaps you can [if potters are in hotspot]get the potters something to work with[else]give the protest more constructive aims[end if]?"
 "chainlinks"	489297393	--	chain links	--	"You're overthinking it. Or you hope you are. It's both a chain, and links."
 "tug toe"	546084231	--	red bull burdell	--	"Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said."
@@ -536,6 +536,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "angle"	285314976	--	phail phial	--	"There's nothing between ANGLE and GLEAN that you can do with the blue lube."
 "terry"	523922985	--	--	past-strip rule	"You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no."
 "yorpwald"	548467110	--	--	past-intro rule	"[if player is in notices section][no-warpy][else]You'll need to change Yorpwald one anagram at a time[end if]."
+"retry"	523922985	--	--	can-retry rule	"You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no."
 "notepad"	478859078	--	--	degen-true rule	"[what-for]."
 "dope"	304653734	--	--	degen-true rule	"[what-for]."
 "tan"	174205344	--	--	degen-true rule	"[what-for]."
@@ -868,6 +869,13 @@ to say the-sand:
 to say simple-riot:
 	say "Perhaps it's best to keep it simple and cut down the riot"
 	
+this is the hotspot-no-kilns rule:
+	if player is in hotspot:
+		if kilns are not in hotspot:
+			if protest is in hotspot or riot is in hotspot:
+				the rule succeeds;
+	the rule fails;
+
 this is the riot-gone rule:
 	if player is in hotspot and riot is in lalaland:
 		the rule succeeds;
@@ -908,6 +916,11 @@ this is the past-intro rule:
 	if notices section is visited:
 		the rule succeeds;
 	the rule fails;
+	
+this is the can-retry rule:
+	if trips strip is visited:
+		the rule succeeds;
+	the rule fails
 
 to say what-for:
 	say "[if notices section is unvisited]You mess around with all the possibilities for a bit[else]You don't want to make your notepad vanish. It might be more useful to take notes on what to change[end if]"
