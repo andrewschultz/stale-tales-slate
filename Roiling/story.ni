@@ -234,6 +234,8 @@ chapter guardians
 
 a guardian is a kind of person. a guardian is usually auxiliary and vanishing. a guardian can be passtried. a guardian is usually not passtried. a guardian can be clueneedy. a guardian is usually not clueneedy. a guardian can be unprodded or prodded. a guardian is usually unprodded. a guardian can be plurtry. a guardian is usually not plurtry.
 
+a guardian can be prevseen. a guardian is usually not prevseen.
+
 a guardian has text called retrytext.
 
 a guardian has a room called gualoc.
@@ -18472,12 +18474,26 @@ lots	3	4
 
 book basic guardian work
 
-rule for printing a locale paragraph about a guardian (called gua):
-	if gua is not ray eck:
-		increment guardians-seen;
-		say "[initial appearance of gua][no line break] ";
-		if guardians-seen is number of visible guardians:
-			say "[paragraph break]";
+for printing a locale paragraph about a guardian (called gua):
+	if gua is ray eck:
+		continue the action;
+	d "1.";
+	repeat with myg running through not prevseen guardians in location of player:
+		say "Oh look! You haven't seen [the gua] before. [if guardian is plural-named]They're[else if gua is female]She's[else if gua is male]He's[else]It's[end if] guarding the way [if gualoc of myg is location of player][guadir of myg][otherwise][opposite of guadir of myg][end if].";
+	let psg be number of prevseen guardians in location of player;
+	if psg is 0:
+		continue the action;
+	say "You can [if number of prevseen guardians is 0]also [end if]still see ";
+	let guasofar be 0;
+	repeat with myg running through prevseen guardians:
+		increment guasofar;
+		say "[the myg] guarding the way [if gualoc of myg is location of player][guadir of myg][otherwise][opposite of guadir of myg][end if]";
+		if guasofar < psg - 1:
+			say ", ";
+		if guasofar is psg - 1:
+			say "and ";
+	now all guardians in location of player are prevseen;
+	now all guardians in location of player are mentioned;
 	continue the action;
 
 guardians-seen is a number that varies.
@@ -18624,7 +18640,12 @@ book Topside Deposit
 
 Topside Deposit is a room in Towers. "[if ray eck is in lalaland]You don't seem to have much else to do here. While you can go any direction, it's only sensible to go back north[else]There's a bit more life to the north--it's wooded, but it's also guarded[end if]. The curst palace is barely visible in the distance."
 
-Ray Eck is a proper-named purple guardian in Topside Deposit.  description is "He doesn't look particularly wealthy or elitist, but he sure does like watching his keycar go round and round."
+for printing a locale paragraph about a thing (called nongua) in topside deposit:
+	if nongua is start tarts and toaster is in deposit:
+		now start tarts are mentioned;
+	continue the action:
+
+Ray Eck is a proper-named purple guardian in Topside Deposit.  description is "He doesn't look particularly wealthy or elitist, but he sure does like watching his keycar go round and round.". "[one of]A yacker[or]Ray Eck still[stopping] controls his keycar remotely here, making it zoom around."
 
 check taking a guardian:
 	say "Sadly, you can't just move anyone or anything out of the way in the Badlands." instead;
@@ -18656,7 +18677,7 @@ the pack of start tarts is a hintpastry in Topside Deposit. description is "They
 
 section toaster
 
-The Rosetta Toaster is a container. It is in Topside Deposit. "A rosetta toaster rotates here."
+The Rosetta Toaster is a container. It is in Topside Deposit. "A Rosetta Toaster rotates here[if start tarts are in deposit], with a pack of start tarts nearby[end if]."
 
 check scaning toaster:
 	say "[one of]The toaster looks like a pretty good diagnostic item as-is, and it doesn't need an upgrade, so you're not disappointed when nothing pops up[or]Still nothing. The toaster probably doesn't need an upgrade[stopping]." instead;
@@ -20194,22 +20215,16 @@ to say foods of (myf - a thing):
 	say "[if myf is a hintpastry]food[else]stuff[end if]";
 
 to say gd of (zz - a guardian):
-	if zz is ray eck:
-		say "[one of]A yacker using a hidden remote to control a keycar[or]Ray Eck, with his keycar,[stopping]";
-		now zz is mentioned;
-	else:
-		say "[A zz]";
-		if zz is deacons:
-			say "[one of][or] (still mum about their hostile ol['] heist)[stopping]";
-		if zz is atheists:
-			say "[one of] (well, they're certainly wasting each other's time talking about there's no afterlife)[or][stopping]";
-		if zz is nameless salesmen:
-			say "[one of][or] still hawking Nerd-Aid[stopping]";
-		if zz is natives:
-			say "[one of][or] (you assume, by how they are talking about the Badlands and looking at you funny)[stopping]";
-		if zz is ego drains:
-			say "[one of][or] (you know, those barely visible spirits that make you feel bad about doing things quickly and efficiently. They exist in non-magic worlds, too)[stopping]";
-	say " [if zz is plural-named]are[else]is[end if][mb-also] guarding the way [if gualoc of zz is location of player][guadir of zz][otherwise][opposite of guadir of zz][end if][mb-aswell]";
+	if zz is deacons:
+		say "[one of][or] (still mum about their hostile ol['] heist)[stopping]";
+	if zz is atheists:
+		say "[one of] (well, they're certainly wasting each other's time talking about there's no afterlife)[or][stopping]";
+	if zz is nameless salesmen:
+		say "[one of][or] still hawking Nerd-Aid[stopping]";
+	if zz is natives:
+		say "[one of][or] (you assume, by how they are talking about the Badlands and looking at you funny)[stopping]";
+	if zz is ego drains:
+		say "[one of][or] (you know, those barely visible spirits that make you feel bad about doing things quickly and efficiently. They exist in non-magic worlds, too)[stopping]";
 
 to say mb-aswell:
 	if guardians-seen is 3:
