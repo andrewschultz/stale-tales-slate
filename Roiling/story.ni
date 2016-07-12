@@ -234,7 +234,7 @@ chapter guardians
 
 a guardian is a kind of person. a guardian is usually auxiliary and vanishing. a guardian can be passtried. a guardian is usually not passtried. a guardian can be clueneedy. a guardian is usually not clueneedy. a guardian can be unprodded or prodded. a guardian is usually unprodded. a guardian can be plurtry. a guardian is usually not plurtry.
 
-a guardian can be prevseen. a guardian is usually not prevseen.
+a guardian can be prevseen. a guardian is usually not prevseen. a guardian can be prevtaunt. a guardian is usually not prevtaunt.
 
 a guardian has text called retrytext.
 
@@ -2354,11 +2354,14 @@ curtis	mopeage rant	"'[if rampage note is off-stage]What note? You can't pin tha
 curtis	Art Erd	"[one of]Curtis breathes deeply and gives a look of contempt and shakes his head[or]No point asking again[stopping]. Curtis probably doesn't want to know if any fruit came from [him-her]."
 Art Erd	curtis	"'There's people with silly science ideas like him, then there's businessmen like ME. Pfft.'"
 Art Erd	storage box	"'[if storage box is in scape space]It's...umm...worth something.[else]You bought it[end if].'"
-Art Erd	len craig	"'Nicely? Len? Icy!' he mutters. 'Cut Len's cluster...'"
-Dr Tera	len craig	"'Nicely? Len? Icy!' he mutters. 'Cut Len's cluster...'" [this just gets rid of an annoying error at the start]
+Art Erd	len craig	"[icy-len]"
+Dr Tera	len craig	"[icy-len]" [this just gets rid of an annoying error at the start]
 len craig	curtis	"[one of]'Nice fella, lots of ideas about agriculture, but no business sense. Just sits looking for someone to do his dirty work for him. You don't...'[or]You don't want to admit Curtis has you gofering. Though, really, it's been not too bad, with your powers.[stopping]"
 len craig	tekno-token	"[if tekno-token is off-stage]'We accept tekno-tokens, yes.'[else][one of]He inspects the token and says it's valid[or]If you ask again, Len might question its validity[stopping].[end if]"
 len craig	Art Erd	"Len snorts and shakes his head. 'What a weasel.'" [end OTHERS]
+
+to say icy-len:
+	say "'Nicely? Len? Icy!' [he-she] mutters. 'Cut Len's cluster...'"
 
 check objasking about Dr Tera when player is female:
 	try objasking noun about Art Erd instead;
@@ -16827,19 +16830,20 @@ understand the command "unearth" as something new.
 
 understand "unearth [something]" as unearthing.
 
-a pre-haun is privately-named vanishing scenery in anger range.
+a pre-haun is privately-named vanishing scenery in anger range. printed name of pre-haun is "the haunter in Anger Range". description of pre-haun is "You can't see it, but you can feel it."
+
+understand "haunter" as pre-haun when pre-haun is in anger range.
 
 does the player mean unearthing the pre-haun: it is very likely.
-
-ueyet is a truth state that varies.
 
 check fliptoing pre-haun:
 	if player has digger and ruby is in lalaland:
 		continue the action;
-	say "[h-not-yet]." instead;
+	say "[h-not-yet].";
+	preef pre-haun;
 
 to say h-not-yet:
-	say "You can feel the haunter, but [if ueyet is false]you've no clue how to summon it[else if player has digger and ruby is in lalaland]it can't rise until you try to UNEARTH it again[else if player has digger]you don't know what you'd do if you'd unearth it[else]you haven't found something that can unearth it[end if]"
+	say "You [if player does not have digger]can feel the haunter, but you have nothing to dig it up with[else if player has digger and ruby is in lalaland]shouldn't dig the haunter back up. You've no reason to[else]you don't know what you'd do if you'd unearth the haunter[end if]"
 
 after fliptoing pre-haun:
 	now haunter is in anger range;
@@ -16933,7 +16937,7 @@ every turn (this is the track haunter rule):
 				reg-inc;
 				the rule succeeds;
 		else if haunter is visible:
-			say "The haunter moans impatiently[one of][or][or][or][or]! It cries for any news of its lost jewel[cycling]!";
+			say "The haunter moans impatiently and shifts restlessly, hoping to be led somewhere[one of][or][or][or][or]! It cries for any news of its lost jewel[cycling]!";
 
 [of such extreme action that you may wind up using extra nouns at your own risk]
 
@@ -20466,10 +20470,49 @@ once-sad deacons	Ole Shrine Shoreline	north	"They mention you [one of]should kno
 
 chapter guardian taunt tables
 
+after fliptoing a guardian:
+	if noun is ray eck, continue the action;
+	if number of guardians in location of player is 0:
+		continue the action; [save a bit of time why not]
+	repeat through table of ggt:
+		if guaname entry is in location of player and guaname entry is not prevtaunt:
+			deliver-taunt guaname entry and noun;
+			continue the action;
+	repeat through table of ggt:
+		if guaname entry is in location of player:
+			deliver-taunt guaname entry and noun;
+			continue the action;
+	continue the action;
+
+to deliver-taunt (g1 - a guardian) and (g2 - a guardian):
+	repeat through table of gst:
+		if g1 is guaname entry and g2 is guagone entry:
+			say "[guatext entry][line break]";
+			continue the action;
+	repeat through table of ggt:
+		if g1 is guaname entry:
+			say "[line break][guatext entry][line break]";
+
 section generic taunts
 
 table of ggt - guardian generic taunts
 guaname	guatext
+rewired robot	"The robot's lights blink and flash and bloop. Is it laughing?"
+muscly hulk	"The muscly hulk beats its chest for NOT being removed like that."
+snider diners	"The snider diners sniff at the distraction."
+inapt paint	"'Well, at least it wasn't me, whoever I am,' mumbles the man covered in inapt paint."
+salesmen	"'Not bad! But would've been more stylish with NERD-AID!'"
+ego drains	"The ego-drains make a flushing and slurping noise. Another rival guardian down the drain!"
+bonker	"'ENEMIES ARE STILL TOO SCARED TO FACE THE BONKER!' you hear from the east."
+natives	"The natives mumble how they KNEW something like that would happen to someone else. They've seen it all, here."
+iPrune	"The iPrune rears up and seems bigger for a second."
+pirates	"The pirates sing a colorful shanty about another lubber relegated to the deep."
+grailman	"The grailman mumbles something like 'well, we can't all be above average.'"
+reed's ale	"'The Reed's Ale man adjusts his half-on half-off costume, glad he wasn't the one dispelled--or whatever.'"
+deacons	"'The deacons mumble passive-aggressively that the wages of sin is--that."
+ingrates	"The ingrates complain there aren't enough of them to take over the space you opened before worrying they're next."
+admirer	"Your admirer claps far too fervently at your accomplishment."
+wait-seer	"The wait-seer cooly puts up a hand and mumbles some Hakuna Matata nonsense."
 atheists	"The atheists mention meditation is all well and good, but the sweatier wait-seer's flaw was bringing an invisible cloud being into it."
 
 section specific taunts
@@ -23501,7 +23544,7 @@ chapter pineapple
 
 the ppf is privately-named scenery in Filed Field. "It's not worth sneaking over or through, either way. It's an eyesore, really."
 
-understand "pipe/ panel/ fence" as ppf. printed name of ppf is "pipe panel fence".
+understand "pipe/panel/fence" as ppf. printed name of ppf is "pipe panel fence".
 
 check taking ppf:
 	say "You don't have the strength. Maybe you can change it, though." instead;
@@ -23611,7 +23654,7 @@ to say gree-app:
 understand "tarred trader" and "tarred/trader" as Red Rat when player is male.
 understand "tarred trader" and "tarred/trader" as Dr Tera when player is female.
 
-understand "retard" as a mistake ("You can picture people like [greedy-person] calling you, or people he 'provided financial services to,' that, but two wrongs don't make a right. Besides, if anything, he was being too clever.") when player is in scape space
+understand "retard" as a mistake ("You can picture people like [greedy-person] calling you, or people [he-she] 'provided financial services to,' that, but two wrongs don't make a right. Besides, if anything, [he-she] was being too clever.") when player is in scape space
 
 understand "red rat" as a mistake ("Dr. Tera Darter is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.") when player is in scape space and greedy-person is Dr Tera
 
@@ -26409,17 +26452,17 @@ book cheatage
 
 [* this book lets the beta-tester skip over boring bits ]
 
-chapter anging
+chapter greting
 
 [* this lets you skip over the macks]
 
-anging is an action applying to nothing.
+greting is an action applying to nothing.
 
-understand the command "ang" as something new.
+understand the command "gret" as something new.
 
-understand "ang" as anging.
+understand "gret" as greting.
 
-carry out anging:
+carry out greting:
 	now macked-out is 2;
 	move player to frontage;
 	say "==CHEATING TO DEFEAT MACKS";
