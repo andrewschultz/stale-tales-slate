@@ -7178,7 +7178,7 @@ before listening (this is the you can hear stuff some places rule):
 	if deacons are visible:
 		say "The deacons aren't exactly yelling about their hostile ol['] heist. You might want to ASK them about, well, anything." instead;
 	if rewired robot is visible:
-		say "You listen until you cringe. Red lights flash across the robot, pleased he drew ire." instead;
+		say "You listen until you cringe. Red lights flash across the robot, pleased it drew ire." instead;
 	if player is in havens:
 		say "You think you hear NEVAHs, but that might just be internal melodrama." instead;
 	if player is in topside:
@@ -18474,24 +18474,26 @@ lots	3	4
 
 book basic guardian work
 
-for printing a locale paragraph about a guardian (called gua):
+for writing a paragraph about a guardian (called gua):
 	if gua is ray eck:
 		continue the action;
-	d "1.";
+	let so-far be 0;
 	repeat with myg running through not prevseen guardians in location of player:
-		say "Oh look! You haven't seen [the gua] before. [if guardian is plural-named]They're[else if gua is female]She's[else if gua is male]He's[else]It's[end if] guarding the way [if gualoc of myg is location of player][guadir of myg][otherwise][opposite of guadir of myg][end if].";
+		say "[if so-far is 0]Oh, look[else if so-far is 1][line break]Wow, squared[else if so-far is 2][line break]Man, it's busy here[end if]! You haven't seen [the myg] before. [if myg is plural-named]They're[else if myg is female]She's[else if myg is neuter]It's[else]He's[end if] guarding the way [if gualoc of myg is location of player][guadir of myg][otherwise][opposite of guadir of myg][end if].";
+		increment so-far;
+		now myg is mentioned;
 	let psg be number of prevseen guardians in location of player;
-	if psg is 0:
-		continue the action;
-	say "You can [if number of prevseen guardians is 0]also [end if]still see ";
 	let guasofar be 0;
-	repeat with myg running through prevseen guardians:
-		increment guasofar;
-		say "[the myg] guarding the way [if gualoc of myg is location of player][guadir of myg][otherwise][opposite of guadir of myg][end if]";
-		if guasofar < psg - 1:
-			say ", ";
-		if guasofar is psg - 1:
-			say "and ";
+	if psg > 0:
+		say "You can [if number of prevseen guardians is 0]also [end if]still see ";
+		repeat with myg running through prevseen guardians:
+			increment guasofar;
+			say "[the myg] blocking passage [if gualoc of myg is location of player][guadir of myg][otherwise][opposite of guadir of myg][end if]";
+			if guasofar < psg - 1:
+				say ", ";
+			if guasofar is psg - 1:
+				say " and ";
+		say ".";
 	now all guardians in location of player are prevseen;
 	now all guardians in location of player are mentioned;
 	continue the action;
@@ -18652,7 +18654,7 @@ check taking a guardian:
 
 a-text of ray eck is "RRYYRO". b-text of ray eck is "RRYYRO". parse-text of ray eck is "x[sp]x[sp]-[sp]-[sp]x[sp]y". ray eck is cheat-spoilable.
 
-the keycar is auxiliary scenery. description of keycar is "It zips around as Ray fiddles with his remote. It appears to have its designer's name written in red. You'd be able to read it with out too much difficulty.". understand "key" and "key car" and "car" as keycar.
+the keycar is auxiliary scenery in Topside Deposit. description of keycar is "It zips around as Ray fiddles with his remote. It appears to have its designer's name written in red. You'd be able to read it with out too much difficulty.". understand "key" and "key car" and "car" as keycar.
 
 check taking keycar:
 	say "Ray Eck laughs as it zips around out of your grasp. What a jerk." instead;
@@ -20356,7 +20358,7 @@ description of admirer is "[if admirer is male]He[else]She[end if] seems to be g
 to say admsex:
 	say "[if admirer is male]he[else]she[end if]"
 
-the oddly rewired robot is a purple guardian. understand "prevent/robot/bot" as oddly rewired robot.
+the oddly rewired robot is a neuter purple guardian. understand "prevent/robot/bot" as oddly rewired robot.
 
 understand "were rid" as a mistake ("On the right track, but you are just one person. Plus you probably need an adjective. Something one-wordier.") when player is in copse and rewired robot is in copse.
 
@@ -20439,7 +20441,7 @@ description of neural pulses is "They seem to cause neural shocks when you get t
 
 a-text of pulses is "YRRYYR". b-text of pulses is "YRRYGP". parse-text of pulses is "-[sp]x[sp]x[sp]-[sp]a[sp]l". pulses are cheat-spoilable.
 
-chapter guardian table
+chapter guardian org table
 
 table of guard-org [organized going 1st north then east. W, N, E.]
 guy	loc	blockdir	blokzorz	kloozorz	taunt	aux
@@ -20461,6 +20463,20 @@ bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[els
 natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."
 Atheists	Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."
 once-sad deacons	Ole Shrine Shoreline	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their careers if you fixed that."
+
+chapter guardian taunt tables
+
+section generic taunts
+
+table of ggt - guardian generic taunts
+guaname	guatext
+atheists	"The atheists mention meditation is all well and good, but the sweatier wait-seer's flaw was bringing an invisible cloud being into it."
+
+section specific taunts
+
+table of gst - guardian specific taunts
+guaname	guagone	guatext
+atheists	grailman	"The atheists sniff that the grailman would be good at guarding any grail, since it PROBABLY DOESN'T EXIST."
 
 chapter min-score-of-towers
 
