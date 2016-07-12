@@ -44,6 +44,7 @@ Have you tried:
 >undo
 >getby 1
 >getby 2
+>exist
 
 > amusing
 Have you tried:
@@ -53,6 +54,7 @@ Have you tried:
 
 >undo
 >getby 1
+>exist
 
 > amusing
 Have you tried:

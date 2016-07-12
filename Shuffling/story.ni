@@ -11847,16 +11847,19 @@ instead of going inside in Enclosure:
 part scoring
 
 to decide which number is player-rank:
+	if mrlp is resort:
+		if resort is solved:
+			decide on number of rows in table of ranks;
+		else:
+			decide on number of rows in table of ranks - 1;
 	if Dry Yard is not visited:
 		decide on 1;
 	if notices section is not visited:
 		decide on 2;
 	if trips strip is not visited:
 		decide on 3;
-	let temp-rank be 4;
+	let temp-rank be 3;
 	increase temp-rank by number of solved regions;
-	if mrlp is resort:
-		increment temp-rank;
 	decide on temp-rank.
 
 table of ranks
@@ -11883,7 +11886,7 @@ to say and-bypass:
 	say " with [list of bypassed regions] bypassed";
 
 carry out requesting the score:
-	d "[number of bypassed regions] [list of bypassed regions] bypassed, [number of solved regions] [list of solved regions] solved, [number of unsolved regions] [list of unsolved regions] unsolved.";
+	d "[number of bypassed regions] [list of bypassed regions] bypassed, [number of solved regions] [list of solved regions] solved, [number of unsolved regions] [list of unsolved regions] unsolved. Current rank in numbers is [player-rank].";
 	if mrlp is nothing:
 		say "[bug-report]: This location needs a region." instead;
 	otherwise:

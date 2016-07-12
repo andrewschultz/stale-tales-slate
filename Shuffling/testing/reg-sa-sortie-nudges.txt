@@ -71,7 +71,7 @@ You can just walk to the kitchen, there's no need to revisit the nick, and there
 
 >n
 >ketchin
-Nothing happens. Well, you didn't really want to go back, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room.
+Nothing happens. Well, you didn't really want to go back to the nick, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room.
 
 #######dumb stuff
 >x fridge

@@ -3916,6 +3916,7 @@ o-t	"Hm, no, that's not quite how to cover all the ground looking for the ol['] 
 raft	"The raft rocks slightly."
 oars	"You see bubbling under the oars."
 eeks	"You guess the eeks must be there--no, there!"
+pre-haun	"You need an organized way to dig at the ground."
 haunter	"You're a bit tongue-tied, but that seems close."
 a-s	"Hm, you almost thought you found something. Well, not QUITE like that."
 c2	"The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled."
@@ -7114,11 +7115,15 @@ instead of thinking:
 			now thinko is true instead;
 		else if Gunter is off-stage:
 			say "Hard to think with that knocking." instead;
-	if pernod is visible:
-		say "No, you need to t hink a little more soulfully. ";
+	if player is in econ cone and pernod is in econ cone:
+		say "No, you need to think a little more soulfully." instead;
+	else if mrlp is troves:
+		say "Yes, how you think is extra important here." instead;
+	else if mrlp is towers and topside is visited:
+		say "Old Hat Daltho's advice about people--if not things--being too complex for just five letters is stuck in your head." instead;
 	if mrlp is demo dome:
 		try requesting the score instead;
-	say "If you need help, just say HINT. K?";
+	say "Nothing immediate comes up. If you need help, just say HINT. K?";
 
 chapter touching
 
@@ -8471,6 +8476,7 @@ oars	oars	"soar"	"soar"	"The oars seem to have thrusters underneath. Physics! Te
 raft	raft	"fart" or "fart on raft"	"fart"	"Channeling frat, uh, co-eds['] humor, you fail to keep your tush shut, thus. Your gust-guts cause the oars, of all things, to grow larger, as if they have gained the gas for propulsion.[paragraph break]It's kind of disgusting, but at least it's not wasteful!"	false	217136535	"Quit rafting around. That raft has oars. Use them. Even if they're stuck in place."
 carps	carps	"scrap" or "scrap carps"	"scrap"	"[spike-scrap]."	false	284257131
 carps	carps	"spike" or "spike pikes"	"spike"	"[spike-scrap]."	false	403472058
+pre-haun	pre-haun	"unearth" or "unearth haunter"	"unearth"	"!!!!"	false	529723362
 c2	c2	"trace" or "trace crate"	"trace"	"Based on where you got hit and how fast it hit you, you throw some grass up in the air or something, note how the wood landed, and figure where it came from! But you see no crates-caster. They'll probably chuck something at you when you're not looking, and you'll probably need to use your instincts. (P.S. don't worry, it's not a centaur either, so you can't untrace. You can't trace up and capture it either.)"	false	337433333
 crate	crate	"react" or "react to crate"	"react"	"This time you're ready. You turn around and know when to look when the crate is about to hit you. You knock it down in mid-air and, in a fit of rage, fling it back into the tall weeds and hit the en-pris sniper. You hear an expression of anger, then scurrying. You won't need to recast the crates."	false	337433333
 skis	skis	"kiss"	"kiss"	"As you kiss them, they pull up--and dissolve."	false	290473956
@@ -16813,23 +16819,34 @@ rule for supplying a missing noun when unearthing:
 		else:
 			now noun is location;
 
-unearthing is an action applying to one visible thing.
+unearthing is an action applying to one thing.
 
 understand the command "unearth" as something new.
 
 understand "unearth [something]" as unearthing.
 
-does the player mean unearthing the haunter: it is very likely.
+a pre-haun is privately-named vanishing scenery in anger range.
 
-after deciding the scope of the player when player is in anger range and haunter is off-stage:
-	place haunter in scope;
+does the player mean unearthing the pre-haun: it is very likely.
 
 ueyet is a truth state that varies.
 
-before doing something with haunter when haunter is off-stage:
-	if current action is unearthing or current action is objhinting or current action is assuageing:
+check fliptoing pre-haun:
+	if player has digger and ruby is in lalaland:
 		continue the action;
-	say "You can feel the haunter, but [if ueyet is false]you've no clue how to summon t[else if player has digger and ruby is in lalaland]it can't rise until you try to UNEARTH it again[else if player has digger]you don't know what you'd do if you'd unearth it[else]you haven't found something that can unearth it[end if]." instead;
+	say "[h-not-yet]." instead;
+
+to say h-not-yet:
+	say "You can feel the haunter, but [if ueyet is false]you've no clue how to summon it[else if player has digger and ruby is in lalaland]it can't rise until you try to UNEARTH it again[else if player has digger]you don't know what you'd do if you'd unearth it[else]you haven't found something that can unearth it[end if]"
+
+after fliptoing pre-haun:
+	now haunter is in anger range;
+	continue the action;
+
+before doing something with pre-haun:
+	if current action is unearthing or current action is scaning or current action is fliptoing or current action is objhinting:
+		continue the action;
+	say "[h-not-yet]." instead;
 
 before doing something with ruby when ruby is in lalaland:
 	if current action is unearthing or current action is objhinting:
@@ -16854,8 +16871,10 @@ carry out unearthing:
 		say "You need something to dig here[if uaah is visited]. Maybe something from a hut you visited[else]. You haven't found a place with that something, yet. Still, hooray for thinking ahead[end if].";
 		preef haunter;
 		the rule succeeds;
-	if noun is not haunter:
+	if noun is not pre-haun:
 		say "Not worth unearthing." instead;
+	if noun is haunter:
+		say "It already is." instead;
 	if haunter is not off-stage:
 		say "The haunter has been unearthed." instead;
 	say "Ravage a grave!";
@@ -20323,6 +20342,8 @@ to say admsex:
 	say "[if admirer is male]he[else]she[end if]"
 
 the oddly rewired robot is a purple guardian. understand "prevent/robot/bot" as oddly rewired robot.
+
+understand "were rid" as a mistake ("On the right track, but you are just one person. Plus you probably need an adjective. Something one-wordier.") when player is in copse and rewired robot is in copse.
 
 description of oddly rewired robot is "It is in perfect compliance with Obst-Bots (Obstacle? Obstinate? Both? Nobody ever remembers) regulations assuring you it has recently been [i]rewired[r] to be the best at guarding important places. You could probably listen to its odd beeping to drive yourself up the wall. You see red writing on it."
 
@@ -25077,6 +25098,7 @@ rigged digger	"[one of]The rigged digger is used to dig ground.[plus][or]The dig
 sardine	"[if bubble wrap is off-stage]To scare the guard away, you need an item from the fish bowl. Go there.[else if bubble wrap is not in lalaland][one of]The sandier sardine seems to have problems with his ears.[plus][or]Have anything that might make noise?[plus][or]The bubble wrap.[plus][or]WARP the wrap.[minus][cycling][else]You shouldn't need hints for the sardine now.[end if]"
 h-h	"The Horned Hedron is where you need to go [if hedron is visited]back[else]next[end if] to infiltrate the Lout Base."
 a-s	"[if a-s is reflexive][one of]Why might the arches be guarded?[plus][or]There's something in them.[plus][or]X ARCHES doesn't quite work. Something more thorough?[plus][or]SEARCH ARCHES.[minus][cycling][else]Nothing else in the arches.[end if]"
+pre-haun	"[one of]You need to summon the haunter, but you need a reason.[plus][or]You need to bury a treasure first to have it go chase something.[plus][or]The rigged digger should give you a hint.[minus][cycling]"
 haunter	"[if haunter is reflexed][one of]Now you've gained its trust, you will want to show the haunter something.[plus][or]Like where you buried that ruby.[minus][cycling][else][one of]What do you do with a sausage?[plus][or]To calm it down?[plus][or]The settler can help here.[plus][or]You can ASSUAGE the sausage.[minus][cycling][end if]"
 walleyes	"[one of]The walleyes won't let you explore the Hedron. You need to get rid of them.[plus][or]If you talk to the walleyes, they'll mention how you'd need to be a big scary ghost or something.[plus][or]You need a ghost to come along for the ride to scare the walleyes.[plus][or]Hide something the ghost wants in Collapsed Old Places.[minus][cycling]"
 o-t	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or]You need to cover the area to disable the ol['] trap, but not with spies watching you. The haunter can take care of them.[plus][or]Once the haunter's scared everyone away, what's an action to scour for a switch for the ol['] trap?[plus][or]PATROL.[cycling]"
