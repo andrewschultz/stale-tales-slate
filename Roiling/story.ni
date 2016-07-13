@@ -4030,7 +4030,7 @@ satyr	"The satyr puts a hand on its chin as if pondering music."
 medals	"The medals waver noiselessly. Hm, that's not quite it."
 weltish whistle	"The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right."
 moss cap	"The cap itches for a bit, then seems to try to spin you around." [others]
-ppf	"The pipe panel fence sways slightly."
+pipe panel fence	"The pipe panel fence sways slightly."
 b-w	"You feel the barriers west pulling towards you."
 sorer bogey	"The bogey's tone changes slightly for a second."
 l-o-p	"Something glints off the list of prices."
@@ -4644,13 +4644,13 @@ carry out possing:
 	if possibles is true:
 		now possibles is false;
 	otherwise:
-		now min-alert is true;
 		now possibles is true;
 	say "Switching [if possibles is true]on[else]off[end if] minimum/maximum available point notification in the header. ";
 	if min-alert is false:
 		ital-say "this is a quasi-spoiler of sorts, since watching the maximum possible score drop may mean you have missed an easter egg. Or watching the minimum score increase may mean you found one.";
 	else:
 		say "[line break]";
+	now min-alert is true;
 	pad-rec-q "poss";
 	the rule succeeds;
 
@@ -5368,7 +5368,7 @@ rustic-easy-items is a list of things variable. rustic-easy-items is { lumps, sp
 
 wells-hintables is a list of things variable. wells-hintables is { green stain, riot cap, silly shirt, sorer bogey, stucco }.
 
-field-hintables is a list of things variable. field-hintables is { b-r, b-w, barber sickle, mean trowel, ppf, pryer bars, rapt figure }.
+field-hintables is a list of things variable. field-hintables is { b-r, b-w, barber sickle, mean trowel, pipe panel fence, pryer bars, rapt figure }.
 
 clearing-hintables is a list of things variable. clearing-hintables is { auction caution, l-o-p, lemons, melon, nectarine, peach, pre-mang, quince }.
 
@@ -6522,7 +6522,7 @@ Scape Space	"The scape space is pretty sparse. No spare rooms, restrooms, anythi
 Clangier Clearing	"You could get lost in whatever's not back west."
 
 to say if-fence:
-	say "[if ppf is visible]the pipe panel fence too[else]even without the fence[end if]"
+	say "[if pipe panel fence is visible]the pipe panel fence too[else]even without the fence[end if]"
 
 to say unless-max:
 	let my-tot be poss-score of oyster - cur-score of oyster;
@@ -8654,7 +8654,7 @@ miser ruble	mulberries	"mulberries"	"mulberries"	"The ruble blossoms in your han
 barber sickle	blackberries	"blackberries"	"blackberries"	"The barber sickle grows into a bunch of vines which sprout black fruits, and a basket pops out to hold them. How convenient."	true	732304866
 pryer bars	raspberry	"raspberry"	"raspberry"	"The drupelets in the pryer bars pop out and multiply, leaving you with raspberries."	true	704483418
 harmonicas	maraschino cherry	"maraschino" or "maraschino cherries/cherry"	"maraschino"	"Several painfully tinny chords later, the off-red harmonicas become a maraschino cherry."	true	494589373
-ppf	pineapple	"pineapple"	"pineapple"	"With a plain peep, the fence collapses into a pineapple!"	true	669912106
+pipe panel fence	pineapple	"pineapple"	"pineapple"	"With a plain peep, the fence collapses into a pineapple!"	true	669912106
 videotape collection	persimmon	"persimmon"	"persimmon"	"The unappetizing covers on the videotape collection schlurp together to form something better looking--a persimmon."	true	707273074
 magenta rope	pomegranate	"pomegranate"	"pomegranate"	"With a splatch, the note and rant get yellowed and ball themselves up around the rope to form a pomegranate. You have done either Curtis or society a favor by getting rid of those writings."	true	769822574
 l-o-p	kumquat	"cripes"	"cripes"	"Man! The way you said it, man, Len Craig has another look. Kumquats are indeed an order of magnitude off. He hands you one as gratitude for giving pricees precise knowledge."	true	454868268	"That'd be a bit insulting. The prices are good enough."
@@ -10043,7 +10043,7 @@ the horizontal stripes are part of the peeling paperwall. description of horizon
 
 the small holes are part of the paperwall. description is "They look like some sort of weird lock or something.". understand "hole" as small holes.
 
-understand "paper/ wall/ " and "wallpaper" as paperwall.
+understand "paper/wall/wallpaper" as paperwall.
 
 after fliptoing stapler:
 	if peeling paperwall is not in cavern:
@@ -11644,7 +11644,7 @@ rule for printing a locale paragraph about otters-x:
 	say "Statues of twin otters wait here, facing each other--it's all blurry behind them.";
 	now otters-x is mentioned;
 
-understand "twins/otters/statues" as otters-x.
+understand "twins/otters/statues/statue" as otters-x.
 
 f-o-b is privately-named scenery. printed name of f-o-b is "the field of barley".
 
@@ -11858,7 +11858,7 @@ instead of scaning passage:
 check taking passage:
 	say "EXAMINE it, instead." instead;
 
-understand "studio e/" as passage.
+understand "studio e" and "studio" as passage.
 
 e-revealed is a truth state that varies.
 
@@ -11884,7 +11884,7 @@ check scaning lecturer:
 
 a-text of lecturer is "YYRRYRY". b-text of lecturer is "YYRRYRY". parse-text of lecturer is "-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-".
 
-understand "max p lee" and "max/lee" and "max lee" as lecturer.
+understand "max p lee" and "max/lee/example" and "max lee" as lecturer.
 
 description of lecturer is "He's wearing a very expensive suit and tie. You're not sure why they should be expensive, but you know they are. They're probably about as showy as drug dealers['] $5,000 suits and $300 ties. You read MAX P LEE, EXAMPLE projected behind him, and he is sponsored by RutCorp, who help pull you out of ruts, apparently."
 
@@ -12153,8 +12153,8 @@ to say do-i-switch:
 			now sign-other is whether or not sign-other is false;
 			say "The picturers changed since you last saw them.";
 
-understand "scripture picture/picturers/picturer" as picturers.
-understand "picture/picturers/picturer" as picturers.
+understand "scripture picture/picturer" as picturers.
+understand "picture/picturer" as picturers.
 
 after examining when mrlp is routes (this is the switch picturers rule) :
 	if noun is not picturers:
@@ -12220,7 +12220,7 @@ check entering dingy dwelling:
 
 does the player mean scaning dingy dwelling: it is likely.
 
-understand "oscar's/oscars" as the dingy dwelling.
+understand "oscar's/oscars/oscar" as the dingy dwelling.
 
 the lairage regalia is reflexive scenery in Same Mesa. "[one of]As Yorpwaldian lairage regalia go, it's cheerless and unwelcoming. It says: [or][stopping][b][ast]Oscar's[ast][r]"
 
@@ -12643,7 +12643,7 @@ chapter ashtray
 
 a trashy ashtray is scenery in adobe abode. "[if pipe soot is in abode]The ashtray is full of pipe soot, but at least, no Pepsi too[else]You emptied the ashtray[end if]."
 
-understand "ash/tray" and "ashtray" as ashtray.
+understand "ash/tray" as ashtray.
 
 check scaning ashtray:
 	if player does not have pipe soot:
@@ -17089,8 +17089,6 @@ the eeks are vanishing scenery in Lean Lane.
 
 Handsome Sand Home is an innie room in Oyster. "You're in a rather nicely kept up home. A raw red reward drawer leans against one wall[wipes-too]. You may leave to the west--anywhere else is probably a bit too private."
 
-understand "a nut" as a mistake ("That's not nice. You are a guest.") when player is in sand home.
-
 Aunt Tuna is a female person in Sand Home. description is "Grayin['], grainy. 'Staring at people you barely know! Where are your manners?'". "Aunt Tuna putters around here, nodding and clucking and shaking her head. Well, as much as a fish can[if tea tray is visible]. She occasionally motions to the tea tray she laid out for you[end if]."
 
 does the player mean eating the tea tray: it is very likely;
@@ -18194,7 +18192,7 @@ understand the command "xray/x-ray [something]" as something new.
 understand "xray [something]" as xraying.
 understand "x-ray [something]" as xraying.
 
-understand "xray" as a mistake ("You don't have x-ray vision right now.") when xrayvision is false.
+understand "xray" and "x-ray" as a mistake ("You don't have x-ray vision right now.") when xrayvision is false.
 
 to say if-duck:
 	if duck is not visible:
@@ -18873,11 +18871,11 @@ book Anemic Cinema
 Anemic Cinema is north of Baldest Blasted Saltbed. "Well, you're not [i]in[r] the cinema. It's off to the side[if ingrates are visible]. Something smells to the west, too[end if][tow-dirs].". Anemic Cinema is in Towers.
 
 after printing the locale description for Anemic Cinema when Anemic Cinema is unvisited:
-	say "The ingrates grumble about how they were given a boring and useless passage to guard. Maybe you don't really need to get rid of them.[paragraph break]";
+	say "The ingrates grumble about how their territory is useless, and that's really not their fault. Maybe you don't really need to get rid of them.[paragraph break]";
 
-The theater is useless scenery in anemic Cinema. description of theater is "[bug-report]"
+The theater thereat is useless scenery in anemic Cinema. description of theater is "[bug-report]"
 
-understand "theatre" and "anemic/ cinema" as theater.
+understand "anemic/cinema" and "anemic cinema" as theater when player isi n 
 
 check going inside when player is in cinema:
 	try entering theater;
@@ -19065,7 +19063,7 @@ Danger Garden is a room in Towers. Danger Garden is east of Unblest Sunbelt. pri
 understand "danger/gander garden" and "garden" as Danger Garden when mrlp is towers.
 
 after printing the locale description for Danger Garden when Danger Garden is unvisited:
-	say "The natives look, well, restless, as if they might want to find a better place to guard[if ego drains are unprodded]. Also, the ego drains seem to put ideas into your mind that you really don't need or deserve to go north, and maybe you can just go around--and, well, it makes a lot of sense as-is and is far less over the top than the rest of the campsite[end if].";
+	say "The natives look, well, restless, as if they might want to find a more important territory to guard[if ego drains are unprodded]. Also, the ego drains seem to put ideas into your mind that you really don't need or deserve to go north, and maybe you can just go around--and, well, it makes a lot of sense as-is and is far less over the top than the rest of the campsite[end if].";
 	now ego drains are prodded;
 	continue the action;
 
@@ -22802,7 +22800,7 @@ after doing something with coin-person:
 		set the pronoun her to Dr Lola;
 	continue the action;
 
-understand "dollar/-- bill" as droll dollar.
+understand "dollar bill" and "bill" as droll dollar.
 
 to say if-clear:
 	say "[if clearing is visited]--ah, you're nodding, you've seen it--[else] [end if]"
@@ -23373,7 +23371,7 @@ the printed name of l-o-p is "the list of prices".
 
 a-text of l-o-p is "RRYRYR". b-text of l-o-p is "RPGRGP". parse-text of l-o-p is "x[sp]r[sp]i[sp]x[sp]e[sp]s". l-o-p is parse-spoilable.
 
-understand "precis" as a mistake ("It's already a precis, of sorts. Less pretentious words will work better here.") when l-o-p is visible.
+understand "precis" as a mistake ("It's already a precis, of sorts. Less highfalutin['] words will work better here.") when l-o-p is visible.
 
 understand "silt" as a mistake ("Dirty way to slash prices.") when l-o-p is visible.
 
@@ -23479,7 +23477,7 @@ book Filed Field
 
 chapter where it is, and scenery
 
-Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Foliage cause foilage all directions except east. [if b-w are visible]Barriers west block you. [end if][if ppf is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries. [end if][if b-r is visible]A buried raft lies here, too. [end if][if ppf is in lalaland and briar screen is in lalaland and b-w is in lalaland and rapt figure is in lalaland and b-r is in lalaland]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others.
+Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Foliage cause foilage all directions except east. [if b-w are visible]Barriers west block you. [end if][if pipe panel fence is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries. [end if][if b-r is visible]A buried raft lies here, too. [end if][if pipe panel fence is in lalaland and briar screen is in lalaland and b-w is in lalaland and rapt figure is in lalaland and b-r is in lalaland]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others.
 
 the foliage is useless scenery in filed field. "It'll still block you going anywhere but back east, even with the more man-made obstacles gone."
 
@@ -23542,14 +23540,12 @@ instead of doing something with the jagged spoon:
 
 chapter pineapple
 
-the ppf is privately-named scenery in Filed Field. "It's not worth sneaking over or through, either way. It's an eyesore, really."
+the pipe panel fence is scenery in Filed Field. "It's not worth sneaking over or through, either way. It's an eyesore, really."
 
-understand "pipe/panel/fence" as ppf. printed name of ppf is "pipe panel fence".
-
-check taking ppf:
+check taking pipe panel fence:
 	say "You don't have the strength. Maybe you can change it, though." instead;
 
-a-text of ppf is "RYRYYRRRY". b-text of ppf is "PGRGYRRRY". parse-text of ppf is "p[sp]i[sp]x[sp]e[sp]-[sp]x[sp]x[sp]x[sp]-".
+a-text of pipe panel fence is "RYRYYRRRY". b-text of pipe panel fence is "PGRGYRRRY". parse-text of pipe panel fence is "p[sp]i[sp]x[sp]e[sp]-[sp]x[sp]x[sp]x[sp]-".
 
 the pineapple is a fruit.
 
@@ -23955,8 +23951,6 @@ For printing a locale paragraph about a thing (called the item) when player is i
 
 the written walls are plural-named scenery in hows show. "There's an owl decal code wall[if any-walls is true and last-wall is owl decal] you've been browsing recently[else if owl decal is examined] full of Inform 7 code[end if] and an allow-lots-tools wall[if any-walls is true and last-wall is allow lots tools] you've been browsing recently[else if allow lots tools is examined] full of PERL tricks[end if][if any-walls is false], and each looks about as interesting as the other[end if]."
 
-understand "written walls" as written walls.
-
 check examining written walls for the first time:
 	ital-say "it may help slightly to have a copy of the source handy as you read for this. I'll often be pointing you to things to search for.";
 
@@ -23975,7 +23969,7 @@ after doing something with owl decal code wall:
 	now last-wall is owl decal code wall;
 	continue the action;
 
-description of owl decal code wall is "You read some [one of]more [or][stopping]of the owl decal code wall.[paragraph break][this-inform]"
+description of owl decal code wall is "You read some [one of][or]more [stopping]of the owl decal code wall.[paragraph break][this-inform]"
 
 inform-row is a number that varies.
 
@@ -24009,7 +24003,7 @@ after doing something with allow lots tools wall:
 	now last-wall is allow lots tools wall;
 	continue the action;
 
-description of allow lots tools wall is "You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. But not a lot.[paragraph break][this-perl]"
+description of allow lots tools wall is "You read some [one of][or]more [stopping]of the allow-lots-tools wall. Some of this might be useful if you make your own game. But not a lot.[paragraph break][this-perl]"
 
 perl-row is a number that varies.
 
@@ -25347,7 +25341,7 @@ b-r	"[one of]Philip Larkin would know what to do with the buried raft right away
 b-w	"[one of]Barriers West can be another fruit.[plus][or]They're reddish, with a seedy outside and leaves on top?[plus][or]STRAWBERRIES.[minus][cycling]"
 barber sickle	"[one of]The barber sickle is dripping and dark. Its texture is like the pryer bars.[plus][or]BLACKBERRIES.[minus][cycling]"
 mean trowel	"[one of]The mean trowel mentions three names if you READ it.[plus][or]There's no physical clue as to what the mean trowel is, so it's a bit tricky unless you just plow through all the fruits that might be.[plus][or]WATERMELON.[minus][cycling]"
-ppf	"[one of]These are meant to keep the cows out.[plus][or]You need only worry about PIPE PANEL.[plus][or]PINEAPPLE.[minus][cycling]"
+pipe panel fence	"[one of]These are meant to keep the cows out.[plus][or]You need only worry about PIPE PANEL.[plus][or]PINEAPPLE.[minus][cycling]"
 pryer bars	"[one of]If you know what drupelets are, the pryer bars may be a bit easier. If not, consider this edutainment.[plus][or]The bars are a bit reddish, which clues the fruit's color.[plus][or]The pryer bars can become a raspberry.[minus][cycling]"
 drupelets	"They clue you as to what the pryer bars should be. If not, then maybe this game will actually help you with your vocabulary! (I didn't know what they were before I Googled.)"
 jagged spoon	"The spoon's weird shape clues you as to what the rapt figure should be."
@@ -26308,7 +26302,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]the barber sickle could've become blackberries.";
 		if pryer bars are not in lalaland:
 			say "[2dmiss of cur-reg]the pryer bars could've become a raspberry.";
-		if ppf is not in lalaland:
+		if pipe panel fence is not in lalaland:
 			say "[2dmiss of cur-reg]the pipe panel fence could've become a pineapple.";
 		if b-w are not in lalaland:
 			say "[2dmiss of cur-reg]the barriers west could've become strawberries.";
