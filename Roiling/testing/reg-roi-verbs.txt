@@ -1,0 +1,247 @@
+###############################
+#
+#reg-roi-verbs.txt
+#
+#regression test for exhausting the verbs, meta and otherwise
+#
+#with synonyms thrown in for good measure
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* meta
+
+you may wish to type ABOUT or VERBS to see information about the game and what words work best.
+
+>about
+WRONG
+
+>verbs
+WRONG
+
+>credits
+WRONG
+
+>poss
+Switching on
+quasi-spoiler
+
+>poss
+Switching off
+!quasi-spoiler
+
+>poss
+Switching on
+!quasi-spoiler
+
+* demo dome specific
+
+>demo dome mode
+>e
+>rr
+Axe pigs!
+>read 17
+Even, tense.
+>r 17
+Even, tense.
+>x 17
+Even, tense.
+>examine 17
+Even, tense.
+
+>w
+>n
+>x owl-decal wall
+You read some of
+>x owl-decal code wall
+You read some more of
+
+* synonyms
+
+>gonear paperwall
+>x wallpaper
+WRONG
+>x wall
+>x paper
+>staple
+>x staples
+WRONG
+
+>ts
+
+>x mmm
+>x mm
+WRONG
+
+>routes
+>in
+
+>follow giant
+This game doesn't allow the FOLLOW verb
+
+>x cleric
+>x circle
+>x cleric circle
+WRONG
+
+>x picture
+>x picturer
+>x scripture picturer
+>x scripture picture
+WRONG
+
+>x adsorbing sign
+>x adsorbing board
+>x sign
+>x board
+WRONG
+
+>x oscars
+>x oscar's
+>x oscar
+WRONG
+
+>x pat's
+>x pats
+WRONG
+
+>past
+>x seedpit
+WRONG
+
+>retry
+
+>tokers
+>nestor
+
+>x ian
+>x guardian
+>x drug guardian
+WRONG
+
+>x max
+>x lee
+>x max lee
+>x max p lee
+>x example
+WRONG
+
+>x studio e
+>x studio
+WRONG
+
+>outside
+
+>troves
+>in
+>hush
+HUSH on.
+!Gritty sounds
+[NOTE: you will still hear the first random dialogue in an area, but it will be noted as such.]
+>hush
+You already can't hear
+>uhhs
+Random dialogue on again.
+>z
+Gritty sounds
+>hush
+HUSH on.
+!will still hear
+
+>seed 1
+>towers
+>gonear topside
+>x pastry
+mystery flavor
+>get pastry
+>creaky
+>n
+>x pastry
+Which do you mean, the Owers'-Bin Brownies or the pack of start tarts?
+
+>x robot
+>read robot
+Rewired -- DR. EWRIE.
+>r robot
+Rewired -- DR. EWRIE.
+>x red writing
+Rewired -- DR. EWRIE.
+
+>go to deposit
+Deposit
+>goto copse
+Copse
+>gt deposit
+Deposit
+
+>exits
+You can try to go north.
+
+>r
+(the red writing)
+When the car slows a bit, you read KC AYER in red.
+
+>x car
+It zips around as Ray fiddles with his remote. It appears to have its designer's name written in red. You'd be able to read it with out too much difficulty.
+
+>tell about keycar
+>ask about keycar
+>talk about keycar
+>ask about keycar
+WRONG
+
+>tell about xxx
+>ask about xxx
+>talk about xxx
+>a xxx
+WRONG
+
+>tell ray about keycar
+>ask ray about keycar
+>talk ray about keycar
+WRONG
+
+>tell keycar about keycar
+>ask keycar about keycar
+>talk keycar about keycar
+WRONG
+
+>n
+>exits
+There are four viable exits, though not all are unblocked: north, south, east and west.
+
+>weirder
+>clumsy
+>rinsed
+>exits
+There are four viable exits: north, south, east and west.
+
+>otters
+>x randi
+>x darin
+>x twins
+>x otters
+>x statues
+>x statue
+
+>gonear scape space
+>x tarred
+Tarred literally and figuratively, he gives off an 'I'm sly. Slimy.' air. Grease agrees with him.
+>x trader
+Grease agrees with him.
+>x tarred trader
+Grease agrees with him.
+>gs
+>x tarred
+Tarred literally and figuratively, she gives off an 'I'm sly. Slimy.' air. Grease agrees with her.
+>x trader
+Grease agrees with her.
+>x tarred trader
+Grease agrees with her.
+
+>purloin dollar
+>x dollar bill
+Lord Al Ollard
+>gs
+>x bill
+Lola Ollard

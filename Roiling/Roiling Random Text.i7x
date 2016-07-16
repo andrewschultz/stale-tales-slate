@@ -13353,6 +13353,7 @@ blurb	prio
 "Of Greasy Gray Foes[r], by Faye Gros"
 "Of Liars So Frail[r], by Rolf Sia"
 "Of Mr. Sad-From-Ads[r], by Sam Ford"
+"Of Mules Fulsome[r], by Sue Flom & Flo Muse"
 "Of Quality to Qualify[r], by Tuqila Foy"
 "Of Rules Fer Soul[r], by [if player is male]Les Rufo[else]Sue Rolf[end if]"
 "Of Sales So False[r], by [if player is male]Les Faso[else]Lea Foss[end if]"

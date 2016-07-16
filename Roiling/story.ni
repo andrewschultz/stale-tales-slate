@@ -2306,6 +2306,7 @@ yapper	Casper	"'Too much violence in his books, not enough money making.'"
 yapper	Elvira	"'She's called on the dialer a few times.'"
 Ray Eck	start tarts	"'Not mine.'" [start TOWERS]
 Ray Eck	toaster	"'Not nearly as sophisticated as my keycar.'"
+Ray Eck	keycar	"Ray Eck proceeds to [one of][or]re-[stopping]tell you about its features and so forth. What a YACKER, you think, seeing red."
 salesmen	Nerd-Aid	"The salesmen [one of]are more than happy to talk about Nerd-Aid. They're not nerdy themselves, but they just want to HELP people, because yay tolerance. They [or][stopping]mention [one of]it's much better than that red Rind-Ade, and if you ask again, they'll tell you who endorses Nerd-Aid[or][endorse-aid][cycling]."
 kid	Dr Yow	"[if kid is lonely and Dr Yow is in ropins]'I heard [he-she] was imprisoned. But I'd love to learn from [him-her].'[else if kid is lonely][one of]'Wow! You rescued [him-her]? You're almost as awesome as [he-she] is!' [kid-fol][or]'Tell me something I don't know. Or get Dr. Yow to. No offense'[stopping][else if kid is following]'I wanna see Dr. Yow!'[else][he-she-c]'s zoned you out, what with Dr. Yow [around-gone].[end if]"
 kid	bot boat	"'Man, I'm learning to build stuff! [if bot boat are off-stage]Like a bot boat! [end if]But I need someone to try them.'"
@@ -9046,6 +9047,10 @@ to say tables-beams:
 		say ", and [if t-b are in study]beams on another wall[else]a way down where those beams were[end if]";
 
 Dusty Study is an innie room in Roman Manor. "[one of]Your study's not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is in lalaland]. After your sleep, you remember you built some secret passages[end if][if gunter is in lalaland]. You'll want to take them[else]. You came in through your super-secret side door, and you don't feel like going back out, yet[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
+
+after printing the locale description for Dusty Study when Dusty Study is unvisited:
+	ital-say "you may wish to type ABOUT or VERBS to see information about the game and what words work best.";
+	continue the action;
 
 to say think-cue:
 	say "[if thinko is false and gunter is off-stage]. It's a good place to just THINK[end if]"
@@ -18875,7 +18880,7 @@ after printing the locale description for Anemic Cinema when Anemic Cinema is un
 
 The theater thereat is useless scenery in anemic Cinema. description of theater is "[bug-report]"
 
-understand "anemic/cinema" and "anemic cinema" as theater when player isi n 
+understand "anemic/cinema" and "anemic cinema" as theater when player is in Anemic Cinema.
 
 check going inside when player is in cinema:
 	try entering theater;
@@ -22182,12 +22187,12 @@ after fliptoing when player is in Anger Pit (this is the break the imp down rule
 
 section debug - not for release
 
-[understand "i1" as imp1.
-understand "i2" as imp2.
-understand "i3" as imp3.
-understand "r1" as ram1.
-understand "r2" as ram2.
-understand "r3" as ram3.]
+understand "i1" as imp1 when debug-state is true and player is in tapering anger pit.
+understand "i2" as imp2 when debug-state is true and player is in tapering anger pit.
+understand "i3" as imp3 when debug-state is true and player is in tapering anger pit.
+understand "r1" as ram1 when debug-state is true and player is in tapering anger pit.
+understand "r2" as ram2 when debug-state is true and player is in tapering anger pit.
+understand "r3" as ram3 when debug-state is true and player is in tapering anger pit.
 
 chapter animaling
 
