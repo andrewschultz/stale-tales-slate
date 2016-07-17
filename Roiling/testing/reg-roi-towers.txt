@@ -167,6 +167,110 @@ Terrance shakes his head, but a glare from Rodney sets him straight--for now.
 >recreant
 up by one point
 
+* taunt-thru
+
+>seed 1
+>gonear topside
+>purloin settler
+>creaky
+>n
+Scope Copse
+
+#test all 3 guardians in copse
+>rewired
+>clumsy
+WRONG
+>undo
+>rinsed
+WRONG
+>undo
+>undo
+>clumsy
+>rinsed
+WRONG
+>rewired
+>n
+
+Saltbed
+>punier
+WRONG
+>undo
+>pastier
+WRONG
+>punier
+>n
+
+Anemic Cinema
+
+>weariest
+>married
+WRONG
+>undo
+>angstier
+WRONG
+>undo
+>undo
+>angstier
+>married
+WRONG
+>weariest
+
+>e
+
+Salted Deltas
+
+>marginal
+WRONG
+>undo
+>hastiest
+WRONG
+>marginal
+>s
+
+Savager Ravages
+
+>flemish
+WRONG
+>undo
+>released
+WRONG
+>flemish
+>e
+
+Ole Shrine Shoreline
+#must test both male and female bad guys here
+
+>grandiose
+WRONG
+>undo
+>undo
+>gs
+>grandiose
+WRONG
+>undo
+>holiest
+WRONG
+>grandiose
+>gs
+
+>s
+
+>drained
+>naivest
+WRONG
+>undo
+>broken
+WRONG
+>undo
+>undo
+>naivest
+>broken
+WRONG
+>drained
+
+
+
+
 * err-thru
 
 >seed 1

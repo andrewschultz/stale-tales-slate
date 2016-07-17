@@ -3992,8 +3992,8 @@ Reed's Ale	"The Reed's Ale man listens to what you're saying for a minute, but--
 wait-seer	"The wait-seer looks bored and distracted for a second."
 rewired robot	"The robot almost looked a bit odd there for a moment."
 atheists	"The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal."
-lois the hostile	"[BUG]" ??
-hostile-is-he lot	"[BUG]" ??
+lois the hostile	"[bug-report]" [??]
+hostile-is-he lot	"[bug-report]" [??]
 ropins	"The ropins remains secure, with no easy way to open it."
 smart kid	"[kid-first] fidgets a bit but can't keep focused, though [he-she] clearly wants to."
 denim	"The denim bends and warps, but you hear no tearing noise."
@@ -18485,7 +18485,7 @@ for writing a paragraph about a guardian (called gua):
 		continue the action;
 	let so-far be 0;
 	repeat with myg running through not prevseen guardians in location of player:
-		say "[if so-far is 0]Oh, look[else if so-far is 1][line break]Wow, squared[else if so-far is 2][line break]Man, it's busy here[end if]! You haven't seen [the myg] before. [if myg is plural-named]They're[else if myg is female]She's[else if myg is neuter]It's[else]He's[end if] guarding the way [if gualoc of myg is location of player][guadir of myg][otherwise][opposite of guadir of myg][end if].";
+		say "[if so-far is 0]Oh, look[else if so-far is 1][line break]Wow, squared[else if so-far is 2][line break]Man, it's busy here[else]Man, it's busier than it should be here[end if]! You haven't seen [the myg] before. [if myg is plural-named]They're[else if myg is female]She's[else if myg is neuter]It's[else]He's[end if] guarding the way [if gualoc of myg is location of player][guadir of myg][otherwise][opposite of guadir of myg][end if].";
 		increment so-far;
 		now myg is mentioned;
 	let psg be number of prevseen guardians in location of player;
@@ -20241,9 +20241,11 @@ chapter who are the guardians?
 
 Lois the Hostile is a female purple guardian. description is "She looks hostile, all right."
 
-a-text of lois the hostile is "[bug]." b-text of lois the hostile is "[bug]."
+a-text of lois the hostile is "RYRYYRR". b-text of lois the hostile is "?GRYYRR".
 
 the hostile-is-he lot is a plural-named purple guardian.
+
+a-text of hostile-is-he lot is "RYRYYRR". b-text of hostile-is-he lot is "??RYYR?".
 
 The man covered in inapt paint is a blue guardian. description is "He has, in inapt paint on his chest, FLEMISH. He cries out 'I'm not Flemish! Nothing against [']em! It's just not me!'"
 
@@ -20487,7 +20489,7 @@ to deliver-taunt (g1 - a guardian) and (g2 - a guardian):
 			continue the action;
 	repeat through table of ggt:
 		if g1 is guaname entry:
-			say "[line break][guatext entry][line break]";
+			say "[guatext entry][line break]";
 
 section generic taunts
 
@@ -20506,7 +20508,7 @@ pirates	"The pirates sing a colorful shanty about another lubber relegated to th
 grailman	"The grailman mumbles something like 'well, we can't all be above average.'"
 reed's ale	"'The Reed's Ale man adjusts his half-on half-off costume, glad he wasn't the one dispelled--or whatever.'"
 lois the hostile	"[the-hostile] mumbles passive-aggressively that the wages of sin is--that."
-hostile-is-he-lot	"[the-hostile] mumble passive-aggressively that the wages of sin is--that."
+hostile-is-he lot	"[the-hostile] mumble passive-aggressively that the wages of sin is--that."
 ingrates	"The ingrates complain there aren't enough of them to take over the space you opened before worrying they're next."
 admirer	"Your admirer claps far too fervently at your accomplishment."
 wait-seer	"The wait-seer cooly puts up a hand and mumbles some Hakuna Matata nonsense."
@@ -20651,6 +20653,10 @@ to reposition-guardians:
 	[say "Repositioning guardians.";]
 	repeat through table of guard-org:
 		if guy entry is not in lalaland:
+			if guy entry is lois the hostile and player is male:
+				next;
+			if guy entry is hostile-is-he lot and player is female:
+				next;
 			if location of player is loc entry:
 				now guy entry is in location of player;
 				if there is an aux entry:

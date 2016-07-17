@@ -712,9 +712,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "wordy"	410999494	--	Dr Yow	--	"Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if Dr Yow has been rowdy and Dr Yow has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]--but [he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]."
 "tentative"	788195264	--	--	kid-not-learnt rule	"The kid fidgets a bit but can't keep focused, though [he-she] wants to."
 "shoreline"	716559056	shoreline	--	--	"[towersloc]." [OLE SHRINE SHORELINE 3 2]
-"deacons"	409562652	--	deacons	--	"The deacons mumble to themselves, and you catch 'Lo! Is the...?' / 'Toils, eh.' and your calling upon supernatural powers that clearly don't exist. You feel devoid of can-does after your latest attempt, mumbling 'Eh, I lost.'[paragraph break]You get the sense the deacons have given you the run-around. They're not going to discuss their hostile ol['] heist around you[if deacons are escanned]--but maybe you can muddle through the odd readings from the settler[end if]."
-"deacon"	313288686	--	deacons	--	"[plutry of deacons]There's more than one deacon blocking you."
-"shrine"	460586531	--	o-s	--	"The shrine is kind of sacred, and regardless of what you think of the deacons['] religion, messing with it would be a mean move."
+"shrine"	460586531	--	o-s	--	"The shrine is kind of sacred, and regardless of what you think of [the-hostile]'s religion, messing with it would be a mean move."
 "actionless"	686724232	coastlines	--	--	"[towersloc]." [ACTIONLESS COASTLINES 3 3]
 "coastline"	590450266	coastlines	--	--	"[towersloc]."
 "dirk stam"	469925871	--	smart kid	--	"The kid looks at you curiously. You probably don't need to change [his-her] name or intelligence."
