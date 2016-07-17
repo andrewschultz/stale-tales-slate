@@ -650,15 +650,12 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "idtag"	203919473	--	ID Tag	--	"ID tag: dig at it? Gad."
 "unlocked"	522953692	--	--	duck-cant rule	"The lone duck looks around for something to do but can't find anything. Well, not here. And not like that."
 "unblest"	573436152	sunbelt	--	--	"[towersloc]." [UNBLEST SUNBELT 2 1]
-"nameless"	637144468	--	salesmen	--	"The salesmen laugh at the sheer [i]lameness[r] of what you're saying, or trying to say, or whatever. Compared to you, their maleness, talk--and clothes--are clearly [i]dandier[r].[paragraph break]Or maybe they're just too unimaginative to be affected by any of your nonsense powers. Well, directly."
-"salesman"	511526177	--	salesmen	--	"Picking off one salesman would just make the others work harder for their commission. And it's not doable, anyway. If you got rid of their product, they might stop pestering you."
 "cans"	186374877	--	Nerd-Aid	--	"[nerd-a]."
 "nerd"	303066509	--	Nerd-Aid	--	"[nerd-a]."
 "aid"	68209753	--	Nerd-Aid	--	"[nerd-a]."
 "wears"	419526469	--	Nerd-Aid	--	"You suppress a swear as the sales pitch wears on you."
 "bottles"	576885432	--	Nerd-Aid	--	"They're not just bottles! They're bottles of NERD-AID!"
 "tapin"	300664149	--	man covered in	--	"It won't be such a tap-in to nip at, sadly. Daltho's advice comes back: nobody will be easier than Rodney."
-"shirts"	463256898	--	salesmen	--	"The shirts were built to resist the most direct of manipulations. Perhaps you can work on the salesmen themselves. Because the shirts do make them look dandier."
 "neuralpulses"	1003884530	--	neural pulses	--	"Man, biochemistry's way complex. Complex isomers and such are worse than anagrams! You may be more successful breaking the neural pulses down into components."
 "ravages"	453544036	ravages	--	--	"[rav-rej]." [SAVAGER RAVAGES 2 2]
 "ravage"	357270070	ravages	--	--	"[rav-rej]."
@@ -1744,7 +1741,7 @@ to say shoaly:
 	say "That might cause some bizarre erosion and risk dumping YOU in Leak Lake"
 
 to say nerd-a:
-	say "You think a bit. The salesmen don't emphasize one word over the other during their sales pitches, so the NERD and AID of Nerd-Aid seem equally ludicrous. I mean important"
+	say "Concentrate on the Nerd-Aid. In the dandier arid den"
 
 to say rav-rej:
 	say "This is a weird place, being at the crossroads, but better to [if number of visible guardians is 0 and weeds are in lalaland and denim is in lalaland]mess around elsewhere[else if weeds are visible]get rid of the weeds[else if number of visible guardians > 0]tackle a guardian[else if denim is visible]see if you can get rid of the denim[end if]";

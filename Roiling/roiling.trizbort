@@ -147,7 +147,7 @@ version 3 March 2015</history>
 		<room id="47" name="Topside Deposit" subtitle="" x="224" y="640" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects custom="yes" customRight="-40" customDown="0">    Start Tarts|Rosetta Toaster</objects>
 		</room>
-		<room id="48" name="Unblest Sunbelt" subtitle="(diners/salesmen)" x="352" y="544" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="48" name="Unblest Sunbelt" subtitle="(diners/arid den)" x="352" y="544" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="49" name="Salted Deltas" subtitle="(wait-seer/atheists)" x="352" y="352" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="50" name="Actionless Coastline" subtitle="" x="480" y="352" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="Dirk Stam/Kim Darst" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n" custom="yes" customRight="-24" customDown="0">Smart Kid</objects>
@@ -304,7 +304,7 @@ version 3 March 2015</history>
 			<dock index="0" id="49" port="e" />
 			<dock index="1" id="50" port="w" />
 		</line>
-		<line id="105" name="" description="" color="#000000" style="dashed" midText="deacons (holiest)">
+		<line id="105" name="" description="" color="#000000" style="dashed" midText="Lois the Hostile/Hostile-Is-He Lot">
 			<dock index="0" id="50" port="s" />
 			<dock index="1" id="51" port="n" />
 		</line>

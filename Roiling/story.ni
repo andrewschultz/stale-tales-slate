@@ -1936,7 +1936,7 @@ hostile-is-he lot	--
 natives	--
 snider diners	"'We are EATING,' they exclaim, drily. You'd like to rain on their parade, even a little."
 sweatier wait-seer	--
-salesmen	--
+arid den	--
 rewired robot	--
 unripe iPrune	--
 pirates	--
@@ -2145,7 +2145,7 @@ Curtis	"'I'm a busy man!' yells Curtis. 'I have confidence in you, dealing with 
 Len Craig	"[one of]Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge[or]Your magic powers do not, alas, expand to straightforward bargaining[stopping]."
 Art Erd	"[his-her-c] mumbles 'er, drat' and something about how money is very, very nice."
 Dr Tera	"[his-her-c] mumbles 'er, drat' and something about how money is very, very nice."
-salesmen	"They utterly ignore your inquiry and instead talk about anything and talk about how they can talk about anything. They talk about how just one word has the power to change things. And finally, they get around to how great Nerd-Aid is, and you shouldn't be ashamed if you need a little Nerd-Aid."
+arid den	"The automated response system you can't see keeps croaking 'Nerd-Aid...Nerd.Aid...'"
 passport	"Try using its features instead."
 
 to say boat-works:
@@ -2309,7 +2309,7 @@ yapper	Elvira	"'She's called on the dialer a few times.'"
 Ray Eck	start tarts	"'Not mine.'" [start TOWERS]
 Ray Eck	toaster	"'Not nearly as sophisticated as my keycar.'"
 Ray Eck	keycar	"Ray Eck proceeds to [one of][or]re-[stopping]tell you about its features and so forth. What a YACKER, you think, seeing red."
-salesmen	Nerd-Aid	"The salesmen [one of]are more than happy to talk about Nerd-Aid. They're not nerdy themselves, but they just want to HELP people, because yay tolerance. They [or][stopping]mention [one of]it's much better than that red Rind-Ade, and if you ask again, they'll tell you who endorses Nerd-Aid[or][endorse-aid][cycling]."
+arid den	Nerd-Aid	"'YES! NERD-AID!' booms some unseen response system in the arid den."
 kid	Dr Yow	"[if kid is lonely and Dr Yow is in ropins]'I heard [he-she] was imprisoned. But I'd love to learn from [him-her].'[else if kid is lonely][one of]'Wow! You rescued [him-her]? You're almost as awesome as [he-she] is!' [kid-fol][or]'Tell me something I don't know. Or get Dr. Yow to. No offense'[stopping][else if kid is following]'I wanna see Dr. Yow!'[else][he-she-c]'s zoned you out, what with Dr. Yow [around-gone].[end if]"
 kid	bot boat	"'Man, I'm learning to build stuff! [if bot boat are off-stage]Like a bot boat! [end if]But I need someone to try them.'"
 kid	keycar	"'I'd love to make one of them! But that man said I wasn't grown up enough.'"
@@ -2325,7 +2325,7 @@ Dr Yow	gizmo	"[if Dr Yow is in ropins]'Not enough sharp edges. It's for making t
 Dr Yow	bonker	"[one of]Dr. Yow facepalms a bit. You can imagine listening to that bonker was even worse if you were imprisoned, too[or]No need to dredge that up, again[stopping]."
 Dr Yow	lake	"[doc-on-lake]"
 Dr Yow	kid	"[if kid is reflexed]'A sharp learner! [he-she-c] can help you now.'[else if kid is in subsector]'Sart enough, but [he-she]'s not ready to learn. For some kids, they just need that switch to go on.'[else]'I could use a young apprentice. You--well, you probably have other prisoners to rescue, or something.'[end if]"
-salesmen	curst palace	"They mention their homes are dandier than that curst palace."
+arid den	curst palace	"If the den could talk, it would find a way to say it's more practical and motivational than the Curst Palace."
 ray eck	settler	"Ray Eck just won't shut up about what the settler could be for, and why it doesn't do anything. You notice its colors don't change even when you switch it to and from cheat mode, which--well, that's a pretty big help."
 Ed Yerg	curst palace	"'It can be something super special. [3-random]! If only...' You got no concrete clues, but Ed's pep talk was a help[new-yerg-thing]. Maybe you can come back for another, later, if you still have no luck outside."
 Ed Yerg	crocus	"[if ed yerg is reflexive]'I don't think much of unprofitable things like flowers. Used to, but not now.'[else if crocus is in lalaland]Don't push-poll him about your generosity.[else if crocus is in flowerpot]Just give him the crocus. Don't tease him.[else]'I haven't enjoyed flowers for a long time.'[end if]"
@@ -2371,7 +2371,7 @@ check objasking about Dr Tera when player is female:
 	try objasking noun about Art Erd instead;
 
 to say endorse-aid:
-	say "[one of]it's endorsed by Red Dina, among others[or]endorsed by Ned Radi, among others[or]endorsed by Ed Nardi, among others[or]endorsed by Ed Darin, among others[or]endorsed by Adi Dern[or]endorsed by Nerd Ida, of course[or]you can Add Erin, Reid, Dan to the list of endorsers[cycling]--they see red when you ask who THAT is"
+	say "it's endorsed by [one of]Adi Dern[or]Red Dina[or]Ned Radi[or]Ed Nardi[or]Ed Indar[or]Ed Darin[or]Nerd Ida, of course[or]--well, you can Add Erin, Reid, Dan to the list of endorsers[cycling]--they see red when you ask who THAT is"
 
 check objasking Elvira about an animal:
 	if second noun is in wire deck or second noun is in perverse preserve:
@@ -3987,7 +3987,7 @@ admirer	"Your admirer looks askance, then returns to their puppy-love expression
 natives	"The natives look almost ready to be suckered by flattery or just a tall tale in general, but that look passes."
 yurts	"The yurts sway slightly. They may not be guarding much, but maybe you could do for them."
 alarming	"The grailman seems almost average for a moment."
-nameless salesmen	"The salesmen grow momentarily protective of their Nerd-Aid supply."
+dandier arid den	"The arid den seems to lose a bit of power."
 Reed's Ale	"The Reed's Ale man listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch."
 wait-seer	"The wait-seer looks bored and distracted for a second."
 rewired robot	"The robot almost looked a bit odd there for a moment."
@@ -5121,7 +5121,7 @@ USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are
 pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, five letters is easier than four[end if]."
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
 Ray Eck	false	true	false	false	"Ray Eck begins babbling about how interesting the settler looks, almost as interesting as his keycar. Maybe you could ASK him about the settler, if he's still stumping you." [towers]
-nameless salesmen	false	true	false	true	"Hm. Salesmen is eight letters, but your settler registers seven. Seven letters in Nerd-Aid. It's--well, they're certainly dressed unusually."
+dandier arid den	true	true	false	false	"Well. That's two things you can't figure to start, but maybe you can, if you think about it."
 alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
 sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
 iPrune	true	true	false	false	"Hm. That one blinky letter is pretty weird. Maybe you can start there, or try to annoy the iPrune."
@@ -6777,8 +6777,8 @@ check eating (this is the try to eat a hint tart rule) :
 			say "You're already under the influence of a pastry. XRAY something before continuing.";
 		if diners are visible:
 			say "The diners scoff at you eating something like that cold--well, eating that at all--and you're too embarrassed to do so[if toaster is visible]. But maybe you can put it in the toaster[end if]." instead;
-		if salesmen are visible:
-			say "'You know what would go great with that? NERD-AID!' says one salesman. The others agree, quickly." instead;
+		if dandier arid den is visible:
+			say "'You know what would go great with that? NERD-AID!' booms a mechanical voice from the dandier arid den." instead;
 		if noun is not heated:
 			if toaster is visible:
 				say "You figure you'd better heat that up in the toaster first. So you do. Mmm, not bad[if diners are visible]. The diners let loose some dry wit about people who enjoy something THAT unrefined[end if].";
@@ -7268,8 +7268,8 @@ before listening (this is the you can hear stuff some places rule):
 		say "Someone calling out they need help to go ABROAD." instead;
 	if player is in Danger Garden: [towers]
 		say "[if bonker is visible]A menacing silence spews from the bonker. Or maybe it's just your imagination[else]Honk, honk.[end if]" instead;
-	if salesmen are visible:
-		say "After hearing the salesmen chat for minutes, you're [i]dreadin['][r] what they'll say next." instead;
+	if dandier arid den is in location of player:
+		say "You're dreadin['] the next mechanical sales pitch from the dandier arid den." instead;
 	if player is in Loftier Trefoil:
 		if sir rodney is visible:
 			say "Ugh. Sir Rodney is a dry one, barking out complaints." instead;
@@ -7355,10 +7355,10 @@ before smelling (this is the you can smell some stuff some places rule):
 		say "Noodles so olden." instead;
 	if player is in campiest campsite:
 		say "[one of]You smell something generically nice and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.[or]You wonder to yourself if that's tarragon or rosemary or perhaps a hint of lavender... no, no, no.[or]I ran out of stupid jokes for this. Get on with the game, here.[stopping]";
-		if salesmen are not visible:
+		if dandier arid den is not in campsite:
 			do nothing instead;
-	if salesmen are visible:
-		say "[if player is in campsite]Also, t[else]T[end if]he salesmen smell of Rind-Ade, the energy drink for people with more boisterous professions. It's the red stuff." instead;
+	if dandier arid den is in location of player:
+		say "The Nerd-Aid from the dandier arid den smells suspiciously like the very red Rind-Ade drink." instead;
 	if deli rye is visible or noun is deli rye: [otters]
 		say "The deli rye smells good, but Ed won't share." instead;
 	if player is in frontage:
@@ -8521,7 +8521,7 @@ weeds	ragged dagger	"sewed"	"sewed"	"The weeds tangle together and pull each oth
 raves saver	raves saver	"pearly"	"pearly"	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"	false	472956780
 oddly rewired robot	oddly rewired robot	"weirder/wierder"	"weirder"	"[if-wierd]The oddly rewired robot, once so proud of how it conformed to standards, now finds reason to believe it is weirder. Being weird, it can no longer move wider. 'Battery...try...beat.' It begins to melt--mottle--until it looks abysmal, almost balsamy, as it cries 'Sob, a true saboteur' slinking away in shame at its crossed Wiser-Wires."	false	600216532	"weirder"
 iPrune	iPrune	"punier"	"punier"	"Instead of being worried about how much the iPrune would block you when full-grown, you wonder about if it were the size of a normal banana. It works. The iPrune kicks you ineffectually as you walk past, then runs and hides in embarrassment."	false	513602032	"punier"
-nameless salesmen	nameless salesmen	"drained"	"drained"	"You think you've got it, how to troll their latest sales pitches. 'I'm a busy adventurer!' you shout. 'I don't have time for this! Sales? Ew! Weasels!' The right facial expressions, and you have them totally confused and beat, too drained to go on, physically and mentally.[paragraph break]What's more, the Nerd-Aid bottles themselves are drained! (Don't worry, they were really just sugar water.) You insult the salesmen's clothes as a coup de grace before they leave for good. They cry 'Gad! Upset! Upstaged!'"	false	371276262	"drained"
+arid den	arid den	"drained"	"drained"		"You focus, hoping the arid den will lose energy. Justfor effect, you yell 'I'm a busy adventurer!' you shout. 'I don't have time for this! But I do things the right way!' You're still surprised as the Nerd-Aid bottles seem to dry up inside, and the arid den's lights dim, until it collapses into itself and underground."	false	371276262	"drained"
 strudel	strudel	"rustled"	"rustled"	"You manage to take the strudel without obviously reaching for it. This makes no practical difference but makes you feel smoother. Go, you."	false	592462631	"You'd have to drop it on the ground and get it germy to try that again. Eww."
 an admirer	an admirer	"married" or "mardier"	"married"	"[response-based]. You're slapped sidearm for having misread them, but you're spared spouse opuses."	false	430738621	"married"
 natives	natives	"vainest" or "naivest"	"naivest"	"[vain-naiv]. Now that the natives have moved on, you can go south."	false	550443085	"The natives should be gone."
@@ -18767,7 +18767,7 @@ description of spec-o-scope is "You look into the scope and see:[paragraph break
 [line break]  [bloorg of iPrune] [bloorg of grailman] [if player is male][bloorg of hostile-is-he lot][else][bloorg of lois the hostile]~
 [line break]  .[bloorg of robot].[bloorg of reed's ale].~
 [line break]  [bloorg of muscly] [bloorg of man covered in inapt paint] [bloorg of ego drains]~
-[line break]![bloorg of pirates].[bloorg of diners].[bloorg of salesmen].[bloorg of bonker]!
+[line break]![bloorg of pirates].[bloorg of diners].[bloorg of arid den].[bloorg of bonker]!
 [line break]  [bloorg of Ray Eck]   [bloorg of natives]
 [line break]  !   +[variable letter spacing][paragraph break]| = passage, x = no passage, . = location, ! = important, + = treasure."
 
@@ -18858,15 +18858,15 @@ book unblest sunbelt
 Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land here is dry and unforgiving. You doubt there's much to do here besides get on[if number of visible guardians is 0], especially since you got rid of the guardians here[end if][if pulses are visible], though you feel [i]neural pulses[r] you'd love to get rid of[end if][tow-dirs]."
 
 after printing the locale description for Unblest Sunbelt when Unblest Sunbelt is unvisited:
-	if inapt paint is prodded and salesmen are prodded:
+	if inapt paint is prodded and arid den is prodded:
 		continue the action;
 	if inapt paint is prodded:
-		say "The salesmen, being nameless, swear by their wares they think you'll like. NERD-AID!";
-	else if salesmen are prodded:
+		say "Boy. You don't want to look, but you can't, at all the flavors of Nerd-Aid in the arid den.";
+	else if arid den is prodded:
 		say "Hm, that inapt paint--nah, it'd be a tap-in by itself, according to Old Hat Daltho. Must be the actual words.";
 	else:
-		say "Over the salesmen hawking NERD-AID, you consider Old Hat Daltho's advice: the inapt paint can't be a tap-in.";
-	now salesmen are prodded;
+		say "Over the mechanical voice from the arid den hawking NERD-AID, you consider Old Hat Daltho's advice: the inapt paint can't be a tap-in.";
+	now arid den is prodded;
 	now inapt paint is prodded;
 	continue the action;
 
@@ -18956,8 +18956,8 @@ check pushing retape button:
 	if waters is visited or limits is visited:
 		say "The saver has suffered permanent water damage. It doesn't even make any weird warpy noises." instead;
 	if raves saver is not silent:
-		if salesmen are visible:
-			say "The salesmen decry the sound quality of your raves saver. They reiterate that anyone who'd use a piece of junk like that ISN'T going places." instead;
+		if arid den is visible:
+			say "Fortunately no advertisement from the arid den is loud enough for the raves saver to catch it." instead;
 		if number of visible guardians > 0:
 			say "Nothing on your saver is abrasive enough to move a guardian out of your way." instead;
 	if Dr Yow is visible:
@@ -20220,7 +20220,7 @@ to say gd of (zz - a guardian):
 		say "[one of][or] (still mum about their hostile ol['] heist)[stopping]";
 	if zz is atheists:
 		say "[one of] (well, they're certainly wasting each other's time talking about there's no afterlife)[or][stopping]";
-	if zz is nameless salesmen:
+	if zz is arid den:
 		say "[one of][or] still hawking Nerd-Aid[stopping]";
 	if zz is natives:
 		say "[one of][or] (you assume, by how they are talking about the Badlands and looking at you funny)[stopping]";
@@ -20294,22 +20294,15 @@ understand "diner" as diners.
 
 a-text of snider diners is "RYRRYR". b-text of snider diners is "R??R?R". parse-text of diners is "x[sp]?[sp]?[sp]x[sp]?[sp]x".
 
-The nameless salesmen are plural-named male blue guardians. understand "men/salesman" as salesmen.
+The dandier arid den is a blue guardian.
 
-description of nameless salesmen is "They look dandier than anyone you've met here. They seem to gain energy from their shirts, bizarrely. Shirts by that one designer whose name you can't remember.[paragraph break]You think you smell something, too, but you can't place it."
+description of dandier arid den is "They look dandier than anyone you've met here. They seem to gain energy from their shirts, bizarrely. Shirts by that one designer whose name you can't remember.[paragraph break]You think you smell something, too, but you can't place it."
 
-the salesmen wear the shirts. the shirts are cluey and plural-named.
-
-instead of doing something with the shirts:
-	if current action is scaning or current action is examining or current action is objhinting:
-		continue the action.;
-	say "They're the salesmen's, and you couldn't pull off wearing them. You wouldn't want to. So you don't need to do much with them."
-
-the bottles of Nerd-Aid are an auxiliary thing. the salesmen carry the Nerd-Aid. understand "wares" as nerd-aid. understand "nerd/aid" and "nerdaid" and "nerd aid" as nerd-aid.
+the bottles of Nerd-Aid are auxiliary plural-named scenery. the arid den carries the nerd-aid. understand "wares" as nerd-aid. understand "nerd/aid" and "nerdaid" and "nerd aid" as nerd-aid.
 
 a-text of Nerd-Aid is "RRYYRYR". b-text of Nerd-Aid is "RRYYRYP". parse-text of nerd-aid is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]d".
 
-description of Nerd-Aid is "You can't make out what the Nerd-Aid should be, and maybe that's all for the best."
+description of Nerd-Aid is "You can't make out what flavor the Nerd-Aid should be, and maybe that's all for the best."
 
 instead of doing something with the nerd-aid:
 	if current action is taking or current action is eating or current action is drinking:
@@ -20317,12 +20310,6 @@ instead of doing something with the nerd-aid:
 	if action is procedural:
 		continue the action;
 	say "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.";
-
-description of shirts is "You think you recognize them now. They're from the popular designer Ed Indar. Who always signs his name in red."
-
-a-text of salesmen is "RRYYRYR". b-text of salesmen is "PRYYRGR". parse-text of salesmen is "d[sp]x[sp]-[sp]-[sp]x[sp]e[sp]x".
-
-a-text of shirts is "RRYYRYR". b-text of shirts is "PRYYRGR". parse-text of shirts is "d[sp]x[sp]-[sp]-[sp]x[sp]e[sp]x".
 
 The muscly hulk is a red guardian.
 
@@ -20447,19 +20434,19 @@ chapter guardian org table
 table of guard-org [organized going 1st north then east. W, N, E.]
 guy	loc	blockdir	blokzorz	kloozorz	taunt	aux
 muscly hulk	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."
-oddly rewired robot	Scope Copse	west	"'I-was-rewired-enough-to-be-just-normal-enough-to-block-you,' says robot, as if pre-set to 'pester.' It smiles in a way it knows drew ire, and you see red."
+rewired robot	Scope Copse	west	"'I-was-rewired-enough-to-be-just-normal-enough-to-block-you,' says robot, as if pre-set to 'pester.' It smiles in a way it knows drew ire, and you see red."
 snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if]."	--	"The diners smack their lips, and you think you hear the zhk of silverware."
 iPrune	Blasted Saltbed	north	"The iPrune rumbles over to block your way. [one of]It asks where you're going, and you mumble, red-faced, 'Er, up in...' but you can't say where, ultimately[or]'REIN UP!' it yells, making you see red[in random order][one of]. Maybe if you tried to pass again, both sides could have their say[or][stopping]."	"Looking at the iPrune, you are intimidated by how unnaturally big it is. Maybe the solution is easier than you're worried it is."
 pirates	Blasted Saltbed	east	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	--	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
 ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."
 an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."
-sweatier wait-seer	Anemic Cinema	east	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."
-man covered in inapt paint	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."
-nameless salesmen	Unblest Sunbelt	east	"You try to sneak by, but you don't have the energy to resist their waves of faux-politeness as they offer up some Nerd-Aid, which seems just right for someone like you--don't take it the wrong way--that they're [i]dandier[r] than. The energy just radiates from their shirts as their stream of yannos annoys you into...gnh...nothing."
+wait-seer	Anemic Cinema	east	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."
+man covered	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."
+arid den	Unblest Sunbelt	east	"The dandier arid den must have some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."
 reed's ale	Ravages	east	"The Reed's Ale man blocks you--his costume looks stupid, but it's not encumbering--and asks you to help him out, and not just about buying, but about whether he should continue this career."	"The Reed's Ale man fidgets with his costume, unsure if he wants to take it off or put it on."
-an alarming grailman	Ravages	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."
+grailman	Ravages	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."
 Ray Eck	Deposit	north	"The yacker controls his keycar so it runs over your foot. You briefly wonder if he has a twin named Kim."	"The yacker introduces himself as Ray Eck, grateful there's someone out here who doesn't mind talking."	"Ray Eck's keycar can't go that far, so you manage to escape."	keycar
-organised ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you try to walk through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."
+ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you try to walk through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'JAIL DEFENDED!' you hear from the east."
 natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."
 Atheists	Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."
@@ -20499,7 +20486,7 @@ rewired robot	"The robot's lights blink and flash and bloop. Is it laughing?"
 muscly hulk	"The muscly hulk beats its chest for NOT being removed like that."
 snider diners	"The snider diners sniff at the distraction."
 inapt paint	"'Well, at least it wasn't me, whoever I am,' mumbles the man covered in inapt paint."
-salesmen	"'Not bad! But would've been more stylish with NERD-AID!'"
+arid den	"'Not bad! But would've been more stylish with NERD-AID!'"
 ego drains	"The ego-drains make a flushing and slurping noise. Another rival guardian down the drain!"
 bonker	"'ENEMIES ARE STILL TOO SCARED TO FACE THE BONKER!' you hear from the east."
 natives	"The natives mumble how they KNEW something like that would happen to someone else. They've seen it all, here."
@@ -25216,8 +25203,8 @@ ego drains	"[one of]They're organised, but perhaps if they were hyperbole, they 
 admirer	"[one of]She needs someone to be attached to.[plus][or]Why stop at just engaged?[plus][or]MARRIED.[minus][cycling]"
 natives	"[one of]They babble about how they can't be suckered, and so forth, and yet they're almost too good for this place.[plus][or]You can do two things to the natives.[plus][or]The natives can become VAINEST, or NAIVEST.[minus][cycling]"
 yurts	"[one of]They look out of place, made of weird metals.[plus][or]You can corrupt them by making them...[plus][or]RUSTY.[minus][cycling]"
-salesmen	"[one of]The salesmen want you to concentrate on their product. NERD-AID.[plus][or]In addition, their loud clothes give them energy to talk loud. They 're DANDIER than you.[plus][or]The salesmen can become a seven-letter word, and the settler gives clues about how to sap their energy. As does smelling. Or talking to them and learning of endorsements.[plus][or]DRAINED.[minus][cycling]"
-Nerd-Aid	"The Nerd-Aid gives you a better idea of how to change the salesmen, by its name and by asking them about it."
+arid den	"[one of]The dandier arid den sells a lot of Nerd-Aid. It appears to be at full power.[plus][or]How could you lessen its power?[plus][or]Try smelling, examining the merchandise for endorsements, etc.[plus][or]DRAINED.[minus][cycling]"
+Nerd-Aid	"The Nerd-Aid gives you a better idea of how to change the arid den, by its name and by seeing who endorses Nerd-Aid."
 weeds	"[one of]The weeds might be less effective if tied together.[plus][or]Or, more accurately, SEWED.[minus][cycling]"
 man covered in inapt paint	"[one of]The inapt paint says the man's FLEMISH, but he's sick of this nationality bit. He wants individuality.[plus][or]What could be more individual than...[plus][or]HIMSELF?[minus][cycling]"
 i-p	--	man covered in inapt paint
