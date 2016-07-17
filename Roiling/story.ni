@@ -1931,7 +1931,8 @@ smart kid	"'I like gadgets and building things! [if bot boat is off-stage]I just
 pester'n serpent	"The serpent has nothing to say."
 inapt paint	--
 muscly hulk	--
-deacons	--
+lois the hostile	--
+hostile-is-he lot	--
 natives	--
 snider diners	"'We are EATING,' they exclaim, drily. You'd like to rain on their parade, even a little."
 sweatier wait-seer	--
@@ -2076,7 +2077,8 @@ organised ego drains	"The ego drains just aren't to be argued with. When you try
 pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to converse.[or]'Yarrh, Harry,' they shout, and one of them makes fun of your skin tone. You feel like a spiter, hoping they get skin cancer.[in random order]"
 reed's ale	"'He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 admirer	"They claim they never thought they'd love someone the way they love you! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another compliment[or]You blush red hearing nonsense you two could be as good together as the popular society couple Red Irma and Ed Mirra[cycling]."
-once-sad deacons	"'Deacons! A second!'[paragraph break][one of]'We hate you, but we won't tell you lies, tho['].' You blush and thank the coldest old sect. They seem to have more nastiness in reserve[or]They ignore you and disparage St. Helio--you turn red when they ask if you know who that is[or]Apropos of nothing, a deacon in red discusses [one of]the soil[or]the oils[in random order] here[or]One deacon gets a little too folksy with a 'This ole...' The others glare at him, turning red[or]The deacons huddle together for a bit, then agree. 'I.e. SLOTH!' They...they aren't very NICE deacons. Maybe you can change that[cycling]."
+lois the hostile	"bug."
+hostile-is-he lot	"bug."
 man covered in inapt paint	"He ignores your conversation. '[one of]They done wrong to ol['] Mel Fish. That's me.[or]They were all [']Shelf [']im!['] and on the paint went.[or]SMH. Life.[or]Eh. Films.[in random order]' he mumbles as his eyes go red[one of]. Maybe he has other things to mumble about[or][stopping]."
 natives	"You seem unable to convince the natives they are too good to stand here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
 sweatier wait-seer	"'Trees! [one of]Aw, I[or]I, aw[in random order]...' he says, making you see red. 'I'm obviously [i]sweatier[r] than you, yet I am far less tired!'"
@@ -2312,7 +2314,8 @@ kid	Dr Yow	"[if kid is lonely and Dr Yow is in ropins]'I heard [he-she] was impr
 kid	bot boat	"'Man, I'm learning to build stuff! [if bot boat are off-stage]Like a bot boat! [end if]But I need someone to try them.'"
 kid	keycar	"'I'd love to make one of them! But that man said I wasn't grown up enough.'"
 kid	Atheists	"'Boy! Tell them religion has a point, and they get huffy. Thanks for deep-sixin['] [']em!'"
-kid	deacons	"'Boy! Ask one question about their religion, they get huffy. Thanks for deep-sixin['] [']em!'"
+kid	hostile-is-he lot	"'Boy! Ask one question about their religion, they get huffy. Thanks for deep-sixin['] [']em!'"
+kid	lois the hostile	"'Boy! Ask one question about her religion, she gets mad. Thanks for deep-sixin['] her!'"
 kid	settler	"'Wow! I'm real impressed with who built this! Whatever it is. [if bot boat is visible]All I can build is mechanical stuff[else]I'd like to build something, too[end if].'"
 kid	gizmo	"[if gizmo is off-stage]'I could use a weird tool to build things.'[else if player has gizmo]'Wow! Maybe if I knew how to build something, I could have it?' You could probably GIVE it to the kid, once [he-she]'s inspired to build something.[else]It's be kind of rude to ask for it back. The kid'll use it better anyway."
 kid	duck	"'I'm not real big on biology. But I guess ducks are cute.'"
@@ -2385,7 +2388,7 @@ kid-guar is a person that varies. [kid-guar is usually nothing.]
 
 check objasking kid about (this is the kid can spoil rule):
 	if second noun is in lalaland:
-		if second noun is not atheists and second noun is not deacons:
+		if second noun is not atheists and second noun is not the-hostile:
 			say "That's out of the way." instead;
 		else:
 			say "The kid doesn't want to be reminded, probably." instead;
@@ -2525,7 +2528,7 @@ to decide which number is kid-moves: [hacky but simple and easy to prove. Inapt/
 
 to say kid-fol: [h]
 	if kid-moves is 2:
-		say "It's a quick walk back to the subsector with the deacons and ego-drains gone.";
+		say "It's a quick walk back to the subsector with [the-hostile] and ego-drains gone.";
 	else if kid-moves is 4:
 		say "You loop around a bit past guardians you haven't cleared.";
 	else if kid-moves is 6:
@@ -2655,7 +2658,7 @@ strudel	"DR. ELTUS recommends this strudel!"	[towers]
 keycar	"When the car slows a bit, you read KC AYER in red."
 iPrune	"InPure industries[one of]. Yep, you heard rumors Elvira was involved with them, too[or][stopping]."
 rewired robot	"Rewired -- DR. EWRIE."
-o-s	"[if deacons are in lalaland]The shrine reads LOST? HIE! THE LOIS![else][one of]Written in red on the shrine is THE LOIS, who helped you in the sortie pre-Elvira You can read a bit more.[or][one of]LOST? HIE! [or]THE LOIS [cycling]is written on the ole shrine in red.[stopping][end if]"
+o-s	"[if the-hostile is in lalaland]The shrine reads LOST? HIE! THE LOIS![else][one of]Written in red on the shrine is THE LOIS, who helped you in the sortie pre-Elvira You can read a bit more.[or][one of]LOST? HIE! [or]THE LOIS [cycling]is written on the ole shrine in red.[stopping][end if]"
 prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[in random order]. There're two other bits to read."
 blaster	"ALBERT'S."
 welt-proof flowerpot	"GYDIN['], >> 'Y/N, dig?'"
@@ -3989,7 +3992,8 @@ Reed's Ale	"The Reed's Ale man listens to what you're saying for a minute, but--
 wait-seer	"The wait-seer looks bored and distracted for a second."
 rewired robot	"The robot almost looked a bit odd there for a moment."
 atheists	"The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal."
-deacons	"The deacons ponder for a minute before going back to their scheming. But they looked scared--worried--you were close to exposing their ol['] heist."
+lois the hostile	"[BUG]" ??
+hostile-is-he lot	"[BUG]" ??
 ropins	"The ropins remains secure, with no easy way to open it."
 smart kid	"[kid-first] fidgets a bit but can't keep focused, though [he-she] clearly wants to."
 denim	"The denim bends and warps, but you hear no tearing noise."
@@ -5122,7 +5126,8 @@ alarming grailman	true	false	false	false	"The one letter blinks between green an
 sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
 iPrune	true	true	false	false	"Hm. That one blinky letter is pretty weird. Maybe you can start there, or try to annoy the iPrune."
 raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT."
-deacons	false	true	false	false	"Well, this is tricky. They could be just plain deacons, or they could be the hostile ol['] heist. You may need to observe a bit more to clear this up."
+lois the hostile	false	true	false	false	"Well, this is tricky. They could be just plain , or they could be the hostile ol['] heist. You may need to observe a bit more to clear this up." [??]
+hostile-is-he lot	false	true	false	false	"Well, this is tricky. They could be just plain , or they could be the hostile ol['] heist. You may need to observe a bit more to clear this up." [??]
 man covered in inapt paint	false	true	false	false	"Hmm, painted and covered have three vowels--so it's probably the FLEMISH in inapt paint across his chest."
 old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
 Dr Yow	false	true	false	false	"[if Dr Yow has not been rowdy and Dr Yow has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her].[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]"
@@ -5897,7 +5902,7 @@ carry out towers-hinting:
 	if duck is not returned:
 		all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck? And its name, Loud Neck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or]UNLOCKED.[cycling]" instead;
 	if actionless coastlines is unvisited:
-		all-say "[one of]You need to find the Actionless Shoreline.[or]It's in the northeast of the Scope Copse map.[or][if deacons are in lalaland or pirates are in lalaland]You've already cleared who you need to[else]You've got at least another guardian to get rid of[end if].[cycling]" instead;
+		all-say "[one of]You need to find the Actionless Shoreline.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is in lalaland and atheists are in lalaland]You've already cleared who you need to[else]You've got at least another guardian to get rid of[end if].[cycling]" instead;
 	if kid is lonely:
 		all-say "[one of]Hm, the kid [if player is not in shoreline]at the shoreline [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK KID ABOUT DOCTOR.[cycling]" instead;
 	if kid is not in subsector and Dr Yow is in subsector:
@@ -6267,10 +6272,6 @@ after reading a command:
 		if the player's command matches the regular expression "\byurt\b":
 			now yurt-plurtry is true;
 			ital-say "there are too many yurts, and they're too uniform, to examine just one. But you don't need to.";
-	if location of player is location of deacons and deacons are not plurtry:
-		if the player's command matches the regular expression "\bdeacon\b":
-			now deacons are plurtry;
-			ital-say "there are too many deacons, and they're too uniform, to examine just one. But you don't need to.";
 	if location of player is location of diners and diners are not plurtry:
 		if the player's command matches the regular expression "\bdiner\b":
 			now diners are plurtry;
@@ -6913,8 +6914,8 @@ check singing:
 		say "Wrong area for that." instead;
 	if clam is visible:
 		say "If you could sing, it might settle the clam down. But you can't, so it doesn't." instead;
-	if deacons are visible:
-		say "That won't make them any less hostile." instead;
+	if the-hostile is visible:
+		say "That won't make [the-hostile] any less hostile." instead;
 	if gins sign is visible:
 		if cheat-on is true and gins sign is escanned:
 			say "Knowing what you know, singing shouldn't work. You sing a song of frustration when you realize you'd need to GISN with what the settler says, here." instead;
@@ -7179,8 +7180,6 @@ before listening (this is the you can hear stuff some places rule):
 		say "'He mutters and moans how [one of]Dr. Eleesa endorses it[or]E-dealers have it so easy[or]Lad Reese likes the stuff[or]Dre Eleas looks great in that ad for Reed's Ale[in random order], turning red, unsure if he wants to remove his costume or put it back on." instead;
 	if ingrates are visible:
 		say "You see red as the ingrates['] voices sound like tin gears." instead;
-	if deacons are visible:
-		say "The deacons aren't exactly yelling about their hostile ol['] heist. You might want to ASK them about, well, anything." instead;
 	if rewired robot is visible:
 		say "You listen until you cringe. Red lights flash across the robot, pleased it drew ire." instead;
 	if player is in havens:
@@ -7348,9 +7347,7 @@ before smelling (this is the you can smell some stuff some places rule):
 		say "This situation only stinks in general, not literally." instead;
 	if player is in Den Loft:
 		say "Old heat. Loathed hot lead." instead;
-	if deacons are visible: [towers]
-		say "The deacons wrinkle their noses back, hostile." instead;
-	if ingrates are visible:
+	if ingrates are visible: [towers]
 		say "Nitre gas. Or niter gas. You forget how it's spelled, and trying to remember makes you see red either way." instead;
 	if leak lake is visible:
 		say "The overwhelming smell of kale is not offensive, but you'd like to get by it." instead;
@@ -8533,7 +8530,8 @@ neural pulses	neural pulses	"unreal" or "pluses"	"pluses"	"[if-plus]"	false	5607
 reed's ale	reed's ale	"resealed/released"	"released"	"[rscheck]You concentrate, and suddenly the man figures how to [if rese is true]re[else]un[end if]zip himself. He runs off[if rese is true], maybe to bug other guardians about the smooth taste of Reed's Ale[else], looking a little more dignified[end if]."	false	642046842	"released"
 an alarming grailman	an alarming grailman	"marginal"	"marginal"	"The grailman might still be able to block you, but he doesn't want to risk it. He seems to lose confidence visibly as you speak."	false	354088487	"marginal"
 Atheists	Atheists	"hastiest"	"hastiest"	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right!' They run off for someone else to harass."	false	611037040	"hastiest"
-once-sad deacons	once-sad deacons	"holiest"	"holiest"	"The deacons shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the shrine. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the shrine opens for him![wfak][paragraph break]Then the next deacon realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already."	false	537631654	"holiest"
+lois the hostile	lois the hostile	"holiest"	"holiest"	"Lois the Hostile pauses a minute and considers. 'No. That can't be right. But that'd mean THAT, too--and. Whoah. I really do need to change things. I--I've listened to Elvira too much.' She nods at you. 'I bet you helped. I'm not sure how, but thank you.' Then she runs off into the ole shrine to start penance."	false	537631654	"holiest"
+hostile-is-he lot	hostile-is-he lot	"holiest"	"holiest"	"The lot shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the shrine. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the shrine opens for him![wfak][paragraph break]Then the next one realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already."	false	537631654	"holiest"
 ray eck	ray eck	"creaky"	"creaky"	"You hear a squeak from the keycar, then Ray Eck cringing and grabbing his leg. He spends some time complaining about various aches (don't worry, they're psychosomatic) and then about how he'd been ripped off purchasing stuff like the keycar before. Worried the keycar will sputter and die out here, he guides it home."	false	409615745	"creaky"
 pirates	pirates	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."	false	541160519	"pastier"
 old ice	old ice	"coiled"	"coiled"	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."	false	341000045	"coiled"
@@ -14110,7 +14108,7 @@ check burning:
 	if noun is an animal:
 		say "No animal cruelty, please. Well, maybe an implausible non-violent gag or two." instead;
 	if noun is a person:
-		say "Amazingly, with all your abstract wordplay prowess, you're not good at getting in sick burns in arguments[if noun is a guardian and noun is not deacons and noun is not reed's ale]. But maybe you can figure how to leave them burned[else]. Go figure[end if]." instead;
+		say "Amazingly, with all your abstract wordplay prowess, you're not good at getting in sick burns in arguments[if noun is a guardian and noun is not lois the hostile and noun is not hostile-is-he lot and noun is not reed's ale]. But maybe you can figure how to leave them burned[else]. Go figure[end if]." instead;
 	if noun is a fruit or noun is lobster or noun is tea tray:
 		say "Good thing this game isn't a cooking sim." instead;
 	if noun is chair: [introduction]
@@ -18350,6 +18348,10 @@ section initalization
 
 when play begins (this is the place guardians rule):
 	repeat through table of guard-org:
+		if player is male and guy entry is lois the hostile:
+			next;
+		if player is female and guy entry is hostile-is-he lot:
+			next;
 		if there is a kloozorz entry:
 			now guy entry is clueneedy;
 		now guadir of guy entry is blockdir entry;
@@ -18400,9 +18402,6 @@ carry out looking when mrlp is towers (this is the towers YOU ARE HERE redraw ru
 	now the location is visited;
 	if can-see-map:
 		draw-my-loc;
-	if deacons are visible and deacon-plot is false:
-		say "The deacons don't see you coming at first. They quiet down once they do, but you could not help hearing their plot against the shrine nearby: a hostile ol['] heist if there ever was one!";
-		now deacon-plot is true;
 	continue the action;
 
 deacon-plot is a truth state that varies.
@@ -18765,7 +18764,7 @@ description of spec-o-scope is "You look into the scope and see:[paragraph break
 [line break]  !       *
 [line break]  [bloorg of admirer]~~~~~~
 [line break]+[bloorg of ingrates].[bloorg of wait-seer].[bloorg of atheists].~ +
-[line break]  [bloorg of iPrune] [bloorg of grailman] [bloorg of deacons]~
+[line break]  [bloorg of iPrune] [bloorg of grailman] [if player is male][bloorg of hostile-is-he lot][else][bloorg of lois the hostile]~
 [line break]  .[bloorg of robot].[bloorg of reed's ale].~
 [line break]  [bloorg of muscly] [bloorg of man covered in inapt paint] [bloorg of ego drains]~
 [line break]![bloorg of pirates].[bloorg of diners].[bloorg of salesmen].[bloorg of bonker]!
@@ -19213,37 +19212,30 @@ the smart kid can be lonely or following or found. smart kid is lonely.
 
 book Ole Shrine Shoreline
 
-Ole Shrine Shoreline is north of Danger Garden and east of Savager Ravages. "Leak Lake spans far to the east. You can't cross it here. An ole shrine[if deacons are in lalaland], where the deacons went,[else], possibly for the deacons,[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Ole Shrine Shoreline is in Towers.
-
-after printing the locale description for Shoreline when Shoreline is unvisited:
-	if deacons are prodded and organised are prodded:
-		continue the action;
-	if deacons are prodded:
-		say "The organised ego drains look menacing, as if there are several very good reasons you can just walk around them, and really, you probably don't need a direct route south.";
-	else if organised are prodded:
-		say "The once-sad deacons begin discussing theological minutae in fits of one-upmanship. They're very slippery, and you suspect it's not that they're deacons, but just that--well, they seem snaky with their arguments, like the serpent you had to make docile.";
+to say relig-mf:
+	if player is male:
+		say "Lois the Hostile";
 	else:
-		say "The ego-drains and their nine letters leave you worried you're up to the task, but the once-sad deacons seem downright shifty. Snakes, with their argument, like the serpent you had to make docile.";
-	now deacons are prodded;
-	now organised are prodded;
-	continue the action;
+		say "the hostile-is-he lot"
 
-after going to Actionless Coastlines:
-	kid-appears;
-	continue the action;
+to decide which guardian is the-hostile:
+	if player is male, decide on hostile-is-he lot;
+	decide on lois the hostile;
+
+Ole Shrine Shoreline is north of Danger Garden and east of Savager Ravages. "Leak Lake spans far to the east. You can't cross it here. An ole shrine[if the-hostile is in lalaland], where [the-hostile] went,[else], possibly for [the-hostile],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Ole Shrine Shoreline is in Towers.
 
 to kid-appears:
 	if kid is off-stage:
-		if atheists are in lalaland and deacons are in lalaland:
+		if atheists are in lalaland and the-hostile are in lalaland:
 			now kid is in actionless coastlines;
 			if player is in coastlines:
-				say "Some kid comes into view from a dark mist with the atheists and deacons gone, [what-kid-does].";
+				say "Some kid comes into view from a dark mist with the atheists and [relig-mf] gone, [what-kid-does].";
 			else:
 				say "You hear a kid yell, 'Yay! They're all gone!' to the [if player is in shoreline]north[else]east[end if].";
 		else:
-			say "You hear [if deacons are not in lalaland]voices[else]a voice[end if] yell [one of]'Sadly no, nosy lad[or]a bizarrely accented 'Abort, o brat[in random order]!' to someone you can't see.";
+			say "You hear [if the-hostile are not in lalaland]voices[else]a voice[end if] yell [one of]'Sadly no, nosy lad[or]a bizarrely accented 'Abort, o brat[in random order]!' to someone you can't see.";
 
-after fliptoing deacons:
+after fliptoing the-hostile:
 	kid-appears;
 	continue the action;
 
@@ -19596,7 +19588,7 @@ to say wordy-hinty:
 
 book Actionless Coastlines
 
-Actionless Coastlines is north of Ole Shrine Shoreline. Actionless Coastlines is east of Salted Deltas. Actionless Coastlines is in Towers. "Leak Lake is calmer and narrower here, but even with no rocks, you can't make it across on your own. Thankfully, no sectionals are being held here right now. If you had some sort of craft, maybe you could[if atheists are visible]. You can go back south, however[else if deacons are visible]. You can go back west, however[else]. You can go west and south, though[end if][one of]. There's no sign of sectionals, past, present or future[or][stopping]."
+Actionless Coastlines is north of Ole Shrine Shoreline. Actionless Coastlines is east of Salted Deltas. Actionless Coastlines is in Towers. "Leak Lake is calmer and narrower here, but even with no rocks, you can't make it across on your own. Thankfully, no sectionals are being held here right now. If you had some sort of craft, maybe you could[if atheists are visible]. You can go back south, however[else if the-hostile are visible]. You can go back west, however[else]. You can go west and south, though[end if][one of]. There's no sign of sectionals, past, present or future[or][stopping]."
 
 o-s is a backdrop. o-s is in coastlines and shoreline.
 
@@ -19606,16 +19598,16 @@ understand "ole/shrine" and "ole shrine" as o-s.
 
 instead of doing something with o-s:
 	if current action is entering and player is in shoreline:
-		say "[if deacons are in lalaland]No need to disturb the deacons since they let you past[else]The deacons might string you up for sacrilege, the mood they're in, even if they're keeping away from it, now[end if]." instead;
+		say "[if the-hostile are in lalaland]No need to disturb [relig-mf] now you're past[else]You're worried [relig-mf] might have you strung up for sacrilege. So HOSTILE[end if]." instead;
 	if action is procedural:
 		continue the action;
 	if current action is entering:
 		say "That would feel sacrilegious." instead;
 	if player is in coastlines:
-		say "The ole shrine is too far away to do anything other than look at, [if deacons are in lalaland]and you don't need to bother the deacons[else]even without the deacons blocking you[end if]." instead;
-	say "There's nothing much to do with the shrine. It's not blocking you, [if deacons are in lalaland]and neither are the deacons[else]but the deacons are[end if].";
+		say "The ole shrine is too far away to do anything other than look at, [if the-hostile are in lalaland]and you don't need to bother [the-hostile][else]even without [the-hostile] blocking you[end if]." instead;
+	say "There's nothing much to do with the shrine. It's not blocking you, and it's keeping [the-hostile] out of the way, too.";
 
-description of o-s is "It's relatively modest, and where you enter (or you would, if you were religious,) it mentions its sister shrine Heron Isle[if deacons are visible]. You'd think the deacons would want to enter, but they glare at it, and the red writing on it, looking [i]hostile[r][end if]."
+description of o-s is "It's relatively modest, and where you enter (or you would, if you were religious,) it mentions its sister shrine Heron Isle[if the-hostile is visible]. You'd think [the-hostile] would want to enter, but they glare at it, but apparently it's witnessing time[end if]."
 
 book side-path rooms
 
@@ -20224,7 +20216,7 @@ to say foods of (myf - a thing):
 	say "[if myf is a hintpastry]food[else]stuff[end if]";
 
 to say gd of (zz - a guardian):
-	if zz is deacons:
+	if zz is the-hostile:
 		say "[one of][or] (still mum about their hostile ol['] heist)[stopping]";
 	if zz is atheists:
 		say "[one of] (well, they're certainly wasting each other's time talking about there's no afterlife)[or][stopping]";
@@ -20247,11 +20239,11 @@ the initial appearance of a guardian is usually "[gd of the item described]."
 
 chapter who are the guardians?
 
-The once-sad deacons are plural-named purple guardians. description is "They interrupt their 'Lo, he's it' act to tut-tut you and argue the reason you are most likely to miss out on heaven. But they are all equally hostile."
+Lois the Hostile is a female purple guardian. description is "She looks hostile, all right."
 
-understand "deacon" as deacons.
+a-text of lois the hostile is "[bug]." b-text of lois the hostile is "[bug]."
 
-a-text of deacons is "RYRYYRR". b-text of deacons is "PGRYYRR". parse-text of deacons is "h[sp]o[sp]x[sp]-[sp]-[sp]x[sp]x". deacons are cheat-spoilable.
+the hostile-is-he lot is a plural-named purple guardian.
 
 The man covered in inapt paint is a blue guardian. description is "He has, in inapt paint on his chest, FLEMISH. He cries out 'I'm not Flemish! Nothing against [']em! It's just not me!'"
 
@@ -20469,7 +20461,8 @@ organised ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SI
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'JAIL DEFENDED!' you hear from the east."
 natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."
 Atheists	Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."
-once-sad deacons	Ole Shrine Shoreline	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their careers if you fixed that."
+lois the hostile	Ole Shrine Shoreline	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their careers if you fixed that." [??]
+hostile-is-he lot	Ole Shrine Shoreline	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their careers if you fixed that." [??]
 
 chapter guardian taunt tables
 
@@ -20512,7 +20505,8 @@ iPrune	"The iPrune rears up and seems bigger for a second."
 pirates	"The pirates sing a colorful shanty about another lubber relegated to the deep."
 grailman	"The grailman mumbles something like 'well, we can't all be above average.'"
 reed's ale	"'The Reed's Ale man adjusts his half-on half-off costume, glad he wasn't the one dispelled--or whatever.'"
-deacons	"'The deacons mumble passive-aggressively that the wages of sin is--that."
+lois the hostile	"[the-hostile] mumbles passive-aggressively that the wages of sin is--that."
+hostile-is-he-lot	"[the-hostile] mumble passive-aggressively that the wages of sin is--that."
 ingrates	"The ingrates complain there aren't enough of them to take over the space you opened before worrying they're next."
 admirer	"Your admirer claps far too fervently at your accomplishment."
 wait-seer	"The wait-seer cooly puts up a hand and mumbles some Hakuna Matata nonsense."
@@ -25205,7 +25199,7 @@ muscly hulk	"[one of]Muscly is nice, but if you could tangle him up...[plus][or]
 oddly rewired robot	"[one of]The robot's been rewired and looks a bit odd.[plus][or]The robot is normal enough to block you.[plus][or]What if you made the robot WEIRDER?[minus][cycling]"
 sweatier wait-seer	"[one of]The wait-seer is certainly SWEATIER than you.[plus][or]He doesn't seem to be getting tired, the wait-seer.[plus][or]So changing the wait-seer to someone who is, or gets, tired, could work.[plus][or]WEARIEST.[minus][cycling]"
 ingrates	"[one of]The ingrates are the ANGRIEST you've ever seen.[plus][or]They're too mad to let you pass. The ingrates are not going to stop complaining, but maybe they could complain more passively.[plus][or]What if the ingrates became ANGSTIER?[minus][cycling]"
-deacons	"[one of]They're HOSTILE at the moment. They shouldn't be. God is love in most religions.[plus][or]They aren't quite at the peak of their profession, but maybe you could help them.[plus][or]They can be the HOLIEST you've seen.[minus][cycling]"
+lois the hostile	"[one of]Boy, for being potentially religious, [the-hostile] sure is HOSTILE. But they shouldn't be. God is love in most religions.[plus][or]Maybe helping [the-hostile] could help you.[plus][or]Make [the-hostile] the HOLIEST you've seen.[minus][cycling]"
 Ray Eck	"[one of]Ray Eck and his car are in tip-top shape, but maybe you can change that.[plus][or][minus][cycling]"
 keycar	--	Ray Eck
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
@@ -28150,7 +28144,7 @@ carry out repling:
 		now all red guardians are off-stage;
 		now all blue guardians are off-stage;
 		now atheists are off-stage;
-		now deacons are off-stage;
+		now the-hostile is off-stage;
 		say "All red and blue guardians reinitialized.";
 		reposition-guardians;
 		the rule succeeds;
