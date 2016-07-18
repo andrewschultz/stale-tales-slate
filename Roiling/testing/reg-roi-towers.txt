@@ -268,10 +268,66 @@ WRONG
 WRONG
 >drained
 
+* descrip-tries
+
+>gonear topside
+>purloin settler
+>creaky
+>n
+>muscly
+>rinsed
+
+#saltbed enemies
+>abstract pirates to lalaland
+>n
+WRONG
+>undo
+>undo
+>abstract iprune to lalaland
+>n
+WRONG
+>abstract pirates to lalaland
+
+#sunbelt enemies
+>s
+>abstract dandier to lalaland
+>e
+WRONG
+>undo
+>undo
+>abstract inapt paint to lalaland
+>e
+WRONG
+>abstract dandier to lalaland
+
+#ravages enemies
+
+>abstract grailman to lalaland
+>n
+WRONG
+>undo
+>undo
+>abstract reed's ale to lalaland
+>n
+WRONG
+>abstract grailman to lalaland
+
+#deltas enemies
+>abstract wait-seer to lalaland
+>n
+WRONG
+>undo
+>undo
+>abstract atheists to lalaland
+>n
+>e
+WRONG
+>abstract hostile-is-he-lot to lalaland
+>s
+WRONG
 
 
-
-* err-thru
+*err-thru
 
 >seed 1
 >gonear trefoil

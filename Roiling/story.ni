@@ -4951,7 +4951,8 @@ before scaning (this is the check as scanned if player can have/take settler rul
 			now noun is cscanned;
 		else:
 			now noun is ncscanned;
-	else:
+	else if noun is not location of player:
+		d "[noun].";
 		say "The letters settler isn't THAT long-range." instead;
 
 before scaning (this is the troves smart alecky rule):
@@ -5010,7 +5011,7 @@ check scaning heat:
 check scaning cold:
 	say "You look for a clue how to make some heat..."
 
-check scaning location of the player (this is the location rule):
+check scaning location of the player (this is the location scan rule):
 	if location is Sun-Spared Underpass: [start routes]
 		if darkness is visible:
 			try scaning darkness instead;
@@ -5103,11 +5104,15 @@ others	"not nouns any more--a different part of speech in each location"
 
 [this table gives clues after you scan, although sometimes it may be approrpriate to give hints only in cheat mode.]
 
+to say cheatfid:
+	say "You fiddle with the cheat button and note that nothing happens to the R's and Y's"
+
 table of aftertexts [taf]
 xtradesc	b-only	clue-only-once	clued-yet	bothscan	xtratext
-tables	false	false	false	true	"You fiddle with the cheat button and note that nothing happens to the R's and Y's." [manor]
-niche	false	false	false	true	"You fiddle with the cheat button and note that nothing happens to the R's and Y's."
-t-b	false	false	false	true	"You fiddle with the cheat button and note that nothing happens to the R's and Y's." [end manor]
+pram	false	false	false	true	"[cheatfid]." [manor]
+tables	false	false	false	true	"[cheatfid]."
+niche	false	false	false	true	"[cheatfid]."
+t-b	false	false	false	true	"[cheatfid]." [end manor]
 bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [routes]
 controls	false	false	false	false	"This is odd--all these question marks. Surely you'll find by accident where Ben hid the hit win button? Or you can just pick and choose, focusing on Ben, or the win."
 ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?"
@@ -7591,6 +7596,27 @@ carry out cting:
 		say "[reject]" instead;
 	try pushing tcb instead;
 
+chapter sbing
+
+sbing is an action applying to one thing.
+
+understand the command "sb" as something new.
+
+understand "sb" as sbing.
+
+understand "sb [thing]" as sbing.
+
+carry out sbing:
+	if debug-state is false:
+		say "[reject]";
+	let z be cheat-on;
+	now cheat-on is false;
+	try scaning noun;
+	now cheat-on is true;
+	try scaning noun;
+	now cheat-on is z;
+	the rule succeeds;
+
 chapter ssing
 
 [* SS scans an object forcing no-cheat mode]
@@ -7600,6 +7626,8 @@ ssing is an action applying to nothing.
 understand the command "ss" as something new.
 
 understand "ss" as ssing.
+
+understand "ss [thing]" as ss0ing.
 
 understand the command "shake" as something new.
 
@@ -9688,7 +9716,7 @@ a-text of niche is "RRYRRYO". b-text of niche is "RRYRRYO". parse-text of niche 
 instead of doing something with niche:
 	if action is procedural:
 		continue the action;
-	say "It's--well, it's not available.";
+	say "It's--well, it's not close enough to do much with.";
 
 the chimney is scenery. "It's where your niche was. You can probably put your chair on the bed, then climb the chair to reach it. I won't even make you spell out the details. Just go [b]up[r]."
 
@@ -11906,7 +11934,7 @@ instead of doing something with idg:
 		say "He's too big for you." instead;
 	if player does not have heartfelt reflections:
 		say "Before you can do anything with or to Ian, he thrusts a sheet of heartfelt reflections on drug use at you[one of][or] again[or] yet again[stopping]. 'It will help you in ways you don't know. And even I don't know.' Do you take it?";
-		if the player consents:
+		if the player yes-consents:
 			now player has heartfelt reflections;
 			say "'Good choice. Say, if they're good enough, do you think you could put in a word for me--to a lecturer like THAT?" instead;
 		otherwise:
@@ -12181,7 +12209,7 @@ after scaning scripture picturers:
 	if cheat-on is true and sign-pushed-prompt is false:
 		now sign-pushed-prompt is true;
 		say "Man! That wasn't helpful at all! The sign does look a bit wobbly, though, and you know these things are two-sided. Give it a push?";
-		if the player consents:
+		if the player yes-consents:
 			try pushing scripture picturers instead;
 		otherwise:
 			say "Well, if you feel like it later, the sign or whoever put it there will forgive you."
@@ -13062,7 +13090,7 @@ check scaning post:
 		try scaning babblings instead;
 	if post is reflexed:
 		say "You've dealt with the post." instead;
-	say "[if cheat-on is false]RRYR[else]The stop post blinks between PRGR and RRYP[end if]." instead;
+
 
 check examining stop post when babblings are in Used Lot:
 	say "You try to, but you get a headache. Everyone here's too [i]verbose. [r]You need to find what to do make them less verbose. Or seem that way." instead;
@@ -13116,12 +13144,12 @@ to say vile-evil:
 	else:
 		say "vile";
 
-[this is really awful but I don't see a better way]
+[the below is really awful but I don't see a better way]
 
-understand "evil" and "evil bee" as what-a-bee when bee's head is reflexive and what-a-bee is reflexive.
-understand "vile" and "vile bee" as what-a-bee when bee's head is reflexive and what-a-bee is reflexed.
-understand "vile" and "vile bee" as what-a-bee when bee's head is reflexed and what-a-bee is reflexive.
-understand "live" and "live bee" as what-a-bee when bee's head is reflexed and what-a-bee is reflexed.
+understand "bee/evil" and "evil bee" as what-a-bee when bee's head is reflexive and what-a-bee is reflexive.
+understand "bee/vile" and "vile bee" as what-a-bee when bee's head is reflexive and what-a-bee is reflexed.
+understand "bee/vile" and "vile bee" as what-a-bee when bee's head is reflexed and what-a-bee is reflexive.
+understand "bee/live" and "live bee" as what-a-bee when bee's head is reflexed and what-a-bee is reflexed.
 
 check scaning what-a-bee:
 	if what-a-bee is reflexive and bee's head is reflexive:
@@ -13312,7 +13340,7 @@ check scaning skyscraper:
 
 chapter astute statue
 
-The astute statue is uncluing scenery in Econ Cone. "[one of]It is, of course, of [trev]. It's thirty feet tall and a decent likeness, except it's a shocking red, so nobody can miss it, and he has a full head of hair instead of that ridiculous comb-over. Also, his arm is around air, because when this statue was initially commissioned, his third wife demanded to be part of it. She was removed when he remarried, replaced by his fourth wife, who divorced him when she was portrayed as shorter than he was.[or][trev] is unchanged, himself, just waiting for you to want to be like him.[stopping][paragraph break]Rivets lie at the bottom of the statue in some sort of pattern. [one of]. It is not a statue of limitations, for sure[or][stopping]."
+The astute statue is uncluing scenery in Econ Cone. "[one of]It is, of course, of [trev]. It's thirty feet tall and a decent likeness, except it's a shocking red, so nobody can miss it, and he has a full head of hair instead of that ridiculous comb-over. Also, his arm is around air, because when this statue was initially commissioned, his third wife demanded to be part of it. She was removed when he remarried, replaced by his fourth wife, who divorced him when she was portrayed as shorter than he was.[or][trev] is unchanged, himself, just waiting for you to want to be like him.[stopping][paragraph break]Rivets lie at the bottom of the statue in some sort of pattern[one of]. It is not a statue of limitations, for sure[or][stopping]."
 
 Include (-
 	has transparent talkable
@@ -13336,7 +13364,7 @@ the prai is privately-named reflexive scenery in Econ Cone. prai is undesc. prin
 
 a-text of prai is "YRRYRY". b-text of prai is "YRRGRG". parse-text of prai is "a[sp]x[sp]x[sp]i[sp]x[sp]e". prai is cheat-spoilable.
 
-check scaning rivets:
+before scaning rivets (this is the switch to praise rule):
 	if rivets are reflexed and prai is reflexive:
 		try scaning prai instead;
 
@@ -15497,7 +15525,7 @@ check fliptoing t-key:
 
 check scaning t-key:
 	say "You sense there can't be much to do with something saying TBA. Still, go ahead and scan?";
-	unless the player consents:
+	unless the player yes-consents:
 		say "OK, you should get it." instead;
 
 a-text of t-key is "RYR". b-text of t-key is "PYR". parse-text of t-key is "t[sp]a[sp]b". t-key is any-spoilable.
@@ -19346,22 +19374,24 @@ check scaning ropins:
 	now ropins are examined;
 
 to decide whether (n - a thing) is spoilable-now:
-	if n is cheat-spoilable and cheat-on is true, decide yes;
+	if n is cheat-spoilable, decide yes;
 	if n is any-spoilable, decide yes;
-	if n is parse-spoilable and parse-now is true and cheat-on is true, decide yes;
+	if n is parse-spoilable and parse-now is true, decide yes;
 	decide no.
 
 squee-warn is a truth state that varies.
 
 before scaning (this is the knock down cheats rule):
-	if noun is spoilable-now:
+	if noun is a location:
+		continue the action;
+	if cheat-on is true and noun is spoilable-now:
 		if squee is true:
 			say "You hear loud squealings from the equals sign. This may be a near or total spoiler. Go ahead anyway?";
 			if the player consents:
 				continue the action;
 			else:
 				say "OK." instead;
-		if squee-warn is false or equals-pushed is false:
+		if squee-warn is false:
 			now squee-warn is true;
 			ital-say "this may be a bit of a spoiler. If you want to disable it, you can push the equals sign. This warning will not appear again.";
 			say "You feel foreboding this may be a bit too much of a clue. Do you still want to see the settler reading?";
@@ -19915,6 +19945,7 @@ to decide whether the action is procedural: [aip]
 	if xraying, yes;
 	if smelling, yes;
 	if reading, yes;
+	if sbing, yes;
 	if qbc_litany is table of no conversation:
 		if gotoing, yes;
 		if gotothinging, yes;
