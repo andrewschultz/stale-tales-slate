@@ -60,7 +60,7 @@ Include (-
 	  'l//':   print "look";
 	  'x//':   print "examine";
 	  'xx//':   print "examine magically";
-	  'rc//':   print "scan both ways";
+	  'rc//', 'cr//':   print "scan both ways";
 	  'r//', 'rec//', 'rect//':   print "rectify";
 	  'poss//':   print "track possible points";
 	  'pad//':   print "look up in your pad";
@@ -696,9 +696,12 @@ to decide whether the action is procedural: [aip]
 	if listening, yes;
 	if saying yes, yes;
 	if saying no, yes;
+	if xmxing, yes;
 	if dropping, yes;
 	if looking, yes;
 	if objasking about, yes;
+	if requesting the score, yes;
+	if taking inventory, yes;
 [	if out of world, yes;]
 	no;
 
@@ -2670,6 +2673,10 @@ understand "certify [something]" as certifying.
 understand "cert [something]" as certifying.
 understand "cer [something]" as certifying.
 understand "c [something]" as certifying.
+understand "certify" as certifying.
+understand "cert" as certifying.
+understand "cer" as certifying.
+understand "c" as certifying.
 
 does the player mean certifying the gadget: it is likely.
 
@@ -2703,6 +2710,10 @@ understand "rectify [something]" as rectifying.
 understand "rect [something]" as rectifying.
 understand "rec [something]" as rectifying.
 understand "r [something]" as rectifying.
+understand "rectify" as rectifying.
+understand "rect" as rectifying.
+understand "rec" as rectifying.
+understand "r" as rectifying.
 
 does the player mean rectifying the gadget: it is likely.
 
@@ -2732,11 +2743,20 @@ cring is an action applying to one thing.
 
 understand the command "rc/cr [something]" as something new.
 
+understand "rc" as cring.
+
 understand "rc [something]" as cring.
 
+understand "cr" as cring.
 understand "cr [something]" as cring.
 
 marcos-trumped is a truth state that varies.
+
+to gadflip:
+	if gadget is cert:
+		now gadget is rect;
+	else:
+		now gadget is cert;
 
 to buzz-or-no-noise (ana - a thing):
 	repeat through regana of mrlp:
@@ -2759,16 +2779,16 @@ carry out cring:
 	now ever-scan is true;
 	if gadget is cert:
 		say "You get to scanning, twiddling from certify to rectify and back.";
+		gadflip;
 		try scaning the noun;
-		now gadget is rect;
+		gadflip;
 		try scaning the noun;
-		now gadget is cert;
 	otherwise:
 		say "You get to scanning, twiddling from rectify to certify and back.";
+		gadflip;
 		try scaning the noun;
-		now gadget is cert;
+		gadflip;
 		try scaning the noun;
-		now gadget is rect;
 	d "RECT-TEXT: [rect-text of noun].";
 	d "CERT-TEXT: [cert-text of noun].";
 
@@ -4633,23 +4653,68 @@ to say buz-help:
 	otherwise:
 		say ".";
 
-check examining the tagged gadget (this is the see if gadget clues locations rule):
+rule for supplying a missing noun (this is the scan the location if you can rule) :
+	if current action is scaning or current action is rectifying or current action is certifying or current action is cring:
+		if player is in hotspot and red bull is in hotspot:
+			now noun is red bull;
+			continue the action;
+		if player is in anti-cool and player does not have tulip:
+			now noun is tulip;
+			continue the action;
+		if player is in moor and anapest is in moor:
+			now noun is anapest;
+			continue the action;
+	if current action is cring:
+		if can-scan-air:
+			say "You scan the air around, twiddling from certify to rectify and back.[paragraph break]";
+			read-gadget;
+			gadflip;
+			say "[line break]You try the other setting, too.[paragraph break]";
+			read-gadget;
+			gadflip;
+		else:
+			say "You wave the gadget, but nothing happens. Maybe specify something to scan.";
+		reject the player's command;
+	if current action is scaning or current action is rectifying or current action is certifying:
+		if can-scan-air:
+			read-gadget;
+		else:
+			say "You wave the gadget, but nothing happens. Maybe specify something to scan.";
+		reject the player's command;
+	continue the action;
+			
+to decide whether can-scan-air:
+	if player is in the nick, yes;
+	if player is in tiles, yes;
+	if player is in roomroom, yes;
+	if player is in moor and anapest is in lalaland, yes;
+	if player is in roman manor, yes;
+	no.
+
+to read-gadget:
 	if player is in the nick:
-		say "[gad][if gadget is cert]seven reds on its screen[otherwise][bcn][bc][bc][rc][bc][bc][gc][end if]." instead;
+		say "[gad][if gadget is cert]seven reds on its screen[otherwise][bcn][bc][bc][rc][bc][bc][gc][end if].";
+	else if player is in tiles:
+		say "Your gadget's not near anything, but it's registering [if gadget is cert][rcn][rc][gc][gc][rc][otherwise][rcn][gc][bc][bc][bc][end if].";
+	else if player is in roomroom:
+		say "Your gadget's not near anything, but it's registering [if gadget is cert][rcn][gc][gc][rc][otherwise][rcn][bc][bc][gc][end if].";
+	else if player is in moor:
+		say "Your gadget's not near anything, but it's registering [if gadget is cert][rcn][gc][gc][rc][otherwise][rcn][bc][bc][gc][end if].";
+	else if player is in roman manor:
+		say "No matter where you point your gadget, it shows [if gadget is cert][gcn][gc][gc][rc][rc][otherwise][gcn][bc][bc][rc][bc][end if]. That can't be for the manor, though.";
+	else:
+		say "[bug-report]";
+
+check examining the tagged gadget (this is the see if gadget clues locations rule):
+	if can-scan-air:
+		read-gadget;
+		the rule succeeds;
+	if player is in anti-cool and nerds are in anti-cool:
+		try scaning nerds instead;
 	if player is in Anti-Cool Location:
 		if player has tulip:
 			say "The gadget shows nothing now." instead;
 		say "You scan the area, wondering what you could ask nerds that'd get that tulip. You see [asknerds]." instead;
-	if player is in tiles:
-		say "Your gadget's not near anything, but it's registering [if gadget is cert][rcn][rc][gc][gc][rc][otherwise][rcn][gc][bc][bc][bc][end if]." instead;
-	if player is in roomroom:
-		say "Your gadget's not near anything, but it's registering [if gadget is cert][rcn][gc][gc][rc][otherwise][rcn][bc][bc][gc][end if]." instead;
-	if player is in moor:
-		if anapest is visible:
-			try scaning anapest instead;
-		say "Your gadget's not near anything, but it's registering [if gadget is cert][rcn][gc][gc][rc][otherwise][rcn][bc][bc][gc][end if]." instead;
-	if player is in roman manor:
-		say "No matter where you point your gadget, it shows [if gadget is cert][gcn][gc][gc][rc][rc][otherwise][gcn][bc][bc][rc][bc][end if]. That can't be for the manor, though." instead;
 
 rule for printing a locale paragraph about the tagged gadget:
 	if location of player is hotspot:
@@ -4661,7 +4726,7 @@ does the player mean switching on the gadget: it is likely.
 the pit is part of the tagged gadget. pit is undesc.
 
 instead of doing something with the pit:
-	unless current action is progressive:
+	if action is procedural::
 		continue the action;
 	say "You don't need to fiddle with the pit--just examine the tip."
 
@@ -4671,7 +4736,7 @@ instead of examining pit:
 the tip is part of the tagged gadget.
 
 instead of doing something with the tip:
-	unless current action is progressive:
+	if action is procedural::
 		continue the action;
 	say "The tip's just there to examine, so you know the gadget's setting."
 
@@ -4700,7 +4765,7 @@ the handle is part of the tagged gadget. description of handle is "Just wide eno
 instead of doing something with the handle:
 	if the current action is attacking:
 		say "You couldn't hold the gadget, then." instead;
-	unless current action is progressive:
+	if action is procedural::
 		continue the action;
 	say "The handle is about what it seems to be. Don't worry about it too much."
 
@@ -4888,7 +4953,7 @@ instead of doing something with the blue lube:
 		continue the action;
 	if the current action is taking:
 		say "[if lube-asked is false]It probably belongs in the PHAIL phial, until you determine otherwise[otherwise]You wouldn't be able to GLEAN or ANGLE then[end if].";
-	unless current action is progressive:
+	if action is procedural:
 		continue the action;
 	say "The lube's really only good for staring at."
 
@@ -5855,7 +5920,7 @@ understand "nile" as a mistake ("Wrong river for the underworld.") when player i
 understand "file" as a mistake ("It looks like you can just cut in line. No need to stand.") when player is in self-id fields.
 
 instead of doing something other than scaning or objhinting gy2:
-	unless current action is progressive:
+	if action is procedural:
 		continue the action;
 	say "The line of no life is too incorporeal to interact with.";
 
@@ -5933,12 +5998,12 @@ instead of putting on canister:
 understand "sabled/ blades/blade" as grinder. understand "blender" as grinder.
 
 instead of doing something with the red ring:
-	unless current action is progressive:
+	if action is procedural:
 		continue the action;
 	say "It's not that important, but it had to be SOME color. You probably want to do stuff with the canister and not the grinder.";
 
 instead of doing something with the grinder:
-	unless current action is progressive:
+	if action is procedural:
 		continue the action;
 	say "The grinder's too sharp to touch.";
 
@@ -6187,7 +6252,7 @@ the notes stone is scenery in Sorted Trodes. understand "myth" as notes stone.
 the stack of tacks is amusing scenery in Sorted Trodes. "[bug-report]"
 
 instead of doing something with the stack of tacks:
-	unless current action is progressive:
+	if action is procedural:
 		if current action is not taking:
 			continue the action;
 	say "The tacks are glued to themselves. And, oddly, to the notes stone."
@@ -7027,7 +7092,7 @@ the manila animal is undesc. it is part of the obligatory fridge. understand "la
 the manila animal is amusing.
 
 instead of doing something with the manila animal:
-	unless current action is progressive:
+	if action is procedural:
 		continue the action;
 	say "You've half-destroyed a store already, but you draw the line at aesthetically altering a fridge."
 
@@ -7683,7 +7748,7 @@ instead of scaning anapest:
 	say "Yes, this sort of poetry doesn't require deep reading, just scanning";
 	if player has gadget:
 		say ". But seriously, your gadget seems to blink with the beat. [run paragraph on]";
-		try scaning anapest instead;
+		continue the action;
 	otherwise:
 		say ". Too bad you don't have a device to scan it more practically." instead;
 
@@ -7692,7 +7757,7 @@ instead of doing something with anapest:
 		continue the action;
 	if the current action is listening:
 		continue the action;
-	if current action is progressive:
+	if action is procedural:
 		continue the action;
 	say "The beat is drilled in your head: da da DA da da DA da da DA (repeated. I'll spare you the words, but...)"
 
@@ -8138,7 +8203,7 @@ does the player mean doing something with can of beer:
 instead of doing something with the can of beer:
 	if current action is drinking:
 		say "Yuck. The beer's name may be even truer now than when some poor sap bought it." instead;
-	unless current action is progressive:
+	if action is procedural:
 		continue the action;
 	say "You don't really want to get close to it." instead;
 
@@ -8149,7 +8214,7 @@ the soggy love letter is auxiliary scenery. description of soggy love letter is 
 understand "dear inga" and "soggy note" as soggy love letter when soggy love letter is visible.
 
 instead of doing something with the soggy letter:
-	unless current action is progressive:
+	if action is procedural:
 		continue the action;
 	say "You don't really want to get close to it." instead;
 
@@ -8158,7 +8223,7 @@ the arena dig flier is auxiliary scenery. lgth of dig flier is 8. gpos of dig fl
 the arena dig flier is fixed in place.
 
 instead of doing something with the arena dig flier:
-	unless current action is progressive:
+	if action is procedural:
 		continue the action;
 	say "You don't really want to get close to it." instead;
 
@@ -8781,7 +8846,7 @@ after doing something with wands:
 description of wands is "[one of]You lean over to peer at the wands and realize the faeries are watching you stare. You feel embarrassed[or]You've got enough magic for one person. You don't need more[stopping]."
 
 instead of doing something with the wands:
-	unless current action is progressive:
+	if action is procedural:
 		continue the action;
 	say "The wands are the faeries[']. Best not meddle.";
 
@@ -9345,6 +9410,8 @@ initial appearance of nerds is "Some nerds are here, nattering about technology 
 
 description of nerds is "They're sitting around nattering about nerd things. They don't look particularly nerdy, but most of their conversation seems to revolve around how smart other people aren't. They're babblier than most but don't seem bribable."
 
+rect-text of nerds is "D[d1][d1][d1][d1][d1][d1]S". cert-text of nerds is "[d1][d1]R[d1][d1][d1]SS".
+
 the lit-up tulip is a thing in Anti-Cool Location.
 
 instead of taking lit-up tulip:
@@ -9599,7 +9666,7 @@ section siren-resin
 the siren is scenery in Bassy Abyss. rgtext of siren is "[rcn][rc][rc][rc][gc]". rpos of siren is 5. gpos of siren is 3. lgth of siren is 5. cert-text of siren is "-[d1][d1][d1][ast]N". rect-text of siren is "R[d1][d1][d1][ast]N".
 
 instead of doing something with the siren:
-	if current action is progressive:
+	if action is procedural:
 		continue the action;
 	if current action is xmxing or current action is attacking:
 		continue the action;
@@ -9641,7 +9708,7 @@ the ts are flippable. gpos of ts is 2. rpos of ts is 1. lgth of ts is 5. the rgt
 description of ts is "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one."
 
 instead of doing something with the ts:
-	if current action is progressive:
+	if action is procedural:
 		continue the action;
 	say "It looks like you probably just have to work your magic on them again. There can't be that many possibilities."
 
@@ -9677,7 +9744,7 @@ the sand is useless scenery in islet.
 description of the sand is "It's not worth digging through[if cork is visible or wings are visible]. You've got something useful, anyway[otherwise]. Maybe the stuff lying around is worthwhile[end if]."
 
 instead of doing something with the sand:
-	unless current action is progressive:
+	if action is procedural:
 		continue the action;
 	say "No use searching for anything like DNAs or a handset in the sand. Islets have sand, so I sort of had to put it here."
 
@@ -10049,7 +10116,7 @@ section cutlery
 the cruelty cutlery is useless scenery. "It's built for cruel looks, not practicality. But it looks impressive. Like, +2 or +3. Not that numbers are your thing, more words. Or that you want to look too closely. Red Bull Burdell has a firm grip on it."
 
 instead of doing something other than examining cutlery:
-	unless current action is progressive:
+	if action is procedural:
 		continue the action;
 	if current action is taking:
 		say "No, Red Bull Burdell's not letting go.";
@@ -10090,7 +10157,7 @@ description of toe is "A toe just juts out from Burdell's boot, looking infected
 understand "fear/ boot/" and "bare/ foot/" as toe.
 
 to say kicks:
-	say "He kicks the gadget out of the way! You were only able to read [if gadget is cert]six reds, then [bcn][rc][gc][bc][bc][bc][otherwise][bcn][rc][gc][bc][bc][bc], then six reds[end if] as he apparently kicked the switch, too[if gadget-secured is true], which is impressive given how you locked it[end if]. He's not going to let you near it.";
+	say "Red Bull Burdell kicks the gadget out of the way! You were only able to read [if gadget is cert]six reds, then [bcn][rc][gc][bc][bc][bc][otherwise][bcn][rc][gc][bc][bc][bc], then six reds[end if] as he apparently kicked the switch, too[if gadget-secured is true], which is impressive given how you locked it[end if]. He's not going to let you near it.";
 	if gadget is cert:
 		now gadget is rect;
 	otherwise:
@@ -10171,7 +10238,7 @@ the spire is amusing scenery in roman manor. "It makes you calm and relaxed enou
 the toaster is amusing scenery in roman manor. description of toaster is "It's just a stupid harmless luxury, here for a last bit of cheap wordplay."
 
 instead of doing something with the toaster:
-	unless current action is progressive:
+	if action is procedural:
 		continue the action;
 	say "No more fiddling. You just want to sit back and let stuff sink in."
 
@@ -10845,12 +10912,6 @@ carry out scaning:
 	now ever-scan is true;
 	now gadget is examined;
 	now last-was-cert is whether or not gadget is cert;
-	if noun is oils and gadget is rect:
-		say "You stick the gadget down the cask's hole so it's almost touching the oils[if silo is in moor]. It's stuck on [rcn][bc][bc][gc][otherwise]. It goes to [bcn][bc][rc][gc] -- then [rcn][bc][bc][gc] -- and back[end if]." instead;
-	if noun is oils:
-		say "The feedback from the cask seems to interfere, and you don't want to drop your toy IN the oils--but really, there are only so many possibilities. You're pretty sure you can figure them.";
-	if noun is oils and gadget is cert:
-		say "You stick the gadget halfway into the cask, and it reads [if silo is in moor][rc][gc][gc][rc][otherwise][rc]**[rc], the middle two dots flipping from both red to both green and back[end if]." instead;
 	if noun is tiles:
 		say "It's [if gadget is cert][rc][rc][gc][gc][rc][otherwise][rc][gc][bc][bc][bc][end if], all up and down the tiles." instead;
 	if noun is chicken liver or noun is cow liver:
@@ -10957,7 +11018,7 @@ description of new land is "You'll have to go there to see it all."
 instead of doing something with new land:
 	if current action is entering:
 		try entering the getaway instead;
-	unless current action is progressive:
+	if action is procedural:
 		continue the action;
 	say "Go through the gate to learn more about it."
 
@@ -11415,17 +11476,6 @@ description of wolves is "Drooling, hate in their eyes, etc. And a bit of fear. 
 
 part drapes-spread-red asp
 
-to decide whether the current action is progressive:
-	if scaning or xmxing or reading or examining or looking or taking inventory:
-		decide no;
-	if the current action is fliptoing:
-		decide no;
-	if the current action is objhinting:
-		decide no;
-	if requesting the score:
-		decide no;
-	decide yes;
-
 the spread is flippable scenery. lgth of spread is 6. gpos of spread is 6. rpos of spread is 1. rgtext of spread is "[rcn][rc][rc][rc][rc][rc]". cert-text of spread is "-[d1][d1][d1][d1][d1]". rect-text of spread is "D[d1][d1][d1][d1][ast]S".
 
 description of spread is "You feel fear going near the spread. It might lash out at you if you get too close, or if you tried to cut it with [if player has sliver]your sliver[else]something[end if]."
@@ -11435,7 +11485,7 @@ the drapes are plural-named scenery.
 understand "cloth" as drapes when drapes are visible.
 
 instead of doing something with the drapes:
-	unless current action is progressive:
+	if action is procedural:
 		continue the action;
 	if current action is cutwithing or current action is unfolding:
 		continue the action;
@@ -12831,7 +12881,7 @@ understand the command "fill [something]" as something new.
 
 understand "fill [something]" as filling.
 
-the oils are a plural-named thing in sacred cedars. rgtext of oils is "[rcn][if caskfillings is 2][gc][gc][else][rc][rc][end if][rc]". lgth of oils is 4. gpos of oils is 4. rpos of oils is 1. cert-text of oils is "-[d1][if soil is off-stage]I[ast]L[else]-[d1][end if][d1]". rect-text of oils is "S[d1][d1][ast][if soil is off-stage]L[else]O[end if]".
+the oils are a plural-named thing in sacred cedars. rgtext of oils is "[rcn][if caskfillings is 2][gc][gc][else][rc][rc][end if][rc]". lgth of oils is 4. gpos of oils is 4. rpos of oils is 1. cert-text of oils is "-[d1][if soil is not off-stage]I[ast]L[else]-[d1][end if][d1]". rect-text of oils is "S[d1][d1][ast][if soil is off-stage]L[else]O[end if]".
 
 the description of oils is "[if oils are not in cask]You try looking up the spout for a glimpse of the oils, but it doesn't work[otherwise]You can't see through the cask--or its narrow hole very well--but you remember the oils being thick and somewhat golden. You trust they are sacred enough for your job, though[end if].".
 

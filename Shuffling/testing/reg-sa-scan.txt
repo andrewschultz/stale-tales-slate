@@ -8,6 +8,7 @@
 
 * _intro
 
+>opt in
 >in
 >door
 Your score has just gone up by one point.
@@ -61,12 +62,18 @@ Trips Strip
 
 * _trips
 
->rc f
+>cr
+You wave the gadget, but nothing happens. Maybe specify something to scan.
+
+>cr store f
 You get to scanning, twiddling from certify to rectify and back.
 The gadget beeps once. A series of lights comes across: RRRRRR. 
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG. 
 
->rc i
+>rc
+You wave the gadget, but nothing happens. Maybe specify something to scan.
+
+>cr store i
 You get to scanning, twiddling from certify to rectify and back.
 The gadget beeps once. A series of lights comes across: GRRRRR. 
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBRB. 
@@ -364,15 +371,29 @@ Most of the screen goes blue. Then a green dot and red dot bounce left and right
 >put straw in sack
 >get sack
 
->rc room
-WRONG
+>rc
+Your gadget's not near anything, but it's registering RGGR.
+Your gadget's not near anything, but it's registering RBBG.
 >moor
 Your score has just gone up by one point.
->rc moor
-WRONG
+>rc
+You get to scanning, twiddling from certify to rectify and back.
+
+Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat. Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBR. 
+
+Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat. The gadget beeps once. A series of lights comes across: RRGRRRG. 
+
+DEBUG INFO: RECT-TEXT: P-----T.
+DEBUG INFO: CERT-TEXT: --A---T.
 
 >rc anapest
-WRONG
+Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat. The gadget beeps once. A series of lights comes across: RRGRRRG. 
+
+Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat. Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBR. 
+
+DEBUG INFO: RECT-TEXT: P-----T.
+DEBUG INFO: CERT-TEXT: --A---T.
+
 >peasant
 Your score has just gone up by one point.
 
@@ -423,15 +444,21 @@ Your score has just gone up by one point.
 Sacred Cedars
 
 >rc oils
-You stick the gadget halfway into the cask, and it reads R**R, the middle two dots flipping from both red to both green and back.
-You stick the gadget down the cask's hole so it's almost touching the oils. It goes to BBRG -- then RBBG -- and back.
+The gadget beeps once. A series of lights comes across: RRRR. 
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG. 
+DEBUG INFO: RECT-TEXT: S--L.
+DEBUG INFO: CERT-TEXT: -----.
 
 >cask
 >fill cask
 Gainly laying
 
 >rc oils
-WRONG
+You get to scanning, twiddling from certify to rectify and back.
+The gadget beeps once. A series of lights comes across: RRRR. 
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG. 
+DEBUG INFO: RECT-TEXT: S--L.
+DEBUG INFO: CERT-TEXT: -----.
 
 >moor
 >soil
@@ -440,10 +467,15 @@ Your score has just gone up by one point.
 >room
 >n
 >e
->pour oils
->rc oils
-WRONG
 
+>rc oils
+You get to scanning, twiddling from certify to rectify and back.
+The gadget beeps once. A series of lights comes across: RRRR. 
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG. 
+DEBUG INFO: RECT-TEXT: S--O.
+DEBUG INFO: CERT-TEXT: --IL-.
+
+>pour oils
 Gainly laying
 SO NOW HALLS SHALL SWOON
 
@@ -454,7 +486,12 @@ Crashing Archings
 >moor
 
 >rc oils
-WRONG
+You get to scanning, twiddling from certify to rectify and back.
+The gadget beeps once. A series of lights comes across: RGGR. 
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRG. 
+DEBUG INFO: RECT-TEXT: S--O.
+DEBUG INFO: CERT-TEXT: --IL-.
+
 >silo
 Your score has just gone up by one point.
 
@@ -500,8 +537,12 @@ Your score has just gone up by one point.
 >enter metros
 Underside
 
->rc gardenias
-WRONG
+>rc drainage
+The gadget beeps once. A series of lights comes across: RRRRRRRR. Uh, oh. Not really helpful at all. Maybe you'll find a hint elsewhere, or in the stuff floating in the drainage.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBBRGB. Not bad, but still. Maybe you'll find a hint elsewhere, or in the stuff floating in the drainage.
+DEBUG INFO: RECT-TEXT: G------A.
+DEBUG INFO: CERT-TEXT: --------.
+
 >gardenia
 Your score has just gone up by one point.
 
@@ -637,7 +678,13 @@ Man, I've done enough work today
 Your score has just gone up by one point.
 
 >rc nerds
-WRONG
+As the nerds ask other questions, the gadget lights up, and you notice RRGRRRGR, until the nerds ask no more. Then it goes back to RRRRRRRG as you think how, why and what to ask nerds.
+As the nerds ask other questions, the gadget lights up, and you notice BBBGRBBB, until the nerds ask no more. Then it goes back to BRBBBBGB as you think how, why and what to ask nerds.
+DEBUG INFO: RECT-TEXT: D------S.
+DEBUG INFO: CERT-TEXT: --R---SS.
+
+# ?? extra space
+
 >ask nerds about darkness
 
 >s
@@ -645,7 +692,11 @@ WRONG
 Bassy Abyss
 
 >rc siren
-WRONG
+The gadget beeps once. A series of lights comes across: RRRRG. 
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBR. 
+DEBUG INFO: RECT-TEXT: R---N.
+DEBUG INFO: CERT-TEXT: ----N.
+
 >resin
 Your score has just gone up by one point.
 
@@ -673,7 +724,11 @@ Your score has just gone up by one point.
 Tiles
 
 >rc tiles
-WRONG
+The gadget beeps once. A series of lights comes across: RRGGR. 
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBBB. 
+DEBUG INFO: RECT-TEXT: I---T.
+DEBUG INFO: CERT-TEXT: --LE-.
+
 >lites
 Light isn't the problem here. It's not having anywhere to go.
 
@@ -770,9 +825,9 @@ DEBUG INFO: CERT-TEXT: P--TE--.
 Your score has just gone up by one point.
 
 >rc
-WRONG
+Red Bull Burdell kicks the gadget out of the way! You were only able to read six reds, then BRGBBB as he apparently kicked the switch, too. He's not going to let you near it.
 >rc red bull
-WRONG
+You can't reach the gadget, but you remember six reds, then BRGBBB.
 
 >tug toe
 Your score has just gone up by one point.
@@ -781,7 +836,8 @@ Your score has just gone up by one point.
 Roman Manor
 
 >rc exits
-WRONG
+No matter where you point your gadget, it shows GBBRB. That can't be for the manor, though.
+No matter where you point your gadget, it shows GGGRR. That can't be for the manor, though.
 
 >exist
 Your score has just gone up by one point.
@@ -829,7 +885,7 @@ a smart gamin' anagrammist
 >tsf
 >{include} _resort
 
-* other-forest
+* _other-forest
 
 >ts
 >sr sw

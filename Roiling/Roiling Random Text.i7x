@@ -31089,6 +31089,7 @@ blurb
 "Aw, Rump, Warm Up[r], by Pa Wurm"
 "Back Up to Pot a Buck[r], by Pat Kubco"
 "Bad Diets, Dead Bits[r], by Addi Best"
+"Banjo Gipsy? Paying Jobs[r], by Gaby Jipson"
 "Barest Ego, Be So Great[r], by Tresa Boge"
 "Be a Thing: in the Bag[r], by Beth Nagi" []
 "Be a Tot to Beat[r], by Abe Ott & Bo Tate"
