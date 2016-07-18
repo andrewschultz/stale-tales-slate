@@ -19391,7 +19391,7 @@ before scaning (this is the knock down cheats rule):
 				continue the action;
 			else:
 				say "OK." instead;
-		if squee-warn is false:
+		if squee-warn is false and equals-pushed is false:
 			now squee-warn is true;
 			ital-say "this may be a bit of a spoiler. If you want to disable it, you can push the equals sign. This warning will not appear again.";
 			say "You feel foreboding this may be a bit too much of a clue. Do you still want to see the settler reading?";

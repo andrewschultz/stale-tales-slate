@@ -60,6 +60,7 @@ Include (-
 	  'l//':   print "look";
 	  'x//':   print "examine";
 	  'xx//':   print "examine magically";
+	  'rc//':   print "scan both ways";
 	  'r//', 'rec//', 'rect//':   print "rectify";
 	  'poss//':   print "track possible points";
 	  'pad//':   print "look up in your pad";
@@ -690,6 +691,7 @@ to decide whether the action is procedural: [aip]
 	if scaning, yes;
 	if objhinting, yes;
 	if smelling, yes;
+	if cring, yes;
 	if reading, yes;
 	if listening, yes;
 	if saying yes, yes;
@@ -2746,11 +2748,15 @@ to buzz-or-no-noise (ana - a thing):
 carry out cring:
 	if gadget-secured is true:
 		say "You can't use this shortcut. Your gadget is locked." instead;
+	if player is in hotspot and red bull is in hotspot:
+		try scaning red bull instead;
 	if noun is inflexible:
-		buzz-or-no-noise noun instead;
+		buzz-or-no-noise noun;
+		the rule succeeds;
 	now marcos-trumped is true;
 	if noun is pig and player is not on fuzzy looking wall:
 		say "You are too far away at the moment." instead;
+	now ever-scan is true;
 	if gadget is cert:
 		say "You get to scanning, twiddling from certify to rectify and back.";
 		try scaning the noun;
@@ -2763,6 +2769,8 @@ carry out cring:
 		now gadget is cert;
 		try scaning the noun;
 		now gadget is rect;
+	d "RECT-TEXT: [rect-text of noun].";
+	d "CERT-TEXT: [cert-text of noun].";
 
 chapter sging
 
@@ -5770,7 +5778,7 @@ section guiders
 
 [guiders are items that cue the direction to go. There are four.]
 
-a guider is a kind of thing. a guider is usually scenery. a guider has a direction called godir.
+a guider is a kind of thing. a guider is usually scenery. a guider has a direction called godir. a guider is usually flippable.
 
 check taking a guider:
 	if noun is thorn:
@@ -5779,13 +5787,13 @@ check taking a guider:
 		say "Maybe you can take a hint from the [noun], instead.";
 	the rule succeeds;
 
-a whiff of stew is a guider. godir of whiff of stew is west. description of whiff is "It smells pretty good, even if you can't detect any specific ingredients. But which way is it from?".
+a whiff of stew is a guider. godir of whiff of stew is west. description of whiff is "It smells pretty good, even if you can't detect any specific ingredients. But which way is it from?". the rgtext of stew is "[rc][rc][rc][rc]". the lgth of stew is 4. gpos of stew is 4. rpos of stew is 2. cert-text of stew is "-[d1][d1][d1][d1]". rect-text of stew is "W[d1][d1][ast]T".
 
 understand "smell" as whiff of stew when whiff of stew is in location of player.
 
-a thorn is a guider. godir of thorn is north. description of thorn is "You won't step on it or nay of its brethren. Maybe it indicates the way to go, if you stop and think for a moment..". the rgtext of thorn is "[rc][rc][rc][rc][rc]". the lgth of thorn is 5. gpos of thorn is 5. rpos of thorn is 2. cert-text of thorn is "-[d1][d1][d1][d1]". rect-text of thorn is "N[d1][d1][d1][ast]H".
+a thorn is a guider. godir of thorn is north. description of thorn is "You won't step on it or nay of its brethren. Maybe it indicates the way to go, if you stop and think for a moment.". the rgtext of thorn is "[rc][rc][rc][rc][rc]". the lgth of thorn is 5. gpos of thorn is 5. rpos of thorn is 2. cert-text of thorn is "-[d1][d1][d1][d1]". rect-text of thorn is "N[d1][d1][d1][ast]H".
 
-an aroma of teas is a guider. godir of aroma of teas is east. description of teas is "You're not refined enough to know which teas. It's kind of a combination of them, a new direction in olfactory sense.".
+an aroma of teas is a guider. godir of aroma of teas is east. description of teas is "You're not refined enough to know which teas. It's kind of a combination of them, a new direction in olfactory sense.". the rgtext of teas is "[rc][rc][rc][rc]". the lgth of teas is 4. gpos of teas is 2. rpos of teas is 1. cert-text of teas is "-[d1][d1][d1]". rect-text of teas is "E[d1][d1][ast]T".
 
 understand "seat" as a mistake ("You need the opposite of a seat, here. But at the same time, you're also very close.") when teas is visible.
 
@@ -5795,7 +5803,7 @@ understand "smell" as aroma of teas when aroma of teas is in location of player.
 
 understand "tea" as aroma of teas.
 
-a rambling shout is a guider. godir of rambling shout is south. description of shout is "It's gibberish, but it has to be coming from somewhere."
+a rambling shout is a guider. godir of rambling shout is south. description of shout is "It's gibberish, but it has to be coming from somewhere.". the rgtext of shout is "[gc][rc][rc][rc][rc]". the lgth of shout is 5. gpos of shout is 1. rpos of shout is 2. cert-text of shout is "S[d1][d1][d1][d1]". rect-text of shout is "S[d1][d1][d1][ast]H".
 
 understand "noise/sound" as rambling shout when rambling shout is in location of player.
 
@@ -6435,7 +6443,7 @@ the printed name of Frenetic Centrifuge is "[if centrifuge-stopped is true]A Rou
 
 understand "round/den" and "round den" and "unadorned" as Centrifuge when centrifuge-stopped is true.
 
-The dial is in Centrifuge. The dial has a number called numset. The numset of the dial is 0. the dial is fixed in place.
+The dial is in Centrifuge. The dial has a number called numset. The numset of the dial is 0. the dial is fixed in place. the dial is flippable.
 
 understand "a lid" as a mistake ("[if centrifuge-stopped is true]You don't need to deal with the dial, now[else]Changing the dial would leave you stuck[end if].") when player is in Centrifuge.
 
@@ -7430,6 +7438,8 @@ chapter Stiller Trellis / Crashing Archings
 
 Stiller Trellis is east of Kitchen and north of roomroom. "[if trel-priv is in lalaland]The crashing archings cover where the trellis was, blocking the way you made to the east. [else if cedars are not visited]This room feels close to something important. [end if][the-trellis]. You can [unless trel-priv is in lalaland or scraped wall is hayfilled]also [end if]go west or south.". Trellis is in Sortie.
 
+understand "haywall" and "hay wall" as scraped wall when scraped wall is hayfilled.
+
 understand "tillers" as a mistake ("You aren't going to sea in this game.") when player is in Trellis and archings are not in Trellis.
 
 trel-priv is privately-named scenery in Trellis. printed name of trel-priv is "the trellis". understand "trellis" as trel-priv.
@@ -7682,7 +7692,7 @@ instead of doing something with anapest:
 		continue the action;
 	if the current action is listening:
 		continue the action;
-	unless current action is progressive:
+	if current action is progressive:
 		continue the action;
 	say "The beat is drilled in your head: da da DA da da DA da da DA (repeated. I'll spare you the words, but...)"
 
@@ -9311,7 +9321,7 @@ every turn when metallic door was open:
 			else:
 				say "[i][bracket]NOTE: the game will just let you walk east now, so don't worry about swiping the card again.[close bracket][r][paragraph break]";
 
-some nerds are plural-named people in Anti-Cool Location.
+some nerds are plural-named flippable people in Anti-Cool Location.
 
 check putting noise bag on nerds:
 	if words are in noise bag:
@@ -9589,7 +9599,7 @@ section siren-resin
 the siren is scenery in Bassy Abyss. rgtext of siren is "[rcn][rc][rc][rc][gc]". rpos of siren is 5. gpos of siren is 3. lgth of siren is 5. cert-text of siren is "-[d1][d1][d1][ast]N". rect-text of siren is "R[d1][d1][d1][ast]N".
 
 instead of doing something with the siren:
-	unless current action is progressive:
+	if current action is progressive:
 		continue the action;
 	if current action is xmxing or current action is attacking:
 		continue the action;
@@ -9631,7 +9641,7 @@ the ts are flippable. gpos of ts is 2. rpos of ts is 1. lgth of ts is 5. the rgt
 description of ts is "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one."
 
 instead of doing something with the ts:
-	unless current action is progressive:
+	if current action is progressive:
 		continue the action;
 	say "It looks like you probably just have to work your magic on them again. There can't be that many possibilities."
 
@@ -10045,7 +10055,7 @@ instead of doing something other than examining cutlery:
 		say "No, Red Bull Burdell's not letting go.";
 	try examining cutlery instead.
 
-Red Bull Burdell is a person.
+Red Bull Burdell is a flippable person.
 
 Red Bull Burdell wears the Thirst T-Shirt. understand "thirst/-- tshirt" and "rage/gear" as t-shirt.
 
@@ -10150,7 +10160,7 @@ check going outside in Manor:
 check scaning final-exits:
 	try scaning the location instead;
 
-the final-exits are privately-named plural-named scenery in roman manor. "They are tempting you to adventure, but you'd rather be than do."
+the final-exits are flippable privately-named plural-named scenery in roman manor. "They are tempting you to adventure, but you'd rather be than do."
 
 understand "exits" as final-exits when player is in roman manor.
 

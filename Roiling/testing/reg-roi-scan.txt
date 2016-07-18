@@ -2201,16 +2201,16 @@ Rustic Citrus
 >n
 >missed
 
-* _only-manor
+* only-manor
 
 >{include} _manor
 
-* _only-stores
+* only-stores
 
 >ts
 >{include} _stores
 
-* _only-routes
+* only-routes
 
 >ts
 >routes
