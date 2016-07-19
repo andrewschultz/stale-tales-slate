@@ -2396,7 +2396,6 @@ check objasking kid about (this is the kid can spoil rule):
 			say "The kid doesn't want to be reminded, probably." instead;
 	unless second noun is guardian or second noun is curst palace:
 		continue the action;
-	dl "1.";
 	if kid-cheat is false:
 		if second noun is curst palace:
 			say "The kid puts [his-her] hand to [his-her] face, then mumbles 'Sorry, eleven letters is too much. Maybe something shorter.'" instead;
@@ -2564,15 +2563,6 @@ check going:
 	if the noun is up or noun is down:
 		if the room noun of the location of player is nowhere:
 			say "if there is a way [noun], it should be clear in the description. Hopefully. If not, try EXITS." instead;
-
-book the air
-
-rule for supplying a missing noun:
-	if current action is sbing or current action is scaning:
-		if player is in lean lane and cans are in lean lane:
-			now the noun is the cans;
-		else:
-			now the noun is the location of the player.
 
 book reading (vs just examining)
 
@@ -4918,15 +4908,115 @@ understand the command "scan" as something new.
 understand "scan [something]" as scaning.
 understand "scan" as scaning.
 
-rule for supplying a missing noun while scaning or sbing (this is the how to scan the air rule):
-	if player is in lean lane and cans are in lean lane:
-		now noun is cans;
-	if player is in dirge ridge and leo is washed up:
-		now noun is wzup;
-	if player is in cruelest lectures:
-		now noun is lecturer;
-	say "You wave the settler, but it doesn't pick up any random data.";
-	reject the player's command;
+[rule for supplying a missing noun while scaning or sbing (this is the how to scan the air rule):]
+rule for supplying a missing noun while sbing (this is the how to scan the air rule):
+	d "[noun].";
+	if mrlp is stores:
+		if player is in cruelest lectures:
+			now noun is lecturer;
+			continue the action;
+	else if mrlp is routes:
+		if location is Sun-Spared Underpass:
+			if darkness is in sun-spared underpass:
+				now noun is darkness;
+				continue the action;
+		if player is in mesa:
+			if the-b is in mesa:
+				now noun is the-b;
+				continue the action;
+			if thing form is in mesa:
+				now noun is thing form;
+				continue the action;
+	else if mrlp is troves:
+		if player is in loather rathole:
+			if cold is in rathole:
+				now noun is cold;
+			else:
+				now noun is heat;
+			continue the action;
+	else if mrlp is presto:
+		if player is in dirge ridge and leo is washed up:
+			now noun is wzup;
+			continue the action;
+	else if mrlp is oyster:
+		if player is in plains:
+			if crate are in plains and crate is reflexive:
+				now noun is crate;
+				continue the action;
+			else if c2 is reflexive:
+				now noun is c2;
+				continue the action;
+			else if bogus-plains are reflexive:
+				now noun is bogus-plains;
+				continue the action;
+		if player is in arches:
+			if a-s are reflexive:
+				now noun is a-s;
+				continue the action;
+		if player is in anger range:
+			if pikes are in lalaland and haunter is off-stage:
+				now noun is pre-haun;
+				continue the action;
+			if haunter is in anger range and haunter is reflexive:
+				now noun is haunter;
+				continue the action;
+		if player is in hedron and walleyes are in lalaland and o-t is in hedron:
+			now noun is o-t;
+			continue the action;
+		if player is in lean lane:
+			if cans are in lean lane:
+				now noun is cans;
+			else:
+				now noun is eeks;
+			continue the action;
+		if player is in scum ant sanctum:
+			now noun is ant;
+			continue the action;
+	else if mrlp is otters:
+		if player is in bleary barley:
+			if b-b is in bleary barley:
+				now noun is b-b;
+				continue the action;
+			if ed riley is in bleary barley:
+				now noun is ed riley;
+				continue the action;
+		if player is in loop pool:
+			if sea cube is in loop pool:
+				now noun is sea cube;
+				continue the action;
+			if eels are reflexive:
+				now noun is eels;
+				continue the action;
+		if player is in bran barn:
+			if ghoul hat is not in lalaland:
+				now noun is ghoul hat;
+				continue the action;
+			if p-2 is in bran barn:
+				now noun is p-2;
+				continue the action;
+		if player is in frontage and atmo-moat is in frontage and macks are not in frontage:
+			now noun is atmo-moat;
+			continue the action;
+		if player is in preserve and raptor is in preserve:
+			now noun is raptor;
+			continue the action;
+		if player is in wire deck and owls are in wire deck:
+			now noun is owls;
+			continue the action;
+		if player is in alcoves and parrot is in alcoves:
+			now noun is parrot;
+			continue the action;
+	else if mrlp is others: [others]
+		if perp-priv is part of the passport and gate-level < 2:
+			now noun is perp-priv;
+			continue the action;
+		if player is in clearing:
+			if pre-mang is in clearing:
+				now noun is pre-mang;
+				continue the action;
+	if noun is nothing:
+		say "You wave the settler, but it doesn't pick up any random data.";
+		reject the player's command;
 
 does the player mean scaning the cans: it is likely.
 
@@ -4964,11 +5054,10 @@ before scaning (this is the check as scanned if player can have/take settler rul
 		d "[noun].";
 		say "The letters settler isn't THAT long-range." instead;
 
-before scaning (this is the troves smart alecky rule):
-	if Map region of location of the player is troves:
-		if troves-scan is false:
-			say "You're a bit worried this scanning shouldn't work here, since it is all about you. but then you realize you are just utilizing and leveraging proprietary technology, and that makes you feel like more of a go-getter.[line break]";
-			now troves-scan is true;
+before scaning when mrlp is troves (this is the troves smart alecky rule):
+	if troves-scan is false:
+		say "You're a bit worried this scanning shouldn't work here, since it is all about you. but then you realize you are just utilizing and leveraging proprietary technology, and that makes you feel like more of a go-getter.[line break]";
+		now troves-scan is true;
 
 first-good-scan is a truth state that varies.
 
@@ -5026,11 +5115,7 @@ check scaning cold:
 	say "You look for a clue how to make some heat..."
 
 check scaning location of the player (this is the location scan rule):
-	if location is Sun-Spared Underpass: [start routes]
-		if darkness is visible:
-			try scaning darkness instead;
-	if the-b is visible:
-		try scaning the-b instead;
+	d "scaning player location.";
 	if location of player is Cripple Clipper:
 		if ship controls are reflexive:
 			say "You scan, trying to find [one of]where the hit win button is, and you get [hit-win][or]where Ben hid the button, and you get [ben-hid][in random order]." instead;
@@ -5155,6 +5240,8 @@ natives	true	true	false	false	"That's weird. They're just natives, but the blink
 curst palace	true	false	false	false	"[if palace-let < 5]Wow, lots of blank data. You may want to get closer to have any hope of figuring how to restore the palace[else if palace-let is 11 and cheat-on is true]The final letter clue blinks alternately with the fifth--neither is purple at the same time[else if cheat-on is true]Hm, maybe you can figure what the fifth letter is if you know more about the later ones[else]Just the reds and yellows still leave a lot of possibilities. But maybe you'll have clues along the way[end if]."
 serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
 cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely." [otters]
+t-tearily-irately	false	true	false	false	"Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways."
+t-steamily	true	true	false	false	"Well, you have a feeling you know what that question mark should be."
 atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
 Merle	false	false	false	true	"Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings."
 sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp is maybe too active for even the settler to pin down."
@@ -7625,6 +7712,7 @@ sb-cur is a truth state that varies.
 carry out sbing:
 	if debug-state is false:
 		say "[reject]";
+	d "SBing: [noun].";
 	if noun is reflexed:
 		if noun is not dialer and noun is not bench:
 			say "You fiddle with the settler, but on each setting, it emits a BEEEOOOP which suggests there's nothing left to do here." instead;
@@ -8153,13 +8241,20 @@ check fliptoing when mrlp is otters and power-back is false:
 
 preserve-animals is a number that varies.
 
-check scaning boat:
+check scaning boat (this is the scan boat components and not boat rule):
+	showme whether or not blaster is reflexive;
+	showme whether or not turbos are reflexive;
+	dl "1.";
 	if blaster is reflexive and turbos are reflexive:
-		say "Weird--the settler flips about, as if the components of the boat would give different readings." instead;
+		say "The blaster and turbos both give something different, but you focus on [the t-or-b].";
+		try scaning t-or-b instead;
+	dl "2.";
 	if blaster is reflexed and turbos are reflexed:
-		say "Nothing any more. You probably fixed the boat all you can.";
+		say "Nothing any more. You probably fixed the boat all you can." instead;
+	dl "3.";
 	if blaster is reflexed:
 		try scaning turbos instead;
+	dl "4.";
 	try scaning blaster instead;
 
 note-progress is a truth state that varies.
@@ -10769,7 +10864,7 @@ instead of taking decal:
 
 description of backside is "[bug-report]";
 
-before scaning:
+before scaning (this is the don't scan part of the settler rule) :
 	if noun is part of the settler:
 		say "The settler's pretty powerful, but it's not four-dimensional, so it can't wrap to scan itself--or parts of itself." instead;
 
@@ -12103,6 +12198,7 @@ check scaning old giant (this is the scan other parts of giant instead rule):
 		say "The settler registers something only when the elbow is in its way.";
 		try scaning elbow instead;
 	if nuder is visible:
+		say "The settler only registers when it's pointed at Rude [']N Nuder.";
 		try scaning nuder instead;
 
 understand "satired" as a mistake ("Bad idea to poke fun at someone that much bigger than you.") when player is in mesa and old giant is visible.
@@ -18417,7 +18513,7 @@ to decide which number is palace-let: [I could've defined a new variable but it'
 	if location of player is lots or location of player is route or location of player is sunbelt or location of player is saltbed, decide on 6;
 	if location of player is ravages or location of player is subsector or location of player is Danger Garden or location of player is havens or location of player is cinema, decide on 7;
 	if location of player is deltas or location of player is shoreline, decide on 8;
-	if location of player is coastlines, decide on 9;
+	if location of player is coastlines or location of player is rawest waters, decide on 9;
 	if location of player is solo den, decide on 10;
 	if location of player is limits, decide on 11;
 	decide on 2;
@@ -19407,7 +19503,7 @@ to decide whether (n - a thing) is spoilable-now:
 
 squee-warn is a truth state that varies.
 
-before scaning (this is the knock down cheats rule):
+before scaning (this is the check for cheats the player doesn't want rule):
 	if noun is a location:
 		continue the action;
 	if cheat-on is true and noun is spoilable-now:
@@ -21712,15 +21808,22 @@ when play begins (this is the mack-randomize rule):
 		[say "[G] mack things in pod [X + 6].";]
 		let H be a random number from 1 to G;
 		place-a-mack X and H;
-	assign-mack-priority;
+	assign-random-mack-priority;
 	now cur-pod-num is 0;
 
 definition: a mack-idea (called mm) is unprioritized:
 	if mack-prio of mm is 0 and mm is in frontage:
 		decide yes;
 	decide no;
+	
+to assign-fixed-mack-priority:
+	now cur-mack-blab is 0;
+	repeat with B running through mack-ideas:
+		if B is in frontage:
+			now mack-prio of B is pod-num of B;
 
-to assign-mack-priority:
+to assign-random-mack-priority:
+	now cur-mack-blab is 0;
 	repeat with B running through mack-ideas:
 		now mack-prio of B is 0;
 	let C be number of mack-ideas in frontage; [should be 7, but yeah]
@@ -21752,7 +21855,7 @@ t-seedily is a mack-idea. pod-num is 1. pod-ord is 2. a-text of t-seedily is "RY
 
 t-cattily is a mack-idea. pod-num is 1. pod-ord is 3. a-text is "RYRRYRO". b-text is "RGRRYPB". parse-text is "x[sp]a[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "Each mack discusses tacitly why he's got something the others don't.". mack-brief is "acting tacitly".
 
-t-tearily-irately is a mack-idea.  pod-num is 1. pod-ord is 4. a-text is "RYRYYYRRO". b-text is "RYRYYYRRO". parse-text is "?[sp]?[sp]a[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". mack-brief is "discussing reality".
+t-tearily-irately is a mack-idea.  pod-num is 1. pod-ord is 4. a-text is "??YRYRO". b-text is "??GR?RO". parse-text is "?[sp]?[sp]a[sp]x[sp][if cheat-on is true]?[else]-[end if][sp]l[sp]y". mack-move is "The macks ooze on about how women want companionship, as much as men, and that's REALITY. It seems they could be flustered two different ways, but they aren't close, yet.". mack-brief is "discussing reality".
 
 [pod 2 is non-repeating 7-letters]
 t-nastily is a mack-idea. pod-num is 2. pod-ord is 1. a-text is "RYRRYRO". b-text is "RGRRYPB". parse-text is "x[sp]a[sp]x[sp]x[sp]i[sp]l[sp]y". mack-move is "The macks suddenly start acting very saintly.". mack-brief is "acting saintly".
@@ -21766,7 +21869,7 @@ t-starkly is a mack-idea. pod-num is 2. pod-ord is 4. a-text is "RRYRRRO". b-tex
 [pod 3 is 8-letters repeating]
 t-blearily is a mack-idea. pod-num is 3. pod-ord is 1. a-text is "RRYYRYRO". b-text is "RRYYRYPB". parse-text is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks cut each other off reliably, giving Gretta no time to reject them or point out they're not THAT exciting.". mack-brief is "interrupting each other reliably".
 
-t-formally is a mack-idea. pod-num is 3. pod-ord is 2. a-text is "RYRRYRRO". b-text is "*YR*YRRO". parse-text is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]l[sp]y". mack-move is "The macks manage to seem surprisingly fly, moral. Like Ally from 'My Floral', a 'premium' cable show so bad you turn red just thinking of it. But they've got the confidence and pace to pull it off, for now.". mack-brief is "acting too formally".
+t-formally is a mack-idea. pod-num is 3. pod-ord is 2. a-text is "RYRRYRRO". b-text is "PYRPYRRO". parse-text is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]l[sp]y". mack-move is "The macks manage to seem surprisingly fly, moral. Like Ally from 'My Floral', a 'premium' cable show so bad you turn red just thinking of it. But they've got the confidence and pace to pull it off, for now.". mack-brief is "acting too formally".
 
 t-coitally is a mack-idea. pod-num is 3. pod-ord is 3. a-text is "RYYRYRRO". b-text is "RGYRYRRB". parse-text is "x[sp]o[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y". mack-move is "The macks discuss how nice it is to meet her in this locality.". mack-brief is "'admiring' this locality".
 
@@ -21783,7 +21886,7 @@ t-suddenly is a mack-idea. pod-num is 3. pod-ord is 8. a-text is "RYRRYRRO". b-t
 [pod 4 is 8-letters non-repeating]
 t-modestly is a mack-idea. pod-num is 4. pod-ord is 1. a-text is "RYRYRRRO". b-text is "RYRYRRRO". parse-text is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]l[sp]y". mack-move is "Three macks put on a production. 'Ed, my lost styledom! Yet old Ms...' 'Ty, sod...' / 'Mel!' It's over-the-top, but through seeing red you almost admire their courage.". mack-brief is "behaving fake-modestly".
 
-t-steamily is a mack-idea. pod-num is 4. pod-ord is 2. a-text is "RRYYRYRO". b-text is "RRYYRY*O". parse-text is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". mack-brief is "mis-discussing Misty Ale".
+t-steamily is a mack-idea. pod-num is 4. pod-ord is 2. a-text is "RRYYRYRO". b-text is "RRYYRY?O". parse-text is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y". mack-move is "The macks claim they like May Islet Misty Ale for the taste and not the ridiculous commercials. It doesn't taste a bit like slimy tea!". mack-brief is "mis-discussing Misty Ale".
 
 t-stupidly is a mack-idea. pod-num is 4. pod-ord is 3. a-text is "RRYRYRRO". b-text is "RRYRYRRO". parse-text is "x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]l[sp]y". mack-move is "One mack idly puts in a mention he doesn't let duty slip. 'I ply dust.' It's tidy, plus, and it makes you see all red.".
 
@@ -21835,9 +21938,9 @@ to decide which mack-idea is mack-hint:
 
 every turn when player is in frontage and macks are in frontage (this is the macks hitting on rule):
 	d "Macks hitting on rule:[line break]";
-	repeat with QQ running through reflexive mack-ideas in frontage:
+[	repeat with QQ running through reflexive mack-ideas in frontage:
 		if debug-state is true:
-			say "DEBUG NOTES: [qq]: [mack-prio of qq].";
+			say "DEBUG NOTES: [qq]: [mack-prio of qq].";]
 	let loop be false;
 	while cur-pod-num is unworkable:
 		increment cur-mack-blab;
@@ -21852,7 +21955,7 @@ every turn when player is in frontage and macks are in frontage (this is the mac
 			if loop is true:
 				if ever-loop-mack is false:
 					now ever-loop-mack is true;
-					say "The macks take a break. They've [one of][or]once again [stopping]babbled for long enough, and about enough, they can repeat their 'exciting' conversation all over again[if macked-out > 0], except for what you managed to alter[end if].";
+					say "The macks take a break. They've [one of][or]once again [stopping]babbled for long enough, and about enough, they can repeat their 'exciting' conversation all over again[if macked-out > 0], except for what you managed to alter[end if].[paragraph break]";
 			now current-idea is ment;
 			say "[mack-move of current-idea][line break]";
 			continue the action;
@@ -22388,13 +22491,13 @@ the snail is a neuter animal. description is "It's quite spiky and seems to move
 
 check scaning imp:
 	say "The settler seems to jump around with the imp a bit before stabilizing. The imp's [if silence-tally is 0]patience is legendary and butlery--but it's moving rangily[else if imp1 is in lalaland]patience is legendary and butlery[else if imp3 is in lalaland]It has a butlery air as it moves rangily[else if imp2 is in lalaland]patience feels legendary as it moves rangily[end if].";
-	let tempscn be random reflexive scenery in Anger Pit;
-	try scaning tempscn instead;
+	try scaning entry 1 of tapering-items;
+	the rule succeeds;
 
 check scaning whiners:
-	say "The settler seems to jump around a bit before stabilizing. It blinks about as they [if ram1 is reflexive]restyle[else]continue[end if] [if ram2 is reflexive]tallyhoing[else]their noisiness[end if] [if ram3 is reflexive] with callosity[end if]";
-	let tempscn be random reflexive scenery in Anteroom;
-	try scaning tempscn instead;
+	say "The settler seems to jump around a bit before stabilizing. It blinks about as they [if ram1 is reflexive]restyle[else]continue[end if] [if ram2 is reflexive]tallyhoing[else]their noisiness[end if] [if ram3 is reflexive]with callosity[end if]";
+	try scaning entry 1 of anteroom-items;
+	the rule succeeds;
 
 check going south in Anteroom:
 	if whiners are visible:
@@ -22975,6 +23078,8 @@ does the player mean doing something with rampage note when rampage note is visi
 description of magenta rope is "Oddly colored. It's got a yellowish tinge."
 
 instead of doing something with megaton pear:
+	if action is procedural:
+		continue the action;
 	say "It's--well, maybe not a megaton, but it sure is heavy. And certainly inedible. Maybe it can be changed to a real fruit."
 
 instead of doing something with rampage note:
@@ -23167,8 +23272,8 @@ check going north in Gates Stage:
 		now all carried fruits are in lalaland;
 	if gate-level < 2:
 		now perp-check is true;
-	if gate-level is 0:
 		now perp-priv is part of the passport;
+	if gate-level is 0:
 		say "You try to sneak through--you're backstage at the Admit-Us Stadium! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
 	else if gate-level is 1:
 		say "[one of]You try to sneak into the Admit-Us Stadium, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells 'PERP!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
@@ -23253,7 +23358,7 @@ the icons are plural-named things. description is "The icons are designed to be 
 check scaning coins:
 	say "The settler flashes back, with [if cheat-on is false]all five entries changing[else]all but the last entry--which stays red--changing[end if].";
 	say "Hm. Maybe it would be better to scan just one coin?";
-	if the player consents:
+	if the player yes-consents:
 		let mytext be indexed text;
 		if cheat-on is true:
 			now mytext is b-text of coin;
@@ -23261,7 +23366,7 @@ check scaning coins:
 			now mytext is a-text of coin;
 		say "You see [spacies of mytext]." instead;
 
-a-text of coins is "?????". b-text of coins is "?????". parse-text of coins is "?[sp]?[sp]?[sp]?[sp]?".
+a-text of coins is "????R". b-text of coins is "?????". parse-text of coins is "?[sp]?[sp]?[sp]?[sp]?".
 
 a-text of icons is "RYRYR". b-text of icons is "RYRYR". parse-text of icons is "-[sp]x[sp]-[sp]x[sp]x".
 
@@ -27823,37 +27928,38 @@ to place-idea (myp - a number) and (myi - a number):
 			the rule succeeds;
 	say "BUG: didn't get anything for pod [myp] index [myi2].";
 
-carry out seeding:
+carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip frontage]
 	let temp be 0;
 	let G be Rodney;
 	let found-yet be false;
-	let act-index be the number understood;
+	let act-index be the remainder after dividing number understood by 100;
+	let seedflags be number understood / 100;
 	if act-index > 8:
-		say "[b]WARNING: this is probably out of range.[r][paragraph break]";
+		say "[b]WARNING: this is probably out of range.[r][line break]";
 	if act-index < 1:
 		say "Need a positive act index.";
 		the rule fails;
-	if trefoil is visited and number of warriors in lalaland > 0: [first, seed the start of TOWERS]
-		say "Skipping Trefoil seeding as you've already disposed of one warrior. Restart if you wish to re-seed.";
-	else:
-		if act-index > 5:
-			say "Decreasing index to 5 for the Trefoil.";
-			now act-index is 4;
-		now all warriors are off-stage;
-		repeat with J running from 1 to 7:
-			place-warrior J and act-index;
-	let act-index be the number understood;
-	if frontage is visited and macked-out > 0: [next, seed the macks in OTTERS]
-		say "Skipping Frontage seeding because you already started wiping the macks out.";
-	else:
-		now all mack-ideas are off-stage;
-		now act-index is number understood;
-		if act-index > 4:
-			say "Decreasing index to 4 for the Frontage.";
-		now all mack-ideas are off-stage;
-		repeat with J running from 1 to max-pod-num:
-			place-idea J and act-index;
-		assign-mack-priority;
+	if seedflags <= 4:
+		if frontage is visited and macked-out > 0: [next, seed the macks in OTTERS]
+			say "Skipping Frontage seeding because you already started wiping the macks out.";
+		else:
+			now all mack-ideas are off-stage;
+			repeat with J running from 1 to max-pod-num:
+				place-idea J and act-index;
+			if seedflags is 0:
+				assign-random-mack-priority;
+			else:
+				assign-fixed-mack-priority;
+	if the remainder after dividing seedflags by 4 < 2:
+		if trefoil is visited and number of warriors in lalaland > 0: [first, seed the start of TOWERS]
+			say "Skipping Trefoil seeding as you've already disposed of one warrior. Restart if you wish to re-seed.";
+		else:
+			if act-index > 5:
+				say "Decreasing index to 5 for the Trefoil.";
+				now act-index is 4;
+			now all warriors are off-stage;
+			repeat with J running from 1 to 7:
+				place-warrior J and act-index;
 
 chapter cap
 

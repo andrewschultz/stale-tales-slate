@@ -247,7 +247,7 @@ die-to-us is a truth state that varies.
 to say ted-die:
 	if die-trigger > 0:
 		decrement die-trigger;
-		say "[if die-trigger is 0]'Die to us!' the lecturer yells, as he points at someone who may or may not be using drugs. 'To use...I'd...' the poor soul mumbles as he is slapped up and carted off. You see red at what must be either harsh injustice or appalling acting[else]Man, it's all so [i]tedious[r][end if]";
+		say "[if die-trigger is 0]'Die to us!' the lecturer yells, as he points at someone who may or may not be using drugs. 'To use...I'd...' the poor soul mumbles as he is slapped up and carted off. You see red at what must be either harsh injustice or appalling acting[else]Man, it's all so [i]tedious[r][end if].";
 	else if a random chance of 1 in 4 succeeds:
 		say "After that ... incident, everything is back to [i]tedious[r].";
 	else:

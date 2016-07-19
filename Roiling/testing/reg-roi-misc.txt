@@ -37,6 +37,69 @@ That's not something you can say, do or see here. For a general list of verbs, t
 >wave pad
 I understood the first word, but it can just stand on its own as a verb. If you were trying to do something tricky with it, you shouldn't need to. So just "wave" should work.
 
+* two-of-threes
+
+>ts
+>gonear swell wells
+>purloin passport
+>n
+>n
+>prep
+by one point
+>review
+by one point
+>research
+!by one point
+>undo
+>undo
+>research
+>prep
+by one point
+>review
+>prep
+!by one point
+>undo
+>undo
+>undo
+>review
+>prep
+by one point
+>research
+>prep
+by one point
+>prep
+!by one point
+
+>gonear shack
+>syke
+>abstract leo to phat path
+>abstract rand to phat path
+>z
+>so long
+by one point
+>later
+by one point
+>tough
+!by one point
+>undo
+>undo
+>tough
+by one point
+>later
+!by one point
+>undo
+>undo
+>undo
+>later
+by one point
+>tough
+by one point
+>so long
+!by one point
+
+
+
+
 * oyster-weird-verbs
 
 >inset abc
