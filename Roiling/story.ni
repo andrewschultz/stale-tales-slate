@@ -283,7 +283,7 @@ every turn when strip of profits is visited (this is the region-hint on no score
 		if turns-spent of mrlp > last-hint-turns of mrlp:
 			if the remainder after dividing turns-spent of mrlp by 10 is 0:
 				say "It seems you're stuck a bit here. Would you like a hint as to what this region is about?";
-				if the player consents:
+				if the player yes-consents:
 					now mrlp is spoiled;
 					choose row with hint-reg of mrlp in table of region-spoilers;
 					say "This region focuses on [spoil-expl entry].";
@@ -541,8 +541,10 @@ to choose-female:
 	now greedy-person is Dr Tera;
 	now i trash his art is off-stage;
 	now er trash is part of the dope op-ed;
+	now lois the hostile is off-stage;
 
 to choose-male:
+	now lois the hostile is off-stage;
 	now the player is male;
 	now the admirer is female;
 	now smart kid is male;
@@ -555,7 +557,7 @@ to choose-male:
 	now greedy-person is Red Rat;
 	now i trash his art is part of the dope op-ed;
 	now er trash is off-stage;
-
+	now hostile-is-he lot is off-stage;
 
 to decide whether (cho - a number) is irrelevant:
 	if cho is 70 or cho is 102, decide no;
@@ -985,8 +987,8 @@ to say full-monty of (myobj - a thing):
 			pad-rec-q "question mark";
 	if myobj is curst palace:
 		pad-rec-q "curst palace";
-		continue the action;
-	now space-warned is sw;
+	else:
+		now space-warned is sw;
 	now questions-not-flagged is qnf;
 
 the question mark is a thing. the question mark is undesc. [question mark is for hinting ONLY]
@@ -2565,11 +2567,12 @@ check going:
 
 book the air
 
-rule for supplying a missing noun when scaning:
-	if player is in lean lane and cans are in lean lane:
-		now the noun is the cans;
-	else:
-		now the noun is the location of the player.
+rule for supplying a missing noun:
+	if current action is sbing or current action is scaning:
+		if player is in lean lane and cans are in lean lane:
+			now the noun is the cans;
+		else:
+			now the noun is the location of the player.
 
 book reading (vs just examining)
 
@@ -4915,9 +4918,15 @@ understand the command "scan" as something new.
 understand "scan [something]" as scaning.
 understand "scan" as scaning.
 
-rule for supplying a missing noun while scaning:
+rule for supplying a missing noun while scaning or sbing (this is the how to scan the air rule):
 	if player is in lean lane and cans are in lean lane:
-		now noun is cans
+		now noun is cans;
+	if player is in dirge ridge and leo is washed up:
+		now noun is wzup;
+	if player is in cruelest lectures:
+		now noun is lecturer;
+	say "You wave the settler, but it doesn't pick up any random data.";
+	reject the player's command;
 
 does the player mean scaning the cans: it is likely.
 
@@ -4986,7 +4995,7 @@ carry out scaning:
 		pad-rec-q "spaces";
 	if noun is not the player:
 		now last-scanned-thing is noun;
-	say "Your settler registers [full-monty of noun].";
+	say "[sb-choose][full-monty of noun].";
 	repeat through table of aftertexts:
 [	if noun is an xtradesc in table of aftertexts: ?! doesn't work]
 		if noun is xtradesc entry:
@@ -5000,6 +5009,11 @@ carry out scaning:
 					say "[line break][xtratext entry][line break]";
 			the rule succeeds;
 	the rule succeeds;
+
+to say sb-choose:
+	say "Your settler registers ";
+	if sb-cur is true:
+		say "([if cheat-on is true]cheat on[else]no cheat[end if]) "
 
 chapter scaning air
 
@@ -5125,14 +5139,14 @@ alert letters	true	false	false	false	"Hmm. The settler is giving a weird result,
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
 pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, five letters is easier than four[end if]."
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
-Ray Eck	false	true	false	false	"Ray Eck begins babbling about how interesting the settler looks, almost as interesting as his keycar. Maybe you could ASK him about the settler, if he's still stumping you." [towers]
+Ray Eck	false	true	false	false	"Ray Eck begins babbling about how interesting the settler looks, almost as interesting as his keycar. Maybe you could ASK him about the keycar, if he's still stumping you." [towers]
 dandier arid den	true	true	false	false	"Well. That's two things you can't figure to start, but maybe you can, if you think about it."
 alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
 sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
 iPrune	true	true	false	false	"Hm. That one blinky letter is pretty weird. Maybe you can start there, or try to annoy the iPrune."
-raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT."
-lois the hostile	false	true	false	false	"Well, this is tricky. They could be just plain , or they could be the hostile ol['] heist. You may need to observe a bit more to clear this up." [??]
-hostile-is-he lot	false	true	false	false	"Well, this is tricky. They could be just plain , or they could be the hostile ol['] heist. You may need to observe a bit more to clear this up." [??]
+raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. MAybe it's the brand you can/should worry about."
+lois the hostile	false	true	false	false	"Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts." [??]
+hostile-is-he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue." [??]
 man covered in inapt paint	false	true	false	false	"Hmm, painted and covered have three vowels--so it's probably the FLEMISH in inapt paint across his chest."
 old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
 Dr Yow	false	true	false	false	"[if Dr Yow has not been rowdy and Dr Yow has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her].[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]"
@@ -5140,7 +5154,7 @@ ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but
 natives	true	true	false	false	"That's weird. They're just natives, but the blinky bit suggests there may be two possible solutions."
 curst palace	true	false	false	false	"[if palace-let < 5]Wow, lots of blank data. You may want to get closer to have any hope of figuring how to restore the palace[else if palace-let is 11 and cheat-on is true]The final letter clue blinks alternately with the fifth--neither is purple at the same time[else if cheat-on is true]Hm, maybe you can figure what the fifth letter is if you know more about the later ones[else]Just the reds and yellows still leave a lot of possibilities. But maybe you'll have clues along the way[end if]."
 serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
-cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders." [otters]
+cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely." [otters]
 atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but it's been a long journey."
 Merle	false	false	false	true	"Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings."
 sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp is maybe too active for even the settler to pin down."
@@ -7606,15 +7620,22 @@ understand "sb" as sbing.
 
 understand "sb [thing]" as sbing.
 
+sb-cur is a truth state that varies.
+
 carry out sbing:
 	if debug-state is false:
 		say "[reject]";
+	if noun is reflexed:
+		if noun is not dialer and noun is not bench:
+			say "You fiddle with the settler, but on each setting, it emits a BEEEOOOP which suggests there's nothing left to do here." instead;
+	now sb-cur is true;
 	let z be cheat-on;
 	now cheat-on is false;
 	try scaning noun;
 	now cheat-on is true;
 	try scaning noun;
 	now cheat-on is z;
+	now sb-cur is false;
 	the rule succeeds;
 
 chapter ssing
@@ -11928,7 +11949,7 @@ understand "ian" and "drug guardian" and "guardian" as idg.
 understand "ani" and "nia" as a mistake ("Ian's had a big life change, but that might be too big for him!") when player is in Cruelest Lectures.
 
 instead of doing something with idg:
-	if current action is scaning:
+	if current action is scaning or current action is sbing:
 		say "'No offense, chum, but it's me who should probably be scanning you lawbreakers.' He nods and smiles, faux-friendly, and you turn back to the lecturer." instead;
 	if current action is attacking:
 		say "He's too big for you." instead;
@@ -12915,7 +12936,7 @@ check scaning thor:
 		now thor-hug is false;
 	else:
 		now thor-hug is true;
-	say "Thor booms [if thor-hug is true]'Thor hug!'[else]'Hug Thor!'[end if] as you point the settler at him.";
+	say "Thor booms [if thor-hug is true]'Thor hug[else]'Hug Thor[end if]!' as you point the settler at him.";
 
 a-text of thor is "RRRYYRR". b-text of thor is "[if thor-hug is false]RRRYYRR[else]PPRYYRR[end if]". parse-text of thor is "[if thor-hug is false]x[sp]x[sp]x[sp]-[sp]-[sp]x[sp]x[else]t[sp]h[sp]x[sp]-[sp]-[sp]x[sp]x[end if]".
 
@@ -14065,7 +14086,8 @@ before giving pedanto-notepad to yak:
 
 try-keyboard is a truth state that varies.
 
-yak-badbook is a truth state that varies;
+yak-badbook is a truth state that varies.
+
 before giving a badbook to yak:
 	if yak is not on skid:
 		now yak-badbook is true;
@@ -15008,7 +15030,7 @@ before fliptoing when mrlp is presto (this is the warn against SHATTER THREATS r
 				do nothing instead;
 			if noun is disk and yak is in lalaland:
 				say "You probably want to go inside the shack before doing that. That stupid SHATTER-THREATS law and all. Do so now?";
-				if the player consents:
+				if the player yes-consents:
 					say "Great!";
 					move player to shack;
 					move skid to shack;
@@ -15019,7 +15041,7 @@ before fliptoing when mrlp is presto (this is the warn against SHATTER THREATS r
 					do nothing instead;
 			if noun is screen and shack is visited:
 				say "You probably want to go inside the shack before doing that. That stupid SHATTER-THREATS law and all. Do so now?";
-				if the player consents:
+				if the player yes-consents:
 					say "Great!";
 					move player to shack;
 					now player has censer;
@@ -16063,7 +16085,7 @@ check scaning casper:
 		try scaning recaps instead;
 
 check scaning recaps:
-	if recaps is not reflexed:
+	if recaps is not reflexed and cheat-on is true:
 		say "Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue."
 
 a-text of capers is "RRRYRY". b-text of capers is "RRR??Y". parse-text of capers is "x[sp]x[sp]x[sp]-[sp]x[sp]-".
@@ -16700,14 +16722,12 @@ a-text of pale plea is "RYYR". b-text of pale plea is "RYYR". parse-text of pale
 scray-scan is a truth state that varies.
 
 check scaning when player is in freight:
-	if noun is crays:
-		if scray-scan is true:
-			say "You already scanned the pale plea. It was RYYR." instead;
-		say "The crays aren't still slightly leery the settler might be a weapon. During the moment of delay, you point it towards the pale plea and see something.";
-		now scray-scan is true;
-		try scaning plea instead;
 	if scray-scan is true:
-		say "You already got RYYR for the pale plea." instead;
+		say "You already scanned the pale plea. It was RYYR." instead;
+	say "The crays are till slightly leery the settler might be a weapon. During the moment of delay, you point it towards the pale plea and see something.";
+	now scray-scan is true;
+	if noun is not plea:
+		try scaning plea instead;
 
 instead of doing something with pale plea:
 	if action is procedural:
@@ -17037,6 +17057,10 @@ after fliptoing when player is in plains: [everything except "splain"]
 	if noun is c2 or noun is crate or noun is skis or noun is knob:
 		check-rude-door;
 	continue the action;
+
+check scaning crate:
+	if c2 is in plains:
+		try scaning c2 instead;
 
 a-text of crate is "RYYRR". b-text of crate is "RYGRR". parse-text of crate is "x[sp]r[sp]a[sp]x[sp]t". crate is parse-spoilable.
 
@@ -17598,7 +17622,7 @@ Lapsin' Plains is north of anger range. Lapsin' plains is in oyster. "[if rude d
 
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin' Plains
 
-c2 is scenery in lapsin' plains. c2 is undesc. c2 is privately-named. c2 is vanishing. printed name of c2 is "wherever the crate is coming from"
+c2 is vanishing privately-named scenery in lapsin' plains. c2 is undesc. printed name of c2 is "wherever the crate is coming from"
 
 a-text of c2 is "RRYRY". b-text of c2 is "RPGRG". parse-text of c2 is "x[sp]r[sp]a[sp][sp]e". c2 is parse-spoilable.
 
@@ -18957,6 +18981,8 @@ a-text of weeds is "RYRYR". b-text of weeds is "RGRYR". parse-text of weeds is "
 
 the raves saver is a reflexive LLPish thing. the raves saver can be yow-talk, yow-yell, goosey, ducky, or silent. the raves saver is silent.
 
+understand "replay/player" and "replay player" as raves saver.
+
 understand "tape recorder" and "tape/recorder" as raves saver.
 
 check opening raves saver:
@@ -19661,7 +19687,9 @@ check scaning strudel:
 		say "You already rustled it." instead;
 	say "You don't suspect you need to do anything with the strudel, but the settler still pops something up. Maybe it'd be practice to figure how you could've taken it.";
 
-The sled rut is useless scenery in Lost Lots. "It's flecked with red, oddly[if strudel is in Lost Lots], and the strudel's still in it[else if strudel is reflexed], though you think you know why, now[end if]."
+The sled rut is auxiliary scenery in Lost Lots. "It's flecked with red, oddly[if strudel is in Lost Lots], and the strudel's still in it[else if strudel is reflexed], though you think you know why, now[end if]."
+
+a-text of sled rut is "RYRRRYR". b-text of sled rut is "RYRRRYR". parse-text of sled rut is "x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x".
 
 check taking sled rut:
 	say "[if strudel is in Lost Lots]Maybe take the strudel instead[else]The sled rut is nothing and holds nothing[end if]." instead;
@@ -20327,6 +20355,8 @@ a-text of snider diners is "RYRRYR". b-text of snider diners is "R??R?R". parse-
 
 The dandier arid den is a blue guardian.
 
+a-text of arid den is "RRYYRYR". b-text of arid den is "??YYRGR". parse-text of arid den is "?[sp]?[sp]-[sp]-[sp]x[sp]e[sp]x".
+
 description of dandier arid den is "They look dandier than anyone you've met here. They seem to gain energy from their shirts, bizarrely. Shirts by that one designer whose name you can't remember.[paragraph break]You think you smell something, too, but you can't place it."
 
 the bottles of Nerd-Aid are auxiliary plural-named scenery. the arid den carries the nerd-aid. understand "wares" as nerd-aid. understand "nerd/aid" and "nerdaid" and "nerd aid" as nerd-aid.
@@ -20409,7 +20439,7 @@ the organised ego drains are a plural-named red guardian.
 
 description of organised ego drains is "You recognize the ego drains as odd spirits that make you feel bad about yourself and your purpose."
 
-a-text of organised is "RRYRRYYRY". b-text of organised is "R*YRRYYRY". parse-text of organised is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
+a-text of organised is "RRYRRYYRY". b-text of organised is "RRYRRYYRY". parse-text of organised is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
 
 the unripe iPrune is a red guardian. understand "prune" and "unripe prune" as iprune.
 
@@ -21186,11 +21216,6 @@ does the player mean gotothinging b-b:
 	it is very unlikely.
 
 a-text of b-b is "RYRYRO". b-text of b-b is "P??YRB". parse-text of b-b is "b[sp]?[sp]?[sp]e[sp]l[sp]y". b-b is cheat-spoilable.
-
-check scaning b-b:
-	if b-b is reflexed:
-		say "Nothing registers." instead;
-	say "Your settler registers [if cheat-on is false]RYRYRO[else]PGPYRB[end if]." instead;
 
 instead of taking b-b:
 	say "[if b-b is reflexed]It'll be barely useful[otherwise]Your inventory doesn't expand infinitely[end if]."
@@ -22949,13 +22974,15 @@ does the player mean doing something with rampage note when rampage note is visi
 
 description of magenta rope is "Oddly colored. It's got a yellowish tinge."
 
-instead of doing something other than scaning megaton pear:
+instead of doing something with megaton pear:
 	say "It's--well, maybe not a megaton, but it sure is heavy. And certainly inedible. Maybe it can be changed to a real fruit."
 
-instead of doing something other than scaning rampage note:
+instead of doing something with rampage note:
+	if action is procedural, continue the action;
 	say "A glance seems to indicate some unfortunate writing--either Curtis actually still believes that stuff, or he's embarrassed ever to have written it. Either way, he doesn't need to be alerted to you knowing about it. Best to get rid of it."
 
-instead of doing something other than scaning mopeage rant:
+instead of doing something with mopeage rant:
+	if action is procedural, continue the action;
 	say "A glance seems to indicate some unfortunate writing--either Curtis actually still believes that stuff, or he's embarrassed ever to have written it. Either way, he doesn't need to be alerted to you knowing about it. Best to get rid of it."
 
 instead of taking magenta rope:
@@ -23316,7 +23343,7 @@ to decide which number is gate-level:
 		increment A;
 	if searcher is reflexed:
 		increment A;
-	if passport is reflexed:
+	if perp-priv is reflexed:
 		increment A;
 	decide on A.
 
@@ -23409,6 +23436,8 @@ check fliptoing papayas when papayas are in lalaland:
 		say "You already got credit for prompt payment." instead;
 
 the auction caution is reflexive scenery in Clangier Clearing. "It's pretty clear: PAY ASAP covers over half of it. That probably applies to non-auctions, too.". understand "banner" as auction caution.
+
+a-text of auction caution is "RYRYOYR". b-text of auction caution is "RYRYOYR".
 
 some papayas are a plural-named fruit. description is "Goldish and gourdish."
 
@@ -23523,6 +23552,8 @@ the watermelon is a fruit. description is "It isn't too heavy or big to carry, t
 
 the mean trowel is a thing in Filed Field. description is "It has some red writing saying who made it and also what it protects against."
 
+a-text of mean trowel is "RYRYRRYRYR". b-text of mean trowel is "RYRYRRYRYR". parse-text of mean trowel is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]".
+
 check taking the mean trowel:
 	say "You can't find anything to dig, dig?" instead;
 
@@ -23635,11 +23666,9 @@ rhubarb is a fruit.
 
 instead of doing something with the pugnacious plant:
 	if action is procedural:
-		continue the action;
+		if current action is not attacking and current action is not examining:
+			continue the action;
 	say "The plant senses you trying to do something with it and whips a burr at you. [one of]'Burr. Bah!' you say as you notice a brief red welt[or]'Bah. Burr,' you say, as a burr bounces off[or]'Arrh, bub,' you brag as you duck the plant's reflexive attack[or]'Bub...' [greedy-s] distracts you. 'Arrh!' you cry, as you pick out a burr the plant shot at you[in random order]." instead;
-
-check scaning plant:
-	say "The settler doesn't register anything, though the plant gestures threateningly. Maybe you need to be more hands-on, here." instead;
 
 check scaning an-a:
 	say "There should be only three letters, but you see more.";

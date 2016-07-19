@@ -30,26 +30,27 @@ Bangish bashing
 
 >d
 >sb stria
-Your settler registers RRYYR.
-Your settler registers PPYGR.
+Your settler registers (no cheat) RRYYR.
+Your settler registers (cheat on) PPYGR.
 >undo
 >undo
 
 >sb giant pin
-Your settler registers RYYRRYRR.
-Your settler registers RYYPPYRR.
+Your settler registers (no cheat) RYYRRYRR.
+Your settler registers (cheat on) RYYPPYRR.
 >painting
 DEBUG INFO: Adding a min point
 
 >sb tables
-Your settler registers RRYRRY.
-You fiddle with the cheat button and note that nothing happens to the R's and Y's.
+Your settler registers (no cheat) RRYRRY.
+Your settler registers (cheat on) RRYRRY.
+
 >stable
 DEBUG INFO: Adding a min point
 
 >sb my niche
-Your settler registers RRYRRYO.
-You fiddle with the cheat button and note that nothing happens to the R's and Y's.
+Your settler registers (no cheat) RRYRRYO.
+Your settler registers (cheat on) RRYRRYO.
 
 >chimney
 DEBUG INFO: Adding a min point
@@ -58,8 +59,8 @@ DEBUG INFO: Adding a min point
 A Blest Stable
 
 >sb sitar
-Your settler registers RRYYR.
-Your settler registers PRYYP.
+Your settler registers (no cheat) RRYYR.
+Your settler registers (cheat on) PRYYP.
 
 >stair
 DEBUG INFO: Adding a min point
@@ -70,8 +71,8 @@ You shouldn't need to go back
 >u
 
 >sb pram
-Your settler registers RYRR.
-!/[PG]
+Your settler registers (no cheat) RYRR.
+Your settler registers (cheat on) RYRR.
 
 >ramp
 DEBUG INFO: Adding a min point
@@ -103,15 +104,15 @@ Your score has just gone up
 Carven Cavern
 
 >sb plates
-Your settler registers RRYRRY.
-Your settler registers RRGRRY.
+Your settler registers (no cheat) RRYRRY.
+Your settler registers (cheat on) RRGRRY.
 
 >staple
 Your score has just gone up by one point
 
 >sb plaster
-Your settler registers RRYRRYR.
-Your settler registers RRGRRGP.
+Your settler registers (no cheat) RRYRRYR.
+Your settler registers (cheat on) RRGRRGP.
 
 >stapler
 Your score has just gone up by one point
@@ -130,78 +131,96 @@ Won now: Roman Manor (13/13).
 * _stores
 
 >sb store b
-WRONG
+Your settler registers (no cheat) RYRRYR.
+Your settler registers (cheat on) PYRRGR.
 >sb store p
-WRONG
+Your settler registers (no cheat) RRYRRY.
+Your settler registers (cheat on) RRYRRY.
 >sb store u
-WRONG
+Your settler registers (no cheat) RYYRYR.
+Your settler registers (cheat on) RYYRGR.
 >sb store v
-WRONG
+Your settler registers (no cheat) RRYRYR.
+Your settler registers (cheat on) RRGRGR.
 >sb store t
-WRONG
+Your settler registers (no cheat) YRRYRR.
+Your settler registers (cheat on) YPRYRR.
 >sb store w
-WRONG
+Your settler registers (no cheat) RYRYRR.
+Your settler registers (cheat on) RYRYRR.
 >sb store y
-WRONG
+Your settler registers (no cheat) YORRYR.
+Your settler registers (cheat on) YORRGR.
 >sb store h
-WRONG
+The settler gives a weird noise, as if it doesn't want to scan this store--yet.
+#?? don't scan both?
 >sb store k
-WRONG
+Your settler registers (no cheat) RYRYRR.
+Your settler registers (cheat on) RYRYRR.
+
 >sb store n
-WRONG
+Your settler registers (no cheat) RYRRYR.
+Your settler registers (cheat on) RYRRYR.
 
 >sb store g
-WRONG
+#smack the person down saying registers nothing once?
+The letters settler registers nothing.
 
 >presto
 Your score has just gone up by one point
 >sb spot
-WRONG
+The letters settler registers nothing.
 
 >otters
 Your score has just gone up by one point
 >sb otters
-WRONG
+The letters settler registers nothing.
 
 >routes
 Your score has just gone up by one point
 >sb routes
-WRONG
+The letters settler registers nothing.
 
 >troves
 Your score has just gone up by one point
 >sb troves
-WRONG
+The letters settler registers nothing.
 
 >towers
 Your score has just gone up by one point
 >sb towers
-WRONG
+The letters settler registers nothing.
 
 >oyster
 Your score has just gone up by one point
 >sb oyster
-WRONG
+The letters settler registers nothing.
 
 >others
 Your score has just gone up by one point
->sb others
+>sb hoster
 WRONG
 
 >tokers
 Your score has just gone up by one point
 >sb tokers
+The letters settler registers nothing.
 >sb cloud
+The letters settler registers nothing.
 
 >nestor
 >sb nestor
+The letters settler registers nothing.
 
 >enter cloud
 
 >sb ian
-WRONG
+"No offense, chum, but it's me who should probably be scanning you lawbreakers." He nods and smiles, faux-friendly, and you turn back to the lecturer.
 >sb lecturer
-WRONG
+You point your settler at the tedious lecturer.
+Your settler registers (no cheat) YYRRYRY.
+Your settler registers (cheat on) YYRRYRY.
+
 >scan
 WRONG
 
@@ -213,26 +232,38 @@ WRONG
 0 out of 18 total points in the current region, Routes
 
 >sb bench
-WRONG
+Your settler registers (no cheat) YRYYRRR.
+Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S.
+Your settler registers (cheat on) GPYYPRR.
+
 >sb worst ad
-WRONG
+Your settler registers (no cheat) RYRYRRR.
+Your settler registers (cheat on) RGRYRRR.
 
 >towards
 Your score has just gone up by one point
 DEBUG INFO: Adding a min point
 
 >sb picturers
-WRONG
+Your settler registers (no cheat) YRRYRY.
+Your settler registers (cheat on) YRRYRG.
+
 >inside
 Your score has just gone up by one point
 
+>x list
+
 >sb spoon
 
+>out
 
 >sb lairage
-WRONG
+Your settler registers (no cheat) YRRYRR.
+Your settler registers (cheat on) YRRYRP.
+
 >sb adsorbing
-WRONG
+Your settler registers (no cheat) RYRR.
+Your settler registers (cheat on) PGRR.
 
 >past
 Your score has just gone up by one point
@@ -240,7 +271,9 @@ Your score has just gone up by one point
 Idle Deli
 
 >sb seed pit
-WRONG
+Your settler registers (no cheat) RYRRYRY.
+Your settler registers (cheat on) RGRRYRY.
+
 >despite
 Your score has just gone up by one point
 
@@ -250,34 +283,45 @@ Your score has just gone up by one point
 Adobe Abode
 
 >sb ashtray
-WRONG
+#?? how to get a double-print out of the way?
+Only the pipe soot does anything to the settler, so you focus on that.
+Your settler registers (no cheat) YRRYRYRY.
+Your settler registers (cheat on) YRPYPYRY.
 >sb pipe soot
-WRONG
+Your settler registers (no cheat) YRRYRYRY.
+Your settler registers (cheat on) YRPYPYRY.
+
 >opposite
 Your score has just gone up by one point
 
 >out
 
 >sb bench
-WRONG
+Your settler registers (no cheat) YRYYRRR.
+Your settler registers (cheat on) GPYYPRR.
 
 >against
 Your score has just gone up by one point
 
 >sb giant
-WRONG
+Your settler registers (no cheat) YRRRYRY.
+Your settler registers (cheat on) YRRRYRY.
+
+>sb elbow
+Your settler registers (no cheat) RYRYR.
+Your settler registers (cheat on) RYRGP.
+
+>astride
+Your score has just gone up by one point
+
+>below
+Your score has just gone up by one point
+
 >sb elbow
 WRONG
 
 >sb giant
 WRONG
->astride
-Your score has just gone up by one point
-
->sb elbow
-WRONG
->below
-Your score has just gone up by one point
 
 >sb rude
 >under
@@ -292,53 +336,75 @@ You gnash your teeth a bit thinking about how threatening the form is. It is pro
 The thing can't block out THAT much of the sky. You've got the wrong word.
 
 >sb huge thing
-WRONG
+Your settler registers (no cheat) RRYR.
+Your settler registers (cheat on) PRYP.
+
 >from
 Your score has just gone up by one point
 
 >sb bean
-WRONG
+Your settler registers (no cheat) RYRYYRR.
+Your settler registers (cheat on) RYRYYRR.
+
 >beneath
 Your score has just gone up by one point
 
 Sun-Spared Underpass
 
 >sb darkness
-WRONG
+Your settler registers (no cheat) YRRYR.
+Your settler registers (cheat on) GPRGR.
 
 >until
 Your score has just gone up by one point
->sb unroad
+>sb cracks
 WRONG
 >around
 Your score has just gone up by one point
 
 >sb unroad
-WRONG
+Your settler registers (no cheat) YRYRR.
+Your settler registers (cheat on) YRYRR.
+
 >along
 Your score has just gone up by one point
 
 Ripe Pier
 
->sb midst
+>sb mist
 WRONG
 
 >sb sign
-WRONG
+Your settler registers (no cheat) YRYYRR.
+Your settler registers (cheat on) GPYYRP.
 
 >amidst
 Your score has just gone up by one point
 
 >sb controls
-WRONG
+Your settler registers (no cheat) RYR??R.
+This is odd--all these question marks. Surely you'll find by accident where Ben hid the hit win button? Or you can just pick and choose, focusing on Ben, or the win.
+Your settler registers (cheat on) ?G???P.
 
 >behind
 Your score has just gone up by one point
 
->sb thor
+>scan thor
 WRONG
+>scan thor
+WRONG
+
+>cheat
+>scan thor
+WRONG
+>scan thor
+WRONG
+
+>cheat
+
 >sb beet
-WRONG
+Your settler registers (no cheat) RYRRYYR.
+Your settler registers (cheat on) RGRRGGR.
 
 >between
 Your score has just gone up by one point
@@ -354,8 +420,8 @@ Routes (18/18)
 Loather Rathole
 
 >sb egg
-Your settler registers RYRY.
-Your settler registers ??R?--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode.
+Your settler registers (no cheat) RYRY.
+Your settler registers (cheat on) ??R?--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode.
 
 >gape
 Your score has just gone up by one point
@@ -383,17 +449,19 @@ Your score has just gone up by one point
 >scan
 WRONG
 >sb post
-Your settler registers RRYR.
-Your settler registers ?R??.
+Your settler registers (no cheat) RRYR.
+Your settler registers (cheat on) ?R??.
 
 >spot
 Your score has just gone up by one point
 
 >sb bee
-WRONG
+Your settler registers (no cheat) RYRYYRY.
+Your settler registers (cheat on) RYRYYRG.
+
 >sb head
-Your settler registers RYYRYR.
-Your settler registers RYYRYR.
+Your settler registers (no cheat) RYYRYR.
+Your settler registers (cheat on) RYYRYR.
 
 >reason
 Your score has just gone up by one point
@@ -406,20 +474,20 @@ Pallid
 
 >scan
 >sb diapers
-Your settler registers RYRRYYR.
-Your settler registers PYRPYYR.
+Your settler registers (no cheat) RYRRYYR.
+Your settler registers (cheat on) PYRPYYR.
 
 >sb spider
-Your settler registers RYRRYYR.
-Your settler registers RYRRYYP.
+Your settler registers (no cheat) RYRRYYR.
+Your settler registers (cheat on) RYRRYYP.
 
 >sb sad pier
-Your settler registers RYRRYYR.
-Your settler registers RYRPYYP.
+Your settler registers (no cheat) RYRRYYR.
+Your settler registers (cheat on) RYRPYYP.
 
 >sb lager
-Your settler registers RRYRY.
-Your settler registers RRYRY.
+Your settler registers (no cheat) RRYRY.
+Your settler registers (cheat on) RRYRY.
 
 >glare
 Adding a min point
@@ -432,8 +500,8 @@ Your score has just gone up by one point
 Boredom Bedroom
 
 >sb lead
-Your settler registers RYYR.
-Your settler registers ???R.
+Your settler registers (no cheat) RYYR.
+Your settler registers (cheat on) ???R.
 
 Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?
 
@@ -442,8 +510,8 @@ Your score has just gone up by one point
 Dour Tan Rotunda
 
 >sb brochure
-Your settler registers RYRYRY.
-Your settler registers R???RG.
+Your settler registers (no cheat) RYRYRY.
+Your settler registers (cheat on) R???RG.
 You imagine a voice saying OBSTACLES LIKE THOSE QUESTION MARKS MAY BE OPPORTUNITIES. A reading of the brochure may help see what it's about.
 
 >desire
@@ -453,29 +521,31 @@ Econ-Cone
 
 >sb statue
 You're pretty sure Trevis Vister did his best to make his statue couldn't be melted down by some silly mind-game, but maybe the settler will turn up something...hmm, nothing, except for the rivets.
-Your settler registers RRRYRY.
+Your settler registers (no cheat) RRRYRY.
 A little messy, but that may just mean there are two ways to look at this problem.
-Your settler registers ?RR?R?.
+Your settler registers (cheat on) ?RR?R?.
 The greens and yellows in the last two characters blink in unison.
+WRONG
 
 >sb rivets
-Your settler registers RRRYRY.
+Your settler registers (no cheat) RRRYRY.
 A little messy, but that may just mean there are two ways to look at this problem.
-Your settler registers ?RR?R?.
+Your settler registers (cheat on) ?RR?R?.
 The greens and yellows in the last two characters blink in unison.
+WRONG
 
 >aspire
 Your score has just gone up by one point
 >strive
 
 >sb statue
-WRONG
+The settler emits a BEEEOOOP as if to say there's no need to do any more, there.
 >sb rivets
-WRONG
+The settler emits a BEEEOOOP as if to say there's no need to do any more, there.
 
 >sb pernod
-Your settler registers RYRRYR.
-Your settler registers PYRRYR.
+Your settler registers (no cheat) RYRRYR.
+Your settler registers (cheat on) PYRRYR.
 
 >ponder
 FiefCo Office
@@ -485,22 +555,23 @@ If only you could tune that out!
 >scan
 WRONG
 >sb noise
-Your settler registers YRRYRY.
+Your settler registers (no cheat) YRRYRY.
+Your settler registers (cheat on) YRRYRY.
 
 >ignore
 Your score has just gone up by one point
 
 >sb lobster
-Your settler registers RYRRRYR.
-Your settler registers RGRPPGP.
+Your settler registers (no cheat) RYRRRYR.
+Your settler registers (cheat on) RGRPPGP.
 
 >sb stream
-Your settler registers RYRRYR.
-Your settler registers RYRRYR.
+Your settler registers (no cheat) RYRRYR.
+Your settler registers (cheat on) RYRRYR.
 
 >sb divorces
-Your settler registers RYRRYRYR.
-Your settler registers PGRRYRGR.
+Your settler registers (no cheat) RYRRYRYR.
+Your settler registers (cheat on) PGRRYRGR.
 
 >master
 Your score has just gone up by one point
@@ -511,12 +582,15 @@ Your score has just gone up by one point
 Adding a min point
 
 >sb salt
-Your settler registers RYRR.
-Your settler registers RGRP.
+Your settler registers (no cheat) RYRR.
+Your settler registers (cheat on) RGRP.
 >last
 
 >sb playbill
-WRONG
+Your settler registers (no cheat) RYRYRR.
+Your settler registers (cheat on) RYRYRR.
+!/[PG]
+
 >scan
 WRONG
 
@@ -627,6 +701,9 @@ Your settler registers RGRR.
 >darn
 Your score has just gone up by one point
 
+>sb leo
+Your settler registers RRYRRYR.
+Your settler registers PRYRRYR.
 >sb rand
 Your settler registers RRYRRYR.
 Your settler registers PRYRRYR.
@@ -655,11 +732,20 @@ Your settler registers RORY.
 Your score has just gone up by one point
 
 >sb log ons
-WRONG
+Leo and Rand ooh and ah at how you're using a thing to find out about things.
+Your settler registers RYRYRR.
+Your settler registers RGRGPR.
+
 >sb alert
-WRONG
+Your settler registers RYRYR.
+Your settler registers RY???
+Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them.
+
 >sb ought
-WRONG
+Your settler registers RYYRR.
+Leo and Rand ooh and ah at how you're using a thing to find out about things.
+Your settler registers RYYRR.
+!/[PG]
 
 >later
 Your score has just gone up by one point
@@ -668,11 +754,13 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >sb log ons
-WRONG
+You fiddle with the settler, but on each setting, it emits a BEEEOOOP which suggests there's nothing left to do here.
+
 >sb alert
-WRONG
+You fiddle with the settler, but on each setting, it emits a BEEEOOOP which suggests there's nothing left to do here.
+
 >sb ought
-WRONG
+You fiddle with the settler, but on each setting, it emits a BEEEOOOP which suggests there's nothing left to do here.
 
 >n
 Hacks' Shack
@@ -686,7 +774,9 @@ Your score has just gone up by one point
 Adding a min point
 
 >sb escaroles
-WRONG
+Your settler registers RYRRYRYRY.
+Your settler registers RYRRYRYRY.
+
 >casserole
 Your score has just gone up by one point
 Adding a min point
@@ -755,22 +845,24 @@ Only one more piece of hardware
 
 >put leaf on skid
 
->s
-Your score has just gone up by one point
-Hacks' Shack
-
 #purloin ALL the bad books???
 
+>purloin bakery do
 >sb bakery do
 WRONG
+>purloin bred okay
 >sb bred okay
 WRONG
+>purloin day broke
 >sb day broke
 WRONG
+>purloin dear koby
 >sb dear koby
 WRONG
+>purloin ebay dork
 >sb ebay dork
 WRONG
+>purloin  yo be dark
 >sb yo be dark
 WRONG
 
@@ -783,6 +875,7 @@ WRONG
 Your score has just gone up by one point
 
 >push skid n
+#?? describe skid as having used up its usefulness
 >push skid n
 >push skid n
 Your score has just gone up by one point
@@ -845,21 +938,38 @@ Presto (33/33)
 Posh Hops Shop
 
 >sb tunes
-WRONG
+Your settler registers YRRYR.
+Your settler registers YRRGR.
 >sb amper
-WRONG
+Your settler registers RYRYR..
+
+Your settler registers R?RYR--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode.
+
 >sb tumblers
-WRONG
+Your settler registers RRYR.
+Your settler registers RRYR.
+
 >sb sign
-WRONG
+Your settler registers RYRR.
+Your settler registers ?G?R.
+
 >sb casper
-WRONG
+Your settler registers RRRYRY.
+Your settler registers ?RRYRY.
+
 >sb capers
-WRONG
+#should only print once
+Your settler registers RRRYRY.
+Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue.
+Your settler registers RRR??Y.
+
 >sb stein
-WRONG
+Your settler registers YRRYR.
+Your settler registers YRRYR.
+
 >sb tines
-WRONG
+Your settler registers (no cheat) YRRYR.
+Your settler registers (cheat on) YRRGR.
 
 >sing
 >spit
@@ -869,24 +979,32 @@ WRONG
 Olde Lode
 
 >sb clam
-WRONG
+Your settler registers RYRR.
+Your settler registers PYRP.
+
 >calm
 Your score has just gone up by one point
 
 >sb urn
-WRONG
+Your settler registers RYR.
+Your settler registers RYP.
+
 >run
 Your score has just gone up by one point
 
 Hero's Shore
 
 >sb raft
-WRONG
+Your settler registers RYRR.
+Your settler registers RGRP.
+
 >sb oars
-WRONG
+Your settler registers RYYR.
+Your settler registers RYYR.
 
 >sb canoe
-WRONG
+Your settler registers YRYYR.
+Your settler registers YRYYR.
 
 >sb boats
 WRONG
@@ -898,18 +1016,20 @@ Fighter Freight
 >scan
 WRONG
 >sb crays
-WRONG
+You already scanned the pale plea. It was RYYR.
 
 >leap
 Your score has just gone up by one point
 Anger Range
 
 >sb carps
-WRONG
+Your settler registers (no cheat) RRRYR.
+Your settler registers (cheat on) RRPYR.
 >sb pikes
-WRONG
+Your settler registers (no cheat) RRYRY.
+Your settler registers (cheat on) RRYRY.
 >sb trout
-WRONG
+The trout doesn't need that right now. He needs someone who can help him deal with the pikes and carps.
 
 >scrap
 Your score has just gone up by one point
@@ -917,17 +1037,18 @@ Your score has just gone up by one point
 >e
 Lean Lane
 
->scan
-WRONG
-
->ss cans
-WRONG
-
->sb eeks
-
 >sb cans
+WRONG
+
+>scan
 Your score has just gone up by one point
 min point
+
+>sb
+
+>sb eeks
+Your settler registers (no cheat) RYYR.
+Your settler registers (cheat on) RGYR.
 
 >seek
 Your score has just gone up by one point
@@ -938,16 +1059,23 @@ Handsome Sand Home
 WRONG
 
 >sb tea
-WRONG
+Your settler registers (no cheat) YYR.
+Your settler registers (cheat on) YYR.
 
 >sb trout
-WRONG
+Your settler registers (no cheat) RYRYR.
+Your settler registers (cheat on) PYRYR.
+
 >sb tuna
-WRONG
+The letters settler registers nothing.
+
 >sb wipes
-WRONG
+Your settler registers (no cheat) RRYRY.
+Your settler registers (cheat on) RRYRY.
+
 >sb dent
-WRONG
+Your settler registers (no cheat) RYRR.
+Your settler registers (cheat on) RGPR.
 
 >eat
 Your score has just gone up by one point
@@ -974,7 +1102,8 @@ min point for this flip
 WRONG
 
 >sb crates
-WRONG
+Your settler registers (no cheat) RYYRR.
+Your settler registers (cheat on) RYGRP.
 
 >trace
 Your score has just gone up by one point
@@ -990,9 +1119,12 @@ Your score has just gone up by one point
 >scan
 WRONG
 >sb skis
-WRONG
+Your settler registers (no cheat) RYRR.
+Your settler registers (cheat on) RYRP.
+
 >sb knob
-WRONG
+Your settler registers (no cheat) RYRR.
+Your settler registers (cheat on) RYRR.
 
 >kiss
 Your score has just gone up by one point
@@ -1005,20 +1137,25 @@ a hut
 >scan
 WRONG
 >sb tubs
-WRONG
+Your settler registers (no cheat) RYRR.
+Your settler registers (cheat on) RGRR.
 
 >bust
 Your score has just gone up by one point
 
 >sb prod
-WRONG
+Your settler registers (no cheat) RRYR.
+Your settler registers (cheat on) RPGR.
+
 >scan
 WRONG
 >drop
 Your score has just gone up by one point
 
 >sb waste
-WRONG
+Your settler registers (no cheat) RRYYR.
+Your settler registers (cheat on) RRYYR.
+
 >scan
 WRONG
 >sweat
@@ -1026,17 +1163,23 @@ Your score has just gone up by one point
 min point for
 
 >sb heaps
-WRONG
+Your settler registers (no cheat) RRYRY.
+Your settler registers (cheat on) RRGPY.
+
 >shape
 Your score has just gone up by one point
 
 >sb lance
-WRONG
+Your settler registers (no cheat) RRYYR.
+Your settler registers (cheat on) RRYYR.
+
 >scan
 WRONG
 >clean
 Your score has just gone up by one point
 min point for
+
+>out
 
 >s
 
@@ -1168,57 +1311,91 @@ Oyster (39/39)
 * _towers-seeds-2-5
 
 >ts
->gonear towers
+>gonear trefoil
 
 >seed 2
 
 >sb demitri
-WRONG
+Your settler registers (no cheat) RYRYRYR.
+Your settler registers (cheat on) RYPGRYR.
+
 >sb andrew
-WRONG
+Your settler registers (no cheat) RYRRYR.
+Your settler registers (cheat on) RYRRGR.
+
 >sb marcel
-WRONG
+Your settler registers (no cheat) RYRRYR.
+Your settler registers (cheat on) RGRRGR.
+
 >sb bredo
-WRONG
+Your settler registers (no cheat) RYRYR.
+Your settler registers (cheat on) PYRYR.
+
 >sb eldon
-WRONG
+Your settler registers (no cheat) YRRYR.
+Your settler registers (cheat on) YPPYP.
+
 >sb shane
-WRONG
+Your settler registers (no cheat) YRRYR.
+Your settler registers (cheat on) YRRYR.
 
 >seed 3
 
 >sb archie
-WRONG
+Your settler registers (no cheat) YRRYYR.
+Your settler registers (cheat on) GRRYYR.
+
 >sb leander
-WRONG
+Your settler registers (no cheat) RYYRRYR.
+Your settler registers (cheat on) PGGRRGR.
+
 >sb marlon
-WRONG
+Your settler registers (no cheat) RYRRYR.
+Your settler registers (cheat on) RYPRYR.
+
 >sb daryl
-WRONG
+Your settler registers (no cheat) RYRRO.
+Your settler registers (cheat on) RGPRO.
+
 >sb goldy
-WRONG
+Your settler registers (no cheat) RYRRO.
+Your settler registers (cheat on) PGRRB.
+
 >sb tyson
-WRONG
+Your settler registers (no cheat) RRYRO.
+Your settler registers (cheat on) RRYRO.
 
 >seed 4
 
 >sb preston
-WRONG
+Your settler registers (no cheat) RRYRYRR.
+Your settler registers (cheat on) PPYRYRR.
+
 >sb barney
-WRONG
+Your settler registers (no cheat) RYYRRO.
+Your settler registers (cheat on) RYYRRB.
+
 >sb reggie
-WRONG
+Your settler registers (no cheat) YRRYYR.
+Your settler registers (cheat on) YRPYYR.
+
 >sb dewey
-WRONG
+Your settler registers (no cheat) RYYRO.
+Your settler registers (cheat on) RGYRB.
+
 >sb royce
-WRONG
+Your settler registers (no cheat) RYOYR.
+Your settler registers (cheat on) RGBYR.
+
 >sb wade
-WRONG
+Your settler registers (no cheat) YRYR.
+Your settler registers (cheat on) YRYR.
 
 >seed 5
 
 >sb terrance
-WRONG
+Your settler registers (no cheat) RYRRYYRR.
+Your settler registers (cheat on) RGRPYYRR.
 
 * _towers
 
@@ -1227,18 +1404,35 @@ WRONG
 >in
 
 >sb cedrick
-WRONG
+Your settler registers (no cheat) RRYRRYR.
+Your settler registers (cheat on) PRYRRYR.
+
 >sb andres
-WRONG
+Your settler registers (no cheat) RRYRYR.
+Your settler registers (cheat on) RPYPGR.
+
 >sb ernest
-WRONG
+Your settler registers (no cheat) RYRRYR.
+Your settler registers (cheat on) RYPRYR.
+
 >sb blake
-WRONG
+Your settler registers (no cheat) RRYYR.
+Your settler registers (cheat on) PPYYR.
+
 >sb edwin
-WRONG
+Your settler registers (no cheat) RYRYR.
+Your settler registers (cheat on) RYRYR.
+
 >sb geno
-WRONG
+Your settler registers (no cheat) RYRY.
+Your settler registers (cheat on) PYPY.
+
 >sb rodney
+Your settler registers (no cheat) OYRRYR.
+Your settler registers (cheat on) OGRRGR.
+
+>sb palace
+Nothing unusual like that around here.
 
 >gone
 Your score has just gone up by one point
@@ -1255,17 +1449,23 @@ Your score has just gone up by one point
 >yonder
 Your score has just gone up by one point
 
->sb palace
-WRONG
-
 Topside Deposit
 
 >sb palace
-WRONG
+You'd think you would see eleven lights for the curst palace, but some are blacked out, as if the settler was too far away to analyze everything.
+Your settler registers (no cheat) RRYR*******.
+You don't see any more than you have before.
+Your settler registers (cheat on) RRYR*******.
+Wow, lots of blank data. You may want to get closer to have any hope of figuring how to restore the palace.
 
 >sb ray eck
-WRONG
+Your settler registers (no cheat) RRYYRO.
+Ray Eck begins babbling about how interesting the settler looks, almost as interesting as his keycar. Maybe you could ASK him about the keycar, if he's still stumping you.
+Your settler registers (cheat on) RRYYRO.
+
 >sb keycar
+Your settler registers (no cheat) RRYYRO.
+Your settler registers (cheat on) RRYYRO.
 
 >creaky
 Your score has just gone up by one point
@@ -1274,52 +1474,72 @@ Your score has just gone up by one point
 Scope Copse
 
 >sb palace
-WRONG
-
->sb ray eck
-WRONG
+Ooh! A few more lights, now.
+Your settler registers (no cheat) RRYRR******.
+You don't see any more than you have before.
+Your settler registers (cheat on) RRYR?******--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode.
+Hm, maybe you can figure what the fifth letter is if you know more about the later ones.
 
 >sb yurts
-WRONG
+Your settler registers (no cheat) RYRRO.
+Your settler registers (cheat on) RGRPO.
+
 >rusty
 Your score has just gone up by one point
 min point
 
+>sb diners
+Your settler registers (no cheat) RYRRYR.
+Your settler registers (cheat on) R??R?R.
+
 >rinsed
 Your score has just gone up by one point
-WRONG
 
 >sb robot
-WRONG
+Your settler registers (no cheat) RYYRRYR.
+Your settler registers (cheat on) RGYRRGR.
 
 >weirder
 Your score has just gone up by one point
 
 >sb hulk
+Your settler registers (no cheat) RRYRRO.
+Your settler registers (cheat on) RRYRRB.
 
-WRONG
 >clumsy
-Your score has just gone up by one point
+Your settler registers (no cheat) RRYRRO.
+Your settler registers (cheat on) RRYRRB.
 
 >n
 Baldest Blasted Saltbed
 
 >sb palace
-WRONG
+Ooh! A few more lights, now.
+Your settler registers (no cheat) RRYRRY*****.
+You don't see any more than you have before.
+Your settler registers (cheat on) RRYR?Y*****.
+Hm, maybe you can figure what the fifth letter is if you know more about the later ones.
 
 >sb old ice
-WRONG
+Your settler registers (no cheat) RYYRYR.
+
+Your settler registers (cheat on) R?YRYR.
+
 >coiled
 Your score has just gone up by one point
 Adding a min point
 
 >sb pirates
-WRONG
+Your settler registers (no cheat) RYRRYYR.
+Your settler registers (cheat on) PYRRYGR.
+
 >pastier
 Your score has just gone up by one point
 
 >sb iprune
-WRONG
+Your settler registers (no cheat) RYRYYR.
+Your settler registers (cheat on) RYR?YR.
+
 >punier
 Your score has just gone up by one point
 
@@ -1327,20 +1547,30 @@ Your score has just gone up by one point
 Anemic Cinema
 
 >sb palace
-WRONG
+Ooh! A few more lights, now.
+Your settler registers (no cheat) RRYRRYR****.
+You don't see any more than you have before.
+Your settler registers (cheat on) RRYR?YR****.
+Hm, maybe you can figure what the fifth letter is if you know more about the later ones.
 
 >sb admirer
-WRONG
+Your settler registers (no cheat) RYRRYYR.
+Your settler registers (cheat on) RYRRYGR.
+
 >married
 Your score has just gone up by one point
 
 >sb sweatier
-WRONG
+Your settler registers (no cheat) RYYRYYRR.
+Your settler registers (cheat on) ?YYRY?RR.
+
 >weariest
 Your score has just gone up by one point
 
 >sb ingrates
-WRONG
+Your settler registers (no cheat) YRRRRYYR.
+Your settler registers (cheat on) ?PPRRYGR.
+
 >angstier
 Your score has just gone up by one point
 
@@ -1348,29 +1578,46 @@ Your score has just gone up by one point
 Shaven Havens
 
 >sb palace
-WRONG
+You don't see any more than you have before.
+Your settler registers (no cheat) RRYRRYR****.
+You don't see any more than you have before.
+Your settler registers (cheat on) RRYR?YR****.
+Hm, maybe you can figure what the fifth letter is if you know more about the later ones.
 
 >s
 
 >w
 Outer Route
 >sb palace
-WRONG
+You don't see any more than you have before. In fact, you have less information than when you were closer.
+Your settler registers (no cheat) RRYRRY*****.
+You don't see any more than you have before. In fact, you have less information than when you were closer.
+Your settler registers (cheat on) RRYR?Y*****.
+Hm, maybe you can figure what the fifth letter is if you know more about the later ones.
+
 >e
 
 >e
 Salted Deltas
 
 >sb palace
-WRONG
+Ooh! A few more lights, now.
+Your settler registers (no cheat) RRYRRYRY***.
+You don't see any more than you have before.
+Your settler registers (cheat on) RRYR?YRY***.
+Hm, maybe you can figure what the fifth letter is if you know more about the later ones.
 
 >sb atheists
-WRONG
+Your settler registers (no cheat) RYRRYYRR.
+Your settler registers (cheat on) RYRRGYRR.
+
 >hastiest
 Your score has just gone up by one point
 
 >sb grailman
-WRONG
+Your settler registers (no cheat) RYRRYRYR.
+Your settler registers (cheat on) RYRRYR?R.
+
 >marginal
 Your score has just gone up by one point
 
@@ -1378,36 +1625,52 @@ Your score has just gone up by one point
 Savager Ravages
 
 >sb palace
-WRONG
+You don't see any more than you have before. In fact, you have less information than when you were closer.
+Your settler registers (no cheat) RRYRRYR****.
 
 >sb reed's ale
-WRONG
+Your settler registers (no cheat) RYRYYRYR.
+Your settler registers (cheat on) PGRYYRYR.
 
 >resealed
 Your score has just gone up by one point
 
 >sb mel fish
-WRONG
+Your settler registers (no cheat) RYRRYRR.
+Hmm, painted and covered have three vowels--so it's probably the FLEMISH in inapt paint across his chest.
+Your settler registers (cheat on) RYRRYRR.
+The weeds continue to sway freely and menacingly, but they can't be THAT tough.
+# do I know him as Mel Fish?
 
 >himself
 Your score has just gone up by one point
 
 >sb weeds
-WRONG
+Your settler registers (no cheat) RYRYR.
+Your settler registers (cheat on) RGRYR.
 
 >sewed
 Your score has just gone up by one point
 
 >sb raves saver
-WRONG
+Your settler registers (no cheat) RYYRRO.
+
+Your settler registers (cheat on) ???RR?.
+
+Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT.
+
 >sb replay player
-WRONG
+Your settler registers (no cheat) RYYRRO.
+Your settler registers (cheat on) ???RR?.
+
 >pearly
 Your score has just gone up by one point
 min point
 
 >sb denim
-WRONG
+Your settler registers (no cheat) RYRYR.
+Your settler registers (cheat on) RYPYR.
+
 >mined
 Your score has just gone up by one point
 min point
@@ -1416,15 +1679,26 @@ min point
 
 Unblest Sunbelt
 >sb palace
-WRONG
+You don't see any more than you have before. In fact, you have less information than when you were closer.
+Your settler registers (no cheat) RRYRRY*****.
 
 >sb arid den
-WRONG
+Your settler registers (no cheat) RRYYRYR.
+Your settler registers (cheat on) ??YYRGR.
+
+>sb nerd-aid
+Your settler registers (no cheat) RRYYRYR.
+Your settler registers (cheat on) RRYYRYP.
+
 >drained
 Your score has just gone up by one point
 
+>sb neural
+WRONG
+
 >sb pulses
 WRONG
+
 >pluses
 Your score has just gone up by one point
 
@@ -1432,19 +1706,28 @@ Your score has just gone up by one point
 Danger Garden
 
 >sb palace
-WRONG
+You don't see any more than you have before. In fact, you have less information than when you were closer.
+Your settler registers (no cheat) RRYRRYR****.
 
 >sb bonker
+Your settler registers (no cheat) RRYRYR.
+Your settler registers (cheat on) PRYPGR.
+
 >broken
 Your score has just gone up by one point
 
 >sb organised
-WRONG
+Your settler registers (no cheat) RRYRRYYRY.
+Your settler registers (cheat on) RRYRRYYRY.
+
 >grandiose
 Your score has just gone up by one point
 
 >sb natives
-WRONG
+Your settler registers (no cheat) RYYRYRR.
+Your settler registers (cheat on) ?GYRYRR.
+That's weird. They're just natives, but the blinky bit suggests there may be two possible solutions.
+
 >naivest
 Your score has just gone up by one point
 min point
@@ -1453,12 +1736,21 @@ min point
 Lost Lots
 
 >sb palace
-WRONG
+You don't see any more than you have before. In fact, you have less information than when you were closer.
+Your settler registers (no cheat) RRYRRY*****.
 
 >sb sled rut
-WRONG
+Your settler registers (no cheat) RYRRRYR.
+Your settler registers (cheat on) RYRRRYR.
+
 >sb strudel
-WRONG
+Your settler registers (no cheat) RYRRRYR.
+
+You don't suspect you need to do anything with the strudel, but the settler still pops something up. Maybe it'd be practice to figure how you could've taken it.
+
+Your settler registers (cheat on) RYRRRGR.
+#get rid of doubles
+
 >rustled
 Your score has just gone up by one point
 min point
@@ -1469,17 +1761,28 @@ min point
 Ole Shrine Shoreline
 
 >sb palace
-WRONG
+You don't see any more than you have before.
+
+Your settler registers (no cheat) RRYRRYRY***.
 
 >sb lot
-WRONG
+Your settler registers (no cheat) RYRYYRR.
+Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue.
+Your settler registers (cheat on) ??RYYR?.
+
 >s
 >gs
+>n
 >sb lois
-WRONG
+Your settler registers (no cheat) RYRYYRR.
+Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts.
+Your settler registers (cheat on) ?GRYYRR.
+
+>s
+>gs
+>n
 >holiest
 Your score has just gone up by one point
->gs
 
 >n
 Actionless Coastlines
@@ -1626,7 +1929,7 @@ Towers (45/45)
 
 #### bug with GO TO DUCK printing the wrong error but only if I skip the Trefoil. Is there any way...?
 
-*_otters-other-seeds
+* otters-other-seeds
 
 >a5
 >in
@@ -1645,15 +1948,22 @@ Towers (45/45)
 WRONG
 
 >sb barley
-WRONG
+Your settler registers (no cheat) RYRYRO.
+Your settler registers (cheat on) P??YRB
 
 >barely
 Your score has just gone up by one point
 
 >sb cinders
-WRONG
+Your settler registers (no cheat) RYRRYRR.
+Your settler registers (cheat on) R?RR??R.
+
+Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely
 
 >sb ed riley
+Your settler registers (no cheat) RYYRYRO.
+Your settler registers (cheat on) RYYRYRB.
+
 >reedily
 Your score has just gone up by one point
 
@@ -1663,19 +1973,19 @@ Gent-Fora Frontage
 >sb macks
 WRONG
 
->scan
+>sb macks
 WRONG
->scan
+>sb macks
 WRONG
->scan
+>sb macks
 WRONG
->scan
+>sb macks
 WRONG
->scan
+>sb macks
 WRONG
->scan
+>sb macks
 WRONG
->scan
+>sb macks
 WRONG
 
 >bossily
@@ -1700,7 +2010,8 @@ Loop Pool
 >scan
 WRONG
 >sb cube
-WRONG
+Your settler registers (no cheat) RYRYYRY.
+Your settler registers (cheat on) RGRYGRG.
 
 >because
 Your score has just gone up by one point
@@ -1708,6 +2019,9 @@ Your score has just gone up by one point
 >scan
 WRONG
 >sb eels
+Your settler registers (no cheat) YRRY.
+Your settler registers (cheat on) GRRY.
+
 >else
 Your score has just gone up by one point
 
@@ -1719,20 +2033,27 @@ Bran Barn
 >scan
 WRONG
 >sb ghoul hat
-WRONG
+Your settler registers (no cheat) YRRRYYRR.
+Your settler registers (cheat on) YRRRYYRR.
+
 >although
 Your score has just gone up by one point
 
 >scan
 WRONG
 >sb howe
-WRONG
+Your settler registers (no cheat) RYRYRYR.
+Your settler registers (cheat on) RYRYRYR.
+
 >however
 Your score has just gone up by one point
 
 >n
 >sb moat
-WRONG
+Your settler registers (no cheat) YRYR.
+You feel sheepish having used the settler, but it's been a long journey.
+Your settler registers (cheat on) ??YR.
+
 >scan
 WRONG
 
@@ -1760,14 +2081,16 @@ Your score has just gone up by one point
 Wickeder Wire Deck
 
 >sb owls
-WRONG
+Your settler registers (no cheat) RRYR.
+Your settler registers (cheat on) RRYR.
+
 
 >sb medals
-WRONG
->x medals
->sb medals
-WRONG
+The settler reads oddly for a while but doesn't show anything. Maybe you need to reveal the medals some more.
+[NOTE: You'll get a mulligan for instantaneous actions like examining, but you may want to deal with those owls, or flee.]
 
+>slow
+Your score has just gone up by one point
 
 >sb ocelots
 WRONG
@@ -1788,6 +2111,9 @@ Your score has just gone up by one point
 WRONG
 >garbed
 Adding a min point
+
+>sb medals
+WRONG
 
 >s
 >s
@@ -1817,22 +2143,26 @@ WRONG
 >parrot
 Your score has just gone up by one point
 
->sb snail
+>sb nails
 WRONG
 >snail
 Your score has just gone up by one point
 
 >sb thrones
-WRONG
+Your settler registers (no cheat) RYRRYRR.
+Your settler registers (cheat on) RYPRYRP.
+
 >hornets
 Your score has just gone up by one point
 
 >sb corona
-WRONG
+Your settler registers (no cheat) RYRYYR.
+Your settler registers (cheat on) RYRGYR.
+
 >racoon
 Your score has just gone up by one point
 
->sb snipe
+>sb pines
 WRONG
 >snipe
 Your score has just gone up by one point
@@ -1844,12 +2174,15 @@ Your score has just gone up by one point
 Coevals' Alcoves
 
 >sb merle
-WRONG
+Your settler registers (no cheat) RYRYRRRO.
+!!Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings.
+Your settler registers (cheat on) RYRYRRRO.
+
 >honestly
 Your score has just gone up by one point
 min point
 >sb merle
-WRONG
+You fiddle with the settler, but on each setting, it emits a BEEEOOOP which suggests there's nothing left to do here.
 
 >scan
 WRONG
@@ -1858,7 +2191,9 @@ WRONG
 Your score has just gone up by one point
 
 >sb whistle
-WRONG
+Your settler registers (no cheat) RYYRRO.
+Your settler registers (cheat on) RGYPRO.
+
 >deeply
 Your score has just gone up by one point
 >quickly
@@ -1890,92 +2225,128 @@ Well, those stores you took care of are gone, and so is the megaton magneto-mont
 >scan
 WRONG
 
+>sb spear
+Your settler registers (no cheat) RYYRR.
+Your settler registers (cheat on) RYYRR.
+
+>pears
+Your score has just gone up by one point.
+
 >x stand
 
->sb harmonicas
-WRONG
 >maraschino
 Your score has just gone up by one point.
 
 >sb pagers
-WRONG
+Your settler registers (no cheat) RRYRYR.
+Your settler registers (cheat on) RRYRYP.
+
 >grapes
 Your score has just gone up by one point.
 
 >sb cries
-WRONG
+Your settler registers (no cheat) RRYRRYRRYYR.
+Your settler registers (cheat on) RRYRRYRPGGP.
+
 >cranberries
 Your score has just gone up by one point.
 
 >sb mad train
+Your settler registers (no cheat) RYRYRYRR.
+Your settler registers (cheat on) RGRYPYRR.
+
 >tamarind
 Your score has just gone up by one point.
 Hmm. Probably
 
 >sb moss cap
-WRONG
+Your settler registers (no cheat) RYRRYRR.
+Your settler registers (cheat on) RGRRYRR.
+
 >compass
 Your score has just gone up by one point.
 
+>sb harmonicas
+Your settler registers (no cheat) RYRYRRRYRY.
+Your settler registers (cheat on) RGPYRRRYRY.
+
 >sb lumps
+Your settler registers (no cheat) RRYRR.
+Your settler registers (cheat on) RRYRP.
+
 >plums
 Your score has just gone up by one point.
 
->sb spear
-WRONG
->pears
-Your score has just gone up by one point.
-
 >sb blurbs
-WRONG
+Your settler registers (no cheat) RRYYRYRRYYR.
+They read ?RYYRYRRY?P, except for "Bieber Rules," which says PRYYRYPRYGP.
+
 >blueberries
 Your score has just gone up by one point.
 
 >sb magenta rope
-WRONG
+Your settler registers (no cheat) RYRYRRYRYRY.
+Your settler registers (cheat on) RYRGRRGRYRG.
+
 >sb mopeage rant
 WRONG
 >sb megaton pear
 WRONG
 >sb rampage note
 WRONG
+
 >pomegranate
 Your score has just gone up by one point.
 Take on a token
 
 >sb peanut cola
-WRONG
+Your settler registers (no cheat) RYRRYRYYRY.
+Your settler registers (cheat on) RYRRYRYYRY.
+
 >cantaloupe
 Your score has just gone up by one point.
 
 >sb videotape
-WRONG
+Your settler registers (no cheat) RYRRYRRYR.
+Your settler registers (cheat on) RYRRYRRYR.
+
 >persimmon
 Your score has just gone up by one point.
 
 >sb slime
-WRONG
+Your settler registers (no cheat) RYRYR.
+Your settler registers (cheat on) RYRYR.
+
 >limes
 Your score has just gone up by one point.
 
 >n
 Swell Wells
 >sb riot cap
+Your settler registers (no cheat) YRRYRYR.
+Your settler registers (cheat on) YRRYPYR.
+
 >apricot
 Your score has just gone up by one point.
 
 >sb silly shirt
-WRONG
+Your settler registers (no cheat) YRRRYR.
+Your settler registers (cheat on) YRPRYR.
+
 >apples
 Your score has just gone up by one point.
 
 >sb miser ruble
-WRONG
+Your settler registers (no cheat) RYRRYRRYYR.
+Your settler registers (cheat on) PYRRYPRYYR.
+
 >mulberries
 Your score has just gone up by one point.
 
 >sb sorer bogey
-WRONG
+Your settler registers (no cheat) RYYRYRYRRO.
+Your settler registers (cheat on) RGYRYPYRRB.
+
 >gooseberry
 Your score has just gone up by one point.
 
@@ -1984,19 +2355,30 @@ scru-it
 >n
 
 >sb stucco
-WRONG
+Your settler registers (no cheat) RYRYRYRR.
+Your settler registers (cheat on) RYRYRYRR.
+
 >coconuts
 Your score has just gone up by one point.
+
+>sb coin
+WRONG
 
 >icon
 Your score has just gone up by one point.
 
 >s
 You fiddle with the coin you got
+
+>sb icons
+WRONG
+
 >n
 
 >sb green stain
-WRONG
+Your settler registers (no cheat) RYRRYRYRYR.
+Your settler registers (cheat on) RYRRYRYRYR.
+
 >tangerines
 Your score has just gone up by one point.
 
@@ -2004,7 +2386,9 @@ Your score has just gone up by one point.
 Filed Field
 
 >sb sickle
-WRONG
+Your settler registers (no cheat) RRYRRRYRRYYR.
+Your settler registers (cheat on) PRYRRRYRRYYR.
+
 >blackberries
 Your score has just gone up by one point.
 
@@ -2014,27 +2398,37 @@ WRONG
 Your score has just gone up by one point.
 
 >sb panel fence
-WRONG
+Your settler registers (no cheat) RYRYYRRRY.
+Your settler registers (cheat on) PGRGYRRRY.
+
 >pineapple
 Your score has just gone up by one point.
 
 >sb barriers west
-WRONG
+Your settler registers (no cheat) RRRYRRYRRYYR.
+Your settler registers (cheat on) RRPYRRYRRYYR.
+
 >strawberries
 Your score has just gone up by one point.
 
 >sb rapt figure
-WRONG
+Your settler registers (no cheat) RRYRYRRYYR.
+Your settler registers (cheat on) RRYRYRRGYR.
+
 >grapefruit
 Your score has just gone up by one point.
 
 >sb pryer bars
-WRONG
+Your settler registers (no cheat) RYRRRYRRO.
+Your settler registers (cheat on) RYRRRYRPO.
+
 >raspberry
 Your score has just gone up by one point.
 
 >sb buried raft
-WRONG
+Your settler registers (no cheat) RRYYRRRYYR.
+Your settler registers (cheat on) PRYYRRPYYP.
+
 >breadfruit
 Your score has just gone up by one point.
 
@@ -2051,12 +2445,16 @@ Your score has just gone up by one point.
 Clangier Clearing
 
 >sb quince
-WRONG
+Your settler registers (no cheat) RYRRYY.
+Your settler registers (cheat on) RYRRYG.
+
 >cinque
 Your score has just gone up by one point.
 
 >sb peach
-WRONG
+Your settler registers (no cheat) RRYYR.
+Your settler registers (cheat on) RRYYR.
+
 >cheap
 Your score has just gone up by one point.
 
@@ -2071,21 +2469,30 @@ WRONG
 Your score has just gone up by one point.
 
 >sb nectarine
-WRONG
+Your settler registers (no cheat) YRRYYRRYR.
+Your settler registers (cheat on) YRPYYRRYR.
+
 >ancienter
 Your score has just gone up by one point.
 
 >sb lemons
-WRONG
+Your settler registers (no cheat) RYRYRR.
+Your settler registers (cheat on) RYRYRR.
+
 >solemn
 Your score has just gone up by one point.
 
 >sb melon
-WRONG
+Your settler registers (no cheat) RYR??--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in cheat mode.
+Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon.
+Your settler registers (cheat on) ?????.
+
 >len mo
 
 >sb list of prices
-WRONG
+Your settler registers (no cheat) RRYRYR.
+Your settler registers (cheat on) RPGRGP.
+
 >cripes
 Your score has just gone up by one point.
 
@@ -2093,23 +2500,29 @@ Your score has just gone up by one point.
 >d
 Scape Space
 
->sb banana
+>sb an a
 WRONG
 >nab an a
 Your score has just gone up by one point.
 
 >sb orange
-WRONG
+Your settler registers (no cheat) RY*RYYR. The black cells would indicate spaces, you guess.
+Your settler registers (cheat on) RY*RYYR.
+
 >go near
 Your score has just gone up by one point.
 
 >sb plant
+Wow, seven letters, odd. Maybe you need to poke or talk to the plant or attack it or something to see what kind it might be.
 WRONG
+
 >rhubarb
 Your score has just gone up by one point.
 
 >sb sign
-WRONG
+Your settler registers (no cheat) RYRYRRYR.
+Your settler registers (cheat on) ?GRGPRG?.
+
 >reversed
 Your score has just gone up by one point.
 
@@ -2128,12 +2541,16 @@ WRONG
 Your score has just gone up by one point.
 
 >sb viewer
-WRONG
+Your settler registers (no cheat) RYRYYR.
+Your settler registers (cheat on) RYRYGR.
+
 >review
 Your score has just gone up by one point.
 
 >sb searcher
-WRONG
+Your settler registers (no cheat) RYRYYRRR.
+Your settler registers (cheat on) RGRYYRRR.
+
 >research
 Your score has just gone up by one point.
 
@@ -2201,7 +2618,7 @@ Rustic Citrus
 >n
 >missed
 
-* only-manor
+* _only-manor
 
 >{include} _manor
 
@@ -2256,4 +2673,5 @@ Rustic Citrus
 * only-others
 
 >gonear rustic citrus
+>purloin letters settler
 >{include} _others
