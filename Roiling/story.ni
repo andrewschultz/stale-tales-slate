@@ -5261,16 +5261,18 @@ rivets	false	false	false	true		"[rivet-help]."
 song	false	true	false	false	"You'd guess it's Eddie's song and not Eddie, since when the instrumentals kick in, the settler's reading stays."
 alert letters	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them." [presto]
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
-pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, five letters is easier than four[end if]."
+perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light."
+pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, five letters is easier than four[end if]." [oyster]
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
+bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 Ray Eck	false	true	false	false	"Ray Eck begins babbling about how interesting the settler looks, almost as interesting as his keycar. Maybe you could ASK him about the keycar, if he's still stumping you." [towers]
 dandier arid den	true	true	false	false	"Well. That's two things you can't figure to start, but maybe you can, if you think about it."
 alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
 sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
 iPrune	true	true	false	false	"Hm. That one blinky letter is pretty weird. Maybe you can start there, or try to annoy the iPrune."
 raves saver	true	false	false	false	"Man! Four of the six entries (and you'd expect five) are blinky. That doesn't seem to mean anything...OR DOES IT. MAybe it's the brand you can/should worry about."
-lois the hostile	false	true	false	false	"Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts." [??]
-hostile-is-he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue." [??]
+lois the hostile	false	true	false	false	"Well, this is tricky. There's her name, and it's probably interacting with itself. Maybe if you think, you can figure a few shortcuts."
+hostile-is-he lot	false	true	false	false	"Well, this is tricky. Their sort of double name affords a couple interpretations for the settler, but maybe that's a bit of a clue."
 man covered in inapt paint	false	true	false	false	"Hmm, painted and covered have three vowels--so it's probably the FLEMISH in inapt paint across his chest."
 old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusing letter may not be so confusing."
 Dr Yow	false	true	false	false	"[if Dr Yow has not been rowdy and Dr Yow has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her].[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]"
@@ -7220,9 +7222,9 @@ check pushing the skid to (this is the yak-oof rule):
 	if yak is in lalaland:
 		if player is in hacks' shack:
 			say "You pushed the skid around enough." instead;
-		say "The skid's served its purpose, and maybe it's time to remake it as a disk back in the shack.";
+		say "The skid's served its purpose, and maybe it's time to remake it as a disk back in the shack. You go back. Jack.";
 		now skid is in shack;
-		move player to shack, without printing a room description;
+		go-back shack;
 		the rule succeeds;
 	if the room second noun of location of player is nowhere:
 		continue the action;
@@ -7756,15 +7758,19 @@ carry out sbing:
 	if debug-state is false:
 		say "[reject]";
 	d "SBing: [noun].";
-	if noun is reflexed:
-		if noun is washed up:
-			continue the action;
+	if noun is a person and noun is washed up: [leo/rand]
+		do nothing;
+	else if noun is reflexed:
+		if noun is rivets and prai is reflexive:
+			try sbing prai instead;
 		if noun is not dialer and noun is not bench:
 			say "You fiddle with the settler, but on each setting, it emits a BEEEOOOP which suggests there's nothing left to do here." instead;
 	now sb-cur is true;
 	let z be cheat-on;
 	now cheat-on is false;
 	try scaning noun;
+	if the rule failed:
+		the rule succeeds;
 	now cheat-on is true;
 	try scaning noun;
 	now cheat-on is z;
@@ -8652,7 +8658,7 @@ oars	oars	"soar"	"soar"	"The oars seem to have thrusters underneath. Physics! Te
 raft	raft	"fart" or "fart on raft"	"fart"	"Channeling frat, uh, co-eds['] humor, you fail to keep your tush shut, thus. Your gust-guts cause the oars, of all things, to grow larger, as if they have gained the gas for propulsion.[paragraph break]It's kind of disgusting, but at least it's not wasteful!"	false	217136535	"Quit rafting around. That raft has oars. Use them. Even if they're stuck in place."
 carps	carps	"scrap" or "scrap carps"	"scrap"	"[spike-scrap]."	false	284257131
 carps	carps	"spike" or "spike pikes"	"spike"	"[spike-scrap]."	false	403472058
-pre-haun	pre-haun	"unearth" or "unearth haunter"	"unearth"	"!!!!"	false	529723362
+pre-haun	pre-haun	"unearth" or "unearth haunter"	"unearth"	"A haunter's underneath--[']n unearthed! You're almost unhearted. It's--a weird [b]sausage[r]. You scry a cry as scary...'My lost ruby!'"	false	529723362
 c2	c2	"trace" or "trace crate"	"trace"	"Based on where you got hit and how fast it hit you, you throw some grass up in the air or something, note how the wood landed, and figure where it came from! But you see no crates-caster. They'll probably chuck something at you when you're not looking, and you'll probably need to use your instincts. (P.S. don't worry, it's not a centaur either, so you can't untrace. You can't trace up and capture it either.)"	false	337433333
 crate	crate	"react" or "react to crate"	"react"	"This time you're ready. You turn around and know when to look when the crate is about to hit you. You knock it down in mid-air and, in a fit of rage, fling it back into the tall weeds and hit the en-pris sniper. You hear an expression of anger, then scurrying. You won't need to recast the crates."	false	337433333
 skis	skis	"kiss"	"kiss"	"As you kiss them, they pull up--and dissolve."	false	290473956
@@ -14214,8 +14220,9 @@ before giving a badbook to yak:
 	if yak is not on skid:
 		now yak-badbook is true;
 		say "[one of]The yak doesn't trust you with something that doesn't look quite enough like food. Maybe you if you gained the yak's trust, first, it might...[or]Still, the yak doesn't trust you enough to eat what was THAT part of a tree. Yet.[stopping]" instead;
-	say "The yak gazes blankly at the book. Then, it ignores the leaf for a second. It begins to munch on the book, for a change of pace. But the actual paper is as indigestible as the words. Some deep animal intuition makes it shudder. It almost pounds its head on the skid--and snap! The safety on the drab yoke calls it to crack and fall off. The yak, dazed, walks away.";
+	say "The yak gazes blankly at the book. Then, it ignores the leaf for a second. It begins to munch on the book, for a change of pace. But the actual paper is as indigestible as the words. Some deep animal intuition makes it shudder. It almost pounds its head on the skid--and snap! The safety on the drab yoke calls it to crack and fall off. The yak, dazed, walks away. You pick up the drab yoke--it's not that heavy.";
 	now yoke is in location of player;
+	now player has drab yoke;
 	now yak is in lalaland;
 	now noun is in lalaland;
 	reg-inc;
@@ -15293,7 +15300,7 @@ check going in shack (this is the maybe lock player in rule):
 after printing the locale description for hacks' shack (this is the auto-screen rule):
 	if player has onyx censer:
 		if censer is prefigured:
-			say "This looks like the place for a screen. You decide to flip the censer to the screen, now.";
+			now hacks' shack is visited;
 			try fliptoing screen;
 			if player has screen:
 				say "You decide to put the screen you just made on the labs slab so you don't have to lug it around any more.";
@@ -15473,12 +15480,16 @@ the USB is a vanishing thing. description is "It's an ordinary USB. Or it would 
 
 a-text of USB is "RYR". b-text of USB is "RY?". parse-text of usb is "x[sp]u[sp]x". usb is any-spoilable.
 
+usb-scan-warn is a truth state that varies.
+
 check scaning USB:
-	say "You wonder if you need to. There aren't many possibilities. There may even be two ways to change it. After all, it's pretty universal. Scan anyway?";
-	if the player consents:
-		say "Ok.";
-	else:
-		say "Good sport!" instead;
+	if usb-scan-warn is false:
+		now usb-scan-warn is true;
+		say "You wonder if you need to. There aren't many possibilities. There may even be two ways to change it. After all, it's pretty universal. Scan anyway?";
+		if the player yes-consents:
+			say "Ok.";
+		else:
+			say "Good sport!" instead;
 
 instead of doing something with usb:
 	if action is procedural:
@@ -15578,6 +15589,8 @@ a badbook has text called theme.
 a badbook has text called author.
 
 does the player mean doing something with a badbook when player is in shack: it is likely.
+
+does the player mean giving a badbook to the yak: it is likely.
 
 does the player mean reading catechism when yak is in lalaland: it is very likely.
 
@@ -15816,6 +15829,8 @@ check putting on the keyboard (this is the complete-keyboard rule):
 		now caps lock is part of the keyboard instead;
 	otherwise:
 		say "That's not a key that needs to fit in the keyboard." instead;
+
+does the player mean doing something with compiled code: it is likely.
 
 check fliptoing compiled code:
 	if scratch paper is not reflexed:
@@ -16872,7 +16887,7 @@ scray-scan is a truth state that varies.
 
 check scaning when player is in freight:
 	if scray-scan is true:
-		say "You already scanned the pale plea. It was RYYR." instead;
+		say "You already scanned around here. You saw RYYR, probably from the pale plea." instead;
 	say "The crays are till slightly leery the settler might be a weapon. During the moment of delay, you point it towards the pale plea and see something.";
 	now scray-scan is true;
 	if noun is not plea:
@@ -17031,6 +17046,8 @@ understand the command "unearth" as something new.
 understand "unearth [something]" as unearthing.
 
 a pre-haun is privately-named vanishing scenery in anger range. printed name of pre-haun is "the haunter in Anger Range". description of pre-haun is "You can't see it, but you can feel it."
+
+a-text of pre-haun is "YRYYRRR". b-text of pre-haun is "YRYYRRR". parse-text of pre-haun is "-[sp]x[sp]-[sp]-[sp]x[sp]x[sp]x".
 
 understand "haunter" as pre-haun when pre-haun is in anger range.
 
@@ -17267,7 +17284,8 @@ check scaning the cans (this is the bonus point rule) :
 		say "You scan the cans, and at first they flash RRYR, as expected. Then you hear a rip in the fabric of reality. Apparently, you caused it by 1) not knowing what to do with the cans, so you scanned them and 2) knowing you needed to scan the cans. It's not very big, but between the logical paradox and infraviolet rays or whatever, the sludge in the cans (itself created through an abuse of quantum physics of infraviolet rays or whatever--hey, I'm a programmer, not a physicist) bursts into water and dirt. [paragraph break]If you get rid of Elvira, you'll see if you can replicate this. It'd make recycling pretty darned efficient. You feel more socially conscious, and less of a plain wordslinger, for having partially cleaned up Lean Lane.";
 		min-and;
 		now cans are in lalaland instead;
-	say "You're over-thinking this one." instead;
+	say "You're over-thinking this one.";
+	the rule fails;
 
 
 understand "neal" as a mistake ("You aren't looking for anyone named Neal. Unless the trout is named Neal. (Spoiler: he's not.) Maybe you should figure how to find the eeks.") when player is in Lean Lane.

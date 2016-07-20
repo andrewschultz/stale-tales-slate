@@ -1,7 +1,9 @@
 use strict;
 use warnings;
 
-open(A, "c:/writing/dict/settler.txt");
+my $setFile = "c:\\writing\\dict\\settler.txt";
+
+open(A, "$setFile");
 
 my @colors = ("R", "Y", "O", "P", "G", "B");
 
@@ -21,6 +23,7 @@ while ($count <= $#ARGV)
   $a = $ARGV[$count];
   for ($a)
   {
+   /-e/ && do { `$setFile`; exit; };
     /-!/ && do { $readExclam = 1; $count++; next; };
     /-c/ && do { $cheatText = 0; $count++; next; };
     /-p/ && do { $parseText = 1; $count++; next; };

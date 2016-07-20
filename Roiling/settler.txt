@@ -335,7 +335,7 @@ v:swipe,wipes,i-spew
 !arches,search
 !chaser,search
 !achers,search
-!haunter,unearth=scrawl
+haunter,unearth=pre-haun
 !gleaner,enlarge
 !general,enlarge
 !sausage,assuage

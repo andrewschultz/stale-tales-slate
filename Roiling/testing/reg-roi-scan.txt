@@ -585,7 +585,8 @@ Hmm, the message could've been painted on, but Trevis Vister commissioned rivets
 Your score has just gone up by one point
 
 >sb rivets
-WRONG
+Your settler registers (no cheat) YRRYRY.
+Your settler registers (cheat on) YRRGRG.
 
 >aspire
 Your score has just gone up by one point
@@ -691,10 +692,6 @@ Austerer Treasure
 
 >sb hoop
 Your settler registers (no cheat) RYYR.
-
-[NOTE: this may be a bit of a spoiler. If you want to disable it, you can push the equals sign. This warning will not appear again.]
-You feel foreboding this may be a bit too much of a clue. Do you still want to see the settler reading?
-
 Your settler registers (cheat on) RGGR.
 
 >sb ye hoop
@@ -822,7 +819,6 @@ Hmm. The settler is giving a weird result, but the sheer number of question mark
 Your settler registers (no cheat) RYYRR.
 Leo and Rand ooh and ah at how you're using a thing to find out about things.
 Your settler registers (cheat on) RYYRR.
-!/[PG]
 
 >later
 Your score has just gone up by one point
@@ -966,10 +962,11 @@ Your settler registers (cheat on) RYOPYYRR.
 Your score has just gone up by one point
 
 >push skid n
-#?? describe skid as having used up its usefulness
+Back at Hacks' Shack
 >push skid n
->push skid n
-Your score has just gone up by one point
+You pushed the skid around enough.
+
+>i
 
 >keyboard
 Your score has just gone up by one point
@@ -981,39 +978,65 @@ You can now do computery things unimpeded!
 fits in perfectly
 
 >sb tba key
-WRONG
+You sense there can't be much to do with something saying TBA. Still, go ahead and scan?
+Your settler registers (no cheat) RYR.
+Your settler registers (cheat on) PYR.
+
 >tab
 Your score has just gone up by one point
 Adding a min point
 
 >sb skid
-WRONG
+Your settler registers (no cheat) RYRR.
+Your settler registers (cheat on) RYRR.
+
 >disk
 >put disk in drive
 
 >sb orange button
-WRONG
+The letters settler registers nothing.
+
 >sb blue button
-WRONG
+Your settler registers (no cheat) RYRYYR.
+Your settler registers (cheat on) RYPYGR.
+
 >reboot
 Your score has just gone up by one point
 
+>compile
+
 >sb speel
-WRONG
+Your settler registers (no cheat) RRYYR.
+Your settler registers (cheat on) PRGGR.
+
 >sleep
 Your score has just gone up by one point
 
+>depref
+
 >sb polemic
-WRONG
+Your settler registers (no cheat) RYRRYRY.
+Your settler registers (cheat on) RGRRYRY.
+
 >compile
 Your score has just gone up by one point
 
 >pour cola in mug
+
 >sb code
-WRONG
+Your settler registers (no cheat) RYRYR.
+Your settler registers (cheat on) RYRYR.
+
+>sb compiled code
+Your settler registers (no cheat) RYRYR.
+Your settler registers (cheat on) RYRYR.
+
+>debug
 
 >sb usb
-WRONG
+Your settler registers (no cheat) RYR.
+Your settler registers (cheat on) RY?.
+
 >sub
 
 Diver time
@@ -1033,7 +1056,8 @@ Your settler registers (no cheat) YRRYR.
 Your settler registers (cheat on) YRRGR.
 >sb amper
 Your settler registers (no cheat) RYRYR.
-Your settler registers (cheat on) RYRYR
+Your settler registers (cheat on) R?RYR
+#?? perma-amper mentions ...
 
 >sb tumblers
 Your settler registers (no cheat) RRYR.
@@ -1106,9 +1130,11 @@ Your score has just gone up by one point
 Fighter Freight
 
 >scan
-WRONG
+Your settler registers RYYR.
+You check both ways, and it's still RYYR.
+
 >sb crays
-You already scanned the pale plea. It was RYYR.
+You already scanned around here. You saw RYYR, probably from the pale plea.
 
 >leap
 Your score has just gone up by one point
@@ -1131,7 +1157,6 @@ Lean Lane
 
 >sb cans
 You're over-thinking this one.
-PRINT ONLY ONCE. HOW?
 
 >scan
 Your score has just gone up by one point
@@ -1185,25 +1210,30 @@ min point
 Lapsin' Plains
 
 >sb
-WRONG
+Your settler registers (no cheat) RRYRY.
+Your settler registers (cheat on) RPGRG.
 
 >sb crates
-Your settler registers (no cheat) RYYRR.
-Your settler registers (cheat on) RYGRP.
+Your settler registers (no cheat) RRYRY.
+Your settler registers (cheat on) RPGRG.
 
 >trace
 Your score has just gone up by one point
 
 >sb
-WRONG
+Your settler registers (no cheat) RYYRR.
+Your settler registers (cheat on) RYGRR.
+
 >sb crates
-WRONG
+Your settler registers (no cheat) RYYRR.
+Your settler registers (cheat on) RYGRR.
 
 >react
 Your score has just gone up by one point
 
 >sb
-WRONG
+Your settler registers (no cheat) RRRYYR.
+Your settler registers (cheat on) RRRY??.
 
 >sb skis
 Your settler registers (no cheat) RYRR.
@@ -1219,13 +1249,14 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >sb
-WRONG
+Your settler registers (no cheat) RRRYYR.
+Your settler registers (cheat on) RRRY??.
 
 >splain
 min point for this flip
 
 >sb
-WRONG
+You wave the settler, but it doesn't pick up any random data.
 
 >in
 a hut
@@ -1322,17 +1353,23 @@ Your score has just gone up by one point
 ##>unearth haunter
 
 >sb
-WRONG
+Your settler registers (no cheat) YRYYRRR.
+Your settler registers (cheat on) YRYYRRR.
+
 >sb writing
-WRONG
+You can really only read the writing.
+
 >unearth
-WRONG NEED SOMETHING
+A haunter's underneath--'n unearthed! You're almost unhearted. It's--a weird sausage. You scry a cry as scary..."My lost ruby!"
 by one point
 
 >sb sausage
-WRONG
+Your settler registers (no cheat) YRRYYRY.
+Your settler registers (cheat on) YRRYGPG.
+
 >scan
-WRONG
+Your settler registers YRRYYRY.
+
 >assuage
 by one point
 
@@ -1376,7 +1413,9 @@ min point
 Tenfold Teflon'd
 
 >scan
-You wave the settler, but it doesn't pick up any random data.
+The settler goes crazy when pointed at the yapper.
+
+Your settler registers RRYRYO.
 
 >sb yapper
 Your settler registers (no cheat) RRYRYO.
@@ -1386,7 +1425,9 @@ Your settler registers (cheat on) ?RY?Y?.
 Your score has just gone up by one point
 
 >sb
-WRONG
+Your settler registers (no cheat) RYRYYR.
+Your settler registers (cheat on) PYRYYR.
+
 
 >sb dialer
 Your settler registers (no cheat) RYRYYR.
@@ -1404,7 +1445,8 @@ Your score has just gone up by one point
 min point
 
 >sb
-WRONG
+Your settler registers (no cheat) RYRYYR.
+Your settler registers (cheat on) RYRYYR.
 
 >sb dialer
 Your settler registers (no cheat) RYRYYR.
@@ -3051,14 +3093,14 @@ Rustic Citrus
 >in
 >{include} _routes
 
-* only-troves
+* _only-troves
 
 >ts
 >troves
 >in
 >{include} _troves
 
-* only-presto
+* _only-presto
 
 >ts
 >presto
