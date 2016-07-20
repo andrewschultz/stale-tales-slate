@@ -4905,12 +4905,10 @@ scaning is an action applying to one thing.
 
 understand the command "scan" as something new.
 
-understand "scan [something]" as scaning.
 understand "scan" as scaning.
+understand "scan [thing]" as scaning.
 
-[rule for supplying a missing noun while scaning or sbing (this is the how to scan the air rule):]
-rule for supplying a missing noun while sbing (this is the how to scan the air rule):
-	d "[noun].";
+rule for supplying a missing noun while scaning or sbing (this is the how to scan the air rule):
 	if mrlp is stores:
 		if player is in cruelest lectures:
 			now noun is lecturer;
@@ -4934,11 +4932,28 @@ rule for supplying a missing noun while sbing (this is the how to scan the air r
 			else:
 				now noun is heat;
 			continue the action;
+		if player is in used lot:
+			if verbose babblings are in used lot:
+				now noun is verbose babblings;
+				continue the action;
+			if stop post is reflexive:
+				now noun is stop post;
+				continue the action;
+		if player is in fiefco:
+			if noise is in fiefco:
+				now noun is noise;
+				continue the action;
+			if song is in fiefco:
+				now noun is song;
+				continue the action;
 	else if mrlp is presto:
 		if player is in dirge ridge and leo is washed up:
 			now noun is wzup;
 			continue the action;
 	else if mrlp is oyster:
+		if player is in fighter freight:
+			now noun is pale plea;
+			continue the action;
 		if player is in plains:
 			if crate are in plains and crate is reflexive:
 				now noun is crate;
@@ -4957,24 +4972,42 @@ rule for supplying a missing noun while sbing (this is the how to scan the air r
 			if pikes are in lalaland and haunter is off-stage:
 				now noun is pre-haun;
 				continue the action;
+			if pre-haun is in anger range:
+				now noun is pre-haun;
+				continue the action;
 			if haunter is in anger range and haunter is reflexive:
 				now noun is haunter;
 				continue the action;
-		if player is in hedron and walleyes are in lalaland and o-t is in hedron:
-			now noun is o-t;
-			continue the action;
 		if player is in lean lane:
 			if cans are in lean lane:
 				now noun is cans;
 			else:
 				now noun is eeks;
 			continue the action;
+		if player is in hedron and walleyes are in lalaland and o-t is in hedron:
+			now noun is o-t;
+			continue the action;
 		if player is in scum ant sanctum:
 			now noun is ant;
 			continue the action;
+		if player is in tenfold:
+			if yapper is in tenfold:
+				say "The settler goes crazy when pointed at the yapper.";
+				now noun is yapper;
+				continue the action;
+			say "The settler goes crazy when pointed at the dialer.";
+			if dialer is reflexive:
+				now noun is dialer;
+			else:
+				now noun is d2;
+			continue the action;
+	else if mrlp is towers:
+		if player is in rawest waters:
+			now noun is eastern shore;
+			continue the action;
 	else if mrlp is otters:
 		if player is in bleary barley:
-			if b-b is in bleary barley:
+			if b-b is reflexive:
 				now noun is b-b;
 				continue the action;
 			if ed riley is in bleary barley:
@@ -5004,7 +5037,14 @@ rule for supplying a missing noun while sbing (this is the how to scan the air r
 			now noun is owls;
 			continue the action;
 		if player is in alcoves and parrot is in alcoves:
+			say "The settler seems to give a reading when pointed at the parrot.";
 			now noun is parrot;
+			continue the action;
+		if player is in tapering and imp is in tapering:
+			now noun is imp;
+			continue the action;
+		if player is in anteroom and whiners are in anteroom:
+			now noun is whiners;
 			continue the action;
 	else if mrlp is others: [others]
 		if perp-priv is part of the passport and gate-level < 2:
@@ -5014,9 +5054,8 @@ rule for supplying a missing noun while sbing (this is the how to scan the air r
 			if pre-mang is in clearing:
 				now noun is pre-mang;
 				continue the action;
-	if noun is nothing:
-		say "You wave the settler, but it doesn't pick up any random data.";
-		reject the player's command;
+	say "You wave the settler, but it doesn't pick up any random data.";
+	reject the player's command;
 
 does the player mean scaning the cans: it is likely.
 
@@ -5246,6 +5285,7 @@ atmo-moat	false	true	false	true	"You feel sheepish having used the settler, but 
 Merle	false	false	false	true	"Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings."
 sly imp	false	false	false	false	"The settler then gets garbled a bit. The imp is maybe too active for even the settler to pin down."
 whiners	false	false	false	false	"The settler then garbles and changes. The men have ways of staying loud." [end otters]
+medals	true	true	false	false	"Hmm. Maybe if you SWITCHed the medals, you could get another clue, if you needed."
 coins	false	false	false	false	"Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice." [others]
 pugnacious	false	false	false	false	"Wow, seven letters, odd. Maybe you need to poke or talk to the plant or attack it or something to see what kind it might be."
 caution	false	false	false	false	"Hm, that certainly cuts things down a ton[if caution is unexamined], or should, once you read that sign[end if]. Just [if cheat-on is true]one possibility[else]three possibilities[end if]."
@@ -7106,8 +7146,6 @@ understand the command "xyzzy" as something new.
 understand "xyzzy" as xyzzying.
 
 carry out xyzzying:
-	dl "[cur-score of manor].";
-	d "[mrlp].";
 	say "That word is a mess and holds absolutely no power for you[if player is in dusty study and cur-score of manor is 0]. Hopefully you'll find why soon enough[else]. Trust me, I checked all the other twenty-nine combinations[end if].";
 	the rule succeeds;
 
@@ -7180,7 +7218,12 @@ Understand "pull [something] [direction]" or "pull [something] to [direction]" a
 
 check pushing the skid to (this is the yak-oof rule):
 	if yak is in lalaland:
-		say "You probably don't need any more grunt work, now the yak's dealt with." instead;
+		if player is in hacks' shack:
+			say "You pushed the skid around enough." instead;
+		say "The skid's served its purpose, and maybe it's time to remake it as a disk back in the shack.";
+		now skid is in shack;
+		move player to shack, without printing a room description;
+		the rule succeeds;
 	if the room second noun of location of player is nowhere:
 		continue the action;
 	if yak is on skid and location of player is phat path and second noun is north:
@@ -7714,6 +7757,8 @@ carry out sbing:
 		say "[reject]";
 	d "SBing: [noun].";
 	if noun is reflexed:
+		if noun is washed up:
+			continue the action;
 		if noun is not dialer and noun is not bench:
 			say "You fiddle with the settler, but on each setting, it emits a BEEEOOOP which suggests there's nothing left to do here." instead;
 	now sb-cur is true;
@@ -8240,22 +8285,6 @@ check fliptoing when mrlp is otters and power-back is false:
 		say "[inhib]" instead;
 
 preserve-animals is a number that varies.
-
-check scaning boat (this is the scan boat components and not boat rule):
-	showme whether or not blaster is reflexive;
-	showme whether or not turbos are reflexive;
-	dl "1.";
-	if blaster is reflexive and turbos are reflexive:
-		say "The blaster and turbos both give something different, but you focus on [the t-or-b].";
-		try scaning t-or-b instead;
-	dl "2.";
-	if blaster is reflexed and turbos are reflexed:
-		say "Nothing any more. You probably fixed the boat all you can." instead;
-	dl "3.";
-	if blaster is reflexed:
-		try scaning turbos instead;
-	dl "4.";
-	try scaning blaster instead;
 
 note-progress is a truth state that varies.
 
@@ -8893,9 +8922,6 @@ to say rodney-ditch:
 understand "resent" as a mistake ("But how could you make Ernest [i]feel[r] so he'd resent his position?") when Ernest is visible.
 
 understand "lauren" as a mistake ("You briefly remember a random acquaintance. If your name actually is Lauren, you savor the awkward and neat feeling of the first other Lauren you meant. Life is like that.") when neural pulses are visible.
-
-check scaning pulses:
-	say "You can't scan the pulses. They're sort of all in your head, and the rays or whatever from the settler might intensify them. But maybe there is more than one way to zap them." instead;
 
 to say read-canflip:
 	say "[one of]. Reading the notice [if notice is examined]again[else]briefly[end if], you see that things won't be this flexible out in the real world[or][stopping]";
@@ -14583,7 +14609,27 @@ instead of pushing Ye Hoop:
 instead of attacking Ye Hoop:
 	try taking ye hoop instead;
 
-a-text of Ye Hoop is "RRYYYO". b-text of Ye Hoop is "RRYGYO". parse-text of ye hoop is "x[sp]x[sp]-[sp]o[sp]-[sp]y". ye hoop is cheat-spoilable.
+a-text of Ye Hoop is "[if ye-rec]RRYYYO[else]RYYR[end if]". b-text of Ye Hoop is "[if ye-rec]RRYGYO[else]RGGR[end if]". parse-text of ye hoop is "[if ye-rec]x[sp]x[sp]-[sp]o[sp]-[sp]y[else]POOH[end if]". ye hoop is cheat-spoilable.
+
+ye-scan is a truth state that varies.
+no-ye-scan is a truth state that varies.
+ever-hoop-both is a truth state that varies.
+
+after scaning ye hoop:
+	if ye-rec:
+		now ye-scan is true;
+	else:
+		now no-ye-scan is true;
+	if no-ye-scan is true and ye-scan is true:
+		if ever-hoop-both is false:
+			say "Hm, different readings whether it's ye hoop or not.";
+			now ever-hoop-both is true;
+	continue the action;
+	
+to decide whether ye-rec:
+	if the player's command includes "ye":
+		decide yes;
+	decide no;
 
 check going outside in Austerer Treasure:
 	try going east instead.
@@ -15146,6 +15192,13 @@ before fliptoing when mrlp is presto (this is the warn against SHATTER THREATS r
 					say "OK, but you'll need to do so anyway to get out of here.";
 					preef screen;
 					do nothing instead;
+			if noun is keyboard and yak is in lalaland:
+				say "You probably want to go inside the shack before doing that. That stupid SHATTER-THREATS law and all. Do so now?";
+				if the player yes-consents:
+					say "Great!";
+					move player to shack;
+					move drab yoke to shack;
+					continue the action;
 			say "That stupid SHATTER-THREATS law might pick you up out here. Best to go in the shack and try again.";
 			preef noun;
 			do nothing instead;
@@ -18640,7 +18693,7 @@ for writing a paragraph about a guardian (called gua):
 	let guasofar be 0;
 	if psg > 0:
 		say "You can [if number of prevseen guardians is 0]also [end if]still see ";
-		repeat with myg running through prevseen guardians:
+		repeat with myg running through prevseen guardians in location of player:
 			increment guasofar;
 			say "[the myg] blocking passage [if gualoc of myg is location of player][guadir of myg][otherwise][opposite of guadir of myg][end if]";
 			if guasofar < psg - 1:
@@ -19270,6 +19323,22 @@ a smart kid is a reflexive person. "[if met-kid is false]'Hi! I'm [kid-full]! Th
 
 a bot boat is a thing. understand "botboat" and "bot-boat" as a bot boat.
 
+check scaning bot boat (this is the scan boat components and not boat rule):
+	showme whether or not blaster is reflexive;
+	showme whether or not turbos are reflexive;
+	dl "1.";
+	if blaster is reflexive and turbos are reflexive:
+		say "The blaster and turbos both give something different, but you focus on [the t-or-b].";
+		try scaning t-or-b instead;
+	dl "2.";
+	if blaster is reflexed and turbos are reflexed:
+		say "Nothing any more. You probably fixed the boat all you can." instead;
+	dl "3.";
+	if blaster is reflexed:
+		try scaning turbos instead;
+	dl "4.";
+	try scaning blaster instead;
+
 to say if-tent:
 	if player is in coastlines:
 		say ", looking far-off, as if for inspiration he hasn't found yet";
@@ -19290,7 +19359,7 @@ check scaning smart kid:
 	if smart kid is reflexed:
 		say "'Oh! Pf! I bet I could make one of those, easy." instead;
 	if smart kid is reflexive and smart kid is in subsector:
-		say "[if cheat-on is false]YRRYRRYRY[else]YRRYRPGPG[end if]." instead;
+		continue the action;
 	say "'Wow! Cool! What is that?' Hmm, maybe you'll get to use it on him later." instead;
 
 met-kid is a truth state that varies.
@@ -19532,7 +19601,7 @@ after scaning (this is the note equals sign rule):
 
 ever-parse is a truth state that varies.
 
-after scaning:
+after scaning (this is the tell us about x in parse mode rule) :
 	if parse-now is true and ever-parse is false:
 		now ever-parse is true;
 		ital-say "x means a consonant, as nothing in this game becomes anything with an x in it, and the dash means a vowel.";
@@ -20105,7 +20174,7 @@ Solo Den is west of Mislit Limits. printed name of Solo Den is "[if ed yerg is r
 
 Ed Yerg is a person in Solo Den. description is "[if ed is reflexive]Despite a wrinkled face, his hair is gleaming and dark[else if crocus is not in lalaland]Ed looks a little sad[else]Ed looks relaxed and ready to chat[end if]."
 
-parse-text of ed yerg is "x[sp]x[sp]e[sp]y[sp]e[sp]x". ed yerg is cheat-spoilable.
+a-text of ed yerg is "RRYYRO". b-text of ed yerg is "RRYGRO". parse-text of ed yerg is "x[sp]x[sp]e[sp]y[sp]e[sp]x". ed yerg is cheat-spoilable.
 
 understand "gyre" as a mistake ("Ed doesn't deserve THAT for his past sins. Plus, you'd get sucked in.") when player is in solo den.
 
@@ -20584,7 +20653,7 @@ check taking neural pulses:
 
 description of neural pulses is "They seem to cause neural shocks when you get too close. And they make you see red when you think of...Lauren. Man, she was beyond fake. What did [if player is male]other [end if]guys see in her?"
 
-a-text of pulses is "YRRYYR". b-text of pulses is "YRRYGP". parse-text of pulses is "-[sp]x[sp]x[sp]-[sp]a[sp]l". pulses are cheat-spoilable.
+a-text of neural pulses is "YRRYYR". b-text of neural pulses is "YRRYGP". parse-text of pulses is "-[sp]x[sp]x[sp]-[sp]a[sp]l". pulses are cheat-spoilable.
 
 chapter guardian org table
 
@@ -21710,7 +21779,7 @@ check scaning medals:
 	if nounsolve < 3 or adjsolve < 3:
 		say "The settler reads oddly for a while but doesn't show anything. Maybe you need to reveal the medals some more." instead;
 
-a-text of medals is "RYYRRRO". b-text of medals is "[if medals-lucky-first is true]RGYRRRO[else]RYYRRRB[end if][one of]--hmm, maybe if you switched the medals, you might get another clue. If you need it.[or][stopping]". parse-text of medals is "[if medals-lucky-first is false]x[sp]-[sp]-[sp]x[sp]x[sp]x[sp]y[else]x[sp]u[sp]i[sp]x[sp]x[sp]x[sp]y[end if]".
+a-text of medals is "RYYRRRO". b-text of medals is "[if medals-lucky-first is true]RGYRRRO[else]RYYRRRB[end if]". parse-text of medals is "[if medals-lucky-first is false]x[sp]-[sp]-[sp]x[sp]x[sp]x[sp]y[else]x[sp]u[sp]i[sp]x[sp]x[sp]x[sp]y[end if]".
 
 chapter mack flipping
 
@@ -23262,6 +23331,10 @@ to say two-of-three:
 
 perp-priv is a privately-named thing. it is reflexive. description is "bug".
 
+perp-priv is cheat-spoilable.
+
+a-text of perp-priv is "RRYR". b-text of perp-priv is "PRYP". parse-text of perp-priv is "P[sp]R[sp]E[sp]P".
+
 understand "perp-priv" as perp-priv when debug-state is true.
 
 check going north in Gates Stage:
@@ -23358,7 +23431,7 @@ the icons are plural-named things. description is "The icons are designed to be 
 check scaning coins:
 	say "The settler flashes back, with [if cheat-on is false]all five entries changing[else]all but the last entry--which stays red--changing[end if].";
 	say "Hm. Maybe it would be better to scan just one coin?";
-	if the player yes-consents:
+	if the player switch-consents:
 		let mytext be indexed text;
 		if cheat-on is true:
 			now mytext is b-text of coin;

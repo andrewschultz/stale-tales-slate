@@ -4682,7 +4682,7 @@ rule for supplying a missing noun (this is the scan the location if you can rule
 			say "You wave the gadget, but nothing happens. Maybe specify something to scan.";
 		reject the player's command;
 	continue the action;
-			
+
 to decide whether can-scan-air:
 	if player is in the nick, yes;
 	if player is in tiles, yes;
