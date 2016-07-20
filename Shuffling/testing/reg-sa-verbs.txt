@@ -1,0 +1,226 @@
+## reg-sa-verbs.txt
+## tests for all the verbs and, well, other understand stuff too
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+VERBS
+
+* silly starting stuff
+
+>exist
+WRONG
+
+>scan
+WRONG
+>c
+WRONG
+>cr
+WRONG
+>rc
+WRONG
+
+>in
+>blot
+>bugle
+>play bugle
+>in
+>x toga
+WRONG
+>read toga
+WRONG
+
+
+>dance
+You won't get caned for that,
+
+>walkthrough
+WRONG
+>help
+WRONG
+>info
+WRONG
+>instructions
+WRONG
+
+>xyzzy
+WRONG
+>xyzzy
+WRONG
+>xyzzy
+WRONG
+>xyzzy
+WRONG
+
+#####################forest
+
+* forest-understandage
+
+>sr nw
+
+>ts
+
+>c store f
+>r store f
+>cr store f
+>rc store f
+
+>forest
+
+>about
+WRONG
+>credits
+WRONG
+>release
+WRONG
+>tech
+WRONG
+>sites
+WRONG
+>options
+WRONG
+>verb
+WRONG
+>verbs
+WRONG
+
+>poss
+WRONG
+>poss
+WRONG
+>poss
+WRONG
+
+>knock forest
+WRONG
+>knock on forest
+WRONG
+
+>in
+
+>north
+>west
+Self-ID Fields
+
+>w
+>open sandwich
+>maps
+>x map
+WRONG
+>beard
+
+>beard
+WRONG
+
+>peel chicken
+You have nothing to peel anything with.
+>pry chicken
+You have nothing to peel anything with.
+>scrape chicken
+You have nothing to peel anything with.
+
+>x disguise
+WRONG
+
+>east
+>x 1s
+WRONG
+>x one
+WRONG
+>x 0s
+WRONG
+>x zero
+WRONG
+>x zeroes
+WRONG
+
+>nose
+
+>x semicircles
+>x imprint
+
+>shades
+>x shades
+>x shade
+>x glasses
+
+>shotgun
+
+>put nose on beard
+>put shades on beard
+disguise!
+
+>w
+>n
+
+>x lich
+WRONG
+
+>gonear frost forst
+>purloin shotgun
+>purloin silver
+>x shell
+WRONG
+
+>put silver in shotgun
+WRONG
+>undo
+>load shotgun
+WRONG
+
+>shoot at werewolves
+Trips Strip
+
+>undo
+>shoot wolves
+Trips Strip
+
+>undo
+>fire at wolves
+Trips Strip
+
+>undo
+>fire wolves
+Trips Strip
+
+* sortie-understand
+
+>ts
+>sortie
+>in
+>16
+>x nick
+WRONG
+>kitchen
+
+>s
+>e
+>straw
+>gonear moor
+>trade straw
+WRONG
+>trade
+WRONG
+
+>scan
+WRONG
+
+* resort-understand
+
+>ts
+
+>sk 1
+>sk 2
+>sk 3
+
+>resort
+>in
+
+>tug settler
+WRONG
+>pull settler
+WRONG
+
+>gonear manor
+>x exits
+WRONG

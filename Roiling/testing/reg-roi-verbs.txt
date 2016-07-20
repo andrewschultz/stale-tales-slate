@@ -13,13 +13,61 @@
 
 you may wish to type ABOUT or VERBS to see information about the game and what words work best.
 
+>hint xxx
+
+>consult me
+You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
+
+>pad elvira
+Apparently, appreciating her is what separates us from the animals. According to Gunter.
+>consult about elvira
+Apparently, appreciating her is what separates us from the animals. According to Gunter.
+>consult pad about elvira
+Apparently, appreciating her is what separates us from the animals. According to Gunter.
+>notepad elvira
+Apparently, appreciating her is what separates us from the animals. According to Gunter.
+>pedanto elvira
+Apparently, appreciating her is what separates us from the animals. According to Gunter.
+
+>consult pad
+WRONG
+>consult about
+WRONG
+>pad
+WRONG
+
+>notepad
+WRONG
+>pedanto
+WRONG
+
+
+>x book
+WRONG
+
+>au 1
+
 >about
 WRONG
 
+>verb
+WRONG
 >verbs
 WRONG
 
 >credits
+WRONG
+
+>tech
+WRONG
+
+>sites
+WRONG
+
+>release
+WRONG
+
+>bastard
 WRONG
 
 >poss
@@ -33,6 +81,131 @@ Switching off
 >poss
 Switching on
 !quasi-spoiler
+
+>think
+
+>ponder
+You begin another deep think, but mulling and rehashing is no fun.
+
+>think
+You begin another deep think, but mulling and rehashing is no fun.
+
+>x shelf
+It's engraved READING A DINGER, I GANDER
+
+>x books
+You couldn't read--not even just titles--with that knocking at the door.
+
+>open door
+>1
+>5
+>lamp
+
+>hint painting
+WRONG
+>hint painting
+WRONG
+>hint painting
+WRONG
+>hint painting
+WRONG
+
+#?? preef something that ...
+#what if scan something invisible/unachievable
+
+>scan pin
+WRONG
+>space on
+WRONG
+>scan pin
+WRONG
+>no space
+WRONG
+>scan pin
+WRONG
+>no space
+WRONG
+>scan pin
+WRONG
+>nos
+WRONG
+>scan pin
+WRONG
+>son
+WRONG
+>scan pin
+WRONG
+>spaceon
+WRONG
+>scan pin
+WRONG
+>nospace
+WRONG
+>scan pin
+WRONG
+
+>access
+now on.
+>verbs
+!/--
+>access
+now off.
+>verbs
+--
+
+>answer door
+A rallies sallier? With snipers pressin[']? Better not.
+
+>x stable x
+WRONG
+>stable x
+>x stable
+
+>x basement x
+WRONG
+> basement x
+>x basement
+
+>staple me
+WRONG
+
+>basement
+NO TIP
+OPT IN
+
+>rove over
+It's not that easy. Maybe once you've returned back here to your Dusty Study, you can sneak out a more usual passage. But you need to fix things in Yorpwald, first. Or restart the game.
+
+>opt in
+You already have OPT IN at a region's start. NO TIP reverse this.
+
+>no tip
+You switch to NO TIP at a region's start. OPT IN will reverse this.
+
+>no tip
+You already have NO TIP at a region's start. OPT IN will reverse this.
+
+>opt in
+You switch to OPT IN at a region's start. NO TIP reverse this.
+
+>opts
+Typing ACCESS toggles
+>post opts
+Typing ACCESS toggles
+>options
+Typing ACCESS toggles
+
+>tan me
+Surly foe: yourself? Lose fury!
+>kick me
+Surly foe: yourself? Lose fury!
+
+>stapler
+>staple me
+WRONG
+>staple
+>staple me
+WRONG
 
 * demo dome specific
 
@@ -58,7 +231,38 @@ You read some more of
 
 * synonyms
 
->gonear paperwall
+>x my niche
+The words MY NICHE have a square dotted outline around them.
+>x my
+The words MY NICHE have a square dotted outline around them.
+>x ceiling
+The words MY NICHE have a square dotted outline around them.
+
+>purloin treatise
+>x prepared
+WRONG
+>x prepared red
+>x prepared paper
+>x prepared red paper
+>x red paper
+>x paper
+>x letter
+
+>x ads
+It's impossible to look away...advertising certainly has gotten more prominent since Elvira arrived. She's been so good at saying you need to advertise, and yet--she does not need to. Apparently she is quite a consultant for opposing ad firms.
+
+The ads aren't sad because they're drab but rather because so many people fall for them. And they're not even magically possessed. This is the price of prosperity, and yet... One ad hawks Mac Bly's Cymbals.
+
+>x ad
+Another ad 
+
+>x questin
+It's headed Good deeds? Sodded ego! Elvira lays out how you saved Yorpwald and all. But everyday stuff? You couldn't repair a flat tyre with flattery, make custard out of car dust or spumoni from an ion sump. Or even a cellphone from cellophane.
+
+You pause. That's so contrived. What kind of faker-freak would think that up?
+
+>x inquest
+It's no less annoying the second time around.>gonear paperwall
 >x wallpaper
 WRONG
 >x wall
@@ -67,11 +271,81 @@ WRONG
 >x staples
 WRONG
 
->ts
+>staple wall
+>in
+
+############################################stores
+
+>point settler at store p
+WRONG
+>point settler at store p
+WRONG
+
+>shake settler
+WRONG
+>shake
+WRONG
+>shake me
+WRONG
+>ss
+WRONG
+
+>parse
+WRONG
+>parse
+WRONG
+
+>spare
+WRONG
+>spare
+WRONG
+
+>cheat
+WRONG
+
+>scan store p
+WRONG
+
+>la
+WRONG
+
+>parse
+WRONG
+>cheat
+WRONG
+
+
+>pf
+You consult your notepad but haven't figured any flips in advance yet.
 
 >x mmm
+WRONG
+
 >x mm
 WRONG
+
+>tokers
+>nestor
+
+>x ian
+>x guardian
+>x drug guardian
+WRONG
+
+>x max
+>x lee
+>x max lee
+>x max p lee
+>x example
+WRONG
+
+>x studio e
+>x studio
+WRONG
+
+>outside
+
+############################################routes
 
 >routes
 >in
@@ -105,35 +379,63 @@ WRONG
 >x pats
 WRONG
 
+>inside
+>x recipe
+WRONG
+>x oopsin
+WRONG
+>x priest
+WRONG
+>x oopsin priest
+WRONG
+
+>out
+
+>across
+>opposite
+>out
+
 >past
 >x seedpit
+WRONG
+>despite
+>x seedpit
+WRONG
+>x mushroom
+WRONG
+>out
+
+>against
+>x elbow
+>x elbows
+WRONG
+>astride
+>below
+>under
+>inside
+
+>out
+>from
+>x bean
+WRONG
+
+>gonear underpass
+>until
+>around
+>x trail
+WRONG
+>x unroad
 WRONG
 
 >retry
 
->tokers
->nestor
+>retry
 
->x ian
->x guardian
->x drug guardian
-WRONG
-
->x max
->x lee
->x max lee
->x max p lee
->x example
-WRONG
-
->x studio e
->x studio
-WRONG
-
->outside
+##########################################troves
 
 >troves
->in
+>enter troves
+
 >hush
 HUSH on.
 !Gritty sounds
@@ -142,11 +444,241 @@ HUSH on.
 You already can't hear
 >uhhs
 Random dialogue on again.
+>uhhs
+You already can hear random dialogue.
+
 >z
 Gritty sounds
 >hush
 HUSH on.
 !will still hear
+
+>x book
+WRONG
+
+>hate
+>care
+>observe
+>spot
+>x evil bee
+YAY
+>x vile bee
+BOO
+>x live bee
+BOO
+
+>believe
+>x vile bee
+YAY
+
+>undo
+>undo
+
+>reason
+>x vile bee
+YAY
+
+>believe
+>x live bee
+YAY
+>x evil bee
+YAY
+>x vile bee
+YAY
+
+>recall
+>despair
+>gt bedroom
+WRONG
+>gt pad
+WRONG
+
+>x copy
+WRONG
+>x book
+WRONG
+>x lead
+WRONG
+
+>deal
+>desire
+Econ-Cone
+
+>gt econ-cone
+WRONG
+
+>x trevis
+WRONG
+>x trevis vister
+WRONG
+>x vister
+WRONG
+
+>strive
+>x champagne
+WRONG
+>x prod
+WRONG
+>x n-e-prod
+WRONG
+>x neprod
+WRONG
+>x bottle of prod
+WRONG
+>x bottle of n-e-prod
+WRONG
+>x bottle of neprod
+WRONG
+>retry
+
+#####################################
+
+>presto
+by one point
+>x spot
+It's hecka swirly. You're sure it goes somewhere the speech is louder and so forth.
+>x er spot
+It's hecka swirly. You're sure it goes somewhere the speech is louder and so forth.
+
+>enter spot
+>x bread
+WRONG
+>umph
+>pooh
+>e
+>s
+>drat
+>rats
+
+>x scratches
+WRONG
+
+>s
+>ole
+>darn
+>whassup
+
+>n
+>n
+>this
+WRONG
+
+>bleep
+
+>this
+WRONG
+
+>e
+>boing
+>put dart in gun
+
+>x sway ways
+WRONG
+>x spoilt pistol
+>x spoilt
+>x pistol
+
+
+>w
+>there
+>n
+>syke
+>so long
+>later
+>n
+>x bad book
+WRONG
+
+>skid
+>leaf
+>pull skid s
+Phat Path
+>pull skid to s
+Grey Gyre
+
+>retry
+
+####################oyster
+
+>oyster
+>enter oyster
+>x author
+WRONG
+>x fish
+WRONG
+>x book
+WRONG
+
+>gonear anger range
+>spike
+>e
+>seek
+by one point
+
+>taste tea
+WRONG
+>chew tea
+WRONG
+>eat tea
+by one point
+
+>w
+>w
+>warp
+>look behind arches
+WRONG
+
+>e
+>n
+>knock x
+WRONG
+>knock
+WRONG
+
+>clean me
+WRONG
+>clean settler
+WRONG
+>clean lance
+WRONG
+>clean lance
+WRONG
+
+>retry
+
+#############################################towers
+
+>seed 1
+>towers
+>enter towers
+>gone
+>wined
+>bleak
+>yonder
+Topside Deposit
+
+>answer x
+(to Ray Eck)
+This game generally uses ASK X ABOUT Y instead, unless you are in a conversation with numbered choices.
+
+>answer x
+(to Ray Eck)
+[NOTE: you don't need to ask anyone to do anything to complete the game, and in fact it's almost never useful, though I tried some humorous rejects. You are better off ASKing people about things.]
+If only it were that easy, to ask someone or something to move. You'll have to change them to get by.
+
+>answer keycar
+That's not something animate.
+
+>answer ray
+Try to ASK a person about something instead.
+
+>wordy
+WRONG
+>rowdy
+WRONG
+
+>play saver
+WRONG
 
 >seed 1
 >towers
@@ -210,11 +742,71 @@ WRONG
 >exits
 There are four viable exits, though not all are unblocked: north, south, east and west.
 
+>x yurt
+WRONG
+>yurts
+>x brownie
+WRONG
+
+>repair me
+
 >weirder
 >clumsy
 >rinsed
 >exits
 There are four viable exits: north, south, east and west.
+
+>w
+>repair toaster
+That's nothing like a rapier. It's not sharp, metal and pointed. You'll need to find something else.
+
+>e
+>n
+>punier
+>x theatre
+The theater thereat, with such lame titles as "Me, I can," / "Nice, Ma!" and "Iceman," has been abandoned. And really, you shouldn't be staring at some screen when you are trying to save a world.
+>x anemic cinema
+Me, I can
+>x anemic
+Me, I can
+>x cinema
+Me, I can
+
+>gonear subsector
+
+>wordy
+by one point
+>wordy
+!by one point
+>rowdy
+by one point
+>rowdy
+!by one point
+
+>x doc
+WRONG
+>x doctor
+>x doc yow
+>x doctor yow
+
+>retry
+
+###########################hinty
+
+>au -1
+>nothin
+Disabling hints for the entirety of play is a drastic step, so once again I want to note NO HINT may be better than the drastic NOTHING. Do you still wish to disable hints completely?
+Okay.
+
+>no hint
+WRONG
+>hint
+WRONG
+>undo
+>undo
+
+
+################################otters-y
 
 >otters
 >x randi
@@ -223,6 +815,139 @@ There are four viable exits: north, south, east and west.
 >x otters
 >x statues
 >x statue
+
+>gonear bleary
+>barely
+
+>x yielder
+WRONG
+>x steward
+WRONG
+
+>reedily
+
+>discern
+WRONG
+>discern me
+WRONG
+>discern cinders
+WRONG
+
+>w
+
+>attack macks
+Don't hate the player, hate the game.
+>attack mack
+Don't hate the player, hate the game.
+>smack macks
+They really, really deserve it, but keep your cool. Smack their arguments down instead and they may smack each other for you.
+
+>bossily
+>nastily
+>blearily
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>n
+>because
+>else
+>s
+>atom
+
+>s
+>x painting
+WRONG
+
+>x iq medal
+WRONG
+>x iq medals
+>x lucky medal
+>x lucky medals
+>x iq
+>x lucky
+
+>e
+>n
+>angrily
+>brutely
+>gt tapering
+>gt inert gap
+>gt inert
+>gt gap
+
+>n
+>slow
+>x ocelot
+WRONG
+>x sunglasses
+WRONG
+>x shades
+WRONG
+>x glasses
+WRONG
+>coolest
+>x sunglasses
+WRONG
+>x shades
+WRONG
+>x glasses
+WRONG
+
+>s
+>loathingly
+>stoically
+>gt near moot
+>gt moot
+
+>s
+>parrot
+>x throne
+>thrones
+>x hornet
+
+>play whistle
+WRONG
+>whistle
+WRONG
+
+###############################others-y
+
+>ts
+
+>c
+You push the teach-cheat button, and it's now on. Hooray for more information when you SCAN in the future--though you can push the button to go back to normal mode. The logo seems to change colors as well.
+>t
+You push the teach-cheat button, and it's now off. Hooray for more challenge.
+>t
+You push the teach-cheat button, and it's now on. Hooray for more information. The logo seems to change colors as well.
+>c
+You push the teach-cheat button, and it's now off. Hooray for more challenge.
+>cheat
+You push the teach-cheat button, and it's now on. Hooray for more information. The logo seems to change colors as well.
+>teach
+You push the teach-cheat button, and it's now off. Hooray for more challenge.
+>teach
+You push the teach-cheat button, and it's now on. Hooray for more information. The logo seems to change colors as well.
+>cheat
+You push the teach-cheat button, and it's now off. Hooray for more challenge.
+
+>gonear rustic citrus
+
+>kiss me
+You feel as good-looking as ever after kissing yourself.
+>kiss curtis
+This is not a romance game.
+>kiss settler
+Moisten no items.
+>kiss scanner
+Moisten no items.
+
+>blow harmonicas
+I'll have to stem that. Your playing's the pits. Music, not game playing.
 
 >gonear scape space
 >x tarred
@@ -245,3 +970,62 @@ Lord Al Ollard
 >gs
 >x bill
 Lola Ollard
+>gs
+
+>u
+
+>e
+>sell
+You are paving
+>sell x
+You are paving
+
+>x price list
+Reading the list, the kumquat is the most reasonably priced item on the list, though other prices almost make you want to curse.
+>x prices
+Reading the list, the kumquat is the most reasonably priced item on the list, though other prices almost make you want to curse.
+>x list of prices
+Reading the list, the kumquat is the most reasonably priced item on the list, though other prices almost make you want to curse.
+
+>x designs
+The singed design is some sort of amalgamation of musical notes and instruments intertwined. You can't read who wrote it, but it makes the coin look more artsy than commercial.
+>x design
+The singed design is some sort of amalgamation of musical notes and instruments intertwined. You can't read who wrote it, but it makes the coin look more artsy than commercial.
+
+>n
+>x gate
+They're closed by a halt lath.
+>x gates
+They're closed by a halt lath.
+
+>x stadium
+Nothing unusual like that around here.
+>x arena
+It looks familiar--wait--it's Yorpwald's famous, enormous Admit-Us Stadium! What's more, you hear a hubbub that means some event must be going on.
+>x stadium
+The Admit-Us Stadium stands behind the gate, a hubbub still indicating that something important must be going on.
+
+>blow me
+WRONG
+
+* demo dome
+
+>demo dome mode
+>x shall
+WRONG
+>x shall halls
+WRONG
+>x shall-halls
+WRONG
+
+>n
+>x decal wall
+You read some of the owl decal code wall.
+>x owl-decal wall
+You read some more of the owl decal code wall.
+>x owl-decal code wall
+[NOTE: you probably don't need more than four words per command. The most complex ones are PUT X ON Y or ASK X ABOUT Y, and a compound item like GIANT PIN can use GIANT or PIN. Adjectives usually aren't necessary, and GET ALL will never take anything harmful or lethal.]
+You read some more of the owl decal code wall.
+
+>x allow-lots-tools wall
+You read some of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.

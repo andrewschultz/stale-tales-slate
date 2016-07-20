@@ -12876,6 +12876,7 @@ blurb	prio
 "Mold Thy Old Myth[r], by Tom Hyld"
 "Mollify [']Im, Folly: of My Ill[r], by Milo Fly"
 "Molly Ran Normally[r], by Arny Moll" []
+"A Molten Telamon[r], by Tom Neal-Almonte"
 "Mom, Deny My Demon[r], by Don Emmy"
 "Monasterial Ameliorants[r], by [if player is male]Salim Renato[else]Alison Marte[end if]"
 "Money's My Nose[r], by Semyon Moynes"

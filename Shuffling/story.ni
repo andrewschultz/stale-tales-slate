@@ -11642,9 +11642,7 @@ to decide what thing is the current getup:
 
 the current getup is a thing that varies.
 
-understand "disguise" as the beard.
-understand "disguise" as the nose when beard is not visible or shades are part of the nose.
-understand "disguise" as the shades when nose is not visible and beard is not visible.
+understand "disguise" as a disguise-piece.
 
 instead of eating bread:
 	say "It's not as disgusting as the meat you've seen, but you're not hungry now. There must be some other use.";
@@ -12528,10 +12526,9 @@ understand "reminders" as remindersing.
 reminders is a truth state that varies. reminders is true.
 
 carry out remindersing:
-	if reminders is true:
-		now reminders is false;
-	otherwise:
-		now reminders is true;
+	say "Now we will [if reminders is false]not [end if]have reminders appear on reloading a saved game.";
+	now reminders is whether or not reminders is false;
+	showme whether reminders is true;
 	the rule succeeds;
 
 chapter wait for any key
@@ -12597,9 +12594,7 @@ chapter knocking
 knocking is an action applying to one thing.
 
 understand the command "knock on [something]" as something new.
-understand the command "knock on [something]" as something new.
 
-understand "knock [something]" as knocking.
 understand "knock [something]" as knocking.
 
 does the player mean knocking the black door: it is very likely;
@@ -12973,6 +12968,9 @@ understand the command "shoot/fire at/ [something]" as something new.
 
 understand "shoot at [something]" as shooting.
 understand "shoot [something]" as shooting.
+
+understand "fire at [something]" as shooting.
+understand "fire [something]" as shooting.
 
 does the player mean shooting the wolves when the wolves are visible: it is very likely.
 

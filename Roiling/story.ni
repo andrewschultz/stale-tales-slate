@@ -4908,7 +4908,7 @@ understand the command "scan" as something new.
 understand "scan" as scaning.
 understand "scan [thing]" as scaning.
 
-rule for supplying a missing noun while scaning or sbing (this is the how to scan the air rule):
+rule for supplying a missing noun while scaning or sying or sning or sbing (this is the how to scan the air rule):
 	if mrlp is stores:
 		if player is in cruelest lectures:
 			now noun is lecturer;
@@ -7269,7 +7269,7 @@ understand "ponder" as thinking when pernod is not visible.
 instead of thinking:
 	if player is in study:
 		if stuff-found < 3:
-			say "You begin a[one of][or]another[stopping] deep think, [one of]all about Elvira's rise to prominence and how she assured everyone that she could do wordplay if she were bored, and she was sure it was the best you could do, but really, there was no CREATIVITY at the heart of it, and the n-factorial possibilities--and that tagged gadget to give clues was a bit TOO convenient. It passes the time[or]but mulling and rehashing is no fun[stopping].";
+			say "You begin [one of]a[or]another[stopping] deep think, [one of]all about Elvira's rise to prominence and how she assured everyone that she could do wordplay if she were bored, and she was sure it was the best you could do, but really, there was no CREATIVITY at the heart of it, and the n-factorial possibilities--and that tagged gadget to give clues was a bit TOO convenient. It passes the time[or]but mulling and rehashing is no fun[stopping].";
 			now thinko is true instead;
 		else if Gunter is off-stage:
 			say "Hard to think with that knocking." instead;
@@ -7712,10 +7712,10 @@ does the player mean pointing the settler at the player: it is very likely.
 point-warn is a truth state that varies.
 
 carry out pointing it at:
-	if noun is not settler:
-		say "You can really only point [if player has settler]the settler[else]one thing[end if] at other objects." instead;
 	if noun is patcher:
 		try zaping second noun instead;
+	if noun is not settler:
+		say "You can really only point [if player has settler]the settler[else]one thing[end if] at other objects." instead;
 	if point-warn is false:
 		ital-say "it's much easier to SCAN objects instead.";
 		now point-warn is true;
@@ -7792,6 +7792,10 @@ understand "ss [thing]" as ss0ing.
 understand the command "shake" as something new.
 
 understand "shake [thing]" as ss0ing.
+understand "shake" as ss0ing.
+
+rule for supplying a missing noun when ss0ing:
+	now noun is settler;
 
 ss0ing is an action applying to one thing.
 
@@ -7811,8 +7815,9 @@ chapter sying
 
 sying is an action applying to one thing.
 
-understand the command "sy [something]" as something new.
+understand the command "sy" as something new.
 
+understand "sy" as sying.
 understand "sy [something]" as sying.
 
 carry out sying:
@@ -7837,8 +7842,9 @@ chapter sning
 
 sning is an action applying to one thing.
 
-understand the command "sn [something]" as something new.
+understand the command "sn" as something new.
 
+understand "sn" as sning.
 understand "sn [something]" as sning.
 
 carry out sning:
@@ -8014,7 +8020,7 @@ carry out nothining:
 	if absolutely-no-hints is true:
 		say "You're already shut down." instead;
 	say "Disabling hints for the entirety of play is a drastic step, so [one of][or]once again I want to note [stopping]NO HINT may be better than the drastic NOTHING. Do you still wish to disable hints completely?";
-	if the player consents:
+	if the player switch-consents:
 		now absolutely-no-hints is true;
 	say "Okay[if absolutely-no-hints is true]. Hints are now disabled even if you save and restore[end if].";
 	if session-hints-off:
@@ -9535,6 +9541,8 @@ check answering:
 	else:
 		try asking noun to try taking inventory instead;
 
+does the player mean answering side door when gunter is off-stage: it is likely.
+
 does the player mean opening side door: it is very likely.
 
 description of semi-secret side door is "[one of]Oh, man, I can't really tell you. It's yours, and it's a secret, and I would've had to, like, violate your property rights to be able to describe it better than you could. Okay, i[or]I[stopping]t's an innocuous door that looks like boring aluminum siding from the outside. It has a peephole, too."
@@ -10564,6 +10572,7 @@ instead of taking closets:
 the closest closets are in Highest Heights.
 
 check entering closets:
+	move closets backdrop to all visited rooms;
 	if player is in study:
 		say "The closets sure are faster than climbing the chimney.";
 		now player is in heights instead;
@@ -11276,10 +11285,10 @@ check consulting it about:
 
 chapter padding
 
-understand the command "consult about [text]" as something new.
+understand the command "consult about" as something new.
 understand "consult about [text]" as padding.
 
-understand the command "notepad/pedanto/pad [text]" as something new.
+understand the command "notepad/pedanto/pad" as something new.
 understand "notepad [text]" and "pedanto [text]" and "pad [text]" as padding.
 
 padding is an action applying to one topic.
@@ -13946,12 +13955,6 @@ pouring it into is an action applying to two things.
 understand the command "pour [something] in/into/on [something]" as something new.
 understand "pour [something] in/into/on [something]" as pouring it into.
 
-check pouring it into:
-	if noun is dirty cola or noun is fizzy cola:
-		try inserting noun into second noun instead;
-	say "That won't work. You need to pour a liquid into something." instead;
-
-
 chapter interjections
 
 to decide whether (int - a thing) is interjective: [this is for hinting in presto: do you think something, or envision something?]
@@ -14632,7 +14635,7 @@ after scaning ye hoop:
 			say "Hm, different readings whether it's ye hoop or not.";
 			now ever-hoop-both is true;
 	continue the action;
-	
+
 to decide whether ye-rec:
 	if the player's command includes "ye":
 		decide yes;
@@ -14962,7 +14965,7 @@ understand "this" as thising.
 
 carry out thising:
 	if location of player is location of plebe:
-		say "He flinches a bit, but maybe you need something more general?";
+		say "The plebe flinches a bit, but maybe you need something more general?";
 	otherwise:
 		say "No excuse for that sort of language. Really.";
 	the rule succeeds;
@@ -15653,6 +15656,7 @@ check pouring it into:
 		say "It's already in the mug." instead;
 	if noun is dirty looking cola:
 		try inserting noun into second noun instead;
+	say "That won't work. You need to pour a liquid (a small amount) into something." instead;
 
 chapter rebooting
 
@@ -17469,6 +17473,8 @@ check taking the tea tray:
 instead of eating tea tray:
 	if the player's command includes "tray":
 		say "You probably just want the tea on the tray. Not the tray." instead;
+	if the player's command does not include "eat":
+		say "Be straightforward, here." instead;
 	if trout is reflexive:
 		say "You feel slightly guilty eating before helping the trout, but Aunt Tuna nods, it's okay for you to eat first.";
 	say "Gosh, tea, and you don't feel hostage[if aunt tuna is visible] to manners or anything[end if]! Not just fringy frying! A dose of seafood (Not, like, fish. But what they eat. Tressed dessert.) A dish is had. Being fed is def! There's a whole crumpets spectrum in here, treats taster, all free of nitrate tainter! Muy yum! But while being a chompin['] champion, you bite half a paler pearl.[paragraph break][if aunt tuna is visible]'Oh my goodness!' says Aunt Tuna. 'I am so sorry! I do not know how that got in there. You may keep it. I hope it is a decent apology for my being such a negligent hostess.' She [tray-sez].[else]Well, you can't exactly go complaining to Aunt Tuna now for this, after making a mess in her place.[end if]";
@@ -18143,8 +18149,14 @@ instead of searching a-s:
 	if sardine is visible:
 		say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of him to have a serious look.";
 		preef a-s instead;
-	try fliptoing a-s;
-	now a-s are unfigured;
+	if the player's command includes "search":
+		try fliptoing a-s;
+		now a-s are unfigured;
+		the rule succeeds;
+	if a-s are reflexed:
+		say "You already searched, which should work.";
+	else:
+		say "No, that is not quite the way to look through the arches.";
 
 after fliptoing a-s:
 	pearl-check;
@@ -20600,7 +20612,7 @@ a-text of oddly rewired robot is "RYYRRYR". b-text of oddly rewired robot is "RG
 
 the man in a REED'S ALE costume is a red guardian.
 
-understand "reeds ale man" and "reeds" as man in a REED'S
+understand "reeds ale man" and "ale man" and "reeds" as man in a REED'S
 
 before doing something with costume:
 	if current action is opening or current action is closing or current action is pulling or current action is taking:
@@ -21755,7 +21767,7 @@ chapter medals
 
 the medals are a reflexive wearable plural-named thing.
 
-understand "iq medal" and "iq" and "lucky medal" and "lucky" as medals.
+understand "iq/lucky medal/medals" and "iq/lucky" as medals.
 
 after printing the name of medals while taking inventory:
 	say " ([if nounsolve < 3 and adjsolve < 3]very tarnished[else if nounsolve >= 3 and adjsolve >= 3]polished[else]somewhat tarnished[end if])";
@@ -21902,7 +21914,7 @@ definition: a mack-idea (called mm) is unprioritized:
 	if mack-prio of mm is 0 and mm is in frontage:
 		decide yes;
 	decide no;
-	
+
 to assign-fixed-mack-priority:
 	now cur-mack-blab is 0;
 	repeat with B running through mack-ideas:
@@ -22024,7 +22036,6 @@ to decide which mack-idea is mack-hint:
 	decide on cur-mack.
 
 every turn when player is in frontage and macks are in frontage (this is the macks hitting on rule):
-	d "Macks hitting on rule:[line break]";
 [	repeat with QQ running through reflexive mack-ideas in frontage:
 		if debug-state is true:
 			say "DEBUG NOTES: [qq]: [mack-prio of qq].";]
@@ -22475,9 +22486,11 @@ after fliptoing an animal:
 				now my-animal entry is adjed instead;
 	say "[reject]" instead;]
 
-book Rote-Moan Anteroom
+book Rote Moan Anteroom
 
-Rote-Moan Anteroom is south of Bleary Barley. Anteroom is part of otters. Anteroom is innie. "[if whiners are visible]The noise here is just unbearable--whiners guarding the way south and not shutting up about it. You feel vaguely grateful they aren't guarding the way back north, too[else]This room is quieter now, just a north-south passage[end if]."
+Rote Moan Anteroom is south of Bleary Barley. Anteroom is part of otters. Anteroom is innie. "[if whiners are visible]The noise here is just unbearable--whiners guarding the way south and not shutting up about it. You feel vaguely grateful they aren't guarding the way back north, too[else]This room is quieter now, just a north-south passage[end if]."
+
+understand "near/moot" and "near moot" as anteroom when whiners are in lalaland.
 
 the shrewin' whiners are plural-named flippable people in Anteroom. description is "They blather on hopelessly, as if you should try to be as whiny as they are. [one of]Probably many of them are named Sherwin, but more importantly, m[or]M[stopping]aybe you can make them run out of energy.". "Shrewin['] whiners are [if ram1 is reflexive]tallyhoing[else]babbling[end if][if ram2 is reflexive] with great callosity[end if] here[if ram3 is reflexive]. They restyle why they can't let you go south[end if][if power-back is true]. Yet, for all their bluster, you feel like you could've taken them even before you regained your powers[end if]."
 
@@ -22509,7 +22522,7 @@ to say pre-desc:
 		say "You rescued [if nounsolve is 4]all the[else if nounsolve is 1]one of the[else]a few[end if] animals here, but it's still eerie.[no line break]";
 		continue the action;
 
-Perverse Preserve is south of Rote-Moan Anteroom. Perverse Preserve is part of otters. "[pre-desc]"
+Perverse Preserve is south of Rote Moan Anteroom. Perverse Preserve is part of otters. "[pre-desc]"
 
 A corona is a thing. the corona is fixed in place. description is "It's almost like a pair of dark scavenger's eyes. You can't locate its original light source--you try to cut it off, but you can't.". "A corona of light scurries about on the floor. It may have an extra c around its edge."
 
@@ -22536,7 +22549,7 @@ a-text of thrones is "RYRRYRR". b-text of thrones is "RYPRYRP". parse-text of th
 
 the hornets are plural-named neuter animals. description is "Thankfully, they are not buzzing with intent to sting you.". "Hornets are buzzing around here."
 
-understand "hornet" as thrones.
+understand "hornet" as hornets when hornets are in location of player.
 
 instead of taking the thrones:
 	say "They seem abnormally sharp, as if they could sting you again and again.";
@@ -23611,7 +23624,7 @@ the l-o-p is privately-named proper-named reflexive scenery in Clangier Clearing
 check taking l-o-p:
 	say "That'd leave everyone in the market confused[if l-o-p is reflexed] and undo your help fixing the prices[end if]." instead;
 
-understand "list/of/prices/" or "price list" or "list of prices" as l-o-p.
+understand "price list" or "list/ of/ prices" as l-o-p.
 
 the printed name of l-o-p is "the list of prices".
 
@@ -24244,14 +24257,14 @@ the allow lots tools wall is a proper-named exhibit in hows show. "[this-perl]".
 
 printed name of allow lots tools wall is "the allow-lots-tools wall".
 
-understand "alliow-lots-tools wall" as tools wall.
+understand "allow-lots-tools wall" as tools wall.
 
 after doing something with allow lots tools wall:
 	now any-walls is true;
 	now last-wall is allow lots tools wall;
 	continue the action;
 
-description of allow lots tools wall is "You read some [one of][or]more [stopping]of the allow-lots-tools wall. Some of this might be useful if you make your own game. But not a lot.[paragraph break][this-perl]"
+description of allow lots tools wall is "You read some [one of][or]more [stopping]of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.[paragraph break][this-perl]"
 
 perl-row is a number that varies.
 
@@ -24602,6 +24615,9 @@ check hinting when player is in Inclosure and tri-hint is false:
 	say "'[one of]A dirty aid-try[or]Uum, boy, you bum[at random]!' Elvira shrieks, but she can't PROVE what you just did. Ha!";
 	now tri-hint is true;
 
+before hinting when session-hints-off is true:
+	say "You temporarily turned hints off." instead;
+	
 check hinting for the first time:
 	if have-objhinted is false:
 		if player is not in Inclosure:
