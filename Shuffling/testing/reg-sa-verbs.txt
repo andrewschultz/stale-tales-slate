@@ -111,6 +111,13 @@ WRONG
 
 >goat
 
+>pat goat
+The goat bleats and pushes your hand away with its hoof. It's too tired for that nonsense.
+>pet goat
+The goat bleats and pushes your hand away with its hoof. It's too tired for that nonsense.
+>stroke goat
+The goat bleats and pushes your hand away with its hoof. It's too tired for that nonsense.
+
 >kick goat
 That'd be cruel. He's a lazy sort of ornery, not violent.
 >kick me
@@ -127,6 +134,9 @@ WRONG
 >x gate
 WRONG
 
+>lift gateway
+WRONG
+
 >enter gateway
 >x mega-ant
 WRONG
@@ -141,6 +151,9 @@ WRONG
 
 >gateman
 
+>talk to gateman
+WRONG
+
 >x man
 WRONG
 >x gate man
@@ -149,7 +162,19 @@ WRONG
 >x fellow
 
 >get gadget
+
+>talk to gateman about gadget
+WRONG
 >ask gateman about gadget
+WRONG
+>tell gateman about gadget
+WRONG
+
+>ask gateman about xyzzy
+WRONG
+>tell gateman about xyzzy
+WRONG
+
 >get saltine
 
 >slander me
@@ -509,6 +534,10 @@ WRONG
 WRONG
 
 >drapes
+
+>unfold drapes
+>WRONG
+
 >cut drapes with notepad
 WRONG
 
@@ -712,6 +741,9 @@ WRONG
 >x gate
 WRONG
 
+>lift grate
+WRONG
+
 >kitchen
 
 >open fridge
@@ -905,6 +937,9 @@ WRONG
 >missile
 
 >fold paper
+
+>unfold paper
+WRONG
 
 >panel
 >soil
