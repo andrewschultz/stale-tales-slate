@@ -355,6 +355,17 @@ The beats shift up for a second.
 
 Anti-Cool Location
 
+>w
+>put card on sensor
+>z
+>e
+Anti-Cool Location
+>w
+>z
+>open metallic door
+>e
+Anti-Cool Location
+
 >anticolo
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 

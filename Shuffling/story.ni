@@ -8229,17 +8229,6 @@ a gardenia is a flower.
 
 description of gardenia is "It's white, and it's just one flower instead of the whole bush. But it's the only one you've seen in the city proper[if elf row's flowers are visited], and people or humanoids who go in for this sort of thing might value it[end if]."
 
-check going east in undesired underside:
-	if metallic door is open:
-		continue the action;
-	if nerds-unwelcome is true:
-		say "You aren't welcome back[if keycard is in lalaland], and besides, no keycard[end if]." instead;
-	if player has the tulip:
-		say "It would be awkward to go back when you have the tulip. The nerds probably won't help you any more." instead;
-	if player has the keycard and barcode is part of the keycard:
-		now metallic door is open;
-		say "You [if keycard-put is true]re-scan your keycard and[else if Anti-Cool Location is unvisited]decide swiping the keycard might work, and what do you know, it does. You[otherwise]swipe your keycard and[end if] go east as the door opens.";
-
 chapter alley
 
 there is a room called A Yell Alley. it is in Metros. "This dead-end alley is littered with [if words are visible]words, which almost drown out the intense beats heard elsewhere in the city, and [end if]garbage. Only way out is back east."
@@ -9298,24 +9287,6 @@ check putting barcode on sensor:
 		try putting keycard on sensor instead;
 	say "You try holding the barcode up to the sensor, which pulses a bit. But the door doesn't seem to open. Perhaps the barcode needs to be a part of something." instead;
 
-check putting keycard on sensor:
-	if barcode is not part of keycard:
-		say "Hm. The blank keycard doesn't seem to work. It needs some sort of code." instead;
-	if nerds-unwelcome is true:
-		say "You aren't welcome back east." instead;
-	if player has lit-up tulip:
-		say "You don't want to put up with the nerds now you've gotten their tulip. They may not want to put up with you, either." instead;
-	if keycard-put is false:
-		say "What do you know? It works! The door slides open!";
-		reg-inc;
-		now keycard-put is true;
-	otherwise:
-		if metallic door is open:
-			say "The door is open. So you just walk east instead.";
-			try going east instead;
-		say "The door slides open again.";
-	now metallic door is open instead;
-
 check inserting into sensor:
 	say "The sensor isn't a container. So you go with putting it ON, instead.";
 	try putting noun on second noun;
@@ -9328,40 +9299,70 @@ check pushing metallic door:
 check pulling metallic door:
 	say "It's an automatic door." instead;
 
-[?? 3 code paths: open door, put keycard on sensor, go east
-check putting keycard on sensor:
-check opening the metallic door:
-check going east in undesired underside:
-east-through-door can be an action
-]
+this is the bother-nerds rule:
+	if nerds-unwelcome is true:
+		say "You aren't welcome back east[if keycard is in lalaland], and besides, no keycard[end if].";
+		the rule fails;
+	if player has lit-up tulip:
+		say "You don't want to put up with the nerds now you've gotten their tulip. They may not want to put up with you, either. Probably mention how they're sure they could figure what you need to do, etc.";
+		the rule fails;
+	the rule succeeds;
 
-check opening the metallic door:
-	if location of player is Anti-Cool Location:
-		say "The door slides open as you step near it.";
-		now metallic door is open;
-		the rule succeeds;
-	if keycard is in lalaland:
-		say "You no longer have your keycard." instead;
-	if player has tulip:
-		if nerds-unwelcome is true:
-			say "You aren't welcome back." instead;
-		say "Nah, too awkward. The nerds'd be all, 'What?! We gave you the tulip! We can't solve all you dumb people's problems. We have our own!' Then they'd go on to bemoan how only dumb people seem to enter politics." instead;
-	if keycard-put is true:
-		say "You use the keycard to open the door again.";
-		try putting keycard on sensor instead;
-	if location of player is undesired and keycard is off-stage:
-		say "You hear braying laughter behind the door. 'Hey! Some unintellectual's trying to get in. Like we'd make it a piece of cake for them to.' Then someone else admonishes the speaker for ending a sentence with a preposition." instead;
-	if noun is open:
-		say "But it already is. For now." instead;
-	say "The metallic door's got no handle. It's probably operated by the sensor[if player has keycard], which might open if you put something like your keycard on it[otherwise], but you don't seem to have anything to activate it[end if]." instead;
-
-check putting on the sensor:
+check putting on the sensor (this is the reject silly sensor tries rule) :
 	ignore the can't put onto what's not a supporter rule;
 	if noun is gadget:
 		say "The gadget is more for gauging than doing, but yeah, you probably need something high-tech. Oh, the gadget remains silent, too." instead;
 	if noun is the dry cake:
 		say "Opening an electronic door is not such a piece of cake. Something more metallic." instead;
 	say "'Special place is special!' barks the sensor. You'll probably need something more high-tech to slip, ace." instead;
+
+check putting keycard on sensor:
+	consider the bother-nerds rule;
+	if the rule failed:
+		the rule succeeds;
+	if barcode is not part of keycard:
+		say "Hm. The blank keycard doesn't seem to work. It needs some sort of code." instead;
+	if metallic door is open:
+		say "The door is open. So you just walk east instead.";
+		try going east instead;
+	if keycard-put is false:
+		say "What do you know? It works! The door slides open!";
+		reg-inc;
+		now keycard-put is true;
+	otherwise:
+		say "The door slides open again.";
+	now metallic door is open instead;
+
+check going east in undesired underside:
+	consider the bother-nerds rule;
+	if the rule failed:
+		the rule succeeds;
+	if metallic door is open:
+		continue the action;
+	if player has the keycard and barcode is part of the keycard:
+		if anti-cool location is unvisited:
+			say "Hm, maybe your keycard will do the trick.[paragraph break]";
+		try putting keycard on sensor;
+		continue the action;
+	else:
+		try opening the metallic door instead;
+
+check opening the metallic door:
+	if noun is open:
+		say "But it already is. For now." instead;
+	if location of player is Anti-Cool Location:
+		say "The door slides open as you step near it.";
+		now metallic door is open;
+		the rule succeeds;
+	consider the bother-nerds rule;
+	if the rule failed:
+		the rule succeeds;
+	if keycard-put is true:
+		say "You use the keycard to open the door again.";
+		try putting keycard on sensor instead;
+	if location of player is undesired and keycard is off-stage:
+		say "You hear braying laughter behind the door. 'Hey! Some unintellectual's trying to get in. Like we'd make it a piece of cake for them to.' Then someone else admonishes the speaker for ending a sentence with a preposition." instead;
+	say "The metallic door's got no handle. It's probably operated by the sensor[if player has keycard], which might open if you put something like your keycard on it[otherwise], but you don't seem to have anything to activate it[end if]." instead;
 
 check putting on the red optical beam:
 	ignore the can't put onto what's not a supporter rule;
