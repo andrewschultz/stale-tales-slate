@@ -303,8 +303,14 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >papayas
 Your score has just gone up by one point
+
+>priec
+Hm, no, the pattern of prices
 >cripes
 Your score has just gone up by one point
+>priec
+No, you already took care of stuff
+
 >kumquta
 Just return the fruit to Curtis. No need for another change.
 
@@ -861,6 +867,9 @@ You might break what is in the storage. Then it would be neither great nor so gr
 
 >pugnaciosu
 You may want to listen to what the plant has to say, or what it makes you say.
+
+>desigsn
+The design doesn't need changing. It's what the design's on.
 
 >icons
 >sonic

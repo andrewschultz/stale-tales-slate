@@ -104,7 +104,7 @@ for $idx (0..$#ARGV)
 #print "$idx $this\n";
 if ($this eq "-t") { print B "TEMPLATE string hashval region room? whatseen? rule? gametext:\n"; next; }
 
-$tabString = "$region\t--\t$rm\t--";
+$tabString = "--\t$rm\t--";
 
 $hash = 0;
 #if ($this > 0)

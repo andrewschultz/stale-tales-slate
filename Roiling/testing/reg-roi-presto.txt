@@ -219,6 +219,9 @@ The popgun is just fine
 >number
 You got the boing mechanism working
 
+>wysa
+You don't need to change the sway-ways. You might get lost beyond them, anyway.
+
 >w
 >s
 >s

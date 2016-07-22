@@ -5145,7 +5145,7 @@ carry out gleaning:
 	all-say "[bug-report] This part needs a story.";
 	the rule succeeds;
 
-after gleaning (this is the angle-glean check rule):
+report gleaning (this is the angle-glean check rule):
 	h-check;
 	continue the action;
 
@@ -12535,7 +12535,7 @@ reminders is a truth state that varies. reminders is true.
 carry out remindersing:
 	say "Now we will [if reminders is false]not [end if]have reminders appear on reloading a saved game.";
 	now reminders is whether or not reminders is false;
-	showme whether reminders is true;
+	showme whether or not reminders is true;
 	the rule succeeds;
 
 chapter wait for any key
@@ -12726,7 +12726,7 @@ understand the command "play [something]" as something new.
 understand "play [something]" as playing.
 
 understand the command "blow [something]" as something new.
-understand "blow [something]" as blow.
+understand "blow [something]" as blowing.
 
 does the player mean playing the bugle: it is very likely;
 does the player mean blowing the bugle: it is very likely;

@@ -6669,7 +6669,7 @@ Reclusion Inclosure	"Even without the raw-bulk bulwark that way, Elvira wouldn't
 Rustic Citrus	"[unless player has compass]You try to go north by not going north, but everywhere's a border, arbored[else if swell wells are unvisited]That's not north, according to your compass[else]You can only go back north to the wells[end if]." [others]
 filed field	"[if b-w are visible and noun is west]The barriers west block you. Maybe you can get rid of them.[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east.[end if]"
 Scape Space	"The scape space is pretty sparse. No spare rooms, restrooms, anything. You can only go back up."
-Clangier Clearing	"You could get lost in whatever's not back west."
+Clangier Clearing	"Nameless salesmen constantly coming and going stop you from going any way but back west. You don't really notice them until you have to leave, but they leave you with a feeling of lameness."
 
 to say if-fence:
 	say "[if pipe panel fence is visible]the pipe panel fence too[else]even without the fence[end if]"
@@ -7774,7 +7774,7 @@ carry out sbing:
 	if a-text of noun is b-text of noun:
 		say "Nothing changes between cheat/teach and regular mode.";
 		now sb-cur is false;
-		the rule suceeds;
+		the rule succeeds;
 	now cheat-on is true;
 	try scaning noun;
 	now cheat-on is z;
@@ -8162,7 +8162,7 @@ understand the command "sites" as something new.
 understand "sites" as sitesing.
 
 carry out sitesing:
-	say "I've probably forgotten some, here, but these are the big ones.[line break]
+	say "I've probably forgotten some, here, but these are the big ones.[line break]";
 	say "http://wordsmith.org/anagram/ -- Anu Garg's Rearrangement Server at wordsmith.org was invaluable to me. Hard to believe I've known about it for fifteen years. You've probably seen it before, too, but it's the big one for the main game mechanic. The sayings that go with each anagram have also helped me in many other ways. It's still fun after all these years.[line break]http://www.anagrammy.com/anagrams/faq6.html[line break]http://www.english-for-students.com/One-Word-Anagrams.html[line break]http://www.enchantedlearning.com/english/anagram/ was quite nice for common anagrams by subject.[line break]http://www2.vo.lu/homepages/phahn/anagrams/oneword.htm[line break]http://www.ssynth.co.uk/~gay/anagram.html[line break]http://www.wellho.net/resources/ex.php4?item=p669/anagram (basic succinct PERL anagram finder)[line break]http://boards.straightdope.com/sdmb/archive/index.php/t-291149.html for specific words and also ideas how to script more complex stuff[line break]http://www.rinkworks.com/words/oddities.shtml[line break]http://www.sporcle.com/ had many puzzles that helped me determine what was fair and what wasn't[line break]http://jamesgart.com/anagram/[line break]PERL for letting me parse through word-to-word anagrams and also helping me break one promising word into two.[paragraph break]I'd be interested if someone from France can ref these sites to make a similar game, someone from Spain could take pains, or a German manager could do so too. It'd be interesting to see.";
 	say "And it's already mentioned in the credits, but [my-repo] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep an occasional backup, or be sure of what you changed, it can save a lot of trouble.";
 	the rule succeeds; [forgot where I found the names from]
@@ -9539,8 +9539,6 @@ check answering:
 		say "This game generally uses ASK X ABOUT Y instead, unless you are in a conversation with numbered choices[if haunter is visible or kid is visible]. However, the X, Y syntax can work here[end if]." instead;
 	else:
 		try asking noun to try taking inventory instead;
-
-does the player mean answering side door when gunter is off-stage: it is likely.
 
 does the player mean opening side door: it is very likely.
 
@@ -13908,7 +13906,7 @@ understand "shoot [something]" as shooting.
 
 understand the command "fire [something]" as something new.
 
-understand "fire [something]" as shooting.
+understand "fire [text]" as a mistake ("SHOOT something with the gun instead.") when player has popgun.
 
 carry out shooting:
 	if player does not have popgun:
@@ -13928,7 +13926,7 @@ carry out shooting:
 	if noun is hoop:
 		say "Shooting hoops is only a figurative expression." instead;
 	if noun is Leo and Rand is off-stage:
-		say "He backpedals out of range, looking a bit scared. Perhaps you can find a better target to shoot." instead;
+		say "He backpedals out of range, looking a bit scared. Perhaps you can find a better target to shoot, later." instead;
 	if noun is Rand or noun is Leo:
 		if noun is fightin:
 			say "That'd just make him madder." instead;
@@ -14022,7 +14020,7 @@ section volt maze path
 
 the volt maze is vanishing scenery in Grey Gyre. "At the start of the path is tiled WELCOME TO THE [b]VOLT MAZE[r]. You can read red writing about who made it.". understand "path" as volt maze.
 
-understand "entry" and "maze entry" as volt maze when player is in Gyre.
+understand "maze/ entry" as volt maze when player is in Gyre.
 
 a-text of volt maze is "RYRYRRYR". b-text of volt maze is "RYRYRRYR". parse-text of volt maze is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -14719,7 +14717,7 @@ The PG-on-up popgun is a container in Marines Seminar.
 
 understand "oppugn [text]" and "oppugn" as a mistake ("You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.") when popgun is visible.
 
-understand "PG-on-up gun" and "gun" as popgun.
+understand "PG-on-up/ pop/ gun/" as popgun.
 
 understand "nobig" and "no big" as a mistake ("[if boing is reflexed]Hey, now, that's just humblebragging[else]Overconfidence is sort of the way, here. But it needs to be backed up with an idea[end if].") when popgun is visible.
 
@@ -14733,7 +14731,7 @@ check scaning popgun when boing is reflexive:
 
 a-text of popgun is "RYRRY". b-text of popgun is "PYRRY". parse-text of popgun is "b[sp]-[sp]x[sp]x[sp]-". popgun is cheat-spoilable.
 
-understand "sawedoff/PG-on-up pop/ gun/" as popgun.
+understand "PG-on-up pop/ gun/" as popgun.
 
 report taking popgun:
 	say "You're not one for violence, but the gun doesn't look super-high-powered. On the other hand, it's not G-rated, so it's minimally effective. Snagged.";
@@ -14817,7 +14815,7 @@ after printing the locale description for phat path when player has popgun:
 
 the priv-shack is privately-named proper-named scenery. "[if shack is visited]It looks just as you left it[else]The shack looks cozy and inviting[end if].". printed name of priv-shack is "the shack"
 
-understand "shack" as priv-shack.
+understand "shack" as priv-shack when player is in phat path.
 
 instead of doing something with priv-shack:
 	if current action is entering:
@@ -16011,7 +16009,7 @@ instead of touching walls:
 
 description of big-let is "It's a letter[if r10 is visited]. Much like back to the L you saw at the beginning[else]. Maybe there are others later along[end if]."
 
-understand "floor" and "big/ m/n/o/p/q/r/s/t/u/v" and "big/ letter" as big-let.
+understand "floor" and "big/ l/m/n/o/p/q/r/s/t/u/v/letter" as big-let.
 
 r10 is a privately-named mazeroom in Presto. r10 is west of Maze Entry. "A big M is tiled into the floor here[exits-lead]."
 
@@ -16155,7 +16153,7 @@ instead of doing something with m-bk:
 		try looking instead;
 	say "You can only really try looking in the Posh Hops Shop."
 
-understand "Posh Hops Shop" and "posh/hops shop" and "posh hops" and "posh/hops/shop" as m-bk when player is in posh hops shop.
+understand "posh/ hops/ shop" as m-bk when player is in posh hops shop.
 
 instead of exiting when in Posh Hops Shop:
 	try going outside;
@@ -16759,7 +16757,7 @@ understand "ocean" as a mistake ("As you seek to change the canoe, you hear a ru
 
 Shoer Osher is scenery in Hero's Shore. "Everyone knows the story of Shoer Osher and [if player is male]his[else]her[end if] rise to fame from humble farm life, and everyone knows it's sort of fake, but nobody can say much. The statue itself improves Osher's looks and muscle tone. It's quite frankly creepy enough, making you wonder if perhaps you should be looking in the river instead for ways to cross it."
 
-Understand "sculpture" and "super cult sculpture" and "super/cult sculpture" as Osher.
+Understand "sculpture" and "super/ cult/ sculpture" as Osher.
 
 check taking Osher:
 	say "You have enough heroism by yourself."
@@ -16880,7 +16878,7 @@ Fighter Freight is a room in Oyster. "You're near the edge of a fighter freight.
 
 some scary crays are plural-named terse people in Fighter Freight. "Scary crays hover here, on the verge of attacking.". description is "They don't have any weapons, but they are staring intently at you, ready to take you down."
 
-understand "cray" and "scary cray" as crays.
+understand "scary/ cray" as crays.
 
 the pale plea is scenery in Fighter Freight. "[one of]'A... [']elp!'[or]'Pal! Pal! Ee!'[or]'Apple...ale...'[in random order]". the pale plea is vanishing.
 
@@ -18634,8 +18632,6 @@ carry out looking when mrlp is towers (this is the towers YOU ARE HERE redraw ru
 		draw-my-loc;
 	continue the action;
 
-deacon-plot is a truth state that varies.
-
 to wipe-towers-map:
 	if can-see-map:
 		change current foreground-color to (R 255 G 255 B 255);
@@ -19296,7 +19292,7 @@ book Danger Garden
 
 Danger Garden is a room in Towers. Danger Garden is east of Unblest Sunbelt. printed name of Danger Garden is "[if bonker is visible]Danger[otherwise]Gander[end if] Garden". "[if bonker is visible]This garden seems both describable and indescribable. You're sure it's inspired its share of overblown prose and poetry, and of thinking how things are or should be, but there's no time for that now[otherwise]You hear the geese honking now with the bonker gone, but they are too scared of you[end if]. The curst palace is barely visible in the distance north-ish, and you can take a path any which way.".
 
-understand "danger/gander garden" and "garden" as Danger Garden when mrlp is towers.
+understand "danger/gander/ garden" as Danger Garden when mrlp is towers.
 
 after printing the locale description for Danger Garden when Danger Garden is unvisited:
 	say "The natives look, well, restless, as if they might want to find a more important territory to guard[if ego drains are unprodded]. Also, the ego drains seem to put ideas into your mind that you really don't need or deserve to go north, and maybe you can just go around--and, well, it makes a lot of sense as-is and is far less over the top than the rest of the campsite[end if].";
@@ -19403,8 +19399,8 @@ to say what-kid-does:
 		continue the action;
 	say "drawing in the air and mouthing ideas[one of]. 'Hey! I'm [kid-full]! They tell me I'm a smart kid but never let me learn the cool stuff. Those mean adults kept bugging me about religion! Bo-ring! Maybe you can teach me? Or find someone who can?' You never were good at that technical stuff, but maybe you [if prison ropins is reflexed]have found[else]can find[end if] someone else who is[meet-kid][or][stopping]"
 
-understand "dirk stam" and "dirk" and "stam" as smart kid when player is male.
-understand "kim darst" and "kim" and "darst" as smart kid when player is female.
+understand "dirk stam" and "dirk/stam" as smart kid when player is male.
+understand "kim darst" and "kim/darst" as smart kid when player is female.
 
 before taking gizmo:
 	if smart kid has gizmo:
@@ -19857,7 +19853,7 @@ instead of doing something with o-s:
 		say "The ole shrine is too far away to do anything other than look at, [if the-hostile are in lalaland]and you don't need to bother [the-hostile][else]even without [the-hostile] blocking you[end if]." instead;
 	say "There's nothing much to do with the shrine. It's not blocking you, and it's keeping [the-hostile] out of the way, too.";
 
-description of o-s is "It's relatively modest, and where you enter (or you would, if you were religious,) it mentions its sister shrine Heron Isle[if the-hostile is visible]. You'd think [the-hostile] would want to enter, but they glare at it, but apparently it's witnessing time[end if]."
+description of o-s is "It's relatively modest, and where you enter (or you would, if you were religious,) it mentions its sister shrine Heron Isle[if the-hostile is visible]. You'd think [the-hostile] would want to enter, but they glare at it, but apparently it's witnessing time[end if]. Also written on the ole shrine is 'RIP once-sad deacons: aced, son (just before release 4). Hmm."
 
 book side-path rooms
 
@@ -20434,8 +20430,6 @@ check going west in mislit limits:
 
 section serpent
 
-understand the command "present" as something new.
-
 A pester'n serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of pester'n serpent is "[one of]A[or]The[stopping] pester'n serpent guards the way west. It lets out ten reps of a particularly nasty hiss."
 
 rule for supplying a missing second noun when showing:
@@ -20504,7 +20498,7 @@ The man covered in inapt paint is a blue guardian. description is "He has, in in
 
 understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.") when man covered is visible.
 
-understand "painted man" and "mel fish" and "mel" and "fish" as man covered in inapt paint.
+understand "mel fish" and "mel/fish" as man covered in inapt paint.
 
 the i-p is part of the man covered in inapt paint. the i-p is privately-named. printed name of i-p is "inapt paint". understand "inapt/paint" and "inapt paint" as i-p.
 
@@ -20521,7 +20515,7 @@ description of i-p is "Didn't need a pint to spell out FLEMISH."
 
 a-text of man covered in inapt paint is "RYRRYRR". b-text of man covered in inapt paint is "RYRRYRR". parse-text of man covered in inapt paint is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x".
 
-understand "flemish/painted man" as man covered in inapt paint.
+understand "flemish/painted man/" as man covered in inapt paint.
 
 some natives are a plural-named white guardian. indefinite article of natives is "several".
 
@@ -20611,7 +20605,7 @@ a-text of oddly rewired robot is "RYYRRYR". b-text of oddly rewired robot is "RG
 
 the man in a REED'S ALE costume is a red guardian.
 
-understand "reeds ale man" and "ale man" and "reeds" as man in a REED'S
+understand "reeds ale/ man/" as man in a REED'S
 
 before doing something with costume:
 	if current action is opening or current action is closing or current action is pulling or current action is taking:
@@ -24614,8 +24608,10 @@ check hinting when player is in Inclosure and tri-hint is false:
 	say "'[one of]A dirty aid-try[or]Uum, boy, you bum[at random]!' Elvira shrieks, but she can't PROVE what you just did. Ha!";
 	now tri-hint is true;
 
-before hinting when session-hints-off is true:
+check hinting when session-hints-off is true (this is the force hint blocking rule):
 	say "You temporarily turned hints off." instead;
+
+the force hint blocking rule is listed first in the check hinting rulebook.
 
 check hinting for the first time:
 	if have-objhinted is false:

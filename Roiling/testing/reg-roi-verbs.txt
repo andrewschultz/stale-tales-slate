@@ -13,8 +13,6 @@
 
 you may wish to type ABOUT or VERBS to see information about the game and what words work best.
 
->hint xxx
-
 >consult me
 You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
 
@@ -274,6 +272,9 @@ WRONG
 >staple wall
 >in
 
+>x gun
+WRONG
+
 ############################################stores
 
 >point settler at store p
@@ -346,6 +347,29 @@ WRONG
 >outside
 
 ############################################routes
+
+>hint xxx
+WRONG
+>hint store u
+WRONG
+>info store u
+WRONG
+>help store u
+WRONG
+>hints store u
+WRONG
+
+>hint plates
+WRONG
+>info plates
+WRONG
+>help plates
+WRONG
+>hints plates
+WRONG
+
+>x book
+WRONG
 
 >routes
 >in
@@ -543,10 +567,58 @@ It's hecka swirly. You're sure it goes somewhere the speech is louder and so for
 >enter spot
 >x bread
 WRONG
+
+>x entry
+WRONG
+>x maze entry
+WRONG
+
+>n
+>w
+>x letter
+WRONG
+>x big letter
+WRONG
+>x big l
+WRONG
+>x big m
+WRONG
+>x big n
+WRONG
+>x big p
+WRONG
+>x big p
+WRONG
+>x big q
+WRONG
+>x big r
+WRONG
+>x big s
+WRONG
+>x big t
+WRONG
+>x big u
+WRONG
+>x big v
+WRONG
+>x v
+WRONG
+
+>e
+>s
+
+
 >umph
 >pooh
 >e
 >s
+>x gasp-gaps
+WRONG
+>x gasp
+WRONG
+>x gaps
+WRONG
+
 >drat
 >rats
 
@@ -565,28 +637,109 @@ WRONG
 
 >bleep
 
+>throw dart at leo
+WRONG
+
+>throw dart
+WRONG
+
 >this
 WRONG
 
 >e
+
+>x yaws
+Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security.
+>x sway
+Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security.
+>x sway-ways
+Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security.
+>x ways
+Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security.
+
 >boing
 >put dart in gun
+WRONG
+>undo
+>load gun with dart
+WRONG
+
+>shoot me with gun
+Just say what you want to shoot.
 
 >x sway ways
 WRONG
 >x spoilt pistol
 >x spoilt
 >x pistol
-
+>x pg-on-up pop
+WRONG
+>x pg-on-up gun
+WRONG
+>x pop gun
+WRONG
 
 >w
+
+>shoot leo
+>fire leo
+
 >there
 >n
 >syke
+
+>x logons
+WRONG
+>x letters
+WRONG
+>x log ons letters
+WRONG
+
+>x alter letters
+WRONG
+>x alter
+WRONG
+>x letters
+WRONG
+
 >so long
 >later
+
+>x shack
+WRONG
+
 >n
 >x bad book
+WRONG
+
+>mug
+>cola
+>x can
+WRONG
+
+>put cola in mug
+WRONG
+>pour cola in mug
+WRONG
+
+>x algorithms
+WRONG
+>x logarithms
+WRONG
+>x algorithms logarithms
+WRONG
+>x textbook
+WRONG
+>x text
+WRONG
+>x book
+WRONG
+
+>x puddle
+WRONG
+>caps lock
+
+>x fountain
 WRONG
 
 >skid
@@ -596,12 +749,98 @@ Phat Path
 >pull skid to s
 Grey Gyre
 
+>push skid s
+>put leaf on skid
+
+>keyboard
+
+>push skid n
+>push skid n
+>push skid n
+
+>disk
+>put disk in drive
+
+>place keyboard on slab
+>reboot
+>x code
+WRONG
+>x program
+WRONG
+>x polemic
+WRONG
+
+>x tba key
+WRONG
+>x tba
+WRONG
+>tab
+
+>x tab key
+WRONG
+>x tab
+WRONG
+
 >retry
 
 ####################oyster
 
 >oyster
 >enter oyster
+>x posh hops shop
+WRONG
+>x posh hops
+WRONG
+>x posh shop
+WRONG
+>x hops shop
+WRONG
+
+>inset settler
+WRONG
+>inset xyz
+WRONG
+>unset settler
+WRONG
+>scrape settler
+WRONG
+>insert settler
+WRONG
+>spill settler
+WRONG
+>produce redo cup
+WRONG
+>calm me
+WRONG
+>calm casper
+WRONG
+>run n
+WRONG
+>assuage casper
+WRONG
+>unearth casper
+WRONG
+>tend casper
+WRONG
+>seek casper
+WRONG
+
+>trace settler
+WRONG
+>enlarge me
+WRONG
+
+>remap settler
+WRONG
+>spit settler
+WRONG
+>spit at settler
+WRONG
+>spit in settler
+WRONG
+>spit on settler
+WRONG
+
 >x author
 WRONG
 >x fish
@@ -609,11 +848,60 @@ WRONG
 >x book
 WRONG
 
->gonear anger range
+>sing
+>spit
+>scrape
+>stroll
+>calm
+>run
+
+>sob at boats
+WRONG
+>sob at shoer
+WRONG
+
+>x sculpture
+WRONG
+>x super
+WRONG
+>x cult
+WRONG
+>x super cult
+WRONG
+>leap
+WRONG
+
+>spike carps
+>scrap with pikes
+>scrap at pikes
+>scrap pikes
+>unearth haunter
+WRONG
+>unearth me
+WRONG
+
+>x fish
+WRONG
+>x bullies
+WRONG
+
 >spike
 >e
 >seek
 by one point
+
+>x tortu
+WRONG
+
+>tutor
+by one point
+
+>clean me
+
+>swipe tuna
+WRONG
+>swipe tea
+WRONG
 
 >taste tea
 WRONG
@@ -622,14 +910,101 @@ WRONG
 >eat tea
 by one point
 
+>swipe wipes
+by one point
+>clean wipes
+WRONG
+>clean settler
+WRONG
+
+>wrap settler
+WRONG
+>wrap xxx
+WRONG
+>warp settler
+WRONG
+
 >w
+
+>n
+>x debris
+WRONG
+>x crates
+WRONG
+>x doorknob
+WRONG
+>bonk settler
+WRONG
+>bonk me
+WRONG
+
+>trace
+>react
+>kiss
+>bonk
+>in
+>gt hut
+WRONG
+
+>shape me
+WRONG
+>bust me
+WRONG
+
+>bust
+>drop
+>out
+>s
+>s
+
 >w
 >warp
 >look behind arches
 WRONG
 
+>patrol
+
+>x achers
+WRONG
+>x arches
+WRONG
+>x achers arches
+WRONG
+
+>search
+>n
+>w
+>bury ruby
+>e
+>patrol
+>s
+>e
+>unearth x
+WRONG
+>unearth me
+WRONG
+>unearth
+>assuage me
+WRONG
+>assuage x
+WRONG
+>assuage ghost
+WRONG
+>assuage haunter
+WRONG
+>assuage sausage
+>w
+>n
+>w
+>patrol
+WRONG
+>patrol
+WRONG
+
+>s
 >e
 >n
+
 >knock x
 WRONG
 >knock
@@ -644,6 +1019,14 @@ WRONG
 >clean lance
 WRONG
 
+>dig xyz
+WRONG
+>bury xyz
+WRONG
+
+>bury notepad
+WRONG
+
 >retry
 
 #############################################towers
@@ -656,6 +1039,13 @@ WRONG
 >bleak
 >yonder
 Topside Deposit
+
+>x castle apcur
+WRONG
+>x castle
+WRONG
+>x apcur
+WRONG
 
 >answer x
 (to Ray Eck)
@@ -672,6 +1062,31 @@ That's not something animate.
 >answer ray
 Try to ASK a person about something instead.
 
+>get toaster
+>get tarts
+
+>toast tarts
+WRONG
+>heat tarts
+WRONG
+>warm tarts
+WRONG
+
+>x toast-o-stat
+WRONG
+>x toast
+WRONG
+
+>xray 
+>xray me
+WRONG
+>xray ray
+WRONG
+>x-ray me
+WRONG
+>x-ray ray
+WRONG
+
 >wordy
 WRONG
 >rowdy
@@ -682,7 +1097,23 @@ WRONG
 
 >seed 1
 >towers
->gonear topside
+
+>gone
+by one point
+>wined
+by one point
+>bleak
+by one point
+>yonder
+by one point
+
+>x flower pot
+WRONG
+>x pot
+WRONG
+>plant pot
+WRONG
+
 >x pastry
 mystery flavor
 >get pastry
@@ -742,6 +1173,9 @@ WRONG
 >exits
 There are four viable exits, though not all are unblocked: north, south, east and west.
 
+>x diner
+WRONG
+
 >x yurt
 WRONG
 >yurts
@@ -763,6 +1197,45 @@ That's nothing like a rapier. It's not sharp, metal and pointed. You'll need to 
 >e
 >n
 >punier
+
+>e
+>sewed
+>mined
+>x pirate
+WRONG
+>pastier
+>released
+
+>x flemish man
+WRONG
+>x painted man
+WRONG
+>x flemish
+WRONG
+>x painted
+WRONG
+>x mel
+WRONG
+>x fish
+WRONG
+>x mel fish
+WRONG
+>hug mel
+WRONG
+>embrace mel
+WRONG
+
+>himself
+
+>x eclairs
+WRONG
+>x eclair
+WRONG
+
+>w
+
+>n
+
 >x theatre
 The theater thereat, with such lame titles as "Me, I can," / "Nice, Ma!" and "Iceman," has been abandoned. And really, you shouldn't be staring at some screen when you are trying to save a world.
 >x anemic cinema
@@ -772,12 +1245,123 @@ Me, I can
 >x cinema
 Me, I can
 
->gonear subsector
+>married
+>angstier
+>x ingrate
+WRONG
+
+>w
+>x loaves
+WRONG
+>x loaf
+WRONG
+
+>x wait seer
+WRONG
+>x seer
+WRONG
+>weariest
+
+>n
+>x id tag
+>x lone noel
+WRONG
+>x noel
+WRONG
+
+>s
+>e
+>x atheist
+WRONG
+>hastiest
+>marginal
+
+>e
+>x hostile
+WRONG
+>holiest
+by one point
+
+>x shrine
+WRONG
+>x ole
+WRONG
+>x ole shrine
+WRONG
+
+>x dirk
+WRONG
+>x dirk stam
+WRONG
+>x stam
+WRONG
+
+>s
+>organised
+
+>x reeds ale man
+WRONG
+>x reeds ale
+WRONG
+>x reeds man
+WRONG
+>x reeds
+WRONG
+>released
+
+>gs
+>n
+>x kim
+WRONG
+>x darst
+WRONG
+>x kim darst
+WRONG
+>s
+>gs
+
+>s
+>broken
+>drained
+>x native
+WRONG
+>vainest
+
+>x geese
+>gt danger garden
+WRONG
+>gt gander garden
+WRONG
+>gt garden
+WRONG
+
+>e
+
+>x jail
+WRONG
+
+>x doctor yow
+WRONG
+>x doc yow
+WRONG
+>x doctor
+WRONG
+>x doc
+WRONG
+
+>tape
+WRONG
+>retape
+WRONG
+>record
+WRONG
 
 >wordy
 by one point
 >wordy
 !by one point
+>retape
+
 >rowdy
 by one point
 >rowdy
@@ -788,6 +1372,41 @@ WRONG
 >x doctor
 >x doc yow
 >x doctor yow
+
+>gt duck
+>repeat
+>gt yow
+>unlocked
+>gt kid
+>ask kid about yow
+
+>s
+>s
+>e
+>rowdy
+>attentive
+
+>gt kid
+>robust
+
+
+
+>present serpent
+by one point
+undo
+
+>present
+by one point
+
+>x flower
+WRONG
+>plant crocus
+WRONG
+>dingy
+>plant crocus
+WRONG
+>x flower
+WRONG
 
 >retry
 
@@ -1010,6 +1629,26 @@ WRONG
 
 * demo dome
 
+>z
+
+>no hint
+WRONG
+>hint me
+WRONG
+>nothin
+WRONG
+>hint me
+
+>undo
+>undo
+>undo
+>undo
+
+>nothin
+WRONG
+>no hint
+WRONG
+
 >demo dome mode
 >x shall
 WRONG
@@ -1029,3 +1668,11 @@ You read some more of the owl decal code wall.
 
 >x allow-lots-tools wall
 You read some of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
+
+* roving
+
+>rove over
+>others
+
+>x mouth
+WRONG
