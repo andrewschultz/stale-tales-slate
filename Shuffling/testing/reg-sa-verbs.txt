@@ -8,6 +8,43 @@ VERBS
 
 * silly starting stuff
 
+>au 1
+
+>follow me
+Tautological.
+>follow passage
+A Dry Yard
+>undo
+
+>help
+WRONG
+>info
+WRONG
+>instructions
+WRONG
+
+>pad lecture
+WRONG
+
+>x tag
+WRONG
+>x name tag
+WRONG
+
+>au 1
+>hint
+>hint
+
+>kiss me
+
+>pf
+WRONG
+
+>consult pad
+WRONG
+>pad
+WRONG
+
 >exist
 WRONG
 
@@ -21,15 +58,106 @@ WRONG
 WRONG
 
 >in
+
+>x smell
+WRONG
+>x breeze
+WRONG
+
+>door
+
+>unlock door
+WRONG
+
+>hint door
+WRONG
+>hint blot
+WRONG
+>hint bugle
+WRONG
+
 >blot
 >bugle
+>x horn
+WRONG
+
+>x doorway
+WRONG
+
+>blow pad
+WRONG
+>blow bugle
+WRONG
+>play pad
+WRONG
 >play bugle
+WRONG
+
+>x doorway
+WRONG
+
 >in
 >x toga
 WRONG
 >read toga
 WRONG
 
+>x thickest
+WRONG
+>x thickets
+WRONG
+>x thickest thickets
+WRONG
+
+>goat
+
+>kick goat
+That'd be cruel. He's a lazy sort of ornery, not violent.
+>kick me
+WRONG
+
+>x animal
+WRONG
+
+>in
+
+>x billboard
+WRONG
+
+>x gate
+WRONG
+
+>enter gateway
+>x mega-ant
+WRONG
+
+>x noise
+WRONG
+>attics
+>x attic
+WRONG
+>x dollhouse
+WRONG
+
+>gateman
+
+>x man
+WRONG
+>x gate man
+WRONG
+
+>x fellow
+
+>get gadget
+>ask gateman about gadget
+>get saltine
+
+>slander me
+WRONG
+>slander gateman
+WRONG
+
+>in
 
 >dance
 You won't get caned for that,
@@ -52,6 +180,60 @@ WRONG
 >xyzzy
 WRONG
 
+>xx store i
+WRONG
+>eat saltine
+WRONG
+>xx store i
+WRONG
+>xx store m
+WRONG
+
+>parse
+WRONG
+>scan f
+WRONG
+>spare
+WRONG
+>scan f
+WRONG
+>spare
+WRONG
+>scan f
+WRONG
+>parse
+WRONG
+>scan f
+WRONG
+
+>spare
+>no tip
+WRONG
+>no tip
+WRONG
+>forets
+>opt in
+WRONG
+>opt in
+WRONG
+>forets
+
+>metros
+>x roadsign
+>x writing
+
+>help off
+WRONG
+>hint off
+WRONG
+>info off
+WRONG
+>hint off
+WRONG
+
+>hint store i
+WRONG
+
 #####################forest
 
 * forest-understandage
@@ -60,10 +242,106 @@ WRONG
 
 >ts
 
+>eat saltine
+It'll only take one bite to EAT. You can't save half for later and get another hint.
+
+>scan store f
+>access
+WRONG
+>scan store f
+>access
+WRONG
+>scan store f
+WRONG
+
+>son
+WRONG
+>scan store f
+WRONG
+>space
+WRONG
+>scan store f
+WRONG
+>space on
+WRONG
+>scan store f
+WRONG
+>spaces on
+WRONG
+>scan store f
+WRONG
+
+>nos
+WRONG
+>scan store f
+WRONG
+>no space
+WRONG
+>scan store f
+WRONG
+>no spaces
+WRONG
+>scan store f
+WRONG
+
+>glean
+WRONG
+>hanker
+WRONG
+>hkr
+WRONG
+>nk
+WRONG
+>kr
+WRONG
+
+>angle
+WRONG
+>harken
+WRONG
+>hrn
+WRONG
+>rk
+WRONG
+>kn
+WRONG
+
 >c store f
+WRONG
+>cer store f
+WRONG
+>cert store f
+WRONG
+>certify store f
+WRONG
+
 >r store f
+WRONG
+>rec store f
+WRONG
+>rect store f
+WRONG
+>rectify store f
+WRONG
+
 >cr store f
+WRONG
 >rc store f
+WRONG
+
+>x device
+WRONG
+>x side
+WRONG
+
+>secure
+WRONG
+>recuse
+WRONG
+>recuse
+WRONG
+>secure
+WRONG
 
 >forest
 
@@ -98,18 +376,87 @@ WRONG
 
 >in
 
+>c
+>r
+
+
+>gt softer forest
+WRONG
+>gt softer
+WRONG
+>gt rest of forest
+WRONG
+
 >north
+
+>x smell
+WRONG
+
+>certify
+WRONG
+>rectify
+WRONG
+
 >west
 Self-ID Fields
 
+>x bearded man
+WRONG
+>x bearded guy
+WRONG
+>x bearded figure
+WRONG
+>x man
+WRONG
+>x guy
+WRONG
+>x figure
+WRONG
+
+>x bearded men
+WRONG
+>x bearded guys
+WRONG
+>x bearded figures
+WRONG
+>x men
+WRONG
+>x guys
+WRONG
+>x figures
+WRONG
+>x line of no life
+WRONG
+>x life
+WRONG
+>x line
+WRONG
+>x undead
+WRONG
+
 >w
+
+>get sandwich
+>e
 >open sandwich
+>x meat
 >maps
 >x map
 WRONG
 >beard
 
 >beard
+WRONG
+
+>w
+>x chicken
+>x meat
+WRONG
+>x cow
+>x meat
+WRONG
+
+>x livers
 WRONG
 
 >peel chicken
@@ -146,8 +493,8 @@ WRONG
 
 >shotgun
 
->put nose on beard
->put shades on beard
+>hook nose to beard
+>hook shades to beard
 disguise!
 
 >w
@@ -156,7 +503,107 @@ disguise!
 >x lich
 WRONG
 
->gonear frost forst
+>chisel
+
+>x cloth
+WRONG
+
+>drapes
+>cut drapes with notepad
+WRONG
+
+>x cloth
+WRONG
+
+>retry
+>i
+WRONG
+>enter forest
+>i
+WRONG
+
+>terry
+>i
+WRONG
+>enter forest
+>i
+WRONG
+
+>s
+>w
+
+>x blade
+WRONG
+>x blades
+WRONG
+>x sabled blade
+WRONG
+>x sabled blades
+WRONG
+>x blender
+WRONG
+
+>chisel chicken
+WRONG
+>undo
+>peel chicken with chisel
+WRONG
+>undo
+>peel chicken with settler
+WRONG
+>pry chicken with settler
+WRONG
+>scrape chicken with settler
+WRONG
+
+>peel chicken liver
+>peel cow liver
+
+>grind notepad
+WRONG
+
+>x glob
+WRONG
+>x glop
+WRONG
+
+>e
+
+>grind notepad
+WRONG
+
+>n
+>sliver
+>cut drapes
+
+>x door
+WRONG
+>x doorway
+WRONG
+
+>x map
+>silver
+>put silver in shotgun
+>undo
+>load shotgun
+WRONG
+>undo
+>load silver in shotgun
+
+>n
+>x maps
+
+>x a
+WRONG
+>x e
+WRONG
+>x o
+WRONG
+>x i
+WRONG
+>x u
+WRONG
+
 >purloin shotgun
 >purloin silver
 >x shell
@@ -167,6 +614,8 @@ WRONG
 >undo
 >load shotgun
 WRONG
+
+>wolves
 
 >shoot at werewolves
 Trips Strip
@@ -180,29 +629,496 @@ Trips Strip
 Trips Strip
 
 >undo
+
 >fire wolves
+WRONG
+
+>stab wolves
+Stab? With what you have? Bats.
+
+>fire shotgun
 Trips Strip
+
+* forest-alt
+
+>sr se
+
+>ts
+>forest
+>in
+
+>certify
+WRONG
+>rectify
+WRONG
+
+>sg
+WRONG
+>sg
+WRONG
+
+>x noise
+WRONG
+>x sound
+WRONG
+
+>s
+
+>certify
+WRONG
+>rectify
+WRONG
 
 * sortie-understand
 
+>au 1
+
+>hint
+>hint
+
 >ts
 >sortie
+
+>x pictures
+WRONG
+>x picture
+WRONG
+>x prime minister
+WRONG
+>x prime ministers
+WRONG
+>x minister
+WRONG
+>x ministers
+WRONG
+
+
 >in
+
+>set me to 1
+WRONG
+>switch me to 1
+WRONG
+>turn me to 1
+WRONG
+>turn 17
+WRONG
+>set 15
+WRONG
+
 >16
 >x nick
 WRONG
+>x gate
+WRONG
+
 >kitchen
 
+>open fridge
+>x heapin
+WRONG
+>x helpin
+WRONG
+
+>eat cake pan
+Err, it's kind of metal.
+
+>grits
+>x heapin
+WRONG
+>x helpin
+WRONG
+
+>x cakepan
+WRONG
+
+>x shirt
+WRONG
+
+>x man
+WRONG
+>x spear man
+WRONG
+
+>x cat perfume
+WRONG
+>x house prefume
+WRONG
+>x cat house perfume
+WRONG
+
+>x chefs
+WRONG
+>x chef
+WRONG
+>x statues
+WRONG
+>x statue
+WRONG
+
+>tortilla
+>lettuce
+>steak
+>hotsauce
+>parmesan
+
+>x hot sauce
+WRONG
+>x packet
+WRONG
+
+>put hot sauce on taco
+>put lettuce on taco
+>put steak on taco
+>put parmesan on taco
+
+>x covering
+WRONG
+
+>x tortilla
+WRONG
+
+>coat
+
 >s
+
+>gt round den
+WRONG
+>gt unadorned
+WRONG
+>gt round
+WRONG
+>gt den
+WRONG
+
 >e
+>sack
+by one point
+
+>x hose
+WRONG
+
+>hoses
+by one point
+
 >straw
->gonear moor
+by one point
+>put straw in sack
+
+>moor
+>x awful poet
+>x awful
+>x poet
+
+>tap pat
+WRONG
+>tap me
+WRONG
+
+>scan
+WRONG
+
+>x anapests
+WRONG
+>x poem
+WRONG
+>x poetry
+WRONG
+>x peasants
+WRONG
+
+>peasant
 >trade straw
 WRONG
 >trade
 WRONG
+>give straw to peasant
 
->scan
+>x block
+WRONG
+>black door
+by one point
+
+>room
+>n
+>x decoration
+WRONG
+>put straw in wall
+>x haywall
+WRONG
+>x hay wall
+WRONG
+>hallway
+
+>e
+>tap spout
+WRONG
+
+>pour oils
+WRONG
+
+>fill cask
+WRONG
+>fill oils
+WRONG
+
+
+>x oil
+WRONG
+
+>x vermian minerva
+WRONG
+>x vermian
+WRONG
+>x minerva
+WRONG
+>x cliche chalice
+WRONG
+>x cliche
+WRONG
+>x chalice
+WRONG
+>x solid
+WRONG
+>x idols
+WRONG
+>x solid idols
+WRONG
+>x lanced
+WRONG
+>x candle
+WRONG
+>x lanced candle
+WRONG
+
+>w
+>s
+>moor
+
+>x poetry
+WRONG
+>x limerick
+WRONG
+>x paper
+WRONG
+
+>missile
+
+>fold paper
+
+>panel
+>soil
+>room
+>n
+>e
+>pour oils
+
+>w
+>x archings
+WRONG
+>x rubble
+WRONG
+
+>s
+>moor
+>soil
+by one point
+
+>x right
+WRONG
+>x right button
+WRONG
+>x left
+WRONG
+>x left button
+WRONG
+
+>shoot
+>steer
+
+>x right
+WRONG
+>x right button
+WRONG
+>x left
+WRONG
+>x left button
+WRONG
+
+* metros-understand
+
+>ts
+>metros
+
+>x metros
+WRONG
+
+>x escalator
+WRONG
+
+>x senser
+WRONG
+
+>x thumping
+WRONG
+>x beats
+WRONG
+
+>in
+>drink drainage
+WRONG
+
+>unlock door
+WRONG
+
+>n
+
+>x driveway
+WRONG
+>x drive way
+WRONG
+>x drive
+WRONG
+>x way
+WRONG
+
+>x man
+WRONG
+
+>steal corn
+WRONG
+
+>w
+>x gunk
+WRONG
+>x bits
+WRONG
+>x gunk bits
+WRONG
+>x trash
+WRONG
+>x placard
+WRONG
+>x writing
+WRONG
+
+>tomato
+>x rotten
+WRONG
+>x rotten tomato
+WRONG
+
+>e
+>s
+>w
+>x potato
+WRONG
+
+>x mattress
+WRONG
+>x bump
+WRONG
+>x something
+WRONG
+
+>throw tomato
+WRONG
+>throw tomato at thing
+WRONG
+
+>search mattress
+
+>x machine
+WRONG
+>x black box
+WRONG
+>x black
+WRONG
+>x box
+WRONG
+
+>e
+>n
+>n
+
+>switch emitter
+>get dry cake
+>s
+
+>hush
+WRONG
+>hush
+WRONG
+>uhhs
+WRONG
+>uhhs
+WRONG
+
+>keycard
+>x key
+WRONG
+>x card
+WRONG
+>x key card
+WRONG
+
+>e
+
+>x freesia
+WRONG
+>x fairies
+WRONG
+>x freesia fairies
+WRONG
+>x heath
+WRONG
+>x begonia
+WRONG
+>x flowers
+WRONG
+>x seeds
+WRONG
+>x flower
+WRONG
+>x seed
+WRONG
+
+understand "steal [something]" as taking.
+
+###########################endgame
+
+>controls
+>opening
+>u
+
+>put controls in opening
+>x controls
+>x psas
+
+>s
+>e
+
+>purloin can of beer
+>x aged rain
+WRONG
+>x beer can
+WRONG
+>x aged
+WRONG
+>x rain
+WRONG
+
+>purloin soggy
+>x dear inga
+WRONG
+>x dear
+WRONG
+>x inga
+WRONG
+>x soggy note
+WRONG
+
+>cut beast with sword
 WRONG
 
 * resort-understand
@@ -216,6 +1132,116 @@ WRONG
 >resort
 >in
 
+>swim
+no water nearby
+
+>x tiles
+WRONG
+>x colors
+WRONG
+
+>islet
+>islet
+You already made it
+
+>swim
+No other land anywhere close.
+
+>fly
+You have nothing that can help sustained flying.
+>flap
+You have nothing that can help sustained flying.
+>cork
+by one point
+
+>untie swing
+WRONG
+
+>wings
+by one point
+
+>fly
+An Odd Low Woodland
+>undo
+>swim
+An Odd Low Woodland
+
+>toeholds
+by one point
+>grips
+by one point
+>ropes
+by one point
+>untie ropes
+WRONG
+
+>poles
+by one point
+
+>x crowd
+WRONG
+>x uprisers
+WRONG
+>x horde
+WRONG
+>x rioters
+WRONG
+>x rabble
+WRONG
+>x mob
+WRONG
+
+>trio
+
+>x trio
+WRONG
+
+>x protest
+WRONG
+>x three
+WRONG
+>x protesters
+WRONG
+>x crowd
+WRONG
+>x uprisers
+WRONG
+>x horde
+WRONG
+>x rioters
+WRONG
+>x rabble
+WRONG
+>x mob
+WRONG
+
+>x chains
+>china
+>kilns
+>potters
+
+>x rbb
+WRONG
+>x his toe
+WRONG
+
+>x fear boot
+WRONG
+>x boot
+WRONG
+>x fear
+WRONG
+>x bare foot
+WRONG
+>x bare
+WRONG
+>x foot
+WRONG
+
+>tug bull
+WRONG
+>tug me
+WRONG
 >tug settler
 WRONG
 >pull settler

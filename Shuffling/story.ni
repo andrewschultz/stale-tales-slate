@@ -1001,7 +1001,7 @@ carry out helping:
 	if meaningful-hint is false:
 		now meaningful-hint is true;
 		say "You call out for the Magic Hint Fairy. 'Please! Please!'[paragraph break]All you hear in return is 'Asleep! Asleep!'[paragraph break]You pause. You've heard she may be a hi-rent hinter, maybe even a cruel cluer--not that she can spirit you to the cheaters['] hectares--but even a thin hint could probably make you enjoy your journey less if you rely on her too much.[paragraph break]Do you really want to poke her now?";
-		if player consents:
+		if player direct-consents:
 			say "You see by the look on her face she's thinking 'Spiel or Spoiler?' But the look on your face shows you're ready to take the Perilous trip to Spoiler U with an idea aide. You won't spit on tips. [hintblah]";
 			continue the action;
 		otherwise:
@@ -1996,6 +1996,8 @@ instead of swinging:
 
 understand "drink" as drinking.
 
+understand "drink [something]" as drinking.
+
 rule for supplying a missing noun while drinking: now the noun is the player.
 
 instead of drinking:
@@ -2065,6 +2067,8 @@ instead of eating:
 		say "If this were a spy game, that would be ideal. But it isn't." instead;
 	if noun is cake pan:
 		say "Err, it's kind of metal." instead;
+	if noun is grist:
+		say "Ooh. It's almost edible enough. Just needs a little change." instead;
 	if noun is snarled darnels:
 		say "[if goat is visible]The goat did enough[else]You're the wrong sort of animal for that, but maybe you can summon the right one[end if]." instead;
 	if noun is toe:
@@ -2104,9 +2108,6 @@ Check asking something for (this is the nobody gives anything rule):
 
 check objasking gateman about saltine:
 	now asked-almond is true;
-
-[understand the command "throw [something preferably held]" as something new.
-understand "throw [something preferably held]" as throwing it at.]
 
 check throwing tomato at nerds:
 	say "They're not a real menace, just annoying." instead;
@@ -2267,7 +2268,7 @@ carry out fireing:
 		try shooting noun instead;
 	if noun is emitter:
 		try switching on emitter instead;
-	say "No, you were the one who got fired[if player has shotgun]. You may want to SHOOT something, though[end if]. And not just because you got fired. I hope not.";
+	say "No, you were the one who got fired[if player has shotgun]. You may want to SHOOT something, though. And not just because you got fired. I hope not[end if].";
 	the rule succeeds;
 
 chapter kicking-attacking
@@ -2477,23 +2478,6 @@ carry out accessing:
 	say "Screen reader accessible text is now [on-off of sr-acc].";
 	the rule succeeds;
 
-chapter spaceing
-
-spaceing is an action out of world.
-
-understand the command "space" as something new.
-
-understand "space" as spaceing.
-
-carry out spaceing:
-	if sr-acc is true:
-		say "This can't be toggled in screen reader mode." instead;
-	now spaces-on is whether or not spaces-on is true;
-	say "Spaces in gadget output are now [on-off of spaces-on].";
-	pad-rec-q "spaces";
-	now son-nos is true;
-	the rule succeeds;
-
 chapter soning
 
 spaces-on is a truth state that varies.
@@ -2501,10 +2485,12 @@ spaces-on is a truth state that varies.
 soning is an action out of world.
 
 understand the command "son" as something new.
+understand the command "space" as something new.
 understand the command "space on" as something new.
 understand the command "spaces on" as something new.
 
 understand "son" as soning.
+understand "space" as soning.
 understand "space on" as soning.
 understand "spaces on" as soning.
 
@@ -2582,9 +2568,10 @@ chapter angleing
 
 angleing is an action out of world.
 
-understand the command "rk/kn/hnk/glean" as something new.
+understand the command "harken/rk/kn/hnk/angle" as something new.
 
 understand "angle" as angleing.
+understand "harken" as angleing.
 understand "hrn" as angleing.
 understand "rk" as angleing.
 understand "kn" as angleing.
@@ -3992,7 +3979,7 @@ after fliptoing gateman:
 		now bugle is in lalaland;
 	continue the action;
 
-understand "old man" and "almond" as gateman when gateman is visible.
+understand "old/ man/ almond" as gateman when gateman is visible.
 
 the odor is scenery. the odor is undesc. it is in Dry Yard. rgtext of odor is "[rcn][rc][gc][gc]". lgth of odor is 4. gpos of odor is 2. rpos of odor is 4. cert-text of odor is "-[d1][ast]O[ast]R". rect-text of odor is "D[d1][d1][ast]R".
 
@@ -4106,8 +4093,6 @@ check smelling in Dry Yard:
 		say "It's an odor of new places and adventure and puzzles and how to get there. It tempts you--wouldn't it be nice if there was something more physical to provide passage than, well, just an odor?[paragraph break]You repress a four-letter word. Well, if things are that simple, it's probably a [i]nicer[r] four-letter word." instead;
 	otherwise:
 		say "The door is of some odd wood you don't recognize." instead;
-
-understand "smell" and "breeze" as odor.
 
 instead of taking odor:
 	say "Impossible."
@@ -4812,7 +4797,7 @@ the s-r is part of the tagged gadget. the s-r is privately-named.
 
 printed name of s-r is "SECURE/RECUSE button". understand "secure/recuse button" and "secure/recuse" and "button" as s-r.
 
-description of s-r is "It's currently [unless gadget-secured is true]not [end if]lit up indicating [if gadget-secured is true]SECURE[else]RECUSE[end if], [if button-locked is true]and it's locked in place now you've left the strip[else]but you can probably push it to change that[end if]. An arrow leads from it to the [c-r] tip."
+description of s-r is "It's currently [unless gadget-secured is true]not [end if]lit up indicating [if gadget-secured is true]SECURE[else]RECUSE[end if], [if button-locked is true]and it's locked in place[else]but you can probably push it to change that[end if]. An arrow leads from it to the [c-r] tip."
 
 the arrow is part of the tagged gadget. description is "The arrow leads from the locked SECURE/RECUSE button to the [c-r]. This seems to indicate SECURE/RECUSE affects whether you can change the RECTIFY/CERTIFY settings."
 
@@ -5037,9 +5022,9 @@ understand "angel" as a mistake ("You've got enough practical help. You don't ne
 
 gleaning is an action out of world.
 
-understand the command "nk/kr/hrk/glean" as something new.
+understand the command "hanker/nk/kr/hkr/glean" as something new.
 
-understand "glean" and "hrk" and "nk" and "kr" as gleaning.
+understand "glean" and "hanker" and "hkr" and "nk" and "kr" as gleaning.
 
 carry out gleaning:
 	if phial is not visible:
@@ -5159,6 +5144,11 @@ carry out gleaning:
 			all-say "You see yourself just being. No, abiding. No, it's hard to describe what you're doing, since it's so passive." instead;
 	all-say "[bug-report] This part needs a story.";
 	the rule succeeds;
+
+after gleaning (this is the angle-glean check rule):
+	h-check;
+	continue the action;
+
 
 to say sortie-end:
 	say ". It all seems to end with some sort of rocket hitting a huge building. But there is no explosion, just rainbows and bubbles. Weird";
@@ -5536,7 +5526,7 @@ the Tories are plural-named auxiliary scenery in trips strip. lgth of tories is 
 
 description of tories is "A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something."
 
-understand "pictures" and "picture" and "prime minister" as tories when tories are visible.
+understand "pictures/picture" and "prime minister/minsters" as tories when tories are visible.
 
 [note we need to activate TORIES]
 
@@ -5876,7 +5866,7 @@ chapter Rest of Forest
 
 rf is a privately-named room in Forest. the printed name of rf is "Rest of Forest". "The forest feels a bit thinner here, so you must be close to somewhere new. Here, [vis-hint]."
 
-understand "rest of" and "rest of forest" as rf when mrlp is forest.
+understand "rest of forest/" as rf when mrlp is forest.
 
 understand "forest2" as rf when debug-state is true.
 
@@ -5902,7 +5892,7 @@ gy is privately-named scenery in Self-ID Fields. understand "man" as gy when pla
 
 printed name of gy is "bearded man".
 
-understand "bearded man/guy/figure" and "man/figure/guy" as gy.
+understand "bearded/ man/guy/figure" as gy.
 
 instead of doing something with gy:
 	say "Too late. He's gone. But here's another.";
@@ -7050,7 +7040,7 @@ check taking off the coat:
 
 the bottle of CATHOUSE perfume is a pregredient. "A bottle of CATHOUSE perfume is here.". rgtext of CATHOUSE is "[rcn][rc][gc][rc][rc][gc][rc][gc]". lgth of cathouse is 8. gpos of cathouse is 4. rpos of cathouse is 8. cert-text of cathouse is "-[d1][ast]T[d1][d1][ast]U[d1][ast]E". rect-text of cathouse is "H[d1][d1][d1][d1][d1][d1][ast]E".
 
-understand "cat house perfume" as CATHOUSE.
+understand "cat/ house/ perfume" and "cat/ house/" as CATHOUSE when player is in kitchen and cathouse is in kitchen.
 
 CATHOUSE is in Kitchen.
 
@@ -7066,7 +7056,7 @@ check opening large packet:
 
 description of HOTSAUCE is "It's some disturbing mix of reddish shades of orange-red. The ungrammatical HOTSAUCE on the packet blocks out any list of ingredients, which is probably for the best."
 
-understand "packet/hot/sauce" and "hot sauce" as HOTSAUCE when HOTSAUCE is visible.
+understand "hot/ sauce/" as HOTSAUCE when HOTSAUCE is visible.
 
 instead of eating HOTSAUCE:
 	say "If you really want to do this, you are obviously too wild and crazy for text adventures.";
@@ -7415,6 +7405,14 @@ section pouring
 pouring is an action applying to one visible thing.
 
 understand the command "pour [any thing]" as something new.
+
+understand "pour" as pouring.
+
+rule for supplying a missing noun while pouring:
+	if player has cask:
+		now noun is cask;
+	say "You don't really have anything you can pour.";
+	reject the player's command;
 
 understand "pour [any thing]" as pouring.
 
@@ -8141,7 +8139,7 @@ carry out taping:
 			try filling the cask instead;
 		otherwise:
 			say "The oils would go to waste." instead;
-	say "You may want to PUSH or ATTACK instead." instead;
+	say "You may want to PUSH or ATTACK instead. It probably won't do much good, but that's the synonym." instead;
 
 does the player mean taping the spout: it is very likely;
 
@@ -8250,7 +8248,7 @@ garbage is useless scenery in alley. "The garbage smell would make a bear gag--s
 
 the stink bug is useless scenery in alley. "[bug-report]"
 
-understand "gunk bits" as stink bug.
+understand "gunk/ bits/" as stink bug.
 
 instead of doing something with the stink bug:
 	if the current action is eating:
@@ -8368,7 +8366,7 @@ after taking the motto:
 instead of eating motto:
 	say "I hope you're not dumb enough to swallow that. Figuratively or literally.";
 
-understand "rotten" and "rotten tomato" as tomato.
+understand "rotten tomato/" as tomato.
 
 the description of the tomato is "It's as rotten as the motto of Pa Otto's you extracted it from. It is probably even more rotten on the inside, not that you have the bravery to check. Yet it also has that staying power. It doesn't have any mold on it, yet."
 
@@ -8428,7 +8426,7 @@ understand "stent" as a mistake ("Medical procedures aren't necessary here. The 
 instead of doing something with the tents:
 	say "Probably a long-hair halo ring in the tents. Less helpful than the deadbeat."
 
-understand "way" and "drive" as driveway when driveway is visible.
+understand "drive/ way/" as driveway when driveway is visible.
 
 instead of following driveway:
 	try going north;
@@ -8600,7 +8598,7 @@ does the player mean examining the location: it is very likely.
 
 description of kernels is "Most are yellow but others are discolored--red and black and white."
 
-understand "red/black/white buttons/kernels" and "red/black/white" as discolored buttons.
+understand "red/black/white buttons/kernels/" and "red/black/white" as discolored buttons when lost corn is visible.
 
 some controls are a thing.
 
@@ -8760,7 +8758,7 @@ check taking begonias:
 
 the keycard is a thing.
 
-understand "key card" and "card" as keycard.
+understand "key/ card/" as keycard.
 
 description of keycard is "It's plain and metallic[if barcode is part of the keycard], with a barcode that might help with optical scanners[otherwise], and the only thing that indicates it's a keycard is small text saying FOR AUTHORIZED ACCESS ONLY[end if]."
 
@@ -8825,7 +8823,7 @@ check going east in Elf Row's Flowers:
 
 Some freesia faeries are people in Elf Row's Flowers. "Freesia faeries fly around here [if heaths are in flowers and begonias are in flowers]anxiously[else]randomly[end if]."
 
-understand "freesia fairies" and "fairies" as faeries.
+understand "freesia/ fairies/" as faeries.
 
 instead of taking freesia faeries:
 	say "They're too fast for you. And they are not souvenirs.";
@@ -8973,7 +8971,7 @@ the merchandise is scenery in elf row's flowers. "All sorts of flower-related se
 
 does the player mean objasking the faeries about the merchandise: it is likely.
 
-understand "flowers/seeds" as merchandise when merchandise is visible.
+understand "flowers/seeds/flower/seed" as merchandise when merchandise is visible.
 
 description of brocade is "It's rather plain and white with lots of black bars. It would take a rabider braider than most to weave such a design[if player does not have brocade]. Scratchings above it indicate it's not part of the normal merchandise[end if]."
 
@@ -9139,7 +9137,7 @@ description of termite emitter is "It's a black box the side of maybe two CD cas
 check examining the termite emitter:
 	ignore the examine devices rule.
 
-understand "black box" and "machine" as termite emitter.
+understand "black/ box/" and "machine" as termite emitter.
 
 condo-evac is a truth state that varies. condo-evac is usually false.
 
@@ -9728,6 +9726,8 @@ carry out isleting:
 		reg-inc;
 		say "The tiles crumble and shift around.";
 		move player to Islet instead;
+	if mrlp is resort:
+		say "You already made it to the islet." instead;
 	say "[reject]";
 	the rule succeeds;
 
@@ -9761,9 +9761,7 @@ the swing is a thing in islet. "You see a rudimentary swing hanging from a tree 
 instead of taking the swing:
 	say "It's tied, and you can't climb to untie it."
 
-description of swing is "The swing is made of twine and hangs from a tree branch high up. You won't get to untie it, but you can see something scratched on the tree.". rgtext of swing is "[rcn][rc][rc][rc][rc]". lgth of swing is 5. gpos of swing is 2. rpos of swing is 1. cert-text of swing is "-[d1][d1][d1][d1]". rect-text of swing is "W[d1][d1][d1][ast]S".
-
-understand "twine" as swing
+description of swing is "You can't tell what the swing is made of, but it looks firm and stable. It hangs from a tree branch high up. You won't get to untie it, but you can see something scratched on the tree.". rgtext of swing is "[rcn][rc][rc][rc][rc]". lgth of swing is 5. gpos of swing is 2. rpos of swing is 1. cert-text of swing is "-[d1][d1][d1][d1]". rect-text of swing is "W[d1][d1][d1][ast]S".
 
 the wings are a plural-named wearable thing.
 
@@ -9828,7 +9826,8 @@ carry out swiming:
 	if player has cork and player is in islet:
 		try going east instead;
 	if player is in islet:
-		say "No land anywhere close. You'd need help to swim." instead;
+		say "No other land anywhere close. You'd need help to swim." instead;
+	say "There's no water nearby to swim in. In which to swim.";
 	the rule succeeds;
 
 chapter woodland
@@ -11163,7 +11162,7 @@ to say goat-toga:
 check asking gateman about "world peace":
 	say "That goal's a slog, but I've got confidence." instead;
 
-understand "man" as gateman when gateman is visible.
+understand "old/ man" as gateman when gateman is visible.
 
 understand "gate man" as gateman.
 
@@ -12417,6 +12416,14 @@ to say poss-range:
 
 book stubs
 
+yn-auto is a number that varies.
+
+to decide whether the player direct-consents:
+	if yn-auto is 1, decide yes;
+	if yn-auto is -1, decide no;
+	if the player consents, decide yes;
+	decide no;
+
 section switching
 
 the can't switch on unless switchable rule is not listed in any rulebook.
@@ -12574,7 +12581,7 @@ carry out biteing:
 	if noun is toe:
 		say "It'd be hard to hold in your teeth." instead;
 	if noun is saltine:
-		say "It'll only take one bite to eat.";
+		say "It'll only take one bite to EAT. You can't save half for later and get another hint." instead;
 	try eating noun instead;
 
 chapter instructionsing
@@ -12707,21 +12714,28 @@ carry out following:
 		if player is in Elm Train Terminal:
 			try going east instead;
 		say "No telling where they're coming from." instead;
-	say "That doesn't seem to be going anywhere.";
+	say "[if noun is a person]They don't[else]That doesn't[end if] seem to be going anywhere.";
 	the rule succeeds;
 
 chapter playing
 
 playing is an action applying to one thing.
+blowing is an action applying to one thing.
 
 understand the command "play [something]" as something new.
 understand "play [something]" as playing.
 
-understand the command "blow[something]" as something new.
-understand "blow [something]" as playing.
+understand the command "blow [something]" as something new.
+understand "blow [something]" as blow.
 
 does the player mean playing the bugle: it is very likely;
+does the player mean blowing the bugle: it is very likely;
 
+carry out blowing:
+	if noun is not bugle:
+		say "It really only makes sense to BLOW an instrument. Well, CLEAN sense." instead;
+	try playing noun instead;
+	
 carry out playing:
 	if noun is not bugle:
 		say "That's not an instrument you can play." instead;
@@ -12816,7 +12830,7 @@ description of creases is "[one of]One down the middle and two diagonally up fro
 check throwing poem at when poem is folded:
 	say "[one of]You make some feeoow noises as it flies, then some PFF BMM noises as you pretend it drops a bomb. It's fun, but it'll never cause any actual damage[or]You play at air-wars some more[stopping]. Wouldn't it be neat if you could drop bombs, and it'd make people nicer?" instead;
 
-understand "folded/paper/plane" and "folded paper/plane" and "folded plane" as poem when poem is folded.
+understand "folded/ paper/ plane/" as poem when poem is folded.
 
 tried-smilies is a truth state that varies. tried-smilies is false.
 
@@ -12970,7 +12984,6 @@ understand "shoot at [something]" as shooting.
 understand "shoot [something]" as shooting.
 
 understand "fire at [something]" as shooting.
-understand "fire [something]" as shooting.
 
 does the player mean shooting the wolves when the wolves are visible: it is very likely.
 
@@ -14726,6 +14739,27 @@ understand "shomis" as shomising.
 carry out shomising:
 	carry out the showing what the player missed activity;
 	the rule succeeds;
+
+chapter auing
+
+auing is an action out of world applying to one number.
+
+understand the command "au" as something new.
+
+understand "au [number]" as auing.
+
+carry out auing:
+	if number understood > 1 or number understood < -1:
+		say "1 = auto-yes 0 = auto-off -1 = auto-no." instead;
+	if number understood is yn-auto:
+		say "It's already set to [auto-set]." instead;
+	say "Y/N responses changed from [auto-set] to ";
+	now yn-auto is number understood;
+	say "[auto-set].";
+	the rule succeeds;
+
+to say auto-set:
+	say "[if yn-auto is 1]auto-yes[else if yn-auto is -1]auto-no[else]no auto[end if]";
 
 chapter apping
 

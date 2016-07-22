@@ -7771,6 +7771,10 @@ carry out sbing:
 	try scaning noun;
 	if the rule failed:
 		the rule succeeds;
+	if a-text of noun is b-text of noun:
+		say "Nothing changes between cheat/teach and regular mode.";
+		now sb-cur is false;
+		the rule suceeds;
 	now cheat-on is true;
 	try scaning noun;
 	now cheat-on is z;
@@ -8158,14 +8162,9 @@ understand the command "sites" as something new.
 understand "sites" as sitesing.
 
 carry out sitesing:
-	if cur-score of intro is 0:
-		say "Last chance spoiler warning. Sure you want to look?";
-		if the player consents:
-			do nothing;
-		otherwise:
-			say "Ok. Back to the game." instead;
+	say "I've probably forgotten some, here, but these are the big ones.[line break]
 	say "http://wordsmith.org/anagram/ -- Anu Garg's Rearrangement Server at wordsmith.org was invaluable to me. Hard to believe I've known about it for fifteen years. You've probably seen it before, too, but it's the big one for the main game mechanic. The sayings that go with each anagram have also helped me in many other ways. It's still fun after all these years.[line break]http://www.anagrammy.com/anagrams/faq6.html[line break]http://www.english-for-students.com/One-Word-Anagrams.html[line break]http://www.enchantedlearning.com/english/anagram/ was quite nice for common anagrams by subject.[line break]http://www2.vo.lu/homepages/phahn/anagrams/oneword.htm[line break]http://www.ssynth.co.uk/~gay/anagram.html[line break]http://www.wellho.net/resources/ex.php4?item=p669/anagram (basic succinct PERL anagram finder)[line break]http://boards.straightdope.com/sdmb/archive/index.php/t-291149.html for specific words and also ideas how to script more complex stuff[line break]http://www.rinkworks.com/words/oddities.shtml[line break]http://www.sporcle.com/ had many puzzles that helped me determine what was fair and what wasn't[line break]http://jamesgart.com/anagram/[line break]PERL for letting me parse through word-to-word anagrams and also helping me break one promising word into two.[paragraph break]I'd be interested if someone from France can ref these sites to make a similar game, someone from Spain could take pains, or a German manager could do so too. It'd be interesting to see.";
-	say "And it's already mentioned in the credits, but [my-repo] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
+	say "And it's already mentioned in the credits, but [my-repo] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep an occasional backup, or be sure of what you changed, it can save a lot of trouble.";
 	the rule succeeds; [forgot where I found the names from]
 
 chapter optionsing
@@ -24617,7 +24616,7 @@ check hinting when player is in Inclosure and tri-hint is false:
 
 before hinting when session-hints-off is true:
 	say "You temporarily turned hints off." instead;
-	
+
 check hinting for the first time:
 	if have-objhinted is false:
 		if player is not in Inclosure:

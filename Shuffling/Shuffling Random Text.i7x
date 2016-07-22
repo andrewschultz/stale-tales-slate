@@ -392,6 +392,7 @@ blurb
 "Erby Byer-Brey"
 "Eric Rice"
 "Erich Reich" []
+"Erike Eiker"
 "Erland Ladner"
 "Ern Renner"
 "Ernesto Sentero"
@@ -3402,6 +3403,7 @@ blurb
 "'Malware? Lame! Raw!'"
 "'Math set? That's me!'"
 "'A math trick? Karmic, that!'"
+"'MatLab alt? BAM!'"
 "'Mediums are for dummies!'" [x]
 "'Mental math, hmm? A talent!'"
 "'Merry Devon? Myron Dever? Very modern nerdy mover.'"
