@@ -22235,7 +22235,7 @@ blurb
 "'Allo, Lola!' / 'Ol['] Al!'"
 "'Alphonse, phone Sal.'"
 "'Am I one? Anomie!'"
-"'Ambush! Bash [']um!'"
+"'Ambush! Ha, bums, bash [']um!'"
 "'Amigo! Go!' / 'I am!'"
 "'And bestow beatdowns to bad news.'" []
 "'And GIT, Nat. Dig?' / 'Dang it!'"
@@ -31203,6 +31203,7 @@ blurb
 "Fond Sure Founders: Four Dens[r], by Rod Funes"
 "Forge Yen of Energy[r], by Geno Frye"
 "Found it Fun? Do It[r], by Di Ufton" []
+"Found Tons Soft? Dunno[r], by Donn Fouts"
 "Freezing, Grief, Zen[r], by Inez Ferg"
 "Fuel This Life Thus[r], by Ulf Theis"
 "Fuels-Self U[r], by Fufu Essell"

@@ -4,8 +4,6 @@
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-VERBS
-
 * silly starting stuff
 
 >au 1

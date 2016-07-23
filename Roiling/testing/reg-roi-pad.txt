@@ -1,0 +1,360 @@
+## reg-roi-others.txt
+## testing all possible passages through others, e.g. how much you can give Curtis, when
+##
+## also tests nudges
+##
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* everything
+
+>au 1
+
+>pad
+Currently you can consult your pad about these general topics:
+--verbs, options, access, free turns.
+--go to, Old Warpy, SHATTER-THREATS, methods.
+--red, Shuffling Around, tagged gadget, retry.
+--warp, directions/dirs.
+
+>think
+
+>stable
+>pad
+flips
+>undo
+>undo
+
+>open door
+>1
+>5
+
+>lamp
+
+>pad
+Elvira
+
+>basement
+
+>pad
+opt in/no tip
+
+>poss
+>padd
+poss,
+
+>satchel
+>x settler
+[You record the information about the settler in your pedanto-notepad.]
+
+>pad
+the settler
+
+>d
+>in
+
+>flier
+>3
+WRONG
+
+>pad
+rove over
+WRONG
+
+>undo
+>undo
+
+>1
+>4
+>1
+>2
+>2
+>3
+>5
+[You record the information about clues in your notepad.]
+>5
+[You record the information about Gretta in your notepad.]
+
+>6
+
+>staple
+>stapler
+>staple wall
+>in
+
+################################trips strip
+
+
+>pad
+retry
+warp
+
+>hint equals
+>hint equals
+>hint equals
+sy/sn
+
+>shake settler
+in the future, you can shorten this with SS
+
+>pad
+/\bss\b
+
+>sl
+>pad
+\bsl\b
+>undo
+>undo
+
+>switch slider
+[NOTE: You can type SL to toggle the slider in the future.]
+You switch the slider on.
+
+>pad
+/\bsl\b
+
+>scan store f with settler
+[You record the information about long commands in your notepad.]
+>pad
+long commands
+
+>undo
+>undo
+
+>w x y z a
+[You record the information about long commands in your notepad.]
+
+>pad
+long commands
+
+##########################routesy
+
+>routes
+>in
+
+>scan signboard
+[NOTE: if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type SPACE ON or SON to space out the text if you are visually impaired, or NO SPACE or NOS to lump the text back. Also, LA repeats what you scanned last, if the window on top does not show it.]
+
+>pad
+/\bla\b
+/\bspaces\b
+
+>say yoho
+!You add the information
+
+>pad
+/\bsaying\b
+
+>against
+[You add the information to your pedanto-notepad under FLIPS.]
+
+>pad
+flips
+
+>sleep
+
+>pad
+/\bsleep\b
+
+>past
+>despite
+>out
+>across
+>opposite
+>out
+>inside
+
+>x toils
+record the information
+>pad
+reagents
+
+>out
+>against
+>astride
+>below
+>under
+>inside
+No-Gal Logan
+
+>out
+>from
+>beneath
+
+>until
+>around
+>along
+
+>amidst
+
+>pad
+hit win
+
+>retry
+
+>presto
+>enter spot
+
+>umph
+>pooh
+>e
+>s
+>drat
+>rats
+>s
+>ole
+>darn
+>whassup
+
+>n
+>n
+>bleep
+>e
+>bingo
+>put dart in gun
+>w
+>mazeltov
+>there
+>n
+
+>syke
+>later
+>tough
+>pad
+Leo and Rand
+
+>n
+
+>x catechism
+>pad hacking
+WRONG
+
+########################oyster specific
+
+>ts
+>oyster
+>in
+>scan casper
+WRONG
+
+>pad
+WRONG
+
+>retry
+
+>oyster
+>enter oyster
+>ask casper about xxx
+WRONG
+
+>pad
+WRONG
+>undo
+>undo
+
+>ask casper about casper
+WRONG
+
+>pad
+WRONG
+
+>scrape
+>spit
+>sing
+>stroll
+>calm
+>run
+
+>boast
+>leap
+
+>scrap
+>e
+>seek
+>ask tuna about xxx
+WRONG
+>pad
+WRONG
+>undo
+>undo
+
+>ask tuna about casper
+WRONG
+>pad
+WRONG
+>undo
+>undo
+
+>retry
+
+
+##################################towers specific
+
+>seed 1
+>towers
+>enter towers
+
+>ask rodney about rodney
+Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.
+
+>pad
+WRONG
+
+>undo
+>undo
+
+>ask rodney about xxx
+Hm, that wasn't very revealing. They don't seem to have a lot else to say. You note this in your notepad.
+
+>pad
+WRONG
+
+>gone
+>bleak
+>wined
+>yonder
+badlands
+
+>pad
+badlands
+
+>scan palace
+WRONG
+
+>pad
+WRONG
+
+>get tarts
+>put tarts in toaster
+
+>pad xray
+
+>gonear mislit
+>present
+>dingy
+>w
+>greyed
+>give flowerpot to ed
+>ask ed about palace
+>e
+
+>pad
+scenery
+
+>retry
+
+#############################otters
+
+>a5
+
+>barley
+>pf
+barley
+
+>in
+asking
+
+>pad
+asking
+

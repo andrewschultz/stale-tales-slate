@@ -338,6 +338,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "force"	333002970	marines seminar	--	--	"[ca-co]."
 "forcefield"	607159749	marines seminar	--	--	"[ca-co]."
 "field"	274156779	marines seminar	--	--	"[ca-co]."
+"sway"	328755809	marines seminar	--	--	"You don't need to change the sway-ways. You might get lost beyond them, anyway."
 "serial"	410398381	--	popgun	--	"[is-boing]."
 "number"	469637285	--	popgun	--	"[is-boing]."
 "stump"	450030903	--	stump	--	"[if star is reflexed]The stump just sits there, stumpy[else]The stump doesn't move, but the star seems to rattle a bit[end if]."
@@ -966,6 +967,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "miser"	418471877	--	miser ruble	--	"[whole-item]."
 "ruble"	390468463	--	miser ruble	--	"[whole-item]."
 "bluer"	390468463	--	tekno-token	--	"That doesn't really describe the Tekno-Token." [this is put below because the ruble should trump the tekno-token]
+"designs"	487883186	--	singed design	--	"The design doesn't need changing. It's what the design's on."
 "foliage"	362267787	--	foliage	--	"Alas, the foliage also blocks your magical powers and not just your explorations, but [if number of flippable things in filed field > 0]there's plenty else to work at[else]no big deal. You took care of everything else[end if] here." [filed field]
 "barriers"	545651053	--	b-w	--	"The barriers['] westness is important."
 "barber"	337479343	--	barber sickle	--	"[whole-item]."
@@ -987,6 +989,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "screen"	525123080	--	briar screen	--	"[whole-item]."
 "len"	250527456	clearing	--	--	"[len-part]." [clearing]
 "craig"	184109754	clearing	--	--	"[len-part]."
+"price"	358594302	clearing	--	--	"[if kumquat is off-stage]Hm, no, the pattern of prices[else]No, you already took care of stuff[end if]."
 "among"	242122758	--	--	need-mango rule	"Not quite the right way."
 "list"	298190669	--	l-o-p	--	"[if l-o-p is reflexed]You already messed with the list[else]The list doesn't look odd, but maybe some the prices will make you exclaim something[end if]."
 "overpriced"	774270700	--	peach	--	"[if peach is reflexed]No need to change now, and that's not the right way[else]That's over-thinking it. It's just a peach[end if]."

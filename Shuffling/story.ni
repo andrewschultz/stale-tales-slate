@@ -1934,7 +1934,7 @@ carry out helpoffing:
 	if hintsoff is true:
 		say "Hints are already disabled." instead;
 	say "This will shut off hints for the remainder of the play session. You will need to restart to see them again. Are you sure?";
-	if the player consents:
+	if the player direct-consents:
 		say "Done.";
 		now hintsoff is true;
 	otherwise:
@@ -2832,7 +2832,7 @@ carry out retrying:
 		else if red bull burdell is in lalaland:
 			say "You've disposed of Red Bull Burdell[if number of solved regions < 4], so if you want to explore another region, you'll need to restart the game[end if]." instead;
 		say "You don't really need to[if number of solved regions is 4]. In fact, you have nowhere else to go[otherwise], though there's one more region to solve[end if]. Are you sure?";
-		if the player consents:
+		if the player direct-consents:
 			do nothing;
 		otherwise:
 			say "Okay, back to the endgame." instead;
@@ -4457,11 +4457,11 @@ carry out xmxing:
 		try xmxing nametag instead;
 	if noun is thruhinted:
 		say "You already hinted through for that. Are you sure you want to use the x-ray vision from your saltine?";
-		unless the player consents:
+		unless the player direct-consents:
 			say "Ok." instead;
 	if noun is static:
 		say "[if gateman is visible]Old Man Almond makes a dubious noise. Maybe it is not a good idea to use something as powerful as the saltine this early in the game, on something potentially unimportant[else]You stop and think. The static doesn't seem as important as that gateway[end if]. Do so anyway?";
-		unless the player consents:
+		unless the player direct-consents:
 			say "OK." instead;
 		say "[v-b]the static seems to form attics near the doll house[if gateman is visible]. Old Man Almond makes a dubious noise[end if].";
 		ditch-saltine instead;
@@ -4888,7 +4888,7 @@ instead of taking the show hows tag:
 	say "If it were a mattress tag, you'd laugh and pull it off, but everything's gotten a bit weird. You don't know about the warranty on it, but the tag seems pretty important. It's made of some weird plastic you can't just rip[one of].[paragraph break]Plus, embarrassingly, you've no clue how to undo the knot tying the tag to the handle--and you're not strong enough to pull the tag off[or][stopping].";
 	if player does not have the gadget:
 		say "[line break]By the way, it seems you don't even have the gadget. Did you mean to take the tagged gadget instead?";
-		if the player consents:
+		if the player direct-consents:
 			say "Ok, taking the gadget.";
 			try taking the gadget instead;
 		otherwise:
@@ -5428,7 +5428,7 @@ to say store-overview:
 
 to say sto-desc:
 	say "There are 26 of them. Would you like a general overview?";
-	if the player consents:
+	if the player direct-consents:
 		say "[store-overview]";
 		the rule succeeds;
 	otherwise:
@@ -5504,7 +5504,7 @@ understand "writing" as roadsign.
 
 check examining roadsign:
 	say "It's a strain to read, and you wonder if maybe you can look for more natural clues as to what to do with store F. Try and pick out the writing anyway?";
-	if the player consents:
+	if the player direct-consents:
 		say "The sign appears to say, in all red, [one of]E FORTS/OSTFER[or]TRESFO/S EFTRO[cycling][r] before a gust of wind picks it up and flips it around.";
 
 Store G is a sto. understand "store/ 7/seven" as store g.
@@ -6834,7 +6834,7 @@ description of loose label is "[loo-la]"
 
 to say loo-la:
 	say "'We can help be something to base a whole spicy dish on! A truly MALE meal, not lame! It may help you make a run through a border!' Red writing is on the other side of the label--flip it over to see what it is?";
-	if the player consents:
+	if the player direct-consents:
 		say "--crafted with care by [first custom style]AL TILTRO[r].[no line break]";
 	otherwise:
 		say "Ok.[no line break]";
@@ -6978,7 +6978,7 @@ description of spearman is "[spearman-descrip]".
 
 to say spearman-descrip:
 	say "He's got a stupid smile and is giving a thumbs-up with his free hand. It's cheesy, not corny. You know the difference. But it is not a REAL cheese. Yet. You notice some writing on his armor--do you wish to read it?";
-	if the player consents:
+	if the player direct-consents:
 		try examining armor;
 		continue the action;
 	otherwise:
@@ -11280,7 +11280,7 @@ protest	kilns	"'If we were artsy, we'd use [']em. But we're not. Take some magic
 
 to say tip-dialogue:
 	say "'Well, one of rectify or certify is overall better than the other. Would you like to know which[one of][or], again[stopping]?'";
-	if the player consents:
+	if the player direct-consents:
 		say "'Without getting too mathy, you can expect one of the letters to CERTIFY correctly if there are no repeats, but a bit more with repeats--one and a half, in an eight-letter word with a repeat. RECTIFY, you're always guaranteed the first and last right. So it's a bit more help if you SECURE later. But how much challenge you want is up to you. Either can work with any red writing you might see.'";
 		pad-rec-lump "certify";
 		pad-rec "rectify";
@@ -11878,7 +11878,7 @@ before cutting:
 
 to ask-to-cut:
 	say "You could cut the tag off the gadget with that, but this might break the gadget. Are you sure?";
-	if the player consents:
+	if the player direct-consents:
 		now printed name of tagged gadget is "a gadget";
 		now tagged gadget is broken;
 		say "With a sad BOOOOP, the gadget shuts down. The tag flutters off. Hooray for adding to the challenge!";
@@ -12422,7 +12422,7 @@ yn-auto is a number that varies.
 to decide whether the player direct-consents:
 	if yn-auto is 1, decide yes;
 	if yn-auto is -1, decide no;
-	if the player consents, decide yes;
+	if the player consents, decide yes; [inside direct-consents]
 	decide no;
 
 section switching
@@ -12736,7 +12736,7 @@ carry out blowing:
 	if noun is not bugle:
 		say "It really only makes sense to BLOW an instrument. Well, CLEAN sense." instead;
 	try playing noun instead;
-	
+
 carry out playing:
 	if noun is not bugle:
 		say "That's not an instrument you can play." instead;

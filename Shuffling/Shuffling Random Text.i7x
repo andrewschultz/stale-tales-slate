@@ -1503,6 +1503,7 @@ blurb
 "All Over, Overall!"
 "Aloha! A Halo!"
 "Altho['] Loath, Halt! O!"
+"Analytics? A scantily lacy saint!"
 "Anchorage: oh, carnage! Each groan!"
 "And fie! A fiend!"
 "And flag Gandalf, glad fan!"
