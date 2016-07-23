@@ -1,0 +1,223 @@
+## reg-roi-others.txt
+## testing all possible passages through others, e.g. how much you can give Curtis, when
+##
+## also tests nudges
+##
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* everything
+
+>au 1
+
+>score
+WRONG
+>pad poss
+WRONG
+
+>in
+
+>door
+>blot
+>bugle
+>play bugle
+
+>in
+>slander
+>goat
+>in
+
+>x board
+>pad board
+WRONG
+>pad retry
+WRONG
+
+>undo
+>undo
+>undo
+
+>gateman
+
+>ask gateman about advice
+WRONG
+>pad advice
+WRONG
+
+>get gadget
+>ask gateman about tip
+WRONG
+>pad certify
+WRONG
+>pad rectify
+WRONG
+
+>undo
+>undo
+>undo
+
+>ask gateman about redness
+WRONG
+>pad redness
+WRONG
+
+
+>ask gateman about saltine
+>pad xx
+WRONG
+>undo
+>undo
+
+>eat saltine
+>pad xx
+WRONG
+>undo
+>undo
+
+>pad certify
+WRONG
+>pad rectify
+WRONG
+
+>undo
+>undo
+>undo
+
+>certify static
+WRONG
+>pad certify
+WRONG
+
+>rectify static
+WRONG
+>pad rectify
+WRONG
+
+>undo
+>undo
+
+>ask gateman about certify
+>pad certify
+WRONG
+>undo
+>undo
+
+>ask gateman about rectify
+>pad rectify
+WRONG
+>undo
+>undo
+
+>ask gateman about blue lube
+
+>x examples
+>pad certify
+>pad rectify
+
+>ask gateman about goat
+WRONG
+>pad goat
+WRONG
+
+>xyz writing
+WRONG
+>pad writing
+WRONG
+
+>ask gateman about red bull burdell
+WRONG
+>pad burdell
+WRONG
+
+>ask gateman about phail phial
+>pad lube
+WRONG
+>pad angle
+WRONG
+>pad glean
+WRONG
+
+>in
+
+>x stores
+>pad stores
+WRONG
+
+>pad retry
+WRONG
+
+>pad secure
+WRONG
+>pad recuse
+WRONG
+
+>son
+>pad spaces
+WRONG
+>undo
+>undo
+
+>nos
+>pad spaces
+WRONG
+>undo
+>undo
+
+>certify f
+You can toggle spaces between the letters with SPACE(S), or you can set them directly with SPACE(S) ON/NO SPACE(S), or SON/NOS for short.
+
+>pad spaces
+WRONG
+
+
+>rectify f
+>certify f
+>rectify f
+>certify f
+>rectify f
+>certify f
+
+>pad macros
+CR/RC
+
+>purloin phail phial
+
+>angle
+You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, store M, Store I, Store F and Store B when you do.
+ [You decide to keep a to-do entry in your notebook of stuff you haven't tackled, yet.]
+
+[You record the information about to-do in your notepad.]
+
+>pad to-do
+WRONG
+
+>glean
+>angle
+>glean
+>glean
+You stare into the blue lube for a bit. You see a small story unfold.
+
+You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble.
+
+After this vision, you shake your head a bit on seeing yourself taking six foot-high letters labeled ANGLE and crumpling them into AN. Then you do the same for GLEAN, which folds to GL. (Fourth wall time, to be clear--you can use four abbreviations, now.)
+
+>pad macros
+ANGLE=AN to see changeable items, GLEAN=GL to see the story ahead.
+
+>moters
+detailed nudges
+>pad opt in
+WRONG
+
+
+>metros
+>in
+>n
+[Note: the above was random dialogue that can be turned off with HUSH or on with UHHS. If you forget this, it's in your notepad. Also, if you want all the dialogue, no need to hit Z a ton. You can read the source or, to see it formatted a bit better, solve the game.]
+
+>pad hush
+UHHS turns on random dialogue, HUSH turns it off.
+>pad uhhs
+UHHS turns on random dialogue, HUSH turns it off.
+

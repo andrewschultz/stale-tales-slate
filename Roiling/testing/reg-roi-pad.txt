@@ -191,6 +191,19 @@ No-Gal Logan
 >pad
 hit win
 
+########################troves specific
+
+>troves
+>enter troves
+>z
+>z
+>z
+>z
+>z
+uhhs
+
+#######################presto specific
+
 >retry
 
 >presto
@@ -229,6 +242,8 @@ Leo and Rand
 >x catechism
 >pad hacking
 WRONG
+
+>retry
 
 ########################oyster specific
 

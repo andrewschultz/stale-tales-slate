@@ -3429,7 +3429,7 @@ topic (topic)	known	blurb	short	verify
 "store i/9/nine" or "i/9/nine"	false	"Store I appears to have a weird exit."	"store i"
 "store m/13/thirteen" or "m/13/thirteen"	false	"Store M appears to open to a whole metropolis."	"store m"
 "store r/18/eighteen" or "r/18/eighteen"	false	"Store R doesn't appear to be open yet."	"store r"
-"macros"	false	"[tell-macros]"	"macros"
+"macros"	false	"[tell-macros][run paragraph on]"	"macros"
 "writing"	false	"You need to READ or EXAMINE something instead of the WRITING on it."	"writing"
 "c/cer/cert/certify"	false	"1 beep = 1 word, buzz = already changed, silence = nothing.[line break]red/green = right/wrong letters."	"certify"
 "r/rec/rect/rectify"	false	"green dot = 1st letter. Red dot = last letter. Blue = the rest."	"rectify"
@@ -3445,7 +3445,7 @@ topic (topic)	known	blurb	short	verify
 "phial" or "lube"	false	"Worth looking into. Though you probably just want to ANGLE and GLEAN."	"lube"
 "angle"	false	"Lets you see what can be changed."	"angle"
 "glean"	false	"Lets you glimpse what you need to do."	"glean"
-"to-do" or "todo" or "to do"	false	"What's on tap right now: [if number of padded flippable not flipped-yet things is 0]nothing[otherwise][list of padded not inflexible not flipped-yet things][end if]"	"to-do"
+"to-do" or "todo" or "to do"	false	"What's on tap right now: [if number of padded flippable not flipped-yet things is 0]nothing[otherwise][list of padded not inflexible not flipped-yet things][end if]."	"to-do"
 "flips"	false	"[what-can-flip]"	"flips"
 "random/dialogue" or "random dialogue" or "uhhs/hush"	false	"UHHS turns on random dialogue, HUSH turns it off."	"random dialogue"	true
 "xx"	false	"You can XX after you eat the saltine in order to see what an item should be. This has one use, and benign items do not waste it."	"xx"	true
@@ -4238,7 +4238,7 @@ the broad board is scenery in notices section."[one of]Welcome to YORPWALD![para
 
 to say board-note:
 	pad-rec-q "board";
-	pad-rec "retry"
+	pad-rec "retry";
 
 understand "billboard" as broad board.
 
@@ -4590,7 +4590,8 @@ to say v-b:
 instead of eating the saltine:
 	if gateman is visible:
 		say "[one of]Old Man Almond coughs. 'You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static [if static is in lalaland or attics are in lalaland]was[else]is[end if] just practice[or]You reckon you can wait until the real quest[stopping].'";
-		pad-rec "xx" instead;
+		pad-rec "xx";
+		the rule succeeds;
 	if faeries are visible:
 		say "As you open the packet, the faeries buzz. It'd be rude to eat in here, so you step out, eat and come back.";
 	choose row with short of "xx" in table of pad-stuff;
@@ -6675,8 +6676,6 @@ to go-to-nick:
 	now cask is open;
 	now the hole is part of the cask;
 	now the hoses are in roomroom;
-	if warts are visible:
-		pad-rec "warts";
 	move player to the nick;
 
 before going in the nick:
@@ -7089,7 +7088,11 @@ instead of doing something with the manila animal:
 instead of examining the manila animal:
 	say "Written on it: '? No, too stupid a fad. I put soot on warts.' But you've seen no soot, and you're not sure what should be behind the question mark."
 
-description of obligatory fridge is "A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything[end if][one of]. It's probably a Def-Rig brand, though you doubt that's important[or][stopping]."
+description of obligatory fridge is "A manila animal forms a lamina over it[if fridge is open]. In the fridge, you see [list of things in fridge][else]. It doesn't appear locked or anything[end if][one of]. It's probably a Def-Rig brand, though you doubt that's important. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS[or][stopping]."
+
+after examining obligatory fridge:
+	pad-rec-q "warts";
+	continue the action;
 
 fridge-open is a truth state that varies.
 
@@ -12407,7 +12410,7 @@ to poss-display:
 	if possibles is false and min-alert is false:
 		ital-say "You can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing POSS. This is a potential spoiler, since the minimum score increasing indicates you found a Last Lousy Point, and the maximum score decreasing indicates one is no longer available. But maybe you'd like that sort of hint, too.";
 		now min-alert is true;
-		pad-rec "poss"
+		pad-rec "poss";
 
 to say poss-range:
 	if poss-score of mrlp > min-score of mrlp:
