@@ -2705,26 +2705,29 @@ section settler color deduction text
 
 to say current-known:
 	let yays be 0;
-	say "Red: ";
+	let itxt be indexed text;
+	now itxt is "Red: ";
 	repeat through table of known-letters:
 		if v-c-y entry is 1:
-			consider the my-rule entry;
+			follow the my-rule entry;
 			if the rule succeeded:
 				increment yays;
-				say "[my-let entry][run paragraph on]";
-	say "[line break]Yellow: ";
+				now itxt is "[itxt][my-let entry] ";
+	say "[itxt]";
+	now itxt is "Yellow: ";
 	repeat through table of known-letters:
 		if v-c-y entry is 2:
-			consider the my-rule entry;
+			follow the my-rule entry;
 			if the rule succeeded:
 				increment yays;
-				say "[my-let entry][run paragraph on]";
+				now itxt is "[itxt][my-let entry] ";
+	say "[itxt]";
 	consider the got-y rule;
 	if the rule succeeded:
 		increment yays;
-		say "[line break]Orange: Y.";
+		say "Orange: Y.";
 	if yays is last-yays:
-		say "[line break]Hmm, nothing new from that...";
+		say "Hmm, nothing new from that...";
 	now last-yays is yays;
 
 this is the got-a rule:
@@ -3106,6 +3109,7 @@ before quipping when current quip is bye-Elmo-quip (this is the Elmo pulls you b
 		if the player direct-consents:
 			say "Elmo notices your haste and nods. 'Okay, first things first, I think I know where you need to go.'";
 			enact bye-elmo-quip;
+			disable the interr-quip quip;
 			disable the orange-dunno-quip quip;
 			disable the orange-know-quip quip;
 			now current quip is interr-quip;
@@ -4491,8 +4495,6 @@ to reg-inc:
 		if mrlp is myrg entry and tru-sco >= pttot entry:
 			if no-tip is false and roved is false and doneyet entry is false:
 				say "[line break][blurb entry][paragraph break]";
-				dl "1.";
-				dl "[tip-warn].";
 				if tip-warn is false:
 					ital-say "you can turn this start-of-region hinting off with NO TIP and on again with OPT IN.";
 					now tip-warn is true;
@@ -4648,7 +4650,7 @@ understand "scaf" as scafing.
 
 carry out scafing:
 	now score-after is whether or not score-after is true;
-	say "Printing score after gaining a point is now [on-off of score-after].";
+	say "Printing score after gaining a point is now [if score-after is true]on[else]off[end if].";
 	the rule succeeds;
 
 scaying is an action out of world.
@@ -4693,7 +4695,7 @@ understand the command "posf" as something new.
 understand "posf" as posfing.
 
 carry out posfing:
-	say "Forcing possible point notification on[if possibes is true], though it already is[end if].";
+	say "Forcing possible point notification on[if possibles is true], though it already is[end if].";
 	now possibles is true;
 	the rule succeeds;
 
@@ -8797,7 +8799,7 @@ Shane	Shane	"ashen"	"ashen"	"Suddenly, the color rushes from Shane's face, and h
 Terrance	Terrance	"recreant"	"recreant"	"Terrance suddenly realizes that unconditional acceptance of duty ecides he might as well desert his duty and wanders off. [if number of visible warriors is 2]Rodney[else]The others[end if] can surely handle a bunch of drunks."	false	619470753	"recreant"
 Tyson	Tyson	"stony"	"stony"	"Tyson's emotions grow from hateful to just plain stony. This extends to his feelings towards Rodney as well as the tavern dwellers."	false	465003321	"stony"
 Wade	Wade	"awed"	"awed"	"Wade glances at your settler. 'Hmm,' he says. 'A gadget like that, you must be someone important. Beats Rodney's stupid sword.' As he walks away, he mutters some interesting, lucid points that make you feel better about needing or using the settler and quest aides in general. You get the sense if you ever made a game yourself, he'd give some pretty awesome work and advice. You could even picture him helping create a gadget like the settler. Clearly, he was way too good for Rodney!"	false	258957789	"awed"
-Rodney	Rodney	"yonder/droney"	"yonder"	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar. The speaker introduces himself as Old Hat Daltho, once a hot lad tipped to save Yorpwald. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Daltho hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say.[wfak][paragraph break]You follow his directions, apparently towards a voice booming 'Stop! Die!' But where you wind up isn't so threatening. Someone's there to greet you! Or to have a chat. A long one--he's a bit of a yacker."	false	499778338	"Rodney should already be gone."	Deposit
+Rodney	Rodney	"yonder/droney"	"yonder"	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Old Hat Daltho, once a hot lad tipped to save Yorpwald. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Daltho hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say.[wfak][paragraph break]You follow his directions, apparently towards a voice booming 'Stop! Die!' But where you wind up isn't so threatening. Someone's there to greet you! Or to have a chat. A long one--he's a bit of a yacker."	false	499778338	"Rodney should already be gone."	Deposit
 flowerpot	flowerpot	"dingy"	"dingy"	"The crocus doesn't look a great shade of green, but it doesn't look dried out any more. It looks safer to pick up, so you do, and you put it in the flowerpot[unless player is in solo den][else if ed yerg is reflexive]. Ed sniffs--it still doesn't seem valuable[else]Ed looks longingly at the plant[end if]."	false	289888397	-- [583551280?]
 Ed Yerg	Ed Yerg	"greyed"	"greyed"	"[yergy]."	false	516924064	"That might be cruel. Ed's on the level, now."
 Ed Yerg	Ed Yerg	"grey"	"grey"	"[yergy]"	false	368088866	"That might be cruel. Ed's on the level, now."
@@ -8971,10 +8973,15 @@ to say hit-win-behind:
 	say "Ah! There's the Hit Win button. Within a compartment, behind a panel you missed earlier. After a few ol['] duhs, 'Should hold us. Uh, sold?' you say to--oops, you forgot No-Gal Logan left. Panic! 'Cap'n, I...' You feel like a saboteur with this boat ruse, yet the deeps speed by your cripple clipper. The ol['] ship has polish--it's a rigged red gig, but it stops between two reefs. You're only in position to win, but that's still a pretty good deal. One more magic thing?[no line break]";
 
 to say rodney-ditch:
+	let vw be number of visible warriors;
 	if the player's command includes "droney":
-		say ". [if number of visible warriors > 1]Rodney seems to grow tired of giving the orders. He loses his crispness and[else]Rodney begins babbling about something or other, then[end if] looks around, embarrassed--[if number of visible warriors > 1], his remaining pal[rodpals] can't be bothered to follow such a dry one[else]talking to himself, really, now[end if]";
+		say ". [if vw > 1]Rodney seems to grow tired of giving the orders. He loses his crispness and[else]Rodney begins babbling about something or other, then[end if] looks around, embarrassed--[if vw > 1], his remaining pal[rodpals] can't be bothered to follow such a dry one[else]talking to himself, really, now[end if]";
 	else:
-		say ". Well, maybe he can repel the lightning and sparks kind, but not yours. He is blown through the doorway and looks up, dazed.[paragraph break]He shakes his head, blinks and runs off[if number of visible warriors > 1], along with his remaining pal[rodpals][end if]";
+		say ". Well, maybe he can repel the lightning and sparks kind, but not yours. He is blown through the doorway and looks up, dazed. Nobody goes to help him";
+		if vw is 0:
+			continue the action;
+		say ". The remaining warrior[if vw > 1]s[end if] even ask[if vw is 1]s[end if] if you can work your magic to make [if vw > 1]them better people[else]him a better person[end if]. After a surprisingly illuminating speech that avoids the major self-help catch-phrase, you make an excellent case for self-improvement coming from within, and not worrying about being perfect, or getting a perfect score. It goes over well, and [list of warriors in trefoil] thank you profusely before going on [if vw > 1]their ways[else]his way[end if]";
+
 
 understand "resent" as a mistake ("But how could you make Ernest [i]feel[r] so he'd resent his position?") when Ernest is visible.
 
@@ -10443,8 +10450,8 @@ the litany of Mole Elmo is the table of Elmo comments.
 
 table of Elmo comments [tco-mo]
 prompt	response	enabled
-"Ask Elmo about how to use your Settler, because you're not sure yet"	flier-quip	1
-"Show Elmo the sweet Settler you know how to use"	showset-quip	1
+"Ask Elmo about how to use your Settler, because you're not sure yet."	flier-quip	1
+"Show Elmo the sweet Settler you know how to use."	showset-quip	1
 "Check the scale that can flip to laces and back."	scale-quip	0
 "Check the ELMO nametag that could show him up as a mole."	elmomole-quip	0
 "Check the PLUG of nutrients that could become a GULP bottle."	gulp-quip	0
@@ -10478,7 +10485,7 @@ prompt	response	enabled
 "Poss. Clue? Closeups?"	clues-quip	0
 "Gretta Garett-Tatger?"	gretta-quip	0
 "Jumbo, um, job. Six of [']em? Some fix!"	shortcut-quip	0
-"Ask Elmo about the Strip of Profits"	strip-quip	0
+"Ask Elmo about new stores in the Strip of Profits"	strip-quip	0
 "Complain about the weather [bracket]NOTE: complaining, or listening to Elmo complain, is possibly therapeutic, but utterly unproductive[close bracket]"	weather-quip	0
 "Complain about your favorite sports team"	sports-quip	0
 "Complain about the media"	media-quip	0
@@ -10493,7 +10500,7 @@ quip	quiptext
 curb-quip	"'It's not your fault you didn't have a super perfect story when you rescued Yorpwald. That's the fault of -- someone above -- if they even exist. Maybe if you fix what's wrong here, it'll be a more compelling story and pontificators won't turn against you. Or get bored.' Elmo turns to the fourth wall. 'Or have an excuse to pretend they're bored.'" [start ELMO text]
 interr-quip	"'The Strip of Profits is--well, it's tied up with Old Warpy again. You know, how Old Warpy sent you to the forest and metros and sortie? Yeah, there's people buying stuff from the stores, but they're so occupied, they won't notice YOU! Still, you've got a trial trail ahead. Elvira's got her toy theory started. About you being bad for Yorpwald.'"
 toy-theory-quip	"You've sort of heard it, and you've sort of thought it, but yeah. She really did backhand-compliment you (big deal, boring mathy stuff, not a SHRED of excitement, but you did the job, she guessed) while saying people needed someone more exciting to mythologize about.[wfak][paragraph break]Like, gosh, HER! 'Her united con continued unnoticed. But it's too perfect. Tough to--ugh. Something messes up, she denounces it right away. SHATTER-THREATS is so specific to you, too. That's why I don't like it.[paragraph break]'She at the very least SEEMS to think you're behind the influx of annoying anagrams. But then, she might be trolling us by framing you. That's an...other-y theory, eh, tyro?'"
-strip-quip	"'Yeah, lots to explore. But I bet observing and talking to people will help. Even if they don't want to help. There also may be some--illegal types around stores K and N. You don't need them, but they can't hurt.'"
+strip-quip	"'Yeah, lots to explore. But I bet observing and talking to people will help. Even if they don't want to help. There also may be some--illegal types around stores K and N. You don't need them, but they can't hurt. There's others towards the end of the alphabet. New places that might have clues.'"
 clues-quip	"'Examine everything. People and things blocking you. Try to get by them. Just plain listen, or smell. Dialogues also guide. Oh, and if you can find Gretta Garett-Tatger, bonus.'"
 gretta-quip	"'She's a good investigative reporter, the best. She's dug further into Elvira's doings than anyone else. But she's become a bit of a--target.' You both cringe. 'No, her name's not your fault. Just, she may have found something, even left a cue in the Strip of Profits.' Elmo shows you a picture of her."
 trial-trail-quip	"'More trouble, more stores. Six of [']em. But you can't just switch stuff to other stuff. That'd be more hokey and homeworky. You'll have to infer finer things to upset the setup. But I have some basic notes.' Elmo hands you a paper. 'It's a Gird Grid. More details there. Read it later.'"
@@ -10506,7 +10513,7 @@ got-red-yellow-quip	"'Yyupp. Vowels. But we haven't found anything where the che
 still-busted-quip	"You shake your head. 'Duh, I'm humid.'[paragraph break]'A, e, i, o, u,' Elmo points out. 'Vowels.'[paragraph break]'Maybe other letters too...nah, too many consonants go to red. Yeah. Vowels and consonants.' You figure the cheat button might be a good idea to learn for the future. Might be a good idea to start small. Like--with the lamp."
 showset-quip	"'Hint agent thing! NEAT!' You show him what the red and yellow mean, then the green and purple. He asks if there are any other colors, like orange."
 lamp-quip	"'Yeah, sorry about the lamp.' You say no worries--you're trying to figure what it means. Elmo doesn't judge. 'Yeah, you been under stress, I bet, let's work it out.' The settler vaguely goes Red, yellow/green, red and red near the fragments. 'Hm, cheat mode changes A from yellow to green. That must mean something.'"
-gp-quip	"'Awesome! Yeah, cheating turns the reds and yellows blue.'"
+gp-quip	"'Awesome! Yeah, cheating adds blue to the reds and yellows if the letters are right. To purple and green.'"
 settler-quip	"'LETTERS SETTLER. Hm, the E-T-T change color when you switch cheat mode on. Maybe that's because they are in the right places. Yellow e to green, red t to purple. Not clear if it's e and t specifically that change, though.'"
 yorp-quip	"'Hm, [if chimney-quip is mowered]more orange letters to Y[else]the D in Yorpwald and W in Wordplay are orange. Or maybe it's what the letters can become. Orange, we haven't seen much of that[end if]. Also, interesting, the O-R change colors when you go cheat mode. Looks like they're already in the right place.'[paragraph break]'Gotcha, doc. Good catch.'"
 stable-quip	"You remember cheat mode did not change the tables when you scanned them before entering the stable--there was lots of red writing, too, which your pedanto-notepad says was wrong letters. But there were some yellows, too. They were probably wrong, but a different sort of wrong."
@@ -18756,7 +18763,7 @@ for writing a paragraph about a guardian (called gua):
 		continue the action;
 	let so-far be 0;
 	repeat with myg running through not prevseen guardians in location of player:
-		say "[if so-far is 0]Oh, look[else if so-far is 1][line break]Wow, squared[else if so-far is 2][line break]Man, it's busy here[else]Man, it's busier than it should be here[end if]! You haven't seen [the myg] before. [if myg is plural-named]They're[else if myg is female]She's[else if myg is neuter]It's[else]He's[end if] guarding the way [if gualoc of myg is location of player][guadir of myg][otherwise][opposite of guadir of myg][end if].";
+		say "[if so-far is 0]Oh, look[else if so-far is 1][line break]But there's more[else if so-far is 2][line break]And that's not all[else][line break]Man, it's busier than it should be here[end if]! [initial appearance of myg][line break]";
 		increment so-far;
 		now myg is mentioned;
 	let psg be number of prevseen guardians in location of player;
@@ -18789,7 +18796,7 @@ after printing the locale description when mrlp is towers (this is the castle ne
 		if adude is clueneedy and any-reveal is false:
 			now adude is not clueneedy;
 			now any-reveal is true;
-			say "[kloozorz corresponding to a guy of adude in table of guard-org][paragraph break]";
+			say "[line break][kloozorz corresponding to a guy of adude in table of guard-org][paragraph break]";
 	if rm is unvisited and rm is a towloc listed in the table of towercomments:
 		choose row with towloc of rm in table of towercomments;
 		if there is a towquo entry:
@@ -19124,6 +19131,18 @@ instead of doing something to the cliff:
 	if action is procedural, continue the action;
 	say "Looking at the cliff, you spend moments in awe of it unclimbable verticality--and of how Inform 7 lets you implement backdrops that can be in several rooms at once." instead;
 
+the old ice is LLPish reflexive scenery in Blasted Saltbed. "[if old ice is reflexed]It's coiled into a really cool pattern now, thanks to you[else]Big chunks of ice are always impressive, but this could be more artistic if it weren't so flat[end if]."
+
+a-text of old ice is "RYYRYR". b-text of old ice is "R?YRYR". parse-text is "x[sp]?-[sp]x[sp]-[sp]x"
+
+check taking old ice:
+	say "You'd get your hands stuck. And I won't double dog dare you." instead;
+
+check scaning cliff:
+	if old ice is reflexive:
+		say "Nothing happens until you also flick across the old ice.";
+		try scaning old ice instead;
+
 book unblest sunbelt
 
 Unblest Sunbelt is east of Scope Copse. Unblest Sunbelt is in Towers. "The land here is dry and unforgiving. You doubt there's much to do here besides get on[if number of visible guardians is 0], especially since you got rid of the guardians here[end if][if pulses are visible], though you feel [i]neural pulses[r] you'd love to get rid of[end if][tow-dirs]."
@@ -19140,6 +19159,15 @@ after printing the locale description for Unblest Sunbelt when Unblest Sunbelt i
 	now arid den is prodded;
 	now inapt paint is prodded;
 	continue the action;
+
+the neural pulses are plural-named LLPish vanishing scenery in Unblest Sunbelt.
+
+check taking neural pulses:
+	say "You don't need or want to--they just flow through either way." instead;
+
+description of neural pulses is "They seem to cause neural shocks when you get too close. And they make you see red when you think of...Lauren. Man, she was beyond fake. What did [if player is male]other [end if]guys see in her?"
+
+a-text of neural pulses is "YRRYYR". b-text of neural pulses is "YRRYGP". parse-text of pulses is "-[sp]x[sp]x[sp]-[sp]a[sp]l". pulses are cheat-spoilable.
 
 book Anemic Cinema
 
@@ -20475,7 +20503,7 @@ check going west in mislit limits:
 
 section serpent
 
-A pester'n serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of pester'n serpent is "[one of]A[or]The[stopping] pester'n serpent guards the way west. It lets out ten reps of a particularly nasty hiss."
+A pester'n serpent is a vanishing LLPish animal in Mislit Limits. initial appearance of pester'n serpent is "[one of]A[or]The[stopping] pester'n serpent guards the way west. It lets out ten reps of a particularly nasty hiss.". description of pester'n serpent is "It's coiled and ready to strike anyone who tries to go by it."
 
 rule for supplying a missing second noun when showing:
 	if pester'n serpent is visible:
@@ -20531,15 +20559,92 @@ the initial appearance of a guardian is usually "[gd of the item described]."
 
 chapter who are the guardians?
 
-Lois the Hostile is a female purple guardian. description is "She looks hostile, all right."
+[this is arranged from east to werst, then south to north, the first place you can see a guardian.]
 
-a-text of lois the hostile is "RYRYYRR". b-text of lois the hostile is "?GRYYRR".
+section scope copse
 
-the hostile-is-he lot is a plural-named purple guardian.
+the oddly rewired robot is a neuter purple guardian. understand "prevent/robot/bot" as oddly rewired robot. "An oddly rewired robot enthusiastically guards the way [psgdir of rewired robot]."
 
-a-text of hostile-is-he lot is "RYRYYRR". b-text of hostile-is-he lot is "??RYYR?".
+understand "were rid" as a mistake ("On the right track, but you are just one person. Plus you probably need an adjective. Something one-wordier.") when player is in copse and rewired robot is in copse.
 
-The man covered in inapt paint is a blue guardian. description is "He has, in inapt paint on his chest, FLEMISH. He cries out 'I'm not Flemish! Nothing against [']em! It's just not me!'"
+description of oddly rewired robot is "It is in perfect compliance with Obst-Bots (Obstacle? Obstinate? Both? Nobody ever remembers) regulations assuring you it has recently been [i]rewired[r] to be the best at guarding important places. You could probably listen to its odd beeping to drive yourself up the wall. You see red writing on it."
+
+a-text of oddly rewired robot is "RYYRRYR". b-text of oddly rewired robot is "RGYRRGR". parse-text of rewired robot is "x[sp]e[sp]i[sp]x[sp]x[sp]e[sp]x".
+
+The muscly hulk is a red guardian. "A muscly hulk flexes as it guards the way [psgdir of muscly hulk].".
+
+description of muscly hulk is "He's certainly muscly. He looks relatively light on his toes for his size, too."
+
+understand "scumly" as a mistake ("Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.") when muscly hulk is visible.
+
+a-text of muscly is "RRYRRO". b-text of muscly is "RRYRRB". parse-text of muscly is "x[sp]x[sp]u[sp]x[sp]x[sp]y".
+
+The snider diners are plural-named flippable blue guardians. "Snider diners block the way [psgdir of snider diners].". description is "They're sniffing the air and mumbling about sophisticated palates and not being interrupted. All very drily."
+
+understand "diner" as diners.
+
+a-text of snider diners is "RYRRYR". b-text of snider diners is "R??R?R". parse-text of diners is "x[sp]?[sp]?[sp]x[sp]?[sp]x".
+
+section baldest blasted saltbed
+
+the unripe iPrune is a red guardian. understand "prune" and "unripe prune" as iprune. "An iPrune--unripe--is too much of an obstacle as-is to the [psgdir of iprune]."
+
+description of iPrune is "It's almost impossibly big for being unripe and disturbingly animated. You knew Elvira was a bit too into genetic mutations, and combining weird technology and biology, but this is crazy. It's branded with red writing."
+
+a-text of iPrune is "RYRYYR". b-text of iPrune is "RYR?YR". parse-text of iPrune is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
+
+some pirates are plural-named red guardians. "Pirates probably won't let you go [psgdir of pirates] unless you can get rid of them.". description of pirates is "Sun-burnt and proud of it. They traipse, unlikely to hand you a piastre or discuss the REST API[one of]. If you look again, you might remember what the dance they're doing is[or]. You blush as you recall their dance is the Star Pie Traipse[stopping]."
+
+understand "pirate" as pirates.
+
+pirate-countdown is a number that varies.
+
+every turn when pirates are visible:
+	if pirate-countdown > 0:
+		decrement pirate-countdown;
+	else:
+		if a random chance of 1 in 5 succeeds:
+			say "A pirate swats at an air pest, red-faced--and reaps it! But it leaves a red welt.";
+			now pirate-countdown is 3;
+
+a-text of pirates is "RYRRYYR". b-text of pirates is "PYRRYGR". parse-text of pirates is "p[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x". pirates are cheat-spoilable.
+
+section anemic cinema
+
+The ingrates are plural-named white guardians. "Ingrates whining about any old thing block the way [psgdir of ingrates]."
+
+understand "ingrate" as ingrates.
+
+understand "granites" and "granite" as a mistake ("They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't til they're gone.") when ingrates are visible.
+
+description of ingrates is "They're spouting some of the [i]angriest[r] ranting you've heard, though it doesn't make you see red right away. And yet, angriest is so close to whining."
+
+a-text of ingrates is "YRRRRYYR". b-text of ingrates is "?PPRRYGR". parse-text of ingrates is "?[sp]n[sp]g[sp]x[sp]x[sp]-[sp]-[sp]x".
+
+An admirer is a female purple guardian. "An admirer to the [psgdir of admirer] would rather you stay here and listen to their flattery than go anywhere new."
+
+a-text of admirer is "RYRRYYR". b-text of admirer is "RYRRYGR". parse-text of admirer is "x[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x".
+
+description of admirer is "[if admirer is male]He[else]She[end if] seems to be gazing at you raptly, as if out of puppy love. While [admsex] is too scared to approach you, you doubt you can get by without some really awkward conversation. It's like [admsex] needs that special someone you can't be while you're trekking the Badlands."
+
+to say admsex:
+	say "[if admirer is male]he[else]she[end if]"
+
+The sweatier wait-seer is a blue guardian. "A sweatier wait-seer seems in no hurry to let anyone [psgdir of wait-seer]."
+
+understand "wait/ seer" as wait-seer.
+
+description of sweatier wait-seer is "He is sweatier than anyone else you have run across here. But as-is, he has more than enough energy to beat you up. He mutters 'I...we...stare,' turning red, as you look at him."
+
+understand "sweat" and "waste" and "waste ire" as a mistake ("You waste sweat and ire thinking what to do.") when sweatier wait-seer is visible.
+
+a-text of wait-seer is "RYYRYYRR". b-text of wait-seer is "?YYRY?RR". parse-text of wait-seer is "?[sp]-[sp]-[sp]x[sp]-[sp]?[sp]x[sp]x".
+
+section unblest sunbelt
+
+The man covered in inapt paint is a blue guardian. "A man to the [psgdir of inapt paint] covered in inapt paint mumbles 'I'm flesh. I'm flesh. And whoever I am, I need to stand my ground against...whoever everyone else is.'"
+
+description is "He has, in inapt paint on his chest, FLEMISH. He cries out 'I'm not Flemish! Nothing against [']em! It's just not me!'"
 
 understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.") when man covered is visible.
 
@@ -20562,30 +20667,6 @@ a-text of man covered in inapt paint is "RYRRYRR". b-text of man covered in inap
 
 understand "flemish/painted man/" as man covered in inapt paint.
 
-some natives are a plural-named white guardian. indefinite article of natives is "several".
-
-understand "native" as natives.
-
-description of natives is "They're not, like, a particular skin color or with a particular accent. That'd be racist of me. They just seem to talk about the Badlands like they know all about it, and they're looking at you funny, as if they know you don't fit in."
-
-a-text of natives is "RYYRYRR". b-text of natives is "?GYRYRR". parse-text of natives is "?[sp]a[sp]-[sp]x[sp]-[sp]x[sp]x".
-
-The sweatier wait-seer is a blue guardian.
-
-understand "wait/ seer" as wait-seer.
-
-description of sweatier wait-seer is "He is sweatier than anyone else you have run across here. But as-is, he has more than enough energy to beat you up. He mutters 'I...we...stare,' turning red, as you look at him."
-
-understand "sweat" and "waste" and "waste ire" as a mistake ("You waste sweat and ire thinking what to do.") when sweatier wait-seer is visible.
-
-a-text of wait-seer is "RYYRYYRR". b-text of wait-seer is "?YYRY?RR". parse-text of wait-seer is "?[sp]-[sp]-[sp]x[sp]-[sp]?[sp]x[sp]x".
-
-The snider diners are plural-named flippable blue guardians. description is "They're sniffing the air and mumbling about sophisticated palates and not being interrupted. All very drily."
-
-understand "diner" as diners.
-
-a-text of snider diners is "RYRRYR". b-text of snider diners is "R??R?R". parse-text of diners is "x[sp]?[sp]?[sp]x[sp]?[sp]x".
-
 The dandier arid den is a blue guardian.
 
 a-text of arid den is "RRYYRYR". b-text of arid den is "??YYRGR". parse-text of arid den is "?[sp]?[sp]-[sp]-[sp]x[sp]e[sp]x".
@@ -20605,50 +20686,15 @@ instead of doing something with the nerd-aid:
 		continue the action;
 	say "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.";
 
-The muscly hulk is a red guardian.
+section savager ravages
 
-description of muscly hulk is "He's certainly muscly. He looks relatively light on his toes for his size, too."
+the alarming grailman is a blue guardian. understand "liam/ garn/" as grailman. "An alarming grailman to the [psgdir of grailman] has you worried there's no way by him."
 
-understand "scumly" as a mistake ("Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.") when muscly hulk is visible.
+description of grailman is "You could probably take a below-average grailman, but this one's a cut above. He seems to be flexing his muscles a lot, waiting for someone to try going by."
 
-a-text of muscly is "RRYRRO". b-text of muscly is "RRYRRB". parse-text of muscly is "x[sp]x[sp]u[sp]x[sp]x[sp]y".
+a-text of alarming is "RYRRYRYR". b-text of alarming is "RYRRYR?R". parse-text of alarming is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x".
 
-The ingrates are plural-named white guardians.
-
-understand "ingrate" as ingrates.
-
-understand "granites" and "granite" as a mistake ("They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't til they're gone.") when ingrates are visible.
-
-description of ingrates is "They're spouting some of the [i]angriest[r] ranting you've heard, though it doesn't make you see red right away. And yet, angriest is so close to whining."
-
-a-text of ingrates is "YRRRRYYR". b-text of ingrates is "?PPRRYGR". parse-text of ingrates is "?[sp]n[sp]g[sp]x[sp]x[sp]-[sp]-[sp]x".
-
-description of pester'n serpent is "It's coiled and ready to strike anyone who tries to go by it."
-
-The bonker is a purple guardian. description of bonker is "It's twice your height and upright and club-shaped and probably ready to [if bonker is passtried]re-[end if]bonk anyone who goes east while it's still functional, and boy does it look functional[one of]. Other guardians are not so violent. Must be something important back there[or][stopping]."
-
-a-text of bonker is "RRYRYR". b-text of bonker is "PRYPGR". parse-text of bonker is "b[sp]x[sp]o[sp]k[sp]e[sp]x". bonker is parse-spoilable.
-
-retrytext of bonker is ", poised to re-bonk"
-
-An admirer is a female purple guardian.
-
-a-text of admirer is "RYRRYYR". b-text of admirer is "RYRRYGR". parse-text of admirer is "x[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x".
-
-description of admirer is "[if admirer is male]He[else]She[end if] seems to be gazing at you raptly, as if out of puppy love. While [admsex] is too scared to approach you, you doubt you can get by without some really awkward conversation. It's like [admsex] needs that special someone you can't be while you're trekking the Badlands."
-
-to say admsex:
-	say "[if admirer is male]he[else]she[end if]"
-
-the oddly rewired robot is a neuter purple guardian. understand "prevent/robot/bot" as oddly rewired robot.
-
-understand "were rid" as a mistake ("On the right track, but you are just one person. Plus you probably need an adjective. Something one-wordier.") when player is in copse and rewired robot is in copse.
-
-description of oddly rewired robot is "It is in perfect compliance with Obst-Bots (Obstacle? Obstinate? Both? Nobody ever remembers) regulations assuring you it has recently been [i]rewired[r] to be the best at guarding important places. You could probably listen to its odd beeping to drive yourself up the wall. You see red writing on it."
-
-a-text of oddly rewired robot is "RYYRRYR". b-text of oddly rewired robot is "RGYRRGR". parse-text of rewired robot is "x[sp]e[sp]i[sp]x[sp]x[sp]e[sp]x".
-
-the man in a REED'S ALE costume is a red guardian.
+the man in a REED'S ALE costume is a red guardian. "A man in a REED'S ALE costume to the [psgdir of reed's ale] probably won't let you by, since that's his job."
 
 understand "reeds ale/ man/" as man in a REED'S
 
@@ -20662,11 +20708,15 @@ a-text of reed's ale is "RYRYYRYR". b-text of reed's ale is "PGRYYRYR". parse-te
 
 rese is a truth state that varies.
 
-the alarming grailman is a blue guardian. understand "liam/ garn/" as grailman.
+section salted deltas
 
-description of grailman is "You could probably take a below-average grailman, but this one's a cut above. He seems to be flexing his muscles a lot, waiting for someone to try going by."
+the Atheists are plural-named purple guardians. "Atheists to the [psgdir of atheists] seem quite set in their ways. And their territory.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say."
 
-a-text of alarming is "RYRRYRYR". b-text of alarming is "RYRRYR?R". parse-text of alarming is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x".
+understand "atheist" as atheists.
+
+a-text of atheists is "RYRRYYRR". b-text of atheists is "RYRRGYRR". parse-text of atheists is "x[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]x".
+
+section danger garden
 
 the organised ego drains are a plural-named red guardian.
 
@@ -20674,54 +20724,29 @@ description of organised ego drains is "You recognize the ego drains as odd spir
 
 a-text of organised is "RRYRRYYRY". b-text of organised is "RRYRRYYRY". parse-text of organised is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
 
-the unripe iPrune is a red guardian. understand "prune" and "unripe prune" as iprune.
+some natives are a plural-named white guardian. indefinite article of natives is "several". "Some natives block your way [psgdir of natives], though you don't really see anything interesting there."
 
-description of iPrune is "It's almost impossibly big for being unripe and disturbingly animated. You knew Elvira was a bit too into genetic mutations, and combining weird technology and biology, but this is crazy. It's branded with red writing."
+understand "native" as natives.
 
-a-text of iPrune is "RYRYYR". b-text of iPrune is "RYR?YR". parse-text of iPrune is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
+description of natives is "They're not, like, a particular skin color or with a particular accent. That'd be racist of me. They just seem to talk about the Badlands like they know all about it, and they're looking at you funny, as if they know you don't fit in."
 
-some pirates are plural-named red guardians. description of pirates is "Sun-burnt and proud of it. They traipse, unlikely to hand you a piastre or discuss the REST API[one of]. If you look again, you might remember what the dance they're doing is[or]. You blush as you recall their dance is the Star Pie Traipse[stopping]."
+a-text of natives is "RYYRYRR". b-text of natives is "?GYRYRR". parse-text of natives is "?[sp]a[sp]-[sp]x[sp]-[sp]x[sp]x".
 
-understand "pirate" as pirates.
+The bonker is a purple guardian. "You recognize a huge bonker to the [psgdir of bonker]. They're usually more bark than bite, but this one's certainly in the way, and they aren't just hired out for fun. Something interesting must be to the [psgdir of bonker].". description of bonker is "It's twice your height and upright and club-shaped and probably ready to [if bonker is passtried]re-[end if]bonk anyone who goes east while it's still functional, and boy does it look functional[one of]. Other guardians are not so violent. Must be something important back there[or][stopping]."
 
-pirate-countdown is a number that varies.
+a-text of bonker is "RRYRYR". b-text of bonker is "PRYPGR". parse-text of bonker is "b[sp]x[sp]o[sp]k[sp]e[sp]x". bonker is parse-spoilable.
 
-every turn when pirates are visible:
-	if pirate-countdown > 0:
-		decrement pirate-countdown;
-	else:
-		if a random chance of 1 in 5 succeeds:
-			say "A pirate swats at an air pest, red-faced--and reaps it! But it leaves a red welt.";
-			now pirate-countdown is 3;
+retrytext of bonker is ", poised to re-bonk"
 
-a-text of pirates is "RYRRYYR". b-text of pirates is "PYRRYGR". parse-text of pirates is "p[sp]-[sp]x[sp]x[sp]-[sp]e[sp]x". pirates are cheat-spoilable.
+section ole shrine shoreline
 
-the old ice is LLPish reflexive scenery in Blasted Saltbed. "[if old ice is reflexed]It's coiled into a really cool pattern now, thanks to you[else]Big chunks of ice are always impressive, but this could be more artistic if it weren't so flat[end if]."
+Lois the Hostile is a female purple guardian. "You recognize Lois the Hostile, renowned for forced-contrarian views on religion, as well as the 'real' Lois. She just likes to block people, and in this case, she's blocking your way [psgdir of lois the hostile].". description is "She looks hostile, all right."
 
-a-text of old ice is "RYYRYR". b-text of old ice is "R?YRYR". parse-text is "x[sp]?-[sp]x[sp]-[sp]x"
+a-text of lois the hostile is "RYRYYRR". b-text of lois the hostile is "?GRYYRR".
 
-check taking old ice:
-	say "You'd get your hands stuck. And I won't double dog dare you." instead;
+the hostile-is-he lot is a plural-named purple guardian. "The Hostile-is-He Lot, a swarm of contrarians who question anything and everything except their own nuisance value, block the way [psgdir of hostile-is-he lot]."
 
-check scaning cliff:
-	if old ice is reflexive:
-		say "Nothing happens until you also flick across the old ice.";
-		try scaning old ice instead;
-
-the Atheists are plural-named purple guardians. description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say."
-
-understand "atheist" as atheists.
-
-a-text of atheists is "RYRRYYRR". b-text of atheists is "RYRRGYRR". parse-text of atheists is "x[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]x".
-
-the neural pulses are plural-named LLPish vanishing scenery in Unblest Sunbelt.
-
-check taking neural pulses:
-	say "You don't need or want to--they just flow through either way." instead;
-
-description of neural pulses is "They seem to cause neural shocks when you get too close. And they make you see red when you think of...Lauren. Man, she was beyond fake. What did [if player is male]other [end if]guys see in her?"
-
-a-text of neural pulses is "YRRYYR". b-text of neural pulses is "YRRYGP". parse-text of pulses is "-[sp]x[sp]x[sp]-[sp]a[sp]l". pulses are cheat-spoilable.
+a-text of hostile-is-he lot is "RYRYYRR". b-text of hostile-is-he lot is "??RYYR?".
 
 chapter guardian org table
 
@@ -20975,11 +21000,8 @@ after fliptoing a warrior:
 	d "[list of warriors in trefoil].";
 	if noun is Rodney:
 		now all visible warriors are pinko;
-		d "[vw] left.";
 		if vw > 0:
 			decrease poss-score of towers by vw;
-		if vw > 0:
-			say "Rodney's remaining follower[if vw > 1]s look[else] looks[end if] a bit lost, but not upset. [if vw > 1]They even ask[else]He even asks[end if] if you can work your magic to make [if vw > 1]them better people[else]him a better person[end if]. After a surprisingly illuminating speech that avoids the major self-help catch-phrase, you make an excellent case for self-improvement coming from within, and not worrying about being perfect, or getting a perfect score. It goes over well, and [list of warriors in trefoil] thank you profusely before going on [if vw > 1]their ways[else]his way[end if].";
 		now all visible warriors are in lalaland;
 		now player has flowerpot;
 		continue the action;
