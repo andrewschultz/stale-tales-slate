@@ -1909,7 +1909,7 @@ old giant	"He is already talking about himself, his complaints, and so forth."
 Oscar	"'I'm just this guy, in this house, with that ashtray [if pipe soot is in adobe]full of nice smelling pipe soot[else]some self-appointed do-gooder cleaned out. Well, I can make more[end if].' Nope, he doesn't seem to have much to say."
 Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [if mushrooms are off-stage]Can't even make it to the seed pit[else]Don't have your guts to explore the seed pit, either[end if].'"
 armada	"They'll have nothing sensible to say in unison."
-statue	"Oh, if it were the real version, you'd regret that."
+statue	"Oh, if it were the real version, you'd regret that." [reflex TROVES]
 plebe	 "You figure you should grill him about how worthless he thinks he is, but you lack the right word or words." [reflex PRESTO]
 Rand	"He gives a whole new dimension to small talk. But not for long, thankfully."
 Leo	"He gives a whole new dimension to small talk. But not for long, thankfully."
@@ -1929,8 +1929,7 @@ aunt tuna	"She's talking about herself every move, pretty much[if trout is refle
 sardine	"[one of]The sardine spends time babbling about his sensitive hearing, saying you couldn't possibly understand. But you sort of do[or]You don't want to hear the sardine on himself again[stopping]."
 walleyes	"Now's not the time to upbraid baddies for being bad. Sneak past them instead."
 yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what.' He winks."
-smart kid	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
-pester'n serpent	"The serpent has nothing to say."
+Ray Eck	-- [reflex TOWERS]
 inapt paint	--
 muscly hulk	--
 lois the hostile	--
@@ -1942,17 +1941,20 @@ arid den	--
 rewired robot	--
 unripe iPrune	--
 pirates	--
-Ray Eck	--
 grailman	--
 costume man	--
 bonker	--
 ingrates	--
 organised	--
 admirer	"'But enough about me! What about you?' You need a way to make them less interested in you."
-Dr Yow	"Dr. Yow is too modest--and focused on [his-her] science--to bang on about previous achievements or imprisonment."
 Atheists	--
+lois the hostile	--
+hostile-is-he lot	--
+Dr Yow	"Dr. Yow is too modest--and focused on [his-her] science--to bang on about previous achievements or imprisonment."
+smart kid	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'"
+pester'n serpent	"The serpent has nothing to say."
 Ed Yerg	"Ed Yerg mentions [if flowerpot is in lalaland]how happy he is you helped him. So happy, if you go out and come in, he might give you help with that palace[else if ed yerg is reflexive]his advice isn't cheap[else]he needs something to cheer him up[end if]."
-Ed Riley	"[one of]Ed Riley blathers how he can stand up to WHO DO YOU THINK YOU ARE and all that sort of thing. You claim you were just trying to get to know him, then he says THEN YOU'LL KNOW I NEED TO GUARD THE WAY WEST, HERE. He speaks very authoritatively[or]You don't need another verbal smackdown, at least not in Ed's current tone of voice[stopping]."
+Ed Riley	"[one of]Ed Riley blathers how he can stand up to WHO DO YOU THINK YOU ARE and all that sort of thing. You claim you were just trying to get to know him, then he says THEN YOU'LL KNOW I NEED TO GUARD THE WAY WEST, HERE. He speaks very authoritatively[or]You don't need another verbal smackdown, at least not in Ed's current tone of voice[stopping]." [reflex OTTERS]
 whiners	--
 macks	"Their opinion would be slightly biased. You can probably learn more about them by observing them."
 Gretta	"She's got enough people asking about her right now."
@@ -1962,6 +1964,7 @@ Mr Lee	--
 le mer	--
 eels	--
 snail	--
+snipe	--
 hornets	--
 racoon	--
 ocelots	"[if ocelots are reflexed]They seem too shy to talk[else]They point to themselves and give a thumbs up[end if]."
@@ -2220,7 +2223,7 @@ idg	lecturer	"A great man. Listen to him, not me." [start STORES]
 idg	Elvira	"She didn't get to her position of power by using DRUGS."
 Brother Horbert	spoon	"'[if spoon is in lalaland]I hope you used it wisely[else]It may help you figure where to go[end if].'" [start ROUTES]
 Brother Horbert	mantle	"[one of]Brother Horbert shudders a bit[or]Best not to press him[stopping]."
-Brother Horbert	list o toils	"[if l-o-p is unexamined]Why not examine the list yourself?[else if mushrooms are off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]"	[horbert tells about quest items elsewhere]
+Brother Horbert	list o toils	"[if l-o-p is unexamined]Why not examine the list yourself?[else if mushrooms are off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]" [horbert tells about quest items elsewhere]
 Brother Horbert	form	"[if form is off-stage]Brother Horbert mutters something about the gift of second sight.[else]Brother Horbert says, 'If you found the reagents, surely dealing with that form will be easier!'[end if]"
 Brother Horbert	Pat	"[lost-faith]"
 Brother Horbert	Oscar	"[lost-faith]"
@@ -2257,7 +2260,7 @@ hogs	Rand	"'They size him up and give a thumbs-down. Then they give you a double
 hogs	Leo	"'They size him up and give a thumbs-down. Then they give you a double thumbs-down. Ouch! No respect.'"
 hogs	keys	"They snicker at the thought of you being clever or strong enough to get the keys."
 hogs	yourself	"The hogs smirk and flex a bit, to show they're bigger and stronger." [end presto]
-trolls	Casper	"[one of]'A great man! We're sure his books are great, if you have nothing better to do than read. But he LIVED his books.'[or]'Wanna know about him, ask HIM.'[stopping]"	 [oyster]
+trolls	Casper	"[one of]'A great man! We're sure his books are great, if you have nothing better to do than read. But he LIVED his books.'[or]'Wanna know about him, ask HIM.'[stopping]" [oyster]
 trolls	capers	"[if stein is in lalaland][yeah-cute][else]'Hard-hitting stuff, we're sure. He's told us what's in there. Poke at it wrong, you'll upset the man himself.'[end if]"
 trolls	stein	"[if stein is in lalaland][yeah-cute][else]'Don't go putting it somewhere stupid and breaking it.'[end if]"
 trolls	tunes	"[if song is in reflexed][yeah-cute][else]'Don't be messing with the tunes or the amper on the jukebox. Annoy a lot of people.'[end if]"

@@ -1,0 +1,1955 @@
+## reg-roi-askabout.txt
+## asking about for Roiling Original:
+##
+##
+
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* _manor
+
+>posf
+>score
+Score in a scenario: 0 out of 13 total points in the current region, Roman Manor. Lowest score to solve is 8. Maximum score available is 13.
+
+>x chair
+You thought you preferred
+
+>think
+CREATIVITY
+
+>x sad ads
+Bangish bashing
+
+>open door
+
+>ask gunter about gunter
+WRONG
+>ask gunter about elvira
+WRONG
+>ask gunter about xyzzy
+WRONG
+
+>1
+>5
+
+It is now pitch dark
+
+
+>lapm
+You think you feel the palm shake a bit, but nothing terribly magical happens.
+>lamp
+Your score has just gone up by one point
+>lapm
+If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
+
+>basemetn
+The ten beams creak slightly. Maybe not all of them. But a few.
+
+>basement
+Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
+Your score has just gone up by two points
+>basemetn
+You probably just want to go DOWN to the basement.
+
+>d
+
+>in
+You fumble nervously
+
+>satchel
+Your score has just gone up
+
+>in
+haven't really EXAMINED it
+>x settler
+
+####line break problem after X SETTLER??
+
+>in
+Hands up!
+
+>flier
+Your score has just gone up
+
+>ask elmo about elmo
+WRONG
+>ask elmo about elvira
+WRONG
+>ask elmo about xyzzy
+WRONG
+
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>1
+>3
+Carven Cavern
+
+>staple
+Your score has just gone up by one point
+
+>stapler
+Your score has just gone up by one point
+
+>staple wall
+>in
+Strip of Profits
+
+>score
+Won now: Roman Manor (8/13).
+
+* _stores
+
+>posf
+
+>presto
+Your score has just gone up by one point
+
+>otters
+Your score has just gone up by one point
+
+>routes
+Your score has just gone up by one point
+
+>troves
+Your score has just gone up by one point
+
+>towers
+Your score has just gone up by one point
+
+>oyster
+Your score has just gone up by one point
+
+>score
+WRONG
+Score in a scenario: 6 out of 11 total points in the current region, Stores.
+
+>tokers
+
+>ask tokers about tokers
+WRONG
+>ask tokers about nestor
+WRONG
+>ask tokers about elvira
+WRONG
+>ask tokers about xyzzy
+WRONG
+
+>ask tokers about store k
+WRONG
+>ask tokers about nestor
+WRONG
+>ask tokers about smoke cloud
+WRONG
+
+>nestor
+>ask nestor about tokers
+WRONG
+>ask nestor about nestor
+WRONG
+>ask nestor about elvira
+WRONG
+>ask nestor about xyzzy
+WRONG
+
+>ask nestor about store n
+WRONG
+>ask nestor about tokers
+WRONG
+
+>enter cloud
+
+>ask ian about ian
+WRONG
+>ask ian about elvira
+WRONG
+>ask ian about lecturer
+WRONG
+>ask ian about xyzzy
+WRONG
+
+>ask lecturer about ian
+WRONG
+>ask lecturer about elvira
+WRONG
+>ask lecturer about lecturer
+WRONG
+>ask lecturer about xyzzy
+WRONG
+
+* _routes
+
+>posf
+>score
+0 out of 18 total points in the current region, Routes
+WRONG
+
+>inside
+Your score has just gone up by one point
+
+>ask horbert about horbert
+WRONG
+>ask horbert about giant
+WRONG
+>ask horbert about elvira
+WRONG
+>ask horbert about xyzzy
+WRONG
+
+>ask brother horbert about spoon
+WRONG
+>ask brother horbert about mantle
+WRONG
+>ask brother horbert about list-o-toils
+WRONG
+>ask brother horbert about form
+WRONG
+>ask brother horbert about pat
+WRONG
+>ask brother horbert about oscar
+WRONG
+>ask brother horbert about old giant
+WRONG
+
+>x toils
+Precise recipes
+
+>out
+>past
+Your score has just gone up by one point
+
+Idle Deli
+
+>despite
+Your score has just gone up by one point
+
+>ask pat about pat
+WRONG
+>ask pat about horbert
+WRONG
+>ask pat about giant
+WRONG
+>ask pat about elvira
+WRONG
+>ask pat about xyzzy
+WRONG
+>ask pat about seed pit
+WRONG
+>ask pat about oscar
+WRONG
+
+>out
+>across
+Your score has just gone up by one point
+
+Adobe Abode
+
+>opposite
+Your score has just gone up by one point
+
+>ask oscar about oscar
+WRONG
+>ask oscar about horbert
+WRONG
+>ask oscar about giant
+WRONG
+>ask oscar about elvira
+WRONG
+>ask oscar about xyzzy
+WRONG
+>ask oscar about ashtray
+WRONG
+>ask oscar about pipe soot
+WRONG
+>ask oscar about pat
+WRONG
+
+>out
+
+>against
+Your score has just gone up by one point
+
+>ask old giant about bench
+WRONG
+>ask old giant about horbert
+WRONG
+>ask old giant about giant
+WRONG
+>ask old giant about elvira
+WRONG
+>ask old giant about xyzzy
+WRONG
+
+>astride
+>below
+>under
+Your score has just gone up by one point
+
+##no-gal needs a line break ??
+
+>in
+>out
+>from
+Your score has just gone up by one point
+
+>ask armada about armada
+WRONG
+>ask armada about giant
+WRONG
+>ask armada about elvira
+WRONG
+
+>beneath
+Your score has just gone up by one point
+DEBUG INFO: Taking away a max point.
+
+>score
+WRONG
+
+Sun-Spared Underpass
+
+>until
+Your score has just gone up by one point
+>around
+Your score has just gone up by one point
+>along
+Your score has just gone up by one point
+
+Ripe Pier
+
+>amidst
+Your score has just gone up by one point
+
+Cripple Clipper
+
+>behind
+Your score has just gone up by one point
+>through
+Your score has just gone up by one point
+
+>score
+Routes (17/18)
+
+* _troves
+
+>l
+Loather Rathole
+
+>hate
+Your score has just gone up by one point
+>care
+Your score has just gone up by one point
+Loudest Used Lot
+
+>observe
+Your score has just gone up by one point
+>spot
+Your score has just gone up by one point
+
+>reason
+Your score has just gone up by one point
+
+>derive
+Pallid Li'L Pad
+DEBUG INFO: Taking away a max point.
+
+>posf
+>score
+WRONG
+
+>despair
+Your score has just gone up by one point
+
+>l
+Boredom Bedroom
+
+>deal
+Your score has just gone up by one point
+DEBUG INFO: Taking away a max point.
+
+>score
+WRONG
+
+Dour Tan Rotunda
+>desire
+Your score has just gone up by one point
+Econ-Cone
+>aspire
+Your score has just gone up by one point
+
+>ask statue about elvira
+WRONG
+>ask statue about statue
+WRONG
+>ask statue about xyzzy
+WRONG
+
+>ponder
+FiefCo Office
+Your score has just gone up by one point
+If only you could tune that out!
+DEBUG INFO: Taking away a max point.
+
+>score
+
+>ignore
+Your score has just gone up by one point
+>bolster
+Your score has just gone up by one point
+>last
+Your score has just gone up by one point
+>resign
+Your score has just gone up by one point
+Strip of Profits
+
+>score
+15/21
+
+* _presto
+
+>l
+Grey Gyre
+
+>umph
+Your score has just gone up by one point
+Austerer Treasure
+
+>pooh
+Your score has just gone up by one point
+Taking away a max point.
+
+>posf
+>score
+WRONG
+
+>e
+
+>n
+>w
+>w
+>n
+>e
+>e
+>e
+>n
+>w
+>n
+>ask lev matzo about elvira
+WRONG
+>ask lev matzo about lev matzo
+WRONG
+>ask lev matzo about xyzzy
+WRONG
+>ask lev matzo about volt maze
+WRONG
+>ask lev matzo about matzo lev
+WRONG
+>ask lev matzo about tom alvez
+WRONG
+
+>scan lev matzo
+
+>n
+>w
+>w
+>n
+>e
+>e
+>e
+>n
+>w
+>n
+>ask matzo lev about elvira
+WRONG
+>ask matzo lev about matzo lev
+WRONG
+>ask matzo lev about xyzzy
+WRONG
+>ask matzo lev about volt maze
+WRONG
+>ask matzo lev about lev matzo
+WRONG
+>ask matzo lev about tom alvez
+WRONG
+
+>scan matzo lev
+
+>n
+>w
+>w
+>n
+>e
+>e
+>e
+>n
+>w
+>n
+>ask tom alvez about elvira
+WRONG
+>ask tom alvez about tom alvez
+WRONG
+>ask tom alvez about xyzzy
+WRONG
+>ask tom alvez about volt maze
+WRONG
+>ask tom alvez about lev matzo
+WRONG
+>ask tom alvez about matzo lev
+WRONG
+
+>s
+Burnt Brunt
+
+>rats
+Your score has just gone up by one point
+>drat
+Your score has just gone up by one point
+
+>n
+
+>ask plebe about elvira
+WRONG
+>ask plebe about plebe
+WRONG
+>ask plebe about xyzzy
+WRONG
+>ask plebe about leo
+WRONG
+>ask plebe about rand
+WRONG
+
+>bleep
+Your score has just gone up by one point
+
+>e
+Marines Seminar
+
+>bingo
+Your score has just gone up by one point
+
+>w
+>mazeltov
+Your score has just gone up by one point
+
+>s
+>s
+Dirge Ridge
+
+>ole
+Your score has just gone up by one point
+>darn
+Your score has just gone up by one point
+>whassup
+Your score has just gone up by one point
+
+>ask rand about elvira
+WRONG
+>ask rand about rand
+WRONG
+>ask rand about xyzzy
+WRONG
+
+>ask leo about elvira
+WRONG
+>ask leo about leo
+WRONG
+>ask leo about xyzzy
+WRONG
+
+>ask rand about yak
+WRONG
+>ask rand about plebe
+WRONG
+>ask leo about hogs
+WRONG
+>ask rand about leo
+WRONG
+>ask leo about rand
+WRONG
+
+>n
+>n
+>load gun with dart
+>there
+Your score has just gone up by one point
+>n
+Phat Path
+
+##bingo *2 = no line break
+#different message for making it to the phat path 1st time?
+
+>ask hogs about popgun
+WRONG
+>ask hogs about rand
+WRONG
+>ask hogs about leo
+WRONG
+>ask hogs about keys
+WRONG
+>ask hogs about yourself
+WRONG
+>ask hogs about elvira
+WRONG
+>ask hogs about hogs
+WRONG
+>ask hogs about xyzzy
+WRONG
+
+>syke
+Your score has just gone up by one point
+
+>later
+Your score has just gone up by one point
+>tough
+Your score has just gone up by one point
+Hut! Go!
+Dat was a good dust-up
+
+>n
+Hacks' Shack
+
+>capslock
+Your score has just gone up by one point
+>skid
+Your score has just gone up by one point
+>cola
+Your score has just gone up by one point
+>mug
+>leaf
+Your score has just gone up by one point
+>futon
+Your score has just gone up by one point
+>screen
+Your score has just gone up by one point
+>put screen on slab
+Only one more piece of hardware
+
+>get book
+>push skid s
+>push skid s
+>push skid s
+
+>put leaf on skid
+
+>push skid n
+>push skid n
+>push skid n
+Your score has just gone up by one point
+
+>keyboard
+Your score has just gone up by one point
+
+>put keyboard on slab
+You can now do computery things unimpeded!
+
+>put lock on keyboard
+fits in perfectly
+
+>disk
+>put disk in drive
+>reboot
+Your score has just gone up by one point
+>sleep
+Your score has just gone up by one point
+>compile
+>pour cola in mug
+>debug
+Your score has just gone up by one point
+>sub
+Diver time
+Your score has just gone up by one point
+Strip of Profits
+
+>score
+(28/33)
+
+* _oyster
+
+>l
+Posh Hops Shop
+
+>ask casper about elvira
+WRONG
+>ask casper about casper
+WRONG
+>ask casper about xyzzy
+WRONG
+>ask casper about die thou
+WRONG
+>ask casper about hideout
+WRONG
+>ask casper about haunter
+WRONG
+>ask casper about trolls
+WRONG
+>ask casper about capers recaps
+WRONG
+>ask casper about elvira
+WRONG
+
+>ask trolls	about casper
+WRONG
+>ask trolls about capers
+WRONG
+>ask trolls about stein
+WRONG
+>ask trolls about tunes
+WRONG
+>ask trolls about gins sign
+WRONG
+>ask trolls about stumbler tumblers
+WRONG
+>ask trolls about haunter
+WRONG
+>ask trolls about elvira
+WRONG
+>ask trolls about trolls
+WRONG
+>ask trolls about xyzzy
+WRONG
+>ask trolls about die thou
+WRONG
+>ask trolls about hideout
+WRONG
+
+>ask patrons about casper
+WRONG
+>ask patrons about trolls
+WRONG
+>ask patrons about elvira
+WRONG
+>ask patrons about patrons
+WRONG
+>ask patrons about xyzzy
+WRONG
+>ask patrons about die thou
+WRONG
+>ask patrons about hideout
+WRONG
+
+>unset
+Your score has just gone up by one point
+>sing
+Your score has just gone up by one point
+>spit
+Your score has just gone up by one point
+
+>stroll
+Olde Lode
+
+>calm
+Your score has just gone up by one point
+
+>run
+Your score has just gone up by one point
+
+Hero's Shore
+>boast
+Your score has just gone up by one point
+Fighter Freight
+
+>leap
+Your score has just gone up by one point
+
+Anger Range
+
+>ask carps about trout
+WRONG
+>ask carps about aunt tuna
+WRONG
+>ask carps about casper
+WRONG
+>ask carps about haunter
+WRONG
+>ask carps about pikes
+WRONG
+>ask pikes about carps
+WRONG
+>ask carps about elvira
+WRONG
+>ask carps about carps
+WRONG
+>ask carps about xyzzy
+WRONG
+>ask carps about die thou
+WRONG
+>ask carps about hideout
+WRONG
+>ask pikes about elvira
+WRONG
+>ask pikes about pikes
+WRONG
+>ask pikes about xyzzy
+WRONG
+>ask pikes about die thou
+WRONG
+>ask pikes about hideout
+WRONG
+
+>scrap
+Your score has just gone up by one point
+
+>posf
+>score
+WRONG
+
+>e
+>seek
+Your score has just gone up by one point
+
+>score
+WRONG
+
+>eat
+Your score has just gone up by one point
+
+>tutor
+Your score has just gone up by one point
+
+>ask trout about carps
+WRONG
+>ask trout about pikes
+WRONG
+>ask trout about aunt tuna
+WRONG
+>ask trout about haunter
+WRONG
+>ask trout about casper
+WRONG
+>ask trout about elvira
+WRONG
+>ask trout about trout
+WRONG
+>ask trout about xyzzy
+WRONG
+>ask trout about die thou
+WRONG
+>ask trout about hideout
+WRONG
+
+>ask aunt tuna about tea
+WRONG
+>ask aunt tuna about pikes
+WRONG
+>ask aunt tuna about carps
+WRONG
+>ask aunt tuna about haunter
+WRONG
+>ask aunt tuna about walleyes
+WRONG
+>ask aunt tuna about sardine
+WRONG
+>ask aunt tuna about yapper
+WRONG
+>ask aunt tuna about horned hedron
+WRONG
+>ask aunt tuna about trout
+WRONG
+>ask aunt tuna about ruby
+WRONG
+>ask aunt tuna about casper spacer
+WRONG
+>ask tuna about elvira
+WRONG
+>ask tuna about tuna
+WRONG
+>ask tuna about xyzzy
+WRONG
+>ask tuna about die thou
+WRONG
+>ask tuna about hideout
+WRONG
+
+>w
+>n
+Lapsin' Plains
+
+>trace
+Your score has just gone up by one point
+>react
+Your score has just gone up by one point
+>kiss
+Your score has just gone up by one point
+>bonk
+Your score has just gone up by one point
+
+>in
+a hut
+
+>bust
+Your score has just gone up by one point
+>drop
+Your score has just gone up by one point
+
+>out
+>s
+>w
+Arches
+
+>ask sardine about haunter
+WRONG
+>ask sardine about elvira
+WRONG
+>ask sardine about elvira
+WRONG
+>ask sardine about sardine
+WRONG
+>ask sardine about xyzzy
+WRONG
+>ask sardine about die thou
+WRONG
+>ask sardine about hideout
+WRONG
+
+>warp
+Your score has just gone up by one point
+>search
+Your score has just gone up by one point
+GENERAL GLEANER engulf it
+>enlarge
+Your score has just gone up by one point
+
+>n
+Hedron
+
+>ask walleyes about haunter
+WRONG
+>ask walleyes about ruby
+WRONG
+>ask walleyes about sardine
+WRONG
+>ask walleyes about casper
+WRONG
+>ask walleyes about elvira
+WRONG
+>ask walleyes about walleyes
+WRONG
+>ask walleyes about xyzzy
+WRONG
+>ask walleyes about die thou
+WRONG
+>ask walleyes about hideout
+WRONG
+
+>w
+Collapsed Old Places
+
+>bury
+Your score has just gone up by one point
+
+>e
+>s
+>e
+
+>unearth
+by one point
+
+>assuage
+by one point
+
+>ask haunter about elvira
+WRONG
+>ask haunter about haunter
+WRONG
+>ask haunter about xyzzy
+WRONG
+
+>w
+>n
+>w
+
+>e
+>patrol
+Your score has just gone up by one point
+
+>x gleaner
+
+>in
+
+>score
+WRONG
+
+>ask yapper about dialer
+WRONG
+>ask yapper about gleaner
+WRONG
+>ask yapper about casper
+WRONG
+>ask yapper about ruby
+WRONG
+>ask yapper about haunter
+WRONG
+>ask yapper about sardine
+WRONG
+>ask yapper about walleyes
+WRONG
+>ask yapper about casper
+WRONG
+>ask yapper about elvira
+WRONG
+>ask yapper about yapper
+WRONG
+>ask yapper about xyzzy
+WRONG
+>ask yapper about die thou
+WRONG
+>ask yapper about hideout
+WRONG
+
+>prepay
+Your score has just gone up by one point
+
+>derail
+Your score has just gone up by one point
+>pull lever
+>redial
+Your score has just gone up by one point
+
+>score
+Oyster (30/39)
+
+* _towers
+
+>seed 1
+>towers
+>in
+
+>gone
+Your score has just gone up by one point
+
+>wined
+Your score has just gone up by one point
+
+>bleak
+Your score has just gone up by one point
+
+>yonder
+Your score has just gone up by one point
+Topside Deposit
+
+>score
+WRONG
+
+>get tarts
+>put tarts in toaster
+>xray keycar
+
+>posf
+>score
+WRONG
+
+>ask ray eck about settler
+WRONG
+>ask ray eck about start tarts
+WRONG
+>ask ray eck about toaster
+WRONG
+>ask ray eck about keycar
+WRONG
+>ask ray eck about elvira
+WRONG
+>ask ray eck about ray eck
+WRONG
+>ask ray eck about xyzzy
+WRONG
+>ask ray eck about curst palace
+WRONG
+
+>creaky
+Your score has just gone up by one point
+
+>n
+Scope Copse
+
+>ask rewired about elvira
+WRONG
+>ask rewired about rewired
+WRONG
+>ask rewired about xyzzy
+WRONG
+>ask rewired about curst palace
+WRONG
+
+>ask muscly hulk about elvira
+WRONG
+>ask muscly hulk about muscly hulk
+WRONG
+>ask muscly hulk about xyzzy
+WRONG
+>ask muscly hulk about curst palace
+WRONG
+
+>weirder
+Your score has just gone up by one point
+>clumsy
+Your score has just gone up by one point
+
+>ask snider diners about elvira
+WRONG
+>ask snider diners about snider diners
+WRONG
+>ask snider diners about xyzzy
+WRONG
+>ask snider diners about curst palace
+WRONG
+
+>n
+Baldest Blasted Saltbed
+
+>ask iprune about elvira
+WRONG
+>ask iprune about iprune
+WRONG
+>ask iprune about xyzzy
+WRONG
+>ask iprune about curst palace
+WRONG
+
+>ask pirates about elvira
+WRONG
+>ask pirates about pirates
+WRONG
+>ask pirates about xyzzy
+WRONG
+>ask pirates about curst palace
+WRONG
+
+>pastier
+Your score has just gone up by one point
+
+>punier
+Your score has just gone up by one point
+
+>n
+Anemic Cinema
+
+>ask sweatier about elvira
+WRONG
+>ask sweatier about sweatier
+WRONG
+>ask sweatier about xyzzy
+WRONG
+>ask sweatier about curst palace
+WRONG
+
+>ask ingrates about elvira
+WRONG
+>ask ingrates about ingrates
+WRONG
+>ask ingrates about xyzzy
+WRONG
+>ask ingrates about curst palace
+WRONG
+
+>married
+Your score has just gone up by one point
+
+>ask admirer about elvira
+WRONG
+>ask admirer about admirer
+WRONG
+>ask admirer about xyzzy
+WRONG
+>ask admirer about curst palace
+WRONG
+
+>n
+Shaven Havens
+
+>s
+>s
+>e
+Savager Ravages
+
+>ask grailman about elvira
+WRONG
+>ask grailman about grailman
+WRONG
+>ask grailman about xyzzy
+WRONG
+>ask grailman about curst palace
+WRONG
+
+>ask inapt paint about elvira
+WRONG
+>ask inapt paint about inapt paint
+WRONG
+>ask inapt paint about xyzzy
+WRONG
+>ask inapt paint about curst palace
+WRONG
+
+>ask reed's about elvira
+WRONG
+>ask reed's about reed's
+WRONG
+>ask reed's about xyzzy
+WRONG
+>ask reed's about curst palace
+WRONG
+
+>sewed
+
+>released
+>e
+Ole Shrine Shoreline
+
+>ask lot about elvira
+WRONG
+>ask lot about lot
+WRONG
+>ask lot about xyzzy
+WRONG
+>ask lot about curst palace
+WRONG
+
+>w
+>gs
+>e
+>ask lois the hostile about elvira
+WRONG
+>ask lois the hostile about lois the hostile
+WRONG
+>ask lois the hostile about xyzzy
+WRONG
+>ask lois the hostile about curst palace
+WRONG
+>w
+>gs
+>e
+
+>holiest
+
+>ask organised about elvira
+WRONG
+>ask organised about organised
+WRONG
+>ask organised about xyzzy
+WRONG
+>ask organised about curst palace
+WRONG
+
+>grandiose
+>n
+Actionless Coastline
+
+>ask atheists about elvira
+WRONG
+>ask atheists about atheists
+WRONG
+>ask atheists about xyzzy
+WRONG
+>ask atheists about curst palace
+WRONG
+
+>hastiest
+
+>ask smart kid about elvira
+WRONG
+>ask smart kid about smart kid
+WRONG
+>ask smart kid about xyzzy
+WRONG
+>ask smart kid about curst palace
+WRONG
+
+>s
+>s
+
+>ask arid den about nerd-aid
+WRONG
+>ask dandier about elvira
+WRONG
+>ask dandier about dandier
+WRONG
+>ask dandier about xyzzy
+WRONG
+>ask dandier about curst palace
+WRONG
+
+>ask natives about elvira
+WRONG
+>ask natives about natives
+WRONG
+>ask natives about xyzzy
+WRONG
+>ask natives about curst palace
+WRONG
+
+>ask bonker about elvira
+WRONG
+>ask bonker about bonker
+WRONG
+>ask bonker about xyzzy
+WRONG
+>ask bonker about curst palace
+WRONG
+
+>broken
+>e
+
+>wordy
+>push retape
+>go to duck
+>push repeat
+
+>go to yow
+>unlocked
+
+>ask dr yow about duck
+WRONG
+>ask dr yow about gizmo
+WRONG
+>ask dr yow about bonker
+WRONG
+>ask dr yow about lake
+WRONG
+>ask dr yow about kid
+WRONG
+>ask dr yow about elvira
+WRONG
+>ask dr yow about dr yow
+WRONG
+>ask dr yow about xyzzy
+WRONG
+>ask dr yow about curst palace
+WRONG
+
+>go to kid
+
+>ask dirk about elvira
+WRONG
+>ask dirk about dirk
+WRONG
+>ask dirk about xyzzy
+WRONG
+>ask dirk about curst palace
+WRONG
+>ask kid about bot boat
+WRONG
+>ask kid about keycar
+WRONG
+>ask kid about atheists
+WRONG
+>ask kid about hostile-is-he lot
+WRONG
+>ask kid about lois the hostile
+WRONG
+>ask kid about settler
+WRONG
+>ask kid about gizmo
+WRONG
+>ask kid about duck
+WRONG
+>ask kid about toaster
+WRONG
+
+>ask kid about yow
+Obscurest
+
+>s
+>s
+>e
+>rowdy
+>attentive
+
+>go to copse
+>w
+>put dagger in machine
+
+>go to kid
+>give gizmo to kid
+>robust
+>stabler
+
+>score
+WRONG
+
+>enter boat
+
+>score
+WRONG
+
+>ask serpent about elvira
+WRONG
+>ask serpent about serpent
+WRONG
+>ask serpent about xyzzy
+WRONG
+>ask serpent about curst palace
+WRONG
+
+>present
+
+>w
+>grey
+by one point
+>ask yerg about elvira
+WRONG
+>ask yerg about yerg
+WRONG
+>ask yerg about xyzzy
+WRONG
+>ask yerg about curst palace
+WRONG
+>ask ed yerg about crocus
+WRONG
+>ask ed yerg about flowerpot
+WRONG
+>ask ed yerg about old hat daltho
+WRONG
+
+>spectacular
+
+>score
+24/45
+
+* _otters
+
+>seed 1
+>otters
+>in
+>barely
+Your score has just gone up by one point
+
+>ask ed riley about elvira
+WRONG
+>ask ed riley about ed riley
+WRONG
+>ask ed riley about xyzzy
+WRONG
+
+>reedily
+Your score has just gone up by one point
+
+>get cinders
+
+>w
+Gent-Fora Frontage
+
+>discern macks
+>posf
+>score
+
+>ask macks about elvira
+WRONG
+>ask macks about macks
+WRONG
+>ask macks about xyzzy
+WRONG
+
+>bossily
+Your score has just gone up by one point.
+>nastily
+Your score has just gone up by one point.
+>blearily
+Your score has just gone up by one point.
+
+>ask gretta about elvira
+WRONG
+>ask gretta about gretta
+WRONG
+>ask gretta about xyzzy
+WRONG
+
+>1
+>3
+
+>n
+>because
+Your score has just gone up by one point
+>else
+Your score has just gone up by one point
+
+>ask le mer about elvira
+WRONG
+>ask le mer about le mer
+WRONG
+>ask le mer about xyzzy
+WRONG
+>ask eels about elvira
+WRONG
+>ask eels about eels
+WRONG
+>ask eels about xyzzy
+WRONG
+
+>s
+>atom
+Your score has just gone up by one point
+
+>s
+>ask mr lee about elvira
+WRONG
+>ask mr lee about mr lee
+WRONG
+>ask mr lee about xyzzy
+WRONG
+>n
+
+>e
+>n
+
+>ask sly imp about elvira
+WRONG
+>ask sly imp about sly imp
+WRONG
+>ask sly imp about xyzzy
+WRONG
+
+>enragedly
+Your score has just gone up by one point
+>angrily
+Your score has just gone up by one point
+
+>n
+Wickeder Wire Deck
+
+>slow
+Your score has just gone up by one point
+
+>ask ocelots about elvira
+WRONG
+>ask ocelots about ocelots
+WRONG
+>ask ocelots about xyzzy
+WRONG
+>ask satyr about elvira
+WRONG
+>ask satyr about satyr
+WRONG
+>ask satyr about xyzzy
+WRONG
+>ask leopard about elvira
+WRONG
+>ask leopard about leopard
+WRONG
+>ask leopard about xyzzy
+WRONG
+>ask badger about elvira
+WRONG
+>ask badger about badger
+WRONG
+>ask badger about xyzzy
+WRONG
+
+>coolest
+Your score has just gone up by one point
+>paroled
+Your score has just gone up by one point
+>artsy
+Your score has just gone up by one point
+
+>s
+Tapering Inert Gap
+>s
+>s
+
+Rote-Moan Anteroom
+
+>ask whiners about elvira
+WRONG
+>ask whiners about whiners
+WRONG
+>ask whiners about xyzzy
+WRONG
+
+>loathingly
+Your score has just gone up by one point
+>tersely
+Your score has just gone up by one point
+
+>s
+Perverse Preserve
+
+>ask snail about elvira
+WRONG
+>ask snail about snail
+WRONG
+>ask snail about xyzzy
+WRONG
+>ask snipe about elvira
+WRONG
+>ask snipe about snipe
+WRONG
+>ask snipe about xyzzy
+WRONG
+>ask hornets about elvira
+WRONG
+>ask hornets about hornets
+WRONG
+>ask hornets about xyzzy
+WRONG
+>ask racoon about elvira
+WRONG
+>ask racoon about racoon
+WRONG
+>ask racoon about xyzzy
+WRONG
+
+>parrot
+Your score has just gone up by one point
+>snail
+Your score has just gone up by one point
+>hornets
+Your score has just gone up by one point
+>raccoon
+Your score has just gone up by one point
+
+>n
+Near-Moot Anteroom
+
+>n
+>w
+>w
+
+>ask elmer about merle
+WRONG
+>ask merle about elmer
+WRONG
+>ask elmer about elvira
+WRONG
+>ask elmer about elmer
+WRONG
+>ask elmer about xyzzy
+WRONG
+>ask merle about elvira
+WRONG
+>ask merle about merle
+WRONG
+>ask merle about xyzzy
+WRONG
+
+>raptor
+Your score has just gone up by one point
+>deeply
+Your score has just gone up by one point
+>quickly
+Your score has just gone up by one point
+
+>w
+WTF FTW
+
+>1
+>8
+>8
+>8
+
+>au -1
+
+>ask elvira about elvira
+WRONG
+>undo
+>ask elvira about elvira
+WRONG
+>undo
+>ask elvira about xyzzy
+WRONG
+>undo
+>ask elvira about gretta
+WRONG
+>undo
+>ask elvira about mr lee
+WRONG
+>undo
+>ask elvira about eels
+WRONG
+>undo
+>ask elvira about le mer
+WRONG
+>undo
+>ask elvira about merle
+WRONG
+>undo
+>ask elvira about elmer
+WRONG
+>undo
+>ask elvira about ed riley
+WRONG
+>undo
+>ask elvira about whiners
+WRONG
+>undo
+>ask elvira about sly imp
+WRONG
+>undo
+
+>play whistle
+
+* _others
+
+>z
+
+>x stand
+
+>ask curtis about rampage note
+WRONG
+>ask curtis about mopeage rant
+WRONG
+>ask curtis about art erd
+WRONG
+>ask curtis about len
+WRONG
+>ask curtis about elvira
+WRONG
+>ask curtis about curtis
+WRONG
+>ask curtis about xyzzy
+WRONG
+
+>maraschino
+Your score has just gone up by one point.
+>grapes
+Your score has just gone up by one point.
+>cranberries
+Your score has just gone up by one point.
+>tamarind
+Your score has just gone up by one point.
+
+>compass
+Your score has just gone up by one point.
+
+>plums
+Your score has just gone up by one point.
+>pears
+Your score has just gone up by one point.
+>blueberries
+Your score has just gone up by one point.
+>pomegranate
+Your score has just gone up by one point.
+Take on a token
+
+>cantaloupe
+Your score has just gone up by one point.
+>persimmon
+Your score has just gone up by one point.
+>limes
+Your score has just gone up by one point.
+
+>n
+Swell Wells
+>apricot
+Your score has just gone up by one point.
+>apples
+Your score has just gone up by one point.
+>mulberries
+Your score has just gone up by one point.
+>gooseberry
+Your score has just gone up by one point.
+>coconuts
+Your score has just gone up by one point.
+
+>s
+>icons
+Your score has just gone up by one point.
+>sonic
+Your score has just gone up by one point.
+
+>n
+>tangerines
+Your score has just gone up by one point.
+
+>e
+
+>ask len craig about curtis
+WRONG
+>ask len craig about tekno-token
+WRONG
+>ask len craig about art erd
+WRONG
+>ask len about elvira
+WRONG
+>ask len about len
+WRONG
+>ask len about xyzzy
+WRONG
+
+>among
+Your score has just gone up by one point.
+>papayas
+Your score has just gone up by one point.
+>solemn
+Your score has just gone up by one point.
+
+>w
+>s
+>i
+a droll dollar
+
+>n
+>gs
+>d
+>ask tera about elvira
+WRONG
+>ask tera about tera
+WRONG
+>ask tera about xyzzy
+WRONG
+>u
+>gs
+
+>d
+
+>ask art about elvira
+WRONG
+>ask art about art
+WRONG
+>ask art about xyzzy
+WRONG
+>ask art erd about curtis
+WRONG
+>ask art erd about storage box
+WRONG
+>ask art erd about len craig
+WRONG
+
+>give dollar to trader
+>put icons in slot
+>u
+>n
+
+>ask passport about elvira
+WRONG
+>ask passport about passport
+WRONG
+>ask passport about xyzzy
+WRONG
+
+>research
+Your score has just gone up by one point.
+>review
+Your score has just gone up by one point.
+>n
+You Did Great
+
+* current_focus
+#>{include} _only-manor
+#>{include} _only-routes
+#>{include} _only-troves
+#>{include} _only-presto
+#>{include} _only-towers
+#>{include} _only-otters
+#>undo
+>{include} _only-others
+#>undo
+#>{include} _only-oyster
+
+* big-go
+
+>{include} _manor
+>{include} _stores
+
+>enter routes
+Same Mesa
+>{include} _routes
+
+>enter troves
+Loather Rathole
+>{include} _troves
+
+>enter spot
+Grey Gyre
+>{include} _presto
+
+>enter oyster
+Posh Hops Shop
+>{include} _oyster
+
+>enter towers
+Loftier Trefoil
+>{include} _towers
+
+>enter otters
+Bleary Barley
+>in
+>{include} _otters
+
+>rove over
+>others
+Your score has just gone up
+>enter hoster
+Rustic Citrus
+>{include} _others
+
+* _summarize
+
+>purloin passport
+>gonear gates stage
+>research
+>review
+>n
+>missed
+>undo
+>undo
+
+* _only-manor
+
+>{include} _manor
+
+* only-stores
+
+>gonear strip
+>{include} _stores
+
+* _only-routes
+
+>gonear same mesa
+>{include} _routes
+>{include} _summarize
+
+* _only-troves
+
+>gonear rathole
+>{include} _troves
+>{include} _summarize
+
+* _only-presto
+
+>gonear gyre
+>{include} _presto
+>{include} _summarize
+
+* only-oyster
+
+>purloin settler
+>gonear posh hops shop
+>{include} _oyster
+>{include} _summarize
+
+* _only-towers
+
+>seed 1
+>gonear trefoil
+>{include} _towers
+>{include} _summarize
+
+* _only-otters
+
+>seed 1
+>gonear barley
+>{include} _otters
+>{include} _summarize
+
+* _only-others
+
+>gonear rustic citrus
+>{include} _others
+
