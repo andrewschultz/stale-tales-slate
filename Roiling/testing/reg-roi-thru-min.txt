@@ -9,6 +9,10 @@
 
 * _manor
 
+>posf
+>score
+Score in a scenario: 0 out of 13 total points in the current region, Roman Manor. Lowest score to solve is 8. Maximum score available is 13.
+
 >x chair
 You thought you preferred
 
@@ -100,6 +104,8 @@ Won now: Roman Manor (8/13).
 
 * _stores
 
+>posf
+
 >presto
 Your score has just gone up by one point
 
@@ -119,12 +125,15 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >score
+WRONG
 Score in a scenario: 6 out of 11 total points in the current region, Stores.
 
 * _routes
 
+>posf
 >score
 0 out of 18 total points in the current region, Routes
+WRONG
 
 >inside
 Your score has just gone up by one point
@@ -169,6 +178,9 @@ Your score has just gone up by one point
 >beneath
 Your score has just gone up by one point
 DEBUG INFO: Taking away a max point.
+
+>score
+WRONG
 
 Sun-Spared Underpass
 
@@ -217,6 +229,10 @@ Your score has just gone up by one point
 Pallid Li'L Pad
 DEBUG INFO: Taking away a max point.
 
+>posf
+>score
+WRONG
+
 >despair
 Your score has just gone up by one point
 
@@ -226,6 +242,9 @@ Boredom Bedroom
 >deal
 Your score has just gone up by one point
 DEBUG INFO: Taking away a max point.
+
+>score
+WRONG
 
 Dour Tan Rotunda
 >desire
@@ -239,6 +258,8 @@ FiefCo Office
 Your score has just gone up by one point
 If only you could tune that out!
 DEBUG INFO: Taking away a max point.
+
+>score
 
 >ignore
 Your score has just gone up by one point
@@ -265,6 +286,10 @@ Austerer Treasure
 >pooh
 Your score has just gone up by one point
 Taking away a max point.
+
+>posf
+>score
+WRONG
 
 >e
 >s
@@ -413,9 +438,17 @@ Anger Range
 >scrap
 Your score has just gone up by one point
 
+>posf
+>score
+WRONG
+
 >e
 >seek
 Your score has just gone up by one point
+
+>score
+WRONG
+
 >eat
 Your score has just gone up by one point
 
@@ -486,6 +519,10 @@ Your score has just gone up by one point
 >x gleaner
 
 >in
+
+>score
+WRONG
+
 >prepay
 Your score has just gone up by one point
 
@@ -517,9 +554,16 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 Topside Deposit
 
+>score
+WRONG
+
 >get tarts
 >put tarts in toaster
 >xray keycar
+
+>posf
+>score
+WRONG
 
 >creaky
 Your score has just gone up by one point
@@ -597,7 +641,14 @@ Obscurest
 >give gizmo to kid
 >robust
 >stabler
+
+>score
+WRONG
+
 >enter boat
+
+>score
+WRONG
 
 >spectacular
 
@@ -614,8 +665,14 @@ Your score has just gone up by one point
 >reedily
 Your score has just gone up by one point
 
+>get cinders
+
 >w
 Gent-Fora Frontage
+
+>discern macks
+>posf
+>score
 
 >bossily
 Your score has just gone up by one point.

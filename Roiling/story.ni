@@ -453,7 +453,7 @@ use MAX_OBJECTS of 930.
 
 use MAX_SYMBOLS of 140000.
 
-use SYMBOLS_CHUNK_SIZE of 14000.
+use SYMBOLS_CHUNK_SIZE of 15000.
 
 use ALLOC_CHUNK_SIZE of 35000.
 
@@ -2990,7 +2990,7 @@ before QBC responding with (this is the warn you before bailing from a convo rul
 			if the number understood is cur-act - 1:
 				say "'So rude!' says Gunter, roused, soured.";
 
-before quipping when player is in  (this is the Gretta checks rule):
+before quipping when player is in frontage (this is the Gretta checks rule):
 	let missed-one be false;
 	if current quip is gre-go-quip:
 		if gre-go-warn is false:
@@ -4499,6 +4499,10 @@ to reg-inc:
 					pad-rec "opt in/no tip";
 			now doneyet entry is true;
 			the rule succeeds;
+	if score-after is true:
+		try requesting the score;
+
+score-after is a truth state that varies.
 
 table of init-points
 myrg	pttot	blurb	doneyet
@@ -4634,6 +4638,30 @@ to decide which direction is cueloc of (xx - an exhibit):
 	let myway be the best route from Peek Keep to the location of xx;
 	decide on myway.
 
+section scafing - not for release
+
+scafing is an action out of world.
+
+understand the command "scaf" as something new.
+
+understand "scaf" as scafing.
+
+carry out scafing:
+	now score-after is whether or not score-after is true;
+	say "Printing score after gaining a point is now [on-off of score-after].";
+	the rule succeeds;
+
+scaying is an action out of world.
+
+understand the command "scay" as something new.
+
+understand "scay" as scaying.
+
+carry out scaying:
+	say "Printing score after gaining a point [if score-after is true]was already[else]is now[end if] on.";
+	now score-after is true;
+	the rule succeeds;
+
 chapter possing
 
 possing is an action out of world.
@@ -4654,6 +4682,19 @@ carry out possing:
 		say "[line break]";
 	now min-alert is true;
 	pad-rec-q "poss";
+	the rule succeeds;
+
+section posfing - not for release
+
+posfing is an action out of world.
+
+understand the command "posf" as something new.
+
+understand "posf" as posfing.
+
+carry out posfing:
+	say "Forcing possible point notification on[if possibes is true], though it already is[end if].";
+	now possibles is true;
 	the rule succeeds;
 
 chapter bugtracking
@@ -8711,7 +8752,7 @@ raves saver	raves saver	"pearly"	"pearly"	"The saver shines a bit, then goes bac
 oddly rewired robot	oddly rewired robot	"weirder/wierder"	"weirder"	"[if-wierd]The oddly rewired robot, once so proud of how it conformed to standards, now finds reason to believe it is weirder. Being weird, it can no longer move wider. 'Battery...try...beat.' It begins to melt--mottle--until it looks abysmal, almost balsamy, as it cries 'Sob, a true saboteur' slinking away in shame at its crossed Wiser-Wires."	false	600216532	"weirder"
 iPrune	iPrune	"punier"	"punier"	"Instead of being worried about how much the iPrune would block you when full-grown, you wonder about if it were the size of a normal banana. It works. The iPrune kicks you ineffectually as you walk past, then runs and hides in embarrassment."	false	513602032	"punier"
 arid den	arid den	"drained"	"drained"		"You focus, hoping the arid den will lose energy. Justfor effect, you yell 'I'm a busy adventurer!' you shout. 'I don't have time for this! But I do things the right way!' You're still surprised as the Nerd-Aid bottles seem to dry up inside, and the arid den's lights dim, until it collapses into itself and underground."	false	371276262	"drained"
-strudel	strudel	"rustled"	"rustled"	"You manage to take the strudel without obviously reaching for it. This makes no practical difference but makes you feel smoother. Go, you."	false	592462631	"You'd have to drop it on the ground and get it germy to try that again. Eww."
+strudel	strudel	"rustled"	"rustled"	"You manage to take the strudel without obviously reaching for it[if player is in lost lots]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."	false	592462631	"You'd have to drop it on the ground and get it germy to try that again. Eww."
 an admirer	an admirer	"married" or "mardier"	"married"	"[response-based]. You're slapped sidearm for having misread them, but you're spared spouse opuses."	false	430738621	"married"
 natives	natives	"vainest" or "naivest"	"naivest"	"[vain-naiv]. Now that the natives have moved on, you can go south."	false	550443085	"The natives should be gone."
 neural pulses	neural pulses	"unreal" or "pluses"	"unreal"	"[if-plus]"	false	443144884	"unreal"
@@ -9417,13 +9458,13 @@ the dope op-ed is propaganda. "That 'dope' op-ed Gunter threw at you landed here
 
 understand "pedo" as a mistake ("[one of]Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her 'clever' games[or]Don't dwell on it. It's lies[stopping].") when player is in study and op-ed is in study.
 
-the Nitro Intro page is propaganda. it is part of the dope op-ed. the printed name of nitro intro is "Nitro-Intro page".
+the Nitro Intro page is propaganda. it is part of the dope op-ed. the printed name of nitro intro is "Nitro-Intro page". understand "nitro-intro page/" as nitro intro page.
 
 description of nitro intro page is "Elvira lays out that she is clearly aliver in her introduction, where she will beat you at your own game.[paragraph break]She notes how Penal Panel--panel IX--explain the Porter Report--the questin['] inquest on your life file. The media aimed you with RELATED! ALERTED! REQUIRES QUERIERS. Governor Ron Grove found taint--a tint. Ties to the Postage Gestapo. Recommended a deport-o-torpedo. Senator Ron East said can't snore at treason.[paragraph break]No hot-plate hate plot on! Elvira is dedicated to making Yorpwald safe, not just from outside forces, but from the influx of silly old anagrams and the LIKELY PERSON BEHIND THEM--a certain reruns nurser! Someone who resorted to boring old anagrams a computer could crank out.[paragraph break]She also notes she will refrain from calling you the obvious name she COULD in an op-ed, because she has class. But really, oppo = poop."
 
 the Questin' Inquest page is propaganda. it is part of the dope op-ed.
 
-description of Questin' Inquest is "[one of]It's headed Good deeds? Sodded ego! Elvira lays out how you saved Yorpwald and all. But everyday stuff? You couldn't repair a flat tyre with flattery, make custard out of car dust or spumoni from an ion sump. Or even a cellphone from cellophane.[paragraph break]You pause. That's so contrived. What kind of faker-freak would think that up?[or]It's no less annoying the second time around.[cycling]"
+description of Questin' Inquest is "[one of]It's headed Good deeds? Sodded ego! Elvira lays out how you saved Yorpwald and all. But everyday stuff? You couldn't repair a flat tyre with flattery, make custard out of car dust or spumoni from an ion sump. Or even a cellphone from cellophane.[paragraph break]You pause. That's so contrived. What kind of faker-freak would think that up?[or]The Questin['] Inquest page is no less annoying the second time around.[cycling]"
 
 understand "questin" and "questin inquest" as inquest.
 
@@ -9431,7 +9472,7 @@ a thing called the MoneyCo and Economy page is propaganda. it is part of the dop
 
 description of MoneyCo is "Elvira notes Yorpwald's more profitable than ever! What's good for MoneyCo is good for Yorpwald! The motto 'Come Yon, Con Em, Yo!' is a coy omen. If there were fraud, it'd have been found out. But one day MoneyCo will deserve to be MyOneCo! I mean, think about it. Elvira is cool. Money is cool. Elvira deserves money! And of course the Trips Strip deserved to become the Strip of Profits! It rousts tourists! Gets us guests!"
 
-The Shatter-Threats page is propaganda. it is part of the dope op-ed.
+The Shatter-Threats page is propaganda. it is part of the dope op-ed. understand "shatter/ threats/ page/" as shatter-threats page when player is in study.
 
 description of Shatter-Threats is "[one of]Elvira notes all political parties have agreed on a do-pry law for Yorpwald. The Swanker Wankers and Ruthless Hustlers and even the fringe Smugger Muggers and Ballsier Liberals. Sporto-troops, rowdies, weirdos gave statements, testaments. It's to fight Evil-Ra, who is everywhere, even if we can't see him, and worse than Ol['] King Jim. We need the Tautest Statute yet. A polished shield-op. Dragnet Granted for Unclear Evils Surveillance. To Finger Fringe so the homeland doesn't become a [d-word] hole, a lamer realm, a stage-one stone age. Everyone's a suspect, including--or especially you. Elvira points out there are only so many nouns LEFT to change, making you a bit useless. But there is a chance you could mess things back up if you were jealous of her popularity.[paragraph break]Besides, it's not like it's the RESTRICT-STRICTER law![paragraph break]There's a bit more.[or]She notes yours was an insecure sinecure. Nice? Sure. But four out of five leading intellectuals, stuffy or non, agree what she has remade should not be reamed. She also notes the law doesn't prevent you from flipping stuff in your own home--just don't get any ideas.[paragraph break]Plus GOOD IDEA has no meaningful anagrams. Worth thinking about![cycling]"
 
@@ -9440,7 +9481,7 @@ The I Trash His Art page is propaganda. The Her Arts Er Trash page is propaganda
 description of I Trash His Art is "[artrash]". description of Er Trash is "[artrash]".
 
 to say artrash:
-	say "[one of]Elvira offers an apology for not seeing to the heart of the matter about all your anagramming. Oh, sure, she had clever opinions about whether obvious anagrams were better than non-obvious ones, and she changed around, and she's glad people found them interesting, but really, it's kind of nerdy now that your good deeds were DONE. Lots of examples, ahead.[or]Elvira lists games that don't make kids or concerned parents happy. Mega Mage Game (e-mag: a gem!) as well as many others: [twiddle of table of lame computer games and 4][paragraph break]She blames you for the games['] technical and aesthetic faults, mainly due to the anagram craze you never quite discouraged[or]Elvira discourses on rap music. 'Rap music is, um, [crap]. Funky? F'n yuk! Pop stars, stop raps!' She lists D.J. JD as even worse than [twiddle of table of bad rappers and 4]Geez! So many horrible 'musicians.' The 'hits,' too.[or]Elvira has harsh words for other genres, yet they keep cranking things out! [twiddle of table of lousy hit songs and 5]You...you find yourself agreeing with her, but you never commissioned any of that[or]Elvira ravages the rigidness of music in general. All the latest...hits. Mourning oldies soiled by Chas Cash-Asch and his Sex Rime Remixes, and how SOMEONE with word power (guess who) makes the fliest stifle itself. Though she praises Ariel V's album [i]We Do No Wooden Ode Now[r], she rips the same ol['] lame-os: [twiddle of table of oldies singers and 3][or]Elvira 'begs the question' of who is getting a lot of royalties! Someone probably in a nice cosy hidden manor! She finishes by berating the Klaw Walk and Bungie Beguin as dumb dances.[or]Elvira shows little respect for comedians like [twiddle of table of comedians and 1]--that pissant is pants--but also [twiddle of table of comedians and 3] even/especially if they make jokes about you. It is too easy. While those about her fall flat or generally have to paint her in a favorable light.[or]Elvira eviscerates dummies['] mediums that produce movies like [twiddle of table of lame movies and 3], but there's the small screen too...[or]They're just unbearable, TV shows like [twiddle of table of lame tv shows and 3]Even stuff rated g grated--that's the end of THIS article, thankfully[drt].[or]No. Really. You don't want to read that nonsense again. She always seems to know which way the wind is blowing, then she blames you for it.[stopping]"
+	say "[one of]Elvira offers an apology for not seeing to the heart of the matter about all your anagramming. Oh, sure, she had clever opinions about whether obvious anagrams were better than non-obvious ones, and she changed around, and she's glad people found them interesting, but really, it's kind of nerdy now that your good deeds were DONE. Lots of examples, ahead.[or]Elvira lists games that don't make kids or concerned parents happy. Mega Mage Game (e-mag: a gem!) as well as many others: [twiddle of table of lame computer games and 4].[paragraph break]She blames you for the games['] technical and aesthetic faults, mainly due to the anagram craze you never quite discouraged.[or]Elvira discourses on rap music. 'Rap music is, um, [crap]. Funky? F'n yuk! Pop stars, stop raps!' She lists D.J. JD as even worse than [twiddle of table of bad rappers and 4]. Geez! So many horrible 'musicians.' The 'hits,' too.[or]Elvira has harsh words for other genres, yet they keep cranking things out! [twiddle of table of lousy hit songs and 5]You...you find yourself agreeing with her, but you never commissioned any of that[or]Elvira ravages the rigidness of music in general. All the latest...hits. Mourning oldies soiled by Chas Cash-Asch and his Sex Rime Remixes, and how SOMEONE with word power (guess who) makes the fliest stifle itself. Though she praises Ariel V's album [i]We Do No Wooden Ode Now[r], she rips the same ol['] lame-os: [twiddle of table of oldies singers and 3].[or]Elvira 'begs the question' of who is getting a lot of royalties! Someone probably in a nice cosy hidden manor! She finishes by berating the Klaw Walk and Bungie Beguin as dumb dances.[or]Elvira shows little respect for comedians like [twiddle of table of comedians and 1]--that pissant is pants--but also [twiddle of table of comedians and 3] even/especially if they make jokes about you. It is too easy. While those about her fall flat or generally have to paint her in a favorable light.[or]Elvira eviscerates dummies['] mediums that produce movies like [twiddle of table of lame movies and 3], but there's the small screen too...[or]They're just unbearable, TV shows like [twiddle of table of lame tv shows and 3]Even stuff rated g grated--that's the end of THIS article, thankfully[drt].[or]No. Really. You don't want to read that nonsense again. She always seems to know which way the wind is blowing, then she blames you for it.[stopping][run paragraph on]"
 
 dope-read is a truth state that varies.
 
@@ -9449,7 +9490,7 @@ to say drt:
 
 The By Li'l Billy page is propaganda. it is part of the dope op-ed.
 
-description of Billy page is "Next to no text. Gross caricatures of you, by Li'l Billy, in the Tenure Tureen: NEUTER! Deserve Severed!, or Elvira as archon and you as anchor. Re: tha heart-hater. MESSIAH AMISS, HE IS? SHAME!!!"
+description of Billy page is "Next to no text. Gross caricatures of you, by Li'l Billy, in the Tenure Tureen: NEUTER! Deserve Severed!, or Elvira as archon and you as anchor. Re: tha heart-hater. MESSIAH [if player is male]AMISS, HE IS? SHAME[else]AIMS: SHE IS SHAME[end if]!!!"
 
 instead of doing something with propaganda:
 	if current action is taking:
@@ -20703,8 +20744,8 @@ ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, 
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'JAIL DEFENDED!' you hear from the east."
 natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."
 Atheists	Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."
-lois the hostile	Ole Shrine Shoreline	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their careers if you fixed that." [??]
-hostile-is-he lot	Ole Shrine Shoreline	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their careers if you fixed that." [??]
+lois the hostile	Ole Shrine Shoreline	north	"She mentions you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that."
+hostile-is-he lot	Ole Shrine Shoreline	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their divinity careers if you fixed that."
 
 chapter guardian taunt tables
 
@@ -21694,7 +21735,7 @@ prompt	response	enabled
 "I sort of lost my powers. Well, most of them. What can I do now?"	gre-what-quip	0
 "[if loop pool is visited]What can I do with the pool[else]What's[end if] to the north?"	gre-north-quip	0
 "[if bran barn is visited]What can I do in the barn[else]What's[end if] to the south?"	gre-south-quip	0
-"What's back east[if sly imp is in lalaland or whiners are in lalaland]? I got rid of some nuisances[but-stuck].[else]?[end if]"	gre-east-quip	0
+"What can I do back east[if sly imp is in lalaland or whiners are in lalaland]? I got rid of some nuisances[but-stuck].[else]?[end if]"	gre-east-quip	0
 "Rescuing animals? How?"	gre-animals-quip	0
 "[if optleft of Gretta is 1]Wow! You've been a big help[else if gre-go-warn is true]That's really all, now[else]Um, that's all, I guess[end if]. Thanks."	gre-go-quip	0
 
@@ -21842,6 +21883,7 @@ after fliptoing a mack-idea:
 		say "Gretta nods, able to reject the worst of the macks['] bragging, but she still listens, likely out of cognitive dissonance. Strike two for the macks.";
 	otherwise:
 		say "Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the bulwark in the first place. But you can't ask that straight out.";
+		now hold-it-up is true;
 		now macks are in lalaland;
 		now all mack-ideas are in lalaland;
 		try talking to Gretta;
@@ -24033,7 +24075,7 @@ carry out demoing:
 		say "[reject]";
 	if player is not in dusty study or gunter is in lalaland:
 		say "For reasons of continuity, you can't visit the Demo Dome until you've restarted the game." instead;
-	say "[if knockage is true]You ignore Gunter's emo'd voice, probably looking to apologize and kiss up[else]You decide to, umm, use the Me-Um-Us Museum[end if]. You pull out your discreet, secret ID to enter.";
+	say "[if knockage is true]You ignore Gunter's emo'd voice, probably looking to apologize and kiss up[else]You decide to, umm, use the Me-Um-Us Museum[end if]. You call up a nav-van and then pull out your discreet, secret ID to enter.";
 	move player to peek keep;
 	now red writing is examined; [this is a silly hack to make sure sparse spares is tracked ok]
 	now right hand status line is "Poking Around";
@@ -24451,7 +24493,7 @@ table of informcode
 thiscode [x inform wall] [tdm2]
 "A chunk of code starting with CheckTranscriptStatus (courtesy of Zarf) notes how the author was able to nag his testers to take a transcript if they left a comment without transcripting on--or to thank them."
 "You read various testing commands used in writing the game, including ones to show the exits every move, hint everything visible every move, and track hints without spoiling things for the player. Other commands include jumping to the Strip of Profits, clearing all but Otters, and even jumping to just before the Gates Stage."
-"You stare at the start of the Tables of Nudges. There's, like, 1000+! That's over double Shuffling Around! The numbers look confusing and arbitrary, but you recognize the anagram-strings that the game checks for, as well as how room anagrams seem to point to the same error messages." [?? sort this out]
+"You stare at the start of the Tables of Nudges. There's, like, 1000+! That's over double Shuffling Around! The numbers look confusing and arbitrary, but you recognize the anagram-strings that the game checks for, as well as how room anagrams seem to point to the same error messages. You even see how they were broken into regions, and a region has a table name called table of routes anagrams/nudges, and so forth."
 "You stare at the start of the Table of Random Books. Wow, [number of rows in table of random books]! That's a lot of books! The second column seems to give a book a priority, so the player is likely to see certain ones first. Those seem to cover certain puzzles that occur later. It seems like a lot, but there's a note that it was well over two years, and the author just wrote a few neat words from each book to poke at."
 "You see some specialized Inform 6 code from Zarf (again,) Climbing Stars (in more than one place--for disabling TRACE for the Oyster puzzle, and for restarting the game after winning) and other people."
 "You see a bit more Inform 6 code the author scratched out himself. The main chunk is at https://www.intfic.com/t/i6-stubs-for-i7-programmers/83/6."
@@ -24875,9 +24917,9 @@ carry out objhinting (this is the pick object to hint rule) :
 	if noun is realized:
 		all-say "Nothing more to do with [if noun is plural-named]that[else]those[end if]." instead;
 	if noun is amusing:
-		all-say "[if noun is plural-named]That is[else]Those are[end if] in there for general silliness." instead;
+		all-say "[if noun is plural-named]Those are[else]That is[end if] in there for general silliness." instead;
 	if noun is useless:
-		all-say "[if noun is plural-named]That is[else]Those are[end if] in there for local flavor and scenery." instead;
+		all-say "[if noun is plural-named]Those are[else]That is[end if] in there for local flavor and scenery." instead;
 	if spoilit is true:
 		if there is hint-entry of noun in table of hintobjs:
 			now spoilit is false;
@@ -25124,6 +25166,9 @@ to say by-rivets:
 to say by-bee:
 	say "You can get past the bee now[if what-a-bee is reflexive and bee's head is reflexive], though you can deal with it one more way[else], having dealt with it both ways[end if]"
 
+to say op-ed-silly:
+	say "The op-ed, with all of its parts, is just there to build up Elvira's ludicrous 'case' against you";
+
 table of hintobjs [toh]
 hint-entry	advice-entry	parallel-entry	spoil-entry
 red writing	"The red writing provides a clue of what the letters can't be."
@@ -25132,6 +25177,14 @@ Urgent Gunter	"You can pump him for information if you want."
 peephole	"The peephole's for looking through."
 notice	"For reading."
 question mark	"[bug-report]"
+op-ed	"[op-ed-silly]."
+nitro intro	"[op-ed-silly]."
+moneyco	"[op-ed-silly]."
+questin' inquest	"[op-ed-silly]."
+shatter-threats page	"[op-ed-silly]."
+I Trash His Art	"[op-ed-silly]."
+Her Arts Er Trash	"[op-ed-silly]."
+By Li'l Billy	"[op-ed-silly]."
 colorful logo	"The logo provides hints as to the mechanics of the settler. You may want to try examining it with teach/cheat mode on or off."
 switch	"The switch shows you what needs to be changed if you SWITCH SETTLER."
 decal	"[one of]The Y's on the decal are orange. This seems like a clue.[plus][or]Orange is red and yellow.[plus][or]Y is the only letter of the alphabet that is...[plus][or]...a consonant and a vowel![minus][cycling]"
@@ -26846,7 +26899,8 @@ carry out a5ing:
 	now player has purse;
 	now player has pedanto-notepad;
 	move player to Strip of Profits;
-	try fliptoing otters-x instead;
+	try fliptoing otters-x;
+	ital-say "you may wish to SEED 1 so you can make the macks talk blearily, nastily and bossily, if you are in an automatic testing situation."
 
 chapter hfing
 

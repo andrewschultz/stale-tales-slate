@@ -24,3 +24,323 @@ Gent-Fora Frontage
 Reclusion Inclosure
 >7
 No mercy, my crone!
+
+* detail-gunter-chat
+
+>think
+>get notepad
+>open door
+
+[1] Say, Mr., um... summary?
+/[2]
+
+>1
+
+[1] Elvira...necro-crone recon?
+[2] Powers? Me? Spew more!
+[3] Why so showy? Calm down, mad clown!
+[4] Ask Gunter how business is
+[5] One Beg: begone!
+
+>1
+
+[1] Shil-lish. Sit on it, son.
+[5] One Beg: begone!
+
+>1
+
+[4] One Beg: begone!
+
+>1
+
+[3] One Beg: begone!
+
+>1
+
+[2] One Beg: begone!
+
+>1
+
+"Once you came along, it was clear Gustave was the vaguest. A denser sender. Very idle delivery. But, well MY initiative kept me Optimal Top Mail. So well I have time for my pouter troupe."
+
+[1] Pouter troupe?
+[2] One Beg: begone!
+
+>1
+"Why, they came around about the time Elvira did! I didn't believe them at first! But then they became spouter troupes. No offense, you deserve your no-spine pension and all, but ... there's not much of a story behind what you did. Nothing award-winning. Why, it gives me headaches to think about some things you did and saw! No offense. Anyone with a calculator or whatever could've done it. They just...spoke the truth. And were more interesting about it! Now Elvira is more interesting. I mean, you're not funny, or anything."
+
+[1] Lighten the mood with a joke
+[2] One Beg: begone!
+
+>1
+"Eh, punt the pun," you think. The paunchy, achy pun--a painful pun-fail--hardly cleans up on the pun scale. You picture a generic cringee at So-So MC Cosmo's, Ralf's Larfs or Best Gags Run Gangbusters. "Rad irony? Ordinary."
+
+[1] Er, ahem, hear me
+[2] One Beg: begone!
+
+>1
+Gunter intones tension. Refusal earfuls. "Cad, no can do. Damn, uh, DUH, man." Refusal earfuls.
+
+[1] One Beg: begone!
+
+>lamp
+
+>x op-ed
+The dope op-ed is broken into several pages. It's by Elvira, and it's apparently tackling you on your own ground. The pages are labeled nitro-intro, questin' inquest, MoneyCo and Economy, Shatter-Threats, I Trash His Art, and By Li'l Billy.
+
+>x nitro
+Elvira lays out that she is clearly aliver in her introduction, where she will beat you at your own game.
+
+>x intro
+Elvira lays out that she is clearly aliver in her introduction, where she will beat you at your own game.
+
+>x nitro-intro
+Elvira lays out that she is clearly aliver in her introduction, where she will beat you at your own game.
+
+>x nitro intro
+Elvira lays out that she is clearly aliver in her introduction, where she will beat you at your own game.
+
+>x intro page
+Elvira lays out that she is clearly aliver in her introduction, where she will beat you at your own game.
+
+>x inquest
+It's headed Good deeds? Sodded ego! Elvira lays out how you saved Yorpwald and all. But everyday stuff? You couldn't repair a flat tyre with flattery, make custard out of car dust or spumoni from an ion sump. Or even a cellphone from cellophane.
+
+You pause. That's so contrived. What kind of faker-freak would think that up?
+
+>x questin
+The Questin' Inquest page is no less annoying the second time around.
+
+>x moneyco
+Elvira notes Yorpwald's more profitable than ever!
+
+>x economy
+Elvira notes Yorpwald's more profitable than ever!
+
+>x i trash
+Elvira lists games that don't make kids or concerned parents happy. Mega Mage Game (e-mag: a gem!) as well as many others: 
+
+She blames you for the games' technical and aesthetic faults, mainly due to the anagram craze you never quite discouraged.
+
+>x i trash
+Elvira discourses on rap music. "Rap music is, um, crap. Funky? F'n yuk! Pop stars, stop raps!" She lists D.J. JD as even worse than 
+Geez! So many horrible "musicians." The "hits," too.
+
+>x i trash
+Elvira has harsh words for other genres, yet they keep cranking things out!
+
+>x i trash
+Elvira ravages the rigidness of music in general. All the latest...hits.
+
+>x i trash
+Elvira "begs the question" of who is getting a lot of royalties! Someone probably in a nice cosy hidden manor! She finishes by berating the Klaw Walk and Bungie Beguin as dumb dances.
+
+>x i trash
+Elvira shows little respect for comedians like
+
+>x i trash
+Elvira eviscerates dummies' mediums that produce movies like 
+
+>x i trash
+They're just unbearable, TV shows like 
+that's the end of THIS article, thankfully.
+
+>x i trash
+No. Really. You don't want to read that nonsense again. She always seems to know which way the wind is blowing, then she blames you for it.
+
+>x billy
+Next to no text. Gross caricatures of you, by Li'l Billy, in the Tenure Tureen: NEUTER! Deserve Severed!, or Elvira as archon and you as anchor. Re: tha heart-hater. MESSIAH AMISS, HE IS? SHAME!!!
+
+>gs
+>x billy
+Next to no text. Gross caricatures of you, by Li'l Billy, in the Tenure Tureen: NEUTER! Deserve Severed!, or Elvira as archon and you as anchor. Re: tha heart-hater. MESSIAH AIMS: SHE IS SHAME!!!
+* detail-elmo-chat
+
+>gonear basement
+>purloin settler
+>x settler
+>in
+>rifle
+
+* detail-gretta-chat
+
+>seed 1
+
+>a5
+>in
+>barely
+>reedily
+
+>n
+>brutely
+>angrily
+
+>n
+dangerous hooting
+
+>s
+>s
+>s
+The whiners can't imagine why anyone would want to go there. They block you, for your own good. They seem to have all sorts of reasons, and there's no way past the quantity, if not the quality, of their arguments.
+
+>stoically
+>tersely
+
+>s
+A very loud roar scares you. You doubt adverbs are up to the task of calming it. You decide to return once you have your full powers back.
+
+>n
+>w
+
+>bossily
+>nastily
+>blearily
+
+[1] Boy, those macks, huh?
+
+>1
+
+[1] What's your history with Elvira?
+[2] I sort of lost my powers. Well, most of them. What can I do now?
+[3] Um, that's all, I guess. Thanks.
+
+>3
+WRONG
+
+>1
+
+she's--well, augmenting animals.
+/[3]
+
+>1
+
+[1] What's to the north?
+[2] What's to the south?
+[3] What's back east? I got rid of some nuisances, but I got chased after that.
+[4] Um, that's all, I guess. Thanks.
+
+>1
+"Maybe you will figure how to help the eels to the north and their spirit, Le Mer. They're suspicious of people, though, after Elvira failed to recruit them."
+
+>5
+You murmur "Umm...urr." [Valid responses range from 1-3. Type REPEAT to re-list the options.]
+
+>1
+"Mr. Lee is ready to blame his failed crops on anyone. Elvira's got him convinced it's not her, but if you help him, he could be swayed back. Plus, he's a farmer, so, more animals."
+
+>1
+"There are animal pens back east."
+
+>1
+"The animals aren't just imprisoned but reduced to mockeries of their real selves--whether they know it or not. Maybe one reason she wanted to discredit you was, you might be able to change them back."
+
+[1] Wow! You've been a big help. Thanks.
+
+>0
+[The only response right now is 1. Type REPEAT to see it again.]
+
+>1
+
+>n
+>because
+>else
+>s
+>s
+>although
+>however
+>n
+>e
+>n
+>n
+
+>slow
+>paroled
+>coolest
+>artsy
+>garbed
+
+>s
+>s
+>s
+>s
+
+>parrot
+>snail
+>snipe
+>racoon
+>thrones
+
+>n
+>w
+>atom
+>w
+>honestly
+>raptor
+
+>deeply
+>quickly
+>w
+
+[1] Smartly done, monster lady. Fool us? So foul of soul! (Lay things out logically, hopefully without getting overemotional or boring)
+[2] WTF FTW
+[3] LOL, how hollow!
+[4] Play God? Dopy gal!
+[5] Abhorsive Behaviors!
+[6] Strong will? Still wrong. At bay, ya bat.
+[7] Scourge-curse, go! (yeah, yeah, get on with it)
+
+>1
+/[7]
+
+>1
+/[6]
+
+>1
+/[5]
+
+>1
+/[4]
+
+>1
+/[3]
+
+>1
+/[2]
+
+>1
+/[1]
+
+>play whistle
+A MONSTER ROTS. AMEN.
+
+>rove over
+
+* detail-elvira-chat
+
+>au 1
+>seed 1
+>a5
+>in
+>barely
+>reedily
+
+>w
+
+>s
+>n
+>n
+>s
+
+>bossily
+>nastily
+>blearily
+
+>1
+>1
+>1
+
+[1] What can I do with the pool to the north?
+[2] What can I do in the barn to the south?
+/some nuisances, but
+
+>4

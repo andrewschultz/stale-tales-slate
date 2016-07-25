@@ -13695,6 +13695,8 @@ carry out j2ing:
 
 chapter getbying
 
+[ * toggles wareas that are solved ]
+
 getbying is an action applying to one number.
 
 understand the command "getby" as something new.
@@ -13968,6 +13970,8 @@ test pl8 with "j/sortie/d/e/n/ne/16/straw/get straw/e/sack/w/get straw/cask/put 
 test pl7 with "x brazier/m/f/r/hd/hf/hd/hf/in/x cat/pet cat/pet goat/gato/x gato/man/north/goat/go north/x new land/x gateway/open gateway/gate man/open gateway/in/l/x new land/x gadget/x slider/x flipside/x example/get slider/attack small slider/x device/swap/x device/swap/swap gadget/swap slider/swap slider/swap gadget/in/get a way/talk to man/ask about mumbletypeg/ask about toga/ask about goat/ask about slider/ask about gadget/ask about game/x gateway/attack gateman/attack old man/attack gadget/attack slider/attack almond/scan attic/scan attics/scan static/scan doll house/in/x trapdoor/x roster/m/f/r/forest/in/x leaves/m/f/r/smell/door/n/x leaves/x device/door/scan door/x music/x note/x musical chord/scan bulge/scan bugle/bugle/play bugle/in/e/x shell/x bubble/x bucket/nose/shades/hook nose to shades/w/w/open sandwich/beard/hook shades to beard/wear beard/e/n/chisel/s/w/get chicken/get cow/put chicken in canister/put cow in canister" in subsite
 
 chapter ending-testing
+
+[ * simple very-ending test ]
 
 test end-test with "gonear manor/exist"
 
@@ -14746,6 +14750,7 @@ carry out shomising:
 
 chapter auing
 
+[turn on auto-yes dialogue or auto-no. 1=y 0=nothing -1=no ]
 auing is an action out of world applying to one number.
 
 understand the command "au" as something new.
