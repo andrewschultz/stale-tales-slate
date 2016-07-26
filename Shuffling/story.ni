@@ -181,6 +181,8 @@ index map with Sorted Trodes mapped east of Self-ID Fields.]
 
 [release along with a solution.]
 
+showtabname is a truth state that varies.
+
 debug-state is a truth state that varies. debug-state is usually false.
 
 debug-scan is a truth state that varies. debug-scan is usually false. [a testing variable for if we want to check scaning beforehand]
@@ -731,6 +733,7 @@ this is the find-blather rule:
 				if the rule succeeded:
 					if chat-rand is true and talk-quiet is true and done-once entry is true:
 						the rule succeeds;
+					say "([mytab entry])";
 					now done-once entry is true;
 					increment curidx entry;
 					if curidx entry > maxidx entry:
@@ -763,6 +766,7 @@ to say randbla:
 			if there is a go-ahead entry:
 				consider the go-ahead entry;
 				if the rule succeeded:
+					say "([mytab entry])";
 					increment curidx entry;
 					let whrow be curidx entry; [needed for the multiple-name entry]
 					let mdx be maxidx entry;
@@ -790,7 +794,7 @@ to say randbla:
 						if mdx is q + whrow - 1:
 							say "[lly]";
 						the rule succeeds;
-					d "[curidx entry] vs [maxidx entry].";
+					[d "[curidx entry] vs [maxidx entry].";]
 					if curidx entry > maxidx entry:
 						if there is a lasties entry:
 							say "[lasties entry]";
@@ -8750,6 +8754,11 @@ check taking begonias:
 
 the keycard is a thing.
 
+after printing the name of the keycard while taking inventory:
+	if barcode is part of the keycard:
+		say " (with the barcode on it)";
+	continue the action;
+
 understand "key/ card/" as keycard.
 
 description of keycard is "It's plain and metallic[if barcode is part of the keycard], with a barcode that might help with optical scanners[otherwise], and the only thing that indicates it's a keycard is small text saying FOR AUTHORIZED ACCESS ONLY[end if]."
@@ -14769,6 +14778,19 @@ carry out auing:
 
 to say auto-set:
 	say "[if yn-auto is 1]auto-yes[else if yn-auto is -1]auto-no[else]no auto[end if]";
+
+chapter showtabing
+
+showtabing is an action out of world.
+
+understand the command "showtab" as something new.
+
+understand "showtab" as showtabing.
+
+carry out showtabing:
+	now showtabname is whether or not showtabname is false;
+	say "Showing table names in random text is now [on-off of showtabname].";
+	the rule succeeds;
 
 chapter apping
 

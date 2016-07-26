@@ -1,0 +1,191 @@
+###############################
+#
+#reg-sa-rand.txt
+#
+#regression test for all the random text
+#
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* silliness
+
+>au 1
+>showtab
+
+>x name list
+The list is slim, but it's long. Several names: Morynda Raymond, Hannes Hansen, Nelly-Ellyn Lenly, Iola Liao and Sarina Arians. A list of names has always left you feeling like you wouldn't fit in, but this is a step beyond.
+
+>ts
+
+>sr nw
+
+>forest
+>in
+
+>n
+>w
+
+>w
+>open sandwich
+>maps
+>x maps
+(table of evil locations)
+
+>retry
+>sortie
+>enter sortie
+
+>16
+>n
+>kitchen
+
+>parmesan
+>steak
+>lettuce
+>tortilla
+>hotsauce
+
+>put sauce on taco
+>put steak on taco
+>put lettuce on taco
+>put parmesan on taco
+
+>coat
+>s
+>e
+>straw
+>sack
+>put straw in sack
+>shoes
+>moor
+
+>z
+(table of poem codas)You cringe as Pat ends a verse with
+
+>z
+(table of poem codas)You cringe as Pat ends a verse with
+
+>retry
+
+#########################metros
+
+>metros
+>enter metros
+>n
+
+>gardenia
+
+>z
+(table of camp chants)Sounds of social protest.
+>z
+(table of camp chants)More sounds of social protest.
+
+>w
+>tomato
+>e
+>s
+>w
+>throw tomato
+
+>x mattress
+>e
+>n
+>n
+(table of condo dialogue)Flabbier blab: rife.
+
+>z
+(table of condo dialogue)Flabbier blab: rife.
+
+>switch emitter
+>get cake
+
+>s
+>e
+
+>give gardenia
+>sheath
+>get brocade
+>barcode
+>put barcode on keycard
+
+>w
+>s
+>s
+>x psas
+(table of psas)You watch for the next Pa's PSA (and yeah, they're kind of paternalistic and probably can't help you one bit):
+
+"I'm learnt," you think, after reading that.
+
+>x psa
+(table of psas)You watch for the next Pa's PSA:
+
+>n
+>put card on sensor
+
+>e
+(table of nerd natter)Brainy brayin'. Huge stir over Guthrie's right-use. "Urge this!"
+
+>z
+(table of nerd natter)Wits fly swiftly. "I stop no options. Posit on!"
+
+>retry
+>gonear tiles
+
+>islet
+>cork
+>wings
+>e
+
+>toeholds
+>ropes
+>grips
+>slope
+
+>e
+(table of riot slogans)Voices babble. "HILLSIDE SHILL, DIE!"
+
+>trio
+
+>china
+>kilns
+
+>potters
+
+>z
+(table of red bull taunts)"GET OUT!!!!" yells Red Bull Burdell.
+His boot, with his toe sticking out, swings within an inch of your chin.
+
+>z
+(table of red bull taunts)"GET OUT!!!!" yells Red Bull Burdell.
+His boot, with his toe sticking out, swings within an inch of your chin again.
+
+>z
+(table of red bull taunts)"GET OUT!!!!" yells Red Bull Burdell.
+His boot, with his toe sticking out, swings within an inch of your chin yet again.
+
+>z
+(table of red bull taunts)"GET OUT!!!!" yells Red Bull Burdell.
+His boot, with his toe sticking out, swings within an inch of your chin, prompting one of your finest feints.
+
+>z
+(table of red bull taunts)"GET OUT!!!!" yells Red Bull Burdell.
+His boot, with his toe sticking out, swings within an inch of your chin. But his smiting timings are just off.
+
+You think how you can use your word power. Somehow going "TUT, EGO!" won't be incisive enough. You need action.
+
+>tug toe
+>e
+>exist
+
+>l
+1. Pat's verse-ends (I)
+2. Names of other job applicants (intro)
+3. Red Camp chants (M)
+4. Anti-Cool Location chatter (M)
+5. Evil map locations (F)
+6. Red Bull Burdell's taunts (R)
+7. Every last Pa's PSA in Elm Train Terminal (M)
+8. Condo chatter (M)
+9. Rioters' chants (R)
+
