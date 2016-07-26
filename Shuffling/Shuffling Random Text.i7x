@@ -748,6 +748,7 @@ blurb
 "Marilu Rumali"
 "Marion Marino"
 "Markos Roskam"
+"Marla LaMar"
 "Marlena LaMarne"
 "Marline Lierman"
 "Marlon Molnar-Lorman"
@@ -948,6 +949,7 @@ blurb
 "Rashida Saradhi"
 "Raul Laur" []
 "Ravi Ivar"
+"Raymond Mordany"
 "Reba Baer"
 "Rebeca Bearce"
 "Reesy Reyes"
@@ -1434,6 +1436,7 @@ blurb
 "So-Simple Slime-Ops Moss Pile"
 "sogger-gorges"
 "Sour Milk Murk Soil"
+"Spiteful Flue Pits"
 "the Spook Pets Hook"
 "Squirmage Quagmires"
 "Stale-Dawn Wasteland"
@@ -1471,6 +1474,7 @@ blurb
 "Wexton, ex-Town"
 "Wood-Fen of no Dew"
 "Worthless Howlers St"
+"Ye Bog-Go-Bye"
 "Yon Pit Pointy"
 
 book sortie
@@ -2335,6 +2339,7 @@ blurb
 "Old foe, fooled!"
 "Old mugs['] mud-slog sum: GOLD!"
 "Old Newt dwelt on let-down. Del won't."
+"Old oafs of salad loaf, sad."
 "Old, worn: no world lord now."
 "Ole rant to learn lean rot no later."
 "On Elves so Elven: lo, seven!"
@@ -2528,6 +2533,7 @@ blurb
 "See with the wise. Sit. Whee!"
 "Seek truth, thee Turks! Tusk, there."
 "Seek War! A skewer? [']S weaker."
+"Self-elfs fell. Fess!"
 "Self pity? Split, fey tipsy elf!"
 "Self pity, yep, lifts spite. Fly!" []
 "The selfish heel shifts!"
@@ -2764,6 +2770,7 @@ blurb
 "Ugly into guilty? No, outlying."
 "Uh, floss of slush? Flush so."
 "Uh, graft-fraught, far thug."
+"Uh, say, to a youth's soya hut."
 "Uh, sniped! Pushed in. His end, up. Punished!"
 "Uh, spook, shook up?"
 "Uh, yo, gent. Ye go hunt the young!"
@@ -2888,6 +2895,7 @@ blurb
 "'Adidas is Dada!'"
 "'Advancement, me? Vacant end!'"
 "'Advice-of-Fad voice, face void!'"
+"'Agitprop! Go, rip! Apt!'"
 "'All-Eco Locale!'"
 "'Alms for ol['] farms!'"
 "'Aloud, lines! Delusional soul denial!'"
@@ -3521,6 +3529,7 @@ blurb
 "'Noel?' / 'EOLN, Leon!'" []
 "'Non-Mac? Con man!' one booms." [x]
 "'Not like Tolkein? Ten-kilo oinklet!'"
+"'Now bots bow tons!'"
 "'NPC AI panic!'"
 "'Numerology? You mongrel!'"
 "'Oh, Dirk's dorkish.'"

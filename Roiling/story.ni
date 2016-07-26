@@ -226,7 +226,7 @@ instead of taking a portal:
 	try entering the noun instead;
 
 for writing a paragraph about a lumpable portal (called ptl) :
-	say "Where stores once sat, you can now enter [list of lumpable portals in location of the player].";
+	say "Where [if number of lumpable portals in location of player > 1]stores[else]a store[end if] once sat, you can now enter [list of lumpable portals in location of the player].";
 	now all lumpable portals in location of the player are mentioned;
 	continue the action;
 
@@ -978,7 +978,7 @@ to say full-monty of (myobj - a thing):
 		draw a rectangle (current foreground-color) in current graphics window at D by 12 with size 12 by 12;
 		increase D by 13;
 	draw a rectangle (R 255 G 255 B 255) in current graphics window at 13 by 30 with size 220 by 20;
-	paint bitmap text (color g-Black) of "[myobj]: cheat [if cheat-on is true]on[else]off[end if]" in current graphics window at 13 by 30 using Glimmr C&C with size 1;
+	paint bitmap text (color g-Black) of "[myobj]: cheat [on-off of cheat-on]" in current graphics window at 13 by 30 using Glimmr C&C with size 1;
 	if parse-now is true and cheat-on is true:
 		say ". You figure out what you can: [parse-text of myobj]";
 	say "[spacies of A][if qnf is true and questions-not-flagged is false]--hmm. Some of the spaces are blinking as if the settler couldn't tell what letters should be used. Maybe there are two ways to wangle things, or maybe the ambiguity is an extra clue. You could try re-scanning in non-cheat mode[end if][if sw is true and space-warned is false and myobj is not curst palace]. The black cells would indicate spaces, you guess[end if]";
@@ -1769,6 +1769,9 @@ to say r:
 to say sp:
 	say "[if screenread is true] [end if]";
 
+to say on-off of (myts - a truth state):
+	say "[if myts is true]on[else]off[end if]"
+
 section specifically
 
 Rand-first is a truth state that varies.
@@ -1909,7 +1912,7 @@ old giant	"He is already talking about himself, his complaints, and so forth."
 Oscar	"'I'm just this guy, in this house, with that ashtray [if pipe soot is in adobe]full of nice smelling pipe soot[else]some self-appointed do-gooder cleaned out. Well, I can make more[end if].' Nope, he doesn't seem to have much to say."
 Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [if mushrooms are off-stage]Can't even make it to the seed pit[else]Don't have your guts to explore the seed pit, either[end if].'"
 armada	"They'll have nothing sensible to say in unison."
-statue	"Oh, if it were the real version, you'd regret that." [reflex TROVES]
+statue	"Oh, if it were the real version, you'd regret that."
 plebe	 "You figure you should grill him about how worthless he thinks he is, but you lack the right word or words." [reflex PRESTO]
 Rand	"He gives a whole new dimension to small talk. But not for long, thankfully."
 Leo	"He gives a whole new dimension to small talk. But not for long, thankfully."
@@ -1929,7 +1932,8 @@ aunt tuna	"She's talking about herself every move, pretty much[if trout is refle
 sardine	"[one of]The sardine spends time babbling about his sensitive hearing, saying you couldn't possibly understand. But you sort of do[or]You don't want to hear the sardine on himself again[stopping]."
 walleyes	"Now's not the time to upbraid baddies for being bad. Sneak past them instead."
 yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what.' He winks."
-Ray Eck	-- [reflex TOWERS]
+smart kid	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
+pester'n serpent	"The serpent has nothing to say."
 inapt paint	--
 muscly hulk	--
 lois the hostile	--
@@ -1941,20 +1945,17 @@ arid den	--
 rewired robot	--
 unripe iPrune	--
 pirates	--
+Ray Eck	--
 grailman	--
 costume man	--
 bonker	--
 ingrates	--
 organised	--
 admirer	"'But enough about me! What about you?' You need a way to make them less interested in you."
-Atheists	--
-lois the hostile	--
-hostile-is-he lot	--
 Dr Yow	"Dr. Yow is too modest--and focused on [his-her] science--to bang on about previous achievements or imprisonment."
-smart kid	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'"
-pester'n serpent	"The serpent has nothing to say."
+Atheists	--
 Ed Yerg	"Ed Yerg mentions [if flowerpot is in lalaland]how happy he is you helped him. So happy, if you go out and come in, he might give you help with that palace[else if ed yerg is reflexive]his advice isn't cheap[else]he needs something to cheer him up[end if]."
-Ed Riley	"[one of]Ed Riley blathers how he can stand up to WHO DO YOU THINK YOU ARE and all that sort of thing. You claim you were just trying to get to know him, then he says THEN YOU'LL KNOW I NEED TO GUARD THE WAY WEST, HERE. He speaks very authoritatively[or]You don't need another verbal smackdown, at least not in Ed's current tone of voice[stopping]." [reflex OTTERS]
+Ed Riley	"[one of]Ed Riley blathers how he can stand up to WHO DO YOU THINK YOU ARE and all that sort of thing. You claim you were just trying to get to know him, then he says THEN YOU'LL KNOW I NEED TO GUARD THE WAY WEST, HERE. He speaks very authoritatively[or]You don't need another verbal smackdown, at least not in Ed's current tone of voice[stopping]."
 whiners	--
 macks	"Their opinion would be slightly biased. You can probably learn more about them by observing them."
 Gretta	"She's got enough people asking about her right now."
@@ -1964,7 +1965,6 @@ Mr Lee	--
 le mer	--
 eels	--
 snail	--
-snipe	--
 hornets	--
 racoon	--
 ocelots	"[if ocelots are reflexed]They seem too shy to talk[else]They point to themselves and give a thumbs up[end if]."
@@ -2223,7 +2223,7 @@ idg	lecturer	"A great man. Listen to him, not me." [start STORES]
 idg	Elvira	"She didn't get to her position of power by using DRUGS."
 Brother Horbert	spoon	"'[if spoon is in lalaland]I hope you used it wisely[else]It may help you figure where to go[end if].'" [start ROUTES]
 Brother Horbert	mantle	"[one of]Brother Horbert shudders a bit[or]Best not to press him[stopping]."
-Brother Horbert	list o toils	"[if l-o-p is unexamined]Why not examine the list yourself?[else if mushrooms are off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]" [horbert tells about quest items elsewhere]
+Brother Horbert	list o toils	"[if l-o-p is unexamined]Why not examine the list yourself?[else if mushrooms are off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]"	[horbert tells about quest items elsewhere]
 Brother Horbert	form	"[if form is off-stage]Brother Horbert mutters something about the gift of second sight.[else]Brother Horbert says, 'If you found the reagents, surely dealing with that form will be easier!'[end if]"
 Brother Horbert	Pat	"[lost-faith]"
 Brother Horbert	Oscar	"[lost-faith]"
@@ -2260,7 +2260,7 @@ hogs	Rand	"'They size him up and give a thumbs-down. Then they give you a double
 hogs	Leo	"'They size him up and give a thumbs-down. Then they give you a double thumbs-down. Ouch! No respect.'"
 hogs	keys	"They snicker at the thought of you being clever or strong enough to get the keys."
 hogs	yourself	"The hogs smirk and flex a bit, to show they're bigger and stronger." [end presto]
-trolls	Casper	"[one of]'A great man! We're sure his books are great, if you have nothing better to do than read. But he LIVED his books.'[or]'Wanna know about him, ask HIM.'[stopping]" [oyster]
+trolls	Casper	"[one of]'A great man! We're sure his books are great, if you have nothing better to do than read. But he LIVED his books.'[or]'Wanna know about him, ask HIM.'[stopping]"	 [oyster]
 trolls	capers	"[if stein is in lalaland][yeah-cute][else]'Hard-hitting stuff, we're sure. He's told us what's in there. Poke at it wrong, you'll upset the man himself.'[end if]"
 trolls	stein	"[if stein is in lalaland][yeah-cute][else]'Don't go putting it somewhere stupid and breaking it.'[end if]"
 trolls	tunes	"[if song is in reflexed][yeah-cute][else]'Don't be messing with the tunes or the amper on the jukebox. Annoy a lot of people.'[end if]"
@@ -2940,6 +2940,8 @@ to say part-list of (tt - a table-name) and (fi - a number): [unused]
 		say "[if idx is fi and idx > lonum]and [end if][blurb entry][if idx < fi - 1], [end if]";
 
 to say biop of (ts - a truth state):
+	if showtabname is true:
+		say "(table of biopics)";
 	repeat through table of biopics:
 		if there is a fave entry:
 			if fave entry is ts:
@@ -4659,7 +4661,7 @@ understand "scaf" as scafing.
 
 carry out scafing:
 	now score-after is whether or not score-after is true;
-	say "Printing score after gaining a point is now [if score-after is true]on[else]off[end if].";
+	say "Printing score after gaining a point is now [on-off of score-after].";
 	the rule succeeds;
 
 scaying is an action out of world.
@@ -4686,7 +4688,7 @@ carry out possing:
 		now possibles is false;
 	otherwise:
 		now possibles is true;
-	say "Switching [if possibles is true]on[else]off[end if] minimum/maximum available point notification in the header. ";
+	say "Switching [on-off of possibles] minimum/maximum available point notification in the header. ";
 	if min-alert is false:
 		ital-say "this is a quasi-spoiler of sorts, since watching the maximum possible score drop may mean you have missed an easter egg. Or watching the minimum score increase may mean you found one.";
 	else:
@@ -7618,19 +7620,20 @@ before sleeping:
 		say "You feel too inclined towards action for that." instead;
 	if slept is true:
 		say "[one of]You already found a place to sleep, so I'll give you generic sleep-rejects from here.[or][randbla][stopping]" instead;
-	say "[one of][sleep-reject][or][randbla][stopping]" instead;
+	say "[one of][sleep-reject].[or][randbla][stopping]" instead;
 
 to say sleep-reject:
 	if slept is true:
-		say "You found the one place in the game where you needed to sleep.";
+		say "You found the one place in the game where you needed to sleep";
 	else if location is outie:
-		say "Sleeping outside is dangerous. You'd need somewhere protected.";
+		say "Sleeping outside is dangerous. You'd need somewhere protected";
 	else if mrlp is manor:
 		say "You won't need to sleep for a long while.";
 	else if mrlp is presto and shack is unvisited:
-		say "It'd be nice to have somewhere to sleep after tumbling through the gyre.";
+		say "It'd be nice to have somewhere to sleep after tumbling through the gyre";
 	else:
-		say "Maybe you'll find somewhere more hospitable later.";
+		say "Maybe you'll find somewhere more hospitable later";
+	say ". But otherwise, you'll get a bunch of silly random responses you may or may not find entertaining";
 	pad-rec "sleep";
 
 chapter taking
@@ -7739,7 +7742,7 @@ instead of swearing obscenely:
 
 to say deth:
 	let temp be a random number from 1 to number of rows in table of death messages;
-	say "[blurb in row temp of table of death messages]";
+	say "[if showtabname is true](table of death messages)[end if][blurb in row temp of table of death messages]";
 
 curse-warned is a truth state that varies.
 
@@ -8570,7 +8573,7 @@ to say check-nestor:
 after fliptoing when player is in stores (this is the reunite gang rule) :
 	if noun is nestor or noun is tokers:
 		if nestor is in strip and tokers are in strip:
-			say "The lackers and slacker pull a tarp apart and pull out a dime bag made big and spark a tinderbox-bred toxin for tokins['] stokin[']. 'A drug to drag out!'' They offer a stupor sprout to spur Proust, and even an opiate oatpie, but you decline. They explain excitedly to you that this stuff is SO good, it's literally a like passage to a new world for certain people. You might even be able to enter the like smoke if you're way out enough.";
+			say "The lackers and slacker pull a tarp apart and pull out a dime bag made big and spark a tinderbox-bred toxin for tokins['] stokin[']. 'A drug to drag out!' They offer a stupor sprout to spur Proust, and even an opiate oatpie, but you decline. They explain excitedly to you that this stuff is SO good, it's literally a like passage to a new world for certain people. You might even be able to enter the like smoke if you're way out enough.";
 	continue the action;
 
 after fliptoing a fruit (this is the fruit cue rule):
@@ -9066,7 +9069,7 @@ to say remap-or-unset:
 		say "You brave the electrical underpinnings of the perma-amper to create an ampish mishap";
 
 to say troend:
-	say "Something about the song reminds you of that townhome in your hometown. O glum mogul! [iced-reigns]. Writing songs is your sort of doing nothing. Fortunately, you're skilled enough in the art of doing nothing to make the switch fairly quickly. Once you have irreversibly adjusted your quit note quotient and signed a short-week worksheet, you reenact gloom you remembered in this conglomerate. Is life I, Self, I? Lies, if...[paragraph break]Your condensed rise to the top of this business business makes you efficient writing songs too. [twiddle of table of songs you could write and 4]The satirical edge you didn't mean to put in is a big hit in Spoiloplis and beyond. Your songs fully restore the spirit of a common man and shred the oligarchs['] rash logic[xtra-help]. And no censorship will enrich sops.[paragraph break]Exhausted, you realize you have no way home. But you meet a fellow called Tristan, startin['] a company called Tin Star Transit. You pay with stolen knick-knacks from your office. The ride's low frills but extremely fast--to the Strip of Profits. So ends your paydirt day trip: poverty to the very top, IOU phear to euphoria."
+	say "Something about the song reminds you of that townhome in your hometown. O glum mogul! [iced-reigns]. Writing songs is your sort of doing nothing. Fortunately, you're skilled enough in the art of doing nothing to make the switch fairly quickly. Once you have irreversibly adjusted your quit note quotient and signed a short-week worksheet, you reenact gloom you remembered in this conglomerate. Is life I, Self, I? Lies, if...[paragraph break]Your condensed rise to the top of this business business makes you efficient writing songs too. [twiddle of table of songs you could write and 4]. The satirical edge you didn't mean to put in is a big hit in Spoiloplis and beyond. Your songs fully restore the spirit of a common man and shred the oligarchs['] rash logic[xtra-help]. And no censorship will enrich sops.[paragraph break]Exhausted, you realize you have no way home. But you meet a fellow called Tristan, startin['] a company called Tin Star Transit. You pay with stolen knick-knacks from your office. The ride's low frills but extremely fast--to the Strip of Profits. So ends your paydirt day trip: poverty to the very top, IOU phear to euphoria."
 
 to say iced-reigns:
 	if word number 1 in the player's command is "decide":
@@ -9344,7 +9347,7 @@ to say hawk-blare:
 		now this-ad is 1;
 		continue the action;
 	choose row this-ad in table of ad slogans;
-	say "[if blare entry is true]blares[else]hawks[end if] [blurb entry][if blare entry is false][end if]"
+	say "[if blare entry is true]blares[else]hawks[end if] [blurb entry][if showtabname is true](table of ad slogans)[end if]"
 
 understand "ad" as sad ads.
 
@@ -9500,7 +9503,7 @@ The I Trash His Art page is propaganda. The Her Arts Er Trash page is propaganda
 description of I Trash His Art is "[artrash]". description of Er Trash is "[artrash]".
 
 to say artrash:
-	say "[one of]Elvira offers an apology for not seeing to the heart of the matter about all your anagramming. Oh, sure, she had clever opinions about whether obvious anagrams were better than non-obvious ones, and she changed around, and she's glad people found them interesting, but really, it's kind of nerdy now that your good deeds were DONE. Lots of examples, ahead.[or]Elvira lists games that don't make kids or concerned parents happy. Mega Mage Game (e-mag: a gem!) as well as many others: [twiddle of table of lame computer games and 4].[paragraph break]She blames you for the games['] technical and aesthetic faults, mainly due to the anagram craze you never quite discouraged.[or]Elvira discourses on rap music. 'Rap music is, um, [crap]. Funky? F'n yuk! Pop stars, stop raps!' She lists D.J. JD as even worse than [twiddle of table of bad rappers and 4]. Geez! So many horrible 'musicians.' The 'hits,' too.[or]Elvira has harsh words for other genres, yet they keep cranking things out! [twiddle of table of lousy hit songs and 5]You...you find yourself agreeing with her, but you never commissioned any of that[or]Elvira ravages the rigidness of music in general. All the latest...hits. Mourning oldies soiled by Chas Cash-Asch and his Sex Rime Remixes, and how SOMEONE with word power (guess who) makes the fliest stifle itself. Though she praises Ariel V's album [i]We Do No Wooden Ode Now[r], she rips the same ol['] lame-os: [twiddle of table of oldies singers and 3].[or]Elvira 'begs the question' of who is getting a lot of royalties! Someone probably in a nice cosy hidden manor! She finishes by berating the Klaw Walk and Bungie Beguin as dumb dances.[or]Elvira shows little respect for comedians like [twiddle of table of comedians and 1]--that pissant is pants--but also [twiddle of table of comedians and 3] even/especially if they make jokes about you. It is too easy. While those about her fall flat or generally have to paint her in a favorable light.[or]Elvira eviscerates dummies['] mediums that produce movies like [twiddle of table of lame movies and 3], but there's the small screen too...[or]They're just unbearable, TV shows like [twiddle of table of lame tv shows and 3]Even stuff rated g grated--that's the end of THIS article, thankfully[drt].[or]No. Really. You don't want to read that nonsense again. She always seems to know which way the wind is blowing, then she blames you for it.[stopping][run paragraph on]"
+	say "[one of]Elvira offers an apology for not seeing to the heart of the matter about all your anagramming. Oh, sure, she had clever opinions about whether obvious anagrams were better than non-obvious ones, and she changed around, and she's glad people found them interesting, but really, it's kind of nerdy now that your good deeds were DONE. Lots of examples, ahead.[or]Elvira lists games that don't make kids or concerned parents happy. Mega Mage Game (e-mag: a gem!) as well as many others: [twiddle of table of lame computer games and 4].[paragraph break]She blames you for the games['] technical and aesthetic faults, mainly due to the anagram craze you never quite discouraged.[or]Elvira discourses on rap music. 'Rap music is, um, [crap]. Funky? F'n yuk! Pop stars, stop raps!' She lists D.J. JD as even worse than [twiddle of table of bad rappers and 4]. Geez! So many horrible 'musicians.' The 'hits,' too.[or]Elvira has harsh words for other genres, yet they keep cranking things out! [twiddle of table of lousy hit songs and 5]You...you find yourself agreeing with her, but you never commissioned any of that.[or]Elvira ravages the rigidness of music in general. All the latest...hits. Mourning oldies soiled by Chas Cash-Asch and his Sex Rime Remixes, and how SOMEONE with word power (guess who) makes the fliest stifle itself. Though she praises Ariel V's album [i]We Do No Wooden Ode Now[r], she rips the same ol['] lame-os: [twiddle of table of oldies singers and 3].[or]Elvira 'begs the question' of who is getting a lot of royalties! Someone probably in a nice cosy hidden manor! She finishes by berating the Klaw Walk and Bungie Beguin as dumb dances.[or]Elvira shows little respect for comedians like [twiddle of table of comedians and 1]--that pissant is pants--but also [twiddle of table of comedians and 3] even/especially if they make jokes about you. It is too easy. While those about her fall flat or generally have to paint her in a favorable light.[or]Elvira eviscerates dummies['] mediums that produce movies like [twiddle of table of lame movies and 3], but there's the small screen too...[or]They're just unbearable, TV shows like [twiddle of table of lame tv shows and 3]Even stuff rated g grated--that's the end of THIS article, thankfully[drt].[or]No. Really. You don't want to read that nonsense again. She always seems to know which way the wind is blowing, then she blames you for it.[stopping][run paragraph on]"
 
 dope-read is a truth state that varies.
 
@@ -11174,13 +11177,13 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "verbs/verb"	true	"[verb-list]"	"verbs"	false	--	false
 "options" or "opts" or "post opts"	true	"[opts-list]"	"options"	false	--	false
 "parse/spare"	false	"PARSE processes the settler's data for you, but SPARE hides it."	"parse"	false	--	false
-"access"	true	"Typing ACCESS toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently [if screenread is true]on[else]off[end if]."	"access"	false	--	false
+"access"	true	"Typing ACCESS toggles handicapped accessibility mode, which generally helps the visually impaired with graphics clues and avoids a stream of useless punctuation. It is currently [on-off of screenread]."	"access"	false	--	false
 "free turns" or "free/turns"	true	"Some actions do not take a turn. For instance, examining, looking or taking inventory, or 'out of world' actions like SCORE, will not cost you time if you are in a tight situation."	"free turns"	false
 "saying"	false	"Instead of SAYing or THINKing, you can just type the word."	"saying"	false
 "talking"	false	"TALKING is the equivalent of asking someone about themselves."	"talking"	false
 "sleep/sleeping"	false	"SLEEP is only advisable in a protected area."	"sleep"	false
 "long commands" or "long/command/commands"	false	"Commands over 4 words long aren't necessary. You can say TAKE ALL or GET ALL, eliminate THE, or use half an open compound word without repercussions."	"long commands"
-"random/ dialogue/dialog/"	false	"HUSH turns random dialogue off. UHHS turns it on. It is [if talk-quiet is false]on[else]off[end if]."	"random dialogue"	false
+"random/ dialogue/dialog/"	false	"HUSH turns random dialogue off. UHHS turns it on. It is [on-off of talk-quiet]."	"random dialogue"	false
 "diorama"	false	"[dior-scan]"	"diorama"	true
 "question mark" or "question/mark"	false	"[if qmspoil is true]The question mark is often better than a red or yellow in Cheat mode, because it limits you to two possibilities[else]The question mark is, well, a question mark. But maybe it's not as vague as it seems. You can HINT it if you're stuck[end if]."	"question mark"	true
 "opt in" or "opt/notip/optin/tip" or "no tip"	false	"OPT IN lets you see initial region hints. NO TIP turns them off."	"opt in/no tip"	false
@@ -12829,7 +12832,7 @@ check asking Brother Horbert about:
 	say "Brother Horbert shrugs. He doesn't know much about the outside world.";
 
 to say pious1: [otherwise the picture has trouble with randbla for random stuff]
-	now pious-state is whether or not pious-state is true;
+	now pious-state is whether or not pious-state is false;
 
 pious-state is a truth state that varies.
 
@@ -13434,7 +13437,7 @@ check fliptoing cellar door:
 
 book Pallid Li'l Pad
 
-Pallid Li'L Pad is a room in Troves. "This is [if diapers are reflexed]no bro-dome--it leaves you feeling all me, BROOD[else]a dump, um, pad[end if]. Well, it beats Get-a-Cot Cottage, or Drag-Grad.[paragraph break]You notice trappings of spiritual and material poverty: a picture of a sad pier, a box of diapers, and a spider crawling[if diapers are reflexed]. Though you're not quite held back by them so much[else]. They all point to a rock bottom you haven't hit yet, but it may be necessary[end if].  now. You have learned to despair and to deal, and now you need a third way between them. You believe you deserve to [i]reside[r] somewhere better[if diapers are reflexed]. Such details will drag you back. You want to break out of the funless fulness of Drag-grad, here, to [i]lead[r][end if]. All equally depressing."
+Pallid Li'L Pad is a room in Troves. "This is [if diapers are reflexed]no bro-dome--it leaves you feeling all me, BROOD[else]a dump, um, pad[end if]. Well, it beats Get-a-Cot Cottage, or Drag-Grad.[paragraph break]You notice trappings of spiritual and material poverty: a picture of a sad pier, a box of diapers, and a spider crawling[if diapers are reflexed]. Though you're not quite held back by them so much. You want to break out of the funless fulness of Drag-grad, here, to [i]lead[r][else]. They all point to a rock bottom you haven't hit yet, but it may be necessary now[end if]."
 
 chapter adeiprs
 
@@ -19092,7 +19095,7 @@ instead of taking rapier repair:
 
 understand "pairer" as a mistake ("[if gizmo is off-stage]You don't need duplicates of anything here. Besides, the machine looks complex enough. It will probably reject or accept what it needs to[else]You don't need to repurpose the repair machine. It's done enough for you[end if].")
 
-the I ZOMG Gizmo is a thing. description is "[one of]Whew. I'm buffaloed on this one. Somebody who knows how to build things would probably understand how to activate, much less use, the [randbla] or [randbla]. Hey, if I understood, I would be writing stuff far less silly than this game.[or]You find yourself baffled by the [giz-part][stopping]."
+the I ZOMG Gizmo is a thing. description is "[one of]Whew. I'm buffaloed on this one. Somebody who knows how to build things would probably understand how to activate, much less use, the [randbla] or [randbla]. Hey, if I understood, I would be writing stuff far less silly than this game[or]You find yourself baffled by the [giz-part][stopping]."
 
 to say giz-part:
 	choose row with mytab of table of gizmo parts in table of megachatter;
@@ -21650,8 +21653,9 @@ to clean-for-roving:
 	move player to strip of profits;
 	if number of portals in strip of profits > 0:
 		say "Moving [list of portals in strip of profits] out of the Strip. They shouldn't be there.";
-		say "[bug-report]";
-		now every portal in strip of profits is in lalaland;
+		repeat with myport running through portals in strip of profits:
+			if myport is not hoster:
+				move myport to lalaland;
 
 to say hat-gone:
 	say "[if ghoul hat is in lalaland] despite zapping that ghoul hat[else], though his ghoul hat's gone[end if]";
@@ -22435,7 +22439,7 @@ After printing the name of a hintpastry (called the curfood) while taking invent
 	say " [if curfood is heated](heated)[else](cold)[end if]";
 
 to say set-det:
-	say "[unless player has purse]: [end if]Cheat/teach mode is [if cheat-on is true]on[else]off[end if], [if list-headache is false]and [end if]idlers['] slider is [if slider is switched on]on[else]off[end if][slider-detail]";
+	say "[unless player has purse]: [end if]Cheat/teach mode is [on-off of cheat-on], [if list-headache is false]and [end if]idlers['] slider is [on-off of whether or not slider is switched on][slider-detail]";
 
 to say slider-detail:
 	if list-headache is false:
@@ -27823,7 +27827,7 @@ carry out sssing:
 		now sss is true;
 	else:
 		now sss is false;
-	say "Every-turn settler tracking is [if sss is true]on[else]off[end if].";
+	say "Every-turn settler tracking is [on-off of sss].";
 	the rule succeeds;
 
 chapter fruiing
@@ -28689,6 +28693,19 @@ to say list-of-randos:
 		if go-ahead entry is bzzt rule and reps entry > 1:
 			say " [if comma-yet is true],[end if][XX]";
 			now comma-yet is true;
+
+chapter showtabing
+
+showtabing is an action out of world.
+
+understand the command "showtab" as something new.
+
+understand "showtab" as showtabing.
+
+carry out showtabing:
+	now showtabname is whether or not showtabname is false;
+	say "Showing table names in random text is now [on-off of showtabname].";
+	the rule succeeds;
 
 volume spare ideas
 
