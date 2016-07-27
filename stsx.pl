@@ -15,6 +15,7 @@ my $runTableSort = 1;
 my $runTableChomp = 1;
 my $debug = 0;
 my $updatesToCheck = 0;
+my $badLines;
 
 while ($count <= $#ARGV)
 {
@@ -42,14 +43,14 @@ while ($a = <A>)
   if ($a =~ /=shuffling/i) { $stsGame = "Shuffling Around"; }
   if ($currentTable)
   {
-    if (($a =~ /\"/) && ($a !~ /\".*\"/)) { $bail = 1; print "WARNING need more than one quote line $thisLine table $currentTable: $a\n"; $bail = 1; }
-    if ($a =~ /^['`]/) { chomp($a); print "WARNING $a not properly quoted, line $thisLine table $currentTable\n"; $bail = 1; }
-    if ($a =~ /^[a-z0-9]/i) { chomp($a); print "WARNING $a does not start with a quote, line $thisLine table $currentTable\n"; $bail = 1; }
-    if (($currentTable eq "table of biopics") && ($a !~ /\t(true|false)/)) { print "WARNING biopics need true or false!\n"; $bail = 1; }
-    if (($currentTable =~ /^table of ad slogans/) && ($a !~ /\ttrue/)) { $a =~ s/(^\"[^\"]*\")/$1\tfalse/; $adAds = 1;}
+    if (($a !~ /^\"/) || ($a !~ /[a-z0-9]/i)) { $currentTable = ""; next; }
+    if (($a =~ /\"/) && ($a !~ /\".*\"/)) { $badLines .= "$a"; print "WARNING need more than one quote line $thisLine table $currentTable: $a\n"; $bail = 1; }
+    if ($a =~ /^['`]/) { $badLines .= "$a"; chomp($a); print "WARNING $a not properly quoted, line $thisLine table $currentTable\n"; $bail = 1; }
+    if ($a =~ /^[a-z0-9]/i) { $badLines .= "$a"; chomp($a); print "WARNING $a does not start with a quote, line $thisLine table $currentTable\n"; $bail = 1; }
+    if (($currentTable eq "table of biopics") && ($a !~ /\t(true|false)/)) { $badLines .= "$a"; print "WARNING biopics entry line $thisLine needs true or false!\n"; $bail = 1; }
+    if (($currentTable =~ /^table of ad slogans/) && ($a !~ /\ttrue/)) { $a =~ s/(^\"[^\"]*\")/$1\tfalse/; $adAds = 1; }
   }
   if ($inUpdates) { if ($a !~ /[a-z]/i) { $inUpdates = 0; next; }  $updatesToCheck++; next; }
-  if (($a !~ /^\"/) || ($a !~ /[a-z0-9]/i)) { $currentTable = ""; next; }
   if ($bail) { next; }
   if ($currentTable)
   {
@@ -58,11 +59,16 @@ while ($a = <A>)
   }
 }
 
-if ($adAds) { print "Added FALSE to ads without them."; }
+if ($adAds) { print "Added FALSE to ads without them.\n\n"; }
 
 print "TEST RESULTS:update ideas,3,$updatesToCheck,0,nothing\n";
 
-if ($bail) { die("Fix mistakes before continuing."); }
+if ($bail)
+{
+  $badLines =~s/\n/\n<br \/>/g;
+  print "TEST RESULTS:sts.txt corruption,0,1,0,$badLines\n";
+  die("Fix mistakes before continuing.");
+}
 
 if ($totalAdded)
 {

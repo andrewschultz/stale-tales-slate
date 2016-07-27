@@ -6727,7 +6727,7 @@ Reclusion Inclosure	"Even without the raw-bulk bulwark that way, Elvira wouldn't
 Rustic Citrus	"[unless player has compass]You try to go north by not going north, but everywhere's a border, arbored[else if swell wells are unvisited]That's not north, according to your compass[else]You can only go back north to the wells[end if]." [others]
 filed field	"[if b-w are visible and noun is west]The barriers west block you. Maybe you can get rid of them.[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east.[end if]"
 Scape Space	"The scape space is pretty sparse. No spare rooms, restrooms, anything. You can only go back up."
-Clangier Clearing	"Nameless salesmen constantly coming and going stop you from going any way but back west. You don't really notice them until you have to leave, but they leave you with a feeling of lameness."
+Clangier Clearing	"The nameless salesmen constantly coming and going stop you from going any way but back west. You don't really notice them until you have to leave, but they leave you with a feeling of lameness."
 
 to say if-fence:
 	say "[if pipe panel fence is visible]the pipe panel fence too[else]even without the fence[end if]"
@@ -23667,7 +23667,18 @@ check fliptoing when player is in clearing and player does not have tekno-token:
 		preef noun;
 		do nothing instead;
 
-Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "There's lots of noise among traders here, though most of them pay you no attention. That leaves you time to notice a list of prices and another banner saying AUCTION CAUTION. It looks like people are using all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow.[paragraph break]You'd probably get lost if you go any way but back west."
+Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "There's lots of noise among nameless salesmen here. They block any exit except back west.[paragraph break]You notice a list of prices and another banner saying AUCTION CAUTION. It looks like people are using all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow."
+
+the nameless salesmen are scenery in clangier clearing. "The nameless salesmen are, well, nondescript but numerous. They ignore you, and none seems as interesting as Len Craig."
+
+before talking to nameless salesmen:
+	say "You have nothing to say to the salesmen." instead;
+
+understand "lameness" as a mistake ("No need to judge them. We can't all be heroes.") when player is in clangier clearing.
+
+Include (-
+	has transparent talkable
+-) when defining nameless salesmen.
 
 after choosing notable locale objects when player is in clangier clearing:
 	set the locale priority of len craig to 1;

@@ -14759,7 +14759,7 @@ carry out shomising:
 
 chapter auing
 
-[turn on auto-yes dialogue or auto-no. 1=y 0=nothing -1=no ]
+[ * turn on auto-yes dialogue or auto-no. 1=y 0=nothing -1=no ]
 auing is an action out of world applying to one number.
 
 understand the command "au" as something new.
@@ -14780,6 +14780,8 @@ to say auto-set:
 	say "[if yn-auto is 1]auto-yes[else if yn-auto is -1]auto-no[else]no auto[end if]";
 
 chapter showtabing
+
+[ * this shows table names for auto-testing purposes (random text) ]
 
 showtabing is an action out of world.
 
