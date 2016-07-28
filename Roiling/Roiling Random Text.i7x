@@ -1442,6 +1442,7 @@ blurb
 "Phat now: whap not."
 "Physical? Achy slip."
 "A point to pain? A tip: NO!"
+"Punch mo[']? No, chump!"
 "Punch-outs? Un-posh! Cut!"
 "Rage move? Game over!"
 "Rah, enmity in my heart! Irate hymn!"
@@ -1467,6 +1468,7 @@ blurb
 "To clash? Ha, clots."
 "To scowl: low-cost."
 "To shred? D'oh! Rest!" []
+"To slash so? HALTS!"
 "To slay? Ay, lost."
 "To spring on...sporting? No!"
 "Trounce? No! Truce!"
@@ -1586,6 +1588,7 @@ blurb
 "'Funny li'l nullify'n!'"
 "'Gad! Reset!' / 'Restaged.'"
 "'Gah, spun. Hang-ups.'"
+"'Gird one redoing!'"
 "'Go, erase so eager!'"
 "'Go-over groove!'"
 "'A goadin[']: Do again.'"
@@ -10175,6 +10178,7 @@ blurb	prio
 "Bleat at a Battle[r], by Lea Batt"
 "Bleat, Mr. Lambert[r], by Tal Brem"
 "Blemished Limbs, Heed[r], by Debi Helms"
+"A Blend-Den Lab[r], by Ed Blan"
 "Blighter Girl Beth Hiltberg[r], by Helg-Brit Gilbreth"
 "Blocked Old Beck[r], by Ced Kolb"
 "Blog Friend, Blind Gofer[r], by Ford Ebling"
@@ -10992,6 +10996,7 @@ blurb	prio
 "Duper-Oath Up the Road: Proud Hate[r], by [if player is male]Pedro Haut[else]Hope Dutra[end if]" []
 "A Duty? Ay, Tut, Ya Dud[r], by Tad Yu"
 "Duty: Solve, Study, Love[r], by Stuey Vold"
+"A Dweeb Be Awed[r], by Bea Dew & Deb Wea"
 "E-Czar Craze[r], by Z. C. Rea"
 "E-Divas I Saved[r], by Sad Evi Davies"
 "E-Z In Zine[r], by Inez Enzi"
@@ -12703,6 +12708,7 @@ blurb	prio
 "Losted Old Set[r], by [d-t] Les" []
 "Lot I'm In: No Limit[r], by Tim Olin"
 "A Lot to Al[r], by Lala Otto" []
+"Lots Die to Slide[r], by Del Otis"
 "Lots View Two Evils Wits Love[r], by Tevis Low"
 "Lotta Total Ol['] Tat[r], by Al Ott"
 "Lou, Be as Lo-Abuse Soul [a-b][r], by Beau Sol"
@@ -12923,6 +12929,7 @@ blurb	prio
 "Mild Row[r], by Wlodmir Wildmor"
 "Mildest, Mist-Led[r], by Del Smit"
 "Milk Cries: Limericks[r], by Slick Emir Rick Miles"
+"Milk for Rim Folk[r], by Kim Flor"
 "Milk, Honey, Elk, Hominy, Homely Kin[r], by [if player is male]Milo Hynek[else]Emily Kohn[end if]"
 "Milk of Mo['] Filk[r], by Flo Kim"
 "Milk, Soup: OK, I Slump[r], by [if player is male]Kip Solum[else]Lois Kump[end if]"
@@ -13110,6 +13117,7 @@ blurb	prio
 "My Other Home Try[r], by Tom Hyre"
 "My Papers, Ms. Yapper[r], by Myra Epps"
 "My Peace Came, Yep[r], by Macy Pee"
+"My Plague: Gamely Up, Lumpy Age[r], by [if player is male]Guy Maple[else]Meg Pauly[end if]"
 "My Range, Grey Man[r], by Meg Ryan"
 "My Rant: Try, Man![r] by Tamryn Rymant"
 "My Rat Marty[r], by Myrta Tamyr" []
@@ -17448,6 +17456,7 @@ blurb
 "Renita, Terina, Terian." []
 "Rev. Pa, a Perv."
 "Rev. Pop's Perv Ops."
+"Rex's Ex Xerxes."
 "Rexie's Sexier Ere Six."
 "Ric Glover's Cover Girls."
 "Riding, I Grind." []
@@ -17950,6 +17959,7 @@ blurb
 "Ringo's Groins-Sin Org" []
 "Riskiest Kirstie's"
 "Risque Squire"
+"Roof Sty for Toys"
 "Rox Estes Sex Store"
 "RudeCorp's Producers."
 "Salty Tyla's"
@@ -18015,6 +18025,7 @@ blurb
 "'Be a dork--or baked!' / 'OK, Debra.'"
 "'BE! Chase cheeba's beaches!'"
 "'Be stoned: bested? No!'"
+"'Beg-a-thon? Bong heat!'"
 "A belch. A 'Blech.'"
 "'Big Deals Ads? Bilge!'"
 "'Bogart? Go, brat!'"
@@ -24000,6 +24011,7 @@ blurb
 "A blurt: 'Brutal!'" []
 "'Boat went. Won't be at...'"
 "'Bob, I...' / 'Time to imbibe!'"
+"'Bodacious cab? ODIOUS!'"
 "'Bonfire? / Fine, bro!'" []
 "'Boot my TOM? Boy!'"
 "'Boots? My. Tomboys!'" []
@@ -24058,6 +24070,7 @@ blurb
 "'Chat Chez Chaz, Chet!'"
 "'Chavs, Chas?' / 'V.'"
 "'Chaz!' / 'Zach!'"
+"'Cheap suits? Up, chastise!'"
 "'Cheat, use the sauce!' / 'He's acute.'" []
 "'Cheese sechee? [']S... eeech.'"
 "'Chemistry? Cristy? Meh.'" []
@@ -25678,6 +25691,7 @@ blurb
 "Chiseler Chris Lee"
 "Chiselled Dechellis"
 "Chortling Clint Groh"
+"Chronic-Chic Ron"
 "Chubster Schubert" []
 "Churlish Lush Rich"
 "CIA-*** Caissa Isaacs" [x]
@@ -31590,6 +31604,7 @@ blurb
 "Nail Down an Old Win[r], by [if player is male]Lon Dwain[else]Diann Low, Dawn Olin & Nona Wild[end if]"
 "Naivete? Lo, Live, Atone, Elevation[r], by [if player is male]Vito Neale[else]Eve Latino[end if]"
 "Nearly Earn, Yen, Rally[r], by Arlyne Larney"
+"Need Wiz, Wizened[r], by Inez Dew"
 "New Haters: the Answer[r], by Stew Ahern"
 "New Life? Few Line[r], by Ewin Elf" []
 "A New-Old Deal Now[r], by [if player is male]Dan Lowe & Lon Wade[else]Lea Down[end if]"
@@ -36732,6 +36747,7 @@ blurb
 "'Exit meant a Next Time!'"
 "'Fantastic faint scat!'" []
 "'Fear nigh? Hang fire!'"
+"'Fear-smit, I'm faster!'"
 "'Feint, wail--a fine wilt!'" []
 "'Final-go loafing?'" []
 "'Flee! Be feeble!'" []
@@ -36851,6 +36867,7 @@ blurb
 "'Eh, reform from here!'"
 "'Ensure it reunites us entire!'"
 "'Ever solid, I RESOLVED!'" []
+"'Fix-led, I'd flex!'"
 "'Go, man. Cheer more change!'"
 "'Hear from reform, ah!'" []
 "'A hell-proof hope for all!'"
@@ -36890,6 +36907,7 @@ blurb
 "'Abrupter? Up, barter, rapt rube! Perturb a...'"
 "'Ach, super purchase!'"
 "'Add-ons, yet! Ends today!'"
+"'Advertise trades! Vie!'"
 "'All deserve deals. Revel!'"
 "'App? Yay!' / 'Pay, pay!'"
 "'Aw, yep, we pay.'"

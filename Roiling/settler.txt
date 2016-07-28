@@ -226,6 +226,7 @@ v:married,edmirra,iraderm
 !poncier,porcine
 !rimiest,mistier
 #### post-guardian
+fidget,gifted=smart kid
 !tentative,attentive=smart kid
 !dr yow,wordy
 !dr yow,rowdy

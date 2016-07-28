@@ -120,7 +120,7 @@ Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster
 
 Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 33. min-score of presto is 28. [rom stick, lamb, tab, casserole, +1 point for Phooey]
 
-Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 45. min-score of towers is 24.
+Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 46. min-score of towers is 24.
 [Necessary points:
 4 for regular warriors
 1 for Ray Eck
@@ -131,10 +131,11 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 1 for weeds
 2 for Dr Yow
 1 for lone duck
-1 for tentative
+1 for gifted/fidget
 2 for a bot boat
 1 for the palace] [1 non-anagram for rapier repair]
-[3 for the extra warriors
+[BONUS:
+3 for the extra warriors
 1 for not using x-ray vision to clear every guardian
 1 for strudel
 1 for the yurts
@@ -142,6 +143,7 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 2 for the ingrates/natives
 3 for the denim, neural pulses and old ice
 1 for the replay player
+1 for tentative
 1 for giving Ed the flowerpot NON-ANAGRAM
 3 for dying crocus/serpent/ed yerg]
 
@@ -2538,6 +2540,7 @@ to say kid-fol: [h]
 	else if kid-moves is 6:
 		say "You regret not clearing more guardians--the kid is nice, but [he-she] sure can TALK and loves to kibitz about who's hanging around, and how and why you could've figured things out, leaving you a bit too exhausted to show HOW you work your magic. And a little embarrassed. You mumble something about being practical. Plus the long walk may help the kid sit and listen. You hope.";
 	now kid is found;
+	now atten is in subsector;
 	move kid to subsector;
 	move player to subsector;
 
@@ -3999,7 +4002,7 @@ atheists	"The atheists momentarily ditch their timed snark for a few quick hitte
 lois the hostile	"[bug-report]" [??]
 hostile-is-he lot	"[bug-report]" [??]
 ropins	"The ropins remains secure, with no easy way to open it."
-smart kid	"[kid-first] fidgets a bit but can't keep focused, though [he-she] clearly wants to."
+smart kid	"[kid-first] strains to keep even more attention despite doing pretty well."
 denim	"The denim bends and warps, but you hear no tearing noise."
 pulses	"The pulses seem less there and less negative for a moment."
 old ice	"The old ice seems to glimmer a bit."
@@ -4260,7 +4263,7 @@ Claire's Scalier	--
 raves saver	"The raves saver is as glitzed-up as it'll get."
 strudel	"You'd have to drop it on the ground and get it germy to try that again. Eww."
 prison ropins	"It already is. Dr. Yow is free."
-smart kid	"[kid-first] is fully attentive. Don't ruin a good thing!"
+smart kid	"[kid-first] is fully attentive. Overkill might damage [his-her] creative streak!"
 turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
 flowerpot	"You've got something nice in the flowerpot. Better not mess with it."
@@ -8780,7 +8783,8 @@ old ice	old ice	false	341000045	--	"coiled"	"coiled"	"The docile old ice bends, 
 denim	Éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the ravages are, well, ravaged enough. You take the éclairs."
 fissure	fissure	false	582291393	--	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 prison ropins	prison ropins	false	522953692	--	"unlocked"	"unlocked"	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks and vanishes. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
-kid	kid	false	788195264	--	"attentive"	"attentive"	"[kid-full] snaps to attention. [he-she-c]'s more ready to learn, now."
+smart kid	smart kid	false	356052660	--	"gifted"	"gifted"	"[kid-full] calms down a bit. 'Man! My mind is clearer now! Did you...? Well, if you did or didn't, I'm still, wow.' [he-she-c] asks you, 'Could you give me help building a bot-boat?' You shake your head. 'Do you know anyone?'[paragraph break]Hmm, not any of the guardians blocking your way, but maybe you could get someone to show [kid-full] how to. Then maybe you could cross Leak Lake and get closer to the Curst Palace."
+atten	atten	false	788195264	--	"attentive"	"attentive"	"[kid-full] snaps further to attention, even more eager than before!"
 turbos	turbos	false	482585076	--	"robust"	"robust"	"The turbos whir a bit and grow shinier. Robust or bust! You'd feel [if blaster is reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
 blaster	blaster	false	486934458	--	"stabler"	"stabler"	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
 eastern shore	eastern shore	false	611415331	Mislit Limits	"nearest"	"nearest"	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the flowerpot, too, and maybe you have the time to drop off a gift...wherever Daltho's friend may be."
@@ -19426,13 +19430,31 @@ instead of doing something with s-d:
 to say meet-kid:
 	now met-kid is true.
 
+to say kid-full-fid:
+	say "[if kid is male]Dirk [if-fid] Stam[else]Kim [if-fid] Darst[end if]"
+
 to say kid-full:
 	say "[if kid is male]Dirk Stam[else]Kim Darst[end if]"
+
+to say if-fid:
+	if smart kid is reflexive:
+		say "'Fidget'"
 
 to say kid-first:
 	say "[if kid is male]Dirk[else]Kim[end if]"
 
 a smart kid is a reflexive person. "[if met-kid is false]'Hi! I'm [kid-full]! Thanks for getting rid of those big mean adults!' It's the kid you rescued. You exchange greetings[meet-kid][else if Dr Yow is in lalaland][what-kid-sez][else]Your friend [kid-full] the smart kid is here[if-tent][end if]."
+
+a-text of smart kid is "RYRRYR". b-text of smart kid is "RGRRGR". parse-text of smart kid is "x[sp]i[sp]x[sp]x[sp]e[sp]d".
+
+understand "fidget" as smart kid when location of smart kid is location of player.
+
+every turn when smart kid is reflexive and player is in coastlines:
+	say "[kid-full] continues to fidget and mutter a wish to be just a BIT smarter. Fidget, fidget, fidget."
+
+the atten is a privately-named vanishing scenery. printed name of atten is "attentiveness".
+
+a-text of atten is "YRRYRRYRY". b-text of atten is "YRRYRPGPG". parse-text of atten is "-[sp]x[sp]x[sp]-[sp]x[sp]t[sp]i[sp]v[sp]e".
 
 a bot boat is a thing. understand "botboat" and "bot-boat" as a bot boat.
 
@@ -19462,18 +19484,20 @@ check answering smart kid that:
 	if the player's command matches the regular expression "\b(doctor|dr|yow)\b":
 		try objasking smart kid about Dr Yow instead;
 
-a-text of smart kid is "YRRYRRYRY". b-text of smart kid is "YRRYRPGPG". parse-text of smart kid is "-[sp]x[sp]x[sp]-[sp]x[sp]t[sp]i[sp]v[sp]e".
-
 [gotoing subsector is kiddoing.
 
 talking to Dr Yow is kiddoing.]
 
 check scaning smart kid:
 	if smart kid is reflexed:
-		say "'Oh! Pf! I bet I could make one of those, easy." instead;
+		say "'Oh! Yeah! I bet I could make one of those, one day." instead;
 	if smart kid is reflexive and smart kid is in subsector:
+		say "[kid-full] continues to fidget as you scan [him-her]."
+		say "[line break]";
 		continue the action;
-	say "'Wow! Cool! What is that?' Hmm, maybe you'll get to use it on him later." instead;
+	if player is in subsector and atten is in subsector:
+		say "[kid-full] doesn't fidget, but [he-she] is kind of tentative now.[paragraph break]";
+		try scaning atten instead;
 
 met-kid is a truth state that varies.
 
@@ -19485,7 +19509,7 @@ to say what-kid-does:
 	if Dr Yow is visible:
 		say "looking [if smart kid is reflexed]attentive[else]tentative[end if]ly at Dr. Yow";
 		continue the action;
-	say "drawing in the air and mouthing ideas[one of]. 'Hey! I'm [kid-full]! They tell me I'm a smart kid but never let me learn the cool stuff. Those mean adults kept bugging me about religion! Bo-ring! Maybe you can teach me? Or find someone who can?' You never were good at that technical stuff, but maybe you [if prison ropins is reflexed]have found[else]can find[end if] someone else who is[meet-kid][or][stopping]"
+	say "drawing in the air and mouthing ideas[one of]. 'Hey! I'm [kid-full]! They tell me I'm a smart kid but, like, not REALLY smart enough to do REALLY cool stuff. Those mean adults kept bugging me about religion! Bo-ring! Maybe you can help me? I don't know how?' You just can't help notice the kid fidget, fidget, fidget"
 
 understand "dirk stam" and "dirk/stam" as smart kid when player is male.
 understand "kim darst" and "kim/darst" as smart kid when player is female.
@@ -19882,16 +19906,9 @@ to kid-gets-it:
 	say "The kid's understanding is paltry at first, but [he-she]'s attentive, so [he-she] gets it partly, before raptly exclaiming 'Droll Dr. LOL!' Dr. Yow's confident now, explaining patly and aptly. 'Call me Dr. Leo--older version of you.' They converse animatedly about the dream of no-silage gasoline, but Dr. Yow convinces [him-her] to start small.[paragraph break]The lecture over, the kid says, 'Dr.?'[paragraph break]'Toy! Try! Do!' The kid smacks [his-her] forehead and runs off 'It--it won't just be pseudo-souped! Pen lids, spindle...'[paragraph break]'Wait! Kid! I have this lots-o-tools stool...' but the kid's gone.[paragraph break]'Wait! Where is it? O lost!' [he-she-c] searches [his-her] pockets, just in case.[paragraph break]'Dr. Yow's Drowsy. My lab: balmy. Long cameo.' Then, above [his-her] duck's quack, 'come along.' [he-she-c] follows a loading diagonal, off for some [if player is female](sic) [end if]bachelor lab chore. Before [he-she] does, [he-she] shows you a picture labeled CURSEE RESCUE, featuring--a very unflattering portrait of yourself, before sticking it in [his-her] pocket. 'That dude[if player is female], um, dudess[end if] with the powers. House arrest, I heard. You look like someone who cares.' Unintentional compliments are the nicest.";
 	now Dr Yow is in lalaland;
 	now duck is in lalaland;
+	now atten is in lalaland;
 	now kid is in Actionless Coastlines;
 	now bot boat is in actionless coastlines;
-
-after fliptoing smart kid:
-	if Dr Yow is wordy:
-		say "The kid's attentive now, but Dr. Yow's wordiness isn't quite exciting enough for learning." instead;
-	if Dr Yow is rowdy:
-		kid-gets-it instead;
-	say "Unfortunately, Dr. Yow has nothing to say--maybe you can help [him-her], there.";
-	continue the action;
 
 section wordying
 
@@ -20531,10 +20548,6 @@ understand "respent" as a mistake ("You're not sure if the serpent's ever been s
 a-text of pester'n serpent is "RRYRYRR". b-text of pester'n serpent is "?RYRY??". parse-text of serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
 
 book Towers specific verbs
-
-check fliptoing kid:
-	if Dr Yow is not visible:
-		say "[reject]" instead;
 
 chapter guardian stubs
 
@@ -25117,7 +25130,7 @@ to say up-to-l3:
 	say "[if curtis-level is 0]needs more fruit for your first reward[else if coin is off-stage]has a reward for you[else if curtis-level is 1]needs more fruit for your second reward[else if coins is off-stage and icons is off-stage]has a second coin for you[else if curtis-level is 2]still needs a few more fruits[else]has not just a coin but a bill[end if]"
 
 to say n-o:
-	say "[if kid is reflexed]now[else]once[end if]";
+	say "[if atten is reflexed]now[else]once[end if]";
 
 check objhinting a quest-item when mrlp is routes (this is the redirect hints in routes rule) :
 	if cleric circle is unvisited:

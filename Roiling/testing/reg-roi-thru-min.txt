@@ -624,6 +624,7 @@ Actionless Coastline
 >unlocked
 
 >go to kid
+>gifted
 >ask kid about yow
 Obscurest
 
@@ -631,7 +632,6 @@ Obscurest
 >s
 >e
 >rowdy
->attentive
 
 >go to copse
 >w
