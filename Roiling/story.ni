@@ -2152,7 +2152,7 @@ Curtis	"'I'm a busy man!' yells Curtis. 'I have confidence in you, dealing with 
 Len Craig	"[one of]Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge[or]Your magic powers do not, alas, expand to straightforward bargaining[stopping]."
 Art Erd	"[his-her-c] mumbles 'er, drat' and something about how money is very, very nice."
 Dr Tera	"[his-her-c] mumbles 'er, drat' and something about how money is very, very nice."
-arid den	"The automated response system you can't see keeps croaking 'Nerd-Aid...Nerd.Aid...'"
+arid den	"The automated response system you can't see keeps croaking 'Nerd-Aid...Nerd-Aid...'"
 passport	"Try using its features instead."
 
 to say boat-works:
@@ -2331,7 +2331,7 @@ Dr Yow	duck	"[if ravages is unvisited]'I miss my duck! When they captured me, I 
 Dr Yow	gizmo	"[if Dr Yow is in ropins]'Not enough sharp edges. It's for making things...crafting.'[else]I'm too tired to make anything, but maybe an eager apprentice...it's a newfangled device for younguns anyway.'[end if]"
 Dr Yow	bonker	"[one of]Dr. Yow facepalms a bit. You can imagine listening to that bonker was even worse if you were imprisoned, too[or]No need to dredge that up, again[stopping]."
 Dr Yow	lake	"[doc-on-lake]"
-Dr Yow	kid	"[if kid is reflexed]'A sharp learner! [he-she-c] can help you now.'[else if kid is in subsector]'Sart enough, but [he-she]'s not ready to learn. For some kids, they just need that switch to go on.'[else]'I could use a young apprentice. You--well, you probably have other prisoners to rescue, or something.'[end if]"
+Dr Yow	kid	"[if kid is in coastlines]'It would be fun to tutor someone!'[else if kid is in subsector]'I bet I could teach [him-her] if I kept it interesting and exciting.'[end if]"
 arid den	curst palace	"If the den could talk, it would find a way to say it's more practical and motivational than the Curst Palace."
 ray eck	settler	"Ray Eck just won't shut up about what the settler could be for, and why it doesn't do anything. You notice its colors don't change even when you switch it to and from cheat mode, which--well, that's a pretty big help."
 Ed Yerg	curst palace	"'It can be something super special. [3-random]! If only...' You got no concrete clues, but Ed's pep talk was a help[new-yerg-thing]. Maybe you can come back for another, later, if you still have no luck outside."
@@ -4002,7 +4002,7 @@ atheists	"The atheists momentarily ditch their timed snark for a few quick hitte
 lois the hostile	"[bug-report]" [??]
 hostile-is-he lot	"[bug-report]" [??]
 ropins	"The ropins remains secure, with no easy way to open it."
-smart kid	"[kid-first] strains to keep even more attention despite doing pretty well."
+smart kid	"[kid-first] scrunches [his-her] eyes to try to keep even more attention, but it doesn't quite work."
 denim	"The denim bends and warps, but you hear no tearing noise."
 pulses	"The pulses seem less there and less negative for a moment."
 old ice	"The old ice seems to glimmer a bit."
@@ -13472,7 +13472,7 @@ after fliptoing diapers:
 
 chapter ltb
 
-ltb is a privately-named vanishing thing. "A copy of LEAD[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here.". description of ltb is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.". printed name of ltb is "LEAD".
+ltb is a privately-named vanishing thing. "A copy of LEAD[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here.". description of ltb is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.". printed name of ltb is "LEAD". [ ltb = lead the book]
 
 a-text of ltb is "RYYR". b-text of ltb is "???R". parse-text of ltb is "x[sp]e[sp]a[sp]x". ltb is parse-spoilable.
 
@@ -13922,15 +13922,6 @@ every turn when player has curst crust and mrlp is presto and track-crust is tru
 	try eating curst crust;
 
 section turn rules
-
-after going (this is the parrot follows you rule):
-	if parrot is in an adjacent room:
-		if location of player is not bran barn and location of player is not loop pool:
-			say "The parrot follows you.";
-			move parrot to location of player;
-		else:
-			say "'Awk! Not sure you need to mess around there now.' The parrot does not follow you.";
-	continue the action;
 
 every turn when mrlp is presto and Rand is eager (this is the Leo-Rand lackey rule):
 	if location of player is maze entry:
@@ -18815,7 +18806,7 @@ after printing the locale description when mrlp is towers (this is the castle ne
 		if adude is clueneedy and any-reveal is false:
 			now adude is not clueneedy;
 			now any-reveal is true;
-			say "[line break][kloozorz corresponding to a guy of adude in table of guard-org][paragraph break]";
+			say "[kloozorz corresponding to a guy of adude in table of guard-org][paragraph break]";
 	if rm is unvisited and rm is a towloc listed in the table of towercomments:
 		choose row with towloc of rm in table of towercomments;
 		if there is a towquo entry:
@@ -19443,18 +19434,29 @@ to say if-fid:
 to say kid-first:
 	say "[if kid is male]Dirk[else]Kim[end if]"
 
-a smart kid is a reflexive person. "[if met-kid is false]'Hi! I'm [kid-full]! Thanks for getting rid of those big mean adults!' It's the kid you rescued. You exchange greetings[meet-kid][else if Dr Yow is in lalaland][what-kid-sez][else]Your friend [kid-full] the smart kid is here[if-tent][end if]."
+a smart kid is a reflexive person. "[kid-full] smiles [if smart kid is reflexive]nervously[else]happily[end if] at you, lost in technical abstract thought."
+
+before talking to smart kid when smart kid is reflexive:
+	say "[kid-full] says 'Sorry, I'm too distracted...I'm even distracted by how I'm distracted, and why I am, and why I shouldn't be, and how I'm wasting my smarts, but I better not think I'm TOO smart.'[paragraph break]Fidget, fidget, fidget." instead;
 
 a-text of smart kid is "RYRRYR". b-text of smart kid is "RGRRGR". parse-text of smart kid is "x[sp]i[sp]x[sp]x[sp]e[sp]d".
 
 understand "fidget" as smart kid when location of smart kid is location of player.
 
-every turn when smart kid is reflexive and player is in coastlines:
+every turn when smart kid is reflexive and player is in coastlines and smart kid is in coastlines:
 	say "[kid-full] continues to fidget and mutter a wish to be just a BIT smarter. Fidget, fidget, fidget."
 
-the atten is a privately-named vanishing scenery. printed name of atten is "attentiveness".
+the atblock is privately-named LLPish vanishing scenery. printed name of atten is "attentiveness".
 
-a-text of atten is "YRRYRRYRY". b-text of atten is "YRRYRPGPG". parse-text of atten is "-[sp]x[sp]x[sp]-[sp]x[sp]t[sp]i[sp]v[sp]e".
+kid-atten is a truth state that varies.
+
+after fliptoing atblock:
+	now kid-atten is true;
+	continue the action;
+
+understand "atblock" as atblock when debug-state is true.
+
+a-text of atblock is "YRRYRRYRY". b-text of atblock is "YRRYRPGPG". parse-text of atblock is "-[sp]x[sp]x[sp]-[sp]x[sp]t[sp]i[sp]v[sp]e".
 
 a bot boat is a thing. understand "botboat" and "bot-boat" as a bot boat.
 
@@ -19476,9 +19478,9 @@ check scaning bot boat (this is the scan boat components and not boat rule):
 
 to say if-tent:
 	if player is in coastlines:
-		say ", looking far-off, as if for inspiration he hasn't found yet";
+		say ", looking far-off, as if for inspiration [he-she] hasn't found yet";
 	if player is in subsector:
-		say ", looking [if smart kid is reflexed]attentive[else]too tentative[end if]"
+		say ", looking [if atblock is in lalaland]attentive[else]tentative[end if]"
 
 check answering smart kid that:
 	if the player's command matches the regular expression "\b(doctor|dr|yow)\b":
@@ -19492,7 +19494,7 @@ check scaning smart kid:
 	if smart kid is reflexed:
 		say "'Oh! Yeah! I bet I could make one of those, one day." instead;
 	if smart kid is reflexive and smart kid is in subsector:
-		say "[kid-full] continues to fidget as you scan [him-her]."
+		say "[kid-full] continues to fidget as you scan [him-her].";
 		say "[line break]";
 		continue the action;
 	if player is in subsector and atten is in subsector:
@@ -19509,7 +19511,7 @@ to say what-kid-does:
 	if Dr Yow is visible:
 		say "looking [if smart kid is reflexed]attentive[else]tentative[end if]ly at Dr. Yow";
 		continue the action;
-	say "drawing in the air and mouthing ideas[one of]. 'Hey! I'm [kid-full]! They tell me I'm a smart kid but, like, not REALLY smart enough to do REALLY cool stuff. Those mean adults kept bugging me about religion! Bo-ring! Maybe you can help me? I don't know how?' You just can't help notice the kid fidget, fidget, fidget"
+	say "drawing in the air and mouthing ideas[one of]. 'Hey! I'm [kid-full]! They tell me I'm a smart kid but, like, not REALLY smart enough to do REALLY cool stuff. Those mean adults kept bugging me about religion! Bo-ring! Maybe you can help me? I don't know how?'[paragraph break]You just can't help notice the kid fidget, fidget, fidget, even before [he-she] mumbles 'Sorry. That's even my nickname.' Ouch. Maybe you can help[or][stopping]"
 
 understand "dirk stam" and "dirk/stam" as smart kid when player is male.
 understand "kim darst" and "kim/darst" as smart kid when player is female.
@@ -19903,10 +19905,17 @@ carry out rowdying:
 [rowdy -> attentive]
 
 to kid-gets-it:
-	say "The kid's understanding is paltry at first, but [he-she]'s attentive, so [he-she] gets it partly, before raptly exclaiming 'Droll Dr. LOL!' Dr. Yow's confident now, explaining patly and aptly. 'Call me Dr. Leo--older version of you.' They converse animatedly about the dream of no-silage gasoline, but Dr. Yow convinces [him-her] to start small.[paragraph break]The lecture over, the kid says, 'Dr.?'[paragraph break]'Toy! Try! Do!' The kid smacks [his-her] forehead and runs off 'It--it won't just be pseudo-souped! Pen lids, spindle...'[paragraph break]'Wait! Kid! I have this lots-o-tools stool...' but the kid's gone.[paragraph break]'Wait! Where is it? O lost!' [he-she-c] searches [his-her] pockets, just in case.[paragraph break]'Dr. Yow's Drowsy. My lab: balmy. Long cameo.' Then, above [his-her] duck's quack, 'come along.' [he-she-c] follows a loading diagonal, off for some [if player is female](sic) [end if]bachelor lab chore. Before [he-she] does, [he-she] shows you a picture labeled CURSEE RESCUE, featuring--a very unflattering portrait of yourself, before sticking it in [his-her] pocket. 'That dude[if player is female], um, dudess[end if] with the powers. House arrest, I heard. You look like someone who cares.' Unintentional compliments are the nicest.";
+	say "The kid's understanding is paltry at first, but [he-she]'s attentive, so [he-she] gets it partly, before raptly exclaiming 'Droll Dr. LOL!' Dr. Yow's confident now, explaining patly and aptly. 'Call me Dr. Leo--older version of you.' They converse animatedly about the dream of no-silage gasoline, but Dr. Yow convinces [him-her] to start small.";
+	if kid-atten is false:
+		say "[line break]It seems to take a bit longer than it should, but Dr. Yow is patient and even having fun. You wonder if you could've helped a bit more, but you did enough--and [kid-first] will find [his-her] own clever life hacks to focus more.";
+	else:
+		say "[line break]The lecture goes extra quickly with [kid-first] attentive! So much common sense, but there's lots of deep stuff, too. Suddenly you understand how certain machines that confused you as a kid worked.";
+	say "[line break]The lecture over, [kid-first] says, 'Dr.?'[paragraph break]'Toy! Try! Do!'[line break][kid-full] smacks [his-her] forehead and runs off 'It--it won't just be pseudo-souped! Pen lids, spindle...'[paragraph break]'Wait! Kid! I have this lots-o-tools stool...' but the kid's gone.[paragraph break]'Wait! Where is it? O lost!' [he-she-c] searches [his-her] pockets, just in case.[paragraph break]'Dr. Yow's Drowsy. My lab: balmy. Long cameo.' Then, above [his-her] duck's quack, 'come along.' [he-she-c] follows a loading diagonal, off for some [if player is female](sic) [end if]bachelor lab chore. Before [he-she] does, [he-she] shows you a picture labeled CURSEE RESCUE, featuring--a very unflattering portrait of yourself, before sticking it in [his-her] pocket. 'That dude[if player is female], um, dudess[end if] with the powers. House arrest, I heard. You look like someone who cares.' Unintentional compliments are the nicest.";
 	now Dr Yow is in lalaland;
 	now duck is in lalaland;
-	now atten is in lalaland;
+	if atblock is in subsector:
+		now kid-atten is false;
+	now atblock is in lalaland;
 	now kid is in Actionless Coastlines;
 	now bot boat is in actionless coastlines;
 
@@ -20695,7 +20704,7 @@ a-text of man covered in inapt paint is "RYRRYRR". b-text of man covered in inap
 
 understand "flemish/painted man/" as man covered in inapt paint.
 
-The dandier arid den is a blue guardian.
+The dandier arid den is a blue guardian. "A dandier arid den rests [psgdir of arid den], too wide to cross. It may not be manned, but those things have security like crazy."
 
 a-text of arid den is "RRYYRYR". b-text of arid den is "??YYRGR". parse-text of arid den is "?[sp]?[sp]-[sp]-[sp]x[sp]e[sp]x".
 
@@ -20746,7 +20755,7 @@ a-text of atheists is "RYRRYYRR". b-text of atheists is "RYRRGYRR". parse-text o
 
 section danger garden
 
-the organised ego drains are a plural-named red guardian.
+the organised ego drains are a plural-named red guardian. "Ego-drains bubble up to the [psgdir of ego drains]."
 
 description of organised ego drains is "You recognize the ego drains as odd spirits that make you feel bad about yourself and your purpose."
 
@@ -20760,7 +20769,7 @@ description of natives is "They're not, like, a particular skin color or with a 
 
 a-text of natives is "RYYRYRR". b-text of natives is "?GYRYRR". parse-text of natives is "?[sp]a[sp]-[sp]x[sp]-[sp]x[sp]x".
 
-The bonker is a purple guardian. "You recognize a huge bonker to the [psgdir of bonker]. They're usually more bark than bite, but this one's certainly in the way, and they aren't just hired out for fun. Something interesting must be to the [psgdir of bonker].". description of bonker is "It's twice your height and upright and club-shaped and probably ready to [if bonker is passtried]re-[end if]bonk anyone who goes east while it's still functional, and boy does it look functional[one of]. Other guardians are not so violent. Must be something important back there[or][stopping]."
+The bonker is a purple guardian. "You recognize a huge bonker to the [psgdir of bonker]. They're usually more bark than bite, but this one's certainly in the way, and they aren't just hired out for fun. Gotta be something interesting that way.". description of bonker is "It's twice your height and upright and club-shaped and probably ready to [if bonker is passtried]re-[end if]bonk anyone who goes east while it's still functional, and boy does it look functional[one of]. Other guardians are not so violent. Must be something important back there[or][stopping]."
 
 a-text of bonker is "RRYRYR". b-text of bonker is "PRYPGR". parse-text of bonker is "b[sp]x[sp]o[sp]k[sp]e[sp]x". bonker is parse-spoilable.
 
@@ -20789,7 +20798,7 @@ ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, thoug
 an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."
 wait-seer	Anemic Cinema	east	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."
 man covered	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."
-arid den	Unblest Sunbelt	east	"The dandier arid den must have some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."
+arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."
 reed's ale	Ravages	east	"The Reed's Ale man blocks you--his costume looks stupid, but it's not encumbering--and asks you to help him out, and not just about buying, but about whether he should continue this career."	"The Reed's Ale man fidgets with his costume, unsure if he wants to take it off or put it on."
 grailman	Ravages	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."
 Ray Eck	Deposit	north	"The yacker controls his keycar so it runs over your foot. You briefly wonder if he has a twin named Kim."	"The yacker introduces himself as Ray Eck, grateful there's someone out here who doesn't mind talking."	"Ray Eck's keycar can't go that far, so you manage to escape."	keycar
@@ -20840,7 +20849,7 @@ natives	"The natives mumble how they KNEW something like that would happen to so
 iPrune	"The iPrune rears up and seems bigger for a second."
 pirates	"The pirates sing a colorful shanty about another lubber relegated to the deep."
 grailman	"The grailman mumbles something like 'well, we can't all be above average.'"
-reed's ale	"'The Reed's Ale man adjusts his half-on half-off costume, glad he wasn't the one dispelled--or whatever.'"
+reed's ale	"The Reed's Ale man adjusts his half-on half-off costume, glad he wasn't the one dispelled--or whatever."
 lois the hostile	"[the-hostile] mumbles passive-aggressively that the wages of sin is--that."
 hostile-is-he lot	"[the-hostile] mumble passive-aggressively that the wages of sin is--that."
 ingrates	"The ingrates complain there aren't enough of them to take over the space you opened before worrying they're next."
@@ -21191,6 +21200,17 @@ understand "recalm" and "recalm marcel" as a mistake ("Right idea, but it might 
 understand "radly" as a mistake ("Boo! That's too subtle for here. Maybe you could make Daryl look different so he feels less radly about himself.") when player is in trefoil and Daryl is in trefoil.
 
 volume otters
+
+section turn rules
+
+after going (this is the parrot follows you rule):
+	if parrot is in an adjacent room:
+		if location of player is not bran barn and location of player is not loop pool:
+			say "The parrot follows you.";
+			move parrot to location of player;
+		else:
+			say "'Awk! Not sure you need to mess around there now.' The parrot does not follow you.";
+	continue the action;
 
 book otters specific verbs
 
@@ -26607,6 +26627,8 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]the denim in Savager Ravages could've been MINED.";
 		if saver is reflexive:
 			say "[2dmiss of cur-reg]the REPLAY PLAYER letters on the saver could've become PEARLY.";
+		if kid-atten is false:
+			say "[2dmiss of cur-reg]you could've made [kid-full]ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if flowerpot is reflexive:
 			say "[2dmiss of cur-reg]you could've made the succor crocus DINGY to stop it dying.";
 		if serpent is in limits:

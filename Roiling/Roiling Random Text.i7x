@@ -2456,7 +2456,6 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Eustis Tissue"	false
 "Eutsler's Streusel"	false
 "Evangelist Elevatings"	false
-"Evanston Nav-Notes"	false
 "Evaristo's Assortive Savoriest"	false
 "Eve's Gig Veggies"	false
 "Evelina's Vaseline"	false
@@ -23813,6 +23812,7 @@ blurb
 "AllRite Literal Tallier" []
 "Assigner-Or-Organisers"
 "Backlogs-Sack Blog"
+"Evanston Notes-Nav"
 "Banks-It Task-Bin"
 "Can-Slog Scan-Log"
 "Classiest List-Cases"
