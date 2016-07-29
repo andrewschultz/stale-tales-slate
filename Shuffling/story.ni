@@ -4410,6 +4410,29 @@ xmxing is an action applying to one thing.
 understand the command "xx" as something new.
 
 understand "xx [something]" as xmxing.
+understand "xx " as xmxing.
+
+rule for supplying a missing noun when xmxing:
+	if player is in the nick:
+		now noun is t-n;
+		continue the action;
+	if player is in roomroom:
+		now noun is r2;
+		continue the action;
+	if player is in moor:
+		if anapest is in moor:
+			now noun is anapest;
+		else:
+			now noun is m2;
+		continue the action;
+	if player is in roman manor:
+		now noun is final-exits;
+		continue the action;
+	if player is in tiles:
+		now noun is ts;
+		continue the action;
+	say "Nothing really sticks out. You may have to XX something specific.";
+	reject the player's command;
 
 xray-cheat is a truth state that varies.
 
@@ -4421,7 +4444,7 @@ check xmxing:
 			say "You lost your x-ray vision, so you can only just examine, instead.";
 		try examining the noun instead;
 	if noun is a direction:
-		say "[if player is in sf or player is in rf]You can't see which way to go--maybe use your other senses[else]Just try going that way instead[end if]." instead;
+		say "[if player is in sf or player is in rf]You can't see which way to go--maybe use your other senses[else]Just try going [noun] instead[end if]." instead;
 
 carry out xmxing:
 	if xray-cheat is true:
@@ -4432,16 +4455,22 @@ carry out xmxing:
 		if saltine is in lalaland:
 			say "You lost your x-ray vision." instead;
 		try examining the noun instead;
+	if noun is r2:
+		if moor is visited:
+			say "You non-magically space out and realize you can go back to the moor.";
+			the rule succeeds;
+		say "Your vision swirls, and you see a moor.";
+		ditch-saltine instead;
+	if noun is m2:
+		say "You have a very non-magical vision of the room you were in before you jumped to the moor.";
+		the rule succeeds;
+	if noun is t-n:
+		say "Your vision swirls, and you see a kitchen.";
+		ditch-saltine instead;
 	if noun is the location:
-		if player is in the nick:
-			say "Your vision swirls, and you see a kitchen.";
-			ditch-saltine instead;
 		if player is in alley and words are in alley:
 			say "You stare at where the words may be coming from.";
 			try xmxing words instead;
-		if player is in roomroom and moor is unvisited:
-			say "Your vision swirls, and you see a moor.";
-			ditch-saltine instead;
 		if player is in the moor:
 			if pat is visible:
 				say "You imagine a peasant coming by to disrupt Pat's poetry.";
@@ -4517,7 +4546,7 @@ carry out xmxing:
 		say "The number sixteen takes prominence on the dial for a moment. You shake your head, and it disappears. Weird.";
 		ditch-saltine instead;
 	if noun is warts:
-		say "You can't see them, but you remember the palindrome ''No, too stupid a fad. I put soot on ...'" instead;
+		say "You can't see them, but you remember the palindrome 'No, too stupid a fad. I put soot on ...'" instead;
 	if noun is cask and sack is in lalaland:
 		say "You already changed the cask to a sack[if straw is in lalaland], and you don't see any reason to do so again[else], and if you need to do so again, you won't forget[end if]." instead;
 	if noun is sack:
@@ -4531,8 +4560,9 @@ carry out xmxing:
 		say "You imagine a panel of experts critiquing the poem, before it was folded. Hm. You don't need THAT sort of panel.";
 		ditch-saltine instead;
 	if noun is scraped wall:
-		say "You imagine the scraped wall [if scraped wall is not hayfilled]gets stuffed with hay, then[else], already being a haywall,[end if] becomes a haywall.";
-		preef hallway;
+		say "You imagine the scraped wall[if scraped wall is not hayfilled] gets stuffed with hay, then[else], already being a haywall,[end if] becomes a haywall.";
+		if scraped wall is not hayfilled:
+			preef hallway;
 		ditch-saltine instead;
 	if noun is poem and pat is in the moor:
 		try xmxing the location instead;
@@ -4546,7 +4576,7 @@ carry out xmxing:
 		if gardenia is not in lalaland:
 			say "The faeries buzz, perturbed, as you take a little too long to gaze at the merchandise." instead;
 	if noun is motto:
-		say "You thought you saw the tomato whiz by 'a motto,' there.";
+		say "You thought you saw a tomato whiz by 'a motto,' there.";
 		ditch-saltine instead;
 	if noun is antlers:
 		say "You take care not to drop any crackers on the rug. A large FOR RENT sign seems to obscure the antlers for a moment.";
@@ -4569,30 +4599,45 @@ carry out xmxing:
 	if noun is links:
 		say "[v-b]you see [unless china is in lalaland]some china and also [end if]kilns, to bake clay in, or something.";
 		ditch-saltine instead;
-	if noun is red bull burdell:
+	if noun is red bull burdell or noun is toe:
 		say "You squint at Red Bull Burdell, trying to notice what he could become, but all you notice is his infected toe as he yells 'GET OUT.' Maybe you could pull it...no, not pull...well, there are only six possibilities...";
 		ditch-saltine instead;
 	if noun is final-exits:
 		say "They just seem to EXIST. Maybe you can, too.";
 		ditch-saltine instead;
+	if noun is a teleporter:
+		if noun is t-n:
+			say "[v-b]you see a kitchen." instead;
 	if noun is flippable: [start general stuff]
 		if there is a the-to corresponding to the-from of noun in regana of mrlp:
-			say "[v-b]you see [the-to corresponding to the-from of noun in regana of mrlp].";
+			say "[v-b]you see [salt-text of noun][the-to corresponding to the-from of noun in regana of mrlp].";
 			ditch-saltine instead;
 		else:
 			say "You give the saltine a funny look. Like you're not sure if it could give you help. This is a [bug-report]" instead;
-	if player is in the nick:
-		say "Perhaps just staring at the air will do something." instead;
+	if player is in the nick and noun is not t-n:
+		say "You let your eyes wander.[paragraph break]";
+		try xmxing t-n instead;
 	say "Though you squinted extra, you don't see anything beyond what you normally would've. Well, maybe some other time.";
 	try examining the noun instead;
 	the rule succeeds.
+
+to say salt-text of (xxx - a thing):
+	if xxx is cabinet or xxx is store f or xxx is store i or xxx is store r, say "a "; [stores]
+	if xxx is ones or xxx is noughts, say "a "; [forest]
+	if xxx is cake pan or xxx is cult tee or xxx is tall trio or xxx is spearman or xxx is taco, say "a "; [sortie]
+	if xxx is anapest or xxx is roadblock or xxx is smilies, say "a ";
+	if xxx is trees button or noun is hoots button, say "a ";
+	if xxx is cask, say "a ";
+	if xxx is beats or xxx is dry cake or xxx is brocade, say "a "; [metros]
+	if xxx is heaths or xxx is begonias or xxx is words, say "a ";
+	if xxx is poles or xxx is riot, say "a "; [resort]
 
 to say v-b:
 	say "Your vision blurs a bit, and instead ";
 
 instead of eating the saltine:
 	if gateman is visible:
-		say "[one of]Old Man Almond coughs. 'You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static [if static is in lalaland or attics are in lalaland]was[else]is[end if] just practice[or]You reckon you can wait until the real quest[stopping].'";
+		say "[one of]Old Man Almond coughs. 'You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static [if static is in lalaland or attics are in lalaland]was[else]is[end if] just practice.'[or]You reckon you can wait until the real quest.[stopping]";
 		pad-rec "xx";
 		the rule succeeds;
 	if faeries are visible:
@@ -5850,7 +5895,7 @@ a whiff of stew is a guider. godir of whiff of stew is west. description of whif
 
 understand "smell" as whiff of stew when whiff of stew is in location of player.
 
-a thorn is a guider. godir of thorn is north. description of thorn is "You won't step on it or nay of its brethren. Maybe it indicates the way to go, if you stop and think for a moment.". the rgtext of thorn is "[rc][rc][rc][rc][rc]". the lgth of thorn is 5. gpos of thorn is 5. rpos of thorn is 2. cert-text of thorn is "-[d1][d1][d1][d1]". rect-text of thorn is "N[d1][d1][d1][ast]H".
+a thorn is a guider. godir of thorn is north. description of thorn is "You won't step on it or any of its brethren. Maybe it indicates the way to go, if you stop and think for a moment.". the rgtext of thorn is "[rc][rc][rc][rc][rc]". the lgth of thorn is 5. gpos of thorn is 5. rpos of thorn is 2. cert-text of thorn is "-[d1][d1][d1][d1]". rect-text of thorn is "N[d1][d1][d1][ast]H".
 
 an aroma of teas is a guider. godir of aroma of teas is east. description of teas is "You're not refined enough to know which teas. It's kind of a combination of them, a new direction in olfactory sense.". the rgtext of teas is "[rc][rc][rc][rc]". the lgth of teas is 4. gpos of teas is 2. rpos of teas is 1. cert-text of teas is "-[d1][d1][d1]". rect-text of teas is "E[d1][d1][ast]T".
 
@@ -6662,9 +6707,11 @@ chapter The Nick
 
 The Nick is a room in Sortie. "You're locked in this arty suite of austerity by a great grate. It's a more forbidding version of the gateway in the Notices Section. You doubt even Old Man Almond could magic it open. There appears to be no standard way out. It has no accommodations, not even unsoft futons. This is a saner snare than the centrifuge, but it doesn't look like you'll drug a guard or reveal a lever to escape. At least there is some graffiti[if player has gadget][beepity-nick][end if]."
 
-t-n is privately-named scenery in the nick. printed name of t-n is "the nick". understand "nick" as t-n. the rgtext of t-n is "[rc][rc][rc][rc][rc][rc][rc]". the lgth of t-n is 7. gpos of t-n is 7. rpos of t-n is 4. the cert-text of t-n is "-[d1][d1][d1][d1][d1][d1]". the rect-text of t-n is "K[d1][d1][d1][d1][d1][ast]N".
+t-n is privately-named scenery in the nick. "The nick is all around.". printed name of t-n is "the nick". understand "nick" as t-n. the rgtext of t-n is "[rc][rc][rc][rc][rc][rc][rc]". the lgth of t-n is 7. gpos of t-n is 7. rpos of t-n is 4. the cert-text of t-n is "-[d1][d1][d1][d1][d1][d1]". the rect-text of t-n is "K[d1][d1][d1][d1][d1][ast]N".
 
-t-n is undesc.
+instead of doing something with t-n:
+	if action is procedural:
+		continue the action;
 
 section how to get here
 

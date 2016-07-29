@@ -1331,6 +1331,7 @@ blurb
 "Envy-Fear Navy Reef"
 "even-worse sewer-oven"
 "Feverish Serf Hive"
+"Feverish Serf Hive"
 "Flay-Hide Hayfield"
 "Fools['] Gold Flood-Slog"
 "Forsaken Oak-Ferns"
@@ -2158,6 +2159,7 @@ blurb
 "Lost revue: our svelte true loves!"
 "Lost war, rats! Low trawl, so."
 "Lots ran to snarl or slant."
+"Lots ran to snarl or slant."
 "Loud bang! A gun? Bold!"
 "Louts rue our lutes['] true soul."
 "Love fear? Leave for Oval Reef! Loaf, ever!"
@@ -2613,6 +2615,7 @@ blurb
 "The sofa: oh, a fest of hates!" []
 "Soft hint: shift not this font!"
 "Soft-worn snow fort, oft sworn to frowns."
+"The solar loathers lather so."
 "The solar loathers lather so."
 "Solemn days. Nosy damsel, slay demons!"
 "A solid sad oil, laid so."

@@ -1147,10 +1147,14 @@ Elf Row's Flowers
 >ask faeries about brocade
 "It is free. But useless to us."
 
+>ask faeries about gardenia
+They see your gardenia and snatch it away before you can offer properly. "Yes! Yes!" They're visibly impressed. "Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one. And take the brocade, too. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need."
+>undo
+
 >get brocade
 
 >ask faeries about brocade
-"It is free. But useless to us."
+"Do with it what you need."
 
 >ask faeries about drainage
 "Perhaps you can turn something in this city into a flower. We are out of ideas. How can drainage become a flower?"
@@ -1159,7 +1163,7 @@ Elf Row's Flowers
 "It is terrible! Our hearing is even more delicate than a clumsy human's. We can do no decent long-term magic with it around."
 
 >ask faeries about gardenia
-They see your gardenia and snatch it away before you can offer properly. "Yes! Yes!" They're visibly impressed. "Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one. And take the brocade, too. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need."
+They see your gardenia and snatch it away before you can offer properly. "Yes! Yes!" They're visibly impressed. "Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need."
 
 >ask faeries about xyzzy
 "You are our hero! Thank you so much! We are sure you can do something with your reward! Now go and save the city."
