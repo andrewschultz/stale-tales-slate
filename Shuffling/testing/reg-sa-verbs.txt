@@ -4,7 +4,7 @@
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* silly starting stuff
+* intro-verbiage
 
 >au 1
 
@@ -105,7 +105,7 @@ I couldn't find anything like that to hint.
 It's brass, you guess, and it probably can't be too hard to play.
 
 >x doorway
-WRONG
+It's got a big musical chord painted on the front above where the bulge was. It's covered by a blot, too. You have no clue where the door could lead now you've opened it.
 
 >blow pad
 It really only makes sense to BLOW an instrument. Well, CLEAN sense.
@@ -114,14 +114,11 @@ It really only makes sense to BLOW an instrument. Well, CLEAN sense.
  >play pad
 That's not an instrument you can play.
 
-> *play bugle*
+>play bugle
 Nothing further happens.
 
->play bugle
-WRONG
-
 >x doorway
-WRONG
+It's really just the outline of a doorway now. You can just enter it.
 
 >in
 >x toga
@@ -140,14 +137,14 @@ Well, they're tangled enough, you'd probably get hurt going through them.
 >goat
 
 >pat goat
-It doesn't seem to realize it did anything for you. It's probably still confused. Probably irritable from eating all those big gigantic thickets. Don't fluster the restful.
+The goat is off in dreamland and doesn't need disturbing after that meal, whether it was good or bad. Don't fluster the restful.
 >pet goat
 Don't fluster the restful.
 >stroke goat
 Don't fluster the restful.
-
 >kick goat
-That'd be cruel. He's a lazy sort of ornery, not violent.
+Don't fluster the restful.
+
 >kick me
 I hope it's not the puzzles that made you try this.
 
@@ -163,55 +160,63 @@ You hear a big VOOP. The writing on the board is replaced by even more writing, 
 
 
 >x gate
-WRONG
+You can't see a lot. It's dark and murky.  It says GETAWAY at the top, WARMUP on the side facing you and UM, WARP on the other, but there's a little something else to READ.
+
+Maybe you'll spend long enough there, your severance check'll make it to your mailbox before you get back.
+
+>read gate
+"E. g., man, TA!" is written in red, beneath the WARMUP/UM, WARP text. The red text is just like A TAN GEM and such on the broad board. There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice.
 
 >lift gateway
-WRONG
+It's open. It's just unclear where it leads.
 
 >enter gateway
 >x mega-ant
-WRONG
+Boy, is it bright red! And fierce! It's clicking aggressively at you.
 
 >x noise
-WRONG
+It's not especially painful to listen to, but you probably don't have to.
+
 >attics
 >x attic
-WRONG
+They fit perfectly on what was once the top of the house. Maybe there's no way a doll could get there, but the house looks nicer now.
 >x dollhouse
-WRONG
+It's much nicer and quieter now that you tacked the attics on.
 
 >gateman
 
 >talk to gateman
-WRONG
+You engage in small talk, which peters out. Perhaps you should ASK about something, instead.
+
+"Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The getaway! General advice! No time to scold clods asking about--whatever you just mumbled about."
 
 >x man
-WRONG
+"Stop staring!" he booms. "You should probably get equipped. Get the gadget in the cabinet."
 >x gate man
-WRONG
+"Stop staring!" he booms. "You should probably get equipped. Get the gadget in the cabinet."
 
 >x fellow
 
 >get gadget
 
 >talk to gateman about gadget
-WRONG
+"Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
 >ask gateman about gadget
-WRONG
+"Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
 >tell gateman about gadget
-WRONG
+"Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
 
 >ask gateman about xyzzy
-WRONG
+"Fool! That magic word has no place alongside your magic abilities."
 >tell gateman about xyzzy
-WRONG
+"Fool! That magic word has no place alongside your magic abilities."
 
 >get saltine
 
 >slander me
-WRONG
+That's not a useful action here. I mean, slander's never REALLY useful, but yeah.
 >slander gateman
-WRONG
+That's not a useful action here. I mean, slander's never REALLY useful, but yeah.
 
 >in
 
@@ -219,216 +224,278 @@ WRONG
 You won't get caned for that,
 
 >walkthrough
-WRONG
+This game's gblorb file should come packaged with an InvisiClues-style HTML file and, in older versions, a text file called walkthrough.txt. However, there is a risk that will spoil a lot you won't want, especially since the areas are compartmentalized.
+
+You can ask for hints with the HINT command--they should deal with the puzzle currently restricting you the most and may be doled out slowly to avoid spoilers.
+
 >help
-WRONG
+What you did with the odor will clue the rest of the game. This is a part of all the puzzles in the game, but you'll have to do other things, too.
 >info
-WRONG
+What you did with the odor will clue the rest of the game. This is a part of all the puzzles in the game, but you'll have to do other things, too.
 >instructions
-WRONG
+What you did with the odor will clue the rest of the game. This is a part of all the puzzles in the game, but you'll have to do other things, too.
 
 >xyzzy
-WRONG
+What a mess! Hard to do anything with that.
 >xyzzy
-WRONG
+This sort of game, I can only make lame meta-jokes with that...you should've figured that out.
 >xyzzy
-WRONG
+Testing all 29 possibilities...just to make sure...nope.
 >xyzzy
-WRONG
+Testing the 119 possibilities...including duplicates...
 
 >xx store i
-WRONG
+Store I has pictures of famous political figures in the window--Winston Churchill, Benjamin Disraeli and that great charmer, Margaret Thatcher (*). You think you remember what party they belonged to. The pictures are big enough to obscure--almost--the outline of a trap door behind them.
+[NOTE: this is not a political statement on their party.]
 >eat saltine
-WRONG
+You're not sure what the saltine is supposed to do, but your vision looks a little weirder after eating it. Some things seem especially sharp if you stare doubly hard at them.
 >xx store i
-WRONG
+Your vision blurs a bit, and instead you see a sortie.
+You blink, and things look a little less sharp. The saltine's done its work.
 >xx store m
-WRONG
+You lost your x-ray vision, so you can only just examine, instead.
+
+There's no window in store m--just a detailed map of a subway.
+
+You can X STORES to examine all the stores.
 
 >parse
-WRONG
+The game is now parsing output from the gadget.
 >scan f
-WRONG
->spare
-WRONG
->scan f
-WRONG
->spare
-WRONG
->scan f
-WRONG
->parse
-WRONG
->scan f
-WRONG
+Before scanning for the first time, you fumble with the gadget and note it is set to CERTIFY.
+The gadget beeps once. A series of lights comes across: RRRRRR (R = red, G = green). Hmm, that means ------. 
+You can toggle spaces between the letters with SPACE(S), or you can set them directly with SPACE(S) ON/NO SPACE(S), or SON/NOS for short.
 
 >spare
->no tip
-WRONG
->no tip
-WRONG
->forets
+The game is now not parsing output from the gadget.
+>scan f
+The gadget beeps once. A series of lights comes across: RRRRRR.
+!Hmm,
+>spare
+The game is already not parsing output from the gadget.
+>scan f
+The gadget beeps once. A series of lights comes across: RRRRRR. 
+!Hmm,
+>parse
+The game is now parsing output from the gadget.
+>scan f
+The gadget beeps once. A series of lights comes across: RRRRRR. Hmm, that means ------. 
+
+>spare
 >opt in
-WRONG
+Now pointing you with an additional hint when you have the right anagram letters. NO TIP turns this back off.
 >opt in
-WRONG
+You're already being pointed to extra hints.
 >forets
+That seemed right but didn't seem quite natural.
+>no tip
+Now hiding tips in favor of a generic response. OPT IN turns this back on.
+>no tip
+You're already requesting no tip.
+>forets
+You feel a slight psychic push-pull coming from Store F. Keep at it.
 
 >metros
 >x roadsign
 >x writing
 
 >help off
-WRONG
+This will shut off hints for the remainder of the play session. You will need to restart to see them again. Are you sure?
+Done.
 >hint off
-WRONG
+Hints are already disabled.
 >info off
-WRONG
+Hints are already disabled.
 >hint off
-WRONG
+Hints are already disabled.
 
 >hint store i
-WRONG
+Hints are disabled for this session.
 
 #####################forest
 
-* forest-understandage
+* forest-verbiage
 
 >sr nw
 
 >ts
 
->eat saltine
+>bite saltine
 It'll only take one bite to EAT. You can't save half for later and get another hint.
 
 >scan store f
 >access
-WRONG
+Screen reader accessible text is now on.
 >scan store f
+The gadget beeps once. A series of lights comes across: R R R R R R. 
 >access
-WRONG
+Screen reader accessible text is now off.
 >scan store f
-WRONG
+The gadget beeps once. A series of lights comes across: RRRRRR. 
 
 >son
-WRONG
+Spaces in gadget output are now on.
 >scan store f
-WRONG
+The gadget beeps once. A series of lights comes across:  R R R R R R. 
 >space
-WRONG
+Spaces in gadget output are already on.
 >scan store f
-WRONG
+The gadget beeps once. A series of lights comes across:  R R R R R R. 
 >space on
-WRONG
+Spaces in gadget output are already on.
 >scan store f
-WRONG
+The gadget beeps once. A series of lights comes across:  R R R R R R. 
 >spaces on
-WRONG
+Spaces in gadget output are already on.
 >scan store f
-WRONG
+The gadget beeps once. A series of lights comes across:  R R R R R R. 
 
 >nos
-WRONG
+Spaces in gadget output are now off.
 >scan store f
-WRONG
+The gadget beeps once. A series of lights comes across: RRRRRR. 
 >no space
-WRONG
+Spaces in gadget output are already off.
 >scan store f
-WRONG
+The gadget beeps once. A series of lights comes across: RRRRRR. 
 >no spaces
-WRONG
+Spaces in gadget output are already off.
 >scan store f
-WRONG
+The gadget beeps once. A series of lights comes across: RRRRRR. 
 
 >glean
-WRONG
+You stare into the blue lube for a bit. You see a small story unfold.
+
+You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble.
+
 >hanker
-WRONG
+You stare into the blue lube for a bit. You see a small story unfold.
+
+You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble.
+
 >hkr
-WRONG
+You stare into the blue lube for a bit. You see a small story unfold.
+
+You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble.
+
 >nk
-WRONG
+You stare into the blue lube for a bit. You see a small story unfold.
+
+You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble.
+
 >kr
-WRONG
+You stare into the blue lube for a bit. You see a small story unfold.
+
+You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, store M, Store I, Store F and Store B when you do.
+[You decide to keep a running to-do entry in your notebook of stuff you haven't tackled, yet.]
 >harken
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, store M, Store I, Store F and Store B when you do.
 >hrn
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, store M, Store I, Store F and Store B when you do.
 >rk
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, store M, Store I, Store F and Store B when you do.
 >kn
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, store M, Store I, Store F and Store B when you do.
 
 >c store f
-WRONG
+The gadget beeps once. A series of lights comes across: RRRRRR. 
 >cer store f
-WRONG
+The gadget beeps once. A series of lights comes across: RRRRRR. 
 >cert store f
-WRONG
+The gadget beeps once. A series of lights comes across: RRRRRR. 
 >certify store f
-WRONG
+The gadget beeps once. A series of lights comes across: RRRRRR. 
 
 >r store f
-WRONG
+(switching to rectify first)
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG.  (R = red, G = green, B = blue).
+
 >rec store f
-WRONG
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG. 
 >rect store f
-WRONG
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG. 
 >rectify store f
-WRONG
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG. 
 
 >cr store f
-WRONG
+You get to scanning, twiddling from rectify to certify and back.
+
+The gadget beeps once. A series of lights comes across: RRRRRR. 
+
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG. 
+
 >rc store f
-WRONG
+You get to scanning, twiddling from rectify to certify and back.
+
+The gadget beeps once. A series of lights comes across: RRRRRR. 
+
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG. 
+
+#### extra space??
 
 >x device
-WRONG
+It looks like a wall stud sensor, six inches by twelve, with a screen on the top. A show hows tag you can read is tied by a tight knot to the handle, which narrows where it meets the main part. The gadget crackles with greeny energy. A tip in a pit on one of its edges points to RECTIFY.
+
+You see a blurb above a button labeled SECURE/RECUSE.
+
 >x side
-WRONG
+The tip points to RECTIFY, but you can switch it back to CERTIFY unless you push SECURE.
 
 >secure
-WRONG
->recuse
-WRONG
->recuse
-WRONG
+You push the button, and it starts glowing. The tip in the pit clicks.
 >secure
-WRONG
+You push the button, and it stops glowing. The tip in the pit vibrates.
+>secure
+You push the button, and it starts glowing. The tip in the pit clicks.
+
+>recuse
+The RECUSE button is for after you've solved two areas, but you haven't solved any, yet.
 
 >forest
 
 >about
-WRONG
+This game, the first of two in the Stale Tales Slate, is about a certain sort of wordplay. I think you know it, now that your score is positive?
+
 >credits
-WRONG
+Tester Street residents ("no on tiredness:")
+
 >release
-WRONG
+Each version of Shuffling Around should contain release notes, but here is a brief summary:
+
 >tech
-WRONG
+All three of these people's efforts spilled into this game's sequel in the Stale Tales Slate, A Roiling Original. So I am doubly thankful.
+
 >sites
-WRONG
+PERL for letting me parse through word-to-word anagrams and also helping me break one promising word into two.
+
 >options
-WRONG
+You read about options in your dope tan notepad.
+
 >verb
-WRONG
+--X or EXAMINE an object. If an object has writing, READ it instead of X WRITING.
+
+##### holy extra line breaks Batman
 >verbs
-WRONG
+--X or EXAMINE an object. If an object has writing, READ it instead of X WRITING.
 
 >poss
-WRONG
+Switching on minimum/maximum available point notification in the status line. 
+
+[Note: this is a quasi-spoiler of sorts, since watching the maximum possible score drop may mean you have missed an easter egg. Or watching the minimum score increase may mean you found one.]
 >poss
-WRONG
+Switching off minimum/maximum available point notification in the status line. 
 >poss
-WRONG
+Switching on minimum/maximum available point notification in the status line. 
+!quasi-spoiler
 
 >knock forest
-WRONG
+Better just to try to enter.
+
 >knock on forest
-WRONG
+Better just to try to enter.
 
 >in
 
@@ -437,58 +504,71 @@ WRONG
 
 
 >gt softer forest
-WRONG
+You're already here. Or there. The precise grammar's neither here nor there.
+
 >gt softer
-WRONG
+You're already here. Or there. The precise grammar's neither here nor there.
+
 >gt rest of forest
-WRONG
+You haven't gotten there yet.
+
+>certify
+>rectify
 
 >north
 
 >x smell
-WRONG
+It smells pretty good, even if you can't detect any specific ingredients. But which way is it from?
 
 >certify
-WRONG
+You're picking something up. Probably the whiff of stew.
+
+The gadget beeps once. A series of lights comes across: RRRR. 
+
 >rectify
-WRONG
+You're picking something up. Probably the whiff of stew.
+
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBG. 
 
 >west
 Self-ID Fields
 
 >x bearded man
-WRONG
+Too late. He's gone. But here's another.
+
+Dude, an undead!
+
 >x bearded guy
-WRONG
+Too late. He's gone. But here's another.
 >x bearded figure
-WRONG
+Too late. He's gone. But here's another.
 >x man
-WRONG
+Too late. He's gone. But here's another.
 >x guy
-WRONG
+Too late. He's gone. But here's another.
 >x figure
-WRONG
+Too late. He's gone. But here's another.
 
 >x bearded men
-WRONG
+They're a fine ol' line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.
 >x bearded guys
-WRONG
+They're a fine ol' line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.
 >x bearded figures
-WRONG
+They're a fine ol' line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.
 >x men
-WRONG
+They're a fine ol' line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.
 >x guys
-WRONG
+They're a fine ol' line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.
 >x figures
-WRONG
+They're a fine ol' line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.
 >x line of no life
-WRONG
+They're a fine ol' line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.
 >x life
-WRONG
+They're a fine ol' line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.
 >x line
-WRONG
+They're a fine ol' line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.
 >x undead
-WRONG
+They're a fine ol' line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you.
 
 >w
 
@@ -498,22 +578,22 @@ WRONG
 >x meat
 >maps
 >x map
-WRONG
+They're labeled "ALMOST LOST, MA" and claim to lead to the slayer layers and help you go off of fog
 >beard
 
 >beard
-WRONG
+It's a deplorably generic fake beard. It has a couple little bits that hook, one at the center and one at the edges, but they're not in use.
 
 >w
 >x chicken
 >x meat
-WRONG
+It's ugly and frozen and stamped 100% amalgamatable.
 >x cow
 >x meat
-WRONG
+It's ugly and frozen and stamped 100% amalgamatable.
 
 >x livers
-WRONG
+You can't use multiple objects with that verb.
 
 >peel chicken
 You have nothing to peel anything with.
@@ -523,130 +603,149 @@ You have nothing to peel anything with.
 You have nothing to peel anything with.
 
 >x disguise
-WRONG
+It's a deplorably generic fake beard. It has a couple little bits that hook, one at the center and one at the edges, but they're not in use.
 
->east
+>e
+>e
+
 >x 1s
-WRONG
+They easily pass the smell test for being ones.
 >x one
-WRONG
+They easily pass the smell test for being ones.
 >x 0s
-WRONG
->x zero
-WRONG
+One look at them makes you feel like solving silly word puzzles, shooting stuff and chewing bubble gum.
+
+There is no bubble gum in this game.
+>x zeros
+One look at them makes you feel like solving silly word puzzles, shooting stuff and chewing bubble gum.
 >x zeroes
-WRONG
+One look at them makes you feel like solving silly word puzzles, shooting stuff and chewing bubble gum.
 
 >nose
 
 >x semicircles
+Two upside-down semicircles next to each other, engraved in each of the dashes. Nothing too deep, just an imprint.
 >x imprint
+Two upside-down semicircles next to each other, engraved in each of the dashes. Nothing too deep, just an imprint.
 
 >shades
 >x shades
+They're not dark enough to prevent you seeing anything. You suspect they'd fit your face just fine. They also have a small hook between the lens bits.
 >x shade
+They're not dark enough to prevent you seeing anything. You suspect they'd fit your face just fine. They also have a small hook between the lens bits.
 >x glasses
+They're not dark enough to prevent you seeing anything. You suspect they'd fit your face just fine. They also have a small hook between the lens bits.
 
 >shotgun
 
 >hook nose to beard
+[NOTE: while this game generally maps ATTACH/TIE X TO Y to PUT X ON/IN Y, PUT ON/IN is a bit more specific and is thus recommended.]
+
+The nose hooks over the beard easily and naturally.
 >hook shades to beard
-disguise!
+The shades hook over the beard (with a nose hooked to it) easily and naturally.
+
+You've made a full disguise now!
 
 >w
 >n
 
 >x lich
-WRONG
+They seem to be moaning about being reduced to a tool of greater evil.
 
 >chisel
 
 >x cloth
-WRONG
+You feel fear going near the spread. It might lash out at you if you get too close, or if you tried to cut it with something.
 
 >drapes
 
 >unfold drapes
->WRONG
+They are much too heavy and thick.
 
 >cut drapes with notepad
-WRONG
+That's not sharp enough to cut.
 
 >x cloth
-WRONG
+Too thick and heavy to walk through.
 
 >retry
 >i
-WRONG
+!  a full-blown beard disguise (being worn)
+
 >enter forest
 >i
-WRONG
+  a full-blown beard disguise (being worn)
 
 >terry
 >i
-WRONG
+!  a full-blown beard disguise (being worn)
 >enter forest
 >i
-WRONG
+  a full-blown beard disguise (being worn)
 
 >s
 >w
 
 >x blade
-WRONG
+Sharp.
 >x blades
-WRONG
+Sharp.
 >x sabled blade
-WRONG
+Sharp.
 >x sabled blades
-WRONG
+Sharp.
 >x blender
-WRONG
+It's got a pair of sabled blades that rotate opposite to each other when activated.
 
 >chisel chicken
-WRONG
+Cr-r-r-r-k. The chisel successfully leverages the freezer-burned chicken liver from the wall.
 >undo
 >peel chicken with chisel
-WRONG
+Cr-r-r-r-k. The chisel successfully leverages the freezer-burned chicken liver from the wall.
 >undo
->peel chicken with settler
-WRONG
->pry chicken with settler
-WRONG
->scrape chicken with settler
-WRONG
+>peel chicken with gadget
+Wrong instrument.
+>pry chicken with gadget
+Wrong instrument.
+>scrape chicken with gadget
+Wrong instrument.
 
 >peel chicken liver
 >peel cow liver
 
 >grind notepad
-WRONG
+The canister's for processing food, and that doesn't count.
+
+>put chicken in canister
+>put cow in canister
 
 >x glob
-WRONG
+Amalgamated well enough that you can't recognize which parts were cow and chicken. You suspect they're an upgrade from the individual livers but need to find out how.
 >x glop
-WRONG
+Amalgamated well enough that you can't recognize which parts were cow and chicken. You suspect they're an upgrade from the individual livers but need to find out how.
 
 >e
 
 >grind notepad
-WRONG
+There appears to be nothing that can grind anything here.
 
 >n
 >sliver
 >cut drapes
 
 >x door
-WRONG
+It's pretty imposing. That spread, and those drapes, were huge. And what's behind--well, you can't see much, and it'd be nice to have some sort of guide.
 >x doorway
-WRONG
+It's pretty imposing. That spread, and those drapes, were huge. And what's behind--well, you can't see much, and it'd be nice to have some sort of guide.
 
 >x map
 >silver
 >put silver in shotgun
+The silver fits in well. You hear some melodramatic nonsense in your head about a dreamer rearmed. More practically, you're ready for a firefight.
 >undo
 >load shotgun
-WRONG
+The silver fits in well. You hear some melodramatic nonsense in your head about a dreamer rearmed. More practically, you're ready for a firefight.
 >undo
 >load silver in shotgun
 
@@ -654,26 +753,26 @@ WRONG
 >x maps
 
 >x a
-WRONG
+A, E, I, O, U and Y, piled up in a pyramid. Hm, they are not just ANY letters. Yup, they're pretty much shouting out (figuratively) "We're vowels!" Yup, even the Y. The vowels also have bumps where they end.
 >x e
-WRONG
+A, E, I, O, U and Y, piled up in a pyramid. Hm, they are not just ANY letters. Yup, they're pretty much shouting out (figuratively) "We're vowels!" Yup, even the Y. The vowels also have bumps where they end.
 >x o
-WRONG
+A, E, I, O, U and Y, piled up in a pyramid. Hm, they are not just ANY letters. Yup, they're pretty much shouting out (figuratively) "We're vowels!" Yup, even the Y. The vowels also have bumps where they end.
 >x i
-WRONG
+A, E, I, O, U and Y, piled up in a pyramid. Hm, they are not just ANY letters. Yup, they're pretty much shouting out (figuratively) "We're vowels!" Yup, even the Y. The vowels also have bumps where they end.
 >x u
-WRONG
+A, E, I, O, U and Y, piled up in a pyramid. Hm, they are not just ANY letters. Yup, they're pretty much shouting out (figuratively) "We're vowels!" Yup, even the Y. The vowels also have bumps where they end.
 
 >purloin shotgun
 >purloin silver
 >x shell
-WRONG
+It's shaped like a small rocket. It'd make a nifty projectile.
 
 >put silver in shotgun
-WRONG
+The silver fits in well. You hear some melodramatic nonsense in your head about a dreamer rearmed. More practically, you're ready for a firefight.
 >undo
 >load shotgun
-WRONG
+The silver fits in well. You hear some melodramatic nonsense in your head about a dreamer rearmed. More practically, you're ready for a firefight.
 
 >wolves
 
@@ -691,12 +790,15 @@ Trips Strip
 >undo
 
 >fire wolves
-WRONG
+No, you were the one who got fired. You may want to SHOOT something, though. And not just because you got fired. I hope not.
 
 >stab wolves
 Stab? With what you have? Bats.
 
 >fire shotgun
+Mention what you want to shoot
+
+>shoot wolves
 Trips Strip
 
 * forest-alt
@@ -708,28 +810,34 @@ Trips Strip
 >in
 
 >certify
-WRONG
+You're picking something up. Probably the rambling shout.
+
 >rectify
-WRONG
+You're picking something up. Probably the rambling shout.
 
 >sg
-WRONG
+You switch the gadget to certify.
 >sg
-WRONG
+You switch the gadget to rectify.
 
 >x noise
-WRONG
+It's gibberish, but it has to be coming from somewhere.
 >x sound
-WRONG
+It's gibberish, but it has to be coming from somewhere.
 
 >s
 
 >certify
-WRONG
->rectify
-WRONG
+You're picking something up. Probably the aroma of teas.
 
-* sortie-understand
+The gadget beeps once. A series of lights comes across: RRRR. 
+
+>rectify
+You're picking something up. Probably the aroma of teas.
+
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBB. 
+
+* sortie-verbiage
 
 >au 1
 
@@ -737,87 +845,94 @@ WRONG
 >hint
 
 >ts
->sortie
 
 >x pictures
-WRONG
+A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something. The who isn't as important as what they are--Tories.
 >x picture
-WRONG
+A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something. The who isn't as important as what they are--Tories.
 >x prime minister
-WRONG
+A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something. The who isn't as important as what they are--Tories.
 >x prime ministers
-WRONG
+A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something. The who isn't as important as what they are--Tories.
 >x minister
-WRONG
+A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something. The who isn't as important as what they are--Tories.
 >x ministers
-WRONG
+A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something. The who isn't as important as what they are--Tories.
+
+>sortie
 
 
 >in
 
 >set me to 1
-WRONG
+That doesn't set to a number. It doesn't SWITCH, either, so you may want to try another verb.
 >switch me to 1
-WRONG
+That doesn't set to a number. It doesn't SWITCH, either, so you may want to try another verb.
 >turn me to 1
-WRONG
+That doesn't set to a number. It doesn't SWITCH, either, so you may want to try another verb.
 >turn 17
-WRONG
+The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
 >set 15
-WRONG
+The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
 
 >16
+>n
+
 >x nick
-WRONG
+The nick is all around.
+
 >x gate
-WRONG
+Huge. Eugh. Old Man Almond couldn't magic it, and not even Flexi-Felix could slip through the holes! You notice a branding on it that you can probably read.
 
 >lift grate
-WRONG
+You utterly fail to move it. If it could speak, it might sarcastically say
 
 >kitchen
 
 >open fridge
 >x heapin
-WRONG
+It's a heapin' helpin' of the stuff, haphazardly lumped at the bottom of the fridge.
 >x helpin
-WRONG
+It's a heapin' helpin' of the stuff, haphazardly lumped at the bottom of the fridge.
 
 >eat cake pan
 Err, it's kind of metal.
 
 >grits
 >x heapin
-WRONG
+They look more edible than the grist, but you're not THAT hungry right now.
 >x helpin
-WRONG
+They look more edible than the grist, but you're not THAT hungry right now.
 
 >x cakepan
-WRONG
+It's empty, and you wonder what it's doing in the fridge.
 
 >x shirt
-WRONG
+You remember seeing someone wearing it. It's got a picture of a carrot, a cucumber, an olive and several different colored onions all in a bowl. They're drumming their fingers, waiting for someone or something. You remember this t-shirt being briefly in fashion back home, wherever that is.
 
 >x man
-WRONG
+He's got a stupid smile and is giving a thumbs-up with his free hand. It's cheesy, not corny. You know the difference. But it is not a REAL cheese. Yet. You notice some writing on his armor--do you wish to read it?
+
+Don't put me NEAR SPAM. The red all-caps seem more overdone than his thumbs-up. The spearman wobbles a bit as you look closely at the writing--you can probably pick him up.
+
 >x spear man
-WRONG
+He's got a stupid
 
 >x cat perfume
-WRONG
->x house prefume
-WRONG
+It's yellow-gold, like most. The bottle seems to advertise a spicy scent too hot for most people's tastes.
+>x house perfume
+It's yellow-gold, like most. The bottle seems to advertise a spicy scent too hot for most people's tastes.
 >x cat house perfume
-WRONG
+It's yellow-gold, like most. The bottle seems to advertise a spicy scent too hot for most people's tastes.
 
 >x chefs
-WRONG
+Well, they are actually only six
 >x chef
-WRONG
+Well, they are actually only six
 >x statues
-WRONG
+Well, they are actually only six
 >x statue
-WRONG
+Well, they are actually only six
 
 >tortilla
 >lettuce
@@ -826,47 +941,50 @@ WRONG
 >parmesan
 
 >x hot sauce
-WRONG
+It's some disturbing mix of reddish shades of orange-red. The ungrammatical HOTSAUCE on the packet blocks out any list of ingredients, which is probably for the best.
 >x packet
-WRONG
+It's some disturbing mix of reddish shades of orange-red. The ungrammatical HOTSAUCE on the packet blocks out any list of ingredients, which is probably for the best.
 
 >put hot sauce on taco
+>x covering
+It certainly gives the taco color.
+
 >put lettuce on taco
 >put steak on taco
 >put parmesan on taco
 
->x covering
-WRONG
-
 >x tortilla
-WRONG
+Man, it looks great. It's got meat, lettuce, cheese, sauce and a soft tortilla shell--but you know that, since you made it yourself!
 
 >coat
 
 >s
 
 >gt round den
-WRONG
+You're already here. Or there. The precise grammar's neither here nor there.
 >gt unadorned
-WRONG
+You're already here. Or there. The precise grammar's neither here nor there.
 >gt round
-WRONG
+You're already here. Or there. The precise grammar's neither here nor there.
 >gt den
-WRONG
+You're already here. Or there. The precise grammar's neither here nor there.
 
 >e
 >sack
 by one point
 
 >x hose
-WRONG
+Thick, probably better for keeping water out than storing it.
 
->hoses
+>shoes
 by one point
 
 >straw
 by one point
 >put straw in sack
+
+>tap sack
+PUSH may be the synonym you want, here.
 
 >moor
 >x awful poet
@@ -874,103 +992,106 @@ by one point
 >x poet
 
 >tap pat
-WRONG
+Not apt.
+
 >tap me
-WRONG
+PUSH may be the synonym you want, here.
 
 >scan
-WRONG
+Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat. Before scanning for the first time, you fumble with the gadget and note it is set to CERTIFY.
 
 >x anapests
-WRONG
+You can't help NOT paying attention to the anapest.
 >x poem
-WRONG
+You can't help NOT paying attention to the anapest.
 >x poetry
-WRONG
->x peasants
-WRONG
+You can't help NOT paying attention to the anapest.
 
 >peasant
 >trade straw
-WRONG
+Instead of trading, use GIVE X to Y.
 >trade
-WRONG
+Instead of trading, use GIVE X to Y.
 >give straw to peasant
 
 >x block
-WRONG
+It's about eight feet long and really dark (you pause and hope you don't need to learn COBOL) and dented about halfway through--well, four-ninths of the way from the right. You are utterly unsure what it could possibly be guarding, and you also notice bright red graffiti.
+
+You think back to how your nametag was creased, and how the roadblock probably doesn't change into anything too easy like a broad lock. The moor and the sack already felt a bit easy.
+
 >black door
 by one point
 
 >room
 >n
 >x decoration
-WRONG
->put straw in wall
+It arches over the scraped bit of wall, as if the wall wasn't supposed to be there. You could picture a passage through it, somehow.
+>put hay in wall
 >x haywall
-WRONG
+It's scraped away, but not enough to bust through. In fact, you stuffed hay where the wall was sort of peeled away.
 >x hay wall
-WRONG
+It's scraped away, but not enough to bust through. In fact, you stuffed hay where the wall was sort of peeled away.
 >hallway
 
 >e
+
+>cask
 >tap spout
-WRONG
+Gainly laying the cask under the spout, you pour in some oils.
 
 >pour oils
-WRONG
+The cask is already full of oils.
 
 >fill cask
-WRONG
+The cask is already full of oils.
 >fill oils
-WRONG
-
+You have enough.
 
 >x oil
-WRONG
+You can't see through the cask--or its narrow hole very well--but you remember the oils being thick and somewhat golden. You trust they are sacred enough for your job, though.
 
 >x vermian minerva
-WRONG
+You see a vermian minerva, a cliche chalice, and a lanced candle. They're probably not for anything, but they're solid idols and add atmosphere nicely, even if you can't descry meaning from examining them individually.
 >x vermian
-WRONG
+You see a vermian minerva, a cliche chalice, and a lanced candle. They're probably not for anything, but they're solid idols and add atmosphere nicely, even if you can't descry meaning from examining them individually.
 >x minerva
-WRONG
+You see a vermian minerva, a cliche chalice, and a lanced candle. They're probably not for anything, but they're solid idols and add atmosphere nicely, even if you can't descry meaning from examining them individually.
 >x cliche chalice
-WRONG
+You see a vermian minerva, a cliche chalice, and a lanced candle. They're probably not for anything, but they're solid idols and add atmosphere nicely, even if you can't descry meaning from examining them individually.
 >x cliche
-WRONG
+You see a vermian minerva, a cliche chalice, and a lanced candle. They're probably not for anything, but they're solid idols and add atmosphere nicely, even if you can't descry meaning from examining them individually.
 >x chalice
-WRONG
+You see a vermian minerva, a cliche chalice, and a lanced candle. They're probably not for anything, but they're solid idols and add atmosphere nicely, even if you can't descry meaning from examining them individually.
 >x solid
-WRONG
+You see a vermian minerva, a cliche chalice, and a lanced candle. They're probably not for anything, but they're solid idols and add atmosphere nicely, even if you can't descry meaning from examining them individually.
 >x idols
-WRONG
+You see a vermian minerva, a cliche chalice, and a lanced candle. They're probably not for anything, but they're solid idols and add atmosphere nicely, even if you can't descry meaning from examining them individually.
 >x solid idols
-WRONG
+You see a vermian minerva, a cliche chalice, and a lanced candle. They're probably not for anything, but they're solid idols and add atmosphere nicely, even if you can't descry meaning from examining them individually.
 >x lanced
-WRONG
+You see a vermian minerva, a cliche chalice, and a lanced candle. They're probably not for anything, but they're solid idols and add atmosphere nicely, even if you can't descry meaning from examining them individually.
 >x candle
-WRONG
+You see a vermian minerva, a cliche chalice, and a lanced candle. They're probably not for anything, but they're solid idols and add atmosphere nicely, even if you can't descry meaning from examining them individually.
 >x lanced candle
-WRONG
+You see a vermian minerva, a cliche chalice, and a lanced candle. They're probably not for anything, but they're solid idols and add atmosphere nicely, even if you can't descry meaning from examining them individually.
 
 >w
 >s
 >moor
 
 >x poetry
-WRONG
+"I'm just a guy who loves his work :) :)
 >x limerick
-WRONG
+"I'm just a guy who loves his work :) :)
 >x paper
-WRONG
+"I'm just a guy who loves his work :) :)
 
 >missile
 
 >fold paper
 
 >unfold paper
-WRONG
+The poem deserves obscurity. Folding it out of view was a good first step.
 
 >panel
 >soil
@@ -981,127 +1102,143 @@ WRONG
 
 >w
 >x archings
-WRONG
+The archings blocked the passage to the east once they crashed down. You burble like a lubber at the rubble that now blocks the way east.
 >x rubble
-WRONG
+The archings blocked the passage to the east once they crashed down. You burble like a lubber at the rubble that now blocks the way east.
 
 >s
 >moor
->soil
+>silo
 by one point
 
+>put door on silo
+>put panel on silo
+>put missile in silo
+
 >x right
-WRONG
+It's on the right, and it's labeled HOOTS.
 >x right button
-WRONG
+It's on the right, and it's labeled HOOTS.
 >x left
-WRONG
+It's on the left, and it's labeled TREES.
 >x left button
-WRONG
+It's on the left, and it's labeled TREES.
 
 >shoot
 >steer
 
 >x right
-WRONG
+It's on the right, and it's labeled SHOOT.
 >x right button
-WRONG
+It's on the right, and it's labeled SHOOT.
 >x left
-WRONG
+It's on the left, and it's labeled STEER.
 >x left button
-WRONG
+It's on the left, and it's labeled STEER.
 
-* metros-understand
+* metros-verbiage
 
 >ts
 >metros
 
 >x metros
-WRONG
+The escalator has TO THE METROS scrawled on it.
 
 >x escalator
-WRONG
+The escalator has TO THE METROS scrawled on it.
+
+>enter metros
 
 >x senser
-WRONG
+It has a small red optical beam.
 
 >x thumping
-WRONG
+You're sure some idiot would call them funky, but you don't have time for aesthetics.
 >x beats
-WRONG
+You're sure some idiot would call them funky, but you don't have time for aesthetics.
 
 >in
 >drink drainage
-WRONG
+Eww, don't even.
+
+>gardenia
 
 >unlock door
-WRONG
+It has no visible keyholes. The only possible interface seems to be the sensor.
 
 >n
 
 >x driveway
-WRONG
+It's immaculate compared to the rest of the city.
 >x drive way
-WRONG
+It's immaculate compared to the rest of the city.
 >x drive
-WRONG
+It's immaculate compared to the rest of the city.
 >x way
-WRONG
+It's immaculate compared to the rest of the city.
 
 >x man
-WRONG
+He's wearing some of the hardest-trashed threads you've seen. You know he's a deadbeat because his t-shirt says DEAD BEAT DEADBEAT. Which fits in with this world, yes, but about as half-donkeyed as possible. Oh, and he has a ridiculous goatee, too.
 
 >steal corn
-WRONG
+The deadbeat almost gets up. "Hey, Man, like, how do we know someone undisreputable doesn't, like, like the Man, man? Hey? Hey?" he says, with no dearth of hatred as he jerks his thumb north. He might not do anything, but his friends might pour out from their tents. You don't need a fight right now.
+
+Maybe you need to strike a blow against some rich people to show you belong.
 
 >w
 >x gunk
-WRONG
+Not important. Just here for local flavor. Not very palatable flavor, but flavor nonetheless.
 >x bits
-WRONG
+Not important.
 >x gunk bits
-WRONG
+Not important.
 >x trash
-WRONG
+The garbage smell would make a bear gag--stink bug, gunk bits, etc.
 >x placard
-WRONG
+[Fourth wall note: it's not really, primarily, a placard. People seeing it probably think more, "Hey! A motto!" than "Hey! A placard!"]
+
+It's labeled A MOTTO, and somehow, someone named Too-Apt Pa Otto has managed to make a hash of grammar, logic, math, science and basic human decency in sixty letters. Sixty-four if it were spelled correctly.
+
+I'd tell you what it said, but you-the-person would be the worse for it. It's like Monty Python's funniest joke in the world that way. Even considering it makes you feel worried you'll forget simple stupid stuff, like what's a fruit and what's a vegetable.
 >x writing
-WRONG
+It's labeled A MOTTO
 
 >tomato
 >x rotten
-WRONG
+It's as rotten as the motto
 >x rotten tomato
-WRONG
+It's as rotten as the motto
 
 >e
 >s
 >w
 >x potato
-WRONG
+It's grown wrong, a gigantic hairy eyeless potato clearly not the right girth. And it's wired weird, with a cruel ulcer for a mouth. It seems more in the mood for bellowing than fighting, but it still probably doesn't belong in the hotel. It's too big to fight and too fearsome to get near. It appears to be sitting on some sort of mattress.
 
 >x mattress
-WRONG
+Can't do or see much with the night thing on it.
 >x bump
-WRONG
+Can't do or see much with the night thing on it.
 >x something
-WRONG
+Can't do or see much with the night thing on it.
 
 >throw tomato
-WRONG
+A direct hit!
+>undo
 >throw tomato at thing
-WRONG
+A direct hit!
 
 >search mattress
+(Nothing in this game has anything deeply hidden, so searching works like examining.)
 
 >x machine
-WRONG
+It's a black box
 >x black box
-WRONG
+It's a black box
 >x black
-WRONG
+It's a black box
 >x box
-WRONG
+It's a black box
 
 >e
 >n
@@ -1112,82 +1249,120 @@ WRONG
 >s
 
 >hush
-WRONG
+HUSH on. [NOTE: you will still hear the first random dialogue in an area, but it will be noted as such.]
 >hush
-WRONG
+You already can't hear random dialogue.
 >uhhs
-WRONG
+Random dialogue on again.
 >uhhs
-WRONG
+You already can hear random dialogue.
 
 >keycard
 >x key
-WRONG
+It's plain and metallic, and the only thing that indicates it's a keycard is small text saying FOR AUTHORIZED ACCESS ONLY.
 >x card
-WRONG
+It's plain and metallic, and the only thing that indicates it's a keycard is small text saying FOR AUTHORIZED ACCESS ONLY.
 >x key card
-WRONG
+It's plain and metallic, and the only thing that indicates it's a keycard is small text saying FOR AUTHORIZED ACCESS ONLY.
 
 >e
 
 >x freesia
-WRONG
->x fairies
-WRONG
->x freesia fairies
-WRONG
->x heath
-WRONG
->x begonia
-WRONG
->x flowers
-WRONG
->x seeds
-WRONG
->x flower
-WRONG
->x seed
-WRONG
+They are maybe a foot high, but each one of them carries a small wand you're sure you don't want pointed at you.
 
-understand "steal [something]" as taking.
+>x fairies
+Something you did or thought causes the freesia faeries to buzz...I guess they're magical enough to detect your misspellings. You feel a tingling, but it passes
+They are maybe a foot high, but each one of them carries a small wand you're sure you don't want pointed at you.
+
+>x freesia fairies
+They can see in your eyes you're spelling things wrong, but they'll have to deal.
+
+They are maybe a foot high, but each one of them carries a small wand you're sure you don't want pointed at you.
+
+>x heath
+They're tied together so their stems seem to form a sort of narrow tube. But surely flowers alone aren't going to stop the thumping here.
+
+>x begonia
+Reddish, pinkish, white. Kind of fragile, but they seem to silence things a bit, like they could somehow contain the sounds if you knew how to mess with them.
+
+>x flowers
+(the merchandise)
+All sorts of flower-related semi-magical stuff spans the store. You wouldn't know what to do with any of it, but maybe if you help the faeries, they'll give you something.
+
+>x seeds
+All sorts of flower-related semi-magical stuff spans the store. You wouldn't know what to do with any of it, but maybe if you help the faeries, they'll give you something.
+
+>x flower
+All sorts of flower-related semi-magical stuff spans the store. You wouldn't know what to do with any of it, but maybe if you help the faeries, they'll give you something.
+
+>x seed
+All sorts of flower-related semi-magical stuff spans the store. You wouldn't know what to do with any of it, but maybe if you help the faeries, they'll give you something.
+
+>give gardenia to fairies
+>sheath
+>barcode
+
+>put barcode on keycard
+
+>w
+>w
+>sword
 
 ###########################endgame
 
+>e
 >controls
+>velcro
+>wear velcro
+>s
+
+>e
+>ask nerds about darkness
+
+>s
 >opening
 >u
 
 >put controls in opening
 >x controls
+The opening isn't really an opening any more, what with the controls fitting in nicely.
+!In the opening are some controls.
+
 >x psas
+You watch for the next Pa's PSA
 
 >s
 >e
 
 >purloin can of beer
 >x aged rain
-WRONG
+It appears to be AGED RAIN brand beer. Hooray, truth in advertising? A reading of the small print, though, leaves you seeing red.
 >x beer can
-WRONG
+It appears to be AGED RAIN brand beer. Hooray, truth in advertising? A reading of the small print, though, leaves you seeing red.
 >x aged
-WRONG
+It appears to be AGED RAIN brand beer. Hooray, truth in advertising? A reading of the small print, though, leaves you seeing red.
 >x rain
-WRONG
+It appears to be AGED RAIN brand beer. Hooray, truth in advertising? A reading of the small print, though, leaves you seeing red.
 
 >purloin soggy
 >x dear inga
-WRONG
+Someone has written DEAR INGA: in big letters. The waters have smudged the smaller writing, which is probably for the best.
 >x dear
-WRONG
+Someone has written DEAR INGA: in big letters. The waters have smudged the smaller writing, which is probably for the best.
 >x inga
-WRONG
+Someone has written DEAR INGA: in big letters. The waters have smudged the smaller writing, which is probably for the best.
 >x soggy note
-WRONG
+Someone has written DEAR INGA: in big letters. The waters have smudged the smaller writing, which is probably for the best.
+
+>resin
+>beast
+>get sword
+>beast
 
 >cut beast with sword
-WRONG
+Trips Strip
 
-* resort-understand
+* resort-verbiage
 
 >ts
 
@@ -1202,9 +1377,9 @@ WRONG
 no water nearby
 
 >x tiles
-WRONG
+They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one.
 >x colors
-WRONG
+They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one.
 
 >islet
 >islet
@@ -1221,7 +1396,7 @@ You have nothing that can help sustained flying.
 by one point
 
 >untie swing
-WRONG
+The knots where it is tied to the tree are too high up.
 
 >wings
 by one point
@@ -1233,53 +1408,55 @@ An Odd Low Woodland
 An Odd Low Woodland
 
 >toeholds
-by one point
+by two points
 >grips
 by one point
 >ropes
 by one point
 >untie ropes
-WRONG
+You have better things to do than take apart potentially useful ropes. Like getting up that poles over there.
 
->poles
+>slope
 by one point
 
+>e
+
 >x crowd
-WRONG
+Well, you have to admit, there's a wide variety of people protesting you, even if they're not explaining why. The riot will probably be blocking your way to the east, but they don't seem to be attacking you, which is nice.
+You probably can't calm down the whole riot at once, but it'd be nice to have a way to weed out most of them.
 >x uprisers
-WRONG
+You probably can't calm down the whole riot at once, but it'd be nice to have a way to weed out most of them.
 >x horde
-WRONG
+You probably can't calm down the whole riot at once, but it'd be nice to have a way to weed out most of them.
 >x rioters
-WRONG
+You probably can't calm down the whole riot at once, but it'd be nice to have a way to weed out most of them.
 >x rabble
-WRONG
+You probably can't calm down the whole riot at once, but it'd be nice to have a way to weed out most of them.
 >x mob
-WRONG
+You probably can't calm down the whole riot at once, but it'd be nice to have a way to weed out most of them.
 
 >trio
 
 >x trio
-WRONG
-
+They're all smeared with--huh? Looks like clay? In any event, they don't look like their hearts are in the protest.
 >x protest
-WRONG
+They're all smeared with--huh? Looks like clay? In any event, they don't look like their hearts are in the protest.
 >x three
-WRONG
+They're all smeared with--huh? Looks like clay? In any event, they don't look like their hearts are in the protest.
 >x protesters
-WRONG
+They're all smeared with--huh? Looks like clay? In any event, they don't look like their hearts are in the protest.
 >x crowd
-WRONG
+They're all smeared with--huh? Looks like clay? In any event, they don't look like their hearts are in the protest.
 >x uprisers
-WRONG
+They're all smeared with--huh? Looks like clay? In any event, they don't look like their hearts are in the protest.
 >x horde
-WRONG
+They're all smeared with--huh? Looks like clay? In any event, they don't look like their hearts are in the protest.
 >x rioters
-WRONG
+They're all smeared with--huh? Looks like clay? In any event, they don't look like their hearts are in the protest.
 >x rabble
-WRONG
+They're all smeared with--huh? Looks like clay? In any event, they don't look like their hearts are in the protest.
 >x mob
-WRONG
+They're all smeared with--huh? Looks like clay? In any event, they don't look like their hearts are in the protest.
 
 >x chains
 >china
@@ -1287,32 +1464,37 @@ WRONG
 >potters
 
 >x rbb
-WRONG
+His face is covered with crass scars, and he's wearing a t-shirt saying "thirst". He has a toe that sticks out--a partial bare foot inside a fear boot. You think back to Achilles for some reason.
 >x his toe
-WRONG
+A toe just juts out from Burdell's boot, looking infected.
+>touch toe
+Just touching wouldn't be enough to cause serious pain.
 
 >x fear boot
-WRONG
+A toe just juts out from Burdell's boot, looking infected.
 >x boot
-WRONG
+A toe just juts out from Burdell's boot, looking infected.
 >x fear
-WRONG
+A toe just juts out from Burdell's boot, looking infected.
 >x bare foot
-WRONG
+A toe just juts out from Burdell's boot, looking infected.
 >x bare
-WRONG
+A toe just juts out from Burdell's boot, looking infected.
 >x foot
-WRONG
+A toe just juts out from Burdell's boot, looking infected.
 
->tug bull
-WRONG
 >tug me
-WRONG
->tug settler
-WRONG
->pull settler
-WRONG
+You tug at yourself, nervous from hearing GET OUT yet again.
+>tug red bull
+Try a small part of him. Both lexicographically and physically.
+>tug gadget
+Right verb, wrong thing.
+>tug boot
+The boot is too big to grab. Think smaller.
+
+>pull gadget
+No, not pull, something even shorter.
 
 >gonear manor
 >x exits
-WRONG
+They are tempting you to adventure, but you'd rather be than do.

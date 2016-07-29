@@ -269,9 +269,7 @@ CR/RC (something) = C (something) + R(something).
 
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, store M, Store I, Store F and Store B when you do.
- [You decide to keep a to-do entry in your notebook of stuff you haven't tackled, yet.]
-
-[You record the information about to-do in your notepad.]
+[You decide to keep a running to-do entry in your notebook of stuff you haven't tackled, yet.]
 
 >pad to-do
 What's on tap right now: Store R, store M, Store I, Store F and Store B.

@@ -310,7 +310,7 @@ chapter special help
 
 [We need a non-backdrop first here, or the compiler complains.]
 
-table of spechelp [tosh] [this is for specific error messages for specific items]
+table of spechelp [tosh] [tsh] [this is for specific error messages for specific items]
 xtrhelp	helptxt
 bolt	"You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here."
 bulge	"The bulge swells and makes a squeal, like it's trying to make music."
@@ -702,6 +702,8 @@ to decide whether the action is procedural: [aip]
 	if xmxing, yes;
 	if dropping, yes;
 	if looking, yes;
+	if certifying, yes;
+	if rectifying, yes;
 	if objasking about, yes;
 	if requesting the score, yes;
 	if taking inventory, yes;
@@ -1202,7 +1204,7 @@ cur-item is a thing that varies.
 
 carry out objhinting:
 	if hintsoff is true:
-		say "Hints are disabled." instead;
+		say "Hints are disabled for this session." instead;
 	now ever-obj-hinted is true;
 	now cur-item is noun;
 	if noun is location:
@@ -2152,6 +2154,8 @@ rule for supplying a missing second noun while throwing:
 the block throwing at rule is not listed in any rulebook.
 
 check touching:
+	if noun is toe:
+		say "Just touching wouldn't be enough to cause serious pain." instead;
 	if noun is blades:
 		say "They begin to whir at your finger's presence." instead;
 	if noun is bolt:
@@ -2249,7 +2253,11 @@ the can't pull scenery rule is not listed in any rulebook.
 check pulling:
 	if noun is the player:
 		say "Whew! All this wordplay makes you nervous." instead;
-	say "Ullp! You don't need to pull anything in this game, though PUSH may be marginally useful." instead;
+	if player is in hotspot and red bull is in hotspot:
+		say "No, not pull, something even shorter." instead;
+	if player is in roman manor:
+		say "No, something much more passive." instead;
+	say "Ullp! You don't need to PULL anything in this game, though a synonym may help somewhere...and PUSH may be marginally useful." instead;
 
 chapter fireing
 
@@ -2598,9 +2606,9 @@ carry out angleing:
 	now all visible flippable not flipped-yet things are padded;
 	h-check;
 	choose row with short of "to-do" in table of pad-stuff;
-	if there is a verify entry or verify entry is false:
-		say " [i][bracket]You decide to keep a to-do entry in your notebook of stuff you haven't tackled, yet.[close bracket][line break]";
-	pad-rec "to-do";
+	if there is a known entry and known entry is false:
+		say "[i][bracket]You decide to keep a running to-do entry in your notebook of stuff you haven't tackled, yet.[close bracket][line break]";
+	pad-rec-q "to-do";
 	the rule succeeds;
 
 to h-check:
@@ -2844,7 +2852,12 @@ carry out retrying:
 		unless JJ is warpable:
 			now JJ is in lalaland;
 			add JJ to item-list of mrlp;
+	repeat with JJ running through worn things:
+		unless JJ is warpable:
+			now JJ is in lalaland;
+			add JJ to worn-list of mrlp;
 	now retried is true;
+	now last-loc of mrlp is location of player;
 	now player is in trips strip;
 	the rule succeeds;
 
@@ -3164,7 +3177,7 @@ table of Stores anagrams
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 store b	sorbet	"sorbet"	--	"The store collapses into a greyish sorbet which is surprisingly tasteful. So tasteful, you eat it all at once and throw away the cup it came in. In a trash can behind one of the stores you can't change. Which? It's not worth remembering."	false	505285378	[start trips anagrams]
 store f	forest-x	"forest"	"store f"	"The greens and browns of Store F coagulate and pull apart into an actual forest."	false	513381369
-store i	sortie-x	"sortie"	"store i"	"The store rumbles, destroying the portraits of famous Tories (this is not a political statement) and revealing the small sortie down[trap-check]. A stairway down remains, but that's about it."	false	531859319
+store i	sortie-x	"sortie"	"store i"	"The store rumbles, destroying the portraits of famous Tories (enjoy this, if you wish) and revealing the small sortie down[trap-check]. A stairway down remains, but that's about it."	false	531859319
 store m	metros-x	"metros"	"store m"	"The store rumbles, with the collections of small-scale cities disappearing. You see an escalator leading--well, somewhere populated."	false	550941626
 store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! You see, for a brief moment, a manor that seems made for you. 'I know what you're looking at!' calls some random well-wisher. 'You've earned it! For defeating Red Bull Burdell!'[paragraph break]Before you reply you haven't, he's already run behind store G, yelling 'Go! Rest!'"	false	572190276
 cabinet	nice bat	"nice bat" or "be actin"	"cabinet"	"The cabinet seems to expand like an amoeba, then, POP! It becomes a rather large bat, which jumps up and down excitedly. It's clearly grateful it has become active, alive--more than just something to store things in."	false	384428789	[end trips strip anagrams]
@@ -4400,7 +4413,7 @@ section xmxing
 to ditch-saltine:
 	if xray-cheat is false:
 		now xray-vision is false;
-		say "You blink, and things look a little less sharp. The saltine's done its work.";
+		say "[line break]You blink, and things look a little less sharp. The saltine's done its work.";
 		now undo-code is 1;
 		pad-del "xx";
 		prevent undo;
@@ -4689,6 +4702,10 @@ to say buz-help:
 
 rule for supplying a missing noun (this is the scan the location if you can rule) :
 	if current action is scaning or current action is rectifying or current action is certifying or current action is cring:
+		if current action is certifying:
+			now gadget is cert;
+		if current action is rectifying:
+			now gadget is rect;
 		if player is in hotspot and red bull is in hotspot:
 			now noun is red bull;
 			continue the action;
@@ -4697,6 +4714,10 @@ rule for supplying a missing noun (this is the scan the location if you can rule
 			continue the action;
 		if player is in moor and anapest is in moor:
 			now noun is anapest;
+			continue the action;
+		if player is in sf or player is in rf:
+			now noun is a random guider in location of player;
+			say "You're picking something up. Probably [the noun].";
 			continue the action;
 	if current action is cring:
 		if can-scan-air:
@@ -5036,7 +5057,7 @@ carry out recuseing:
 	if gadget-secured is false and button-locked is true:
 		say "Not securing in your first trip means you can't use the gadget to recuse." instead;
 	if number of solved regions is 1:
-		say "You haven't even gotten beyond the strip yet." instead;
+		say "The RECUSE button is for after you've solved two areas, but you haven't solved any, yet." instead;
 	if number of solved regions < 3:
 		say "You can't recuse yet. You still need to work through one more store." instead;
 	if forest is unsolved:
@@ -5573,13 +5594,13 @@ Store I is a sto. understand "store/ 9/nine" as store i. lgth of store i is 6. g
 
 the Tories are plural-named auxiliary scenery in trips strip. lgth of tories is 6. gpos of tories is 6. rpos of tories is 5. rgtext of tories is "[rcn][gc][gc][rc][rc][rc]". cert-text of tories is "-[ast]O[ast]R[d1][d1][d1]". rect-text of tories is "S[d1][d1][d1][d1][ast]E".
 
-description of tories is "A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something."
+description of tories is "A closer look indicates that they are glued to the inside of the store window, instead of hanging from a wire on a nail or something. The who isn't as important as what they are--Tories."
 
-understand "pictures/picture" and "prime minister/minsters" as tories when tories are visible.
+understand "pictures/picture" and "prime/ minister/ministers" as tories when tories are visible.
 
 [note we need to activate TORIES]
 
-description of store i is "It has pictures of famous political figures in the window--Winston Churchill, Benjamin Disraeli and that great charmer, Margaret Thatcher[one of] (*)[or][stopping]. You think you remember what party they belonged to. The pictures are big enough to obscure--almost--the outline of a trap door behind them[one of].[paragraph break](*) semantically, too good to pass up. Feel free and welcome to picture it being said sarcastically[or][stopping]."
+description of store i is "Store I has pictures of famous political figures in the window--Winston Churchill, Benjamin Disraeli and that great charmer, Margaret Thatcher[one of] (*)[or][stopping]. You think you remember what party they belonged to. The pictures are big enough to obscure--almost--the outline of a trap door behind them[one of].[paragraph break](*) semantically, too good to pass up. Feel free and welcome to picture it being said sarcastically[or][stopping]."
 
 after examining store i for the first time:
 	say "[one of][i][bracket]NOTE: this is not a political statement on their party.[close bracket][r][line break][or][stopping]";
@@ -6014,7 +6035,7 @@ instead of taking the canister:
 
 the red ring is part of the canister. description of red ring is "It's on top of the canister."
 
-the grinder is part of the canister. description of grinder is "It's a pair of sabled blades that rotate opposite to each other when activated."
+the grinder is part of the canister. description of grinder is "It's got a pair of sabled blades that rotate opposite to each other when activated[if livers are not off-stage]. But you broke it[end if]."
 
 understand "grin" as a mistake ("You [if canister is broken]smirk at the grinder you trashed[else]smile confidently. You'll figure how to use the grinder[end if].") when player is in s-e-d.
 
@@ -6034,7 +6055,7 @@ instead of putting on canister:
 	say "(I'm going to assume you meant in the canister.)";
 	try inserting noun into canister instead;
 
-understand "sabled/ blades/blade" as grinder. understand "blender" as grinder.
+understand "blender" as grinder.
 
 instead of doing something with the red ring:
 	if action is procedural:
@@ -6049,7 +6070,9 @@ instead of doing something with the grinder:
 instead of entering canister:
 	say "It's too small."
 
-the blades are part of the canister. description of blades is "Sharp and warm to the touch."
+the sabled blades are part of the canister. description of blades is "[if livers are off-stage]Sharp[else]Ruined[end if]."
+
+understand "sabled/ blade" as sabled blades
 
 the canister can be broken. the canister is not broken.
 
@@ -7103,7 +7126,7 @@ the large packet of HOTSAUCE is an ingredient.
 check opening large packet:
 	try attacking large packet instead;
 
-description of HOTSAUCE is "It's some disturbing mix of reddish shades of orange-red. The ungrammatical HOTSAUCE on the packet blocks out any list of ingredients, which is probably for the best."
+description of HOTSAUCE is "[if hotsauce is part of tortilla]It certainly gives the taco color[else]It's some disturbing mix of reddish shades of orange-red. The ungrammatical HOTSAUCE on the packet blocks out any list of ingredients, which is probably for the best[end if]."
 
 understand "hot/ sauce/" as HOTSAUCE when HOTSAUCE is visible.
 
@@ -7182,7 +7205,7 @@ rule for deciding whether all includes grits: it does not.
 rule for deciding whether all includes cake pan: it does not.
 rule for deciding whether all includes pancake: it does not.
 
-description of grits is "They look more edible than the grits, but you're not THAT hungry right now."
+description of grits is "They look more edible than the grist, but you're not THAT hungry right now."
 
 the cake pan is in the fridge. lgth of cake pan is 7. gpos of cake pan is 5. rpos of cake pan is 4. rgtext of cake pan is "[rcn][gc][rc][rc][rc][rc][rc]". cert-text of cake pan is "-[ast]A[d1][d1][d1][d1][d1]". rect-text of cake pan is "P[d1][d1][d1][d1][d1][ast]E".
 
@@ -7330,7 +7353,7 @@ tie-warn is a truth state that varies.
 
 instead of tying to (this is the check for big quest item attachment rule):
 	if tie-warn is false:
-		ital-say "Note--while this game generally maps ATTACH/TIE X TO Y to PUT X ON/IN Y, PUT ON/IN[i] is a bit more specific and is thus recommended.";
+		ital-say "while this game generally maps ATTACH/TIE X TO Y to PUT X ON/IN Y, PUT ON/IN[i] is a bit more specific and is thus recommended.";
 		now tie-warn is true;
 	if noun is missile or noun is hay or noun is straw or noun is panel or noun is black door:
 		try inserting noun into second noun instead;
@@ -7817,8 +7840,6 @@ instead of going nowhere in moor:
 
 the peasant is a man. "A peasant is here[if peasant has hay], carrying some hay over his shoulder[end if]."
 
-understand "peasants" as peasant when woeful pat is visible.
-
 before doing something with the hay when peasant has hay:
 	if the current action is objasking generically or the current action is objasking about or current action is scaning or current action is examining or current action is xmxing:
 		continue the action;
@@ -7921,10 +7942,10 @@ rgtext of trees is "[rcn][rc][gc][gc][rc]". lgth of trees button is 5. gpos of t
 
 the steer button is a thing. description is "It's on the left, and it's labeled STEER."
 
-understand "right button/" as hoots button when hoots button is visible.
-understand "right button/" as shoot button when shoot button is visible.
-understand "left button/" as trees button when trees button is visible.
-understand "left button/" as steer button when steer button is visible.
+understand "right" and "right button" as hoots button when hoots button is visible.
+understand "right" and "right button" as shoot button when shoot button is visible.
+understand "left" and "left button" as trees button when trees button is visible.
+understand "left" and "left button" as steer button when steer button is visible.
 
 check pushing hoots button:
 	say "You hear loud hoots. You're not sure if people are laughing, or alerting you to the fact that this button doesn't do what it's supposed to, or if maybe it's some high-tech/magic war dance or even an air raid siren. Whatever it is, it's clear noise won't get the missile launched." instead;
@@ -8180,9 +8201,10 @@ section taping
 
 taping is an action applying to one thing.
 
-understand the command "tap [something]" as something new.
+understand the command "tap" as something new.
 
 understand "tap" as taping.
+understand "tap [something]" as taping.
 
 carry out taping:
 	if noun is pat:
@@ -8192,7 +8214,7 @@ carry out taping:
 			try filling the cask instead;
 		otherwise:
 			say "The oils would go to waste." instead;
-	say "You may want to PUSH or ATTACK instead. It probably won't do much good, but that's the synonym." instead;
+	say "PUSH may be the synonym you want, here." instead;
 
 does the player mean taping the spout: it is very likely;
 
@@ -8260,9 +8282,9 @@ instead of doing something with the can of beer:
 
 does the player mean doing something with the love letter when the love letter is visible: it is very likely.
 
-the soggy love letter is auxiliary scenery. description of soggy love letter is "Someone has written [b]DEAR INGA:[r] in big letters. The waters have smudged the smaller writing, which is probably for the best. A reading of what's there makes you see red, anyhow.". lgth of soggy love letter is 8. gpos of soggy love letter is 7. rpos of soggy love letter is 3. rgtext of soggy letter is "[rcn][rc][rc][rc][rc][gc][rc][gc]". cert-text of soggy love letter is "-[d1][d1][d1][d1][ast]N[d1][ast]A". rect-text of soggy love letter is "G[d1][d1][d1][d1][d1][d1][ast]A".
+the soggy love letter is auxiliary scenery. description of soggy love letter is "Someone has written [b]DEAR INGA:[r] in big letters. The waters have smudged the smaller writing, which is probably for the best.". lgth of soggy love letter is 8. gpos of soggy love letter is 7. rpos of soggy love letter is 3. rgtext of soggy letter is "[rcn][rc][rc][rc][rc][gc][rc][gc]". cert-text of soggy love letter is "-[d1][d1][d1][d1][ast]N[d1][ast]A". rect-text of soggy love letter is "G[d1][d1][d1][d1][d1][d1][ast]A".
 
-understand "dear inga" and "soggy note" as soggy love letter when soggy love letter is visible.
+understand "dear inga" and "dear/inga" and "soggy note" as soggy love letter when soggy love letter is visible.
 
 instead of doing something with the soggy letter:
 	if action is procedural:
@@ -8408,7 +8430,7 @@ after taking the motto:
 instead of eating motto:
 	say "I hope you're not dumb enough to swallow that. Figuratively or literally.";
 
-understand "rotten tomato/" as tomato.
+understand "rotten tomato" and "rotten" as tomato.
 
 the description of the tomato is "It's as rotten as the motto of Pa Otto's you extracted it from. It is probably even more rotten on the inside, not that you have the bravery to check. Yet it also has that staying power. It doesn't have any mold on it, yet."
 
@@ -9602,6 +9624,8 @@ lgth of neon pig is 7. gpos of neon pig is 3. rpos of neon pig is 7. rgtext of n
 
 the op is proper-named privately-named scenery container. understand "opening/recess" as op. the printed name of op is "the opening"
 
+procedural rule while examining op: ignore the examine containers rule.
+
 description of op is "[if controls are in op]The opening isn't really an opening any more, what with the controls fitting in nicely[else if player is on fuzzy looking wall]You can see that the opening isn't just a blank area, though it doesn't lead anywhere much. Once you got rid of that neon pig, there are still all kinds of receptacles and such that could be attached to something electrical. If you READ, you might be able to see what[otherwise]You look back up at the opening you made. Seems something belongs in there[end if]."
 
 the tracks are scenery in Elm Train Terminal. understand "rail" and "rails" and "track" as tracks.
@@ -10128,7 +10152,7 @@ Include (-
 	has transparent animate
 -) when defining protest.
 
-description of protest is "They're all smeared with--huh? Looks like clay? In any event, they don't look like their heart is in the protest."
+description of protest is "They're all smeared with--huh? Looks like clay? In any event, they don't look like their hearts are in the protest."
 
 the potters are plural-named scenery. understand "trio/protest/three" as potters when potters are visible.
 
@@ -10256,11 +10280,13 @@ understand "tug [something]" as tuging.
 does the player mean tuging the player: it is very likely;
 
 carry out tuging:
-	if red bull burdell is not visible or noun is not toe:
-		try pulling the noun instead;
-	if noun is the player:
-		say "You tug at yourself, nervous from hearing GET OUT yet again." instead;
 	if red bull burdell is visible:
+		if noun is the player:
+			say "You tug at yourself, nervous from hearing GET OUT yet again." instead;
+		if noun is red bull:
+			say "Try a small part of him. Both lexicographically and physically." instead;
+		if noun is not toe:
+			say "Right verb, wrong thing." instead;
 		if the player's command includes "boot":
 			say "The boot is too big to grab. Think smaller." instead;
 		if the player's command matches the regular expression "^(tug)? *toe":
@@ -10274,9 +10300,8 @@ carry out tuging:
 				say "[line break]There can't be much more to do but go east and just sit around.";
 			now red bull burdell is in lalaland instead;
 		otherwise:
-			say "Six letters. You're close." instead;
-	otherwise:
-		say "[reject]";
+			say "You need six letters. You're close." instead;
+	try pulling the noun instead;
 	the rule succeeds;
 
 chapter Roman Manor
@@ -10474,7 +10499,7 @@ understand "odor" and "rood" as a mistake ("That door's reinforced. [if Anti-Coo
 
 understand "odor" and "rood" as a mistake ("It would stink to be you if you did that. The nerds outnumber you and would crucify you.") when player is in Anti-Cool Location.
 
-understand "tap" and "tap [text]" as a mistake ("'Ah! You are TAPping your feet to my anapest beat!'[paragraph break](You may want to PUSH or ATTACK something instead.)") when woeful pat is visible.
+understand "tap" and "tap [text]" as a mistake ("'Ah! You are TAPping your feet to my anapest beat!'[paragraph break](You may want to PUSH something instead.)") when woeful pat is visible.
 
 understand "similes" as a mistake ("[if smilies are visible]Adding similes would mean the limerick wouldn't scan. They'd be more forced than the smilies. Though forced smilies can be a powerful weapon. Hmm.[else if missile is visible]You can't create something abstract from something concrete. Or plutonium. Or whatever that missile's made of.[otherwise][reject]")
 
@@ -10825,6 +10850,7 @@ scaning is an action applying to one thing.
 understand the command "scan [something]" as something new.
 
 understand "scan [something]" as scaning.
+understand "scan" as scaning.
 
 understand "scan" as a mistake ("[verb-cue].") when notices section is unvisited.
 understand "scan [text]" as a mistake ("[verb-cue].") when notices section is unvisited.
@@ -10975,6 +11001,7 @@ carry out scaning:
 	now last-scan is noun; [DIVIDING LINE FOR SUCCESSFUL SCAN]
 	if gadget is not examined or ever-scan is false:
 		say "Before scanning for the first time, you fumble with the gadget and note it is set to [if gadget is cert]CERTIFY[else]RECTIFY[end if].";
+		say "[line break]";
 	now ever-scan is true;
 	now gadget is examined;
 	now last-was-cert is whether or not gadget is cert;
@@ -12365,7 +12392,7 @@ understand "credits" and "credit" as creditsing.
 carry out creditsing:
 	if cur-score of Intro is 0:
 		say "There is a list of websites I would like to credit. But it might spoil things before you score anything. So I'll just list beta-testers and general help.[paragraph break]";
-	say "[if cur-score of Intro > 0]Tester Street residents ('no on tiredness:')[paragraph break][end if]Adri, Anthony Hope, DJ Hastings, Gavin Myers-Leman, Hulk Handsome ([if cur-score of intro > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[otherwise][i]shout-out not spoiled til you score a point[r][end if],) Joey Jones, John Nitchals, Paul Lee, Robert Patten and Tomie Campf, in alphabetical first-name order. They found 700+ bugs.[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: David Wilkins, Jason Orendorff, Matt Weiner, Sean M. Shore and Toby Ott. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or this game's IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type SITES for a list of sites that helped[if cur-score of intro is 0], which will totally spoil things right now[end if].";
+	say "[if cur-score of Intro > 0]Tester Street residents ('no on tiredness:')[paragraph break][end if]Adri, Anthony Hope, DJ Hastings, Gavin Myers-Leman, Hulk Handsome ([if cur-score of intro > 0]who nicely handles hokum like huge bars and bear hugs in his own IFComp 2012 game[otherwise][i]shout-out not spoiled til you score a point[r][end if],) Joey Jones, John Nitchals, Paul Lee, Robert Patten and Tomie Campf, in alphabetical first-name order. They found 700+ bugs.[paragraph break]Source (or cues) : Heartless Zombie, who found a lot of bugs AND helped tighten up my post-release code to lessen horrible spoilery disambiguations.[paragraph break]Storied Editors (post-release fixes) also include: David Wilkins, Jason Orendorff, Matt Weiner, Sean M. Shore and Toby Ott. Reviews on the Internet also helped me fix things--Carl Muckenhoupt and Simon Carless discovered unwinnable states but were still kind enough to remark favorably.[paragraph break]A hat tip to ClubFloyd for a wonderful transcript that turned up a lot of usability issues. Their patience and perseverance helped me a lot![paragraph break]It must be noted that several bugs that popped up in the several versions were due to me trying to slip in one more small thing without adequate re-testing. If there is anything obvious (and there was, in the initial release,) it is my fault and not theirs. So play the most recent release! IFArchive.org, or this game's IFDB page (http://ifdb.tads.org/viewgame?id=ch39pwspg9nohmw) has it.[paragraph break]John Nitchals made the cover art. Cover image is a derivative of 'LED scrolling nametags' (http://www.flickr.com/photos/clanlife/385380701/) by Phil Campbell, used under a Creative Commons Attribution 3.0 Unported (CC BY 3.0) license: http://creativecommons.org/licenses/by/3.0/[paragraph break]Marco Innocenti provided moral support early on.[paragraph break]Contact me with suggestions (technical or aesthetic) at [email], and you can join these worthy people above.[paragraph break]Also, thanks to the folks at intfiction.org who helped me code things. You can also find who the pseudonyms really are at http://ifwiki.org/index.php/Shuffling_Around.[paragraph break]Finally, type SITES for a list of sites that helped[if cur-score of intro is 0], which will totally spoil things right now[end if].";
 	say "Also, thanks to Google Code and BitBucket, which contained original source control and issues, and GitHub, where I currently have a repository: [ghsite].";
 	say "Oh, hey, do you wish to see what the pen names are right now? Some people were kind enough to take them at my request.";
 	if the player yes-consents:
@@ -12668,9 +12695,11 @@ chapter knocking
 
 knocking is an action applying to one thing.
 
+understand the command "knock [something]" as something new.
 understand the command "knock on [something]" as something new.
 
 understand "knock [something]" as knocking.
+understand "knock on [something]" as knocking.
 
 does the player mean knocking the black door: it is very likely;
 does the player mean knocking the cabinet: it is very likely;
@@ -12999,6 +13028,10 @@ carry out filling:
 		say "You may have to be more specific. Try PUT x IN y instead." instead;
 	if noun is sack:
 		say "The oils would leak out of the sack." instead;
+	if noun is oils:
+		if oils are in cask:
+			say "You have enough." instead;
+		say "You want to fill a container that can hold the oils." instead;
 	if noun is not cask:
 		say "You need something solid to pour the oils into." instead;
 	if silo is in moor and soil is in moor:
@@ -13702,14 +13735,12 @@ carry out tsing:
 	now nametag is in lalaland;
 	solve-region intro;
 	now notices section is visited;
-	if player has gadget:
-		say "You already have the gadget. Jumping.";
-	otherwise:
-		say "You now carry the tagged gadget from the Notices Section, as well as the prep paper.";
 	now player has the gadget;
 	now player has the prep paper;
+	now player has the saltine;
+	now player has the phial;
 	now intro is solved;
-	say "I gave you the gadget and paper.";
+	say "I gave you the gadget and paper and saltine, regardless of what you already had.";
 	the rule succeeds;
 
 chapter tsfing
