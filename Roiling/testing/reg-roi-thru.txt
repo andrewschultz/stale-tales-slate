@@ -2517,6 +2517,11 @@ You don't need to repurpose the repair machine. It's done enough for you.
 >give gizmo to kid
 "Wow! That'd be neat if I had something to build."
 
+>giftde
+Dirk scrunches his eyes to try to keep even more attention, but it doesn't quite work.
+>gifted
+>giftde
+Dirk is fully attentive. Overkill might damage his creative streak!
 >ask kid about doctor
 Obscurest Subsector
 
@@ -2606,9 +2611,13 @@ Lone Sod Solo Den
 Ed doesn't deserve THAT for his past sins. Plus, you'd get sucked in.
 
 >grye
-WRONG
-Your score has just gone up by one point
+Ed looks slightly less avaricious.
 >grey
+Your score has just gone up by one point
+>grye
+Ed's attitude is changed enough for the better.
+
+>undo
 >undo
 
 >greyde
@@ -2635,7 +2644,7 @@ Your score has just gone up by one point
 Strip of Profits
 
 >score
-Towers (45/45)
+Towers (46/46)
 
 #### bug with GO TO DUCK printing the wrong error but only if I skip the Trefoil. Is there any way...?
 

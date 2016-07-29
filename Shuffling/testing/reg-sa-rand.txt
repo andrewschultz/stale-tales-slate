@@ -14,7 +14,8 @@
 >showtab
 
 >x name list
-The list is slim, but it's long. Several names: Morynda Raymond, Hannes Hansen, Nelly-Ellyn Lenly, Iola Liao and Sarina Arians. A list of names has always left you feeling like you wouldn't fit in, but this is a step beyond.
+The list is slim, but it's long. Several names: (table of job searcher names)
+A list of names has always left you feeling like you wouldn't fit in, but this is a step beyond.
 
 >ts
 
@@ -72,12 +73,12 @@ The list is slim, but it's long. Several names: Morynda Raymond, Hannes Hansen, 
 
 >metros
 >enter metros
->n
 
 >gardenia
 
->z
+>n
 (table of camp chants)Sounds of social protest.
+
 >z
 (table of camp chants)More sounds of social protest.
 
@@ -101,6 +102,8 @@ The list is slim, but it's long. Several names: Morynda Raymond, Hannes Hansen, 
 >get cake
 
 >s
+>keycard
+
 >e
 
 >give gardenia
@@ -124,10 +127,20 @@ The list is slim, but it's long. Several names: Morynda Raymond, Hannes Hansen, 
 >put card on sensor
 
 >e
-(table of nerd natter)Brainy brayin'. Huge stir over Guthrie's right-use. "Urge this!"
+(table of nerd natter)
+/(Brainy brayin'|Wits fly swiftly|BLANK)\.
 
 >z
-(table of nerd natter)Wits fly swiftly. "I stop no options. Posit on!"
+(table of nerd natter)
+/(Brainy brayin'|Wits fly swiftly|BLANK)\.
+
+>z
+(table of nerd natter)
+/(Brainy brayin'|Wits fly swiftly|BLANK)\.
+
+>z
+(table of nerd natter)
+/(Brainy brayin'|Wits fly swiftly|BLANK)\.
 
 >retry
 >gonear tiles
@@ -143,7 +156,7 @@ The list is slim, but it's long. Several names: Morynda Raymond, Hannes Hansen, 
 >slope
 
 >e
-(table of riot slogans)Voices babble. "HILLSIDE SHILL, DIE!"
+(table of riot slogans)Voices babble.
 
 >trio
 

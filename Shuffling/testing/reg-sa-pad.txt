@@ -4,7 +4,7 @@
 ## also tests nudges
 ##
 
-** game: /home/andrew/prt/debug-roiling.ulx
+** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
 * everything
@@ -12,9 +12,12 @@
 >au 1
 
 >score
-WRONG
+You haven't solved any regions yet.
+
+[NOTE: You can toggle seeing the minimum points to pass an area, or maximum achievable points, by typing POSS. This is a potential spoiler, since the minimum score increasing indicates you found a Last Lousy Point, and the maximum score decreasing indicates one is no longer available. But maybe you'd like that sort of hint, too.]
+
 >pad poss
-WRONG
+POSS toggles if you see the possible minimum and maximum scores on solving a region. It's a small spoiler/clue for last lousy points.
 
 >in
 
@@ -30,9 +33,10 @@ WRONG
 
 >x board
 >pad board
-WRONG
+It's got notes on needing two simple 7-letter portmanteaux, which you need to figure out. The nametag seems to change to someone who can help you with whatever the gateway should become
+
 >pad retry
-WRONG
+RETRY gets Terry to send you to the Trips Strip, wherever that is.
 
 >undo
 >undo
@@ -41,145 +45,225 @@ WRONG
 >gateman
 
 >ask gateman about advice
-WRONG
+[You record the information about advice in your notepad.]
 >pad advice
-WRONG
+--Nothing over eight words. Maybe one two-word deal.
+--Red Bull Burdell is much bigger and stronger than you. Traditional fighting won't work.
 
 >get gadget
+
+>scan static
+
 >ask gateman about tip
-WRONG
->pad certify
-WRONG
->pad rectify
-WRONG
+"Well, one of rectify or certify is overall better than the other. Would you like to know which?"
+"Without getting too mathy, you can expect one of the letters to CERTIFY correctly if there are no repeats, but a bit more with repeats--one and a half, in an eight-letter word with a repeat. RECTIFY, you're always guaranteed the first and last right. So it's a bit more help if you SECURE later. But how much challenge you want is up to you. Either can work with any red writing you might see."
+
+[You record the information about certify/rectify in multiple entries in your notepad.]
 
 >undo
+
+>ask about certify
+"Tells you what letters are right for what something should be. Red is wrong, green is right. Probably not as powerful as rectifying, but gets you some stuff right away. Also--there's some clues out there that're just plain red. They're all wrong."
+[You record the information about certify in your notepad.]
+
+>pad certify
+1 beep = 1 word, buzz = already changed, silence = nothing.
+red/green = right/wrong letters.
+>undo
+>undo
+
+>ask about rectify
+"Gives you the first and last letters of what something should be."
+[You record the information about rectify in your notepad.]
+
+>pad rectify
+green dot = 1st letter. Red dot = last letter. Blue = the rest.
 >undo
 >undo
 
 >ask gateman about redness
-WRONG
->pad redness
-WRONG
+"Red writing, like Red Bull Burdell, is totally wrong in many ways. So many, it can be a help."
 
+He shows you some calculations that any such writing can be expected to eliminate 60% of your possible choices, because 1 minus 1/x to the x is 1/e, more if there's a duplicate letter--the Inclusion-Exclusion Principle applies here, and you nod as he mentions the exact numbers aren't important, but every clue helps.
+[You record the information about red in your notepad.]
+
+>pad redness
+Any words that are red, or make you see red, or make people turn red, are all wrong, just like Red Bull Burdell. This is handy to know--what do you need to mess with? And how shouldn't it be messed with?
 
 >ask gateman about saltine
+"Miniscule, but more than mini-clues. The next item that baffles you, eat that and eXamine extra hard and it'll make sense. Oh, apologies in advance: good flavors and good magic don't mix."
+
+[You record the information about xx in your notepad.]
+
 >pad xx
-WRONG
+You can XX after you eat the saltine in order to see what an item should be. This has one use, and benign items do not waste it.
+
 >undo
 >undo
 
 >eat saltine
+Old Man Almond coughs. "You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static is just practice."
+
 >pad xx
-WRONG
->undo
->undo
+You can XX after you eat the saltine in order to see what an item should be. This has one use, and benign items do not waste it.
 
->pad certify
-WRONG
->pad rectify
-WRONG
-
->undo
 >undo
 >undo
 
 >certify static
-WRONG
->pad certify
-WRONG
+(NOTE: when using CERTIFY, you can shorten it to CERT/CER/C in the future.)
+
+The gadget beeps once. A series of lights comes across: RGRRRR. 
 
 >rectify static
-WRONG
+(switching to rectify first)(NOTE: when using RECTIFY, you can shorten it to RECT/REC/R in the future.)
+
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGBBB.  (R = red, G = green, B = blue).
+
 >pad rectify
-WRONG
+You haven't written anything about that. Currently you can consult the notepad about:
+>pad certify
+You haven't written anything about that. Currently you can consult the notepad about:
 
 >undo
 >undo
 
 >ask gateman about certify
+"Tells you what letters are right for what something should be. Red is wrong, green is right. Probably not as powerful as rectifying, but gets you some stuff right away. Also--there's some clues out there that're just plain red. They're all wrong."
+
 >pad certify
-WRONG
+1 beep = 1 word, buzz = already changed, silence = nothing.
+red/green = right/wrong letters.
+
 >undo
 >undo
 
 >ask gateman about rectify
+"Gives you the first and last letters of what something should be."
+
 >pad rectify
-WRONG
+green dot = 1st letter. Red dot = last letter. Blue = the rest.
+
 >undo
 >undo
 
 >ask gateman about blue lube
+"The phial with the lube can grease your way to a solution." He coughs. "Sorry."
+
+"If you ANGLE the lube just right so it reflects a light source, you can see what you can change. If you GLEAN, you see what you should be doing. How your story unfolds." He walks over to the cabinet, pats it, and says a few words. "You can take the phial now."
 
 >x examples
+CERTIFY: LEMON <-> MELON. A little thought and you realize only two reds on the gadget makes things trivial.
+
+RECTIFY: PASTE <-> TAPES. The red S/green T in PASTE and green P/red E in TAPES are, you realize, the first and last letters in the other word.
+
+>access
+>x examples
+CERTIFY: LEMON, two way arrow, and MELON. The m's and l's are red, but the other letters are green.
+
+RECTIFY: PASTE, two-way arrow, TAPES. The ST of paste is red and green, with the PE of tapes being green and red. Hm, Tapes starts with T and ends with S, while Paste starts with P and ends with E.
+
+>access
+
 >pad certify
 >pad rectify
 
 >ask gateman about goat
-WRONG
+"Hm, yes, good job with the goat. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Red-Red in Certify mode and Red-Blue-Green-Blue in Rectify."
+
+[You record the information about the goat in your notepad.]
+
 >pad goat
-WRONG
+Certify = RGRR and Rectify = RBGB.
+
+>eat writing
+There's a lot of writing in this game, especially red writing. If you're trying to read writing, you may want to READ what the writing is on, instead. This is slight laziness on my part, but it's tricky code. I hope you understand.
+[You record the information about writing in your notepad.]
+
+>undo
 
 >xyz writing
-WRONG
+You don't have to do anything with any writing, just READ whatever the writing is on. That said, sorry for not implementing any and all writing fully.
+
+[You record the information about writing in your notepad.]
+
 >pad writing
-WRONG
+You need to READ or EXAMINE something instead of the WRITING on it.
+>undo
+>undo
 
 >ask gateman about red bull burdell
-WRONG
+"Like he was thought up by a demonic comedian. Made a desireable age disagreeable. Seemed a poseur when he uprose from abuser to saboteur. He'd make a poignant nag point, acting like a rowdy pal. Heard his cleats in the castle as he did something called "Leveling up." Maximizing stuff called hit points and magic points. Things went awry before we were wary." You sense there's more, if you can bear it.
+
+[You record the information about Red Bull Burdell in your notepad.]
+
 >pad burdell
-WRONG
+The guy I need to beat. Probably not with strength or anything like that.
+
+>pad red bull burdell
+The guy I need to beat. Probably not with strength or anything like that.
 
 >ask gateman about phail phial
+"Good, good, you got the phial. Remember to ANGLE to see into things or GLEAN to see around as need be."
+
 >pad lube
-WRONG
+Worth looking into. Though you probably just want to ANGLE and GLEAN.
+
 >pad angle
-WRONG
+Lets you see what can be changed.
+
 >pad glean
-WRONG
+Lets you glimpse what you need to do.
 
 >in
 
 >x stores
+They're labelled with letters, not numbers, though you can refer to them by number if you want. Of the various stores you see, only store M, Store I and Store F look like you can do anything with them. Store B looks--well, not quite dead, but not very substantial, either. Store R has COMING SOON spray-painted to the side it. A few others seem greyed-out, like in a video game or something. There can't be anything in any of them. 
+[You record the information about stores in your notepad.]
+
 >pad stores
-WRONG
+--Store F
+--Store I
+--Store M
+--Store R
 
 >pad retry
-WRONG
+RETRY gets Terry to send you back to the Trips Strip.
 
 >pad secure
-WRONG
+Having SECURE activated will make the gadget less useful on any one puzzle but will let you skip a chunk of your quest later. SECURE will be locked once you visit certain places. The button will flash when you need to choose.
+
 >pad recuse
-WRONG
+If you secured, RECUSE will come in handy once you've solved two quests, to skip a third.
 
 >son
 >pad spaces
-WRONG
+SPACES toggles whether you have an extra space in raw gadget results. SPACE(S) ON/SON forces it on, while NO SPACE(S)/NOS forces it off.
+
 >undo
 >undo
 
 >nos
 >pad spaces
-WRONG
+SPACES toggles whether you have an extra space in raw gadget results. SPACE(S) ON/SON forces it on, while NO SPACE(S)/NOS forces it off.
+
 >undo
 >undo
 
 >certify f
-You can toggle spaces between the letters with SPACE(S), or you can set them directly with SPACE(S) ON/NO SPACE(S), or SON/NOS for short.
-
->pad spaces
-WRONG
-
+The gadget beeps once. A series of lights comes across: RRRRRR. 
 
 >rectify f
 >certify f
 >rectify f
 >certify f
+A shady figure sidles up to you. "Hey! Pal! The name's Marcos. Sellin' macros. Ways to lump actions together. Streamline your thinking. Actually, not selling them at all, just hoping you remember me once you fix things here and are an acclaimed hero with clout."
+
 >rectify f
 >certify f
 
 >pad macros
-CR/RC
+CR/RC (something) = C (something) + R(something).
 
 >purloin phail phial
 
@@ -190,7 +274,7 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 [You record the information about to-do in your notepad.]
 
 >pad to-do
-WRONG
+What's on tap right now: Store R, store M, Store I, Store F and Store B.
 
 >glean
 >angle
@@ -206,10 +290,10 @@ After this vision, you shake your head a bit on seeing yourself taking six foot-
 ANGLE=AN to see changeable items, GLEAN=GL to see the story ahead.
 
 >moters
-detailed nudges
->pad opt in
-WRONG
+[NOTE: You can toggle detailed nudges when you're on the right track with OPT IN (to get them) and NO TIP (to hide them,) though they may give more hints than you want. You will always get this generic message, at least, in any case.]
 
+>pad opt in
+OPT IN gives you more detail when you are on the right track. NO TIP gives you less detail but lets you know you have the right anagram.
 
 >metros
 >in

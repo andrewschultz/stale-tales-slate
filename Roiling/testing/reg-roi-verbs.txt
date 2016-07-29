@@ -1378,6 +1378,8 @@ WRONG
 >gt yow
 >unlocked
 >gt kid
+
+>gifted
 >ask kid about yow
 
 >s

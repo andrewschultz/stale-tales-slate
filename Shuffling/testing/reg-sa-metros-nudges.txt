@@ -357,6 +357,10 @@ Anti-Cool Location
 
 >w
 >put card on sensor
+The door is open. So you just walk east instead.
+Anti-Cool Location
+
+>w
 >z
 >e
 Anti-Cool Location

@@ -1420,7 +1420,7 @@ WRONG
 >spectacular
 
 >score
-24/45
+24/46
 
 * _otters
 

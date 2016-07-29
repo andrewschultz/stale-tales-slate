@@ -9,9 +9,6 @@
 
 >opt in
 
->score
-a nervy every
-
 >no entry
 Hm, interesting. You wonder if anything is REALLY stopping you from entering.
 >try
@@ -59,7 +56,7 @@ You solved that puzzle already. Onward!
 You don't have enough possessions to need a cart. You probably need somewhere to go, instead.
 
 >rood
-This game is religion-neutral. Besides, a rood wouldn't lead anywhere.
+This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
 >doro
 The odor doesn't seem too complex. You pause. You can figure what it should be.
@@ -69,11 +66,8 @@ Your score has just gone up by one point.
 The door is probably the way out. Best not change it into something else.
 
 >rood
-The door is probably the way out. Best not change it into something else.
+You already changed the odor, and this game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
->score
-1 out of 7
-You haven't solved any regions yet. You have the rank of reduced deducer.
 >blto
 You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here.
 >blot
@@ -107,9 +101,6 @@ Your score has just gone up by one point.
 >gota
 The goat seems content enough as-is.
 
->score
-You haven't solved any regions yet. You have the rank of reduced deducer.
-
 >sandler
 I award you zero points for that anagramming try, and may God have mercy on your soul. Okay, actually, you're close to one point.
 
@@ -130,9 +121,6 @@ There will be better hints than a manners advice column once you move on.
 I award you zero points for that anagramming try, and may God have mercy on your soul for trying to sneak another point.
 
 >in
-
->score
-You haven't solved any regions yet. You have the rank of stunted student.
 
 >get phial
 
@@ -159,82 +147,166 @@ Your score has just gone up by one point.
 >gatemna
 Don't scramble the gateman. He's here to help.
 
->ask gateman about redness
-WRONG
->ask gateman about board
-WRONG
->ask gateman about doll house
-WRONG
->ask gateman about static
-WRONG
->ask gateman about attics
-WRONG
->ask gateman about blue lube
-WRONG
->ask gateman about phail phial
-WRONG
->ask gateman about prep paper
-WRONG
->ask gateman about Red Bull Burdell
-WRONG
->ask gateman about tip
-WRONG
->ask gateman about tinfoil info-lit
-WRONG
->ask gateman about Bud Helm
-WRONG
->ask gateman about Raw Rori
-WRONG
->ask gateman about pen
-WRONG
->ask gateman about dope tan notepad
-WRONG
->ask gateman about new land
-WRONG
->ask gateman about nametag
-WRONG
->ask gateman about yourself
-WRONG
->ask gateman about gateman
-WRONG
->ask gateman about arrow
-WRONG
->ask gateman about knot
-WRONG
->ask gateman about examples
-WRONG
->ask gateman about disclaimer
-WRONG
->ask gateman about gadget-screen
-WRONG
->ask gateman about handle
-WRONG
->ask gateman about goat
-WRONG
->ask gateman about toga
-WRONG
->ask gateman about shrub
-WRONG
->ask gateman about brush
-WRONG
->ask gateman about thorn
-WRONG
->ask gateman about getaway
-WRONG
->ask gateman about gadget
-WRONG
->ask gateman about s-r
-WRONG
->ask gateman about noise bag
-WRONG
->ask gateman about saltine
-WRONG
->ask gateman about cabinet
-WRONG
+>ask gateman about xyzzy
+"Fool! That magic word has no place alongside your magic abilities."
 
->score
-7 out of 7
-stunted student
+>ask gateman about next guy
+"Optimistic, aren't we?"
+
+>ask gateman about sane sean
+The gateman shakes his head slowly and shrugs. Sane Sean would probably be a lot funnier if Yorpwald weren't in trouble.
+
+>ask gateman about advice
+"Well, you figured a few things out. Probably want to focus more on changing stuff than weird actions. One thing, though. The things you need to change? Nothing too complex. Nothing over eight letters. Okay, maybe one two-word thing with nine. Red Bull Burdell often babbled about getting eighteen intelligence and wisdom from all that leveling up, but he never got a decent vocabulary. The philistine. Also, there will be clues--clues that seem all wrong, deliberately wrong, but their wrongness will stand out and help you."
+
+>ask gateman about clods
+Like I said, no time for that. Time to fix things!"
+
+>ask gateman about world
+"Well, it wasn't a very SPECIAL world. In fact it was one of those hero mills. I remember more hills than anything else. Figure it had to break down for the next guy to save it."
+
+>ask gateman about yorpwald
+"It's been shuffled, nearly f-flushed! You can rescue it from physical, economic and moral malaise. You will need to travel through Old Warpy to get there. The stuff in the cabinet should help. Ask me about it. I'm a hero emeritus, and stuff."
+
+>ask gateman about old warpy
+"Once you step in, it'll take you somewhere far away. But it's perfectly harmless and not too bumpy. Like beyond that gateway getaway. Terry's in there, too, and he flips the switch so you can RETRY if you get stuck somewhere."
+
+>ask gateman about terry
+"He's reliable."
+
+>ask gateman about lupine lineup
+Distant rumblings from somewhere beyond a very quiet place. Sadly, violence may be necessary."
+
+>ask gateman about noble
+"He used to be fair and just. But he saw Red Bull Burdell 'leveling up,' whatever that is. Red Bull bragged about how he'd multiplied his gold and achieved eighteen charisma, or something, before changing Noble Ol' Ben."
+
+>ask gateman about quest
+"Three major problems past the gateway. Noise is one. A lupine lineup. Noble Ol' Ben: gone. Lorn. No longer."
+"And I think I know who's behind it: RED BULL BURDELL!"
+
+>ask gateman about quest
+He mentions "Noise is one, lupine lineup, Noble Ol' Ben gone, lorn, no longer." Then he motions to the gateway. "You'll see when you get there, I think."
+
+>ask gateman about schtuff
+"Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The getaway! General advice! No time to scold clods asking about--whatever you just mumbled about."
+
+>ask gateman about schtuff
+Old Man Almond pauses. "There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the gateway once you change it. It's not too hard, for seven letters, but I can't tell you. You'll learn by doing."
+
+>ask gateman about redness
+"Red writing, like Red Bull Burdell, is totally wrong in many ways. So many, it can be a help."
+
+He shows you some calculations that any such writing can be expected to eliminate 60% of your possible choices, because 1 minus 1/x to the x is 1/e, more if there's a duplicate letter--the Inclusion-Exclusion Principle applies here, and you nod as he mentions the exact numbers aren't important, but every clue helps.
+[You record the information about red in your notepad.]
+
+>ask gateman about board
+"Good idea to take notes on it. But I can tell you about other stuff. Like the gadget in the cabinet. Or even how it works."
+
+>ask gateman about doll house
+"You don't need to take it with or anything. Nice job with it, though."
+
+>ask gateman about static
+"Good job getting rid of it."
+
+>ask gateman about attics
+"They're more appropriate to the doll house, definitely."
+
+>ask gateman about blue lube
+"Cabinet not letting you have it, eh? The phial with the lube can grease your way to a solution." He coughs. "Sorry."
+
+"If you ANGLE the lube just right so it reflects a light source, you can see what you can change. If you GLEAN, you see what you should be doing. How your story unfolds." He walks over to the cabinet, pats it, and says a few words. "You can take the phial now."
+
+[You record the information about lube/angle/glean in multiple entries in your notepad.]
+
+>ask gateman about phail phial
+"Good, good, you got the phial. Remember to ANGLE to see into things or GLEAN to see around as need be."
+
+>ask gateman about prep paper
+"No, I'm not sure how we all know this. There's a lot of high-level magic theory. And if we knew the details and had your powers, maybe one of us could try. But--well, it's a start."
+
+>ask gateman about Red Bull Burdell
+"Like he was thought up by a demonic comedian. Made a desireable age disagreeable. Seemed a poseur when he uprose from abuser to saboteur. He'd make a poignant nag point, acting like a rowdy pal. Heard his cleats in the castle as he did something called "Leveling up." Maximizing stuff called hit points and magic points. Things went awry before we were wary." You sense there's more, if you can bear it.
+
+>ask gateman about tip
+"Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
+
+>ask gateman about tinfoil info-lit
+"Sane Sean. Hmph. Either he's dumb enough to believe Red Bull Burdell's a good guy, or he's a deep undercover double agent."
+
+>ask gateman about Bud Helm
+"Yeah, we were surprised the bum held Bud Helm.  Bud Helm bled, hum? He's a broken man, now."
+
+>ask gateman about Raw Rori
+"Pure strength. That won't get the job done here."
+
+>ask gateman about pen
+"How thoughtful! Nobody's asked me for my autograph for a long time! Wait, we don't have time for that nonsense."
+
+>ask gateman about dope tan notepad
+"Good choice, taking notes."
+
+>ask gateman about new land
+"I can't tell you everything about it. But you'll see for yourself."
+
+>ask gateman about nametag
+"Oh, did you have problems with it? Sorry. I'd have helped, but I was--I mean, I wasn't at all." He rolls his eyes.
+
+>ask gateman about yourself
+"We need someone to free us from the marauding tyranny of Red Bull Burdell! He has made a plowyard out of Yorpwald! Force alone cannot undo him!"
+
+>ask gateman about gateman
+"Once I solved one of those hero mills with more hills..." he blinks. "I'm not important. You are. And what you can do."
+
+ >ask gateman about arrow
+"Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
+
+>ask gateman about knot
+"Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
+
+>ask gateman about examples
+"Hm, LEMON and MELON have three letters in common, and they're all green. The two that switch are red. So that's not bad. PASTE and TAPES, on the other hand...the green T and red S on the left map to the first last letters on the right, and the P and E are green and red and map to the first and last letters on the left."
+
+>ask gateman about disclaimer
+"Necessary legalese. But really, use the gadget as often or little as you want or need. Nobody will judge."
+
+>ask gateman about gadget screen
+"Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
+
+>ask gateman about handle
+"Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
+
+>ask gateman about goat
+"Hm, yes, good job with the goat. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Red-Red in Certify mode and Red-Blue-Green-Blue in Rectify."
+
+>ask gateman about toga
+You don't wish to revisit past glories. It's probably better to PAD GOAT for Old Man Almond's information.
+
+>ask gateman about shrub
+You don't wish to revisit past glories. It's probably better to PAD GOAT for Old Man Almond's information.
+
+>ask gateman about brush
+You don't wish to revisit past glories. It's probably better to PAD GOAT for Old Man Almond's information.
+
+>ask gateman about thorn
+"Sorry if it scratched you. And by you I mean your nametag. And by your nametag I mean me."
+
+>ask gateman about getaway
+"I'd get that gadget in the cabinet before entering. I can help, if you ask. But I can't force you to do anything."
+
+>ask gateman about gadget
+"Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
+
+>ask gateman about secure button
+"Scan something. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
+
+>ask gateman about noise bag
+"Cities gotta have noise but there's one just constantly has it. Burdell's behind it, too, claiming he couldn't have leveled up without that techno-piffle and people get used to it if they try. Actually calls it music. He's got a lieutenant to enforce it."
+
+>ask gateman about saltine
+"Miniscule, but more than mini-clues. The next item that baffles you, eat that and eXamine extra hard and it'll make sense. Oh, apologies in advance: good flavors and good magic don't mix."
+
+>ask gateman about cabinet
+"Everything in there's yours."
 
 >remove gadget from cabinet
 To keep things simple, I recommend TAKE as a synonym. REMOVE is also okay, but it defaults to carried or worn items, and I know no way around that.
@@ -259,32 +331,11 @@ Trips Strip
 >lost
 No, you need to find your way through individual stores.
 
->strobe
-You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. You suspect Store B may have better refreshment to add.")
-
->presto
-Your magic is not advanced enough to change store p! Well, not this game![fake-clue of store p]
-
->routes
-Hm, that seems right, but it doesn't work this game![fake-clue of store u]
-
->troves
-Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.[fake-clue of store v]
-
->towers
-That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.[fake-clue of store w]
-
->oyster
-Nice try, but that's next game![fake-clue of store y]
-
 >sorbet
 Your score has just gone up by one point.
 
 >nice bat
 Your score has just gone up by one point.
-
->score
-out of 6
 
 >resort
 seems like it should work
@@ -302,9 +353,6 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 Rest of Forest
 
->score
-1 out of 16 total
-
 >seat
 You need the opposite of a seat, here. But at the same time, you're also very close.
 
@@ -320,9 +368,6 @@ Wrong river for the underworld.
 
 >file
 It looks like you can just cut in line. No need to stand.
-
->score
-2 out of 16
 
 >e
 Sorted Trodes
@@ -371,9 +416,6 @@ Hey! Guns are dangerous! It wasn't that easy to get one. Besides, changing the t
 
 >gnu
 Shotgun: gnu? Tosh!
-
->score
-5 out of 16 total
 
 >w
 >w
@@ -432,9 +474,6 @@ You can just read the spread instead. The messages here aren't cryptic enough to
 The banshee whines, sure someone is trying to kill it! Or send it to a lower ring of the death-kingdom.
 >hasbeen
 Your score has just gone up by one point.
-
->score
-9 out of 16
 
 >chisle
 The liches whine, sure someone is trying to kill them! Or send it to a lower ring of the death-kingdom.
@@ -565,9 +604,6 @@ Your score has just gone up by one point.
 
 >enter sortie
 Centrifuge
-
->score
-0 out of 27 total points
 
 >a lid
 Changing the dial would leave you stuck.
@@ -714,9 +750,6 @@ Your score has just gone up by one point.
 >strwa
 The straw remains motionless.
 
->score
-12 out of 27
-
 >shose
 Something leaks out of the hoses. Hm. What else can be rubber, now.
 >shoes
@@ -752,10 +785,20 @@ The moor sways a bit. You do some brief mental calculation. There's no third pla
 >mope
 Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.
 
+>ask woeful pat about beat
+He holds up his hand for silence. He is too busy reciting his poem. You probably can't ask him about anything other than the poem. Or maybe its meter.
+
+>ask woeful pat about paean
+"It will be my best reading yet. Even better than this. Here you go, just to make sure."
+
+>ask woeful pat about paean
+"It will be my best reading yet. Even better than this."
+
 >ask woeful pat about peasant
-WRONG
+"There is one who tries his best. But he is too...obvious."
+
 >ask woeful pat about anapest
-WRONG
+"I noticed you nodding your head to the beat. You probably don't even know it's called ANAPEST. But the proper meter of my poem is but the surface of its multifaceted splendor!"
 
 >peasatn
 You think you had the right idea, but your execution was poor. Maybe be more workmanlike.
@@ -764,14 +807,26 @@ Your score has just gone up by one point.
 >peasatn
 You're better off changing what the peasant has than what he is.
 
->ask peasant about hay
-WRONG
+>ask peasant about lord ablemiser
+"Used to be much nicer, I'd say!"
+
 >ask peasant about poem
-WRONG
+"I try my best at it."
+
+>ask peasant about peasant
+"I don't know much about that, that's sure. But I know from hay, being an abler baler."
+
 >ask peasant about straw
-WRONG
+"Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though."
+
+>ask peasant about hay
+"Not very useful for building something unless you want it to be destroyed quickly. Can't think of any reason I'd need that. Straw, on the other hand..."
+
+>ask peasant about straw
+"Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though."
+
 >ask peasant about Woeful Pat
-WRONG
+"He's better than I am at poetry, I'm sure. I'm not educated enough to know why. Frustrates me sometimes."
 
 >black rood
 Hm, no, keep religion out of it.
@@ -1007,18 +1062,35 @@ Your score has just gone up by one point.
 >n
 Cramped Red Camp
 
+>ask deadbeat about blozhko
+He mumbles something about chillin' with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn, and he also complains about nerds down southish, for some reason.
+
+>ask deadbeat about deadbeat
+He mumbles "Mt. Rose Rots Me Moster" and giggles stupidly. You probably won't learn much from him except about instruments of subversion.
+
+>ask deadbeat about beats
+"They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, you square, yo."
+
+>ask deadbeat about slorntco
+"Organized capital is so repressive, dude."
+
 >ask deadbeat about nerds
-WRONG
+The deadbeat starts shaking as he rattles off how the nerds east of the Underside have forgotten their roots.
+
 >ask deadbeat about faeries
-WRONG
+The deadbeat doesn't believe in magic, now. But he did as a kid.
+
 >ask deadbeat about red bull burdell
-WRONG
+"He is oppressive, man, but he is just a symptom of disparity and malaise."
+
 >ask deadbeat about talkers
-WRONG
+The deadbeat starts up some nonsense pseudo-sociological mumblings.
+
 >ask deadbeat about lost corn
-WRONG
+"Hey, Man, like, how do we know you don't, like, like the Man, man? Hey? Hey?"
+
 >ask deadbeat about termite emitter
-WRONG
+"What? Do you know something?" he looks furtively around, more convinced than ever you're with The Man, man.
 
 >w
 A Yell Alley
@@ -1044,13 +1116,17 @@ Your score has just gone up by one point.
 Cordoned Red Condo
 
 >ask talkers about dry cake
-WRONG
+Someone puts their hand to their lips. Someone else shakes their head. You don't DESERVE that cake, according to them.
 
 >switch emitter
 Your score has just gone up by one point.
 
 >get cake
 >s
+
+>ask deadbeat about beats
+"They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, dude."
+
 >keycard
 Your score has just gone up by one point.
 >controls
@@ -1059,7 +1135,34 @@ Your score has just gone up by one point.
 >e
 Elf Row's Flowers
 
->give gardenia to faeries
+>ask faeries about xyzzy
+"You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!" they exclaim.
+
+>abstract gardenia to underside
+>ask faeries about xyzzy
+"You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!" they exclaim. It will probably be tougher than getting a sore and changing it to a rose.
+
+>purloin gardenia
+
+>ask faeries about brocade
+"It is free. But useless to us."
+
+>get brocade
+
+>ask faeries about brocade
+"It is free. But useless to us."
+
+>ask faeries about drainage
+"Perhaps you can turn something in this city into a flower. We are out of ideas. How can drainage become a flower?"
+
+>ask faeries about beats
+"It is terrible! Our hearing is even more delicate than a clumsy human's. We can do no decent long-term magic with it around."
+
+>ask faeries about gardenia
+They see your gardenia and snatch it away before you can offer properly. "Yes! Yes!" They're visibly impressed. "Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one. And take the brocade, too. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need."
+
+>ask faeries about xyzzy
+"You are our hero! Thank you so much! We are sure you can do something with your reward! Now go and save the city."
 
 >barcode
 Your score has just gone up by one point.
@@ -1078,175 +1181,6 @@ Elm Train Terminal
 Your score has just gone up by one point.
 
 >put controls in opening
-
->n
->n
->e
-
-* _metstart-long
-
->opt in
-
->baste
-I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
-
->gardenai
-The drainage bubbles a bit.
->gardenia
-Your score has just gone up by one point.
->gardenai
-The flowers are fine as-is.
-
->score
-1 out of 18 total points
-
->n
-Cramped Red Camp
-
->w
-A Yell Alley
-
->tomaot
-Hm, you maybe could bend the motto a bit differently.
->tomato
-Your score has just gone up by one point.
->tomaot
-It's pretty gross, but you can't really change it. Maybe it can gross someone, or something, else out.
-
->e
->velcor
-The clover seems overcome with fuzz for a moment--but no, you missed a little something.
->velcro
-Your score has just gone up by one point.
->velcor
-The velcro remains tangled.
-
->smitten
-No matter how hard you try to convince yourself they're useful, you're not smitten with them. They're just ugly. But they could stick really good on the right surface.
-
->s
-Undesired Underside
-
->snores
-Any noise would be better than the beats, but without the sensor, you're probably not getting by the door.
->senors
-The senors you want to see are behind the door.
-
->w
-The Ol' Hotel
-
->lucre
-Ugg. You're not sure what kind of lucre you need, but maybe something that hasn't been in the night thing. Even something the night thing was sitting on.
->cluer
-Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing.
-
->throw tomato at thing
-Your score has just gone up by one point.
-
->x mattress
->e
->n
->n
-Cordoned Red Condo
-
->rentla
-One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers.
->rental
-Your score has just gone up by one point.
->rentla
-That's not something
-
->undo
->undo
->rentasl
-You could've sworn you the thing grew eyelids! And the eyes moved, begging you for any excuse it doesn't belong here!
->rentals
-Your score has just gone up by one point.
->rentasl
-Nothing at all seems to happen this time. You've probably done what you can.
-
->stalker
-Hm. If the talkers became a stalker, the only person to stalk would be you. You can't change who they are inside, but maybe you can give them a fright.
-
->switch emitter
-Your score has just gone up by one point.
-
->get cake
->s
-
->controsl
-You thought you heard electronic beeping from the corn.
->controls
-Your score has just gone up by one point.
->controsl
-The controls stay as they are.
-
->stent
-Medical procedures aren't necessary here. The noise is too distracting anyway.
-
->e
-Elf Row's Flowers
-
->give gardenia to faeries
-Powerful pure flow
-
->barcoed
-The brocade design seems simple, yet complex, and perhaps you don't have to change a lot.
->barcode
-Your score has just gone up by one point.
->barcoed
-The barcode does not shift.
-
->keycadr
-You feel like can almost identify what the cake can become.
->keycard
-Your score has just gone up by one point.
->keycadr
-The keycard remains stiff. Looks like it's as it should be.
-
->put barcode on keycard
-
->w
->s
-
->bates
-You don't need to deal with a knife-wielding psycho so near a hotel, which is close enough to a motel.
-
->s
-Elm Train Terminal
-
->bates
-You don't need to deal with a knife-wielding psycho on top of all this.
-
->sap
-The PSA is sappy, but it's not literally sappy. And sticky stuff won't get you up the wall.
->asp
-That's just what you need, a snake chasing you with everything else going on.
->spa
-You haven't earned a break yet.
->pass
-You take a pass on etiquette advice. You need results right now!
-
->tar
-That'd be neat, make the wall sticky so you could climb and deal with that stupid pig...but you might get stuck to it, too. Need something clingy but less gooey.
-
->u
-(on the fuzzy looking wall)
-
->opening
-Your score has just gone up by one point.
-
->put controls in opening
-Your score has just gone up by one point.
-
->rat
-No, you don't need a rat chasing you around.
->lair
-That might work, if the rail did not lead to a lair already.
->liar
-The number of liars the rails would create would be shocking.
->lira
-But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which don't use lira any more anyway. Plus, you don't need money.
 
 >n
 >n
@@ -1270,27 +1204,37 @@ Your score has just gone up by one point.
 The sheath remains still.
 
 >ask faeries about gardenia
-WRONG
+"We have faith in you! You will make the city safe to grow flowers again!"
+
 >ask faeries about heaths
-WRONG
+"We have faith in you! You will make the city safe to grow flowers again!"
+
 >ask faeries about begonias
-WRONG
+The faeries have been generous enough.
+
 >ask faeries about sheath
-WRONG
+"It is up to you to use it. We cannot help further."
+
 >ask faeries about sheath
-WRONG
+"It is up to you to use it. We cannot help further."
+
 >ask faeries about merchandise
-WRONG
+"We have faith in you! You will make the city safe to grow flowers again!"
+
 >ask faeries about clover
-WRONG
+"That is just a weed! We have no use for it. But maybe it is useful to you."
+
 >ask faeries about tomato
-WRONG
+"A putrid vegetable! It must taste terrible!"
+
 >ask faeries about tulip
-WRONG
+"Some flower that is!"
+
 >ask faeries about deadbeat
-WRONG
+The fairies buzz and give superior sniffs.
+
 >ask faeries about nerds
-WRONG
+The fairies buzz and give superior sniffs.
 
 >w
 >w
@@ -1317,18 +1261,89 @@ Your score has just gone up by one point.
 >odor
 It would stink to be you if you did that. The nerds outnumber you and would crucify you.
 
+>ask about xyzzy
+"Hm, should we even talk to an outsider about that?"
+
+"Well, if they found their way in, they can't be THAT dumb!"
+
+"Well, they'll have to find the right thing to ASK NERDS like us about if they want us to stop talking about them like they's not here."
+
+"Maybe they's a lateral thinker. Who knows several ways to get through things."
+
+"GROAN! Nice Ignorance."
+
+They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip.
+
+"If they doen't know what to ask nerds about, they deserve ED'S SNARK!" Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.
+
+>ask about xyzzy
+More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.
+
+>ask about xyzzy
+Laugh-tons onslaught as you haven't figured what to ask nerds.
+
+>ask about xyzzy
+They form a grin ring, but you close your eyes a bit. As you do, you are hit with a book!
+
+>ask about xyzzy
+A hundred-nerd DUH follow your latest ask-nerds attempt.
+
+>ask about xyzzy
+"Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!"
+
+>ask about xyzzy
+An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.
+
+>ask about xyzzy
+The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.
+
+>ask about xyzzy
+Apparently you haven't seen the light for what to ask nerds about. "We can wait here a thousand years!" one laughs. They debate on what's worse, dumb people in power or out.
+
+>ask about xyzzy
+One nerd tells you you should be sent to the red planet of SKASDREN for asking so many nagging questions.
+
+>ask about xyzzy
+One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.
+
+>ask about xyzzy
+A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.
+
+>ask about xyzzy
+One nerd jokingly refers you to DR. KASSEN.
+
+>ask about xyzzy
+"'K, Ren's sad," one nerd remarks, red-faced.
+
+>ask about xyzzy
+One nerd dumps out his shoe. "Erks! Sand!" He looks red-faced at such a public display.
+
+>ask about xyzzy
+Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.
+
+>ask nerds about dorks
+They snicker knowingly. They assure you Karkdoss is the worst, if you want to ask dorks for any help.
+
+>ask nerds about karkdoss
+They snicker knowingly. You wonder if there is a Karkdoss, and if so, if they really think you should ask dorks.
+
 >ask nerds about beats
-WRONG
+"Anyone can be smart enough to build noise cancelling homes to get rid of the beats!"
+
 >ask nerds about controls
-WRONG
+The nerds might be experts on technical stuff, but they'd be over your head.
+
 >ask nerds about deadbeat
-WRONG
+The nerds aren't big on social stuff. They're more about the technical stuff, about showing answers to questions you have. And questions you don't know you have yet.
+
 >ask nerds about faeries
-WRONG
+The nerds assure you science is better than magic.
+
 >ask nerds about red bull burdell
-WRONG
+"Sometimes Yorpwald is so dumb it deserves a thousand years of his rule. Not that he deserves to rule for a thousand years. We need someone smart enough to ASK NERDS the right thing to help dethrone him!"
+
 >ask nerds about tracks
-WRONG
+"We wouldn't touch it, that's for sure. I mean, even if we could see where it went."
 
 >ask nerds about darkness
 
@@ -1369,181 +1384,6 @@ The sword is yours
 Your score has just gone up by one point.
 Trips Strip
 
-* _metros-heaths-gnats
-
->get heaths
->sheath
-Your score has just gone up by one point.
-
->w
->w
->sword
-Your score has just gone up by one point.
-
->e
->give emitter to deadbeat
-Dude! So you
-
->give emitter to deadbeat
-Man, I've done enough work today
-#double lines
-
->s
->e
-Your score has just gone up by one point.
-
->switch emitter
->s
->e
-Bassy Abyss
-
->resin
-Your score has just gone up by one point.
-
->beast
-Your score has just gone up by one point.
->betsa
-
->get sword
-The sword is yours
-
->attack beast
-Your score has just gone up by one point.
-Trips Strip
-
-* _metros-begonias-darkness
-
->get begonias
->noise bag
-Your score has just gone up by one point.
-
->gab
-That's not a powerful enough noise to fight the beats.
-
->w
->w
->open bag
-swirling into the bag
-
->e
->give emitter to deadbeat
-Dude! So you
-
->give emitter to deadbeat
-Man, I've done enough work today
-#double lines
-
->s
->e
-Your score has just gone up by one point.
-
->ask nerds about darkness
-Your score has just gone up by one point.
-
->s
->e
-Bassy Abyss
-
->resin
-Your score has just gone up by one point.
-
->beast
-Your score has just gone up by one point.
-
->sword
-Your score has just gone up by one point.
-
->attack beast
-Your score has just gone up by one point.
-Trips Strip
-
-* _metros-begonias-gnats
-
->get begonias
->noise bag
-Your score has just gone up by one point.
-
->w
->w
->open bag
-swirling into the bag
-
->e
->give emitter to deadbeat
-Dude! So you
-
->give emitter to deadbeat
-Man, I've done enough work today
-#double lines
-
->s
->e
-Your score has just gone up by one point.
-
->switch emitter
-Your score has just gone up by one point.
-
->s
->e
-Bassy Abyss
-
->resin
-Your score has just gone up by one point.
-
->beast
-Your score has just gone up by one point.
-
->sword
-Your score has just gone up by one point.
-
->attack beast
-Your score has just gone up by one point.
-Trips Strip
-
-* _metros-begonias-noise
-
->get begonias
->noise bag
-Your score has just gone up by one point.
-
->w
->w
->open bag
-swirling into the bag
-
->e
->give emitter to deadbeat
-Dude! So you
-
->give emitter to deadbeat
-Man, I've done enough work today
-#double lines
-
->s
->e
-Your score has just gone up by one point.
-
->open bag
-BE FAIR
-Your score has just gone up by one point.
-
->s
->e
-Bassy Abyss
-
->resin
-Your score has just gone up by one point.
-
->beast
-Your score has just gone up by one point.
-
->sword
-Your score has just gone up by one point.
-
->attack beast
-Your score has just gone up by one point.
-Trips Strip
-
 * _resort
 
 >resort
@@ -1562,9 +1402,6 @@ Islet
 Light isn't the problem here. It's getting off the islet
 >slite
 That's bad spelling, and it won't shrink your problems.
-
->score
-1 out of 14 total
 
 >cork
 Your score has just gone up by one point.
@@ -1628,7 +1465,7 @@ Too many people are watching for you to slink away
 Your score has just gone up by one point.
 
 >ask protest about kilns
-WRONG
+"If we were artsy, we'd use 'em. But we're not. Take some magic to MAKE us artsy."
 
 >ether
 They're not bad people. But even bad people don't deserve to vanish like that! Maybe they can get a purpose, able to use those kilns.
@@ -1666,74 +1503,14 @@ a smart gamin' anagrammist
 
 >{include} _intro
 >{include} _forest
->score
-You have the rank of benigner beginner.
 >{include} _trips
->score
-You have the rank of a mature amateur.
 >{include} _sortie
 >metros
 Your score has just gone up by one point.
 
 >enter metros
 Underside
->{include} _metstart-long
->{include} _metros-heaths-darkness
->score
-new hero now here
-
->{include} _resort
-
-* metros-1
-#####this is usually not run as we can rely on plow-through. But it's there if wanted.
-
->gonear underside
->{include} _metstart-long
+>{include} _metstart-short
 >{include} _metros-heaths-darkness
 
-* metros-2
-
->gonear underside
->{include} _metstart-short
->{include} _metros-heaths-gnats
-
-* metros-3
-
->gonear underside
->{include} _metstart-short
->{include} _metros-begonias-darkness
-
-* metros-4
-
->gonear underside
->{include} _metstart-short
->{include} _metros-begonias-gnats
-
-* metros-5
-
->gonear underside
->{include} _metstart-short
->{include} _metros-begonias-noise
-
-* intro-only
-
->{include} _intro
-
-* forest-only
-
->ts
->opt in
->{include} _forest
-
-* sortie-only
-
->ts
->opt in
->{include} _sortie
-
-* resort-only
-
->ts
->opt in
->tsf
 >{include} _resort

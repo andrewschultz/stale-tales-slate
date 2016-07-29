@@ -23812,7 +23812,6 @@ blurb
 "AllRite Literal Tallier" []
 "Assigner-Or-Organisers"
 "Backlogs-Sack Blog"
-"Evanston Notes-Nav"
 "Banks-It Task-Bin"
 "Can-Slog Scan-Log"
 "Classiest List-Cases"
@@ -23827,6 +23826,7 @@ blurb
 "Doings-Dosing" []
 "Done-Logs So Golden"
 "Enum-Menu"
+"Evanston Notes-Nav"
 "Force-Us Focuser" []
 "Freeing-Up Figure-Pen"
 "Game Plan Angle Map"

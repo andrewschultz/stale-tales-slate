@@ -15,19 +15,29 @@ A Dry Yard
 >undo
 
 >help
-WRONG
+There's not much to do here, but EXAMINEing different things may give you a clue what's going on. This is a part of all the puzzles in the game, but you'll have to do other things, too.
+Note: If you want actual hints, you may wish to try HINT or HINTS.
 >info
-WRONG
+There's not much to do here, but EXAMINEing different things may give you a clue what's going on. This is a part of all the puzzles in the game, but you'll have to do other things, too.
+!Note: If you want actual hints, you may wish to try HINT or HINTS.
 >instructions
-WRONG
+There's not much to do here, but EXAMINEing different things may give you a clue what's going on. This is a part of all the puzzles in the game, but you'll have to do other things, too.
+!Note: If you want actual hints, you may wish to try HINT or HINTS.
 
 >pad lecture
-WRONG
+An hour-long pre-lunch lecture by some fellow named Curt Lee netted you three pages of doodles. You remember him saying how ONE WORD could open a NEW DOOR in this age of technological innovation if you picked the right one, and that's more magic than real magic, if real magic existed, which it doesn't.
+
+But hey, at least lunch was nice.
 
 >x tag
-WRONG
+It's stuck to your shirt, all right. Somehow, you got a magenta one while most other people got plain white. It just took a tame nag to put it on, and you hate it but can't bring yourself to pull it off in public.
+
+It does not make you feel like a powerful magnate, that's for sure.
+
 >x name tag
-WRONG
+It's stuck to your shirt, all right. Somehow, you got a magenta one while most other people got plain white. It just took a tame nag to put it on, and you hate it but can't bring yourself to pull it off in public.
+
+It does not make you feel like a powerful magnate, that's for sure.
 
 >au 1
 >hint
@@ -36,58 +46,77 @@ WRONG
 >kiss me
 
 >pf
-WRONG
+You consult your notepad but haven't figured any flips in advance yet.
+
 
 >consult pad
-WRONG
+Currently you can consult the notepad about:
+--notepad, verbs, options, access.
+--lecture.
 >pad
-WRONG
+Currently you can consult the notepad about:
+--notepad, verbs, options, access.
+--lecture.
 
 >exist
-WRONG
+You continue to exist. Perhaps this ability will come in handy some day.
 
 >scan
-WRONG
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 >c
-WRONG
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 >cr
-WRONG
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 >rc
-WRONG
+That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 
 >in
 
 >x smell
-WRONG
+It's an odor of new places and adventure and puzzles and how to get there. It tempts you--wouldn't it be nice if there was something more physical to provide passage than, well, just an odor?
+
+You repress a four-letter word. Well, if things are that simple, it's probably a nicer four-letter word.
+
+You imagine a swordsman changing to sandworms, and back.
+
 >x breeze
-WRONG
+It's an odor of new places and adventure and puzzles and how to get there. It tempts you--wouldn't it be nice if there was something more physical to provide passage than, well, just an odor?
+
+You repress a four-letter word. Well, if things are that simple, it's probably a nicer four-letter word.
+
+You confuse latitude and altitude for a second. Odd.
 
 >door
 
 >unlock door
-WRONG
+No keyholes. Maybe you can break it down some other way?
 
 >hint door
-WRONG
+You can just ENTER the door once you figure how to open it.
 >hint blot
-WRONG
+I couldn't find anything like that to hint.
+
 >hint bugle
-WRONG
+I couldn't find anything like that to hint.
 
 >blot
 >bugle
 >x horn
-WRONG
+It's brass, you guess, and it probably can't be too hard to play.
 
 >x doorway
 WRONG
 
 >blow pad
-WRONG
+It really only makes sense to BLOW an instrument. Well, CLEAN sense.
 >blow bugle
-WRONG
->play pad
-WRONG
+ The note from the bugle causes the door to swing back and forth, just as when you got rid of the bolt.
+ >play pad
+That's not an instrument you can play.
+
+> *play bugle*
+Nothing further happens.
+
 >play bugle
 WRONG
 
@@ -96,38 +125,42 @@ WRONG
 
 >in
 >x toga
-WRONG
+On it you see a four-legged animal with a sort of beard and horns. It's not very clear, but there are only so many possibilities--and if you read the toga, maybe you can see what's written on it.
+
 >read toga
-WRONG
+It's a dingy grey and says "You GOT A believe!" You'd expect that sort of excruciating grammar on a sports team's t-shirt, but not a toga. Hmm.
 
 >x thickest
-WRONG
+Well, they're tangled enough, you'd probably get hurt going through them.
 >x thickets
-WRONG
+Well, they're tangled enough, you'd probably get hurt going through them.
 >x thickest thickets
-WRONG
+Well, they're tangled enough, you'd probably get hurt going through them.
 
 >goat
 
 >pat goat
-The goat bleats and pushes your hand away with its hoof. It's too tired for that nonsense.
+It doesn't seem to realize it did anything for you. It's probably still confused. Probably irritable from eating all those big gigantic thickets. Don't fluster the restful.
 >pet goat
-The goat bleats and pushes your hand away with its hoof. It's too tired for that nonsense.
+Don't fluster the restful.
 >stroke goat
-The goat bleats and pushes your hand away with its hoof. It's too tired for that nonsense.
+Don't fluster the restful.
 
 >kick goat
 That'd be cruel. He's a lazy sort of ornery, not violent.
 >kick me
-WRONG
+I hope it's not the puzzles that made you try this.
 
 >x animal
-WRONG
+It seems ill-tempered despite, or perhaps because of, its eclectic recent meal.
 
 >in
 
 >x billboard
-WRONG
+
+You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.
+[You record the information about retry in your notepad.]
+
 
 >x gate
 WRONG
