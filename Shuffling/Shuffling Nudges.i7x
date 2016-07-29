@@ -655,7 +655,7 @@ to say guider-content:
 	say "No, that's not the [i]essence[r] of the thing."
 
 to say forest-no:
-	say "You can't seem to make anything physical to tell you which direction to go"
+	say "Your compass feels extra jumbled, but--well, you must be close"
 
 to say no-un:
 	say "You can't do much to change the undead. You're not THAT powerful. Maybe specific undead";

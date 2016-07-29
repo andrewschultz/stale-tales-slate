@@ -247,6 +247,8 @@ section compiler adjust constant section
 
 use MAX_STATIC_DATA of 300000.
 
+use MAX_NUM_STATIC_STRINGS of 21000.
+
 use MAX_ACTIONS of 290.
 
 use MAX_VERBS of 375.
@@ -334,7 +336,7 @@ liches	"The liches whine, sure someone is trying to kill them! Or send it to a l
 bread	"A few crumbs fall from the bread and leave a scuzzy growth before vanishing."
 livers	"The livers seem to prick you for a moment, as if to say you're not quite right."
 sliver	"The sliver shines a bit as you focus on it. It suddenly feels slightly more valuable."
-spread	"As you get close to the spread, it turns bright red and burst into something else--a red asp! You jump away[red-to]."
+spread	"As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away[red-to]."
 red asp	"The red asp strikes at something you can't see, unaware it's you that's trying to change it."
 Spam	"Nothing happens, but you think you can make out odd shapes in the Spam for a moment."
 hoses	"Something leaks out of the hoses. Hm. What else can be rubber, now."
@@ -397,15 +399,23 @@ to say red-to:
 	now spread is in lalaland;
 
 to say spec-help of (itm - a thing):
+	if itm is begonias:
+		if player has heaths or player has sheath:
+			say "You made your choice.";
+			continue the action;
+	if itm is heaths:
+		if player has begonias or player has noise bag:
+			say "You made your choice.";
+			continue the action;
 	if itm is oils and oils are not in cask:
 		say "[if player is in cedars]Changing Lois is highly unlikely, and y[else]Y[end if]ou should possess the oils before doing anything with them.";
 		continue the action;
 	if itm is a xtrhelp listed in the table of spechelp:
 		choose row with xtrhelp of itm in table of spechelp;
-		if point is true:
+		if point is true or tnt is true:
 			say "[helptxt entry][line break]";
-		else:
-			say "You feel a slight psychic push-pull coming from [the itm]. Keep at it.";
+		if point is false or tnt is true:
+			say "You feel a slight psychic push-pull coming from [if itm is r2 or itm is t-n or itm is m2]all around[else][the itm][end if]. Keep at it.";
 			d "There is a spechelp entry for this.";
 	else:
 		d "Add something to the table of spechelp for [the itm], maybe? Search for to[r]sh.";
@@ -6294,7 +6304,7 @@ instead of eating livers:
 instead of eating Spam:
 	say "The thought of eating Spams gives you a spasm. Eww."
 
-livers are things. description of livers is "Amalgamated well enough that you can't recognize which parts were cow and chicken. You suspect they're an upgrade from the individual livers but need to find out how.". lgth of livers is 6. gpos of livers is 6. rpos of livers is 5. rgtext of livers is "[rcn][rc][rc][rc][rc][rc]". cert-text of livers is "-[d1][d1][d1][d1][d1]". rect-text of livers is "S[d1][d1][d1][d1][ast]R".
+the livers are things. description of livers is "Amalgamated well enough that you can't recognize which parts were cow and chicken. You suspect they're an upgrade from the individual livers but need to find out how.". lgth of livers is 6. gpos of livers is 6. rpos of livers is 5. rgtext of livers is "[rcn][rc][rc][rc][rc][rc]". cert-text of livers is "-[d1][d1][d1][d1][d1]". rect-text of livers is "S[d1][d1][d1][d1][ast]R".
 
 understand "glop" and "glob" as livers.
 
@@ -6524,7 +6534,7 @@ description of frowns is "Probably either sharp or decaying teeth behind them, b
 
 Frost Forts is north of Ghouls' Slough. nowhere is south of Frost Forts.
 
-vowels are in Frost Forts. vowels are plural-named and privately-named. "Six large aplastic capitals sway when there is no breeze and stand still when there is."
+the vowels are in Frost Forts. vowels are plural-named and privately-named. "Six large aplastic capitals sway when there is no breeze and stand still when there is."
 
 rgtext of vowels is "[rcn][gc][rc][rc][rc][gc]". lgth of vowels is 6. gpos of vowels is 3. rpos of vowels is 6. cert-text of vowels is "-[ast]O[d1][d1][d1][ast]S". rect-text of vowels is "W[d1][d1][d1][d1][ast]S".
 
@@ -6730,7 +6740,7 @@ chapter The Nick
 
 The Nick is a room in Sortie. "You're locked in this arty suite of austerity by a great grate. It's a more forbidding version of the gateway in the Notices Section. You doubt even Old Man Almond could magic it open. There appears to be no standard way out. It has no accommodations, not even unsoft futons. This is a saner snare than the centrifuge, but it doesn't look like you'll drug a guard or reveal a lever to escape. At least there is some graffiti[if player has gadget][beepity-nick][end if]."
 
-t-n is privately-named scenery in the nick. "The nick is all around.". printed name of t-n is "the nick". understand "nick" as t-n. the rgtext of t-n is "[rc][rc][rc][rc][rc][rc][rc]". the lgth of t-n is 7. gpos of t-n is 7. rpos of t-n is 4. the cert-text of t-n is "-[d1][d1][d1][d1][d1][d1]". the rect-text of t-n is "K[d1][d1][d1][d1][d1][ast]N".
+t-n is privately-named proper-named scenery in the nick. "The nick is all around.". printed name of t-n is "the nick". understand "nick" as t-n. the rgtext of t-n is "[rc][rc][rc][rc][rc][rc][rc]". the lgth of t-n is 7. gpos of t-n is 7. rpos of t-n is 4. the cert-text of t-n is "-[d1][d1][d1][d1][d1][d1]". the rect-text of t-n is "K[d1][d1][d1][d1][d1][ast]N".
 
 instead of doing something with t-n:
 	if action is procedural:
@@ -7808,7 +7818,7 @@ instead of doing something with the bright red graffiti:
 
 description of bright red graffiti is "DOC OLBARK has chosen to deface this roadblock, in bright red paint, no less."
 
-anapest is scenery in moor. rgtext of anapest is "[rcn][rc][gc][rc][rc][rc][gc]". lgth of anapest is 7. gpos of anapest is 4. rpos of anapest is 7. cert-text of anapest is "-[d1][ast]A[d1][d1][d1][ast]T". rect-text of anapest is "P[d1][d1][d1][d1][d1][ast]T".
+the anapest is scenery in moor. rgtext of anapest is "[rcn][rc][gc][rc][rc][rc][gc]". lgth of anapest is 7. gpos of anapest is 4. rpos of anapest is 7. cert-text of anapest is "-[d1][ast]A[d1][d1][d1][ast]T". rect-text of anapest is "P[d1][d1][d1][d1][d1][ast]T".
 
 description of anapest is "You can't help NOT paying attention to the anapest."
 
@@ -7912,7 +7922,7 @@ understand "limerick" as poem when poem is not folded.
 
 understand "paper" as poem when poem is visible.
 
-smilies are part of poem. smilies are plural-named.
+the smilies are part of poem. smilies are plural-named.
 
 instead of taking smilies:
 	say "You can't just pull them off the page."
@@ -11954,7 +11964,7 @@ before cutting:
 	if player does not have sliver:
 		say "You have nothing sharp enough to cut." instead;
 	if noun is spread:
-		say "As you get close to the spread, it turns bright red and burst into something else--a red asp! You jump away[red-to]." instead;
+		say "As you get close to the spread, it turns bright red and bursts into something else--a red asp! You jump away[red-to]." instead;
 	if noun is drapes:
 		say "The drapes vanish as they are cut, revealing a doorway.";
 		now drapes are in lalaland;
@@ -13129,7 +13139,7 @@ test pe with "purloin chisel/gonear chicken/rules/peel liver/peel liver"
 
 peeling it with is an action applying to two things.
 
-understand the  command "chisel/pry/scrape/peel" as something new.
+understand the command "chisel/pry/scrape/peel" as something new.
 
 understand "peel [thing] with [thing]" as peeling it with.
 understand "scrape [thing] with [thing]" as peeling it with.
@@ -14878,6 +14888,23 @@ understand "showtab" as showtabing.
 carry out showtabing:
 	now showtabname is whether or not showtabname is false;
 	say "Showing table names in random text is now [on-off of showtabname].";
+	the rule succeeds;
+
+chapter tnting
+
+[ * tnt toggles if both hints are shown on something good. ]
+
+tnt is a truth state that varies.
+
+tnting is an action out of world.
+
+understand the command "tnt" as something new.
+
+understand "tnt" as tnting.
+
+carry out tnting:
+	now tnt is whether or not tnt is false;
+	say "Tip-no-tip is now [on-off of tnt].";
 	the rule succeeds;
 
 chapter apping

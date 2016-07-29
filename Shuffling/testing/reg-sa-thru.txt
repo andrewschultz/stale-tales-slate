@@ -10,6 +10,7 @@
 * _intro
 
 >opt in
+>tnt
 
 >score
 a nervy every
@@ -65,6 +66,7 @@ This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywher
 
 >doro
 The odor doesn't seem too complex. You pause. You can figure what it should be.
+You feel a slight psychic push-pull coming from the odor. Keep at it.
 >door
 Your score has just gone up by one point.
 >doro
@@ -78,6 +80,7 @@ You already changed the odor, and this game is religion-neutral or tries to be. 
 You haven't solved any regions yet. You have the rank of reduced deducer.
 >blto
 You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here.
+You feel a slight psychic push-pull coming from the bolt. Keep at it.
 >blot
 Your score has just gone up by one point.
 >blto
@@ -85,6 +88,7 @@ You don't want to re-lock the door.
 
 >bugel
 The bulge swells and makes a squeal, like it's trying to make music.
+You feel a slight psychic push-pull coming from the bulge. Keep at it.
 >bugle
 Your score has just gone up by one point.
 >bugel
@@ -104,6 +108,7 @@ Nice try, but wrong language. Another animal would be more likely to eat through
 
 >gota
 The toga blows in an unseen breeze, exposing what's written on it a bit more.
+You feel a slight psychic push-pull coming from the toga. Keep at it.
 >goat
 Your score has just gone up by one point.
 >gota
@@ -143,6 +148,7 @@ The cabinet bit you, but there was no lasting damage.
 
 >attisc
 You think a bit, and the static seems like a bad extension to the doll house.
+You feel a slight psychic push-pull coming from the static. Keep at it.
 >attics
 Your score has just gone up by one point.
 >attisc
@@ -156,6 +162,7 @@ Very good. Very close. But here's a meta-nag: what kind of man? What would he wo
 
 >gatemna
 The nametag peels infinitesimally.
+You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
 >gateman
 Your score has just gone up by one point.
 >gatemna
@@ -225,17 +232,26 @@ maybe, soon, you will
 * _forest
 
 >sr ne
+>fretso
+That seemed right but didn't seem quite natural.
+You feel a slight psychic push-pull coming from Store F. Keep at it.
 >forest
 Your score has just gone up by one point.
+>fretso
 
 >enter forest
 
+>ornth
+Your compass feels extra jumbled, but--well, you must be close.
 >n
 Your score has just gone up by one point.
 Rest of Forest
 
 >score
 1 out of 16 total
+
+>aest
+Your compass feels extra jumbled, but--well, you must be close.
 
 >seat
 You need the opposite of a seat, here. But at the same time, you're also very close.
@@ -270,6 +286,7 @@ You don't need people oohing and ahing at your skill.
 
 >noes
 The ones rattle a bit. Maybe you can sense out what they should be.
+You feel a slight psychic push-pull coming from the ones. Keep at it.
 >nose
 Your score has just gone up by one point.
 >noes
@@ -277,6 +294,7 @@ Don't get that nose bent out of shape.
 
 >shadse
 The dashes seemed to rattle a bit, but you feel slightly uncool.
+You feel a slight psychic push-pull coming from the dashes. Keep at it.
 >shades
 Your score has just gone up by one point.
 >shadse
@@ -290,6 +308,7 @@ You need something more tangible than that. Something that could make a gunshot,
 
 >shotgnu
 Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
+You feel a slight psychic push-pull coming from the noughts. Keep at it.
 >shotgun
 Your score has just gone up by one point.
 >shotgnu
@@ -322,6 +341,7 @@ You are trying to save a magic world, not start a garage band. Besides, there's 
 
 >masp
 Nothing happens, but you think you can make out odd shapes in the Spam for a moment.
+You feel a slight psychic push-pull coming from the Spam. Keep at it.
 >maps
 Your score has just gone up by one point.
 >masp
@@ -332,6 +352,7 @@ It's kind of cold a lot of places here. Keep your clothes on.
 
 >beadr
 A few crumbs fall from the bread and leave a scuzzy growth before vanishing.
+You feel a slight psychic push-pull coming from the bread. Keep at it.
 >beard
 Your score has just gone up by one point.
 >beadr
@@ -370,6 +391,7 @@ Your score has just gone up by one point.
 
 >chisle
 The liches whine, sure someone is trying to kill them! Or send it to a lower ring of the death-kingdom.
+You feel a slight psychic push-pull coming from the liches. Keep at it.
 >chisel
 Your score has just gone up by one point.
 >chisle
@@ -411,6 +433,7 @@ The livers are too dull to do anything like that with. Yet.
 
 >slivre
 The livers seem to prick you for a moment, as if to say you're not quite right.
+You feel a slight psychic push-pull coming from the livers. Keep at it.
 >sliver
 Your score has just gone up by one point.
 >slivre
@@ -418,6 +441,11 @@ The sliver seems to bend, but it snaps back. As if it's impatient to do or be mo
 
 >e
 >n
+
+>drepsa
+As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.
+You feel a slight psychic push-pull coming from the spread. Keep at it.
+>undo
 >drapes
 Your score has just gone up by one point.
 >undo
@@ -430,6 +458,7 @@ That is too passive, to ask to be spared.
 
 >drapse
 The red asp strikes at something you can't see, unaware it's you that's trying to change it.
+You feel a slight psychic push-pull coming from the red asp. Keep at it.
 >drapes
 Your score has just gone up by one point.
 >drapse
@@ -475,6 +504,7 @@ Frost Forts
 
 >wolvse
 The vowels continue to howl in defiance. OU...AIE...like a wild animal.
+You feel a slight psychic push-pull coming from the vowels. Keep at it.
 >wolves
 Your score has just gone up by one point.
 >wolvse
@@ -536,6 +566,7 @@ You might rather thin-nen to slip through the bars, but you can't.
 
 >kitchne
 The nick blurs a little but snaps back to normal.
+You feel a slight psychic push-pull coming from all around. Keep at it.
 >kitchen
 Your score has just gone up by one point.
 >kitchne
@@ -546,6 +577,7 @@ grist and a cake pan
 
 >hotsauec
 The CATHOUSE perfume suddenly smells a bit spicier.
+You feel a slight psychic push-pull coming from the bottle of CATHOUSE perfume. Keep at it.
 >hotsauce
 Your score has just gone up by one point.
 >hotsauec
@@ -553,6 +585,7 @@ Best not to get too crazy with food preparation.
 
 >tortilal
 The tall trio seem to look interested for a minute.
+You feel a slight psychic push-pull coming from the tall trio. Keep at it.
 >tortilla
 Your score has just gone up by one point.
 >tortilal
@@ -560,6 +593,7 @@ Best not to get too crazy with food preparation.
 
 >lettuec
 The cult tee seems to vegetate there. Change things around and it may become something.
+You feel a slight psychic push-pull coming from the cult tee. Keep at it.
 >lettuce
 Your score has just gone up by one point.
 >lettuec
@@ -576,6 +610,7 @@ Hm. An indoor forest. That would be neat to see. But this is a kitchen.
 
 >steka
 You thought you smelled meat there, for a minute. Hm.
+You feel a slight psychic push-pull coming from the skate. Keep at it.
 >steak
 Your score has just gone up by one point.
 >steka
@@ -588,6 +623,7 @@ I think you have the wrong food group. Besides, it wouldn't be nice to wipe the 
 
 >parmesna
 The spearman's smile seems to get a bit cheesier--you may or may not need to try a few other pre-names.
+You feel a slight psychic push-pull coming from the cheesy spearman. Keep at it.
 >parmesan
 Your score has just gone up by one point.
 >parmesna
@@ -611,6 +647,7 @@ You don't need to know your classics, here.
 
 >cota
 Weird. The taco almost seemed to grow arms, or even sleeves.
+You feel a slight psychic push-pull coming from the taco. Keep at it.
 >coat
 Your score has just gone up by one point.
 >cota
@@ -618,6 +655,7 @@ No need for fashion tweaks.
 
 >grtis
 The grist looks a bit less bland.
+You feel a slight psychic push-pull coming from the grist. Keep at it.
 >grits
 Your score has just gone up by one point.
 >grtis
@@ -625,6 +663,7 @@ Best not to get too crazy with food preparation.
 
 >pancaek
 It's a cake pan, backwards and forwards.
+You feel a slight psychic push-pull coming from the cake pan. Keep at it.
 >pancake
 Your score has just gone up by one point.
 >pancaek
@@ -641,6 +680,7 @@ a little too undescribed
 
 >strwa
 The warts itch slightly.
+You feel a slight psychic push-pull coming from the warts. Keep at it.
 >straw
 Your score has just gone up by one point.
 >strwa
@@ -651,6 +691,7 @@ The straw remains motionless.
 
 >shose
 Something leaks out of the hoses. Hm. What else can be rubber, now.
+You feel a slight psychic push-pull coming from the pair of hoses. Keep at it.
 >shoes
 Your score has just gone up by one point.
 >shose
@@ -658,6 +699,7 @@ But you're wearing the shoes. That might cause problems.
 
 >sakc
 Nothing happens. Maybe you are trying to do too much to change the cask
+You feel a slight psychic push-pull coming from the cask. Keep at it.
 >sack
 Your score has just gone up by one point.
 >sakc
@@ -672,11 +714,14 @@ You mope, but you imagine no poem.
 
 >moro
 You almost feel something picking you up for a second. You must have been close.
+You feel a slight psychic push-pull coming from all around. Keep at it.
 >moor
 Your score has just gone up by one point.
 Moor
+
 >moro
 The moor sways a bit. You do some brief mental calculation. There's no third place between them.
+You feel a slight psychic push-pull coming from all around. Keep at it.
 
 >tap
 "Ah! You are TAPping your feet to my anapest beat!"
@@ -686,6 +731,7 @@ Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is 
 
 >peasatn
 You think you had the right idea, but your execution was poor. Maybe be more workmanlike.
+You feel a slight psychic push-pull coming from the anapest. Keep at it.
 >peasant
 Your score has just gone up by one point.
 >peasatn
@@ -696,6 +742,7 @@ Hm, no, keep religion out of it.
 
 >blackdoro
 The roadblock changes all the colors of the rainbow, but none seem appropriate.
+You feel a slight psychic push-pull coming from the roadblock. Keep at it.
 >black door
 Your score has just gone up by one point.
 >blackdoro
@@ -730,6 +777,7 @@ You try, but the smilies on the poem prevent you.
 
 >missiel
 The smilies momentarily grow eyebrows that point aggressively, then vanish.
+You feel a slight psychic push-pull coming from the smilies. Keep at it.
 >missile
 Your score has just gone up by one point.
 >missiel
@@ -750,6 +798,7 @@ Whoah! Teleporting there would be too cold even with that coat on. Plus, you hav
 
 >panle
 The plane can probably become something else, but not that.
+You feel a slight psychic push-pull coming from the folded paper plane. Keep at it.
 >panel
 Your score has just gone up by one point.
 >panle
@@ -768,6 +817,7 @@ Your score has just gone up by one point.
 
 >hallwya
 Hm, yes, a haywall might become something more passable, if you muddle it right.
+You feel a slight psychic push-pull coming from the scraped wall. Keep at it.
 >hallway
 Your score has just gone up by one point.
 >hallwya
@@ -785,7 +835,6 @@ Lois will not pour the oils in the cask for you, but she is not stopping you.
 >sack
 >lois
 You suddenly feel discontent at your container of choice.
-
 
 >ecards
 Even if those were physical things, they'd be--well, less than religious. You don't need to change the cedars.
@@ -826,6 +875,7 @@ The oils need a purpose--to build something great. You don't want to waste them.
 >moor
 >soli
 The oils need a purpose--to build something great. You don't want to waste them.
+You feel a slight psychic push-pull coming from the oils. Keep at it.
 >soil
 Your score has just gone up by one point.
 >soli
@@ -884,6 +934,7 @@ Unfortunately, it's not QUITE as easy as just pushing a reset button
 
 >stere
 Hmm, that doesn't work, but you bet you can bull your way through things.
+You feel a slight psychic push-pull coming from the trees button. Keep at it.
 >steer
 ester pervades
 Your score has just gone up by one point.
@@ -895,6 +946,7 @@ Already good.
 
 >shoto
 You suppress a few minor swears as you realize that can't be right.
+You feel a slight psychic push-pull coming from the hoots button. Keep at it.
 >shoot
 changes to a shoot
 Your score has just gone up by one point.
@@ -994,6 +1046,7 @@ I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store
 
 >gardenai
 The drainage bubbles a bit.
+You feel a slight psychic push-pull coming from the drainage. Keep at it.
 >gardenia
 Your score has just gone up by one point.
 >gardenai
@@ -1010,6 +1063,7 @@ A Yell Alley
 
 >tomaot
 Hm, you maybe could bend the motto a bit differently.
+You feel a slight psychic push-pull coming from the motto. Keep at it.
 >tomato
 Your score has just gone up by one point.
 >tomaot
@@ -1018,6 +1072,7 @@ It's pretty gross, but you can't really change it. Maybe it can gross someone, o
 >e
 >velcor
 The clover seems overcome with fuzz for a moment--but no, you missed a little something.
+You feel a slight psychic push-pull coming from the fuzzy clover. Keep at it.
 >velcro
 Your score has just gone up by one point.
 >velcor
@@ -1062,6 +1117,7 @@ That's not something
 >undo
 >rentasl
 You could've sworn you the thing grew eyelids! And the eyes moved, begging you for any excuse it doesn't belong here!
+You feel a slight psychic push-pull coming from the antlers. Keep at it.
 >rentals
 Your score has just gone up by one point.
 >rentasl
@@ -1078,6 +1134,7 @@ Your score has just gone up by one point.
 
 >controsl
 You thought you heard electronic beeping from the corn.
+You feel a slight psychic push-pull coming from the lost corn. Keep at it.
 >controls
 Your score has just gone up by one point.
 >controsl
@@ -1094,6 +1151,7 @@ Powerful pure flow
 
 >barcoed
 The brocade design seems simple, yet complex, and perhaps you don't have to change a lot.
+You feel a slight psychic push-pull coming from the brocade. Keep at it.
 >barcode
 Your score has just gone up by one point.
 >barcoed
@@ -1101,6 +1159,7 @@ The barcode does not shift.
 
 >keycadr
 You feel like can almost identify what the cake can become.
+You feel a slight psychic push-pull coming from the dry cake. Keep at it.
 >keycard
 Your score has just gone up by one point.
 >keycadr
@@ -1135,6 +1194,9 @@ That'd be neat, make the wall sticky so you could climb and deal with that stupi
 >u
 (on the fuzzy looking wall)
 
+>openign
+The neon pig blinks as if in last-ditch defiance.
+You feel a slight psychic push-pull coming from the neon pig. Keep at it.
 >opening
 Your score has just gone up by one point.
 
@@ -1166,15 +1228,21 @@ The faeries have very magic and very demoralizing anti-vandalism spells.
 >get heaths
 >sheaht
 You stare at the heaths, picturing them in the circle and wondering which is the "starter."
+You feel a slight psychic push-pull coming from the heaths. Keep at it.
 >sheath
 Your score has just gone up by one point.
 >sheaht
 The sheath remains still.
+>noise bag
+You already got the heaths--don't mess with the merchandise.
+>noisebga
+You made your choice.
 
 >w
 >w
 >swodr
 The words seem to whizz around the air a bit, but they aren't tempered into something that can really do damage.
+You feel a slight psychic push-pull coming from the words. Keep at it.
 >sword
 Your score has just gone up by one point.
 >swodr
@@ -1214,6 +1282,7 @@ No water source. You can do better than short-circuiting the siren with water, t
 
 >resni
 The siren continues to blind you--like it's throwing dust in your eyes.
+You feel a slight psychic push-pull coming from the siren. Keep at it.
 >resin
 Your score has just gone up by one point.
 >resni
@@ -1223,6 +1292,7 @@ Time for that after you sure-handedly slay the final enemy, here.
 
 >betsa
 The beats shift up for a second.
+You feel a slight psychic push-pull coming from the beats. Keep at it.
 >beast
 Your score has just gone up by one point.
 >betsa
@@ -1549,54 +1619,58 @@ You have the rank of new hero now here.
 
 >{include} _resort
 
-* metros-1
+* _metros-1
 #####this is usually not run as we can rely on plow-through. But it's there if wanted.
 
 >gonear underside
 >{include} _metstart-long
 >{include} _metros-heaths-darkness
 
-* metros-2
+* _metros-2
 
 >gonear underside
 >{include} _metstart-short
 >{include} _metros-heaths-gnats
 
-* metros-3
+* _metros-3
 
 >gonear underside
 >{include} _metstart-short
 >{include} _metros-begonias-darkness
 
-* metros-4
+* _metros-4
 
 >gonear underside
 >{include} _metstart-short
 >{include} _metros-begonias-gnats
 
-* metros-5
+* _metros-5
 
 >gonear underside
 >{include} _metstart-short
 >{include} _metros-begonias-noise
 
-* intro-only
+##dupe test
+* _intro-only
 
 >{include} _intro
 
-* forest-only
+##dupe test
+* _forest-only
 
 >ts
 >opt in
 >{include} _forest
 
-* sortie-only
+##dupe test
+* _sortie-only
 
 >ts
 >opt in
 >{include} _sortie
 
-* resort-only
+##dupe test
+* _resort-only
 
 >ts
 >opt in

@@ -21,7 +21,7 @@ No conifers appear. Maybe you can just use your senses, and it's easier than tha
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 
 >norht
-You can't seem to make anything physical to tell you which direction to go.
+Your compass feels extra jumbled, but--well, you must be close.
 
 >n
 >forets
@@ -30,15 +30,15 @@ You won't need to do anything to the whole room unless you are trapped in a room
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 
 >eta
-You can't seem to make anything physical to tell you which direction to go. Anyway, it doesn't smell like just one tea.
+Your compass feels extra jumbled, but--well, you must be close. Anyway, it doesn't smell like just one tea.
 >norht
-You can't seem to make anything physical to tell you which direction to go.
+Your compass feels extra jumbled, but--well, you must be close.
 >eats
-You can't seem to make anything physical to tell you which direction to go.
+Your compass feels extra jumbled, but--well, you must be close.
 >aroam
 No, that's not the essence of the thing.
 >eats
-You can't seem to make anything physical to tell you which direction to go.
+Your compass feels extra jumbled, but--well, you must be close.
 
 >leavse
 You have no time to play with leaves.
@@ -60,12 +60,12 @@ You don't want to change a region drastically while you're in it.
 >ramblign
 No, that's not the essence of the thing.
 >souht
-You can't seem to make anything physical to tell you which direction to go.
+Your compass feels extra jumbled, but--well, you must be close.
 >s
 >whffi
 No, that's not the essence of the thing.
 >wets
-You can't seem to make anything physical to tell you which direction to go.
+Your compass feels extra jumbled, but--well, you must be close.
 >w
 Self-ID Fields
 
