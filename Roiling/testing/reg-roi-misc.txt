@@ -44,49 +44,58 @@ I understood the first word, but it can just stand on its own as a verb. If you 
 >purloin passport
 >n
 >n
+
 >prep
 by one point
 >review
 by one point
 >research
 !by one point
+
 >undo
 >undo
 >research
->prep
 by one point
 >review
->prep
 !by one point
+
 >undo
 >undo
 >undo
 >review
->prep
 by one point
 >research
->prep
 by one point
 >prep
 !by one point
 
->gonear shack
+
+>gonear phat path
 >syke
 >abstract leo to phat path
+>ole
 >abstract rand to phat path
+>darn
+>whassup
 >z
+
+##tough last
 >so long
 by one point
 >later
 by one point
 >tough
 !by one point
+
+##later last
 >undo
 >undo
 >tough
 by one point
 >later
 !by one point
+
+##so long last
 >undo
 >undo
 >undo

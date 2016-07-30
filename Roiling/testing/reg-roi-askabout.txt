@@ -1701,19 +1701,19 @@ WRONG
 >x stand
 
 >ask curtis about rampage note
-WRONG
+"None of your business."
 >ask curtis about mopeage rant
-WRONG
+"None of your business."
 >ask curtis about art erd
-WRONG
+XCurtis is curt. "I'm focused on business, here."
 >ask curtis about len
-WRONG
+XCurtis is curt. "I'm focused on business, here."
 >ask curtis about elvira
-WRONG
+XCurtis is curt. "I'm focused on business, here."
 >ask curtis about curtis
-WRONG
+XCurtis is curt. "I'm focused on business, here."
 >ask curtis about xyzzy
-WRONG
+"I'm a busy man!" yells Curtis. "I have confidence in you, dealing with fruit. I mean, you saved the whole COUNTRY already. This can't take too long."
 
 >maraschino
 Your score has just gone up by one point.
@@ -1770,17 +1770,17 @@ Your score has just gone up by one point.
 >e
 
 >ask len craig about curtis
-WRONG
+"Nice fella, lots of ideas about agriculture, but no business sense. Just sits looking for someone to do his dirty work for him. You don't..."
 >ask len craig about tekno-token
-WRONG
+He inspects the token and says it's valid.
 >ask len craig about art erd
-WRONG
+Len snorts and shakes his head. "What a weasel."
 >ask len about elvira
-WRONG
+CCCC"No small talk. Just the language of business. Let's haggle."
 >ask len about len
-WRONG
+"No small talk. Just the language of business. Let's haggle."
 >ask len about xyzzy
-WRONG
+Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge. It doesn't seem terribly relevant, but eh.
 
 >among
 Your score has just gone up by one point.
@@ -1798,28 +1798,30 @@ a droll dollar
 >gs
 >d
 >ask tera about elvira
-WRONG
+"She wasn't as bad as she was smeared to be!"
 >ask tera about tera
-WRONG
+She mumbles "er, drat" and something about how money is very, very nice.
+
 >ask tera about xyzzy
-WRONG
+Dr. Tera shrugs, then does the "let's swap" hand gesture. Hmm, what could you give her to get that so-great storage?
+
 >u
 >gs
 
 >d
 
 >ask art about elvira
-WRONG
+"She wasn't as bad as she was smeared to be!"
 >ask art about art
-WRONG
+"Traded a dead rat..." he mumbles.
 >ask art about xyzzy
-WRONG
+Art Erd shrugs, then does the "let's swap" hand gesture. Hmm, what could you give he to get that so-great storage?
 >ask art erd about curtis
-WRONG
+"There's people with silly science ideas like him, then there's businessmen like ME. Pfft."
 >ask art erd about storage box
-WRONG
+"It's...umm...worth something.."
 >ask art erd about len craig
-WRONG
+"Nicely? Len? Icy!" he mutters. "Cut Len's cluster..."
 
 >give dollar to trader
 >put icons in slot
@@ -1827,11 +1829,11 @@ WRONG
 >n
 
 >ask passport about elvira
-WRONG
+You may be better off examining non-living things, not talking to them.
 >ask passport about passport
-WRONG
+You may be better off examining non-living things, not talking to them.
 >ask passport about xyzzy
-WRONG
+You may be better off examining non-living things, not talking to them.
 
 >research
 Your score has just gone up by one point.
@@ -1853,6 +1855,8 @@ You Did Great
 #>{include} _only-oyster
 
 * big-go
+
+>au 1
 
 >{include} _manor
 >{include} _stores

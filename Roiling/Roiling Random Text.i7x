@@ -10092,7 +10092,7 @@ blurb	prio
 "Been-Dark Reedbank[r], by Ned Baker"
 "Beer Cans Scare Ben[r], by Bren Case"
 "BeerInc: Be Rec'in![r], by Ben Rice & Nic Eber" [p]
-"Beg Hard, Hebhard[r], by Gab Herd"
+"Beg Hard, Gebhard[r], by Gab Herd"
 "Behaviors['] Bias, Hover[r], by [if player is male]Ravi Shobe[else]Sheri Bova[end if]"
 "Bein['] Less Sensible[r], by Ben Siles"
 "Bein['] Sly: Bylines[r], by Lyn Seib-Lisenby"
@@ -14261,7 +14261,7 @@ blurb	prio
 "Relic-Laden Cinderella[r], by [if player is male]Eric Leland[else]Nell Darcie[end if]"
 "Relisted, Let's Ride[r], by [if player is male]Ted Riles[else]Lis Deter[end if]"
 "Relit by Liberty![r] by Teri Bly"
-"Rely, Lost Trolleys[r], by Sol Tyler"
+"Yet Roll, Trolley[r], by Roy Tell"
 "Rely on Ol['] Ryne[r], by Ron Ley & Lon Rey" []
 "Remain a Miner[r], by Marnie Manier" []
 "Remains of Famines or Fair Omens[r], by [if player is male]Simon Fear[else]Mona Fries[end if]"

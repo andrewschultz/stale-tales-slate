@@ -28,45 +28,52 @@ Apparently, appreciating her is what separates us from the animals. According to
 Apparently, appreciating her is what separates us from the animals. According to Gunter.
 
 >consult pad
-WRONG
+Currently you can consult your pad about these general topics:
 >consult about
-WRONG
+Currently you can consult your pad about these general topics:
 >pad
-WRONG
+Currently you can consult your pad about these general topics:
 
 >notepad
-WRONG
+You don't need to change the pedanto-notepad, except maybe by filling it up with ideas.
 >pedanto
-WRONG
-
+You don't need to change the pedanto-notepad, except maybe by filling it up with ideas.
 
 >x book
-WRONG
+It's your workbook. It holds bookwork. The original, from the first time you saved Yorpwald, is in some museum. But this is about the same. It's small enough to fit in a pocket, and you have clipped a pen over it, too.
 
 >au 1
 
 >about
-WRONG
+A Roiling Original is the sequel to Shuffling Around and part 2 in my Stale Tales Slate. I doubt there'll be a third, since I've milked the concept dry.
 
 >verb
-WRONG
+--N, S, E and W are the basic directions.
+--TALK to an NPC gives general information, while ASK X ABOUT gives detailed information.
+--OPTIONS or OPTS or POST OPTS gives you a list of game options that can simplify play or add detail.
+--PAD to see a list of topics. Then PAD VERBS, for example.
+--VERBS shows this, OPTIONS shows options you can change, and informational meta-commands include ABOUT, CREDITS, TECH, SITES, and RELEASE.
+--You can GO TO/GOTO  or GT a location or thing if it's a bit far away but in the region.
+--You wrote notes about how you can RETRY thanks to Terry if you get stuck somewhere past a store.
+
 >verbs
-WRONG
+--N, S, E and W are the basic directions.
 
 >credits
-WRONG
+I must direct credit to my testers for finding bugs and making sure this game was not mega (redacted).Thanks to Heartless Zombie (David White) for his hash code and suggestions, which removed many technical barriers.
 
 >tech
-WRONG
+All three of these people's efforts are also present in the first game, Shuffling Around. So I am doubly thankful.
 
 >sites
-WRONG
+I'd be interested if someone from France can ref these sites to make a similar game, someone from Spain could take pains, or a German manager could do so too. It'd be interesting to see.
 
 >release
-WRONG
+Each version of A Roiling Original should contain a text file with detailed release notes, but here is a brief summary:
 
+>showtab
 >bastard
-WRONG
+(table of cussing rejects)
 
 >poss
 Switching on
@@ -82,6 +89,11 @@ Switching on
 
 >think
 
+>open door
+>1
+>5
+>lamp
+
 >ponder
 You begin another deep think, but mulling and rehashing is no fun.
 
@@ -94,22 +106,30 @@ It's engraved READING A DINGER, I GANDER
 >x books
 You couldn't read--not even just titles--with that knocking at the door.
 
->open door
->1
->5
->lamp
+>hint giant pin
+The pin's hanging from a wall, but things like that usually don't hang from walls. (+) [Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.]
+>hint giant pin
+What generally hangs from a wall to make a room look nicer? (+)
+>hint giant pin
+A picture or... (+)
+>hint giant pin
+A painting. (-) [A minus sign means you've reached the end of a hint loop. You can cycle through them again, though.]
 
->hint painting
-WRONG
->hint painting
-WRONG
->hint painting
-WRONG
->hint painting
-WRONG
+>hint giant pin
+The pin's hanging from a wall, but things like that usually don't hang from walls. (+)
+!sign means you can HINT
+>hint giant pin
+What generally hangs from a wall to make a room look nicer? (+)
+>hint giant pin
+A picture or... (+)
+>hint giant pin
+A painting. (-)
+!minus sign means you've
 
 #?? preef something that ...
 #what if scan something invisible/unachievable
+
+>satchel
 
 >scan pin
 WRONG
@@ -229,6 +249,7 @@ You read some more of
 
 * synonyms
 
+>au 1
 >x my niche
 The words MY NICHE have a square dotted outline around them.
 >x my
@@ -1631,6 +1652,7 @@ WRONG
 
 * demo dome
 
+>au 1
 >z
 
 >no hint

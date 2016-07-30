@@ -377,7 +377,7 @@ by one point
 It's probably not just any scrawl. What the scrawl says may be important.
 
 >hauntre
-You start randomly digging, but you don't have a good instrument, and you probably aren't doing it quite right.
+You need an organized way to see what's under the ground, and you don't have a digging instrument, either.
 
 >e
 Lean Lane
@@ -438,7 +438,7 @@ It'd be easier to steal all the wipes at once. Pulling them out and so forth--ti
 It'd be easier to use them all at once. Pulling them out and so forth--tiring.
 
 >tutor
-Hey! No double dipping.
+Retutor? Torture. Rot. True!
 
 >tutro
 Retutor? Torture. Rot. True!
@@ -662,7 +662,7 @@ The thin hint doesn't reveal anything else.
 >s
 >e
 >unearht
-You start randomly digging, but despite having a good digger, you probably aren't doing it quite right.
+ You need an organized way to see what's under the ground with your rigged digger.
 >unearth
 >unearht
 The haunter needs to be dealt with otherwise.
@@ -689,9 +689,12 @@ Anything can howl, but this is a haunter--and, in fact, it's not just a haunter 
 End Den
 >out
 >enlarge
-You just need to examine the gleaner to figure what to do with it.
+It's already been made bigger. Not much more you can do with it except examine it.
 
 >x gleaner
+
+>enlarge
+It's already been made bigger. Not much more you can do with it.
 
 >in
 >scumatn

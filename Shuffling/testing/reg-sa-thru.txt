@@ -1619,6 +1619,7 @@ You have the rank of new hero now here.
 
 >{include} _resort
 
+#dupe-test
 * _metros-1
 #####this is usually not run as we can rely on plow-through. But it's there if wanted.
 
@@ -1626,25 +1627,27 @@ You have the rank of new hero now here.
 >{include} _metstart-long
 >{include} _metros-heaths-darkness
 
-* _metros-2
+#dupe-test
+* metros-2
 
 >gonear underside
 >{include} _metstart-short
 >{include} _metros-heaths-gnats
 
-* _metros-3
+#dupe-test
+* metros-3
 
 >gonear underside
 >{include} _metstart-short
 >{include} _metros-begonias-darkness
 
-* _metros-4
+* metros-4
 
 >gonear underside
 >{include} _metstart-short
 >{include} _metros-begonias-gnats
 
-* _metros-5
+* metros-5
 
 >gonear underside
 >{include} _metstart-short

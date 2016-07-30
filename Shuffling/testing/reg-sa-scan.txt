@@ -855,36 +855,7 @@ a smart gamin' anagrammist
 >{include} _metros
 >{include} _resort
 
-
-* _intro-only
-
->{include} _intro
-
-* _forest-only
-
->ts
->opt in
->{include} _forest
-
-* _sortie-only
-
->ts
->opt in
->{include} _sortie
-
-* _metros-only
-
->ts
->opt in
->{include} _metros
-
-* _resort-only
-
->ts
->opt in
->tsf
->{include} _resort
-
+##dupe test
 * _other-forest
 
 >ts

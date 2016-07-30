@@ -8,7 +8,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* silliness
+* before-otters
 
 >au 1
 >showtab
@@ -97,7 +97,7 @@ No. Really. You don't want to read that nonsense again. She always seems to know
 [5] Let Elmo complain about his lack of success with women
 
 >1
-(table of sports chatter)You say at least you don't like Duke FC
+(table of sports chatter)
 
 >1
 >1
@@ -129,13 +129,13 @@ You're not sure whom to call. There are so many choices! (table of help companie
 #########################stores
 
 >x store c
-/\(table of (sicko movies|store c competitors|store c ads)\)
+!/\(table of (sicko movies|store c competitors|store c ads)\)
 >x store c
-/\(table of (sicko movies|store c competitors|store c ads)\)
+table of sicko movies
 >x store c
-/\(table of (sicko movies|store c competitors|store c ads)\)
+table of store c competitors
 >x store c
-/\(table of (sicko movies|store c competitors|store c ads)\)
+table of store c ads
 >x store c
 /\(table of (sicko movies|store c competitors|store c ads)\)
 >x store c
@@ -173,7 +173,13 @@ You're not sure whom to call. There are so many choices! (table of help companie
 (table of undo allows)
 
 >sleep
-Maybe you'll find somewhere more hospitable later,
+Maybe you'll find somewhere more hospitable later. But otherwise, you'll get a bunch of silly random responses you may or may not find entertaining.
+>undo
+
+>outside
+
+>sleep
+Sleeping outside is dangerous. You'd need somewhere protected. But otherwise, you'll get a bunch of silly random responses you may or may not find entertaining.
 
 >sleep
 (table of sleep rejects)
@@ -211,10 +217,10 @@ Brother Horbert mumbles something to himself... (table of horbert musings)
 
 >x pa
 Pa, Egg, Pea, of course, recently topped (table of self-help bestsellers)
-Gritty sounds come, then go, from the streets: (table of gritty dialogue)"Alibis, not libations!"
+Gritty sounds come, then go, from the streets: (table of gritty dialogue)
 
 >x pa
-(table of ethics advice)
+(table of iffy advice)
 
 You pore over a random "thought-improving" passage of Peg A. Page:
 
@@ -275,12 +281,13 @@ Another "worldly" article is (table of DIVORCES articles)
 >decide
 Your condensed rise to the top of this business business makes you efficient writing songs too. (table of songs you could write)
 
+>undo
+
 >x desk
 Made of nice to notice eco-tin, it has a Slick-Tech Checklist (more popular and efficient than the (table of non-checklists)
 >x desk
 Made of nice to notice eco-tin, it has a Slick-Tech Checklist (more popular and efficient than the (table of non-checklists)
 
->undo
 >resign
 
 ##################################presto
@@ -297,19 +304,19 @@ A booming voice yells "(table of undo rejects)
 >s
 >ole
 >darn
+>z
+/\(table of Leo-Rand (chitchat|idols)\)
+>z
+/\(table of Leo-Rand (chitchat|idols)\)
+>z
+/\(table of Leo-Rand (chitchat|idols)\)
+>z
+/\(table of Leo-Rand (chitchat|idols)\)
+>z
+/\(table of Leo-Rand (chitchat|idols)\)
+>z
+/\(table of Leo-Rand (chitchat|idols)\)
 >whassup
->z
-/\(table of Leo-Rand (chitchat|idols)\)
->z
-/\(table of Leo-Rand (chitchat|idols)\)
->z
-/\(table of Leo-Rand (chitchat|idols)\)
->z
-/\(table of Leo-Rand (chitchat|idols)\)
->z
-/\(table of Leo-Rand (chitchat|idols)\)
->z
-/\(table of Leo-Rand (chitchat|idols)\)
 
 >n
 >n
@@ -326,24 +333,26 @@ A booming voice yells "(table of undo rejects)
 >later
 >so long
 >s
->w
+>umph
 >screen
 >e
 >n
+>n
 >x catechism
-/(table of (catechism pages|research topics|smartypants)\)
+The title is ALGORITHMS, LOGARITHMS, and it's by Olga Smirth.
+/\(table of (catechism pages|research topics|smartypants)\)
 >x catechism
-/(table of (catechism pages|research topics|smartypants)\)
+/\(table of (catechism pages|research topics|smartypants)\)
 >x catechism
-/(table of (catechism pages|research topics|smartypants)\)
+/\(table of (catechism pages|research topics|smartypants)\)
 >x catechism
-/(table of (catechism pages|research topics|smartypants)\)
+/\(table of (catechism pages|research topics|smartypants)\)
 >x catechism
-/(table of (catechism pages|research topics|smartypants)\)
+/\(table of (catechism pages|research topics|smartypants)\)
 >x catechism
-/(table of (catechism pages|research topics|smartypants)\)
+/\(table of (catechism pages|research topics|smartypants)\)
 >x catechism
-/(table of (catechism pages|research topics|smartypants)\)
+/\(table of (catechism pages|research topics|smartypants)\)
 
 >futon
 >x futon
@@ -376,7 +385,7 @@ A booming voice yells "(table of undo rejects)
 >z
 /\(table of (bar dialogue|competing bars)\)
 >talk to casper
-(table of Casper mumbles)
+!(table of Casper mumbles)
 >talk to casper
 (table of Casper mumbles)
 >talk to casper
@@ -436,6 +445,11 @@ A booming voice yells "(table of undo rejects)
 >tutor
 >eat
 
+>w
+>w
+
+>warp
+>n
 >x theses
 (table of theses)
 >x theses
@@ -466,6 +480,8 @@ or (table of gizmo parts)
 
 * otters-rand
 
+>showtab
+
 >au 1
 >seed 1
 
@@ -481,9 +497,8 @@ or (table of gizmo parts)
 >nastily
 >blearily
 
->6
->5
->4
+>1
+>3
 
 >n
 >because
@@ -519,16 +534,23 @@ or (table of gizmo parts)
 >hornets
 
 >n
+>n
 >w
 >w
+>atom
+>w
 >z
-(table of Elmer and Merle squabbles)
+!(table of Elmer and Merle squabbles)
 >z
-(table of Elmer and Merle squabbles)
+!(table of Elmer and Merle squabbles)
 >z
-(table of Elmer and Merle squabbles)
+!(table of Elmer and Merle squabbles)
 
 >honestly
+>z
+(table of Elmer and Merle squabbles)
+>z
+(table of Elmer and Merle squabbles)
 >z
 (table of Elmer and Merle squabbles)
 
@@ -546,8 +568,9 @@ As you blow the whistle, you feel a deep vibration on the ground. You hear a cac
 Elvira cries "New aid? Naw, die!" then "To arms! A storm!" at...all the lethal: (table of Elvira machines)
 But animals from the fabled Odd Pack Paddock find valence in this enclave: (table of animal friends)
 
-* others-rand
+* _others-rand
 
+>showtab
 >rove over
 >others
 >in
@@ -567,11 +590,11 @@ But animals from the fabled Odd Pack Paddock find valence in this enclave: (tabl
 
 >n
 >e
->z
+>listen
 (table of selly yells)
->z
+>listen
 (table of selly yells)
->z
+>listen
 (table of selly yells)
 >w
 >n

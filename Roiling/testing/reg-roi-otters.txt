@@ -395,7 +395,7 @@ You need to focus on HOW the imp averts, vaster.
 You need to focus on HOW the imp averts, vaster.
 
 >brutely
-The sly imp lets out a curse. It's completely failed to keep his cool. It leaves, confidence shattered. You can go past now.
+The sly imp lets out a curse. It's completely failed to keep its cool. It leaves, confidence shattered. You can go past now.
 
 >l
 Tapering Inert Gap

@@ -1922,8 +1922,7 @@ hogs	"The whole 'Who do you think you are' won't go well with these hogs. They'r
 l-m	"'I'm here to help, just by being me, apparently.'"
 m-l	"'I'm here to help, just by being me, apparently.'"
 Tom Alvez	"'I'm here to help, just by being me, apparently.'"
-casper spacer	"Casper Spacer has a lot to say about himself...so much, it'd get in the way of your quest." [reflex OYSTER]
-trolls	"They'd affirm their right to privacy before asking YOU personal questions. Trolls, sheesh."
+trolls	"They'd affirm their right to privacy before asking YOU personal questions. Trolls, sheesh." [reflex OYSTER]
 patrons	--
 clam	"Asking the clam about its feelings is a start."
 boats	"They're too far away for proper conversation. Maybe you can do something bold to show them you're worth having aboard."
@@ -2150,8 +2149,8 @@ parrot	"[if Merle is visible]Don't blow his cover![else]'Fear the feather! A bir
 Elvira	"'I watch a witch,' you mutter. 'Nice try. Tiny rec. Y'cretin.' You're not going to out-debate the vexin['] vixen."
 Curtis	"'I'm a busy man!' yells Curtis. 'I have confidence in you, dealing with fruit. I mean, you saved the whole COUNTRY already. This can't take too long." [begin others]
 Len Craig	"[one of]Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge[or]Your magic powers do not, alas, expand to straightforward bargaining[stopping]."
-Art Erd	"[his-her-c] mumbles 'er, drat' and something about how money is very, very nice."
-Dr Tera	"[his-her-c] mumbles 'er, drat' and something about how money is very, very nice."
+Art Erd	"[he-she-c] mumbles 'er, drat' and something about how money is very, very nice."
+Dr Tera	"[he-she-c] mumbles 'er, drat' and something about how money is very, very nice."
 arid den	"The automated response system you can't see keeps croaking 'Nerd-Aid...Nerd-Aid...'"
 passport	"Try using its features instead."
 
@@ -3932,7 +3931,7 @@ o-t	"Hm, no, that's not quite how to cover all the ground looking for the ol['] 
 raft	"The raft rocks slightly."
 oars	"You see bubbling under the oars."
 eeks	"You guess the eeks must be there--no, there!"
-pre-haun	"You need an organized way to dig at the ground."
+pre-haun	"You need an organized way to see what's under the ground[if digger is off-stage], and you don't have a digging instrument, either[else] with your rigged digger[end if]."
 haunter	"You're a bit tongue-tied, but that seems close."
 a-s	"Hm, you almost thought you found something. Well, not QUITE like that."
 c2	"The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled."
@@ -4254,7 +4253,7 @@ a-p	"You discovered the portal. No need to look further."
 ruby	"You already did in the wrap."
 haunter	"Don't oversell it! Just take the haunter to where it was probably (heh) the walleyes who buried the ruby."
 thin hint	"The ruby's hidden well. No need to tinker."
-gleaner	"It's already been made bigger. Not much more you can do with it."
+gleaner	"It's already been made bigger. Not much more you can do with it[if gleaner is unexamined] except examine it[end if]."
 lever	"You riff on your previous celebrations, but it doesn't feel as cool."
 brownies	-- [towers]
 old ice	"Twist the ice too much, it might not look right."
@@ -5978,7 +5977,7 @@ to decide which thing is oyster-item:
 		if pikes are in range:
 			decide on carps;
 		if haunter is off-stage:
-			decide on scrawl;
+			decide on pre-haun;
 		if haunter is reflexive:
 			decide on haunter;
 	if haunter is reflexed and location of player is location of haunter:
@@ -8195,12 +8194,12 @@ understand the command "release" as something new.
 understand "release" as releaseing.
 
 carry out releaseing:
-	say "Each version of Shuffling Around should contain release notes, but here is a brief summary:[paragraph break]";
+	say "Each version of A Roiling Original should contain a text file with detailed release notes, but here is a brief summary:[paragraph break]";
 	say "A Roiling Original's first release was for Spring Thing 2013, on April 1st.";
 	say "A Roiling Original's second release went out in January 2014. It fixed a lot of puzzles and bugs and also opened up a new region. Many areas were renamed, and many puzzles were redone. The code name was [i]Gad! Super Upgrades![r]";
 	say "A Roiling Original's third release went out in March of 2015. It included the 'director's cut' Demo Dome Mode. Puzzles were tweaked, and hinting was made more robust. The code name was Past-Due Updates.";
 	say "[line break]The current edition of A Roiling Original should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, and a list of changes from the previous release. The code name was [i]Sustinent Nuttiness[r].";
-	say "Any future update could be called Fiddly Did Fly, because I don't expect to do much more. Tweakings Take Wings and We Task Tweaks are possibilities, but they feel kindof cheap.";
+	say "Any future update could be called Fiddly Did Fly, because I don't expect to do much more. Tweakings Take Wings and We Task Tweaks are possibilities, but they feel kind of cheap.";
 
 part teching
 
@@ -11291,7 +11290,7 @@ onyx censer	presto	"The censer can become a SCREEN once you've found a place to 
 plebe	presto	"You can shout BLEEP at the plebe [if player wears star]now[else]once[end if] you look more authoritative."
 ether	presto	"You haven't yet found the right moment to shout THERE into the ether."
 trolls	oyster	"You can't quite STROLL past the trolls, yet."
-haunter	oyster	"You should UNEARTH the haunter once you figure how to handle it."
+haunter	oyster	"You should UNEARTH the haunter once you figure how to dig it up and handle it."
 a-s	oyster	"SEARCH the arches."
 dialer	oyster	"With the yapper gone, you should be able to DERAIL."
 d2	oyster	"You should be able to REDIAL the dialer with the proper preparation."
@@ -17121,6 +17120,7 @@ check fliptoing pre-haun:
 		continue the action;
 	say "[h-not-yet].";
 	preef pre-haun;
+	the rule succeeds;
 
 to say h-not-yet:
 	say "You [if player does not have digger]can feel the haunter, but you have nothing to dig it up with[else if player has digger and ruby is in lalaland]shouldn't dig the haunter back up. You've no reason to[else]you don't know what you'd do if you'd unearth the haunter[end if]"
@@ -18538,8 +18538,11 @@ check xraying:
 		say "You remember, from somwhere behind a fourth wall, reading you could just say [right-word entry in upper case]." instead;
 	if noun is the player:
 		say "You might expose yourself to harmful rays and stuff, looking that close." instead;
-	if noun is kid and Dr Yow is not visible:
-		say "[if Dr Yow is not visible]'I--I don't like free candy, [mrmaam],' [he-she] says, looking scared.[paragraph break]Maybe you can't quite help [him-her] now[else]The kid seems to cringe, memories of bullying hall monitors, probably[end if]." instead;
+	if noun is kid:
+		if kid is reflexive:
+			say "You realize [kid-first] could be GIFTED and fidget less.";
+		else if kid is in subsector and atblock is in subsector:
+			say "You realize [kid-first] could be a little more ATTENTIVE.";
 	if noun is sled rut:
 		if strudel is visible:
 			try xraying strudel instead;
@@ -23514,7 +23517,7 @@ check going north in Gates Stage:
 	now final response activity entry is demo dome moding;
 	end the story finally saying "A Giddy Route: You Did Great" instead;
 
-every turn when player is in gates stage and perp-check is true and passport is not reflexed (this is the perp-clue rule):
+every turn when player is in gates stage and perp-check is true and perp-priv is not reflexed (this is the perp-clue rule):
 	if a random chance of 1 in 2 succeeds:
 		say "The bouncer's yell of 'PERP!' rings in your ears.";
 
@@ -24088,7 +24091,7 @@ instead of doing something to greedy-person:
 	otherwise:
 		if player has storage:
 			say "You don't want to deal with [greedy-s] any more than you have to." instead;
-		say "[greedy-s] shrugs, then does the 'let's swap' hand gesture. Hmm, what could you give [he-she] to get that so-great storage?"
+		say "[greedy-s] shrugs, then does the 'let's swap' hand gesture. Hmm, what could you give [him-her] to get that so-great storage?"
 
 check opening slot:
 	say "It will fit if you give it the right thing." instead;
@@ -26628,7 +26631,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 		if saver is reflexive:
 			say "[2dmiss of cur-reg]the REPLAY PLAYER letters on the saver could've become PEARLY.";
 		if kid-atten is false:
-			say "[2dmiss of cur-reg]you could've made [kid-full]ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
+			say "[2dmiss of cur-reg]you could've made [kid-full] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
 		if flowerpot is reflexive:
 			say "[2dmiss of cur-reg]you could've made the succor crocus DINGY to stop it dying.";
 		if serpent is in limits:

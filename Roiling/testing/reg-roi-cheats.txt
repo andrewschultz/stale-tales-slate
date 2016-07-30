@@ -622,8 +622,8 @@ Hmm. You bet you could get past if the man covered in inapt paint were HIMSELF.
 You have a good gaze, and you know what to do and say and think. Gotta be PEARLY.
 
 >s
->xray salesmen
-Hmm. You bet you could get past if the nameless salesmen were DRAINED.
+>xray arid den
+Hmm. You bet you could get past if the dandier arid den were DRAINED.
 
 >drained
 >e
@@ -679,15 +679,21 @@ You've done what you can with Dr. Yow. He can be rowdy or wordy.
 >w
 >n
 
->xray deacons
-Hmm. You bet you could get past if the once-sad deacons were HOLIEST.
+>xray lot
+Hmm. You bet you could get past if the Hostile-is-He Lot were HOLIEST.
+
+>s
+>gs
+>n
+>xray lois
+Hmm. You bet you could get past if Lois the Hostile were HOLIEST.
 >holiest
+>gs
+
 >n
 
 >xray dirk
-"I--I don't like free candy, mister," he says, looking scared.
-
-Maybe you can't quite help him now.
+You realize Dirk could be GIFTED and fidget less.
 
 >gifted
 >ask kid about yow
@@ -1053,7 +1059,7 @@ You can go back to Curtis for a reward.
 /DEBUG INFO: (nectarine|overpriced peach|pre-mang|quince)
 
 >ancienter
-/DEBUG INFO: (peach|pre-mang|quince)
+/DEBUG INFO: (overpriced peach|pre-mang|quince)
 
 >cheap
 /DEBUG INFO: (pre-mang|quince)

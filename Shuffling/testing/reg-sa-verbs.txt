@@ -247,6 +247,8 @@ Testing the 119 possibilities...including duplicates...
 >xx store i
 Store I has pictures of famous political figures in the window--Winston Churchill, Benjamin Disraeli and that great charmer, Margaret Thatcher (*). You think you remember what party they belonged to. The pictures are big enough to obscure--almost--the outline of a trap door behind them.
 [NOTE: this is not a political statement on their party.]
+>xx store i
+!this is not a political statement on their party
 >eat saltine
 You're not sure what the saltine is supposed to do, but your vision looks a little weirder after eating it. Some things seem especially sharp if you stare doubly hard at them.
 >xx store i
