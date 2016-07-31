@@ -554,7 +554,7 @@ You hang around the bench, hoping for something to happen, but nothing happens. 
 >against
 Your score has just gone up by one point
 >againts
-You leaned on the bench right. Time to try more.
+You leaned on the bench right. Time to get on it.
 
 #quick early wrong tries
 >under
@@ -578,10 +578,7 @@ Oof! You fail to jump on the bench end. Try mixing things up from what you just 
 >astride
 Your score has just gone up by one point
 >astried
-You got on the bench right. Time to try more.
-
->astride
-You positioned yourself well to duck the giant and put up with his elbow. Try something else.
+You got on the bench right. Time to start ducking.
 
 >staider
 You already did your best with the tirades. The giant will complain if he wants to.
@@ -653,7 +650,7 @@ You feel it's ALMOST the right time for the darkness to lift.
 >until
 Your score has just gone up by one point
 >untli
-No, it's the right time to move forward.
+The underground is already lit. Un-unlit.
 
 >aroudn
 The cracks almost seem to lead somewhere.
@@ -989,7 +986,7 @@ Such people would be beneath your delegational abilities.
 Your score has just gone up by one point
 Adding a min point
 >mastre
-You can't do better than master the stream, so no use trying.
+The stream has nurtured you spiritually. The lobster nurtured you physically. Time to move on.
 
 >decied
 You try to groove to Eddie's song, but that's not quite it.
@@ -1109,7 +1106,7 @@ You try something that doesn't quite work, but now you're that much closer to an
 >bingo
 Your score has just gone up by one point
 >binog
-It's nice and springy as-is.
+You can't force another revelation, but you don't need to.
 
 >no big
 Hey, now, that's just humblebragging.
@@ -1145,7 +1142,7 @@ There aren't that many things to do with Leo. So few, you could probably brute-f
 >ole
 Your score has just gone up by one point
 >oel
-Leo doesn't need to be outflanked again.
+Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
 
 >rolande
 That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
@@ -1155,7 +1152,7 @@ There aren't that many things to do with Rand. So few, you could probably brute-
 >darn
 Your score has just gone up by one point
 >danr
-Rand doesn't need to be outflanked again.
+Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
 
 >evil
 No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you.
@@ -1233,6 +1230,12 @@ No Egyptian deity comes to your rescue.
 >alter
 Vandalism! For shame!
 
+>so long
+>solgon
+That'd be an awkward rehash. You need another way to say good-bye.
+>undo
+>undo
+
 >latre
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 >later
@@ -1246,10 +1249,8 @@ It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. 
 Your score has just gone up by one point
 Hut! Go!
 >touhg
-That'd be an awkward rehash. You need another way to say good-bye.
+They're already off getting to know each other better.
 
->undo
->undo
 >undo
 >undo
 
@@ -1262,7 +1263,7 @@ It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. 
 Dat was a good dust-up
 Your score has just gone up by one point
 >sologn
-That'd be an awkward rehash. You need another way to say good-bye.
+They're already off getting to know each other better.
 >tough
 They're already off getting to know each other better.
 
@@ -1963,7 +1964,8 @@ The gleaner remains too small to read.
 >enlarge
 Your score has just gone up by one point
 >enlareg
-It's already been made bigger. Not much more you can do with it.
+It's already been made bigger. Not much more you can do with it except examine it.
+
 
 >n
 Hedron
@@ -1995,7 +1997,7 @@ You managed to bury the ruby. On to the next bit.
 ##>unearth haunter
 
 >unearht
-You start randomly digging, but despite having a good digger, you probably aren't doing it quite right.
+You need an organized way to see what's under the ground with your rigged digger.
 >unearth
 by one point
 >unearht
@@ -2048,6 +2050,10 @@ That was my name in the first game.
 
 >out
 >x gleaner
+
+>enlareg
+It's already been made bigger. Not much more you can do with it.
+
 >in
 Scum Ant Sanctum
 
@@ -2299,9 +2305,10 @@ There's nothing here to unlock.
 Salted Deltas
 
 >slated
-You're not sure what the deltas could be slated for. You're not here for geological research, anyway. Might be more productive to deal with the Atheists and the alarming grailman, instead. Especially the Atheists.
+You're not sure what the deltas could be slated for. You're not here for geological research, anyway. Might be more productive to deal with the alarming grailman and the Atheists, instead. Especially the Atheists.
+
 >lasted
-The salted deltas have already lasted since well before you were born, and that's a verb, anyway. Might be more productive to deal with the Atheists and the alarming grailman, instead. Especially the Atheists.
+The salted deltas have already lasted since well before you were born, and that's a verb, anyway. Might be more productive to deal with the alarming grailman and the Atheists, instead. Especially the Atheists.
 
 >kale
 More kale? Dear, did I ask for more kale? Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.
@@ -2373,7 +2380,7 @@ That's not something
 
 >s
 >drainde
-The salesmen grow momentarily protective of their Nerd-Aid supply.
+The arid den seems less imposing and impressive.
 >drained
 Your score has just gone up by one point
 >drainde
@@ -2438,7 +2445,7 @@ You almost expect the strudel to hop up into your arms, but the moment passes.
 Your score has just gone up by one point
 min point
 >rustlde
-You already rustled the strudel.
+You'd have to drop the strudel on the ground and get it germy to try that again. Eww.
 
 >n
 
@@ -2446,7 +2453,7 @@ You already rustled the strudel.
 Ole Shrine Shoreline
 
 >holiets
-The deacons ponder for a minute before going back to their scheming. But they looked scared--worried--you were close to exposing their ol' heist.
+The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes.
 >holiest
 Your score has just gone up by one point
 >holiets
@@ -2521,12 +2528,12 @@ You don't need to repurpose the repair machine. It's done enough for you.
 Dirk scrunches his eyes to try to keep even more attention, but it doesn't quite work.
 >gifted
 >giftde
-Dirk is fully attentive. Overkill might damage his creative streak!
+Fiddling with Dirk too much that way might undo the good you did him.
 >ask kid about doctor
 Obscurest Subsector
 
 >attentiev
-Dirk fidgets a bit but can't keep focused, though he clearly wants to.
+Dirk seems a little more focused, but he could maybe do even better.
 >attentive
 Your score has just gone up by one point
 >attentiev
@@ -3173,7 +3180,7 @@ Your score has just gone up by one point.
 >pears
 Your score has just gone up by one point.
 >peasr
-That's not something you can say, do or see here.
+There's no in-between for the PARSE and SPARE commands for the settler.
 
 >x stand
 >blueberrise
@@ -3439,7 +3446,7 @@ Dirty way to slash prices.
 Dirty way to slash prices.
 
 >precis
-It's already a precis, of sorts. Less pretentious words will work better here.
+It's already a precis, of sorts. Less highfalutin' words will work better here.
 >cripse
 Something glints off the list of prices.
 >cripes
@@ -3486,6 +3493,9 @@ The plant seems to adopt a defensive position with its arms/branches.
 Your score has just gone up by one point.
 >rhubabr
 Just return the fruit to Curtis. No need for another change.
+
+>score
+but you only need 40
 
 >reversde
 You seem to read the sign backwards for a second.
@@ -3540,7 +3550,7 @@ You've done enough researching, but you can just go north.
 >frui
 
 >score
-41 out of 41
+41 of 41
 
 >n
 You Did Great
@@ -3586,10 +3596,9 @@ Bleary Barley
 >{include} _otters
 
 >rove over
-Your score has just gone up
 >others
-Rustic Citrus
 >in
+Rustic Citrus
 >{include} _others
 
 * _summarize
@@ -3601,44 +3610,44 @@ Rustic Citrus
 >n
 >missed
 
-* only-manor
+* _only-manor
 
 >{include} _manor
 
-* only-stores
+* _only-stores
 
 >ts
 >{include} _stores
 
-* only-routes
+* _only-routes
 
 >ts
 >routes
 >in
 >{include} _routes
 
-* only-troves
+* _only-troves
 
 >ts
 >troves
 >in
 >{include} _troves
 
-* only-presto
+* _only-presto
 
 >ts
 >presto
 >in
 >{include} _presto
 
-* only-oyster
+* _only-oyster
 
 >ts
 >oyster
 >in
 >{include} _oyster
 
-* only-towers
+* _only-towers
 
 >seed 1
 >ts
@@ -3646,14 +3655,14 @@ Rustic Citrus
 >in
 >{include} _towers
 
-* only-otters
+* _only-otters
 
 >seed 1
 >a5
 >in
 >{include} _otters
 
-* only-others
+* _only-others
 
 >gonear rustic citrus
 >{include} _others

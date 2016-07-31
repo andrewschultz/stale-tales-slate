@@ -709,7 +709,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "yow"	304646602	--	Dr Yow	--	"[he-she-c]'s a doctor! Have some respect when you try to scramble [him-her] up."
 "doctor"	377173649	--	Dr Yow	--	"That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean."
 "wordy"	410999494	--	Dr Yow	--	"Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if Dr Yow has been rowdy and Dr Yow has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]--but [he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]."
-"tentative"	788195264	--	--	kid-not-learnt rule	"The kid fidgets a bit but can't keep focused, though [he-she] wants to."
+"tentative"	788195264	--	--	kid-can-learn rule	"[kid-first] is fully attentive. Don't ruin a good thing!"
 "shoreline"	716559056	shoreline	--	--	"[towersloc]." [OLE SHRINE SHORELINE 3 2]
 "shrine"	460586531	--	o-s	--	"The shrine is kind of sacred, and regardless of what you think of [if player is male]the [end if][the-hostile]'s religion, messing with it would be a mean move."
 "actionless"	686724232	coastlines	--	--	"[towersloc]." [ACTIONLESS COASTLINES 3 3]
@@ -1764,10 +1764,10 @@ this is the bonker-gone rule:
 		the rule succeeds;
 	the rule fails;
 
-this is the kid-not-learnt rule:
+this is the kid-can-learn rule:
 	if player is in subsector:
-		if smart kid is in subsector and Dr Yow is in subsector:
-			if smart kid is not reflexed:
+		if smart kid is in subsector:
+			if kid-atten is true:
 				the rule succeeds;
 	the rule fails.
 

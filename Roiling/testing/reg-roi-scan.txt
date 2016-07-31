@@ -3006,31 +3006,31 @@ No need to over-study or over-think. Through the gates!
 
 >au 1
 >sb coins
-You see YRY (R and P).
+Your settler registers YRY (R and P).
 
 >sy coins
-The settler flashes back, with all but the last entry--which stays red--changing.
+The settler flashes back, with all five entries changing.
 Hm. Maybe it would be better to scan just one coin?
-You see YRYP.
+Your settler registers YRYP.
 
 >sn coins
 The settler flashes back, with all but the last entry--which stays red--changing.
 Hm. Maybe it would be better to scan just one coin?
-You see YRYR.
+Your settler registers YRYR.
 
 >au -1
 >sb coins
 The final of the five entries stays on red in non-cheat mode, but everything else is scrambled.
 
 >sy coins
-The settler flashes back, with all but the last entry--which stays red--changing.
+The settler flashes back, with all five entries changing.
 Hm. Maybe it would be better to scan just one coin?
-You see ?????.
+Your settler registers ?????.
 
 >sn coins
 The settler flashes back, with all but the last entry--which stays red--changing.
 Hm. Maybe it would be better to scan just one coin?
-You see ????R.
+Your settler registers ????R.
 
 >score
 41 out of 41
@@ -3098,7 +3098,7 @@ Rustic Citrus
 
 >{include} _manor
 
-* only-stores
+* _only-stores
 
 >ts
 >{include} _stores
@@ -3124,7 +3124,7 @@ Rustic Citrus
 >in
 >{include} _presto
 
-* only-oyster
+* _only-oyster
 
 >ts
 >oyster

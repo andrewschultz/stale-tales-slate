@@ -206,7 +206,7 @@ That's a good idea, but you're not sure HOW to react. You need a bit of data, fi
 >s
 
 >unearth
-You need something to dig here. You haven't found
+You can feel the haunter, but you have nothing to dig it up with.
 [You add the information to your pedanto-notepad under FLIPS.]
 >undo
 >e

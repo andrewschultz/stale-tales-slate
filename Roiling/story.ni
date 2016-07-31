@@ -989,10 +989,7 @@ to say full-monty of (myobj - a thing):
 	if qnf is true:
 		if questions-not-flagged is false:
 			pad-rec-q "question mark";
-	if myobj is curst palace:
-		pad-rec-q "curst palace";
-	else:
-		now space-warned is sw;
+	now space-warned is sw;
 	now questions-not-flagged is qnf;
 
 the question mark is a thing. the question mark is undesc. [question mark is for hinting ONLY]
@@ -2163,7 +2160,7 @@ casper-talk is a truth state that varies.
 
 to say add-hangout:
 	now casper-talk is true;
-	pad-rec "hangout";
+	pad-rec "the hangout";
 
 Leo-traveled is a truth state that varies.
 
@@ -3803,7 +3800,7 @@ to say doc-try:
 	now docile-tried is true;
 	say "[one of][or], again[stopping]";
 
-table of spechelp [tsh] [this is for specific error messages for specific items]
+table of spechelp [tosh] [tsh] [this is for specific error messages for specific items]
 xtrhelp	helptxt
 t-b	"The ten beams creak slightly. Maybe not all of them. But a few."
 palm	"The palm remains upright but seems slightly brighter."
@@ -3995,13 +3992,13 @@ admirer	"Your admirer looks askance, then returns to their puppy-love expression
 natives	"The natives look almost ready to be suckered by flattery or just a tall tale in general, but that look passes."
 yurts	"The yurts sway slightly. They may not be guarding much, but maybe you could do for them."
 alarming	"The grailman seems almost average for a moment."
-dandier arid den	"The arid den seems to lose a bit of power."
+dandier arid den	"The arid den seems less imposing and impressive."
 Reed's Ale	"The Reed's Ale man listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch."
 wait-seer	"The wait-seer looks bored and distracted for a second."
 rewired robot	"The robot almost looked a bit odd there for a moment."
 atheists	"The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal."
-lois the hostile	"[bug-report]" [??]
-hostile-is-he lot	"[bug-report]" [??]
+lois the hostile	"Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress."
+hostile-is-he lot	"The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes."
 ropins	"The ropins remains secure, with no easy way to open it."
 smart kid	"[kid-first] scrunches [his-her] eyes to try to keep even more attention, but it doesn't quite work."
 atblock	"[kid-first] seems a little more focused, but [he-she] could maybe do even better."
@@ -4142,7 +4139,7 @@ to say spec-help of (itm - a thing):
 [		else:
 			say "You feel as though you could've done something.";]
 	if itm is a mack-idea:
-		say "[if itm is ment]The macks seem to waver a bit, but not enough.[else][reject]";
+		say "[if itm is ment]The macks seem to waver a bit, but not enough.[else]The macks look at you funny.";
 		continue the action;
 	d "You may want to put in special text here in the table of spechelp, tsh, for ([noun]). Or not.";
 	say "You feel a slight psychic push-pull coming from [the itm]. That's a decent omen.";
@@ -4184,8 +4181,8 @@ picturers	"The picturers were pretty strict about what they suggested. Not much 
 lairage regalia	"You twist your mind a bit, but no, there's probably only one way to enter."
 adsorbing signboard	"No, you don't see any other way around the signboard to enter. You don't need one, either."
 old giant	"[if old giant is visible]It wouldn't be wise to argue against the giant[else if old giant is in lalaland]You had your conversation for the day[else][bug-report][end if]."
-bench	"[if old giant is in lalaland][giant-over][else]You leaned on the bench right. Time to try more[end if]."
-bench-end	"[if old giant is in lalaland][giant-over][else]You got on the bench right. Time to try more[end if]."
+bench	"[if old giant is in lalaland][giant-over][else]You leaned on the bench right. Time to get on it[end if]."
+bench-end	"[if old giant is in lalaland][giant-over][else]You got on the bench right. Time to start ducking[end if]."
 giant's elbow	"[if old giant is in lalaland][giant-over][else]You don't need to avoid the giant's elbow any more[end if]."
 runed book	"You don't need to do anything fancy with the runed book."
 pipe soot	"Brother Horbert probably knows what to do with that."
@@ -4245,7 +4242,7 @@ trout	"Retutor? Torture. Rot. True!"
 wipes	"Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on."
 crate	"Besides identifying it as a rect, you can't do much else with the crate."
 knob	"You should leave the knob to b'n OK."
-bogus-plains	"You had your say."
+bogus-plains	"You start up a grand lecture again, but you feel something spinal and think 'I...plans.' Time to move on."
 waste	"The tubs already got broken up."
 lance	"Your work turned up enough."
 rigged digger	"You managed to get a digger from a prod, and that's good enough."
@@ -4263,9 +4260,9 @@ old ice	"Twist the ice too much, it might not look right."
 ragged dagger	--
 Claire's Scalier	--
 raves saver	"The raves saver is as glitzed-up as it'll get."
-strudel	"You'd have to drop it on the ground and get it germy to try that again. Eww."
+strudel	"You'd have to drop the strudel on the ground and get it germy to try that again. Eww."
 prison ropins	"It already is. Dr. Yow is free."
-smart kid	"[kid-first] is fully attentive. Overkill might damage [his-her] creative streak!"
+smart kid	"Fiddling with [kid-first] too much that way might undo the good you did [him-her]."
 turbos	"The turbos are working. Best not tinker."
 blaster	"The blaster is working. Best not tinker."
 flowerpot	"You've got something nice in the flowerpot. Better not mess with it."
@@ -4303,7 +4300,7 @@ to say giant-over:
 	say "The bench isn't important with the giant gone"
 
 to say no-rehash:
-	say "That'd be an awkward rehash. You need another way to say good-bye"
+	say "[if leo is in dirge ridge]They're already off getting to know each other better[else]That'd be an awkward rehash. You need another way to say good-bye[end if]"
 
 to say just-c:
 	say "Just return the fruit to Curtis. No need for another change"
@@ -4320,7 +4317,7 @@ to say good-enuf of (goody - a thing):
 		say "You've already dealt with the macks that way.[no line break]";
 		continue the action;
 	if goody is a fruit:
-		say "[just-c].";
+		say "[just-c].[no line break]";
 		continue the action;
 	if goody is an animal:
 		if goody is in perverse preserve or goody is in wickeder wire deck:
@@ -6007,8 +6004,8 @@ to decide which thing is oyster-item:
 			decide on tubs;
 		if prod is visible:
 			decide on prod;
-		if aunt-tuna-cross is false: [hint the side quest ONLY IF you can still get the wipes]
-			if waste is reflexive and waste is in uaah:
+		if aunt-tuna-cross is false or wipes are not in sand home: [hint the side quest ONLY IF you can still get the wipes]
+			if waste is in uaah:
 				decide on waste;
 			if lance is not cleaned and lance is in uaah:
 				decide on lance;
@@ -6025,10 +6022,9 @@ to decide which thing is oyster-item:
 		if sardine is in Achers' Arches:
 			if player has wrap:
 				decide on wrap;
+			decide on sardine;
 		if a-s is reflexive:
 			decide on a-s;
-		if ruby is off-stage:
-			decide on bubble wrap;
 	if player has gleaner and gleaner is reflexive:
 		decide on gleaner;
 	if player is in hedron:
@@ -6059,7 +6055,7 @@ carry out oyster-hinting:
 		all-say "You need to show the haunter where the ruby is buried, now.";
 	else if player is in Arches:
 		if bubble wrap is off-stage:
-			all-say "You need to go back to the handsome sand home for a small gift.";
+			all-say "You need to go [if handsome sand home is visited]back to the handsome sand home[else]east of Anger Range[end if] for a small gift.";
 	else if player is in anger range and eeks are in lean lane:
 		all-say "You may want to visit the trout to the east.";
 	else if player is in collapsed and player does not have the digger:
@@ -8511,14 +8507,16 @@ carry out fliptoing:
 			if the-from entry is vanishing and the-from entry is the-to entry:	[this should work unless you flip an item twice and it vanishes 2nd time. Check.]
 				now the-from entry is in lalaland;
 			if taked entry is true or player has the-from entry:
-				now player has the-to entry;
+				if the-from entry is not ruby:
+					now player has the-to entry;
 			if there is a roomjump entry:
 				if roomjump entry is Strip of Profits:
 					solve-region the map region of the location of the player;
 					continue the action;
 				move player to roomjump entry;
 				consider the show blues rule; [for debugging]
-				consider the process random dialogue rule instead;
+				consider the process random dialogue rule;
+				the rule succeeds;
 			else if the-from entry is part of the diorama:
 				now the-to entry is part of the diorama;
 				now diorama-flip is true;
@@ -8738,7 +8736,7 @@ o-t	a-p	false	400254014	--	"patrol"	"patrol"	"You zigzag meticulously back and f
 eeks	eeks	false	404819362	Handsome Sand Home	"seek"	"seek"	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the reward drawer. You also notice some wipes on the drawer."
 tubs	waste	false	322908696	--	"bust"	"bust"	"As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right."
 prod	digger	true	262171428	--	"drop"	"drop"	"It rattles as you drop it. You try every which way. Heavy end first, light end first, sideways, at an angle--then POW! It opens. It's a properly rigged digger, now. You can't really call it a prod. But you can, and do, pick it up."
-waste	lance	false	437312684	--	"sweat"	"sweat"	"You make real effort to clean up the waste. And you do! You pile them into heaps, in the process finding a very dirty lance."
+waste	lance	false	437312684	--	"sweat"	"sweat"	"You make real effort to clean up the waste. And you do! You pile them into heaps, in the process finding a very dirty lance. It's a bit too dirty to take."
 heaps	heaps	false	345016151	--	"shape"	"shape" or "shape the/ heaps"	"You channel your inner artist and make something beautiful out of the heaps."
 ruby	thin hint	false	331207767	--	"ruby"	"ruby"	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to."
 haunter	haunter	false	462435186	--	"assuage"	"assuage"	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. The hedron is full of no-good-niks. The haunter waits on your next move."
@@ -8808,7 +8806,7 @@ Shane	Shane	false	332457700	--	"ashen"	"ashen"	"Suddenly, the color rushes from 
 Terrance	Terrance	false	619470753	--	"recreant"	"recreant"	"Terrance suddenly realizes that unconditional acceptance of duty ecides he might as well desert his duty and wanders off. [if number of visible warriors is 2]Rodney[else]The others[end if] can surely handle a bunch of drunks."
 Tyson	Tyson	false	465003321	--	"stony"	"stony"	"Tyson's emotions grow from hateful to just plain stony. This extends to his feelings towards Rodney as well as the tavern dwellers."
 Wade	Wade	false	258957789	--	"awed"	"awed"	"Wade glances at your settler. 'Hmm,' he says. 'A gadget like that, you must be someone important. Beats Rodney's stupid sword.' As he walks away, he mutters some interesting, lucid points that make you feel better about needing or using the settler and quest aides in general. You get the sense if you ever made a game yourself, he'd give some pretty awesome work and advice. You could even picture him helping create a gadget like the settler. Clearly, he was way too good for Rodney!"
-Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Old Hat Daltho, once a hot lad tipped to save Yorpwald. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Daltho hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say.[wfak][paragraph break]You follow his directions, apparently towards a voice booming 'Stop! Die!' But where you wind up isn't so threatening. Someone's there to greet you! Or to have a chat. A long one--he's a bit of a yacker."
+Rodney	Rodney	false	499778338	Topside Deposit	"yonder"	"yonder/droney"	"Well. Rodney isn't as impervious to magic as he claimed[rodney-ditch]. You're about to leave, but you hear a 'Do halt!' from the cellar.[wfak][paragraph break]The speaker introduces himself as Old Hat Daltho, once a hot lad tipped to save Yorpwald. 'I know who you must be, now.'[wfak][paragraph break]You nod. 'While I learned much world-saving theory, I never had the chance to put it into practice. But I do know this: Dr. Yow, if you can find [him-her], will help in several ways, but the Bland Sad Badlands are a cruel, difficult place. All people blocking your way--though not things--will be at least as tough as Rodney, though you if you listen and ask questions, it may become easier.' You note six letters in Rodney.[add-adj][wfak][paragraph break]Daltho hands you a welt-proof flowerpot, which is for an old friend--one who bought property near Castle Apcur, the Curst Palace, and is holding out for property value. Perhaps you will find a flower along the way to put in it. 'I? The one? No, thee! I...old-age gaoled...' / 'Ah, told.' you say, writing the information in your notepad.[wfak][paragraph break]You follow his directions, apparently towards a voice booming 'Stop! Die!' But where you wind up isn't so threatening. Someone's there to greet you! Or to have a chat. A long one--he's a bit of a yacker."
 flowerpot	flowerpot	false	289888397	--	"dingy"	"dingy"	"The crocus doesn't look a great shade of green, but it doesn't look dried out any more. It looks safer to pick up, so you do, and you put it in the flowerpot[unless player is in solo den][else if ed yerg is reflexive]. Ed sniffs--it still doesn't seem valuable[else]Ed looks longingly at the plant[end if]."
 Ed Yerg	Ed Yerg	false	516924064	--	"greyed"	"greyed"	"[yergy]."
 Ed Yerg	Ed Yerg	false	368088866	--	"grey"	"grey"	"[yergy]"
@@ -11119,7 +11117,7 @@ to say cur-has:
 	say ".[line break]Unconsulted subjects are in [i]italics[r].";
 	if fixies > 0:
 		now A is 0;
-		say "[line break]You can also consult your pad about [if fixies is 1]a topic[else]topics[end if] specific to this region:[line break]--";
+		say "[line break]You can also consult your pad about [if fixies is 1]a topic[else]topics[end if] `:[line break]--";
 		repeat through table of pad-stuff:
 			if known entry is true and there is a fixed-region entry:
 				if mrlp is fixed-region entry and introtoo entry is unrelevant:
@@ -11224,9 +11222,9 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "reagents/reagent"	false	"You need three reagents to help Brother Horbert: mushrooms[if player has mushrooms] (check)[end if], a runed book[if player has runed book] (check)[end if], and pipe soot[if player has pipe soot] (check)[end if]."	"reagents"	true	routes
 "Leo/Rand" or "Leo and Rand"	false	"Leo and Rand may be able to help you with heavy lifting."	"Leo and Rand"	true	presto
 "haunter"	false	"The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it."	"haunter"	true	oyster
-"die" or "die thou" or "hideout" or "hangout"	false	"If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them."	"hangout"	true	oyster
+"die" or "die thou" or "the/ hideout/hangout"	false	"If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them."	"the hangout"	true	oyster
 "progress"	false	"You note the following: manor = stuff[other-areas]."	"progress"	false
-"curst/palace" or "curst palace"	false	"You apparently can't scan the curst palace fully with the settler [']til you're all the way there. But maybe you can guess."	"curst palace"	true	towers
+"curst/palace" or "curst palace" or "castle/apcur" or "castle apcur"	false	"You apparently can't scan the curst palace fully with the settler [']til you're all the way there. But maybe you can guess."	"curst palace"	true	towers
 "xray" or "xraying"	false	"[xray-help]."	"xray"	false	towers
 "hit/ win/ button/" or "ben/ hid"	false	"Ben hid a HIT WIN button somewhere. Where?"	"hit win button"	false	routes
 "scenery"	false	"Ed Yerg told you to look for [the entry clue-index in nextclue]."	"scenery"	false	towers
@@ -11729,7 +11727,7 @@ check entering hoster:
 
 chapter store i
 
-the sortie is useless scenery in Strip of Profits. understand "store f" and "store/f" as sortie when player is in strip of profits. "The sortie leads to the erstwhile Lord Ablemiser's territory, which you were able to neutralize your first time through. You think he still likes you--but you've no time to verify that."
+the sortie is useless scenery in Strip of Profits. understand "store i" and "store/i" as sortie when player is in strip of profits. "The sortie leads to the erstwhile Lord Ablemiser's territory, which you were able to neutralize your first time through. You think he still likes you--but you've no time to verify that."
 
 instead of entering sortie:
 	say "[t-trap]."
@@ -11901,6 +11899,8 @@ understand "twins/otters/statues/statue" as otters-x.
 f-o-b is privately-named scenery. printed name of f-o-b is "the field of barley".
 
 description of f-o-b is "You look behind the otters at the field of barley. [if b-b is reflexed]There's not much left.[else]It's everywhere, up to your waist, with no end in sight.[end if]"
+
+understand "field/ of/ barley" as f-o-b when player is in strip of profits and f-o-b is in strip of profits.
 
 check entering otters-x:
 	if number of needed regions > 0:
@@ -14986,9 +14986,6 @@ a-text of ought is "RYYRR". b-text of ought is "RYYRR". parse-text of ought is "
 
 rebuked is a truth state that varies.
 
-to say lrshoo:
-	say "[if Leo is visible]Hmm...staler, alters. A long SOS would have no gloss. You don't want it to sound like Toughs, Go Thus. So, try to do something different[else]They're already off getting to know each other better[end if]";
-
 to say increm:
 	if the player's command includes "tough":
 		say "You add an extra 'Hut! Go!' for emphasis.[paragraph break]";
@@ -16550,10 +16547,15 @@ does the player mean spilling pills: it is very likely;
 cheated-guy is an object that varies. cheated-guy is nothing.
 
 after spilling:
+	if player has thin hint:
+		dl "You now have the thin hint.";
 	if pills are in lalaland and cheated-guy is nothing:
 		d "BUG I mistracked a pill spill.[line break]";
 	else if scams is true:
-		say "[how-pills-used].";
+		if cheated-guy is nothing:
+			say "PILLS NOT USED SUCCESSFULLY.";
+		else:
+			say "[how-pills-used].";
 	continue the action;
 
 to guy-cheat (gc - a thing):
@@ -16578,7 +16580,6 @@ boats	"A boat pulls over as you spill the pills. 'If ye need a ride, come aboard
 oars	"The pills must've been energy pills, because they jump up and down and attach to the oars and create a reaction that blasts your raft into the air to the other side! With a bump, you tumble out and walk a bit..."
 plea	"Some of the crays are dumb enough to think that the pills might be coins. In the ensuing hubbub of arguments between smart fish and dumb fish, you jump over the edge and swim to shore."
 carps	"The carps and pikes, distracted by the pills that fall out and keep jumping, ignore the trout. 'You stupid! Those pills are valuable. Out of our way, mouth-breather.' The range anger wells up in you."
-lance	"The pills somehow dissolve the ugly bits on the lance. It's the retractable sort, which is handy for carrying."
 tubs	"You spill the pills and slip on them, because no bathmat is around. In the process, you smack your elbow against the tubs. Right on the funny bone. You find it so unfunny you beat the tubs into waste. Which might be hiding more than just that prod you found inside."
 prod	"You spill the pills, which bounce around at your legs until you're annoyed enough to start hitting at them with the prod. Foomp! A hidden switch triggers, and the prod transforms to a rigged digger."
 heaps	"The pills you spill on the heaps cause a bizarre chemical reaction. You don't feel poisoned, so it can't be too dangerous. You think."
@@ -16592,7 +16593,7 @@ ruby	"The pills swarm your ruby so you drop it. They sink into the dirt, the rub
 scrawl	"The pills slip into the scrawl, flaring it up. The ground looks extra soft, and you look to see what you can--what's the word? UNEARTH. It's a big weird undead sausage! The sausage cries for its lost ruby!"
 haunter	"The haunter stays your hand. Perhaps it had a sad incident in its past which sent it to earth sooner--or made it lose its ruby. It nods at you in understanding."
 yapper	"The yapper begins bellyaching about picking up the pills. He complains about how it's HIS job to clean things up. He goes off to look for a wastebasket--but you think you see him popping a pill as he leaves."
-d2	 "You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the hedron, and the hedron accuses her. It's great fun."
+d2	 "You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the hedron's leaders of double crossing her, and the hedron's leaders accuse her. It's great fun to eavesdrop."
 dialer	"You spill the pills on the dialer, and they change DIALER to enough of the 720 possibilities that they settle on DERAIL."
 
 pill-use is a truth state that varies.
@@ -16618,6 +16619,9 @@ carry out spilling:
 	if location of haunter is location of player:
 		if haunter is reflexed:
 			say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]." instead;
+	if player is in collapsed old places:
+		if ruby is off-stage or digger is off-stage:
+			say "A solitary pill tries to burrow into the ground but fails. Hm. Maybe you should come back later if you need to hide something." instead;
 	if player is in End Den:
 		say "Unfortunately, the pills won't roll off and lead the way to where you need to go. You need some sort of map[if player has gleaner and gleaner is reflexed]. One might be in your inventory, and you just need to examine it[end if]." instead;
 	let oi be oyster-item;
@@ -16652,22 +16656,38 @@ carry out spilling:
 		if cur-score of oyster < 3:
 			now poss-score of oyster is poss-score of oyster + cur-score of oyster - 3; [you can skip up to 3 points but will not lose a point using the pills later to tutor Tortu the trout if you use the pills now. So really the maximum to lose is 2.]
 		move player to olde lode instead;
+	if player is in anger range and carps are in lalaland::
+		if digger is off-stage:
+			say "A single pill jumps out, tries to burrow in the ground, and pops back in the jar. Looks like you need to dig somehow for the haunter, but you don't have an instrument." instead;
+		if pre-haun is in anger range:
+			if thin hint is not in collapsed old places:
+				say "A single pill jumps out and you could swear it yelped before jumping back in the bottle. Maybe you need to prepare before digging up whatever's under Anger Range." instead;
 	if player is in Hedron and walleyes are in hedron: [walleyes can't really be flipped. You need to go through the sausage.]
 		say "You don't have one for everyone, and there's too many everyone, anyway. You'll need to outsmart the walleyes." instead;
 	if oi is the player:
 		say "You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long." instead;
 	if player is in uaah:
+		dl "[oi].";
 		if oi is waste or oi is heaps or oi is lance:
 			say "That might be a bit dirty, and you wonder if it's really worth it to use the pills on beautification (fourth wall note: this will only help with an optional side quest). Go ahead anyway?";
 			if the player direct-consents:
 				do nothing;
 			else:
 				say "[if oi is heaps]Yeah. Maybe writers and musicians need to pop pills to do their work, but sculptors don't. Maybe you can make the heaps more beautiful on your own[else]Yeah, it's not wise to put off general sanitation tasks with pills[end if]." instead;
-	if oi is scrawl:
+		if oi is lance:
+			say "The pills stick to the lance, making it so gross you feel compelled to CLEAN the lance, finally. Turns out it's the retractable sort, which is handy for carrying until you need to use it.";
+			now lance is cleaned;
+			now lance is unfigured;
+			now player has lance;
+			now cheated-guy is lance;
+			min-and instead;
+	if oi is pre-haun:
 		if ruby is not in lalaland:
 			say "As you turn the pill jar upside-down, the pills stay in--as if some supernatural force is pushing them up, because they aren't ready to come out yet.[paragraph break]Hmm. Maybe you have more to do before you find what's under, here." instead;
-		now cheated-guy is scrawl;
-		try unearthing haunter instead;
+		now cheated-guy is pre-haun;
+		say "The pills attach to your digger with a clang. They can't be removed normally, so you start to dig and dig.";
+		now cheated-guy is pre-haun;
+		try fliptoing pre-haun instead;
 	if oi is ant:
 		now cheated-guy is ant;
 		try taning ant instead;
@@ -16677,16 +16697,16 @@ carry out spilling:
 		say "Nothing happens, so you pull the lever...";
 		now lev-pull is true;
 	if oi is a pill-thing listed in table of pill-comments:
-		let any-flip be false;
 		now pill-use is true;
 		repeat through table of oyster anagrams:
-			if oi is the-from entry and any-flip is false:
+			if oi is the-from entry:
+				if oi is ruby:
+					now ruby is in location of player;
 				try fliptoing the-to entry;
-				now any-flip is true;
-		now pill-use is false;
-		if any-flip is false:
-			say "I should've tried to flip something, but I couldn't. BUG.";
-			d "[oi] was not a the-from in the oyster anagrams.";
+				now pill-use is false;
+				the rule succeeds;
+		say "I should've tried to flip something, but I couldn't. BUG.";
+		d "[oi] was not a the-from in the oyster anagrams.";
 	else:
 		say "You should be able to spill the pills to work on the [oi] but you can't. This is a BUG and I need to put an entry in a table for the [oi].";
 	the rule succeeds;
@@ -18278,6 +18298,7 @@ carry out burying:
 		say "The walleyes would find the ruby and take it, and you'd be out--but maybe you could frame them for its theft by burying the ruby somewhere near." instead;
 	if player is not in Collapsed Old Places:
 		say "You don't need to sock away wealth. You have enough. But that ruby--you've heard of it before. Maybe this is not the right place. If you want to hide the ruby, hide it somewhere hidden." instead;
+	now ruby is in collapsed old places;
 	try fliptoing thin hint;
 	the rule succeeds;
 
@@ -18407,7 +18428,7 @@ book Collapsed Old Places
 
 Collapsed Old Places is west of Horned Hedron. "There's not much to see here[if haunter is in lalaland], after that episode with the haunter[else if ruby is not in lalaland]. This would be a good place to hide something, because nobody who fears for their life would want to go here[else]. You [one of]still [or][stopping]see the thin hint you marked in the ground with your rigged digger[end if].". Collapsed Old Places is in Oyster. Collapsed Old Places is innie.
 
-thin hint is scenery. "The thin hint marks where you buried the ruby. You will be able to find it if you leave and come back."
+the thin hint is scenery. "The thin hint marks where you buried the ruby. You will be able to find it if you leave and come back."
 
 before doing something with thin hint:
 	if action is procedural:
@@ -19419,7 +19440,7 @@ understand "lasted" as a mistake ("The salted deltas have already lasted since w
 to say vis-guar:
 	if number of guardians in salted deltas > 0:
 		say ". Might be more productive to deal with [the list of guardians in salted deltas], instead";
-		if atheists are in deltas:
+		if number of guardians in deltas is 2:
 			say ". Especially the Atheists";
 	else:
 		say ". You've gotten rid of all nuisances here, anyway";
@@ -19457,7 +19478,7 @@ understand "fidget" as smart kid when location of smart kid is location of playe
 every turn when smart kid is reflexive and player is in coastlines and smart kid is in coastlines:
 	say "[kid-full] continues to fidget and mutter a wish to be just a BIT smarter. Fidget, fidget, fidget."
 
-the atblock is privately-named LLPish vanishing scenery. printed name of atblock is "tentativeness".
+the atblock is privately-named LLPish vanishing scenery. printed name of atblock is "tentativeness". description is "[bug-report]".
 
 kid-atten is a truth state that varies.
 
@@ -19474,17 +19495,13 @@ a bot boat is a thing. understand "botboat" and "bot-boat" as a bot boat.
 check scaning bot boat (this is the scan boat components and not boat rule):
 	showme whether or not blaster is reflexive;
 	showme whether or not turbos are reflexive;
-	dl "1.";
 	if blaster is reflexive and turbos are reflexive:
 		say "The blaster and turbos both give something different, but you focus on [the t-or-b].";
 		try scaning t-or-b instead;
-	dl "2.";
 	if blaster is reflexed and turbos are reflexed:
 		say "Nothing any more. You probably fixed the boat all you can." instead;
-	dl "3.";
 	if blaster is reflexed:
 		try scaning turbos instead;
-	dl "4.";
 	try scaning blaster instead;
 
 to say if-tent:
@@ -20792,11 +20809,11 @@ retrytext of bonker is ", poised to re-bonk"
 
 section ole shrine shoreline
 
-Lois the Hostile is a female purple guardian. "You recognize Lois the Hostile, renowned for forced-contrarian views on religion, as well as the 'real' Lois. She just likes to block people, and in this case, she's blocking your way [psgdir of lois the hostile].". description is "She looks hostile, all right."
+Lois the Hostile is a female purple guardian. "You recognize Lois the Hostile, renowned for forced-contrarian views on religion, as well as the 'real' Lois. She just likes to block people, and in this case, she's blocking your way [psgdir of lois the hostile].". description is "She doesn't exactly look happy, but she doesn't look irredeemably evil."
 
 a-text of lois the hostile is "RYRYYRR". b-text of lois the hostile is "?GRYYRR".
 
-The Hostile-Is-He Lot is a plural-named purple guardian. "The Hostile-is-He Lot, a swarm of contrarians who question anything and everything except their own nuisance value, block the way [psgdir of hostile-is-he lot]."
+The Hostile-Is-He Lot is a plural-named purple guardian. "The Hostile-is-He Lot, a swarm of contrarians who question anything and everything except their own nuisance value, block the way [psgdir of hostile-is-he lot].". description is "It's amazing, the variety of hostile expressions!"
 
 a-text of hostile-is-he lot is "RYRYYRR". b-text of hostile-is-he lot is "??RYYR?".
 
@@ -21037,6 +21054,10 @@ the specification of warrior is "A person who blocks your way out of the Trefoil
 roddro is a truth state that varies.
 rodyon is a truth state that varies.
 
+after fliptoing rodney:
+	pad-rec-q "curst palace";
+	continue the action;
+
 check fliptoing Rodney:
 	if number of visible warriors > 4:
 		if the player's command includes "yonder":
@@ -21047,7 +21068,7 @@ check fliptoing Rodney:
 		now roddro is true;
 		preef Rodney instead;
 
-after fliptoing a warrior:
+after fliptoing a warrior (this is the trefoil exit rule):
 	let vw be number of warriors in trefoil;
 	d "[list of warriors in trefoil].";
 	if noun is Rodney:
@@ -23587,13 +23608,13 @@ the icons are plural-named things. description is "The icons are designed to be 
 check sbing coins: [can't find any way else to do this]
 	say "The settler is all over the place. Maybe it would be better to scan just one coin?";
 	if the player direct-consents:
-		say "You see YRY (R and P).";
+		say "Your settler registers YRY (R and P).";
 	else:
 		say "The final of the five entries stays on red in non-cheat mode, but everything else is scrambled.";
 	the rule succeeds;
 
 check scaning coins:
-	say "The settler flashes back, with [if cheat-on is false]all five entries changing[else]all but the last entry--which stays red--changing[end if].";
+	say "The settler flashes back, with [if cheat-on is true]all five entries changing[else]all but the last entry--which stays red--changing[end if].";
 	say "Hm. Maybe it would be better to scan just one coin?";
 	if the player direct-consents:
 		let mytext be indexed text;
@@ -23601,7 +23622,7 @@ check scaning coins:
 			now mytext is b-text of coin;
 		else:
 			now mytext is a-text of coin;
-		say "You see [spacies of mytext]." instead;
+		say "Your settler registers [spacies of mytext]." instead;
 
 a-text of coins is "????R". b-text of coins is "?????". parse-text of coins is "?[sp]?[sp]?[sp]?[sp]?".
 
@@ -25246,7 +25267,6 @@ scratch paper	"You got things compiling. No more worries there."
 t-key	"[if t-key is part of keyboard]It's fit in now[else]It's part of the keyboard. You can put it in[end if]."
 raft	"Now you're on the raft, you need to find a way to use the oars." [start OYSTER]
 knob	"The knob's been dealt with."
-bogus-plains	"You start up a grand lecture again, but you feel something spinal and think 'I...plans.' Time to move on."
 heaps	"I can't give any artistic advice. They're--good enough, I guess. Better than before."
 lance	"I can't give you details on how to fight, but now your lance is clean, you'll be able to use it when need be."
 gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figure what to do with it[else if sanctum is visited or tenfold is visited]The gleaner's not particularly valuable to you any more. But maybe it could be to someone else[end if]."
@@ -26534,7 +26554,7 @@ to say d-then:
 		say "pull the lever then ";
 
 to say how-pills-used:
-	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is rude door]BONK the knob[else if cheated-guy is a-s]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over the river[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is o-t]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is scrawl]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
+	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is rude door]BONK the knob[else if cheated-guy is a-s]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over the river[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is o-t]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is pre-haun]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is heaps]SHAPE the heaps[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
 
 a region can be tickedoff. a region is usually not tickedoff.
 
