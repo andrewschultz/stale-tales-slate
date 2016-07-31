@@ -8,7 +8,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* seed-1
+* _seed-1
 
 >seed 1
 >gonear trefoil
@@ -51,7 +51,7 @@ up by one point
 >yonder
 up by one point
 
-* seed-2
+* _seed-2
 
 >seed 2
 >gonear trefoil
@@ -91,7 +91,7 @@ Demitri shakes his head, but a glare from Rodney sets him straight--for now.
 >timider
 up by one point
 
-* seed-3
+* _seed-3
 
 >seed 3
 >gonear trefoil
@@ -124,7 +124,7 @@ Leander shakes his head, but a glare from Rodney sets him straight--for now.
 >learned
 up by one point
 
-* seed-4
+* _seed-4
 
 >seed 4
 >gonear trefoil
@@ -154,7 +154,7 @@ Preston shakes his head, but a glare from Rodney sets him straight--for now.
 >pronest
 up by one point
 
-* seed-5
+* _seed-5
 
 >seed 5
 >gonear trefoil
@@ -167,7 +167,7 @@ Terrance shakes his head, but a glare from Rodney sets him straight--for now.
 >recreant
 up by one point
 
-* taunt-thru
+* _taunt-thru
 
 >seed 1
 >gonear topside
@@ -177,26 +177,26 @@ up by one point
 Scope Copse
 
 #test all 3 guardians in copse
->rewired
+>weirder
 >clumsy
-WRONG
+The snider diners sniff at the distraction.
 >undo
 >rinsed
-WRONG
+The muscly hulk beats its chest for NOT being removed like that.
 >undo
 >undo
 >clumsy
 >rinsed
-WRONG
->rewired
+The robot's lights blink and flash and bloop. Is it laughing?
+>weirder
 >n
 
 Saltbed
 >punier
-WRONG
+The pirates sing a colorful shanty about another lubber relegated to the deep.
 >undo
 >pastier
-WRONG
+The iPrune rears up and seems bigger for a second.
 >punier
 >n
 
@@ -204,15 +204,15 @@ Anemic Cinema
 
 >weariest
 >married
-WRONG
+The ingrates complain there aren't enough of them to take over the space you opened before worrying they're next.
 >undo
 >angstier
-WRONG
+Your admirer claps far too fervently at your accomplishment.
 >undo
 >undo
 >angstier
 >married
-WRONG
+The wait-seer cooly puts up a hand and mumbles some Hakuna Matata nonsense.
 >weariest
 
 >e
@@ -220,52 +220,59 @@ WRONG
 Salted Deltas
 
 >marginal
-WRONG
+The atheists sniff that the grailman would be good at guarding any grail, since it PROBABLY DOESN'T EXIST.
 >undo
 >hastiest
-WRONG
+The grailman mumbles something like "well, we can't all be above average."
 >marginal
 >s
 
 Savager Ravages
 
->flemish
-WRONG
+>himself
+The Reed's Ale man adjusts his half-on half-off costume, glad he wasn't the one dispelled--or whatever.
 >undo
 >released
-WRONG
->flemish
+"Well, at least it wasn't me, whoever I am," mumbles the man covered in inapt paint.
+>himself
 >e
 
 Ole Shrine Shoreline
 #must test both male and female bad guys here
 
 >grandiose
-WRONG
+The Hostile-is-He Lot mumble passive-aggressively that the wages of sin is, well, THAT.
 >undo
 >undo
 >gs
+>e
 >grandiose
-WRONG
+Lois the Hostile mumbles passive-aggressively that the wages of sin is, well, THAT.
 >undo
 >holiest
-WRONG
+The ego-drains make a flushing and slurping noise. Another rival guardian down the drain!
 >grandiose
 >gs
 
 >s
 
 >drained
+>e
 >naivest
-WRONG
+"ENEMIES ARE STILL TOO SCARED TO FACE THE BONKER!" you hear from the east.
 >undo
 >broken
-WRONG
+The natives mumble how they KNEW something like that would happen to someone else. They've seen it all, here.
 >undo
 >undo
+>undo
+>n
+>e
+>s
 >naivest
 >broken
-WRONG
+"Not bad! But would've been more stylish with NERD-AID!" booms a mechanical voice from the arid den.
+
 >drained
 
 * descrip-tries
@@ -273,61 +280,134 @@ WRONG
 >gonear topside
 >purloin settler
 >creaky
+
+>z
+
+#copse enemies
+>abstract rewired to lalaland
+>abstract diners to lalaland
 >n
->muscly
->rinsed
+You briefly remember the giant's paradox, about trading off strength and dexterity.
+>undo
+>undo
+>undo
+
+>abstract rewired to lalaland
+>abstract muscly to lalaland
+>n
+The diners mutter about how bad weather can ruin the ambience of open-air meals.
+>undo
+>undo
+>undo
+
+>abstract muscly to lalaland
+>abstract diners to lalaland
+>n
+The rewired robot is almost trying TOO hard to be normal, you think.
+
+>abstract rewired to lalaland
 
 #saltbed enemies
 >abstract pirates to lalaland
 >n
-WRONG
+Looking at the iPrune, you are intimidated by how unnaturally big it is. Maybe the solution is easier than you're worried it is.
 >undo
 >undo
 >abstract iprune to lalaland
 >n
-WRONG
+You can't make the pirates less in-shape, but maybe something more cosmetic will work.
+
 >abstract pirates to lalaland
 
-#sunbelt enemies
->s
->abstract dandier to lalaland
->e
-WRONG
+#anemic cinema enemies
+
+>abstract ingrates to lalaland
+>abstract admirer to lalaland
+>n
+Boy! You'd get tired with the wait-seer's life. Maybe he could, too.
 >undo
 >undo
->abstract inapt paint to lalaland
+>undo
+
+>abstract ingrates to lalaland
+>abstract wait-seer to lalaland
+>n
+If only there were a legal or moral reason for the admirer to cool it!
+>undo
+>undo
+>undo
+
+>abstract wait-seer to lalaland
+>abstract admirer to lalaland
+>n
+Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny.
+>abstract ingrates to lalaland
+
+#salted deltas enemies
+
+>abstract atheists to lalaland
 >e
-WRONG
->abstract dandier to lalaland
+You haven't met many grailmen, but this one is good enough, for now.
+>undo
+>undo
+>abstract grailman to lalaland
+>e
+The atheists have no shortage of logic, but perhaps their presentation could be adjusted.
+>abstract atheists to lalaland
 
 #ravages enemies
 
->abstract grailman to lalaland
->n
-WRONG
->undo
->undo
 >abstract reed's ale to lalaland
->n
-WRONG
->abstract grailman to lalaland
-
-#deltas enemies
->abstract wait-seer to lalaland
->n
-WRONG
->undo
->undo
->abstract atheists to lalaland
->n
->e
-WRONG
->abstract hostile-is-he-lot to lalaland
 >s
-WRONG
+Perhaps you can free the man covered in inapt paint from nationality and to individuality.
+>undo
+>undo
 
+>abstract inapt paint to lalaland
+>s
+The Reed's Ale man fidgets with his costume, unsure if he wants to take it off or put it on.
+>abstract reed's ale to lalaland
+>mined
+>sewed
 
-*err-thru
+#sunbelt enemies, oops, enemy
+
+>s
+The arid den won't evaporate, but maybe you can get rid of it another way.
+>abstract arid den to lalaland
+
+#garden enemies
+>abstract ego drains to lalaland
+>abstract natives to lalaland
+>e
+"BONKER DEFENDING JAIL AT 100% EFFICIENCY!" you hear from the east.
+>undo
+>undo
+>undo
+
+>abstract bonker to lalaland
+>abstract natives to lalaland
+>e
+Part of you wonders if you should play up the ego drains, but the other part says they're obstructive enough.
+>undo
+>undo
+>undo
+
+>abstract ego drains to lalaland
+>abstract bonker to lalaland
+>e
+Those natives look like they could be psyched out.
+>abstract natives to lalaland
+>n
+Boy! The Lot sure could use some down-home kindness.
+>s
+>gs
+>n
+Boy! Lois sure could use some down-home kindness.
+>s
+>gs
+
+* _err-thru
 
 >seed 1
 >gonear trefoil
@@ -723,19 +803,12 @@ This is a weird place, being at the crossroads, but better to mess around elsewh
 >s
 Unblest Sunbelt
 
->nameless
-The salesmen laugh at the sheer lameness of what you're saying, or trying to say, or whatever. Compared to you, their maleness, talk--and clothes--are clearly dandier.
-Or maybe they're just too unimaginative to be affected by any of your nonsense powers. Well, directly.
->salesmna
-Picking off one salesman would just make the others work harder for their commission. And it's not doable, anyway. If you got rid of their product, they might stop pestering you.
->shirst
-The shirts were built to resist the most direct of manipulations. Perhaps you can work on the salesmen themselves. Because the shirts do make them look dandier.
 >casn
-You think a bit. The salesmen don't emphasize one word over the other during their sales pitches, so the NERD and AID of Nerd-Aid seem equally ludicrous. I mean important.
+Concentrate on the Nerd-Aid. In the dandier arid den.
 >nedr
-You think a bit. The salesmen don't emphasize one word over the other during their sales pitches, so the NERD and AID of Nerd-Aid seem equally ludicrous. I mean important.
+Concentrate on the Nerd-Aid. In the dandier arid den.
 >adi
-You think a bit. The salesmen don't emphasize one word over the other during their sales pitches, so the NERD and AID of Nerd-Aid seem equally ludicrous. I mean important.
+Concentrate on the Nerd-Aid. In the dandier arid den.
 >weasr
 You suppress a swear as the sales pitch wears on you.
 >bottlse
@@ -817,20 +890,8 @@ Ole Shrine Shoreline
 >shorelien
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
->deacno
-There's more than one deacon blocking you.
-
->deacosn
-The deacons mumble to themselves, and you catch "Lo! Is the...?" / "Toils, eh." and your calling upon supernatural powers that clearly don't exist. You feel devoid of can-does after your latest attempt, mumbling "Eh, I lost."
-You get the sense the deacons have given you the run-around. They're not going to discuss their hostile ol' heist around you.
-
->scan deacons
-
->deacons
---but maybe you can muddle through the odd readings from the settler.
-
 >shrien
-The shrine is kind of sacred, and regardless of what you think of the deacons' religion, messing with it would be a mean move.
+The shrine is kind of sacred, and regardless of what you think of the Hostile-Is-He Lot's religion, messing with it would be a mean move.
 
 >holiest
 >n
@@ -941,15 +1002,16 @@ It's not just any duck. But it's served its purpose.
 >e
 
 >tentatiev
-Dirk strains to keep even more attention despite doing pretty well.
+Dirk seems a little more focused, but he could maybe do even better.
+
+>attentive
+by one point
 
 >rowdy
 by one point
 
->woryd
-Dr. Yow seems to ponder something for a second but then shakes his head--he's probably shown his full range of emotions
-
 >attentive
+not something you
 
 >gt campsite
 

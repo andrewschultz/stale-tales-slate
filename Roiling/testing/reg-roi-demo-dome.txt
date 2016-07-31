@@ -199,16 +199,16 @@ This is a museum! No messing with the exhibits, please. Or trying to.
 NOTE: you've read all the way through
 
 >x tools wall
-You read some of the allow-lots-tools wall. Some of this might be useful if you make your own game. But not a lot.
+You read some of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
 
 >g
-You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. But not a lot.
+You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
 
 >g
-You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. But not a lot.
+You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
 
 >g
-You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. But not a lot.
+You read some more of the allow-lots-tools wall. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
 
 >g
 >g

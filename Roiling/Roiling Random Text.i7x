@@ -7111,6 +7111,7 @@ blurb
 "Cake Boss Beck Sosa"
 "Can't Hate Etta Chan"
 "Castor's StarsCo"
+"The Cat Acteth"
 "The Cats at Chet's"
 "Cats Like Kastelic" []
 "Cesar Arce's Acres" []
@@ -7498,6 +7499,7 @@ blurb
 "Bad Kids Did Bask"
 "Baggiest Beats Gig"
 "Ball Very Verbally"
+"Bard So Adorbs"
 "Barmy in My Brain"
 "The Bass Has Best"
 "Be Down: We Bond" []
@@ -14212,6 +14214,7 @@ blurb	prio
 "Reasons Snare So[r], by Ren Sosa" []
 "Reaving Vinegar[r], by Vi Regan-Avinger"
 "Reba's BS Era[r], by Sabra Beers"
+"Rebel and a Blender[r], by Len Beard"
 "Rebel-Mass Assembler[r], by [if player is male]Elmer Bass[else]Sam Belser[end if]"
 "Rebuilt it Bluer[r], by Bret Lui & Lu Trieb" []
 "Recalling: All Cringe[r], by [if player is male]Carl Ingle[else]Nell Craig[end if]"
@@ -14261,7 +14264,6 @@ blurb	prio
 "Relic-Laden Cinderella[r], by [if player is male]Eric Leland[else]Nell Darcie[end if]"
 "Relisted, Let's Ride[r], by [if player is male]Ted Riles[else]Lis Deter[end if]"
 "Relit by Liberty![r] by Teri Bly"
-"Yet Roll, Trolley[r], by Roy Tell"
 "Rely on Ol['] Ryne[r], by Ron Ley & Lon Rey" []
 "Remain a Miner[r], by Marnie Manier" []
 "Remains of Famines or Fair Omens[r], by [if player is male]Simon Fear[else]Mona Fries[end if]"
@@ -16140,6 +16142,7 @@ blurb	prio
 "Yet Cavil Actively, Vile Caty[r], by [if player is male]Clive Tay[else]Evita Cly[end if]"
 "Yet Coo, Coyote[r], by Toy Coe"
 "Yet Harm the Army-Era Myth[r], by Ty Hamer" []
+"Yet Roll, Trolley[r], by Roy Tell"
 "Yet Roughen the Younger[r], by Theo Gurney"
 "Yet Shirk the Risky, Eh, Kristy[r], by Trish Key"
 "Yet Walls Ally West[r], by Sly Ewalt" []
@@ -18677,6 +18680,7 @@ blurb
 "NEW AGE? GEE, NAW" []
 "NICKNAMES SICKEN, MAN"
 "NIL PUBIC IN PUBLIC"
+"NO-GUILT GIN? LOUT"
 "NOBLESSE? BONE LESS" []
 "NOIRS? NO SIR" []
 "NOISY? OY, SIN"
@@ -32382,6 +32386,7 @@ blurb
 "Piny Heart in Therapy"
 "Pisser Spires" []
 "Placity? Typical City, Pal" []
+"Plow, plow, LWOP"
 "Ply Tales, All Types" []
 "PM, Dude Dumped"
 "Po['] Hero Hooper" []

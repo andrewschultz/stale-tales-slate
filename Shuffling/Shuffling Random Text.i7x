@@ -2361,6 +2361,7 @@ blurb
 "Only fools fly on, solo. Folly soon!"
 "Oo, see fury of our eyes!"
 "Oof! Not on foot!"
+"Oop, ask: ok, soap a spook?"
 "Or ask it: a risk to art is OK."
 "Or be on Borneo. One orb: bore? No!"
 "Or do us odours so dour? O, sour'd!"

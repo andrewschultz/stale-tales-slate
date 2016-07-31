@@ -16,17 +16,6 @@ you may wish to type ABOUT or VERBS to see information about the game and what w
 >consult me
 You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
 
->pad elvira
-Apparently, appreciating her is what separates us from the animals. According to Gunter.
->consult about elvira
-Apparently, appreciating her is what separates us from the animals. According to Gunter.
->consult pad about elvira
-Apparently, appreciating her is what separates us from the animals. According to Gunter.
->notepad elvira
-Apparently, appreciating her is what separates us from the animals. According to Gunter.
->pedanto elvira
-Apparently, appreciating her is what separates us from the animals. According to Gunter.
-
 >consult pad
 Currently you can consult your pad about these general topics:
 >consult about
@@ -38,6 +27,8 @@ Currently you can consult your pad about these general topics:
 You don't need to change the pedanto-notepad, except maybe by filling it up with ideas.
 >pedanto
 You don't need to change the pedanto-notepad, except maybe by filling it up with ideas.
+
+>get notepad
 
 >x book
 It's your workbook. It holds bookwork. The original, from the first time you saved Yorpwald, is in some museum. But this is about the same. It's small enough to fit in a pocket, and you have clipped a pen over it, too.
@@ -89,22 +80,33 @@ Switching on
 
 >think
 
+>x books
+You couldn't read--not even just titles--with that knocking at the door.
+
 >open door
 >1
 >5
 >lamp
 
+>pad elvira
+Apparently, appreciating her is what separates us from the animals. According to Gunter.
+>consult about elvira
+Apparently, appreciating her is what separates us from the animals. According to Gunter.
+>consult pad about elvira
+Apparently, appreciating her is what separates us from the animals. According to Gunter.
+>notepad elvira
+Apparently, appreciating her is what separates us from the animals. According to Gunter.
+>pedanto elvira
+Apparently, appreciating her is what separates us from the animals. According to Gunter.
+
 >ponder
-You begin another deep think, but mulling and rehashing is no fun.
+Nothing immediate comes up. If you need help, just say HINT. K?
 
 >think
-You begin another deep think, but mulling and rehashing is no fun.
+Nothing immediate comes up. If you need help, just say HINT. K?
 
 >x shelf
 It's engraved READING A DINGER, I GANDER
-
->x books
-You couldn't read--not even just titles--with that knocking at the door.
 
 >hint giant pin
 The pin's hanging from a wall, but things like that usually don't hang from walls. (+) [Note: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.]
@@ -130,40 +132,55 @@ A painting. (-)
 #what if scan something invisible/unachievable
 
 >satchel
+NO TIP
+OPT IN
 
 >scan pin
-WRONG
+Ta-dum! Datum! It's not an odd DOA doodad! You recall writing in your notepad about your tagged gadget from your first adventure and how it helped you determine what you needed to change an object to. But the settler has new colors. You'll need to find what they're for.
+
+[NOTE: if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type SPACE ON or SON to space out the text if you are visually impaired, or NO SPACE or NOS to lump the text back. Also, LA repeats what you scanned last, if the window on top does not show it.]
+
 >space on
-WRONG
+Now spaces are on.
+
 >scan pin
-WRONG
+Your settler registers R Y Y R R Y R R.
+
 >no space
-WRONG
+Now spaces are off.
+
 >scan pin
-WRONG
+Your settler registers RYYRRYRR.
+
 >no space
-WRONG
+Spaces are already off.
 >scan pin
-WRONG
+Your settler registers RYYRRYRR.
 >nos
-WRONG
+Spaces are already off.
 >scan pin
-WRONG
+Your settler registers RYYRRYRR.
 >son
-WRONG
+Now spaces are on.
 >scan pin
-WRONG
+Your settler registers R Y Y R R Y R R.
 >spaceon
-WRONG
+Spaces are already on.
 >scan pin
-WRONG
+Your settler registers R Y Y R R Y R R.
 >nospace
-WRONG
+Now spaces are off.
 >scan pin
-WRONG
+Your settler registers RYYRRYRR.
 
 >access
 now on.
+>scan pin
+Your settler registers Red Yellow Yellow Red Red Yellow Red Red.
+>space on
+Your settler registers Red Yellow Yellow Red Red Yellow Red Red.
+>no space
+
 >verbs
 !/--
 >access
@@ -174,22 +191,24 @@ now off.
 >answer door
 A rallies sallier? With snipers pressin[']? Better not.
 
->x stable x
-WRONG
->stable x
->x stable
+>jj stable jj
+You can just change the tables by saying STABLE.
+>stable jj
+You can just change the tables by saying STABLE.
+>jj stable
+You can just change the tables by saying STABLE.
 
->x basement x
-WRONG
-> basement x
->x basement
+>jj basement jj
+You can just change the ten beams by saying BASEMENT.
+> basement jj
+You can just change the ten beams by saying BASEMENT.
+>jj basement
+You can just change the ten beams by saying BASEMENT.
 
 >staple me
-WRONG
+That doesn't need stapling.
 
 >basement
-NO TIP
-OPT IN
 
 >rove over
 It's not that easy. Maybe once you've returned back here to your Dusty Study, you can sneak out a more usual passage. But you need to fix things in Yorpwald, first. Or restart the game.
@@ -218,12 +237,15 @@ Surly foe: yourself? Lose fury!
 >kick me
 Surly foe: yourself? Lose fury!
 
->stapler
+>gonear carven cavern
 >staple me
-WRONG
+You need something to staple with.
+
+>stapler
+
 >staple
 >staple me
-WRONG
+That doesn't need stapling.
 
 * demo dome specific
 
@@ -259,13 +281,19 @@ The words MY NICHE have a square dotted outline around them.
 
 >purloin treatise
 >x prepared
-WRONG
+The treatise iterates some sort of pattern but ends abruptly. You stare. Tears. Eyes watery yet raw. Arg. Life. Fragile.
 >x prepared red
+(Yes, the old timer is a time lord now.)
 >x prepared paper
+(Yes, the old timer is a time lord now.)
 >x prepared red paper
+(Yes, the old timer is a time lord now.)
 >x red paper
+(Yes, the old timer is a time lord now.)
 >x paper
+(Yes, the old timer is a time lord now.)
 >x letter
+(Yes, the old timer is a time lord now.)
 
 >x ads
 It's impossible to look away...advertising certainly has gotten more prominent since Elvira arrived. She's been so good at saying you need to advertise, and yet--she does not need to. Apparently she is quite a consultant for opposing ad firms.
@@ -275,20 +303,25 @@ The ads aren't sad because they're drab but rather because so many people fall f
 >x ad
 Another ad 
 
+>purloin his art
+
 >x questin
 It's headed Good deeds? Sodded ego! Elvira lays out how you saved Yorpwald and all. But everyday stuff? You couldn't repair a flat tyre with flattery, make custard out of car dust or spumoni from an ion sump. Or even a cellphone from cellophane.
 
 You pause. That's so contrived. What kind of faker-freak would think that up?
 
 >x inquest
-It's no less annoying the second time around.>gonear paperwall
+It's no less annoying the second time around.
+
+>gonear carven cavern
 >x wallpaper
 WRONG
 >x wall
 >x paper
 >staple
+>stapler
 >x staples
-WRONG
+It looks unbent (well, beyond the two bends all staples have) and usable. It's the biggest staple you've seen by a long shot.
 
 >staple wall
 >in
@@ -303,12 +336,15 @@ WRONG
 >point settler at store p
 WRONG
 
+>purloin settler
+
 >shake settler
 WRONG
 >shake
 WRONG
 >shake me
-WRONG
+That doesn't really work.
+
 >ss
 WRONG
 

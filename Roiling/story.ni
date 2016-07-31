@@ -116,7 +116,7 @@ Routes is a region. regtab of Routes is table of routes nudges. regana of Routes
 
 Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 21. min-score of Troves is 15. [Pa Egg Pea, lager, lobster/stream, bee, astute statue, DIVORCES]
 
-Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 39. min-score of oyster is 27. [scan cans = 1, revel/lever=1, fart/soar=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter and pulling lever]
+Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 39. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter and pulling lever]
 
 Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 33. min-score of presto is 28. [rom stick, lamb, tab, casserole, +1 point for Phooey]
 
@@ -543,7 +543,8 @@ to choose-female:
 	now greedy-person is Dr Tera;
 	now i trash his art is off-stage;
 	now er trash is part of the dope op-ed;
-	now lois the hostile is off-stage;
+	if hostile-is-he lot is not in lalaland:
+		now hostile-is-he lot is off-stage;
 
 to choose-male:
 	now lois the hostile is off-stage;
@@ -559,7 +560,8 @@ to choose-male:
 	now greedy-person is Red Rat;
 	now i trash his art is part of the dope op-ed;
 	now er trash is off-stage;
-	now hostile-is-he lot is off-stage;
+	if lois the hostile is not in lalaland:
+		now lois the hostile is off-stage;
 
 to decide whether (cho - a number) is irrelevant:
 	if cho is 70 or cho is 102, decide no;
@@ -996,28 +998,28 @@ to say full-monty of (myobj - a thing):
 the question mark is a thing. the question mark is undesc. [question mark is for hinting ONLY]
 
 to say spacies of (INTE - indexed text):
-	if setspace is false:
+	if setspace is false and screenread is false:
 		say "[INTE]";
 		continue the action;
 	let chrs be the number of characters in INTE;
 	repeat with chtemp running from 1 to chrs:
 		let THISCHAR be character number chtemp in INTE;
 		if THISCHAR is "R":
-			say "Red";
+			say "[if screenread is true]Red[else]R[end if]";
 		else if THISCHAR is "Y":
-			say "Yellow";
+			say "[if screenread is true]Yellow[else]Y[end if]";
 		else if THISCHAR is "G":
-			say "Green";
+			say "[if screenread is true]Green[else]G[end if]";
 		else if THISCHAR is "P":
-			say "Purple";
+			say "[if screenread is true]Purple[else]P[end if]";
 		else if THISCHAR is "O":
-			say "Orange";
+			say "[if screenread is true]Orange[else]O[end if]";
 		else if THISCHAR is "B":
-			say "Brown";
+			say "[if screenread is true]Brown[else]B[end if]";
 		else if THISCHAR is "*":
-			say "Asterisk";
+			say "[if screenread is true]Asterisk[else]*[end if]";
 		else if THISCHAR is "?":
-			say "Question mark";
+			say "[if screenread is true]Question mark[else]?[end if]";
 		if chtemp < chrs:
 			say " ";
 
@@ -2539,7 +2541,7 @@ to say kid-fol: [h]
 	else if kid-moves is 6:
 		say "You regret not clearing more guardians--the kid is nice, but [he-she] sure can TALK and loves to kibitz about who's hanging around, and how and why you could've figured things out, leaving you a bit too exhausted to show HOW you work your magic. And a little embarrassed. You mumble something about being practical. Plus the long walk may help the kid sit and listen. You hope.";
 	now kid is found;
-	now atten is in subsector;
+	now atblock is in subsector;
 	move kid to subsector;
 	move player to subsector;
 
@@ -4002,6 +4004,7 @@ lois the hostile	"[bug-report]" [??]
 hostile-is-he lot	"[bug-report]" [??]
 ropins	"The ropins remains secure, with no easy way to open it."
 smart kid	"[kid-first] scrunches [his-her] eyes to try to keep even more attention, but it doesn't quite work."
+atblock	"[kid-first] seems a little more focused, but [he-she] could maybe do even better."
 denim	"The denim bends and warps, but you hear no tearing noise."
 pulses	"The pulses seem less there and less negative for a moment."
 old ice	"The old ice seems to glimmer a bit."
@@ -4181,9 +4184,9 @@ picturers	"The picturers were pretty strict about what they suggested. Not much 
 lairage regalia	"You twist your mind a bit, but no, there's probably only one way to enter."
 adsorbing signboard	"No, you don't see any other way around the signboard to enter. You don't need one, either."
 old giant	"[if old giant is visible]It wouldn't be wise to argue against the giant[else if old giant is in lalaland]You had your conversation for the day[else][bug-report][end if]."
-bench	"[if giant is in lalaland][giant-over][else]You leaned on the bench right. Time to try more[end if]."
-bench-end	"[if giant is in lalaland][giant-over][else]You got on the bench right. Time to try more[end if]."
-giant's elbow	"[if giant is in lalaland][giant-over][else]You don't need to avoid the giant's elbow any more[end if]."
+bench	"[if old giant is in lalaland][giant-over][else]You leaned on the bench right. Time to try more[end if]."
+bench-end	"[if old giant is in lalaland][giant-over][else]You got on the bench right. Time to try more[end if]."
+giant's elbow	"[if old giant is in lalaland][giant-over][else]You don't need to avoid the giant's elbow any more[end if]."
 runed book	"You don't need to do anything fancy with the runed book."
 pipe soot	"Brother Horbert probably knows what to do with that."
 seed pit	"That'd be a double negative, to re-enter. Your argument would be so won, it's lost."
@@ -4503,7 +4506,7 @@ to reg-inc:
 	consider the notify score changes rule;
 	let tru-sco be cur-score of mrlp;
 	if mrlp is otters and cinders are in lalaland:
-		decrement tru-sco; [if the player uses the cinders earlier than they should--I can't stop them, but this ]
+		decrement tru-sco; [if the player uses the cinders earlier than they should--I can't stop them, but this is a hack]
 	repeat through table of init-points:
 		if mrlp is myrg entry and tru-sco >= pttot entry:
 			if no-tip is false and roved is false and doneyet entry is false:
@@ -4587,7 +4590,7 @@ carry out requesting the score:
 			if min-score of mrlp < poss-score of mrlp:
 				say ". Lowest score to solve is [min-score of mrlp]. Maximum score available is [poss-score of mrlp]";
 			else:
-				say ". You've found all the secrets here, so you need all [min-score of mrlp] points to win";
+				say ". There are no secrets left to find here, so the score to win is [min-score of mrlp] points[if poss-score of mrlp is not max-score of mrlp]--you missed some extra stuff you can't go back for[end if]";
 		say ".[line break]";
 		if mrlp is otters and power-back is false:
 			say "[line break]You probably need to do something to get back your full powers, too.";
@@ -4853,6 +4856,7 @@ when play begins (this is the hint and other randomization rule):
 		now t-or-b is turbos;
 	else:
 		now t-or-b is blaster;
+	sort the table of guard-org in random order; [for first-time-view clues]
 	sort table of animal randomness in random order; [otters hinting]
 	sort tapering-items in random order;
 	sort anteroom-items in random order;
@@ -5166,23 +5170,27 @@ to oscan (scanee - a thing):
 
 carry out scaning:
 	if mrlp is demo dome:
-		say "Questing time is over. No need." instead;
+		say "Questing time is over. No need.";
+		the rule fails;
 	if noun is big l or noun is big-let:
-		say "Nothing happens. It's probably some sort of hint or guide in itself, not something you need to mess with." instead;
+		say "Nothing happens. It's probably some sort of hint or guide in itself, not something you need to mess with.";
+		the rule fails;
 	if noun is player:
-		say "According to your cutting-edge blend of magic and technology, you are either perfect as you are, or too boring to change anything else." instead;
+		say "According to your cutting-edge blend of magic and technology, you are either perfect as you are, or too boring to change anything else.";
+		the rule fails;
 	if noun is letters settler:
-		say "The settler is not flexible, despite its flexible options. But it would show [full-monty of settler] if it were." instead;
+		say "The settler is not flexible, despite its flexible options. But it would show [full-monty of settler] if it were.";
+		the rule fails;
 	if a-text of noun is "":
-		say "The letters settler registers nothing." instead;
+		say "The letters settler registers nothing.";
+		the rule fails;
 	if first-good-scan is false:
 		now first-good-scan is true;
 		say "[one of]Ta-da! Data (a tad.) [or]Ta-dum! Datum! [at random]It's not an odd DOA doodad! [if mrlp is manor]You recall writing in your notepad about your tagged gadget from your first adventure and how it helped you determine what you needed to change an object to. But the settler has new colors. You'll need to find what they're for.[paragraph break][end if]";
 		ital-say "if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type SPACE ON or SON to space out the text if you are visually impaired, or NO SPACE or NOS to lump the text back. Also, LA repeats what you scanned last, if the window on top does not show it.";
 		pad-rec-q "la";
 		pad-rec-q "spaces";
-	if noun is not the player:
-		now last-scanned-thing is noun;
+	now last-scanned-thing is noun;
 	say "[sb-choose][full-monty of noun].";
 	repeat through table of aftertexts:
 [	if noun is an xtradesc in table of aftertexts: ?! doesn't work]
@@ -7832,7 +7840,7 @@ carry out sbing:
 	try scaning noun;
 	if the rule failed:
 		the rule succeeds;
-	if a-text of noun is b-text of noun:
+	if a-text of last-scanned-thing is b-text of last-scanned-thing:
 		say "Nothing changes between cheat/teach and regular mode.";
 		now sb-cur is false;
 		the rule succeeds;
@@ -7860,7 +7868,8 @@ understand "shake [thing]" as ss0ing.
 understand "shake" as ss0ing.
 
 rule for supplying a missing noun when ss0ing:
-	now noun is settler;
+	if player has settler:
+		now noun is settler;
 
 ss0ing is an action applying to one thing.
 
@@ -7890,15 +7899,11 @@ carry out sying:
 		try taking settler;
 	if player does not have settler:
 		say "You need the settler for this shortcut." instead;
-	now cheat-on is false;
-	now squee is false;
+	now cheat-on is true;
 	try scaning noun;
-	if squee was true:
-		say "You reset the equals sign.";
-		now squee is true;
-	if cheat-on was true:
+	if cheat-on was false:
 		say "You reset the cheat/teach button.";
-		now cheat-on is true;
+		now cheat-on is false;
 	the rule succeeds.
 
 chapter sning
@@ -7918,12 +7923,8 @@ carry out sning:
 	if player does not have settler:
 		say "You need the settler for this shortcut." instead;
 	now cheat-on is false;
-	now squee is false;
 	try scaning noun;
-	if squee was true:
-		say "You reset the equals sign.";
-		now squee is true;
-	if cheat-on was false:
+	if cheat-on was true:
 		say "You re-unset the cheat/teach button.";
 		now cheat-on is true;
 	the rule succeeds;
@@ -7988,13 +7989,8 @@ understand the command "access" as something new.
 understand "access" as accessing.
 
 carry out accessing:
-	if screenread is true:
-		say "Accessibility mode is now off.";
-		now screenread is false;
-	else:
-		say "Accessibility mode is now on.";
-		now screenread is true;
-		now setspace is true;
+	now screenread is whether or not screenread is true;
+	say "Accessibility mode is now [on-off of screenread].";
 	the rule succeeds;
 
 chapter spaceoning
@@ -8783,7 +8779,7 @@ denim	Éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the
 fissure	fissure	false	582291393	--	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 prison ropins	prison ropins	false	522953692	--	"unlocked"	"unlocked"	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks and vanishes. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 smart kid	smart kid	false	356052660	--	"gifted"	"gifted"	"[kid-full] calms down a bit. 'Man! My mind is clearer now! Did you...? Well, if you did or didn't, I'm still, wow.' [he-she-c] asks you, 'Could you give me help building a bot-boat?' You shake your head. 'Do you know anyone?'[paragraph break]Hmm, not any of the guardians blocking your way, but maybe you could get someone to show [kid-full] how to. Then maybe you could cross Leak Lake and get closer to the Curst Palace."
-atten	atten	false	788195264	--	"attentive"	"attentive"	"[kid-full] snaps further to attention, even more eager than before!"
+atblock	atblock	false	788195264	--	"attentive"	"attentive"	"[kid-full] snaps further to attention, even more eager than before!"
 turbos	turbos	false	482585076	--	"robust"	"robust"	"The turbos whir a bit and grow shinier. Robust or bust! You'd feel [if blaster is reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
 blaster	blaster	false	486934458	--	"stabler"	"stabler"	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
 eastern shore	eastern shore	false	611415331	Mislit Limits	"nearest"	"nearest"	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the flowerpot, too, and maybe you have the time to drop off a gift...wherever Daltho's friend may be."
@@ -10346,6 +10342,8 @@ rule for supplying a missing noun when stapleing:
 		now noun is paperwall.
 
 carry out stapleing:
+	if player does not have stapler:
+		say "You need something to staple with." instead;
 	if stapler is not in staple and player has staple:
 		say "(Putting the staple in the stapler first)";
 		try inserting staple into stapler;
@@ -12900,12 +12898,12 @@ a trashy ashtray is scenery in adobe abode. "[if pipe soot is in abode]The ashtr
 
 understand "ash/tray" as ashtray.
 
-check scaning ashtray:
-	if player does not have pipe soot:
-		say "Only the pipe soot does anything to the settler, so you focus on that.";
-		try scaning pipe soot instead;
-
 instead of doing something with ashtray:
+	if current action is sbing or current action is scaning:
+		if player does not have pipe soot:
+			now noun is pipe soot;
+			say "Only the pipe soot does anything to the settler, so you focus on that.[paragraph break]";
+			continue the action;
 	if action is procedural:
 		continue the action;
 	say "You can't do much with the ashtray besides be all 'Artsy, ha!' or 'Ay, trash.'";
@@ -17123,7 +17121,7 @@ check fliptoing pre-haun:
 	the rule succeeds;
 
 to say h-not-yet:
-	say "You [if player does not have digger]can feel the haunter, but you have nothing to dig it up with[else if player has digger and ruby is in lalaland]shouldn't dig the haunter back up. You've no reason to[else]you don't know what you'd do if you'd unearth the haunter[end if]"
+	say "You [if player does not have digger]can feel the haunter, but you have nothing to dig it up with[else if player has digger and ruby is in lalaland]shouldn't dig the haunter back up. You've no reason to[else]don't know what you'd do if you'd unearth the haunter[end if]"
 
 after fliptoing pre-haun:
 	now haunter is in anger range;
@@ -17259,7 +17257,11 @@ carry out assuageing:
 		say "Bullies never work that way." instead;
 	if noun is trout:
 		say "[if noun is in anger range]Concentrate on the carps and pikes instead[else]He's already happy with you[end if]." instead;
-	the rule succeeds.
+	if noun is the player:
+		say "Believe in yourself! You can do it! Yeah!" instead;
+	if noun is not a person:
+		say "There's only one living thing you need to assuage." instead;
+	say "You don't need to use your charisma, there." instead;
 
 chapter traceing
 
@@ -17675,8 +17677,11 @@ instead of doing something with jumble:
 	say "The lettering looks like it can be shifted around to things you can do."
 
 check scaning jumble:
-	if dialer is reflexive:
-		try scaning dialer instead;
+	try scaning dialer instead;
+
+check scaning dialer:
+	if dialer is reflexed:
+		try scaning d2 instead;
 
 a-text of dialer is "RYRYYR". b-text of dialer is "[if dialer is reflexive]PYRYYR[else]RYRYYR[end if]". parse-text of dialer is "[if dialer is reflexive]d[sp]-[sp]x[sp]-[sp]-[sp]x[else]x[sp]e[sp]x[sp]-[sp]-[sp]l[end if]".
 
@@ -17713,7 +17718,7 @@ check pulling lever:
 
 chapter redialing
 
-the d2 is privately-named unscannable reflexive scenery. d2 is undesc. printed name of d2 is "dialer"
+the d2 is privately-named unscannable reflexive scenery. d2 is undesc. printed name of d2 is "dialer[if debug-state is true] (part 2)[end if]"
 
 a-text of d2 is "RYRYYR". b-text of d2 is "RYRYYR". parse-text of d2 is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
 
@@ -18114,7 +18119,7 @@ to say dig-purpose:
 check searching the heaps:
 	say "[if player has rigged digger]Don't get greedy[otherwise]That'd be too boring. You might have more fun creating something with the heaps. You don't know why, but you just do[end if]." instead;
 
-the waste is vanishing LLPish scenery. "It'd take strength and effort to move or pick through."
+the waste is vanishing scenery. "It'd take strength and effort to move or pick through." [it is not LLPish because you flip the tubs to it]
 
 check fliptoing lance:
 	if waste is reflexed:
@@ -18543,6 +18548,9 @@ check xraying:
 			say "You realize [kid-first] could be GIFTED and fidget less.";
 		else if kid is in subsector and atblock is in subsector:
 			say "You realize [kid-first] could be a little more ATTENTIVE.";
+	if noun is keycar:
+		say "It zips around, and you wind up focusing on Ray Eck instead...";
+		try xraying ray eck instead;
 	if noun is sled rut:
 		if strudel is visible:
 			try xraying strudel instead;
@@ -18641,12 +18649,12 @@ section initalization
 
 when play begins (this is the place guardians rule):
 	repeat through table of guard-org:
+		if there is a kloozorz entry:
+			now guy entry is clueneedy;
 		if player is male and guy entry is lois the hostile:
 			next;
 		if player is female and guy entry is hostile-is-he lot:
 			next;
-		if there is a kloozorz entry:
-			now guy entry is clueneedy;
 		now guadir of guy entry is blockdir entry;
 		now gualoc of guy entry is loc entry;
 
@@ -19449,7 +19457,7 @@ understand "fidget" as smart kid when location of smart kid is location of playe
 every turn when smart kid is reflexive and player is in coastlines and smart kid is in coastlines:
 	say "[kid-full] continues to fidget and mutter a wish to be just a BIT smarter. Fidget, fidget, fidget."
 
-the atblock is privately-named LLPish vanishing scenery. printed name of atten is "attentiveness".
+the atblock is privately-named LLPish vanishing scenery. printed name of atblock is "tentativeness".
 
 kid-atten is a truth state that varies.
 
@@ -19493,6 +19501,10 @@ check answering smart kid that:
 
 talking to Dr Yow is kiddoing.]
 
+check sbing smart kid:
+	if smart kid is in subsector and atblock is in subsector:
+		try sbing atblock instead;
+
 check scaning smart kid:
 	if smart kid is reflexed:
 		say "'Oh! Yeah! I bet I could make one of those, one day." instead;
@@ -19500,9 +19512,9 @@ check scaning smart kid:
 		say "[kid-full] continues to fidget as you scan [him-her].";
 		say "[line break]";
 		continue the action;
-	if player is in subsector and atten is in subsector:
+	if player is in subsector and atblock is in subsector:
 		say "[kid-full] doesn't fidget, but [he-she] is kind of tentative now.[paragraph break]";
-		try scaning atten instead;
+		try scaning atblock instead;
 
 met-kid is a truth state that varies.
 
@@ -19575,9 +19587,9 @@ book Ole Shrine Shoreline
 
 to say relig-mf:
 	if player is male:
-		say "Lois the Hostile";
+		say "the Hostile-Is-He Lot";
 	else:
-		say "the hostile-is-he lot"
+		say "Lois the Hostile";
 
 to decide which guardian is the-hostile:
 	if player is male, decide on hostile-is-he lot;
@@ -20025,9 +20037,9 @@ Rawest Waters is a room in Towers. "Ew. Rats. You're splashing around in a spry 
 
 after printing the locale description for Rawest Waters when Rawest Waters is unvisited (this is the adjust min towers score in waters rule):
 	now poss-score of Towers is 5 + cur-score of towers;
-	now min-score of Towers is 2 + cur-score of towers;
+	now min-score of Towers is 1 + cur-score of towers;
 	if player has strudel and strudel is not reflexed:
-		increment poss-score of towers;
+		increment poss-score of towers; [ First, you need to say SPECTACULAR. But you can also DINGY, GREEDY, PRESENT and give Ed the flowerpot. And the strudel can always be rustled.]
 
 eastern shore is reflexive scenery in rawest waters. "The eastern shore's not necessarily closer than the other two, unless you want it to be."
 
@@ -20119,8 +20131,8 @@ to towers-min-adj: [this is when you leave the mainland]
 			increment poss-score of towers;
 		else:
 			now no-pastries is true;
-	now poss-score of towers is poss-score of towers + 5; [dingy, spectacular, greyed, give flowerpot]
-	now min-score of towers is min-score of towers + 1; [4 warriors, spectacular]
+	now poss-score of towers is cur-score of towers + 5; [dingy, spectacular, greyed, give flowerpot]
+	now min-score of towers is cur-score of towers + 1; [4 warriors, spectacular]
 	if turbos are reflexive or blaster is reflexive: [rawest waters]
 		increment poss-score of towers;
 		increment min-score of towers;
@@ -20784,7 +20796,7 @@ Lois the Hostile is a female purple guardian. "You recognize Lois the Hostile, r
 
 a-text of lois the hostile is "RYRYYRR". b-text of lois the hostile is "?GRYYRR".
 
-the hostile-is-he lot is a plural-named purple guardian. "The Hostile-is-He Lot, a swarm of contrarians who question anything and everything except their own nuisance value, block the way [psgdir of hostile-is-he lot]."
+The Hostile-Is-He Lot is a plural-named purple guardian. "The Hostile-is-He Lot, a swarm of contrarians who question anything and everything except their own nuisance value, block the way [psgdir of hostile-is-he lot]."
 
 a-text of hostile-is-he lot is "RYRYYRR". b-text of hostile-is-he lot is "??RYYR?".
 
@@ -20792,25 +20804,25 @@ chapter guardian org table
 
 table of guard-org [organized going 1st north then east. W, N, E.]
 guy	loc	blockdir	blokzorz	kloozorz	taunt	aux
-muscly hulk	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."
-rewired robot	Scope Copse	west	"'I-was-rewired-enough-to-be-just-normal-enough-to-block-you,' says robot, as if pre-set to 'pester.' It smiles in a way it knows drew ire, and you see red."
-snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if]."	--	"The diners smack their lips, and you think you hear the zhk of silverware."
+muscly hulk	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."	"You briefly remember the giant's paradox, about trading off strength and dexterity."
+rewired robot	Scope Copse	west	"'I-was-rewired-enough-to-be-just-normal-enough-to-block-you,' says robot, as if pre-set to 'pester.' It smiles in a way it knows drew ire, and you see red."	"The rewired robot is almost trying TOO hard to be normal, you think."
+snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if]."	"The diners mutter about how bad weather can ruin the ambience of open-air meals."	"The diners smack their lips, and you think you hear the zhk of silverware."
 iPrune	Blasted Saltbed	north	"The iPrune rumbles over to block your way. [one of]It asks where you're going, and you mumble, red-faced, 'Er, up in...' but you can't say where, ultimately[or]'REIN UP!' it yells, making you see red[in random order][one of]. Maybe if you tried to pass again, both sides could have their say[or][stopping]."	"Looking at the iPrune, you are intimidated by how unnaturally big it is. Maybe the solution is easier than you're worried it is."
-pirates	Blasted Saltbed	east	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	--	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
-ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."
-an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."
-wait-seer	Anemic Cinema	east	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."
-man covered	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."
-arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."
+pirates	Blasted Saltbed	east	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
+ingrates	Anemic Cinema	west	"They quite simply won't shut up about things, though they seem well-feed, intelligent and un-ugly enough. They're the rangiest of the nuisances you've come across, zipping back and forth in a red blur."	"Gee. It would be nice to make the ingrates less aggressive, even if you can't make them less whiny."
+an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow!) wo[end if]mantrap, hugs you and won't let go and explains you are even cuter than the lost duck over behind them."	"If only there were a legal or moral reason for the admirer to cool it!"
+wait-seer	Anemic Cinema	east	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe he could, too."
+man covered	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free the man covered in inapt paint from nationality and to individuality."
+arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
 reed's ale	Ravages	east	"The Reed's Ale man blocks you--his costume looks stupid, but it's not encumbering--and asks you to help him out, and not just about buying, but about whether he should continue this career."	"The Reed's Ale man fidgets with his costume, unsure if he wants to take it off or put it on."
-grailman	Ravages	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."
+grailman	Ravages	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"You haven't met many grailmen, but this one is good enough, for now."	
 Ray Eck	Deposit	north	"The yacker controls his keycar so it runs over your foot. You briefly wonder if he has a twin named Kim."	"The yacker introduces himself as Ray Eck, grateful there's someone out here who doesn't mind talking."	"Ray Eck's keycar can't go that far, so you manage to escape."	keycar
-ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you try to walk through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."
-bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'JAIL DEFENDED!' you hear from the east."
-natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."
-Atheists	Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."
-lois the hostile	Ole Shrine Shoreline	north	"She mentions you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that."
-hostile-is-he lot	Ole Shrine Shoreline	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their divinity careers if you fixed that."
+ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you try to walk through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."	"Part of you wonders if you should play up the ego drains, but the other part says they're obstructive enough."
+bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
+natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"Those natives look like they could be psyched out."
+Atheists	Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of logic, but perhaps their presentation could be adjusted."
+lois the hostile	Ole Shrine Shoreline	north	"She mentions you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that."	"Boy! Lois sure could use some down-home kindness."
+hostile-is-he lot	Ole Shrine Shoreline	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their divinity careers if you fixed that."	"Boy! The Lot sure could use some down-home kindness."
 
 chapter guardian taunt tables
 
@@ -20845,7 +20857,7 @@ rewired robot	"The robot's lights blink and flash and bloop. Is it laughing?"
 muscly hulk	"The muscly hulk beats its chest for NOT being removed like that."
 snider diners	"The snider diners sniff at the distraction."
 inapt paint	"'Well, at least it wasn't me, whoever I am,' mumbles the man covered in inapt paint."
-arid den	"'Not bad! But would've been more stylish with NERD-AID!'"
+arid den	"'Not bad! But would've been more stylish with NERD-AID!' booms a mechanical voice from the arid den."
 ego drains	"The ego-drains make a flushing and slurping noise. Another rival guardian down the drain!"
 bonker	"'ENEMIES ARE STILL TOO SCARED TO FACE THE BONKER!' you hear from the east."
 natives	"The natives mumble how they KNEW something like that would happen to someone else. They've seen it all, here."
@@ -20853,8 +20865,8 @@ iPrune	"The iPrune rears up and seems bigger for a second."
 pirates	"The pirates sing a colorful shanty about another lubber relegated to the deep."
 grailman	"The grailman mumbles something like 'well, we can't all be above average.'"
 reed's ale	"The Reed's Ale man adjusts his half-on half-off costume, glad he wasn't the one dispelled--or whatever."
-lois the hostile	"[the-hostile] mumbles passive-aggressively that the wages of sin is--that."
-hostile-is-he lot	"[the-hostile] mumble passive-aggressively that the wages of sin is--that."
+lois the hostile	"Lois the Hostile mumbles passive-aggressively that the wages of sin is, well, THAT."
+hostile-is-he lot	"The Hostile-is-He Lot mumble passive-aggressively that the wages of sin is, well, THAT."
 ingrates	"The ingrates complain there aren't enough of them to take over the space you opened before worrying they're next."
 admirer	"Your admirer claps far too fervently at your accomplishment."
 wait-seer	"The wait-seer cooly puts up a hand and mumbles some Hakuna Matata nonsense."
@@ -23572,6 +23584,14 @@ instead of doing something with singed design:
 
 the icons are plural-named things. description is "The icons are designed to be too interesting to pitch but not important looking enough to be currency. Instead of someone important, they each have shattered musical notes on them. Each has a singed design, signed."
 
+check sbing coins: [can't find any way else to do this]
+	say "The settler is all over the place. Maybe it would be better to scan just one coin?";
+	if the player direct-consents:
+		say "You see YRY (R and P).";
+	else:
+		say "The final of the five entries stays on red in non-cheat mode, but everything else is scrambled.";
+	the rule succeeds;
+
 check scaning coins:
 	say "The settler flashes back, with [if cheat-on is false]all five entries changing[else]all but the last entry--which stays red--changing[end if].";
 	say "Hm. Maybe it would be better to scan just one coin?";
@@ -25153,7 +25173,7 @@ to say up-to-l3:
 	say "[if curtis-level is 0]needs more fruit for your first reward[else if coin is off-stage]has a reward for you[else if curtis-level is 1]needs more fruit for your second reward[else if coins is off-stage and icons is off-stage]has a second coin for you[else if curtis-level is 2]still needs a few more fruits[else]has not just a coin but a bill[end if]"
 
 to say n-o:
-	say "[if atten is reflexed]now[else]once[end if]";
+	say "[if atblock is reflexed]now[else]once[end if]";
 
 check objhinting a quest-item when mrlp is routes (this is the redirect hints in routes rule) :
 	if cleric circle is unvisited:

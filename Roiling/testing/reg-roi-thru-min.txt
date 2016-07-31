@@ -125,15 +125,14 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >score
-WRONG
-Score in a scenario: 6 out of 11 total points in the current region, Stores.
+Score in a scenario: 6 out of 11 total points in the current region, Stores. Lowest score to solve is 6. Maximum score available is 11.
 
 * _routes
 
 >posf
 >score
-0 out of 18 total points in the current region, Routes
-WRONG
+Score in a scenario: 0 out of 18 total points in the current region, Routes. Lowest score to solve is 17. Maximum score available is 18.
+You have scored 6 out of 11 total points for the (unsolved hub) Stores region.
 
 >inside
 Your score has just gone up by one point
@@ -179,10 +178,10 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 DEBUG INFO: Taking away a max point.
 
->score
-WRONG
-
 Sun-Spared Underpass
+
+>score
+Score in a scenario: 11 out of 18 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 17 points--you missed some extra stuff you can't go back for.
 
 >until
 Your score has just gone up by one point
@@ -231,7 +230,7 @@ DEBUG INFO: Taking away a max point.
 
 >posf
 >score
-WRONG
+Score in a scenario: 6 out of 21 total points in the current region, Troves. Lowest score to solve is 15. Maximum score available is 20.
 
 >despair
 Your score has just gone up by one point
@@ -243,10 +242,11 @@ Boredom Bedroom
 Your score has just gone up by one point
 DEBUG INFO: Taking away a max point.
 
->score
-WRONG
-
 Dour Tan Rotunda
+
+>score
+Score in a scenario: 8 out of 21 total points in the current region, Troves. Lowest score to solve is 15. Maximum score available is 19.
+
 >desire
 Your score has just gone up by one point
 Econ-Cone
@@ -260,6 +260,7 @@ If only you could tune that out!
 DEBUG INFO: Taking away a max point.
 
 >score
+Score in a scenario: 11 out of 21 total points in the current region, Troves. Lowest score to solve is 15. Maximum score available is 18.
 
 >ignore
 Your score has just gone up by one point
@@ -289,7 +290,7 @@ Taking away a max point.
 
 >posf
 >score
-WRONG
+Score in a scenario: 2 out of 33 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 32.
 
 >e
 >s
@@ -409,6 +410,10 @@ Strip of Profits
 >l
 Posh Hops Shop
 
+>posf
+>score
+Score in a scenario: 0 out of 39 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
+
 >unset
 Your score has just gone up by one point
 >sing
@@ -440,14 +445,15 @@ Your score has just gone up by one point
 
 >posf
 >score
-WRONG
+Score in a scenario: 9 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 39.
 
 >e
 >seek
+DEBUG INFO: Taking away a max point.
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 10 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 38.
 
 >eat
 Your score has just gone up by one point
@@ -521,7 +527,7 @@ Your score has just gone up by one point
 >in
 
 >score
-WRONG
+Score in a scenario: 26 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 38.
 
 >prepay
 Your score has just gone up by one point
@@ -555,7 +561,7 @@ Your score has just gone up by one point
 Topside Deposit
 
 >score
-WRONG
+Score in a scenario: 4 out of 46 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 43.
 
 >get tarts
 >put tarts in toaster
@@ -563,7 +569,7 @@ WRONG
 
 >posf
 >score
-WRONG
+Score in a scenario: 4 out of 46 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 42.
 
 >creaky
 Your score has just gone up by one point
@@ -643,12 +649,12 @@ Obscurest
 >stabler
 
 >score
-WRONG
+Score in a scenario: 23 out of 46 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 42.
 
 >enter boat
 
 >score
-WRONG
+Score in a scenario: 23 out of 46 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 28.
 
 >spectacular
 
@@ -671,8 +677,13 @@ Your score has just gone up by one point
 Gent-Fora Frontage
 
 >discern macks
+>discern
+As you gaze into the cinders, they blow away, leaving you feeling the macks can talk
+DEBUG INFO: Taking away a max point.
+
 >posf
 >score
+Score in a scenario: 2 out of 29 total points in the current region, Otters. Lowest score to solve is 23. Maximum score available is 28.
 
 >bossily
 Your score has just gone up by one point.
@@ -719,7 +730,7 @@ Tapering Inert Gap
 >s
 >s
 
-Rote-Moan Anteroom
+Rote Moan Anteroom
 
 >loathingly
 Your score has just gone up by one point
@@ -911,7 +922,7 @@ Rustic Citrus
 
 >{include} _manor
 
-* only-stores
+* _only-stores
 
 >gonear strip
 >{include} _stores
@@ -934,7 +945,7 @@ Rustic Citrus
 >{include} _presto
 >{include} _summarize
 
-* only-oyster
+* _only-oyster
 
 >purloin settler
 >gonear posh hops shop

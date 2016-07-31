@@ -568,7 +568,7 @@ As you blow the whistle, you feel a deep vibration on the ground. You hear a cac
 Elvira cries "New aid? Naw, die!" then "To arms! A storm!" at...all the lethal: (table of Elvira machines)
 But animals from the fabled Odd Pack Paddock find valence in this enclave: (table of animal friends)
 
-* _others-rand
+* others-rand
 
 >showtab
 >rove over

@@ -1,4 +1,4 @@
-## reg-roi-thru.txt
+## reg-roi-scan.txt
 ## nudges for Roiling Original: complete walkthrough with maximum points and alternate paths
 ##
 ##
@@ -43,14 +43,14 @@ DEBUG INFO: Adding a min point
 
 >sb tables
 Your settler registers (no cheat) RRYRRY.
-Your settler registers (cheat on) RRYRRY.
+Nothing changes between cheat/teach and regular mode.
 
 >stable
 DEBUG INFO: Adding a min point
 
 >sb my niche
 Your settler registers (no cheat) RRYRRYO.
-Your settler registers (cheat on) RRYRRYO.
+Nothing changes between cheat/teach and regular mode.
 
 >chimney
 DEBUG INFO: Adding a min point
@@ -72,7 +72,7 @@ You shouldn't need to go back
 
 >sb pram
 Your settler registers (no cheat) RYRR.
-Your settler registers (cheat on) RYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >ramp
 DEBUG INFO: Adding a min point
@@ -95,7 +95,6 @@ Hands up!
 
 >sb rifle
 Elmo might shoot you if you went for the settler, which you notice is blinking RRYYR. Which has to be the rifle. You hope.
-!/[PG]
 
 >flier
 Your score has just gone up
@@ -133,9 +132,17 @@ Won now: Roman Manor (13/13).
 >sb store b
 Your settler registers (no cheat) RYRRYR.
 Your settler registers (cheat on) PYRRGR.
+
+[NOTE: this may be a bit of a spoiler. If you want to disable it, you can push the equals sign. This warning will not appear again.]
+You feel foreboding this may be a bit too much of a clue. Do you still want to see the settler reading?
+
 >sb store p
 Your settler registers (no cheat) RRYRRY.
-Your settler registers (cheat on) RRYRRY.
+Nothing changes between cheat/teach and regular mode.
+>sb tropes poster
+Your settler registers (no cheat) RRYRRY.
+Your settler registers (cheat on) ??YRRY
+
 >sb store u
 Your settler registers (no cheat) RYYRYR.
 Your settler registers (cheat on) RYYRGR.
@@ -147,7 +154,7 @@ Your settler registers (no cheat) YRRYRR.
 Your settler registers (cheat on) YPRYRR.
 >sb store w
 Your settler registers (no cheat) RYRYRR.
-Your settler registers (cheat on) RYRYRR.
+Nothing changes between cheat/teach and regular mode.
 >sb store y
 Your settler registers (no cheat) YORRYR.
 Your settler registers (cheat on) YORRGR.
@@ -156,11 +163,11 @@ The settler gives a weird noise, as if it doesn't want to scan this store--yet.
 #?? don't scan both?
 >sb store k
 Your settler registers (no cheat) RYRYRR.
-Your settler registers (cheat on) RYRYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb store n
 Your settler registers (no cheat) RYRRYR.
-Your settler registers (cheat on) RYRRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb store g
 #smack the person down saying registers nothing once?
@@ -217,16 +224,15 @@ The letters settler registers nothing.
 >sb lecturer
 You point your settler at the tedious lecturer.
 Your settler registers (no cheat) YYRRYRY.
-Your settler registers (cheat on) YYRRYRY.
+Nothing changes between cheat/teach and regular mode.
 
 >scan
-!You wave the settler, but it doesn't pick up any random data.
 You point your settler at the tedious lecturer.
-
 Your settler registers YYRRYRY.
 
 >sb
-Your settler registers YYRRYRY.
+Your settler registers (no cheat) YYRRYRY.
+Nothing changes between cheat/teach and regular mode.
 
 >outside
 
@@ -309,7 +315,7 @@ Your score has just gone up by one point
 
 >sb giant
 Your settler registers (no cheat) YRRRYRY.
-Your settler registers (cheat on) YRRRYRY.
+Nothing changes between cheat/teach and regular mode.
 
 >astride
 Your score has just gone up by one point
@@ -358,7 +364,7 @@ Your score has just gone up by one point
 
 >sb bean
 Your settler registers (no cheat) RYRYYRR.
-Your settler registers (cheat on) RYRYYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >beneath
 Your score has just gone up by one point
@@ -380,7 +386,7 @@ Your score has just gone up by one point
 
 >sb unroad
 Your settler registers (no cheat) YRYRR.
-Your settler registers (cheat on) YRYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >along
 Your score has just gone up by one point
@@ -509,7 +515,7 @@ Your settler registers (cheat on) RYPYYRG.
 
 >sb head
 Your settler registers (no cheat) RYYRYR.
-Your settler registers (cheat on) RYYRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >reason
 Your score has just gone up by one point
@@ -533,7 +539,7 @@ Your settler registers (cheat on) RYRPYYP.
 
 >sb lager
 Your settler registers (no cheat) RRYRY.
-Your settler registers (cheat on) RRYRY.
+Nothing changes between cheat/teach and regular mode.
 
 >glare
 Adding a min point
@@ -610,11 +616,11 @@ If only you could tune that out!
 
 >sb
 Your settler registers (no cheat) YRRYRY.
-Your settler registers (cheat on) YRRYRY.
+Nothing changes between cheat/teach and regular mode.
 
 >sb noise
 Your settler registers (no cheat) YRRYRY.
-Your settler registers (cheat on) YRRYRY.
+Nothing changes between cheat/teach and regular mode.
 
 >ignore
 Your score has just gone up by one point
@@ -625,7 +631,7 @@ Your settler registers (cheat on) RGRPPGP.
 
 >sb stream
 Your settler registers (no cheat) RYRRYR.
-Your settler registers (cheat on) RYRRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb divorces
 Your settler registers (no cheat) RYRRYRYR.
@@ -648,7 +654,7 @@ Your score has just gone up by one point
 
 >sb playbill
 Your settler registers (no cheat) RYRYRR.
-Your settler registers (cheat on) RYRYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb
 Your settler registers (no cheat) RYRYRY.
@@ -673,9 +679,7 @@ Grey Gyre
 
 >sb lamb
 Your settler registers (no cheat) RRYR.
-[NOTE: this may be a bit of a spoiler. If you want to disable it, you can push the equals sign. This warning will not appear again.]
-You feel foreboding this may be a bit too much of a clue. Do you still want to see the settler reading?
-Your settler registers (cheat on) RRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >blam
 Your score has just gone up by one point
@@ -683,7 +687,7 @@ Adding a min point
 
 >sb hump
 Your settler registers (no cheat) YRRR.
-Your settler registers (cheat on) YRRR.
+Nothing changes between cheat/teach and regular mode.
 
 >umph
 Your score has just gone up by one point
@@ -709,7 +713,7 @@ Burnt Brunt
 
 >sb star
 Your settler registers (no cheat) RYRR.
-Your settler registers (cheat on) RYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >rats
 Your score has just gone up by one point
@@ -747,14 +751,14 @@ Your score has just gone up by one point
 >w
 >sb volt maze
 Your settler registers (no cheat) RYRYRRYR.
-Your settler registers (cheat on) RYRYRRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >mazeltov
 Your score has just gone up by one point
 
 >sb ether
 Your settler registers (no cheat) RRYRY.
-Your settler registers (cheat on) RRYRY.
+Nothing changes between cheat/teach and regular mode.
 
 >s
 >s
@@ -762,7 +766,7 @@ Dirge Ridge
 
 >sb leo
 Your settler registers (no cheat) YRY.
-Your settler registers (cheat on) YRY.
+Nothing changes between cheat/teach and regular mode.
 
 >ole
 Your score has just gone up by one point
@@ -800,7 +804,7 @@ Your settler registers (cheat on) RGRR.
 
 >sb keys
 Your settler registers (no cheat) RORY.
-Your settler registers (cheat on) RORY.
+Nothing changes between cheat/teach and regular mode.
 
 >syke
 Your score has just gone up by one point
@@ -817,8 +821,8 @@ Hmm. The settler is giving a weird result, but the sheer number of question mark
 
 >sb ought
 Your settler registers (no cheat) RYYRR.
+Nothing changes between cheat/teach and regular mode.
 Leo and Rand ooh and ah at how you're using a thing to find out about things.
-Your settler registers (cheat on) RYYRR.
 
 >later
 Your score has just gone up by one point
@@ -848,7 +852,7 @@ Adding a min point
 
 >sb escaroles
 Your settler registers (no cheat) RYRRYRYRY.
-Your settler registers (cheat on) RYRRYRYRY.
+Nothing changes between cheat/teach and regular mode.
 
 >casserole
 Your score has just gone up by one point
@@ -863,14 +867,14 @@ Your score has just gone up by one point
 
 >sb disk
 Your settler registers (no cheat) RRYR.
-Your settler registers (cheat on) RRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >skid
 Your score has just gone up by one point
 
 >sb skid
 Your settler registers (no cheat) RYRR.
-Your settler registers (cheat on) RYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb coal
 Your settler registers (no cheat) RYRY.
@@ -888,7 +892,7 @@ Your score has just gone up by one point
 
 >sb flea
 Your settler registers (no cheat) RYYR.
-Your settler registers (cheat on) RYYR.
+Nothing changes between cheat/teach and regular mode.
 
 >leaf
 Your score has just gone up by one point
@@ -923,7 +927,7 @@ Only one more piece of hardware
 >purloin bakery do
 >sb bakery do
 Your settler registers (no cheat) RYORYYRR.
-Your settler registers (cheat on) RYORYYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >purloin bred okay
 >sb bred okay
@@ -952,7 +956,7 @@ Your settler registers (cheat on) RYORYGPR.
 
 >sb bored yak
 Your settler registers (no cheat) RYORYYRR.
-Your settler registers (cheat on) RYORYYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb drab yoke
 Your settler registers (no cheat) RYORYYRR.
@@ -988,7 +992,7 @@ Adding a min point
 
 >sb skid
 Your settler registers (no cheat) RYRR.
-Your settler registers (cheat on) RYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >disk
 >put disk in drive
@@ -1025,11 +1029,11 @@ Your score has just gone up by one point
 
 >sb code
 Your settler registers (no cheat) RYRYR.
-Your settler registers (cheat on) RYRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb compiled code
 Your settler registers (no cheat) RYRYR.
-Your settler registers (cheat on) RYRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >debug
 
@@ -1061,7 +1065,7 @@ Your settler registers (cheat on) R?RYR
 
 >sb tumblers
 Your settler registers (no cheat) RRYR.
-Your settler registers (cheat on) RRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb sign
 Your settler registers (no cheat) RYRR.
@@ -1079,7 +1083,7 @@ Your settler registers (cheat on) RRR??Y.
 
 >sb stein
 Your settler registers (no cheat) YRRYR.
-Your settler registers (cheat on) YRRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb tines
 Your settler registers (no cheat) YRRYR.
@@ -1114,11 +1118,11 @@ Your settler registers (cheat on) RGRP.
 
 >sb oars
 Your settler registers (no cheat) RYYR.
-Your settler registers (cheat on) RYYR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb canoe
 Your settler registers (no cheat) YRYYR.
-Your settler registers (cheat on) YRYYR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb boats
 Your settler registers (no cheat) RYYRR.
@@ -1145,7 +1149,8 @@ Your settler registers (no cheat) RRRYR.
 Your settler registers (cheat on) RRPYR.
 >sb pikes
 Your settler registers (no cheat) RRYRY.
-Your settler registers (cheat on) RRYRY.
+Nothing changes between cheat/teach and regular mode.
+
 >sb trout
 The trout doesn't need that right now. He needs someone who can help him deal with the pikes and carps.
 
@@ -1177,7 +1182,7 @@ You wave the settler, but it doesn't pick up any random data.
 
 >sb tea
 Your settler registers (no cheat) YYR.
-Your settler registers (cheat on) YYR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb trout
 Your settler registers (no cheat) RYRYR.
@@ -1188,7 +1193,7 @@ The letters settler registers nothing.
 
 >sb wipes
 Your settler registers (no cheat) RRYRY.
-Your settler registers (cheat on) RRYRY.
+Nothing changes between cheat/teach and regular mode.
 
 >sb dent
 Your settler registers (no cheat) RYRR.
@@ -1241,7 +1246,7 @@ Your settler registers (cheat on) RYRP.
 
 >sb knob
 Your settler registers (no cheat) RYRR.
-Your settler registers (cheat on) RYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >kiss
 Your score has just gone up by one point
@@ -1277,7 +1282,7 @@ Your score has just gone up by one point
 
 >sb waste
 Your settler registers (no cheat) RRYYR.
-Your settler registers (cheat on) RRYYR.
+Nothing changes between cheat/teach and regular mode.
 
 >sweat
 Your score has just gone up by one point
@@ -1292,7 +1297,7 @@ Your score has just gone up by one point
 
 >sb lance
 Your settler registers (no cheat) RRYYR.
-Your settler registers (cheat on) RRYYR.
+Nothing changes between cheat/teach and regular mode.
 
 >clean
 Your score has just gone up by one point
@@ -1354,7 +1359,7 @@ Your score has just gone up by one point
 
 >sb
 Your settler registers (no cheat) YRYYRRR.
-Your settler registers (cheat on) YRYYRRR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb writing
 You can really only read the writing.
@@ -1404,7 +1409,7 @@ Your settler registers RYR.
 
 >sb ant
 Your settler registers (no cheat) RYR.
-Your settler registers (cheat on) RYR.
+Nothing changes between cheat/teach and regular mode.
 
 >tan
 Your score has just gone up by one point
@@ -1446,11 +1451,11 @@ min point
 
 >sb
 Your settler registers (no cheat) RYRYYR.
-Your settler registers (cheat on) RYRYYR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb dialer
 Your settler registers (no cheat) RYRYYR.
-Your settler registers (cheat on) RYRYYR.
+Nothing changes between cheat/teach and regular mode.
 
 >derali
 There's something more to do, but that's not quite it.
@@ -1492,7 +1497,7 @@ Your settler registers (cheat on) YPPYP.
 
 >sb shane
 Your settler registers (no cheat) YRRYR.
-Your settler registers (cheat on) YRRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >seed 3
 
@@ -1518,7 +1523,7 @@ Your settler registers (cheat on) PGRRB.
 
 >sb tyson
 Your settler registers (no cheat) RRYRO.
-Your settler registers (cheat on) RRYRO.
+Nothing changes between cheat/teach and regular mode.
 
 >seed 4
 
@@ -1544,7 +1549,7 @@ Your settler registers (cheat on) RGBYR.
 
 >sb wade
 Your settler registers (no cheat) YRYR.
-Your settler registers (cheat on) YRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >seed 5
 
@@ -1576,7 +1581,7 @@ Your settler registers (cheat on) PPYYR.
 
 >sb edwin
 Your settler registers (no cheat) RYRYR.
-Your settler registers (cheat on) RYRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb geno
 Your settler registers (no cheat) RYRY.
@@ -1615,12 +1620,12 @@ Wow, lots of blank data. You may want to get closer to have any hope of figuring
 
 >sb ray eck
 Your settler registers (no cheat) RRYYRO.
+Nothing changes between cheat/teach and regular mode.
 Ray Eck begins babbling about how interesting the settler looks, almost as interesting as his keycar. Maybe you could ASK him about the keycar, if he's still stumping you.
-Your settler registers (cheat on) RRYYRO.
 
 >sb keycar
 Your settler registers (no cheat) RRYYRO.
-Your settler registers (cheat on) RRYYRO.
+Nothing changes between cheat/teach and regular mode.
 
 >creaky
 Your score has just gone up by one point
@@ -1792,7 +1797,7 @@ Your score has just gone up by one point
 >sb mel fish
 Your settler registers (no cheat) RYRRYRR.
 Hmm, painted and covered have three vowels--so it's probably the FLEMISH in inapt paint across his chest.
-Your settler registers (cheat on) RYRRYRR.
+Nothing changes between cheat/teach and regular mode.
 The weeds continue to sway freely and menacingly, but they can't be THAT tough.
 # do I know him as Mel Fish?
 
@@ -1874,7 +1879,7 @@ Your score has just gone up by one point
 
 >sb organised
 Your settler registers (no cheat) RRYRRYYRY.
-Your settler registers (cheat on) RRYRRYYRY.
+Nothing changes between cheat/teach and regular mode.
 
 >grandiose
 Your score has just gone up by one point
@@ -1897,7 +1902,7 @@ Your settler registers (no cheat) RRYRRY*****.
 
 >sb sled rut
 Your settler registers (no cheat) RYRRRYR.
-Your settler registers (cheat on) RYRRRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb strudel
 Your settler registers (no cheat) RYRRRYR.
@@ -1964,7 +1969,7 @@ Your settler registers (cheat on) RRYR?YR****.
 >wordy
 >sb yow
 Your settler registers (no cheat) RYRRO.
-Your settler registers (cheat on) RYRRO.
+Nothing changes between cheat/teach and regular mode.
 
 #?? why the extra spaces?
 
@@ -1974,15 +1979,14 @@ Your settler registers (cheat on) RYRRO.
 >sb yow
 Your settler registers (no cheat) RYRRO.
 The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.
-Your settler registers (cheat on) RYRRO.
-
+Nothing changes between cheat/teach and regular mode.
 
 >rowdy
 Your score has just gone up by one point
 
 >sb yow
 Your settler registers (no cheat) RYRRO.
-Your settler registers (cheat on) RYRRO.
+Nothing changes between cheat/teach and regular mode.
 
 >wordy
 Your score has just gone up by one point
@@ -2018,6 +2022,13 @@ The letters settler registers nothing.
 >give gizmo to kid
 "Wow! That'd be neat if I had something to build."
 
+>sb kid
+Your settler registers (no cheat) RYRRYR.
+Your settler registers (cheat on) RGRRGR.
+
+>gifted
+by one point
+
 >ask kid about doctor
 Obscurest Subsector
 
@@ -2041,7 +2052,7 @@ Actionless Coastlines
 
 >sb turbos
 Your settler registers (no cheat) RYRYRR.
-Your settler registers (cheat on) RYRYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb blaster
 Your settler registers (no cheat) RRYRRYR.
@@ -2142,7 +2153,7 @@ Towers (46/46)
 
 >sb macks
 Your settler registers (no cheat) RYRRYRO.
-Your settler registers (cheat on) RYRRYRO.
+Nothing changes between cheat/teach and regular mode.
 
 >sb macks
 Your settler registers (no cheat) RYRRYRO.
@@ -2154,7 +2165,7 @@ Your settler registers (cheat on) RRYYRYPB.
 
 >sb macks
 Your settler registers (no cheat) RYRYRRRO.
-Your settler registers (cheat on) RYRYRRRO.
+Nothing changes between cheat/teach and regular mode.
 
 >sb macks
 Your settler registers (no cheat) RYRRYYRRO.
@@ -2170,7 +2181,7 @@ Your settler registers (cheat on) RGRRYYRYRRRO.
 
 >sb macks
 Your settler registers (no cheat) RYRRYRO.
-Your settler registers (cheat on) RYRRYRO.
+Nothing changes between cheat/teach and regular mode.
 
 ##############################seed = 2
 
@@ -2194,11 +2205,11 @@ Well, you have a feeling you know what that question mark should be.
 
 >sb macks
 Your settler registers (no cheat) RYRRYRYRO.
-Your settler registers (cheat on) RYRRYRYRO.
+Nothing changes between cheat/teach and regular mode.
 
 >sb macks
 Your settler registers (no cheat) YRYRYYRYRRO.
-Your settler registers (cheat on) YRYRYYRYRRO.
+Nothing changes between cheat/teach and regular mode.
 
 ##############################seed = 3
 
@@ -2217,7 +2228,7 @@ Your settler registers (cheat on) RGYRYRRB.
 
 >sb macks
 Your settler registers (no cheat) RRYRYRRO.
-Your settler registers (cheat on) RRYRYRRO.
+Nothing changes between cheat/teach and regular mode.
 
 >sb macks
 Your settler registers (no cheat) RYRRYRRRO.
@@ -2233,7 +2244,7 @@ Your settler registers (cheat on) ??GR?RO.
 
 >sb macks
 Your settler registers (no cheat) RRYRRRO.
-Your settler registers (cheat on) RRYRRRO.
+Nothing changes between cheat/teach and regular mode.
 
 >sb macks
 Your settler registers (no cheat) RYRYRRRO.
@@ -2241,11 +2252,11 @@ Your settler registers (cheat on) RYRYRRPB.
 
 >sb macks
 Your settler registers (no cheat) RRYRYRRO.
-Your settler registers (cheat on) RRYRYRRO.
+Nothing changes between cheat/teach and regular mode.
 
 >sb macks
 Your settler registers (no cheat) RYYRYRRRO.
-Your settler registers (cheat on) RYYRYRRRO.
+Nothing changes between cheat/teach and regular mode.
 
 ##############################seed = 5
 
@@ -2256,19 +2267,19 @@ Your settler registers (cheat on) ??GR?RO.
 
 >sb macks
 Your settler registers (no cheat) RRYRRRO.
-Your settler registers (cheat on) RRYRRRO.
+Nothing changes between cheat/teach and regular mode.
 
 >sb macks
 Your settler registers (no cheat) RRYRRYRO.
-Your settler registers (cheat on) RRYRRYRO.
+Nothing changes between cheat/teach and regular mode.
 
 >sb macks
 Your settler registers (no cheat) RRYRYRRO.
-Your settler registers (cheat on) RRYRYRRO.
+Nothing changes between cheat/teach and regular mode.
 
 >sb macks
 Your settler registers (no cheat) RYRYYYRRO.
-Your settler registers (cheat on) RYRYYYRRO.
+Nothing changes between cheat/teach and regular mode.
 
 ##############################seed = 6
 
@@ -2279,7 +2290,7 @@ Your settler registers (cheat on) ??GR?RO.
 
 >sb macks
 Your settler registers (no cheat) RRYRRRO.
-Your settler registers (cheat on) RRYRRRO.
+Nothing changes between cheat/teach and regular mode.
 
 >sb macks
 Your settler registers (no cheat) RYRYRRRO.
@@ -2294,11 +2305,11 @@ Your settler registers (cheat on) ??GR?RO.
 
 >sb macks
 Your settler registers (no cheat) RRYRRRO.
-Your settler registers (cheat on) RRYRRRO.
+Nothing changes between cheat/teach and regular mode.
 
 >sb macks
 Your settler registers (no cheat) RRYRRYRO.
-Your settler registers (cheat on) RRYRRYRO.
+Nothing changes between cheat/teach and regular mode.
 
 ##############################seed = 8
 
@@ -2309,11 +2320,11 @@ Your settler registers (cheat on) ??GR?RO.
 
 >sb macks
 Your settler registers (no cheat) RRYRRRO.
-Your settler registers (cheat on) RRYRRRO.
+Nothing changes between cheat/teach and regular mode.
 
 >sb macks
 Your settler registers (no cheat) RYRRYRRO.
-Your settler registers (cheat on) RYRRYRRO.
+Nothing changes between cheat/teach and regular mode.
 
 * _otters
 
@@ -2402,22 +2413,22 @@ Bran Barn
 
 >sb
 Your settler registers (no cheat) YRRRYYRR.
-Your settler registers (cheat on) YRRRYYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb ghoul hat
 Your settler registers (no cheat) YRRRYYRR.
-Your settler registers (cheat on) YRRRYYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >although
 Your score has just gone up by one point
 
 >sb
 Your settler registers (no cheat) RYRYRYR.
-Your settler registers (cheat on) RYRYRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb howe
 Your settler registers (no cheat) RYRYRYR.
-Your settler registers (cheat on) RYRYRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >however
 Your score has just gone up by one point
@@ -2455,7 +2466,7 @@ Wickeder Wire Deck
 
 >sb owls
 Your settler registers (no cheat) RRYR.
-Your settler registers (cheat on) RRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >sb medals
 The settler reads oddly for a while but doesn't show anything. Maybe you need to reveal the medals some more.
@@ -2527,7 +2538,7 @@ Your score has just gone up by one point
 
 >sb nails
 Your settler registers (no cheat) RRYYR.
-Your settler registers (cheat on) RRYYR.
+Nothing changes between cheat/teach and regular mode.
 
 >snail
 Your score has just gone up by one point
@@ -2548,7 +2559,7 @@ Your score has just gone up by one point
 
 >sb pines
 Your settler registers (no cheat) RRYRY.
-Your settler registers (cheat on) RRYRY.
+Nothing changes between cheat/teach and regular mode.
 
 >snipe
 Your score has just gone up by one point
@@ -2560,9 +2571,9 @@ Your score has just gone up by one point
 Coevals' Alcoves
 
 >sb merle
-Your settler registers (no cheat) RYRYRRRO.
 Some of the entries seem to flip bluish briefly as you flip the settler, as if the changing conversation may change settings.
-Your settler registers (cheat on) RYRYRRRO.
+Your settler registers (no cheat) RYRYRRRO.
+Nothing changes between cheat/teach and regular mode.
 
 >honestly
 Your score has just gone up by one point
@@ -2627,7 +2638,7 @@ You wave the settler, but it doesn't pick up any random data.
 
 >sb spear
 Your settler registers (no cheat) RYYRR.
-Your settler registers (cheat on) RYYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >pears
 Your score has just gone up by one point.
@@ -2694,7 +2705,7 @@ Your settler registers (cheat on) RGRGRRYRGRY.
 
 >sb megaton pear
 Your settler registers (no cheat) RYRYRRYRYRY.
-Your settler registers (cheat on) RYRYRRYRYRY.
+Nothing changes between cheat/teach and regular mode.
 
 >sb rampage note
 Your settler registers (no cheat) RYRYRRYRYRY.
@@ -2706,21 +2717,21 @@ Take on a token
 
 >sb peanut cola
 Your settler registers (no cheat) RYRRYRYYRY.
-Your settler registers (cheat on) RYRRYRYYRY.
+Nothing changes between cheat/teach and regular mode.
 
 >cantaloupe
 Your score has just gone up by one point.
 
 >sb videotape
 Your settler registers (no cheat) RYRRYRRYR.
-Your settler registers (cheat on) RYRRYRRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >persimmon
 Your score has just gone up by one point.
 
 >sb slime
 Your settler registers (no cheat) RYRYR.
-Your settler registers (cheat on) RYRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >limes
 Your score has just gone up by one point.
@@ -2761,7 +2772,7 @@ scru-it
 
 >sb stucco
 Your settler registers (no cheat) RYRYRYRR.
-Your settler registers (cheat on) RYRYRYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >coconuts
 Your score has just gone up by one point.
@@ -2778,13 +2789,13 @@ You fiddle with the coin you got
 
 >sb icons
 Your settler registers (no cheat) RYRYR.
-Your settler registers (cheat on) RYRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >n
 
 >sb green stain
 Your settler registers (no cheat) RYRRYRYRYR.
-Your settler registers (cheat on) RYRRYRYRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >tangerines
 Your score has just gone up by one point.
@@ -2801,7 +2812,7 @@ Your score has just gone up by one point.
 
 >sb mean trowel
 Your settler registers (no cheat) RYRYRRYRYR.
-Your settler registers (cheat on) RYRYRRYRYR.
+Nothing changes between cheat/teach and regular mode.
 
 >watermelon
 Your score has just gone up by one point.
@@ -2862,26 +2873,22 @@ Your score has just gone up by one point.
 
 >sb peach
 Your settler registers (no cheat) RRYYR.
-Your settler registers (cheat on) RRYYR.
+Nothing changes between cheat/teach and regular mode.
 
 >cheap
 Your score has just gone up by one point.
 
 >sb auction caution
 Your settler registers (no cheat) RYRYOYR.
-
+Nothing changes between cheat/teach and regular mode.
 Hm, that certainly cuts things down a ton, or should, once you read that sign. Just three possibilities.
-
-Your settler registers (cheat on) RYRYOYR.
-
-Hm, that certainly cuts things down a ton, or should, once you read that sign. Just one possibility.
 
 >papayas
 Your score has just gone up by one point.
 
 >sb
 Your settler registers (no cheat) YRYRR.
-Your settler registers (cheat on) YRYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >among
 Your score has just gone up by one point.
@@ -2895,7 +2902,7 @@ Your score has just gone up by one point.
 
 >sb lemons
 Your settler registers (no cheat) RYRYRR.
-Your settler registers (cheat on) RYRYRR.
+Nothing changes between cheat/teach and regular mode.
 
 >solemn
 Your score has just gone up by one point.
@@ -2938,17 +2945,15 @@ Your score has just gone up by one point.
 
 >sb orange
 Your settler registers (no cheat) RY*RYYR. The black cells would indicate spaces, you guess.
-Your settler registers (cheat on) RY*RYYR.
+Nothing changes between cheat/teach and regular mode.
 
 >go near
 Your score has just gone up by one point.
 
 >sb plant
 Your settler registers (no cheat) RRYRYRR.
-
+Nothing changes between cheat/teach and regular mode.
 Wow, seven letters, odd. Maybe you need to poke or talk to the plant or attack it or something to see what kind it might be.
-
-Your settler registers (cheat on) RRYRYRR.
 
 >rhubarb
 Your score has just gone up by one point.
@@ -3001,19 +3006,31 @@ No need to over-study or over-think. Through the gates!
 
 >au 1
 >sb coins
-The settler flashes back, with all five entries changing.
-Hm. Maybe it would be better to scan just one coin?
-You see YRYR.
+You see YRY (R and P).
 
+>sy coins
 The settler flashes back, with all but the last entry--which stays red--changing.
 Hm. Maybe it would be better to scan just one coin?
 You see YRYP.
 
+>sn coins
+The settler flashes back, with all but the last entry--which stays red--changing.
+Hm. Maybe it would be better to scan just one coin?
+You see YRYR.
+
 >au -1
 >sb coins
-Your settler registers (no cheat) ????R.
-Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice.
-Your settler registers (cheat on) ?????.
+The final of the five entries stays on red in non-cheat mode, but everything else is scrambled.
+
+>sy coins
+The settler flashes back, with all but the last entry--which stays red--changing.
+Hm. Maybe it would be better to scan just one coin?
+You see ?????.
+
+>sn coins
+The settler flashes back, with all but the last entry--which stays red--changing.
+Hm. Maybe it would be better to scan just one coin?
+You see ????R.
 
 >score
 41 out of 41
@@ -3081,7 +3098,7 @@ Rustic Citrus
 
 >{include} _manor
 
-* _only-stores
+* only-stores
 
 >ts
 >{include} _stores
@@ -3129,7 +3146,7 @@ Rustic Citrus
 >in
 >{include} _otters
 
-* _only-others
+* only-others
 
 >gonear rustic citrus
 >purloin letters settler
