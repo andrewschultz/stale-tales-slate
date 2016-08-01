@@ -14,9 +14,9 @@
 >pad
 Currently you can consult your pad about these general topics:
 --verbs, options, access, free turns.
---go to, Old Warpy, SHATTER-THREATS, methods.
---red, Shuffling Around, tagged gadget, retry.
---warp, directions/dirs.
+--go to, Old Warpy, methods, red.
+--Shuffling Around, tagged gadget, retry, warp.
+--directions/dirs.
 
 >think
 
@@ -62,22 +62,6 @@ the settler
 rove over
 --Gretta, Old Warpy, SHATTER-THREATS, the settler.
 
->undo
->undo
-
->1
->4
->1
->2
->2
->3
->5
-[You record the information about clues in your notepad.]
->5
-[You record the information about Gretta in your notepad.]
-
->6
-
 >staple
 >stapler
 >staple wall
@@ -114,13 +98,16 @@ You switch the slider on.
 >pad
 /\bsl\b
 
->scan store f with settler
+>w x y z a
 [You record the information about long commands in your notepad.]
 >pad
 long commands
 
 >undo
 >undo
+
+>scan store f with settler
+[NOTE: you don't need the prepostion WITH. You can just say SCAN, as the settler is the only item that can scan.]
 
 >w x y z a
 [You record the information about long commands in your notepad.]
@@ -169,7 +156,7 @@ flips
 record the information
 >pad
 reagents
-uhhs
+random dialogue
 
 >out
 >against
@@ -198,6 +185,7 @@ hit win
 
 ########################troves specific
 
+>retry
 >troves
 >enter troves
 >z
@@ -206,7 +194,7 @@ hit win
 >z
 >z
 >pad
-uhhs
+random dialogue
 
 #######################presto specific
 
@@ -256,27 +244,21 @@ A reminder that cussing won't make a computer work any better, and you need to g
 >ts
 >oyster
 >enter oyster
->scan casper
-[You record the information about the hangout in your notepad.]
+>ask casper about norman bleistift
+[You record the information about the haunter/DIE THOU in multiple entries in your notepad.]
 
 >pad
-hangout
+the haunter
+DIE THOU
 
 >undo
 >undo
 
 >ask casper about xxx
-[You record the information about the hangout in your notepad.]
+[You record the information about the haunter/DIE THOU in multiple entries in your notepad.]
 >pad
-hangout
->undo
->undo
-
->ask casper about casper
-[You record the information about the hangout in your notepad.]
->pad
-hangout
-
+the haunter
+DIE THOU
 >undo
 >undo
 
@@ -294,20 +276,18 @@ hangout
 >e
 >seek
 >ask tuna about xxx
-haunter
-die thou
+the haunter/DIE THOU
 >pad
-haunter
-die thou
+the haunter
+DIE THOU
 >undo
 >undo
 
 >ask tuna about casper
-haunter
-die thou
+the haunter/DIE THOU
 >pad
-haunter
-die thou
+the haunter
+DIE THOU
 >undo
 >undo
 
@@ -326,8 +306,8 @@ die thou
 >bleak
 >wined
 >yonder
-badlands
-
+the Bland Sad Badlands are a cruel, difficult place
+about badlands in
 >pad
 You can also consult your pad about topics specific to this region:
 badlands
@@ -369,7 +349,7 @@ scenery
 You can make the barley be BARELY there once you get past the otters.
 
 >in
-asking
+Those otters weren't there to drain people for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.
 
 >pad
 asking

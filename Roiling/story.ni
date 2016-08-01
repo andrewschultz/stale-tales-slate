@@ -1832,9 +1832,6 @@ check objasking it about (This is the check for object information rule):
 			if second noun is the person-subj entry:
 				if the chum of the noun is the him-who entry:
 					say "[him-say entry][line break]" instead;
-	repeat through table of default-sub-blather:
-		if noun is him-who entry:
-			say "[him-say entry][line break]" instead;
 	if the noun is the second noun:
 		repeat through table of reflexive-blather:
 			if noun is him-asked entry and there is a him-told entry:
@@ -1844,6 +1841,9 @@ check objasking it about (This is the check for object information rule):
 			if right-region entry is not mrlp:
 				say "This is the wrong region to ask about that." instead;
 		say "[him-say entry][line break]" instead;
+	repeat through table of default-sub-blather:
+		if noun is him-who entry:
+			say "[him-say entry][line break]" instead;
 	repeat through table of default-gen-blather:
 		if noun is default-talker entry:
 			say "[gen-blah entry][line break]";
@@ -1981,7 +1981,7 @@ sly imp	"He nods his head as if to say he's all right and he knew you'd ask."
 haunter	"It makes ghostly noises and talks about how it wants its jewel back."
 Elvira	"She sniffs haughtily. As if you have to ask! As if you're NOT too biased to believe the good things about her!"
 Curtis	"'Just trying to rustle up fruit and biotech business. Need to be growing more than iPrunes or those discussing yorpberries.'"
-Len Craig	"'I'm a businessman. What you got?'"
+Len Craig	"'I'm a businessman. A trader. Lots of stuff if you know how to haggle.'"
 Art Erd	"'Traded a dead rat...' he mumbles."
 Dr Tera	"'Traded a dead rat...' she mumbles."
 passport	--
@@ -2061,7 +2061,6 @@ Rand	"[lrduh]"
 computer screen	"[if screen is on labs slab]Yelling at a computer never works. If you need to say something, just say it[else]The screen isn't even plugged in[end if]."
 patrons	"The patrons would probably think YOU were drunk if you told them why you were here or asked questions." [begin OYSTER]
 trolls	"Talking wouldn't distract them from [if silly-acts is 3]eventually beating you up[else]keeping you in the Posh Hops Shop[end if]. They'd just win the argument. They're trolls, after all."
-Casper	"[if casper-talk is false]Before you can pull a bar seat abreast... 'Here's a hint, mac. GO HUNT A HANGOUT. Write that in your pedanto-notepad. I'm busy. Shoo.' He does, however, explain to you about the Horned Hedron and the Absolute Lout Base. And the ghost that may be haunting the area. You congratulate him on his storytelling, but he says 'Pff, nothing on this new novel of mine.'[add-hangout][else]'[ohai-casper][randbla][ohai-casper][run paragraph on]' he mutters to nobody in particular.[end if]"
 clam	"It snaps back at you. Physically, not verbally. Words--okay, conversation--won't help it relax, so you clam up."
 scary crays	"They chuckle a bit. You're not going to be able to talk your way out of this."
 trout	"[if trout is reflexive]He needs a pep talk. Guidance. Even if it's not 100% correct[else]A pep talk won't do much good now[end if]."
@@ -2152,7 +2151,7 @@ owls	"They're too busy swooping at you to talk."
 raptor	"'Roooooooar.'"
 parrot	"[if Merle is visible]Don't blow his cover![else]'Fear the feather! A bird, rabid!' He's got revenge fantasies, but not in his current state--or here."
 Elvira	"'I watch a witch,' you mutter. 'Nice try. Tiny rec. Y'cretin.' You're not going to out-debate the vexin['] vixen."
-Curtis	"'I'm a busy man!' yells Curtis. 'I have confidence in you, dealing with fruit. I mean, you saved the whole COUNTRY already. This can't take too long." [begin others]
+Curtis	"'Ehh?' says Curtis. 'I don't have time for small talk. More fruit, more fruit.'" [begin others]
 Len Craig	"[one of]Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge[or]Your magic powers do not, alas, expand to straightforward bargaining[stopping]."
 Art Erd	"[he-she-c] mumbles 'er, drat' and something about how money is very, very nice."
 Dr Tera	"[he-she-c] mumbles 'er, drat' and something about how money is very, very nice."
@@ -2166,7 +2165,8 @@ casper-talk is a truth state that varies.
 
 to say add-hangout:
 	now casper-talk is true;
-	pad-rec "the hangout";
+	pad-rec-lump "the haunter";
+	pad-rec "DIE THOU";
 
 Leo-traveled is a truth state that varies.
 
@@ -2219,14 +2219,18 @@ to say ohai-casper:
 table of subject-blather	[ask x about thing he knows about] [tosb]
 him-who	person-subj	him-say
 Elmo	settler	"This shouldn't be available." [start INTRO]
+idg	lecturer	"'A great man. Listen to him, not me.'" [start STORES]
+idg	Elvira	"'She didn't get to her position of power by using DRUGS.'"
+idg	idg	"The heartfelt reflections Ian gave you will say enough."
+nestor	Elvira	"'So bogusly repressive!'"
 nestor	Store N	"'Man, it was actually kind of sort of like fun in there. Until it wasn't.'"
 nestor	tokers	"[if tokers are visible]Nestor gives them a thumbs-up, they cheer drippily, and he cheers back[else]'Dude! Could you magic them back somehow?' he pleads[end if]."
 tokers	Store K	"'Man, it was actually kind of sort of like fun in there. Until it wasn't.'"
+tokers	Elvira	"'A bummer of authoritarianism, dude! She says her personality is all the drug you need!'"
 tokers	nestor	"[if nestor is visible]They thank you for finding him[else]They weep at hearing the name of a lost friend[end if]."
 tokers	smoke cloud	"[if cruelest lectures is visited]You know more about it than they do[else]'Er, free reefer!' they say. You'd probably have SOME sort of experience going through those fumes[end if]."
 lecturer	Elvira	"You probably know he's in favor of her."
-idg	lecturer	"A great man. Listen to him, not me." [start STORES]
-idg	Elvira	"She didn't get to her position of power by using DRUGS."
+lecturer	lecturer	"Oh, his good-for-society rant has enough of his own experiences sprinkled in."
 Brother Horbert	spoon	"'[if spoon is in lalaland]I hope you used it wisely[else]It may help you figure where to go[end if].'" [start ROUTES]
 Brother Horbert	mantle	"[one of]Brother Horbert shudders a bit[or]Best not to press him[stopping]."
 Brother Horbert	list o toils	"[if l-o-p is unexamined]Why not examine the list yourself?[else if mushrooms are off-stage]You've gotten everything.[else if number of held quest-items is 0]You tell Brother Horbert you haven't found any items on the list. He says he has faith in you.[else]You show Brother Horbert your progress. He nods and smiles.[end if]"	[horbert tells about quest items elsewhere]
@@ -2367,12 +2371,15 @@ Merle	Elvira	"'She is a great leader. You do not deserve to visit her to the wes
 curtis	rampage note	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'" [start OTHERS]
 curtis	mopeage rant	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'"
 curtis	Art Erd	"[one of]Curtis breathes deeply and gives a look of contempt and shakes his head[or]No point asking again[stopping]. Curtis probably doesn't want to know if any fruit came from [him-her]."
+curtis	Len Craig	"'A bit of a salesman, but he has some goods. Just--we're not on great terms, so maybe you can...'"
+curtis	Elvira	"'She was terrible for business and innovation. Things are picking up again now, though.'"
 Art Erd	curtis	"'There's people with silly science ideas like him, then there's businessmen like ME. Pfft.'"
 Art Erd	storage box	"'[if storage box is in scape space]It's...umm...worth something.[else]You bought it[end if].'"
 Art Erd	len craig	"[icy-len]"
 Dr Tera	len craig	"[icy-len]" [this just gets rid of an annoying error at the start]
 len craig	curtis	"[one of]'Nice fella, lots of ideas about agriculture, but no business sense. Just sits looking for someone to do his dirty work for him. You don't...'[or]You don't want to admit Curtis has you gofering. Though, really, it's been not too bad, with your powers.[stopping]"
 len craig	tekno-token	"[if tekno-token is off-stage]'We accept tekno-tokens, yes.'[else][one of]He inspects the token and says it's valid[or]If you ask again, Len might question its validity[stopping].[end if]"
+len craig	elvira	"'Less said, the better.'"
 len craig	Art Erd	"Len snorts and shakes his head. 'What a weasel.'" [end OTHERS]
 
 to say icy-len:
@@ -3121,7 +3128,7 @@ before quipping when current quip is bye-Elmo-quip (this is the Elmo pulls you b
 		say "Hm, maybe Elmo has something useful to say. Skip to that part of the conversation?";
 		if the player direct-consents:
 			say "Elmo notices your haste and nods. 'Okay, first things first, I think I know where you need to go.'";
-			enact bye-elmo-quip;
+			enact bye-elmo-quip; [?? need a whole lot more here]
 			disable the interr-quip quip;
 			disable the orange-dunno-quip quip;
 			disable the orange-know-quip quip;
@@ -3717,8 +3724,8 @@ check entering a portal:
 	choose row with por of noun in table of warps;
 	say "[go-text entry]";
 	if noun is otters-x and bleary barley is unvisited:
-		say "Hmm, Elvira may be behind whatever drained you. But you don't know what she's up to. It might be a good idea to ask about her, if people are around.";
-		pad-rec "asking";
+		say "Those otters weren't there to drain people for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.";
+		pad-rec-q "asking";
 	let try-recover be false;
 	if last-loc of grn is visited:
 		now try-recover is true;
@@ -6377,7 +6384,6 @@ after reading a command:
 		if scanwith is false:
 			ital-say "you don't need the prepostion WITH. You can just say SCAN, as the settler is the only item that can scan.";
 			now scanwith is true;
-		pad-rec-q "long commands";
 		replace the regular expression "with.*" in XX with "";
 		change the text of the player's command to XX;
 	if the player's command matches the regular expression "^\p" or the player's command matches the regular expression "^<\*;>":
@@ -11143,7 +11149,7 @@ to say cur-has:
 	say ".[line break]Unconsulted subjects are in [i]italics[r].";
 	if fixies > 0:
 		now A is 0;
-		say "[line break]You can also consult your pad about [if fixies is 1]a topic[else]topics[end if] `:[line break]--";
+		say "[line break]You can also consult your pad about [if fixies is 1]a topic[else]topics[end if] specific to this region:[line break]--";
 		repeat through table of pad-stuff:
 			if known entry is true and there is a fixed-region entry:
 				if mrlp is fixed-region entry and introtoo entry is unrelevant:
@@ -11247,8 +11253,8 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "casper"	false	"Casper talked to you about how this place is full of action, how there's a haunter beneath Anger Range, and it may have lost something. Casper also explained you'll need a way through the Horned Hedron."	"casper"	true	oyster
 "reagents/reagent"	false	"You need three reagents to help Brother Horbert: mushrooms[if player has mushrooms] (check)[end if], a runed book[if player has runed book] (check)[end if], and pipe soot[if player has pipe soot] (check)[end if]."	"reagents"	true	routes
 "Leo/Rand" or "Leo and Rand"	false	"Leo and Rand may be able to help you with heavy lifting."	"Leo and Rand"	true	presto
-"haunter"	false	"The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it."	"haunter"	true	oyster
-"die" or "die thou" or "the/ hideout/hangout"	false	"If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them."	"the hangout"	true	oyster
+"haunter"	false	"The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it."	"the haunter"	true	oyster
+"die" or "die thou" or "the/ hideout/hangout"	false	"If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them."	"DIE THOU"	true	oyster
 "progress"	false	"You note the following: manor = stuff[other-areas]."	"progress"	false
 "curst/palace" or "curst palace" or "castle/apcur" or "castle apcur"	false	"You apparently can't scan the curst palace fully with the settler [']til you're all the way there. But maybe you can guess."	"curst palace"	true	towers
 "xray" or "xraying"	false	"[xray-help]."	"xray"	false	towers
@@ -11257,7 +11263,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "flips" or "flip" or "pf"	false	"[what-can-flip]"	"flips"	false
 "rove" or "over" or "rove over"	false	"You can just ROVE OVER to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
 "talking"	false	"[if number of terse-warned hintrelevant people > 0]You got nothing from [list of terse-warned hintrelevant people][else]Nobody nearby seems useless...YET[end if]."	"talking"	false	--
-"badlands" or "bland/sad badlands" or "bland sad badlands"	false	"Old Hat Daltho told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the flowerpot was for a friend called Ed."	"badlands"	false	towers
+"badlands" or "bland/sad badlands" or "bland sad badlands"	false	"Old Hat Daltho told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the flowerpot was for a friend called Ed."	"badlands"	true	towers
 
 to say xray-help:
 	if xrayvision is true:
@@ -11339,10 +11345,6 @@ to say other-areas:
 
 after objasking aunt tuna about:
 	pad-rec-lump "haunter";
-	pad-rec "die thou"
-
-after objasking casper about:
-	pad-rec "haunter";
 	pad-rec "die thou"
 
 [tope]
@@ -16337,6 +16339,18 @@ a-text of trolls is "RRRYRR". b-text of trolls is "RRRYPR". parse-text of trolls
 
 Casper Spacer is a person in Posh Hops Shop. description is "He hides the writing in his Capers Recaps from your prying eyes.". "Casper Spacer, the famous fish author, is here, working on his latest book, Capers Recaps[one of]. He seems to want to be bothered and not want to be at the same time. Writers have a way of massaging life's contradictions[or][stopping]."
 
+check objasking casper spacer about:
+	casper-chat instead;
+
+check asking casper spacer about:
+	casper-chat instead;
+
+to casper-chat:
+	if casper-talk is true:
+		say "'[ohai-casper][randbla][ohai-casper][run paragraph on]' Casper mutters to nobody in particular.";
+	else:
+		say "'Before you can pull a bar seat abreast... 'Here's a hint, mac. GO HUNT A HANGOUT. Write that in your pedanto-notepad.' He touches on the Die Thou Hideout in the Horned Hedron. An Absolute Lout Base. And the ghost that may be haunting the area. You congratulate him on his storytelling, but he says 'Pff, nothing on this new novel of mine. Which I need to get back to. To which I need to get back.'[add-hangout]"
+
 understand "author" as Casper Spacer.
 
 understand "fish" as Casper.
@@ -17623,9 +17637,23 @@ after fliptoing trout:
 		min-up;
 	continue the action;
 
-check asking aunt tuna about:
+check objasking tuna about:
+	if tuna-first is false:
+		tuna-chat instead;
 	if noun is trout:
 		say "[if trout is reflexed]They will not pick on him so much any more[else]Everyone picks on poor Tortu[end if]." instead
+
+tuna-first is a truth state that varies.
+
+check asking tuna about:
+	if tuna-first is false:
+		tuna-chat instead;
+
+to tuna-chat:
+	say "Aunt Tuna ignores your specific question and instead launches into a tirade about innocent people not being able to hide from the Die Thou Hideout in the Horned Hedron, and what with the haunter running around, that's one more thing to worry about! And it would be nice if they could be played against each other, but the real world doesn't work that way, even though she TRIES to be optimistic.";
+	pad-rec-lump "the haunter";
+	pad-rec "DIE THOU";
+	now tuna-first is true;
 
 to pearl-check:
 	say "[line break]";

@@ -10,8 +10,6 @@
 * _manor
 
 >posf
->score
-Score in a scenario: 0 out of 13 total points in the current region, Roman Manor. Lowest score to solve is 8. Maximum score available is 13.
 
 >x chair
 You thought you preferred
@@ -25,11 +23,7 @@ Bangish bashing
 >open door
 
 >ask gunter about gunter
-WRONG
->ask gunter about elvira
-WRONG
->ask gunter about xyzzy
-WRONG
+Gunter's kind of leading the conversation, here.
 
 >1
 >5
@@ -74,11 +68,7 @@ Hands up!
 Your score has just gone up
 
 >ask elmo about elmo
-WRONG
->ask elmo about elvira
-WRONG
->ask elmo about xyzzy
-WRONG
+You don't want to go off on any tangents, here.
 
 >1
 >1
@@ -145,62 +135,63 @@ Score in a scenario: 6 out of 11 total points in the current region, Stores.
 >tokers
 
 >ask tokers about tokers
-WRONG
+"Missing our friend, man!"
 >ask tokers about nestor
-WRONG
+They weep at hearing the name of a lost friend.
 >ask tokers about elvira
-WRONG
+"A bummer of authoritarianism, dude! She says her personality is all the drug you need!"
 >ask tokers about xyzzy
-WRONG
+The yawners aren't very answery, and you probably don't need a THC chat. They like you and all, but despite your adventuring, you'd never, like, invent a drug or do nothing as well as they do.
 
 >ask tokers about store k
-WRONG
->ask tokers about nestor
-WRONG
+"Man, it was actually kind of sort of like fun in there. Until it wasn't."
 >ask tokers about smoke cloud
-WRONG
+"Er, free reefer!" they say. You'd probably have SOME sort of experience if you went through those fumes.
 
 >nestor
 >ask nestor about tokers
-WRONG
+Nestor gives them a thumbs-up, they cheer drippily, and he cheers back.
 >ask nestor about nestor
-WRONG
+Nestor mumbles about how his father is disappointed he didn't become a senator, just...he wants to just hang with his pals, if that's okay.
 >ask nestor about elvira
-WRONG
+"So bogusly repressive!"
 >ask nestor about xyzzy
-WRONG
+"Whuh, whuut? Try asking me about, like, stuff instead. Not, you know, stuff."
 
 >ask nestor about store n
-WRONG
->ask nestor about tokers
-WRONG
+"Man, it was actually kind of sort of like fun in there. Until it wasn't."
+
+#?? nestor/tokers twice in file?
 
 >enter cloud
 
 >ask ian about ian
-WRONG
+Before you can do anything with or to Ian, he thrusts a sheet of heartfelt reflections on drug use at you. "It will help you in ways you don't know. And even I don't know." Do you take it?
+>ask ian about ian
+The heartfelt reflections Ian gave you will say enough.
 >ask ian about elvira
-WRONG
+"She didn't get to her position of power by using DRUGS."
 >ask ian about lecturer
-WRONG
+"A great man. Listen to him, not me."
 >ask ian about xyzzy
-WRONG
+Before you can do anything, Ian points at the heartfelt reflections he shared on you. Or at you. But not just plain with you. He's so much bigger than you, it distracts you from whatever you meant to do.
 
 >ask lecturer about ian
-WRONG
+If he actually heard you, he'd yell a stunning rebuke to whatever he could pretend you'd say, then chalk your confusion up to drugs. You just want to get away from all this TEDIOUS stuff.
 >ask lecturer about elvira
-WRONG
+You probably know he's in favor of her.
 >ask lecturer about lecturer
-WRONG
+Oh, his good-for-society rant has enough of his own experiences sprinkled in.
 >ask lecturer about xyzzy
-WRONG
+If he actually heard you, he'd yell a stunning rebuke to whatever he could pretend you'd say, then chalk your confusion up to drugs. You just want to get away from all this TEDIOUS stuff.
+
+>outside
 
 * _routes
 
 >posf
 >score
 0 out of 18 total points in the current region, Routes
-WRONG
 
 >inside
 Your score has just gone up by one point
@@ -1705,15 +1696,15 @@ WRONG
 >ask curtis about mopeage rant
 "None of your business."
 >ask curtis about art erd
-XCurtis is curt. "I'm focused on business, here."
+Curtis breathes deeply and gives a look of contempt and shakes his head. Curtis probably doesn't want to know if any fruit came from him.
 >ask curtis about len
-XCurtis is curt. "I'm focused on business, here."
+"A bit of a salesman, but he has some goods. Just--we're not on great terms, so maybe you can..."
 >ask curtis about elvira
-XCurtis is curt. "I'm focused on business, here."
+"She was terrible for business and innovation. Things are picking up again now, though."
 >ask curtis about curtis
-XCurtis is curt. "I'm focused on business, here."
+"Just trying to rustle up fruit and biotech business. Need to be growing more than iPrunes or those discussing yorpberries."
 >ask curtis about xyzzy
-"I'm a busy man!" yells Curtis. "I have confidence in you, dealing with fruit. I mean, you saved the whole COUNTRY already. This can't take too long."
+"Ehh?" says Curtis. "I don't have time for small talk. More fruit, more fruit."
 
 >maraschino
 Your score has just gone up by one point.
@@ -1776,9 +1767,9 @@ He inspects the token and says it's valid.
 >ask len craig about art erd
 Len snorts and shakes his head. "What a weasel."
 >ask len about elvira
-CCCC"No small talk. Just the language of business. Let's haggle."
+"Less said, the better."
 >ask len about len
-"No small talk. Just the language of business. Let's haggle."
+"I'm a businessman. A trader. Lots of stuff if you know how to haggle."
 >ask len about xyzzy
 Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge. It doesn't seem terribly relevant, but eh.
 
@@ -1850,17 +1841,18 @@ You Did Great
 #>{include} _only-towers
 #>{include} _only-otters
 #>undo
->{include} _only-others
+#>{include} _only-others
 #>undo
 #>{include} _only-oyster
 
-* big-go
+* _big-go
 
 >au 1
 
 >{include} _manor
 >{include} _stores
 
+>gonear trips strip
 >enter routes
 Same Mesa
 >{include} _routes
@@ -1904,7 +1896,7 @@ Rustic Citrus
 >undo
 >undo
 
-* _only-manor
+* only-manor
 
 >{include} _manor
 
@@ -1913,19 +1905,19 @@ Rustic Citrus
 >gonear strip
 >{include} _stores
 
-* _only-routes
+* only-routes
 
 >gonear same mesa
 >{include} _routes
 >{include} _summarize
 
-* _only-troves
+* only-troves
 
 >gonear rathole
 >{include} _troves
 >{include} _summarize
 
-* _only-presto
+* only-presto
 
 >gonear gyre
 >{include} _presto
@@ -1938,21 +1930,21 @@ Rustic Citrus
 >{include} _oyster
 >{include} _summarize
 
-* _only-towers
+* only-towers
 
 >seed 1
 >gonear trefoil
 >{include} _towers
 >{include} _summarize
 
-* _only-otters
+* only-otters
 
 >seed 1
 >gonear barley
 >{include} _otters
 >{include} _summarize
 
-* _only-others
+* only-others
 
 >gonear rustic citrus
 >{include} _others
