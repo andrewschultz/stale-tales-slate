@@ -14702,11 +14702,11 @@ understand the command "evt" as something new.
 understand "evt" as evting.
 
 carry out evting:
-	now ettest is whether or not ettest is true;
+	now ettest is whether or not ettest is false;
 	say "Every-turn-test is now [if ettest is true]on[else]off[end if].";
 	the rule succeeds;
 
-every turn when ettest is true:
+every turn when ettest is true: [this can be varied based on the test we wish to run]
 	if missile is visible:
 		try shooting the missile;
 
