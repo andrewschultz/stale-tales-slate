@@ -2710,21 +2710,21 @@ section settler color deduction text
 to say current-known:
 	let yays be 0;
 	let itxt be indexed text;
-	now itxt is "Red: ";
+	now itxt is "Red:";
 	repeat through table of known-letters:
 		if v-c-y entry is 1:
 			follow the my-rule entry;
 			if the rule succeeded:
 				increment yays;
-				now itxt is "[itxt][my-let entry] ";
+				now itxt is "[itxt][my-let entry]";
 	say "[itxt]";
-	now itxt is "Yellow: ";
+	now itxt is "Yellow:";
 	repeat through table of known-letters:
 		if v-c-y entry is 2:
 			follow the my-rule entry;
 			if the rule succeeded:
 				increment yays;
-				now itxt is "[itxt][my-let entry] ";
+				now itxt is "[itxt][my-let entry]";
 	say "[itxt]";
 	consider the got-y rule;
 	if the rule succeeded:
@@ -3000,6 +3000,7 @@ before QBC responding with (this is the warn you before bailing from a convo rul
 				say "'So rude!' says Gunter, roused, soured.";
 
 before quipping when player is in frontage (this is the Gretta checks rule):
+	now hold-it-up is false;
 	let missed-one be false;
 	if current quip is gre-go-quip:
 		if gre-go-warn is false:
@@ -3014,9 +3015,8 @@ before quipping when player is in frontage (this is the Gretta checks rule):
 					say "OK.";
 					continue the action;
 				say "A bit of awkward silence follows, but it's nowhere near as awkward as the macks['] conversation.[no line break]";
-				choose row with response of gre-go-quip in the table of Gretta comments;
-				now enabled entry is 1;
-				reject the player's command;
+				now hold-it-up is true;
+				continue the action;
 
 instead of abouting or creditsing or xyzzying or requesting the score when rq is active:
 	say "[convoforce]." instead;
@@ -3191,6 +3191,7 @@ after quipping when qbc_litany is the table of Gunter comments:
 		debug-fallthrough;
 
 after quipping when qbc_litany is the table of Elmo comments:
+	d "Went through [current quip].";
 	if hold-it-up is true:
 		choose row with response of bye-Elmo-quip in the table of Elmo comments;
 		now enabled entry is 1;
@@ -3199,6 +3200,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 		enact the trial-trail-quip;
 		now talked-to-Elmo is true;
 		disable the orange-dunno-quip quip;
+		disable the orange-know-quip quip;
 	else if current quip is trial-trail-quip:
 		open-elmos-hints;
 	else if current quip is clues-quip:
@@ -3281,8 +3283,12 @@ after quipping when qbc_litany is the table of Elmo comments:
 		disable the gp-quip quip;
 		enact got-it-quip;
 	else if current quip is gp-quip:
-		enact toy-theory-quip;
-		enact the trial-trail-quip;
+		if y-orange is true:
+			enact toy-theory-quip;
+			enact the trial-trail-quip;
+		else:
+			enact orange-know-quip;
+			enact orange-dunno-quip;
 		disable the lamp-quip quip;
 	else if current quip is settler-quip:
 		if y-orange is false:
@@ -3295,11 +3301,13 @@ after quipping when qbc_litany is the table of Elmo comments:
 		if chimney-quip is not mowered:
 			enact orange-know-quip;
 			enact orange-dunno-quip;
-		enact satchel-quip;
+		unless still-no-gp-quip is mowered or got-it-quip is mowered:
+			enact satchel-quip;
 	else if current quip is satchel-quip or current quip is dio-elm-2-quip:
-		enact still-no-gp-quip;
-		if current quip is dio-elm-2-quip:
-			enact dio-2-quip;
+		unless still-no-gp-quip is mowered or got-it-quip is mowered:
+			enact still-no-gp-quip;
+			if current quip is dio-elm-2-quip:
+				enact dio-2-quip;
 	else if current quip is dio-elm-quip:
 		enact dio-elm-2-quip;
 		repeat with rb running through ramabits:
@@ -3314,14 +3322,22 @@ after quipping when qbc_litany is the table of Elmo comments:
 		disable the dio-elm-2-quip quip;
 		disable the dio-2-quip quip;
 		disable the dio-quip quip;
-		enact interr-quip;
+		disable the settler-quip quip;
+		if y-orange is true:
+			enact interr-quip;
+		else:
+			enact orange-dunno-quip;
+			enact orange-know-quip;
 	else if current quip is showset-quip:
 		disable the flier-quip quip;
 		enact orange-dunno-quip;
 		enact interr-quip;
 	else if current quip is orange-know-quip or current quip is orange-dunno-quip:
+		disable the yorp-quip quip;
 		disable the orange-know-quip quip;
 		disable the orange-dunno-quip quip;
+		if still-no-gp-quip is mowered or got-it-quip is mowered or showset-quip is mowered:
+			enact interr-quip;
 	else if current quip is dio-quip or current quip is trips-quip or current quip is dio-all-quip or current quip is dio-2-quip or current quip is satchel-quip or current quip is yorp-quip or current quip is settler-quip or current quip is strip-quip or current quip is weather-quip or current quip is girls-quip or current quip is sports-quip or current quip is curb-quip or current quip is social-quip or current quip is media-quip-2 or current quip is clues-quip:
 		do nothing;
 	else if current quip is toy-theory-quip:
@@ -3334,9 +3350,8 @@ after quipping when qbc_litany is the table of Elmo comments:
 		now Elmo is in lalaland;
 		now satchel is in lalaland;
 		if do-i-chat is true: [this is a cheat bypass]
-			now macks are in lalaland;
 			move player to Frontage;
-			try looking;
+			now macks are in lalaland;
 			now qbc_litany is table of Gretta comments;
 		else:
 			now poss-score of manor is cur-score of manor + 3;
@@ -9477,7 +9492,7 @@ the dope op-ed is propaganda. "That 'dope' op-ed Gunter threw at you landed here
 
 understand "pedo" as a mistake ("[one of]Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her 'clever' games[or]Don't dwell on it. It's lies[stopping].") when player is in study and op-ed is in study.
 
-the Nitro Intro page is propaganda. it is part of the dope op-ed. the printed name of nitro intro is "Nitro-Intro page". understand "nitro-intro page/" as nitro intro page.
+the Nitro Intro page is propaganda. it is part of the dope op-ed. the printed name of nitro intro is "Nitro-Intro page". understand "nitro-intro" and "nitro-intro page" as nitro intro page.
 
 description of nitro intro page is "Elvira lays out that she is clearly aliver in her introduction, where she will beat you at your own game.[paragraph break]She notes how Penal Panel--panel IX--explain the Porter Report--the questin['] inquest on your life file. The media aimed you with RELATED! ALERTED! REQUIRES QUERIERS. Governor Ron Grove found taint--a tint. Ties to the Postage Gestapo. Recommended a deport-o-torpedo. Senator Ron East said can't snore at treason.[paragraph break]No hot-plate hate plot on! Elvira is dedicated to making Yorpwald safe, not just from outside forces, but from the influx of silly old anagrams and the LIKELY PERSON BEHIND THEM--a certain reruns nurser! Someone who resorted to boring old anagrams a computer could crank out.[paragraph break]She also notes she will refrain from calling you the obvious name she COULD in an op-ed, because she has class. But really, oppo = poop."
 
@@ -10527,7 +10542,7 @@ got-red-yellow-quip	"'Yyupp. Vowels. But we haven't found anything where the che
 still-busted-quip	"You shake your head. 'Duh, I'm humid.'[paragraph break]'A, e, i, o, u,' Elmo points out. 'Vowels.'[paragraph break]'Maybe other letters too...nah, too many consonants go to red. Yeah. Vowels and consonants.' You figure the cheat button might be a good idea to learn for the future. Might be a good idea to start small. Like--with the lamp."
 showset-quip	"'Hint agent thing! NEAT!' You show him what the red and yellow mean, then the green and purple. He asks if there are any other colors, like orange."
 lamp-quip	"'Yeah, sorry about the lamp.' You say no worries--you're trying to figure what it means. Elmo doesn't judge. 'Yeah, you been under stress, I bet, let's work it out.' The settler vaguely goes Red, yellow/green, red and red near the fragments. 'Hm, cheat mode changes A from yellow to green. That must mean something.'"
-gp-quip	"'Awesome! Yeah, cheating adds blue to the reds and yellows if the letters are right. To purple and green.'"
+gp-quip	"'Awesome! Yeah, cheating adds blue to the reds and yellows if the letters are right. To purple and green[if y-orange is false]. Any other colors? Hm, on the back of the settler, YORPWALD's D is orange, and WORDPLAY's W is, too[end if].'"
 settler-quip	"'LETTERS SETTLER. Hm, the E-T-T change color when you switch cheat mode on. Maybe that's because they are in the right places. Yellow e to green, red t to purple. Not clear if it's e and t specifically that change, though.'"
 yorp-quip	"'Hm, [if chimney-quip is mowered]more orange letters to Y[else]the D in Yorpwald and W in Wordplay are orange. Or maybe it's what the letters can become. Orange, we haven't seen much of that[end if]. Also, interesting, the O-R change colors when you go cheat mode. Looks like they're already in the right place.'[paragraph break]'Gotcha, doc. Good catch.'"
 stable-quip	"You remember cheat mode did not change the tables when you scanned them before entering the stable--there was lots of red writing, too, which your pedanto-notepad says was wrong letters. But there were some yellows, too. They were probably wrong, but a different sort of wrong."
@@ -16547,8 +16562,6 @@ does the player mean spilling pills: it is very likely;
 cheated-guy is an object that varies. cheated-guy is nothing.
 
 after spilling:
-	if player has thin hint:
-		dl "You now have the thin hint.";
 	if pills are in lalaland and cheated-guy is nothing:
 		d "BUG I mistracked a pill spill.[line break]";
 	else if scams is true:
@@ -16667,7 +16680,6 @@ carry out spilling:
 	if oi is the player:
 		say "You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long." instead;
 	if player is in uaah:
-		dl "[oi].";
 		if oi is waste or oi is heaps or oi is lance:
 			say "That might be a bit dirty, and you wonder if it's really worth it to use the pills on beautification (fourth wall note: this will only help with an optional side quest). Go ahead anyway?";
 			if the player direct-consents:
@@ -20832,7 +20844,7 @@ wait-seer	Anemic Cinema	east	"The wait-seer doesn't break a second sweat as he c
 man covered	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free the man covered in inapt paint from nationality and to individuality."
 arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
 reed's ale	Ravages	east	"The Reed's Ale man blocks you--his costume looks stupid, but it's not encumbering--and asks you to help him out, and not just about buying, but about whether he should continue this career."	"The Reed's Ale man fidgets with his costume, unsure if he wants to take it off or put it on."
-grailman	Ravages	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"You haven't met many grailmen, but this one is good enough, for now."	
+grailman	Ravages	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"You haven't met many grailmen, but this one is good enough, for now."
 Ray Eck	Deposit	north	"The yacker controls his keycar so it runs over your foot. You briefly wonder if he has a twin named Kim."	"The yacker introduces himself as Ray Eck, grateful there's someone out here who doesn't mind talking."	"Ray Eck's keycar can't go that far, so you manage to escape."	keycar
 ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you try to walk through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."	"Part of you wonders if you should play up the ego drains, but the other part says they're obstructive enough."
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
@@ -21865,6 +21877,10 @@ to decide which number is optleft of (myp - a person):
 	decide on mytemp;
 
 after quipping when qbc_litany is the table of Gretta comments:
+	if hold-it-up is true:
+		now hold-it-up is false;
+		enact gre-go-quip;
+		continue the action;
 	if current quip is gre-macks-quip:
 		enact gre-elv-quip;
 		enact gre-what-quip;
@@ -26976,6 +26992,8 @@ carry out chating:
 	if player is not in study:
 		say "Too late...restart." instead;
 	now do-i-chat is true;
+	now thinko is true;
+	now bookshelf is examined;
 	now player has lamp;
 	now player has settler;
 	repeat with ram running through ramabits:
@@ -27229,7 +27247,9 @@ chapter roman
 
 test diora with "test 1st/satchel/scan platform/scan pavement/scan pedestal/scan crabgrass/pad diorama/event map/farm plot/steel pad/brass crag/scan map/scan plot/scan pad/scan crag/pad diorama"
 
-test Elmo with "test 1st/basement/satchel/d/x settler/in/flier"
+test elmq with "purloin settler/gonear basement/x settler/in/flier"
+
+test elmo with "test 1st/basement/satchel/d/x settler/in/flier"
 
 test elmox with "rom/test 1st/satchel/stable/painting/basement/chimney/u/ramp/d/stair/x settler/in/flier"
 

@@ -8,7 +8,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* quick-chat
+* _quick-chat
 
 >au 1
 >chat
@@ -20,13 +20,15 @@ Bam, Tense Basement
 >3
 
 Gent-Fora Frontage
+>1
+>3
 >3
 
 Reclusion Inclosure
 >7
 No mercy, my crone!
 
-* detail-gunter-chat
+* _detail-gunter-chat
 
 >au 1
 >think
@@ -34,7 +36,7 @@ No mercy, my crone!
 >open door
 
 [1] Say, Mr., um... summary?
-/[2]
+!/[2]
 
 >1
 
@@ -75,7 +77,7 @@ No mercy, my crone!
 [2] One Beg: begone!
 
 >1
-"Eh, punt the pun," you think. The paunchy, achy pun--a painful pun-fail--hardly cleans up on the pun scale. You picture a generic cringee at So-So MC Cosmo's, Ralf's Larfs or Best Gags Run Gangbusters. "Rad irony? Ordinary."
+"Eh, punt the pun," you think. The paunchy, achy pun--a painful pun-fail--hardly cleans up on the pun scale.
 
 [1] Er, ahem, hear me
 [2] One Beg: begone!
@@ -85,6 +87,7 @@ Gunter intones tension. Refusal earfuls. "Cad, no can do. Damn, uh, DUH, man." R
 
 [1] One Beg: begone!
 
+>1
 >lamp
 
 >x op-ed
@@ -118,6 +121,9 @@ Elvira notes Yorpwald's more profitable than ever!
 
 >x economy
 Elvira notes Yorpwald's more profitable than ever!
+
+>x i trash
+Elvira offers an apology for not seeing to the heart of the matter about all your anagramming. Oh, sure, she had clever opinions about whether obvious anagrams were better than non-obvious ones, and she changed around, and she's glad people found them interesting, but really, it's kind of nerdy now that your good deeds were DONE. Lots of examples, ahead.
 
 >x i trash
 Elvira lists games that don't make kids or concerned parents happy. Mega Mage Game (e-mag: a gem!) as well as many others: 
@@ -163,6 +169,78 @@ Her Arts Er Trash
 >x her arts
 No. Really. You don't want to read that nonsense again. She always seems to know which way the wind is blowing, then she blames you for it.
 
+* _detail-elmo-chat-gp-first
+
+>au 1
+
+>gonear basement
+>purloin settler
+>x settler
+>in
+>flier
+
+>2
+>1
+[1] Got some reinvestigator interrogatives, hustle-sleuth.
+[2] Finish Fishin'.
+>undo
+>undo
+>2
+[1] Hmm, I don't see what orange means.
+[2] Hm, I even see what orange is for. Got some reinvestigator interrogatives, hustle-sleuth.
+[3] Finish Fishin'.
+
+>undo
+
+>1
+>4
+>2
+[1] Yeah, I see what orange means.
+[2] Hmm, I don't see what orange means.
+[3] Finish Fishin'.
+>1
+[1] Got some reinvestigator interrogatives, hustle-sleuth.
+
+>undo
+>undo
+
+
+>1
+"Yeah, sorry about the lamp." You say no worries--you're trying to figure what it means. Elmo doesn't judge. "Yeah, you been under stress, I bet, let's work it out." The settler vaguely goes Red, yellow/green, red and red near the fragments. "Hm, cheat mode changes A from yellow to green. That must mean something."
+
+[1] Ask Elmo about the "Letters Settler" text.
+[2] Tell Elmo you got what the cheat button does, thanks!
+[3] Finish Fishin'.
+
+>1
+"LETTERS SETTLER. Hm, the E-T-T change color when you switch cheat mode on. Maybe that's because they are in the right places. Yellow e to green, red t to purple. Not clear if it's e and t specifically that change, though."
+
+DEBUG INFO: Went through settler-quip.
+[1] Ask Elmo about the "Yorpwald-Wordplay" text on the laced decal.
+[2] Scan everything about the diorama.
+[3] Tell Elmo you got what the cheat button does, thanks!
+[4] Finish Fishin'.
+
+>2
+With everything scanned now, you take a closer look.
+
+[1] Look through all the diorama data.
+[2] Ask Elmo about the "Yorpwald-Wordplay" text on the laced decal.
+[3] Hm, still not clear on the green/purple.
+[4] Tell Elmo you got what the cheat button does, thanks!
+[5] Finish Fishin'.
+
+>3
+Elmo notes that individual letters can be either red-or-purple or yellow-or-green. All green letters in cheat mode were yellow in non-cheat, and the same for purple to red. Then the ones that are purple/green--are in the right place.
+
+>3
+You examine the backside of settler and note how Yorpwald lines up with Wordplay--those two orange letters MEAN something. Then you both realize both orange letters go to a Y that's not in the right place.
+[1] Got some reinvestigator interrogatives, hustle-sleuth.
+[2] Finish Fishin'.
+
+>1
+"The Strip of Profits is--well, it's tied up with Old Warpy again. You know, how Old Warpy sent you to the forest and metros and sortie? Yeah, there's people buying stuff from the stores, but they're so occupied, they won't notice YOU! Still, you've got a trial trail ahead. Elvira's got her toy theory started. About you being bad for Yorpwald."
+
 * detail-elmo-chat
 
 >au 1
@@ -175,6 +253,7 @@ No. Really. You don't want to read that nonsense again. She always seems to know
 
 [3] Finish Fishin'.
 
+#########################very easy out
 >3
 Elmo checks you for a second. "You sure you know how to use the settler?"
 You nod. "No clues counsel."
@@ -186,6 +265,32 @@ You leave, feeling less resave-averse, but run as you hear "Get Elmo!" / "Get ol
 
 You crawl through the evac-cave, which exits to writing behind a dune, man. UNNAMED: MUNDANE, but you look closer and see RETRAIN TERRAIN. Behind is a carven cavern. It looks as good a place as any to visit.
 
+>undo
+
+#####################now check the quick way past the tutorial
+
+>2
+
+[NOTE: if you didn't mean to do this, you can UNDO to get a bit more help from Elmo.]
+[1] Hmm, I don't see what orange means.
+[2] Hm, I even see what orange is for. Got some reinvestigator interrogatives, hustle-sleuth.
+[3] Finish Fishin'.
+
+>1
+You examine the backside of settler and note how Yorpwald lines up with Wordplay--those two orange letters MEAN something. Then you both realize both orange letters go to a Y that's not in the right place.
+
+[1] Got some reinvestigator interrogatives, hustle-sleuth.
+[2] Finish Fishin'.
+
+>undo
+>2
+"The Strip of Profits is--well, it's tied up with Old Warpy again. You know, how Old Warpy sent you to the forest and metros and sortie? Yeah, there's people buying stuff from the stores, but they're so occupied, they won't notice YOU! Still, you've got a trial trail ahead. Elvira's got her toy theory started. About you being bad for Yorpwald."
+
+[1] Ask Elmo about her toy theory
+[2] Ask Elmo about your trial trail
+[3] Finish Fishin'.
+
+>undo
 >undo
 
 >1
@@ -214,7 +319,15 @@ Yellow: E I O U
 Red: C F G L M P R S
 Yellow: A E I O U
 
+[1] Oh, cool, I know what the reds and yellows are for, now.
+[2] Geez. I'm still busted. Kinda shaken by...well, the excitement.
+[3] Finish Fishin'.
+
+#### split path here. Options don't matter, but check text.
+
 >1
+"Yyupp. Vowels. But we haven't found anything where the cheat button actually does anything." You try and think of something where it might.
+
 [1] Ask Elmo about the lamp
 [2] Explain you know what the colors besides red and yellow mean, and you're wondering what to DO.
 [3] Finish Fishin'.
@@ -222,15 +335,21 @@ Yellow: A E I O U
 >undo
 
 >2
+You shake your head. "Duh, I'm humid."
+
+"A, e, i, o, u," Elmo points out. "Vowels."
+
 [1] Ask Elmo about the lamp
 [2] Explain you know what the colors besides red and yellow mean, and you're wondering what to DO.
 [3] Finish Fishin'.
 
->2
-"Awesome! Yeah, cheating adds blue to the reds and yellows if the letters are right. To purple and green."
+###### split here: 2 leads to main, 1 gives more clues
 
-[1] Ask Elmo about her toy theory
-[2] Ask Elmo about your trial trail
+>2
+"Awesome! Yeah, cheating adds blue to the reds and yellows if the letters are right. To purple and green. Any other colors? Hm, on the back of the settler, YORPWALD's D is orange, and WORDPLAY's W is, too."
+
+[1] Yeah, I see what orange means.
+[2] Hmm, I don't see what orange means.
 [3] Finish Fishin'.
 
 >undo
@@ -243,10 +362,12 @@ Yellow: A E I O U
 [2] Tell Elmo you got what the cheat button does, thanks!
 [3] Finish Fishin'.
 
+# again, a jump ahead before we plow the clues
+
 >2
 "Excellent! So, yeah, the settler adds blues when you're in cheat mode and the letters are right. Purple consonants, green vowels." Elmo looks over your settler once more. "Hmm. What's the orange for? On Yorpwald/wordplay?"
-[1] Ask Elmo about the "Letters Settler" text.
-[2] Hm, I even see what orange is for. Got some reinvestigator interrogatives, hustle-sleuth.
+[1] Yeah, I see what orange means.
+[2] Hmm, I don't see what orange means.
 [3] Finish Fishin'.
 
 >undo
@@ -312,38 +433,31 @@ Elmo thinks a minute and notes red plus blue is purple, and yellow plus blue is 
 
 [1] Yeah, I see what orange means.
 [2] Hmm, I don't see what orange means.
-[3] Hm, I even see what orange is for. Got some reinvestigator interrogatives, hustle-sleuth.
-[4] Finish Fishin'.
+[3] Finish Fishin'.
 
 >undo
 >4
 
->4
 "Excellent! So, yeah, the settler adds blues when you're in cheat mode and the letters are right. Purple consonants, green vowels." Elmo looks over your settler once more. "Hmm. What's the orange for? On Yorpwald/wordplay?"
 
 [1] Yeah, I see what orange means.
 [2] Hmm, I don't see what orange means.
-[3] Hm, I even see what orange is for. Got some reinvestigator interrogatives, hustle-sleuth.
-[4] Finish Fishin'.
+[3] Finish Fishin'.
 
->1
-You've got this one--Yorpwald, wordplay, the orange D at the end goes to Y, the orange W at the start to Y, too.
-
-[1] Got some reinvestigator interrogatives, hustle-sleuth.
-[2] Finish Fishin'.
-
->undo
 >2
 You examine the backside of settler and note how Yorpwald lines up with Wordplay--those two orange letters MEAN something. Then you both realize both orange letters go to a Y that's not in the right place.
 
 [1] Got some reinvestigator interrogatives, hustle-sleuth.
 [2] Finish Fishin'.
 
->2
-[1] Ask Elmo about her toy theory
-[2] Ask Elmo about your trial trail
-[3] Finish Fishin'.
 >undo
+
+
+>1
+You've got this one--Yorpwald, wordplay, the orange D at the end goes to Y, the orange W at the start to Y, too.
+
+[1] Got some reinvestigator interrogatives, hustle-sleuth.
+[2] Finish Fishin'.
 
 >1
 [1] Ask Elmo about her toy theory
@@ -370,7 +484,7 @@ Like, gosh, HER! "Her united con continued unnoticed. But it's too perfect. Toug
 [5] Finish Fishin'.
 
 >4
-"Yeah, lots to explore. But I bet observing and talking to people will help. Even if they don't want to help. There also may be some--illegal types around stores K and N. You don't need them, but they can't hurt."
+"Yeah, lots to explore. But I bet observing and talking to people will help. Even if they don't want to help. There also may be some--illegal types around stores K and N. You don't need them, but they can't hurt. There's others towards the end of the alphabet. New places that might have clues."
 
 [1] Strip of Profits? Was that the Trips Strip? What's at the...?
 [2] Strategy-try stage? Get artsy?
@@ -385,11 +499,22 @@ Like, gosh, HER! "Her united con continued unnoticed. But it's too perfect. Toug
 [3] Finish Fishin'.
 
 >1
+"Where do I look? Is there a bare min--uh, most efficient way through?"
+
+"Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. But the remaining stuff. You can maybe take care of them later.
+
+[1] Poss. Clue? Closeups?
+[2] Jumbo, um, job. Six of 'em? Some fix!
+[3] Finish Fishin'.
+
+>1
 "Examine everything. People and things blocking you. Try to get by them. Just plain listen, or smell. Dialogues also guide. Oh, and if you can find Gretta Garett-Tatger, bonus."
 
 [1] Gretta Garett-Tatger?
 [2] Jumbo, um, job. Six of 'em? Some fix!
 [3] Finish Fishin'.
+
+>1
 
 "She's a good investigative reporter, the best. She's dug further into Elvira's doings than anyone else. But she's become a bit of a--target." You both cringe. "No, her name's not your fault. Just, she may have found something, even left a cue in the Strip of Profits." Elmo shows you a picture of her.
 
@@ -398,6 +523,8 @@ Like, gosh, HER! "Her united con continued unnoticed. But it's too perfect. Toug
 [1] Jumbo, um, job. Six of 'em? Some fix!
 [2] Finish Fishin'.
 
+>1
+
 "Hm, maybe a covert vector after you solve two...
 
 "Oh, hey, if you want to complain about random stuff, go ahead. It might not give any practical help, but I don't mind listening. I've thrown a lot at you."
@@ -405,9 +532,39 @@ Like, gosh, HER! "Her united con continued unnoticed. But it's too perfect. Toug
 [1] Complain about the weather [NOTE: complaining, or listening to Elmo complain, is possibly therapeutic, but utterly unproductive]
 [2] Finish Fishin'.
 
->2
+>1
+That's always a safe one. You say "How 'bout that weather, geez," not realizing you haven't gotten out enough to know if it's been too hot, cold, rainy or dry. But fortunately, you haven't gotten out enough to remember those details don't matter.
 
-* detail-gretta-chat
+[1] Complain about your favorite sports team
+[2] Complain about the media
+[3] Complain about how more exciting people and stories pushed you to the curb
+[4] Complain about social forces in general
+[5] Let Elmo complain about his lack of success with women
+[6] Finish Fishin'.
+
+>1
+[5] Finish Fishin'.
+
+>1
+[1] Complain about the media some more
+[5] Finish Fishin'.
+
+>1
+[4] Finish Fishin'.
+
+>1
+[3] Finish Fishin'.
+
+>1
+[2] Finish Fishin'.
+
+>1
+[1] Finish Fishin'.
+
+>1
+Carven Cavern
+
+* _detail-gretta-and-elvira-chat
 
 >seed 1
 
@@ -450,19 +607,23 @@ A very loud roar scares you. You doubt adverbs are up to the task of calming it.
 [3] Um, that's all, I guess. Thanks.
 
 >3
-WRONG
+[1] What's your history with Elvira?
+[2] I sort of lost my powers. Well, most of them. What can I do now?
+[3] That's really all, now. Thanks.
 
 >1
 
 she's--well, augmenting animals.
-/[3]
+[1] I sort of lost my powers. Well, most of them. What can I do now?
+[2] That's really all, now. Thanks.
+![3]
 
 >1
 
 [1] What's to the north?
 [2] What's to the south?
-[3] What's back east? I got rid of some nuisances, but I got chased after that.
-[4] Um, that's all, I guess. Thanks.
+[3] What can I do back east? I got rid of some nuisances, but I got chased after that.
+[4] That's really all, now. Thanks.
 
 >1
 "Maybe you will figure how to help the eels to the north and their spirit, Le Mer. They're suspicious of people, though, after Elvira failed to recruit them."
@@ -516,6 +677,7 @@ You murmur "Umm...urr." [Valid responses range from 1-3. Type REPEAT to re-list 
 >thrones
 
 >n
+>n
 >w
 >atom
 >w
@@ -535,32 +697,45 @@ You murmur "Umm...urr." [Valid responses range from 1-3. Type REPEAT to re-list 
 [7] Scourge-curse, go! (yeah, yeah, get on with it)
 
 >1
-/[7]
+[1] WTF FTW
+[2] LOL, how hollow!
+[3] Play God? Dopy gal!
+[4] Abhorsive Behaviors!
+[5] Strong will? Still wrong. At bay, ya bat.
+[6] Go bald, old bag!
+[7] Sinister Insister. Hypno-phony. Reposed? Deposer.
+[8] Scourge-curse, go! (yeah, yeah, get on with it)
 
 >1
-/[6]
+!/\[8\]
 
 >1
-/[5]
+!/\[7\]
 
 >1
-/[4]
+!/\[6\]
 
 >1
-/[3]
+!/\[5\]
 
 >1
-/[2]
+!/\[4\]
 
 >1
-/[1]
+!/\[3\]
 
+>1
+!/\[2\]
+
+>1
+!/\[1\]
+
+>au 1
 >play whistle
-A MONSTER ROTS. AMEN.
 
->rove over
+Strip of Profits
 
-* detail-elvira-chat
+* _detail-gretta-chat-special-case
 
 >au 1
 >seed 1
@@ -586,6 +761,11 @@ A MONSTER ROTS. AMEN.
 
 [1] What can I do with the pool to the north?
 [2] What can I do in the barn to the south?
-/some nuisances, but
+!some nuisances
+
+>abstract sly imp to lalaland
+>recap
+some nuisances
+!, but I got chased after that.
 
 >4

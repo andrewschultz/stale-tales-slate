@@ -1311,6 +1311,7 @@ blurb
 "Right-On Hint Org."
 "The Risen Hint-Seer." []
 "Saner Tip Pantries." []
+"Scheduling-Cluing Shed"
 "Should've Solved, Uh?"
 "Silverado Aid Lovers."
 "Smart-Pick Trick Maps!"
@@ -4478,6 +4479,7 @@ blurb	fave
 "OK, Words, Do Works[r], by Rod Skow"	true
 "Older and Wiser, I Learned Words[r], by Delores Darwin"	true
 "One Cold Neo-Clod[r], by Don Cole"	false
+"A Pedantic Pain Acted[r], by Pia DeCant"	false
 "Permutations? Imposter, a Nut[r], by [if player is male]Tatum Pierson[else]Maurine Potts[end if]"	false
 "Permuting, Urgent Imp[r], by Meg Turpin"	false
 "Prodigious? Odious Prig[r], by Guido Spiro"	false
@@ -6476,7 +6478,6 @@ blurb
 "News Rally, Yell Warns, Swell Yarn"
 "The Next Tent Hex"
 "No, Dr. Nord-Dorn"
-"No Fan of Ann"
 "Non-Insect Innocents"
 "Nope, Dr. Penrod"
 "Now Mac Can Mow"
@@ -7667,6 +7668,7 @@ blurb
 "Gash Boom Goombahs"
 "Get Shaw the Swag"
 "Ghetto? LOL, Got to Hell"
+"Gild the Delight"
 "Go, Bump, Bop, Mug"
 "Go Eff Geoff"
 "Go Forward, Dog, Row Far"
@@ -14559,6 +14561,7 @@ blurb	prio
 "Sed Lang's Sad Glens[r], by Ned Glass"
 "Sedated Deadest[r], by Tad Dees"
 "Seduction Noticed Us[r], by Dustin Coe & Ted Cousin"
+"See, a Plot to Please[r], by Pete Also"
 "See, Chap, a Speech[r], by Peaches Paesche"
 "See-Gigs Inn: Genie Sings[r], by Signe Gines"
 "See Grim Emigres[r], by Meg Reis"
@@ -23836,10 +23839,12 @@ blurb
 "Delegating/Get-Dealing Gadget Line"
 "A Desk, Asked" []
 "Desk-Sked"
+"A Diligent Leading-It Detailing"
 "Dire SOS Dossier" []
 "Do-Great Date-Org" []
 "Doings-Dosing" []
 "Done-Logs So Golden"
+"Dude-I-Map-Idea Dump"
 "Enum-Menu"
 "Evanston Notes-Nav"
 "Force-Us Focuser" []
@@ -23870,6 +23875,7 @@ blurb
 "Mr. Note-Mentor" []
 "Need-To-Denote"
 "Nest-O-Notes" []
+"Net-Doer Denoter"
 "Not-Broke Rent-Book"
 "Notifys-So-Nifty"
 "Optimal-Toil Map"
@@ -23890,6 +23896,8 @@ blurb
 "Strat-Start"
 "Streamline-Meaner List" []
 "Sup-R-Spur"
+"Sure-Force Refocuser"
+"Think-More-Hone-Mr. Kit"
 "This Log So Light"
 "Toil-Proof Portfolio"
 "Unmeagrest Augmenters"
@@ -36092,6 +36100,7 @@ blurb
 "'Morty's stormy.'" []
 "'Ms. Elia is lame.'" []
 "'Nellie's seen ill.'"
+"'No Fan of Ann!'"
 "'Oswald was...old.'" []
 "'Patricia's parasitic.'"
 "'Perry's spryer.'"
