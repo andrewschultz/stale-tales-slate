@@ -181,6 +181,10 @@ index map with Sorted Trodes mapped east of Self-ID Fields.]
 
 [release along with a solution.]
 
+Procedural rule: ignore the print final score rule.
+
+section variables i'd like to NFR but can't quite--mostly debug stubs
+
 showtabname is a truth state that varies.
 
 debug-state is a truth state that varies. debug-state is usually false.
@@ -189,9 +193,9 @@ debug-scan is a truth state that varies. debug-scan is usually false. [a testing
 
 debug-parse is a truth state that varies. debug-scan is usually false. [a testing variable for if we want to check parse-scaning beforehand]
 
-ff is a truth state that varies.
+tnt is a truth state that varies.
 
-Procedural rule: ignore the print final score rule.
+ff is a truth state that varies.
 
 chapter basic things about things
 
@@ -14896,8 +14900,6 @@ carry out showtabing:
 chapter tnting
 
 [ * tnt toggles if both hints are shown on something good. ]
-
-tnt is a truth state that varies.
 
 tnting is an action out of world.
 
