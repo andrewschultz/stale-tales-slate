@@ -17,7 +17,7 @@ TOA = the tables of big point scoring changes, table of * anagrams
 TOH = table of hint logic
 TMC = mega-chatter, which logs all the tables I search lists for
 TAF = after-texts, which logs everything said after scanning stuff. Used to help clue the player if something is confusing, whether it's a question mark or vowels/consonants not lining up
-TOR = reflexive blather, asking people about themselves (this is often a default)
+TOR/TRB = reflexive blather, asking people about themselves (this is often a default)
 TOD = default gen blather, about general nonsense e.g. a misunderstood request
 DSB = default subject blather, about a specific topic. If an NPC has no entry, it goes to TOD.
 TOB = read ALL the book titles!
@@ -321,8 +321,9 @@ understand "pastry" as a hintpastry.
 check objasking about a hintpastry when mrlp is towers:
 	if noun is Dr Yow or noun is smart kid:
 		say "You might get a lecture about all the gross chemicals in there." instead;
-	say "You offer the hint-pastry as a gift, instead.";
-	try giving the second noun to the noun;
+	if second noun is visible:
+		say "You offer the hint-pastry as a gift, instead.";
+		try giving the second noun to the noun;
 
 the specification of a hintpastry is "A hintpastry, when heated, lets you see how a thing/item should be described."
 
@@ -1753,6 +1754,10 @@ Check asking generically (This is the check for only one sensible converser rule
 the can only talk to talkables rule is not listed in any rulebook.
 
 check talking to (this is the hint looking not talking rule):
+	if noun is armada:
+		say "They're not in the mood for remotely reasonable conversation." instead;
+	if noun is statue:
+		say "Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that." instead;
 	if the noun provides the property litany and the noun provides the property greeting, do nothing;
 	otherwise say "You may be better off examining non-living things, not talking to them." instead.
 
@@ -1823,6 +1828,10 @@ check objasking it about (This is the check for object information rule):
 			say "He's in a fighting mood, not a talking mood, right now." instead;
 	if second noun is the player:
 		say "Nobody in the game can tell you anything new about yourself. Well, anything new and helpful." instead;
+	if the noun is the second noun:
+		repeat through table of reflexive-blather:
+			if noun is him-asked entry and there is a him-told entry:
+				say "[him-told entry][line break]" instead;
 	repeat through table of subject-blather:
 		if second noun is the person-subj entry:
 			if noun is the him-who entry:
@@ -1832,10 +1841,6 @@ check objasking it about (This is the check for object information rule):
 			if second noun is the person-subj entry:
 				if the chum of the noun is the him-who entry:
 					say "[him-say entry][line break]" instead;
-	if the noun is the second noun:
-		repeat through table of reflexive-blather:
-			if noun is him-asked entry and there is a him-told entry:
-				say "[him-told entry][line break]" instead;
 	if the second noun is a person-subj listed in the table of object-blather:
 		if there is a right-region entry:
 			if right-region entry is not mrlp:
@@ -1906,18 +1911,18 @@ section talk tables
 to say uf:
 	say "Any attempt at conversation would be banefully unflyable.[no line break]"
 
-table of reflexive-blather	[ask x about x] [tor]
+table of reflexive-blather	[ask x about x] [tor] [trb]
 him-asked	him-told
 Gunter	"His views would be biased."
 Elmo	"You already know about his mission and what he's done to help you. No time for small talk."
-nestor	"[if store k is visible]'Want...friends...man!'[else]You can't think of a way to ask that without saying WHAT DO YOU THINK YOU'RE DOING, buy you get the impression there's not much to ask.[end if]"
+nestor	"[if store k is visible]'Want...friends...man!'[else]'Friendship, all you need, dude!' Nestor smiles at the tokers.[end if]"
 tokers	"[if store n is visible]'Missing our friend, man!'[else]You can't think of a way to ask that without saying WHAT DO YOU THINK YOU'RE DOING, buy you get the impression there's not much to ask.[end if]"
 lecturer	--
 idg	"'I'm nothing without Max P. Lee's help.' He goes on about how and why he is nothing, leaving you wishing he sort of was. How [i]tedious[r]."
 Brother Horbert	"He mentions he cannot do much--the Same Mesa needs magic to undo the curse, but the list-o-toils is on the wall[if list o toils is examined], as you've seen[end if]." [reflex ROUTES]
 old giant	"He is already talking about himself, his complaints, and so forth."
 Oscar	"'I'm just this guy, in this house, with that ashtray [if pipe soot is in adobe]full of nice smelling pipe soot[else]some self-appointed do-gooder cleaned out. Well, I can make more[end if].' Nope, he doesn't seem to have much to say."
-Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [if mushrooms are off-stage]Can't even make it to the seed pit[else]Don't have your guts to explore the seed pit, either[end if].'"
+Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [pat-on-pit].'"
 armada	"They'll have nothing sensible to say in unison."
 statue	"Oh, if it were the real version, you'd regret that."
 plebe	 "You figure you should grill him about how worthless he thinks he is, but you lack the right word or words." [reflex PRESTO]
@@ -1940,6 +1945,7 @@ walleyes	"Now's not the time to upbraid baddies for being bad. Sneak past them i
 yapper	"'I'm a dedicated public servant. I'm not paid to chat. But I'm not paid enough to keep you out, no matter what.' He winks."
 smart kid	"'I like gadgets and building things! [if bot boat is off-stage]I just need one more cool tool[else]I'd love you to try my boat, here[end if]!'" [reflex TOWERS]
 pester'n serpent	"The serpent has nothing to say."
+Ray Eck	"Don't get him started."
 inapt paint	--
 muscly hulk	--
 lois the hostile	--
@@ -1973,11 +1979,11 @@ eels	--
 snail	--
 hornets	--
 racoon	--
-ocelots	"[if ocelots are reflexed]They seem too shy to talk[else]They point to themselves and give a thumbs up[end if]."
+ocelots	"[if ocelots are reflexive]They seem too shy to talk[else]They point to themselves and give a thumbs up[end if]."
 satyr	--
 leopard	--
 badger	"[if badger is reflexive]It covers its exposed parts and turns away[else]It fumbles happily with its now-clothed chest[end if]."
-sly imp	"He nods his head as if to say he's all right and he knew you'd ask."
+sly imp	"It nods its head as if to say it's all right and it knew you'd ask."
 haunter	"It makes ghostly noises and talks about how it wants its jewel back."
 Elvira	"She sniffs haughtily. As if you have to ask! As if you're NOT too biased to believe the good things about her!"
 Curtis	"'Just trying to rustle up fruit and biotech business. Need to be growing more than iPrunes or those discussing yorpberries.'"
@@ -1985,6 +1991,9 @@ Len Craig	"'I'm a businessman. A trader. Lots of stuff if you know how to haggle
 Art Erd	"'Traded a dead rat...' he mumbles."
 Dr Tera	"'Traded a dead rat...' she mumbles."
 passport	--
+
+to say pat-on-pit:
+	say "[if mushrooms are off-stage]Can't even make it to the seed pit[else]Don't have your guts to explore the seed pit, either[end if]"
 
 check asking Curtis about:
 	if second noun is a fruit:
@@ -2004,7 +2013,7 @@ to say tho-need:
 		say ", though I feel you may not need the eels['] energy"
 
 to say left-here:
-	say "'I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be.'"
+	say "'I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be"
 
 to say doc-in-prison:
 	say "[he-she-c] gestures to the ropins and then shakes an invisible fence of [his-her] own. As if [he-she] is too exhausted to talk any more[if Dr Yow has been rowdy and Dr Yow has been wordy]. You figured two ways to get [him-her] to talk, and that's probably enough[else if Dr Yow has been rowdy or Dr Yow has been wordy]. Maybe Dr. Yow has a bit more expressiveness in [him-her][end if].";
@@ -2042,17 +2051,17 @@ lecturer	"If he actually heard you, he'd yell a stunning rebuke to whatever he c
 urgent Gunter	"[bug-report]"
 Mole Elmo	"[bug-report]"
 Brother Horbert	"[one of]'Saint Tina's Nun of No Fun left a list-o-toils for possible curse cures. Check thou it before proceeding, if you haven't.'[or]After a fret, he says, 'The list-o-toils!'[stopping] He seems pretty focused on that." [begin routes]
-Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. Can't even make it to the seed pit.'"
+Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [pat-on-pit].'"
 Oscar	"He's too grouchy to give much help here. He mutters on about slotted dottles--which, well, you [if player has pipe soot]already have pipe soot[else if read-list is true]don't think will help you get any pipe soot[else]don't know or care much about, now, yet[end if]."
 drama armada	"They stare blankly at you, fearful yet confident you know what to do next. They won't be much help."
-old giant	"The giant is sort of controlling the conversation, and he's bigger than you. You probably just need to sympathize and avoid getting hit and so forth."
+old giant	"The giant is sort of controlling the conversation, and he's bigger than you. You probably just need to sympathize and avoid getting hit by flailing limbs and so forth."
 nestor	"'Whuh, whuut? Try asking me about, like, stuff instead. Not, you know, stuff.'"
 what-a-bee	"The bee just buzzes. That's what bees do."
 spider	"Talking to animals? This isn't the way to get to the top!"
 lamb	"It's a baaaaad conversationalist." [begin presto]
-l-m	"[left-here]"
-m-l	"[left-here]"
-Tom Alvez	"[left-here]"
+l-m	"[left-here].'"
+m-l	"[left-here].'"
+Tom Alvez	"[left-here].'"
 hogs	"They snort and laugh as if you are beneath speaking to or even wasting harsh words at."
 bored yak	"The yak, not being very yakety, does not talk back."
 giant dead flea	"It's sort of dead. Not that it was great conversation when it was alive."
@@ -2085,7 +2094,7 @@ robot	"'I have been REWIRED to let you by!'"
 snider diners	"They [one of]ignore you, asking is DERN coming[or]talk about Dr. Enis[or]mention NERD IS something unintelligible[in random order], until they're red[one of], but you sense they have a bit more to say[or], but maybe they have one more rant[stopping]."
 organised ego drains	"The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go [if player is in campsite]north[else]south[end if][if campsite is visited and shoreline is visited], especially since you walked around before[end if]."
 pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to converse.[or]'Yarrh, Harry,' they shout, and one of them makes fun of your skin tone. You feel like a spiter, hoping they get skin cancer.[in random order]"
-reed's ale	"'He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
+reed's ale	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 admirer	"They claim they never thought they'd love someone the way they love you! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another compliment[or]You blush red hearing nonsense you two could be as good together as the popular society couple Red Irma and Ed Mirra[cycling]."
 lois the hostile	"bug."
 hostile-is-he lot	"bug."
@@ -2098,6 +2107,8 @@ ingrates	"[one of]They swat imaginary red ire-gnats as they brush you off[or]You
 pester'n serpent	"It remains coiled."
 alarming grailman	"'You do find me alarming, don't you? I always give 110%. No-one passes Liam Garn!'"
 bonker	"You try to chat but feel like a, er, knob."
+Lois the Hostile	"She complains about something irrelevant to what you asked. Hostile!"
+Hostile-Is-He Lot	"They complain about something irrelevant to what you asked. Hostile!"
 Atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]He says they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
 Andres	"[war-duh]"
 Andrew	"[war-duh]"
@@ -2136,7 +2147,7 @@ macks	"'Talking's stalking,' they yell at you before continuing to hit on Gretta
 eels	"[if eels are reflexed]'Eels...' / 'Fib-beliefs?' Their attention span seems short, and they have little to say. You need one word, useless on its own yet powerful.[else]They seem to have their minds on other things now that they helped you.[end if]"
 Elmer	"[mon-men]"
 Merle	"[mon-men][no line break]"
-sly imp	"He could talk circles around you as-is. You won't convince him to let you pass."
+sly imp	"It could talk circles around you as-is. So talking may not be the way to get past it."
 whiners	"Rational conversation won't make the whiners budge. You probably need to make them quieter."
 hardy hydra	"Roooooooar."
 ocelots	"[if ocelots are reflexive]Flimsy I'm-flys[else]'You're cool.'[paragraph break]'You? Cooler!' You feel [one of]encouraged by this exchange, impressed they got away with that[or]awkward about this repeat, but they don't--there's just nothing else to say around them[stopping][end if]."
@@ -2144,15 +2155,16 @@ badger	"[uf]"
 leopard	"[uf]"
 racoon	"[uf]"
 satyr	"[uf]"
-hornets	"[uf]"
-snipe	"[uf]"
-snail	"[uf]"
+hornets	"The hornets just buzz."
+snipe	"The snipe rustles back and forth a bit."
+racoon	"The racoon skitters around."
+snail	"Schlurrrp."
 owls	"They're too busy swooping at you to talk."
 raptor	"'Roooooooar.'"
 parrot	"[if Merle is visible]Don't blow his cover![else]'Fear the feather! A bird, rabid!' He's got revenge fantasies, but not in his current state--or here."
 Elvira	"'I watch a witch,' you mutter. 'Nice try. Tiny rec. Y'cretin.' You're not going to out-debate the vexin['] vixen."
 Curtis	"'Ehh?' says Curtis. 'I don't have time for small talk. More fruit, more fruit.'" [begin others]
-Len Craig	"[one of]Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge[or]Your magic powers do not, alas, expand to straightforward bargaining[stopping]."
+Len Craig	"[one of]Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge. You get the feeling you asked about something irrelevant, but that advice might help you in general[or]Len's eyes glaze over a bit. Nothing personal, just business[stopping]."
 Art Erd	"[he-she-c] mumbles 'er, drat' and something about how money is very, very nice."
 Dr Tera	"[he-she-c] mumbles 'er, drat' and something about how money is very, very nice."
 arid den	"The automated response system you can't see keeps croaking 'Nerd-Aid...Nerd-Aid...'"
@@ -2216,7 +2228,7 @@ to say ohai-casper:
 	else:
 		now casper-mumble is true;
 
-table of subject-blather	[ask x about thing he knows about] [tosb]
+table of subject-blather	[ask x about thing they know about] [tosb]
 him-who	person-subj	him-say
 Elmo	settler	"This shouldn't be available." [start INTRO]
 idg	lecturer	"'A great man. Listen to him, not me.'" [start STORES]
@@ -2238,16 +2250,22 @@ Brother Horbert	form	"[if form is off-stage]Brother Horbert mutters something ab
 Brother Horbert	Pat	"[lost-faith]"
 Brother Horbert	Oscar	"[lost-faith]"
 Brother Horbert	old giant	"'Well-meaning, but his wrath is misplaced. I can hear him from here. You [if giant is in lalaland]did well to listen to him[else]may learn from listening to him, but there is nothing to fear[end if].'"
+Brother Horbert	Elvira	"'Perhaps she was good once. But her influence on religion is...disturbing.'"
 old giant	bench	"There's not much dispute over the ownership. And the giant isn't trying to shoo you away. Maybe you should listen to the giant in general."
+old giant	Elvira	"The old giant becomes momentarily more vocal and upset."
 oscar	ashtray	"[if player has pipe soot]Best not to call attention to your thievery.[else]'It's not pretty, but it's mine.'[end if]"
 oscar	pipe soot	"[if player has pipe soot]You don't need to mention you have it.[else]'Potpourri. Don't think you can just take it with me looking.'[end if]"
-oscar	pat	"'I wouldn't go in that deli unless I needed something besides a meal.'"
-oscar	giant	"'Keeps my home less quiet, I'm sure!'"
+oscar	pat	"'I went there once. That SEED PIT...ugh.'"
+oscar	old giant	"'Keeps my home less quiet, I'm sure!'"
 oscar	Brother Horbert	"'He means well, but he can't really HELP us.'"
-pat	seed pit	"[if pit is reflexive]'IT'S DEEP,' yells Pat.[else]'Well, it didn't scare YOU, but it'll still scare customers.'[end if]" [end routes]
+oscar	Elvira	"'Hmph. Glad she's kept away from ME, so far.'"
+oscar	oscar	"Oscar grumbles. 'I'm ME, you know?'"
+pat	pat	"'Still holding on to the Idle Deli here.'"
+pat	seed pit	"'[if mushrooms are off-stage]It scares[else]Well, it didn't scare YOU, but it'll still scare[end if] customers. It was nicer before the Poison Stripe, but I can't afford to remove it.'" [end routes]
 pat	oscar	"'Him and his filthy pipe. Not welcome here.'"
-pat	giant	"'Probably not good for business.'"
+pat	old giant	"'Probably not good for business.'"
 pat	Brother Horbert	"'He means well, but he can't really HELP us.'"
+pat	Elvira	"'Business is bad enough. I don't need trouble with her.'"
 plebe	Elvira	"[one of]The plebe looks distinctly uncomfortable but nods. Perhaps they don't agree with Elvira, but their job is to serve and protect, blah blah, especially when intimidated by authority. Hey. Maybe you could be that authority[or]You don't need to ask them again. They, like any good plebe, are intimidated by authority[stopping]." [start PRESTO]
 plebe	Leo	"You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force."
 plebe	Rand	"You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force."
@@ -2256,9 +2274,12 @@ Rand	plebe	"[no-plebe]"
 Leo	hogs	"[if phat path is unvisited]You haven't seen any hogs yet.[else if lawl wall is in lalaland]'Dat was fun. You was clever.'[else]'If only you was our size, we could just take [']em. But you ain't. No offense. Maybe you can out-clever [']em like you did us.'[end if]"
 Rand	Leo	"[if Rand is washed up and Leo is washed up]We're washed up, boss. We could use a nice word.[else if Rand is fightin]This is no time for conversation![else]He flashes a thumbs-up at his friend.[end if]"
 Leo	Rand	"[if Rand is washed up and Leo is washed up]We're washed up, boss. We could use a nice word.[else if Leo is fightin]This is no time for conversation![else]He flashes a thumbs-up at his friend.[end if]"
-l-m	volt maze	"[maze-end-clue]."
-m-l	volt maze	"[maze-end-clue]."
-Tom Alvez	volt maze	"[maze-end-clue]."
+l-m	Elvira	"'I'm safe from her in this maze. I think?'"
+m-l	Elvira	"'I'm safe from her in this maze. I think?'"
+Tom Alvez	Elvira	"'I'm safe from her in this maze. I think?'"
+l-m	volt maze	"[maze-end-clue].'"
+m-l	volt maze	"[maze-end-clue].'"
+Tom Alvez	volt maze	"[maze-end-clue].'"
 l-m	m-l	"[maze-later]."
 l-m	Tom Alvez	"[maze-later]."
 m-l	l-m	"[maze-before]."
@@ -2322,12 +2343,14 @@ yapper	walleyes	"'Pft, foot soldiers, working for mere salary.'"
 yapper	Casper	"'Too much violence in his books, not enough money making.'"
 yapper	Elvira	"'She's called on the dialer a few times.'"
 Ray Eck	start tarts	"'Not mine.'" [start TOWERS]
+Ray Eck	Elvira	"He blathers on about what's wrong about her so annoyingly you almost sympathize with her."
 Ray Eck	toaster	"'Not nearly as sophisticated as my keycar.'"
 Ray Eck	keycar	"Ray Eck proceeds to [one of][or]re-[stopping]tell you about its features and so forth. What a YACKER, you think, seeing red."
 arid den	Nerd-Aid	"'YES! NERD-AID!' booms some unseen response system in the arid den."
 kid	Dr Yow	"[if kid is lonely and Dr Yow is in ropins]'I heard [he-she] was imprisoned. But I'd love to learn from [him-her].'[else if kid is lonely][one of]'Wow! You rescued [him-her]? You're almost as awesome as [he-she] is!' [kid-fol][or]'Tell me something I don't know. Or get Dr. Yow to. No offense'[stopping][else if kid is following]'I wanna see Dr. Yow!'[else][he-she-c]'s zoned you out, what with Dr. Yow [around-gone].[end if]"
 kid	bot boat	"'Man, I'm learning to build stuff! [if bot boat are off-stage]Like a bot boat! [end if]But I need someone to try them.'"
 kid	keycar	"'I'd love to make one of them! But that man said I wasn't grown up enough.'"
+kid	curst palace	"'It's big and scary! But it'd be fun to live in if it weren't.'"
 kid	Atheists	"'Boy! Tell them religion has a point, and they get huffy. Thanks for deep-sixin['] [']em!'"
 kid	hostile-is-he lot	"'Boy! Ask one question about their religion, they get huffy. Thanks for deep-sixin['] [']em!'"
 kid	lois the hostile	"'Boy! Ask one question about her religion, she gets mad. Thanks for deep-sixin['] her!'"
@@ -2336,7 +2359,7 @@ kid	gizmo	"[if gizmo is off-stage]'I could use a weird tool to build things.'[el
 kid	duck	"'I'm not real big on biology. But I guess ducks are cute.'"
 kid	toaster	"[if toaster is in coastlines]'Gee, thanks for it! I'll do something cool with, I mean to, it!''[else if toaster is in Danger Garden]You think back to the toaster in the garden. It might be worth giving the kid, as a nice gift, if you ever leave.[else]You show the toaster to the kid, who's very interested, but [he-she] says [he-she]'d feel guilty taking it before actually helping you.[end if]"
 Dr Yow	duck	"[if ravages is unvisited]'I miss my duck! When they captured me, I was clear in a west waste.'[else if duck is not in subsector]'I--I'm too exhausted to get my duck. If you could bring it back--it just needs to hear my voice.'[else]'Very loyal to me. It might ignore you now, but...thank you.'[end if]"
-Dr Yow	gizmo	"[if Dr Yow is in ropins]'Not enough sharp edges. It's for making things...crafting.'[else]I'm too tired to make anything, but maybe an eager apprentice...it's a newfangled device for younguns anyway.'[end if]"
+Dr Yow	gizmo	"[if Dr Yow is in ropins]'Not enough sharp edges. It's for making things...crafting.'[else]'I'm too tired to make anything, but maybe an eager apprentice...it's a newfangled device for younguns anyway.'[end if]"
 Dr Yow	bonker	"[one of]Dr. Yow facepalms a bit. You can imagine listening to that bonker was even worse if you were imprisoned, too[or]No need to dredge that up, again[stopping]."
 Dr Yow	lake	"[doc-on-lake]"
 Dr Yow	kid	"[if kid is in coastlines]'It would be fun to tutor someone!'[else if kid is in subsector]'I bet I could teach [him-her] if I kept it interesting and exciting.'[end if]"
@@ -2346,13 +2369,22 @@ Ed Yerg	curst palace	"'It can be something super special. [3-random]! If only...
 Ed Yerg	crocus	"[if ed yerg is reflexive]'I don't think much of unprofitable things like flowers. Used to, but not now.'[else if crocus is in lalaland]Don't push-poll him about your generosity.[else if crocus is in flowerpot]Just give him the crocus. Don't tease him.[else]'I haven't enjoyed flowers for a long time.'[end if]"
 Ed Yerg	flowerpot	"[if ed yerg is reflexive]'Worthless, with or without a flower in it.'[else]'From Daltho, eh? Very nice.'[end if]"
 Ed Yerg	Old Hat Daltho	"[if ed yerg is reflexive]'Hmph. Never did cash in on his talents as much as he should have.'[else if flowerpot is reflexive]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]" [end TOWERS]
-Ed Riley	Elvira	"'She got me this job here! She's gotten lots of people jobs, telling others what they can't do.'" [start OTTERS]
-macks	Elvira	"'She would be too good for us.'"
+Ed Riley	Elvira	"'She got me this job here! It's not REAL close to where she is, but hey. She's gotten lots of people jobs, telling others what they can't do. It's a lot more fun than I thought it would be.'" [start OTTERS]
+macks	Elvira	"'She would be too good for us. She deserves to have time by herself in the bulwark to the east.'"
 eels	Elvira	"'The eels crackle and light up menacingly at the sound of her name.'"
 Le Mer	Elvira	"'She must be defeated[if eels are reflexed]. You can lead the troops to do so[end if].'"
-Mr Lee	Elvira	"'She must be defeated[if p-2 is reflexed]. You must be the one to lead us[else]. If you are not with her, show me a sign[end if].'"
+Mr Lee	Elvira	"'She must be defeated[if p-2 is in lalaland]. You must be the one to lead us[else if ghoul hat is in lalaland]. You might be that person. Just one more sign[else]. If you are not with her, show me a sign[end if].'"
+ocelots	Elvira	"They shudder[at-elvira]."
+satyr	Elvira	"He shudders[at-elvira]."
+leopard	Elvira	"It shudders[at-elvira]."
+badger	Elvira	"It shudders[at-elvira]."
+snail	Elvira	"It shudders."
+snipe	Elvira	"It shudders."
+racoon	Elvira	"It shudders."
+hornets	Elvira	"The buzzing seems almost angry."
 Elmer	Merle	"'Almost as interesting as me.'"
 Merle	Elmer	"'Almost as interesting as me.'"
+Merle	Elvira	"'She is up to something interesting to the west, you'll have to admit. And you'll have to trust us.'"
 Elmer	Elvira	"'She is up to something interesting to the west, you'll have to admit. And you'll have to trust us.'"
 Elvira	Gretta	"'Not as unselfish as she thought she was.'"
 Elvira	Mr Lee	"'Hopeless. Paranoid.'"
@@ -2366,8 +2398,7 @@ Elvira	sly imp	"[if imp is in Anteroom]She's not going to HELP you with the imp[
 sly imp	Elvira	"'Oh, you know her too? Of course you don't! If you did, you'd know you couldn't go beyond here.'"
 whiners	Elvira	"They bang on about how Elvira would be furious if they let someone see the animals to the south."
 Elmer	Elvira	"'She is a great leader. You do not deserve to visit her to the west.'"
-Gretta	Elvira	"[if macks are visible]Gretta cringes even more at hearing Elvira's name, but she can't do much with those macks around, and neither can you[else]You are already talking about Elvira[end if]."
-Merle	Elvira	"'She is a great leader. You do not deserve to visit her to the west.'" [end OTTERS]
+Gretta	Elvira	"[if macks are visible]Gretta cringes even more at hearing Elvira's name, but she can't do much with those macks around, and neither can you[else]You are already talking about Elvira[end if]." [end OTTERS]
 curtis	rampage note	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'" [start OTHERS]
 curtis	mopeage rant	"'[if rampage note is off-stage]What note? You can't pin that on me.[else]None of your business.[end if]'"
 curtis	Art Erd	"[one of]Curtis breathes deeply and gives a look of contempt and shakes his head[or]No point asking again[stopping]. Curtis probably doesn't want to know if any fruit came from [him-her]."
@@ -2377,10 +2408,14 @@ Art Erd	curtis	"'There's people with silly science ideas like him, then there's 
 Art Erd	storage box	"'[if storage box is in scape space]It's...umm...worth something.[else]You bought it[end if].'"
 Art Erd	len craig	"[icy-len]"
 Dr Tera	len craig	"[icy-len]" [this just gets rid of an annoying error at the start]
+Art Erd	Elvira	"'She wasn't as bad as she was smeared to be!'"
 len craig	curtis	"[one of]'Nice fella, lots of ideas about agriculture, but no business sense. Just sits looking for someone to do his dirty work for him. You don't...'[or]You don't want to admit Curtis has you gofering. Though, really, it's been not too bad, with your powers.[stopping]"
 len craig	tekno-token	"[if tekno-token is off-stage]'We accept tekno-tokens, yes.'[else][one of]He inspects the token and says it's valid[or]If you ask again, Len might question its validity[stopping].[end if]"
 len craig	elvira	"'Less said, the better.'"
 len craig	Art Erd	"Len snorts and shakes his head. 'What a weasel.'" [end OTHERS]
+
+to say at-elvira:
+	say " at the name. You quickly give assurance where you stand"
 
 to say icy-len:
 	say "'Nicely? Len? Icy!' [he-she] mutters. 'Cut Len's cluster...'"
@@ -2478,10 +2513,10 @@ to say yeah-cute:
 	say "[if silly-acts is 1]The trolls patronize you not to try any more funny stuff.[else if silly-acts is 2]The trolls mention they can still take a little more of your destructive nonsense. They've seen worse. And dealt with it, too.[else]The trolls shoot you a look that says both stay here and get lost at once. Best not to bait them any more.[end if]";
 
 to say lost-faith:
-	say "'One of many of my flock who have lost faith.'";
+	say "'One of many of my flock who have lost faith they can help.'[no line break]";
 
 to say maze-end-clue:
-	say "'I was told not to congratulate myself if I made it to the start, from point Z to point A. Not that I was told the way through.'";
+	say "'I was told not to congratulate myself if I made it to the start, from point Z to point A. Not that I was told the way through";
 
 to say maze-before:
 	say "'Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have.'"
@@ -3025,11 +3060,11 @@ before quipping when player is in frontage (this is the Gretta checks rule):
 					now missed-one is true;
 			if missed-one is true:
 				say "'Oh--um, yeah, don't feel you're holding me back. I sort of want to get away, but I know a few things that could help you,' Gretta says. Stay and ask a bit more?";
-				unless the player yes-consents:
-					say "OK.";
+				if the player direct-consents:
+					say "A bit of awkward silence follows, but it's nowhere near as awkward as the macks['] conversation.[no line break]";
+					now hold-it-up is true;
 					continue the action;
-				say "A bit of awkward silence follows, but it's nowhere near as awkward as the macks['] conversation.[no line break]";
-				now hold-it-up is true;
+				say "OK.";
 				continue the action;
 
 instead of abouting or creditsing or xyzzying or requesting the score when rq is active:
@@ -7423,7 +7458,7 @@ before listening (this is the you can hear stuff some places rule):
 			say "Regular tavern bustle and storytelling once again, but nobody you need to talk to." instead;
 		say "Rodney and his not-so-merry men stand impassive, united." instead;
 	if reed's ale is visible:
-		say "'He mutters and moans how [one of]Dr. Eleesa endorses it[or]E-dealers have it so easy[or]Lad Reese likes the stuff[or]Dre Eleas looks great in that ad for Reed's Ale[in random order], turning red, unsure if he wants to remove his costume or put it back on." instead;
+		say "He mutters and moans how [one of]Dr. Eleesa endorses it[or]E-dealers have it so easy[or]Lad Reese likes the stuff[or]Dre Eleas looks great in that ad for Reed's Ale[in random order], turning red, unsure if he wants to remove his costume or put it back on." instead;
 	if ingrates are visible:
 		say "You see red as the ingrates['] voices sound like tin gears." instead;
 	if rewired robot is visible:
@@ -8208,6 +8243,7 @@ carry out abouting:
 		unless the player direct-consents:
 			say "OK." instead;
 	say "A Roiling Original is the sequel to Shuffling Around and part 2 in my Stale Tales Slate. I doubt there'll be a third, since I've milked the concept dry.[paragraph break]ARO was initially written for Spring Thing 2013 and contains the same mechanics as Shuffling Around but hopefully is different enough to make for a new, original, and enjoyable story, especially since I focused on story in the post-comp release. You can see more abut the people who helped the game come to be by typing CREDITS. There are a lot of them!";
+	say "[line break]A Roiling Original is intended to be POLITE on the Zarfian cruelty scale. It's possible to die, but the deaths are meant to be joke deaths. Barring a horrid bug, there is no way to make the game unwinnable, although you may lock yourself out of getting full points, which is just a vanity thing.";
 	ital-say "I really appreciate transcripts (even though this is a post-comp version,) as it's cool to tinker with what I made--or to be able to squash a bug, or to make a puzzle clearer. If you wish to send a transcript, you can do so by typing TRANSCRIPT at the command line, then mailing me that text file at [email]. ;, * and ? at the line's start will indicate comments.[paragraph break]You can directly report bugs or annoyances at [my-repo]--no need for an account." instead;
 
 part releaseing
@@ -11780,7 +11816,7 @@ section smoke cloud
 
 the smoke cloud is a not maingame not lumpable portal. diffic of smoke cloud is 1. "The tokers['] smoke cloud hovers--[if lectures is visited]but you don't want to go back[else]maybe there's a small 'adventure' inside[end if]."
 
-description of smoke cloud is "It hangs all around the tokers[if lectures is visited]. You don't really want to go back[otherwise]. But it probably can't harm you. Maybe it even leads to adventure[end if]."
+description of smoke cloud is "It hangs all around the tokers[if lectures is visited]. You don't really want to go back[otherwise]. But it probably can't harm you. Maybe it even leads to a small adventure if you ENTER it. I promise it won't kill you[end if]."
 
 go-region of smoke cloud is stores.
 
@@ -12316,6 +12352,9 @@ part people and things
 chapter old giant [NOTE: it's critical to say old giant and not giant, because giant = giant pin according to inform]
 
 the grouchy old giant is a person. "There's a grouchy old giant here sitting on the big bench[if Rude 'N Nuder is in Same Mesa], waving something called Rude [']N Nuder in the air[otherwise], going on some [i]tirades[r] about something or other[flail]. You're not sure if he needs his space or someone to listen to[end if]."
+
+does the player mean objasking about old giant when mrlp is routes: it is likely.
+does the player mean objasking generically old giant when mrlp is routes: it is likely. [ugh, nothing else works :/ ]
 
 description of grouchy old giant is "You can't do much more than listen to the giant. [if bench is reflexed]You're not sure what he's complaining about, but it seems he really needs to[else if elbow is reflexed]His [i]tirades are as loud as ever, his arms flailing high in the air[else]He seems to be half gesturing for you to have a seat, which is ironic, because only half a seat is left[end if]."
 
@@ -12860,7 +12899,7 @@ check examining lament mantle for the first time:
 	say "Man! This guy is a grouch. You have morals and all, but geez."
 
 check asking Brother Horbert about:
-	say "Brother Horbert shrugs. He doesn't know much about the outside world.";
+	say "Brother Horbert shrugs. 'I should know more about the exotic outside world, but it's hard, with the poison stripe.'";
 
 to say pious1: [otherwise the picture has trouble with randbla for random stuff]
 	now pious-state is whether or not pious-state is false;
@@ -12875,6 +12914,8 @@ does the player mean doing something with the list o toils:
 	it is unlikely.
 
 the list o toils is scenery in Cleric Circle. "[list-o-toils-text]"
+
+understand "list-o-toils" as list o toils.
 
 understand "recipe" as list o toils.
 
@@ -22097,8 +22138,8 @@ after fliptoing a mack-idea:
 		try talking to Gretta;
 		continue the action;
 	consider the macks hitting on rule;
-	if debug-state is true:
-		say "NOTE: The player can't have know this yet, but since you're testing, I'll let it fly.";
+	if debug-state is true and noun is not ment:
+		say "NOTE: The player can't have known this yet, but since you're testing, I'll let it fly.";
 		continue the action;
 	continue the action;
 
@@ -25017,6 +25058,8 @@ definition: a thing (called hintcand) is hintrelevant:
 		if mrlp is manor and highest heights is visited:
 			decide yes;
 		decide no;
+	if hintcand is old giant and mrlp is routes: [he is known-about before he comes on stage officially]
+		decide yes;
 	if hintcand is red writing:
 		decide yes;
 	if hintcand is o-s:
@@ -25095,6 +25138,7 @@ does the player mean objhinting an object in lalaland:
 	it is unlikely.
 
 definition: a thing (called hthing) is deregioned:
+	if mrlp is routes and hthing is giant pin, decide yes;
 	if location of hthing is nothing, decide no;
 	if location of hthing is lalaland, decide no;
 	if mrlp is not map region of location of hthing, decide yes;

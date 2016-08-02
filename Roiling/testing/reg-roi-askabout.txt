@@ -128,10 +128,6 @@ Your score has just gone up by one point
 >oyster
 Your score has just gone up by one point
 
->score
-WRONG
-Score in a scenario: 6 out of 11 total points in the current region, Stores.
-
 >tokers
 
 >ask tokers about tokers
@@ -142,17 +138,16 @@ They weep at hearing the name of a lost friend.
 "A bummer of authoritarianism, dude! She says her personality is all the drug you need!"
 >ask tokers about xyzzy
 The yawners aren't very answery, and you probably don't need a THC chat. They like you and all, but despite your adventuring, you'd never, like, invent a drug or do nothing as well as they do.
-
 >ask tokers about store k
 "Man, it was actually kind of sort of like fun in there. Until it wasn't."
 >ask tokers about smoke cloud
-"Er, free reefer!" they say. You'd probably have SOME sort of experience if you went through those fumes.
+"Er, free reefer!" they say. You'd probably have SOME sort of experience going through those fumes.
 
 >nestor
 >ask nestor about tokers
 Nestor gives them a thumbs-up, they cheer drippily, and he cheers back.
 >ask nestor about nestor
-Nestor mumbles about how his father is disappointed he didn't become a senator, just...he wants to just hang with his pals, if that's okay.
+"Friendship, all you need, dude!" Nestor smiles at the tokers.
 >ask nestor about elvira
 "So bogusly repressive!"
 >ask nestor about xyzzy
@@ -197,28 +192,26 @@ If he actually heard you, he'd yell a stunning rebuke to whatever he could prete
 Your score has just gone up by one point
 
 >ask horbert about horbert
-WRONG
+He mentions he cannot do much--the Same Mesa needs magic to undo the curse, but the list-o-toils is on the wall.
 >ask horbert about giant
-WRONG
+"Well-meaning, but his wrath is misplaced. I can hear him from here. You may learn from listening to him, but there is nothing to fear."
 >ask horbert about elvira
-WRONG
+"Perhaps she was good once. But her influence on religion is...disturbing."
 >ask horbert about xyzzy
-WRONG
+Brother Horbert shrugs. "I should know more about the exotic outside world, but it's hard, with the poison stripe."
 
 >ask brother horbert about spoon
-WRONG
+"It may help you figure where to go."
 >ask brother horbert about mantle
-WRONG
+Brother Horbert shudders a bit.
 >ask brother horbert about list-o-toils
-WRONG
+Why not examine the list yourself?
 >ask brother horbert about form
-WRONG
+Brother Horbert mutters something about the gift of second sight.
 >ask brother horbert about pat
-WRONG
+"One of many of my flock who have lost faith they can help."
 >ask brother horbert about oscar
-WRONG
->ask brother horbert about old giant
-WRONG
+"One of many of my flock who have lost faith they can help."
 
 >x toils
 Precise recipes
@@ -232,20 +225,22 @@ Idle Deli
 >despite
 Your score has just gone up by one point
 
+## rev ali is a person ?? defined for routes only, off-stage, chum of Elvira
+
 >ask pat about pat
-WRONG
+"Still holding on to the Idle Deli here."
 >ask pat about horbert
-WRONG
+"He means well, but he can't really HELP us."
 >ask pat about giant
-WRONG
+"Probably not good for business."
 >ask pat about elvira
-WRONG
+"Business is bad enough. I don't need trouble with her."
 >ask pat about xyzzy
-WRONG
+Don't have your guts to explore the seed pit, either.
 >ask pat about seed pit
-WRONG
+"Well, it didn't scare YOU, but it'll still scare customers. It was nicer before the Poison Stripe, but I can't afford to remove it."
 >ask pat about oscar
-WRONG
+"Him and his filthy pipe. Not welcome here."
 
 >out
 >across
@@ -257,21 +252,21 @@ Adobe Abode
 Your score has just gone up by one point
 
 >ask oscar about oscar
-WRONG
+Oscar grumbles. "I'm ME, you know?"
 >ask oscar about horbert
-WRONG
+"He means well, but he can't really HELP us."
 >ask oscar about giant
-WRONG
+"Keeps my home less quiet, I'm sure!"
 >ask oscar about elvira
-WRONG
+"Hmph. Glad she's kept away from ME, so far."
 >ask oscar about xyzzy
-WRONG
+He's too grouchy to give much help here. He mutters on about slotted dottles--which, well, you already have pipe soot.
 >ask oscar about ashtray
-WRONG
+Best not to call attention to your thievery.
 >ask oscar about pipe soot
-WRONG
+You don't need to mention you have it.
 >ask oscar about pat
-WRONG
+"I went there once. That SEED PIT...ugh."
 
 >out
 
@@ -279,15 +274,15 @@ WRONG
 Your score has just gone up by one point
 
 >ask old giant about bench
-WRONG
+There's not much dispute over the ownership. And the giant isn't trying to shoo you away. Maybe you should listen to the giant in general.
 >ask old giant about horbert
-WRONG
+The giant is sort of controlling the conversation, and he's bigger than you. You probably just need to sympathize and avoid getting hit by flailing limbs and so forth.
 >ask old giant about giant
-WRONG
+He is already talking about himself, his complaints, and so forth.
 >ask old giant about elvira
-WRONG
+The old giant becomes momentarily more vocal and upset.
 >ask old giant about xyzzy
-WRONG
+The giant is sort of controlling the conversation, and he's bigger than you. You probably just need to sympathize and avoid getting hit by flailing limbs and so forth.
 
 >astride
 >below
@@ -302,19 +297,13 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >ask armada about armada
-WRONG
+They're not in the mood for remotely reasonable conversation.
 >ask armada about giant
-WRONG
+They're not in the mood for remotely reasonable conversation.
 >ask armada about elvira
-WRONG
+They're not in the mood for remotely reasonable conversation.
 
 >beneath
-Your score has just gone up by one point
-DEBUG INFO: Taking away a max point.
-
->score
-WRONG
-
 Sun-Spared Underpass
 
 >until
@@ -363,8 +352,6 @@ Pallid Li'L Pad
 DEBUG INFO: Taking away a max point.
 
 >posf
->score
-WRONG
 
 >despair
 Your score has just gone up by one point
@@ -375,11 +362,8 @@ Boredom Bedroom
 >deal
 Your score has just gone up by one point
 DEBUG INFO: Taking away a max point.
-
->score
-WRONG
-
 Dour Tan Rotunda
+
 >desire
 Your score has just gone up by one point
 Econ-Cone
@@ -387,11 +371,11 @@ Econ-Cone
 Your score has just gone up by one point
 
 >ask statue about elvira
-WRONG
+Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that.
 >ask statue about statue
-WRONG
+Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that.
 >ask statue about xyzzy
-WRONG
+Trevis Vister has strong opinions on everything and all kinds of success plans, but (un)fortunately his statue can't relate any of that.
 
 >ponder
 FiefCo Office
@@ -428,8 +412,6 @@ Your score has just gone up by one point
 Taking away a max point.
 
 >posf
->score
-WRONG
 
 >e
 
@@ -437,30 +419,47 @@ WRONG
 >w
 >w
 >n
+>n
 >e
 >e
 >e
 >n
 >w
 >n
+>n
+
+>n
+>w
+>w
+>n
+>n
+>e
+>e
+>e
+>n
+>w
+>n
+
 >ask lev matzo about elvira
-WRONG
+"I'm safe from her in this maze. I think?"
 >ask lev matzo about lev matzo
-WRONG
+"I'm here to help, just by being me, apparently."
 >ask lev matzo about xyzzy
-WRONG
+"I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be."
 >ask lev matzo about volt maze
-WRONG
+"I was told not to congratulate myself if I made it to the start, from point Z to point A. Not that I was told the way through."
 >ask lev matzo about matzo lev
-WRONG
+"I'm here to help, just by being me, apparently."
 >ask lev matzo about tom alvez
-WRONG
+"Oh! He'll drop by later. I hope you don't need his help too much."
 
 >scan lev matzo
+>n
 
 >n
 >w
 >w
+>n
 >n
 >e
 >e
@@ -469,23 +468,25 @@ WRONG
 >w
 >n
 >ask matzo lev about elvira
-WRONG
+"I'm safe from her in this maze. I think?"
 >ask matzo lev about matzo lev
-WRONG
+"I'm here to help, just by being me, apparently."
 >ask matzo lev about xyzzy
-WRONG
+"I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be."
 >ask matzo lev about volt maze
-WRONG
+"I was told not to congratulate myself if I made it to the start, from point Z to point A. Not that I was told the way through."
 >ask matzo lev about lev matzo
-WRONG
+"I'm here to help, just by being me, apparently."
 >ask matzo lev about tom alvez
-WRONG
+"Oh! He'll drop by later. I hope you don't need his help too much."
 
->scan matzo lev
+>sb matzo lev
+>n
 
 >n
 >w
 >w
+>n
 >n
 >e
 >e
@@ -494,17 +495,19 @@ WRONG
 >w
 >n
 >ask tom alvez about elvira
-WRONG
+"I'm safe from her in this maze. I think?"
 >ask tom alvez about tom alvez
-WRONG
+"I'm here to help, just by being me, apparently."
 >ask tom alvez about xyzzy
-WRONG
+"I was told I was left here to help someone who needed it and might need a clue and---well, they didn't tell me what the clue would be."
 >ask tom alvez about volt maze
-WRONG
+"I was told not to congratulate myself if I made it to the start, from point Z to point A. Not that I was told the way through."
 >ask tom alvez about lev matzo
-WRONG
+"Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have."
 >ask tom alvez about matzo lev
-WRONG
+"Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have."
+
+>n
 
 >s
 Burnt Brunt
@@ -1036,33 +1039,28 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 Topside Deposit
 
->score
-WRONG
-
 >get tarts
 >put tarts in toaster
 >xray keycar
 
 >posf
->score
-WRONG
 
 >ask ray eck about settler
-WRONG
+Ray Eck just won't shut up about what the settler could be for, and why it doesn't do anything. You notice its colors don't change even when you switch it to and from cheat mode, which--well, that's a pretty big help.
 >ask ray eck about start tarts
 WRONG
 >ask ray eck about toaster
-WRONG
+"Not nearly as sophisticated as my keycar."
 >ask ray eck about keycar
-WRONG
+Ray Eck proceeds to tell you about its features and so forth. What a YACKER, you think, seeing red.
 >ask ray eck about elvira
-WRONG
+He blathers on about what's wrong about her so annoyingly you almost sympathize with her.
 >ask ray eck about ray eck
-WRONG
+Don't get him started.
 >ask ray eck about xyzzy
-WRONG
+"Hmm? That's not as interesting as my bright red keycar, here."
 >ask ray eck about curst palace
-WRONG
+"You'll never get there!"
 
 >creaky
 Your score has just gone up by one point
@@ -1073,20 +1071,20 @@ Scope Copse
 >ask rewired about elvira
 WRONG
 >ask rewired about rewired
-WRONG
+"I have been REWIRED to let you by!"
 >ask rewired about xyzzy
 WRONG
 >ask rewired about curst palace
-WRONG
+"You'll never get there!"
 
 >ask muscly hulk about elvira
 WRONG
 >ask muscly hulk about muscly hulk
-WRONG
+He kind of stumbles with dialogue. Maybe you can make him stumble physically.
 >ask muscly hulk about xyzzy
-WRONG
+He kind of stumbles with dialogue. Maybe you can make him stumble physically.
 >ask muscly hulk about curst palace
-WRONG
+"You'll never get there!"
 
 >weirder
 Your score has just gone up by one point
@@ -1096,11 +1094,11 @@ Your score has just gone up by one point
 >ask snider diners about elvira
 WRONG
 >ask snider diners about snider diners
-WRONG
+"We are EATING," they exclaim, drily. You'd like to rain on their parade, even a little.
 >ask snider diners about xyzzy
-WRONG
+They ignore you, asking is DERN coming, until they're red, but you sense they have a bit more to say.
 >ask snider diners about curst palace
-WRONG
+"You'll never get there!"
 
 >n
 Baldest Blasted Saltbed
@@ -1108,20 +1106,20 @@ Baldest Blasted Saltbed
 >ask iprune about elvira
 WRONG
 >ask iprune about iprune
-WRONG
+"I?! Prune?!" it cries, turning red at a perceived slight.
 >ask iprune about xyzzy
-WRONG
+"I may be UNRIPE, but I'm bigger than you!" it cries. "If I was the same size, maybe you could use words to get me to let you by. But we aren't, so I'm not." Hmph.
 >ask iprune about curst palace
-WRONG
+"You'll never get there!"
 
 >ask pirates about elvira
 WRONG
 >ask pirates about pirates
-WRONG
+Harsh arrhs and the sound of shook hooks follow your attempt to converse.
 >ask pirates about xyzzy
-WRONG
+"Yarrh, Harry," they shout, and one of them makes fun of your skin tone. You feel like a spiter, hoping they get skin cancer.
 >ask pirates about curst palace
-WRONG
+"You'll never get there!"
 
 >pastier
 Your score has just gone up by one point
@@ -1135,23 +1133,20 @@ Anemic Cinema
 >ask sweatier about elvira
 WRONG
 >ask sweatier about sweatier
-WRONG
+"Trees! I, aw..." he says, making you see red. "I'm obviously sweatier than you, yet I am far less tired!"
 >ask sweatier about xyzzy
-WRONG
+"Trees! Aw, I..." he says, making you see red. "I'm obviously sweatier than you, yet I am far less tired!"
 >ask sweatier about curst palace
-WRONG
+"You'll never get there!"
 
 >ask ingrates about elvira
 WRONG
 >ask ingrates about ingrates
-WRONG
+They swat imaginary red ire-gnats as they brush you off.
 >ask ingrates about xyzzy
-WRONG
+You're shocked by the angriest interruption imaginable.
 >ask ingrates about curst palace
-WRONG
-
->married
-Your score has just gone up by one point
+"You'll never get there!"
 
 >ask admirer about elvira
 WRONG
@@ -1160,7 +1155,10 @@ WRONG
 >ask admirer about xyzzy
 WRONG
 >ask admirer about curst palace
-WRONG
+"You'll never get there!"
+
+>married
+Your score has just gone up by one point
 
 >n
 Shaven Havens
@@ -1173,29 +1171,31 @@ Savager Ravages
 >ask grailman about elvira
 WRONG
 >ask grailman about grailman
-WRONG
+"You do find me alarming, don't you? I always give 110%. No-one passes Liam Garn!"
 >ask grailman about xyzzy
-WRONG
+"You do find me alarming, don't you? I always give 110%. No-one passes Liam Garn!"
 >ask grailman about curst palace
-WRONG
+"You'll never get there!"
 
 >ask inapt paint about elvira
 WRONG
 >ask inapt paint about inapt paint
-WRONG
+He ignores your conversation
 >ask inapt paint about xyzzy
-WRONG
+He ignores your conversation
 >ask inapt paint about curst palace
-WRONG
+"You'll never get there!"
 
 >ask reed's about elvira
 WRONG
 >ask reed's about reed's
-WRONG
+He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
 >ask reed's about xyzzy
-WRONG
+He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
 >ask reed's about curst palace
-WRONG
+"You'll never get there!"
+>listen
+He mutters and moans
 
 >sewed
 
@@ -1206,11 +1206,11 @@ Ole Shrine Shoreline
 >ask lot about elvira
 WRONG
 >ask lot about lot
-WRONG
+They complain about something irrelevant to what you asked. Hostile!
 >ask lot about xyzzy
-WRONG
+They complain about something irrelevant to what you asked. Hostile!
 >ask lot about curst palace
-WRONG
+"You'll never get there!"
 
 >w
 >gs
@@ -1218,11 +1218,12 @@ WRONG
 >ask lois the hostile about elvira
 WRONG
 >ask lois the hostile about lois the hostile
-WRONG
+She complains about something irrelevant to what you asked. Hostile!
 >ask lois the hostile about xyzzy
-WRONG
+She complains about something irrelevant to what you asked. Hostile!
 >ask lois the hostile about curst palace
-WRONG
+"You'll never get there!"
+
 >w
 >gs
 >e
@@ -1232,11 +1233,11 @@ WRONG
 >ask organised about elvira
 WRONG
 >ask organised about organised
-WRONG
+The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go south.
 >ask organised about xyzzy
-WRONG
+The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go south.
 >ask organised about curst palace
-WRONG
+"You'll never get there!"
 
 >grandiose
 >n
@@ -1245,11 +1246,11 @@ Actionless Coastline
 >ask atheists about elvira
 WRONG
 >ask atheists about atheists
-WRONG
+They start logic-bashing, when one of the junior atheists tries to make a point. 
 >ask atheists about xyzzy
-WRONG
+They start logic-bashing, when one of the junior atheists tries to make a point. 
 >ask atheists about curst palace
-WRONG
+"You'll never get there!"
 
 >hastiest
 
@@ -1260,7 +1261,7 @@ WRONG
 >ask smart kid about xyzzy
 WRONG
 >ask smart kid about curst palace
-WRONG
+"It's big and scary! But it'd be fun to live in if it weren't."
 
 >s
 >s
@@ -1422,11 +1423,13 @@ WRONG
 Your score has just gone up by one point
 
 >ask ed riley about elvira
-WRONG
+"She got me this job here! It's not REAL close to where she is, but hey. She's gotten lots of people jobs, telling others what they can't do. It's a lot more fun than I thought it would be."
 >ask ed riley about ed riley
-WRONG
+Ed Riley blathers how he can stand up to WHO DO YOU THINK YOU ARE and all that sort of thing. You claim you were just trying to get to know him, then he says THEN YOU'LL KNOW I NEED TO GUARD THE WAY WEST, HERE. He speaks very authoritatively.
+>ask ed riley about ed riley
+You don't need another verbal smackdown, at least not in Ed's current tone of voice.
 >ask ed riley about xyzzy
-WRONG
+"Stay there in the rye, idle! Yielder!" he booms, and then he bangs on about not trying to sing or attack him. Be nice to quiet him down, somehow.
 
 >reedily
 Your score has just gone up by one point
@@ -1441,11 +1444,13 @@ Gent-Fora Frontage
 >score
 
 >ask macks about elvira
-WRONG
+"She would be too good for us. She deserves to have time by herself in the bulwark to the east."
 >ask macks about macks
-WRONG
+Their opinion would be slightly biased. You can probably learn more about them by observing them.
 >ask macks about xyzzy
-WRONG
+"Talking's stalking," they yell at you before continuing to hit on Gretta.
+
+>au -1
 
 >bossily
 Your score has just gone up by one point.
@@ -1455,11 +1460,7 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >ask gretta about elvira
-WRONG
->ask gretta about gretta
-WRONG
->ask gretta about xyzzy
-WRONG
+She's heard enough rambling conversation on others' terms, here.
 
 >1
 >3
@@ -1471,17 +1472,17 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >ask le mer about elvira
-WRONG
+"She must be defeated. You can lead the troops to do so."
 >ask le mer about le mer
-WRONG
+It's kind of single-minded, but it's impressive the moat talks at all. "The eels still distrust you, though I feel you may not need the eels' energy."
 >ask le mer about xyzzy
-WRONG
+Again, ethereal babbling. "The eels still distrust you, though I feel you may not need the eels' energy."
 >ask eels about elvira
-WRONG
+"The eels crackle and light up menacingly at the sound of her name."
 >ask eels about eels
-WRONG
+"Eels..." / "Fib-beliefs?" Their attention span seems short, and they have little to say. You need one word, useless on its own yet powerful.
 >ask eels about xyzzy
-WRONG
+"Eels..." / "Fib-beliefs?" Their attention span seems short, and they have little to say. You need one word, useless on its own yet powerful.
 
 >s
 >atom
@@ -1489,22 +1490,29 @@ Your score has just gone up by one point
 
 >s
 >ask mr lee about elvira
-WRONG
+"She must be defeated. If you are not with her, show me a sign."
 >ask mr lee about mr lee
-WRONG
+You fail to get anywhere. Between the ghoul hat and Rev. Howe's gaze, Mr. Lee seems half-possessed, though you wonder if you need a double-charge after talking to the eels.
+>although
+>ask mr lee about elvira
+"She must be defeated. You might be that person. Just one more sign."
+>however
+>ask mr lee about elvira
+"She must be defeated. You must be the one to lead us."
 >ask mr lee about xyzzy
-WRONG
+"You have gained my trust and your powers. Go on!"
+
 >n
 
 >e
 >n
 
 >ask sly imp about elvira
-WRONG
+"Oh, you know her too? Of course you don't! If you did, you'd know you couldn't go beyond here."
 >ask sly imp about sly imp
-WRONG
+It nods its head as if to say it's all right and it knew you'd ask.
 >ask sly imp about xyzzy
-WRONG
+It could talk circles around you as-is. So talking may not be the way to get past it.
 
 >enragedly
 Your score has just gone up by one point
@@ -1518,29 +1526,29 @@ Wickeder Wire Deck
 Your score has just gone up by one point
 
 >ask ocelots about elvira
-WRONG
+They shudder at the name. You quickly give assurance where you stand.
 >ask ocelots about ocelots
-WRONG
+They seem too shy to talk.
 >ask ocelots about xyzzy
-WRONG
+Flimsy I'm-flys.
 >ask satyr about elvira
-WRONG
+He shudders at the name. You quickly give assurance where you stand.
 >ask satyr about satyr
-WRONG
+Any attempt at conversation would be banefully unflyable.
 >ask satyr about xyzzy
-WRONG
+Any attempt at conversation would be banefully unflyable.
 >ask leopard about elvira
-WRONG
+It shudders at the name. You quickly give assurance where you stand.
 >ask leopard about leopard
-WRONG
+Any attempt at conversation would be banefully unflyable.
 >ask leopard about xyzzy
-WRONG
+Any attempt at conversation would be banefully unflyable.
 >ask badger about elvira
-WRONG
+It shudders at the name. You quickly give assurance where you stand.
 >ask badger about badger
-WRONG
+It covers its exposed parts and turns away.
 >ask badger about xyzzy
-WRONG
+Any attempt at conversation would be banefully unflyable.
 
 >coolest
 Your score has just gone up by one point
@@ -1554,14 +1562,14 @@ Tapering Inert Gap
 >s
 >s
 
-Rote-Moan Anteroom
+Rote Moan Anteroom
 
 >ask whiners about elvira
-WRONG
+They bang on about how Elvira would be furious if they let someone see the animals to the south.
 >ask whiners about whiners
-WRONG
+Rational conversation won't make the whiners budge. You probably need to make them quieter.
 >ask whiners about xyzzy
-WRONG
+Rational conversation won't make the whiners budge. You probably need to make them quieter.
 
 >loathingly
 Your score has just gone up by one point
@@ -1571,39 +1579,41 @@ Your score has just gone up by one point
 >s
 Perverse Preserve
 
->ask snail about elvira
-WRONG
->ask snail about snail
-WRONG
->ask snail about xyzzy
-WRONG
->ask snipe about elvira
-WRONG
->ask snipe about snipe
-WRONG
->ask snipe about xyzzy
-WRONG
->ask hornets about elvira
-WRONG
->ask hornets about hornets
-WRONG
->ask hornets about xyzzy
-WRONG
->ask racoon about elvira
-WRONG
->ask racoon about racoon
-WRONG
->ask racoon about xyzzy
-WRONG
-
 >parrot
-Your score has just gone up by one point
+
 >snail
 Your score has just gone up by one point
 >hornets
 Your score has just gone up by one point
 >raccoon
 Your score has just gone up by one point
+>snipe
+Your score has just gone up by one point
+
+>ask snail about elvira
+It shudders.
+>ask snail about snail
+Schlurrrp.
+>ask snail about xyzzy
+Schlurrrp.
+>ask snipe about elvira
+It shudders.
+>ask snipe about snipe
+The snipe rustles back and forth a bit.
+>ask snipe about xyzzy
+The snipe rustles back and forth a bit.
+>ask hornets about elvira
+The buzzing seems almost angry.
+>ask hornets about hornets
+The hornets just buzz.
+>ask hornets about xyzzy
+The hornets just buzz.
+>ask racoon about elvira
+It shudders.
+>ask racoon about racoon
+The racoon skitters around.
+>ask racoon about xyzzy
+The racoon skitters around.
 
 >n
 Near-Moot Anteroom
@@ -1612,22 +1622,24 @@ Near-Moot Anteroom
 >w
 >w
 
+>ask merle about me
+Nobody in the game can tell you anything new about yourself. Well, anything new and helpful.
 >ask elmer about merle
-WRONG
+"Almost as interesting as me."
 >ask merle about elmer
-WRONG
+"Almost as interesting as me."
 >ask elmer about elvira
-WRONG
+"She is up to something interesting to the west, you'll have to admit. And you'll have to trust us."
 >ask elmer about elmer
-WRONG
+"Slightly more interesting than my friend."
 >ask elmer about xyzzy
-WRONG
+"We're Elvira's monster mentors. Making REAL animals. You don't need Eden." They
 >ask merle about elvira
-WRONG
+"She is up to something interesting to the west, you'll have to admit. And you'll have to trust us."
 >ask merle about merle
-WRONG
+"Slightly more interesting than my friend."
 >ask merle about xyzzy
-WRONG
+"We're Elvira's monster mentors. Making REAL animals. You don't need Eden." They
 
 >raptor
 Your score has just gone up by one point
@@ -1647,41 +1659,27 @@ WTF FTW
 >au -1
 
 >ask elvira about elvira
-WRONG
->undo
->ask elvira about elvira
-WRONG
->undo
+She sniffs haughtily. As if you have to ask! As if you're NOT too biased to believe the good things about her!
 >ask elvira about xyzzy
-WRONG
->undo
+"I watch a witch," you mutter. "Nice try. Tiny rec. Y'cretin." You're not going to out-debate the vexin' vixen.
 >ask elvira about gretta
-WRONG
->undo
+"Not as unselfish as she thought she was."
 >ask elvira about mr lee
-WRONG
->undo
+"Hopeless. Paranoid."
 >ask elvira about eels
-WRONG
->undo
+"Their electric shocks would be useful--but they didn't let me harness them."
 >ask elvira about le mer
-WRONG
->undo
+"Not dangerous."
 >ask elvira about merle
-WRONG
->undo
+"He will get his reward. Even if he hadn't let you by."
 >ask elvira about elmer
-WRONG
->undo
+"He will get his reward. Even if he hadn't let you by."
 >ask elvira about ed riley
-WRONG
->undo
+"I didn't expect much from him."
 >ask elvira about whiners
-WRONG
->undo
+You explain you got past them, and she shrugs. Henchmen these days. That's why they're henchmen and not leaders.
 >ask elvira about sly imp
-WRONG
->undo
+You explain you got past it, and she shrugs. Henchmen these days. That's why they're henchmen and not leaders.
 
 >play whistle
 
@@ -1771,7 +1769,9 @@ Len snorts and shakes his head. "What a weasel."
 >ask len about len
 "I'm a businessman. A trader. Lots of stuff if you know how to haggle."
 >ask len about xyzzy
-Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge. It doesn't seem terribly relevant, but eh.
+Len proceeds to tell you how he was known as Icy Len til he started doing things nicely and even suggests you use nonverbal cues as a way to get an edge. You get the feeling you asked about something irrelevant, but that advice might help you in general.
+>ask len about xyzzy
+Len's eyes glaze over a bit. Nothing personal, just business
 
 >among
 Your score has just gone up by one point.
@@ -1806,7 +1806,7 @@ Dr. Tera shrugs, then does the "let's swap" hand gesture. Hmm, what could you gi
 >ask art about art
 "Traded a dead rat..." he mumbles.
 >ask art about xyzzy
-Art Erd shrugs, then does the "let's swap" hand gesture. Hmm, what could you give he to get that so-great storage?
+Art Erd shrugs, then does the "let's swap" hand gesture. Hmm, what could you give him to get that so-great storage?
 >ask art erd about curtis
 "There's people with silly science ideas like him, then there's businessmen like ME. Pfft."
 >ask art erd about storage box
@@ -1833,7 +1833,7 @@ Your score has just gone up by one point.
 >n
 You Did Great
 
-* current_focus
+* _current_focus
 #>{include} _only-manor
 #>{include} _only-routes
 #>{include} _only-troves
@@ -1896,45 +1896,32 @@ Rustic Citrus
 >undo
 >undo
 
-* only-manor
+* _only-manor
 
 >{include} _manor
 
-* only-stores
+* _only-stores
 
 >gonear strip
 >{include} _stores
 
-* only-routes
+* _only-routes
 
 >gonear same mesa
 >{include} _routes
 >{include} _summarize
 
-* only-troves
+* _only-troves
 
 >gonear rathole
 >{include} _troves
 >{include} _summarize
 
-* only-presto
-
->gonear gyre
->{include} _presto
->{include} _summarize
-
-* only-oyster
+* _only-oyster
 
 >purloin settler
 >gonear posh hops shop
 >{include} _oyster
->{include} _summarize
-
-* only-towers
-
->seed 1
->gonear trefoil
->{include} _towers
 >{include} _summarize
 
 * only-otters
@@ -1944,7 +1931,21 @@ Rustic Citrus
 >{include} _otters
 >{include} _summarize
 
-* only-others
+* only-towers
+
+>seed 1
+>gonear trefoil
+>{include} _towers
+>{include} _summarize
+
+* only-presto
+
+>purloin settler
+>gonear gyre
+>{include} _presto
+>{include} _summarize
+
+* _only-others
 
 >gonear rustic citrus
 >{include} _others
