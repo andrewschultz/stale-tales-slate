@@ -11005,15 +11005,30 @@ to show-bluable:
 	if QQ is 0:
 		swi-say "You see nothing unusual after doing so.[line break]";
 		continue the action;
-	swi-say "[one of]You switch the settler, then shake it. Your vision swirls for a minute, and o[or]Switch, shake, swirl. O[stopping]nly [bluable-list] [if QQ is 1 and QQQ is not plural-named]is[else]are[end if] visible. It's a bit of a headache to stare too long, so you switch it off.[line break]";
+	say "[one of]You switch the settler, then shake it. Your vision swirls for a minute[or]Swish, shake, swirl[stopping]. ";
+	if QQ is 1:
+		say "Only";
+	else if QQ < 4:
+		say "A few things:";
+	else:
+		say "Many things:";
+	say " [bluable-list] [if QQ is 1 and QQQ is not plural-named]is[else]are[end if] visible. It's a bit of a headache to stare too long, so you switch it off.[line break]";
 	if ever-switched is false:
 		say "[line break]Wow! That's handy! The switch shows you which items identifiably change definability!";
 		now ever-switched is true;
+	if ever-blur was false and ever-blur is false:
+		say "[line break]You'd guess the blurry stuff clues something more important.";
+
+ever-blur is a truth state that varies.
 
 to say bluable-list:
 	let QQ2 be number of bluable things;
 	let inc be 0;
+	let riv-pra be false;
 	repeat with bloo running through bluable things:
+		if riv-pra is true:
+			if bloo is rivets or bloo is prai:
+				next;
 		increment inc;
 		if inc is QQ2 and QQ2 > 1:
 			say " and ";
@@ -11034,6 +11049,10 @@ sorer bogey	"an outline of the sorer bogey"
 eeks	"some cartoony representation of EEKS"
 Elmer	"Elmer and Merle"
 Merle	--
+lager	"the can of Large Regal Lager (with the rubbish story on it lit up too)"
+rubbish story	--
+prai	"the rivets spelling PRAISE"
+rivets	"the rivets spelling PRAISE"
 
 to swi-say (sst - indexed text):
 	if sss is false:
@@ -11048,6 +11067,8 @@ definition: a thing (called candi) is bluable:
 	if candi is ghostly, no;
 	if candi is uncluing, no;
 	if candi is tunes, no;
+	if player is in same mesa:
+		if candi is dingy dwelling or candi is grubby restaurant, decide no;
 	if candi is crate and player is in plains:
 		if c2 is in plains, yes;
 	if candi is haunter:
@@ -11328,7 +11349,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "sl"	false	"Shortcut command to turn slider on."	"sl"	false
 "sy"	false	"Shortcut command to scan with hints, overriding the equals sign and the current setting."	"sy"	false
 "sn"	false	"Shortcut command to scan without hints, overriding the equals sign and the current setting."	"sn"
-"ss"	false	"Shortcut command to shake the settler and see what all in the general area needs changing."	"ss"	true
+"ss"	false	"Shortcut command to shake the settler and see what all in the general area needs changing[if ever-blur is true]. Blurry stuff is a bit more auxiliary[end if]."	"ss"	true
 "hacking" or "hack"	false	"A reminder that cussing won't make a computer work any better, and you need to get everything set up first on your comfy labs slab, and only then should you take action with various technical programming activities."	"hacking"	true	presto
 "methods"	true	"You probably want to talk to and examine everyone. Even hostile people drop clues when asked about themselves, or stuff in general. Searching and reading writing, or even trying to run past or attack enemies, can offer information, too."	"methods"	false
 "red"	true	"Stuff that's all red, or an idea that makes you or someone see red, is all wrong, which is a clue in its own way."	"red"	true
@@ -12514,7 +12535,7 @@ instead of doing something with rs:
 
 chapter scripture picturers
 
-Scripture picturers are reflexive flippable scenery in Same Mesa. "[do-i-switch]Parish of Satin Saint Astin[paragraph break][if Cleric Circle is unvisited]Six letters below: [dssd][otherwise]Pal, Meet a Temple! Hubris-b-rubbish![end if]".
+the scripture picturers are reflexive flippable scenery in Same Mesa. "[do-i-switch]Parish of Satin Saint Astin[paragraph break][if Cleric Circle is unvisited]Six letters below: [dssd][otherwise]Pal, Meet a Temple! Hubris-b-rubbish![end if]".
 
 switch-pic-next is a truth state that varies.
 
@@ -13120,7 +13141,7 @@ to say to-o:
 
 chapter narrow cracks
 
-the narrow cracks are scenery. "[to-o]"
+the narrow cracks are plural-named scenery. "[to-o]"
 
 check taking narrow cracks:
 	say "Take a hint from them, where they may lead you." instead;
@@ -13914,7 +13935,7 @@ chapter how to last (1 of 2)
 
 section lobster
 
-an extra fancy lobster meal is in FiefCo Office. it is auxiliary. description is "Oh, man, it looks awesome. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if stream is reflexed]--though you are feeling confident enough, having dealt with the stream[end if].". fancy lobster meal is vanishing. initial appearance of lobster meal is "A meal's on the desk. Lobster! You may or may not have the confidence to eat it."
+an extra fancy lobster meal is in FiefCo Office. description is "Oh, man, it looks awesome. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if stream is reflexed]--though you are feeling confident enough, having dealt with the stream[end if].". fancy lobster meal is vanishing. initial appearance of lobster meal is "A meal's on the desk. Lobster! You may or may not have the confidence to eat it."
 
 a-text of lobster is "RYRRRYR". b-text of lobster is "RGRPPGP". parse-text of lobster is "x[sp]o[sp]x[sp]s[sp]t[sp]e[sp]r". lobster is parse-spoilable.
 
@@ -13940,7 +13961,7 @@ instead of doing something to the salt shaker:
 	if action is procedural, continue the action;
 	say "[if shaker is reflexed]The previous occupant probably had it there to salt away some dumb motivational saying[else]You salted this puzzle away, already[end if]."
 
-the salt shaker is auxiliary scenery in FiefCo Office.
+the salt shaker is scenery in FiefCo Office.
 
 description of salt shaker is "It has a few wise sayings: Be worth your [i]SALT[r]. Salt helps things preserve themselves. And, oh, wait, there's no way to get the salt out. It's just a cheap motivational gimmick!"
 
@@ -17173,7 +17194,7 @@ understand "fish" and "bullies" as carps when carps-pref is true.
 
 the carps are plural-named nasty vanishing people in Anger Range. "They are sneering and teasing the poor trout."
 
-understand "craps" as a mistake ("You have no dice to tempt the craps with. Or large amounts of money. Perhaps you'll need to try something more violent.") when player is in anger range and carps are in anger range.
+understand "craps" as a mistake ("You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.") when player is in anger range and carps are in anger range.
 
 description of carps is "They are sneering and teasing the poor trout. You're bigger than them, by two feet."
 

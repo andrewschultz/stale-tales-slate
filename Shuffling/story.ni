@@ -5781,7 +5781,7 @@ section forest portal
 
 does the player mean entering the forest-x: it is likely. [forest is first in alphabet and easiest]
 
-the forest-x is a privately-named thing. it is fixed in place. the printed name of forest-x is "forest". "There's a forest here where store F was[if forest is solved], but you probably don't need to go back there[end if].". forest-x is a portal. forest-x is fixed in place.
+the forest-x is a proper-named privately-named thing. it is fixed in place. the printed name of forest-x is "the forest". "There's a forest here where store F was[if forest is solved], but you probably don't need to go back there[end if].". forest-x is a portal. forest-x is fixed in place.
 
 understand "forest" as forest-x.
 
@@ -5803,7 +5803,7 @@ check entering the forest-x:
 
 section sortie portal
 
-the sortie-x is a portal. "Some stairs lead down from the wreckage of store I, further than you can see[if sortie is solved]. But no sense looking--you know what's there, and you've taken care of it[end if]."
+the sortie-x is a privately-named proper-named portal. "Some stairs lead down from the wreckage of store I, further than you can see[if sortie is solved]. But no sense looking--you know what's there, and you've taken care of it[end if]."
 
 check climbing sortie-x:
 	try entering sortie-x instead;
@@ -5812,7 +5812,7 @@ check exiting in trips strip:
 	if trips strip is visible:
 		try entering sortie-x instead;
 
-the printed name of sortie-x is "sortie". understand "sortie" and "stairs" and "stairway" as sortie-x. sortie-x is fixed in place.
+the printed name of sortie-x is "the sortie". understand "sortie" and "stairs" and "stairway" as sortie-x. sortie-x is fixed in place.
 
 description of sortie-x is "It's a stairway. For making a sortie. Exiting[sortie-have]"
 
@@ -5832,11 +5832,11 @@ check entering sortie-x:
 
 section metros portal
 
-the metros-x are a plural-named and privately-named portal. "You see a down escalator here[if metros is solved], but it's not worth revisiting the metros[end if]."
+the metros-x are a plural-named privately-named portal. "You see a down escalator here[if metros is solved], but it's not worth revisiting the metros[end if]."
 
 description of metros-x is "The escalator has TO THE METROS scrawled on it."
 
-the printed name of metros-x is "metros".
+the printed name of metros-x is "the metros".
 
 understand "metros" as metros-x.
 

@@ -1,0 +1,950 @@
+## reg-sa-nudges.txt
+## nudges for Shuffling Around: the big test
+##
+## nudgeleft.txt is the file to look for
+
+
+** game: /home/andrew/prt/debug-shuffling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* _intro
+
+>opt in
+>tnt
+
+>in
+A Dry Yard
+
+>blot
+Your score has just gone up by one point.
+>bugle
+Your score has just gone up by one point.
+
+>in
+Thickest Thickets
+>goat
+Your score has just gone up by one point.
+>slander
+Your score has just gone up by one point.
+
+>in
+
+>gateman
+
+>get gadget
+>scan attics
+>ask gateman about gadget
+
+>get phial
+>ask gateman about cabinet
+>get phial
+
+>angle
+WRONG
+>glean
+WRONG
+
+>attics
+>in
+Trips Strip
+
+* _trips
+
+>angle
+WRONG
+>glean
+WRONG
+
+>sorbet
+Your score has just gone up by one point.
+>nice bat
+Your score has just gone up by one point.
+
+>score
+out of 6
+
+>resort
+seems like it should work
+maybe, soon, you will
+
+>angle
+WRONG
+>glean
+WRONG
+
+* _forest
+
+>sr ne
+>fretso
+That seemed right but didn't seem quite natural.
+You feel a slight psychic push-pull coming from Store F. Keep at it.
+>forest
+Your score has just gone up by one point.
+>fretso
+
+>enter forest
+
+>angle
+WRONG
+>glean
+WRONG
+
+>ornth
+Your compass feels extra jumbled, but--well, you must be close.
+>n
+Your score has just gone up by one point.
+Rest of Forest
+
+>angle
+WRONG
+>glean
+WRONG
+
+>e
+Self-ID Fields
+by one point
+
+>e
+Sorted Trodes
+
+>tones
+You aren't sure you need a booming voice telling you what you can EXAMINE.
+
+>destro
+It's going to get evil enough even without a high-ranking COBRA officer.
+
+>doters
+You don't need people oohing and ahing at your skill.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>nose
+Your score has just gone up by one point.
+>shades
+Your score has just gone up by one point.
+>shotgun
+Your score has just gone up by one point.
+
+>w
+>w
+Stored, er, Dots
+
+>open sandwich
+bread from the Spam
+
+>angle
+WRONG
+>glean
+WRONG
+
+>maps
+Your score has just gone up by one point.
+>beard
+Your score has just gone up by one point.
+
+>put shades on beard
+>put nose on beard
+You've made a full disguise now!
+
+>angle
+WRONG
+>glean
+WRONG
+
+
+>e
+>n
+Your score has just gone up by one point.
+Cruel Ones' Enclosure
+
+>angle
+WRONG
+>glean
+WRONG
+
+>hasbeen
+Your score has just gone up by one point.
+
+>chisel
+Your score has just gone up by one point.
+
+>s
+>w
+>peel cow
+Cr-r-r-r-k.
+
+>peel chicken
+Cr-r-r-r-k.
+
+>put cow in canister
+>put chicken in canister
+LIVERS.
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>sliver
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>e
+>n
+
+>angle
+WRONG
+>glean
+WRONG
+
+>n
+red asp!
+
+>angle
+WRONG
+>glean
+WRONG
+
+>drapes
+Your score has just gone up by one point.
+
+>cut drapes
+revealing a doorway
+
+>silver
+Your score has just gone up by one point.
+
+>put silver in shotgun
+
+>n
+Ghouls' Slough
+
+>angle
+WRONG
+>glean
+WRONG
+
+>x maps
+Frost Forts
+
+>angle
+WRONG
+>glean
+WRONG
+
+>wolves
+Your score has just gone up by one point.
+
+>shoot wolves
+Your score has just gone up by one point.
+Trips Strip
+
+* _sortie
+
+>sortie
+Your score has just gone up by one point.
+
+>enter sortie
+Centrifuge
+
+>angle
+WRONG
+>glean
+WRONG
+
+>16
+round den, unadorned
+Your score has just gone up by one point.
+
+>e
+The Nick
+
+>angle
+WRONG
+>glean
+WRONG
+
+>kitchen
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>open fridge
+grist and a cake pan
+
+>angle
+WRONG
+>glean
+WRONG
+
+>hotsauce
+Your score has just gone up by one point.
+>tortilla
+Your score has just gone up by one point.
+>lettuce
+Your score has just gone up by one point.
+>steak
+Your score has just gone up by one point.
+>parmesan
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>put steak on taco
+a good start
+
+>angle
+WRONG
+>glean
+WRONG
+
+>put sauce on taco
+The tortilla's coming together
+
+>put lettuce on taco
+almost there!
+
+>put parmesan on taco
+A full-blown taco
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>coat
+Your score has just gone up by one point.
+
+>grits
+Your score has just gone up by one point.
+>pancake
+Your score has just gone up by one point.
+
+>s
+A Round Den, Unadorned
+
+>e
+a little too undescribed
+
+>angle
+WRONG
+>glean
+WRONG
+
+>straw
+Your score has just gone up by one point.
+
+>shoes
+Your score has just gone up by one point.
+>sack
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>put straw in sack
+
+>get sack
+
+>moor
+Your score has just gone up by one point.
+Moor
+
+>angle
+WRONG
+>glean
+WRONG
+
+>peasant
+Your score has just gone up by one point.
+
+>black door
+Your score has just gone up by one point.
+
+>give straw to peasant
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>missile
+Your score has just gone up by one point.
+
+>fold paper
+
+
+>angle
+WRONG
+>glean
+WRONG
+
+>panel
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>room
+
+>n
+Stiller Trellis
+
+>tillers
+You aren't going to sea in this game.
+
+>put hay in wall
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>hallway
+Your score has just gone up by one point.
+
+>e
+Sacred Cedars
+
+>cask
+The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright.
+
+>fill cask
+Gainly laying
+
+>angle
+WRONG
+>glean
+WRONG
+
+>moor
+
+>angle
+WRONG
+>glean
+WRONG
+
+>soil
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>room
+>n
+>e
+>pour oils
+Gainly laying
+SO NOW HALLS SHALL SWOON
+
+>angle
+WRONG
+>glean
+WRONG
+
+>w
+Crashing Archings
+
+>s
+>moor
+
+>angle
+WRONG
+>glean
+WRONG
+
+>silo
+Your score has just gone up by one point.
+
+>put door on silo
+perfectly, swinging
+
+>put missile in silo
+RESULT WITH LUSTER
+
+>put panel on silo
+
+>angle
+WRONG
+>glean
+WRONG
+
+>steer
+ester pervades
+Your score has just gone up by one point.
+>shoot
+changes to a shoot
+Your score has just gone up by one point.
+
+>push steer
+AMUSING GUNS
+>push shoot
+Your score has just gone up by one point.
+Trips Strip
+
+* _metstart-short
+
+###############################################
+#this gets you to the flower shop with a choice of flowers, with everything else possible taken (except how to get the tulip) care of
+
+>angle
+WRONG
+>glean
+WRONG
+
+>gardenia
+Your score has just gone up by one point.
+
+>n
+Cramped Red Camp
+
+>angle
+WRONG
+>glean
+WRONG
+
+>w
+A Yell Alley
+
+>angle
+WRONG
+>glean
+WRONG
+
+>tomato
+Your score has just gone up by one point.
+
+>e
+>velcro
+Your score has just gone up by one point.
+
+>s
+>w
+The Ol' Hotel
+
+>throw tomato at thing
+Your score has just gone up by one point.
+
+>x mattress
+>e
+>n
+>n
+Cordoned Red Condo
+
+>angle
+WRONG
+>glean
+WRONG
+
+>switch emitter
+Your score has just gone up by one point.
+
+>get cake
+>s
+>keycard
+Your score has just gone up by one point.
+>controls
+Your score has just gone up by one point.
+
+>e
+Elf Row's Flowers
+
+>angle
+WRONG
+>glean
+WRONG
+
+>give gardenia to faeries
+
+>barcode
+Your score has just gone up by one point.
+>put barcode on keycard
+
+>angle
+WRONG
+>glean
+WRONG
+
+>w
+>s
+
+>s
+Elm Train Terminal
+
+>angle
+WRONG
+>glean
+WRONG
+
+>u
+(on the fuzzy looking wall)
+
+>opening
+Your score has just gone up by one point.
+
+>put controls in opening
+
+>n
+>n
+>e
+
+>angle
+WRONG
+>glean
+WRONG
+
+
+* _metros-heaths-darkness
+
+# this is the "main line" I use to get through the game. Mainly because it was the first I thought of.
+
+>get heaths
+>sheath
+Your score has just gone up by one point.
+
+>w
+>w
+>sword
+Your score has just gone up by one point.
+
+>e
+>give emitter to deadbeat
+Dude! So you
+
+>give emitter to deadbeat
+Man, I've done enough work today
+#double lines
+
+>s
+
+>e
+Your score has just gone up by one point.
+
+>odor
+It would stink to be you if you did that. The nerds outnumber you and would crucify you.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>ask nerds about darkness
+
+>odor
+That door's reinforced. The nerds made sure it was protected against all sorts of crazy things.
+
+>s
+>e
+Bassy Abyss
+
+>angle
+WRONG
+>glean
+WRONG
+
+>resin
+Your score has just gone up by one point.
+>beast
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>attack beast
+Your score has just gone up by one point.
+Trips Strip
+
+* _metros-heaths-gnats
+
+>get heaths
+>sheath
+Your score has just gone up by one point.
+
+>w
+>w
+>sword
+Your score has just gone up by one point.
+
+>e
+>give emitter to deadbeat
+Dude! So you
+
+>give emitter to deadbeat
+Man, I've done enough work today
+#double lines
+
+>s
+>e
+Your score has just gone up by one point.
+
+>switch emitter
+>s
+>e
+Bassy Abyss
+
+>resin
+Your score has just gone up by one point.
+
+>beast
+Your score has just gone up by one point.
+>betsa
+
+>get sword
+The sword is yours
+
+>attack beast
+Your score has just gone up by one point.
+Trips Strip
+
+* _metros-begonias-darkness
+
+>get begonias
+>noise bag
+Your score has just gone up by one point.
+
+>w
+>w
+>open bag
+swirling into the bag
+
+>angle
+WRONG
+>glean
+WRONG
+
+>e
+>give emitter to deadbeat
+Dude! So you
+
+>s
+>e
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>ask nerds about darkness
+Your score has just gone up by one point.
+
+>s
+>e
+Bassy Abyss
+
+>resin
+Your score has just gone up by one point.
+
+>beast
+Your score has just gone up by one point.
+
+>sword
+Your score has just gone up by one point.
+
+>attack beast
+Your score has just gone up by one point.
+Trips Strip
+
+* _resort
+
+>resort
+Your score has just gone up by one point.
+
+>enter resort
+Tiles
+
+>angle
+WRONG
+>glean
+WRONG
+
+>islet
+Your score has just gone up by one point.
+Islet
+
+>angle
+WRONG
+>glean
+WRONG
+
+>cork
+Your score has just gone up by one point.
+
+>wings
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>e
+An Odd Low Woodland
+
+>angle
+WRONG
+>glean
+WRONG
+
+>slope
+Your score has just gone up by one point.
+
+>grips
+Your score has just gone up by one point.
+
+>ropes
+Your score has just gone up by one point.
+
+>toeholds
+Your score has just gone up by two points.
+
+>e
+Potshot Hotspot
+
+>angle
+WRONG
+>glean
+WRONG
+
+>trio
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>china
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>kilns
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>potters
+Your score has just gone up by one point.
+
+>angle
+WRONG
+>glean
+WRONG
+
+>tug toe
+Your score has just gone up by one point.
+
+>e
+Roman Manor
+
+>angle
+WRONG
+>glean
+WRONG
+
+>exist
+Your score has just gone up by one point.
+
+a smart gamin' anagrammist
+
+################################main tests below here
+
+* plow-through
+
+###############this tries all the mistakes etc.
+
+>{include} _intro
+>{include} _forest
+>score
+You have the rank of solider soldier.
+>{include} _trips
+>score
+You have the rank of solider soldier.
+>{include} _sortie
+>score
+You have the rank of a mature amateur.
+>metros
+Your score has just gone up by one point.
+
+>enter metros
+Underside
+>{include} _metstart-long
+>{include} _metros-heaths-darkness
+>score
+You have the rank of new hero now here.
+
+>{include} _resort
+
+#dupe-test
+* _metros-1
+#####this is usually not run as we can rely on plow-through. But it's there if wanted.
+
+>gonear underside
+>{include} _metstart-long
+>{include} _metros-heaths-darkness
+
+#dupe-test
+* metros-2
+
+>gonear underside
+>{include} _metstart-short
+>{include} _metros-begonias-darkness
+
+##dupe test
+* _intro-only
+
+>{include} _intro
+
+##dupe test
+* _forest-only
+
+>ts
+>opt in
+>{include} _forest
+
+##dupe test
+* _sortie-only
+
+>ts
+>opt in
+>{include} _sortie
+
+##dupe test
+* _resort-only
+
+>ts
+>opt in
+>tsf
+>{include} _resort

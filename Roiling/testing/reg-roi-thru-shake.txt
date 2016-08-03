@@ -1,0 +1,1425 @@
+## reg-roi-thru.txt
+## nudges for Roiling Original: left and right walkthrough
+##
+##
+
+
+** game: /home/andrew/prt/debug-roiling.ulx
+** interpreter: /home/andrew/prt/glulxe -q
+
+* _manor
+
+>posf
+
+>x chair
+You thought you preferred
+
+>think
+CREATIVITY
+
+>x sad ads
+Bangish bashing
+
+>open door
+
+>1
+>5
+
+It is now pitch dark
+
+
+>lamp
+Your score has just gone up by one point
+
+>satchel
+>x settler
+
+>shake settler
+WRONG
+
+>basement
+Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
+Your score has just gone up by two points
+
+>d
+>shake settler
+>undo
+>undo
+>undo
+
+>stable
+>in
+>shake settler
+WRONG
+
+>undo
+>undo
+>undo
+
+>chimney
+>u
+>shake settler
+WRONG
+
+>ramp
+>d
+>in
+Hands up!
+
+>shake settler
+WRONG
+
+>flier
+Your score has just gone up
+
+>3
+Carven Cavern
+
+>shake settler
+WRONG
+
+>staple
+Your score has just gone up by one point
+
+>stapler
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>staple wall
+>in
+Strip of Profits
+
+>score
+Won now: Roman Manor (8/13).
+
+* _stores
+
+>posf
+>shake settler
+WRONG
+
+>presto
+Your score has just gone up by one point
+
+>otters
+Your score has just gone up by one point
+
+>routes
+Your score has just gone up by one point
+
+>troves
+Your score has just gone up by one point
+
+>towers
+Your score has just gone up by one point
+
+>oyster
+Your score has just gone up by one point
+
+>score
+Score in a scenario: 6 out of 11 total points in the current region, Stores. Lowest score to solve is 6. Maximum score available is 11.
+
+* _routes
+
+>posf
+
+>shake settler
+WRONG
+
+>inside
+Your score has just gone up by one point
+
+>x toils
+Precise recipes
+
+>out
+>past
+Your score has just gone up by one point
+
+Idle Deli
+
+>shake settler
+WRONG
+
+>despite
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>out
+>across
+Your score has just gone up by one point
+
+Adobe Abode
+
+>shake settler
+WRONG
+
+>opposite
+Your score has just gone up by one point
+
+>out
+
+>against
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>astride
+
+>shake settler
+WRONG
+
+>below
+
+>shake settler
+WRONG
+
+>under
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+##no-gal needs a line break ??
+
+>in
+>out
+
+>shake settler
+WRONG
+
+>from
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>beneath
+Your score has just gone up by one point
+DEBUG INFO: Taking away a max point.
+
+Sun-Spared Underpass
+
+>shake settler
+WRONG
+
+>until
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>around
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>along
+Your score has just gone up by one point
+
+Ripe Pier
+
+>shake settler
+WRONG
+
+>amidst
+Your score has just gone up by one point
+
+Cripple Clipper
+
+>shake settler
+WRONG
+
+>behind
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>through
+Your score has just gone up by one point
+
+>score
+Routes (17/18)
+
+* _troves
+
+>l
+Loather Rathole
+
+>shake settler
+WRONG
+
+>hate
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>care
+Your score has just gone up by one point
+Loudest Used Lot
+
+>shake settler
+WRONG
+
+>observe
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>spot
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>reason
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>derive
+Pallid Li'L Pad
+DEBUG INFO: Taking away a max point.
+
+>posf
+>score
+Score in a scenario: 6 out of 21 total points in the current region, Troves. Lowest score to solve is 15. Maximum score available is 20.
+
+>shake settler
+WRONG
+
+>despair
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>l
+Boredom Bedroom
+
+>deal
+Your score has just gone up by one point
+DEBUG INFO: Taking away a max point.
+
+Dour Tan Rotunda
+
+>shake settler
+WRONG
+
+>desire
+Your score has just gone up by one point
+Econ-Cone
+
+>shake settler
+WRONG
+
+>aspire
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>ponder
+FiefCo Office
+Your score has just gone up by one point
+If only you could tune that out!
+DEBUG INFO: Taking away a max point.
+
+>shake settler
+WRONG
+
+>ignore
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>bolster
+Your score has just gone up by one point
+>last
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>resign
+Your score has just gone up by one point
+Strip of Profits
+
+* _presto
+
+>posf
+
+>l
+Grey Gyre
+
+>shake settler
+WRONG
+
+>umph
+Your score has just gone up by one point
+Austerer Treasure
+
+>shake settler
+WRONG
+
+>pooh
+Your score has just gone up by one point
+Taking away a max point.
+
+>shake settler
+WRONG
+
+>e
+>s
+Burnt Brunt
+
+>shake settler
+WRONG
+
+>rats
+Your score has just gone up by one point
+>drat
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>n
+
+>shake settler
+WRONG
+
+>bleep
+Your score has just gone up by one point
+
+>e
+Marines Seminar
+
+>shake settler
+WRONG
+
+>bingo
+Your score has just gone up by one point
+
+>w
+>mazeltov
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>s
+>s
+Dirge Ridge
+
+>shake settler
+WRONG
+
+>ole
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>darn
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>whassup
+Your score has just gone up by one point
+
+>n
+>n
+>load gun with dart
+
+>shake settler
+WRONG
+
+>there
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>n
+Phat Path
+
+##bingo *2 = no line break
+#different message for making it to the phat path 1st time?
+
+>shake settler
+WRONG
+
+>syke
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>later
+Your score has just gone up by one point
+>tough
+Your score has just gone up by one point
+Hut! Go!
+Dat was a good dust-up
+
+>n
+Hacks' Shack
+
+>shake settler
+WRONG
+
+>capslock
+Your score has just gone up by one point
+>skid
+Your score has just gone up by one point
+>cola
+Your score has just gone up by one point
+>mug
+>leaf
+Your score has just gone up by one point
+>futon
+Your score has just gone up by one point
+>screen
+Your score has just gone up by one point
+>put screen on slab
+Only one more piece of hardware
+
+>shake settler
+WRONG
+
+>get book
+>push skid s
+>push skid s
+>push skid s
+
+>put leaf on skid
+
+>push skid n
+>push skid n
+>push skid n
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>keyboard
+Your score has just gone up by one point
+
+>put keyboard on slab
+You can now do computery things unimpeded!
+
+>put lock on keyboard
+fits in perfectly
+
+>disk
+
+>shake settler
+WRONG
+
+>put disk in drive
+
+>shake settler
+WRONG
+
+>reboot
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>sleep
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>compile
+
+>shake settler
+WRONG
+
+>pour cola in mug
+
+>shake settler
+WRONG
+
+>debug
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>sub
+Diver time
+Your score has just gone up by one point
+Strip of Profits
+
+>score
+(28/33)
+
+* _oyster
+
+>l
+Posh Hops Shop
+
+>posf
+
+>shake settler
+WRONG
+
+>unset
+Your score has just gone up by one point
+>sing
+Your score has just gone up by one point
+>spit
+Your score has just gone up by one point
+
+>stroll
+Olde Lode
+
+>shake settler
+WRONG
+
+>calm
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>run
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+Hero's Shore
+>boast
+Your score has just gone up by one point
+Fighter Freight
+
+>shake settler
+WRONG
+
+>leap
+Your score has just gone up by one point
+
+Anger Range
+
+>shake settler
+WRONG
+
+>scrap
+Your score has just gone up by one point
+
+>e
+
+>shake settler
+WRONG
+
+>seek
+DEBUG INFO: Taking away a max point.
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>eat
+Your score has just gone up by one point
+
+>tutor
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>w
+>n
+Lapsin' Plains
+
+>shake settler
+WRONG
+
+>trace
+Your score has just gone up by one point
+>react
+Your score has just gone up by one point
+>kiss
+Your score has just gone up by one point
+>bonk
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>in
+a hut
+
+>shake settler
+WRONG
+
+>bust
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>drop
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>out
+>s
+>w
+Arches
+
+>shake settler
+WRONG
+
+>warp
+Your score has just gone up by one point
+>search
+Your score has just gone up by one point
+GENERAL GLEANER engulf it
+
+>shake settler
+WRONG
+
+>enlarge
+Your score has just gone up by one point
+
+>n
+Hedron
+
+>w
+Collapsed Old Places
+
+>shake settler
+WRONG
+
+>bury
+Your score has just gone up by one point
+
+>e
+>s
+>e
+
+>shake settler
+WRONG
+
+>unearth
+by one point
+
+>shake settler
+WRONG
+
+>assuage
+by one point
+
+>w
+>n
+>w
+
+>e
+
+>shake settler
+WRONG
+
+>patrol
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>in
+
+>shake settler
+WRONG
+
+>out
+
+>x gleaner
+
+>shake settler
+WRONG
+
+>purloin lance
+
+>in
+
+>shake settler
+WRONG
+
+>tan ant
+
+>shake settler
+WRONG
+
+>prepay
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>derail
+Your score has just gone up by one point
+>pull lever
+>redial
+Your score has just gone up by one point
+
+* _towers
+
+>seed 1
+>towers
+>in
+
+>shake settler
+WRONG
+
+>gone
+Your score has just gone up by one point
+
+>wined
+Your score has just gone up by one point
+
+>bleak
+Your score has just gone up by one point
+
+>yonder
+Your score has just gone up by one point
+Topside Deposit
+
+>score
+Score in a scenario: 4 out of 46 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 43.
+
+>shake settler
+WRONG
+
+>get tarts
+>put tarts in toaster
+>xray keycar
+
+>creaky
+Your score has just gone up by one point
+
+>n
+Scope Copse
+
+>shake settler
+WRONG
+
+>weirder
+Your score has just gone up by one point
+>clumsy
+Your score has just gone up by one point
+
+>n
+Baldest Blasted Saltbed
+
+>shake settler
+WRONG
+
+>pastier
+Your score has just gone up by one point
+
+>punier
+Your score has just gone up by one point
+
+>n
+Anemic Cinema
+
+>shake settler
+WRONG
+
+>married
+Your score has just gone up by one point
+
+>n
+Shaven Havens
+
+>shake settler
+WRONG
+
+>s
+>s
+>e
+Savager Ravages
+
+>shake settler
+WRONG
+
+>sewed
+
+>released
+>e
+Ole Shrine Shoreline
+
+>shake settler
+WRONG
+
+>holiest
+>grandiose
+>n
+Actionless Coastline
+
+>shake settler
+WRONG
+
+>hastiest
+>s
+>s
+
+>shake settler
+WRONG
+
+>broken
+
+>drained
+>w
+
+>shake settler
+WRONG
+
+>e
+
+>e
+
+>shake settler
+WRONG
+
+>wordy
+>push retape
+>go to duck
+>push repeat
+
+>go to yow
+>unlocked
+
+>go to kid
+
+>shake settler
+WRONG
+
+>gifted
+>ask kid about yow
+Obscurest
+
+>s
+>s
+>e
+>rowdy
+
+>shake settler
+WRONG
+
+>go to copse
+>w
+
+>shake settler
+WRONG
+
+>put dagger in machine
+
+>go to kid
+>give gizmo to kid
+
+>shake settler
+WRONG
+
+>robust
+
+>shake settler
+WRONG
+
+>stabler
+
+>enter boat
+
+>shake settler
+WRONG
+
+>present
+
+>w
+
+>shake settler
+WRONG
+
+>e
+
+>spectacular
+
+>score
+24/46
+
+* _otters
+
+>seed 1
+>otters
+>in
+
+>shake settler
+WRONG
+
+>barely
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>reedily
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>get cinders
+
+>w
+Gent-Fora Frontage
+
+>shake settler
+WRONG
+
+>discern macks
+>discern
+As you gaze into the cinders, they blow away, leaving you feeling the macks can talk
+DEBUG INFO: Taking away a max point.
+
+>bossily
+Your score has just gone up by one point.
+
+>shake settler
+WRONG
+
+>nastily
+Your score has just gone up by one point.
+
+>shake settler
+WRONG
+
+>blearily
+Your score has just gone up by one point.
+
+>au -1
+
+>1
+>3
+
+>n
+
+>shake settler
+WRONG
+
+>because
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>else
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>s
+>atom
+Your score has just gone up by one point
+
+>s
+
+>shake settler
+WRONG
+
+>although
+
+>shake settler
+WRONG
+
+>however
+
+>shake settler
+WRONG
+
+>n
+
+>e
+>n
+
+>shake settler
+WRONG
+
+>enragedly
+Your score has just gone up by one point
+>angrily
+Your score has just gone up by one point
+
+>n
+Wickeder Wire Deck
+
+>shake settler
+WRONG
+
+>slow
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>coolest
+Your score has just gone up by one point
+>paroled
+Your score has just gone up by one point
+>artsy
+Your score has just gone up by one point
+>garbed
+
+>shake settler
+WRONG
+
+>s
+Tapering Inert Gap
+>s
+>s
+
+Rote Moan Anteroom
+
+>shake settler
+WRONG
+
+>loathingly
+Your score has just gone up by one point
+>tersely
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>s
+Perverse Preserve
+
+>shake settler
+WRONG
+
+>parrot
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>snail
+Your score has just gone up by one point
+>hornets
+Your score has just gone up by one point
+>raccoon
+Your score has just gone up by one point
+>snipe
+
+>shake settler
+WRONG
+
+>n
+Near-Moot Anteroom
+
+>n
+>w
+>w
+
+>shake settler
+WRONG
+
+>raptor
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>deeply
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>quickly
+Your score has just gone up by one point
+
+>shake settler
+WRONG
+
+>w
+WTF FTW
+
+>1
+>8
+>8
+>8
+
+>shake settler
+WRONG
+
+>au -1
+
+>shake settler
+WRONG
+
+>play whistle
+
+* _others
+
+>z
+
+>x stand
+
+>shake settler
+WRONG
+
+>maraschino
+Your score has just gone up by one point.
+>grapes
+Your score has just gone up by one point.
+>cranberries
+Your score has just gone up by one point.
+>tamarind
+Your score has just gone up by one point.
+
+>compass
+Your score has just gone up by one point.
+
+>plums
+Your score has just gone up by one point.
+>pears
+Your score has just gone up by one point.
+>blueberries
+Your score has just gone up by one point.
+>pomegranate
+Your score has just gone up by one point.
+Take on a token
+
+>cantaloupe
+Your score has just gone up by one point.
+>persimmon
+Your score has just gone up by one point.
+>limes
+Your score has just gone up by one point.
+
+>n
+Swell Wells
+
+>shake settler
+WRONG
+
+>apricot
+Your score has just gone up by one point.
+>apples
+Your score has just gone up by one point.
+>mulberries
+Your score has just gone up by one point.
+>gooseberry
+Your score has just gone up by one point.
+>coconuts
+Your score has just gone up by one point.
+
+>s
+
+>shake settler
+WRONG
+
+>icons
+Your score has just gone up by one point.
+
+>shake settler
+WRONG
+
+>sonic
+Your score has just gone up by one point.
+
+>n
+>tangerines
+Your score has just gone up by one point.
+
+>e
+Clangier Clearing
+
+>shake settler
+WRONG
+
+>among
+Your score has just gone up by one point.
+>papayas
+Your score has just gone up by one point.
+>solemn
+Your score has just gone up by one point.
+
+>shake settler
+WRONG
+
+>w
+>s
+>i
+a droll dollar
+
+>n
+>d
+Scape Space
+
+>shake settler
+WRONG
+
+>give dollar to trader
+
+>shake settler
+WRONG
+
+>put icons in slot
+>u
+
+>w
+Filed Field
+>shake settler
+WRONG
+
+>e
+
+>n
+>research
+Your score has just gone up by one point.
+>review
+Your score has just gone up by one point.
+>n
+You Did Great
+
+* _current_focus
+#>{include} _only-manor
+#>{include} _only-routes
+#>{include} _only-troves
+#>{include} _only-presto
+#>{include} _only-towers
+#>{include} _only-otters
+#>undo
+#>{include} _only-others
+#>undo
+#>{include} _only-oyster
+
+* _big-go
+
+>{include} _manor
+>{include} _stores
+
+>enter routes
+Same Mesa
+>{include} _routes
+
+>enter troves
+Loather Rathole
+>{include} _troves
+
+>enter spot
+Grey Gyre
+>{include} _presto
+
+>enter oyster
+Posh Hops Shop
+>{include} _oyster
+
+>enter towers
+Loftier Trefoil
+>{include} _towers
+
+>enter otters
+Bleary Barley
+>in
+>{include} _otters
+
+>rove over
+>others
+Your score has just gone up
+>enter hoster
+Rustic Citrus
+>{include} _others
+
+* _summarize
+
+>purloin passport
+>gonear gates stage
+>research
+>review
+>n
+>missed
+>undo
+>undo
+
+* only-manor
+
+>{include} _manor
+
+* only-stores
+
+>ts
+>{include} _stores
+
+* only-routes
+
+>gonear same mesa
+>purloin settler
+>{include} _routes
+>{include} _summarize
+
+* only-troves
+
+>gonear rathole
+>purloin settler
+>{include} _troves
+>{include} _summarize
+
+* only-presto
+
+>gonear gyre
+>purloin settler
+>{include} _presto
+>{include} _summarize
+
+* only-oyster
+
+>purloin settler
+>gonear posh hops shop
+>{include} _oyster
+>{include} _summarize
+
+* only-towers
+
+>seed 1
+>gonear trefoil
+>purloin settler
+>{include} _towers
+>{include} _summarize
+
+* only-otters
+
+>seed 1
+>gonear barley
+>purloin settler
+>{include} _otters
+>{include} _summarize
+
+* only-others
+
+>gonear rustic citrus
+>purloin settler
+>{include} _others
+

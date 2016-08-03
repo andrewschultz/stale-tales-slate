@@ -22198,6 +22198,7 @@ blurb
 "Hot Perks: The Pork's Posh Trek."
 "I Hit At Tahiti."
 "I Master a Maserati."
+"I'm-All-Set Meal List"
 "Improve-on-Promo Vine."
 "In-Touch Count, Hi." []
 "Income Dump Compendium." []
@@ -31756,6 +31757,7 @@ blurb
 "Set Moods So Modest[r], by [d-t] Moses"
 "Set, Pup? Step Up[r], by Stu Epp" []
 "Set Time, I Test Me[r], by Tim Tees"
+"Shaky? Ah, Sky[r], by Sy Kha"
 "Shlep-Helps[r], by Shepp Shell"
 "Showy Trade: Say the Word[r], by [if player is male]Thad Rowsey[else]Sade Worthy[end if]"
 "Shunt or Rush Not[r], by Stu Horn"
