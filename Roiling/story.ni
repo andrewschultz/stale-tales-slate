@@ -1648,7 +1648,7 @@ persuasion rule for asking macks to try doing something:
 	persuasion fails;
 
 persuasion rule for asking Mr Lee to try doing something:
-	say "[if p-2 is reflexed]Mr. Lee can't do any more for you[else]Mr. Lee doesn't trust you enough to do anything for you[end if].";
+	say "[if p-2 is in lalaland]Mr. Lee can't do any more for you[else]Mr. Lee doesn't trust you enough to do anything for you[end if].";
 	persuasion fails;
 
 persuasion rule for asking whiners to try doing something:
@@ -4700,11 +4700,21 @@ carry out requesting the score:
 	otherwise:
 		d "# of turns = [turn count].";
 		say "Ol['] Stat Totals:[paragraph break]Score in a scenario: [cur-score of mrlp] out of [max-score of mrlp] total points in the current region, [mrlp]";
-		if mrlp is not solved and possibles is true:
-			if min-score of mrlp < poss-score of mrlp:
-				say ". Lowest score to solve is [min-score of mrlp]. Maximum score available is [poss-score of mrlp]";
+		if cur-score of mrlp is max-score of mrlp:
+			if mrlp is manor:
+				say ". You should go IN to the Strip of Profits, now";
+			else if mrlp is others:
+				say ". You can go NORTH to Admit-Us Stadium";
+			else if mrlp is stores:
+				say ". You have access to all the sub-areas";
 			else:
-				say ". There are no secrets left to find here, so the score to win is [min-score of mrlp] points[if poss-score of mrlp is not max-score of mrlp]--you missed some extra stuff you can't go back for[end if]";
+				say ". BUG: your final action should always score the final point";
+		else:
+			if mrlp is not solved and possibles is true:
+				if min-score of mrlp < poss-score of mrlp:
+					say ". Lowest score to solve is [min-score of mrlp]. Maximum score available is [poss-score of mrlp]";
+				else:
+					say ". There are no secrets left to find here, so the score to win is [min-score of mrlp] points[if poss-score of mrlp is not max-score of mrlp]--you missed some extra stuff you can't go back for[end if]";
 		say ".[line break]";
 		if mrlp is otters and power-back is false:
 			say "[line break]You probably need to do something to get back your full powers, too.";
@@ -7856,9 +7866,10 @@ instead of swearing obscenely:
 	if location of player is cleric circle:
 		if curse-warned is false:
 			now curse-warned is true;
-			say "Only, uh, unholy. You can curse anywhere else except here without repercussion" instead;
-		say "A voice booms CRUDE? CURED! as you feel a rage-slice for your sacrilege.";
+			say "Only, uh, unholy. You can curse anywhere else except here without repercussion." instead;
+		say "A voice booms SACRILEGE? RAGE! SLICE! You feel horrible pain, and the last thing you hear is CRUDE? CURED!";
 		get-dead;
+		the rule succeeds;
 	if player is in cripple clipper:
 		say "Siphon no pish on-ship." instead;
 	otherwise:
@@ -15013,11 +15024,6 @@ check taking Harm's Marsh:
 check entering harm's marsh:
 	try going west instead;
 
-after printing the locale description for phat path when player has popgun:
-	if player has popgun:
-		say "One of the hogs walks over, takes your popgun, smashes it, laughs, and goes back to the wall. Well, you didn't have the ammo for it anyway.";
-		now popgun is in lalaland;
-
 the priv-shack is privately-named proper-named scenery. "[if shack is visited]It looks just as you left it[else]The shack looks cozy and inviting[end if].". printed name of priv-shack is "the shack"
 
 understand "shack" as priv-shack when player is in phat path.
@@ -15078,7 +15084,12 @@ the keys are part of the lawl wall. the keys are reflexive. description is "You'
 
 a-text of keys is "RORY". b-text of keys is "RORY". parse-text of keys is "x[sp]y[sp]x[sp]e". keys is any-spoilable.
 
-the hogs are reflexive plural-named people in Phat Path. description is "They're as big as Leo and Rand but meaner. Plus there are three of them. They look a little smarter, too--but maybe you can use reverse psychology to get under their skin or sneak those keys on the wall.". "Hogs are stretched against the lawl wall, in no hurry to try to get by. They look like tough customers, ones who might get annoyed by the sort of words that got you here."
+the hogs are reflexive plural-named people. description is "They're as big as Leo and Rand but meaner. Plus there are three of them. They look a little smarter, too--but maybe you can use reverse psychology to get under their skin or sneak those keys on the wall.". "Hogs are stretched against the lawl wall, in no hurry to try to get by. They look like tough customers, too tough for the sort of words that got you here. OR ARE THEY."
+
+after printing the locale description for Phat Path when Phat Path is unvisited:
+	say "Shouldn't be much of a problem to get the keys and...oh no! you hear...[wfak][paragraph break]";
+	say "A PHT! Suddenly three hogs, all Rand and Leo's size, block your way. One just up and takes your popgun, smashes it, laughs, and goes to guard the keys. What to do?";
+	now popgun is in lalaland;
 
 a-text of hogs is "RYRR". b-text of hogs is "RGRR". parse-text of hogs is "x[sp]o[sp]x[sp]x". hogs are cheat-spoilable.
 
@@ -19286,7 +19297,7 @@ description of spec-o-scope is "You look into the scope and see:[paragraph break
 [line break]  !       *
 [line break]  [bloorg of admirer]~~~~~~
 [line break]+[bloorg of ingrates].[bloorg of wait-seer].[bloorg of atheists].~ +
-[line break]  [bloorg of iPrune] [bloorg of grailman] [if player is male][bloorg of hostile-is-he lot][else][bloorg of lois the hostile]~
+[line break]  [bloorg of iPrune] [bloorg of grailman] [if player is male][bloorg of hostile-is-he lot][else][bloorg of lois the hostile][end if]~
 [line break]  .[bloorg of robot].[bloorg of reed's ale].~
 [line break]  [bloorg of muscly] [bloorg of man covered in inapt paint] [bloorg of ego drains]~
 [line break]![bloorg of pirates].[bloorg of diners].[bloorg of arid den].[bloorg of bonker]!
@@ -20355,6 +20366,8 @@ to towers-min-adj: [this is when you leave the mainland]
 		else:
 			now no-pastries is true;
 	now poss-score of towers is cur-score of towers + 5; [dingy, spectacular, greyed, give flowerpot]
+	if used-ray is false and no-pastries is false:
+		increment poss-score of towers;
 	now min-score of towers is cur-score of towers + 1; [4 warriors, spectacular]
 	if turbos are reflexive or blaster is reflexive: [rawest waters]
 		increment poss-score of towers;
@@ -21056,7 +21069,7 @@ hostile-is-he lot	Ole Shrine Shoreline	north	"They mention you [one of]should kn
 
 chapter guardian taunt tables
 
-after fliptoing a guardian:
+after fliptoing a guardian (this is the guardian taunt rule) :
 	if noun is ray eck, continue the action;
 	if number of guardians in location of player is 0:
 		continue the action; [save a bit of time why not]
@@ -21137,13 +21150,13 @@ after fliptoing a guardian (this is the track guardian progress rule):
 		now topside is accessible;
 		now copse is accessible;
 		continue the action;
-	if noun is white:
+	if noun is white: [white guardians are optional]
 		now MR is mightaswell;
 		min-up;
 		if can-see-map:
 			draw-my-loc;
 		continue the action;
-	if noun is purple:
+	if noun is purple: [purple guardians must be dispelled]
 		if MR is coastlines or player is in coastlines:
 			now MR is accessible;
 		else:
@@ -21156,17 +21169,16 @@ after fliptoing a guardian (this is the track guardian progress rule):
 		d "You already unlocked [MR].";
 	else:
 		d "You just unlocked [MR].";
+	let gua-before be gua-to-clear;
 	if MR is not sideview or MR is not mightaswell:
 		now MR is accessible;
+	if gua-before is gua-to-clear: [if we still need to clear the same number of guardians, increase minimum score]
+		min-up;
 	if can-see-map:
 		draw-my-loc;
 	let RG be number of red guardians not in lalaland;
 	let BG be number of blue guardians not in lalaland;
-	d "Reds now [RG], blues now [BG]. [noun] = [if noun is red]red[else if noun is blue]blue[else if noun is white]white[else]purple[end if].";
-	if noun is red and RG >= BG:
-		min-up;
-	if noun is blue and BG >= RG:
-		min-up;
+	d "Reds now [RG], blues now [BG]. [noun] = [if noun is red]red[else if noun is blue]blue[else if noun is white]white[else]purple[end if], gua-before = [gua-before], gua-after = [gua-to-clear].";
 	if number of visible guardians > 0:
 		now mr-hinty is a random visible guardian;
 	else if scope copse is visited:
@@ -21182,6 +21194,19 @@ after fliptoing a guardian (this is the track guardian progress rule):
 		else if number of tower-accessible rooms >= 9:
 			say "You probably don't have much left to do, to get everywhere you need.";
 	continue the action;
+
+to decide which number is gua-to-clear:
+	let temp be 0;
+	if saltbed is not accessible and sunbelt is not accessible, decide on 5;
+	if savager ravages is not accessible, increment temp;
+	if anemic cinema is not accessible:
+		increment temp;
+		if saltbed is not accessible and deltas are not accessible and shoreline is accessible, increment temp;
+	if danger garden is not accessible:
+		increment temp;
+		if sunbelt is not accessible and shoreline is not accessible and deltas are accessible, increment temp;
+	if deltas are not accessible and shoreline is not accessible, increment temp;
+	decide on temp.
 
 clear-warn is a truth state that varies.
 
@@ -22551,7 +22576,7 @@ after fliptoing ghoul hat:
 
 after fliptoing p-2:
 	de-inhib;
-	if eels are in lalaland:
+	if eels are reflexed:
 		min-up;
 	continue the action;
 

@@ -2614,16 +2614,25 @@ carry out angleing:
 			say "You'd need to get the phial from the cabinet first." instead;
 	if player does not have phail phial:
 		all-say "[reject]" instead;
-	if number of visible flippable not flipped-yet things is 0:
+	if player is in sf or player is in rf:
+		if thorn is not in location of player:
+			say "There's a weird haze in each of the four directions--north, south, east and west." instead;
+	let ANG be the number of angleable things;
+	if ANG is 0:
 		all-say "You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do." instead;
-	all-say "You stare into the blue lube for a bit, then look around. You notice weird hazes around [the list of visible flippable not flipped-yet things] when you do.";
-	now all visible flippable not flipped-yet things are padded;
+	all-say "You stare into the blue lube for a bit, then look around. You notice [if ang is 1]a weird haze[else]weird hazes[end if] around [the list of angleable things] when you do.";
+	now all angleable things are padded;
 	h-check;
 	choose row with short of "to-do" in table of pad-stuff;
 	if there is a known entry and known entry is false:
 		say "[i][bracket]You decide to keep a running to-do entry in your notebook of stuff you haven't tackled, yet.[close bracket][line break]";
 	pad-rec-q "to-do";
 	the rule succeeds;
+
+definition: a thing (called cand) is angleable:
+	if cand is cabinet and player is in notices section, decide no;
+	if cand is visible and cand is flippable and cand is not flipped-yet, decide yes;
+	decide no;
 
 to h-check:
 	if h-short-told is true:
@@ -5140,14 +5149,8 @@ carry out gleaning:
 			all-say "You see yourself walking into store R, which temporarily looks like a luxury hotel, with palm trees around." instead;
 		all-say "You see yourself relaxing in a large manor far from here." instead;
 	if mrlp is forest:
-		if rf is unvisited:
-			all-say "You see yourself walking forward, your hair blowing back." instead;
-		if odor is visible:
-			all-say "You see a door swirling from nothing." instead;
-		if bulge is visible:
-			all-say "You see the bulge in the door falling and becoming an instrument." instead;
 		if Self-ID Fields is unvisited:
-			all-say "You see yourself [if bugle is visible]playing the bugle and [end if]entering the door." instead;
+			all-say "You see yourself considering all four compass directions before picking the right one." instead;
 		if Enclosure is unvisited:
 			all-say "You see yourself [if number of things that are part of beard < 2]putting something on your face and then [end if]walking through the turnstile with ease." instead;
 		if livers are off-stage:

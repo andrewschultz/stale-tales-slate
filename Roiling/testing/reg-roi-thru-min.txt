@@ -29,7 +29,7 @@ Bangish bashing
 
 It is now pitch dark
 
-
+#xc
 >lapm
 You think you feel the palm shake a bit, but nothing terribly magical happens.
 >lamp
@@ -48,6 +48,7 @@ You probably just want to go DOWN to the basement.
 
 >d
 
+#xc
 >in
 You fumble nervously
 
@@ -63,6 +64,7 @@ haven't really EXAMINED it
 >in
 Hands up!
 
+#xc
 >flier
 Your score has just gone up
 
@@ -89,6 +91,7 @@ Your score has just gone up
 >3
 Carven Cavern
 
+#xc
 >staple
 Your score has just gone up by one point
 
@@ -99,6 +102,7 @@ Your score has just gone up by one point
 >in
 Strip of Profits
 
+#xc
 >score
 Won now: Roman Manor (8/13).
 
@@ -106,6 +110,7 @@ Won now: Roman Manor (8/13).
 
 >posf
 
+#xc
 >presto
 Your score has just gone up by one point
 
@@ -134,9 +139,11 @@ Score in a scenario: 6 out of 11 total points in the current region, Stores. Low
 Score in a scenario: 0 out of 18 total points in the current region, Routes. Lowest score to solve is 17. Maximum score available is 18.
 You have scored 6 out of 11 total points for the (unsolved hub) Stores region.
 
+#xc
 >inside
 Your score has just gone up by one point
 
+#xc
 >x toils
 Precise recipes
 
@@ -146,6 +153,7 @@ Your score has just gone up by one point
 
 Idle Deli
 
+#xc
 >despite
 Your score has just gone up by one point
 
@@ -155,11 +163,13 @@ Your score has just gone up by one point
 
 Adobe Abode
 
+#xc
 >opposite
 Your score has just gone up by one point
 
 >out
 
+#xc
 >against
 Your score has just gone up by one point
 >astride
@@ -169,36 +179,46 @@ Your score has just gone up by one point
 
 ##no-gal needs a line break ??
 
+#xc
 >in
+#xc
 >out
+#xc
 >from
 Your score has just gone up by one point
 
+#xc
 >beneath
 Your score has just gone up by one point
 DEBUG INFO: Taking away a max point.
 
 Sun-Spared Underpass
 
+#xc
 >score
 Score in a scenario: 11 out of 18 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 17 points--you missed some extra stuff you can't go back for.
 
 >until
 Your score has just gone up by one point
+#xc
 >around
 Your score has just gone up by one point
+#xc
 >along
 Your score has just gone up by one point
 
 Ripe Pier
 
+#xc
 >amidst
 Your score has just gone up by one point
 
 Cripple Clipper
 
+#xc
 >behind
 Your score has just gone up by one point
+#xc
 >through
 Your score has just gone up by one point
 
@@ -210,20 +230,26 @@ Routes (17/18)
 >l
 Loather Rathole
 
+#xc
 >hate
 Your score has just gone up by one point
+#xc
 >care
 Your score has just gone up by one point
 Loudest Used Lot
 
+#xc
 >observe
 Your score has just gone up by one point
+#xc
 >spot
 Your score has just gone up by one point
 
+#xc
 >reason
 Your score has just gone up by one point
 
+#xc
 >derive
 Pallid Li'L Pad
 DEBUG INFO: Taking away a max point.
@@ -235,9 +261,11 @@ Score in a scenario: 6 out of 21 total points in the current region, Troves. Low
 >despair
 Your score has just gone up by one point
 
+#xc
 >l
 Boredom Bedroom
 
+#xc
 >deal
 Your score has just gone up by one point
 DEBUG INFO: Taking away a max point.
@@ -247,27 +275,34 @@ Dour Tan Rotunda
 >score
 Score in a scenario: 8 out of 21 total points in the current region, Troves. Lowest score to solve is 15. Maximum score available is 19.
 
+#xc
 >desire
 Your score has just gone up by one point
 Econ-Cone
+#xc
 >aspire
 Your score has just gone up by one point
 
+#xc
 >ponder
 FiefCo Office
 Your score has just gone up by one point
 If only you could tune that out!
 DEBUG INFO: Taking away a max point.
 
+#xc
 >score
 Score in a scenario: 11 out of 21 total points in the current region, Troves. Lowest score to solve is 15. Maximum score available is 18.
 
 >ignore
 Your score has just gone up by one point
+#xc
 >bolster
 Your score has just gone up by one point
+#xc
 >last
 Your score has just gone up by one point
+#xc
 >resign
 Your score has just gone up by one point
 Strip of Profits
@@ -280,10 +315,12 @@ Strip of Profits
 >l
 Grey Gyre
 
+#xc
 >umph
 Your score has just gone up by one point
 Austerer Treasure
 
+#xc
 >pooh
 Your score has just gone up by one point
 Taking away a max point.
@@ -292,26 +329,33 @@ Taking away a max point.
 >score
 Score in a scenario: 2 out of 33 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 32.
 
+#xc
 >e
+#xc
 >s
 Burnt Brunt
 
+#xc
 >rats
 Your score has just gone up by one point
+#xc
 >drat
 Your score has just gone up by one point
 
 >n
+#xc
 >bleep
 Your score has just gone up by one point
 
 >e
 Marines Seminar
 
+#xc
 >bingo
 Your score has just gone up by one point
 
 >w
+#xc
 >mazeltov
 Your score has just gone up by one point
 
@@ -319,16 +363,20 @@ Your score has just gone up by one point
 >s
 Dirge Ridge
 
+#xc
 >ole
 Your score has just gone up by one point
+#xc
 >darn
 Your score has just gone up by one point
+#xc
 >whassup
 Your score has just gone up by one point
 
 >n
 >n
 >load gun with dart
+#xc
 >there
 Your score has just gone up by one point
 >n
@@ -337,11 +385,14 @@ Phat Path
 ##bingo *2 = no line break
 #different message for making it to the phat path 1st time?
 
+#xc
 >syke
 Your score has just gone up by one point
 
+#xc
 >later
 Your score has just gone up by one point
+#xc
 >tough
 Your score has just gone up by one point
 Hut! Go!
@@ -350,19 +401,28 @@ Dat was a good dust-up
 >n
 Hacks' Shack
 
+#xc
 >capslock
 Your score has just gone up by one point
+#xc
 >skid
 Your score has just gone up by one point
+#xc
 >cola
 Your score has just gone up by one point
+#xc
 >mug
+Your score has just gone up by one point
+#xc
 >leaf
 Your score has just gone up by one point
+#xc
 >futon
 Your score has just gone up by one point
+#xc
 >screen
 Your score has just gone up by one point
+#xc
 >put screen on slab
 Only one more piece of hardware
 
@@ -378,25 +438,32 @@ Only one more piece of hardware
 >push skid n
 Your score has just gone up by one point
 
+#xc
 >keyboard
 Your score has just gone up by one point
 
+#xc
 >put keyboard on slab
 You can now do computery things unimpeded!
 
 >put lock on keyboard
 fits in perfectly
 
+#xc
 >disk
 >put disk in drive
+#xc
 >reboot
 Your score has just gone up by one point
+#xc
 >sleep
 Your score has just gone up by one point
 >compile
 >pour cola in mug
+#xc
 >debug
 Your score has just gone up by one point
+#xc
 >sub
 Diver time
 Your score has just gone up by one point
@@ -407,6 +474,7 @@ Strip of Profits
 
 * _oyster
 
+#xc
 >l
 Posh Hops Shop
 
@@ -424,22 +492,27 @@ Your score has just gone up by one point
 >stroll
 Olde Lode
 
+#xc
 >calm
 Your score has just gone up by one point
 
+#xc
 >run
 Your score has just gone up by one point
 
 Hero's Shore
+#xc
 >boast
 Your score has just gone up by one point
 Fighter Freight
 
+#xc
 >leap
 Your score has just gone up by one point
 
 Anger Range
 
+#xc
 >scrap
 Your score has just gone up by one point
 
@@ -448,6 +521,7 @@ Your score has just gone up by one point
 Score in a scenario: 9 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 39.
 
 >e
+#xc
 >seek
 DEBUG INFO: Taking away a max point.
 Your score has just gone up by one point
@@ -455,9 +529,11 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 10 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 38.
 
+#xc
 >eat
 Your score has just gone up by one point
 
+#xc
 >tutor
 Your score has just gone up by one point
 
@@ -465,42 +541,54 @@ Your score has just gone up by one point
 >n
 Lapsin' Plains
 
+#xc
 >trace
 Your score has just gone up by one point
+#xc
 >react
 Your score has just gone up by one point
+#xc
 >kiss
 Your score has just gone up by one point
+#xc
 >bonk
 Your score has just gone up by one point
 
 >in
 a hut
 
+#xc
 >bust
 Your score has just gone up by one point
 >drop
 Your score has just gone up by one point
 
+#xc
 >out
+#xc
 >s
 >w
 Arches
 
+#xc
 >warp
 Your score has just gone up by one point
+#xc
 >search
 Your score has just gone up by one point
 GENERAL GLEANER engulf it
+#xc
 >enlarge
 Your score has just gone up by one point
 
+#xc
 >n
 Hedron
 
 >w
 Collapsed Old Places
 
+#xc
 >bury
 Your score has just gone up by one point
 
@@ -508,17 +596,21 @@ Your score has just gone up by one point
 >s
 >e
 
+#xc
 >unearth
 by one point
 
+#xc
 >assuage
 by one point
 
+#xc
 >w
 >n
 >w
 
 >e
+#xc
 >patrol
 Your score has just gone up by one point
 
@@ -529,12 +621,15 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 26 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 38.
 
+#xc
 >prepay
 Your score has just gone up by one point
 
+#xc
 >derail
 Your score has just gone up by one point
 >pull lever
+#xc
 >redial
 Your score has just gone up by one point
 
@@ -547,6 +642,7 @@ Oyster (30/39)
 >towers
 >in
 
+#xc
 >gone
 Your score has just gone up by one point
 
@@ -563,6 +659,7 @@ Topside Deposit
 >score
 Score in a scenario: 4 out of 46 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 43.
 
+#xc
 >get tarts
 >put tarts in toaster
 >xray keycar
@@ -574,17 +671,21 @@ Score in a scenario: 4 out of 46 total points in the current region, Towers. Low
 >creaky
 Your score has just gone up by one point
 
+#xc
 >n
 Scope Copse
 
+#xc
 >weirder
 Your score has just gone up by one point
+#xc
 >clumsy
 Your score has just gone up by one point
 
 >n
 Baldest Blasted Saltbed
 
+#xc
 >pastier
 Your score has just gone up by one point
 
@@ -594,27 +695,32 @@ Your score has just gone up by one point
 >n
 Anemic Cinema
 
+#xc
 >married
 Your score has just gone up by one point
 
 >n
 Shaven Havens
 
+#xc
 >s
 >s
 >e
 Savager Ravages
 
+#xc
 >sewed
 
 >released
 >e
 Ole Shrine Shoreline
+#xc
 >holiest
 >grandiose
 >n
 Actionless Coastline
 
+#xc
 >hastiest
 >s
 >s
@@ -656,6 +762,7 @@ Score in a scenario: 23 out of 46 total points in the current region, Towers. Lo
 >score
 Score in a scenario: 23 out of 46 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 28.
 
+#xc
 >spectacular
 
 >score
@@ -666,16 +773,20 @@ Score in a scenario: 23 out of 46 total points in the current region, Towers. Lo
 >seed 1
 >otters
 >in
+#xc
 >barely
 Your score has just gone up by one point
+#xc
 >reedily
 Your score has just gone up by one point
 
+#xc
 >get cinders
 
 >w
 Gent-Fora Frontage
 
+#xc
 >discern macks
 >discern
 As you gaze into the cinders, they blow away, leaving you feeling the macks can talk
@@ -692,21 +803,29 @@ Your score has just gone up by one point.
 >blearily
 Your score has just gone up by one point.
 
+>au -1
 >1
 >3
 
+#xc
 >n
+#xc
 >because
 Your score has just gone up by one point
+#xc
 >else
 Your score has just gone up by one point
 
+#xc
 >s
+#xc
 >atom
 Your score has just gone up by one point
 
+#xc
 >e
 >n
+#xc
 >enragedly
 Your score has just gone up by one point
 >angrily
@@ -715,9 +834,11 @@ Your score has just gone up by one point
 >n
 Wickeder Wire Deck
 
+#xcu
 >slow
 Your score has just gone up by one point
 
+#xc
 >coolest
 Your score has just gone up by one point
 >paroled
@@ -732,6 +853,7 @@ Tapering Inert Gap
 
 Rote Moan Anteroom
 
+#xc
 >loathingly
 Your score has just gone up by one point
 >tersely
@@ -740,8 +862,11 @@ Your score has just gone up by one point
 >s
 Perverse Preserve
 
+#xcu
 >parrot
 Your score has just gone up by one point
+
+#xc
 >snail
 Your score has just gone up by one point
 >hornets
@@ -756,10 +881,13 @@ Near-Moot Anteroom
 >w
 >w
 
+#xc
 >raptor
 Your score has just gone up by one point
+#xc
 >deeply
 Your score has just gone up by one point
+#xc
 >quickly
 Your score has just gone up by one point
 
@@ -771,6 +899,7 @@ WTF FTW
 >8
 >8
 
+#xcu
 >au -1
 >play whistle
 
@@ -780,6 +909,7 @@ WTF FTW
 
 >x stand
 
+#xc
 >maraschino
 Your score has just gone up by one point.
 >grapes
@@ -811,6 +941,7 @@ Your score has just gone up by one point.
 
 >n
 Swell Wells
+#xc
 >apricot
 Your score has just gone up by one point.
 >apples
@@ -833,6 +964,8 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >e
+Clangier Clearing
+#xc
 >among
 Your score has just gone up by one point.
 >papayas
@@ -847,10 +980,14 @@ a droll dollar
 
 >n
 >d
+Scape Space
+#xc
 >give dollar to trader
 >put icons in slot
 >u
 >n
+Gates Stage
+#xc
 >research
 Your score has just gone up by one point.
 >review

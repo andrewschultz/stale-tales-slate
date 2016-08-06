@@ -28,8 +28,9 @@ It is now pitch dark
 >lamp
 Your score has just gone up by one point
 
+>posf
 >score
-WRONG
+Score in a scenario: 1 out of 13 total points in the current region, Roman Manor. Lowest score to solve is 8. Maximum score available is 13.
 
 >basement
 Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
@@ -37,55 +38,68 @@ Your score has just gone up by two points
 
 >stable
 >score
-WRONG
+Score in a scenario: 4 out of 13 total points in the current region, Roman Manor. Lowest score to solve is 9. Maximum score available is 13.
 >chimney
 >score
-WRONG
+Score in a scenario: 5 out of 13 total points in the current region, Roman Manor. Lowest score to solve is 10. Maximum score available is 13.
 >u
 >ramp
 >score
-WRONG
+Score in a scenario: 6 out of 13 total points in the current region, Roman Manor. Lowest score to solve is 11. Maximum score available is 13.
 >undo
 >undo
 >undo
 >in
 >stair
 >score
-WRONG
+Score in a scenario: 6 out of 13 total points in the current region, Roman Manor. Lowest score to solve is 11. Maximum score available is 13.
 >undo
 >undo
 >undo
 >d
 >stair
 >score
-WRONG
+Score in a scenario: 6 out of 13 total points in the current region, Roman Manor. Lowest score to solve is 11. Maximum score available is 13.
 >undo
 >undo
 >undo
 >painting
 >score
-WRONG
+Score in a scenario: 6 out of 13 total points in the current region, Roman Manor. Lowest score to solve is 11. Maximum score available is 13.
 >u
 >ramp
+>score
+Score in a scenario: 7 out of 13 total points in the current region, Roman Manor. Lowest score to solve is 12. Maximum score available is 13.
 >d
 >stair
 >score
-WRONG
+Score in a scenario: 8 out of 13 total points in the current region, Roman Manor. There are no secrets left to find here, so the score to win is 13 points.
 
+>undo
+>undo
+
+>satchel
 >x settler
 >in
 
+>score
+Score in a scenario: 8 out of 13 total points in the current region, Roman Manor. Lowest score to solve is 12. Maximum score available is 13.
+
+>undo
+>undo
+>stair
+>in
 >flier
 >3
 
 >score
-WRONG
+Score in a scenario: 10 out of 13 total points in the current region, Roman Manor. There are no secrets left to find here, so the score to win is 13 points.
 
 >staple
 >stapler
 >staple wall
 >score
-WRONG
+Score in a scenario: 13 out of 13 total points in the current region, Roman Manor. You should go IN to the Strip of Profits, now.
 
 >in
 Strip of Profits
@@ -95,15 +109,20 @@ Won now: Roman Manor (13/13).
 
 * _stores
 
+>posf
+
+>score
+Score in a scenario: 0 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 11.
+
 >sorbet
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 1 out of 11 total points in the current region, Stores. Lowest score to solve is 4. Maximum score available is 11.
 
 >others
 >score
-WRONG
+Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 5. Maximum score available is 11.
 
 >presto
 Your score has just gone up by one point
@@ -122,10 +141,10 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 9. Maximum score available is 11.
 >nestor
 >score
-WRONG
+Score in a scenario: 10 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 11.
 
 >enter smoke
 >outside
@@ -136,6 +155,7 @@ Score in a scenario: 11 out of 11 total points in the current region, Stores.
 
 * _routes
 
+>posf
 >score
 0 out of 18 total points in the current region, Routes
 
@@ -143,7 +163,7 @@ Score in a scenario: 11 out of 11 total points in the current region, Stores.
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 1 out of 18 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 18 points.
 
 >inside
 Your score has just gone up by one point
@@ -189,15 +209,17 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >around
 Your score has just gone up by one point
+>along
+Your score has just gone up by one point
 
 >amidst
 Your score has just gone up by one point
 
 >behind
 Your score has just gone up by one point
+>undo
+
 >within
-Your score has just gone up by one point
->between
 Your score has just gone up by one point
 >through
 Your score has just gone up by one point
@@ -207,13 +229,18 @@ Routes (18/18)
 
 * _troves
 
+>posf
+
 >l
 Loather Rathole
+
+>score
+Score in a scenario: 0 out of 21 total points in the current region, Troves. Lowest score to solve is 15. Maximum score available is 21.
 
 >gape
 Your score has just gone up by one point
 >score
-WRONG
+Score in a scenario: 1 out of 21 total points in the current region, Troves. Lowest score to solve is 16. Maximum score available is 21.
 
 >hate
 Your score has just gone up by one point
@@ -230,7 +257,7 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >believe
 >score
-WRONG
+Score in a scenario: 7 out of 21 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
 
 >undo
 >undo
@@ -238,19 +265,17 @@ WRONG
 >believe
 >reason
 >score
-WRONG
+Score in a scenario: 7 out of 21 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 21.
 
 >recall
 
 >despair
+Your score has just gone up by one point
 
 >glare
 Your score has just gone up by one point
 >score
-WRONG
-
->despair
-Your score has just gone up by one point
+Score in a scenario: 10 out of 21 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 21.
 
 >l
 Boredom Bedroom
@@ -265,20 +290,26 @@ Econ-Cone
 >aspire
 Your score has just gone up by one point
 >score
-WRONG
->strive
-Your score has just gone up by one point
->score
-WRONG
+Score in a scenario: 13 out of 21 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 21.
 
 >strive
 Your score has just gone up by one point
 >score
-WRONG
+Score in a scenario: 14 out of 21 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 21.
+
+>undo
+>undo
+>undo
+>undo
+
+>strive
+Your score has just gone up by one point
+>score
+Score in a scenario: 13 out of 21 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 21.
 >aspire
 Your score has just gone up by one point
 >score
-WRONG
+Score in a scenario: 14 out of 21 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 21.
 
 >ponder
 FiefCo Office
@@ -290,24 +321,26 @@ Your score has just gone up by one point
 >bolster
 Your score has just gone up by one point
 >score
-WRONG
->master
-Your score has just gone up by one point
->score
-WRONG
-
->undo
->undo
->undo
+Score in a scenario: 17 out of 21 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 21.
 
 >master
 Your score has just gone up by one point
 >score
-WRONG
+Score in a scenario: 18 out of 21 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 21.
+
+>undo
+>undo
+>undo
+>undo
+
+>master
+Your score has just gone up by one point
+>score
+Score in a scenario: 17 out of 21 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 21.
 >bolster
 Your score has just gone up by one point
 >score
-WRONG
+Score in a scenario: 18 out of 21 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 21.
 
 >bolstre
 That's not something you can say, do or see here.
@@ -315,12 +348,12 @@ That's not something you can say, do or see here.
 >discover
 Your score has just gone up by one point
 >score
-WRONG
+Score in a scenario: 19 out of 21 total points in the current region, Troves. There are no secrets left to find here, so the score to win is 21 points.
 
 >last
 Your score has just gone up by one point
 >score
-WRONG
+Score in a scenario: 20 out of 21 total points in the current region, Troves. There are no secrets left to find here, so the score to win is 21 points.
 
 >resign
 Your score has just gone up by one point
@@ -332,24 +365,25 @@ Troves (21/21)
 
 * _presto
 
+>posf
 >l
 Grey Gyre
 
 >score
-WRONG
+Score in a scenario: 0 out of 33 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 33.
 
 >blam
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 1 out of 33 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 33.
 
 >umph
 Your score has just gone up by one point
 >phooey
 Your score has just gone up by two points
 >score
-WRONg
+Score in a scenario: 4 out of 33 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 33.
 
 
 >e
@@ -407,15 +441,17 @@ Your score has just gone up by one point
 >n
 Hacks' Shack
 
+>score
+Score in a scenario: 16 out of 33 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 33.
 >romsticks
 Your score has just gone up by one point
 >score
-WRONG
+Score in a scenario: 17 out of 33 total points in the current region, Presto. Lowest score to solve is 31. Maximum score available is 33.
 
 >casserole
 Your score has just gone up by one point
 >score
-WRONG
+Score in a scenario: 18 out of 33 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 33.
 
 >capslock
 Your score has just gone up by one point
@@ -459,12 +495,14 @@ You can now do computery things unimpeded!
 >put lock on keyboard
 fits in perfectly
 
+>score
+Score in a scenario: 27 out of 33 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 33.
 >tab
 Your score has just gone up by one point
 Adding a min point
 
 >score
-WRONG
+Score in a scenario: 28 out of 33 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 33 points.
 
 >disk
 >put disk in drive
@@ -489,26 +527,28 @@ Presto (33/33)
 
 * _oyster
 
+>posf
+
 >l
 Posh Hops Shop
 
 
 >score
-WRONG
+Score in a scenario: 0 out of 39 total points in the current region, Oyster. Lowest score to solve is 28. Maximum score available is 39.
 
 >unset
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 1 out of 39 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 39.
 
 >sing
 >score
-WRONG
+Score in a scenario: 2 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 39.
 
 >scrape
 >score
-WRONG
+Score in a scenario: 3 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 39.
 
 >stroll
 Olde Lode
@@ -530,11 +570,14 @@ Your score has just gone up by one point
 >e
 Lean Lane
 
+>score
+Score in a scenario: 9 out of 39 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 39.
+
 >scan
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 10 out of 39 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 39.
 
 >seek
 Your score has just gone up by one point
@@ -543,20 +586,22 @@ Handsome Sand Home
 >eat
 Your score has just gone up by one point
 
+>score
+Score in a scenario: 12 out of 39 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 39.
 >tend
 Your score has just gone up by one point
-
 >score
-WRONG
+Score in a scenario: 13 out of 39 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 39.
 
 >tutor
 Your score has just gone up by one point
 
+>score
+Score in a scenario: 14 out of 39 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 39.
 >swipe
 Your score has just gone up by one point
-min point
 >score
-WRONG
+Score in a scenario: 15 out of 39 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 39.
 
 >w
 >n
@@ -565,7 +610,7 @@ Lapsin' Plains
 >splain
 min point for this flip
 >score
-WRONG
+Score in a scenario: 16 out of 39 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 39.
 
 >trace
 Your score has just gone up by one point
@@ -583,23 +628,24 @@ Your score has just gone up by one point
 >drop
 Your score has just gone up by one point
 
+>score
+Score in a scenario: 22 out of 39 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 39.
 >sweat
 Your score has just gone up by one point
-
 >score
-WRONG
+Score in a scenario: 23 out of 39 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 39.
 
 >shape
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 24 out of 39 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 39.
 
 >clean
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 25 out of 39 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 39.
 
 >out
 
@@ -659,7 +705,8 @@ End Den
 Scum Ant Sanctum
 
 >score
-WRONG
+Score in a scenario: 33 out of 39 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 39.
+#?? this is actually wrong! If you are in the sanctum you're forced to kill the ant and get the min-point
 
 >tan
 Your score has just gone up by one point
@@ -667,6 +714,8 @@ Your score has just gone up by one point
 Tenfold Teflon'd
 
 
+>score
+Score in a scenario: 34 out of 39 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 39.
 ##>prepay yapper
 >prepay
 Your score has just gone up by one point
@@ -675,11 +724,12 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 36 out of 39 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 39 points.
 
 >derail
 Your score has just gone up by one point
 >pull lever
+Your score has just gone up by one point
 >redial
 Your score has just gone up by one point
 
@@ -687,6 +737,8 @@ Your score has just gone up by one point
 Oyster (39/39)
 
 * _towers
+
+>posf
 
 >seed 1
 >towers
@@ -700,33 +752,33 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 3 out of 46 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 46.
 
 >tenser
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 4 out of 46 total points in the current region, Towers. Lowest score to solve is 25. Maximum score available is 46.
 
 >snared
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 5 out of 46 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 46.
 
 >cricked
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 6 out of 46 total points in the current region, Towers. Lowest score to solve is 27. Maximum score available is 46.
 
 >yonder
 Your score has just gone up by one point
 
->score
-WRONG
-
 Topside Deposit
+
+>score
+Score in a scenario: 7 out of 46 total points in the current region, Towers. Lowest score to solve is 27. Maximum score available is 46.
 
 >creaky
 Your score has just gone up by one point
@@ -738,13 +790,13 @@ Scope Copse
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 9 out of 46 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 46.
 
 >rinsed
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 10 out of 46 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 46.
 
 >weirder
 Your score has just gone up by one point
@@ -752,7 +804,7 @@ Your score has just gone up by one point
 >clumsy
 Your score has just gone up by one point
 >score
-WRONG
+Score in a scenario: 12 out of 46 total points in the current region, Towers. Lowest score to solve is 29. Maximum score available is 46.
 
 >n
 Baldest Blasted Saltbed
@@ -761,13 +813,13 @@ Baldest Blasted Saltbed
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 13 out of 46 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 46.
 
 >pastier
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 14 out of 46 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 46.
 #minimum should not increase
 #i forget the algorithm
 
@@ -775,7 +827,7 @@ WRONG
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 15 out of 46 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 46.
 #minimum should not increase
 
 >n
@@ -786,12 +838,11 @@ Your score has just gone up by one point
 >weariest
 Your score has just gone up by one point
 
-
 >angstier
 Your score has just gone up by one point
 
 >score
-WRONG
+Score in a scenario: 18 out of 46 total points in the current region, Towers. Lowest score to solve is 32. Maximum score available is 46.
 #definitely a min point here
 
 >n
@@ -804,38 +855,34 @@ Salted Deltas
 >hastiest
 Your score has just gone up by one point
 
+>score
+Score in a scenario: 19 out of 46 total points in the current region, Towers. Lowest score to solve is 32. Maximum score available is 46.
 >marginal
 Your score has just gone up by one point
 # add minimum point here
 
 >score
-WRONG
-# add minimum point here
+WRONG??
+Score in a scenario: 20 out of 46 total points in the current region, Towers. Lowest score to solve is 33. Maximum score available is 46.
 
 >s
 Savager Ravages
 
 >resealed
-Your score has just gone up by one point
+Score in a scenario: 21 out of 46 total points in the current region, Towers. Lowest score to solve is 33. Maximum score available is 46.
+WRONG??
 # add minimum point here
 
 >score
 WRONG
-
->released
-Your score has just gone up by one point
-# add minimum point here
-
->score
-WRONG
-# add minimum point here
 
 >himself
 Your score has just gone up by one point
 # add minimum point here
 
 >score
-WRONG
+Score in a scenario: 21 out of 46 total points in the current region, Towers. Lowest score to solve is 33. Maximum score available is 46.
+WRONG??
 # add minimum point here
 
 >sewed
@@ -846,7 +893,7 @@ Your score has just gone up by one point
 min point
 
 >score
-WRONG
+Score in a scenario: 24 out of 46 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 46.
 # add minimum point here
 
 >mined
@@ -854,7 +901,7 @@ Your score has just gone up by one point
 # add minimum point here
 
 >score
-WRONG
+Score in a scenario: 25 out of 46 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 46.
 # add minimum point here
 
 min point
@@ -863,12 +910,15 @@ min point
 >drained
 Your score has just gone up by one point
 
+>score
+WRONG??
+
 >pluses
 Your score has just gone up by one point
 # add minimum point here
 
 >score
-WRONG
+Score in a scenario: 27 out of 46 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 46.
 # add minimum point here
 
 >e
@@ -882,7 +932,7 @@ Your score has just gone up by one point
 # add minimum point here
 
 >score
-WRONG
+Score in a scenario: 29 out of 46 total points in the current region, Towers. Lowest score to solve is 38. Maximum score available is 46.
 # add minimum point here
 
 >naivest
@@ -890,7 +940,7 @@ Your score has just gone up by one point
 # add minimum point here
 
 >score
-WRONG
+Score in a scenario: 30 out of 46 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 46.
 # add minimum point here
 
 >s
@@ -902,6 +952,9 @@ If you made it, you might fall in the slot and never get out.
 >rustled
 Your score has just gone up by one point
 min point
+
+>score
+Score in a scenario: 31 out of 46 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 46.
 
 >n
 
@@ -948,12 +1001,15 @@ by one point
 >ask kid about doctor
 Obscurest Subsector
 
+>score
+Score in a scenario: 37 out of 46 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 46.
+
 >attentive
 Your score has just gone up by one point
 # add minimum point here
 
 >score
-WRONG
+Score in a scenario: 38 out of 46 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 46.
 # add minimum point here
 
 >rowdy
@@ -977,7 +1033,7 @@ Your score has just gone up by one point
 # add minimum point here
 
 >score
-WRONG
+Score in a scenario: 41 out of 46 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 46.
 # add minimum point here
 
 >dingy
@@ -985,7 +1041,7 @@ Your score has just gone up by one point
 # add minimum point here
 
 >score
-WRONG
+Score in a scenario: 42 out of 46 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 46.
 # add minimum point here
 
 >w
@@ -996,11 +1052,14 @@ Your score has just gone up by one point
 # add minimum point here
 
 >score
-WRONG
+Score in a scenario: 43 out of 46 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 46.
 # add minimum point here
 
 >give flowerpot
 Your score has just gone up by one point
+
+>score
+Score in a scenario: 44 out of 46 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 46.
 
 >e
 >spectacular
@@ -1014,6 +1073,8 @@ Towers (46/46)
 
 * _otters
 
+>posf
+
 >seed 1
 >otters
 >in
@@ -1021,12 +1082,15 @@ Towers (46/46)
 Your score has just gone up by one point
 >reedily
 Your score has just gone up by one point
+
+>score
+Score in a scenario: 2 out of 29 total points in the current region, Otters. Lowest score to solve is 23. Maximum score available is 29.
 >rescind
 Your score has just gone up by one point
 # add minimum point here
 
 >score
-WRONG
+Score in a scenario: 3 out of 29 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 29.
 # add minimum point here
 
 >w
@@ -1051,78 +1115,12 @@ Loop Pool
 >score
 >s
 >s
->however
->score
-WRONG
 >although
 >score
-WRONG
->undo
->undo
->undo
->undo
->undo
->undo
->undo
->undo
-
->s
->s
->although
->score
-WRONG
->however
-WRONG
->n
->n
->else
->score
-WRONG
->undo
->undo
->undo
->undo
->undo
->undo
->undo
->undo
->undo
->undo
-
->s
->s
->however
->although
->n
->n
->because
->score
-WRONG
->else
->score
-WRONG
-
->undo
->undo
->undo
->undo
->undo
->undo
->undo
-
->n
->n
->because
->score
-WRONG
->else
->score
-WRONG
->s
->s
+Score in a scenario: 9 out of 29 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 29.
 >however
 >score
-WRONG
+Score in a scenario: 10 out of 29 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 29.
 
 >n
 
@@ -1153,15 +1151,17 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >garbed
 Your score has just gone up by one point
+DEBUG INFO: Adding a min point for this flip.
 >score
-WRONG
+Score in a scenario: 18 out of 29 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 29.
 >undo
 >undo
 >undo
 >garbed
 >artsy
+DEBUG INFO: Adding a min point for this flip.
 >score
-WRONG
+Score in a scenario: 18 out of 29 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 29.
 >undo
 >undo
 >undo
@@ -1169,8 +1169,10 @@ WRONG
 >garbed
 >artsy
 >paroled
+DEBUG INFO: Adding a min point for this flip.
 >score
-WRONG
+Score in a scenario: 18 out of 29 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 29.
+>undo
 >undo
 >undo
 >undo
@@ -1179,6 +1181,9 @@ WRONG
 >artsy
 >paroled
 >coolest
+DEBUG INFO: Adding a min point for this flip.
+>score
+Score in a scenario: 18 out of 29 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 29.
 
 >s
 >s
@@ -1186,8 +1191,6 @@ WRONG
 >loathingly
 Your score has just gone up by one point
 >tersely
-Your score has just gone up by one point
->stoically
 Your score has just gone up by one point
 
 >s
@@ -1204,16 +1207,18 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >snipe
 Your score has just gone up by one point
+DEBUG INFO: Adding a min point for this flip.
 >score
-WRONG
+Score in a scenario: 25 out of 29 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 29.
 
 >undo
 >undo
 >undo
 >snipe
 >raccoon
+DEBUG INFO: Adding a min point for this flip.
 >score
-WRONG
+Score in a scenario: 25 out of 29 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 29.
 
 >undo
 >undo
@@ -1222,8 +1227,9 @@ WRONG
 >snipe
 >raccoon
 >hornets
+DEBUG INFO: Adding a min point for this flip.
 >score
-WRONG
+Score in a scenario: 25 out of 29 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 29.
 
 >undo
 >undo
@@ -1234,8 +1240,9 @@ WRONG
 >raccoon
 >hornets
 >snail
+DEBUG INFO: Adding a min point for this flip.
 >score
-WRONG
+Score in a scenario: 25 out of 29 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 29.
 
 >n
 >n
@@ -1246,7 +1253,7 @@ Coevals' Alcoves
 >honestly
 Your score has just gone up by one point
 >score
-WRONG
+Score in a scenario: 26 out of 29 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 29 points.
 
 >raptor
 Your score has just gone up by one point
@@ -1273,55 +1280,210 @@ WTF FTW
 >play whistle
 Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
 
+* _otters-NSSN
+
+>posf
+
+>seed 1
+>a5
+>otters
+>in
+>barely
+>reedily
+>rescind
+>w
+Gent-Fora Frontage
+>bossily
+Your score has just gone up by one point.
+>nastily
+Your score has just gone up by one point.
+>blearily
+Your score has just gone up by one point.
+
+>au -1
+>1
+>3
+
+>n
+>because
+>score
+Score in a scenario: 7 out of 29 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 29.
+>s
+>s
+>although
+>score
+Score in a scenario: 8 out of 29 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 29.
+>n
+>n
+>else
+>score
+Score in a scenario: 9 out of 29 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 29.
+>s
+>s
+>however
+>score
+Score in a scenario: 10 out of 29 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 29.
+
+* _otters-SNNS
+
+>posf
+
+>seed 1
+>a5
+>otters
+>in
+>barely
+>reedily
+>rescind
+>w
+Gent-Fora Frontage
+>bossily
+Your score has just gone up by one point.
+>nastily
+Your score has just gone up by one point.
+>blearily
+Your score has just gone up by one point.
+
+>au -1
+>1
+>3
+
+>s
+>although
+>score
+Score in a scenario: 7 out of 29 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 29.
+>n
+>n
+>because
+>score
+Score in a scenario: 8 out of 29 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 29.
+>else
+>score
+Score in a scenario: 9 out of 29 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 29.
+>s
+>s
+>however
+>score
+Score in a scenario: 10 out of 29 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 29.
+
+* _otters-SSNN
+
+>posf
+
+>seed 1
+>a5
+>otters
+>in
+>barely
+>reedily
+>rescind
+>w
+Gent-Fora Frontage
+>bossily
+Your score has just gone up by one point.
+>nastily
+Your score has just gone up by one point.
+>blearily
+Your score has just gone up by one point.
+
+>au -1
+>1
+>3
+
+>s
+>although
+>score
+Score in a scenario: 7 out of 29 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 29.
+>however
+>score
+Score in a scenario: 8 out of 29 total points in the current region, Otters. Lowest score to solve is 24. Maximum score available is 29.
+>n
+>n
+>because
+>score
+Score in a scenario: 9 out of 29 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 29.
+>else
+>score
+Score in a scenario: 10 out of 29 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 29.
+
 * _others
 
+>posf
+
 >z
+
+>x stand
 
 >maraschino
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 1 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >grapes
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 2 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >cranberries
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 3 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >tamarind
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 4 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 
 >compass
 Your score has just gone up by one point.
+>score
+Score in a scenario: 5 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 
 >plums
 Your score has just gone up by one point.
+>score
+Score in a scenario: 6 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >pears
 Your score has just gone up by one point.
+>score
+Score in a scenario: 7 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >blueberries
 Your score has just gone up by one point.
+>score
+Score in a scenario: 8 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >pomegranate
 Your score has just gone up by one point.
 Take on a token
+>score
+Score in a scenario: 9 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >cantaloupe
 Your score has just gone up by one point.
+>score
+Score in a scenario: 10 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >persimmon
 Your score has just gone up by one point.
+>score
+Score in a scenario: 11 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >limes
+Your score has just gone up by one point.
+>score
+Score in a scenario: 12 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 
 >n
 Swell Wells
 >apricot
 Your score has just gone up by one point.
+>score
+Score in a scenario: 13 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >apples
 Your score has just gone up by one point.
+>score
+Score in a scenario: 14 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >mulberries
 Your score has just gone up by one point.
+>score
+Score in a scenario: 15 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >gooseberry
 Your score has just gone up by one point.
+>score
+Score in a scenario: 16 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 
 >s
 scru-it
@@ -1329,8 +1491,12 @@ scru-it
 
 >coconuts
 Your score has just gone up by one point.
+>score
+Score in a scenario: 17 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >icon
 Your score has just gone up by one point.
+>score
+Score in a scenario: 18 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 
 >s
 You fiddle with the coin you got
@@ -1338,37 +1504,45 @@ You fiddle with the coin you got
 
 >tangerines
 Your score has just gone up by one point.
+>score
+Score in a scenario: 19 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 
 >w
 Filed Field
 
 >blackberries
 Your score has just gone up by one point.
+>score
+Score in a scenario: 20 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >watermelon
 Your score has just gone up by one point.
+>score
+Score in a scenario: 21 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >pineapple
 Your score has just gone up by one point.
+>score
+Score in a scenario: 22 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >strawberries
 Your score has just gone up by one point.
 >score
-WRONG
-#liast with minimum at base
+Score in a scenario: 23 out of 41 total points in the current region, Others. Lowest score to solve is 26. Maximum score available is 41.
+#strawberries = last with minimum at base
 >grapefruit
 Your score has just gone up by one point.
 
 >score
-WRONG
+Score in a scenario: 24 out of 41 total points in the current region, Others. Lowest score to solve is 27. Maximum score available is 41.
 #should be first min-up
 
 >raspberry
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 25 out of 41 total points in the current region, Others. Lowest score to solve is 28. Maximum score available is 41.
 
 >breadfruit
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 26 out of 41 total points in the current region, Others. Lowest score to solve is 29. Maximum score available is 41.
 
 >e
 >s
@@ -1376,7 +1550,8 @@ Nice going.
 
 >sonic
 Blam!
-Your score has just gone up by one point.
+>score
+Score in a scenario: 27 out of 41 total points in the current region, Others. Lowest score to solve is 29. Maximum score available is 41.
 
 >n
 >e
@@ -1385,42 +1560,42 @@ Clangier Clearing
 >cinque
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 28 out of 41 total points in the current region, Others. Lowest score to solve is 30. Maximum score available is 41.
 
 >cheap
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 29 out of 41 total points in the current region, Others. Lowest score to solve is 31. Maximum score available is 41.
 
 >papayas
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 30 out of 41 total points in the current region, Others. Lowest score to solve is 32. Maximum score available is 41.
 
 >among
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 31 out of 41 total points in the current region, Others. Lowest score to solve is 33. Maximum score available is 41.
 
 >ancienter
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 32 out of 41 total points in the current region, Others. Lowest score to solve is 34. Maximum score available is 41.
 
 >solemn
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 33 out of 41 total points in the current region, Others. Lowest score to solve is 35. Maximum score available is 41.
 
 >len mo
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 34 out of 41 total points in the current region, Others. Lowest score to solve is 36. Maximum score available is 41.
 
 >cripes
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 35 out of 41 total points in the current region, Others. Lowest score to solve is 37. Maximum score available is 41.
 
 >w
 >d
@@ -1429,22 +1604,22 @@ Scape Space
 >nab an a
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 36 out of 41 total points in the current region, Others. Lowest score to solve is 38. Maximum score available is 41.
 
 >go near
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 37 out of 41 total points in the current region, Others. Lowest score to solve is 39. Maximum score available is 41.
 
 >rhubarb
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 38 out of 41 total points in the current region, Others. Lowest score to solve is 40. Maximum score available is 41.
 
 >reversed
 Your score has just gone up by one point.
 >score
-WRONG
+Score in a scenario: 39 out of 41 total points in the current region, Others. There are no secrets left to find here, so the score to win is 41 points.
 
 >give dollar
 
@@ -1455,8 +1630,14 @@ Gates Stage
 
 >research
 Your score has just gone up by one point.
+>score
+Score in a scenario: 40 out of 41 total points in the current region, Others. There are no secrets left to find here, so the score to win is 41 points.
+
 >review
 Your score has just gone up by one point.
+>score
+Score in a scenario: 41 out of 41 total points in the current region, Others. You can go NORTH to Admit-Us Stadium.
+
 >n
 
 You Did Great
@@ -1553,7 +1734,7 @@ Rustic Citrus
 >in
 >{include} _oyster
 
-* _only-towers
+* only-towers
 
 >seed 1
 >ts

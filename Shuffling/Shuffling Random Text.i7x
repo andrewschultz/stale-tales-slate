@@ -1642,6 +1642,7 @@ blurb
 "Cross? Mute? Customers must score!"
 "Crudest crusted set curd."
 "Cry Last, Crystal!"
+"Cry, Lou, Luc, Roy or Lucy!"
 "Cry, solo robot, too-sorry bloc? Cool story, bro!"
 "A crypt. Cry? Apt."
 "Cur of Corfu!"
@@ -3024,6 +3025,7 @@ blurb
 "'Gro Food for Good!'"
 "'Gro-Now: WRONGO!'"
 "'Grossly-sly orgs! SRSLY, GO!'"
+"'Groupthink poking thru!'"
 "'Guards? Drag us? Urg, sad.'"
 "'Gus Tom Must Go!'"
 "'Halls of power? Shallower fop!'"
@@ -3375,6 +3377,7 @@ blurb
 "'Complicated topic calmed. Placid comet.'"
 "A conceders['] crescendo follows a claim nerds'd LIKE to help everyday stupid people." [x]
 "'Coolidge's Logic Odes slice GOOD!'"
+"'[']Cos pie's so epic!'"
 "'Craft glue: gruel. FACT!'"
 "'A cretin! Certain!' / 'I recant!'"
 "Critiques on [i]Somber Fun of Numbers[r], by Murf Bones." [x]

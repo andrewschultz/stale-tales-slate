@@ -1864,6 +1864,7 @@ blurb
 "Won't dare to wander."
 "Yea, told to delay."
 "'A yield. I delay.'"
+"You mind muy doin[']?"
 "You pass, so? Say, UP!"
 
 table of yessage [xxg11]
@@ -7222,6 +7223,7 @@ blurb
 "Mishta Mathis"
 "Mo Cuts Scum to Custom"
 "Mo['] Cats to Scam"
+"Mo['] Files of Slime"
 "Molly is Mo['] Silly"
 "Mr. Casa's Sarcasm"
 "Mr I-Stop-Imports"
@@ -10271,6 +10273,7 @@ blurb	prio
 "Brave Nun Van Buren[r], by Evan Burn"
 "Bravest Star Bev[r], by Rav Best"
 "Brawl On, Barn Owl[r], by Al Brown"
+"Bray, Bray[r], by Barry Bay"
 "Bray Oft, Frat Boy[r], by Fab Troy Bayfort"
 "Bray Soft, Frat Boys[r], by Fay Borst"
 "Brazen Guile, Gaberlunzie[r], by [if player is male]Bazil Gurnee[else]Zenia Bulger & Eliza Gruben[end if]"
@@ -16017,6 +16020,7 @@ blurb	prio
 "Wild Bo's Low Bids[r], by Sid Blow"
 "Wild Glen Dwelling[r], by Gwen Dill"
 "A Wild ID Law[r], by Walid Lidwa"
+"Wild Logo Idol, Glow[r], by Will Good & Gill Wood"
 "Wild Ted's Twiddles[r], by Wilt Edds"
 "A Wilder, Idle War[r], by Eli Ward" []
 "Wilfredo, Dire Wolf of Wilder Row Field[r], by Ford Weil"
@@ -24781,6 +24785,7 @@ blurb
 "'Obsolete obese lot!'"
 "'Octane, Ace?' / 'Not at once.'"
 "'OD, Tex? Detox!'" []
+"'Odd boory body odor!'"
 "'Odd day, daddy-o!'"
 "'Odd log, old dog.'"
 "'Offends? Send off!'"
@@ -31385,6 +31390,7 @@ blurb
 "Bury the Hurt: Bye[r], by Ty Huber"
 "Busy Times[r], by [if player is male]Tim Bussey[else]Betsy Imus[end if]"
 "But Stir, Burst It[r], by Su Britt"
+"By Gusto, Bot Guys Got Busy[r], by Guy Bost"
 "Bye, Harm: My Rehab[r], by Herb May"
 "Can You? Ay, Unco[r], by Una Coy"
 "Career Goals: Sager Oracle[r], by [if player is male]Roger Casale & Cole Segarra[else]Grace LaRose[end if]"
@@ -35929,6 +35935,7 @@ blurb
 "Alert, clown: we can troll!"
 "All We Do: ALLOWED!" []
 "ARM! RAM! MAR!"
+"The ASBO be as hot!"
 "AUNT TUNA (an unflattering picture, captioned weight: A TUN)" [p] [x]
 "Aw, a creep: peace? WAR!"
 "Aye for year of fear, yo!"
@@ -36267,6 +36274,7 @@ blurb
 "ear-bud dauber" []
 "eat-mech machete" []
 "Electro-Corelet" []
+"epic rants print case"
 "epic taints-antiseptic" []
 "an epulotic poultice"
 "errantries restrainer"
@@ -36689,6 +36697,7 @@ blurb
 "a DuPont's Stun-Pod"
 "a frog-leg flogger"
 "gagmost maggots" []
+"a gloom-gleem golem"
 "a gouge-o-gauge"
 "a harm-set hamster"
 "hassler-lashers" []
