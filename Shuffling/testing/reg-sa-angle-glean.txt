@@ -42,7 +42,8 @@ Your score has just gone up by one point.
 >get phial
 
 >angle
-You stare into the blue lube for a bit, then look around. You notice a weird haze around the static when you do.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the static (faint) when you do.
+[You decide to keep a running to-do entry in your notebook of stuff you haven't tackled, yet.]
 
 >glean
 You see Old Man Almond sneaking up from behind you and smacking you on the head, saying to get going already...
@@ -79,30 +80,24 @@ WRONG
 * _forest
 
 >sr ne
->fretso
-That seemed right but didn't seem quite natural.
-You feel a slight psychic push-pull coming from Store F. Keep at it.
 >forest
 Your score has just gone up by one point.
->fretso
 
 >enter forest
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the thorn when you do.
 >glean
-WRONG
+You see yourself considering all four compass directions before picking the right one.
 
->ornth
-Your compass feels extra jumbled, but--well, you must be close.
 >n
 Your score has just gone up by one point.
 Rest of Forest
 
 >angle
-WRONG
+There's a weird haze in each of the four directions--north, south, east and west.
 >glean
-WRONG
+You see yourself considering all four compass directions before picking the right one.
 
 >e
 Self-ID Fields
@@ -111,19 +106,10 @@ by one point
 >e
 Sorted Trodes
 
->tones
-You aren't sure you need a booming voice telling you what you can EXAMINE.
-
->destro
-It's going to get evil enough even without a high-ranking COBRA officer.
-
->doters
-You don't need people oohing and ahing at your skill.
-
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the ones, the dashes and the noughts when you do.
 >glean
-WRONG
+You see yourself putting something on your face and then walking through the turnstile with ease.
 
 >nose
 Your score has just gone up by one point.
@@ -140,9 +126,9 @@ Stored, er, Dots
 bread from the Spam
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the Spam and the bread when you do.
 >glean
-WRONG
+You see yourself putting something on your face and then walking through the turnstile with ease.
 
 >maps
 Your score has just gone up by one point.
@@ -154,10 +140,9 @@ Your score has just gone up by one point.
 You've made a full disguise now!
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
 >glean
-WRONG
-
+You see yourself walking through the turnstile with ease.
 
 >e
 >n
@@ -165,9 +150,9 @@ Your score has just gone up by one point.
 Cruel Ones' Enclosure
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the banshee (faint) and the liches when you do.
 >glean
-WRONG
+You see the liches working their way under the meats, which fall into the grinder.
 
 >hasbeen
 Your score has just gone up by one point.
@@ -189,33 +174,33 @@ LIVERS.
 Your score has just gone up by one point.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the livers when you do.
 >glean
-WRONG
+You see the livers narrowing to a sharp, semi-metallic point.
 
 >sliver
 Your score has just gone up by one point.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the sliver when you do.
 >glean
-WRONG
+You see yourself slashing at the drapes, which billow out.
 
 >e
 >n
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the spread and the sliver when you do.
 >glean
-WRONG
+You stare into the blue lube for a bit. You see a small story unfold.
 
 >n
 red asp!
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the red asp and the sliver when you do.
 >glean
-WRONG
+You see yourself slashing at the drapes, which billow out.
 
 >drapes
 Your score has just gone up by one point.
@@ -226,23 +211,27 @@ revealing a doorway
 >silver
 Your score has just gone up by one point.
 
+>glean
+You see yourself loading your shotgun.
+
 >put silver in shotgun
 
 >n
 Ghouls' Slough
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
 >glean
-WRONG
+You see yourself tracing something on the maps and then walking with a purpose.
 
 >x maps
 Frost Forts
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the vowels when you do.
+
 >glean
-WRONG
+You see the vowels grow slavering teeth.
 
 >wolves
 Your score has just gone up by one point.
@@ -253,6 +242,14 @@ Trips Strip
 
 * _sortie
 
+>forest
+
+>angle
+/(You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, Store M and Store I when you do|You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, Store M, Store I and Store B when you do)
+
+>glean
+You see yourself examining the pictures on store I, then store I, then watching it collapse. You see yourself walking down a narrow exit. You even hear something like a rocket launch.
+
 >sortie
 Your score has just gone up by one point.
 
@@ -260,9 +257,9 @@ Your score has just gone up by one point.
 Centrifuge
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the dial when you do.
 >glean
-WRONG
+You see yourself flipping the dial back and forth about six or seven times. It all seems to end with some sort of rocket hitting a huge building. But there is no explosion, just rainbows and bubbles. Weird.
 
 >16
 round den, unadorned
@@ -272,25 +269,25 @@ Your score has just gone up by one point.
 The Nick
 
 >angle
-WRONG
+The nick glows all around.
 >glean
-WRONG
+You see yourself patting your stomach.
 
 >kitchen
 Your score has just gone up by one point.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman, the bottle of CATHOUSE perfume, the grist (faint) and the cake pan (faint) when you do. Your warts also tingle.
 >glean
-WRONG
+You see yourself making a meal, then dressing up to go out. You don't see yourself EATING the meal.
 
 >open fridge
 grist and a cake pan
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the tall trio, the cult tee, the skate, the cheesy spearman, the bottle of CATHOUSE perfume, the grist (faint) and the cake pan (faint) when you do. Your warts also tingle.
 >glean
-WRONG
+You see yourself making a meal, then dressing up to go out. You don't see yourself EATING the meal.
 
 >hotsauce
 Your score has just gone up by one point.
@@ -304,17 +301,18 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the grist (faint) and the cake pan (faint) when you do. Your warts also tingle.
+
 >glean
-WRONG
+You see yourself making a meal, then dressing up to go out. You don't see yourself EATING the meal.
 
 >put steak on taco
 a good start
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the grist (faint) and the cake pan (faint) when you do. Your warts also tingle.
 >glean
-WRONG
+You see yourself making a meal, then dressing up to go out. You don't see yourself EATING the meal.
 
 >put sauce on taco
 The tortilla's coming together
@@ -327,9 +325,9 @@ A full-blown taco
 Your score has just gone up by one point.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the grist (faint), the cake pan (faint) and the taco when you do. Your warts also tingle.
 >glean
-WRONG
+You see your face clear again, pleased you reversed the warts.
 
 >coat
 Your score has just gone up by one point.
@@ -346,12 +344,16 @@ A Round Den, Unadorned
 a little too undescribed
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the pair of hoses and the cask when you do. Your warts also tingle.
+
 >glean
-WRONG
+You see your face clear again, pleased you reversed the warts.
 
 >straw
 Your score has just gone up by one point.
+
+>glean
+You see yourself smiling at your feet with pride!
 
 >shoes
 Your score has just gone up by one point.
@@ -359,9 +361,10 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >angle
-WRONG
+The whole room seems lit up.
+
 >glean
-WRONG
+You see yourself disappearing!
 
 >put straw in sack
 
@@ -372,9 +375,11 @@ Your score has just gone up by one point.
 Moor
 
 >angle
-WRONG
+The whole moor seems lit up, and the glow pulses with the anapest beat of the poem.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the roadblock when you do.
+
 >glean
-WRONG
+You see a rough but friendly fellow scaring Pat away.
 
 >peasant
 Your score has just gone up by one point.
@@ -386,28 +391,31 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >angle
-WRONG
+The whole moor seems lit up.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the smilies when you do.
+
 >glean
-WRONG
+You see yourself filling up a wall then making it disappear.
 
 >missile
 Your score has just gone up by one point.
 
 >fold paper
 
-
 >angle
-WRONG
+The whole moor seems lit up.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the folded paper plane when you do.
 >glean
-WRONG
+You see yourself filling up a wall then making it disappear.
 
 >panel
 Your score has just gone up by one point.
 
 >angle
-WRONG
+The whole moor seems lit up.
+There's nothing else, here, than the general glow.
 >glean
-WRONG
+You see yourself filling up a wall then making it disappear.
 
 >room
 
@@ -421,9 +429,9 @@ You aren't going to sea in this game.
 Your score has just gone up by one point.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the scraped wall when you do.
 >glean
-WRONG
+You see yourself building a huge structure without saying anything.
 
 >hallway
 Your score has just gone up by one point.
@@ -438,24 +446,25 @@ The sack stiffens, rises and becomes less blobby. It's the cask again, nice and 
 Gainly laying
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the cask and the oils when you do.
 >glean
-WRONG
+You see yourself building a huge structure without saying anything.
+
 
 >moor
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the cask and the oils when you do.
 >glean
-WRONG
+You see yourself building a huge structure without saying anything.
 
 >soil
 Your score has just gone up by one point.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the cask when you do.
 >glean
-WRONG
+You see yourself building a huge structure without saying anything.
 
 >room
 >n
@@ -465,9 +474,9 @@ Gainly laying
 SO NOW HALLS SHALL SWOON
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the cask and the oils when you do.
 >glean
-WRONG
+You see yourself building a huge structure without saying anything.
 
 >w
 Crashing Archings
@@ -476,9 +485,9 @@ Crashing Archings
 >moor
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the cask and the oils when you do.
 >glean
-WRONG
+You see yourself building a huge structure without saying anything.
 
 >silo
 Your score has just gone up by one point.
@@ -492,9 +501,9 @@ RESULT WITH LUSTER
 >put panel on silo
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the hoots button and the trees button when you do.
 >glean
-WRONG
+You see yourself pointing at one of the buttons before it changes. Then you push it and hear a roar.
 
 >steer
 ester pervades
@@ -502,6 +511,11 @@ Your score has just gone up by one point.
 >shoot
 changes to a shoot
 Your score has just gone up by one point.
+
+>angle
+There's nothing else, here, than the general glow.
+>glean
+The blue lube shows you nothing. You probably just need to push a button or something.
 
 >push steer
 AMUSING GUNS
@@ -515,9 +529,10 @@ Trips Strip
 #this gets you to the flower shop with a choice of flowers, with everything else possible taken (except how to get the tulip) care of
 
 >angle
-WRONG
+The blue glow pulses with the beats.
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the drainage when you do.
 >glean
-WRONG
+You see yourself giving something reddish to some weird monster before it runs off.
 
 >gardenia
 Your score has just gone up by one point.
@@ -526,17 +541,18 @@ Your score has just gone up by one point.
 Cramped Red Camp
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the lost corn and the fuzzy clover when you do.
 >glean
-WRONG
+You see yourself giving something reddish to some weird monster before it runs off.
 
 >w
 A Yell Alley
 
 >angle
-WRONG
+The blue glow pulses with the beats, forming angry words.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the words and the motto when you do.
 >glean
-WRONG
+You see yourself giving something reddish to some weird monster before it runs off.
 
 >tomato
 Your score has just gone up by one point.
@@ -559,9 +575,9 @@ Your score has just gone up by one point.
 Cordoned Red Condo
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the antlers (faint) and the dry cake when you do.
 >glean
-WRONG
+You see yourself putting the brocade and the dry cake on the sensor in the Underside. Nothing works until you put them together.
 
 >switch emitter
 Your score has just gone up by one point.
@@ -577,9 +593,10 @@ Your score has just gone up by one point.
 Elf Row's Flowers
 
 >angle
-WRONG
+The blue glow pulses with the beats.
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the heaths, the begonias and the brocade when you do.
 >glean
-WRONG
+You see yourself putting the brocade and the keycard on the sensor in the Underside. Nothing works until you put them together.
 
 >give gardenia to faeries
 
@@ -588,9 +605,9 @@ Your score has just gone up by one point.
 >put barcode on keycard
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the heaths and the begonias when you do.
 >glean
-WRONG
+You see yourself putting the barcode and the keycard on the sensor in the Underside. Nothing works until you put them together.
 
 >w
 >s
@@ -599,9 +616,9 @@ WRONG
 Elm Train Terminal
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the neon pig when you do.
 >glean
-WRONG
+You see the neon pig exploding, the empty space being filled with--an ear of corn?!
 
 >u
 (on the fuzzy looking wall)
@@ -616,9 +633,9 @@ Your score has just gone up by one point.
 >e
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the heaths and the begonias when you do.
 >glean
-WRONG
+You see yourself putting the barcode and the keycard on the sensor in the Underside. Nothing works until you put them together.
 
 
 * _metros-heaths-darkness
@@ -651,9 +668,9 @@ Your score has just gone up by one point.
 It would stink to be you if you did that. The nerds outnumber you and would crucify you.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the nerds when you do.
 >glean
-WRONG
+You see yourself opening the termite emitter so it swarms over the nerds. You wonder who would be dirty enough to give you a quick refill.
 
 >ask nerds about darkness
 
@@ -665,9 +682,9 @@ That door's reinforced. The nerds made sure it was protected against all sorts o
 Bassy Abyss
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the siren when you do.
 >glean
-WRONG
+You see yourself pounding the siren and then doing various gymnastic tricks--wait, no, that'd be cray. Too many verbs to guess.
 
 >resin
 Your score has just gone up by one point.
@@ -675,9 +692,9 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
 >glean
-WRONG
+A quick swordfight, and the beast is vanquished!
 
 >attack beast
 Your score has just gone up by one point.
@@ -737,9 +754,9 @@ Your score has just gone up by one point.
 swirling into the bag
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the words when you do.
 >glean
-WRONG
+You see yourself putting the barcode and the keycard on the sensor in the Underside. Nothing works until you put them together.
 
 >e
 >give emitter to deadbeat
@@ -750,9 +767,10 @@ Dude! So you
 Your score has just gone up by one point.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the nerds when you do.
+
 >glean
-WRONG
+You see yourself grabbing the tulip as the nerds close their ears!
 
 >ask nerds about darkness
 Your score has just gone up by one point.
@@ -783,18 +801,18 @@ Your score has just gone up by one point.
 Tiles
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the tiles when you do.
 >glean
-WRONG
+You watch as the tiles shring from a large land mass to a smaller one.
 
 >islet
 Your score has just gone up by one point.
 Islet
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the swing and the rock when you do.
 >glean
-WRONG
+You see yourself either swimming or flying east, but not without proper gear.
 
 >cork
 Your score has just gone up by one point.
@@ -803,69 +821,83 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
 >glean
-WRONG
+You see yourself either swimming or flying east, but not without proper gear.
 
 >e
 An Odd Low Woodland
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the poles, the tool shed, the spore and the sprig when you do.
 >glean
-WRONG
+You see the poles to the east bend at an angle.
 
 >slope
 Your score has just gone up by one point.
+>glean
+You see two visions: one, the tool shed being destroyed, and another, you wearing the sprig, modified and the spore, modified. In each, you climb east.
 
 >grips
 Your score has just gone up by one point.
+>glean
+You see two visions: one, the tool shed being destroyed, and another, you wearing the grips and the spore, modified. In each, you climb east.
 
 >ropes
 Your score has just gone up by one point.
+>glean
+You see two visions: one, the tool shed being destroyed, and another, you wearing the grips and the ropes. In each, you climb east.
+
+>angle
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the tool shed when you do.
+>glean
+You see two visions: one, the tool shed being destroyed, and another, you wearing the grips and the ropes. In each, you climb east.
 
 >toeholds
 Your score has just gone up by two points.
+
+>glean
+You see two visions: one, you trying out the toeholds, and another, you wearing the grips and the ropes. In each, you climb east.
 
 >e
 Potshot Hotspot
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the riot when you do.
 >glean
-WRONG
+You see the riot, happier now, discussing art and wearing dirty smocks.
 
 >trio
 Your score has just gone up by one point.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the chain links and the trio when you do.
 >glean
-WRONG
+You see the trio, happier now, discussing art and wearing dirty smocks.
 
 >china
 Your score has just gone up by one point.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice weird hazes around the chain links and the trio when you do.
 >glean
-WRONG
+You see the trio, happier now, discussing art and wearing dirty smocks.
 
 >kilns
 Your score has just gone up by one point.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around the trio when you do.
 >glean
-WRONG
+You see the trio, happier now, discussing art and wearing dirty smocks.
 
 >potters
 Your score has just gone up by one point.
 
 >angle
-WRONG
+You stare into the blue lube for a bit, then look around. You notice a weird haze around Red Bull Burdell when you do.
 >glean
-WRONG
+You somehow manage to defeat Red Bull Burdell while still on the ground.
 
 >tug toe
 Your score has just gone up by one point.
@@ -874,9 +906,9 @@ Your score has just gone up by one point.
 Roman Manor
 
 >angle
-WRONG
+All the exits seem lit up.
 >glean
-WRONG
+You see yourself just being. No, abiding. No, it's hard to describe what you're doing, since it's so passive.
 
 >exist
 Your score has just gone up by one point.
@@ -885,7 +917,7 @@ a smart gamin' anagrammist
 
 ################################main tests below here
 
-* plow-through
+* _plow-through
 
 ###############this tries all the mistakes etc.
 
@@ -911,21 +943,6 @@ You have the rank of new hero now here.
 
 >{include} _resort
 
-#dupe-test
-* _metros-1
-#####this is usually not run as we can rely on plow-through. But it's there if wanted.
-
->gonear underside
->{include} _metstart-short
->{include} _metros-heaths-darkness
-
-#dupe-test
-* metros-2
-
->gonear underside
->{include} _metstart-short
->{include} _metros-begonias-darkness
-
 ##dupe test
 * _intro-only
 
@@ -945,10 +962,28 @@ You have the rank of new hero now here.
 >opt in
 >{include} _sortie
 
+#dupe-test
+* _metros-1
+#####this is usually not run as we can rely on plow-through. But it's there if wanted.
+
+>ts
+>gonear underside
+>{include} _metstart-short
+>{include} _metros-heaths-darkness
+
+#dupe-test
+* metros-2
+
+>ts
+>gonear underside
+>{include} _metstart-short
+>{include} _metros-begonias-darkness
+
 ##dupe test
-* _resort-only
+*_resort-only
 
 >ts
 >opt in
 >tsf
 >{include} _resort
+

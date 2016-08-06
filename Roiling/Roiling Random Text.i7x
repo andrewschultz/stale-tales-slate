@@ -1578,6 +1578,7 @@ blurb
 "'Do. Certain? Redaction.'"
 "'Do it, man, and omit...'"
 "Done that? Oh, attend."
+"Done work. Know. Redo."
 "'Easy, tidy. Yay, edits!'"
 "'Echos: CHOSE!'"
 "'Editor! Redo it!'" []

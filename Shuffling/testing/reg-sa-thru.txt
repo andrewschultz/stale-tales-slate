@@ -642,17 +642,6 @@ almost there!
 A full-blown taco
 Your score has just gone up by one point.
 
->cato
-You don't need to know your classics, here.
-
->cota
-Weird. The taco almost seemed to grow arms, or even sleeves.
-You feel a slight psychic push-pull coming from the taco. Keep at it.
->coat
-Your score has just gone up by one point.
->cota
-No need for fashion tweaks.
-
 >grtis
 The grist looks a bit less bland.
 You feel a slight psychic push-pull coming from the grist. Keep at it.
@@ -689,6 +678,16 @@ The straw remains motionless.
 >score
 12 out of 27
 
+>mope
+You mope, but you imagine no poem.
+
+>moro
+You almost feel something picking you up for a second. You must have been close.
+You feel a slight psychic push-pull coming from all around. Keep at it.
+
+>moor
+You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.
+
 >shose
 Something leaks out of the hoses. Hm. What else can be rubber, now.
 You feel a slight psychic push-pull coming from the pair of hoses. Keep at it.
@@ -696,6 +695,9 @@ You feel a slight psychic push-pull coming from the pair of hoses. Keep at it.
 Your score has just gone up by one point.
 >shose
 But you're wearing the shoes. That might cause problems.
+
+>moor
+You see a flash and get a glimpse of a moor, but it is just too cold. You blink and find yourself back in the room
 
 >sakc
 Nothing happens. Maybe you are trying to do too much to change the cask
@@ -709,12 +711,17 @@ You doubt the sack/cask has a triple purpose.
 
 >get sack
 
->mope
-You mope, but you imagine no poem.
+>cato
+You don't need to know your classics, here.
 
->moro
-You almost feel something picking you up for a second. You must have been close.
-You feel a slight psychic push-pull coming from all around. Keep at it.
+>cota
+Weird. The taco almost seemed to grow arms, or even sleeves.
+You feel a slight psychic push-pull coming from the taco. Keep at it.
+>coat
+Your score has just gone up by one point.
+>cota
+No need for fashion tweaks.
+
 >moor
 Your score has just gone up by one point.
 Moor
