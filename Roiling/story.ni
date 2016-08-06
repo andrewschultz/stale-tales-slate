@@ -19685,8 +19685,14 @@ to say kid-first:
 
 a smart kid is a reflexive person. "[kid-full] smiles [if smart kid is reflexive]nervously[else]happily[end if] at you, lost in technical abstract thought."
 
-before talking to smart kid when smart kid is reflexive:
-	say "[kid-full] says 'Sorry, I'm too distracted...I'm even distracted by how I'm distracted, and why I am, and why I shouldn't be, and how I'm wasting my smarts, but I better not think I'm TOO smart.'[paragraph break]Fidget, fidget, fidget." instead;
+before objasking smart kid about when smart kid is reflexive:
+	kid-fid instead;
+
+before asking smart kid about when smart kid is reflexive:
+	kid-fid instead;
+
+to kid-fid:
+	say "[kid-first] says 'Sorry, I'm too distracted...I'm even distracted by how I'm distracted, and why I am, and why I shouldn't be, and how I'm wasting my smarts, but I better not think I'm TOO smart.'[paragraph break]Fidget, fidget, fidget.";
 
 a-text of smart kid is "RYRRYR". b-text of smart kid is "RGRRGR". parse-text of smart kid is "x[sp]i[sp]x[sp]x[sp]e[sp]d".
 
@@ -21173,6 +21179,7 @@ after fliptoing a guardian (this is the track guardian progress rule):
 	if MR is not sideview or MR is not mightaswell:
 		now MR is accessible;
 	if gua-before is gua-to-clear: [if we still need to clear the same number of guardians, increase minimum score]
+		d "unnecessary guardian cleared.";
 		min-up;
 	if can-see-map:
 		draw-my-loc;
