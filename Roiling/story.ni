@@ -181,7 +181,7 @@ a thing can be LLPish. a thing is usually not LLPish.
 
 a thing can be universal, useless, cluey, amusing, abstract or practical. a thing is usually practical.
 
-a thing can be flippable, auxiliary or uncluing. a thing is usually uncluing.
+a thing can be flippable, auxiliary or uncluing or clue-used. a thing is usually uncluing.
 
 a thing can be rayed. a thing is usually not rayed.
 
@@ -3172,6 +3172,8 @@ before doing something when Elmo is visible:
 		if word number 1 in the player's command is "talk" or word number 1 in the player's command is "ask" or word number 1 in the player's command is "say" or word number 1 in the player's command is "tell":
 			say "You aren't brave enough to say 'Disarm, mad sir!'" instead;
 		say "You can't do much with Elmo around." instead;
+	if current action is swearing obscenely or current action is swearing mildly:
+		say "No need for that. Shouldn't be too hard to figure what to do with the rifle." instead;
 	if action is blathery:
 		say "You don't want to go off on any tangents, here." instead;
 	if current action is not talking to Elmo and current action is not QBC responding with:
@@ -7855,7 +7857,7 @@ instead of swearing obscenely:
 		if cur-score of presto is 0:
 			say "That's too strong for here. But you have the right idea." instead;
 		if hacks' shack is visited:
-			say "There's no place for swearing now you've gotten to the hacks['] shack." instead;
+			say "While computer hackery involves a lot of spontaneous swearing at times, it won't help you, here. The interjective part of your journey is [if keyboard is off-stage or censer is off-stage]mostly [end if]over." instead;
 		if plebe is visible:
 			say "The plebe perks his ears up, but maybe that was too strong. Perhaps you should use a more general one--or one the plebe isn't expecting." instead;
 		if hogs are visible:
@@ -7870,6 +7872,19 @@ instead of swearing obscenely:
 		say "A voice booms SACRILEGE? RAGE! SLICE! You feel horrible pain, and the last thing you hear is CRUDE? CURED!";
 		get-dead;
 		the rule succeeds;
+	if player is in posh hops shop:
+		say "This is the place for it, but you can't bring yourself to be heard." instead;
+	if smart kid is in location of player:
+		say "Some example you are." instead;
+	if player is in frontage and macks are in frontage:
+		say "The conversation is horrid enough." instead;
+	if player is in coastlines or player is in shoreline:
+		if lois is in location of player or hostile-is-he lot is in location of player:
+			say "Oh, the self-righteous backlash you'd get from hostile folk nearby!" instead;
+	if player is in reclusion inclosure:
+		say "Yup. It's gotten REAL. But that won't help." instead;
+	if player is in alcoves and elmer is in alcoves:
+		say "Merle and Elmer sniff faux-piously." instead;
 	if player is in cripple clipper:
 		say "Siphon no pish on-ship." instead;
 	otherwise:
@@ -11113,7 +11128,6 @@ to swi-say (sst - indexed text):
 
 definition: a thing (called candi) is bluable:
 	[say "[candi] [if candi is ghostly]invis[end if] [if candi is uncluing]uncluing[end if] [if candi is visible] visible[end if].";]
-	if player is in shack and candi is blue button and rebooted is false, yes; [presto specific yes]
 	if candi is unscannable, no;
 	if candi is reflexed, no;
 	if candi is ghostly, no;
@@ -12679,14 +12693,18 @@ does the player mean scaning dingy dwelling: it is likely.
 
 understand "oscar's/oscars/oscar" as the dingy dwelling.
 
-the lairage regalia is reflexive scenery in Same Mesa. "[one of]As Yorpwaldian lairage regalia go, it's cheerless and unwelcoming. It says: [or][stopping][b][ast]Oscar's[ast][r]"
+the lairage regalia is reflexive scenery in Same Mesa. "[one of]As Yorpwaldian lairage regalia go, it's cheerless and unwelcoming. It says: [or][stopping][b][ast]Oscar's[ast][r]."
 
 to say ast:
-	say "[if screenread is true]****[end if]"
+	say "[if screenread is true] ** [end if]"
 
 a-text of dingy dwelling is "YRRYRR". b-text of dingy dwelling is "YRRYRP". parse-text of dingy dwelling is "-[sp]x[sp]x[sp]-[sp]x[sp]s".
 
 a-text of lairage regalia is "YRRYRR". b-text of lairage regalia is "YRRYRP". parse-text of lairage regalia is "-[sp]x[sp]x[sp]-[sp]x[sp]s".
+
+after fliptoing lairage regalia:
+	now dingy dwelling is clue-used;
+	continue the action;
 
 chapter grubby restaurant
 
@@ -12699,6 +12717,10 @@ check entering grubby restaurant:
 		try fliptoing signboard instead;
 	say "You walk back into Pat's idle deli more confidently the second time. The building does not shift.";
 	now player is in Idle Deli instead;
+
+after fliptoing signboard:
+	now grubby restaurant is clue-used;
+	continue the action;
 
 does the player mean scaning grubby restaurant: it is likely.
 
@@ -13176,7 +13198,7 @@ instead of eating mushrooms:
 the seed pit is reflexive scenery in Idle Deli. "[if mushrooms are off-stage]It's ugly and moldy but you find yourself thinking, if I had just one reason to go in there, against any warnings...[otherwise]You got through okay once, but you don't want to know what might sit deep in there.[end if]"
 
 after fliptoing seed pit:
-	now warning sign is uncluing;
+	now warning sign is clue-used;
 	continue the action;
 
 understand "seedpit" as seed pit.
@@ -15829,6 +15851,7 @@ check pushing small blue button:
 	if rebooted is true:
 		say "No need to reboot twice." instead;
 	now small blue button is unfigured;
+	now small blue button is reflexed;
 	say "The button changes into a REBOOT button, which you press[if player has rom sticks]--though first those ROM sticks will put your PPC on PCP to code in CPP and avoid PCRam Cramp[end if]. The disk drive hums for a while, the computer screen lights up with a fractal shaped like a flatcar, and after a stallin['] install (and several booster-reboots,) the code you saw before reappears on the screen.";
 	if player has rom sticks:
 		now rom sticks are in lalaland;
@@ -20086,6 +20109,9 @@ after scaning (this is the tell us about x in parse mode rule) :
 		now ever-parse is true;
 		ital-say "x means a consonant, as nothing in this game becomes anything with an x in it, and the dash means a vowel.";
 
+before scaning a clue-used thing:
+	say "The settler emits a BEEEOOOP as if to say there's no need to do any more, there." 
+	
 before scaning a reflexed thing:
 	if noun is not dialer and noun is not bench:
 		say "The settler emits a BEEEOOOP as if to say there's no need to do any more, there." instead;
