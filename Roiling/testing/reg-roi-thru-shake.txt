@@ -630,7 +630,7 @@ Your score has just gone up by one point
 Hero's Shore
 
 >shake settler
-WRONG
+A few things: the boats, the raft and the interlocking oars are visible
 
 >boast
 Your score has just gone up by one point
@@ -645,7 +645,7 @@ Your score has just gone up by one point
 Anger Range
 
 >shake settler
-Swish, shake, swirl. Many things: the carps, the trout, the pikes and the haunter in Anger Range are visible.
+Many things: the carps, the trout, the pikes and an outline of where something is buried are visible.
 
 >scrap
 Your score has just gone up by one point
@@ -653,14 +653,14 @@ Your score has just gone up by one point
 >e
 
 >shake settler
-Swish, shake, swirl. Only some cartoony representation of EEKS are visible.
+A couple things: the cans (very blurry) and some cartoony representation of EEKS are visible.
 
 >seek
 DEBUG INFO: Taking away a max point.
 Your score has just gone up by one point
 
 >shake settler
-Swish, shake, swirl. A few things: the trout, the tea tray (a bit blurry) and the wipes (a bit blurry) are visible.
+Many things: the trout, the tea tray, the wipes (a bit blurry) and the dent (very blurry) are visible.
 
 >eat
 Your score has just gone up by one point
@@ -669,44 +669,53 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >shake settler
-Swish, shake, swirl. A few things: the wipes (a bit blurry) and the bubble wrap are visible.
+A few things: the wipes (a bit blurry), the bubble wrap and the dent (very blurry) are visible.
 
 >w
 >n
 Lapsin' Plains
 
 >shake settler
-Swish, shake, swirl. Many things: the bubble wrap, crate, wherever the crate is coming from, the skis, bogus-plains and the knob are visible.
+Many things: the bubble wrap, wherever the crate is coming from, the crate, the skis, all around the plains (very blurry) and the knob are visible.
 
 >trace
 Your score has just gone up by one point
+>shake settler
+Many things: the bubble wrap, the crate, the skis, all around the plains (very blurry) and the knob are visible.
+
 >react
 Your score has just gone up by one point
+>shake settler
+Many things: the bubble wrap, the skis, all around the plains (very blurry) and the knob are visible.
+
 >kiss
 Your score has just gone up by one point
+>shake settler
+A few things: the bubble wrap, all around the plains (very blurry) and the knob are visible.
+
 >bonk
 Your score has just gone up by one point
 
 >shake settler
-Swish, shake, swirl. A few things: the bubble wrap and bogus-plains are visible.
+A couple things: the bubble wrap and all around the plains (very blurry) are visible.
 
 >in
 a hut
 
 >shake settler
-Swish, shake, swirl. A few things: the bubble wrap and the tubs are visible.
+A couple things: the bubble wrap and the tubs are visible.
 
 >bust
 Your score has just gone up by one point
 
 >shake settler
-Swish, shake, swirl. Many things: the bubble wrap, the prod, the heaps and the waste are visible.
+Many things: the bubble wrap, the prod, the heaps (very blurry) and the waste are visible.
 
 >drop
 Your score has just gone up by one point
 
 >shake settler
-Swish, shake, swirl. A few things: the bubble wrap, the heaps and the waste are visible.
+A few things: the bubble wrap, the heaps (very blurry) and the waste are visible
 
 >out
 >s
@@ -714,7 +723,7 @@ Swish, shake, swirl. A few things: the bubble wrap, the heaps and the waste are 
 Arches
 
 >shake settler
-Swish, shake, swirl. A few things: the bubble wrap and the arches are visible.
+A couple things: the bubble wrap and the arches are visible.
 
 >warp
 Your score has just gone up by one point
@@ -723,7 +732,7 @@ Your score has just gone up by one point
 GENERAL GLEANER engulf it
 
 >shake settler
-Swish, shake, swirl. A few things: the general gleaner and the ruby (a bit blurry) are visible.
+A couple things: the general gleaner and the ruby are visible.
 
 >enlarge
 Your score has just gone up by one point
@@ -735,7 +744,7 @@ Hedron
 Collapsed Old Places
 
 >shake settler
-Swish, shake, swirl. Only the ruby (a bit blurry) is visible.
+Swish, shake, swirl. Only the ruby is visible.
 
 >bury
 Your score has just gone up by one point
@@ -745,7 +754,7 @@ Your score has just gone up by one point
 >e
 
 >shake settler
-Swish, shake, swirl. Only the haunter in Anger Range is visible.
+Only an outline of where something is buried is visible.
 
 >unearth
 by one point
@@ -793,13 +802,13 @@ Swish, shake, swirl. Only the ant is visible.
 >tan ant
 
 >shake settler
-WRONG
+A few things: the papery yapper, the dialer and the lever (very blurry) are visible.
 
 >prepay
 Your score has just gone up by one point
 
 >shake settler
-A few things: the papery yapper, the dialer and the lever (very blurry) are visible.
+A couple things: the dialer and the lever (very blurry) are visible.
 
 >derail
 Your score has just gone up by one point
@@ -830,7 +839,7 @@ Your score has just gone up by one point
 Topside Deposit
 
 >shake settler
-Many things: Ray Eck, the keycar (a bit blurry), the welt-proof flowerpot and the Curst Palace are visible.
+Many things: Ray Eck, Ray Eck's keycar (a bit blurry), the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >get tarts
 >put tarts in toaster
@@ -866,7 +875,7 @@ Your score has just gone up by one point
 Anemic Cinema
 
 >shake settler
-Many things: the welt-proof flowerpot (very blurry), the Curst Palace, the ingrates, the admirer and the sweatier wait-seer are visible.
+Many things: the welt-proof flowerpot (very blurry), the Curst Palace, the ingrates (very blurry), the admirer and the sweatier wait-seer are visible.
 
 >married
 Your score has just gone up by one point
@@ -875,7 +884,7 @@ Your score has just gone up by one point
 Shaven Havens
 
 >shake settler
-A couple things: the welt-proof flowerpot and the Curst Palace are visible.
+A couple things: the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >s
 >s
@@ -883,7 +892,7 @@ A couple things: the welt-proof flowerpot and the Curst Palace are visible.
 Savager Ravages
 
 >shake settler
-Many things: the denim, the weeds, the welt-proof flowerpot (very blurry), the Curst Palace, the man covered in inapt paint, the alarming grailman and the man in a REED'S ALE costume are visible.
+Many things: the denim (very blurry), the weeds, the welt-proof flowerpot (very blurry), the Curst Palace, the man covered in inapt paint, the alarming grailman and the man in a REED'S ALE costume are visible.
 
 >sewed
 
@@ -907,7 +916,7 @@ Many things: the raves saver (very blurry), the welt-proof flowerpot (very blurr
 >s
 
 >shake settler
-Many things: the raves saver (very blurry), the welt-proof flowerpot (very blurry), the Curst Palace, the dandier arid den, the bottles of Nerd-Aid, the natives (a bit blurry) and the bonker are visible.
+Many things: the raves saver (very blurry), the welt-proof flowerpot (very blurry), the Curst Palace, the dandier arid den, the bottles of Nerd-Aid (a bit blurry), the natives (very blurry) and the bonker are visible.
 
 >broken
 
@@ -915,14 +924,14 @@ Many things: the raves saver (very blurry), the welt-proof flowerpot (very blurr
 >w
 
 >shake settler
-Many things: the neural pulses, the raves saver (very blurry), the welt-proof flowerpot (very blurry), the Curst Palace, the snider diners and the man covered in inapt paint are visible.
+Many things: the neural pulses (very blurry), the raves saver (very blurry), the welt-proof flowerpot (very blurry), the Curst Palace, the snider diners and the man covered in inapt paint are visible.
 
 >e
 
 >e
 
 >shake settler
-Many things: the raves saver (very blurry), the prison ropins, Dr. Yow, the fissure (a bit blurry), the welt-proof flowerpot and the Curst Palace are visible.
+Many things: the raves saver (very blurry), the prison ropins, Dr. Yow, the fissure (a bit blurry), the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >wordy
 >push retape
@@ -935,11 +944,11 @@ Many things: the raves saver (very blurry), the prison ropins, Dr. Yow, the fiss
 >go to kid
 
 >shake settler
-Swish, shake, swirl. Many things: the raves saver (very blurry), the smart kid, the welt-proof flowerpot and the Curst Palace are visible.
+Many things: the raves saver (very blurry), Dirk, the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >gifted
 >shake settler
-Swish, shake, swirl. Many things: the raves saver (very blurry), the welt-proof flowerpot and the Curst Palace are visible.
+A few things: the raves saver (very blurry), the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >ask kid about yow
 Obscurest
@@ -949,18 +958,18 @@ Obscurest
 >e
 
 >shake settler
-Many things: the raves saver (very blurry), the tentativeness (very blurry), Dr. Yow, the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
+Many things: the raves saver (very blurry), an aura of tentativeness about Dirk (very blurry), Dr. Yow, the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >rowdy
 
 >shake settler
-Many things: the raves saver (very blurry), Dr. Yow, the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
+A few things: the raves saver (very blurry), the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >go to copse
 >w
 
 >shake settler
-Swish, shake, swirl. A few things: the raves saver (very blurry), the welt-proof flowerpot and the Curst Palace are visible.
+A few things: the raves saver (very blurry), the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >put dagger in machine
 
@@ -973,29 +982,29 @@ Many things: the raves saver (very blurry), the turbos, the blaster, the welt-pr
 >robust
 
 >shake settler
-Swish, shake, swirl. Many things: the raves saver (very blurry), the turbos, the blaster, the welt-proof flowerpot and the Curst Palace are visible.
+Many things: the raves saver (very blurry), the blaster, the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >pearly
 >shake settler
-Swish, shake, swirl. Many things: the turbos, the blaster, the welt-proof flowerpot and the Curst Palace are visible.
+A few things: the blaster, the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >enter boat
 Rawest Waters
 
 >shake settler
-Swish, shake, swirl. Many things: the raves saver (very blurry), the eastern shore, the welt-proof flowerpot (very blurry) and the Curst Palace are visible. You turn the settler off.
+A few things: the eastern shore, the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >nearest
 
 >shake settler
-Many things: the raves saver (very blurry), the succor crocus (very blurry), the pester'n serpent (very blurry), the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
+Many things: the succor crocus (very blurry), the pester'n serpent (very blurry), the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >present
 
 >w
 
 >shake settler
-Swish, shake, swirl. Many things: the raves saver (very blurry), Ed Yerg (very blurry), the welt-proof flowerpot and the Curst Palace are visible.
+A few things: Ed Yerg (very blurry), the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >e
 
@@ -1447,13 +1456,13 @@ Rustic Citrus
 >purloin settler
 >{include} _routes
 
-* only-troves
+* _only-troves
 
 >gonear rathole
 >purloin settler
 >{include} _troves
 
-* only-presto
+* _only-presto
 
 >gonear gyre
 >purloin settler
@@ -1465,21 +1474,21 @@ Rustic Citrus
 >gonear posh hops shop
 >{include} _oyster
 
-* only-towers
+* _only-towers
 
 >seed 1
 >gonear trefoil
 >purloin settler
 >{include} _towers
 
-* only-otters
+* _only-otters
 
 >seed 1
 >gonear barley
 >purloin settler
 >{include} _otters
 
-* only-others
+* _only-others
 
 >gonear rustic citrus
 >purloin settler

@@ -8870,7 +8870,7 @@ tubs	waste	false	322908696	--	"bust"	"bust"	"As if you've a tub tabu, you expend
 prod	digger	true	262171428	--	"drop"	"drop"	"It rattles as you drop it. You try every which way. Heavy end first, light end first, sideways, at an angle--then POW! It opens. It's a properly rigged digger, now. You can't really call it a prod. But you can, and do, pick it up."
 waste	lance	false	437312684	--	"sweat"	"sweat"	"You make real effort to clean up the waste. And you do! You pile them into heaps, in the process finding a very dirty lance. It's a bit too dirty to take."
 heaps	heaps	false	345016151	--	"shape"	"shape" or "shape the/ heaps"	"You channel your inner artist and make something beautiful out of the heaps."
-ruby	thin hint	false	331207767	--	"ruby"	"ruby"	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to."
+ruby	thin hint	false	331207767	--	"bury"	"bury"	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to."
 haunter	haunter	false	462435186	--	"assuage"	"assuage"	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. The hedron is full of no-good-niks. The haunter waits on your next move."
 lever	lever	false	501914680	--	"revel"	"revel"	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
 gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."
@@ -9059,7 +9059,7 @@ chapter auxiliary text and rules
 
 to say trout-tut:
 	say "How to start... 'Branded nerd? Bad. Karate? A taker?' You show the trout how to paste a pest with some slick licks. As tutorer, you show him how to avoid the rote rut of torture. Most of what you say is a po['] combat boot camp, but he gives a trouty tryout, as a monkish moshnik with frail flair, and you give a kind dink to boost his confidence. Aunt Tuna clucks that she TOLD him that, and if he'd listened to HER when SHE said it instead of having a ton-not-fair fair--but it's as pleased as she's been in a while![paragraph break]";
-	say "She explains someone deserves a reward. He's all 'A donut, Aunt! Do!' but she says diabetes is not the best idea. Not even a tater treat. But she hands you bubble wrap--a present from someone named Valeri, who used to be so nice but never shows up any more[if tray is visible]--and also jerks her head towards the tray[end if].[paragraph break]You doubt Aunt Tuna has anything else for you[if wipes are visible], though maybe you could sneak the wipes[end if][if dent is visible]. Maybe you could fix the dent[end if]. But you should probably explore elsewhere.";
+	say "She explains someone deserves a reward. He's all 'A donut, Aunt! Do!' but she says diabetes is not the best idea. Not even a tater treat. But she hands you bubble wrap--a present from someone named Valeri, who used to be so nice but never shows up any more[if tray is visible]--and also jerks her head towards the tray[end if].[paragraph break]You doubt Aunt Tuna has anything else for you[if wipes are visible], though maybe you could sneak the wipes[end if][if dent is visible]. Maybe you could fix the dent[end if]. But you should probably explore elsewhere";
 	now player has bubble wrap;
 
 to say get-crust:
@@ -11096,6 +11096,8 @@ wzup	"a pair of hands patting Leo and Rand on the back" [presto]
 pre-haun	"an outline of where something is buried" [oyster]
 eeks	"some cartoony representation of EEKS"
 atblock	"an aura of tentativeness about [kid-first]" [towers]
+keycar	"Ray Eck's keycar"
+smart kid	"[kid-first]"
 Merle	"Elmer and Merle" [otters]
 sorer bogey	"an outline of the sorer bogey" [others]
 an-a	"the A you can maybe grab somehow"
@@ -11123,8 +11125,7 @@ definition: a thing (called candi) is bluable:
 		if diapers are in lalaland and candi is sad pier, no;
 		if candi is rubbish story, decide no;
 	if player is in econ cone:
-		if prai is reflexive and candi is rivets, decide no;
-		if rivets are reflexive and candi is prai, decide no;
+		if rivets are reflexive and candi is prai, no;
 	if candi is tunes, no; [oyster specific]
 	if player is in scum ant sanctum and candi is ant, yes;
 	if candi is haunter and player is in anger range and candi is off-stage, decide no; [visibility issues here. We "see" the haunter but can't see it with bluables]
@@ -11134,7 +11135,7 @@ definition: a thing (called candi) is bluable:
 	if player is in gates stage and gate-level is 2: [others specific]
 		if candi is perp-priv or candi is searcher or candi is viewer, no;
 	if player is in filed field and candi is barren cries, no;
-	if candi is enclosed by the location, yes;
+	if candi is visible, yes;
 	decide no;
 
 definition: a thing (called candi) is outlinable:
@@ -17401,6 +17402,7 @@ does the player mean unearthing the pre-haun: it is very likely.
 check fliptoing pre-haun:
 	if player has digger and ruby is in lalaland:
 		continue the action;
+	d "[whether or not player has digger], [location of ruby].";
 	say "[h-not-yet].";
 	preef pre-haun;
 	the rule succeeds;
@@ -17583,8 +17585,6 @@ check scaning crate:
 	if c2 is in plains:
 		try scaning c2 instead;
 
-a-text of crate is "RYYRR". b-text of crate is "RYGRR". parse-text of crate is "x[sp]r[sp]a[sp]x[sp]t". crate is parse-spoilable.
-
 check fliptoing crate:
 	if c2 is in lapsin' plains:
 		say "That's a good idea, but you're not sure HOW to react. You need a bit of data, first.";
@@ -17627,7 +17627,7 @@ Lean Lane is a room in oyster. Lean Lane is east of Anger Range. "Somewhere, you
 
 scan-cans is a truth state that varies.
 
-the cans are vanishing LLPish scenery in Lean Lane. "The cans are all icky and sticky and--eww. It'd take something weird to counter the chemical reaction that made--whatever's non-biodegradable in there."
+the cans are vanishing flippable LLPish scenery in Lean Lane. "The cans are all icky and sticky and--eww. It'd take something weird to counter the chemical reaction that made--whatever's non-biodegradable in there."
 
 a-text of cans is "RRYR". b-text of cans is "RRYR". parse-text of cans is "x[sp]x[sp]a[sp]x".
 
@@ -17676,7 +17676,7 @@ understand "aet" as a mistake ("Oh, this region won't go into extra time unless 
 
 understand "eta" as a mistake ("ETA's one move later now that you went fishing for this anagram.") when tea tray is visible.
 
-The tea tray is auxiliary edible scenery in Handsome Sand Home. description is "Arty, with tea on it. The meal, not the drink[one of]. And no beak-bake in it[or][stopping]. But why stare at it? That's not what food is for."
+The tea tray is edible flippable scenery in Handsome Sand Home. description is "Arty, with tea on it. The meal, not the drink[one of]. And no beak-bake in it[or][stopping]. But why stare at it? That's not what food is for."
 
 a-text of tea tray is "YYR". b-text of tea tray is "YYR". parse-text of tea is "e[sp]a[sp]t". tea tray is parse-spoilable.
 
@@ -17873,7 +17873,7 @@ check fliptoing trout (this is the no teaching while fighting rule) :
 
 book sanctum
 
-the ant is a animal. "An oddly colored ant is here! It seems more threatening than anything, but your lance seems to hold it at bay.". description of ant is "If you look at it one way, it's a light brown--no, that's not it--but another way, it's a bright red, a simulacrum of the legendary Tar Rat Art. You're glad you have that lance to do something simple to fend it off, or maybe even run it off."
+the ant is a flippable animal. "An oddly colored ant is here! It seems more threatening than anything, but your lance seems to hold it at bay.". description of ant is "If you look at it one way, it's a light brown--no, that's not it--but another way, it's a bright red, a simulacrum of the legendary Tar Rat Art. You're glad you have that lance to do something simple to fend it off, or maybe even run it off."
 
 check taking ant:
 	say "Dealing with the ant is even easier than TAKE." instead;
@@ -18037,7 +18037,7 @@ check fliptoing bubble wrap:
 		if trout is reflexive:
 			say "'You have things backward. You haven't done enough yet to deserve a reward,' clucks Aunt Tuna with the staidest distaste. 'Show me you won't restack rackets with some other poor innocent!'" instead;
 
-the dent is part of the raw red reward drawer. the dent is LLPish. description is "It'd probably take the right sort of futzing to get rid of."
+the dent is part of the raw red reward drawer. the dent is LLPish and flippable. description is "It'd probably take the right sort of futzing to get rid of."
 
 a-text of dent is "RYRR". b-text of dent is "RGPR". parse-text of dent is "t[sp]e[sp]n[sp]d". dent is parse-spoilable.
 
@@ -18176,6 +18176,8 @@ does the player mean opening the rude door: it is likely.
 
 the crate is reflexive scenery in Lapsin' Plains. "[if crate is reflexed]You can only see fragments of what it was, and they're not worth paying attention to[else]You can't see the crate but you know it, or one just like it, is about to be thrown at you. Crates are a dime a dozen for any bad guys, so that could go on for a while[end if]."
 
+a-text of crate is "RYYRR". b-text of crate is "RYGRR". parse-text of crate is "x[sp]r[sp]a[sp]x[sp]t". crate is parse-spoilable.
+
 understand "debris" and "crates" as crate.
 
 understand "brides" as a mistake ("No, no time to think about romance, now.") when crate is visible.
@@ -18234,7 +18236,7 @@ understand "embrace [text]" and "embrace" as a mistake ("Hug? Ugh. Guh.")
 
 chapter splaining
 
-bogus-plains is privately-named LLPish reflexive scenery in lapsin' plains. understand "plains" as bogus-plains when player is in plains and debug-state is true. bogus-plains is undesc.
+bogus-plains is privately-named LLPish reflexive scenery in lapsin' plains. understand "plains" as bogus-plains when player is in plains and debug-state is true. bogus-plains is undesc. printed name is "all around the plains"
 
 a-text of bogus-plains is "RRRYYR". b-text of bogus-plains is "RRRY??". parse-text of bogus-plains is "x[sp]x[sp]x[sp]a[sp]?[sp]?".
 
@@ -18512,6 +18514,11 @@ a-text of a-s is "RYYRRR". b-text of a-s is "RY?RRR". parse-text of a-s is "x[sp
 
 does the player mean searching the a-s: it is very likely.
 
+check fliptoing a-s:
+	if sardine is visible:
+		say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of him to have a serious look.";
+		preef a-s instead;
+
 instead of searching a-s:
 	if sardine is visible:
 		say "A snider near-dis from the sardine keeps you in check. You'll need to get rid of him to have a serious look.";
@@ -18558,7 +18565,7 @@ rule for supplying a missing noun when burying:
 	else:
 		now noun is the player;
 
-a ruby is an auxiliary thing.
+the ruby is a reflexive thing.
 
 a-text of ruby is "RYRO". b-text of ruby is "RGRB". parse-text of ruby is "b[sp]u[sp]r[sp]y". ruby is parse-spoilable.
 
@@ -18581,7 +18588,7 @@ carry out burying:
 		say "The walleyes would find the ruby and take it, and you'd be out--but maybe you could frame them for its theft by burying the ruby somewhere near." instead;
 	if player is not in Collapsed Old Places:
 		say "You don't need to sock away wealth. You have enough. But that ruby--you've heard of it before. Maybe this is not the right place. If you want to hide the ruby, hide it somewhere hidden." instead;
-	now ruby is in collapsed old places;
+	now ruby is in collapsed old places; [necessary for flipping to work]
 	try fliptoing thin hint;
 	the rule succeeds;
 
@@ -18712,6 +18719,10 @@ book Collapsed Old Places
 Collapsed Old Places is west of Horned Hedron. "There's not much to see here[if haunter is in lalaland], after that episode with the haunter[else if ruby is not in lalaland]. This would be a good place to hide something, because nobody who fears for their life would want to go here[else]. You [one of]still [or][stopping]see the thin hint you marked in the ground with your rigged digger[end if].". Collapsed Old Places is in Oyster. Collapsed Old Places is innie.
 
 the thin hint is scenery. "The thin hint marks where you buried the ruby. You will be able to find it if you leave and come back."
+
+after fliptoing thin hint:
+	now ruby is in lalaland;
+	continue the action;
 
 before doing something with thin hint:
 	if action is procedural:
@@ -20148,7 +20159,7 @@ after fliptoing when player is in subsector (this is the yow is free rule) :
 check inserting into the fissure:
 	say "Nothing from your inventory seems to fit it. It's really oblong."
 
-Dr Yow is a person in prison ropins. description is "[one of]You remember a slanderous (or is it libelous?) article claiming [he-she] was really Dr. Ieow, but [he-she] does look a[or]A[stopping] bit wonky, y'know? But with an intense look in [his-her] eyes[if Dr Yow is rowdy] as [he-she] yells[else if Dr Yow is wordy] as [he-she] babbles[end if][what-can-doc-say].". "Dr. Yow is pacing around semi-absent-mindedly[if Dr Yow is not in prison ropins] enjoying[otherwise] pining for[end if] [his-her] freedom."
+Dr Yow is a flippable person in prison ropins. description is "[one of]You remember a slanderous (or is it libelous?) article claiming [he-she] was really Dr. Ieow, but [he-she] does look a[or]A[stopping] bit wonky, y'know? But with an intense look in [his-her] eyes[if Dr Yow is rowdy] as [he-she] yells[else if Dr Yow is wordy] as [he-she] babbles[end if][what-can-doc-say].". "Dr. Yow is pacing around semi-absent-mindedly[if Dr Yow is not in prison ropins] enjoying[otherwise] pining for[end if] [his-her] freedom."
 
 printed name of Dr Yow is "Dr. Yow"
 
@@ -20731,7 +20742,7 @@ instead of taking crocus:
 		say "It looks a bit TOO colorful for a flower, almost radioactive. In fact, from what you know about the species, that means it's close to DYING. Maybe you could tone it down." instead;
 	say "It's been through enough [if flowerpot is reflexive]bad times[else]upheaval[end if]."
 
-the succor crocus is an LLPish thing in mislit limits. "A succor crocus lies here, full of livid colors that don't make you happier."
+the succor crocus is an LLPish flippable thing in mislit limits. "A succor crocus lies here, full of livid colors that don't make you happier."
 
 description of crocus is "[if flowerpot is reflexive]From what you know, the brighter a succor crocus is, the less it works. Right now, it's far too bright, and it's close to dying[else]Looking much better now[end if]."
 
@@ -20987,7 +20998,7 @@ a-text of pirates is "RYRRYYR". b-text of pirates is "PYRRYGR". parse-text of pi
 
 section anemic cinema
 
-The ingrates are plural-named white guardians. "Ingrates whining about any old thing block the way [psgdir of ingrates]."
+The ingrates are plural-named LLPish white guardians. "Ingrates whining about any old thing block the way [psgdir of ingrates]."
 
 understand "ingrate" as ingrates.
 
@@ -21100,7 +21111,7 @@ description of organised ego drains is "You recognize the ego drains as odd spir
 
 a-text of organised is "RRYRRYYRY". b-text of organised is "RRYRRYYRY". parse-text of organised is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
 
-some natives are a plural-named white guardian. indefinite article of natives is "several". "Some natives block your way [psgdir of natives], though you don't really see anything interesting there."
+some natives are a plural-named white LLPish guardian. indefinite article of natives is "several". "Some natives block your way [psgdir of natives], though you don't really see anything interesting there."
 
 understand "native" as natives.
 
