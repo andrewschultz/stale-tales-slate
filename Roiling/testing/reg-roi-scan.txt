@@ -2659,20 +2659,13 @@ Your settler registers (cheat on) RRYRYP.
 >grapes
 Your score has just gone up by one point.
 
->sb cries
-Your settler registers (no cheat) RRYRRYRRYYR.
-Your settler registers (cheat on) RRYRRYRPGGP.
-
->cranberries
-Your score has just gone up by one point.
-Hmm. Probably
-
 >sb mad train
 Your settler registers (no cheat) RYRYRYRR.
 Your settler registers (cheat on) RGRYPYRR.
 
 >tamarind
 Your score has just gone up by one point.
+Hmm. Probably
 
 >sb moss cap
 Your settler registers (no cheat) RYRRYRR.
@@ -2713,7 +2706,6 @@ Your settler registers (cheat on) RYPYRRYPYPG.
 
 >pomegranate
 Your score has just gone up by one point.
-Take on a token
 
 >sb peanut cola
 Your settler registers (no cheat) RYRRYRYYRY.
@@ -2721,6 +2713,7 @@ Nothing changes between cheat/teach and regular mode.
 
 >cantaloupe
 Your score has just gone up by one point.
+Take on a token
 
 >sb videotape
 Your settler registers (no cheat) RYRRYRRYR.
@@ -2802,6 +2795,17 @@ Your score has just gone up by one point.
 
 >w
 Filed Field
+
+>sb cries
+Your settler registers (no cheat) RRYRRYRRYYR.
+Your settler registers (cheat on) RRYRRYRPGGP.
+
+>sb briar screen
+Your settler registers (no cheat) RRYRRYRRYYR.
+Your settler registers (cheat on) RPYRRYRPYGR.
+
+>cranberries
+Your score has just gone up by one point.
 
 >sb sickle
 Your settler registers (no cheat) RRYRRRYRRYYR.

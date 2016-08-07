@@ -234,7 +234,7 @@ for writing a paragraph about a lumpable portal (called ptl) :
 
 chapter guardians
 
-a guardian is a kind of person. a guardian is usually auxiliary and vanishing. a guardian can be passtried. a guardian is usually not passtried. a guardian can be clueneedy. a guardian is usually not clueneedy. a guardian can be unprodded or prodded. a guardian is usually unprodded. a guardian can be plurtry. a guardian is usually not plurtry.
+a guardian is a kind of person. a guardian is usually vanishing. a guardian can be passtried. a guardian is usually not passtried. a guardian can be clueneedy. a guardian is usually not clueneedy. a guardian can be unprodded or prodded. a guardian is usually unprodded. a guardian can be plurtry. a guardian is usually not plurtry.
 
 a guardian can be prevseen. a guardian is usually not prevseen. a guardian can be prevtaunt. a guardian is usually not prevtaunt.
 
@@ -2761,7 +2761,7 @@ prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]M
 blaster	"ALBERT'S."
 welt-proof flowerpot	"GYDIN['], >> 'Y/N, dig?'"
 p-2	"One barely legible bit reads [one of]Eeh, Row V![or]Veer How?[or]Rev. Howe[or]Whereov[in random order]."	[otters]
-whistle	"Ed Plye, apparently, made the whistle."
+whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 drinks stand	--	blurbs	[others]
 riot cap	"It's red and [one of]made of I-TRAP-CO material[or]designed and shaped by CAPTOR-I, whoever they are[in random order]"	--
 mad train	"DR. NIMATA."
@@ -3159,6 +3159,8 @@ before doing something when Elmo is visible:
 	if current action is scaning Elmo or current action is examining Elmo:
 		say "[if rifle is visible]You worry about making any quick movements, even though he doesn't look...enthusiastic about this situation, almost gazing at his rifle with disgust. Maybe you could get rid of the rifle[else]Talk with him, instead[end if]." instead;
 	if rifle is visible:
+		if current action is ss0ing or current action is ssing:
+			say "You can't afford sudden or elaborate movements, but well, there's that rifle." instead;
 		if action is procedural:
 			continue the action;
 		if current action is singing:
@@ -4155,7 +4157,7 @@ leopard	"The leopard almost seems to un-cuff its hands."
 badger	"The badger flexes imaginary suit lapels, then quickly goes back to brooding."
 satyr	"The satyr puts a hand on its chin as if pondering music."
 medals	"The medals waver noiselessly. Hm, that's not quite it."
-weltish whistle	"The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right."
+weltish whistle	"[if player has whistle]The sound you make is experimental and groovy, in a new jazz sort of way, but it's not quite right[else]Probably best to have the whistle before changing it[end if]."
 moss cap	"The cap itches for a bit, then seems to try to spin you around." [others]
 pipe panel fence	"The pipe panel fence sways slightly."
 b-w	"You feel the barriers west pulling towards you."
@@ -4164,7 +4166,7 @@ l-o-p	"Something glints off the list of prices."
 auction caution	"Everyone promises quick payment, but what are you promising to pay quickly FOR?"
 peach	"The peach still looks too expensive."
 videotape	"You must be on the right track--but nothing happens. Yet."
-barren cries	"The cries seem like they could change--or is it a dream to you?"
+barren cries	"The briar screen seems to turn dark reddish, and the barren cries seem like they could change--or is it a dream to you?"
 harmonicas	"The harmonicas whistle, as if something happened."
 pagers	"The pagers light up slightly. Maybe give it another go."
 riot cap	"Nothing happens. Your magic skills feel like the pits for a second."
@@ -7573,9 +7575,7 @@ before listening (this is the you can hear stuff some places rule):
 	if player is in rustic citrus:	[others]
 		if pagers are visible:
 			say "Annoying, low-tech beeping. Sounds like--well--pagers. You don't have the patience to find them all, though." instead;
-		if barren cries are visible:
-			say "Barren cries sift through the winds. You wonder if fruits have an feelings, or an afterlife." instead;
-			say "You quieted the pagers and barren cries." instead;
+		say "You quieted the pagers." instead;
 	if player is in dusty study:
 		if dusty study is not lit:
 			say "Nobody's going to whisper a hint to you in the dark." instead;
@@ -8624,7 +8624,7 @@ carry out fliptoing:
 					min-up;
 			if the-to entry is not in lalaland or the-to entry is satchel:
 				if the-from entry is boats and raft is reflexed:
-					do nothing;	[a bailout if you type RAFT and BOAST]
+					do nothing;	[a bailout not to add a point if you FART then BOAST]
 				else if the-from entry is coins and the-to entry is s-i:
 					two-up;
 				else if the-to entry is t-b:
@@ -11014,32 +11014,34 @@ to show-bluable:
 			say "[line break]";
 			pad-rec-q "ss";
 	if QQ is 0:
-		swi-say "You see nothing unusual after doing so.[line break]";
+		swi-say "You see nothing unusual after shaking the settler.[line break]";
 		continue the action;
 	say "[one of]You switch the settler, then shake it. Your vision swirls for a minute[or]Swish, shake, swirl[stopping]. ";
 	if QQ is 1:
 		say "Only";
+	else if QQ is 2:
+		say "A couple things:";
 	else if QQ < 4:
 		say "A few things:";
 	else:
 		say "Many things:";
-	say " [bluable-list] [if QQ is 1 and QQQ is not plural-named]is[else]are[end if] visible. It's a bit of a headache to stare too long, so you switch it off.[line break]";
+	say " [bluable-list] [if QQ is 1 and QQQ is not plural-named]is[else]are[end if] visible. [one of]It's a bit of a headache to stare too long, so you switch the settler off. Your view quickly returns to normal[or]You turn the settler off[stopping].[line break]";
 	if ever-switched is false:
 		say "[line break]Wow! That's handy! The switch shows you which items identifiably change definability!";
 		now ever-switched is true;
-	if ever-blur was false and ever-blur is false:
+	if ever-blur was false and ever-blur is true:
 		say "[line break]You'd guess the blurry stuff clues something more important.";
+	if ever-blur was false and ever-blur is true:
+		say "[line break]Perhaps the blurry stuff is fully optional.";
+	d "[list of bluable things].";
 
 ever-blur is a truth state that varies.
+ever-vblur is a truth state that varies.
 
 to say bluable-list:
 	let QQ2 be number of bluable things;
 	let inc be 0;
-	let riv-pra be false;
 	repeat with bloo running through bluable things:
-		if riv-pra is true:
-			if bloo is rivets or bloo is prai:
-				next;
 		increment inc;
 		if inc is QQ2 and QQ2 > 1:
 			say " and ";
@@ -11047,23 +11049,59 @@ to say bluable-list:
 			choose row with altview of bloo in table of altviews;
 			if there is an alttext entry:
 				say "[alttext entry]";
+			else:
+				say "!!!!";
+				next;
 		else:
 			say "[the bloo]";
-			if bloo is auxiliary:
-				say "(but a bit blurry)";
-			if inc + 1 < QQ2:
-				say ", ";
+		if bloo is part of the diorama:
+			say " (faint)";
+		else if bloo is llpish-plus:
+			say " (very blurry)";
+			now ever-vblur is true;
+		else if bloo is blurry:
+			say " (a bit blurry)";
+			now ever-blur is true;
+		if inc + 1 < QQ2:
+			say ", ";
+
+definition: a thing (called lp) is llpish-plus:
+	if lp is llpish, yes;
+	if lp is ghoul hat or lp is p-2:
+		if eels are reflexed:
+			decide yes;
+	if lp is eels or lp is sea cube:
+		if p-2 is in lalaland:
+			decide yes;
+	if lp is prai and rivets are reflexed, yes;
+	if lp is rivets and prai is reflexed, yes;
+	if lp is merle or lp is elmer, yes;
+	decide no;
+
+definition: a thing (called mbbl) is blurry:
+	if mbbl is store h and roved is false, yes;
+	if mbbl is auxiliary, yes;
+	if mbbl is a guardian, no;
+	decide no;
 
 table of altviews
 altview	alttext
-sorer bogey	"an outline of the sorer bogey"
-eeks	"some cartoony representation of EEKS"
-Elmer	"Elmer and Merle"
-Merle	--
+darkness	"a weird outline in the darkness" [routes]
+cellar door	"a cellar door (no, it can't be THERE)" [troves]
 lager	"the can of Large Regal Lager (with the rubbish story on it lit up too)"
 rubbish story	--
 prai	"the rivets spelling PRAISE"
 rivets	"the rivets spelling PRAISE"
+wzup	"a pair of hands patting Leo and Rand on the back" [presto]
+pre-haun	"an outline of where something is buried" [oyster]
+eeks	"some cartoony representation of EEKS"
+atblock	"an aura of tentativeness about [kid-first]" [towers]
+Merle	"Elmer and Merle" [otters]
+sorer bogey	"an outline of the sorer bogey" [others]
+an-a	"the A you can maybe grab somehow"
+perp-priv	"the words 'PERP' forming outside the Admit-Us Stadium"
+coins	"Curtis's coins"
+icons	"the icons you made"
 
 to swi-say (sst - indexed text):
 	if sss is false:
@@ -11073,25 +11111,37 @@ to swi-say (sst - indexed text):
 
 definition: a thing (called candi) is bluable:
 	[say "[candi] [if candi is ghostly]invis[end if] [if candi is uncluing]uncluing[end if] [if candi is visible] visible[end if].";]
+	if player is in shack and candi is blue button and rebooted is false, yes; [presto specific yes]
 	if candi is unscannable, no;
 	if candi is reflexed, no;
 	if candi is ghostly, no;
 	if candi is uncluing, no;
-	if candi is tunes, no;
-	if player is in same mesa:
-		if candi is dingy dwelling or candi is grubby restaurant, decide no;
+	if player is in same mesa: [routes specific]
+		if candi is dingy dwelling or candi is grubby restaurant, no;
+	if candi is warning sign and seed pit is reflexed, no;
+	if player is in pallid: [troves specific]
+		if diapers are in lalaland and candi is sad pier, no;
+		if candi is rubbish story, decide no;
+	if player is in econ cone:
+		if prai is reflexive and candi is rivets, decide no;
+		if rivets are reflexive and candi is prai, decide no;
+	if candi is tunes, no; [oyster specific]
+	if player is in scum ant sanctum and candi is ant, yes;
+	if candi is haunter and player is in anger range and candi is off-stage, decide no; [visibility issues here. We "see" the haunter but can't see it with bluables]
 	if candi is crate and player is in plains:
 		if c2 is in plains, yes;
-	if candi is haunter:
-		if player is in anger range and candi is off-stage: [visibility issues here. We "see" the haunter but can't see it with bluables]
-			decide no;
-	if candi is visible, yes;
+	if candi is elmer, no; [otters specific]
+	if player is in gates stage and gate-level is 2: [others specific]
+		if candi is perp-priv or candi is searcher or candi is viewer, no;
+	if player is in filed field and candi is barren cries, no;
+	if candi is enclosed by the location, yes;
+	decide no;
 
 definition: a thing (called candi) is outlinable:
-	[say "[candi] [if candi is ghostly]invis[end if] [if candi is uncluing]uncluing[end if] [if candi is visible] visible[end if].";]
 	if candi is not ghostly, no;
 	if candi is uncluing, no;
 	if candi is visible, yes;
+	decide no;
 
 to say outline-invis: [unused]
 	if number of outlinable things > 0:
@@ -11888,7 +11938,7 @@ Store J is a useless sto in Strip of Profits. understand "store/ 10/ten" as Stor
 
 chapter store k
 
-Store K is a bedruggled sto in Strip of Profits. understand "store/ 11/eleven" as Store K when player is in Strip of Profits.
+Store K is a bedruggled LLPish sto in Strip of Profits. understand "store/ 11/eleven" as Store K when player is in Strip of Profits.
 
 a-text of Store K is "RYRYRR". b-text of Store K is "RYRYRR". parse-text of store k is "x[sp]-[sp]x[sp]-[sp]x[sp]x".
 
@@ -11947,7 +11997,7 @@ instead of entering metros:
 
 chapter store n
 
-Store N is a bedruggled sto in Strip of Profits. understand "store/ 14/fourteen" as Store N when player is in Strip of Profits.
+Store N is a bedruggled LLPish sto in Strip of Profits. understand "store/ 14/fourteen" as Store N when player is in Strip of Profits.
 
 description of Store N is "Someone appears to be in there."
 
@@ -12467,7 +12517,7 @@ the giant's elbow is part of the grouchy old giant. description is "Well, thankf
 
 understand "bowel" and "bowels" as a mistake ("The giant's spouting enough verbal diarrhea, so, just... no.[paragraph break]Also, you don't need to go THAT far down.") when old giant is visible and elbow is reflexive
 
-the elbow is reflexive and auxiliary.
+the elbow is reflexive.
 
 a-text of elbow is "RYRYR". b-text of elbow is "RYRGP". parse-text of elbow is "x[sp]e[sp]x[sp]o[sp]w". elbow is cheat-spoilable.
 
@@ -13067,7 +13117,7 @@ oscar-annoy is a truth state that varies. oscar-annoy is usually false.
 
 chapter pipe soot
 
-some pipe soot is a reflexive quest-item in Adobe Abode.
+some pipe soot is a reflexive singular-named quest-item in Adobe Abode.
 
 check taking the pipe soot when soot is in adobe:
 	say "Oscar snaps at you. 'Hey! Whoa! No stealing! Even worthless stuff!'[paragraph break]Maybe if you could position yourself so he can't see you taking it." instead;
@@ -13123,6 +13173,10 @@ instead of eating mushrooms:
 	say "One of them is probably poisonous, and not even I can tell[if list o toils is examined]. Plus, Brother Horbert needs them[end if]."
 
 the seed pit is reflexive scenery in Idle Deli. "[if mushrooms are off-stage]It's ugly and moldy but you find yourself thinking, if I had just one reason to go in there, against any warnings...[otherwise]You got through okay once, but you don't want to know what might sit deep in there.[end if]"
+
+after fliptoing seed pit:
+	now warning sign is uncluing;
+	continue the action;
 
 understand "seedpit" as seed pit.
 
@@ -13279,7 +13333,7 @@ instead of doing something with the free reef:
 
 chapter thor
 
-Thor is reflexive auxiliary scenery in Cripple Clipper. "He's looking for a hug. Arms opened wide. Grinning disturbingly."
+Thor is reflexive scenery in Cripple Clipper. "He's looking for a hug. Arms opened wide. Grinning disturbingly."
 
 instead of doing something to thor:
 	if action is procedural, continue the action;
@@ -13298,7 +13352,7 @@ a-text of thor is "RRRYYRR". b-text of thor is "[if thor-hug is false]RRRYYRR[el
 
 chapter new beet
 
-the new beet is reflexive auxiliary scenery in Cripple Clipper. "It's dripping something gross and purple, which lands in the water with a hiss. With your navigation skills, you'd probably get too close to it or Thor."
+the new beet is reflexive scenery in Cripple Clipper. "It's dripping something gross and purple, which lands in the water with a hiss. With your navigation skills, you'd probably get too close to it or Thor."
 
 a-text of new beet is "RYRRYYR". b-text of new beet is "RGRRGGR". parse-text of new beet is "x[sp]e[sp]x[sp]x[sp]e[sp]e[sp]x".
 
@@ -13608,7 +13662,7 @@ the picture of a sad pier is auxiliary scenery in Pallid Li'l Pad. "It is a ward
 
 a-text of sad pier is "RYRRYYR". b-text of sad pier is "RYRPYYP". parse-text of sad pier is "x[sp]-[sp]x[sp]p[sp]-[sp]-[sp]r".
 
-box of diapers is reflexive scenery in Pallid Li'l Pad. "The diapers are a symbol of a new rebirth by starting from nothing, or something. At least, you hope they are."
+the box of diapers is reflexive scenery in Pallid Li'l Pad. "The diapers are a symbol of a new rebirth by starting from nothing, or something. At least, you hope they are."
 
 understand "boredom/bedroom" and "boredom bedroom" as Pallid Li'l Pad when diapers are reflexed.
 
@@ -13623,6 +13677,7 @@ understand "broomed" as a mistake ("You are not rich and consequential enough to
 after fliptoing diapers:
 	now printed name of Pallid Li'l Pad is "Boredom Bedroom";
 	now ltb is in Pallid Li'l Pad;
+	now sad pier is uncluing;
 	continue the action;
 
 chapter ltb
@@ -13742,6 +13797,8 @@ check objhinting rivets:
 
 the prai is privately-named reflexive scenery in Econ Cone. prai is undesc. printed name of prai is "PRAISE".
 
+understand "iarp" as prai when debug-state is true.
+
 a-text of prai is "YRRYRY". b-text of prai is "YRRGRG". parse-text of prai is "a[sp]x[sp]x[sp]i[sp]x[sp]e". prai is cheat-spoilable.
 
 before scaning rivets (this is the switch to praise rule):
@@ -13765,9 +13822,11 @@ a-text of rivets is "RRRYRY". b-text of rivets is "[if prai is reflexed]RRRYRY[e
 understand "persia" as a mistake ("You redden at the thought of mystical lands that aren't relevant to the here and now.") when player is in Econ Cone.
 
 after fliptoing prai:
+	if rivets are reflexive, now rivets are llpish;
 	continue the action;
 
 after fliptoing rivets:
+	if prai is reflexive, now prai is llpish;
 	continue the action;
 
 chapter pernod
@@ -13921,6 +13980,10 @@ the noise is vanishing scenery in FiefCo Office. "It's noise from the person you
 
 a-text of noise is "YRRYRY". b-text of noise is "YRRYRY". parse-text of noise is "-[sp]x[sp]x[sp]-[sp]x[sp]-".
 
+after fliptoing noise:
+	now tan ivy vanity is uncluing;
+	continue the action;
+
 instead of doing something with the noise:
 	if action is procedural:
 		continue the action;
@@ -13950,6 +14013,10 @@ an extra fancy lobster meal is in FiefCo Office. description is "Oh, man, it loo
 
 a-text of lobster is "RYRRRYR". b-text of lobster is "RGRPPGP". parse-text of lobster is "x[sp]o[sp]x[sp]s[sp]t[sp]e[sp]r". lobster is parse-spoilable.
 
+after fliptoing lobster:
+	if stream is in fiefco, now stream is LLPish;
+	continue the action;
+
 instead of eating lobster meal:
 	say "You don't quite feel you deserve to eat it, yet.";
 
@@ -13961,6 +14028,10 @@ section stream painting
 The painting of the stream is reflexive scenery in FiefCo Office. "It's labeled as PRACTICAL RELAXATION FOR TODAY'S LEADERS. The stream is about all there is to it. It shimmers based on how you stare at it[if stream is not reflexed and lobster is in lalaland]. You doubt you need to do anything with it, since you had that delicious lobster, but then, it might be one more overachievement[end if]."
 
 a-text of stream is "RYRRYR". b-text of stream is "RYRRYR". parse-text of stream is "x[sp]-[sp]x[sp]x[sp]-[sp]x".
+
+after fliptoing stream:
+	if lobster is in fiefco, now lobster is LLPish;
+	continue the action;
 
 instead of doing something to painting of the stream:
 	if action is procedural, continue the action;
@@ -14012,11 +14083,6 @@ Eddie's song is reflexive scenery. "Eddie C. warbles on."
 
 a-text of eddie's song is "RYRYRY". b-text of eddie's song is "RYPYPG". parse-text is "x[sp]e[sp]x[sp]i[sp]x[sp]e". eddie's song is parse-spoilable.
 
-check scaning playbill for the first time:
-	say "You see only six lights, which means it's probably the text on the playbill.";
-
-a-text of playbill is "RYRYRR". b-text of playbill is "RYRYRR". parse-text of playbill is "x[sp]-[sp]x[sp]-[sp]x[sp]x".
-
 understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when player is in FiefCo Office and playbill is in FiefCo office.
 
 instead of examining song:
@@ -14025,6 +14091,11 @@ instead of examining song:
 section playbill
 
 the playbill is scenery. "It's for Siren G. Grines, Singer. That's in red, as is smaller writing about the band and promoters and so forth. It looks counter-cultural, but you are intrigued."
+
+a-text of playbill is "RYRYRR". b-text of playbill is "RYRYRR". parse-text of playbill is "x[sp]-[sp]x[sp]-[sp]x[sp]x".
+
+check scaning playbill for the first time:
+	say "You see only six lights, which means it's probably the text on the playbill.";
 
 instead of doing something with playbill:
 	if action is procedural:
@@ -15089,6 +15160,7 @@ the hogs are reflexive plural-named people. description is "They're as big as Le
 after printing the locale description for Phat Path when Phat Path is unvisited:
 	say "Shouldn't be much of a problem to get the keys and...oh no! you hear...[wfak][paragraph break]";
 	say "A PHT! Suddenly three hogs, all Rand and Leo's size, block your way. One just up and takes your popgun, smashes it, laughs, and goes to guard the keys. What to do?";
+	now hogs are in Phat Path;
 	now popgun is in lalaland;
 
 a-text of hogs is "RYRR". b-text of hogs is "RGRR". parse-text of hogs is "x[sp]o[sp]x[sp]x". hogs are cheat-spoilable.
@@ -15726,7 +15798,7 @@ does the player mean doing something with the hard drive: it is unlikely.
 
 description of hard drive is "It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a small blue button and a small orange button, as well as a golden dongle you don't want to mess with."
 
-The small blue button is part of the hard drive. it is auxiliary. understand "reboot/ button" as small blue button.
+The small blue button is part of the hard drive. understand "reboot/ button" as small blue button.
 
 The small orange button is part of the hard drive.
 
@@ -17039,6 +17111,9 @@ to say uurrgg:
 
 The boats are vanishing plural-named scenery in Hero's shore.
 
+check fliptoing boats when raft is reflexed:
+	say "You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but..."
+
 a-text of boats is "RYYRR". b-text of boats is "PGGRR". parse-text of boats is "b[sp]o[sp]a[sp]x[sp]x". boats is cheat-spoilable.
 
 the raft is scenery.
@@ -17091,7 +17166,7 @@ check going when player is in raft:
 
 description of raft is "It's made of oaks which soak and carry interlocking--and completely locked--oars."
 
-the interlocking oars are an LLPish thing. the interlocking oars are part of the raft. description is "The oars are some red metal, more like containers than something that could get you through the water. They don't seem mobile[if raft is reflexed]--they seem a bit bulkier than before you, um, gave a gas refill[end if].".
+the interlocking oars are part of the raft. description is "The oars are some red metal, more like containers than something that could get you through the water. They don't seem mobile[if raft is reflexed]--they seem a bit bulkier than before you, um, gave a gas refill[end if].".
 
 pushing oars is futiling. pulling oars is futiling.
 
@@ -17552,7 +17627,7 @@ Lean Lane is a room in oyster. Lean Lane is east of Anger Range. "Somewhere, you
 
 scan-cans is a truth state that varies.
 
-the cans are vanishing scenery in Lean Lane. "The cans are all icky and sticky and--eww. It'd take something weird to counter the chemical reaction that made--whatever's non-biodegradable in there."
+the cans are vanishing LLPish scenery in Lean Lane. "The cans are all icky and sticky and--eww. It'd take something weird to counter the chemical reaction that made--whatever's non-biodegradable in there."
 
 a-text of cans is "RRYR". b-text of cans is "RRYR". parse-text of cans is "x[sp]x[sp]a[sp]x".
 
@@ -20073,7 +20148,7 @@ after fliptoing when player is in subsector (this is the yow is free rule) :
 check inserting into the fissure:
 	say "Nothing from your inventory seems to fit it. It's really oblong."
 
-Dr Yow is an auxiliary person in prison ropins. description is "[one of]You remember a slanderous (or is it libelous?) article claiming [he-she] was really Dr. Ieow, but [he-she] does look a[or]A[stopping] bit wonky, y'know? But with an intense look in [his-her] eyes[if Dr Yow is rowdy] as [he-she] yells[else if Dr Yow is wordy] as [he-she] babbles[end if][what-can-doc-say].". "Dr. Yow is pacing around semi-absent-mindedly[if Dr Yow is not in prison ropins] enjoying[otherwise] pining for[end if] [his-her] freedom."
+Dr Yow is a person in prison ropins. description is "[one of]You remember a slanderous (or is it libelous?) article claiming [he-she] was really Dr. Ieow, but [he-she] does look a[or]A[stopping] bit wonky, y'know? But with an intense look in [his-her] eyes[if Dr Yow is rowdy] as [he-she] yells[else if Dr Yow is wordy] as [he-she] babbles[end if][what-can-doc-say].". "Dr. Yow is pacing around semi-absent-mindedly[if Dr Yow is not in prison ropins] enjoying[otherwise] pining for[end if] [his-her] freedom."
 
 printed name of Dr Yow is "Dr. Yow"
 
@@ -20281,7 +20356,7 @@ after printing the locale description for Rawest Waters when Rawest Waters is un
 	if player has strudel and strudel is not reflexed:
 		increment poss-score of towers; [ First, you need to say SPECTACULAR. But you can also DINGY, GREEDY, PRESENT and give Ed the flowerpot. And the strudel can always be rustled.]
 
-eastern shore is reflexive scenery in rawest waters. "The eastern shore's not necessarily closer than the other two, unless you want it to be."
+the eastern shore is reflexive scenery in rawest waters. "The eastern shore's not necessarily closer than the other two, unless you want it to be."
 
 southwestern shore is scenery in rawest waters. "You can barely see it--the kid isn't there either."
 
@@ -20529,6 +20604,8 @@ to decide whether the action is procedural: [aip]
 	if fliptoing, yes;
 	if attacking, yes;
 	if scaning, yes;
+	if ss0ing, yes;
+	if ssing, yes;
 	if scanlasting, yes;
 	if objhinting, yes;
 	if xraying, yes;
@@ -20568,7 +20645,7 @@ chapter Old One's Solo Den
 
 Solo Den is west of Mislit Limits. printed name of Solo Den is "[if ed yerg is reflexive]Lone Sod[else]Old One's[end if] Solo Den". Solo Den is an innie room in towers. "You [one of]look around and are led soon to[or]see[stopping] some writing on the wall here, and you smell something, too."
 
-Ed Yerg is a person in Solo Den. description is "[if ed is reflexive]Despite a wrinkled face, his hair is gleaming and dark[else if crocus is not in lalaland]Ed looks a little sad[else]Ed looks relaxed and ready to chat[end if]."
+Ed Yerg is an LLPish person in Solo Den. description is "[if ed is reflexive]Despite a wrinkled face, his hair is gleaming and dark[else if crocus is not in lalaland]Ed looks a little sad[else]Ed looks relaxed and ready to chat[end if]."
 
 a-text of ed yerg is "RRYYRO". b-text of ed yerg is "RRYGRO". parse-text of ed yerg is "x[sp]x[sp]e[sp]y[sp]e[sp]x". ed yerg is cheat-spoilable.
 
@@ -20654,7 +20731,7 @@ instead of taking crocus:
 		say "It looks a bit TOO colorful for a flower, almost radioactive. In fact, from what you know about the species, that means it's close to DYING. Maybe you could tone it down." instead;
 	say "It's been through enough [if flowerpot is reflexive]bad times[else]upheaval[end if]."
 
-the succor crocus is an auxiliary thing in mislit limits. "A succor crocus lies here, full of livid colors that don't make you happier."
+the succor crocus is an LLPish thing in mislit limits. "A succor crocus lies here, full of livid colors that don't make you happier."
 
 description of crocus is "[if flowerpot is reflexive]From what you know, the brighter a succor crocus is, the less it works. Right now, it's far too bright, and it's close to dying[else]Looking much better now[end if]."
 
@@ -21573,7 +21650,7 @@ every turn when player is in Inclosure and player was in Inclosure (this is the 
 
 chapter cinders
 
-cinders are a vanishing LLPish thing. "Cinders lie here, probably cold enough to take.";
+the cinders are a vanishing LLPish plural-named thing. "Cinders lie here, probably cold enough to take.";
 
 report taking cinders:
 	say "They crackle with energy as you take them. Perhaps you can do something with them.";
@@ -21792,7 +21869,7 @@ check going in Bleary Barley:
 			say "Ed Riley booms, 'Yielder! That's right. Go [noun]. Not west.'";
 			continue the action;
 
-b-b is privately-named reflexive scenery in Bleary Barley. the printed name of b-b is "bleary barley". understand "bleary/barley" and "barley" as b-b. "[if b-b is reflexed]Not so impressive now--it might be a mirage, but it looks like the barley to the east is on water, and thicker-yellow on top. It reminds you of a marsh[otherwise]It ranges expansively--but the weird thing is, it hasn't flowered. Very bleary though[end if]."
+b-b is privately-named proper-named reflexive scenery in Bleary Barley. the printed name of b-b is "the bleary barley". understand "bleary/barley" and "barley" as b-b. "[if b-b is reflexed]Not so impressive now--it might be a mirage, but it looks like the barley to the east is on water, and thicker-yellow on top. It reminds you of a marsh[otherwise]It ranges expansively--but the weird thing is, it hasn't flowered. Very bleary though[end if]."
 
 does the player mean gotothinging b-b:
 	if mrlp is otters:
@@ -22845,16 +22922,17 @@ after fliptoing an animal:
 			say "The LUCKY medal you're wearing clanks against the IQ medal. It looks a bit clearer, now.";
 		else if temp is 3:
 			say "The [list of visible reflexed animals] all look over at you, point and give you a thumbs-up. They glance over at the [list of visible reflexive animals] and shrug a bit, as if it can come along if it wants to. Your LUCKY medal looks very shiny now.";
+			now random visible reflexive animal is LLPish;
 		else if temp is 4:
 			d "[the list of visible reflexed animals]. You get a min-up.";
 			min-up;
 	if location of player is perverse preserve:
-		d "[number of visible animals] [the list of visible reflexed animals]--current min = [min-score of otters].";
 		let temp be number of visible animals;
 		if temp is 2:
 			say "The IQ medal you're wearing clanks against the LUCKY medal. It looks a bit clearer, now.";
 		else if temp is 4:
 			say "The [list of visible animals] swarm around you in a circle a few times. You seem to have established leadership of them, whether or not you can do anything with the [random pre-animal in perverse preserve]. Your IQ medal looks very shiny now.";
+			now random pre-animal in perverse preserve is llpish;
 		else if temp is 5:
 			min-up;
 	if noun is reflexed and location of player is wickeder:
@@ -23045,7 +23123,7 @@ every turn when parrot is visible (this is the parrot-chat rule):
 	if location of player is alcoves:
 		say "The parrot hides out of sight of Elmer and Merle, eyeing them fearfully.";
 	else if location of player is wire deck:
-		if number of visible reflexive animals is 0:
+		if owl is in lalaland and number of visible reflexive animals is 0:
 			say "'Awwk! Happy animals! They might do something for you some day, adventurer!'";
 			continue the action;
 		say "The parrot notes the [list of reflexive animals] [if number of visible reflexive animals > 1]don't[else]doesn't[end if] look happy.";
@@ -23294,11 +23372,6 @@ instead of examining pagers:
 	say "Remember when these things were the most annoying electronic devices? Then came cell phones and iPods."
 
 grapes are a plural-named fruit.
-
-after fliptoing grapes:
-	say "You hear barren cries now that the pagers aren't distracting you.";
-	now barren cries are in citrus;
-	continue the action;
 
 chapter maraschino
 
@@ -23564,7 +23637,7 @@ chapter pomegranate
 
 the pomegranate is a fruit.
 
-magenta rope is a vanishing thing. "A magenta rope is here by the drinks stand, partially obscuring a rampage note and mopeage rant."
+the magenta rope is a vanishing thing. "A magenta rope is here by the drinks stand, partially obscuring a rampage note and mopeage rant."
 
 a-text of magenta rope is "RYRYRRYRYRY". b-text of magenta rope is "RYRGRRGRYRG". parse-text of magenta rope is "x[sp]-[sp]x[sp]e[sp]x[sp]x[sp]a[sp]x[sp]-[sp]x[sp]e".
 
@@ -23588,15 +23661,15 @@ instead of doing something with mopeage rant:
 instead of taking magenta rope:
 	say "It would uncover Curtis's silly writings--the note and the rant. You'd be best off getting rid of all three, somehow."
 
-megaton pear plans are plural-named auxiliary scenery. description of megaton pear is "[bug-report]".
+the megaton pear plans are plural-named auxiliary scenery. description of megaton pear is "[bug-report]".
 
 a-text of megaton pear is "RYRYRRYRYRY". b-text of megaton pear is "RYRYRRYRYRY". parse-text of megaton pear is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]-".
 
-rampage note is auxiliary scenery. description of rampage note is "[bug-report]".
+the rampage note is auxiliary scenery. description of rampage note is "[bug-report]".
 
 a-text of rampage note is "RYRYRRYRYRY". b-text of rampage note is "RYPYRRYPYPG". parse-text of rampage note is "x[sp]-[sp]m[sp]-[sp]x[sp]x[sp]-[sp]n[sp]-[sp]t[sp]e".
 
-mopeage rant is auxiliary scenery. description of mopeage rant is "[bug-report]".
+the mopeage rant is auxiliary scenery. description of mopeage rant is "[bug-report]".
 
 a-text of mopeage rant is "RYRYRRYRYRY". b-text of mopeage rant is "RGRGRRYRGRY". parse-text of mopeage rant is "x[sp]o[sp]x[sp]e[sp]x[sp]x[sp]-[sp]x[sp]a[sp]x[sp]-".
 
@@ -24188,7 +24261,7 @@ the barren cries are scenery in Filed Field. "You can't see them or where they'r
 
 a-text of barren cries is "RRYRRYRRYYR". b-text of barren cries is "RRYRRYRPGGP". parse-text of barren cries is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]r[sp]i[sp]e[sp]s".
 
-The briar screen is scenery in filed field. "It's stained dark off-red and smells kind of bitter. You can barely see what it is screening. Examining it amplifies the barren cries."
+The briar screen is scenery in Filed Field. "It's stained dark off-red and smells kind of bitter. You can barely see what it is screening. Examining it amplifies the barren cries."
 
 a-text of briar screen is "RRYRRYRRYYR". b-text of briar screen is "RPYRRYRPYGR". parse-text of briar screen is "x[sp]r[sp]-[sp]x[sp]x[sp]-[sp]x[sp]r[sp]-[sp]e[sp]x".
 
@@ -24264,7 +24337,7 @@ book Scape Space
 
 Scape Space is an innie room in Others. Scape Space is below Swell Wells.
 
-The reserved sign is auxiliary scenery in Scape Space. "RESERVED for the DESERVER."
+The reserved sign is scenery in Scape Space. "RESERVED for the DESERVER."
 
 check taking reserved sign:
 	say "[greedy-s] yells at you to be a little more subtle trying to steal stuff." instead;
@@ -26976,9 +27049,6 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]the harmonicas could've become maraschino cherries.";
 		if grapes are not in lalaland:
 			say "[2dmiss of cur-reg]the pagers could've become grapes.";
-		else:
-			if barren cries are not in lalaland:
-				say "[2dmiss of cur-reg]the barren cries could've become cranberries.";
 		if drinks stand is unexamined:
 			say "[2dmiss of cur-reg]you could've examined the drinks stand to find more pre-fruits.";
 		else:
@@ -27366,6 +27436,7 @@ understand "endgame [text]" as endgameing.
 
 carry out endgameing:
 	let temp be 0;
+	now player has settler;
 	now manor is solved;
 	if end-jump is true or the player's command matches the regular expression "p":
 		increment temp;

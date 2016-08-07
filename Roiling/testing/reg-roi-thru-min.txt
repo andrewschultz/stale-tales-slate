@@ -914,7 +914,7 @@ WTF FTW
 Your score has just gone up by one point.
 >grapes
 Your score has just gone up by one point.
->cranberries
+>limes
 Your score has just gone up by one point.
 >tamarind
 Your score has just gone up by one point.
@@ -936,8 +936,6 @@ Take on a token
 Your score has just gone up by one point.
 >persimmon
 Your score has just gone up by one point.
->limes
-Your score has just gone up by one point.
 
 >n
 Swell Wells
@@ -952,6 +950,8 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 >coconuts
 Your score has just gone up by one point.
+>tangerines
+Your score has just gone up by one point.
 
 >s
 >icons
@@ -960,8 +960,6 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >n
->tangerines
-Your score has just gone up by one point.
 
 >e
 Clangier Clearing
@@ -971,6 +969,8 @@ Your score has just gone up by one point.
 >papayas
 Your score has just gone up by one point.
 >solemn
+Your score has just gone up by one point.
+>mo len
 Your score has just gone up by one point.
 
 >w

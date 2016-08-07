@@ -35,7 +35,7 @@ Your score has just gone up by one point
 >x settler
 
 >shake settler
-WRONG
+Many things: the giant pin (very blurry), the ten beams, the tables, the niche, the pavement (faint), the platform (faint), the pedestal (faint) and the crabgrass (faint) are visible.
 
 >basement
 Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
@@ -43,6 +43,8 @@ Your score has just gone up by two points
 
 >d
 >shake settler
+Many things: the pavement (faint), the platform (faint), the pedestal (faint), the crabgrass (faint) and the stria (very blurry) are visible. You turn the settler off.
+
 >undo
 >undo
 >undo
@@ -50,7 +52,7 @@ Your score has just gone up by two points
 >stable
 >in
 >shake settler
-WRONG
+Swish, shake, swirl. Only the sitar is visible.
 
 >undo
 >undo
@@ -59,7 +61,7 @@ WRONG
 >chimney
 >u
 >shake settler
-WRONG
+Swish, shake, swirl. Only the pram is visible.
 
 >ramp
 >d
@@ -67,7 +69,7 @@ WRONG
 Hands up!
 
 >shake settler
-WRONG
+You can't afford sudden or elaborate movements, but well, there's that rifle.
 
 >flier
 Your score has just gone up
@@ -76,7 +78,7 @@ Your score has just gone up
 Carven Cavern
 
 >shake settler
-WRONG
+A couple things: the plaster and the plates are visible.
 
 >staple
 Your score has just gone up by one point
@@ -85,7 +87,7 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+You see nothing unusual after shaking the settler.
 
 >staple wall
 >in
@@ -98,7 +100,7 @@ Won now: Roman Manor (8/13).
 
 >posf
 >shake settler
-WRONG
+Many things: Store V, Store B (very blurry), Store H (a bit blurry), Store K (very blurry), Store N (very blurry), Store P, Store T, Store U, Store W, Store Y and the tropes poster (a bit blurry) are visible.
 
 >presto
 Your score has just gone up by one point
@@ -121,12 +123,30 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 6 out of 11 total points in the current region, Stores. Lowest score to solve is 6. Maximum score available is 11.
 
+>shake settler
+Many things: Store B (very blurry), Store H (a bit blurry), Store K (very blurry) and Store N (very blurry) are visible.
+
+>sorbet
+Your score has just gone up by one point
+
+>others
+Your score has just gone up by one point
+
+>tokers
+Your score has just gone up by one point
+
+>nestor
+Your score has just gone up by one point
+
+>ss
+You see nothing unusual after shaking the settler.
+
 * _routes
 
 >posf
 
 >shake settler
-WRONG
+Many things: the scripture picturers, the lairage regalia, the adsorbing signboard, the bench, the worst ad (very blurry) and the bench-end are visible.
 
 >inside
 Your score has just gone up by one point
@@ -141,13 +161,13 @@ Your score has just gone up by one point
 Idle Deli
 
 >shake settler
-WRONG
+A couple things: the warning sign (a bit blurry) and the seed pit are visible.
 
 >despite
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+You see nothing unusual after shaking the settler.
 
 >out
 >across
@@ -156,10 +176,13 @@ Your score has just gone up by one point
 Adobe Abode
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the pipe soot is visible.
 
 >opposite
 Your score has just gone up by one point
+
+>shake settler
+You see nothing unusual after shaking the settler.
 
 >out
 
@@ -167,23 +190,23 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: the worst ad (very blurry), the giant's elbow and the bench-end are visible.
 
 >astride
 
 >shake settler
-WRONG
+A couple things: the worst ad (very blurry) and the giant's elbow are visible.
 
 >below
 
 >shake settler
-WRONG
+A couple things: the worst ad (very blurry) and Rude 'N Nuder are visible.
 
 >under
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the worst ad (very blurry) is visible.
 
 ##no-gal needs a line break ??
 
@@ -191,13 +214,13 @@ WRONG
 >out
 
 >shake settler
-WRONG
+A couple things: the worst ad (very blurry) and the huge thing form above are visible.
 
 >from
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+A couple things: the worst ad (very blurry) and THE BEAN are visible.
 
 >beneath
 Your score has just gone up by one point
@@ -206,19 +229,19 @@ DEBUG INFO: Taking away a max point.
 Sun-Spared Underpass
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only a weird outline in the darkness is visible.
 
 >until
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Only the narrow cracks are visible.
 
 >around
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the un-road is visible.
 
 >along
 Your score has just gone up by one point
@@ -226,7 +249,7 @@ Your score has just gone up by one point
 Ripe Pier
 
 >shake settler
-WRONG
+A couple things: the pier sign and da mist are visible.
 
 >amidst
 Your score has just gone up by one point
@@ -234,13 +257,13 @@ Your score has just gone up by one point
 Cripple Clipper
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: the ship controls, Thor and the new beet are visible.
 
 >behind
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+A couple things: Thor and the new beet are visible.
 
 >through
 Your score has just gone up by one point
@@ -254,55 +277,53 @@ Routes (17/18)
 Loather Rathole
 
 >shake settler
-WRONG
+A couple things: Pa, Egg, Pea (very blurry) and the cold are visible.
 
 >hate
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. A couple things: Pa, Egg, Pea (very blurry) and the heat are visible.
 
 >care
 Your score has just gone up by one point
 Loudest Used Lot
 
 >shake settler
-WRONG
+Many things: Pa, Egg, Pea (very blurry), the verbose babblings, the stop post and a cellar door (no, it can't be THERE) are visible
 
 >observe
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+A few things: Pa, Egg, Pea (very blurry), the stop post and a cellar door (no, it can't be THERE) are visible.
 
 >spot
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Many things: Pa, Egg, Pea (very blurry), a cellar door (no, it can't be THERE), the evil bee and the bee's head are visible.
 
 >reason
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+A few things: Pa, Egg, Pea (very blurry), a cellar door (no, it can't be THERE) and the vile bee are visible.
 
 >derive
 Pallid Li'L Pad
 DEBUG INFO: Taking away a max point.
 
 >posf
->score
-Score in a scenario: 6 out of 21 total points in the current region, Troves. Lowest score to solve is 15. Maximum score available is 20.
 
 >shake settler
-WRONG
+Many things: Pa, Egg, Pea (very blurry), the picture of a sad pier (a bit blurry), the box of diapers and the can of Large Regal Lager (with the rubbish story on it lit up too) (very blurry) are visible.
 
 >despair
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+A few things: Pa, Egg, Pea (very blurry), the can of Large Regal Lager (with the rubbish story on it lit up too) (very blurry) and LEAD are visible.
 
 >l
 Boredom Bedroom
@@ -314,20 +335,20 @@ DEBUG INFO: Taking away a max point.
 Dour Tan Rotunda
 
 >shake settler
-WRONG
+Swish, shake, swirl. A couple things: Pa, Egg, Pea (very blurry) and the brochure are visible.
 
 >desire
 Your score has just gone up by one point
 Econ-Cone
 
 >shake settler
-WRONG
+Swish, shake, swirl. A couple things: Pa, Egg, Pea (very blurry) and the rivets spelling PRAISE are visible.
 
 >aspire
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: Pa, Egg, Pea (very blurry), the rivets spelling PRAISE (very blurry) and the bottle of Pernod are visible.
 
 >ponder
 FiefCo Office
@@ -336,13 +357,13 @@ If only you could tune that out!
 DEBUG INFO: Taking away a max point.
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: Pa, Egg, Pea (very blurry), the tan ivy vanity (a bit blurry), the noise, DIVORCES Magazine (very blurry), the extra fancy lobster meal, the painting of the stream and the salt shaker are visible.
 
 >ignore
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: Pa, Egg, Pea (very blurry), DIVORCES Magazine (very blurry), the extra fancy lobster meal, the painting of the stream and the salt shaker are visible.
 
 >bolster
 Your score has just gone up by one point
@@ -350,7 +371,7 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Many things: Pa, Egg, Pea (very blurry), DIVORCES Magazine (very blurry), the painting of the stream (very blurry), Eddie's song and the playbill are visible.
 
 >resign
 Your score has just gone up by one point
@@ -364,28 +385,28 @@ Strip of Profits
 Grey Gyre
 
 >shake settler
-WRONG
+Many things: the lamb (very blurry), the volt maze, the hump and the plebe are visible.
 
 >umph
 Your score has just gone up by one point
 Austerer Treasure
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only Ye Hoop is visible.
 
 >pooh
 Your score has just gone up by one point
 Taking away a max point.
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the onyx censer is visible.
 
 >e
 >s
 Burnt Brunt
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the drab yoke, the dart, the decorative star and the onyx censer are visible.
 
 >rats
 Your score has just gone up by one point
@@ -393,12 +414,12 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. A couple things: the drab yoke and the onyx censer are visible.
 
 >n
 
 >shake settler
-WRONG
+Many things: the lamb (very blurry), the volt maze, the plebe and the onyx censer are visible.
 
 >bleep
 Your score has just gone up by one point
@@ -407,7 +428,7 @@ Your score has just gone up by one point
 Marines Seminar
 
 >shake settler
-WRONG
+Swish, shake, swirl. A couple things: the onyx censer and the boing mechanism are visible.
 
 >bingo
 Your score has just gone up by one point
@@ -417,26 +438,26 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: the lamb (very blurry), the ether and the onyx censer are visible.
 
 >s
 >s
 Dirge Ridge
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: Leo, a pair of hands patting Leo and Rand on the back and the onyx censer are visible.
 
 >ole
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: a pair of hands patting Leo and Rand on the back, Rand and the onyx censer are visible.
 
 >darn
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. A couple things: a pair of hands patting Leo and Rand on the back and the onyx censer are visible.
 
 >whassup
 Your score has just gone up by one point
@@ -446,13 +467,13 @@ Your score has just gone up by one point
 >load gun with dart
 
 >shake settler
-WRONG
+A few things: the lamb (very blurry), the ether and the onyx censer are visible.
 
 >there
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. A couple things: the lamb (very blurry) and the onyx censer are visible.
 
 >n
 Phat Path
@@ -461,13 +482,13 @@ Phat Path
 #different message for making it to the phat path 1st time?
 
 >shake settler
-WRONG
+A few things: the onyx censer, the keys and the hogs are visible.
 
 >syke
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the onyx censer, the log ons letters, the alert letters and the ought letters are visible.
 
 >later
 Your score has just gone up by one point
@@ -480,7 +501,7 @@ Dat was a good dust-up
 Hacks' Shack
 
 >shake settler
-WRONG
+Many things: the onyx censer, the pile of coal, the fount, the pair of trim socks, the escaroles, the giant dead flea, the gum, the clock sap, the disk, the piece of scratch paper and the small blue button are visible.
 
 >capslock
 Your score has just gone up by one point
@@ -499,7 +520,7 @@ Your score has just gone up by one point
 Only one more piece of hardware
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the pair of trim socks, the escaroles, the piece of scratch paper, the small blue button and the skid are visible.
 
 >get book
 >push skid s
@@ -514,7 +535,7 @@ WRONG
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the drab yoke, the pair of trim socks, the escaroles, the piece of scratch paper, the small blue button and the skid are visible.
 
 >keyboard
 Your score has just gone up by one point
@@ -528,40 +549,40 @@ fits in perfectly
 >disk
 
 >shake settler
-WRONG
+Many things: the pair of trim socks, the escaroles, the disk, the piece of scratch paper, the small blue button and the TBA key (very blurry) are visible.
 
 >put disk in drive
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the pair of trim socks, the escaroles, the disk, the piece of scratch paper, the small blue button and the TBA key (very blurry) are visible.
 
 >reboot
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the pair of trim socks, the escaroles, the disk, the piece of scratch paper and the TBA key (very blurry) are visible.
 
 >sleep
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the pair of trim socks, the escaroles, the disk, the piece of scratch paper and the TBA key (very blurry) are visible.
 
 >compile
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the pair of trim socks, the escaroles, the disk, the compiled code and the TBA key (very blurry) are visible.
 
 >pour cola in mug
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the pair of trim socks, the escaroles, the disk, the compiled code and the TBA key (very blurry) are visible.
 
 >debug
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the pair of trim socks, the escaroles, the disk, the USB and the TBA key (very blurry) are visible.
 
 >sub
 Diver time
@@ -579,7 +600,7 @@ Posh Hops Shop
 >posf
 
 >shake settler
-WRONG
+You switch the settler, then shake it. Your vision swirls for a minute. Many things: the stumbler tumblers, the gins sign, the tines, the trolls, Capers Recaps and the perma-amper (a bit blurry) are visible.
 
 >unset
 Your score has just gone up by one point
@@ -588,31 +609,35 @@ Your score has just gone up by one point
 >spit
 Your score has just gone up by one point
 
+>shake settler
+Many things: the tines, the trolls, Capers Recaps and the perma-amper (a bit blurry) are visible.
+
 >stroll
 Olde Lode
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the clam is visible.
 
 >calm
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the urn is visible.
 
 >run
 Your score has just gone up by one point
 
+Hero's Shore
+
 >shake settler
 WRONG
 
-Hero's Shore
 >boast
 Your score has just gone up by one point
 Fighter Freight
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the pale plea is visible.
 
 >leap
 Your score has just gone up by one point
@@ -620,7 +645,7 @@ Your score has just gone up by one point
 Anger Range
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the carps, the trout, the pikes and the haunter in Anger Range are visible.
 
 >scrap
 Your score has just gone up by one point
@@ -628,14 +653,14 @@ Your score has just gone up by one point
 >e
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only some cartoony representation of EEKS are visible.
 
 >seek
 DEBUG INFO: Taking away a max point.
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: the trout, the tea tray (a bit blurry) and the wipes (a bit blurry) are visible.
 
 >eat
 Your score has just gone up by one point
@@ -644,14 +669,14 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: the wipes (a bit blurry) and the bubble wrap are visible.
 
 >w
 >n
 Lapsin' Plains
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the bubble wrap, crate, wherever the crate is coming from, the skis, bogus-plains and the knob are visible.
 
 >trace
 Your score has just gone up by one point
@@ -663,25 +688,25 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: the bubble wrap and bogus-plains are visible.
 
 >in
 a hut
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: the bubble wrap and the tubs are visible.
 
 >bust
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the bubble wrap, the prod, the heaps and the waste are visible.
 
 >drop
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: the bubble wrap, the heaps and the waste are visible.
 
 >out
 >s
@@ -689,7 +714,7 @@ WRONG
 Arches
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: the bubble wrap and the arches are visible.
 
 >warp
 Your score has just gone up by one point
@@ -698,7 +723,7 @@ Your score has just gone up by one point
 GENERAL GLEANER engulf it
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: the general gleaner and the ruby (a bit blurry) are visible.
 
 >enlarge
 Your score has just gone up by one point
@@ -710,7 +735,7 @@ Hedron
 Collapsed Old Places
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the ruby (a bit blurry) is visible.
 
 >bury
 Your score has just gone up by one point
@@ -720,13 +745,13 @@ Your score has just gone up by one point
 >e
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the haunter in Anger Range is visible.
 
 >unearth
 by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the haunter is visible.
 
 >assuage
 by one point
@@ -738,32 +763,32 @@ by one point
 >e
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the ol' trap is visible.
 
 >patrol
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the portal (a bit blurry) is visible.
 
 >in
 
 >shake settler
-WRONG
+You see nothing unusual after shaking the settler.
 
 >out
 
 >x gleaner
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the portal (a bit blurry) is visible.
 
 >purloin lance
 
 >in
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the ant is visible.
 
 >tan ant
 
@@ -774,7 +799,7 @@ WRONG
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+A few things: the papery yapper, the dialer and the lever (very blurry) are visible.
 
 >derail
 Your score has just gone up by one point
@@ -789,7 +814,7 @@ Your score has just gone up by one point
 >in
 
 >shake settler
-WRONG
+You switch the settler, then shake it. Your vision swirls for a minute. Many things: Andres, Sir Rodney, Geno, Edwin, Blake, Ernest and Cedrick are visible.
 
 >gone
 Your score has just gone up by one point
@@ -804,11 +829,8 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 Topside Deposit
 
->score
-Score in a scenario: 4 out of 46 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 43.
-
 >shake settler
-WRONG
+Many things: Ray Eck, the keycar (a bit blurry), the welt-proof flowerpot and the Curst Palace are visible.
 
 >get tarts
 >put tarts in toaster
@@ -821,7 +843,7 @@ Your score has just gone up by one point
 Scope Copse
 
 >shake settler
-WRONG
+Many things: the yurts, the welt-proof flowerpot (very blurry), the Curst Palace, the oddly rewired robot, the muscly hulk and the snider diners are visible.
 
 >weirder
 Your score has just gone up by one point
@@ -832,7 +854,7 @@ Your score has just gone up by one point
 Baldest Blasted Saltbed
 
 >shake settler
-WRONG
+Many things: the old ice (very blurry), the welt-proof flowerpot (very blurry), the Curst Palace, the unripe iPrune and the pirates are visible.
 
 >pastier
 Your score has just gone up by one point
@@ -844,7 +866,7 @@ Your score has just gone up by one point
 Anemic Cinema
 
 >shake settler
-WRONG
+Many things: the welt-proof flowerpot (very blurry), the Curst Palace, the ingrates, the admirer and the sweatier wait-seer are visible.
 
 >married
 Your score has just gone up by one point
@@ -853,7 +875,7 @@ Your score has just gone up by one point
 Shaven Havens
 
 >shake settler
-WRONG
+A couple things: the welt-proof flowerpot and the Curst Palace are visible.
 
 >s
 >s
@@ -861,7 +883,7 @@ WRONG
 Savager Ravages
 
 >shake settler
-WRONG
+Many things: the denim, the weeds, the welt-proof flowerpot (very blurry), the Curst Palace, the man covered in inapt paint, the alarming grailman and the man in a REED'S ALE costume are visible.
 
 >sewed
 
@@ -870,7 +892,7 @@ WRONG
 Ole Shrine Shoreline
 
 >shake settler
-WRONG
+Many things: the raves saver (very blurry), the welt-proof flowerpot (very blurry), the Curst Palace, the organised ego drains and the Hostile-Is-He Lot are visible.
 
 >holiest
 >grandiose
@@ -878,14 +900,14 @@ WRONG
 Actionless Coastline
 
 >shake settler
-WRONG
+Many things: the raves saver (very blurry), the welt-proof flowerpot (very blurry), the Curst Palace and the Atheists are visible.
 
 >hastiest
 >s
 >s
 
 >shake settler
-WRONG
+Many things: the raves saver (very blurry), the welt-proof flowerpot (very blurry), the Curst Palace, the dandier arid den, the bottles of Nerd-Aid, the natives (a bit blurry) and the bonker are visible.
 
 >broken
 
@@ -893,14 +915,14 @@ WRONG
 >w
 
 >shake settler
-WRONG
+Many things: the neural pulses, the raves saver (very blurry), the welt-proof flowerpot (very blurry), the Curst Palace, the snider diners and the man covered in inapt paint are visible.
 
 >e
 
 >e
 
 >shake settler
-WRONG
+Many things: the raves saver (very blurry), the prison ropins, Dr. Yow, the fissure (a bit blurry), the welt-proof flowerpot and the Curst Palace are visible.
 
 >wordy
 >push retape
@@ -913,25 +935,32 @@ WRONG
 >go to kid
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the raves saver (very blurry), the smart kid, the welt-proof flowerpot and the Curst Palace are visible.
 
 >gifted
+>shake settler
+Swish, shake, swirl. Many things: the raves saver (very blurry), the welt-proof flowerpot and the Curst Palace are visible.
+
 >ask kid about yow
 Obscurest
 
 >s
 >s
 >e
+
+>shake settler
+Many things: the raves saver (very blurry), the tentativeness (very blurry), Dr. Yow, the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
+
 >rowdy
 
 >shake settler
-WRONG
+Many things: the raves saver (very blurry), Dr. Yow, the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >go to copse
 >w
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: the raves saver (very blurry), the welt-proof flowerpot and the Curst Palace are visible.
 
 >put dagger in machine
 
@@ -939,33 +968,38 @@ WRONG
 >give gizmo to kid
 
 >shake settler
-WRONG
+Many things: the raves saver (very blurry), the turbos, the blaster, the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >robust
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the raves saver (very blurry), the turbos, the blaster, the welt-proof flowerpot and the Curst Palace are visible.
 
->stabler
+>pearly
+>shake settler
+Swish, shake, swirl. Many things: the turbos, the blaster, the welt-proof flowerpot and the Curst Palace are visible.
 
 >enter boat
+Rawest Waters
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the raves saver (very blurry), the eastern shore, the welt-proof flowerpot (very blurry) and the Curst Palace are visible. You turn the settler off.
+
+>nearest
+
+>shake settler
+Many things: the raves saver (very blurry), the succor crocus (very blurry), the pester'n serpent (very blurry), the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
 
 >present
 
 >w
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the raves saver (very blurry), Ed Yerg (very blurry), the welt-proof flowerpot and the Curst Palace are visible.
 
 >e
 
 >spectacular
-
->score
-24/46
 
 * _otters
 
@@ -974,19 +1008,19 @@ WRONG
 >in
 
 >shake settler
-WRONG
+You switch the settler, then shake it. Your vision swirls for a minute. Only the bleary barley is visible.
 
 >barely
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Many things: the cinders (very blurry), Ed Riley, the deli rye (a bit blurry) and the Er Yield sign (a bit blurry) are visible.
 
 >reedily
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Only the cinders (very blurry) are visible.
 
 >get cinders
 
@@ -994,7 +1028,7 @@ WRONG
 Gent-Fora Frontage
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: the cinders (very blurry), the atmo-moat and the macks are visible.
 
 >discern macks
 >discern
@@ -1005,13 +1039,13 @@ DEBUG INFO: Taking away a max point.
 Your score has just gone up by one point.
 
 >shake settler
-WRONG
+Swish, shake, swirl. A couple things: the atmo-moat and the macks are visible.
 
 >nastily
 Your score has just gone up by one point.
 
 >shake settler
-WRONG
+Swish, shake, swirl. A couple things: the atmo-moat and the macks are visible.
 
 >blearily
 Your score has just gone up by one point.
@@ -1024,19 +1058,19 @@ Your score has just gone up by one point.
 >n
 
 >shake settler
-WRONG
+Swish, shake, swirl. A few things: the medals, the sea cube and the eels are visible.
 
 >because
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. A couple things: the medals and the eels are visible.
 
 >else
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the medals are visible.
 
 >s
 >atom
@@ -1045,17 +1079,18 @@ Your score has just gone up by one point
 >s
 
 >shake settler
-WRONG
+A few things: the medals, the ghoul hat (very blurry) and the painting of Rev. Howe (very blurry) are visible.
 
 >although
+Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. A couple things: the medals and the painting of Rev. Howe (very blurry) are visible. You turn the settler off.
 
 >however
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the medals are visible.
 
 >n
 
@@ -1063,7 +1098,7 @@ WRONG
 >n
 
 >shake settler
-WRONG
+Swish, shake, swirl. A couple things: the medals and the sly imp are visible. You turn the settler off.
 
 >enragedly
 Your score has just gone up by one point
@@ -1074,13 +1109,13 @@ Your score has just gone up by one point
 Wickeder Wire Deck
 
 >shake settler
-WRONG
+Swish, shake, swirl. A couple things: the medals and the owls are visible.
 
 >slow
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the medals, the ocelots, the leopard, the badger and the satyr are visible. You turn the settler off.
 
 >coolest
 Your score has just gone up by one point
@@ -1088,10 +1123,15 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >artsy
 Your score has just gone up by one point
+
+>shake
+Swish, shake, swirl. A couple things: the medals and the badger (very blurry) are visible. You turn the settler off.
+
 >garbed
+Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the medals are visible. You turn the settler off.
 
 >s
 Tapering Inert Gap
@@ -1101,7 +1141,7 @@ Tapering Inert Gap
 Rote Moan Anteroom
 
 >shake settler
-WRONG
+Swish, shake, swirl. A couple things: the medals and the shrewin' whiners are visible. You turn the settler off.
 
 >loathingly
 Your score has just gone up by one point
@@ -1109,19 +1149,19 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the medals are visible. You turn the settler off.
 
 >s
 Perverse Preserve
 
 >shake settler
-WRONG
+A couple things: the medals and the raptor are visible.
 
 >parrot
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Many things: the medals, the corona, the thrones, the pines, the nails, the parrot and the weltish whistle are visible.
 
 >snail
 Your score has just gone up by one point
@@ -1129,10 +1169,15 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 >raccoon
 Your score has just gone up by one point
->snipe
 
 >shake settler
-WRONG
+Many things: the medals, the pines (very blurry), the parrot and the weltish whistle are visible.
+
+>snipe
+Your score has just gone up by one point
+
+>shake settler
+Swish, shake, swirl. A few things: the medals, the parrot and the weltish whistle are visible. You turn the settler off.
 
 >n
 Near-Moot Anteroom
@@ -1142,41 +1187,42 @@ Near-Moot Anteroom
 >w
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: Elmer and Merle (very blurry), the medals, the parrot and the weltish whistle are visible. You turn the settler off.
+
+>honestly
+Your score has just gone up by one point
+
+>shake settler
+Swish, shake, swirl. A few things: the medals, the parrot and the weltish whistle are visible. You turn the settler off.
 
 >raptor
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+A couple things: the medals and the weltish whistle are visible. You turn the settler off.
 
 >deeply
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+Only the medals are visible.
 
 >quickly
 Your score has just gone up by one point
 
 >shake settler
-WRONG
+You see nothing unusual after shaking the settler.
 
 >w
 WTF FTW
 
 >1
 >8
->8
->8
 
 >shake settler
-WRONG
+You see nothing unusual after shaking the settler.
 
 >au -1
-
->shake settler
-WRONG
 
 >play whistle
 
@@ -1184,16 +1230,14 @@ WRONG
 
 >z
 
->x stand
-
 >shake settler
-WRONG
+Many things: the pagers, the harmonicas, the spear, the lumps, the mad train and the eerie blurbs are visible. It's a bit of a headache to stare too long, so you switch the settler off.
 
 >maraschino
 Your score has just gone up by one point.
 >grapes
 Your score has just gone up by one point.
->cranberries
+>pears
 Your score has just gone up by one point.
 >tamarind
 Your score has just gone up by one point.
@@ -1201,9 +1245,16 @@ Your score has just gone up by one point.
 >compass
 Your score has just gone up by one point.
 
->plums
+>shake settler
+A couple things: the lumps and the eerie blurbs are visible.
+
+>x stand
+
+>shake settler
+
+>limes
 Your score has just gone up by one point.
->pears
+>plums
 Your score has just gone up by one point.
 >blueberries
 Your score has just gone up by one point.
@@ -1215,14 +1266,15 @@ Take on a token
 Your score has just gone up by one point.
 >persimmon
 Your score has just gone up by one point.
->limes
-Your score has just gone up by one point.
+
+>shake settler
+You see nothing unusual after shaking the settler.
 
 >n
 Swell Wells
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the stucco, the green stain, the silly shirt, the riot cap and the miser ruble are visible.
 
 >apricot
 Your score has just gone up by one point.
@@ -1234,30 +1286,33 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 >coconuts
 Your score has just gone up by one point.
+>tangerines
+Your score has just gone up by one point.
+
+>shake settler
+You see nothing unusual after shaking the settler.
 
 >s
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only Curtis's coins are visible.
 
 >icons
 Your score has just gone up by one point.
 
 >shake settler
-WRONG
+Swish, shake, swirl. Only the icons you made are visible.
 
 >sonic
 Your score has just gone up by one point.
 
 >n
->tangerines
-Your score has just gone up by one point.
 
 >e
 Clangier Clearing
 
 >shake settler
-WRONG
+Swish, shake, swirl. Many things: the list of prices, the auction caution, the lemons, the melon, the nectarine, the quince, the overpriced peach and the pre-mang are visible.
 
 >among
 Your score has just gone up by one point.
@@ -1265,9 +1320,10 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 >solemn
 Your score has just gone up by one point.
+>len mo
 
 >shake settler
-WRONG
+Many things: the list of prices, the nectarine, the quince and the overpriced peach are visible.
 
 >w
 >s
@@ -1279,12 +1335,9 @@ a droll dollar
 Scape Space
 
 >shake settler
-WRONG
+Many things: the reserved sign, the A you can maybe grab somehow, the pugnacious plant and the ENGARO orange are visible.
 
 >give dollar to trader
-
->shake settler
-WRONG
 
 >put icons in slot
 >u
@@ -1292,15 +1345,30 @@ WRONG
 >w
 Filed Field
 >shake settler
-WRONG
+Many things: the viewer, the searcher, the buried raft, the mean trowel, the briar screen, the rapt figure, the pipe panel fence, the pryer bars, the barriers west and the barber sickle are visible.
+
+>cranberries
+Your score has just gone up by one point.
 
 >e
 
 >n
+>shake settler
+Swish, shake, swirl. A couple things: the viewer and the searcher are visible. You turn the settler off.
+
+>n
+
+>shake settler
+A few things: the words "PERP" forming outside the Admit-Us Stadium, the viewer and the searcher are visible.
+
 >research
 Your score has just gone up by one point.
 >review
 Your score has just gone up by one point.
+
+>shake
+You see nothing unusual after shaking the settler.
+
 >n
 You Did Great
 
@@ -1364,42 +1432,38 @@ Rustic Citrus
 >undo
 >undo
 
-* only-manor
+* _only-manor
 
 >{include} _manor
 
-* only-stores
+* _only-stores
 
 >ts
 >{include} _stores
 
-* only-routes
+* _only-routes
 
 >gonear same mesa
 >purloin settler
 >{include} _routes
->{include} _summarize
 
 * only-troves
 
 >gonear rathole
 >purloin settler
 >{include} _troves
->{include} _summarize
 
 * only-presto
 
 >gonear gyre
 >purloin settler
 >{include} _presto
->{include} _summarize
 
 * only-oyster
 
 >purloin settler
 >gonear posh hops shop
 >{include} _oyster
->{include} _summarize
 
 * only-towers
 
@@ -1407,7 +1471,6 @@ Rustic Citrus
 >gonear trefoil
 >purloin settler
 >{include} _towers
->{include} _summarize
 
 * only-otters
 
@@ -1415,7 +1478,6 @@ Rustic Citrus
 >gonear barley
 >purloin settler
 >{include} _otters
->{include} _summarize
 
 * only-others
 

@@ -3130,13 +3130,6 @@ Your score has just gone up by one point.
 >grapse
 That's not something you can
 
->cranberrise
-The cries seem like they could change--or is it a dream to you?
->cranberries
-Your score has just gone up by one point.
->cranberrise
-That's not something you can
-
 >tamaridn
 The train emits some fake smoke and seems ready to blow up--but no.
 >tamarind
@@ -3258,16 +3251,16 @@ Your score has just gone up by one point.
 >gooseberyr
 Just return the fruit to Curtis. No need for another change.
 
->s
-scru-it
->n
-
 >coconust
 The stucco looks almost hairy for a second.
 >coconuts
 Your score has just gone up by one point.
 >coconust
 Just return the fruit to Curtis. No need for another change.
+
+>s
+scru-it
+>n
 
 >sonic
 Maybe if you had more than one coin.
@@ -3295,6 +3288,13 @@ Filed Field
 
 >fidel
 A thin voice howls "I fled!"
+
+>cranberrise
+The cries seem like they could change--or is it a dream to you?
+>cranberries
+Your score has just gone up by one point.
+>cranberrise
+That's not something you can
 
 >blackberrise
 The barber sickle darkens a bit. You must be on the right track.

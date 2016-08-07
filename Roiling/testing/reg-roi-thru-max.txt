@@ -1410,6 +1410,12 @@ Score in a scenario: 10 out of 29 total points in the current region, Otters. Lo
 
 >z
 
+>cranberries
+Your score has just gone up by one point.
+>score
+Score in a scenario: 3 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
+
+
 >x stand
 
 >maraschino
@@ -1420,11 +1426,11 @@ Score in a scenario: 1 out of 41 total points in the current region, Others. Low
 Your score has just gone up by one point.
 >score
 Score in a scenario: 2 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
->cranberries
+>tamarind
 Your score has just gone up by one point.
 >score
 Score in a scenario: 3 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
->tamarind
+>plums
 Your score has just gone up by one point.
 >score
 Score in a scenario: 4 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
@@ -1434,7 +1440,7 @@ Your score has just gone up by one point.
 >score
 Score in a scenario: 5 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 
->plums
+>limes
 Your score has just gone up by one point.
 >score
 Score in a scenario: 6 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
@@ -1448,40 +1454,36 @@ Your score has just gone up by one point.
 Score in a scenario: 8 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >pomegranate
 Your score has just gone up by one point.
-Take on a token
 >score
 Score in a scenario: 9 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >cantaloupe
 Your score has just gone up by one point.
+Take on a token
 >score
 Score in a scenario: 10 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >persimmon
 Your score has just gone up by one point.
 >score
 Score in a scenario: 11 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
->limes
-Your score has just gone up by one point.
->score
-Score in a scenario: 12 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 
 >n
 Swell Wells
 >apricot
 Your score has just gone up by one point.
 >score
-Score in a scenario: 13 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
+Score in a scenario: 12 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >apples
 Your score has just gone up by one point.
 >score
-Score in a scenario: 14 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
+Score in a scenario: 13 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >mulberries
 Your score has just gone up by one point.
 >score
-Score in a scenario: 15 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
+Score in a scenario: 14 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >gooseberry
 Your score has just gone up by one point.
 >score
-Score in a scenario: 16 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
+Score in a scenario: 15 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 
 >s
 scru-it
@@ -1490,11 +1492,11 @@ scru-it
 >coconuts
 Your score has just gone up by one point.
 >score
-Score in a scenario: 17 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
+Score in a scenario: 16 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >icon
 Your score has just gone up by one point.
 >score
-Score in a scenario: 18 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
+Score in a scenario: 17 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 
 >s
 You fiddle with the coin you got
@@ -1503,11 +1505,15 @@ You fiddle with the coin you got
 >tangerines
 Your score has just gone up by one point.
 >score
-Score in a scenario: 19 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
+Score in a scenario: 18 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 
 >w
 Filed Field
 
+>cranberries
+Your score has just gone up by one point.
+>score
+Score in a scenario: 19 out of 41 total points in the current region, Others. Lowest score to solve is 25. Maximum score available is 41.
 >blackberries
 Your score has just gone up by one point.
 >score
