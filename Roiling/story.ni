@@ -3159,21 +3159,21 @@ before doing something when Elmo is visible:
 	if current action is scaning Elmo or current action is examining Elmo:
 		say "[if rifle is visible]You worry about making any quick movements, even though he doesn't look...enthusiastic about this situation, almost gazing at his rifle with disgust. Maybe you could get rid of the rifle[else]Talk with him, instead[end if]." instead;
 	if rifle is visible:
+		if current action is swearing obscenely or current action is swearing mildly:
+			say "No need for that. Shouldn't be too hard to figure what to do with the rifle." instead;
 		if current action is ss0ing or current action is ssing:
 			say "You can't afford sudden or elaborate movements, but well, there's that rifle." instead;
-		if action is procedural:
-			continue the action;
 		if current action is singing:
 			say "That's not what the high sign is for." instead;
 		if current action is waiting:
 			continue the action;
 		if current action is going:
 			say "Back in the manor won't help, and Elmo won't let you by." instead;
+		if action is procedural:
+			continue the action;
 		if word number 1 in the player's command is "talk" or word number 1 in the player's command is "ask" or word number 1 in the player's command is "say" or word number 1 in the player's command is "tell":
 			say "You aren't brave enough to say 'Disarm, mad sir!'" instead;
 		say "You can't do much with Elmo around." instead;
-	if current action is swearing obscenely or current action is swearing mildly:
-		say "No need for that. Shouldn't be too hard to figure what to do with the rifle." instead;
 	if action is blathery:
 		say "You don't want to go off on any tangents, here." instead;
 	if current action is not talking to Elmo and current action is not QBC responding with:
@@ -3259,7 +3259,6 @@ to open-elmos-hints:
 		enact the artsy-quip;
 		enact the clues-quip;
 		enact the trips-quip;
-		now player has the Gird Grid;
 
 ramabits is a list of things variable. ramabits is { farm plot, platform, event map, pavement, brass crag, crabgrass, pedestal, steel pad }
 
@@ -3454,6 +3453,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 			say "Hm. Maybe Elmo had some information for you that a conversation couldn't bring out. Well, it's all really just anagramming from here on out--you think/hope.";
 		now Elmo is in lalaland;
 		now satchel is in lalaland;
+		now player has gird grid;
 		if do-i-chat is true: [this is a cheat bypass]
 			move player to Frontage;
 			now macks are in lalaland;
@@ -7017,6 +7017,8 @@ check waiting:
 			say "Solo detail? Isolated? No. Desolation." instead;
 		if cur-score of troves is 0:
 			say "That's the wrong sort of inaction for here[one of]. Better watch it, or snotbag nagbots or a boot-o-bot will get you[or][stopping]." instead;
+		if player is in fiefco:
+			say "You're...thinking hard. No really." instead;
 		say "You are paralyzed by the hustle and bustle of the big city. Though how much is bustle or hustle, I really couldn't say." instead;
 	if carps are visible:
 		try listening instead;
@@ -7853,6 +7855,8 @@ instead of waving hands:
 chapter swearing
 
 instead of swearing obscenely:
+	unless qbc_litany is table of no conversation:
+		say "You're classier than that." instead;
 	if mrlp is presto:
 		if cur-score of presto is 0:
 			say "That's too strong for here. But you have the right idea." instead;
@@ -8481,7 +8485,7 @@ table of warps [this gives the text for which portal leads to which area, and wh
 por	reg	lloc	go-text
 routes-x	Routes	Same Mesa	"[one of]The route turns a bit, then begins branching. You are no longer sure what direction you are going in, and you always vaguely tried to take the center one, but it's no use. You wind up crossing a red line, and you find there is no way back. 'No curse cure, son!' booms a voice[if player is female] sadly ignorant of your gender[end if].[paragraph break]After walking on for a bit, you find yourself somewhere that might be populated. Well, there are buildings around[or][if Sun-Spared Underpass is visited]Somehow, the routes lead you underground[otherwise]It's easier to get lost the way you need to the second time[end if][stopping].[line break]"
 troves-x	Troves	Loather Rathole	"[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. When you look up, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]"
-e-s	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]"
+e-s	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]"
 oyster-x	Oyster	Posh Hops Shop	"[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
 towers-x	Towers	Loftier Trefoil	"[one of]As you attempt to enter the towers, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
 otters-x	Otters	Bleary Barley	"[if b-b is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Bleary Barley is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[otherwise]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]"
@@ -8758,7 +8762,7 @@ Store H	hoster	false	524148772	--	"others"	"others"	"You manage to discover a se
 Store K	tokers	false	539799651	--	"tokers"	"tokers"	"You concentrate on the store with all your might, but you're unable to do anything. In frustration, you bang on the window, breaking it. Smoke comes pouring out. 'Dude you must totally be the cops! We were hotboxing in there!' You assure them you are not, that you've got a rather libertarian view on it all, but it takes so long that a joint they left in there burns the store down. Fortunately, they'd grabbed everything else of value, and all things considered, they feel almost glad to be liberated from their fears of being caught. They pull a tarp apart and sit down.[check-nestor]"
 Store N	nestor	false	555773981	--	"nestor"	"nestor"	"The store rumbles and collapses! But the rubble falls in a circle around the poor fellow inside. He gives a duh-eyed 'Hey dude.' A long pause. 'What happened?' He wouldn't believe the truth, so you just [check-tokers]"
 lecturer	lecturer	false	572670412	Strip of Profits	"outside"	"go outside" or "outside"	"Ian and the lecturer are swept from the doorway and stage, respectively, by something unseen. The lecturer frantically babbles something about how this is why we need to fight drugs, but he is too busy backwards somersaulting to establish eye contact with his audience. You stumble out yourself, back onto the way high highway.[paragraph break]'Whoah, dude! You totally stuck it to guard-on-a-ground Durango! Dour nag!' The tokers give you the sauciest suitcase you could imagine (tie-dyed, not spaghetti sauce) and encourage you to eat the nice mush munchies therein. You protest at first, worrying the munchies might be 'special,' but no, the tokers assure you that'd waste money. They explain the munchies help reduce migraines['] mini-rages, like [if headaches is 10](after some experiments with the settler) [end if]that annoying noise from the slider. You can use the slider [if headaches is 0]again[else]more[end if], now."
-Store P	e-s	false	568332432	--	"presto"	"presto"	"You say the magic word! An unseen voice lauds, 'SALUD!'[paragraph break]You feel yourself swirling, lifted from the ground, and you see the words in the poster blur as first the store, then the poster swirls into--well, not a blotch. Call it an, er, spot. Nothing escapes, except for an odd, unappealing hunk of bread, which you take. You nibble it. It's disgusting, and you bite your tongue before a nasty word slips out[get-crust]."
+Store P	e-s	false	568332432	--	"presto"	"presto"	"You say the magic word! An unseen voice lauds, 'SALUD!'[paragraph break]You feel yourself swirling, lifted from the ground, and you see the words in the poster blur as first the store, then the poster swirls into--well, not a blotch. Call it an, er, spot. You can ENTER, if you dare."
 Store T	otters-x	false	589976491	--	"otters"	"otters"	"The store divides in two until it becomes a path with gargoyles on each side. I mean, otters."
 Store U	routes-x	false	591972280	--	"routes"	"routes"	"The routes coalesce and flatten and grow. You can ENTER them to see where they lead."
 Store V	troves-x	false	594031293	--	"troves"	"troves"	"You look more closely at Store V. Yes, those are definitely troves. Store V collapses--you duck as the walls fall out and somehow sink into the ground."
@@ -10693,15 +10697,38 @@ still-no-gp-quip	"Elmo notes that individual letters can be either red-or-purple
 got-it-quip	"'Excellent! So, yeah, the settler adds blues when you're in cheat mode and the letters are right. Purple consonants, green vowels.'[if y-orange is false] Elmo looks over your settler once more. 'Hmm. What's the orange for? On Yorpwald/wordplay?'[else] You and Elmo note orange is for Y's, and you suspect correct oranges become brown or something.[end if]"
 orange-know-quip	"You've got this one--Yorpwald, wordplay, the orange D at the end goes to Y, the orange W at the start to Y, too[y-know]."
 orange-dunno-quip	"You [if backside is examined]re-[end if]examine the backside of settler and note how Yorpwald lines up with Wordplay--those two orange letters MEAN something. Then you both realize both orange letters go to a Y that's not in the right place[y-know]."
-bye-Elmo-quip	"[if hold-it-up is false][note-gretta]A pause. 'Go, you doer. You're good. Un-retire, reuniter. Re-shift it fresh. Disable bad lies. There's an evac-cave over thataway. You'll know what to do. I think. Forsake fears, ok?'[paragraph break]You leave, feeling less resave-averse, but run as you hear 'Get Elmo!' / 'Get ol['] me? Let me go!' 'Sympathy?' / 'My hat, spy!' ... 'A spy yaps, pays...'[paragraph break]You crawl through the evac-cave, which exits to writing behind a dune, man. UNNAMED: MUNDANE, but you look closer and see RETRAIN TERRAIN. Behind is a carven cavern. It looks as good a place as any to visit.[end if]" [end ELMO text]
+bye-Elmo-quip	"[if hold-it-up is false][note-gretta]A pause. 'Go, you doer. You're good. Un-retire, reuniter. Re-shift it fresh. Disable bad lies. There's an evac-cave over thataway. You'll know what to do. I think. Forsake fears, ok?'[paragraph break][gridchek]You leave, feeling less resave-averse, but run as you hear 'Get Elmo!' / 'Get ol['] me? Let me go!' 'Sympathy?' / 'My hat, spy!' ... 'A spy yaps, pays...'[paragraph break]You crawl through the evac-cave, which exits to writing behind a dune, man. UNNAMED: MUNDANE, but you look closer and see RETRAIN TERRAIN. Behind is a carven cavern. It looks as good a place as any to visit.[end if]" [end ELMO text]
+
+to say gridchek:
+	say "[if player does not have gird grid]Elmo hands you an additional note--a Gird Grid--to help you on your way. [end if]";
+	now player has gird grid;
 
 section Gird Grid
 
 the Gird Grid is a warpable thing. description is "[bug-report]"
 
+after printing the name of gird grid when gird grid is examined:
+	say " (X 1 through X 6 to read quickly)";
+
+understand "x [number]" as gridxing when player has gird grid.
+
+gridxing is an action applying to one number.
+
+carry out gridxing:
+	if number understood < 1 or number understood > 6:
+		say "You must choose 1-6 in the Gird Grid." instead;
+	choose row number understood in table of griddiness;
+	if there is a reg-match entry:
+		if reg-match entry is solved or reg-match entry is bypassed:
+			say "You're pretty sure you don't need to deal with the [reg-match entry], any more. Still, you re-read the description and take time to feel pleased with what you fixed." instead;
+	say "[reg-blurb entry][line break]";
+	if there is a reg-match entry and mrlp is reg-match entry:
+		say "[if cur-score of mrlp is 0]Hm. Maybe you'll figure out what do do, and how[else]Hm. The hints make a bit more sense, now[end if].";
+	the rule succeeds;
+
 check examining the Gird Grid:
 	now gird grid is examined;
-	say "The Gird Grid [one of]is the real thing--endorsed by Dr. Ridrig! It [or][stopping]is divided 2x3, into sections labeled, not quite in alphabetical order, U(1), V(2), P(3), Y(4), W(6) and T(6).[paragraph break]Just type in the part you wish to examine, (case insensitive) letter or number.";
+	say "The Gird Grid [one of]is the real thing--endorsed by Dr. Ridrig! It [or][stopping]is divided 2x3, into sections labeled, not quite in alphabetical order, U(1), V(2), P(3), Y(4), W(5) and T(6).[paragraph break]Just type in the part you wish to examine, (case insensitive) letter or number[one of] (in the future, you can type X # for the number you want)[or][stopping].";
 	let cho be the chosen letter;
 	if cho - 32 is a uc-ascii listed in the table of griddiness: [switch to lower case]
 		now cho is cho - 32;
@@ -10723,8 +10750,8 @@ table of griddiness
 num-ascii	uc-ascii	reg-match	reg-blurb
 49	85	routes	"The Poison Stripe surrounding the Same Mesa has caused people there to lose all sense of direction, physically and mentally. If one person could escape, that would change. The Oopsin['] Priest may be able to help you."
 50	86	troves	"Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order."
-51	80	presto	"There is rumor of a Hacks['] Shack immune to Elvira's Shatter-Threats legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks['] Shack, you may feel a sense of normality that gets you back to how things were before Elvira."
-52	89	oyster	"A seashore seahorse mentioned aseaside dis-ease you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it."
+51	80	presto	"There is rumor of a Hacks['] Shack immune to Elvira's SHATTER-THREATS legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks['] Shack, you may feel a sense of normality that gets you back to how things were before Elvira."
+52	89	oyster	"A seashore seahorse mentioned a seaside dis-ease you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it."
 53	87	towers	"The Bland Sad Badlands are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow..."
 54	84	otters	"Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!"
 48	--	--	"You'd guess area zero would be this, here, now, but you've been doing okay so far."
@@ -10858,6 +10885,7 @@ understand "paces" as a mistake ("The space capes are already abstract and bizar
 pursins is a truth state that varies.
 
 check inserting into the purse:
+	ignore the can't insert into what's not a container rule;
 	if noun is lamp:
 		say "Fire hazard." instead;
 	if player does not have noun:
@@ -14691,7 +14719,7 @@ check throwing it at (this is the don't throw dart rule) :
 	say "You don't have many good rangy weapons in this game. Attacking instead (though that's useless too)...";
 	try attacking the second noun instead;
 
-the dart is a reflexive thing. description is "[if dart is part of popgun]Locked and loaded[else if dart is not in dumpster]It's long and narrow, made more for stunning than killing, for propulsion than throwing[else]The dart is in the dumpster, just out of reach[end if]."
+the dart is a reflexive thing. description is "[if dart is in popgun]Locked and loaded[else if dart is not in dumpster]It's long and narrow, made more for stunning than killing, for propulsion than throwing[else]The dart is in the dumpster, just out of reach[end if]."
 
 the dumpster contains the dart.
 
@@ -15025,6 +15053,11 @@ instead of doing something with camo-coma:
 
 The PG-on-up popgun is a container in Marines Seminar.
 
+after printing the name of the popgun while taking inventory:
+	if dart is in popgun:
+		say " (loaded with the dart)";
+	continue the action;
+
 understand "oppugn [text]" and "oppugn" as a mistake ("You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.") when popgun is visible.
 
 understand "PG-on-up/ pop/ gun/" as popgun.
@@ -15047,7 +15080,10 @@ report taking popgun:
 	say "You're not one for violence, but the gun doesn't look super-high-powered. On the other hand, it's not G-rated, so it's minimally effective. Snagged.";
 	the rule succeeds;
 
-description of PG-on-up popgun is "It's cheap plastic but probably packs a punch with the right ammo--but if it were G? No, pup[if boing is reflexed]. Its boing mechanism is fixed, now[otherwise]. You notice its boing mechanism is broken. It may take a eureka moment to figure out how to fix this spoilt pistol[end if][if dart is in popgun]. Loaded, too![end if]. You notice a serial number."
+description of PG-on-up popgun is "It's cheap plastic but probably packs a punch with the right ammo--but if it were G? No, pup[if boing is reflexed]. Its boing mechanism is fixed, now[otherwise]. You notice its boing mechanism is broken. It may take a eureka moment to figure out how to fix this spoilt pistol[end if][if dart is in popgun]. Loaded, too, with that dart![end if]. You notice a serial number."
+
+check examining popgun:
+	ignore the examine containers rule;
 
 understand "spoilt/pistol" and "spoilt pistol" as popgun.
 
@@ -15182,8 +15218,9 @@ the hogs are reflexive plural-named people. description is "They're as big as Le
 
 after printing the locale description for Phat Path when Phat Path is unvisited:
 	say "Shouldn't be much of a problem to get the keys and...oh no! you hear...[wfak][paragraph break]";
-	say "A PHT! Suddenly three hogs, all Rand and Leo's size, block your way. One just up and takes your popgun, smashes it, laughs, and goes to guard the keys. What to do?";
+	say "A PHT! Suddenly three hogs, all Rand and Leo's size, block your way. One just up and takes your popgun, smashes it, laughs, and even rips off your star and throws it into Harm's Marsh. It then goes to guard the keys, the big jerk. What to do?";
 	now hogs are in Phat Path;
+	now decorative star is in lalaland;
 	now popgun is in lalaland;
 
 a-text of hogs is "RYRR". b-text of hogs is "RGRR". parse-text of hogs is "x[sp]o[sp]x[sp]x". hogs are cheat-spoilable.
@@ -15689,6 +15726,11 @@ instead of eating or chewing gum:
 	say "Seriously. It's tough to program and chew gum at the same time.[paragraph break]No, I didn't mean it that way! I meant, the noise from your gum chewing would be distracting, with all that deep thinking you would have to do."
 
 the mug is a container.
+
+after printing the name of the mug while taking inventory:
+	if fizzy cola is in mug:
+		say " (full of fizzy cola)";
+	continue the action;
 
 description of mug is "Beneath text ('CPU CUP' over a UPC symbol) is a message explaining it slowly refills whatever beverage you put in there, but only very slowly."
 
@@ -17716,7 +17758,7 @@ the paler pearl is an undesc. description is "It's a nice pearl but too small to
 the general gleaner is a reflexive thing. description is "[if gleaner is reflexed]You see a map of all the paths in the Horned Hedron. They twist around a lot, and once you re-angle, it dilates details so you can see the way to get to...the Tenfold Teflon'd Den Loft (avec evac-cave,) with even a separate pest area on the side[oy-can-win][otherwise]You hope to have peered deeper for a vision, but it's too small. All you can make out in the morbid dim orb is [ho-he] and the words GENERAL GLEANER, though if you look closely you may be able to read some red writing--the artist's name, too[end if]."
 
 after printing the name of the general gleaner while taking inventory:
-	say " ([if gleaner is reflexed]neat but small[else]enlarged[end if])";
+	say " ([if gleaner is reflexed]enlarged[else]neat but small[end if])";
 	continue the action;
 
 check examining gleaner when player is in loft:
@@ -20110,7 +20152,7 @@ after scaning (this is the tell us about x in parse mode rule) :
 		ital-say "x means a consonant, as nothing in this game becomes anything with an x in it, and the dash means a vowel.";
 
 before scaning a clue-used thing:
-	say "The settler emits a BEEEOOOP as if to say there's no need to do any more, there." 
+	say "You read what the settler says--and you realize you already took care of something else like [the noun]." instead;
 	
 before scaning a reflexed thing:
 	if noun is not dialer and noun is not bench:
@@ -20657,6 +20699,9 @@ to decide whether the action is procedural: [aip]
 	if dropping, yes;
 	if looking, yes;
 	if objasking about, yes;
+	if taking inventory, yes;
+	if swearing obscenely, yes;
+	if swearing mildly, yes;
 	if listening, yes;
 	no;
 
@@ -22892,6 +22937,9 @@ after printing the name of the stapler while taking inventory:
 		say " (empty)";
 
 before listing contents while taking inventory: group hintpastries together
+
+after printing the name of the mug while taking inventory: omit contents in listing;
+after printing the name of the popgun while taking inventory: omit contents in listing;
 
 instead of taking inventory:
 	if mrlp is troves:
@@ -27324,6 +27372,7 @@ carry out tsing:
 	now player has the super purse;
 	now player has the letters settler;
 	now player has the pedanto-notepad;
+	now player has the gird grid;
 	now manor is solved;
 	say "I gave you the purse, settler, and notepad.";
 	the rule succeeds;

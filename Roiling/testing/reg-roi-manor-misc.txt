@@ -558,3 +558,23 @@ The paperwall is unmoved. Maybe the stuff that came from it  could help you more
 
 >wall
 The paperwall is unmoved. Maybe the stuff that came from it  could help you more, here.
+
+####test the Gird Grid
+
+>x 1
+The Poison Stripe surrounding the Same Mesa has caused people there to lose all sense of direction, physically and mentally. If one person could escape, that would change. The Oopsin' Priest may be able to help you.
+
+>x 2
+Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order.
+
+>x 3
+There is rumor of a Hacks' Shack immune to Elvira's SHATTER-THREATS legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks' Shack, you may feel a sense of normality that gets you back to how things were before Elvira.
+
+>x 4
+A seashore seahorse mentioned a seaside dis-ease you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it.
+
+>x 5
+The Bland Sad Badlands are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. Castle Apcur, the Curst Palace, lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow...
+
+>x 6
+Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!

@@ -35,7 +35,7 @@ The parser had trouble understanding that (multi-word) command. While it's possi
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
 
 >wave pad
-I understood the first word, but it can just stand on its own as a verb. If you were trying to do something tricky with it, you shouldn't need to. So just "wave" should work.
+I understood the first word, but you may have thrown on too many words. So just "wave" should work.
 
 * two-of-threes
 
