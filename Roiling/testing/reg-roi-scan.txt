@@ -1468,7 +1468,7 @@ Your score has just gone up by one point
 >score
 Oyster (39/39)
 
-* _towers-seeds-2-5
+* towers-seeds-2-5
 
 >ts
 >gonear trefoil
@@ -2140,7 +2140,7 @@ Towers (46/46)
 
 #### bug with GO TO DUCK printing the wrong error but only if I skip the Trefoil. Is there any way...?
 
-* _otters-all-seeds
+* otters-all-seeds
 
 >a5
 >in
@@ -3042,7 +3042,7 @@ Your settler registers ????R.
 >n
 You Did Great
 
-* _big-go
+* big-go
 
 >{include} _manor
 
@@ -3089,7 +3089,7 @@ Rustic Citrus
 >in
 >{include} _others
 
-* _summarize
+* summarize
 
 >purloin passport
 >gonear gates stage
@@ -3098,44 +3098,44 @@ Rustic Citrus
 >n
 >missed
 
-* _only-manor
+* only-manor
 
 >{include} _manor
 
-* _only-stores
+* only-stores
 
 >ts
 >{include} _stores
 
-* _only-routes
+* only-routes
 
 >ts
 >routes
 >in
 >{include} _routes
 
-* _only-troves
+* only-troves
 
 >ts
 >troves
 >in
 >{include} _troves
 
-* _only-presto
+* only-presto
 
 >ts
 >presto
 >in
 >{include} _presto
 
-* _only-oyster
+* only-oyster
 
 >ts
 >oyster
 >in
 >{include} _oyster
 
-* _only-towers
+* only-towers
 
 >seed 1
 >ts
@@ -3143,7 +3143,7 @@ Rustic Citrus
 >in
 >{include} _towers
 
-* _only-otters
+* only-otters
 
 >seed 1
 >a5

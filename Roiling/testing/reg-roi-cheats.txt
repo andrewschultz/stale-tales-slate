@@ -11,7 +11,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _routes-cheat-thru
+* routes-cheat-thru
 
 >ts
 >routes
@@ -90,7 +90,7 @@ need to be ALONG.
 
 Strip of Profits
 
-* _troves-cheat-thru
+* troves-cheat-thru
 
 >ts
 >troves
@@ -137,7 +137,7 @@ In particular, you feel the need to LAST right now.
 >last
 /In particular, you feel the need to (RESIGN|DECIDE) right now.
 
-* _presto-cheat-thru
+* presto-cheat-thru
 
 >ts
 >presto
@@ -554,7 +554,7 @@ You spill the pills and hook yourself on the dialer trying to catch them. You wi
 
 --instead of using the pills, you could've tried to REDIAL the dialer.
 
-* _towers-cheat-thru
+* towers-cheat-thru
 
 >ts
 >towers
@@ -800,7 +800,7 @@ You have a good gaze, and you know what to do and say and think. Gotta be GREEDY
 [NOTE: you already xrayed this, so you're just remembering what it was...]
 You remember you could still think DINGY.
 
-* _otters-cheat-thru
+* otters-cheat-thru
 
 >au 1
 >seed 1
@@ -956,7 +956,7 @@ As you gaze into the cinders, they blow away, leaving you feeling you can just P
 
 >play whistle
 
-* _others-cheat-thru
+* others-cheat-thru
 
 >au 1
 >rove over
@@ -1134,7 +1134,7 @@ Go north to win!
 
 You Did Great
 
-* _others-scape-space
+* others-scape-space
 
 >au 1
 >rove over

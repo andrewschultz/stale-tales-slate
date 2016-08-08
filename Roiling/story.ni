@@ -33,6 +33,8 @@ DMT = dome tables, text from Demo Dome section
 
 VRT = VOLUME RANDOM TEXT BLURB TABLES has the random text, though it's now in the new file.
 
+TRIX=what I think are nice tricks that may be somewhere near the back of the Inform IDE documentation
+
 Volumes are divided by region for the most part.
 ]
 
@@ -2112,8 +2114,8 @@ ingrates	"[one of]They swat imaginary red ire-gnats as they brush you off[or]You
 pester'n serpent	"[serp-say]."
 alarming grailman	"'You do find me alarming, don't you? I always give 110%. No-one passes Liam Garn!'"
 bonker	"You try to chat but feel like a, er, knob."
-Lois the Hostile	"She complains about something irrelevant to what you asked. Hostile!"
-Hostile-Is-He Lot	"They complain about something irrelevant to what you asked. Hostile!"
+Lois the Hostile	"She complains[hostile-red]!"
+Hostile-Is-He Lot	"They complain[hostile-red]!"
 Atheists	"They start logic-bashing, when one of the junior atheists tries to make a point. [one of]'[one of]Eh...I[or]I...eh[in random order]...stats why God can't exist.' [or]'Is theta's...'[or]'This tea's...'[or]'Ah, test is...' [or]He says they should sell atheist gear like ties, hats. [or]St. Tiesha was, apparently, very nasty. [in random order]The atheist turns red, wondering if they had a right to speak up."
 Andres	"[war-duh]"
 Andrew	"[war-duh]"
@@ -2173,6 +2175,9 @@ Art Erd	"[he-she-c] mumbles 'er, drat' and something about how money is very, ve
 Dr Tera	"[he-she-c] mumbles 'er, drat' and something about how money is very, very nice."
 arid den	"The automated response system you can't see keeps croaking 'Nerd-Aid...Nerd-Aid...'"
 passport	"Try using its features instead."
+
+to say hostile-red:
+	say " about something irrelevant to what you asked and sees red: [one of]the soil[or]the oils[or]St. Helio[in random order]. Hostile"
 
 to say boat-works:
 	say "[if kid has gizmo]could make a bot boat here[else]could see if that boat works[end if]";
@@ -3219,7 +3224,7 @@ before quipping when current quip is bye-Elmo-quip (this is the Elmo pulls you b
 		say "Hm, maybe Elmo has something useful to say. Skip to that part of the conversation?";
 		if the player direct-consents:
 			say "Elmo notices your haste and nods. 'Okay, first things first, I think I know where you need to go.'";
-			enact bye-elmo-quip; [?? need a whole lot more here]
+			enact bye-elmo-quip;
 			disable the interr-quip quip;
 			disable the orange-dunno-quip quip;
 			disable the orange-know-quip quip;
@@ -11160,14 +11165,11 @@ definition: a thing (called candi) is bluable:
 	if candi is reflexed, no;
 	if candi is ghostly, no;
 	if candi is uncluing, no;
-	if player is in same mesa: [routes specific]
-		if candi is dingy dwelling or candi is grubby restaurant, no;
-	if candi is warning sign and seed pit is reflexed, no;
+	if candi is clue-used, no;
 	if player is in pallid: [troves specific]
-		if diapers are in lalaland and candi is sad pier, no;
-		if candi is rubbish story, decide no;
+		if candi is rubbish story, decide no; [this gets hidden]
 	if player is in econ cone:
-		if rivets are reflexive and candi is prai, no;
+		if rivets are reflexive and candi is prai, no; [otherwise we double-print]
 	if candi is tunes, no; [oyster specific]
 	if player is in scum ant sanctum and candi is ant, yes;
 	if candi is haunter and player is in anger range and candi is off-stage, decide no; [visibility issues here. We "see" the haunter but can't see it with bluables]
@@ -13225,7 +13227,7 @@ instead of eating mushrooms:
 
 the seed pit is reflexive scenery in Idle Deli. "[if mushrooms are off-stage]It's ugly and moldy but you find yourself thinking, if I had just one reason to go in there, against any warnings...[otherwise]You got through okay once, but you don't want to know what might sit deep in there.[end if]"
 
-after fliptoing seed pit:
+after fliptoing mushrooms:
 	now warning sign is clue-used;
 	continue the action;
 
@@ -13728,7 +13730,7 @@ understand "broomed" as a mistake ("You are not rich and consequential enough to
 after fliptoing diapers:
 	now printed name of Pallid Li'l Pad is "Boredom Bedroom";
 	now ltb is in Pallid Li'l Pad;
-	now sad pier is uncluing;
+	now sad pier is clue-used;
 	continue the action;
 
 chapter ltb
@@ -14032,7 +14034,7 @@ the noise is vanishing scenery in FiefCo Office. "It's noise from the person you
 a-text of noise is "YRRYRY". b-text of noise is "YRRYRY". parse-text of noise is "-[sp]x[sp]x[sp]-[sp]x[sp]-".
 
 after fliptoing noise:
-	now tan ivy vanity is uncluing;
+	now tan ivy vanity is clue-used;
 	continue the action;
 
 instead of doing something with the noise:
@@ -15054,9 +15056,8 @@ instead of doing something with camo-coma:
 The PG-on-up popgun is a container in Marines Seminar.
 
 after printing the name of the popgun while taking inventory:
-	if dart is in popgun:
-		say " (loaded with the dart)";
-	continue the action;
+	say " ([if dart is in popgun]loaded with the dart[else]unloaded[end if])";
+	omit contents in listing;
 
 understand "oppugn [text]" and "oppugn" as a mistake ("You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.") when popgun is visible.
 
@@ -15683,7 +15684,7 @@ this is the shack-south rule:
 			say "That yak. Maybe you could release it from its yoke.";
 		else:
 			say "That drab yoke. What could it become?";
-	the rule succeeds; [?? drab yoke and keyboard -- pin player down more]
+	the rule succeeds;
 
 to say treas-west:
 	if austerer is not visited:
@@ -15728,8 +15729,8 @@ instead of eating or chewing gum:
 the mug is a container.
 
 after printing the name of the mug while taking inventory:
-	if fizzy cola is in mug:
-		say " (full of fizzy cola)";
+	say " ([if fizzy cola is in mug]full of fizzy cola[else]empty[end if])";
+	omit contents in listing; [trix]
 	continue the action;
 
 description of mug is "Beneath text ('CPU CUP' over a UPC symbol) is a message explaining it slowly refills whatever beverage you put in there, but only very slowly."
@@ -15863,7 +15864,7 @@ does the player mean doing something with the hard drive: it is unlikely.
 
 description of hard drive is "It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clunky square disks. It has a small blue button and a small orange button, as well as a golden dongle you don't want to mess with."
 
-The small blue button is part of the hard drive. understand "reboot/ button" as small blue button.
+The small blue button is part of the hard drive. understand "reboot/ button" as small blue button. it is flippable.
 
 The small orange button is part of the hard drive.
 
@@ -20153,7 +20154,7 @@ after scaning (this is the tell us about x in parse mode rule) :
 
 before scaning a clue-used thing:
 	say "You read what the settler says--and you realize you already took care of something else like [the noun]." instead;
-	
+
 before scaning a reflexed thing:
 	if noun is not dialer and noun is not bench:
 		say "The settler emits a BEEEOOOP as if to say there's no need to do any more, there." instead;
@@ -22938,9 +22939,6 @@ after printing the name of the stapler while taking inventory:
 
 before listing contents while taking inventory: group hintpastries together
 
-after printing the name of the mug while taking inventory: omit contents in listing;
-after printing the name of the popgun while taking inventory: omit contents in listing;
-
 instead of taking inventory:
 	if mrlp is troves:
 		if truffle is off-stage and purse-stolen is false:
@@ -23378,7 +23376,7 @@ prompt	response	enabled
 "Strong will? Still wrong. At bay, ya bat."	strong-quip	1
 "Go bald, old bag!"	bald-quip	0
 "Sinister Insister. Hypno-phony. Reposed? Deposer."	sinister-quip	0
-"Scourge-curse, go! (yeah, yeah, get on with it)"	final-quip	1
+"Plot is spoilt! Scourge-curse, go! (yeah, yeah, get on with it)"	final-quip	1
 
 chapter hydra
 
@@ -29205,11 +29203,15 @@ to say list-of-randos:
 
 chapter showtabing
 
+[ * showtab shows the random tables we are choosing ]
+
 showtabing is an action out of world.
 
 understand the command "showtab" as something new.
 
 understand "showtab" as showtabing.
+understand "showtaby" as showtabing when showtabname is false.
+understand "showtabn" as showtabing when showtabname is true.
 
 carry out showtabing:
 	now showtabname is whether or not showtabname is false;
@@ -29217,8 +29219,6 @@ carry out showtabing:
 	the rule succeeds;
 
 volume spare ideas
-
-[idea for punting stuff over to cut code down]
 
 [when play begins:
 	let temptext be indexed text;

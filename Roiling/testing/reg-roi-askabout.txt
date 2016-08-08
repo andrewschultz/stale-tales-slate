@@ -464,7 +464,7 @@ Taking away a max point.
 >ask tom alvez about matzo lev
 "Oh! You met him? I hope he helped you a bit. He told me about the weird scanner you have."
 
-* _fake-end
+* fake-end
 
 >n
 
@@ -1769,7 +1769,7 @@ Your score has just gone up by one point.
 >n
 You Did Great
 
-* _current_focus
+* current_focus
 #>{include} _only-manor
 #>{include} _only-routes
 #>{include} _only-troves
@@ -1781,7 +1781,7 @@ You Did Great
 #>undo
 #>{include} _only-oyster
 
-* _big-go
+* big-go
 
 >au 1
 
@@ -1836,7 +1836,7 @@ Rustic Citrus
 
 >{include} _manor
 
-* _only-stores
+* only-stores
 
 >gonear strip
 >{include} _stores

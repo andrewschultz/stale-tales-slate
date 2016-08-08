@@ -212,6 +212,7 @@ sub sortTheTable
 	$num = () = $a =~ /\"/gi;
 	if (($num % 2) || (!$num)) { $quoteWarn .= "  -- $thisTable: $a\n"; }
   }
+  if ($badError) { print "TEST RESULTS:$short tables bad fail,1,0,0,0,$badError\n"; die; } 
   if ($verbose) { printf("%2d: Sorting $thisTable, " . ($#ary+1) . " total elements.\n", $count); }
   if ($#ary < 23)
   { print "********UH OH, THERE ARE WAY TOO FEW in $thisTable, $#ary********\n"; }

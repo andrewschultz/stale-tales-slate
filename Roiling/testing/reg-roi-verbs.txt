@@ -9,7 +9,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _general-verbs-synonyms
+* general-verbs-synonyms
 
 you may wish to type ABOUT or VERBS to see information about the game and what words work best.
 
@@ -248,7 +248,7 @@ You need something to staple with.
 >staple me
 That doesn't need stapling.
 
-* _demo_dome-verbs-synonyms
+* demo_dome-verbs-synonyms
 
 >demo dome mode
 
@@ -1819,7 +1819,7 @@ You try to drop a hint for the parrot to give you the whistle, but he croaks for
 
 ###############################others-y
 
-* _roving
+* roving
 
 >rove over
 >others
@@ -1923,7 +1923,7 @@ The Admit-Us Stadium stands behind the gate, a hubbub still indicating that some
 >blow me
 You don't really want an STD that leads to DTs.
 
-* _disable-hints
+* disable-hints
 
 >au -1
 >z
@@ -1979,7 +1979,7 @@ You've already shut hints down completely.
 >nothin
 You've already shut down hints for this saved game.
 
-* _whole-enchilada
+* whole-enchilada
 
 >{include} _manor-verbs-synonyms
 >{include} _stores-verbs-synonyms
@@ -1991,35 +1991,35 @@ You've already shut down hints for this saved game.
 >{include} _otters-verbs-synonyms
 >{include} _others-verbs-synonyms
 
-* _manor-only
+* manor-only
 
 >{include} _manor-verbs-synonyms
 
-* _stores-only
+* stores-only
 
 >ts
 >au 1
 >{include} _stores-verbs-synonyms
 
-* _routes-only
+* routes-only
 
 >ts
 >au 1
 >{include} _routes-verbs-synonyms
 
-* _troves-only
+* troves-only
 
 >ts
 >au 1
 >{include} _troves-verbs-synonyms
 
-* _presto-only
+* presto-only
 
 >ts
 >au 1
 >{include} _presto-verbs-synonyms
 
-* _oyster-only
+* oyster-only
 
 >ts
 >au 1
@@ -2031,13 +2031,13 @@ You've already shut down hints for this saved game.
 >au 1
 >{include} _towers-verbs-synonyms
 
-* _otters-only
+* otters-only
 
 >a5
 >au 1
 >{include} _otters-verbs-synonyms
 
-* _others-only
+* others-only
 
 >ts
 >au 1

@@ -1278,7 +1278,7 @@ WTF FTW
 >play whistle
 Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
 
-* _otters-NSSN
+* otters-NSSN
 
 >posf
 
@@ -1322,7 +1322,7 @@ Score in a scenario: 9 out of 29 total points in the current region, Otters. Low
 >score
 Score in a scenario: 10 out of 29 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 29.
 
-* _otters-SNNS
+* otters-SNNS
 
 >posf
 
@@ -1364,7 +1364,7 @@ Score in a scenario: 9 out of 29 total points in the current region, Otters. Low
 >score
 Score in a scenario: 10 out of 29 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 29.
 
-* _otters-SSNN
+* otters-SSNN
 
 >posf
 
@@ -1646,7 +1646,7 @@ Score in a scenario: 41 out of 41 total points in the current region, Others. Yo
 
 You Did Great
 
-* _big-go
+* big-go
 
 >{include} _manor
 
@@ -1692,7 +1692,7 @@ Bleary Barley
 Rustic Citrus
 >{include} _others
 
-* _summarize
+* summarize
 
 >purloin passport
 >gonear gates stage
@@ -1701,37 +1701,37 @@ Rustic Citrus
 >n
 >missed
 
-* _only-manor
+* only-manor
 
 >{include} _manor
 
-* _only-stores
+* only-stores
 
 >ts
 >{include} _stores
 
-* _only-routes
+* only-routes
 
 >ts
 >routes
 >in
 >{include} _routes
 
-* _only-troves
+* only-troves
 
 >ts
 >troves
 >in
 >{include} _troves
 
-* _only-presto
+* only-presto
 
 >ts
 >presto
 >in
 >{include} _presto
 
-* _only-oyster
+* only-oyster
 
 >ts
 >oyster
@@ -1746,14 +1746,14 @@ Rustic Citrus
 >in
 >{include} _towers
 
-* _only-otters
+* only-otters
 
 >seed 1
 >a5
 >in
 >{include} _otters
 
-* _only-others
+* only-others
 
 >gonear rustic citrus
 >{include} _others

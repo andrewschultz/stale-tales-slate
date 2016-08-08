@@ -146,7 +146,7 @@ You see nothing unusual after shaking the settler.
 >posf
 
 >shake settler
-Many things: the scripture picturers, the lairage regalia, the adsorbing signboard, the bench, the worst ad (very blurry) and the bench-end are visible.
+Many things: the scripture picturers, the dingy dwelling (a bit blurry), the lairage regalia, the grubby restaurant (a bit blurry), the adsorbing signboard, the bench, the worst ad (very blurry) and the bench-end are visible.
 
 >inside
 Your score has just gone up by one point
@@ -190,7 +190,7 @@ You see nothing unusual after shaking the settler.
 Your score has just gone up by one point
 
 >shake settler
-Swish, shake, swirl. A few things: the worst ad (very blurry), the giant's elbow and the bench-end are visible.
+A few things: the worst ad (very blurry), the giant's elbow and the bench-end are visible.
 
 >astride
 
@@ -1008,6 +1008,12 @@ A few things: Ed Yerg (very blurry), the welt-proof flowerpot (very blurry) and 
 
 >e
 
+>abstract accu-plaster to limits
+>abstract capsule cart to limits
+
+>shake settler
+Many things: the accu-plaster (a bit blurry), the capsule cart (a bit blurry), the succor crocus (very blurry), the welt-proof flowerpot (very blurry) and the Curst Palace are visible.
+
 >spectacular
 
 * _otters
@@ -1381,7 +1387,7 @@ You see nothing unusual after shaking the settler.
 >n
 You Did Great
 
-* _current_focus
+* current_focus
 #>{include} _only-manor
 #>{include} _only-routes
 #>{include} _only-troves
@@ -1393,7 +1399,8 @@ You Did Great
 #>undo
 #>{include} _only-oyster
 
-* _big-go
+##ALL
+* big-go
 
 >{include} _manor
 >{include} _stores
@@ -1430,7 +1437,7 @@ Your score has just gone up
 Rustic Citrus
 >{include} _others
 
-* _summarize
+* summarize
 
 >purloin passport
 >gonear gates stage
@@ -1441,54 +1448,63 @@ Rustic Citrus
 >undo
 >undo
 
-* _only-manor
+##UNIT
+** _only-manor
 
 >{include} _manor
 
-* _only-stores
+##UNIT
+** _only-stores
 
 >ts
 >{include} _stores
 
-* _only-routes
+##UNIT
+** _only-routes
 
 >gonear same mesa
 >purloin settler
 >{include} _routes
 
-* _only-troves
+##UNIT
+** _only-troves
 
 >gonear rathole
 >purloin settler
 >{include} _troves
 
-* _only-presto
+##UNIT
+** _only-presto
 
 >gonear gyre
 >purloin settler
 >{include} _presto
 
-* only-oyster
+##UNIT
+** _only-oyster
 
 >purloin settler
 >gonear posh hops shop
 >{include} _oyster
 
-* _only-towers
+##UNIT
+** _only-towers
 
 >seed 1
 >gonear trefoil
 >purloin settler
 >{include} _towers
 
-* _only-otters
+##UNIT
+** _only-otters
 
 >seed 1
 >gonear barley
 >purloin settler
 >{include} _otters
 
-* _only-others
+##UNIT
+** _only-others
 
 >gonear rustic citrus
 >purloin settler

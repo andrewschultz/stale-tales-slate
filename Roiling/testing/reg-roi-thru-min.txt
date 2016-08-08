@@ -1059,7 +1059,7 @@ Rustic Citrus
 
 >{include} _manor
 
-* _only-stores
+* only-stores
 
 >gonear strip
 >{include} _stores

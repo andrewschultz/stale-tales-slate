@@ -8,7 +8,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* _quick-chat
+* quick-chat
 
 >au 1
 >chat
@@ -28,7 +28,7 @@ Reclusion Inclosure
 >7
 No mercy, my crone!
 
-* _detail-gunter-chat
+* detail-gunter-chat
 
 >au 1
 >think
@@ -169,7 +169,7 @@ Her Arts Er Trash
 >x her arts
 No. Really. You don't want to read that nonsense again. She always seems to know which way the wind is blowing, then she blames you for it.
 
-* _detail-elmo-chat-gp-first
+* detail-elmo-chat-gp-first
 
 >au 1
 
@@ -564,7 +564,7 @@ That's always a safe one. You say "How 'bout that weather, geez," not realizing 
 >1
 Carven Cavern
 
-* _detail-gretta-and-elvira-chat
+* detail-gretta-and-elvira-chat
 
 >seed 1
 
@@ -735,7 +735,7 @@ You murmur "Umm...urr." [Valid responses range from 1-3. Type REPEAT to re-list 
 
 Strip of Profits
 
-* _detail-gretta-chat-special-case
+* detail-gretta-chat-special-case
 
 >au 1
 >seed 1
