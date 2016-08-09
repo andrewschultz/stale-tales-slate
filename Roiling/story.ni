@@ -23238,7 +23238,7 @@ hydra-known is a truth state that varies.
 check going west in Alcoves (this is the need quick rule):
 	if parrot is in lalaland and raptor is in lalaland:
 		if medals are not reflexed:
-			say "Your medals clink as you go west. Elvira hears them and ambushes you! She touches what you recognize as the Ultimate Mutilate-It Amulet and fires the legendary Phrase Shaper Phaser at you. You think of possible replies, of ways to block her, as you slump to the ground. But you are not fast enough. The last thing you hear as you slump to the ground is Gretta's medals clanking--the ones you never quite used[if medals are prefigured], though you sort of figured how, earlier[end if].";
+			say "Your medals clink as you go west. Elvira hears them and ambushes you! She touches what you recognize as the Ultimate Mutilate-It Amulet and fires the legendary Phrase Shaper Phaser at you. You think of possible replies, of ways to block her, as you slump to the ground. But you are not fast enough. 'Last word: drat! Slow!'[paragraph break]The last thing you hear as you slump to the ground is Gretta's medals clanking--the ones you never quite used[if medals are prefigured], though you sort of figured how, earlier[end if].";
 			get-dead;
 			follow the shutdown rules instead;
 		continue the action;

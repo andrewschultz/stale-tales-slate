@@ -51,7 +51,7 @@ horbert musings	0	1	0
 ########store v
 checklist items	1	1	0
 DIVORCES articles	1	1	-1
-ethics advice	1	1	0
+iffy advice	1	1	0
 gritty dialogue	1	1	1
 non-checklists	2	-1	-1
 posh dialogue	1	1	1

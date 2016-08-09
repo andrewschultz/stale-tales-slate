@@ -384,13 +384,13 @@ open(A, $nudgeFile);
 $inNudgeTable = 0;
 while ($a = <A>)
 {
-  if ($a =~ /^table of nudges/i)
+  if ($a =~ /^table of [a-z ]+ nudges/i)
   {
     $inNudgeTable = 1;
 	<A>;
 	next;
   }
-  if (($inNudgeTable) && ($a !~ /^\"/)) { last; }
+  if (($inNudgeTable) && ($a !~ /^\"/)) { $inNudgeTable = 0; }
   if ($inNudgeTable) { $myLines++; }
 }
 

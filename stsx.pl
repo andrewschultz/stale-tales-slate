@@ -43,7 +43,9 @@ while ($a = <A>)
   if ($a =~ /=shuffling/i) { $stsGame = "Shuffling Around"; }
   if ($currentTable)
   {
+    my @c = split(/\"/, $a);
     if (($a !~ /^\"/) || ($a !~ /[a-z0-9]/i)) { $currentTable = ""; next; }
+	if ($#c > 2) { $badLines .= "$a"; print "WARNING too many quotes in line $thisLine ($#c) table $currentTable: $a\n"; $bail = 1; }
     if (($a =~ /\"/) && ($a !~ /\".*\"/)) { $badLines .= "$a"; print "WARNING need more than one quote line $thisLine table $currentTable: $a\n"; $bail = 1; }
     if ($a =~ /^['`]/) { $badLines .= "$a"; chomp($a); print "WARNING $a not properly quoted, line $thisLine table $currentTable\n"; $bail = 1; }
     if ($a =~ /^[a-z0-9]/i) { $badLines .= "$a"; chomp($a); print "WARNING $a does not start with a quote, line $thisLine table $currentTable\n"; $bail = 1; }
