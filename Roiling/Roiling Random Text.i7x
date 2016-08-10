@@ -1025,7 +1025,7 @@ blurb
 "Long Life Fill? Gone!"
 "A Mistake Takes Aim!"
 "Mm, uber-bummer!"
-"Mount a World? Mortal Wound"
+"Mount a World? Mortal Wound!"
 "Narrow Bed. Barrow-Den."
 "Now Dealt a Let-Down!"
 "Nuts, I go sign out!"
@@ -1941,6 +1941,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Ace Finn's Finances"	false
 "Ace Reed's Decrease-Care Seed"	false
 "Acne irks? Skin Care!"	true
+"Acne? LOL, One Call: Cal Leon!"	true
 "Acne-Plus Clean Ups"	false
 "Adeline's Sane Deli"	false
 "Adless Slade's"	false
@@ -2782,6 +2783,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Kindfort's Soft Drink"	false
 "Kindness Inn Desks"	false
 "King Fear-Freak Gin"	false
+"Kip's Cafe: Safe Pick!"	false
 "Kishka Khakis"	false
 "Kissler's: Risk Less!"	true
 "Kit Sews Weskits!"	true
@@ -3847,7 +3849,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Yucatan Cay Tuna"	false
 "Yukster Turkeys"	false
 "Zambino's Zambonis"	false
-"Zanghi Hazing"	false
+"Zanghi Hazing"	false]
 
 table of bad rappers [xxm2]
 blurb
@@ -4515,6 +4517,7 @@ blurb	fave
 "To Bull: Easy, Absolutely, by a Sellout[r], by [if player is male]Solly Taube[else]Tula Boyles[end if]"	false
 "Upstream Into Permutations Use: Important[r], by [if player is male]Rupe Mattison[else]Simona Pruett[end if]"	true
 "Very Well Done? YELLOW NERVED[r], by [if player is male]Dewey Norvell[else]Evelyn Dowler[end if]"	false
+"Visionary? Yo, VAIN, Sir[r], by Ivory Sina"	false
 "Whoa, Heart, What a Hero[r], by Tarah Howe"	true
 "A Wit, Hedged: Dead Weight[r], by Dwight Eade"	false
 "Word Game: Go Ward [']Em[r], by [if player is male]Drew Goma[else]Marge Dow[end if]"	true
@@ -6528,7 +6531,6 @@ blurb
 "Pepe Wu's Wee-Pups Sweep-Up"
 "Perraut's Raptures"
 "Persevere, Rep. Reeves"
-"Pink Miss Simpkins"
 "Pip the Hip Pet"
 "Pip's Gig: Gip Pigs"
 "Pip's the Hippest"
@@ -8658,7 +8660,6 @@ blurb
 "Diva Dina Davidian"
 "Diva Earl Delariva"
 "Diva Ervin Vandivier"
-"Diva Eryn Vineyard"
 "Diva Eryn Vineyard" []
 "Diva Gia Gavidia"
 "Diva Lea Deavila"
@@ -8832,6 +8833,7 @@ blurb
 "I-So-Hep Sophie" []
 "Ian 'Dish' Nishida"
 "Ida 'Chum' Michaud"
+"Idle-Sob Seibold"
 "Idol Ann Landino"
 "Idol Anna Andolina"
 "Idol Arlen Nardiello"
@@ -10362,7 +10364,6 @@ blurb	prio
 "Bleat, Mr. Lambert[r], by Tal Brem"
 "Blemished Limbs, Heed[r], by Debi Helms"
 "A Blend-Den Lab[r], by Ed Blan"
-"A Blend-Den Lab[r], by Ed Blan"
 "Blighter Girl Beth Hiltberg[r], by Helg-Brit Gilbreth"
 "Blocked Old Beck[r], by Ced Kolb"
 "Blog Friend, Blind Gofer[r], by Ford Ebling"
@@ -11192,7 +11193,6 @@ blurb	prio
 "Duper-Oath Up the Road: Proud Hate[r], by [if player is male]Pedro Haut[else]Hope Dutra[end if]" []
 "A Duty? Ay, Tut, Ya Dud[r], by Tad Yu"
 "Duty: Solve, Study, Love[r], by Stuey Vold"
-"A Dweeb Be Awed[r], by Bea Dew & Deb Wea"
 "A Dweeb Be Awed[r], by Bea Dew & Deb Wea"
 "E-Czar Craze[r], by Z. C. Rea"
 "E-Divas I Saved[r], by Sad Evi Davies"
@@ -12420,7 +12420,6 @@ blurb	prio
 "If Felon, Offline[r], by Flo Fine"
 "If Lame, Fail [']Em[r], by Mia Elf"
 "If Lost in Tinfoils[r], by [toti] Fils"
-"If Met of Time Off[r], by Tom Fife"
 "If No Info[r], by Fifi Noon"
 "If Starved, Drive Fast[r], by [if player is male]Dave First[else]Frida Vest[end if]"
 "If Taken at Knife[r], by Ike Fant"
@@ -12913,7 +12912,6 @@ blurb	prio
 "Lot I'm In: No Limit[r], by Tim Olin"
 "A Lot to Al[r], by Lala Otto" []
 "Lots Die to Slide[r], by Del Otis"
-"Lots Die to Slide[r], by Del Otis"
 "Lots View Two Evils Wits Love[r], by Tevis Low"
 "Lotta Total Ol['] Tat[r], by Al Ott"
 "Lou, Be as Lo-Abuse Soul [a-b][r], by Beau Sol"
@@ -13138,7 +13136,6 @@ blurb	prio
 "Mildest, Mist-Led[r], by Del Smit"
 "Milk Cries: Limericks[r], by Slick Emir Rick Miles"
 "Milk for Rim Folk[r], by Kim Flor"
-"Milk for Rim Folk[r], by Kim Flor"
 "Milk, Honey, Elk, Hominy, Homely Kin[r], by [if player is male]Milo Hynek[else]Emily Kohn[end if]"
 "Milk of Mo['] Filk[r], by Flo Kim"
 "Milk, Soup: OK, I Slump[r], by [if player is male]Kip Solum[else]Lois Kump[end if]"
@@ -13327,7 +13324,6 @@ blurb	prio
 "My Other Home Try[r], by Tom Hyre"
 "My Papers, Ms. Yapper[r], by Myra Epps"
 "My Peace Came, Yep[r], by Macy Pee"
-"My Plague: Gamely Up, Lumpy Age[r], by [if player is male]Guy Maple[else]Meg Pauly[end if]"
 "My Plague: Gamely Up, Lumpy Age[r], by [if player is male]Guy Maple[else]Meg Pauly[end if]"
 "My Range, Grey Man[r], by Meg Ryan"
 "My Rant: Try, Man![r] by Tamryn Rymant"
@@ -14588,6 +14584,7 @@ blurb	prio
 "Root Canal: a Cool Rant[r], by [if player is male]Aaron Colt[else]Cora Alton[end if]" []
 "Rope This Tire Shop[r], by Si Thorpe" []
 "Roped, Pedro Pored[r], by Red Rod Pope" []
+"The Ropes Stop Here[r], by Hope Rest"
 "The Rose She Tore[r], by Ester Ho" []
 "Rose's Zone: Ones, Zeros[r], by Zoro Essen"
 "Rosie's Osiers Rise So[r], by Rossie O'Reiss"
@@ -15757,6 +15754,7 @@ blurb	prio
 "To Stink As Tato Skins[r], by [if player is male]Kit Santos[else]Isa Knotts[end if]"
 "To Stories: Tortoises Resist Too[r], by [if player is male]Toto Reiss[else]Rossie Ott[end if]"
 "To Such a Scout: Ah, Cash Out![r] by Scot Hua"
+"To Surf for Stu[r], by Russ-Otto Ruff"
 "To Surlier Or Lustier[r], by Tori Luers"
 "To Survey Your Vest[r], by Rus Tovey"
 "To Swing on Twigs[r], by [if player is male]Tig Snow[else]Gwin Tso[end if]" []
@@ -15908,6 +15906,7 @@ blurb	prio
 "Turgid Tea, Gut Tirade, Gratitude[r], by Ida Gutter"
 "Turing's Grunt is Rusting[r], by Stu Ring"
 "Turn, Heal, Lutheran[r], by [if player is male]Neal Hurt[else]Ruth Lane[end if]"
+"The Turn Hurt Ten[r], by Tre Hunt"
 "Turn There: the Return[r], by Trent Ruhe"
 "A Turtle's Late Rust[r], by [if player is male]Al Sutter[else]Lu Streat[end if]"
 "Tut, Air My Maturity?[r], by Yuri Matt"
@@ -17691,7 +17690,6 @@ blurb
 "Rev. Pa, a Perv."
 "Rev. Pop's Perv Ops."
 "Rex's Ex Xerxes."
-"Rex's Ex Xerxes."
 "Rexie's Sexier Ere Six."
 "Ric Glover's Cover Girls."
 "Riding, I Grind." []
@@ -18198,7 +18196,6 @@ blurb
 "Riskiest Kirstie's"
 "Risque Squire"
 "Roof Sty for Toys"
-"Roof Sty for Toys"
 "Rox Estes Sex Store"
 "RudeCorp's Producers."
 "Salty Tyla's"
@@ -18264,7 +18261,6 @@ blurb
 "'Be a dork--or baked!' / 'OK, Debra.'"
 "'BE! Chase cheeba's beaches!'"
 "'Be stoned: bested? No!'"
-"'Beg-a-thon? Bong heat!'"
 "'Beg-a-thon? Bong heat!'"
 "A belch. A 'Blech.'"
 "'Big Deals Ads? Bilge!'"
@@ -18438,7 +18434,6 @@ blurb
 "'Follow truth to full worth.'"
 "'Go. Do Good.'"
 "'Go! Our cause, courageous.'"
-"'Go! Serenity! Generosity!'"
 "'Go! Serenity! Generosity!'"
 "'Go, tread, do great.'"
 "'Go up the gut. Hope.'"
@@ -18848,7 +18843,6 @@ blurb
 "I'D STROKE?! DORKIEST! DO STRIKE" []
 "ICY MALT: A CALAMITY"
 "IDLE, EH? TV? THE DEVIL"
-"IDLINGS GILD SIN"
 "IDLINGS GILD SIN"
 "IDOLATRY DAILY = ROT"
 "IF BINGE, BIG FINE"
@@ -21207,7 +21201,7 @@ blurb
 "Dog Ed Dodge."
 "Don't Aid Ian Todd."
 "Double-cross bold sources."
-"Draw Al Alward"
+"Draw Al Alward."
 "Draw Allen Wallander."
 "Draw Bell Bradwell."
 "Draw Bo Boward."
@@ -23752,10 +23746,9 @@ blurb
 "'Pry, lie, Ripley? I reply!'"
 "'PSAs? Pass!'"
 "'Puerile? Pure lie!'"
-"'Pull down. LOL u pwnd!"
+"'Pull down. LOL u pwnd!'"
 "'Pummel! Lump [']em!' / '[']Elp! Mum!'"
 "'Pun? Gah! Hang up.'"
-"'Punch mo[']?' / 'No!' / 'Chump.'"
 "'Pup, war! Wrap up...'"
 "'Purpose? Sure, pop!'"
 "'Put me up, Met!' / 'Um, pet...'"
@@ -23793,7 +23786,6 @@ blurb
 "'Ride, Tim!' / 'I'm tired.' / 'Timider?'" []
 "'Rip Me, Mr. Pie? I'm pre-prime!'" []
 "'Rise, [d-t]!' / 'So tired!'" []
-"'Risk two. It works.'"
 "'Risk two. It WORKS.'" []
 "'Roam, bud!' / 'U mad, bro?'"
 "'Rob YOU? OUR boy? Oo, bury!'"
@@ -24453,7 +24445,6 @@ blurb
 "'Boat went. Won't be at...'"
 "'Bob, I...' / 'Time to imbibe!'"
 "'Bodacious cab? ODIOUS!'"
-"'Bodacious cab? ODIOUS!'"
 "'Bonfire? / Fine, bro!'" []
 "'Boot my TOM? Boy!'"
 "'Boots? My. Tomboys!'" []
@@ -24512,7 +24503,6 @@ blurb
 "'Chat Chez Chaz, Chet!'"
 "'Chavs, Chas?' / 'V.'"
 "'Chaz!' / 'Zach!'"
-"'Cheap suits? Up, chastise!'"
 "'Cheap suits? Up, chastise!'"
 "'Cheat, use the sauce!' / 'He's acute.'" []
 "'Cheese sechee? [']S... eeech.'"
@@ -24961,7 +24951,6 @@ blurb
 "'Is CPR PC, sir?'" []
 "'Is he fat? Eat fish!'" []
 "'Is Tank Atkins a Skint?'"
-"'Is Ted deist?'"
 "'Is Ted Deist?'"
 "'Is this on?' / 'To hissin[']!'"
 "'Is Wes Weiss...?' / 'Ew, sis!'"
@@ -25773,7 +25762,6 @@ blurb
 "Abe 'Legs' Beagles"
 "Abe 'Nah' Bahena"
 "Abel 'Ranch' Labranche"
-"Abel 'Ranch' Labranche"
 "Aborter Roberta" []
 "Abrupt Pub-Rat Pa Burt"
 "Abused Bad Sue"
@@ -25950,7 +25938,6 @@ blurb
 "Beastly Stabley" []
 "Beastly Ty Bales" []
 "Beau 'Ranch' Brancheau"
-"Becki 'Ranch' Rickenbach"
 "Becki 'Ranch' Rickenbach"
 "Been-Legal Been Ballengee"
 "Beer-Swigs Weissberg"
@@ -26186,8 +26173,6 @@ blurb
 "Chiseler Chris Lee"
 "Chiselled Dechellis"
 "Chortling Clint Groh"
-"Chronic-Chic Ron"
-"Chronic-Chic Ron"
 "Chubster Schubert" []
 "Chun 'Ski' Huckins"
 "Churlish Lush Rich"
@@ -26256,6 +26241,7 @@ blurb
 "Coppery Cy Roper"
 "Cougher Goucher"
 "Cougher Reg Chou" []
+"Coughin['] Gino Cho"
 "Count Arvilla Vaillancourt"
 "Count Berta Betancourt"
 "Count Cain Antonucci"
@@ -26381,7 +26367,6 @@ blurb
 "Dean 'Ski' Deakins"
 "Death Row Drew Otha" []
 "Debbie 'Ranch' Breidenbach"
-"Debbie 'Ranch' Breidenbach"
 "Debonair [if player is male]Ira Boden[else]Robin Ade[end if]" []
 "Decatur Rude Cat" []
 "Decayed Ace Eddy"
@@ -26395,7 +26380,6 @@ blurb
 "Deferrer Ferderer"
 "Defiling Fielding"
 "Del 'Nah' Handel-Dahlen"
-"Del 'Ranch' Chandler"
 "Del 'Ranch' Chandler" []
 "Delaware Earl Wade" []
 "Delayer Eardley"
@@ -26537,7 +26521,6 @@ blurb
 "Doorman Don Mora" []
 "Dorine 'Legs' Delsignore"
 "Doris 'Nah' Hardison" []
-"Doris 'Ranch' Richardson"
 "Doris 'Ranch' Richardson" []
 "Doser-So-Red Erdos"
 "Double-Talk [if player is male]Odell Kubat[else]Bella Dutko[end if]"
@@ -26657,7 +26640,6 @@ blurb
 "Ed 'Legs' Sledge"
 "Ed 'Nah' Haden"
 "Ed 'Ranch' Chenard"
-"Ed 'Ranch' Chenard"
 "Ed 'Ski' Dikes"
 "Ed 'Sneer' Resende" []
 "Edenic Denice"
@@ -26708,7 +26690,6 @@ blurb
 "Erlking Klinger" []
 "Erma 'Legs' Elgersma"
 "Ernie 'Legs' Seelinger"
-"Ernie 'Ranch' Nachreiner"
 "Ernie 'Ranch' Nachreiner"
 "Errant Terran Ratner" []
 "Erratic Art Rice" []
@@ -27206,7 +27187,6 @@ blurb
 "Islander Sindelar" []
 "Isolater Lita Rose"
 "Iva 'Ranch' Chavarin"
-"Iva 'Ranch' Chavarin"
 "Ivana 'Legs' Gavilanes"
 "Ivana 'Plod' Vialpando"
 "Jackhole [if player is male]Joe Chalk[else]Jae Holck[end if]"
@@ -27292,7 +27272,6 @@ blurb
 "Kid Trice Dietrick" []
 "Kid Vanselow Levandowski"
 "Kid Zane Dziekan"
-"Kim 'Ranch' Kirchman"
 "Kim 'Ranch' Kirchman"
 "Kina 'Legs' Keasling"
 "Kinder Kid Ren" []
@@ -27720,7 +27699,6 @@ blurb
 "Mae 'Ranch' Marchena"
 "Maestro Stomaer" []
 "Magan 'Ranch' Mcgranahan"
-"Magan 'Ranch' Mcgranahan"
 "Malefactor [if player is male]Cal Frometa[else]Leoma Craft[end if]"
 "Malicious Lucia Isom"
 "Malicious Musical Io" []
@@ -27738,7 +27716,6 @@ blurb
 "Map Nut Putman"
 "Mar-Soon Mansoor" []
 "Mara 'Ranch' Ramcharan"
-"Maranda 'Ranch' Ramachandran"
 "Maranda 'Ranch' Ramachandran"
 "Marc 'Nah' Marchan"
 "Marge 'Nah' Hagerman" []
@@ -27836,7 +27813,6 @@ blurb
 "Mega Icky Cagy Mike" []
 "Megan 'Nah' Hagemann" []
 "Mei 'Nah' Heiman"
-"Mei 'Ranch' Reichman"
 "Mei 'Ranch' Reichman" []
 "Mel 'Nah' Lehman-Helman" []
 "Mel 'Ski' Mikels-Mikles"
@@ -28160,7 +28136,6 @@ blurb
 "Ornery Ron Rey" []
 "Ostentatious-Toe Toussaint" []
 "Oswald 'Ski' Sadlowski"
-"oughin['] Gino Cho"
 "Outland Lout Dan Daulton" []
 "Over-Literal Leila Trevor"
 "Over-Pitch Petrovich"
@@ -28903,10 +28878,10 @@ blurb
 "SOB Trey Boyster"
 "SOB Ty Ostby"
 "SOB, Well, Slob Lew Bellows" []
+"Sod-Bile Seibold"
 "Softest Fossett"
 "Softie Dan DiStefano" []
 "Softie Ren Firestone" []
-"Sol 'Ranch' Charlson"
 "Sol 'Ranch' Charlson"
 "Son 'Nah' Hanson" []
 "Sona 'Fib' Bonifas"
@@ -29072,7 +29047,6 @@ blurb
 "Sybarite [ta] Byers"
 "Tacky KC Tay" []
 "Tama 'Ski' Aksamit"
-"Tana 'Ranch' Carnathan"
 "Tana 'Ranch' Carnathan"
 "Tank Kant"
 "Tarnished [if player is male]Dean Hirst[else]Enid Stahr[end if]" []
@@ -29357,7 +29331,6 @@ blurb
 "Well Ned Wendell" []
 "Well-to-Do Lewd Tool Leo Woldt"
 "Wendee Weeden" []
-"Wes 'Ranch' Crenshaw"
 "Wes 'Ranch' Crenshaw"
 "West Side Ted Weiss"
 "Whale LaHew"
@@ -32314,7 +32287,6 @@ blurb
 "Nail Down an Old Win[r], by [if player is male]Lon Dwain[else]Diann Low, Dawn Olin & Nona Wild[end if]"
 "Naivete? Lo, Live, Atone, Elevation[r], by [if player is male]Vito Neale[else]Eve Latino[end if]"
 "Nearly Earn, Yen, Rally[r], by Arlyne Larney"
-"Need Wiz, Wizened[r], by Inez Dew"
 "Need Wiz, Wizened[r], by Inez Dew"
 "New Haters: the Answer[r], by Stew Ahern"
 "New Life? Few Line[r], by Ewin Elf" []
@@ -37488,7 +37460,6 @@ blurb
 "'Fantastic faint scat!'" []
 "'Fear nigh? Hang fire!'"
 "'Fear-smit, I'm faster!'"
-"'Fear-smit, I'm faster!'"
 "'Feint, wail--a fine wilt!'" []
 "'Fend! Trot! Don't fret!'"
 "'Final-go loafing?'" []
@@ -37611,7 +37582,6 @@ blurb
 "'Ensure it reunites us entire!'"
 "'Ever solid, I RESOLVED!'" []
 "'Fix-led, I'd flex!'"
-"'Fix-led, I'd flex!'"
 "'Go, man. Cheer more change!'"
 "'Hear from reform, ah!'" []
 "'A hell-proof hope for all!'"
@@ -37651,7 +37621,6 @@ blurb
 "'Abrupter? Up, barter, rapt rube! Perturb a...'"
 "'Ach, super purchase!'"
 "'Add-ons, yet! Ends today!'"
-"'Advertise trades! Vie!'"
 "'Advertise trades! Vie!'"
 "'All deserve deals. Revel!'"
 "'App? Yay!' / 'Pay, pay!'"

@@ -3397,7 +3397,7 @@ blurb
 "'Citin['] of fiction!'"
 "'CleanSoft Conflates lone facts!'"
 "'Cold dark-clad dork!'"
-"The comb mech bot? Botch 'em!'"
+"'The comb mech bot? Botch [']em!'"
 "'Complicated topic calmed. Placid comet.'"
 "A conceders['] crescendo follows a claim nerds'd LIKE to help everyday stupid people." [x]
 "'Coolidge's Logic Odes slice GOOD!'"
@@ -3501,6 +3501,7 @@ blurb
 "'Merry Devon? Myron Dever? Very modern nerdy mover.'"
 "'Microsoft, son? So conformist!'"
 "'Mirth-goals algorithms['] glamor hits!'"
+"'Montrose? Tons More Moron Set!'"
 "More chats. Some chart. Math score. Smart echo." []
 "'More true retro-emu!'"
 "'Morse code demo? SCORE! Some decor!'"
