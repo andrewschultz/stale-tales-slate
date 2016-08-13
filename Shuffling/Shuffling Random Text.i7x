@@ -380,6 +380,7 @@ blurb
 "Elwanda Danelaw"
 "Elwood DeWool"
 "Elwyn Newly"
+"Ely Eyl-Ley"
 "Elyon Olney"
 "Elysa Sealy"
 "Elyse Seely"
@@ -743,6 +744,7 @@ blurb
 "Manolo Looman"
 "Mara Amar-Rama"
 "Marci Maric"
+"Marcia Carami"
 "Marcia Macari"
 "Marcie Cerami"
 "Marcy McRay"
@@ -861,6 +863,7 @@ blurb
 "Neryca Carney"
 "Nestor Rosten-Tornes"
 "Nevria Earvin"
+"Nic Noll-Lincoln"
 "Nicholas Laschino"
 "Nicola Colina"
 "Nicolas Liscano"
@@ -930,6 +933,7 @@ blurb
 "Pattey Pyeatt"
 "Patti Piatt"
 "Paul Lupa"
+"Paulina Laupain"
 "Paulski Pulaski"
 "Pavel Pleva"
 "Pearl LaPre"
@@ -1227,6 +1231,7 @@ blurb
 "Tyrone Torney"
 "Tyson Yonts"
 "Ula Lau"
+"Ulgine LeGuin"
 "Uri Rui"
 "Uriel Lurie"
 "Ursula Sularu"
@@ -1324,6 +1329,7 @@ blurb
 "Bridge of Fried Bog"
 "The Bruin's Brine Huts"
 "Cage-For-Fog Acre"
+"Cape of Po['] Face"
 "Castle of Lost Face"
 "the Chilling Lichling"
 "Chop-Down-Chow Pond"
@@ -1552,6 +1558,7 @@ blurb
 "And trip, darn pit! Dirt nap."
 "Anger the green hat, her agent, then rage."
 "Anti-rot or taint: no trait to train in Tarot."
+"Antipodes as pointed, painted so."
 "Apnea Paean."
 "Apologize? Lo, I zap ego!"
 "Arced Cedar Cadre."
@@ -1718,6 +1725,7 @@ blurb
 "Dope letter. Treetop-led. Teleported!"
 "Dot Plum's old stump must plod."
 "A doter orated to read."
+"Dough, soil, guilds: ooh, I should go."
 "A doughty, tho gaudy, youth. Gad, tough day!"
 "Dour pun round-up: un-proud."
 "Dove hit the void, tho['] I'd've..." [p]
@@ -1888,6 +1896,7 @@ blurb
 "Forefinger reoffering, free of ring."
 "A formed far dome, made for dream of more fad."
 "Foul wind, fluid now! O, wild fun!"
+"Foul winds find us low. Now, fluids."
 "Foulest of Lutes!"
 "Four Years Your Fears."
 "Fraidy Friday!"
@@ -2122,6 +2131,7 @@ blurb
 "Io, Venus! Envious onus, vie!"
 "Ire, MF? Fie, Mr. I'm fer Fermi!"
 "Is he loud? Uh, so idle? Hide, soul!"
+"Is Porky spiky or rosy, Kip?"
 "It fled. I'd felt lifted."
 "It opens to snipe: so inept!"
 "It's a hike. I shake it...shiitake!"
@@ -3143,6 +3153,7 @@ blurb
 "'No greed nor edge! End gore!'"
 "'No, libeler! Rebellion!'"
 "'Northwest Worth-Nets threw TONS!'"
+"'Not wicked. Ticked, now: edict, know!'"
 "'Now bash who bans: show, nab!'"
 "'Now-Org? Wrongo!'" []
 "'Nutso? Not us!'"
@@ -3336,6 +3347,7 @@ blurb
 "'Going up? Ug, no, pig!'"
 "'Gotwin Towing charges poor people the same as us rich people. And yet poor folks still whine!'" [x]
 "'His crops? Oh, crisps!' Rich sops."
+"'I represent enterprise!'"
 "'If a guest fatigues, use a gift.'"
 "Integrant nattering."
 "'It can't be a real toxin. It gives relaxation!'" [x]
@@ -3373,6 +3385,7 @@ blurb
 "Someone decries a reckless clerkess who is lucky to have a job." [x]
 "Someone mentions distrust of those with slanted dentals." [x]
 "'Stoneham-Matheson? Mean host!'"
+"'Talk fancy? Can't. Flaky.'"
 "'Tea stain! In a STATE!'"
 "Their callow white collar lowlier chat. 'Article! Howl! Allow thrice? Wail! Chortle!'"
 "They argue over who has subtler butlers." [x]
@@ -3487,6 +3500,7 @@ blurb
 "'I stop no options. Posit on!'"
 "'I'm lost, Milt.' / 'So?'"
 "'IBM? Punk! Bumpkin!'"
+"'Idea porn, arid peon! Redo? Pain!'"
 "'Ideas, sift. Satisfied!'"
 "'If later I falter a trifle, ret: FAIL!'"
 "'Inconsistent nonscientist!'"
@@ -3626,6 +3640,7 @@ blurb
 "'Ported.' / 'De trop! To derp!'"
 "'Post back, pack-bots.'"
 "Praise, backhanded and sincere, for Link Bro Kilborn." [x]
+"'Prototype? Poor!' / 'Petty.'"
 "'Prudent, nut? Derp.'"
 "'Quadratics? A cad! Squirt!'"
 "A quick stark-fact fast-track." [x]
@@ -3985,6 +4000,7 @@ blurb
 "'A tickle? I TACKLE!'"
 "'Tilt! Bang! Battling!'"
 "'To fault, flat-out, fat lout!'"
+"To rage, toe-rag!"
 "'Too-plain pain tool! Optional? Oi, pal! NOT!'"
 "'Trash ME? Terms? Ha!'"
 "'Tread on a rodent!'"
