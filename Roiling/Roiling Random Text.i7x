@@ -843,6 +843,7 @@ blurb
 "Not playing poignantly."
 "Notes: crud, don't curse!"
 "O, brash abhors!"
+"O, pity to yip!"
 "O, sip on poison!"
 "O, Spiter Riposte!"
 "O, yammer more! May mar [']em, yo!"
@@ -1375,6 +1376,7 @@ blurb
 "A snub's odd. Sounds bad."
 "Too grumpy? Go, mopy rut!"
 "Wilcos? I scowl."
+"Yes, pout, you pest!"
 "Yo, tip: visit positivity!"
 
 table of nonviolence messages [xxg6]
@@ -1626,6 +1628,7 @@ blurb
 "'Odd! I've...voided.'"
 "'Oh, dear!' / 'Ah, redo!'" []
 "'On, bud, to undo-bot!' / 'No doubt.'"
+"Ooh, redraft, for the road."
 "Oops, there. Pooh, reset."
 "'Or else, er, LOSE!'"
 "'Or the other...'"
@@ -1704,6 +1707,7 @@ blurb
 "No, rude undoer."
 "No tube to un-be."
 "Not again! A giant NO."
+"Now, take tweak? NO!"
 "Oo, rend no re-do."
 "Redo? AVERT! Overrated!"
 "Redo? Riven! Overriden."
@@ -1842,6 +1846,7 @@ blurb
 "Stasis? Assist."
 "Stay, Mr[if player is female]s? My stars!"
 "A stew on? No sweat." []
+"Stimu? I must, um, sit."
 "Stuff-op? Puts off!"
 "Tarrying? Grit: nary."
 "Temporarily mopy? Retrial!"
@@ -2291,7 +2296,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Dalton's Sandlot"	false
 "Damage Bros. Board Games"	false
 "Dan Peck's Neck Pads"	false
-"Dario's Radios"	false
+"Dario's I-So-Rad Radios"	false
 "Darner's Errands"	false
 "Darrel's Larders"	false
 "Data Reps Adapters"	false
@@ -2534,6 +2539,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Fresh at Father's"	false
 "Freund's Refunds"	false []
 "Friere's Ferries"	false
+"Frigman Farming"	false
 "Frostwood Worst Food"	false
 "Frugal Gal Fur"	false
 "Frutansky Funky Arts"	false
@@ -2730,6 +2736,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "If ALE, a life!"	true
 "If-Stout Outfits"	false
 "Ilich's Chilis"	false
+"Ilse Kan's Seal Skin"	false
 "Imbrogno Brooming"	false
 "Inane Curs Insurance"	false
 "IndustCo Conduits"	false []
@@ -3252,6 +3259,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "PR Pa Rapp"	false
 "Pram-Loft Platform"	false
 "President's Driest Pens"	false
+"Price Club's Bicep Curls"	false
 "Pricy Goth Copyright"	false
 "Priestley's Peristyles"	false
 "Prig Fanny's Frying Pans"	false
@@ -3315,6 +3323,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Reliable Lee Blair"	false
 "Rema Rios Armoires"	false []
 "Remington Mentoring"	false
+"Ren Slick Clinkers"	false
 "Renetta's Entreats"	false
 "Rep. Gross: PROGRESS!"	true
 "Resiny Sin-Rye"	false
@@ -3342,6 +3351,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Rod Gump's Gumdrops"	false
 "Roddis Droids"	false
 "Roden's Drones"	false []
+"Roderick's Rock Rides"	false
 "Roger's Reorgs"	false
 "Rolling-On Grill"	false
 "Rome Clan Corn Meal"	false
@@ -3737,6 +3747,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Try Pat's Party St.!"	true
 "Try Rif's Stir-Fry!"	true
 "Tsao/Sato Oats"	false []
+"Tuan Tuna"	false
 "Tuckahoe's Tack House"	false
 "Tucker Tek-Cru"	false
 "Turano Naruto"	false
@@ -3849,7 +3860,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Yucatan Cay Tuna"	false
 "Yukster Turkeys"	false
 "Zambino's Zambonis"	false
-"Zanghi Hazing"	false]
+"Zanghi Hazing"	false
 
 table of bad rappers [xxm2]
 blurb
@@ -6468,10 +6479,12 @@ blurb
 "Marty, My Rat"
 "Masoning Moanings" []
 "Max's XMas Xams"
+"Maybe Be Amy"
 "Mehmet, Them, Me"
 "Melt-So Motels"
 "Merriest Triremes"
 "Mesmerist Mimesters"
+"Met Sir Mister"
 "Milo Lin's Millions"
 "Misha Has [']Im"
 "Mo['] So Cute Outcomes"
@@ -7267,6 +7280,7 @@ blurb
 "Odd Teen Ted Oden"
 "Oh Noes Mr. Hormones"
 "Oh, Saw a Show" []
+"Ol['] Mac's So Calm"
 "Ol['] Pat is a Pistol"
 "Olof Dover, Food Lover"
 "Or Be OK, Booker" []
@@ -7302,6 +7316,7 @@ blurb
 "Romantic Mr. Action"
 "Rosena's Reasons"
 "Rotten Tot Ren Retton"
+"The Rough Goth Hour"
 "Roy Can Crayon"
 "Rucci's Circus"
 "Sam's Epic Escapism"
@@ -7697,6 +7712,7 @@ blurb
 "Gas Tank Ganksta"
 "Gash Boom Goombahs"
 "Get Shaw the Swag"
+"Ghetto is Gothiest"
 "Ghetto? LOL, Got to Hell"
 "Gild the Delight"
 "Go, Bump, Bop, Mug"
@@ -7900,6 +7916,7 @@ blurb
 "Mixed Bag Maxed Big"
 "Mm Boi Mob [']Im"
 "Mo['] Arson: Arm Soon, Maroons"
+"Mo['] Ballsy Small Boy"
 "Mo['] Honesty: Money's Hot"
 "Mo['] Hos? Oo, SMH"
 "Mo['] New Women" []
@@ -7983,6 +8000,7 @@ blurb
 "Our Blast So Brutal"
 "Our Game: A Morgue"
 "Our Meter More True" []
+"Our Play Your Pal"
 "Our Posse Uprose So"
 "Our Styled Sultry Ode" []
 "Pace is a Spice"
@@ -8071,6 +8089,7 @@ blurb
 "Snog Song"
 "So [d-word-u] Mad, Son"
 "So Gank Nags, OK"
+"So Get [']Em Most, Gee"
 "So Glad as Gold"
 "So-Hot Hos to Shoot"
 "So Pact To Caps at Cops"
@@ -9179,6 +9198,7 @@ blurb
 "Nigel 'Hope' Philogene"
 "Nigh-Lame Hilgeman"
 "No-Girl Loring Gorlin"
+"No-Mates Stan Moe"
 "Noble Star Albertson" []
 "Nomad Damon Monda" []
 "Nomady Dynamo Dan Moy"
@@ -9819,6 +9839,7 @@ this-book is a number that varies. this-book is usually 0.
 
 table of random books [xxm4] [tob]
 blurb	prio
+"The  Diary: Their Day Hit, Ready[r], by Ray Heidt"
 "[a-b], Russ: ABUSERS[r], by Bess Rau"	0
 "[a-word-u] Zit Zen: Snazziest[r], by Issa Zentz"
 "[d-t] Shed the Odds[r], by Ted Dosh"
@@ -10104,6 +10125,7 @@ blurb	prio
 "The Arrow, a Thrower: Hot, Rawer[r], by Hart Rowe"
 "The Arrow Heart Row[r], by Thor Ware" []
 "Arsenic's Raciness[r], by [if player is male]Eric Sans[else]Erin Cass[end if]"
+"Art Fits at First[r], by Sir Taft"
 "Art, Hill: a Thrill[r], by Lil Rath"
 "Art I Love To Elvira[r], by [if player is male]Avi Toler[else]Lita Vore[end if]" []
 "Art Now to Warn[r], by Warran Wotton"
@@ -10275,6 +10297,7 @@ blurb	prio
 "Been-Dark Reedbank[r], by Ned Baker"
 "Beer Cans Scare Ben[r], by Bren Case"
 "BeerInc: Be Rec'in![r], by Ben Rice & Nic Eber" [p]
+"Bees, Grit, Big Trees[r], by Geri Best"
 "Beg Hard, Gebhard[r], by Gab Herd"
 "Behaviors['] Bias, Hover[r], by [if player is male]Ravi Shobe[else]Sheri Bova[end if]"
 "Bein['] Less Sensible[r], by Ben Siles"
@@ -10304,6 +10327,7 @@ blurb	prio
 "Besties is Beset[r], by Tess Ibe"
 "Bestrew, Webster[r], by Wes Bert"
 "Bet, Star Taber St. Batters[r], by Art Best"
+"Betamax: I Mix a Beat[r], by Tamie Bax"
 "Betray Yet, Rab?[r] by Bettye Ybarra"
 "Betty Lou's Subtle Toy[r], by Utley Bost"
 "Beyond Done-by, Ye Bond[r], by Don Bey" []
@@ -10377,6 +10401,7 @@ blurb	prio
 "Blush, Gone, Bungholes[r], by Ben Slough"
 "Blush Ripe, Publisher![r] by Herb Pulis"
 "Bo's Life-Foibles[r], by [if player is male]Leif Bos[else]Flo Seib[end if]"
+"Boadicea Bade Ciao[r], by Ada Boice"
 "The Board's Drab Ethos[r], by [if player is male]Shad Berto[else]Rhoda Best[end if]"
 "Boater to Bear or Beat[r], by Tre Abo & [a-b] Ort" []
 "Bob Lew's Wobbles[r], by Sol Webb"
@@ -11032,6 +11057,7 @@ blurb	prio
 "Diverse Drivees I Served[r], by Deviser Irv Dees" []
 "Diversey Drive, Yes[r], by Sid Every"
 "Do Allegory Really Good[r], by Leo Gaylord"
+"Do Beers Breed So[r], by Rob Dees"
 "Do Clean, Lone Cad[r], by Dan Cole"
 "Do Crawl, Cold War[r], by Carl Dow" []
 "Do Ill? Ew, I Do Well[r], by Leo Wild"
@@ -11383,6 +11409,7 @@ blurb	prio
 "Eton's Onset[r], by Enos Teston"
 "Eunuchs['] Cue-Shun[r], by Sue Chun"
 "Evaders Ever Sad, Re-Saved[r], by Dav Rees"
+"Evanston: Ten Novas, None Vast[r], by Ann Stove"
 "Eve Ruins Universe[r], by Sue Ervin"
 "Eve's Sandy Seven Days[r], by Syed Evans & Evan Dyess"
 "Eve's Silly Ivy[r], by Sylvie Sivley"
@@ -11906,6 +11933,7 @@ blurb	prio
 "Hard News, Swan Herd[r], by Hans Drew"
 "Hard Time Had Merit[r], by Tami Herd"
 "Hard Times, Tired Sham[r], by Edra Smith"
+"Hard to be Hot Bread[r], by Ed Hobart"
 "Hard-Won Word: Nah[r], by Rod Hawn"
 "Hardcastle Cathedrals[r], by Chad Slater"
 "Hardcore Vs. Hardcovers[r], by Dave Schorr"
@@ -12145,6 +12173,7 @@ blurb	prio
 "I, Cad, Acid[r], by Cid Dacia"
 "I Came to Omit Ace[r], by Tami Coe"
 "I, Camera, America[r], by Mia Crae"
+"I Can Feed Defiance[r], by Candi Fee"
 "I-Can-Gro Organic[r], by Ron Gaci" []
 "I Cannot Contain Con Tina[r], by Ann Coit" []
 "I Censor Cronies So Nicer[r], by Ric Enos" []
@@ -12182,6 +12211,7 @@ blurb	prio
 "I Eat Ramen, Reanimate[r], by Art Meanie"
 "I, Emma, a Mime[r], by Mamie Emami"
 "I, Empty: Pity Me[r], by Tim Pye"
+"I, Ever Plus Repulsive[r], by Lupe Revis"
 "I Fab a Fib[r], by Fifi Baab"
 "I Fan a Fin[r], by Nina Faif"
 "I, Fan, Naif[r], by Fina Fain" []
@@ -12279,6 +12309,7 @@ blurb	prio
 "I Shape APIs, Eh?[r] by Si Heap"
 "I Share a Shire[r], by [if player is male]Isiah Shearer[else]Sherrie Sahia[end if]" []
 "I Share No Nose Hair[r], by Rio Hanes"
+"I, Skanky Yakkins[r], by Nik Kasy & Kain Sky"
 "I Sketch the Sick[r], by Tish Eck"
 "I, Sky Den, Kidneys[r], by Nik Syed"
 "I Slam Mails[r], by Sam Li" []
@@ -12452,6 +12483,7 @@ blurb	prio
 "In for a Rain of No Fair[r], by Faran Fiorino"
 "In Gassy Sayings[r], by Sy Gains"
 "In Here, Cat: Eat, Enrich[r], by Teri Hance" []
+"In Seer Ernie's[r], by Ren Eis"
 "In Sun Be Bunnies[r], by Ennis Bu"
 "In the Black Kitchen-Lab[r], by Beth Calkin"
 "In Ur-Ruin I Run[r], by Nuri Inur"
@@ -12638,6 +12670,7 @@ blurb	prio
 "Laden, Leaden Land[r], by Alden Andel"
 "The Ladies['] Deaths Lie[r], by Edie Stahl"
 "Ladroon Orlando[r], by Al Rondo" []
+"Lady, Moth, My Old Hat[r], by Ty Oldham"
 "Lag Very Gravely[r], by Val Grey"
 "Laggers['] Gargles[r], by Greg Sal"
 "Lair at a Trail[r], by Tara Li"
@@ -13020,6 +13053,7 @@ blurb	prio
 "Marg My Grammy[r], by Gamy Mr. A. Grymm"
 "Mark of OK Farm[r], by Ma Fork"
 "Mark One Monk Era[r], by Ken Mora-Romanek"
+"Mark Thee the Maker[r], by Kath Emer"
 "Marlette's Streamlet[r], by Matt Sleer"
 "Marquees Mas Queer[r], by Em Square" []
 "Marriage: a Grim Era[r], by Amie Garr"
@@ -13094,6 +13128,7 @@ blurb	prio
 "Men Loath A Menthol-Methanol[r], by Hotelman Lon Mehta" []
 "Men, Shoot the Moons[r], by Shon Mote & Honest Mo"
 "Men's Epic Specimen[r], by Sim Pence"
+"Men's Woe Now Seem New, Some[r], by Wes Moen"
 "Mend Richly, My Children[r], by Mercy Lindh"
 "Menial, Mainline, Lame[r], by Melina Elamin"
 "Menials['] Seminal Lies, Man[r], by Liliana Semmens"
@@ -13148,6 +13183,7 @@ blurb	prio
 "A Minger, Mangier[r], by Mariam Greening"
 "Mini Lols? Millions[r], by Slim Olin" []
 "Mini-Moon, I'm On[r], by Moni Mino" []
+"A Minimal Mailman, I[r], by Mia Milan"
 "Mink-Dog Kingdom[r], by Kim Gond"
 "Minks Leak Snake Milk[r], by Ken Klimas"
 "The Minor Hero Mint[r], by [if player is male]Tim Horne[else]Mei North[end if]"
@@ -13155,6 +13191,7 @@ blurb	prio
 "Mire Folk Filk More[r], by Mike Rolf"
 "The Mire: I'm There[r], by Tim Rhee"
 "The Mirror-Him Terror[r], by Torri Rehm"
+"Mirth, a Keg: Make Right[r], by Mike Garth"
 "Miscaption Impactions[r], by Pati Scomin"
 "A Misclick: Sick Claim[r], by Mick Scali"
 "Misdealt Medalist[r], by [if player is male]Tim Slade[else]Lea Smidt[end if]" []
@@ -13573,6 +13610,7 @@ blurb	prio
 "None Cursed Uncensored, Senor Dunce[r], by Ned Crounes" []
 "None Had One Hand[r], by Ned Noah"
 "None Rib Bro Nine[r], by Ben Niro"
+"None Sit in Stone[r], by [toti] Senn"
 "Noon and On and...No![r] by Ann Doon"
 "Noon Glee Gala: Go Angle Alone[r], by Angelo Alonge" []
 "Noose Mogul Monologues[r], by Moose Luong"
@@ -13684,6 +13722,7 @@ blurb	prio
 "Odes to DeSoto: Sed, Too[r], by Ted Soo" []
 "Oeuvres['] Overuse[r], by Sour Eve"
 "Of a Red Fedora: Do Fear[r], by Rod Fae"
+"Of Crusty Coy Turfs[r], by Cyr Fouts"
 "Of Despair Poised Far[r], by Pedro Asif"
 "Of Drunk Dork Fun[r], by Rod Funk"
 "Of Greasy Gray Foes[r], by Faye Gros"
@@ -13821,6 +13860,7 @@ blurb	prio
 "On Fears of Saner Far Eons[r], by [if player is male]Fran Ose[else]Rose Fan[end if]"
 "On Fever of Nerve[r], by Vern Foe" []
 "On, Glad Old Nag, and Log[r], by Golda Langdon"
+"On I Bet To be In[r], by Eboni Bonetti"
 "On Juice I Jounce[r], by Joni Cue"
 "On Late to Lean at Noel[r], by Ole Nat Leaton"
 "On-Message Sage Omens[r], by Gena Moses"
@@ -13905,6 +13945,7 @@ blurb	prio
 "Or a Quest to Square, Equator's Quaestor[r], by Reo Quast"
 "Or a Self For Sale[r], by Flo Ares" []
 "Or Be Bore[r], by Robb Oree"
+"Or Be on Borneo[r], by Rob Eno"
 "Or Bind No Bird[r], by Di Born-Brodin"
 "Or Fast Arts of a Frost[r], by Taras Ostroff"
 "Or Fast, Star of Frat, So[r], by Taras Ostroff" []
@@ -13974,6 +14015,7 @@ blurb	prio
 "Our Dad's Rad Duos[r], by Ros Duda"
 "Our Death, Authored, Heard Out[r], by Theo Radu"
 "Our Fleshy Fury Holes[r], by Rush Foley"
+"Our Game's Mega Sour[r], by Rose Guam"
 "Our Ineptest Pretentious Pioneers, Tut[r], by Terise Upton"
 "Our Islet: Outliers Loiter, Us[r], by Lou Reist"
 "Our Jest, Jouster[r], by Su Trejo"
@@ -14082,6 +14124,7 @@ blurb	prio
 "Patience, Inept Ace[r], by Pete Cain"
 "Patients['] Neat Tips[r], by [if player is male]Stan Piet[else]Pat Stein[end if]"
 "Patriarch's Chair-Traps[r], by Traci Sharp"
+"Patric's Scar Tip: A Script, Scrap It[r], by Cris Apt"
 "Patroness, Transpose Not Spares[r], by [if player is male]Ron Spates[else]Pat Rossen[end if]"
 "Patronymic Importancy: Myopic Rant[r], by [if player is male]Cory Pitman[else]Marcy Pinto[end if]"
 "Patty is a Typist[r], by Tip Tsay"
@@ -14123,6 +14166,7 @@ blurb	prio
 "Peter Klein's Serpentlike[r], by Lester Kneip"
 "Petrie's Pestier Respite[r], by Sir Pete" []
 "Pets O['] Poets, Oppose Test[r], by Pete Stoops"
+"The Pews: She Wept[r], by Wes Peth"
 "PFC Tree, Perfect Prefect[r], by F. T. Creep"
 "Phat Spree: the Papers[r], by Pepe Harst"
 "Pheasant, Antheaps, Heat Snap[r], by Pat Shane"
@@ -14221,6 +14265,7 @@ blurb	prio
 "Posin['] to Stoop in: Options[r], by Otis Pon" []
 "The Posse Ops Sheet[r], by Tess Hope"
 "Possible Sob-Spiel[r], by Bliss Poe"
+"The Post-Hep Tots[r], by Shep Ott"
 "A Post So Apt[r], by Papa Stoots & Pat Sposato" []
 "Postured Proudest[r], by Ed Proust" []
 "Potemkin Poem Knit, Token Imp[r], by Kip Monet"
@@ -14324,6 +14369,7 @@ blurb	prio
 "Rad Hate: a Thread[r], by Ed Haart"
 "Rad Slang Garlands[r], by Sal Grand"
 "Rad Waste Eastward[r], by [if player is male]Wade Star[else]Dara West[end if]"
+"Radio or Aid[r], by Dara DiOrio"
 "Radio's So Arid[r], by Sid Ora" []
 "Radtke's Darkest Ad Treks[r], by Ed Stark"
 "Rag of Fargo[r], by Ara Rog-Goff" []
@@ -14663,6 +14709,7 @@ blurb	prio
 "Sad Forge: Grades of God's Fear[r], by Sage Ford"
 "Sad Kin Danski is Dank[r], by Kandiss Dakin" []
 "Sad Life? Fie, Lads[r], by Sid Leaf"
+"Sad Men Amends[r], by Em Sand"
 "Sad Mo, So Mad[r], by Moss D'Adamo"
 "Sad Nerd Dr. Dean's Danders[r], by Sed Rand"
 "Sad Rote Art Odes So Rated[r], by Rod East" []
@@ -14718,6 +14765,7 @@ blurb	prio
 "Say, Dad, Sad Day[r], by Ada Syd"
 "Say, Get Stagey[r], by Ty Sage"
 "Say, Rot or Stay: a Story[r], by Roy Ast"
+"Say That: Ah, Yes[r], by Tyesha Hastey"
 "Scald, Ire, Rile Cads[r], by Ric Dales"
 "Scale, Sour Carousels[r], by [if player is male]Lucas Rose[else]Eula Cross[end if]" []
 "The Scaly Sly Cheat, Chastely[r], by Seth Clay" []
@@ -15084,6 +15132,7 @@ blurb	prio
 "So Often to Footnotes[r], by Toto Sefon"
 "So-Perfect Coper Fest[r], by Pet Fresco"
 "So Perps Oppress[r], by Ross Epp"
+"So Pinch No Chips[r], by Nichois Schnopp"
 "So Quaver, Vaqueros[r], by Vas Roque"
 "So Quit Quoits[r], by Otis Qu" []
 "So Rain Airs On[r], by Rosina Sanrio"
@@ -15241,6 +15290,7 @@ blurb	prio
 "Stand it Distant[r], by Sid Tant"
 "Standard Dad Rants[r], by Tad Rands"
 "Standifer's Draftiness[r], by [if player is male]Anders Fist[else]Astrid Senf[end if]"
+"Star of a Frost[r], by Taras Ostroff"
 "Star of Frat, So[r], by Taras Ostroff"
 "Star-Shine Tarnishes[r], by [if player is male]Seth Rains[else]Tresa Shin[end if]"
 "Staring at Grins[r], by Art Sing"
@@ -15320,6 +15370,7 @@ blurb	prio
 "Stumbler Blurts? Me?[r] by Mel Brust"
 "A Stunt Taunts[r], by Stan Tu"
 "The Stupid Tepid Huts: Thud, Spite[r], by Shedu Pitt"
+"Style It Testily[r], by Ty Leist"
 "Suave? Go, a Vogue's So Vague[r], by Su Govea" []
 "Suavery: a Survey Very USA[r], by Eva Usry"
 "Sub-Folk of Bulks[r], by Flo Busk"
@@ -15424,6 +15475,7 @@ blurb	prio
 "Tea Time: Meet Tia[r], by Emi Tate"
 "Tea Try Treaty[r], by Art Tye"
 "Tea With Thwaite[r], by Ewa Hitt"
+"Tea Worth Hot Water[r], by Theo Traw"
 "Teach, Pastor Catastrophe[r], by Sacha Potter"
 "Teachership Heptarchies[r], by [if player is male]Heath Crespi[else]Pat Cheshire[end if]"
 "Team Road to a Dream: More Data[r], by Dre Amato"
@@ -15479,6 +15531,7 @@ blurb	prio
 "Then Gob the Bong, Bent Hog[r], by Goth Ben"
 "Then Mix the Minx-Hex Mint[r], by Tex Minh"
 "Then Park the Prank[r], by Ken Tharp"
+"Then Rub the Burn[r], by Brent Hu"
 "Then Was the Swan[r], by Wes Nath" []
 "A Theory's Hot Years[r], by Troy Shea"
 "There Don's Shortened[r], by Seth Nored"
@@ -15822,6 +15875,7 @@ blurb	prio
 "Toshiko Hooks It[r], by [if player is male]Kit Soho[else]Tish Koo[end if]" []
 "Tot, Bug a Tugboat[r], by Gab Tout"
 "Tot Gabe Got Beat[r], by Bo Tatge"
+"Tot, Sneer to Resent[r], by Oren Sett"
 "Total Held Death Toll[r], by Odell Hatt" []
 "Totally Tall Toy[r], by Lyla Ott"
 "Tote Bag Got Beat[r], by Gabe Ott" []
@@ -16103,6 +16157,7 @@ blurb	prio
 "Vs. Mean Mavens[r], by Nev Sam"
 "Vulnerable Lunar Bevel[r], by LaVern Blue" []
 "Wage-Mopers['] Power Games[r], by Marge Swope" []
+"The Wagon Gone: WHAT[r], by [if player is male]Theo Wang[else]Thea Wong[end if]"
 "Waldner's Nerd Laws[r], by Ned Rawls & Len Sward"
 "Waldo's Old Saw[r], by Sal Dow" []
 "Walk Over Workvale[r], by Kev Orlaw"
@@ -16144,6 +16199,7 @@ blurb	prio
 "The Ways They Was[r], by Ty Hawes & Stew Hay"
 "We Admit Wit, Dame[r], by Tim Wade"
 "We Avoid Avid Woe[r], by Evia Dow"
+"We Avoid Diva Woe[r], by Evia Dow"
 "We Bores Be Worse[r], by Bo Ewers"
 "We Both Bow: the Hot Web[r], by Thoth Bewebow"
 "We Bother the Bower[r], by Bee Worth"
@@ -16282,6 +16338,7 @@ blurb	prio
 "Word Games, Mod Wagers[r], by [if player is male]Mos DeGraw[else]Meg Soward[end if]"
 "Work, Play, Wry Polka[r], by Kyla Prow"
 "Work Sleep Prowl Seek[r], by Polk Ewers"
+"Work Visa: Vow, a Risk[r], by Avi Krows"
 "Workable Bleak Row[r], by Bo Walker & Karl Bowe"
 "Worked-On Dork Owen[r], by Drew Koon"
 "World, Go Grow Old[r], by Lord Gow"
@@ -16819,6 +16876,7 @@ blurb
 "Big-Anus Abusing."
 "Big Len, Gil, Ben, Bi Glen."
 "Big Lon's Sin Blog." []
+"Big Tease, I Get Base!"
 "Bill, We Will Be Bi Well."
 "Bimbo Bi Mob."
 "Bimboes Mobbies."
@@ -16961,6 +17019,7 @@ blurb
 "Double Down Now, Loud Bed."
 "Dr. Lo-Vibe Lovebird."
 "Dr. White Hit Drew, Writhed."
+"Drips Won't Strip Down!"
 "Drusila, As Lurid."
 "The Dude Hut Deed."
 "Dumbest Bed-Smut."
@@ -17038,6 +17097,7 @@ blurb
 "Fine Mr. Fermin."
 "Finer-Body Boyfriend Bry DeFino."
 "A Finest Sin-Feat Fan Site."
+"First Lady Flirt Days."
 "Fit Anne Infante."
 "Fit Arreola Taliaferro."
 "Fit Cher Fichter."
@@ -17398,6 +17458,7 @@ blurb
 "Louise's Oil Uses."
 "Louts O['] Lust."
 "Love Fest of Svelte." []
+"Love Wish: Live Show!"
 "Lovebird/Devil Rob." []
 "Lovesum Volumes."
 "Lt. Hudson Shouldn't."
@@ -18001,6 +18062,7 @@ blurb
 "Venial Elvina LaVine." []
 "Verboten Bent Over Bro Event."
 "Vices Are a Service."
+"Villagers['] Slave Girl."
 "Virgin Irving."
 "Voyeurs? Us? O Very."
 "Waitress Wastries."
@@ -18020,6 +18082,7 @@ blurb
 "When Folks Know Flesh."
 "Whip, Cute? Up, We Itch."
 "Wideman's New Maids."
+"A Wife? I, a Few!"
 "Wild Boy, Wily Bod."
 "Wild Set: it's Lewd!" []
 "Witness Sin Stew." []
@@ -18034,6 +18097,7 @@ blurb
 "Yes, Jon Enjoys Jonesy."
 "Yes, Tom, My Toes."
 "Yet Ma's Steamy." []
+"Yet Risk Kirstey: Ike's Try."
 "Yo, Doms, Sodomy." []
 "You Doll, You'll Do."
 "You Pervs So Very Up."
@@ -18219,6 +18283,7 @@ blurb
 "Slattern Lattner's"
 "Smooch-Art Chat Rooms"
 "Smut-Offer-Fest Forum"
+"So Sticky Sick Toys"
 "So-Tacky Toy Sack" []
 "Sultry URL Sty" []
 "Super Deal, Pleasured"
@@ -18485,6 +18550,7 @@ blurb
 "bring down? Bind? Wrong."
 "buried fresh, hubris freed, refurbished!"
 "burn ego, burgeon." []
+"cash-only cans: holy? Ach, no, sly."
 "cash, souls... such a loss."
 "cattiness? Scantiest."
 "chartless? St. Charles."
@@ -18558,6 +18624,7 @@ blurb
 "let us care? Ace result."
 "Let's go, St. Oleg."
 "life's short? Selfish rot."
+"loathsome tool, shame."
 "love war? Lo, waver."
 "lustin, d'oh! I shouldn't." []
 "mad ire? Dim era." []
@@ -18634,6 +18701,7 @@ blurb
 "stuff by St. Buffy."
 "Sustain us, St. Sanitus!" [x]
 "Thanks, St. Hank!"
+"theologian? Healing, too."
 "to be like Rev. Figo, Giver of Org Five." [x]
 "to prey? Rot. Yep."
 "To sin is not on, is't?" []
@@ -18665,6 +18733,7 @@ blurb
 "AH, VOWIN[']? HOW VAIN"
 "ALLURIN[']: RUIN ALL"
 "ALOHA, OL['] OOH-LA-LA"
+"ANIMIST? YO, ANIMOSITY"
 "ANTI-PROGRESS? PRISON'S GREAT"
 "ANY DOUBT? BANDY OUT"
 "APHORISMS NET MISANTHROPES"
@@ -18688,6 +18757,7 @@ blurb
 "BEATLES BE STALE"
 "BEER, CADS? BE SCARED"
 "BEER? VILE, BELIEVER"
+"BEERS? CAD, BE SCARED"
 "BEN-WA? EW! BAN"
 "BILLIARDS? RABID ILLS"
 "BIT TRUE TRIBUTE? REBUT IT" []
@@ -18817,6 +18887,7 @@ blurb
 "HELLFIRES RILE FLESH"
 "HEURISM? MUSHIER"
 "HICKEYS: SICK, HEY"
+"HIDE AWAY A WHY IDEA"
 "HIS DEMONS: HEDONISM'S DIMNESS, OH"
 "HIS GOAL: NO HOOLIGANS"
 "HOLIDAYS? I SAY, HOLD"
@@ -18889,6 +18960,7 @@ blurb
 "MAMBO? VILE! IMMOVABLE"
 "MANKIEST? MISTAKEN" []
 "MASTURB = BUM ARTS! MUST BAR"
+"ME, I BAN BEAMIN[']"
 "MERCY IS CRIMES-Y"
 "MIRACLES? LIE! SCRAM"
 "MISERABLE? RISE! BLAME" []
@@ -18959,6 +19031,7 @@ blurb
 "POSIT NO POTIONS" []
 "POUND NO PUD"
 "POUTISH? SHIP OUT"
+"PRESBYTERIAN BRAYS INEPTER"
 "PREVENT TV-PREEN" []
 "PRINCIPLES CRIPPLE SIN"
 "PRO-GAY? GO PRAY"
@@ -19158,6 +19231,7 @@ blurb
 "Semi-banal lima beans"
 "Sorta-Top Pot-Roast"
 "Sprat-parts"
+"Syrup of fry-soup"
 "Tasto-toast-tatos"
 "Toroid Dorito"
 "Transience nectarines"
@@ -22636,8 +22710,10 @@ blurb
 "Pride: Sin? Inspired!."
 "Pruett's putters sputter."
 "Puerta's pasture: rates up!" []
+"Put a manor paramount."
 "Rapt tipsy party tips."
 "Rave Us, Saveur: Suaver Vera-Su."
+"Ray Loos: so royal orals, yo!"
 "Relisted Deliters." []
 "Remapping pampering."
 "Repubs: Superb! (Pure BS!)" []
@@ -22650,6 +22726,7 @@ blurb
 "Rude Gov Dr. Vogue." []
 "Saintfleur ultrafines." []
 "Scarcest-Cars Sect."
+"Seal skin, sane silk."
 "Second-Dens Co."
 "Sheep of posh fee."
 "Showin['] Who's in: Wish on."
@@ -22665,6 +22742,7 @@ blurb
 "Spendiest Tepidness."
 "Starred Traders."
 "Stir crazy? Ritzy cars!"
+"Su Sharp's Rush-Spas."
 "Suni Tice's Nice Suits."
 "Super-Rich Curer-Ship Price Rush."
 "SUV Ego Vogues."
@@ -22685,6 +22763,7 @@ blurb
 "Ultra smooth moolah trust." []
 "Unfurled-Fund Lure." []
 "Vain Coast Vacations." []
+"Vainest in a Vest."
 "Vapid VIP Ad."
 "Very fun fur envy."
 "Vestal Valets." []
@@ -22864,6 +22943,7 @@ blurb
 "'The angry gentry? HA!'"
 "'Anonymous? Man, son, you annoy us mo['].'"
 "'Any Bus? A sub?' / 'Nyaa.'"
+"'Any posh phony's a spy? Ah, no.'"
 "'Any weed, Dewayne?' / 'Aw, needy?'"
 "'Apathy, Pat?' / 'Yah.'" []
 "'APB: Gil's Big Pals!'"
@@ -23043,6 +23123,7 @@ blurb
 "'Dis Work? Skid Row!'"
 "'Dish, men. He minds? Send him...'"
 "'Dislike silk? Die!'" []
+"'Disobey? Boy DIES!'"
 "'Diss at sadist? It's sad.'"
 "'Ditmore's mortised!'"
 "'Ditto a gem: got it made!'"
@@ -23184,6 +23265,7 @@ blurb
 "'Go die, Diego!'" []
 "'Go, dood! Do good!'"
 "'Go drill, old girl!'"
+"'Go dumb, dog-bum.'"
 "'Go, mite!' . 'I got [']em!'"
 "'Go? Nah. Oh, nag, Hogan!'"
 "'Go raw. Grow a...' / 'Aw, Rog!'"
@@ -23346,6 +23428,7 @@ blurb
 "'I'd pay...' / 'Ya dip.'"
 "'I'd say Daisy Day is, Saidy!' / 'Dis! Ya!'" []
 "'I'd shot its...' / 'Doh, do this.'" []
+"'I'd want to down it at...' / 'Wait! Don't!'"
 "'I'm about to, bum! Ai!'"
 "'I'm back!' / 'Ick!' / BAM!"
 "'I'm broke.' / 'Bore, Kim. Rob Mike.'"
@@ -23605,6 +23688,7 @@ blurb
 "'Now, hit! With no 'how' nit!' / 'Hi! Won't!'"
 "'Now I'm mad, dim man!' / 'OW!'"
 "'Now it won't, I own it!'" []
+"'NOW, Lew!' / 'Wow, Len. New low.'"
 "'Now on?' / 'No, won!'"
 "'Nursed, Ed runs. SUNDER.'"
 "'O My God! G-Moody!'"
@@ -24099,6 +24183,7 @@ blurb
 "'Unwell, sot? Tell us now!' / 'Two sullen...'"
 "'Up ahead...aha, dupe!'"
 "'Up, cat! Act up!'"
+"'Up for no fun? Poor...'"
 "'Up my...I...Ow!' / 'You wimp!'"
 "'Up, Ron! Pruno!' / 'Urp...no!'"
 "'Up this. PUSH IT!'" []
@@ -24245,6 +24330,7 @@ blurb
 "Cures-Held Scheduler"
 "Delegating/Get-Dealing Gadget Line"
 "A Desk, Asked" []
+"Desk of OK Defs"
 "Desk-Sked"
 "Desk-Yap Keypads"
 "A Diligent Leading-It Detailing"
@@ -24407,6 +24493,7 @@ blurb
 "'Bagel chips? Bilge, chaps!'"
 "'Bah, dang handbag!'"
 "'Bah, mite! Beat him!'"
+"'Bah, tots! That SOB!'"
 "'Ban [d-t]? Not bad!'" []
 "'The bar, eh, brat? BREATH!'" []
 "'Bay home?' / 'Oh, maybe! Ahem! Boy!'"
@@ -24525,6 +24612,7 @@ blurb
 "'Co-pay cap? Oy!'" []
 "'Cocaine?' / 'Once.' / 'CIA!'"
 "'Collatin[']? LOL, I can't!'" []
+"'A commit? I act, Mom.'"
 "'Communist scum! / I'm not!'"
 "'Confide, Doc? Fine!'" []
 "'A connect on accent, once?' / 'Can't!'"
@@ -24532,6 +24620,7 @@ blurb
 "'Consigned.' / 'Seconding.'"
 "'Contrary! Rory can't!'" []
 "'Cookin['], eh? No...I choke.'"
+"'Coper's rec? Oops!'"
 "'Coquettish?' / 'Quit, Chet! So...'"
 "'Cordial? Acrid ol['] liar, Doc!'" []
 "'Cork wine? Ew, no, Rick! Nice work!'" []
@@ -25128,6 +25217,7 @@ blurb
 "'My Porsche shop! Mercy!'"
 "'My serial mislayer, Mr. Easily-Smearily!'"
 "'My shoes! Oh, messy!'" []
+"'My son is ON, my sis!'"
 "'My, son! Mony's...'"
 "'My system sets...' / 'Mess, Ty.'"
 "'My wish: Whimsy!' / 'Why, Sim?'"
@@ -25431,6 +25521,7 @@ blurb
 "'Snow day dawns, oy!'"
 "'Snub Rick: sick burn? Bunk, Cris!'"
 "'So, a trek? Or skate?'" []
+"'So ample? Lame, sop.'"
 "'So, any?' / 'Ya.' / 'Son! Say no! Ay! SON!'" []
 "'So, Audry! Our day's dour, say.'"
 "'So, Billy!' /'Lo, Sibyl!' / 'Oy, bills.'" []
@@ -25532,6 +25623,7 @@ blurb
 "'Taxes reaped. Exasperated.'"
 "'Taxis at six!' / 'Uh, rider, hurried?'"
 "'Tea, Mr. Marte?'" []
+"'Tea, Tom?' / 'To meat, Matteo!'"
 "'Team player? Tame parley!'"
 "'Tears? Rates a Rest!'" []
 "'Teary, Pat? TEA PARTY!'" []
@@ -25843,6 +25935,18 @@ blurb
 "At-Large Art Gale" []
 "Athletic Cal Hiett" []
 "Auditor-Toad Rui"
+"Aunt Carlee Laracuente"
+"Aunt Gia Antigua"
+"Aunt Gilda Daignault"
+"Aunt Gilma Manigault"
+"Aunt Mimi Tumminia"
+"Aunt Molina Lamountain"
+"Aunt Pham Hauptman"
+"Aunt Ro Turano"
+"Aunt Safi Faustina"
+"Aunt Sherie Steinhauer"
+"Aunt Sherise Steinhauser"
+"Aunt Zina Nunziata"
 "Aura 'Ski' Sakurai"
 "Ava 'Legs' Salvage"
 "Average Erv Gaea"
@@ -26631,6 +26735,7 @@ blurb
 "E-Z Rep Perez"
 "Eagle Algee"
 "Earthliest Stealthier [if player is male]Elias Rhett[else]Retta Hiles[end if]"
+"Earthly Hartley"
 "Earwig Gawrie" []
 "Easy-Ayes Seya Seay"
 "Easy-Life Elise Fay"
@@ -26834,6 +26939,7 @@ blurb
 "Feared Wilt Waterfield" []
 "Fearful Lauffer"
 "Fed-Coal DeFalco" []
+"Fed Mr. Fremd"
 "Federal Elfreda" []
 "Feebler Lefebre" []
 "Feistier Seiferti" []
@@ -26951,6 +27057,7 @@ blurb
 "Golden God Len DeLong" []
 "Golfer Nut Flo Gunter"
 "Goner Goren Rogen" []
+"Goober Bo Gore"
 "Goober Bo Gore" []
 "Good-Munch Mcdonough" []
 "Goon Amina Manoogian"
@@ -26969,6 +27076,7 @@ blurb
 "Goon Vi Govoni"
 "Goons-Pal Spagnolo"
 "Gorgeous Grouse Og" []
+"Gorgeous Ogg Rouse"
 "Gorgon Ron Ogg"
 "Gorilla Garrilo"
 "Gormless Gross Mel"
@@ -27010,6 +27118,7 @@ blurb
 "Gridlock Rick Gold"
 "Grif the Fighter" []
 "Groom[if player is male]-Mo-Org Mr[else]s-Mo-Orgs Mrs[end if]. Goo"
+"Groovy Gov Roy"
 "Groper Peg Orr" []
 "Gropin['] Pig Ron"
 "Gross Olin Rossignol"
@@ -27880,6 +27989,7 @@ blurb
 "Neal 'Ski' Lesniak"
 "Near-Bum [if player is male]Ren Baum[else]Em Braun[end if]"
 "Near-Top Patreon Paterno"
+"Neck Man McKenna"
 "Neckbeard Daren Beck"
 "Ned 'Ski' Deskin"
 "Needy Ed Nye" []
@@ -28350,6 +28460,7 @@ blurb
 "Rave Boy Overbay" []
 "Raw Deal Lea Ward" []
 "Raw Hood Harwood"
+"Raw Ike Kierwa"
 "Ray-Dog O'Grady" []
 "Re-Dealing Geraldine" []
 "Real-Class Scarsella" []
@@ -28791,6 +28902,7 @@ blurb
 "Smurfy [if player is male]Mr. Sy Fu[else]Ms. Fury[end if]" []
 "Snag-This Hastings" []
 "Snakebird Bednarski" []
+"Snarly Sly Arn"
 "Snazzy Sy Zanz"
 "Sneaky-Snakey Kay Sen" []
 "Sneaky Sy Kane" []
@@ -29012,6 +29124,7 @@ blurb
 "Sticky Sick Ty"
 "Stinger Gestrin"
 "Stingy Earl Singletary" []
+"Stinker Sir Kent"
 "Stinkeroo [if player is male]Oren Sitko[else]Rosi O'Kent[end if]"
 "Stinky-Skin Ty"
 "Stocky Ty Ocks"
@@ -29191,6 +29304,7 @@ blurb
 "Trevor 'Hands' Vanderhorst"
 "Tricky Kit Cyr"
 "'Triggers' Greg Rist"
+"Trim Hot Tim Roth"
 "Trina 'Legs' Lastinger"
 "Trina 'Ski' Kristina"
 "Troglodyte [if player is male]Goldy Otter[else]Dotty Lorge[end if]"
@@ -31819,6 +31933,7 @@ blurb
 "Capella LaPlace"
 "Cary Tudor's Courtyards"
 "Casandra's Sandaracs"
+"Celebrity Rebel City"
 "Covered Red Cove" []
 "Coy Slots So Costly"
 "Crime-Pays Pricy Mesa"
@@ -32108,9 +32223,11 @@ blurb
 "Extol a Merit: Time to Relax[r], by [if player is male]Alex Moretti[else]Tamie Troxel[end if]"
 "Extras, Taxers[r], by Rex Sat"
 "Fail it New? Win at Life[r], by Twila Fine & Fae Litwin"
+"Fat-Toes: to Feats of State[r], by Stef Tao"
 "Fatalism? Flat Aims[r], by Sam Latif"
 "Fear-Slant? Learn Fast: Snarl, Fate[r], by Leta Farns"
 "Fears Go for Ages[r], by Fae Gros"
+"A Fertile Life Rate[r], by Ira Fleet"
 "A Fertile Life Rate[r], by Tia Fleer"
 "Fie, Trash This Fear: Shift Era[r], by [if player is male]Seth Fair[else]Fae Hirst[end if]"
 "Flowering, Re-Flowing[r], by Inger Wolf" []
@@ -32202,6 +32319,7 @@ blurb
 "I Slave to Save Toil[r], by Elsa Voit"
 "I, Smoker, Irksome[r], by [if player is male]Moe Risk[else]Kim Rose[end if]"
 "I Snag Gains[r], by Ana Siggins" []
+"I, Spry, OK Risky Op[r], by Roy Skip"
 "I Stall at Ills[r], by Al List" []
 "I-Try-Each-Year Itch[r], by [if player is male]Ty Archie[else]Traci Yeh[end if]"
 "I'd Org, Rig, Do[r], by Rodd Giorgi" []
@@ -32282,6 +32400,7 @@ blurb
 "Motiv-Vomit[r], by Vi Tom"
 "Motivation: Vitamin Too[r], by Tito Aminov & Matt Iovino"
 "Muddled Dud, Meld[r], by Del Mudd"
+"My Idea May Die[r], by Ami Dey"
 "My Neo-Money[r], by Emmy Nooney" []
 "My Road's Mad Rosy[r], by Rod Mays"
 "Nail Down an Old Win[r], by [if player is male]Lon Dwain[else]Diann Low, Dawn Olin & Nona Wild[end if]"
@@ -32688,6 +32807,7 @@ blurb
 "Double, Ole Bud" []
 "Dourest Detours, Rousted" []
 "Down, Burden, Rundown Bed"
+"Dreadfully Dull, Frayed"
 "Drier, Direr"
 "Drudge On, Underdog" []
 "Dryest Red Sty"
@@ -32720,6 +32840,7 @@ blurb
 "Forgot to, Frog"
 "Formal Ol['] Farm" []
 "Free Heart Hereafter" []
+"Free Song of Greens"
 "Frets of Efforts" []
 "Frown to Front, Ow"
 "Fundamental Mundane Flat"
@@ -32918,6 +33039,7 @@ blurb
 "Minus Sun I'm Musin[']" []
 "Miscoiled Domiciles"
 "Mo['] Frailty: Formailty" []
+"Mo['] Pads So Damp"
 "Mo['] Pads So Damp" []
 "Mo['] Ruin I Mourn"
 "Mold It, I'm Told" []
@@ -32998,6 +33120,7 @@ blurb
 "Oh No, Gouged Good Enough"
 "Oh, Seeing He is Gone"
 "Oh, Skint, Think So"
+"Oi, Sad Adios"
 "Ok, Pal, POLKA"
 "OK Town to Know" []
 "Ol['] [a-b] Ebola" []
@@ -33076,6 +33199,7 @@ blurb
 "Prime Agony: Paying More"
 "Promiscuous Porous Music"
 "Promise, Po['] Miser" []
+"Prosaic Ol['] Acropolis"
 "Prosaic Ol['] Acropolis" []
 "A Prude's Sad, Pure Rues-Pad" []
 "A Pudgy-Guy Pad"
@@ -33619,7 +33743,6 @@ blurb
 "They discount the side effects of Brain-Rust NutriBars." [x]
 "They discuss Bilal's ill abs."
 "They discuss favorite flavors of Clobber Cobbler." [x]
-"They discuss the pseudoscience behind the Tricep-Rip Tec." [x]
 "They discuss the training methods of Hard-Way Hayward." [x]
 "They discuss their fear of Slice-U Sluice." [x]
 "They discuss Tricep-Rip Tec." [x]
@@ -34966,6 +35089,7 @@ blurb
 "Ard 'IQ' Qadir"
 "Art 'IQ' Tariq"
 "Ash 'IQ' Ishaq"
+"Autodidact [if player is male]Todd Cutaia[else]Dacia Doutt[end if]"
 "Boss Hacker Hassebrock" []
 "Buster 'IQ' Berquist" []
 "Collegian [if player is male]Alec Ligon[else]Olga Cline[end if]" []
@@ -35754,6 +35878,7 @@ blurb
 "gives a tut, taut." [x]
 "gives unhs. 'Shun huns.'" [x]
 "goes back to melodrama, alarm mode." [x]
+"greasily, Gary lies!"
 "has heard bad kids these days snort wasp paws." [x]
 "has said before: 'Bernice, be nicer!'" [x]
 "heaps scorn on her corns." [x]
@@ -36429,6 +36554,7 @@ blurb
 "Wan Gin Awning"
 "Wardless Sal Drew's"
 "Wastin['] Tawni's" []
+"Wastin['] Twain's"
 "Wastrel Art Lew's" []
 "Webster's Brew Sets"
 "Wild Gus Ludwig's"
@@ -36601,6 +36727,7 @@ table of theses [xxy6]
 blurb
 "Alert, clown: we can troll!"
 "All We Do: ALLOWED!" []
+"Arg! Woot! Go to war!"
 "ARM! RAM! MAR!"
 "The ASBO be as hot!"
 "AUNT TUNA (an unflattering picture, captioned weight: A TUN)" [p] [x]
@@ -36674,6 +36801,7 @@ blurb
 "Mafian Infama: I'm a Fan!"
 "Maim loser memorials!"
 "Mean froth! Harm often! Fear month!"
+"Mean stuff, me: fast fun!"
 "Mercy? KO! Mockery!"
 "Mocked? Deck mo[']!" []
 "Moralz? LAMZOR!!!!" []
@@ -36702,6 +36830,7 @@ blurb
 "Prudes? Us? Derp!"
 "Pun, hi? Un-hip!"
 "Requests for a Hologram Harm Logo." [x]
+"Rise, mock more sick!"
 "The rogues, us, go there."
 "Ron's Den = NO NERDS!"
 "Ruffian Funfair coming soon!" [x]
@@ -37162,6 +37291,7 @@ blurb
 "a log-lair gorilla"
 "a lone-rook onlooker"
 "luster-befit butterflies"
+"a malarkey-realm yak"
 "a marbled red lamb"
 "marrowish hairworms"
 "a master-mo['] marmoset"
@@ -37201,6 +37331,7 @@ blurb
 "re-denier reindeer"
 "real-wuss walruses"
 "a retirer terrier"
+"a riffage giraffe"
 "a riffage giraffe"
 "a rip-pounce porcupine" []
 "rooster toreros" []
@@ -37456,6 +37587,7 @@ blurb
 "'Ego slit? Leg it so!'" []
 "'Eh, valour overhaul?'" []
 "'Emigrate it? Meager!'"
+"'Erect nice reticence!'"
 "'Exit meant a Next Time!'"
 "'Fantastic faint scat!'" []
 "'Fear nigh? Hang fire!'"
@@ -37489,6 +37621,7 @@ blurb
 "'A legion? Ego lain! Go alien!'"
 "'Lo! Retire, loiterer!'"
 "'A low AWOL!'"
+"'Magnificent feinting, Mac!'"
 "'March out, our match? Macho rut! Humor, cat!'"
 "'Must go? Mo['] guts!'" []
 "'My foe, mo['] fey!'"

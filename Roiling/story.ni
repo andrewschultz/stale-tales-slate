@@ -13312,7 +13312,7 @@ chapter two ways out
 
 section pier sign
 
-the pier sign is vanishing scenery in ripe pier. "You can't see much of the actual pier, but you can smell it. Thankfully, the pier sign offers some advice. 'Ripe pier! Boat rides ABROAD! Disclaimer: deal with DA MIST at your own risk.'[paragraph break]Hmm. There may be more than one way to get by."
+the pier sign is vanishing scenery in ripe pier. "You can't see much of the actual pier, but you can smell it. Thankfully, the pier sign offers some advice. 'Ripe pier! Boat rides past a RAD BOA! Disclaimer. Da mist: SAD, TIM? IT'S MAD.'[paragraph break]Hmm. The all caps words are in red. There may be more than one way to get by."
 
 understand "abroad" as a mistake ("You can't go abroad til you get--well, you can figure it out.") when mist is visible.
 
@@ -19844,14 +19844,14 @@ before asking smart kid about when smart kid is reflexive:
 	kid-fid instead;
 
 to kid-fid:
-	say "[kid-first] says 'Sorry, I'm too distracted...I'm even distracted by how I'm distracted, and why I am, and why I shouldn't be, and how I'm wasting my smarts, but I better not think I'm TOO smart.'[paragraph break]Fidget, fidget, fidget.";
+	say "[kid-first] says 'Sorry, I'm too distracted...I'm even distracted by how I'm distracted, and why I am, and why I shouldn't be, and how I'm wasting my smarts, but I better not think I'm TOO smart. Anyway, I'd f'get...'[paragraph break]Fidget, fidget, fidget.";
 
 a-text of smart kid is "RYRRYR". b-text of smart kid is "RGRRGR". parse-text of smart kid is "x[sp]i[sp]x[sp]x[sp]e[sp]d".
 
 understand "fidget" as smart kid when location of smart kid is location of player.
 
 every turn when smart kid is reflexive and player is in coastlines and smart kid is in coastlines:
-	say "[kid-full] continues to fidget and mutter a wish to be just a BIT smarter. Fidget, fidget, fidget."
+	say "[kid-full] continues to fidget and mutter a wish to be just a BIT smarter. 'I'd f'get...' Fidget, fidget, fidget."
 
 the atblock is privately-named LLPish vanishing scenery. printed name of atblock is "tentativeness". description is "[bug-report]".
 
@@ -20714,6 +20714,9 @@ definition: a thing is followy:
 the impressive cliff is a useless backdrop. it is in Blasted Saltbed, anemic cinema, Unblest Sunbelt, danger garden. "It's impressive enough to inspire you to do something impressive, full of scaly clays."
 
 Leak Lake is a useless backdrop. it is in salted deltas, Actionless Coastlines, Ole Shrine Shoreline. "Leak Lake is so named because many bodies of water leak into it, and it leaks into others. You are glad it doesn't smell of carp, but it does smell of some sort of vegetable."
+
+instead of drinking leak lake:
+	say "Too icky." instead;
 
 check entering leak lake:
 	if player is in coastlines and bot boat is in coastlines:

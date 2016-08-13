@@ -52,6 +52,7 @@ blurb
 "Alfred Fardle"
 "Alfrido Florida-Ailford"
 "Algey Yagle"
+"Alika Kalai"
 "Aline Laine"
 "Alisha Salahi"
 "Alister Lasiter-Artiles"
@@ -403,9 +404,11 @@ blurb
 "Ernie Neier"
 "Ernst Stern"
 "Errik Riker"
+"Errike Reiker"
 "Errol Lorre"
 "Erskine Eriksen"
 "Erving Gervin"
+"Eryca Carey"
 "Esau Seau"
 "Esme Mees"
 "Esther Hester"
@@ -690,6 +693,7 @@ blurb
 "Lida Dial"
 "Lilla Lalli"
 "Lilse Liles" []
+"Lily-Roe O'Reilly"
 "Linda Landi-Dalin"
 "Linne Lenin"
 "Linsey Selyin-Insley"
@@ -731,6 +735,7 @@ blurb
 "Maida Adami"
 "Malik Klima"
 "Malika Kamali"
+"Malysa Almasy"
 "Manderson Sonderman"
 "Mandie Demian" []
 "Manifred Friedman"
@@ -911,6 +916,7 @@ blurb
 "Oskar Kosar"
 "Oskar Sroka" []
 "Oskram Markos" []
+"Osmond Mondos"
 "Ossip Sipos"
 "Osvaldo Davolos"
 "Osvaldo Lovados" []
@@ -1120,6 +1126,7 @@ blurb
 "Sidney Disney"
 "Sigbert Gribets"
 "Sigmund Mudgins"
+"Silvana Valanis"
 "Silvia Valisi"
 "Simon Minos"
 "Siskel Kissel-Skiles"
@@ -1162,6 +1169,7 @@ blurb
 "Tandra Darant"
 "Tangela Galante"
 "Tanisha Ashanti" []
+"Taranis Sinatra"
 "Tarek Akter"
 "Tareza Zarate"
 "Tasia Asati-Satai"
@@ -1420,7 +1428,9 @@ blurb
 "Praecox-Pox Acre"
 "the primeval vile ramp"
 "Purely Shot Leprosy Hut"
+"Raw Edge Ragweed"
 "A Region Air-Gone"
+"Rest-Choke Sheet Rock"
 "Retain-Flu Alien Turf" []
 "Rockwell Work Cell"
 "Rough Fen of Hunger"
@@ -1959,6 +1969,7 @@ blurb
 "Grenade! En garde!"
 "Grievin['], Genivir? Grin! Vie!" []
 "A grim old marigold!"
+"Grit and Dr. Giant, Darting."
 "Gunfire rung! Fie!"
 "Gus dies? I'd guess Sue digs."
 "A gym, gamy. My gay mag."
@@ -2064,6 +2075,7 @@ blurb
 "I nosh on his shin, o!"
 "I, rankest, streak in, a stinker."
 "I, relay yer ail? Ya rile, ye liar!" []
+"I, reopening pioneering in one gripe."
 "I sally a silly, ill say. Ail, sly!"
 "I sent off fine sotf feints of one stiff info fest!"
 "I square a squire!"
@@ -2097,6 +2109,7 @@ blurb
 "Ill-Ache Ice Hall."
 "Ill, sad ark! All is dark! A lark slid!"
 "Ill vain villain!"
+"Illusion, a chant, annual holistic hallucinations."
 "In be tots so bitten."
 "In gulf, I flung Gil. Fun!"
 "In NJ a Ninja."
@@ -2356,6 +2369,7 @@ blurb
 "OK! Awe awoke!"
 "OK, go find food, king."
 "Ol['] Slew-So-Well."
+"Ol['] turbine in trouble. Rebuilt? No!"
 "Old Dan and Old Donald."
 "Old El Paso deal pools: pedal, solo."
 "Old foe, fooled!"
@@ -2644,6 +2658,7 @@ blurb
 "Some Long Ol['] Gnomes['] Englooms: Go Solemn."
 "Some toad set a mood as mooted."
 "Some trip! More pits, po['] mister!"
+"Son, a lad, and also no salad."
 "Soon, Emit Emotions!"
 "Soon the one shot on those!"
 "Sorrowful slow furor."
@@ -2829,6 +2844,7 @@ blurb
 "A villa, eh? Heal vial--all I have!"
 "Vines site: its envies, sensitive."
 "Vocal stir! Vicar lost! Rival cots! Victrolas!"
+"Wait for a writ of fair two."
 "Waldo's was old. Ow, lads!"
 "A wall? Yup, pull away."
 "Warm blood? Bad ol['] worm."
@@ -3120,6 +3136,7 @@ blurb
 "'Nepotists['] pottiness: inept sots!'"
 "'New large green law!'"
 "'Next, go rip exporting!'"
+"'Nice to max income tax! Exotic, man!'"
 "'No, Cats! NastCo so can't scan to...'" []
 "'No crime, MinerCo?!'"
 "'No direr orderin[']!'"
@@ -3253,6 +3270,7 @@ blurb
 "'To super posture, pouters!'" []
 "'Tons-Mart? Not Smart!'"
 "'TonsCo: no cost to cons!'"
+"'Top scan can spot PantsCo!'"
 "'Toxins? IX tons, not six!'"
 "'TPTB? PBTT!'"
 "'Tradition, idiot? Rant!'"
@@ -3301,6 +3319,7 @@ table of condo dialogue [xxm2]
 blurb
 "'Art deco! DO react, redcoat!'"
 "Art ethic. Their act: chattier, theatric."
+"'Awful diet? Wide fault. Flu waited.'"
 "A badly dressed fellow deplores the skankiness of snakeskins." [x]
 "'Be boring? BINGE, bro!'"
 "'Being poor? Bore? No, pig! Gripe boon!'"
@@ -3308,6 +3327,7 @@ blurb
 "'Cadge, sir? Disgrace!'"
 "'Cake, ho! Ah, coke!'"
 "Chat! Soothe toothaches! Taste hooch!"
+"'Chatters? A stretch.'"
 "'Condoles.' / 'Consoled.'"
 "The conversationalists decry conservationalists." [x]
 "Discussion of groats via gastro-argots." [x]
@@ -3380,6 +3400,7 @@ blurb
 "'Asocial? Us? SALACIOUS!' Eww." [x]
 "'Bam! Stop, spambot!'"
 "'BBS? Yah, shabby.'"
+"'Ben Ott's net-bots? Not best!'"
 "'Berated, debater!'"
 "'Best-idea debate is base diet.'"
 "Bewarin['] a brewin['] webinar."
@@ -3403,6 +3424,7 @@ blurb
 "'Coolidge's Logic Odes slice GOOD!'"
 "'[']Cos pie's so epic!'"
 "'Craft glue: gruel. FACT!'"
+"'Crash-into-ion charts? Chain! Sort!'"
 "'A cretin! Certain!' / 'I recant!'"
 "Critiques on [i]Somber Fun of Numbers[r], by Murf Bones." [x]
 "Croupiness percussion. Almost supersonic." [x]
@@ -3911,6 +3933,7 @@ blurb
 "'ME: a right-might era!'"
 "'Me, focus! Scum, foe!'"
 "'Met pain! NAPTIME!'"
+"'Might, RAKE! Make right!'"
 "'Mo['] food OF DOOM!'"
 "'Most erring? I'm stronger!'"
 "'MY spot! Stompy, stompy!'"

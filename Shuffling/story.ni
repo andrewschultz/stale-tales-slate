@@ -984,7 +984,7 @@ sol	chosen
 book section-victory
 
 to metro-victory:
-	say "You draw your sword with the improvised battle cry 'At fencing I'm magnificent!' doing your best impression of St. Abe, or is it St. Bea?[paragraph break]Whichever, the beast scratches you, which you sort of deserve, but then your sword acts as a microphone, converting the beast's remaining beats to equally horrendous lyrics and providing feedback that makes it wince. It gives an owly yowl, tone-deaf: 'Fate! Done!' and runs off.[paragraph break]People can finally think again, so they figure how to find you quickly in the abyss![paragraph break]'How? Who? Ohh wow. You merit this mitre!' someone says. But all you want is to get on with your quest. The escalator in the undesired underside is rigged to go up. You note the ol['] hotel is now Le Hot Hotel, the terminal lean, trim. You then turn your sore to a rose, lead a pared parade and, for slower fun, plant a sunflower before returning to the Trips Strip.[paragraph break]You wonder if you could've just tried to SAY BS to get rid of the metros without trying. Maybe it'd be useful in a future alternate universe.";
+	say "You draw your sword with the improvised battle cry 'At fencing I'm magnificent!' doing your best impression of St. Abe, or is it St. Bea?[paragraph break]Whichever, the beast scratches you, which you sort of deserve, but then your sword acts as a microphone, converting the beast's remaining beats to equally horrendous lyrics and providing feedback that makes it wince. It gives an owly yowl, tone-deaf: 'Fate! Done!' and runs off.[paragraph break]People can finally think again, so they figure how to find you quickly in the abyss![paragraph break]'How? Who? Ohh wow. You merit this mitre!' someone says. But all you want is to get on with your quest. The escalator in the undesired underside is rigged to go up. You note the ol['] hotel (L'Hote Helot) is now Le Hot Hotel, the terminal lean, trim. You then turn your sore to a rose, lead a pared parade and, for slower fun, plant a sunflower before returning to the Trips Strip.[paragraph break]You wonder if you could've just tried to SAY BS to get rid of the metros without trying. Maybe it'd be useful in a future alternate universe.";
 	now stickyhanded is false;
 	reg-inc;
 	solve-region metros;
@@ -8328,7 +8328,7 @@ check going inside in Undesired Underside:
 check going outside in undesired underside:
 	say "You already are in the not-so-great outdoors." instead;
 
-the building is scenery in underside. understand "hotel" as building. description of building is "[first custom style]AND I RAGE[r] is written in red."
+the building is scenery in underside. understand "hotel" as building. description of building is "[if drainage is in underside]It says L'HOTE HELOT[else][first custom style]AND I RAGE[r] is written in red.[end if]"
 
 the down escalator is scenery in underside.
 
@@ -9095,12 +9095,15 @@ check giving gardenia to faeries:
 	now the gardenia is in lalaland;
 	now fairy-worthy is true instead;
 
+to say take-flower:
+	say "A flower! Low fear! Remember, adventurer! The flowers cannot be used for violence. They may be a suitable vessel";
+
 report taking heaths:
-	say "'Remember, adventurer! The flowers cannot be used for violence. They may be a suitable vessel.'";
+	say "'[take-flower].'";
 	the rule succeeds;
 
 report taking begonias:
-	say "'Remember, adventurer! The flowers cannot be used for violence. They may be a suitable vessel.'";
+	say "'[take-flower].'";
 	the rule succeeds;
 
 check taking:
