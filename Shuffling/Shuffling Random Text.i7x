@@ -1355,6 +1355,7 @@ blurb
 "Envy-Fear Navy Reef"
 "even-worse sewer-oven"
 "Feverish Serf Hive"
+"Fireball-Fall Bier"
 "Flay-Hide Hayfield"
 "Fools['] Gold Flood-Slog"
 "Forsaken Oak-Ferns"
@@ -1438,6 +1439,7 @@ blurb
 "A Region Air-Gone"
 "Rest-Choke Sheet Rock"
 "Retain-Flu Alien Turf" []
+"Rife Town of Winter"
 "Rockwell Work Cell"
 "Rough Fen of Hunger"
 "Rude Slob Boulders"
@@ -1499,6 +1501,7 @@ blurb
 "Versace's Crevasse"
 "Very Weird Dewy River"
 "Vile Rust Rivulets"
+"Wait-Long Twin Gaol"
 "Wary-Ado Roadway"
 "Waste-link twin lakes"
 "Weak-Evil Lake View"
@@ -2787,6 +2790,7 @@ blurb
 "To miss mist so is most... SOS, Tim!"
 "To miss moss: it smit so." []
 "To Pop Ferry, poetry prof: rot, foppery of property!"
+"To reefs of trees or fetes."
 "To refuse fee-tours, refute so. Use forte! Reuse oft! Our fetes! Euro-fest!"
 "To ride or diet? Do tire."
 "To sad toads, a toast's odd."
@@ -2844,6 +2848,7 @@ blurb
 "Urgent-smit mutterings: resign, mutt!"
 "The URL lureth? Hurtle!"
 "USA, gold, Douglas? Gad, soul!"
+"USA, once Oceanus: a cue, son?"
 "Ushered So, Hordes Use Red Houses."
 "Vain teen, Venetian: 'Neat vein, inane vet.'"
 "Varletries['] Retrievals! Travel, sire!"
@@ -3422,6 +3427,7 @@ blurb
 "'Bold ideas? Bad. Soiled. Old. Biased.'"
 "'Bold mocks? Block, mods!'"
 "'Bolthead!' / 'D'oh! Bleat, Theobald!'"
+"'Boy, bossy BBS yo-yos!'"
 "A brief argument over the Hax-o-Gen Hexagon: good or bad?" [x]
 "'A broom? Roomba!'"
 "'Bud bags bad bugs!'"
@@ -3532,6 +3538,7 @@ blurb
 "'Math set? That's me!'"
 "'A math trick? Karmic, that!'"
 "'MatLab alt? BAM!'"
+"'Max fills? Small fix.'"
 "'Mediums are for dummies!'" [x]
 "'Mental math, hmm? A talent!'"
 "'Merry Devon? Myron Dever? Very modern nerdy mover.'"
