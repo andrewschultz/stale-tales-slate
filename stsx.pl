@@ -35,6 +35,7 @@ while ($a = <A>)
   $thisLine++;
   if ($a =~ /^table of/)
   {
+	if ($currentTable) { print "WARNING no space between tables in line $thisLine: $a"; $bail = 1; $badLines .= "$a"; };
     chomp($a);
     $currentTable = $a; $currentTable =~ s/ *\[[^\]]*\]$//;
 	#print "Current table now $currentTable.\n";
@@ -45,8 +46,8 @@ while ($a = <A>)
   {
     my @c = split(/\"/, $a);
     if (($a !~ /^\"/) || ($a !~ /[a-z0-9]/i)) { $currentTable = ""; next; }
-	if ($#c > 2) { $badLines .= "$a"; print "WARNING too many quotes in line $thisLine ($#c) table $currentTable: $a\n"; $bail = 1; }
-    if (($a =~ /\"/) && ($a !~ /\".*\"/)) { $badLines .= "$a"; print "WARNING need more than one quote line $thisLine table $currentTable: $a\n"; $bail = 1; }
+	if ($#c > 2) { $badLines .= "$a"; print "WARNING too many quotes in line $thisLine ($#c) table $currentTable: $a"; $bail = 1; }
+    if (($a =~ /\"/) && ($a !~ /\".*\"/)) { $badLines .= "$a"; print "WARNING need more than one quote line $thisLine table $currentTable: $a"; $bail = 1; }
     if ($a =~ /^['`]/) { $badLines .= "$a"; chomp($a); print "WARNING $a not properly quoted, line $thisLine table $currentTable\n"; $bail = 1; }
     if ($a =~ /^[a-z0-9]/i) { $badLines .= "$a"; chomp($a); print "WARNING $a does not start with a quote, line $thisLine table $currentTable\n"; $bail = 1; }
     if (($currentTable eq "table of biopics") && ($a !~ /\t(true|false)/)) { $badLines .= "$a"; print "WARNING biopics entry line $thisLine needs true or false!\n"; $bail = 1; }

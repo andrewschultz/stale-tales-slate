@@ -19372,6 +19372,8 @@ section toaster
 
 The Rosetta Toaster is a container. It is in Topside Deposit. "A Rosetta Toaster rotates here[if start tarts are in deposit], with a pack of start tarts nearby[end if]."
 
+understand "retoast" and "retoast [text]" as a mistake ("You can just TOAST or EAT a pastry once you have it.") when toaster is visible.
+
 check scaning toaster:
 	say "[one of]The toaster looks like a pretty good diagnostic item as-is, and it doesn't need an upgrade, so you're not disappointed when nothing pops up[or]Still nothing. The toaster probably doesn't need an upgrade[stopping]." instead;
 
@@ -19383,7 +19385,7 @@ Rule for printing room description details of the Rosetta Toaster:
 
 the Rosetta Toaster has a number called charges. the charges of the Rosetta Toaster is usually 0.
 
-the description of the Rosetta Toaster is "This nutriments instrument, according the writing beneath 'O Treats,' automatically applies a much more appropriate description to the target of your choice than the most obvious one. Which makes up for it not having a dial for how dark you toast your preferred flat bread product. It's not available at-store and known to cause conflicts with namer ramen[one of].[paragraph break]it'as also known as a toast-o-stat[or][stopping]."
+the description of the Rosetta Toaster is "[one of]You begin to stare.[paragraph break][or][stopping]This nutriments instrument, according the writing beneath 'O Treats,' automatically applies a much more appropriate description to the target of your choice than the most obvious one. Which makes up for it not having a dial for how dark you toast your preferred flat bread product. It's not available at-store and known to cause conflicts with namer ramen[one of].[paragraph break]it'as also known as a toast-o-stat[or][stopping]."
 
 understand "toast-o-stat" and "stat" as toaster.
 
