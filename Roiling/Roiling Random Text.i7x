@@ -4000,6 +4000,7 @@ blurb
 "Def Sanner Fernandes"
 "Def Seaton Destefano"
 "Def Terisa Defreitas"
+"Def Tones Ed Sefton"
 "Def Wilborn Brownfield"
 "Dis-Well Sidwell"
 "Disowned Odd Swine"
@@ -4525,6 +4526,7 @@ blurb	fave
 "Good [if player is male]Man? [else]Woman? Ow, [end if]Mad Goon[r], by [if player is male]Dan[else]Wonda[end if] Moog"	false
 "Here Trots the Sorter[r], by Ester Hort"	true
 "Hero, Get There: GO[r], by Thor Gee"	true
+"Hero, Ply, Be Hyperbole[r], by [if player is male]Lee Brophy[else]Beryl Hope[end if]"
 "Hero Tasks? Ask Others[r], by [if player is male]Theo Krass[else]Kathe Ross[end if]"	false
 "Hero Tent Not There[r], by Rene Toth-Etherton"	false
 "Hog, Urge a Rough Age[r], by Rea Gough"	false
@@ -8034,6 +8036,7 @@ blurb
 "O Town to Own"
 "Oaths by Hats Boy"
 "Odd [a-word-u] Saddos"
+"Off Lewd Def Flow"
 "Oh, All Holla" []
 "Oh, Her Gig? Go Higher"
 "Oh, Li'l Holli, Ill Ho"
@@ -15126,6 +15129,7 @@ blurb	prio
 "Sit Thereon in the Store[r], by Theo Estrin"
 "Sit, Ye Yetis[r], by Ty Eis"
 "Sits-Mum Summits[r], by Stu Mims"
+"Six Algae Galaxies[r], by Alix Sage"
 "Six Clone Lexicons[r], by Niles Cox"
 "Six Neat Tin Axes: It's Xena[r], by Anti-Sex Ex-Saint Esta Nix"
 "Six Rope Proxies[r], by Ox Pires" []
@@ -16857,6 +16861,7 @@ blurb
 "notes [i]Unwary Ryan Wu[r] underlines too much education is never enough." [x]
 "notes all the clever implications in [i]The Pill: Help, [']Til[r]." [x]
 "notes anyone can be tempted, like in [i]Stars Go to Grass[r]." [x]
+"notes how [i]Thug Life: Ugh, I Left[r] isn't just about drugs."
 "notes that [i]THEM, METH[r], does, indeed, 'h/t me.'" [p] [x]
 "notes the budget of [i]Hemp, Dust: The Dumps[r] was worth every penny."
 "notes the exoticism and down to earthiness of [i]The Ganja, Then a Jag[r]." [x]
@@ -34807,6 +34812,7 @@ blurb
 "amateur e-trauma"
 "Amico's mosaic" []
 "Amnestied dementias"
+"the ample apple lemma"
 "Analogism magnolias" []
 "Ann Scott's constants"
 "antic frog go-frantic factoring" []
@@ -36569,9 +36575,11 @@ blurb
 "Freudian feud, rain!"
 "Grey men, my genre."
 "Haiku, pest? Shake it up!"
+"Hyperbole: helper? Boy!"
 "I draft, adrift..."
 "I Snared a Snider Sardine." []
 "Many weigh Hemingway. Enigma: why?"
+"Max prosy paroxysm."
 "Meta-fiction faction time: am I confetti?" []
 "Modernism: dim sermon."
 "Muser serum...muser serum!"
