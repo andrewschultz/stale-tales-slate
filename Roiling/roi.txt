@@ -875,13 +875,18 @@ Playing the raves saver isn't enough.
 ?How should Dr. Yow lecture the kid?
 WORDY has been done. This is an exciting lecture. Or it needs to be. Kids get bored easily!
 ROWDY.
-?The audience isn't listening!
-The kid is trying not to be in awe but failing. Too TENTATIVE.
-Make the kid ATTENTIVE.
+?The kid looks tentative. Can I change that?
+This is an LLP. It was part of the main puzzle before I felt it was a bit arbitrary. The word was too long, and it was too easy in cheat mode.
+TENTATIVE can become...
+...ATTENTIVE.
 >>ACTIONLESS COASTLINE
 ?Somebody seems to be hiding. What gives?
 Ray Eck and Lois the Hostile, or the Hostile-is-He Lot, are hard to hang with.
-You need to get rid of them.
+You need to get rid of them both. When they do, someone new will appear.
+?Does the kid have to FIDGET so much?
+He can't. He would love to be a bit smarter.
+You can calm him down and help him focus by making him...
+...GIFTED.
 ?What's the kid interested in?
 Technical stuff. Like Dr. Yow knows. Dr. Yow's in the subsector.
 ASK KID ABOUT DOCTOR once you rescued the doctor.

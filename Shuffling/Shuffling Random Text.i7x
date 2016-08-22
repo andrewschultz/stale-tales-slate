@@ -1999,6 +1999,7 @@ blurb
 "Grievin['], Genivir? Grin! Vie!" []
 "A grim old marigold!"
 "Grit and Dr. Giant, Darting."
+"Grooming mo['] goring? Grim goon."
 "Gunfire rung! Fie!"
 "Gus dies? I'd guess Sue digs."
 "A gym, gamy. My gay mag."
@@ -2077,6 +2078,7 @@ blurb
 "Hunt is shut in!"
 "Hurt lichen, their lunch in the lurch!"
 "Hurt? No? Run hot or hunt!"
+"Husky dragon, doughy ranks, shaky ground."
 "The hut, ehh? Tut!"
 "Hut folk oft hulk."
 "Hut-fort of truth, oft hurt!"
@@ -2564,6 +2566,7 @@ blurb
 "The rifts! The first theft, Sir." []
 "Right, foes. Forget his foresight!"
 "Rigid fate. Gift aired: gratified."
+"Ripen, dusk! Skip under!"
 "Ripeness or repression re-opens, sir!"
 "Rise, bad seabird! A bride's bread is braised!"
 "The rise, it's here! His tree, he tires!"
@@ -3046,6 +3049,7 @@ blurb
 "'Damage a gamed mega-ad!'"
 "'De-bar Debra Beard-Bader!'" []
 "'Deft bogus budgets of debt fog us!'"
+"'Democracy coda: decry!'"
 "'A desk job? Jokes! Bad!'"
 "'Devastate a seated TV! Evade, stat!'"
 "'Diesels? IDLESSE!'"
@@ -3271,6 +3275,7 @@ blurb
 "'Sick of FiskCo!'"
 "'Silence? NO! Insolence!'"
 "'Slobbery lobbyers!'"
+"'Smarten up! Amp unrest! Unstrap [']em!'"
 "'SnareCo cares? No!'"
 "'Snub nemesis businessmen! I...numbnesses!'"
 "'So fend on, Feds, fo['] ends!'"
@@ -3415,6 +3420,7 @@ blurb
 "Slimiest elitisms."
 "'Snack time!' / 'Mint cakes?'"
 "Snatchiest chattiness."
+"Snootin['] notions."
 "Some posher hopers think domestics should cost dimes." [x]
 "Someone agrees with Kramer's remarks entirely, whatever they are." [x]
 "Someone asks if they can arrest that starer." [x]

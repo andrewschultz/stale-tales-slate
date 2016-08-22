@@ -1210,7 +1210,7 @@ The Reed's Ale man can't decide if he should stay or go.
 
 > E
 
-The deacons are once-sad, but they are plotting a hostile ol' heist of St. Eliho. How to stop this horrid act?
+Now whether you are facing Lois the Hostile or the Hostile-is-He Lot, they really need to become much, much nicer.
 
 > HOLIEST
 
@@ -1318,13 +1318,15 @@ The fissure can be messed with, and so can the (locked) gate.
 > N
 > N
 
+Help the kid not fidget.
+
+> GIFTED
+
 > TELL KID ABOUT YOW
 
 (There are other ways to do this, but this is the most straightforward...I think.)
 
-The kid's having trouble concentrating. He's tentative.
-
-> ATTENTIVE
+The kid's having trouble concentrating. He's tentative. LLP time.
 
 Now for something to listen to that's interesting.
 
@@ -1814,13 +1816,13 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
   * release 2: you can now do something with the sign in the initial area, and there's a new verb for you to get out, which relies on people there and not the bar name. Also, you need to get 3 of 5 verbs. The sign in the shore is gone, but the raft is visible and has a two-part solution with oars. You no longer need to ARRIVE--there's a better verb since there are boats. The portal moved from the plains to the hideout. You no longer need to SHAPE the heaps--the tubs, instead. The papery yapper is not present to bribe. The pills are now available to skip a puzzle. There is a side area to put an item to frame the walleyes less implausibly. There is also a side quest that starts in the Fishbowl and ends just before the final location, which is named differently. It involves wipes, waste, a lance, an ant and, optionally, the heaps, re-purposed. You also get killed a lot less by the haunter. The game gives a warning.
   * release 3: it's now 3 of 6 verbs to learn in the Hops Shop (renamed in release 2) though 2 relate to the jukebox, along with an LLP in the Handsome Sand Home (ex-fishbowl) (dent) and in the plains (general) with a LLP in the Lean Lane. You also have another puzzle and location if you get on the boats (LEAP).
 3 PRESTO:
- * release 1: Rickey is here instead of Rand.
+ * release 1 (deprecated) : Rickey is in Dirge Ridge instead of Rand.
  * release 2: Lawl Wall replaces Horned Hedron with more sensible puzzle. You now need to summon a SUB or BUS at the end. Rand was Rickey. The Lawl Wall was not there. Many places are renamed.
  * release 3: some causality is fixed in this release. It may have more to do with the hints than the actual puzzles, but that should be clearer, now. The escaroles allow an alternative path to bring the yak over. You no longer have to read the textbook.
 4 TOWERS:
  * release 2: guardians are moved around, with the ingrates (more appropriate for the right word) replacing the yapper, who is optioned to the Oyster's final room where he makes more sense. The nebula now guards items in the topside. You must also get rid of both the prefect (swaps with pirates) and the deacons so the kid appears. The bonker is new as well. The sweatier wait-seer replaces the thug and clues the right word better. Many guardians are moved around. You could skip certain things with the kid before, like giving him the Gizmo, but you can't now.
  * release 3: the tavern was moved to the start, to give you a clearer idea what to do and give more of a storyline. You need to dispel three of six random guardians before Rodney goes, not 2 of 4, Daltho has his own room, and DYING is switched back from a solution to what it is. The nebula now guards Daltho's own room. You go back there instead of to the tavern. Andrew, Archie, Barney, Bredo, Dewey, Goldy, Marcel, Marlon (I didn't find the relatively simple code to override "normal,") Royce and Wade are also not present in the comp release. Most were in release 2 as well, though I'm too lazy to research which. RIP the slobb-blobs. The snider diners and natives are new, with greedy Ed Yerg replacing the greedy gnome. The atheists and yacker are new, too, with the serpent replacing the nebula. The yurts are now a last lousy point. Curst Palace now has a name--Castle Apcur.
- * release 4: the jetskis are gone, and you now ENTER BOAT to get where you need.
+ * release 4: the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. You also need to make the kid stop fidgeting before talking about Dr. Yow. The old puzzle is now an LLP. The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better.
  5 TROVES
  * release 2: you now have a new action near the end in addition to dealing with the singer. Eddie C was not in release 1. The lager was also moved from the Very Top/Office. DIVORCES did not appear in release 1.
  * release 3: you had only one way to find the cellar (the direct way) in release 2. Now you have another. LLP with the book the guy gives you at the start. It's renamed, with an author, Peg A. Page. There's now a different puzzle to enter the skyscraper (PERNOD vs STEW)
@@ -1830,6 +1832,7 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
   * release 4: I added yet a few more ways the macks were annoying, because it was fun.
 6 OTHERS was an added area for release 2, so there are really no comparisons from release 1 to release 2. Other than that I hid it for release 1 a week before the deadline because I realized it was extraneous.
  * release 3: added persimmon and breadfruit. I forget if Curtis gave you the token right away in release 2, or you had to wait.
+ * release 4: added coconuts and other fruits. New puzzle for tangerine, and melons/lemons each have their own word now.
 7 DEMO DOME was added in release 3, so there are no comparisons before.
  * release 3: initial, and you just examine stuff.
 
@@ -1906,7 +1909,7 @@ Store H has a minimum of 160 and a maximum of 321. But its theme is easy enough,
 
 LAST LOUSY POINTS
  
-Note that I'm not really going to address cases like finding 3/3 things when you only need 2/3 or, in OTHERS, where you can avoid flipping a lot. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things. I'm also not including the other things to change in OTHERS, as none are really "last lousy."
+Note that I'm not really going to address cases like finding 3/3 things when you only need 2/3 or, in OTHERS, where you can avoid flipping a lot of fruits. Or all the guardians in Towers, where you can leave seven alone. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things and, in fact, can't really help you go forward. Often they will seem superfluous or even slightly hidden.
 
 Hints are in ROT13.
 
@@ -1934,6 +1937,8 @@ Note that troves has a lot of 1-of-2 puzzles, where you may or may not skip to t
 
 TOWERS:
 
+Note that five of the guardians can be left alone.
+
 The denim can be ZVARQ for a new pastry.
 The strudel can be EHFGYRQ for an extra point, though you can just take it.
 The yurts can be LHEGF.
@@ -1941,6 +1946,10 @@ The yurts can be LHEGF.
 The docile old ice can be PBVYRQ.
 The replay player can be CRNEYL.
 HAERNY or CHYFRF for the neural pulses. Yes, the second isn't right for the region, but it's an LLP.
+
+The smart kid can also be made NGGRAGVIR in the Subsector.
+
+Across the pond, the serpent can be CERFRAG, the crocus (dying) can become QVATL, and Ed Yerg can become GREY(ED).
 
 OYSTER:
 
