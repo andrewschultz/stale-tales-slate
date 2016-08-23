@@ -1,5 +1,6 @@
 out=shuffling-invisiclues.htm
 !Shuffling Around HTML Clues
+->c:/games/inform/shuffling Materials/Release
 >INTRODUCTION
 ?What is my power in this game?
 Does the name of this opening room strike you as curious?

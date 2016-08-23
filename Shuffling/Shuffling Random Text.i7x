@@ -316,6 +316,7 @@ blurb
 "Dedrick Reddick"
 "DeLana Andale"
 "Delilah Hallide"
+"Delmon LeMond"
 "Delsie Seidel"
 "Dena Nead"
 "Denard Darden" []
@@ -1259,6 +1260,7 @@ blurb
 "Verna Raven"
 "Vernia Vanier" []
 "Vernie Ervine-Venier"
+"Veronha Hanover"
 "Vesta Taves"
 "Viola Oliva"
 "Virgine Vignier"
@@ -1492,6 +1494,7 @@ blurb
 "Stop-Win Snow-Tip"
 "Streaming-Mist Range"
 "the Suasory Ossuary"
+"Subprime Bum Spire"
 "Suffering-Rung Fiefs"
 "Tall-Odor Toll Road"
 "the tallowy tollway"
@@ -1504,6 +1507,7 @@ blurb
 "Trail of Fail-Rot"
 "Traumatic Cat Atrium"
 "True-Down Undertow"
+"True Punk Turnpike"
 "undeads['] sad dune"
 "Unwary Runway"
 "Unwieldy Wily Dune"
@@ -1707,6 +1711,7 @@ blurb
 "The day had yet deathy!"
 "Daytime. Me, a tidy maid yet?"
 "Dear Di: I dread ire -- Dad."
+"Dear golem, lamed ogre. Dogma, reel. Ogle dream."
 "Dear Rev Everard averred, re-raved!"
 "Death of fate. D'oh!"
 "Deathly deal thy dye. Halt, the lady!"
@@ -3160,6 +3165,7 @@ blurb
 "'Loser flow-followers!'"
 "'Low threats, wealth sort? Lost the war!'"
 "'Lower taxes: exalt worse!'"
+"'Loyal fop? Fool play. Ay, ol['] flop!'"
 "'Mad flouter? Artful demo? Formulated!'"
 "'Make coins? Mean sicko!'"
 "'Make dough? Egad! Hokum!'"
@@ -3562,6 +3568,7 @@ blurb
 "'It's leet. I settle.'"
 "Jock-hate joke-chat."
 "'The jock joke? Tch.'"
+"'Kerberos reeks, bro!'"
 "'Knowing-now king? Wink Ngo!'"
 "'The latest! That's leet!'"
 "'Lean on one LAN? No, Neal!'"
@@ -3682,6 +3689,7 @@ blurb
 "'Oust dips so stupid.'"
 "'Panic, I? CPAN!'" []
 "'Paper? I'd ... prepaid ride-app!'"
+"'Past dorks['] dark spots.'"
 "'Patric's pics-art? A script!'"
 "'PeerSci Creep is Precise!' they admit, exhaustedly." [x]
 "'Pen this: ShipNet!'"
@@ -3761,6 +3769,7 @@ blurb
 "'Threading hit danger? Read THING.'"
 "Three cups! Uh, respect super tech!"
 "Thunder, the durn nerd hut."
+"'To input! Put it on!'"
 "'To us be obtuse? Bust! E-o!'"
 "'To use IQ? Quite so!'" []
 "'Two-bit-wit bot!'"
@@ -3956,6 +3965,7 @@ blurb
 "'FIE! DROP, PRIDE OF DRIP-FOE!'" []
 "'A fight? Ha, gift!'"
 "'FIND LOSER-NERDS. FOIL!'"
+"'Floored foe! LORD!'"
 "'FOE: BULLIED? DOUBLE LIFE? BLUE? FOILED!'"
 "'Frump face! Creampuff!'"
 "'Fumble, elf-bum!'"

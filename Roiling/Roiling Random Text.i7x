@@ -928,6 +928,7 @@ blurb
 "To cuss cuts so!"
 "To hiss is tosh." []
 "To quips? Quit, sop!"
+"To snipe? So inept!"
 "Torchier Rhetoric!"
 "Tore up? Pouter."
 "Twinges stewing?"
@@ -1320,6 +1321,7 @@ blurb
 "Saner Tip Pantries." []
 "Scheduling-Cluing Shed!"
 "Should've Solved, Uh?"
+"Shoveling Solve Nigh."
 "Silverado Aid Lovers."
 "Smart-Pick Trick Maps!"
 "So Not Fair? Info, Sorta."
@@ -1914,6 +1916,7 @@ blurb
 "Nod. Truth don't hurt."
 "'O, quite,' quote I."
 "On doubts: bud, not so!"
+"Pleasing, pale sign."
 "Reaction's so certain."
 "Right on, I throng!" []
 "Say ays?"
@@ -3081,6 +3084,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Natale's Sealant"	false
 "Near-Miss Seminars"	false
 "NeatCo: Octane at Once!"	true
+"Ned Barr's Rebrands"	false
 "Neil's Liens"	false
 "Nelson's Data Stands Alone!"	true
 "Nemeth Menthe"	false
@@ -3148,6 +3152,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Olga Hu's Goulash"	false
 "Olga Mohr's Holograms"	false []
 "Olympus Slop, Yum: Plum, Soy!"	true
+"Omar Reis Armories"	false
 "One-Swap Weapons"	false
 "Oompah's Shampoo"	false
 "Ooz-Rich Chorizo"	false
@@ -4578,6 +4583,7 @@ blurb	fave
 "To Vanish, Shot, Vain[r], by Hans Voit"	false
 "Upstream Into Permutations Use: Important[r], by [if player is male]Rupe Mattison[else]Simona Pruett[end if]"	true
 "Very Well Done? YELLOW NERVED[r], by [if player is male]Dewey Norvell[else]Evelyn Dowler[end if]"	false
+"Vie, Rebel, Believer[r], by Bree Levi"	true
 "Visionary? Yo, VAIN, Sir[r], by Ivory Sina"	false
 "Whoa, Heart, What a Hero[r], by Tarah Howe"	true
 "A Wit, Hedged: Dead Weight[r], by Dwight Eade"	false
@@ -5688,6 +5694,7 @@ blurb
 
 table of lame computer games [xxm6]
 blurb
+"Abuser-Girl/Bruiser-Gal Burglaries"
 "Ace For a Force" []
 "Ace Vs. Caves"
 "Ad-Rid Air Raid" []
@@ -6452,6 +6459,7 @@ blurb
 "Freedom From Dee"
 "Fretting Gent Rift"
 "The Frogs Got Fresh"
+"Front Line: None Flirt"
 "Frosh Lick Rich Folks"
 "Fruits Rift Us"
 "The Fun Fen Hut"
@@ -8399,6 +8407,7 @@ blurb
 "'Soft? Rosy? So frosty!'"
 "'Solitude's dissolute!'"
 "Surging Urgings."
+"Tourist, stir! Out!"
 "'TYRANT'S RANT STY!'"
 "'Upstaged? Upset? Gad!'"
 "'Venerable? Never able!'"
@@ -8417,6 +8426,8 @@ blurb
 "Actual Sina Santalucia"
 "Al 'Chump' Mcphaul"
 "Al 'Hips' Haslip"
+"Alec 'Yum' Mcauley"
+"Allen 'Yum' Mullaney"
 "Alto Ben Labonte" []
 "Alto Bo Lobato"
 "Alto Cyr Claytor" []
@@ -8424,7 +8435,9 @@ blurb
 "Alto Minh Hamilton"
 "Alto Nevin Valentino"
 "Alto Toal"
+"Andra 'Yum' Muradyan"
 "Angsty Ty Gans"
+"Ann 'Yum' Munyan"
 "Annese 'Chum' Schueneman"
 "Any-Clot Clayton"
 "Ara 'Dish' Rashida" []
@@ -8622,10 +8635,12 @@ blurb
 "Cute Tora Crotteau"
 "Cute Ula Cuautle"
 "Cyril's Lyrics"
+"Dan 'Yum' Munday"
 "Dang-Dim Madding"
 "Darling Lingard"
 "Darn Fly Fryland"
 "Darn Glib Girl Band"
+"Daron 'Yum' Raymundo"
 "Dashing Dan Gish" []
 "Dear Amy Demaray-Maready"
 "Dear Arch Hardacre" []
@@ -8789,8 +8804,10 @@ blurb
 "Emmitt 'Hope' Petithomme"
 "Emo Boy Bo Moye"
 "Emo Moe"
+"Ena 'Yum' Mauney"
 "Enid 'Chum' Duchemin"
 "Enormo-Mooner Ron Moe" []
+"Enos 'Yum' Mounsey"
 "Exploited Po['] Idle Tex"
 "Failed Luc Caulfield"
 "Fair Allen Farinella"
@@ -8829,6 +8846,7 @@ blurb
 "Grungiest-Gut Singer Gus Ginter"
 "Hackneyed [if player is male]Chad Keeny[else]Dyan Cheek[end if]"
 "Hades Heads" []
+"Hae 'Yum' Mayhue"
 "Hangdog Dan Hogg"
 "Hard-Luck Chad Krul" []
 "Hard Rockin['] [if player is male]Darrin Koch[else]Darci Krohn[end if]"
@@ -8968,6 +8986,7 @@ blurb
 "Jinxed Jed Nix"
 "Jumbled Jed Blum"
 "Kabir 'Chum' Krichbaum"
+"Kao 'Yum' Yoakum"
 "Kern 'Dish' Hendriks"
 "Kewl Welk" []
 "Kind Alber Birkeland"
@@ -9074,7 +9093,11 @@ blurb
 "Lame Trey Altmeyer"
 "Lame Una Manuela"
 "Lame Van Maneval"
+"Len 'Yum' Munley"
+"Leonor 'Yum' Mulrooney"
 "Les 'Dish' Shields"
+"Lev 'Yum' Mulvey"
+"Levan 'Yum' Mulvaney"
 "Li'l Bess Bissell"
 "Li'l Kip Killip"
 "Lita 'Chum' Matulich"
@@ -9400,6 +9423,7 @@ blurb
 "Old Yetta Aydelott"
 "Omer 'Chum' Muchmore"
 "On-Meter Emerton"
+"Ona 'Yum' Youman"
 "Operatic Pia Ector"
 "Organist Rita Song"
 "Outcast Stu Cato"
@@ -9511,9 +9535,12 @@ blurb
 "Recreator Carretero"
 "Red Hot Ed Roth" []
 "Rejected Jed Crete"
+"Ren 'Yum' Rumney"
 "Rena 'Dish' Sheridan" []
 "Rena 'Hips' Einspahr-Seraphin"
+"Renae 'Yum' Neumayer"
 "Renate 'Dish' Eisenhardt" []
+"Renee 'Yum' Neumeyer"
 "Rent Al Lenart"
 "Rent Aldo Alderton"
 "Rent Ali Lantier"
@@ -9626,6 +9653,7 @@ blurb
 "Rod 'Chum' Murdoch"
 "Rolling Ron Gill" []
 "Romantic Carin['] Tom" []
+"Rose 'Yum' Seymour"
 "Rowena 'Hips' Spainhower"
 "Rube Aida Rabideau"
 "Rube Al Lauber"
@@ -9873,6 +9901,7 @@ blurb
 "Too-Dire Ode Trio"
 "Top Loser Lopresto"
 "Top-Ode Ed Toop"
+"Tora 'Yum' Moutray"
 "Tortured [d-t] Ruter"
 "Tramp Chet McPhatter"
 "Tramp Eli Palmiter"
@@ -9897,6 +9926,7 @@ blurb
 "Weakling Wink Gale"
 "Weathered [if player is male]Reed Wheat[else]Thea Wrede[end if]"
 "Welcomer Clem Rowe"
+"Weldon 'Yum' Muldowney"
 "Wert 'Dish' Dewhirst"
 "Wistful Lu Swift"
 "Worn Alec Lowrance" []
@@ -10132,6 +10162,7 @@ blurb	prio
 "And the Ten Had Hat Den[r], by Ted Han"
 "And to Nod at a Don't[r], by [if player is male]Donta[else]Tonda[end if] Donat"
 "And Toys Don't Say Stand, Yo[r], by Tad Sony" []
+"And We Wend: a New Ad Waned[r], by [if player is male]Ewan Wadden[else]Wende Dwana[end if]"
 "And Yes, in Nine Days[r], by Sandi Ney"
 "Andre Nader, A Nerd[r], by Daren Raden" []
 "Androids So Drain'd[r], by Sid Doran"
@@ -13737,6 +13768,7 @@ blurb	prio
 "Noble Mt. Belmont[r], by Ben Tolm" []
 "Noble Romp: No Problem[r], by Rob Pelmon"
 "Noble Savage Gleans Above[r], by Vanesa Bogle & Geneva Sabol"
+"Nobler Vow, Overblown[r], by Love Brown"
 "Noblest Belton's[r], by Lon Best" []
 "A Noblest Pup, Unstoppable[r], by Pablo Supnet"
 "Nobody Will Woo Blindly[r], by Loyd Wilbon"
@@ -14688,6 +14720,7 @@ blurb	prio
 "Respond, Holy Polyhedrons[r], by Loyd Pherson & Dyson Proehl"
 "A Response Pre-Season[r], by Rose Aspen"
 "Rest, Bind, Bird Nest[r], by Sid Brent"
+"Rest, Empire Perimeters[r], by Peter Miers"
 "Rest Home Theorems[r], by Tom Sheer"
 "Rest Ill, Lilters[r] by Lilster Stiller"
 "Rest, Maid, Die Smart[r], by Tim Sader"
@@ -16345,6 +16378,7 @@ blurb	prio
 "Walk Over Workvale[r], by Kev Orlaw"
 "Wallabies['] Able Wails[r], by Blaise Law"
 "Walled Lad Lew[r], by Del Law"
+"Wan, Led, We Land[r], by Ned Law"
 "Wan Times, Same Twin[r], by Stew Main"
 "Wanders to a Worst Den[r], by Don Waters" []
 "Want to Do Toad Town[r], by [if player is male]Natt Wood[else]Dawn Otto[end if]"
@@ -17402,6 +17436,7 @@ blurb
 "Holly's Shy? LOL."
 "Hooters: Hers Too, or Those!"
 "Hooters Reshoot." []
+"Horniest Into Hers."
 "Horny Hyron."
 "Horny Treat: Another Try!"
 "Hos, Try Shorty."
@@ -17875,6 +17910,7 @@ blurb
 "Pinafore-Open Fair."
 "Pink Tush, Spunk-Hit." []
 "Please! Ur-Pleasure!"
+"Pleasing-Lips Gena."
 "Plow Us Up Slow."
 "Pluto's Po['] Slut Lost Up."
 "Ply Ol['] Polly."
@@ -18163,6 +18199,7 @@ blurb
 "Tex Ho's Hot Sex."
 "Tex's Sext."
 "That Romp, Hot Tramp."
+"Their Son, Horniest."
 "Then More Other Men."
 "There's Ma, Her Mate's Harem-Set."
 "They Win Whitney." []
@@ -18286,6 +18323,7 @@ blurb
 "Worship or Whips."
 "X-Rated Rad Tex." []
 "Xena, an Ex."
+"XTC Seas Sex Acts."
 "Yasmin May Sin."
 "Yay Wants Way Nasty."
 "Yes, Jon Enjoys Jonesy."
@@ -19541,7 +19579,16 @@ blurb
 "Bore Ty Boyter"
 "Bore Wm Bowmer"
 "Borer Dick Broderick"
+"Boring Aldo Longobardi"
+"Boring Ara Garbarino"
+"Boring Del Olberding"
+"Boring Elsa Gabrielson"
+"Boring Enos Bonsignore"
 "Boring Grobin" []
+"Boring Mae Giambrone"
+"Boring Mo Imbrogno"
+"Boring Rhee Boehringer"
+"Boring Stan Brasington"
 "Boy Rev Overby"
 "Briber Ribber Bri Erb"
 "Brimstone Bert Simon"
@@ -21411,6 +21458,26 @@ blurb
 "Crush Nigel Luchsinger."
 "Crush Rae Rauscher."
 "Crush Terra Carruthers."
+"Cull Annie Cullinane"
+"Cull Ariel Lucarelli"
+"Cull Dario Couillard"
+"Cull Eda Caudell"
+"Cull Elsa Clausell"
+"Cull Enos Counsell"
+"Cull Gina Culligan"
+"Cull Gooch Colclough"
+"Cull Ida Caudill"
+"Cull Lew Culwell"
+"Cull Macey Mccaulley"
+"Cull Marc Mccullar"
+"Cull Mina Mullican"
+"Cull Mo Collum"
+"Cull Nina Cullinan"
+"Cull Rae Cuellar"
+"Cull Roe Cerullo"
+"Cull Thersa Altschuler"
+"Cull Toi Cutillo"
+"Cull Toni Culliton"
 "Curt pity void = PRODUCTIVITY."
 "Cut Down WundtCo."
 "Cut off TuffCo."
@@ -22798,6 +22865,7 @@ blurb
 "Whack Tien Whitenack."
 "A whiner. New hair. Hire? Naw."
 "Wrest, Strew."
+"Yes, cull Sculley."
 
 table of DIVORCES articles [xxv2]
 blurb
@@ -22878,6 +22946,7 @@ blurb
 "Host Ben the Snob."
 "A Host Has To." []
 "Hot Perks: The Pork's Posh Trek."
+"Hut fer the fur."
 "I Hit At Tahiti."
 "I Master a Maserati."
 "I'm-All-Set Meal List."
@@ -23682,6 +23751,7 @@ blurb
 "'In summation: ammunition's a must, minion.'"
 "'Infirm, Mr.? Fini!'"
 "'Info? ACT, faint co-faction!'" []
+"'Inside job? Son, I jibed.'"
 "Interrogatives. Tergiversation." [p]
 "'Into it? No, not I!'"
 "'Inward? I'd Warn Darwin.'"
@@ -23956,6 +24026,7 @@ blurb
 "'On tap to nap? Not Pa!'" []
 "'ONE fix?' / 'Fine, Ox.'"
 "'One thug? Toughen!'"
+"'One, Two, Owe Not!'"
 "'Oo, chats? Cahoots?' / 'Shoo, cat!'"
 "'Oof! Die, foodie!'"
 "'Ooh, nuts. South on Houston...'" []
@@ -25507,6 +25578,7 @@ blurb
 "'Nor THY thorny try, hon['].'"
 "'Not Ned's tendons!'" []
 "'Not set?' / 'Tetons? No test!'" []
+"'Not well? Tell, now.'"
 "'Notice it once.' / 'Nice to notice.'"
 "'Now, Rog?' / 'WRONGO.'" []
 "'Nut job!' / 'But Jon!'"
@@ -26101,6 +26173,7 @@ blurb
 "Aborter Roberta" []
 "Abrupt Pub-Rat Pa Burt"
 "Abused Bad Sue"
+"Ace 'Gun' Gaunce"
 "Ace Lord DeCarlo" []
 "Ace Rogue Oceguera"
 "'Achoo' Ochoa"
@@ -26118,10 +26191,12 @@ blurb
 "Alan 'Fang' Flanagan" []
 "Alarmed Delamar" []
 "Albany Ana Bly"
+"Albert 'Gun' Altenburg"
 "Alden 'Fib' Banfield" []
 "Alderman [if player is male]Mel Randa[else]Erma Land[end if]" []
 "Aldo 'Sneer' Rosendale" []
 "Alec 'Ski' Cieslak-Lasecki"
+"Ali 'Gun' Gaulin"
 "Ali 'Plod' Padillo"
 "Alina 'Plod' Palladino"
 "All-Drab Ballard"
@@ -26132,10 +26207,12 @@ blurb
 "Alleged-Legal Ed"
 "Allen 'Ski' Kinsella"
 "Allogenic Collegian [if player is male]Eli Colgan[else]Lila Gonce[end if]"
+"Alma 'Gun' Mangual"
 "Almighty May Light" []
 "Alone Leona 'No Ale' O'Neal" [p] []
 "Alta 'Legs' Steagall"
 "Amaya 'Ski' Yamasaki"
+"Amber 'Gun' Guberman"
 "Amber 'Nah' Haberman" []
 "Amie 'Zits' Zemaitis"
 "Amoral Alomar" []
@@ -26153,7 +26230,9 @@ blurb
 "Anton 'Ski' Atkinson"
 "Any-Hat Nat Hay"
 "Any-Musk Manusky"
+"April 'Gun' Pulgarin"
 "April 'Ski' Pilarski"
+"Ara 'Gun' Uranga"
 "Ara 'Legs' Lagares"
 "Ara 'Mo['] Aroma' Amaro" [p]
 "Arch 'Legs' Schlager"
@@ -26173,6 +26252,7 @@ blurb
 "Asa 'Ski' Sasaki"
 "ASBO Sabo (a SOB)" []
 "Ash 'Nah' Shahan"
+"Asha 'Gun' Sahagun"
 "Ashli 'Legs' Hillegass"
 "Astonishing Tina Hissong"
 "Astronomer Monterrosa"
@@ -26248,6 +26328,7 @@ blurb
 "Bar Kid Drabik"
 "Barb 'Clunk' Blackburn"
 "Barger Garber" []
+"Bari 'Gun' Bugarin"
 "Bari 'Legs' Balsiger"
 "Barky Rybka Rybak"
 "Baron Alec Barcelona"
@@ -26304,6 +26385,7 @@ blurb
 "Berating-Binge Art Brigante"
 "Berdine Bendier Breedin[']"
 "Berquist Briquets"
+"Bert 'Gun' Bungert"
 "Bestial Ableist Eli Bast" []
 "Better-Count Bettencourt"
 "Bickery Rick Bey-Brickey"
@@ -26407,12 +26489,14 @@ blurb
 "Bowlin['] Wilbon"
 "Boxin['] Bo Nix"
 "Boy-Band Don-Baby"
+"Brad 'Gun' Bungard"
 "Brahman Branham"
 "Braider Berardi"
 "'Brains' Mel Silberman"
 "'Brains' Oleg Gabrielson"
 "Brat Bart Tabb-Tarr"
 "Brat Mel Lambert" []
+"Bree 'Gun' Buenger"
 "Bribe-O Robbie" []
 "Bribee Bieber"
 "Briller Birrell"
@@ -26492,6 +26576,7 @@ blurb
 "Carroty Rat Cory" []
 "Cash-[']Em McShea"
 "Cate 'Nah' Ancheta"
+"Cecila 'Gun' Angelucci"
 "Cedary Darcey" []
 "Celano's Seconal" []
 "Cerebral Carl Eber"
@@ -26523,6 +26608,7 @@ blurb
 "Chiseler Chris Lee"
 "Chiselled Dechellis"
 "Chortling Clint Groh"
+"Chris 'Gun' Schuring"
 "Chubster Schubert" []
 "Chun 'Ski' Huckins"
 "Churlish Lush Rich"
@@ -26542,6 +26628,7 @@ blurb
 "Clued Ed Luc" []
 "Coddled Cold Edd"
 "Coe 'Ranch' Cochrane"
+"Coercive Eric Cove"
 "Cogniser/Co-Signer Rescigno"
 "Coiner [if player is male]Enrico[else]Corine[end if] Cerino"
 "Cokin['] Nicko"
@@ -26569,6 +26656,7 @@ blurb
 "Cold Roni Coldiron" []
 "Cold Stan Scotland"
 "Cold Su Duclos"
+"Cold Sweat Scot Ewald"
 "Cold Thea Deloatch" []
 "Collared Cardello" []
 "Colonel Loco Len"
@@ -26661,20 +26749,39 @@ blurb
 "Curb Kid Burdick"
 "Cure-All Cruella LaLucre" []
 "Cutesie Eustice"
+"Czar Aisha Zacharias"
+"Czar Alba Balcazar"
+"Czar Asia Zacarias"
+"Czar Blake Balcerzak"
+"Czar Cora Carrazco"
+"Czar Em Marzec"
+"Czar Kay Zackary"
+"Czar Noe Zarcone"
+"Czar Oda Cardoza"
 "Czar Racz" []
+"Czar Rana Carranza"
+"Czar Riva Vizcarra"
+"Czar Rosia Carrizosa"
+"Czar Tora Cortazar"
+"Czar Zora Carrozza"
 "Da Fool Adolfo" []
 "Dachsund-Duds Chan"
 "Daimonic Dominica"
+"Dale 'Gun' Gaulden"
 "Dale-Dog Delgado"
 "Damner Erdman" []
+"Dan 'Gun' Dungan"
 "Dan 'Ranch' Chandran"
 "Dan 'Ski' Adkins"
 "Dan 'Sneer' Andersen-Andresen"
+"Dana 'Gun' Dunagan"
 "Dander Denard" []
 "Dang Rube Bared-Gun Brundage" []
+"Danna 'Gun' Dunnagan"
 "Dante 'Legs' Engelstad"
 "Dapper Ed Rapp-Pepard" []
 "Dara 'Legs' Ragsdale"
+"Dario 'Gun' Guardino"
 "Dark Bales Barksdale"
 "Dark Beech Hardebeck"
 "Dark Burch Burckhard"
@@ -26718,21 +26825,26 @@ blurb
 "Deafer Feared Freeda"
 "Dealin['] Ned Ali" []
 "Dealing Ida Glen" []
+"Dean 'Gun' Dunegan"
 "Dean 'Ski' Deakins"
 "Death Row Drew Otha" []
 "Debbie 'Ranch' Breidenbach"
 "Debonair [if player is male]Ira Boden[else]Robin Ade[end if]" []
+"Deborah 'Gun' Rodenbaugh"
+"Debra 'Gun' Brundage"
 "Decatur Rude Cat" []
 "Decayed Ace Eddy"
 "Decorated Ector Dade"
 "Decoyer Cory Dee"
 "Decried Decider Cid Reed"
 "Dee 'Drawl' Delawder"
+"Dee 'Gun' Dungee"
 "Dee 'Nah' Headen"
 "Dee 'Specs' Cespedes"
 "Deep Jon Pendejo"
 "Deferrer Ferderer"
 "Defiling Fielding"
+"Del 'Gun' Gulden"
 "Del 'Nah' Handel-Dahlen"
 "Del 'Ranch' Chandler" []
 "Delaware Earl Wade" []
@@ -26744,6 +26856,7 @@ blurb
 "Demoter Tom Reed" []
 "Demotist Modesitt"
 "Denis 'Frat' Standifer" []
+"Denis 'Gun' Duensing"
 "Depleter Delprete"
 "Depraved Pa Vedder"
 "Deranged Ned Edgar" []
@@ -26753,10 +26866,13 @@ blurb
 "Deviser DeVries" []
 "Dexterous Tex Souder"
 "Diane 'Legs' Deangelis"
+"Diann 'Gun' Dunnigan"
 "Dickhead Addi Heck" []
 "Dim-Bore Dire-Mob Mr. Dobie" []
 "Dim Bulb Mild Bub"
 "Dim-Ruck Mudrick"
+"Dina 'Gun' Dunigan"
+"Dion 'Gun' Guindon"
 "Dire Tat Attired Ed Raitt"
 "Dirty Slob Sid Rybolt"
 "Diseased Sid Saeed"
@@ -26874,6 +26990,8 @@ blurb
 "Doomer Rod Moe"
 "Dooming Domingo" []
 "Doorman Don Mora" []
+"Dora 'Gun' Durango"
+"Dorie 'Gun' Gourdine"
 "Dorine 'Legs' Delsignore"
 "Doris 'Nah' Hardison" []
 "Doris 'Ranch' Richardson" []
@@ -27015,8 +27133,10 @@ blurb
 "Eli 'Ski' Kisiel"
 "Elim-Emil" []
 "Elk Grove Keg Lover Reg Volek"
+"Elli 'Gun' Guillen"
 "Elmo 'Fang' Fogleman" []
 "Elmo 'Nah' Holeman" []
+"Elsa 'Gun' Lagunes"
 "Elza 'Ski' Zaleski"
 "Em 'Ranch' Merchan"
 "Em 'Ski' Simek"
@@ -27049,6 +27169,7 @@ blurb
 "Ernie 'Ranch' Nachreiner"
 "Errant Terran Ratner" []
 "Erratic Art Rice" []
+"Etta 'Gun' Tungate"
 "Eva 'Legs' Selvage"
 "Evader [if player is male]Dav Ree[else]Eve Ard[end if]" []
 "Evaders-Adverse Deavers" []
@@ -27082,6 +27203,7 @@ blurb
 "Even Verda Vandeveer"
 "Even Will Newville"
 "Even Zonia Veneziano"
+"Evia 'Gun' Vigneau"
 "Evil [n-t] Valiente" []
 "Evil Aaron Valeriano" []
 "Evil Ada Deavila" []
@@ -27186,6 +27308,7 @@ blurb
 "Fat Tyler Flattery" []
 "Fat Weidler Waterfield" []
 "Faulty Ulf Tay"
+"Fay 'Gun' Fanguy"
 "Fear-Fare Rafe Efra"
 "Feared Wilt Waterfield" []
 "Fearful Lauffer"
@@ -27388,8 +27511,10 @@ blurb
 "Hair-Legs Grealish"
 "Hairless [if player is male]Hal Reiss[else]Lisa Sher[end if]"
 "Hairy Amos Yamashiro"
+"Hal 'Gun' Hulgan"
 "Hal 'Ski' Kalish"
 "Hale-Snort Rosenthal" []
+"Ham 'Gun' Ghuman"
 "Ham 'Ski' Khamis"
 "Ham 'Sneer' Ehresman"
 "Hana 'Ski' Kashani"
@@ -27474,6 +27599,7 @@ blurb
 "Hoardy Rod Hay"
 "Hoboken Ben Hook"
 "Hog Luc Clough"
+"Holli 'Gun' Loughlin"
 "Hollie 'Hands' Hollinshead"
 "Homeless Elmo Hess"
 "Hong 'Ski' Hosking"
@@ -27495,6 +27621,7 @@ blurb
 "Hussy Shy Su"
 "I-Be-Scum Buscemi"
 "I-Stank Atkins" []
+"Ian 'Gun' Guinan"
 "Ian 'Legs' Gelinas-Sinegal"
 "Ian 'Ski' Aikins"
 "IANAL Alain" []
@@ -27505,6 +27632,7 @@ blurb
 "Icky Ed Dickey"
 "Icy Man Nic May"
 "Icy Norm McInroy"
+"Ida 'Gun' Gaudin"
 "Ignoble Gil Bone" []
 "Ignoble Leo Bing" []
 "Ignoramus [if player is male]Gus Marion[else]Ros Gumina[end if]"
@@ -27542,13 +27670,16 @@ blurb
 "Innocent Tien Conn"
 "Introvert Trot Ervin" []
 "Invalid Vin Dial"
+"Ira 'Gun' Guarin"
 "Ira 'Hands' Sardinha"
 "Ire-Fest Seifert" []
 "Ireless Eissler"
 "Irvin 'Legs' Siverling"
+"Isa 'Gun' Suniga"
 "Islander Dan Riles" []
 "Islander Sindelar" []
 "Isolater Lita Rose"
+"Iva 'Gun' Gauvin"
 "Iva 'Ranch' Chavarin"
 "Ivana 'Legs' Gavilanes"
 "Ivana 'Plod' Vialpando"
@@ -27559,12 +27690,14 @@ blurb
 "Jaywalker Jake Lawry"
 "Jealous Joe Saul" []
 "Jen-Dog DeJong" []
+"Jere 'Gun' Juenger"
 "Jerk Abe Jerabek"
 "Jerk Bao Bajorek"
 "Jerk Cai Jarecki"
 "Jerk Wasik Krajewski"
 "Jerkwad Jed Wark"
 "Jigsaw-Jaw Sig"
+"Jo 'Gun' Joung"
 "Jo 'Hands' Dosanjh"
 "Joan 'Ski' Janoski-Janosik"
 "Jobless Jess Bol"
@@ -27577,7 +27710,9 @@ blurb
 "Kara 'Ski' Karasik"
 "Karan 'Fib' Fairbank"
 "Karl C & Carl K Clark"
+"Kera 'Gun' Graunke"
 "Kestrel Sterkel"
+"Key Czar Zackery"
 "Kid Anson Adkinson" []
 "Kid Arch Hardick"
 "Kid Arn Kinard" []
@@ -27699,6 +27834,7 @@ blurb
 "Lazy Bum Luz Byam"
 "Le Bum Blume"
 "Le Weird Drew, Lie Wielder" []
+"Lea 'Gun' Naugle"
 "Lea 'Ski' Lesiak"
 "Lead-Fair Alfredia"
 "Leader Ed Earl" []
@@ -27837,6 +27973,7 @@ blurb
 "Libeled Bill Dee"
 "Libeler Bill Ree-Bleiler" []
 "Libertine [if player is male]Bertie Lin[else]Britni Lee[end if]"
+"Lida 'Gun' Gauldin"
 "Lie-Mug Miguel" []
 "Lifer Friel"
 "Likable Ike Ball"
@@ -28082,16 +28219,23 @@ blurb
 "Map Nut Putman"
 "Map Nut Putnam"
 "Mar-Soon Mansoor" []
+"Mara 'Gun' Grauman"
 "Mara 'Ranch' Ramcharan"
 "Maranda 'Ranch' Ramachandran"
 "Marc 'Nah' Marchan"
 "Marge 'Nah' Hagerman" []
+"Maribel 'Gun' Burlingame"
 "Marietta's Metatarsi"
 "Mario 'Legs' Margolies"
+"Mark 'Gun' Krugman"
 "Marmot Motram"
+"Marna 'Gun' Graumann"
 "Martial Tim Lara"
+"Mason 'Gun' Magnuson"
 "Masquer Marques"
 "Mastodon Stan Odom"
+"Mateo 'Gun' Montague"
+"Matt 'Gun' Guttman"
 "Matt 'Sneer' Testerman"
 "Mauls-a-Slum Sam Lu" []
 "Maybe-Not Abe Monty" []
@@ -28189,11 +28333,14 @@ blurb
 "Mere Pal Parmele, Pre-Meal"
 "Mess-O Moses" []
 "Meta 'Ranch' Catherman"
+"Mia 'Gun' Mungia-Gumina"
 "Mia 'Ski' Misiak"
 "Mid-Tier Tim Reid" []
 "Migrant Girtman" []
+"Milda 'Gun' Maulding"
 "Miles 'Nah' Leishman"
 "Milo 'Nah' Holiman" []
+"Min 'Gun' Mungin"
 "Min-Wage Wiegman" []
 "Mina 'Legs' Seligman"
 "Mind-Fear Friedman" []
@@ -28201,6 +28348,7 @@ blurb
 "Ming 'Zoo' Mozingo"
 "Minh 'Ski' Mishkin"
 "Missoula Sam Louis"
+"Mo-Gun Mungo"
 "Mo-Gun No-Mug Mungo"
 "Mo['] Belly Bellomy"
 "Mo['] Far Raffo Marmo" []
@@ -28285,6 +28433,7 @@ blurb
 "Niki 'Legs' Kiesling"
 "Nil-Opt Lipton" []
 "Niles 'Ski' Lesinski"
+"Nilsa 'Gun' Lusignan"
 "Nine Finger Regine Finn"
 "No-Angel Leo Gann"
 "No-Arm Ramon" []
@@ -28361,6 +28510,7 @@ blurb
 "No-Works Skowron"
 "Nobbish Bob Shin"
 "Nodder Ed Dorn" []
+"Noe 'Gun' Gunnoe"
 "Noe 'Plod' Polendo"
 "Noe 'Ski' Sienko"
 "Nolo Loon Loo Onlon"
@@ -28373,6 +28523,7 @@ blurb
 "Not-Cool Loot Con Colt Ono" []
 "Not-Dumb Bo Mundt"
 "Not-Frat Trafton"
+"Not-Good Goon [d-t]"
 "Not-Hungry Thug Ronny"
 "Not-Lying Tiny Long"
 "Not Normal [if player is male]Lon Ortman[else]Lorna Mont[end if]"
@@ -28394,6 +28545,7 @@ blurb
 "Obsolete Boots Lee" []
 "Occupied Ed Puccio"
 "Ocie 'Ski' Osiecki"
+"Oda 'Gun' Dougan"
 "Odd Ben Bodden" []
 "Odd-Bile Diebold" []
 "Odd Daria Daddario"
@@ -28467,14 +28619,17 @@ blurb
 "Oh-No Hoon" []
 "Ol['] Rex Rolex"
 "Ol['] SOB Sobol" []
+"Ola 'Gun' Angulo"
 "Old Cheat Deloatch" []
 "Old Dog Og Dold" []
 "Old Fran Randolf" []
+"Old Gun DuLong"
 "Old Liar Radillo" []
 "Old Lita DiTolla"
 "Old Thumb Humboldt"
 "Oleaginous [if player is male]Louis Genoa[else]Sonia Logue[end if]"
 "Olga 'Legs' Gallegos"
+"Omer 'Gun' Mounger"
 "Omerta Tam Roe" []
 "Omni-Moni Mino" []
 "On-a-Diet [toti] Ade"
@@ -28492,6 +28647,7 @@ blurb
 "One-Plant Napleton"
 "Oofer Orfeo"
 "Operator Art Poore"
+"Ora 'Gun' Ungaro"
 "Ora 'Plod' Lopardo"
 "Ora 'Ski' Sikora-Rosiak"
 "Orange Ned DeGennaro" []
@@ -28723,6 +28879,7 @@ blurb
 "Raw Hood Harwood"
 "Raw Ike Kierwa"
 "Ray-Dog O'Grady" []
+"Rayna 'Gun' Nungaray"
 "Re-Dealing Geraldine" []
 "Real-Class Scarsella" []
 "Real Quick Alec Quirk"
@@ -28775,10 +28932,13 @@ blurb
 "Revisor Riveros"
 "Rex Lew-Wexler"
 "Rey 'Frat' Raftery" []
+"Rey 'Gun' Gurney"
 "Rey 'Nah' Harney-Hayner"
+"Reyes 'Gun' Guernsey"
 "Rhea-So-Hoarse" []
 "Rheumatoid [if player is male]Theo Midura[else]Maudie Roth[end if]"
 "Rheumic Murchie"
+"Rhoda 'Gun' Draughon"
 "Rich 'Sneer' Schreiner"
 "Rich-Needs Schneider"
 "Rich Sot Christo"
@@ -28794,6 +28954,7 @@ blurb
 "Roach Arch-O Rocha" []
 "Roadman Armando" []
 "Roaster Serrato" []
+"Rob 'Gun' Ogburn"
 "Rob 'Legs' Solberg-Solberg"
 "Rob 'Sneer' Berrones"
 "Rob 'Zits' Zobrist" []
@@ -28801,9 +28962,11 @@ blurb
 "Rob, Ex-Boxer"
 "Robt 'Legs' Stolberg"
 "Robust Bro Stu"
+"Rod 'Gun' Ground"
 "Rod 'Sneer' Renderos" []
 "Roil-Games Margolies"
 "Roil-Lad Radillo" []
+"Rolf 'Gun' Furlong"
 "Roll-[']Em Moller"
 "Romancer Cranmore"
 "Rompish Morphis"
@@ -28812,7 +28975,9 @@ blurb
 "Rootless Rosselot" []
 "Ros 'Fib' Forbis" []
 "Ros 'Nah' Sharon" []
+"Rosann 'Gun' Gunnarson"
 "Roscoe 'Legs' Groseclose"
+"Rose 'Gun' Surgeon"
 "Rosi 'Ranch' Richarson"
 "Rot-Bag Bogart" []
 "Rotten Trent-O Retton" []
@@ -28851,10 +29016,12 @@ blurb
 "Safe-Con Fonseca" []
 "Saintly [if player is female]Sly Tina[else]Tiny Sal[r]" []
 "Sallow Slow Al"
+"Sam 'Gun' Mangus"
 "Sam 'Nah' Ashman" []
 "Sam 'Ski' Kassim"
 "Sam 'Zoo' Somoza"
 "Samesy Massey" []
+"Samson 'Gun' Magnusson"
 "Sane-Munch Schuneman"
 "Sane Pro Pearson" []
 "Sang 'Ski' Gaskins-Kassing"
@@ -28994,6 +29161,7 @@ blurb
 "Sick Ned Dickens" []
 "Sick-Rent Stricken Nickster"
 "Sickener Ericksen" []
+"Sid 'Gun' Dingus"
 "Sid 'Sneer' Driessen-Resendis" []
 "Silent Al Santelli"
 "Silent Alona Santaniello" []
@@ -29197,6 +29365,7 @@ blurb
 "Snide Retha Eisenhardt" []
 "Snide Rock Dickerson" []
 "Snide Valko Levandoski"
+"Snidey Sidney"
 "Snooper Pro Enos"
 "Snoopier Poisoner Ines Poor"
 "Snorer-Gob Rosenborg"
@@ -29423,12 +29592,16 @@ blurb
 "Swooner Rosenow"
 "Sybarite [ta] Byers"
 "Tacky KC Tay" []
+"Talia 'Gun' Lantigua"
+"Tama 'Gun' Tanguma"
 "Tama 'Ski' Aksamit"
 "Tana 'Ranch' Carnathan"
 "Tank Kant"
 "Tarnished [if player is male]Dean Hirst[else]Enid Stahr[end if]" []
 "Tarnished Seth Randi"
+"Tarsha 'Gun' Straughan"
 "Tart Barb Barr-Batt" []
+"Tasia 'Gun' Agustina"
 "Taskin['] Atkins" []
 "Tasteful Sue Flatt"
 "Tat-Rube Taubert"
@@ -29440,12 +29613,16 @@ blurb
 "Ten-Vice Vicente"
 "Tena 'Ski' Kienast"
 "Tense Pro Peterson" []
+"Tera 'Gun' Turnage-Turnage"
+"Teri 'Gun' Guertin"
 "Teri 'Legs' Striegel-Stiegler"
+"Terra 'Gun' Guerrant"
 "Terri 'Nah' Rinehart-Reinhart"
 "Terrible Bert Iler"
 "Testator-Attestor [if player is male]Art Totes[else]Tresa Ott[end if]"
 "Tetchier Teichert" []
 "Tetchy Chetty"
+"Thea 'Gun' Hungate"
 "Thick Art Kithcart"
 "Thick Ed, the [dick-u]" []
 "Thick Ewan Whitenack" []
@@ -29487,6 +29664,7 @@ blurb
 "Three-Balls Herb Stella"
 "Thrifty Ty Firth"
 "Thumper Humpert"
+"Tia 'Gun' Giunta-Guinta"
 "Tie Snob Bo Stein" []
 "Tight-End Ted Night"
 "Timewaster [if player is male]Matt Weiser[else]Tamie Werst[end if]"
@@ -29495,6 +29673,7 @@ blurb
 "Tiny-Legs Stingley"
 "Tire-Games Stegmaier"
 "Tired-Gut Tut Ridge"
+"Tisa 'Gun' Agustin"
 "Toad Al Dolata"
 "Toad Art Attardo"
 "Toad Dion DiDonato" []
@@ -29511,10 +29690,12 @@ blurb
 "Toad Vito D'Ottavio" []
 "Tobin 'Sneer' Borenstein" []
 "Tod 'Nah' Hadnot" []
+"Toi 'Gun' Guinto-Guiton"
 "Tolerant Tarleton" []
 "Tom 'Nah' Thoman" []
 "Tomcat Cottam"
 "Tomcat Mac Ott" []
+"Tomi 'Gun' Guimont"
 "Tona 'Legs' Stangelo"
 "Tonda 'Legs' Gladstone"
 "Toni 'Sneer' Orenstein" []
@@ -29538,6 +29719,7 @@ blurb
 "Too Tired Otto Reid" []
 "Toolman Lomanto"
 "Topeka Kat Poe" []
+"Tori 'Gun' Guitron"
 "Tormentor Norm Otter"
 "Tortured Ruder Tot Rod Utter" []
 "Tot Con Cotton"
@@ -29586,6 +29768,30 @@ blurb
 "Two-Bit Twit Bo" []
 "Tyree Huong the Younger" []
 "Tzaddik Kid Datz"
+"Tzar Abe Tabarez"
+"Tzar Alba Baltazar"
+"Tzar Basilia Aristizabal"
+"Tzar Bernie Barrientez"
+"Tzar Cora Cortazar"
+"Tzar Ed Dartez"
+"Tzar Eli Altizer"
+"Tzar Esh Shatzer"
+"Tzar Eva Tavarez"
+"Tzar Gil Garlitz"
+"Tzar Lea Laterza"
+"Tzar Les Stalzer"
+"Tzar Man Zartman"
+"Tzar Meg Metzgar"
+"Tzar Mia Maritza"
+"Tzar Min Ritzman"
+"Tzar Monroe Monterroza"
+"Tzar Noble Brazelton"
+"Tzar Ona Tarazon"
+"Tzar Sera Terrazas"
+"Tzar Sher Shartzer"
+"Tzar Skye Zaretsky"
+"Tzar Sly Zylstra"
+"Tzar Sol Stolarz"
 "Uber-Fat Faubert"
 "Uber-Sly Elsbury" []
 "Uglier Reg Liu" []
@@ -29770,7 +29976,9 @@ blurb
 "Yodeler Delorey" []
 "Younger NY Rogue Guy Oren" []
 "Zeroing Ozinger"
+"Zia 'Gun' Zuniga"
 "Zia 'Legs' Szeliga"
+"Zoe 'Gun' Noguez"
 "Zoe 'Plod' Delpozo"
 "Zona 'Legs' Gonzales"
 "Zoo-Call Collazo"
@@ -29780,6 +29988,7 @@ blurb
 table of prestigious bums [xxv8]
 blurb
 "The Abe Bethea"
+"Abel 'Yes' Beasley"
 "Ace Alden Encalade"
 "Ace Ali Alicea"
 "Ace Alton Anacleto"
@@ -29870,11 +30079,14 @@ blurb
 "Ace Vaughn Cavenaugh"
 "The Adams Steadham" []
 "Al 'Top' Plato" []
+"Al 'Yep' Paley"
+"Al 'Yes' Sealy"
 "The Al Leath"
 "Alana 'Top' Patalano"
 "Alden 'FBI' Banfield" []
 "Alec 'Hup' Plauche"
 "Alf 'Hup' Pufahl"
+"Alf 'Yes' Safley"
 "Ali 'Top' Pilato"
 "Aline 'Top' Lapointe" []
 "The Alma Leatham"
@@ -29922,12 +30134,16 @@ blurb
 "Ann 'Buy' Bunyan" []
 "Ann 'Top' Panton"
 "Anna 'Top' Pantano"
+"Aron 'Yes' Reynosa"
 "Arron 'Buy' Raybourn"
+"Art 'Yep' Tarpey"
+"Art 'Yes' Stayer"
 "Atty. Bree Attebery" []
 "Atty. Lesh Hayslett" []
 "Atty. Pew Pettway"
 "Awesome Don Woodmansee"
 "The Barney Abernethy" []
+"Bert 'Yes' Seybert"
 "Big Abe Gebbia"
 "Big Aron Nobriga"
 "Big Ayana Agbayani"
@@ -30008,10 +30224,14 @@ blurb
 "Brain Lott Albritton"
 "Brain Mchale Chamberlain" []
 "Brain Oster Barrientos" []
+"Brant 'Yes' Stanbery"
 "Breana 'Top' Bonaparte" []
+"Burl 'Yes' Elsbury"
 "The Burl Hulbert"
 "Busy Hwa Bushway" []
 "Busy Wert Westbury"
+"Cal 'Yep' Capley"
+"Cal 'Yes' Claeys"
 "Callie 'Top' Capetillo"
 "The Capra Capehart" []
 "Caren 'Hup' Uncapher"
@@ -30331,6 +30551,8 @@ blurb
 "Col. Tyra Claytor" []
 "Col. Watt Walcott"
 "Col. Zola Collazo"
+"Dale 'Yes' Elsayed"
+"Dan 'Yep' Pandey"
 "The Darrin Reinhardt" []
 "DDS Angie Sandidge" []
 "DDS Earl Saddler" []
@@ -30351,8 +30573,12 @@ blurb
 "Dead Ron Denardo" []
 "Dead Sol Soledad"
 "Dean 'Top' Daponte" []
+"Del 'Yep' Pedley"
+"Del 'Yes' Seydel"
+"Delores 'Yes' Delosreyes"
 "Denver 'Top' Devenport" []
 "Deon 'Buy' Beydoun"
+"Derek 'Yes' Dekeyser"
 "Diane 'Hup' Dauphine"
 "Dina 'Top' Pintado" []
 "Dir. Abe Beaird" []
@@ -30492,13 +30718,19 @@ blurb
 "Elana 'Top' Pantaleo"
 "Eli 'Buy' Bilyeu" []
 "Eli 'Top' Polite" []
+"Eli 'Yes' Leisey"
 "The Eli Thiele"
 "Elite Drew Detweiler"
 "Elite Zahn Hazeltine"
 "Elli 'Top' Petillo"
+"Elmo 'Yes' Moseley"
+"Elsa 'Yep' Peasley"
+"Elva 'Yes' Veasley"
 "Ender 'Buy' DeBruyne"
 "Eneida 'Hup' Dauphinee"
 "Enid 'Top' Depinto" []
+"Eric 'Yep' Piercey"
+"Erik 'Yes' Keirsey"
 "Erin 'Top' Petroni" []
 "Ernest 'Top' Petterson" []
 "The Erwin Whitener"
@@ -30506,7 +30738,11 @@ blurb
 "Esq. Mauro Mosquera" []
 "Esq. Paula Pasquale"
 "Esq. Raul Quarles"
+"Etta 'Yep' Payette"
+"Eva 'Yep' Peavey"
+"Eva 'Yes' Veasey"
 "Eve 'Top' Peveto"
+"Ewen 'Yes' Sweeney"
 "Exalted Tex Dale"
 "Fear-CIO Cafiero" []
 "Gala 'Hup' Alpaugh"
@@ -30616,6 +30852,7 @@ blurb
 "Gen. Yu Yeung"
 "Gen. Yun Nguyen" []
 "Gertie 'Top' Potteiger"
+"Gil 'Yes' Sigley"
 "Gina 'Top' Pignato"
 "Gov. Brush Vosburgh"
 "Gov. Corse Cosgrove"
@@ -30639,6 +30876,8 @@ blurb
 "Great Rhea Gearheart"
 "Great Salmon Mastrangelo" []
 "Hair Snob Harbison" []
+"Hal 'Yes' Ashley"
+"Ham 'Yes' Haymes"
 "The Harley Heatherly"
 "Hero Amy Haymore"
 "Hero Ben Boehner"
@@ -30863,6 +31102,7 @@ blurb
 "Icon Tash Atchison" []
 "Icon Trisha Christiano"
 "Icon Watts Wainscott" []
+"Ida 'Yes' Daisey"
 "Ilona 'Top' Politano" []
 "In-Demand Ned Mandi" []
 "Ines 'Top' Pistone" []
@@ -30870,8 +31110,12 @@ blurb
 "Ira 'Top' Poitra" []
 "Iris 'Top' Spirito"
 "Jana 'Top' Pantoja"
+"Jo 'Yes' Josey"
+"Jon 'Yes' Joynes"
 "The Karma Hatmaker" []
 "Keren 'Top' Petrenko"
+"Kim 'Yes' Kimsey"
+"Kurt 'Yes' Sturkey"
 "The Kylie Keithley"
 "Lady Mae Almeyda" []
 "Lady Olga Golladay"
@@ -30880,11 +31124,14 @@ blurb
 "Lady Ren Darnley"
 "Lara 'Top' Parlato" []
 "The Larson Rosenthal" []
+"Lea 'Yes' Easley-Sealey"
 "Leader Fitts Satterfield"
 "Leader Jan Alejandre"
+"Leah 'Yes' Heasley"
 "Leanna 'Top' Pantalone"
 "Lee 'Buy' Belyeu"
 "Lee 'Hup' Heupel"
+"Lee 'Yes' Seelye"
 "Leet Amos Altemose" []
 "Leet Art Letarte"
 "Leet Blair Laliberte" []
@@ -30928,18 +31175,28 @@ blurb
 "Leet Ty Tetley"
 "Leet Van Valente" []
 "Leet Vito Violette"
+"Len 'Yep' Penley"
+"Len 'Yes' Ensley"
 "Leo 'Buy' Bouley" []
 "Les 'Top' Postel-Postle"
 "The Les Stehle"
+"Leta 'Yes' Teasley"
+"Levi 'Yes' Livesey"
+"Lew 'Yes' Wesley"
 "The Lewis Whitesel"
 "Lila 'Top' Patillo" []
 "The Lillian Lilienthal"
 "Lin 'Top' Lipton" []
+"Lin 'Yes' Insley"
+"Lina 'Yes' Ainsley"
+"Link 'Yes' Kinsley"
 "Lise 'Top' Pistole" []
+"Lita 'Yes' Stailey"
 "Liz 'Top' Politz"
 "Loida 'Top' Dapolito"
 "The Loma Lamothe" []
 "The Lon Helton" []
+"Loo 'Yep' Pooley"
 "Lord Abe Laborde" []
 "Lord Alec Cardello" []
 "Lord Bay Bolyard" []
@@ -30958,6 +31215,7 @@ blurb
 "Lord Shaunte Southerland" []
 "Lord Sweetman Westmoreland" []
 "Loree 'FBI' Belfiore" []
+"Lou 'Yes' Ousley"
 "Louder Doer Lu" []
 "The Luna Henault" []
 "The Ma Mehta"
@@ -31080,11 +31338,13 @@ blurb
 "Miss Noon Simonson" []
 "Miss Pink Simpkins" []
 "Mo 'Buy' Boyum"
+"Mo 'Yes' Mosey"
 "The Mo Thome"
 "Mogul Bahr Malbrough" []
 "Mogul Han Loughman" []
 "Mogul Linch Mcloughlin"
 "Mogul Riel Guillermo" []
+"Morris 'Yes' Morrissey"
 "Mr. Abe Brame" []
 "Mr. Abel Marble" []
 "Mr. Acree Creamer"
@@ -31625,17 +31885,24 @@ blurb
 "Ms. Woodall Smallwood"
 "Ms. Yelle Smelley"
 "Ms. Yuen Munsey"
+"Nat 'Yes' Tansey"
 "The Nat Hatten" []
 "Ned 'Buy' Budney"
 "The Neil Thielen" []
 "Nerissa 'Top' Petrossian" []
 "Newport Town Rep Powtner" []
 "Ng, Elite Gentile"
+"Nick 'Yep' Pickney"
 "Ola 'Buy' Boulay" []
+"Ola 'Yep' Pelayo"
 "The Olga Holgate" []
 "Olin 'Top' Lopinto"
+"Omer 'Yes' Seymore"
 "Ossie 'Top' Esposito"
+"Pam 'Yes' Sampey"
+"Pearl 'Yep' Rappleye"
 "Phil 'Top' Philpot-Philpot"
+"Phil 'Yes' Shipley"
 "Pig Trader Partridge" []
 "Prime Doer Pridemore" []
 "Pro Akins Parkison"
@@ -31696,7 +31963,9 @@ blurb
 "Rae 'Top' Tropea" []
 "The Rae Heater" []
 "The Rakestraw Starkweather"
+"Ralph 'Yes' Sharpley"
 "Ranae 'Hup' Harpenau"
+"Reda 'Yep' Pereyda"
 "Reed 'Top' Depetro"
 "Ren 'Buy' Burney"
 "Rena 'Top' Paterno" []
@@ -31876,8 +32145,14 @@ blurb
 "Rich Ula Laurich"
 "Rich Wes Schwier"
 "Risa 'Top' Poitras" []
+"Rob 'Yes' Boyers"
+"Robt 'Yes' Boyster"
+"Rock 'Yes' Croskey"
+"Rod 'Yes' Dorsey"
+"Ron 'Yep' Poyner"
 "The Ron Thorne" []
 "The Ronald Leonhardt" []
+"Ros 'Yep' Poyser"
 "The Ros Stoehr"
 "Rose 'Top' Stroope" []
 "Rosia 'Top' Saporito" []
@@ -31887,7 +32162,10 @@ blurb
 "The Russ Shuster"
 "Sade 'Top' Podesta"
 "Sal 'Top' Postal" []
+"Sal 'Yep' Pasley"
 "Sam 'Top' Postma"
+"Sam 'Yep' Sampey"
+"Sam 'Yes' Massey"
 "The Sam Thames-Mathes" []
 "Sara 'Top' Spataro" []
 "Saul 'Hup' Paulhus"
@@ -32094,6 +32372,7 @@ blurb
 "Snob Torre Robertson" []
 "Snob Ulmer Rosenblum"
 "Snob Zane Bezanson"
+"Sol 'Yep' Posley"
 "Solon Chin Nicholson"
 "Solon Dan Donalson" []
 "Solon Felt Tollefson"
@@ -32126,6 +32405,7 @@ blurb
 "Spy Renato Petrosyan" []
 "Spy Rock Prysock"
 "Spy Telma Stampley" []
+"Su 'Yep' Pusey"
 "Super Don Pounders"
 "Super Ly Pursley" []
 "Super Ngo Spurgeon"
@@ -32140,11 +32420,16 @@ blurb
 "Supt. Rehm Shumpert" []
 "Supt. Ro Stroup" []
 "Supt. Roe Stroupe" []
+"Tam 'Yes' Stamey"
 "Tera 'Hup' Haupert"
 "Teri 'Top' Piotter" []
 "Terri 'Top' Perrotti"
 "The Tori Theriot" []
+"Tran 'Yep' Paynter"
+"Tran 'Yes' Stayner"
 "Tricia 'Top' Capriotti" []
+"Val 'Yes' Leyvas"
+"Vanita 'Yes' Avetisyan"
 "The Vi Veith"
 "VP Antle VanPelt"
 "VP Claire Percival" []
@@ -32162,6 +32447,7 @@ blurb
 "VP Toni Potvin"
 "The Weston Whetstone"
 "The Wiley Whiteley"
+"Will 'Yes' Swilley"
 "Winner Bo Winborne" []
 "Winner Bost Brownstein"
 "Winner Cathell Lichtenwalner"
@@ -32222,6 +32508,7 @@ blurb
 "Dampier's Emir Pads"
 "Dates-Stead"
 "De La Pena's Esplanade" []
+"Dear Only Royal Den"
 "Desirable Idler Base"
 "Dig-Long Lodging" []
 "Doc Harr's Orchards" []
@@ -32639,6 +32926,7 @@ blurb
 "Inept Force, Frenetic Op, PERFECTION[r], by Pierce Font"
 "Inkblots Bilk Tons[r], by Link Bost"
 "Intend Bow? I Won't Bend[r], by [if player is male]Ben Dowtin[else]Deb Winton[end if]"
+"Interesting Intense Grit[r], by Erin Gittens"
 "Into Hell? Eh, I'll Not[r], by Lon Leith"
 "It Hones to Shine[r], by [if player is male]Theo Sin[else]Tish Eno[end if]" []
 "Itch, Chit[r], by Tic Hitch"
@@ -32847,6 +33135,7 @@ blurb
 "Sit Free? Sir, Feet: Set Fire[r], by Seifert Siefert" []
 "Slip [m-e] Simple Impels[r], by [if player is male]Emil Lepp-Sims[else]Ms. Millie Epps[end if]" [x]
 "Slouch-Free, So Cheerful[r], by [if player is male]Les Foucher[else]Loree Fuchs[end if]"
+"Slouch to a Holocaust[r], by Loo Tausch"
 "Slow Mind? Slim Down[r], by Don Wilms"
 "Smarting Wit, Arm Twisting[r], by Matt Wirsing & Grits Witman"
 "Sneak Not, Take Tons[r], by Nate Kost"
@@ -33031,6 +33320,7 @@ blurb
 "Blessed Bedless"
 "Blighted Bedlight"
 "Bloody Ol['] Body, Old Boy" []
+"Blue Jam: a Jumble"
 "Bolder Old Reb" []
 "The Bones Been Shot" []
 "Boney Al, Lean Boy" []
@@ -34260,6 +34550,7 @@ blurb
 "Dona 'Grr' Norgard" []
 "Dora 'Pecs' Pescador"
 "Dori 'Blam' Lombardi" []
+"Doris 'Guns' Sigurdson"
 "Dorla 'Pow' Waldroop"
 "Doug 'Blam' Goldbaum" []
 "Droppin['] Pip Dorn" []
@@ -34267,6 +34558,7 @@ blurb
 "Earl 'Pecs' Placeres" []
 "Earle 'Ouch' Rocheleau"
 "Eboni 'Grr' Obringer-Broering"
+"Ed 'Guns' Sugden"
 "Eden 'Rock' Eckenrod"
 "Edie 'Grr' Rediger"
 "Edie 'MMA' Miedema"
@@ -34291,6 +34583,7 @@ blurb
 "Emmi 'Grr' Grimmer"
 "Ena 'Splat' Pleasant"
 "Ena 'Splat' Pleasant" []
+"Enid 'Guns' Duensing"
 "Enid 'Sock' Dickeson" []
 "Ennis 'Rock' Nickerson" []
 "Enos 'Bam' Boseman" []
@@ -34298,6 +34591,7 @@ blurb
 "Enos 'Whap' Openshaw"
 "Enos 'Whap' Openshaw" []
 "Erica 'Grr' Carriger"
+"Erich 'Guns' Scheuring"
 "Erin 'Blam' Liberman" []
 "Erin 'Ouch' Icenhour" []
 "Erin 'Sock' Erickson" []
@@ -34392,15 +34686,19 @@ blurb
 "Ivy 'Rock' Vickroy"
 "Jan 'Sock' Jackson" []
 "Jenni 'Bam' Benjamin" []
+"Jere 'Guns' Juergens"
+"Kali 'Guns' Klausing"
 "Kandi 'Rock' Kondracki" []
 "Karl 'Zot' Kotlarz"
 "Kasia 'Wham' Kawashima"
 "Kena 'Bam' Bakeman"
 "Kena 'Blam' Blakeman"
 "Kersti 'Pow' Petrowski"
+"Kirby 'Guns' Kingsbury"
 "Kit 'Sock' Kostick"
 "KO-Grind King Rod"
 "Kristie 'Pow' Pietrowski"
+"Laci 'Guns' Clausing"
 "LaGarde 'Blam' Gambardella"
 "Lan 'Blam' Ballman"
 "Lan 'Ouch' Calhoun"
@@ -34417,10 +34715,12 @@ blurb
 "Large Ron Loranger" []
 "Larsen 'Thud' Sutherland" []
 "Layne 'Thud' Delahunty"
+"Lea 'Guns' Lagunes"
 "Lea 'Sock' Sealock" []
 "Lee 'Bonk' Knoebel"
 "Leia 'Pecs' Speciale"
 "Len 'Blam' Bellman" []
+"Len 'Guns' Gunnels"
 "Len 'MMA' Melman"
 "Leona 'Grr' Loranger" []
 "Les 'Bam' Balmes" []
@@ -34432,6 +34732,7 @@ blurb
 "Lin 'Blam' Billman"
 "Lin 'MMA' Milman"
 "Lin 'Sock' Nickols" []
+"Lina 'Guns' Lusignan"
 "Lina 'MMA' Mailman"
 "Lina 'Sock' Nickolas" []
 "Ling 'Bam' Gamblin" []
@@ -34458,7 +34759,9 @@ blurb
 "Mac 'Grr' Mcgarr"
 "Mace 'Bonk' Boeckman"
 "Mack 'Zot' Tomczak"
+"Mara 'Guns' Sugarman"
 "Marc 'Bonk' Brockman"
+"Mason 'Guns' Magnusson"
 "Matt 'Sock' Mattocks"
 "Maude 'Grr' Magruder" []
 "Maul-Bop Palumbo" []
@@ -34469,13 +34772,16 @@ blurb
 "Mina 'Rock' Marcinko" []
 "Misti 'Hook' Kishimoto"
 "MMA Hood Mahmood"
+"Mona 'Guns' Magnuson"
 "Ms. Ouch-So-Much" []
 "Mustang Stugman" []
 "MVP Napier Vipperman" []
+"Nat 'Guns' Unangst"
 "Nat 'Hook' Khatoon"
 "Nat 'Ouch' Cauthon"
 "Neal 'Smash' Hasselman" []
 "Neal 'Thud' Delahunt"
+"Nell 'Guns' Gunnells"
 "Nestor 'Blam' Lambertson" []
 "Nestor 'Sock' Rosenstock"
 "Nettie 'Grr' Rettinger"
@@ -34494,6 +34800,7 @@ blurb
 "Oren 'Bam' Boerman" []
 "Oren 'Ouch' Cohenour"
 "Oscar 'MMA' Sammarco"
+"Paolo 'Guns' Spagnuolo"
 "Plain Stud Duplantis" []
 "Pro [n-t] Paterno" []
 "Pro Ada Porada"
@@ -34586,10 +34893,12 @@ blurb
 "Renzi 'Blam' Zilberman"
 "Retta 'Hook' Toothaker"
 "Rey 'Blam' Bramley-Marbley"
+"Rey 'Guns' Gurnsey"
 "Rey 'Sock' Croskey" []
 "Rey 'Splat' Spratley"
 "Rey 'Splat' Spratley" []
 "Rhett 'Bam' Trembath"
+"Rich 'Guns' Schuring"
 "Rita 'Blood' Dibartolo" []
 "Rita 'Boom' Morabito" []
 "Robt 'Smack' Backstrom"
@@ -34597,13 +34906,16 @@ blurb
 "Rocio 'Splat' Policastro"
 "Rocio 'Splat' Policastro" []
 "Rod 'Blam' Lombard-Lombard" []
+"Rod 'Guns' Grounds"
 "Rod 'Pecs' Prescod"
+"Roe 'Guns' Surgeon"
 "Roe 'Splat' Portales"
 "Rollo 'Bam' Broomall"
 "Ron 'Bam' Amborn" []
 "Ron 'Blam' Lamborn"
 "Ron 'MMA' Morman-Marmon"
 "Roni 'MMA' Marmion"
+"Ronna 'Guns' Gunnarson"
 "Ros 'Wham' Worsham"
 "Rosa 'Thud' Southard" []
 "Rose 'Bam' Boersma" []
@@ -34700,6 +35012,7 @@ blurb
 "Tank So Stanko"
 "Tank Spear Pasternak" []
 "Tank Tignor Tarkington" []
+"Tarah 'Guns' Straughan"
 "Ted 'Rock' Dockter"
 "Teena 'Grr' Gaertner" []
 "Tera 'Blood' DeBartolo" []
@@ -34715,6 +35028,7 @@ blurb
 "Thug Noah Haughton" []
 "Thug Nona Naughton" []
 "Thug Rene Guenther" []
+"Tia 'Guns' Agustin"
 "Tina 'Zot' Zanotti"
 "Tito 'Thud' Douthitt"
 "TKO Alan Kantola"
@@ -34756,6 +35070,7 @@ blurb
 "Tona 'Bam' Boatman" []
 "Tone 'Splat' Stapleton"
 "Toni 'Ouch' Coutinho"
+"Tonita 'Guns' Tousignant"
 "Tora 'MMA' Tammaro"
 "Torie 'Blam' Baltimore" []
 "Tran 'Bam' Bartman"
@@ -35006,6 +35321,7 @@ blurb
 "Feldhaus headfuls"
 "Ferrentino's interferons"
 "Ferriera's rarefiers"
+"Fessuri's Fissures"
 "feudalist disulfate"
 "Filbertio's Fibrolites"
 "Fingold's Foldings"
@@ -35205,6 +35521,7 @@ blurb
 "net-angst tangents"
 "neuroleptics['] intercouples"
 "Neustadt's unstateds"
+"Ney-Nye Yen"
 "Nichole's Helicons" []
 "Nicknamed Dieckmann"
 "Nieland's annelids"
@@ -36952,6 +37269,7 @@ blurb
 "Stoner Treon's" []
 "Stringy Ty Ring's"
 "Stubborn Runt Bob's"
+"Subprime Miser Pub"
 "Swindler Drew Lin's"
 "Sy and Andy's" []
 "Synergist Ty Singer's"
@@ -37474,6 +37792,7 @@ blurb
 "Striky Kristy"
 "Tackier Katrice" []
 "Tankier Katerin"
+"Teaser Teresa"
 "Thyroid Dorithy" []
 "Tiring Ingrit"
 "Too-Flat Loo Taft"

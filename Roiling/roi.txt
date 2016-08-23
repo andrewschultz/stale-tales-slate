@@ -1,5 +1,6 @@
 out=roiling-invisiclues.htm
 !A Roiling Original HTML Clues
+->c:/games/inform/roiling Materials/Release
 >General
 ?Does the male/female option have any practical difference?
 Well, one. It changes one guardian in one area. It also changes the names/genders of some people you'll meet or hear of.
