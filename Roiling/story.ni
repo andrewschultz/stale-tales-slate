@@ -267,7 +267,7 @@ check objasking a guardian about a guardian (this is the guardian general chat r
 the specification of guardian is "A person that blocks your way through the towers area until you describe him correctly."
 
 after doing something with a guardian:
-	if noun is organised:
+	if noun is organised or noun is hostile-is-he lot:
 		set the pronoun them to noun;
 	else:
 		set the pronoun it to noun;
@@ -8633,8 +8633,10 @@ carry out fliptoing:
 			if location of player is preserve:
 				if the-to entry is not parrot and the-from entry is not parrot:
 					increment nounsolve;
-			set pronoun it to the-to entry;
-			set pronoun them to the-to entry;
+			if the-to entry is singular-named:
+				set pronoun it to the-to entry;
+			if the-to entry is plural-named:
+				set pronoun them to the-to entry;
 			if pill-use is true:
 				pill-list the-from entry;
 			else:
@@ -12923,7 +12925,11 @@ understand "beneath" as a mistake ("Nice try, but wrong preposition for the situ
 
 section a drama armada
 
-a drama armada is scenery. understand "crowds" as drama armada. description of drama armada is "They're all milling around, waiting on you to say the right thing and make it snappy, and staring at the enormous bean. You'd like to push it out of the way."
+a drama armada is plural-named scenery. understand "crowds" as drama armada. description of drama armada is "They're all milling around, waiting on you to say the right thing and make it snappy, and staring at the enormous bean. You'd like to push it out of the way."
+
+after doing something with drama armada:
+	set the pronoun it to drama armada;
+	continue the action;
 
 Include (-
 	has transparent animate
@@ -24256,7 +24262,7 @@ description of Len Craig is "Unperturbed by the noise, he makes hand and nodding
 
 some lemons are a reflexive fruit in clearing.
 
-a melon is a reflexive fruit in clearing.
+a melon is a reflexive singular-named fruit in clearing.
 
 description of lemons is "Sour and frowny."
 
