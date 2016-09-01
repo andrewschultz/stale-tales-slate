@@ -301,12 +301,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "picture"	566810127	--	stream	--	"It's not just any old picture. There's a stream."
 "shaker"	401807173	--	shaker	--	"The shaker itself's been around a while and can't be changed easily. Plus, what if it was a pepper shaker? Can't do much with that."
 "fern"	308552316	fiefco	--	--	"The fern is mentally, if not physically, unmalleable."
-"sked"	298042342	fiefco	--	--	"[list-stable]."
-"minder"	412134508	fiefco	--	--	"[list-stable]."
-"stencil"	513909871	fiefco	--	--	"[list-stable]."
-"slick"	267019414	fiefco	--	--	"[list-stable]."
-"tech"	287204011	fiefco	--	--	"[list-stable]."
-"checklist"	554223425	--	checklist	--	"[list-stable]."
+"sked"	298042342	fiefco	--	--	"The checklist was built to be especially stable and singular of purpose. So, nothing happens."
 "divorces"	575948795	--	--	divorces-gone rule	"No! Not another second thinking about that rubbish."
 "song"	272133753	--	song	--	"It's the song name--[i]I'd Cede[r]."
 "eddie"	342663242	--	song	--	"It's the song name--[i]I'd Cede[r]."
@@ -1426,9 +1421,6 @@ this is the ignore-ignored rule:
 	if player is in fiefco and noise is in lalaland:
 		the rule succeeds;
 	the rule fails;
-
-to say list-stable:
-	say "The checklist was built to be especially stable and singular of purpose. So, nothing happens"
 
 this is the divorces-gone rule:
 	if player is in fiefco and divorces is in lalaland:

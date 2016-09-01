@@ -13947,7 +13947,7 @@ to say trev:
 
 book FiefCo Office
 
-FiefCo Office is an innie room in Troves. "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Slick-Tech Checklist[if divorces is visible], and DIVORCES magazine[end if] on your desk to the plasm lamps above, to the inspirational picture of a stream, your office conforms to the opulent/no let-up deco-code. Including the double-plus-secure door out[if song is visible].[paragraph break]Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes, still[else]. A shaker of salt sits on the vanity, too[end if]."
+FiefCo Office is an innie room in Troves. "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your desk to the plasm lamps above, to the inspirational picture of a stream, your office conforms to the opulent/no let-up deco-code. Including the double-plus-secure door out[if song is visible].[paragraph break]Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes, still[else]. A shaker of salt sits on the vanity, too[end if]."
 
 section order the flips
 
@@ -13997,13 +13997,13 @@ instead of doing something with the secure door:
 
 chapter desk, checklist and vanity
 
-the big important desk is scenery in FiefCo Office. "Made of nice to notice eco-tin, it has a Slick-Tech Checklist (more popular and efficient than the [randbla]) on it that you could read all day."
+the big important desk is scenery in FiefCo Office. "Made of nice to notice eco-tin, it has a Desk-Sked (more popular and efficient than the [randbla]) on it that you could read all day."
 
-the Slick-Tech Checklist is scenery in FiefCo Office. understand "list" and "checklist" and "slick/tech" and "slick tech" as checklist.
+the Desk Sked is scenery in FiefCo Office. printed name of Desk Sked is "Desk-Sked". understand "desk-sked" as desk sked
 
-does the player mean examining the big important desk: it is very likely.
+does the player mean doing something with the big important desk: it is very likely.
 
-description of slick-tech checklist is "You browse some steno-notes on your Slick-Tech Checklist: [randbla]"
+description of Desk Sked is "You browse some steno-notes on your Desk-Sked: [randbla]"
 
 check going east in FiefCo Office:
 	say "You couldn't just run out on your company and your responsibilities like that! You would engage to leave a note or something first. And, of course, you would need to mentally prepare yourself to[if salt is visible]. And you'd need to have proved yourself. You haven't, yet[otherwise]. I guess you could leave now, if you did the right thing, first[end if]." instead;
@@ -25884,7 +25884,7 @@ rivets	"[one of]Those rivets stand out.[plus][or][if prai is reflexed]You alread
 statue	--	rivets
 secure door	"Useful for keeping people out[if noise is in office], though the vanity may provide more hints what (not) to do[end if]."
 plasm lamps	"Useful for working late at the office but not for solving silly word puzzles."
-slick-tech checklist	"Useful for organizing tasks much tricker than playing dumb computer games."
+Desk Sked	"Useful for organizing tasks much tricker than playing dumb computer games."
 big important desk	"Just part of the scenery."
 lager	"[one of]The Large Regal Lager serves a purpose, but not a critical one.[plus][or]You are upset at the lager. You can make a moral statement by looking at it funny.[plus][or]GLARE at the lager in Pallid Li'l Pad.[minus][cycling]"	--	"GLARE"
 skyscraper	"[if pernod is off-stage]You can't think of getting into the skyscraper until you are in tune with Trevis Vister.[else]The Pernod holds a clue how to get into the skyscraper.[end if]"
