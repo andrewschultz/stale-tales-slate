@@ -2,22 +2,5 @@
 
 @echo off
 
-if "%1" EQU "e" (
-ti.pl e
-goto exit
-)
-
-if "%1" EQU "-m" (
-ti.pl -m %2
-gq.pl -m 10 /%2
-
-goto exit
-
-)
-
-ti.pl %1
-
-:gq
+ti.pl %*
 gq.pl -m 10 /%1
-
-:exit

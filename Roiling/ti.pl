@@ -26,8 +26,8 @@ $printCmds = 0;
 
 $firstNames = 1;
 
-$firstsFile = "firsts.txt";
-$lastsFile = "lastbig.txt";
+$firstsFile = "firsts-a.txt";
+$lastsFile = "lasts-a.txt";
 
 $fullStr = "Hon.";
 
@@ -58,7 +58,7 @@ if (! -f "$dictDir/$lastsFile") { $lastsFile = "lasts2.txt"; }
 
 if ($firstNames) { $initFile = "$firstsFile"; } else
 {
-  $initFile = "lastbig.txt"; $lastsFile = $initFile;
+  $initFile = "$lastsFile"; $lastsFile = $initFile;
   if (! -f "c:/writing/dict/$initFile") { $initFile = "lasts2.txt"; $lastsFile = "lasts2.txt"; }
 }
 $addStr = lc($fullStr); $addStr =~ s/\.//g;
@@ -113,7 +113,7 @@ close(A);
 
 #for $x (sort keys %last) { print "$x: $last{$x}\n"; } die;
 
-readUp("firsts.txt", 0);
+readUp("$firstsFile", 0);
 readUp("$lastsFile", 1);
 
 sub findWhat
