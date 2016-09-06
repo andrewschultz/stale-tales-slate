@@ -419,7 +419,7 @@ to say spec-help of (itm - a thing):
 		choose row with xtrhelp of itm in table of spechelp;
 		if point is true or tnt is true:
 			say "[helptxt entry][line break]";
-		if point is false or tnt is true:
+		else if point is false or tnt is true:
 			say "You feel a slight psychic push-pull coming from [if itm is r2 or itm is t-n or itm is m2]all around[else][the itm][end if]. Keep at it.";
 			d "There is a spechelp entry for this.";
 	else:
@@ -3024,10 +3024,6 @@ carry out fliptoing (this is the main flipping rule) :
 					now player carries the-to entry;
 				if the-to entry is prefigured:
 					now the-to entry is done-for;
-				if the-to entry provides the property male and the-to entry is male:
-					set the pronoun him to the-to entry;
-				if the-to entry provides the property female and the-to entry is female:
-					set the pronoun her to the-to entry;
 				if the-from entry is oils:
 					move the-from entry to sacred cedars;
 				if vanish entry is true:
@@ -3043,11 +3039,6 @@ carry out fliptoing (this is the main flipping rule) :
 			move noun to lalaland;
 		else if noun is not teleporter:
 			move noun to location of player; [may need special case for slippery sword]
-	if the-to entry is visible:
-		if the-to entry is plural-named:
-			set the pronoun them to the-to entry;
-		if the-to entry is singular-named:
-			set the pronoun it to the-to entry;
 	if noun is shoot button or noun is steer button:
 		now noun is part of panel;
 	if hintfull is true or helpdebugflag is true:
@@ -3060,10 +3051,21 @@ carry out fliptoing (this is the main flipping rule) :
 	the rule succeeds;
 
 after fliptoing (this is the set pronouns rule) :
-	if noun is plural-named:
-		set the pronoun them to noun;
-	set the pronoun it to the noun;
-[	d "[noun] is now it.";]
+	if noun is teleporter:
+		[set the pronoun it to location of player;]
+		continue the action;
+	if noun is beast:
+		set the pronoun him to noun;
+		set the pronoun her to noun;
+		continue the action;
+	if noun is visible:
+		if noun is plural-named:
+			set the pronoun them to noun;
+		set the pronoun it to noun; [if noun is singular-named: ... is grammatically proper but this seems more convenient for the user]
+		if noun provides the property male and noun is male:
+			set the pronoun him to noun;
+		if noun provides the property female and noun is female:
+			set the pronoun her to noun;
 	continue the action;
 
 after fliptoing (this is the when to increase min points after flip rule): [static is taken care of in carry out fliptoing--since you can reflip, it gets tricky]
@@ -3693,6 +3695,7 @@ when play begins (this is the don't use any other besides status window when pla
 	now player has the dope tan notepad;
 	now left hand status line is "[location of player] ([mrlp])[last-scan-thing]";
 	now right hand status line is "[cur-score of mrlp]/[if possibles is true][poss-range][else][max-score of mrlp][end if][if Trips Strip is visited] [bracket][number of solved regions][close bracket][end if]";
+	set the pronoun it to the above-sign;
 
 last-was-cert is a truth state that varies.
 scan-to-header is a truth state that varies.
@@ -3858,7 +3861,7 @@ check taking name list:
 instead of following banner:
 	try going east instead;
 
-the above-sign is privately-named scenery in Busiest Subsite. the printed name of above-sign is "sign above the passage". understand "sign" as above-sign when player is in subsite.
+the above-sign is privately-named scenery in Busiest Subsite. the printed name of above-sign is "the sign above the passage". understand "sign" as above-sign when player is in subsite.
 
 instead of taking above-sign:
 	say "[grounds]";
@@ -4247,7 +4250,7 @@ check wearing the toga:
 
 understand "thickets/thickest" and "thickest thickets" as darnels when player is in thickets.
 
-the snarled darnels are scenery in Thickest Thickets. "Well, they're tangled enough, you'd probably get hurt going through them."
+the snarled darnels are plural-named scenery in Thickest Thickets. "Well, they're tangled enough, you'd probably get hurt going through them."
 
 understand "sandler" as a mistake ("I award you zero points for that anagramming try, and may God have mercy on your soul[if darn-slan is false]. Okay, actually, you're close to one point[else] for trying to sneak another point[end if].") when player is in Thickest Thickets.
 
@@ -7387,6 +7390,13 @@ description of the sack is "Sturdy burlap, reading 'a stick it sack'. [if number
 
 the cask is a transparent reversible container in roomroom. "You see a plain cask here[if cask is closed]--it seems unbroached[else]--someone has cut a small hole in the top[end if]."
 
+after printing the locale description for roomroom:
+	if cask is in roomroom:
+		set the pronoun it to cask;
+	if hoses are in roomroom:
+		set the pronoun them to hoses;
+	continue the action;
+
 the cask is closed. rgtext of cask is "[rcn][gc][rc][gc]". lgth of cask is 4. gpos of cask is 3. rpos of cask is 4. cert-text of cask is "-[ast]A[d1][ast]K". rect-text of cask is "S[d1][d1][ast]K".
 
 description of the cask is "It's plain and cedar[if cask is open], with a small hole on top[else], and it seems airtight[end if]. It's engraved WERE-EWER[in-cask]."
@@ -7664,25 +7674,26 @@ after printing the locale description for moor when moor is unvisited:
 	move r2 backdrop to all moory rooms;
 	continue the action;
 
-check fliptoing r2:
-	if shoes are not in lalaland:
-		say "You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.";
-		preef r2 instead;
-	if player carries coat and player is not wearing coat:
-		say "(wearing the coat first)[line break]";
-		now player wears the coat;
-	if player is not wearing coat:
-		say "You see a flash and get a glimpse of a moor, but it is just too cold. You blink and find yourself back in the room[if coat is off-stage]. You'll need to pierce the recipe to build something warm that can cover the rest of your body than just the shoes[else]. That coat you made would be handy[end if].";
-		preef r2 instead;
-	if moor is unvisited:
-		if sortie-warn is false and button-locked is false and player has gadget and hows tag is part of gadget:
-			now sortie-warn is true;
-			say "[gadact] once you jump to the moor. Is this okay?";
-			if the player yes-consents:
-				do nothing;
-			else:
-				say "Okay. Next time, you won't see this warning." instead;
-			now button-locked is true;
+check fliptoing teleporter (this is the block moor if not dressed right rule):
+	if player is in roomroom:
+		if shoes are not in lalaland:
+			say "You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.";
+			preef r2 instead;
+		if player carries coat and player is not wearing coat:
+			say "(wearing the coat first)[line break]";
+			now player wears the coat;
+		if player is not wearing coat:
+			say "You see a flash and get a glimpse of a moor, but it is just too cold. You blink and find yourself back in the room[if coat is off-stage]. You'll need to pierce the recipe to build something warm that can cover the rest of your body than just the shoes[else]. That coat you made would be handy[end if].";
+			preef r2 instead;
+		if moor is unvisited:
+			if sortie-warn is false and button-locked is false and player has gadget and hows tag is part of gadget:
+				now sortie-warn is true;
+				say "[gadact] once you jump to the moor. Is this okay?";
+				if the player yes-consents:
+					do nothing;
+				else:
+					say "Okay. Next time, you won't see this warning." instead;
+				now button-locked is true;
 
 to say moor-jump:
 	if moor is visited:
@@ -8199,6 +8210,7 @@ before doing something with the missile when the missile is visible:
 check inserting missile into silo:
 	if black door is part of silo:
 		say "You schlep the missile through the door. You hear some mechanics and whizzing, then 'SMILIES MISSILE PROPERLY ALIGNED FOR DEALING A RESULT WITH LUSTER.'";
+		set the pronoun it to silo;
 		now missile is in silo instead;
 	otherwise:
 		say "No way to put the missile in or on the silo--and nothing on the side to attach it to. If there were any way into the silo, you could put the missile in there." instead;
@@ -8737,7 +8749,7 @@ some lost corn is a singular-named thing. rgtext of lost corn is "[rcn][gc][rc][
 
 the indefinite article of lost corn is "some".
 
-initial appearance of the lost corn is "That lost corn is still in that corner. Sorry if that sounds corny."
+initial appearance of the lost corn is "[one of]Some lost corn is[or]That lost corn is still[stopping] in that corner. Sorry if that sounds corny."
 
 the discolored buttons are part of the corn. description of discolored buttons is "They give you this weird urge to push them."
 
@@ -9827,6 +9839,10 @@ chapter Bassy Abyss
 
 Bassy Abyss is east of Elm Train Terminal. "Well, this is it[if beats are visible]. You feel like a movie star (not of a GOOD movie, mind,) with the beats pulsing in the background to lead you on to defeating--oh, wait. The beats ARE what you're trying to defeat[rieuw][else if beast is visible]. The beast is growling, probably to frighten or distract you into doing nothing constructive. I guess it worked for so long when it was incorporeal and it got lazy[rieuw][else]. You should've been kicked back to the trips strip, since you won. This is a BUG[end if].". Abyss is in Metros.
 
+after printing the locale description for abyss when abyss is unvisited:
+	set the pronoun it to siren;
+	continue the action;
+
 understand "reins" as a mistake ("Horsing around like that won't hold back the [if beast is visible]beast[else]beats[end if]. You need to get a grip another way, but you're on the right track.") when player is in Bassy Abyss.
 
 understand "risen" as a mistake ("You don't need the [if siren is visible]siren's volume or [end if][if beast is visible]the beast's power [else]the beats['] volume [end if]to have risen. Oh, no.") when player is in Bassy Abyss.
@@ -10197,6 +10213,11 @@ understand "brb" as a mistake ("You don't know him that well. No riffing on his 
 understand "slink" as a mistake ("[if red bull burdell is visible]You couldn't slink behind the kilns even if they were here[else if red bull burdell is in lalaland]Why slink? No one is blocking or watching you any more[else]Too many people are watching for you to slink away[end if].") when player is in hotspot
 
 description of Potshot Hotspot is "An arid, trod dirt road. East is siesta.[paragraph break][if riot is visible][one of]Oh dear. A horde. Uprisers--surprise--protesting YOU! A full-blown riot[or]There's a riot going on here! A bunch of people seem to be protesting...you, accusing you of things you'd never be brave enough to do[cycling][else if protest is visible]Three can still be a protest as well as a crowd, apparently. They're blocking your way east[else if potters are visible]The potters aren't just pottering around[pottiness][else if red bull burdell is visible]Red Bull Burdell is here, looking down at you[else]It's nice and peaceful here, but it's not quite home[end if].";
+
+after printing the locale description for hotspot when hotspot is unvisited:
+	set the pronoun it to riot;
+	set the pronoun them to riot;
+	continue the action;
 
 to say ri-tri:
 	if riot is visible:
@@ -10921,7 +10942,7 @@ after reading a command:
 	repeat with QQ running through fungible things: [this takes care of most of the cases, but when an object like the oils or links is flipped, we need an additional flip]
 		if QQ is a the-from listed in regana of mrlp:
 			if the player's command matches exact-text entry:
-				d "Found a fungible, [the-from entry].";
+				d "Found a fungible, [the-from entry], to [the-to entry].";
 				try fliptoing the-to entry;
 				the rule succeeds;
 	continue the action;
@@ -11679,7 +11700,7 @@ check telling about:
 
 part wolves-vowels
 
-the wolves are people. "Slavering werewolves aren't quite advancing on you. They're waiting for the first sucker to step forward and get shot. You think."
+the wolves are neuter people. "Slavering werewolves aren't quite advancing on you. They're waiting for the first sucker to step forward and get shot. You think."
 
 the wolves are plural-named.
 
@@ -13544,7 +13565,7 @@ volume beta testing - not for release
 
 description of main-window is "bug"
 
-when play begins (this is the please remove before release rule):
+when play begins (this is the beta tester instruction rule):
 	say "This version of the game involves special tricks for the player to warp through the game. It is 'volume beta testing' in the source and should be marked as NOT FOR RELEASE before release. However, it's okay now.[paragraph break]Type [b]dc[r] for all debug commands, but the one most helpful to me is [b]hd[r], which tracks the hints you receive. Shufhints.glkdata is a text file created and appended every move that you can send to me to make sure hints are valid. It's 2 dirs up in Windows and in /home in Mac.";
 	if debug-state is false:
 		say "After pushing a key, you'll be asked to save to a transcript file immediately, so you don't forget. Thanks for Beta testing![wfak]";

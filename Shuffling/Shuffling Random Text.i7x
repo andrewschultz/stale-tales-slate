@@ -1737,6 +1737,7 @@ blurb
 "Death of fate. D'oh!"
 "Deathly deal thy dye. Halt, the lady!"
 "Deepest steeped pet seed!"
+"Deign low dowling. Gone wild? Gelid now."
 "Demand, sir? Read minds? Madder sin!"
 "Demur? No! Mend our mourned ur-demon."
 "A depth pathed the pad."
@@ -2876,6 +2877,7 @@ blurb
 "Touchy Rick's Schtick: your outcry, hicks!"
 "Tourin['] our tin unit, or, to ruin."
 "A Tower! O, water! Woe, rat!" []
+"Tower wrote: we rot."
 "Tragedy Gyrated."
 "Traipsed into trepidations, pristine toad: daintier? Stop!"
 "Trapezes: reap zest, raze pest."
@@ -2992,6 +2994,7 @@ blurb
 "Ye lode: eyed, lo!"
 "Ye may. / Yay, me!"
 "Ye oak? OK, yea, a yoke."
+"Ye small elm, slay a smelly sly male!"
 "Yeah, let thee lay. Heal yet late, hey?"
 "Yeah, Nick. Each inky keychain."
 "Yeah, OK, a hokey oak, hey?"
