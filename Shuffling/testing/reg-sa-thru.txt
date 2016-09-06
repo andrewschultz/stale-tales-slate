@@ -20,8 +20,10 @@ Hm, interesting. You wonder if anything is REALLY stopping you from entering.
 >try
 You're sure the lecture to the east will be about trying versus doing. Ugh. Maybe the sign means something different.
 
+#xc
 >x sign
 
+#xc
 >try
 You're sure the lecture to the east will be about trying versus doing. Ugh.
 
@@ -52,6 +54,7 @@ That's not something you can say, do or see here. For a list of common verbs, ty
 >in
 A Dry Yard
 
+#xc
 >try
 That's more sensible than the five alternatives, but it's not concrete enough.
 
@@ -72,6 +75,7 @@ Your score has just gone up by one point.
 >doro
 The door is probably the way out. Best not change it into something else.
 
+#xc
 >rood
 You already changed the odor, and this game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
@@ -86,6 +90,7 @@ Your score has just gone up by one point.
 >blto
 You don't want to re-lock the door.
 
+#xc
 >bugel
 The bulge swells and makes a squeal, like it's trying to make music.
 You feel a slight psychic push-pull coming from the bulge. Keep at it.
@@ -94,6 +99,7 @@ Your score has just gone up by one point.
 >bugel
 The bugle emits a sad "don't change me back" noise.
 
+#xc
 >use bugle
 Use is a bit too general for this game's parser to understand. You can SWITCH something, or PUT something IN/ON something, or even ATTACH something to something. You can PUSH a button or OPEN something, as well. Specific items should clue you what to do if you EXAMINE them.
 
@@ -114,6 +120,7 @@ Your score has just gone up by one point.
 >gota
 The goat seems content enough as-is.
 
+#xc
 >score
 You haven't solved any regions yet. You have the rank of reduced deducer.
 
@@ -130,6 +137,7 @@ Your score has just gone up by one point.
 >slandre
 You already messed with the darnels.
 
+#xc
 >landers
 There will be better hints than a manners advice column once you move on.
 
@@ -143,6 +151,7 @@ You haven't solved any regions yet. You have the rank of stunted student.
 
 >get phial
 
+#xc
 >bactine
 The cabinet bit you, but there was no lasting damage.
 
@@ -154,6 +163,7 @@ Your score has just gone up by one point.
 >attisc
 Hm, you can't think of anything to do with the attics but change them back.
 
+#xc
 >magnet
 A magnet is two words--but "a" doesn't fully count.
 
@@ -168,6 +178,7 @@ Your score has just gone up by one point.
 >gatemna
 Don't scramble the gateman. He's here to help.
 
+#xc
 >score
 7 out of 7
 stunted student
@@ -178,6 +189,7 @@ To keep things simple, I recommend TAKE as a synonym. REMOVE is also okay, but i
 >get gadget
 go-hint thingo
 
+#xc
 >ask about gadget
 Scan something
 
@@ -239,8 +251,10 @@ You feel a slight psychic push-pull coming from Store F. Keep at it.
 Your score has just gone up by one point.
 >fretso
 
+#xc
 >enter forest
 
+#xc
 >ornth
 Your compass feels extra jumbled, but--well, you must be close.
 >n
@@ -250,6 +264,7 @@ Rest of Forest
 >score
 1 out of 16 total
 
+#xc
 >aest
 Your compass feels extra jumbled, but--well, you must be close.
 
@@ -292,6 +307,7 @@ Your score has just gone up by one point.
 >noes
 Don't get that nose bent out of shape.
 
+#xc
 >shadse
 The dashes seemed to rattle a bit, but you feel slightly uncool.
 You feel a slight psychic push-pull coming from the dashes. Keep at it.
@@ -300,12 +316,14 @@ Your score has just gone up by one point.
 >shadse
 Anything you do to bend the shades might break them.
 
+#xc
 >gat
 Hey! Guns are dangerous! It won't be that easy to get one. Besides, changing the tag will break the tagged gadget.
 
 >gunshot
 You need something more tangible than that. Something that could make a gunshot, perhaps
 
+#xc
 >shotgnu
 Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
 You feel a slight psychic push-pull coming from the noughts. Keep at it.
@@ -347,6 +365,7 @@ Your score has just gone up by one point.
 >masp
 The maps are probably right, you hope. No need to change them.
 
+#xc
 >bared
 It's kind of cold a lot of places here. Keep your clothes on.
 
@@ -358,10 +377,13 @@ Your score has just gone up by one point.
 >beadr
 For a beard, it's actually pretty cool.
 
+#xc
 >put shades on beard
+#xc
 >put nose on beard
 You've made a full disguise now!
 
+#xc
 >e
 >n
 Your score has just gone up by one point.
@@ -386,6 +408,7 @@ The banshee whines, sure someone is trying to kill it! Or send it to a lower rin
 >hasbeen
 Your score has just gone up by one point.
 
+#xc
 >score
 9 out of 16
 
@@ -397,6 +420,7 @@ Your score has just gone up by one point.
 >chisle
 It's a perfectly good tool. Trying to refine it might break it.
 
+#xc
 >s
 >w
 >peel cow
@@ -405,6 +429,7 @@ Cr-r-r-r-k.
 >peel chicken
 Cr-r-r-r-k.
 
+#xc
 >fire shotgun at grinder
 You can either FIRE the gun, or you can SHOOT the whatever you want.
 
@@ -418,10 +443,12 @@ You smile confidently. You'll figure how to use the grinder.
 Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam.
 
 >put cow in canister
+#xc
 >put chicken in canister
 LIVERS.
 Your score has just gone up by one point.
 
+#xc
 >steam
 You've already done enough with the meats.
 
@@ -439,6 +466,7 @@ Your score has just gone up by one point.
 >slivre
 The sliver seems to bend, but it snaps back. As if it's impatient to do or be more, but it hasn't served its purpose as-is, yet.
 
+#xc
 >e
 >n
 
@@ -453,6 +481,7 @@ Your score has just gone up by one point.
 >n
 red asp!
 
+#xc
 >spared
 That is too passive, to ask to be spared.
 
@@ -464,6 +493,7 @@ Your score has just gone up by one point.
 >drapse
 They look forbidding, but you might turn them into something worse. Maybe you can just dispose of them physically.
 
+#xc
 >n
 The drapes are too thick.
 
@@ -480,17 +510,20 @@ Your score has just gone up by one point.
 >silvre
 Hard to beat silver. It's what it should be.
 
+#xc
 >gunshot
 You need to SHOOT the gun, but you need to load it first.
 
 >put silver in shotgun
 
+#xc
 >gunshot
 You need to SHOOT the gun.
 
 >n
 Ghouls' Slough
 
+#xc
 >god
 You want to tempt the supernatural in somewhere this hellish? Phew.
 
@@ -502,6 +535,7 @@ UNDO
 >x maps
 Frost Forts
 
+#xc
 >wolvse
 The vowels continue to howl in defiance. OU...AIE...like a wild animal.
 You feel a slight psychic push-pull coming from the vowels. Keep at it.
@@ -510,6 +544,7 @@ Your score has just gone up by one point.
 >wolvse
 You don't need magic. You have a weapon.
 
+#xc
 >steel
 You'd be crushed if the sleet turned to steel.
 
@@ -522,9 +557,11 @@ Trips Strip
 
 * _sortie
 
+#xc
 >sortie
 Your score has just gone up by one point.
 
+#xc
 >enter sortie
 Centrifuge
 
@@ -538,6 +575,7 @@ Changing the dial would leave you stuck.
 
 You can probably TURN the dial to a number, e.g. 99
 
+#xc
 >16
 round den, unadorned
 Your score has just gone up by one point.
@@ -551,6 +589,7 @@ Your score has just gone up by one point.
 >sixtene
 That's not something you can say, do or see here.
 
+#xc
 >turn x
 You can probably just SWITCH something with two text settings
 
@@ -561,6 +600,7 @@ The Nick
 >n
 The Nick
 
+#xc
 >thicken
 You might rather thin-nen to slip through the bars, but you can't.
 
@@ -572,6 +612,7 @@ Your score has just gone up by one point.
 >kitchne
 Nothing happens. Well, you didn't really want to go back to the nick, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room.
 
+#xc
 >open fridge
 grist and a cake pan
 
@@ -583,6 +624,7 @@ Your score has just gone up by one point.
 >hotsauec
 Best not to get too crazy with food preparation.
 
+#xc
 >tortilal
 The tall trio seem to look interested for a minute.
 You feel a slight psychic push-pull coming from the tall trio. Keep at it.
@@ -591,6 +633,7 @@ Your score has just gone up by one point.
 >tortilal
 Best not to get too crazy with food preparation.
 
+#xc
 >lettuec
 The cult tee seems to vegetate there. Change things around and it may become something.
 You feel a slight psychic push-pull coming from the cult tee. Keep at it.
@@ -599,6 +642,7 @@ Your score has just gone up by one point.
 >lettuec
 Best not to get too crazy with food preparation.
 
+#xc
 >keats
 This is wordplay, not poetry. But the skate does glow red.
 >stake
@@ -608,6 +652,7 @@ You do a take, then a double take, at how odd this all is.
 >teaks
 Hm. An indoor forest. That would be neat to see. But this is a kitchen.
 
+#xc
 >steka
 You thought you smelled meat there, for a minute. Hm.
 You feel a slight psychic push-pull coming from the skate. Keep at it.
@@ -616,6 +661,7 @@ Your score has just gone up by one point.
 >steka
 Best not to get too crazy with food preparation.
 
+#xc
 >pears
 I think you have the wrong food group. The spearman is cheesy. Plus, he wouldn't be a spearman without his spear.
 >limes
@@ -629,19 +675,24 @@ Your score has just gone up by one point.
 >parmesna
 Best not to get too crazy with food preparation.
 
+#xc
 >put steak on taco
 a good start
 
+#xc
 >put sauce on taco
 The tortilla's coming together
 
+#xc
 >put lettuce on taco
 almost there!
 
+#xc
 >put parmesan on taco
 A full-blown taco
 Your score has just gone up by one point.
 
+#xc
 >grtis
 The grist looks a bit less bland.
 You feel a slight psychic push-pull coming from the grist. Keep at it.
@@ -650,6 +701,7 @@ Your score has just gone up by one point.
 >grtis
 Best not to get too crazy with food preparation.
 
+#xc
 >pancaek
 It's a cake pan, backwards and forwards.
 You feel a slight psychic push-pull coming from the cake pan. Keep at it.
@@ -658,6 +710,7 @@ Your score has just gone up by one point.
 >pancaek
 Best not to get too crazy with food preparation.
 
+#xc
 >s
 A Round Den, Unadorned
 
@@ -675,6 +728,7 @@ Your score has just gone up by one point.
 >strwa
 The straw remains motionless.
 
+#xc
 >score
 12 out of 27
 
@@ -688,6 +742,7 @@ You feel a slight psychic push-pull coming from all around. Keep at it.
 >moor
 You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.
 
+#xc
 >shose
 Something leaks out of the hoses. Hm. What else can be rubber, now.
 You feel a slight psychic push-pull coming from the pair of hoses. Keep at it.
@@ -696,6 +751,7 @@ Your score has just gone up by one point.
 >shose
 But you're wearing the shoes. That might cause problems.
 
+#xc
 >moor
 You see a flash and get a glimpse of a moor, but it is just too cold. You blink and find yourself back in the room
 
@@ -707,6 +763,7 @@ Your score has just gone up by one point.
 >sakc
 You doubt the sack/cask has a triple purpose.
 
+#xc
 >put straw in sack
 
 >get sack
@@ -722,10 +779,12 @@ Your score has just gone up by one point.
 >cota
 No need for fashion tweaks.
 
+#xc
 >moor
 Your score has just gone up by one point.
 Moor
 
+#xc
 >moro
 The moor sways a bit. You do some brief mental calculation. There's no third place between them.
 You feel a slight psychic push-pull coming from all around. Keep at it.
@@ -744,6 +803,7 @@ Your score has just gone up by one point.
 >peasatn
 You're better off changing what the peasant has than what he is.
 
+#xc
 >black rood
 Hm, no, keep religion out of it.
 
@@ -755,6 +815,7 @@ Your score has just gone up by one point.
 >blackdoro
 The black door just sits there.
 
+#xc
 >black rood
 Hm, no, keep religion out of it--you have what you need.
 
@@ -770,6 +831,7 @@ Instead of trading, use GIVE X to Y.
 >give straw to peasant
 Your score has just gone up by one point.
 
+#xc
 >yah
 You're glad you've got the hay, but you're not excited, and you can't fake it.
 
@@ -790,6 +852,7 @@ Your score has just gone up by one point.
 >missiel
 The missile emits an almost giggly sound but doesn't actually change.
 
+#xc
 >mope
 You mope, but it doesn't change the poem. Or even give you an idea for one.
 
@@ -811,6 +874,7 @@ Your score has just gone up by one point.
 >panle
 The panel bleeps a "stop that" sort of warning.
 
+#xc
 >room
 
 >n
@@ -822,6 +886,7 @@ You aren't going to sea in this game.
 >put hay in wall
 Your score has just gone up by one point.
 
+#xc
 >hallwya
 Hm, yes, a haywall might become something more passable, if you muddle it right.
 You feel a slight psychic push-pull coming from the scraped wall. Keep at it.
@@ -830,6 +895,7 @@ Your score has just gone up by one point.
 >hallwya
 You already have a passage east. Don't close it.
 
+#xc
 >e
 Sacred Cedars
 
@@ -840,6 +906,7 @@ The sack stiffens, rises and becomes less blobby. It's the cask again, nice and 
 Lois will not pour the oils in the cask for you, but she is not stopping you.
 
 >sack
+#xc
 >lois
 You suddenly feel discontent at your container of choice.
 
@@ -888,16 +955,19 @@ Your score has just gone up by one point.
 >soli
 The soil is right as-is, but maybe something can go on it.
 
+#xc
 >lois
 Lois may not hear you out here, and she may only give marginal hints in the cedars.
 
 >room
+#xc
 >n
 >e
 >pour oils
 Gainly laying
 SO NOW HALLS SHALL SWOON
 
+#xc
 >lois
 You feel guilt at asking Lois for more
 
@@ -922,17 +992,21 @@ Your score has just gone up by one point.
 >siol
 That silo was pretty big. You probably have little more to do with the oils.
 
+#xc
 >put missile in silo
 No way to
 
 >put door on silo
 perfectly, swinging
 
+#xc
 >put missile in silo
 RESULT WITH LUSTER
 
+#xc
 >put panel on silo
 
+#xc
 >terse
 All five wrong.
 
@@ -948,6 +1022,7 @@ Your score has just gone up by one point.
 >stere
 No, the steer button HAS to be right.
 
+#xc
 >terse
 Already good.
 
@@ -960,12 +1035,14 @@ Your score has just gone up by one point.
 >shoto
 No, the shoot button HAS to be right.
 
+#xc
 >sooth
 Close...what you need to do will sooth, in a bit.
 
 >push shoot
 You hear a loud siren!
 
+#xc
 >push steer
 AMUSING GUNS
 
@@ -973,35 +1050,45 @@ AMUSING GUNS
 Your score has just gone up by one point.
 Trips Strip
 
+#xc
+
 * _metstart-short
 
 ###############################################
 #this gets you to the flower shop with a choice of flowers, with everything else possible taken (except how to get the tulip) care of
 
+#xc
 >gardenia
 Your score has just gone up by one point.
 
+#xc
 >n
 Cramped Red Camp
 
 >w
 A Yell Alley
 
+#xc
 >tomato
 Your score has just gone up by one point.
 
+#xc
 >e
 >velcro
 Your score has just gone up by one point.
 
+#xc
 >s
 >w
 The Ol' Hotel
 
+#xc
 >throw tomato at thing
 Your score has just gone up by one point.
 
+#xc
 >x mattress
+#xc
 >e
 >n
 >n
@@ -1010,22 +1097,29 @@ Cordoned Red Condo
 >switch emitter
 Your score has just gone up by one point.
 
+#xc
 >get cake
+#xc
 >s
 >keycard
 Your score has just gone up by one point.
+#xc
 >controls
 Your score has just gone up by one point.
 
+#xc
 >e
 Elf Row's Flowers
 
 >give gardenia to faeries
 
+#xc
 >barcode
 Your score has just gone up by one point.
+#xc
 >put barcode on keycard
 
+#xc
 >w
 >s
 
@@ -1038,6 +1132,7 @@ Elm Train Terminal
 >opening
 Your score has just gone up by one point.
 
+#xc
 >put controls in opening
 
 >n
@@ -1048,6 +1143,7 @@ Your score has just gone up by one point.
 
 >opt in
 
+#xc
 >baste
 I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
 
@@ -1059,6 +1155,7 @@ Your score has just gone up by one point.
 >gardenai
 The flowers are fine as-is.
 
+#xc
 >score
 1 out of 18 total points
 
@@ -1076,6 +1173,7 @@ Your score has just gone up by one point.
 >tomaot
 It's pretty gross, but you can't really change it. Maybe it can gross someone, or something, else out.
 
+#xc
 >e
 >velcor
 The clover seems overcome with fuzz for a moment--but no, you missed a little something.
@@ -1085,6 +1183,7 @@ Your score has just gone up by one point.
 >velcor
 The velcro remains tangled.
 
+#xc
 >smitten
 No matter how hard you try to convince yourself they're useful, you're not smitten with them. They're just ugly. But they could stick really good on the right surface.
 
@@ -1120,6 +1219,7 @@ Your score has just gone up by one point.
 >rentla
 That's not something
 
+#xc
 >undo
 >undo
 >rentasl
@@ -1130,6 +1230,7 @@ Your score has just gone up by one point.
 >rentasl
 Nothing at all seems to happen this time. You've probably done what you can.
 
+#xc
 >stalker
 Hm. If the talkers became a stalker, the only person to stalk would be you. You can't change who they are inside, but maybe you can give them a fright.
 
@@ -1147,6 +1248,7 @@ Your score has just gone up by one point.
 >controsl
 The controls stay as they are.
 
+#xc
 >stent
 Medical procedures aren't necessary here. The noise is too distracting anyway.
 
@@ -1156,6 +1258,7 @@ Elf Row's Flowers
 >give gardenia to faeries
 Powerful pure flow
 
+#xc
 >barcoed
 The brocade design seems simple, yet complex, and perhaps you don't have to change a lot.
 You feel a slight psychic push-pull coming from the brocade. Keep at it.
@@ -1164,6 +1267,7 @@ Your score has just gone up by one point.
 >barcoed
 The barcode does not shift.
 
+#xc
 >keycadr
 You feel like can almost identify what the cake can become.
 You feel a slight psychic push-pull coming from the dry cake. Keep at it.
@@ -1172,6 +1276,7 @@ Your score has just gone up by one point.
 >keycadr
 The keycard remains stiff. Looks like it's as it should be.
 
+#xc
 >put barcode on keycard
 
 >w
@@ -1201,15 +1306,18 @@ That'd be neat, make the wall sticky so you could climb and deal with that stupi
 >u
 (on the fuzzy looking wall)
 
+#xc
 >openign
 The neon pig blinks as if in last-ditch defiance.
 You feel a slight psychic push-pull coming from the neon pig. Keep at it.
 >opening
 Your score has just gone up by one point.
 
+#xc
 >put controls in opening
 Your score has just gone up by one point.
 
+#xc
 >rat
 No, you don't need a rat chasing you around.
 >lair
@@ -1232,6 +1340,7 @@ The faeries have very magic and very demoralizing anti-vandalism spells.
 >trounce counter
 The faeries have very magic and very demoralizing anti-vandalism spells.
 
+#xc
 >get heaths
 >sheaht
 You stare at the heaths, picturing them in the circle and wondering which is the "starter."
@@ -1245,6 +1354,7 @@ You already got the heaths--don't mess with the merchandise.
 >noisebga
 You made your choice.
 
+#xc
 >w
 >w
 >swodr
@@ -1280,6 +1390,7 @@ That door's reinforced. The nerds made sure it was protected against all sorts o
 >e
 Bassy Abyss
 
+#xc
 >reins
 Horsing around like that won't hold back the beats. You need to get a grip another way, but you're on the right track.
 >risen
@@ -1297,6 +1408,7 @@ The dust is dust now.
 >rinse
 Time for that after you sure-handedly slay the final enemy, here.
 
+#xc
 >betsa
 The beats shift up for a second.
 You feel a slight psychic push-pull coming from the beats. Keep at it.
@@ -1305,6 +1417,7 @@ Your score has just gone up by one point.
 >betsa
 You've changed the beats to something tangible, physically beatable.
 
+#xc
 >get sword
 The sword is yours
 
@@ -1314,6 +1427,7 @@ Trips Strip
 
 * _metros-heaths-gnats
 
+#xc
 >get heaths
 >sheath
 Your score has just gone up by one point.
@@ -1327,6 +1441,7 @@ Your score has just gone up by one point.
 >give emitter to deadbeat
 Dude! So you
 
+#xc
 >give emitter to deadbeat
 Man, I've done enough work today
 #double lines
@@ -1335,6 +1450,7 @@ Man, I've done enough work today
 >e
 Your score has just gone up by one point.
 
+#xc
 >switch emitter
 >s
 >e
@@ -1343,13 +1459,16 @@ Bassy Abyss
 >resin
 Your score has just gone up by one point.
 
+#xc
 >beast
 Your score has just gone up by one point.
 >betsa
 
+#xc
 >get sword
 The sword is yours
 
+#xc
 >attack beast
 Your score has just gone up by one point.
 Trips Strip
@@ -1360,6 +1479,7 @@ Trips Strip
 >noise bag
 Your score has just gone up by one point.
 
+#xc
 >gab
 That's not a powerful enough noise to fight the beats.
 
@@ -1372,6 +1492,7 @@ swirling into the bag
 >give emitter to deadbeat
 Dude! So you
 
+#xc
 >give emitter to deadbeat
 Man, I've done enough work today
 #double lines
@@ -1383,19 +1504,24 @@ Your score has just gone up by one point.
 >ask nerds about darkness
 Your score has just gone up by one point.
 
+#xc
 >s
 >e
 Bassy Abyss
 
+#xc
 >resin
 Your score has just gone up by one point.
 
+#xc
 >beast
 Your score has just gone up by one point.
 
+#xc
 >sword
 Your score has just gone up by one point.
 
+#xc
 >attack beast
 Your score has just gone up by one point.
 Trips Strip
@@ -1406,15 +1532,18 @@ Trips Strip
 >noise bag
 Your score has just gone up by one point.
 
+#xc
 >w
 >w
 >open bag
 swirling into the bag
 
+#xc
 >e
 >give emitter to deadbeat
 Dude! So you
 
+#xc
 >give emitter to deadbeat
 Man, I've done enough work today
 #double lines
@@ -1423,28 +1552,35 @@ Man, I've done enough work today
 >e
 Your score has just gone up by one point.
 
+#xc
 >switch emitter
 Your score has just gone up by one point.
 
+#xc
 >s
 >e
 Bassy Abyss
 
+#xc
 >resin
 Your score has just gone up by one point.
 
+#xc
 >beast
 Your score has just gone up by one point.
 
+#xc
 >sword
 Your score has just gone up by one point.
 
+#xc
 >attack beast
 Your score has just gone up by one point.
 Trips Strip
 
 * _metros-begonias-noise
 
+#xc
 >get begonias
 >noise bag
 Your score has just gone up by one point.
@@ -1454,10 +1590,12 @@ Your score has just gone up by one point.
 >open bag
 swirling into the bag
 
+#xc
 >e
 >give emitter to deadbeat
 Dude! So you
 
+#xc
 >give emitter to deadbeat
 Man, I've done enough work today
 #double lines
@@ -1466,23 +1604,29 @@ Man, I've done enough work today
 >e
 Your score has just gone up by one point.
 
+#xc
 >open bag
 BE FAIR
 Your score has just gone up by one point.
 
+#xc
 >s
 >e
 Bassy Abyss
 
+#xc
 >resin
 Your score has just gone up by one point.
 
+#xc
 >beast
 Your score has just gone up by one point.
 
+#xc
 >sword
 Your score has just gone up by one point.
 
+#xc
 >attack beast
 Your score has just gone up by one point.
 Trips Strip
@@ -1492,53 +1636,64 @@ Trips Strip
 >resort
 Your score has just gone up by one point.
 
+#xc
 >enter resort
 Tiles
 >lites
 Light isn't the problem here. It's not having anywhere to go.
 
+#xc
 >islet
 Your score has just gone up by one point.
 Islet
 
+#xc
 >lites
 Light isn't the problem here. It's getting off the islet
 >slite
 That's bad spelling, and it won't shrink your problems.
 
+#xc
 >score
 1 out of 14 total
 
+#xc
 >cork
 Your score has just gone up by one point.
 
+#xc
 >wings
 Your score has just gone up by one point.
 
 >e
 An Odd Low Woodland
 
+#xc
 >slope
 Your score has just gone up by one point.
 
+#xc
 >prigs
 Grumbling about prigs, or showing those prigs, won't help now. You should probably make the sprig into something useful instead.
 
 >grips
 Your score has just gone up by one point.
 
+#xc
 >prigs
 Grumbling about prigs, or showing those prigs, won't help now. You should probably use the grips to climb instead.
 
 >ropes
 Your score has just gone up by one point.
 
+#xc
 >loot
 You don't have time for treasure with Red Bull Burdell waiting.
 
 >toeholds
 Your score has just gone up by two points.
 
+#xc
 >prose
 There's not much of that left in this game, and talking won't help you up the slope.
 >pores
@@ -1555,6 +1710,7 @@ No, the clay is a clue to what the protest really wants to do.
 >trio
 Your score has just gone up by one point.
 
+#xc
 >lacy
 No, the clay is a clue to what the trio really wants to do.
 
@@ -1564,12 +1720,14 @@ You don't have the ability to dish out an achin', but you see red from wanting t
 >china
 Your score has just gone up by one point.
 
+#xc
 >slink
 Too many people are watching for you to slink away
 
 >kilns
 Your score has just gone up by one point.
 
+#xc
 >ether
 They're not bad people. But even bad people don't deserve to vanish like that! Maybe they can get a purpose, able to use those kilns.
 >roister
@@ -1578,9 +1736,11 @@ That's what's causing the riot, and it's up to you to quiet the rioters--well, t
 >potters
 Your score has just gone up by one point.
 
+#xc
 >brb
 You don't know him that well. No riffing on his initials!
 
+#xc
 >tug toe
 Your score has just gone up by one point.
 
@@ -1590,6 +1750,7 @@ Quit screwing around and focus on yourself. NO, not like THAT. Geez
 >e
 Roman Manor
 
+#xc
 >sex it
 You're not even up for THAT, now. You just want to BE.
 

@@ -8637,6 +8637,10 @@ carry out fliptoing:
 				set pronoun it to the-to entry;
 			if the-to entry is plural-named:
 				set pronoun them to the-to entry;
+			if the-to entry provides the property male and the-to entry is male:
+				set the pronoun him to the-to entry;
+			if the-to entry provides the property female and the-to entry is female:
+				set the pronoun her to the-to entry;
 			if pill-use is true:
 				pill-list the-from entry;
 			else:
@@ -8694,11 +8698,6 @@ carry out fliptoing:
 				set the pronoun it to the-to entry;
 				if the-to entry is plural-named:
 					set the pronoun them to the-to entry;
-			if the-to entry is a person:
-				if the-to entry is female:
-					set the pronoun her to the-to entry;
-				else:
-					set the pronoun him to the-to entry;
 			follow the show blues rule instead; [for debugging]
 	repeat through regana of mrlp:
 		if noun is the-from entry and location of noun is location of player:

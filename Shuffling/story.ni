@@ -400,6 +400,7 @@ to say m-r-almost:
 
 to say red-to:
 	now red asp is in Enclosure;
+	set the pronoun it to red asp;
 	now spread is in lalaland;
 
 to say spec-help of (itm - a thing):
@@ -3023,6 +3024,10 @@ carry out fliptoing (this is the main flipping rule) :
 					now player carries the-to entry;
 				if the-to entry is prefigured:
 					now the-to entry is done-for;
+				if the-to entry provides the property male and the-to entry is male:
+					set the pronoun him to the-to entry;
+				if the-to entry provides the property female and the-to entry is female:
+					set the pronoun her to the-to entry;
 				if the-from entry is oils:
 					move the-from entry to sacred cedars;
 				if vanish entry is true:
@@ -3038,6 +3043,11 @@ carry out fliptoing (this is the main flipping rule) :
 			move noun to lalaland;
 		else if noun is not teleporter:
 			move noun to location of player; [may need special case for slippery sword]
+	if the-to entry is visible:
+		if the-to entry is plural-named:
+			set the pronoun them to the-to entry;
+		if the-to entry is singular-named:
+			set the pronoun it to the-to entry;
 	if noun is shoot button or noun is steer button:
 		now noun is part of panel;
 	if hintfull is true or helpdebugflag is true:
@@ -3937,6 +3947,7 @@ check examining (this is the examine-dirs rule):
 check going inside in Busiest Subsite:
 	say "Someone tugs you by the arm. 'Can't you read? It says NO ENTRY! Quit dawdling and get to the DEBRIEFING already!'[paragraph break]You check and make sure. No, still NONE TRY. As you brush him off, you hear 'Nice. Smart. Miscreant!'[paragraph break][wfak]";
 	say "The voice cuts off. The passage behind is gone. You shake off a momentary fear missing the lecture will go in your life file.";
+	set the pronoun it to odor;
 	now player is in Dry Yard instead;
 
 instead of thinking:
@@ -4097,7 +4108,7 @@ to say bul-blo:
 	else:
 		say "bolt"
 
-yard-door is a privately-named fixed in place thing. understand "door" and "improbable" as yard-door when odor is visible or yard-door is visible.
+yard-door is a privately-named fixed in place thing. understand "door" and "improbable" as yard-door when odor is visible or yard-door is visible. printed name of yard-door is "the door".
 
 after fliptoing yard-door:
 	if min-alert is false:
@@ -4216,6 +4227,8 @@ check going nowhere in thickest thickets:
 carry out fliptoing goat:
 	if player has toga:
 		now toga is in location of player;
+	set the pronoun him to goat;
+	set the pronoun her to goat;
 
 the toga is a thing in Thickest Thickets. "A toga is lying here. It doesn't look particularly festive or clean.". the rgtext of toga is "[rc][gc][rc][rc]". the lgth of toga is 4. gpos of toga is 3. rpos of toga is 1. cert-text of toga is "-[ast]O[d1][d1]". rect-text of toga is "G[d1][d1][ast]T".
 
@@ -5979,6 +5992,9 @@ chapter Softer Forest (sf)
 
 sf is a privately-named room in Forest. the printed name of sf is "Softer Forest".
 
+after printing the locale description for sf when sf is unvisited:
+	set the pronoun it to a random guider in sf;
+
 understand "forest1" as sf when debug-state is true.
 
 understand "softer" and "softer forest" as sf when mrlp is forest.
@@ -6032,6 +6048,9 @@ understand "noise/sound" as rambling shout when rambling shout is in location of
 chapter Rest of Forest
 
 rf is a privately-named room in Forest. the printed name of rf is "Rest of Forest". "The forest feels a bit thinner here, so you must be close to somewhere new. Here, [vis-hint]."
+
+after printing the locale description for rf when rf is unvisited:
+	set the pronoun it to a random guider in rf;
 
 understand "rest of forest/" as rf when mrlp is forest.
 
@@ -6198,6 +6217,8 @@ check inserting into the scantier canister:
 			say "(peeling the [noun] off the wall first)[line break]";
 		if number of glopmeats in lalaland is 1:
 			say "Bam! The canister chokes, sputters, and then wheezes--you see a mist arise from it and vanish. It wheezes, chokes, and coughs out--well, liver-slop spillover, but we'll call the homogenized mess LIVERS.";
+			set the pronoun it to livers;
+			set the pronoun them to livers;
 			reg-inc;
 			now chicken liver is in lalaland;
 			now cow liver is in lalaland;
@@ -6589,6 +6610,9 @@ check examining maps in Ghouls' Slough:
 chapter Frost Forts
 
 Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimera to do the ice harm here, there's so much of it. The forts all around seem to frown at you, and six-foot-high iced dice are placed all around. An icecap is near you, smelling of ipecac.[paragraph break]All exits seem to lead somewhere even darker[if wolves are in Frost Forts], though I doubt those werewolves will let you get there[end if][one of]. You steel yourself against the sleet[or][stopping]."
+
+ after printing the locale description for forts when forts is unvisited:
+	set the pronoun them to vowels;
 
 understand "unpile" as a mistake ("They'd be much less dangerous left in a pile. Maybe you have something that can do that!") when player is in frost forts and wolves are in frost forts.
 
@@ -10287,6 +10311,7 @@ to hello-bull:
 		now talk-quiet is false;
 	say "[wfak][line break]'Armed with a dream, I forged my RESPECT SCEPTER--an alum-maul--went from Da Prominent to Predominant! Once, you rodents snorted.'[paragraph break]Moving from angered to enraged, he puts his battle tablet in a back pocket and pulls out his cruelty cutlery forged of [i]iron noir[r].[paragraph break]'I will not waste sweat. GET OUT!!!! My ideal time? IMMEDIATELY! Nuance is nuisance!'[paragraph break]Bad time to maunder unarmed.[line break][wfak]";
 	now Red Bull Burdell is in Potshot Hotspot;
+	set the pronoun him to Red Bull Burdell;
 	now potters are in lalaland;
 	now kilns are in lalaland;
 	now cutlery is in hotspot;
@@ -11892,9 +11917,8 @@ check going north in Enclosure:
 	if red asp is in Enclosure:
 		say "You need to get rid of the red asp, first." instead;
 	if spread is in Enclosure:
-		say "As you try to walk through the spread, it reforms into a nasty red asp! You back up quickly.";
-		now red asp is in Enclosure;
-		now spread is in lalaland instead;
+		say "As you try to walk through the spread, it reforms into a nasty red asp! You back up quickly.[red-to]";
+		the rule succeeds;
 	if player does not have maps and player does not have Spam:
 		say "You're worried about that notice. What if you get lost?" instead;
 	if player does not have shotgun:

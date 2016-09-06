@@ -235,6 +235,7 @@ blurb
 "Christa Straich"
 "Christina Taschrini"
 "Christine Steinrich"
+"Chronos Shocron-Schnoor"
 "Cicero Reccio"
 "Clara Claar"
 "Clare Creal"
@@ -343,6 +344,7 @@ blurb
 "Don Hall-Holland"
 "Donal Aldon"
 "Dondre Reddon"
+"Donella Delano"
 "Donovan Van Doon"
 "Dori Dior"
 "Dorinda DiNardo"
@@ -823,6 +825,7 @@ blurb
 "Micha Chima" []
 "Michel Chmiel"
 "Michels McLeish"
+"Mikel Limke"
 "Mikhail Il-Hakim"
 "Milton Tomlin-Tilmon"
 "Minna Inman"
@@ -1085,6 +1088,7 @@ blurb
 "Scott Cotts"
 "Scottie Sicotte"
 "Searle Easler"
+"Selya Ayles"
 "Selya Ayles" []
 "Serban Nabers-Barnes"
 "Serge Seger"
@@ -3768,6 +3772,7 @@ blurb
 "'Sky-Tech? Sketchy!'"
 "'Snider Nerd is Snider!' they laugh, with fake self-awareness." [x]
 "'Sod DOS!'"
+"'Sokoban snob? A-ok!'"
 "'Some tend. Most need DemosNet.'"
 "'Source code, coerce us, do!'"
 "'South end node shut. Done thus.'"
