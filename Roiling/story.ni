@@ -151,7 +151,7 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 
 Otters is an unsolved region. regtab of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 29. min-score of otters is 23. [2 for the extra conjunction pair, 1 for dissing Elmer/Merle, 2 for all animals in both N and S animal regions, 1 for cinders]
 
-Others is an unsolved region. regtab of Others is table of others nudges. regana of Others is table of others anagrams. max-score of Others is 41. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits + compass + icons/sonic + passport x 2. FRUI checks what fruit is where.]
+Others is an unsolved region. regtab of Others is table of others nudges. regana of Others is table of others anagrams. max-score of Others is 42. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
 Demo Dome is a frivolous region. regtab of Demo Dome is table of demo dome nudges.
 
@@ -719,9 +719,14 @@ every turn when scams is true (this is the scam rule):
 		now player has pills;
 		try spilling pills;
 	else if mrlp is others:
-		d "Basic hints.";
-		try hinting instead;
+		if player has arugula:
+			say "Force feeding you arugula.";
+			now arugula is in lalaland;
+		if can-guru is false:
+			now can-guru is true;
+			say "Giving you GURU ability.";
 	else if mrlp is demo dome:
+		say "No cheat items, so I'm just giving hints.";
 		try requesting the score instead;
 
 section long form of verbs
@@ -3819,6 +3824,8 @@ check entering a portal:
 						say "You decide to look around a bit more." instead;
 	choose row with por of noun in table of warps;
 	say "[go-text entry]";
+	if noun is hoster:
+		pad-rec "guru";
 	if noun is otters-x and bleary barley is unvisited:
 		say "Those otters weren't there to drain people for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.";
 		pad-rec-q "asking";
@@ -8513,7 +8520,10 @@ e-s	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visi
 oyster-x	Oyster	Posh Hops Shop	"[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
 towers-x	Towers	Loftier Trefoil	"[one of]As you attempt to enter the towers, they seem to move away will stop when you try to go closer, they move even further away. But you keep walking, eventually walking somewhere barren--the Bland Sad Badlands! There's not much there, but you've heard people guard the silliest things, just because. So when you find a tavern, you stop in for some help.[wfak][paragraph break]Someone is willing to talk to you: a marauding sort named Rodney who already has held the tavern hostage! And you stumbled in just as he'd got everyone scared and ready to let him loot the place![wfak][paragraph break][or]You warp back to the Badlands again.[stopping]"
 otters-x	Otters	Bleary Barley	"[if b-b is reflexed]You turn around when you pass through the otters, but the Strip of Profits is gone.[else if Bleary Barley is visited]You stumble back into the barley and when you turn around, you can't see the otters anywhere.[otherwise]As you walk through, you feel a tingling, like giant wasp paws. You know you are not as powerful as before. A voice says 'This area is not to be braved lightly. Really.'[end if][paragraph break]"
-hoster	others	rustic citrus	"After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it.'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices."
+hoster	others	rustic citrus	"After the darkest, sad trek, a frazzled beady-eyed man runs up to you and mutters about the Postage Gestapo and Tubers Brutes and so forth. Then he looks up. 'Curtis. Turf is fruits. CEO of TruSci.[paragraph break]'Yeah, you. You, um, [tgw] Listen, I need help with my business. Elvira grew all kinds of un-nutritious stuff. It'd help Yorpwald, and maybe it's help you. I bet it'd be real easy for you...and I'll give you something cool for every four fruits. Until I'm out of cool stuff. What do you say?'[wfak][paragraph break]'Great! You do your thing, then I'll do mine. It's weird technical biotech stuff, increase yields--a step past your...not that you're...um, never mind, get on it. Oh, here's an augural arugula, if you get stuck on something. Just eat it and la! a GURU!'[paragraph break]He's a bit brusque, but that's the legacy of bad leaders like Elvira--the people opposed to them the loudest can get annoying before anyone notices[get-arug]."
+
+to say get-arug:
+	now player has arugula;
 
 book fliptoing
 
@@ -8949,7 +8959,7 @@ hostile-is-he lot	hostile-is-he lot	false	537631654	--	"holiest"	"holiest"	"The 
 ray eck	ray eck	false	409615745	--	"creaky"	"creaky"	"You hear a squeak from the keycar, then Ray Eck cringing and grabbing his leg. He spends some time complaining about various aches (don't worry, they're psychosomatic) and then about how he'd been ripped off purchasing stuff like the keycar before. Worried the keycar will sputter and die out here, he guides it home."
 pirates	pirates	false	541160519	--	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
 old ice	old ice	false	341000045	--	"coiled"	"coiled"	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."
-denim	éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the ravages are, well, ravaged enough. You take the éclairs."
+denim	Éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the ravages are, well, ravaged enough. You take the éclairs."
 fissure	fissure	false	582291393	--	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 prison ropins	prison ropins	false	522953692	--	"unlocked"	"unlocked"	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks and vanishes. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 smart kid	smart kid	false	356052660	--	"gifted"	"gifted"	"[kid-full] calms down a bit. 'Man! My mind is clearer now! Did you...? Well, if you did or didn't, I'm still, wow.' [he-she-c] asks you, 'Could you give me help building a bot-boat?' You shake your head. 'Do you know anyone?'[paragraph break]Hmm, not any of the guardians blocking your way, but maybe you could get someone to show [kid-full] how to. Then maybe you could cross Leak Lake and get closer to the Curst Palace."
@@ -11499,6 +11509,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "rove" or "over" or "rove over"	false	"You can just ROVE OVER to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
 "talking"	false	"[if number of terse-warned hintrelevant people > 0]You got nothing from [list of terse-warned hintrelevant people][else]Nobody nearby seems useless...YET[end if]."	"talking"	false	--
 "badlands" or "bland/sad badlands" or "bland sad badlands"	false	"Old Hat Daltho told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the flowerpot was for a friend called Ed."	"badlands"	true	towers
+"guru"	false	"You can GURU something [if arugula is in lalaland]now you've eaten[else]after eating[end if] the augural arugula."	"guru"	true	others
 
 to say xray-help:
 	if xrayvision is true:
@@ -19766,10 +19777,10 @@ chapter éclairs
 
 a pack of Claire's Scalier Éclairs is a hintpastry. description is "To those who eat these scalier éclairs (O CALORIES,) much is clear. However, it is not recommended that you eat them cold."
 
-understand "eclair/eclairs" as éclairs.
+understand "eclair/eclairs" as Éclairs.
 
-after doing something with éclairs:
-	set the pronoun them to éclairs;
+after doing something with Éclairs:
+	set the pronoun them to Éclairs;
 	continue the action;
 
 chapter retapeing
@@ -22998,6 +23009,8 @@ instead of taking inventory:
 		say "[line break]You also DON'T have your full powers. You'll need to fix that before hitting the bulwark to the west.";
 	if player has compass:
 		say "[line break]You also have a compass to tell direction.";
+	if can-guru is true:
+		say "[line break]You still have the aftertaste of the arugula, to GURU people."
 
 silence-tally is a number that varies.
 
@@ -23437,6 +23450,53 @@ to check-fruit-min:
 
 description of Rustic Citrus is "A sign on an abandoned drinks stand says RUSTIC CITRUS and, well, it's pretty rustic even if nothing much is growing[if spear is visible]--I don't think the spear stuck in the ground counts[end if][if mad train is visible], and a mad train lies glaring at the lack of track ahead[end if]. [if lumps are visible]The ground's covered with lumps, too. [end if][if pagers are visible]You hear pagers beeping all around as well. [end if][if slime is visible]You also have trouble not looking at some slime oozing off to the side. [end if][if videotape is in citrus]That videotape collection you uncovered from the drinks stand lies here, too. [end if]"
 
+chapter augural arugula
+
+the augural arugula is an edible thing.
+
+check eating arugula:
+	say "Not very tasty, but your vision seems clearer. You can now GURU what you are curious about.";
+	now arugula is in lalaland;
+	now can-guru is true;
+	the rule succeeds;
+
+after printing the name of arugula when taking inventory:
+	say " (to eat, then GURU something to change to fruit)";
+	continue the action;
+
+can-guru is a truth state that varies.
+
+section guruing
+
+guruing is an action applying to one thing.
+
+understand the command "guru" as something new.
+
+understand "guru [something]" as guruing when mrlp is others.
+
+did-guru is a truth state that varies.
+
+carry out guruing:
+	if can-guru is false:
+		if arugula is in lalaland:
+			say "You lost your guru powers." instead;
+		say "You'll near to eat the arugula, first." instead;
+	if noun is megaton pear or noun is mopeage rant or noun is rampage note:
+		say "You blink and wind up refocusing on the magenta rope.";
+		try guruing magenta rope instead;
+	repeat through table of others anagrams:
+		if noun is the-from entry:
+			say "A vision of [the-to entry] flashes before your eyes. The aftertaste of arugula finally dissipates.";
+			now can-guru is false;
+			now noun is prefigured;
+			now did-guru is true;
+			decrement poss-score of others;
+			the rule succeeds;
+	if noun is a person:
+		say "Maybe a person shouldn't and can't be changed into a fruit." instead;
+	say "Nothing happens. Maybe something else.";
+	the rule succeeds.
+	
 chapter curtis and dealing with him
 
 Curtis is a person in Rustic Citrus. description is "I curst him to be nondescript.". "Curtis is pottering around, waiting for you to hand over [if cur-score of others is 0]some[else]more[end if] fruits."
@@ -23683,7 +23743,7 @@ check going north in Rustic Citrus:
 
 chapter drinks stand
 
-the abandoned drinks stand is scenery in Rustic Citrus. "[one of]It's pretty easy to see why it's abandoned. Unfortunately, it's not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant, and plans for a megaton pear, under some magenta rope. And there's a lame video collection.[or]There's no other nasty cola, or writing, or 'art,' to find.[or]You've searched the stand pretty thoroughly.[stopping][if eerie blurbs are visible] You notice some eerie blurbs written on the stand.[end if]"
+the abandoned drinks stand is scenery in Rustic Citrus. "[one of]It's pretty easy to see why it's abandoned. Unfortunately, it's not hi-tech enough to be hooked up to a wiki with gifs, which would make things easier for you. (Technology often does.) But you do find a can of nasty peanut cola there. It's too gross in concept to take. And there's a rampage note with a mopeage rant[if pears are in lalaland], and plans for a megaton pear,[end if] under some magenta rope. And there's a lame video collection.[or]There's no other nasty cola, or writing, or 'art,' to find.[or]You've searched the stand pretty thoroughly.[stopping][if eerie blurbs are visible] You notice some eerie blurbs written on the stand.[end if]"
 
 check taking drinks stand:
 	say "The drinks stand is too big to take[if slime is off-stage], but maybe it's worth examining[else], and you sort of ransacked it anyway[end if]." instead;
@@ -27165,45 +27225,57 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]you could've examined the drinks stand to find more pre-fruits.";
 		else:
 			if eerie blurbs are not in lalaland:
-				say "[2dmiss of cur-reg]the eerie blurbs could've become blueberries.";
+				say "[2dmiss of cur-reg]the eerie blurbs could've become BLUEBERRIES.";
 			if slime is not in lalaland:
-				say "[2dmiss of cur-reg]the slime could've become limes.";
+				say "[2dmiss of cur-reg]the slime could've become LIMES.";
 			if peanut cola is not in lalaland:
-				say "[2dmiss of cur-reg]the peanut cola could've become a cantaloupe.";
+				say "[2dmiss of cur-reg]the peanut cola could've become a CANTALOUPE.";
 			if mopeage rant is not in lalaland:
-				say "[2dmiss of cur-reg]the mopeage rant et al could've become a pomegranate.";
-			if apples is not in lalaland:
-				say "[2dmiss of cur-reg]the ESP PAL shirt could've become apples.";
+				say "[2dmiss of cur-reg]the mopeage rant et al could've become a POMEGRANATE.";
+			if videotape collection is not in lalaland:
+				say "The videotape collection's movies could've become a PERSIMMON.";
+		if apples are not in lalaland: [swell wells]
+			say "[2dmiss of cur-reg]the ESP PAL shirt could've become APPLES.";
+		if green stain is not in lalaland:
+			say "[2dmiss of cur-reg]you could've made the green stain TANGERINES.";
+		if miser ruble is not in lalaland:
+			say "[2dmiss of cur-reg]the miser ruble could've become MULBERRIES.";
 		if riot cap is not in lalaland:
-			say "[2dmiss of cur-reg]the riot cap could've become an apricot.";
+			say "[2dmiss of cur-reg]the riot cap could've become an APRICOT.";
 		if sorer bogey is not in lalaland:
-			say "[2dmiss of cur-reg]the sorer bogey could've become a gooseberry.";
+			say "[2dmiss of cur-reg]the sorer bogey could've become a GOOSEBERRY.";
 		if stucco is not in lalaland:
-			say "[2dmiss of cur-reg]the message on stucco could've become coconuts.";
-		if rapt figure is not in lalaland:
-			say "[2dmiss of cur-reg]the rapt figure could've become a grapefruit.";
-		if barber sickle is not in lalaland:
-			say "[2dmiss of cur-reg]the barber sickle could've become blackberries.";
-		if pryer bars are not in lalaland:
-			say "[2dmiss of cur-reg]the pryer bars could've become a raspberry.";
+			say "[2dmiss of cur-reg]the message on stucco could've become COCONUTS.";
+		if rapt figure is not in lalaland: [filed field]
+			say "[2dmiss of cur-reg]the rapt figure could've become a GRAPEFRUIT.";
 		if pipe panel fence is not in lalaland:
-			say "[2dmiss of cur-reg]the pipe panel fence could've become a pineapple.";
+			say "[2dmiss of cur-reg]the pipe panel fence could've become a PINEAPPLE.";
 		if b-w are not in lalaland:
-			say "[2dmiss of cur-reg]the barriers west could've become strawberries.";
-		if barren cries are off-stage and briar screen is not in lalaland:
-			say "[2dmiss of cur-reg]the briar screen could've become cranberries.";
+			say "[2dmiss of cur-reg]the barriers west could've become STRAWBERRIES.";
+		if briar screen is not in lalaland:
+			say "[2dmiss of cur-reg]the briar screen could've become CRANBERRIES.";
+		if b-r is not in lalaland:
+			say "[2dmiss of cur-reg]the buried raft could've become BREADFRUIT.";
+		if pryer bars are not in lalaland:
+			say "[2dmiss of cur-reg]the pryer bars could've become a RASPBERRY.";
+		if barber sickle is not in lalaland:
+			say "[2dmiss of cur-reg]the barber sickle could've become BLACKBERRIES.";
+		if mean trowel is not in lalaland:
+			say "[2dmiss of cur-reg]the briar screen could've become a WATERMELON.";
 		if lemons are not in lalaland: [clearing]
 			say "[2dmiss of cur-reg]you could've looked SOLEMN to get lemons.";
 		if melon is not in lalaland:
 			say "[2dmiss of cur-reg]you could've said MO LEN or LEN MO to get a melon.";
+		if papayas are not in lalaland:
+			say "[2dmiss of cur-reg]you could've gotten PAPAYAS from the 'Pay ASAP' Auction Caution.";
 		if mango is not in lalaland:
 			say "[2dmiss of cur-reg]you could've listened to the 'go, man' voice to go AMONG the clearing.";
 		if peach is not in lalaland:
 			say "[2dmiss of cur-reg]you could've gotten the peach CHEAP.";
 		if l-o-p is not reflexed:
 			say "[2dmiss of cur-reg]you could've said CRIPES at the prices.";
-		if green stain is not in lalaland:
-			say "[2dmiss of cur-reg]you could've made the green stain TANGERINES.";
+		if quince is not in lalaland:
+			say "[2dmiss of cur-reg]you could've said the quince costs CINQUE.";
 		if nectarine is not in lalaland:
 			say "[2dmiss of cur-reg]you could've made the nectarine ANCIENTER.";
 		if orange is not in lalaland: [mr ice]
@@ -27214,6 +27286,8 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]you could've made the plant in the Scape Space RHUBARB.";
 		if reserved sign is not in lalaland:
 			say "[2dmiss of cur-reg]you could've made the reserved sign in the Scape Space REVERSED.";
+		if did-guru is true:
+			say "[2da]going a-la-guru from the arugula lost you a final point.";
 	if number of bypassed regions > 0:
 		say "[2dg of cur-reg]Next time, you can maybe try the [list of bypassed regions] region[if number of bypassed regions > 1]s[end if]." instead;
 	if anything-missed is false:
