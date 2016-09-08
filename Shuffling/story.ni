@@ -2185,6 +2185,25 @@ check touching:
 		say "The spread lashes back--it turns into a red asp! You back off quickly, but fortunately, the asp is only a vicious guardian, not a vicious attacker[red-to]." instead;
 	say "Touch's not [i]tons[r] couth." instead;
 
+chapter examining
+
+xrooming is an action applying to one visible thing.
+
+understand "x [any room]" as xrooming.
+understand "examine [any room]" as xrooming.
+
+check xrooming:
+	if noun is location of player:
+		say "X/EXAMINE (ROOM) is equivalent to LOOK in Shuffling Around.";
+		try looking instead;
+	if noun is visited:
+		say "You've been there, but you can't see that far[x-room-n].";
+	else:
+		say "You haven't gotten there yet, and you can't see that far[x-room-n].";
+
+to say x-room-n:
+	say "[one of]. X ROOM is really just the same as LOOK for the room you're in, and you don't need to look ahead or behind[or][stopping]"
+
 chapter throwing
 
 understand the command "throw" as something new.
@@ -3052,7 +3071,7 @@ carry out fliptoing (this is the main flipping rule) :
 
 after fliptoing (this is the set pronouns rule) :
 	if noun is teleporter:
-		[set the pronoun it to location of player;]
+		set the pronoun it to location of player;
 		continue the action;
 	if noun is beast:
 		set the pronoun him to noun;

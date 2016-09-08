@@ -3080,6 +3080,7 @@ blurb
 "'Consumers: un-cross [']em!'"
 "'Control us, loco runts? Lout? Scorn!'"
 "'Corporate Rat Cooper: react, poor!'"
+"'Countryside eco-industry? Crony-suited!'"
 "'Crass law: class war!'"
 "'The crime: hermetic rich meet!'"
 "'Crucify Fyrucci!'"
@@ -4026,6 +4027,7 @@ blurb
 "'Grunt! Oi! Routing!'"
 "'Gusto, oaf? Out of gas!'"
 "'Ha, slide a shield!' he brags, pretending you attacked." [x]
+"'Haven? NEVAH!'"
 "He points at himself. 'BAD!' Then at you. 'SAD ABS!'" [x]
 "He points at himself. 'BEEF!' Then at you. 'FEEB!'" [x]
 "'Heftier free hit if there...' / 'The fire!' you yell, distracting his swing." [x]

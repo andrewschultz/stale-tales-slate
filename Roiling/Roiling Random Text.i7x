@@ -19277,6 +19277,7 @@ blurb
 "BRING UP BURPING? BURN, PIG"
 "BUDDHAS? BAH! DUDS"
 "A BURP'S SUBPAR"
+"BUST THE BET HUTS"
 "CERTITUDE! RECTITUDE"
 "CHA-CHA? ACH! ACH"
 "CHARITABLE? LIAR, BETCHA"
@@ -29018,6 +29019,7 @@ blurb
 "Old Liar Radillo" []
 "Old Lita DiTolla"
 "Old Thumb Humboldt"
+"Olde Cap'N Copeland"
 "Oleaginous [if player is male]Louis Genoa[else]Sonia Logue[end if]"
 "Olga 'Legs' Gallegos"
 "Omer 'Gun' Mounger"

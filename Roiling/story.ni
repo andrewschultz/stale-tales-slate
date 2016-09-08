@@ -6887,6 +6887,25 @@ to say unless-max:
 
 book regular trivial verb tweaks
 
+chapter examining
+
+xrooming is an action applying to one visible thing.
+
+understand "x [any room]" as xrooming.
+understand "examine [any room]" as xrooming.
+
+check xrooming:
+	if noun is location of player:
+		say "X/EXAMINE (ROOM) is equivalent to LOOK in A Roiling Original.";
+		try looking instead;
+	if noun is visited:
+		say "You've been there, but you can't see that far[x-room-n].";
+	else:
+		say "You haven't gotten there yet, and you can't see that far[x-room-n].";
+
+to say x-room-n:
+	say "[one of]. X ROOM is really just the same as LOOK for the room you're in, and you don't need to look ahead or behind[or][stopping]"
+
 chapter attacking
 
 understand the command "kick" as something new.
@@ -8930,7 +8949,7 @@ hostile-is-he lot	hostile-is-he lot	false	537631654	--	"holiest"	"holiest"	"The 
 ray eck	ray eck	false	409615745	--	"creaky"	"creaky"	"You hear a squeak from the keycar, then Ray Eck cringing and grabbing his leg. He spends some time complaining about various aches (don't worry, they're psychosomatic) and then about how he'd been ripped off purchasing stuff like the keycar before. Worried the keycar will sputter and die out here, he guides it home."
 pirates	pirates	false	541160519	--	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
 old ice	old ice	false	341000045	--	"coiled"	"coiled"	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."
-denim	Éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the ravages are, well, ravaged enough. You take the éclairs."
+denim	éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the ravages are, well, ravaged enough. You take the éclairs."
 fissure	fissure	false	582291393	--	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 prison ropins	prison ropins	false	522953692	--	"unlocked"	"unlocked"	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks and vanishes. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 smart kid	smart kid	false	356052660	--	"gifted"	"gifted"	"[kid-full] calms down a bit. 'Man! My mind is clearer now! Did you...? Well, if you did or didn't, I'm still, wow.' [he-she-c] asks you, 'Could you give me help building a bot-boat?' You shake your head. 'Do you know anyone?'[paragraph break]Hmm, not any of the guardians blocking your way, but maybe you could get someone to show [kid-full] how to. Then maybe you could cross Leak Lake and get closer to the Curst Palace."
@@ -19743,14 +19762,14 @@ after going somewhere (this is the duck-follows-you rule):
 		move duck to location of player;
 	continue the action;
 
-chapter Éclairs
+chapter éclairs
 
 a pack of Claire's Scalier Éclairs is a hintpastry. description is "To those who eat these scalier éclairs (O CALORIES,) much is clear. However, it is not recommended that you eat them cold."
 
-understand "eclair/eclairs" as Éclairs.
+understand "eclair/eclairs" as éclairs.
 
-after doing something with Éclairs:
-	set the pronoun them to Éclairs;
+after doing something with éclairs:
+	set the pronoun them to éclairs;
 	continue the action;
 
 chapter retapeing
