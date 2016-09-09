@@ -1114,21 +1114,26 @@ He ignores your conversation
 >ask inapt paint about curst palace
 "You'll never get there!"
 
->ask reed's about elvira
-"If it weren't for her I wouldn't have this job and costume. Which kind of stinks, but..."
->ask reed's about reed's
-He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
->ask reed's about xyzzy
-He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
->ask reed's about curst palace
-"You'll never get there!"
 >listen
-He mutters and moans
+Lars Eede mutters and moans
 
 >sewed
 
->released
+>s
 >e
+
+>ask organised about elvira
+Staring at the ego-drains for a bit, you have to admit Elvira shows leadership, initiative, etc. You turn away feeling more self-conscious than before.
+>ask organised about organised
+The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go south.
+>ask organised about xyzzy
+The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go south.
+>ask organised about curst palace
+"You'll never get there!"
+
+>grandiose
+
+>n
 Ole Shrine Shoreline
 
 >ask lot about elvira
@@ -1138,6 +1143,15 @@ They complain about something irrelevant to what you asked. Hostile!
 >ask lot about xyzzy
 They complain about something irrelevant to what you asked. Hostile!
 >ask lot about curst palace
+"You'll never get there!"
+
+>ask lars about elvira
+"If it weren't for her I wouldn't have this job and costume. Which kind of stinks, but..."
+>ask lars about lars
+He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
+>ask lars about xyzzy
+He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
+>ask lars about curst palace
 "You'll never get there!"
 
 >w
@@ -1152,22 +1166,21 @@ She complains about something irrelevant to what you asked. Hostile!
 >ask lois the hostile about curst palace
 "You'll never get there!"
 
->w
+>ask elsa about elvira
+"If it weren't for her I wouldn't have this job and costume. Which kind of stinks, but..."
+>ask elsa about elsa
+She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
+>ask elsa about xyzzy
+She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it.
+>ask elsa about curst palace
+"You'll never get there!"
+
+>s
 >gs
->e
+>n
 
 >holiest
 
->ask organised about elvira
-Staring at the ego-drains for a bit, you have to admit Elvira shows leadership, initiative, etc. You turn away feeling more self-conscious than before.
->ask organised about organised
-The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go south.
->ask organised about xyzzy
-The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go south.
->ask organised about curst palace
-"You'll never get there!"
-
->grandiose
 >n
 Actionless Coastline
 

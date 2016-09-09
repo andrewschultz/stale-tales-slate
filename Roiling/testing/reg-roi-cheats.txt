@@ -646,7 +646,6 @@ Hmm. You bet you could get past if the man in a REED'S ALE costume were RELEASED
 >xray inapt paint
 Hmm. You bet you could get past if the man covered in inapt paint were HIMSELF.
 
->released
 >mined
 >himself
 >sewed
@@ -715,12 +714,23 @@ You've done what you can with Dr. Yow. He can be rowdy or wordy.
 >xray lot
 Hmm. You bet you could get past if the Hostile-Is-He Lot were HOLIEST.
 
+>xray reed's ale
+WRONG
+>xray lars eede
+WRONG
+
 >s
 >gs
 >n
 >xray lois
 Hmm. You bet you could get past if Lois the Hostile were HOLIEST.
 >holiest
+
+>xray reed's ale
+WRONG
+>xray elsa erde
+WRONG
+
 >gs
 
 >n

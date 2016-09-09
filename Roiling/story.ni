@@ -572,7 +572,7 @@ to choose-male:
 
 after fliptoing reed's ale:
 	now lars eede is in lalaland;
-	now elsa rede is in lalaland;
+	now elsa erde is in lalaland;
 	continue the action;
 
 after fliptoing the-hostile (this is the holiest for testing purposes rule) :
@@ -1979,7 +1979,8 @@ unripe iPrune	--
 pirates	--
 Ray Eck	--
 grailman	--
-costume man	--
+Lars Eede	--
+Elsa Erde	--
 bonker	--
 ingrates	--
 organised	--
@@ -2119,9 +2120,9 @@ snider diners	"They [one of]ignore you, asking is DERN coming[or]talk about Dr. 
 organised ego drains	"The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go [if player is in campsite]north[else]south[end if][if campsite is visited and shoreline is visited], especially since you walked around before[end if]."
 pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to converse.[or]'Yarrh, Harry,' they shout, and one of them makes fun of your skin tone. You feel like a spiter, hoping they get skin cancer.[in random order]"
 lars eede	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
-Elsa Reed	"She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
+Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 admirer	"They claim they never thought they'd love someone the way they love you! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another compliment[or]You blush red hearing nonsense you two could be as good together as the popular society couple Red Irma and Ed Mirra[cycling]."
-man covered in inapt paint	"He ignores your conversation. '[one of]They done wrong to ol['] Mel Fish. That's me.[or]They were all [']Shelf [']im!['] and on the paint went.[or]SMH. Life.[or]Eh. Films.[in random order]' he mumbles as his eyes go red[one of]. Maybe he has other things to mumble about[or][stopping]."
+man covered in inapt paint	"He ignores your conversation. '[one of]They done wrong to ol['] [kno-mel]. That's me.[or]They were all [']Shelf [']im!['] and on the paint went.[or]SMH. Life.[or]Eh. Films.[in random order]' he mumbles as his eyes go red[one of]. Maybe he has other things to mumble about[or][stopping]."
 natives	"You seem unable to convince the natives they are too good to stand here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
 sweatier wait-seer	"'Trees! [one of]Aw, I[or]I, aw[in random order]...' he says, making you see red. 'I'm obviously [i]sweatier[r] than you, yet I am far less tired!'"
 Ray Eck	"'Hmm? That's not as interesting as my bright red keycar, here.'"
@@ -4724,6 +4725,7 @@ carry out requesting the score:
 			say "[if store h is in strip of profits]You need to figure how to get to store H[else]Enter the hoster for the final region[end if]." instead;
 		say "You have [cur-score of mrlp] of [max-score of mrlp] total points for the post-Elvira Others region[if min-score of mrlp < max-score of mrlp], but you only need [min-score of mrlp][end if].";
 		eval-fruits;
+		check-guru;
 		the rule succeeds;
 	otherwise:
 		d "# of turns = [turn count].";
@@ -4761,7 +4763,12 @@ carry out requesting the score:
 		say "[line break]You haven't solved any regions yet.";
 	if mrlp is others:
 		eval-fruits;
+		check-guru;
 	the rule succeeds;
+
+to check-guru:
+	if did-guru is false and cur-score of others is 41:
+		say "[line break]Since you've changed all the fruits without using the arugula, I think you deserve to know you will get the last lousy point for entering the Stadium [if player is not in gates stage]north of the Gates Stage[else]to the north[end if] without using GURU."
 
 possibles is a truth state that varies. min-alert is a truth state that varies.
 
@@ -21178,6 +21185,12 @@ understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/fo
 
 understand "mel fish" and "mel/fish" as man covered in inapt paint.
 
+mel-known is a truth state that varies.
+
+to say kno-mel:
+	say "Mel Fish";
+	now mel-known is true;
+
 the i-p is part of the man covered in inapt paint. the i-p is privately-named. printed name of i-p is "inapt paint". understand "inapt/paint" and "inapt paint" as i-p.
 
 does the player mean doing something with inapt paint: it is very likely.
@@ -21223,13 +21236,13 @@ description of grailman is "You could probably take a below-average grailman, bu
 a-text of alarming is "RYRRYRYR". b-text of alarming is "RYRRYR?R". parse-text of alarming is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x".
 
 to say deal-seer:
-	say "'[el-la-f], deal seer, at your service!' someone with a bottle of Reed's Ale ambushes you. They don't seem like they want to be budged.[or]Lars Eede, Deal Seer, remains here, with that bottle of Reed's Ale."
+	say "[one of]'[el-la-f], deal seer, at your service!' someone with a bottle of Reed's Ale ambushes you. They don't seem like they want to be budged.[or]Lars Eede, Deal Seer, remains here, with that bottle of Reed's Ale.[stopping]"
 
 Lars Eede is a guardian. a-text of Lars Eede is "RYRYYRYR". b-text of Lars Eede is "RYRYYRYR". parse-text of Lars Eede is "x[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x". "[deal-seer]"
 
 description of Lars Eede is "He's carrying that bottle of Reed's Ale but seems awfully jittery."
 
-Elsa Erde is a guardian. a-text of Elsa Erde is "RYRYYRYR". b-text of Elsa Erde is "RYRYYRYR". parse-text of Lars Eede is "x[sp]-[sp]x[sp]e[sp]-[sp]x[sp]-[sp]x". "[deal-seer]"
+Elsa Erde is a guardian. a-text of Elsa Erde is "RYRYYRYR". b-text of Elsa Erde is "RYRYYRYR". parse-text of Elsa Erde is "x[sp]-[sp]x[sp]e[sp]-[sp]x[sp]-[sp]x". "[deal-seer]"
 
 description of Elsa Erde is "She's carrying that bottle of Reed's Ale but seems awfully jittery."
 
@@ -21343,7 +21356,7 @@ guaname	guatext
 rewired robot	"The robot's lights blink and flash and bloop. Is it laughing?"
 muscly hulk	"The muscly hulk beats its chest for NOT being removed like that."
 snider diners	"The snider diners sniff at the distraction."
-inapt paint	"'Well, at least it wasn't me, whoever I am,' mumbles the man covered in inapt paint."
+inapt paint	"[if mel-known is true]Mel Fish[else]The man to the [n-s-rav][end if] mumbles 'Well, at least it wasn't me, whoever I am. I mean, my name's [kno-mel], but who am I, really?'"
 arid den	"'Not bad! But would've been more stylish with NERD-AID!' booms a mechanical voice from the arid den."
 ego drains	"The ego-drains make a flushing and slurping noise. Another rival guardian down the drain!"
 bonker	"'ENEMIES ARE STILL TOO SCARED TO FACE THE BONKER!' you hear from the east."
@@ -21359,6 +21372,9 @@ ingrates	"The ingrates complain there aren't enough of them to take over the spa
 admirer	"Your admirer claps far too fervently at your accomplishment."
 wait-seer	"The wait-seer cooly puts up a hand and mumbles some Hakuna Matata nonsense."
 atheists	"The atheists mention meditation is all well and good, but the sweatier wait-seer's flaw was bringing an invisible cloud being into it."
+
+to say n-s-rav:
+	say "[if player is in ravages]south[else]north[end if]"
 
 to say reedale:
 	say "[el-la] takes another swig from the bottle of Reed's Ale. 'Glad that wasn't me"
@@ -21523,10 +21539,10 @@ to reposition-guardians:
 		if guy entry is not in lalaland:
 			if player is male:
 				if guy entry is lois the hostile or guy entry is Elsa Erde:
-				next;
+					next;
 			if player is female:
 				if guy entry is hostile-is-he lot or guy entry is Lars Eede:
-				next;
+					next;
 			if location of player is loc entry:
 				now guy entry is in location of player;
 				if there is an aux entry:
@@ -24086,6 +24102,10 @@ check going north in Gates Stage:
 	else if gate-level is 1:
 		say "[one of]You try to sneak into the Admit-Us Stadium, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells 'PERP!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
 	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Admit-Us Stadium. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragment spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! 'I shut a hiatus!' By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Roman Manor becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. But wait: there's a little more, if you can't get enough. DEMO DOME MODE, if you want, which is a puzzleless look behind the scenes, featuring items that didn't fit in and random musings about building code and so forth. You can access it now or when you restart.";
+	if did-guru is false:
+		say "[line break]You also get an additional point for not using the arugula!";
+		min-and;
+		consider the notify score changes rule;
 	now others is solved;
 	if debug-state is true:
 		append "Test passed for Others.[line break]" to the file of debuggery;

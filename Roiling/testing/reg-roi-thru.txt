@@ -3550,7 +3550,7 @@ You've done enough researching, but you can just go north.
 >frui
 
 >score
-41 of 41
+41 out of 42
 
 >n
 You Did Great

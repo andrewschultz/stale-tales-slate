@@ -230,10 +230,11 @@ The grailman mumbles something like "well, we can't all be above average."
 Savager Ravages
 
 >himself
-The Reed's Ale man adjusts his half-on half-off costume, glad he wasn't the one dispelled--or whatever.
+Lars takes another swig from the bottle of Reed's Ale. "Glad that wasn't me."
+
 >undo
 >released
-"Well, at least it wasn't me, whoever I am," mumbles the man covered in inapt paint.
+"Well, at least it wasn't me, whoever I am. I mean, my name's Mel Fish, but who am I, really?" mumbles the man to the south.
 >himself
 >e
 

@@ -21,7 +21,7 @@ Trying to change the current region you're in would be risky, or useless, or may
 Your score has just gone up by one point
 
 >score
-1 out of 41 total points
+1 out of 42 total points
 Lowest score to solve is 25
 
 >grapes
