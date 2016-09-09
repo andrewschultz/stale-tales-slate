@@ -721,8 +721,9 @@ every turn when scams is true (this is the scam rule):
 	else if mrlp is others:
 		if player has arugula:
 			say "Force feeding you arugula.";
+			now can-guru is true;
 			now arugula is in lalaland;
-		if can-guru is false:
+		else if can-guru is false:
 			now can-guru is true;
 			say "Giving you GURU ability.";
 	else if mrlp is demo dome:
@@ -9379,7 +9380,7 @@ after fliptoing hit win button:
 	continue the action;
 
 after fliptoing when mrlp is others (this is the slot and singed design appear rule):
-	if noun is s-c or noun is s-i or noun is icon or noun is icons:
+	if noun is iconic:
 		now singed design is part of the noun;
 	if noun is s-i or noun is s-c:
 		if player has so-great storage:
@@ -20726,6 +20727,7 @@ to decide whether the action is procedural: [aip]
 	if scanlasting, yes;
 	if objhinting, yes;
 	if xraying, yes;
+	if guruing, yes;
 	if smelling, yes;
 	if reading, yes;
 	if sbing, yes;
@@ -23452,7 +23454,7 @@ description of Rustic Citrus is "A sign on an abandoned drinks stand says RUSTIC
 
 chapter augural arugula
 
-the augural arugula is an edible thing.
+the augural arugula is an edible thing. description of arugula is "It's not enough for a luau. Arg."
 
 check eating arugula:
 	say "Not very tasty, but your vision seems clearer. You can now GURU what you are curious about.";
@@ -23484,16 +23486,27 @@ carry out guruing:
 	if noun is megaton pear or noun is mopeage rant or noun is rampage note:
 		say "You blink and wind up refocusing on the magenta rope.";
 		try guruing magenta rope instead;
+	if noun is viewer or noun is searcher or noun is perp-priv:
+		say "No. It's got to be pretty simple." instead;
 	repeat through table of others anagrams:
 		if noun is the-from entry:
-			say "A vision of [the-to entry] flashes before your eyes. The aftertaste of arugula finally dissipates.";
+			if noun is compass:
+				say "Whoah! A compass begins spinning.";
+			else:
+				say "You focus and squint, and some fruit appears in your vision: [if indefinite article of the-to entry is non-empty][indefinite article of the-to entry] [end if][the-to entry]. The aftertaste of arugula finally dissipates.";
 			now can-guru is false;
 			now noun is prefigured;
 			now did-guru is true;
 			decrement poss-score of others;
 			the rule succeeds;
+	if noun is iconic:
+		if noun is s-i:
+			say "The icons seem appropriate as-is." instead;
+		say "Hm. That's not fruit and not going to be fruit. You are pretty sure you can decide what to do." instead;
+	if noun is the player:
+		say "You don't want to change. Well, not in that way." instead;
 	if noun is a person:
-		say "Maybe a person shouldn't and can't be changed into a fruit." instead;
+		say "A person shouldn't and can't be changed into a fruit." instead;
 	say "Nothing happens. Maybe something else.";
 	the rule succeeds.
 	
@@ -24082,8 +24095,17 @@ the singed design is part of the coin. description is "The singed design is some
 
 understand "designs" as singed design when mrlp is others
 
+definition: a thing (called myt) is iconic:
+	if myt is icon, yes;
+	if myt is icons, yes;
+	if myt is coin, yes;
+	if myt is coins, yes;
+	if myt is s-c, yes;
+	if myt is s-i, yes;
+	no;
+
 check reading (this is the default to singed design rule) :
-	if noun is icon or noun is coins or noun is icons or noun is s-c or noun is s-i:
+	if noun is iconic:
 		if singed design is not part of the noun:
 			say "BUG: there should be a singed design to read." instead;
 		try reading singed design instead;
@@ -28478,12 +28500,8 @@ understand the command "scam" as something new.
 understand "scam" as scaming.
 
 carry out scaming: [?! doesn't quite work for otters]
-	if scams is false:
-		now scams is true;
-		say "Scams on.";
-	else:
-		now scams is false;
-		say "Scams off.";
+	now scams is whether or not scams is true;
+	say "Scams is [on-off of scams].";
 	the rule succeeds;
 
 chapter mowing

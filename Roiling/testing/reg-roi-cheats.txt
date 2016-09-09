@@ -11,7 +11,7 @@
 ** game: /home/andrew/prt/debug-roiling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 
-* routes-cheat-thru
+* _routes-cheat-thru
 
 >ts
 >routes
@@ -90,7 +90,7 @@ need to be ALONG.
 
 Strip of Profits
 
-* troves-cheat-thru
+* _troves-cheat-thru
 
 >ts
 >troves
@@ -137,7 +137,7 @@ In particular, you feel the need to LAST right now.
 >last
 /In particular, you feel the need to (RESIGN|DECIDE) right now.
 
-* presto-cheat-thru
+* _presto-cheat-thru
 
 >ts
 >presto
@@ -332,7 +332,7 @@ You gulp the crust, mouthing your favorite profanity (minor or major, I won't ju
 
 Strip of Profits
 
-* oyster-cheat-thru
+* _oyster-cheat-thru
 
 >au 1
 >ts
@@ -554,7 +554,7 @@ You spill the pills and hook yourself on the dialer trying to catch them. You wi
 
 --instead of using the pills, you could've tried to REDIAL the dialer.
 
-* towers-cheat-thru
+* _towers-cheat-thru
 
 >ts
 >towers
@@ -800,7 +800,7 @@ You have a good gaze, and you know what to do and say and think. Gotta be GREEDY
 [NOTE: you already xrayed this, so you're just remembering what it was...]
 You remember you could still think DINGY.
 
-* otters-cheat-thru
+* _otters-cheat-thru
 
 >au 1
 >seed 1
@@ -958,15 +958,54 @@ As you gaze into the cinders, they blow away, leaving you feeling you can just P
 
 * others-cheat-thru
 
+#I want to keep hints on to check things out here
+>hd
+
 >au 1
 >rove over
 
->gonear rustic
+>others
+
+>in
 
 Rustic Citrus
+/(lumps|pagers|spear)
+
+>i
+augural arugula
+
+>eat arugula
+Not very tasty, but your vision seems clearer. You can now GURU what you are curious about.
+
+>pad
+--guru
+
+>i
+You still have the aftertaste of the arugula, to GURU people.
 
 >scam
-/(lumps|pagers|spear)
+
+>guru me
+You don't want to change. Well, not in that way.
+
+>guru curtis
+A person shouldn't and can't be changed into a fruit.
+
+>guru lumps
+You focus and squint, and some fruit appears in your vision: plums. The aftertaste of arugula finally dissipates.
+
+>guru spear
+You focus and squint, and some fruit appears in your vision: pears. The aftertaste of arugula finally dissipates.
+
+>guru pagers
+You focus and squint, and some fruit appears in your vision: grapes. The aftertaste of arugula finally dissipates.
+
+>guru mad train
+You focus and squint, and some fruit appears in your vision: a tamarind. The aftertaste of arugula finally dissipates.
+
+>i
+arugula
+
 >plums
 >pears
 >grapes
@@ -977,33 +1016,69 @@ Examine the drinks stand. You'll find more raw materials.
 
 Hmm, the slime is green and knobbly and smells a bit like dishwashing detergent.
 
+>guru slime
+You focus and squint, and some fruit appears in your vision: limes. The aftertaste of arugula finally dissipates.
+
 >limes
 
 That moss cap is useless as-is. Curtis claimed it helped you tell directions, but it doesn't. (+)
 
+>guru moss cap
+Whoah! A compass begins spinning.
+
 >compass
 
 Nothing specific left to do here, though you may need to give Curtis some more fruits.
+
+>guru peanut cola
+You focus and squint, and some fruit appears in your vision: cantaloupe. The aftertaste of arugula finally dissipates.
 
 >cantaloupe
 
 Curtis relieves you of your burden you found.
 Nothing specific left to do here, though you may need to give Curtis some more fruits.
 
+>guru videotape
+You focus and squint, and some fruit appears in your vision: a persimmon. The aftertaste of arugula finally dissipates.
+
+>guru eerie blurbs
+You focus and squint, and some fruit appears in your vision: blueberries. The aftertaste of arugula finally dissipates.
+
+>guru mopeage rant
+You focus and squint, and some fruit appears in your vision: a pomegranate. The aftertaste of arugula finally dissipates.
+
 >n
 Swell Wells
 
 /DEBUG INFO: (green stain|riot cap|silly shirt|sorer bogey|stucco) hinting
 
+>guru stucco
+You focus and squint, and some fruit appears in your vision: coconuts. The aftertaste of arugula finally dissipates.
+
 >coconuts
 /DEBUG INFO: (green stain|riot cap|silly shirt|sorer bogey) hinting
+
+>guru tangerines
+You focus and squint, and some fruit appears in your vision: tangerines. The aftertaste of arugula finally dissipates.
 
 >tangerines
 /DEBUG INFO: (riot cap|silly shirt|sorer bogey) hinting
 
+>guru riot cap
+You focus and squint, and some fruit appears in your vision: an apricot. The aftertaste of arugula finally dissipates.
+
 >apricot
 
 You can go back to Curtis for a reward.
+
+>guru shirt
+You focus and squint, and some fruit appears in your vision: apples. The aftertaste of arugula finally dissipates.
+
+>guru miser ruble
+You focus and squint, and some fruit appears in your vision: mulberries. The aftertaste of arugula finally dissipates.
+
+>guru sorer bogey
+You focus and squint, and some fruit appears in your vision: gooseberries. The aftertaste of arugula finally dissipates.
 
 >s
 >n
@@ -1019,10 +1094,27 @@ Nothing specific left to do here, though you may need to give Curtis some more f
 >w
 Filed Field
 
-/DEBUG INFO: (buried raft|the barriers west|barber sickle|mean trowel|pipe panel fence|pryer bars|rapt figure)
+/DEBUG INFO: (buried raft|the barriers west|barber sickle|mean trowel|pipe panel fence|pryer bars|rapt figure|briar screen)
+
+>guru buried raft
+You focus and squint, and some fruit appears in your vision: breadfruit. The aftertaste of arugula finally dissipates.
+>guru barriers west
+You focus and squint, and some fruit appears in your vision: strawberries. The aftertaste of arugula finally dissipates.
+>guru barber sickle
+You focus and squint, and some fruit appears in your vision: blackberries. The aftertaste of arugula finally dissipates.
+>guru mean trowel
+You focus and squint, and some fruit appears in your vision: a watermelon. The aftertaste of arugula finally dissipates.
+>guru panel fence
+You focus and squint, and some fruit appears in your vision: a pineapple. The aftertaste of arugula finally dissipates.
+>guru pryer bars
+You focus and squint, and some fruit appears in your vision: a raspberry. The aftertaste of arugula finally dissipates.
+>guru rapt figure
+You focus and squint, and some fruit appears in your vision: grapefruit. The aftertaste of arugula finally dissipates.
+>guru briar screen
+You focus and squint, and some fruit appears in your vision: cranberries. The aftertaste of arugula finally dissipates.
 
 >breadfruit
-/DEBUG INFO: (the barriers west|barber sickle|mean trowel|pipe panel fence|pryer bars|rapt figure)
+/DEBUG INFO: (the barriers west|barber sickle|mean trowel|pipe panel fence|pryer bars|rapt figure|briar screen)
 
 >raspberry
 You can go back to Curtis for a reward.
@@ -1037,16 +1129,16 @@ You ultimately need another coin, but perhaps it can be converted to something o
 You ultimately need another coin
 
 >icon
-/DEBUG INFO: (the barriers west|barber sickle|mean trowel|pipe panel fence|rapt figure)
+/DEBUG INFO: (the barriers west|barber sickle|mean trowel|pipe panel fence|rapt figure|briar screen)
 
 >strawberries
-/DEBUG INFO: (barber sickle|mean trowel|pipe panel fence|rapt figure)
+/DEBUG INFO: (barber sickle|mean trowel|pipe panel fence|rapt figure|briar screen)
 
 >blackberries
-/DEBUG INFO: (mean trowel|pipe panel fence|rapt figure)
+/DEBUG INFO: (mean trowel|pipe panel fence|rapt figure|briar screen)
 
 >watermelon
-/DEBUG INFO: (pipe panel fence|rapt figure)
+/DEBUG INFO: (pipe panel fence|rapt figure|briar screen)
 
 >pineapple
 You can go back to Curtis for a reward.
@@ -1059,15 +1151,32 @@ The icons are too inert.
 
 >n
 >w
-DEBUG INFO: rapt figure
+/DEBUG INFO: (rapt figure|briar screen)
 
 >grapefruit
-Nothing specific left to do here.
+DEBUG INFO: briar screen
 
 >e
 Nothing specific left to do here.
 
 >e
+
+>guru caution
+You focus and squint, and some fruit appears in your vision: PAPAYAS. The aftertaste of arugula finally dissipates.
+>guru list of prices
+You focus and squint, and some fruit appears in your vision: CRIPES. The aftertaste of arugula finally dissipates.
+>guru lemons
+You focus and squint, and some fruit appears in your vision: SOLEMN. The aftertaste of arugula finally dissipates.
+>guru melon
+You focus and squint, and some fruit appears in your vision: MO LEN. The aftertaste of arugula finally dissipates.
+>guru nectarine
+You focus and squint, and some fruit appears in your vision: ANCIENTER. The aftertaste of arugula finally dissipates.
+>guru peach
+You focus and squint, and some fruit appears in your vision: CHEAP. The aftertaste of arugula finally dissipates.
+>guru quince
+You focus and squint, and some fruit appears in your vision: QUINCE. The aftertaste of arugula finally dissipates.
+>guru
+You focus and squint, and some fruit appears in your vision: a mango. The aftertaste of arugula finally dissipates.
 
 /DEBUG INFO: (auction caution|the list of prices|lemons|melon|nectarine|overpriced peach|pre-mang|quince)
 
@@ -1110,6 +1219,15 @@ Nothing specific left to do here, though you will want to trade that dollar.
 >d
 You can trade the dollar for the storage box.
 
+>guru orange
+You focus and squint, and some fruit appears in your vision: a mango. The aftertaste of arugula finally dissipates.
+>guru plant
+You focus and squint, and some fruit appears in your vision: a mango. The aftertaste of arugula finally dissipates.
+>guru sign
+You focus and squint, and some fruit appears in your vision: a mango. The aftertaste of arugula finally dissipates.
+>guru banana
+You focus and squint, and some fruit appears in your vision: a mango. The aftertaste of arugula finally dissipates.
+
 >give dollar to art erd
 You probably want to put the icons in the storage.
 
@@ -1119,7 +1237,18 @@ You probably want to put the icons in the storage.
 >n
 /DEBUG INFO: (viewer|searcher) hinting.
 
+>w
+>cranberries
+Nothing specific left to do here.
+
 >n
+
+>guru searcher
+No. It's got to be pretty simple.
+
+>guru viewer
+No. It's got to be pretty simple.
+
 >research
 DEBUG INFO: viewer hinting.
 >undo
@@ -1129,6 +1258,12 @@ DEBUG INFO: searcher hinting.
 
 >research
 Go north to win!
+
+>s
+>s
+
+>guru harmonicas
+You focus and squint, and some fruit appears in your vision: maraschino cherry. The aftertaste of arugula finally dissipates.
 
 >n
 

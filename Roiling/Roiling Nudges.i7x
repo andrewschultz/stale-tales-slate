@@ -910,6 +910,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 
 table of others nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
+"arugula"	386324594	--	arugula	--	"The arugula is just for eating, so you can change something else that's been stumping you."
 "pear"	296783689	--	spear	--	"[plur-fruit]."
 "plum"	304460758	--	lumps	--	"[plur-fruit]."
 "pager"	329383391	--	pagers	--	"[plur-fruit]."
