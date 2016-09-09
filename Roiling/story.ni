@@ -546,6 +546,8 @@ to choose-female:
 	now greedy-person is Dr Tera;
 	now i trash his art is off-stage;
 	now er trash is part of the dope op-ed;
+	if Lars Eede is not in lalaland:
+		now Lars Eede is off-stage;
 	if hostile-is-he lot is not in lalaland:
 		now hostile-is-he lot is off-stage;
 
@@ -565,6 +567,13 @@ to choose-male:
 	now er trash is off-stage;
 	if lois the hostile is not in lalaland:
 		now lois the hostile is off-stage;
+	if Elsa Erde is not in lalaland:
+		now Elsa Erde is off-stage;
+
+after fliptoing reed's ale:
+	now lars eede is in lalaland;
+	now elsa rede is in lalaland;
+	continue the action;
 
 after fliptoing the-hostile (this is the holiest for testing purposes rule) :
 	now lois the hostile is in lalaland;
@@ -2109,7 +2118,8 @@ robot	"'I have been REWIRED not to let you by!'"
 snider diners	"They [one of]ignore you, asking is DERN coming[or]talk about Dr. Enis[or]mention NERD IS something unintelligible[in random order], until they're red[one of], but you sense they have a bit more to say[or], but maybe they have one more rant[stopping]."
 organised ego drains	"The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go [if player is in campsite]north[else]south[end if][if campsite is visited and shoreline is visited], especially since you walked around before[end if]."
 pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to converse.[or]'Yarrh, Harry,' they shout, and one of them makes fun of your skin tone. You feel like a spiter, hoping they get skin cancer.[in random order]"
-reed's ale	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
+lars eede	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
+Elsa Reed	"She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 admirer	"They claim they never thought they'd love someone the way they love you! [one of]Off-guard, red-faced, you mumble, 'I? Rad? Erm...' Maybe you can stomach another compliment[or]You blush red hearing nonsense you two could be as good together as the popular society couple Red Irma and Ed Mirra[cycling]."
 man covered in inapt paint	"He ignores your conversation. '[one of]They done wrong to ol['] Mel Fish. That's me.[or]They were all [']Shelf [']im!['] and on the paint went.[or]SMH. Life.[or]Eh. Films.[in random order]' he mumbles as his eyes go red[one of]. Maybe he has other things to mumble about[or][stopping]."
 natives	"You seem unable to convince the natives they are too good to stand here, or to find a way to sucker them into moving. However, they do babble on about [one of]ST. EAVIN, the local church[or]the local SETI-NAV[or]TIN EVA'S bar[or]where to avoid AI VENTS[or]the local INVEST-A stock broker[or]a local celebrity named SVETINA[or]the TIN-SAVE recycling center[in random order], which makes you see red[one of]. Maybe there's more of that, if you can hack it[or][stopping]."
@@ -2393,7 +2403,8 @@ admirer	curst palace	"'It's not good enough for you-ou-ou!'"
 grailman	Elvira	"'Even--or especially--Elvira does not deserve to see the grail yet. One of the two. I'm not sure.'"
 grailman	curst palace	"'You can get there without getting by me, I bet!'"
 inapt paint	Elvira	"'I want to identify with me and not whatever nation she is promoting!'"
-reed's ale	Elvira	"'If it weren't for her I wouldn't have this job and costume. Which kind of stinks, but...'"
+Lars Eede	Elvira	"'If it weren't for her I wouldn't have this job. Which kind of stinks, but...'"
+Elsa Erde	Elvira	"'If it weren't for her I wouldn't have this job. Which kind of stinks, but...'"
 arid den	Nerd-Aid	"'YES! NERD-AID!' booms some unseen response system in the arid den."
 arid den	Elvira	"'WHETHER YOU LIKE OR HATE ELVIRA, NERD-AID TASTES GREAT!'"
 atheists	Elvira	"The atheists begin yelling FACTS about Elvira, pro and con, very loudly back and forth. They contradict each other quickly. You're sorry you asked."
@@ -4126,7 +4137,7 @@ natives	"The natives look almost ready to be suckered by flattery or just a tall
 yurts	"The yurts sway slightly. They may not be guarding much, but maybe you could do for them."
 alarming	"The grailman seems almost average for a moment."
 dandier arid den	"The arid den seems less imposing and impressive."
-Reed's Ale	"The Reed's Ale man listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch."
+Reed's Ale	"[el-la-f] listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch."
 wait-seer	"The wait-seer looks bored and distracted for a second."
 rewired robot	"The robot almost looked a bit odd there for a moment."
 atheists	"The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal."
@@ -5731,7 +5742,7 @@ rustic-easy-items is a list of things variable. rustic-easy-items is { lumps, sp
 
 wells-hintables is a list of things variable. wells-hintables is { green stain, riot cap, silly shirt, sorer bogey, stucco }.
 
-field-hintables is a list of things variable. field-hintables is { b-r, b-w, barber sickle, mean trowel, pipe panel fence, pryer bars, rapt figure }.
+field-hintables is a list of things variable. field-hintables is { b-r, b-w, barber sickle, mean trowel, pipe panel fence, pryer bars, rapt figure, briar screen }.
 
 clearing-hintables is a list of things variable. clearing-hintables is { auction caution, l-o-p, lemons, melon, nectarine, peach, pre-mang, quince }.
 
@@ -6897,15 +6908,29 @@ book regular trivial verb tweaks
 
 chapter examining
 
+before deciding the scope of the player:
+	place the location of the player in scope;
+	continue the action;
+
+does the player mean doing something with location of the player: it is unlikely.
+
+instead of doing something with the location of the player:
+	if current action is examining, continue the action;
+	say "You may need to change your location at some time, but you never need to do anything with it in a command."
+
 xrooming is an action applying to one visible thing.
 
 understand "x [any room]" as xrooming.
 understand "examine [any room]" as xrooming.
 
-check xrooming:
+check examining location of player:
 	if noun is location of player:
 		say "X/EXAMINE (ROOM) is equivalent to LOOK in A Roiling Original.";
 		try looking instead;
+
+check xrooming:
+	if noun is location of player:
+		try examining location of player instead; [shouldn't happen but just in case]
 	if noun is visited:
 		say "You've been there, but you can't see that far[x-room-n].";
 	else:
@@ -7558,7 +7583,7 @@ before listening (this is the you can hear stuff some places rule):
 			say "Regular tavern bustle and storytelling once again, but nobody you need to talk to." instead;
 		say "Rodney and his not-so-merry men stand impassive, united." instead;
 	if reed's ale is visible:
-		say "He mutters and moans how [one of]Dr. Eleesa endorses it[or]E-dealers have it so easy[or]Lad Reese likes the stuff[or]Dre Eleas looks great in that ad for Reed's Ale[in random order], turning red, unsure if he wants to remove his costume or put it back on." instead;
+		say "[el-la-f] mutters and moans how [one of]Dr. Eleesa endorses it[or]E-dealers have it so easy[or]Lad Reese likes the stuff[or]Dre Eleas looks great in that ad for Reed's Ale[in random order], turning red, unsure if he wants to remove his costume or put it back on." instead;
 	if ingrates are visible:
 		say "You see red as the ingrates['] voices sound like tin gears." instead;
 	if rewired robot is visible:
@@ -8952,7 +8977,7 @@ an admirer	an admirer	false	430738621	--	"married"	"married" or "mardier"	"[resp
 natives	natives	false	550443085	--	"naivest"	"vainest" or "naivest"	"[vain-naiv]. Now that the natives have moved on, you can go south."
 neural pulses	neural pulses	false	443144884	--	"unreal"	"unreal" or "pluses"	"[if-plus]"
 neural pulses	neural pulses	false	560739646	--	"pluses"	"unreal" or "pluses"	"[if-plus]"
-reed's ale	reed's ale	false	642046842	--	"released"	"resealed/released"	"[rscheck]You concentrate, and suddenly the man figures how to [if rese is true]re[else]un[end if]zip himself. He runs off[if rese is true], maybe to bug other guardians about the smooth taste of Reed's Ale[else], looking a little more dignified[end if]."
+reed's ale	reed's ale	false	642046842	--	"released"	"resealed/released"	"[rscheck]You concentrate, and suddenly [el-la-f] [if rese is true]takes a deep breath. 'I've been fooling myself, haven't I? Territorial...materialistic...no more of this. Thank you!' [he-she-c] runs off[else]tries to take another pull from the Reed's Ale bottle, but it is suddenly stuck and won't open. 'I...I didn't need the stuff, anyway! I have better things to do!' [he-she-c] runs off. It's not clear whether those better things involve more deals or just stuff that's good for society, but whatever. You can pass, now[end if]."
 an alarming grailman	an alarming grailman	false	354088487	--	"marginal"	"marginal"	"The grailman might still be able to block you, but he doesn't want to risk it. He seems to lose confidence visibly as you speak."
 Atheists	Atheists	false	611037040	--	"hastiest"	"hastiest"	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right!' They run off for someone else to harass."
 lois the hostile	lois the hostile	false	537631654	--	"holiest"	"holiest"	"Lois the Hostile pauses a minute and considers. 'No. That can't be right. But that'd mean THAT, too--and. Whoah. I really do need to change things. I--I've listened to Elvira too much.' She nods at you. 'I bet you helped. I'm not sure how, but thank you.' Then she runs off into the ole shrine to start penance."
@@ -14663,7 +14688,7 @@ check burning:
 	if noun is an animal:
 		say "No animal cruelty, please. Well, maybe an implausible non-violent gag or two." instead;
 	if noun is a person:
-		say "Amazingly, with all your abstract wordplay prowess, you're not good at getting in sick burns in arguments[if noun is a guardian and noun is not lois the hostile and noun is not hostile-is-he lot and noun is not reed's ale]. But maybe you can figure how to leave them burned[else]. Go figure[end if]." instead;
+		say "Amazingly, with all your abstract wordplay prowess, you're not good at getting in sick burns in arguments[if noun is a guardian and noun is not lois the hostile and noun is not hostile-is-he lot]. But maybe you can figure how to leave them burned[else]. Go figure[end if]." instead;
 	if noun is a fruit or noun is lobster or noun is tea tray:
 		say "Good thing this game isn't a cooking sim." instead;
 	if noun is chair: [introduction]
@@ -19073,10 +19098,12 @@ when play begins (this is the place guardians rule):
 	repeat through table of guard-org:
 		if there is a kloozorz entry:
 			now guy entry is clueneedy;
-		if player is male and guy entry is lois the hostile:
-			next;
-		if player is female and guy entry is hostile-is-he lot:
-			next;
+		if player is male:
+			if guy entry is lois the hostile or guy entry is elsa erde:
+				next;
+		if player is female:
+			if guy entry is hostile-is-he lot or guy entry is lars eede:
+				next;
 		now guadir of guy entry is blockdir entry;
 		now gualoc of guy entry is loc entry;
 
@@ -21195,17 +21222,20 @@ description of grailman is "You could probably take a below-average grailman, bu
 
 a-text of alarming is "RYRRYRYR". b-text of alarming is "RYRRYR?R". parse-text of alarming is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x".
 
-the man in a REED'S ALE costume is a red guardian. "A man in a REED'S ALE costume to the [psgdir of reed's ale] probably won't let you by, since that's his job."
+to say deal-seer:
+	say "'[el-la-f], deal seer, at your service!' someone with a bottle of Reed's Ale ambushes you. They don't seem like they want to be budged.[or]Lars Eede, Deal Seer, remains here, with that bottle of Reed's Ale."
 
-understand "reeds ale man" and "reeds/ale man" and "reeds ale" and "reeds" as man in a REED'S
+Lars Eede is a guardian. a-text of Lars Eede is "RYRYYRYR". b-text of Lars Eede is "RYRYYRYR". parse-text of Lars Eede is "x[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x". "[deal-seer]"
 
-before doing something with costume:
-	if current action is opening or current action is closing or current action is pulling or current action is taking:
-		say "The man fidgets uncontrollably as you get near. Perhaps you need to help him and leave him feeling it was his choice." instead;
+description of Lars Eede is "He's carrying that bottle of Reed's Ale but seems awfully jittery."
 
-description of the Reed's Ale costume man is "He is in a REED'S ALE costume so annoyingly huge and bright you'd surely remember the ad and not his name if you saw him again. The costume seems half on, half off--and it seems he doesn't know which way would be best. Get canned and be free, or suffer humiliation for a paycheck? Maybe you can help."
+Elsa Erde is a guardian. a-text of Elsa Erde is "RYRYYRYR". b-text of Elsa Erde is "RYRYYRYR". parse-text of Lars Eede is "x[sp]-[sp]x[sp]e[sp]-[sp]x[sp]-[sp]x". "[deal-seer]"
 
-a-text of reed's ale is "RYRYYRYR". b-text of reed's ale is "PGRYYRYR". parse-text of reed's ale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
+description of Elsa Erde is "She's carrying that bottle of Reed's Ale but seems awfully jittery."
+
+the Reed's Ale is a thing. a-text of reed's ale is "RYRYYRYR". b-text of reed's ale is "PGRYYRYR". parse-text of reed's ale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
+
+description of Reed's Ale is "It's open and, from [el-la-f]'s frequent swigs, apparently bottomless. You can't read the details of the bottle, but it's probably not very good for you. Or [el-la-f]. Yet [el-la-f] is attached to it, for some reason. Well, you probably know why by now, if you got this far."
 
 rese is a truth state that varies.
 
@@ -21265,7 +21295,8 @@ an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow
 wait-seer	Anemic Cinema	east	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe he could, too."
 man covered	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free the man covered in inapt paint from nationality and to individuality."
 arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
-reed's ale	Ravages	east	"The Reed's Ale man blocks you--his costume looks stupid, but it's not encumbering--and asks you to help him out, and not just about buying, but about whether he should continue this career."	"The Reed's Ale man fidgets with his costume, unsure if he wants to take it off or put it on."
+Lars Eede	Ravages	east	"Elsa Erde blocks you. 'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"
+Elsa Erde	Ravages	east	"Elsa Erde blocks you. 'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"
 grailman	Ravages	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"You haven't met many grailmen, but this one is good enough, for now."
 Ray Eck	Deposit	north	"The yacker controls his keycar so it runs over your foot. You briefly wonder if he has a twin named Kim."	"The yacker introduces himself as Ray Eck, grateful there's someone out here who doesn't mind talking."	"Ray Eck's keycar can't go that far, so you manage to escape."	keycar
 ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you try to walk through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."	"Part of you wonders if you should play up the ego drains, but the other part says they're obstructive enough."
@@ -21276,6 +21307,11 @@ lois the hostile	Ole Shrine Shoreline	north	"She mentions you [one of]should kno
 hostile-is-he lot	Ole Shrine Shoreline	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their divinity careers if you fixed that."	"Boy! The Lot sure could use some down-home kindness."
 
 chapter guardian taunt tables
+
+after fliptoing reed's ale:
+	consider the guardian taunt rule;
+	consider the track guardian progress rule;
+	continue the action;
 
 after fliptoing a guardian (this is the guardian taunt rule) :
 	if noun is ray eck, continue the action;
@@ -21315,13 +21351,23 @@ natives	"The natives mumble how they KNEW something like that would happen to so
 iPrune	"The iPrune rears up and seems bigger for a second."
 pirates	"The pirates sing a colorful shanty about another lubber relegated to the deep."
 grailman	"The grailman mumbles something like 'well, we can't all be above average.'"
-reed's ale	"The Reed's Ale man adjusts his half-on half-off costume, glad he wasn't the one dispelled--or whatever."
+Lars Eede	"[reedale].'"
+Elsa Erde	"[reedale].'"
 lois the hostile	"Lois the Hostile mumbles passive-aggressively that the wages of sin is, well, THAT."
 hostile-is-he lot	"The Hostile-is-He Lot mumble passive-aggressively that the wages of sin is, well, THAT."
 ingrates	"The ingrates complain there aren't enough of them to take over the space you opened before worrying they're next."
 admirer	"Your admirer claps far too fervently at your accomplishment."
 wait-seer	"The wait-seer cooly puts up a hand and mumbles some Hakuna Matata nonsense."
 atheists	"The atheists mention meditation is all well and good, but the sweatier wait-seer's flaw was bringing an invisible cloud being into it."
+
+to say reedale:
+	say "[el-la] takes another swig from the bottle of Reed's Ale. 'Glad that wasn't me"
+
+to say el-la-f:
+	say "[if player is female]Elsa Erde[else]Lars Eede[end if]"
+
+to say el-la:
+	say "[if player is female]Elsa[else]Lars[end if]"
 
 section specific taunts
 
@@ -21475,14 +21521,19 @@ to reposition-guardians:
 	[say "Repositioning guardians.";]
 	repeat through table of guard-org:
 		if guy entry is not in lalaland:
-			if guy entry is lois the hostile and player is male:
+			if player is male:
+				if guy entry is lois the hostile or guy entry is Elsa Erde:
 				next;
-			if guy entry is hostile-is-he lot and player is female:
+			if player is female:
+				if guy entry is hostile-is-he lot or guy entry is Lars Eede:
 				next;
 			if location of player is loc entry:
 				now guy entry is in location of player;
 				if there is an aux entry:
-					now aux entry is in location of player;
+					if aux entry is reed's ale:
+						now guy entry carries aux entry;
+					else:
+						now aux entry is in location of player;
 			if the room blockdir entry of loc entry is location of player:
 				now guy entry is in location of player;
 				if there is an aux entry:
@@ -23509,7 +23560,7 @@ carry out guruing:
 		say "A person shouldn't and can't be changed into a fruit." instead;
 	say "Nothing happens. Maybe something else.";
 	the rule succeeds.
-	
+
 chapter curtis and dealing with him
 
 Curtis is a person in Rustic Citrus. description is "I curst him to be nondescript.". "Curtis is pottering around, waiting for you to hand over [if cur-score of others is 0]some[else]more[end if] fruits."
@@ -27020,7 +27071,7 @@ rule for showing alternate routes:
 	if towers is solved:
 		say "[eqls]TOWERS[line break]";
 		if reed's ale is in lalaland:
-			say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] the Reed's Ale guy and given him a different outlook on life.";
+			say "[2da]you could've also [if rese is true]RELEASED[else]RESEALED[end if] [el-la-f] to give [him-her] a new outlook on life.";
 		if natives are in lalaland:
 			say "[2da]you could've also made the natives [if naiv-nat is true]VAINEST[else]NAIVEST[end if] to uproot them.";
 		say "[2da][if turbos are reflexed and blaster is reflexed]If you'd only half-repaired the boat, you'd have been kicked to the Rawest Waters, where you'd have needed to make the Eastern shore NEAREST[else if turbos are reflexed]you'd have passed Rawest Waters if you'd have made the blaster STABLER[else]you'd have passed Rawest Waters if you'd have made the turbos ROBUST[end if].";
@@ -27183,7 +27234,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 				choose row with the-from of gua in table of towers anagrams;
 				let rm2 be gualoc of gua;
 				now rm2 is the room guadir of gua from rm2;
-				say "[2dmiss of cur-reg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is reed's ale]RELEASED or RESEALED[else][right-word entry in upper case][end if].";
+				say "[2dmiss of cur-reg][the gua] ([gualoc of gua]/[rm2]) could've become [if the-from entry is lars eede or the-from entry is elsa erde]RELEASED or RESEALED[else][right-word entry in upper case][end if].";
 			if number of guardians not in lalaland > 1:
 				say "(that's all for the guardians)[line break]";
 		if strudel is reflexive:
@@ -28500,7 +28551,7 @@ understand the command "scam" as something new.
 understand "scam" as scaming.
 
 carry out scaming: [?! doesn't quite work for otters]
-	now scams is whether or not scams is true;
+	now scams is whether or not scams is false;
 	say "Scams is [on-off of scams].";
 	the rule succeeds;
 

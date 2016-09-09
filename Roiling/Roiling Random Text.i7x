@@ -1232,6 +1232,7 @@ blurb
 "Bona Fides Based Info."
 "Chad's Tip Dispatch."
 "Cheaters['] Hectares."
+"Cheating-Gain Tech."
 "Clear-Cut Clue-Trac."
 "Clue a Ton, Clean Out!"
 "Cold Hearts Cheat Lords."
@@ -6530,6 +6531,7 @@ blurb
 "Favorites for Evita's" []
 "Fearing Fangier Fergina"
 "Felix's Elf Six"
+"Ferengi Freeing"
 "Fiddler Dr. Field"
 "Figure Out: I Go Future" []
 "Filler: Re-Fill"
@@ -35676,6 +35678,7 @@ blurb
 "Cletrone's electrons"
 "clothiers['] chlorites"
 "coarsening ignorances"
+"Cocini's Iconics"
 "Cofer's forces"
 "Colasanti's scalations"
 "Columbo's Coulombs"

@@ -673,7 +673,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "button"	473004833	--	raves saver	--	"The raves saver's minimal capabilities are enough...just..."
 "retape"	527699816	--	raves saver	--	"The raves saver has limited functionality, alas."
 "dagger"	301546223	--	dagger	--	"You feel no energy from the dagger. Perhaps it needs to be repaired mechanically."
-"costume"	589729215	--	reed's ale	--	"You fail to cut some from the costume. Maybe it's more what the costume advertises--REED'S ALE."
 "weed"	384576080	--	weeds	--	"Gumming up one weed wouldn't get the others."
 "salted"	404220839	deltas	--	--	"[towersloc]." [SALTED DELTAS 2 3]
 "delta"	307946873	deltas	--	--	"[towersloc]."

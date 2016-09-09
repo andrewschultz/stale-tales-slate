@@ -2187,15 +2187,29 @@ check touching:
 
 chapter examining
 
+before deciding the scope of the player:
+	place the location of the player in scope;
+	continue the action;
+
+does the player mean doing something with location of the player: it is unlikely.
+
+instead of doing something with the location of the player:
+	if current action is examining, continue the action;
+	say "You may need to change your location at some time, but you never need to do anything with it in a command."
+
 xrooming is an action applying to one visible thing.
 
 understand "x [any room]" as xrooming.
 understand "examine [any room]" as xrooming.
 
-check xrooming:
+check examining location of player:
 	if noun is location of player:
 		say "X/EXAMINE (ROOM) is equivalent to LOOK in Shuffling Around.";
 		try looking instead;
+
+check xrooming:
+	if noun is location of player:
+		try examining location of player instead; [shouldn't happen but just in case]
 	if noun is visited:
 		say "You've been there, but you can't see that far[x-room-n].";
 	else:
