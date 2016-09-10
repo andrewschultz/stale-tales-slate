@@ -777,10 +777,11 @@ You can laugh at them if they become GRANDIOSE.
 They have impressive tans they're proud of.
 How to make the pirates lose them?
 Make them PASTIER.
-?Reed's Ale man
-Between famous endorsers and all, he isn't sure if he wants to leave his job or continue.
-There are pros and cons to both, and you can help him go either way with two very similar words.
-He can become RESEALED or RELEASED.
+?Lars Eede/Elsa Erde (deal seer)
+The deal seer hits the Reed's Ale quite hard!
+They feel trapped in their life and can't stop drinking.
+You can help them get RELEASED.
+The Reed's ale can also become RESEALED.
 ?Rewired Robot
 It drew ire and made you see red.
 It's been REWIRED to be normal.
@@ -1312,6 +1313,9 @@ The Lumps can be PLUMS.
 The Pagers can be GRAPES.
 Examine the drinks stand, then the slime can be LIMES.
 There are more potential fruits, which you may be able to guess, but you only need four.
+?What's the augural arugula for?
+Well, it's a cheat item. You can EAT it, then GURU something, and if it can become a fruit, there you go.
+But you lose a last lousy point at the end if you GURU something. So it's double-edged.
 ?What's this stupid moss cap for?
 The moss cap is supposed to help you with directions.
 It doesn't work so well in its present state.

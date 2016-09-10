@@ -6915,9 +6915,9 @@ book regular trivial verb tweaks
 
 chapter examining
 
-before deciding the scope of the player:
+[before deciding the scope of the player:
 	place the location of the player in scope;
-	continue the action;
+	continue the action;]
 
 does the player mean doing something with location of the player: it is unlikely.
 
@@ -6937,6 +6937,7 @@ check examining location of player:
 
 check xrooming:
 	if noun is location of player:
+		say "X/EXAMINE (ROOM) is equivalent to LOOK in A Roiling Original.";
 		try examining location of player instead; [shouldn't happen but just in case]
 	if noun is visited:
 		say "You've been there, but you can't see that far[x-room-n].";
@@ -7590,7 +7591,7 @@ before listening (this is the you can hear stuff some places rule):
 			say "Regular tavern bustle and storytelling once again, but nobody you need to talk to." instead;
 		say "Rodney and his not-so-merry men stand impassive, united." instead;
 	if reed's ale is visible:
-		say "[el-la-f] mutters and moans how [one of]Dr. Eleesa endorses it[or]E-dealers have it so easy[or]Lad Reese likes the stuff[or]Dre Eleas looks great in that ad for Reed's Ale[in random order], turning red, unsure if he wants to remove his costume or put it back on." instead;
+		say "[el-la-f] mutters and moans how [one of]Dr. Eleesa's motivational techniques seem so easy[or]E-dealers have it so easy[or]Lad Reese is an upstart intent on stealing commissions[or]Dre Eleas's methods aren't to be trusted[in random order], turning red until taking another swig at the Reed's Ale." instead;
 	if ingrates are visible:
 		say "You see red as the ingrates['] voices sound like tin gears." instead;
 	if rewired robot is visible:
@@ -19103,16 +19104,10 @@ section initalization
 
 when play begins (this is the place guardians rule):
 	repeat through table of guard-org:
-		if there is a kloozorz entry:
-			now guy entry is clueneedy;
-		if player is male:
-			if guy entry is lois the hostile or guy entry is elsa erde:
-				next;
-		if player is female:
-			if guy entry is hostile-is-he lot or guy entry is lars eede:
-				next;
 		now guadir of guy entry is blockdir entry;
 		now gualoc of guy entry is loc entry;
+		if there is a kloozorz entry:
+			now guy entry is clueneedy;
 
 book which room is how far
 
@@ -21236,9 +21231,9 @@ description of grailman is "You could probably take a below-average grailman, bu
 a-text of alarming is "RYRRYRYR". b-text of alarming is "RYRRYR?R". parse-text of alarming is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x".
 
 to say deal-seer:
-	say "[one of]'[el-la-f], deal seer, at your service!' someone with a bottle of Reed's Ale ambushes you. They don't seem like they want to be budged.[or]Lars Eede, Deal Seer, remains here, with that bottle of Reed's Ale.[stopping]"
+	say "[one of]'[el-la-f], deal seer, at your service!' someone with a bottle of Reed's Ale ambushes you. They don't seem like they want to be budged[or]Lars Eede, Deal Seer, remains here, with that bottle of Reed's Ale[stopping]"
 
-Lars Eede is a guardian. a-text of Lars Eede is "RYRYYRYR". b-text of Lars Eede is "RYRYYRYR". parse-text of Lars Eede is "x[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x". "[deal-seer]"
+Lars Eede is a guardian. a-text of Lars Eede is "RYRYYRYR". b-text of Lars Eede is "RYRYYRYR". parse-text of Lars Eede is "x[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x". "[deal-seer]."
 
 description of Lars Eede is "He's carrying that bottle of Reed's Ale but seems awfully jittery."
 
@@ -21246,7 +21241,7 @@ Elsa Erde is a guardian. a-text of Elsa Erde is "RYRYYRYR". b-text of Elsa Erde 
 
 description of Elsa Erde is "She's carrying that bottle of Reed's Ale but seems awfully jittery."
 
-the Reed's Ale is a thing. a-text of reed's ale is "RYRYYRYR". b-text of reed's ale is "PGRYYRYR". parse-text of reed's ale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
+the Reed's Ale is a vanishing thing. a-text of reed's ale is "RYRYYRYR". b-text of reed's ale is "PGRYYRYR". parse-text of reed's ale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
 description of Reed's Ale is "It's open and, from [el-la-f]'s frequent swigs, apparently bottomless. You can't read the details of the bottle, but it's probably not very good for you. Or [el-la-f]. Yet [el-la-f] is attached to it, for some reason. Well, you probably know why by now, if you got this far."
 
@@ -21308,8 +21303,8 @@ an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow
 wait-seer	Anemic Cinema	east	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe he could, too."
 man covered	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free the man covered in inapt paint from nationality and to individuality."
 arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
-Lars Eede	Ravages	east	"Elsa Erde blocks you. 'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"
-Elsa Erde	Ravages	east	"Elsa Erde blocks you. 'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"
+Lars Eede	Ravages	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free him from his capitalist or drinking urges."	--	reed's ale
+Elsa Erde	Ravages	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free him from his capitalist or drinking urges."	--	reed's ale
 grailman	Ravages	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"You haven't met many grailmen, but this one is good enough, for now."
 Ray Eck	Deposit	north	"The yacker controls his keycar so it runs over your foot. You briefly wonder if he has a twin named Kim."	"The yacker introduces himself as Ray Eck, grateful there's someone out here who doesn't mind talking."	"Ray Eck's keycar can't go that far, so you manage to escape."	keycar
 ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you try to walk through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."	"Part of you wonders if you should play up the ego drains, but the other part says they're obstructive enough."
@@ -23564,7 +23559,7 @@ carry out guruing:
 			now can-guru is false;
 			now noun is prefigured;
 			now did-guru is true;
-			decrement poss-score of others;
+			poss-d;
 			the rule succeeds;
 	if noun is iconic:
 		if noun is s-i:

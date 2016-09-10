@@ -36,6 +36,8 @@ Store W:
 --the smart kid is now female if you are
 --Dr. Yow is now female if you are
 --the jetskis are replaced with a more appropriate conveyance
+--the once-sad deacons have been replaced by gender-specific blockers
+--the man in the costume is replaced by a deal seer, male or female
 
 Store V:
 --the Bedroom in Store V now has a new name
@@ -47,4 +49,4 @@ Meta-stuff:
 --metrics HTML file updated with new solution
 --tweaks to the Trizbort map
 
-??Demo Dome Mode is now more robust
+Demo Dome Mode is now much more robust, too.
