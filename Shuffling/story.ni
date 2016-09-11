@@ -2187,9 +2187,23 @@ check touching:
 
 chapter examining
 
-before deciding the scope of the player:
+before deciding the scope of the player (this is the silent scope rule) :
 	place the location of the player in scope;
 	continue the action;
+
+Include (-
+Replace DB_Rule;
+-) before "Rulebooks.i6t".
+
+Include (-
+[ DB_Rule R N blocked;
+	if (R==0 || R==(+ the silent scope rule +)) return;
+	print "[Rule ~", (RulePrintingRule) R, "~ ";
+	#ifdef NUMBERED_RULES; print "(", N, ") "; #endif;
+	if (blocked == false) "applies.]";
+	print "does not apply (wrong ", (address) blocked, ").]^";
+];
+-) after "Rulebooks.i6t".
 
 does the player mean doing something with location of the player: it is unlikely.
 
