@@ -2864,6 +2864,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Lads['] [crap-u] Placards"	false
 "Laffer's Raffles"	false
 "Laforce's Alfresco Flares Co"	false
+"Lambert's Rest Balm"	false
 "Lame Host Mae Holt's Hot Meals"	false []
 "Lammert's Trammels"	false
 "Lankest Anklets"	false
@@ -34500,6 +34501,7 @@ blurb
 "I Catnap Captain" []
 "Keep-Warm Meek Wrap"
 "Knaub-Kuban A-Bunk"
+"Know-Rest Nest-Work"
 "LAZ-E-BOD DOZABLE"
 "Lee's Top-To-Sleep" []
 "Let's-Cope Sleep Cot"
