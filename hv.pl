@@ -15,9 +15,15 @@
 #
 #
 
-my %ary;
+use strict;
+use warnings;
 
-$printIfThere = 0;
+my %ary;
+my %regHash;
+my %rmHash;
+my %inLong;
+
+my $printIfThere = 0;
 
 $ary{"a"} = 2187818;
 $ary{"b"} = 18418905;
@@ -46,7 +52,7 @@ $ary{"x"} = 112768081;
 $ary{"y"} = 122359252;
 $ary{"z"} = 122969618;
 
-@alf = ( "e", "z", "y", "x", "w", "v", "u", "t", "s", "r", "q", "p", "o", "n", "m", "l", "k", "j", "i", "h", "g", "f", "d", "c", "b", "a" );
+my @alf = ( "e", "z", "y", "x", "w", "v", "u", "t", "s", "r", "q", "p", "o", "n", "m", "l", "k", "j", "i", "h", "g", "f", "d", "c", "b", "a" );
 
 #This was when I got odd hash values and didn't have any way to reverse engineer them. I found out what they were.
 #foreach $q (sort {$ary{$b} <=> $ary{$a} } keys %ary)
@@ -61,69 +67,69 @@ $ary{"z"} = 122969618;
 
 open(B, ">>c:/writing/dict/hv.txt");
 
-$doShuf = 1;
-$doRoil = 1;
+# globals
+my $doShuf = 1;
+my $doRoil = 1;
+my $doLoc = 1;
 
-$regHash{"-rf"} = "forest";
-$rmHash{"-rf"} = "fields";
-$regHash{"-ri"} = "sortie";
-$rmHash{"-ri"} = "moor";
-$regHash{"-rm"} = "metros";
-$rmHash{"-rm"} = "underside";
+my $openPost = 0;
+my $anyFound = 0;
+my $worthOpening = 0;
+my $lineNum = 0;
+my $hash = 0;
 
-$regHash{"-ru"} = "routes";
-$rmHash{"-ru"} = "mesa";
-$regHash{"-rp"} = "presto";
-$rmHash{"-rp"} = "gyre";
-$regHash{"-rv"} = "troves";
-$rmHash{"-rv"} = "rathole";
-$regHash{"-rw"} = "towers";
-$rmHash{"-rw"} = "trefoil";
-$regHash{"-ry"} = "oyster";
-$rmHash{"-ry"} = "hops shop";
-$regHash{"-rt"} = "otters";
-$rmHash{"-rt"} = "inclosure";
+my $myRegion = "";
 
-$region = "myreg"; $rm = "myrm";
+$regHash{"-rf"} = "forest"; $rmHash{"-rf"} = "fields"; $regHash{"-ri"} = "sortie"; $rmHash{"-ri"} = "moor"; $regHash{"-rm"} = "metros"; $rmHash{"-rm"} = "underside";
 
-for $idx (0..$#ARGV)
+$regHash{"-ru"} = "routes"; $rmHash{"-ru"} = "mesa"; $regHash{"-rp"} = "presto"; $rmHash{"-rp"} = "gyre"; $regHash{"-rv"} = "troves"; $rmHash{"-rv"} = "rathole"; $regHash{"-rw"} = "towers"; $rmHash{"-rw"} = "trefoil"; $regHash{"-ry"} = "oyster"; $rmHash{"-ry"} = "hops shop"; $regHash{"-rt"} = "otters"; $rmHash{"-rt"} = "inclosure";
+
+my $region = "myreg"; my $rm = "myrm";
+
+#helper vars
+my $cmd = "";
+my $tabString = "";
+my $line;
+my $inTable = 0; my $currentTable = 0;
+my $found = 0;
+
+for my $idx (0..$#ARGV)
 {
-  $this = @ARGV[$idx];
-  if ($this =~ /^-?(e|!)$/) { $cmd = "start \"\" \"C:/Program Files (x86)/Notepad++/notepad++.exe\" c:/writing/dict/hv.txt"; `$cmd`; exit; }
+  my $this = lc($ARGV[$idx]);
+  if ($this =~ /^-?[e!]$/) { $cmd = "start \"\" \"C:/Program Files (x86)/Notepad++/notepad++.exe\" c:/writing/dict/hv.txt"; `$cmd`; exit; }
+  if ($this =~ /^-?[o]$/) { $cmd = "start \"\" \"C:/Program Files (x86)/Notepad++/notepad++.exe\" c:/writing/dict/hv.pl"; `$cmd`; exit; }
   if ($this =~ /^-?(c|cl|clean)$/) { cleanUp(); exit; }
   if ($this =~ /-r[a-z]/) { $region = $regHash{$this}; if (!$region) { $region = "myreg"; } $rm = $rmHash{$this}; if (!$rm) { $rm = "myrm"; } next; }
   if ($this =~ /-p/) { $printIfThere = 1; next; }
   if ($this =~ /[0-9]/) { wordit($this); next; }
-  if ($this =~ /-o/) { $myRegion = $this; $myRegion =~ s/^-o//g; if ($myRegion eq "") { die("Need to munge the region with -o."); } next; }
+#  if ($this =~ /-o/) { $myRegion = $this; $myRegion =~ s/^-o//g; if ($myRegion eq "") { die("Need to munge the region with -o."); } next; } # deprecated
   if ($this =~ /-f/) { $openPost = 1; next; }
   if ($this =~ /-s/) { $doShuf = 1; $doRoil = 0; next; }
   if ($this =~ /-r/) { $doShuf = 0; $doRoil = 1; next; }
   if ($this =~ /-m/) { matchHash("shuffling"); matchHash("roiling"); exit; }
   if ($this =~ /,/) { $tabString =$this; $tabString =~ s/,/\t/g; $tabString =~ s/_/ /g; next; }
-  if ($this =~ /^\?/) { usage(); exit; }
+  if ($this =~ /^-?\?/) { usage(); exit; }
 #print "$idx $this\n";
 if ($this eq "-t") { print B "TEMPLATE string hashval region room? whatseen? rule? gametext:\n"; next; }
 
 $tabString = "--\t$rm\t--";
 
-$hash = 0;
 #if ($this > 0)
 #{
   #$found = 0;
   #print "$this:\n";
   #findHash($this, "", $ary{"e"}); print "\n"; next; }
-@x = split(//, $this);
+my @x = split(//, $this);
 
-for $q (@x)
+for my $q (@x)
 {
   #print "$q $ary{$q}\n";
   $hash += $ary{$q};
 }
 
-$anyFound = 0;
-
 if ($doShuf) { lookBoth($hash, "shuffling"); }
 if ($doRoil) { lookBoth($hash, "roiling"); }
+if ($doLoc) { lookFor($hash, "c:\\writing\\dict\\hv.txt"); }
 
 if (($printIfThere) || ($anyFound == 0)) { print B "\"$this\"\t$hash\t$tabString\t\"some text\"\n"; $worthOpening = 1; }
 else { print "Instance found in file, not printing externally. Use -p.\n"; }
@@ -136,14 +142,14 @@ sub wordit
 {
   my $total = 0;
   open(A, "c:/writing/dict/brit-1word.txt");
-  while ($a = <A>)
+  while ($line = <A>)
   {
     $total = 0;
-    chomp($a); $a = lc($a);
-	@q = split(//, $a);
+    chomp($line); $line = lc($line);
+	my @q = split(//, $line);
 	for (@q) { $total += $ary{$_}; }
-	if ($total == $_[0]) { print "FOUND WORD: $a =~ $total\n"; return; }
-   #if ($a eq "thing") { print "$a $total\n"; }
+	if ($total == $_[0]) { print "FOUND WORD: $line =~ $total\n"; return; }
+   #if ($line eq "thing") { print "$line $total\n"; }
    }
   close(A);
   print "No matches for $_[0]. Trying findHash.";
@@ -157,24 +163,24 @@ sub matchHash
 my %inFile;
 print "Matching hashes for $_[0].\n";
 open(A, "c:/games/inform/$_[0].inform/source/story.ni") || die ("No source file");
-while ($a = <A>) #first read in the source with table of anagrams
+while ($line = <A>) #first read in the source with table of anagrams
 {
   $lineNum++;
-  if ($a =~ /^table of anagrams/) { $inTable = 1; }
-  if ($inTable && ($a =~ /\t[0-9]/)) { chomp($a); $b = $a; $b =~ s/.*\t//g; $b =~ s/[^0-9].*//g; $inFile{$b} = $lineNum; $inLong{$b} = $a; }
-  if ($a !~ /[a-z]/i) { $inTable = 0; }
+  if ($line =~ /^table of anagrams/) { $inTable = 1; }
+  if ($inTable && ($line =~ /\t[0-9]/)) { chomp($line); $b = $line; $b =~ s/.*\t//g; $b =~ s/[^0-9].*//g; $inFile{$b} = $lineNum; $inLong{$b} = $line; }
+  if ($line !~ /[a-z]/i) { $inTable = 0; }
 }
 close(A);
 open(A, "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] nudges.i7x") || die ("No nudge file");
-while ($a = <A>) #first read in the source with table of anagrams
+while ($line = <A>) #first read in the source with table of anagrams
 {
-  if ($a =~ /^table of nudges/) { $inTable = 1; }
-  if ($inTable && ($a =~ /\t[0-9]/))
+  if ($line =~ /^table of nudges/) { $inTable = 1; }
+  if ($inTable && ($line =~ /\t[0-9]/))
   {
-    @b = split(/\t/, $a); $c = @b[1];
-	if ($inFile{$c}) { print "We have a potential duplicate with hash value $c:\n--$inLong{$c}\n--$a\n"; }
+    my @tabary = split(/\t/, $line); my $c = $tabary[1];
+	if ($inFile{$c}) { print "We have a potential duplicate with hash value $c:\n--$inLong{$c}\n--$line\n"; }
   }
-  if ($a !~ /[a-z]/i) { $inTable = 0; }
+  if ($line !~ /[a-z]/i) { $inTable = 0; }
 }
 
 }
@@ -189,18 +195,21 @@ sub lookFor
 {
   open(A, "$_[1]") || die ("Can't open $_[1].\n");
   $line = 0;
+  if ($_[1] =~ /hv/) { $currentTable = " scrapwork"; }
+
+  my $lineCount = 0;
   my $foundyet = 0;
-  while ($a = <A>)
+  while ($line = <A>)
   {
-  $line++;
-  if ($a =~ /^table of/i) { $currentTable = "($a)"; chomp($currentTable); }
-  if (($a !~ /^[a-z]/) || ($a =~ /\t/)) { $currentTable = ""; chomp($currentTable); }
-  if ($a =~ /$hash/)
+  $lineCount++;
+  if ($line =~ /^table of/i) { $currentTable = "($line)"; chomp($currentTable); }
+  if (($line !~ /^[a-z]/) || ($line =~ /\t/)) { if ($currentTable ne " scrapwork") { $currentTable = ""; } }
+  if ($line =~ /$hash/)
   {
-  if (($myRegion) && ($a !~ /$myRegion/))
-  { print "REGION-IGNORING\n$a"; }
+  if (($myRegion) && ($line !~ /$myRegion/))
+  { print "REGION-IGNORING\n$line"; }
   else
-  { if (!$foundyet) { print "Found in $_[1]$currentTable:\n"; } print "($line) $a"; $foundyet = 1; $anyFound = 1;}
+  { if (!$foundyet) { print "Found in $_[1]$currentTable:\n"; } print "($lineCount) $line"; $foundyet = 1; $anyFound = 1;}
   }
   }
   close(A);
@@ -208,7 +217,7 @@ sub lookFor
 
 sub fhbig
 {
-  for $i(3..11)
+  for my $i(3..11)
   {
     print "Checking $_[1] <-> $i\n";
     findHash($_[0], "", $i);
@@ -239,7 +248,7 @@ sub findHash
 
 	{ #if ($ary{$q} > $_[3]) { next; }
 	  #print "$q $ary{$q}\n";
-	  $q = @alf[$idx];
+	  $q = $alf[$idx];
 	  my $temp = $_[0];
 	  #print "$temp vs ($maxlength - $l) * $ary{$q} = " . ($maxlength - $l) * $ary{$q} . "\n";
 	  if ($temp > (($maxlength - $l) * $ary{$q})) { last; }
@@ -254,9 +263,9 @@ sub cleanUp
 {
   my $toClean = 0;
   open(A, "c:/writing/dict/hv.txt") || do { print "TEST RESULTS:HV.TXT wasn't read,grey,0.0\n"; return; };
-  while ($a = <A>)
+  while ($line = <A>)
   {
-    if ($a =~ /\t[0-9]/) { $toClean++; }
+    if ($line =~ /\t[0-9]/) { $toClean++; }
   }
   print "TEST RESULTS:HV.TXT clean,3,$toClean,0\n";
 }
@@ -264,18 +273,19 @@ sub cleanUp
 sub usage
 {
 print <<EOT;
--r(letter) = force room and region name
+-r(letter) = force room and region name (only room now that error tables divided by region)
 -p = print if there, override if the hash is already in the source
 # = reverse-lookup a hash number
--oREGION = force region name
--c = clean up hv.txt or see how much is left
+-oREGION = force region name (deprecated)
+-c = run cleanup test on hv.txt
 -f = file open after
 -s = Shuffling only
 -r = Roiling only
 comma separated list gives several words
 ? = usage
 -m = match anagram table and nudge table
-! = edit the output file hv.txt
+-o/ = edit the output file hv.txt
+-!/-e = open hv.pl
 EOT
 exit;
 }

@@ -3480,7 +3480,6 @@ blurb
 "'Talk fancy? Can't. Flaky.'"
 "'Tea stain! In a STATE!'"
 "Their callow white collar lowlier chat. 'Article! Howl! Allow thrice? Wail! Chortle!'"
-"They argue over who has subtler butlers." [x]
 "'Time to lose, moot elites!'"
 "'Too pricy? Poor city!'"
 "'Top inn rec: Princeton!'"

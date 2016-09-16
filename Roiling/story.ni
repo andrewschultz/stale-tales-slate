@@ -8421,7 +8421,7 @@ carry out releaseing:
 	say "A Roiling Original's second release went out in January 2014. It fixed a lot of puzzles and bugs and also opened up a new region. Many areas were renamed, and many puzzles were redone. The code name was [i]Gad! Super Upgrades![r]";
 	say "A Roiling Original's third release went out in March of 2015. It included the 'director's cut' Demo Dome Mode. Puzzles were tweaked, and hinting was made more robust. The code name was Past-Due Updates.";
 	say "[line break]The current edition of A Roiling Original should include Invisiclues-style HTML, a color Trizbort map, a walkthrough, a heatmap of (rough) relative area difficulty, and a list of changes from the previous release. The code name was [i]Sustinent Nuttiness[r].";
-	say "Any future update could be called Fiddly Did Fly, because I don't expect to do much more. Tweakings Take Wings and We Task Tweaks are possibilities, but they feel kind of cheap.";
+	say "Any future update could be called Fiddly Did Fly, because I don't expect to do much more. Tweakings Take Wings, Fun [']Nuf and We Task Tweaks are possibilities, but they feel kind of cheap.";
 
 part teching
 
@@ -9230,6 +9230,8 @@ to say rodney-ditch:
 
 
 understand "resent" as a mistake ("But how could you make Ernest [i]feel[r] so he'd resent his position?") when Ernest is visible.
+
+understand "enters" as a mistake ("You'll need a few exits, here, really.") when Ernest is visible.
 
 understand "lauren" as a mistake ("You briefly remember a random acquaintance. If your name actually is Lauren, you savor the awkward and neat feeling of the first other Lauren you meant. Life is like that.") when neural pulses are visible.
 
@@ -13872,7 +13874,7 @@ understand "eiders" as a mistake ("But what would ducks DO in the big city? They
 
 book Econ Cone
 
-Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the perky crass skyscraper in the center forms the top of the skyline, which is itself a cone. [one of]Once here, t[or]T[stopping]he bluster from your average bustler is subtler here. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]You have lost all sense of direction, mainly because that statue nearby looks so important! [if rivets is reflexive and prai is reflexive]Maybe it will help you motivate yourself even more[else if rivets is reflexive or prai is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]That statue taught you all it could, so maybe you can move on--or in--to the skyscraper[end if]."
+Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the perky crass skyscraper in the center forms the top of the skyline, which is itself a cone. It's quieter here than the lot or rathole. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]You have lost all sense of direction, mainly because that statue nearby looks so important! [if rivets is reflexive and prai is reflexive]Maybe it will help you motivate yourself even more[else if rivets is reflexive or prai is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]That statue taught you all it could, so maybe you can move on--or in--to the skyscraper[end if]."
 
 understand "econ-cone" as Econ Cone.
 
@@ -24039,6 +24041,8 @@ book gates stage
 
 Gates Stage is north of Swell Wells. "Important-looking gates lead to the north. They don't look strictly locked, but you probably need some sort of ID--or confidence--to get by them. Behind them you see [if arena is examined]the Admit-Us Stadium[else]a near arena[end if]."
 
+understand "saget" as a mistake ("You don't need to be part of Yorpwald's Funniest Home Videos right now.") when player is in gates stage.
+
 Gates Stage is in Others.
 
 A near arena is scenery in Gates Stage. "[one of]It looks familiar--wait--it's Yorpwald's famous, enormous Admit-Us Stadium! What's more, you hear a hubbub that means some event must be going on[or]The Admit-Us Stadium stands behind the gate, a hubbub still indicating that something important must be going on[stopping]."
@@ -24347,7 +24351,7 @@ the nameless salesmen are scenery in clangier clearing. "The nameless salesmen a
 before talking to nameless salesmen:
 	say "You have nothing to say to the salesmen." instead;
 
-understand "lameness" as a mistake ("No need to judge them. We can't all be heroes.") when player is in clangier clearing.
+understand "lameness" as a mistake ("No need to judge the nameless salesmen. We can't all be heroes.") when player is in clangier clearing.
 
 Include (-
 	has transparent talkable

@@ -15312,6 +15312,7 @@ blurb	prio
 "Shed Not the Dons[r], by Ted Sohn"
 "Sheesh, Re-Prep, Sphere[r], by Herr Shep Espe"
 "Shen Clan Channels[r], by Nan Lesch"
+"Shieks and Skinheads[r], by [if player is male]Ed Haskins[else]Karin Hess[end if]"
 "Shield Four Flourished[r], by Rudolf Heis"
 "Shiest Heists Thesis[r], by Si Tesh"
 "Shift Around, Faint Shroud: Author Finds[r], by [if player is male]Stanford Hui[else]Frida Huston[end if]"
@@ -35821,6 +35822,7 @@ blurb
 "Groce-Greco Recog"
 "Grote-Trego Ergot"
 "Guillermo glomeruli" []
+"Guiton's Outings"
 "the Gulf Coast focal gust"
 "Hardee's sheared headers" []
 "Hearns's harness"
