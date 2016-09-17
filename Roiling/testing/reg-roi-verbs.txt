@@ -1435,7 +1435,7 @@ These cheap brownies don't look too unappetizing. However, nobody wanted to eat 
 >repair me
 You need to be by a repair machine.
 
->weirder
+>subtler
 >clumsy
 >rinsed
 >exits

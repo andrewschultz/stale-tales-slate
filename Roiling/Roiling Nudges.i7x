@@ -600,8 +600,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "tart"	293731657	--	start tarts	--	"[not-singular-hp]."
 "copse"	398904196	--	spec-o-scope	--	"[cop-sco]." [COPSE SCOPE 1 1]
 "spec"	324551619	--	spec-o-scope	--	"[cop-sco]."
-"oddly"	292583846	--	rewired robot	--	"[odd-rob]."
-"robot"	355557880	--	rewired robot	--	"[odd-rob]."
+"butler"	493578481	--	bluster butlers	--	"You need to deal with all the butlers. Not just one."
 "hulk"	249135123	--	muscly hulk	--	"You make some helpless-sounding noises, trying to form a sensible word. The hulk looks slightly annoyed, but completely--and rightfully--unworried. As Daltho said, four letters would be too simple."
 "musclyhulk"	709768725	--	muscly hulk	--	"You wrack your brain but quickly get the sense you're over-thinking how to ju-jitsu the hulk's strength."
 "diner"	348059355	--	diners	--	"[plutry of diners]There's more than one diner blocking you."
@@ -665,6 +664,12 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "reed"	361965110	--	reed's ale	--	"[reed-ale]."
 "ale"	183807766	--	reed's ale	--	"[reed-ale]."
 "reedale"	545772876	--	reed's ale	--	"[reed-ale]."
+"lars"	237599426	--	reed's ale	--	"[reed-ale]."
+"eede"	404447416	--	reed's ale	--	"[reed-ale]."
+"elsa"	280081732	--	reed's ale	--	"[reed-ale]."
+"rede"	361965110	--	reed's ale	--	"[reed-ale]."
+"seer"	437209987	--	reed's ale	--	"[reed-ale]."
+"deal"	204836855	--	reed's ale	--	"[reed-ale]."
 "save"	333432713	--	raves saver	--	"[no-fril]."
 "saver"	418756516	--	raves saver	--	"[no-fril]."
 "recorder"	625970878	--	raves saver	--	"[no-fril]."
@@ -1701,9 +1706,6 @@ to say gosh-camp:
 
 to say plutry of (pg - a guardian):
 	now pg is plurtry;
-
-to say odd-rob:
-	say "You think a bit, but Daltho's advice comes back--oddly rewired robot--only rewired is tough enough"
 
 to say wait-see:
 	say "The wait-seer shrugs patiently, unfazed you did not understand his full being. It is probably your inconvenience and not his";

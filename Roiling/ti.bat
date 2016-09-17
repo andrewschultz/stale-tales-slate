@@ -3,4 +3,4 @@
 @echo off
 
 ti.pl %*
-gq.pl -m 10 /%1
+gq.pl -r -m 10 %*

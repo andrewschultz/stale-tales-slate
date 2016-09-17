@@ -7,8 +7,9 @@ Well, one. It changes one guardian in one area. It also changes the names/gender
 Spoilers ahead.
 The tarred trader, Dr. Yow, the smart kid, and the person on a droll dollar change names.
 The south exit from the Coastline, in Store W, features either Lois the Hostile or the Hostile-Is-He Lot.
+The Deal Seer west of the Shoreline is Lars Eede or Elsa Erde.
 There may be an embarrassing bug where a female NPC is referred to as male, but I hope not. I searched pretty thoroughly, I guess/think. If you find one, I'll fix it and give you credit.
-Also, if any animals are referred to as male, let me know, as that's a potential bug.
+Also, if any animals are referred to as male, let me know, as that's a potential bug. I tryied to leave them gender-neutral.
 >MANOR
 >>Study
 ?What do I do here?
@@ -782,10 +783,9 @@ The deal seer hits the Reed's Ale quite hard!
 They feel trapped in their life and can't stop drinking.
 You can help them get RELEASED.
 The Reed's ale can also become RESEALED.
-?Rewired Robot
-It drew ire and made you see red.
-It's been REWIRED to be normal.
-WEIRDER.
+?Bluster Butlers
+Making them more circumspect could help them move up in the world, and away from here.
+They can become SUBTLER.
 ?Sweatier wait-seer
 He doesn't seem to get tired of blocking you.
 Make him WEARIEST.
@@ -901,6 +901,9 @@ The turbos and blaster are broken.
 You need to fix one, preferably both.
 The turbos can be more ROBUST.
 The blaster can be STABLER.
+But wait! There's one more optional thing!
+It looks WEIRDER inside. The wires are all over the place.
+Make it REWIRED, which isn't a replacement for ROBUST or STABLER, but it helps the kid think more clearly.
 >>RAWEST WATERS
 ?Help! Which shore?
 Northern, Eastern and Northeastern.

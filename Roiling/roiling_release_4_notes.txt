@@ -37,7 +37,8 @@ Store W:
 --Dr. Yow is now female if you are
 --the jetskis are replaced with a more appropriate conveyance
 --the once-sad deacons have been replaced by gender-specific blockers
---the man in the costume is replaced by a deal seer, male or female
+--the man in the costume is replaced by a deal seer, male or female, gender specific too
+--the oddly rewired robot has been replaced by bluster butlers, but the robot's flip is now a Last Lousy Point
 
 Store V:
 --the Bedroom in Store V now has a new name

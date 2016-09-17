@@ -798,7 +798,7 @@ Your score has just gone up by one point
 >score
 Score in a scenario: 10 out of 46 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 46.
 
->weirder
+>subtler
 Your score has just gone up by one point
 
 >clumsy

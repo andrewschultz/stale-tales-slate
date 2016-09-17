@@ -177,7 +177,7 @@ up by one point
 Scope Copse
 
 #test all 3 guardians in copse
->weirder
+>subtler
 >clumsy
 The snider diners sniff at the distraction.
 >undo
@@ -188,7 +188,7 @@ The muscly hulk beats its chest for NOT being removed like that.
 >clumsy
 >rinsed
 The robot's lights blink and flash and bloop. Is it laughing?
->weirder
+>subtler
 >n
 
 Saltbed
@@ -540,15 +540,10 @@ The pastry is for eating, not for changing. It might be more edible if you heate
 >brownie
 Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
 
->oddyl
-You think a bit, but Daltho's advice comes back--oddly rewired robot--only rewired is tough enough.
->robto
-You think a bit, but Daltho's advice comes back--oddly rewired robot--only rewired is tough enough.
+>butlre
+You need to deal with all the butlers. Not just one.
 
->weirdre
-The robot almost looked a bit odd there for a moment.
-
->weirder
+>subtler
 Your score has just gone up by one point.
 
 >w

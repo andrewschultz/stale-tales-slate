@@ -676,7 +676,7 @@ Your score has just gone up by one point
 Scope Copse
 
 #xc
->weirder
+>subtler
 Your score has just gone up by one point
 #xc
 >clumsy

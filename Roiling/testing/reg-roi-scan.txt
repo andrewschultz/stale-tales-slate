@@ -1655,11 +1655,11 @@ Your settler registers (cheat on) R??R?R.
 >rinsed
 Your score has just gone up by one point
 
->sb robot
-Your settler registers (no cheat) RYYRRYR.
-Your settler registers (cheat on) RGYRRGR.
+>sb butlers
+Your settler registers (no cheat) RYRRRYR.
+Your settler registers (cheat on) R?RRR??.
 
->weirder
+>subtler
 Your score has just gone up by one point
 
 >sb hulk

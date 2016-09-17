@@ -121,6 +121,8 @@ $tabString = "--\t$rm\t--";
   #findHash($this, "", $ary{"e"}); print "\n"; next; }
 my @x = split(//, $this);
 
+$hash = 0;
+
 for my $q (@x)
 {
   #print "$q $ary{$q}\n";

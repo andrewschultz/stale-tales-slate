@@ -4611,6 +4611,7 @@ blurb	fave
 "Permuting, Urgent Imp[r], by Meg Turpin"	false
 "Prodigious? Odious Prig[r], by Guido Spiro"	false
 "Re-Grow, Mad Word Gamer[r], by [if player is male]Drew Magro[else]Meg Darrow[end if]"	true []
+"Really Po['] Role Play[r], by [if player is male]Lyle Pora[else]Lora Pyle[end if]"	false
 "Recapping Pap: CRINGE[r], by Pip Cregan"	false
 "Right One? Inert Hog[r], by [if player is male]Theo Ring[else]Inge Roth[end if]"	false
 "Rogue at Our Gate: Outrage[r], by U. Ortega"	false
@@ -9921,7 +9922,6 @@ blurb
 "Slow Determan Westmoreland"
 "Slow Etienne Loewenstein"
 "Slow Evan Vanselow"
-"Slow Hal Shallow" []
 "Slow Kandi Landowski"
 "Slow Kathern Walkenhorst"
 "Slow Ken Knowles"
@@ -19499,6 +19499,7 @@ blurb
 "NOBLESSE? BONE LESS" []
 "NOIRS? NO SIR" []
 "NOISY? OY, SIN"
+"NOS TO TOONS"
 "NOT MAD TO DAMN"
 "NOT ODD? DON'T DO D-N-D, TOO"
 "NOT SERIOUS = TOO-SURE SIN"
@@ -34515,6 +34516,7 @@ blurb
 "PEERLESS SLEEPERS"
 "Poseur-Fort Four-Poster (for POSTURE)"
 "Prep-Now-a-Power-Nap"
+"Repiner-Ripener"
 "Rest-O-Store"
 "Restster" []
 "Safe-Bod Sofa-Bed"
@@ -34530,6 +34532,7 @@ blurb
 "Sundberg Rung-Beds"
 "Sure-Lie Leisure" []
 "These-Plus Sleep Huts"
+"To-Snore-on-Store"
 "A Tuck-So Sack-Out"
 "Tucson SunCot" []
 "Us-As-Top Pass-Out"

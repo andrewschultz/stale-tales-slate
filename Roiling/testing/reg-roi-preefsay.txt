@@ -283,8 +283,8 @@ Your attempt to bounce Rodney yonder is blocked by a few of his followers, who s
 >unlocked
 >ask yow about curst palace
 Dr. Yow scrunches his head a bit, then shrugs. "Ouch. Eleven letters. Maybe if it was shorter."
->ask yow about robot
-WEIRDER
+>ask yow about butlers
+SUBTLER
 >ask yow about ingrates
 rubs his temples
 >w

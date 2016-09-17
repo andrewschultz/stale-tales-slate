@@ -995,13 +995,13 @@ Your score has just gone up by one point
 >n
 Scope Copse
 
->ask rewired about elvira
-"Superior...example...flesh and blood..."
->ask rewired about rewired
-"I have been REWIRED not to let you by!"
->ask rewired about xyzzy
-"I have been REWIRED not to let you by!"
->ask rewired about curst palace
+>ask butlers about elvira
+WRONG
+>ask butlers about butlers
+WRONG
+>ask butlers about xyzzy
+WRONG
+>ask butlers about curst palace
 "You'll never get there!"
 
 >ask muscly hulk about elvira
@@ -1013,7 +1013,7 @@ He kind of stumbles with dialogue. Maybe you can make him stumble physically.
 >ask muscly hulk about curst palace
 "You'll never get there!"
 
->weirder
+>subtler
 Your score has just gone up by one point
 >clumsy
 Your score has just gone up by one point

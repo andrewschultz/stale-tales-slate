@@ -66,9 +66,9 @@ spill/stroll/calm/run/boast/scrap/seek/eat/tutor/kiss/trace/react/bonk/bust/drop
 Store Y (max)
 sing/spit/inset/stroll/calm/run/fart/soar/scrap/scan/seek/eat/tutor/tend/swipe/kiss/trace/react/splain/bonk/bust/drop/sweat/clean/shape/warp/bury/unearth/assuage/search/enlarge/patrol/tan/prepay/revel/derail/redial
 Store W (min)
-awed/coyer/weedy/yonder/creaky/weirder/clumsy/punier/pastier/resealed/hostile/organised/married/hostile/hastiest/broken/wordy/unlocked/attentive/rowdy/stabler/robust/spectacular
+awed/coyer/weedy/yonder/creaky/subtler/clumsy/punier/pastier/resealed/hostile/organised/married/hostile/hastiest/broken/wordy/unlocked/attentive/rowdy/stabler/robust/spectacular
 Store W (max)
-ashen/coyer/weedy/tenser/achier/recreant/yonder/rustled/creaky/rusty/clumsy/weirder/rinsed/pastier/punier/coiled/married/weariest/angstier/marginal/himself/sewed/mined/resealed/unreal/drained/naivest/grandiose/broken/wordy/pearly/unlocked/holiest/hastiest/attentive/rowdy/stabler/nearest/present/dingy/greyed/spectacular
+ashen/coyer/weedy/tenser/achier/recreant/yonder/rustled/creaky/rusty/clumsy/subtler/rinsed/pastier/punier/coiled/married/weariest/angstier/marginal/himself/sewed/mined/resealed/unreal/drained/naivest/grandiose/broken/wordy/pearly/unlocked/holiest/hastiest/attentive/rowdy/weirder/stabler/nearest/present/dingy/greyed/spectacular
 Store T (min) (adjusted)
 bare/reedi/seedi/steami/tedious/because/else/atom/angri/brute/slow/coolest/artsy/garbed/stoical/terse/parrot/snail/snipe/racoon/honest/raptor/deep/quick
 Store T (max) (adjusted)

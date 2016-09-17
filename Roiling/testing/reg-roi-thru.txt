@@ -2217,11 +2217,11 @@ Your score has just gone up by one point
 >rinsde
 That's not something
 
->weirdre
+>subtlre
 The robot almost looked a bit odd there for a moment.
->weirder
+>subtler
 Your score has just gone up by one point
->weirdre
+>subtlre
 That's not something
 
 >scumly

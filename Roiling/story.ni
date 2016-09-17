@@ -1974,7 +1974,7 @@ natives	--
 snider diners	"'We are EATING,' they exclaim, drily. You'd like to rain on their parade, even a little."
 sweatier wait-seer	--
 arid den	--
-rewired robot	--
+bluster butlers	--
 unripe iPrune	--
 pirates	--
 Ray Eck	--
@@ -2115,7 +2115,7 @@ drama armada	"The drama armada doesn't seem to respond to conversation. Maybe if
 plebe	"Plebes aren't much for small talk. In fact, they get yelled at for that sort of thing. Hmm, maybe you could yell at him the right way to make him move."
 muscly hulk	"He kind of stumbles with dialogue. Maybe you can make him stumble physically."
 iPrune	"[one of]'I?! Prune?!' it cries, turning red at a perceived slight[or]'I may be UNRIPE, but I'm bigger than you!' it cries. 'If I was the same size, maybe you could use words to get me to let you by. But we aren't, so I'm not.' Hmph[cycling]."
-robot	"'I have been REWIRED not to let you by!'"
+bluster butlers	"'If we let you by, we'd have to answer to our mentor, Les Burt!' You see red at the name."
 snider diners	"They [one of]ignore you, asking is DERN coming[or]talk about Dr. Enis[or]mention NERD IS something unintelligible[in random order], until they're red[one of], but you sense they have a bit more to say[or], but maybe they have one more rant[stopping]."
 organised ego drains	"The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go [if player is in campsite]north[else]south[end if][if campsite is visited and shoreline is visited], especially since you walked around before[end if]."
 pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to converse.[or]'Yarrh, Harry,' they shout, and one of them makes fun of your skin tone. You feel like a spiter, hoping they get skin cancer.[in random order]"
@@ -2391,7 +2391,7 @@ Ray Eck	Elvira	"He blathers on about what's wrong about her so annoyingly you al
 Ray Eck	toaster	"'Not nearly as sophisticated as my keycar.'"
 Ray Eck	keycar	"Ray Eck proceeds to [one of][or]re-[stopping]tell you about its features and so forth. What a YACKER, you think, seeing red."
 Ray Eck	settler	"Ray Eck just won't shut up about what the settler could be for, and why it doesn't do anything. You notice its colors don't change even when you switch it to and from cheat mode, which--well, that's a pretty big help."
-rewired	Elvira	"'Superior...example...flesh and blood...'"
+butlers	Elvira	"'Well, you'd think she'd want someone active working as bouncers, but she wants quieter. What's up with that?'"
 diners	Elvira	"The diners extol her taste in food. Any drip knows she's no wet blanket."
 muscly hulk	Elvira	"The hulk blinks and shrugs and grunts."
 iPrune	Elvira	"'The longer she rules, the bigger plants like me will grow!'"
@@ -2778,7 +2778,6 @@ dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but 
 strudel	"DR. ELTUS recommends this strudel!"	[towers]
 keycar	"When the car slows a bit, you read KC AYER in red."
 iPrune	"InPure industries[one of]. Yep, you heard rumors Elvira was involved with them, too[or][stopping]."
-rewired robot	"Rewired -- DR. EWRIE."
 o-s	"[if the-hostile is in lalaland]The shrine reads LOST? HIE! THE LOIS![else][one of]Written in red on the shrine is THE LOIS, who helped you in the sortie pre-Elvira You can read a bit more.[or][one of]LOST? HIE! [or]THE LOIS [cycling]is written on the ole shrine in red.[stopping][end if]"
 prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[in random order]. There're two other bits to read."
 blaster	"ALBERT'S."
@@ -4140,7 +4139,7 @@ alarming	"The grailman seems almost average for a moment."
 dandier arid den	"The arid den seems less imposing and impressive."
 Reed's Ale	"[el-la-f] listens to what you're saying for a minute, but--no, you didn't quite get it right. He goes back to reciting his tired sales pitch."
 wait-seer	"The wait-seer looks bored and distracted for a second."
-rewired robot	"The robot almost looked a bit odd there for a moment."
+bluster butlers	"The bluster butlers cough slightly and look around furtively."
 atheists	"The atheists momentarily ditch their timed snark for a few quick hitters, but then it's back to normal."
 lois the hostile	"Lois the Hostile momentarily gives a fake smile, but it's not as fake as it could be. Progress."
 hostile-is-he lot	"The Hostile-Is-He Lot mumble, hmm, if we saw things THAT way...but the moment passes."
@@ -5493,6 +5492,7 @@ pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and 
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 Ray Eck	false	true	false	false	"Ray Eck begins babbling about how interesting the settler looks, almost as interesting as his keycar. Maybe you could ASK him about the keycar, if he's still stumping you." [towers]
+bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out."
 dandier arid den	true	true	false	false	"Well. That's two things you can't figure to start, but maybe you can, if you think about it."
 alarming grailman	true	false	false	false	"The one letter blinks between green and yellow."
 sweatier wait-seer	true	false	false	false	"The letters blink from red/yellow to purple/green and back."
@@ -6285,9 +6285,9 @@ carry out towers-hinting:
 		all-say "[one of]Dr. Yow is versatile. You need [him-her] to be exciting around the kid.[or][he-she-c] can also be...[or]...ROWDY.[cycling]" instead;
 	if kid is reflexive:
 		all-say "[one of]The kid is too tentative to listen to Dr. Yow.[or]What can [he-she] become?[or]This is slightly tricky, even with three t's. You need to focus, so the kid can focus.[or]ATTENTIVE.[cycling]" instead;
-	if havens is not visited:
-		all-say "You need to visit west of the Copse Scope[if neural pulses are not in lalaland]. The rewired robot guards that area[end if]." instead;
-	if player is in havens:
+	if campsite is not visited:
+		all-say "You need to visit west of the Copse Scope[if butlers are not in lalaland]. The bluster butlers guard that area[end if]." instead;
+	if player is in campsite:
 		if weeds are in ravages:
 			all-say "The item you want is behind the weeds in the ravages." instead;
 		if gizmo is off-stage:
@@ -6633,6 +6633,10 @@ after reading a command:
 		if the player's command matches the regular expression "\b(hardy|hydra)\b":
 			say "You don't want to THINK about taking on the hydra by yourself. You need something much bigger.";
 			reject the player's command;
+	if location of player is location of butlers and butlers are not plurtry:
+		if the player's command matches the regular expression "\bbutler\b":
+			now butlers are plurtry;
+			ital-say "there are too many butlers, so getting rid of one wouldn't do much.";
 	if location of player is location of atheists and atheists are not plurtry:
 		if the player's command matches the regular expression "\batheist\b":
 			now atheists are plurtry;
@@ -7032,7 +7036,7 @@ Ray Eck	"Not even his cousin, Kim Eck, deserves that." [START towers]
 denim	"[if player has gizmo]The gizmo can't cut through[else if player has dagger]Your ragged dagger doesn't quite cut it[else]You've got nothing sharp enough[end if]. It's thickly packed denim, for sure."
 serpent	"Snaky yanks would backfire on you. Maybe you can calm the snake, though."
 sweatier wait-seer	"You find it tough to get close to his sweatiness. 'Ew...I...tears,' you say, your eyes going red."
-rewired robot	"Don't MAKE it become a boot-o-bot."
+bluster butlers	"They're probably trained to hand out ur-belts."
 bonker	"As you hunker down to run at the bonker, it wavers menacingly. You're not going to beat it while it's in such good shape."
 prison ropins	"[which-sharp]--but force doesn't seem the right way in, anyway."
 log gaol	"[which-sharp]----but there is probably nothing beyond in the Badlands anyway."
@@ -7608,8 +7612,8 @@ before listening (this is the you can hear stuff some places rule):
 		say "[el-la-f] mutters and moans how [one of]Dr. Eleesa's motivational techniques seem so easy[or]E-dealers have it so easy[or]Lad Reese is an upstart intent on stealing commissions[or]Dre Eleas's methods aren't to be trusted[in random order], turning red until taking another swig at the Reed's Ale." instead;
 	if ingrates are visible:
 		say "You see red as the ingrates['] voices sound like tin gears." instead;
-	if rewired robot is visible:
-		say "You listen until you cringe. Red lights flash across the robot, pleased it drew ire." instead;
+	if player is in copse and butlers are in copse:
+		say "The butlers loudly banter 'Let's rub (you) the wrong way!' You see red." instead;
 	if player is in havens:
 		say "You think you hear NEVAHs, but that might just be internal melodrama." instead;
 	if player is in topside:
@@ -8991,7 +8995,7 @@ man covered in inapt paint	man covered in inapt paint	false	450759108	--	"himsel
 bonker	bonker	false	427742080	--	"broken"	"broken"	"It starts whirring and coughing and bleeping frantically, far more than such a simple machine really should. It wheezes 'Failed--to--guard--threat--to--state--Dr.--Yow!' Then it explodes in a shower of rainbow sparks. The way east is clear now."
 weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	"The weeds tangle together and pull each other out of the ground. As they do, they reveal two items that seem, well, kind of stupid, but you never know. A ragged dagger and a raves saver, which you take."
 raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
-oddly rewired robot	oddly rewired robot	false	600216532	--	"weirder"	"weirder/wierder"	"[if-wierd]The oddly rewired robot, once so proud of how it conformed to standards, now finds reason to believe it is weirder. Being weird, it can no longer move wider. 'Battery...try...beat.' It begins to melt--mottle--until it looks abysmal, almost balsamy, as it cries 'Sob, a true saboteur' slinking away in shame at its crossed Wiser-Wires."
+bluster butlers	bluster butlers	false	589852447	--	"subtler"	"subtler"	"The butlers quiet down a bit. Then they sniff at you. No, you do not deserve to go west. But you're not really even good enough for their time at all! They mutter how they're more high class than this, and they should be guarding a mansion and not some silly ... well, they aren't even going to bother to tell you. They glide off in search of more gainful employment."
 iPrune	iPrune	false	513602032	--	"punier"	"punier"	"Instead of being worried about how much the iPrune would block you when full-grown, you wonder about if it were the size of a normal banana. It works. The iPrune kicks you ineffectually as you walk past, then runs and hides in embarrassment."
 arid den	arid den	false	371276262	--	"drained"	"drained"	"You focus, hoping the arid den will lose energy. Justfor effect, you yell 'I'm a busy adventurer!' you shout. 'I don't have time for this! But I do things the right way!' You're still surprised as the Nerd-Aid bottles seem to dry up inside, and the arid den's lights dim, until it collapses into itself and underground."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	"You manage to take the strudel without obviously reaching for it[if player is in lost lots]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
@@ -19312,7 +19316,7 @@ to say which-cue of (therow - a number) :
 table of townarr
 observ
 "[line break]The palace is barely visible now."
-"The palace seems a bit closer now. You probably have a way to go, but it's a start. Maybe the scope could provide some sort of map. And those three guardians--well, maybe you can bribe, attack or talk to them. For information if nothing else. The rewired robot, particularly, keeps its eyes on you. Maybe it's guarding something important."
+"The palace seems a bit closer now. You probably have a way to go, but it's a start. Maybe the scope could provide some sort of map. And those three guardians--well, maybe you can bribe, attack or talk to them. For information if nothing else. The bluster butlers, particularly, keep their eyes on you. Maybe they're guarding something important."
 "You still can't make out any details of the palace, but it's certainly there, across the big lake to the northeast. But there are more stupid guardians here--they look more resolute and tougher to figure, but you are getting the hang of things. You think."
 "The castle looks a little bigger now--but you may eventually need to cut [if location of player is cinema]east[else]north[end if] a bit to get to it. It looks like there're dead ends [if location of player is cinema]north and west[else]south and east[end if], and you still aren't sure how to cross Leak Lake."
 "You're a good deal closer to the palace than at the copse, but you can probably go northeast a bit more to get closer. That still leaves Leak Lake to pass."
@@ -19533,7 +19537,7 @@ description of spec-o-scope is "You look into the scope and see:[paragraph break
 [line break]  [bloorg of admirer]~~~~~~
 [line break]+[bloorg of ingrates].[bloorg of wait-seer].[bloorg of atheists].~ +
 [line break]  [bloorg of iPrune] [bloorg of grailman] [if player is male][bloorg of hostile-is-he lot][else][bloorg of lois the hostile][end if]~
-[line break]  .[bloorg of robot].[bloorg of reed's ale].~
+[line break]  .[bloorg of butlers].[bloorg of reed's ale].~
 [line break]  [bloorg of muscly] [bloorg of man covered in inapt paint] [bloorg of ego drains]~
 [line break]![bloorg of pirates].[bloorg of diners].[bloorg of arid den].[bloorg of bonker]!
 [line break]  [bloorg of Ray Eck]   [bloorg of natives]
@@ -19949,6 +19953,8 @@ understand "atblock" as atblock when debug-state is true.
 a-text of atblock is "YRRYRRYRY". b-text of atblock is "YRRYRPGPG". parse-text of atblock is "-[sp]x[sp]x[sp]-[sp]x[sp]t[sp]i[sp]v[sp]e".
 
 a bot boat is a thing. understand "botboat" and "bot-boat" as a bot boat.
+
+understand "were rid" as a mistake ("No, the wires still need to BE there.") when player is in coastlines and boat is in coastlines.
 
 check scaning bot boat (this is the scan boat components and not boat rule):
 	showme whether or not blaster is reflexive;
@@ -21109,13 +21115,13 @@ chapter who are the guardians?
 
 section scope copse
 
-the oddly rewired robot is a neuter purple guardian. understand "prevent/robot/bot" as oddly rewired robot. "An oddly rewired robot enthusiastically guards the way [psgdir of rewired robot]."
+the bluster butlers are a plural-named neuter purple guardian. understand "bluster butler" and "butler" as bluster butlers. "Bluster butlers, masters of direct intimidation, guard the way [psgdir of bluster butlers]."
 
-understand "were rid" as a mistake ("On the right track, but you are just one person. Plus you probably need an adjective. Something one-wordier.") when player is in copse and rewired robot is in copse.
+understand "bustler" as a mistake ("The butlers are plural, and anyway, they're bustling plenty as-is.") when player is in copse and butlers are in copse.
 
-description of oddly rewired robot is "It is in perfect compliance with Obst-Bots (Obstacle? Obstinate? Both? Nobody ever remembers) regulations assuring you it has recently been [i]rewired[r] to be the best at guarding important places. You could probably listen to its odd beeping to drive yourself up the wall. You see red writing on it."
+description of bluster butlers is "Bluster butlers are known for handling undesirables roughly. Their employers (or alma mater) are sewn into what they're wearing: [i]Trebul's[r]."
 
-a-text of oddly rewired robot is "RYYRRYR". b-text of oddly rewired robot is "RGYRRGR". parse-text of rewired robot is "x[sp]e[sp]i[sp]x[sp]x[sp]e[sp]x".
+a-text of bluster butlers is "RYRRRYR". b-text of bluster butlers is "R*RRR**". parse-text of bluster butlers is "x[sp]?[sp]x[sp]x[sp]x[sp]?[sp]?".
 
 The muscly hulk is a red guardian. "A muscly hulk flexes as it guards the way [psgdir of muscly hulk].".
 
@@ -21257,6 +21263,10 @@ Elsa Erde is a guardian. a-text of Elsa Erde is "RYRYYRYR". b-text of Elsa Erde 
 
 description of Elsa Erde is "She's carrying that bottle of Reed's Ale but seems awfully jittery."
 
+understand "deal seer" and "deal/seer" as Lars Eede when player is male.
+
+understand "deal seer" and "deal/seer" as Elsa Erde when player is female.
+
 the Reed's Ale is a vanishing thing. a-text of reed's ale is "RYRYYRYR". b-text of reed's ale is "PGRYYRYR". parse-text of reed's ale is "r[sp]e[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x".
 
 description of Reed's Ale is "It's open and, from [el-la-f]'s frequent swigs, apparently bottomless. You can't read the details of the bottle, but it's probably not very good for you. Or [el-la-f]. Yet [el-la-f] is attached to it, for some reason. Well, you probably know why by now, if you got this far."
@@ -21287,7 +21297,7 @@ description of natives is "They're not, like, a particular skin color or with a 
 
 a-text of natives is "RYYRYRR". b-text of natives is "?GYRYRR". parse-text of natives is "?[sp]a[sp]-[sp]x[sp]-[sp]x[sp]x".
 
-The bonker is a purple guardian. "You recognize a huge bonker to the [psgdir of bonker]. They're usually more bark than bite, but this one's certainly in the way, and they aren't just hired out for fun. Gotta be something interesting that way.". description of bonker is "It's twice your height and upright and club-shaped and probably ready to [if bonker is passtried]re-[end if]bonk anyone who goes east while it's still functional, and boy does it look functional[one of]. Other guardians are not so violent. Must be something important back there[or][stopping]."
+The bonker is a purple guardian. "You recognize a huge bonker to the [psgdir of bonker][one of]. They're usually more bark than bite, but this one's certainly in the way, and they aren't just hired out for fun. Gotta be something interesting that way[or][stopping].". description of bonker is "It's twice your height and upright and club-shaped and probably ready to [if bonker is passtried]re-[end if]bonk anyone who goes east while it's still functional, and boy does it look functional[one of]. While it's not quite as violent as a boot-o-bot or space-taking as Obst-Bots, its presence indicates something important to the east[or][stopping]."
 
 a-text of bonker is "RRYRYR". b-text of bonker is "PRYPGR". parse-text of bonker is "b[sp]x[sp]o[sp]k[sp]e[sp]x". bonker is parse-spoilable.
 
@@ -21310,7 +21320,7 @@ chapter guardian org table
 table of guard-org [organized going 1st north then east. W, N, E.]
 guy	loc	blockdir	blokzorz	kloozorz	taunt	aux
 muscly hulk	Scope Copse	north	"He shows surprising dexterity for someone so muscly as he forces you back."	"You briefly remember the giant's paradox, about trading off strength and dexterity."
-rewired robot	Scope Copse	west	"'I-was-rewired-enough-to-be-just-normal-enough-to-block-you,' says robot, as if pre-set to 'pester.' It smiles in a way it knows drew ire, and you see red."	"The rewired robot is almost trying TOO hard to be normal, you think."
+bluster butlers	Scope Copse	west	"The butlers begin running around, roaring all sorts of reasons you don't want to go west and it wouldn't be good for society anyway. 'See what's west? URL best!' one says. You see red at the horrible rhyme."	"Maybe if the butlers were quieter, they'd have a better place to guard than here."
 snider diners	Scope Copse	east	"They sniff and seem to dig around for concealed cutlery. You don't need or want any part of that, or of their wit[if player has dagger], even if your ragged dagger were more effective[end if]."	"The diners mutter about how bad weather can ruin the ambience of open-air meals."	"The diners smack their lips, and you think you hear the zhk of silverware."
 iPrune	Blasted Saltbed	north	"The iPrune rumbles over to block your way. [one of]It asks where you're going, and you mumble, red-faced, 'Er, up in...' but you can't say where, ultimately[or]'REIN UP!' it yells, making you see red[in random order][one of]. Maybe if you tried to pass again, both sides could have their say[or][stopping]."	"Looking at the iPrune, you are intimidated by how unnaturally big it is. Maybe the solution is easier than you're worried it is."
 pirates	Blasted Saltbed	east	"'Tips are...' one pirate says. 'Spare it!' you lash out. Everyone's a bit red-faced over this."	"You can't make the pirates less in-shape, but maybe something more cosmetic will work."	"A wry, wary 'Yawr!' from the pirates makes you feel awry."
@@ -21364,7 +21374,7 @@ section generic taunts
 
 table of ggt - guardian generic taunts
 guaname	guatext
-rewired robot	"The robot's lights blink and flash and bloop. Is it laughing?"
+bluster butlers	"The bluster butlers loudly mention the strength of working in teams to guard important places."
 muscly hulk	"The muscly hulk beats its chest for NOT being removed like that."
 snider diners	"The snider diners sniff at the distraction."
 inapt paint	"[if mel-known is true]Mel Fish[else]The man to the [n-s-rav][end if] mumbles 'Well, at least it wasn't me, whoever I am. I mean, my name's [kno-mel], but who am I, really?'"
@@ -26247,7 +26257,7 @@ Ed Yerg	"[one of]He's trying to shake you down, and there's something artificial
 iPrune	"[one of]The iPrune is decidedly UNRIPE, and yet it's still too big for you.[plus][or]Any way to make the veggie/fruit smaller?[plus][or]Maybe PUNIER?[minus][cycling]"
 neural pulses	"[one of]They are both neural and pulses.[plus][or]You can't see them, but you know they're there, and they're slight negatives.[plus][or]If the pulses were all in your mind, or something more positive, it'd be nice.[plus][or]Make them UNREAL. Or PLUSES.[minus][cycling]"
 muscly hulk	"[one of]Muscly is nice, but if you could tangle him up...[plus][or]Maybe if he weren't so coordinated?[plus][or]CLUMSY.[minus][cycling]"
-oddly rewired robot	"[one of]The robot's been rewired and looks a bit odd.[plus][or]The robot is normal enough to block you.[plus][or]What if you made the robot WEIRDER?[minus][cycling]"
+bluster butlers	"[one of]The bluster butlers are a bit too noisy. Maybe you could quiet them down?[plus][or]They're good at the direct approach, but if they were indirect, maybe they could guard somewhere more valuable.[plus][or]What if you made the butlers SUBTLER?[minus][cycling]"
 sweatier wait-seer	"[one of]The wait-seer is certainly SWEATIER than you.[plus][or]He doesn't seem to be getting tired, the wait-seer.[plus][or]So changing the wait-seer to someone who is, or gets, tired, could work.[plus][or]WEARIEST.[minus][cycling]"
 ingrates	"[one of]The ingrates are the ANGRIEST you've ever seen.[plus][or]They're too mad to let you pass. The ingrates are not going to stop complaining, but maybe they could complain more passively.[plus][or]What if the ingrates became ANGSTIER?[minus][cycling]"
 lois the hostile	"[one of]Boy, for being potentially religious, [the the-hostile] sure is HOSTILE. But they shouldn't be. God is love in most religions.[plus][or]Maybe helping [relig-mf] could help you.[plus][or]Make [relig-mf] the HOLIEST you've seen.[minus][cycling]"
