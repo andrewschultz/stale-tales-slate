@@ -1302,7 +1302,7 @@ tight knot	"It helps the gadget remain tagged."
 attics	"The attics can be flipped back to static, if you want."
 static	"[one of]It's optional to fix the dollhouse and static. You can use the gadget in the cabinet to figure it out. [plus][or]The dollhouse appears to be missing a top bit. [plus][or]ATTICS. [minus][cycling]"
 doll house	--	attics
-gateman	"The old man will help you if you ask him about various things."
+gateman	"The tan mage will help you if you ask him about various things."
 getaway gateway	"You can enter it[if gateman is off-stage] with assistance from someone else[else if player does not have gadget], but maybe get some stuff to help you first[else] when ready[end if]."
 new land	"You can find out once you enter the gateway."
 prep paper	"The prep paper gives hints you'll cross off as you finger things."
@@ -2108,7 +2108,7 @@ instead of eating:
 
 xray-vision is a truth state that varies. xray-vision is usually false.
 
-asked-almond is a truth state that varies.
+asked-gateman is a truth state that varies.
 
 the asking yourself for something rule is not listed in any rulebook.
 
@@ -2132,7 +2132,7 @@ Check asking something for (this is the nobody gives anything rule):
 	say "Asking directly for stuff doesn't work. If it were that easy, someone already would've. Maybe you want to ask ABOUT." instead;
 
 check objasking gateman about saltine:
-	now asked-almond is true;
+	now asked-gateman is true;
 
 check throwing tomato at nerds:
 	say "They're not a real menace, just annoying." instead;
@@ -3308,8 +3308,8 @@ bulge	bugle	"bugle"	"bulge"	"The ovular shape on the door rumbles then falls off
 odor	yard-door	"door"	"odor"	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start intro anagrams]
 bolt	blot	"blot"	"bolt"	"The bolt retracts, and slowly a blot spreads over the door, which swings in and out[if bugle-played is true] just as when you played the bugle[else]. You can probably enter now[end if]."	false	249695339	"You don't want to re-lock the door."
 toga	goat	"goat"	"toga"	"The dingy toga shudders. It seems to rip, make legs, and twist around, like one of those balloon animals you were never good at. All this twisting has left him with an appetite, and he walks over to the delicious thickets and brambles.[paragraph break]He finds a relatively weak spot in the thickets and goes at it. Enough branches make way so that you could make it through if you crouch. Exhausted, he turns around three times and falls asleep.[paragraph break]Man! You actually made something living, this time. And you can even go IN through the darnels, now too[if darn-slan is true]--the ones you slandered nicely. You really took full advantage of this first bit[else], which you could maybe trash right if you think about it. Or you could just move on[end if]."	false	212250115	"The goat seems content enough as-is."
-nametag	gateman	"gateman" or "gate man"	"nametag"	"Whoah! The nametag pulses and pops in directions you didn't think something that flat could. You hear a gish, then a sigh. A tall, grouchy old man in sober robes so aged you almost say 'Egad' cries 'The eyes! They see!' He grumbles how he shoulda been a portal king in the parking lot, he's such a talking pro. 'Rote scan. Ancestor? No traces.' Then he notices you. 'You--well, you brought me back. Yorpwald's been shuffled. Almost f-flushed. I'm Old Man Almond. But this isn't some RPG where you can ask everyone on the way for help. I'm pretty much it[if attics are not off-stage]. Oh, nice job fixing the static, too. There'll be worse noise later, but you'll deal with that whenever[end if].'[paragraph break]'Er, oh...or, eh...'[paragraph break]'Brilliant! You're a natural!'"	false	400874126	--	true
-static	attics	"attics" or "attic"	--	"[check-plur]The static cuts off and seems to grow opaque. Then it forms into a small box with a cupola, pyramid, and other shapes. They fit with a click on top of the doll house[if gateman is visible]. Old Man Almond golf-claps. 'Good work, though there's worse noise later[what-about-gate].'[else]. Too bad nobody was around to see it![end if]"	false	368680251	--	true
+nametag	gateman	"gateman" or "gate man"	"nametag"	"Whoah! The nametag pulses and pops in directions you didn't think something that flat could. You hear a gish, then a sigh. A tall, grouchy old man in sober robes so aged you almost say 'Egad' cries 'The eyes! They see!' He grumbles how he shoulda been a portal king in the parking lot, he's such a talking pro. 'Rote scan. Ancestor? No traces.' Then he notices you. 'You--well, you brought me back. Yorpwald's been shuffled. Almost f-flushed. I'm Nat Egam, Tan Mage. See, this isn't some RPG where you can ask everyone on the way for help. I'm pretty much it[if attics are not off-stage]. Oh, nice job fixing the static, too. There'll be worse noise later, but you'll deal with that whenever[end if].'[paragraph break]'Er, oh...or, eh...'[paragraph break]'Brilliant! You're a natural!'"	false	400874126	--	true
+static	attics	"attics" or "attic"	--	"[check-plur]The static cuts off and seems to grow opaque. Then it forms into a small box with a cupola, pyramid, and other shapes. They fit with a click on top of the doll house[if gateman is visible]. Nat Egam golf-claps. 'Good work, though there's worse noise later[what-about-gate].'[else]. Too bad nobody was around to see it![end if]"	false	368680251	--	true
 attics	static	"static"	--	"You undo your artistic work for perhaps more practical considerations like learning how to use the new toys from the cabinet."	false	368680251	--	true
 
 table of Stores anagrams
@@ -4124,7 +4124,13 @@ the brush is scenery in Dry Yard. "[shru-bru]."
 to say oddo:
 	say "[if odor is in Dry Yard]odor[else]door[end if]"
 
-The gateman is a person. "Old Man Almond, the gateman, is grousing around here."
+The gateman is a person. "Nat Egam, the tan mage/gateman, is grousing around here."
+
+understand "nat/egam" and "nat egam" and 'tan/mage" and "tan mage" and "gate man" as gateman.
+
+understand "old man" and "man" as gateman when player is in notices section and old man is in notices section.
+
+understand "almond" as a mistake ("'Don't try anything too nutty!' booms Nat Egam.) when player is in notices section and old man is in notices section.
 
 after fliptoing gateman:
 	set the pronoun him to gateman;
@@ -4135,8 +4141,6 @@ after fliptoing gateman:
 		say "The gateman [if ant is in lalaland]pauses again, then [end if]looks at your bugle. 'Oh! Thanks for recovering that! You won't need it--but it's valuable, and stuff. Mind if I...?' You don't. It's already a bit tricky to carry around.";
 		now bugle is in lalaland;
 	continue the action;
-
-understand "old/ man/ almond" as gateman when gateman is visible.
 
 the odor is scenery. the odor is undesc. it is in Dry Yard. rgtext of odor is "[rcn][rc][gc][gc]". lgth of odor is 4. gpos of odor is 2. rpos of odor is 4. cert-text of odor is "-[d1][ast]O[ast]R". rect-text of odor is "D[d1][d1][ast]R".
 
@@ -4365,7 +4369,7 @@ to say get-a-man:
 		say "[reject]";
 		continue the action;
 	if trips strip is visited:
-		say "Old Man Almond cannot help you now.";
+		say "Tan Mage Nat Egam cannot help you now.";
 		continue the action;
 	if gateman is visible:
 		say "You already did.";
@@ -4381,7 +4385,7 @@ check going inside in notices section:
 
 check going nowhere in Notices Section:
 	if getaway is visible:
-		say "That'd be a cop-out, running away. You'd break Old Man Almond's heart, too. You probably want to go in and enter the gateway.";
+		say "That'd be a cop-out, running away. You'd break Nat Egam's heart, too. You probably want to go in and enter the gateway.";
 	otherwise:
 		say "You can't even remember the way you came through the thickets. And the gateway's right in front of you. You sense it's probably where you want to go.";
 	the rule succeeds;
@@ -4514,11 +4518,11 @@ check entering the getaway gateway:
 	if player does not have tagged gadget and gadget-warned is false:
 		say "'Dang adventurers these days. It's not demo mode out there. If I'd had doohickeys nice as that gadget in the cabinet when I saved that ONE world...I'd of took it! And saved two or three worlds!' He gives a warning, wan grin.";
 		now gadget-warned is true instead;
-	say "Your path is clear. [if player has gadget]'Eh, get at the gate.' Old Man Almond gets his hanky out. 'Okay, hunt.'[paragraph break]'Thank you,' you say.[paragraph break]'Plod wary through warpy old Yorpwald!' he say, also handing you a prep paper. 'This all--what I know--very theoretical. But you'll figure it. Oh--remember. If you SECURE the tip to either CERTIFY or RECTIFY, you can RECUSE yourself from the last of the three stores you need to enter. But you don't have to choose [']til the button starts flashing. Also, you can RETRY at any point for Terry to return you to the Strip.'[pad-sec][else]'A fool! Aloof! Ol['] oaf!' cries Old Man Almond as you mutter 'rely on only...er...' As you walk through, you hear 'Oh, nope! No hope!'[end if]";
+	say "Your path is clear. [if player has gadget]'Eh, get at the gate.' Nat Egam gets his hanky out. 'Okay, hunt.'[paragraph break]'Thank you,' you say.[paragraph break]'Plod wary through warpy old Yorpwald!' he say, also handing you a prep paper. 'This all--what I know--very theoretical. But you'll figure it. Oh--remember. If you SECURE the tip to either CERTIFY or RECTIFY, you can RECUSE yourself from the last of the three stores you need to enter. But you don't have to choose [']til the button starts flashing. Also, you can RETRY at any point for Terry to return you to the Strip.'[pad-sec][else]'A fool! Aloof! Ol['] oaf!' cries Nat Egam as you mutter 'rely on only...er...' As you walk through, you hear 'Oh, nope! No hope!'[end if]";
 	if player has gadget:
 		now player has a prep paper;
 		pad-rec-q "retry";
-	say "[line break]The gate disappears behind you[if static is visible] as you hear Old Man Almond grumble about being stuck with the static[end if], and you walk down a pathway, then yap 'What?!' when you see...";
+	say "[line break]The gate disappears behind you[if static is visible] as you hear Nat Egam grumble about being stuck with the static[end if], and you walk down a pathway, then yap 'What?!' when you see...";
 	say "[wfak]...a few strip malls. Ugh. There's nothing adventurous about THAT.[no line break]";
 	solve-region intro instead;
 
@@ -4648,10 +4652,10 @@ carry out xmxing:
 		unless the player direct-consents:
 			say "Ok." instead;
 	if noun is static:
-		say "[if gateman is visible]Old Man Almond makes a dubious noise. Maybe it is not a good idea to use something as powerful as the saltine this early in the game, on something potentially unimportant[else]You stop and think. The static doesn't seem as important as that gateway[end if]. Do so anyway?";
+		say "[if gateman is visible]Nat Egam makes a dubious noise. Maybe it is not a good idea to use something as powerful as the saltine this early in the game, on something potentially unimportant[else]You stop and think. The static doesn't seem as important as that gateway[end if]. Do so anyway?";
 		unless the player direct-consents:
 			say "OK." instead;
-		say "[v-b]the static seems to form attics near the doll house[if gateman is visible]. Old Man Almond makes a dubious noise[end if].";
+		say "[v-b]the static seems to form attics near the doll house[if gateman is visible]. Nat Egam makes a dubious noise[end if].";
 		ditch-saltine instead;
 	if noun is attics:
 		say "After some thought, that seems like it'd be a waste, since you know what they were. You can probably change things back, if you want." instead;
@@ -4793,7 +4797,7 @@ to say v-b:
 
 instead of eating the saltine:
 	if gateman is visible:
-		say "[one of]Old Man Almond coughs. 'You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static [if static is in lalaland or attics are in lalaland]was[else]is[end if] just practice.'[or]You reckon you can wait until the real quest.[stopping]";
+		say "[one of]Nat Egam coughs. 'You might want to save that. It'll help you later, with a real puzzle, if you eXamine double hard. The static [if static is in lalaland or attics are in lalaland]was[else]is[end if] just practice.'[or]You reckon you can wait until the real quest.[stopping]";
 		pad-rec "xx";
 		the rule succeeds;
 	if faeries are visible:
@@ -4830,7 +4834,7 @@ check taking gadget:
 	if gadget is in hotspot and red bull is in hotspot:
 		say "Red Bull Burdell kicks it out of the way." instead;
 
-	[say "Old Man Almond coughs. 'Be a bit unfair if you had both. Y'wanna leave that other doohickey? I mean, I believe you're gonna fix things, but just in case, the next guy'll need a little...plus, I'm kinda proud of it...'"]
+	[say "Nat Egam coughs. 'Be a bit unfair if you had both. Y'wanna leave that other doohickey? I mean, I believe you're gonna fix things, but just in case, the next guy'll need a little...plus, I'm kinda proud of it...'"]
 
 after taking the tagged gadget:
 	say "[one of]It's a weird go-hint thingo, all right. The show hows tag dangling from it seems relatively free of legalese. You notice a tip in a pit on the side of the gadget[or]You pick up the gadget, again[stopping].";
@@ -5126,7 +5130,7 @@ description of PHAIL phial is "It feels tingly and looks glinty. It contains som
 
 the blue lube is part of the phail phial.
 
-description of blue lube is "[if phial is in cabinet]You have to blink a couple times after looking at it, even from outside the cabinet. It has some weird powers, but you'd probably need to ask how to harness them[else if lube-asked is false]You sense it's powerful, but you need to look at it right[else]You remember what Old Man Almond said. You can either ANGLE or GLEAN as you look at it, which may help your quest[end if]."
+description of blue lube is "[if phial is in cabinet]You have to blink a couple times after looking at it, even from outside the cabinet. It has some weird powers, but you'd probably need to ask how to harness them[else if lube-asked is false]You sense it's powerful, but you need to look at it right[else]You remember what Nat Egam said. You can either ANGLE or GLEAN as you look at it, which may help your quest[end if]."
 
 [Rule for deciding whether all includes blue lube while taking (this is the zap lube rule): rule fails.]
 
@@ -5136,7 +5140,7 @@ check taking phial:
 	if cabinet is visible:
 		if lube-asked is false and player is not in strip:
 			now cabinet-bit-me is true;
-			say "Ow! The cabinet bites you as you try to take the phial. It didn't break your skin, so you don't need bactine[if gateman is in notices section][one of]. Old Man Almond coughs, as if he might be able to help you[or][stopping][else if gateman is off-stage]. Maybe you could use someone to help you understand the cabinet[end if]." instead;
+			say "Ow! The cabinet bites you as you try to take the phial. It didn't break your skin, so you don't need bactine[if gateman is in notices section][one of]. Nat Egam coughs, as if he might be able to help you[or][stopping][else if gateman is off-stage]. Maybe you could use someone to help you understand the cabinet[end if]." instead;
 
 understand "bactine" as a mistake ("The cabinet bit you, but there was no lasting damage.") when cabinet is visible and cabinet-bit-me is true.
 
@@ -5255,7 +5259,7 @@ carry out gleaning:
 	if location of player is notices section:
 		if nametag is visible:
 			all-say "You see yourself looking down at your nametag, mouthing a word and pointing to the gate as an old man appears. Then you see yourself tinkering with the tagged gadget on both settings, snapping your fingers and groaning, and walking through the gate." instead;
-		all-say "You see Old Man Almond sneaking up from behind you and smacking you on the head, saying to get going already...[paragraph break]And a few seconds later, he does[one of]. Well, the clairvoyance bit seems to work[or]. Again. Hooray for double-checking, I think[stopping]." instead;
+		all-say "You see Nat Egam sneaking up from behind you and smacking you on the head, saying to get going already...[paragraph break]And a few seconds later, he does[one of]. Well, the clairvoyance bit seems to work[or]. Again. Hooray for double-checking, I think[stopping]." instead;
 	if location of player is trips strip:
 		if store f is visible:
 			all-say "You see yourself walking into woods instead of store F. Well, not quite woods. You think you hear lumber rumble." instead;
@@ -6899,7 +6903,7 @@ check looking in Centrifuge:
 
 chapter The Nick
 
-The Nick is a room in Sortie. "You're locked in this arty suite of austerity by a great grate. It's a more forbidding version of the gateway in the Notices Section. You doubt even Old Man Almond could magic it open. There appears to be no standard way out. It has no accommodations, not even unsoft futons. This is a saner snare than the centrifuge, but it doesn't look like you'll drug a guard or reveal a lever to escape. At least there is some graffiti[if player has gadget][beepity-nick][end if]."
+The Nick is a room in Sortie. "You're locked in this arty suite of austerity by a great grate. It's a more forbidding version of the gateway in the Notices Section. You doubt even Nat Egam could magic it open. There appears to be no standard way out. It has no accommodations, not even unsoft futons. This is a saner snare than the centrifuge, but it doesn't look like you'll drug a guard or reveal a lever to escape. At least there is some graffiti[if player has gadget][beepity-nick][end if]."
 
 t-n is privately-named proper-named scenery in the nick. "The nick is all around.". printed name of t-n is "the nick". understand "nick" as t-n. the rgtext of t-n is "[rc][rc][rc][rc][rc][rc][rc]". the lgth of t-n is 7. gpos of t-n is 7. rpos of t-n is 4. the cert-text of t-n is "-[d1][d1][d1][d1][d1][d1]". the rect-text of t-n is "K[d1][d1][d1][d1][d1][ast]N".
 
@@ -6941,7 +6945,7 @@ The great grate is scenery in The Nick.
 
 the branding is part of the great grate. description of branding is "The grate seems to be made by [first custom style]HECK TIN[r]. It's not steel, but it's still too thick. The redness of HECK TIN surprises you a bit.". understand "brand" as branding.
 
-description of great grate is "Huge. Eugh. Old Man Almond couldn't magic it, and not even Flexi-Felix could slip through the holes! You notice a branding on it that you can probably read."
+description of great grate is "Huge. Eugh. Nat Egam couldn't magic it, and not even Flexi-Felix could slip through the holes! You notice a branding on it that you can probably read."
 
 check opening great grate:
 	say "You utterly fail to move it. If it could speak, it might sarcastically say [one of]Boring? Brig? No![or]Give up! And mean it, inmate![or]Denied, Indeed![or]Weak Try, Raw Tyke![at random]" instead;
@@ -11159,7 +11163,7 @@ carry out scaning:
 			try scaning warts instead;
 		say "The gadget remains silent as you scan yourself. You're either too awesome for any funny changes, or too boring and inflexible. Whichever." instead;
 	if noun is gateman:
-		say "The gadget buzzes.[paragraph break]'What?! Were you hoping to change me back?' harrumphs Old Man Almond. 'Maybe ask me questions instead.'" instead;
+		say "The gadget buzzes.[paragraph break]'What?! Were you hoping to change me back?' harrumphs Nat Egam. 'Maybe ask me questions instead.'" instead;
 	if noun is the yard-door:
 		say "You see no activity until you wave your gadget over the bulge. So you leave it there, and you pick something up.[line break]";
 		try scaning bulge instead;
@@ -11447,17 +11451,13 @@ check asking about (This is the check for specific topics rule):
 
 
 to say goat-toga:
-	say "[one of]'Hm, yes, good job with the goat. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Red-Red in Certify mode and Red-Blue-Green-Blue in Rectify.'[or]You don't wish to revisit past glories. It's probably better to PAD GOAT for Old Man Almond's information.[no line break][stopping]";
+	say "[one of]'Hm, yes, good job with the goat. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Red-Red in Certify mode and Red-Blue-Green-Blue in Rectify.'[or]You don't wish to revisit past glories. It's probably better to PAD GOAT for Nat Egam's information.[no line break][stopping]";
 	pad-rec "the goat";
 
 check asking gateman about "world peace":
 	say "That goal's a slog, but I've got confidence." instead;
 
-understand "old/ man" as gateman when gateman is visible.
-
-understand "gate man" as gateman.
-
-description of gateman is "'Stop staring!' he booms. [if player has tagged gadget]'You're ready to go through that gateway, though you can ask me for help.'[else]'You should probably get equipped. Get the gadget in the cabinet.'[end if]"
+description of gateman is "His sober robes are tan, but they're not important. 'Stop staring!' he booms. [if player has tagged gadget]'You're ready to go through that gateway, though you can ask me for help.'[else]'You should probably get equipped. Get the gadget in the cabinet.'[end if]"
 
 to say your-job:
 	say "[one of]'We need someone to free us from the marauding tyranny of Red Bull Burdell! He has made a plowyard out of Yorpwald! Force alone cannot undo him!'[or]'You. Red Bull Burdell. Win.'[stopping]";
@@ -11622,7 +11622,7 @@ beats	"Dude! They're clearly busy bringing sexy back. You text adventurers don't
 deadbeat	"He mumbles something about [if condo-evac is false]chillin['] with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn[else if corn is visible]how you haven't put that lost corn to good use yet[else]whatever you did with that corn better work[end if], and he also complains about [if Anti-Cool Location is visited]those nerds you saw[else]nerds down southish, for some reason[end if]."
 faeries	"[if fairy-worthy is false]'You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!' they exclaim[rose-sore].[else]'You are our hero! Thank you so much[sure-you]! Now go and save the city.'[paragraph break]Hm, they didn't really seem to be listening to you, but fair enough, that's something."
 goat	"The goat got here by magic, but it isn't. Don't fluster the restful."
-gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The [if getaway is visible]getaway[else]gateway[end if]! General advice! No time to scold clods asking about--whatever you just mumbled about.'[or]Old Man Almond pauses. 'There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the gateway[if getaway is visible] once you change it. It's not too hard, for seven letters, but I can't tell you[end if]. You'll learn by doing.'[stopping]"
+gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The [if getaway is visible]getaway[else]gateway[end if]! General advice! No time to scold clods asking about--whatever you just mumbled about.'[or]Nat Egam pauses. 'There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the gateway[if getaway is visible] once you change it. It's not too hard, for seven letters, but I can't tell you[end if]. You'll learn by doing.'[stopping]"
 gy	"The men passing through seem in a hurry."
 gy2	"You could never get everyone's attention at once."
 liches	"They are too busy moaning to each other."
@@ -12345,7 +12345,7 @@ check putting it on(this is the disguise-piece creation rule):
 book waiting
 
 to say die-die-die:
-	say "Before collapsing from the cold, you fire the shotgun in desperation. Six missiles fly out, and they fall just after you do! Old Man Almond receives news of your death, and the forts are not frozen by the time he gets there. The good news: the next adventurer will be able to use your gadget. The bad? Er...";
+	say "Before collapsing from the cold, you fire the shotgun in desperation. Six missiles fly out, and they fall just after you do! Nat Egam receives news of your death, and the forts are not frozen by the time he gets there. The good news: the next adventurer will be able to use your gadget. The bad? Er...";
 	end the story;
 
 instead of waiting:
@@ -12500,7 +12500,7 @@ check listening:
 			say "The toga flutters in some wind you can't quite feel." instead;
 	if player is in notices:
 		if gateman is visible:
-			say "'Y'can't have anything worth listening to without anything to ask me about!' says Old Man Almond." instead;
+			say "'Y'can't have anything worth listening to without anything to ask me about!' says Nat Egam." instead;
 	if player is in Sorted Trodes:
 		say "The notes stone contains written, not musical, notes." instead;
 	if player is in frost forts:
@@ -14260,7 +14260,7 @@ get straw]
 
 test pl8 with "j/sortie/d/e/n/ne/16/straw/get straw/e/sack/w/get straw/cask/put straw in cask/sack/e/n/w/kitchen/tortilla/sauce/hot sauce/lettuce/parmesan/steak/put lettuce on steak/put tortilla in lettuce//put tortilla on lettuce/put tortilla in lettuce/put sauce on lettuce/put steak in lettuce/coat/e/scrape wall/i/pad/s/pad" in subsite
 
-test pl7 with "x brazier/m/f/r/hd/hf/hd/hf/in/x cat/pet cat/pet goat/gato/x gato/man/north/goat/go north/x new land/x gateway/open gateway/gate man/open gateway/in/l/x new land/x gadget/x slider/x flipside/x example/get slider/attack small slider/x device/swap/x device/swap/swap gadget/swap slider/swap slider/swap gadget/in/get a way/talk to man/ask about mumbletypeg/ask about toga/ask about goat/ask about slider/ask about gadget/ask about game/x gateway/attack gateman/attack old man/attack gadget/attack slider/attack almond/scan attic/scan attics/scan static/scan doll house/in/x trapdoor/x roster/m/f/r/forest/in/x leaves/m/f/r/smell/door/n/x leaves/x device/door/scan door/x music/x note/x musical chord/scan bulge/scan bugle/bugle/play bugle/in/e/x shell/x bubble/x bucket/nose/shades/hook nose to shades/w/w/open sandwich/beard/hook shades to beard/wear beard/e/n/chisel/s/w/get chicken/get cow/put chicken in canister/put cow in canister" in subsite
+test pl7 with "x brazier/m/f/r/hd/hf/hd/hf/in/x cat/pet cat/pet goat/gato/x gato/man/north/goat/go north/x new land/x gateway/open gateway/gate man/open gateway/in/l/x new land/x gadget/x slider/x flipside/x example/get slider/attack small slider/x device/swap/x device/swap/swap gadget/swap slider/swap slider/swap gadget/in/get a way/talk to man/ask about mumbletypeg/ask about toga/ask about goat/ask about slider/ask about gadget/ask about game/x gateway/attack gateman/attack old man/attack gadget/attack slider/attack nat/scan attic/scan attics/scan static/scan doll house/in/x trapdoor/x roster/m/f/r/forest/in/x leaves/m/f/r/smell/door/n/x leaves/x device/door/scan door/x music/x note/x musical chord/scan bulge/scan bugle/bugle/play bugle/in/e/x shell/x bubble/x bucket/nose/shades/hook nose to shades/w/w/open sandwich/beard/hook shades to beard/wear beard/e/n/chisel/s/w/get chicken/get cow/put chicken in canister/put cow in canister" in subsite
 
 chapter ending-testing
 

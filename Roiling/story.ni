@@ -2628,7 +2628,7 @@ table of general-blather	[ask x about any old unusual subject]
 him-who	topic	him-say
 nestor	"life"	"'Life is, like, the time of your life!'"
 nestor	"father" or "his father"	"You have a country to save. Don't waste time shaming recreational drug users."
-Gunter	"old/ man/ almond"	"He and you are up to no good, I'm sure."
+Gunter	"nat egam" or "nat/egam" or "tan mage" or "tan/mage"	"He and you are up to no good, I'm sure."
 Dr Yow	"key"	"Dr. Yow shrugs. If [he-she] knew where a key was, [he-she]'d find it."
 
 table of object-blather [this gives people default things to say about stuff, if they are not terse.]
@@ -2642,7 +2642,7 @@ haunter	oyster	"'It was looking for its lost jewel! We thought it was buried, bu
 table of popular-blather	[ask anyone about specific topic. Yeah, this fizzled.]
 topic	right-region	him-say
 "yorpwald"	--	"That might suck you into a boring discussion about politics. Or, worse, an exciting one."
-"old/ man/ almond"	--	"Asking about him might blow your cover."
+"nat egam" or "nat/egam" or "tan mage" or "tan/mage"	--	"Asking about him might blow your cover."
 
 to decide which number is kid-moves: [hacky but simple and easy to prove. Inapt/swarm = force you 2W. SWSE or WSSE are only possible 4-movers. 2 + 2 * how many squares west you must go to go all the way south.]
 	if ego drains are in lalaland:
@@ -5610,7 +5610,7 @@ carry out manor-hinting:
 		say "[one of]You should look around and examine stuff. Someone will eventually interrupt you.[or][next-to-see].[stopping]" instead;
 	if latches are visible:
 		if latches-warn is false:
-			all-say "You figure there must be a couple ways out, but the latches can become something--Old Man Almond wouldn't have sent them to you, otherwise.";
+			all-say "You figure there must be a couple ways out, but the latches can become something--Nat Egam wouldn't have sent them to you, otherwise.";
 			now latches-warn is true;
 		try objhinting latches instead;
 	if location of player is study:
@@ -8821,7 +8821,7 @@ chapter the tables themselves by region
 
 table of roman manor anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
-palm	lamp	true	201542769	--	"lamp"	"lamp" or "get lamp"	"Lamp. Palm. Yup. Using your old powers, you change the palm into a lamp, which gives off light. You go all Jason Scott on it, and just like that, bam, it's in your inventory.[paragraph break]You blink and look around and stare at your diorama. You remember how Old Man Almond gave it to you for one day you might need warm-ups, to get back in the groove. With unusual examples and anything. In case you had a different divining tool than the tagged gadget[if latches are off-stage]. Oh! And he gave you something else! Those--useless latches! They might be good for something. You remember the lump from sleeping on the chair--yup, there they are[end if].[paragraph break]Oh, there's that 'dope' op-ed Gunter threw at you, too[preefies]."
+palm	lamp	true	201542769	--	"lamp"	"lamp" or "get lamp"	"Lamp. Palm. Yup. Using your old powers, you change the palm into a lamp, which gives off light. You go all Jason Scott on it, and just like that, bam, it's in your inventory.[paragraph break]You blink and look around and stare at your diorama. You remember how [gtmn] gave it to you for one day you might need warm-ups, to get back in the groove. With unusual examples and anything. In case you had a different divining tool than the tagged gadget[if latches are off-stage]. Oh! And he gave you something else! Those--useless latches! They might be good for something. You remember the lump from sleeping on the chair--yup, there they are[end if].[paragraph break]Oh, there's that 'dope' op-ed Gunter threw at you, too[preefies]."
 latches	satchel	true	439479634	--	"satchel"	"satchel"	"The locks start fiddling with themselves--and each other--and slowly, a satchel emerges from the mess[new-thing]."
 giant pin	abstract painting	false	447164205	--	"painting"	"painting"	"The giant pin's edges become sharper and, before you know it, it's reformed to a portrait hanging on the wall. Whatever stuck the pin to the wall still works on the painting, which may not be High Art, but it's worth a look."
 pavement	event map	false	682523494	--	"event map"	"event map" or "eventmap"	"The pavement unfolds into a small map which, you remember, describes your first trip through Yorpwald."
@@ -9610,7 +9610,7 @@ check entering rich chair:
 
 check searching rich chair:
 	if latches are off-stage:
-		say "Ah, so that's what that lump is. Some latches, from Old Man Almond, who helped you when you first arrived. But what're they good for?";
+		say "Ah, so that's what that lump is. Some latches, from [gtmn], who helped you when you first arrived. But what're they good for?";
 		now player has latches instead;
 	else:
 		say "You find nothing further in the chair." instead;
@@ -10090,7 +10090,10 @@ before examining when Gunter is off-stage and stuff-found is 3:
 	if noun is bookshelf:
 		say "You couldn't read--not even just titles--with that knocking at the door." instead;
 
-the diorama is a backdrop. "[one of]Yes, you remember when Old Man Almond gave it to you. You've half forgotten it's here, now, but he said one day, just in case, it'd be useful. For simpler prelims than your first time shuffling around.[paragraph break][or][stopping]It's a loose conglomeration of [if platform is part of diorama]a platform[else]a farm plot[end if], [if pavement is part of diorama]some pavement[else]an event map[end if], [if pedestal is part of diorama]a pedestal[else]a steel pad[end if], and [if crabgrass is part of diorama]some crabgrass[else]a brass crag[end if]. A notice down the center reveals what these items can become."
+to say gtmn:
+	say "[one of]Tan Mage Nat Egam[or]Nat Egam[stopping]"
+
+the diorama is a backdrop. "[one of]Yes, you remember when Tan Mage Nat Egam gave it to you. You've half forgotten it's here, now, but he said one day, just in case, it'd be useful. For simpler prelims than your first time shuffling around.[paragraph break][or][stopping]It's a loose conglomeration of [if platform is part of diorama]a platform[else]a farm plot[end if], [if pavement is part of diorama]some pavement[else]an event map[end if], [if pedestal is part of diorama]a pedestal[else]a steel pad[end if], and [if crabgrass is part of diorama]some crabgrass[else]a brass crag[end if]. A notice down the center reveals what these items can become."
 
 after scaning when player is in study (this is the pad-diorama rule) :
 	if noun is part of diorama:
@@ -10344,7 +10347,7 @@ instead of doing something with evac-cave:
 		try going inside instead;
 	say "You probably just want to enter the cave or go IN.";
 
-the stria are plural-named vanishing LLPish scenery in Basement. "You never knew what they were until Old Man Almond told you. 'You'll be glad one day, maybe,' he said. They're like veins, vines." [stria are LLPish because if you're in the basement you don't need to attack them]
+the stria are plural-named vanishing LLPish scenery in Basement. "You never knew what they were until [gtmn] told you. 'You'll be glad one day, maybe,' he said. They're like veins, vines." [stria are LLPish because if you're in the basement you don't need to attack them]
 
 a-text of stria is "RRYYR". b-text of stria is "PPYGR". parse-text of stria is "s[sp]t[sp]a[sp]i[sp]r". stria is parse-spoilable.
 
@@ -10428,7 +10431,7 @@ check going inside in Basement:
 		if treatise is off-stage:
 			say "You fumble nervously with the latches before entering, and a treatise falls out. Maybe it will help you decide what to do with the latches, before you go out into the wide world without a scanning device to help you know where to use your power.";
 			now player has treatise instead;
-		say "[one of]You probably want to figure what those latches are for. What could they be hiding? You've done okay without them, but who knows how you'll react in pressure situations. Whatever they need to be, Old Man Almond would've made it easier than what you've done so far[or]Those latches. Gotta be a trick to [']em, since Old Man Almond had them sent to you[stopping]. Maybe it'd help to [if treatise is examined]re-[end if]read the teariest treatise." instead;
+		say "[one of]You probably want to figure what those latches are for. What could they be hiding? You've done okay without them, but who knows how you'll react in pressure situations. Whatever they need to be, [gtmn] would've made it easier than what you've done so far[or]Those latches. Gotta be a trick to [']em, since [gtmn] had them sent to you[stopping]. Maybe it'd help to [if treatise is examined]re-[end if]read the teariest treatise." instead;
 	if player has settler and settler is unexamined:
 		if settler-x-nag is false:
 			now settler-x-nag is true;
@@ -10464,7 +10467,7 @@ check going inside in cavern:
 		say "You'll probably need a way through that plaster." instead;
 	if paperwall is visible:
 		say "You'll probably need a way through that paperwall." instead;
-	say "You walk through the former paperwall--and through an obscure part of Old Warpy. You hear a voice: 'You! Find! Unify! Do!' Is it Old Man Almond? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
+	say "You walk through the former paperwall--and through an obscure part of Old Warpy. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
 	now satchel is in lalaland;
 	now teariest treatise is in lalaland;
 	solve-region roman manor;
@@ -10759,7 +10762,7 @@ clues-quip	"'Examine everything. People and things blocking you. Try to get by t
 gretta-quip	"'She's a good investigative reporter, the best. She's dug further into Elvira's doings than anyone else. But she's become a bit of a--target.' You both cringe. 'No, her name's not your fault. Just, she may have found something, even left a cue in the Strip of Profits.' Elmo shows you a picture of her."
 trial-trail-quip	"'More trouble, more stores. Six of [']em. But you can't just switch stuff to other stuff. That'd be more hokey and homeworky. You'll have to infer finer things to upset the setup. But I have some basic notes.' Elmo hands you a paper. 'It's a Gird Grid. More details there. Read it later.'"
 shortcut-quip	"'Hm, maybe a covert vector after you solve two...[paragraph break]'Oh, hey, if you want to complain about random stuff, go ahead. It might not give any practical help, but I don't mind listening. I've thrown a lot at you.'"
-flier-quip	"'Hmm. Well, my last name's not Stetler, but I can give it a shot.' You and Elmo scan the flier, which is [if setspace is true]R Y R R Y[else]RYRRY[end if] with cheat or teach mode. 'I saw your settler was [if setspace is true]R R Y Y R[else]RRYYR[end if] when I had the rifle.' Elmo speed-reads your treatise. 'So the colors tell you what stuff should become. That gives us five letters.'[paragraph break]'I and E are yellow for the rifle AND the flier, and R and F and L are red. Hm. Dunno if that's enough. I have some other supplies Old Man Almond gave me.' You note a PLUG of nutrients, laces, and an ELMO nametag." [check what's scanned]
+flier-quip	"'Hmm. Well, my last name's not Stetler, but I can give it a shot.' You and Elmo scan the flier, which is [if setspace is true]R Y R R Y[else]RYRRY[end if] with cheat or teach mode. 'I saw your settler was [if setspace is true]R R Y Y R[else]RRYYR[end if] when I had the rifle.' Elmo speed-reads your treatise. 'So the colors tell you what stuff should become. That gives us five letters.'[paragraph break]'I and E are yellow for the rifle AND the flier, and R and F and L are red. Hm. Dunno if that's enough. I have some other supplies [gtmn] gave me.' You note a PLUG of nutrients, laces, and an ELMO nametag." [check what's scanned]
 scale-quip	"You experiment with changing the laces to a scale and back. Laces to scale is [if setspace is true]R Y R R Y[else]RYRRY[end if], scale to laces is [if setspace is true]R Y R Y R[else]RYRYR[end if].  [mo-data]."
 gulp-quip	"The plug becomes a gulp, then back to a plug, no more unappetizing than before. You note plug to gulp is [if setspace is true]R Y R R[else]RYRR[end if], gulp to plug is [if setspace is true]R R Y R[else]RRYR[end if], and cheat mode changes nothing. [mo-data]."
 elmomole-quip	"You flip the nametag to MOLE and back, tracking the scanner. Elmo to Mole is [if setspace is true]R Y R Y[else]RYRY[end if], Mole to Elmo is [if setspace is true]Y R R Y[else]YRRY[end if]. [mo-data]."
@@ -11020,7 +11023,7 @@ check examining settler (this is the examine to scan under duress rule) :
 
 check taking:
 	if noun is part of the Letters Settler:
-		say "You don't want to go deconstructing the Letters Settler. It was hard enough to create for Old Man Almond! (And me, too. But enough about coding.)" instead;
+		say "You don't want to go deconstructing the Letters Settler. It was hard enough to create for [gtmn]! (And me, too. But enough about coding.)" instead;
 
 the receptors are part of the letters settler.
 
@@ -25964,7 +25967,7 @@ sitar	"[one of]You need a way down, but the sitar doesn't allow that.[plus][or]R
 stria	"[one of]Embedded in the ceiling, the stria split it a bit. Maybe they offer a way up?[plus][or]The stria can become a STAIR.[minus][cycling]"
 pram	"[one of]The pram gives you a sinking feeling to look at it.[plus][or]You need a way down and out of reach. Something you could even crawl down.[plus][or]The pram can become a ramp.[minus][cycling]"
 ramp	"Just go down or in to walk down the ramp."
-latches	"[one of]The latches seem useless, but they are your parting gift from Old Man Almond[if Basement is visited], so you probably want to 'solve' them before moving on[end if].[plus][or][if treatise is off-stage]You should examine the latches. There's a note inside them which is useful.[else]Old Man Almond also said it would be pretty simple to figure out what to do with the latches.[end if][plus][or]Did you notice anything about the treatise's wording that might give a hint about the latches?[plus][or]Lots of anagrams in the treatise, but they have something in common.[plus][or]Old Man Almond only switched the first and last letters in the treatise. Maybe you can do that with the latches.[plus][or]You can get a SATCHEL.[minus][cycling]"
+latches	"[one of]The latches seem useless, but they are your parting gift from [gtmn][if Basement is visited], so you probably want to 'solve' them before moving on[end if].[plus][or][if treatise is off-stage]You should examine the latches. There's a note inside them which is useful.[else][gtmn] also said it would be pretty simple to figure out what to do with the latches.[end if][plus][or]Did you notice anything about the treatise's wording that might give a hint about the latches?[plus][or]Lots of anagrams in the treatise, but they have something in common.[plus][or][gtmn] only switched the first and last letters in the treatise. Maybe you can do that with the latches.[plus][or]You can get a SATCHEL.[minus][cycling]"
 satchel	"The satchel might be useful for carrying things, but your super purse is better. So don't worry about it."
 letters settler	"[one of]The settler seems to give mostly reds and yellows. If you tinker with it, you may notice a pattern.[plus][or]Reds mean one thing and yellows mean another. If you've solved and scanned a bit, you may know which is what.[plus][or]Also, the coloring of the words LETTERS SETTLER is a clue. If you have the teach/cheat button on.[plus][or]As is, to get fourth-wall, A ROILING ORIGINAL.[plus][or]But the settler is all you need.[plus][or]With teach/cheat on, note that e-t-t are halfway different colors. That's because they match.[plus][or]Specifically, if the current object differs from the target object in one letter, the color will be red if the target is a consonant and yellow if it's a vowel.[plus][or]If you have 'cheat' on, you can see that green is a correct vowel and purple is a correct consonant. Red and yellow are incorrect consonants and vowels.[plus][or]There are also orange and brown, but they are rarer. Since orange = red + yellow, you can guess what it may be.[plus][or]The letter Y.[plus][or]There should be a separate document describing basic strategies for using the settler.[plus][or]One last thing: the equals sign is there so as not to spoil puzzles that are a bit on the easy side. It's fully optional and just part of what I hope is something that helps calibrate play to be more fun based on how tough you find these sorts of puzzles.[minus][cycling]"
 diorama	"[one of]The diorama provides things you can flip around. You don't get any points for them, since they're labeled, but I hope they help.[plus][or]First, the platform and pavement give only reds and yellows, even in teach/cheat mode. Cheat mode doesn't help.[plus][or]What pattern do you see in reds and yellow on the diorama?[plus][or]The crabgrass and pedestal have colors that change in some places.[plus][or]Note the colors change from red to purple or yellow to green. What is similar about these?[plus][or]Adding blue. And which letters change?[plus][or]cRAbgrass, bRAss crag.[plus][or]The letters that are correct![plus][or]So, blue = correct.[minus][cycling]"
@@ -26899,7 +26902,7 @@ table of sexdif [tsx]
 examp
 "[bold type](general)[r] Dropping something."
 "Examining yourself."
-"[bold type](manor)[r] The note from Old Man Almond about the purse, and the purse itself too"
+"[bold type](manor)[r] The note from [gtmn] about the purse, and the purse itself too"
 "Ditching Gunter."
 "Complain about the media to Elmo."
 "Many of the books (300+) have alternate authors. Many other random texts adjust for your gender, but books are the main one. Some names are switched, such as Abe/Bea, Dot/Tod, Tio/Toi, Tino/Toni, and Simeon/Simone."
