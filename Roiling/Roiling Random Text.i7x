@@ -983,6 +983,7 @@ blurb
 "Diverge, Grieved!"
 "Done! O, End!" []
 "Earth-Free, Hereafter: Ether Fare!"
+"Eek! Rats! Retakes?"
 "Ehh, took the hook!"
 "End goes! O goodness!"
 "End! Nuts! Stunned!"
