@@ -1048,6 +1048,14 @@ The blaster is working. Best not tinker.
 You fixed what you can of the boat
 >undo
 >undo
+
+>weirdre
+WRONG
+>weirder
+WRONG
+>weirdre
+WRONG
+
 >enter boat
 
 Rawest Waters
@@ -1184,7 +1192,7 @@ Nah, that's just garbage. It's the curst palace you need to focus on.
 Strip of Profits
 
 >score
-(46/46)
+(47/47)
 
 >tortes
 There's no time for food! Especially fatty, non-brain food! Besides, the towers had plenty of food. There was your chance!

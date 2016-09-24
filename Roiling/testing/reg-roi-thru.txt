@@ -2552,6 +2552,23 @@ Your score has just gone up by one point
 >robuts
 The turbos are working. Best not tinker.
 
+>weirdre
+WRONG
+>weirder
+Your score has just gone up by one point
+>weirdre
+WRONG
+
+>stablre
+WRONG
+>stabler
+WRONG
+>stablre
+WRONG
+
+>undo
+>undo
+
 >enter boat
 Rawest Waters
 
@@ -2651,7 +2668,7 @@ Your score has just gone up by one point
 Strip of Profits
 
 >score
-Towers (46/46)
+Towers (47/47)
 
 #### bug with GO TO DUCK printing the wrong error but only if I skip the Trefoil. Is there any way...?
 

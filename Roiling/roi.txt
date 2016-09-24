@@ -904,6 +904,11 @@ The blaster can be STABLER.
 But wait! There's one more optional thing!
 It looks WEIRDER inside. The wires are all over the place.
 Make it REWIRED, which isn't a replacement for ROBUST or STABLER, but it helps the kid think more clearly.
+?Is the weirder red wire good/bad for anything?
+It's not critical to the game.
+But it is a Last Lousy Point.
+It can be reorganized...
+...or REWIRED.
 >>RAWEST WATERS
 ?Help! Which shore?
 Northern, Eastern and Northeastern.

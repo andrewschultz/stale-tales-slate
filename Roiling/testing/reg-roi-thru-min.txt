@@ -657,7 +657,7 @@ Your score has just gone up by one point
 Topside Deposit
 
 >score
-Score in a scenario: 4 out of 46 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 43.
+Score in a scenario: 4 out of 47 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 43.
 
 #xc
 >get tarts
@@ -666,7 +666,7 @@ Score in a scenario: 4 out of 46 total points in the current region, Towers. Low
 
 >posf
 >score
-Score in a scenario: 4 out of 46 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 42.
+Score in a scenario: 4 out of 47 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 42.
 
 >creaky
 Your score has just gone up by one point
@@ -755,18 +755,18 @@ Obscurest
 >stabler
 
 >score
-Score in a scenario: 23 out of 46 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 42.
+Score in a scenario: 23 out of 47 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 42.
 
 >enter boat
 
 >score
-Score in a scenario: 23 out of 46 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 28.
+Score in a scenario: 23 out of 47 total points in the current region, Towers. Lowest score to solve is 24. Maximum score available is 28.
 
 #xc
 >spectacular
 
 >score
-24/46
+24/47
 
 * _otters
 

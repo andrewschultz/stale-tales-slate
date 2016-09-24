@@ -1559,7 +1559,7 @@ You don't need to change the fourth animal, but why not.
 
 > GARBED
 
-You may notice one of your medals changing now.
+You may notice one of your medals has changed now.
 
 > S
 
@@ -1591,7 +1591,7 @@ You don't need to change the fourth non-animal, but why not.
 
 > RACOON
 
-You may notice one of your medals changing as you summon the animals.
+You may notice the other of your medals changing as you summon these animals.
 
 You have enough allies now. Time to kill the hardy hydra.
 
@@ -1962,6 +1962,8 @@ The replay player can be CRNEYL.
 HAERNY or CHYFRF for the neural pulses. Yes, the second isn't right for the region, but it's an LLP.
 
 The smart kid can also be made NGGRAGVIR in the Subsector.
+
+You can even fix the boat a bit. The weirder red wire can be ERJVERQ.
 
 Across the pond, the serpent can be CERFRAG, the crocus (dying) can become QVATL, and Ed Yerg can become GREY(ED).
 

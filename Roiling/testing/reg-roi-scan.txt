@@ -2065,6 +2065,13 @@ Your settler registers (cheat on) RRGRRGP.
 >robust
 Your score has just gone up by one point
 
+>sb weirder
+Your settler registers (no cheat) RYRYRYR.
+Your settler registers (cheat on) RGRYR*R.
+
+>rewired
+Your score has just gone up by one point
+
 >enter boat
 Rawest Waters
 >sb
@@ -2140,7 +2147,7 @@ Your score has just gone up by one point
 Strip of Profits
 
 >score
-Towers (46/46)
+Towers (47/47)
 
 #### bug with GO TO DUCK printing the wrong error but only if I skip the Trefoil. Is there any way...?
 

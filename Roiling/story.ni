@@ -122,11 +122,11 @@ Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster
 
 Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 33. min-score of presto is 28. [rom stick, lamb, tab, casserole, +1 point for Phooey]
 
-Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 46. min-score of towers is 24.
+Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 47. min-score of towers is 24.
 [Necessary points:
 4 for regular warriors
 1 for Ray Eck
-1 for rewired
+1 for subtler
 1 for admirer
 1 for bonker
 7 for basic stuff
@@ -146,6 +146,7 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 3 for the denim, neural pulses and old ice
 1 for the replay player
 1 for tentative
+1 for rewired (bot-boat)
 1 for giving Ed the flowerpot NON-ANAGRAM
 3 for dying crocus/serpent/ed yerg]
 
@@ -5505,6 +5506,7 @@ old ice	true	true	false	false	"Hm, it's certainly docile old ice, so the confusi
 Dr Yow	false	true	false	false	"[if Dr Yow has not been rowdy and Dr Yow has been wordy][else]The settler showed two sets of RYRRO for a moment, there. Perhaps it represents a range of Dr. Yow's emotions.[else if Dr Yow has been rowdy or Dr Yow has been wordy]Hm, maybe Dr. Yow has more emotion than what you already brought out of [him-her].[else]That leaves four possibilities, cheat or no, and none of the others make sense.[end if]"
 ropins	false	true	false	false	"Now this is odd. The ropins have six letters, but they register eight. Maybe if you find something with eight letters, you can find out how to unlock them."
 natives	true	true	false	false	"That's weird. They're just natives, but the blinky bit suggests there may be two possible solutions."
+weirder red wire	true	true	false	false	"Hm, looks like the red wire doesn't make you SEE red. You were never an electrical whiz, but maybe general logic will help rearrange the tangled connections."
 curst palace	true	false	false	false	"[if palace-let < 5]Wow, lots of blank data. You may want to get closer to have any hope of figuring how to restore the palace[else if palace-let is 11 and cheat-on is true]The final letter clue blinks alternately with the fifth--neither is purple at the same time[else if cheat-on is true]Hm, maybe you can figure what the fifth letter is if you know more about the later ones[else]Just the reds and yellows still leave a lot of possibilities. But maybe you'll have clues along the way[end if]."
 serpent	true	true	false	false	"That is a lot of blinks, but those blinks have to be almost as good as a purple or green."
 cinders	true	true	false	false	"Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely." [otters]
@@ -9018,6 +9020,7 @@ smart kid	smart kid	false	356052660	--	"gifted"	"gifted"	"[kid-full] calms down 
 atblock	atblock	false	788195264	--	"attentive"	"attentive"	"[kid-full] snaps further to attention, even more eager than before!"
 turbos	turbos	false	482585076	--	"robust"	"robust"	"The turbos whir a bit and grow shinier. Robust or bust! You'd feel [if blaster is reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
 blaster	blaster	false	486934458	--	"stabler"	"stabler"	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
+bot boat	bot boat	false	600216532	--	"rewired"	"rewired"	The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [kid-full] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [kid-full] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [kid-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-u] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! Adults always told me I just need to get more organized. But it always sounded so bossy.'"
 eastern shore	eastern shore	false	611415331	Mislit Limits	"nearest"	"nearest"	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the flowerpot, too, and maybe you have the time to drop off a gift...wherever Daltho's friend may be."
 Andres	Andres	false	401528293	--	"snared"	"snared"	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Trefoil. It's nothing lethal, but enough to make him flee."
 Andrew	Andrew	false	413189100	--	"warned"	"warned"	"Andrew suddenly gulps, as if he hadn't realized the downside of this venture. 'Darn, we...raw end!' he mumbles, then flees. Rodney mumbles 'Aw, nerd.'"
@@ -19955,17 +19958,26 @@ understand "atblock" as atblock when debug-state is true.
 
 a-text of atblock is "YRRYRRYRY". b-text of atblock is "YRRYRPGPG". parse-text of atblock is "-[sp]x[sp]x[sp]-[sp]x[sp]t[sp]i[sp]v[sp]e".
 
-a bot boat is a thing. understand "botboat" and "bot-boat" as a bot boat.
+a bot boat is a reflexive thing. understand "botboat" and "bot-boat" as a bot boat.
 
-understand "were rid" as a mistake ("No, the wires still need to BE there.") when player is in coastlines and boat is in coastlines.
+the weirder red wire is part of the bot boat. description is "You know, it's not really red, more reddish, if you look at it right. But it just seems superfluous and tangled. You're too worried about electricity to touch it, but maybe with the right plan...you could make it neater.". the weirder red wire is LLPish and vanishing.
+
+a-text of weirder red wire is "RYRYRYR". b-text of weirder red wire is "RGRYR*R". parse-text of weirder red wire is "x[sp]e[sp]x[sp]-[sp]x[sp]*[sp]x".
+
+understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when player is in coastlines and weirder red wire is in coastlines.
 
 check scaning bot boat (this is the scan boat components and not boat rule):
-	showme whether or not blaster is reflexive;
-	showme whether or not turbos are reflexive;
+	[showme whether or not blaster is reflexive;
+	showme whether or not turbos are reflexive;]
 	if blaster is reflexive and turbos are reflexive:
 		say "The blaster and turbos both give something different, but you focus on [the t-or-b].";
 		try scaning t-or-b instead;
 	if blaster is reflexed and turbos are reflexed:
+		if bot boat is reflexive:
+			say "With the boat's components fixed, you focus on the weirder red wire.";
+			try scaning weirder red wire instead;
+			instead;
+			continue the action;
 		say "Nothing any more. You probably fixed the boat all you can." instead;
 	if blaster is reflexed:
 		try scaning turbos instead;
@@ -20573,7 +20585,7 @@ check examining bot boat:
 	if turbos are not part of bot boat:
 		say "The bot boat seem bare-bones at the moment, not ready to ride." instead;
 
-description of bot boat is "You don't see much on the boat you understand, except some turbos and a blaster. [if turbos are reflexed]The turbos seem robust enough[otherwise]A pair of turbos doesn't look quite ...hardy? No, some other word ... to help propel you across the river[end if]. [if blaster is reflexed]The blaster seems stabler than it used to be[otherwise]The blaster hums and shakes erratically[end if]."
+description of bot boat is "You don't see much on the boat you understand, except some turbos and a blaster. [if turbos are reflexed]The turbos seem robust enough[otherwise]A pair of turbos doesn't look quite ...hardy? No, some other word ... to help propel you across the river[end if]. [if blaster is reflexed]The blaster seems stabler than it used to be[otherwise]The blaster hums and shakes erratically[end if].[paragraph break][if bot boat is reflexed]The bot boat is nicely rewired, now[else]Some wires inside are also connected [i]weirder[r] than they should be. Maybe they can be fixed, though that's probably not as important as the main hardware[end if]."
 
 the turbos are a reflexive plural-named thing. description of turbos is "You're not sure how they should work, but [if turbos are reflexed]you managed to[else]maybe you can[end if] counter the kid's technical knowledge by tweaking it."
 
@@ -26298,6 +26310,7 @@ o-s	"The ole shrine is just sort of there, for a clue. You don't need to do anyt
 bot boat	"Two parts of a bot boat are broken. The blaster and turbos."
 blaster	"[one of]The blaster isn't quite as solid as it could be.[plus][or]Maybe you could make the blaster STABLER?[minus][cycling]"
 turbos	"[one of]The turbos aren't quite as solid as they could be.[plus][or]Maybe you could make the turbos ROBUST?[minus][cycling]"
+weirder red wire	"[one of]The weirder red wire is organized wrong. Perhaps it can be reorganized, redone, rejigged, redesigned...[plus][or]REWIRED.[minus][cycling]"
 spray	"The spray isn't as important as any of the shores you need to reach."
 eastern	"[one of]Oh dear, it's a choice between the northern and eastern and southwest shores.[plus][or]The letters settler gives seven letters, which lets you eliminate all but one shore.[plus][or]The eastern shore remains. What to do with it? How do you move to it?[plus][or]Or move the eastern shore to you?[plus][or]Make the eastern shore the NEAREST.[minus][cycling]"
 northern	--	eastern
