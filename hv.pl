@@ -107,7 +107,7 @@ for my $idx (0..$#ARGV)
   if ($this =~ /-s/) { $doShuf = 1; $doRoil = 0; next; }
   if ($this =~ /-r/) { $doShuf = 0; $doRoil = 1; next; }
   if ($this =~ /-m/) { matchHash("shuffling"); matchHash("roiling"); exit; }
-  if ($this =~ /,/) { $tabString =$this; $tabString =~ s/,/\t/g; $tabString =~ s/_/ /g; next; }
+  if ($this =~ /\//) { $tabString =$this; $tabString =~ s/\//\t/g; $tabString =~ s/_/ /g; next; }
   if ($this =~ /^-?\?/) { usage(); exit; }
 #print "$idx $this\n";
 if ($this eq "-t") { print B "TEMPLATE string hashval region room? whatseen? rule? gametext:\n"; next; }
@@ -119,7 +119,15 @@ $tabString = "--\t$rm\t--";
   #$found = 0;
   #print "$this:\n";
   #findHash($this, "", $ary{"e"}); print "\n"; next; }
-my @x = split(//, $this);
+  
+my @these = split(/,/, $this);
+
+if (@these > -1) { print "Checking CSV of list.\n"; }
+
+for my $hword (@these)
+{
+
+my @x = split(//, $hword);
 
 $hash = 0;
 
@@ -133,8 +141,10 @@ if ($doShuf) { lookBoth($hash, "shuffling"); }
 if ($doRoil) { lookBoth($hash, "roiling"); }
 if ($doLoc) { lookFor($hash, "c:\\writing\\dict\\hv.txt"); }
 
-if (($printIfThere) || ($anyFound == 0)) { print B "\"$this\"\t$hash\t$tabString\t\"some text\"\n"; $worthOpening = 1; }
+if (($printIfThere) || ($anyFound == 0)) { print B "\"$hword\"\t$hash\t$tabString\t\"some text\"\n"; $worthOpening = 1; }
 else { print "Instance found in file, not printing externally. Use -p.\n"; }
+}
+
 }
 
 close(B);

@@ -9020,7 +9020,7 @@ smart kid	smart kid	false	356052660	--	"gifted"	"gifted"	"[kid-full] calms down 
 atblock	atblock	false	788195264	--	"attentive"	"attentive"	"[kid-full] snaps further to attention, even more eager than before!"
 turbos	turbos	false	482585076	--	"robust"	"robust"	"The turbos whir a bit and grow shinier. Robust or bust! You'd feel [if blaster is reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
 blaster	blaster	false	486934458	--	"stabler"	"stabler"	"The blaster whirs a bit and grows shinier. It quits making those weird noises. You'd feel [if turbos are reflexed]totally safe[otherwise]marginally safer[end if] crossing the river on the boat now."
-bot boat	bot boat	false	600216532	--	"rewired"	"rewired"	The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [kid-full] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [kid-full] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [kid-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-u] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! Adults always told me I just need to get more organized. But it always sounded so bossy.'"
+bot boat	bot boat	false	600216532	--	"rewired"	"rewired"	"The wires in the bot boat begin to glow. You realize they could be organized a lot more simply. You point to them, and [kid-full] snaps [his-her] fingers. 'Of course! I can do that...and that... I should've thought of it earlier.' [kid-full] proceeds to find some simplifications you'd never have considered. So many, in fact, the red wire becomes superfluous! 'Man! I feel dumb about all I coulda fixed, now!'[paragraph break]You reassure [kid-first] that it's not a big deal, and it's more important to just DO stuff. [he-she-c] looks unsure until you mention something about how organization helps clear the way for new ideas, but if you already have a ton, go for [']em...[paragraph break]'Oh, wow! That's pretty awesome! Adults always told me I just need to get more organized. But it always sounded so bossy.'"
 eastern shore	eastern shore	false	611415331	Mislit Limits	"nearest"	"nearest"	"You figure which way and which coast is the nearest. Yes, that is a real beach, and it is reachable. And it is not a lies isle! Aslosh on the shoals, you look up at the Curst Palace. You are close. You could win it now. But you hold the flowerpot, too, and maybe you have the time to drop off a gift...wherever Daltho's friend may be."
 Andres	Andres	false	401528293	--	"snared"	"snared"	"Andres suddenly feels a pull, and some sort of tentacle you haven't seen before breaks and outside the Trefoil. It's nothing lethal, but enough to make him flee."
 Andrew	Andrew	false	413189100	--	"warned"	"warned"	"Andrew suddenly gulps, as if he hadn't realized the downside of this venture. 'Darn, we...raw end!' he mumbles, then flees. Rodney mumbles 'Aw, nerd.'"
@@ -18982,7 +18982,7 @@ to say big-hint of (rayx - a thing) :
 		choose row with the-from of rayx in the table of towers anagrams;
 		say "[right-word entry in upper case]";
 	else:
-		say "[if rayx is smart kid]ATTENTIVE[else if rayx is yurts]RUSTY[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is crocus]DINGY[else if rayx is flowerpot and limits is visited]DINGY[else if rayx is ed yerg]GREEDY[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is old ice]COILED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is pulses]UNREAL[else if rayx is palace]SPECTACULAR[else if rayx is fissure]FUSSIER[else if rayx is strudel]RUSTLED[else if rayx is raves saver]PEARLY[else]BUG[end if]";
+		say "[if rayx is smart kid]ATTENTIVE[else if rayx is yurts]RUSTY[else if rayx is turbos]ROBUST[else if rayx is blaster]STABLER[else if rayx is duck]UNLOCKED--well, maybe the duck will help something become unlocked[else if rayx is prison ropins]UNLOCKED[if-duck][else if rayx is crocus]DINGY[else if rayx is flowerpot and limits is visited]DINGY[else if rayx is ed yerg]GREEDY[else if rayx is denim]MINED[else if rayx is weeds]SEWED[else if rayx is old ice]COILED[else if rayx is weirder red wire]REWIRED[else if rayx is eastern]NEAREST[else if rayx is serpent]PRESENT[else if rayx is pulses]UNREAL[else if rayx is palace]SPECTACULAR[else if rayx is fissure]FUSSIER[else if rayx is strudel]RUSTLED[else if rayx is raves saver]PEARLY[else]BUG[end if]";
 
 xray-warn is a truth state that varies.
 
@@ -19039,20 +19039,17 @@ check xraying:
 			say "Without the strudel, you can't really see into the sled rut." instead;
 	if noun is Dr Yow:
 		if Dr Yow has been rowdy and Dr Yow has been wordy:
-			say "You've done what you can with Dr. Yow. [he-she-c] can be rowdy or wordy." instead;
+			say "You've done what you can with Dr. Yow. [he-she-c] can still be rowdy or wordy." instead;
 		if Dr Yow has been wordy:
 			say "You realize Dr. Yow has a rowdy side, too.";
 		else if Dr Yow has been rowdy:
 			say "You realize Dr. Yow has a wordy side, too.";
 		otherwise:
 			say "You see Dr. Yow has both a wordy and rowdy side that have been crushed by prison.";
-		if noun is not rayed:
-			if scams is false:
-				now undo-code is 2;
-				prevent undo;
-		do nothing instead;
 	if noun is bot boat:
 		if turbos are reflexed and blaster is reflexed:
+			if red wire is part of the bot boat:
+				try xraying red wire instead;
 			say "The bot boat and its parts appear as workable as it can be." instead;
 		if t-or-b is reflexive:
 			try xraying t-or-b instead;
@@ -19061,7 +19058,7 @@ check xraying:
 		if turbos are reflexive:
 			try xraying turbos instead;
 	if noun is reflexed or noun is nonreflexive:
-		say "That doesn't seem to need internal changing. Maybe find something or someone else to x-ray." instead;
+		say "[if noun is plural-named]Those don't[else]That doesn't[end if] seem to need internal changing. Maybe find something or someone else to x-ray." instead;
 	if noun is palace:
 		if palace-warn is false:
 			now palace-warn is true;
@@ -19073,7 +19070,7 @@ check xraying:
 	if noun is guardian:
 		say "Hmm. You bet you could get past if [the noun] were [big-hint of noun].";
 	else if noun is warrior: [do I need this? Since warriors moved to start]
-		say "Boy! Sure would be nice if he were [big-hint of noun].";
+		say "Boy! Sure would be nice if [noun] were [big-hint of noun].";
 	else if noun is rayed:
 		say "You remember you could still think [big-hint of noun]." instead;
 	else if noun is prefigured or noun is thruhinted:
@@ -19976,8 +19973,6 @@ check scaning bot boat (this is the scan boat components and not boat rule):
 		if bot boat is reflexive:
 			say "With the boat's components fixed, you focus on the weirder red wire.";
 			try scaning weirder red wire instead;
-			instead;
-			continue the action;
 		say "Nothing any more. You probably fixed the boat all you can." instead;
 	if blaster is reflexed:
 		try scaning turbos instead;
@@ -27308,6 +27303,8 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]the REPLAY PLAYER letters on the saver could've become PEARLY.";
 		if kid-atten is false:
 			say "[2dmiss of cur-reg]you could've made [kid-full] ATTENTIVE to help Dr. Yow's lecture go down a bit smoother.";
+		if weirder red wire is part of bot boat:
+			say "[2dmiss of cur-reg]you could've made the weirder red wire REWIRED.";
 		if flowerpot is reflexive:
 			say "[2dmiss of cur-reg]you could've made the succor crocus DINGY to stop it dying.";
 		if serpent is in limits:

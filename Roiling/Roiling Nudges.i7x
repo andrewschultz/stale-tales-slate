@@ -724,6 +724,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "boat"	198069318	--	bot boat	--	"[fix-boat-parts]."
 "boatbot"	393950818	--	bot boat	--	"[fix-boat-parts]."
 "turbo"	386311110	--	turbos	--	"You [if turbos are reflexed]already dealt[else]need to deal[end if] with both turbos."
+"wire"	366057531	weirder red wire	--	--	"The wires are okay. They're just organized WEIRDER."
+"wires"	462331497	weirder red wire	--	--	"The wires are okay. They're just organized WEIRDER."
 "waster"	522636487	rawest waters	--	--	"Ew. Rats. You do feel like a waster, doing something with the waters. Perhaps the northern--or eastern--shore can work better." [RAWEST WATERS 4 3]
 "spray"	387610798	rawest waters	--	--	"The spray will still drown you if you don't figure a way to move somewhere."
 "water"	426362521	rawest waters	--	--	"The water is too elemental and generic to change. Plus the badlands are dry enough. How to get closer to a shore?"

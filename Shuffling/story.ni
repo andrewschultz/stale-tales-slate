@@ -4124,13 +4124,13 @@ the brush is scenery in Dry Yard. "[shru-bru]."
 to say oddo:
 	say "[if odor is in Dry Yard]odor[else]door[end if]"
 
-The gateman is a person. "Nat Egam, the tan mage/gateman, is grousing around here."
+The gateman is a person. "Nat Egam, the tan mage/gateman, is grousing around here.".
 
-understand "nat/egam" and "nat egam" and 'tan/mage" and "tan mage" and "gate man" as gateman.
+understand "nat/egam" and "nat egam" and "tan/mage" and "tan mage" and "gate man" as the gateman.
 
-understand "old man" and "man" as gateman when player is in notices section and old man is in notices section.
+understand "old man" and "man" as gateman when player is in notices section and gateman is in notices section.
 
-understand "almond" as a mistake ("'Don't try anything too nutty!' booms Nat Egam.) when player is in notices section and old man is in notices section.
+understand "almond" as a mistake ("'Don't try anything too nutty!' booms Nat Egam.") when player is in notices section and gateman is in notices section.
 
 after fliptoing gateman:
 	set the pronoun him to gateman;
