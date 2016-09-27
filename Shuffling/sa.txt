@@ -245,7 +245,7 @@ Everything is in ANAPEST.
 ST. PAEAN is his latest work.
 Summoning a PEASANT will get him to flee.
 ?What do I do for the peasant?
-He has hay, but Lord Ablemiser doesn't know the difference between that and straw.
+He has hay, but Mean Old Mondale-Doleman doesn't know the difference between that and straw. Or pretends not to.
 Warp to the room if need be. PUT STRAW IN SACK.TAKE SACK. GIVE STRAW TO PEASANT.
 Woohoo! Some hay! And another poem. A shorter one.
 ?What do I do with the poem?

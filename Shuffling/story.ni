@@ -1163,6 +1163,8 @@ definition: a thing (called hthing) is deregioned:
 	decide no.
 
 definition: a thing (called hintcand) is hintrelevant:
+	if mrlp is sortie:
+		if hintcand is Mean Old Mondale-Doleman, decide yes;
 	if hintcand is off-stage, decide no;
 	if hintcand is in lalaland, decide no;
 	if hintcand is in bullpen, decide yes;
@@ -1459,7 +1461,7 @@ missile	"[if silo is off-stage]You have nowhere to put the missile, yet[else if 
 spout	"[if caskfillings is 2]You've gotten all the oil you need[else if caskfillings is 1]You may be able to get more oils[else]you can POUR OILS into the cask from the spout[end if]."
 soil	"[if silo is off-stage]The soil is a good foundation for a structure[else]You've built a structure on the  soil[end if]."
 Woeful Pat	"Pat's poetry is useless, but its beat isn't."
-peasant	"[one of]The peasant has a bunch of hay he doesn't want. Lord Ablemiser said it was 'almost the same thing.' [if warts are not off-stage]What could become almost the same thing? The answer's right under your nose.[else]What've you seen that's almost the same thing?[end if][plus][or]The straw. [if sack is off-stage]The cask can be made into a sack[else]It can fit in the sack[end if]. [plus][or]GIVE STRAW TO PEASANT. [minus][cycling]"
+peasant	"[one of]The peasant has a bunch of hay he doesn't want. Mean Old Mondale-Doleman said it was 'almost the same thing.' [if warts are not off-stage]What could become almost the same thing? The answer's right under your nose.[else]What've you seen that's almost the same thing?[end if][plus][or]The straw. [if sack is off-stage]The cask can be made into a sack[else]It can fit in the sack[end if]. [plus][or]GIVE STRAW TO PEASANT. [minus][cycling]"
 black door	"[if silo is not visible]You probably need to build a structure to attach the black door to[else if black door is not part of the silo]Just PUT BLACK DOOR ON SILO[else]The black door's OK where it is[end if]."
 dashed boundary	"You need to put some sort of door on it[if black door is off-stage], but there are no doors in the moor, yet[else], and maybe that black door will work[end if]."
 dotted rectangle	"You need to put something in the rectangle[if panel is off-stage], but nothing is the right size[else], and the panel is the right size[end if]."
@@ -6725,6 +6727,11 @@ check going in Frost Forts:
 
 book Sortie
 
+Mean Old Mondale-Doleman is privately-named scenery.
+understand "mondale/doleman" as mondale-doleman.
+understand "mean/-- old/-- mondale/doleman" as mondale-doleman.
+understand "mean/-- old/-- mondale doleman" as mondale-doleman.
+
 chapter Ug, Frenetic Centrifuge
 
 Frenetic Centrifuge is a room in Sortie. "[if centrifuge-stopped is true]Exits lie north and east[maybe-shift]![else]Two exits are spinning counterclockwise. They're a right angle apart.[end if]"
@@ -6894,7 +6901,7 @@ centrifuge-stopped is a truth state that varies. centrifuge-stopped is usually f
 check looking in Centrifuge:
 	if player was not in Centrifuge:
 		if centrifuge-stopped is false:
-			say "You climb down a larded ladder, slip, and hear people chattering about Lord Ablemiser, finances fan since... once a money yeoman, the frugalest till the fear gluts, but who'd nag nary a granny for late fees. Generous? Gone sour. Got antsy, then nasty... more garnish, less sharing... stern rents, a splinter should rent slip... a testier treatise from his Taxman, Tan Max... claiming to feel raw and that the welfare era flew! 'No grace in ignorance, caring one!' A cold clod, now. He may even have aborted a debtor...[wfak]";
+			say "You climb down a larded ladder, slip, and hear people chattering about Mean Old Mondale-Doleman, finances fan since... once a money yeoman, the frugalest till the fear gluts, but who'd nag nary a granny for late fees. Generous? Gone sour. Got antsy, then nasty... more garnish, less sharing... stern rents, a splinter should rent slip... a testier treatise from his Taxman, Tan Max... claiming to feel raw and that the welfare era flew! 'No grace in ignorance, caring one!' A cold clod, now. He may even have aborted a debtor...[wfak]";
 			say "You hear cases for destroying his castle and for showing love. You see and avoid tripwires, and just as you feel your wit's riper, a snare nears. You swat at a pest and miss a step, then tumble madly wide of a middle way...";
 			say "[wfak]You roll down a gradient, tirade, nag to yourself...";
 			say "[wfak]Thump. ('Drat, poor trapdoor!' you hear.)";
@@ -6964,7 +6971,7 @@ startmod5 is a number that varies.
 every turn:
 	if turn count > nick-turns:
 		if player is in The Nick:
-			say "[one of]Boy. Incarceration's making you hungry already[or]You think back to your home and all its comfy rooms[or]Mmm, Foood. Even a lame meal. You'd even make it yourself[or]You feel the heat of Lord Ablemiser's hate even from here. You can't take it, so you want to get out of the The Nick. The Nick[or]You counter your urge to sink in despair. Or maybe you just table it[or]You doze off and dream you're watching a cooking show featuring ten hicks. They work in multiple...oops, you wake up and forget[or]You'd do housework to avoid this workhouse[or]You doze off--some guy named Chen has a kit for getting out of here--you wake up. Dang[or]You feel your mind thicken. You're hungry for a new location and whatever new puzzles it has cooked up[stopping].";
+			say "[one of]Boy. Incarceration's making you hungry already[or]You think back to your home and all its comfy rooms[or]Mmm, Foood. Even a lame meal. You'd even make it yourself[or]You feel the heat of Mean Old Mondale-Doleman's hate even from here. You can't take it, so you want to get out of the The Nick. The Nick[or]You counter your urge to sink in despair. Or maybe you just table it[or]You doze off and dream you're watching a cooking show featuring ten hicks. They work in multiple...oops, you wake up and forget[or]You'd do housework to avoid this workhouse[or]You doze off--some guy named Chen has a kit for getting out of here--you wake up. Dang[or]You feel your mind thicken. You're hungry for a new location and whatever new puzzles it has cooked up[stopping].";
 		if the remainder after dividing turn count by 5 is startmod5:
 			if warts are visible:
 				if player is in the nick:
@@ -8071,7 +8078,7 @@ before giving to peasant:
 
 before giving straw to peasant (this is the straw-peasant rule):
 	ignore the can't give what you haven't got rule;
-	say "'Oh, thank you! Lord Ablemiser stuck me with this hay when I needed much stronger material to re-patch my house. He pretended not to know the difference. But he did once!'[paragraph break]'Here's a little something I wrote. [i]He[r] said even an economist wouldn't put emoticons in a poem.'[paragraph break]He hands you a paper and heads off. You're sick of poetry, but with the hay weighing you down, you'll never catch the peasant.";
+	say "'Oh, thank you! Mean Old Mondale-Doleman stuck me with this hay when I needed much stronger material to re-patch my house. He pretended not to know the difference. But he did once!'[paragraph break]'Here's a little something I wrote. [i]He[r] said even an economist wouldn't put emoticons in a poem.'[paragraph break]He hands you a paper and heads off. You're sick of poetry, but with the hay weighing you down, you'll never catch the peasant.";
 	now player has the poem;
 	reg-inc;
 	now peasant is in lalaland;
@@ -8139,7 +8146,8 @@ missile-steered is a truth state that varies. missile-steered is usually false.
 check pushing shoot button:
 	if missile-steered is false:
 		say "[one of]You hear a loud siren! Unfortunately, the missile doesn't seem to be pointing anywhere besides straight up. Guess where it'll land?[or]The missile doesn't have a specific target. You can't just go chucking it anywhere.[stopping]" instead;
-	say "A voice intones 'Chargin[']! Chargin[']! Chagrin-a-grinch!'[paragraph break]Grand finale! A flaring end?! No finer inferno than feral flare as from a remote meteor before you pass out. You are knocked unconscious, unable to feel the wave of simple, heartfelt, plainly-worded concerns that explode across the land.[paragraph break]You wake up in a castle. Lord Ablemiser is beaming, no longer big, mean.[paragraph break]'O crater creator! That launch deserves A LUNCH!' he booms. 'Had now!'";
+	say "A voice intones 'Chargin[']! Chargin[']! Chagrin-a-grinch!'[paragraph break]Grand finale! A flaring end?! No finer inferno than feral flare as from a remote meteor. A loud voice echoes 
+	'Mondale-Doleman! Lo, Amend!' And the missile becomes... a dolmen. You feel simple, heartfelt, plainly-worded concerns flooding explode across, and you run towards them, and somehow it takes no time at all to get to Mean Old Mondale-Doleman's castle.[paragraph break]Where he is beaming, no longer big, mean.[paragraph break]'O crater creator! That launch deserves A LUNCH!' he booms. 'Had now!'";
 	say "[wfak]And how! You learn he is, of course, Noble Ol' Ben. But he feels he hasn't re-earned the title, yet, so he's all 'Me, sir? Miser!' (Yeh, ok, hokey.)[paragraph break]You try every tater treat and enjoy the flukiest lutefisk ever. You even meet the guards who imprisoned you[guards-say-hi]. Hugs gush. After a thousand uh, not-sad, handouts (ah! Donuts!) and a fast, live festival ('My encore ceremony!') with an orchestra, a carthorse returns you to the Trips Strip.[paragraph break]Dreaming on the way back, you picture yourself saying 'SOOTH!' when asked if you'd solved the sortie in an alternate universe.";
 	reg-inc;
 	solve-region sortie instead;
@@ -8163,7 +8171,7 @@ check pushing steer button:
 		say "That'd be overkill. You imagine it's [if shoot button is visible]the other[else]another[end if] one you need to push to launch.";
 	otherwise:
 		now missile-steered is true;
-		say "'AMUSING GUNS! AIM!' The silo makes some ominous VVTT-KLK-BRRW noises and tilts slightly in the direction of what you assume and hope is Lord Ablemiser's palace.";
+		say "'AMUSING GUNS! AIM!' The silo makes some ominous VVTT-KLK-BRRW noises and tilts slightly in the direction of what you assume and hope is Mean Old Mondale-Doleman's palace.";
 	the rule succeeds;
 
 section silo arcana
@@ -11541,6 +11549,8 @@ peasant	hay	"'Not very useful for building something unless you want it to be de
 peasant	poem	"'I try my best at it.'"
 peasant	straw	"'Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though.'"
 peasant	Woeful Pat	"'He's better than I am at poetry, I'm sure. I'm not educated enough to know why. Frustrates me sometimes.'"
+peasant	Mean Old	"Used to be much nicer, back when we knew him by his first name."
+woeful pat	Mean Old	"He does not censor my art. He cannot be that bad!"
 woeful pat	peasant	"'There is one who tries his best. But he is too...obvious.'"
 woeful pat	anapest	"[if anapest-clued is false][anapest-clue][run paragraph on][else][one of]'A mere creative writing teacher could educate you as to the pedantic details of writing doggerel that mimics my epic's flow!'[or]You didn't REALLY want the anapest explanation again, did you?[ana-true][stopping][end if]"
 deadbeat	beats	"'They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, [if condo-evac is true]dude[else]you square, yo[end if].'"
@@ -11688,7 +11698,6 @@ gateman	"quest" or "purpose/goal" or "my purpose/goal"	"[one of]'Three major pro
 gateman	"doll house/attic/attics/static/house"	"'Just something to get your feet wet, fiddling with the devices and such. Won't help with a quest[if attics are off-stage]. Though it's not the doll house but what's coming from it[else]. Good job with it, yes[end if].'"
 gateman	"certify" or "certifying"	"'Tells you what letters are right for what something should be. Red is wrong, green is right. Probably not as powerful as rectifying, but gets you some stuff right away. Also--there's some clues out there that're just plain red. They're all wrong.'[prcer]"
 gateman	"rectify" or "rectifying"	"'Gives you the first and last letters of what something should be.'[prrec]"
-peasant	"lord/ablemiser" or "lord ablemiser"	"'Used to be much nicer, I'd say!'"
 peasant	"hay"	"'I can't use it. But I could use some straw.'"
 woeful pat	"beat/rhythm/meter"	"[anapest-clue][run paragraph on]"
 woeful pat	"st paean" or "paean"	"'It will be my best reading yet. Even better than this[if player does not have flier]. Here you go, just to make sure[give-flier][end if].'"
