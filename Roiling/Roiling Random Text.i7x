@@ -4627,6 +4627,7 @@ blurb	fave
 "Sloth, Be the Slob[r], by Les Both"	false
 "The Sorry Hero's Try[r], by Rory Tesh"	false
 "St. Be-Best[r], by Bess Bett"	true
+"Stymie Not Testimony[r], by Simon Yett"	true
 "Suaver? No, Ravenous[r], by Evan Urso"	false
 "Tasty or Artsy to So Ratty[r], by Tyra Tso"	false
 "There Rots the Sorter[r], by Ros Threet"	false
@@ -6184,6 +6185,7 @@ blurb
 "PPV PVP"
 "Primates-Spar Time"
 "Pro Style Prey Lots"
+"Pro-Wars Spar Row"
 "P.S. Tom, Stomp Ms. Top." [p]
 "Puke-Race Up a Creek"
 "Punk-Car Crank-Up"
@@ -12121,6 +12123,7 @@ blurb	prio
 "Gone Grey? Energy, Go[r], by Greg Oyen"
 "Gone Mad on Madge[r], by Dom Egan"
 "Gone Musk, Some Gunk[r], by Gus Monke"
+"Gone off on Geoff[r], by Ogo Neff"
 "Gone, Rift: to Finger Not Grief[r], by [if player is male]Oren Gift[else]Teri Fong[end if]"
 "Good Candy? A Dodgy Con[r], by Dodo Cygan"
 "Good Hues Doghouse[r], by Doug Shoe"
@@ -12942,6 +12945,7 @@ blurb	prio
 "A Jest, My Majesty[r], by Steamy J & Ty James"
 "Jet on to Jen[r], by Jojo Ennett"
 "Jim, Lay My Jail[r], by Jay Lim"
+"Jingle: a Lean Jig[r], by Jane Gil"
 "Jingos['] Jog-Ins[r], by Si Jong"
 "A Jinx, a Jinx[r], by AJ Nix & Jan Xi" []
 "Jo's Lunar Journals[r], by [if player is male]Rajon Sul[else]Ros Lujan[end if]"
@@ -15278,6 +15282,7 @@ blurb	prio
 "Set a Seat East[r], by Essa Tate"
 "Set-Dice Deceits[r], by Cid Tees" []
 "Set Onward, Stare Down No Steward[r], by [if player is male]Art Downes[else]Ronda West[end if]" []
+"Set Plead Pedestal[r], by Del Pates"
 "Setback at Beck's[r], by Eb Stack & KC Bates"
 "Seven Art Veterans[r], by Nat Veres"
 "Seven Gin Evenings[r], by Sven Egin"
@@ -17789,6 +17794,7 @@ blurb
 "I'm Fine if in Em."
 "I'm on Nomi, Moni." [p] []
 "I'm Queer: Requiem."
+"Id Story So Dirty"
 "Idle Stag Gets Laid."
 "IDOL, Oil'd." []
 "If I Score Orifices."
@@ -23274,6 +23280,7 @@ blurb
 "Fast Cars as Crafts."
 "Fear Until Ultra-Fine." []
 "Fiances Face Sin."
+"Fifi-Coco's Coifs-Foci"
 "Fine Car Fancier." []
 "Flo Got to Golf."
 "For Autos So Far Out."
@@ -34490,6 +34497,7 @@ blurb
 "Conway YawnCo"
 "Copycats['] Spacy Cot"
 "Cot-Is-Stoic" []
+"A Cot Me-So-Comatose"
 "Count's Sun-Cot"
 "Coy-Nap Canopy"
 "Davenports Dat's PROVEN"
@@ -34529,6 +34537,7 @@ blurb
 "Sleep Time Slim Tepee"
 "Slob-Daze Dozables"
 "Slumber Lumbers"
+"Snap-Span-Naps"
 "SNOOZE-EZ-SOON" []
 "Soft Cold Fold Cots"
 "Spartan-Art Naps"
