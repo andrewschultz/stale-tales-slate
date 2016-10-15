@@ -1870,6 +1870,13 @@ Your settler registers (cheat on) PRYPGR.
 >broken
 Your score has just gone up by one point
 
+>sb stinger
+Your settler registers (no cheat) RYRRYRR.
+Your settler registers (cheat on) RYRRYRR.
+
+>resting
+Your score has just gone up by one point
+
 >sb organised
 Your settler registers (no cheat) RRYRRYYRY.
 Nothing changes between cheat/teach and regular mode.
@@ -2147,7 +2154,7 @@ Your score has just gone up by one point
 Strip of Profits
 
 >score
-Towers (47/47)
+Towers (48/48)
 
 #### bug with GO TO DUCK printing the wrong error but only if I skip the Trefoil. Is there any way...?
 

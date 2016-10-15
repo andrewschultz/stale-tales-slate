@@ -1592,6 +1592,7 @@ Freckly-faced and buck-toothed and talking to herself.
 
 >s
 >broken
+>resting
 >drained
 >x native
 [NOTE: there are too many natives to deal with one at a time.]

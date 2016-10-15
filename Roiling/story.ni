@@ -122,13 +122,13 @@ Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster
 
 Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 33. min-score of presto is 28. [rom stick, lamb, tab, casserole, +1 point for Phooey]
 
-Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 47. min-score of towers is 24.
+Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 48. min-score of towers is 25.
 [Necessary points:
 4 for regular warriors
 1 for Ray Eck
 1 for subtler
 1 for admirer
-1 for bonker
+1 for bonker, 1 for stinger
 7 for basic stuff
 1 for weeds
 2 for Dr Yow
@@ -19884,6 +19884,8 @@ instead of doing something with geese:
 
 after fliptoing bonker:
 	now geese are in Danger Garden;
+	now stinger is in Danger Garden;
+	now gualoc of stinger is Danger Garden;
 	continue the action;
 
 book Salted Deltas
@@ -21313,6 +21315,10 @@ a-text of bonker is "RRYRYR". b-text of bonker is "PRYPGR". parse-text of bonker
 
 retrytext of bonker is ", poised to re-bonk"
 
+The stinger is a purple guardian. "The stinger that replaced the bonker remains here guarding the east passage, fizzing about actively.". description of stinger is "It's certainly active. Maybe if it calmed down, you could get past it."
+
+a-text of stinger is "RYRRYRR". b-text of stinger is "RYRRYRR". parsetext of stinger is "x[sp]x[sp]x[sp]x[sp]x[sp]x[sp]x".
+
 section ole shrine shoreline
 
 Lois the Hostile is a female proper-named purple guardian. "You recognize Lois the Hostile, renowned for forced-contrarian views on religion, as well as the 'real' Lois. She just likes to block people, and in this case, she's blocking your way [psgdir of lois the hostile].". description is "She doesn't exactly look happy, but she doesn't look irredeemably evil."
@@ -21345,6 +21351,7 @@ grailman	Ravages	north	"The grailman, with well-above-average skills for your av
 Ray Eck	Deposit	north	"The yacker controls his keycar so it runs over your foot. You briefly wonder if he has a twin named Kim."	"The yacker introduces himself as Ray Eck, grateful there's someone out here who doesn't mind talking."	"Ray Eck's keycar can't go that far, so you manage to escape."	keycar
 ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you try to walk through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."	"Part of you wonders if you should play up the ego drains, but the other part says they're obstructive enough."
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
+stinger	Mislit Limits	east	"The stinger needles at you menacingly. You back off."	"The stinger looks unusually active."	"Fizzing and buzzing from the stinger."
 natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"Those natives look like they could be psyched out."
 Atheists	Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of logic, but perhaps their presentation could be adjusted."
 lois the hostile	Ole Shrine Shoreline	north	"She mentions you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that."	"Boy! Lois sure could use some down-home kindness."
@@ -21391,6 +21398,7 @@ inapt paint	"[if mel-known is true]Mel Fish[else]The man to the [n-s-rav][end if
 arid den	"'Not bad! But would've been more stylish with NERD-AID!' booms a mechanical voice from the arid den."
 ego drains	"The ego-drains make a flushing and slurping noise. Another rival guardian down the drain!"
 bonker	"'ENEMIES ARE STILL TOO SCARED TO FACE THE BONKER!' you hear from the east."
+stinger	"The stinger continues to fizz and buzz."
 natives	"The natives mumble how they KNEW something like that would happen to someone else. They've seen it all, here."
 iPrune	"The iPrune rears up and seems bigger for a second."
 pirates	"The pirates sing a colorful shanty about another lubber relegated to the deep."
@@ -26288,6 +26296,7 @@ man covered in inapt paint	"[one of]The inapt paint says the man's FLEMISH, but 
 i-p	--	man covered in inapt paint
 Atheists	"[one of]The atheists are willing to explain everything very slowly to you. That's not good. You'd like them to be frustrated with you, to move on.[plus][or]How can you make them super-impatient?[plus][or]Make them HASTIEST.[minus][cycling]"
 bonker	"[one of]The bonker is working just great. How to gum it up?[plus][or]Busted...or...[plus][or]BROKEN.[minus][cycling]"
+stinger	"[one of]The stinger doesn't need to be so active. How could it become calmer?[plus][or][plus][or]BROKEN.[minus][cycling]"
 repeat button	"REPEAT plays back what you recorded with the retape button."
 retape button	"RETAPE gives something for the repeat button to replay."
 Dr Yow	"[unless Dr Yow has been wordy][one of]Dr. Yow is silent, but you can change that.[plus][or]Take a look at [his-her] name.[plus][or]You can make [him-her] WORDY.[plus][or]If you have the raves saver, you can then PUSH RETAPE.[minus][cycling][else if Dr Yow is in prison ropins]You need to bring a friend along to rescue Dr. Yow.[else if Dr Yow has not been rowdy][one of]Dr. Yow can be something besides wordy, too.[plus][or]You can make Dr. Yow be exciting.[plus][or]Dr. Yow can be ROWDY.[minus][cycling][else]Dr. Yow will stay around to impart [his-her] knowledge for a bit.[end if]"

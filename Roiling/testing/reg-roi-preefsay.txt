@@ -263,6 +263,7 @@ Your attempt to bounce Rodney yonder is blocked by a few of his followers, who s
 >drained
 >e
 >broken
+>resting
 >e
 >wordy
 >push retape

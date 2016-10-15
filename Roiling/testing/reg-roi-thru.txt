@@ -2412,6 +2412,13 @@ Your score has just gone up by one point
 >brokne
 That's not something
 
+>restign
+WRONG
+>resting
+Your score has just gone up by one point
+>restign
+That's not something
+
 >grandioes
 The drains sizzle slightly but go back to menacing quiet.
 >grandiose
@@ -2668,7 +2675,7 @@ Your score has just gone up by one point
 Strip of Profits
 
 >score
-Towers (47/47)
+Towers (48/48)
 
 #### bug with GO TO DUCK printing the wrong error but only if I skip the Trefoil. Is there any way...?
 

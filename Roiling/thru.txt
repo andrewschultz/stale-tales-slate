@@ -1231,6 +1231,10 @@ The bonker is working fine until it's...
 
 > BROKEN
 
+Oh no! But a stinger takes its place! And it's active!
+
+> RESTING
+
 > E
 
 Dr. Yow is imprisoned and can't talk until he's

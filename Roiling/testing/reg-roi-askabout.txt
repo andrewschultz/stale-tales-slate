@@ -1242,6 +1242,7 @@ You try to chat but feel like a, er, knob.
 "It must be guarded by a thousand like me!"
 
 >broken
+>resting
 >e
 
 >wordy

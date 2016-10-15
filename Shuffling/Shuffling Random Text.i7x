@@ -3611,6 +3611,7 @@ blurb
 "Jock-hate joke-chat."
 "'The jock joke? Tch.'"
 "'Kerberos reeks, bro!'"
+"'Knots of OK fonts!'"
 "'Knowing-now king? Wink Ngo!'"
 "'The latest! That's leet!'"
 "'Lean on one LAN? No, Neal!'"
@@ -4105,6 +4106,7 @@ blurb
 "'Spoil me? Some lip! Lose, imp!'"
 "'Step to me, mote-pest? Meet STOP!'"
 "'STINKER TINKERS? NET RISK!'" []
+"'Stop, wee woe-pest! To weeps!'"
 "'Strike, cad? Sidetrack!'"
 "'Stud? NO! Dust on donuts!'"
 "'Stupid-smart upstart dims!'"
