@@ -105,14 +105,15 @@ close(B);
 
 if ($dupes) { print "$dupes duplicate(s) found. Results below.\n$dupeString"; } else { print "No duplicates found. Hooray!\n"; }
 
-$errSlash = join(" / ", @errLines);
+$errSlash = join(" / ", reverse(@errLines));
 
 print "TEST RESULTS:$_[0] duplicates,0,$dupes,0,$errSlash\n";
 
 $niSize = -s "$fileName";
 $nuSize = -s "$outFileName";
+$nuDel = $nuSize + $deletedBytes;
 
-if ($niSize != $nuSize) { die "Something went wrong. File sizes aren't equal! New=$nuSize Old=$niSize. Maybe check CR's."; }
+if ($nuDel != $niSize) { die "Something went wrong. File sizes aren't equal! New=$nuSize + $deletedBytes = $nuDel != Old=$niSize. Maybe check CR's."; }
 
 if ($badError)
 {
@@ -194,6 +195,7 @@ if ($quoteWarn) { print "ODD QUOTE WARNING:\n$quoteWarn"; }
 sub sortTheTable
 {
   my @ary = ();
+  my $del = 0;
 
   while ($a = <A>)
   {
@@ -216,23 +218,18 @@ sub sortTheTable
   if ($verbose) { printf("%2d: Sorting $thisTable, " . ($#ary+1) . " total elements.\n", $count); }
   if ($#ary < 23)
   { print "********UH OH, THERE ARE WAY TOO FEW in $thisTable, $#ary********\n"; }
+  $del = 0;
   @ary2 = sort {lch($a) cmp lch($b)} @ary;
-  for (@ary2)
-  {
-    print B "$_";
-	#print chr(13);
-  }
-  print B $a; #print chr(13);
   for (0..$#ary2)
   {
-    $lines2 = $lines + $_;
+    $lines2 = $lines + $_ + 1 - $del;
     $temp = lch(@ary2[$_]); chomp($temp);
 	$temp2 = $temp; $temp2 =~ s/'//g;
     if ($isDone{$temp2})
 	{
 	  $dupes++;
 	  push (@errLines, $lines2);
-	  if ($lines2 - $isDone{$temp2} == 1) { $addDupe = "$temp ($lines2-$short) is a duplicate line in the same table.\n"; }
+	  if ($lines2 - $isDone{$temp2} == 1) { $addDupe = "$temp ($lines2-$short) is an immediate duplicate($table{$temp2}). Weeding out.\n"; $deletedBytes += length($ary2[$_]); $ary2[$_] = ""; }
 	  else
 	  {
       $addDupe = "$temp ($lines2-$short) is duplicated from line $isDone{$temp2} table $table{$temp2}.\n";
@@ -241,16 +238,24 @@ sub sortTheTable
     }
 	elsif ($_ > 0)
 	{
-	  if (@ary2[$_] =~ /\Q@ary2[$_-1]/i)
+	  if ((@ary2[$_-1]) && (@ary2[$_] =~ /\Q@ary2[$_-1]/i))
 	  {
-	    print "$temp ($lines2-$short) is *duplicated from line $isDone{$temp}.\n"; $dupes++; $dupeString .= "$thisTable ($lines2 from $isDone{$temp}): $temp\n";
+	    print "LastLineCheck: $temp ($lines2-$short) is duplicated from line $isDone{$temp2}.\n"; $dupes++; $dupeString .= "($_) $thisTable ($lines2 from previous line)\n";
 	  }
 	}
 	$isDone{$temp2} = "$lines2-$short";
 	$table{$temp2} = $thisTable;
   }
+  @ary2 = grep { $_ ne '' } @ary2;
   $lines += $#ary2 + 2;
   
+  for (@ary2)
+  {
+    print B "$_";
+	#print chr(13);
+  }
+  print B $a; #print chr(13);
+
   #print $#ary . " total lines.\n";
 }
 

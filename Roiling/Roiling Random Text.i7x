@@ -754,7 +754,7 @@ blurb
 "Crude's Cursed."
 "A cry: racy."
 "Curses? Cusser."
-"Dang Sour Dour Nags"
+"Dang Sour Dour Nags!"
 "Defrost, frets! Do!"
 "The dins! End this!"
 "Dish a dis? Ah!"
@@ -2770,7 +2770,6 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Huckstep Ketchups"	false
 "Hula-Haul"	false
 "I-Be-Foul Biofuel"	false
-"I-Be-Foul Biofuel"	false
 "I-Bouquet Boutique"	false
 "I-Look-OK Oil"	false
 "I Stake at Ike's!"	true
@@ -2812,7 +2811,6 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "JebstCo Objects"	false
 "Jen Booth: on the Job!"	true
 "Jillee's Jellies"	false
-"Jim Gluk's Milk Jugs"	false
 "Jim Klug's Milk Jugs"	false
 "Joe Bond's Jobs DONE!"	true
 "JoinStar Janitors"	false
@@ -4174,7 +4172,6 @@ blurb
 "Hot-Rap Porath"
 "Hype Man Ham Pyne"
 "Hype-Well Whelpley"
-"I-Ill-Hard Hilliard"
 "I-Ill-Hard Hilliard"
 "I-Roll-[']Em Morelli"
 "Ice Don Condie" []
@@ -12139,7 +12136,7 @@ blurb	prio
 "Gone Grey? Energy, Go[r], by Greg Oyen"
 "Gone Mad on Madge[r], by Dom Egan"
 "Gone Musk, Some Gunk[r], by Gus Monke"
-"Gone off on Geoff[r], by Ogo Neff"
+"Gone Off on Geoff[r], by Ogo Neff"
 "Gone, Rift: to Finger Not Grief[r], by [if player is male]Oren Gift[else]Teri Fong[end if]"
 "Good Candy? A Dodgy Con[r], by Dodo Cygan"
 "Good Hues Doghouse[r], by Doug Shoe"
@@ -13157,7 +13154,6 @@ blurb	prio
 "LeRon or Len[r], by Errol Nolen"
 "Less Drive: Diss, Revel[r], by Ed Silvers"
 "Less of a Lass-Foe[r], by Elf Sosa"
-"Less of a Lass-Foe[r], by Elf Sosa"
 "Less-Proud Pros['] Duels[r], by Ross Plude"
 "Less Rude Elders, Us[r], by Ed Sulser"
 "Lest God Gets Old[r], by Del Gost"
@@ -13651,7 +13647,7 @@ blurb	prio
 "Monsieur Inermous[r], by [if player is male]Simon Ure[else]Sue Minor[end if]"
 "Monstrosity: Inmost Story[r], by Otis Nystrom & Tory Stimson"
 "Montague's Age Mounts[r], by Mungo East"
-"Montgomery’s Gory Moments[r], by Tommy Gonser"
+"Montgomery's Gory Moments[r], by Tommy Gonser"
 "Month, Meet the Moment[r], by Tom Nemeth"
 "The Moods: Hot Demos[r], by Seth Odom"
 "Moody's Sodomy[r], by Sy Odom"
@@ -15953,7 +15949,6 @@ blurb	prio
 "Tea Try Treaty[r], by Art Tye"
 "Tea With Thwaite[r], by Ewa Hitt"
 "Tea Worth Hot Water[r], by Theo Traw"
-"Tea Worth Hot Water[r], by Theo Traw"
 "Teach, Pastor Catastrophe[r], by Sacha Potter"
 "Teachership Heptarchies[r], by [if player is male]Heath Crespi[else]Pat Cheshire[end if]"
 "Team Road to a Dream: More Data[r], by Dre Amato"
@@ -16022,7 +16017,6 @@ blurb	prio
 "They, a Town: Not the Way[r], by Tony Wheat"
 "They Bred the Derby[r], by Herb Dyte"
 "They Do. Doth Ye?[r] by Ted Hoy"
-"They Gas the Gays[r], by Hy Gates"
 "They Gas the Gays[r], by Hy Gates"
 "They Kiss This: Keys[r], by Ty Sheski" []
 "They Mar My Heart[r], by Trey Ham" []
@@ -17374,7 +17368,6 @@ blurb
 "Bent Sam, Best Man."
 "Beresford Bros Freed for Breeds!"
 "Bert, Bret, Treb."
-"Bert, Bret, Treb."
 "Bertha's Bathers."
 "Beslag-Gables." []
 "Beth in the Bin."
@@ -17429,7 +17422,6 @@ blurb
 "But is Stu Bi?"
 "Buttsex Subtext."
 "Buxom? Mo['] Bux!"
-"Buxom: Mo['] Bux."
 "Cami-Lex's Exclaims-Climaxes."
 "Candi, Eve, Deviance."
 "Candi in a CD." []
@@ -17826,8 +17818,7 @@ blurb
 "I'm Fine if in Em."
 "I'm on Nomi, Moni." [p] []
 "I'm Queer: Requiem."
-"Id Story So Dirty"
-"Id Story So Dirty"
+"Id Story So Dirty."
 "Idle Stag Gets Laid."
 "IDOL, Oil'd." []
 "If I Score Orifices."
@@ -17916,7 +17907,6 @@ blurb
 "Lewd Nilsa Willadsen." []
 "Lewd Nina Wineland." []
 "Lewd Oafs So Flawed."
-"Lewd Oafs So Flawed." []
 "Lewd Regan Greenwald." []
 "Lewd Ren Wendler."
 "Lewd Rina Reinwald." []
@@ -23314,7 +23304,7 @@ blurb
 "Fear Until Ultra-Fine." []
 "Fiances Face Sin."
 "Fifi-Coco's Coifs-Foci"
-"Fine Car Fancier." []
+"Fine Car Fancier" []
 "Flo Got to Golf."
 "For Autos So Far Out."
 "Games for Ego Farms."
@@ -24525,6 +24515,7 @@ blurb
 "'Prove OK Provoke.'" []
 "'Pry, lie, Ripley? I reply!'"
 "'PSAs? Pass!'"
+"'Psh, Sue pushes. She's up!'"
 "'Puerile? Pure lie!'"
 "'Pull down. LOL u pwnd!'"
 "'Pummel! Lump [']em!' / '[']Elp! Mum!'"
@@ -24714,7 +24705,6 @@ blurb
 "'Sorest tosser!' No, you haven't moved behind Store S." [x]
 "'Sort of soft or...[']s troof!'"
 "'Soul? [d-t] sold out!'"
-"'Soul? [d-t] sold out!'" []
 "'Soup's up!' / 'SOS!'"
 "'Speakins? Spankies!'"
 "'St. Mary, smarty? Try Sam!'" []
@@ -25014,7 +25004,6 @@ blurb
 "'Yum, gonna' / 'YOUNG MAN!'"
 "'Yum!' / 'Dino, you mind?'" []
 "'Zero hour! Err, uh, zoo!'" []
-"‘Psh, Sue pushes. She's up!’"
 
 table of non-skeds [xxv5]
 blurb
@@ -27868,7 +27857,6 @@ blurb
 "Golfer Nut Flo Gunter"
 "Goner Goren Rogen" []
 "Goober Bo Gore"
-"Goober Bo Gore" []
 "Good-Munch Mcdonough" []
 "Goon Amina Manoogian"
 "Goon Ed Gooden"
@@ -28818,7 +28806,6 @@ blurb
 "Murderer Demurrer Red Rumer"
 "Muscular Scum Raul"
 "Mustier Sturmie"
-"Mustier Sturmie"
 "My-Rules Rumsley"
 "Nag-a-Doc Cadogan"
 "Nail Biter Nate Bilir"
@@ -29248,8 +29235,6 @@ blurb
 "Promise Imposer Mo Piers" []
 "Properly-Reply Pro Rory Lepp" []
 "Punitive Evi Putin"
-"Punk Erma Kuperman"
-"Punk Isis Supinski"
 "Pure Al Lauper"
 "Put-Downer Drew Upton"
 "Quainter Antiquer [if player is male]Art Quine[else]Teri Quan[end if]" []
@@ -34127,7 +34112,6 @@ blurb
 "Miscoiled Domiciles"
 "Mo['] Frailty: Formailty" []
 "Mo['] Pads So Damp"
-"Mo['] Pads So Damp" []
 "Mo['] Ruin I Mourn"
 "Mold It, I'm Told" []
 "Moldering Gold Miner"
@@ -34293,7 +34277,6 @@ blurb
 "Promiscuous Porous Music"
 "Promise, Po['] Miser" []
 "Prosaic Ol['] Acropolis"
-"Prosaic Ol['] Acropolis" []
 "A Prude's Sad, Pure Rues-Pad" []
 "A Pudgy-Guy Pad"
 "Push Back, Busk-Chap"
@@ -34527,7 +34510,7 @@ blurb
 "Bo's Famed Foam Beds"
 "Bodett Tot-Bed"
 "Bold-Fet Loft Beds"
-"The Cap'n's Nap Techs"
+"The Cap'n's Nap Techs" [p]
 "Chiesa Chaise" []
 "Comfier Eco-Firm"
 "Comfort-Form Cot" []
@@ -34535,7 +34518,6 @@ blurb
 "Conway YawnCo"
 "Copycats['] Spacy Cot"
 "Cot-Is-Stoic" []
-"A Cot Me-So-Comatose"
 "A Cot Me-So-Comatose"
 "Count's Sun-Cot"
 "Coy-Nap Canopy"
@@ -34546,7 +34528,6 @@ blurb
 "EconFits Fine Cots"
 "Enteric's Rest-Nice" []
 "Flee-Bads Leaf Beds" []
-"Get-Close-Glee Cots"
 "Get-Close-Glee Cots"
 "Gold Zone Long Doze"
 "I-Am-Spent Naptimes"
@@ -34576,7 +34557,6 @@ blurb
 "Sleep Time Slim Tepee"
 "Slob-Daze Dozables"
 "Slumber Lumbers"
-"Snap-Span-Naps"
 "Snap-Span-Naps"
 "SNOOZE-EZ-SOON" []
 "Soft Cold Fold Cots"
@@ -35086,14 +35066,12 @@ blurb
 "Emma 'Grr' Grammer"
 "Emmi 'Grr' Grimmer"
 "Ena 'Splat' Pleasant"
-"Ena 'Splat' Pleasant" []
 "Enid 'Guns' Duensing"
 "Enid 'Sock' Dickeson" []
 "Ennis 'Rock' Nickerson" []
 "Enos 'Bam' Boseman" []
 "Enos 'MMA' Moseman"
 "Enos 'Whap' Openshaw"
-"Enos 'Whap' Openshaw" []
 "Erica 'Grr' Carriger"
 "Erich 'Guns' Scheuring"
 "Erin 'Blam' Liberman" []
@@ -35103,7 +35081,6 @@ blurb
 "Erma 'Bonk' Bronkema" []
 "Ernie 'Blam' Lieberman" []
 "Ernie 'Splat' Pearlstein"
-"Ernie 'Splat' Pearlstein" []
 "Erol 'Bam' Lombera" []
 "Esther 'Rock' Strohecker"
 "Etta 'Grr' Garrett"
@@ -35243,7 +35220,6 @@ blurb
 "Ling 'Ouch' Coughlin"
 "Linh 'Bam' Hamblin" []
 "Linh 'Splat' Stanphill"
-"Linh 'Splat' Stanphill"
 "Link 'Sock' Skolnick"
 "Lionel 'Grr' Rollinger"
 "Lis 'Kapow' Pawloski"
@@ -35252,7 +35228,6 @@ blurb
 "Loreta 'Boom' Bartolomeo"
 "Luc 'Boom' Columbo" []
 "Luc 'Splat' Stallcup"
-"Luc 'Splat' Stallcup" []
 "Luce 'Boom' Coulombe"
 "Lucio 'Bam' Columbia"
 "Lurie 'Bonk' Kilbourne" []
@@ -35400,7 +35375,6 @@ blurb
 "Rey 'Guns' Gurnsey"
 "Rey 'Sock' Croskey" []
 "Rey 'Splat' Spratley"
-"Rey 'Splat' Spratley" []
 "Rhett 'Bam' Trembath"
 "Rich 'Guns' Schuring"
 "Rita 'Blood' Dibartolo" []
@@ -35408,7 +35382,6 @@ blurb
 "Robt 'Smack' Backstrom"
 "Rocio 'Bam' Ambrocio" []
 "Rocio 'Splat' Policastro"
-"Rocio 'Splat' Policastro" []
 "Rod 'Blam' Lombard-Lombard" []
 "Rod 'Guns' Grounds"
 "Rod 'Pecs' Prescod"
@@ -35424,7 +35397,6 @@ blurb
 "Rosa 'Thud' Southard" []
 "Rose 'Bam' Boersma" []
 "Rose 'Bonk' Brookens"
-"Rose 'Splat' Spoelstra"
 "Rose 'Splat' Spoelstra"
 "Rosie 'Bam' Ambroise" []
 "Rosita 'Bonk' Stainbrook" []
@@ -35450,7 +35422,6 @@ blurb
 "Sarah 'Bam' Abrahams" []
 "Sarina 'Bam' Barsamian" []
 "Sean 'Rock' Ackerson" []
-"Sean 'Splat' Pleasants"
 "Sean 'Splat' Pleasants"
 "Seldon 'Thud' Huddleston"
 "Senior 'Whap' Spainhower" []
@@ -37604,7 +37575,6 @@ blurb
 "Less-Down Denslow's"
 "Lianne's Ales Inn" []
 "Lisbeth Blithe's"
-"Lisbeth Blithe's"
 "Listener Leitner's" []
 "Local Pub Club Opal"
 "Loosener Leonore's"
@@ -38318,7 +38288,6 @@ blurb
 "Striky Kristy"
 "Tackier Katrice" []
 "Tankier Katerin"
-"Teaser Teresa"
 "Thyroid Dorithy" []
 "Tiring Ingrit"
 "Too-Flat Loo Taft"
@@ -38636,7 +38605,6 @@ blurb
 "re-denier reindeer"
 "real-wuss walruses"
 "a retirer terrier"
-"a riffage giraffe"
 "a riffage giraffe"
 "a rip-pounce porcupine" []
 "rooster toreros" []
@@ -38994,7 +38962,6 @@ blurb
 "'So, pluck locks up!'"
 "'Sod's gone. Goodness!'" []
 "'Sortie's rosiest!'" []
-"'Spaciest escapist!'"
 "'Stagnation, antagonist?'"
 "'A stumble? Stale bum.'"
 "'Take us on? Sneak out!'"
@@ -39194,7 +39161,7 @@ blurb
 "'Yes, pals! Pay less!'"
 "'Yo, um, once you con me...'"
 "'Your needs ensured, yo!'"
-"Zero pins! No prizes!"
+"'Zero pins! No prizes!'"
 
 Roiling Random Text ends here.
 

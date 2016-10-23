@@ -21317,7 +21317,7 @@ retrytext of bonker is ", poised to re-bonk"
 
 The stinger is a purple guardian. "The stinger that replaced the bonker remains here guarding the east passage, fizzing about actively.". description of stinger is "It's certainly active. Maybe if it calmed down, you could get past it."
 
-a-text of stinger is "RYRRYRR". b-text of stinger is "RYRRYRR". parsetext of stinger is "x[sp]x[sp]x[sp]x[sp]x[sp]x[sp]x".
+a-text of stinger is "RYRRYRR". b-text of stinger is "RYRRYRR". parse-text of stinger is "x[sp]x[sp]x[sp]x[sp]x[sp]x[sp]x".
 
 section ole shrine shoreline
 
