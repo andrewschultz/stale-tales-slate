@@ -196,6 +196,7 @@ sub sortTheTable
 {
   my @ary = ();
   my $del = 0;
+  my $lastDupTable = "";
 
   while ($a = <A>)
   {
@@ -227,6 +228,7 @@ sub sortTheTable
 	$temp2 = $temp; $temp2 =~ s/'//g;
     if ($isDone{$temp2})
 	{
+	  if ($thisTable ne $lastDupTable) { $dupeString .= "****TABLE $thisTable\n"; $lastDupTable = $thisTable; }
 	  $dupes++;
 	  push (@errLines, $lines2);
 	  if ($lines2 - $isDone{$temp2} == 1) { $addDupe = "$temp ($lines2-$short) is an immediate duplicate($table{$temp2}). Weeding out.\n"; $deletedBytes += length($ary2[$_]); $ary2[$_] = ""; }
@@ -240,6 +242,7 @@ sub sortTheTable
 	{
 	  if ((@ary2[$_-1]) && (@ary2[$_] =~ /\Q@ary2[$_-1]/i))
 	  {
+        if ($thisTable ne $lastDupTable) { $dupeString .= "****TABLE $thisTable\n"; $lastDupTable = $thisTable; }
 	    print "LastLineCheck: $temp ($lines2-$short) is duplicated from line $isDone{$temp2}.\n"; $dupes++; $dupeString .= "($_) $thisTable ($lines2 from previous line)\n";
 	  }
 	}

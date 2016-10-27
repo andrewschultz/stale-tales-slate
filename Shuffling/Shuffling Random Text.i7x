@@ -3556,6 +3556,7 @@ blurb
 "'Dog, coils! Disc logo!' / '[']S cool. Dig.'"
 "'Don't open that malig-Gmail!'" [x]
 "'Dope build! Double dip!'"
+"'DOS? Sod!'"
 "'Dour flat loud fart at Rudolf!'"
 "'A driver arrived? Rad! I rev! Rare vid!'"
 "'Dub THEM the dumb!'"
@@ -3773,7 +3774,6 @@ blurb
 "'Sir-Tech is...RETCH!' / 'Rec this!'"
 "'Sky-Tech? Sketchy!'"
 "'Snider Nerd is Snider!' they laugh, with fake self-awareness." [x]
-"'DOS? Sod!'"
 "'Sokoban snob? A-ok!'"
 "'Some tend. Most need DemosNet.'"
 "'Source code, coerce us, do!'"
