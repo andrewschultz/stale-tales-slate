@@ -1089,7 +1089,6 @@ blurb
 "Scottie Sicotte"
 "Searle Easler"
 "Selya Ayles"
-"Selya Ayles" []
 "Serban Nabers-Barnes"
 "Serge Seger"
 "Sergei Griese"
@@ -1406,7 +1405,6 @@ blurb
 "the ill-stink lit kilns"
 "Impaled Mad Pile"
 "Infernal Feral Inn"
-"Irate-Face Cafeteria"
 "Ireful Ant Ritual Fen"
 "the Ivy's Sty-Hive"
 "Joint-Corpse Projections"
@@ -3775,7 +3773,7 @@ blurb
 "'Sir-Tech is...RETCH!' / 'Rec this!'"
 "'Sky-Tech? Sketchy!'"
 "'Snider Nerd is Snider!' they laugh, with fake self-awareness." [x]
-"'Sod DOS!'"
+"'DOS? Sod!'"
 "'Sokoban snob? A-ok!'"
 "'Some tend. Most need DemosNet.'"
 "'Source code, coerce us, do!'"

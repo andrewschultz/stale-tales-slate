@@ -8144,7 +8144,6 @@ blurb
 "My Dour Drum, Yo"
 "My Fortune: Money Turf"
 "My Noise is Money"
-"My Org Is So Grimy"
 "My Passion: Noisy Amps"
 "My Shoes Mosh, Yes"
 "Nah, Got to Hang" []
@@ -8338,7 +8337,6 @@ blurb
 "Step That Phattest"
 "Stephan's Phatness"
 "Strong Leet Long Street" []
-"Stupefy-Fest, Yup" []
 "Styled Mo['] Modestly"
 "Stylish Sly This"
 "Sub-Trite Tributes"
@@ -10279,6 +10277,7 @@ blurb	prio
 "All Ma's Llamas[r], by Sal Lam"
 "All Right Li'l Garth[r], by Trig Hall"
 "All Sew as Well[r], by Les Law"
+"All Sew as Well[r], by Sal Lew"
 "All Them: The Mall[r], by Mel Halt"
 "All This: It Shall[r], by Sal Hilt"
 "All Time Low: a Mellow Lit[r], by [if player is male]Milo Atwell[else]Wilma Tolle[end if]"
@@ -11692,6 +11691,7 @@ blurb	prio
 "Entropies Interpose[r], by [if player is male]Nito Peers[else]Irene Post[end if]"
 "Entrustin['] Nutrients[r], by Ennis Rutt"
 "Envy Dirk, Very Kind Nervy Kid[r], by Kevin Dry"
+"Envy, Envy[r], by Evyn Vyne"
 "Envy Erases Seven Years[r], by Venessa Rey"
 "Epic Rut Picture[r], by Curt Pei"
 "Epidemic: Dim Piece[r], by Cimi Deep" []
@@ -11789,6 +11789,7 @@ blurb	prio
 "Faint, if Naif Fit, Tiffani[r], by Fifi Tan"
 "Fainter Fine Art[r], by Tia Fern"
 "The Fair Fear Hit[r], by Tai Fehr"
+"A Fairly Glum Gallimaufry[r], by Mally Figura"
 "Fairy, I Fray[r], by Fifi Ayr-Ray" []
 "The Fairy's Fiery Hats[r], by Trish Faye"
 "Fall Down, Wolf Land[r], by Fawn Doll" []
@@ -11830,6 +11831,7 @@ blurb	prio
 "Faulkner's Real Funks[r], by Fran Lukes"
 "A Favor for Ava[r], by Raf Avo"
 "Favorable Brave Olaf, Verbal Oaf[r], by [if player is male]Rob LaFave[else]Bev Alfaro[end if]"
+"The Fays['] Hay-Fest as Hefty[r], by Ty Shafe"
 "Fear-Taken Neat Freak? Aren't Fake[r], by Kate Fearn"
 "Fearing a Finger[r], by Geri Fan" []
 "Feast, or Fares to a Forest of Tears[r], by Tre Faso"
@@ -13302,6 +13304,7 @@ blurb	prio
 "Lord Abe Labored[r], by Rod Beal" []
 "Lord Mayor Mr. Rolo Day[r], by Daryl Romo"
 "A Lord or Lad[r], by Roald Doral" []
+"Lord Rey: Orderly, Dry Lore[r], by Rory Eld"
 "Lord Saw a World's Old Wars[r], by Sal Drow"
 "Lord Ted's Toddlers[r], by Del Dorst"
 "The Lord Told Her[r], by Red Holt"
@@ -13981,6 +13984,7 @@ blurb	prio
 "No Rest, St. Oren[r], by Nestor Reston" []
 "No Rev is So Riven Over Sin[r], by Vin Rose"
 "No Riven Environ[r], by [if player is male]Ron Vine[else]Erin Von[end if]"
+"No Scale So Clean[r], by Les Cano"
 "No Sea: Aeons as One[r], by Asase Noone"
 "No Seamy Yeomans[r], by Amos Ney"
 "No Secret to Screen[r], by Ernst Coe"
@@ -14173,6 +14177,7 @@ blurb	prio
 "Oh, Besty, the Boys, They Sob[r], by Toby Esh"
 "Oh, Brat, Hot Bar[r], by Bo Hart & Bart Ho" []
 "Oh, Cancer or Chance, Encroach[r], by [if player is male]Ron Chace[else]Cora Chen[end if]-Cochrane"
+"Oh, Cap a Chap? Ah, Cop[r], by Papa Chooch"
 "Oh, Darby, Hard Yob[r], by Brad Hoy"
 "Oh, Drear Hoarder Dr. O'Hare[r], by Ro Heard"
 "Oh, Fair of Hair[r], by Ari Hof"
@@ -14246,6 +14251,7 @@ blurb	prio
 "Old Nan Donlan[r], by Donnal Landon" []
 "Old Narc, Lorn Cad[r], by Cal Dorn" []
 "Old Nick Lock'd In[r], by Dick Lon"
+"Old Pain: No Plaid[r], by [if player is male]Dan Poli[else]Ali Pond[end if]"
 "Old Perp Doppler[r], by Pop Erdl"
 "Old Rae, a Real Doodler[r], by Eldora Laredo" []
 "Old Snob So Blond[r], by Sol Bond"
@@ -14408,7 +14414,6 @@ blurb	prio
 "Orchestra Carthorse[r], by Seth Carro"
 "The Order Erred, Tho['][r], by Rod Ereth"
 "The Order to Re-Herd[r], by Reed Roth" []
-"Orderly, Dry Lore[r], by Rod Lyde"
 "Ordinary Ironyard[r], by [if player is male]Roy Darin[else]Dori Ryan[end if]"
 "Organist Roasting[r], by Art Goins" []
 "Original Air Lingo[r], by [if player is male]Gino Rial[else]Lori Agin[end if]"
@@ -14574,6 +14579,7 @@ blurb	prio
 "Peoples Lose Pep[r], by [if player is male]Les Pope[else]Else Opp[end if]" []
 "Pep Rally LP Player[r], by Lyle Rapp"
 "Pep Spilt, Pip Slept[r], by Pet Lipps"
+"Pepard Parped[r], by Ed Rapp"
 "Pereida's Airspeed[r], by [if player is male]Sid Perea[else]Dee Paris[end if]"
 "Peril Colt: Epic Troll[r], by Ric Pellot"
 "Perkiest Tree, Skip[r], by [if player is male]Kip Ester[else]Kit Peers[end if]"
@@ -15165,6 +15171,7 @@ blurb	prio
 "Sad Winner Niswander[r], by [if player is male]Drew Annis[else]Sandi Wren[end if]"
 "Sad Wren Wanders[r], by Rad Swen Andrews" []
 "Sadder Dreads[r], by Dr. Sade Adders"
+"Sadly Sly Ad[r], by Dallys Days"
 "Safer Fears[r], by Fefe Sarras"
 "Sage Dr. Segard Grades[r], by Sad Reg Gerdas"
 "Sagest Stages[r], by Teessa Staggs"
@@ -15648,6 +15655,7 @@ blurb	prio
 "Soldiers['] Dire Loss[r], by [if player is male]Sid Soler[else]Doris Les[end if]" []
 "Solemn Lit Millstone[r], by Les Milton"
 "Solemnity Met Nosily[r], by Tony Miles"
+"Solid Dis, Lo[r], by Lissi O'Dold"
 "A Solid Sad Oil Laid So[r], by Odalis Salido" []
 "Solitary Royalist[r], by Lisa Troy"
 "Solitary Sailor Ty: Ail-Story[r], by Lyra Otis" []
@@ -17153,6 +17161,7 @@ blurb
 "extrapolates [i]Or Do Sin on Roids[r] to drugs not illegal yet."
 "exults in the optimism of [i]Haskins Sank His Shakins[r]." [x]
 "feels [i]A Stoner: No Tears[r] clearly deserves more than one star." [x]
+"gasps at the emotional power of [i]Thurgood's Drug Shoot[r]."
 "hails the artistic daring of [i]Skid-Bars: Brass, Kid? Bad Risks[r]." [x]
 "has little that needs to be said about [i]The Rum Hurt Me[r]."
 "hashes out legal details of [i]Audi: a DUI[r]." [x]
@@ -33254,6 +33263,7 @@ blurb
 "Find Out Fun: DO IT[r], by Ino Duft"
 "Flowering, Re-Flowing[r], by Inger Wolf" []
 "Follow Through: Ooh, Full Growth[r], by Thor Wolfghoul"
+"Fond Rec, Doc Fern[r], by Don Cerf"
 "Fond Sure Founders: Four Dens[r], by Rod Funes"
 "Forge Yen of Energy[r], by Geno Frye"
 "Found it Fun? Do It[r], by Di Ufton" []
@@ -33426,6 +33436,7 @@ blurb
 "Mentors Need Endorsement[r], by Ed Mortensen"
 "Mere Oops: Some Rope[r], by Esme Poor"
 "Mid-Range Dreaming[r], by [if player is male]Ned Grima[else]Meg Randi[end if]" []
+"Mind, Heart, Third Name[r], by [if player is male]Tim Harden[else]Enid Marth[end if]"
 "The Mind's Mend: This[r], by Ned Smith"
 "Miss Life if I'm Less[r], by Simi Self"
 "Mo['] Money Memo Yon[r], by Emmy Ono"
@@ -33475,6 +33486,7 @@ blurb
 "OK Fills of Skill[r], by Flo Silk"
 "OK, Glide Godlike[r], by Ed Golik"
 "OK, Stir to Risk[r], by Kristo Kortis"
+"OK Tips to Skip[r], by Kip Tso"
 "Ol['] Law of Low Loaf[r], by [if player is male]Al Woolf[else]Ola Fowl[end if]"
 "Omni-Range Enamoring[r], by Mina Rogen"
 "On Relief: Info-Reel[r], by Len Fiore"
@@ -33494,6 +33506,7 @@ blurb
 "Open Path to Happen[r], by Theo Napp" []
 "Or Thrice to Richer Rhetoric[r], by [if player is male]Eric Hort[else]Terri Cho[end if]" []
 "Organized? Zing! A Doer![r], by [if player is male]Ezra Godin & Edgar Zion[else]Zoe Gardin & Zona Ridge[end if]"
+"Other Guys: Huge Story[r], by Gus Yother"
 "Out, Grhh, Through[r], by [if player is male]Hugh Ort[else]Ruth Goh[end if]"
 "Out, Man! AMOUNT![r] by Mo Tuan"
 "Outings, I? No Guts[r], by [tt] Sung"
@@ -33643,6 +33656,7 @@ blurb
 "Timorous? I Roust Mo['][r], by Otis Orum"
 "Tiny Doubt? Don't Buy It[r], by Tito Bundy" []
 "Tip, Mac: Impact-It Camp[r], by Taci Timm-Capp" []
+"Tips to Stop It[r], by Si Pott"
 "A Titan in Attainin['][r], by Tina Tian" []
 "To Apply Top Play[r], by Plato Py"
 "To Bash Bathos[r], by Bobo Hass-Hatt" []
