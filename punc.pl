@@ -2,10 +2,17 @@
 #
 # e edits punc.txt
 #
-# with punc.txt, makes sure there are no gross punctuation errors in the Stale Tales Slate random entries
+# Inform 7 source scanning script
+# with punc.txt, makes sure there are no gross punctuation errors in various table entries
+# originally just for Stale Tales Slate random entries but now expanded to other projects
+#
 # punc.txt has more annotations on what things mean
 #
-# each table has field values: start capital, punctuation and quotes
+#example
+#hs - horrendous songs	0,1,-1,-1	1,1,-1,-1
+#row 0 has 1 start capital, -1 punctuation -1 quotes (single)
+#
+# each table column check has field values: start capital, punctuation and quotes
 #
 # 3 means ALL CAPS
 # 2 means Title Case
@@ -50,16 +57,14 @@ while ($a = <A>)
   if ($a =~ /;/) { last; }
   chomp($a);
   if (length($a) == 0) { next; }
-  if ($a =~ /^VALUE=/) { $a =~ s/VALUE=//g; $gameVal = $a; next; }
+  if ($a =~ /^VALUE=/) { $a =~ s/VALUE=//g; $gameVal = $a; $myFile{$gameVal} = "c:\\games\\inform\\$gameVal.inform\\source"; next; }
   if ($a =~ /^FILES=/) { $a =~ s/FILES=//g; $myFile{$gameVal} = $a; print "$gameVal -> $a\n"; next; }
-  @b = split(/\t/, lc($a));
-  if ($#b == 0) { print "Warning: No data for TABLE OF @b[0].\n"; }
-  if (@b[1] eq "--") { $ignore{@b[0]} = 1; next; }
-  $entry{@b[0]} = $gameVal; #print "Defining @b[0].\n";
-  $caps{@b[0]} = @b[1];
-  $punc{@b[0]} = @b[2];
-  $quot{@b[0]} = @b[3];
-  if ($quot{@b[0]} eq "") { print "Warning fill in @b[0] rows at line $lineNum.\n"; }# else { print "Read $b[0]\n"; }
+  $b = $a;
+  $b =~ s/^[^\t]*\t//;
+  $c = $a; $c =~ s/\t.*//;
+  $searches{$c} = $b;
+  if (!$b) { print "Warning: No data for TABLE OF $c.\n"; }
+  #if ($quot{@b[0]} eq "") { print "Warning fill in @b[0] rows at line $lineNum.\n"; }# else { print "Read $b[0]\n"; }
 }
 
 close(A);
@@ -71,6 +76,7 @@ $map{"s"} = "shuffling";
 $map{"sa"} = "shuffling";
 $map{"roi"} = "roiling";
 $map{"b"} = "shuffling,roiling";
+$map{"pc"} = "compound";
 
 for my $argnum (0..$#ARGV)
 {
@@ -89,6 +95,7 @@ my $fileToRead = $myFile{$_[0]}; if (!$fileToRead) { die ("No file defined for $
 my $totalErrors = 0;
 $totalSuccesses = 0;
 @lineList = ();
+my @parseAry = ();
 
 open(A, $fileToRead) || die ("Can't open $fileToRead.");
 
@@ -105,17 +112,17 @@ while ($a = <A>)
     $head = lc($a); $head =~ s/^table of //g; $head =~ s/[ \t]*\[.*//g;
 	<A>;
     $errsYet = 0; $errs = 0;
-	#print "$head: $entry{$head}\n";
-    if ($entry{$head} eq "") { if (!$warning{$_[0]} || $ignore{$head}) { } else { print "Warning, no entry in punc.txt for $head.\n"; } }
+	#print "$head: $searches{$head}\n";
+    if ($searches{$head} eq "") { if (!$warning{$_[0]} || $ignore{$head}) { } else { print "Warning, no entry in punc.txt for $head.\n"; } }
 	else
 	{
 	  if (!$ignore{$head})
 	  {
-	  $got{$head} = 1;
-	  $capCheck = $caps{$head};
-	  $puncCheck = $punc{$head};
-	  $quoCheck = $quot{$head};
-	  $inTable = 1;
+      $got{$head} = 1;
+      $inTable = 1;
+	  $currentParsing = $searches{$head};
+	  @parseAry = split(/\t/, $currentParsing);
+	  #print "Changing to @parseAry\n";
 	  #print "Starting $head.\n";
 	  }
 	  next;
@@ -126,9 +133,18 @@ while ($a = <A>)
     if ($inTable)
 	{
 	  $lineNum++;
-	  #print "Trying $a\n";
 	  chomp($a);
-	  lookUp($a);
+	  #print "Trying @parseAry\n";
+	  for $thisParse (@parseAry)
+	  {
+	    @tempParse = split(/,/, $thisParse);
+		$myIndex = @tempParse[0];
+        $capCheck = @tempParse[1];
+        $puncCheck = @tempParse[2];
+        $quoCheck = @tempParse[3];
+		#print "Looking up $a\n";
+		lookUp($a);
+	  }
 	}
 }
 

@@ -6,9 +6,11 @@
 # the [p] after in the source code means to pass on the possible errors.
 ####PROB COMP
 VALUE=compound
+####Not necessary but put there for posterity
 FILES=c:\games\inform\compound.inform\source\story.ni
-hs - horrendous songs	1	-1	-1
-hb - horrendous books	1	-1	-1
+hs - horrendous songs	0,1,-1,-1	1,1,-1,-1
+hb - horrendous books	0,1,-1,-1	1,1,-1,-1
+;
 
 ####ROIL
 VALUE=roiling
