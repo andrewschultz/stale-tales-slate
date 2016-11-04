@@ -1,11 +1,18 @@
-####need start capital? punctuation (1/0/-1) quotes 1/0/-1
+####need start capital? punctuation (1\0\-1) quotes 1\0\-1
 # 1 means we need it, -1 means we need NOT to have it, 0 OK either way
 # -- means that, although the table has a "blurb" entry, it is not part of the random list of text we wish to print out.
 # in this case, magnifs is what Ed Yerg tells you once he's friendly, sexdif is the table of differences based on your gender, and
 # townarr gives additional information about the Curst Palace once you visit certain rooms.
 # the [p] after in the source code means to pass on the possible errors.
+####PROB COMP
+VALUE=compound
+FILES=c:\games\inform\compound.inform\source\story.ni
+hs - horrendous songs	1	-1	-1
+hb - horrendous books	1	-1	-1
+
 ####ROIL
 VALUE=roiling
+FILES=c:\program files (x86)\inform 7\inform7\extensions\andrew schultz\Roiling Random Text.i7x
 ########general
 cussing rejects	1	1	-1
 death messages	1	1	-1
@@ -88,13 +95,15 @@ elvira taunts	1	1	1
 ########store h
 selly yells	1	1	1
 political slogans	1	1	1
-####need start capital? punctuation (1/0/-1) quotes 1/0/-1
+####need start capital? punctuation (1\0\-1) quotes 1\0\-1
 magnifs	--
 sexdif	--
 townarr	--
+
 ####SA
 # this list is shorter, consisting of Pat's codas, the deadbeat camp, condo chatter, PSAs, nerd chat, Red Bull Burdell's taunts, the riot chants and the names on the graffiti in the strip.
 VALUE=shuffling
+FILES=c:\program files (x86)\inform 7\inform7\extensions\andrew schultz\Shuffling Random Text.i7x
 ######intro
 job searcher names	1	-1	-1
 ######f

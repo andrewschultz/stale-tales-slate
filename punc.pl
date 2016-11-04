@@ -21,13 +21,13 @@
 my $allLines;
 
 my $roi = "c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/Roiling random text.i7x";
-my $sa = "c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/Sa random text.i7x";
+my $sa = "c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/Shuffling random text.i7x";
 
 if (@ARGV[0] eq "e") { `c:\\writing\\dict\\punc.txt`; exit; }
 
 if (@ARGV[0] eq "cl") { fixChecklist(); exit; }
 
-@titleWords = ("but", "by", "a", "the", "in", "if", "is", "it", "as", "of", "on", "to", "or", "and", "at", "an", "oh", "for", "be", "not", "no", "nor", "into", "with", "from");
+@titleWords = ("but", "by", "a", "the", "in", "if", "is", "it", "as", "of", "on", "to", "or", "sic", "and", "at", "an", "oh", "for", "be", "not", "no", "nor", "into", "with", "from");
 addTitles();
 
 $showOK = 0;
@@ -41,12 +41,17 @@ else
 open(A, "c:/writing/dict/punc.txt") || do { print ("Can't open c:/writing/dict/punc.txt."); usage(); }
 }
 
+my $lineNum = 0;
+
 while ($a = <A>)
 {
+  $lineNum++;
   if ($a =~ /#/) { next; }
   if ($a =~ /;/) { last; }
   chomp($a);
-  if ($a =~ /^VALUE=/) { $a =~ s/VALUE=//g; $gameVal = $a; next;}
+  if (length($a) == 0) { next; }
+  if ($a =~ /^VALUE=/) { $a =~ s/VALUE=//g; $gameVal = $a; next; }
+  if ($a =~ /^FILES=/) { $a =~ s/FILES=//g; $myFile{$gameVal} = $a; print "$gameVal -> $a\n"; next; }
   @b = split(/\t/, lc($a));
   if ($#b == 0) { print "Warning: No data for TABLE OF @b[0].\n"; }
   if (@b[1] eq "--") { $ignore{@b[0]} = 1; next; }
@@ -54,49 +59,42 @@ while ($a = <A>)
   $caps{@b[0]} = @b[1];
   $punc{@b[0]} = @b[2];
   $quot{@b[0]} = @b[3];
-  if ($quot{@b[0]} eq "") { print "Warning fill in @b[0] rows.\n"; }
+  if ($quot{@b[0]} eq "") { print "Warning fill in @b[0] rows at line $lineNum.\n"; }# else { print "Read $b[0]\n"; }
 }
 
 close(A);
 
-$proj = "roiling";
+$warning{"shuffling"} = 1;
+$warning{"roiling"} = 1;
 
 $map{"s"} = "shuffling";
 $map{"sa"} = "shuffling";
 $map{"roi"} = "roiling";
+$map{"b"} = "shuffling,roiling";
 
-if (@ARGV[0] eq "-h") { usage(); }
-
-if ($map{@ARGV[0]}) { $proj = $map{@ARGV[0]}; }
-elsif (@ARGV[0]) { $proj = @ARGV[0]; }
-
-if (@ARGV[0] eq "b")
+for my $argnum (0..$#ARGV)
 {
-  storyTables($roi, "roiling");
-  storyTables($sa, "shuffling");
-  exit;
+  if (@ARGV[$argnum] eq "-h") { usage(); }
+  if (@ARGV[$argnum] eq "-i") { $matchQuotes = 0; }
+  if ($map{@ARGV[0]}) { $proj = $map{@ARGV[$argnum]}; } else { $proj = @ARGV[$argnum]; }
+  @projs = split(/,/, $proj);
+  for $myproj(@projs) { storyTables($myproj); }
 }
-
-print "b=both r/roi=roiling s/sa=shuffling\n";
-
-$storyFile = "c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/$proj random text.i7x";
-
-if (@ARGV[1] eq "-i") { $matchQuotes = 0; }
-
-storyTables($storyFile, "$proj");
 
 sub storyTables
 {
+
+my $fileToRead = $myFile{$_[0]}; if (!$fileToRead) { die ("No file defined for $_[0]."); }
 
 my $totalErrors = 0;
 $totalSuccesses = 0;
 @lineList = ();
 
-open(A, $_[0]) || die ("Can't open $_[0].");
+open(A, $fileToRead) || die ("Can't open $fileToRead.");
 
 $allLines = 0;
 
-print "Table parsing for $_[0]:\n";
+print "Table parsing for $fileToRead:\n";
 
 while ($a = <A>)
 {
@@ -104,13 +102,11 @@ while ($a = <A>)
   if ($a =~ /^table of /)
   {
     chomp($a);
-    $head = lc($a); $head =~ s/^table of //g; $head =~ s/[ \t]*\[.*//g; next;
-  }
-  if (($a =~ /^blurb/) && ($a !~ /^blurb\t\"/)) # this is a hack as Shuffling as an object called blurb. Oops.
-  {
+    $head = lc($a); $head =~ s/^table of //g; $head =~ s/[ \t]*\[.*//g;
+	<A>;
     $errsYet = 0; $errs = 0;
-	#print "...$head\n";
-    if ($entry{$head} eq "") { if ($ignore{$head}) { } else { print "Warning, no entry in punc.txt for $head.\n"; } }
+	#print "$head: $entry{$head}\n";
+    if ($entry{$head} eq "") { if (!$warning{$_[0]} || $ignore{$head}) { } else { print "Warning, no entry in punc.txt for $head.\n"; } }
 	else
 	{
 	  if (!$ignore{$head})
@@ -124,7 +120,7 @@ while ($a = <A>)
 	  }
 	  next;
 	}
-	}
+}
 	if ($inTable == 1) { if ($a !~ /^\"/i) { if ($errs) { print "===============Finished $head. $errs errors.\n"; $totalErrors += $errs; } else { $noerr .= " $head"; } $errsyet = 0; $errs = 0; $inTable = 0; $lineNum = 0; next; }
 	}
     if ($inTable)

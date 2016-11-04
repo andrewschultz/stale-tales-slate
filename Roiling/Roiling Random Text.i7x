@@ -12308,7 +12308,6 @@ blurb	prio
 "Hate Psalm: Me, Asphalt, the Plasma Heat Lamps[r], by Seth Palma"
 "Hated Death: Add the Heat[r], by 'Teeth' Hadad" []
 "Hateful Leaf Hut[r], by Fleta Hu & Fae Thul"
-"Haters, Rest, Ah[r], by Tre Ash" []
 "Haters-Tip Therapist[r], by [if player is male]Rhett Pais[else]Rhea Pitts[end if]"
 "Hauling Laughin['][r], by Lang Hui"
 "Hauteurs: Use a Hurt[r], by Su Huerta"
@@ -33324,6 +33323,8 @@ blurb
 "Harried? Rah, Ride Hardier[r], by Ira Herd" []
 "Haste of The Oafs[r], by Fae Tosh"
 "Hater Wile? Healer Wit Wealthier[r], by [if player is male]Earl White[else]Leia Werth[end if]"
+"Haters? Eh, Rats[r], by Tre Ash" []
+"Haters, Rest, Ah[r], by Tre Ash" []
 "He Lacks Hackles[r], by Sal Heck"
 "Heat-Flow of Wealth[r], by Flo Wheat"
 "Heed, Get the Edge[r], by Ted Ghee"
