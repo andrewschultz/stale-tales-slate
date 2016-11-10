@@ -2,6 +2,8 @@
 #sso.pl
 #scratch sort, does a trivial sort of the ideas I have written down
 #
+#puts all of the titles in the middle of the file
+#
 
 use strict;
 use warnings;

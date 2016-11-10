@@ -4,7 +4,7 @@ volume megachatter table
 
 table of megachatter [tmc]
 mytab	eturn	curidx	maxidx	go-ahead	descr	prefix	suffix	lasties	maxbeforepause (number)	done-once	table-size (number)	ent-per	end-count
-table of evil locations	false	0	30	reading-the-map rule	"Evil map locations (F)"	""	""	"(worst and last) Hell's Shell[post-brk]"	20	false	0	1	0
+table of evil locations	false	0	30	reading-the-map rule	"Evil map locations (F)"	""	""	"(worst and last) Hell's Shell[post-brk]"	20	false	0	1	0 [p]
 table of poem codas	true	0	30	pat-poem rule	"Pat's verse-ends (I)"	"You cringe as Pat ends a verse with [i]"	"[r]"	"'O Scant Cantos!' cries Pat. He asks what you thought of his Marsh Poet Metaphors. 'Souly,' you say. 'It's...THY.'[paragraph break]He thanks you and begins again, direr, drier. 'Verse. I revise.'[line break]"	--	false	0
 table of camp chants	true	0	30	with-hippies rule	"Red Camp chants (M)"	"[one of]S[or]More s[stopping]ounds of social protest. "	""	"Chants stanch. 'Restin['], OK?' Their tone irks, then ... 'Restokin[']! Strike on!' Petitioner repetition.[line break]"	--	false	--
 table of condo dialogue	true	0	30	talk-in-condo rule	"Condo chatter (M)"	"Flabbier blab: rife. "	""	"Laugh-ins languish. You hear someone re-repeat repartee. Conversations start anew...[line break]"
@@ -1774,7 +1774,7 @@ blurb
 "Dove hit the void, tho['] I'd've..." [p]
 "Dr. Ice Cried: I'd rec!"
 "Dr. Lowly, worldly wry doll."
-"Dr., sow words!"
+"Dr., sow words!" [p]
 "Drab ole era: bold real bod."
 "Drawn yet? Tend wary. Wend a try."
 "The dream he dreamt there, mad, had meter."
@@ -2493,7 +2493,7 @@ blurb
 "Paternity titan, prey. Rain petty."
 "Patronise a separation? No, parasite!"
 "Peaceful puce leaf." []
-"Peek or re-poke? OK,. peer."
+"Peek or re-poke? OK, peer."
 "Peer! Frere! Freer Pere!"
 "Pen hordes? Red phones? Nope, shred."
 "A Pert, Apter Paper Treat? Repeat trap!"
@@ -2550,7 +2550,7 @@ blurb
 "Prised, Spired Spider."
 "Prod, wind! Drip down!"
 "A Promo? Jest. Major poet's mojos taper. Poor jetsam."
-"Proof St.: for stop of sport."
+"Proof St.: for stop of sport." [p]
 "Prophetic trip epoch: top cipher. Chirp, poet!"
 "Prose Poser!"
 "Proud Nifty Profundity: Yup, Drift On."

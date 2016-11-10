@@ -17,8 +17,8 @@ table of death messages	false	0	0	bzzt rule	lll	"Death notices"	--	""
 
 table of megachatter (continued) [this is organized by region then by alphabet, well, roughly]
 mytab	eturn	curidx	maxidx	go-ahead	whichreg	descr	prefix	suffix	lasties	maxbeforepause	done-once	init-order	table-size	reps
-table of random books	false	0	30	read-books rule	manor	"All the books in your bookshelf"	"[i]"	"[r]"	"your own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1
-table of ad slogans	true	0	30	blurby rule	manor	"All the ads in the Dope Op-Ed"	--	""	"HANKER! HARKEN! you read. With that general ad, it's back to the start."
+table of random books	false	0	30	read-books rule	manor	"All the books in your bookshelf"	"[i]"	"[r]"	"your own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1 [p]
+table of ad slogans	true	0	30	blurby rule	manor	"All the ads in the Dope Op-Ed"	--	""	"HANKER! HARKEN! And with that general ad, it's back to the start."
 table of mob chants	false	0	30	mob-chanting rule	manor	"Mob chants (LISTEN post-Gunter in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"They finish fishin[']."
 table of idiotic lecture points	true	0	15	lecture-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	" [ted-die]"	"The lecturer flips back to the start of his keystone keynotes, resuming his ol['] mongo monolog.[pre-brk]"	20
 table of overdone movies	true	0	15	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	""	"The lecturer reminds the crowd [i]Dosing Doings[r] remains the universal classic.[pre-brk]"	20
@@ -27,24 +27,24 @@ table of store c competitors	false	0	10	compet-over-ad rule	stores	"Store C comp
 table of store c ads	false	0	10	read-c rule	stores	"Store C advertisements (parental advisory)"	--	""	"'Wanker? Ew, rank!' someone hisses at you. Yup, you've been reading a while."
 table of tokers nonsense	true	0	30	ohai-tokers rule	stores	"The tokers['] chat[if tokers are off-stage and nestor is off-stage] (flip STORE K and STORE N in Strip of Profits)[end if]"	--	""	"'No weed? We done!' but they find some more, ready to repeat. You may wish to HUSH them to zone them out as they zone out.[pre-brk]"
 table of moralizers	false	0	30	read-pious-1 rule	routes	"Moralizers[c-c-u]"	--	""	--
-table of mantle laments	false	0	30	read-pious-2 rule	routes	"Rev. Ali's hot takes[c-c-u]"	--	"[randexc]"	"wait, no, an epilogue hand-written in: [i]sad, rash [if censor-minor is true](mean name)[else]hardass[end if][r], which is refreshing."
+table of mantle laments	false	0	30	read-pious-2 rule	routes	"Rev. Ali's hot takes[c-c-u]"	--	"[randexc]"	"wait, no, an epilogue hand-written in: [i]sad, rash [if censor-minor is true](mean name)[else]hardass[end if][r], which is refreshing." [p]
 table of horbert musings	true	0	30	horby rule	routes	"Brother Horbert's musings[c-c-u]"	"Brother Horbert mumbles something to himself... [i]"	"[r]"	"Brother Horbert mumbles [i]Ah, even heaven...[r] A pause. His thoughts may loop again--like people's wanderings in the mesa.[pre-brk]"	40
 table of horbert farewells	false	0	20	horb-bye rule	routes	"Brother Horbert's blessings[c-c-u]"	"Brother Horbert speaks as you leave: [i]"	"[r][pre-brk]"	"Brother Horbert's face shows neat, epic patience as you leave, again.[pre-brk]"	40
 table of missing deli foods	false	0	20	ask-deli rule	routes	"Non-foods at the Idle Deli[indic of routes]"	--	""	"'Not even spoiled old pies...'"
 table of sked items	false	0	20	read-tec rule	troves	"Desk-Sked to-dos[indic of troves]"	--	""	"Wow! That's a lot to do. You need to sit and think and build up to believing you can do it all. And quickly."
-table of DIVORCES articles	false	0	30	read-divorces rule	troves	"'Fascinating' DIVORCES articles[indic of troves]"	--	""	"an interview with an influential mayor who knows what's what: Ah, Mr. Harm![paragraph break]Well, they saved the worst for last. You could reread if you want."
+table of DIVORCES articles	false	0	30	read-divorces rule	troves	"'Fascinating' DIVORCES articles[indic of troves]"	--	""	"an interview with an influential mayor who knows what's what: Ah, Mr. Harm![paragraph break]Well, they saved the worst for last. You could reread if you want." [p]
 table of iffy advice	false	0	20	read-eths rule	troves	"Advice from Pa, Egg, Pea[eisiping]"	"[one of]There is some blurb about how REAL CHANGE COMES FROM WITHIN and how you shouldn't look to change a clover into Velcro or any such nonsense. Also how this book is better than [i][twiddle of table of self-help bestsellers and 3][r][paragraph break][or][stopping]You pore over a random 'thought-improving' passage of Peg A. Page: "	""	"You've reached the end, filled with [crap]piest tips recap. Rereading may or may not be less painful the second time through."
 table of gritty dialogue	true	0	20	say-gritty rule	troves	"Gritty Spoiloplis dialogue[indic of troves]"	"Gritty sounds come, then go, from [one of]your testers, the tersest[or]the[stopping] streets: "	""	"Tense silence replaces the gritty sounds, which will probably return and cycle. People making the same mistakes they did before. But you are bound for better things--or, with that book, you'd better be.[pre-brk]"
 table of non-skeds	false	0	20	desk-look rule	troves	"Desk-Sked alternatives[if fiefco is unvisited] (Troves)[end if]"	--	"Slick-Tech Checklist, which is rapidly catching up"
 table of posh dialogue	true	0	20	say-posh rule	troves	"Posh Spoiloplis dialogue[indic of troves]"	"Upper-class concerns: "	""	"A low, snide 'Old is new, wild ones.' Cue repetition.[pre-brk]"
-table of posse bosses	false	0	20	in-lot-or-ruin rule	troves	"Loudest Used Lot bad guys[indic of troves]"	"maybe "	""	"not Mean Roy Maroney, anymore--he's the last of them"
-table of prestigious bums	false	0	20	read-deal rule	troves	"'Inspirational' Yorpwaldians in [i]DEAL[r][indic of troves]"	--	""	"Aliver Elvira, in case anyone forgot"
-table of real estate ads	false	0	20	read-brochure rule	troves	"Rotunda brochure locations[indic of troves]"	"It's for real estate by Sir Dee. One page header blares [i]Home's so Meh? "	"[r]"	"Secretcester! OWN NOW! is the final entry."
+table of posse bosses	false	0	20	in-lot-or-ruin rule	troves	"Loudest Used Lot bad guys[indic of troves]"	"maybe "	""	"not Mean Roy Maroney, anymore--he's the last of them" [p]
+table of prestigious bums	false	0	20	read-deal rule	troves	"'Inspirational' Yorpwaldians in [i]DEAL[r][indic of troves]"	--	""	"Aliver Elvira, in case anyone forgot" [p]
+table of real estate ads	false	0	20	read-brochure rule	troves	"Rotunda brochure locations[indic of troves]"	"It's for real estate by Sir Dee. One page header blares [i]Home's so Meh? "	"[r]"	"Secretcester! OWN NOW! Well, that's the last and loudest listing."
 table of Leo-Rand chitchat	true	0	15	chitchat-over-idols rule	presto	"Leo and Rand's chatter[if rand is fightin] (STORE P)[end if]"	--	""	"'Heya.' / 'Yeah?' An awkward silence follows.[paragraph break]They've run out of conversation, but fortunately (for them,) they forgot it all, so they can just restart."
 table of Leo-Rand idols	true	0	15	Leo-Rand-cry rule	presto	"Leo and Rand's idols[if rand is fightin] (STORE P)[end if]"	"[one of]Leo and Rand[or]Rand and Leo[at random] sadly admit they're no "	"."
 table of catechism pages	false	0	10	catechism-over-research rule	presto	"Hacks['] shack catechism entries[indic of presto]"	--	""	"After the final 'Ok, worn? Work on or know,' only a nixed-pap Appendix is left. You could flip through for more research topics or brainy types, but you've done enough. I appoint you a rarest raster starer. Have an, er, star."
 table of research topics	false	0	10	research-over-doctors rule	presto	"[one of]Some[or]More[stopping] explanation of research by Arch Rees:[indic of presto]"	"Arch Rees[one of][or] further[stopping] explaining research on "	"."
-table of smartypants	false	0	10	read-docs rule	presto	"Ph. D. researchers"	"The highly technical yet useful research of "	"."
+table of smartypants	false	0	10	read-docs rule	presto	"Ph. D. researchers"	"The highly technical yet useful research of "	"." [p]
 table of bedding brands	false	0	20	read-futon rule	presto	"Sleep aide brands"	--	""	"Smartest Mattress, hopefully cleaner than the one you remember from The Ol['] Hotel in the Metros behind Store M."
 table of bar dialogue	true	0	15	bar-over-comp rule	oyster	"Posh Hops Shop action[indic of oyster]"	"[one of]Whew. Rough talk and action here. [or]More rough talk and action. [or][stopping]" 	""	"You've seen it all. Time to take decisive action(s) of your own.[pre-brk]"
 table of competing bars	true	0	15	in-bar rule	oyster	"Posh Hops Shop competitors[indic of oyster]"	"Someone says the Posh Hops Shop [one of]has nothing on[or]sure beats[at random] "	"."	"Everyone agrees Soph Pho's is a total rip-off of, well, here. You can't imagine any more bars being discussed.[pre-brk]"
@@ -55,7 +55,7 @@ table of tuna gossip	true	0	15	gossip-over-chatter rule	oyster	"Aunt Tuna's goss
 table of aunt tuna chatter	true	0	15	ohai-tuna rule	oyster	"Aunt Tuna's complaints[indic of oyster]"	"[one of]'Oh, dear! Do hear!' / 'D'oh...are...' Aunt Tuna cuts you off and[or]Aunt Tuna[stopping] "	""	"Aunt Tuna, as her nags snag, restarts her prattle platter of how she is BEYOND done-by...[pre-brk]"
 table of theses	false	0	30	screed-read rule	oyster	"Theses Sheets notes[indic of oyster]"	""	""	"Life Conks Nice Folks![paragraph break]Well, that's probably enough proof you're dealing with bad guys, here."
 table of rodney bluster	true	0	20	rodney-here rule	towers	"Rodney's bluster[indic of towers]"	"Rodney [if number of visible warriors is 7]informs his gang[else if number of visible warriors > 3]yells at his remaining troops[else if number of visible warriors is 2]yells to his remaining companion[else]mutters to himself[end if] about "	"."	"Rodney warns about repeating, then inept rage and a petering.[pre-lb]"
-table of gizmo parts	false	0	20	examining-gizmo rule	towers	"Parts of the I ZOMG GIZMO[indic of towers]"	--	""	"Ulti-Util, the most powerful, confusing and hidden of all the gizmo parts"
+table of gizmo parts	false	0	20	examining-gizmo rule	towers	"Parts of the I ZOMG GIZMO[indic of towers]"	--	""	"Ulti-Util, the most powerful, confusing and hidden of all the gizmo parts" [p]
 table of Elmer and Merle squabbles	true	0	20	alcove-talk rule	otters	"Elmer and Merle's chat"	--	""	"Since they're kinda evil, or at least serving someone evil, they give a greedy look as they restart their complaint routines.[pre-lb]"
 table of Elvira battle cries	false	0	20	last-battle rule	otters	"Elvira's battle cries"	--	""	""
 table of Elvira machines	false	0	20	bzzt rule	otters	"Elvira's machines"	--	""	""
@@ -1986,7 +1986,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Ace Finn Finance"	false
 "Ace Finn's Finances"	false
 "Ace Reed's Decrease-Care Seed"	false
-"Acne irks? Skin Care!"	true
+"Acne Irks? Skin Care!"	true
 "Acne? LOL, One Call: Cal Leon!"	true
 "Acne-Plus Clean Ups"	false
 "Adeline's Sane Deli"	false
@@ -2391,7 +2391,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Di Malanta's Dalmatians"	false
 "DiCarlo's Cordials"	false
 "Diebel's Edibles"	false
-"Dig crafts? Gift cards!"	true
+"Dig Crafts? Gift cards!"	true
 "Digestional Gelatinoids"	false
 "Dilger's Girdles"	false
 "Dinkel's Kindles"	false
@@ -2527,8 +2527,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Evrice's Ecrives Service"	false
 "Ewart Water"	false
 "Exasp-a-Spex"	false
-"Excalibur: I be a luxcar!"	true
-"Excalubur: I be a LUX car!"	true
+"Excalibur: I Be a LUX Car!"	true
 "Experiment Re-Exemptin[']"	false
 "Fab Ron's Brans of no Barfs"	false
 "Faberge's Free Bags"	false
@@ -2596,7 +2595,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Fun-Fort Turnoff"	false
 "Fungal-Unflag"	false
 "Funk Dojo Junk Food"	false
-"Furlham Rum: HALF harmful!"	true
+"Furlham Rum: HALF Harmful!"	true
 "Fuse-Act Faucets"	false
 "G. Crosby Cyborgs"	false []
 "G. Frei Grief-Refig"	false
@@ -2774,7 +2773,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "I-Look-OK Oil"	false
 "I Stake at Ike's!"	true
 "I-Steal-It Sale!"	true
-"I trust Titus R.!"	true
+"I Trust Titus R.!"	true
 "I Use Mr. I'm Sure!"	true
 "I'm-Mo[']-Super Emporiums"	false
 "Iannello Lanoline"	false []
@@ -2783,7 +2782,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Icer Dome: Mediocre? Dire? Come! More Dice!"	true
 "IdleCo's EcoLids"	false
 "If Acne in Face: ECAFIN!"	true
-"If ALE, a life!"	true
+"If ALE, a Life!"	true
 "If-Stout Outfits"	false
 "Ilich's Chilis"	false
 "Ilse Kan's Seal Skin"	false
@@ -2841,7 +2840,7 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Kindfort's Soft Drink"	false
 "Kindness Inn Desks"	false
 "King Fear-Freak Gin"	false
-"Kip's Cafe: Safe Pick!"	false
+"Kip's Cafe: Safe Pick!"	true
 "Kishka Khakis"	false
 "Kissler's: Risk Less!"	true
 "Kit Sews Weskits!"	true
@@ -11519,7 +11518,7 @@ blurb	prio
 "Dry Abe, Ye Bard Beardy: a Derby[r], by Deb Ray" []
 "Dry AI Diary[r], by Yadir Riady"
 "Dry Blood, Body Lord[r], by Rod Dolby"
-"Dry Bo, Boy Dr.[r], by Brody O'Byrd"
+"Dry Bo, Boy Dr.[r], by Brody O'Byrd" [p]
 "Dry Haler Heraldry[r], by Hal Ryder"
 "Dry Mouth, Dour Myth[r], by Ruth Mody & Trudy Ohm"
 "Dry Mouths['] Dour Myths[r], by [if player is male]Dusty Mohr[else]Trudy Ohms[end if]"
@@ -13032,7 +13031,7 @@ blurb	prio
 "La, Tough to Laugh, Lout-Hag[r], by Al Ought" []
 "La, Vigor, Go Viral[r], by Vi Gorla & Lora Vig"
 "Lab Fest Last Feb[r], by Alf Best"
-"Lab Term Table, Mr.[r], by Lambert Beltram-Bramlet" []
+"Lab Term Table, Mr.[r], by Lambert Beltram-Bramlet" [] [p]
 "Label a Hug Laughable[r], by Helga Blau"
 "Label My Yell: Bam[r], by Alby-Lem Bellamy" []
 "Labors, Men: No Rambles[r], by Rosenbalm Lamberson" []
@@ -14027,7 +14026,7 @@ blurb	prio
 "None Had One Hand[r], by Ned Noah"
 "None Rib Bro Nine[r], by Ben Niro"
 "None Sit in Stone[r], by [tt] Senn"
-"Noon and On and...No![r] by Ann Doon"
+"Noon and On and... No![r] by Ann Doon"
 "Noon Glee Gala: Go Angle Alone[r], by Angelo Alonge" []
 "Noose Mogul Monologues[r], by Moose Luong"
 "Nope, I Prep Pepperoni[r], by Irene Popp"
@@ -17646,7 +17645,7 @@ blurb
 "Fun Fist Stuffin[']."
 "Fur Boot Foot Rub."
 "Gail & Ted Get Laid."
-"Gail R., a Girl-Grail."
+"Gail R., a Girl-Grail." [p]
 "Gal Hess Has Legs."
 "Galen's Angels."
 "Ganymede's Edgy Manse."
@@ -23311,8 +23310,8 @@ blurb
 "Fast Cars as Crafts."
 "Fear Until Ultra-Fine." []
 "Fiances Face Sin."
-"Fifi-Coco's Coifs-Foci"
-"Fine Car Fancier" []
+"Fifi-Coco's Coifs-Foci."
+"Fine Car Fancier." []
 "Flo Got to Golf."
 "For Autos So Far Out."
 "Games for Ego Farms."
@@ -23579,7 +23578,7 @@ blurb
 "'Ack! Ow! Wacko!'"
 "'Acrimony, Mac. Irony. Corny, am I?'" []
 "'Ad hominem? Mind a home, monied ham!'"
-"'Admire? Idea, Mr.: raid [']em!'" []
+"'Admire? Idea, Mr.: Raid [']em!'" [] [p]
 "'Affinity? Tiffany, I...'"
 "'Age-flab, fleabag!'"
 "'Agree, Ragee!'" []
@@ -24871,7 +24870,7 @@ blurb
 "'Um, Pop?' / 'Mop up!'"
 "'Um, Sal Mauls a slum!'" []
 "'Um, then hunt [']em!'"
-"'Um, Yo, Mr., so your mom's...'"
+"'Um, Yo, Mr. So your mom's...'"
 "'Umkay?' / 'Yuk, Ma.'"
 "'Un-gored? Guerdon!'"
 "'Un-tired? Intrude! Under it!'" []
@@ -26067,7 +26066,7 @@ blurb
 "'Ooh, cries! Choosier coo, heirs!'"
 "'Ooh, Meg?' / 'Go home, hog Moe!'"
 "'Ooh, Pat! A photo!'"
-"'Oop, Del!, ol['] dope!' / 'Poe, old poodle!'"
+"'Oop, Del, ol['] dope!' / 'Poe, old poodle!'"
 "'Open house? Hope on, Sue.'"
 "'Or gowns? So wrong! Grow, son!'"
 "'Or Night? Right On!'" []
