@@ -8148,7 +8148,7 @@ check pushing shoot button:
 		say "[one of]You hear a loud siren! Unfortunately, the missile doesn't seem to be pointing anywhere besides straight up. Guess where it'll land?[or]The missile doesn't have a specific target. You can't just go chucking it anywhere.[stopping]" instead;
 	say "A voice intones 'Chargin[']! Chargin[']! Chagrin-a-grinch!'[paragraph break]Grand finale! A flaring end?! No finer inferno than feral flare as from a remote meteor. A loud voice echoes 
 	'Mondale-Doleman! Lo, Amend!' And the missile becomes... a dolmen. You feel simple, heartfelt, plainly-worded concerns flooding explode across, and you run towards them, and somehow it takes no time at all to get to Mean Old Mondale-Doleman's castle.[paragraph break]Where he is beaming, no longer big, mean.[paragraph break]'O crater creator! That launch deserves A LUNCH!' he booms. 'Had now!'";
-	say "[wfak]And how! You learn he is, of course, Noble Ol' Ben. But he feels he hasn't re-earned the title, yet, so he's all 'Me, sir? Miser!' (Yeh, ok, hokey.)[paragraph break]You try every tater treat and enjoy the flukiest lutefisk ever. You even meet the guards who imprisoned you[guards-say-hi]. Hugs gush. After a thousand uh, not-sad, handouts (ah! Donuts!) and a fast, live festival ('My encore ceremony!') with an orchestra, a carthorse returns you to the Trips Strip.[paragraph break]Dreaming on the way back, you picture yourself saying 'SOOTH!' when asked if you'd solved the sortie in an alternate universe.";
+	say "[wfak]And how! You learn he is, of course, Noble Ol' Ben. But he feels he hasn't re-earned the title, yet, so he's all 'Me, sir? Miser!' (Yeh, ok, hokey.)[paragraph break]You try every tater treat and enjoy the flukiest lutefisk (fine dish! Finished!) ever. You even meet the guards who imprisoned you[guards-say-hi]. Hugs gush. After a thousand uh, not-sad, handouts (ah! Donuts!) and a fast, live festival ('My encore ceremony!') with an orchestra, a carthorse returns you to the Trips Strip.[paragraph break]Dreaming on the way back, you picture yourself saying 'SOOTH!' when asked if you'd solved the sortie in an alternate universe.";
 	reg-inc;
 	solve-region sortie instead;
 
@@ -11997,11 +11997,14 @@ check going north in Enclosure:
 		say "As you try to walk through the spread, it reforms into a nasty red asp! You back up quickly.[red-to]";
 		the rule succeeds;
 	if player does not have maps and player does not have Spam:
-		say "You're worried about that notice. What if you get lost?" instead;
+		say "[dibb]It's probably dangerous to go there without some sort of guide." instead;
 	if player does not have shotgun:
-		say "The enemies, whatever they are, must be close, now. You're worried you have no way to protect yourself." instead;
+		say "[dibb]You've got maps to help you, but man. That's scary. You need a weapon." instead;
 	if shotgun is not loaded:
 		say "You don't know what's to the north. [if prep paper is examined]You remember something about a lupine lineup[else if player has prep paper]You read the prep paper to note something about a lupine lineup[else]Things will probably only get more creepy and dangerous[end if], and that unloaded shotgun won't be enough[if silver is off-stage], and you don't have anything that works against them[else], but maybe you can refashion what you have into a different sort of weapon[end if]." instead;
+
+to say dibb:
+	say "A voice booms 'Dash in, be banished!' "
 
 book reg-verbs
 

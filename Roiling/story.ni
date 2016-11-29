@@ -9566,8 +9566,6 @@ after printing the locale description when player is in dusty study and gunter i
 
 rule for printing the name of a dark room: say "No light-glint, oh!"
 
-rule for printing the description of a dark room: say "[one of]You can't see much. You're pretty sure you forgot to replace the bulb on a usual light source, so you'll need something else.[or]Still, no light source.[stopping]"
-
 the player is in Dusty Study.
 
 a rich chair is useless scenery in Dusty Study. "You thought you preferred a recliner but this is real. Nicer. It guards against cushionless slouchiness. Its backrest is shaped like brackets, and it's from Art Beck's. Small things can get stuck in it, or even lost[if pedanto-notepad is on chair]. Like your pedanto-notepad, just sitting on it[end if][if latches are off-stage]. In fact, it seems a bit lumpy now[end if]."
@@ -23752,7 +23750,10 @@ to coin-eval:
 		say "Curtis says 'Boy, you have a lot of goodies now. Wouldn't want to lose them carrying all those fruits.' He helps keep your inventory lean and mean.";
 		now all carried fruits are in lalaland;
 	if number of carried fruits > 0 and temp < 4:
-		say "Curtis relieves you of your burden[if number of carried fruits > 1]s[end if] you found[one of]. He thanks you but is curt[or][stopping].";
+		if number of carried fruits > 4:
+			say "Curtis goes to take your bounty but backs off on seeing how much there is. 'I, old as...' He snaps his fingers. 'A solid load is laid, so! Lo, aids! Oi, lads!' he booms, and a couple assistants carry away your haul[one of]. 'Do sail!' he exhorts you[or][stopping].";
+		else:
+			say "Curtis relieves you of your burden[if number of carried fruits > 1]s[end if] you found[one of]. He thanks you but is curt[or][stopping].";
 		repeat with fru running through carried fruits:
 			now fru is in lalaland;
 	if curtis-level > temp:
@@ -26745,6 +26746,7 @@ presto	"Anagramming caffeine with the cola? Or the bad book in the shack, or the
 presto	"Cursing, or anagramming cursing, anywhere in Presto?"
 oyster	"Anagramming PLAINS in the plains?"
 others	"Trying to get a mango twice in the Clearing?"
+others	"Giving Curtis four or more fruits?"
 
 table of anayux
 reg-needed	yux	do-i-print
