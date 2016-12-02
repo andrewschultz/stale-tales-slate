@@ -33229,6 +33229,7 @@ blurb
 "Bonfire for BEIN['][r], by Rob Fine" []
 "A Bonnier Neo-Brain[r], by [i-n] Ebron"
 "Book List to Bilk So[r], by Otis Kolb"
+"Boom, Jack! Mojo Back[r], by Jacob Mok"
 "Bouts to Bus Out BS[r], by Tubbs Souto" []
 "Bribe, Cuss: Subscribe[r], by [if player is male]Bruce Biss[else]Bess Rubic[end if]" []
 "Bury the Hurt: Bye[r], by Ty Huber"

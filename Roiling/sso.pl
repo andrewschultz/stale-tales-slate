@@ -15,6 +15,8 @@ my $fileOut = "";
 my $titlesPrinted = 0;
 my $titles = "";
 
+my @stuff = ();
+
 my $breakYet = 0;
 my $midPrintYet = 0;
 my $fudge = 0;
@@ -41,11 +43,20 @@ while (my $line = <A>)
 {
   if ($line =~ /[a-z]/i)
   {
-    if (!$breakYet) { $quoted++; }
+    if (($breakYet) && (!$endPrintYet)) { if ($line =~ /^[a-z]/i) { $endPrintYet = 1; } }
+    if (!$breakYet) { $quoted++; if ($line !~ /\[r\]/) { push (@stuff, $line); } }
 	elsif (!$endPrintYet) { $alrSort++ }
 	else { $unanagrammed++; }
   }
-  if (($line !~ /[a-z]/i) && (!$breakYet)) { $fileOut .= $line; $breakYet = 1; next; } # first look for first break
+  if (($line !~ /[a-z]/i) && (!$breakYet))
+  {
+    @stuff = sort { wordsIn($a) <=> wordsIn($b) || length($a) <=> length($b) } (@stuff);
+	$fileOut .= join("", @stuff);
+	$fileOut .= $line;
+	@stuff = ();
+	$breakYet = 1;
+	next;
+  } # first look for first break
   if (($line !~ /[a-z]/i) && ($midPrintYet) && (!$endPrintYet)) { $endPrintYet = 1; } # first look for first break
   if ($breakYet && !$midPrintYet)
   {
@@ -63,7 +74,7 @@ while (my $line = <A>)
   }
   else
   {
-    $fileOut .= $line;
+    if ($breakYet) { $fileOut .= $line; }
     if (($line !~ /[a-z]/i) && (!$breakYet))
     {
 	  if (!$titles) { print "No titles in first bit."; exit;}
@@ -93,6 +104,12 @@ if ($noCopy) { die ("Run again without -d."); }
 
 # the big moment
 `copy /Y tosort2.txt tosort.txt;`;
+
+sub wordsIn
+{
+  my @x = split(/ /, $_[0]);
+  return $#x
+}
 
 sub usage
 {
