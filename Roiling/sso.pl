@@ -5,97 +5,100 @@
 #unanagrammed ideas at the end
 #anagrammed at the start
 #
-#puts all of the titles in the middle of the file
+#puts all of the titles in the middle of the file, if there are any, so I can grab those easily
+#alternative is to get ALL CAPS working
 #
+#future features ALL CAPS separate chunk
+#
+#also tacks on quotes
 
 use strict;
 use warnings;
 
-my $fileOut = "";
-my $titlesPrinted = 0;
-my $titles = "";
-
-my @stuff = ();
-
-my $breakYet = 0;
-my $midPrintYet = 0;
-my $fudge = 0;
-
-my $quoted = 0;
-my $unanagrammed = 0;
-my $alrSort = 0;
-my $endPrintYet = 0;
-
+####options
+my $compare = 0;
 my $noCopy = 0;
+
+my @listLump = ("", "", "");
+my $roil = "c:\\games\\inform\\roiling.inform\\Source";
+
+my $qad = 0;
+my $titlesPrinted = 0;
+my $readingStrings = 1;
+my $curList = 0;
+my $newTitles;
+
+open(A, "$roil\\tosort.txt") || die ("Could not find tosort.txt.");
 
 if (defined($ARGV[0]))
 {
-if (($ARGV[0] eq "-d") || ($ARGV[0] eq "d"))
-{
-  $noCopy = 1;
+  if ($ARGV[0] =~ /c/) { $compare = 1; }
+  if ($ARGV[0] =~ /d/) { $noCopy = 1; }
+  if ($ARGV[0] =~ /f/) { $noCopy = 0; }
+  $ARGV[0] =~ s/[cdf-]//g;
+  if ($ARGV[0]) { usage(); }
 }
-else { usage(); }
-}
-
-open(A, "tosort.txt") || die ("Need to be in ROILING directory.");
 
 while (my $line = <A>)
 {
-  if ($line =~ /[a-z]/i)
-  {
-    if (($breakYet) && (!$endPrintYet)) { if ($line =~ /^[a-z]/i) { $endPrintYet = 1; } }
-    if (!$breakYet) { $quoted++; if ($line !~ /\[r\]/) { push (@stuff, $line); } }
-	elsif (!$endPrintYet) { $alrSort++ }
-	else { $unanagrammed++; }
-  }
-  if (($line !~ /[a-z]/i) && (!$breakYet))
-  {
-    @stuff = sort { wordsIn($a) <=> wordsIn($b) || length($a) <=> length($b) } (@stuff);
-	$fileOut .= join("", @stuff);
-	$fileOut .= $line;
-	@stuff = ();
-	$breakYet = 1;
-	next;
-  } # first look for first break
-  if (($line !~ /[a-z]/i) && ($midPrintYet) && (!$endPrintYet)) { $endPrintYet = 1; } # first look for first break
-  if ($breakYet && !$midPrintYet)
+  if ($readingStrings)
   {
     if ($line =~ /[a-z]/i)
-	{
-	  $fileOut .= $titles; $titlesPrinted = 1; $midPrintYet = 1;
-	  if ($line !~ /\[r\]/) { $fileOut .= "\n"; $fudge = 2; }
+    {
+	  if ($curList == 0)
+	  {
+	    if ($line !~ /^\"/) { $line = "\"$line"; $line =~ s/$/\"/; $qad++; } #add quotes
+	    if ($line =~ /\[r\]/) { $newTitles .= $line; $titlesPrinted++; }
+		else { $listLump[$curList] .= $line; }
+	  }
+	  else { $listLump[$curList] .= $line; }
     }
-  }
-  if (($line =~ /\[r\]/i) && (!$breakYet))
-  {
-    if ($line !~ /^\"/) { print "WARNING need start quotes for $line"; }
-    elsif ($line !~ /.+\"/) { print "WARNING missing end quotes for $line"; }
-	$titles .= $line;
+	else { $readingStrings = 0; }
   }
   else
   {
-    if ($breakYet) { $fileOut .= $line; }
-    if (($line !~ /[a-z]/i) && (!$breakYet))
-    {
-	  if (!$titles) { print "No titles in first bit."; exit;}
-    } 
+    if ($line =~ /[a-z]/i)
+	{
+	  $readingStrings = 1;
+	  $curList++;
+	  if ($curList > 2) { die("Too many line breaks at $.!"); }
+	  $listLump[$curList] .= $line;
+	}
   }
-
 }
 
-close(A);
-open(A, ">tosort2.txt");
+if ($newTitles)
+{
+  if ($listLump[1])
+  {
+    $listLump[2] = $listLump[1];
+	$listLump[1] = "";
+  }
+  $listLump[1] .= $newTitles;
+}
 
-print A "$fileOut";
-close(A);
+my @finalOut;
 
-if ((-s "tosort.txt") + $fudge != -s "tosort2.txt") { die ("Size mismatch (fudge factor $fudge) " . (-s "tosort2.txt") . " < before, after > " . (-s "tosort.txt")); }
-if (!$titlesPrinted) { die ("Oops no titles printed."); }
+for my $l (@listLump) { push (@finalOut, alfPrint($l)); }
 
-print "$quoted quoted to sort, $unanagrammed unanagrammed to sort, $alrSort already sorted.\n";
+open(B, ">$roil/tosort2.txt");
+print B join("\n\n", @finalOut);
+close(B);
 
-# uncomment for debugging purposes
-#die ("Made it, ready to copy back!");
+if ($qad) { print "$qad quotes added!\n"; }
+if ($titlesPrinted) { print "$titlesPrinted titles printed!\n"; }
+
+`wm tosort.txt tosort2.txt`;
+
+die;
+
+sub alfPrint
+{
+  if (!$_[0]) { return; }
+  my @tosort = split(/\n/, $_[0]);
+  @tosort = sort { wordsIn($a) <=> wordsIn($b) || length($a) <=> length($b) } (@tosort);
+  return join("\n", @tosort);
+}
 
 if ($noCopy) { die ("Run again without -d."); }
 
@@ -114,7 +117,9 @@ sub wordsIn
 sub usage
 {
 print<<EOT;
+c/-c is compare post-run
 d/-d is demo mode. The file doesn't change.
+f/-f is force copy.
 EOT
 exit
 }
