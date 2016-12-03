@@ -8982,7 +8982,8 @@ ruby	thin hint	false	331207767	--	"bury"	"bury"	"You bury the ruby with your han
 haunter	haunter	false	462435186	--	"assuage"	"assuage"	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. The hedron is full of no-good-niks. The haunter waits on your next move."
 lever	lever	false	501914680	--	"revel"	"revel"	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
 gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."
-yapper	yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' He motions you to slip him the gleaner behind your back. Then he goes off to find such a judge, presumably."
+yapper	yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' He motions you to slip him the gleaner behind your back. Then he goes off to find such a judge, presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"
+pins	d2	false	291640279	--	
 d2	d2	false	335153504	Strip of Profits	"redial"	"redial"	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range. Between Aunt Tuna, the sardine, and even the reluctant trolls--a story.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Hedron still exerted its hold. Now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
 dialer	dialer	false	335153504	--	"derail"	"derail"	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!' Something dangerous may happen soon."
 
@@ -18075,13 +18076,19 @@ Tenfold Teflon'd Den Loft is an innie room in Oyster. "[one of]You're at the cen
 lev-pull is a truth state that varies.
 
 check taking lever:
-	say "You can really only pull it." instead;
+
+instead of doing something with lever:
+	if action is pushing or action is pulling:
+		say "[if lever is reflexed]It's not fun enough to tinker with, any more.[else]Nothing happens, but you're still just excited to find it. Maybe you can do something superfluous to show that![end if]";
+	if action is procedural:
+		continue the action;
+	say "You're not sure what you can do with the lever, really[if lever is reflexed], and it doesn't seem as fun any more anyway." instead;
 
 check going outside in Den Loft:
 	if lev-pull is true:
 		say "You can't leave now. You're so close. The lever doesn't seem to work any more, but the dialer...maybe..." instead;
 
-the papery yapper is a vanishing person in Den Loft. "A papery yapper, full of sharp edges that would bleed you to death, blocks access to the dialer. He is wearing a stupid paper necklace."
+the papery yapper is a person in Den Loft. "A papery yapper, full of sharp edges that would bleed you to death, blocks access to the dialer. He is wearing a stupid paper necklace."
 
 after fliptoing yapper (this is the A Briber is You rule):
 	now gleaner is in lalaland;
@@ -18159,23 +18166,28 @@ check exiting in Den Loft:
 
 check fliptoing lever:
 	if yapper is visible:
-		say "Nothing to celebrate yet--dispose of the yapper first.";
-		preef lever instead;
+		preef lever;
+		say "Nothing to celebrate yet--dispose of the yapper first." instead;
 
-check pushing lever:
-	try pulling lever instead;
 
-check pulling lever:
-	if yapper is visible:
-		say "The yapper reaches out a papery arm and prevents you." instead;
-	if dialer is reflexive:
-		say "[one of]You hear a dial tone from the dialer, then a voice which can only be Elvira. You can't blow your cover talking to her, so you switch the lever back. Looks like you need to change what the dialer does[or]Annoying Elvira with empty phone calls won't work--you need to set the dialer before pulling the lever[stopping]." instead;
-	if lev-pull is false:
 		say "You pull the lever.[paragraph break]'HEY! Oh! It's the boys from the horned hedron! You pull that lever and...' her voice turns sweet. 'You wouldn't do that, would you? Well, I could send you more...supplies...I'll pretend this didn't happen!'";
-		reg-inc;
-		now d2 is in tenfold;
-		now lev-pull is true instead;
-	say "The lever doesn't seem to do anything more. Maybe you need to futz with the dialer." instead;
+
+chapter pins
+
+[?? if player has pills then reg-inc]
+
+some pins are scenery. "The pins cover the dialer. There's probably more than one way to get rid of them, but right now, they're blocking you from using it again. Or, in other words, from...wait for it...[paragraph break]PS'in."
+
+understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when player is in hedron and pins are in hedron.
+
+instead of doing something with pins:
+	if action is dropping:
+		say "Only twenty-four combinations. Two work. The pin(s) will drop." instead;
+	if action is taking:
+		say "They'd poke you nastily. Give you nips and all." instead;
+	if action is procedural:
+		continue the action;
+	say "You need to get the pins out of the way, but don't worry, it's pretty simple." instead;
 
 chapter redialing
 
@@ -18183,7 +18195,7 @@ the d2 is privately-named unscannable reflexive scenery. d2 is undesc. printed n
 
 a-text of d2 is "RYRYYR". b-text of d2 is "RYRYYR". parse-text of d2 is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
 
-understand "redial" as a mistake ("[if yapper is visible]You can't even [i]dial[r] with the yapper around[else if dialer is reflexive]Maybe in a bit, but you haven't even dialed yet[else]Maybe in a bit, but you haven't pulled the lever to activate the DERAIL command yet[end if].") when lev-pull is false and player is in tenfold.
+understand "redial" as a mistake ("[if yapper is visible]You can't even [i]dial[r] with the yapper around[else if dialer is reflexive]Maybe in a bit, but you haven't even dialed yet[else]Maybe in a bit, but the pins are in the way at the moment[end if].") when pins are in hedron and player is in tenfold.
 
 check fliptoing d2:
 	if lev-pull is false:
@@ -26258,7 +26270,8 @@ ant	"[one of]You can't outright attack the ant. You poke at it ineffectually. So
 yapper	"[one of]The settler on cheat mode gives confusing readings here because PAPERY and YAPPER clash.[plus][or]So if you use the settler, you may note that five of the letters are right. But maybe you want to solve this the old-fashioned way.[plus][or]He seems to be asking for a bribe and not asking for one at the same time. He needs to be compensated before he lets you do anything.[plus][or]If you give the yapper an item, he indicates he could be bribed...if it were valuable. He likes the pearl.[plus][or]You can just PREPAY the yapper.[minus][cycling]"
 intercom	"The intercom is controlled by the dialer."
 jumble	"The jumble reorganizes when you set the dialer."
-lever	"[if lev-pull is true][one of]Aren't you happy to have found the lever?[plus][or]Don't last lousy points make you feel excited and like you want to party?[plus][or]Or REVEL?[minus][cycling][else][one of]Fiddling with the lever does nothing on its own, at first.[plus][or]You'll want to concentrate on the dialer, instead.[plus][or]Once you've done that, PULL the lever to do something else with the dialer.[minus][cycling][end if]"
+pins	"[one of]There are two solutions here to get them out of the way. One is more sensible, given your inventory, but both work.[minus][or]The pins are tangled together, and you can use force or finesse.[minus][or]SPIN them, or SNIP them.[plus][cycling]"
+lever	"[if lever is reflexed][one of]Aren't you happy to have found the lever?[plus][or]Don't last lousy points make you feel excited and like you want to party?[plus][or]Or REVEL?[minus][cycling][else][one of]Fiddling with the lever does nothing on its own, at first.[plus][or]You'll want to concentrate on the dialer, instead.[plus][or]Once you've done that, PULL the lever to do something else with the dialer.[minus][cycling][end if]"
 d2	--	dialer
 dialer	"[one of]The dialer is dangerous and destructive. But it's also flexible.[plus][or][if dialer is reflexive]You already found[else]You may see[end if] the dialer can REDIAL, but what else can you have it do?[plus][or][unless d2 is reflexed]DERAIL. [else]Here's what's left: [end if][if lev-pull is false]PULL LEVER. [end if]REDIAL.[minus][cycling]"	[end OYSTER hinting]
 Rosetta Toaster	"[one of]You can use it to gain hints, but you need to clear the serpent to take it.[plus][or]Just put the food in the toaster and then XRAY anyone blocking your path.[minus][cycling]" [begin towers hinting]
