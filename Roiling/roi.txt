@@ -741,9 +741,17 @@ MARGINAL.
 They're patient and willing to explain their views.
 Could you make them hurry up so they give up?
 Yes, make them HASTIEST.
+?Bluster Butlers
+Making them more circumspect could help them move up in the world, and away from here.
+They can become SUBTLER.
 ?Bonker
 It works perfectly.
 Til it's BROKEN.
+Oh, look, something else! We'll tackle that at the end.
+?Dandier Arid Den
+It won't let you pass without buying its product, NERD-AID.
+It's endorsed by, among others, ED INDAR.
+Make the den, or the bottles, DRAINED.
 ?"Flemish" man with inapt paint.
 The inapt paint is wrong.
 His name is Mel Fish, and that's in red.
@@ -756,12 +764,6 @@ If the madness became whining...
 ?Muscly hulk
 Strength doesn't matter without dexterity.
 So make him CLUMSY.
-?Nameless salesmen
-It's LAMENESS to mess with them.
-They like to focus on their product, NERD-AID.
-Plus they are proud of their clothes by ED INDAR.
-They are DANDIER.
-Make them DRAINED.
 ?Natives
 These guys could be one thing, or the other.
 If you want to sucker them with pride, VAINEST.
@@ -783,15 +785,16 @@ The deal seer hits the Reed's Ale quite hard!
 They feel trapped in their life and can't stop drinking.
 You can help them get RELEASED.
 The Reed's ale can also become RESEALED.
-?Bluster Butlers
-Making them more circumspect could help them move up in the world, and away from here.
-They can become SUBTLER.
 ?Sweatier wait-seer
 He doesn't seem to get tired of blocking you.
 Make him WEARIEST.
 ?Unripe i-Prune
 Whatever it is, it's terrifyingly big.
 Make it PUNIER.
+?The stinger replaced the bonker!
+It sure is vigilant.
+How to lower its energy?
+Make it RESTING.
 >>LOCATIONS THAT DON'T 100% MATTER
 ?Which ones have nothing besides guardians??
 Ole Shrine Shoreline and Salted Deltas.
@@ -1174,7 +1177,13 @@ REVEL.
 There's also a clump of letters that can be relaid.
 DIALER may become something else.
 DERAIL.
-You need to pull the lever, then redo DERAIL. Try again.
+?Oh no! Pins are blocking the dialer!
+Two solutions here.
+They aren't lethal, but they are annoying.
+SPIN or SNIP them.
+?What else do I do with the dialer?
+Well, you can DERAIL again...
+...or you can find another way to call back.
 REDIAL.
 >STORE T
 >>WHAT I CAN DO WHEN I'M POWERLESS?

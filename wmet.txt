@@ -62,9 +62,9 @@ mazeltov/umph/pooh/drat/rats/ole/darn/whassup/bleep/bingo/there/syke/later/solon
 Store P (max)
 blam/mazeltov/umph/phooey/drat/rats/ole/darn/whassup/bleep/bingo/there/syke/later/solong/capslock/mug/leaf/skid/cola/futon/keyboard/screen/rom sticks/casserole/reboot/tab/sleep/compile/debug/sub
 Store Y (min)
-spill/stroll/calm/run/boast/scrap/seek/eat/tutor/kiss/trace/react/bonk/bust/drop/warp/bury/unearth/assuage/search/enlarge/patrol/prepay/derail/redial
+spill/stroll/calm/run/boast/scrap/seek/eat/tutor/kiss/trace/react/bonk/bust/drop/warp/bury/unearth/assuage/search/enlarge/patrol/prepay/derail/spin/redial
 Store Y (max)
-sing/spit/inset/stroll/calm/run/fart/soar/scrap/scan/seek/eat/tutor/tend/swipe/kiss/trace/react/splain/bonk/bust/drop/sweat/clean/shape/warp/bury/unearth/assuage/search/enlarge/patrol/tan/prepay/revel/derail/redial
+sing/spit/inset/stroll/calm/run/fart/soar/scrap/scan/seek/eat/tutor/tend/swipe/kiss/trace/react/splain/bonk/bust/drop/sweat/clean/shape/warp/bury/unearth/assuage/search/enlarge/patrol/tan/prepay/revel/derail/spin/redial
 Store W (min)
 awed/coyer/weedy/yonder/creaky/subtler/clumsy/punier/pastier/resealed/hostile/organised/married/hostile/hastiest/broken/resting/wordy/unlocked/attentive/rowdy/stabler/robust/spectacular
 Store W (max)
