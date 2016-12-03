@@ -34,6 +34,7 @@ my $newTitles = "";
 my $allCaps = "";
 my $shoutyAds = "";
 my $biopics = "";
+my $movies = "";
 
 open(A, "$roil\\tosort.txt") || die ("Could not find tosort.txt.");
 
@@ -64,6 +65,7 @@ while (my $line = <A>)
 	    elsif ($line =~ /\[r\]/) { $newTitles .= $line; }
 	    elsif ($line !~ /[a-z]/) { $allCaps .= $line; }
 		elsif ($line =~ /\t(true|false)/) { $shoutyAds .= $line; }
+		elsif ($line =~ /\[i\].*\[r\]/) { $movies .= $line; }
 		else { $listLump[$curList] .= $line; }
 	  }
 	  else { $listLump[$curList] .= $line; }
@@ -82,6 +84,7 @@ while (my $line = <A>)
 	  if ($line !~ /[a-z]/i) { $listLump[$curList] = $allCaps; $allCaps = ""; }
 	  elsif ($line =~ /\[r\]/i) { $listLump[$curList] = $newTitles; $newTitles = ""; }
 	  elsif ($line =~ /\t(true|false)/i) { $listLump[$curList] = $shoutyAds; $shoutyAds = ""; }
+	  elsif ($line =~ /\[i\].*\[r\]/i) { $listLump[$curList] = $movies; $movies = ""; }
 	  $listLump[$curList] .= $line;
 	}
   }
@@ -91,6 +94,7 @@ my $rolling = 1;
 if ($allCaps) { splice(@listLump, $rolling, 0, $allCaps); $rolling++; }
 if ($newTitles) { splice(@listLump, $rolling, 0, $newTitles); $rolling++; }
 if ($shoutyAds) { splice(@listLump, $rolling, 0, $shoutyAds); $rolling++; }
+if ($movies) { splice(@listLump, $rolling, 0, $movies); $rolling++; }
 
 my @finalOut;
 
@@ -134,6 +138,9 @@ sub wordsIn
 sub usage
 {
 print<<EOT;
+SSO roughly sorts out anagrams into categories: biopics, regular books, movies, shouty ads, and ALL CAPS entries.
+Sorted are on top, non-sorted on bottom, so ctrl-home/end work. Sorting within is by word then letter length.
+
 c/-c is compare post-run
 d/-d is demo mode. The file doesn't change.
 f/-f is force copy.

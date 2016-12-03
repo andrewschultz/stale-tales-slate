@@ -141,7 +141,7 @@ if ($doShuf) { lookBoth($hash, "shuffling"); }
 if ($doRoil) { lookBoth($hash, "roiling"); }
 if ($doLoc) { lookFor($hash, "c:\\writing\\dict\\hv.txt"); }
 
-if (($printIfThere) || ($anyFound == 0)) { print B "\"$hword	\"\t$hash\t$tabString\t\"some text\"\n"; $worthOpening = 1; }
+if (($printIfThere) || ($anyFound == 0)) { print B "\"$hword\"\t$hash\t$tabString\t\"some text\"\n"; $worthOpening = 1; }
 else { print "Instance found in file, not printing externally. Use -p.\n"; }
 }
 
