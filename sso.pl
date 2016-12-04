@@ -22,12 +22,12 @@ use warnings;
 my $compare = 0;
 my $noCopy = 0;
 my $numbers = 0;
+my $stats = 0;
 
 my @listLump = ("");
 my $roil = "c:\\games\\inform\\roiling.inform\\Source";
 
 my $qad = 0;
-my $titlesPrinted = 0;
 my $readingStrings = 1;
 my $curList = 0;
 
@@ -52,16 +52,19 @@ if (defined($ARGV[0]))
 {
   if ($ARGV[0] =~ /c/) { $compare = 1; }
   if ($ARGV[0] =~ /d/) { $noCopy = 1; }
-  if ($ARGV[0] =~ /e/) { `$roil\\$toSort`; exit(); }
+  if ($ARGV[0] =~ /e/) { `$roil\\toSort.txt`; exit(); }
   if ($ARGV[0] =~ /f/) { $noCopy = 0; }
   if ($ARGV[0] =~ /n/) { $numbers = 1; }
-  $ARGV[0] =~ s/[cdfn-]//g;
+  if ($ARGV[0] =~ /s/) { $stats = 1; }
+  $ARGV[0] =~ s/[cdfns-]//g;
   if ($ARGV[0]) { usage(); }
 }
 
 open(A, "$roil\\tosort.txt") || die ("Could not find tosort.txt.");
 
-while (my $line = <A>)
+my $line;
+
+while ($line = <A>)
 {
   if ($readingStrings)
   {
@@ -104,7 +107,7 @@ while (my $line = <A>)
 	  $readingStrings = 1;
 	  $curList++;
 	  push(@listLump, "");
-	  if ($curList > 5) { die("Too many line breaks at $.!"); }
+	  if ($curList > 15) { die("Too many line breaks at $.!"); }
 	  if ($line =~ /\[r\].*\t(true|false)/) { $listLump[$curList] = $biopics; $biopics = ""; }
 	  if ($line !~ /[a-z]/i) { $listLump[$curList] = $allCaps; $allCaps = ""; }
 	  elsif ($line =~ /\[r\]/i) { $listLump[$curList] = $newTitles; $newTitles = ""; }
@@ -125,6 +128,7 @@ while (my $line = <A>)
 	}
   }
 }
+close(A);
 
 my $rolling = 1;
 if ($allCaps) { splice(@listLump, $rolling, 0, $allCaps); $rolling++; }
@@ -152,13 +156,32 @@ print B join("\n\n", @finalOut);
 close(B);
 
 if ($qad) { print "$qad quotes added!\n"; }
-if ($titlesPrinted) { print "$titlesPrinted titles printed!\n"; }
 
-if ($compare) { `wm $roil\\tosort.txt $roil\\tosort2.txt`; print "Comparing, no copy over."; exit(); }
-if ($noCopy) { print "Did not copy over. Use -f to force or get rid of -d."; exit(); }
+if ($compare) { `wm $roil\\tosort.txt $roil\\tosort2.txt`; print "Comparing, no copy over."; }
+elsif ($noCopy) { print "Did not copy over. Use -f to force or get rid of -d."; }
+else { `copy $roil\\tosort2.txt $roil\\tosort.txt`; }
 
-`copy $roil\\tosort2.txt $roil\\tosort.txt`;
+if ($numbers)
+{
+  open(A, "$roil\\tosort.txt");
+  my $empties = 0;
 
+  while ($line = <A>) { if ($line !~ /[a-z]/i) { $empties++; } }
+
+  print "$. $empties\n";
+  my $totalNonEmpty = $. - $empties;
+  close(A);
+
+  my ($second, $minute, $hour, $dayOfMonth, $month, $yearOffset, $dayOfWeek, $dayOfYear, $daylightSavings) = localtime(time);
+  my @left = split(/\n/, $finalOut[0]);
+  my @uns = split(/\n/, $finalOut[$#finalOut]);
+  my $out = sprintf("%d,%d,%d,%d-%02d-%02d %02d:%02d:%02d\n", ($#left+1), ($#uns+1), $totalNonEmpty, $yearOffset+1900, $month+1, $dayOfMonth+1, $hour, $minute, $second);
+  open(B, ">>$roil\\sso-stat.txt");
+  printf B $out;
+  close(B);
+}
+
+if ($stats) { `$roil\\sso-stat.txt`; }
 
 sub alfPrint
 {
@@ -167,8 +190,6 @@ sub alfPrint
   @tosort = sort { wordsIn($a) <=> wordsIn($b) || length($a) <=> length($b) } (@tosort);
   return join("\n", @tosort);
 }
-
-if ($noCopy) { die ("Run again without -d."); }
 
 # in case anything happens
 `copy /Y tosort.txt tosort-bk.txt`;
@@ -195,6 +216,8 @@ d/-d is demo mode. The file doesn't change.
 e/-e edits tosort.txt.
 f/-f is force copy.
 n/-n runs the numbers.
+s/-s opens the stats after
+dns is good for doing the stats etc
 EOT
 exit
 }
