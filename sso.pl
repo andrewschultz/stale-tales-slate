@@ -21,6 +21,7 @@ use warnings;
 ####options
 my $compare = 0;
 my $noCopy = 0;
+my $numbers = 0;
 
 my @listLump = ("");
 my $roil = "c:\\games\\inform\\roiling.inform\\Source";
@@ -35,17 +36,30 @@ my $allCaps = "";
 my $shoutyAds = "";
 my $biopics = "";
 my $movies = "";
-
-open(A, "$roil\\tosort.txt") || die ("Could not find tosort.txt.");
+my $fgp = "";
+my $mgp = "";
+my $igp = "";
+my $xgp = "";
+my $pgp = "";
+my $vgp = "";
+my $wgp = "";
+my $ygp = "";
+my $ugp = "";
+my $tgp = "";
+my $hgp = "";
 
 if (defined($ARGV[0]))
 {
   if ($ARGV[0] =~ /c/) { $compare = 1; }
   if ($ARGV[0] =~ /d/) { $noCopy = 1; }
+  if ($ARGV[0] =~ /e/) { `$roil\\$toSort`; exit(); }
   if ($ARGV[0] =~ /f/) { $noCopy = 0; }
-  $ARGV[0] =~ s/[cdf-]//g;
+  if ($ARGV[0] =~ /n/) { $numbers = 1; }
+  $ARGV[0] =~ s/[cdfn-]//g;
   if ($ARGV[0]) { usage(); }
 }
+
+open(A, "$roil\\tosort.txt") || die ("Could not find tosort.txt.");
 
 while (my $line = <A>)
 {
@@ -66,6 +80,17 @@ while (my $line = <A>)
 	    elsif ($line !~ /[a-z]/) { $allCaps .= $line; }
 		elsif ($line =~ /\t(true|false)/) { $shoutyAds .= $line; }
 		elsif ($line =~ /\[i\].*\[r\]/) { $movies .= $line; }
+		elsif ($line =~ /\"f$/) { $fgp .= $line; }
+		elsif ($line =~ /\"m$/) { $mgp .= $line; }
+		elsif ($line =~ /\"i$/) { $igp .= $line; }
+		elsif ($line =~ /\"x$/) { $xgp .= $line; }
+		elsif ($line =~ /\"p$/) { $pgp .= $line; }
+		elsif ($line =~ /\"v$/) { $vgp .= $line; }
+		elsif ($line =~ /\"w$/) { $wgp .= $line; }
+		elsif ($line =~ /\"y$/) { $ygp .= $line; }
+		elsif ($line =~ /\"u$/) { $ugp .= $line; }
+		elsif ($line =~ /\"t$/) { $tgp .= $line; }
+		elsif ($line =~ /\"h$/) { $hgp .= $line; }
 		else { $listLump[$curList] .= $line; }
 	  }
 	  else { $listLump[$curList] .= $line; }
@@ -85,6 +110,17 @@ while (my $line = <A>)
 	  elsif ($line =~ /\[r\]/i) { $listLump[$curList] = $newTitles; $newTitles = ""; }
 	  elsif ($line =~ /\t(true|false)/i) { $listLump[$curList] = $shoutyAds; $shoutyAds = ""; }
 	  elsif ($line =~ /\[i\].*\[r\]/i) { $listLump[$curList] = $movies; $movies = ""; }
+	  elsif ($line =~ /\"f/i) { $listLump[$curList] = $fgp; $fgp = ""; }
+	  elsif ($line =~ /\"m/i) { $listLump[$curList] = $mgp; $mgp = ""; }
+	  elsif ($line =~ /\"i/i) { $listLump[$curList] = $igp; $igp = ""; }
+	  elsif ($line =~ /\"x/i) { $listLump[$curList] = $xgp; $xgp = ""; }
+	  elsif ($line =~ /\"p/i) { $listLump[$curList] = $pgp; $pgp = ""; }
+	  elsif ($line =~ /\"v/i) { $listLump[$curList] = $vgp; $vgp = ""; }
+	  elsif ($line =~ /\"w/i) { $listLump[$curList] = $wgp; $wgp = ""; }
+	  elsif ($line =~ /\"y/i) { $listLump[$curList] = $ygp; $ygp = ""; }
+	  elsif ($line =~ /\"u/i) { $listLump[$curList] = $ugp; $ugp = ""; }
+	  elsif ($line =~ /\"t/i) { $listLump[$curList] = $tgp; $tgp = ""; }
+	  elsif ($line =~ /\"h/i) { $listLump[$curList] = $hgp; $hgp = ""; }
 	  $listLump[$curList] .= $line;
 	}
   }
@@ -95,6 +131,17 @@ if ($allCaps) { splice(@listLump, $rolling, 0, $allCaps); $rolling++; }
 if ($newTitles) { splice(@listLump, $rolling, 0, $newTitles); $rolling++; }
 if ($shoutyAds) { splice(@listLump, $rolling, 0, $shoutyAds); $rolling++; }
 if ($movies) { splice(@listLump, $rolling, 0, $movies); $rolling++; }
+if ($fgp) { splice(@listLump, $rolling, 0, $fgp); $rolling++; }
+if ($mgp) { splice(@listLump, $rolling, 0, $mgp); $rolling++; }
+if ($igp) { splice(@listLump, $rolling, 0, $igp); $rolling++; }
+if ($xgp) { splice(@listLump, $rolling, 0, $xgp); $rolling++; }
+if ($pgp) { splice(@listLump, $rolling, 0, $pgp); $rolling++; }
+if ($vgp) { splice(@listLump, $rolling, 0, $vgp); $rolling++; }
+if ($wgp) { splice(@listLump, $rolling, 0, $wgp); $rolling++; }
+if ($ygp) { splice(@listLump, $rolling, 0, $ygp); $rolling++; }
+if ($ugp) { splice(@listLump, $rolling, 0, $ugp); $rolling++; }
+if ($tgp) { splice(@listLump, $rolling, 0, $tgp); $rolling++; }
+if ($hgp) { splice(@listLump, $rolling, 0, $hgp); $rolling++; }
 
 my @finalOut;
 
@@ -139,11 +186,15 @@ sub usage
 {
 print<<EOT;
 SSO roughly sorts out anagrams into categories: biopics, regular books, movies, shouty ads, and ALL CAPS entries.
-Sorted are on top, non-sorted on bottom, so ctrl-home/end work. Sorting within is by word then letter length.
+You can also specify the store area at the end of the quotes. X means the name list to start SA.
+
+Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sorting within is by word then letter length.
 
 c/-c is compare post-run
 d/-d is demo mode. The file doesn't change.
+e/-e edits tosort.txt.
 f/-f is force copy.
+n/-n runs the numbers.
 EOT
 exit
 }
