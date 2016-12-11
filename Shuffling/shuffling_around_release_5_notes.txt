@@ -2,13 +2,15 @@ Shuffling Around Release 5 Notes
 
 This fixed one bug Sean M. Shore found in A Roiling Original. The problem was that the saltine could be used on an item you've prefigured or hinted, which essentially renders it useless. So there's not much new mechanically. There are other minor things, including some code cleanup and also small game text tweaks.
 
+The big fixes are probably in Store R. The first two room names are different. The dial in the centrifuge is handled a bit differently, and Lord Ablemiser's name was changed too.
+
 --1000 poem codas and 1000 job competitor names
 --hinting disambiguation is better
 --over 3500 total random texts
 --all random lists have at least 40 words
---final list-of-lists once you win touchup
 --tweaks to the Trizbort map
---you can now see only 30 names or maps unless you win
+--the game loops after 30 random names or maps, unless you win.
+  --the final list-of-lists once you win is touched up too
 --certify/rectify usage tweaks
 --last scan now appears/stays in header until solved
 --you now have the ability to interpret gadget showings with PARSE or turn it off with SPARE

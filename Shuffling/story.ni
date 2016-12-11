@@ -378,7 +378,7 @@ words	"The words [if words are in noise bag]slash at the bag a bit[else]seem to 
 beats	"The beats shift up for a second."
 siren	"The siren continues to blind you--like it's throwing dust in your eyes."
 neon pig	"The neon pig blinks as if in last-ditch defiance."
-ts	"The tiles rattle as if to shift but settle down." [resort start]
+tiles	"The tiles rattle as if to shift but settle down." [resort start]
 swing	"The swing goes slightly airborne."
 tool shed	"You hear an unseen hinge neigh as if in defiance."
 rock	"Hmm, a rock, but only so much you can do with it."
@@ -1532,8 +1532,9 @@ hilt	"[if siren is in abyss]The hilt is too slippery to grab[else]Now that you g
 beats	"[if player is not in abyss]Nothing to do about the beats until you get to the source.[else]The beats can be changed into a BEAST.[end if]"
 beast	"You need to attack the beast with a weapon! You [if sword is off-stage]don't have one[else]can use your sword[end if]."
 emitter	"[if dry cake is in condo]The emitter is useful to lower property values. Specifically, the condo's.[else]You can show the emitter to the deadbeat. The angst gnats are another way through a puzzle.[end if]"
-ts	"[one of]Hm, weird colored tiles. Blue all around. Brown. Sort of like store F and Forest. [plus][or]The TILES become an ISLET. [minus][cycling]" [START RESORT]
-leis	"They're, well...wait for it...lies. They're not what you really want to be after."
+tiles	"[one of]Hm, weird colored tiles. Blue all around. Brown. Sort of like store F and Forest. [plus][or]The TILES become an ISLET. [minus][cycling]" [START RESORT]
+stile	"[one of]The tiles provide a visual clue, but the stile is just to reinforce things.[plus][or]It's reddish tinged, so you know all the letters are wrong.[plus][or]The TILES/STILE become an ISLET. [minus][cycling]"
+leis	"They're not what you want to be after. You may or may not notice an anagram, here."
 swing	"[one of]The swing can get you up in the air, but maybe you can go even higher. [plus][or]The swing can become WINGS, too. [minus][cycling]"
 wings	"The wings will let you go up or east over the water."
 cork	"The cork will let you go east over the water."
@@ -1797,8 +1798,8 @@ rock-first is a truth state that varies.
 isle-clue is a truth state that varies.
 
 carry out resort-hinting:
-	if player is in tiles:
-		try objhinting ts instead;
+	if player is in Astral Altars:
+		try objhinting tiles instead;
 	if player is in Isle:
 		if cork is visible or wings are visible:
 			all-say "You've found one way across the water[if cork is off-stage], though you can HINT ROCK for another[else if wings are off-stage], though you can HINT SWING for another[end if]." instead;
@@ -2210,7 +2211,7 @@ Include (-
 
 does the player mean doing something with location of the player: it is unlikely.
 
-instead of doing something with the location of the player:
+instead of doing something with the location of the player (this is the location is too general rule) :
 	if current action is examining, continue the action;
 	say "You may need to change your location at some time, but you never need to do anything with it in a command."
 
@@ -2219,10 +2220,11 @@ xrooming is an action applying to one visible thing.
 understand "x [any room]" as xrooming.
 understand "examine [any room]" as xrooming.
 
-check examining location of player:
-	if noun is location of player:
-		say "X/EXAMINE (ROOM) is equivalent to LOOK in Shuffling Around.";
-		try looking instead;
+check examining location of player (this is the fake the scenery rule) :
+	if noun is astral altars:
+		say "The altars are probably mostly for showcasing the tiles and stile." instead;
+	say "X/EXAMINE (ROOM) is usually equivalent to LOOK in Shuffling Around. Sometimes it will describe scenery for you, but it doesn't have critical information.";
+	try looking instead;
 
 check xrooming:
 	if noun is location of player:
@@ -3384,7 +3386,7 @@ words	sword	"sword"	"words"	"[if player has sheath]The words go slippery, claimi
 
 table of Resort anagrams
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
-ts	teleporter	"islet"	"tiles"	"The tiles crumble and shift around and spread across the floor of the altars! The stile blossoms into a tree. The ground turns softer under you"	false	425996778	--	false	Isle
+tiles	teleporter	"islet"	"tiles"	"The tiles crumble and shift around and spread across the floor of the altars! The stile blossoms into a tree. The ground turns softer under you"	false	425996778	--	false	Isle
 rock	cork	"cork"	"rock"	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143
 swing	wings	"wings"	"swing"	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
 sprig	grips	"grips"	"sprig"	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
@@ -3732,7 +3734,7 @@ when play begins (this is the don't use any other besides status window when pla
 		if Q is a sto:
 			move Q to Trips Strip;
 	now last-loc of sortie is Centrifuge;
-	now last-loc of resort is tiles;
+	now last-loc of resort is Astral Altars;
 	now last-loc of metros is underside;
 	now last-loc of forest is sf;
 	now the peasant has the hay;
@@ -4592,9 +4594,6 @@ rule for supplying a missing noun when xmxing:
 	if player is in roman manor:
 		now noun is final-exits;
 		continue the action;
-	if player is in tiles:
-		now noun is ts;
-		continue the action;
 	say "Nothing really sticks out. You may have to XX something specific.";
 	reject the player's command;
 
@@ -4754,8 +4753,11 @@ carry out xmxing:
 	if noun is neon pig:
 		say "[v-b]you see an opening where the pig is.";
 		ditch-saltine instead;
-	if noun is ts: [start resort]
+	if noun is tiles: [start resort]
 		say "As your vision blurs, the tiles['] blue, green and brown re-form to make an islet.";
+		ditch-saltine instead;
+	if noun is tiles: [start resort]
+		say "As your vision blurs, the stile seems to stand over a small islet.";
 		ditch-saltine instead;
 	if noun is protest:
 		say "You see the trio stopping their protest to get to work as potters.";
@@ -4891,7 +4893,7 @@ rule for supplying a missing noun (this is the scan the location if you can rule
 
 to decide whether can-scan-air:
 	if player is in the nick, yes;
-	if player is in tiles, yes;
+	if player is in Astral Altars, yes;
 	if player is in roomroom, yes;
 	if player is in moor and anapest is in lalaland, yes;
 	if player is in roman manor, yes;
@@ -4900,8 +4902,6 @@ to decide whether can-scan-air:
 to read-gadget:
 	if player is in the nick:
 		say "[gad][if gadget is cert]seven reds on its screen[else][bcn][bc][bc][rc][bc][bc][gc][end if].";
-	else if player is in tiles:
-		say "Your gadget's not near anything, but it's registering [if gadget is cert][rcn][rc][gc][gc][rc][else][rcn][gc][bc][bc][bc][end if].";
 	else if player is in roomroom:
 		say "Your gadget's not near anything, but it's registering [if gadget is cert][rcn][gc][gc][rc][else][rcn][bc][bc][gc][end if].";
 	else if player is in moor:
@@ -5359,7 +5359,7 @@ carry out gleaning:
 			all-say "A quick swordfight, and the beast is vanquished!" instead;
 		all-say "Words morph into a sword that overpowers the beast." instead;
 	if mrlp is resort:
-		if player is in tiles:
+		if player is in Astral Altars:
 			all-say "You watch as the tiles shring from a large land mass to a smaller one." instead;
 		if player is in Isle:
 			all-say "You see yourself either swimming or flying east, but not without proper gear." instead;
@@ -6042,7 +6042,7 @@ check fliptoing the r-p:
 
 check entering the r-p:
 	say "'You! Find! Unify! Do!' a voice booms. You stride into the resort thinking 'Gee. Damn. Endgame.' But it is a mirage! You're gamier than to let that bother you, though, even though you hardly seem to be in paradise.";
-	now the player is in tiles instead;
+	now the player is in Astral Altars instead;
 
 book Forest
 
@@ -9981,39 +9981,33 @@ stickyhanded is a truth state that varies. stickyhanded is usually false.
 
 book resort
 
-chapter tiles
+chapter Astral Altars
 
-Tiles is a room in Resort. "Tiles, tiles, tiles. As far as you can see. And if you look too long, you see red instead of the actual tile colors.[paragraph break]This doesn't look like a comfortable place for a nice long vacation[if player has gadget][beepity-tiles][end if][if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]."
+Astral Altars is a room in Resort. "Well, maybe you won't find your vacation spot right away. Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]."
 
-understand "lites" as a mistake ("Light isn't the problem here. It's [if player is in Isle]getting off the [isle][else]not having anywhere to go[end if].") when player is in tiles or player is in Isle
+check going nowhere in astral altars:
+	say "As you step away from the altars, a weird barrier blocks you. It's very tarsal." instead;
 
-to say beepity-tiles:
-	say ". Your gadget jostles a bit";
+understand "lites" as a mistake ("Light isn't the problem here. It's not having anywhere to go.") when player is in Astral Altars
 
-instead of going in Tiles:
-	say "It's all tiles as far as you can see. You've barely had to walk great distances all game, and you're not starting now."
+tiles are plural-named scenery in Astral Altars
 
-ts are plural-named proper-named privately-named scenery in tiles. understand "tiles" and "tile" as ts. printed name of ts is "the tiles".
+the stile is scenery in Astral Altars
 
-understand "colors" as ts.
+the tiles are flippable. gpos of tiles is 2. rpos of tiles is 1. lgth of tiles is 5. the rgtext of tiles is "[rc][rc][gc][gc][rc]". the lgth of tiles is 5. gpos of tiles is 2. rpos of tiles is 1. cert-text of tiles is "-[d1][ast]L[ast]E[d1]". rect-text of tiles is "I[d1][d1][d1][ast]T".
 
-the ts are flippable. gpos of ts is 2. rpos of ts is 1. lgth of ts is 5. the rgtext of ts is "[rc][rc][gc][gc][rc]". the lgth of ts is 5. gpos of ts is 2. rpos of ts is 1. cert-text of ts is "-[d1][ast]L[ast]E[d1]". rect-text of ts is "I[d1][d1][d1][ast]T".
+description of tiles is "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one."
 
-description of ts is "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one."
-
-instead of doing something with the ts:
+instead of doing something with scenery in Altars:
 	if action is procedural:
 		continue the action;
-	say "It looks like you probably just have to work your magic on them again. There can't be that many possibilities."
+	say "You probably need to do something with, or to, the stile and tiles."
 
-check going in tiles:
-	say "One way looks as good as the others. You'd probably collapse from exhaustion before you got anywhere.";
-
-understand "slite" as a mistake ("That's bad spelling, and it won't shrink your problems.") when player is in ts.
+understand "slite" as a mistake ("That's bad spelling, and it won't shrink your problems.") when player is in Astral Altars.
 
 chapter Isle
 
-Isle is a room in Resort. "[if leis are in isle]Well, this is a little more like a RESORT. It's just covered with Leis. [end if]You can see land way to the east[if leis are not in isle], and you probably want to get going that way, too[end if]."
+Isle is a room in Resort. "[if leis are in isle]Well, this is a little more like a RESORT. It's just covered with leis. [end if]You can see land way to the east[if leis are not in isle], and now the leis here were exposed, you probably want to get going that way, too[end if]."
 
 printed name of Isle is "[if Leis are in Isle]Leis[else]Lies[end if] Isle"
 
@@ -10024,7 +10018,7 @@ does the player mean doing something with the leis: it is likely.
 
 the leis are scenery in isle. "Looking at them, you half forget you came through Store R to beat Red Bull Burdell."
 
-understand "lies" as a mistake ("[lei-lala]'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is") when player is in isle and leis are in isle.
+understand "lies" and "lie" as a mistake ("[lei-lala]'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is") when player is in isle and leis are in isle.
 
 to say lei-lala:
 	now leis are in lalaland;
@@ -10051,7 +10045,7 @@ description of tree is "It has ALOFT scratched into it[one of]. An arrow points 
 
 section swing - wings
 
-the swing is a thing in Isle. "You see a rudimentary swing hanging from a tree here."
+the swing is a thing in Isle. "A rudimentary swing hangs from a tree here."
 
 instead of taking the swing:
 	say "It's tied, and you can't climb to untie it."
@@ -11220,8 +11214,6 @@ carry out scaning:
 	now ever-scan is true;
 	now gadget is examined;
 	now last-was-cert is whether or not gadget is cert;
-	if noun is tiles:
-		say "It's [if gadget is cert][rc][rc][gc][gc][rc][else][rc][gc][bc][bc][bc][end if], all up and down the tiles." instead;
 	if noun is chicken liver or noun is cow liver:
 		say "You see five red lights in a row--but you only see the [if noun is cow liver]bottom[else]top[end if] half of them. Odd." instead;
 	if noun is dial:
@@ -12985,8 +12977,8 @@ understand "read [something]" as reading.
 reading is an action applying to one thing.
 
 check reading (this is the reading is almost examining rule):
-	if noun is ts:
-		say "The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out ST. ELI. But the effort, your eyes water, and you see red a bit." instead;
+	if noun is tiles:
+		say "The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But the effort, your eyes water, and you see red a bit." instead;
 	if noun is great grate:
 		try examining the branding instead;
 	if noun is toga:
@@ -13621,7 +13613,7 @@ index map with terminal mapped north of slough.
 index map with abyss mapped west of elm train terminal.
 
 [roster]
-index map with tiles mapped east of sf.
+index map with Astral Altars mapped east of sf.
 index map with Isle mapped south of sf.
 index map with woodland mapped east of Isle.
 index map with hotspot mapped east of woodland.
@@ -14075,7 +14067,7 @@ carry out rjing:
 	if rj is 3:
 		move player to undesired underside;
 	if rj is 4:
-		move player to tiles;
+		move player to Astral Altars;
 	if rj is 5:
 		move player to roman manor;
 		say "Debug-testing note: EXIST to win.";
@@ -14254,7 +14246,7 @@ section talk-testing
 
 test gman with "in/goat/in/gateman/ask about abc/ask about him" in subsite.
 
-test alltalk with "ask about me/ask about xyz/in/door/blot/in/goat/in/ask about me/ask about xyz/north/ask about me/ask about xyz/gateman/ask about me/ask about xyz/gonear deadbeat/ask about me/ask about xyz/gonear faeries/ask about me/ask about xyz/gonear night thing/ask about me/ask about xyz/gonear nerds/ask about me/ask about xyz/gonear woeful pat/ask about me/ask about xyz/ask about xyz/peasant/ask about me/ask about xyz/gonear talkers/ask about me/ask about xyz/gonear tiles/islet/cork/e/grips/ropes/slope/u/ask about me/ask about xyz/trio/ask about me/ask about xyz/potters/kilns/ask about me/ask about xyz/gonear frost forts/ask about me/ask about xyz/gonear frost forts/wolves/ask about me/ask about xyz/gonear turnstile/ask about me/ask about xyz/gonear liches/ask about me/ask about xyz/" in subsite.
+test alltalk with "ask about me/ask about xyz/in/door/blot/in/goat/in/ask about me/ask about xyz/north/ask about me/ask about xyz/gateman/ask about me/ask about xyz/gonear deadbeat/ask about me/ask about xyz/gonear faeries/ask about me/ask about xyz/gonear night thing/ask about me/ask about xyz/gonear nerds/ask about me/ask about xyz/gonear woeful pat/ask about me/ask about xyz/ask about xyz/peasant/ask about me/ask about xyz/gonear talkers/ask about me/ask about xyz/gonear Astral Altars/islet/cork/e/grips/ropes/slope/u/ask about me/ask about xyz/trio/ask about me/ask about xyz/potters/kilns/ask about me/ask about xyz/gonear frost forts/ask about me/ask about xyz/gonear frost forts/wolves/ask about me/ask about xyz/gonear turnstile/ask about me/ask about xyz/gonear liches/ask about me/ask about xyz/" in subsite.
 
 test default-talk with "gonear red bull/ask about me/ask about xyz/gonear woeful pat/ask about me/ask about xyz" in subsite.
 
@@ -14401,15 +14393,15 @@ test res-all with "sk 1/sk 2/sk 3/test r0/ua 4/test r1/ua 4/test r2/ua 4"
 
 test resort with "resort/enter resort/islet/cork/wings/e/slope/grips/ropes/toeholds/e/trio/potters/china/kilns/tug toe/e/exist" in trips strip
 
-test rq with "gonear tiles/islet/cork/wings/e/slope/grips/ropes/toeholds/e/trio/potters/kilns/tug toe/e/exist" in trips strip
+test rq with "gonear Astral Altars/islet/cork/wings/e/slope/grips/ropes/toeholds/e/trio/potters/kilns/tug toe/e/exist" in trips strip
 
 test r0 with "resort/enter resort/islet/cork/wings/e/slope/grips/ropes/toeholds/e/trio/potters/kilns/tug toe/e/v rm" in trips strip
 
-test r1 with "gonear tiles/islet/cork/e/toeholds/slope/e/trio/potters/kilns/tug toe/e/v rm" in tiles
+test r1 with "gonear Astral Altars/islet/cork/e/toeholds/slope/e/trio/potters/kilns/tug toe/e/v rm" in Astral Altars
 
-test r2 with "gonear tiles/islet/wings/e/slope/grips/ropes/e/trio/kilns/potters/tug toe/e/v rm" in tiles
+test r2 with "gonear Astral Altars/islet/wings/e/slope/grips/ropes/e/trio/kilns/potters/tug toe/e/v rm" in Astral Altars
 
-test toolclue with "scan tiles/swap/scan tiles/islet/cork/e/grips/ropes/v rm" in tiles
+test toolclue with "scan tiles/swap/scan tiles/islet/cork/e/grips/ropes/v rm" in Astral Altars
 
 volume programmer testing commands - not for release
 

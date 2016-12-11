@@ -458,7 +458,10 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 table of Resort nudges
 this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "resort"	572190276	--	--	degen-true rule	"[reg-rej]."
-"tile"	329722812	tiles	--	--	"You need to deal with all the tiles."
+"astral"	342897262	Astral Altars	--	--	"[loc-rej]."
+"altar"	246623296	Astral Altars	--	--	"[loc-rej]."
+"leis"	322886760	Isle	--	--	"[loc-rej]."
+"lie"	226612794	Isle	--	--	"[loc-rej]."
 "sand"	188398381	Isle	--	--	"[the-sand]."
 "thesand"	456596807	Isle	--	--	"[the-sand]."
 "islet"	425996778	Isle	--	--	"Nothing happens. You may need to deal with something specific on the Leis Isle to leave."
