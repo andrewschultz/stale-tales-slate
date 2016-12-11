@@ -257,6 +257,8 @@ use MAX_ACTIONS of 290.
 
 use MAX_VERBS of 380.
 
+use MAX_VERBSPACE of 4200.
+
 use MAX_SYMBOLS of 33000.
 
 use MAX_PROP_TABLE_SIZE of 240000.
@@ -6787,6 +6789,11 @@ section a lid
 
 a lid is scenery. description is "It covers where the dial was, and you probably want to keep it that way."
 
+instead of doing something with lid:
+	if current action is taking or current action is taking or current action is pulling or current action is attacking, say "You don't want to bring the lid back" instead;
+	if action is procedural, continue the action;
+	say "The lid's okay where it is. Better than the dial, anyway.";
+
 section dial setting
 
 dialsetting it to is an action applying to one thing and one number.
@@ -6846,7 +6853,10 @@ check dialsetting it to:
 		now numset of dial is 16;
 		say "The room warps a bit. You wonder if you made things worse, but you hear strong g-trons go SNRT...you did it![paragraph break][if dial is unexamined]You glance at the dial, see EXITS N E and wonder if it was always there[else]The flipping bits in the dial lock in to say EXITS N E[end if]. And you see, yes, exits are north and east now. My hat, that was mathy.[paragraph break]You find yourself in a round den, unadorned.";
 		reg-inc;
-		now centrifuge-stopped is true instead;
+		now dial is in lalaland;
+		now lid is in centrifuge;
+		now centrifuge-stopped is true;
+		the rule succeeds;
 	if numset of dial > 17:
 		now numset-ever-greater is true;
 	if numset of dial < 16 and number understood < numset of dial:
@@ -9990,13 +10000,13 @@ check going nowhere in astral altars:
 
 understand "lites" as a mistake ("Light isn't the problem here. It's not having anywhere to go.") when player is in Astral Altars
 
-tiles are plural-named scenery in Astral Altars
+tiles are plural-named flippable scenery in Astral Altars. "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one."
 
-the stile is scenery in Astral Altars
+gpos of tiles is 2. rpos of tiles is 1. lgth of tiles is 5. the rgtext of tiles is "[rc][rc][gc][gc][rc]". the lgth of tiles is 5. cert-text of tiles is "-[d1][ast]L[ast]E[d1]". rect-text of tiles is "I[d1][d1][d1][ast]T".
 
-the tiles are flippable. gpos of tiles is 2. rpos of tiles is 1. lgth of tiles is 5. the rgtext of tiles is "[rc][rc][gc][gc][rc]". the lgth of tiles is 5. gpos of tiles is 2. rpos of tiles is 1. cert-text of tiles is "-[d1][ast]L[ast]E[d1]". rect-text of tiles is "I[d1][d1][d1][ast]T".
+the stile is scenery in Astral Altars. "It's reddish. A stile usually provides passage over something, but it's all by itself here. Maybe it can lead you somewhere else, in a different form."
 
-description of tiles is "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one."
+gpos of stile is 3. rpos of stile is 2. lgth of stile is 5. the rgtext of stile is "[rc][rc][gc][gc][rc]". the lgth of stile is 5. cert-text of stile is "-[d1][d1][d1][d1]". rect-text of stile is "I[d1][d1][d1][ast]T".
 
 instead of doing something with scenery in Altars:
 	if action is procedural:
