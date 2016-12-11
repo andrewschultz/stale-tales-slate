@@ -458,13 +458,12 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 table of Resort nudges
 this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "resort"	572190276	--	--	degen-true rule	"[reg-rej]."
-"tiles"	425996778	tiles	--	--	"The tiles seem to shift a bit, but not enough."
 "tile"	329722812	tiles	--	--	"You need to deal with all the tiles."
-"sand"	188398381	islet	--	--	"[the-sand]."
-"thesand"	456596807	islet	--	--	"[the-sand]."
-"islet"	425996778	islet	--	--	"Nothing happens. You may need to deal with something specific on the islet to leave."
-"eter"	444046039	islet	--	--	"The tree sits there[if swing is visible], but the swing rocks a bit[end if]."
-"oflat"	259979148	islet	--	--	"[if cork is visible and wings are visible]You can just use either the cork or the wings to leave to the east[else if cork is visible or wings are visible]You have a way off this island to the east, though you can make the other for fun, too[else if tree is examined or rock is examined]Mangling the word you read did nothing. Maybe go with what it's written on[else]You notice writing on the rock and swing similar to what you just said. Or tried to say[end if]. Also, no need to make anything lo-fat here."
+"sand"	188398381	Isle	--	--	"[the-sand]."
+"thesand"	456596807	Isle	--	--	"[the-sand]."
+"islet"	425996778	Isle	--	--	"Nothing happens. You may need to deal with something specific on the Leis Isle to leave."
+"eter"	444046039	Isle	--	--	"The tree sits there[if swing is visible], but the swing rocks a bit[end if]."
+"oflat"	259979148	Isle	--	--	"[if cork is visible and wings are visible]You can just use either the cork or the wings to leave to the east[else if cork is visible or wings are visible]You have a way off this island to the east, though you can make the other for fun, too[else if tree is examined or rock is examined]Mangling the word you read did nothing. Maybe go with what it's written on[else]You notice writing on the rock and swing similar to what you just said. Or tried to say[end if]. Also, no need to make anything lo-fat here."
 "hotsopt"	569947414	hotspot	--	--	"[loc-rej]."
 "woodland"	423607270	woodland	--	--	"[loc-rej]."
 "tool"	305629011	--	tool shed	--	"Hm, no, the whole tool shed."

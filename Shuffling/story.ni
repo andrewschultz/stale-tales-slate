@@ -255,7 +255,7 @@ use MAX_NUM_STATIC_STRINGS of 21000.
 
 use MAX_ACTIONS of 290.
 
-use MAX_VERBS of 375.
+use MAX_VERBS of 380.
 
 use MAX_SYMBOLS of 33000.
 
@@ -936,10 +936,10 @@ rule for showing what the player missed:
 	if cabinet is in trips strip:
 		say "[2da of stores]the cabinet, once it followed you, could've become something really alive. A nice bat.";
 	now sect-missed is false;
-	if rock is in islet:
-		say "[2da of resort]the rock on the islet was changeable to CORK.";
-	if swing is in islet:
-		say "[2da of resort]the swing on the islet was changeable to WINGS.";
+	if rock is in Isle:
+		say "[2da of resort]the rock on the [isle] was changeable to CORK.";
+	if swing is in isle:
+		say "[2da of resort]the swing on the [isle] was changeable to WINGS.";
 	if spore is in woodland:
 		say "[2da of resort]the spore in the woodland was changeable to ROPES[toolwood].";
 	if sprig is in woodland:
@@ -1533,9 +1533,10 @@ beats	"[if player is not in abyss]Nothing to do about the beats until you get to
 beast	"You need to attack the beast with a weapon! You [if sword is off-stage]don't have one[else]can use your sword[end if]."
 emitter	"[if dry cake is in condo]The emitter is useful to lower property values. Specifically, the condo's.[else]You can show the emitter to the deadbeat. The angst gnats are another way through a puzzle.[end if]"
 ts	"[one of]Hm, weird colored tiles. Blue all around. Brown. Sort of like store F and Forest. [plus][or]The TILES become an ISLET. [minus][cycling]" [START RESORT]
+leis	"They're, well...wait for it...lies. They're not what you really want to be after."
 swing	"[one of]The swing can get you up in the air, but maybe you can go even higher. [plus][or]The swing can become WINGS, too. [minus][cycling]"
-wings	"You can make it east now, having made that."
-cork	--	wings
+wings	"The wings will let you go up or east over the water."
+cork	"The cork will let you go east over the water."
 rock	"[one of]The rock would just sink in the water. [plus][or]But not if the rock became a CORK. [minus][cycling]"
 poles	"[one of]The poles are just too vertical. What's something spelled like them that isn't? [plus][or]They're not ski poles, for going down a ski whatchamajigger... [plus][or]They can be a SLOPE. [minus][cycling]"
 ropes	"[one of]The ropes provide safety but no traction. [plus][or]The sprig can change into something providing traction. [plus][or]It seems suctioned to the ground. [plus][or]It becomes GRIPS. [minus][cycling]"
@@ -1793,16 +1794,16 @@ carry out metros-hinting:
 
 rock-first is a truth state that varies.
 
-islet-clue is a truth state that varies.
+isle-clue is a truth state that varies.
 
 carry out resort-hinting:
 	if player is in tiles:
 		try objhinting ts instead;
-	if player is in islet:
+	if player is in Isle:
 		if cork is visible or wings are visible:
 			all-say "You've found one way across the water[if cork is off-stage], though you can HINT ROCK for another[else if wings are off-stage], though you can HINT SWING for another[end if]." instead;
-		if islet-clue is false:
-			now islet-clue is true;
+		if isle-clue is false:
+			now isle-clue is true;
 			all-say "Either item lying around can help you across the water." instead;
 		if rock-first is true and rock is visible:
 			try objhinting rock instead;
@@ -3383,6 +3384,7 @@ words	sword	"sword"	"words"	"[if player has sheath]The words go slippery, claimi
 
 table of Resort anagrams
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
+ts	teleporter	"islet"	"tiles"	"The tiles crumble and shift around and spread across the floor of the altars! The stile blossoms into a tree. The ground turns softer under you"	false	425996778	--	false	Isle
 rock	cork	"cork"	"rock"	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143
 swing	wings	"wings"	"swing"	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
 sprig	grips	"grips"	"sprig"	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
@@ -5359,7 +5361,7 @@ carry out gleaning:
 	if mrlp is resort:
 		if player is in tiles:
 			all-say "You watch as the tiles shring from a large land mass to a smaller one." instead;
-		if player is in islet:
+		if player is in Isle:
 			all-say "You see yourself either swimming or flying east, but not without proper gear." instead;
 		if player is in woodland:
 			if poles are in woodland:
@@ -6035,7 +6037,7 @@ check fliptoing the r-p:
 	if you-can-advance:
 		continue the action;
 	if store r is visible:
-		say "That seems like it should work, but you sense you have not done enough yet[if islet is unvisited]. In fact, you probably haven't even visited some place you need to work through[end if]. But maybe, soon, you will.";
+		say "That seems like it should work, but you sense you have not done enough yet[if Isle is unvisited]. In fact, you probably haven't even visited some place you need to work through[end if]. But maybe, soon, you will.";
 		preef store r instead;
 
 check entering the r-p:
@@ -6727,14 +6729,9 @@ check going in Frost Forts:
 
 book Sortie
 
-Mean Old Mondale-Doleman is privately-named scenery.
-understand "mondale/doleman" as mondale-doleman.
-understand "mean/-- old/-- mondale/doleman" as mondale-doleman.
-understand "mean/-- old/-- mondale doleman" as mondale-doleman.
-
 chapter Ug, Frenetic Centrifuge
 
-Frenetic Centrifuge is a room in Sortie. "[if centrifuge-stopped is true]Exits lie north and east[maybe-shift]![else]Two exits are spinning counterclockwise. They're a right angle apart.[end if]"
+Frenetic Centrifuge is a room in Sortie. "[if centrifuge-stopped is true]A lid lies where once the dial laid. Exits lie north and east[maybe-shift]![else]Two exits are spinning counterclockwise. They're a right angle apart.[end if]"
 
 [Ug is chopped on to the printed name, because of Inform language conventions]
 
@@ -6777,6 +6774,18 @@ to say dial-hints:
 	if numset of dial is 16:
 		the rule succeeds;
 	say "[one of]. You wonder if there's a partial clue here that you just need to look at right[or]. Maybe if you knew where the exits were supposed to be, that would help. There are only twelve possibilities[or]. You briefly wonder what numbers have X's in them[or]. The dial seems to indicate there are seven letters--one is X, and two are a direction. But you haven't had to go diagonally a lot. That leaves four possibilities[or]. Where, abbreviated, the exits should point[or]. The room NEXT IS Easier[or]. You may feel square for missing other solutions to this problem[or]. Worse comes to worst, you can just to a binary search with the numbers: 99, 50, 75, etc[or]. Well, maybe you can brute force things and move the dial one unit at a time. The centrifuge hasn't killed you yet[stopping]"
+
+section for Mondale-Doleman to be referenced everywhere
+
+Mean Old Mondale-Doleman is privately-named scenery in Centrifuge. it is undesc.
+
+understand "mondale/doleman" as mondale-doleman.
+understand "mean/-- old/-- mondale/doleman" as mondale-doleman.
+understand "mean/-- old/-- mondale doleman" as mondale-doleman.
+
+section a lid
+
+a lid is scenery. description is "It covers where the dial was, and you probably want to keep it that way."
 
 section dial setting
 
@@ -9976,7 +9985,7 @@ chapter tiles
 
 Tiles is a room in Resort. "Tiles, tiles, tiles. As far as you can see. And if you look too long, you see red instead of the actual tile colors.[paragraph break]This doesn't look like a comfortable place for a nice long vacation[if player has gadget][beepity-tiles][end if][if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]."
 
-understand "lites" as a mistake ("Light isn't the problem here. It's [if player is in islet]getting off the islet[else]not having anywhere to go[end if].") when player is in tiles or player is in islet
+understand "lites" as a mistake ("Light isn't the problem here. It's [if player is in Isle]getting off the [isle][else]not having anywhere to go[end if].") when player is in tiles or player is in Isle
 
 to say beepity-tiles:
 	say ". Your gadget jostles a bit";
@@ -10000,42 +10009,41 @@ instead of doing something with the ts:
 check going in tiles:
 	say "One way looks as good as the others. You'd probably collapse from exhaustion before you got anywhere.";
 
-section isleting
+understand "slite" as a mistake ("That's bad spelling, and it won't shrink your problems.") when player is in ts.
 
-isleting is an action applying to nothing.
+chapter Isle
 
-understand the command "islet" as something new.
+Isle is a room in Resort. "[if leis are in isle]Well, this is a little more like a RESORT. It's just covered with Leis. [end if]You can see land way to the east[if leis are not in isle], and you probably want to get going that way, too[end if]."
 
-understand "islet" as isleting.
+printed name of Isle is "[if Leis are in Isle]Leis[else]Lies[end if] Isle"
 
-carry out isleting:
-	if player is in tiles:
-		reg-inc;
-		say "The tiles crumble and shift around.";
-		move player to Islet instead;
-	if mrlp is resort:
-		say "You already made it to the islet." instead;
-	say "[reject]";
-	the rule succeeds;
+understand "leis isle" as isle when leis are in isle.
+understand "lies isle" as isle when leis are not in isle.
 
-understand "slite" as a mistake ("That's bad spelling, and it won't shrink your problems.") when player is in islet or player is in ts.
+does the player mean doing something with the leis: it is likely.
 
-chapter islet
+the leis are scenery in isle. "Looking at them, you half forget you came through Store R to beat Red Bull Burdell."
 
-Islet is a room in Resort. "Well, this is a little more idyllic. But it's all sand and so small, it can't be the one you were promised. You can see land way to the east."
+understand "lies" as a mistake ("[lei-lala]'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is") when player is in isle and leis are in isle.
+
+to say lei-lala:
+	now leis are in lalaland;
+
+check taking the leis:
+	say "[lei-lala]The leis wither as you touch them. 'I SEE ILLS!' booms un unseen voice. Yes, the leis were...LIES. Your final resort must be further on." instead;
 
 section scenery
 
-the sand is useless scenery in islet.
+the sand is useless scenery in Isle.
 
 description of the sand is "It's not worth digging through[if cork is visible or wings are visible]. You've got something useful, anyway[else]. Maybe the stuff lying around is worthwhile[end if]."
 
 instead of doing something with the sand:
 	if action is procedural:
 		continue the action;
-	say "No use searching for anything like DNAs or a handset in the sand. Islets have sand, so I sort of had to put it here."
+	say "No use searching for anything like DNAs or a handset in the sand. Isles have sand, so I sort of had to put it here."
 
-the tree is useless scenery in islet.
+the tree is useless scenery in Isle.
 
 instead of climbing tree: say "That'll only get you off the sand on the island, not the island."
 
@@ -10043,7 +10051,7 @@ description of tree is "It has ALOFT scratched into it[one of]. An arrow points 
 
 section swing - wings
 
-the swing is a thing in islet. "You see a rudimentary swing hanging from a tree here."
+the swing is a thing in Isle. "You see a rudimentary swing hanging from a tree here."
 
 instead of taking the swing:
 	say "It's tied, and you can't climb to untie it."
@@ -10056,7 +10064,7 @@ description of wings is "They're pretty standard magical wings you can flap to m
 
 section cork - rock
 
-the rock is a thing in islet. "A large-ish rock sits here[if player has wings], but it seems less potentially useful now you have the wings[else] away from the swing[end if]."
+the rock is a thing in Isle. "A large-ish rock sits here[if player has wings], but it seems less potentially useful now you have the wings[else] away from the swing[end if]."
 
 description of rock is "It's holey, like a sponge, but not any less dense for that--it's scratched to read FLOAT.". rgtext of rock is "[rcn][gc][rc][gc]". lgth of rock is 4. gpos of rock is 3. rpos of rock is 4. cert-text of rock is "-[ast]O[d1][ast]K". rect-text of rock is "C[d1][d1][ast]K".
 
@@ -10067,7 +10075,7 @@ some cork is a thing. "A chunk of cork is here.". description of cork is "It's p
 
 section going
 
-check going in islet (this is the islet escape rule):
+check going in Isle (this is the Isle escape rule):
 	if player has wings and noun is up:
 		try going east instead;
 	if player does not have cork and player does not have wings:
@@ -10076,13 +10084,14 @@ check going in islet (this is the islet escape rule):
 		say "Maybe something's that way, but you see land far off to the east." instead;
 	if rock is not in lalaland or swing is not in lalaland:
 		poss-d;
+	say "Yes. It's time to move on from the [isle]. You need to find Red Bull Burdell.[paragraph break]";
 	if player has wings and wings are not worn:
 		say "You put on the wings--for spawning wingspan, of course. [run paragraph on]";
 		now player wears the wings;
 	if wings are worn:
 		say "The wings last just long enough for you to get to the landmass you see before shredding into the wind[if player has cork]. You also, unsurprisingly, drop the cork as you operate your wings[end if]. But it probably doesn't matter now--you're across to some sort of mainland.";
 	otherwise:
-		say "With the cork under your chest, you dog-paddle to the land you saw from the islet. It's soggy and gross from your swim, and the seaweed or whatever has already started to eat at it. You scrabble past a few silent inlets...";
+		say "With the cork under your chest, you dog-paddle to the land you saw from the [isle]. It's soggy and gross from your swim, and the seaweed or whatever has already started to eat at it. You scrabble past a few silent inlets...";
 	now cork is in lalaland;
 	now wings are in lalaland;
 	now player is in woodland instead;
@@ -10096,7 +10105,7 @@ understand the command "fly/flap" as something new.
 understand "fly" and "flap" as flying.
 
 carry out flying:
-	if player has wings and player is in islet:
+	if player has wings and player is in Isle:
 		try going east instead;
 	say "You have nothing that can help sustained flying." instead;
 	the rule succeeds;
@@ -10110,9 +10119,9 @@ understand the command "swim" as something new.
 understand "swim" as swiming.
 
 carry out swiming:
-	if player has cork and player is in islet:
+	if player has cork and player is in Isle:
 		try going east instead;
-	if player is in islet:
+	if player is in Isle:
 		say "No other land anywhere close. You'd need help to swim." instead;
 	say "There's no water nearby to swim in. In which to swim.";
 	the rule succeeds;
@@ -12804,7 +12813,7 @@ before going up:
 [	if up-nearby is true:
 		say "[if cur-score of Intro is 0]I, uh, lied. There's nowhere you can go up in the game. Or nearby. But that was a clue[else]Well, since you've scored a point, you might guess why 'I'd go nearby or up' is a hint[end if].";
 		now up-nearby is false instead;]
-	if player has wings and player is in islet:
+	if player has wings and player is in Isle:
 		try flying instead;
 	say "You have no boost boots for dances to ascend. And most of the time, if you need to go up, there'll be something clear to climb. Hopefully." instead;
 
@@ -13613,8 +13622,8 @@ index map with abyss mapped west of elm train terminal.
 
 [roster]
 index map with tiles mapped east of sf.
-index map with islet mapped south of sf.
-index map with woodland mapped east of islet.
+index map with Isle mapped south of sf.
+index map with woodland mapped east of Isle.
 index map with hotspot mapped east of woodland.
 index map with roman manor mapped east of hotspot.
 
@@ -14455,10 +14464,10 @@ chapter unsolve
 
 to unsolve-resort:
 	now cur-score of resort is 0;
-	now rock is in islet; [islet]
+	now rock is in Isle; [Isle]
 	now rock is not flipped-yet;
 	now cork is off-stage;
-	now swing is in islet;
+	now swing is in Isle;
 	now swing is not flipped-yet;
 	now wings are off-stage;
 	now tool shed is in woodland; [odd low woodland]
