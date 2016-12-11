@@ -98,6 +98,8 @@ open(B, ">$r2");
 
 alfPrint(\@intro);
 
+print B "\n\n";
+
 for my $j (@x)
 {
   if (defined($hash{$j})) { print B "$hash{$j}\n"; }
@@ -130,7 +132,14 @@ if ($statsOpen) { `$roil\\sso-stat.txt`; }
 
 if (!$copyBack) { print "Did not copy file over.\n"; }
 else
-{ print "Copying back over.\n"; copy $r2, $roil; }
+{
+  my $aroi = meaningful($roil);
+  my $a2 = meaningful($r2);
+  if ($aroi == $a2)
+  {
+  print "Copying back over.\n"; copy $r2, $roil;
+  } else { print "Mismatch of meaningful lines: $aroi to $a2.\n"; }
+}
 
 if ($compare) { `wm $roil $r2`; }
 
@@ -152,6 +161,18 @@ sub wordsIn
 {
   my @x = split(/ /, $_[0]);
   return $#x
+}
+
+sub meaningful
+{
+  open(C, "$_[0]");
+  my $mea = 0;
+  while ($line = <C>)
+  {
+    if ($line =~ /[a-z]/i) { $mea++; }
+  }
+  close(C);
+  $mea++;
 }
 
 sub usage
