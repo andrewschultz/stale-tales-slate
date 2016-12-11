@@ -30,6 +30,7 @@ my $roil = "c:\\games\\inform\\roiling.inform\\Source";
 my $qad = 0;
 my $readingStrings = 1;
 my $curList = 0;
+my $badsuffix = 0;
 
 my $newTitles = "";
 ##############################
@@ -60,6 +61,7 @@ my $ogp = ""; #####roiling general
 
 if (defined($ARGV[0]))
 {
+  if ($ARGV[0] =~ /o/) { outputLast(); exit(); }
   if ($ARGV[0] =~ /c/) { $compare = 1; }
   if ($ARGV[0] =~ /d/) { $noCopy = 1; }
   if ($ARGV[0] =~ /e/) { `$roil\\toSort.txt`; exit(); }
@@ -108,6 +110,7 @@ while ($line = <A>)
 		elsif ($line =~ /\"h$/) { $hgp .= $line; } # h
 		elsif ($line =~ /\"g$/) { $ggp .= $line; } # generic
 		elsif ($line =~ /\"o$/) { $ogp .= $line; } # opening of ARO
+		elsif ($line =~ /\"[a-z]$/) { $badsuffix++; print "Bad suffix $badsuffix, line $.: $line"; }
 		else { $listLump[$curList] .= $line; }
 	  }
 	  else { $listLump[$curList] .= $line; }
@@ -147,6 +150,8 @@ while ($line = <A>)
   }
 }
 close(A);
+
+if ($badsuffix) { print "Fix bad suffixes before continuing."; exit(); }
 
 my $rolling = 1;
 if ($allCaps) { splice(@listLump, $rolling, 0, $allCaps); $rolling++; }
@@ -223,6 +228,35 @@ sub wordsIn
 {
   my @x = split(/ /, $_[0]);
   return $#x
+}
+
+sub outputLast
+{
+  my @ary = ();
+  open(A, "$roil\\tosort.txt");
+  while ($a = <A>)
+  {
+    if ($a !~ /[a-z]/i) { @ary = (); next; }
+	chomp($a);
+	push (@ary, $a);
+  }
+  close(A);
+  my $a2 = $#ary+1;
+  print "Total to check = " . ($a2) . ".\n";
+  open(B, ">$roil\\tosort-auto.txt");
+  my $q = time();
+  my $cout;
+  for (0..$#ary)
+  {
+    my $cmd = "gr $ary[$_] | grep -i table";
+	printf("%d of %d: $cmd\n", $_+1, $a2);
+	$cout = `$cmd`;
+	if ($cout =~ /[a-z]/) { print B "(" . ($_+1) . ")$ary[$_]===\n"; print B $cout; }
+  }
+  $q = time() - $q;
+  print B "$q total seconds for $a2 undones.\n";
+  close(B);
+  `$roil\\tosort-auto.txt`;
 }
 
 sub usage
