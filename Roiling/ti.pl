@@ -40,14 +40,15 @@ while ($count <= $#ARGV)
   {
   /^-?w$/ && do { findWhat(); exit; };
   /^-?e$/ && do { `$scr`; exit; };
-  /^-d$/ && do { $allowDupe = 1; $count++; next; };
-  /^-f$/ && do { $lastsFile = "firsts.txt"; $firstsFile = "lastbig.txt"; $count++; next; };
-  /^-m$/ && do { $middleName = 1; $count++; next; };
-  /^-p$/ && do { $period = 1; $count++; next; };
-  /^-pc$/ && do { $printCmds = 1; $count++; next; };
-  /^-r$/ && do { $reverses = 1; $count++; next; };
-  /^-t$/ && do { runScratchTest(); exit; };
-  /-\?/ && do { usage(); $count++; next; };
+  /^-?d$/ && do { $allowDupe = 1; $count++; next; };
+  /^-?f$/ && do { $lastsFile = "firsts.txt"; $firstsFile = "lastbig.txt"; $count++; next; };
+  /^-?m$/ && do { $middleName = 1; $count++; next; };
+  /^-?p$/ && do { $period = 1; $count++; next; };
+  /^-?pc$/ && do { $printCmds = 1; $count++; next; };
+  /^-?l$/ && do { seeLeft(); exit(); };
+  /^-?r$/ && do { $reverses = 1; $count++; next; };
+  /^-?t$/ && do { runScratchTest(); exit; };
+  /-?\?/ && do { usage(); $count++; next; };
   /^[a-z]/i && do { if (length($a) == 1) { die ("Won't process 1-word string."); } $fullStr = $a; $count++; next; };
   }
 }
@@ -210,6 +211,30 @@ sub alf
   @xx = sort(@x);
   my $z = join('', @xx);
   return $z;
+}
+
+sub seeLeft()
+{
+  open(A, "$scr");
+  while ($a = <A>)
+  {
+    if ($a =~ /^[0-9]/)
+	{
+	  if ($inList)
+	  {
+	    if ($tagged{$cur}) { print "last $listSum"; } else { print "first $listSum"; }
+		$listSum = 0; $inList = 0; $tagged{$cur} = 1;
+		next;
+      }
+	}
+	if ($a =~ /^\"/)
+	{
+	  if (!$inList) { chomp($a); $a =~ s/ .*//g; $a =~ s/\"//g; print "\nList for $a: "; }
+	  $inList = 1; $listSum++; next;
+    }
+  }
+  print
+  close($scr);
 }
 
 sub usage
