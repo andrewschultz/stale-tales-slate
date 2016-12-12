@@ -153,7 +153,7 @@ sub alfPrint
   my ($q) = @_;
   if (!$_[0]) { return; }
   my @ary = @$q;
-  @ary = sort { wordsIn($a) <=> wordsIn($b) || length($a) <=> length($b) } (@ary);
+  @ary = sort { wordsIn($a) <=> wordsIn($b) || length($a) <=> length($b) || lc($a) cmp lc($b) } (@ary);
   print B join("\n", @ary);
 }
 

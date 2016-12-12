@@ -4019,7 +4019,7 @@ tan ivy vanity	"You try to not pay attention to the babble behind the door, but 
 lobster	"That's not quite the way to deserve that lobster[if ivy vanity is reflexive]. You can't quite concentrate, anyway, with the knock at the door[end if]."
 stream	"That's not quite the way to focus on the stream[if ivy vanity is reflexive]. You can't quite concentrate, anyway, with the knock at the door[end if]."
 DIVORCES	"DIVORCES suddenly seems more alluring and more rubbish at once."
-shaker	"You don't quite draw inspiration from the shaker, but there can't be that many alts."
+salt	"You don't quite draw inspiration from the salt, but there can't be that many alts."
 Eddie's Song	"You try to groove to Eddie's song, but that's not quite it."
 playbill	"You try to imagine what the singer's songs are like, but that's not quite it."
 lamb	"The lamb looks confused. Maybe you could be more forceful. Verbally, not physically." [START presto]
@@ -8901,7 +8901,7 @@ rivets	rivets	false	564671562	--	"strive"	"strive"	"You make up your mind to str
 pernod	pernod	false	458885045	FiefCo Office	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through!"
 lager	lager	false	301731271	--	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave your [if diapers are reflexed]bedroom[else]pad[end if] just long to pour the hurtful booze [if diapers are reflexed]down the sink[else]out the window you forgot was there[end if]. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio Alger!"
 noise	noise	false	433982545	--	"ignore"	"ignore"	"'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."
-salt	song	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure St. Al watched over you. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! You see there was a playbill under the salt."
+salt	song	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! You see there was a playbill under the salt."
 stream	stream	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP."
 lobster	lobster	false	559099217	--	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. After all, the cost of the lobster is probably less a percent of YOUR income than your underlings['] food is of theirs."
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	"On perusing DIVORCES with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. DIVORCES is not for you! You pitch it and re-focus."
@@ -8985,7 +8985,7 @@ gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	"Rustle. Result: luster! 
 yapper	yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' He motions you to slip him the gleaner behind your back. Then he goes off to find such a judge, presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"
 pins	d2	false	291640279	--
 d2	d2	false	335153504	Strip of Profits	"redial"	"redial"	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range. Between Aunt Tuna, the sardine, and even the reluctant trolls--a story.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Hedron still exerted its hold. Now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
-dialer	dialer	false	335153504	--	"derail"	"derail"	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!' Something dangerous may happen soon."
+dialer	dialer	false	335153504	--	"derail"	"derail"	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!'Then a pause. Then Elvira's voice.[paragraph break]'HEY! Oh! It's the boys from the horned hedron! This IS just one of your pranks, isn't it?' her voice turns less saccharine. 'You wouldn't do that again, would you? Well, I could send you more...supplies...now, I'll pretend this didn't happen!' As her voice crackles off, pins spring up to shield the dialer from further operation.";
 
 table of towers anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
@@ -14184,28 +14184,24 @@ instead of doing something to painting of the stream:
 	if action is procedural, continue the action;
 	say "It doesn't need to be physically futzed with[if painting of the stream is reflexive]. In fact, you've already gotten use out of it[end if].";
 
-chapter salt shaker
+chapter St Al Salt
 
-instead of doing something to the salt shaker:
+instead of doing something to the salt:
 	if action is procedural, continue the action;
-	say "[if shaker is reflexed]The previous occupant probably had it there to salt away some dumb motivational saying[else]You salted this puzzle away, already[end if]."
+	if current action is eating, say "That would be potentially lethal. And gross." instead;
+	if current action is putting on:
+		ignore the can't put what's not held rule;
+		if second noun is lobster, say "That'd ruin it." instead;
+		say "The salt is there for ornamental and inspirational purposes. Plus, there's nothing here to eat[if lobster is visible], except the lobster, which doesn't need it[end if]." instead;
+	say "Your mind stalls at what to do with the salt, or how to ignore it."
 
-the salt shaker is scenery in FiefCo Office.
+the St Al Salt is scenery in FiefCo Office. printed name of salt is "St. Al Salt".
 
-description of salt shaker is "It has a few wise sayings: Be worth your [i]SALT[r]. Salt helps things preserve themselves. And, oh, wait, there's no way to get the salt out. It's just a cheap motivational gimmick!"
+understand "shaker" and "salt shaker" and "shaker of salt" as St Al Salt
 
-a-text of salt is "RYRR". b-text of salt is "RGRP". parse-text of salt is "x[sp]a[sp]x[sp]t". salt is parse-spoilable.
+description of salt is "St. Al Salt is, from what you are reading, engineered to maximize your productivity from (motivational stress * remaining years,) much better than other brands. It helps you preserve yourself, sort of. It is emblazoned with a picture of St. Al, recently enshrined as Yorpwald's patron saint of Not Faffing Around."
 
-before eating salt:
-	say "You're in a high-pressure enough environment, as-is. Plus, the shaker can't actually get the salt out. It does sort of shake, though." instead;
-
-check putting salt on:
-	ignore the can't put what's not held rule;
-	if second noun is lobster:
-		say "That'd ruin it." instead;
-	say "The salt is there for ornamental and inspirational purposes. Plus, there's nothing here to eat[if lobster is visible], except the lobster, which doesn't need it[end if]." instead;
-
-understand "alts" as a mistake ("There are no alts. You must become worth your salt.") when salt is visible
+a-text of salt is "RYRR". b-text of salt is "R?R?". parse-text of salt is "x[sp]a[sp]x[sp]t". salt is parse-spoilable.
 
 understand "slat" as a mistake ("You're not in the window making business.") when salt is visible
 
@@ -18075,10 +18071,8 @@ Tenfold Teflon'd Den Loft is an innie room in Oyster. "[one of]You're at the cen
 
 lev-pull is a truth state that varies.
 
-check taking lever:
-
 instead of doing something with lever:
-	if action is pushing or action is pulling:
+	if current action is pushing or current action is pulling or current action is taking:
 		say "[if lever is reflexed]It's not fun enough to tinker with, any more.[else]Nothing happens, but you're still just excited to find it. Maybe you can do something superfluous to show that![end if]";
 	if action is procedural:
 		continue the action;
@@ -18169,9 +18163,6 @@ check fliptoing lever:
 		preef lever;
 		say "Nothing to celebrate yet--dispose of the yapper first." instead;
 
-
-		say "You pull the lever.[paragraph break]'HEY! Oh! It's the boys from the horned hedron! You pull that lever and...' her voice turns sweet. 'You wouldn't do that, would you? Well, I could send you more...supplies...I'll pretend this didn't happen!'";
-
 chapter pins
 
 [?? if player has pills then reg-inc]
@@ -18181,9 +18172,9 @@ some pins are scenery. "The pins cover the dialer. There's probably more than on
 understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when player is in hedron and pins are in hedron.
 
 instead of doing something with pins:
-	if action is dropping:
+	if current action is dropping:
 		say "Only twenty-four combinations. Two work. The pin(s) will drop." instead;
-	if action is taking:
+	if current action is taking:
 		say "They'd poke you nastily. Give you nips and all." instead;
 	if action is procedural:
 		continue the action;
