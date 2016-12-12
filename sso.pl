@@ -22,7 +22,7 @@ my $r2 = "c:\\games\\inform\\roiling.inform\\Source\\tosort2.txt";
 ###################################globals
 my %hash;
 my @x = ();
-my $line;
+my $line, my $line2;
 my @intro = ();
 my @endLump = ();
 
@@ -37,9 +37,10 @@ my $statsOpen = 0;
 
 if (defined($ARGV[0]))
 {
-  if ($ARGV[0] =~ /o/) { outputLast(); exit(); }
-  if ($ARGV[0] =~ /d/) { $copyBack = 0; }
   if ($ARGV[0] =~ /e/) { `$roil\\toSort.txt`; exit(); }
+  if ($ARGV[0] =~ /o/) { outputLast(); exit(); }
+  if ($ARGV[0] =~ /r/) { `\\writing\\dict\\sso.txt`; exit(); } # forcing options first
+  if ($ARGV[0] =~ /d/) { $copyBack = 0; }
   if ($ARGV[0] =~ /f/) { $copyBack = 1; }
   if ($ARGV[0] =~ /n/) { $numbers = 1; }
   if ($ARGV[0] =~ /s/) { $statsOpen = 1; }
@@ -79,6 +80,7 @@ while ($line = <A>)
   if (($line !~ /^\"/) && (!$blanksYet)) { print "Quotes added line $., $line\n"; $line = "\"$line\""; }
   if ($unsorted) { push (@endLump, $line); next; }
   $idx = 0;
+  $line2 = $line; $line2 =~ s/ *\[(p)?\]$//; # ignore duplicator at line end
   for $y (@x)
   {
     if ($line =~ /$y/)

@@ -1,13 +1,29 @@
+####################################################################################
+#list of regular expressions to sort random text by, from highest priority to lowest
+#sso.txt, called by sso.pl
+####################################################################################
+#Biopics, then motivational, then regular books
 \[r\].*\t(true|false)s
-\[r\]
+\[r\].*\"v
+\[r\],? by 
+########################ALL CAPS STUFF: PSA(p), laments
+^\"[^a-z]+\"p$
 ^\"[^a-z]+\"$
+########################ads
 \t(true|false)
 \[i\].*\[r\]
+########################shuffling stuff. F=forest/maps, X=names, I=bad poems
 \"f$
-\"m$
 \"i$
 \"x$
+########################PSAs counted above. MC=condo (Rarer than camp), M = camp
+\"mn$
+\"mc$
+\"m$
+########################ri=riot, r=RED BULL
+\"ri$
 \"r$
+########################ROILING stuff
 \"p$
 \"t$
 \"u$
@@ -18,4 +34,5 @@
 \"h$
 \"g$
 \"o$
+########################Catchall below
 \"[a-z]$
