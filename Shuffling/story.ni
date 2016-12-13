@@ -9993,7 +9993,7 @@ book resort
 
 chapter Astral Altars
 
-Astral Altars is a room in Resort. "Well, maybe you won't find your vacation spot right away. Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]."
+Astral Altars is a room in Resort. "Well, maybe you won't find your vacation spot right away. Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]. You also think you hear something."
 
 check going nowhere in astral altars:
 	say "As you step away from the altars, a weird barrier blocks you. It's very tarsal." instead;
@@ -12544,6 +12544,8 @@ check listening:
 			say "You hear static coming from the doll house." instead;
 		otherwise:
 			say "Each attic is tacit now." instead;
+	if player is in astral altars:
+		say "You hear mumblings you aren't in the ELITE LISTS. They make you see red." instead;
 	if player is in sf or player is in rf:
 		if shout is visible:
 			say "You still hear that shout[one of], and if you listen again, you could get a couple of words.[or] that turns you red from its silliness: [one of]'Hut! SO!'[or]'Uh?! SOT!'[or]'Us, HOT!'[in random order][stopping]" instead;

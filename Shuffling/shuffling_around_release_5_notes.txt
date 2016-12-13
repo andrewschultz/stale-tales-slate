@@ -2,7 +2,7 @@ Shuffling Around Release 5 Notes
 
 This fixed one bug Sean M. Shore found in A Roiling Original. The problem was that the saltine could be used on an item you've prefigured or hinted, which essentially renders it useless. So there's not much new mechanically. There are other minor things, including some code cleanup and also small game text tweaks.
 
-The big fixes are probably in Store R. The first two room names are different. The dial in the centrifuge is handled a bit differently, and Lord Ablemiser's name was changed too.
+The big fixes are probably in Store R. The first two room names are different. The opening room for Store I is naed differently, the dial doesn't quite disappear, and Lord Ablemiser's name was changed too.
 
 --1000 poem codas and 1000 job competitor names
 --hinting disambiguation is better
