@@ -34,10 +34,13 @@ my $copyBack = 0; # this default can change
 my $compare = 0;
 my $numbers = 0;
 my $statsOpen = 0;
+my $inHeader = 1;
+my $header = "";
 
 if (defined($ARGV[0]))
 {
-  if ($ARGV[0] =~ /e/) { `$roil\\toSort.txt`; exit(); }
+  if ($ARGV[0] =~ /\?/) { usage(); exit(); }
+  if ($ARGV[0] =~ /e/) { `$roil`; exit(); }
   if ($ARGV[0] =~ /o/) { outputLast(); exit(); }
   if ($ARGV[0] =~ /r/) { `\\writing\\dict\\sso.txt`; exit(); } # forcing options first
   if ($ARGV[0] =~ /d/) { $copyBack = 0; }
@@ -54,7 +57,7 @@ if (defined($ARGV[0]))
     }
   }
   $ARGV[0] =~ s/[cdfns-]//g;
-  if ($ARGV[0]) { usage(); }
+  if ($ARGV[0]) { print "Invalid letters: $ARGV[0]\n===============\n"; usage(); }
 }
 
 ####################################open the mapping file
@@ -74,6 +77,11 @@ open(A, "$roil") || die();
 
 while ($line = <A>)
 {
+  if ($inHeader)
+  {
+    if ($line =~ /^#/) { $header .= $line; next; }
+	$inHeader = 0;
+  }
   if ($line =~ /^========/) { $unsorted = 1; next; }
   if ($line !~ /[a-z]/i) { $blanksYet = 1; next; }
   chomp($line);
@@ -97,6 +105,8 @@ while ($line = <A>)
 close(A);
 
 open(B, ">$r2");
+
+print B $header;
 
 alfPrint(\@intro);
 
