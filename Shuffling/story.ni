@@ -9839,6 +9839,10 @@ lgth of neon pig is 7. gpos of neon pig is 3. rpos of neon pig is 7. rgtext of n
 
 the op is proper-named privately-named scenery container. understand "opening/recess" as op. the printed name of op is "the opening"
 
+understand "gip" as a mistake ("Yeah, whoever bought it probably did get gipped, but that doesn't help get rid of it.") when player is in terminal and neon pig is in terminal.
+
+understand "none" as a mistake ("Bummer! You'd think that worked to get rid of the pig, but that's probably too abstract a noun. Probably have to deal with the whole neon pig.") when player is in terminal and neon pig is in terminal.
+
 procedural rule while examining op: ignore the examine containers rule.
 
 description of op is "[if controls are in op]The opening isn't really an opening any more, what with the controls fitting in nicely[else if player is on fuzzy looking wall]You can see that the opening isn't just a blank area, though it doesn't lead anywhere much. Once you got rid of that neon pig, there are still all kinds of receptacles and such that could be attached to something electrical. If you READ, you might be able to see what[else]You look back up at the opening you made. Seems something belongs in there[end if]."
