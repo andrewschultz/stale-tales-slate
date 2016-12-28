@@ -14,10 +14,21 @@ use strict;
 use warnings;
 
 use File::Copy qw(copy);
+use Math::Prime::Util "gcd";
 
 ####################################constants
-my $roil = "c:\\games\\inform\\roiling.inform\\Source\\tosort.txt";
-my $r2 = "c:\\games\\inform\\roiling.inform\\Source\\tosort2.txt";
+my $orig = "c:\\games\\inform\\roiling.inform\\Source\\tosort.txt";
+my $mod = "c:\\games\\inform\\roiling.inform\\Source\\tosort2.txt";
+
+my $inc = "c:\\Program Files (x86)\\Inform 7\\Inform7\\Extensions\\Andrew Schultz";
+my $roil = "c:\\games\\inform\\roiling.inform\\source";
+$inc = $roil;
+
+my $rr = "Roiling Random Text.i7x";
+my $sr = "Shuffling Random Text.i7x";
+
+my $txtfile = __FILE__;
+$txtfile =~ s/txt$/pl/;
 
 ###################################globals
 my %hash;
@@ -25,6 +36,8 @@ my @x = ();
 my $line, my $line2;
 my @intro = ();
 my @endLump = ();
+
+my %dupes;
 
 my $unsorted = 0;
 my $blanksYet = 0;
@@ -36,17 +49,19 @@ my $numbers = 0;
 my $statsOpen = 0;
 my $inHeader = 1;
 my $header = "";
+my $wob = 0;
 
 if (defined($ARGV[0]))
 {
   if ($ARGV[0] =~ /\?/) { usage(); exit(); }
-  if ($ARGV[0] =~ /e/) { `$roil`; exit(); }
+  if ($ARGV[0] =~ /e/) { `$orig`; exit(); }
   if ($ARGV[0] =~ /o/) { outputLast(); exit(); }
-  if ($ARGV[0] =~ /r/) { `\\writing\\dict\\sso.txt`; exit(); } # forcing options first
+  if ($ARGV[0] =~ /r/) { `$txtfile`; exit(); } # forcing options first
   if ($ARGV[0] =~ /d/) { $copyBack = 0; }
   if ($ARGV[0] =~ /f/) { $copyBack = 1; }
   if ($ARGV[0] =~ /n/) { $numbers = 1; }
   if ($ARGV[0] =~ /s/) { $statsOpen = 1; }
+  if ($ARGV[0] =~ /t/) { $inc = $roil; }
   if ($ARGV[0] =~ /c/) #must be out of alphabetical ordedr so compare trumps copy back
   {
     $compare = 1;
@@ -60,8 +75,11 @@ if (defined($ARGV[0]))
   if ($ARGV[0]) { print "Invalid letters: $ARGV[0]\n===============\n"; usage(); }
 }
 
+dupget("$inc\\$rr");
+dupget("$inc\\$sr");
+
 ####################################open the mapping file
-open(A, "c:\\writing\\dict\\sso.txt") || die();
+open(A, $txtfile) || die();
 
 while ($line=<A>)
 {
@@ -73,7 +91,7 @@ while ($line=<A>)
 
 close(A);
 
-open(A, "$roil") || die();
+open(A, "$orig") || die();
 
 while ($line = <A>)
 {
@@ -85,6 +103,8 @@ while ($line = <A>)
   if ($line =~ /^========/) { $unsorted = 1; next; }
   if ($line !~ /[a-z]/i) { $blanksYet = 1; next; }
   chomp($line);
+  if ($dupes{wordsonly($line)}) { print "Duplicate $line details $dupes{wordsonly($line)}\n"; }
+  checkAnagram($line);
   if (($line !~ /^\"/) && (!$blanksYet)) { print "Quotes added line $., $line\n"; $line = "\"$line\""; }
   if ($unsorted) { push (@endLump, $line); next; }
   $idx = 0;
@@ -104,7 +124,7 @@ while ($line = <A>)
 
 close(A);
 
-open(B, ">$r2");
+open(B, ">$mod");
 
 print B $header;
 
@@ -124,7 +144,7 @@ close(B);
 
 if ($numbers)
 {
-  open(A, "$roil\\tosort.txt");
+  open(A, "$orig");
   my $empties = 0;
 
   while ($line = <A>) { if ($line !~ /[a-z]/i) { $empties++; } }
@@ -145,15 +165,15 @@ if ($statsOpen) { `$roil\\sso-stat.txt`; }
 if (!$copyBack) { print "Did not copy file over.\n"; }
 else
 {
-  my $aroi = meaningful($roil);
-  my $a2 = meaningful($r2);
+  my $aroi = meaningful($orig);
+  my $a2 = meaningful($mod);
   if ($aroi == $a2)
   {
-  print "Copying back over.\n"; copy $r2, $roil;
+  print "Copying back over.\n"; copy $mod, $roil;
   } else { print "Mismatch of meaningful lines: $aroi to $a2.\n"; }
 }
 
-if ($compare) { `wm $roil $r2`; }
+if ($compare) { `wm $orig $mod`; }
 
 ####################################################################
 #
@@ -185,6 +205,78 @@ sub meaningful
   }
   close(C);
   $mea++;
+}
+
+sub checkAnagram
+{
+  my %freq;
+  if ($_[0] !~ /^\"/) { return; }
+  my $ags = lc($_[0]); $ags =~ s/^\"//; $ags =~ s/\".*//;
+  $ags =~ s/\[r\].? by//;
+  $ags =~ s/\[toti\]/tio/g;
+  #############################get rid of between paren, non ascii below
+  $ags =~ s/\[[^\]]*\]//g;
+  $ags =~ s/[^a-z]//g;
+  my $firstBad = "";
+  my @ang = split(//, $ags);
+  for (@ang)
+  {
+    $freq{$_}++;
+  }
+  my $gcd = 0;
+  for my $k (sort keys %freq)
+  {
+    if ($gcd > 0) { $gcd = gcd($gcd, $freq{$k}); if (($gcd == 1) && $firstBad eq "") { $firstBad = $k; } } else { $gcd = $freq{$k}; }
+  }
+  if ($gcd == 1)
+  {
+    if ($_[0] =~ /\[(p|x|px)\]/) { return; }
+	$wob++;
+    print "Wobbly anagram $wob/$ags line $., probably $firstBad: $_[0]: ";
+	for my $k (sort keys %freq) { print "$k$freq{$k}"; }
+	print ".\n";
+  }
+}
+
+sub dupget
+{
+  open(A, "$_[0]") || die ("No file $_[0]");
+  my $line;
+
+  my $inTable = 0;
+
+  while ($line = <A>)
+  {
+    if ($line =~ /^table.*xx/)
+	{
+	  #print "Table start at $.\n";
+	  <A>;
+	  $inTable = 1;
+	  next;
+	}
+	if ($line !~ /[a-z]/i)
+	{
+	  #if ($inTable) { print "Table end at $.\n"; }
+	  $inTable = 0;
+    }
+	if ($inTable)
+	{
+    $line = wordsonly($line);
+	chomp($line);
+	$dupes{$line} = "$.-$_[0]";
+	#if ($line =~ /froth/) { print "$line at line $. in $_[0].\n"; }
+	}
+  }
+  close(A);
+}
+
+sub wordsonly
+{
+  my $temp = lc($_[0]);
+  $temp =~ s/^\"//;
+  $temp =~ s/\".*//;
+  $temp =~ s/['\.\!\-\?]//g;
+  return $temp;
 }
 
 sub usage
