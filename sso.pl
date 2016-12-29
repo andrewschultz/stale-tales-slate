@@ -28,11 +28,12 @@ my $rr = "Roiling Random Text.i7x";
 my $sr = "Shuffling Random Text.i7x";
 
 my $txtfile = __FILE__;
-$txtfile =~ s/txt$/pl/;
+$txtfile =~ s/pl$/txt/;
 
 ###################################globals
+my %regex;
 my %hash;
-my @x = ();
+my @tabname = ();
 my $line, my $line2;
 my @intro = ();
 my @endLump = ();
@@ -86,8 +87,13 @@ while ($line=<A>)
   if ($line =~ /^;/) { last; }
   if ($line =~ /^#/) { next; }
   chomp($line);
-  push(@x, $line);
+  my @hashy = split(/\t/, $line);
+  if ($#hashy != 1) { die "Hash lines need a \\t for what table it maps to and the regex: line $. as $line fails."; }
+  push(@tabname, $hashy[0]);
+  $regex{$hashy[0]} = $hashy[1];
 }
+
+die;
 
 close(A);
 
@@ -109,7 +115,7 @@ while ($line = <A>)
   if ($unsorted) { push (@endLump, $line); next; }
   $idx = 0;
   $line2 = $line; $line2 =~ s/ *\[(p)?\]$//; # ignore duplicator at line end
-  for $y (@x)
+  for $y (@tabname)
   {
     if ($line =~ /$y/)
     {
@@ -118,7 +124,7 @@ while ($line = <A>)
     }
     $idx++;
   }
-  if ($idx > $#x) { push (@intro, $line); }
+  if ($idx > $#tabname) { push (@intro, $line); }
   #print "$idx vs $#x\n";
 }
 
@@ -132,7 +138,7 @@ alfPrint(\@intro);
 
 print B "\n\n";
 
-for my $j (@x)
+for my $j (@tabname)
 {
   if (defined($hash{$j})) { print B "$hash{$j}\n"; }
 }

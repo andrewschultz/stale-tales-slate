@@ -3,52 +3,102 @@
 #sso.txt, called by sso.pl
 ####################################################################################
 #Biopics, then motivational, then regular books
-\[r\].*\t(true|false)s
-\[r\].*\"v
-\[r\],? by 
+xxm3	\[r\].*\t(true|false)s
+xxv0	\[r\].*\"v
+xxm4	\[r\],? by 
 ########################ALL CAPS STUFF: PSA(p), laments
-^\"[^a-z]+\"p$
-^\"[^a-z]+\"$
+xxu3	^\"[^a-z]+\"p$
+xxms4	^\"[^a-z]+\"$
 ########################ads
-\t(true|false)
+xxm1	\t(true|false)
 \[i\].*\[r\]
 ########################shuffling stuff. F=forest/maps, X=names, I=bad poems
-\"f$
-\"i$
-\"x$
+xxf	\"f$
+xxi	\"i$
+xxx	\"x$
 ########################PSAs counted above. MC=condo (Rarer than camp), M = camp
-\"mn$
-\"mc$
-\"m$
+xxms1	\"ms[n1]$
+xxms2	\"ms[c2]$
+xxms3	\"m(n|s3)$
 ########################ri=riot, r=RED BULL
-\"ri$
-\"r$
+xxr1	\"r[i1]$
+xxr2	\"r(2)?$
 ########################ROILING stuff
-\"p6$
-\"p5$
-\"p4$
-\"p3$
-\"p2$
-\"p1$
-\"p$
-\"t5$
-\"t4$
-\"t3$
-\"t2$
-\"t1$
-\"t$
-\"u5$
-\"u4$
-\"u2$
-\"u1$
-\"u$
-\"v$
-\"w2$
-\"w$
-\"y$
-\"s$
-\"h$
-\"g$
-\"o$
-########################Catchall below
+xxp6	\"p6$
+xxp5	\"p5$
+xxp4	\"p4$
+xxp3	\"p3$
+xxp2	\"p2$
+xxp1	\"p1$
+##################OTTERS
+xxt5	\"t5$
+xxt4	\"t4$
+xxt3	\"t3$
+xxt2	\"t2$
+xxt1	\"t1$
+####################ROUTES
+xxt5	\"u5$
+xxt4	\"u4$
+xxt2	\"u2$
+xxt1	\"u1$
+#########################TROVES
+xxv1	\"v1$
+xxv2	\"v2$
+xxv3	\"v3$
+xxv4	\"v4$
+xxv5	\"v5$
+xxv6	\"v6$
+xxv7	\"v7$
+xxv8	\"v8$
+xxv9	\"v9$
+############################w 2 = rodney bluster 1 = gizmo parts
+xxw2	\"w2$
+xxw1	\"w1?$
+#############################OYSTER
+xxy1	\"y1$
+xxy2	\"y2$
+xxy3	\"y3$
+xxy4	\"y4$
+xxy5	\"y5$
+xxy6	\"y6$
+xxy7	\"y7$
+xxy8	\"y8$
+#############################STORES
+xxs1	\"s1$
+xxs2	\"s2$
+xxs3	\"s3$
+xxs4	\"s4$
+xxs5	\"s5$
+xxs6	\"s6$
+###############################OTHERS 1=slogans 2=yells
+xxh1	\"h1$
+xxh2	\"h2$
+############################general
+xxg10	\"g10$
+xxg11	\"g11$
+xxg1	\"g1$
+xxg2	\"g2$
+xxg3	\"g3$
+xxg4	\"g4$
+xxg5	\"g5$
+xxg6	\"g6$
+xxg7	\"g7$
+xxg8	\"g8$
+xxg9	\"g9$
+#################################original
+xxo1	\"o1$
+xxo2	\"o2$
+xxo3	\"o3$
+xxo4	\"o4$
+xxo5	\"o5$
+xxo6	\"o6$
+xxo7	\"o7$
+xxo8	\"o8$
+xxo9	\"o9$
+xxo01	\"o01$
+xxo02	\"o02$
+xxo03	\"o03$
+xxo04	\"o04$
+;
+########################That's all! Anything else is not sorted
 \"[a-z]$
