@@ -45,7 +45,7 @@ my $unsorted = 0;
 my $blanksYet = 0;
 my $idx = 0;
 my $y;
-my $copyBack = 0; # this default can change
+my $copyBack = 1; # this default can change
 my $compare = 0;
 my $numbers = 0;
 my $statsOpen = 0;
@@ -131,7 +131,7 @@ while ($line = <A>)
 
 close(A);
 
-if ($moveOver) { moveOver($rr); moveOver($sr); die(); }
+if ($moveOver) { moveOver($rr); moveOver($sr); }
 
 open(B, ">$mod");
 
@@ -176,9 +176,9 @@ else
 {
   my $aroi = meaningful($orig);
   my $a2 = meaningful($mod);
-  if ($aroi == $a2)
+  if (($aroi == $a2) || ($moveOver))
   {
-  print "Copying back over.\n"; copy $mod, $roil;
+  print "Copying back over.\n"; copy $mod, $orig;
   } else { print "Mismatch of meaningful lines: $aroi to $a2.\n"; }
 }
 
@@ -300,20 +300,21 @@ while ($line = <A>)
   print B $line;
   if ($line =~ /^table of .*\[xx/)
   {
-    print "Table line $line";
-    INNER: for my $j (@tabname)
+    #print "Table line $line";
+    for my $j (@tabname)
 	{
 	  if ($line =~ /$j/)
 	  {
-        print "!!!! $line vs $j/$regex{$j}\n";
+        #print "!!!! $line vs $j/$regex{$j}\n";
 	    if (defined($hash{$j}))
 	    {
-	    print "Adding to $j/$regex{$j}\n";
-	    print B <A>;
-		print B $hash{$j};
+	    #print "Adding to $j/$regex{$j}\n";
+		my $q = <A>;
+	    print B $q;
+		my @hashary = split(/\n/, $hash{$j});
+		for (@hashary) { $_ =~ s/\"[a-z]+[0-9]*$/\"/; print B "$_\n"; }
 		delete($hash{$j});
-		print "17\n";
-		last INNER;
+		last;
 		}
 	  }
 	}

@@ -719,6 +719,7 @@ book general
 
 table of cussing rejects [xxg1]
 blurb
+"Ah, do the hothead!"
 "[if player is male]Mr. Taunt-Tantrum[else]Mrs. Taunt-Tantrums[end if]!"
 "A-ah! Not an oath!"
 "Absolutely lousy bleat!"
@@ -1586,6 +1587,7 @@ blurb
 
 table of undo allows [xxg9]
 blurb
+"Simply a misplay."
 "'Action over? Revocation!'"
 "'Adjourn? Jar! Undo!'"
 "Ah, sow whoas!"
@@ -1949,6 +1951,12 @@ book manor
 
 table of ad slogans [xxm1]
 blurb	blare	[random sad ads: the blare field designates whether you have an exclamation point at the end]
+"So Daunting, Astounding[r], by[if player is male]Otis Dungan[else]Gia Dunston[end if]"	true
+"Tats STAT!"	true
+"Get Vint Vetting!"	true
+"Wearying? GRAY WINE!"	true
+"Get Rad Ale: GREAT DEAL!"	true
+"Napoli's Oil Pans So Plain: No Pails!"	true
 "[d-t] Saffo Fast Food"	false
 "[if player is male]Aaron Colt[else]Lora Acton[end if]'s Root Canals"	false [p]
 "[if player is male]Alec Pino[else]Loni Cape[end if]'s Special on Pecan Oils!"	true [p]
@@ -4657,6 +4665,22 @@ blurb	fave
 
 table of comedians [xxm4]
 blurb
+"To Whine One Whit on White[r], by [toti] Wehn"
+"Mew a Lot, Low Mate[r], by Walt Moe"
+"Saint? Ungodly, Astoundingly[r], by [if player is male]Landis Guyton[else]Glinda Younts[end if]"	false
+"Lyin['] Inly[r], by Ilyi Lynn"
+"I Send in Des[r], by Sindi Edens"
+"Up at a Put[r], by Tuta Paup"
+"Swamis Mis-Saw[r], by Wm Issa"
+"Robust BS Tour[r], by Brutus Botros"	false
+"Super Macho? A Sore Chump[r], by Marcus Hope"	false
+"Easily Ye Sail[r], by Alysia Eisley"
+"I, Novice In Voice[r], by Vi Cione"
+"Rah, Lilt: a Thrill[r], by Art Hill."
+"Homeowners When Morose[r], by Owen Mosher"
+"Horsewomen, Homeowners[r], by Omer Hewson" []
+"Bigly Bilgy[r], by Gilly Bigby"	false
+"Ill Inn: Nil, Nil[r], by Linn Li"
 "Absurdist Trudi Bass" []
 "Acerbic Ric Cabe"
 "Actor Ann Cantoran"
@@ -17181,6 +17205,7 @@ blurb
 
 table of overdone movies [xxs2]
 blurb
+"'Hegemon? Meh, gone!'"
 "admits [i]Wendie's Sin Weed Dies New[r] is weak, but it's not WRONG." [x]
 "agrees [i]Fop, Indeed? Dope Fiend[r] is funny, well, TIL IT ISN'T." [x]
 "almost weeps at the simple truth of [i]Ah, Vilest, the Vials[r]." [x]
@@ -17347,6 +17372,8 @@ blurb
 
 table of sicko movies [xxs3]
 blurb
+"Sybian Bayins[']!"
+"Bad Self Alf's Bed!"
 "[a-word-u]-Hump Smash-Up."
 "[a-word-u] Porn Parsons."
 "[d-word-u] Hoes Had Men So Handsome." []
@@ -33069,6 +33096,7 @@ blurb
 
 table of real estate ads [xxv9]
 blurb
+"Bloats Oblast"
 "A-Clan Canal"
 "Ace-Pal Palace"
 "Ah, Acute Chateau" []
@@ -33243,6 +33271,8 @@ blurb
 
 table of self-help bestsellers [xxv0]
 blurb
+"Keenly, Keenly[r], by Kenley Yenkle"
+"I, Tot, To It[r], by Titi Otto"
 "[if player is male]Fears, Mr[else]Fear, Mrs[end if]? Torn? TRANSFORMER[r], by Storm Ferran"
 "Able to Be a Lot[r], by Beata Botello"
 "Absolutely All-Best You[r], by [if player is male]Les Baluyot[else]Betsy Ulloa[end if]" []
@@ -35787,6 +35817,7 @@ blurb
 
 table of research topics [xxp5]
 blurb
+"somitic miotics"
 "[if player is male]Craig Abel[else]Alica Berg[end if][']s Algebraics"
 "abstrusest substrates"
 "Achilles helicals" []
@@ -37349,6 +37380,7 @@ blurb
 
 table of bar dialogue [xxy2]
 blurb
+"'Oft Sly? Fly, sot!'"
 "An abnormal ol['] barman serves up some martini mini-art, and a patron gives an abrupt burp at the pub art." [x]
 "'Add ale.' / 'La-de-da.'"
 "'Addie's is dead.'"
@@ -37559,6 +37591,9 @@ blurb
 
 table of Casper mumbles [xxy3]
 blurb
+"Genre regen? Er, neg!"
+"Short yips. This prosy sophistry!"
+"'Poetry? Stop. Potty prose prototypes.'"
 "[if player is male]Lon Veist[else]Lois Vent[end if], novelist? Vile snot!" []
 "Anti-novel? Let on, vain Valentino!"
 "Author? Clem Crouthamel?!" []
@@ -38477,6 +38512,11 @@ book towers
 
 table of gizmo parts [xxw1]
 blurb
+"mis-steered semi-desert"
+"recording-decor ring"
+"riddled diddler"
+"scarred carders"
+"Daze-Adze"
 "a-parted data pre-adapter"
 "all-portion pollinator"
 "alt-speed pedestal"

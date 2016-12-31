@@ -23,6 +23,28 @@ book intro
 
 table of job searcher names [xxx]
 blurb
+"Delray Radley"
+"Gilbert Tilberg"
+"Rumona Murano"
+"Ramsey Mayers"
+"Socrates Castores"
+"Karl Kral"
+"Adele Ledea"
+"Loula Ulloa"
+"Mirko Omrik"
+"Alysa Salay"
+"Lazlo Zolla"
+"Nasib Basin"
+"Silvao Valois"
+"Ganesh Hagens"
+"Gawain Nagawi"
+"Hamlet Lathem"
+"Cormac McCaro"
+"Thorin Hortin"
+"Hermia Mahier"
+"Morania Mariano"
+"Alyosha Shalayo"
+"Natalie Alienta"
 "Aaron Orana"
 "Abdul Bauld-Lubda"
 "Abel Beal"
@@ -1325,6 +1347,8 @@ book forest
 
 table of evil locations [xxf]
 blurb
+"Hard-Slogs Grasshold"
+"Hums-Mush"
 "Absorbing-Brains Bog"
 "the AH! Heath"
 "All-Down Lowland"
@@ -1547,6 +1571,15 @@ book sortie
  
 table of poem codas [xxi]
 blurb
+"Born lame: be normal? NO! Ramble!"
+"Stale dawn. Wasteland. Wand tales."
+"Set now to news. On, West!"
+"Polemist mile post? Simple to top, slime!"
+"Pal, I lug a li'l pug!"
+"Safe true features after use: ruts? A fee."
+"Our felts of luster lose turf. Felt sour."
+"With long light now, night owl. Low thing!"
+"In words: Down, Sir Windsor."
 "****ed Men, Add Mad End." [x]
 "About-face, oaf at cube!"
 "Acidic, a cicada, I."
@@ -3020,7 +3053,7 @@ blurb
 
 book metros
 
-table of camp chants [xxm1]
+table of camp chants [xxms1]
 blurb
 "'Abusive USA vibe!'"
 "'Account, U-Can't-Co!'"
@@ -3413,7 +3446,7 @@ blurb
 "'Yuck, one coy nuke!'"
 "'Zeal's sin. LAZINESS!'"
 
-table of condo dialogue [xxm2]
+table of condo dialogue [xxms2]
 blurb
 "'Art deco! DO react, redcoat!'"
 "Art ethic. Their act: chattier, theatric."
@@ -3486,8 +3519,9 @@ blurb
 "'Wines, swine!' yells a visitor, snapping his fingers at a waiter. Of [i]course[r] that had several layers of irony." [x]
 "You learn they're scared of lunatics that don't cut nails." [x]
 
-table of nerd natter [xxm3]
+table of nerd natter [xxms3]
 blurb
+"'Spyware wars? Yep!'"
 "'Ah! No NaOH, Noah!'"
 "'Ain't Herb the brain? Bah, inert!'"
 "'Aliterate tail eater!' / 'Retaliate!'"
@@ -3838,8 +3872,12 @@ blurb
 "You hear a MENSA-y yesman encourage someone to repeat himself." [x]
 "You hear a WTF waft." [x]
 
-table of psas [xxm4]
+table of psas [xxms4]
 blurb
+"RESIDENT? DETER SIN"
+"A MONK? OK, MAN"
+"SO HORNY? OY, SHORN"
+"LAST TIME: TITS? LAME"
 "11+2=12+1"
 "ABLEISM'S MISSABLE"
 "ACID TRIPS => RAPID TICS"
@@ -4141,6 +4179,7 @@ blurb
 
 table of riot slogans [xxr2]
 blurb
+"Stifle is FELT!"
 "The [ri-tri] accuse you of animal cruelty: making monotremes into metronomes." [x]
 "The [ri-tri] characterize you as a leper to repeal or repel." [x]
 "The [ri-tri] continue their bashin['], hoping to banish you." [x]
