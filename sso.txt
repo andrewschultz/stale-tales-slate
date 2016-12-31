@@ -11,7 +11,6 @@ xxu3	^\"[^a-z]+\"p$
 xxms4	^\"[^a-z]+\"$
 ########################ads
 xxm1	\t(true|false)
-\[i\].*\[r\]
 ########################shuffling stuff. F=forest/maps, X=names, I=bad poems
 xxf	\"f$
 xxi	\"i$
@@ -63,7 +62,7 @@ xxy5	\"y5$
 xxy6	\"y6$
 xxy7	\"y7$
 xxy8	\"y8$
-#############################STORES
+#############################STORES 1=lecture 2=movies 3=sicko movies 4=ads 5=competitors 6=tokers
 xxs1	\"s1$
 xxs2	\"s2$
 xxs3	\"s3$

@@ -22,6 +22,7 @@ my $mod = "c:\\games\\inform\\roiling.inform\\Source\\tosort2.txt";
 
 my $inc = "c:\\Program Files (x86)\\Inform 7\\Inform7\\Extensions\\Andrew Schultz";
 my $roil = "c:\\games\\inform\\roiling.inform\\source";
+########################uncomment below for testing
 $inc = $roil;
 
 my $rr = "Roiling Random Text.i7x";
@@ -51,6 +52,7 @@ my $statsOpen = 0;
 my $inHeader = 1;
 my $header = "";
 my $wob = 0;
+my $moveOver = 0;
 
 if (defined($ARGV[0]))
 {
@@ -62,8 +64,9 @@ if (defined($ARGV[0]))
   if ($ARGV[0] =~ /f/) { $copyBack = 1; }
   if ($ARGV[0] =~ /n/) { $numbers = 1; }
   if ($ARGV[0] =~ /s/) { $statsOpen = 1; }
-  if ($ARGV[0] =~ /t/) { $inc = $roil; }
-  if ($ARGV[0] =~ /c/) #must be out of alphabetical ordedr so compare trumps copy back
+  if ($ARGV[0] =~ /m/) { $moveOver = 1; }
+  if ($ARGV[0] =~ /t/) { $inc = $roil; } #testing
+  if ($ARGV[0] =~ /c/) #I'd put the options in alphabetical order, but I want comparing to overrule copy back
   {
     $compare = 1;
 	if ($copyBack)
@@ -72,7 +75,7 @@ if (defined($ARGV[0]))
 	  $copyBack = 0;
     }
   }
-  $ARGV[0] =~ s/[cdfns-]//g;
+  $ARGV[0] =~ s/[cdfnstrom-]//g;
   if ($ARGV[0]) { print "Invalid letters: $ARGV[0]\n===============\n"; usage(); }
 }
 
@@ -93,8 +96,6 @@ while ($line=<A>)
   $regex{$hashy[0]} = $hashy[1];
 }
 
-die;
-
 close(A);
 
 open(A, "$orig") || die();
@@ -109,7 +110,7 @@ while ($line = <A>)
   if ($line =~ /^========/) { $unsorted = 1; next; }
   if ($line !~ /[a-z]/i) { $blanksYet = 1; next; }
   chomp($line);
-  if ($dupes{wordsonly($line)}) { print "Duplicate $line details $dupes{wordsonly($line)}\n"; }
+  if ($dupes{wordsonly($line)}) { print "Duplicate $line ($.) details $dupes{wordsonly($line)}\n"; }
   checkAnagram($line);
   if (($line !~ /^\"/) && (!$blanksYet)) { print "Quotes added line $., $line\n"; $line = "\"$line\""; }
   if ($unsorted) { push (@endLump, $line); next; }
@@ -117,7 +118,7 @@ while ($line = <A>)
   $line2 = $line; $line2 =~ s/ *\[(p)?\]$//; # ignore duplicator at line end
   for $y (@tabname)
   {
-    if ($line =~ /$y/)
+    if ($line =~ /$regex{$y}/)
     {
       #if ($idx == 3) { print "$idx ($.). $y: $line\n"; }
 	  $hash{$y} .= "$line\n"; last;
@@ -129,6 +130,8 @@ while ($line = <A>)
 }
 
 close(A);
+
+if ($moveOver) { moveOver($rr); moveOver($sr); die(); }
 
 open(B, ">$mod");
 
@@ -283,6 +286,43 @@ sub wordsonly
   $temp =~ s/\".*//;
   $temp =~ s/['\.\!\-\?]//g;
   return $temp;
+}
+
+sub moveOver
+{
+open(A, "$_[0]");
+open(B, ">$_[0].bak");
+
+my $line;
+
+while ($line = <A>)
+{
+  print B $line;
+  if ($line =~ /^table of .*\[xx/)
+  {
+    print "Table line $line";
+    INNER: for my $j (@tabname)
+	{
+	  if ($line =~ /$j/)
+	  {
+        print "!!!! $line vs $j/$regex{$j}\n";
+	    if (defined($hash{$j}))
+	    {
+	    print "Adding to $j/$regex{$j}\n";
+	    print B <A>;
+		print B $hash{$j};
+		delete($hash{$j});
+		print "17\n";
+		last INNER;
+		}
+	  }
+	}
+  }
+}
+
+close(A);
+close(B);
+
 }
 
 sub usage
