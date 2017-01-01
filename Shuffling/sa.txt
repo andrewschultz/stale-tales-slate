@@ -176,7 +176,7 @@ WOLVES.
 ?How do I shoot the enemies?
 SHOOT WOLVES.
 >STORE I
->>CENTRIFUGE
+>>TRAP PART
 ?How do I stop the spinning?
 Two ways. You can guess, using binary searches.
 Or you can note EXITS?? =~ some number.
@@ -214,6 +214,11 @@ Reverse them.
 They can become STRAW.
 You can get a container later.
 >>Room
+?Who is this long haired guy with the shades and the accent I can't quite place?
+Is this question TEARING YOU APART?
+He's Tommy Wiseau, the writer, producer and lead actor in <i>The Room</i>.
+Wait, no he isn't. He's not in this game at all. But he IS in <a href="http://www.newgrounds.com/portal/view/547307">this one</a>.
+I know, I know, I should've left my STUPID joke clues in my pocket.
 ?What are the rubber hoses for?
 You notice your feet getting wet?
 They can become SHOES.
@@ -239,7 +244,7 @@ Once you have hay, PUT HAY IN WALL
 Then, HALLWAY.
 ?Help! The location name changed!
 That's because you're done to the east.
->>Moor
+>>Beyond the Room
 ?How do I get rid of the poet?
 Everything is in ANAPEST.
 ST. PAEAN is his latest work.
@@ -417,9 +422,15 @@ OPEN BAG.SWORD
 ?How do I kill the enemy?
 ATTACK BEAST.
 >STORE R
->>TILES
-?What? This is one lousy resort! These tiles go on forever!
-They can become an ISLET.
+>>ASTRAL ALTARS
+?What? This is one lousy resort!
+Wait, you have a STILE, and you have TILES.
+They can become something else.
+An ISLET.
+>>LEIS ISLE
+?Is this paradise? What do I do with the leis?
+No, it's not paradise. If you try to do anything with them they become, well...
+...LIES. However, there are other items on the island.
 ?How do I get out of here?
 The rock and swing can be used. Go east once you have flipped one. You only need one.
 ?What does the rock become?
@@ -430,7 +441,7 @@ CORK.
 It says aloft.
 What flies?
 WINGS.
->>An Odd Low Woodland
+>>Rived Drive
 ?The poles are too steep!
 Yes, they're vertical.
 What can be at an angle?

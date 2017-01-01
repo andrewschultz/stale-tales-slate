@@ -7114,6 +7114,8 @@ to say loo-la:
 
 the tortilla is an ingredient. understand "taco" as tortilla.
 
+understand "littoral" as a mistake ("How frustrating! A shoreline doesn't appear. You're still stuck in here, but [if r2 is prefigured or moor is visited]you know[else]maybe[end if] there's another way out.") when player is in kitchen and tortilla is not in lalaland.
+
 to say tort-desc:
 	say "tortilla";
 	if tortilla is visible:
@@ -7874,7 +7876,7 @@ printed name of m2 is "the moor". m2 is undesc.
 
 room-flip is a truth state that varies.
 
-after fliptoing roomroom:
+after fliptoing r2:
 	if room-flip is false:
 		say "[paragraph break][i][bracket]NOTE: you can now teleport back to the moor from any inside location.[close bracket][line break]";
 		now room-flip is true;
