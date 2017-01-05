@@ -19,6 +19,7 @@ xxx	\"x$
 xxms1	\"ms[n1]$
 xxms2	\"ms[c2]$
 xxms3	\"m(n|s3)$
+xxs4	\"ms4$
 ########################ri=riot, r=RED BULL
 xxr1	\"r[i1]$
 xxr2	\"r(2)?$

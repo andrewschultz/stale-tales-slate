@@ -461,7 +461,7 @@ use MAX_SYMBOLS of 140000.
 
 use SYMBOLS_CHUNK_SIZE of 15000.
 
-use ALLOC_CHUNK_SIZE of 35000.
+use ALLOC_CHUNK_SIZE of 36000.
 
 use MAX_VERBSPACE of 10240.
 
@@ -2631,6 +2631,7 @@ nestor	"life"	"'Life is, like, the time of your life!'"
 nestor	"father" or "his father"	"You have a country to save. Don't waste time shaming recreational drug users."
 Gunter	"nat egam" or "nat/egam" or "tan mage" or "tan/mage"	"He and you are up to no good, I'm sure."
 Dr Yow	"key"	"Dr. Yow shrugs. If [he-she] knew where a key was, [he-she]'d find it."
+idg	"vitamins/nativism" or "nativism vitamins"	"'Nice an crunchy. Taste good too."
 
 table of object-blather [this gives people default things to say about stuff, if they are not terse.]
 person-subj	right-region	him-say
@@ -2762,6 +2763,7 @@ table of readables [tre]
 to-read	what-read	alt-read
 sitar	"Oh, right. You bought it from Trisa Israt." [manor]
 rifle	"It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle."
+pastel plates	"EPSTAL is written as an author's signature."
 Store H	"'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'" [stores]
 ltb	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple."	[troves]
 DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
@@ -5477,14 +5479,16 @@ xtradesc	b-only	clue-only-once	clued-yet	bothscan	xtratext
 pram	false	false	false	true	"[cheatfid]." [manor]
 tables	false	false	false	true	"[cheatfid]."
 niche	false	false	false	true	"[cheatfid]."
-t-b	false	false	false	true	"[cheatfid]." [end manor]
+t-b	false	false	false	true	"[cheatfid]."
+plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end manor]
 bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [routes]
 controls	false	false	false	false	"This is odd--all these question marks. Surely you'll find by accident where Ben hid the hit win button? Or you can just pick and choose, focusing on Ben, or the win."
 ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?"
 Pa Egg Pea	true	true	false	false	"Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out."
 stop post	true	false	false	false	"Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing."
 brochure	true	false	false	false	"You imagine a voice saying OBSTACLES LIKE THOSE QUESTION MARKS MAY BE OPPORTUNITIES. A [if brochure is examined]re[end if]reading of the brochure may help see what it's about."
-rivets	false	false	false	true		"[rivet-help]."
+rivets	false	false	false	true	"[rivet-help]."
+salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
 song	false	true	false	false	"You'd guess it's Eddie's song and not Eddie, since when the instrumentals kick in, the settler's reading stays."
 alert letters	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them." [presto]
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
@@ -9072,7 +9076,7 @@ p-2	p-2	false	667670490	--	"however"	"however"	"Mr. Lee doesn't seem willing to 
 sea cube	sea cube	false	496604299	--	"because"	"because"	"'Well, now that you put it that way...' You hear a rush of water. Le Mer has unlocked the sea cube. Eels come out. They look up at you--they may be able to understand you."
 eels	eels	false	405700023	--	"else"	"else"	"The eels seem to understand you. They squirm across the pool and gaze at you as if to stay still. You feel a shock through your body[if power-back is true] much like in Mr. Lee's bran barn[else], and your mordant skills are no longer dormant[end if]."
 atmo-moat	atmo-moat	false	243725566	--	"atom"	"atom"	"You summon up all your powers for this one. With a swoosh, the atmo-moat swirls into a single atom, which flakes off to obscurity."
-t-bossily	t-bossily	false	506485351 [begin macks 7]	--	"bossily"	"bossily"	"The macks cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now." [begin macks 7]
+t-bossily	t-bossily	false	506485351	--	"bossily"	"bossily"	"The macks cross over from confidence to ordering around, and Gretta groans. She'd given them the benefit of the doubt before, but not now." [begin macks 7]
 t-nastily	t-nastily	false	491645247	--	"nastily"	"nastily"	"The saintliness act breaks out into competition, which becomes cutthroat, and one idiot, then another, lets slip that he could impress a better woman than Gretta with a nice-guy act. They scramble to assure her they didn't mean it that way, but she's not fooled."
 t-seedily	t-seedily	false	594081210	--	"seedily"	"seedily"	"That thing they were doing? With their eyelids? Well, Gretta seems to have caught on, now. She laughs and groans a bit, and the macks accuse each other of being too obvious."
 t-shadily	t-shadily	false	377939109	--	"shadily"	"shadily"	"You manage to make them let slip a mean dis of other maidens."
@@ -9080,7 +9084,7 @@ t-snidely	t-snidely	false	535182609	--	"snidely"	"snidely"	"The macks refer to L
 t-starkly	t-starkly	false	516001874	--	"starkly"	"starkly"	"The macks finally get a bit too explicit about looks, and Gretta is able to overcome their flattery."
 t-cattily	t-cattily	false	448579376	--	"cattily"	"cattily"	"The macks each lose their composure, each putting down the next guy's uniqueness or virtues or whatever. They're talking more sense than before, but the truth hurts, and things get out of hand quickly."
 t-tearily-irately	t-tearily-irately	false	539593685	--	"irately"	"irately" or "tearily"	"One suitor is reduced to tears as he talks about reality, or his version of it. 'Dude, that was pathetic,' someone else says. 'Yet...LIAR! True-luv vulture!' The argument reflects well on no-one."
-t-blearily	t-blearily	false	508716411 [begin MACKS 8]	--	"blearily"	"blearily"	"They interrupt each other, but not forcefully enough. Gretta comments, 'fascinating,' further cutting them." [begin MACKS 8]
+t-blearily	t-blearily	false	508716411	--	"blearily"	"blearily"	"They interrupt each other, but not forcefully enough. Gretta comments, 'fascinating,' further cutting them." [begin MACKS 8]
 t-ribaldly	t-ribaldly	false	401939391	--	"ribaldly"	"ribaldly"	"The macks move from courtship to...well, less than courtly desires. She wanted to believe they would not, but they couldn't help it."
 t-formally	t-formally	false	482441177	--	"formally"	"formally"	"The macks over-explain how they're fly/moral, and that's a critical lapse in concentration! Gretta has the time to ask obvious questions and make them contradict each other. And shortly THAT's all over."
 t-coitally	t-coitally	false	473635774	--	"coitally"	"coitally"	"Sometimes you just have to let idiots talk about what, apparently, all men think about. With these guys, it's like you almost didn't have to do anything."
@@ -9091,14 +9095,14 @@ t-silently	t-silently	false	671077377	--	"silently"	"silently"	"The macks run ou
 t-steamily	t-steamily	false	614619001	--	"steamily"	"steamily"	"The macks begin to discuss the disgraceful commercial in much more detail than is necessary, and their facade of refined alcohol palette, etc., is broken."
 t-suddenly	t-suddenly	false	616324659	--	"suddenly"	"suddenly"	"The macks['] timing is ruined. They started well, but the slightest disruption and--wham! They're just not as good as the paid actors who've been practicing way more."
 t-stupidly	t-stupidly	false	628150776	--	"stupidly"	"stupidly"	"The macks reiterate how they don't let duty slip, but it's way too heavy-handed. Gretta has to laugh a bit."
-t-martially	t-martially	false	531864386 [begin MACKS 9]	--	"martially"	"martially"	"The men, in an effort to prove their worth, begin talking about that most manly of subjects, war. They talk very loudly and begin discussing cool ammunition and weapons and blood and guts. And shoot-em-up games. Gretta yawns conspicuously, clamming the macks up." [begin MACKS 9]
+t-martially	t-martially	false	531864386	--	"martially"	"martially"	"The men, in an effort to prove their worth, begin talking about that most manly of subjects, war. They talk very loudly and begin discussing cool ammunition and weapons and blood and guts. And shoot-em-up games. Gretta yawns conspicuously, clamming the macks up." [begin MACKS 9]
 t-sincerely	t-sincerely	false	746289017	--	"sincerely"	"sincerely"	"Gretta nods as the macks make a complete u-turn and discuss what they really think of celery. While it's probably good, long-term, for them to be more sincere, their immediate aims have been foiled."
 t-sobbingly	t-sobbingly	false	530137500	--	"sobbingly"	"sobbingly"	"The macks change up the mood, but it is for the worst. One starts crying, then others do--and it's pathetic enough, their plucky efforts to persuade without logic fall to pieces."
 t-tediously	t-tediously	false	748843503	--	"tediously"	"tediously"	"The macks begin whinging with the same old argument, going dreadfully off-subject, and so forth. Suddenly, their nonsense is less believable, or fun to believe."
 t-wearingly	t-wearingly	false	645925650	--	"wearingly"	"wearingly"	"They start repeating their arguments, and finally, Gretta draws up the courage to explain it's getting old."
-t-drawlingly	t-drawlingly	false	592962469 [begin MACKS 10]	--	"drawlingly"	"drawlingly"	"The macks begin talking slower, and suddenly, their conversational hold is broken. Gretta realizes there's no good way to make home repair discussions more exciting and says so. She looks relieved." [begin MACKS 10]
+t-drawlingly	t-drawlingly	false	592962469	--	"drawlingly"	"drawlingly"	"The macks begin talking slower, and suddenly, their conversational hold is broken. Gretta realizes there's no good way to make home repair discussions more exciting and says so. She looks relieved." [begin MACKS 10-11]
 t-emotionally	t-emotionally	false	789771536	--	"emotionally"	"emotionally"	"Their matter-of-factness is disrupted. They had to play it straight, but they aren't able to. Gretta shoos them away with her hand, cringing to think she was suckered in the first place."
-t-despairingly	t-despairingly	false	781752737 [begin MACKS 11]	--	"despairingly"	"despairingly"	"The macks become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the macks." [begin MACKS 11]
+t-despairingly	t-despairingly	false	781752737	--	"despairingly"	"despairingly"	"The macks become upset Gretta does not recognize just how swell they are--as a group, and individually. Gretta shrugs and shakes her head, maybe more at herself than the macks." [begin MACKS 12]
 Merle	Merle	false	683905568	--	"honestly"	"honestly"	"You entrench an enchanter with a well-timed 'Honestly?' They throw out anti lying litanying but you're all 'Few LOLs, fellows.' It's not pretty, but their camaraderie's shattered. They begin squabbling about whom Elvira likes better. It's a welcome change."
 raptor	parrot	false	431763978	--	"parrot"	"parrot"	"The raptor turns into a parrot, which squawks gratefully for being rescued. It squawks about not wanting to be a raptor again--except briefly to take revenge on whatever turned it into a raptor in the first place, and maybe you can help it.[paragraph break]With the raptor's bulk out of the way, you see some weird stuff behind."
 parrot	raptor	false	431763978	--	"raptor"	"raptor"	"'A bird! Rabid! Dinosaur is around!' croaks the parrot. before it changes. 'Repel it, reptile!' you hear a woman cry. The raptor gets to ur-thing hurting and takes out the hydra to the west! Merle and Elmer are paired, repaid, running away as smarting migrants. 'Twist, twits,' you smirk under your breath.[paragraph break]The parrot's revenge sated, you return it to its normal form. 'A whistle is wealth,' it says, dropping the whistle to you before flying off.[paragraph break]You hear a female scream. 'Nemesis seems in,' you mutter. But maybe that whistle is worth a look, first. And you might want to [if medals are prefigured]figure out the medals[else]recall what you did with the medals earlier[end if]."
@@ -10444,7 +10448,25 @@ check going inside in Basement:
 
 book carven cavern
 
-Carven Cavern is an innie room in Roman Manor. "This is an oddly carved cavern. [if plaster is visible]The plaster on one wall is just tacky[else if paperwall is visible]The paperwall behind the plaster seems almost as out-of-place as the plaster was[otherwise]you demolished two layers of wall so you can move onward and inward[end if]. You probably don't want to go back outside.";
+Carven Cavern is an innie room in Roman Manor. "This is an oddly carved cavern[plaster-plates][curtain-desc]. You probably don't want to go back outside.";
+
+to say plaster-plates:
+	say ". ";
+	if plates are in cavern and plaster is in cavern:
+		say "Palest pastel plates sit on a plaster psalter";
+	else if plates are in cavern:
+		say "Palest pastel plates lie here";
+	else if plaster is in cavern:
+		say "The plaster psalter still remains";
+	else:
+		say "It's bare now you got rid of the psalter and plates";
+
+to say curtain-desc:
+	say ". ";
+	if curtain is in lalaland:
+		say "The curtain no longer blocks passage in";
+	else:
+		say "[if curtain-know is true]The Act-Ruin Curtain[else]A curtain may be covering up a passage[end if]"
 
 understand "trainer" as a mistake ("You're on your own. Perhaps you'd be better off [if plaster is in cavern]scanning the plaster and [end if]twiddling the [if staple is visible]staple[else]plates[end if] to get on with things.") when player is in cavern
 
@@ -10465,26 +10487,25 @@ check going nowhere in cavern (this is the cavern check rule):
 	do nothing instead;
 
 check going inside in cavern:
-	if plaster is visible:
-		say "You'll probably need a way through that plaster." instead;
-	if paperwall is visible:
-		say "You'll probably need a way through that paperwall." instead;
+	if act-ruin curtain is in cavern:
+		now curtain-know is true;
+		say "As you touch the curtain, it immediately drains you of your will to enter it. You realize it must be a ACT-RUIN CURTAIN. You'll have to disable it somehow without touching it" instead;
 	say "You walk through the former paperwall--and through an obscure part of Old Warpy. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
 	now satchel is in lalaland;
 	now teariest treatise is in lalaland;
 	solve-region roman manor;
 	the rule succeeds;
 
-chapter plaster
+chapter plaster psalter
 
-some plaster is scenery in cavern. "It looks sloppily put on, as if someone wanted it to be torn down the right way, though you don't have the patience or tools to do so physically[if plates are visible]. Some plates are stuck in it too[end if]. RETRAIN TERRAIN is written at the top."
+a plaster psalter is scenery in cavern. "It looks sturdy enough, but out of place[if plates are visible]. Some plates lie on top of it[end if]. Maybe you can make it into something more useful. RETRAIN TERRAIN is written at the top."
 
 check taking plaster:
-	say "Peeling the plaster would be more painful and pedantic than, well, figuring a seven-word anagram." instead;
+	say "It's stuck to the floor. What would you do with it, anyway?" instead;
 
-understand "psalter" as a mistake ("You don't need prayer when you have this cool magic power.") when player is in carven cavern.
+a-text of plaster is "RRYRRYR". b-text of plaster is "RRGRRGP". parse-text is "x[sp]x[sp]A[sp]x[sp]x[sp]E[sp]R".
 
-a-text of plaster is "RRYRRYR". b-text of plaster is "RRGRRGP". parse-text is "[bug-report]".
+chapter stapler
 
 the stapler is a container. description of stapler is "[if stapler contains staple]Locked and loaded with a staple[otherwise]Empty, but given its width, ready for some heavy-duty ammo[end if].". "An oddly wide metal stapler lies here. The normal material would nearly get lost in it."
 
@@ -10512,7 +10533,14 @@ after inserting staple into stapler:
 	say "The staple fits in with minimal fuss.";
 	the rule succeeds
 
-the peeling paperwall is scenery. "It's oddly lined, with one vertical stripe on the edge and a bunch of horizontal stripes. There's a small pair of holes in the upper left-hand corner. You imagine it's many layers of papers, so pulling them one by one wouldn't work."
+chapter act-ruin curtain
+
+check touching curtain:
+	try going inside instead;
+
+curtain-know is a truth state that varies.
+
+the act-ruin curtain is scenery. "It looks flimsy enough[if curtain-know is true], but you know if you touch it, you'll freeze up again[end if]."
 
 understand "wall" and "walls" as paperwall when player is in cavern and paperwall is in cavern.
 
@@ -10544,13 +10572,11 @@ after fliptoing stapler:
 		now peeling paperwall is in cavern;
 	continue the action;
 
-chapter plates
+chapter pastel plates
 
-some plates are a plural-named thing in carven cavern. description of plates is "They're cracked and useless and appear to be squarish, but each has metallic trim around its edge[if plaster is visible]. In some odd way, they sort of seem to belong wedged in the plaster[end if].". "Some plates [if plaster is visible]are wedged in the plaster[otherwise]lie[end if] here[one of]. So that's where they go after the dishwasher eats them[or][stopping]."
+the palest pastel plates are plural-named scenery in carven cavern. description of plates is "They're...a bit squarish. Odd. And they're  cracked and useless and appear to be squarish, but each has metallic trim around its edge and even some red writing[if plaster is in cavern]. The plates seem like they belong with the plaster[end if].".
 
 understand "petals" as a mistake ("That's already been done, and quite well, by Alan Garner in The Owl Service. If you haven't read his Brisingamen books, you should! They're not too long and very entertaining.") when plates are visible or staple is visible.
-
-understand "pastel" and "palest" as a mistake ("The plates are more metallic. Plus, you are a text adventurer, not an interior decorator.") when plates are visible or staple is visible.
 
 understand "pleats" as a mistake ("You are a text adventurer, not a fashion designer.") when plates are visible or staple is visible.
 
@@ -10560,7 +10586,9 @@ instead of taking plates:
 	otherwise:
 		say "They are too broken and bulky to be of much use.";
 
-a-text of plates is "RRYRRY". b-text of plates is "RRGRRY". parse-text is "[bug-report]."
+a-text of plates is "RRYRRY". b-text of plates is "RR?RRY". parse-text is "x[sp]x[sp]?[sp]x[sp]x[sp]-."
+
+chapter staple
 
 the staple is a thing. description is "It looks unbent (well, beyond the two bends all staples have) and usable. It's the biggest staple you've seen by a long shot."
 
@@ -12477,7 +12505,7 @@ description of lecturer is "He's wearing a very expensive suit and tie. You're n
 
 chapter ian
 
-idg is a privately-named person in Cruelest Lectures. printed name of idg is "Ian (a Drug Guardian)". description is "'What? Those biceps are from pure hard work. And a proper diet. And the right vitamins.' He nods and points to the lecturer.". "Standing by the only exit is Ian (a Drug Guardian.)"
+idg is a privately-named person in Cruelest Lectures. printed name of idg is "Ian (a Drug Guardian)". description is "'What? Those biceps are from pure hard work. And a proper diet. And Nativism Vitamins.' He nods and points to the lecturer.". "Standing by the only exit is Ian (a Drug Guardian.)"
 
 understand "ian" and "drug guardian" and "guardian" as idg.
 
@@ -23523,7 +23551,7 @@ prompt	response	enabled
 "WTF FTW"	wtf-quip	1
 "LOL, how hollow!"	hollow-quip	1
 "Play God? Dopy gal!"	sneer-quip	1
-"Abhorsive Behaviors!"	abhor-quip	1
+"Abhorsive behaviors! Nastiest titaness!"	abhor-quip	1
 "Strong will? Still wrong. At bay, ya bat."	strong-quip	1
 "Go bald, old bag!"	bald-quip	0
 "Sinister Insister. Hypno-phony. Reposed? Deposer."	sinister-quip	0
@@ -24295,7 +24323,7 @@ check inserting into lost slot:
 		say "The box splutters for a while but eventually rejects the [noun]. Still, you must be close to having the right thing." instead;
 	if noun is not s-i:
 		say "That doesn't fit." instead;
-	say "The icons fit just fine. The box opens up, dissolving to reveal a popstar's passport.";
+	say "As perform the toll-toss, you think you hear tots['] LOLs. The box opens up, dissolving to reveal a popstar's passport.";
 	now storage box is in lalaland;
 	now s-i is in lalaland;
 	now player has popstar's passport;
