@@ -11,6 +11,22 @@
 use strict;
 use warnings;
 
+my $prev = __FILE__;
+$prev =~ s/pl$/txt/;
+
+if (($#ARGV > -1) && ($ARGV[0] eq "h")) { `$prev`; exit; }
+
+my @prevs = ();
+
+open(A, "$prev");
+while ($a = <A>)
+{
+  chomp($a);
+  push(@prevs, $a);
+  if ($#prevs >= 30) { print "Too many previous files in $prev, cutting off.\n"; last; }
+}
+close(A);
+
 ##########################options
 my $plurals = 0;
 my $eqOnly = 1; # only show stuff that's equal, good default
@@ -72,13 +88,18 @@ tryNames("lasts");
 if ($matches) { print "\nMatches:$matches"; $matches = ""; }
 #for (keys %linked) { print "$_ -> $linked{$_}\n"; }
 
+unshift(@prevs, $ARGV[$thisarg]); if ($#prevs >= 30) { pop(@prevs); }
 }
+
+open(A, ">$prev");
+for (@prevs) { print A "$_\n"; }
+close(A);
 
 sub tryNames
 {
 
-%times = {};
-%mytimes = {};
+%times = ();
+%mytimes = ();
 
 my $count = 0;
 
@@ -110,14 +131,14 @@ while ($a = <A>)
   @b = split(//, $a);
   for (@b)
   {
-    if ($mytimes{$_} == 0) { next OUTER; }
+    if (!defined($mytimes{$_}) || ($mytimes{$_} == 0)) { next OUTER; }
     $mytimes{$_}--;
   }
   if (!$a) { next; }
   if (!$eqOnly)
   { print "$a"; $count++; }
   my $toAdd = "";
-  for my $q (keys %times) { if ($mytimes{$q} > 0) { $toAdd .= uc($q) x $mytimes{$q}; } }
+  for my $q (keys %times) { if (defined($mytimes{$q}) && ($mytimes{$q} > 0)) { $toAdd .= uc($q) x $mytimes{$q}; } }
   
   if (!$eqOnly) { if (!$toAdd) { print "!"; $matches .= lf($a); } print "/" . alfo($toAdd); } else { if ($matchFlag && !$toAdd) { $matches .= lf($a); } }
   if ($linked{alfo($a)})
