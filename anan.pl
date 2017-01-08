@@ -7,12 +7,34 @@
 #
 
 #set this, I use it so much
-$eqOnly = 1; $matchFlag = 1;
 
-for $thisarg (0..$#ARGV)
+use strict;
+use warnings;
+
+##########################options
+my $plurals = 0;
+my $eqOnly = 1; # only show stuff that's equal, good default
+my $matchFlag = 1;
+my $toSub;
+my $mustFirstLast;
+my $modify = 0;
+my $matches = 0;
+
+my %nameType;
+my %first;
+my %last;
+my %times;
+my %mytimes;
+my %linked;
+my %bkwd;
+
+my $foundMatch = 0;
+my $thisMatch;
+
+for my $thisarg (0..$#ARGV)
 {
-  if (@ARGV[$thisarg] eq "-p") { $plurals = 1;  next; }
-  $thisMatch = lc(@ARGV[$thisarg]);
+  if ($ARGV[$thisarg] eq "-p") { $plurals = 1;  next; }
+  $thisMatch = lc($ARGV[$thisarg]);
 
 if ($thisMatch =~ /\\/) { $eqOnly = 0; $matchFlag = 0; $thisMatch =~ s/=//g; $thisMatch =~ s/\\//g; }
 
@@ -64,13 +86,15 @@ open(A, "c:/writing/dict/$_[0].txt") || die ("No $_[0].txt.\n");
 
 print "\n$_[0].txt:\n";
 
-@my = split(//, lc($thisMatch));
+my @my = split(//, lc($thisMatch));
 
 for (@my) { $times{$_}++; }
 
 #for ('a'..'z') { print "$_ $times{$_}\n"; } die;
 
-$l = 0;
+my $l = 0;
+my $lc;
+my @b;
 
 OUTER:
 while ($a = <A>)
@@ -79,7 +103,6 @@ while ($a = <A>)
   if ($_[0] eq "firsts") { $first{$lc} = 1; } else { $last{$lc} = 1; }
   %mytimes = %times;
   if ($a !~ /[A-Z]/) { next; }
-  $q = $a;
   $l++;
   chomp($a); $a = lc($a); $a =~ s/\t.*//g;
   #if ($seen{$a}) { print "Duplicate $a at line $l.\n"; } $seen{$a} = 1;
@@ -93,8 +116,8 @@ while ($a = <A>)
   if (!$a) { next; }
   if (!$eqOnly)
   { print "$a"; $count++; }
-  $toAdd = "";
-  for $q (keys %times) { if ($mytimes{$q} > 0) { $toAdd .= uc($q) x $mytimes{$q}; } }
+  my $toAdd = "";
+  for my $q (keys %times) { if ($mytimes{$q} > 0) { $toAdd .= uc($q) x $mytimes{$q}; } }
   
   if (!$eqOnly) { if (!$toAdd) { print "!"; $matches .= lf($a); } print "/" . alfo($toAdd); } else { if ($matchFlag && !$toAdd) { $matches .= lf($a); } }
   if ($linked{alfo($a)})
@@ -127,15 +150,17 @@ sub strdif
 {
   my @a = sort(split(//, $_[0]));
   my @b = sort(split(//, $_[1]));
+  my $bi;
+  my $ai;
   
   for $bi (0..$#b)
   {
     $foundMatch = 0;
     for $ai (0..$#a)
 	{
-	  if (@a[$ai] eq @b[$bi]) { @a[$ai] = ""; $foundMatch = 1; last; }
+	  if ($a[$ai] eq $b[$bi]) { $a[$ai] = ""; $foundMatch = 1; last; }
 	}
-	if (!$foundMatch) { die "$_[0] did not have/ran out of @b[$bi]."; }
+	if (!$foundMatch) { die "$_[0] did not have/ran out of $b[$bi]."; }
   }
   return join("", @a);
 }
