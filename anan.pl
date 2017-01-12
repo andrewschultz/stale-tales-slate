@@ -16,17 +16,6 @@ $prev =~ s/pl$/txt/;
 
 if (($#ARGV > -1) && ($ARGV[0] eq "h")) { `$prev`; exit; }
 
-my @prevs = ();
-
-open(A, "$prev");
-while ($a = <A>)
-{
-  chomp($a);
-  push(@prevs, $a);
-  if ($#prevs >= 30) { print "Too many previous files in $prev, cutting off.\n"; last; }
-}
-close(A);
-
 ##########################options
 my $plurals = 0;
 my $eqOnly = 1; # only show stuff that's equal, good default
@@ -43,9 +32,12 @@ my %times;
 my %mytimes;
 my %linked;
 my %bkwd;
+my %inPrev;
 
 my $foundMatch = 0;
 my $thisMatch;
+
+my @prevs;
 
 for my $thisarg (0..$#ARGV)
 {
@@ -88,12 +80,33 @@ tryNames("lasts");
 if ($matches) { print "\nMatches:$matches"; $matches = ""; }
 #for (keys %linked) { print "$_ -> $linked{$_}\n"; }
 
-unshift(@prevs, $ARGV[$thisarg]); if ($#prevs >= 30) { pop(@prevs); }
+addPrev($ARGV[$thisarg]);
 }
+
+open(A, "$prev");
+
+while ($a = <A>)
+{
+  chomp($a);
+  addPrev($a);
+}
+
+close(A);
 
 open(A, ">$prev");
 for (@prevs) { print A "$_\n"; }
 close(A);
+
+######################################functions below
+sub addPrev
+{
+  my $newAdd = lc($_[0]);
+  $newAdd =~ s/[0-9=]//g;
+  if ($inPrev{$newAdd})
+  { print "$newAdd already in history.\n"; }
+  else
+  { if ($#prevs < 29) { push(@prevs, $newAdd); $inPrev{$newAdd} = 1; } }
+}
 
 sub tryNames
 {
