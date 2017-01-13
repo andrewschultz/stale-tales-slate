@@ -39,6 +39,9 @@ my $line, my $line2;
 my @intro = ();
 my @endLump = ();
 
+my %caps;
+my %punc;
+my %quotes;
 my %dupes;
 
 my $unsorted = 0;
@@ -94,6 +97,10 @@ while ($line=<A>)
   if ($#hashy != 1) { die "Hash lines need a \\t for what table it maps to and the regex: line $. as $line fails."; }
   push(@tabname, $hashy[0]);
   $regex{$hashy[0]} = $hashy[1];
+  if ($#hashy < 4) { print "$hashy[0] needs caps/punc/quotes.\n"; }
+  $caps{$hashy[0]} = $hashy[2];
+  $punc{$hashy[0]} = $hashy[3];
+  $quotes{$hashy[0]} = $hashy[4];
 }
 
 close(A);
@@ -120,6 +127,8 @@ while ($line = <A>)
   {
     if ($line =~ /$regex{$y}/)
     {
+      if (($quotes{$y} == -1) && ($line =~ /'/)) { print "Excess quotes: $line\n"; last; }
+      if (($quotes{$y} == 1) && ($line !~ /'/)) { print "Need quotes: $line\n"; last; }
       #if ($idx == 3) { print "$idx ($.). $y: $line\n"; }
 	  $hash{$y} .= "$line\n"; last;
     }

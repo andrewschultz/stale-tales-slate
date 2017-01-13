@@ -8,21 +8,21 @@ xxv0	\[r\].*\"v
 xxm4	\[r\],? by 
 ########################ALL CAPS STUFF: PSA(p), laments
 xxu3	^\"[^a-z]+\"p$
-xxms4	^\"[^a-z]+\"$
+xxms4	^\"[^a-z]+\"$	3	-1	-1
 ########################ads
 xxm1	\t(true|false)
 ########################shuffling stuff. F=forest/maps, X=names, I=bad poems
-xxf	\"f$
-xxi	\"i$
-xxx	\"x$
+xxf	\"f$	0	-1	-1
+xxi	\"i$	1	1	-1
+xxx	\"x$	1	-1	-1
 ########################PSAs counted above. MC=condo (Rarer than camp), M = camp
-xxms1	\"ms[n1]$
-xxms2	\"ms[c2]$
-xxms3	\"m(n|s3)$
-xxs4	\"ms4$
+xxms1	\"ms[n1]$	1	1	1
+xxms2	\"ms[c2]$	1	1	0
+xxms3	\"m(n|s3)$	1	1	0
+#xxms4	\"ms4$	3	-1	-1
 ########################ri=riot, r=RED BULL
-xxr1	\"r[i1]$
-xxr2	\"r(2)?$
+xxr1	\"r[i1]$	1	1	0
+xxr2	\"r(2)?$	1	1	0
 ########################ROILING stuff
 xxp6	\"p6$
 xxp5	\"p5$
