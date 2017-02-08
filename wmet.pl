@@ -108,9 +108,9 @@ sub perms
   my $vowels = 0;
   my $cons = 0;
   my $ys = 0;
-  
+
   for (@ary) { $let{$_}++; if ($_ =~ /[aeiou]/) { $vowels++; } elsif ($_ =~ /[y]/i) { $ys++; } else { $cons++; } }
-  
+
   my $poss = @fact[length($_[0])];
   if ($header =~ /^sa/)
   {

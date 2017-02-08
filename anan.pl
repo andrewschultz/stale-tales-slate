@@ -152,7 +152,7 @@ while ($a = <A>)
   { print "$a"; $count++; }
   my $toAdd = "";
   for my $q (keys %times) { if (defined($mytimes{$q}) && ($mytimes{$q} > 0)) { $toAdd .= uc($q) x $mytimes{$q}; } }
-  
+
   if (!$eqOnly) { if (!$toAdd) { print "!"; $matches .= lf($a); } print "/" . alfo($toAdd); } else { if ($matchFlag && !$toAdd) { $matches .= lf($a); } }
   if ($linked{alfo($a)})
   {
@@ -174,7 +174,7 @@ close(A);
 sub alfo
 {
   my @alf = split(//, lc($_[0]));
-  
+
   @alf = sort(@alf);
   return(join('', @alf));
 
@@ -186,7 +186,7 @@ sub strdif
   my @b = sort(split(//, $_[1]));
   my $bi;
   my $ai;
-  
+
   for $bi (0..$#b)
   {
     $foundMatch = 0;

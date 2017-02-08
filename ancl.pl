@@ -16,9 +16,9 @@ sub fiPro
   $toread = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] Random Text.i7x";
   open(A, "$toread") || die ("No $toread.\n");
   my $line = 0;
- 
+
   print "Starting $toread\n";
-  
+
   while ($a=<A>)
   {
     $line++;
@@ -37,6 +37,6 @@ sub fiPro
 	  $classes{$temp} .= "  ($line-$_[0]) $a";
 	}
   }
-  
+
   close(A);
 }

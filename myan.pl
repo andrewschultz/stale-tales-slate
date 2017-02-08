@@ -164,7 +164,7 @@ sub findAna
   my $maxlength;
   $maxlength = length($_[0]);
   my $lo2 = length($_[2]);
-  
+
   if (($lo2) && ($lo2 < $maxlength)) { $maxlength = $lo2; } # this makes sure that we don't search for cowpies-cow-pies and cowpies-pies-cow
 
   if ($_[3] == $curMax)
@@ -215,7 +215,7 @@ sub alf
 {
   return lc($_[0]);
   my @x = sort(split(//, $_[0]));
-  return join(@x); 
+  return join(@x);
 }
 
 sub wd

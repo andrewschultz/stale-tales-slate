@@ -36,7 +36,7 @@ while (@ARGV[$count])
 {
   $a = @ARGV[$count];
   $b = @ARGV[$count+1];
-  
+
   for ($a)
   {
   /^-x[0-9]/i && do { $exclude = 1; $x = $a; $x =~ s/^-x//g; $x =~ s/[^0-9]//g; @y = split(//, $x); for (@y) { if ($_ > 0) { @doable[$_] = 0; } } $count++; next; }; #eXclude
@@ -220,11 +220,11 @@ for (0..$#lists)
   shift(@digs);
   shift(@sizes);
   shift (@combo);
-  
+
   if ($sums == 0) { print "I didn't find any blurbs in tables. Bailing.\n"; exit; }
-  
+
   print "$sums total lines, $totalSize total size\n1st digits @digs, sizes @sizes";
-  
+
   if ($expected)
   {
     for (0..8)
@@ -233,7 +233,7 @@ for (0..$#lists)
 	  @exp[$_] = floor(@exp[$_] * 10 + .5) / 10;
     }
   }
-  
+
   if ($expected == 1)
   {
     print ", expected @exp.\n";
@@ -242,15 +242,15 @@ for (0..$#lists)
   {
     print ", ";
   }
-  
+
   print "total @combo";
-  
+
   if ($expected == 2)
   {
     print ", expected @exp";
   }
   print ".\n";
-  
+
 $totAvg = $totalSize / $sums;
   if ($average) { printf ("Average = %.3f\n", $totAvg); }
 # this is to see how much til 400000
@@ -290,7 +290,7 @@ $totAvg = $totalSize / $sums;
   $runTot += $sums;
   if ($runTot > $sums) { print "$runTot overall.\n"; }
   for $q (keys %lines) { delete $lines{$q}; }
-  
+
   if ($procReg) { for $thisReg (sort {$regLines{$b} <=> $regLines{$a}} keys %regLines) { print "$thisReg = $regLines{$thisReg}\n"; } }
 
   if ($printBytes)
@@ -440,7 +440,7 @@ sub countTables
 	chomp($a);
     $a =~ s/^\"//g;
     $a =~ s/\".*//g;
-	
+
 	$lgth = length($a);
     if ($a =~ /\[if player is (fe)?male\]/i)
 	{

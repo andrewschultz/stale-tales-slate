@@ -82,7 +82,7 @@ while ($a = <A>)
 	}
 	$nocheat .= $colors[$curIdx]; $cheat .= $colors[$xtraIdx+$curIdx];
   }
-  
+
   for (0..$#c)
   {
     if ($d[$_] eq $c[$_]) { $parse .= "$space$c[$_]"; }
@@ -90,7 +90,7 @@ while ($a = <A>)
 	elsif (($d[$_] =~ /[aeiou]/) && ($vowels - $vowelmatch == 1)) { $parse .= "$space$d[$_]"; } # PLAY
 	elsif (($d[$_] !~ /[y]/) && ($consonants - $consonantmatch == 1)) { $parse .= "$space$d[$_]"; } # AIDE
 	else { if ($d[$_] =~ /[aeiou]/) { $parse .= "$space-"; } else { $parse .= "$space" . "x"; } }
-	
+
 	if ($d[$_] eq 'y') { $ncparse .= ($space . "y"); }
 	elsif ($d[$_] =~ /aeiou/) { if ($vowels == 1) { $ncparse .= "$space$d[$_]"; } else { $ncparse .= "$space-"; } } # PLAY
 	elsif ($d[$_] !~ /[y]/) { if ($consonants == 1) { $ncparse .= "$space$d[$_]"; } else { $ncparse .= "$space" . "x"; }  } # AIDE

@@ -94,13 +94,16 @@ while ($line=<A>)
   if ($line =~ /^#/) { next; }
   chomp($line);
   my @hashy = split(/\t/, $line);
-  if ($#hashy != 1) { die "Hash lines need a \\t for what table it maps to and the regex: line $. as $line fails."; }
+  if ($#hashy < 1) { die "Hash lines need a \\t for what table it maps to and the regex: line $. as $line fails."; }
   push(@tabname, $hashy[0]);
   $regex{$hashy[0]} = $hashy[1];
   if ($#hashy < 4) { print "$hashy[0] needs caps/punc/quotes.\n"; }
-  $caps{$hashy[0]} = $hashy[2];
-  $punc{$hashy[0]} = $hashy[3];
-  $quotes{$hashy[0]} = $hashy[4];
+  if ($#hash < 2) { $caps{$hashy[0]} = 0; }
+  else { $caps{$hashy[0]} = $hashy[2]; }
+  if ($#hash < 3) { $punc{$hashy[0]} = 0; }
+  else { $punc{$hashy[0]} = $hashy[3]; }
+  if ($#hash < 4) { $quotes{$hashy[0]} = 0; }
+  else { $quotes{$hashy[0]} = $hashy[4]; }
 }
 
 close(A);

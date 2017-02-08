@@ -35,7 +35,7 @@ while ($count <= $#ARGV)
 {
   $a = @ARGV[$count];
   $b = @ARGV[$count+1];
-  
+
   for ($a)
   {
   /^-?w$/ && do { findWhat(); exit; };

@@ -8,9 +8,9 @@ my $found = 0;
 
 @files = ( "c:/games/inform/roiling.inform/source/story.ni", "c:/games/inform/sa.inform/source/story.ni",
   "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Roiling Random Text.i7x",
-  "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Sa Random Text.i7x",
+  "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Shuffling Random Text.i7x",
   "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Roiling Nudges.i7x",
-  "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Sa Nudges.i7x" );
+  "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Shuffling Nudges.i7x" );
 
 for $match (@matches)
 {

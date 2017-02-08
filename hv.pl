@@ -119,7 +119,7 @@ $tabString = "--\t$rm\t--";
   #$found = 0;
   #print "$this:\n";
   #findHash($this, "", $ary{"e"}); print "\n"; next; }
-  
+
 my @these = split(/,/, $this);
 
 if (@these > -1) { print "Checking CSV of list.\n"; }
@@ -148,7 +148,7 @@ else { print "Instance found in file, not printing externally. Use -p.\n"; }
 }
 
 close(B);
-if ($worthOpening && $openPost) { `c:/writing/dict/hv.txt`; } 
+if ($worthOpening && $openPost) { `c:/writing/dict/hv.txt`; }
 
 sub wordit
 {
@@ -244,9 +244,9 @@ sub findHash
   my $maxlength = $_[2];
   my $starting = $_[3];
   my $l = length($_[1]);
-  
+
   #print "Parameters: $_[0] $_[1] $_[2] $_[3]...\n";
-  
+
   if (!$maxlength) { $maxlength = 11; }
   if (($l < 0) || ($found)) { return; }
   #print "Trying $_[0]/$_[1]/$_[2]\n";
@@ -265,7 +265,7 @@ sub findHash
 	  #print "$temp vs ($maxlength - $l) * $ary{$q} = " . ($maxlength - $l) * $ary{$q} . "\n";
 	  if ($temp > (($maxlength - $l) * $ary{$q})) { last; }
 	  if ($temp < $ary{$q}) { next; }
-	  
+
 	  findHash($temp - $ary{$q}, "$_[1]$q", $maxlength, $idx);
 	}
   }

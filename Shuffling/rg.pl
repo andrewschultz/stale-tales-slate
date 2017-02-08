@@ -27,10 +27,10 @@ sub rg
   print "lgth of $_[1] is " . ($#b+1) . ".";
   for (0..$#b)
   {
-    if (@b[0] eq @c[$_]) { print " gpos of $_[1] is " . ($_+1) . ". "; last; } 
+    if (@b[0] eq @c[$_]) { print " gpos of $_[1] is " . ($_+1) . ". "; last; }
   }
   for (0..$#b)
   {
-    if (@b[$#b] eq @c[$_]) { print "rpos of $_[1] is " . ($_+1) . ".\n"; last; } 
+    if (@b[$#b] eq @c[$_]) { print "rpos of $_[1] is " . ($_+1) . ".\n"; last; }
   }
 }

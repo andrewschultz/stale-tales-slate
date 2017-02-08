@@ -18,8 +18,8 @@ $badError = "";
 
 while ($count <= $#ARGV)
 {
-  $a = @ARGV[$count];  
-  $b = @ARGV[$count+1];  
+  $a = @ARGV[$count];
+  $b = @ARGV[$count+1];
   for ($a)
   {
     /^-?x$/ && do { $dontcopy = 1; $count++; next; };
@@ -142,7 +142,7 @@ sub postProcess
   #my $outFileName = "$_[0].bak";
   my $outFileName = "c:\\Program Files (x86)\\Inform 7\\Inform7\\Extensions\\Andrew Schultz\\temp.i7x";
 
-  
+
 if (!$dontcopy)
 {
   print "Copying .nu to .ni\n";
@@ -170,7 +170,7 @@ if (!$dontcopy)
   $outString .= $thisOutString;
 
   print "Now:\n$outString";
-  
+
   close(A);
   open(B, ">c:/games/inform/tsh.txt");
   print B $outString;
@@ -215,7 +215,7 @@ sub sortTheTable
 	$num = () = $a =~ /\"/gi;
 	if (($num % 2) || (!$num)) { $quoteWarn .= "  -- $thisTable: $a\n"; }
   }
-  if ($badError) { print "TEST RESULTS:$short tables bad fail,1,0,0,0,$badError\n"; die; } 
+  if ($badError) { print "TEST RESULTS:$short tables bad fail,1,0,0,0,$badError\n"; die; }
   if ($verbose) { printf("%2d: Sorting $thisTable, " . ($#ary+1) . " total elements.\n", $count); }
   if ($#ary < 23)
   { print "********UH OH, THERE ARE WAY TOO FEW in $thisTable, $#ary********\n"; }
@@ -251,7 +251,7 @@ sub sortTheTable
   }
   @ary2 = grep { $_ ne '' } @ary2;
   $lines += $#ary2 + 2;
-  
+
   for (@ary2)
   {
     print B "$_";
@@ -290,7 +290,7 @@ sub lch
 #
 sub fileOf
 {
-  #return "c:/games/inform/$_[0].inform/Source"; 
+  #return "c:/games/inform/$_[0].inform/Source";
   return "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] Random Text.i7x";
 }
 

@@ -42,10 +42,10 @@ OUTER: while ($exit == 0)
 {
   print "File: $fi screen: $sc\n";
   print "Grepquick (gq): $gq Nicknaming (ni): $ti Anagram Names (an): $an My anagram (my): $my (- before means ignore)\n";
-  print "Type in next thing(s) to anagram (! = both words to name too)\n"; 
+  print "Type in next thing(s) to anagram (! = both words to name too)\n";
   $a = <STDIN>;
   readLine($a);
-} 
+}
 }
 
 close(A);

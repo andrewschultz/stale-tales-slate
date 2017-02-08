@@ -130,7 +130,7 @@ sub addIdeas
 	  print ".\n";
     }
   }
-  
+
 
   close(A);
   close(B);
@@ -185,7 +185,7 @@ sub cleanUpLoneFile()
 
   close(A);
   close(B);
-  
+
   $cmd = "copy $anaDel $anaIdeas";
   print "$cmd\n";
   `$cmd`;

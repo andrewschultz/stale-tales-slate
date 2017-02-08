@@ -114,7 +114,7 @@ while (@perm = $p_iterator->next)
   if (!isOops($j))
   {
     $succ++;
-	
+
 	for (0..$#perm) { $statFin{"@perm[$_]-$_"}++; }
     if ($succ <= $myMax)
     {

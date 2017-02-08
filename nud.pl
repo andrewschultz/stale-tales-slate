@@ -25,7 +25,7 @@ sub nudgesort
   my @bigAry;
   my @prefix;
   my $lastString;
-  
+
   my $fileName = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] nudges.i7x";
   my $tempFile = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/temp.i7x";
   open(A, "$fileName") || die ("$fileName not available.");

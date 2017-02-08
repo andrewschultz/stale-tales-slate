@@ -8,7 +8,7 @@
 #It only focuses on table text
 #Time to run:
 #Shuffling = 5 seconds
-#Roiling = 
+#Roiling =
 
 use POSIX;
 
@@ -157,7 +157,7 @@ for $thisDir(@weedDir)
   print A2 "$s1";
 
   print B "$s2";
-  
+
   if (keys %pbad > 0) { print B "Missing stuff by table:\n"; for $tname (sort keys %pbad) { print B "$tname : $pbad{$tname}\n"; } }
 
   print B2 "$s2a";
@@ -167,7 +167,7 @@ for $thisDir(@weedDir)
   close(A);
 
   print A2 "</table></body></html>";
-  
+
   for $x (sort keys %dupCount) { print A3 "$x: $dupCount{$x}\n"; }
 
   close(A2);
@@ -246,7 +246,7 @@ sub cutDown
   }
   $temp =~ s/\[[^\]]*\]//g;
   return $temp;
-  
+
 }
 
 sub checkFullAna
@@ -268,17 +268,17 @@ sub checkFullAna
 sub quikAna
 {
   my $strg = lc($_[0]); $strg =~ s/[^a-z]//gi;
-  
+
   my@x = split(//, $strg);
-  
+
   for ('a' .. 'z') { $quik{$_} = 0; }
-  
+
   for (@x) { $quik[ord($_)-97]++; }
-  
+
   my %roots;
   my $retStr;
   my $temp = lc($_[0]);
-  
+
   #print "$temp: $a $b $c\n";
   for $let ('a' .. 'z')
   {
@@ -288,11 +288,11 @@ sub quikAna
   }
 
   $q = Math::BigInt::bgcd(@roots);
-  
+
   if ($q > 1) { return 1; }
-  
+
   return 0;
-  
+
 }
 
 sub mash
@@ -300,7 +300,7 @@ sub mash
   my %roots;
   my $retStr;
   my $temp = lc($_[0]);
-  
+
   #print "$temp: $a $b $c\n";
   for $let ('a' .. 'z')
   {
@@ -340,7 +340,7 @@ sub mash
 	}
 	$hadPoss = 0;
 	}
-  
+
   $mess = join("", @roots);
   #die ($mess . $_[0]	);
   return $mess;
@@ -459,7 +459,7 @@ sub cromstring
 		}
 	  }
 	  print "\n";
-	  
+
 	}
 	else
 	{
@@ -476,8 +476,8 @@ sub gotAna
   my %totes;
   my @tmp;
   my @words;
-  
-  
+
+
   for $q (0..$#divs)
   {
     @tmp = split(//, @divs[$q]);
@@ -493,7 +493,7 @@ sub gotAna
     $runTote = 0;
     for $j ($i..$#words)
 	{
-	  $runTote += @words[$j]; 
+	  $runTote += @words[$j];
 	  #if ($totes{$runTote} =~ /^0/) { print B "$totes{$runTote}: $i, $j, $_[0]\n"; }
       if ($totes{$runTote} !~ /[0-9]/)
 	  {
@@ -511,12 +511,12 @@ sub gotAna
 	    if ($die) { print "$runTote already $totes{$runTote}\n"; }
 	    @rt = split(/-/, $totes{$runTote});
 		if (!@rt[1]) { @rt[1] = @rt[0]; }
-		
+
 		$mayDupe = 0;
 		if ($i <= @rt[1]) { $mayDupe = 1; }
-		
+
 		if ($j == $i) { $combo = "$i"; } else { $combo = "$i-$j"; }
-		
+
 		if ($mayDupe && $showDupe) { print B "(DUPE WORDS?) "; }
 		if (($mayDupe == 0) || ($showDupe == 1))
 		{
@@ -588,7 +588,7 @@ while (($a = <A>) && (stillWorth()))
     if ($line == $weirdLine) { $notWeirdYet = 0; }
   }
   chomp($a); $a = lc($a);
-  
+
   if ($a =~ /^table of.*xx/)
   {
     if ($dupeRows) { $dupCount{$thisTable} = $dupeRows;  }
