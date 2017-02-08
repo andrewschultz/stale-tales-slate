@@ -1,13 +1,41 @@
+########################################
+ #
+#wmet.pl
+#
+#Work out METrics of how many possibilities there are for each STS game
+#
+#one possible bug fix is to scan through for minimums and maxes
+
 use POSIX;
 
-$printSettler = 1;
+use strict;
+use warnings;
 
-$settlerToo = 1;
+#####constants
+my $inFile = "c:\\writing\\dict\\wmet.txt";
+my $outFile = "c:\\writing\\dict\\metrics.htm";
 
-$inFile = "c:/writing/dict/wmet.txt";
-$outFile = "c:/writing/dict/metrics.htm";
+#####options
+my $printSettler = 1;
+my $settlerToo = 1;
+my $debug = 0;
+my $launch = 1;
 
-if (@ARGV[0] eq "-d") { $debug = 1; }
+#####vars
+my @fact; # factorial array so don't have to keep recalculating
+my $lg, my $t1, my $t2; # t1 = length sum,  t2 = length square sum for RMS
+my $poss;
+my $k;
+my $sett; # settler possibilities
+my $thislog, my $thisset;
+my $header;
+my $inHere = 0;
+
+if (defined($ARGV[0]))
+{
+if ($ARGV[0] eq "-d") { $debug = 1; }
+if ($ARGV[0] eq "-l") { $launch = 1; }
+}
 
 open(A, $inFile) || die ("Can't open $inFile.");
 open(B, ">$outFile");
@@ -16,9 +44,8 @@ print B "<html>\n<title>Stale Tales Slate Difficulty Metrics</title><body>\n<cen
 
 print B "<tr><th>test run<th>Anagrams<th>Letters<th>&Sigma;Letters^2<th>Average<th>RMS<th>&Sigma;Log(poss., no device)<th>Average<th>&Sigma;Log(poss. with gadget)<th>Average\n";
 
-@fact[0] = 1;
-
-for (1..12) { @fact[$_] = $_ * @fact[$_-1]; }
+$fact[0] = 1;
+for (1..12) { $fact[$_] = $_ * $fact[$_-1]; }
 
 while ($a = <A>)
 {
@@ -35,7 +62,7 @@ while ($a = <A>)
   }
   else
   {
-    @b = split(/[\/,]/, $a);
+    my @b = split(/[\/,]/, $a);
     for (@b)
     {
 	  $lg = length($_);
@@ -55,27 +82,34 @@ print B "</table></center>\n(NOTE 1: more logical possibilities does not mean so
 
 close(B);
 
+if ($launch) { `$outFile`; }
+
+############################################
+#subroutines
+#
+
 sub evaluate
 {
   if (!$inHere) { return; }
   my $t1a = $t1 / $inHere;
   my $t2a = $t2 / $inHere;
   my $t2b = $t2a ** .5;
+
   if ($t1 > 0)
   {
-    $tla = $thislog / $inHere;
-	$tlb = $thisset / $inHere;
-    $toB = sprintf("<tr><td>%s<td %s>%2d<td %s>%3d<td %s>%4d<td %s>%4.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f\n",
+    my $tla = $thislog / $inHere;
+	my $tlb = $thisset / $inHere;
+    my $toB = sprintf("<tr><td>%s<td %s>%2d<td %s>%3d<td %s>%4d<td %s>%4.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f<td %s>%6.2f<td %s>%4.2f\n",
       $header,
-	  torgb($inHere, 8, 40), $inHere,
-	  torgb($t1, 40, 260), $t1,
-	  torgb($t2, 363, 1850), $t2,
-	  torgb($t1a, 4,  8), $t1a,
-	  torgb($t2b, 4, 8.1), $t2b,
-	  torgb($thislog, 70, 225), $thislog,
-	  torgb($tla, 4, 9.5), $tla,
-	  torgb($thisset, 40, 170), $thisset,
-	  torgb($tlb, 2, 5.5), $tlb);
+	  torgb($inHere, 3, 45.01), $inHere, # total puzzles
+	  torgb($t1, 18, 321.1), $t1, # letters
+	  torgb($t2, 97, 2710), $t2, # letters square sum
+	  torgb($t1a, 4,  8), $t1a, # avg letters
+	  torgb($t2b, 4, 8.13), $t2b, # RMS letters
+	  torgb($thislog, 16.65, 392), $thislog, # sum of logs of possibilities without settlers
+	  torgb($tla, 4, 9.52), $tla, # average of logs of possibilities without settlers
+	  torgb($thisset, 8, 225), $thisset, # sum of logs of possibilities with settlers
+	  torgb($tlb, 2, 5.5), $tlb); # average of logs of possibilities with settlers
 	print B $toB;
     $t1 = 0;
     $t2 = 0;
@@ -89,8 +123,16 @@ sub torgb
 {
   my $x = 255 - floor(($_[0]-$_[1]) * 256 / ($_[2]-$_[1]));
   my $retStr;
-  if ($x < 0) { $x = 0; }
-  if ($x > 255) { $x = 255; }
+  if ($x < 0)
+  {
+    print  "WARNING $a gives $_[0] $_[1] $_[2] < 0\n";
+    $x = 0;
+  }
+  if ($x > 255)
+  {
+    print  "WARNING $a gives $_[0] $_[1] $_[2] > 255\n";
+    $x = 255;
+  }
   if ($header =~ /^ZZZ/i)
   {
   $retStr = sprintf("td bgcolor=c0%02x40", $x);
@@ -108,20 +150,21 @@ sub perms
   my $vowels = 0;
   my $cons = 0;
   my $ys = 0;
+  my %let;
 
   for (@ary) { $let{$_}++; if ($_ =~ /[aeiou]/) { $vowels++; } elsif ($_ =~ /[y]/i) { $ys++; } else { $cons++; } }
 
-  my $poss = @fact[length($_[0])];
+  my $poss = $fact[length($_[0])];
   if ($header =~ /^sa/)
   {
-  $sett = @fact[length($_[0])-2];
+  $sett = $fact[length($_[0])-2];
   }
   else
   {
-  $sett = @fact[$vowels] * @fact[$cons] * @fact[$ys];
+  $sett = $fact[$vowels] * $fact[$cons] * $fact[$ys];
   if ($printSettler) { print "$_[0] = $sett\n"; }
   }
-  for $k (keys %let) { $sett /= @fact[$let{$k}]; $poss /= @fact[$let{$k}]; $let{$k} = 0; }
+  for $k (keys %let) { $sett /= $fact[$let{$k}]; $poss /= $fact[$let{$k}]; $let{$k} = 0; }
   #print "$_[0] -> $poss $sett\n";
   return $poss;
 }
