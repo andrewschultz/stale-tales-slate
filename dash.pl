@@ -4,14 +4,26 @@
 #
 #no arguments needed
 
-$roil = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Roiling Random Text.i7x";
-$sa = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Shuffling Random Text.i7x";
+use strict;
+use warnings;
+
+my $roil = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Roiling Random Text.i7x";
+my $sa = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Shuffling Random Text.i7x";
+
+my $count = 0, my $frag = 0, my $subs = 0;
+
+my %hyphe;
+my %wrd;
+
+my @b, my @c;
 
 readHash($sa);
 readHash($roil);
 
 hyphe($sa);
 hyphe($roil);
+
+##################################subroutines
 
 sub readHash
 {
@@ -41,7 +53,7 @@ sub hyphe
         if ($hyphe{$_}) { $count++; print "($line) Duplicate hyphen $count $_\n"; }
         $hyphe{$_} = 1;
         @c = split(/-/, $_); $subs = 0; for $frag (@c) { if ($wrd{$frag}) { $subs++; } }
-        if ($subs > 2) { if (alfy(@c[0]) eq alfy(@c[1])) { print "($line) $_ is an overused hyphen, maybe.\n"; } }
+        if ($subs > 2) { if (alfy($c[0]) eq alfy($c[1])) { print "($line) $_ is an overused hyphen, maybe.\n"; } }
       }
 	}
   }
