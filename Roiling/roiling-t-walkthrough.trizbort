@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<trizbort version="1.5.9.7">
+	<info />
+	<map>
+		<room id="1" name="get rid of Barley" subtitle="" x="-896" y="-704" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="2" name="get rid of Whiners" subtitle="" x="-896" y="-832" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="3" name="" description="" flow="oneWay">
+			<dock index="0" id="1" port="n" />
+			<dock index="1" id="2" port="s" />
+		</line>
+		<room id="4" name="get rid of Imp" subtitle="" x="-896" y="-576" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="5" name="" description="" flow="oneWay">
+			<dock index="0" id="1" port="s" />
+			<dock index="1" id="4" port="n" />
+		</line>
+		<room id="6" name="get rid of Ed Riley" subtitle="" x="-736" y="-704" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="7" name="" description="" flow="oneWay">
+			<dock index="0" id="1" port="e" />
+			<dock index="1" id="6" port="w" />
+		</line>
+		<room id="8" name="get rid of Macks" subtitle="" x="-576" y="-704" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="9" name="" description="" flow="oneWay">
+			<dock index="0" id="6" port="e" />
+			<dock index="1" id="8" port="w" />
+		</line>
+		<room id="10" name="powers back" subtitle="" x="-416" y="-704" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="yes" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="12" name="gain eels' trust" subtitle="" x="-576" y="-832" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="13" name="" description="" flow="oneWay">
+			<dock index="0" id="8" port="n" />
+			<dock index="1" id="12" port="s" />
+		</line>
+		<room id="14" name="gain Mr Lee's trust" subtitle="" x="-576" y="-576" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="15" name="" description="" flow="oneWay">
+			<dock index="0" id="8" port="s" />
+			<dock index="1" id="14" port="n" />
+		</line>
+		<line id="11" name="" description="" flow="oneWay">
+			<dock index="0" id="12" port="se" />
+			<dock index="1" id="10" port="nw" />
+		</line>
+		<line id="16" name="" description="" flow="oneWay">
+			<dock index="0" id="14" port="ne" />
+			<dock index="1" id="10" port="sw" />
+		</line>
+		<room id="17" name="get rid of moat" subtitle="" x="-256" y="-704" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="18" name="" description="" flow="oneWay">
+			<dock index="0" id="10" port="e" />
+			<dock index="1" id="17" port="w" />
+		</line>
+		<room id="19" name="help wire deck animals" subtitle="" x="-256" y="-832" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="20" name="" description="" flow="oneWay">
+			<dock index="0" id="10" port="ne" />
+			<dock index="1" id="19" port="sw" />
+		</line>
+		<room id="21" name="help preserve animals" subtitle="" x="-256" y="-576" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="22" name="" description="" flow="oneWay">
+			<dock index="0" id="10" port="se" />
+			<dock index="1" id="21" port="nw" />
+		</line>
+		<room id="23" name="get rid of Elmer/Merle" subtitle="" x="-96" y="-704" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="24" name="" description="" flow="oneWay">
+			<dock index="0" id="17" port="e" />
+			<dock index="1" id="23" port="w" />
+		</line>
+		<line id="25" name="" description="" flow="oneWay">
+			<dock index="0" id="21" port="ne" />
+			<dock index="1" id="23" port="sw" />
+		</line>
+		<room id="26" name="train with whistle" subtitle="" x="64" y="-704" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="27" name="" description="" flow="oneWay">
+			<dock index="0" id="23" port="e" />
+			<dock index="1" id="26" port="w" />
+		</line>
+		<room id="28" name="defeat Elvira" subtitle="" x="64" y="-832" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="29" name="" description="" flow="oneWay">
+			<dock index="0" id="26" port="n" />
+			<dock index="1" id="28" port="s" />
+		</line>
+		<line id="30" name="" description="" flow="oneWay">
+			<dock index="0" id="19" port="ne" />
+			<dock index="1" id="28" port="nw" />
+		</line>
+		<room id="31" name="use cinders" subtitle="" x="-736" y="-576" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="32" name="" description="" style="dashed">
+			<dock index="0" id="1" port="se" />
+			<dock index="1" id="31" port="nw" />
+		</line>
+		<room id="33" name="gain Lee AND Eels' trust" subtitle="" x="-416" y="-832" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="34" name="" description="" style="dashed">
+			<dock index="0" id="10" port="n" />
+			<dock index="1" id="33" port="s" />
+		</line>
+		<room id="35" name="free 4th animal" subtitle="" x="-96" y="-832" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="36" name="" description="" style="dashed">
+			<dock index="0" id="19" port="e" />
+			<dock index="1" id="35" port="w" />
+		</line>
+		<room id="37" name="free 4th animal" subtitle="" x="-96" y="-576" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="38" name="" description="" style="dashed">
+			<dock index="0" id="21" port="e" />
+			<dock index="1" id="37" port="w" />
+		</line>
+		<room id="39" name="annoy Elmer &amp; Merle" subtitle="" x="64" y="-576" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="40" name="" description="" style="dashed">
+			<dock index="0" id="23" port="se" />
+			<dock index="1" id="39" port="nw" />
+		</line>
+	</map>
+	<settings>
+		<colors />
+		<regions>
+			<NoRegion Name="NoRegion" TextColor="Black">White</NoRegion>
+		</regions>
+		<fonts>
+			<room size="13">Arial</room>
+			<object size="11">Arial</object>
+			<line size="9">Arial</line>
+		</fonts>
+		<grid>
+			<snapTo>yes</snapTo>
+			<visible>yes</visible>
+			<showOrigin>yes</showOrigin>
+			<size>32</size>
+		</grid>
+		<lines>
+			<width>2</width>
+			<handDrawn>no</handDrawn>
+			<arrowSize>12</arrowSize>
+			<textOffset>4</textOffset>
+		</lines>
+		<rooms>
+			<darknessStripeSize>24</darknessStripeSize>
+			<objectListOffset>4</objectListOffset>
+			<connectionStalkLength>32</connectionStalkLength>
+			<preferredDistanceBetweenRooms>64</preferredDistanceBetweenRooms>
+			<defaultRoomName>Holder Place</defaultRoomName>
+		</rooms>
+		<ui>
+			<handleSize>12</handleSize>
+			<snapToElementSize>16</snapToElementSize>
+		</ui>
+		<margins>
+			<documentSpecific>no</documentSpecific>
+			<horizontal>0</horizontal>
+			<vertical>0</vertical>
+		</margins>
+		<keypadNavigation>
+			<creationModifier>control</creationModifier>
+			<unexploredModifier>alt</unexploredModifier>
+		</keypadNavigation>
+	</settings>
+</trizbort>
