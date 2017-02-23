@@ -103,8 +103,8 @@
 			<dock index="0" id="34" port="sw" />
 			<dock index="1" id="37" port="ne" />
 		</line>
-		<room id="41" name="Last Lousy Points" subtitle="" x="224" y="-800" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects custom="yes" customRight="-44" customDown="0">Yurts/strudel/denim|Old ice/neural pulses|replay player</objects>
+		<room id="41" name="Last chance for LLPs" subtitle="" x="224" y="-800" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-44" customDown="0">Yurts/strudel/denim|Old ice/neural pulses|replay player|remaining guardians (7)</objects>
 		</room>
 		<line id="42" name="" description="" style="dashed">
 			<dock index="0" id="27" port="ne" />
@@ -115,15 +115,17 @@
 			<dock index="0" id="1" port="s" />
 			<dock index="1" id="43" port="n" />
 		</line>
-		<room id="45" name="Present/ Dying/Greedy (Ed Yerg)" subtitle="" x="224" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="45" name="Present/ Dying/Greedy (Ed Yerg)" subtitle="" x="224" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-52" customDown="0">Give the flowerpot|for non-anagram point</objects>
+		</room>
 		<line id="46" name="" description="" style="dashed">
 			<dock index="0" id="34" port="s" />
 			<dock index="1" id="45" port="n" />
 		</line>
 		<room id="39" name="REWIRED" subtitle="" x="224" y="-672" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="40" name="" description="" style="dashed">
-			<dock index="0" id="32" port="n" />
-			<dock index="1" id="39" port="s" />
+			<dock index="0" id="27" port="e" />
+			<dock index="1" id="39" port="w" />
 		</line>
 		<room id="47" name="ATTENTIVE" subtitle="" x="64" y="-416" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="48" name="" description="" style="dashed">

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<trizbort version="1.5.9.5">
+<trizbort version="1.5.9.7">
 	<info>
 		<title>A Roiling Original</title>
 		<author>Andrew Schultz</author>
@@ -52,7 +52,7 @@ version 3 March 2015</history>
 		<room id="17" name="Pallid Li'l Pad" subtitle="(Boredom Bedroom)" x="-544" y="-320" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>   Lager</objects>
 		</room>
-		<room id="18" name="Dour Tan Rotunda" subtitle="" x="-544" y="-416" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="18" name="Browse Bowers" subtitle="" x="-544" y="-416" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="19" name="Econ-Cone" subtitle="" x="-416" y="-320" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n" custom="yes" customRight="-32" customDown="0">Astute Statue</objects>
 		</room>
@@ -608,19 +608,7 @@ version 3 March 2015</history>
 		</line>
 	</map>
 	<settings>
-		<colors>
-			<canvas>White</canvas>
-			<fill>White</fill>
-			<border>Black</border>
-			<line>Black</line>
-			<selectedLine>SteelBlue</selectedLine>
-			<hoverLine>DarkOrange</hoverLine>
-			<largeText>Black</largeText>
-			<smallText>Black</smallText>
-			<lineText>Black</lineText>
-			<grid>Silver</grid>
-			<startRoom>GreenYellow</startRoom>
-		</colors>
+		<colors />
 		<regions>
 			<Demo____Dome Name="Demo Dome" TextColor="Black">#E0E0E0</Demo____Dome>
 			<Manor Name="Manor" TextColor="Black">Silver</Manor>
