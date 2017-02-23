@@ -1,19 +1,34 @@
+###################################################
+#
 #bma.pl
-#this simply tries all book anagrams and checks them. These are the most likely to fail.
+#
+#this simply tries all book anagrams from the three tables in A Roiling Original and checks them.
+#
+#I'm focusing on this because these are the most likely to fail.
 
-open(A, "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Roiling Random Text.i7x");
+use strict;
+use warnings;
 
-$cc = 0;
+my $rrh = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Roiling Random Text.i7x";
+open(A, "") || die ("Can't open header file.");
+
+########################variables
+my $success = 0;
+my $cc = 0; #counted errors
+my $count = 0;
+my $lines;
+my @lineList = ();
+my $maxNum = 0;
 
 print "Remember Tio=tt and Tino=toti\n";
 
 while ($count <= $#ARGV)
 {
-  $a = @ARGV[$count];
-  for ($a)
+  my $arg = $ARGV[$count];
+  for ($arg)
   {
     /-x/ && do { $lines = 1; $count++; next; };
-	/-[0-9]/ && do { $maxNum = $a; $maxNum =~ s/^-//g; $count++; next; };
+	/-[0-9]/ && do { $maxNum = $arg; $maxNum =~ s/^-//g; $count++; next; };
 	usage();
   }
 }
@@ -23,29 +38,40 @@ while ($count <= $#ARGV)
 # well, in the source anyway. So that's why they're in the order they're in, below.
 #
 
-while ($a = <A>)
+my $orig = "";
+my $line;
+my $books = 0;
+
+while ($line = <A>)
 {
-  $totalLines++;
-  chomp($a);
-  if ($a =~ /^table of biopics \[/) { $books = 1;  printTest(); next; }
-  if ($a =~ /^table of random books \[/) { $books = 2; printTest("Roiling biopics"); next; }
-  if ($a =~ /^table of self-help bestsellers \[/)
+  chomp($line);
+  if ($line =~ /^table of biopics \[/) { $books = 1;  printTest(); next; }
+  if ($line =~ /^table of random books \[/) { $books = 2; printTest("Roiling biopics"); next; }
+  if ($line =~ /^table of self-help bestsellers \[/)
   {
     $books = 3;
 	printTest("Roiling random books"); next; }
-  if ($a !~ /[a-z]/) { $books = 0; next; }
+  if ($line !~ /[a-z]/) { $books = 0; next; }
   if ($books)
   {
     $count++;
-	$orig = $a;
-    checkBookString($a);
+	$orig = $line;
+    checkBookString($line);
   }
 }
 
 printTest("Roiling self-help books");
 
+close(A);
+
+#################################################
+#subroutines
+
 sub checkBookString
 {
+    my $stl;
+    my $el;
+
     if (($_[0] !~ /\[r\]/) && ($books == 2)) { print "$_[0] has no [r].\n"; $cc++; next; }
     if ($_[0] =~ /\[x\]/) { next; } # [x] is a skip because something was too odd to parse
 	if ($_[0] =~ /\]\[(end if|else)/) { print "$_[0] BLANK IF CLAUSE\n"; $cc++; next; }
@@ -91,9 +117,9 @@ sub checkBookString
 	my %el;
 	my $errorString;
 	my $flagError = 0;
-    $start = lc($_[0]); $start =~ s/\[r\].*//g; $s2 = $start;
-    $start;
-    $end = lc($_[0]); $end =~ s/.*\[r\]//g; $end =~ s/,? by //g;
+    my $start = lc($_[0]); $start =~ s/\[r\].*//g;
+	my $s2 = $start;
+    my $end = lc($_[0]); $end =~ s/.*\[r\]//g; $end =~ s/,? by //g;
 	for ('a'..'z')
 	{
 	  $stl = () = $start =~ /$_/g;
@@ -109,8 +135,8 @@ sub checkBookString
 	{ $cc++;
 	if ((!$maxNum) || ($cc < $maxNum))
 	{
-	if ($lines) { print "$count ($cc) ($totalLines): "; }
-	push (@lineList, $totalLines);
+	if ($lines) { print "$count ($cc) ($.): "; }
+	push (@lineList, $.);
 	print "$_[0]: $errorString";
 	if ($_[1]) { print " (from $orig)"; }
 	print "\n";
@@ -121,9 +147,9 @@ sub checkBookString
 
 sub printTest
 {
-  $totalLines++; <A>;
+  <A>;
   if (!$_[0]) { return; }
-  $lineConc = join(" / ", @lineList);
+  my $lineConc = join(" / ", @lineList);
   @lineList = ();
   print "TEST RESULTS:$_[0],3,$cc,$success,$lineConc\n";
   if ($cc) { print "$cc to clean up.\n";  } else { print "Everything looks good!\n"; }
@@ -134,7 +160,7 @@ sub printTest
 sub sortit
 {
   my $x = $_[0]; $x = lc($x); $x =~ s/[^a-z]//g;
-  @y = split(//, $x);
+  my @y = split(//, $x);
   @y = sort(@y);
   $x = join('', @y);
   return $x;
@@ -146,7 +172,7 @@ sub wout
   my $out = "";
   for ('a' .. 'z')
   {
-  $total = $temp =~ s/$_//g;
+  my $total = $temp =~ s/$_//g;
   if ($total) { $out .= "$_"; if ($total > 1) { $out .= $total; } }
   }
   return $out;

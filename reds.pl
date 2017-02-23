@@ -7,40 +7,60 @@
 # this determines whether things that clue red do so properly
 # e.g. red knob would clue BONK but red skis should not clue KISS
 #
+# can read in file name or word-arguments
+#
 
 use Algorithm::Permute;
 
+use strict;
+use warnings;
+
+my %dupHash;
+my %statFin;
+
+my @letArray;
+my @array;
+my @onematch;
+#####changed later
+my @poss, my @perm;
+
 my $printResults = 0;
 
-$myMax = 1000;
-$maxLetters = 20;
+my $myMax = 1000;
+my $maxLetters = 20;
 
-$showPoss = 1;
-$showRemain = 1;
+my $showPoss = 1;
+my $showRemain = 1;
 
-$checkForDup = 0;
+my $checkForDup = 0;
 
-$cur = 0;
+my $cur = 0;
+
+my $fileName = "";
+my $firstString = 0;
+my $sectionIgnore = 0;
+my $settler = 0;
 
 while ($cur <= $#ARGV)
 {
-  for (@ARGV[$cur])
+  for ($ARGV[$cur])
   {
-  /-a/ && do { $lookDif = 1; $cur++; next; };
-  /-f/ && do { $fileName = @ARGV[$cur+1]; $cur += 2; next; };
+  #/-a/ && do { $lookDif = 1; $cur++; next; };
+  #the above is an option I don't know what it's for
+  /-f/ && do { $fileName = $ARGV[$cur+1]; $cur += 2; next; };
   /^-y$/ && do { $fileName = "c:/writing/dict/reds.txt"; $settler = 1; $cur++; next; };
   /^-n$/ && do { $fileName = "c:/writing/dict/reds.txt"; $settler = 0; $cur++; next; };
-  /-l/ && do {$maxLetters = @ARGV[$cur+1]; $cur += 2; next; };
-  /-m/ && do {$myMax = @ARGV[$cur+1]; $cur += 2; next; };
+  /-l/ && do {$maxLetters = $ARGV[$cur+1]; $cur += 2; next; };
+  /-m/ && do {$myMax = $ARGV[$cur+1]; $cur += 2; next; };
   /-np/ && do {$showPoss = 0; $cur++; next; };
   /-nr/ && do {$showRemain = 0; $cur++; next; };
-  /\./ && do { $fileName = @ARGV[$cur]; $cur++; next; };
-  /^[a-z]/ && do { if ($firstString eq "") { $firstString = $cur; } $cur++; next; };
+  /\./ && do { $fileName = $ARGV[$cur]; $cur++; next; };
+  /^[a-z]/ && do { if ($firstString == 0) { $firstString = $cur; } $cur++; next; };
   $cur = $#ARGV + 1;
   }
 }
 
-if (!$fileName) { $printResults = 1; @letArray = split(//, "@ARGV[$firstString]"); @array = @ARGV; for (1..$firstString) { shift(@array); } oneRed(); }
+if (!$fileName) { $printResults = 1; @letArray = split(//, "$ARGV[$firstString]"); @array = @ARGV; for (1..$firstString) { shift(@array); } oneRed(); }
 else
 {
   $printResults = 0;
@@ -53,8 +73,8 @@ else
 	if ($a =~ /^;/) { last; }
 	if ($sectionIgnore) { next; }
 	@array=split(/,/, $a);
-	if ($settler) { $foundPct = 0; for (@array) { if ($_ =~ /%/) { $foundPct = 1; } } if (!$foundPct) { @array = (@array, "%"); } }
-	@letArray = split(//, @array[0]);
+	if ($settler) { my $foundPct = 0; for (@array) { if ($_ =~ /%/) { $foundPct = 1; } } if (!$foundPct) { @array = (@array, "%"); } }
+	@letArray = split(//, $array[0]);
 	oneRed();
   }
   close(A);
@@ -64,39 +84,41 @@ else
 sub oneRed
 {
 
-$succ = 0;
+my $i, my $j, my $x, my $z; # iterator variables
 
-@lets = sort(@letArray);
+my $succ = 0;
+
+my @lets = sort(@letArray);
 
 my $p_iterator = Algorithm::Permute->new ( \@letArray );
 
-$checkForDup = 0;
+my $checkForDup = 0;
 
-for (0..$#lets) { if (@lets[$_] eq @lets[$_+1]) { $checkForDup = 1; } }
+for (0..$#lets) { if ($lets[$_] eq $lets[$_+1]) { $checkForDup = 1; } }
 
-@perm = split(//, "@array[0]");
+my @perm = split(//, "$array[0]");
 
 for $j (1..$#array)
 {
-  if (@array[$j] eq "%")
-  { @array[$j] = "";
+  if ($array[$j] eq "%")
+  { $array[$j] = "";
     for $i (0..$#perm)
 	{
-	  if ($perm[$i] =~ /[aeiou]/) { @array[$j] .= "!"; }
-	  elsif ($perm[$i] eq "y") { @array[$j] .= "Y"; }
-	  else { @array[$j] .= "#"; }
+	  if ($perm[$i] =~ /[aeiou]/) { $array[$j] .= "!"; }
+	  elsif ($perm[$i] eq "y") { $array[$j] .= "Y"; }
+	  else { $array[$j] .= "#"; }
 	}
   }
 }
 
 for $j (1..$#array)
 {
-  if (@array[$j] =~ /^1-/) { @array[$j] =~ s/^1-//g; @onematch[$j] = 1; } else { $onematch[$j] = 0; }
+  if ($array[$j] =~ /^1-/) { $array[$j] =~ s/^1-//g; $onematch[$j] = 1; } else { $onematch[$j] = 0; }
 }
 
-if ($temp = isOops(@array[0])) { die "@array[0] fails the test at word $temp, @array[$temp].\n"; }
+if (my $temp = isOops($array[0])) { die "$array[0] fails the test at word $temp, $array[$temp].\n"; }
 
-if (length(@array[0]) > $maxLetters) { print "@array[0] too long.\n"; return; }
+if (length($array[0]) > $maxLetters) { print "$array[0] too long.\n"; return; }
 
 for $x (@perm)
 {
@@ -115,7 +137,7 @@ while (@perm = $p_iterator->next)
   {
     $succ++;
 
-	for (0..$#perm) { $statFin{"@perm[$_]-$_"}++; }
+	for (0..$#perm) { $statFin{"$perm[$_]-$_"}++; }
     if ($succ <= $myMax)
     {
       if ($printResults) { print "$succ: $j is ok.\n"; }
@@ -124,37 +146,38 @@ while (@perm = $p_iterator->next)
 
 }
 
-if (($succ > $myMax) || (!$printResults)) { print "@array[0]: $succ found total.\n"; }
+if (($succ > $myMax) || (!$printResults)) { print "$array[0]: $succ found total.\n"; }
 
 if ($printResults)
 {
 print "Stats:";
 
-$firstLet = "";
-for $a (sort keys %statFin)
+my $firstLet = "";
+my $thisLet;
+for $x (sort keys %statFin)
 {
-  $thisLet = $a; $thisLet =~ s/^(.).*/$1/;
+  $thisLet = $x; $thisLet =~ s/^(.).*/$1/;
   if ($showPoss)
   {
   if ($firstLet ne $thisLet) { print "\n"; } else { print " | "; }
-  print "$a: $statFin{$a}";
+  print "$x: $statFin{$x}";
   }
-  if ($statFin{$a})
+  if ($statFin{$x})
   {
-    @x = split(/-/, $a);
-	if (@poss[@x[1]] !~ /@x[0]/)
+    my @x = split(/-/, $x);
+	if ($poss[$x[1]] !~ /$x[0]/)
 	{
-		@poss[@x[1]] .= @x[0];
+		$poss[$x[1]] .= $x[0];
 	}
 	else
 	{
-	  #print "\n@poss[@x[0]]: Not adding @x[0] to @x[1].\n";
+	  #print "\n$poss[$x[0]]: Not adding $x[0] to $x[1].\n";
 	}
   }
   $firstLet = $thisLet;
 }
 
-if ($showRemain) { print "\n"; for (0..$#poss) { print "" . ($_+1) . ": @poss[$_] "; } }
+if ($showRemain) { print "\n"; for (0..$#poss) { print "" . ($_+1) . ": $poss[$_] "; } }
 
 if ($succ == 0) { print "We didn't find any possibilities. Sorry.\n" }
 }
@@ -162,34 +185,38 @@ if ($succ == 0) { print "We didn't find any possibilities. Sorry.\n" }
 
 sub isOops
 {
+my $count;
+my $gotone;
+my $this;
+
 for ($count = 1; $count <= $#array; $count++)
 {
   $gotone = 0;
-  #print "$l THIS: $this PERM(L) @perm[$l]\n";
-  for $l (0..length(@array[0])-1)
-  { $this = substr(@array[$count], $l, 1);
-  #print "Comparing $j char $l: THIS $this <-> @perm[$l] PERMU.\n";
-  if (@perm[$l] eq $this)
-  { if (!@onematch[$count]) {
-	return $count; #print "Fail at arg $count, char $l $j @perm[$l] vs " . substr(@array[$count], $l, 1) . " @array[$count]\n";
+  #print "$l THIS: $this PERM(L) $perm[$l]\n";
+  for my $l (0..length($array[0])-1)
+  { $this = substr($array[$count], $l, 1);
+  #print "Comparing $j char $l: THIS $this <-> $perm[$l] PERMU.\n";
+  if ($perm[$l] eq $this)
+  { if (!$onematch[$count]) {
+	return $count; #print "Fail at arg $count, char $l $j $perm[$l] vs " . substr($array[$count], $l, 1) . " $array[$count]\n";
 	} else { $gotone = 1; }
-  } elsif (($this =~ /[A-Z]/) && (@perm[$l] ne lc ($this)))
+  } elsif (($this =~ /[A-Z]/) && ($perm[$l] ne lc ($this)))
   {
 	return $count;
   }
-  elsif (($this eq "#") && (@perm[$l] =~ /[aeiou]/i )) { return $count; }
-  elsif (($this eq "!") && (@perm[$l] !~ /[aeiouy]/i)) { return $count; }
-  elsif (($this eq "y") && (@perm[$l] eq "y")) { return $count; }
+  elsif (($this eq "#") && ($perm[$l] =~ /[aeiou]/i )) { return $count; }
+  elsif (($this eq "!") && ($perm[$l] !~ /[aeiouy]/i)) { return $count; }
+  elsif (($this eq "y") && ($perm[$l] eq "y")) { return $count; }
   else
   {
     #if ($this eq "#") { print "# implies consonants." }
-    #if (@perm[l] eq "[aeiou]") { print "vowelly." }
-	#print "Pass at arg $count, char $l $j @perm[$l] vs " . substr(@array[$count], $l, 1) . " @array[$count]\n";
+    #if ($perm[l] eq "[aeiou]") { print "vowelly." }
+	#print "Pass at arg $count, char $l $j $perm[$l] vs " . substr($array[$count], $l, 1) . " $array[$count]\n";
   }
   }
-  if ((@onematch[$count] == 1) && (!$gotone))
+  if (($onematch[$count] == 1) && (!$gotone))
   {
-    #print "Failed any match $_[0] <-> @array[$count].\n";
+    #print "Failed any match $_[0] <-> $array[$count].\n";
 	return -1; }
 }
 return 0;
