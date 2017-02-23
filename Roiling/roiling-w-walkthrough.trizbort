@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<trizbort version="1.5.9.7">
+	<info />
+	<map>
+		<room id="1" name="Trefoil (4 of 7)" subtitle="" x="-416" y="-416" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="2" name="Topside Deposit/ Ray Eck" subtitle="" x="-416" y="-544" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="3" name="" description="" flow="oneWay">
+			<dock index="0" id="1" port="n" />
+			<dock index="1" id="2" port="s" />
+		</line>
+		<room id="4" name="West to Campsite" subtitle="" x="-96" y="-800" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="5" name="" description="" flow="oneWay">
+			<dock index="0" id="2" port="nnw" />
+			<dock index="1" id="4" port="w" />
+		</line>
+		<room id="6" name="East to Subsector" subtitle="" x="-256" y="-416" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="7" name="" description="" flow="oneWay">
+			<dock index="0" id="2" port="se" />
+			<dock index="1" id="6" port="nw" />
+		</line>
+		<room id="8" name="North to Ravages" subtitle="" x="-256" y="-544" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="9" name="" description="" flow="oneWay">
+			<dock index="0" id="2" port="e" />
+			<dock index="1" id="8" port="w" />
+		</line>
+		<room id="10" name="Get dagger under weeds" subtitle="" x="-256" y="-672" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="11" name="" description="" flow="oneWay">
+			<dock index="0" id="2" port="ne" />
+			<dock index="1" id="10" port="sw" />
+		</line>
+		<room id="12" name="In NE, clear hostile/ atheists" subtitle="" x="-256" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="13" name="" description="" flow="oneWay">
+			<dock index="0" id="2" port="sse" />
+			<dock index="1" id="12" port="nnw" />
+		</line>
+		<room id="14" name="Record Dr. Yow" subtitle="" x="-96" y="-672" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="16" name="" description="" flow="oneWay">
+			<dock index="0" id="10" port="e" />
+			<dock index="1" id="14" port="w" />
+		</line>
+		<room id="15" name="UNLOCKED with Lone Duck" subtitle="" x="-96" y="-544" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="17" name="" description="" flow="oneWay">
+			<dock index="0" id="8" port="e" />
+			<dock index="1" id="15" port="w" />
+		</line>
+		<line id="18" name="" description="" flow="oneWay">
+			<dock index="0" id="14" port="s" />
+			<dock index="1" id="15" port="n" />
+		</line>
+		<line id="19" name="" description="" flow="oneWay">
+			<dock index="0" id="6" port="ne" />
+			<dock index="1" id="15" port="sw" />
+		</line>
+		<room id="20" name="Get Yow to tutor kid" subtitle="" x="-96" y="-416" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="21" name="&quot;Gifted&quot;" subtitle="" x="-96" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="22" name="" description="" flow="oneWay">
+			<dock index="0" id="12" port="e" />
+			<dock index="1" id="21" port="w" />
+		</line>
+		<line id="23" name="" description="" flow="oneWay">
+			<dock index="0" id="21" port="n" />
+			<dock index="1" id="20" port="s" />
+		</line>
+		<line id="24" name="" description="" flow="oneWay">
+			<dock index="0" id="15" port="s" />
+			<dock index="1" id="20" port="n" />
+		</line>
+		<room id="25" name="Dagger in Repair" subtitle="" x="64" y="-800" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="26" name="" description="" flow="oneWay">
+			<dock index="0" id="4" port="e" />
+			<dock index="1" id="25" port="w" />
+		</line>
+		<room id="27" name="Kid makes a bot-boat" subtitle="" x="64" y="-672" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="28" name="" description="" flow="oneWay">
+			<dock index="0" id="20" port="ne" />
+			<dock index="1" id="27" port="sw" />
+		</line>
+		<line id="29" name="" description="" flow="oneWay">
+			<dock index="0" id="25" port="s" />
+			<dock index="1" id="27" port="n" />
+		</line>
+		<room id="30" name="1 of robust/stabler, eastern" subtitle="" x="64" y="-544" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="31" name="" description="" flow="oneWay">
+			<dock index="0" id="27" port="s" />
+			<dock index="1" id="30" port="n" />
+		</line>
+		<room id="32" name="2 of robust/stabler" subtitle="" x="224" y="-544" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="33" name="" description="" flow="oneWay">
+			<dock index="0" id="27" port="se" />
+			<dock index="1" id="32" port="nw" />
+		</line>
+		<room id="34" name="Mislit Limits" subtitle="" x="224" y="-416" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="35" name="" description="" flow="oneWay">
+			<dock index="0" id="30" port="se" />
+			<dock index="1" id="34" port="nw" />
+		</line>
+		<line id="36" name="" description="" flow="oneWay">
+			<dock index="0" id="32" port="s" />
+			<dock index="1" id="34" port="n" />
+		</line>
+		<room id="37" name="Spectacular" subtitle="" x="64" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="38" name="" description="" flow="oneWay">
+			<dock index="0" id="34" port="sw" />
+			<dock index="1" id="37" port="ne" />
+		</line>
+		<room id="41" name="Last Lousy Points" subtitle="" x="224" y="-800" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects custom="yes" customRight="-44" customDown="0">Yurts/strudel/denim|Old ice/neural pulses|replay player</objects>
+		</room>
+		<line id="42" name="" description="" style="dashed">
+			<dock index="0" id="27" port="ne" />
+			<dock index="1" id="41" port="sw" />
+		</line>
+		<room id="43" name="remaining 3" subtitle="" x="-416" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="44" name="" description="" style="dashed">
+			<dock index="0" id="1" port="s" />
+			<dock index="1" id="43" port="n" />
+		</line>
+		<room id="45" name="Present/ Dying/Greedy (Ed Yerg)" subtitle="" x="224" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="46" name="" description="" style="dashed">
+			<dock index="0" id="34" port="s" />
+			<dock index="1" id="45" port="n" />
+		</line>
+		<room id="39" name="REWIRED" subtitle="" x="224" y="-672" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="40" name="" description="" style="dashed">
+			<dock index="0" id="32" port="n" />
+			<dock index="1" id="39" port="s" />
+		</line>
+		<room id="47" name="ATTENTIVE" subtitle="" x="64" y="-416" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="48" name="" description="" style="dashed">
+			<dock index="0" id="20" port="e" />
+			<dock index="1" id="47" port="w" />
+		</line>
+	</map>
+	<settings>
+		<colors />
+		<regions>
+			<NoRegion Name="NoRegion" TextColor="Black">White</NoRegion>
+		</regions>
+		<fonts>
+			<room size="13">Arial</room>
+			<object size="11">Arial</object>
+			<line size="9">Arial</line>
+		</fonts>
+		<grid>
+			<snapTo>yes</snapTo>
+			<visible>yes</visible>
+			<showOrigin>yes</showOrigin>
+			<size>32</size>
+		</grid>
+		<lines>
+			<width>2</width>
+			<handDrawn>no</handDrawn>
+			<arrowSize>12</arrowSize>
+			<textOffset>4</textOffset>
+		</lines>
+		<rooms>
+			<darknessStripeSize>24</darknessStripeSize>
+			<objectListOffset>4</objectListOffset>
+			<connectionStalkLength>32</connectionStalkLength>
+			<preferredDistanceBetweenRooms>64</preferredDistanceBetweenRooms>
+			<defaultRoomName>Holder Place</defaultRoomName>
+		</rooms>
+		<ui>
+			<handleSize>12</handleSize>
+			<snapToElementSize>16</snapToElementSize>
+		</ui>
+		<margins>
+			<documentSpecific>no</documentSpecific>
+			<horizontal>0</horizontal>
+			<vertical>0</vertical>
+		</margins>
+		<keypadNavigation>
+			<creationModifier>control</creationModifier>
+			<unexploredModifier>alt</unexploredModifier>
+		</keypadNavigation>
+	</settings>
+</trizbort>
