@@ -186,7 +186,7 @@ version 3 March 2015</history>
 		<room id="71" name="Coevals' Alcoves" subtitle="" x="224" y="-224" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects custom="yes" customRight="-40" customDown="0">    Elmer/Merle</objects>
 		</room>
-		<room id="72" name="Reclusion Inclosure" subtitle="End Otters" x="96" y="-224" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="72" name="Reclusion Inclosure" subtitle="End Otters" x="96" y="-224" w="96" h="64" region="Otters" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" isEndRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
 		<room id="73" name="Rustic Citrus" subtitle="Start Others" x="-160" y="256" w="96" h="64" region="Others" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
@@ -608,7 +608,19 @@ version 3 March 2015</history>
 		</line>
 	</map>
 	<settings>
-		<colors />
+		<colors>
+			<canvas>White</canvas>
+			<border>Black</border>
+			<line>Black</line>
+			<selectedLine>SteelBlue</selectedLine>
+			<hoverLine>DarkOrange</hoverLine>
+			<largeText>Black</largeText>
+			<smallText>Black</smallText>
+			<lineText>Black</lineText>
+			<grid>#F5F5F5</grid>
+			<startRoom>GreenYellow</startRoom>
+			<endRoom>Red</endRoom>
+		</colors>
 		<regions>
 			<Demo____Dome Name="Demo Dome" TextColor="Black">#E0E0E0</Demo____Dome>
 			<Manor Name="Manor" TextColor="Black">Silver</Manor>
@@ -644,7 +656,7 @@ version 3 March 2015</history>
 			<objectListOffset>4</objectListOffset>
 			<connectionStalkLength>8</connectionStalkLength>
 			<preferredDistanceBetweenRooms>32</preferredDistanceBetweenRooms>
-			<defaultRoomName>Cave</defaultRoomName>
+			<defaultRoomName>Mesprise Premises</defaultRoomName>
 		</rooms>
 		<ui>
 			<handleSize>12</handleSize>

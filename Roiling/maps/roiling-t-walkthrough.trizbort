@@ -2,7 +2,7 @@
 <trizbort version="1.5.9.7">
 	<info />
 	<map>
-		<room id="1" name="get rid of Barley" subtitle="" x="-896" y="-704" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="1" name="get rid of Barley" subtitle="" x="-896" y="-704" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="2" name="get rid of Whiners" subtitle="" x="-896" y="-832" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="3" name="" description="" flow="oneWay">
 			<dock index="0" id="1" port="n" />
@@ -71,7 +71,7 @@
 			<dock index="0" id="23" port="e" />
 			<dock index="1" id="26" port="w" />
 		</line>
-		<room id="28" name="defeat Elvira" subtitle="" x="64" y="-832" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="28" name="defeat Elvira" subtitle="" x="64" y="-832" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isEndRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="29" name="" description="" flow="oneWay">
 			<dock index="0" id="26" port="n" />
 			<dock index="1" id="28" port="s" />
@@ -107,7 +107,19 @@
 		</line>
 	</map>
 	<settings>
-		<colors />
+		<colors>
+			<canvas>White</canvas>
+			<border>Black</border>
+			<line>Black</line>
+			<selectedLine>SteelBlue</selectedLine>
+			<hoverLine>DarkOrange</hoverLine>
+			<largeText>Black</largeText>
+			<smallText>Black</smallText>
+			<lineText>Black</lineText>
+			<grid>#F5F5F5</grid>
+			<startRoom>GreenYellow</startRoom>
+			<endRoom>Red</endRoom>
+		</colors>
 		<regions>
 			<NoRegion Name="NoRegion" TextColor="Black">White</NoRegion>
 		</regions>
@@ -133,7 +145,7 @@
 			<objectListOffset>4</objectListOffset>
 			<connectionStalkLength>32</connectionStalkLength>
 			<preferredDistanceBetweenRooms>64</preferredDistanceBetweenRooms>
-			<defaultRoomName>Holder Place</defaultRoomName>
+			<defaultRoomName>Mesprise Premises</defaultRoomName>
 		</rooms>
 		<ui>
 			<handleSize>12</handleSize>

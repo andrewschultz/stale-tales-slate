@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<trizbort version="1.5.9.5">
+<trizbort version="1.5.9.7">
 	<info>
 		<title>Shuffling Around</title>
 		<author>Andrew Schultz (Ned Yompus)</author>
@@ -92,7 +92,7 @@
 		<room id="32" name="Potshot Hotspot" subtitle="" x="224" y="160" w="96" h="64" region="Resort" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects custom="yes" customRight="-12" customDown="0">Riot</objects>
 		</room>
-		<room id="33" name="Roman Manor" subtitle="End Resort/Game" x="352" y="160" w="96" h="64" region="Resort" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="33" name="Roman Manor" subtitle="End Resort/Game" x="352" y="160" w="96" h="64" region="Resort" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" isEndRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects custom="yes" customRight="-16" customDown="0">Exits</objects>
 		</room>
 		<line id="37" name="" description="" color="#000000" style="dashed">
@@ -238,7 +238,6 @@
 	<settings>
 		<colors>
 			<canvas>White</canvas>
-			<fill>White</fill>
 			<border>Black</border>
 			<line>Black</line>
 			<selectedLine>SteelBlue</selectedLine>
@@ -248,6 +247,7 @@
 			<lineText>Black</lineText>
 			<grid>#F5F5F5</grid>
 			<startRoom>GreenYellow</startRoom>
+			<endRoom>Red</endRoom>
 		</colors>
 		<regions>
 			<Forest Name="Forest" TextColor="Black">Lime</Forest>
