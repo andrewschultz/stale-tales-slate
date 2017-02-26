@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <trizbort version="1.5.9.7">
-	<info />
+	<info>
+		<title>A Roiling Original Store U walkthrough</title>
+		<author>Andrew Schultz</author>
+		<description>Flowchart with main puzzles and LLPs</description>
+		<history>Created Feb 23 2017</history>
+	</info>
 	<map>
 		<room id="1" name="Same Mesa" subtitle="" x="-544" y="-416" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="2" name="INSIDE Cleric Circle" subtitle="" x="-544" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
@@ -13,7 +18,7 @@
 			<dock index="0" id="2" port="s" />
 			<dock index="1" id="4" port="n" />
 		</line>
-		<room id="6" name="Mushrooms from Pat's/Seed Pit" subtitle="" x="-384" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="6" name="Mushrooms from Seed Pit/Pat's" subtitle="" x="-384" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="7" name="" description="" flow="oneWay">
 			<dock index="0" id="1" port="se" />
 			<dock index="1" id="6" port="nw" />
@@ -36,7 +41,9 @@
 			<dock index="0" id="6" port="sw" />
 			<dock index="1" id="10" port="ne" />
 		</line>
-		<room id="14" name="TOWARDS LLP" subtitle="" x="-864" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="14" name="WORST AD LLP" subtitle="" x="-864" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects>Before going|underground</objects>
+		</room>
 		<line id="15" name="" description="" style="dashed">
 			<dock index="0" id="10" port="w" />
 			<dock index="1" id="14" port="s" />

@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <trizbort version="1.5.9.7">
-	<info />
+	<info>
+		<title>A Roiling Original Store W walkthrough</title>
+		<author>Andrew Schultz</author>
+		<description>Flowchart with main puzzles and LLPs</description>
+		<history>Created Feb 23 2017</history>
+	</info>
 	<map>
 		<room id="1" name="Trefoil (4 of 7)" subtitle="" x="-416" y="-416" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="2" name="Topside Deposit/ Ray Eck" subtitle="" x="-416" y="-544" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
@@ -79,21 +84,17 @@
 			<dock index="0" id="25" port="s" />
 			<dock index="1" id="27" port="n" />
 		</line>
-		<room id="30" name="1 of robust/stabler, eastern" subtitle="" x="64" y="-544" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="31" name="" description="" flow="oneWay">
+		<room id="30" name="No cheat xrays LLP" subtitle="" x="64" y="-544" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="31" name="" description="" style="dashed">
 			<dock index="0" id="27" port="s" />
 			<dock index="1" id="30" port="n" />
 		</line>
-		<room id="32" name="2 of robust/stabler" subtitle="" x="224" y="-544" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="32" name="2 of turbos/blaster/ eastern" subtitle="" x="224" y="-544" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="33" name="" description="" flow="oneWay">
 			<dock index="0" id="27" port="se" />
 			<dock index="1" id="32" port="nw" />
 		</line>
 		<room id="34" name="Mislit Limits" subtitle="" x="224" y="-416" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="yes" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="35" name="" description="" flow="oneWay">
-			<dock index="0" id="30" port="se" />
-			<dock index="1" id="34" port="nw" />
-		</line>
 		<line id="36" name="" description="" flow="oneWay">
 			<dock index="0" id="32" port="s" />
 			<dock index="1" id="34" port="n" />
@@ -111,7 +112,7 @@
 			<dock index="1" id="41" port="sw" />
 		</line>
 		<room id="43" name="remaining 3 warriors down" subtitle="" x="-416" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="44" name="" description="" style="dashed">
+		<line id="44" name="" description="" style="dashed" midText="Only at start">
 			<dock index="0" id="1" port="s" />
 			<dock index="1" id="43" port="n" />
 		</line>
@@ -131,6 +132,10 @@
 		<line id="48" name="" description="" style="dashed">
 			<dock index="0" id="20" port="e" />
 			<dock index="1" id="47" port="w" />
+		</line>
+		<line id="35" name="" description="" flow="oneWay">
+			<dock index="0" id="30" port="e" />
+			<dock index="1" id="32" port="w" />
 		</line>
 	</map>
 	<settings>
