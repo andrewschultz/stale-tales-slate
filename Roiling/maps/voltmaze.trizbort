@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <trizbort version="1.5.9.7">
-	<info />
+	<info>
+		<title>Store P Volt Maze map</title>
+		<author>Andrew Schultz</author>
+		<description>Simple map of the volt maze. Possibly combined later with the main map in a full document.</description>
+	</info>
 	<map>
 		<room id="1" name="Maze Room" subtitle="" x="-224" y="-128" w="96" h="64" region="Wrong Way" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="2" name="Maze Room" subtitle="" x="-96" y="-128" w="96" h="64" region="Wrong Way" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
