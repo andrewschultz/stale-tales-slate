@@ -129,16 +129,16 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 1 for subtler
 1 for admirer
 1 for bonker, 1 for stinger
-7 for basic stuff
+7 for basic stuff to get through the map
 1 for weeds
 2 for Dr Yow
 1 for lone duck
 1 for gifted/fidget
 2 for a bot boat
-1 for the palace] [1 non-anagram for rapier repair]
+1 for the palace] [1 NON-ANAGRAM for rapier repair]
 [BONUS:
 3 for the extra warriors
-1 for not using x-ray vision to clear every guardian
+1 for not using x-ray vision to clear every guardian NON-ANAGRAM
 1 for strudel
 1 for the yurts
 5 for the H/I beyond needing to clear the coastlines
@@ -471,7 +471,7 @@ use MAX_VERBS of 640.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
-use MAX_NUM_STATIC_STRINGS of 80000.
+use MAX_NUM_STATIC_STRINGS of 90000.
 
 use MAX_PROP_TABLE_SIZE of 540000.
 

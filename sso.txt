@@ -5,7 +5,7 @@
 #Biopics, then motivational, then regular books
 xxm3	\[r\].*\t(true|false)s
 xxv0	\[r\].*\"v
-xxm4	\[r\],? by
+xxm04	\[r\],? by
 ########################ALL CAPS STUFF: PSA(p), laments
 xxu3	^\"[^a-z]+\"p$
 xxms4	^\"[^a-z]+\"$	3	-1	-1

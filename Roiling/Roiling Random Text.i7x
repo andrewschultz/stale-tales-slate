@@ -1367,6 +1367,7 @@ blurb
 "Blase? Edgy? Be glad! Yes!"
 "A cry, torn, contrary."
 "Denial, earn adrenaline!"
+"Jeer, cat! A reject!"
 "Despair is a derp."
 "Dig banes? Being sad?"
 "Disagree is geared."
@@ -4550,6 +4551,10 @@ blurb
 
 table of biopics [xxm3]
 blurb	fave
+"Bigly Bilgy[r], by Gilly Bigby"	false
+"Robust BS Tour[r], by Brutus Botros"	false
+"Super Macho? A Sore Chump[r], by Marcus Hope"	false
+"Saint? Ungodly, Astoundingly[r], by [if player is male]Landis Guyton[else]Glinda Younts[end if]"	false
 "[if player is male]One Man, No Name[else]I, Hereon, Heroine[end if][r], by [if player is male]Ann Moe[else]Irene Ho[end if]"	true
 "Able Doing? No Big Deal: Angled Bio[r], by [if player is male]Eli Bogdan[else]Gia Bondel[end if]"	false
 "Ace's Win Was Nice[r], by Wes Cain"	true
@@ -4665,22 +4670,6 @@ blurb	fave
 
 table of comedians [xxm4]
 blurb
-"To Whine One Whit on White[r], by [toti] Wehn"
-"Mew a Lot, Low Mate[r], by Walt Moe"
-"Saint? Ungodly, Astoundingly[r], by [if player is male]Landis Guyton[else]Glinda Younts[end if]"	false
-"Lyin['] Inly[r], by Ilyi Lynn"
-"I Send in Des[r], by Sindi Edens"
-"Up at a Put[r], by Tuta Paup"
-"Swamis Mis-Saw[r], by Wm Issa"
-"Robust BS Tour[r], by Brutus Botros"	false
-"Super Macho? A Sore Chump[r], by Marcus Hope"	false
-"Easily Ye Sail[r], by Alysia Eisley"
-"I, Novice In Voice[r], by Vi Cione"
-"Rah, Lilt: a Thrill[r], by Art Hill."
-"Homeowners When Morose[r], by Owen Mosher"
-"Horsewomen, Homeowners[r], by Omer Hewson" []
-"Bigly Bilgy[r], by Gilly Bigby"	false
-"Ill Inn: Nil, Nil[r], by Linn Li"
 "Absurdist Trudi Bass" []
 "Acerbic Ric Cabe"
 "Actor Ann Cantoran"
@@ -10155,9 +10144,21 @@ blurb
 
 this-book is a number that varies. this-book is usually 0.
 
-table of random books [xxm4] [tob]
+table of random books [xxm04] [tob]
 blurb	prio
-"The  Diary: Their Day Hit, Ready[r], by Ray Heidt"
+"To Whine One Whit on White[r], by [toti] Wehn"
+"Mew a Lot, Low Mate[r], by Walt Moe"
+"Lyin['] Inly[r], by Ilyi Lynn"
+"I Send in Des[r], by Sindi Edens"
+"Up at a Put[r], by Tuta Paup"
+"Swamis Mis-Saw[r], by Wm Issa"
+"Easily Ye Sail[r], by Alysia Eisley"
+"I, Novice In Voice[r], by Vi Cione"
+"Rah, Lilt: a Thrill[r], by Art Hill."
+"Homeowners When Morose[r], by Owen Mosher"
+"Horsewomen, Homeowners[r], by Omer Hewson" []
+"Ill Inn: Nil, Nil[r], by Linn Li"
+"The Diary: Their Day Hit, Ready[r], by Ray Heidt"
 "[a-b], Russ: ABUSERS[r], by Bess Rau"	0
 "[a-word-u] Zit Zen: Snazziest[r], by Issa Zentz"
 "[d-t] Shed the Odds[r], by Ted Dosh"
@@ -14522,7 +14523,7 @@ blurb	prio
 "Our Nat Turano Ran Out[r], by Art Nou" []
 "Our Nine Inure No Reunion[r], by Nino Ure"
 "Our Past: a Sprout[r], by Pat Urso"
-"Our Pods So Proud[r], by Su Droop"
+"Up, Doors: Our Pods So Proud[r], by Su Droop"
 "Our Poets: Poseur to Too Super[r], by Rupe Soto"
 "Our Set So True[r], by Sue Ort"
 "Our Side: I Sure Do[r], by Sue Dior"
@@ -17568,7 +17569,7 @@ blurb
 "Damn Sissy Sassy-Mind Sysadmins."
 "Danny, Dyann [']N Andy."
 "Dark Skin, Rad Kinks."
-"Darlena, Leandra and Earl."	
+"Darlena, Leandra and Earl."
 "Darn, He and Her Harden."
 "Daughters Get Us Hard." []
 "Debased Bad Seed."
@@ -34894,7 +34895,7 @@ blurb
 "Notes from Le Prof of Perl, Pop Rolf Freel." [x]
 "Notes on webring brewing." [x]
 "Notes scrawled: Duke CS sucked." [x]
-"Nyan So Annoys a Sonny." [x] 
+"Nyan So Annoys a Sonny." [x]
 "Oi! I/O!"
 "On the fall of the Richest Itchers, a computer game company." [x]
 "On the Snafu as Fun." [x]
