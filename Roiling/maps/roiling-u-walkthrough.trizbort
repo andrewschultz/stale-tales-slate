@@ -7,52 +7,48 @@
 		<history>Created Feb 23 2017</history>
 	</info>
 	<map>
-		<room id="1" name="Same Mesa" subtitle="" x="-544" y="-416" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="2" name="INSIDE Cleric Circle" subtitle="" x="-544" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="1" name="Same Mesa" subtitle="" x="-32" y="-224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="2" name="INSIDE Cleric Circle" subtitle="" x="128" y="-224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="3" name="" description="" flow="oneWay">
-			<dock index="0" id="1" port="s" />
-			<dock index="1" id="2" port="n" />
+			<dock index="0" id="1" port="e" />
+			<dock index="1" id="2" port="w" />
 		</line>
-		<room id="4" name="Giant: Runed Book" subtitle="" x="-544" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="4" name="Giant: Runed Book" subtitle="" x="128" y="-96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="5" name="" description="" flow="oneWay">
 			<dock index="0" id="2" port="s" />
 			<dock index="1" id="4" port="n" />
 		</line>
-		<room id="6" name="Mushrooms from Seed Pit/Pat's" subtitle="" x="-384" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="6" name="Mushrooms from Seed Pit/Pat's" subtitle="" x="-32" y="-96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="7" name="" description="" flow="oneWay">
-			<dock index="0" id="1" port="se" />
-			<dock index="1" id="6" port="nw" />
+			<dock index="0" id="1" port="s" />
+			<dock index="1" id="6" port="n" />
 		</line>
-		<room id="8" name="Pipe Soot from Oscar's" subtitle="" x="-704" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="8" name="Pipe Soot from Oscar's" subtitle="" x="-192" y="-96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="9" name="" description="" flow="oneWay">
 			<dock index="0" id="1" port="sw" />
 			<dock index="1" id="8" port="ne" />
 		</line>
-		<room id="10" name="The Bean appears" subtitle="" x="-544" y="-32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="10" name="The Bean appears" subtitle="" x="-32" y="32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="11" name="" description="" flow="oneWay">
-			<dock index="0" id="4" port="s" />
-			<dock index="1" id="10" port="n" />
+			<dock index="0" id="4" port="sw" />
+			<dock index="1" id="10" port="ne" />
 		</line>
 		<line id="12" name="" description="" flow="oneWay">
 			<dock index="0" id="8" port="se" />
 			<dock index="1" id="10" port="nw" />
 		</line>
 		<line id="13" name="" description="" flow="oneWay">
-			<dock index="0" id="6" port="sw" />
-			<dock index="1" id="10" port="ne" />
+			<dock index="0" id="6" port="s" />
+			<dock index="1" id="10" port="n" />
 		</line>
-		<room id="14" name="WORST AD LLP" subtitle="" x="-864" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="14" name="WORST AD LLP" subtitle="" x="-192" y="-224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>Before going|underground</objects>
 		</room>
-		<line id="15" name="" description="" style="dashed">
-			<dock index="0" id="10" port="w" />
-			<dock index="1" id="14" port="s" />
-		</line>
 		<line id="16" name="" description="" style="dashed">
-			<dock index="0" id="14" port="n" />
+			<dock index="0" id="14" port="e" />
 			<dock index="1" id="1" port="w" />
 		</line>
-		<room id="17" name="Underpass/ Pier/Clipper/ win" subtitle="" x="-384" y="-32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isEndRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="17" name="Underpass/ Pier/Clipper/ win" subtitle="" x="128" y="32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isEndRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="18" name="" description="" flow="oneWay">
 			<dock index="0" id="10" port="e" />
 			<dock index="1" id="17" port="w" />
