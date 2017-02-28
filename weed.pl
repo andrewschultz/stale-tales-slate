@@ -12,7 +12,12 @@
 
 use POSIX;
 
+use strict;
+use warnings;
+
 use Math::BigInt;
+
+my @localLineNums;
 
 #print Math::BigInt::bgcd((8,12,18,27));
 #print Math::BigInt::bgcd((12,18,27));
@@ -20,7 +25,29 @@ use Math::BigInt;
 
 #$teststring = "\"accustor curators\""; die(cromstring($teststring) . " " . offstring($teststring));
 
-@color = ("#ffffff", "#dddddd", "#bbbbbb");
+my @color = ("#ffffff", "#dddddd", "#bbbbbb");
+
+my $upPosLimit = 0;
+my $upBadLimit = 0;
+
+my @badPos;
+my @false;
+my @quik;
+my @rev;
+my @roots;
+my @rt;
+my @z;
+my @smallStuff;
+
+my %ary;
+my %dupCount;
+my %dupes;
+my %exp;
+my %fapo;
+my %ln;
+my %pbad;
+my %quik;
+my %repl;
 
 $ary{"a"} = 2187818;
 $ary{"b"} = 18418905;
@@ -69,11 +96,12 @@ $repl{"t-w"} = "watt";
 $repl{"s-w"} = "this";
 $repl{"f-w"} = "ukcf";
 
+my $badAnaSoFar;
 my $breakNum = 50;
 
-$di = $sm = $badans = $posBad = $falsePos = 0;
+my $di = my $sm = my $badans = my $posBad = my $falsePos = 0;
 
-$badana = 1;
+my $badana = 1;
 
 $upBadLimit = -1;
 $upPosLimit = -1;
@@ -85,12 +113,12 @@ $sta = time();
 $exp{"roi"} = $exp{"ro"} = $exp{"r"} = $exp{"-r"} = "roiling";
 $exp{"sa"} = $exp{"s"} = $exp{"-s"} = $exp{""} = "shuffling";
 
-$roi = "c:/games/inform/roiling.inform/Source";
-$sa = "c:/games/inform/shuffling.inform/Source";
+my $roi = "c:/games/inform/roiling.inform/Source";
+my $sa = "c:/games/inform/shuffling.inform/Source";
 
-$pwd = getcwd();
+my $pwd = getcwd();
 
-@weedDir = ();
+my @weedDir = ();
 
 my $divider = 5000;
 
@@ -129,6 +157,11 @@ if ($pwd =~ /(shuffling|roiling)\.inform/)
 }
 
 if (!@weedDir[0]) { die "No suitable directory found. -s, -r or -2."; }
+
+my $s1;
+my $s2;
+my $s3;
+my $thisDir;
 
 for $thisDir(@weedDir)
 {
@@ -408,8 +441,11 @@ sub cromstring
   my $x = lc($_[0]); $x =~ s/[^a-z]//gi;
   my $cromString = "";
   if ($x !~ /[a-z]/) { return 1; } #trivially true
-  @z = split(//, $x);
+  my @z = split(//, $x);
   my @which;
+
+  my $bgcd;
+
   for (@z)
   {
     #print "Adding $_: @which\n";
@@ -430,8 +466,7 @@ sub cromstring
   {
     if (@which[$_])
 	{
-	$c = chr($_+97);
-    $cromString .= "$c@which[$_]";
+    $cromString .= chr($_ + 97) . "@which[$_]";
 	}
   }
   if ($_[1] == 1)
@@ -476,7 +511,9 @@ sub gotAna
   my %totes;
   my @tmp;
   my @words;
-
+  my $mayDupe = 0;
+  my $showDupe = 0;
+  my $anaStr;
 
   for $q (0..$#divs)
   {
@@ -512,7 +549,6 @@ sub gotAna
 	    @rt = split(/-/, $totes{$runTote});
 		if (!@rt[1]) { @rt[1] = @rt[0]; }
 
-		$mayDupe = 0;
 		if ($i <= @rt[1]) { $mayDupe = 1; }
 
 		if ($j == $i) { $combo = "$i"; } else { $combo = "$i-$j"; }
@@ -557,7 +593,9 @@ sub stillWorth
 sub weedOneSource
 {
 
+my $acrom;
 @localLineNums = ();
+my %ta; # not used but maybe it will be
 
 my $myfi;
 if ($_[0] =~ /!!/)
@@ -573,7 +611,9 @@ else
 open(A, "$myfi") || die ("No $_[0]/$myfi.");
 print "Weeding out $myfi\n";
 
-$ch = chr(0xe2);
+my $ch = chr(0xe2);
+my $first;
+my $second;
 
 $line = 0;
 
@@ -618,7 +658,6 @@ while (($a = <A>) && (stillWorth()))
 	  print B2"----($line) $a not \[\] vs $fapo{$acrom}\n";
 	}
     $badAnaSoFar = 0;
-    $old = $a;
     $a = cutDown($a);
 	if (!checkFullAna($a))
 	{
@@ -631,7 +670,7 @@ while (($a = <A>) && (stillWorth()))
 	$q2 = lets($dupes{$a});
 	if ($q2 != $q)
 	{
-	  $z = Math::BigInt::bgcd(($q2, $q)); $q2 /= $z; $q /= $z;
+	  my $z = Math::BigInt::bgcd(($q2, $q)); $q2 /= $z; $q /= $z;
 	  #print A2 "SZ $q2 $q: "; $sm++;
 	  $sm++;
 	}

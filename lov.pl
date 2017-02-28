@@ -3,34 +3,64 @@
 #this tells me how much content each random table list has. It looks at really mathy stuff like average, geometric mean, and so forth.
 #it even compares to expected values from Benford's Law and Zipf's Law.
 #
-#uses are lov.pl g s / lov.pl g r (roiling is default)
+ #uses are lov.pl g s / lov.pl g r (roiling is default)
 #
 #lov.pl g -o9 (tells anything with a 9 as a first digit if I want to hit a 10^x goal)
 
 use Win32::Clipboard;
 use POSIX;
 
-$newClip = Win32::Clipboard::new();
-$clip = $newClip->GetText;
+use strict;
+use warnings;
+
+my $newClip = Win32::Clipboard::new();
+my $clip = $newClip->GetText;
 chomp($clip);
 
+my %inExt;
 $inExt{"roiling"} = 1;
 $inExt{"shuffling"} = 1;
 
-#globals here. Maybe move them to init function?
-$genderChars = 34; #34 chars for [if male][else]
-$downup = 1;
-$gender = 0; # do we count gender ifdefs?
-$ascend = 0; # this can be changed to 1 if we want the default. -an and -dn change it
+#globals/options here. Maybe move them to init function?
+my $alfy;
+my $average;
+my $genderChars = 34; #34 chars for [if male][else]
+my $downup = 1;
+my $gender = 0; # do we count gender ifdefs?
+my $ascend = 0; # this can be changed to 1 if we want the default. -an and -dn change it
+my $maxVal = 0;
+my $minVal = 0;
+my $calcGeom = 0;
+my $calcGeomPlus = 0;
+my $warning = 0;
+my $countGenders = 0;
+my $fileName = "";
+my @dirs;
+my @lists = ();
+
+#vars
+my $myLines;
+my $x, my $y, my $z, my $c;
+
 
 #this determines which first digits should be shown
-@doable = (0, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+my @doable = (0, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
-$defLook = "roiling";
+my $defLook = "roiling";
 
 if ($clip !~ /^\"/) { $clip = "\"$clip\", "; }
 
-$count = 0;
+my $count = 0;
+
+my %ang;
+my %av;
+my %covered;
+my %lines;
+my %regLines;
+my %region;
+my %size;
+
+my @y; #for the while loop
 
 while (@ARGV[$count])
 {
@@ -85,7 +115,31 @@ while (@ARGV[$count])
 
 if (@dirs[0] =~ /(shuffling|roiling)\.inform/) { $printBytes = 1; }
 
-for $myStory (@dirs) { findNudges($myStory); findAna($myStory); }
+for my $myStory (@dirs) { findNudges($myStory); findAna($myStory); }
+
+open(A, "c:/games/inform/roiling.inform/source/story.ni");
+open(B, ">c:/games/inform/roiling.inform/source/story.new");
+
+binmode(B);
+
+$c = @ARGV[0] - 1;
+
+open(C, ">>c:/games/inform/roiling.inform/source/story.check");
+
+print C $clip;
+
+while ($a = <A>)
+{
+  if ($a =~ /^@lists[$c]/)
+  {
+    $a =~ s/\{/\{ $clip/g;
+    print "Added $clip to @lists[$c], $c.";
+  }
+  chomp($a);
+  print B "$a\x0a";
+}
+
+#####################################subroutines
 
 sub findAna()
 {
@@ -96,8 +150,9 @@ if ($inExt{$_[0]}) { $fileToOpen = "c:/Program Files (x86)/Inform 7/Inform7/Exte
 
 $sums = 0;
 $totalSize = 0;
-@digs = ();
-@lists = ();
+my @digs = ();
+my @sizes = ();
+my @combo = ();
 #my %lines;
 
 open(A, $fileToOpen) || die ("No $fileToOpen.");
@@ -109,8 +164,8 @@ while ($a = <A>)
 	$b = "myUndos";
 	$a =~ s/^[^\"]*\"//g;
 	$a =~ s/\";//g;
-	@j = split(/\" \"/, $a);
-	for (@j)
+	@y = split(/\" \"/, $a);
+	for (@y)
 	{
 	  $size{$b} += length($_);
 	  $totalSize += length($_);
@@ -125,7 +180,7 @@ while ($a = <A>)
     $b =~ s/ is a list.*//g;
 	$size{$b} = length($a); $totalSize += $size{$b};
 	$a =~ s/.*\{ *\"//g;
-    @bogus = split(/\", \"/, $a);
+    my @bogus = split(/\", \"/, $a);
 	$lines{$b} = $#bogus + 1; # why the extra? 1 for the general bad math and 1 for the ending entry which is not included before the main list is shuffled
 	if ($b !~ /(impadvs|ramlist)/i)
 	{
@@ -174,11 +229,11 @@ for (0..$#lists)
   $linedig = $lines{@lists[$_]}; $linedig = substr($linedig, 0, 1);
   $sizedig = $size{@lists[$_]}; $sizedig = substr($sizedig, 0, 1);
 
-  $avg = "";
+  my $avg = "";
   if ($average) { $avg = " avg=$av{@lists[$_]}"; }
   if (($region{@lists[$_]}) && ($procReg)) { $avg .= " reg=$region{@lists[$_]}"; $regLines{$region{@lists[$_]}} += $lines{@lists[$_]}; }
 
-  $baseStr = "$c @lists[$_] $lines{@lists[$_]} lines $size{@lists[$_]} bytes$avg\n";
+  my $baseStr = "$c @lists[$_] $lines{@lists[$_]} lines $size{@lists[$_]} bytes$avg\n";
 
   if ($onlies)
   {
@@ -225,6 +280,7 @@ for (0..$#lists)
 
   print "$sums total lines, $totalSize total size\n1st digits @digs, sizes @sizes";
 
+  my @exp;
   if ($expected)
   {
     for (0..8)
@@ -266,17 +322,21 @@ $totAvg = $totalSize / $sums;
   if (!$gender) { $tlt += $genderChars * $genderLines; }
   $toLac = $tlt / ($totAvg + 3);
   #print "Dividing by " . ($totAvg + 3) . "\n";
-  $canlose = ($totalSize - $lbound*$sums) / $toLac;
-  $mustgain = ((1+$lbound)*$sums - $totalSize) / $toLac;
+
+  ##these are silly things to track relative sizes to blue lacuna
+  #$canlose = ($totalSize - $lbound*$sums) / $toLac;
+  #$mustgain = ((1+$lbound)*$sums - $totalSize) / $toLac;
 
   #printf ("About %.3f anagrams to reach Blue Lacuna ($tlt) and can lose %.3f/gain %.3f & still be in $lbound. Avg = %.3f\n", $toLac, $canlose, $mustgain, $totAvg);
   # this was to calculate pace for 10000
   #$remai = 10000; $td = POSIX::mktime(0,0,0,0,0,115) - time(); $td /= 86400; $remai -= $sums; $remai /= $td; print "$remai per day ($td) for 10k.\n";
+
+  my $q;
   if ($calcGeom)
   {
   $prod /= ($#lists+1); $prod = exp($prod);
-  $q = ceil($prod); $q /= $prod; $q **= ($#lists + 1); $qq = 1 / ($q - 1);
-  $qqq = floor($prod); $qqq = $prod / $qqq; $qqq **= ($#lists + 1);
+  $q = ceil($prod); $q /= $prod; $q **= ($#lists + 1); my $qq = 1 / ($q - 1);
+  my $qqq = floor($prod); $qqq = $prod / $qqq; $qqq **= ($#lists + 1);
   print "Geometric Mean = " . $prod . " ratio = $q lines = $qq above = $qqq\n";
   }
   if ($calcGeomPlus)
@@ -305,6 +365,7 @@ close(A);
 
 print "Table of Nudges has $myLines.\n";
 
+my @c;
 if (!$countGenders)
 {
 open(B, "c:/writing/dict/lov.txt");
@@ -319,7 +380,7 @@ $shortName = $_[0]; $shortName =~ s/\.inform.*//g; $shortName =~ s/.*[\\\/]//g;
 if ($ang{$shortName} == $sums) { print "No progress since last time!\n"; }
 else
 {
-@localtime = localtime(time);
+my @localtime = localtime(time);
 $dateForm = sprintf("%4d-%02d-%02d-%02d-%02d-%02d",
 @localtime[5]+1900, @localtime[4]+1, @localtime[3], @localtime[2], @localtime[1], @localtime[0]);
 
@@ -335,29 +396,7 @@ if ($warning) { print "WARNING: $warning"; }
 
 }
 
-open(A, "c:/games/inform/roiling.inform/source/story.ni");
-open(B, ">c:/games/inform/roiling.inform/source/story.new");
-
-binmode(B);
-
-$c = @ARGV[0] - 1;
-
-open(C, ">>c:/games/inform/roiling.inform/source/story.check");
-
-print C $clip;
-
-while ($a = <A>)
-{
-  if ($a =~ /^@lists[$c]/)
-  {
-    $a =~ s/\{/\{ $clip/g;
-    print "Added $clip to @lists[$c], $c.";
-  }
-  chomp($a);
-  print B "$a\x0a";
-}
-
-sub tableWorthy
+                  sub tableWorthy
 {
   if ($_[0] =~ /^table of /)
   {
@@ -367,7 +406,7 @@ sub tableWorthy
 	if ($covered{$temp})
 	{
 	  $reg = $_[0]; chomp($reg);
-	  if ($reg =~ /\[xx[a-z]\]/) { $temp2 = $temp; $temp2 =~ s/^table of //g; $reg =~ s/.*\[xx/xx/g; $reg =~ s/\].*//g; $region{$temp2} = $reg; }
+	  if ($reg =~ /\[xx[a-z]\]/) { my $temp2 = $temp; $temp2 =~ s/^table of //g; $reg =~ s/.*\[xx/xx/g; $reg =~ s/\].*//g; $region{$temp2} = $reg; }
 	  return 1;
 	}
   }
@@ -406,12 +445,13 @@ sub listWorthy
 
 sub findHeaders
 {
+  my $nolast; # only for debugging
   print "Last:";
   while ($a = <A>)
   {
     if ($a =~ /^table/)
 	{
-	  @g = (); @g = split(/\t+/, $a);
+	  @y = (); @y = split(/\t+/, $a);
 	  chomp($a);
 	  $lasttab = $a;
 	  $a =~ s/\t.*//g;
@@ -419,10 +459,10 @@ sub findHeaders
 	  $covered{$a} = 1;
 	  $lasttab =~ s/.*\t//g;
 	  #if ($#g >= 8) { print ("$#g @g[0]: #8 = @g[8]\n"); }
-	  if (@g[9] =~ /[a-z]/i)
-	  { print " @g[0]";
+	  if (@y[9] =~ /[a-z]/i)
+	  { print " @y[0]";
 	    $lines{$b} = 1; # this is because we have a final anagram that says we're starting over. It seems arbitrary, but some lists recycle, and some don't.
-	  } else { $nolast .= " @g[0]"; }
+	  } else { $nolast .= " @y[0]"; }
 	  #if ($lasttab =~ /[a-z]/) { $lines{$b} = 1;  print " $b"; }
 	  	} elsif ($a !~ /[a-z]/) { last; }
   }

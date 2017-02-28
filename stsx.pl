@@ -5,7 +5,10 @@
 #
 #also checks to see how many local updates to go through
 
-$anaIdeas = "c:\\writing\\dict\\sts.txt";
+use strict;
+use warnings;
+
+my $anaIdeas = "c:\\writing\\dict\\sts.txt";
 
 open(A, $anaIdeas) || die ("No ideas file $anaIdeas.");
 
@@ -17,10 +20,20 @@ my $debug = 0;
 my $updatesToCheck = 0;
 my $badLines;
 
+my %bytesAdded;
+my %toAdd;
+my %toFiles;
+
+######################variables
+my $adAds = 0;
+my $line;
+my $count = 0;
+my $bail = 0;
+
 while ($count <= $#ARGV)
 {
-  $a = @ARGV[$count];
-  for ($a)
+  $line = @ARGV[$count];
+  for ($line)
   {
   /^-d/ && do { $debug = 1; $count++; next; };
   /^-n/ && do { $runTableSort = 0; $count++; next; };
@@ -29,37 +42,37 @@ while ($count <= $#ARGV)
 
 }
 
-while ($a = <A>)
+while ($line = <A>)
 {
-  if ($a =~ /^\\ro3/) { $inUpdates = 1; next; }
+  if ($line =~ /^\\ro3/) { $inUpdates = 1; next; }
   $thisLine++;
-  if ($a =~ /^table of/)
+  if ($line =~ /^table of/)
   {
-	if ($currentTable) { print "WARNING no space between tables in line $thisLine: $a"; $bail = 1; $badLines .= "$a"; };
-    chomp($a);
-    $currentTable = $a; $currentTable =~ s/ *\[[^\]]*\]$//;
+	if ($currentTable) { print "WARNING no space between tables in line $thisLine: $line"; $bail = 1; $badLines .= "$line"; };
+    chomp($line);
+    $currentTable = $line; $currentTable =~ s/ *\[[^\]]*\]$//;
 	#print "Current table now $currentTable.\n";
 	next;
   }
-  if ($a =~ /=shuffling/i) { $stsGame = "Shuffling Around"; }
+  if ($line =~ /=shuffling/i) { $stsGame = "Shuffling Around"; }
   if ($currentTable)
   {
-    my @c = split(/\"/, $a);
-    if ($a =~ /“/) { err(); print "$a($thisLine) has smart quotes, which you may not want.\n"; $bail++; }
-	if (($a !~ /^\"/) || ($a !~ /[a-z0-9]/i)) { $currentTable = ""; next; }
-	if ($#c > 2) { $badLines .= "$a"; print "WARNING too many quotes in line $thisLine ($#c) table $currentTable: $a"; $bail++; }
-    if (($a =~ /\"/) && ($a !~ /\".*\"/)) { $badLines .= "$a"; print "WARNING need more than one quote line $thisLine table $currentTable: $a"; $bail++; }
-    if ($a =~ /^['`]/) { $badLines .= "$a"; chomp($a); print "WARNING $a not properly quoted, line $thisLine table $currentTable\n"; $bail++; }
-    if ($a =~ /^[a-z0-9]/i) { $badLines .= "$a"; chomp($a); print "WARNING $a does not start with a quote, line $thisLine table $currentTable\n"; $bail++; }
-    if (($currentTable =~ "table of biopics") && ($a !~ /\t(true|false)/)) { $badLines .= "$a"; print "WARNING biopics entry line $thisLine needs true or false!\n"; $bail++; }
-    if (($currentTable =~ /^table of ad slogans/) && ($a !~ /\t(true|false)/)) { $a =~ s/(^\"[^\"]*\")/$1\tfalse/; $adAds++; }
+    my @c = split(/\"/, $line);
+    if ($line =~ /“/) { err(); print "$line($thisLine) has smart quotes, which you may not want.\n"; $bail++; }
+	if (($line !~ /^\"/) || ($line !~ /[a-z0-9]/i)) { $currentTable = ""; next; }
+	if ($#c > 2) { $badLines .= "$line"; print "WARNING too many quotes in line $thisLine ($#c) table $currentTable: $line"; $bail++; }
+    if (($line =~ /\"/) && ($line !~ /\".*\"/)) { $badLines .= "$line"; print "WARNING need more than one quote line $thisLine table $currentTable: $line"; $bail++; }
+    if ($line =~ /^['`]/) { $badLines .= "$line"; chomp($line); print "WARNING $line not properly quoted, line $thisLine table $currentTable\n"; $bail++; }
+    if ($line =~ /^[a-z0-9]/i) { $badLines .= "$line"; chomp($line); print "WARNING $line does not start with a quote, line $thisLine table $currentTable\n"; $bail++; }
+    if (($currentTable =~ "table of biopics") && ($line !~ /\t(true|false)/)) { $badLines .= "$line"; print "WARNING biopics entry line $thisLine needs true or false!\n"; $bail++; }
+    if (($currentTable =~ /^table of ad slogans/) && ($line !~ /\t(true|false)/)) { $line =~ s/(^\"[^\"]*\")/$1\tfalse/; $adAds++; }
   }
-  if ($inUpdates) { if ($a !~ /[a-z]/i) { $inUpdates = 0; next; }  $updatesToCheck++; next; }
+  if ($inUpdates) { if ($line !~ /[a-z]/i) { $inUpdates = 0; next; }  $updatesToCheck++; next; }
   if ($bail) { next; }
   if ($currentTable)
   {
-    #print "$currentTable gets $a";
-    $toAdd{$currentTable} .= $a; $totalAdded++; $bytesAdded{$stsGame} += length($a);
+    #print "$currentTable gets $line";
+    $toAdd{$currentTable} .= $line; $totalAdded++; $bytesAdded{$stsGame} += length($line);
   }
 }
 
@@ -112,10 +125,13 @@ sub addIdeas
   open(B, ">$addedFile") || die ("Can't open $addedFile!");
   binmode(B);
 
-  while ($a = <A>)
+  my @x;
+  my $c;
+
+  while ($line = <A>)
   {
-    $b = $a; chomp($b);
-    print B $a;
+    $b = $line; chomp($b);
+    print B $line;
     if ($toAdd{$b})
     {
       $c = <A>;
@@ -139,12 +155,12 @@ sub addIdeas
   `$cmd`;
   print "File copied\n";
   my $unsorted = 0;
+  my $undone = "c:/writing/dict/sts-undone.txt";
   open(A, "$undone");
-  while ($a = <A>) { if ($a =~ /^\"/) { $unsorted++; } }
+  while ($line = <A>) { if ($line =~ /^\"/) { $unsorted++; } }
   close(A);
   print "TEST RESULTS:$_[0] unsorted,0,$unsorted,0,<a href=\"$undone\">Culprits</a>\n";
   if ($_[1] == 0) { print "Not processing results til both files are written.\n"; return; }
-  $undone = "c:/writing/dict/sts-undone.txt";
   for $x (keys %toAdd) { print "$x hash not deleted. This should never happen, but it did. Look in $undone."; open(C, ">>$undone"); print C "$x:\n$toAdd{$x}\n"; close(C); }
 }
 
@@ -167,20 +183,20 @@ sub cleanUpLoneFile()
   open(A, "$anaIdeas");
   open(B, ">$anaDel");
 
-  while ($a = <A>)
+  while ($line = <A>)
   {
     if ($inTable)
     { #do it here so we get the carriage return at the end of a table in
-      if ($a !~ /^\"/) { $inTable = 0; print B $a; } else
+      if ($line !~ /^\"/) { $inTable = 0; print B $line; } else
       {
-        #print "Deleting $a";
+        #print "Deleting $line";
       }
     }
     else
     {
-    print B $a;
+    print B $line;
     }
-    if ($a =~ /^table/) { $inTable = 1; }
+    if ($line =~ /^table/) { $inTable = 1; }
   }
 
   close(A);

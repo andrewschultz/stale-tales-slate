@@ -16,25 +16,42 @@
 #table of posse bosses [xxv7]
 #table of prestigious bums [xxv8]
 
-$scr = "c:/games/inform/roiling.inform/Source/ppl-scratch.txt";
-$don = "c:/games/inform/roiling.inform/Source/ppl-done.txt";
+use strict;
+use warnings;
 
-$dictDir = "c:/writing/dict";
+##############more or less set constants
+my $scr = "c:/games/inform/roiling.inform/Source/ppl-scratch.txt";
+my $don = "c:/games/inform/roiling.inform/Source/ppl-done.txt";
+my $firstsFile = "firsts-a.txt";
+my $lastsFile = "lasts-a.txt";
+my $dictDir = "c:/writing/dict";
 
-$count = 0;
-$printCmds = 0;
+################options
+my $allowDupe = 0;
+my $printCmds = 0;
+my $middleName = 0;
+my $reverses = 0; # this means that we can have last+X=first as well as first+X=last
+my $period = 0;
 
-$firstNames = 1;
+################hashes
+my %first;
+my %last;
+my %pinged; # not in use but we want to make sure something hasn't been done before
+my %tagged;
 
-$firstsFile = "firsts-a.txt";
-$lastsFile = "lasts-a.txt";
+################variables
+my $count = 0;
+my $firstNames = 1;
+my $line; # global read in from <A>
+my $q; # generic variable
 
-$fullStr = "Hon.";
+#######################the string to search
+my $fullStr = "Hon."; # this is a default
 
 while ($count <= $#ARGV)
 {
-  $a = @ARGV[$count];
-  $b = @ARGV[$count+1];
+  $a = $ARGV[$count];
+  $b = $ARGV[$count+1];
 
   for ($a)
   {
@@ -57,18 +74,21 @@ $firstNames = 0;
 
 if (! -f "$dictDir/$lastsFile") { $lastsFile = "lasts2.txt"; }
 
+my $uStr;
+
+my $initFile;
 if ($firstNames) { $initFile = "$firstsFile"; } else
 {
   $initFile = "$lastsFile"; $lastsFile = $initFile;
   if (! -f "c:/writing/dict/$initFile") { $initFile = "lasts2.txt"; $lastsFile = "lasts2.txt"; }
 }
-$addStr = lc($fullStr); $addStr =~ s/\.//g;
+my $addStr = lc($fullStr); $addStr =~ s/\.//g;
 $uStr = ucfirst($addStr);
 
+my $alphStr;
 if (!$allowDupe)
 {
-  @alphAry = split(//, lc($fullStr));
-  $alphStr = join("", sort(@alphAry));
+  $alphStr = join("", sort(split(//, lc($fullStr))));
   open(A, "$don");
   while ($a = <A>)
   {
@@ -119,8 +139,11 @@ readUp("$lastsFile", 1);
 
 sub findWhat
 {
+  my $x;
   my %used;
+
   open(A, "$scr");
+
   while ($a = <A>)
   {
     if ($a =~ /^[#=0-9]/) { next; }
@@ -152,40 +175,41 @@ print "Reading $_[0] vs $lastsFile.\n";
 
 open(A, "$dictDir/$_[0]") || die ("No writing/dict/$_[0]!");
 
-$cs = 0;
+my $cs = 0;
+my $aalf;
+my $this;
+my $lasty;
 
-$line = 0;
-while ($a = <A>)
+while ($line = <A>)
 {
-  $line++; #for debug purposes in the last names file
-  chomp($a);
-  $a = lc($a);
-  if ($a =~ /[^a-z]/) { print ("Line $line in $_[0] is not alphabetical.\n"); }
-  $b = "$addStr$a";
+  chomp($line);
+  $line = lc($line);
+  if ($line =~ /[^a-z]/) { print ("Line $. in $_[0] is not alphabetical.\n"); }
+  $b = "$addStr$line";
   $q = alf($b);
-  $aalf = alf($a);
+  $aalf = alf($line);
   if ($first{$aalf} && ($_[0] == 0)) { next; } #skip over 2 first names
-  if ($pinged{$q} && $first{$a}) { next; }
-  $first{$aalf} = $a;
+  if ($pinged{$q} && $first{$line}) { next; }
+  $first{$aalf} = $line;
   if ($last{$q} || $first{$q})
   {
   $lasty = $last{$q};
   if (!$lasty) { $lasty = $first{$q}; }
-  if ($a =~ /(aline|ange)/) { print "$q to $lasty from $a, but is $b\n"; }
+  if ($line =~ /(aline|ange)/) { print "$q to $lasty from $line, but is $b\n"; }
   if ($printCmds)
   {
-  print "gq $addStr $a > doccheck.txt\n";
+  print "gq $addStr $line > doccheck.txt\n";
   }
   if ($middleName)
   {
-  if (lc("$a$uStr") eq lc($lasty)) { next; }
-  $this = "$a '$uStr' $lasty";
+  if (lc("$line$uStr") eq lc($lasty)) { next; }
+  $this = "$line '$uStr' $lasty";
   $this =~ s/^([a-z])/uc($1)/ge;
   }
   else
   {
-  if (lc("$uStr$a") eq lc($lasty)) { next; }
-  $this = "$uStr $a $lasty";
+  if (lc("$uStr$line") eq lc($lasty)) { next; }
+  $this = "$uStr $line $lasty";
   }
   $this =~ s/-([a-z])/-uc($1)/ge;
   $this =~ s/([\.\?!]?\s+[a-z])/uc($1)/ge;
@@ -208,17 +232,20 @@ close(A);
 sub alf
 {
   my @x = split(//, $_[0]);
-  @xx = sort(@x);
-  my $z = join('', @xx);
+  my $z = join('', sort(@x));
   return $z;
 }
 
-sub seeLeft()
+sub seeLeft
 {
+  my $cur;
+  my $inList = 0;
+  my $listSum = 0;
+
   open(A, "$scr");
-  while ($a = <A>)
+  while ($line = <A>)
   {
-    if ($a =~ /^[0-9]/)
+    if ($line =~ /^[0-9]/)
 	{
 	  if ($inList)
 	  {
@@ -227,9 +254,9 @@ sub seeLeft()
 		next;
       }
 	}
-	if ($a =~ /^\"/)
+	if ($line =~ /^\"/)
 	{
-	  if (!$inList) { chomp($a); $a =~ s/ .*//g; $a =~ s/\"//g; print "\nList for $a: "; }
+	  if (!$inList) { chomp($line); $line =~ s/ .*//g; $line =~ s/\"//g; print "\nList for $line: "; }
 	  $inList = 1; $listSum++; next;
     }
   }

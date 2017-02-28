@@ -5,16 +5,36 @@
 
 use Cwd;
 
-$fileName = "story.ni";
-$outFileName = "c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/temp.i7x";
+use strict;
+use warnings;
 
-$dupes = 0;
+####################constants
+my $fileName = "story.ni";
+my $outFileName = "c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/temp.i7x";
+my $s = "shuffling";
+my $r = "roiling";
 
-$s = "shuffling";
-$r = "roiling";
+###################options
+my $dontcopy = ;
+my $verbose = 0;
+my $seriouslyTesting = 0;
 
-$totBad = 0;
-$badError = "";
+###################variables
+my $dupes = 0;
+my $totBad = 0;
+my $badError = "";
+my @dirs;
+my @errLines;
+my $short;
+my $quoteWarn;
+my $ignoreArticles = 0;
+my $deletedBytes = 0;
+
+####alphSource/Sort TheTable
+my $thisTable;
+my $dupeString;
+
+my $count;
 
 while ($count <= $#ARGV)
 {
@@ -26,6 +46,7 @@ while ($count <= $#ARGV)
 	/^-?(r|ro|roi)$/ && do { @dirs = (@dirs, $r); $count++; next; };
 	/^-?(s|sa)$/ && do { @dirs = (@dirs, $s); $count++; next; };
 	/^-?b$/ && do { @dirs = (@dirs, $s, $r); $count++; next; }; # both: roiling goes first due to more debug text
+	/^-?st$/ && do { $seriouslyTesting = 1; $count++; next; };
 	/^-?o$/ && do { $outFileName = "$b"; $count += 2; next; };
 	/^-?v$/ && do { $verbose = 1; $count++; next; };
 	/^-?f$/ && do { $fileName = "$b"; if ($fileName !~ /\.ni/) { $fileName .= ".ni"; } $count += 2; next; };
@@ -37,7 +58,7 @@ if ($#dirs == -1)
 {
   if (-f "story.ni")
   {
-  $shortDir = getcwd();
+  my $shortDir = getcwd();
   $shortDir =~ s/\.inform.*//g; $shortDir =~ s/.*[\\\/]//g;
 
   @dirs = ($shortDir);
@@ -48,7 +69,8 @@ if ($#dirs == -1)
   }
 }
 
-for $mydir (@dirs)
+my %alfed;
+for my $mydir (@dirs)
 {
   if ($alfed{$mydir}) { print "Duplicate directory $mydir\n."; } else { alphSource($mydir); $alfed{lc($mydir)} = 1; }
 }
@@ -57,16 +79,14 @@ for $mydir (@dirs)
 
 sub alphSource
 {
+  my %findy;
+  my $fileName = fileOf($_[0]);
+  my $thisDir = lc($_[0]);
 
-print "Alphabetizing $_[0].\n";
+  print "Alphabetizing $_[0].\n";
 
-$fileName = fileOf($_[0]);
+  $findy{lc("$_[0]/story.ni")} = 1; #print "Adding $_[0] to findy.\n";
 
-$findy{lc("$_[0]/story.ni")} = 1; #print "Adding $_[0] to findy.\n";
-
-$lines = 0;
-
-my $thisDir = lc($_[0]);
 
 $short = $thisDir;
 $short =~ s/\.inform.*//g; $short =~ s/.*[\\\/]//g;
@@ -84,7 +104,6 @@ binmode(B);
 
 while ($a = <A>)
 {
-  $lines++;
   if (($a =~ /^blurb/) && ($a !~ /\[noalf\]/) && ($a !~ /^blurb\t\"/) && ($b !~ /magnifs/)) #blurb then quote appears in SA
   {
     $count++;
@@ -105,13 +124,13 @@ close(B);
 
 if ($dupes) { print "$dupes duplicate(s) found. Results below.\n$dupeString"; } else { print "No duplicates found. Hooray!\n"; }
 
-$errSlash = join(" / ", reverse(@errLines));
+my $errSlash = join(" / ", reverse(@errLines));
 
 print "TEST RESULTS:$_[0] duplicates,0,$dupes,0,$errSlash\n";
 
-$niSize = -s "$fileName";
-$nuSize = -s "$outFileName";
-$nuDel = $nuSize + $deletedBytes;
+my $niSize = -s "$fileName";
+my $nuSize = -s "$outFileName";
+my $nuDel = $nuSize + $deletedBytes;
 
 if ($nuDel != $niSize) { die "Something went wrong. File sizes aren't equal! New=$nuSize + $deletedBytes = $nuDel != Old=$niSize. Maybe check CR's."; }
 
@@ -120,7 +139,7 @@ if ($badError)
   my @temp = split(/\n/, $badError);
   @temp = grep { $_ =~ /\"/ } @temp;
   print join "<br/>", @temp;
-  print "TEST RESULTS:$_[0] quotes,0,$totBad,0,$errLines\n";
+  print "TEST RESULTS:$_[0] quotes,0,$totBad,0,$errSlash\n";
   print "BAD ERRORS FOUND, NOT POST-PROCESSING\n$badError\n";
   return;
 }
@@ -135,8 +154,7 @@ sub postProcess
 {
   my $thisDir = $_[0];
   my $updateFound = 0;
-  my $outString = $thisOutString = "";
-  my $quoteWarn = 0;
+  my $outString = my $thisOutString = "";
   my $modFile = fileOf($_[0]);
   my $modFileShort = $modFile; $modFileShort =~ s/.*[\\\/]//g;
   #my $outFileName = "$_[0].bak";
@@ -148,6 +166,7 @@ if (!$dontcopy)
   print "Copying .nu to .ni\n";
   #`copy -R $outFileName $fileName`;
   open(A, "c:/games/inform/tsh.txt");
+  my @b;
   while ($a = <A>)
   {
     @b = split(/,/, $a);
@@ -163,8 +182,8 @@ if (!$dontcopy)
 	}
   }
   if (!$updateFound) { print "New file $_[0]/story.ni.\n"; }
-  @localtime = localtime(time);
-  $dateForm = sprintf("%4d-%02d-%02d-%02d-%02d-%02d",
+  my @localtime = localtime(time);
+  my $dateForm = sprintf("%4d-%02d-%02d-%02d-%02d-%02d",
   @localtime[5]+1900, @localtime[4]+1, @localtime[3], @localtime[2], @localtime[1], @localtime[0]);
   $thisOutString = "$modFileShort," . (-s "$modFile") . ",$dupes,$dateForm\n";
   $outString .= $thisOutString;
@@ -175,7 +194,7 @@ if (!$dontcopy)
   open(B, ">c:/games/inform/tsh.txt");
   print B $outString;
   close(B);
-  $cmd = "copy \"$outFileName\" \"$modFile\"";
+  my $cmd = "copy \"$outFileName\" \"$modFile\"";
   $cmd =~ s/\//\\/g;
   #print "$cmd\n";
   if (!$seriouslyTesting) { `$cmd`; print "Copying over $outFileName $fileName.\n$cmd\n"; } else { print "Testing means I didn't copy.\n"; exit; }
@@ -197,16 +216,24 @@ sub sortTheTable
   my @ary = ();
   my $del = 0;
   my $lastDupTable = "";
+  my @c;
+  my @ary2;
+  my %isDone;
+  my %table;
+  my $addDupe;
+  my $ch = chr(0xe2);
+  my $num;
+  my $temp;
+  my $temp2;
 
   while ($a = <A>)
   {
     @c = split(/\"/,  $a);
-	if (($#c ==1) || ($#c > 2)) { $totBad++; $badError .= ("Uh-oh, wrong # of quotes at $short line " . ($lines+$#ary+2) . "\n$#c:$a"); }
-    if ($a =~ /^'/) { $totBad++; $badError .= ("Uh-oh, single quote line start at $short line " . ($lines+$#ary+2) . ", bailing."); }
+	if (($#c ==1) || ($#c > 2)) { $totBad++; $badError .= ("Uh-oh, wrong # of quotes at $short line $.\n$#c:$a"); }
+    if ($a =~ /^'/) { $totBad++; $badError .= ("Uh-oh, single quote line start at $short line $., bailing."); }
     if ($a !~ /^\"/) {
-	  if ($a =~ /^[a-z]/i) { $totBad++; $badError .= ("Uh-oh, you started a table line with a character: $short # " .  ($lines+$#ary+2) . ", bailing."); }
-	  $ch = chr(0xe2);
-	  if ($a =~ /^$ch/) { $totBad++; $badError .= ("Uh-oh, smart quote found at $short line " . ($lines+$#ary+2) . ", bailing."); }
+	  if ($a =~ /^[a-z]/i) { $totBad++; $badError .= ("Uh-oh, you started a table line with a character: $short # $., bailing."); }
+	  if ($a =~ /^$ch/) { $totBad++; $badError .= ("Uh-oh, smart quote found at $short line $., bailing."); }
 	  #print "Final = $a";
 	  last;
 	}
@@ -223,7 +250,7 @@ sub sortTheTable
   @ary2 = sort {lch($a) cmp lch($b)} @ary;
   for (0..$#ary2)
   {
-    $lines2 = $lines + $_ + 1 - $del;
+    my $lines2 = $. + $_ + 1 - $del;
     $temp = lch(@ary2[$_]); chomp($temp);
 	$temp2 = $temp; $temp2 =~ s/'//g;
     if ($isDone{$temp2})
@@ -250,7 +277,6 @@ sub sortTheTable
 	$table{$temp2} = $thisTable;
   }
   @ary2 = grep { $_ ne '' } @ary2;
-  $lines += $#ary2 + 2;
 
   for (@ary2)
   {

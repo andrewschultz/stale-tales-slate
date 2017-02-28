@@ -1,16 +1,25 @@
 ############################################
 #anin.pl
 #checks for anagrams
+#
+#largely superseded by gq.bat/gr.bat/gq.pl
 
-@matches = split(/,/, @ARGV[0]);
+use strict;
+use warnings;
+
+my @matches = split(/,/, @ARGV[0]);
 
 my $found = 0;
 
-@files = ( "c:/games/inform/roiling.inform/source/story.ni", "c:/games/inform/sa.inform/source/story.ni",
+my @files = ( "c:/games/inform/roiling.inform/source/story.ni", "c:/games/inform/shuffling.inform/source/story.ni",
   "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Roiling Random Text.i7x",
   "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Shuffling Random Text.i7x",
   "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Roiling Nudges.i7x",
   "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/Shuffling Nudges.i7x" );
+
+my $match;
+my $curFile;
+my $localFound;
 
 for $match (@matches)
 {
@@ -30,7 +39,6 @@ open(A, "$_[0]") || die ("No $_[0]");
 
 while ($a = <A>)
 {
-  $line++;
   if ($a !~ /[a-z]/i) { next; }
   chomp($a);
   if (lineMatch($match, $a)) { print "$a\n"; }
@@ -46,7 +54,7 @@ close(A);
 sub lineMatch
 {
   my $tempLine = lc($_[1]); $tempLine =~ s/^[^a-z]+//gi;
-  @b = split(/[^a-z']+/i, $tempLine);
+  my @b = split(/[^a-z']+/i, $tempLine);
 
   my $ss = lc($_[0]);
 
@@ -54,6 +62,7 @@ sub lineMatch
   my $startIndex = 0;
   my $endIndex = 0;
   my $stringInLine = @b[0];
+  my $ll;
 
   while (($startIndex <= $#b) && ($endIndex <= $#b))
   {
@@ -76,7 +85,7 @@ sub lineMatch
       $found = 1;
       print "$ss ($startIndex, $endIndex) ";
       print join(" ", @b[$startIndex..$endIndex]);
-      print " matches line $line======\n$_[1]\n";
+      print " matches line $.======\n$_[1]\n";
     }
     $endIndex++; $stringInLine .= @b[$endIndex];
   }

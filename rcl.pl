@@ -5,6 +5,13 @@
 #usage: 1 word = tries to anagram names (anan.pl) and searches through with gq
 #2 words = looks through only gq
 
+use strict;
+use warnings;
+
+if (defined($ARGV[0])) { die ("No arguments please!"); }
+
+my $x;
+
 while (1)
 {
 print "\nInsert stuff to anagram>>>";
