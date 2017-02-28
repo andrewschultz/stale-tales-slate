@@ -228,7 +228,7 @@ Also, if you are curious about the main "theme" of each store, I have it in ROT1
 The optional stores are organized starting with the shortest, with the final Store T coming last, so you may wish to search for Store P/U/V/W/Y if you don't want to be spoiled by scrolling. I think I've put in enough carriage return buffers.
 
 You will get a warning before solving an area if you can still gain a few points. But if something is unachievable, then the game will not warn you. This may happen in store V, where there are a few with points you may miss. POSS will trigger when you miss them.
- 
+
 U = cercbfvgvbaf
 V = cnffvir ireof
 Y = npgvir ireof
@@ -1259,7 +1259,7 @@ The atheists can talk nice and slow and patiently, until you agree with them.
 
 > HASTIEST
 
-The small kid will help you later. 
+The small kid will help you later.
 
 > W
 
@@ -1728,36 +1728,36 @@ You can do a lot of things here in the Clangier Clearing.
 > MO LEN
 > CRIPES
 > ANCIENTER
- 
+
 > W
 
 You could return for another coin, but let's get all Curtis has to offer and also explore the rest of this area.
 
 > W
- 
+
 > PINEAPPLE
 > STRAWBERRIES
 > BLACKBERRIES
 > RASPBERRY
 
 There's a lot more to do here and elsewhere, and you can probably guess a lot of the other fruits, but you have the minimum you need, now.
- 
+
 > E
 > S
- 
+
  Ooh, stuff from Curtis. Let's deal with the coins, because you don't need money with your tekno-token and droll dollar. They're almost artsy. Musical. Like some sort of drawing.
- 
+
 > SONIC
 > ICONS
- 
+
 (Note: this should be doable in any order, e.g. coin->icon first and so forth.)
- 
+
 > N
 > D
 > GIVE DOLLAR TO TRADER
- 
+
 That gives you the "useless" so-great storage.
- 
+
 > PUT ICONS IN SLOT
 
 Woohoo! A popstar's passport! Maybe it can get you through the gate!
@@ -1765,20 +1765,20 @@ Woohoo! A popstar's passport! Maybe it can get you through the gate!
 > U
 > N
 > N
- 
+
  Hmm, the passport is not enough on its own. Maybe you need to use it, or parts of it. Like the viewer and the searcher. They are not hard to use! Probably a lot easier to tinker with than other things in this game.
- 
+
 > REVIEW
 > RESEARCH
 
 (You can also note you get called a perp if you go north. That gives a third verb you should have no problem guessing. But you only need two, and, in fact, that's what the game will let you have. Note none of these are meant to be too hard, since you're really just putting ER at the end to RE at the start.)
 
 (ALT) > PERP
- 
+
 > N
- 
+
  Hooray! The final FINAL ending!
- 
+
 OR IS IT? Well, there is still Demo Dome Mode, which isn't an adventure but more a museum-style thing to examine stuff. You won't need a walkthrough for that.
 
 
@@ -1821,8 +1821,8 @@ OR IS IT? Well, there is still Demo Dome Mode, which isn't an adventure but more
 
 
 
- 
- 
+
+
 There is not much to do in the DEMO DOME MODE other than to examine everything. The game keeps track of how much you have left to examine in any one room and nags you if you leave before examining everything fully.
 
 Known Comp vs Post-comp walkthrough differences
@@ -1837,7 +1837,7 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
   * release 2: you can now do something with the sign in the initial area, and there's a new verb for you to get out, which relies on people there and not the bar name. Also, you need to get 3 of 5 verbs. The sign in the shore is gone, but the raft is visible and has a two-part solution with oars. You no longer need to ARRIVE--there's a better verb since there are boats. The portal moved from the plains to the hideout. You no longer need to SHAPE the heaps--the tubs, instead. The papery yapper is not present to bribe. The pills are now available to skip a puzzle. There is a side area to put an item to frame the walleyes less implausibly. There is also a side quest that starts in the Fishbowl and ends just before the final location, which is named differently. It involves wipes, waste, a lance, an ant and, optionally, the heaps, re-purposed. You also get killed a lot less by the haunter. The game gives a warning.
   * release 3: it's now 3 of 6 verbs to learn in the Hops Shop (renamed in release 2) though 2 relate to the jukebox, along with an LLP in the Handsome Sand Home (ex-fishbowl) (dent) and in the plains (general) with a LLP in the Lean Lane. You also have another puzzle and location if you get on the boats (LEAP).
   * release 4: you now don't use the lever at all. You replace the pins. You can SPIN or SNIP them.
-  
+
 3 PRESTO:
  * release 1 (deprecated) : Rickey is in Dirge Ridge instead of Rand.
  * release 2: Lawl Wall replaces Horned Hedron with more sensible puzzle. You now need to summon a SUB or BUS at the end. Rand was Rickey. The Lawl Wall was not there. Many places are renamed.
@@ -1860,52 +1860,52 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
  * release 3: initial, and you just examine stuff.
 
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 METRICS
 
 The game has point totals for each region, but how do they compare in size? I decided to take a look at how many words you needed to type in for the various anagrams. I likely made some niggling arithmetic errors here, so if you can correct them, I'd be happy. Big picture comments still stand, I think, and this is largely for curiosity. I didn't account for using a hint item to reduce the minimum.
@@ -1931,14 +1931,14 @@ Store T has a minimum of 153 and a maximum of 200. The bran barn forces more let
 Store H has a minimum of 160 and a maximum of 321. But its theme is easy enough, I think, that it shouldn't be too tough.
 
 LAST LOUSY POINTS
- 
+
 Note that I'm not really going to address cases like finding 3/3 things when you only need 2/3 or, in OTHERS, where you can avoid flipping a lot of fruits. Or all the guardians in Towers, where you can leave seven alone. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things and, in fact, can't really help you go forward. Often they will seem superfluous or even slightly hidden.
 
 Hints are in ROT13.
 
 STORES:
 
-FBEORG from Store B. 
+FBEORG from Store B.
 
 PRESTO:
 
