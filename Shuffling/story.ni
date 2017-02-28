@@ -3496,7 +3496,7 @@ carry out vaguing:
 	say "[cur-has]";
 	the rule succeeds.
 
-description of dope tan notepad is "You just like it. The color, the feel. Other people have computers, but your notepad is yours. [cur-has]"
+description of dope tan notepad is "You just like it. The color, the feel. It might not be a top-end notepad, but it feels like one. [cur-has]"
 
 check examining dope tan notepad for the first time:
 	say "It's your workbook. It holds bookwork. Not a thrilling color to most, and one of many you bought cheap a long time ago, and they haven't run out yet. It's small enough to fit in a pocket, and you have clipped what you call your 'toad pen' over it, too[one of]. It helped you through a lecture from this morning[or][stopping].[paragraph break](To use the notepad, you can type PAD (subject) or CONSULT PAD ABOUT (subject). If you forget what you've written about, you can type PAD or CONSULT PAD.)" instead;
@@ -8167,7 +8167,7 @@ missile-steered is a truth state that varies. missile-steered is usually false.
 check pushing shoot button:
 	if missile-steered is false:
 		say "[one of]You hear a loud siren! Unfortunately, the missile doesn't seem to be pointing anywhere besides straight up. Guess where it'll land?[or]The missile doesn't have a specific target. You can't just go chucking it anywhere.[stopping]" instead;
-	say "A voice intones 'Chargin[']! Chargin[']! Chagrin-a-grinch!'[paragraph break]Grand finale! A flaring end?! No finer inferno than feral flare as from a remote meteor. A loud voice echoes 
+	say "A voice intones 'Chargin[']! Chargin[']! Chagrin-a-grinch!'[paragraph break]Grand finale! A flaring end?! No finer inferno than feral flare as from a remote meteor. A loud voice echoes
 	'Mondale-Doleman! Lo, Amend!' And the missile becomes... a dolmen. You feel simple, heartfelt, plainly-worded concerns flooding explode across, and you run towards them, and somehow it takes no time at all to get to Mean Old Mondale-Doleman's castle.[paragraph break]Where he is beaming, no longer big, mean.[paragraph break]'O crater creator! That launch deserves A LUNCH!' he booms. 'Had now!'";
 	say "[wfak]And how! You learn he is, of course, Noble Ol' Ben. But he feels he hasn't re-earned the title, yet, so he's all 'Me, sir? Miser!' (Yeh, ok, hokey.)[paragraph break]You try every tater treat and enjoy the flukiest lutefisk (fine dish! Finished!) ever. You even meet the guards who imprisoned you[guards-say-hi]. Hugs gush. After a thousand uh, not-sad, handouts (ah! Donuts!) and a fast, live festival ('My encore ceremony!') with an orchestra, a carthorse returns you to the Trips Strip.[paragraph break]Dreaming on the way back, you picture yourself saying 'SOOTH!' when asked if you'd solved the sortie in an alternate universe.";
 	reg-inc;

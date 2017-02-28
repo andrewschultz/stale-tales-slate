@@ -108,6 +108,10 @@ METROS.
 ?Store R?
 You can't do anything with it right away.
 It can become a RESORT once you've solved two stores--three if you SECUREd the gadget.
+>The cabinet is back! Can I do anything with/to it?
+It's a sort of obscure last point.
+It could be an animal. A nice one.
+Specifically, a NICE BAT.
 >STORE F
 >>Forest
 ?How do I go anywhere?
@@ -157,6 +161,8 @@ SPREAD.
 CUT SPREAD (with sliver)
 ?That banshee is annoying! Can I get rid of it?
 It's a last lousy point, but yes.
+I'll put in a buffer here before spoiling it.
+HASBEEN or HAS BEEN.
 ?Do I need anything for the next bit?
 Yes. The maps...
 ...the silver...
@@ -422,23 +428,25 @@ OPEN BAG.SWORD
 ?How do I kill the enemy?
 ATTACK BEAST.
 >STORE R
->>ASTRAL ALTARS
+>>Astral Altars
 ?What? This is one lousy resort!
 Wait, you have a STILE, and you have TILES.
 They can become something else.
 An ISLET.
->>LEIS ISLE
+>>Leis Isle
 ?Is this paradise? What do I do with the leis?
 No, it's not paradise. If you try to do anything with them they become, well...
 ...LIES. However, there are other items on the island.
 ?How do I get out of here?
-The rock and swing can be used. Go east once you have flipped one. You only need one.
+The rock or the swing can be used. They're functionally equivalent.
+You can flip the other one to get an extra point.
+If you leave before doing so, you can't get maximum points. If that's interesting to you.
 ?What does the rock become?
-It says afloat.
+It says FLOAT.
 What floats?
 CORK.
 ?What does the swing become?
-It says aloft.
+It says ALOFT.
 What flies?
 WINGS.
 >>Rived Drive
@@ -447,6 +455,10 @@ Yes, they're vertical.
 What can be at an angle?
 A SLOPE.
 But now you still need help to climb it.
+?What do I need to change, here?
+The poles...
+...and either the toolshed, or the sprig and spore.
+You can change both for an extra two points.
 ?Can the sprig become anything?
 Yes. It's a bit sticky as is.
 GRIPS.
@@ -472,6 +484,8 @@ Maybe if they were POTTERS.
 The potters have no tools!
 What do all potters need?
 KILNS.
+Or, if you want that last lousy point...
+...you can change the CHAIN to CHINA, before changing the links.
 ?Oh no! It's Red Bull Burdell! How do I beat him?
 Don't worry. He won't beat you.
 What does he say every move?
