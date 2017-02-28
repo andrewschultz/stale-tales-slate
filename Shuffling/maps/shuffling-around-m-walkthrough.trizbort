@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<trizbort version="1.5.9.7">
+	<info>
+		<title>Shuffling Around Store I Flowchart</title>
+		<author>Andrew Schultz</author>
+		<description>Flowchart for Store I region</description>
+		<history>Created 2/27/2017</history>
+	</info>
+	<map>
+		<room id="2" name="Enter Underside" subtitle="" x="0" y="-64" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="yes" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="1" name="Fix DRAINAGE" subtitle="" x="0" y="-320" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="3" name="" description="" flow="oneWay">
+			<dock index="0" id="2" port="n" />
+			<dock index="1" id="1" port="s" />
+		</line>
+		<room id="4" name="Fix BROCADE" subtitle="" x="480" y="-64" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="5" name="" description="" flow="oneWay">
+			<dock index="0" id="2" port="se" />
+			<dock index="1" id="4" port="sw" />
+		</line>
+		<room id="6" name="Get, fix DRY CAKE" subtitle="" x="320" y="-192" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="8" name="Fix A MOTTO in Alley" subtitle="" x="160" y="-64" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="9" name="" description="" flow="oneWay">
+			<dock index="0" id="2" port="e" />
+			<dock index="1" id="8" port="w" />
+		</line>
+		<room id="10" name="Defeat Night Thing" subtitle="" x="160" y="-192" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="11" name="" description="" flow="oneWay">
+			<dock index="0" id="8" port="n" />
+			<dock index="1" id="10" port="s" />
+		</line>
+		<line id="7" name="" description="" flow="oneWay">
+			<dock index="0" id="10" port="e" />
+			<dock index="1" id="6" port="w" />
+		</line>
+		<room id="12" name="Get Past Door" subtitle="" x="320" y="-64" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="13" name="" description="" flow="oneWay">
+			<dock index="0" id="4" port="w" />
+			<dock index="1" id="12" port="e" />
+		</line>
+		<line id="14" name="" description="" flow="oneWay">
+			<dock index="0" id="6" port="s" />
+			<dock index="1" id="12" port="n" />
+		</line>
+		<room id="15" name="take HEATHS" subtitle="" x="0" y="-448" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="16" name="" description="" flow="oneWay">
+			<dock index="0" id="1" port="n" />
+			<dock index="1" id="15" port="s" />
+		</line>
+		<room id="17" name="Take BEGONIAS" subtitle="" x="160" y="-448" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="18" name="" description="" flow="oneWay">
+			<dock index="0" id="1" port="ne" />
+			<dock index="1" id="17" port="sw" />
+		</line>
+		<room id="19" name="Get TULIP" subtitle="" x="640" y="-64" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="20" name="" description="" flow="oneWay">
+			<dock index="0" id="12" port="ne" />
+			<dock index="1" id="19" port="nw" />
+		</line>
+		<room id="22" name="Fix CLOVER" subtitle="" x="160" y="-320" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="23" name="" description="" flow="oneWay">
+			<dock index="0" id="2" port="nne" />
+			<dock index="1" id="22" port="sw" />
+		</line>
+		<room id="24" name="WORDS from alley" subtitle="" x="480" y="-448" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="25" name="" description="" flow="oneWay">
+			<dock index="0" id="15" port="ne" />
+			<dock index="1" id="24" port="nw" />
+		</line>
+		<line id="26" name="" description="" flow="oneWay">
+			<dock index="0" id="17" port="e" />
+			<dock index="1" id="24" port="w" />
+		</line>
+		<room id="27" name="Get/Fix LOST CORN" subtitle="" x="320" y="-320" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="28" name="" description="" flow="oneWay">
+			<dock index="0" id="6" port="n" />
+			<dock index="1" id="27" port="s" />
+		</line>
+		<room id="29" name="Fix Pig" subtitle="" x="480" y="-320" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="30" name="" description="" flow="oneWay">
+			<dock index="0" id="22" port="ne" />
+			<dock index="1" id="29" port="nw" />
+		</line>
+		<line id="31" name="" description="" flow="oneWay">
+			<dock index="0" id="27" port="e" />
+			<dock index="1" id="29" port="w" />
+		</line>
+		<room id="32" name="Fix SIREN" subtitle="" x="640" y="-192" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="33" name="" description="" flow="oneWay">
+			<dock index="0" id="19" port="n" />
+			<dock index="1" id="32" port="s" />
+		</line>
+		<line id="34" name="" description="" flow="oneWay">
+			<dock index="0" id="29" port="se" />
+			<dock index="1" id="32" port="nw" />
+		</line>
+		<room id="35" name="Fix WORDS (again)" subtitle="" x="640" y="-448" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isEndRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="36" name="" description="" flow="oneWay">
+			<dock index="0" id="32" port="n" />
+			<dock index="1" id="35" port="s" />
+		</line>
+		<room id="37" name="ANTLERS LLP (before taking cake)" subtitle="" x="480" y="-192" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="38" name="" description="" flow="oneWay">
+			<dock index="0" id="6" port="e" />
+			<dock index="1" id="37" port="w" />
+		</line>
+		<line id="21" name="" description="" flow="oneWay">
+			<dock index="0" id="24" port="se" />
+			<dock index="1" id="32" port="nnw" />
+		</line>
+	</map>
+	<settings>
+		<colors>
+			<canvas>White</canvas>
+			<border>Black</border>
+			<line>Black</line>
+			<selectedLine>SteelBlue</selectedLine>
+			<hoverLine>DarkOrange</hoverLine>
+			<largeText>Black</largeText>
+			<smallText>Black</smallText>
+			<lineText>Black</lineText>
+			<grid>#F5F5F5</grid>
+			<startRoom>GreenYellow</startRoom>
+			<endRoom>Red</endRoom>
+		</colors>
+		<regions>
+			<NoRegion Name="NoRegion" TextColor="Black">White</NoRegion>
+		</regions>
+		<fonts>
+			<room size="13">Arial</room>
+			<object size="11">Arial</object>
+			<line size="9">Arial</line>
+		</fonts>
+		<grid>
+			<snapTo>yes</snapTo>
+			<visible>yes</visible>
+			<showOrigin>yes</showOrigin>
+			<size>32</size>
+		</grid>
+		<lines>
+			<width>2</width>
+			<handDrawn>no</handDrawn>
+			<arrowSize>12</arrowSize>
+			<textOffset>4</textOffset>
+		</lines>
+		<rooms>
+			<darknessStripeSize>24</darknessStripeSize>
+			<objectListOffset>4</objectListOffset>
+			<connectionStalkLength>32</connectionStalkLength>
+			<preferredDistanceBetweenRooms>64</preferredDistanceBetweenRooms>
+			<defaultRoomName>Cave</defaultRoomName>
+		</rooms>
+		<ui>
+			<handleSize>12</handleSize>
+			<snapToElementSize>16</snapToElementSize>
+		</ui>
+		<margins>
+			<documentSpecific>no</documentSpecific>
+			<horizontal>0</horizontal>
+			<vertical>0</vertical>
+		</margins>
+		<keypadNavigation>
+			<creationModifier>control</creationModifier>
+			<unexploredModifier>alt</unexploredModifier>
+		</keypadNavigation>
+	</settings>
+</trizbort>
