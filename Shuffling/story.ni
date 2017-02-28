@@ -2215,6 +2215,8 @@ does the player mean doing something with location of the player: it is unlikely
 
 instead of doing something with the location of the player (this is the location is too general rule) :
 	if current action is examining, continue the action;
+	if location of player is astral altars:
+		say "The altars aren't as important as what's on them." instead;
 	say "You may need to change your location at some time, but you never need to do anything with it in a command."
 
 xrooming is an action applying to one visible thing.
@@ -10000,6 +10002,8 @@ book resort
 chapter Astral Altars
 
 Astral Altars is a room in Resort. "Well, maybe you won't find your vacation spot right away. Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]. You also think you hear something."
+
+understand "altar" as Astral Altars when Astral Altars is visited.
 
 check going nowhere in astral altars:
 	say "As you step away from the altars, a weird barrier blocks you. It's very tarsal." instead;
