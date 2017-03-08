@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<trizbort version="1.5.9.7">
+<trizbort version="1.5.9.8">
 	<info>
 		<title>A Roiling Original Store V walkthrough</title>
 		<author>Andrew Schultz</author>
@@ -7,7 +7,7 @@
 		<history>Created Feb 23 2017</history>
 	</info>
 	<map>
-		<room id="1" name="Rathole heat/race" subtitle="" x="-288" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="1" name="Loather Rathole heat/race" subtitle="" x="-288" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="2" name="Loudest Used Lot (Evil Bee)" subtitle="" x="-288" y="-32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="3" name="" description="" flow="oneWay">
 			<dock index="0" id="1" port="s" />
@@ -28,17 +28,17 @@
 			<dock index="0" id="6" port="s" />
 			<dock index="1" id="8" port="n" />
 		</line>
-		<room id="10" name="Bowers" subtitle="" x="-128" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="10" name="Browse Bowers &quot;RESIDE&quot;" subtitle="" x="32" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="11" name="" description="" flow="oneWay">
-			<dock index="0" id="6" port="n" />
-			<dock index="1" id="10" port="s" />
+			<dock index="0" id="6" port="ne" />
+			<dock index="1" id="10" port="sw" />
 		</line>
-		<room id="12" name="Learn from Statue, exit EconCone" subtitle="" x="32" y="-32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="12" name="pass Astute Statue, exit EconCone" subtitle="" x="32" y="-32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="13" name="" description="" flow="oneWay">
-			<dock index="0" id="10" port="se" />
-			<dock index="1" id="12" port="nw" />
+			<dock index="0" id="10" port="s" />
+			<dock index="1" id="12" port="n" />
 		</line>
-		<room id="14" name="statue both ways" subtitle="" x="32" y="96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="14" name="Astute Statue both ways" subtitle="" x="32" y="96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="15" name="" description="" style="dashed" midText="only in Econ-Cone">
 			<dock index="0" id="12" port="s" />
 			<dock index="1" id="14" port="n" />
@@ -48,13 +48,9 @@
 			<dock index="0" id="12" port="e" />
 			<dock index="1" id="16" port="w" />
 		</line>
-		<room id="18" name="Pa Egg Pea" subtitle="" x="32" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="18" name="Pa Egg Pea" subtitle="" x="-128" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n" custom="yes" customRight="-56" customDown="0">any time before victory</objects>
 		</room>
-		<line id="19" name="" description="" style="dashed">
-			<dock index="0" id="16" port="nw" />
-			<dock index="1" id="18" port="se" />
-		</line>
 		<room id="20" name="both of Lobster/ Stream" subtitle="" x="192" y="-160" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n" custom="yes" customRight="-56" customDown="0"> any time before victory</objects>
 		</room>
@@ -68,6 +64,10 @@
 		<line id="23" name="" description="" style="dashed">
 			<dock index="0" id="16" port="s" />
 			<dock index="1" id="22" port="n" />
+		</line>
+		<line id="19" name="" description="" style="dashed">
+			<dock index="0" id="1" port="e" />
+			<dock index="1" id="18" port="w" />
 		</line>
 	</map>
 	<settings>
@@ -100,7 +100,6 @@
 		</grid>
 		<lines>
 			<width>2</width>
-			<handDrawn>no</handDrawn>
 			<arrowSize>12</arrowSize>
 			<textOffset>4</textOffset>
 		</lines>
