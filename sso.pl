@@ -59,6 +59,7 @@ my $moveOver = 0;
 
 if (defined($ARGV[0]))
 {
+  if ($ARGV[0] =~ /^[0-9]/) { doAnagrams($ARGV[0]); }
   if ($ARGV[0] =~ /\?/) { usage(); exit(); }
   if ($ARGV[0] =~ /e/) { `$orig`; exit(); }
   if ($ARGV[0] =~ /o/) { outputLast(); exit(); }
@@ -82,6 +83,7 @@ if (defined($ARGV[0]))
   if ($ARGV[0]) { print "Invalid letters: $ARGV[0]\n===============\n"; usage(); }
 }
 
+die();
 dupget("$inc\\$rr");
 dupget("$inc\\$sr");
 
@@ -98,11 +100,11 @@ while ($line=<A>)
   push(@tabname, $hashy[0]);
   $regex{$hashy[0]} = $hashy[1];
   if ($#hashy < 4) { print "$hashy[0] needs caps/punc/quotes.\n"; }
-  if ($#hash < 2) { $caps{$hashy[0]} = 0; }
+  if ($#hashy < 2) { $caps{$hashy[0]} = 0; }
   else { $caps{$hashy[0]} = $hashy[2]; }
-  if ($#hash < 3) { $punc{$hashy[0]} = 0; }
+  if ($#hashy < 3) { $punc{$hashy[0]} = 0; }
   else { $punc{$hashy[0]} = $hashy[3]; }
-  if ($#hash < 4) { $quotes{$hashy[0]} = 0; }
+  if ($#hashy < 4) { $quotes{$hashy[0]} = 0; }
   else { $quotes{$hashy[0]} = $hashy[4]; }
 }
 
@@ -336,6 +338,28 @@ while ($line = <A>)
 close(A);
 close(B);
 
+}
+
+sub doAnagrams
+{
+  my $str;
+  my $str2;
+  my $endYet = 0;
+  my $count = 0;
+
+  open(A, $orig);
+  while ($a = <A>)
+  {
+    if ((!$endYet) && ($a =~ /^[a-z]/i)) { $endYet = 1; }
+	if (!$endYet) { next; }
+	$str = lc($a);
+	chomp($str);
+	$str2 = $str; $str2 =~ s/ //g;
+	print "gr $str\nanan.pl $str2\nmyan.pl $str2";
+	 $count++;
+	 if ($count >= $_[0]) { last; }
+  }
+  die();
 }
 
 sub usage
