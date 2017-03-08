@@ -15,7 +15,7 @@ my $s = "shuffling";
 my $r = "roiling";
 
 ###################options
-my $dontcopy = ;
+my $dontcopy = 0;
 my $verbose = 0;
 my $seriouslyTesting = 0;
 
@@ -34,12 +34,12 @@ my $deletedBytes = 0;
 my $thisTable;
 my $dupeString;
 
-my $count;
+my $count = 0;
 
 while ($count <= $#ARGV)
 {
-  $a = @ARGV[$count];
-  $b = @ARGV[$count+1];
+  $a = $ARGV[$count];
+  $b = $ARGV[$count+1];
   for ($a)
   {
     /^-?x$/ && do { $dontcopy = 1; $count++; next; };
@@ -56,7 +56,7 @@ while ($count <= $#ARGV)
 
 if ($#dirs == -1)
 {
-  if (-f "story.ni")
+  if (-f "story.ni" && (getcwd() =~ /games.inform/))
   {
   my $shortDir = getcwd();
   $shortDir =~ s/\.inform.*//g; $shortDir =~ s/.*[\\\/]//g;
@@ -65,11 +65,12 @@ if ($#dirs == -1)
   }
   else
   {
-  @dirs = ($r);
+  @dirs = ($r, $s);
   }
 }
 
 my %alfed;
+
 for my $mydir (@dirs)
 {
   if ($alfed{$mydir}) { print "Duplicate directory $mydir\n."; } else { alphSource($mydir); $alfed{lc($mydir)} = 1; }
@@ -97,10 +98,22 @@ $count = 0;
 
 $ignoreArticles = 1;
 
-open(A, "$fileName");
-open(B, ">$outFileName");
+open(C, "$fileName") || die ("Can't open $fileName");
+open(B, ">$outFileName") || die ("Can't open $outFileName");
 
-binmode(B);
+my $doBinary = 0;
+
+binmode(C);
+
+$a = <C>;
+if ($a !~ /\r/) { $doBinary = 1; }
+else { $doBinary = 0; }
+
+close(C);
+
+open(A, "$fileName") || die ("Can't open $fileName");
+
+if ($doBinary) { binmode(A); binmode(B); }
 
 while ($a = <A>)
 {
@@ -170,21 +183,21 @@ if (!$dontcopy)
   while ($a = <A>)
   {
     @b = split(/,/, $a);
-    if (@b[0] =~ /$_[0]/)
+    if ($b[0] =~ /$_[0]/)
 	{
 	  $updateFound = 1;
-	  print "Updating @b[0].\n";
+	  print "Updating $b[0].\n";
 	}
 	else
 	{
-	  print "Not updating @b[0].\n";
+	  print "Not updating $b[0].\n";
 	  $outString .= $a;
 	}
   }
   if (!$updateFound) { print "New file $_[0]/story.ni.\n"; }
   my @localtime = localtime(time);
   my $dateForm = sprintf("%4d-%02d-%02d-%02d-%02d-%02d",
-  @localtime[5]+1900, @localtime[4]+1, @localtime[3], @localtime[2], @localtime[1], @localtime[0]);
+  $localtime[5]+1900, $localtime[4]+1, $localtime[3], $localtime[2], $localtime[1], $localtime[0]);
   $thisOutString = "$modFileShort," . (-s "$modFile") . ",$dupes,$dateForm\n";
   $outString .= $thisOutString;
 
@@ -251,7 +264,7 @@ sub sortTheTable
   for (0..$#ary2)
   {
     my $lines2 = $. + $_ + 1 - $del;
-    $temp = lch(@ary2[$_]); chomp($temp);
+    $temp = lch($ary2[$_]); chomp($temp);
 	$temp2 = $temp; $temp2 =~ s/'//g;
     if ($isDone{$temp2})
 	{
@@ -267,7 +280,7 @@ sub sortTheTable
     }
 	elsif ($_ > 0)
 	{
-	  if ((@ary2[$_-1]) && (@ary2[$_] =~ /\Q@ary2[$_-1]/i))
+	  if (($ary2[$_-1]) && ($ary2[$_] =~ /\Q$ary2[$_-1]/i))
 	  {
         if ($thisTable ne $lastDupTable) { $dupeString .= "****TABLE $thisTable\n"; $lastDupTable = $thisTable; }
 	    print "LastLineCheck: $temp ($lines2-$short) is duplicated from line $isDone{$temp2}.\n"; $dupes++; $dupeString .= "($_) $thisTable ($lines2 from previous line)\n";
