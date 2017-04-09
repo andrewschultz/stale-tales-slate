@@ -10498,7 +10498,7 @@ check going inside in cavern:
 
 chapter plaster psalter
 
-a plaster psalter is scenery in cavern. "It looks sturdy enough, but out of place[if plates are visible]. Some plates lie on top of it[end if]. Maybe you can make it into something more useful. RETRAIN TERRAIN is written at the top."
+a plaster psalter is scenery in cavern. "It looks sturdy enough, but out of place[if plates are visible]. Some plates lie on top of it[end if]. Maybe you can make it into something more useful."
 
 check taking plaster:
 	say "It's stuck to the floor. What would you do with it, anyway?" instead;
@@ -10819,7 +10819,7 @@ still-no-gp-quip	"Elmo notes that individual letters can be either red-or-purple
 got-it-quip	"'Excellent! So, yeah, the settler adds blues when you're in cheat mode and the letters are right. Purple consonants, green vowels.'[if y-orange is false] Elmo looks over your settler once more. 'Hmm. What's the orange for? On Yorpwald/wordplay?'[else] You and Elmo note orange is for Y's, and you suspect correct oranges become brown or something.[end if]"
 orange-know-quip	"You've got this one--Yorpwald, wordplay, the orange D at the end goes to Y, the orange W at the start to Y, too[y-know]."
 orange-dunno-quip	"You [if backside is examined]re-[end if]examine the backside of settler and note how Yorpwald lines up with Wordplay--those two orange letters MEAN something. Then you both realize both orange letters go to a Y that's not in the right place[y-know]."
-bye-Elmo-quip	"[if hold-it-up is false][note-gretta]A pause. 'Go, you doer. You're good. Un-retire, reuniter. Re-shift it fresh. Disable bad lies. There's an evac-cave over thataway. You'll know what to do. I think. Forsake fears, ok?'[paragraph break][gridchek]You leave, feeling less resave-averse, but run as you hear 'Get Elmo!' / 'Get ol['] me? Let me go!' 'Sympathy?' / 'My hat, spy!' ... 'A spy yaps, pays...'[paragraph break]You crawl through the evac-cave, which exits to writing behind a dune, man. UNNAMED: MUNDANE, but you look closer and see RETRAIN TERRAIN. Behind is a carven cavern. It looks as good a place as any to visit.[end if]" [end ELMO text]
+bye-Elmo-quip	"[if hold-it-up is false][note-gretta]A pause. 'Go, you doer. You're good. Un-retire, reuniter. Re-shift it fresh. Disable bad lies. There's an evac-cave over thataway. You'll know what to do. I think. Forsake fears, ok?'[paragraph break][gridchek]You leave, feeling less resave-averse, but run as you hear 'Get Elmo!' / 'Get ol['] me? Let me go!' 'Sympathy?' / 'My hat, spy!' ... 'A spy yaps, pays...'[paragraph break]You crawl through the evac-cave, which exits to writing behind a dune, man. UNNAMED: MUNDANE, but you look closer and see RETRAIN TERRAIN in a font that feels rantier. Behind is a carven cavern. It looks as good a place as any to visit.[end if]" [end ELMO text]
 
 to say gridchek:
 	say "[if player does not have gird grid]Elmo hands you an additional note--a Gird Grid--to help you on your way. [end if]";
@@ -23535,7 +23535,7 @@ the litany of Elvira is the table of Elvira comments.
 table of quip texts (continued) [tqt-el]
 quip	quiptext
 null-quip	"This shouldn't be part of the conversation."
-logical-quip	"'Pick a nit? Pack it in! Drone-o-nerd!' she laughs, hypnotic, pythonic. 'I? Spoon Poison? Overbearing, raving bore!' Your reply is undone in innuendo." [start ELVIRA text]
+logical-quip	"'Pick a nit? Pack it in! Limp dung, dumpling! Drone-o-nerd!' she laughs, hypnotic, pythonic. 'I? Spoon Poison? Overbearing, raving bore!' Your reply is undone in innuendo." [start ELVIRA text]
 wtf-quip	"WTF is swift. 'Egad, an agenda. Rugged Grudge. Reactions so certain. A sincerest resistance! Dayum, Y U MAD?' / 'Say, fits satisfy?' She gives a plain man's mansplain of her main plans and gets to clamp into a compliant calm point about your complaint. Manic plot? Progress! She also points out that it's probably for the best. You were feeling useless, weren't you? And if you just attack her and get it over with, you can die feeling heroic. She's sure you worked hard to get here. And, sure as Nilbog is goblin spelled backwards, she knows how to troll, too."
 hollow-quip	"An ol['] howl. 'Me? Rocky mockery! Petulant late punt! [if player is male]Ach, Mr. Charm[else]Ms. Arch-Charms[end if]!' She laughs with mindless mildness. 'Uber-Rube! Delicate, elite cad! Deny it's destiny? Evasion! So naive!' You cork a croak."
 abhor-quip	"'Recoil, O Relic!' / 'Nuh-unh, hun! Solicit colitis!' Wow. Oww."
@@ -24454,6 +24454,8 @@ understand "price list" or "list/ of/ prices" as l-o-p.
 the printed name of l-o-p is "the list of prices".
 
 a-text of l-o-p is "RRYRYR". b-text of l-o-p is "RPGRGP". parse-text of l-o-p is "x[sp]r[sp]i[sp]x[sp]e[sp]s". l-o-p is parse-spoilable.
+
+understand "spicer" as a mistake ("You don't need to summon someone who deals in spices, or (dated political joke) general falsehoods.") when l-o-p is visible.
 
 understand "precis" as a mistake ("It's already a precis, of sorts. Less highfalutin['] words will work better here.") when l-o-p is visible.
 

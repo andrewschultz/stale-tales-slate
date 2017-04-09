@@ -9,6 +9,7 @@
 #
 #also tacks on quotes
 #
+# to check: 1 check anagrams 2 check done before 3 check sorting into order
 
 use strict;
 use warnings;
@@ -375,6 +376,7 @@ d/-d is demo mode. The file doesn't change.
 e/-e edits tosort.txt.
 f/-f is force copy.
 n/-n adds a line of numbers to the stats file.
+r/-r opens the file of regular expressions that sorts  the anagrams.
 s/-s opens the stats after.
 dns is good for doing the stats etc
 EOT

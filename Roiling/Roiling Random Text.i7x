@@ -17296,7 +17296,7 @@ blurb
 "points out [i]Tout IQ to Quit[r] has multiple positive messages." [x]
 "points out how [i]Bar Kid's Bad Risk[r] balances sympathy and reality." [x]
 "praises the gritty, gripping, noir, curt REALness of [i]Vi's IVs[r]." [x]
-"praises the presentation, if not the content, of [i]Nutmeg: a Mutagen Augment[r]." [x]
+"praises the presentation, if not the content, of [i]Nutmeg: a Mutagen Augment[r]--the main character should've become a mega-nut." [x]
 "praises the REAL way-out insights of [i]folds of LSD[r]." [x]
 "praises the straightforward humor in [i]Boozed Bozo Ed[r]." [x]
 "proclaims [i]Me, a Drunk, Unmarked[r] poignant but not the way to get sympathy." [x]
@@ -26600,7 +26600,7 @@ blurb
 "'Too crude, Doc! Outre!'"
 "'Too pushy?' / 'Yup.' / 'Shoot.'"
 "'Top art? Rot, Pat!'" []
-"'Top, son. Spot on!'"
+"'Top, son. Spot on! No stop!'"
 "'Torn ACL: act lorn? Not Carl.'"
 "'Toss-up? Stop us!'"
 "'Tourism rims out.'"
@@ -38475,6 +38475,7 @@ blurb
 "Minge-O Imogen" []
 "Narker Karren"
 "NASA Math Samantha"
+"Neatnik Tennika"
 "No-Lays Alyson" []
 "Odorate Teodora"
 "OK Bore Brooke" []

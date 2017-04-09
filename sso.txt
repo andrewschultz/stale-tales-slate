@@ -1,104 +1,112 @@
 ####################################################################################
 #list of regular expressions to sort random text by, from highest priority to lowest
 #sso.txt, called by sso.pl
+##############the numbers are: capitalization (1=sentence 2=title 3=all caps) | punctuation | quotes (1=necc 0=either way -1=neither)
 ####################################################################################
 #Biopics, then motivational, then regular books
-xxm3	\[r\].*\t(true|false)s
-xxv0	\[r\].*\"v
-xxm04	\[r\],? by
+xxm3	\[r\].*\t(true|false)	2	-1	-1
+xxv0	\[r\].*\"v	2	-1	-1
+xxm04	\[r\],? by	2	-1	-1
 ########################ALL CAPS STUFF: PSA(p), laments
-xxu3	^\"[^a-z]+\"p$
+xxu3	^\"[^a-z]+\"p$	3	-1	-1
 xxms4	^\"[^a-z]+\"$	3	-1	-1
 ########################ads
-xxm1	\t(true|false)
+xxm1	\t(true|false)	2	0	-1
 ########################shuffling stuff. F=forest/maps, X=names, I=bad poems
 xxf	\"f$	0	-1	-1
 xxi	\"i$	1	1	-1
 xxx	\"x$	1	-1	-1
 ########################PSAs counted above. MC=condo (Rarer than camp), M = camp
-xxms1	\"ms[n1]$	1	1	1
-xxms2	\"ms[c2]$	1	1	0
-xxms3	\"m(n|s3)$	1	1	0
-#xxms4	\"ms4$	3	-1	-1
+xxms1	\"(ms[n1]|camp)$	1	1	1
+xxms2	\"(ms[c2]|condo)$	1	1	0
+xxms3	\"(m(n|s3)|nerds|nerd)$	1	1	0
+#xxms4	\"(ms4|psa)$	3	-1	-1
 ########################ri=riot, r=RED BULL
-xxr1	\"r[i1]$	1	1	0
-xxr2	\"r(2)?$	1	1	0
+xxr1	\"(r[i1]|protest)$	1	1	0
+xxr2	\"(r(2)?|redbull|bull)$	1	1	0
 ########################ROILING stuff
-xxp6	\"p6$
-xxp5	\"p5$
-xxp4	\"p4$
-xxp3	\"p3$
-xxp2	\"p2$
-xxp1	\"p1$
+xxp1	\"(beds|bedding|p1)$	2	-1	-1
+xxp2	\"(catechism|cat|p2)$	1	1	0
+xxp3	\"(lrchat|p3)$	1	1	0
+xxp4	\"(lridols|idols|p4)$	2	-1	-1
+xxp5	\"(p5|res|research)$	0	-1	-1
+xxp6	\"(p6|smart)$`2	-1	-1
 ##################OTTERS
-xxt5	\"t5$
-xxt4	\"t4$
-xxt3	\"t3$
-xxt2	\"t2$
-xxt1	\"t1$
+xxt1	\"(t1|animal|animals)$	0	-1	-1
+xxt2	\"(t2|elmer|merle)$	1	1	0
+xxt3	\"(t3|battle)$	1	0	0
+xxt4	\"(t4|machines)$	-1	-1	-1
+xxt5	\"(t5|taunts)$	1	1	1
 ####################ROUTES
-xxt5	\"u5$
-xxt4	\"u4$
-xxt2	\"u2$
-xxt1	\"u1$
+xxu5	\"(u5|moral)$	2	-1	-1
+xxu4	\"(u4|deli)$	1	-1	-1
+xxu2	\"(u2|horbmus|horb)$	0	1	0
+xxu1	\"(u1|horbye)$	1	1	1
 #########################TROVES
-xxv1	\"v1$
-xxv2	\"v2$
-xxv3	\"v3$
-xxv4	\"v4$
-xxv5	\"v5$
-xxv6	\"v6$
-xxv7	\"v7$
-xxv8	\"v8$
-xxv9	\"v9$
+xxv1	\"(v1|skeditm)$	1	1	0
+xxv2	\"(v2|div|divo|divorce|divorce)$	1	1	-1
+xxv3	\"(v3|iffy|advice)$	1	1	0
+xxv4	\"(v4|grit|gritty)$	1	1	1
+xxv5	\"(v5|sked)$	2	-1	-1
+xxv6	\"(v6|posh)$	1	1	1
+xxv7	\"(v7|boss|bosses)$	2	-1	-1
+xxv8	\"(v8|bum|bums)$	2	-1	-1
+xxv9	\"(v9|realest(ate)?$	2	-1	-1
+xxvx	\"(vx|you(r)?song)$	2	-1	-1
 ############################w 2 = rodney bluster 1 = gizmo parts
-xxw2	\"w2$
-xxw1	\"w1?$
+xxw1	\"w(1?)$	0	-1	-1
+xxw2	\"w2$	-1	-1	-1
 #############################OYSTER
-xxy1	\"y1$
-xxy2	\"y2$
-xxy3	\"y3$
-xxy4	\"y4$
-xxy5	\"y5$
-xxy6	\"y6$
-xxy7	\"y7$
-xxy8	\"y8$
+xxy1	\"y1$	-1	1	0
+xxy2	\"y2$	1	1	0
+xxy3	\"y3$	2	-1	-1
+xxy4	\"y4$	1	1	-1
+xxy5	\"y5$	1	1	0
+xxy6	\"y6$	1	1	-1
+xxy7	\"y7$	0	1	0
+xxy8	\"y8$	2	-1	-1
 #############################STORES 1=lecture 2=movies 3=sicko movies 4=ads 5=competitors 6=tokers
-xxs1	\"s1$
-xxs2	\"s2$
-xxs3	\"s3$
-xxs4	\"s4$
-xxs5	\"s5$
-xxs6	\"s6$
+xxs1	\"s1$	-1	1	0
+xxs2	\"s2$	0	1	-1
+xxs3	\"s3$	2	1	-1
+xxs4	\"s4$	1	1	0
+xxs5	\"s5$	2	0	-1
+xxs6	\"s6$	1	1	0
 ###############################OTHERS 1=slogans 2=yells
-xxh1	\"h1$
-xxh2	\"h2$
+xxh1	\"(h1|slogan|slogans)$	1	1	1
+xxh2	\"(h2|yell|yells)$	1	1	1
 ############################general
-xxg10	\"g10$
-xxg11	\"g11$
-xxg1	\"g1$
-xxg2	\"g2$
-xxg3	\"g3$
-xxg4	\"g4$
-xxg5	\"g5$
-xxg6	\"g6$
-xxg7	\"g7$
-xxg8	\"g8$
-xxg9	\"g9$
+xxg1	\"(g1|cuss)$	1	1	-1
+xxg2	\"(g2|death)$	1	1	-1
+xxg3	\"(g3|empty)$	1	1	0
+xxg4	\"(g4|help)$	1	1	-1
+xxg5	\"(g5|no)$	1	1	-1
+xxg6	\"(g6|att|attack)$	1	1	-1
+xxg7	\"(g7|sing)$	1	1	0
+xxg8	\"(g8|sleep)$	1	1	0
+xxg9	\"(g9|undon)$	1	1	0
+xxg0	\"(g0|undoy|undo)$	1	1	0
+xxg10	\"(g10|wait|z)$	1	1	0
+xxg11	\"(g11|yes)$	1	1	-1
 #################################original
-xxo1	\"o1$
-xxo2	\"o2$
-xxo3	\"o3$
-xxo4	\"o4$
-xxo5	\"o5$
-xxo6	\"o6$
-xxo7	\"o7$
-xxo8	\"o8$
-xxo9	\"o9$
-xxo01	\"o01$
-xxo02	\"o02$
-xxo03	\"o03$
-xxo04	\"o04$
+xxm1	\"(o1|ads|ad)$	2	0	1
+xxm2	\"(o2|rap)$	2	-1	-1
+xxm3	\"(o3|bio)$	2	-1	-1
+xxm4	\"(o4|com|come|comed|comedy)$	2	-1	-1
+xxm5	\"(o5|elmo|emo)$	0	-1	-1
+xxm6	\"(o6|comp|game)$	2	-1	-1
+xxm7	\"(o7|movie)$	2	-1	-1
+xxm8	\"(o8|talk)$	2	-1	-1
+xxm9	\"(o9|tv)$	2	-1	-1
+xxm01	\"(o01|laugh)$	2	-1	-1
+xxm02	\"(o02|lousy|hit)$	2	-1	-1
+xxm03	\"(o03|mob)$	2	-1	-1
+xxm04	\"(o04|bk)$	2	-1	-1
+xxm05	\"(o05|sport|sports)$	1	1	0
 ;
 ########################That's all! Anything else is not sorted
 \"[a-z]$
+##################
+#other checks
+# 1 what about [a] at end
+# what if match more than 1

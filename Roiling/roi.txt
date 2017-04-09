@@ -1514,14 +1514,16 @@ Some anagram lists outstripped others at various times. But the laws were still 
 >GENERAL QUESTIONS FOR YOUR (POTENTIAL) AMUSEMENT
 ?How many ways are there to die?
 Not many. And I think they're relatively obvious deaths. Easily undoable too.
-You can create an OCEAN where there's a canoe.
-You can wait around by Elvira.
-You can curse in the Cleric Circle.
-You can wait around and not change the owls or the raptor.
-You can face Elvira when not up to speed.
-You can troll the trolls four ways instead of three in the Posh Hops Shop.
-You can take the urn in the Olde Lode.
-You can attack the scary crays on the fighter freight.
+You can curse in the Cleric Circle. (u)
+You can turn the BEAN into BANE. (u)
+You can troll the trolls four ways instead of three in the Posh Hops Shop. (y)
+You can take the urn in the Olde Lode. (y)
+You can create an OCEAN where there's a canoe. (y)
+You can attack the scary crays on the fighter freight. (y)
+You can wait around and not change the owls or the raptor. (t)
+You can go west to face Elvira without using the medals. (t)
+You can wait around by Elvira, or try to train with the whistle in the Reclusion Inclosure, or attack her directly. (t)
+In old versions, you used to get killed by the haunter, but I found that to be too cruel, so now  the game hints the right way to do things instead.
 ?Bad anagrams:
 ...making the plates or staple PASTEL, PLEATS or PETALS?
 ...trying to STUB or say BUTS/BUTS around the tubs?
