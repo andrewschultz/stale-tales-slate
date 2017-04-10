@@ -7,7 +7,7 @@ Well, one. It changes one guardian in one area. It also changes the names/gender
 Spoilers ahead.
 The tarred trader, Dr. Yow, the smart kid, and the person on a droll dollar change names.
 The south exit from the Coastline, in Store W, features either Lois the Hostile or the Hostile-Is-He Lot.
-The Deal Seer west of the Shoreline is Lars Eede or Elsa Erde.
+The Deal Seer west of the Strait is Lars Eede or Elsa Erde.
 There may be an embarrassing bug where a female NPC is referred to as male, but I hope not. I searched pretty thoroughly, I guess/think. If you find one, I'll fix it and give you credit.
 Also, if any animals are referred to as male, let me know, as that's a potential bug. I tryied to leave them gender-neutral.
 >MANOR
@@ -716,11 +716,11 @@ Now you can explore other places.
 Eleven, minimum, including the serpent.
 There are eighteen total including the serpent.
 You must clear five guardians to reach and leave certain corners (NW-N, SE-E, and by the copse,) and you must clear both guardians by the coastline so the smart kid is not scared.
-To get to the Coastline and clear it, you must zap at least seven guardians. You can actually avoid visiting (saltbed and shoreline) or (sunbelt and deltas).
-The minimum guardians to zap are clued very tangentially by the spec-o-scope, which says HI. The H corresponds to clearing the west and east sides, as well as west and east in the ravages. The I corresponds to the north and south sides, as well as north and south in the ravages. The next hints contain rough reasoning why you need to clear seven guardians inside the three-by-three area.
-You must clear two guardians from the Coastline, one from the Garden, and one from the Cinema. You must clear one from the Copse, and one from/to the Ravages. All these exclude each other.
-The quick and dirty observation is that the one path from the Ravages can connect to the Copse or Coastline, but not both. Then there's no way to connect anything else.
-To grind through things, let's take the path you chose from the Copse. Assume it's to the north. It must hook up to the one you chose from the Cinema or Ravages. If it hooks up to the Ravages, the Cinema can hook south (missing the Coastline) or east (missing the Copse.) Note we didn't even worry about the Garden, here.
+To get to the Coastline and clear it, you must zap at least seven guardians. You can actually avoid visiting (saltbed and strait) or (sunbelt and deltas).
+The minimum guardians to zap are clued very tangentially by the spec-o-scope, which says HI. The H corresponds to clearing the west and east sides, as well as west and east in the Treading Gradient. The I corresponds to the north and south sides, as well as north and south in the Treading Gradient. The next hints contain rough reasoning why you need to clear seven guardians inside the three-by-three area.
+You must clear two guardians from the Coastline, one from the Garden, and one from the Cinema. You must clear one from the Copse, and one from/to the Treading Gradient. All these exclude each other.
+The quick and dirty observation is that the one path from the Treading Gradient can connect to the Copse or Coastline, but not both. Then there's no way to connect anything else.
+To grind through things, let's take the path you chose from the Copse. Assume it's to the north. It must hook up to the one you chose from the Cinema or Treading Gradient. If it hooks up to the Treading Gradient, the Cinema can hook south (missing the Coastline) or east (missing the Copse.) Note we didn't even worry about the Garden, here.
 We can mirror this reasoning across a line northeast from the copse (proof by symmetry) to eliminate the path east of the Copse, too.
 ?Can I walk around guardians I can't solve?
 For the most part, yes, eventually, except those guarding corners.
@@ -797,11 +797,11 @@ How to lower its energy?
 Make it RESTING.
 >>LOCATIONS THAT DON'T 100% MATTER
 ?Which ones have nothing besides guardians??
-Ole Shrine Shoreline and Salted Deltas.
+Strati Strait and Salted Deltas.
 Danger Garden and Anemic Cinema have guardians you need to pass, but there's nothing there.
 Baldest Blasted Saltbed and Unblest Sunbelt have scenery that gives LLPs.
-Outer Route and Lost Lots have pastries (and, in the Lots, an LLP) but nothing critical.
-Of course, you must pass through one of the Shoreline/Deltas and Saltbed/Sunbelt. But you don't have to visit both to solve the Towers area or even get maximum points.
+Nude Dune and Lost Lots have pastries (and, in the Lots, an LLP) but nothing critical.
+Of course, you must pass through one of the Strait/Deltas and Saltbed/Sunbelt. But you don't have to visit both to solve the Towers area or even get maximum points.
 >>SCOPE COPSE
 ?What's the scope for?
 It shows you where you need to go.
@@ -809,13 +809,18 @@ It also creates a map in the upper window that lasts until you cross the lake.
 ?What are the yurts doing? How can I get rid of them?
 They're quite eco-friendly, or seem to be. They seem well build enough.
 Unless, or until, they're RUSTY.
->>CAMPIEST CAMPSITE
+>>OUTER ROUTE
+?What's the campiest campsite for?
+To hold the rapier repair.
+It was the name of a room, but it was a bit too obvious.
 ?What's the rapier repair for?
 Fixing worn down swordy things.
-You may've found one behind the weeds in the ravages.
+You may've found one behind the weeds in the Treading Gradient.
 The ragged dagger.
 PUT DAGGER IN REPAIR.
->>SAVAGER RAVAGES
+?What are the sway-ways for?
+They are scenery to "help" you "decide" to go back east.
+>>TREADING GRADIENT
 ?Do I need to get rid of the weeds?
 No, but you can (and need to) make them immobile.
 Make them SEWED.
@@ -839,13 +844,16 @@ The gizmo is handy later.
 It has a nametag.
 Have you seen anyone by that name?
 Dr. Yow is locked up in the subsector.
-You can't move Dr. Yow to the ravages, but you can move his voice.
+You can't move Dr. Yow to the Shaven Havens, but you can move his voice.
 The duck might trust that.
 >>LOST LOTS
 ?What can I do about the strudel?
 You can just take it. Or you can take it with style.
 Doing so is a last lousy point.
 It can be RUSTLED.
+?How do I get past the gasfield?
+Well, you don't need to.
+And you can't.
 >>OBSCUREST SUBSECTOR
 ?Who's the person in prison?
 Read the fence.
@@ -858,6 +866,9 @@ ROWDY is one.
 WORDY is the other.
 Dr. Yow's voice is useful.
 But the duck probably doesn't need Dr. Yow yelling.
+?Is a log-gaol important?
+Yes, to make the subsector obscurest.
+It wouldn't be very obscure if it had more than one exit, would it?
 ?Is the fissure important?
 Try making it FUSSIER.
 Nothing happens--with just you there.
@@ -869,7 +880,7 @@ How could you lure it there?
 By moving Dr. Yow's voice over.
 The raves saver can record it.
 PUSH RETAPE after getting Dr. Yow to speak.
-PUSH REPEAT in the ravages.
+PUSH REPEAT in the Shaven Havens.
 Return.
 The lone duck can't be unlocked, but it seems to know to go to the fissure.
 Alternatively, making the fissure FUSSIER causes the duck to go over.
@@ -885,6 +896,9 @@ This is an LLP. It was part of the main puzzle before I felt it was a bit arbitr
 TENTATIVE can become...
 ...ATTENTIVE.
 >>ACTIONLESS COASTLINE
+?What are the natatorium and hatchery for?
+They are convenient places for the atheists and hostile person/people to go once you've neutralized them.
+There's no way to enter.
 ?Somebody seems to be hiding. What gives?
 Ray Eck and Lois the Hostile, or the Hostile-is-He Lot, are hard to hang with.
 You need to get rid of them both. When they do, someone new will appear.

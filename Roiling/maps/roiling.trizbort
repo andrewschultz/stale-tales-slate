@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<trizbort version="1.5.9.7">
+<trizbort version="1.5.9.8">
 	<info>
 		<title>A Roiling Original</title>
 		<author>Andrew Schultz</author>
@@ -129,7 +129,7 @@ version 3 March 2015</history>
 		<room id="46" name="Scope Copse" subtitle="(Bluster Butlers)" x="96" y="448" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n" custom="yes" customRight="-36" customDown="0">Yurts    Spec-o-Scope</objects>
 		</room>
-		<room id="47" name="Campiest Campsite" subtitle="" x="-32" y="448" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="47" name="Outer Route" subtitle="" x="-32" y="448" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="Campiest Campsite" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects custom="yes" customRight="-32" customDown="0">Rapier Repair</objects>
 		</room>
 		<room id="48" name="Salted Deltas" subtitle="(wait-seer/atheists)" x="224" y="256" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
@@ -139,7 +139,7 @@ version 3 March 2015</history>
 			<objects at="n" custom="yes" customRight="-44" customDown="3">Weeds    Denim</objects>
 		</room>
 		<room id="52" name="Danger/Gander Garden" subtitle="(bonker/stinger)" x="352" y="448" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="53" name="Outer Route" subtitle="(ingrates)" x="-32" y="256" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="53" name="Nude Dune" subtitle="(ingrates)" x="-32" y="256" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects custom="yes" customRight="-36" customDown="0">Solve-a-Loaves</objects>
 		</room>
 		<room id="54" name="Lost Lots" subtitle="" x="352" y="544" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
@@ -152,7 +152,7 @@ version 3 March 2015</history>
 			<objects custom="yes" customRight="-22" customDown="0">Dr. Yow</objects>
 		</room>
 		<room id="57" name="Baldest Blasted Saltbed" subtitle="" x="96" y="352" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="58" name="Gadflies' Gasfield" subtitle="" x="352" y="352" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="58" name="Strati Strait" subtitle="" x="352" y="352" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="59" name="Actionless Coastline" subtitle="" x="352" y="256" w="96" h="64" region="Towers" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="Dirk Stam/Kim Darst" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n" custom="yes" customRight="-24" customDown="0">(Smart Kid)</objects>
 		</room>
@@ -647,7 +647,6 @@ version 3 March 2015</history>
 		</grid>
 		<lines>
 			<width>2</width>
-			<handDrawn>no</handDrawn>
 			<arrowSize>8</arrowSize>
 			<textOffset>4</textOffset>
 		</lines>

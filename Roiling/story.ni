@@ -6246,7 +6246,7 @@ to say to-center:
 		if the room mydir of location of player is topside:
 			say "[mydir]";
 			continue the action;
-	say "[if player is in coastlines]southwest[else if player is in cinema or player is in ravages or player is in Nude Dune]southeast[else if player is in copse or player is in Shaven Havens or player is in Danger Garden]northeast[else if player is in lots or player is in Obscurest Subsector or player is in Danger Garden]northwest[else]some way--use the scope[end if]";
+	say "[if player is in coastlines]southwest[else if player is in cinema or player is in Treading Gradient or player is in Nude Dune]southeast[else if player is in copse or player is in Shaven Havens or player is in Danger Garden]northeast[else if player is in lots or player is in Obscurest Subsector or player is in Danger Garden]northwest[else]some way--use the scope[end if]";
 
 carry out towers-hinting:
 	if number of visible warriors > 0:
@@ -6257,7 +6257,7 @@ carry out towers-hinting:
 		try objhinting admirer instead;
 	if player is in Danger Garden and bonker is in Danger Garden:
 		try objhinting bonker instead;
-	if player is in ravages and weeds is in ravages:
+	if player is in Treading Gradient and weeds is in Treading Gradient:
 		try objhinting weeds instead;
 	if number of visible guardians > 0:
 		d "Looking for mr hinty = [mr-hinty].";
@@ -6271,11 +6271,11 @@ carry out towers-hinting:
 		all-say "You can just go north[if tarts are reflexive], though you can hint the tarts and toaster if you want[end if]." instead;
 	if ravages is unvisited:
 		all-say "There's an important location in the center of the Bland Sad Badlands, [to-center] of here. You'll want to [if ravages is accessible]go[else]make a path[end if] there." instead;
-	if raves saver is in ravages or ragged dagger is in ravages:
+	if raves saver is in Treading Gradient or ragged dagger is in Treading Gradient:
 		all-say "Collect the loot from the ravages." instead;
 	if obscurest subsector is unvisited:
 		all-say "[if bonker is in lalaland]Go east of where the bonker was.[else]You need to work your way to the east bit you saw in the scope copse.[end if]" instead;
-	if savager ravages is unvisited:
+	if Treading Gradient is unvisited:
 		all-say "[if admirer is in lalaland]You need someone, or something, north of where the admirer was.[else]You need to work your way to the north bit you [seesaw] in the scope copse.[end if]" instead;
 	unless Dr Yow has been wordy:
 		all-say "[one of]Dr. Yow[if player is not in Obscurest Subsector] back in the prison ropins[end if] can be manipulated.[or]There are two ways to make Dr. Yow wordy, but one is more useful than the other right away.[or]Dr. Yow can be WORDY.[cycling]" instead;
@@ -6296,7 +6296,7 @@ carry out towers-hinting:
 	if Outer Route is not visited:
 		all-say "You need to visit west of the Copse Scope[if butlers are not in lalaland]. The bluster butlers guard that area[end if]." instead;
 	if player is in Outer Route:
-		if weeds are in ravages:
+		if weeds are in Treading Gradient:
 			all-say "The item you want is behind the weeds in the ravages." instead;
 		if gizmo is off-stage:
 			try objhinting rapier repair instead;
@@ -6897,7 +6897,7 @@ Topside Deposit	"The badlands are too dangerous any way but[if scope copse is vi
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is visible], like the boat, which [kid-first] will let you enter[end if]."
 Nude Dune	"Unorg'd ground is every way except back east."
-Lost Lots	"You can only back out of this outback to the north."
+Lost Lots	"Best to back out of this outback to the north. The gadflies['] gasfield would wreak havoc with your sense of direction or, worse, you."
 Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
 Alcoves	"You sway to the side, not ready to face the menace to the west." [otters]
@@ -19267,7 +19267,7 @@ anemic cinema	1	1
 salted deltas	2	1
 actionless coastlines	3	1
 baldest blasted saltbed	1	2
-savager ravages	2	2
+Treading Gradient	2	2
 Strati Strait	3	2
 Outer Route	0	3
 scope copse	1	3
@@ -19362,7 +19362,7 @@ scope copse	2	--
 saltbed	3	--
 sunbelt	3	--
 anemic cinema	4	--
-savager ravages	4	--
+Treading Gradient	4	--
 Danger Garden	5	--
 salted deltas	6	--
 Strati Strait	6	--
@@ -19585,7 +19585,7 @@ Outer Route is west of Scope Copse. Outer Route is in Towers. "It's a bit outre 
 
 the campiest campsite is useless scenery in Outer Route. understand "camp/site/campsite" and "yon camp" as campsite. "My goodness! The campiest campsite is the MOST! It's a bit redundant and over-the-top, so you might not sensibly make a whole room out of it, but...this is a good place for it."
 
-instead of doing something with campsite:
+instead of doing something with campiest campsite:
 	if action is procedural, continue the action;
 	say "Well, gosh! There's not a whole lot to do with the camp but have fun being around it! Oh, and maybe figure what goes in the rapier repair." instead;
 
@@ -19708,16 +19708,16 @@ instead of doing something with theater:
 		try entering theater;
 	say "The theater thereat, with such lame titles as 'Me, I can,' / 'Nice, Ma!' and 'Iceman,' has been abandoned. And really, you shouldn't be staring at some screen when you are trying to save a world."
 
-book Savager Ravages
+book Treading Gradient
 
-Savager Ravages is north of Unblest Sunbelt and east of Baldest Blasted Saltbed. "This place is just a total mess. You see [if weeds are visible and denim is visible][we-g] along with the denim patching what's probably a hole[else if weeds are visible][we-g][else if denim is visible]denim patching a hole[else]nothing else you can shake down for items[end if]. Paths in all four directions here[if number of visible guardians is 0], all unobstructed[else if number of visible guardians is 1], even if one's blocked[else], even if some are blocked[end if].". Savager Ravages is in Towers.
+Treading Gradient is north of Unblest Sunbelt and east of Baldest Blasted Saltbed. "This place is just a total mess. You see [if weeds are visible and denim is visible][we-g] along with the denim patching what's probably a hole[else if weeds are visible][we-g][else if denim is visible]denim patching a hole[else]nothing else you can shake down for items[end if]. Paths in all four directions here[if number of visible guardians is 0], all unobstructed[else if number of visible guardians is 1], even if one's blocked[else], even if some are blocked[end if].". Treading Gradient is in Towers.
 
 to say we-g:
 	say "weeds swaying, despite no wind,"
 
-understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if man covered is in ravages]. The man who is not Flemish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when player is in ravages and weeds are in ravages.
+understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if man covered is in Treading Gradient]. The man who is not Flemish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when player is in Treading Gradient and weeds are in Treading Gradient.
 
-every turn when player is in ravages and weeds are in ravages and player was in ravages:
+every turn when player is in Treading Gradient and weeds are in Treading Gradient and player was in Treading Gradient:
 	say "The weeds [one of][or]continue to [stopping]sway freely and menacingly[one of]. Perhaps you can get rid of them, since they're not actual people blocking passage[or], but they can't be THAT tough[stopping].";
 
 after printing the locale description for ravages when ravages is unvisited:
@@ -19725,21 +19725,21 @@ after printing the locale description for ravages when ravages is unvisited:
 		say "Hm, that inapt paint--nah, it'd be a tap-in by itself, must be the actual words.";
 		now inapt paint is prodded;
 
-before going down in ravages:
-	say "[if denim is in ravages]The denim is too thick[else]You try to look into the dark where the denim was. Going in would be the dopiest posited thing you could do, even with a light source[end if]." instead;
+before going down in Treading Gradient:
+	say "[if denim is in Treading Gradient]The denim is too thick[else]You try to look into the dark where the denim was. Going in would be the dopiest posited thing you could do, even with a light source[end if]." instead;
 
-the denim is LLPish vanishing scenery in ravages. the indefinite article of denim is "some".
+the denim is LLPish vanishing scenery in Treading Gradient. the indefinite article of denim is "some".
 
 check taking denim:
 	say "You can't get a good grip on the denim to pull it." instead;
 
-understand "i mend" as a mistake ("You're more interested in doing the opposite--seeing what's behind.") when denim is in ravages and player is in ravages.
+understand "i mend" as a mistake ("You're more interested in doing the opposite--seeing what's behind.") when denim is in Treading Gradient and player is in Treading Gradient.
 
 a-text of denim is "RYRYR". b-text of denim is "RYPYR". parse-text of denim is "x[sp]-[sp]n[sp]-[sp]x". denim is cheat-spoilable.
 
 description of denim is "Too heavy for normal tools to cut."
 
-the weeds are vanishing scenery in Ravages. "They look like some sort of mutant weeds from the future, maybe a crazy one with multi-layered cities. They blow in some undetectable wind: west, then east a while, then down and south. There may be something inside them, but you can't tell."
+the weeds are vanishing scenery in Treading Gradient. "They look like some sort of mutant weeds from the future, maybe a crazy one with multi-layered cities. They blow in some undetectable wind: west, then east a while, then down and south. There may be something inside them, but you can't tell."
 
 check taking weeds:
 	say "They spin around you like a garment before picking you up and placing you away." instead;
@@ -19909,7 +19909,7 @@ after fliptoing bonker:
 
 book Salted Deltas
 
-Salted Deltas is north of Savager Ravages and east of Anemic Cinema. "Leak Lake, with its shoals aslosh, is to the north and far too wide to cross[tow-dirs].". Salted Deltas is in Towers.
+Salted Deltas is north of Treading Gradient and east of Anemic Cinema. "Leak Lake, with its shoals aslosh, is to the north and far too wide to cross[tow-dirs].". Salted Deltas is in Towers.
 
 s-d are useless scenery in salted deltas. understand "salted/ deltas" as s-d. printed name of s-d is "salted deltas".
 
@@ -20107,7 +20107,7 @@ to decide which guardian is the-hostile:
 	if player is male, decide on hostile-is-he lot;
 	decide on lois the hostile;
 
-Strati Strait is north of Danger Garden and east of Savager Ravages. "Leak Lake spans far to the east. You can't cross it here. An ole shrine[if the-hostile is in lalaland], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Strati Strait is in Towers.
+Strati Strait is north of Danger Garden and east of Treading Gradient. "Leak Lake spans far to the east. You can't cross it here. An ole shrine[if the-hostile is in lalaland], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Strati Strait is in Towers.
 
 to kid-appears:
 	if kid is off-stage:
@@ -20134,7 +20134,14 @@ book important side rooms
 
 chapter Shaven Havens
 
-Shaven Havens is north of Anemic Cinema. Shaven Havens is in Towers. "This place wasn't, like, shaved with a razor. It's just free of anything that could hide bad guys, and hey, small things. It looks too dangerous to go anywhere except back south."
+Shaven Havens is north of Anemic Cinema. Shaven Havens is in Towers. "This place wasn't, like, shaved with a razor. It's just free of anything that could hide bad guys, so hooray for small things. Savager ravages impede you any way except back south."
+
+the savager ravages are scenery. "They're pretty forbidding. Trust me, you don't want to go any way but back south."
+
+instead of doing something with savager ravages:
+	if action is procedural:
+		continue the action;
+	say "You don't want to mess with the savager ravages." instead;
 
 havens-visit is a truth state that varies.
 
@@ -20503,7 +20510,9 @@ book side-path rooms
 
 chapter Lost Lots
 
-Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is just a barren area, without even a slot. You should probably go back north before losing all sense of direction."
+Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is just a barren area, without even a slot. A gadflies['] gasfield surrounds you every way except back north."
+
+the gadflies' gasfield is scenery in Lots Lots.
 
 understand "slot" as a mistake ("If you made it, you might fall in the slot and never get out.") when player is in Lost Lots.
 
@@ -21269,7 +21278,7 @@ instead of doing something with the nerd-aid:
 		continue the action;
 	say "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.";
 
-section savager ravages
+section Treading Gradient
 
 the alarming grailman is a blue guardian. understand "liam/ garn/" as grailman. "An alarming grailman to the [psgdir of grailman] has you worried there's no way by him."
 
@@ -21358,9 +21367,9 @@ an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow
 wait-seer	Anemic Cinema	east	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe he could, too."
 man covered	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free the man covered in inapt paint from nationality and to individuality."
 arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
-Lars Eede	Savager Ravages	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free him from his capitalist or drinking urges."	--	reed's ale
-Elsa Erde	Savager Ravages	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free him from his capitalist or drinking urges."	--	reed's ale
-grailman	Savager Ravages	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"You haven't met many grailmen, but this one is good enough, for now."
+Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free him from his capitalist or drinking urges."	--	reed's ale
+Elsa Erde	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free him from his capitalist or drinking urges."	--	reed's ale
+grailman	Treading Gradient	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"You haven't met many grailmen, but this one is good enough, for now."
 Ray Eck	Topside Deposit	north	"The yacker controls his keycar so it runs over your foot. You briefly wonder if he has a twin named Kim."	"The yacker introduces himself as Ray Eck, grateful there's someone out here who doesn't mind talking."	"Ray Eck's keycar can't go that far, so you manage to escape."	keycar
 ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you try to walk through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."	"Part of you wonders if you should play up the ego drains, but the other part says they're obstructive enough."
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
@@ -21426,7 +21435,7 @@ wait-seer	"The wait-seer cooly puts up a hand and mumbles some Hakuna Matata non
 atheists	"The atheists mention meditation is all well and good, but the sweatier wait-seer's flaw was bringing an invisible cloud being into it."
 
 to say n-s-rav:
-	say "[if player is in ravages]south[else]north[end if]"
+	say "[if player is in Treading Gradient]south[else]north[end if]"
 
 to say reedale:
 	say "[el-la] takes another swig from the bottle of Reed's Ale. 'Glad that wasn't me"
@@ -21521,7 +21530,7 @@ after fliptoing a guardian (this is the track guardian progress rule):
 to decide which number is gua-to-clear:
 	let temp be 0;
 	if saltbed is not accessible and sunbelt is not accessible, decide on 5;
-	if savager ravages is not accessible, increment temp;
+	if Treading Gradient is not accessible, increment temp;
 	if anemic cinema is not accessible:
 		increment temp;
 		if saltbed is not accessible and salted deltas are not accessible and Strati Strait is accessible, increment temp;
@@ -27327,7 +27336,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 		if old ice are not reflexed:
 			say "[2dmiss of cur-reg]the old ice in the Baldest Blasted Saltbed could've become COILED.";
 		if denim is not in lalaland:
-			say "[2dmiss of cur-reg]the denim in Savager Ravages could've been MINED.";
+			say "[2dmiss of cur-reg]the denim in Treading Gradient could've been MINED.";
 		if saver is reflexive:
 			say "[2dmiss of cur-reg]the REPLAY PLAYER letters on the saver could've become PEARLY.";
 		if kid-atten is false:

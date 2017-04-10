@@ -333,7 +333,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "force"	333002970	marines seminar	--	--	"[ca-co]."
 "forcefield"	607159749	marines seminar	--	--	"[ca-co]."
 "field"	274156779	marines seminar	--	--	"[ca-co]."
-"sway"	328755809	marines seminar	--	--	"You don't need to change the sway-ways. You might get lost beyond them, anyway."
 "serial"	410398381	--	popgun	--	"[is-boing]."
 "number"	469637285	--	popgun	--	"[is-boing]."
 "stump"	450030903	--	stump	--	"[if star is reflexed]The stump just sits there, stumpy[else]The stump doesn't move, but the star seems to rattle a bit[end if]."
@@ -610,6 +609,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "owers"	491691228	--	brownies	--	"[eat-pastry]."
 "bin"	132319259	--	brownies	--	"[eat-pastry]."
 "route"	495698314	--	outer route	--	"[towersloc]." [OUTER ROUTE 0 1]
+"sway"	328755809	outer route	--	--	"You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere useful"
 "camp"	166734515	campsite	--	--	"[gosh-camp]!"
 "site"	372182939	campsite	--	--	"[gosh-camp]!"
 "campiest"	538917454	campiest	--	--	"[gosh-camp]!"
@@ -645,6 +645,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "duck"	198073659	--	lone duck	--	"It's not just any duck. [if duck is returned]But it's served its purpose[else]It's a LONE duck[end if]."
 "idtag"	203919473	--	ID Tag	--	"ID tag: dig at it? Gad."
 "unlocked"	522953692	--	--	duck-cant rule	"The lone duck looks around for something to do but can't find anything. Well, not here. And not like that."
+"ravages"	453544036	--	myrm	--	"[rav-chao]."
+"ravage"	357270070	--	myrm	--	"[rav-chao]."
 "unblest"	573436152	sunbelt	--	--	"[towersloc]." [UNBLEST SUNBELT 2 1]
 "cans"	186374877	--	Nerd-Aid	--	"[nerd-a]."
 "nerd"	303066509	--	Nerd-Aid	--	"[nerd-a]."
@@ -653,8 +655,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bottles"	576885432	--	Nerd-Aid	--	"They're not just bottles! They're bottles of NERD-AID!"
 "tapin"	300664149	--	man covered in	--	"It won't be such a tap-in to nip at, sadly. Daltho's advice comes back: nobody will be easier than Rodney."
 "neuralpulses"	1003884530	--	neural pulses	--	"Man, biochemistry's way complex. Complex isomers and such are worse than anagrams! You may be more successful breaking the neural pulses down into components."
-"ravages"	453544036	ravages	--	--	"[rav-rej]." [SAVAGER RAVAGES 2 2]
-"ravage"	357270070	ravages	--	--	"[rav-rej]."
+"gradient"	485956893	Treading Gradient	--	--	"[rav-rej]." [TREADING GRADIENT 2 2]
 "scalier"	429403966	--	Éclairs	--	"[eat-pastry]."
 "eclair"	333130000	--	Éclairs	--	"[not-singular-hp]."
 "denim"	326810705	--	denim	--	"You scrape at the denim fragments and wonder if there is any magic in dem. Well, not the way you thought it, apparently."
@@ -697,6 +698,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "strudel"	592462631	--	--	strood rule	"[eat-pastry]."
 "sled"	298923003	--	sled rut	--	"Work on the whole sled rut."
 "rut"	293539628	--	sled rut	--	"Work on the whole sled rut."
+"gasfield"	405218265	--	myrm	--	"[gasgad]."
+"gadfly"	258504596	--	myrm	--	"[gasgad]."
+"gadflie"	308944299	--	myrm	--	"[gasgad]."
 "obscurest"	725670736	subsector	--	--	"[towersloc]." [OBSCUREST SUBSECTOR 4 1]
 "locked"	348940377	subsector	--	--	"Nothing needs to be locked here, certainly not the gaol which [if Dr Yow is in ropins]already is[else]you unlocked[end if]."
 "gol"	160766118	subsector	--	--	"[if fissure is visible]The gaol is too sturdy to defeated by a three-word combination. Or a four-word one[else]You opened the gaol, and there's not much else to do with it[end if]."
@@ -1721,8 +1725,8 @@ to say reed-ale:
 to say ego-dr:
 	say "Until you see the ego-drains themselves as organised, you probably won't see how to get past them"
 
-to say fun-leaves:
-	say "Yes, it's fun to mess with leaves, but distracting"
+to say gasgad:
+	say "You can't change the gadflies. There are too many"
 
 this is the duck-cant rule:
 	if player is not in subsector and location of duck is location of player:
@@ -1740,6 +1744,9 @@ to say out-rou:
 
 to say shoaly:
 	say "That might cause some bizarre erosion and risk dumping YOU in Leak Lake"
+
+to say rav-chao:
+	say "The ravages are chaotic enough. Changing them is a fight you'd lose"
 
 to say nerd-a:
 	say "Concentrate on the Nerd-Aid. In the dandier arid den"
