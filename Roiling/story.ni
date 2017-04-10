@@ -2118,7 +2118,7 @@ muscly hulk	"He kind of stumbles with dialogue. Maybe you can make him stumble p
 iPrune	"[one of]'I?! Prune?!' it cries, turning red at a perceived slight[or]'I may be UNRIPE, but I'm bigger than you!' it cries. 'If I was the same size, maybe you could use words to get me to let you by. But we aren't, so I'm not.' Hmph[cycling]."
 bluster butlers	"'If we let you by, we'd have to answer to our mentor, Les Burt!' You see red at the name."
 snider diners	"They [one of]ignore you, asking is DERN coming[or]talk about Dr. Enis[or]mention NERD IS something unintelligible[in random order], until they're red[one of], but you sense they have a bit more to say[or], but maybe they have one more rant[stopping]."
-organised ego drains	"The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go [if player is in campsite]north[else]south[end if][if campsite is visited and shoreline is visited], especially since you walked around before[end if]."
+organised ego drains	"The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go [if player is in campsite]north[else]south[end if][if campsite is visited and Strati Strait is visited], especially since you walked around before[end if]."
 pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to converse.[or]'Yarrh, Harry,' they shout, and one of them makes fun of your skin tone. You feel like a spiter, hoping they get skin cancer.[in random order]"
 lars eede	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
@@ -6249,6 +6249,8 @@ to say to-center:
 	say "[if player is in coastlines]southwest[else if player is in cinema or player is in ravages or player is in outer route]southeast[else if player is in copse or player is in havens or player is in Danger Garden]northeast[else if player is in lots or player is in subsector or player is in campsite]northwest[else]some way--use the scope[end if]";
 
 carry out towers-hinting:
+	if number of visible warriors > 0:
+		try objhinting h-w instead;
 	if location of player is rawest waters:
 		try objhinting eastern instead; [this can come first since it is a 1-off puzzle]
 	if player is in anemic cinema and admirer is in anemic cinema:
@@ -6282,9 +6284,9 @@ carry out towers-hinting:
 	if duck is not returned:
 		all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck? And its name, Loud Neck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or]UNLOCKED.[cycling]" instead;
 	if actionless coastlines is unvisited:
-		all-say "[one of]You need to find the Actionless Shoreline.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is in lalaland and atheists are in lalaland]You've already cleared who you need to[else]You've got at least another guardian to get rid of[end if].[cycling]" instead;
+		all-say "[one of]You need to find the Actionless Coastlines.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is in lalaland and atheists are in lalaland]You've already cleared who you need to[else]You've got at least another guardian to get rid of[end if].[cycling]" instead;
 	if kid is lonely:
-		all-say "[one of]Hm, the kid [if player is not in shoreline]at the shoreline [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK KID ABOUT DOCTOR.[cycling]" instead;
+		all-say "[one of]Hm, the kid [if player is not in coastlines]at the coastlines [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK KID ABOUT DOCTOR.[cycling]" instead;
 	if kid is not in subsector and Dr Yow is in subsector:
 		all-say "The kid will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
 	unless Dr Yow has been rowdy:
@@ -6298,19 +6300,17 @@ carry out towers-hinting:
 			all-say "The item you want is behind the weeds in the ravages." instead;
 		if gizmo is off-stage:
 			try objhinting rapier repair instead;
-	if location of player is not coastlines and Trefoil is unvisited:
-		all-say "You'll want to head to the shoreline to make it across the water." instead;
 	if player has gizmo:
 		try objhinting gizmo instead;
-	if rawest is unvisited and Trefoil is unvisited:
+	if location of player is not coastlines:
+		all-say "You'll want to head to the coastlines to make it across the water." instead;
+	if rawest is unvisited and limits are unvisited:
 		if t-or-b is reflexive:
 			try objhinting t-or-b instead;
 		if turbos are reflexive:
 			try objhinting turbos instead;
 		if blaster is reflexive:
 			try objhinting blaster instead;
-	if number of visible warriors > 0:
-		try objhinting h-w instead;
 	if player is in solo den:
 		if player has flowerpot and flowerpot is reflexive:
 			try objhinting crocus instead;
@@ -6320,7 +6320,7 @@ carry out towers-hinting:
 			all-say "You should GIVE the succor crocus to Ed Yerg for hints." instead;
 	if player is in mislit limits:
 		try objhinting curst palace instead;
-	all-say "There seems to be nothing to do here." instead;
+	all-say "There seems to be nothing to do here. Or, rather, I'm stuck suggesting anything." instead;
 
 to decide what indexed text is the vul of (w - a warrior):
 	choose row with the-from of w in table of towers anagrams;
@@ -7971,7 +7971,7 @@ instead of swearing obscenely:
 		say "Some example you are." instead;
 	if player is in frontage and macks are in frontage:
 		say "The conversation is horrid enough." instead;
-	if player is in coastlines or player is in shoreline:
+	if player is in coastlines or player is in Strati Strait:
 		if lois is in location of player or hostile-is-he lot is in location of player:
 			say "Oh, the self-righteous backlash you'd get from hostile folk nearby!" instead;
 	if player is in reclusion inclosure:
@@ -19168,7 +19168,7 @@ to decide which number is palace-let: [I could've defined a new variable but it'
 	if location of player is copse, decide on 5;
 	if location of player is lots or location of player is route or location of player is sunbelt or location of player is saltbed, decide on 6;
 	if location of player is ravages or location of player is subsector or location of player is Danger Garden or location of player is havens or location of player is cinema, decide on 7;
-	if location of player is deltas or location of player is shoreline, decide on 8;
+	if location of player is deltas or location of player is Strati Strait, decide on 8;
 	if location of player is coastlines or location of player is rawest waters, decide on 9;
 	if location of player is solo den, decide on 10;
 	if location of player is limits, decide on 11;
@@ -19264,21 +19264,21 @@ to draw-line (lcc - a room) and (bd - a direction):
 
 table of towers-locs [arranged n to s then w to e]
 my-loc	my-x	my-y
-havens	1	0
-route	0	1
-anemic	1	1
-deltas	2	1
-coastlines	3	1
-saltbed	1	2
-ravages	2	2
-shoreline	3	2
-campsite	0	3
-copse	1	3
-sunbelt	2	3
+shaven havens	1	0
+outer route	0	1
+anemic cinema	1	1
+salted deltas	2	1
+actionless coastlines	3	1
+baldest blasted saltbed	1	2
+savager ravages	2	2
+Strati Strait	3	2
+campiest campsite	0	3
+scope copse	1	3
+unblest sunbelt	2	3
 Danger Garden	3	3
-subsector	4	3
-topside	1	4
-lots	3	4
+obscurest subsector	4	3
+topside deposit	1	4
+lost lots	3	4
 
 book basic guardian work
 
@@ -19368,7 +19368,7 @@ anemic cinema	4	--
 savager ravages	4	--
 Danger Garden	5	--
 salted deltas	6	--
-ole shrine shoreline	6	--
+Strati Strait	6	--
 shaven havens	--	"You're going side-to-side to see the curst palace without getting closer, but hooray to seeing some other life form."
 obscurest subsector	--	"You're going side-to-side to see the curst palace, but hooray to seeing some other person. Even if he is locked up."
 lost lots	--	"This may've been a step away from the palace, but hooray, stuff to pick up."
@@ -20105,7 +20105,7 @@ to say at-ten:
 
 the smart kid can be lonely or following or found. smart kid is lonely.
 
-book Ole Shrine Shoreline
+book Strati Strait
 
 to say relig-mf:
 	if player is male:
@@ -20117,7 +20117,7 @@ to decide which guardian is the-hostile:
 	if player is male, decide on hostile-is-he lot;
 	decide on lois the hostile;
 
-Ole Shrine Shoreline is north of Danger Garden and east of Savager Ravages. "Leak Lake spans far to the east. You can't cross it here. An ole shrine[if the-hostile is in lalaland], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Ole Shrine Shoreline is in Towers.
+Strati Strait is north of Danger Garden and east of Savager Ravages. "Leak Lake spans far to the east. You can't cross it here. An ole shrine[if the-hostile is in lalaland], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Strati Strait is in Towers.
 
 to kid-appears:
 	if kid is off-stage:
@@ -20126,7 +20126,7 @@ to kid-appears:
 			if player is in coastlines:
 				say "Some kid comes into view from a dark mist with the atheists and [relig-mf] gone, [what-kid-does].";
 			else:
-				say "You hear a kid yell, 'Yay! They're all gone!' to the [if player is in shoreline]north[else]east[end if].";
+				say "You hear a kid yell, 'Yay! They're all gone!' to the [if player is in Strati Strait]north[else]east[end if].";
 		else:
 			say "You hear [if the-hostile are not in lalaland]voices[else]a voice[end if] yell [one of]'Sadly no, nosy lad[or]a bizarrely accented 'Abort, o brat[in random order]!' to someone you can't see.";
 
@@ -20488,16 +20488,16 @@ to say wordy-hinty:
 
 book Actionless Coastlines
 
-Actionless Coastlines is north of Ole Shrine Shoreline. Actionless Coastlines is east of Salted Deltas. Actionless Coastlines is in Towers. "Leak Lake is calmer and narrower here, but even with no rocks, you can't make it across on your own. Thankfully, no sectionals are being held here right now. If you had some sort of craft, maybe you could[if atheists are visible]. You can go back south, however[else if the-hostile are visible]. You can go back west, however[else]. You can go west and south, though[end if][one of]. There's no sign of sectionals, past, present or future[or][stopping]."
+Actionless Coastlines is north of Strati Strait. Actionless Coastlines is east of Salted Deltas. Actionless Coastlines is in Towers. "Leak Lake is calmer and narrower here, but even with no rocks, you can't make it across on your own. Thankfully, no sectionals are being held here right now. If you had some sort of craft, maybe you could[if atheists are visible]. You can go back south, however[else if the-hostile are visible]. You can go back west, however[else]. You can go west and south, though[end if][one of]. There's no sign of sectionals, past, present or future[or][stopping]."
 
-o-s is a backdrop. o-s is in coastlines and shoreline.
+o-s is a backdrop. o-s is in coastlines and Strati Strait.
 
 printed name of o-s is "the Ole Shrine".
 
 understand "ole/shrine" and "ole shrine" as o-s.
 
 instead of doing something with o-s:
-	if current action is entering and player is in shoreline:
+	if current action is entering and player is in Strati Strait:
 		say "[if the-hostile are in lalaland]No need to disturb [relig-mf] now you're past[else]You're worried [relig-mf] might have you strung up for sacrilege. So HOSTILE[end if]." instead;
 	if action is procedural:
 		continue the action;
@@ -20844,7 +20844,7 @@ definition: a thing is followy:
 
 the impressive cliff is a useless backdrop. it is in Blasted Saltbed, anemic cinema, Unblest Sunbelt, danger garden. "It's impressive enough to inspire you to do something impressive, full of scaly clays."
 
-Leak Lake is a useless backdrop. it is in salted deltas, Actionless Coastlines, Ole Shrine Shoreline. "Leak Lake is so named because many bodies of water leak into it, and it leaks into others. You are glad it doesn't smell of carp, but it does smell of some sort of vegetable."
+Leak Lake is a useless backdrop. it is in salted deltas, Actionless Coastlines, Strati Strait. "Leak Lake is so named because many bodies of water leak into it, and it leaks into others. You are glad it doesn't smell of carp, but it does smell of some sort of vegetable."
 
 instead of drinking leak lake:
 	say "Too icky." instead;
@@ -20856,7 +20856,7 @@ check entering leak lake:
 
 understand "kale" as a mistake ("More kale? Dear, did I ask for more kale? Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.") when leak lake is visible.
 
-the shoals aslosh are a useless plural-named backdrop. they are in salted deltas, Actionless Coastlines, Ole Shrine Shoreline. "They make you say 'Ah! Loss!' (or Oh! Lass! if you're feeling romantic.) And, of course, if you focus on one, you see halos."
+the shoals aslosh are a useless plural-named backdrop. they are in salted deltas, Actionless Coastlines, Strati Strait. "They make you say 'Ah! Loss!' (or Oh! Lass! if you're feeling romantic.) And, of course, if you focus on one, you see halos."
 
 chapter Old One's Solo Den
 
@@ -21348,7 +21348,7 @@ The stinger is a purple guardian. "The stinger that replaced the bonker remains 
 
 a-text of stinger is "RYRRYRR". b-text of stinger is "RYRRYRR". parse-text of stinger is "x[sp]x[sp]x[sp]x[sp]x[sp]x[sp]x".
 
-section ole shrine shoreline
+section Strati Strait
 
 Lois the Hostile is a female proper-named purple guardian. "You recognize Lois the Hostile, renowned for forced-contrarian views on religion, as well as the 'real' Lois. She just likes to block people, and in this case, she's blocking your way [psgdir of lois the hostile].". description is "She doesn't exactly look happy, but she doesn't look irredeemably evil."
 
@@ -21383,8 +21383,8 @@ bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[els
 stinger	Mislit Limits	east	"The stinger needles at you menacingly. You back off."	"The stinger looks unusually active."	"Fizzing and buzzing from the stinger."
 natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"Those natives look like they could be psyched out."
 Atheists	Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of logic, but perhaps their presentation could be adjusted."
-lois the hostile	Ole Shrine Shoreline	north	"She mentions you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that."	"Boy! Lois sure could use some down-home kindness."
-hostile-is-he lot	Ole Shrine Shoreline	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their divinity careers if you fixed that."	"Boy! The Lot sure could use some down-home kindness."
+lois the hostile	Strati Strait	north	"She mentions you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that."	"Boy! Lois sure could use some down-home kindness."
+hostile-is-he lot	Strati Strait	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their divinity careers if you fixed that."	"Boy! The Lot sure could use some down-home kindness."
 
 chapter guardian taunt tables
 
@@ -21540,11 +21540,11 @@ to decide which number is gua-to-clear:
 	if savager ravages is not accessible, increment temp;
 	if anemic cinema is not accessible:
 		increment temp;
-		if saltbed is not accessible and deltas are not accessible and shoreline is accessible, increment temp;
+		if saltbed is not accessible and deltas are not accessible and Strati Strait is accessible, increment temp;
 	if danger garden is not accessible:
 		increment temp;
-		if sunbelt is not accessible and shoreline is not accessible and deltas are accessible, increment temp;
-	if deltas are not accessible and shoreline is not accessible, increment temp;
+		if sunbelt is not accessible and Strati Strait is not accessible and deltas are accessible, increment temp;
+	if deltas are not accessible and Strati Strait is not accessible, increment temp;
 	decide on temp.
 
 clear-warn is a truth state that varies.
@@ -25584,7 +25584,7 @@ definition: a thing (called hintcand) is hintrelevant:
 		decide yes;
 	if hintcand is o-s:
 		if mrlp is towers:
-			if coastlines is visited or shoreline is visited:
+			if coastlines is visited or Strati Strait is visited:
 				decide yes;
 		decide no;
 	if hintcand is curst palace:
@@ -25605,7 +25605,7 @@ definition: a thing (called hintcand) is hintrelevant:
 		decide no;
 	if hintcand is leak lake or hintcand is shoals aslosh:
 		if mrlp is towers:
-			if salted deltas is visited or Actionless Coastlines is visited or Ole Shrine Shoreline is visited:
+			if salted deltas is visited or Actionless Coastlines is visited or Strati Strait is visited:
 				decide yes;
 		decide no;
 	let R1 be map region of location of hintcand;
