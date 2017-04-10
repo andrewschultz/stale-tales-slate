@@ -1644,7 +1644,7 @@ persuasion rule for asking smart kid to try doing something (this is the block k
 	if the player's command matches the regular expression "(boat|bot)" and kid is reflexive:
 		try objasking smart kid about bot boat instead;
 	if the player's command matches the regular expression "\b(doctor|dr|yow)":
-		if subsector is unvisited:
+		if Obscurest Subsector is unvisited:
 			say "You don't know about that area yet.";
 			persuasion fails;
 		try objasking smart kid about Dr Yow instead;
@@ -2118,7 +2118,7 @@ muscly hulk	"He kind of stumbles with dialogue. Maybe you can make him stumble p
 iPrune	"[one of]'I?! Prune?!' it cries, turning red at a perceived slight[or]'I may be UNRIPE, but I'm bigger than you!' it cries. 'If I was the same size, maybe you could use words to get me to let you by. But we aren't, so I'm not.' Hmph[cycling]."
 bluster butlers	"'If we let you by, we'd have to answer to our mentor, Les Burt!' You see red at the name."
 snider diners	"They [one of]ignore you, asking is DERN coming[or]talk about Dr. Enis[or]mention NERD IS something unintelligible[in random order], until they're red[one of], but you sense they have a bit more to say[or], but maybe they have one more rant[stopping]."
-organised ego drains	"The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go [if player is in campsite]north[else]south[end if][if campsite is visited and Strati Strait is visited], especially since you walked around before[end if]."
+organised ego drains	"The ego drains just aren't to be argued with. When you try to, you're that much more convinced you don't need to go [if player is in Danger Garden]north[else]south[end if][if Danger Garden is visited and Strati Strait is visited], especially since you walked around before[end if]."
 pirates	"[one of]Harsh arrhs and the sound of shook hooks follow your attempt to converse.[or]'Yarrh, Harry,' they shout, and one of them makes fun of your skin tone. You feel like a spiter, hoping they get skin cancer.[in random order]"
 lars eede	"He seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
 Elsa Erde	"She seems to want to talk, really, and at the same time, he doesn't. He keeps mumbling a sales pitch under his breath, and maybe if you listen a bit, you can remember it."
@@ -2222,7 +2222,7 @@ to say pal-yak:
 		say "'My mouf? Oh, a yak, not a yap.'";
 
 to say doc-on-lake:
-	if kid is in subsector:
+	if kid is in Obscurest Subsector:
 		say "The kid almost seems to interrupt you saying the lake isn't THAT far across.";
 		continue the action;
 	if kid is reflexive:
@@ -2429,11 +2429,11 @@ kid	settler	"'Wow! I'm real impressed with who built this! Whatever it is. [if b
 kid	gizmo	"[if gizmo is off-stage]'I could use a weird tool to build things.'[else if player has gizmo]'Wow! Maybe if I knew how to build something, I could have it?' You could probably GIVE it to the kid, once [he-she]'s inspired to build something.[else]It's be kind of rude to ask for it back. The kid'll use it better anyway."
 kid	duck	"'I'm not real big on biology. But I guess ducks are cute.'"
 kid	toaster	"[if toaster is in coastlines]'Gee, thanks for it! I'll do something cool with, I mean to, it!''[else if toaster is in Danger Garden]You think back to the toaster in the garden. It might be worth giving the kid, as a nice gift, if you ever leave.[else]You show the toaster to the kid, who's very interested, but [he-she] says [he-she][']d feel guilty taking it before actually helping you.[end if]"
-Dr Yow	duck	"[if ravages is unvisited]'I miss my duck! When they captured me, I was clear in a west waste.'[else if duck is not in subsector]'I--I'm too exhausted to get my duck. If you could bring it back--it just needs to hear my voice.'[else]'Very loyal to me. It might ignore you now, but...thank you.'[end if]"
+Dr Yow	duck	"[if ravages is unvisited]'I miss my duck! When they captured me, I was clear in a west waste.'[else if duck is not in Obscurest Subsector]'I--I'm too exhausted to get my duck. If you could bring it back--it just needs to hear my voice.'[else]'Very loyal to me. It might ignore you now, but...thank you.'[end if]"
 Dr Yow	gizmo	"[if Dr Yow is in ropins]'Not enough sharp edges. It's for making things...crafting.'[else]'I'm too tired to make anything, but maybe an eager apprentice...it's a newfangled device for younguns anyway.'[end if]"
 Dr Yow	bonker	"[one of]Dr. Yow facepalms a bit. You can imagine listening to that bonker was even worse if you were imprisoned, too[or]No need to dredge that up, again[stopping]."
 Dr Yow	lake	"[doc-on-lake]"
-Dr Yow	kid	"[if kid is in coastlines]'It would be fun to tutor someone!'[else if kid is in subsector]'I bet I could teach [him-her] if I kept it interesting and exciting.'[end if]"
+Dr Yow	kid	"[if kid is in coastlines]'It would be fun to tutor someone!'[else if kid is in Obscurest Subsector]'I bet I could teach [him-her] if I kept it interesting and exciting.'[end if]"
 Dr Yow	Elvira	"Elvira probably had Dr. Yow put here, so you decide against asking."
 arid den	curst palace	"If the den could talk, it would find a way to say it's more practical and motivational than the Curst Palace."
 Ed Yerg	Elvira	"'[if ed yerg is reflexive]Such a bold vision for Yorpwald[else]I...I feel embarrassed ever supporting her[end if]!'"
@@ -2663,7 +2663,7 @@ to say kid-fol: [h]
 	else if kid-moves is 6:
 		say "You regret not clearing more guardians--the kid is nice, but [he-she] sure can TALK and loves to kibitz about who's hanging around, and how and why you could've figured things out, leaving you a bit too exhausted to show HOW you work your magic. And a little embarrassed. You mumble something about being practical. Plus the long walk may help the kid sit and listen. You hope.";
 	now kid is found;
-	now atblock is in subsector;
+	now atblock is in Obscurest Subsector;
 	move kid to subsector;
 	move player to subsector;
 
@@ -5209,7 +5209,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			else:
 				now noun is eeks;
 			continue the action;
-		if player is in hedron and walleyes are in lalaland and o-t is in hedron:
+		if player is in Horned Hedron and walleyes are in lalaland and o-t is in Horned Hedron:
 			now noun is o-t;
 			continue the action;
 		if player is in scum ant sanctum:
@@ -6195,10 +6195,10 @@ to decide which thing is oyster-item:
 			decide on a-s;
 	if player has gleaner and gleaner is reflexive:
 		decide on gleaner;
-	if player is in hedron:
-		if walleyes are in hedron:
+	if player is in Horned Hedron:
+		if walleyes are in Horned Hedron:
 			decide on walleyes;
-		if o-t is in hedron:
+		if o-t is in Horned Hedron:
 			decide on o-t;
 	if player is in old places:
 		if player has digger and player has ruby:
@@ -6246,7 +6246,7 @@ to say to-center:
 		if the room mydir of location of player is topside:
 			say "[mydir]";
 			continue the action;
-	say "[if player is in coastlines]southwest[else if player is in cinema or player is in ravages or player is in outer route]southeast[else if player is in copse or player is in havens or player is in Danger Garden]northeast[else if player is in lots or player is in subsector or player is in campsite]northwest[else]some way--use the scope[end if]";
+	say "[if player is in coastlines]southwest[else if player is in cinema or player is in ravages or player is in Nude Dune]southeast[else if player is in copse or player is in Shaven Havens or player is in Danger Garden]northeast[else if player is in lots or player is in Obscurest Subsector or player is in Danger Garden]northwest[else]some way--use the scope[end if]";
 
 carry out towers-hinting:
 	if number of visible warriors > 0:
@@ -6255,7 +6255,7 @@ carry out towers-hinting:
 		try objhinting eastern instead; [this can come first since it is a 1-off puzzle]
 	if player is in anemic cinema and admirer is in anemic cinema:
 		try objhinting admirer instead;
-	if player is in campsite and bonker is in campsite:
+	if player is in Danger Garden and bonker is in Danger Garden:
 		try objhinting bonker instead;
 	if player is in ravages and weeds is in ravages:
 		try objhinting weeds instead;
@@ -6278,24 +6278,24 @@ carry out towers-hinting:
 	if savager ravages is unvisited:
 		all-say "[if admirer is in lalaland]You need someone, or something, north of where the admirer was.[else]You need to work your way to the north bit you [seesaw] in the scope copse.[end if]" instead;
 	unless Dr Yow has been wordy:
-		all-say "[one of]Dr. Yow[if player is not in subsector] back in the prison ropins[end if] can be manipulated.[or]There are two ways to make Dr. Yow wordy, but one is more useful than the other right away.[or]Dr. Yow can be WORDY.[cycling]" instead;
+		all-say "[one of]Dr. Yow[if player is not in Obscurest Subsector] back in the prison ropins[end if] can be manipulated.[or]There are two ways to make Dr. Yow wordy, but one is more useful than the other right away.[or]Dr. Yow can be WORDY.[cycling]" instead;
 	if duck is aloof:
-		all-say "[one of]That duck [if duck is not visible]in the havens seemed[else]seems[end if] awfully lonely. Maybe you can bring it home?[or]It won't follow you. It doesn't trust your voice.[or]Someone else's voice, then, maybe?[or]Find anything that could record that?[or][if ravages is unvisited]Something's in the ravages.[else if player does not have raves saver]The raves saver you saw is useful.[else]Your raves saver.[end if][or]It's actually a tape recorder.[or]It has two buttons, RETAPE and REPEAT, and you can probably figure what does what.[or]If you RETAPE Dr. Yow when [he-she] is [if Dr Yow has been wordy]WORDY[else]in a certain state[end if], that gets [his-her] voice.[cycling]" instead;
+		all-say "[one of]That duck [if duck is not visible]in the Shaven Havens seemed[else]seems[end if] awfully lonely. Maybe you can bring it home?[or]It won't follow you. It doesn't trust your voice.[or]Someone else's voice, then, maybe?[or]Find anything that could record that?[or][if ravages is unvisited]Something's in the ravages.[else if player does not have raves saver]The raves saver you saw is useful.[else]Your raves saver.[end if][or]It's actually a tape recorder.[or]It has two buttons, RETAPE and REPEAT, and you can probably figure what does what.[or]If you RETAPE Dr. Yow when [he-she] is [if Dr Yow has been wordy]WORDY[else]in a certain state[end if], that gets [his-her] voice.[cycling]" instead;
 	if duck is not returned:
 		all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck? And its name, Loud Neck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or]UNLOCKED.[cycling]" instead;
 	if actionless coastlines is unvisited:
 		all-say "[one of]You need to find the Actionless Coastlines.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is in lalaland and atheists are in lalaland]You've already cleared who you need to[else]You've got at least another guardian to get rid of[end if].[cycling]" instead;
 	if kid is lonely:
 		all-say "[one of]Hm, the kid [if player is not in coastlines]at the coastlines [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK KID ABOUT DOCTOR.[cycling]" instead;
-	if kid is not in subsector and Dr Yow is in subsector:
+	if kid is not in Obscurest Subsector and Dr Yow is in Obscurest Subsector:
 		all-say "The kid will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
 	unless Dr Yow has been rowdy:
 		all-say "[one of]Dr. Yow is versatile. You need [him-her] to be exciting around the kid.[or][he-she-c] can also be...[or]...ROWDY.[cycling]" instead;
 	if kid is reflexive:
 		all-say "[one of]The kid is too tentative to listen to Dr. Yow.[or]What can [he-she] become?[or]This is slightly tricky, even with three t's. You need to focus, so the kid can focus.[or]ATTENTIVE.[cycling]" instead;
-	if campsite is not visited:
+	if Outer Route is not visited:
 		all-say "You need to visit west of the Copse Scope[if butlers are not in lalaland]. The bluster butlers guard that area[end if]." instead;
-	if player is in campsite:
+	if player is in Outer Route:
 		if weeds are in ravages:
 			all-say "The item you want is behind the weeds in the ravages." instead;
 		if gizmo is off-stage:
@@ -6889,16 +6889,16 @@ Posh Hops Shop	"[if noun is not outside]You just got here, so direction means no
 Lean Lane	"You can only go back west, or you would risk running into a mesh crab chambers or a crab crib full of bric-a-brac." [oyster]
 Handsome Sand Home	"Though you are a guest, probably best not to go poking around. You can go back west."
 Lapsin' Plains	"You can only go back south, or[if door-sux is false], once you defeat the door,[end if] inside."
-Achers' Arches	"You can only go north to the Hedron[if sardine is in arches], once the sardine is gone,[end if] or east back to Anger Range."
-Hedron	"The main exit is south, though some enclosed place is west, too. It'd be a tougher hedron to guard if it had lots of exits. Well, you can also go IN to the [if a-p is visible]portal[else]ol['] trap once you disarm it[end if][if walleyes are visible], though you probably don't need the walleyes watching you try[end if]."
+Achers' Arches	"You can only go north to the Horned Hedron[if sardine is in arches], once the sardine is gone,[end if] or east back to Anger Range."
+Horned Hedron	"The main exit is south, though [if collapsed old places is visited]you can go back west to the collapsed old places[else]an area west is in disrepair[end if]. You can also go IN to the [if a-p is visible]portal[else]ol['] trap once you disarm it[end if][if walleyes are visible], though you probably don't need the walleyes watching you try[end if]."
 Tenfold	"While you can go back outside, you can just finish things here[unless-max]."
 Loftier Trefoil	"[if rodney is visible]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to go out[end if]." [towers]
 Topside Deposit	"The badlands are too dangerous any way but[if scope copse is visited] back[end if] north[if Ray Eck is visible], and Ray Eck's in the way right now[end if]."
-Campsite	"Oh! This is such a nice place! But other than back east, all ways are perilous! Perilous!"
+Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is visible], like the boat, which [kid-first] will let you enter[end if]."
-Outer Route	"Unorg'd ground is every way except back east."
+Nude Dune	"Unorg'd ground is every way except back east."
 Lost Lots	"You can only back out of this outback to the north."
-Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
+Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
 Alcoves	"You sway to the side, not ready to face the menace to the west." [otters]
 Loop Pool	"The pool is wide and long. You can only go back south."
@@ -6977,10 +6977,8 @@ understand the command "kick" as something new.
 
 understand "kick [something]" as attacking.
 
-instead of attacking:
-	if player is in campsite:
-		say "A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything." instead;
-	if noun is a store:
+instead of attacking: [this takes responses for general types. The table below it is for specific NPCs/objects]
+	if noun is a store: [general stuff here that can't fit into a table]
 		say "Sore at a store?" instead;
 	if noun is Elvira:
 		say "'Hater-heart.' She pouts. She summons a proto-troop that easily defeats you. '[one of]Pretty try, pet[or]Gritty try, git[in random order]!' she laughs. 'A feted defeat!' Perhaps you need backup.";
@@ -6995,12 +6993,10 @@ instead of attacking:
 	if noun is a target listed in the table of attack-specific:
 		choose row with target of noun in table of attack-specific;
 		say "[nohit entry][line break]" instead;
-	if noun is a guardian:
-		say "You need to see into this blocker's nature instead[if player has dagger]--that dagger would just make things murder[end if]." instead;
 	if player has lance:
 		say "Wrong enemy for the lance." instead;
-	if noun is duck:
-		say "The poor thing doesn't have a clonk due." instead;
+	if noun is a guardian:
+		say "You need to see into [the noun]'s nature instead[if player has dagger]--that dagger would just make things murder[end if]." instead;
 	say "[randbla][line break]" instead;
 
 sign-other is a truth state that varies.
@@ -7039,14 +7035,17 @@ rude door	"[if door-sux is true]The door is miserable enough for having to let y
 yapper	"I dunno. Not without scissors you don't. That yapper looks pretty tough. He could take out a rock-man or two, you bet."
 ant	"You poke at the ant, which keeps it at bay. You need something more simple, violent and direct."
 Ray Eck	"Not even his cousin, Kim Eck, deserves that." [START towers]
+campiest campsite	"A loud voice booms LE FIST ITSELF! You quiver in fear at the thought of retribution from attacking anything."
+rapier repair	"[if gizmo is not off-stage]You already broke it[else]No, it must be useful for something[end if]!"
 denim	"[if player has gizmo]The gizmo can't cut through[else if player has dagger]Your ragged dagger doesn't quite cut it[else]You've got nothing sharp enough[end if]. It's thickly packed denim, for sure."
-serpent	"Snaky yanks would backfire on you. Maybe you can calm the snake, though."
 sweatier wait-seer	"You find it tough to get close to his sweatiness. 'Ew...I...tears,' you say, your eyes going red."
 bluster butlers	"They're probably trained to hand out ur-belts."
 bonker	"As you hunker down to run at the bonker, it wavers menacingly. You're not going to beat it while it's in such good shape."
 prison ropins	"[which-sharp]--but force doesn't seem the right way in, anyway."
 log gaol	"[which-sharp]----but there is probably nothing beyond in the Badlands anyway."
 Dr Yow	"[if Dr Yow is in prison ropins]You can't reach in, and it's a bad idea anyway[else]You imgaine Dr. Yow mouthing a dry 'ow,' which isn't quite an anagram, but suddenly remember a fellow called Dry Mo, who may or may not be Dr. Yow's bodyguard. Besides, Dr. Yow is here to help you[end if]."
+lone duck	"The poor thing doesn't have a clonk due. You can see red at this, if you want."
+serpent	"Snaky yanks would backfire on you. Maybe you can calm the snake, though."
 Ed Yerg	"Ye dreg!"
 ed riley	"'I could DRIL YEE!' Ed booms. You can just HEAR the flagrant misspelling, and it makes you see red." [START otters]
 macks	"[one of]Don't hate the player, hate the game.[paragraph break]Um, sorry about that. But b[or]B[stopping]eing outnumbered, maybe you can attack their arguments instead."
@@ -7277,7 +7276,7 @@ chapter jumping
 instead of jumping:
 	if player is in gyre and hump is in gyre:
 		say "This is a silly anagram game, not a silly rhyming game." instead;
-	if player is in campsite:
+	if player is in Outer Route:
 		say "You jump, clicking your heels and striking a ridiculous smile at the apex." instead;
 	if player is in freight:
 		say "You certainly are feeling jumpy right now, but--well, you want to jump towards the pale plea. And as reflexively as possible." instead;
@@ -7359,7 +7358,7 @@ check singing:
 		say "You can't quite mimic the singer, but maybe you could tweak his singer-ness. You can't move to artists['] straits with your job. You're more suing than 'I sung' now." instead;
 	if mrlp is troves:
 		say "No hippy trippy blues song about being poor here, if you please. And you will--you're not in power, yet." instead;
-	if player is in campsite:
+	if player is in Outer Route:
 		say "[one of]'Oh sappy! So happy!' The birds go chürp chürp chëëp chëëp[or]Best not encourage cheeps-speech. The dirt itself might burst into song[stopping]!" instead;
 	if player is in same mesa:
 		say "You look at the scripture picturers for clues, and swirling in the design you see [dssd]. Hmm. You don't know any songs like that." instead;
@@ -7620,11 +7619,11 @@ before listening (this is the you can hear stuff some places rule):
 		say "You see red as the ingrates['] voices sound like tin gears." instead;
 	if player is in copse and butlers are in copse:
 		say "The butlers loudly banter 'Let's rub (you) the wrong way!' You see red." instead;
-	if player is in havens:
+	if player is in Shaven Havens:
 		say "You think you hear NEVAHs, but that might just be internal melodrama." instead;
 	if player is in topside:
 		say "An unconvincing voice moans 'Stop! Die!' but it's not very effective." instead;
-	if player is in subsector:
+	if player is in Obscurest Subsector:
 		if Dr Yow is rowdy:
 			say "Dr. Yow is yacking away noisily." instead;
 		if Dr Yow is wordy:
@@ -7711,7 +7710,7 @@ before listening (this is the you can hear stuff some places rule):
 			say "Ugh. Sir Rodney is a dry one, barking out complaints." instead;
 		say "Nobody has anything to say. Perhaps the fear remains." instead; [code should not be reached]
 	if natives are visible:
-		say "The too-pleasant sounds of the campsite are drowned out by the natives['] babble.";
+		say "The natives' babble doesn't stop.";
 		try objasking natives about natives instead;
 	if player is in bran barn:	[otters]
 		say "You hear morose mooers you can't see." instead;
@@ -7789,10 +7788,8 @@ before smelling (this is the you can smell some stuff some places rule):
 		say "The overwhelming smell of kale is not offensive, but you'd like to get by it." instead;
 	if player is in solo den:
 		say "Noodles so olden." instead;
-	if player is in campiest campsite:
-		say "[one of]You smell something generically nice and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.[or]You wonder to yourself if that's tarragon or rosemary or perhaps a hint of lavender... no, no, no.[or]I ran out of stupid jokes for this. Get on with the game, here.[stopping]";
-		if dandier arid den is not in campsite:
-			do nothing instead;
+	if player is in Outer Route:
+		say "[one of]You smell something generically nice from the campsite nearby and say 'Ahhhh! Nature!' a bit too loud. Ugg. You won't do that again.[or]You wonder to yourself if that's tarragon or rosemary or perhaps a hint of lavender... no, no, no.[or]I ran out of stupid jokes for this. Get on with the game, here.[stopping]";
 	if dandier arid den is in location of player:
 		say "The Nerd-Aid from the dandier arid den smells suspiciously like the very red Rind-Ade drink." instead;
 	if deli rye is visible or noun is deli rye: [otters]
@@ -8983,12 +8980,12 @@ prod	digger	true	262171428	--	"drop"	"drop"	"It rattles as you drop it. You try 
 waste	lance	false	437312684	--	"sweat"	"sweat"	"You make real effort to clean up the waste. And you do! You pile them into heaps, in the process finding a very dirty lance. It's a bit too dirty to take."
 heaps	heaps	false	345016151	--	"shape"	"shape" or "shape the/ heaps"	"You channel your inner artist and make something beautiful out of the heaps."
 ruby	thin hint	false	331207767	--	"bury"	"bury"	"You bury the ruby with your handy rigged digger. Good thing there aren't rubies. You'd be busier. Probably give yourself a bruise. You leave a thin hint so you know where to dig the ruby up, when you need to."
-haunter	haunter	false	462435186	--	"assuage"	"assuage"	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. The hedron is full of no-good-niks. The haunter waits on your next move."
+haunter	haunter	false	462435186	--	"assuage"	"assuage"	"'How sad, shadow,' you explain, and you think you might know where someone hid its jewels. You....well, saw and heard stuff. It nods. Makes sense. the Horned Hedron is full of no-good-niks. The haunter waits on your next move."
 lever	lever	false	501914680	--	"revel"	"revel"	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
 gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."
 yapper	yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' He motions you to slip him the gleaner behind your back. Then he goes off to find such a judge, presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"
 pins	d2	false	291640279	--
-d2	d2	false	335153504	Strip of Profits	"redial"	"redial"	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range. Between Aunt Tuna, the sardine, and even the reluctant trolls--a story.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Hedron still exerted its hold. Now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
+d2	d2	false	335153504	Strip of Profits	"redial"	"redial"	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range. Between Aunt Tuna, the sardine, and even the reluctant trolls--a story.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold. Now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
 dialer	dialer	false	335153504	--	"derail"	"derail"	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!'Then a pause. Then Elvira's voice.[paragraph break]'HEY! Oh! It's the boys from the horned hedron! This IS just one of your pranks, isn't it?' her voice turns less saccharine. 'You wouldn't do that again, would you? Well, I could send you more...supplies...now, I'll pretend this didn't happen!' As her voice crackles off, pins spring up to shield the dialer from further operation.";
 
 table of towers anagrams
@@ -11595,7 +11592,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "flips" or "flip" or "pf"	false	"[what-can-flip]"	"flips"	false
 "rove" or "over" or "rove over"	false	"You can just ROVE OVER to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
 "talking"	false	"[if number of terse-warned hintrelevant people > 0]You got nothing from [list of terse-warned hintrelevant people][else]Nobody nearby seems useless...YET[end if]."	"talking"	false	--
-"badlands" or "bland/sad badlands" or "bland sad badlands"	false	"Old Hat Daltho told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the flowerpot was for a friend called Ed."	"badlands"	true	towers
+"badlands" or "bland/sad badlands" or "bland sad badlands"	false	"Old Hat Daltho told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the flowerpot was for a friend called Ed."	"badlands"	true	towers
 "guru"	false	"You can GURU something [if arugula is in lalaland]now you've eaten[else]after eating[end if] the augural arugula."	"guru"	true	others
 
 to say xray-help:
@@ -11656,7 +11653,7 @@ a-s	oyster	"SEARCH the arches."
 dialer	oyster	"With the yapper gone, you should be able to DERAIL."
 d2	oyster	"You should be able to REDIAL the dialer with the proper preparation."
 lance	oyster	"CLEAN the lance once you have something to wash it with."
-duck	towers	"The lone duck could make SOMETHING unlocked[if subsector is visited]. Maybe the prison ropins[end if]."
+duck	towers	"The lone duck could make SOMETHING unlocked[if Obscurest Subsector is visited]. Maybe the prison ropins[end if]."
 ropins	towers	"It would be nice if something made the prison ropins UNLOCKED[if duck is prefigured], like, maybe the duck[end if]."
 rodney	towers	"Rodney can be [if roddro is false]sent YONDER[else if rodyon is false]made DRONEY[else]sent YONDER or made DRONEY[end if]."
 b-b	otters	"You can make the barley be BARELY there once you get past the otters."
@@ -16429,7 +16426,7 @@ definition: a direction (called dir) is viable:
 		decide no; [these are individual cases]
 	unless the room dir from location of player is nothing:
 		decide yes; [this is the main one. If a room's there, go]
-	if player is in hedron and dir is inside and walleyes are in lalaland and o-t is reflexed:
+	if player is in Horned Hedron and dir is inside and walleyes are in lalaland and o-t is reflexed:
 		decide yes; [these are fringe cases. Again, you can enter certain places etc. once traps are removed]
 	if player is in Basement and dir is inside:
 		decide yes;
@@ -17041,7 +17038,7 @@ ruby	"The pills swarm your ruby so you drop it. They sink into the dirt, the rub
 scrawl	"The pills slip into the scrawl, flaring it up. The ground looks extra soft, and you look to see what you can--what's the word? UNEARTH. It's a big weird undead sausage! The sausage cries for its lost ruby!"
 haunter	"The haunter stays your hand. Perhaps it had a sad incident in its past which sent it to earth sooner--or made it lose its ruby. It nods at you in understanding."
 yapper	"The yapper begins bellyaching about picking up the pills. He complains about how it's HIS job to clean things up. He goes off to look for a wastebasket--but you think you see him popping a pill as he leaves."
-d2	 "You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the hedron's leaders of double crossing her, and the hedron's leaders accuse her. It's great fun to eavesdrop."
+d2	 "You spill the pills and hook yourself on the dialer trying to catch them. You wind up REDIALing, and all sorts of hubbub ensues as Elvira's voice crackles, and she accuses the Horned Hedron's leaders of double crossing her, and the Horned Hedron's leaders accuse her. It's great fun to eavesdrop."
 dialer	"You spill the pills on the dialer, and they change DIALER to enough of the 720 possibilities that they settle on DERAIL."
 
 pill-use is a truth state that varies.
@@ -17110,7 +17107,7 @@ carry out spilling:
 		if pre-haun is in anger range:
 			if thin hint is not in collapsed old places:
 				say "A single pill jumps out and you could swear it yelped before jumping back in the bottle. Maybe you need to prepare before digging up whatever's under Anger Range." instead;
-	if player is in Hedron and walleyes are in hedron: [walleyes can't really be flipped. You need to go through the sausage.]
+	if player is in Horned Hedron and walleyes are in Horned Hedron: [walleyes can't really be flipped. You need to go through the sausage.]
 		say "You don't have one for everyone, and there's too many everyone, anyway. You'll need to outsmart the walleyes." instead;
 	if oi is the player:
 		say "You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long." instead;
@@ -17677,11 +17674,11 @@ every turn (this is the track haunter rule):
 		if location of haunter is adjacent to location of player:
 			say "The haunter follows you.";
 			move haunter to location of player;
-			if location of player is Hedron and walleyes are in Hedron:
+			if location of player is Horned Hedron and walleyes are in Horned Hedron:
 				say "[line break]The walleyes spout yea-wells. Their toothy cackling becomes toothy clacking as the haunter hovers over you protectively.";
 				the rule succeeds;
 			if location of player is Old Places:
-				say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Hedron now. [if o-t is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].";
+				say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if o-t is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].";
 				now walleyes are in lalaland;
 				now haunter is in lalaland;
 				now thin hint is in lalaland;
@@ -17884,7 +17881,7 @@ check examining gleaner when player is in loft:
 	say "You found the way in and know the way out. Better deal with the [if yapper is visible]yapper and [end if]dialer, now." instead;
 
 to say ho-he:
-	say "[if end den is visited]maybe the maze you [are-were-hedron] stuck in[else if player is in hedron]somewhere, maybe somewhere close[else if hedron is visited]the horned hedron[else if Achers' Arches is visited]a structure, possibly the hedron north of [arch-here],[else]some structure[end if]";
+	say "[if end den is visited]maybe the maze you [are-were-hedron] stuck in[else if player is in Horned Hedron]somewhere, maybe somewhere close[else if Horned Hedron is visited]the horned hedron[else if Achers' Arches is visited]a structure, possibly the Horned Hedron north of [arch-here],[else]some structure[end if]";
 
 to say are-were-hedron:
 	say "[if player is in end den]are[else]were[end if]"
@@ -18095,7 +18092,7 @@ carry out taning:
 
 book Den Loft
 
-Tenfold Teflon'd Den Loft is an innie room in Oyster. "[one of]You're at the center of what's really a nice mob combine, all things considered. I mean, the mob isn't nice, but it's obviously a spendy spy den. It's unclear if it's above or below ground, it's so well protected a city-fail facility. [or][stopping]You can exit or go out to leave this place, though it's probably better just to find a way to mess up the whole Hedron.[paragraph break]A huge dialer takes up the bulk of the wall--it seems to have settings to tell it what to do, then a lever to pull."
+Tenfold Teflon'd Den Loft is an innie room in Oyster. "[one of]You're at the center of what's really a nice mob combine, all things considered. I mean, the mob isn't nice, but it's obviously a spendy spy den. It's unclear if it's above or below ground, it's so well protected a city-fail facility. [or][stopping]You can exit or go out to leave this place, though it's probably better just to find a way to mess up the whole Horned Hedron.[paragraph break]A huge dialer takes up the bulk of the wall--it seems to have settings to tell it what to do, then a lever to pull."
 
 lev-pull is a truth state that varies.
 
@@ -18197,7 +18194,7 @@ chapter pins
 
 some pins are scenery. "The pins cover the dialer. There's probably more than one way to get rid of them, but right now, they're blocking you from using it again. Or, in other words, from...wait for it...[paragraph break]PS'in."
 
-understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when player is in hedron and pins are in hedron.
+understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when player is in Horned Hedron and pins are in Horned Hedron.
 
 instead of doing something with pins:
 	if current action is dropping:
@@ -18214,7 +18211,7 @@ the d2 is privately-named unscannable reflexive scenery. d2 is undesc. printed n
 
 a-text of d2 is "RYRYYR". b-text of d2 is "RYRYYR". parse-text of d2 is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
 
-understand "redial" as a mistake ("[if yapper is visible]You can't even [i]dial[r] with the yapper around[else if dialer is reflexive]Maybe in a bit, but you haven't even dialed yet[else]Maybe in a bit, but the pins are in the way at the moment[end if].") when pins are in hedron and player is in tenfold.
+understand "redial" as a mistake ("[if yapper is visible]You can't even [i]dial[r] with the yapper around[else if dialer is reflexive]Maybe in a bit, but you haven't even dialed yet[else]Maybe in a bit, but the pins are in the way at the moment[end if].") when pins are in Horned Hedron and player is in tenfold.
 
 check fliptoing d2:
 	if lev-pull is false:
@@ -18676,13 +18673,13 @@ after fliptoing waste (this is the tubs give prod and waste rule):
 
 book Achers' Arches
 
-Achers' Arches is a room in oyster. Achers' Arches is west of anger range. "Arches lead north to [if hedron is unvisited]what could be [end if]the Horned Hedron[if a-s is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are lots of hidden places you could ambush someone from[end if][if a-s is reflexive and sardine is in lalaland] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is in lalaland], as well as north [hedron-if-v][end if]."
+Achers' Arches is a room in oyster. Achers' Arches is west of anger range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if a-s is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are lots of hidden places you could ambush someone from[end if][if a-s is reflexive and sardine is in lalaland] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is in lalaland], as well as north [hedron-if-v][end if]."
 
 to say hedron-if-v:
-	if hedron is visited:
-		say "to the hedron"
+	if Horned Hedron is visited:
+		say "to the Horned Hedron"
 
-h-h is privately-named scenery in Achers' Arches. "You can only see the arches leading into the hedron.". understand "horned/hedron" and "horned hedron" as h-h. printed name of h-h is "the Horned Hedron".
+h-h is privately-named scenery in Achers' Arches. "You can only see the arches leading into the Horned Hedron.". understand "horned/hedron" and "horned hedron" as h-h. printed name of h-h is "the Horned Hedron".
 
 instead of doing something with h-h:
 	if current action is entering:
@@ -18774,7 +18771,7 @@ carry out burying:
 		say "Nothing you have is valuable enough to bury." instead;
 	if player is in anger range:
 		say "That would reunite the haunter with the ruby, but you might be a prime suspect for taking it. Maybe you can use the haunter to take out an enemy." instead;
-	if player is in hedron:
+	if player is in Horned Hedron:
 		say "The walleyes would find the ruby and take it, and you'd be out--but maybe you could frame them for its theft by burying the ruby somewhere near." instead;
 	if player is not in Collapsed Old Places:
 		say "You don't need to sock away wealth. You have enough. But that ruby--you've heard of it before. Maybe this is not the right place. If you want to hide the ruby, hide it somewhere hidden." instead;
@@ -18784,18 +18781,18 @@ carry out burying:
 
 book Horned Hedron
 
-Horned Hedron is north of Achers' Arches. Hedron is in Oyster. Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here[if o-t is in Hedron]. An ol['] trap[else]. A portal[end if] leads into the Hedron proper[if o-t is in Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. Collapsed old places lie west."
+Horned Hedron is north of Achers' Arches. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here[if o-t is in Horned Hedron]. An ol['] trap[else]. A portal[end if] leads into the Horned Hedron proper[if o-t is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. Collapsed old places lie west."
 
 thug-tell is a truth state that varies.
 
-check going south when player is in Hedron and ruby is in lalaland:
+check going south when player is in Horned Hedron and ruby is in lalaland:
 	if thug-tell is false:
 		say "You hear snickers as DIE THOU thugs are, presumably, digging up your ruby. If anyone finds them with it, the thugs will be the ones who have it.";
 		now thug-tell is true;
 
 chapter theses sheets
 
-the theses sheets are plural-named amusing scenery in Hedron.
+the theses sheets are plural-named amusing scenery in Horned Hedron.
 
 instead of taking sheets:
 	say "No denial they're nailed."
@@ -18807,7 +18804,7 @@ description of theses sheets is "[one of]They're a MEAN FIST MANIFEST written in
 
 chapter ol trap and portal
 
-the o-t is privately-named flippable scenery in Hedron. understand "ol/ol' trap" and "trap/oltrap" as o-t. printed name of o-t is "ol['] trap".
+the o-t is privately-named flippable scenery in Horned Hedron. understand "ol/ol' trap" and "trap/oltrap" as o-t. printed name of o-t is "ol['] trap".
 
 a-text of o-t is "RYRRYR". b-text of o-t is "RYRRGR". parse-text is "x[sp]-[sp]t[sp]r[sp]-[sp]x".
 
@@ -18826,16 +18823,16 @@ The weaselly walleyes are plural-named people in Horned Hedron. "[one of]Some we
 
 say-something is a number that varies. say-something is 0.
 
-every turn when player is in hedron and walleyes are in hedron (this is the talking henchmen rule):
+every turn when player is in Horned Hedron and walleyes are in Horned Hedron (this is the talking henchmen rule):
 	if say-something is 3:
 		now say-something is 0;
 	if say-something is 0:
-		say "[one of]One relates a story of framing someone else for burying a hidden treasure, then getting the treasure as a reward. Some sub-henchman who worries it'll happen to him is beaten up[or]One remarks he's heard there's buried treasure where you'd least expect it in the hedron--he speculates where that is, then says, oops, it's not least expected any more[or]One speculates on where the Hedron's treasure stash might be[or]One sneers it'd be funny if the ruby turned up in some innocent person's home, and the haunter took them out[cycling].";
+		say "[one of]One relates a story of framing someone else for burying a hidden treasure, then getting the treasure as a reward. Some sub-henchman who worries it'll happen to him is beaten up[or]One remarks he's heard there's buried treasure where you'd least expect it in the Horned Hedron--he speculates where that is, then says, oops, it's not least expected any more[or]One speculates on where the Horned Hedron's treasure stash might be[or]One sneers it'd be funny if the ruby turned up in some innocent person's home, and the haunter took them out[cycling].";
 	increment say-something;
 
 description of walleyes is "Oh, they are seedy, all right. But they seem more interested in laughing at you than attacking. They're probably just flunkies who will take a fall."
 
-check going inside in Hedron:
+check going inside in Horned Hedron:
 	if a-p is visible:
 		try entering a-p instead;
 	if o-t is visible:
@@ -18856,13 +18853,13 @@ understand "tarp" as a mistake ("Nothing happens. You wonder if part of the ol['
 
 check entering a-p:
 	if ruby is not in lalaland:
-		say "Weaselly walleyes jump out and buffet you and throw you back into the main entrance of the Hedron. 'Boss told us not to let you air-breathers in. Even with a gift. But we'll be watching you.' They run back out of view." instead;
-	if walleyes are in hedron:
+		say "Weaselly walleyes jump out and buffet you and throw you back into the main entrance of the Horned Hedron. 'Boss told us not to let you air-breathers in. Even with a gift. But we'll be watching you.' They run back out of view." instead;
+	if walleyes are in Horned Hedron:
 		say "Not with those walleyes waiting and watching." instead;
 	if find-base is true:
 		check-sanctum instead;
 	else:
-		say "You try to make your way through the Hedron, but you eventually wind up in an[one of][or]other (?)[run paragraph on][stopping] end den.";
+		say "You try to make your way through the Horned Hedron, but you eventually wind up in an[one of][or]other (?)[run paragraph on][stopping] end den.";
 		move player to End Den instead;
 
 to check-sanctum:
@@ -18887,21 +18884,21 @@ understand the command "patrol" as something new.
 understand "patrol" as patroling.
 
 carry out patroling:
-	if player is in hedron:
+	if player is in Horned Hedron:
 		if o-t is visible:
 			try fliptoing a-p instead;
 		else:
 			say "You already patrolled." instead;
-	if hedron is visited:
-		if walleyes are in lalaland and o-t is in hedron and mrlp is oyster:
+	if Horned Hedron is visited:
+		if walleyes are in lalaland and o-t is in Horned Hedron and mrlp is oyster:
 			say "You suddenly realize how to search out the ol['] trap in the Horned Hedron.";
-			move player to hedron, without printing a room description;
+			move player to Horned Hedron, without printing a room description;
 			try fliptoing a-p instead;
-		if walleyes are in hedron and mrlp is oyster:
+		if walleyes are in Horned Hedron and mrlp is oyster:
 			say "That's a good idea. Maybe you can search the Horned Hedron once if the walleyes are gone.";
 			preef o-t;
 			do nothing instead;
-	say "You pace around for a bit, but nothing happens. Maybe this isn't quite the place to look[if o-t is in lalaland]--it already worked in the hedron, and once is enough[end if]." instead;
+	say "You pace around for a bit, but nothing happens. Maybe this isn't quite the place to look[if o-t is in lalaland]--it already worked in the Horned Hedron, and once is enough[end if]." instead;
 	the rule succeeds;
 
 book Collapsed Old Places
@@ -18928,10 +18925,10 @@ End Den is an innie room in Oyster. "You look around, but this probably isn't wh
 understand "ned" as a mistake ("That was my name in the first game.") when player is in end den.
 
 check exiting in End Den:
-	say "You find your way back to the hedron entrance.";
+	say "You find your way back to the Horned Hedron entrance.";
 	if haunter is visible:
-		move haunter to Hedron;
-	now player is in Hedron instead;
+		move haunter to Horned Hedron;
+	now player is in Horned Hedron instead;
 
 volume towers
 
@@ -19056,7 +19053,7 @@ check xraying:
 	if noun is kid:
 		if kid is reflexive:
 			say "You realize [kid-first] could be GIFTED and fidget less.";
-		else if kid is in subsector and atblock is in subsector:
+		else if kid is in Obscurest Subsector and atblock is in Obscurest Subsector:
 			say "You realize [kid-first] could be a little more ATTENTIVE.";
 	if noun is keycar:
 		say "It zips around, and you wind up focusing on Ray Eck instead...";
@@ -19164,11 +19161,11 @@ when play begins (this is the place guardians rule):
 book which room is how far
 
 to decide which number is palace-let: [I could've defined a new variable but it's nice to have this in one place. This shows how many letters the settler gives.]
-	if location of player is topside or location of player is campsite, decide on 4;
+	if location of player is topside or location of player is Outer Route, decide on 4;
 	if location of player is copse, decide on 5;
-	if location of player is lots or location of player is route or location of player is sunbelt or location of player is saltbed, decide on 6;
-	if location of player is ravages or location of player is subsector or location of player is Danger Garden or location of player is havens or location of player is cinema, decide on 7;
-	if location of player is deltas or location of player is Strati Strait, decide on 8;
+	if location of player is lost lots or location of player is Nude Dune or location of player is sunbelt or location of player is saltbed, decide on 6;
+	if location of player is ravages or location of player is subsector or location of player is Danger Garden or location of player is Shaven Havens or location of player is cinema, decide on 7;
+	if location of player is salted deltas or location of player is Strati Strait, decide on 8;
 	if location of player is coastlines or location of player is rawest waters, decide on 9;
 	if location of player is solo den, decide on 10;
 	if location of player is limits, decide on 11;
@@ -19265,14 +19262,14 @@ to draw-line (lcc - a room) and (bd - a direction):
 table of towers-locs [arranged n to s then w to e]
 my-loc	my-x	my-y
 shaven havens	1	0
-outer route	0	1
+Nude Dune	0	1
 anemic cinema	1	1
 salted deltas	2	1
 actionless coastlines	3	1
 baldest blasted saltbed	1	2
 savager ravages	2	2
 Strati Strait	3	2
-campiest campsite	0	3
+Outer Route	0	3
 scope copse	1	3
 unblest sunbelt	2	3
 Danger Garden	3	3
@@ -19360,7 +19357,7 @@ observ
 table of towercomments
 towloc	towdist	towquo
 loftier trefoil	0	"The castle--well, you couldn't even see it outside. Maybe someone will help you, once you've sorted this mess out."
-campiest campsite	--	"The palace has receded a bit, but--well--that machine's got to be good for something."
+Outer Route	--	"The palace has receded a bit, but--well--that machine's got to be good for something."
 scope copse	2	--
 saltbed	3	--
 sunbelt	3	--
@@ -19372,7 +19369,7 @@ Strati Strait	6	--
 shaven havens	--	"You're going side-to-side to see the curst palace without getting closer, but hooray to seeing some other life form."
 obscurest subsector	--	"You're going side-to-side to see the curst palace, but hooray to seeing some other person. Even if he is locked up."
 lost lots	--	"This may've been a step away from the palace, but hooray, stuff to pick up."
-outer route	--	"This may've been a step away from the palace, but hooray, stuff to pick up."
+Nude Dune	--	"This may've been a step away from the palace, but hooray, stuff to pick up."
 actionless coastlines	7	--
 rawest waters	8	--
 
@@ -19451,7 +19448,7 @@ book Topside Deposit
 Topside Deposit is a room in Towers. "[if ray eck is in lalaland]You don't seem to have much else to do here. While you can go any direction, it's only sensible to go back north[else]There's a bit more life to the north--it's wooded, but it's also guarded[end if]. The curst palace is barely visible in the distance."
 
 for printing a locale paragraph about a thing (called nongua) in topside deposit:
-	if nongua is start tarts and toaster is in deposit:
+	if nongua is start tarts and toaster is in Topside Deposit:
 		now start tarts are mentioned;
 	continue the action:
 
@@ -19473,13 +19470,13 @@ after fliptoing ray eck:
 
 a-text of keycar is "RRYYRO". b-text of keycar is "RRYYRO". parse-text of keycar is "x[sp]x[sp]-[sp]-[sp]x[sp]y".
 
-inside of Deposit is nowhere.
+inside of Topside Deposit is nowhere.
 
-understand "dopiest" as a mistake ("You sense that Ray Eck [if ray eck is in deposit]is[else]was[end if] one of the easier people to deal with, here, but you don't want to overstate it.") when player is in topside.
+understand "dopiest" as a mistake ("You sense that Ray Eck [if ray eck is in Topside Deposit]is[else]was[end if] one of the easier people to deal with, here, but you don't want to overstate it.") when player is in topside.
 
 understand "posited" as a mistake ("You formulate a proof that the place you are in does actually exist.") when player is in topside.
 
-check going north in deposit:
+check going north in Topside Deposit:
 	if player does not have Rosetta Toaster and ray eck is not visible:
 		say "[one of]The Rosetta Toaster looks handy, you have to admit, looking back at it[or]You ignore the toaster, again[stopping].";
 
@@ -19487,7 +19484,7 @@ a pack of start tarts is a hintpastry in Topside Deposit. description is "They a
 
 section toaster
 
-The Rosetta Toaster is a container. It is in Topside Deposit. "A Rosetta Toaster rotates here[if start tarts are in deposit], with a pack of start tarts nearby[end if]."
+The Rosetta Toaster is a container. It is in Topside Deposit. "A Rosetta Toaster rotates here[if start tarts are in Topside Deposit], with a pack of start tarts nearby[end if]."
 
 understand "retoast" and "retoast [text]" as a mistake ("You can just TOAST or EAT a pastry once you have it.") when toaster is visible.
 
@@ -19582,27 +19579,20 @@ to say bloorg of (gg - a guardian):
 		say "x";
 	[say "[if gg is blue]B[else if gg is red]R[else if gg is purple]P[else]W";]
 
-book Campiest Campsite
+book Outer Route
 
-Campiest Campsite is west of Scope Copse. Campiest Campsite is in Towers. "The dead leaves here are a bit too pastel, the chirping of unseen birds is a bit too sharp, and it smells a bit too much like air freshener. At least [one of]yon camp has no campy company (copy, man?)[or]no campers scamper[or]saucy yucas haven't burst from the ground[in random order] here. It's heavily wooded, and you can really go back east."
+Outer Route is west of Scope Copse. Outer Route is in Towers. "It's a bit outre here, but nothing to rue. The chirping of unseen birds is a bit too sharp, and it smells a bit too much like air freshener. Sway-Ways lead every way but east, which is to say, you can only go back east."
 
-the camp is useless scenery in campsite. understand "site/campsite" as camp.
+the campiest campsite is useless scenery in Outer Route. understand "camp/site/campsite" and "yon camp" as campsite. "My goodness! The campiest campsite is the MOST! It's a bit redundant and over-the-top, so you might not sensibly make a whole room out of it, but...this is a good place for it."
 
-description of camp is "Wow! It's just so inspiring and ALIVE!"
-
-instead of doing something with camp:
+instead of doing something with campsite:
 	if action is procedural, continue the action;
 	say "Well, gosh! There's not a whole lot to do with the camp but have fun being around it! Oh, and maybe figure what goes in the rapier repair." instead;
 
-the dead leaves are useless plural-named scenery in campsite. "[bug-report]"
-
-instead of doing something with dead leaves:
-	say "Dead leaves! Man! Why is it dead leaves make you feel so ALIVE?!"
-
-A rapier repair machine is in Campiest Campsite. "A shiny machine labeled RAPIER REPAIR [if dagger is in lalaland]fizzles[else]chugs[end if] along here.". description is "It's a hi-watts whatsit that reads 'Paranoid? A poniard!' It looks like what you imagined a left-handed smokebender did, back when you were being hazed in [if player is male]Boy[else]Girl[end if] Scouts. [if dagger is not in lalaland]It's nowhere near big enough to clean a lance, but you could probably PUT any blade smaller than a rapier in there[otherwise]You seem to have broken it creating the gizmo[end if]."
+A rapier repair machine is in Outer Route. "A shiny machine labeled RAPIER REPAIR [if dagger is in lalaland]fizzles[else]chugs[end if] along in the campiest campsite nearby. At least [one of]yon camp has no campy company (copy, man?)[or]no campers scamper[or]saucy yucas haven't burst from the ground[in random order] here.". description is "It's a hi-watts whatsit that reads 'Paranoid? A poniard!' It looks like what you imagined a left-handed smokebender did, back when you were being hazed in [if player is male]Boy[else]Girl[end if] Scouts. [if dagger is not in lalaland]It's nowhere near big enough to clean a lance, but you could probably PUT any blade smaller than a rapier in there[otherwise]You seem to have broken it creating the gizmo[end if]."
 
 instead of taking rapier repair:
-	say "It's at best impractical and at worst impossible to take. Besides, [if dagger is in lalaland]you already used it[else]it'd be easier to carry something that'd fit into IT[end if]."
+	say "Heavens, no! It fits in TOO well with the campiest campsite! Plus, it's at best impractical and at worst impossible to take. [if dagger is in lalaland]Plus you already used it[else]Better to carry something that'd fit into IT[end if]."
 
 understand "pairer" as a mistake ("[if gizmo is off-stage]You don't need duplicates of anything here. Besides, the machine looks complex enough. It will probably reject or accept what it needs to[else]You don't need to repurpose the repair machine. It's done enough for you[end if].")
 
@@ -19898,7 +19888,7 @@ Danger Garden is a room in Towers. Danger Garden is east of Unblest Sunbelt. pri
 understand "danger/gander/ garden" as Danger Garden when mrlp is towers.
 
 after printing the locale description for Danger Garden when Danger Garden is unvisited:
-	say "The natives look, well, restless, as if they might want to find a more important territory to guard[if ego drains are unprodded]. Also, the ego drains seem to put ideas into your mind that you really don't need or deserve to go north, and maybe you can just go around--and, well, it makes a lot of sense as-is and is far less over the top than the rest of the campsite[end if].";
+	say "The natives look, well, restless, as if they might want to find a more important territory to guard[if ego drains are unprodded]. Also, the ego drains seem to put ideas into your mind that you really don't need or deserve to go north, and maybe you can just go around--and, well, it makes a lot of sense as-is unless you think too much about it and get depressed[end if].";
 	now ego drains are prodded;
 	continue the action;
 
@@ -19923,14 +19913,14 @@ Salted Deltas is north of Savager Ravages and east of Anemic Cinema. "Leak Lake,
 
 s-d are useless scenery in salted deltas. understand "salted/ deltas" as s-d. printed name of s-d is "salted deltas".
 
-understand "slated" as a mistake ("You're not sure what the deltas could be slated for. You're not here for geological research, anyway[vis-guar].") when player is in Salted Deltas.
+understand "slated" as a mistake ("You're not sure what the salted deltas could be slated for. You're not here for geological research, anyway[vis-guar].") when player is in Salted Deltas.
 
 understand "lasted" as a mistake ("The salted deltas have already lasted since well before you were born, and that's a verb, anyway[vis-guar].") when player is in Salted Deltas.
 
 to say vis-guar:
 	if number of guardians in salted deltas > 0:
 		say ". Might be more productive to deal with [the list of guardians in salted deltas], instead";
-		if number of guardians in deltas is 2:
+		if number of guardians in salted deltas is 2:
 			say ". Especially the Atheists";
 	else:
 		say ". You've gotten rid of all nuisances here, anyway";
@@ -20012,7 +20002,7 @@ check scaning bot boat (this is the scan boat components and not boat rule):
 to say if-tent:
 	if player is in coastlines:
 		say ", looking far-off, as if for inspiration [he-she] hasn't found yet";
-	if player is in subsector:
+	if player is in Obscurest Subsector:
 		say ", looking [if atblock is in lalaland]attentive[else]tentative[end if]"
 
 check answering smart kid that:
@@ -20024,17 +20014,17 @@ check answering smart kid that:
 talking to Dr Yow is kiddoing.]
 
 check sbing smart kid:
-	if smart kid is in subsector and atblock is in subsector:
+	if smart kid is in Obscurest Subsector and atblock is in Obscurest Subsector:
 		try sbing atblock instead;
 
 check scaning smart kid:
 	if smart kid is reflexed:
 		say "'Oh! Yeah! I bet I could make one of those, one day." instead;
-	if smart kid is reflexive and smart kid is in subsector:
+	if smart kid is reflexive and smart kid is in Obscurest Subsector:
 		say "[kid-full] continues to fidget as you scan [him-her].";
 		say "[line break]";
 		continue the action;
-	if player is in subsector and atblock is in subsector:
+	if player is in Obscurest Subsector and atblock is in Obscurest Subsector:
 		say "[kid-full] doesn't fidget, but [he-she] is kind of tentative now.[paragraph break]";
 		try scaning atblock instead;
 
@@ -20148,7 +20138,7 @@ Shaven Havens is north of Anemic Cinema. Shaven Havens is in Towers. "This place
 
 havens-visit is a truth state that varies.
 
-after printing the locale description for havens when havens-visit is false:
+after printing the locale description for shaven havens when havens-visit is false:
 	ital-say "you may wish to GO TO DUCK to get back here with less hassle.";
 	now havens-visit is true;
 	continue the action;
@@ -20163,7 +20153,7 @@ check giving something to duck:
 	say "The duck doesn't seem interested in anything edible. Or inedible." instead;
 
 instead of touching the duck:
-	say "It waddles away[if Dr Yow is in subsector] behind Dr. Yow[else if lone duck is friendly], even though it seems attracted to your raves saver[else]--maybe it needs some way to trust you[end if]."
+	say "It waddles away[if Dr Yow is in Obscurest Subsector] behind Dr. Yow[else if lone duck is friendly], even though it seems attracted to your raves saver[else]--maybe it needs some way to trust you[end if]."
 
 instead of taking the duck:
 	if lone duck is returned:
@@ -20189,16 +20179,16 @@ a log gaol is scenery in obscurest subsector. "It surrounds the subsector on fou
 
 subsector-visit is a truth state that varies.
 
-after printing the locale description for subsector when subsector-visit is false:
+after printing the locale description for Obscurest Subsector when subsector-visit is false:
 	ital-say "you may wish to GO TO GAOL to get back here with less hassle.";
 	now subsector-visit is true;
 	continue the action;
 
-understand "locked" as a mistake ("[if Dr Yow is in prison ropins]No, the opposite...[else]You don't need to fiddle with the lock now.[end if]") when player is in subsector.
+understand "locked" as a mistake ("[if Dr Yow is in prison ropins]No, the opposite...[else]You don't need to fiddle with the lock now.[end if]") when player is in Obscurest Subsector.
 
-understand "delock" as a mistake ("[if Dr Yow is in prison ropins]No, this is the wrong area for pure action[else]Unlocked worked better, here[end if].") when player is in subsector.
+understand "delock" as a mistake ("[if Dr Yow is in prison ropins]No, this is the wrong area for pure action[else]Unlocked worked better, here[end if].") when player is in Obscurest Subsector.
 
-after choosing notable locale objects when player is in subsector:
+after choosing notable locale objects when player is in Obscurest Subsector:
 	set locale priority of prison ropins to 0;
 
 instead of cutting prison ropins:
@@ -20210,7 +20200,7 @@ instead of cutting gaol:
 to say no-rips:
 	say "[if player has dagger]The dagger is too ragged[else if player has gizmo]The gizmo is too unwieldy to fit between the mesh. You try to cut it, but the blade squeaks against the steel[else]You have nothing that could cut anything[end if]."
 
-The prison ropins are a reflexive plural-named transparent container in Subsector. ropins are fixed in place. "The prison ropins are dense and strong enough that they will cause no rips, but you can see through them. They're made to ensure no rips (of course!) [if duck is returned]though you found another way in[else]and look locked, but there must be some way to make them openable--[one of]ah, there's a[or]there's that[stopping] small fissure which is the closest thing to a keyhole, and some writing, too[end if]."
+The prison ropins are a reflexive plural-named transparent container in Obscurest Subsector. ropins are fixed in place. "The prison ropins are dense and strong enough that they will cause no rips, but you can see through them. They're made to ensure no rips (of course!) [if duck is returned]though you found another way in[else]and look locked, but there must be some way to make them openable--[one of]ah, there's a[or]there's that[stopping] small fissure which is the closest thing to a keyhole, and some writing, too[end if]."
 
 check taking ropins:
 	say "WAY too heavy and big." instead;
@@ -20220,16 +20210,16 @@ understand "jail" as prison ropins.
 instead of entering prison ropins:
 	say "It's not very full of fun or useful things. If it were, Dr. Yow would've gone all MacGyver and burrowed out without your help.";
 
-instead of going inside in subsector:
+instead of going inside in Obscurest Subsector:
 	try entering prison ropins instead;
 
 a-text of prison ropins is "YRRYRRYR". b-text of prison ropins is "YRRYRRYR". parse-text is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
-understand "unlocked" as a mistake ("There's nothing here to unlock. [if subsector is visited]Though you've been to the subsector with the prison ropins[else]Maybe someone's imprisoned somewhere[end if][if duck is not friendly]. And besides, the duck doesn't seem cooperative, yet[end if][if duck is not prefigured]. Still, that's an idea[end if].[preefsay of duck]") when duck is visible and prison ropins is not visible.
+understand "unlocked" as a mistake ("There's nothing here to unlock. [if Obscurest Subsector is visited]Though you've been to the subsector with the prison ropins[else]Maybe someone's imprisoned somewhere[end if][if duck is not friendly]. And besides, the duck doesn't seem cooperative, yet[end if][if duck is not prefigured]. Still, that's an idea[end if].[preefsay of duck]") when duck is visible and prison ropins is not visible.
 
-understand "goal" as a mistake ("You fantasize briefly about being a sports star instead of a text adventurer[if Dr Yow is in ropins]. But it changes nothing. You look at the poor figure in the gaol[else]. You've done a good job rescuing Dr. Yow, but you still feel far from your main goal[end if].") when player is in subsector.
+understand "goal" as a mistake ("You fantasize briefly about being a sports star instead of a text adventurer[if Dr Yow is in ropins]. But it changes nothing. You look at the poor figure in the gaol[else]. You've done a good job rescuing Dr. Yow, but you still feel far from your main goal[end if].") when player is in Obscurest Subsector.
 
-understand "olga" as a mistake ("Even if the goal could become a person, they'd be kind of wooden.") when player is in subsector.
+understand "olga" as a mistake ("Even if the goal could become a person, they'd be kind of wooden.") when player is in Obscurest Subsector.
 
 description of ropins is "[if duck is returned]It's open now, not that you want to enter.[else]The gaol advertises itself as the involuntary home of one Dr. Yow.[end if]"
 
@@ -20319,7 +20309,7 @@ does the player mean locking with settler: it is likely;
 the can't unlock without a lock rule is not listed in any rulebook.
 
 check unlocking:
-	if player is in subsector:
+	if player is in Obscurest Subsector:
 		if noun is prison ropins or noun is fissure:
 			if prison ropins is reflexed:
 				say "The prison is already open." instead;
@@ -20344,14 +20334,14 @@ the fissure is part of the ropins. description is "It's rounded, more ovular tha
 
 a-text of fissure is "RYRRYYR". b-text of fissure is "PYPPYYR". parse-text of fissure is "f[sp]u[sp]s[sp]s[sp]i[sp]e[sp]r". fissure is parse-spoilable.
 
-after fliptoing when player is in subsector (this is the yow is free rule) :
+after fliptoing when player is in Obscurest Subsector (this is the yow is free rule) :
 	if noun is fissure or noun is prison ropins:
 		now duck is unfigured;
 		now prison ropins is unfigured;
 		now fissure is unfigured;
 		now fissure is in lalaland;
 		now prison ropins is reflexed;
-		now Dr Yow is in subsector;
+		now Dr Yow is in Obscurest Subsector;
 		now duck is returned;
 	continue the action;
 
@@ -20453,7 +20443,7 @@ to kid-gets-it:
 	say "[line break]The lecture over, [kid-first] says, 'Dr.?'[paragraph break]'Toy! Try! Do!'[line break][kid-full] smacks [his-her] forehead and runs off 'It--it won't just be pseudo-souped! Pen lids, spindle...'[paragraph break]'Wait! Kid! I have this lots-o-tools stool...' but the kid's gone.[paragraph break]'Wait! Where is it? O lost!' [he-she-c] searches [his-her] pockets, just in case.[paragraph break]'Dr. Yow's Drowsy. My lab: balmy. Long cameo.' Then, above [his-her] duck's quack, 'come along.' [he-she-c] follows a loading diagonal, off for some [if player is female](sic) [end if]bachelor lab chore. Before [he-she] does, [he-she] shows you a picture labeled CURSEE RESCUE, featuring--a very unflattering portrait of yourself, before sticking it in [his-her] pocket. 'That dude[if player is female], um, dudess[end if] with the powers. House arrest, I heard. You look like someone who cares.' Unintentional compliments are the nicest.";
 	now Dr Yow is in lalaland;
 	now duck is in lalaland;
-	if atblock is in subsector:
+	if atblock is in Obscurest Subsector:
 		now kid-atten is false;
 	now atblock is in lalaland;
 	now kid is in Actionless Coastlines;
@@ -20538,23 +20528,17 @@ a-text of sled rut is "RYRRRYR". b-text of sled rut is "RYRRRYR". parse-text of 
 check taking sled rut:
 	say "[if strudel is in Lost Lots]Maybe take the strudel instead[else]The sled rut is nothing and holds nothing[end if]." instead;
 
-chapter Outer Route
+chapter Nude Dune
 
-Outer Route is west of Anemic Cinema. Outer Route is in Towers. "You're on a dirt trail, very neutral-naturel. Too bad. It could be outré if things were just rearranged a bit and maybe the right bits were accented, though it's nothing to rue. As is, it just leads west away from the curst palace."
+Nude Dune is west of Anemic Cinema. Nude Dune is in Towers. "A nude dune spans north, west and south. It's pretty neutral-naturel. But going any way other than east might take you far away from the Curst Palace anyway."
 
-the solve-a-loaves are an edible plural-named hintpastry in outer route. "Some solve-a-loaves have been left here.". description is "They are not huge loaves and could probably fit in a small oven[if player has toaster], like your toaster[end if]. Solve-a-Loaves is an actual brand here in Yorpwald, fortified with brain enriching nutrients."
+the solve-a-loaves are an edible plural-named hintpastry in Nude Dune. "Some solve-a-loaves have been left here.". description is "They are not huge loaves and could probably fit in a small oven[if player has toaster], like your toaster[end if]. Solve-a-Loaves is an actual brand here in Yorpwald, fortified with brain enriching nutrients."
 
 understand "loaves" and "loaf" as solve-a-loaves.
 
-check going west in Outer Route:
-	say "That's the wrong way. You'd probably get lost." instead;
-
-a dirt trail is useless scenery in outer route. "It's nothing special, but by the looks of it, it goes west a ways. Farther than you'd care to walk."
-
-instead of doing something with dirt trail:
-	if action is procedural:
-		continue the action;
-	say "Not much to do with the trail except walk west on it, which isn't the way you want to go."
+check going in Nude Dune:
+	if noun is north or noun is south or noun is west:
+		say "Wait! You do see something through the dune! But it's a rested desert, which deters you." instead;
 
 book rawest waters
 
@@ -21374,15 +21358,15 @@ an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow
 wait-seer	Anemic Cinema	east	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe he could, too."
 man covered	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free the man covered in inapt paint from nationality and to individuality."
 arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
-Lars Eede	Ravages	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free him from his capitalist or drinking urges."	--	reed's ale
-Elsa Erde	Ravages	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free him from his capitalist or drinking urges."	--	reed's ale
-grailman	Ravages	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"You haven't met many grailmen, but this one is good enough, for now."
-Ray Eck	Deposit	north	"The yacker controls his keycar so it runs over your foot. You briefly wonder if he has a twin named Kim."	"The yacker introduces himself as Ray Eck, grateful there's someone out here who doesn't mind talking."	"Ray Eck's keycar can't go that far, so you manage to escape."	keycar
+Lars Eede	Savager Ravages	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free him from his capitalist or drinking urges."	--	reed's ale
+Elsa Erde	Savager Ravages	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free him from his capitalist or drinking urges."	--	reed's ale
+grailman	Savager Ravages	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"You haven't met many grailmen, but this one is good enough, for now."
+Ray Eck	Topside Deposit	north	"The yacker controls his keycar so it runs over your foot. You briefly wonder if he has a twin named Kim."	"The yacker introduces himself as Ray Eck, grateful there's someone out here who doesn't mind talking."	"Ray Eck's keycar can't go that far, so you manage to escape."	keycar
 ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you try to walk through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."	"Part of you wonders if you should play up the ego drains, but the other part says they're obstructive enough."
 bonker	Danger Garden	east	"[if bonker was passtried]RE-BONK! You see red and[else]BONK! The bonker, true to its name, re-bonks you with sockin['] coinks. Your retinas re-stain. It's not lethal or anything, but you[end if] stagger back, dazed, to the center of Danger Garden[if natives are visible]. The natives can't help but mutter that THEY would've known better[end if]. The bonker still looks in good shape."	"'BONKER DEFENDING JAIL AT 100% EFFICIENCY!' you hear from the east."
 stinger	Mislit Limits	east	"The stinger needles at you menacingly. You back off."	"The stinger looks unusually active."	"Fizzing and buzzing from the stinger."
 natives	Danger Garden	south	"The natives assure you there isn't anything you REALLY want to see there. Perhaps there are better things elsewhere, but nothing behind there. I mean, they don't even know why they're HERE. They should be doing better."	"Those natives look like they could be psyched out."
-Atheists	Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of logic, but perhaps their presentation could be adjusted."
+Atheists	Salted Deltas	east	"The atheists slowly and painfully explain to you that you're ignoring them and their very logical arguments. You can run away, but running through them--that's just rude."	"The atheists have no shortage of logic, but perhaps their presentation could be adjusted."
 lois the hostile	Strati Strait	north	"She mentions you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for her divinity career if you fixed that."	"Boy! Lois sure could use some down-home kindness."
 hostile-is-he lot	Strati Strait	north	"They mention you [one of]should know better than[or]are more persistent than[stopping] that kid with [his-her] blasphemous science experiments.[paragraph break]How very [i]hostile[r]. It might be good for their divinity careers if you fixed that."	"Boy! The Lot sure could use some down-home kindness."
 
@@ -21471,7 +21455,7 @@ after fliptoing a guardian (this is the track guardian progress rule):
 	let G be up;
 	let MR be Topside Deposit;
 	if noun is ingrates:
-		now MR is outer route;
+		now MR is Nude Dune;
 	else if noun is natives:
 		now MR is lost lots;
 	else:
@@ -21540,11 +21524,11 @@ to decide which number is gua-to-clear:
 	if savager ravages is not accessible, increment temp;
 	if anemic cinema is not accessible:
 		increment temp;
-		if saltbed is not accessible and deltas are not accessible and Strati Strait is accessible, increment temp;
+		if saltbed is not accessible and salted deltas are not accessible and Strati Strait is accessible, increment temp;
 	if danger garden is not accessible:
 		increment temp;
-		if sunbelt is not accessible and Strati Strait is not accessible and deltas are accessible, increment temp;
-	if deltas are not accessible and Strati Strait is not accessible, increment temp;
+		if sunbelt is not accessible and Strati Strait is not accessible and salted deltas are accessible, increment temp;
+	if salted deltas are not accessible and Strati Strait is not accessible, increment temp;
 	decide on temp.
 
 clear-warn is a truth state that varies.
@@ -26276,11 +26260,11 @@ tubs	"[one of]The tubs seem tough to crack.[plus][or]You could blast the tubs, o
 prod	"[one of]The prod seems like it should be more than it is, but you can't figure how to operate it.[plus][or]Operating the prod is probably simple and dumb, but something you do by accident.[plus][or]To operate the prod, you need a simple standard action this game doesn't usually let you do.[plus][or]DROP the prod.[minus][cycling]"
 rigged digger	"[one of]The rigged digger is used to dig ground.[plus][or]The digger can get what's in the plain.[plus][or]How would you summon the HAUNTER?[plus][or]You can UNEARTH it.[cycling]"
 sardine	"[if bubble wrap is off-stage]To scare the guard away, you need an item from the fish bowl. Go there.[else if bubble wrap is not in lalaland][one of]The sandier sardine seems to have problems with his ears.[plus][or]Have anything that might make noise?[plus][or]The bubble wrap.[plus][or]WARP the wrap.[minus][cycling][else]You shouldn't need hints for the sardine now.[end if]"
-h-h	"The Horned Hedron is where you need to go [if hedron is visited]back[else]next[end if] to infiltrate the Lout Base."
+h-h	"The Horned Hedron is where you need to go [if Horned Hedron is visited]back[else]next[end if] to infiltrate the Lout Base."
 a-s	"[if a-s is reflexive][one of]Why might the arches be guarded?[plus][or]There's something in them.[plus][or]X ARCHES doesn't quite work. Something more thorough?[plus][or]SEARCH ARCHES.[minus][cycling][else]Nothing else in the arches.[end if]"
 pre-haun	"[one of]You need to summon the haunter, but you need a reason.[plus][or]You need to bury a treasure first to have it go chase something.[plus][or]The rigged digger should give you a hint.[minus][cycling]"
 haunter	"[if haunter is reflexed][one of]Now you've gained its trust, you will want to show the haunter something.[plus][or]Like where you buried that ruby.[minus][cycling][else][one of]What do you do with a sausage?[plus][or]To calm it down?[plus][or]The settler can help here.[plus][or]You can ASSUAGE the sausage.[minus][cycling][end if]"
-walleyes	"[one of]The walleyes won't let you explore the Hedron. You need to get rid of them.[plus][or]If you talk to the walleyes, they'll mention how you'd need to be a big scary ghost or something.[plus][or]You need a ghost to come along for the ride to scare the walleyes.[plus][or]Hide something the ghost wants in Collapsed Old Places.[minus][cycling]"
+walleyes	"[one of]The walleyes won't let you explore the Horned Hedron. You need to get rid of them.[plus][or]If you talk to the walleyes, they'll mention how you'd need to be a big scary ghost or something.[plus][or]You need a ghost to come along for the ride to scare the walleyes.[plus][or]Hide something the ghost wants in Collapsed Old Places.[minus][cycling]"
 o-t	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or]You need to cover the area to disable the ol['] trap, but not with spies watching you. The haunter can take care of them.[plus][or]Once the haunter's scared everyone away, what's an action to scour for a switch for the ol['] trap?[plus][or]PATROL.[cycling]"
 a-p	"[one of]You can just enter the portal.[plus][or]You won't know where to go through the portal without a gleaner.[plus][or]Find the two pearl pieces, by the arches and from Aunt Tuna's gift.[plus][or]The gleaner can't tell you how to use the portal til it's bigger.[plus][or]ENLARGE the gleaner to make the portal work for you.[cycling]"
 scrawl	"[one of]The haunter is beneath here. You may need to recover it.[plus][or]What do you often do with the undead?[plus][or]ETAHN RU is the haunter's name, and it is NEAR HUT.[plus][or]You should be able to UNEARTH it, once you have the proper equipment.[plus][or]You'll also need to have a reason to do so, or something to show it.[minus][cycling]"
@@ -26318,7 +26302,7 @@ Ray Eck	"[one of]Ray Eck and his car are in tip-top shape, but maybe you can cha
 keycar	--	Ray Eck
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
 pirates	"[one of]The pirates are very sun-burnt, and they like it that way.[plus][or]The pirates make fun of your own pale skin.[plus][or]Why not make the pirates PASTIER?[minus][cycling]"
-smart kid	"[if obscurest subsector is unvisited][kid-full]'s not important right now.[else if Dr Yow is in prison ropins][kid-full] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if kid is lonely][one of][kid-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK KID ABOUT DOCTOR.[minus][cycling][else if kid is reflexive and kid is in subsector][one of][kid-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if kid does not have gizmo]You need to give [kid-first] something to build with. A tool.[else][kid-first]'s bot boat is more important.[end if]"
+smart kid	"[if obscurest subsector is unvisited][kid-full]'s not important right now.[else if Dr Yow is in prison ropins][kid-full] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if kid is lonely][one of][kid-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK KID ABOUT DOCTOR.[minus][cycling][else if kid is reflexive and kid is in Obscurest Subsector][one of][kid-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if kid does not have gizmo]You need to give [kid-first] something to build with. A tool.[else][kid-first]'s bot boat is more important.[end if]"
 Reed's Ale	"[one of]The RELEASED poem is awful, isn't it?[plus][or]The zip-lock bag is a bit of a clue.[plus][or]RESEALED.[minus][cycling]"
 ego drains	"[one of]They're organised, but perhaps if they were hyperbole, they wouldn't be as effective.[plus][or]How could you make them over-the-top?[plus][or]Say, GRANDIOSE?[minus][cycling]"
 admirer	"[one of]She needs someone to be attached to.[plus][or]Why stop at just engaged?[plus][or]MARRIED.[minus][cycling]"
@@ -26335,10 +26319,10 @@ stinger	"[one of]The stinger doesn't need to be so active. How could it become c
 repeat button	"REPEAT plays back what you recorded with the retape button."
 retape button	"RETAPE gives something for the repeat button to replay."
 Dr Yow	"[unless Dr Yow has been wordy][one of]Dr. Yow is silent, but you can change that.[plus][or]Take a look at [his-her] name.[plus][or]You can make [him-her] WORDY.[plus][or]If you have the raves saver, you can then PUSH RETAPE.[minus][cycling][else if Dr Yow is in prison ropins]You need to bring a friend along to rescue Dr. Yow.[else if Dr Yow has not been rowdy][one of]Dr. Yow can be something besides wordy, too.[plus][or]You can make Dr. Yow be exciting.[plus][or]Dr. Yow can be ROWDY.[minus][cycling][else]Dr. Yow will stay around to impart [his-her] knowledge for a bit.[end if]"
-ragged dagger	"[one of]The dagger isn't as useful as it could be.[plus][or]Have you found a machine that might sharpen the dagger?[plus][or][if havens is unvisited]There's a room west of the Scope Copse, past the pirates.[else]The Shaven Havens.[end if][plus][or]The machine in the Shaven Havens can repair the dagger.[minus][cycling]"
+ragged dagger	"[one of]The dagger isn't as useful as it could be.[plus][or]Have you found a machine that might sharpen the dagger?[plus][or][if Shaven Havens is unvisited]There's a room west of the Scope Copse, past the pirates.[else]The Shaven Havens.[end if][plus][or]The machine in the Shaven Havens can repair the dagger.[minus][cycling]"
 raves saver	"[one of]The raves saver is, well, a tape recorder.[plus][or]REPEAT is the PLAY button.[plus][or]RETAPE is the RECORD button.[plus][or]Combining RETAPE and REPEAT can bring a sound from one end of this region's map to another.[minus][cycling]"
 gizmo	"[if kid has gizmo][kid-first] has the gizmo. [he-she-c] can use it better than you.[else][one of]You have this gizmo. Have you met anyone who could use it?[plus][or][kid-full] in Actionless Coastlines.[plus][or][he-she-c] may need a lecture first.[plus][or]Give [kid-first] the gizmo [n-o] [he-she]'s inspired by a science lecture.[minus][cycling][end if]"
-ID Tag	"[if subsector is unvisited]Hm, you need to find Dr. Yow, the name on the tag. [he-she-c]'s in the very east.[else]Hm, the ID tag says Dr. Yow. This is [his-her] duck.[end if]"
+ID Tag	"[if Obscurest Subsector is unvisited]Hm, you need to find Dr. Yow, the name on the tag. [he-she-c]'s in the very east.[else]Hm, the ID tag says Dr. Yow. This is [his-her] duck.[end if]"
 fissure	"[one of]The fissure can, surprisingly, become animated.[plus][or]Make the fissure FUSSIER.[plus][or]But you need something that will fuss back at the fissure. Like a free animal or something.[minus][cycling]"
 ropins	"The prison ropins can't be opened with a key. Or a word with C-E-E-F-N. You need to find another way to free Dr. Yow."
 log gaol	"It's just there to block you from going anywhere else."
@@ -27506,8 +27490,8 @@ This is the epilogue rule:
 
 volume mapping
 
-index map with stable mapped west of study.
-index map with heights mapped east of study.
+index map with Stable mapped west of study.
+index map with Highest Heights mapped east of study.
 index map with basement mapped north of study.
 index map with carven cavern mapped north of basement.
 
@@ -27521,7 +27505,7 @@ index map with scape space mapped north of clearing.
 index map with Admit-Us Stadium mapped north of scape space.
 
 [towers]
-index map with deposit mapped east of heights.
+index map with Topside Deposit mapped east of heights.
 index map with rawest waters mapped east of coastlines.
 index map with mislit limits mapped north of rawest waters
 

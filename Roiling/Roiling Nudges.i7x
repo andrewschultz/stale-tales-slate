@@ -609,7 +609,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "brownies"	624010487	--	brownies	--	"[eat-pastry]."
 "owers"	491691228	--	brownies	--	"[eat-pastry]."
 "bin"	132319259	--	brownies	--	"[eat-pastry]."
-"camp"	166734515	campsite	--	--	"[gosh-camp]!" [CAMPIEST CAMPSITE 0 1]
+"route"	495698314	--	outer route	--	"[towersloc]." [OUTER ROUTE 0 1]
+"camp"	166734515	campsite	--	--	"[gosh-camp]!"
 "site"	372182939	campsite	--	--	"[gosh-camp]!"
 "campiest"	538917454	campiest	--	--	"[gosh-camp]!"
 "repair"	427100338	--	rapier repair	--	"[rapier-mach]."
@@ -633,12 +634,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "rampant"	407258077	--	admirer	--	"No, just an admirer, really."
 "womantrap"	589545427	--	--	see-female-admirer rule	"No, just an admirer, really."
 "ingrate"	464927804	--	ingrates	--	"[plutry of ingrates]There's more than one ingrate blocking you."
-"outre"	495698314	outer route	--	--	"[towersloc]." [OUTER ROUTE 0 3]
+"dune"	322848513	Nude Dune	--	--	"[towersloc]." [NUDE DUNE 0 3]
 "solve"	459411311	--	solve-a-loaves	--	"[eat-pastry]."
 "loaves"	461599129	--	solve-a-loaves	--	"[eat-pastry]."
 "loaf"	156869130	--	solve-a-loaves	--	"[not-singular-hp]."
-"dirt"	254455756	Outer Route	--	--	"[out-rou]."
-"trail"	289428324	Outer Route	--	--	"[out-rou]."
+"desert"	561349094	--	Nude Dune	--	"Can't change the desert behind th dunes."
 "shaven"	439622520	shaven havens	--	--	"[towersloc]." [SHAVEN HAVENS 1 4]
 "haven"	343348554	shaven havens	--	--	"[towersloc]."
 "lone"	324880033	--	lone duck	--	"It's not just any lone animal. It's a lone DUCK."
@@ -709,7 +709,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "doctor"	377173649	--	Dr Yow	--	"That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean."
 "wordy"	410999494	--	Dr Yow	--	"Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if Dr Yow has been rowdy and Dr Yow has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]--but [he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]."
 "tentative"	788195264	--	--	kid-can-learn rule	"[kid-first] is fully attentive. Don't ruin a good thing!"
-"gasfield"	405218265	--	gasfield	--	"[towersloc]." [GADFLIES' GASFIELD 3 2]
+"strati"	434998469	--	Strati Strait	--	"[towersloc]." [STRATI STRAIT 3 2]
 "shrine"	460586531	--	o-s	--	"The shrine is kind of sacred, and regardless of what you think of [if player is male]the [end if][the-hostile]'s religion, messing with it would be a mean move."
 "actionless"	686724232	coastlines	--	--	"[towersloc]." [ACTIONLESS COASTLINES 3 3]
 "coastline"	590450266	coastlines	--	--	"[towersloc]."
