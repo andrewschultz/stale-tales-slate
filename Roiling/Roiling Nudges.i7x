@@ -585,6 +585,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "warrior"	485439423	trefoil	--	--	"[war-one]."
 "warriors"	581713389	trefoil	--	--	"[war-one]."
 "deposit"	549030564	deposit	--	--	"[towersloc]." [TOPSIDE DEPOSIT 1 0]
+"fire"	284637654	--	topside deposit	--	"[ftf]."
+"torn"	331693906	--	topside deposit	--	"[ftf]."
+"frontier"	616331560	--	topside deposit	--	"[ftf]."
 "flowerpot"	734674551	--	flowerpot	--	"[flow-fine]."
 "flower"	475745997	--	flowerpot	--	"[flow-fine]."
 "pot"	258928554	--	flowerpot	--	"[flow-fine]."
@@ -616,9 +619,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "repair"	427100338	--	rapier repair	--	"[rapier-mach]."
 "machine"	364257318	--	rapier repair	--	"[rapier-mach]."
 "shiny"	369815871	--	rapier repair	--	"[rapier-mach]."
-"leaves"	515052661	campsite	--	--	"[fun-leaves]."
-"deadleaves"	687104766	campsite	--	--	"[fun-leaves]."
-"dead"	172052105	campsite	--	--	"[fun-leaves]."
 "gizmo"	338989896	--	gizmo	--	"[giz-tex]."
 "zomg"	293997050	--	gizmo	--	"[giz-tex]."
 "baldest"	422639744	saltbed	--	--	"[towersloc]." [BALDEST BLASTED SALTBED 1 2]
@@ -645,8 +645,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "duck"	198073659	--	lone duck	--	"It's not just any duck. [if duck is returned]But it's served its purpose[else]It's a LONE duck[end if]."
 "idtag"	203919473	--	ID Tag	--	"ID tag: dig at it? Gad."
 "unlocked"	522953692	--	--	duck-cant rule	"The lone duck looks around for something to do but can't find anything. Well, not here. And not like that."
-"ravages"	453544036	--	myrm	--	"[rav-chao]."
-"ravage"	357270070	--	myrm	--	"[rav-chao]."
+"ravages"	453544036	--	shaven havens	--	"[rav-chao]."
+"ravage"	357270070	--	shaven havens	--	"[rav-chao]."
 "unblest"	573436152	sunbelt	--	--	"[towersloc]." [UNBLEST SUNBELT 2 1]
 "cans"	186374877	--	Nerd-Aid	--	"[nerd-a]."
 "nerd"	303066509	--	Nerd-Aid	--	"[nerd-a]."
@@ -698,9 +698,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "strudel"	592462631	--	--	strood rule	"[eat-pastry]."
 "sled"	298923003	--	sled rut	--	"Work on the whole sled rut."
 "rut"	293539628	--	sled rut	--	"Work on the whole sled rut."
-"gasfield"	405218265	--	myrm	--	"[gasgad]."
-"gadfly"	258504596	--	myrm	--	"[gasgad]."
-"gadflie"	308944299	--	myrm	--	"[gasgad]."
+"gasfield"	405218265	--	lost lots	--	"[gasgad]."
+"gadfly"	258504596	--	lost lots	--	"[gasgad]."
+"gadflie"	308944299	--	lost lots	--	"[gasgad]."
 "obscurest"	725670736	subsector	--	--	"[towersloc]." [OBSCUREST SUBSECTOR 4 1]
 "locked"	348940377	subsector	--	--	"Nothing needs to be locked here, certainly not the gaol which [if Dr Yow is in ropins]already is[else]you unlocked[end if]."
 "gol"	160766118	subsector	--	--	"[if fissure is visible]The gaol is too sturdy to defeated by a three-word combination. Or a four-word one[else]You opened the gaol, and there's not much else to do with it[end if]."
@@ -714,9 +714,12 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "wordy"	410999494	--	Dr Yow	--	"Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if Dr Yow has been rowdy and Dr Yow has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]--but [he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]."
 "tentative"	788195264	--	--	kid-can-learn rule	"[kid-first] is fully attentive. Don't ruin a good thing!"
 "strati"	434998469	--	Strati Strait	--	"[towersloc]." [STRATI STRAIT 3 2]
-"shrine"	460586531	--	o-s	--	"The shrine is kind of sacred, and regardless of what you think of [if player is male]the [end if][the-hostile]'s religion, messing with it would be a mean move."
+"could"	273306897	--	Strati Strait	--	"[could-cloud]."
+"coulds"	369580863	--	Strati Strait	--	"[could-cloud]."
 "actionless"	686724232	coastlines	--	--	"[towersloc]." [ACTIONLESS COASTLINES 3 3]
 "coastline"	590450266	coastlines	--	--	"[towersloc]."
+"maturation"	653353366	--	natatorium	--	"The natatorium can't be changed. You need to save all your energy for the Curst Palace, anyway"
+"thearchy"	534357183	--	hatchery	--	"The hatchery can't be changed. You need to save all your energy for the Curst Palace, anyway"
 "dirk stam"	469925871	--	smart kid	--	"The kid looks at you curiously. You probably don't need to change [his-her] name or intelligence."
 "smart"	350970758	--	smart kid	--	"[smart-kid-no]."
 "kid"	118955113	--	smart kid	--	"[smart-kid-no]."
@@ -1736,6 +1739,9 @@ this is the duck-cant rule:
 to say no-ropin:
 	say "[if duck is returned]No need to mess with the ropins any more[else]The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open[end if]";
 
+to say could-cloud:
+	say "You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form"
+
 to say ray-part:
 	say "You can't do much with either part of Ray's name. Plus he has that keycar"
 
@@ -1803,6 +1809,9 @@ to say fix-boat-parts:
 this is the serpent-hiding rule:
 	if player is in limits and serpent is in lalaland, the rule succeeds;
 	the rule fails.
+
+to say ftf:
+	say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life."
 
 to say flow-fine:
 	say "The flowerpot [if crocus is visible]itself [end if]is just fine--[if limits are unvisited]you haven't found anything to put in it yet[else if flowerpot is reflexed]and so is the crocus in it[else]maybe something around here could go in it[end if]"

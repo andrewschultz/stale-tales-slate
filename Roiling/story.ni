@@ -2781,7 +2781,7 @@ dialer	"A red warning courtesy of I. ALDER says the letters can be shuffled but 
 strudel	"DR. ELTUS recommends this strudel!"	[towers]
 keycar	"When the car slows a bit, you read KC AYER in red."
 iPrune	"InPure industries[one of]. Yep, you heard rumors Elvira was involved with them, too[or][stopping]."
-o-s	"[if the-hostile is in lalaland]The shrine reads LOST? HIE! THE LOIS![else][one of]Written in red on the shrine is THE LOIS, who helped you in the sortie pre-Elvira You can read a bit more.[or][one of]LOST? HIE! [or]THE LOIS [cycling]is written on the ole shrine in red.[stopping][end if]"
+Thearchy Hatchery	"[if the-hostile is in lalaland]The Hatchery reads LOST? HIE! THE LOIS![else][one of]Written in red on the Hatchery is THE LOIS, who helped you in the sortie pre-Elvira You can read a bit more.[or][one of]LOST? HIE! [or]THE LOIS [cycling]is written on the Thearchy Hatchery in red.[stopping][end if]"
 prison	"Part of the red writing on the prison says [one of]Made by DunkelCo[or]Made in LOUDNECK[or]CONKLUDE there's no way to break in[in random order]. There're two other bits to read."
 blaster	"ALBERT'S."
 welt-proof flowerpot	"GYDIN['], >> 'Y/N, dig?'"
@@ -9010,8 +9010,8 @@ neural pulses	neural pulses	false	560739646	--	"pluses"	"unreal" or "pluses"	"[i
 reed's ale	reed's ale	false	642046842	--	"released"	"resealed/released"	"[rscheck]You concentrate, and suddenly [el-la-f] [if rese is true]takes a deep breath. 'I've been fooling myself, haven't I? Territorial...materialistic...no more of this. Thank you!' [he-she-c] runs off[else]tries to take another pull from the Reed's Ale bottle, but it is suddenly stuck and won't open. 'I...I didn't need the stuff, anyway! I have better things to do!' [he-she-c] runs off. It's not clear whether those better things involve more deals or just stuff that's good for society, but whatever. You can pass, now[end if]."
 an alarming grailman	an alarming grailman	false	354088487	--	"marginal"	"marginal"	"The grailman might still be able to block you, but he doesn't want to risk it. He seems to lose confidence visibly as you speak."
 Atheists	Atheists	false	611037040	--	"hastiest"	"hastiest"	"The atheists rattle off point after point as they just can't believe you won't agree with their stone cold logic. Emboldened, you suggest that, if this is all the time we have on this world, they really don't want to waste it on you. 'Yeah!' they say. 'You're right!' They run off for someone else to harass."
-lois the hostile	lois the hostile	false	537631654	--	"holiest"	"holiest"	"Lois the Hostile pauses a minute and considers. 'No. That can't be right. But that'd mean THAT, too--and. Whoah. I really do need to change things. I--I've listened to Elvira too much.' She nods at you. 'I bet you helped. I'm not sure how, but thank you.' Then she runs off into the ole shrine to start penance."
-hostile-is-he lot	hostile-is-he lot	false	537631654	--	"holiest"	"holiest"	"The lot shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the shrine. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the shrine opens for him![wfak][paragraph break]Then the next one realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already."
+lois the hostile	lois the hostile	false	537631654	--	"holiest"	"holiest"	"Lois the Hostile pauses a minute and considers. 'No. That can't be right. But that'd mean THAT, too--and. Whoah. I really do need to change things. I--I've listened to Elvira too much.' She nods at you. 'I bet you helped. I'm not sure how, but thank you.' Then she runs off into the Thearchy Hatchery to start penance."
+hostile-is-he lot	hostile-is-he lot	false	537631654	--	"holiest"	"holiest"	"The lot shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the Hatchery. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the Hatchery opens for him![wfak][paragraph break]Then the next one realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already."
 ray eck	ray eck	false	409615745	--	"creaky"	"creaky"	"You hear a squeak from the keycar, then Ray Eck cringing and grabbing his leg. He spends some time complaining about various aches (don't worry, they're psychosomatic) and then about how he'd been ripped off purchasing stuff like the keycar before. Worried the keycar will sputter and die out here, he guides it home."
 pirates	pirates	false	541160519	--	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
 old ice	old ice	false	341000045	--	"coiled"	"coiled"	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."
@@ -15146,18 +15146,7 @@ a-text of hump is "YRRR". b-text of hump is "YRRR". parse-text of hump is "u[sp]
 
 book Marines Seminar
 
-Marines Seminar is in presto. Marines Seminar is east of Grey Gyre. "The seminar must be on break now, because [if popgun is in seminar]nothing besides a popgun[else]not much[end if] remains. Camo-coma forcefields are probably every way except back west, and even without them, you'd never keep your balance on the sway-ways."
-
-sway ways are plural-named scenery in Marines Seminar. "Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security."
-
-understand "yaws" and "sway-ways" as sway ways.
-
-instead of doing something with sway ways:
-	if current action is entering:
-		try going east instead;
-	if action is procedural:
-		continue the action;
-	say "There's not much to be done with the sway-ways. They're there for security."
+Marines Seminar is in presto. Marines Seminar is east of Grey Gyre. "The seminar must be on break now, because [if popgun is in seminar]nothing besides a popgun[else]not much[end if] remains. Coma-Camo forcefields surround you evvery way except back west. You can't see them very well, but they're nore there just to deter you."
 
 after printing the locale description for seminar when seminar is unvisited:
 	say "You hear a loud voice yell 'REISMAN! Snare [']im!' / 'Mean, sir!' Uh oh. That plebe might be in trouble. But it's nice to know his name. You resolve to do what you can to give him amnesty, when you can, once Elvira's out of the way.";
@@ -19164,7 +19153,7 @@ to decide which number is palace-let: [I could've defined a new variable but it'
 	if location of player is topside or location of player is Outer Route, decide on 4;
 	if location of player is copse, decide on 5;
 	if location of player is lost lots or location of player is Nude Dune or location of player is sunbelt or location of player is saltbed, decide on 6;
-	if location of player is ravages or location of player is subsector or location of player is Danger Garden or location of player is Shaven Havens or location of player is cinema, decide on 7;
+	if location of player is treading gradient or location of player is subsector or location of player is Danger Garden or location of player is Shaven Havens or location of player is cinema, decide on 7;
 	if location of player is salted deltas or location of player is Strati Strait, decide on 8;
 	if location of player is coastlines or location of player is rawest waters, decide on 9;
 	if location of player is solo den, decide on 10;
@@ -19445,14 +19434,14 @@ check going down in Loftier Trefoil:
 
 book Topside Deposit
 
-Topside Deposit is a room in Towers. "[if ray eck is in lalaland]You don't seem to have much else to do here. While you can go any direction, it's only sensible to go back north[else]There's a bit more life to the north--it's wooded, but it's also guarded[end if]. The curst palace is barely visible in the distance."
+Topside Deposit is a room in Towers. "A fire-torn frontier leads everywhere but north. [if ray eck is in lalaland]With Ray Eck gone, you should have no problems doing so. There's not much to do here[else]Unfortunately, [one of]a yacker[or]Ray Eck[stopping] is blocking the way[end if]. The curst palace is barely visible in the distance."
 
 for printing a locale paragraph about a thing (called nongua) in topside deposit:
 	if nongua is start tarts and toaster is in Topside Deposit:
 		now start tarts are mentioned;
 	continue the action:
 
-Ray Eck is a proper-named purple guardian in Topside Deposit.  description is "He doesn't look particularly wealthy or elitist, but he sure does like watching his keycar go round and round.". "[one of]A yacker[or]Ray Eck still[stopping] controls his keycar remotely here, making it zoom around."
+Ray Eck is a proper-named purple guardian in Topside Deposit.  description is "He doesn't look particularly wealthy or elitist, but he sure does like watching his keycar go round and round.". "[one of]The yacker[or]Ray Eck still[stopping] controls his keycar remotely here, making it zoom around."
 
 check taking a guardian:
 	say "Sadly, you can't just move anyone or anything out of the way in the Badlands." instead;
@@ -19581,7 +19570,22 @@ to say bloorg of (gg - a guardian):
 
 book Outer Route
 
-Outer Route is west of Scope Copse. Outer Route is in Towers. "It's a bit outre here, but nothing to rue. The chirping of unseen birds is a bit too sharp, and it smells a bit too much like air freshener. Sway-Ways lead every way but east, which is to say, you can only go back east."
+Outer Route is west of Scope Copse. Outer Route is in Towers. "It's a bit outre here, but nothing to rue. You can only go back east. Well, you could ty other directions, but the sway-ways would be unreliable."
+
+section sway ways
+
+sway ways are plural-named scenery in Outer Route. "Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security. But then they probably lead back to even more dangerous parts of the badlands, anyway."
+
+understand "yaws" and "sway-ways" as sway ways.
+
+instead of doing something with sway ways:
+	if current action is entering:
+		try going west instead;
+	if action is procedural:
+		continue the action;
+	say "You have no idea how to fix the sway-ways to make them less unsafe, but you don't need to."
+
+section Campiest Campsite
 
 the campiest campsite is useless scenery in Outer Route. understand "camp/site/campsite" and "yon camp" as campsite. "My goodness! The campiest campsite is the MOST! It's a bit redundant and over-the-top, so you might not sensibly make a whole room out of it, but...this is a good place for it."
 
@@ -20107,7 +20111,16 @@ to decide which guardian is the-hostile:
 	if player is male, decide on hostile-is-he lot;
 	decide on lois the hostile;
 
-Strati Strait is north of Danger Garden and east of Treading Gradient. "Leak Lake spans far to the east. You can't cross it here. An ole shrine[if the-hostile is in lalaland], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Strati Strait is in Towers.
+Strati Strait is north of Danger Garden and east of Treading Gradient. "Clouds above (strati) give this strait a feeling of reflective gloom. Leak Lake spans to the east, too far to cross. A Thearchy Hatchery[if the-hostile is in lalaland], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Strati Strait is in Towers.
+
+the could clouds are scenery in Strati Strait. "The strati are definitely could-clouds, full of possibility. Just looking at them feels like you have artist traits."
+
+understand "strati" as could clouds when player is in strati strait.
+
+instead of doing something with could clouds:
+	if action is procedural:
+		continue the action;
+	say "The clouds are too far away to do anything other than look at. They won't help you solve anything. They're just there.";
 
 to kid-appears:
 	if kid is off-stage:
@@ -20485,26 +20498,35 @@ to say wordy-hinty:
 
 book Actionless Coastlines
 
-Actionless Coastlines is north of Strati Strait. Actionless Coastlines is east of Salted Deltas. Actionless Coastlines is in Towers. "Leak Lake is calmer and narrower here, but even with no rocks, you can't make it across on your own. Thankfully, no sectionals are being held here right now. If you had some sort of craft, maybe you could[if atheists are visible]. You can go back south, however[else if the-hostile are visible]. You can go back west, however[else]. You can go west and south, though[end if][one of]. There's no sign of sectionals, past, present or future[or][stopping]."
+Actionless Coastlines is north of Strati Strait. Actionless Coastlines is east of Salted Deltas. Actionless Coastlines is in Towers. "Leak Lake is calmer and narrower here, but even with no rocks, you can't make it across on your own. Thankfully, no sectionals are being held here right now. If you had some sort of craft, maybe you could[if atheists are visible]. You can go back south, however[else if the-hostile are visible]. You can go back west, however[else]. You can go west and south, though[end if][one of]. There's no sign of sectionals, past, present or future[or][stopping].[paragraph break]A maturation natatorium and Thearchy Hatchery provide local flavor."
 
-o-s is a backdrop. o-s is in coastlines and Strati Strait.
+section Maturation Natatorium
 
-printed name of o-s is "the Ole Shrine".
+the Maturation Natatorium is a backdrop. the Maturation Natatorium is in coastlines and Salted Deltas. description is "It extends [if player is in coastlines]west[else]east[end if]. There's no clear way in[if atheists are in lalaland], but you probably don't want to see the atheists again[else], and the atheists would probably pull you back if you tried[end if], anyway. Inscribed on the front is HE SITS AT THIS SEAT."
 
-understand "ole/shrine" and "ole shrine" as o-s.
+instead of doing something with Maturation Natatorium:
+	if current action is entering and player is in Salted Deltas:
+		say "[if atheists are in lalaland]No need to disturb [relig-mf] now you're past[else]You're worried the atheists might give you a working over, verbal or physical might have you strung up for sacrilege. So HOSTILE[end if]." instead;
+	if action is procedural:
+		continue the action;
+	if current action is entering:
+		say "It doesn't look very fun, whether or not you'd be pestered by atheists." instead;
+	say "There's nothing much to do with the maturation natatorium. It's just a gaudy structure.";
 
-instead of doing something with o-s:
+section Thearchy Hatchery
+
+the Thearchy Hatchery is a backdrop. Thearchy Hatchery is in coastlines and Strati Strait.
+
+instead of doing something with Thearchy Hatchery:
 	if current action is entering and player is in Strati Strait:
 		say "[if the-hostile are in lalaland]No need to disturb [relig-mf] now you're past[else]You're worried [relig-mf] might have you strung up for sacrilege. So HOSTILE[end if]." instead;
 	if action is procedural:
 		continue the action;
 	if current action is entering:
 		say "That would feel sacrilegious." instead;
-	if player is in coastlines:
-		say "The ole shrine is too far away to do anything other than look at, [if the-hostile are in lalaland]and you don't need to bother [relig-mf][else]even without [relig-mf] blocking you[end if]." instead;
-	say "There's nothing much to do with the shrine. It's not blocking you, and it's keeping [relig-mf] out of the way, too.";
+	say "There's nothing much to do with the Hatchery. It's just a gaudy structure.";
 
-description of o-s is "It's relatively modest, and where you enter (or you would, if you were religious,) it mentions its sister shrine Heron Isle[if the-hostile is visible]. You'd think [relig-mf] would want to enter, but they glare at it, but apparently it's witnessing time[end if]. Also written on the ole shrine is 'RIP once-sad deacons: aced, son (just before release 4). Hmm."
+description of Thearchy Hatchery is "It's a pretty impressive structure, with a note 'RIP once-sad deacons: aced, son (just before release 4). Hmm. [if the-hostile is visible]. You'd think [relig-mf] would belong there, but maybe they are trying to preach to whatever masses drop by[end if]."
 
 book side-path rooms
 
@@ -21309,7 +21331,7 @@ rese is a truth state that varies.
 
 section salted deltas
 
-the Atheists are plural-named purple guardians. "Atheists to the [psgdir of atheists] seem quite set in their ways. And their territory.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say."
+the Asset-Hit Atheists are plural-named purple guardians. "Atheists to the [psgdir of atheists] seem quite set in their ways. And their territory.". description is "They nod and gesture and say 'A-ha!' a lot, but they do seem to draw out everything they say. They look well off. Asset-hit, if you will."
 
 understand "atheist" as atheists.
 
@@ -25575,7 +25597,7 @@ definition: a thing (called hintcand) is hintrelevant:
 		decide yes;
 	if hintcand is red writing:
 		decide yes;
-	if hintcand is o-s:
+	if hintcand is Thearchy Hatchery:
 		if mrlp is towers:
 			if coastlines is visited or Strati Strait is visited:
 				decide yes;
@@ -26338,7 +26360,7 @@ log gaol	"It's just there to block you from going anywhere else."
 ropins	"[one of]The prison ropins are locked.[plus][or]What could change that?[plus][or]Or make the ropins UNLOCKED? There's an NPC.[plus][or]The Lone Duck could make the gaol unlocked.[cycling]"
 lone duck	"[one of]You need to bring it back to its owner.[plus][or]In the Obscurest Subsector.[plus][or]It won't follow you, though.[plus][or]If you have the Raves Saver, you can record Dr. Yow while [he-she]'s wordy.[plus][or]This will make the duck follow back to Dr. Yow.[plus][or]The duck can open the lock.[plus][or]How? It is a lone duck.[plus][or]The lone duck can make the gaol UNLOCKED.[minus][cycling]"
 rapier repair	"[one of]The rapier repair machine looks like it could use something.[plus][or]Have you seen anything that looks like a rapier and needs repair?[plus][or]That ragged dagger[if player does not have ragged dagger] you left in the ravages[end if].[plus][or]Put the dagger in the machine.[plus][or]The gizmo may help the kid build something.[minus][cycling]"
-o-s	"The ole shrine is just sort of there, for a clue. You don't need to do anything with it."
+Thearchy Hatchery	"The Thearchy Hatchery is just sort of there, for a clue. You don't need to do anything with it."
 bot boat	"Two parts of a bot boat are broken. The blaster and turbos."
 blaster	"[one of]The blaster isn't quite as solid as it could be.[plus][or]Maybe you could make the blaster STABLER?[minus][cycling]"
 turbos	"[one of]The turbos aren't quite as solid as they could be.[plus][or]Maybe you could make the turbos ROBUST?[minus][cycling]"
