@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<trizbort version="1.5.9.7">
+<trizbort version="1.5.9.8">
 	<info>
 		<title>A Roiling Original Store Y walkthrough</title>
 		<author>Andrew Schultz</author>
@@ -43,7 +43,7 @@
 			<dock index="0" id="15" port="se" />
 			<dock index="1" id="17" port="sw" />
 		</line>
-		<room id="19" name="destroy the wrap" subtitle="" x="-224" y="-96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="19" name="destroy wrap, get ruby" subtitle="" x="-224" y="-96" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="20" name="" description="" flow="oneWay">
 			<dock index="0" id="15" port="n" />
 			<dock index="1" id="19" port="s" />
@@ -71,7 +71,7 @@
 			<dock index="0" id="11" port="se" />
 			<dock index="1" id="22" port="nw" />
 		</line>
-		<room id="29" name="clear walleyes, get by portal" subtitle="" x="-64" y="-224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="29" name="summon haunter, enter portal" subtitle="" x="-64" y="-224" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="30" name="" description="" flow="oneWay">
 			<dock index="0" id="22" port="n" />
 			<dock index="1" id="29" port="s" />
@@ -160,7 +160,6 @@
 		</grid>
 		<lines>
 			<width>2</width>
-			<handDrawn>no</handDrawn>
 			<arrowSize>12</arrowSize>
 			<textOffset>4</textOffset>
 		</lines>

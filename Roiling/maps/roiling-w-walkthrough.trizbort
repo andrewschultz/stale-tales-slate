@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<trizbort version="1.5.9.7">
+<trizbort version="1.5.9.8">
 	<info>
 		<title>A Roiling Original Store W walkthrough</title>
 		<author>Andrew Schultz</author>
@@ -13,7 +13,7 @@
 			<dock index="0" id="1" port="n" />
 			<dock index="1" id="2" port="s" />
 		</line>
-		<room id="4" name="West to Campsite" subtitle="" x="-32" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="4" name="Clear Butlers (W Copse)" subtitle="" x="-192" y="-288" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="5" name="" description="" flow="oneWay">
 			<dock index="0" id="2" port="nnw" />
 			<dock index="1" id="4" port="w" />
@@ -23,7 +23,7 @@
 			<dock index="0" id="2" port="se" />
 			<dock index="1" id="6" port="nw" />
 		</line>
-		<room id="8" name="3 North to Ravages" subtitle="" x="-192" y="-32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="8" name="3 North to Ravages (Duck)" subtitle="" x="-192" y="-32" w="96" h="64" region="NoRegion" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<line id="9" name="" description="" flow="oneWay">
 			<dock index="0" id="2" port="e" />
 			<dock index="1" id="8" port="w" />
@@ -137,6 +137,10 @@
 			<dock index="0" id="30" port="e" />
 			<dock index="1" id="32" port="w" />
 		</line>
+		<line id="49" name="" description="" flow="oneWay">
+			<dock index="0" id="10" port="ne" />
+			<dock index="1" id="25" port="sw" />
+		</line>
 	</map>
 	<settings>
 		<colors>
@@ -168,7 +172,6 @@
 		</grid>
 		<lines>
 			<width>2</width>
-			<handDrawn>no</handDrawn>
 			<arrowSize>12</arrowSize>
 			<textOffset>4</textOffset>
 		</lines>
