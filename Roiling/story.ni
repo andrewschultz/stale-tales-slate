@@ -1638,7 +1638,7 @@ persuasion rule for asking smart kid to try gotothinging prison ropins:
 persuasion rule for asking smart kid to try gotoing subsector:
 	try objasking smart kid about Dr Yow instead;
 
-persuasion rule for asking smart kid to try doing something (this is the block kid to subsector rule) :
+persuasion rule for asking smart kid to try doing something (this is the block kid going to obscurest subsector rule) :
 	if the player's command matches the regular expression "gizmo" and kid is reflexive and player has gizmo:
 		try giving gizmo to smart kid instead;
 	if the player's command matches the regular expression "(boat|bot)" and kid is reflexive:
@@ -2428,12 +2428,12 @@ kid	lois the hostile	"'Boy! Ask one question about her religion, she gets mad. T
 kid	settler	"'Wow! I'm real impressed with who built this! Whatever it is. [if bot boat is visible]All I can build is mechanical stuff[else]I'd like to build something, too[end if].'"
 kid	gizmo	"[if gizmo is off-stage]'I could use a weird tool to build things.'[else if player has gizmo]'Wow! Maybe if I knew how to build something, I could have it?' You could probably GIVE it to the kid, once [he-she]'s inspired to build something.[else]It's be kind of rude to ask for it back. The kid'll use it better anyway."
 kid	duck	"'I'm not real big on biology. But I guess ducks are cute.'"
-kid	toaster	"[if toaster is in coastlines]'Gee, thanks for it! I'll do something cool with, I mean to, it!''[else if toaster is in Danger Garden]You think back to the toaster in the garden. It might be worth giving the kid, as a nice gift, if you ever leave.[else]You show the toaster to the kid, who's very interested, but [he-she] says [he-she][']d feel guilty taking it before actually helping you.[end if]"
-Dr Yow	duck	"[if ravages is unvisited]'I miss my duck! When they captured me, I was clear in a west waste.'[else if duck is not in Obscurest Subsector]'I--I'm too exhausted to get my duck. If you could bring it back--it just needs to hear my voice.'[else]'Very loyal to me. It might ignore you now, but...thank you.'[end if]"
+kid	toaster	"[if toaster is in actionless coastlines]'Gee, thanks for it! I'll do something cool with, I mean to, it!''[else if toaster is in Danger Garden]You think back to the toaster in the garden. It might be worth giving the kid, as a nice gift, if you ever leave.[else]You show the toaster to the kid, who's very interested, but [he-she] says [he-she][']d feel guilty taking it before actually helping you.[end if]"
+Dr Yow	duck	"[if havens is unvisited]'I miss my duck! When they captured me, I was clear in a west waste.'[else if duck is not in Obscurest Subsector]'I--I'm too exhausted to get my duck. If you could bring it back--it just needs to hear my voice.'[else]'Very loyal to me. It might ignore you now, but...thank you.'[end if]"
 Dr Yow	gizmo	"[if Dr Yow is in ropins]'Not enough sharp edges. It's for making things...crafting.'[else]'I'm too tired to make anything, but maybe an eager apprentice...it's a newfangled device for younguns anyway.'[end if]"
 Dr Yow	bonker	"[one of]Dr. Yow facepalms a bit. You can imagine listening to that bonker was even worse if you were imprisoned, too[or]No need to dredge that up, again[stopping]."
 Dr Yow	lake	"[doc-on-lake]"
-Dr Yow	kid	"[if kid is in coastlines]'It would be fun to tutor someone!'[else if kid is in Obscurest Subsector]'I bet I could teach [him-her] if I kept it interesting and exciting.'[end if]"
+Dr Yow	kid	"[if kid is in actionless coastlines]'It would be fun to tutor someone!'[else if kid is in Obscurest Subsector]'I bet I could teach [him-her] if I kept it interesting and exciting.'[end if]"
 Dr Yow	Elvira	"Elvira probably had Dr. Yow put here, so you decide against asking."
 arid den	curst palace	"If the den could talk, it would find a way to say it's more practical and motivational than the Curst Palace."
 Ed Yerg	Elvira	"'[if ed yerg is reflexive]Such a bold vision for Yorpwald[else]I...I feel embarrassed ever supporting her[end if]!'"
@@ -2638,7 +2638,7 @@ person-subj	right-region	him-say
 Elvira	--	"Everyone has an opinion about her, that's for sure. But many people are afraid to say the wrong thing. Or say it the wrong way."
 settler	--	"You don't think anyone can help you [if Elmo is in lalaland]more than Elmo did [end if]with that."
 pedanto-notepad	--	"The pedanto-notepad is yours and private. Nobody can help you decipher it--hopefully it is clear enough."
-curst palace	towers	"'[if limits is visited]Maybe you can restore it[else]You'll never get there[end if]!'"
+curst palace	towers	"'[if Mislit Limits is visited]Maybe you can restore it[else]You'll never get there[end if]!'"
 haunter	oyster	"'It was looking for its lost jewel! We thought it was buried, but it appeared somewhere.'"
 
 table of popular-blather	[ask anyone about specific topic. Yeah, this fizzled.]
@@ -2664,8 +2664,8 @@ to say kid-fol: [h]
 		say "You regret not clearing more guardians--the kid is nice, but [he-she] sure can TALK and loves to kibitz about who's hanging around, and how and why you could've figured things out, leaving you a bit too exhausted to show HOW you work your magic. And a little embarrassed. You mumble something about being practical. Plus the long walk may help the kid sit and listen. You hope.";
 	now kid is found;
 	now atblock is in Obscurest Subsector;
-	move kid to subsector;
-	move player to subsector;
+	move kid to obscurest subsector;
+	move player to obscurest subsector;
 
 chapter basic nonos
 
@@ -2684,7 +2684,7 @@ northeast,southeast,northwest,southwest are diagonal.
 
 before going (this is the reject diagonals rule):
 	if noun is a diagonal:
-		if player is in coastlines and noun is northeast:
+		if player is in actionless coastlines and noun is northeast:
 			try going north instead; [crossing leak lake]
 		say "[one of]Intermediate? Terminate! Die![or]Diagonals?! A sad lingo.[or]Diagonals?! So anal. Dig?[in random order][one of][line break][i][bracket]Note: this game's confusing enough without diagonal directions. If you can't find a way to go, type EXITS.[close bracket][r][or][stopping][line break]" instead;
 
@@ -4158,7 +4158,7 @@ eastern shore	"Maybe it's you, but the eastern shore seemed slightly closer."
 serpent	"The serpent calms down for a split-second[doc-try]."
 Ed Yerg	"Ed looks slightly less avaricious."
 flowerpot	"The crocus almost seems to perk up."
-curst palace	"Hmm...[if player is in limits]no rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
+curst palace	"Hmm...[if player is in Mislit Limits]no rumbling from the curst palace. Big words have all sorts of possibilities[else]that's good practice, and a good guess, but even if it were right, you don't know if you could change the curst palace from here[end if]."
 b-b	"The barley rustles in an imaginary wind--but hardly at all." [START otters]
 Ed Riley	"Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly..."
 imp1	"[imp-nag]."
@@ -4920,7 +4920,7 @@ carry out exitsing:
 		say "You can go back outside, though you can also finish the job back here." instead;
 	if player is in end den:
 		say "You can go back outside to the Horned Hedron." instead;
-	if player is in trefoil:
+	if player is in Loftier Trefoil:
 		say "You probably aren't going anywhere until Rodney does, first." instead;
 	if player is in barley and b-b is in barley:
 		say "Maybe you'll see some exits if you get rid of the barley." instead;
@@ -5179,8 +5179,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 		if player is in fighter freight:
 			now noun is pale plea;
 			continue the action;
-		if player is in plains:
-			if crate are in plains and crate is reflexive:
+		if player is in lapsin' plains:
+			if crate are in lapsin' plains and crate is reflexive:
 				now noun is crate;
 				continue the action;
 			else if c2 is reflexive:
@@ -6155,12 +6155,12 @@ to decide which thing is oyster-item:
 			decide on haunter;
 	if haunter is reflexed and location of player is location of haunter:
 		decide on haunter;
-	if player is in plains:
-		if c2 is in plains:
+	if player is in lapsin' plains:
+		if c2 is in lapsin' plains:
 			decide on c2;
 		if crate is reflexive:
 			decide on crate;
-		if skis are in plains:
+		if skis are in lapsin' plains:
 			decide on skis;
 		if knob is reflexive:
 			decide on knob;
@@ -6246,7 +6246,7 @@ to say to-center:
 		if the room mydir of location of player is topside:
 			say "[mydir]";
 			continue the action;
-	say "[if player is in coastlines]southwest[else if player is in cinema or player is in Treading Gradient or player is in Nude Dune]southeast[else if player is in copse or player is in Shaven Havens or player is in Danger Garden]northeast[else if player is in lots or player is in Obscurest Subsector or player is in Danger Garden]northwest[else]some way--use the scope[end if]";
+	say "[if player is in actionless coastlines]southwest[else if player is in Anemic Cinema or player is in Treading Gradient or player is in Nude Dune]southeast[else if player is in Scope Copse or player is in Shaven Havens or player is in Danger Garden]northeast[else if player is in Lost Lots or player is in Obscurest Subsector or player is in Danger Garden]northwest[else]some way--use the scope[end if]";
 
 carry out towers-hinting:
 	if number of visible warriors > 0:
@@ -6265,14 +6265,14 @@ carry out towers-hinting:
 			try objhinting mr-hinty instead;
 		d "Oops! A bug!";
 		any-guardian-hint instead;
-	if player is in trefoil:
+	if player is in Loftier Trefoil:
 		try objhinting h-w instead;
 	if scope copse is unvisited:
 		all-say "You can just go north[if tarts are reflexive], though you can hint the tarts and toaster if you want[end if]." instead;
-	if ravages is unvisited:
-		all-say "There's an important location in the center of the Bland Sad Badlands, [to-center] of here. You'll want to [if ravages is accessible]go[else]make a path[end if] there." instead;
+	if shaven havens is unvisited:
+		all-say "There's an important location in the center of the Bland Sad Badlands, [to-center] of here. You'll want to [if shaven havens is accessible]go[else]make a path[end if] there." instead;
 	if raves saver is in Treading Gradient or ragged dagger is in Treading Gradient:
-		all-say "Collect the loot from the ravages." instead;
+		all-say "Collect the loot from the Treading Gradient." instead;
 	if obscurest subsector is unvisited:
 		all-say "[if bonker is in lalaland]Go east of where the bonker was.[else]You need to work your way to the east bit you saw in the scope copse.[end if]" instead;
 	if Treading Gradient is unvisited:
@@ -6280,13 +6280,13 @@ carry out towers-hinting:
 	unless Dr Yow has been wordy:
 		all-say "[one of]Dr. Yow[if player is not in Obscurest Subsector] back in the prison ropins[end if] can be manipulated.[or]There are two ways to make Dr. Yow wordy, but one is more useful than the other right away.[or]Dr. Yow can be WORDY.[cycling]" instead;
 	if duck is aloof:
-		all-say "[one of]That duck [if duck is not visible]in the Shaven Havens seemed[else]seems[end if] awfully lonely. Maybe you can bring it home?[or]It won't follow you. It doesn't trust your voice.[or]Someone else's voice, then, maybe?[or]Find anything that could record that?[or][if ravages is unvisited]Something's in the ravages.[else if player does not have raves saver]The raves saver you saw is useful.[else]Your raves saver.[end if][or]It's actually a tape recorder.[or]It has two buttons, RETAPE and REPEAT, and you can probably figure what does what.[or]If you RETAPE Dr. Yow when [he-she] is [if Dr Yow has been wordy]WORDY[else]in a certain state[end if], that gets [his-her] voice.[cycling]" instead;
+		all-say "[one of]That duck [if duck is not visible]in the Shaven Havens seemed[else]seems[end if] awfully lonely. Maybe you can bring it home?[or]It won't follow you. It doesn't trust your voice.[or]Someone else's voice, then, maybe?[or]Find anything that could record that?[or][if shaven havens is unvisited]Something's in the Treading Gradient.[else if player does not have raves saver]The raves saver you saw is useful.[else]Your raves saver.[end if][or]It's actually a tape recorder.[or]It has two buttons, RETAPE and REPEAT, and you can probably figure what does what.[or]If you RETAPE Dr. Yow when [he-she] is [if Dr Yow has been wordy]WORDY[else]in a certain state[end if], that gets [his-her] voice.[cycling]" instead;
 	if duck is not returned:
 		all-say "[one of]You probably need to free Dr. Yow. It seems like the right thing to do.[or]Did you notice the duck is a lone duck? And its name, Loud Neck?[or]The lock seems like it should be easy, but it isn't.[or]You can't unlock it. Wrong part of speech.[or]UNLOCKED.[cycling]" instead;
 	if actionless coastlines is unvisited:
 		all-say "[one of]You need to find the Actionless Coastlines.[or]It's in the northeast of the Scope Copse map.[or][if the-hostile is in lalaland and atheists are in lalaland]You've already cleared who you need to[else]You've got at least another guardian to get rid of[end if].[cycling]" instead;
 	if kid is lonely:
-		all-say "[one of]Hm, the kid [if player is not in coastlines]at the coastlines [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK KID ABOUT DOCTOR.[cycling]" instead;
+		all-say "[one of]Hm, the kid [if player is not in actionless coastlines]at the coastlines [end if]seems technically inclined but restless.[or]Who else might help [him-her] learn stuff?[or]Dr. Yow.[or]TELL/ASK KID ABOUT DOCTOR.[cycling]" instead;
 	if kid is not in Obscurest Subsector and Dr Yow is in Obscurest Subsector:
 		all-say "The kid will follow you wherever you go. Lead [him-her] back to the doctor in the subsector." instead;
 	unless Dr Yow has been rowdy:
@@ -6297,12 +6297,12 @@ carry out towers-hinting:
 		all-say "You need to visit west of the Copse Scope[if butlers are not in lalaland]. The bluster butlers guard that area[end if]." instead;
 	if player is in Outer Route:
 		if weeds are in Treading Gradient:
-			all-say "The item you want is behind the weeds in the ravages." instead;
+			all-say "The item you want is behind the weeds in the Treading Gradient." instead;
 		if gizmo is off-stage:
 			try objhinting rapier repair instead;
 	if player has gizmo:
 		try objhinting gizmo instead;
-	if location of player is not coastlines:
+	if location of player is not actionless coastlines:
 		all-say "You'll want to head to the coastlines to make it across the water." instead;
 	if rawest is unvisited and limits are unvisited:
 		if t-or-b is reflexive:
@@ -6655,7 +6655,7 @@ after reading a command:
 		if the player's command matches the regular expression "\bnative\b":
 			now natives are plurtry;
 			ital-say "there are too many natives to deal with one at a time.";
-	if yurt-plurtry is false and player is in copse and yurts are in copse:
+	if yurt-plurtry is false and player is in Scope Copse and yurts are in Scope Copse:
 		if the player's command matches the regular expression "\byurt\b":
 			now yurt-plurtry is true;
 			ital-say "there are too many yurts, and they're too uniform, to examine just one. But you don't need to.";
@@ -6691,7 +6691,7 @@ this is the trailing-a rule:
 		if the player's command exactly matches the text "a nut":
 			say "That's not nice. You are a guest.";
 			the rule succeeds;
-	else if mrlp is towers and player is not in trefoil:
+	else if mrlp is towers and player is not in Loftier Trefoil:
 		if the player's command exactly matches the text "a place":
 			say "It already is a place. It needs to be more than that, to wipe off the stigma of being the curst palace.";
 			the rule succeeds;
@@ -7448,7 +7448,7 @@ understand "knock" as knocking.
 understand "knock [text]" as a mistake ("Just KNOCK instead.");
 
 carry out knocking:
-	if player is in plains or player is in study:
+	if player is in lapsin' plains or player is in study:
 		if urgent Gunter is off-stage and stuff-found is 3:
 			say "Knock knock! / Who's there? / An adventurer who should probably just OPEN the door instead." instead;
 		say "A hollow CONKK, but nothing more. You may need to try other actions here." instead;
@@ -7607,7 +7607,7 @@ before listening (this is the you can hear stuff some places rule):
 		say "[if cur-score of presto is 0]A shot. Sort of[else]You don't hear anything congruent to what you've needed to say in this area, which is a good thing[end if]." instead;
 	if player is in rawest waters:
 		say "A scrawny swan cry. But not the Sawn Swan. You hope." instead;
-	if player is in Trefoil:
+	if player is in Loftier Trefoil:
 		if number of visible warriors is 1:
 			say "Rodney's intimidating enough, he can keep this place quiet." instead;
 		if number of visible warriors is 0:
@@ -7617,7 +7617,7 @@ before listening (this is the you can hear stuff some places rule):
 		say "[el-la-f] mutters and moans how [one of]Dr. Eleesa's motivational techniques seem so easy[or]E-dealers have it so easy[or]Lad Reese is an upstart intent on stealing commissions[or]Dre Eleas's methods aren't to be trusted[in random order], turning red until taking another swig at the Reed's Ale." instead;
 	if ingrates are visible:
 		say "You see red as the ingrates['] voices sound like tin gears." instead;
-	if player is in copse and butlers are in copse:
+	if player is in Scope Copse and butlers are in Scope Copse:
 		say "The butlers loudly banter 'Let's rub (you) the wrong way!' You see red." instead;
 	if player is in Shaven Havens:
 		say "You think you hear NEVAHs, but that might just be internal melodrama." instead;
@@ -7968,7 +7968,7 @@ instead of swearing obscenely:
 		say "Some example you are." instead;
 	if player is in frontage and macks are in frontage:
 		say "The conversation is horrid enough." instead;
-	if player is in coastlines or player is in Strati Strait:
+	if player is in actionless coastlines or player is in Strati Strait:
 		if lois is in location of player or hostile-is-he lot is in location of player:
 			say "Oh, the self-righteous backlash you'd get from hostile folk nearby!" instead;
 	if player is in reclusion inclosure:
@@ -9013,9 +9013,9 @@ Atheists	Atheists	false	611037040	--	"hastiest"	"hastiest"	"The atheists rattle 
 lois the hostile	lois the hostile	false	537631654	--	"holiest"	"holiest"	"Lois the Hostile pauses a minute and considers. 'No. That can't be right. But that'd mean THAT, too--and. Whoah. I really do need to change things. I--I've listened to Elvira too much.' She nods at you. 'I bet you helped. I'm not sure how, but thank you.' Then she runs off into the Thearchy Hatchery to start penance."
 hostile-is-he lot	hostile-is-he lot	false	537631654	--	"holiest"	"holiest"	"The lot shake their heads. Perhaps, instead of an ol['] heist, they can realize they do not belong in the Hatchery. But what if they are realizing they don't belong in order to sneak in the back way? A spirited discussion ensues, until one poor fellow who sobbingly admits he is confused and unworthy wanders away--and the Hatchery opens for him![wfak][paragraph break]Then the next one realizes how awful he's been, then the next. The last one, looking back, wishes the unconditional best for your deity of choice, who probably should exist if he/she/it doesn't already."
 ray eck	ray eck	false	409615745	--	"creaky"	"creaky"	"You hear a squeak from the keycar, then Ray Eck cringing and grabbing his leg. He spends some time complaining about various aches (don't worry, they're psychosomatic) and then about how he'd been ripped off purchasing stuff like the keycar before. Worried the keycar will sputter and die out here, he guides it home."
-pirates	pirates	false	541160519	--	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
+pirates	pirates	false	541160519	--	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if actionless coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
 old ice	old ice	false	341000045	--	"coiled"	"coiled"	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."
-denim	Éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the ravages are, well, ravaged enough. You take the éclairs."
+denim	Éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the Treading Gradient is, well, , ravaged enough. You take the éclairs."
 fissure	fissure	false	582291393	--	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 prison ropins	prison ropins	false	522953692	--	"unlocked"	"unlocked"	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks and vanishes. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 smart kid	smart kid	false	356052660	--	"gifted"	"gifted"	"[kid-full] calms down a bit. 'Man! My mind is clearer now! Did you...? Well, if you did or didn't, I'm still, wow.' [he-she-c] asks you, 'Could you give me help building a bot-boat?' You shake your head. 'Do you know anyone?'[paragraph break]Hmm, not any of the guardians blocking your way, but maybe you could get someone to show [kid-full] how to. Then maybe you could cross Leak Lake and get closer to the Curst Palace."
@@ -9235,7 +9235,7 @@ to say rodney-ditch:
 		say ". Well, maybe he can repel the lightning and sparks kind, but not yours. He is blown through the doorway and looks up, dazed. Nobody goes to help him";
 		if vw is 0:
 			continue the action;
-		say ". The remaining warrior[if vw > 1]s[end if] even ask[if vw is 1]s[end if] if you can work your magic to make [if vw > 1]them better people[else]him a better person[end if]. After a surprisingly illuminating speech that avoids the major self-help catch-phrase, you make an excellent case for self-improvement coming from within, and not worrying about being perfect, or getting a perfect score. It goes over well, and [list of warriors in trefoil] thank you profusely before going on [if vw > 1]their ways[else]his way[end if]";
+		say ". The remaining warrior[if vw > 1]s[end if] even ask[if vw is 1]s[end if] if you can work your magic to make [if vw > 1]them better people[else]him a better person[end if]. After a surprisingly illuminating speech that avoids the major self-help catch-phrase, you make an excellent case for self-improvement coming from within, and not worrying about being perfect, or getting a perfect score. It goes over well, and [list of warriors in Loftier Trefoil] thank you profusely before going on [if vw > 1]their ways[else]his way[end if]";
 
 
 understand "resent" as a mistake ("But how could you make Ernest [i]feel[r] so he'd resent his position?") when Ernest is visible.
@@ -10076,7 +10076,7 @@ pouter-quip	"'Why, they came around about the time Elvira did! I didn't believe 
 pun-quip	"'Eh, punt the pun,' you think. The paunchy, achy pun--a painful pun-fail--hardly cleans up on the pun scale. You picture a generic cringee at [twiddle of table of laughhouses and -3]. 'Rad irony? Ordinary.'"
 ahem-quip	"Gunter intones tension. Refusal earfuls. 'Cad, no can do. [d-word-u], uh, DUH, man.' Refusal earfuls."	[end option 4-4]
 trips-quip	"'No shame,' he moans. 'Some? Nah.' ... he makes the money gesture with his hands but notes you won't get ID'd unless you visit during rush hour."
-media-quip	"Somehow, the media aimed you for trying to do way too much and way too little. You chart the flattery, the backhanded compliments, the first rifts, the outright disrespect. 'His charisma is archaism.' / 'Cagiest toil made him egotistical.' / 'He will make this realm lamer to save it again.' How the only things you [i]did[r] were saving your skin against Red Bull Burdell--and exist at the end."
+media-quip	"Somehow, the media aimed you for trying to do way too much and way too little. You chart the flattery, the backhanded compliments, the first rifts, the outright disrespect. '[his-her-c] charisma is archaism.' / 'Cagiest toil made [him-her] egotistical.' / '[he-she-c] will make this realm lamer to save it again.' How the only things you [i]did[r] were saving your skin against Red Bull Burdell--and EXIST at the end."
 media-quip-2	"You recall Walt Koh's and Kath Low's howl-task host-walk, among other 'informational' shows...[twiddle of table of lame talk shows and 4]Folks co-spit topics, you're mashed, shamed. '[if player is male]He's [else]She... [end if]mad! Trashed, [if player is female]she'd...rat[else]he darts[end if]!' And the rubbish biopics, good ([biop of true]). or bad ([biop of false]). You did nothing to prepare Yorpwald against technically sophisticated attacks like the exciting ones Elvira warns about, the ones that helped her gain a role of Save/Rid Adviser. Many a tearful faulter did not want to blame you--but they had to."
 social-quip	"You complain about social forces in general. More downers than wonders. How you're no longer a secure cursee."
 girls-quip	"You listen about [twiddle of table of elmo emo and 3]. No friend finder or lovers solver found the woman for Elmo. He looks happier for having complained, though."
@@ -11287,8 +11287,8 @@ definition: a thing (called candi) is bluable:
 	if candi is tunes, no; [oyster specific]
 	if player is in scum ant sanctum and candi is ant, yes;
 	if candi is haunter and player is in anger range and candi is off-stage, decide no; [visibility issues here. We "see" the haunter but can't see it with bluables]
-	if candi is crate and player is in plains:
-		if c2 is in plains, yes;
+	if candi is crate and player is in lapsin' plains:
+		if c2 is in lapsin' plains, yes;
 	if candi is elmer, no; [otters specific]
 	if player is in gates stage and gate-level is 2: [others specific]
 		if candi is perp-priv or candi is searcher or candi is viewer, no;
@@ -14778,7 +14778,7 @@ check burning:
 	if noun is yurts:
 		say "Perhaps another more natural way of decomposition would work better." instead;
 	if noun is curst palace:
-		say "You're going to need fireworks, but that's counterproductive[if player is not in limits]. Plus you are [way-tow]too far away[end if]." instead;
+		say "You're going to need fireworks, but that's counterproductive[if player is not in Mislit Limits]. Plus you are [way-tow]too far away[end if]." instead;
 	if noun is a hintpastry:
 		say "There aren't many ways to botch food like that, but that's one[if toaster is visible]. Anyway, you don't see how to set the toaster to eleven or whatever[else]. But maybe there's something that could heat that up[end if]." instead;
 	if mrlp is towers and topside deposit is unvisited:
@@ -14792,7 +14792,7 @@ check burning:
 	say "You're a ropy pyro." instead;
 
 to say way-tow:
-	if limits is unvisited:
+	if Mislit Limits is unvisited:
 		say "way ";
 
 instead of burning the dumpster:
@@ -16403,7 +16403,7 @@ a direction can be viable.
 definition: a direction (called dir) is viable:
 	if player is in phat path and dir is north:
 		decide no;
-	if player is in plains and dir is inside and door-sux is false:
+	if player is in lapsin' plains and dir is inside and door-sux is false:
 		decide no;
 	if player is in frontage and atmo-moat is in frontage and dir is west:
 		decide no;
@@ -17746,13 +17746,13 @@ carry out traceing:
 		say "You already did that. If you retrace, you might get lost at a terrace." instead;
 	try fliptoing c2 instead;
 
-after fliptoing when player is in plains: [everything except "splain"]
+after fliptoing when player is in lapsin' plains: [everything except "splain"]
 	if noun is c2 or noun is crate or noun is skis or noun is knob:
 		check-rude-door;
 	continue the action;
 
 check scaning crate:
-	if c2 is in plains:
+	if c2 is in lapsin' plains:
 		try scaning c2 instead;
 
 check fliptoing crate:
@@ -17897,8 +17897,8 @@ after fliptoing eeks:
 
 to bowl-to-home:
 	now Lean Lane is shunned;
-	change the east exit of anger range to sand home;
-	change the west exit of sand home to anger range;
+	change the east exit of anger range to handsome sand home;
+	change the west exit of handsome sand home to anger range;
 
 chapter enlargeing
 
@@ -18368,9 +18368,9 @@ check taking shut huts:
 instead of entering huts:
 	try opening rude door instead;
 
-after printing the locale description for plains when plains is unvisited:
+after printing the locale description for Lapsin' plains when Lapsin' plains is unvisited:
 	say "You hear splintering and notice a crate that fell near you. Someone or something doesn't like you here.";
-	now fragments are in plains;
+	now fragments are in lapsin' plains;
 
 instead of cutting denim:
 	try attacking denim;
@@ -18412,7 +18412,7 @@ understand "embrace [text]" and "embrace" as a mistake ("Hug? Ugh. Guh.")
 
 chapter splaining
 
-bogus-plains is privately-named LLPish reflexive scenery in lapsin' plains. understand "plains" as bogus-plains when player is in plains and debug-state is true. bogus-plains is undesc. printed name is "all around the plains"
+bogus-plains is privately-named LLPish reflexive scenery in lapsin' plains. understand "plains" as bogus-plains when player is in lapsin' plains and debug-state is true. bogus-plains is undesc. printed name is "all around the plains"
 
 a-text of bogus-plains is "RRRYYR". b-text of bogus-plains is "RRRY??". parse-text of bogus-plains is "x[sp]x[sp]x[sp]a[sp]?[sp]?".
 
@@ -18429,7 +18429,7 @@ to check-rude-door:
 
 door-sux is a truth state that varies.
 
-the rude door is a thing in Lapsin' plains. "You see a door leading [if player is in plains]in[else]out[end if]. A rude message is written above a knob on the door."
+the rude door is a thing in Lapsin' plains. "You see a door leading [if player is in lapsin' plains]in[else]out[end if]. A rude message is written above a knob on the door."
 
 the rude door is fixed in place.
 
@@ -18753,7 +18753,7 @@ carry out burying:
 	if player does not have rigged digger:
 		if player has prod:
 			say "Your prod from a hut should be able to bury stuff if you tinker right. Jar it the right way." instead;
-		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if uaah are unvisited]. Maybe there's something behind that rude door[else]. Maybe you missed something in a hut[end if][stopping]." instead;
+		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin' Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if uaah are unvisited]. Maybe there's something behind that rude door[else]. Maybe you missed something in a hut[end if][stopping]." instead;
 	if ruby is in lalaland:
 		say "You half forgot where you dug the ruby. You're not sure if you want it back." instead;
 	if player does not have ruby:
@@ -18990,7 +18990,7 @@ understand "xray" and "x-ray" as a mistake ("You don't have x-ray vision right n
 
 to say if-duck:
 	if duck is not visible:
-		say "--but nothing [if ravages is visited]here [end if]seems to fit with UNLOCKED";
+		say "--but nothing [if shaven havens is visited]here [end if]seems to fit with UNLOCKED";
 
 to say big-hint of (rayx - a thing) :
 	if rayx is a guardian or rayx is a warrior:
@@ -19150,20 +19150,20 @@ when play begins (this is the place guardians rule):
 book which room is how far
 
 to decide which number is palace-let: [I could've defined a new variable but it's nice to have this in one place. This shows how many letters the settler gives.]
-	if location of player is topside or location of player is Outer Route, decide on 4;
-	if location of player is copse, decide on 5;
-	if location of player is lost lots or location of player is Nude Dune or location of player is sunbelt or location of player is saltbed, decide on 6;
-	if location of player is treading gradient or location of player is subsector or location of player is Danger Garden or location of player is Shaven Havens or location of player is cinema, decide on 7;
+	if location of player is topside deposit or location of player is Outer Route, decide on 4;
+	if location of player is Scope Copse, decide on 5;
+	if location of player is lost lots or location of player is Nude Dune or location of player is unblest sunbelt or location of player is baldest blasted saltbed, decide on 6;
+	if location of player is treading gradient or location of player is obscurest subsector or location of player is Danger Garden or location of player is Shaven Havens or location of player is Anemic Cinema, decide on 7;
 	if location of player is salted deltas or location of player is Strati Strait, decide on 8;
-	if location of player is coastlines or location of player is rawest waters, decide on 9;
+	if location of player is actionless coastlines or location of player is rawest waters, decide on 9;
 	if location of player is solo den, decide on 10;
-	if location of player is limits, decide on 11;
+	if location of player is Mislit Limits, decide on 11;
 	decide on 2;
 
 book drawing the map
 
 to decide whether can-see-map:
-	if waters is visited or limits is visited, decide no;
+	if rawest waters is visited or Mislit Limits is visited, decide no;
 	if spec-o-scope is unexamined, decide no;
 	if mrlp is towers, decide yes;
 	decide no.
@@ -19321,7 +19321,7 @@ after printing the locale description when mrlp is towers (this is the castle ne
 				now towerclose is towdist entry;
 		else:
 			d "Room not defined but not critical";
-	if player is in coastlines:
+	if player is in actionless coastlines:
 		if smart kid is off-stage:
 			say "You think you hear rustling off to the side, as if someone or something is hiding from the [random visible guardian].[paragraph break]";
 	continue the action;
@@ -19336,7 +19336,7 @@ observ
 "[line break]The palace is barely visible now."
 "The palace seems a bit closer now. You probably have a way to go, but it's a start. Maybe the scope could provide some sort of map. And those three guardians--well, maybe you can bribe, attack or talk to them. For information if nothing else. The bluster butlers, particularly, keep their eyes on you. Maybe they're guarding something important."
 "You still can't make out any details of the palace, but it's certainly there, across the big lake to the northeast. But there are more stupid guardians here--they look more resolute and tougher to figure, but you are getting the hang of things. You think."
-"The castle looks a little bigger now--but you may eventually need to cut [if location of player is cinema]east[else]north[end if] a bit to get to it. It looks like there're dead ends [if location of player is cinema]north and west[else]south and east[end if], and you still aren't sure how to cross Leak Lake."
+"The castle looks a little bigger now--but you may eventually need to cut [if location of player is Anemic Cinema]east[else]north[end if] a bit to get to it. It looks like there're dead ends [if location of player is Anemic Cinema]north and west[else]south and east[end if], and you still aren't sure how to cross Leak Lake."
 "You're a good deal closer to the palace than at the copse, but you can probably go northeast a bit more to get closer. That still leaves Leak Lake to pass."
 "Now that you're at the shores of Leak Lake, it's too far to swim. You may need some craft. And crossing here might leave you far from the palace."
 "You can see the other side of Leak Lake from here. It's still too far to swim, but it's clearly closer than anywhere else you've been."
@@ -19401,7 +19401,7 @@ book Loftier Trefoil
 
 Loftier Trefoil is an innie room in Towers. "This opt-outs['] outpost is slightly classier than servant taverns. Still, you can't afford to stay, and you can't leave it with Rodney around. It has other rooms, but since this isn't an RPG, the cellar below and rooms upstairs are off-limits.".
 
-after printing the locale description for trefoil when trefoil is unvisited:
+after printing the locale description for Loftier trefoil when Loftier trefoil is unvisited:
 	say "The ambience here makes you think 'Lo, I fret.'";
 	continue the action;
 
@@ -19480,7 +19480,7 @@ understand "retoast" and "retoast [text]" as a mistake ("You can just TOAST or E
 check scaning toaster:
 	say "[one of]The toaster looks like a pretty good diagnostic item as-is, and it doesn't need an upgrade, so you're not disappointed when nothing pops up[or]Still nothing. The toaster probably doesn't need an upgrade[stopping]." instead;
 
-check taking toaster when player is in coastlines:
+check taking toaster when player is in actionless coastlines:
 	say "You don't need to take it again.";
 
 Rule for printing room description details of the Rosetta Toaster:
@@ -19704,7 +19704,7 @@ understand "theatre" and "theatre thereat" as theater thereat.
 
 understand "anemic/cinema" and "anemic cinema" as theater when player is in Anemic Cinema.
 
-check going inside when player is in cinema:
+check going inside when player is in Anemic Cinema:
 	try entering theater;
 
 instead of doing something with theater:
@@ -19724,7 +19724,7 @@ understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, bu
 every turn when player is in Treading Gradient and weeds are in Treading Gradient and player was in Treading Gradient:
 	say "The weeds [one of][or]continue to [stopping]sway freely and menacingly[one of]. Perhaps you can get rid of them, since they're not actual people blocking passage[or], but they can't be THAT tough[stopping].";
 
-after printing the locale description for ravages when ravages is unvisited:
+after printing the locale description for Treading Gradient when Treading Gradient is unvisited:
 	if inapt paint is unprodded:
 		say "Hm, that inapt paint--nah, it'd be a tap-in by itself, must be the actual words.";
 		now inapt paint is prodded;
@@ -19778,7 +19778,7 @@ description of ragged dagger is "It can't shag much less gash. For cutting, it's
 does the player mean doing something with repeat button when repeat button is not visible: it is unlikely.
 
 check pushing retape button:
-	if waters is visited or limits is visited:
+	if rawest waters is visited or Mislit Limits is visited:
 		say "The saver has suffered permanent water damage. It doesn't even make any weird warpy noises." instead;
 	if raves saver is not silent:
 		if arid den is visible:
@@ -19818,7 +19818,7 @@ to say prev-rec:
 	say " over [if saver was silent]the previous silence[else if saver was ducky]the duck's quacking[else if saver is goosey]the geese's honking[else if saver is yow-yell]Dr. Yow's rants[else if saver is yow-talk]Dr. Yow's talking[end if]";
 
 check pushing repeat button:
-	if waters is visited or limits is visited:
+	if rawest waters is visited or Mislit Limits is visited:
 		say "The saver has suffered permanent water damage. It doesn't even make any weird warpy noises." instead;
 	if smart kid is visible:
 		if raves saver is goosey or raves saver is ducky:
@@ -19965,7 +19965,7 @@ a-text of smart kid is "RYRRYR". b-text of smart kid is "RGRRGR". parse-text of 
 
 understand "fidget" as smart kid when location of smart kid is location of player.
 
-every turn when smart kid is reflexive and player is in coastlines and smart kid is in coastlines:
+every turn when smart kid is reflexive and player is in actionless coastlines and smart kid is in actionless coastlines:
 	say "[kid-full] continues to fidget and mutter a wish to be just a BIT smarter. 'I'd f'get...' Fidget, fidget, fidget."
 
 the atblock is privately-named LLPish vanishing scenery. printed name of atblock is "tentativeness". description is "[bug-report]".
@@ -19986,7 +19986,7 @@ the weirder red wire is part of the bot boat. description is "You know, it's not
 
 a-text of weirder red wire is "RYRYRYR". b-text of weirder red wire is "RGRYR*R". parse-text of weirder red wire is "x[sp]e[sp]x[sp]-[sp]x[sp]*[sp]x".
 
-understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when player is in coastlines and weirder red wire is in coastlines.
+understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when player is in actionless coastlines and weirder red wire is in actionless coastlines.
 
 check scaning bot boat (this is the scan boat components and not boat rule):
 	[showme whether or not blaster is reflexive;
@@ -20004,7 +20004,7 @@ check scaning bot boat (this is the scan boat components and not boat rule):
 	try scaning blaster instead;
 
 to say if-tent:
-	if player is in coastlines:
+	if player is in actionless coastlines:
 		say ", looking far-off, as if for inspiration [he-she] hasn't found yet";
 	if player is in Obscurest Subsector:
 		say ", looking [if atblock is in lalaland]attentive[else]tentative[end if]"
@@ -20126,7 +20126,7 @@ to kid-appears:
 	if kid is off-stage:
 		if atheists are in lalaland and the-hostile are in lalaland:
 			now kid is in actionless coastlines;
-			if player is in coastlines:
+			if player is in actionless coastlines:
 				say "Some kid comes into view from a dark mist with the atheists and [relig-mf] gone, [what-kid-does].";
 			else:
 				say "You hear a kid yell, 'Yay! They're all gone!' to the [if player is in Strati Strait]north[else]east[end if].";
@@ -20149,7 +20149,7 @@ chapter Shaven Havens
 
 Shaven Havens is north of Anemic Cinema. Shaven Havens is in Towers. "This place wasn't, like, shaved with a razor. It's just free of anything that could hide bad guys, so hooray for small things. Savager ravages impede you any way except back south."
 
-the savager ravages are scenery. "They're pretty forbidding. Trust me, you don't want to go any way but back south."
+the savager ravages are scenery in Shaven Havens. "They're pretty forbidding. Trust me, you don't want to go any way but back south."
 
 instead of doing something with savager ravages:
 	if action is procedural:
@@ -20393,7 +20393,7 @@ Dr Yow can be rowdy, wordy or calm. Dr Yow is calm.
 
 check fliptoing prison ropins:
 	if duck is not visible:
-		say "You fiddle with the fence but probably need someone or something to MAKE it unlocked due to how it's configured. You don't have anything on you[if ravages is unvisited]. You haven't explored up north yet[else if duck is prefigured]. You remember trying 'unlocked' with the duck[end if]. Then, UNLOCKED should work. It just feels right.";
+		say "You fiddle with the fence but probably need someone or something to MAKE it unlocked due to how it's configured. You don't have anything on you[if shaven havens is unvisited]. You haven't explored up north yet[else if duck is prefigured]. You remember trying 'unlocked' with the duck[end if]. Then, UNLOCKED should work. It just feels right.";
 		preef prison ropins;
 		do nothing instead;
 
@@ -20502,7 +20502,7 @@ Actionless Coastlines is north of Strati Strait. Actionless Coastlines is east o
 
 section Maturation Natatorium
 
-the Maturation Natatorium is a backdrop. the Maturation Natatorium is in coastlines and Salted Deltas. description is "It extends [if player is in coastlines]west[else]east[end if]. There's no clear way in[if atheists are in lalaland], but you probably don't want to see the atheists again[else], and the atheists would probably pull you back if you tried[end if], anyway. Inscribed on the front is HE SITS AT THIS SEAT."
+the Maturation Natatorium is a backdrop. the Maturation Natatorium is in actionless coastlines and Salted Deltas. description is "It extends [if player is in actionless coastlines]west[else]east[end if]. There's no clear way in[if atheists are in lalaland], but you probably don't want to see the atheists again[else], and the atheists would probably pull you back if you tried[end if], anyway. Inscribed on the front is HE SITS AT THIS SEAT."
 
 instead of doing something with Maturation Natatorium:
 	if current action is entering and player is in Salted Deltas:
@@ -20515,7 +20515,7 @@ instead of doing something with Maturation Natatorium:
 
 section Thearchy Hatchery
 
-the Thearchy Hatchery is a backdrop. Thearchy Hatchery is in coastlines and Strati Strait.
+the Thearchy Hatchery is a backdrop. Thearchy Hatchery is in actionless coastlines and Strati Strait.
 
 instead of doing something with Thearchy Hatchery:
 	if current action is entering and player is in Strati Strait:
@@ -20534,7 +20534,7 @@ chapter Lost Lots
 
 Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is just a barren area, without even a slot. A gadflies['] gasfield surrounds you every way except back north."
 
-the gadflies' gasfield is scenery in Lots Lots.
+the gadflies' gasfield is scenery in Lost Lots.
 
 understand "slot" as a mistake ("If you made it, you might fall in the slot and never get out.") when player is in Lost Lots.
 
@@ -20575,7 +20575,7 @@ book rawest waters
 
 Rawest Waters is a room in Towers. "Ew. Rats. You're splashing around in a spry raspy spray, unable to go back southwest, and unable to decide if the northern or eastern shore is closer."
 
-after printing the locale description for Rawest Waters when Rawest Waters is unvisited (this is the adjust min towers score in waters rule):
+after printing the locale description for Rawest Waters when Rawest Waters is unvisited (this is the adjust min towers score in the waters rule):
 	now poss-score of Towers is 5 + cur-score of towers;
 	now min-score of Towers is 1 + cur-score of towers;
 	if player has strudel and strudel is not reflexed:
@@ -20603,7 +20603,7 @@ does the player mean doing something with eastern shore: it is very likely.
 
 a-text of eastern shore is "RYYRYRR". b-text of eastern shore is "RYYRGRR". parse-text of eastern is "x[sp]-[sp]-[sp]x[sp]e[sp]x[sp]x".
 
-every turn when player is in waters:
+every turn when player is in rawest waters:
 	say "[one of]Gurgle, er, glug... [or]Waters waster, you think... [or]Spirited riptides... [in random order]your eyes go red [one of]thinking of Ernesta, the lady of finding directions[or]half-praying to St. Renae[or]half-praying to St. Earne[in random order]."
 
 the raspy spray is scenery in rawest waters. the spray is undesc.
@@ -20652,7 +20652,7 @@ to towers-min-adj: [this is when you leave the mainland]
 	wipe-towers-map;
 	let und be number of guardians not in lalaland;
 	d "Left [und] guardians.";
-	if denim is in copse:
+	if denim is in Scope Copse:
 		d "Left denim.";
 		increment und;
 	if old ice are not in lalaland:
@@ -20685,7 +20685,7 @@ to say mrmamu:
 	say "[if player is female]Ma'am[else]Mister[end if]";
 
 check taking toaster:
-	if toaster is in coastlines:
+	if toaster is in actionless coastlines:
 		say "Best leave it with the kid." instead;
 
 check taking bot boat:
@@ -20697,7 +20697,7 @@ check entering bot boat:
 	if player has toaster:
 		say "'Hey! [mrmamu]! It'd be dangerous to take that toaster across the water!' [he-she-c]'s right[if number of carried hintpastries > 0]. But you decide to heat up what you have[end if]. You leave the toaster--you bet the kid could do some cool stuff with it. It will be a decent enough payment for [his-her] time and efforts. The kid leaves the toaster on the sand.[line break]";
 		now all carried hintpastries are heated;
-		now toaster is in coastlines;
+		now toaster is in actionless coastlines;
 	else if toaster is visible:
 		if number of carried not heated hintpastries > 0:
 			say "You heat up the food you found since you were last here.";
@@ -20816,7 +20816,7 @@ to say a-bunch:
 	say "[if number of visible warriors is 2]an ex-bunch[else]a bunch[end if]"
 
 definition: a room (called twr) is towery:
-	if twr is trefoil, decide no;
+	if twr is Loftier trefoil, decide no;
 	if map region of twr is towers, decide yes;
 
 To decide whether the current action is no-timely:
@@ -20865,7 +20865,7 @@ instead of drinking leak lake:
 	say "Too icky." instead;
 
 check entering leak lake:
-	if player is in coastlines and bot boat is in coastlines:
+	if player is in actionless coastlines and bot boat is in actionless coastlines:
 		try entering bot boat instead;
 	say "Go out, eh? Too huge!" instead;
 
@@ -20950,7 +20950,7 @@ a-text of flowerpot is "RYRRO". b-text of flowerpot is "PYRRO". parse-text of fl
 
 check inserting into the flowerpot:
 	if noun is crocus:
-		if noun is in limits:
+		if noun is in Mislit Limits:
 			try taking noun instead;
 		say "The crocus is in the flowerpot already." instead;
 	say "Only a flower [if crocus is in flowerpot]like the crocus [end if]belongs in the flowerpot." instead;
@@ -20959,7 +20959,7 @@ check putting on the flowerpot:
 	say "The flowerpot's sole purpose is to hold the succor crocus." instead;
 
 instead of taking crocus:
-	if crocus is in limits:
+	if crocus is in Mislit Limits:
 		say "It looks a bit TOO colorful for a flower, almost radioactive. In fact, from what you know about the species, that means it's close to DYING. Maybe you could tone it down." instead;
 	say "It's been through enough [if flowerpot is reflexive]bad times[else]upheaval[end if]."
 
@@ -21017,7 +21017,7 @@ after fliptoing Curst Palace (this is the overall Towers LLP rule):
 		increment cur-score of towers;
 	continue the action;
 
-understand "crust" as a mistake ("It probably needs less crust, not more. The whole curst palace.") when mrlp is towers and player is not in trefoil.
+understand "crust" as a mistake ("It probably needs less crust, not more. The whole curst palace.") when mrlp is towers and player is not in Loftier Trefoil.
 
 understand "castle apcur" and "castle/apcur" as the curst palace.
 
@@ -21027,7 +21027,7 @@ check examining curst palace when player is not in mislit limits:
 max-pal-seen is a number that varies.
 
 check scaning curst palace (this is the nab a few letters rule) :
-	if player is in trefoil:
+	if player is in Loftier Trefoil:
 		say "You'll want to walk outside first, at the very least." instead;
 	if player is not in mislit limits:
 		if max-pal-seen is 0:
@@ -21108,7 +21108,7 @@ check going in Mislit Limits:
 		say "No. Your destiny is here[if serpent is visible], though the serpent may be guarding some help to the west[else], though maybe you can go west for help[end if]. One big, powerful word and the castle will be restored!" instead;
 
 check going west in mislit limits:
-	if pester'n serpent is in limits:
+	if pester'n serpent is in Mislit Limits:
 		say "'Step near a serpent... you muse, then 'TRAP SEEN.'" instead;
 
 section serpent
@@ -21173,7 +21173,7 @@ section scope copse
 
 the bluster butlers are a plural-named neuter purple guardian. understand "bluster butler" and "butler" as bluster butlers. "Bluster butlers, masters of direct intimidation, guard the way [psgdir of bluster butlers]."
 
-understand "bustler" as a mistake ("The butlers are plural, and anyway, they're bustling plenty as-is.") when player is in copse and butlers are in copse.
+understand "bustler" as a mistake ("The butlers are plural, and anyway, they're bustling plenty as-is.") when player is in Scope Copse and butlers are in Scope Copse.
 
 description of bluster butlers is "Bluster butlers are known for handling undesirables roughly. Their employers (or alma mater) are sewn into what they're wearing: [i]Trebul's[r]."
 
@@ -21510,7 +21510,7 @@ after fliptoing a guardian (this is the track guardian progress rule):
 			draw-my-loc;
 		continue the action;
 	if noun is purple: [purple guardians must be dispelled]
-		if MR is coastlines or player is in coastlines:
+		if MR is actionless coastlines or player is in actionless coastlines:
 			now MR is accessible;
 		else:
 			now MR is sideview;
@@ -21551,14 +21551,14 @@ after fliptoing a guardian (this is the track guardian progress rule):
 
 to decide which number is gua-to-clear:
 	let temp be 0;
-	if saltbed is not accessible and sunbelt is not accessible, decide on 5;
+	if blasted saltbed is not accessible and sunbelt is not accessible, decide on 5;
 	if Treading Gradient is not accessible, increment temp;
 	if anemic cinema is not accessible:
 		increment temp;
-		if saltbed is not accessible and salted deltas are not accessible and Strati Strait is accessible, increment temp;
+		if blasted saltbed is not accessible and salted deltas are not accessible and Strati Strait is accessible, increment temp;
 	if danger garden is not accessible:
 		increment temp;
-		if sunbelt is not accessible and Strati Strait is not accessible and salted deltas are accessible, increment temp;
+		if unblest sunbelt is not accessible and Strati Strait is not accessible and salted deltas are accessible, increment temp;
 	if salted deltas are not accessible and Strati Strait is not accessible, increment temp;
 	decide on temp.
 
@@ -21567,7 +21567,7 @@ clear-warn is a truth state that varies.
 any-cleared is a truth state that varies;
 
 to say bak-copse:
-	say "[if player is not in copse] back in the copse";
+	say "[if player is not in Scope Copse] back in the copse";
 
 [	if MR is a hotcorner:
 		now distance of MR is 0;
@@ -21666,8 +21666,8 @@ check fliptoing Rodney:
 		preef Rodney instead;
 
 after fliptoing a warrior (this is the trefoil exit rule):
-	let vw be number of warriors in trefoil;
-	d "[list of warriors in trefoil].";
+	let vw be number of warriors in Loftier Trefoil;
+	d "[list of warriors in Loftier Trefoil].";
 	if noun is Rodney:
 		now all visible warriors are pinko;
 		if vw > 0:
@@ -21680,7 +21680,7 @@ after fliptoing a warrior (this is the trefoil exit rule):
 	else if vw is 4:
 		say "Rodney's followers look a bit shaken. If you got rid of him by saying [if roddro is true and rodyon is true]by YONDER or DRONEY[else if rodyon is true]YONDER[else if roddro is true]DRONEY[else]something to shoo him[end if], you might be able to clear the lot. Or you can mess with all his pals, first. Your choice.";
 	if vw > 1:
-		now h-w is a random not leaderly warrior in Trefoil;
+		now h-w is a random not leaderly warrior in Loftier Trefoil;
 	else if vw is 1:
 		say "Time to put Rodney out of his misery. Okay, he'll still be miserable, so just put [i]yourself[r] out of the range of his misery.";
 		now h-w is rodney;
@@ -21819,18 +21819,18 @@ when play begins (this is the distribute warriors rule) :
 		let H be a random number from 1 to G;
 		repeat with QQ running through warriors:
 			if pod-num of QQ is mypod and pod-ord of QQ is H:
-				now QQ is in Trefoil;
-	now h-w is a random not leaderly warrior in Trefoil;
+				now QQ is in Loftier Trefoil;
+	now h-w is a random not leaderly warrior in Loftier Trefoil;
 
 [This pulls 1 guy from each wargroup. As of release 3 there are 26 distinct guys with 5.65 letters on average--the shuffling was previously totally random but now it's weighted down to ~5.61 with a more uniform distribution. You are sure to get 2 6's, 2 5's, a 7-8 and a 4-5.]
 
-understand "wendi" and "widen" as a mistake ("Now that would be too embarrassing. Maybe you could embarrass him a little, though.") when player is in trefoil and Edwin is in trefoil.
+understand "wendi" and "widen" as a mistake ("Now that would be too embarrassing. Maybe you could embarrass him a little, though.") when player is in Loftier Trefoil and Edwin is in Loftier Trefoil.
 
-understand "new id" as a mistake ("You need to make sure Edwin's new ID is something negative.") when player is in trefoil and Edwin is in trefoil.
+understand "new id" as a mistake ("You need to make sure Edwin's new ID is something negative.") when player is in Loftier Trefoil and Edwin is in Loftier Trefoil.
 
-understand "recalm" and "recalm marcel" as a mistake ("Right idea, but it might work better in [if cur-score of oyster > 0]the oyster[else]another area[end if].") when player is in trefoil and marcel is in trefoil.
+understand "recalm" and "recalm marcel" as a mistake ("Right idea, but it might work better in [if cur-score of oyster > 0]the oyster[else]another area[end if].") when player is in Loftier Trefoil and marcel is in Loftier Trefoil.
 
-understand "radly" as a mistake ("Boo! That's too subtle for here. Maybe you could make Daryl look different so he feels less radly about himself.") when player is in trefoil and Daryl is in trefoil.
+understand "radly" as a mistake ("Boo! That's too subtle for here. Maybe you could make Daryl look different so he feels less radly about himself.") when player is in Loftier Trefoil and Daryl is in Loftier Trefoil.
 
 volume otters
 
@@ -25599,7 +25599,7 @@ definition: a thing (called hintcand) is hintrelevant:
 		decide yes;
 	if hintcand is Thearchy Hatchery:
 		if mrlp is towers:
-			if coastlines is visited or Strati Strait is visited:
+			if actionless coastlines is visited or Strati Strait is visited:
 				decide yes;
 		decide no;
 	if hintcand is curst palace:
@@ -25894,7 +25894,7 @@ to say yerg-ok:
 	say "[if ed yerg is reflexed]though his advice seems cryptic[else]but you'd have to get through to him first[end if]"
 
 to say give-croc:
-		say "[if serpent is in limits]You need to get behind the serpent[else if solo den is unvisited]You can, but you don't have to, visit the den to the west[else if ed yerg is reflexive]You need to make Ed Yerg nicer, first[else]You need to give Ed Yerg the crocus[end if]"
+		say "[if serpent is in Mislit Limits]You need to get behind the serpent[else if solo den is unvisited]You can, but you don't have to, visit the den to the west[else if ed yerg is reflexive]You need to make Ed Yerg nicer, first[else]You need to give Ed Yerg the crocus[end if]"
 
 to say if-cro:
 	if flowerpot is reflexive:
@@ -26359,7 +26359,7 @@ ropins	"The prison ropins can't be opened with a key. Or a word with C-E-E-F-N. 
 log gaol	"It's just there to block you from going anywhere else."
 ropins	"[one of]The prison ropins are locked.[plus][or]What could change that?[plus][or]Or make the ropins UNLOCKED? There's an NPC.[plus][or]The Lone Duck could make the gaol unlocked.[cycling]"
 lone duck	"[one of]You need to bring it back to its owner.[plus][or]In the Obscurest Subsector.[plus][or]It won't follow you, though.[plus][or]If you have the Raves Saver, you can record Dr. Yow while [he-she]'s wordy.[plus][or]This will make the duck follow back to Dr. Yow.[plus][or]The duck can open the lock.[plus][or]How? It is a lone duck.[plus][or]The lone duck can make the gaol UNLOCKED.[minus][cycling]"
-rapier repair	"[one of]The rapier repair machine looks like it could use something.[plus][or]Have you seen anything that looks like a rapier and needs repair?[plus][or]That ragged dagger[if player does not have ragged dagger] you left in the ravages[end if].[plus][or]Put the dagger in the machine.[plus][or]The gizmo may help the kid build something.[minus][cycling]"
+rapier repair	"[one of]The rapier repair machine looks like it could use something.[plus][or]Have you seen anything that looks like a rapier and needs repair?[plus][or]That ragged dagger[if player does not have ragged dagger] you left in the Treading Gradient[end if].[plus][or]Put the dagger in the machine.[plus][or]The gizmo may help the kid build something.[minus][cycling]"
 Thearchy Hatchery	"The Thearchy Hatchery is just sort of there, for a clue. You don't need to do anything with it."
 bot boat	"Two parts of a bot boat are broken. The blaster and turbos."
 blaster	"[one of]The blaster isn't quite as solid as it could be.[plus][or]Maybe you could make the blaster STABLER?[minus][cycling]"
@@ -27339,7 +27339,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]you could've tried to TAN the ant.";
 		else if ant is not in lalaland:
 			say "[2dmiss of cur-reg]you passed by the side-quest to TAN the ant in the scum ant sanctum.";
-		if bogus-plains is in plains:
+		if bogus-plains is in lapsin' plains:
 			say "[2dmiss of cur-reg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 	now cur-reg is towers;
 	if Towers is solved:
@@ -27367,7 +27367,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]you could've made the weirder red wire REWIRED.";
 		if flowerpot is reflexive:
 			say "[2dmiss of cur-reg]you could've made the succor crocus DINGY to stop it dying.";
-		if serpent is in limits:
+		if serpent is in Mislit Limits:
 			say "[2dmiss of cur-reg]you could've made the serpent PRESENT and maybe saved the fellow who died happy.";
 		else if ed yerg is reflexive:
 			say "[2dmiss of cur-reg]you could've made Ed Yerg in the Solo Den behind the serpent GREYED.";
@@ -27532,26 +27532,26 @@ index map with phat path mapped north of austerer.
 
 [others]
 index map with rustic citrus mapped north of carven cavern.
-index map with scape space mapped north of clearing.
+index map with scape space mapped north of clangier clearing.
 index map with Admit-Us Stadium mapped north of scape space.
 
 [towers]
-index map with Topside Deposit mapped east of heights.
-index map with rawest waters mapped east of coastlines.
-index map with mislit limits mapped north of rawest waters
+index map with Topside Deposit mapped east of highest heights.
+index map with rawest waters mapped east of actionless coastlines.
+index map with mislit limits mapped north of rawest waters.
 
 [demo dome]
 index map with ned's dens mapped north of shaven havens.
 
 [otters]
-index map with preserve mapped east of intel inlet.
+index map with perverse preserve mapped east of intel inlet.
 
 [routes]
 index map with cripple clipper mapped west of gates stage.
 index map with ripe pier mapped west of cripple clipper.
 index map with underpass mapped west of ripe pier.
-index map with adobe mapped north of underpass.
-index map with cleric circle mapped north of adobe.
+index map with adobe abode mapped north of underpass.
+index map with cleric circle mapped north of adobe abode.
 index map with idle deli mapped east of cleric circle.
 index map with same mesa mapped south of idle deli.
 
@@ -27561,11 +27561,11 @@ index map with cruelest lectures mapped north of strip of profits.
 
 [troves]
 index map with used lot mapped north of cleric circle.
-index map with pallid mapped north of used lot.
-index map with rotunda mapped north of pallid.
-index map with econ cone mapped east of pallid.
-index map with rathole mapped east of loudest.
-index map with fiefco office mapped east of rathole.
+index map with pallid li'l pad mapped north of used lot.
+index map with rotunda mapped north of pallid li'l pad.
+index map with econ cone mapped east of pallid li'l pad.
+index map with loather rathole mapped east of loudest used lot.
+index map with fiefco office mapped east of loather rathole.
 
 [oyster]
 index map with posh hops shop mapped east of cruelest lectures.
@@ -27575,10 +27575,10 @@ index map with fighter freight mapped east of hero's shore.
 index map with anger range mapped north of olde lode.
 index map with scum ant sanctum mapped north of old places.
 index map with tenfold teflon'd mapped north of horned hedron.
-index map with end den mapped north of plains.
+index map with end den mapped north of lapsin' plains.
 index map with uaah mapped east of end den.
-index map with sand home mapped east of plains.
-index map with lean lane mapped east of sand home.
+index map with handsome sand home mapped east of lapsin' plains.
+index map with lean lane mapped east of handsome sand home.
 
 volume beta testing - not for release
 
@@ -28408,7 +28408,7 @@ carry out whiing:
 
 chapter fixtowing
 
-[* FIXTOW fixes certain warriors in trefoil. The easiest ones. geno daryl blake eldon wade goldy]
+[* FIXTOW fixes certain warriors in Loftier Trefoil. The easiest ones. geno daryl blake eldon wade goldy]
 
 fixtowing is an action out of world.
 
@@ -28417,17 +28417,17 @@ understand the command "fixtow" as something new.
 understand "fixtow" as fixtowing.
 
 carry out fixtowing:
-	if trefoil is visited:
+	if Loftier Trefoil is visited:
 		say "Note: you've visited the Trefoil, so anything goofy that happens is not really fixable. It's best to use this before doing so, so you can access trickier parts of Towers.";
 	repeat with WA running through warriors:
 		if WA is not rodney:
 			now WA is in lalaland;
-	now geno is in Trefoil;
-	now wade is in Trefoil;
-	now goldy is in Trefoil;
-	now daryl is in Trefoil;
-	now blake is in Trefoil;
-	now eldon is in Trefoil;
+	now geno is in Loftier Trefoil;
+	now wade is in Loftier Trefoil;
+	now goldy is in Loftier Trefoil;
+	now daryl is in Loftier Trefoil;
+	now blake is in Loftier Trefoil;
+	now eldon is in Loftier Trefoil;
 	the rule succeeds;
 
 chapter lsing
@@ -28832,13 +28832,13 @@ carry out ploping:
 	if uber-rand-cheat is true:
 		say "You already dumped everyone in the Trefoil and Frontage.";
 		the rule succeeds;
-	if trefoil is visited and frontage is visited:
+	if Loftier Trefoil is visited and frontage is visited:
 		say "You already went to the Trefoil and Frontage, so I'm going to make you restart, because reasons. It might break too much.";
 		the rule succeeds;
-	if trefoil is visited:
+	if Loftier Trefoil is visited:
 		say "Skipping the Trefoil as you've been there.";
 	else:
-		now all warriors are in trefoil;
+		now all warriors are in Loftier Trefoil;
 		say "Dumping every warrior in the Trefoil.";
 		say "ts, towers, in, y for towers.";
 	if macked-out > 0:
@@ -28862,9 +28862,9 @@ every turn when player is in frontage and macks are in frontage and uber-rand-ch
 		say " [right-word entry in upper case]";
 	say ".";
 
-every turn when player is in trefoil and uber-rand-cheat is true (this is the uber-towers rule):
+every turn when player is in Loftier Trefoil and uber-rand-cheat is true (this is the uber-towers rule):
 	say "Adjectives available:";
-	repeat with QQ running through warriors in trefoil:
+	repeat with QQ running through warriors in Loftier Trefoil:
 		choose row with the-from of QQ in table of towers anagrams;
 		say " [right-word entry in upper case]";
 	say ".";
@@ -28893,10 +28893,10 @@ to place-warrior (myp - a number) and (myi - a number):
 		now myi2 is max-pod;
 	repeat with QQ running through warriors:
 		if pod-num of QQ is myp and pod-ord of QQ is myi2:
-			if QQ is in trefoil:
+			if QQ is in Loftier Trefoil:
 				say "Oops, we placed [QQ] twice. [myp] [myi2].";
-			now QQ is in Trefoil;
-			say "[QQ] to trefoil.";
+			now QQ is in Loftier Trefoil;
+			say "[QQ] to Loftier Trefoil.";
 			the rule succeeds;
 	say "BUG: didn't get anything for pod [myp] index [myi2]."
 
@@ -28944,7 +28944,7 @@ carry out seeding: [100 = ordering macks, 200 = skip trefoil, 400 = skip frontag
 			else:
 				assign-fixed-mack-priority;
 	if the remainder after dividing seedflags by 4 < 2:
-		if trefoil is visited and number of warriors in lalaland > 0: [first, seed the start of TOWERS]
+		if Loftier Trefoil is visited and number of warriors in lalaland > 0: [first, seed the start of TOWERS]
 			say "Skipping Trefoil seeding as you've already disposed of one warrior. Restart if you wish to re-seed.";
 		else:
 			if act-index > 5:
@@ -29211,7 +29211,7 @@ carry out skiing:
 		say "You need to be in Towers for this test command.";
 	else:
 		now all guardians are in lalaland;
-		now smart kid is in coastlines;
+		now smart kid is in actionless coastlines;
 		now gizmo is in lalaland;
 		now bot boat is in actionless coastlines;
 		move player to actionless coastlines;
@@ -29328,7 +29328,7 @@ every turn when vanscan is true:
 
 chapter coping
 
-[* repositions guardians, sends you to copse]
+[* repositions guardians, sends you to Scope Copse]
 
 coping is an action out of world.
 
@@ -29337,7 +29337,7 @@ understand the command "cop" as something new.
 understand "cop" as coping.
 
 carry out coping:
-	move player to copse;
+	move player to Scope Copse;
 	reposition-guardians;
 	the rule succeeds;
 
