@@ -473,7 +473,7 @@ Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
 use MAX_NUM_STATIC_STRINGS of 90000.
 
-use MAX_PROP_TABLE_SIZE of 540000.
+use MAX_PROP_TABLE_SIZE of 560000.
 
 use MAX_STATIC_DATA of 750000.
 
@@ -3865,6 +3865,10 @@ check entering a portal:
 
 to add-errs (reg - a region):
 	repeat through regtab of reg:
+		if there is a this-room entry and this-room entry is not a room:
+			d "[this-room entry] wrongly listed as a room in [reg], [this-cmd entry]f.";
+		if there is a this-item entry and this-item entry is a room:
+			d "[this-item entry] wrongly listed as a room in [reg], [this-cmd entry].";
 		if there is no this-reg entry or this-reg entry is a region:
 			if there is no hashval entry or hashval entry is 0:
 				let XYZ be the hash of this-cmd entry;
@@ -6088,7 +6092,7 @@ carry out troves-hinting:
 		if diapers are reflexive:
 			try objhinting diapers instead;
 		try objhinting ltb instead;
-	if player is in Dour Tan Rotunda:
+	if player is in Browse Bowers:
 		try objhinting brochure instead;
 	if location of player is Econ Cone:
 		if rivets are reflexive and prai is reflexive:
@@ -6878,7 +6882,7 @@ Adobe Abode	"This do be a one-room place. You can really only go outside."
 Loather Rathole	"[if cold is reflexive]You're too cold. While haste heats, the new random direction would offer no more [i]heat[r] than here.[else]You've got to race after that guy, but you wonder if it really matters.[end if]" [troves]
 Used Lot	"[if noun is down]Yes, the cellar is down, but you can't remember WHERE the passage down to the cellar is.[else if post is reflexed]You haven't figured a way to get to the cellar, man. Running away won't help.[else]You can't run from this big fight now that you've traced the robber![end if]"
 Pallid Li'l Pad	"You need to look at something that would inspire you to move, instead."
-Dour Tan Rotunda	"You are definitely going places, but you aren't going places by actually WALKING. Perhaps if you meditate on that brochure."
+Browse Bowers	"You are definitely going places, but you aren't going places by actually WALKING. Perhaps if you meditate on that brochure."
 Econ Cone	"That could lead to ransom manors."
 FiefCo Office	"You're at the very top. You don't really want to change that without really good motivation."
 Burnt Brunt	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
@@ -7760,7 +7764,7 @@ before smelling (this is the you can smell some stuff some places rule):
 		say "Eew-gas sewage. Skint-stink." instead;
 	if player is in Pallid Li'l Pad:
 		say "Ew--mild mildew. A mustier semi-rut." instead;
-	if player is in Dour Tan Rotunda or player is in skyscraper or player is in FiefCo Office:
+	if player is in Browse Bowers or player is in skyscraper or player is in FiefCo Office:
 		say "Perfumed. Dump-free." instead;
 	if mrlp is presto: [presto]
 		say "[if cur-score of presto is 0]Things turn to ash in your nose[else]You don't smell anything that'd make you say what you've needed to say in this area, which is a good thing[end if]." instead;
@@ -8895,7 +8899,7 @@ what-a-bee	what-a-bee	false	607808737	--	"believe"	"believe"	"You remind yoursel
 cellar door	cellar door	false	341950993	Pallid Li'l Pad	"recall"	"recall"	"[rec-der]"
 cellar door	cellar door	false	514122776	Pallid Li'l Pad	"derive"	"derive"	"[rec-der]"
 diapers	diapers	false	459079590	--	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning--and after some furnace care fun, you find a copy of LEAD, the first big motivational book in Yorpwald. You don't have time to worry whether positive thinking found it. You have too much positive thinking to do."
-ltb	ltb	false	204836855	Dour Tan Rotunda	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
+ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
 brochure	brochure	false	503231922	econ cone	"desire"	"desire"	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
 prai	prai	false	438050501	--	"aspire"	"aspire"	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 rivets	rivets	false	564671562	--	"strive"	"strive"	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if prai is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
@@ -9350,7 +9354,7 @@ instead of doing something with satchel when player has satchel:
 	say "You've gotten the settler from the satchel, and you don't need to do more." instead;
 
 to say eicond:
-	say "[if cur-score of troves is 0]You can picture yourself, successful, extolling this book as what got you started[else if player is in rathole]You feel you can and will do better than here[else if player is in Used Lot]You dare to feel superior to whoever might be walking around here[else if player is in Pallid Li'l Pad]The book convinces you that average is not enough for a thinker like you, as long as you are thinking like it. You buck up[else if player is in Dour Tan Rotunda]Someone semi-important-looking walks by and commends your choice of reading material, and you say you love it[else if player is in Econ Cone]You even successfully turn back an insult from someone who is all LESS READING MORE DOING[else if player is in fiefco]You turbo-speed-read, since you've LIVED a lot of this advice[end if], ignoring how useless the book is for helping you figure what to do right now. Eh well, you've got a spiel to tell others how THEY better use it"
+	say "[if cur-score of troves is 0]You can picture yourself, successful, extolling this book as what got you started[else if player is in rathole]You feel you can and will do better than here[else if player is in Used Lot]You dare to feel superior to whoever might be walking around here[else if player is in Pallid Li'l Pad]The book convinces you that average is not enough for a thinker like you, as long as you are thinking like it. You buck up[else if player is in Browse Bowers]Someone semi-important-looking walks by and commends your choice of reading material, and you say you love it[else if player is in Econ Cone]You even successfully turn back an insult from someone who is all LESS READING MORE DOING[else if player is in fiefco]You turbo-speed-read, since you've LIVED a lot of this advice[end if], ignoring how useless the book is for helping you figure what to do right now. Eh well, you've got a spiel to tell others how THEY better use it"
 
 to say rscheck:
 	if word number 1 in the player's command is "resealed":
@@ -13891,13 +13895,21 @@ instead of eating lager:
 instead of taking lager:
 	say "No, touching or holding a can almost always leads to drinking from it. You may even be able to ignore the Large Regal Lager altogether. But you will need to steel yourself before taking it."
 
-book Dour Tan Rotunda
+book Browse Bowers
 
-Dour Tan Rotunda is an innie room in Troves. "This could also be a rotund rotunda, but obesity is not very posh. Nobody is quite happy here. It's posh enough, but designed specifically to make people want even more. There's not much to do except stare at a brochure just lying around. But oh, what a brochure!".
+Browse Bowers is an innie room in Troves. "It's very look-don't-touch here. In fact, for someone so recently poor as yourself, you'd feel guilty walking around and looking. So there's not much to do except stare at a brochure just lying around. But oh, what a brochure!".
+
+chapter dour tan rotunda
+
+the dour tan rotunda is scenery in Browse Bowers. "It looks sad and neglected. It might've been really big before the Browse Bowers, bigger and slicker, came along--say, before Version 4 of this game."
+
+instead of doing something with the dour tan rotunda:
+	if action is procedural, continue the action;
+	say "The rotunda has not kept up with progress. Do not worry about it.";
 
 chapter brochure
 
-a brochure is vanishing scenery in Dour Tan Rotunda. "[one of]'Got here? No debt to bend? Go there!'[paragraph break][or][stopping][randbla]. [one of]Obviously no un-go-ish housing here. [or][stopping]The page-end reads RESIDE! RESIDE! RESIDE!"
+a brochure is vanishing scenery in Browse Bowers. "[one of]'Got here? No debt to bend? Go there!'[paragraph break][or][stopping][randbla]. [one of]Obviously no un-go-ish housing here. [or][stopping]The page-end reads RESIDE! RESIDE! RESIDE!"
 
 a-text of brochure is "RYRYRY". b-text of brochure is "R???RG". parse-text of brochure is "x[sp]e[sp]s[sp]i[sp]x[sp]e". brochure is cheat-spoilable.
 
@@ -27560,9 +27572,9 @@ index map with strip of profits mapped north of cripple clipper.
 index map with cruelest lectures mapped north of strip of profits.
 
 [troves]
-index map with used lot mapped north of cleric circle.
+index map with loudest used lot mapped north of cleric circle.
 index map with pallid li'l pad mapped north of used lot.
-index map with rotunda mapped north of pallid li'l pad.
+index map with browse bowers mapped north of pallid li'l pad.
 index map with econ cone mapped east of pallid li'l pad.
 index map with loather rathole mapped east of loudest used lot.
 index map with fiefco office mapped east of loather rathole.

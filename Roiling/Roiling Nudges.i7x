@@ -282,6 +282,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "picture"	566810127	Pallid Li'l Pad	--	--	"It's not just any old picture. It's of a sad pier."
 "spider"	456891772	--	diapers	--	"The diapers, the sad pier--the spider only fits in as *a* spider."
 "glare"	301731271	--	--	glaring-futile rule	"You stare into space some more but get distracted."
+"rotunda"	460016620	browse bowers	--	--	"[rotun]."
+"dour"	285811276	browse bowers	--	--	"[rotun]."
+"tan"	174205344	browse bowers	--	--	"[rotun]."
 "brochure"	552618888	--	brochure	--	"It's more the blurb at the end than the brochure."
 "cone"	290071779	Econ Cone	--	--	"[cone-rec]."
 "recent"	531959132	Econ Cone	--	--	"[cone-rec]."
@@ -309,9 +312,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bedroom"	465358213	--	--	pad-now-bedroom rule	"[locname]."
 "office"	319186909	fiefco	--	--	"[locname]."
 "fief"	225828747	fiefco	--	--	"[locname-part]."
-"rotunda"	460016620	rotunda	--	--	"[locname]."
-"dour"	285811276	rotunda	--	--	"[locname-part]."
-"tan"	174205344	rotunda	--	--	"[locname-part]."
 "poverty"	701582538	--	--	degen-true rule	"There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details."
 "trove"	497757327	--	--	degen-true rule	"[not-the-reg]."
 "storev"	594031293	--	--	degen-true rule	"[not-the-reg]."
@@ -611,7 +611,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "brownies"	624010487	--	brownies	--	"[eat-pastry]."
 "owers"	491691228	--	brownies	--	"[eat-pastry]."
 "bin"	132319259	--	brownies	--	"[eat-pastry]."
-"route"	495698314	--	outer route	--	"[towersloc]." [OUTER ROUTE 0 1]
+"route"	495698314	outer route	--	--	"[towersloc]." [OUTER ROUTE 0 1]
 "sway"	328755809	outer route	--	--	"You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere useful"
 "camp"	166734515	campsite	--	--	"[gosh-camp]!"
 "site"	372182939	campsite	--	--	"[gosh-camp]!"
@@ -638,15 +638,15 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "solve"	459411311	--	solve-a-loaves	--	"[eat-pastry]."
 "loaves"	461599129	--	solve-a-loaves	--	"[eat-pastry]."
 "loaf"	156869130	--	solve-a-loaves	--	"[not-singular-hp]."
-"desert"	561349094	--	Nude Dune	--	"Can't change the desert behind th dunes."
+"desert"	561349094	Nude Dune	--	--	"Can't change the desert behind th dunes."
 "shaven"	439622520	shaven havens	--	--	"[towersloc]." [SHAVEN HAVENS 1 4]
 "haven"	343348554	shaven havens	--	--	"[towersloc]."
 "lone"	324880033	--	lone duck	--	"It's not just any lone animal. It's a lone DUCK."
 "duck"	198073659	--	lone duck	--	"It's not just any duck. [if duck is returned]But it's served its purpose[else]It's a LONE duck[end if]."
 "idtag"	203919473	--	ID Tag	--	"ID tag: dig at it? Gad."
 "unlocked"	522953692	--	--	duck-cant rule	"The lone duck looks around for something to do but can't find anything. Well, not here. And not like that."
-"ravages"	453544036	--	shaven havens	--	"[rav-chao]."
-"ravage"	357270070	--	shaven havens	--	"[rav-chao]."
+"ravages"	453544036	shaven havens	--	--	"[rav-chao]."
+"ravage"	357270070	shaven havens	--	--	"[rav-chao]."
 "unblest"	573436152	sunbelt	--	--	"[towersloc]." [UNBLEST SUNBELT 2 1]
 "cans"	186374877	--	Nerd-Aid	--	"[nerd-a]."
 "nerd"	303066509	--	Nerd-Aid	--	"[nerd-a]."
@@ -680,8 +680,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "retape"	527699816	--	raves saver	--	"The raves saver has limited functionality, alas."
 "dagger"	301546223	--	dagger	--	"You feel no energy from the dagger. Perhaps it needs to be repaired mechanically."
 "weed"	384576080	--	weeds	--	"Gumming up one weed wouldn't get the others."
-"salted"	404220839	deltas	--	--	"[towersloc]." [SALTED DELTAS 2 3]
-"delta"	307946873	deltas	--	--	"[towersloc]."
+"salted"	404220839	salted deltas	--	--	"[towersloc]." [SALTED DELTAS 2 3]
+"delta"	307946873	salted deltas	--	--	"[towersloc]."
 "shoals"	360184465	--	shoals	--	"[shoaly]."
 "shoal"	263910499	--	shoals	--	"[shoaly]."
 "atheist"	514763074	--	atheists	--	"Changing only one atheist would only help you so long. The rest would restore their companion's (lack of) faith shortly."
@@ -713,11 +713,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "doctor"	377173649	--	Dr Yow	--	"That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean."
 "wordy"	410999494	--	Dr Yow	--	"Dr. Yow seems to ponder something for a second but then shakes [his-her] head[if Dr Yow has been rowdy and Dr Yow has been wordy]--[he-she]'s probably shown [his-her] full range of emotions[else if Dr Yow has not been rowdy and Dr Yow has not been wordy]--but [he-she] can't break out of [his-her] shell[else]--maybe there's one more way for [him-her] to be, to talk[end if]."
 "tentative"	788195264	--	--	kid-can-learn rule	"[kid-first] is fully attentive. Don't ruin a good thing!"
-"strati"	434998469	--	Strati Strait	--	"[towersloc]." [STRATI STRAIT 3 2]
-"could"	273306897	--	Strati Strait	--	"[could-cloud]."
-"coulds"	369580863	--	Strati Strait	--	"[could-cloud]."
-"actionless"	686724232	coastlines	--	--	"[towersloc]." [ACTIONLESS COASTLINES 3 3]
-"coastline"	590450266	coastlines	--	--	"[towersloc]."
+"strati"	434998469	Strati Strait	--	--	"[towersloc]." [STRATI STRAIT 3 2]
+"could"	273306897	Strati Strait	--	--	"[could-cloud]."
+"coulds"	369580863	Strati Strait	--	--	"[could-cloud]."
+"actionless"	686724232	Actionless Coastlines	--	--	"[towersloc]." [ACTIONLESS COASTLINES 3 3]
+"coastline"	590450266	Actionless Coastlines	--	--	"[towersloc]."
 "maturation"	653353366	--	natatorium	--	"The natatorium can't be changed. You need to save all your energy for the Curst Palace, anyway"
 "thearchy"	534357183	--	hatchery	--	"The hatchery can't be changed. You need to save all your energy for the Curst Palace, anyway"
 "dirk stam"	469925871	--	smart kid	--	"The kid looks at you curiously. You probably don't need to change [his-her] name or intelligence."
@@ -731,8 +731,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "boat"	198069318	--	bot boat	--	"[fix-boat-parts]."
 "boatbot"	393950818	--	bot boat	--	"[fix-boat-parts]."
 "turbo"	386311110	--	turbos	--	"You [if turbos are reflexed]already dealt[else]need to deal[end if] with both turbos."
-"wire"	366057531	weirder red wire	--	--	"The wires are okay. They're just organized WEIRDER."
-"wires"	462331497	weirder red wire	--	--	"The wires are okay. They're just organized WEIRDER."
+"wire"	366057531	--	weirder red wire	--	"The wires are okay. They're just organized WEIRDER."
+"wires"	462331497	--	weirder red wire	--	"The wires are okay. They're just organized WEIRDER."
 "waster"	522636487	rawest waters	--	--	"Ew. Rats. You do feel like a waster, doing something with the waters. Perhaps the northern--or eastern--shore can work better." [RAWEST WATERS 4 3]
 "spray"	387610798	rawest waters	--	--	"The spray will still drown you if you don't figure a way to move somewhere."
 "water"	426362521	rawest waters	--	--	"The water is too elemental and generic to change. Plus the badlands are dry enough. How to get closer to a shore?"
@@ -742,7 +742,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "north"	368976205	rawest waters	--	--	"Hmm. Concentrate on a shore--northern or eastern--not a direction."
 "east"	329377911	rawest waters	--	--	"Hmm. Concentrate on a shore--northern or eastern--not a direction."
 "southwest"	851249533	rawest waters	--	--	"[diag-dir-rej]."
-"mislit"	407258668	limits	--	--	"[towersloc]." [MISLIT LIMITS 4 4]
+"mislit"	407258668	mislit limits	--	--	"[towersloc]." [MISLIT LIMITS 4 4]
 "pester"	621785964	--	serpent	--	"The serpent doesn't just pester, it's pester'n."
 "present"	690693472	--	--	serpent-hiding rule	"The serpent is taken care of."
 "occurs"	399067323	--	crocus	--	"[if flowerpot is reflexive]You realize you can't change the crocus to something, but you can change its condition--it's dying[else]The crocus is OK as-is. In fact, it could make a nice gift for someone who could appreciate it[end if]."
@@ -1424,6 +1424,9 @@ this is the glaring-futile rule:
 	if player is in pallid and lager is in lalaland:
 		the rule succeeds;
 	the rule fails;
+
+to say rotun:
+	say "The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here"
 
 to say cone-rec:
 	say "You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like [if prai is reflexed and rivets are reflexed]how to go west[else if prai is reflexive and rivets are reflexive]how to be inspired by that statue[else]going west or, maybe, that statue again[end if]"
