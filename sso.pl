@@ -23,71 +23,88 @@ my $mod = "c:\\games\\inform\\roiling.inform\\Source\\tosort2.txt";
 
 my $inc = "c:\\Program Files (x86)\\Inform 7\\Inform7\\Extensions\\Andrew Schultz";
 my $roil = "c:\\games\\inform\\roiling.inform\\source";
+
 ########################uncomment below for testing
 $inc = $roil;
 
 my $rr = "Roiling Random Text.i7x";
 my $sr = "Shuffling Random Text.i7x";
 
+##########################txtfile is the list of regexes after the 2nd quote
 my $txtfile = __FILE__;
 $txtfile =~ s/pl$/txt/;
 
 ###################################globals
 my %regex;
 my %hash;
+my %details;
+my %runoff;
+my @roughname = ();
 my @tabname = ();
 my $line, my $line2;
 my @intro = ();
 my @endLump = ();
+my $count = 0;
 
 my %caps;
 my %punc;
 my %quotes;
 my %dupes;
 
+##################################options
 my $unsorted = 0;
 my $blanksYet = 0;
 my $idx = 0;
 my $y;
-my $copyBack = 1; # this default can change
+my $copyBack = 0; # this default can change
 my $compare = 0;
 my $numbers = 0;
 my $statsOpen = 0;
 my $inHeader = 1;
 my $header = "";
 my $wob = 0;
-my $moveOver = 0;
+my $moveToHeader = 1;
+my $copyHeaderBack = 0;
+my $compareRoil = 0;
+my $compareShuf = 0;
 
-if (defined($ARGV[0]))
+while ($count <= $#ARGV)
 {
-  if ($ARGV[0] =~ /^[0-9]/) { doAnagrams($ARGV[0]); }
-  if ($ARGV[0] =~ /\?/) { usage(); exit(); }
-  if ($ARGV[0] =~ /e/) { `$orig`; exit(); }
-  if ($ARGV[0] =~ /o/) { outputLast(); exit(); }
-  if ($ARGV[0] =~ /r/) { `$txtfile`; exit(); } # forcing options first
-  if ($ARGV[0] =~ /d/) { $copyBack = 0; }
-  if ($ARGV[0] =~ /f/) { $copyBack = 1; }
-  if ($ARGV[0] =~ /n/) { $numbers = 1; }
-  if ($ARGV[0] =~ /s/) { $statsOpen = 1; }
-  if ($ARGV[0] =~ /m/) { $moveOver = 1; }
-  if ($ARGV[0] =~ /t/) { $inc = $roil; } #testing
-  if ($ARGV[0] =~ /c/) #I'd put the options in alphabetical order, but I want comparing to overrule copy back
+  for ($ARGV[$count])
   {
+  /^[0-9]/ && do { doAnagrams($ARGV[0]); };
+  /\?/ && do { usage(); exit(); };
+  /^-?e$/ && do { `$orig`; exit(); };
+  /^-?o$/ && do { outputLast(); exit(); };
+  /^-?r$/ && do { `$txtfile`; exit(); }; # forcing options first
+  /^-?d$/ && do { $copyBack = 0; $count++; next; };
+  /^-?f$/ && do { $copyBack = 1; $count++; next; };
+  /^-?n$/ && do { $numbers = 1; $count++; next; };
+  /^-?s$/ && do { $statsOpen = 1; $count++; next; };
+  /^-?m$/ && do { $moveToHeader = 1; $count++; next; };
+  /^-?cr$/ && do { $compareRoil = 1; $count++; next; }; #testing
+  /^-?cs$/ && do { $compareShuf = 1; $count++; next; }; #testing
+  /^-?cb$/ && do { $compareShuf = $compareRoil = 1; $count++; next; }; #testing
+  /^-?t$/ && do { $inc = $roil; $count++; next; }; #testing
+  /^-?c$/ && do
+  {#I'd put the options in alphabetical order, but I want comparing to overrule copy back
     $compare = 1;
 	if ($copyBack)
 	{
 	  print "Turning off copyBack.\n";
 	  $copyBack = 0;
     }
+	$count++; next;
+  };
+  print "Invalid parameter: $ARGV[0]\n===============\n";
+  usage();
   }
-  $ARGV[0] =~ s/[cdfnstrom-]//g;
-  if ($ARGV[0]) { print "Invalid letters: $ARGV[0]\n===============\n"; usage(); }
 }
 
-die();
 dupget("$inc\\$rr");
 dupget("$inc\\$sr");
 
+print "Read mapping file...\n";
 ####################################open the mapping file
 open(A, $txtfile) || die();
 
@@ -96,7 +113,22 @@ while ($line=<A>)
   if ($line =~ /^;/) { last; }
   if ($line =~ /^#/) { next; }
   chomp($line);
+  if ($line eq "")
+  {
+    print "Blank line $.\n";
+	next;
+  }
   my @hashy = split(/\t/, $line);
+  if ($hashy[0] eq "!")
+  {
+    if ($#hashy != 2)
+	{
+	  print "Bad sorter line $., $line.\n";
+	}
+    $details{$hashy[1]} = $hashy[2];
+	push(@roughname, $hashy[1]);
+	next;
+  }
   if ($#hashy < 1) { die "Hash lines need a \\t for what table it maps to and the regex: line $. as $line fails."; }
   push(@tabname, $hashy[0]);
   $regex{$hashy[0]} = $hashy[1];
@@ -113,6 +145,7 @@ close(A);
 
 open(A, "$orig") || die();
 
+OUTER:
 while ($line = <A>)
 {
   if ($inHeader)
@@ -120,20 +153,29 @@ while ($line = <A>)
     if ($line =~ /^#/) { $header .= $line; next; }
 	$inHeader = 0;
   }
+  if ($line =~ /^#/) { next; }
   if ($line =~ /^========/) { $unsorted = 1; next; }
   if ($line !~ /[a-z]/i) { $blanksYet = 1; next; }
   chomp($line);
   if ($dupes{wordsonly($line)}) { print "Duplicate $line ($.) details $dupes{wordsonly($line)}\n"; }
   checkAnagram($line);
-  if (($line !~ /^\"/) && (!$blanksYet)) { print "Quotes added line $., $line\n"; $line = "\"$line\""; }
+  if (($line !~ /^\"/) && (!$blanksYet)) { print "Quotes added line $., $line\n"; $line = "\"$line"; if ($line !~ /\"$/) { $line .= "\""; } }
   if ($unsorted) { push (@endLump, $line); next; }
   $idx = 0;
   $line2 = $line; $line2 =~ s/ *\[(p)?\]$//; # ignore duplicator at line end
+  for $y (@roughname)
+  {
+    if ($line =~ /\"$y$/)
+	{
+	  $runoff{$y} .= "$line\n";
+	  next OUTER;
+	}
+  }
   for $y (@tabname)
   {
     if ($line =~ /$regex{$y}/)
     {
-      if (($quotes{$y} == -1) && ($line =~ /'/)) { print "Excess quotes: $line\n"; last; }
+      if (($quotes{$y} == -1) && ($line =~ /(\W'|'\W)/)) { print "Excess quotes: $line\n"; last; }
       if (($quotes{$y} == 1) && ($line !~ /'/)) { print "Need quotes: $line\n"; last; }
       #if ($idx == 3) { print "$idx ($.). $y: $line\n"; }
 	  $hash{$y} .= "$line\n"; last;
@@ -146,7 +188,11 @@ while ($line = <A>)
 
 close(A);
 
-if ($moveOver) { moveOver($rr); moveOver($sr); }
+if ($moveToHeader)
+{
+  moveOver($rr);
+  moveOver($sr)
+}
 
 open(B, ">$mod");
 
@@ -154,7 +200,10 @@ print B $header;
 
 alfPrint(\@intro);
 
-print B "\n\n";
+for my $j (sort keys %runoff)
+{
+  print B "\n#$details{$j}\n$runoff{$j}";
+}
 
 for my $j (@tabname)
 {
@@ -186,12 +235,12 @@ if ($numbers)
 
 if ($statsOpen) { `$roil\\sso-stat.txt`; }
 
-if (!$copyBack) { print "Did not copy file over.\n"; }
+if (!$copyBack) { print "Did not copy tosort2.txt back to tosort.txt.\n"; }
 else
 {
   my $aroi = meaningful($orig);
   my $a2 = meaningful($mod);
-  if (($aroi == $a2) || ($moveOver))
+  if (($aroi == $a2) || ($moveToHeader))
   {
   print "Copying back over.\n"; copy $mod, $orig;
   } else { print "Mismatch of meaningful lines: $aroi to $a2.\n"; }

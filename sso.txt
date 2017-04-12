@@ -2,6 +2,17 @@
 #list of regular expressions to sort random text by, from highest priority to lowest
 #sso.txt, called by sso.pl
 ##############the numbers are: capitalization (1=sentence 2=title 3=all caps) | punctuation | quotes (1=necc 0=either way -1=neither)
+!	t	t1=animal friends t2=elm/merle t3=battle t4=machines t5=taunts
+!	g	g1=cuss g2=death g3=empty g4=help g5=no g6=nonvi g7=sing g8=sleep g9=undo g0=undo rej g10=wait g11=yessage
+!	o	o2=rappers (o3=biopics) o4=comedians o5=elmo o6=games o7=movies o8=talkshows o9=tvshows o0=lafhouse o01=lousyhit o02=mob o03=oldies (o04=books) o05=chatter
+!	h	h1=political slogans (default h2 = selly yells)
+!	p	p1=bedding p2=catechism p3=lr chat p4=lr idols p5=research p6=smart ppl
+!	u	u1=horbert bye u2=musings u4=deli foods u5=moralizers (u3=ALL CAPS)
+!	s	s1=lecture s2=movies s3=porn movies s4=ads s5=competitors
+!	r	r1=crowd r2=red bull
+#v v1=sked items v2=divorces v3=iffy advice v4=gritty v5=non-skeds v6=posh v7=bosses v8=fancy bums v9=real est ads v0=bestsellers vx=your songs
+#w w1=gizmo w2=rodney
+#y y1=aunt y2=bar y3=casper y4=other bars y5=fish fries y6=theses y7=gossip y8=girls
 ####################################################################################
 #Biopics, then motivational, then regular books
 xxm3	\[r\].*\t(true|false)	2	-1	-1
@@ -30,7 +41,7 @@ xxp2	\"(catechism|cat|p2)$	1	1	0
 xxp3	\"(lrchat|p3)$	1	1	0
 xxp4	\"(lridols|idols|p4)$	2	-1	-1
 xxp5	\"(p5|res|research)$	0	-1	-1
-xxp6	\"(p6|smart)$`2	-1	-1
+xxp6	\"(p6|smart)$	2	-1	-1
 ##################OTTERS
 xxt1	\"(t1|animal|animals)$	0	-1	-1
 xxt2	\"(t2|elmer|merle)$	1	1	0
@@ -51,7 +62,7 @@ xxv5	\"(v5|sked)$	2	-1	-1
 xxv6	\"(v6|posh)$	1	1	1
 xxv7	\"(v7|boss|bosses)$	2	-1	-1
 xxv8	\"(v8|bum|bums)$	2	-1	-1
-xxv9	\"(v9|realest(ate)?$	2	-1	-1
+xxv9	\"(v9|realest(ate)?)$	2	-1	-1
 xxvx	\"(vx|you(r)?song)$	2	-1	-1
 ############################w 2 = rodney bluster 1 = gizmo parts
 xxw1	\"w(1?)$	0	-1	-1
@@ -89,6 +100,7 @@ xxg0	\"(g0|undoy|undo)$	1	1	0
 xxg10	\"(g10|wait|z)$	1	1	0
 xxg11	\"(g11|yes)$	1	1	-1
 #################################original
+#o o2=rappers (o3=biopics) o4=comedians o5=elmo o6=games o7=movies o8=talkshows o9=tvshows o0=lafhouse o01=lousyhit o02=mob o03=oldies (o04=books) o05=chatter
 xxm1	\"(o1|ads|ad)$	2	0	1
 xxm2	\"(o2|rap)$	2	-1	-1
 xxm3	\"(o3|bio)$	2	-1	-1
@@ -98,9 +110,10 @@ xxm6	\"(o6|comp|game)$	2	-1	-1
 xxm7	\"(o7|movie)$	2	-1	-1
 xxm8	\"(o8|talk)$	2	-1	-1
 xxm9	\"(o9|tv)$	2	-1	-1
-xxm01	\"(o01|laugh)$	2	-1	-1
-xxm02	\"(o02|lousy|hit)$	2	-1	-1
-xxm03	\"(o03|mob)$	2	-1	-1
+xxm0	\"(o0|o00|laf|laugh)$	2	-1	-1
+xxm01	\"(o01|hits)$	2	-1	-1
+xxm02	\"(o02|mob)$	0	1	1
+xxm03	\"(o03|oldies)$	2	-1	-1
 xxm04	\"(o04|bk)$	2	-1	-1
 xxm05	\"(o05|sport|sports)$	1	1	0
 ;
