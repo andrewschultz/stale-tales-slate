@@ -29382,6 +29382,33 @@ after fliptoing when exitall is true:
 	try exitsing;
 	continue the action;
 
+chapter nuding
+
+nuding is an action out of world.
+
+understand the command "nud" as something new.
+
+understand "nud" as nuding.
+
+carry out nuding:
+	let nudges be 0;
+	let showit be false;
+	repeat through regtab of mrlp:
+		now showit is false;
+		if there is a this-item entry and this-item entry is visible:
+			now showit is true;
+		if there is a this-room entry and player is in this-room entry:
+			now showit is true;
+		if there is a this-rule entry:
+			follow the this-rule entry;
+			if the rule succeeded:
+				now showit is true;
+		if showit is true:
+			say "[this-cmd entry] can be nudged.";
+			increment nudges;
+	if nudges is 0, say "nothing oh dear that's wrong!";
+	else say "total nudge(s) [nudges]"
+
 chapter rejching
 
 [* this checks for adequate rejects]
