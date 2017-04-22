@@ -10,9 +10,10 @@
 !	u	u1=horbert bye u2=musings u4=deli foods u5=moralizers (u3=ALL CAPS)
 !	s	s1=lecture s2=movies s3=porn movies s4=ads s5=competitors
 !	r	r1=crowd r2=red bull
-#v v1=sked items v2=divorces v3=iffy advice v4=gritty v5=non-skeds v6=posh v7=bosses v8=fancy bums v9=real est ads v0=bestsellers vx=your songs
-#w w1=gizmo w2=rodney
-#y y1=aunt y2=bar y3=casper y4=other bars y5=fish fries y6=theses y7=gossip y8=girls
+!  v v1=sked items v2=divorces v3=iffy advice v4=gritty v5=non-skeds v6=posh v7=bosses v8=fancy bums v9=real est ads v0=bestsellers vx=your songs
+!  w w1=gizmo w2=rodney
+!  y y1=aunt y2=bar y3=casper y4=other bars y5=fish fries y6=theses y7=gossip y8=girls
+!  ms 1=camp 2=condo 3=nerds 4=psa
 ####################################################################################
 #Biopics, then motivational, then regular books
 xxm3	\[r\].*\t(true|false)	2	-1	-1

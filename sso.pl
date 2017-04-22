@@ -18,15 +18,15 @@ use File::Copy qw(copy);
 use Math::Prime::Util "gcd";
 
 ####################################constants
-my $orig = "c:\\games\\inform\\roiling.inform\\Source\\tosort.txt";
-my $mod = "c:\\games\\inform\\roiling.inform\\Source\\tosort2.txt";
-
-my $inc = "c:\\Program Files (x86)\\Inform 7\\Inform7\\Extensions\\Andrew Schultz";
 my $roil = "c:\\games\\inform\\roiling.inform\\source";
+my $inc = "c:\\Program Files (x86)\\Inform 7\\Inform7\\Extensions\\Andrew Schultz";
+
+my $orig = "$roil\\tosort.txt";
+my $mod = "$roil\\tosort2.txt";
+my $test = "$roil\\sso-test.txt";
+my $stat = "$roil\\sso-stat.txt";
 
 ########################uncomment below for testing
-$inc = $roil;
-
 my $rr = "Roiling Random Text.i7x";
 my $sr = "Shuffling Random Text.i7x";
 
@@ -228,12 +228,12 @@ if ($numbers)
 
   my ($second, $minute, $hour, $dayOfMonth, $month, $yearOffset, $dayOfWeek, $dayOfYear, $daylightSavings) = localtime(time);
   my $out = sprintf("%d,%d,%d,%d-%02d-%02d %02d:%02d:%02d\n", ($#intro+1), ($#endLump+1), $totalNonEmpty, $yearOffset+1900, $month+1, $dayOfMonth+1, $hour, $minute, $second);
-  open(B, ">>$roil\\sso-stat.txt");
+  open(B, ">>$stat.txt");
   printf B $out;
   close(B);
 }
 
-if ($statsOpen) { `$roil\\sso-stat.txt`; }
+if ($statsOpen) { `$stat`; }
 
 if (!$copyBack) { print "Did not copy tosort2.txt back to tosort.txt.\n"; }
 else
