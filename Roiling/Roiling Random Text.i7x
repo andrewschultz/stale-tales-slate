@@ -3685,7 +3685,6 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "Stoudemire Udometries"	false
 "Strachan's Trash Cans"	false
 "Streed's Dessert"	false []
-"Streperous Superstore"	false
 "Stressed? Desserts!"	true
 "Striating Attirings"	false
 "Studio B OUTBIDS!"	true
@@ -6720,7 +6719,7 @@ blurb
 "Olin's Losin['] Lions"
 "Olsen's Lesson"
 "One Jury Journey"
-"Our Jr.  Juror"
+"Our Jr. Juror"
 "Outsider Suitor Ed"
 "Pagan Hero Orphanage"
 "Palmetto Meta-Plot"
@@ -9929,7 +9928,7 @@ blurb
 "Shmoe Tina Mathieson"
 "Shmoe Twan Mathewson" []
 "Shmoe Una Houseman"
-"Silk-Banjo  Jablonski"
+"Silk-Banjo Jablonski"
 "Simple Ann Spielmann"
 "Simple Erick Picklesimer"
 "Simple Gena Spiegelman"
@@ -10754,7 +10753,7 @@ blurb	prio
 "Bones Bit, I Ebb Tons[r], by Bob Stein"
 "Bones Hid Behind So[r], by Ben Doshi"
 "Bones in Benoni's Benison[r], by Bo Ennis"
-"Bonsoir, Orbison[r], by  [if player is male]Bo Irons[else]Robin So[end if]"
+"Bonsoir, Orbison[r], by [if player is male]Bo Irons[else]Robin So[end if]"
 "Boogers! Goobers![r], by Geo Bors"
 "Boone's One SOB[r], by Ben Soo"
 "Boorhug Borough[r], by Rob Hugo"
@@ -15173,7 +15172,7 @@ blurb	prio
 "Royals Got Astrology[r], by [if player is male]Troy Lagos[else]Olga Story[end if]" []
 "Rub a Dodgy Bodyguard[r], by Doug Brady"
 "Rub Head: Hear, Bud[r], by Abe Hurd"
-"Rubbish, His Burb[r], by  Bri Bush"
+"Rubbish, His Burb[r], by Bri Bush"
 "Rube and a Burden[r], by Ben Radu" []
 "Rubes Get Beer Guts[r], by Gus Ebert"
 "Rude Ole Dour Lee[r], by Lou Reed"
@@ -16458,7 +16457,7 @@ blurb	prio
 "Tough Shire, Our Heights: The Roguish Eight Hours[r], by [if player is male]Sergio Huth[else]Tori Hughes[end if]"
 "Tough to Laugh, Al[r], by Hugo Alt" []
 "Tough Wins, South Wing Wino Thugs[r], by Stu Wingoh"
-"Toughest:  Ghetto, Us[r], by Theo Gust & Hugo Test"
+"Toughest: Ghetto, Us[r], by Theo Gust & Hugo Test"
 "Towable Teabowl[r], by Bo Ewalt"
 "Toy Cars at Cory's[r], by [if player is male]Ty Oscar[else]Cary Tso[end if]"
 "Toy Guns: Gutsy? No[r], by Gus Tony"
@@ -17202,7 +17201,7 @@ blurb
 "yells 'Hie to dope? Hope to die!'" [x]
 "yells 'No roids indoors! Rid soon!'" [x]
 "yells 'Sh, li'l shill' at some interruption you didn't hear." [p] [x]
-"yells 'smoke shop: Hemp, ok? SOS!'" [p]  [x]
+"yells 'smoke shop: Hemp, ok? SOS!'" [p] [x]
 "yells STD! DTs!" [x]
 
 table of overdone movies [xxs2]
@@ -17225,7 +17224,7 @@ blurb
 "claims the creators of [i]Risk, to a Rat, is OK[r] believed in their artistic vision." [x]
 "claims you only need to like one part of [i]Tips to Stop It[r]." [x]
 "commends a mythological allusion in [i]Drugs['] Cost: Curst Gods[r]." [x]
-"compares  [i]Pepe Hit the Pipe[r] with [i]Hip Pete: the Pipe[r]." [x]
+"compares [i]Pepe Hit the Pipe[r] with [i]Hip Pete: the Pipe[r]." [x]
 "compliments the old- and new-school balance in [i]Ye Bistro: Yo, Bestir Sobriety[r]." [x]
 "DARES anyone to laugh at [i]Tedd, Acid-Addicted[r]." [x]
 "delves into the simplicity of [i]Eh, Most Mehs to Meth, So[r]." [x]
@@ -18175,7 +18174,7 @@ blurb
 "Neat Sly Stanley Lays Ten." []
 "Ned, Earl, Leander, Darlene." []
 "Need-Big-Bed Inge."
-"Needful Nude  Elf."
+"Needful Nude Elf."
 "Neil, Elin, Leni."
 "Nekid, Inked."
 "Never Old Den Lover Don Vreel."
@@ -23395,7 +23394,7 @@ blurb
 "Vet Nona Vannote."
 "Vet Noor Overton." []
 "Vet Oren Everton." []
-"Vet Padron  Davenport." []
+"Vet Padron Davenport." []
 "Vet Peter Prevette."
 "Vet Petra Prevatte." []
 "Vet Ranae Navarete."
@@ -24959,7 +24958,7 @@ blurb
 "'Thinkers!' / 'Shtinker!'"
 "'Thirties? [s-w]tier.'"
 "'This hoser, he is short.' / 'Horse!'" [x]
-"'Thump Ed!  Dump the...' / 'Umph, Ted!'" []
+"'Thump Ed! Dump the...' / 'Umph, Ted!'" []
 "'Thumpin[']! Hunt imp!' / 'Punt him!'"
 "'Tiger, a triage!' / 'Great, I...'" []
 "'Til this hit list tilts... HI!'"
@@ -33850,7 +33849,7 @@ blurb
 "To Bash Bathos[r], by Bobo Hass-Hatt" []
 "To Husking Tough Skin[r], by King South"
 "To Impugn Gumption: Mug Point[r], by Tomi Pung"
-"To Levying Yet Loving[r], by Tiny Vogel"  []
+"To Levying Yet Loving[r], by Tiny Vogel" []
 "To-Master-Most Rate[r], by Matt Rose"
 "To Plans: No Splat[r], by Sal Pont"
 "To Resign One's Grit[r], by Rose Ting" []

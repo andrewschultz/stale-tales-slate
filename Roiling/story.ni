@@ -2820,7 +2820,7 @@ chapter quip-variable-text
 to say satchel-extra:
 	if satchel is bscanned:
 		continue the action;
-	if satchel is not in Basement:
+	if satchel is not in Largely All-Grey Gallery:
 		say "quickly go back to the study for the satchel, ";
 	say "scan the satchel [if satchel is not escanned]both ways[else]the way you didn't[end if] and ";
 
@@ -3312,8 +3312,8 @@ after quipping when qbc_litany is the table of Gunter comments:
 		move Gunter to lalaland;
 		now dusty study is dark;
 		if do-i-chat is true:
-			move Elmo to Basement;
-			move player to Basement;
+			move Elmo to Largely All-Grey Gallery;
+			move player to Largely All-Grey Gallery;
 			now rifle is in lalaland;
 			now qbc_litany is litany of Mole Elmo; [may be delete-able] [end Gunter's dialogue]
 	else:
@@ -4648,7 +4648,7 @@ to reg-inc:
 	otherwise:
 		increment the cur-score of mrlp;
 		if mrlp is manor and rifle is off-stage and cur-score of manor is max-score of manor - 4:
-			say "[line break]Congratulations, Iron [if player is male]Man[else]Woman (Ow)[end if] in Manor! You've found all the secrets here. You can just exit the basement now[if settler is unexamined], but it'd be a good idea to examine the settler, first[end if].";
+			say "[line break]Congratulations, Iron [if player is male]Man[else]Woman (Ow)[end if] in Manor! You've found all the secrets here. You can just exit the gallery now[if settler is unexamined], but it'd be a good idea to examine the settler, first[end if].";
 		if mrlp is stores and cur-score of stores is max-score of stores:
 			now stores is solved;
 			now last-solved-region is stores;
@@ -6591,7 +6591,7 @@ after reading a command:
 		if the player's command includes "presto":
 			unless the player's command includes "test":
 				say "Presto is the word you said to reveal the, er, spot." instead;
-	if the player's command includes "tickle" and Elmo is in Basement:
+	if the player's command includes "tickle" and Elmo is in Largely All-Grey Gallery:
 		say "Really. This is a juvenile computer game, not a juvenile toy." instead;
 	if player is in clearing and melon is in clearing:
 		if the player's command matches the regular expression "\blen\b" and the player's command matches the regular expression "\bmo\b":
@@ -6800,7 +6800,7 @@ Rule for printing a parser error when the latest parser error is the can't see a
 			say "Hmm. It's not useful in its present state. You think back to how you changed that toga into a goat just by saying 'goat.' Maybe you can do something like that, again." instead;
 		say "You can't see much of anything here, and if you stumble around, that [i]palm[r] might poke your eye out." instead;
 	if the player's command matches the regular expression "^go":
-		say "That isn't a recognized way to go. You can GO TO (room, person or thing you visited), or you can use old-fashioned text adventure directions. For instance, [if tables are in lalaland]GO IN or IN or GO TO STABLE[else if t-b are in lalaland]GO DOWN or GO TO BASEMENT[else]GO TO STUDY or GO UP/IN/DOWN[end if]." instead;
+		say "That isn't a recognized way to go. You can GO TO (room, person or thing you visited), or you can use old-fashioned text adventure directions. For instance, [if tables are in lalaland]GO IN or IN or GO TO STABLE[else if t-b are in lalaland]GO DOWN or GO TO GALLERY[else]GO TO STUDY or GO UP/IN/DOWN[end if]." instead;
 	if the player has the rigged digger:
 		if the player's command includes "prod":
 			say "It's a digger, now." instead;
@@ -6869,7 +6869,7 @@ check going nowhere (this is the spam can't go that way rule) :
 
 table of nowheres [tnw]
 theloc	thereject
-Basement	"You can probably go back up, or you can go in if you're ready to face what's beyond."
+Largely All-Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond."
 stable	"No time for mooching around the manor. You probably need to take [if sitar is visible]a[else]that[end if] secret passage in, or down."
 highest heights	"You can go back IN to the study, though you don't need to, or you could try [if ramp is visible]to get the pram out of the way[else]going DOWN the ramp[end if]."
 Strip of Profits	"Why run off for fun? See [if number of visible portals is 0]what one of those stores can become[else]what's in one of those portals[end if] instead." [manor]
@@ -7136,7 +7136,7 @@ check climbing (this is the generic silly climbing reject rule):
 		try going down instead;
 	if noun is stair:
 		if player is in stable:
-			move player to basement instead;
+			move player to Largely All-Grey Gallery instead;
 		else:
 			move player to study instead;
 	if noun is the-b: [routes]
@@ -7728,7 +7728,7 @@ before listening (this is the you can hear stuff some places rule):
 		say "You think you hear him saying something mean, and you're upset you might've, and you're upset he didn't. He's just being too subtle right now for you to think clearly." instead;
 	if player is in Inclosure:
 		say "Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE." instead;
-	if player is in stable or player is in Basement:
+	if player is in stable or player is in Largely All-Grey Gallery:
 		say "Merciful quiet, for the moment." instead;
 	if player is in shack:
 		say "Classic techno music from the Baleets: 'Be Stale.'" instead;
@@ -8601,8 +8601,6 @@ after fliptoing a portal:
 		now note-progress is true;
 	continue the action;
 
-basement-backpedal is a truth state that varies.
-
 definition: a thing (called mything) is cromulent:
 	if mything is in location of player:
 		decide yes;
@@ -8746,10 +8744,8 @@ carry out fliptoing:
 				else if the-from entry is coins and the-to entry is s-i:
 					two-up;
 				else if the-to entry is t-b:
-					if Basement is unvisited:
+					if Largely All-Grey Gallery is unvisited:
 						two-up;
-					else:
-						now basement-backpedal is true;
 				else if the-to entry is onyx censer and the player's command includes "phooey":
 					two-up;
 				else if the-from entry is not part of the diorama:
@@ -8843,7 +8839,7 @@ pram	ramp	false	233052733	--	"ramp"	"ramp"	"The pram folds out -- boy, there are
 sitar	stair	false	331888451	--	"stair"	"stair"	"The sitar becomes one with the ground, showing you an inner path to somewhere more peaceful."
 stria	stair	false	331888451	--	"stair"	"stair"	"The stria glow and cascade into a stair leading back up."
 niche	chimney	false	484428752	--	"chimney"	"chimney"	"The square saying MY NICHE rumbles and collapses to create an impromptu chimney. It's wide enough for you to climb and even appears to have ledges or whatever to grip. You can go up now."
-t-b	t-b	false	608585586	--	"basement"	"basement"	"[if Basement is visited]You diligently set about making sure you've got all the points for this area[else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to the basement."
+t-b	t-b	false	608585586	--	"basement"	"basement"	"[if Largely All-Grey Gallery is visited]You diligently set about making sure you've got all the points for this area[else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to the basement."
 tables	tables	false	401610655	--	"stable"	"stable"	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 plates	staple	true	464657709	--	"staple"	"staple"	"The plates [if plaster is visible]fall with a clatter from the plaster[otherwise]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
 plaster	stapler	true	549981512	--	"stapler"	"stapler"	"As paper appears behind, a stapler falls out. You take it[if plates are visible] as the formerly stuck plates fall[end if]. The paperwall behind looks lined but seems solid enough."
@@ -9564,7 +9560,7 @@ after printing the locale description when player is in dusty study and gunter i
 		if tables are not visible:
 			say "You could probably go [b]in[r], to the stable, with the tables gone. ";
 		if t-b are in lalaland:
-			say "You [if tables are in lalaland]also [end if]cleared a path [b]down[r] to the basement. ";
+			say "You [if tables are in lalaland]also [end if]cleared a path [b]down[r]. ";
 		if niche is in lalaland:
 			say "There's [if study-outs > 1]also [end if]a chimney leading [b]up[r]. ";
 		say "[line break]";
@@ -9771,7 +9767,6 @@ dope-idx is a number that varies.
 
 after fliptoing when player is in dusty study (this is the more min points in study rule) :
 	if noun is t-b:
-		now basement-backpedal is false;
 		if tables are in lalaland or niche is in lalaland:
 			d "Min point for tables or niche.";
 			min-up; [already have way out of study]
@@ -9794,9 +9789,9 @@ after fliptoing ramp (this is the check ramp min-up rule) :
 	continue the action;
 
 after fliptoing stair (this is the check sitar min-up and exits rule) :
-	now Basement is mapped below stable;
+	now Largely All-Grey Gallery is mapped below stable;
 	if the room below study is nothing:
-		now study is mapped above Basement;
+		now study is mapped above Largely All-Grey Gallery;
 	if t-b is in lalaland:
 		min-up;
 	else if niche is in lalaland and pram is in lalaland:
@@ -9974,8 +9969,8 @@ after fliptoing tables:
 	continue the action;
 
 after fliptoing t-b:
-	now Basement is mapped below study;
-	now study is mapped above Basement;
+	now Largely All-Grey Gallery is mapped below study;
+	now study is mapped above Largely All-Grey Gallery;
 	continue the action;
 
 instead of pushing or pulling tables:
@@ -10315,35 +10310,27 @@ after scaning (this is the init-scan rule) :
 		now parse-hint-yet is true;
 	continue the action;
 
-book basement
+book Largely All-Grey Gallery
 
 understand "basement [text]" and "[text] basement [text]" and "[text] basement" as a mistake ("You can just [if t-b are visible]change the ten beams by saying BASEMENT[else]go down to go to the basement[end if].") when player is in dusty study and latches are not off-stage.
 
 understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a mistake ("You can just [if t-b are visible]change the tables by saying STABLE[else]go IN to go to the stable[end if].") when player is in dusty study and latches are not off-stage.
 
-basement-been is a truth state that varies.
+gallery-been is a truth state that varies.
 
 rule for supplying a missing noun when entering:
-	if player is in basement:
+	if player is in Largely All-Grey Gallery:
 		now the noun is the evac-cave.
 
-Basement is a stairy innie privately-named room in Roman Manor. printed name of Basement is "[bsmnt]". "[one of]Aw, man! This basement was supposed to be a place for solitude, but it was so good at being inconspicuous, even you forgot about it! You see and remember the evac-cave now. It's your way out[or]You can enter the evac-cave here[stopping][if min-score of manor < max-score of manor], though if you're a completist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
+Largely All-Grey Gallery is a stairy innie privately-named room in Roman Manor. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. [one of]There\s an evac-cave that could help you sneak out of the manor[or]You can enter the evac-cave here[stopping][if min-score of manor < max-score of manor], though if you're a completist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
 
-understand "basement" as Basement.
+understand "sitar" as a mistake ("[if stair is visible]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Largely All-Grey Gallery.
 
-understand "sitar" as a mistake ("[if stair is visible]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Basement.
-
-to say bsmnt:
-	if Elmo is in Basement and rifle is in lalaland:
-		say "Be Set, Man";
-		continue the action;
-	say "[if rifle is visible]Bam, Tense[else if basement-been is true]Same Bent[else]Meet-Bans[end if] Basement";
-
-diorama is in dusty study and Basement.
+diorama is in dusty study and Largely All-Grey Gallery.
 
 understand "mole" as a mistake ("You can't change Elmo into an animal. Your powers don't work that way. [if rifle is in lalaland]He already seems to be[else]But maybe he is[end if] a different sort of mole.") when Elmo is visible.
 
-the evac-cave is scenery in Basement. "It's a bit small, but you can enter it, or go inside."
+the evac-cave is scenery in Largely All-Grey Gallery. "It's a bit small, but you can enter it, or go inside."
 
 understand "evac/cave" as evac-cave.
 
@@ -10354,7 +10341,7 @@ instead of doing something with evac-cave:
 		try going inside instead;
 	say "You probably just want to enter the cave or go IN.";
 
-the stria are plural-named vanishing LLPish scenery in Basement. "You never knew what they were until [gtmn] told you. 'You'll be glad one day, maybe,' he said. They're like veins, vines." [stria are LLPish because if you're in the basement you don't need to attack them]
+the stria are plural-named vanishing LLPish scenery in Largely All-Grey Gallery. "You never knew what they were until [gtmn] told you. 'You'll be glad one day, maybe,' he said. They're like veins, vines." [stria are LLPish because if you're in the Largely All-Grey Gallery you don't need to attack them]
 
 a-text of stria is "RRYYR". b-text of stria is "PPYGR". parse-text of stria is "s[sp]t[sp]a[sp]i[sp]r". stria is parse-spoilable.
 
@@ -10363,15 +10350,15 @@ understand "astir" as a mistake ("[if stair is visible]You don't need to do any 
 check taking stria:
 	say "Too high up." instead;
 
-the stair is a backdrop. "It leads [if player is in Basement]up[else]down[end if].";
+the stair is a backdrop. "It leads [if player is in Largely All-Grey Gallery]up[else]down[end if].";
 
 does the player mean climbing the stair: it is very likely.
 
 understand "wallpaper" as a mistake ("You try the word-flip, to check--sadly, it doesn't work. Maybe there is another way to remove the paperwall.") when paperwall is visible
 
-understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Basement and t-b are in dusty study.
+understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All-Grey Gallery and t-b are in dusty study.
 
-after printing the locale description for Basement when Basement is unvisited:
+after printing the locale description for Largely All-Grey Gallery when Largely All-Grey Gallery is unvisited:
 	if do-i-chat is false:
 		if tables are in study and t-b are in study:
 			say "After your trip down the ramp, you note the stria--and the ten beams. Ten beams, basement--that makes sense. You could probably do something to the stria or visit the closets if you wanted, but you don't have to.";
@@ -10384,11 +10371,11 @@ after printing the locale description for Basement when Basement is unvisited:
 			now min-alert is true;
 		continue the action;
 
-check going outside in Basement:
-	say "To get out of the basement, you need to go inward. So let's go that way.";
+check going outside in Largely All-Grey Gallery:
+	say "To get out of the gallery, you need to go inward. So let's go that way.";
 	try going inside instead;
 
-check exiting in Basement:
+check exiting in Largely All-Grey Gallery:
 	try going inside instead;
 
 check going down in dusty study:
@@ -10409,21 +10396,21 @@ check going in stable:
 check going down in stable:
 	if stair is not visible:
 		say "There should be a way down. That sitar could trans-substantiate or be reincarnated as something more useful." instead;
-	move player to Basement instead;
+	move player to Largely All-Grey Gallery instead;
 
 instead of doing something with stair:
 	if action is procedural:
 		continue the action;
 	say "Can't do much but go up or down a stair." instead;
 
-check going up in Basement:
+check going up in Largely All-Grey Gallery:
 	if stria are visible and t-b are in dusty study:
 		say "Hmm. There should be a way back up. The stria could be disposable." instead;
 	if backcheck is false:
 		now backcheck is true;
 		say "You shouldn't need to go back to your study unless you want to get more points. Do you want or need to do this?";
 		if the player yes-consents:
-			now basement-been is true;
+			now gallery-been is true;
 			now player is in dusty study instead;
 		else:
 			say "Ok, probably best to find a way out." instead;
@@ -10433,7 +10420,7 @@ check going up in Basement:
 
 settler-x-nag is a truth state that varies.
 
-check going inside in Basement:
+check going inside in Largely All-Grey Gallery:
 	if player has latches:
 		if treatise is off-stage:
 			say "You fumble nervously with the latches before entering, and a treatise falls out. Maybe it will help you decide what to do with the latches, before you go out into the wide world without a scanning device to help you know where to use your power.";
@@ -10445,7 +10432,7 @@ check going inside in Basement:
 			say "You look at your settler and realize you haven't really EXAMINED it. Maybe you should, before going out in the world. You've been able to guess what to do so far, with the help of heuristics and generally knowing what's in a house, but you may need technical help you can rely on when you hit less friendly areas." instead;
 	say "A brief mental lament as you leave gives way to fear of a sting-ops stop sign. But you miss...[paragraph break]'Hands up!'[paragraph break]You say 'grrr' and feel all yellow, then see red as you scream 'Eeeee!' Because it's not a joke. Some guy has a rifle! You drop your lamp, which shatters.[paragraph break]He's got a rifle. You choke, 'O heck.' You notice the name on his uniform is Elmo, which gives you some hope.";
 	now lamp is in lalaland;
-	now Elmo is in Basement instead;
+	now Elmo is in Largely All-Grey Gallery instead;
 
 book carven cavern
 
@@ -10650,7 +10637,7 @@ every turn when Elmo is visible and Elmo has rifle:
 		if high-sign is false:
 			say "You hear a sigh nigh. A high sign from Elmo?";
 			now high-sign is true;
-			now high sign is in Basement;
+			now high sign is in Largely All-Grey Gallery;
 		else:
 			say "Elmo is flashing some sort of high sign. Bold cue? Could be.";
 	else:
@@ -10676,7 +10663,7 @@ understand "filer" as a mistake ("You can't just give Elmo a desk job. Though ma
 
 understand "lifer" as a mistake ("You start to educate Elmo about the penalties for murder, but he gestures at you like you've almost guessed a Charades clue or something.") when rifle is visible.
 
-check fliptoing when rifle is visible and player is in Basement:
+check fliptoing when rifle is visible and player is in Largely All-Grey Gallery:
 	if noun is not rifle:
 		say "Any distraction, and Elmo might fire. Unless, of course, you can change the rifle itself." instead;
 
@@ -10939,12 +10926,12 @@ check entering closets:
 		now player is in heights instead;
 	if player is in heights:
 		say "You go back down to the closets[if ramp is visible], not ready for the ramp yet[else], not able to figure the pram yet[end if].";
-	else if player is in Basement:
+	else if player is in Largely All-Grey Gallery:
 		if backcheck is false:
 			now backcheck is true;
 			say "You shouldn't need to go back to your study unless you want to get more points. Do you want or need to do this?";
 			if the player direct-consents:
-				now basement-been is true;
+				now gallery-been is true;
 				say "[if t-b are in study]You go back through the closets to your study[else]Woo! You save the effort of climbing up stairs[end if].";
 				now player is in dusty study instead;
 			else:
@@ -10979,7 +10966,7 @@ check going down in highest heights:
 		try entering closets instead;
 	else:
 		say "You slide down the ramp--into the basement you [if t-b are not in study]uncovered another, easier way to get to[else]nearly forgot you had[end if].";
-	now player is in Basement instead;
+	now player is in Largely All-Grey Gallery instead;
 
 check going inside in highest heights:
 	try entering closets instead;
@@ -11745,7 +11732,7 @@ to decide whether need-line-break:
 		decide no;
 	if player is in frontage and gretta is in frontage:
 		decide no;
-	if player is in Basement and elmo is in Basement:
+	if player is in Largely All-Grey Gallery and elmo is in Largely All-Grey Gallery:
 		decide no;
 	decide yes;
 
@@ -11903,6 +11890,8 @@ understand "follow [text]" as a mistake ("This game doesn't allow the FOLLOW ver
 book Strip of Profits
 
 Strip of Profits is a room in Stores. "[if roved is true]Well, those stores you took care of are gone, and so is the megaton magneto-montage. [h-or-others].[else]Most of the twenty-six stores from your first time here remain, though you're not here to shop[which-stores].[paragraph break]A megaton magneto-montage[i-u] stands here.[end if]"
+
+understand "sportif" as a mistake ("You can argue whether the strip is already sportif, but nonetheless, that would be a superficial change compared to fixing what's behind the stores.") when player is in strip of profits.
 
 understand "trips/profit" as strip of profits when debug-state is true.
 
@@ -16429,7 +16418,7 @@ definition: a direction (called dir) is viable:
 		decide yes; [this is the main one. If a room's there, go]
 	if player is in Horned Hedron and dir is inside and walleyes are in lalaland and o-t is reflexed:
 		decide yes; [these are fringe cases. Again, you can enter certain places etc. once traps are removed]
-	if player is in Basement and dir is inside:
+	if player is in Largely All-Grey Gallery and dir is inside:
 		decide yes;
 	if player is in cavern and dir is inside and paperwall is in lalaland:
 		decide yes;
@@ -19707,6 +19696,7 @@ book Anemic Cinema
 
 Anemic Cinema is north of Baldest Blasted Saltbed. "Well, you're not [i]in[r] the cinema. It's off to the side[if ingrates are visible]. Something smells to the west, too[end if][tow-dirs].". Anemic Cinema is in Towers.
 
+understand "ice man" and "iceman" as a mistake ("The iceman cometh (at least it wasn't maniac icemen,) all 'I, manic menace,' and your life passeth
 after printing the locale description for Anemic Cinema when Anemic Cinema is unvisited:
 	say "The ingrates grumble about how their territory is useless, and that's really not their fault. Maybe you don't really need to get rid of them.[paragraph break]";
 
@@ -24431,9 +24421,17 @@ check fliptoing when player is in clearing and player does not have tekno-token:
 		preef noun;
 		do nothing instead;
 
-Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "There's lots of noise among nameless salesmen here. They block any exit except back west.[paragraph break]You notice a list of prices and another banner saying AUCTION CAUTION. It looks like people are using all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow."
+Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "A streperous superstore blocks any exit except back west.[paragraph break]You notice a list of prices and another banner saying AUCTION CAUTION.[paragraph break]Nameless salesmen employ all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow."
 
 the nameless salesmen are scenery in clangier clearing. "The nameless salesmen are, well, nondescript but numerous. They ignore you, and none seems as interesting as Len Craig."
+
+the streperous superstore is scenery in Clangier Clearing. "It's big and intimidating and you would probably get lost there. It's one of Elvira's biggest inventions, and though she's gone, you can't just go blowing it up. Not with people inside, and employed by it."
+
+check going inside when player is in clangier clearing:
+	try going east instead;
+
+check entering superstore:
+	try going east instead;
 
 before talking to nameless salesmen:
 	say "You have nothing to say to the salesmen." instead;
@@ -25598,7 +25596,7 @@ definition: a thing (called hintcand) is hintrelevant:
 	if hintcand is useless, decide no;
 	if hintcand is the location, decide no;
 	if hintcand is the diorama or hintcand is part of the diorama: [if hintcand is out of play?]
-		if player is in basement or player is in study:
+		if player is in Largely All-Grey Gallery or player is in study:
 			decide yes;
 		decide no;
 	if hintcand is closest closets:
@@ -26043,7 +26041,7 @@ sitar	"[one of]You need a way down, but the sitar doesn't allow that.[plus][or]R
 stria	"[one of]Embedded in the ceiling, the stria split it a bit. Maybe they offer a way up?[plus][or]The stria can become a STAIR.[minus][cycling]"
 pram	"[one of]The pram gives you a sinking feeling to look at it.[plus][or]You need a way down and out of reach. Something you could even crawl down.[plus][or]The pram can become a ramp.[minus][cycling]"
 ramp	"Just go down or in to walk down the ramp."
-latches	"[one of]The latches seem useless, but they are your parting gift from [gtmn][if Basement is visited], so you probably want to 'solve' them before moving on[end if].[plus][or][if treatise is off-stage]You should examine the latches. There's a note inside them which is useful.[else][gtmn] also said it would be pretty simple to figure out what to do with the latches.[end if][plus][or]Did you notice anything about the treatise's wording that might give a hint about the latches?[plus][or]Lots of anagrams in the treatise, but they have something in common.[plus][or][gtmn] only switched the first and last letters in the treatise. Maybe you can do that with the latches.[plus][or]You can get a SATCHEL.[minus][cycling]"
+latches	"[one of]The latches seem useless, but they are your parting gift from [gtmn][if Largely All-Grey Gallery is visited], so you probably want to 'solve' them before moving on[end if].[plus][or][if treatise is off-stage]You should examine the latches. There's a note inside them which is useful.[else][gtmn] also said it would be pretty simple to figure out what to do with the latches.[end if][plus][or]Did you notice anything about the treatise's wording that might give a hint about the latches?[plus][or]Lots of anagrams in the treatise, but they have something in common.[plus][or][gtmn] only switched the first and last letters in the treatise. Maybe you can do that with the latches.[plus][or]You can get a SATCHEL.[minus][cycling]"
 satchel	"The satchel might be useful for carrying things, but your super purse is better. So don't worry about it."
 letters settler	"[one of]The settler seems to give mostly reds and yellows. If you tinker with it, you may notice a pattern.[plus][or]Reds mean one thing and yellows mean another. If you've solved and scanned a bit, you may know which is what.[plus][or]Also, the coloring of the words LETTERS SETTLER is a clue. If you have the teach/cheat button on.[plus][or]As is, to get fourth-wall, A ROILING ORIGINAL.[plus][or]But the settler is all you need.[plus][or]With teach/cheat on, note that e-t-t are halfway different colors. That's because they match.[plus][or]Specifically, if the current object differs from the target object in one letter, the color will be red if the target is a consonant and yellow if it's a vowel.[plus][or]If you have 'cheat' on, you can see that green is a correct vowel and purple is a correct consonant. Red and yellow are incorrect consonants and vowels.[plus][or]There are also orange and brown, but they are rarer. Since orange = red + yellow, you can guess what it may be.[plus][or]The letter Y.[plus][or]There should be a separate document describing basic strategies for using the settler.[plus][or]One last thing: the equals sign is there so as not to spoil puzzles that are a bit on the easy side. It's fully optional and just part of what I hope is something that helps calibrate play to be more fun based on how tough you find these sorts of puzzles.[minus][cycling]"
 diorama	"[one of]The diorama provides things you can flip around. You don't get any points for them, since they're labeled, but I hope they help.[plus][or]First, the platform and pavement give only reds and yellows, even in teach/cheat mode. Cheat mode doesn't help.[plus][or]What pattern do you see in reds and yellow on the diorama?[plus][or]The crabgrass and pedestal have colors that change in some places.[plus][or]Note the colors change from red to purple or yellow to green. What is similar about these?[plus][or]Adding blue. And which letters change?[plus][or]cRAbgrass, bRAss crag.[plus][or]The letters that are correct![plus][or]So, blue = correct.[minus][cycling]"
@@ -27278,15 +27276,15 @@ rule for showing what the player missed: [there may be a way to do things withou
 	if t-b is in dusty study:
 		say "[2dmiss of cur-reg]you could've made the ten beams into a BASEMENT.";
 	if tables are in dusty study:
-		say "[2dmiss of cur-reg]you could've made the tables into a STABLE to unlock an alternate way/puzzle to the basement.";
+		say "[2dmiss of cur-reg]you could've made the tables into a STABLE to unlock an alternate way/puzzle to the basement/gallery.";
 	else if sitar is in stable:
-		say "[2dmiss of cur-reg]you could've changed the [if stable is visited]sitar in the stable/[end if]stria in the basement into a STAIR.";
+		say "[2dmiss of cur-reg]you could've changed the [if stable is visited]sitar in the stable/[end if]stria in the gallery into a STAIR.";
 	if niche is in dusty study:
 		say "[2dmiss of cur-reg]you could've changed 'my niche' into a CHIMNEY.";
 	else if pram is in heights:
-		say "[2dmiss of cur-reg]you could've changed the pram into a RAMP.";
-	if basement-backpedal is true:
-		say "[2dmiss of cur-reg]you missed two points by tracking back to the study to zap the ten beams.";
+		say "[2dmiss of cur-reg]you could've changed the pram into a RAMP[if heights is unvisited], if you'd gone up from the study[end if].";
+	if t-b is in dusty study:
+		say "[2dmiss of cur-reg]you could've changed the ten beams in the study to a BASEMENT.";
 	now cur-reg is routes;
 	if routes is solved:
 		if worst ad is in same mesa:

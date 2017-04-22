@@ -55,12 +55,24 @@ while ($cur <= $#ARGV)
   /-np/ && do {$showPoss = 0; $cur++; next; };
   /-nr/ && do {$showRemain = 0; $cur++; next; };
   /\./ && do { $fileName = $ARGV[$cur]; $cur++; next; };
-  /^[a-z]/ && do { if ($firstString == 0) { $firstString = $cur; } $cur++; next; };
+  /^[a-z]/ && do { if ($firstString eq "") { $firstString = $cur; } $cur++; next; };
   $cur = $#ARGV + 1;
   }
 }
 
-if (!$fileName) { $printResults = 1; @letArray = split(//, "$ARGV[$firstString]"); @array = @ARGV; for (1..$firstString) { shift(@array); } oneRed(); }
+if (!$fileName)
+{
+  if ($#ARGV == -1)
+  {
+    usage();
+	exit();
+  }
+  $printResults = 1;
+  @letArray = split(//, "$ARGV[$firstString]");
+  @array = @ARGV;
+  for (1..$firstString) { shift(@array); }
+  oneRed();
+}
 else
 {
   $printResults = 0;
@@ -94,9 +106,9 @@ my $p_iterator = Algorithm::Permute->new ( \@letArray );
 
 my $checkForDup = 0;
 
-for (0..$#lets) { if ($lets[$_] eq $lets[$_+1]) { $checkForDup = 1; } }
+for (0..$#lets-1) { if ($lets[$_] eq $lets[$_+1]) { $checkForDup = 1; } }
 
-my @perm = split(//, "$array[0]");
+@perm = split(//, "$array[0]");
 
 for $j (1..$#array)
 {
@@ -114,6 +126,7 @@ for $j (1..$#array)
 for $j (1..$#array)
 {
   if ($array[$j] =~ /^1-/) { $array[$j] =~ s/^1-//g; $onematch[$j] = 1; } else { $onematch[$j] = 0; }
+  if ($array[$j] =~ /[^0-9%]/) { die ("Bad input $j, $array[$j]"); }
 }
 
 if (my $temp = isOops($array[0])) { die "$array[0] fails the test at word $temp, $array[$temp].\n"; }
@@ -165,7 +178,7 @@ for $x (sort keys %statFin)
   if ($statFin{$x})
   {
     my @x = split(/-/, $x);
-	if ($poss[$x[1]] !~ /$x[0]/)
+	if (defined($poss[$x[1]]) && ($poss[$x[1]] !~ /$x[0]/))
 	{
 		$poss[$x[1]] .= $x[0];
 	}
@@ -183,19 +196,20 @@ if ($succ == 0) { print "We didn't find any possibilities. Sorry.\n" }
 }
 }
 
-sub isOops
+sub isOops # does this contradict the clues we are given e.g. ARGV[1] ... ARGV[ARGC]?
 {
 my $count;
 my $gotone;
 my $this;
+my $l;
 
-for ($count = 1; $count <= $#array; $count++)
+for ($count = 1; $count <= $#array; $count++) # remember to start at 1 because we want to disqualify the first entry as it's the one we want to solve
 {
   $gotone = 0;
-  #print "$l THIS: $this PERM(L) $perm[$l]\n";
-  for my $l (0..length($array[0])-1)
+  #print "$_[0]: THIS: $this PERM(L) $perm[$_[0]]\n";
+  for $l (0..length($array[0])-1)
   { $this = substr($array[$count], $l, 1);
-  #print "Comparing $j char $l: THIS $this <-> $perm[$l] PERMU.\n";
+  #print "Comparing char $l: THIS $this <-> $perm[$l] PERMU.\n";
   if ($perm[$l] eq $this)
   { if (!$onematch[$count]) {
 	return $count; #print "Fail at arg $count, char $l $j $perm[$l] vs " . substr($array[$count], $l, 1) . " $array[$count]\n";
@@ -220,4 +234,8 @@ for ($count = 1; $count <= $#array; $count++)
 	return -1; }
 }
 return 0;
+}
+
+sub usage
+{
 }
