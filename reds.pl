@@ -50,11 +50,12 @@ while ($cur <= $#ARGV)
   /-f/ && do { $fileName = $ARGV[$cur+1]; $cur += 2; next; };
   /^-y$/ && do { $fileName = "c:/writing/dict/reds.txt"; $settler = 1; $cur++; next; };
   /^-n$/ && do { $fileName = "c:/writing/dict/reds.txt"; $settler = 0; $cur++; next; };
-  /-l/ && do {$maxLetters = $ARGV[$cur+1]; $cur += 2; next; };
-  /-m/ && do {$myMax = $ARGV[$cur+1]; $cur += 2; next; };
-  /-np/ && do {$showPoss = 0; $cur++; next; };
-  /-nr/ && do {$showRemain = 0; $cur++; next; };
-  /\./ && do { $fileName = $ARGV[$cur]; $cur++; next; };
+  /^-l$/ && do { $maxLetters = $ARGV[$cur+1]; $cur += 2; next; };
+  /^-m$/ && do { $myMax = $ARGV[$cur+1]; $cur += 2; next; };
+  /^-np$/ && do { $showPoss = 0; $cur++; next; };
+  /^-nr$/ && do { $showRemain = 0; $cur++; next; };
+  /^-\?$/ && do { usage(); exit(); };
+  /\./ && do { print "Period means file name to search, not wild card. Use , for wild card.\n"; $fileName = $ARGV[$cur]; $cur++; next; };
   /^[a-z]/ && do { if ($firstString eq "") { $firstString = $cur; } $cur++; next; };
   $cur = $#ARGV + 1;
   }
@@ -126,7 +127,7 @@ for $j (1..$#array)
 for $j (1..$#array)
 {
   if ($array[$j] =~ /^1-/) { $array[$j] =~ s/^1-//g; $onematch[$j] = 1; } else { $onematch[$j] = 0; }
-  if ($array[$j] =~ /[^0-9%]/) { die ("Bad input $j, $array[$j]"); }
+  #if ($array[$j] =~ /[^0-9%]/) { die ("Bad input $j, $array[$j]"); }
 }
 
 if (my $temp = isOops($array[0])) { die "$array[0] fails the test at word $temp, $array[$temp].\n"; }
@@ -238,4 +239,14 @@ return 0;
 
 sub usage
 {
+print <<EOT;
+Examples:
+reds.pl abcde %
+    Should give 12 possibilities (% means we know where the vowels/consonants/y are)
+reds.pl abcd bcda
+    Should give 9
+reds.pl abcdef bcdeaf
+    Should give an error since the f's match up
+EOT
+exit();
 }
