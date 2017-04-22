@@ -26,13 +26,15 @@ my $mod = "$roil\\tosort2.txt";
 my $test = "$roil\\sso-test.txt";
 my $stat = "$roil\\sso-stat.txt";
 
+my $readIn = $orig;
+
 ########################uncomment below for testing
 my $rr = "Roiling Random Text.i7x";
 my $sr = "Shuffling Random Text.i7x";
 
 ##########################txtfile is the list of regexes after the 2nd quote
 my $txtfile = __FILE__;
-$txtfile =~ s/pl$/txt/;
+$txtfile =~ s/pl$/txt/; # in other words c:\writing\dict\sso.txt
 
 ###################################globals
 my %regex;
@@ -67,6 +69,7 @@ my $moveToHeader = 1;
 my $copyHeaderBack = 0;
 my $compareRoil = 0;
 my $compareShuf = 0;
+my $useTestFile = 1; # mostly covered by copyBack but we can check
 
 while ($count <= $#ARGV)
 {
@@ -81,6 +84,7 @@ while ($count <= $#ARGV)
   /^-?f$/ && do { $copyBack = 1; $count++; next; };
   /^-?n$/ && do { $numbers = 1; $count++; next; };
   /^-?s$/ && do { $statsOpen = 1; $count++; next; };
+  /^-?te$/ && do { $useTestFile = 1; $readIn = $test; $copyBack = 0; $count++; next; };
   /^-?m$/ && do { $moveToHeader = 1; $count++; next; };
   /^-?cr$/ && do { $compareRoil = 1; $count++; next; }; #testing
   /^-?cs$/ && do { $compareShuf = 1; $count++; next; }; #testing
@@ -99,6 +103,11 @@ while ($count <= $#ARGV)
   print "Invalid parameter: $ARGV[0]\n===============\n";
   usage();
   }
+}
+
+if (($readIn eq $test) && ($copyBack == 1))
+{
+  die ("Can't/won't copy back when the file to process is the test file $test");
 }
 
 dupget("$inc\\$rr");
@@ -143,7 +152,7 @@ while ($line=<A>)
 
 close(A);
 
-open(A, "$orig") || die();
+open(A, $readIn) || die();
 
 OUTER:
 while ($line = <A>)
