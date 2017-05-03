@@ -537,7 +537,7 @@ steer button	"No, the steer button HAS to be right."
 shoot button	"No, the shoot button HAS to be right."
 gardenia	"The flowers are fine as-is." [metros]
 tomato	"It's pretty gross, but you can't really change it. Maybe it can gross someone, or something, else out."
-velcro	"The velcro remains tangled."
+Velcro	"The Velcro remains tangled."
 controls	"The controls stay as they are."
 barcode	"The barcode does not shift."
 keycard	"The keycard remains stiff. Looks like it's as it should be."
@@ -942,12 +942,12 @@ rule for showing what the player missed:
 		say "[2da of resort]the rock on the [isle] was changeable to CORK.";
 	if swing is in isle:
 		say "[2da of resort]the swing on the [isle] was changeable to WINGS.";
-	if spore is in woodland:
-		say "[2da of resort]the spore in the woodland was changeable to ROPES[toolwood].";
-	if sprig is in woodland:
-		say "[2da of resort]the sprig in the woodland was changeable to GRIPS[toolwood].";
-	if tool shed is in woodland:
-		say "[2da of resort]the tool shed in the woodland was changeable to TOEHOLDS.";
+	if spore is in Rived Drive:
+		say "[2da of resort]the spore in the Rived Drive was changeable to ROPES[toolwood].";
+	if sprig is in Rived Drive:
+		say "[2da of resort]the sprig in the Rived Drive was changeable to GRIPS[toolwood].";
+	if tool shed is in Rived Drive:
+		say "[2da of resort]the tool shed in the Rived Drive was changeable to TOEHOLDS.";
 	if china is off-stage:
 		say "[2da of resort]the chain links could've become china. [i][bracket]Note: you need to change it to china before making the kilns.[close bracket][r][line break]";
 	now sect-missed is false;
@@ -967,7 +967,7 @@ rule for showing what the player missed:
 		say "[2dn]the other ways to get the tulip are to [alt-sols].";
 
 to say toolwood:
-	say "[if tool shed is in woodland]. Though you got the tougher tool shed[end if]"
+	say "[if tool shed is in Rived Drive]. Though you got the tougher tool shed[end if]"
 
 to say alt-sols:
 	let firsty be false;
@@ -1485,12 +1485,12 @@ tomato	"The tomato is rotten enough that throwing it at something may send them 
 bump	"SEARCH the mattress to find what's in the bump."
 clover	"[one of]The clover seems a bit sticky. [plus][or]Maybe you could change it into something even stickier, like...[plus][or]VELCRO. [minus][cycling]"
 leaves	"The leaves['] clinginess clues what the clover should become."
-Velcro	"The velcro, with its hooks, is useful for sticking to something."
-string	"The string is probably what the clover's stem was. It keeps the velcro mittens hooked together."
+Velcro	"The Velcro, with its hooks, is useful for sticking to something."
+string	"The string is probably what the clover's stem was. It keeps the Velcro mittens hooked together."
 hooks	--	Velcro
 motto	"[one of]The, I mean, a motto probably belongs in the trash in the long term. But it's helpful to you. [plus][or]Who's it by? Too-Apt Pa Otto. How does the song go?[or]Potato, ...[or]TOMATO. [minus][cycling]"
 neon pig	"[one of]That neon pig needs to go. For aesthetic and technical reasons. [plus][or]You can scan it, and that gives you some information. [plus][or]You'd rather have nothing there than the pig, too. [plus][or]It can become an OPENING. [minus][cycling]"
-fuzzy looking wall	"You can climb up the wall with [if player has velcro]your velcro[else]something sticky or clingy[end if]."
+fuzzy looking wall	"You can climb up the wall with [if player has Velcro]your Velcro[else]something sticky or clingy[end if]."
 gardenia	"[if player is in flowers]Try GIVEing the gardenia to the faeries. Either flower you get in return gives a solution.[else]There's a place in this area where you can trade flowers.[end if]"
 building	"The building has a clue for the drainage, but otherwise, you can just go west to enter it."
 sensor	"The sensor probably needs something electronic to read."
@@ -1764,7 +1764,7 @@ carry out metros-hinting:
 		if player has clover:
 			try objhinting clover instead;
 		if player is not wearing Velcro and player is not on fuzzy looking wall:
-			all-say "You can WEAR the velcro to climb the wall." instead;
+			all-say "You can WEAR the Velcro to climb the wall." instead;
 		if neon pig is in Elm Train Terminal:
 			try objhinting neon pig instead;
 		if controls are off-stage:
@@ -1813,7 +1813,7 @@ carry out resort-hinting:
 		else if swing is visible:
 			try objhinting swing instead;
 		all-say "You can just go east here now." instead;
-	if player is in woodland:
+	if player is in Rived Drive:
 		if ropes are visible and grips are visible:
 			all-say "You can just go east now, up the slope." instead;
 		if spore is visible:
@@ -2084,7 +2084,7 @@ instead of jumping:
 		say "Apparently, it's your career that needs the jump, not you." instead;
 	if player is on fuzzy wall:
 		say "Bad idea. Just climb down instead." instead;
-	if player is in woodland:
+	if player is in Rived Drive:
 		say "You don't get anywhere close to over the [if slope is visible]slope[else]poles[end if]. Perhaps it's better to [if poles are visible]try to [end if]CLIMB." instead;
 	say "What am I supposed to do with THAT four-letter mess?"
 
@@ -3144,7 +3144,7 @@ after fliptoing (this is the when to increase min points after flip rule): [stat
 		if spore is in lalaland:
 			min-up;
 	if noun is grips or noun is ropes:
-		if toeholds are in woodland:
+		if toeholds are in Rived Drive:
 			min-up;
 	skip upcoming rulebook break;
 	continue the action;
@@ -5367,10 +5367,10 @@ carry out gleaning:
 			all-say "You watch as the tiles shring from a large land mass to a smaller one." instead;
 		if player is in Isle:
 			all-say "You see yourself either swimming or flying east, but not without proper gear." instead;
-		if player is in woodland:
-			if poles are in woodland:
+		if player is in Rived Drive:
+			if poles are in Rived Drive:
 				all-say "You see the poles to the east bend at an angle." instead;
-			all-say "You see two visions: one, [if tool shed is not in woodland]you trying out the toeholds[else]the tool shed being destroyed[end if], and another, you wearing the [if sprig is in woodland]sprig, modified[else]grips[end if] and the [if spore is in woodland]spore, modified[else]ropes[end if]. In each, you climb east." instead;
+			all-say "You see two visions: one, [if tool shed is not in Rived Drive]you trying out the toeholds[else]the tool shed being destroyed[end if], and another, you wearing the [if sprig is in Rived Drive]sprig, modified[else]grips[end if] and the [if spore is in Rived Drive]spore, modified[else]ropes[end if]. In each, you climb east." instead;
 			if toeholds are visible:
 				all-say "You see yourself walking east." instead;
 			if ropes are visible and grips are visible:
@@ -8149,7 +8149,9 @@ rgtext of hoots button is "[rcn][rc][gc][rc][rc]". lgth of hoots button is 5. gp
 
 the shoot button is a thing. description is "It's on the right, and it's labeled SHOOT.".
 
-understand "sooth" as a mistake ("Close...what you need to do will sooth, in a bit.") when shoot button is visible.
+understand "sooth" as a mistake ("Close...what you need to do will sooth, in a bit.") when shoot button is visible or hoots button is visible.
+understand "otohs" as a mistake ("On the other hand, you might need something more aggressive.") when shoot button is visible or hoots button is visible.
+
 the trees button is a thing. description is "It's on the left, and it's labeled TREES."
 
 rgtext of trees is "[rcn][rc][gc][gc][rc]". lgth of trees button is 5. gpos of trees button is 5. rpos of trees button is 2. cert-text of trees is "-[d1][ast]E[ast]E[d1]". rect-text of trees is "S[d1][d1][d1][ast]R".
@@ -8792,13 +8794,13 @@ Report taking the clover:
 
 some Velcro is a singular-named thing. it is not fixed in place. understand "mittens" and "gloves" as Velcro when Velcro is visible.
 
-check taking off velcro:
+check taking off Velcro:
 	if player is on fuzzy wall:
 		say "You'd fall. Best get down from the wall, first." instead;
 	if player is in abyss:
 		say "Maybe if you had something that gave you an even better grip, you could. But that siren is distracting." instead;
 
-check wearing velcro:
+check wearing Velcro:
 	if player is in abyss:
 		say "[if siren is in abyss]That's not useful in this sticky situation[else]The resin is more useful for you to grab stuff[end if]." instead;
 
@@ -10108,7 +10110,7 @@ check going in Isle (this is the Isle escape rule):
 		say "With the cork under your chest, you dog-paddle to the land you saw from the [isle]. It's soggy and gross from your swim, and the seaweed or whatever has already started to eat at it. You scrabble past a few silent inlets...";
 	now cork is in lalaland;
 	now wings are in lalaland;
-	now player is in woodland instead;
+	now player is in Rived Drive instead;
 
 section flying
 
@@ -10140,23 +10142,23 @@ carry out swiming:
 	say "There's no water nearby to swim in. In which to swim.";
 	the rule succeeds;
 
-chapter woodland
+chapter Rived Drive
 
-There is a room called An Odd Low Woodland. "You've reached an odd low woodland. There's a gigantic [if poles are visible]set of poles[else]slope you could climb[end if] off to the east[if tool shed is visible]. Also, a tool shed that's in bad shape[else]. You see toeholds on the [p-s][end if]."
+There is a room called Rived Drive. "You've reached a Rived Drive. It's an odd low woodland, or was, until release 5. There's a gigantic [if poles are visible]set of poles[else]slope you could climb[end if] off to the east[if tool shed is visible]. Also, a tool shed that's in bad shape[else]. You see toeholds on the [p-s][end if]."
 
-Woodland is a room in Resort.
+Rived Drive is a room in Resort.
 
 does the player mean climbing the poles: it is likely.
 does the player mean climbing the slope: it is likely.
 
-understand "loot" as a mistake ("You don't have time for treasure with Red Bull Burdell waiting.") when player is in woodland and tool shed is in woodland.
+understand "loot" as a mistake ("You don't have time for treasure with Red Bull Burdell waiting.") when player is in Rived Drive and tool shed is in Rived Drive.
 
-check going nowhere in woodland:
+check going nowhere in Rived Drive:
 	say "You'd probably get lost that way. Besides, the vague commotion to the east, past the rising [p-s] seems worth seeing." instead;
 
 section poles-slope
 
-the poles are plural-named scenery in woodland. understand "pole" as poles.
+the poles are plural-named scenery in Rived Drive. understand "pole" as poles.
 
 description of poles is "They are too vertical [if toeholds are not visible]and smooth [end if]to climb. You can't push them--they look quite sturdy and are at least twenty feet tall--but maybe, if they were at an angle..[if tool shed is visible]. Or you could get a grip somewhere[end if].". lgth of poles is 5. gpos of poles is 5. rpos of poles is 4. rgtext of poles is "[rcn][rc][rc][rc][rc]". cert-text of poles is "-[d1][d1][d1][d1]". rect-text of poles is "S[d1][d1][d1][ast]E".
 
@@ -10172,7 +10174,7 @@ check climbing slope:
 
 section tool shed - toeholds
 
-the tool shed is scenery in woodland. rgtext of tool shed is "[gcn][gc][rc][rc][rc][rc][rc][rc]". the lgth of tool shed is 8. gpos of tool shed is 1. rpos of tool shed is 5. cert-text of tool shed is "T[ast]O[d1][d1][d1][d1][d1][d1]". rect-text of tool shed is "T[d1][d1][d1][d1][d1][d1][ast]S".
+the tool shed is scenery in Rived Drive. rgtext of tool shed is "[gcn][gc][rc][rc][rc][rc][rc][rc]". the lgth of tool shed is 8. gpos of tool shed is 1. rpos of tool shed is 5. cert-text of tool shed is "T[ast]O[d1][d1][d1][d1][d1][d1]". rect-text of tool shed is "T[d1][d1][d1][d1][d1][d1][ast]S".
 
 description of tool shed is "It's metal, with no visible entry or even windows. A forbidding u-lock (a padlock could become an old pack, after all,) is welded to it, just to make sure. You notice outcroppings scattered around the tool shed walls.". understand "toolshed" as tool shed.
 
@@ -10209,7 +10211,7 @@ instead of entering tool shed:
 
 toeholds are a plural-named thing. description of toeholds is "They [if poles are visible]could almost help you up the poles, if the poles weren't so vertical[else]should make it easy to climb the slope to the east[end if]."
 
-section woodland text shortcuts
+section Rived Drive text shortcuts
 
 to say check-tools:
 	if ropes are visible or grips are visible:
@@ -10227,9 +10229,9 @@ to say p-s:
 	otherwise:
 		say "slope";
 
-section woodland escape
+section Rived Drive escape
 
-check going east in woodland:
+check going east in Rived Drive:
 	if poles are visible:
 		say "The poles are too vertical to climb[if toeholds are visible]. Even with the toeholds[else if ropes are visible and grips are visible]. Even with your tools[else if ropes are visible or grips are visible], and your one climbing tool wouldn't be quite enough anyway[end if]." instead;
 	if toeholds are visible:
@@ -10250,7 +10252,7 @@ check going east in woodland:
 
 section spore - ropes
 
-the spore is in woodland. "A spore, about a foot long, is here. Imagine what it could grow into."
+the spore is in Rived Drive. "A spore, about a foot long, is here. Imagine what it could grow into."
 
 description of spore is "It looks too delicate as is to support any weight."
 
@@ -10261,7 +10263,7 @@ rgtext of spore is "[rcn][rc][rc][rc][rc]". rpos of spore is 1. gpos of spore is
 
 section sprig - grips
 
-the sprig is in woodland. "A sprig of some tree or weed you can't identify is here.". understand "weed" as sprig when sprig is visible.
+the sprig is in Rived Drive. "A sprig of some tree or weed you can't identify is here.". understand "weed" as sprig when sprig is visible.
 
 instead of taking the sprig:
 	say "Uprooting it would probably kill it."
@@ -10284,11 +10286,11 @@ description of ropes is "They look sturdy enough, knotted at the ends and so for
 
 chapter Potshot Hotspot
 
-report going east in woodland:
+report going east in Rived Drive:
 	say "You won't be able to repo the rope.";
 	continue the action;
 
-Potshot Hotspot is east of woodland. Hotspot is in Resort.
+Potshot Hotspot is east of Rived Drive. Hotspot is in Resort.
 
 understand "brb" as a mistake ("You don't know him that well. No riffing on his initials!") when player is in hotspot and red bull burdell is in hotspot.
 
@@ -10700,11 +10702,11 @@ section resort
 
 understand "prigs" as a mistake ("Grumbling about prigs, or showing those prigs, won't help now. You should probably [if grips are visible]use the grips to climb[else]make the sprig into something useful[end if] instead.") when grips are visible or sprig is visible.
 
-understand "prose" as a mistake ("There's not much of that left in this game, and talking won't help you up the [p-s][if ropes are visible]. The ropes will[else]. The spore can be something sturdier. You see red at the thought of having to read[end if].") when player is in woodland.
+understand "prose" as a mistake ("There's not much of that left in this game, and talking won't help you up the [p-s][if ropes are visible]. The ropes will[else]. The spore can be something sturdier. You see red at the thought of having to read[end if].") when player is in Rived Drive.
 
-understand "pores" as a mistake ("[if ropes are visible]No, you had it[else]Almost. But you don't need to create holes[end if].") when player is in woodland.
+understand "pores" as a mistake ("[if ropes are visible]No, you had it[else]Almost. But you don't need to create holes[end if].") when player is in Rived Drive.
 
-understand "poser" as a mistake ("[if ropes are visible]You mutter a small epithet at where Red Bull Burdell could be. No, he's not around, but he must be near[else]You wonder if YOU are the poser, for not being able to figure what to do[end if].") when player is in woodland.
+understand "poser" as a mistake ("[if ropes are visible]You mutter a small epithet at where Red Bull Burdell could be. No, he's not around, but he must be near[else]You wonder if YOU are the poser, for not being able to figure what to do[end if].") when player is in Rived Drive.
 
 section sortie
 
@@ -12543,7 +12545,7 @@ check listening:
 			try listening to the anapest instead;
 		if peasant is visible:
 			say "With less, he whistles, eh?" instead;
-	if player is in woodland:
+	if player is in Rived Drive:
 		say "You hear something from above the [p-s] to the east, but you'll need to get closer to make out details." instead;
 	if player is in kitchen:
 		say "[one of]A song with the chorus 'He oft partook of the okra pot.' The tune and the thought of okra make you gag, even when you realize it's a novelty song and not serious.[or]It's actually sort of catchy, if you think about it.[or][no-you]ou hate the stupid okra song, again. You need to get cooking on something else.[stopping]" instead;
@@ -12820,7 +12822,7 @@ part directional cleanup
 up-nearby is a truth state that varies.
 
 before going up:
-	if player is in woodland:
+	if player is in Rived Drive:
 		try going east instead;
 	if player is in Elm Train Terminal or player is in condo or player is in underside or player is on fuzzy looking wall:
 		continue the action;
@@ -13496,7 +13498,7 @@ metros	"Scanning the deadbeat?"
 metros	"Asking the beats anything?"
 metros	"The following anagrams in the metros where appropriate: sap, asp, smitten, trounce, stalker, snores, senors, tar, reins, risen, lair(s), lira, liar(s), bates[nfi]"
 --	"the following anagrams in the resort where (in)appropriate: slite, poser, prose, achin, roister, sex it"
---	"Converting the sprig to prigs in the woodland?"
+--	"Converting the sprig to prigs in the Rived Drive?"
 --	"Any anagrams I missed? Let me know. I'll credit you. Or if you find another silly joke to throw in, tell me. I enjoy them."
 
 Rule for amusing a victorious player:
@@ -13637,8 +13639,8 @@ index map with abyss mapped west of elm train terminal.
 [roster]
 index map with Astral Altars mapped east of sf.
 index map with Isle mapped south of sf.
-index map with woodland mapped east of Isle.
-index map with hotspot mapped east of woodland.
+index map with Rived Drive mapped east of Isle.
+index map with hotspot mapped east of Rived Drive.
 index map with roman manor mapped east of hotspot.
 
 volume beta testing - not for release
@@ -14284,7 +14286,7 @@ section tester-scripts
 
 [*mostly paul lee's cool tries]
 
-test pl9m with "test intro/metros/d/beast/gardenia/x gardenia/n/velcro/ask deadbeat about himself/ask deadbeat about cake/e/ask faeries about clover/give clover to faeries/ask faeries about heaths/ask faeries about begonias/ask faeries about gardenias/x brocade/x scratchings/barcode/x flowers/w/get lost corn/w/x garbage/smell/smell garbage/smell tomato/beats/sword/e/e/sheath/w/w/e/n/throw tomato/s/s/w/throw tomato/get emitter/e/n/n/switch emitter/get cake/keycard/s/get corn/" in subsite
+test pl9m with "test intro/metros/d/beast/gardenia/x gardenia/n/Velcro/ask deadbeat about himself/ask deadbeat about cake/e/ask faeries about clover/give clover to faeries/ask faeries about heaths/ask faeries about begonias/ask faeries about gardenias/x brocade/x scratchings/barcode/x flowers/w/get lost corn/w/x garbage/smell/smell garbage/smell tomato/beats/sword/e/e/sheath/w/w/e/n/throw tomato/s/s/w/throw tomato/get emitter/e/n/n/switch emitter/get cake/keycard/s/get corn/" in subsite
 
 [u/u/jump/]
 
@@ -14333,7 +14335,7 @@ test g1 with "goat/gateman/gateway/getaway/thorn/soil/silo/oils/lois/plane/panel
 
 test g2 with "cask/sack/cask/sack/6/9/13/18/19/16/straw/kitchen/the nick/moor/room/missile/smilies/anapest/peasant/haywall/hallway/coat/aco/skate/parmesan/tortilla/hot sauce/hotsauce/cathouse/cat house/lettuce/shoot button/hoots/trees/steer/reset"
 
-test g3 with "drainage/gardenia/brocade/barcode/sheath/heaths/begonias/noise bag/dry cake/keycard/sword/words/tomato/motto/a motto/lost corn/controls/velcro/clover/beats/beast"
+test g3 with "drainage/gardenia/brocade/barcode/sheath/heaths/begonias/noise bag/dry cake/keycard/sword/words/tomato/motto/a motto/lost corn/controls/Velcro/clover/beats/beast"
 
 test g4 with "cork/rock/swing/wings/toolshed/toeholds/grips/sprig/ropes/spore/trio/riot/potters/protest/kilns/links/tug toe"
 
@@ -14484,16 +14486,16 @@ to unsolve-resort:
 	now swing is in Isle;
 	now swing is not flipped-yet;
 	now wings are off-stage;
-	now tool shed is in woodland; [odd low woodland]
+	now tool shed is in Rived Drive; [rived drive]
 	now tool shed is not flipped-yet;
 	now toeholds are off-stage;
-	now poles are in woodland;
+	now poles are in Rived Drive;
 	now poles are not flipped-yet;
 	now slope is off-stage;
-	now sprig is in woodland;
+	now sprig is in Rived Drive;
 	now sprig is not flipped-yet;
 	now ropes are off-stage;
-	now spore is in woodland;
+	now spore is in Rived Drive;
 	now spore is not flipped-yet;
 	now riot is in hotspot; [hotspot]
 	now potters are off-stage;
