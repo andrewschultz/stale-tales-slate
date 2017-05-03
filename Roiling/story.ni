@@ -10322,7 +10322,7 @@ rule for supplying a missing noun when entering:
 	if player is in Largely All-Grey Gallery:
 		now the noun is the evac-cave.
 
-Largely All-Grey Gallery is a stairy innie privately-named room in Roman Manor. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. [one of]There\s an evac-cave that could help you sneak out of the manor[or]You can enter the evac-cave here[stopping][if min-score of manor < max-score of manor], though if you're a completist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
+Largely All-Grey Gallery is a stairy innie privately-named room in Roman Manor. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. It stands regally, for all that. [one of]There's an evac-cave that could help you sneak out of the manor[or]You can enter the evac-cave here[stopping][if min-score of manor < max-score of manor], though if you're a completist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
 
 understand "sitar" as a mistake ("[if stair is visible]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Largely All-Grey Gallery.
 
@@ -17432,6 +17432,8 @@ book Anger Range
 
 Anger Range is a room in Oyster. "This place [if haunter is in lalaland]no longer [end if]manages to n-rage you, [if haunter is in lalaland]and the area seems to have calmed down[else if carps are visible]as well as the fish who live here[otherwise]and you sense there may be something else angré in the area. Some sort of scrawl sears the ground near the center, which feels unusually boiling[hau-clue][end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping]."
 
+understand "renga" as a mistake ("Now is not the time for poetry.") when player is in Anger Range.
+
 to say hau-clue:
 	say "[if ruby is in lalaland and haunter is off-stage], even more than before you buried the ruby[end if]";
 
@@ -19696,7 +19698,8 @@ book Anemic Cinema
 
 Anemic Cinema is north of Baldest Blasted Saltbed. "Well, you're not [i]in[r] the cinema. It's off to the side[if ingrates are visible]. Something smells to the west, too[end if][tow-dirs].". Anemic Cinema is in Towers.
 
-understand "ice man" and "iceman" as a mistake ("The iceman cometh (at least it wasn't maniac icemen,) all 'I, manic menace,' and your life passeth
+understand "ice man" and "iceman" as a mistake ("The iceman cometh, and your life passeth.[paragraph break][uurrgg]") when player is in anemic cinema.
+
 after printing the locale description for Anemic Cinema when Anemic Cinema is unvisited:
 	say "The ingrates grumble about how their territory is useless, and that's really not their fault. Maybe you don't really need to get rid of them.[paragraph break]";
 
@@ -19712,7 +19715,7 @@ check going inside when player is in Anemic Cinema:
 instead of doing something with theater:
 	if current action is entering:
 		try entering theater;
-	say "The theater thereat, with such lame titles as 'Me, I can,' / 'Nice, Ma!' and 'Iceman,' has been abandoned. And really, you shouldn't be staring at some screen when you are trying to save a world."
+	say "The theater thereat, with such lame titles as 'Me, I can,' / 'Nice, Ma!' and 'I, Manic Menace,' has been abandoned. And really, you shouldn't be staring at some screen when you are trying to save a world."
 
 book Treading Gradient
 
@@ -26834,6 +26837,7 @@ oyster	"CARET in the plains?"
 oyster	"PALINS in the plains?"
 towers	"TOWERS:"
 towers	"KALE by Leak Lake?"
+towers	"ICEMAN by Anemic Cinema?"
 towers	"DOPIEST or POSITED in the topside?"
 towers	"PORIN or PORINS by the prison ropin's?"
 towers	"REPAIR TOASTER?"
@@ -27533,8 +27537,8 @@ volume mapping
 
 index map with Stable mapped west of study.
 index map with Highest Heights mapped east of study.
-index map with basement mapped north of study.
-index map with carven cavern mapped north of basement.
+index map with Largely All-Grey Gallery mapped north of study.
+index map with carven cavern mapped north of Largely All-Grey Gallery.
 
 [presto]
 index map with dirge ridge mapped west of stable.
