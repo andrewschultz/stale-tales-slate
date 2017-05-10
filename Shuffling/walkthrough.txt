@@ -1,8 +1,8 @@
 Walkthrough for Shuffling Around, an IFComp 2012 game by Andrew Schultz (schultz.andrew@sbcglobal.net) as Ned Yompus
 
-Last updated 7/23/2015. The different ways through have been tested to work. I threw in some fun stuff to try, but I also hid the Last Lousy Point(s).
+Last updated 4/11/2017 for release 5. The different ways through have been tested to work. The game branches a bit near the end, and I try to cover all these things.
 
-I put in a lot of spaces so as not to spoil things. There are three sections. For IFComp, you only had to complete two. For this, you can complete all three, or you can activate the RECUSE button to get all two.
+I put in a lot of spaces so as not to spoil things. There are three sections you can complete in any order, in the middle of the game, before store r. For IFComp, you only had to complete two. For this, you can complete all three, or you can activate the RECUSE button to get all two.
 
 You may wish to search for the following: intro, store f, store i, store m, store r.
 
@@ -16,6 +16,11 @@ You may wish to search for the following: intro, store f, store i, store m, stor
 > in
 
 > goat
+
+There's a last lousy point with the darnels. Neither SANDLER nor LANDERS works. In fact, this sort of breaks the game's rules, but it IS a last lousy point.
+
+>slander
+
 > in
 
 > gateman
@@ -25,8 +30,9 @@ You may wish to search for the following: intro, store f, store i, store m, stor
 > attics
 > static
 > attics
+> getaway
 
-(You have all the points now, but you may want to get this information.)
+(You have all you need now, but you may want to get this information.)
 
 > read board
 > read info-lit
@@ -42,6 +48,8 @@ You may wish to search for the following: intro, store f, store i, store m, stor
 > ask about redness
 > get phial
 > enter gate
+
+Now at any time you can become un-acne-bit with a last lousy point which is a bit of a brand name, but it's a relatively common one.
 
 
 
@@ -95,12 +103,12 @@ store f
 > forest
 > in
 
-Note: the puzzles are random here. You have two of the four cardinal directions to go, and there's no penalty for a wrong way. So you could just plain guess. You can probably figure out which way without a mistake, though.
+Note: the puzzles are random here. You have two of the four cardinal directions to go, and there's no penalty for a wrong way. So you could just plain guess. You can probably figure out which way without a mistake, though. Also, you won't get the same way twice.
 
 > (direction)
 > (direction)
 
-Now you're out of the forest. You need to sort of look like the spirits passing through.
+Now you're out of the forest. You need to sort of look like the spirits passing through in the line of no life.
 
 > e
 > nose
@@ -108,7 +116,7 @@ Now you're out of the forest. You need to sort of look like the spirits passing 
 > shotgun
 > put shades on nose
 
-Almost there. What about to the west?
+Okay, that's all you can do in the east. But your disguise isn't complete, yet. What about to the west?
 
 > w
 > w
@@ -121,7 +129,7 @@ Almost there. What about to the west?
 > chisel
 > get chisel
 
-The banshee can be disposed of and made a thing of the past.
+The banshee can be disposed of and made a thing of the past for a last lousy point.
 
 > hasbeen
 

@@ -17360,7 +17360,7 @@ check fliptoing oars:
 	if player is not on raft:
 		say "That'd leave the raft behind you. Get on it first." instead;
 
-understand "fart" as a mistake ("[if b-r is visible]This raft isn't as receptive as the one in Anger Range[else]You feel slightly dafter, having farted to no good purpose[end if].") when player is not in Hero's shore.
+understand "fart" as a mistake ("[if b-r is visible]This raft isn't as receptive as the one in Anger Range[else if mrlp is oyster and anger range is visited]Gag ass-gas[else]You feel slightly dafter, having farted to no good purpose[end if].") when player is not in Hero's shore.
 
 check fliptoing raft:
 	if player is not on raft and raft is reflexive:
@@ -25055,6 +25055,10 @@ when play begins (this is the seed novella rule) :
 chapter Hows Show
 
 Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "You see two walls here with snatches of code written all over them[if nuf-hows-examined]: the owl decal code wall and the allow-lots-tools wall[end if]. They may be too technical, but maybe you can get a general feel for the silly tricks that went into A Roiling Original. You can go back south."
+
+after printing the locale description for Hows Show when Hows Show is unvisited:
+	ital-say "NOTE: the whos-show is already under CREDITS.";
+	continue the action;
 
 to decide whether nuf-hows-examined:
 	if written walls are examined, decide yes;

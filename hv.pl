@@ -80,6 +80,7 @@ my $hash = 0;
 
 my $myRegion = "";
 
+###############probably obsolete with tables broken by regi9on
 $regHash{"-rf"} = "forest"; $rmHash{"-rf"} = "fields"; $regHash{"-ri"} = "sortie"; $rmHash{"-ri"} = "moor"; $regHash{"-rm"} = "metros"; $rmHash{"-rm"} = "underside";
 
 $regHash{"-ru"} = "routes"; $rmHash{"-ru"} = "mesa"; $regHash{"-rp"} = "presto"; $rmHash{"-rp"} = "gyre"; $regHash{"-rv"} = "troves"; $rmHash{"-rv"} = "rathole"; $regHash{"-rw"} = "towers"; $rmHash{"-rw"} = "trefoil"; $regHash{"-ry"} = "oyster"; $rmHash{"-ry"} = "hops shop"; $regHash{"-rt"} = "otters"; $rmHash{"-rt"} = "inclosure";
@@ -96,8 +97,8 @@ my $found = 0;
 for my $idx (0..$#ARGV)
 {
   my $this = lc($ARGV[$idx]);
-  if ($this =~ /^-?[e!]$/) { $cmd = "start \"\" \"C:/Program Files (x86)/Notepad++/notepad++.exe\" c:/writing/dict/hv.txt"; `$cmd`; exit; }
-  if ($this =~ /^-?[o]$/) { $cmd = "start \"\" \"C:/Program Files (x86)/Notepad++/notepad++.exe\" c:/writing/dict/hv.pl"; `$cmd`; exit; }
+  if ($this =~ /^-?[e!]$/) { $cmd = "start \"\" \"C:/Program Files (x86)/Notepad++/notepad++.exe\" c:/writing/dict/hv.pl"; `$cmd`; exit; }
+  if ($this =~ /^-?[o]$/) { $cmd = "start \"\" \"C:/Program Files (x86)/Notepad++/notepad++.exe\" c:/writing/dict/hv.txt"; `$cmd`; exit; }
   if ($this =~ /^-?(c|cl|clean)$/) { cleanUp(); exit; }
   if ($this =~ /-r[a-z]/) { $region = $regHash{$this}; if (!$region) { $region = "myreg"; } $rm = $rmHash{$this}; if (!$rm) { $rm = "myrm"; } next; }
   if ($this =~ /-p/) { $printIfThere = 1; next; }
@@ -126,6 +127,8 @@ if (@these > -1) { print "Checking CSV of list.\n"; }
 
 for my $hword (@these)
 {
+
+if (length($hword) < 3) { print "$hword has length < 3, skipping.\n"; next; }
 
 my @x = split(//, $hword);
 

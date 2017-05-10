@@ -10728,6 +10728,7 @@ blurb	prio
 "Bo's Life-Foibles[r], by [if player is male]Leif Bos[else]Flo Seib[end if]"
 "Boadicea Bade Ciao[r], by Ada Boice"
 "The Board's Drab Ethos[r], by [if player is male]Shad Berto[else]Rhoda Best[end if]"
+"Boat or a Robot[r], by Rob Tao"
 "Boater to Bear or Beat[r], by Tre Abo & [a-b] Ort" []
 "Bob Lew's Wobbles[r], by Sol Webb"
 "Bob's Gig: Big Bogs[r], by Og Gibbs"
@@ -12042,7 +12043,7 @@ blurb	prio
 "Gangs of Fog Sang[r], by GG Fason"
 "Gankery: Keg Yarn[r], by Ken Gray"
 "Gant's Angst[r], by Stann Stagg"
-"Gaol Be a Globe[r], by [if player is male]Bo Gale[else]Gab Leo[end if]"
+"Gaol Be a Globe[r], by Gab Leo"
 "Garages Are Gags[r], by Asa Gerg" []
 "Garbage Bagger A[r], by Abe Garg"
 "Garden Home Harmed, Gone[r], by [if player is male]Herman Doge & Ahmed Groen[else]Merna Hodge & Madge Horne[end if]"
@@ -12149,7 +12150,7 @@ blurb	prio
 "Go Win, Mr. I'm-Wrong[r], by Wm. Gorin"
 "Go, World, Do Growl[r], by Gord Low"
 "Go Yard, Gary, Do[r], by Rod Gay"
-"Goal Be a Globe[r], by Bo Gale"
+"Goable Goal Be a Globe[r], by Bo Gale"
 "Goal: Thin Loathing[r], by Inga Holt" []
 "Goalies['] Soilage[r], by Ali Gose"
 "God-Bane Bondage[r], by [a-b] Gond"

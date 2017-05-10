@@ -8,13 +8,11 @@ book the tables themselves
 
 table of roman manor nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
-"basement"	608585586	Basement	--	--	"[locname]."
 "rove"	394647309	--	--	gunter-yet rule	"That's not a way to sneak around and avoid [if stuff-found >= 3 and gunter is off-stage]the[else]any future[end if] knock at the door."
-"meet"	422797389	--	--	is-unbent rule	"[locname-part]."
-"bans"	185788197	--	--	is-unbent rule	"[locname-part]."
-"bent"	318242540	--	--	is-bent rule	"[locname-part]."
-"same"	290343046	--	--	is-bent rule	"[locname-part]."
 "study"	447878132	dusty study	--	--	"[locname]."
+"gallery"	477904362	Gallery	--	--	"[locname]."
+"all"	109815496	Gallery	--	--	"[locname-part]."
+"grey"	368088866	Gallery	--	--	"[locname-part]."
 "blest"	399422837	stable	--	--	"[locname]."
 "stable"	401610655	stable	--	--	"[locname]."
 "highest"	479347239	highest heights	--	--	"[locname]."
@@ -59,7 +57,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "plate"	368383743	--	plates	--	"You have no idea which plate to focus on, so maybe you should focus on the plates."
 "tapler"	453707546	--	plaster	--	"What you need is singular, but you sense it's all the plaster that matters."
 "abstract"	429617931	--	painting	--	"That is probably overthinking the painting's abstract-ness. It's really just good for examining and offsetting the bookcase."
-"ten beams"	608585586	--	--	basement-visible rule	"You probably just want to go DOWN to the basement."
+"ten beams"	608585586	--	--	basement-visible rule	"You probably just want to go DOWN to the [if gallery is visited]gallery[else]basement[end if]."
 "stable"	401610655	--	--	stable-visible rule	"You probably just want to go IN to the stable."
 "satchel"	439479634	--	satchel	--	"You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too."
 "satchel"	439479634	--	latches	--	"Hm, that's not it, but it must be something relatively simple. Maybe rereading the treatise would help things fall out."
@@ -78,7 +76,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "chair"	188792351	--	rich chair	--	"The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing."
 "rich"	186604533	--	rich chair	--	"The chair may be an unnecessary luxury, but you shouldn't feel bad about that."
 "sad"	119490873	--	sad ads	--	"[w-twi]."
-"evac"	256164332	Basement	--	--	"The evac-cave is your way out. It'd be a bad idea to change it."
+"evac"	256164332	Gallery	--	--	"The evac-cave is your way out. It'd be a bad idea to change it."
 "manor"	294846859	--	--	degen-true rule	"[not-the-reg]."
 
 table of stores nudges
@@ -282,6 +280,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "picture"	566810127	Pallid Li'l Pad	--	--	"It's not just any old picture. It's of a sad pier."
 "spider"	456891772	--	diapers	--	"The diapers, the sad pier--the spider only fits in as *a* spider."
 "glare"	301731271	--	--	glaring-futile rule	"You stare into space some more but get distracted."
+"bower"	413836167	--	myrm	--	"[locname]."
+"bowers"	510110133	--	myrm	--	"[locname]."
 "rotunda"	460016620	browse bowers	--	--	"[rotun]."
 "dour"	285811276	browse bowers	--	--	"[rotun]."
 "tan"	174205344	browse bowers	--	--	"[rotun]."
@@ -1196,16 +1196,6 @@ this is the gunter-yet rule:
 to say locname-part:
 	say "You should never need to riff on part of a location name[if bogus-plains is reflexive and oyster is needed], though you may get a last lousy point from doing so if you're observant[end if][one of], so that's one less thing to worry about, I hope[or][stopping]"
 
-this is the is-unbent rule:
-	if player is in Basement and basement-been is false:
-		the rule succeeds;
-	the rule fails;
-
-this is the is-bent rule:
-	if player is in Basement and basement-been is true:
-		the rule succeeds;
-	the rule fails;
-
 this is the Gunter-left rule:
 	if player is in study and Gunter is in lalaland:
 		the rule succeeds;
@@ -1263,7 +1253,7 @@ this is the stable-visible rule:
 	the rule fails;
 
 to say papwall:
-	say "The paperwall is unmoved. Maybe the stuff [if plaster is in lalaland and plates are in lalaland]that came from it[else if plaster is in Basement and plates are in Basement]in the wall[else]in and out of the wall[end if]  could help you more, here";
+	say "The paperwall is unmoved. Maybe the stuff [if plaster is in lalaland and plates are in lalaland]that came from it[else if plaster is in Cavern and plates are in Cavern]in the wall[else]in and out of the wall[end if]  could help you more, here";
 
 to say hisin:
 	say "The high sign is a clue. Bad idea to change it"
