@@ -120,7 +120,7 @@ Troves is a region. regtab of Troves is table of troves nudges. regana of Troves
 
 Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 39. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter and pulling lever]
 
-Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 33. min-score of presto is 28. [rom stick, lamb, tab, casserole, +1 point for Phooey]
+Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 34. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey]
 
 Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 48. min-score of towers is 25.
 [Necessary points:
@@ -4044,6 +4044,7 @@ maze walls	"The maze walls rumble a bit."
 onyx censer	"That feels right, but it's not enough yet. You don't need anything grumbly, here."
 Hogs	"The hogs snicker a bit, but they seem a little nervous, too."
 Keys	"The hogs snicker a bit, but they seem a little nervous, too."
+thaw	"The hawt thaw crackles slightly."
 alert letters	"[l-r-bye-hint]."
 log ons letters	"[l-r-bye-hint]."
 ought letters	"[l-r-bye-hint]."
@@ -5495,9 +5496,10 @@ rivets	false	false	false	true	"[rivet-help]."
 salt	true	false	false	false	"Hmm. Well, four letters can't be bad. The vowel must be in one of those two places."
 song	false	true	false	false	"You'd guess it's Eddie's song and not Eddie, since when the instrumentals kick in, the settler's reading stays."
 alert letters	true	false	false	false	"Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them." [presto]
+hawt thaw	true	false	false	false	"Wow! Three ambiguous readings. But you wonder if they won't help in their own way, or if you really need a huge hint."
 USB	true	true	false	false	"Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good."
-perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light."
-pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, five letters is easier than four[end if]." [oyster]
+perma-amper	true	true	false	false	"It's a perma-amper, so that might account for the twitchy light." [oyster]
+pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, five letters is easier than four[end if]."
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
 Ray Eck	false	true	false	false	"Ray Eck begins babbling about how interesting the settler looks, almost as interesting as his keycar. Maybe you could ASK him about the keycar, if he's still stumping you." [towers]
@@ -8925,11 +8927,12 @@ ye hoop	censer	true	517618773	--	"phooey"	"phooey"	"[get-censer]."
 walls	walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	"This space intentionally left blank."
 volt maze	volt maze	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	"You decide to congratulate yourself [if l-m is off-stage and m-l is off-stage]before you get[else]despite not getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, [paragraph break]You hear an imaginary yenta [if maze entry is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if l-m is escanned]saying you should not have had to scan that nice man to figure the puzzle, asking for any due dayenu.[else if m-l is escanned]saying you should not have had to scan those nice men to figure the puzzle, asking for any due dayenu.[else if r24 is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if plaque is unexamined]wondering how you KNEW.[else]saying SHE'D never been that clever, SHE'D have to go through the maze.[end if] [if player was not in grey gyre]When you wake up back in the gyre, you see[else]There's now[end if] ether to the north.[paragraph break]You shake the yenta's blabber off--the important thing is, you figured the maze out, and you doubt anything else here will be nearly that difficult."
 ether	ether	false	481328338	--	"there"	"there"	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!' [paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
-keys	keys	false	399372505	--	"syke"	"syke"	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow all...ow!'"
+keys	keys	false	399372505	--	"syke"	"syke"	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow...ow...all!'"
 hogs	hogs	false	240508544	--	"gosh"	"gosh"	"You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
 log ons	log ons	false	400300169	--	"solong"	"so long" or "solong"	"[increm]"
 alert	alert	false	372241587	--	"later"	"later"	"[increm]"
 ought	ought	false	352450403	--	"tough"	"tough"	"[increm]"
+hawt thaw	hawt thaw	false	250514908	--	"what"	"what"	"You realize you have done a lot of mental calculations with anagrams, but some of it feels rote, and while Elvira probably overdid it, there are times you relied just on calculation without asking deeper questions. Why is hawt-thaw as it is? Even Yorpwald's best scientists can't answer that question. So, you make a commitment to be more than just someone who finds anagrams, once this whole shebang is over, and you remind yourself that puzzles for their own sake only go so far.[paragraph break]The hawt thaw shrivels up and blows away, leaving you wiser--and more intellectually curious--for its brief presence in your life, even if it doesn't help you on your immediate quest."
 clock sap	caps lock	true	399038507	--	"capslock"	"capslock" or "caps lock"	"You think WHOAH as the clock sap becomes a capslock button, which you pick up."
 disk	skid	false	215229079	--	"skid"	"skid"	"[one of]By some lossless easily reversible algorithm, t[or]T[stopping]he disk changes to a skid with a floppy pop-fly[one of]. The skid's too big to carry, but you can PUSH or PULL it around[or] again[stopping]."
 skid	disk	true	215229079	--	"disk"	"disk"	"The skid changes back into a disk, which you take."
@@ -9489,9 +9492,10 @@ after fliptoing post (this is the cleanup after the post/thief rule) :
 
 after fliptoing (this is the one-of-two and min-up-plus rule):
 	if noun is keys or noun is hogs:
-		say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed. Behind the wall to the north you see a shack, with a warning sign.";
+		say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]A warning sign lies beyond where the wall was.";
 		now keys are in lalaland;
 		now lawl wall is in lalaland;
+		now hawt thaw is in phat path;
 		now hogs are in lalaland;
 		now priv-shack is in phat path;
 		move smart people sign to phat path;
@@ -15406,6 +15410,16 @@ understand "so long" and "solong" and "tough" and "later" as a mistake ("'But we
 
 understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, before you can slog on.") when player is in Phat Path and lawl wall is in lalaland and Leo is in Phat Path.
 
+chapter hawt thaw
+
+the clump of hawt thaw is LLPish reflexive vanishing scenery. "It doesn't make much immediate sense, and it's probably not critically important to your quest. It's not in the way. But maybe thinking about it right will widen your horizons a bit."
+
+a-text of hawt thaw is "RRYR". b-text of hawt thaw is "R???". parse-text of hawt thaw is "?[sp]?[sp]?[sp]?". hawt thaw is parse-spoilable.
+
+instead of doing something with hawt thaw:
+	if action is procedural, continue the action;
+	say "From what you know of hawt thaw, it may not be entirely safe. It sort of appears and disappears with little rhyme or reason."
+
 chapter thising
 
 thising is an action applying to nothing.
@@ -15735,6 +15749,8 @@ check tying it to (this is the put on the slab rule) :
 
 after fliptoing scratch paper:
 	now compiled code is part of the computer screen;
+	if hawt thaw is in phat path:
+		poss-d;
 	if lamb is in Grey Gyre:
 		poss-d;
 	if player has rom sticks:
@@ -23612,7 +23628,7 @@ chapter augural arugula
 the augural arugula is an edible thing. description of arugula is "It's not enough for a luau. Arg."
 
 check eating arugula:
-	say "Not very tasty, but your vision seems clearer. You can now GURU what you are curious about.";
+	say "Not very tasty, but your vision seems clearer. 'La! A guru!' you think to yourself. You can now GURU what you are curious about.";
 	now arugula is in lalaland;
 	now can-guru is true;
 	the rule succeeds;

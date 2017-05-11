@@ -945,6 +945,8 @@ Both work equally well. But now you need to ditch Rand and Leo, who want to visi
 or
 (ALT) > TOUGH
 
+Oh, you can deal with that hawt thaw if you want, too, but it's a last lousy point. It was an extremely badly clued puzzle in version 1, so it's a sort of inside joke. You probably know what to do.
+
 > N
 
 Read the schematic catechism a few times if you want--I sort of generated a lot of doctor names from a script. And some of the longer anagrams were fun. Originally, it was part of the puzzle to fix up the computer, but things didn't quite work right.
@@ -1944,6 +1946,7 @@ PRESTO:
 
 OYNZ scares the lamb. But only enough to send it safely home!
 
+ JUNG gets rid of the hawt thaw. (Neat ROT13, eh?)
 The trim socks become EBZ FGVPXF--no space needed. The escaroles become PNFFREBYR.
 
 ROUTES:

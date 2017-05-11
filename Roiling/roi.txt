@@ -9,7 +9,7 @@ The tarred trader, Dr. Yow, the smart kid, and the person on a droll dollar chan
 The south exit from the Coastline, in Store W, features either Lois the Hostile or the Hostile-Is-He Lot.
 The Deal Seer west of the Strait is Lars Eede or Elsa Erde.
 There may be an embarrassing bug where a female NPC is referred to as male, but I hope not. I searched pretty thoroughly, I guess/think. If you find one, I'll fix it and give you credit.
-Also, if any animals are referred to as male, let me know, as that's a potential bug. I tryied to leave them gender-neutral.
+Also, if any animals are referred to as male, let me know, as that's a potential bug. I tried to leave them gender-neutral.
 >MANOR
 >>Study
 ?What do I do here?
@@ -313,6 +313,10 @@ You only need two of these three to move on.
 TOUGH...
 ...LATER...
 ...SO LONG.
+?Is the hawt thaw significant?
+Not strictly.
+It's really weird, though.
+If you take a good hard look at it, you may want to say WHAT.
 >>HACKS' SHACK
 ?There's a lot to do here! What's my ultimate goal?
 Write a computer program.
