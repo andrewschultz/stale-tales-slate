@@ -6,7 +6,7 @@ volume table of nudges
 
 book the tables themselves
 
-table of roman manor nudges
+table of means manse nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "rove"	394647309	--	--	gunter-yet rule	"That's not a way to sneak around and avoid [if stuff-found >= 3 and gunter is off-stage]the[else]any future[end if] knock at the door."
 "study"	447878132	dusty study	--	--	"[locname]."
@@ -77,7 +77,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "rich"	186604533	--	rich chair	--	"The chair may be an unnecessary luxury, but you shouldn't feel bad about that."
 "sad"	119490873	--	sad ads	--	"[w-twi]."
 "evac"	256164332	Gallery	--	--	"The evac-cave is your way out. It'd be a bad idea to change it."
-"manor"	294846859	--	--	degen-true rule	"[not-the-reg]."
+"manse"	359250554	--	--	degen-true rule	"[not-the-reg]."
 
 table of stores nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
@@ -95,7 +95,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "storem"	550941626	--	metros	--	"[so-last]!"
 "storeo"	561219050	--	store o	--	"Nothing happens. You consider going through the other 358 possibilities, but that'd be so rote."
 "storeq"	571272090	--	store q	--	"Nothing happens. You didn't really expect it to since, hey, no u with the q."
-"storer"	572190276	--	store r	--	"Store R led back to your manor last game. It won't go anywhere new, and you don't need or want to go back, right now[if roved is false]. You wouldn't be safe there[end if]."
+"storer"	572190276	--	store r	--	"Store R led back to the Means Manse last game. It won't go anywhere new, and you don't need or want to go back, right now[if roved is false]. You wouldn't be safe there[end if]."
 "stores"	583140439	--	store s	--	"[no-cand]."
 "storex"	599634554	--	store x	--	"[no-way]."
 "shell"	368990052	--	store y	--	"[shell-no]."
@@ -2076,7 +2076,7 @@ to say mild-swear:
 	say "[if mrlp is presto and cur-score of presto > 0]This region has some lame swears, but that's not one of them[else][cussy][end if]";
 
 this is the know-point rule:
-	if cur-score of manor > 1:
+	if cur-score of means manse > 1:
 		the rule succeeds;
 	the rule fails;
 

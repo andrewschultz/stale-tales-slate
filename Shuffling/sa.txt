@@ -472,6 +472,8 @@ TOEHOLDS.
 When you've transformed the poles, and either the toolshed...
 ...or both the grips and ropes.
 >>Potshot Hotspot
+?What can I do with the ransom manors?
+Nothing, until you've defeated Red Bull Burdell.
 ?This riot sure has a lot of people!
 It would be easier to handle if there were under ten.
 Under five, hey.
@@ -494,9 +496,15 @@ Look at him. Does he have a weakness?
 Hm, his foot.
 Specifically, his toe.
 TUG TOE.
->>Roman Manor
-?What do I do?
+>>Means Manse
+?What do I do with the exits?
 There are exits on all side, but you don't want to take them.
 You deserve to sit, relax and do nothing.
 Your gadget should give a clue either way.
 Just EXIST.
+?Can I do anything with anything else?
+Yes, the manse itself.
+What can MEANS or MANSE become?
+Two things.
+You can start finding NAMES for everything.
+Or you can give AMENS.

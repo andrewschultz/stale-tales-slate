@@ -10296,7 +10296,7 @@ understand "brb" as a mistake ("You don't know him that well. No riffing on his 
 
 understand "slink" as a mistake ("[if red bull burdell is visible]You couldn't slink behind the kilns even if they were here[else if red bull burdell is in lalaland]Why slink? No one is blocking or watching you any more[else]Too many people are watching for you to slink away[end if].") when player is in hotspot
 
-description of Potshot Hotspot is "An arid, trod dirt road. East is siesta.[paragraph break][if riot is visible][one of]Oh dear. A horde. Uprisers--surprise--protesting YOU! A full-blown riot[or]There's a riot going on here! A bunch of people seem to be protesting...you, accusing you of things you'd never be brave enough to do[cycling][else if protest is visible]Three can still be a protest as well as a crowd, apparently. They're blocking your way east[else if potters are visible]The potters aren't just pottering around[pottiness][else if red bull burdell is visible]Red Bull Burdell is here, looking down at you[else]It's nice and peaceful here, but it's not quite home[end if].";
+description of Potshot Hotspot is "An arid, trod dirt road. East is siesta, with a bunch of ransom manors.[paragraph break][if riot is visible][one of]Oh dear. A horde. Uprisers--surprise--protesting YOU! A full-blown riot[or]There's a riot going on here! A bunch of people seem to be protesting...you, accusing you of things you'd never be brave enough to do[cycling][else if protest is visible]Three can still be a protest as well as a crowd, apparently. They're blocking your way east[else if potters are visible]The potters aren't just pottering around[pottiness][else if red bull burdell is visible]Red Bull Burdell is here, looking down at you[else]It's nice and peaceful here, but it's not quite home[end if].";
 
 after printing the locale description for hotspot when hotspot is unvisited:
 	set the pronoun it to riot;
@@ -10345,6 +10345,16 @@ check going east in potshot hotspot:
 
 check going nowhere in potshot hotspot:
 	say "The only way you want to try to go is east." instead;
+
+section roman manors
+
+ransom manors are scenery in Potshot Hotspot. "They're off to the east. Your Means Manse must be there somewhere. You'll probably find it with a bit of exploration[if red bull burdell is not in lalaland]. But first, you need to deal with the distraction at hand[end if]."
+
+instead of entering ransom manors:
+	try going east instead;
+
+instead of going inside in potshot hotspot:
+	try going east instead;
 
 section riot
 
