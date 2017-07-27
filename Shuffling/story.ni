@@ -3307,7 +3307,7 @@ check fliptoing gateman:
 check fliptoing beast:
 	if beats are visible:
 		if player is not in Bassy Abyss:
- 			say "That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair." instead;
+			say "That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair." instead;
 
 chapter the anagram table
 
@@ -9357,7 +9357,7 @@ instead of buying:
 
 chapter The Ol' Hotel
 
-There is a room called The Ol' Hotel
+There is a room called The Ol' Hotel.
 
 Hotel is west of Undesired Underside. "What would a beaten-down city be without an ol['] hotel? Both have seen better days. Still hard not to loathe a hotel in this state. Everything's boarded up. The only way out is east.". Hotel is in Metros.
 

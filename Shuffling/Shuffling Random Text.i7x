@@ -1360,7 +1360,6 @@ blurb
 "Beastly Baylets"
 "Beware-Thou Whereabout"
 "Bile Libe"
-"the boarded roadbed"
 "Bog-is-So-Big"
 "Bogy Go-By"
 "Bridge of Fried Bog"

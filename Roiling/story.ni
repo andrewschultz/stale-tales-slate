@@ -3544,8 +3544,8 @@ check taking scenery:
 		say "That'd be kind of sinful and disruptive." instead;
 	if location of player is idle deli:
 		say "The [noun] is part of the scenery." instead;
-	if location of player is Pallid Li'l Pad:
-		say "That can't be valuable enough." instead;
+	if location of player is Drain Nadir:
+		say "Nothing here is valuable enough. You need to leave it all behind!" instead;
 	if location of player is Econ Cone:
 		say "Oh, you'll TAKE Spoilopolis, all of it. But you can't lug THAT around." instead;
 	if location of player is fiefco:
@@ -3842,7 +3842,7 @@ check entering a portal:
 	if noun is hoster:
 		pad-rec "guru";
 	if noun is otters-x and bleary barley is unvisited:
-		say "Those otters weren't there to drain people for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.";
+		say "'To rest! To rest!' a voice calls. But you shake that off, whispering '...or test!'[paragraph break]And yet, once through, your powers feel dormant, but thankfully not mordant.[paragraph break]Those otters weren't standing guard for no reason. Elvira must be close. But you don't know what she's ultimately up to. You note in your pad it might be an extra good idea to ask about her, if people are around.";
 		pad-rec-q "asking";
 	let try-recover be false;
 	if last-loc of grn is visited:
@@ -5162,8 +5162,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			else:
 				now noun is heat;
 			continue the action;
-		if player is in used lot:
-			if verbose babblings are in used lot:
+		if player is in Bustle Sublet:
+			if verbose babblings are in Bustle Sublet:
 				now noun is verbose babblings;
 				continue the action;
 			if stop post is reflexive:
@@ -5407,17 +5407,18 @@ check scaning location of the player (this is the location scan rule):
 			else:
 				say "The PRAISE text seems to pull your settler to it.";
 				try scaning prai instead;
-	if cellar door is visible:
-		try scaning cellar door instead;
-	if location of player is Pallid Li'l Pad:
-		if diapers are reflexive:
-			say "Whoah, yeah, you're pretty bummed here! You're even too bummed to POINT a handy device like the settler at anything specific. Now THAT'S bummed." instead;
-	if location of player is Used Lot:
+	if location of player is Bustle Sublet:
 		if verbose is visible:
 			try scaning verbose instead;
+		try scanning stop post instead;
+	if location of player is Boarded Roadbed:
 		if what-a-bee is reflexive and bee's head is reflexive:
 			say "That bee is all up in your face. So you sort of scan it by default.";
 			try scaning what-a-bee instead;
+		try scaning cellar door instead;
+	if location of player is Drain Nadir:
+		if diapers are reflexive:
+			say "Whoah, yeah, you're pretty bummed here! Well, not quite bummed enough to avoid pointing the settler at anything specific. There's the diapers, the picture of the sad pier, a spider..." instead;
 	if location of player is FiefCo Office:
 		if noise is in office:
 			say "The settler seems to pulse with the noise's volume.";
@@ -6080,8 +6081,8 @@ carry out troves-hinting:
 			try objhinting cold instead;
 		if heat is visible:
 			try objhinting heat instead;
-	if player is in Used Lot:
-		if verbose are in Used Lot:
+	if player is in Bustle Sublet:
+		if verbose are in Bustle Sublet:
 			try objhinting verbose instead;
 		if post is reflexive:
 			try objhinting post instead;
@@ -6090,9 +6091,10 @@ carry out troves-hinting:
 				try objhinting bee's head instead;
 			try objhinting what-a-bee instead;
 		try objhinting cellar door instead;
-	if player is in Pallid Li'l Pad:
+	if player is in Drain Nadir:
 		if diapers are reflexive:
 			try objhinting diapers instead;
+	if player is in Boredom Bedroom:
 		try objhinting ltb instead;
 	if player is in Browse Bowers:
 		try objhinting brochure instead;
@@ -6882,8 +6884,9 @@ Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel 
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms."
 Adobe Abode	"This do be a one-room place. You can really only go outside."
 Loather Rathole	"[if cold is reflexive]You're too cold. While haste heats, the new random direction would offer no more [i]heat[r] than here.[else]You've got to race after that guy, but you wonder if it really matters.[end if]" [troves]
-Used Lot	"[if noun is down]Yes, the cellar is down, but you can't remember WHERE the passage down to the cellar is.[else if post is reflexed]You haven't figured a way to get to the cellar, man. Running away won't help.[else]You can't run from this big fight now that you've traced the robber![end if]"
-Pallid Li'l Pad	"You need to look at something that would inspire you to move, instead."
+Bustle Sublet	"[if noun is down]Yes, the cellar is down, but you can't remember WHERE the passage down to the cellar is.[else if post is reflexed]You haven't figured a way to get to the cellar, man. Running away won't help.[else]You can't run from this big fight now that you've traced the robber![end if]"
+Drain Nadir	"You need to look at something that would change your mood."
+Boredom Bedroom	"You need to look at something that would inspire you to move, instead."
 Browse Bowers	"You are definitely going places, but you aren't going places by actually WALKING. Perhaps if you meditate on that brochure."
 Econ Cone	"That could lead to ransom manors."
 FiefCo Office	"You're at the very top. You don't really want to change that without really good motivation."
@@ -7107,7 +7110,7 @@ chapter waiting
 
 check waiting:
 	if mrlp is troves:
-		if player is in Pallid Li'l Pad:
+		if player is in Drain Nadir:
 			say "Solo detail? Isolated? No. Desolation." instead;
 		if cur-score of troves is 0:
 			say "That's the wrong sort of inaction for here[one of]. Better watch it, or snotbag nagbots or a boot-o-bot will get you[or][stopping]." instead;
@@ -7656,7 +7659,7 @@ before listening (this is the you can hear stuff some places rule):
 		try examining the pale plea instead;
 	if player is in anger range and carps are in lalaland and haunter is off-stage:
 		say "A cry. 'Eh ... a runt...' you turn red on hearing it." instead;
-	if player is in pallid li'l pad:
+	if player is in Boredom Bedroom:
 		say "The dead air inspires no rad idea." instead;
 	if old giant is in lalaland and player is in Same Mesa:
 		say "Nice to have silence with the giant gone." instead;
@@ -7680,10 +7683,10 @@ before listening (this is the you can hear stuff some places rule):
 		say "[if Gunter is in lalaland][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
 	if babblings are visible: [troves]
 		try examining babblings instead;
-	if player is in Used Lot:
+	if player is in Bustle Sublet:
 		unless what-a-bee is reflexive and bee's head is reflexive:
 			say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!'[in random order][run paragraph on] You see red a bit at getting no direct help, yourself." instead;
-	if player is in rathole or player is in used lot:
+	if player is in rathole or player is in Bustle Sublet:
 		say "[if talk-quiet is false]You shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if player is in rotunda or player is in econ cone:
 		say "[if talk-quiet is false]You shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
@@ -7762,11 +7765,11 @@ before smelling (this is the you can smell some stuff some places rule):
 		say "It smells of adventure and going [i]abroad[r]--or, at least, a bit away from the brackish, salty whiffs of trash." instead;
 	if seed pit is visible:
 		say "The seed pit smells a bit musty." instead;
-	if player is in Loather Rathole or player is in Used Lot: [troves]
+	if player is in Loather Rathole or player is in Bustle Sublet: [troves]
 		say "Eew-gas sewage. Skint-stink." instead;
-	if player is in Pallid Li'l Pad:
+	if player is in Drain Nadir:
 		say "Ew--mild mildew. A mustier semi-rut." instead;
-	if player is in Browse Bowers or player is in skyscraper or player is in FiefCo Office:
+	if player is in Browse Bowers or player is in Econ Cone or player is in FiefCo Office:
 		say "Perfumed. Dump-free." instead;
 	if mrlp is presto: [presto]
 		say "[if cur-score of presto is 0]Things turn to ash in your nose[else]You don't smell anything that'd make you say what you've needed to say in this area, which is a good thing[end if]." instead;
@@ -7838,7 +7841,7 @@ before sleeping:
 		say "This is no dreamboat." instead;
 	if player is in study:
 		say "[if Gunter is off-stage]But you just woke up![otherwise]Not with that knocking.[end if]" instead;
-	if player is in pallid li'l pad:
+	if player is in Boredom Bedroom:
 		say "You don't have time to dream of titanium golf clubs or overpriced alcohol or all the things you should have been dreaming about all these years. Slacker." instead;
 	if player is in Rotunda or player is in Econ Cone:
 		say "In a public place? Worse, in an upscale public place? How shocking!" instead;
@@ -8477,7 +8480,7 @@ understand "post opts" as optionsing.
 
 carry out optionsing:
 	try padding "options" instead;
-	if player is in used lot and stop post is reflexive:
+	if player is in Bustle Sublet and stop post is reflexive:
 		if word number 1 in the player's command is "opts" or word number 2 in the player's command is "opts":
 			say "(You have 24 opts for what to do with the stop post, but this doesn't quite work.)";
 	the rule succeeds;
@@ -8889,20 +8892,20 @@ table of troves anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
 Pa Egg Pea	Pa Egg Pea	false	244059588	--	"gape"	"gape"	"You empty your mind to let the advice in Pa, Egg, Pea sink in. It--makes sense, if you don't think too hard. [eicond]."
 cold	heat	false	270386244	--	"hate"	"hate"	"You feel a rife fire in your heart. [paragraph break]'How neat! Hate won heat now!' you think to yourself.[paragraph break]You manage to stay toasty but you lose focus as you switch too soon from thoughts of goin['] cold to gold coin. A bogeyman takes your moneybag![purse-gone] Your thoughts are really racing now. Racing so fast you can probably do the wrong thing several times before you get it right.[paragraph break]You may need that practice, because right now you don't want your money back as much as you should."
-heat	truffle	true	234323315	Used Lot	"care"	"care"	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, he can't have ducked out in plain sight. You thought you heard a door slam, just out of view. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical to move on."
+heat	truffle	true	234323315	Bustle Sublet	"care"	"care"	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, he can't have ducked out in plain sight. You thought you heard a door slam, just out of view. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical to move on."
 stop post	stop post	false	355202520	--	"spot"	"spot"	"There he is! You don't let on you've spotted him, but you walk near, notice him jump, and yell the magic words.[paragraph break]'Setup, stupe!' Wop! Pow! Pop! Wow! An upset! Your smackings are apt food for a footpad. He drops your purse--[i]though at that moment you realize the self-reliance you gained is better than any money.[r] Still, during all this feeling good about yourself, you let him get away. 'You won't find me in the cellar!' he yells. By then, a large bee has buzzed in and it makes you forget where the cellar entrance is."
 babblings	babblings	false	637146289	--	"observe"	"observe"	"Cads. Clues. Cul-de-sacs. Once you really pay attention, you see how observing them detachedly gets you closer to what you really want. You're in the zone, now. Something may or may not be moving by the stop post. Time to hone your observing."
 bee's head	bee's head	false	454851781	--	"reason"	"reason"	"You recognize that small bumblebees flying don't make any sense. Then, therefore, neither should a much bigger one, due to the scaling paradox. The bee lets out a snore from the reason[if what-a-bee is reflexed]. You've already disposed of the bee emotionally, but hey, you might as well be sure of things[otherwise]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."
 what-a-bee	what-a-bee	false	607808737	--	"believe"	"believe"	"You remind yourself bees smell fear, so you decide to believe that the bee will not harm you[if bee's head is reflexed]. On top of your reasoning it can't, you render it out of commission emotionally and factually[otherwise]. You can probably get by the bee, although it may be possible to marginalize it even more[end if]."
-cellar door	cellar door	false	341950993	Pallid Li'l Pad	"recall"	"recall"	"[rec-der]"
-cellar door	cellar door	false	514122776	Pallid Li'l Pad	"derive"	"derive"	"[rec-der]"
-diapers	diapers	false	459079590	--	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning--and after some furnace care fun, you find a copy of LEAD, the first big motivational book in Yorpwald. You don't have time to worry whether positive thinking found it. You have too much positive thinking to do."
+cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	"[rec-der]"
+cellar door	cellar door	false	514122776	Drain Nadir	"derive"	"derive"	"[rec-der]"
+diapers	diapers	false	459079590	Boredom Bedroom	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief with ISBN bins, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find a copy of LEAD, the first big motivational book in Yorpwald. You don't have time to worry whether positive thinking found it. You have too much positive thinking to do."
 ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
 brochure	brochure	false	503231922	econ cone	"desire"	"desire"	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
 prai	prai	false	438050501	--	"aspire"	"aspire"	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 rivets	rivets	false	564671562	--	"strive"	"strive"	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if prai is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 pernod	pernod	false	458885045	FiefCo Office	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through!"
-lager	lager	false	301731271	--	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave your [if diapers are reflexed]bedroom[else]pad[end if] just long to pour the hurtful booze [if diapers are reflexed]down the sink[else]out the window you forgot was there[end if]. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio Alger!"
+lager	lager	false	301731271	--	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 noise	noise	false	433982545	--	"ignore"	"ignore"	"'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."
 salt	song	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! You see there was a playbill under the salt."
 stream	stream	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP."
@@ -9286,15 +9289,15 @@ check fliptoing old giant:
 		say "You don't need or want another round of that." instead;
 
 to say xtra-help:
-	if lager is in Pallid Li'l Pad and divorces is in office:
+	if lager is in Boredom Bedroom and divorces is in office:
 		continue the action;
 	if lager is in lalaland and divorces is in lalaland:
 		say ". Your songs aren't just soulful, though. They're built on your experience with alcohol and media abuse and glorifying consumerism, from the lager and DIVORCES. They do society good";
 		continue the action;
-	if lager is in Pallid Li'l Pad:
-		say ". Your songs do cause a few people to turn to drink, though, instead of greed";
+	if lager is in Boredom Bedroom:
+		say ". Your songs help a few people shun greed. They still don't take the place of drinking for some sad folk";
 		continue the action;
-	say ". Your songs are a bit preachy, but they do decrease the drinking rate";
+	say ". Your songs don't cause any social change you hoped, but they do decrease the drinking rate";
 
 instead of fliptoing latches:
 	say "The satchel shakes a bit, but since you removed the settler, it probably can't fully reform the latches. Well, you don't need them."
@@ -9353,7 +9356,7 @@ instead of doing something with satchel when player has satchel:
 	say "You've gotten the settler from the satchel, and you don't need to do more." instead;
 
 to say eicond:
-	say "[if cur-score of troves is 0]You can picture yourself, successful, extolling this book as what got you started[else if player is in rathole]You feel you can and will do better than here[else if player is in Used Lot]You dare to feel superior to whoever might be walking around here[else if player is in Pallid Li'l Pad]The book convinces you that average is not enough for a thinker like you, as long as you are thinking like it. You buck up[else if player is in Browse Bowers]Someone semi-important-looking walks by and commends your choice of reading material, and you say you love it[else if player is in Econ Cone]You even successfully turn back an insult from someone who is all LESS READING MORE DOING[else if player is in fiefco]You turbo-speed-read, since you've LIVED a lot of this advice[end if], ignoring how useless the book is for helping you figure what to do right now. Eh well, you've got a spiel to tell others how THEY better use it"
+	say "[if cur-score of troves is 0]You can picture yourself, successful, extolling this book as what got you started[else if player is in rathole]You feel you can and will do better than here[else if player is in Bustle Sublet]You dare to feel superior to whoever might be walking around here[else if player is in Drain Nadir]You know you deserve better than this. It's a temporary setback[else if player is in Boredom Bedroom]The book convinces you that average is not enough for a thinker like you, as long as you are thinking like it. You buck up[else if player is in Browse Bowers]Someone semi-important-looking walks by and commends your choice of reading material, and you say you love it[else if player is in Econ Cone]You even successfully turn back an insult from someone who is all LESS READING MORE DOING[else if player is in fiefco]You turbo-speed-read, since you've LIVED a lot of this advice[end if], ignoring how useless the book is for helping you figure what to do right now. Eh well, you've got a spiel to tell others how THEY better use it"
 
 to say rscheck:
 	if word number 1 in the player's command is "resealed":
@@ -9385,7 +9388,7 @@ to say rec-der:
 		say "not all your memory comes back, but a few cues tip you off--yeah, the robber made it THERE without the bee around. Where's that trap door? You keep trying to recall--and you try so hard you forget to feel sorry for yourself";
 	else:
 		say "try to figure where the cellar must be based on what was behind the robber, where you were standing, and so forth. The calculations aren't as difficult as you feared, and pretty soon you figure where the cellar door must have been";
-	say ". You find it, but soon, you've had enough basements for one game, so you move from ruined to inured. To where you realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief with ISBN bins, no longer bullied by BILL DUE, and yet..."
+	say ". You let out a 'darn, I...' but then, there's the way. 'Rad! In!' But when you look up, it's not a great place to be";
 
 to say logan-hi:
 	say "'No-Gal Logan. Serial Sailer. Here's our selves-vessel. Not quite the HMS SMH.'[paragraph break]'Hooray...or ahoy?' you say, confused.[paragraph break]But the sail ails where the stripe would be above ground. You sort of think you can see a reddish haze, or maybe it's your imagination. 'Now to hit WIN...where's that button? Hmph, won't let me cross. It's up to you. You seem like a trireme meriter. You'll find the hit win button Ben hid. Did it so well, made sure we didn't use it before we need to. You'll reach the beyond. One way now. Aye,' says No-Gal Logan. 'The end! Boy!'[paragraph break]You see him nod bye as he jumps over. 'Logan!' you cry. 'No lag!' he yells back. Then 'St. Olaf!' He floats, so flat, leaving you for the last of...he cries, 'Harbor!' and you cry 'Rah, Bro!' Then you write down what No-Gal said about the button.";
@@ -9462,8 +9465,9 @@ after fliptoing prod:
 	continue the action;
 
 after fliptoing ltb:
-	if lager is in pallid:
+	if lager is in Boredom Bedroom:
 		poss-d;
+	continue the action;
 
 after fliptoing b-b:
 	now Ed Riley is in Bleary Barley;
@@ -9487,7 +9491,6 @@ after fliptoing raptor:
 
 after fliptoing post (this is the cleanup after the post/thief rule) :
 	now purse-stolen is false;
-	move what-a-bee to Used Lot;
 	continue the action;
 
 after fliptoing (this is the one-of-two and min-up-plus rule):
@@ -9864,7 +9867,7 @@ check opening side door:
 	if stuff-found < 3:
 		say "You don't feel like going out without a really good reason." instead;
 	if urgent Gunter is off-stage:
-		say "[if peephole is examined]Urgent Gunter charges in[else]It's Urgent Gunter[end if], full of sensible bileness. '[one of]Pallid li'l pad[or]Stodgy sty, dog[at random]! Elvira wants to see you. About your powers. Me and my pouter troupe agree. Me, best messenger in all of Yorpwald. Hey, if you've done nothing wrong--and it seems like you've done NOTHING since all that shuffling around--you have nothing to hide.'";
+		say "[if peephole is examined]Urgent Gunter charges in[else]It's Urgent Gunter[end if], full of sensible bileness. 'Pallid li'l pad! Stodgy sty, dog! Elvira wants to see you. About your powers. Me and my pouter troupe agree. Me, best messenger in all of Yorpwald. Hey, if you've done nothing wrong--and it seems like you've done NOTHING since all that shuffling around--you have nothing to hide.'";
 		now urgent Gunter is in Dusty Study;
 		pad-del "rove over";
 		try talking to urgent Gunter instead;
@@ -11275,7 +11278,7 @@ definition: a thing (called candi) is bluable:
 	if candi is ghostly, no;
 	if candi is uncluing, no;
 	if candi is clue-used, no;
-	if player is in pallid: [troves specific]
+	if player is in Boredom Bedroom: [troves specific]
 		if candi is rubbish story, decide no; [this gets hidden]
 	if player is in econ cone:
 		if rivets are reflexive and candi is prai, no; [otherwise we double-print]
@@ -12237,15 +12240,13 @@ description of Store T is "Store T is average-sized, but it seems to repel you. 
 
 otters-x are a privately-named plural-named not lumpable portal. printed name of otters-x is "the twin otters". understand "twin otters" as otters-x.
 
-description of otters-x is "They are named Darin and Randi, according to what is engraved below. You see a field of barley beyond them. There's also something below their names, and it reads:"
+description of otters-x is "You see a field of barley beyond them. There's also something below their names, and it reads:"
 
 after examining otters-x:
 	try examining engravings;
 	now f-o-b is in strip of profits;
 
 understand "barely" as a mistake ("You [one of][or]still [stopping]aren't close enough for such a weak word to affect the barley. But that seems right[one of] and worth writing in your notepad[or][stopping].[preefsay-nol of b-b]") when f-o-b is visible.
-
-understand "randi" and "darin" as otters-x.
 
 rule for printing a locale paragraph about otters-x:
 	say "Statues of twin otters wait here, facing each other--it's all blurry behind them.";
@@ -12262,8 +12263,7 @@ understand "field/ of/ barley" as f-o-b when player is in strip of profits and f
 check entering otters-x:
 	if number of needed regions > 0:
 		d "[list of needed regions].";
-		say "As you step between them, you feel mess-up spumes from the otters--maybe a passive sap-vise--drain you to a nadir. 'I...darn!'[paragraph break]You could take your powers going dormant, but they might get mordant. Maybe you need to build them up by fixing things elsewhere[if patcher is in strip of profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
-	say "You begin to feel drained, and you let out a 'darn, I...' you slow down but just make it. 'Rad! In!'"
+		say "As you step between them, you feel mess-up spumes from the otters--maybe a passive sap-vise. Then a voice. 'To rest! To rest!' You just can't move forward, and you move back before you feel rot set. You just aren't strong enough yet. Maybe you need to build yourself up by fixing things elsewhere[if patcher is in strip of profits], or you can cheat with that patcher. I won't judge. The fate of a world is at stake[end if]." instead;
 
 chapter store u
 
@@ -13623,15 +13623,15 @@ the heat is flippable vanishing scenery. "The heat is nice and all, but being ha
 
 a-text of heat is "RYRY". b-text of heat is "RGRG". parse-text of heat is "[sp]x[sp]a[sp]x[sp]e". heat is parse-spoilable. [heat -> care, need to race]
 
-book Loudest Used Lot
+book Bustle Sublet
 
-Loudest Used Lot is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs. Someone seedy owns this area, [randbla]. This messhole with its sidewalk laid askew is almost as bad as being homeless...[paragraph break][if babblings are visible]Except for a stop post that seems to be distracting your attention. Verbose babblings are in the air[else]The stop post is still there, but you can deal[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]."
+Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs. Someone seedy owns this area, [randbla]. This messhole with its sidewalk laid askew is almost as bad as being homeless...[paragraph break][if babblings are visible]Except for a stop post that seems to be distracting your attention. Verbose babblings are in the air[else]The stop post is still there, but you can deal[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]."
 
 chapter useless scenery
 
 section sidewalk
 
-a sidewalk laid askew is useless scenery in Used Lot. "You don't really have time to memorize the sidewalk's cracks."
+a sidewalk laid askew is useless scenery in Bustle Sublet. "You don't really have time to memorize the sidewalk's cracks."
 
 to say more-pos:
 	say "You may want to pay attention to something more positive and alive"
@@ -13643,7 +13643,7 @@ instead of doing something with a sidewalk laid askew:
 
 section ruts
 
-the rustin ruts are useless scenery in Used Lot. printed name of ruts is "rustin['] ruts". understand "rustin ruin" and "rustin/ruin" as ruts. "If you stare too long, you may get in a rut yourself."
+the rustin ruts are useless scenery in Bustle Sublet. printed name of ruts is "rustin['] ruts". understand "rustin ruin" and "rustin/ruin" as ruts. "If you stare too long, you may get in a rut yourself."
 
 instead of doing something with rustin ruts:
 	if action is procedural:
@@ -13654,11 +13654,11 @@ chapter babblings
 
 understand "obverse" as a mistake ("You can't just make things obverse by wanting them to be. [i]But if change comes within, perhaps things are closer to obverse than you think[r].") when babblings are visible.
 
-understand "redive" as a mistake ("Close, but you need to figure out where to re-dive back into the cellar.") when player is in Used Lot and babblings are in lalaland
+understand "redive" as a mistake ("Close, but you need to figure out where to re-dive back into the cellar.") when player is in Bustle Sublet and babblings are in lalaland
 
 bab-lis is a truth state that varies.
 
-the verbose babblings are vanishing plural-named scenery in Used Lot. "[listen-careful]."
+the verbose babblings are vanishing plural-named scenery in Bustle Sublet. "[listen-careful]."
 
 after doing something with babblings:
 	if babblings are not in lalaland:
@@ -13686,7 +13686,7 @@ to say erv:
 
 chapter stop post
 
-The stop post is reflexive scenery in Used Lot. "[if babblings are reflexive]You're so distracted by it, you can't stop and see the big picture. It blocks out all but the babblings round--it's really big and verbose and you could look at it a while without seeing anything meaningful. You can't even remember what you just read. As if you'd lost the ability to.[else if post is reflexive]Its opts. aren't exactly tops. Apparently, though, it is made of recycled pots.[else if bee's head is reflexive]You notice an ad in red proclaiming O. Asner as Nero.[else]An ad in red for L. Clear cleaning[one of], with directions below to [one of]Evans Ave N/S[or]Weave Ave E/W[in random order][or][stopping].[end if]"
+The stop post is reflexive scenery in Bustle Sublet. "[if babblings are reflexive]You're so distracted by it, you can't stop and see the big picture. It blocks out all but the babblings round--it's really big and verbose and you could look at it a while without seeing anything meaningful. You can't even remember what you just read. As if you'd lost the ability to.[else if post is reflexive]Its opts. aren't exactly tops. Apparently, though, it is made of recycled pots.[else if bee's head is reflexive]You notice an ad in red proclaiming O. Asner as Nero.[else]An ad in red for L. Clear cleaning[one of], with directions below to [one of]Evans Ave N/S[or]Weave Ave E/W[in random order][or][stopping].[end if]"
 
 check scaning post:
 	if babblings are reflexive:
@@ -13694,8 +13694,7 @@ check scaning post:
 	if post is reflexed:
 		say "You've dealt with the post." instead;
 
-
-check examining stop post when babblings are in Used Lot:
+check examining stop post when babblings are in Bustle Sublet:
 	say "You try to, but you get a headache. Everyone here's too [i]verbose. [r]You need to find what to do make them less verbose. Or seem that way." instead;
 
 check taking stop post:
@@ -13713,16 +13712,20 @@ check fliptoing stop post:
 
 a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop post is "s[sp]x[sp]o[sp]x". stop post is parse-spoilable.
 
-every turn when player is in Used Lot:
+every turn when player is in Boarded Roadbed Sublet:
 	if what-a-bee is not reflexive or bee's head is not reflexive:
 		if current action is not listening:
 			say "How to get down to the cellar? The cellar.";
+
+book Boarded Roadbed
+
+Boarded Roadbed is a room in Troves. "It's odd...bare... But you know the cellar must be around somewhere. [if what-a-bee is in roadbed]With the bee around ,y[else]Y[end if]ou can't quite remember..."
 
 chapter THE BEE and 2 solutions
 
 section bee proper (believe)
 
-the what-a-bee is a reflexive privately-named thing. printed name of what-a-bee is "[if bee's head is reflexive and what-a-bee is reflexive]evil bee[else if bee's head is reflexed and what-a-bee is reflexed]live bee[otherwise]vile bee[end if]"
+the what-a-bee is a reflexive privately-named thing in Boarded Roadbed. printed name of what-a-bee is "[if bee's head is reflexive and what-a-bee is reflexive]evil bee[else if bee's head is reflexed and what-a-bee is reflexed]live bee[otherwise]vile bee[end if]"
 
 a-text of what-a-bee is "RYRYYRY". b-text of what-a-bee is "[if bee's head is reflexed]RYPYYRG[else]RYRYYRG[end if]". parse-text is "[if bee's head is reflexed]x[sp]-[sp]l[sp]-[sp]-[sp]x[sp]e[else]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]e[end if]"
 
@@ -13790,7 +13793,7 @@ after fliptoing bee's head:
 
 chapter cellar door (after bee dispatched)
 
-the cellar door that must be here somewhere is vanishing scenery in Used Lot. "You can't really examine it if you don't know where it is."
+the cellar door that must be here somewhere is vanishing scenery in Boarded Roadbed. "You can't really examine it if you don't know where it is."
 
 a-text of cellar door is "RYRYRR". b-text of cellar door is "RGRYRR". parse-text of cellar door is "x[sp]e[sp]x[sp]a[sp]x[sp]x".
 
@@ -13817,37 +13820,34 @@ check fliptoing cellar door:
 		preef cellar door;
 		the rule succeeds;
 
-book Pallid Li'l Pad
+book Drain Nadir
 
-Pallid Li'L Pad is a room in Troves. "This is [if diapers are reflexed]no bro-dome--it leaves you feeling all me, BROOD[else]a dump, um, pad[end if]. Well, it beats Get-a-Cot Cottage, or Drag-Grad.[paragraph break]You notice trappings of spiritual and material poverty: a picture of a sad pier, a box of diapers, and a spider crawling[if diapers are reflexed]. Though you're not quite held back by them so much. You want to break out of the funless fulness of Drag-grad, here, to [i]lead[r][else]. They all point to a rock bottom you haven't hit yet, but it may be necessary now[end if]."
+Drain Nadir is a room in Troves. "You notice trappings of spiritual and material poverty: a picture of a sad pier, a box of diapers, and a spider crawling[if diapers are reflexed]. Though you're not quite held back by them so much. You want to break out of the funless fulness of Drag-grad, here, to [i]lead[r][else]. They all point to a rock bottom you haven't hit yet, but it may be necessary now[end if]."
 
 chapter adeiprs
 
-understand "praised" as a mistake ("You would like to be, but you can't just want others to. Change comes from within.") when player is in Pallid Li'l Pad.
+understand "praised" as a mistake ("You would like to be, but you can't just want others to. Change comes from within.") when player is in Drain Nadir.
 
-understand "aspired" as a mistake ("Now is not the time to fret on past dreams.") when player is in Pallid Li'l Pad.
+[?? small clue later with statue]
+understand "aspired" as a mistake ("Now is not the time to fret on past dreams.") when player is in Drain Nadir.
 
-the picture of a sad pier is auxiliary scenery in Pallid Li'l Pad. "It is a warding drawing of what not to wallow in: solitude so dilute in an old suite. According to [i]Pa, Egg, Pea[r], if it were not marked as such, it should be illegal."
+the picture of a sad pier is auxiliary scenery in Drain Nadir. "It is a warding drawing of what not to wallow in: solitude so dilute in an old suite. According to [i]Pa, Egg, Pea[r], if it were not marked as such, it should be illegal."
 
 a-text of sad pier is "RYRRYYR". b-text of sad pier is "RYRPYYP". parse-text of sad pier is "x[sp]-[sp]x[sp]p[sp]-[sp]-[sp]r".
 
-the box of diapers is reflexive scenery in Pallid Li'l Pad. "The diapers are a symbol of a new rebirth by starting from nothing, or something. At least, you hope they are."
-
-understand "boredom/bedroom" and "boredom bedroom" as Pallid Li'l Pad when diapers are reflexed.
+the box of diapers is vanishing scenery in Drain Nadir. "The diapers are a symbol of a new rebirth by starting from nothing, or something. At least, you hope they are."
 
 a-text of diapers is "RYRRYYR". b-text of diapers is "PYRPYYR". parse-text of diapers is "d[sp]-[sp]x[sp]p[sp]-[sp]-[sp]x".
 
-a spider is scenery in Pallid Li'l Pad. "You're don't know whether to crush it or even think 'I spared a spider.'"
+a spider is scenery in Drain Nadir. "You're don't know whether to crush it or even think 'I spared a spider.'"
 
 a-text of a spider is "RYRRYYR". b-text of a spider is "RYRRYYP". parse-text of a spider is "x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]r".
 
-understand "broomed" as a mistake ("You are not rich and consequential enough to snap your fingers and watch your own mess get cleaned up. Yet.") when player is in Pallid Li'l Pad and diapers are reflexed.
+book boredom bedroom
 
-after fliptoing diapers:
-	now printed name of Pallid Li'l Pad is "Boredom Bedroom";
-	now ltb is in Pallid Li'l Pad;
-	now sad pier is clue-used;
-	continue the action;
+Boredom Bedroom is an innie room in Troves. "This is no bro-dome--it leaves you feeling all me, BROOD. Not much of a dump, um, pad. Well, it beats Get-a-Cot Cottage, or Drag-Grad."
+
+understand "broomed" as a mistake ("You are not rich and consequential enough to snap your fingers and watch your own mess get cleaned up. Yet.") when player is in Boredom Bedroom.
 
 chapter ltb
 
@@ -13855,24 +13855,24 @@ ltb is a privately-named vanishing thing. "A copy of LEAD[one of], the bestselle
 
 a-text of ltb is "RYYR". b-text of ltb is "???R". parse-text of ltb is "x[sp]e[sp]a[sp]x". ltb is parse-spoilable.
 
-understand "copy" and "book" and "lead" as ltb when player is in Pallid Li'l Pad.
+understand "copy" and "book" and "lead" as ltb when player is in Boredom Bedroom.
 
-does the player mean doing something with ltb when the player is in Pallid Li'l Pad: it is likely.
+does the player mean doing something with ltb when the player is in Boredom Bedroom: it is likely.
 
-understand "aled" as a mistake ("Getting drunk will not solve your problems[if lager is in Pallid Li'l Pad]. And that lager would taste awful, anyway[else]. Especially when there's nothing here to get drunk with[end if]. You see red at yourself for such thoughts.") when ltb is visible
+understand "aled" as a mistake ("Getting drunk will not solve your problems[if lager is in Boredom Bedroom]. And that lager would taste awful, anyway[else]. Especially when there's nothing here to get drunk with[end if]. You see red at yourself for such thoughts.") when player is in Boredom Bedroom
 
 instead of taking the ltb:
 	say "You already have one motivational book. Perhaps you need to find the right way to soak up LEAD's essence."
 
 chapter lager
 
-The can of Large Regal Lager is a vanishing LLPish thing in Pallid Li'l Pad. description is "It has a picture of someone smiling as he chugs a can of Large Regal Lager--the LARGE being black and above the red Regal Lager below. A warning on the can says that important people drinking too many of these is as bad for the economy as people with nothing better to do not drinking enough. Also there's a rubbish story about how the beer is brewed."
+The can of Large Regal Lager is a vanishing LLPish thing in Boredom Bedroom. description is "It has a picture of someone smiling as he chugs a can of Large Regal Lager--the LARGE being black and above the red Regal Lager below. A warning on the can says that important people drinking too many of these is as bad for the economy as people with nothing better to do not drinking enough. Also there's a rubbish story about how the beer is brewed."
 
 the rubbish story is part of the Regal Lager. the rubbish story is cluey and auxiliary. description is "[one of]It's in red and about how Ergal Agler brewed the first batch long ago. It kills almost as many brain cells as you drinking it[or]Your eyes gloss over all but the red ERGAL AGLER[stopping]."
 
 a-text of rubbish story is "RRYRY". b-text of rubbish story is "RRYRY". parse-text of rubbish story is "x[sp]L[sp]-[sp]x[sp]-".
 
-understand "alger" as a mistake ("What would an Alger hero DO to such foul spirits as the lager, though?") when lager is visible
+understand "alger" as a mistake ("What would an Alger hero DO to such foul spirits as the lager, though?") when player is in Boredom Bedroom and lager is in Boredom Bedroom
 
 instead of scaning rubbish story:
 	try scaning Large Regal Lager instead;
@@ -26169,7 +26169,7 @@ bee's head	"[one of]The bee is hovering so near. But small bees shouldn't be abl
 what-a-bee	"[one of]Even intellectual elitists know, deep down inside, that there is an emotional component to things.[plus][or]They hope to be able to BELIEVE without letting the common man do so as well. Not that they need to, to achieve their goals.[minus][cycling]"	--	"BELIEVE"
 cellar door	"[one of]To open the cellar, you need not REMEMBER anything and everything. Instead, just say 'Oh I know' after someone offers knowledge. It works, because, you know--well, you BETTER know...[plus][or]It is better to be able to RECALL[minus][cycling]."	--	"RECALL"
 spider	--	sad pier
-sad pier	"[one of]The objects in the pallid li'l pad should give you a clue what to do next, since they're all anagrams.[plus][or]Examining yourself, you need to hit total rock bottom.[plus][or]DESPAIR.[minus][cycling]"
+sad pier	"[one of]The objects in the Drain Nadir should give you a clue what to do next, since they're all anagrams.[plus][or]Examining yourself, you need to hit total rock bottom.[plus][or]DESPAIR.[minus][cycling]"
 diapers	"[one of]One page after saying you don't want to make any big mistakes, there's a bit about how you may need to hit rock bottom before finding your way back up[plus][or]There's lots of mumbo-jumbo about observing sentimental objects until you get sick of them, but please be sure to forget them once they've served their purpose[plus][or]DESPAIR is a last option that is hard to come back from. Except when coming back from it slingshots you past people who can't even despair[minus][cycling]."	--	"DESPAIR"
 ltb	"[one of]Feelings of despair are okay. Working through them can help you learn to lead. Unless they don't. Then you deserve more despair[plus][or]If you can't DEAL, you'll never make it[minus][cycling]."	--	"DEAL"
 brochure	"[one of]It is no sin to want a better place to RESIDE.[plus][or]Do not get too hippy-trippy on yourself. Without material DESIRE, nobody would want or build anything.[minus][cycling]"	--	"DESIRE"
@@ -26180,7 +26180,7 @@ secure door	"Useful for keeping people out[if noise is in office], though the va
 plasm lamps	"Useful for working late at the office but not for solving silly word puzzles."
 Desk Sked	"Useful for organizing tasks much tricker than playing dumb computer games."
 big important desk	"Just part of the scenery."
-lager	"[one of]The Large Regal Lager serves a purpose, but not a critical one.[plus][or]You are upset at the lager. You can make a moral statement by looking at it funny.[plus][or]GLARE at the lager in Pallid Li'l Pad.[minus][cycling]"	--	"GLARE"
+lager	"[one of]The Large Regal Lager [if player is in boredom bedroom]here [end if]in Boredom Bedroom serves a purpose, but not a critical one.[plus][or]You are upset at the lager. You can make a moral statement by looking at it funny.[plus][or]GLARE at the lager.[minus][cycling]"	--	"GLARE"
 skyscraper	"[if pernod is off-stage]You can't think of getting into the skyscraper until you are in tune with Trevis Vister.[else]The Pernod holds a clue how to get into the skyscraper.[end if]"
 Pernod	"[one of]Expensive alcohol is for high class reflection, and stuff. Or it advertises itself that way. That is what the Pernod claims to do.[plus][or]In this case, you have two more clues, which is what is on the front of the note tied to the Pernod and the back. 'Derp on, Epdorn.'[plus][or]'Dr. Peno and Ned Orp.'[plus][or]You need to PONDER how to get in.[minus][cycling]."	--	"PONDER"
 card	"The card gives a clue, along with the Pernod, of how to get into the skyscraper."
@@ -27594,11 +27594,11 @@ index map with strip of profits mapped north of cripple clipper.
 index map with cruelest lectures mapped north of strip of profits.
 
 [troves]
-index map with loudest used lot mapped north of cleric circle.
-index map with pallid li'l pad mapped north of used lot.
-index map with browse bowers mapped north of pallid li'l pad.
-index map with econ cone mapped east of pallid li'l pad.
-index map with loather rathole mapped east of loudest used lot.
+index map with Bustle Sublet mapped north of cleric circle.
+index map with Boredom Bedroom mapped north of Bustle Sublet.
+index map with browse bowers mapped north of Boredom Bedroom.
+index map with econ cone mapped east of Boredom Bedroom.
+index map with loather rathole mapped east of Bustle Sublet.
 index map with fiefco office mapped east of loather rathole.
 
 [oyster]
