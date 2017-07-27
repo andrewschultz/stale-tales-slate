@@ -290,7 +290,7 @@ northeast,southeast,northwest,southwest are diagonal.
 north,east,south,west are ordinal.
 
 before going (this is the reject diagonals rule):
-	if location is roman manor:
+	if location is Means Manse:
 		say "[one of]You don't feel like getting up. Suddenly you're in the middle of an exitstential crisis.[or]You've had it with doing and going[or]Sit, ex-adventurer.[or]Where would you go? Texis? You see red at the thought![or]Seeing exits just makes you want to...[or]Come on, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here![stopping]" instead;
 	if noun is a diagonal:
 		if player is in busiest subsite:
@@ -1833,7 +1833,7 @@ carry out resort-hinting:
 		if red bull burdell is visible:
 			try objhinting red bull burdell instead;
 		all-say "There is nothing more to do here except go east." instead;
-	if player is in Roman Manor:
+	if player is in Means Manse:
 		try objhinting final-exits instead;
 	all-say "Unhandled case. I need to fix this, so a transcript would be an enormous help." instead;
 	the rule succeeds;
@@ -2326,7 +2326,7 @@ check pulling:
 		say "Whew! All this wordplay makes you nervous." instead;
 	if player is in hotspot and red bull is in hotspot:
 		say "No, not pull, something even shorter." instead;
-	if player is in roman manor:
+	if player is in Means Manse:
 		say "No, something much more passive." instead;
 	say "Ullp! You don't need to PULL anything in this game, though a synonym may help somewhere...and PUSH may be marginally useful." instead;
 
@@ -2685,7 +2685,7 @@ carry out angleing:
 	else if player is in moor:
 		all-say "The whole moor seems lit up[if anapest is in moor], and the glow pulses with the anapest beat of the poem[end if].";
 		now see-others is true;
-	else if player is in roman manor:
+	else if player is in Means Manse:
 		all-say "All the exits seem lit up.";
 		now see-others is true;
 	else if beats are visible:
@@ -3327,7 +3327,7 @@ store b	sorbet	"sorbet"	--	"The store collapses into a greyish sorbet which is s
 store f	forest-x	"forest"	"store f"	"The greens and browns of Store F coagulate and pull apart into an actual forest."	false	513381369
 store i	sortie-x	"sortie"	"store i"	"The store rumbles, destroying the portraits of famous Tories (enjoy this, if you wish) and revealing the small sortie down[trap-check]. A stairway down remains, but that's about it."	false	531859319
 store m	metros-x	"metros"	"store m"	"The store rumbles, with the collections of small-scale cities disappearing. You see an escalator leading--well, somewhere populated."	false	550941626
-store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! You see, for a brief moment, a manor that seems made for you. 'I know what you're looking at!' calls some random well-wisher. 'You've earned it! For defeating Red Bull Burdell!'[paragraph break]Before you reply you haven't, he's already run behind store G, yelling 'Go! Rest!'"	false	572190276
+store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! 'I know what you're looking at!' calls some random well-wisher. 'The Means Manse! You've earned it! For defeating Red Bull Burdell!'[paragraph break]Before you reply you haven't, he's already run behind store G, yelling 'Go! Rest!'"	false	572190276
 cabinet	nice bat	"nice bat" or "be actin"	"cabinet"	"The cabinet seems to expand like an amoeba, then, POP! It becomes a rather large bat, which jumps up and down excitedly. It's clearly grateful it has become active, alive--more than just something to store things in."	false	384428789	[end trips strip anagrams]
 
 table of Forest anagrams
@@ -4595,7 +4595,7 @@ rule for supplying a missing noun when xmxing:
 		else:
 			now noun is m2;
 		continue the action;
-	if player is in roman manor:
+	if player is in Means Manse:
 		now noun is final-exits;
 		continue the action;
 	say "Nothing really sticks out. You may have to XX something specific.";
@@ -4643,7 +4643,7 @@ carry out xmxing:
 				say "You imagine a peasant coming by to disrupt Pat's poetry.";
 				ditch-saltine instead;
 			say "Before staring at anything, you wonder if you could just think yourself back to the ROOM." instead;
-		if player is in roman manor:
+		if player is in Means Manse:
 			say "You just want to EXIST, really." instead;
 	if noun is nametag: [start intro]
 		if tag-warn is false:
@@ -4900,7 +4900,7 @@ to decide whether can-scan-air:
 	if player is in Astral Altars, yes;
 	if player is in roomroom, yes;
 	if player is in moor and anapest is in lalaland, yes;
-	if player is in roman manor, yes;
+	if player is in Means Manse, yes;
 	no.
 
 to read-gadget:
@@ -4910,8 +4910,8 @@ to read-gadget:
 		say "Your gadget's not near anything, but it's registering [if gadget is cert][rcn][gc][gc][rc][else][rcn][bc][bc][gc][end if].";
 	else if player is in moor:
 		say "Your gadget's not near anything, but it's registering [if gadget is cert][rcn][gc][gc][rc][else][rcn][bc][bc][gc][end if].";
-	else if player is in roman manor:
-		say "No matter where you point your gadget, it shows [if gadget is cert][gcn][gc][gc][rc][rc][else][gcn][bc][bc][rc][bc][end if]. That can't be for the manor, though.";
+	else if player is in Means Manse:
+		say "When you wave your gadget at the exits, it shows [if gadget is cert][gcn][gc][gc][rc][rc][else][gcn][bc][bc][rc][bc][end if]. Elsewhere, it blinks a bit. [if gadget is cert]The first and fourth and fifth entries blink. Maybe there's more than one way to do things[else]There's all sorts of blinking. Hopefully, that means there's more than one thing to think up.";
 	else:
 		say "[bug-report]";
 
@@ -5279,7 +5279,7 @@ carry out gleaning:
 			all-say "You see yourself entering [random visible portal]." instead;
 		if store r is visible:
 			all-say "You see yourself walking into store R, which temporarily looks like a luxury hotel, with palm trees around." instead;
-		all-say "You see yourself relaxing in a large manor far from here." instead;
+		all-say "You see yourself relaxing in a large manse far from here." instead;
 	if mrlp is forest:
 		if Self-ID Fields is unvisited:
 			all-say "You see yourself considering all four compass directions before picking the right one." instead;
@@ -5382,7 +5382,7 @@ carry out gleaning:
 			if red bull burdell is in lalaland:
 				all-say "You see yourself walking east." instead;
 			all-say "You see the [if riot is in hotspot]riot[else]trio[end if], happier now, discussing art and wearing dirty smocks." instead;
-		if player is in roman manor:
+		if player is in Means Manse:
 			all-say "You see yourself just being. No, abiding. No, it's hard to describe what you're doing, since it's so passive." instead;
 	all-say "[bug-report] This part needs a story.";
 	the rule succeeds;
@@ -7452,7 +7452,7 @@ to say tagit:
 check scaning location (this is the air scan rule):
 	if player does not have gadget:
 		continue the action;
-	if player is in the nick or player is in Anti-Cool Location or player is in moor or player is in roomroom or player is in manor:
+	if player is in the nick or player is in Anti-Cool Location or player is in moor or player is in roomroom or player is in means manse:
 		if player has gadget:
 			try examining gadget instead;
 
@@ -10328,7 +10328,7 @@ before going in potshot hotspot:
 		say "I don't think Red Bull Burdell wants you to take him literally. Villains just talk like that, you know?" instead;
 	if red bull burdell is in lalaland:
 		if noun is not east:
-			say "You really can only go east to your Roman Manor." instead;
+			say "You really can only go east to your Means Manse." instead;
 
 check going west in Potshot Hotspot:
 	say "No going back now." instead;
@@ -10484,7 +10484,7 @@ to say kicks:
 
 the chain links are a plural-named thing. rgtext of chain links is "[rcn][gc][rc][rc][gc]". lgth of links is 5. gpos of links is 4. rpos of links is 5. cert-text of links is "-[ast]I[d1][d1][ast]S". rect-text of links is "K[d1][d1][d1][ast]S".
 
-description of chain links is "A bunch of ovular links hooked together. Out of the hands of rioters, it'll cause less achin[']. But they're still more violent things than you'd like, this near your manor."
+description of chain links is "A bunch of ovular links hooked together. Out of the hands of rioters, it'll cause less achin[']. But they're still more violent things than you'd like, this near the Means Manse."
 
 understand "chains" as chain links when chain links are visible.
 
@@ -10535,39 +10535,41 @@ carry out tuging:
 	try pulling the noun instead;
 	the rule succeeds;
 
-chapter Roman Manor
+chapter Means Manse
 
-Roman Manor is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, note the toaster rotates, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The darned [i]exits[r] are all around, making you worry about what was, or if you'll have more to do, but you just want to do less than nothing[if player has gadget]. Your gadget rattles for hopefully the last time[end if].". Roman Manor is in Resort.
+Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The darned [i]exits[r] are all around, making you worry about what was, or if you'll have more to do, but you just want to do less than nothing[if player has gadget]. Your gadget rattles for hopefully the last time[end if].". Means Manse is in Resort.
 
-check going outside in Manor:
-	say "You just want to BE, now. You don't want to have anything to do with exits." instead;
+check going outside in Means Manse:
+	say "You just want to get settled into the Means Manse. Maybe there's a way to BE, without having something to do with the exits just yet." instead;
 
 check scaning final-exits:
 	try scaning the location instead;
 
-the final-exits are flippable privately-named plural-named scenery in roman manor. "They are tempting you to adventure, but you'd rather be than do."
+the final-exits are flippable privately-named plural-named scenery in Means Manse. "They are tempting you to adventure, but you'd rather be than do."
 
-understand "exits" as final-exits when player is in roman manor.
+understand "blamer" as a mistake ("No, we know who's to blame. He's done with. Time to move on.") when player is in Means Manse.
 
-the marble is amusing  scenery in roman manor. "It makes you calm and relaxed enough to sit back and do nothing with a purpose."
+understand "exits" as final-exits when player is in Means Manse.
 
-the spire is amusing scenery in roman manor. "It makes you calm and relaxed enough to sit back and do nothing with a purpose."
+the marble is amusing  scenery in Means Manse. "It makes you calm and relaxed enough to sit back and do nothing with a purpose."
 
-the toaster is amusing scenery in roman manor. description of toaster is "It's just a stupid harmless luxury, here for a last bit of cheap wordplay."
+the spire is amusing scenery in Means Manse. "It makes you calm and relaxed enough to sit back and do nothing with a purpose."
+
+the toaster is amusing scenery in Means Manse. description of toaster is "It's just a stupid harmless luxury, here for a last bit of cheap wordplay."
 
 instead of doing something with the toaster:
 	if action is procedural:
 		continue the action;
 	say "No more fiddling. You just want to sit back and let stuff sink in."
 
-before going in roman manor (this is the clue final verb rule):
+before going in Means Manse (this is the clue final verb rule):
 	say "[one of]You suddenly have ye taxin['] any-exit anxiety. Like you're in the middle of an exitstential crisis.[or]I best sit, be, you think.[or]Sit, ex-adventurer.[or]Where would you go? Texis, perhaps[or]Seeing exits just makes you want to...[or]Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! Maybe you're overthinking[stopping]." instead;
 
 section existing
 
 [the final verb, of course]
 
-understand "sex it" as a mistake ("[if player is not in manor]Quit screwing around and focus on yourself. NO, not like THAT. Geez[else]You're not even up for THAT, now. You just want to BE[end if].")
+understand "sex it" as a mistake ("[if player is not in means manse]Quit screwing around and focus on yourself. NO, not like THAT. Geez[else]You're not even up for THAT, now. You just want to BE[end if].")
 
 existing is an action applying to nothing.
 
@@ -10576,7 +10578,7 @@ understand the command "exist" as something new.
 understand "exist" as existing.
 
 carry out existing:
-	if player is in Roman Manor:
+	if player is in Means Manse:
 		say "That is all that's left to do. It's time to become an adventurer emeritus. Perhaps one day you will resume it, but for now, the allures of your laurels are too great. Doing without the outwith, you begin your being binge, a pure-wit write-up of the happiest epitaphs to your vaunted, er, adventure. Where IS that notepad?";
 		say "[wfak][line break]I...what? End a pad with a deadpan: GIVE A HANG? DANG, I HAVE! TREMENDOUS = ME (ENDS TOUR).";
 		reg-inc;
@@ -12092,7 +12094,7 @@ carry out roomgoing:
 	if mrlp is resort:
 		if red bull burdell is in hotspot:
 			say "He's saying GET OUT just to be obnoxious and intimidating." instead;
-		if player is in roman manor:
+		if player is in Means Manse:
 			say "But you want to NOT go anywhere. NOT take any exits." instead;
 		if red bull burdell is in lalaland:
 			say "But you beat Red Bull Burdell! Just go east!" instead;
@@ -12386,7 +12388,7 @@ to say die-die-die:
 instead of waiting:
 	if player is in frost forts:
 		say "[one of]Ish. Very shivery.[or]Looks like you have a Mexican standoff, if Mexico were in Greenland.[or]The wolves get antsy. I mean, they don't turn into ants. You are getting colder.[or]Your blood runs cold as the wolves inch closer. These aren't totally causally related.[or]If you don't do something cold-blooded, you'll be too cold-blooded to do anything.[or][die-die-die][stopping]" instead;
-	if player is in roman manor:
+	if player is in Means Manse:
 		say "Well, you sort of almost have it, but you want to (not) do something with the exits." instead;
 	if player is in Dry Yard and goat is not visible:
 		say "There's something important to do here. But what?" instead;
@@ -13641,7 +13643,7 @@ index map with Astral Altars mapped east of sf.
 index map with Isle mapped south of sf.
 index map with Rived Drive mapped east of Isle.
 index map with hotspot mapped east of Rived Drive.
-index map with roman manor mapped east of hotspot.
+index map with Means Manse mapped east of hotspot.
 
 volume beta testing - not for release
 
@@ -13907,7 +13909,7 @@ understand the command "dc" as something new.
 understand "dc" as dcing.
 
 carry out dcing:
-	say "[b]SR[r] is a test-fixing command that lets you decide which puzzles to solve at the two random rooms at the start of the forest. SR NE puts them N and E, SR E puts them E and W, and RS reverses which is in which room.[paragraph break][b]RJ[r] jumps to various regions, 1-4, 1=f, 2=i, 3=m, and 4=r, the finale. 5 puts you in the final room, the manor.[line break]sk 1, sk 2 or sk 3 solves a region with 1=f 2=i 3=m and 4=r.[line break]disas disassembles the disguise if you want to try to break that.[line break]ff freezes flips, so if you want to try, say, X BUTTON and X without undoing, you can.[line break][b]TS[r] skips the intro and gets you near the stores.[line break]hf shows full hints every move.[line break][b]CAP[r] caps the number of random texts printed at the number you type. It is useful for testing the text that appears for the last random text, but lots has been done by me.[line break][b]hd toggles printing full hints to a debug file called shufhints, or shufhints.glkdata. This is bolded annoyingly to stress that any hint transcript is helpful to me, if you can get it working, but don't force it. [r]Shufhints(.glkdata) is a text file that appears in c:\program files\inform 7 (or 2 directories up) on Windows and in your home directory on the Mac.[line break]hn turns hints off.[line break]stit toggles whether you always have x-ray vision."
+	say "[b]SR[r] is a test-fixing command that lets you decide which puzzles to solve at the two random rooms at the start of the forest. SR NE puts them N and E, SR E puts them E and W, and RS reverses which is in which room.[paragraph break][b]RJ[r] jumps to various regions, 1-4, 1=f, 2=i, 3=m, and 4=r, the finale. 5 puts you in the final room, the Means Manse.[line break]sk 1, sk 2 or sk 3 solves a region with 1=f 2=i 3=m and 4=r.[line break]disas disassembles the disguise if you want to try to break that.[line break]ff freezes flips, so if you want to try, say, X BUTTON and X without undoing, you can.[line break][b]TS[r] skips the intro and gets you near the stores.[line break]hf shows full hints every move.[line break][b]CAP[r] caps the number of random texts printed at the number you type. It is useful for testing the text that appears for the last random text, but lots has been done by me.[line break][b]hd toggles printing full hints to a debug file called shufhints, or shufhints.glkdata. This is bolded annoyingly to stress that any hint transcript is helpful to me, if you can get it working, but don't force it. [r]Shufhints(.glkdata) is a text file that appears in c:\program files\inform 7 (or 2 directories up) on Windows and in your home directory on the Mac.[line break]hn turns hints off.[line break]stit toggles whether you always have x-ray vision."
 
 chapter hfing
 
@@ -14093,7 +14095,7 @@ carry out rjing:
 	if rj is 4:
 		move player to Astral Altars;
 	if rj is 5:
-		move player to roman manor;
+		move player to Means Manse;
 		say "Debug-testing note: EXIST to win.";
 
 chapter sking
@@ -14119,7 +14121,7 @@ carry out sking:
 		change sk to 0 - sk;
 	if sk is 5:
 		say "To the end.";
-		now player is in manor;
+		now player is in Means Manse;
 	if sk is 4:
 		say "Now all 3 regions are solved.";
 		now forest is solved;
@@ -14303,7 +14305,7 @@ chapter ending-testing
 
 [ * simple very-ending test ]
 
-test end-test with "gonear manor/exist"
+test end-test with "gonear manse/exist"
 
 chapter for-testers
 
@@ -15034,7 +15036,7 @@ table of verification rules (continued)
 rule-short (topic)	rule-name	rule-description
 "ts"	trips-strip rule	"At trips strip e.g. solved area"
 "sco"	max-reg-score rule	"All solved region scores are maximum"
-"rm"	in-roman-manor rule	"In roman manor"
+"rm"	in-means-manse rule	"In Means Manse"
 "fi"	in-fields rule	"In fields"
 
 this is the in-fields rule:
@@ -15058,9 +15060,9 @@ this is the trips-strip rule:
 		the rule succeeds;
 	the rule fails.
 
-this is the in-roman-manor rule:
+this is the in-means-manse rule:
 	append "Current score = [cur-score of resort] of [max-score of resort].[line break]" to the file of test results;
-	if player is in roman manor:
+	if player is in Means Manse:
 		the rule succeeds;
 	the rule fails;
 
