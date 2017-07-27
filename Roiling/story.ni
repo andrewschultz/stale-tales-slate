@@ -6888,7 +6888,7 @@ Browse Bowers	"You are definitely going places, but you aren't going places by a
 Econ Cone	"That could lead to ransom manors."
 FiefCo Office	"You're at the very top. You don't really want to change that without really good motivation."
 Burnt Brunt	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
-Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge. You couldn't leg such gulches."
+Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches."
 Austerer Treasure	"The treasure room has no secret passages--so you can only go back east."
 Marines Seminar	"The camo-coma fields are just obvious enough to anyone paying attention, for legal reasons. Plus, either you are awake enough to see them, or you get too tired to walk into the center. West is the only way out."
 Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]."
@@ -15290,7 +15290,7 @@ to say exwall:
 		say ". The [unless wall is in phat]ex-[end if]wall north is an easier proposition";
 
 to say swan-puma:
-	say "[one of], with or without the fabled Sawn Swan (whose victims emit tearful NAWs) and Ampu-Puma (whose victims plaintively cry 'Um, PA')[or][stopping]";
+	say "[one of], with or without the fabled Sawn Swan (whose victims emit tearful NAWs) and Ampu-Puma (whose victims plaintively cry 'Um, PA') or even the LMAO-loam which lures unwary travelers to their death[or][stopping]";
 
 check going east in Phat Path:
 	say "[if Leo is visible]Leo and Rand don't have the endurance to climb Mount Um, Not. Neither do you[else]You don't want to climb Mount Um, Not[end if][exwall]." instead;

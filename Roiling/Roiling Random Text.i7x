@@ -24465,7 +24465,7 @@ blurb
 "'Miswrote? Wormiest...'"
 "'Mo hid. DO HIM.' / 'D'oh! I'm...'"
 "'Mo, slice! Lo, sic [']em!' / 'I'm close!'" []
-"'Mo['] grass? Gross, Ma!'"
+"'Mo['] grass or grams? Gross, Ma!'"
 "'Mock us? OK, scum...'"
 "'Mocked? Dock [']em.'"
 "'Mocks OK MCs? Sock'm!'"

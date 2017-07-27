@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<trizbort version="1.5.9.8">
+<trizbort version="1.6.0.0">
 	<info>
 		<title>A Roiling Original</title>
 		<author>Andrew Schultz</author>
@@ -52,7 +52,7 @@ version 3 March 2015</history>
 		<room id="17" name="Pallid Li'l Pad" subtitle="Boredom Bedroom" x="-544" y="-320" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects>   Lager</objects>
 		</room>
-		<room id="18" name="Browse Bowers" subtitle="" x="-544" y="-416" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="18" name="Browse Bowers" subtitle="" x="-288" y="-416" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="19" name="Econ-Cone" subtitle="" x="-416" y="-320" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n" custom="yes" customRight="-32" customDown="0">Astute Statue</objects>
 		</room>
@@ -105,7 +105,7 @@ version 3 March 2015</history>
 		<room id="36" name="Lapsin' Plains" subtitle="" x="-32" y="-320" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n" custom="yes" customRight="-28" customDown="0">Crate, Huts</objects>
 		</room>
-		<room id="37" name="(Uh, at) a Hut" subtitle="" x="96" y="-416" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="37" name="(Uh, at) a Hut" subtitle="" x="224" y="-416" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n" custom="yes" customRight="-16" customDown="0">Tubs</objects>
 		</room>
 		<room id="38" name="Achers' Arches" subtitle="" x="-160" y="-224" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
@@ -115,8 +115,8 @@ version 3 March 2015</history>
 			<objects>Weaselly|Walleyes</objects>
 		</room>
 		<room id="40" name="Collapsed Old Places" subtitle="" x="-288" y="-320" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="41" name="End Den" subtitle="" x="-32" y="-416" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="42" name="Scum Ant Sanctum" subtitle="" x="-288" y="-416" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="41" name="End Den" subtitle="" x="96" y="-416" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="42" name="Scum Ant Sanctum" subtitle="" x="-32" y="-416" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="43" name="TenfoldTeflon'd Den/Loft" subtitle="End Oyster" x="-160" y="-416" w="96" h="64" region="Oyster" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="(end OYSTER)" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
@@ -392,11 +392,11 @@ version 3 March 2015</history>
 		</line>
 		<line id="130" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="17" port="n" />
-			<dock index="1" id="18" port="s" />
+			<dock index="1" id="185" port="s" />
 		</line>
 		<line id="131" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
-			<dock index="0" id="18" port="se" />
-			<dock index="1" id="19" port="nw" />
+			<dock index="0" id="18" port="sw" />
+			<dock index="1" id="19" port="ne" />
 		</line>
 		<line id="132" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="19" port="se" />
@@ -575,8 +575,8 @@ version 3 March 2015</history>
 			<dock index="1" id="71" port="w" />
 		</line>
 		<line id="176" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="in" endText="out">
-			<dock index="0" id="39" port="nw" />
-			<dock index="1" id="42" port="se" />
+			<dock index="0" id="39" port="nne" />
+			<dock index="1" id="42" port="ssw" />
 		</line>
 		<line id="177" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="31" port="e" />
@@ -587,8 +587,8 @@ version 3 March 2015</history>
 			<dock index="1" id="33" port="ese" />
 		</line>
 		<line id="179" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="To">
-			<dock index="0" id="42" port="e" />
-			<dock index="1" id="43" port="w" />
+			<dock index="0" id="42" port="w" />
+			<dock index="1" id="43" port="e" />
 		</line>
 		<line id="180" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="71" port="e" />
@@ -605,6 +605,16 @@ version 3 March 2015</history>
 		<line id="183" name="" description="" style="dashed" flow="oneWay">
 			<dock index="0" id="1" port="ne" />
 			<dock index="1" id="80" port="sw" />
+		</line>
+		<room id="184" name="Mesprise Premises" subtitle="" x="-416" y="-416" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="185" name="Mesprise Premises" subtitle="" x="-544" y="-416" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="186" name="" description="" style="dashed" flow="oneWay">
+			<dock index="0" id="185" port="e" />
+			<dock index="1" id="184" port="w" />
+		</line>
+		<line id="187" name="" description="" style="dashed" flow="oneWay">
+			<dock index="0" id="184" port="e" />
+			<dock index="1" id="18" port="w" />
 		</line>
 	</map>
 	<settings>
