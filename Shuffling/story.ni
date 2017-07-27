@@ -10565,6 +10565,10 @@ instead of doing something with the toaster:
 before going in Means Manse (this is the clue final verb rule):
 	say "[one of]You suddenly have ye taxin['] any-exit anxiety. Like you're in the middle of an exitstential crisis.[or]I best sit, be, you think.[or]Sit, ex-adventurer.[or]Where would you go? Texis, perhaps[or]Seeing exits just makes you want to...[or]Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! Maybe you're overthinking[stopping]." instead;
 
+understand "amen" and "name" as a mistake ("Use the plural, here.") when player is in Means Manse.
+
+understand "mensa" and "name" as a mistake ("No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey wass not particularly relevant.[paragraph break]Even if they wouldn't, well, the Means Manse is for you and you alone.") when player is in Means Manse.
+
 section existing
 
 [the final verb, of course]
@@ -10576,10 +10580,18 @@ existing is an action applying to nothing.
 understand the command "exist" as something new.
 
 understand "exist" as existing.
+understand "amens" as existing.
+understand "names" as existing.
 
 carry out existing:
 	if player is in Means Manse:
-		say "That is all that's left to do. It's time to become an adventurer emeritus. Perhaps one day you will resume it, but for now, the allures of your laurels are too great. Doing without the outwith, you begin your being binge, a pure-wit write-up of the happiest epitaphs to your vaunted, er, adventure. Where IS that notepad?";
+		if word number 1 in the player's command is "exist":
+			say "You kick back and enjoy yourself. That is all that's left to do. ";
+		else if word number 1 in the player's command is "names":
+			say "You can't help yourself, but it's fun to give names to the places in the Means Manse. It makes you feel more at home. There's the Dusty Study, and that can be the Largely All-Grey Gallery. That's A Blest Stable, and the Highest Heights may be a bit hackneyed, but...still, a fun place.";
+		else:
+			say "You give a few quiet amens to your accomplishments. Perhaps you didn't solve any great philosophical problems, buy hey, you did pretty well. ";
+		say "It's time to become an adventurer emeritus. Perhaps one day you will resume it, but for now, the allures of your laurels are too great. Doing without the outwith, you begin your being binge, a pure-wit write-up of the happiest epitaphs to your vaunted, er, adventure. Where IS that notepad?";
 		say "[wfak][line break]I...what? End a pad with a deadpan: GIVE A HANG? DANG, I HAVE! TREMENDOUS = ME (ENDS TOUR).";
 		reg-inc;
 		now resort is solved;

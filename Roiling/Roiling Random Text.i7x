@@ -37,9 +37,9 @@ table of iffy advice	false	0	20	read-eths rule	troves	"Advice from Pa, Egg, Pea[
 table of gritty dialogue	true	0	20	say-gritty rule	troves	"Gritty Spoiloplis dialogue[indic of troves]"	"Gritty sounds come, then go, from [one of]your testers, the tersest[or]the[stopping] streets: "	""	"Tense silence replaces the gritty sounds, which will probably return and cycle. People making the same mistakes they did before. But you are bound for better things--or, with that book, you'd better be.[pre-brk]"
 table of non-skeds	false	0	20	desk-look rule	troves	"Desk-Sked alternatives[if fiefco is unvisited] (Troves)[end if]"	--	"Slick-Tech Checklist, which is rapidly catching up"
 table of posh dialogue	true	0	20	say-posh rule	troves	"Posh Spoiloplis dialogue[indic of troves]"	"Upper-class concerns: "	""	"A low, snide 'Old is new, wild ones.' Cue repetition.[pre-brk]"
-table of posse bosses	false	0	20	in-lot-or-ruin rule	troves	"Loudest Used Lot bad guys[indic of troves]"	"maybe "	""	"not Mean Roy Maroney, anymore--he's the last of them" [p]
+table of posse bosses	false	0	20	in-lot-or-ruin rule	troves	"Bustle Sublet bad guys[indic of troves]"	"maybe "	""	"not Mean Roy Maroney, anymore--he's the last of them" [p]
 table of prestigious bums	false	0	20	read-deal rule	troves	"'Inspirational' Yorpwaldians in [i]DEAL[r][indic of troves]"	--	""	"Aliver Elvira, in case anyone forgot" [p]
-table of real estate ads	false	0	20	read-brochure rule	troves	"Rotunda brochure locations[indic of troves]"	"It's for real estate by Sir Dee. One page header blares [i]Home's so Meh? "	"[r]"	"Secretcester! OWN NOW! Well, that's the last and loudest listing."
+table of real estate ads	false	0	20	read-brochure rule	troves	"Browse Bowers brochure locations[indic of troves]"	"It's for real estate by Sir Dee. One page header blares [i]Home's so Meh? "	"[r]"	"Secretcester! OWN NOW! Well, that's the last and loudest listing."
 table of Leo-Rand chitchat	true	0	15	chitchat-over-idols rule	presto	"Leo and Rand's chatter[if rand is fightin] (STORE P)[end if]"	--	""	"'Heya.' / 'Yeah?' An awkward silence follows.[paragraph break]They've run out of conversation, but fortunately (for them,) they forgot it all, so they can just restart."
 table of Leo-Rand idols	true	0	15	Leo-Rand-cry rule	presto	"Leo and Rand's idols[if rand is fightin] (STORE P)[end if]"	"[one of]Leo and Rand[or]Rand and Leo[at random] sadly admit they're no "	"."
 table of catechism pages	false	0	10	catechism-over-research rule	presto	"Hacks['] shack catechism entries[indic of presto]"	--	""	"After the final 'Ok, worn? Work on or know,' only a nixed-pap Appendix is left. You could flip through for more research topics or brainy types, but you've done enough. I appoint you a rarest raster starer. Have an, er, star."
@@ -440,12 +440,12 @@ this is the read-eths rule:
 	the rule fails.
 
 this is the say-gritty rule:
-	if player is in Used Lot or player is in Loather Rathole:
+	if player is in Bustle Sublet or player is in Boarded Roadbed or player is in Loather Rathole:
 		the rule succeeds;
 	the rule fails;
 
 this is the in-lot-or-ruin rule:
-	if player is in Used Lot:
+	if player is in Bustle Sublet:
 		the rule succeeds;
 	the rule fails;
 
@@ -460,7 +460,7 @@ this is the read-brochure rule:
 	the rule fails;
 
 this is the say-posh rule:
-	if player is in Econ Cone or player is in Dour Tan Rotunda:
+	if player is in Econ Cone or player is in Browse Bowers:
 		the rule succeeds;
 	the rule fails;
 

@@ -10,7 +10,7 @@ The south exit from the Coastline, in Store W, features either Lois the Hostile 
 The Deal Seer west of the Strait is Lars Eede or Elsa Erde.
 There may be an embarrassing bug where a female NPC is referred to as male, but I hope not. I searched pretty thoroughly, I guess/think. If you find one, I'll fix it and give you credit.
 Also, if any animals are referred to as male, let me know, as that's a potential bug. I tried to leave them gender-neutral.
->MANOR
+>MEANS MANSE
 >>Study
 ?What do I do here?
 Just examine stuff to get an idea of what the game is about.
@@ -515,7 +515,7 @@ You don't have to do anything.
 It's by Peg A. Page. It's about Peg A. Page. It profited Peg A. Page when sold.
 Okay, I think I beat this into the ground.
 GAPE at it.
->>Loudest Used Lot
+>>BUSTLE SUBLET
 ?What's the stop post for?
 It can't turn into POTS or TOPS. Or expand your OPTS.
 It will help you SPOT. But you need to get rid of things verbose.
@@ -523,6 +523,7 @@ It will help you SPOT. But you need to get rid of things verbose.
 Zone it out. What is obverse?
 This is a seven letter word, but it requires just switching two letters.
 OBSERVE.
+>>BOARDED ROADBED
 ?This stupid evil bee is so near!
 There are two ways to look at it: as so near, or an evil bee. Let's go with the bee itself.
 It's an evil bee. It feeds on your doubt.
@@ -537,16 +538,12 @@ You can't become a caller.
 But you can RECALL. There's another solution, too.
 I'd veer...ever I'd--a way to figure where it was?
 DERIVE.
->>PALLID LI'L PAD
+>>DRAIN NADIR
 ?A spider, sad pier, diapers...
 You can scan them all. But you need to hit rock bottom.
 You must give up, sort of, and not give up.
 DESPAIR.
-?The room name changed! Does that matter?
-Not really. This was the room's name in a previous release. It changed for narrative purposes. It's a little less horrid now.
-?How do I lead?
-Some despair still lingers. Dale Elda and Leda Adle have advice on how to lead in their book.
-You need to learn to DEAL.
+>>BOREDOM BEDROOM
 ?I may or may not want to drink the lager!
 Turns out you don't.
 It is upsetting to find it there. Such productivity lost!
@@ -554,7 +551,10 @@ This is a last lousy point.
 The settler's cheat mode breaks it open since it scans "REGAL LAGER" as red. That makes the first letter clear. Then four possibilities are left.
 You can cut them down further reading the red text about Ergal Agler.
 Or you can GLARE at it right away.
->>DOUR TAN ROTUNDA
+?How do I lead?
+Some despair still lingers. Dale Elda and Leda Adle have advice on how to lead in their book.
+You need to learn to DEAL.
+>>BROWSE BOWERS
 ?How do I reside somewhere now?
 You are ready to want a bigger place.
 The brochures may help you here.

@@ -7689,7 +7689,7 @@ before listening (this is the you can hear stuff some places rule):
 			say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!'[in random order][run paragraph on] You see red a bit at getting no direct help, yourself." instead;
 	if player is in rathole or player is in Bustle Sublet:
 		say "[if talk-quiet is false]You shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
-	if player is in rotunda or player is in econ cone:
+	if player is in browse bowers or player is in econ cone:
 		say "[if talk-quiet is false]You shut off the random posh dialogue with HUSH[else]Actually, you can't help but hear posh dialogue[end if]. Anyway, no more badgering beggar din." instead;
 	if noise is visible:
 		say "No escaping the noise. Someone's knocking to get in." instead;
@@ -7844,7 +7844,7 @@ before sleeping:
 		say "[if Gunter is off-stage]But you just woke up![otherwise]Not with that knocking.[end if]" instead;
 	if player is in Boredom Bedroom:
 		say "You don't have time to dream of titanium golf clubs or overpriced alcohol or all the things you should have been dreaming about all these years. Slacker." instead;
-	if player is in Rotunda or player is in Econ Cone:
+	if player is in Browse Bowers or player is in Econ Cone:
 		say "In a public place? Worse, in an upscale public place? How shocking!" instead;
 	if player is in FiefCo Office:
 		say "You got here by doing nothing while conscious, not doing nothing while unconscious." instead;
@@ -25740,7 +25740,7 @@ carry out objhinting (this is the pick object to hint rule) :
 			try objhinting scripture picturers instead;
 		all-say "The church isn't so special now you've been in it." instead;
 	if noun is closets:
-		all-say "The closets are just for transporting around the manor quicker, to or from the study." instead;
+		all-say "The closets are just for transporting around the Means Manse quicker, to or from the study." instead;
 	if noun is the location:
 		all-say "Occasionally you can SCAN or SMELL or LISTEN for clues. You don't need to type a command to BREATHE it. In fact, the parser doesn't understand that." instead;
 	if location of noun is nothing and noun is not a backdrop:
@@ -26082,7 +26082,7 @@ paperwall	"[one of]What does the paperwall--with its design--remind you of?[plus
 rifle	"[one of]The rifle's more powerful than words. OR IS IT.[plus][or]The rifle makes you wonder if you're on a wanted poster or something.[plus][or]The rifle can become a much more harmless FLIER.[minus][cycling]"
 Curtis	"[if moss cap is off-stage][one of]Curtis will help you if you get him enough fruits. Actually, just four.[plus][or]Look around a bit and look at the scenery. A few things have just a few letters. The rest are an exercise.[plus][or]He is good at delegating but not conversation.[minus][cycling][else if player has moss cap]You won't get more than the moss cap from him. Now, what to do with it?[else]Curtis [up-to-l3].[end if]"
 Mole Elmo	"Mole Elmo's not a very enthusiastic captor. It's as if he wants you to do something to the rifle."
-high sign	"[one of]3, 4, 1, 2, 5. What do those numbers mean?[plus][or]The rifle has five letters, so that is a clue.[plus][or]Letter 3, letter 4, letter 1, letter 2, letter 5.[plus][or]3-4-1-2-5 of rifle.[plus][or]Elmo is cluing the rifle can become a FLIER.[minus][cycling]"	[end MANOR hints]
+high sign	"[one of]3, 4, 1, 2, 5. What do those numbers mean?[plus][or]The rifle has five letters, so that is a clue.[plus][or]Letter 3, letter 4, letter 1, letter 2, letter 5.[plus][or]3-4-1-2-5 of rifle.[plus][or]Elmo is cluing the rifle can become a FLIER.[minus][cycling]"	[end MEANS MANSE hints]
 sad ads	"Err, mostly anagrams that couldn't fit into puzzles. I hope you find them amusing."
 Store B	"[one of]Store B contains some sort of mystery food, but people seem too lazy to figure it out.[plus][or]The two names provide red-clues, but you can also tell from the smells from Store B.[plus][or]SORBET.[minus][cycling]"
 Store H	"[one of]If you haven't solved the game proper, you won't be able to get into Store H.[plus][or]Store H appears radically different from the rest of the store. It's probably where stuff that doesn't fit in goes.[plus][or]ES Roth mentions that you can't face the hoster or call it directly.[plus][or]What's a word for stuff sluffed off to the side?[plus][or]OTHERS. If you want the quick way through, you will need to restart the game.[plus][or]You need to ROVE OVER when you are in the Means Manse.[minus][cycling]"
@@ -27005,13 +27005,13 @@ table of sexdif [tsx]
 examp
 "[bold type](general)[r] Dropping something."
 "Examining yourself."
-"[bold type](manor)[r] The note from [gtmn] about the purse, and the purse itself too"
+"[bold type](Means Manse)[r] The note from [gtmn] about the purse, and the purse itself too"
 "Ditching Gunter."
 "Complain about the media to Elmo."
 "Many of the books (300+) have alternate authors. Many other random texts adjust for your gender, but books are the main one. Some names are switched, such as Abe/Bea, Dot/Tod, Tio/Toi, Tino/Toni, and Simeon/Simone."
 "One page of the dope op-ed is named differently."
 "The clues for the ramp are different, but the name Mr. Pa is still cringy either way. I hope it's the right sort of cringy."
-"The message for solving the manor."
+"The message for solving the Means Manse."
 "[bold type](stores)[r] The hoarder/acuter curate says something different when you return."
 "Double dipping on sorbet in Store B."
 "[bold type](routes)[r] Cursing in Cleric Circle."
@@ -27167,9 +27167,9 @@ rule for showing list of lists:
 			say "<press Q to quit or another key to see more>";
 			let cholet be the chosen letter;
 			if cholet is 113 or cholet is 81:
-				say "By the way, you can list a region's random text with, say, LM for manor, LY for oyster, etc.";
+				say "By the way, you can list a region's random text with, say, LM for Means Manse, LY for oyster, etc.";
 				the rule succeeds;
-	say "By the way, you can list a region's random text with, say, LM for manor, LY for oyster, etc.";
+	say "By the way, you can list a region's random text with, say, LM for Means Manse, LY for oyster, etc.";
 	next-list-poke;
 
 listpoke is a truth state that varies.
@@ -27190,7 +27190,7 @@ to say remap-unset:
 	say "[if remapped is true]UNSET the tunes[else]REMAP the perma-amper[end if]";
 
 rule for showing alternate routes:
-	say "[line break]You may've figured some or even all of these alternate paths out. But here is a list, to check off. The manor has no mutually exclusive solutions, and Presto only has one alternative, for the hoop. This list overlaps very little with the MISSED list which shows actual points missed.";
+	say "[line break]You may've figured some or even all of these alternate paths out. But here is a list, to check off. The Means Manse has no mutually exclusive solutions, and Presto only has one alternative, for the hoop. This list overlaps very little with the MISSED list which shows actual points missed.";
 	d "[list of solved regions].";
 	if routes is solved:
 		say "[eqls]ROUTES[line break]";
@@ -28779,7 +28779,7 @@ roming is an action out of world.
 
 understand the command "rom" as something new.
 
-understand "rom" as roming when player is in manor.
+understand "rom" as roming when mrl is Means Manse.
 
 carry out roming:
 	oscan niche;
