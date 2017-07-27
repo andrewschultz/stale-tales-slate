@@ -8,7 +8,7 @@ Your favorite goofy random tables are in Roiling Random Text.i7x.
 
 The nudges are in Roiling Nudges.i7x.
 
-To search for your favorite goofy random tables, use ^blurb with a regular-expression search for editors that allow them, such as notepad++ in Windows, which is well worth a download for other reasons. You can also search for (bracket) then xx(first letter) with g = general (for example, blank command/wait responses) or m=manor (for example, comedians Gunter mentions) or v = gritty dialogue, and so forth. XX alone is a (poorly-named) variable in some places, but searching with the bracket and then XX will cover everything.
+To search for your favorite goofy random tables, use ^blurb with a regular-expression search for editors that allow them, such as notepad++ in Windows, which is well worth a download for other reasons. You can also search for (bracket) then xx(first letter) with g = general (for example, blank command/wait responses) or m=manse (for example, comedians Gunter mentions) or v = gritty dialogue, and so forth. XX alone is a (poorly-named) variable in some places, but searching with the bracket and then XX will cover everything.
 
 The new Inform IDE may allow you to search this way, too. For A Roiling Original, I stuck with 6G60. I had enough changes to deal with.
 
@@ -108,9 +108,9 @@ a region has a list of things called item-list.
 
 chapter region definition
 
-Roman Manor is an unsolved region. regtab of Roman Manor is table of roman manor nudges. regana of Roman Manor is table of roman manor anagrams. max-score of Roman Manor is 13. min-score of Roman Manor is 8. [giant pin, stable/stair, chimney/ramp, basement] [non-anagram = staple wall]
+Means Manse is an unsolved region. regtab of Means Manse is table of Means Manse nudges. regana of Means Manse is table of Means Manse anagrams. max-score of Means Manse is 13. min-score of Means Manse is 8. [giant pin, stable/stair, chimney/ramp, basement] [non-anagram = staple wall]
 
-last-loc of Roman Manor is Dusty Study. [needed for GT command]
+last-loc of Means Manse is Dusty Study. [needed for GT command]
 
 Stores is an unsolved spoiled region. regtab of Stores is table of Stores nudges. regana of Stores is table of stores anagrams. max-score of stores is 11. min-score of Stores is 3. [k/n/tokers=3, 3 stores you don't need, sorbet also optional]
 
@@ -156,7 +156,7 @@ Others is an unsolved region. regtab of Others is table of others nudges. regana
 
 Demo Dome is a frivolous region. regtab of Demo Dome is table of demo dome nudges.
 
-a thing has a region called lreg. lreg of a thing is usually manor.
+a thing has a region called lreg. lreg of a thing is usually Means Manse.
 
 chapter things
 
@@ -280,7 +280,7 @@ to rulesOn: [used to turn rules on at the very start of play]
 	(- RulesOnSub(); -)
 
 every turn when strip of profits is visited (this is the region-hint on no score rule):
-	if mrlp is manor and Gunter is in lalaland:
+	if mrlp is means manse and Gunter is in lalaland:
 		increment turns-spent of mrlp;
 	else if mrlp is unspoiled:
 		increment turns-spent of mrlp;
@@ -524,7 +524,7 @@ when play begins (this is the screenread gender swears and precursor rule) :
 			choose-male;
 		say "And one final thing: A Roiling Original is a sequel to Shuffling Around. It's strongly recommended you play Shuffling Around first, as it is shorter and provides back story to ARO, but it's not critical. If, in any case, you'd like a recap--which also immediately spoils ARO's mechanic--say yes now.";
 		if the player direct-consents:
-			say "Shuffling Around was about changing...things...to other things. Your tagged gadget helped you with the tougher ones, like the drainage that became a gardenia, and you remember the magenta nametag that became the gateman who introduced you to Yorpwald. After solving the Forest, Sortie and Metros in the stores in the Trips Strip, you tackled Red Bull Burdell and earned your Roman Manor as thanks.[paragraph break]You remember the things you did, but do you need to remember the word?";
+			say "Shuffling Around was about changing...things...to other things. Your tagged gadget helped you with the tougher ones, like the drainage that became a gardenia, and you remember the magenta nametag that became the gateman who introduced you to Yorpwald. After solving the Forest, Sortie and Metros in the stores in the Trips Strip, you tackled Red Bull Burdell and earned your Means Manse as thanks.[paragraph break]You remember the things you did, but do you need to remember the word?";
 			if the player consents: [start of game]
 				say "Things were, well, anagrams. Store F became the forest. Store I, the sortie. Store M, the metros. You were particularly proud of changing the liches to a chisel and the drapes to a spread.";
 			else:
@@ -1237,7 +1237,7 @@ to item-warp:
 	now last-loc of mrlp is location of the player;
 	if number of carried not warpable things > 0 or number of worn not warpable things > 0:
 		if mrlp is solved:
-			if mrlp is Roman Manor or mrlp is others:
+			if mrlp is Means Manse or mrlp is others:
 				say "This game just removed an item it should not have: ([list of carried not warpable things]) ([list of worn not warpable things]). [bug-report]";
 			otherwise:
 				say "[one of]An acuter curate relieves you of the items you won't need any more. He points at himself. 'Rod Hare, Hoarder.' He [if player is female]mumbles pensively, 'Her road...[run paragraph on][else]points at you. 'Rad, hero.[run paragraph on][end if]' He points away. 'I scour curios.'[or]The hoarder takes your surplus stuff again.[stopping]";
@@ -1389,8 +1389,8 @@ Rule for supplying a missing noun while gotothinging:
 
 table of progvals [this determines which rooms are definitively ahead of others, so GO TO can't go backwards. Also, if a room is shunned, you can't go there any more.]
 rm	rmprog	regs	why-not
---	1	manor	"Your manor was surrounded, and you escaped. Bad idea to turn back."
-carven cavern	2	--	[manor]
+--	1	means manse	"The Means Manse was surrounded, and you escaped. Bad idea to turn back."
+carven cavern	2	--	[means manse]
 --	1	routes	"[if progval of location of player is 4]Not from the boat, you aren't. You're much closer to your goal right now[else]The crowd would be sad to see you return, unsuccessful. And you can't, anyway[end if]."
 underpass	2	--	"You already muddled your way out of there. [if progval of location of player is 2]There's gotta be a way to get through da mist[else]And onto the boat, which must go somewhere[end if]!"
 ripe pier	3	--	"You have no idea how to turn the cripple clipper around, and you don't want to."
@@ -2761,7 +2761,7 @@ definition: a thing (called cand) is readable:
 
 table of readables [tre]
 to-read	what-read	alt-read
-sitar	"Oh, right. You bought it from Trisa Israt." [manor]
+sitar	"Oh, right. You bought it from Trisa Israt." [means manse]
 rifle	"It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle."
 pastel plates	"EPSTAL is written as an author's signature."
 Store H	"'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'" [stores]
@@ -3193,7 +3193,7 @@ before doing something when Elmo is visible:
 		if current action is waiting:
 			continue the action;
 		if current action is going:
-			say "Back in the manor won't help, and Elmo won't let you by." instead;
+			say "Back in the Means Manse won't help, and Elmo won't let you by." instead;
 		if action is procedural:
 			continue the action;
 		if word number 1 in the player's command is "talk" or word number 1 in the player's command is "ask" or word number 1 in the player's command is "say" or word number 1 in the player's command is "tell":
@@ -3484,7 +3484,7 @@ after quipping when qbc_litany is the table of Elmo comments:
 			now macks are in lalaland;
 			now qbc_litany is table of Gretta comments;
 		else:
-			now poss-score of manor is cur-score of manor + 3;
+			now poss-score of Means Manse is cur-score of Means Manse + 3;
 			move the player to Carven Cavern;	[end Elmo's dialogue]
 	else:
 		debug-fallthrough;
@@ -3581,7 +3581,7 @@ to solve-region (sre - a region):
 	consider the notify score changes rule;
 	now sre is solved;
 	now last-solved-region is sre;
-	if sre is manor:
+	if sre is Means Manse:
 		now all prefigured things are unfigured;
 	repeat through table of pres:
 		if there is a thereg entry and thereg entry is sre:
@@ -4582,7 +4582,7 @@ to say generic-reject:
 	say "That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. ";
 	unless qbc_litany is Table of No Conversation:
 		say "Besides, there's someone to deal with.";
-	else if cur-score of manor > 0:
+	else if cur-score of Means Manse > 0:
 		say "(If you are trying to flip something back, you almost never need to.)[line break]";
 	else if last-hash is cmdhash and last-hash > 0:
 		say "[paragraph break]Though it looks like you're a bit stuck. You may need to take a step back and examine things, [mb-ss-ped]to see what you can change. The trickier stuff should have more than one clue.";
@@ -4648,7 +4648,7 @@ to reg-inc:
 		say "BUG NOTE: This location needs a map region!";
 	otherwise:
 		increment the cur-score of mrlp;
-		if mrlp is manor and rifle is off-stage and cur-score of manor is max-score of manor - 4:
+		if mrlp is means manse and rifle is off-stage and cur-score of Means Manse is max-score of Means Manse - 4:
 			say "[line break]Congratulations, Iron [if player is male]Man[else]Woman (Ow)[end if] in Manor! You've found all the secrets here. You can just exit the gallery now[if settler is unexamined], but it'd be a good idea to examine the settler, first[end if].";
 		if mrlp is stores and cur-score of stores is max-score of stores:
 			now stores is solved;
@@ -4674,7 +4674,7 @@ score-after is a truth state that varies.
 
 table of init-points
 myrg	pttot	blurb	doneyet
-manor	2	"Yay! You're still changing stuff to stuff. For now. But you're on home turf, now. If you get out in the world, it'll be trickier."	false
+means manse	2	"Yay! You're still changing stuff to stuff. For now. But you're on home turf, now. If you get out in the world, it'll be trickier."	false
 stores	1	"Well, it looks like the stores can be changed into something else. Maybe it won't be so easy behind them, but maybe you can get rid of a few to start and see any tricks later."
 routes	1	"Well, that was different from the standard directions. But there can't be too many other ways to go."
 troves	1	"Neat. You made progress just thinking. Or not-thinking. It could be either."
@@ -4738,7 +4738,7 @@ carry out requesting the score:
 		d "# of turns = [turn count].";
 		say "Ol['] Stat Totals:[paragraph break]Score in a scenario: [cur-score of mrlp] out of [max-score of mrlp] total points in the current region, [mrlp]";
 		if cur-score of mrlp is max-score of mrlp:
-			if mrlp is manor:
+			if mrlp is means manse:
 				say ". You should go IN to the Strip of Profits, now";
 			else if mrlp is others:
 				say ". You can go NORTH to Admit-Us Stadium";
@@ -4958,7 +4958,7 @@ when play begins (this is the basic initialization rule):
 		now doneyet entry is false;
 	move bulwark backdrop to all ominous rooms;
 	move the curst palace backdrop to all towery rooms;
-	add-errs manor;
+	add-errs means manse;
 	let convo-holes be false;
 	let temp be 0;
 	if debug-state is true:
@@ -5352,7 +5352,7 @@ carry out scaning:
 		the rule fails;
 	if first-good-scan is false:
 		now first-good-scan is true;
-		say "[one of]Ta-da! Data (a tad.) [or]Ta-dum! Datum! [at random]It's not an odd DOA doodad! [if mrlp is manor]You recall writing in your notepad about your tagged gadget from your first adventure and how it helped you determine what you needed to change an object to. But the settler has new colors. You'll need to find what they're for.[paragraph break][end if]";
+		say "[one of]Ta-da! Data (a tad.) [or]Ta-dum! Datum! [at random]It's not an odd DOA doodad! [if mrlp is means manse]You recall writing in your notepad about your tagged gadget from your first adventure and how it helped you determine what you needed to change an object to. But the settler has new colors. You'll need to find what they're for.[paragraph break][end if]";
 		ital-say "if your interpreter supports Glulx, see the top for a graphical representation of the colorings. You can also type SPACE ON or SON to space out the text if you are visually impaired, or NO SPACE or NOS to lump the text back. Also, LA repeats what you scanned last, if the window on top does not show it.";
 		pad-rec-q "la";
 		pad-rec-q "spaces";
@@ -5482,11 +5482,11 @@ to say cheatfid:
 
 table of aftertexts [taf]
 xtradesc	b-only	clue-only-once	clued-yet	bothscan	xtratext
-pram	false	false	false	true	"[cheatfid]." [manor]
+pram	false	false	false	true	"[cheatfid]." [means manse]
 tables	false	false	false	true	"[cheatfid]."
 niche	false	false	false	true	"[cheatfid]."
 t-b	false	false	false	true	"[cheatfid]."
-plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end manor]
+plates	true	false	false	false	"Hmm, maybe the question mark isn't as vague as you're worried it is." [end means manse]
 bench	false	true	false	false	"Hm, bench is only five letters, but nothing was highlighted until you scanned the bit reading A GIANT'S." [routes]
 controls	false	false	false	false	"This is odd--all these question marks. Surely you'll find by accident where Ben hid the hit win button? Or you can just pick and choose, focusing on Ben, or the win."
 ltb	true	true	false	false	"Man! Only one stable red at the end. Those two co-authors muck things up. Maybe you can switch to teach mode, or maybe you can have a think on your own, realize there're only so many possibilities, and, oh, what's the word?"
@@ -5554,7 +5554,7 @@ book begin-region hints
 
 section special parser errors
 
-rule for printing a parser error when the latest parser error is the didn't understand error and mrlp is not manor and the number of words in the player's command > 1:
+rule for printing a parser error when the latest parser error is the didn't understand error and mrlp is not means manse and the number of words in the player's command > 1:
 	if cur-score of mrlp < 10 and  mrlp is not parsewrned:
 		choose row with thisreg of mrlp in table of parsewarns;
 		say "[specwarn entry][line break]";
@@ -5567,7 +5567,7 @@ to say pars-trub:
 
 table of parsewarns
 thisreg	specwarn
-manor
+means manse	"You need to change certain things to other things."
 stores	"[pars-trub]you need to change the stores, here, like you changed the [if tables are in lalaland]tables[else if niche is in lalaland]'my niche' writing[else]ten beams[end if], and you just need one word."
 presto	"[pars-trub]one word of sufficient force will work here. While one word is eight letters long and a Last Lousy Point is nine, most are four or five."
 routes	"[pars-trub]one word should work here, with no preface necessary. While one word is eight letters long, the rest are around five or six."
@@ -5578,7 +5578,7 @@ otters	"[pars-trub]while some words are rather long, you [if cur-score of otters
 others	"[pars-trub]you may need a variety of tricks, here, but one word will usually clinch things, and you will figure the general theme."
 demo dome	"[pars-trub]you don't need to do anything fancy here besides looking, moving, examining and reading. No puzzles at all."
 
-book manor-hinting
+book means-hinting
 
 latches-warn is a truth state that varies.
 
@@ -5618,7 +5618,7 @@ every turn when player is in dusty study and stuff-found < 3:
 		say "You may want to examine something [if stuff-found > 0]else [end if]to tell you about Yorpwald, like the [if bookshelf is unexamined]bookshelf[else if ads are unexamined]ads[else]pedanto-notepad[end if].";
 		now tc-last is turn count;
 
-carry out manor-hinting:
+carry out means-hinting:
 	if stuff-found < 3:
 		say "[one of]You should look around and examine stuff. Someone will eventually interrupt you.[or][next-to-see].[stopping]" instead;
 	if latches are visible:
@@ -5637,7 +5637,7 @@ carry out manor-hinting:
 			if tables are in study and niche is in study and t-b are in study:
 				all-say "You have three ways out of the study. You may wish to HINT SETTLER or HINT DIORAMA to figure what to do with them.";
 			else:
-				all-say "You have found a way out of the study. Any way gets you to a secret passage out of your manor, though along the way, you may wish to HINT SETTLER or HINT DIORAMA to figure what to do with them.";
+				all-say "You have found a way out of the study. Any way gets you to a secret passage out of the Means Manse, though along the way, you may wish to HINT SETTLER or HINT DIORAMA to figure what to do with them.";
 			now settler-hint-yet is true instead;
 		if tables are visible:
 			try objhinting tables instead;
@@ -6874,9 +6874,9 @@ check going nowhere (this is the spam can't go that way rule) :
 table of nowheres [tnw]
 theloc	thereject
 Largely All-Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond."
-stable	"No time for mooching around the manor. You probably need to take [if sitar is visible]a[else]that[end if] secret passage in, or down."
+stable	"No time for mooching around Means Manse. You probably need to take [if sitar is visible]a[else]that[end if] secret passage in, or down."
 highest heights	"You can go back IN to the study, though you don't need to, or you could try [if ramp is visible]to get the pram out of the way[else]going DOWN the ramp[end if]."
-Strip of Profits	"Why run off for fun? See [if number of visible portals is 0]what one of those stores can become[else]what's in one of those portals[end if] instead." [manor]
+Strip of Profits	"Why run off for fun? See [if number of visible portals is 0]what one of those stores can become[else]what's in one of those portals[end if] instead." [means manse]
 Cruelest Lectures	"The trumped-up charges and the teleological lectures have totally conked your sense of direction. You can, however, TRY to go outside."
 Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat." [routes]
 Sun-Spared Underpass	"Far into A rift? No. You can't [if darkness is visible]see far enough to [end if]rely on directions, here[if darkness is visible]. You just need to find No-Gal Logan[end if]."
@@ -6885,6 +6885,7 @@ Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambian
 Adobe Abode	"This do be a one-room place. You can really only go outside."
 Loather Rathole	"[if cold is reflexive]You're too cold. While haste heats, the new random direction would offer no more [i]heat[r] than here.[else]You've got to race after that guy, but you wonder if it really matters.[end if]" [troves]
 Bustle Sublet	"[if noun is down]Yes, the cellar is down, but you can't remember WHERE the passage down to the cellar is.[else if post is reflexed]You haven't figured a way to get to the cellar, man. Running away won't help.[else]You can't run from this big fight now that you've traced the robber![end if]"
+Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where the cellar must be."
 Drain Nadir	"You need to look at something that would change your mood."
 Boredom Bedroom	"You need to look at something that would inspire you to move, instead."
 Browse Bowers	"You are definitely going places, but you aren't going places by actually WALKING. Perhaps if you meditate on that brochure."
@@ -7016,7 +7017,7 @@ to say dont-hit of (fi - a person):
 table of attack-specific
 target	nohit
 yourself	"Surly foe: yourself? Lose fury!"
-plaster	"There's too much of it, and it's too hardened." [START manor]
+plaster	"There's too much of it, and it's too hardened." [start Means Manse]
 paperwall	"It's still too thick, even though some of the plastter is peeled away."
 Elmo	"[if rifle is visible]Elmo kind of has the upper hand here[else]No, he's here to help[end if]."
 drama armada	"That'd be a silly way to die." [START routes]
@@ -7137,7 +7138,7 @@ check climbing (this is the climb to enter rule) :
 		try entering noun instead;
 
 check climbing (this is the generic silly climbing reject rule):
-	if noun is ramp: [start MANOR]
+	if noun is ramp: [start Means Manse]
 		try going down instead;
 	if noun is stair:
 		if player is in stable:
@@ -7171,7 +7172,7 @@ check dropping something:
 		say "You aren't in the right state of mind to drop all your possessions, even for a half a move. Doing so might let you jump and grab the hoop, but you need to say, the heck with it. Or something." instead;
 	if noun is a fruit:
 		say "Best return the fruit to Curtis, instead." instead;
-	If mrlp is roman manor:
+	If mrlp is Means Manse:
 		say "You probably need to abscond with everything useful you can get your hands on." instead;
 	say "Hero[if player is female]in[end if]es shouldn't be litterbugs[if player has purse]! Your super purse should hold whatever.[else]![end if]" instead;
 
@@ -7443,7 +7444,7 @@ understand the command "xyzzy" as something new.
 understand "xyzzy" as xyzzying.
 
 carry out xyzzying:
-	say "That word is a mess and holds absolutely no power for you[if player is in dusty study and cur-score of manor is 0]. Hopefully you'll find why soon enough[else]. Trust me, I checked all the other twenty-nine combinations[end if].";
+	say "That word is a mess and holds absolutely no power for you[if player is in dusty study and cur-score of Means Manse is 0]. Hopefully you'll find why soon enough[else]. Trust me, I checked all the other twenty-nine combinations[end if].";
 	the rule succeeds;
 
 chapter knocking
@@ -7744,7 +7745,7 @@ before listening (this is the you can hear stuff some places rule):
 chapter smelling
 
 before smelling (this is the you can smell some stuff some places rule):
-	if player is in study and study is dark: [manor]
+	if player is in study and study is dark: [means manse]
 		say "That worked in Hitch-Hiker's Guide to the Galaxy, but not here. That'd be copy-catting." instead;
 	if player is in study and Gunter is in lalaland:
 		say "Bean soup. Subpoena is near." instead;
@@ -7860,7 +7861,7 @@ to say sleep-reject:
 		say "You found the one place in the game where you needed to sleep";
 	else if location is outie:
 		say "Sleeping outside is dangerous. You'd need somewhere protected";
-	else if mrlp is manor:
+	else if mrlp is means manse:
 		say "You won't need to sleep for a long while.";
 	else if mrlp is presto and shack is unvisited:
 		say "It'd be nice to have somewhere to sleep after tumbling through the gyre";
@@ -8448,7 +8449,7 @@ understand the command "tech" as something new.
 understand "tech" as teching.
 
 carry out teching:
-	say "Many people helped with technical aspects of A Roiling Original. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinking that bugged both me and the player. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts are also present in the first game[if cur-score of manor > 0] in the Stale Tales Slate[end if], Shuffling Around. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's Trizbort app helped me create the map for release 3 (black and white) and Jason Lautzenheiser's modifications for release 4 (region color, borders and more) helped me, and maybe you, visualize things that much better.";
+	say "Many people helped with technical aspects of A Roiling Original. There are the people who wrote the extensions. Andrew Plotkin showed some I6 code for taking transcripts and other things. Climbingstars helped with Bypass Disambiguation (not present til post-comp) and setting pronouns, among other things. Heartless Zombie betrayed his name by pointing me to hash tables to process 'good guesses' in the player's commands, which cleared up a lot of thinking that bugged both me and the player. He also helped me with other neat stubs I've re-used since then.[paragraph break]All three of these people's efforts are also present in the first game[if cur-score of Means Manse > 0] in the Stale Tales Slate[end if], Shuffling Around. So I am doubly thankful.[paragraph break]Juhana Leinonen's JavaScript code helped me create the HTML for pseudo-Invisiclues.[paragraph break]Genstein's Trizbort app helped me create the map for release 3 (black and white) and Jason Lautzenheiser's modifications for release 4 (region color, borders and more) helped me, and maybe you, visualize things that much better.";
 	say "[line break]And it's already mentioned in the credits, but [my-repo] is where the project is hosted. I recommend using source control if at all possible. Even if you just use it to keep a backup, or be sure of what you changed, it can save a lot of trouble.";
 	the rule succeeds;
 
@@ -8509,7 +8510,7 @@ understand the command "no tip" as something new.
 understand "no tip" as notiping.
 
 carry out notiping:
-	if cur-score of manor < 2:
+	if cur-score of Means Manse < 2:
 		say "You shouldn't know about this command, yet. I mean, it was in Shuffling Around, but it's a bit different, this game." instead;
 	say "You [if no-tip is true]already have[else]switch to[end if] NO TIP at a region's start. OPT IN will reverse this.";
 	now no-tip is true;
@@ -8524,7 +8525,7 @@ understand the command "opt in" as something new.
 understand "opt in" as optining.
 
 carry out optining:
-	if cur-score of manor < 2:
+	if cur-score of Means Manse < 2:
 		say "You shouldn't know about this command, yet. I mean, it was in Shuffling Around, but it's a bit different, this game." instead;
 	say "You [if no-tip is false]already have[else]switch to[end if] OPT IN at a region's start. NO TIP reverse this.";
 	now no-tip is false;
@@ -8550,7 +8551,7 @@ carry out retrying:
 	if mrlp is others:
 		say "This is the only region left to take care of." instead;
 	if Strip of Profits is unvisited:
-		say "You haven't been to the Strip of Profits yet, whatever that is, and you suspect you can't just jump ahead. Besides, you don't want to risk retrying your manor." instead;
+		say "You haven't been to the Strip of Profits yet, whatever that is, and you suspect you can't just jump ahead. Besides, you don't want to risk retrying the Means Manse." instead;
 	if mrlp is otters:
 		say "You shouldn't need to go anywhere else[if number of bypassed regions > 0]. While you destroyed some regions with the patcher, you can't revisit them without restarting[end if]. Are you sure?";
 		if the player yes-consents:
@@ -8673,7 +8674,7 @@ check fliptoing (this is the portal palm and reflexive flip rule):
 			the rule succeeds;
 
 check fliptoing when player is in dusty study and gunter is off-stage (this is the don't flip til you should at start rule) :
-	repeat through table of roman manor anagrams:
+	repeat through table of Means Manse anagrams:
 		if noun is the-to entry and the-from entry is cromulent:
 			if player is in dusty study and urgent Gunter is off-stage:
 				if stuff-found < 3:
@@ -8827,7 +8828,7 @@ book anagram tables
 
 chapter the tables themselves by region
 
-table of roman manor anagrams
+table of Means Manse anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
 palm	lamp	true	201542769	--	"lamp"	"lamp" or "get lamp"	"Lamp. Palm. Yup. Using your old powers, you change the palm into a lamp, which gives off light. You go all Jason Scott on it, and just like that, bam, it's in your inventory.[paragraph break]You blink and look around and stare at your diorama. You remember how [gtmn] gave it to you for one day you might need warm-ups, to get back in the groove. With unusual examples and anything. In case you had a different divining tool than the tagged gadget[if latches are off-stage]. Oh! And he gave you something else! Those--useless latches! They might be good for something. You remember the lump from sleeping on the chair--yup, there they are[end if].[paragraph break]Oh, there's that 'dope' op-ed Gunter threw at you, too[preefies]."
 latches	satchel	true	439479634	--	"satchel"	"satchel"	"The locks start fiddling with themselves--and each other--and slowly, a satchel emerges from the mess[new-thing]."
@@ -9532,7 +9533,7 @@ after fliptoing otters-x:
 	now engravings are part of otters-x;
 	continue the action;
 
-volume manor
+volume Means Manse
 
 book Dusty Study
 
@@ -9542,7 +9543,7 @@ to say tables-beams:
 		say "[if tables are in study]tables (the spreadsheety kind) on one wall[else]a way OUT where the tables were[end if]";
 		say ", and [if t-b are in study]beams on another wall[else]a way down where those beams were[end if]";
 
-Dusty Study is an innie room in Roman Manor. "[one of]Your study's not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is in lalaland]. After your sleep, you remember you built some secret passages[end if][if gunter is in lalaland]. You'll want to take them[else]. You came in through your super-secret side door, and you don't feel like going back out, yet[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
+Dusty Study is an innie room in Means Manse. "[one of]Your study's not very sophisticated, but it's you. That doesn't mean you're not very sophisticated. But you were sophisticated enough to know that.[paragraph break][or][stopping]It's a bit messy here, with a diorama hanging down. There's a bookshelf way too large to move[tables-beams]. A rich chair [if pedanto-notepad is on rich chair]holds your pedanto-notepad[else]is here, too, holding some sad ads[end if][if Gunter is in lalaland]. After your sleep, you remember you built some secret passages[end if][if gunter is in lalaland]. You'll want to take them[else]. You came in through your super-secret side door, and you don't feel like going back out, yet[think-cue][end if].[if bean-smell is true][paragraph break]You smell something, and you hear something, too. Probably from outside, but you don't want to go out there.[end if]"
 
 after printing the locale description for Dusty Study when Dusty Study is unvisited:
 	ital-say "you may wish to type ABOUT or VERBS to see information about the game and what words work best.";
@@ -9716,7 +9717,7 @@ the abstract painting is a useless LLPish undesc. "That painting you changed fro
 
 instead of doing something with abstract painting when abstract painting is visible:
 	if current action is taking or searching or attacking:
-		say "It's a false law there has to be a wall safe behind it. Besides, [if Gunter is off-stage]the person knocking might see what you're doing[else]you got enough goodies so far[end if]. You remember it was sort of based on parts of your manor." instead;
+		say "It's a false law there has to be a wall safe behind it. Besides, [if Gunter is off-stage]the person knocking might see what you're doing[else]you got enough goodies so far[end if]. You remember it was sort of based on parts of your Means Manse." instead;
 	unless action is procedural:
 		say "The painting's really just there to be observed. Like most art." instead;
 	say "The painting gives no pure-art rapture, though you muse 'Quite an antique. I put it up.' and notice a place where horses are kept, a roof with smoke rising, and a downstairs living place. It's not exactly worth looking at in detail, but it's just good to know it's there.";
@@ -9750,7 +9751,7 @@ The I Trash His Art page is propaganda. The Her Arts Er Trash page is propaganda
 description of I Trash His Art is "[artrash]". description of Er Trash is "[artrash]".
 
 to say artrash:
-	say "[one of]Elvira offers an apology for not seeing to the heart of the matter about all your anagramming. Oh, sure, she had clever opinions about whether obvious anagrams were better than non-obvious ones, and she changed around, and she's glad people found them interesting, but really, it's kind of nerdy now that your good deeds were DONE. Lots of examples, ahead.[or]Elvira lists games that don't make kids or concerned parents happy. Mega Mage Game (e-mag: a gem!) as well as many others: [twiddle of table of lame computer games and 4].[paragraph break]She blames you for the games['] technical and aesthetic faults, mainly due to the anagram craze you never quite discouraged.[or]Elvira discourses on rap music. 'Rap music is, um, [crap]. Funky? F'n yuk! Pop stars, stop raps!' She lists D.J. JD as even worse than [twiddle of table of bad rappers and 4]. Geez! So many horrible 'musicians.' The 'hits,' too.[or]Elvira has harsh words for other genres, yet they keep cranking things out! [twiddle of table of lousy hit songs and 5]You...you find yourself agreeing with her, but you never commissioned any of that.[or]Elvira ravages the rigidness of music in general. All the latest...hits. Mourning oldies soiled by Chas Cash-Asch and his Sex Rime Remixes, and how SOMEONE with word power (guess who) makes the fliest stifle itself. Though she praises Ariel V's album [i]We Do No Wooden Ode Now[r], she rips the same ol['] lame-os: [twiddle of table of oldies singers and 3].[or]Elvira 'begs the question' of who is getting a lot of royalties! Someone probably in a nice cosy hidden manor! She finishes by berating the Klaw Walk and Bungie Beguin as dumb dances.[or]Elvira shows little respect for comedians like [twiddle of table of comedians and 1]--that pissant is pants--but also [twiddle of table of comedians and 3] even/especially if they make jokes about you. It is too easy. While those about her fall flat or generally have to paint her in a favorable light.[or]Elvira eviscerates dummies['] mediums that produce movies like [twiddle of table of lame movies and 3], but there's the small screen too...[or]They're just unbearable, TV shows like [twiddle of table of lame tv shows and 3]Even stuff rated g grated--that's the end of THIS article, thankfully[drt].[or]No. Really. You don't want to read that nonsense again. She always seems to know which way the wind is blowing, then she blames you for it.[stopping][run paragraph on]"
+	say "[one of]Elvira offers an apology for not seeing to the heart of the matter about all your anagramming. Oh, sure, she had clever opinions about whether obvious anagrams were better than non-obvious ones, and she changed around, and she's glad people found them interesting, but really, it's kind of nerdy now that your good deeds were DONE. Lots of examples, ahead.[or]Elvira lists games that don't make kids or concerned parents happy. Mega Mage Game (e-mag: a gem!) as well as many others: [twiddle of table of lame computer games and 4].[paragraph break]She blames you for the games['] technical and aesthetic faults, mainly due to the anagram craze you never quite discouraged.[or]Elvira discourses on rap music. 'Rap music is, um, [crap]. Funky? F'n yuk! Pop stars, stop raps!' She lists D.J. JD as even worse than [twiddle of table of bad rappers and 4]. Geez! So many horrible 'musicians.' The 'hits,' too.[or]Elvira has harsh words for other genres, yet they keep cranking things out! [twiddle of table of lousy hit songs and 5]You...you find yourself agreeing with her, but you never commissioned any of that.[or]Elvira ravages the rigidness of music in general. All the latest...hits. Mourning oldies soiled by Chas Cash-Asch and his Sex Rime Remixes, and how SOMEONE with word power (guess who) makes the fliest stifle itself. Though she praises Ariel V's album [i]We Do No Wooden Ode Now[r], she rips the same ol['] lame-os: [twiddle of table of oldies singers and 3].[or]Elvira 'begs the question' of who is getting a lot of royalties! Someone probably in a nice cosy hidden manse! She finishes by berating the Klaw Walk and Bungie Beguin as dumb dances.[or]Elvira shows little respect for comedians like [twiddle of table of comedians and 1]--that pissant is pants--but also [twiddle of table of comedians and 3] even/especially if they make jokes about you. It is too easy. While those about her fall flat or generally have to paint her in a favorable light.[or]Elvira eviscerates dummies['] mediums that produce movies like [twiddle of table of lame movies and 3], but there's the small screen too...[or]They're just unbearable, TV shows like [twiddle of table of lame tv shows and 3]Even stuff rated g grated--that's the end of THIS article, thankfully[drt].[or]No. Really. You don't want to read that nonsense again. She always seems to know which way the wind is blowing, then she blames you for it.[stopping][run paragraph on]"
 
 dope-read is a truth state that varies.
 
@@ -9988,7 +9989,7 @@ table-warn is a truth state that varies.
 before doing something with tables when table-warn is false:
 	if the player's command matches the regular expression "\btable\b":
 		now table-warn is true;
-		ital-say "it's important that the tables are plural, as you [if cur-score of manor is 0]may find[else]already found[end if].";
+		ital-say "it's important that the tables are plural, as you [if cur-score of means manse is 0]may find[else]already found[end if].";
 	else:
 		continue the action;
 
@@ -10089,7 +10090,7 @@ girls-quip	"You listen about [twiddle of table of elmo emo and 3]. No friend fin
 weather-quip	"That's always a safe one. You say 'How [']bout that weather, geez,' not realizing you haven't gotten out enough to know if it's been too hot, cold, rainy or dry. But fortunately, you haven't gotten out enough to remember those details don't matter.[paragraph break]Elmo seems ready to listen to deeper concerns, even if they probably aren't germane to what you need to do."
 sports-quip	"Sports banter follows.[paragraph break][twiddle of table of sports chatter and 2]'Chokers.' / 'Shocker.'"
 artsy-quip	"'Where do I look? Is there a bare min--uh, most efficient way through?'[paragraph break]'Spry prys say there's something that can just destroy a few stores. Not the sortie and forest and metros you solved. But the remaining stuff. You can maybe take care of them later."
-leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [if player is female]wo[end if]man! Ego hurt? Er, tough!'[paragraph break]Gunter pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manor.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end GUNTER text]
+leave-quip	"'Travel, varlet!'[paragraph break]Magnetic-acting, he blabs about the seriousness of it all, despite your 'Hastas, [bracket]redacted[close bracket].' Somehow, you are to blame for the awful state of TV, music, games, and the arts in general, but Elvira is always there to bemoan things and assure Yorpwald she can make it better. It sort of blends in for a while, until he yells at you for wasting his time.[paragraph break]As he leaves, he looks in your mailbox, all '[if player is male]N[else]Ow, n[end if]o fan mail? Fail on, [if player is female]wo[end if]man! Ego hurt? Er, tough!'[paragraph break]Gunter pulls out something labeled 'Points to Spin,' then another labeled 'A Folder re: Adolf.'[paragraph break]'Godwin? Win, dog!'[paragraph break]'Snidest dissent! Gob it, bigot!' he yells as he pulls out a paper labeled 'Dope Op-Ed' and throws it at you. It's thick enough, you feel something when it hits. You lie down in your chair, annoyed and stunned. You realize you'll need an evac-cave...they'll be surrounding your manse.[paragraph break]'Told, dolt!' you hear after locking the door. His ugliest lies tug as you fall asleep[if latches are off-stage], which you notice is quite lumpy[end if]. You wake up hours later from a right mean nightmare where people yell 'Zero Day, Ya Dozer!' and '[if player is female]She will hew ills[else]Sir, Echo Heroics[end if]!' then 'Brave a verb! No sun, nouns!'" [end GUNTER text]
 
 book diorama
 
@@ -10196,7 +10197,7 @@ check taking chimney:
 before going up in study:
 	if niche is in study:
 		say "Hm, the letters saying MY NICHE indicate something could be there. Hm, what." instead;
-	say "[one of]I'll skip on the whole piling your chair on the bed bit. Though actually it's kind of fun, jumping up and down to pull yourself up. The chimney has enough handholds. You walk through one of your Closest Closets--they provide localized teleporting through your manor--to find yourself high up[or]You climb up again[stopping].";
+	say "[one of]I'll skip on the whole piling your chair on the bed bit. Though actually it's kind of fun, jumping up and down to pull yourself up. The chimney has enough handholds. You walk through one of your Closest Closets--they provide localized teleporting through the Means Manse--to find yourself high up[or]You climb up again[stopping].";
 
 after fliptoing chimney:
 	now highest heights are mapped above dusty study;
@@ -10329,7 +10330,7 @@ rule for supplying a missing noun when entering:
 	if player is in Largely All-Grey Gallery:
 		now the noun is the evac-cave.
 
-Largely All-Grey Gallery is a stairy innie privately-named room in Roman Manor. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. It stands regally, for all that. [one of]There's an evac-cave that could help you sneak out of the manor[or]You can enter the evac-cave here[stopping][if min-score of manor < max-score of manor], though if you're a completist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
+Largely All-Grey Gallery is a stairy innie privately-named room in Means Manse. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. It stands regally, for all that. [one of]There's an evac-cave that could help you sneak out of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of means manse < max-score of means manse], though if you're a completist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
 
 understand "sitar" as a mistake ("[if stair is visible]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Largely All-Grey Gallery.
 
@@ -10374,7 +10375,7 @@ after printing the locale description for Largely All-Grey Gallery when Largely 
 		else if t-b are in study:
 			say "[if tables are in study][line break][end if]Okay. So that's what the beams in the study were for[if t-b are unexamined]. You remember there were ten now[else]. All ten[end if]. You could uncover them if you were completionist that way.";
 		if possibles is false and min-alert is false:
-			ital-say "you don't need to do anything else in the manor, but if you want to track what you can do, POSS will do so.";
+			ital-say "you don't need to do anything else in the Means Manse, but if you want to track what you can do, POSS will do so.";
 			now min-alert is true;
 		continue the action;
 
@@ -10443,7 +10444,7 @@ check going inside in Largely All-Grey Gallery:
 
 book carven cavern
 
-Carven Cavern is an innie room in Roman Manor. "This is an oddly carved cavern[plaster-plates][curtain-desc]. You probably don't want to go back outside.";
+Carven Cavern is an innie room in Means Manse. "This is an oddly carved cavern[plaster-plates][curtain-desc]. You probably don't want to go back outside.";
 
 to say plaster-plates:
 	say ". ";
@@ -10478,7 +10479,7 @@ check going nowhere in cavern (this is the cavern check rule):
 		if the player direct-consents:
 			try going inside instead;
 		else:
-			say "That is probably the way out of the manor. But you are free to look around." instead;
+			say "That is probably the way out of the Means Manse. But you are free to look around." instead;
 	do nothing instead;
 
 check going inside in cavern:
@@ -10488,7 +10489,7 @@ check going inside in cavern:
 	say "You walk through the former paperwall--and through an obscure part of Old Warpy. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
 	now satchel is in lalaland;
 	now teariest treatise is in lalaland;
-	solve-region roman manor;
+	solve-region Means Manse;
 	the rule succeeds;
 
 chapter plaster psalter
@@ -10882,7 +10883,7 @@ num-ascii	uc-ascii	reg-match	reg-blurb
 
 book stable
 
-Stable is a stairy innie room in Roman Manor. "You never actually used this stable to, say, let a foal named Olaf loaf, and you couldn't think of anything else to do with it[if stair is visible]. The stair you made leads down[end if]. But despite disuse, it is blest with privacy and not falling apart[if tables are in lalaland]. You can go IN or OUT back to the study--it doesn't matter which[end if].";
+Stable is a stairy innie room in Means Manse. "You never actually used this stable to, say, let a foal named Olaf loaf, and you couldn't think of anything else to do with it[if stair is visible]. The stair you made leads down[end if]. But despite disuse, it is blest with privacy and not falling apart[if tables are in lalaland]. You can go IN or OUT back to the study--it doesn't matter which[end if].";
 
 printed name of stable is "A Blest Stable"
 
@@ -10909,7 +10910,7 @@ check going inside in dusty study:
 
 book highest heights
 
-Highest Heights is an innie room in Manor. "Well, you're in the top room of your manor, here. The floor is, of course, divided in eighths, set high, with niches up to several inches. The patented closest closets lead back down the chimney again[if ramp is visible], and the ramp you made slopes down[end if]."
+Highest Heights is an innie room in Means Manse. "Well, you're in the top room of the Means Manse, here. The floor is, of course, divided in eighths, set high, with niches up to several inches. The patented closest closets lead back down the chimney again[if ramp is visible], and the ramp you made slopes down[end if]."
 
 after going when heights are visited and strip of profits is unvisited:
 	if location of player was unvisited: [and location of player is not heights]
@@ -11451,7 +11452,7 @@ to decide whether (qq - a truth state) is unrelevant:
 		decide yes;
 	let mrl be mrlp;
 	if qq is true:
-		if mrl is manor or mrl is stores:
+		if mrl is Means Manse or mrl is stores:
 			decide no;
 	decide yes;
 
@@ -11582,7 +11583,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "Leo/Rand" or "Leo and Rand"	false	"Leo and Rand may be able to help you with heavy lifting."	"Leo and Rand"	true	presto
 "haunter"	false	"The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it."	"the haunter"	true	oyster
 "die" or "die thou" or "the/ hideout/hangout"	false	"If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them."	"DIE THOU"	true	oyster
-"progress"	false	"You note the following: manor = stuff[other-areas]."	"progress"	false
+"progress"	false	"You note the following: means manse = stuff[other-areas]."	"progress"	false
 "curst/palace" or "curst palace" or "castle/apcur" or "castle apcur"	false	"You apparently can't scan the curst palace fully with the settler [']til you're all the way there. But maybe you can guess."	"curst palace"	true	towers
 "xray" or "xraying"	false	"[xray-help]."	"xray"	false	towers
 "hit/ win/ button/" or "ben/ hid"	false	"Ben hid a HIT WIN button somewhere. Where?"	"hit win button"	false	routes
@@ -11666,7 +11667,7 @@ pre-mang	others	"You can look AMONG once you have currency to haggle in the clea
 to say other-areas:
 	repeat through table of region-spoilers:
 		if last-loc of hint-reg entry is visited:
-			if hint-reg entry is not others and hint-reg entry is not roman manor and hint-reg entry is not stores:
+			if hint-reg entry is not others and hint-reg entry is not Means Manse and hint-reg entry is not stores:
 				say "[spoil-expl entry]";
 			else:
 				say "(????)";
@@ -12218,9 +12219,9 @@ chapter store r
 
 Store R is a useless sto in Strip of Profits. understand "store/ 18/eighteen" as Store R when player is in Strip of Profits.
 
-description of Store R is "It could lead back to your resort, to your Roman Manor. But you would not be welcome or safe there."
+description of Store R is "It could lead back to your resort, to your Means Manse. But you would not be welcome or safe there."
 
-understand "resort" as a mistake ("You can't go back to the Roman Manor. Well, you can, but it's a bad idea.") when player is in strip of profits.
+understand "resort" as a mistake ("You can't go back to the Means Manse. Well, you can, but it's a bad idea.") when player is in strip of profits.
 
 chapter store s
 
@@ -22302,12 +22303,12 @@ carry out playing:
 			now otters is solved;
 			now last-solved-region is otters;
 			first-status;
-			say "Elmo and Gretta are waiting for you back at your manor with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you ROVE OVER and help him. If you need a break, no problem, but maybe you might want a little more adventure?";
+			say "Elmo and Gretta are waiting for you back at the Means Manse with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you ROVE OVER and help him. If you need a break, no problem, but maybe you might want a little more adventure?";
 			unless the player direct-consents:
 				say "Yeah. Maybe later. If you want to help him, you can ROVE OVER from your dusty study next time someone knocks. Or you can just UNDO at the next command.";
 				end the story finally saying "A MONSTER ROTS. AMEN.";
 				follow the shutdown rules instead;
-			say "Yeah. You've got nothing pressing back at the manor. But it's probably a good idea to keep the settler and notepad. The whistle and medals will go to a museum, or something.[paragraph break]The animals escort you to the strip of profits.";
+			say "Yeah. You've got nothing pressing back at the Means Manse. But it's probably a good idea to keep the settler and notepad. The whistle and medals will go to a museum, or something.[paragraph break]The animals escort you to the strip of profits.";
 			clean-for-roving;
 			continue the action;
 		else:
@@ -24210,7 +24211,7 @@ check going north in Gates Stage:
 		say "You try to sneak through--you're backstage at the Admit-Us Stadium! You might be able to make a big speech, but you are too terrified. The passport doesn't help a bit as a bouncer yells 'Perp!' Maybe you can learn from the passport. Or parts of it." instead;
 	else if gate-level is 1:
 		say "[one of]You try to sneak into the Admit-Us Stadium, and you hold up under some questioning--but you don't have enough 'cool' to get past the final guard. [if perp-check is false]He yells 'PERP!' and pushes you back. [end if]And with the stage in sight! Thankfully, you have enough to know you'd better leave before people turn hostile[or]You haven't learned anything new since your last attempt to enter[stopping]. Maybe you can use that passport some more." instead;
-	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Admit-Us Stadium. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragment spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! 'I shut a hiatus!' By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Roman Manor becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. But wait: there's a little more, if you can't get enough. DEMO DOME MODE, if you want, which is a puzzleless look behind the scenes, featuring items that didn't fit in and random musings about building code and so forth. You can access it now or when you restart.";
+	say "You've managed to [two-of-three] about this whole charisma thing, but you wonder, does it really work? Is it really that easy, if you don't overthink it? Well, why not? You've mastered all the parts of speech, and now your knowledge of more practical word-use gets you by various guards in the Admit-Us Stadium. You're blinded by an air-gem mirage at the gig going on--the TV show, Optical/Topical Capitol, Elections Selection edition. A three-way debate: Interims Minister Rimstein, Ex-Brat Baxter of the Swanker Wankers and Fatherly Flaherty of the Ruthless Hustlers![paragraph break]The crowd gasps as they recognize you on the stage. But what do you say? 'Able, I'd bailed' gets silence at first.[wfak]Then, a lone voice. 'Re-speak, speaker!' The simple encouragment spurs you: 'HER FAULT! ARTFUL, EH?' [twiddle of table of political slogans and 2][paragraph break]'Go, O.G.,' people call. You're on a roll! 'I shut a hiatus!' By trial 4 or 6, a fair vote proclaims you favorite. Everyone's all '[mami].' You can only say 'Ah, I try out authority.' Your Means Manse becomes the Furthermore-Reformer Hut.[paragraph break]It won't be easy. You'll likely procrastinate a few big choices with random anagrams, from force of habit. But you've learned how, well, all KINDS of words work a bit better, now.[paragraph break]Congratulations! You achieved the 'extended' ending in A Roiling Original. But wait: there's a little more, if you can't get enough. DEMO DOME MODE, if you want, which is a puzzleless look behind the scenes, featuring items that didn't fit in and random musings about building code and so forth. You can access it now or when you restart.";
 	if did-guru is false:
 		say "[line break]You also get an additional point for not using the arugula!";
 		min-and;
@@ -25309,10 +25310,10 @@ chapter dometables
 table of calparts
 thiscal [x calendar] [tdm1]
 "Part one: Protean[paragraph break]There's no compelling personal story here. I just had fun trying to make the sort of game I'd have liked when I was younger, the sort Infocom might've done better if the Apple didn't have its limitations.[paragraph break]This part maps how ARO was part of Shuffling Around at first, til I realized that'd be too long for IFComp's two hours. You see how the game started with the stores, how there was F, I, U, V, W and Y, with P being the finale, and how store M didn't exist for a while. In fact, Store R got finished at the very last. It relates how OUTSIDE was the original puzzle until the author realized that was too abstruse, thanks to a tester, and it maps how F and I were first, so they go the good stuff--the nouns--before M started developing. Somewhere along the line, too, I decided to go in for an anagram of Psuedonym. Moe Spudny, Spud Money, Don Muspey and Ed Spumony all seemed amusing, but it wasn't until I remembered a character I wrote for a walkthrough of Deathlord, Ned, that I started poking around. Yompus may not be a real last name, but it sounds like one. So I went with it. Finding it was one of those 'click' moments that didn't solve any technical problems, but it felt cool.[paragraph break]Plus, Andrew Schultz doesn't really anagram well, except to CRAWLS, ZEN, THUD."
-"Part two: Wrapt to[paragraph break]I realized that it was probably best to go with nouns-to-nouns. Well, until the last puzzle. This kicked out all but F and I. I didn't know what else to do, or where the finale would be. I eventually decided on R, once I figured a resort would be a good place. It only had the Manor, and you just had to EXIST. I think your enemy was Too-Apt Pa Otto, and you had to make him into a POTATO. But that was a bit mean. Then METROS began to take shape, and I liked the underside and hotel, and then other locations fell into place."
+"Part two: Wrapt to[paragraph break]I realized that it was probably best to go with nouns-to-nouns. Well, until the last puzzle. This kicked out all but F and I. I didn't know what else to do, or where the finale would be. I eventually decided on R, once I figured a resort would be a good place. It only had the Means Manse, and you just had to EXIST. I think your enemy was Too-Apt Pa Otto, and you had to make him into a POTATO. But that was a bit mean. Then METROS began to take shape, and I liked the underside and hotel, and then other locations fell into place."
 "Part three: Trap there? Er, phatter[paragraph break]The big problem I had was that I couldn't disambiguate how to flip items, and I had no encouragement for guesses for anagrams. This was a pretty big fault, and there were others, too. Nevertheless, I found a lot with the help of my testers, and I even had the bright idea of trying to provide an alternate way through Metros. One sub-try got the player stuck. Nevertheless, I was able to identify ways to take care of this throughout the comp, and I had plans for post-release stuff. Every mistake I made served to give me an idea to make things easier for the player. The game needed it. I also settled on the idea for the new hint device. I didn't want to reuse what I had from SA, but I also wanted to make things simpler and more powerful. People had trouble seeing if they could take both devices, so I merged them. And I started on the settler, once people said they wanted something a bit more Master Mind like."
 "Part four: tap furor[paragraph break]Nobody was really furious at the game, but I certainly got to work when I learned about David White's hashing. Immediately it made ARO more accessible, in theory. I had a lot to whip into shape. I tried to fix a few things per day. I was disappointed in the bigger mistakes I made, and after getting SA into a decent beta (or so I thought,) I started on ARO."
-"Part five: pave rift[paragraph break]The only problem was, once I got back to ARO, it didn't make sense. I had an idea that nouns would only feature in the intro. Oyster was just entering a house and leaving. Routes didn't let you underground. Troves--well, I didn't get the concept of what it should be in the first release, though I had a few passive verbs. I had to look through my master document of anagrams, and I found that a lot I dismissed as too simple wound up fitting just right, and testers particularly liked them. I also figured on interjections for Presto as the last area, because interjections are EXCITING. Towers--well, more on that later. I also wasn't sure what to do with OTHERS, which I had after the manor and before the strip. I eventually decided to chuck it for release 1, as it wasn't as good an introduction as I thought. The diorama was created 2 weeks before 2013 Spring Thing, and I think it was relatively successful. But I left so much to do at the last minute with exiling a region I'd worked on that I missed some big things."
+"Part five: pave rift[paragraph break]The only problem was, once I got back to ARO, it didn't make sense. I had an idea that nouns would only feature in the intro. Oyster was just entering a house and leaving. Routes didn't let you underground. Troves--well, I didn't get the concept of what it should be in the first release, though I had a few passive verbs. I had to look through my master document of anagrams, and I found that a lot I dismissed as too simple wound up fitting just right, and testers particularly liked them. I also figured on interjections for Presto as the last area, because interjections are EXCITING. Towers--well, more on that later. I also wasn't sure what to do with OTHERS, which I had after the Means Manse and before the strip. I eventually decided to chuck it for release 1, as it wasn't as good an introduction as I thought. The diorama was created 2 weeks before 2013 Spring Thing, and I think it was relatively successful. But I left so much to do at the last minute with exiling a region I'd worked on that I missed some big things."
 "Part six: star pix[paragraph break]I had hoped to put graphics into the game, and it turned out trickier than I thought. Thankfully Glimmr for Glulx works pretty well, but I would up losing valuable time not using the fonts correctly, due to a dumb mistake. I also failed to stop a buffer overrun in some cases, but that's another story. This was something automation could not catch. I also experimented with some pictures and colored text (Yorpwald/wordplay) but didn't get cover art. I couldn't think of anything simple."
 "Part seven: vaster pen[paragraph break]The big problem, though, was what to do with Towers. Originally they were a mess of anagrams like STANCH and CHANTS you had to guess, and you got clues of what was where, and some choices were good and some were evil, and you hacked through the Thickest Thickets. One guy, Elmer, was good, and Merle was evil, and the Coevals['] Alcoves had an elevator where you could go to the various floors and try puzzles. I liked this when OYSTER was small, but Oyster started getting bigger, and Towers became too abstruse with its actions.[paragraph break]It did have hinting, though, and this hinting eventually got repurposed more powerfully and elementally to the settler, but until then, it was a mess. I figured adjectives would be the trickiest things to look at, but a look through my master document gave a lot. At least they weren't as bad as adverbs. I couldn't do anything with them, right? Adverbs were so--powerless."
 "Part eight: that gripe, gather pit, tiger path[paragraph break]And that's when it hit me--I could just GREP my anagram file for ly\b, or words that end in LY, and of course you could be powerless near your great foe. The bleary barley came first, then a way to regain your powers--conjunctions were another word that could be very powerful. Then I noticed a slew of animals which hadn't been anagrammed, mostly because I didn't see how to in SA without crowding the game. Things started to click. I even had an enemy to defeat, but she had no character or name. The necro-crone wasn't Elvira til after Spring Thing."
@@ -25521,8 +25522,8 @@ carry out hinting:
 		say "You're already in my clue lyceum." instead;
 	[if hintblock is true:
 		all-say "You've blocked hints for this session. So you'll need to RESTART to get them back." instead;]
-	if mrlp is roman manor:
-		try manor-hinting instead;
+	if mrlp is Means Manse:
+		try means-hinting instead;
 	if mrlp is stores:
 		try stores-hinting instead;
 	if mrlp is others:
@@ -25542,7 +25543,7 @@ carry out hinting:
 	all-say "No hints for this region yet. Sorry. I need to work on that, don't I?";
 	the rule succeeds;
 
-manor-hinting is an action out of world.
+means-hinting is an action out of world.
 others-hinting is an action out of world.
 stores-hinting is an action out of world.
 presto-hinting is an action out of world.
@@ -25623,7 +25624,7 @@ definition: a thing (called hintcand) is hintrelevant:
 			decide yes;
 		decide no;
 	if hintcand is closest closets:
-		if mrlp is manor and highest heights is visited:
+		if mrlp is means manse and highest heights is visited:
 			decide yes;
 		decide no;
 	if hintcand is old giant and mrlp is routes: [he is known-about before he comes on stage officially]
@@ -25726,7 +25727,7 @@ carry out objhinting (this is the pick object to hint rule) :
 	if noun is a room:
 		say "You need to hint things in a location, not a location. Also, you can just type HINT for the current puzzle to look at." instead;
 	if noun is the player:
-		all-say "[if cur-score of manor < 3]You have, or had, a special power you may remember from Shuffling Around. If you haven't figured it, hopefully, you soon will, from looking around[else]You're as good looking as ever! I can't tell you how to be a better you than you already are[end if]." instead;
+		all-say "[if cur-score of Means Manse < 3]You have, or had, a special power you may remember from Shuffling Around. If you haven't figured it, hopefully, you soon will, from looking around[else]You're as good looking as ever! I can't tell you how to be a better you than you already are[end if]." instead;
 	if noun is a fruit and player has noun:
 		say "The [noun] is a fruit. You can return it to Curtis." instead;
 	now ever-obj-hinted is true;
@@ -26084,7 +26085,7 @@ Mole Elmo	"Mole Elmo's not a very enthusiastic captor. It's as if he wants you t
 high sign	"[one of]3, 4, 1, 2, 5. What do those numbers mean?[plus][or]The rifle has five letters, so that is a clue.[plus][or]Letter 3, letter 4, letter 1, letter 2, letter 5.[plus][or]3-4-1-2-5 of rifle.[plus][or]Elmo is cluing the rifle can become a FLIER.[minus][cycling]"	[end MANOR hints]
 sad ads	"Err, mostly anagrams that couldn't fit into puzzles. I hope you find them amusing."
 Store B	"[one of]Store B contains some sort of mystery food, but people seem too lazy to figure it out.[plus][or]The two names provide red-clues, but you can also tell from the smells from Store B.[plus][or]SORBET.[minus][cycling]"
-Store H	"[one of]If you haven't solved the game proper, you won't be able to get into Store H.[plus][or]Store H appears radically different from the rest of the store. It's probably where stuff that doesn't fit in goes.[plus][or]ES Roth mentions that you can't face the hoster or call it directly.[plus][or]What's a word for stuff sluffed off to the side?[plus][or]OTHERS. If you want the quick way through, you will need to restart the game.[plus][or]You need to ROVE OVER when you are in the Roman Manor.[minus][cycling]"
+Store H	"[one of]If you haven't solved the game proper, you won't be able to get into Store H.[plus][or]Store H appears radically different from the rest of the store. It's probably where stuff that doesn't fit in goes.[plus][or]ES Roth mentions that you can't face the hoster or call it directly.[plus][or]What's a word for stuff sluffed off to the side?[plus][or]OTHERS. If you want the quick way through, you will need to restart the game.[plus][or]You need to ROVE OVER when you are in the Means Manse.[minus][cycling]"
 Store K	"[one of]Store K is not critical, because it's a bit of American slang.[plus][or]What is the suspicious smelling smoke?[plus][or]The smoke is marijuana, but STONER doesn't quite work on Store N.[plus][or]The residents of Store K want to REST, OK? That hint knocks out the vowels with the settler.[plus][or]Also, they yell don't have a STROKE![plus][or]You can also assume they are plural, so S is last.[plus][or]They are TOKERS.[minus][cycling]"
 Store N	"[one of]Looks like there's a guy in Store N. You need to figure his name.[plus][or]Items fall out of Store N if you keep poking or examining.[plus][or]The toners/Sterno give a lot of clues.[plus][or]The mythology and Tintin clue may tip you off.[plus][or]NESTOR is his name.[minus][cycling]"
 Store P	"[one of]You seem to need a magic word, and the tropes poster plus Store P give you a few hints.[plus][or]In particular, you see two blinking colors, which means the first two letters are P/T O/R.[plus][or]But the second must be a consonant. Also, TROPES means you know where the vowels are.[plus][or]Process of elimination gives PRESTO.[minus][cycling]"
@@ -26832,7 +26833,7 @@ others	"Giving Curtis four or more fruits?"
 
 table of anayux
 reg-needed	yux	do-i-print
---	"MANOR:"	a rule
+--	"MANSE:"	a rule
 --	"making the plates or staple PASTEL, PLEATS or PETALS?"
 --	"PSALTER around the plaster/stapler?"
 troves	"TROVES:"
@@ -27106,7 +27107,7 @@ table of regabr
 this-reg	this-top
 lll	"la"
 others	"lh"
-manor	"lm"
+means manse	"lm"
 presto	"lp"
 stores	"ls"
 otters	"lt"
@@ -27290,7 +27291,7 @@ to say 2dmiss of (cr2 - a region):
 anything-missed is a truth state that varies.
 
 rule for showing what the player missed: [there may be a way to do things without all this if you could read through a table]
-	let cur-reg be Roman Manor;
+	let cur-reg be Means Manse;
 	now anything-missed is false;
 	say "An all-feat leaflet flutters over the fourth wall.";
 	now all regions are not tickedoff;
@@ -27697,7 +27698,7 @@ carry out tsing:
 	now player has the letters settler;
 	now player has the pedanto-notepad;
 	now player has the gird grid;
-	now manor is solved;
+	now Means Manse is solved;
 	say "I gave you the purse, settler, and notepad.";
 	the rule succeeds;
 
@@ -27740,7 +27741,7 @@ understand the command "a5" as something new.
 understand "a5" as a5ing.
 
 carry out a5ing:
-	now roman manor is solved;
+	now Means Manse is solved;
 	now store k is in lalaland;
 	now store n is in lalaland;
 	now presto is solved;
@@ -27847,7 +27848,7 @@ understand "endgame [text]" as endgameing.
 carry out endgameing:
 	let temp be 0;
 	now player has settler;
-	now manor is solved;
+	now Means Manse is solved;
 	if end-jump is true or the player's command matches the regular expression "p":
 		increment temp;
 		now presto is solved;
@@ -27987,9 +27988,9 @@ test 1st with "x shelf/lamp/x pad/pad red/open door/1/5/lamp"
 
 test toe with "x shelf/lamp/x pad/pad red/open door/1/0/lamp/basement/d/satchel/x settler/in"
 
-test roman with "test 1st/satchel/basement/stable/chimney/u/ramp/enter closets/painting/in/stair/d/x settler/in/flier/0/y/staple/stapler/put staple in stapler/staple wall/in/coff"
+test means with "test 1st/satchel/basement/stable/chimney/u/ramp/enter closets/painting/in/stair/d/x settler/in/flier/0/y/staple/stapler/put staple in stapler/staple wall/in/coff"
 
-test manor with "test roman"
+test manse with "test means"
 
 test roman-oops with "pmal/lamp/pmal/lehctas/satchel/lehctas/tnemesab/basement/tnemesab/elbats/stable/elbats/yenmihc/chimney/yenmihc/u/pmar/ramp/pmar/enter closets/gnitniap/painting/gnitniap/in/riats/stair/riats/d/in/reilf/flier/reilf/0/elpats/staple/elpats/relpats/stapler/relpats/put staple in stapler/staple wall/in/ffoc/coff/ffoc"
 
@@ -27997,7 +27998,7 @@ test roman-oops with "pmal/lamp/pmal/lehctas/satchel/lehctas/tnemesab/basement/t
 
 test j with "gonear strip/purloin settler"
 
-test manor-dia with "x shelf/lamp/open door/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/lamp/x ads/listen/basement/d/satchel/x settler/in/flier/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/staple/stapler/put staple in stapler/staple wall/in"
+test means-dia with "x shelf/lamp/open door/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/lamp/x ads/listen/basement/d/satchel/x settler/in/flier/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/staple/stapler/put staple in stapler/staple wall/in"
 
 test randum with "sing//z/damn/hint/n/sleep"
 
@@ -28772,7 +28773,7 @@ carry out orfing:
 
 chapter romscan
 
-[* ROM scans everything you can scan in the manor. It doesn't, however, flip them. ]
+[* ROM scans everything you can scan in the manse. It doesn't, however, flip them. ]
 
 roming is an action out of world.
 
@@ -28790,7 +28791,7 @@ carry out roming:
 	oscan tables;
 	repeat with rb running through ramabits:
 		oscan rb;
-	say "All things in the manor are now scanned both ways.";
+	say "All things in Means Manse are now scanned both ways.";
 
 chapter otwin
 
@@ -29193,7 +29194,7 @@ understand "specs" as specsing.
 
 carry out specsing:
 	let locidx be 0;
-	let reg be manor;
+	let reg be means manse;
 	repeat with QQ running through regions:
 		if QQ is not demo dome:
 			repeat through regana of mrlp:

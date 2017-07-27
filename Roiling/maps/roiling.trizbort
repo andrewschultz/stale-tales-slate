@@ -9,17 +9,17 @@ version 2 January 2014
 version 3 March 2015</history>
 	</info>
 	<map>
-		<room id="1" name="Dusty Study" subtitle="Start Manor" x="-160" y="544" w="96" h="64" region="Manor" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="(start MANOR)" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="1" name="Dusty Study" subtitle="Start Means Manse" x="-160" y="544" w="96" h="64" region="Means Manse" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" isStartRoom="yes" description="(start MANOR)" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="2" name="A Blest Stable" subtitle="" x="-288" y="544" w="96" h="64" region="Manor" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="2" name="A Blest Stable" subtitle="" x="-288" y="544" w="96" h="64" region="Means Manse" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects custom="yes" customRight="-14" customDown="0">Sitar</objects>
 		</room>
-		<room id="3" name="Highest Heights" subtitle="" x="-32" y="544" w="96" h="64" region="Manor" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="3" name="Highest Heights" subtitle="" x="-32" y="544" w="96" h="64" region="Means Manse" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects custom="yes" customRight="-12" customDown="0">Pram</objects>
 		</room>
-		<room id="4" name="Largely All-Grey Gallery" subtitle="" x="-160" y="448" w="96" h="64" region="Manor" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="5" name="Carven Cavern" subtitle="End Manor" x="-160" y="352" w="96" h="64" region="Manor" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="(end MANOR)" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="4" name="Largely All-Grey Gallery" subtitle="" x="-160" y="448" w="96" h="64" region="Means Manse" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<room id="5" name="Carven Cavern" subtitle="End Manor" x="-160" y="352" w="96" h="64" region="Means Manse" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="(end MANOR)" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n" custom="yes" customRight="-34" customDown="0">plaster/plates</objects>
 		</room>
 		<room id="6" name="Strip of Profits" subtitle="Start Stores" x="-288" y="-32" w="96" h="64" region="Stores" handDrawn="yes" allcornersequal="no" ellipse="yes" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
@@ -46,12 +46,10 @@ version 3 March 2015</history>
 		<room id="15" name="Loather Rathole" subtitle="Start Troves" x="-416" y="-224" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="(start TROVES)" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="16" name="Loudest Used Lot" subtitle="Rustin' Ruin St." x="-544" y="-224" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="16" name="Bustle Sublet" subtitle="" x="-544" y="-224" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="was loudest used lot/rustin ruin st" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="wsw" />
 		</room>
-		<room id="17" name="Pallid Li'l Pad" subtitle="Boredom Bedroom" x="-544" y="-320" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
-			<objects>   Lager</objects>
-		</room>
+		<room id="17" name="Boarded Roadbed" subtitle="" x="-544" y="-320" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="18" name="Browse Bowers" subtitle="" x="-288" y="-416" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
 		<room id="19" name="Econ-Cone" subtitle="" x="-416" y="-320" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n" custom="yes" customRight="-32" customDown="0">Astute Statue</objects>
@@ -606,13 +604,15 @@ version 3 March 2015</history>
 			<dock index="0" id="1" port="ne" />
 			<dock index="1" id="80" port="sw" />
 		</line>
-		<room id="184" name="Mesprise Premises" subtitle="" x="-416" y="-416" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="185" name="Mesprise Premises" subtitle="" x="-544" y="-416" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<line id="186" name="" description="" style="dashed" flow="oneWay">
+		<room id="184" name="Boredom Bedroom" subtitle="" x="-416" y="-416" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="n">Lager|LEAD</objects>
+		</room>
+		<room id="185" name="Drain Nadir" subtitle="" x="-544" y="-416" w="96" h="64" region="Troves" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
+		<line id="186" name="" description="" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="185" port="e" />
 			<dock index="1" id="184" port="w" />
 		</line>
-		<line id="187" name="" description="" style="dashed" flow="oneWay">
+		<line id="187" name="" description="" style="dashed" flow="oneWay" midText="To">
 			<dock index="0" id="184" port="e" />
 			<dock index="1" id="18" port="w" />
 		</line>
@@ -633,7 +633,7 @@ version 3 March 2015</history>
 		</colors>
 		<regions>
 			<Demo____Dome Name="Demo Dome" TextColor="Black">#E0E0E0</Demo____Dome>
-			<Manor Name="Manor" TextColor="Black">Silver</Manor>
+			<Means____Manse Name="Means Manse" TextColor="Black">Silver</Means____Manse>
 			<NoRegion Name="NoRegion" TextColor="Black">White</NoRegion>
 			<Others Name="Others" TextColor="Black">Lime</Others>
 			<Otters Name="Otters" TextColor="White">#8000FF</Otters>
