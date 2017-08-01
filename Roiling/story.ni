@@ -479,6 +479,12 @@ use MAX_STATIC_DATA of 750000.
 
 Use MAX_LABELS of 16000.
 
+section compiler non-syntax section - not for release
+
+[there shouldn't be much difference but it's worth checking just because]
+
+use MAX_VERBS of 650.
+
 section debug on - not for release
 
 [needs to be near the top--well, could place it before all other when play begins rules]
@@ -5410,7 +5416,7 @@ check scaning location of the player (this is the location scan rule):
 	if location of player is Bustle Sublet:
 		if verbose is visible:
 			try scaning verbose instead;
-		try scanning stop post instead;
+		try scaning stop post instead;
 	if location of player is Boarded Roadbed:
 		if what-a-bee is reflexive and bee's head is reflexive:
 			say "That bee is all up in your face. So you sort of scan it by default.";
@@ -13713,7 +13719,7 @@ check fliptoing stop post:
 
 a-text of stop post is "RRYR". b-text of stop post is "?R??". parse-text of stop post is "s[sp]x[sp]o[sp]x". stop post is parse-spoilable.
 
-every turn when player is in Boarded Roadbed Sublet:
+every turn when player is in Boarded Roadbed:
 	if what-a-bee is not reflexive or bee's head is not reflexive:
 		if current action is not listening:
 			say "How to get down to the cellar? The cellar.";
@@ -15413,7 +15419,7 @@ understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, b
 
 chapter hawt thaw
 
-the clump of hawt thaw is LLPish reflexive vanishing scenery. "It doesn't make much immediate sense, and it's probably not critically important to your quest. It's not in the way. But maybe thinking about it right will widen your horizons a bit."
+the clump of hawt thaw is LLPish vanishing scenery. "It doesn't make much immediate sense, and it's probably not critically important to your quest. It's not in the way. But maybe thinking about it right will widen your horizons a bit."
 
 a-text of hawt thaw is "RRYR". b-text of hawt thaw is "R???". parse-text of hawt thaw is "?[sp]?[sp]?[sp]?". hawt thaw is parse-spoilable.
 
@@ -28779,7 +28785,7 @@ roming is an action out of world.
 
 understand the command "rom" as something new.
 
-understand "rom" as roming when mrl is Means Manse.
+understand "rom" as roming when mrlp is Means Manse.
 
 carry out roming:
 	oscan niche;

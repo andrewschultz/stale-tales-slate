@@ -263,6 +263,10 @@ use MAX_SYMBOLS of 33000.
 
 use MAX_PROP_TABLE_SIZE of 240000.
 
+section compiler adjust constant section - not for release
+
+use MAX_VERBS of 390.
+
 section about the player
 
 does the player mean examining the player: it is unlikely.

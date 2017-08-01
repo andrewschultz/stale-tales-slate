@@ -17,9 +17,9 @@ table of death messages	false	0	0	bzzt rule	lll	"Death notices"	--	""
 
 table of megachatter (continued) [this is organized by region then by alphabet, well, roughly]
 mytab	eturn	curidx	maxidx	go-ahead	whichreg	descr	prefix	suffix	lasties	maxbeforepause	done-once	init-order	table-size	reps
-table of random books	false	0	30	read-books rule	manor	"All the books in your bookshelf"	"[i]"	"[r]"	"your own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1 [p]
-table of ad slogans	true	0	30	blurby rule	manor	"All the ads in the Dope Op-Ed"	--	""	"HANKER! HARKEN! And with that general ad, it's back to the start."
-table of mob chants	false	0	30	mob-chanting rule	manor	"Mob chants (LISTEN post-Gunter in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"They finish fishin[']."
+table of random books	false	0	30	read-books rule	Means Manse	"All the books in your bookshelf"	"[i]"	"[r]"	"your own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1 [p]
+table of ad slogans	true	0	30	blurby rule	Means Manse	"All the ads in the Dope Op-Ed"	--	""	"HANKER! HARKEN! And with that general ad, it's back to the start."
+table of mob chants	false	0	30	mob-chanting rule	Means Manse	"Mob chants (LISTEN post-Gunter in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"They finish fishin[']."
 table of idiotic lecture points	true	0	15	lecture-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	" [ted-die]"	"The lecturer flips back to the start of his keystone keynotes, resuming his ol['] mongo monolog.[pre-brk]"	20
 table of overdone movies	true	0	15	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	""	"The lecturer reminds the crowd [i]Dosing Doings[r] remains the universal classic.[pre-brk]"	20
 table of sicko movies	false	0	50	movie-over-ad rule	stores	"Store C videos (parental advisory)"	"You peruse the movies: "	""	--	--	false	0	0	5
@@ -64,18 +64,18 @@ table of animal friends	false	0	60	bzzt rule	otters	"Your animal friends"	--	""
 table of political slogans	false	0	20	sloganing rule	others	"Political slogans"	--	""
 table of selly yells	false	0	30	clearing-listen rule	others	"Selly Yells[indic of others]"	""	""	"A big errant inert brag pauses the bartering for a minute."
 table of help companies	false	0	30	bzzt rule	lll	"Hint guy t-shirt writing[if have-objhinted is false] (occurs first time you request hints)[end if]"	--	""
-table of elmo emo	false	0	30	bzzt rule	manor	"Elmo's romantic complaints[if girls-quip is not mowered] (off-topic Elmo chat)[end if]"	""	""
-table of sports chatter	false	0	30	bzzt rule	manor	"Elmo's sports banter[if sports-quip is not mowered] (off-topic Elmo chat)[end if]"	""	""
-table of biopics	false	0	30	bzzt rule	manor	"Biopics, good and bad[if media-quip-2 is not mowered] (off-topic Elmo chat)[end if]"	""	""
-table of bad rappers	false	0	60	bzzt rule	manor	"Bad rap music[elv-art]"	--	""
-table of lame computer games	false	0	30	bzzt rule	manor	"Computer games[elv-art]"	--	""
-table of comedians	false	0	30	bzzt rule	manor	"Comedians of Yorpwald[elv-art]"	""	""
-table of laughhouses	false	0	30	bzzt rule	manor	"Comedy joints[unless pun-quip is mowered] (with Gunter, lighten the mood with a joke)[end if]"	""	""
-table of lame talk shows	false	0	30	bzzt rule	manor	"Bad talk shows[unless media-quip-2 is mowered] (complain about the media some more to Elmo)[end if]"	--	""
-table of lame movies	false	0	30	bzzt rule	manor	"Bad movies[elv-art]"	""	""
-table of lame tv shows	false	0	30	bzzt rule	manor	"Bad TV shows[elv-art]"	""	""
-table of oldies singers	false	0	30	bzzt rule	manor	"Initial oldies singers[elv-art]"	""	""
-table of lousy hit songs	false	0	30	bzzt rule	manor	"Bad songs[elv-art]"	--	""
+table of elmo emo	false	0	30	bzzt rule	Means Manse	"Elmo's romantic complaints[if girls-quip is not mowered] (off-topic Elmo chat)[end if]"	""	""
+table of sports chatter	false	0	30	bzzt rule	Means Manse	"Elmo's sports banter[if sports-quip is not mowered] (off-topic Elmo chat)[end if]"	""	""
+table of biopics	false	0	30	bzzt rule	Means Manse	"Biopics, good and bad[if media-quip-2 is not mowered] (off-topic Elmo chat)[end if]"	""	""
+table of bad rappers	false	0	60	bzzt rule	Means Manse	"Bad rap music[elv-art]"	--	""
+table of lame computer games	false	0	30	bzzt rule	Means Manse	"Computer games[elv-art]"	--	""
+table of comedians	false	0	30	bzzt rule	Means Manse	"Comedians of Yorpwald[elv-art]"	""	""
+table of laughhouses	false	0	30	bzzt rule	Means Manse	"Comedy joints[unless pun-quip is mowered] (with Gunter, lighten the mood with a joke)[end if]"	""	""
+table of lame talk shows	false	0	30	bzzt rule	Means Manse	"Bad talk shows[unless media-quip-2 is mowered] (complain about the media some more to Elmo)[end if]"	--	""
+table of lame movies	false	0	30	bzzt rule	Means Manse	"Bad movies[elv-art]"	""	""
+table of lame tv shows	false	0	30	bzzt rule	Means Manse	"Bad TV shows[elv-art]"	""	""
+table of oldies singers	false	0	30	bzzt rule	Means Manse	"Initial oldies singers[elv-art]"	""	""
+table of lousy hit songs	false	0	30	bzzt rule	Means Manse	"Bad songs[elv-art]"	--	""
 table of self-help bestsellers	false	0	30	bzzt rule	troves	"Self-help bestsellers[eisiping]"	--	""
 table of songs you could write	false	0	30	bzzt rule	troves	"Songs you write on solving Troves"	--	""
 table of sleep rejects	false	0	30	am-sleeping rule	lll	"Sleeping rejects"	--	"[pre-lb]"

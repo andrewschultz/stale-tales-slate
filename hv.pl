@@ -155,7 +155,7 @@ else { print "Instance found in file, not printing externally. Use -p.\n"; }
 close(B);
 if ($worthOpening && $openPost) { `c:/writing/dict/hv.txt`; }
 elsif ($forcePost && $openPost) { print "Nothing new but forcing opening anyway.\n"; }
-elsif ($openPost) { print "Use -ff to open the auxiliary file.\n"; }
+elsif ($openPost) { print "Use -ff to open the auxiliary file. Or just -o.\n"; }
 
 ##########################################################
 # subroutines

@@ -240,7 +240,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "storeu"	591972280	--	--	degen-true rule	"[not-the-reg]."
 "route"	495698314	--	--	degen-true rule	"[not-the-reg]."
 
-table of troves nudges
+table of troves nudges [?? used lot/pallid li'l pad / rustin ruin st in ruts]
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "spoiloplis"	701798374	--	--	degen-true rule	"[no-spoil]."
 "spoil"	350899187	--	--	degen-true rule	"[no-spoil]."
@@ -253,35 +253,29 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "peg"	241871770	--	Pa Egg	--	"You pause, then note the author's middle initial, which seems annoyingly important."
 "truffle"	528189368	--	truffle	--	"You can't change the truffle. It can help you change things, though. Or how you see things."
 "cold"	168201090	--	cold	--	"Negative thinking! You don't need to focus on the cold but how to get rid of it. To generate heat."
-"loudest"	581491405	Used Lot	--	--	"[locname]."
-"dues"	350214971	Used Lot	--	--	"[locname-part]."
-"lot"	231276434	Used Lot	--	--	"[locname-part]."
-"messhole"	677684018	Used Lot	--	--	"A messhole is a messhole. You need to concentrate on thinking your way out."
-"rustin"	503713948	Used Lot	--	--	"[ruts-pull]."
-"ruin"	304329964	Used Lot	--	--	"[ruts-pull]."
-"ruts"	389813594	Used Lot	--	--	"[ruts-pull]."
-"boorboro"	504895724	Used Lot	--	--	"[boor-grub]."
-"grubburg"	482896434	Used Lot	--	--	"[boor-grub]."
-"boor"	252447862	Used Lot	--	--	"[boor-grub]."
-"grub"	241448217	Used Lot	--	--	"[boor-grub]."
+"bustle"	504528644	Bustle Sublet	--	--	"[locname]."
+"messhole"	677684018	Bustle Sublet	--	--	"A messhole is a messhole. You need to concentrate on thinking your way out."
+"boorboro"	504895724	Bustle Sublet	--	--	"[boor-grub]."
+"grubburg"	482896434	Bustle Sublet	--	--	"[boor-grub]."
+"boor"	252447862	Bustle Sublet	--	--	"[boor-grub]."
+"grub"	241448217	Bustle Sublet	--	--	"[boor-grub]."
 "observe"	637146289	--	--	lot-observed rule	"You're already observing by reflex now. No need to tweak things."
-"asidewalk"	509159436	Used Lot	--	--	"[sidewalk-oops]."
-"askew"	387135844	Used Lot	--	--	"[sidewalk-oops]."
-"sidewalk"	506971618	Used Lot	--	--	"[sidewalk-oops]."
-"laid"	122023592	Used Lot	--	--	"[sidewalk-oops]."
+"asidewalk"	509159436	Bustle Sublet	--	--	"[sidewalk-oops]."
+"askew"	387135844	Bustle Sublet	--	--	"[sidewalk-oops]."
+"sidewalk"	506971618	Bustle Sublet	--	--	"[sidewalk-oops]."
+"laid"	122023592	Bustle Sublet	--	--	"[sidewalk-oops]."
 "babbling"	257758428	--	babblings	--	"[bab-v]."
 "babblings"	354032394	--	babblings	--	"[bab-v]."
 "stop"	355202520	--	stop post	--	"[if stop post is reflexive]You're not seeing[else]You already saw[end if] the right way to see the stop post, here."
+"roadbed"	350147390	Boarded Roadbed	--	--	"[locname]."
 "live"	333777614	--	what-a-bee	--	"The bee's description isn't important. It's how you see the bee that matters."
 "bee"	274031123	--	what-a-bee	--	"But it's not just any bee. It's a[if bee's head is reflexive and what-a-bee is reflexive]n[end if] [what-a-bee][if bee's head is reflexed and what-a-bee is reflexed]! Though, really, you've already given it the business.[else]![end if]"
-"lilpad"	257303390	pallid li'l pad	--	--	"[locname]."
-"lil"	152620524	pallid li'l pad	--	--	"[locname-part]."
-"pad"	104682866	pallid li'l pad	--	--	"[locname-part]."
-"picture"	566810127	Pallid Li'l Pad	--	--	"It's not just any old picture. It's of a sad pier."
+"picture"	566810127	Drain Nadir	--	--	"It's not just any old picture. It's of a sad pier."
 "spider"	456891772	--	diapers	--	"The diapers, the sad pier--the spider only fits in as *a* spider."
+"bedroom"	465358213	Boredom Bedroom	--	--	"[locname]."
 "glare"	301731271	--	--	glaring-futile rule	"You stare into space some more but get distracted."
-"bower"	413836167	--	myrm	--	"[locname]."
-"bowers"	510110133	--	myrm	--	"[locname]."
+"bower"	413836167	--	browse bowers	--	"[locname]."
+"bowers"	510110133	--	browse bowers	--	"[locname]."
 "rotunda"	460016620	browse bowers	--	--	"[rotun]."
 "dour"	285811276	browse bowers	--	--	"[rotun]."
 "tan"	174205344	browse bowers	--	--	"[rotun]."
@@ -309,7 +303,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "song"	272133753	--	song	--	"It's the song name--[i]I'd Cede[r]."
 "eddie"	342663242	--	song	--	"It's the song name--[i]I'd Cede[r]."
 "playbill"	430866297	--	playbill	--	"You fold and look at the playbill many different ways before figuring it's probably the writing on it that matters."
-"bedroom"	465358213	--	--	pad-now-bedroom rule	"[locname]."
 "office"	319186909	fiefco	--	--	"[locname]."
 "fief"	225828747	fiefco	--	--	"[locname-part]."
 "poverty"	701582538	--	--	degen-true rule	"There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details."
@@ -1412,7 +1405,7 @@ to say bab-v:
 	say "Babbling's babbling, but what stinks is, it's just so VERBOSE. Well, it doesn't stink that VERBOSE has fewer anagrams than babbling(s), settler or no, so that's something";
 
 this is the glaring-futile rule:
-	if player is in pallid and lager is in lalaland:
+	if player is in Boredom Bedroom and lager is in lalaland:
 		the rule succeeds;
 	the rule fails;
 
@@ -1435,11 +1428,6 @@ this is the divorces-gone rule:
 		the rule succeeds;
 	the rule fails;
 
-this is the pad-now-bedroom rule:
-	if player is in pallid li'l pad and diapers are reflexed:
-		the rule succeeds;
-	the rule fails;
-
 to say ruts-pull:
 	say "The ruts will pull you down if you look too far into them"
 	
@@ -1447,7 +1435,7 @@ to say sidewalk-oops:
 	say "You can't make the sidewalk crumble any more, and you probably don't want to"
 
 this is the lot-observed rule:
-	if player is in used lot and babblings are in lalaland:
+	if player is in Bustle Sublet and babblings are in lalaland:
 		the rule succeeds;
 	the rule fails;
 
