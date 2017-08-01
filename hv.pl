@@ -75,6 +75,7 @@ my $doLoc = 1;
 my $openPost = 0;
 my $anyFound = 0;
 my $worthOpening = 0;
+my $forcePost = 0;
 my $lineNum = 0;
 my $hash = 0;
 
@@ -104,6 +105,7 @@ for my $idx (0..$#ARGV)
   if ($this =~ /-p/) { $printIfThere = 1; next; }
   if ($this =~ /[0-9]/) { wordit($this); next; }
 #  if ($this =~ /-o/) { $myRegion = $this; $myRegion =~ s/^-o//g; if ($myRegion eq "") { die("Need to munge the region with -o."); } next; } # deprecated
+  if ($this =~ /-ff/) { $openPost = 1; $forcePost = 1; next; }
   if ($this =~ /-f/) { $openPost = 1; next; }
   if ($this =~ /-s/) { $doShuf = 1; $doRoil = 0; next; }
   if ($this =~ /-r/) { $doShuf = 0; $doRoil = 1; next; }
@@ -152,6 +154,12 @@ else { print "Instance found in file, not printing externally. Use -p.\n"; }
 
 close(B);
 if ($worthOpening && $openPost) { `c:/writing/dict/hv.txt`; }
+elsif ($forcePost && $openPost) { print "Nothing new but forcing opening anyway.\n"; }
+elsif ($openPost) { print "Use -ff to open the auxiliary file.\n"; }
+
+##########################################################
+# subroutines
+#
 
 sub wordit
 {
@@ -293,7 +301,7 @@ print <<EOT;
 # = reverse-lookup a hash number
 -oREGION = force region name (deprecated)
 -c = run cleanup test on hv.txt
--f = file open after
+-f = file open after (-ff = force even if nothing open)
 -s = Shuffling only
 -r = Roiling only
 comma separated list gives several words

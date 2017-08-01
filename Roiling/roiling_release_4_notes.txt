@@ -41,12 +41,13 @@ Store W:
 --the oddly rewired robot has been replaced by bluster butlers, but the robot's flip is now a Last Lousy Point
 
 Store V:
---the Bedroom in Store V now has a new name
+--there are now two more rooms in the sequence
 
 Store T:
 --the macks' idiocy in Store T is now refactored to be drawn from seven pods (7/8 letters with or without repeating letters, 9, 10, and 12--which has one item,) much like the warriors in Store W. You still only need to figure only three, but I think this is less overwhelming
 
 Meta-stuff:
+--introductory region is renamed
 --metrics HTML file updated with new solution
 --tweaks to the Trizbort map
 
