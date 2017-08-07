@@ -20,7 +20,7 @@
 		<room id="5" name="Trips Strip" subtitle="" x="-32" y="-32" w="96" h="64" region="Stores" handDrawn="yes" allcornersequal="no" ellipse="yes" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n" custom="yes" customRight="-32" customDown="0">Store F, I, M, R</objects>
 		</room>
-		<room id="6" name="Softer/Rest of Forest" subtitle="Start Forest" x="-160" y="64" w="96" h="64" region="Forest" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="teas, stew, thorn or shout" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="6" name="Softer Forest" subtitle="Start Forest" x="-160" y="-32" w="96" h="64" region="Forest" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="teas, stew, thorn or shout" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="w" />
 		</room>
 		<room id="7" name="Self-ID Fields" subtitle="" x="-288" y="160" w="96" h="64" region="Forest" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
@@ -36,7 +36,7 @@
 			<objects at="w" custom="yes" customRight="0" customDown="-8">Liches|Banshee</objects>
 		</room>
 		<room id="11" name="Ghouls' Slough" subtitle="" x="-288" y="-32" w="96" h="64" region="Forest" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="0" cornerTopRight="0" cornerBottomLeft="0" cornerBottomRight="0" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="" />
-		<room id="12" name="Frost Forts" subtitle="End Forest" x="-160" y="-32" w="96" h="64" region="Forest" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+		<room id="12" name="Frost Forts" subtitle="End Forest" x="-416" y="-32" w="96" h="64" region="Forest" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="1" cornerTopRight="1" cornerBottomLeft="1" cornerBottomRight="1" borderstyle="Dash" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
 			<objects at="n" custom="yes" customRight="-16" customDown="0">Vowels</objects>
 		</room>
 		<room id="13" name="Trap/Rapt/ Tarp Part" subtitle="Start Sortie" x="96" y="-128" w="96" h="64" region="Sortie" handDrawn="yes" allcornersequal="no" ellipse="no" roundedCorners="yes" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
@@ -108,8 +108,8 @@
 			<dock index="1" id="11" port="s" />
 		</line>
 		<line id="38" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="(maps)">
-			<dock index="0" id="11" port="e" />
-			<dock index="1" id="12" port="w" />
+			<dock index="0" id="11" port="w" />
+			<dock index="1" id="12" port="e" />
 		</line>
 		<line id="39" name="" description="" color="#000000" style="dashed">
 			<dock index="0" id="20" port="e" />
@@ -192,12 +192,8 @@
 			<dock index="1" id="29" port="n" />
 		</line>
 		<line id="59" name="" description="" color="#000000" style="dashed" flow="oneWay" midText="in (F)">
-			<dock index="0" id="5" port="sw" />
-			<dock index="1" id="6" port="ne" />
-		</line>
-		<line id="60" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="two random NESW">
-			<dock index="0" id="6" port="ssw" />
-			<dock index="1" id="7" port="nne" />
+			<dock index="0" id="5" port="w" />
+			<dock index="1" id="6" port="e" />
 		</line>
 		<line id="62" name="" description="" color="#000000" style="dashed" flow="oneWay" startText="In">
 			<dock index="0" id="2" port="w" />
@@ -233,6 +229,17 @@
 		<line id="69" name="" description="" style="dashed" flow="oneWay">
 			<dock index="0" id="30" port="e" />
 			<dock index="1" id="31" port="w" />
+		</line>
+		<room id="36" name="Rest of Forest" subtitle="" x="-160" y="64" w="96" h="64" region="Forest" handDrawn="yes" allcornersequal="yes" ellipse="no" roundedCorners="no" octagonal="no" cornerTopLeft="15" cornerTopRight="15" cornerBottomLeft="15" cornerBottomRight="15" borderstyle="Solid" description="" roomFill="" secondFill="" secondFillLocation="Bottom" roomBorder="" roomLargeText="" roomSmallText="">
+			<objects at="w" />
+		</room>
+		<line id="61" name="" description="" style="dashed" flow="oneWay">
+			<dock index="0" id="6" port="s" />
+			<dock index="1" id="36" port="n" />
+		</line>
+		<line id="70" name="" description="" style="dashed" flow="oneWay">
+			<dock index="0" id="36" port="sw" />
+			<dock index="1" id="7" port="ne" />
 		</line>
 	</map>
 	<settings>
