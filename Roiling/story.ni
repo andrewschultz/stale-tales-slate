@@ -27569,6 +27569,8 @@ index map with carven cavern mapped north of Largely All-Grey Gallery.
 
 [presto]
 index map with dirge ridge mapped west of stable.
+index map with maze entry mapped north of wickeder wire deck.
+index map with phat path mapped north of grey gyre.
 index map with phat path mapped north of austerer.
 
 [others]
@@ -27581,14 +27583,19 @@ index map with Topside Deposit mapped east of highest heights.
 index map with rawest waters mapped east of actionless coastlines.
 index map with mislit limits mapped north of rawest waters.
 
+[others]
+index map with scape space mapped north of clangier clearing.
+index map with clangier clearing mapped east of swell wells.
+
 [demo dome]
+index map with sparse spares mapped south of peek keep.
 index map with ned's dens mapped north of shaven havens.
 
 [otters]
 index map with perverse preserve mapped east of intel inlet.
 
 [routes]
-index map with cripple clipper mapped west of gates stage.
+index map with cripple clipper mapped north of filed field.
 index map with ripe pier mapped west of cripple clipper.
 index map with underpass mapped west of ripe pier.
 index map with adobe abode mapped north of underpass.
@@ -27620,6 +27627,9 @@ index map with end den mapped north of lapsin' plains.
 index map with uaah mapped east of end den.
 index map with handsome sand home mapped east of lapsin' plains.
 index map with lean lane mapped east of handsome sand home.
+
+[oh why not]
+index map with lalaland mapped east of lost lots.
 
 volume beta testing - not for release
 

@@ -175,10 +175,6 @@ the story headline is "Putzing around is unmagical. Shuffling around, though..."
 
 the story genre is "Humor/wordplay"
 
-[Index map with an EPS file.
-
-index map with Sorted Trodes mapped east of Self-ID Fields.]
-
 [release along with a solution.]
 
 Procedural rule: ignore the print final score rule.
@@ -6579,7 +6575,7 @@ chapter Cruel Ones' Enclosure
 
 There is a room called Cruel Ones' Enclosure. It is in Forest.
 
-Enclosure is north of Self-ID Fields. "A creepy acre, yep[if liches are in Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Enclosure]. Along the north wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Enclosure]. A red asp guards the way north[else if spread is in Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Enclosure]. Nothing seems to block the way north now[end if][if banshee is visible]. A banshee also wails about his former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]."
+Enclosure is north of Self-ID Fields. "A creepy acre, yep[if liches are in Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Enclosure]. A red asp guards the way north[else if spread is in Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Enclosure]. Nothing seems to block the way north now[end if][if banshee is visible]. A banshee also wails about his former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields."
 
 to say d-s:
 	say "[if drapes are visible]drapes make[else if red asp is visible]red asp makes[else]spread makes[end if]";
@@ -6643,7 +6639,7 @@ to check-score (a - indexed text):
 
 chapter Ghouls' Slough
 
-Ghouls' Slough is north of Enclosure. "This is as ethereal as its inhabitants, whom you cannot see or hear. You're not sure where the marsh starts and the lake ends[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or][stopping].". Slough is in Forest.
+Ghouls' Slough is inside of Enclosure. "This is as ethereal as its inhabitants, whom you cannot see or hear. You're not sure where the marsh starts and the lake ends[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or][stopping].". Slough is in Forest.
 
 the dog is amusing scenery in slough. dog is an undesc. instead of doing something with the dog when dog is visible:
 	say "Where was it? Where is it? Eegh. You don't REALLY want to think about it."
@@ -12037,7 +12033,7 @@ The chisel is a thing. it is not fixed in place.
 
 description of the chisel is "It seems like it can PEEL all sorts of things you may not want to handle."
 
-check going north in Enclosure:
+check going inside in Enclosure:
 	if liches are in Enclosure:
 		say "The liches won't let you past." instead;
 	if drapes are in Enclosure:
@@ -13648,12 +13644,19 @@ index map with thickets mapped east of notices section.
 index map with dry yard mapped east of thickets.
 index map with subsite mapped south of dry yard.
 
+[roster]
+index map with Astral Altars mapped south of Trips Strip.
+index map with Isle mapped south of Astral Altars.
+index map with Rived Drive mapped east of Isle.
+index map with Potshot Hotspot mapped east of Rived Drive.
+index map with Means Manse mapped east of hotspot.
+
 [forest]
-index map with forts mapped west of strip.
-index map with forts mapped east of slough.
+index map with sf mapped west of Trips Strip.
+index map with rf mapped south of sf.
+index map with slough mapped west of sf.
+index map with Frost Forts mapped west of slough.
 index map with slough mapped north of enclosure.
-index map with sf mapped south of strip.
-index map with rf mapped west of strip.
 
 [sortie]
 index map with centrifuge mapped north of notices section.
@@ -13664,12 +13667,9 @@ index map with moor mapped east of roomroom.
 index map with terminal mapped north of slough.
 index map with abyss mapped west of elm train terminal.
 
-[roster]
-index map with Astral Altars mapped east of sf.
-index map with Isle mapped south of sf.
-index map with Rived Drive mapped east of Isle.
-index map with hotspot mapped east of Rived Drive.
-index map with Means Manse mapped east of hotspot.
+[non-game rooms]
+index map with lalaland mapped east of The Nick.
+index map with bullpen mapped east of lalaland.
 
 volume beta testing - not for release
 

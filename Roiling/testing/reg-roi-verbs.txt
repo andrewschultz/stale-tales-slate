@@ -320,7 +320,7 @@ It's impossible to look away...advertising certainly has gotten more prominent s
 The ads aren't sad because they're drab but rather because so many people fall for them. And they're not even magically possessed. This is the price of prosperity, and yet... One ad
 
 >x ad
-Another ad 
+Another ad
 
 >purloin dope op-ed
 
@@ -688,7 +688,7 @@ Econ-Cone
 You're already here.
 
 >x trevis
-The statue is, of course, of 
+The statue is, of course, of
 Rivets lie at the bottom of the statue in some sort of pattern. It is not a statue of limitations, for sure.
 >x trevis vister
 Trevis Vister is unchanged, himself, just waiting for you to want to be like him.
@@ -1181,7 +1181,7 @@ Surly foe: yourself? Lose fury!
 You're already here.
 
 >shape me
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
 >bust me
 Surly foe: yourself? Lose fury!
@@ -1379,9 +1379,9 @@ You might expose yourself to harmful rays and stuff, looking that close.
 [NOTE: you already xrayed this, so you're just remembering what it was...]
 
 >wordy
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 >rowdy
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
 >play saver
 Nothing unusual like that around here.
