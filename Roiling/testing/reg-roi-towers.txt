@@ -843,7 +843,7 @@ Until you see the ego-drains themselves as organised, you probably won't see how
 by one point
 
 >geees
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
 >broken
 by one point
@@ -971,7 +971,7 @@ The prison ropins are built for...wait for it...no rips. You'll have to focus on
 by one point
 
 >fissuer
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
 >glo
 You opened the gaol, and there's not much else to do with it

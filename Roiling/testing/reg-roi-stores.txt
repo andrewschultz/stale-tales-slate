@@ -137,7 +137,7 @@ The patcher doesn't need to be changed. It does the changing if you point it.
 You're not near enough to the barley to affect it. You need to ENTER through the otters
 
 >belray
-You're not near enough to the barley to affect it. You need to ENTER through the otters. 
+You're not near enough to the barley to affect it. You need to ENTER through the otters.
 
 >barley
 You're not near enough to the barley to affect it. You need to ENTER through the otters. Still, that seems right, if you get there.

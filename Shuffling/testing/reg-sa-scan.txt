@@ -47,15 +47,15 @@ Scan something
 >rc attics
 You get to scanning, twiddling from certify to rectify and back.
 !Before scanning for the first time, you fumble with the gadget and note it is set to CERTIFY.
-The gadget beeps once. A series of lights comes across: RGRRRR (R = red, G = green). 
+The gadget beeps once. A series of lights comes across: RGRRRR (R = red, G = green).
 You can toggle spaces between the letters with SPACE(S), or you can set them directly with SPACE(S) ON/NO SPACE(S), or SON/NOS for short.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBRG.  (R = red, G = green, B = blue).
 
 >static
 >rc static
 You get to scanning, twiddling from certify to rectify and back.
-The gadget beeps once. A series of lights comes across: RGRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGBBB. 
+The gadget beeps once. A series of lights comes across: RGRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGBBB.
 
 >in
 Trips Strip
@@ -67,26 +67,26 @@ You wave the gadget, but nothing happens. Maybe specify something to scan.
 
 >cr store f
 You get to scanning, twiddling from certify to rectify and back.
-The gadget beeps once. A series of lights comes across: RRRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG.
 
 >rc
 You wave the gadget, but nothing happens. Maybe specify something to scan.
 
 >cr store i
 You get to scanning, twiddling from certify to rectify and back.
-The gadget beeps once. A series of lights comes across: GRRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBRB. 
+The gadget beeps once. A series of lights comes across: GRRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBRB.
 
 >rc m
 You get to scanning, twiddling from certify to rectify and back.
-The gadget beeps once. A series of lights comes across: RRRGRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBG. 
+The gadget beeps once. A series of lights comes across: RRRGRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBG.
 
 >rc r
 You get to scanning, twiddling from certify to rectify and back.
-The gadget beeps once. A series of lights comes across: RRRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBGBB. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBGBB.
 
 * _forest
 
@@ -97,8 +97,8 @@ Your score has just gone up by one point.
 >enter forest
 
 >rc thorn
-The gadget beeps once. A series of lights comes across: RRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBG. 
+The gadget beeps once. A series of lights comes across: RRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBG.
 
 >n
 Your score has just gone up by one point.
@@ -108,8 +108,8 @@ Rest of Forest
 1 out of 16 total
 
 >rc teas
-The gadget beeps once. A series of lights comes across: RRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBB. 
+The gadget beeps once. A series of lights comes across: RRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBB.
 
 >e
 Self-ID Fields
@@ -122,16 +122,16 @@ Sorted Trodes
 The gadget makes no noise.
 
 >rc ones
-The gadget beeps once. A series of lights comes across: RRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGRB. 
+The gadget beeps once. A series of lights comes across: RRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGRB.
 
 >rc dashes
-The gadget beeps once. A series of lights comes across: RRRRGG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBR. 
+The gadget beeps once. A series of lights comes across: RRRRGG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBR.
 
 >rc noughts
-The gadget beeps once. A series of lights comes across: RRRRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBBG. 
+The gadget beeps once. A series of lights comes across: RRRRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBBG.
 
 >nose
 >shades
@@ -145,15 +145,15 @@ Stored, er, Dots
 bread from the Spam
 
 >rc spam
-The gadget beeps once. A series of lights comes across: RRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG. 
+The gadget beeps once. A series of lights comes across: RRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG.
 
 >maps
 Your score has just gone up by one point.
 
 >rc bread
-The gadget beeps once. A series of lights comes across: GRRRG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBR. 
+The gadget beeps once. A series of lights comes across: GRRRG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBR.
 
 >beard
 Your score has just gone up by one point.
@@ -168,15 +168,15 @@ Your score has just gone up by one point.
 Cruel Ones' Enclosure
 
 >rc liches
-The gadget beeps once. A series of lights comes across: RRRRGR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGBBB. 
+The gadget beeps once. A series of lights comes across: RRRRGR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGBBB.
 
 >chisel
 Your score has just gone up by one point.
 
 >rc banshee
-The gadget beeps once. A series of lights comes across: RRRRRGR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBGBB. 
+The gadget beeps once. A series of lights comes across: RRRRRGR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBGBB.
 
 >hasbeen
 Your score has just gone up by one point.
@@ -194,27 +194,27 @@ LIVERS.
 Your score has just gone up by one point.
 
 >rc livers
-The gadget beeps once. A series of lights comes across: RRRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBRG. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBRG.
 
 >sliver
 Your score has just gone up by one point.
 
 >rc sliver
-The gadget beeps once. A series of lights comes across: GRRGGG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBBR. 
+The gadget beeps once. A series of lights comes across: GRRGGG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBBR.
 
 >e
 >n
 >rc spread
-The gadget beeps once. A series of lights comes across: RRRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBG. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBG.
 
 >n
 red asp!
 >rc red asp
-The gadget beeps once. A series of lights comes across: RRRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBG. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBG.
 
 >drapes
 Your score has just gone up by one point.
@@ -234,8 +234,8 @@ Ghouls' Slough
 Frost Forts
 
 >rc vowels
-The gadget beeps once. A series of lights comes across: RGRRRG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBR. 
+The gadget beeps once. A series of lights comes across: RGRRRG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBR.
 
 >wolves
 Your score has just gone up by one point.
@@ -266,8 +266,8 @@ You scan the dial, then the exits. They're swirling around too fast, but they ar
 The Nick
 
 >rc nick
-The gadget beeps once. A series of lights comes across: RRRRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRBBG. 
+The gadget beeps once. A series of lights comes across: RRRRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRBBG.
 
 >kitchen
 Your score has just gone up by one point.
@@ -276,12 +276,12 @@ Your score has just gone up by one point.
 grist and a cake pan
 
 >rc grist
-The gadget beeps once. A series of lights comes across: GGGRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBRB. 
+The gadget beeps once. A series of lights comes across: GGGRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBRB.
 
 >rc cake pan
-The gadget beeps once. A series of lights comes across: RGRRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRGBB. 
+The gadget beeps once. A series of lights comes across: RGRRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRGBB.
 
 >grits
 Your score has just gone up by one point.
@@ -289,24 +289,24 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >rc cathouse
-The gadget beeps once. A series of lights comes across: RRGRRGRG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBBR. 
+The gadget beeps once. A series of lights comes across: RRGRRGRG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBBR.
 
 >rc tall trio
 The gadget beeps once. A series of lights comes across: GRRRRRRR. You scanned each of the tall trio, and the readout didn't change.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBBBBB. You scanned each of the tall trio, and the readout didn't change.
 
 >rc cult tee
-The gadget beeps once. A series of lights comes across: RRRGRRG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBBR. 
+The gadget beeps once. A series of lights comes across: RRRGRRG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBBR.
 
 >rc skate
-The gadget beeps once. A series of lights comes across: GRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBB. 
+The gadget beeps once. A series of lights comes across: GRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBB.
 
 >rc spearman
-The gadget beeps once. A series of lights comes across: RRRRRRGG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGBBBBBR. 
+The gadget beeps once. A series of lights comes across: RRRRRRGG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGBBBBBR.
 
 >hotsauce
 Your score has just gone up by one point.
@@ -330,8 +330,8 @@ A full-blown taco
 Your score has just gone up by one point.
 
 >rc taco
-The gadget beeps once. A series of lights comes across: RRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGB. 
+The gadget beeps once. A series of lights comes across: RRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBGB.
 DEBUG INFO: RECT-TEXT: C--T.
 DEBUG INFO: CERT-TEXT: ----.
 
@@ -344,29 +344,29 @@ A Round Den, Unadorned
 >e
 
 >rc warts
-The gadget beeps once. A series of lights comes across: RRGRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBG. 
+The gadget beeps once. A series of lights comes across: RRGRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBG.
 
 >straw
 Your score has just gone up by one point.
 
 >rc hoses
-The gadget beeps once. A series of lights comes across: RRRGG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBR. 
+The gadget beeps once. A series of lights comes across: RRRGG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBR.
 
 >shoes
 Your score has just gone up by one point.
 
 >rc cask
-The gadget beeps once. A series of lights comes across: RGRG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR. 
+The gadget beeps once. A series of lights comes across: RGRG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR.
 
 >sack
 Your score has just gone up by one point.
 
 >rc sack
-The gadget beeps once. A series of lights comes across: RGRG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR. 
+The gadget beeps once. A series of lights comes across: RGRG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR.
 
 >put straw in sack
 >get sack
@@ -379,17 +379,17 @@ Your score has just gone up by one point.
 >rc
 You get to scanning, twiddling from certify to rectify and back.
 
-Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat. Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBR. 
+Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat. Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBR.
 
-Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat. The gadget beeps once. A series of lights comes across: RRGRRRG. 
+Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat. The gadget beeps once. A series of lights comes across: RRGRRRG.
 
 DEBUG INFO: RECT-TEXT: P-----T.
 DEBUG INFO: CERT-TEXT: --A---T.
 
 >rc anapest
-Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat. The gadget beeps once. A series of lights comes across: RRGRRRG. 
+Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat. The gadget beeps once. A series of lights comes across: RRGRRRG.
 
-Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat. Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBR. 
+Yes, this sort of poetry doesn't require deep reading, just scanning. But seriously, your gadget seems to blink with the beat. Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGBBR.
 
 DEBUG INFO: RECT-TEXT: P-----T.
 DEBUG INFO: CERT-TEXT: --A---T.
@@ -398,8 +398,8 @@ DEBUG INFO: CERT-TEXT: --A---T.
 Your score has just gone up by one point.
 
 >rc roadblock
-You notice the gadget beeps twice. Hmm. A series of lights comes across: RRGRRRGRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBGBBBB. 
+You notice the gadget beeps twice. Hmm. A series of lights comes across: RRGRRRGRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBGBBBB.
 >black door
 Your score has just gone up by one point.
 
@@ -407,8 +407,8 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >rc smilies
-The gadget beeps once. A series of lights comes across: RRRRGRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGBBBRB. 
+The gadget beeps once. A series of lights comes across: RRRRGRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BGBBBRB.
 
 >missile
 Your score has just gone up by one point.
@@ -418,8 +418,8 @@ Your score has just gone up by one point.
 folded paper plane
 
 >rc plane
-The gadget beeps once. A series of lights comes across: GRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBB. 
+The gadget beeps once. A series of lights comes across: GRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBB.
 
 >panel
 Your score has just gone up by one point.
@@ -433,8 +433,8 @@ Stiller Trellis
 Your score has just gone up by one point.
 
 >rc haywall
-The gadget beeps once. A series of lights comes across: GGRRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBRBBBB. 
+The gadget beeps once. A series of lights comes across: GGRRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBRBBBB.
 DEBUG INFO: RECT-TEXT: H-----Y.
 DEBUG INFO: CERT-TEXT: HA-----.
 >hallway
@@ -444,8 +444,8 @@ Your score has just gone up by one point.
 Sacred Cedars
 
 >rc oils
-The gadget beeps once. A series of lights comes across: RRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG. 
+The gadget beeps once. A series of lights comes across: RRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG.
 DEBUG INFO: RECT-TEXT: S--L.
 DEBUG INFO: CERT-TEXT: -----.
 
@@ -455,8 +455,8 @@ Gainly laying
 
 >rc oils
 You get to scanning, twiddling from certify to rectify and back.
-The gadget beeps once. A series of lights comes across: RRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG. 
+The gadget beeps once. A series of lights comes across: RRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG.
 DEBUG INFO: RECT-TEXT: S--L.
 DEBUG INFO: CERT-TEXT: -----.
 
@@ -470,8 +470,8 @@ Your score has just gone up by one point.
 
 >rc oils
 You get to scanning, twiddling from certify to rectify and back.
-The gadget beeps once. A series of lights comes across: RRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG. 
+The gadget beeps once. A series of lights comes across: RRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBG.
 DEBUG INFO: RECT-TEXT: S--O.
 DEBUG INFO: CERT-TEXT: --IL-.
 
@@ -487,8 +487,8 @@ Crashing Archings
 
 >rc oils
 You get to scanning, twiddling from certify to rectify and back.
-The gadget beeps once. A series of lights comes across: RGGR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRG. 
+The gadget beeps once. A series of lights comes across: RGGR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRG.
 DEBUG INFO: RECT-TEXT: S--O.
 DEBUG INFO: CERT-TEXT: --IL-.
 
@@ -504,8 +504,8 @@ RESULT WITH LUSTER
 >put panel on silo
 
 >rc trees
-The gadget beeps once. A series of lights comes across: RRGGR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBG. 
+The gadget beeps once. A series of lights comes across: RRGGR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBG.
 DEBUG INFO: RECT-TEXT: S---R.
 DEBUG INFO: CERT-TEXT: --EE-.
 >steer
@@ -513,8 +513,8 @@ ester pervades
 Your score has just gone up by one point.
 
 >rc hoots
-The gadget beeps once. A series of lights comes across: RRGRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG. 
+The gadget beeps once. A series of lights comes across: RRGRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG.
 DEBUG INFO: RECT-TEXT: S---T.
 DEBUG INFO: CERT-TEXT: --O--.
 >shoot
@@ -562,8 +562,8 @@ Your score has just gone up by one point.
 
 >e
 >rc clover
-The gadget beeps once. A series of lights comes across: RRRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRGBB. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRGBB.
 DEBUG INFO: RECT-TEXT: V----O.
 DEBUG INFO: CERT-TEXT: ------.
 >velcro
@@ -588,16 +588,16 @@ Your score has just gone up by one point.
 >get cake
 >s
 >rc dry cake
-The gadget beeps once. A series of lights comes across: RRGGGRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBGB. 
+The gadget beeps once. A series of lights comes across: RRGGGRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBGB.
 DEBUG INFO: RECT-TEXT: K-----D.
 DEBUG INFO: CERT-TEXT: --YCA--.
 >keycard
 Your score has just gone up by one point.
 
 >rc lost corn
-The gadget beeps once. A series of lights comes across: RGRGRGRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBGBBB. 
+The gadget beeps once. A series of lights comes across: RGRGRGRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBGBBB.
 DEBUG INFO: RECT-TEXT: C------S.
 DEBUG INFO: CERT-TEXT: -O-T-O--.
 >controls
@@ -609,13 +609,13 @@ Elf Row's Flowers
 >give gardenia to faeries
 
 >rc begonias
-You notice the gadget beeps twice. Hmm. A series of lights comes across: RRRRRRGR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBGBBB. 
+You notice the gadget beeps twice. Hmm. A series of lights comes across: RRRRRRGR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBGBBB.
 DEBUG INFO: RECT-TEXT: N------G.
 DEBUG INFO: CERT-TEXT: ------A-.
 >rc brocade
-The gadget beeps once. A series of lights comes across: GRRGRGG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBBBR. 
+The gadget beeps once. A series of lights comes across: GRRGRGG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBBBR.
 DEBUG INFO: RECT-TEXT: B-----E.
 DEBUG INFO: CERT-TEXT: B--C-DE.
 >barcode
@@ -632,8 +632,8 @@ Elm Train Terminal
 (on the fuzzy looking wall)
 
 >rc neon pig
-The gadget beeps once. A series of lights comes across: RRRGRRG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBBR. 
+The gadget beeps once. A series of lights comes across: RRRGRRG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBBBR.
 DEBUG INFO: RECT-TEXT: O-----G.
 DEBUG INFO: CERT-TEXT: ---N--G.
 >opening
@@ -647,8 +647,8 @@ Your score has just gone up by one point.
 
 >get heaths
 >rc heaths
-The gadget beeps once. A series of lights comes across: RRRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBRG. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBRG.
 DEBUG INFO: RECT-TEXT: S----H.
 DEBUG INFO: CERT-TEXT: ------.
 >sheath
@@ -657,8 +657,8 @@ Your score has just gone up by one point.
 >w
 >w
 >rc words
-The gadget beeps once. A series of lights comes across: RRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG. 
+The gadget beeps once. A series of lights comes across: RRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG.
 DEBUG INFO: RECT-TEXT: S---D.
 DEBUG INFO: CERT-TEXT: -----.
 >sword
@@ -692,8 +692,8 @@ DEBUG INFO: CERT-TEXT: --R---SS.
 Bassy Abyss
 
 >rc siren
-The gadget beeps once. A series of lights comes across: RRRRG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBR. 
+The gadget beeps once. A series of lights comes across: RRRRG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGBR.
 DEBUG INFO: RECT-TEXT: R---N.
 DEBUG INFO: CERT-TEXT: ----N.
 
@@ -701,8 +701,8 @@ DEBUG INFO: CERT-TEXT: ----N.
 Your score has just gone up by one point.
 
 >rc beats
-The gadget beeps once. A series of lights comes across: GGGRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBRB. 
+The gadget beeps once. A series of lights comes across: GGGRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBRB.
 DEBUG INFO: RECT-TEXT: B---T.
 DEBUG INFO: CERT-TEXT: BEA--.
 >beast
@@ -724,8 +724,8 @@ Your score has just gone up by one point.
 Tiles
 
 >rc tiles
-The gadget beeps once. A series of lights comes across: RRGGR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBBB. 
+The gadget beeps once. A series of lights comes across: RRGGR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBBB.
 DEBUG INFO: RECT-TEXT: I---T.
 DEBUG INFO: CERT-TEXT: --LE-.
 
@@ -737,16 +737,16 @@ Your score has just gone up by one point.
 Islet
 
 >rc rock
-The gadget beeps once. A series of lights comes across: RGRG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR. 
+The gadget beeps once. A series of lights comes across: RGRG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBGR.
 DEBUG INFO: RECT-TEXT: C--K.
 DEBUG INFO: CERT-TEXT: -O-K.
 >cork
 Your score has just gone up by one point.
 
 >rc swing
-The gadget beeps once. A series of lights comes across: RRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBBB. 
+The gadget beeps once. A series of lights comes across: RRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBBB.
 DEBUG INFO: RECT-TEXT: W---S.
 DEBUG INFO: CERT-TEXT: -----.
 >wings
@@ -756,32 +756,32 @@ Your score has just gone up by one point.
 An Odd Low Woodland
 
 >rc poles
-The gadget beeps once. A series of lights comes across: RRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG. 
+The gadget beeps once. A series of lights comes across: RRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBRG.
 DEBUG INFO: RECT-TEXT: S---E.
 DEBUG INFO: CERT-TEXT: -----.
 >slope
 Your score has just gone up by one point.
 
 >rc sprig
-The gadget beeps once. A series of lights comes across: RRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBG. 
+The gadget beeps once. A series of lights comes across: RRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBG.
 DEBUG INFO: RECT-TEXT: G---S.
 DEBUG INFO: CERT-TEXT: -----.
 >grips
 Your score has just gone up by one point.
 
 >rc spore
-The gadget beeps once. A series of lights comes across: RRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBGB. 
+The gadget beeps once. A series of lights comes across: RRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBGB.
 DEBUG INFO: RECT-TEXT: R---S.
 DEBUG INFO: CERT-TEXT: -----.
 >ropes
 Your score has just gone up by one point.
 
 >rc toolshed
-The gadget beeps once. A series of lights comes across: GGRRRRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBRBBB. 
+The gadget beeps once. A series of lights comes across: GGRRRRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBRBBB.
 DEBUG INFO: RECT-TEXT: T------S.
 DEBUG INFO: CERT-TEXT: TO------.
 >toeholds
@@ -791,21 +791,21 @@ Your score has just gone up by two points.
 Potshot Hotspot
 
 >rc riot
-The gadget beeps once. A series of lights comes across: RRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRG. 
+The gadget beeps once. A series of lights comes across: RRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRG.
 DEBUG INFO: RECT-TEXT: T--O.
 DEBUG INFO: CERT-TEXT: ----.
 >trio
 Your score has just gone up by one point.
 
 >rc chain
-The gadget beeps once. A series of lights comes across: RGRRG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGR. 
+The gadget beeps once. A series of lights comes across: RGRRG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGR.
 DEBUG INFO: RECT-TEXT: K---S.
 DEBUG INFO: CERT-TEXT: -I--S.
 >rc links
-The gadget beeps once. A series of lights comes across: RGRRG. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGR. 
+The gadget beeps once. A series of lights comes across: RGRRG.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBGR.
 DEBUG INFO: RECT-TEXT: K---S.
 DEBUG INFO: CERT-TEXT: -I--S.
 
@@ -816,8 +816,8 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >rc protest
-The gadget beeps once. A series of lights comes across: GRRGGRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBBRB. 
+The gadget beeps once. A series of lights comes across: GRRGGRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GBBBBRB.
 DEBUG INFO: RECT-TEXT: P-----S.
 DEBUG INFO: CERT-TEXT: P--TE--.
 
@@ -863,7 +863,7 @@ a smart gamin' anagrammist
 >forest
 >in
 >rc shout
-The gadget beeps once. A series of lights comes across: GRRRR (R = red, G = green). 
+The gadget beeps once. A series of lights comes across: GRRRR (R = red, G = green).
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: GRBBB.  (R = red, G = green, B = blue).
 
 DEBUG INFO: RECT-TEXT: S---H.
@@ -872,7 +872,7 @@ DEBUG INFO: CERT-TEXT: S----.
 
 >s
 >rc stew
-The gadget beeps once. A series of lights comes across: RRRR. 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBG. 
+The gadget beeps once. A series of lights comes across: RRRR.
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBG.
 DEBUG INFO: RECT-TEXT: W--T.
 DEBUG INFO: CERT-TEXT: -----.

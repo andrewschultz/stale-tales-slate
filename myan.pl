@@ -135,8 +135,15 @@ $curMax++;
 
 if ($toFile)
   {
-    if ($checkAfter) { my $searchIt = `anin.pl $myBase`;
-	print C "\n$searchIt"; } else { print "\n"; }
+    if ($checkAfter)
+	{
+	  my $searchIt = `anin.pl $myBase`;
+      print C "\n$searchIt";
+    }
+	else
+	{
+	print "\n";
+	}
 	if ($checkNames) { my $getNames = `anan.pl $myBase=`; print C "\n$getNames"; }
     print C "\n=================$myBase\n";
   }

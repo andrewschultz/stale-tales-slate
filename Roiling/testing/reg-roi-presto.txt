@@ -544,7 +544,7 @@ DEBUG INFO: Trying to flip futon.
 The fount turns into a futon, which is better off not wet. There's rest, eh? you think, looking at it, though you're not really tired yet.
 
 >bekaydor
-The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. 
+The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing.
 !That seems like a
 
 >keyboard
@@ -683,7 +683,7 @@ That stupid NEED IF-DEFINE and that speel, still. You're slipping on peels, unsu
 You feel smarter
 
 >compile
-You successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The 
+You successfully compile your code. Wahoo! Wooha! Core dev covered! But you hear a shwoop, then say whoops. The
 
 >compidle
 The code won't BUDGE.

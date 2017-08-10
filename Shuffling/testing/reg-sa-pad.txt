@@ -113,7 +113,7 @@ You can XX after you eat the saltine in order to see what an item should be. Thi
 >certify static
 (NOTE: when using CERTIFY, you can shorten it to CERT/CER/C in the future.)
 
-The gadget beeps once. A series of lights comes across: RGRRRR. 
+The gadget beeps once. A series of lights comes across: RGRRRR.
 
 >rectify static
 (switching to rectify first)(NOTE: when using RECTIFY, you can shorten it to RECT/REC/R in the future.)
@@ -218,7 +218,7 @@ Lets you glimpse what you need to do.
 >in
 
 >x stores
-They're labelled with letters, not numbers, though you can refer to them by number if you want. Of the various stores you see, only store M, Store I and Store F look like you can do anything with them. Store B looks--well, not quite dead, but not very substantial, either. Store R has COMING SOON spray-painted to the side it. A few others seem greyed-out, like in a video game or something. There can't be anything in any of them. 
+They're labelled with letters, not numbers, though you can refer to them by number if you want. Of the various stores you see, only store M, Store I and Store F look like you can do anything with them. Store B looks--well, not quite dead, but not very substantial, either. Store R has COMING SOON spray-painted to the side it. A few others seem greyed-out, like in a video game or something. There can't be anything in any of them.
 [You record the information about stores in your notepad.]
 
 >pad stores
@@ -251,7 +251,7 @@ SPACES toggles whether you have an extra space in raw gadget results. SPACE(S) O
 >undo
 
 >certify f
-The gadget beeps once. A series of lights comes across: RRRRRR. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
 
 >rectify f
 >certify f

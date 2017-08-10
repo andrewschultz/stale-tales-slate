@@ -22,7 +22,7 @@ PLAYER FRIENDLINESS
 --if you find the right thing to do, but in the wrong order, you write it in your notepad now
 --The player can now determine which items to mess with. [spoiler]Blue Lube lets the player ANGLE or GLEAN[/spoiler]
 --Slider functionality collapsed into tagged gadget so you don't have to decide
-[spoiler]You can RECUSE or SECURE the gadget, in addition, to either skip a store or have both gadget and slider functionality: now referred to as RECTIFY and CERTIFY. The game also gives you a rough idea of what is better.[/spoiler] 
+[spoiler]You can RECUSE or SECURE the gadget, in addition, to either skip a store or have both gadget and slider functionality: now referred to as RECTIFY and CERTIFY. The game also gives you a rough idea of what is better.[/spoiler]
 --added explanation that weapon would not be physically harmful in Store I area
 --a prep paper now describes 3 goals for each area
 --a few more see-red clues for tough puzzles like the Gardenia

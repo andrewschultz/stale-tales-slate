@@ -826,7 +826,7 @@ It's...hmm...you remember all the clues, but what order to place them in, now.
 >derive
 Your score has just gone up by one point
 >deriev
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
 #extra line break?
 
@@ -872,7 +872,7 @@ You reflect that to LEAD, you must also put certain things in order. You know th
 Your score has just gone up by one point
 Dour Tan Rotunda
 >dela
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
 >eiders
 But what would ducks DO in the big city? They have no ambition. They don't crave...
@@ -883,7 +883,7 @@ Your score has just gone up by one point
 
 Econ-Cone
 >desier
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
 >once
 Yes! You only need a chance! Once! To get inside! You are almost enthused enough.
@@ -906,7 +906,7 @@ The bottle of Pernod seems to rattle and spin slightly.
 FiefCo Office
 Your score has just gone up by one point
 >pondre
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
 >undo
 >undo
@@ -2428,7 +2428,7 @@ That's not something
 
 >naivest
 Your score has just gone up by one point
-You remember that alternate solution to the truth-teller 
+You remember that alternate solution to the truth-teller
 min point
 
 >undo
@@ -3543,7 +3543,7 @@ Just KNOCK instead.
 >knock
 
 >prpe
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
 >n
 >prpe

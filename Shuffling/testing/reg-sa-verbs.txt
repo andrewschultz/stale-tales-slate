@@ -265,7 +265,7 @@ You can X STORES to examine all the stores.
 The game is now parsing output from the gadget.
 >scan f
 Before scanning for the first time, you fumble with the gadget and note it is set to CERTIFY.
-The gadget beeps once. A series of lights comes across: RRRRRR (R = red, G = green). Hmm, that means ------. 
+The gadget beeps once. A series of lights comes across: RRRRRR (R = red, G = green). Hmm, that means ------.
 You can toggle spaces between the letters with SPACE(S), or you can set them directly with SPACE(S) ON/NO SPACE(S), or SON/NOS for short.
 
 >spare
@@ -276,12 +276,12 @@ The gadget beeps once. A series of lights comes across: RRRRRR.
 >spare
 The game is already not parsing output from the gadget.
 >scan f
-The gadget beeps once. A series of lights comes across: RRRRRR. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
 !Hmm,
 >parse
 The game is now parsing output from the gadget.
 >scan f
-The gadget beeps once. A series of lights comes across: RRRRRR. Hmm, that means ------. 
+The gadget beeps once. A series of lights comes across: RRRRRR. Hmm, that means ------.
 
 >spare
 >opt in
@@ -329,41 +329,41 @@ It'll only take one bite to EAT. You can't save half for later and get another h
 >access
 Screen reader accessible text is now on.
 >scan store f
-The gadget beeps once. A series of lights comes across: R R R R R R. 
+The gadget beeps once. A series of lights comes across: R R R R R R.
 >access
 Screen reader accessible text is now off.
 >scan store f
-The gadget beeps once. A series of lights comes across: RRRRRR. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
 
 >son
 Spaces in gadget output are now on.
 >scan store f
-The gadget beeps once. A series of lights comes across:  R R R R R R. 
+The gadget beeps once. A series of lights comes across:  R R R R R R.
 >space
 Spaces in gadget output are already on.
 >scan store f
-The gadget beeps once. A series of lights comes across:  R R R R R R. 
+The gadget beeps once. A series of lights comes across:  R R R R R R.
 >space on
 Spaces in gadget output are already on.
 >scan store f
-The gadget beeps once. A series of lights comes across:  R R R R R R. 
+The gadget beeps once. A series of lights comes across:  R R R R R R.
 >spaces on
 Spaces in gadget output are already on.
 >scan store f
-The gadget beeps once. A series of lights comes across:  R R R R R R. 
+The gadget beeps once. A series of lights comes across:  R R R R R R.
 
 >nos
 Spaces in gadget output are now off.
 >scan store f
-The gadget beeps once. A series of lights comes across: RRRRRR. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
 >no space
 Spaces in gadget output are already off.
 >scan store f
-The gadget beeps once. A series of lights comes across: RRRRRR. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
 >no spaces
 Spaces in gadget output are already off.
 >scan store f
-The gadget beeps once. A series of lights comes across: RRRRRR. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
 
 >glean
 You stare into the blue lube for a bit. You see a small story unfold.
@@ -403,38 +403,38 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 You stare into the blue lube for a bit, then look around. You notice weird hazes around Store R, store M, Store I, Store F and Store B when you do.
 
 >c store f
-The gadget beeps once. A series of lights comes across: RRRRRR. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
 >cer store f
-The gadget beeps once. A series of lights comes across: RRRRRR. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
 >cert store f
-The gadget beeps once. A series of lights comes across: RRRRRR. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
 >certify store f
-The gadget beeps once. A series of lights comes across: RRRRRR. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
 
 >r store f
 (switching to rectify first)
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG.  (R = red, G = green, B = blue).
 
 >rec store f
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG. 
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG.
 >rect store f
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG. 
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG.
 >rectify store f
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG. 
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG.
 
 >cr store f
 You get to scanning, twiddling from rectify to certify and back.
 
-The gadget beeps once. A series of lights comes across: RRRRRR. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG. 
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG.
 
 >rc store f
 You get to scanning, twiddling from rectify to certify and back.
 
-The gadget beeps once. A series of lights comes across: RRRRRR. 
+The gadget beeps once. A series of lights comes across: RRRRRR.
 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG. 
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBBBG.
 
 #### extra space??
 
@@ -484,13 +484,13 @@ You read about options in your dope tan notepad.
 --X or EXAMINE an object. If an object has writing, READ it instead of X WRITING.
 
 >poss
-Switching on minimum/maximum available point notification in the status line. 
+Switching on minimum/maximum available point notification in the status line.
 
 [Note: this is a quasi-spoiler of sorts, since watching the maximum possible score drop may mean you have missed an easter egg. Or watching the minimum score increase may mean you found one.]
 >poss
-Switching off minimum/maximum available point notification in the status line. 
+Switching off minimum/maximum available point notification in the status line.
 >poss
-Switching on minimum/maximum available point notification in the status line. 
+Switching on minimum/maximum available point notification in the status line.
 !quasi-spoiler
 
 >knock forest
@@ -525,12 +525,12 @@ It smells pretty good, even if you can't detect any specific ingredients. But wh
 >certify
 You're picking something up. Probably the whiff of stew.
 
-The gadget beeps once. A series of lights comes across: RRRR. 
+The gadget beeps once. A series of lights comes across: RRRR.
 
 >rectify
 You're picking something up. Probably the whiff of stew.
 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBG. 
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BRBG.
 
 >west
 Self-ID Fields
@@ -832,12 +832,12 @@ It's gibberish, but it has to be coming from somewhere.
 >certify
 You're picking something up. Probably the aroma of teas.
 
-The gadget beeps once. A series of lights comes across: RRRR. 
+The gadget beeps once. A series of lights comes across: RRRR.
 
 >rectify
 You're picking something up. Probably the aroma of teas.
 
-Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBB. 
+Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RGBB.
 
 * sortie-verbiage
 
@@ -873,9 +873,9 @@ That doesn't set to a number. It doesn't SWITCH, either, so you may want to try 
 >turn me to 1
 That doesn't set to a number. It doesn't SWITCH, either, so you may want to try another verb.
 >turn 17
-The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
+The room seems to slow down for a bit before picking up speed and spinning as fast as before.
 >set 15
-The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
+The room seems to slow down for a bit before picking up speed and spinning as fast as before.
 
 >16
 >n

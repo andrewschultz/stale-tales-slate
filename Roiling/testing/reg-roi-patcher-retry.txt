@@ -231,7 +231,7 @@ You are also wearing a decorative star.
 >i
   a Rosetta Toaster
   a pack of start tarts (cold)
->retry  
+>retry
 >i
 !  a Rosetta Toaster
 !  a pack of start tarts (cold)
@@ -239,7 +239,7 @@ You are also wearing a decorative star.
 >i
   a Rosetta Toaster
   a pack of start tarts (cold)
->retry  
+>retry
 
 ########################################################Big Patcher Test
 

@@ -171,16 +171,16 @@ You've made a full disguise now!
 >gonear dial
 
 >turn dial to 1
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 2
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 3
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 4
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 5
 The room seems to spin a bit slower. You think. You feel you're getting closer. Perhaps you'll get it soon.
@@ -188,10 +188,10 @@ The room seems to spin a bit slower. You think. You feel you're getting closer. 
 You wonder if the dial has any sort of hint on it--an odd word or number or letter--anything.
 
 >turn dial to 6
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 7
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 8
 The room seems to spin a bit slower. You think. You feel and hope you're getting there, but maybe dividing and conquering the possible numbers left will work, if you don't understand the dial clues it'd be worth examining.
@@ -200,25 +200,25 @@ The room seems to spin a bit slower. You think. You feel and hope you're getting
 You see EXITS ? ?--you can see two letters, but they're scrolling through the four cardinal directions--written in the center of its circle. It's currently set to 8, and you can set it anywhere from 0 to 99 with TURN DIAL TO or just the number. You wonder if there's a partial clue here that you just need to look at right.
 
 >turn dial to 9
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 10
 The room seems to spin a bit slower. You think. Inching along with the dial will get there, but maybe you should be--or should have been--more clinical. Each guess can cut half the numbers, though maybe there's an even quicker way.
 
 >turn dial to 11
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 12
 The room seems to spin a bit slower. You think. Well, you know you'll get there eventually. P.S. I hope you are using the up-arrow and not typing the numbers out.
 
 >turn dial to 13
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 14
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 15
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 16
 The room warps a bit. You wonder if you made things worse, but you hear strong g-trons go SNRT...you did it!
@@ -232,19 +232,19 @@ You find yourself in a round den, unadorned.
 >gonear dial
 
 >turn dial to 2
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 1
 The room seems to spin a bit faster, and you worry you've made things worse--maybe examining the dial can help.
 
 >turn dial to 2
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 1
 You feel like you are just flailing with the numbers, now, as the room picks up speed. The room slowed down a bit when you moved up several numbers. Maybe if you keep going past the right number, you'll eventually hit it.
 
 >turn dial to 2
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 You wonder if the dial has any sort of hint on it--an odd word or number or letter--anything.
 
@@ -252,19 +252,19 @@ You wonder if the dial has any sort of hint on it--an odd word or number or lett
 You think that a binary search may not be a bad way to do things, even if you-the-player don't know what a binary search is.
 
 >turn dial to 2
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 1
 Getting colder.
 
 >turn dial to 2
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 1
 Getting colder.
 
 >turn dial to 2
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 1
 Getting colder.
@@ -274,16 +274,16 @@ Getting colder.
 >gonear dial
 
 >turn dial to 50
-The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
+The room seems to slow down for a bit before picking up speed and spinning as fast as before.
 
 >turn dial to 25
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial to 12
-The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
+The room seems to slow down for a bit before picking up speed and spinning as fast as before.
 
 >turn dial to 18
-The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
+The room seems to slow down for a bit before picking up speed and spinning as fast as before.
 
 >turn dial to 15
 The room seems to slow down for a bit before picking up speed and spinning as fast as before. You feel you're getting closer. Perhaps you'll get it soon.
@@ -304,7 +304,7 @@ You find yourself in a round den, unadorned.
 >gonear dial
 
 >turn dial to 99
-The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
+The room seems to slow down for a bit before picking up speed and spinning as fast as before.
 
 >turn dial to 100
 If you tried to spin it that high, you'd break the dial.
@@ -313,19 +313,19 @@ If you tried to spin it that high, you'd break the dial.
 This negative attitude isn't helping you solve the puzzle.
 
 >turn dial to 0
-The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
+The room seems to slow down for a bit before picking up speed and spinning as fast as before.
 
 >turn dial to 0
 That's where the dial's already set.
 
 >turn dial to 99
-The room seems to slow down for a bit before picking up speed and spinning as fast as before. 
+The room seems to slow down for a bit before picking up speed and spinning as fast as before.
 
 >turn dial to 99
 That's where the dial's already set.
 
 >turn dial to 40
-The room seems to spin a bit slower. You think. 
+The room seems to spin a bit slower. You think.
 
 >turn dial 76
 You can probably TURN the dial to a number, e.g. 99.

@@ -456,11 +456,11 @@ Shrewin' whiners are tallyhoing with great callosity here. They restyle why they
 You don't need to riff on any location names to win the game
 
 >loathing
-No, you need a couple more letters... 
+No, you need a couple more letters...
 >stoical
-No, you need a couple more letters... 
+No, you need a couple more letters...
 >terse
-No, you need a couple more letters... 
+No, you need a couple more letters...
 >stoic
 Usually, you'd need to add two letters, but here you'd need to add four.
 
@@ -719,7 +719,7 @@ The whole bulwark? No, you can't do much. Maybe you can surprise Elvira in there
 Coevals' Alcoves
 
 >ahdry
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
 >w
 Stricter critters restrict--wait, no, that's a hardy hydra with an HD-Ray. Er, dang. Danger. You double back.

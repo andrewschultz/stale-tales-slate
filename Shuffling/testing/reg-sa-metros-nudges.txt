@@ -70,11 +70,11 @@ Changing the beam is way out of your league.
 No way. It's your way up from the metros. Once you fix things.
 
 >buildign
-You can't change the hotel, 
+You can't change the hotel,
 >gardenia
 by one point
 >hotle
-You can't change the hotel, 
+You can't change the hotel,
 >sensro
 You don't have the skill to hack the sensor electronically.
 >doro
@@ -125,7 +125,7 @@ Ugh. Too messy. Mentally and physically.
 >tomato
 >e
 
-####skip the camp again for detail testing. Let's get the 
+####skip the camp again for detail testing. Let's get the
 >s
 >w
 The Ol' Hotel

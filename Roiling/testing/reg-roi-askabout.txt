@@ -1187,9 +1187,9 @@ Actionless Coastline
 >ask atheists about elvira
 The atheists begin yelling FACTS about Elvira, pro and con, very loudly back and forth. They contradict each other quickly. You're sorry you asked.
 >ask atheists about atheists
-They start logic-bashing, when one of the junior atheists tries to make a point. 
+They start logic-bashing, when one of the junior atheists tries to make a point.
 >ask atheists about xyzzy
-They start logic-bashing, when one of the junior atheists tries to make a point. 
+They start logic-bashing, when one of the junior atheists tries to make a point.
 >ask atheists about curst palace
 "You'll never get there!"
 
@@ -1348,7 +1348,7 @@ Ed Yerg mentions he needs something to cheer him up.
 >ask yerg about xyzzy
 "Old clues, eh?" He colludes--babbles, spectacled, avuncular, a polite ole tip about the palace. Make it
 >ask yerg about curst palace
-"It can be something super special. 
+"It can be something super special.
 >ask ed yerg about crocus
 "I haven't enjoyed flowers for a long time."
 >ask ed yerg about flowerpot

@@ -97,13 +97,13 @@ Strip of Profits
 >in
 >hate
 >care
- 
+
  >scam
 In particular, you feel the need to OBSERVE right now.
- 
+
  >observe
 In particular, you feel the need to SPOT right now.
- 
+
  >spot
 /In particular, you feel the need to (BELIEVE|REASON) right now.
 
@@ -345,7 +345,7 @@ You've started to get some action in.
 
 Olde Lode
 
---instead of using the pills, you could've tried to STROLL after 
+--instead of using the pills, you could've tried to STROLL after
 
 >poss
 

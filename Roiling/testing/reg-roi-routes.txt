@@ -129,7 +129,7 @@ Lairage regalia is already tailored to the resident's style. So it's not yours t
 That's not how to get into Pat'S, you reflect.
 
 >regenta
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
 >edi
 The words themselves do nothing. You found the way in.
@@ -203,7 +203,7 @@ Brother Horbert will work his magic with that.
 Brother Horbert will work his magic with that.
 
 >ummarys
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
 >x pews
 

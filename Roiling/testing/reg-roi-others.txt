@@ -624,7 +624,7 @@ Hm. There are a lot of silly shirts out there. Maybe the message is what you nee
 Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle.
 
 >arcipt
-That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS. 
+That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
 >arcipto
 Nothing happens. Your magic skills feel like the pits for a second.
@@ -885,7 +885,7 @@ After all that work getting it to appear, you don't want to make the lost slot v
 You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star.
 
 >passpotr
-The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the 
+The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the
 
 >reviwe
 That's not the way to learn from the viewer--it's probably not that complicated. You hope.
