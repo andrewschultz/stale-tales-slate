@@ -19193,7 +19193,7 @@ blurb
 "death is staid, eh?" []
 "desiring's rigidness."
 "dodge a goaded ego-add."
-"Dogma? Go mad."
+"Gad, mo['] Dogma? Go mad."
 "doings in God's song I'd sing. Do dig, son!"
 "Donatism...saintdom."
 "eclat? Pique? Quiet place."

@@ -4994,7 +4994,7 @@ when play begins (this is the basic initialization rule):
 definition: a room (called myrm) is ominous:
 	if myrm is bleary barley and b-b is reflexive:
 		decide no;
-	if myrm is in otters:
+	if myrm is in Otters:
 		if myrm is Tapering Anger Pit or myrm is Anteroom:
 			decide no;
 		decide yes;
@@ -5850,7 +5850,7 @@ carry out presto-hinting:
 			now spoilit is false;
 			all-say "Ugh. The crust feels like army rations. Not now." instead;
 		all-say "The popgun [if player has popgun]was[else]is[end if] all the seminar has to offer." instead;
-	if player is in a mazeroom or player is in maze entry:
+	if player is in a mazeroom or player is in nowt town:
 		if spoilit is false:
 			all-say "[maze-solve]." instead;
 		try objhinting volt maze instead;
@@ -8935,7 +8935,7 @@ wzup	wzup	false	526524588	--	"whassup"	"whassup"	"'Pshaw, us?'[paragraph break]T
 ye hoop	censer	true	267453412	--	"pooh"	"pooh"	"[get-censer]."
 ye hoop	censer	true	517618773	--	"phooey"	"phooey"	"[get-censer]."
 walls	walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	"This space intentionally left blank."
-volt maze	volt maze	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	"You decide to congratulate yourself [if l-m is off-stage and m-l is off-stage]before you get[else]despite not getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, [paragraph break]You hear an imaginary yenta [if maze entry is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if l-m is escanned]saying you should not have had to scan that nice man to figure the puzzle, asking for any due dayenu.[else if m-l is escanned]saying you should not have had to scan those nice men to figure the puzzle, asking for any due dayenu.[else if r24 is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if plaque is unexamined]wondering how you KNEW.[else]saying SHE'D never been that clever, SHE'D have to go through the maze.[end if] [if player was not in grey gyre]When you wake up back in the gyre, you see[else]There's now[end if] ether to the north.[paragraph break]You shake the yenta's blabber off--the important thing is, you figured the maze out, and you doubt anything else here will be nearly that difficult."
+volt maze	volt maze	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	"You decide to congratulate yourself [if l-m is off-stage and m-l is off-stage]before you get[else]despite not getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, [paragraph break]You hear an imaginary yenta [if nowt town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if l-m is escanned]saying you should not have had to scan that nice man to figure the puzzle, asking for any due dayenu.[else if m-l is escanned]saying you should not have had to scan those nice men to figure the puzzle, asking for any due dayenu.[else if r24 is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if plaque is unexamined]wondering how you KNEW.[else]saying SHE'D never been that clever, SHE'D have to go through the maze.[end if] [if player was not in grey gyre]When you wake up back in the gyre, you see[else]There's now[end if] ether to the north.[paragraph break]You shake the yenta's blabber off--the important thing is, you figured the maze out, and you doubt anything else here will be nearly that difficult."
 ether	ether	false	481328338	--	"there"	"there"	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!' [paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
 keys	keys	false	399372505	--	"syke"	"syke"	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow...ow...all!'"
 hogs	hogs	false	240508544	--	"gosh"	"gosh"	"You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
@@ -13481,7 +13481,7 @@ before going inside in Ripe Pier:
 
 book Cripple Clipper
 
-Cripple Clipper is a room in routes. "You see a free reef ahead and to each side. You aren't much of a sailor, [if hit win button is visible]and the hit win button didn't even do everything[else]but maybe you can somehow hit win on the ship controls[end if]."
+Cripple Clipper is a room in Routes. "You see a free reef ahead and to each side. You aren't much of a sailor, [if hit win button is visible]and the hit win button didn't even do everything[else]but maybe you can somehow hit win on the ship controls[end if]."
 
 chapter controls
 
@@ -14330,7 +14330,7 @@ every turn when player has curst crust and mrlp is presto and track-crust is tru
 section turn rules
 
 every turn when mrlp is presto and Rand is eager (this is the Leo-Rand lackey rule):
-	if location of player is maze entry:
+	if location of player is nowt town:
 		if Leo was visible:
 			say "'Oo Boss. We ain't up to dat maze. It's makes us fink too much!' Leo and Rand wait outside.";
 	otherwise:
@@ -14406,7 +14406,7 @@ carry out shooting:
 		say "Pointless vandalism." instead;
 	if noun is ether:
 		say "You can't see through it. Plus, the popgun is not a gun of un-fog." instead;
-	if noun is maze entry:
+	if noun is nowt town:
 		say "Brute force is a better way to get maze hints." instead;
 	say "Less shooting, more soothing. You'll be prepared when there is a fight." instead;
 	the rule succeeds;
@@ -16378,7 +16378,7 @@ understand "polemic" as scratch paper.
 
 book Volt Maze [L to V]
 
-a mazeroom is a kind of room. the printed name of a mazeroom is usually "Maze Room". a mazeroom is usually innie.
+a mazeroom is a kind of room. the printed name of a mazeroom is usually "Nowt Town". a mazeroom is usually innie.
 
 the specification of mazeroom is "A room you don't need to visit at all but which might give clues."
 
@@ -16460,7 +16460,7 @@ after printing the locale description for r22 when voltzap is false and voltwarn
 
 the description of mazeroom is "You're in a maze room with no distinguishing features[exits-lead].";
 
-check going to maze entry when player was in Grey Gyre:
+check going to nowt town when player was in Grey Gyre:
 	say "[one of]You hope the maze isn't too big. Then you hope there's a quick way around it--[if plaque is examined]the plaque seems to indicate there might be[else]but you feel an odd sense of guilt, as if ancestors lamented that you can't even take time to stop and read a simple plaque[end if][or]You re-enter, not knowing whether to feel bad you're [if r24 is visited]trying[else]not even patient enough[end if] to brute-force things and run through the maze or bad you want an easy way through[if voltzap is false and r24 is visited] or too scared to touch any walls[end if][if r24 is visited and plaque is unexamined] or too hasty to even read that plaque this time around[end if][stopping]."
 
 the plaque is scenery in Grey Gyre. "VOLT MAZE[paragraph break]DESIGNED BY E-Z OL['] AV (TM).[paragraph break]Oy, this maze is meshuggenah--those without the chutzpah to congratulate themselves before entering it have no hope![paragraph break]The first two lines are in red."
@@ -16471,17 +16471,17 @@ instead of taking the plaque:
 instead of scaning plaque:
 	say "Maybe reading between the lines of the Volt Maze plaque would help.";
 
-Maze Entry is north of Grey Gyre. Maze Entry is in Presto. "You can exit back south or hit the maze proper to the west. A big L is tiled into the floor here[if m-l is in lalaland]. Nothing really seems to have changed about the maze several times through, and you may flip if you have to go through the L-to-V maze again[end if]."
+Nowt Town is north of Grey Gyre. Nowt Town is in Presto. "You can exit back south or hit the maze proper to the west. A big L is tiled into the floor here[if m-l is in lalaland]. Nothing really seems to have changed about the maze several times through, and you may flip if you have to go through the L-to-V maze again[end if]."
 
-the big l is scenery in maze entry. "It's a decent enough example of an L[if r00 is unvisited]. Maybe there are other letters in the maze[end if].". understand "letter" and "letter l" as big l when player is in maze entry.
+the big l is scenery in nowt town. "It's a decent enough example of an L[if r00 is unvisited]. Maybe there are other letters in the maze[end if].". understand "letter" and "letter l" as big l when player is in nowt town.
 
-understand "glib" as a mistake ("You'll need to be glib with something like g-lib later. If you get through this maze. In fact, maybe being glib might be easier than walking through.") when player is in Maze Entry.
+understand "glib" as a mistake ("You'll need to be glib with something like g-lib later. If you get through this maze. In fact, maybe being glib might be easier than walking through.") when player is in nowt town.
 
 [is a mazeroom/a mazeroom is usually in presto]
 
 big-let is a privately-named backdrop. big-let is in r10,r00,r01,r02,r12,r22,r32,r33,r23,r24. printed name of big-let is "the big letter"
 
-the maze walls are a reflexive plural-named uncluing useless backdrop. the walls are in r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, maze entry, r21, r22, r23, r24, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
+the maze walls are a reflexive plural-named uncluing useless backdrop. the walls are in r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, nowt town, r21, r22, r23, r24, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
 
 a-text of walls is "RYRYRRYR". b-text of walls is "RYRYRRYR". parse-text of walls is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -16512,7 +16512,7 @@ understand "big/letter t" and "letter/t" as big-let when player is in r33.
 understand "big/letter u" and "letter/u" as big-let when player is in r23.
 understand "big/letter v" and "letter/v" as big-let when player is in r24.
 
-r10 is a privately-named mazeroom in Presto. r10 is west of Maze Entry. "A big M is tiled into the floor here[exits-lead]."
+r10 is a privately-named mazeroom in Presto. r10 is west of nowt town. "A big M is tiled into the floor here[exits-lead]."
 
 r00 is a privately-named mazeroom in Presto. it is west of r10. "A big N is tiled into the floor here[exits-lead]."
 
@@ -16560,7 +16560,7 @@ r14 is a privately-named mazeroom in Presto. it is north of r13.
 
 r04 is a privately-named mazeroom in Presto. it is west of r14.
 
-r24 is a privately-named mazeroom in Presto. it is north of r23. "A big V is tiled into the floor here. You can go back south, but wow, the maze exit seems to be just north[if l-m is off-stage and m-l is off-stage]![else], and maybe that riddle dreidl won't push you back this time!"
+Unwary Runway is an innie room in Presto. printed name is "Unwary Runway". "A big V is tiled into the floor here. You can go back south, but wow, the maze exit seems to be just north[if l-m is off-stage and m-l is off-stage]![else], and maybe that riddle dreidl won't push you back this time!"
 
 understand "mzend" as r24 when debug-state is true.
 
@@ -22085,7 +22085,7 @@ carry out discerning:
 
 book coevals' alcoves
 
-Coevals' Alcoves is a room in otters. Alcoves is west of frontage. "A monstery monastery. Laminas of mythical or extinct animals populate the walls here, along with a forces fresco. You can go back out to the east, or in to the west, if you dare."
+Coevals' Alcoves is a room in Otters. Alcoves is west of frontage. "A monstery monastery. Laminas of mythical or extinct animals populate the walls here, along with a forces fresco. You can go back out to the east, or in to the west, if you dare."
 
 check going when player is in alcoves:
 	if noun is inside:
@@ -22151,7 +22151,7 @@ to say if-ed:
 	if ed riley is visible:
 		say ", or you could if a steward weren't keeping you eastward";
 
-Bleary Barley is a room in otters. "[if b-b is reflexive]Bleary Barley blocks you completely, stretching out seamlessly, endlessly[else]You can go west past where Ed Riley was[if-ed], and though the barley's too thick to the east, north and south are okay[end if]."
+Bleary Barley is a room in Otters. "[if b-b is reflexive]Bleary Barley blocks you completely, stretching out seamlessly, endlessly[else]You can go west past where Ed Riley was[if-ed], and though the barley's too thick to the east, north and south are okay[end if]."
 
 check going east in Bleary Barley when b-b is reflexed:
 	say "The barley is a bit too thick that way[if ed riley is in Bleary Barley]--it almost looks more like marsh plants than barley[end if]." instead;
@@ -22371,7 +22371,7 @@ carry out whistleing:
 
 book Frontage
 
-frontage is west of Bleary Barley. frontage is part of otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. A raw-bulk bulwark is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in frontage]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]."
+frontage is west of Bleary Barley. frontage is a room in Otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. A raw-bulk bulwark is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in frontage]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]."
 
 printed name of frontage is "[if Gretta is in frontage]Gent-Fora Frontage[else]Frat-Gone Frontage[end if]"
 
@@ -22841,7 +22841,7 @@ book side passages
 
 chapter Bran Barn
 
-Bran Barn is an innie room in otters. Bran Barn is south of frontage. "This is a bran barn, empty of grain right now, and it'll probably stay that way[if p-2 is in bran barn]. A painting covers a good chunk of the interior here[end if]. You can go back north."
+Bran Barn is an innie room in Otters. Bran Barn is south of frontage. "This is a bran barn, empty of grain right now, and it'll probably stay that way[if p-2 is in bran barn]. A painting covers a good chunk of the interior here[end if]. You can go back north."
 
 Mr Lee is a person in Bran Barn. description is "He is one of those people you see nothing and everything special about at the same time[if alcoves is visited]. A less evil version of Merle and Elmer combined[end if].". "Mr. Lee stands here, undescribed."
 
@@ -22893,7 +22893,7 @@ check fliptoing p-2:
 
 chapter loop pool
 
-Loop Pool is a room in otters. Loop Pool is north of frontage. "A pool encases a small island. The atmo-moat around the island babbles[if le mer is visible] pretentiously, [i]'Je suis le mer!'[r][else].[end if] You can go back south."
+Loop Pool is a room in Otters. Loop Pool is north of frontage. "A pool encases a small island. The atmo-moat around the island babbles[if le mer is visible] pretentiously, [i]'Je suis le mer!'[r][else].[end if] You can go back south."
 
 after choosing notable locale objects when player is in loop pool:
 	set the locale priority of Le Mer to 0;
@@ -22981,7 +22981,7 @@ after fliptoing eels:
 
 book Tapering Anger Pit
 
-Tapering Anger Pit is an innie room in otters. Anger Pit is north of Bleary Barley. printed name of Anger Pit is "Tapering [if sly imp is in Anger Pit]Anger Pit[else]Inert Gap[end if]". "This north-south passage is [if sly imp is visible]frustratingly blocked[else]pleasantly lifeless with the imp gone[end if]."
+Tapering Anger Pit is an innie room in Otters. Tapering Anger Pit is north of Bleary Barley. printed name of Tapering Anger Pit is "Tapering [if sly imp is in Anger Pit]Anger Pit[else]Inert Gap[end if]". "This north-south passage is [if sly imp is visible]frustratingly blocked[else]pleasantly lifeless with the imp gone[end if]."
 
 understand "inert gap" and "inert/gap" as anger pit when sly imp is in lalaland.
 
@@ -23038,7 +23038,7 @@ check going north in Anger Pit:
 		now try-fail-pit-north is true;
 		say "[one of]You hear a dangerous hooting as you go north. You run from a bunch of owls before they can carve at you with their beaks, but boy, they were quick, and it was close. You don't want to risk it again[or]Those owls are too much for you[stopping], with your powers drained." instead;
 
-Wickeder Wire Deck is north of Anger Pit. Wickeder Wire Deck is part of otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south."
+Wickeder Wire Deck is north of Tapering Anger Pit. Wickeder Wire Deck is a room in Otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south."
 
 the ocelots are plural-named reflexive neuter animals. description is "[if ocelots are reflexive]They glance nervously back, as if they've done something wrong[otherwise]They glance back at you, give you a finger-point you're not cool enough to give back, then ignore you in the nicest possible way[end if].". "Ocelots are making gestures here that you'd look silly making[if ocelots are reflexive]. They do, too, with their stupid sunglasses[else]. But they don't, thanks to your help[end if]."
 
@@ -23266,7 +23266,7 @@ after fliptoing an animal:
 
 book Rote Moan Anteroom
 
-Rote Moan Anteroom is south of Bleary Barley. Anteroom is part of otters. Anteroom is innie. "[if whiners are visible]The noise here is just unbearable--whiners guarding the way south and not shutting up about it. You feel vaguely grateful they aren't guarding the way back north, too[else]This room is quieter now, just a north-south passage[end if]."
+Rote Moan Anteroom is south of Bleary Barley. Anteroom is a room in Otters. Anteroom is innie. "[if whiners are visible]The noise here is just unbearable--whiners guarding the way south and not shutting up about it. You feel vaguely grateful they aren't guarding the way back north, too[else]This room is quieter now, just a north-south passage[end if]."
 
 understand "near/moot" and "near moot" as anteroom when whiners are in lalaland.
 
@@ -23300,7 +23300,7 @@ to say pre-desc:
 		say "You rescued [if nounsolve is 4]all the[else if nounsolve is 1]one of the[else]a few[end if] animals here, but it's still eerie.[no line break]";
 		continue the action;
 
-Perverse Preserve is south of Rote Moan Anteroom. Perverse Preserve is part of otters. "[pre-desc]"
+Perverse Preserve is south of Rote Moan Anteroom. Perverse Preserve is a room in Otters. "[pre-desc]"
 
 A corona is a thing. the corona is fixed in place. description is "It's almost like a pair of dark scavenger's eyes. You can't locate its original light source--you try to cut it off, but you can't.". "A corona of light scurries about on the floor. It may have an extra c around its edge."
 
@@ -23480,7 +23480,7 @@ after printing the locale description for Inclosure when Inclosure is unvisited:
 	else:
 		say "'Serious issue, or...?'";
 
-Reclusion Inclosure is an innie room in otters. Reclusion Inclosure is west of Alcoves. "You feel as slowed here as you did on entering the barley field. Vast vats emit sour moisture over a prey pyre. The room is cluttered with a stocked stockade, a torpid tripod (slowing you down,) and entrances to a warpish warship and becharm-chamber. That nacht-chant could be coming from any of them, or maybe even the enerve-veneer present all around. You can leave to the east."
+Reclusion Inclosure is an innie room in Otters. Reclusion Inclosure is west of Alcoves. "You feel as slowed here as you did on entering the barley field. Vast vats emit sour moisture over a prey pyre. The room is cluttered with a stocked stockade, a torpid tripod (slowing you down,) and entrances to a warpish warship and becharm-chamber. That nacht-chant could be coming from any of them, or maybe even the enerve-veneer present all around. You can leave to the east."
 
 understand "nicer soul" as a mistake ("[one of]'O, nice slur!' Elvira counters. 'Cruel is ON!' Dang! She's come prepared with defense of her own too. I guess finding the redemption in all of us isn't the way to go, here[or]You don't want to hear 'Cruel is on!' again[stopping].") when player is in inclosure.
 
@@ -24920,8 +24920,6 @@ carry out demoing:
 	now right hand status line is "Poking Around";
 	the rule succeeds;
 
-Demo Dome is a region.
-
 chapter Peek Keep
 
 For printing a locale paragraph about a thing (called the item)	(this is the don't mention exhibits in room descriptions rule):
@@ -24975,7 +24973,7 @@ Flashed Ad Shelf	1
 
 chapter Evoc-Cove
 
-Evoc-Cove is east of peek keep. Evoc-cove is in Demo Dome. "A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want."
+Evoc-Cove is east of peek keep. Evoc-Cove is in Demo Dome. "A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want."
 
 check going in evoc-cove:
 	if noun is east or noun is north or noun is south:
@@ -25647,7 +25645,7 @@ definition: a thing (called hintcand) is hintrelevant:
 			decide yes;
 		decide no;
 	if hintcand is big-let:
-		if maze entry is visited:
+		if nowt town is visited:
 			decide yes;
 		decide no;
 	if hintcand is cler-scen:
@@ -27569,7 +27567,7 @@ index map with carven cavern mapped north of Largely All-Grey Gallery.
 
 [presto]
 index map with dirge ridge mapped west of stable.
-index map with maze entry mapped north of wickeder wire deck.
+index map with nowt town mapped north of wickeder wire deck.
 index map with phat path mapped north of grey gyre.
 index map with phat path mapped north of austerer.
 
@@ -27590,9 +27588,10 @@ index map with clangier clearing mapped east of swell wells.
 [demo dome]
 index map with sparse spares mapped south of peek keep.
 index map with ned's dens mapped north of shaven havens.
+index map with intel inlet mapped east of hows show.
 
 [otters]
-index map with perverse preserve mapped east of intel inlet.
+[index map with perverse preserve mapped east of intel inlet.
 
 [routes]
 index map with cripple clipper mapped north of filed field.
@@ -27609,9 +27608,11 @@ index map with cruelest lectures mapped north of strip of profits.
 
 [troves]
 index map with Bustle Sublet mapped north of cleric circle.
-index map with Boredom Bedroom mapped north of Bustle Sublet.
-index map with browse bowers mapped north of Boredom Bedroom.
-index map with econ cone mapped east of Boredom Bedroom.
+index map with boarded roadbed mapped north of Bustle Sublet.
+index map with Drain Nadir mapped north of boarded roadbed.
+index map with Boredom Bedroom mapped east of Drain Nadir.
+index map with browse bowers mapped east of Boredom Bedroom.
+index map with econ cone mapped south of Boredom Bedroom.
 index map with loather rathole mapped east of Bustle Sublet.
 index map with fiefco office mapped east of loather rathole.
 
@@ -27621,15 +27622,15 @@ index map with olde lode mapped east of posh hops shop.
 index map with hero's shore mapped east of olde lode.
 index map with fighter freight mapped east of hero's shore.
 index map with anger range mapped north of olde lode.
-index map with scum ant sanctum mapped north of old places.
 index map with tenfold teflon'd mapped north of horned hedron.
-index map with end den mapped north of lapsin' plains.
+index map with scum ant sanctum mapped east of tenfold teflon'd.
+index map with end den mapped east of scum ant sanctum.
 index map with uaah mapped east of end den.
 index map with handsome sand home mapped east of lapsin' plains.
 index map with lean lane mapped east of handsome sand home.
 
 [oh why not]
-index map with lalaland mapped east of lost lots.
+index map with lalaland mapped east of lost lots.]
 
 volume beta testing - not for release
 
