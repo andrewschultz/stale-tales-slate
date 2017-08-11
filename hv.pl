@@ -95,6 +95,8 @@ my $line;
 my $inTable = 0; my $currentTable = 0;
 my $found = 0;
 
+if ($#ARGV == -1) { usage(); exit; }
+
 for my $idx (0..$#ARGV)
 {
   my $this = lc($ARGV[$idx]);

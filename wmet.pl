@@ -33,8 +33,16 @@ my $inHere = 0;
 
 if (defined($ARGV[0]))
 {
-if ($ARGV[0] eq "-d") { $debug = 1; }
-if ($ARGV[0] eq "-l") { $launch = 1; }
+  my $shortarg = lc($ARGV[0]);
+  $shortarg =~ s/^-//;
+
+  if ($shortarg eq "e") { `$inFile`; exit(); }
+  elsif ($shortarg eq "d") { $debug = 1; }
+  elsif ($shortarg eq "l") { $launch = 1; }
+  else
+  {
+    print "USAGE\n================\n-e = edit data file\n-d=debug text\n-l=launch\n"; exit();
+  }
 }
 
 open(A, $inFile) || die ("Can't open $inFile.");
