@@ -120,7 +120,7 @@ Troves is a region. regtab of Troves is table of troves nudges. regana of Troves
 
 Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 39. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter and pulling lever]
 
-Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 34. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey]
+Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 35. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't]
 
 Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 48. min-score of towers is 25.
 [Necessary points:
@@ -314,6 +314,7 @@ after taking a hintpastry:
 	continue the action;
 
 when play begins (this is the disambig-pastry rule) :
+	rulesOn;
 	let tastee be 1;
 	repeat with HP running through hintpastries:
 		now deliciousness of HP is tastee;
@@ -1312,10 +1313,10 @@ carry out gotoing:
 		say "[if last-loc of noureg is unvisited]You haven't made it to that region, yet[else]That's in the wrong region[end if]." instead;
 	if progval of noun > progval of location of player:
 		say "You seem to be getting ahead of yourself. You shouldn't know about that, yet." instead;
-	if noun is a mazeroom:
+	if noun is a mazeroom or noun is Unwary Runway:
 		if volt maze is in lalaland:
-			say "You don't want to go back to or through the volt maze you solved." instead;
-		say "You'll have to walk through the mazeroom[if noun is r24], from L to V[end if]. Or, well, just solve the volt maze." instead;
+			say "You don't want to, and can't, go back to or through the volt maze you solved." instead;
+		say "You'll have to walk through Nowt Town and the Volt Maze[if noun is Unwary Runway], from L to V[end if]. Or, well, just solve it." instead;
 	if noun is dirge ridge and mrlp is presto: [PRESTO]
 		if Leo is dismissed:
 			post-wall-brunt;
@@ -1528,7 +1529,7 @@ persuasion rule for asking the plebe to try doing something:
 	say "The plebe stiffens further to attention. You are probably asking too nicely, and he's not used to that.";
 	persuasion fails;
 
-persuasion rule for asking a person to try doing something when player is in r24:
+persuasion rule for asking a person to try doing something when player is in Unwary Runway:
 	say "[random npcish person] shrugs. He's just there to help, by being himself.";
 	persuasion fails;
 
@@ -3904,7 +3905,9 @@ lalaland is a privately-named room. "[bug-report]"
 
 understand "ll/lalaland" as lalaland when debug-state is true.
 
-lll is an unsolved region. lalaland is in lll.
+lll is an unsolved region.
+
+lalaland is in lll.
 
 last-solved-region is a region that varies. last-solved-region is usually lll.
 
@@ -4990,6 +4993,8 @@ when play begins (this is the basic initialization rule):
 		if convo-holes is false:
 			say "No conversational holes.";
 	now die-trigger is a random number from 3 to 5; [DIE TO US in Lectures]
+	now r10 is mapped west of nowt town;
+	now nowt town is mapped east of r10;
 
 definition: a room (called myrm) is ominous:
 	if myrm is bleary barley and b-b is reflexive:
@@ -5440,7 +5445,7 @@ check scaning location of the player (this is the location scan rule):
 		try scaning wzup instead;
 	if volt maze is visible:
 		try scaning volt maze instead;
-	if player is in a mazeroom:
+	if player is in a mazeroom or player is in Unwary Runway:
 		say "The air scans [full-monty of volt maze]." instead;
 	if location of player is Posh Hops Shop: [start oyster]
 		say "The settler points towards the door and the trolls.";
@@ -5850,7 +5855,7 @@ carry out presto-hinting:
 			now spoilit is false;
 			all-say "Ugh. The crust feels like army rations. Not now." instead;
 		all-say "The popgun [if player has popgun]was[else]is[end if] all the seminar has to offer." instead;
-	if player is in a mazeroom or player is in nowt town:
+	if player is in a mazeroom or player is in nowt town or player is in Unwary Runway:
 		if spoilit is false:
 			all-say "[maze-solve]." instead;
 		try objhinting volt maze instead;
@@ -7780,7 +7785,7 @@ before smelling (this is the you can smell some stuff some places rule):
 		say "Perfumed. Dump-free." instead;
 	if mrlp is presto: [presto]
 		say "[if cur-score of presto is 0]Things turn to ash in your nose[else]You don't smell anything that'd make you say what you've needed to say in this area, which is a good thing[end if]." instead;
-	if location of player is a mazeroom:
+	if player is in a mazeroom or player is in Unwary Runway:
 		say "'You smell a gefilte and think 'get a life.'" instead;
 	if player is in shack and casserole is in shack:
 		say "That casserole doesn't smell very good, but it's not toxic." instead;
@@ -8934,8 +8939,8 @@ Rand	Rand	false	177448218	--	"darn"	"darn"	"You pretend to trip and tie your sho
 wzup	wzup	false	526524588	--	"whassup"	"whassup"	"'Pshaw, us?'[paragraph break]They're touched by your simple gesture and impressed with your command of slang. Nothing too presumptuous. You tell a white lie about how you know mystic arts and they could learn it too, so losing a fight to you isn't all that bad.[paragraph break]They hail leadership qualities you didn't know you have and vow to help you if you need it. 'Not bad to band,' you mumble. 'Want us? Aw, NUTS.'[paragraph break]They'll be following you around for a bit."
 ye hoop	censer	true	267453412	--	"pooh"	"pooh"	"[get-censer]."
 ye hoop	censer	true	517618773	--	"phooey"	"phooey"	"[get-censer]."
-walls	walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	"This space intentionally left blank."
-volt maze	volt maze	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	"You decide to congratulate yourself [if l-m is off-stage and m-l is off-stage]before you get[else]despite not getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, [paragraph break]You hear an imaginary yenta [if nowt town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if l-m is escanned]saying you should not have had to scan that nice man to figure the puzzle, asking for any due dayenu.[else if m-l is escanned]saying you should not have had to scan those nice men to figure the puzzle, asking for any due dayenu.[else if r24 is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if plaque is unexamined]wondering how you KNEW.[else]saying SHE'D never been that clever, SHE'D have to go through the maze.[end if] [if player was not in grey gyre]When you wake up back in the gyre, you see[else]There's now[end if] ether to the north.[paragraph break]You shake the yenta's blabber off--the important thing is, you figured the maze out, and you doubt anything else here will be nearly that difficult."
+walls	walls	false	354304876	--	"wont"	"wont" or "won't"	"[wont-maze]."
+volt maze	volt maze	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	"You decide to congratulate yourself [if l-m is off-stage and m-l is off-stage]before you get[else]despite not getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, [paragraph break]You hear an imaginary yenta [if nowt town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if l-m is escanned]saying you should not have had to scan that nice man to figure the puzzle, asking for any due dayenu.[else if m-l is escanned]saying you should not have had to scan those nice men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if plaque is unexamined]wondering how you KNEW.[else]saying SHE'D never been that clever, SHE'D have to go through the maze.[end if] [if player was not in grey gyre]When you wake up back in the gyre, you see[else]There's now[end if] ether to the north.[paragraph break]You shake the yenta's blabber off--the important thing is, you figured the maze out, and you doubt anything else here will be nearly that difficult."
 ether	ether	false	481328338	--	"there"	"there"	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!' [paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
 keys	keys	false	399372505	--	"syke"	"syke"	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow...ow...all!'"
 hogs	hogs	false	240508544	--	"gosh"	"gosh"	"You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
@@ -9180,6 +9185,13 @@ searcher	searcher	false	581009492	--	"research"	"research"	"You conduct thorough
 perp-priv	perp-priv	false	376061830	--	"prep"	"prep"	"You use the viewer and searcher in tandem and learn about self-presentation, being charismatic, etc. While part of it seems artificial and open to abuse, it's easier than figuring out anagrams, that's for sure."
 
 chapter auxiliary text and rules
+
+to say wont-maze:
+	if cur-score of presto is 1:
+		say "Why not take care of the big things first? And what better way to start than with an emphatic word? You remember when younger how you could say WON'T. And it works, here, too. The maze dissolved, leaving an ether to the north";
+		continue the action;
+	say "'While it's not quite formally an interjection, you remember how many interjections are bowdlerizations or shortenings of other word phrases. It's worth a try. The Internet itself has been responsible for a lot more sensible interjections than that. So, you yell, 'WON'T!' The maze melts and collapses.";
+	say "[line break]Perhaps you won't get full style points, but so what? It feels good to dispel a maze with one short word"
 
 to say trout-tut:
 	say "How to start... 'Branded nerd? Bad. Karate? A taker?' You show the trout how to paste a pest with some slick licks. As tutorer, you show him how to avoid the rote rut of torture. Most of what you say is a po['] combat boot camp, but he gives a trouty tryout, as a monkish moshnik with frail flair, and you give a kind dink to boost his confidence. Aunt Tuna clucks that she TOLD him that, and if he'd listened to HER when SHE said it instead of having a ton-not-fair fair--but it's as pleased as she's been in a while![paragraph break]";
@@ -14497,13 +14509,25 @@ instead of scaning plaque:
 instead of entering volt maze:
 	try going north.
 
+after fliptoing maze walls:
+	poss-d;
+	shuffle-nowt-town;
+	continue the action;
+
 after fliptoing volt maze:
+	min-up;
+	shuffle-nowt-town;
+	continue the action;
+
+to shuffle-nowt-town:
+	now volt maze is in lalaland;
+	now maze walls are in lalaland;
 	change north exit of Grey Gyre to Phat Path;
 	now ether is in Grey Gyre;
 	continue the action;
 
-before fliptoing volt maze:
-	if player is in a mazeroom:
+before fliptoing:
+	if player is in a mazeroom or player is in Unwary Runway:
 		move player to Grey Gyre, without printing a room description;
 
 section hump
@@ -16386,7 +16410,7 @@ l-m is a privately-named person. understand "lev matzo" and "lev/matzo" as l-m w
 
 to decide whether lev-first:
 	if m-l is not off-stage, decide no;
-	if l-m is in r24 or l-m is in lalaland, decide yes;
+	if l-m is in Unwary Runway or l-m is in lalaland, decide yes;
 	decide no;
 
 m-l is a privately-named person. understand "matzo lev" and "lev/matzo" as m-l when m-l is not off-stage. printed name of m-l is "Matzo Lev".
@@ -16411,15 +16435,16 @@ voltzap is a truth state that varies.
 
 symp-yet is a truth state that varies.
 
-check going nowhere in a mazeroom (this is the zaphint rule) :
-	now voltzap is true;
-	say "[one of]You walk into a wall, which goes ZVT. 'Lame-o,' you think, seeing red. Maybe that ZVT was a VZT[or]You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory[stopping]";
-	if number of npcish people > 0 and symp-yet is false:
-		say ". [random npcish person] cringes";
-		now symp-yet is true;
-	say "." instead;
+check going nowhere (this is the zaphint rule) :
+	if location of player is a mazeroom or location of player is Unwary Runway:
+		now voltzap is true;
+		say "[one of]You walk into a wall, which goes ZVT. 'Lame-o,' you think, seeing red. Maybe that ZVT was a VZT[or]You decide against touching a wall to see the (ZVT/VZT)/Lame-o routine and see red again at the memory[stopping]";
+		if number of npcish people > 0 and symp-yet is false:
+			say ". [random npcish person] cringes";
+			now symp-yet is true;
+		say "." instead;
 
-before going up in a mazeroom (this is the photopia reference rule) :
+before going up when location of player is a mazeroom or location of player is Unwary Runway (this is the photopia reference rule) :
 	say "You know, there was one really fun text adventure where this was the solution. I'd be plagiarizing if that was here. And if you haven't played it, I don't want to spoil it." instead;
 
 a direction can be viable.
@@ -16461,7 +16486,7 @@ after printing the locale description for r22 when voltzap is false and voltwarn
 the description of mazeroom is "You're in a maze room with no distinguishing features[exits-lead].";
 
 check going to nowt town when player was in Grey Gyre:
-	say "[one of]You hope the maze isn't too big. Then you hope there's a quick way around it--[if plaque is examined]the plaque seems to indicate there might be[else]but you feel an odd sense of guilt, as if ancestors lamented that you can't even take time to stop and read a simple plaque[end if][or]You re-enter, not knowing whether to feel bad you're [if r24 is visited]trying[else]not even patient enough[end if] to brute-force things and run through the maze or bad you want an easy way through[if voltzap is false and r24 is visited] or too scared to touch any walls[end if][if r24 is visited and plaque is unexamined] or too hasty to even read that plaque this time around[end if][stopping]."
+	say "[one of]You hope the maze isn't too big. Then you hope there's a quick way around it--[if plaque is examined]the plaque seems to indicate there might be[else]but you feel an odd sense of guilt, as if ancestors lamented that you can't even take time to stop and read a simple plaque[end if][or]You re-enter, not knowing whether to feel bad you're [if Unwary Runway is visited]trying[else]not even patient enough[end if] to brute-force things and run through the maze or bad you want an easy way through[if voltzap is false and Unwary Runway is visited] or too scared to touch any walls[end if][if Unwary Runway is visited and plaque is unexamined] or too hasty to even read that plaque this time around[end if][stopping]."
 
 the plaque is scenery in Grey Gyre. "VOLT MAZE[paragraph break]DESIGNED BY E-Z OL['] AV (TM).[paragraph break]Oy, this maze is meshuggenah--those without the chutzpah to congratulate themselves before entering it have no hope![paragraph break]The first two lines are in red."
 
@@ -16479,9 +16504,9 @@ understand "glib" as a mistake ("You'll need to be glib with something like g-li
 
 [is a mazeroom/a mazeroom is usually in presto]
 
-big-let is a privately-named backdrop. big-let is in r10,r00,r01,r02,r12,r22,r32,r33,r23,r24. printed name of big-let is "the big letter"
+big-let is a privately-named backdrop. big-let is in r10,r00,r01,r02,r12,r22,r32,r33,r23,Unwary Runway. printed name of big-let is "the big letter"
 
-the maze walls are a reflexive plural-named uncluing useless backdrop. the walls are in r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, nowt town, r21, r22, r23, r24, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
+the maze walls are a reflexive plural-named uncluing useless backdrop. the walls are in r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, nowt town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
 
 a-text of walls is "RYRYRRYR". b-text of walls is "RYRYRRYR". parse-text of walls is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -16510,9 +16535,11 @@ understand "big/letter r" and "letter/r" as big-let when player is in r22.
 understand "big/letter s" and "letter/s" as big-let when player is in r32.
 understand "big/letter t" and "letter/t" as big-let when player is in r33.
 understand "big/letter u" and "letter/u" as big-let when player is in r23.
-understand "big/letter v" and "letter/v" as big-let when player is in r24.
+understand "big/letter v" and "letter/v" as big-let when player is in Unwary Runway.
 
-r10 is a privately-named mazeroom in Presto. r10 is west of nowt town. "A big M is tiled into the floor here[exits-lead]."
+nowt-town-p is a privately-named room. it is in lll. description of nowt-town-p is "[bug-report]." [this is a small internal-map hack]
+
+r10 is a privately-named mazeroom in Presto. r10 is west of nowt-town-p. "A big M is tiled into the floor here[exits-lead]."
 
 r00 is a privately-named mazeroom in Presto. it is west of r10. "A big N is tiled into the floor here[exits-lead]."
 
@@ -16550,6 +16577,8 @@ r43 is a privately-named mazeroom in Presto. it is north of r42.
 
 r44 is a privately-named mazeroom in Presto. it is north of r43.
 
+r34 is a privately-named mazeroom in Presto. it is west of r44.
+
 r33 is a privately-named mazeroom in Presto. it is north of r32. "A big T is tiled into the floor here[exits-lead]."
 
 r23 is a privately-named mazeroom in Presto. it is west of r33. "A big U is tiled into the floor here[exits-lead]."
@@ -16560,11 +16589,7 @@ r14 is a privately-named mazeroom in Presto. it is north of r13.
 
 r04 is a privately-named mazeroom in Presto. it is west of r14.
 
-Unwary Runway is an innie room in Presto. printed name is "Unwary Runway". "A big V is tiled into the floor here. You can go back south, but wow, the maze exit seems to be just north[if l-m is off-stage and m-l is off-stage]![else], and maybe that riddle dreidl won't push you back this time!"
-
-understand "mzend" as r24 when debug-state is true.
-
-r34 is a privately-named mazeroom in Presto. it is west of r44.
+Unwary Runway is an innie room in Presto. it is north of r23. "A big V is tiled into the floor here. You can go back south, but ahead things narrow--it's a bit scary, and you could be ambushed. Maybe it's worth a try[if l-m is off-stage and m-l is off-stage]![else], and maybe that riddle dreidl won't push you back this time!"
 
 to say l-or-m:
 	say "[if l-m is visible][l-m][else][m-l][end if]";
@@ -16572,30 +16597,30 @@ to say l-or-m:
 to say zztrue:
 	now voltzap is true;
 
-check going south in r24:
-	if m-l is in r24 or l-m is in r24:
+check going south in Unwary Runway:
+	if m-l is in Unwary Runway or l-m is in Unwary Runway:
 		say "'If you go north, someone might relieve me. I'm kinda getting bored here.'";
 
-check going north in r24:
+check going north in Unwary Runway:
 	say "The exit! [if l-m is visible]'Shalom, ol['] sham' calls [l-or-m].[paragraph break][end if]You've mapped it out...and just as you are about to cross, [one of]a[or]that[stopping] giant spinning robot dreidl pushes you back to the start of the maze as it belts riddle after riddle. It spins back with a monotone 'OY VEY.' [if l-m is off-stage]You see someone coming from the north to check on the noise, but you can't get a really good look.[else][paragraph break][end if]";
 	say "[if voltzap is false]You find the walls really are electric--not too nasty, but bad enough, and you see red and say, with each ZVT(VZT?), Lame-o[zztrue].[else][one of]You manage to avoid the walls this time, but you doubt that dreidl's going away[or]There must be a better way through[stopping].";
 	if l-m is off-stage:
-		now l-m is in r24;
-	else if l-m is in r24:
+		now l-m is in Unwary Runway;
+	else if l-m is in Unwary Runway:
 		if l-m is cscanned:
 			say "[drei-you]see someone walk into view to replace Lev Matzo.";
-			now m-l is in r24;
+			now m-l is in Unwary Runway;
 			now l-m is in lalaland;
 		else:
 			say "[drei-you]see Lev Matzo throwing his hands up as if he wished he could have done more.";
-	else if m-l is in r24:
+	else if m-l is in Unwary Runway:
 		if m-l is cscanned:
 			say "[drei-you]see someone else walk into view to replace Matzo Lev.";
 			now m-l is in lalaland;
-			now Tom Alvez is in r24;
+			now Tom Alvez is in Unwary Runway;
 		else:
 			say "[drei-you]see Matzo Lev throwing his hands up as if he wished he could have done more.";
-	else if Tom Alvez is in r24:
+	else if Tom Alvez is in Unwary Runway:
 		say "[drei-you]hear Tom Alvez moan 'Wait! I don't have a replacement?!'";
 	go-back grey gyre;
 	the rule succeeds;
@@ -16603,11 +16628,11 @@ check going north in r24:
 to say drei-you:
 	say "[line break]As the dreidl chases you away, you "
 
-after scaning when player is in r24 (this is the new random guy in volt maze rule):
+after scaning when player is in Unwary Runway (this is the new random guy in volt maze rule):
 	d "[noun][if noun is cscanned] cscanned[end if][if noun is ncscanned] ncscanned[end if].";
 	if noun is not cscanned:
 		if noun is l-m:
-			say "That helped, but maybe cheat mode would be really useful. At eight letters for the right word, this volt maze is pretty tricky!";
+			say "That helped, but maybe cheat mode would be really useful. At eight letters for the 'best' word, this volt maze is pretty tricky!";
 		else:
 			say "That didn't show anything new. Maybe cheat mode would be better.";
 	continue the action;
@@ -25736,7 +25761,7 @@ carry out objhinting (this is the pick object to hint rule) :
 		say "The [noun] is a fruit. You can return it to Curtis." instead;
 	now ever-obj-hinted is true;
 	if noun is big-let:
-		all-say "[one of]It's kind of a hint[if r10 is unvisited], and you'll find more later in the maze[else if r24 is unvisited], and you've certainly seen a lot through the maze, which seems to end here[else], and they seem to be in alphabetical order[end if].[or]I've said a lot with that clue. If you've gotten through the maze, you'll know it's from L to V.[or]Maze, L to V, don't congratulate yourself?[or]MAZEL TOV.[cycling]" instead;
+		all-say "[one of]It's kind of a hint[if r10 is unvisited], and you'll find more later in the maze[else if Unwary Runway is unvisited], and you've certainly seen a lot through the maze, which seems to end here[else], and they seem to be in alphabetical order[end if].[or]I've said a lot with that clue. If you've gotten through the maze, you'll know it's from L to V.[or]Maze, L to V, don't congratulate yourself?[or]MAZEL TOV.[cycling]" instead;
 	if noun is question mark:
 		all-say "[one of]The question mark in the settler seems to give no information, but its ambiguity is actually a potentially huge help. The question mark only appears during cheat mode. It also usually occurs when you have a thing and a description that anagrams it. An example follows.[plus][or]Let's say you ran across SACRED CEDARS and got ??????. This looks completely unhelpful. But it is not![plus][or]The ? indicates the S and C give different readings, as do the A and E, etc. But that means one of them must be right.[plus][or]So we get SC/AE/CD/RA/ER/DS.[plus][or]There are actually only a few possibilities, here. You have S-C--D or C-D--S and -A-RE- or -E-AR-. Two of these are the original words, but there's SECARD and CADRES. So CADRES would be the word. Another example follows with an ESPRIT STRIPE[qmsp].[plus][or]Believe it or not, nearly everything falls out with the clue ?R??R?.[plus][or]The first letter is e/s, the second p/r, the third p/r, the fourth i/r, the fifth r/p/s, and the sixth is e/t.[plus][or]If letter 4 were r, #2 and 3 would both be p. So #4 is i. Also, #5 is r, p or t. If it were r or p, we'd have the same problem again. #5 is t. But #6 must be e or t, so it is e. #1 is e or s, so it must be s. That leaves SRPITE or SPRITE. Maybe it's a can of sprite, a pixel or a spirit. Either way, you have the answer.[minus][cycling]" instead;
 	if noun is cler-scen:
@@ -26201,7 +26226,7 @@ playbill	"[one of]Hm, the playbill mentions no song. Just the singer.[plus][or]M
 curst crust	"[one of]You'll say something reflexive if you eat the crust.[plus][or][if Grey Gyre is unvisited]The crust is useful in the PRESTO region.[else]Eating it gives you a hint what to say.[end if][minus][cycling]"	[start PRESTO hinting]
 volt maze	"[maze-solve]."	--	"MAZEL TOV"
 big l	"The big L tells you what letter the maze starts on."
-big-let	"The big letters tell you that the maze goes from L to [if r24 is visited]some later letter[else]V[end if]."
+big-let	"The big letters tell you that the maze goes from L to [if Unwary Runway is visited]some later letter[else]V[end if]."
 l-m	"You can scan Lev for hints. He's not much for conversation."	--	"MAZEL TOV"
 m-l	"You can scan Lev for hints. He's not much for conversation."	--	"MAZEL TOV"
 Tom Alvez	"You can scan Tom for hints. He's not much for conversation."	--	"MAZEL TOV"
@@ -26216,7 +26241,7 @@ red stump	--	star
 permadust
 hump	"[one of]Hm, you can't get over the hump.[plus][or]What's a good word before you give a bunch of effort?[plus][or]UMPH.[minus][cycling]"	--	"UMPH"
 plebe	"[one of]You need to get rid of that plebe.[plus][or][if player has star or player wears star]You've got something that will impress him[otherwise]You need to find something to impress the plebe--you may want to go visit the Burnt Brunt to the south[end if].[plus][or]What are plebes scared of? A good tongue lashing.[plus][or]The game blocks the worst profanities. But you've got a pretty general one.[plus][or]You can say BLEEP [if player has star or player wears star]now[otherwise]once[end if] you have the star.[minus][cycling]"	--	"BLEEP"
-Ye Hoop	"[one of]There are two ways to deal with the hoop, err, Ye Hoop.[plus][or]You sort of have to be impressed by the hoop, and say a little something to try harder, or say the heck with your possessions, which bog you down if you try to jump.[plus][or]You can say POOH to give your jumps a little boost.[minus][cycling]"	--	"POOH"
+Ye Hoop	"[one of]There are two ways to deal with the hoop, err, Ye Hoop.[plus][or]You sort of have to be impressed by the hoop, and say a little something to try harder, or say the heck with your possessions, which bog you down if you try to jump.[plus][or]You can say POOH to give your jumps a little boost, but you can do a bit better.[plus]What can YE HOOP anagram to?[minus][cycling]"	--	"POOH"
 Leo	"[if Leo is fightin][one of]You need to neutralize Leo.[plus][or]He charges at you like a bull.[plus][or]What do you exclaim to get out of the way of a bull?[plus][or]OLE![minus][cycling][else if Rand is fightin]Deal with Rand first.[else if Rand is washed up][wash-up][else if Rand is in hacks' shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not in lalaland]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"OLE"
 Rand	"[if Rand is fightin][one of]You need to neutralize Rand.[plus][or]Perhaps another feint can help you defeat Rand.[plus][or]What can you say to fake him out? A word of half-surrender.[plus][or]DARN![minus][cycling][else if Leo is fightin]Deal with Leo first.[else if Rand is washed up][wash-up][else if Rand is in hacks' shack]The sign provides a clue how to get rid of Leo and Rand so you can enter the shack.[else if ether is not in lalaland]You may need him for a fight.[else]He can't do much more, so time to find a place to say good-bye.[end if]"	--	"[if Rand is fightin]DARN[else]WHASSUP[end if]"
 wzup	"[wash-up]"	--	"WHASSUP"
@@ -27560,77 +27585,87 @@ This is the epilogue rule:
 
 volume mapping
 
-index map with Stable mapped west of study.
-index map with Highest Heights mapped east of study.
-index map with Largely All-Grey Gallery mapped north of study.
-index map with carven cavern mapped north of Largely All-Grey Gallery.
+[start regular]
 
-[presto]
-index map with dirge ridge mapped west of stable.
-index map with nowt town mapped north of wickeder wire deck.
-index map with phat path mapped north of grey gyre.
-index map with phat path mapped north of austerer.
+index map with highest heights mapped east of dusty study.
+index map with stable mapped west of dusty study.
+index map with gallery mapped north of dusty study.
+index map with carven cavern mapped north of gallery.
 
-[others]
-index map with rustic citrus mapped north of carven cavern.
-index map with scape space mapped north of clangier clearing.
-index map with Admit-Us Stadium mapped north of scape space.
+[start stores]
 
-[towers]
-index map with Topside Deposit mapped east of highest heights.
+index map with cruelest lectures mapped north of strip of profits.
+
+[start routes]
+
+index map with same mesa mapped west of strip of profits.
+index map with idle deli mapped north of same mesa.
+index map with cleric circle mapped west of idle deli.
+index map with adobe abode mapped south of cleric circle.
+index map with sun-spared underpass mapped south of adobe abode.
+index map with ripe pier mapped east of sun-spared underpass.
+index map with clipper cripple mapped east of ripe pier.
+
+[start troves]
+
+index map with fiefco office mapped north of cruelest lectures.
+index map with loather rathole mapped west of fiefco office.
+index map with bustle sublet mapped west of loather rathole.
+index map with boarded roadbed mapped north of bustle sublet.
+index map with drain nadir mapped north of boarded roadbed.
+index map with boredom bedroom mapped east of drain nadir.
+index map with econ cone mapped south of boredom bedroom.
+index map with browse bowers mapped east of boredom bedroom.
+
+[start towers]
+
+index map with topside deposit mapped east of highest heights.
+
+index map with topside deposit mapped west of loftier trefoil.
 index map with rawest waters mapped east of actionless coastlines.
 index map with mislit limits mapped north of rawest waters.
 
-[others]
+[start others]
+
+index map with filed field mapped south of cripple clipper.
 index map with scape space mapped north of clangier clearing.
-index map with clangier clearing mapped east of swell wells.
+index map with stadium mapped north of scape space.
 
-[demo dome]
-index map with sparse spares mapped south of peek keep.
-index map with ned's dens mapped north of shaven havens.
-index map with intel inlet mapped east of hows show.
+[start oyster]
 
-[otters]
-[index map with perverse preserve mapped east of intel inlet.
-
-[routes]
-index map with cripple clipper mapped north of filed field.
-index map with ripe pier mapped west of cripple clipper.
-index map with underpass mapped west of ripe pier.
-index map with adobe abode mapped north of underpass.
-index map with cleric circle mapped north of adobe abode.
-index map with idle deli mapped east of cleric circle.
-index map with same mesa mapped south of idle deli.
-
-[stores]
-index map with strip of profits mapped north of cripple clipper.
-index map with cruelest lectures mapped north of strip of profits.
-
-[troves]
-index map with Bustle Sublet mapped north of cleric circle.
-index map with boarded roadbed mapped north of Bustle Sublet.
-index map with Drain Nadir mapped north of boarded roadbed.
-index map with Boredom Bedroom mapped east of Drain Nadir.
-index map with browse bowers mapped east of Boredom Bedroom.
-index map with econ cone mapped south of Boredom Bedroom.
-index map with loather rathole mapped east of Bustle Sublet.
-index map with fiefco office mapped east of loather rathole.
-
-[oyster]
 index map with posh hops shop mapped east of cruelest lectures.
 index map with olde lode mapped east of posh hops shop.
 index map with hero's shore mapped east of olde lode.
 index map with fighter freight mapped east of hero's shore.
-index map with anger range mapped north of olde lode.
-index map with tenfold teflon'd mapped north of horned hedron.
-index map with scum ant sanctum mapped east of tenfold teflon'd.
-index map with end den mapped east of scum ant sanctum.
-index map with uaah mapped east of end den.
+index map with achers' arches mapped north of posh hops shop.
 index map with handsome sand home mapped east of lapsin' plains.
 index map with lean lane mapped east of handsome sand home.
+index map with tenfold mapped north of horned hedron.
+index map with scum ant sanctum mapped east of tenfold.
+index map with end den mapped east of scum ant sanctum.
+index map with UAAH mapped east of end den.
 
-[oh why not]
-index map with lalaland mapped east of lost lots.]
+[start otters]
+
+index map with Reclusion Inclosure mapped east of Anger Range.
+
+[start towers]
+
+index map with Shaven Havens mapped south of Ned's Dens.
+
+[start presto]
+
+index map with Hacks' Shack mapped south of Underpass.
+index map with Austerer Treasure mapped south of Phat Path.
+index map with r44 mapped west of Hacks' Shack.
+
+[start demo dome]
+
+index map with ned's dens mapped east of scape space.
+index map with intel inlet mapped north of evoc-cove.
+index map with sparse spares mapped south of peek keep.
+
+index map with lalaland mapped east of lost lots.
 
 volume beta testing - not for release
 

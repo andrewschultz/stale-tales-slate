@@ -19193,7 +19193,6 @@ blurb
 "death is staid, eh?" []
 "desiring's rigidness."
 "dodge a goaded ego-add."
-"Gad, mo['] Dogma? Go mad."
 "doings in God's song I'd sing. Do dig, son!"
 "Donatism...saintdom."
 "eclat? Pique? Quiet place."
@@ -19209,6 +19208,7 @@ blurb
 "famished, made fish."
 "Fish at Faiths? Ah, fits." []
 "Forgiveness: serving foes. Sin fevers go."
+"Gad, mo['] Dogma? Go mad."
 "get meaner?! AGREEMENT." []
 "get rid of ego. Drift." []
 "get vicious? Scout, I give."

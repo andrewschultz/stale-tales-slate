@@ -315,11 +315,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "plaque"	454785149	--	plaque	--	"[mz-chg]."
 "entry"	507506690	--	plaque	--	"[mz-chg]."
 "mazeentry"	824545388	--	plaque	--	"[mz-chg]."
-"bigl"	149825292	maze entry	--	--	"The big L may be some sort of clue, but you can't do anything with it."
+"bigl"	149825292	nowt town	--	--	"The big L may be some sort of clue, but you can't do anything with it."
 "mazeltov"		655479952	--	--	maze-gone rule	"The volt maze is gone. Re-forming it would not be fun."
 "ether"	481328338	--	--	ether-gone rule	"The ether is gone. You can just go [if phat path is visited]back [end if]north."
-"mazeroom"	615142808	--	--	in-mazeroom rule	"[if player is in maze entry]This is just the entry. You may want to tackle the whole maze[else]You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle[end if]."
-"dreidl"	353994775	r24	--	--	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
+"mazeroom"	615142808	--	--	in-mazeroom rule	"[if player is in Nowt Town]This is just the entry. You may want to tackle the whole maze[else]You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle[end if]."
+"dreidl"	353994775	Unwary Runway	--	--	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
 "decorative"	712778774	--	decorative star	--	"[if player wears star]The star's snazzy enough as-is[else]You consider some over-long epithet to get the star, but no, it's gotta be something quick. Visceral. Not necessarily rude[end if]."
 "live"	333777614	dirge ridge	--	--	"The vile veil is impassive. It--kind of protects you, actually."
 "camo"	159621133	marines seminar	--	--	"[ca-co]."
@@ -346,7 +346,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bigs"	192285419	r32	--	--	"[just-letter]."
 "bigt"	199121471	r33	--	--	"[just-letter]."
 "bigu"	201117260	r23	--	--	"[just-letter]."
-"bigv"	203176273	r24	--	--	"[just-letter]."
+"bigv"	203176273	Unwary Runway	--	--	"[just-letter]."
 "whasup"	430250622	--	--	Rand-sad rule	"Maybe something like that'd work with just one washup. But there are two."
 "leonard"	433420743	--	--	Rand-sad rule	"They want to be together, but that's a bit much. Try fixing what they're complaining about, calming their fears."
 "popgun"	443897512	--	popgun	--	"[boing-clue]."
@@ -1445,7 +1445,7 @@ to say boor-grub:
 section presto nudges
 
 this is the in-mazeroom rule:
-	if location of player is mazeroom or location of player is maze entry:
+	if location of player is mazeroom or location of player is Nowt Town:
 		the rule succeeds;
 	the rule fails;
 
