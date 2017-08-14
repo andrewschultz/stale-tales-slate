@@ -314,7 +314,6 @@ after taking a hintpastry:
 	continue the action;
 
 when play begins (this is the disambig-pastry rule) :
-	rulesOn;
 	let tastee be 1;
 	repeat with HP running through hintpastries:
 		now deliciousness of HP is tastee;
@@ -8767,7 +8766,9 @@ carry out fliptoing:
 					two-up;
 				else if the-from entry is not part of the diorama:
 					reg-inc;
-			if the-from entry is vanishing and the-from entry is the-to entry:	[this should work unless you flip an item twice and it vanishes 2nd time. Check.]
+			if the-from entry is a backdrop:
+				remove the-from entry from play;
+			else if the-from entry is vanishing and the-from entry is the-to entry:	[this should work unless you flip an item twice and it vanishes 2nd time. Check.]
 				now the-from entry is in lalaland;
 			if taked entry is true or player has the-from entry:
 				if the-from entry is not ruby:
@@ -8939,8 +8940,8 @@ Rand	Rand	false	177448218	--	"darn"	"darn"	"You pretend to trip and tie your sho
 wzup	wzup	false	526524588	--	"whassup"	"whassup"	"'Pshaw, us?'[paragraph break]They're touched by your simple gesture and impressed with your command of slang. Nothing too presumptuous. You tell a white lie about how you know mystic arts and they could learn it too, so losing a fight to you isn't all that bad.[paragraph break]They hail leadership qualities you didn't know you have and vow to help you if you need it. 'Not bad to band,' you mumble. 'Want us? Aw, NUTS.'[paragraph break]They'll be following you around for a bit."
 ye hoop	censer	true	267453412	--	"pooh"	"pooh"	"[get-censer]."
 ye hoop	censer	true	517618773	--	"phooey"	"phooey"	"[get-censer]."
-walls	walls	false	354304876	--	"wont"	"wont" or "won't"	"[wont-maze]."
-volt maze	volt maze	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	"You decide to congratulate yourself [if l-m is off-stage and m-l is off-stage]before you get[else]despite not getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, [paragraph break]You hear an imaginary yenta [if nowt town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if l-m is escanned]saying you should not have had to scan that nice man to figure the puzzle, asking for any due dayenu.[else if m-l is escanned]saying you should not have had to scan those nice men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if plaque is unexamined]wondering how you KNEW.[else]saying SHE'D never been that clever, SHE'D have to go through the maze.[end if] [if player was not in grey gyre]When you wake up back in the gyre, you see[else]There's now[end if] ether to the north.[paragraph break]You shake the yenta's blabber off--the important thing is, you figured the maze out, and you doubt anything else here will be nearly that difficult."
+n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	"[wont-maze]."
+maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	"You decide to congratulate yourself [if l-m is off-stage and m-l is off-stage]before you get[else]despite not getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, [paragraph break]You hear someone [if nowt town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if l-m is escanned]saying you should not have had to scan that nice man to figure the puzzle, asking for any due dayenu.[else if m-l is escanned]saying you should not have had to scan those nice men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if plaque is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
 ether	ether	false	481328338	--	"there"	"there"	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!' [paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
 keys	keys	false	399372505	--	"syke"	"syke"	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow...ow...all!'"
 hogs	hogs	false	240508544	--	"gosh"	"gosh"	"You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
@@ -14453,6 +14454,10 @@ check entering ether:
 
 a-text of ether is "RRYRY". b-text of ether is "RRYRY". parse-text of ether is "x[sp]x[sp]-[sp]x[sp]-". ether is cheat-spoilable.
 
+section maze entry zany meter
+
+the maze entry zany meter is scenery in Grey Gyre. "It's like one of those things you hit with a carnival hammer, but you don't have any hammer. Bunched at the bottom are three bummer options.[paragraph break]0: be too scared to enter the maze[line break]0:run through the maze[line break]0:run through the maze again[line break]1: ignore and reject Nowt Town[line break]2: (written in red) congratulate yourself for solving the E-Z Ol' Av(TM) Volt Maze."
+
 chapter lamb
 
 The lamb is a vanishing LLPish animal in Grey Gyre. "A poor lost lamb seems stuck here, too frightened to move."
@@ -14520,8 +14525,10 @@ after fliptoing volt maze:
 	continue the action;
 
 to shuffle-nowt-town:
-	now volt maze is in lalaland;
-	now maze walls are in lalaland;
+	remove maze entry zany meter from play;
+	remove volt maze from play;
+	remove maze walls from play;
+	remove n-t-air from play;
 	change north exit of Grey Gyre to Phat Path;
 	now ether is in Grey Gyre;
 	continue the action;
@@ -16506,14 +16513,16 @@ understand "glib" as a mistake ("You'll need to be glib with something like g-li
 
 big-let is a privately-named backdrop. big-let is in r10,r00,r01,r02,r12,r22,r32,r33,r23,Unwary Runway. printed name of big-let is "the big letter"
 
-the maze walls are a reflexive plural-named uncluing useless backdrop. the walls are in r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, nowt town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
+the maze walls are a reflexive plural-named uncluing useless backdrop. the walls are in grey gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, nowt town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
+
+n-t-air is a reflexive plural-named privately-named backdrop. n-t-air is in grey gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, nowt town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
 
 a-text of walls is "RYRYRRYR". b-text of walls is "RYRYRRYR". parse-text of walls is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 check fliptoing walls:
-	say "You figure it would be a very good idea to move out of the maze before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.";
-	move player to Grey Gyre, without printing a room description;
-	try fliptoing volt maze instead;
+	if player is not in Grey Gyre:
+		say "You figure it would be a very good idea to move out of the maze before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.";
+		move player to Grey Gyre, without printing a room description;
 
 description of walls is "This is a volt maze, but they don't seem juiced enough to zap you good. Running into them might be a useful lesson in character building. Or an outright clue."
 

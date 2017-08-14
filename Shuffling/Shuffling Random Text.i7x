@@ -1523,7 +1523,7 @@ blurb
 "Stale-Dawn Wasteland"
 "Stencher Trenches"
 "the Stepanski Snakepits"
-"stiff tiffs"
+"Bad-Ego Bodega"
 "Stockier Rock Site"
 "Stop-Win Snow-Tip"
 "Streaming-Mist Range"

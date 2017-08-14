@@ -292,13 +292,24 @@ Say WHASSUP to get in their good graces.
 ?Are they going to follow me everywhere?
 Well, until you get close to the end.
 And not into the volt maze. You have to go there yourself.
->>VOLT MAZE
+>>NOWT TOWN/VOLT MAZE
 ?Do I need to go through the volt maze? How many times?
-No. You need to figure a word. This is a tricky one, but there are a lot of clues.
+No. You need to figure a word or phrase. There are two. The easy and hard way.
+The maze entry zany meter should give some clues.
+The zany-1 and zany-2 ways get toy through
+?What's the easy way?
+Nowt Town can be dispelled with a specific word.
+It's not strictly a common interjection, but interjections are used to show intense emotion. Many interjections were once one word, or two words squashed together.
+In this case, you don't want to go through the maze, and you're not going to.
+WONT.
+?What's the hard way?
+This is a tricky one, but there are a lot of clues.
 Touching the walls or reading E-Z Ol' Av will give a clue.
 Scanning the fellows at the end helps, too. There are three. When you scan the first two with cheats on, a new one will appear next time through.
-There should be some clues about Yiddish language.
+There should be some clues about Yiddish language or phrases.
 You can say MAZEL TOV at any time.
+?Is there any advantage to the hard way?
+You get an extra point, if you're interested in that sort of thing.
 >>PHAT PATH
 ?How do I deal with the hogs?
 You can annoy them or get their keys.
