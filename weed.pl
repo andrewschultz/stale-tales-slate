@@ -129,17 +129,17 @@ while ($count <= $#ARGV)
   for ($a)
   {
   / / && do { $word = $a; die(cromstring($word, 1)); $count++; next; };
-  /^-?b/ && do { $upBadLimit = $b; $count++; next; };
-  /^-?p/ && do { $upPosLimit = $b; $count++; next; };
-  /^-f/ && do { $flipIt = 1; $count++; next; };
-  /^-g/ && do { $read2nd = 1; $count++; next; };
-  /^-l/ && do { $launch = 1; $count++; next; };
-  /^-!/ && do { $remains = 1; $count++; next; };
-  /^-n/ && do { chdir("c:/writing/dict/nightly"); next; };
-  /^-w/ && do { $weirdLine = $b; $notWeirdYet = 1; $count++; next; };
-  /^(-?)(r|ro|roi)/ && do { @weedDir = (@weedDir, "roiling"); $count++; next; };
-  /^(-s|s|-sa|sa)$/ && do { @weedDir = (@weedDir, "shuffling"); $count++; next; };
-  /^-?2/ && do { @weedDir = (@weedDir, "shuffling", "roiling"); $count++; next; };
+  /^-?b$/ && do { $upBadLimit = $b; $count++; next; };
+  /^-?p$/ && do { $upPosLimit = $b; $count++; next; };
+  /^-?f$/ && do { $flipIt = 1; $count++; next; };
+  /^-?g$/ && do { $read2nd = 1; $count++; next; };
+  /^-?l$/ && do { $launch = 1; $count++; next; };
+  /^-?!$/ && do { $remains = 1; $count++; next; };
+  /^-?n$/ && do { chdir("c:/writing/dict/nightly"); next; };
+  /^-?w$/ && do { $weirdLine = $b; $notWeirdYet = 1; $count++; next; };
+  /^-?(r|ro|roi)$/ && do { @weedDir = (@weedDir, "roiling"); $count++; next; };
+  /^-?(s|sa)$/ && do { @weedDir = (@weedDir, "shuffling"); $count++; next; };
+  /^-?2$/ && do { @weedDir = (@weedDir, "shuffling", "roiling"); $count++; next; };
   usage();
   }
 }

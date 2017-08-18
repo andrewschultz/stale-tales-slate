@@ -100,22 +100,25 @@ if ($#ARGV == -1) { usage(); exit; }
 for my $idx (0..$#ARGV)
 {
   my $this = lc($ARGV[$idx]);
-  if ($this =~ /^-?[e!]$/) { $cmd = "start \"\" \"C:/Program Files (x86)/Notepad++/notepad++.exe\" c:/writing/dict/hv.pl"; `$cmd`; exit; }
-  if ($this =~ /^-?[o]$/) { $cmd = "start \"\" \"C:/Program Files (x86)/Notepad++/notepad++.exe\" c:/writing/dict/hv.txt"; `$cmd`; exit; }
-  if ($this =~ /^-?(c|cl|clean)$/) { cleanUp(); exit; }
-  if ($this =~ /-r[a-z]/) { $region = $regHash{$this}; if (!$region) { $region = "myreg"; } $rm = $rmHash{$this}; if (!$rm) { $rm = "myrm"; } next; }
-  if ($this =~ /-p/) { $printIfThere = 1; next; }
-  if ($this =~ /[0-9]/) { wordit($this); next; }
-#  if ($this =~ /-o/) { $myRegion = $this; $myRegion =~ s/^-o//g; if ($myRegion eq "") { die("Need to munge the region with -o."); } next; } # deprecated
-  if ($this =~ /-ff/) { $openPost = 1; $forcePost = 1; next; }
-  if ($this =~ /-f/) { $openPost = 1; next; }
-  if ($this =~ /-s/) { $doShuf = 1; $doRoil = 0; next; }
-  if ($this =~ /-r/) { $doShuf = 0; $doRoil = 1; next; }
-  if ($this =~ /-m/) { matchHash("shuffling"); matchHash("roiling"); exit; }
-  if ($this =~ /\//) { $tabString =$this; $tabString =~ s/\//\t/g; $tabString =~ s/_/ /g; next; }
-  if ($this =~ /^-?\?/) { usage(); exit; }
+  for ($this)
+  {
+  /^-?[e!]$/ && do { $cmd = "start \"\" \"C:/Program Files (x86)/Notepad++/notepad++.exe\" c:/writing/dict/hv.pl"; `$cmd`; exit; }
+  /^-?[o]$/ && do { $cmd = "start \"\" \"C:/Program Files (x86)/Notepad++/notepad++.exe\" c:/writing/dict/hv.txt"; `$cmd`; exit; }
+  /^-?(c|cl|clean)$/ && do { cleanUp(); exit; }
+  /^-?r[a-z]$/ && do { $region = $regHash{$this}; if (!$region) { $region = "myreg"; } $rm = $rmHash{$this}; if (!$rm) { $rm = "myrm"; } next; }
+  /^-?p$/ && do { $printIfThere = 1; next; }
+  /^[0-9]+$/ && do { wordit($this); next; }
+#  /-o/ && do { $myRegion = $this; $myRegion =~ s/^-o//g; if ($myRegion eq "") { die("Need to munge the region with -o."); } next; } # deprecated
+  /^-?ff$/ && do { $openPost = 1; $forcePost = 1; next; }
+  /^-?f$/ && do { $openPost = 1; next; }
+  /^-?s$/ && do { $doShuf = 1; $doRoil = 0; next; }
+  /^-?r$/ && do { $doShuf = 0; $doRoil = 1; next; }
+  /^-?m$/ && do { matchHash("shuffling"); matchHash("roiling"); exit; }
+  /\// && do { $tabString =$this; $tabString =~ s/\//\t/g; $tabString =~ s/_/ /g; next; }
+  /^-?\?$/ && do { usage(); exit; }
 #print "$idx $this\n";
-if ($this eq "-t") { print B "TEMPLATE string hashval region room? whatseen? rule? gametext:\n"; next; }
+  /^-?t$/ && do { print B "TEMPLATE string hashval region room? whatseen? rule? gametext:\n"; next; };
+  }
 
 $tabString = "$rm\t--\t--";
 

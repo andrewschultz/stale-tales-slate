@@ -37,19 +37,19 @@ while ($count <= $#ARGV)
   $b = $ARGV[$count+1];
   for ($a)
   {
-  /^-a$/ && do { `$anno`; exit; };
-  /^-t$/ && do { noteCheck(); exit; };
-  /^-ma$/ && do { $maxAn = $b; $count += 2; next; };
-  /^-nn$/ && do { $checkNames = 0; $count++; next; };
-  /^-cn$/ && do { $checkNames = 1; $count++; next; };
-  /^-nc$/ && do { $checkAfter = 0; $count++; next; };
-  /^-c$/ && do { $checkAfter = 1; $count++; next; };
-  /^-np$/ && do { $printTimer = 0; $count++; next; };
-  /^-p$/ && do { $printTimer = 1; $count++; next; };
-  /^-f$/ && do { $toFile = 1; $count++; next; };
-  /^-r$/ && do { my @mma = split(/,/, $b); $minWords = $mma[0]; $maxWords = $mma[1]; $count++; next; };
-   /^-m$/ && do { $maxWords = $b; $count += 2; next; };
-   /^-mm$/ && do { $minWords = $maxWords = $b; $count += 2; next; };
+  /^-?a$/ && do { `$anno`; exit; };
+  /^-?t$/ && do { noteCheck(); exit; };
+  /^-?ma$/ && do { $maxAn = $b; $count += 2; next; };
+  /^-?nn$/ && do { $checkNames = 0; $count++; next; };
+  /^-?cn$/ && do { $checkNames = 1; $count++; next; };
+  /^-?nc$/ && do { $checkAfter = 0; $count++; next; };
+  /^-?c$/ && do { $checkAfter = 1; $count++; next; };
+  /^-?np$/ && do { $printTimer = 0; $count++; next; };
+  /^-?p$/ && do { $printTimer = 1; $count++; next; };
+  /^-?f$/ && do { $toFile = 1; $count++; next; };
+  /^-?r$/ && do { my @mma = split(/,/, $b); $minWords = $mma[0]; $maxWords = $mma[1]; $count++; next; };
+   /^-?m$/ && do { $maxWords = $b; $count += 2; next; };
+   /^-?mm$/ && do { $minWords = $maxWords = $b; $count += 2; next; };
    /^[a-z]/ && do { if ($cmdToAn) { die("2 possible words, bailing.\n"); } else { $cmdToAn = $a; $count++; next; } };
    usage();
   }

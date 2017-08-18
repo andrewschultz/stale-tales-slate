@@ -45,17 +45,17 @@ while ($cur <= $#ARGV)
 {
   for ($ARGV[$cur])
   {
-  #/-a/ && do { $lookDif = 1; $cur++; next; };
+  #/^-?a$/ && do { $lookDif = 1; $cur++; next; };
   #the above is an option I don't know what it's for
-  /-f/ && do { $fileName = $ARGV[$cur+1]; $cur += 2; next; };
-  /^-y$/ && do { $fileName = "c:/writing/dict/reds.txt"; $settler = 1; $cur++; next; };
-  /^-n$/ && do { $fileName = "c:/writing/dict/reds.txt"; $settler = 0; $cur++; next; };
-  /^-l$/ && do { $maxLetters = $ARGV[$cur+1]; $cur += 2; next; };
-  /^-m$/ && do { $myMax = $ARGV[$cur+1]; $cur += 2; next; };
-  /^-np$/ && do { $showPoss = 0; $cur++; next; };
-  /^-nr$/ && do { $showRemain = 0; $cur++; next; };
-  /^-\?$/ && do { usage(); exit(); };
-  /\./ && do { print "Period means file name to search, not wild card. Use , for wild card.\n"; $fileName = $ARGV[$cur]; $cur++; next; };
+  /^-?f$/ && do { $fileName = $ARGV[$cur+1]; $cur += 2; next; };
+  /^-?y$/ && do { $fileName = "c:/writing/dict/reds.txt"; $settler = 1; $cur++; next; };
+  /^-?n$/ && do { $fileName = "c:/writing/dict/reds.txt"; $settler = 0; $cur++; next; };
+  /^-?l$/ && do { $maxLetters = $ARGV[$cur+1]; $cur += 2; next; };
+  /^-?m$/ && do { $myMax = $ARGV[$cur+1]; $cur += 2; next; };
+  /^-?np$/ && do { $showPoss = 0; $cur++; next; };
+  /^-?nr$/ && do { $showRemain = 0; $cur++; next; };
+  /^-?\?$/ && do { usage(); exit(); };
+  /\./ && do { print "Just to check, period means file name to search, not wild card. Use comma (,) for wild card.\n"; $fileName = $ARGV[$cur]; $cur++; next; };
   /^[a-z]/ && do { if ($firstString eq "") { $firstString = $cur; } $cur++; next; };
   $cur = $#ARGV + 1;
   }

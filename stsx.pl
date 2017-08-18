@@ -35,8 +35,8 @@ while ($count <= $#ARGV)
   $line = @ARGV[$count];
   for ($line)
   {
-  /^-d/ && do { $debug = 1; $count++; next; };
-  /^-n/ && do { $runTableSort = 0; $count++; next; };
+  /^-?d$/ && do { $debug = 1; $count++; next; };
+  /^-?n$/ && do { $runTableSort = 0; $count++; next; };
   usage();
   }
 

@@ -69,36 +69,36 @@ while (@ARGV[$count])
 
   for ($a)
   {
-  /^-x[0-9]/i && do { $exclude = 1; $x = $a; $x =~ s/^-x//g; $x =~ s/[^0-9]//g; @y = split(//, $x); for (@y) { if ($_ > 0) { @doable[$_] = 0; } } $count++; next; }; #eXclude
-  /^-oo[0-9]/i && do { $onlyNext = 1; $x = $a; $x =~ s/^-oo//g; $x =~ s/[^0-9]//g; @y = split(//, $x); for (@doable) { $_ = 0; }; for (@y) { if ($_ >= 0) { @doable[$_] = 1; } } $count++; next; }; #only
-  /^-o[0-9]/i && do { $onlies = 1; $x = $a; $x =~ s/^-o//g; $x =~ s/[^0-9]//g; @y = split(//, $x); for (@doable) { $_ = 0; }; for (@y) { if ($_ >= 0) { @doable[$_] = 1; } } $count++; next; }; #only
+  /^-?x[0-9]/i && do { $exclude = 1; $x = $a; $x =~ s/^-x//g; $x =~ s/[^0-9]//g; @y = split(//, $x); for (@y) { if ($_ > 0) { @doable[$_] = 0; } } $count++; next; }; #eXclude
+  /^-?oo[0-9]/i && do { $onlyNext = 1; $x = $a; $x =~ s/^-oo//g; $x =~ s/[^0-9]//g; @y = split(//, $x); for (@doable) { $_ = 0; }; for (@y) { if ($_ >= 0) { @doable[$_] = 1; } } $count++; next; }; #only
+  /^-?o[0-9]/i && do { $onlies = 1; $x = $a; $x =~ s/^-o//g; $x =~ s/[^0-9]//g; @y = split(//, $x); for (@doable) { $_ = 0; }; for (@y) { if ($_ >= 0) { @doable[$_] = 1; } } $count++; next; }; #only
   /^-?max$/i && do { $maxVal = $b; $count+= 2; next; }; #maximum # shown in lists
   /^-?min$/i && do { $minVal = $b; $count+= 2; next; }; #maximum # shown in lists
   /^-?g$/i && do { $calcGeom = 1; $count++; next; }; #calculate geometric mean
   /^-?g$/i && do { $calcGeom = 1; $count++; next; }; #calculate geometric mean
   /^-?gp$/i && do { $calcGeomPlus = $calcGeom = 1; $count++; next; }; #calculate geometric mean plus
-  /^-pr$/i && do { $procReg = 1; $count++; next; }; #add extra besides ARO/SA
-  /^-p$/i && do { @dirs = (@dirs, "./story.ni"); $count++; next; }; #add extra besides ARO/SA
-  /^-t?n$/i && do { $alfy = 1; $count++; next; }; #show sorted by table name
-  /^-dbs$/i && do { @dirs = ("c:/users/dropbox/andrew/sa/sa.ni"); $count++; next; }; #dropbox shuffling
-  /^-dbr$/i && do { @dirs = ("c:/users/dropbox/andrew/roil/roil.ni"); $count++; next; }; #dropbox roiling
-  /^-a$/i && do { $average = 1; $count++; next; }; #show averages
-  /^-as$/i && do { $average = 1; $sortbyaverage = 1; if ($a =~ /aS/) { $sortbyaverage = -1; } $count++; next; }; #show averages
+  /^-?pr$/i && do { $procReg = 1; $count++; next; }; #add extra besides ARO/SA
+  /^-?p$/i && do { @dirs = (@dirs, "./story.ni"); $count++; next; }; #add extra besides ARO/SA
+  /^-?t?n$/i && do { $alfy = 1; $count++; next; }; #show sorted by table name
+  /^-?dbs$/i && do { @dirs = ("c:/users/dropbox/andrew/sa/sa.ni"); $count++; next; }; #dropbox shuffling
+  /^-?dbr$/i && do { @dirs = ("c:/users/dropbox/andrew/roil/roil.ni"); $count++; next; }; #dropbox roiling
+  /^-?a$/i && do { $average = 1; $count++; next; }; #show averages
+  /^-?as$/i && do { $average = 1; $sortbyaverage = 1; if ($a =~ /aS/) { $sortbyaverage = -1; } $count++; next; }; #show averages
   /^-?cg$/i && do { $countGenders = 1; $count++; next; }; #count genders in total
-  /^-du$/i && do { $downup = 1; $count++; next; }; # reverse order arrays in (default = most first)
+  /^-?du$/i && do { $downup = 1; $count++; next; }; # reverse order arrays in (default = most first)
   /^-?d$/i && do { `c:/writing/dict/lov.txt`; exit; }; # open the data file
-  /^-ud$/i && do { $downup = 0; $count++; next; }; # reverse order arrays in
-  /^-f$/i && do { $fileName = $b; $count += 2; next; }; # define new file name
+  /^-?ud$/i && do { $downup = 0; $count++; next; }; # reverse order arrays in
+  /^-?f$/i && do { $fileName = $b; $count += 2; next; }; # define new file name
   /^-?an$/i && do { $ascend = 1; $count++; next; }; #whether list numbers ascend
   /^-?dn$/i && do { $ascend = 0; $count++; next; }; #whether list numbers ascend
   /^-?gy/i && do { $gender = 1; $count++; next; }; #gender-ifs counted in character count
   /^-?gn/i && do { $gender = 0; $count++; next; }; #gender-ifs not counted in character count
-  /^-e$/i && do { $expected = 2; $count++; next; }; #show expected Benford-values
-  /^-eh$/i && do { $expected = 1; $count++; next; }; #show expected Benford-half-values
-  /^-rv/i && do { $warning .= "RV deprecated, use DU/UD instead.\n"; $count++; next; }; #deprecated option
+  /^-?e$/i && do { $expected = 2; $count++; next; }; #show expected Benford-values
+  /^-?eh$/i && do { $expected = 1; $count++; next; }; #show expected Benford-half-values
+  /^-?rv$/i && do { $warning .= "RV deprecated, use DU/UD instead.\n"; $count++; next; }; #deprecated option
   /^-?s$/i && do { @dirs = (@dirs, "shuffling"); $count++; next; }; # SA
   /^-?r$/i && do { @dirs = (@dirs, "roiling"); $count++; next; }; # ARO
-  /^-b$/i && do { @dirs = (@dirs, "shuffling", "roiling"); $count++; next; }; #both Stale Tales Slate
+  /^-?b$/i && do { @dirs = (@dirs, "shuffling", "roiling"); $count++; next; }; #both Stale Tales Slate
   /^-\?$/i && do { usage(); exit; };
   print "Bad argument $a in position $count.\n"; usage(); exit;
   }
