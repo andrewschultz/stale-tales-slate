@@ -9,6 +9,12 @@
 
 use Win32::Clipboard;
 use POSIX;
+use List::MoreUtils qw(uniq);
+use lib "c:/writing/scripts";
+use i7;
+
+# use strict;
+# use warnings;
 
 my $newClip = Win32::Clipboard::new();
 my $clip = $newClip->GetText;
@@ -84,6 +90,7 @@ while (@ARGV[$count])
   /^-?cg$/i && do { $countGenders = 1; $count++; next; }; #count genders in total
   /^-?du$/i && do { $downup = 1; $count++; next; }; # reverse order arrays in (default = most first)
   /^-?d$/i && do { `c:/writing/dict/lov.txt`; exit; }; # open the data file
+  /^-?c$/i && do { my $cmd = "$npo c:\\writing\\dict\\lov.pl"; `$cmd`; exit; }; # open the data file
   /^-?ud$/i && do { $downup = 0; $count++; next; }; # reverse order arrays in
   /^-?f$/i && do { $fileName = $b; $count += 2; next; }; # define new file name
   /^-?w$/i && do { $writeToFile = 1; $count++; next; }; #whether to write to a log file (1) or to the screen(0)
@@ -111,6 +118,15 @@ while (@ARGV[$count])
 	@dirs = ("roiling");
 	}
   }
+
+my @dirs2 = uniq(@dirs);
+
+if ($#dirs2 != $#dirs)
+{
+  my $dif = $#dirs - $#dirs2;
+  @dirs = @dirs2;
+  print "Warning: $dif extra entries in directory array.\n";
+}
 
 if (@dirs[0] =~ /(shuffling|roiling)\.inform/) { $printBytes = 1; }
 
@@ -521,9 +537,12 @@ sub usage
 {
 print<<EOT;
 -g = show geometric mean
+-r = roiling, -s = shuffling, -b = both
+-d = open log file, -c = open source
 -du = go down to up
 -ud = go up to down
 -o[digit] = show beginning with that digit
 -oo[digit] = show starting with second digit
+Best usage is lov.pl g b
 EOT
 }
