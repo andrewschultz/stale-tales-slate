@@ -13,8 +13,8 @@ use List::MoreUtils qw(uniq);
 use lib "c:/writing/scripts";
 use i7;
 
-# use strict;
-# use warnings;
+use strict;
+use warnings;
 
 my $newClip = Win32::Clipboard::new();
 my $clip = $newClip->GetText;
@@ -26,13 +26,16 @@ $inExt{"shuffling"} = 1;
 
 #globals/options here. Maybe move them to init function?
 my $alfy;
-my $average;
+my $average = 0;
+my $sortByAverage = 0;
 my $genderChars = 34; #34 chars for [if male][else]
 my $downup = 1;
 my $gender = 0; # do we count gender ifdefs?
 my $ascend = 0; # this can be changed to 1 if we want the default. -an and -dn change it
 my $maxVal = 0;
+my $printBytes = 0;
 my $minVal = 0;
+my $expected = 0;
 my $showGeom = 0;
 my $showGeomPlus = 0;
 my $warning = 0;
@@ -41,9 +44,18 @@ my $fileName = "";
 my $writeToFile = 0; # this should be set to 0 for testing, 1 for standard use
 my @dirs;
 my @lists = ();
+my $exclude = 0;
+my $onlyNext = 0;
+my $onlies = 0;
+my $procReg = 0;
 
 #vars
-my $myLines;
+my $runTot = 0;
+my $genderLines = 0;
+my $myLines = 0;
+my $totalSize = 0;
+
+#throwaway vars
 my $x, my $y, my $z, my $c;
 
 
@@ -66,16 +78,16 @@ my %size;
 
 my @y; #for the while loop
 
-while (@ARGV[$count])
+while ($ARGV[$count])
 {
-  $a = @ARGV[$count];
-  $b = @ARGV[$count+1];
+  $a = $ARGV[$count];
+  $b = $ARGV[$count+1];
 
   for ($a)
   {
-  /^-?x[0-9]/i && do { $exclude = 1; $x = $a; $x =~ s/^-x//g; $x =~ s/[^0-9]//g; @y = split(//, $x); for (@y) { if ($_ > 0) { @doable[$_] = 0; } } $count++; next; }; #eXclude
-  /^-?oo[0-9]/i && do { $onlyNext = 1; $x = $a; $x =~ s/^-oo//g; $x =~ s/[^0-9]//g; @y = split(//, $x); for (@doable) { $_ = 0; }; for (@y) { if ($_ >= 0) { @doable[$_] = 1; } } $count++; next; }; #only
-  /^-?o[0-9]/i && do { $onlies = 1; $x = $a; $x =~ s/^-o//g; $x =~ s/[^0-9]//g; @y = split(//, $x); for (@doable) { $_ = 0; }; for (@y) { if ($_ >= 0) { @doable[$_] = 1; } } $count++; next; }; #only
+  /^-?x[0-9]/i && do { $exclude = 1; $x = $a; $x =~ s/^-x//g; $x =~ s/[^0-9]//g; $y = split(//, $x); for (@y) { if ($_ > 0) { @doable[$_] = 0; } } $count++; next; }; #eXclude
+  /^-?oo[0-9]/i && do { $onlyNext = 1; $x = $a; $x =~ s/^-oo//g; $x =~ s/[^0-9]//g; $y = split(//, $x); for (@doable) { $_ = 0; }; for (@y) { if ($_ >= 0) { @doable[$_] = 1; } } $count++; next; }; #only
+  /^-?o[0-9]/i && do { $onlies = 1; $x = $a; $x =~ s/^-o//g; $x =~ s/[^0-9]//g; $y = split(//, $x); for (@doable) { $_ = 0; }; for (@y) { if ($_ >= 0) { @doable[$_] = 1; } } $count++; next; }; #only
   /^-?max$/i && do { $maxVal = $b; $count+= 2; next; }; #maximum # shown in lists
   /^-?min$/i && do { $minVal = $b; $count+= 2; next; }; #maximum # shown in lists
   /^-?g$/i && do { $showGeom = 1; $count++; next; }; #calculate geometric mean
@@ -86,7 +98,7 @@ while (@ARGV[$count])
   /^-?dbs$/i && do { @dirs = ("c:/users/dropbox/andrew/sa/sa.ni"); $count++; next; }; #dropbox shuffling
   /^-?dbr$/i && do { @dirs = ("c:/users/dropbox/andrew/roil/roil.ni"); $count++; next; }; #dropbox roiling
   /^-?a$/i && do { $average = 1; $count++; next; }; #show averages
-  /^-?as$/i && do { $average = 1; $sortbyaverage = 1; if ($a =~ /aS/) { $sortbyaverage = -1; } $count++; next; }; #show averages
+  /^-?as$/i && do { $average = 1; $sortByAverage = 1; if ($a =~ /aS/) { $sortByAverage = -1; } $count++; next; }; #show averages
   /^-?cg$/i && do { $countGenders = 1; $count++; next; }; #count genders in total
   /^-?du$/i && do { $downup = 1; $count++; next; }; # reverse order arrays in (default = most first)
   /^-?d$/i && do { `c:/writing/dict/lov.txt`; exit; }; # open the data file
@@ -128,7 +140,7 @@ if ($#dirs2 != $#dirs)
   print "Warning: $dif extra entries in directory array.\n";
 }
 
-if (@dirs[0] =~ /(shuffling|roiling)\.inform/) { $printBytes = 1; }
+if ($dirs[0] =~ /(shuffling|roiling)\.inform/) { $printBytes = 1; }
 
 for my $myStory (@dirs) { findNudges($myStory); findAna($myStory); }
 
@@ -137,7 +149,10 @@ open(B, ">c:/games/inform/roiling.inform/source/story.new");
 
 binmode(B);
 
-$c = @ARGV[0] - 1;
+if (defined($ARGV[0]))
+{
+  $c = $ARGV[0] - 1;
+}
 
 open(C, ">>c:/games/inform/roiling.inform/source/story.check");
 
@@ -145,10 +160,10 @@ print C $clip;
 
 while ($a = <A>)
 {
-  if ($a =~ /^@lists[$c]/)
+  if ($a =~ /^$lists[$c]/)
   {
     $a =~ s/\{/\{ $clip/g;
-    print "Added $clip to @lists[$c], $c.";
+    print "Added $clip to $lists[$c], $c.";
   }
   chomp($a);
   print B "$a\x0a";
@@ -156,14 +171,14 @@ while ($a = <A>)
 
 #####################################subroutines
 
-sub findAna()
+sub findAna
 {
 
 my $fileToOpen = "c:/games/inform/$_[0].inform/Source/story.ni";
 
 if ($inExt{$_[0]}) { $fileToOpen = "c:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] Random Text.i7x"; }
 
-$sums = 0;
+my $sums = 0;
 $totalSize = 0;
 my @digs = ();
 my @sizes = ();
@@ -209,9 +224,9 @@ while ($a = <A>)
 
 close(A);
 
-for (0..9) { @digs[$_] = @sizes[$_] = @combo[$_] = 0; }
+for (0..9) { $digs[$_] = $sizes[$_] = $combo[$_] = 0; }
 
-if (@ARGV[0] !~ /^-[0-9]/) #why is this here? I don't know. I should figure out, or delete it.
+if (!defined($ARGV[0]) || ($ARGV[0] !~ /^-[0-9]/)) #why is this here? I don't know. I should figure out, or delete it.
 {
 
 for (keys %lines)
@@ -219,10 +234,10 @@ for (keys %lines)
   $av{$_} = floor(100*$size{$_}/$lines{$_})/100;
 }
 
-if ($sortbyaverage)
+if ($sortByAverage)
 {
   @lists = sort { $av{$a} <=> $av{$b}} keys %lines;
-  if ($sortbyaverage == -1) { @lists = reverse(@lists); }
+  if ($sortByAverage == -1) { @lists = reverse(@lists); }
 }
 elsif ($alfy)
 {
@@ -236,60 +251,61 @@ elsif ($downup)
 @lists = sort {$lines{$b} <=> $lines{$a}}  keys %lines;
 }
 
-$prod = 0;
+my $prod = 0;
+my $prod1 = 0;
 
 for (0..$#lists)
 {
   if ($ascend) { $c = $_ + 1; } else { $c = $#lists - $_ + 1; }
-  $linedig = $lines{@lists[$_]}; $linedig = substr($linedig, 0, 1);
-  $sizedig = $size{@lists[$_]}; $sizedig = substr($sizedig, 0, 1);
+  my $linedig = $lines{$lists[$_]}; $linedig = substr($linedig, 0, 1);
+  my $sizedig = $size{$lists[$_]}; $sizedig = substr($sizedig, 0, 1);
 
   my $avg = "";
-  if ($average) { $avg = " avg=$av{@lists[$_]}"; }
-  if (($region{@lists[$_]}) && ($procReg)) { $avg .= " reg=$region{@lists[$_]}"; $regLines{$region{@lists[$_]}} += $lines{@lists[$_]}; }
+  if ($average) { $avg = " avg=$av{$lists[$_]}"; }
+  if (($region{$lists[$_]}) && ($procReg)) { $avg .= " reg=$region{$lists[$_]}"; $regLines{$region{$lists[$_]}} += $lines{$lists[$_]}; }
 
-  my $baseStr = "$c @lists[$_] $lines{@lists[$_]} lines $size{@lists[$_]} bytes$avg\n";
+  my $baseStr = "$c $lists[$_] $lines{$lists[$_]} lines $size{$lists[$_]} bytes$avg\n";
 
   if ($onlies)
   {
-    #print "$linedig $sizedig @lists[$_]\n";
+    #print "$linedig $sizedig $lists[$_]\n";
 	#print "$linedig $sizedig\n";
-    if (@doable[$linedig] || @doable[$sizedig])
+    if ($doable[$linedig] || $doable[$sizedig])
 	{
-    printcond($baseStr, $lines{@lists[$_]});
+    printcond($baseStr, $lines{$lists[$_]});
 	}
   }
   elsif ($onlyNext)
   {
-  $line2 = $lines{@lists[$_]}; $line2 = substr($line2, 1, 1);
-  $size2 = $size{@lists[$_]}; $size2 = substr($size2, 1, 1);
-    if (@doable[$line2] || @doable[$size2])
+  my $line2 = $lines{$lists[$_]}; $line2 = substr($line2, 1, 1);
+  my $size2 = $size{$lists[$_]}; $size2 = substr($size2, 1, 1);
+    if ($doable[$line2] || $doable[$size2])
 	{
-    printcond($baseStr, $lines{@lists[$_]});
+    printcond($baseStr, $lines{$lists[$_]});
 	}
   }
   elsif ($exclude)
   {
-    if (@doable[$linedig] && @doable[$sizedig])
+    if ($doable[$linedig] && $doable[$sizedig])
 	{
-    printcond($baseStr, $lines{@lists[$_]});
+    printcond($baseStr, $lines{$lists[$_]});
 	}
   }
   else
   {
-    printcond($baseStr, $lines{@lists[$_]});
-	#if (@lists[$_] =~ /random books/) { $atg = $size{@lists[$_]}/$lines{@lists[$_]}; $dif = (100000 - $size{@lists[$_]}) / ($atg); print "Avg = $atg, $dif entries to go.\n"; }
+    printcond($baseStr, $lines{$lists[$_]});
+	#if ($lists[$_] =~ /random books/) { $atg = $size{$lists[$_]}/$lines{$lists[$_]}; $dif = (100000 - $size{$lists[$_]}) / ($atg); print "Avg = $atg, $dif entries to go.\n"; }
   }
 
-  $prod1 += log($lines{@lists[$_]} + 1);
-  $prod += log($lines{@lists[$_]});
+  $prod1 += log($lines{$lists[$_]} + 1);
+  $prod += log($lines{$lists[$_]});
 
-  $sums += $lines{@lists[$_]};
+  $sums += $lines{$lists[$_]};
 
-  @sizes[firstDigit($size{@lists[$_]})]++;
-  @digs[firstDigit($lines{@lists[$_]})]++;
+  $sizes[firstDigit($size{$lists[$_]})]++;
+  $digs[firstDigit($lines{$lists[$_]})]++;
  }
- for (0..9) { @combo[$_] = @digs[$_] + @sizes[$_]; }
+ for (0..9) { $combo[$_] = $digs[$_] + $sizes[$_]; }
   shift(@digs);
   shift(@sizes);
   shift (@combo);
@@ -303,8 +319,8 @@ for (0..$#lists)
   {
     for (0..8)
     {
-      @exp[$_] = ($#lists+1) * (log($_+2)  - log($_+1)) * $expected / log(10);
-	  @exp[$_] = floor(@exp[$_] * 10 + .5) / 10;
+      $exp[$_] = ($#lists+1) * (log($_+2)  - log($_+1)) * $expected / log(10);
+	  $exp[$_] = floor($exp[$_] * 10 + .5) / 10;
     }
   }
 
@@ -325,20 +341,21 @@ for (0..$#lists)
   }
   print ".\n";
 
-$totAvg = $totalSize / $sums;
+  my $totAvg = $totalSize / $sums;
   if ($average) { printf ("Average = %.3f\n", $totAvg); }
-# this is to see how much til 400000
+
+  # this is to see how much til 400000
   #$remai = 400000; $avg = $totalSize / $sums; $delt = ($remai - $totalSize) / ($avg); printf ("%.2f to go to 400k, average = %.3f.\n", $delt, $avg);
   # this was for a silly goal of 27
-  $lbound = floor($totAvg);
-  $ubound = $lbound + 1;
+  my $lbound = floor($totAvg);
+  my $ubound = $lbound + 1;
   print ($ubound*$sums - $totalSize); print " below $ubound.\n";
   print ($totalSize - $lbound*$sums); print " above $lbound.\n";
 
   #calculate pace for blue lacuna--no longer needed!
-  $tlt = 2366420 - (-s "$_[0]");
+  my $tlt = 2366420 - (-s "$_[0]");
   if (!$gender) { $tlt += $genderChars * $genderLines; }
-  $toLac = $tlt / ($totAvg + 3);
+  # my $toLac = $tlt / ($totAvg + 3);
   #print "Dividing by " . ($totAvg + 3) . "\n";
 
   ##these are silly things to track relative sizes to blue lacuna
@@ -362,13 +379,14 @@ $totAvg = $totalSize / $sums;
     my $xxx2 = (($xxx+1)/$xxx) ** ($#lists+1);
     my $xxx3 = 1 / ($xxx2 - 1);
     printf("Ratio between whole numbers: %.3f, %.3f row table gets a point.\n", $xxx2, $xxx3);
-    $prod1 /= ($#lists+1); $prod1 = exp($prod1); $prodif = $prod1 - $prod; print "Add 1 each: $prod1, difference = $prodif\n";
+    $prod1 /= ($#lists+1); $prod1 = exp($prod1);
+	my $prodif = $prod1 - $prod; print "Add 1 each: $prod1, difference = $prodif\n";
   }
   $runTot += $sums;
   if ($runTot > $sums) { print "$runTot overall.\n"; }
   for $q (keys %lines) { delete $lines{$q}; }
 
-  if ($procReg) { for $thisReg (sort {$regLines{$b} <=> $regLines{$a}} keys %regLines) { print "$thisReg = $regLines{$thisReg}\n"; } }
+  if ($procReg) { for my $thisReg (sort {$regLines{$b} <=> $regLines{$a}} keys %regLines) { print "$thisReg = $regLines{$thisReg}\n"; } }
 
   if ($printBytes)
   {
@@ -390,16 +408,16 @@ while ($b = <B>)
 {
   if ($b =~ /^#/) { next; }
   @c = split(/,/, $b);
-  $ang{@c[0]} = @c[1];
+  $ang{$c[0]} = $c[1];
 }
-$shortName = $_[0]; $shortName =~ s/\.inform.*//g; $shortName =~ s/.*[\\\/]//g;
+my $shortName = $_[0]; $shortName =~ s/\.inform.*//g; $shortName =~ s/.*[\\\/]//g;
 
 if ($ang{$shortName} == $sums) { print "No progress since last time!\n"; }
 else
 {
 my @localtime = localtime(time);
-$dateForm = sprintf("%4d-%02d-%02d-%02d-%02d-%02d",
-@localtime[5]+1900, @localtime[4]+1, @localtime[3], @localtime[2], @localtime[1], @localtime[0]);
+my $dateForm = sprintf("%4d-%02d-%02d-%02d-%02d-%02d",
+$localtime[5]+1900, $localtime[4]+1, $localtime[3], $localtime[2], $localtime[1], $localtime[0]);
 
 my $statLine = "$shortName,$sums,$prod,$dateForm\n";
 if ($writeToFile)
@@ -430,7 +448,7 @@ sub tableWorthy
 	$temp =~ s/ *\[.*//g;
 	if ($covered{$temp})
 	{
-	  $reg = $_[0]; chomp($reg);
+	  my $reg = $_[0]; chomp($reg);
 	  if ($reg =~ /\[xx[a-z]\]/) { my $temp2 = $temp; $temp2 =~ s/^table of //g; $reg =~ s/.*\[xx/xx/g; $reg =~ s/\].*//g; $region{$temp2} = $reg; }
 	  return 1;
 	}
@@ -441,11 +459,13 @@ sub tableWorthy
 sub findNudges
 {
 
+my $inNudgeTable = 0;
 my $nudgeFile = "c:\\Program Files (x86)\\Inform 7\\Inform7\\Extensions\\Andrew Schultz\\$_[0] Nudges.i7x";
 $myLines = 0;
+
 if (! -f "$nudgeFile") { return; }
 open(A, $nudgeFile);
-$inNudgeTable = 0;
+
 while ($a = <A>)
 {
   if ($a =~ /^table of [a-z ]+ nudges/i)
@@ -478,16 +498,16 @@ sub findHeaders
 	{
 	  @y = (); @y = split(/\t+/, $a);
 	  chomp($a);
-	  $lasttab = $a;
+	  my $lasttab = $a;
 	  $a =~ s/\t.*//g;
 	  $b = $a; $b =~ s/^table of //g;
 	  $covered{$a} = 1;
 	  $lasttab =~ s/.*\t//g;
-	  #if ($#g >= 8) { print ("$#g @g[0]: #8 = @g[8]\n"); }
-	  if (@y[9] =~ /[a-z]/i)
-	  { print " @y[0]";
+	  #if ($#g >= 8) { print ("$#g $g[0]: #8 = $g[8]\n"); }
+	  if ($y[9] =~ /[a-z]/i)
+	  { print " $y[0]";
 	    $lines{$b} = 1; # this is because we have a final anagram that says we're starting over. It seems arbitrary, but some lists recycle, and some don't.
-	  } else { $nolast .= " @y[0]"; }
+	  } else { $nolast .= " $y[0]"; }
 	  #if ($lasttab =~ /[a-z]/) { $lines{$b} = 1;  print " $b"; }
 	  	} elsif ($a !~ /[a-z]/) { last; }
   }
@@ -506,7 +526,7 @@ sub countTables
     $a =~ s/^\"//g;
     $a =~ s/\".*//g;
 
-	$lgth = length($a);
+	my $lgth = length($a);
     if ($a =~ /\[if player is (fe)?male\]/i)
 	{
 	  $genderLines++;
