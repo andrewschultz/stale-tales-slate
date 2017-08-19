@@ -69,6 +69,7 @@ my %dupes;
 ##################################options
 my $showCrib = 0;
 my $dieOnWarnings = 0;
+my $fullDebug = 0;
 #added before
 
 my $unsorted = 0;
@@ -99,9 +100,11 @@ while ($count <= $#ARGV)
   /^-?d$/ && do { $copyBack = 0; $count++; next; };
   /^-?f$/ && do { $copyBack = 1; $count++; next; };
   /^-?n$/ && do { $numbers = 1; $count++; next; };
+  /^-?dw$/ && do { $dieOnWarnings = 1; $count++; next; };
   /^-?s$/ && do { $statsOpen = 1; $count++; next; };
   /^-?te$/ && do { $useTestFile = 1; $readIn = $test; $copyBack = 0; $count++; next; };
   /^-?m$/ && do { $moveToHeader = 1; $count++; next; };
+  /^-?fd$/ && do { $fullDebug = 1; $count++; next; };
   /^-?cr$/ && do { $compareRoil = 1; $count++; next; }; #testing
   /^-?cs$/ && do { $compareShuf = 1; $count++; next; }; #testing
   /^-?cb$/ && do { $compareShuf = $compareRoil = 1; $count++; next; }; #testing
@@ -182,10 +185,20 @@ my $unusedString = "";
 my $quoteBit;
 my $tableAbbr;
 
+my $quo;
+my %warn;
+
 OUTER:
 while ($line = <A>)
 {
   if ($line !~ /^\"/) { $unusedString .= $line; next; }
+  $quo = () = $line =~ /"/g;
+  if ($quo != 2)
+  {
+    print "WARNING bad quotes in line $., $line";
+	$warnings++;
+	$unusedString .= $line; next;
+  }
   $quoteBit = $line;
   chomp($quoteBit);
   $tableAbbr = $quoteBit;
@@ -195,17 +208,30 @@ while ($line = <A>)
   if (!defined($tableTo{$tableAbbr}))
   {
     print "WARNING $tableAbbr after $quoteBit doesn't map anywhere, line $.\n";
+	$warn{$tableAbbr}++;
 	$warnings++;
 	$unusedString .= $line; next;
   }
-  die() if $dieOnWarnings && $warnings;
-  $tableAdd{$tableTo{$tableAbbr}} .= $line;
+  $tableAdd{$tableTo{$tableAbbr}} .= "$quoteBit\n";
   #print "$idx vs $#x\n";
 }
 
+my $x;
+
+if ($dieOnWarnings && $warnings)
+{
+  for $x (sort {$warn{$a} <=> $warn{$b}} keys %warn)
+  {
+    print "$x: $warn{$x}\n";
+  }
+}
+
+if ($fullDebug)
+{
 for (sort keys %tableAdd)
 {
   print "$_\n$tableAdd{$_}\n";
+}
 }
 
 print "$warnings warnings.\n" if $warnings;
@@ -448,6 +474,7 @@ Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sortin
 -f is force copy.
 -n adds a line of numbers to the stats file.
 -s opens the stats after.
+-dw dies on warnings e.g. an invalid has at the end of quoted text
 SPECIFIC USAGE:
 dns is good for doing the stats etc
 c is good for testing

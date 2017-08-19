@@ -44,61 +44,61 @@ table of laughhouses	xxm0	laf	laff
 table of lousy hit songs	xxm01
 table of mob chants	xxm02	mob
 table of oldies singers	xxm03	old
-table of random books	xxm04	bk
+table of random books	xxm04	bk	bo	boo	book
 table of sports chatter	xxm05
-table of idiotic lecture points	xxs1
-table of overdone movies	xxs2
-table of sicko movies	xxs3
+table of idiotic lecture points	xxs1	lec
+table of overdone movies	xxs2	lecmov
+table of sicko movies	xxs3	sickmov	porn
 table of store c ads	xxs4
 table of store c competitors	xxs5
-table of tokers nonsense	xxs6
-table of horbert farewells	xxu1
-table of horbert musings	xxu2
-table of mantle laments	xxu3
-table of missing deli foods	xxu4
-table of moralizers	xxu5
-table of sked items	xxv1
-table of DIVORCES articles	xxv2
-table of iffy advice	xxv3
-table of gritty dialogue	xxv4
-table of non-skeds	xxv5
-table of posh dialogue	xxv6
-table of posse bosses	xxv7
-table of prestigious bums	xxv8
-table of real estate ads	xxv9
-table of self-help bestsellers	xxv0
+table of tokers nonsense	xxs6	tok	toker	tokers
+table of horbert farewells	xxu1	horbfare	farewell
+table of horbert musings	xxu2	horb	muse
+table of mantle laments	xxu3	mantle
+table of missing deli foods	xxu4	deli
+table of moralizers	xxu5	moral
+table of sked items	xxv1	skedi
+table of DIVORCES articles	xxv2	div	divorce
+table of iffy advice	xxv3	iffy
+table of gritty dialogue	xxv4	grit
+table of non-skeds	xxv5	sked
+table of posh dialogue	xxv6	posh
+table of posse bosses	xxv7	posse	boss
+table of prestigious bums	xxv8	bum	bums
+table of real estate ads	xxv9	real	estate
+table of self-help bestsellers	xxv0	mot	motiv
 table of songs you could write	xxvx
-table of bedding brands	xxp1
-table of catechism pages	xxp2
-table of Leo-Rand chitchat	xxp3
-table of Leo-Rand idols	xxp4
-table of research topics	xxp5
-table of smartypants	xxp6
-table of aunt tuna chatter	xxy1
+table of bedding brands	xxp1	bed
+table of catechism pages	xxp2	cat
+table of Leo-Rand chitchat	xxp3	lrc
+table of Leo-Rand idols	xxp4	lri	idol	idols
+table of research topics	xxp5	res	top	topic	topics
+table of smartypants	xxp6	smart	smarty
+table of aunt tuna chatter	xxy1	chat
 table of bar dialogue	xxy2
 table of Casper mumbles	xxy3
-table of competing bars	xxy4
-table of fish fries	xxy5
+table of competing bars	xxy4	bar
+table of fish fries	xxy5	fry	fish
 table of theses	xxy6
-table of tuna gossip	xxy7
-table of unpopular girls	xxy8
+table of tuna gossip	xxy7	tuna	gossip
+table of unpopular girls	xxy8	girl	girls
 table of gizmo parts	xxw1	gizmo	giz
 table of rodney bluster	xxw2	rodney	rod
-table of animal friends	xxt1
-table of Elmer and Merle squabbles	xxt2
-table of Elvira battle cries	xxt3
-table of Elvira machines	xxt4
-table of Elvira taunts	xxt5
-table of political slogans	xxh1
-table of selly yells	xxh2
+table of animal friends	xxt1	ani	anim	an
+table of Elmer and Merle squabbles	xxt2	ems
+table of Elvira battle cries	xxt3	elm
+table of Elvira machines	xxt4	elm
+table of Elvira taunts	xxt5	elt
+table of political slogans	xxh1	pol
+table of selly yells	xxh2	yel	sel	yell	sell
 ####################################
 # Shuffling Around
-table of job searcher names	xxx	x	name	names
-table of evil locations	xxf	f	evil
-table of poem codas	xxi	i	poem
-table of camp chants	xxms1	camp
-table of condo dialogue	xxms2	condo
-table of nerd natter	xxms3	nerd	nerds
+table of job searcher names	xxx	name	names
+table of evil locations	xxf	evil
+table of poem codas	xxi	poem
+table of camp chants	xxms1	camp	cam
+table of condo dialogue	xxms2	condo	con
+table of nerd natter	xxms3	nerd	nerds	ner
 table of psas	xxms4	psa	psas
 table of red bull taunts	xxr1	rbb	bull
 table of riot slogans	xxr2	riot	riots
