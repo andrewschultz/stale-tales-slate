@@ -25,6 +25,8 @@ $inExt{"roiling"} = 1;
 $inExt{"shuffling"} = 1;
 
 #globals/options here. Maybe move them to init function?
+my $writeToFile = 1; # this should be set to 0 for testing, 1 for standard use
+
 my $alfy;
 my $average = 0;
 my $sortByAverage = 0;
@@ -41,13 +43,13 @@ my $showGeomPlus = 0;
 my $warning = 0;
 my $countGenders = 0;
 my $fileName = "";
-my $writeToFile = 0; # this should be set to 0 for testing, 1 for standard use
 my @dirs;
 my @lists = ();
 my $exclude = 0;
 my $onlyNext = 0;
 my $onlies = 0;
 my $procReg = 0;
+my $debug = 0;
 
 #vars
 my $runTot = 0;
@@ -90,6 +92,7 @@ while ($ARGV[$count])
   /^-?o[0-9]/i && do { $onlies = 1; $x = $a; $x =~ s/^-o//g; $x =~ s/[^0-9]//g; $y = split(//, $x); for (@doable) { $_ = 0; }; for (@y) { if ($_ >= 0) { @doable[$_] = 1; } } $count++; next; }; #only
   /^-?max$/i && do { $maxVal = $b; $count+= 2; next; }; #maximum # shown in lists
   /^-?min$/i && do { $minVal = $b; $count+= 2; next; }; #maximum # shown in lists
+  /^-?db$/i && do { $debug = 1; $count++; next; }; #debug on
   /^-?g$/i && do { $showGeom = 1; $count++; next; }; #calculate geometric mean
   /^-?gp$/i && do { $showGeomPlus = $showGeom = 1; $count++; next; }; #calculate geometric mean plus
   /^-?pr$/i && do { $procReg = 1; $count++; next; }; #add extra besides ARO/SA
@@ -353,10 +356,10 @@ for (0..$#lists)
   print ($totalSize - $lbound*$sums); print " above $lbound.\n";
 
   #calculate pace for blue lacuna--no longer needed!
-  my $tlt = 2366420 - (-s "$_[0]");
-  if (!$gender) { $tlt += $genderChars * $genderLines; }
+  # my $tlt = 2366420 - (-s "$_[0]");
+  # if (!$gender) { $tlt += $genderChars * $genderLines; }
   # my $toLac = $tlt / ($totAvg + 3);
-  #print "Dividing by " . ($totAvg + 3) . "\n";
+  # print "Dividing by " . ($totAvg + 3) . "\n";
 
   ##these are silly things to track relative sizes to blue lacuna
   #$canlose = ($totalSize - $lbound*$sums) / $toLac;
@@ -491,7 +494,7 @@ sub listWorthy
 sub findHeaders
 {
   my $nolast; # only for debugging
-  print "Last:";
+  print "Last:" if $debug;
   while ($a = <A>)
   {
     if ($a =~ /^table/)
@@ -504,14 +507,14 @@ sub findHeaders
 	  $covered{$a} = 1;
 	  $lasttab =~ s/.*\t//g;
 	  #if ($#g >= 8) { print ("$#g $g[0]: #8 = $g[8]\n"); }
-	  if ($y[9] =~ /[a-z]/i)
-	  { print " $y[0]";
+	  if (defined($y[9]) && ($y[9] =~ /[a-z]/i))
+	  { print " $y[0]" if $debug;
 	    $lines{$b} = 1; # this is because we have a final anagram that says we're starting over. It seems arbitrary, but some lists recycle, and some don't.
 	  } else { $nolast .= " $y[0]"; }
 	  #if ($lasttab =~ /[a-z]/) { $lines{$b} = 1;  print " $b"; }
 	  	} elsif ($a !~ /[a-z]/) { last; }
   }
-  print "\n";
+  print "\n" if $debug;
   #print "No last:$nolast\n";
 }
 
@@ -559,6 +562,7 @@ print<<EOT;
 -g = show geometric mean
 -r = roiling, -s = shuffling, -b = both
 -d = open log file, -c = open source
+-db = debug
 -du = go down to up
 -ud = go up to down
 -o[digit] = show beginning with that digit
