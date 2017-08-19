@@ -27,12 +27,12 @@ my $gender = 0; # do we count gender ifdefs?
 my $ascend = 0; # this can be changed to 1 if we want the default. -an and -dn change it
 my $maxVal = 0;
 my $minVal = 0;
-my $calcGeom = 0;
-my $calcGeomPlus = 0;
+my $showGeom = 0;
+my $showGeomPlus = 0;
 my $warning = 0;
 my $countGenders = 0;
 my $fileName = "";
-my $writeToFile = 0;
+my $writeToFile = 0; # this should be set to 0 for testing, 1 for standard use
 my @dirs;
 my @lists = ();
 
@@ -72,9 +72,8 @@ while (@ARGV[$count])
   /^-?o[0-9]/i && do { $onlies = 1; $x = $a; $x =~ s/^-o//g; $x =~ s/[^0-9]//g; @y = split(//, $x); for (@doable) { $_ = 0; }; for (@y) { if ($_ >= 0) { @doable[$_] = 1; } } $count++; next; }; #only
   /^-?max$/i && do { $maxVal = $b; $count+= 2; next; }; #maximum # shown in lists
   /^-?min$/i && do { $minVal = $b; $count+= 2; next; }; #maximum # shown in lists
-  /^-?g$/i && do { $calcGeom = 1; $count++; next; }; #calculate geometric mean
-  /^-?g$/i && do { $calcGeom = 1; $count++; next; }; #calculate geometric mean
-  /^-?gp$/i && do { $calcGeomPlus = $calcGeom = 1; $count++; next; }; #calculate geometric mean plus
+  /^-?g$/i && do { $showGeom = 1; $count++; next; }; #calculate geometric mean
+  /^-?gp$/i && do { $showGeomPlus = $showGeom = 1; $count++; next; }; #calculate geometric mean plus
   /^-?pr$/i && do { $procReg = 1; $count++; next; }; #add extra besides ARO/SA
   /^-?p$/i && do { @dirs = (@dirs, "./story.ni"); $count++; next; }; #add extra besides ARO/SA
   /^-?t?n$/i && do { $alfy = 1; $count++; next; }; #show sorted by table name
@@ -265,9 +264,12 @@ for (0..$#lists)
     printcond($baseStr, $lines{@lists[$_]});
 	#if (@lists[$_] =~ /random books/) { $atg = $size{@lists[$_]}/$lines{@lists[$_]}; $dif = (100000 - $size{@lists[$_]}) / ($atg); print "Avg = $atg, $dif entries to go.\n"; }
   }
-  if ($calcGeomPlus) { $prod1 += log($lines{@lists[$_]} + 1); }
-  if ($calcGeom) { $prod += log($lines{@lists[$_]}); }
+
+  $prod1 += log($lines{@lists[$_]} + 1);
+  $prod += log($lines{@lists[$_]});
+
   $sums += $lines{@lists[$_]};
+
   @sizes[firstDigit($size{@lists[$_]})]++;
   @digs[firstDigit($lines{@lists[$_]})]++;
  }
@@ -332,14 +334,13 @@ $totAvg = $totalSize / $sums;
   #$remai = 10000; $td = POSIX::mktime(0,0,0,0,0,115) - time(); $td /= 86400; $remai -= $sums; $remai /= $td; print "$remai per day ($td) for 10k.\n";
 
   my $q;
-  if ($calcGeom)
-  {
+
   $prod /= ($#lists+1); $prod = exp($prod);
   $q = ceil($prod); $q /= $prod; $q **= ($#lists + 1); my $qq = 1 / ($q - 1);
   my $qqq = floor($prod); $qqq = $prod / $qqq; $qqq **= ($#lists + 1);
-  print "Geometric Mean = " . $prod . " ratio = $q lines = $qq above = $qqq\n";
-  }
-  if ($calcGeomPlus)
+  print "Geometric Mean = " . $prod . " ratio = $q lines = $qq above = $qqq\n" if $showGeom;
+
+  if ($showGeomPlus)
   {
     my $xxx = floor($prod);
     my $xxx2 = (($xxx+1)/$xxx) ** ($#lists+1);
@@ -384,15 +385,16 @@ my @localtime = localtime(time);
 $dateForm = sprintf("%4d-%02d-%02d-%02d-%02d-%02d",
 @localtime[5]+1900, @localtime[4]+1, @localtime[3], @localtime[2], @localtime[1], @localtime[0]);
 
+my $statLine = "$shortName,$sums,$prod,$dateForm\n";
 if ($writeToFile)
 {
 open(B, ">>c:/writing/dict/lov.txt");
-print B "$shortName,$sums,$prod,$dateForm\n";
+print B $statLine;
 close(B);
 }
 else
 {
-print "$shortName,$sums,$prod,$dateForm\n";
+print "NOT SENT TO FILE: $statLine";
 }
 }
 } else { print "Not recording stats as we were counting if/female anagrams in addition.\n"; }
