@@ -93,7 +93,7 @@ while ($a = <A>)
 
 close(A);
 
-open(A, ">$prev");
+open(A, ">$prev") || die ("Unable to open $prev");
 for (@prevs) { print A "$_\n"; }
 close(A);
 

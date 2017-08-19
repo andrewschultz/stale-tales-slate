@@ -10,9 +10,6 @@
 use Win32::Clipboard;
 use POSIX;
 
-use strict;
-use warnings;
-
 my $newClip = Win32::Clipboard::new();
 my $clip = $newClip->GetText;
 chomp($clip);
@@ -35,6 +32,7 @@ my $calcGeomPlus = 0;
 my $warning = 0;
 my $countGenders = 0;
 my $fileName = "";
+my $writeToFile = 0;
 my @dirs;
 my @lists = ();
 
@@ -89,6 +87,8 @@ while (@ARGV[$count])
   /^-?d$/i && do { `c:/writing/dict/lov.txt`; exit; }; # open the data file
   /^-?ud$/i && do { $downup = 0; $count++; next; }; # reverse order arrays in
   /^-?f$/i && do { $fileName = $b; $count += 2; next; }; # define new file name
+  /^-?w$/i && do { $writeToFile = 1; $count++; next; }; #whether to write to a log file (1) or to the screen(0)
+  /^-?(nw|wn)$/i && do { $writeToFile = 0; $count++; next; }; #whether to write to a log file (1) or to the screen(0)
   /^-?an$/i && do { $ascend = 1; $count++; next; }; #whether list numbers ascend
   /^-?dn$/i && do { $ascend = 0; $count++; next; }; #whether list numbers ascend
   /^-?gy/i && do { $gender = 1; $count++; next; }; #gender-ifs counted in character count
@@ -384,9 +384,16 @@ my @localtime = localtime(time);
 $dateForm = sprintf("%4d-%02d-%02d-%02d-%02d-%02d",
 @localtime[5]+1900, @localtime[4]+1, @localtime[3], @localtime[2], @localtime[1], @localtime[0]);
 
+if ($writeToFile)
+{
 open(B, ">>c:/writing/dict/lov.txt");
 print B "$shortName,$sums,$prod,$dateForm\n";
 close(B);
+}
+else
+{
+print "$shortName,$sums,$prod,$dateForm\n";
+}
 }
 } else { print "Not recording stats as we were counting if/female anagrams in addition.\n"; }
 
@@ -396,7 +403,7 @@ if ($warning) { print "WARNING: $warning"; }
 
 }
 
-                  sub tableWorthy
+sub tableWorthy
 {
   if ($_[0] =~ /^table of /)
   {
