@@ -11806,8 +11806,7 @@ to pad-rec-q (q - text): [pad-rec without saying, you add the info]
 to pad-del (q - text):
 	repeat through the table of pad-stuff:
 		if there is no short entry:
-			say "[bug-report] need short entry for
-			.";
+			say "[bug-report] need short entry for [q].";
 		else if short entry is q:
 			if known entry is true:
 				now known entry is false;
@@ -28126,11 +28125,11 @@ test otters with "otters/enter otters/barely/rescind/reedily/w/shadily/martially
 test otters-pow with "in/barely/reedily/w/tearily/snidely/nastily/1/3/n/n/else/because/s/s/however/although/n/w/e/n/else/because/else/s/s/however/although/however"
 
 test otters-cur with "otters/enter otters/barely/reedily/w/shadily/martially/coitally/1/3/w/e/s/db/although/however/n/n/because/else/s/e/n/angrily/brutely/n/slow/paroled/coolest/artsy/garbed/s/s/s/loathingly/tersely/s/parrot"
-[/snail/hornets/snipe/racoon/n/n/w/w/seriously/raptor/w/play whistle/quickly"]
+[/snail/hornets/snipe/racoon/n/n/w/w/seriously/raptor/w/play whistle/quickly]
 
 test otters-oops with "sretto/otters/sretto/enter otters/ylerab/barely/ylerab/dnicser/rescind/dnicser/ylideer/reedily/ylideer/w/ylidahs/shadily/ylidahs/yllaitram/martially/yllaitram/yllatioc/coitally/yllatioc/w/e/n/esuaceb/because/esuaceb/esle/else/esle/s/s/hguohtla/although/hguohtla/revewoh/however/revewoh/n/e/n/ylirgna/angrily/ylirgna/yleturb/brutely/yleturb/n/wols/slow/wols/delorap/paroled/delorap/tselooc/coolest/tselooc/ystra/artsy/ystra/debrag/garbed/debrag/s/s/s/ylgnihtaol/loathingly/ylgnihtaol/ylesret/tersely/ylesret/s/torrap/parrot/torrap/lians/snail/lians/stenroh/hornets/stenroh/epins/snipe/epins/noocar/racoon/noocar/n/n/w/w/yltsenoh/honestly/yltsenoh/rotpar/raptor/rotpar/dleepy/deeply/dleepy/ylkciuq/quickly/ylkciuq/w/7/play whistle"
 
-[w/w/s/s/parrot/n/w/bleah/e/e/bleah/w/u/bleah/d/n/n/u/coolest/d/w/paroled/e/n/garbed/s/s"]
+[w/w/s/s/parrot/n/w/bleah/e/e/bleah/w/u/bleah/d/n/n/u/coolest/d/w/paroled/e/n/garbed/s/s]
 
 test owl-die with "test intro/towers/towers/barely/reedily/e/shadily/martially/coitally/e/because/else/w/w/n/n"
 
@@ -28214,7 +28213,7 @@ test min2 with "rove over/others/in/plums/tamarind/maraschino/blueberries/cantal
 
 test min3 with "rove over/others/in/limes/grapes/pears/blueberries/cantaloupe/pomegranate/compass/n/goosebery/apricot/apples/e/among/solemn/solemn/ancienter/argentine/cheap/cripes/w/s/icons/n/d/give dollar/sonic/u/n/review/n/coff"
 
-[/cheap/reversed/argentine/ancienter/solemn/solemn/w/s/put pear in chimney/push megaton/pomegranate/among/e/put peach in slot/eat tarts/n"]
+[/cheap/reversed/argentine/ancienter/solemn/solemn/w/s/put pear in chimney/push megaton/pomegranate/among/e/put peach in slot/eat tarts/n]
 
 [oops.pl allows me to test oops-scripts.]
 

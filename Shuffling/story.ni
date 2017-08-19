@@ -8171,8 +8171,7 @@ missile-steered is a truth state that varies. missile-steered is usually false.
 check pushing shoot button:
 	if missile-steered is false:
 		say "[one of]You hear a loud siren! Unfortunately, the missile doesn't seem to be pointing anywhere besides straight up. Guess where it'll land?[or]The missile doesn't have a specific target. You can't just go chucking it anywhere.[stopping]" instead;
-	say "A voice intones 'Chargin[']! Chargin[']! Chagrin-a-grinch!'[paragraph break]Grand finale! A flaring end?! No finer inferno than feral flare as from a remote meteor. A loud voice echoes
-	'Mondale-Doleman! Lo, Amend!' And the missile becomes... a dolmen. You feel simple, heartfelt, plainly-worded concerns flooding explode across, and you run towards them, and somehow it takes no time at all to get to Mean Old Mondale-Doleman's castle.[paragraph break]Where he is beaming, no longer big, mean.[paragraph break]'O crater creator! That launch deserves A LUNCH!' he booms. 'Had now!'";
+	say "A voice intones 'Chargin[']! Chargin[']! Chagrin-a-grinch!'[paragraph break]Grand finale! A flaring end?! No finer inferno than feral flare as from a remote meteor. A loud voice echoes 'Mondale-Doleman! Lo, Amend!' And the missile becomes... a dolmen. You feel simple, heartfelt, plainly-worded concerns flooding explode across, and you run towards them, and somehow it takes no time at all to get to Mean Old Mondale-Doleman's castle.[paragraph break]Where he is beaming, no longer big, mean.[paragraph break]'O crater creator! That launch deserves A LUNCH!' he booms. 'Had now!'";
 	say "[wfak]And how! You learn he is, of course, Noble Ol' Ben. But he feels he hasn't re-earned the title, yet, so he's all 'Me, sir? Miser!' (Yeh, ok, hokey.)[paragraph break]You try every tater treat and enjoy the flukiest lutefisk (fine dish! Finished!) ever. You even meet the guards who imprisoned you[guards-say-hi]. Hugs gush. After a thousand uh, not-sad, handouts (ah! Donuts!) and a fast, live festival ('My encore ceremony!') with an orchestra, a carthorse returns you to the Trips Strip.[paragraph break]Dreaming on the way back, you picture yourself saying 'SOOTH!' when asked if you'd solved the sortie in an alternate universe.";
 	reg-inc;
 	solve-region sortie instead;
@@ -14256,8 +14255,7 @@ section forest-random
 
 [* this fixes the path through the forest, north then south]
 
-test allfor with "ts/forest/sr n/in/n/s/v fi/sr s/gonear softer/s/n/v fi/sr e/gonear softer/e/w/v fi/sr w/gonear softer/w/e/v fi/
-sr nw/gonear softer/n/w/v fi/sr ne/gonear softer/n/e/v fi/sr sw/gonear softer/s/w/v fi/sr se/gonear softer/s/e/v fi/rs nw/gonear softer/w/n/v fi/rs ne/gonear softer/e/n/v fi/rs sw/gonear softer/w/s/v fi/rs se/gonear softer/e/s/v fi"
+test allfor with "ts/forest/sr n/in/n/s/v fi/sr s/gonear softer/s/n/v fi/sr e/gonear softer/e/w/v fi/sr w/gonear softer/w/e/v fi/sr nw/gonear softer/n/w/v fi/sr ne/gonear softer/n/e/v fi/sr sw/gonear softer/s/w/v fi/sr se/gonear softer/s/e/v fi/rs nw/gonear softer/w/n/v fi/rs ne/gonear softer/e/n/v fi/rs sw/gonear softer/w/s/v fi/rs se/gonear softer/e/s/v fi"
 
 section odd talks
 
@@ -14419,7 +14417,7 @@ test metros-n-n3 with "metros/enter metros/gardenia/n/w/tomato/e/s/w/throw tomat
 
 [get sword/resin/sword/beast/attack beast]
 
-[resin/sword/attack beast"]
+[resin/sword/attack beast]
 
 chapter sortie
 
