@@ -3602,7 +3602,6 @@ blurb	blare	[random sad ads: the blare field designates whether you have an excl
 "SniffCo Coffins"	false
 "Snowberger Wrong Beers"	false
 "Snowpea Weapons"	false []
-"So Daunting, Astounding[r], by[if player is male]Otis Dungan[else]Gia Dunston[end if]"	true
 "So-Local Cool Al's"	false
 "So-Low Wools"	false
 "So Unfed? No-Feuds Fondues!"	true
@@ -4641,6 +4640,7 @@ blurb	fave
 "Shoo, Mere Emo Hoser: Some Hero[r], by Romeo Esh"	false
 "A Shuffler: Flush Fear[r], by Sal Huffer"	true
 "Sloth, Be the Slob[r], by Les Both"	false
+"So Daunting, Astounding[r], by [if player is male]Otis Dungan[else]Gia Dunston[end if]"	true
 "The Sorry Hero's Try[r], by Rory Tesh"	false
 "St. Be-Best[r], by Bess Bett"	true
 "Stymie Not Testimony[r], by Simon Yett"	true
@@ -8522,6 +8522,7 @@ blurb
 "Furores for sure." []
 "'Graded now: Dead wrong! Downgrade!'"
 "Hear out our hate!"
+"'Hegemon? Meh, gone!'"
 "'Hypnotism-smit phony!'"
 "'In your shell? Sly, unholier!'"
 "'Insulated sultan, die!'"
@@ -11691,7 +11692,6 @@ blurb	prio
 "Em Sagna Manages[r], by Sam Egan"
 "Em Seger Emerges[r], by Meg Rees"
 "Em Smells Mel's Elms[r], by Les Melms"
-"Em's Took to Smoke[r], a movie"
 "Em's Vim Vies[r], by Ms. Evi Vimes"
 "Emending a Demeaning Mad Engine[r], by Megan Nied"
 "Emigre Regime[r], by Meg Eir"
@@ -13798,7 +13798,7 @@ blurb	prio
 "My Care: a Mercy[r], by [if player is male]Mac Rey[else]Maye McCreary[end if]"
 "My Cat is a Mystic[r], by Tim Casy"
 "My Cats['] Sty, Mac[r], by Ms. Tacy St. Macy"
-"My class? Sly scam[r], by Cass Lym"
+"My Class? Sly Scam[r], by Cass Lym"
 "My Clean Clay Men[r], by Len Macy & Al McNey" []
 "My Clear Calm Rye[r], by Marc Ley"
 "My Coarse Sycamore[r], by Rose Macy" []
@@ -14886,7 +14886,7 @@ blurb	prio
 "Ragweed Edge War Age Drew[r], by [if player is male]Ed Wager[else]Dee Graw[end if]"
 "Rah, Dog, Go Hard[r], by Haggard Hodor"
 "Rah, Dusty Thursday[r], by Trudy Ash"
-"Rah, Lilt: a Thrill[r], by Art Hill."
+"Rah, Lilt: a Thrill[r], by Art Hill"
 "Rah, Men[r], by Herman Hamner"
 "Rah Rah Toot[r], by Thora Roath"
 "The Raid: Ah, Tired, a Dither[r], by Di Harte"
@@ -17249,7 +17249,6 @@ blurb
 "has little that needs to be said about [i]The Rum Hurt Me[r]."
 "hashes out legal details of [i]Audi: a DUI[r]." [x]
 "hat-tips [i]Mess Around: Sour Amends[r]." [x]
-"'Hegemon? Meh, gone!'"
 "hints at the fantasy redefinition in [i]A Demon on Mead[r]." [x]
 "hopes nobody ever FULLY sympathizes with the subjects of [i]To Scrape at Capers: Pot Scare[r]." [x]
 "injects deeper social meaning into [i]The Wimp Wit['] Hemp Met WHIP[r]." [x]
@@ -19069,6 +19068,7 @@ blurb
 "They jock the THC MD Si Schmidt." [x]
 "They lecture that mescal-pot-ectoplasm has ample cost--you clamp toes then come splat." [x]
 "They perform a skit on St. Niko Kitson." [x]
+"They recap [i]Em's Took to Smoke[r], a particularly bad/good movie."
 "They recap the PSA-turned-camp [i]Wickedest Weed Stick[r]." [x]
 "They recount the plot of the cult 'classic' [i]Ken's Weed Weekends[r]." [x]
 "'To bangs at bongs!'" []
@@ -37631,7 +37631,7 @@ blurb
 "Plot lines, still? NOPE."
 "Poems? Lose some sleep!"
 "Poetry slam: masterly op? Sporty? Lame. Ample tyros." []
-"'Poetry? Stop. Potty prose prototypes.'"
+"Poetry? Stop. Potty prose prototypes."
 "Prose of spoofer, free? Sop."
 "Prosey Osprey Ros Pye? O, pyres!"
 "Punter's pen, RUST!" []

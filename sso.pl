@@ -11,8 +11,10 @@
 #
 # to check: 1 check anagrams 2 check done before 3 check sorting into order
 
+use lib "c:/writing/scripts";
 use strict;
 use warnings;
+use i7;
 
 use File::Copy qw(copy);
 use Math::Prime::Util "gcd";
@@ -29,14 +31,27 @@ my $stat = "$roil\\sso-stat.txt";
 my $readIn = $orig;
 
 ########################uncomment below for testing
-my $rr = "Roiling Random Text.i7x";
-my $sr = "Shuffling Random Text.i7x";
+my $rrf = "Roiling Random Text.i7x";
+my $srf = "Shuffling Random Text.i7x";
+
+my $rr = "$inc\\$rrf";
+my $sr = "$inc\\$srf";
+
+my $rtemp = "$roil\\$rrf";
+my $stemp = "$roil\\$srf";
 
 ##########################txtfile is the list of regexes after the 2nd quote
 my $txtfile = __FILE__;
 $txtfile =~ s/pl$/txt/; # in other words c:\writing\dict\sso.txt
+my $code = __FILE__;
 
 ###################################globals
+my %secondDefault;
+my %tableTo;
+my %tableAdd;
+my $warnings;
+#added before
+
 my %regex;
 my %hash;
 my %details;
@@ -44,8 +59,6 @@ my %runoff;
 my @roughname = ();
 my @tabname = ();
 my $line, my $line2;
-my @intro = ();
-my @endLump = ();
 my $count = 0;
 
 my %caps;
@@ -54,6 +67,10 @@ my %quotes;
 my %dupes;
 
 ##################################options
+my $showCrib = 0;
+my $dieOnWarnings = 0;
+#added before
+
 my $unsorted = 0;
 my $blanksYet = 0;
 my $idx = 0;
@@ -62,8 +79,6 @@ my $copyBack = 0; # this default can change
 my $compare = 0;
 my $numbers = 0;
 my $statsOpen = 0;
-my $inHeader = 1;
-my $header = "";
 my $wob = 0;
 my $moveToHeader = 1;
 my $copyHeaderBack = 0;
@@ -78,8 +93,9 @@ while ($count <= $#ARGV)
   /^[0-9]/ && do { doAnagrams($ARGV[0]); };
   /\?/ && do { usage(); exit(); };
   /^-?e$/ && do { `$orig`; exit(); };
+  /^-?ec$/ && do { np($code); exit(); };
   /^-?o$/ && do { outputLast(); exit(); };
-  /^-?r$/ && do { `$txtfile`; exit(); }; # forcing options first
+  /^-?e?r$/ && do { `$txtfile`; exit(); }; # forcing options first
   /^-?d$/ && do { $copyBack = 0; $count++; next; };
   /^-?f$/ && do { $copyBack = 1; $count++; next; };
   /^-?n$/ && do { $numbers = 1; $count++; next; };
@@ -110,8 +126,8 @@ if (($readIn eq $test) && ($copyBack == 1))
   die ("Can't/won't copy back when the file to process is the test file $test");
 }
 
-dupget("$inc\\$rr");
-dupget("$inc\\$sr");
+dupget("$rr");
+dupget("$sr");
 
 print "Read mapping file...\n";
 ####################################open the mapping file
@@ -121,122 +137,122 @@ while ($line=<A>)
 {
   if ($line =~ /^;/) { last; }
   if ($line =~ /^#/) { next; }
+  if (($line =~ /^!/))
+  {
+    print $line if ($showCrib);
+	next;
+  }
   chomp($line);
   if ($line eq "")
   {
     print "Blank line $.\n";
 	next;
   }
-  my @hashy = split(/\t/, $line);
-  if ($hashy[0] eq "!")
+  if ($line =~ /~/) # e.g. table=FALSE
   {
-    if ($#hashy != 2)
-	{
-	  print "Bad sorter line $., $line.\n";
-	}
-    $details{$hashy[1]} = $hashy[2];
-	push(@roughname, $hashy[1]);
+    my @hashy = split(/~/, $line);
+	$secondDefault{$hashy[0]} = $hashy[1];
 	next;
   }
-  if ($#hashy < 1) { die "Hash lines need a \\t for what table it maps to and the regex: line $. as $line fails."; }
-  push(@tabname, $hashy[0]);
-  $regex{$hashy[0]} = $hashy[1];
-  if ($#hashy < 4) { print "$hashy[0] needs caps/punc/quotes.\n"; }
-  if ($#hashy < 2) { $caps{$hashy[0]} = 0; }
-  else { $caps{$hashy[0]} = $hashy[2]; }
-  if ($#hashy < 3) { $punc{$hashy[0]} = 0; }
-  else { $punc{$hashy[0]} = $hashy[3]; }
-  if ($#hashy < 4) { $quotes{$hashy[0]} = 0; }
-  else { $quotes{$hashy[0]} = $hashy[4]; }
+  my @hashy = split(/\t/, $line);
+  $hashy[0] = lc($hashy[0]);
+  if ($#hashy < 1) { print "Line $. in $txtfile needs a tab.\n"; }
+  for (1..$#hashy)
+  {
+    if (defined($tableTo{$hashy[$_]}))
+	{
+	  print "$hashy[$_] already sent to $tableTo{$hashy[$_]}, redefined at line $.\n";
+	  next;
+	}
+    $tableTo{$hashy[$_]} = $hashy[0];
+	if ($hashy[$_] =~ /^xx/i)
+	{
+	  $hashy[$_] =~ s/^xx//i;
+	  $tableTo{$hashy[$_]} = $hashy[0];
+	}
+  }
 }
 
 close(A);
 
 open(A, $readIn) || die();
 
+my $unusedString = "";
+
+my $quoteBit;
+my $tableAbbr;
+
 OUTER:
 while ($line = <A>)
 {
-  if ($inHeader)
+  if ($line !~ /^\"/) { $unusedString .= $line; next; }
+  $quoteBit = $line;
+  chomp($quoteBit);
+  $tableAbbr = $quoteBit;
+  $tableAbbr =~ s/^\".*\"([^ \t]*).*/$1/;
+  $quoteBit =~ s/(^\".*\").*/$1/;
+  if (!$tableAbbr) { $unusedString .= $line; next; }
+  if (!defined($tableTo{$tableAbbr}))
   {
-    if ($line =~ /^#/) { $header .= $line; next; }
-	$inHeader = 0;
+    print "WARNING $tableAbbr after $quoteBit doesn't map anywhere, line $.\n";
+	$warnings++;
+	$unusedString .= $line; next;
   }
-  if ($line =~ /^#/) { next; }
-  if ($line =~ /^========/) { $unsorted = 1; next; }
-  if ($line !~ /[a-z]/i) { $blanksYet = 1; next; }
-  chomp($line);
-  if ($dupes{wordsonly($line)}) { print "Duplicate $line ($.) details $dupes{wordsonly($line)}\n"; }
-  checkAnagram($line);
-  if (($line !~ /^\"/) && (!$blanksYet)) { print "Quotes added line $., $line\n"; $line = "\"$line"; if ($line !~ /\"$/) { $line .= "\""; } }
-  if ($unsorted) { push (@endLump, $line); next; }
-  $idx = 0;
-  $line2 = $line; $line2 =~ s/ *\[(p)?\]$//; # ignore duplicator at line end
-  for $y (@roughname)
-  {
-    if ($line =~ /\"$y$/)
-	{
-	  $runoff{$y} .= "$line\n";
-	  next OUTER;
-	}
-  }
-  for $y (@tabname)
-  {
-    if ($line =~ /$regex{$y}/)
-    {
-      if (($quotes{$y} == -1) && ($line =~ /(\W'|'\W)/)) { print "Excess quotes: $line\n"; last; }
-      if (($quotes{$y} == 1) && ($line !~ /'/)) { print "Need quotes: $line\n"; last; }
-      #if ($idx == 3) { print "$idx ($.). $y: $line\n"; }
-	  $hash{$y} .= "$line\n"; last;
-    }
-    $idx++;
-  }
-  if ($idx > $#tabname) { push (@intro, $line); }
+  die() if $dieOnWarnings && $warnings;
+  $tableAdd{$tableTo{$tableAbbr}} .= $line;
   #print "$idx vs $#x\n";
 }
 
+for (sort keys %tableAdd)
+{
+  print "$_\n$tableAdd{$_}\n";
+}
+
+print "$warnings warnings.\n" if $warnings;
+
 close(A);
 
-if ($moveToHeader)
+moveOver($rr, $rtemp);
+moveOver($sr, $stemp);
+
+if (scalar keys %tableAdd > 1)
 {
-  moveOver($rr);
-  moveOver($sr)
+  die("Oops, not everything to files: " . join(", ", sort keys %tableAdd));
 }
 
 open(B, ">$mod");
 
-print B $header;
-
-alfPrint(\@intro);
-
-for my $j (sort keys %runoff)
-{
-  print B "\n#$details{$j}\n$runoff{$j}";
-}
-
-for my $j (@tabname)
-{
-  if (defined($hash{$j})) { print B "$hash{$j}\n"; }
-}
-
-print B "========\n";
-alfPrint(\@endLump);
-
+print B $unusedString;
 close(B);
 
 if ($numbers)
 {
   open(A, "$orig");
-  my $empties = 0;
-
-  while ($line = <A>) { if ($line !~ /[a-z]/i) { $empties++; } }
-
-  print "$. $empties\n";
-  my $totalNonEmpty = $. - $empties;
+  close(A);
+  my $warnings = 0;
+  my $quotedLeft = 0;
+  my $unquotedLeft = 0;
+  while ($a = <A>)
+  {
+    if ($a =~ /^;/) { last; }
+    if ($a =~ /^\".*\"[a-z0-9]/i)
+	{
+	  $warnings++;
+	}
+	elsif ($a =~ /^\".*\"[a-z0-9]/i)
+	{
+	  $quotedLeft++;
+	}
+	elsif ($a !~ /^[;#]/)
+	{
+      $unquotedLeft++;
+	}
+  }
   close(A);
 
+
   my ($second, $minute, $hour, $dayOfMonth, $month, $yearOffset, $dayOfWeek, $dayOfYear, $daylightSavings) = localtime(time);
-  my $out = sprintf("%d,%d,%d,%d-%02d-%02d %02d:%02d:%02d\n", ($#intro+1), ($#endLump+1), $totalNonEmpty, $yearOffset+1900, $month+1, $dayOfMonth+1, $hour, $minute, $second);
+  my $out = sprintf("QUO %d, UNQUO %d, WARN %d,%d-%02d-%02d %02d:%02d:%02d\n", $quotedLeft, $unquotedLeft, $warnings, $yearOffset+1900, $month+1, $dayOfMonth+1, $hour, $minute, $second);
   open(B, ">>$stat.txt");
   printf B $out;
   close(B);
@@ -364,32 +380,29 @@ sub wordsonly
 sub moveOver
 {
 open(A, "$_[0]");
-open(B, ">$_[0].bak");
+open(B, ">$_[1]");
 
 my $line;
+my $tabname;
+my $volYet = 0;
 
 while ($line = <A>)
 {
   print B $line;
-  if ($line =~ /^table of .*\[xx/)
+  $volYet = 1 if $line =~ /\[vrt\]/i;
+  if (!$volYet) { next; }
+  if ($line =~ /^table of .*\[xx/i)
   {
-    #print "Table line $line";
-    for my $j (@tabname)
+    $tabname = lc($line);
+	chomp($tabname);
+	$tabname =~ s/[ \t]*\[.*//;
+	if (defined($tableAdd{$tabname}))
 	{
-	  if ($line =~ /$j/)
-	  {
-        #print "!!!! $line vs $j/$regex{$j}\n";
-	    if (defined($hash{$j}))
-	    {
-	    #print "Adding to $j/$regex{$j}\n";
-		my $q = <A>;
-	    print B $q;
-		my @hashary = split(/\n/, $hash{$j});
-		for (@hashary) { $_ =~ s/\"[a-z]+[0-9]*$/\"/; print B "$_\n"; }
-		delete($hash{$j});
-		last;
-		}
-	  }
+	  my $l = <A>;
+	  print B $l;
+	  print B $tableAdd{$tabname};
+	  delete $tableAdd{$tabname};
+	  # next;
 	}
   }
 }
@@ -429,14 +442,15 @@ You can also specify the store area at the end of the quotes. X means the name l
 
 Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sorting within is by word then letter length.
 
-c/-c is compare post-run
-d/-d is demo mode. The file doesn't change.
-e/-e edits tosort.txt.
-f/-f is force copy.
-n/-n adds a line of numbers to the stats file.
-r/-r opens the file of regular expressions that sorts  the anagrams.
-s/-s opens the stats after.
+-c is compare post-run
+-d is demo mode. The file doesn't change.
+-e edits tosort.txt, -ec edits source code, -er/r edits suffix-to-table file
+-f is force copy.
+-n adds a line of numbers to the stats file.
+-s opens the stats after.
+SPECIFIC USAGE:
 dns is good for doing the stats etc
+c is good for testing
 EOT
 exit
 }

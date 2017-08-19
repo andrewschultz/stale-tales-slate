@@ -15,112 +15,91 @@
 !  y y1=aunt y2=bar y3=casper y4=other bars y5=fish fries y6=theses y7=gossip y8=girls
 !  ms 1=camp 2=condo 3=nerds 4=psa
 ####################################################################################
-#Biopics, then motivational, then regular books
-xxm3	\[r\].*\t(true|false)	2	-1	-1
-xxv0	\[r\].*\"v	2	-1	-1
-xxm04	\[r\],? by	2	-1	-1
-########################ALL CAPS STUFF: PSA(p), laments
-xxu3	^\"[^a-z]+\"p$	3	-1	-1
-xxms4	^\"[^a-z]+\"$	3	-1	-1
-########################ads
-xxm1	\t(true|false)	2	0	-1
-########################shuffling stuff. F=forest/maps, X=names, I=bad poems
-xxf	\"f$	0	-1	-1
-xxi	\"i$	1	1	-1
-xxx	\"x$	1	-1	-1
-########################PSAs counted above. MC=condo (Rarer than camp), M = camp
-xxms1	\"(ms[n1]|camp)$	1	1	1
-xxms2	\"(ms[c2]|condo)$	1	1	0
-xxms3	\"(m(n|s3)|nerds|nerd)$	1	1	0
-#xxms4	\"(ms4|psa)$	3	-1	-1
-########################ri=riot, r=RED BULL
-xxr1	\"(r[i1]|protest)$	1	1	0
-xxr2	\"(r(2)?|redbull|bull)$	1	1	0
-########################ROILING stuff
-xxp1	\"(beds|bedding|p1)$	2	-1	-1
-xxp2	\"(catechism|cat|p2)$	1	1	0
-xxp3	\"(lrchat|p3)$	1	1	0
-xxp4	\"(lridols|idols|p4)$	2	-1	-1
-xxp5	\"(p5|res|research)$	0	-1	-1
-xxp6	\"(p6|smart)$	2	-1	-1
-##################OTTERS
-xxt1	\"(t1|animal|animals)$	0	-1	-1
-xxt2	\"(t2|elmer|merle)$	1	1	0
-xxt3	\"(t3|battle)$	1	0	0
-xxt4	\"(t4|machines)$	-1	-1	-1
-xxt5	\"(t5|taunts)$	1	1	1
-####################ROUTES
-xxu5	\"(u5|moral)$	2	-1	-1
-xxu4	\"(u4|deli)$	1	-1	-1
-xxu2	\"(u2|horbmus|horb)$	0	1	0
-xxu1	\"(u1|horbye)$	1	1	1
-#########################TROVES
-xxv1	\"(v1|skeditm)$	1	1	0
-xxv2	\"(v2|div|divo|divorce|divorce)$	1	1	-1
-xxv3	\"(v3|iffy|advice)$	1	1	0
-xxv4	\"(v4|grit|gritty)$	1	1	1
-xxv5	\"(v5|sked)$	2	-1	-1
-xxv6	\"(v6|posh)$	1	1	1
-xxv7	\"(v7|boss|bosses)$	2	-1	-1
-xxv8	\"(v8|bum|bums)$	2	-1	-1
-xxv9	\"(v9|realest(ate)?)$	2	-1	-1
-xxvx	\"(vx|you(r)?song)$	2	-1	-1
-############################w 2 = rodney bluster 1 = gizmo parts
-xxw1	\"w(1?)$	0	-1	-1
-xxw2	\"w2$	-1	-1	-1
-#############################OYSTER
-xxy1	\"y1$	-1	1	0
-xxy2	\"y2$	1	1	0
-xxy3	\"y3$	2	-1	-1
-xxy4	\"y4$	1	1	-1
-xxy5	\"y5$	1	1	0
-xxy6	\"y6$	1	1	-1
-xxy7	\"y7$	0	1	0
-xxy8	\"y8$	2	-1	-1
-#############################STORES 1=lecture 2=movies 3=sicko movies 4=ads 5=competitors 6=tokers
-xxs1	\"s1$	-1	1	0
-xxs2	\"s2$	0	1	-1
-xxs3	\"s3$	2	1	-1
-xxs4	\"s4$	1	1	0
-xxs5	\"s5$	2	0	-1
-xxs6	\"s6$	1	1	0
-###############################OTHERS 1=slogans 2=yells
-xxh1	\"(h1|slogan|slogans)$	1	1	1
-xxh2	\"(h2|yell|yells)$	1	1	1
-############################general
-xxg1	\"(g1|cuss)$	1	1	-1
-xxg2	\"(g2|death)$	1	1	-1
-xxg3	\"(g3|empty)$	1	1	0
-xxg4	\"(g4|help)$	1	1	-1
-xxg5	\"(g5|no)$	1	1	-1
-xxg6	\"(g6|att|attack)$	1	1	-1
-xxg7	\"(g7|sing)$	1	1	0
-xxg8	\"(g8|sleep)$	1	1	0
-xxg9	\"(g9|undon)$	1	1	0
-xxg0	\"(g0|undoy|undo)$	1	1	0
-xxg10	\"(g10|wait|z)$	1	1	0
-xxg11	\"(g11|yes)$	1	1	-1
-#################################original
-#o o2=rappers (o3=biopics) o4=comedians o5=elmo o6=games o7=movies o8=talkshows o9=tvshows o0=lafhouse o01=lousyhit o02=mob o03=oldies (o04=books) o05=chatter
-xxm1	\"(o1|ads|ad)$	2	0	1
-xxm2	\"(o2|rap)$	2	-1	-1
-xxm3	\"(o3|bio)$	2	-1	-1
-xxm4	\"(o4|com|come|comed|comedy)$	2	-1	-1
-xxm5	\"(o5|elmo|emo)$	0	-1	-1
-xxm6	\"(o6|comp|game)$	2	-1	-1
-xxm7	\"(o7|movie)$	2	-1	-1
-xxm8	\"(o8|talk)$	2	-1	-1
-xxm9	\"(o9|tv)$	2	-1	-1
-xxm0	\"(o0|o00|laf|laugh)$	2	-1	-1
-xxm01	\"(o01|hits)$	2	-1	-1
-xxm02	\"(o02|mob)$	0	1	1
-xxm03	\"(o03|oldies)$	2	-1	-1
-xxm04	\"(o04|bk)$	2	-1	-1
-xxm05	\"(o05|sport|sports)$	1	1	0
+################first default booleans
+table of biopics~FALSE
+table of ad slogans~FALSE
+################now table main regexes/notifiers
+table of cussing rejects	xxg1	cuss	swear
+table of death messages	xxg2	death	die
+table of empty command rejects	xxg3	mt	empty
+table of help companies	xxg4	help	aid
+table of noage	xxg5	no	n
+table of nonviolence messages	xxg6	att	non
+table of singing rejects	xxg7	sing
+table of sleep rejects	xxg8	sleep	zzz	zz
+table of undo allows	xxg9	undoy	undo-y	uy
+table of undo rejects	xxg0	undon	undo-n	un
+table of wait responses	xxg10	wait	z
+table of yessage	xxg11	yes	y
+table of ad slogans	xxm1	ad	ads
+table of bad rappers	xxm2	rap
+table of biopics	xxm3	bio
+table of comedians	xxm4	comed	comedy	com
+table of elmo emo	xxm5	elmo	emo
+table of lame computer games	xxm6	gm	gam	game	games
+table of lame movies	xxm7	mov	movie	movies
+table of lame talk shows	xxm8	talk
+table of lame tv shows	xxm9	tv
+table of laughhouses	xxm0	laf	laff
+table of lousy hit songs	xxm01
+table of mob chants	xxm02	mob
+table of oldies singers	xxm03	old
+table of random books	xxm04	bk
+table of sports chatter	xxm05
+table of idiotic lecture points	xxs1
+table of overdone movies	xxs2
+table of sicko movies	xxs3
+table of store c ads	xxs4
+table of store c competitors	xxs5
+table of tokers nonsense	xxs6
+table of horbert farewells	xxu1
+table of horbert musings	xxu2
+table of mantle laments	xxu3
+table of missing deli foods	xxu4
+table of moralizers	xxu5
+table of sked items	xxv1
+table of DIVORCES articles	xxv2
+table of iffy advice	xxv3
+table of gritty dialogue	xxv4
+table of non-skeds	xxv5
+table of posh dialogue	xxv6
+table of posse bosses	xxv7
+table of prestigious bums	xxv8
+table of real estate ads	xxv9
+table of self-help bestsellers	xxv0
+table of songs you could write	xxvx
+table of bedding brands	xxp1
+table of catechism pages	xxp2
+table of Leo-Rand chitchat	xxp3
+table of Leo-Rand idols	xxp4
+table of research topics	xxp5
+table of smartypants	xxp6
+table of aunt tuna chatter	xxy1
+table of bar dialogue	xxy2
+table of Casper mumbles	xxy3
+table of competing bars	xxy4
+table of fish fries	xxy5
+table of theses	xxy6
+table of tuna gossip	xxy7
+table of unpopular girls	xxy8
+table of gizmo parts	xxw1	gizmo	giz
+table of rodney bluster	xxw2	rodney	rod
+table of animal friends	xxt1
+table of Elmer and Merle squabbles	xxt2
+table of Elvira battle cries	xxt3
+table of Elvira machines	xxt4
+table of Elvira taunts	xxt5
+table of political slogans	xxh1
+table of selly yells	xxh2
+####################################
+# Shuffling Around
+table of job searcher names	xxx	x	name	names
+table of evil locations	xxf	f	evil
+table of poem codas	xxi	i	poem
+table of camp chants	xxms1	camp
+table of condo dialogue	xxms2	condo
+table of nerd natter	xxms3	nerd	nerds
+table of psas	xxms4	psa	psas
+table of red bull taunts	xxr1	rbb	bull
+table of riot slogans	xxr2	riot	riots
 ;
-########################That's all! Anything else is not sorted
-\"[a-z]$
-##################
-#other checks
-# 1 what about [a] at end
-# what if match more than 1
