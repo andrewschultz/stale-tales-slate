@@ -25,6 +25,7 @@ my $inc = "c:\\Program Files (x86)\\Inform 7\\Inform7\\Extensions\\Andrew Schult
 
 my $orig = "$roil\\tosort.txt";
 my $mod = "$roil\\tosort2.txt";
+my $raw = "$roil\\tosort-conv.txt";
 my $test = "$roil\\sso-test.txt";
 my $stat = "$roil\\sso-stat.txt";
 
@@ -70,6 +71,7 @@ my %dupes;
 my $showCrib = 0;
 my $dieOnWarnings = 0;
 my $fullDebug = 0;
+my $writeAdded = 0;
 #added before
 
 my $unsorted = 0;
@@ -89,7 +91,8 @@ my $useTestFile = 1; # mostly covered by copyBack but we can check
 
 while ($count <= $#ARGV)
 {
-  for ($ARGV[$count])
+  my $arg = $ARGV[$count];
+  for ($arg)
   {
   /^[0-9]/ && do { doAnagrams($ARGV[0]); };
   /\?/ && do { usage(); exit(); };
@@ -105,6 +108,7 @@ while ($count <= $#ARGV)
   /^-?te$/ && do { $useTestFile = 1; $readIn = $test; $copyBack = 0; $count++; next; };
   /^-?m$/ && do { $moveToHeader = 1; $count++; next; };
   /^-?fd$/ && do { $fullDebug = 1; $count++; next; };
+  /^-?wa(l)$/ && do { $writeAdded = 1 + ($arg =~ /l/); $count++; next; };
   /^-?cr$/ && do { $compareRoil = 1; $count++; next; }; #testing
   /^-?cs$/ && do { $compareShuf = 1; $count++; next; }; #testing
   /^-?cb$/ && do { $compareShuf = $compareRoil = 1; $count++; next; }; #testing
@@ -203,7 +207,7 @@ while ($line = <A>)
   chomp($quoteBit);
   $tableAbbr = $quoteBit;
   $tableAbbr =~ s/^\".*\"([^ \t]*).*/$1/;
-  $quoteBit =~ s/(^\".*\").*/$1/;
+  $quoteBit =~ s/(^\".*\")([^ \t]*)(.*)/$1$3/;
   if (!$tableAbbr) { $unusedString .= $line; next; }
   if (!defined($tableTo{$tableAbbr}))
   {
@@ -211,6 +215,11 @@ while ($line = <A>)
 	$warn{$tableAbbr}++;
 	$warnings++;
 	$unusedString .= $line; next;
+  }
+  if (($quoteBit !~ /\t/) && defined($secondDefault{$tableTo{$tableAbbr}}))
+  {
+    print "Adding $secondDefault{$tableTo{$tableAbbr}} to $quoteBit which needs 2nd entry\n";
+    $quoteBit .= "\t$secondDefault{$tableTo{$tableAbbr}}";
   }
   $tableAdd{$tableTo{$tableAbbr}} .= "$quoteBit\n";
   #print "$idx vs $#x\n";
@@ -226,12 +235,21 @@ if ($dieOnWarnings && $warnings)
   }
 }
 
-if ($fullDebug)
-{
+my $addText = "";
+
 for (sort keys %tableAdd)
 {
-  print "$_\n$tableAdd{$_}\n";
+  $addText .= "$_\n$tableAdd{$_}\n";
 }
+
+print $addText if ($fullDebug);
+
+if ($writeAdded)
+{
+  open(B, ">$raw");
+  print B $addText;
+  close(B);
+  `$raw` if ($writeAdded == 2);
 }
 
 print "$warnings warnings.\n" if $warnings;

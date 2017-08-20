@@ -16,8 +16,8 @@
 !  ms 1=camp 2=condo 3=nerds 4=psa
 ####################################################################################
 ################first default booleans
-table of biopics~FALSE
-table of ad slogans~FALSE
+table of biopics~false
+table of ad slogans~false
 ################now table main regexes/notifiers
 table of cussing rejects	xxg1	cuss	swear
 table of death messages	xxg2	death	die
@@ -86,9 +86,9 @@ table of gizmo parts	xxw1	gizmo	giz
 table of rodney bluster	xxw2	rodney	rod
 table of animal friends	xxt1	ani	anim	an
 table of Elmer and Merle squabbles	xxt2	ems
-table of Elvira battle cries	xxt3	elm
-table of Elvira machines	xxt4	elm
-table of Elvira taunts	xxt5	elt
+table of Elvira battle cries	xxt3	elm	bat	battle
+table of Elvira machines	xxt4	elm	mac	mach
+table of Elvira taunts	xxt5	elt	taunt
 table of political slogans	xxh1	pol
 table of selly yells	xxh2	yel	sel	yell	sell
 ####################################
