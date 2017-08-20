@@ -11,11 +11,12 @@
 #Roiling =
 
 use POSIX;
+use File::stat;
+use Math::BigInt;
 
 use strict;
 use warnings;
 
-use Math::BigInt;
 
 my @localLineNums;
 
@@ -38,6 +39,8 @@ my $notWeirdYet = 0;
 my $weirdLine = 0;
 my $showNums = 0;
 my $read2nd = 0;
+my $ignoreBefore = 0;
+my $ignoreHours = 0;
 
 ######################
 # arrays
@@ -157,6 +160,7 @@ while ($count <= $#ARGV)
   /^-?g$/ && do { $read2nd = 1; $count++; next; };
   /^-?l$/ && do { $launch = 1; $count++; next; };
   /^-?!$/ && do { $remains = 1; $count++; next; };
+  /^-?ib$/ && do { $ignoreBefore = 1; $ignoreHours = $b; $count+= 2; next; };
   /^-?n$/ && do { chdir("c:/writing/dict/nightly"); next; };
   /^-?sn$/ && do { $showNums = 1; $count++; next; };
   /^-?w$/ && do { $weirdLine = $b; $notWeirdYet = 1; $count++; next; };
@@ -181,14 +185,24 @@ $weedDir[0] = $temp;
 
 if (!$weedDir[0]) { die "No suitable directory found. -s, -r or -2."; }
 
-my $s1;
-my $s2;
-my $s3;
-my $s2a;
+my $s1 = "";
+my $s2 = "";
+my $s3 = "";
+my $s2a = "";
 my $thisDir;
+
+my $triedSomething = 0;
 
 for $thisDir(@weedDir)
 {
+  if (!skipProcessing($thisDir))
+  {
+    print "No updates in last $ignoreHours hours for $thisDir, skipping.\n";
+	next;
+  }
+
+  $triedSomething = 1;
+
   open(A2, ">dupes-$thisDir.htm");
   open(A3, ">dshort-$thisDir.txt");
   open(B, ">oddmatch-$thisDir.txt");
@@ -237,6 +251,8 @@ for $thisDir(@weedDir)
 }
 
 if ($launch) { `dupes.htm`; }
+
+die ("No checks run.") if (!$triedSomething);
 
 my $totTime = time() - $sta;
 
@@ -623,6 +639,15 @@ sub stillWorth
   return 1;
 }
 
+sub skipProcessing
+{
+  return 0 if !$ignoreBefore;
+  my $myfi = "C:/Program Files (x86)/Inform 7/Inform7/Extensions/Andrew Schultz/$_[0] Random Text.i7x";
+  my $t1 = stat($myfi)->mtime;
+  my $t2 = time();
+  return $t2 - $t1 < $ignoreHours * 3600;
+}
+
 sub weedOneSource
 {
 
@@ -805,6 +830,8 @@ options include -r=roiling -s=shuffling -2=both
 -g = flip genders
 -f=flip the final file (may be easier to read)
 -sn = show nums
+-ib = ignore before X hours
+MAIN USAGE CASE: weed.pl -2 -ib 24
 EOT
 exit;
 }
