@@ -192,7 +192,8 @@ open(A, $readIn) || die();
 
 my $unusedString = "";
 
-my $quoteBit;
+my $outputChunk;
+my $anagramChunk;
 my $tableAbbr;
 
 my $quo;
@@ -200,6 +201,7 @@ my %warn;
 my $warnLine = 0;
 my $majorWarnLine = 0;
 my $addSecondCol = 0;
+my $anagramLine = 0;
 
 OUTER:
 while ($line = <A>)
@@ -214,28 +216,43 @@ while ($line = <A>)
 	$majorWarnLine = $. if (!$majorWarnLine);
 	$unusedString .= $line; next;
   }
-  $quoteBit = $line;
-  chomp($quoteBit);
-  $tableAbbr = $quoteBit;
+  $outputChunk = $line;
+  chomp($outputChunk);
+  $tableAbbr = $outputChunk;
   $tableAbbr =~ s/^\".*\"([^ \t]*).*/$1/;
-  $quoteBit =~ s/(^\".*\")([^ \t]*)(.*)/$1$3/;
+  $outputChunk =~ s/(^\".*\")([^ \t]*)(.*)/$1$3/;
+  if ($line =~ /\\.*\\/)
+  {
+  $anagramChunk =~ s/.*\\(.*)\\.*/$1/;
+  $outputChunk =~ s/\\//;
+  }
+  else
+  {
+  $anagramChunk = $outputChunk;
+  $anagramChunk =~ s/\"[^\"]*$/\"/;
+  }
+  if (checkAnagram($anagramChunk) == -1)
+  {
+    $anagramLine = $.;
+    $unusedString .= $line; next;
+  }
   if (!$tableAbbr) { $unusedString .= $line; next; }
   if (!defined($tableTo{$tableAbbr}))
   {
-    print "WARNING $tableAbbr after $quoteBit doesn't map anywhere, line $.\n" if $warnings <= $maxWarnShow;
+    print "WARNING $tableAbbr after $outputChunk doesn't map anywhere, line $.\n" if $warnings <= $maxWarnShow;
 	print "Reached maximum, only showing major errors\n" if $warnings == $maxWarnShow;
 	$warn{$tableAbbr}++;
 	$warnings++;
 	$warnLine = $. if (!$warnLine);
 	$unusedString .= $line; next;
   }
-  if (($quoteBit !~ /\t/) && defined($secondDefault{$tableTo{$tableAbbr}}))
+  if (($outputChunk !~ /\t/) && defined($secondDefault{$tableTo{$tableAbbr}}))
   {
-    print "Adding default at line $.: $secondDefault{$tableTo{$tableAbbr}} to $quoteBit which needs 2nd entry--no need to change in source\n" if $showAdd;
-    $quoteBit .= "\t$secondDefault{$tableTo{$tableAbbr}}";
+    print "Adding default at line $.: $secondDefault{$tableTo{$tableAbbr}} to $outputChunk which needs 2nd entry--no need to change in source\n" if $showAdd;
+    $outputChunk .= "\t$secondDefault{$tableTo{$tableAbbr}}";
 	$addSecondCol++;
   }
-  $tableAdd{$tableTo{$tableAbbr}} .= "$quoteBit\n";
+  $tableAdd{$tableTo{$tableAbbr}} .= "$outputChunk\n";
   #print "$idx vs $#x\n";
 }
 
@@ -260,6 +277,17 @@ if ($dieOnWarnings && $warnings)
 	exit();
   }
   die("Clear all warnings before exporting to i7x files.");
+}
+
+if ($dieOnWarnings && $anagramLine)
+{
+  if ($dieOnWarnings == 2)
+  {
+    my $cmd = "$npo $orig -n$anagramLine";
+	system($cmd);
+	exit();
+  }
+  die("Clear all anagrams before exporting to i7x files. If they encompass part of the line, use backslashes.");
 }
 
 my $addText = "";
@@ -380,7 +408,11 @@ sub checkAnagram
 {
   my %freq;
   if ($_[0] !~ /^\"/) { return; }
-  my $ags = lc($_[0]); $ags =~ s/^\"//; $ags =~ s/\".*//;
+  my $ags = lc($_[0]);
+  $ags =~ s/^\"//;
+  $ags =~ s/\".*//;
+  $ags =~ s/\[d-word(-u)?\]/damn/i;
+  $ags =~ s/\[a-word(-u)?\]/ass/i;
   $ags =~ s/\[r\].? by//;
   $ags =~ s/\[toti\]/tio/g;
   #############################get rid of between paren, non ascii below
@@ -398,13 +430,15 @@ sub checkAnagram
     if ($gcd > 0) { $gcd = gcd($gcd, $freq{$k}); if (($gcd == 1) && $firstBad eq "") { $firstBad = $k; } } else { $gcd = $freq{$k}; }
   }
   if ($gcd == 1)
-  {
+  { # todo: add "a" and "the" and "an" to the start # todo: give false ending pointers just in case
     if ($_[0] =~ /\[(p|x|px)\]/) { return; }
 	$wob++;
     print "Wobbly anagram $wob/$ags line $., probably $firstBad: $_[0]: ";
 	for my $k (sort keys %freq) { print "$k$freq{$k}"; }
 	print ".\n";
+	return -1;
   }
+  return 0;
 }
 
 sub dupget
