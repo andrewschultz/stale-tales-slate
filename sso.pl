@@ -149,6 +149,8 @@ print "Read mapping file...\n";
 ####################################open the mapping file
 open(A, $txtfile) || die();
 
+my %lump;
+
 while ($line=<A>)
 {
   if ($line =~ /^;/) { last; }
@@ -167,12 +169,16 @@ while ($line=<A>)
   if ($line =~ /~/) # e.g. table=FALSE
   {
     my @hashy = split(/~/, $line);
+    die ("$hashy[0] defined at line $lump{$hashy[0]}, redefined at line $.") if ($lump{$hashy[0]});
+	$lump{$hashy[0]} = $.;
 	$secondDefault{$hashy[0]} = $hashy[1];
 	next;
   }
   if ($line =~ /\*/) # e.g. something doesn't work
   {
     my @hashy = split(/\*/, $line);
+    die ("$hashy[0] defined at line $lump{$hashy[0]}, redefined at line $.") if ($lump{$hashy[0]});
+	$lump{$hashy[0]} = $.;
 	$failClue{$hashy[0]} = $hashy[1];
 	next;
   }
@@ -181,18 +187,19 @@ while ($line=<A>)
   if ($#hashy < 1) { print "Line $. in $txtfile needs a tab.\n"; }
   for (1..$#hashy)
   {
-    if (defined($tableTo{$hashy[$_]}))
-	{
-	  print "$hashy[$_] already sent to $tableTo{$hashy[$_]}, redefined at line $.\n";
-	  next;
-	}
+    die ("$hashy[$_] defined at line $lump{$hashy[$_]}, redefined at line $.") if ($lump{$hashy[$_]});
+	$lump{$hashy[$_]} = $.;
+
     $tableTo{$hashy[$_]} = $hashy[0];
 	if ($hashy[$_] =~ /^xx/i)
 	{
 	  $hashy[$_] =~ s/^xx//i;
 	  $tableTo{$hashy[$_]} = $hashy[0];
+	  die ("$hashy[$_] defined at line $lump{$hashy[$_]}, redefined at line $.") if ($lump{$hashy[$_]});
+	  $lump{$hashy[$_]} = $.;
 	}
   }
+
 }
 
 close(A);
