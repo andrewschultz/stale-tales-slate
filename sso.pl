@@ -231,7 +231,7 @@ while ($line = <A>)
   $anagramChunk = $outputChunk;
   $anagramChunk =~ s/\"[^\"]*$/\"/;
   }
-  if (checkAnagram($anagramChunk) == -1)
+  if (checkAnagram($anagramChunk, 0) == -1)
   {
     $anagramLine = $.;
     $unusedString .= $line; next;
@@ -407,7 +407,7 @@ sub meaningful
 sub checkAnagram
 {
   my %freq;
-  if ($_[0] !~ /^\"/) { return; }
+  if (($_[1] == 0) && ($_[0] !~ /^\"/)) { return 0; }
   my $ags = lc($_[0]);
   $ags =~ s/^\"//;
   $ags =~ s/\".*//;
@@ -417,12 +417,12 @@ sub checkAnagram
   $ags =~ s/\[toti\]/tio/g;
   #############################get rid of between paren, non ascii below
   $ags =~ s/\[[^\]]*\]//g;
-  $ags =~ s/[^a-z]//g;
+  $ags =~ s/[^a-z ]//g;
   my $firstBad = "";
   my @ang = split(//, $ags);
   for (@ang)
   {
-    $freq{$_}++;
+    $freq{$_}++ if ($_ ne " ");
   }
   my $gcd = 0;
   for my $k (sort keys %freq)
@@ -430,8 +430,17 @@ sub checkAnagram
     if ($gcd > 0) { $gcd = gcd($gcd, $freq{$k}); if (($gcd == 1) && $firstBad eq "") { $firstBad = $k; } } else { $gcd = $freq{$k}; }
   }
   if ($gcd == 1)
-  { # todo: add "a" and "the" and "an" to the start # todo: give false ending pointers just in case
-    if ($_[0] =~ /\[(p|x|px)\]/) { return; }
+  { my $tempAna = $ags;
+
+    if ($tempAna =~ /^(a|the|an) /i)
+    {
+	  $tempAna =~ s/^(a|an|the) //i;
+	  # print "Sub-anagram $tempAna\n";
+	  return 0 if checkAnagram($tempAna, 1) == 0;
+	}
+    # todo: give false ending pointers just in case
+    if ($_[0] =~ /\[(p|x|px)\]/) { return 0; }
+	if ($_[1] == -1) { return -1; }
 	$wob++;
     print "Wobbly anagram $wob/$ags line $., probably $firstBad: $_[0]: ";
 	for my $k (sort keys %freq) { print "$k$freq{$k}"; }
