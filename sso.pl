@@ -73,6 +73,7 @@ my $dieOnWarnings = 0;
 my $fullDebug = 0;
 my $writeAdded = 0;
 my $maxWarnShow = 25;
+my $showAdd = 0;
 #added before
 
 my $unsorted = 0;
@@ -106,6 +107,7 @@ while ($count <= $#ARGV)
   /^-?d$/ && do { $copyBack = 0; $count++; next; };
   /^-?f$/ && do { $copyBack = 1; $count++; next; };
   /^-?n$/ && do { $numbers = 1; $count++; next; };
+  /^-?sa$/ && do { $showAdd = 1; $count++; next; };
   /^-?dw(l)$/ && do { $dieOnWarnings = 1 + ($arg =~ /l/); $count++; next; };
   /^-?mw$/ && do { $maxWarnShow = $arg2; $count++; next; };
   /^-?s$/ && do { $statsOpen = 1; $count++; next; };
@@ -197,6 +199,7 @@ my $quo;
 my %warn;
 my $warnLine = 0;
 my $majorWarnLine = 0;
+my $addSecondCol = 0;
 
 OUTER:
 while ($line = <A>)
@@ -228,8 +231,9 @@ while ($line = <A>)
   }
   if (($quoteBit !~ /\t/) && defined($secondDefault{$tableTo{$tableAbbr}}))
   {
-    print "Adding default at line $.: $secondDefault{$tableTo{$tableAbbr}} to $quoteBit which needs 2nd entry--no need to change in source\n";
+    print "Adding default at line $.: $secondDefault{$tableTo{$tableAbbr}} to $quoteBit which needs 2nd entry--no need to change in source\n" if $showAdd;
     $quoteBit .= "\t$secondDefault{$tableTo{$tableAbbr}}";
+	$addSecondCol++;
   }
   $tableAdd{$tableTo{$tableAbbr}} .= "$quoteBit\n";
   #print "$idx vs $#x\n";
@@ -239,7 +243,9 @@ $warnLine = $majorWarnLine if ($majorWarnLine);
 
 my $x;
 
-print "$warnings total warnings\n" if $warnings;
+print "$warnings total warnings.\n" if $warnings;
+
+print "$addSecondCol default second columns added.\n" if $addSecondCol && !$showAdd;
 
 if ($dieOnWarnings && $warnings)
 {
@@ -254,7 +260,6 @@ if ($dieOnWarnings && $warnings)
 	exit();
   }
   die("Clear all warnings before exporting to i7x files.");
-  die();
 }
 
 my $addText = "";
@@ -515,6 +520,8 @@ Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sortin
 -n adds a line of numbers to the stats file.
 -s opens the stats after.
 -dw dies on warnings e.g. an invalid has at the end of quoted text
+-mw is maximum warnings
+-sa is show default column add details
 SPECIFIC USAGE:
 dns is good for doing the stats etc
 c is good for testing
