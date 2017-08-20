@@ -4,6 +4,7 @@
 #
 
 use Cwd;
+use File::Compare;
 
 use strict;
 use warnings;
@@ -61,7 +62,11 @@ if ($#dirs == -1)
   my $shortDir = getcwd();
   $shortDir =~ s/\.inform.*//g; $shortDir =~ s/.*[\\\/]//g;
 
+  if ((lc($shortDir) eq "roiling") || (lc($shortDir) eq "shuffling"))
+  {
   @dirs = ($shortDir);
+  print "Running only $shortDir. Leave this directory or use the -2 flag to force default (both dir) behavior.\n";
+  }
   }
   else
   {
@@ -173,6 +178,11 @@ sub postProcess
   #my $outFileName = "$_[0].bak";
   my $outFileName = "c:\\Program Files (x86)\\Inform 7\\Inform7\\Extensions\\Andrew Schultz\\temp.i7x";
 
+if (compare($modFile, $outFileName) == 0)
+{
+  print "$fileName unchanged, so we are not doing anything.\n";
+  return;
+}
 
 if (!$dontcopy)
 {
@@ -336,8 +346,10 @@ sub fileOf
 sub usage
 {
 print <<EOT;
--b both
--r roiling (default unless story.ni in PWD)
+USAGE for TSH.PL:
+
+-b both (default unless story.ni in PWD)
+-r roiling
 -s shuffling
 -f file name
 -v verbose (show what tables sorted)
