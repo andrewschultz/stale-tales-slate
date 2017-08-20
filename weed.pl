@@ -27,9 +27,20 @@ my @localLineNums;
 
 my @color = ("#ffffff", "#dddddd", "#bbbbbb");
 
+########################
+# options
+my $flipIt = 0;
 my $upPosLimit = 0;
 my $upBadLimit = 0;
+my $launch = 0;
+my $remains = 0;
+my $notWeirdYet = 0;
+my $weirdLine = 0;
+my $showNums = 0;
+my $read2nd = 0;
 
+######################
+# arrays
 my @badPos;
 my @false;
 my @quik;
@@ -39,6 +50,8 @@ my @rt;
 my @z;
 my @smallStuff;
 
+########################
+# hashes
 my %ary;
 my %dupCount;
 my %dupes;
@@ -48,6 +61,15 @@ my %ln;
 my %pbad;
 my %quik;
 my %repl;
+
+########################
+# globals which yeah but
+#
+my $numberYet = 0;
+my $tableYetC = 0;
+my $line = 0;
+my $hadPoss = 0;
+my $thisTable = "";
 
 $ary{"a"} = 2187818;
 $ary{"b"} = 18418905;
@@ -106,9 +128,7 @@ my $badana = 1;
 $upBadLimit = -1;
 $upPosLimit = -1;
 
-$inDir = "";
-
-$sta = time();
+my $sta = time();
 
 $exp{"roi"} = $exp{"ro"} = $exp{"r"} = $exp{"-r"} = "roiling";
 $exp{"sa"} = $exp{"s"} = $exp{"-s"} = $exp{""} = "shuffling";
@@ -122,13 +142,15 @@ my @weedDir = ();
 
 my $divider = 5000;
 
+my $count = 0;
+
 while ($count <= $#ARGV)
 {
-  $a = @ARGV[$count];
-  $b = @ARGV[$count+1];
+  $a = $ARGV[$count];
+  $b = $ARGV[$count+1];
   for ($a)
   {
-  / / && do { $word = $a; die(cromstring($word, 1)); $count++; next; };
+  / / && do { my $word = $a; die(cromstring($word, 1)); $count++; next; };
   /^-?b$/ && do { $upBadLimit = $b; $count++; next; };
   /^-?p$/ && do { $upPosLimit = $b; $count++; next; };
   /^-?f$/ && do { $flipIt = 1; $count++; next; };
@@ -136,6 +158,7 @@ while ($count <= $#ARGV)
   /^-?l$/ && do { $launch = 1; $count++; next; };
   /^-?!$/ && do { $remains = 1; $count++; next; };
   /^-?n$/ && do { chdir("c:/writing/dict/nightly"); next; };
+  /^-?sn$/ && do { $showNums = 1; $count++; next; };
   /^-?w$/ && do { $weirdLine = $b; $notWeirdYet = 1; $count++; next; };
   /^-?(r|ro|roi)$/ && do { @weedDir = (@weedDir, "roiling"); $count++; next; };
   /^-?(s|sa)$/ && do { @weedDir = (@weedDir, "shuffling"); $count++; next; };
@@ -146,21 +169,22 @@ while ($count <= $#ARGV)
 
 `copy badana.txt badana.bak`;
 
-if (!@weedDir[0])
+if (!$weedDir[0])
 {
 
 if ($pwd =~ /(shuffling|roiling)\.inform/)
 {
   my $temp = $pwd; $temp =~ s/\.inform.*//g; $temp =~ s/.*[\\\/]//g;
-@weedDir[0] = $temp;
+$weedDir[0] = $temp;
 }
 }
 
-if (!@weedDir[0]) { die "No suitable directory found. -s, -r or -2."; }
+if (!$weedDir[0]) { die "No suitable directory found. -s, -r or -2."; }
 
 my $s1;
 my $s2;
 my $s3;
+my $s2a;
 my $thisDir;
 
 for $thisDir(@weedDir)
@@ -179,7 +203,7 @@ for $thisDir(@weedDir)
 
   if ($di + $sm) { $s1 = "<br>(DUPES.HTM/DSHORT.TXT) $di total differences (disable with \[\]). $sm size mismatches.\n"; } else { $s1 = "DUPES.HTM/DSHORT.TXT will be blank. Hooray!\n"; }
   if ($posBad) { $s2 = "(ODDMATCH.TXT) $posBad interesting cases.\n"; } else { $s2 = "ODDMATCH.TXT has nothing. Wow!\n"; }
-  if ($falsePos) { $s2 = "(FALSEPOS.TXT) $falsePos \[\]'s.\n"; } else { $s2 = "FALSEPOS.TXT has nothing. Good!\n"; }
+  if ($falsePos) { $s2a = "(FALSEPOS.TXT) $falsePos \[\]'s.\n"; } else { $s2a = "FALSEPOS.TXT has nothing. Good!\n"; }
   if ($badans) { $s3 = "(BADANA.TXT) $badans total likely bad anagrams, disable with \[x\].\n"; } else { $s3 = "You have no bad anagrams. Well done!\n"; }
 
   print "TEST RESULTS:$thisDir bad anagrams,10,$badans,0,<a href=\"badana-$thisDir.txt\">The Culprits</a>\n";
@@ -191,7 +215,7 @@ for $thisDir(@weedDir)
 
   print B "$s2";
 
-  if (keys %pbad > 0) { print B "Missing stuff by table:\n"; for $tname (sort keys %pbad) { print B "$tname : $pbad{$tname}\n"; } }
+  if (keys %pbad > 0) { print B "Missing stuff by table:\n"; for my $tname (sort keys %pbad) { print B "$tname : $pbad{$tname}\n"; } }
 
   print B2 "$s2a";
 
@@ -201,7 +225,7 @@ for $thisDir(@weedDir)
 
   print A2 "</table></body></html>";
 
-  for $x (sort keys %dupCount) { print A3 "$x: $dupCount{$x}\n"; }
+  for (sort keys %dupCount) { print A3 "$_: $dupCount{$_}\n"; }
 
   close(A2);
   close(B);
@@ -214,21 +238,21 @@ for $thisDir(@weedDir)
 
 if ($launch) { `dupes.htm`; }
 
-$totTime = time() - $sta;
+my $totTime = time() - $sta;
 
 print "$totTime total seconds. Output to dupes.htm, dshort-?.txt and badana-?.txt and oddmatch-?.txt.\n$s1$s2$s3";
 
 #cmp would put 93 above 111
-for $x (sort { $dupCount{$b} <=> $dupCount{$a} } keys %dupCount)
+for $_ (sort { $dupCount{$b} <=> $dupCount{$a} } keys %dupCount)
 {
-  print "$x had $dupCount{$x}\n";
+  print "$_ had $dupCount{$_}\n";
 }
 
 if ($flipIt)
 {
 open(A, "dupes.htm");
 
-$hdr = <A>;
+my $hdr = <A>;
 
 while ($a  = <A>) { push (@rev, $a); }
 @rev = reverse(@rev);
@@ -237,7 +261,7 @@ close(A);
 open(B, ">dupes-f.htm");
 print B $hdr;
 for (1..$#rev) { print B $_; }
-print B @rev[0];
+print B $rev[0];
 
 print "Reverse file in dupes-f.htm.\n";
 }
@@ -247,6 +271,7 @@ print "Reverse file in dupes-f.htm.\n";
 
 sub cutDown
 {
+  my $x;
   my $temp = $_[0];
   $temp =~ s/\"\s.*/\"/g;
   $temp =~ s/(\[r\]),? +by / /g;
@@ -284,7 +309,7 @@ sub cutDown
 
 sub checkFullAna
 {
-  $fullAna = 0;
+  my $fullAna = 0;
   $fullAna |= quikAna($_[0]);
   if ($fullAna) { return $fullAna; }
   if ($_[0] =~ /^\"(the|an|a) /i)
@@ -312,19 +337,19 @@ sub quikAna
   my $retStr;
   my $temp = lc($_[0]);
 
+  my $let;
+  my $idx;
+  my $t2;
+
   #print "$temp: $a $b $c\n";
   for $let ('a' .. 'z')
   {
     $idx = ord($let) - 97;
     $t2 = () = ($temp =~ /$let/g);
-	@roots[$idx] = $t2;
+	$roots[$idx] = $t2;
   }
 
-  $q = Math::BigInt::bgcd(@roots);
-
-  if ($q > 1) { return 1; }
-
-  return 0;
+  return (Math::BigInt::bgcd(@roots) > 1);
 
 }
 
@@ -334,15 +359,19 @@ sub mash
   my $retStr;
   my $temp = lc($_[0]);
 
+  my $idx;
+  my $let;
+  my $t2;
+
   #print "$temp: $a $b $c\n";
   for $let ('a' .. 'z')
   {
     $idx = ord($let) - 97;
     $t2 = () = ($temp =~ /$let/g);
-	@roots[$idx] = $t2;
+	$roots[$idx] = $t2;
   }
 
-  $q = Math::BigInt::bgcd(@roots);
+  my $q = Math::BigInt::bgcd(@roots);
   if ($q > 1) { for (@roots) { $_ /= $q; } }
   elsif (gotAna($_[0]))
   {
@@ -374,9 +403,8 @@ sub mash
 	$hadPoss = 0;
 	}
 
-  $mess = join("", @roots);
   #die ($mess . $_[0]	);
-  return $mess;
+  return join("", @roots);
 }
 
 sub lets
@@ -396,34 +424,37 @@ sub offstring
   my @lets = ();
   my @z = split(//, $x);
   my @which;
+
+  my $rem;
   my $retString;
+
   for (@z)
   {
     #print "Adding $_: @which\n";
-    @which[ord($_)-97]++;
+    $which[ord($_)-97]++;
   }
   my $lowestInt = 0;
 	  for (0..25)
 	  {
-	    if (@which[$_])
+	    if ($which[$_])
 		{
-		  if (!$lowestInt) { $lowestInt = @which[$_]; }
-		  elsif (@which[$_] < $lowestInt) { $lowestInt = @which[$_]; }
+		  if (!$lowestInt) { $lowestInt = $which[$_]; }
+		  elsif ($which[$_] < $lowestInt) { $lowestInt = $which[$_]; }
 		}
 	  }
-	  $retStrung =  "Culprit(s): ";
+	  $retString =  "Culprit(s): ";
 	  if ($lowestInt == 1)
 	  {
-	  for (0..25) { if (@which[$_] == 1) { $retString .= chr($_+97); $retString .= " (1-iso) "; } }
+	  for (0..25) { if ($which[$_] == 1) { $retString .= chr($_+97); $retString .= " (1-iso) "; } }
 	  #die("$_[0] -> $resString");
 	  }
 	  else
 	  {
 	  for (0..25)
 	  {
-	    if (@which[$_] % $lowestInt)
+	    if ($which[$_] % $lowestInt)
 		{
-		  $rem = @which[$_] % $lowestInt;
+		  $rem = $which[$_] % $lowestInt;
 		  $retString .= chr($_+97);
 		  $retString .= "($rem) ";
 		}
@@ -445,51 +476,53 @@ sub cromstring
   my @which;
 
   my $bgcd;
+  my $rem;
 
   for (@z)
   {
     #print "Adding $_: @which\n";
-    @which[ord($_)-97]++;
+    $which[ord($_)-97]++;
   }
-  if (($_[1] == -1) || ($_[1] == 0))
+  if (defined($_[1]) && (($_[1] == -1) || ($_[1] == 0)))
   {
     $bgcd = Math::BigInt::bgcd(@which) . "=GCD...";
 	for (0..25)
 	{
-	  if (@which[$_])
+	  if ($which[$_])
 	  {
-	    @which[$_] /= $bgcd;
+	    $which[$_] /= $bgcd;
 	  }
 	}
+	  die();
   }
   for (0..25)
   {
-    if (@which[$_])
+    if ($which[$_])
 	{
-    $cromString .= chr($_ + 97) . "@which[$_]";
+    $cromString .= chr($_ + 97) . "$which[$_]";
 	}
   }
-  if ($_[1] == 1)
+  if (defined($_[1]) && ($_[1] == 1))
   {
     $bgcd = Math::BigInt::bgcd(@which) . "=GCD...";
 	if ($bgcd == 1)
 	{
 	  print "not perfect anagram";
-	  $lowestInt = 0;
+	  my $lowestInt = 0;
 	  for (0..25)
 	  {
-	    if (@which[$_])
+	    if ($which[$_])
 		{
-		  if (!$lowestInt) { $lowestInt = @which[$_]; }
-		  elsif (@which[$_] < $lowestInt) { $lowestInt = @which[$_]; }
+		  if (!$lowestInt) { $lowestInt = $which[$_]; }
+		  elsif ($which[$_] < $lowestInt) { $lowestInt = $which[$_]; }
 		}
 	  }
 	  print "\nCulprit(s): ";
 	  for (0..25)
 	  {
-	    if (@which[$_] % $lowestInt)
+	    if ($which[$_] % $lowestInt)
 		{
-		  $rem = @which[$_] % $lowestInt;
+		  $rem = $which[$_] % $lowestInt;
 		  print chr($_+97) . "($rem) ";
 		}
 	  }
@@ -514,25 +547,26 @@ sub gotAna
   my $mayDupe = 0;
   my $showDupe = 0;
   my $anaStr;
+  my $q; my $i; my $j; my $x; # for loop vars
+  $hadPoss = 0;
 
   for $q (0..$#divs)
   {
-    @tmp = split(//, @divs[$q]);
+    @tmp = split(//, $divs[$q]); # ?? @tmp = split(//, @divs[$q]); gives warsum fits
 	$x = 0;
-	for $i (0..$#tmp) { $x = $x + $ary{@tmp[$i]}; }
-	@words[$q] = $x;
+	for $i (0..$#tmp) { $x = $x + $ary{$tmp[$i]}; }
+	$words[$q] = $x;
   }
-  #if ($temp =~ /hillside/i) { for (0..$#words) { print "$_ @words[$_]\n"; } print $temp; $die = 1;}
   #die(join("/", @words));
-  $partAna = 0;
+  my $partAna = 0;
   for $i (0..$#words)
   {
-    $runTote = 0;
+    my $runTote = 0;
     for $j ($i..$#words)
 	{
-	  $runTote += @words[$j];
+	  $runTote += $words[$j];
 	  #if ($totes{$runTote} =~ /^0/) { print B "$totes{$runTote}: $i, $j, $_[0]\n"; }
-      if ($totes{$runTote} !~ /[0-9]/)
+      if (!defined($totes{$runTote}) || ($totes{$runTote} !~ /[0-9]/))
 	  {
 	    if ($i == $j)
 		{
@@ -545,27 +579,26 @@ sub gotAna
 	  }
 	  else
 	  {
-	    if ($die) { print "$runTote already $totes{$runTote}\n"; }
 	    @rt = split(/-/, $totes{$runTote});
-		if (!@rt[1]) { @rt[1] = @rt[0]; }
+		if (!$rt[1]) { $rt[1] = $rt[0]; }
 
-		if ($i <= @rt[1]) { $mayDupe = 1; }
+		if ($i <= $rt[1]) { $mayDupe = 1; }
 
-		if ($j == $i) { $combo = "$i"; } else { $combo = "$i-$j"; }
+		my $combo = ($i == $j) ? $i : "$i-$j";
 
 		if ($mayDupe && $showDupe) { print B "(DUPE WORDS?) "; }
 		if (($mayDupe == 0) || ($showDupe == 1))
 		{
 		$anaStr = "PART-ANA:";
 		#note it'd be nice to reject if one word is the other.
-		if (($i == $j) && (@rt[0] == @rt[1]) && (@divs[$i] eq @divs[@rt[0]]))
+		if (($i == $j) && ($rt[0] == $rt[1]) && ($divs[$i] eq $divs[$rt[0]]))
 		{
 		}
 		else
 		{
-		for ($i..$j) { $anaStr .= " @divs[$_]"; }
+		for ($i..$j) { $anaStr .= " $divs[$_]"; }
 		$anaStr .= " <->";
-		for (@rt[0]..@rt[1]) { $anaStr .= " @divs[$_]"; }
+		for ($rt[0]..$rt[1]) { $anaStr .= " $divs[$_]"; }
 		if (!$notWeirdYet)
 		{
 		print B "$anaStr\n";
@@ -617,11 +650,16 @@ my $second;
 
 $line = 0;
 
-while (($a = <A>) && (stillWorth()))
+my $dupeRows = 0;
+my $tableYetA2 = 0;
+my $curA2Table = 0;
+$tableYetC = 0;
+my $inTable = 0;
+
+while (($a = <A>))
 {
   $line++;
   if ($line % $divider == 0) { print "At line $line\n"; }
-  $tableRows++;
   if ($a =~ /$ch/) { print("BIG WARN line $line has a smart quote or apostrophe.\n"); }
   if ($notWeirdYet)
   {
@@ -631,9 +669,10 @@ while (($a = <A>) && (stillWorth()))
 
   if ($a =~ /^table of.*xx/)
   {
-    if ($dupeRows) { $dupCount{$thisTable} = $dupeRows;  }
-	$dupeRows = 0;
-	$curA2Table = 0; $inTable = 1; $tableYetC = 0; $tableYetA2 = 0;
+    if ($dupeRows) { $dupCount{$thisTable} = $dupeRows; $dupeRows = 0; }
+	$curA2Table = 0;
+    $inTable = 1;
+	$tableYetC = 0;
 	$thisTable = $a; $thisTable =~ s/\[.*//g; chomp($thisTable);
 	print B "==$thisTable\n"; next;
   }
@@ -666,8 +705,8 @@ while (($a = <A>) && (stillWorth()))
 	$b = cromstring($a);
     if ($dupes{$b} && (!$badAnaSoFar))
     {
-	$q = lets($a);
-	$q2 = lets($dupes{$a});
+	my $q = lets($a);
+	my $q2 = lets($dupes{$b});
 	if ($q2 != $q)
 	{
 	  my $z = Math::BigInt::bgcd(($q2, $q)); $q2 /= $z; $q /= $z;
@@ -680,7 +719,6 @@ while (($a = <A>) && (stillWorth()))
 	  checkFinalLineNums();
 	  $numberYet = 0;
 	}
-	  $dif = $line - $oldline;
 	$first = $a; $first =~ s/ .*//g;
 	$second = $dupes{$b}; $second =~ s/ .*//g;
 	$first =~ s/^\"//g; $second =~ s/(SA:)?\"//g;
@@ -688,7 +726,6 @@ while (($a = <A>) && (stillWorth()))
 	print A2 "$a ($line) =? $dupes{$b} ($ln{$b}) (FIRSTS: $first vs $second)";
 	if ($first eq $second) { print A2 "</i>"; }
 	print A2 "<br />\n"; $di++;
-	$oldline = $line;
 	$curA2Table++;
 	$dupeRows++;
 	#old way
@@ -698,7 +735,7 @@ while (($a = <A>) && (stillWorth()))
 	if ($curA2Table % $breakNum == 0)
 	{
 	  print A2 "<hr>run of 50, " . ($#localLineNums - $breakNum + 1) . " to $curA2Table: <b>aq.pl \n";
-	  print A2 join(" ", @localLineNums[($#localLineNums - $breakNum + 1)..$#localLineNums]);
+	  print A2 join(" ", $localLineNums[($#localLineNums - $breakNum + 1)..$#localLineNums]);
 	  print A2 "</b>\n<br />\n";
 	}
 	}
@@ -710,6 +747,7 @@ while (($a = <A>) && (stillWorth()))
 	}
 	#print "$b -> $a\n";
   }
+  last if !stillWorth();
 }
 
 print "$#localLineNums this go round for $thisTable.\n";
@@ -721,7 +759,7 @@ if ($#localLineNums > -1)
   {
   print A2 "Going from $roundDown to $#localLineNums.<br />\n";
   $roundDown--;
-  print A2 "<br>" . ($#localLineNums+1) . " elements:<br /><font size=+3><b>aq.pl " . join(" ", @localLineNums[$roundDown..$#localLineNums]) . "</b></font>\n<br />\n"; }
+  print A2 "<br>" . ($#localLineNums+1) . " elements:<br /><font size=+3><b>aq.pl " . join(" ", $localLineNums[$roundDown..$#localLineNums]) . "</b></font>\n<br />\n"; }
   }
 
   $thisTable = "";
@@ -741,7 +779,7 @@ sub checkFinalLineNums
 		  my $remain = $#localLineNums % $breakNum;
 		  if ($remain < $breakNum - 1)
 		  {
-		  print A2 "<br>" . ($#localLineNums+1) . " elements, showing last " . ($remain + 1) . ":<br /><font size=+3><b>aq.pl " . join(" ", @localLineNums[($#localLineNums - $remain)..$#localLineNums]) . "</b></font>\n";
+		  print A2 "<br>" . ($#localLineNums+1) . " elements, showing last " . ($remain + 1) . ":<br /><font size=+3><b>aq.pl " . join(" ", $localLineNums[($#localLineNums - $remain)..$#localLineNums]) . "</b></font>\n";
 		  }
 	  }
 	  if ($#localLineNums < 10) { @smallStuff = (@smallStuff, @localLineNums); }
@@ -766,6 +804,7 @@ badana.txt = bad anagrams
 options include -r=roiling -s=shuffling -2=both
 -g = flip genders
 -f=flip the final file (may be easier to read)
+-sn = show nums
 EOT
 exit;
 }
