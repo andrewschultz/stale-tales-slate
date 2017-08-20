@@ -41,7 +41,7 @@ table of lame movies	xxm7	mov	movie	movies
 table of lame talk shows	xxm8	talk
 table of lame tv shows	xxm9	tv
 table of laughhouses	xxm0	laf	laff
-table of lousy hit songs	xxm01
+table of lousy hit songs	xxm01	hits
 table of mob chants	xxm02	mob
 table of oldies singers	xxm03	old
 table of random books	xxm04	bk	bo	boo	book
@@ -66,8 +66,8 @@ table of posh dialogue	xxv6	posh
 table of posse bosses	xxv7	posse	boss
 table of prestigious bums	xxv8	bum	bums
 table of real estate ads	xxv9	real	estate
-table of self-help bestsellers	xxv0	mot	motiv
-table of songs you could write	xxvx
+table of self-help bestsellers	xxv0	mot	motiv	sh
+table of songs you could write	xxvx	songs
 table of bedding brands	xxp1	bed
 table of catechism pages	xxp2	cat
 table of Leo-Rand chitchat	xxp3	lrc

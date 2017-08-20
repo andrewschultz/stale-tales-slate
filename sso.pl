@@ -91,7 +91,7 @@ my $useTestFile = 1; # mostly covered by copyBack but we can check
 
 while ($count <= $#ARGV)
 {
-  my $arg = $ARGV[$count];
+  my $arg = lc($ARGV[$count]);
   for ($arg)
   {
   /^[0-9]/ && do { doAnagrams($ARGV[0]); };
@@ -103,7 +103,7 @@ while ($count <= $#ARGV)
   /^-?d$/ && do { $copyBack = 0; $count++; next; };
   /^-?f$/ && do { $copyBack = 1; $count++; next; };
   /^-?n$/ && do { $numbers = 1; $count++; next; };
-  /^-?dw$/ && do { $dieOnWarnings = 1; $count++; next; };
+  /^-?dw(l)$/ && do { $dieOnWarnings = 1 + ($arg =~ /l/); $count++; next; };
   /^-?s$/ && do { $statsOpen = 1; $count++; next; };
   /^-?te$/ && do { $useTestFile = 1; $readIn = $test; $copyBack = 0; $count++; next; };
   /^-?m$/ && do { $moveToHeader = 1; $count++; next; };
@@ -191,6 +191,8 @@ my $tableAbbr;
 
 my $quo;
 my %warn;
+my $warnLine = 0;
+my $majorWarnLine = 0;
 
 OUTER:
 while ($line = <A>)
@@ -201,6 +203,7 @@ while ($line = <A>)
   {
     print "WARNING bad quotes in line $., $line";
 	$warnings++;
+	$majorWarnLine = $. if (!$majorWarnLine);
 	$unusedString .= $line; next;
   }
   $quoteBit = $line;
@@ -214,6 +217,7 @@ while ($line = <A>)
     print "WARNING $tableAbbr after $quoteBit doesn't map anywhere, line $.\n";
 	$warn{$tableAbbr}++;
 	$warnings++;
+	$warnLine = $. if (!$warnLine);
 	$unusedString .= $line; next;
   }
   if (($quoteBit !~ /\t/) && defined($secondDefault{$tableTo{$tableAbbr}}))
@@ -225,6 +229,8 @@ while ($line = <A>)
   #print "$idx vs $#x\n";
 }
 
+$warnLine = $majorWarnLine if ($majorWarnLine);
+
 my $x;
 
 if ($dieOnWarnings && $warnings)
@@ -233,6 +239,14 @@ if ($dieOnWarnings && $warnings)
   {
     print "$x: $warn{$x}\n";
   }
+  if ($dieOnWarnings == 2)
+  {
+    my $cmd = "$npo $orig -n$warnLine";
+	system($cmd);
+	exit();
+  }
+  die("Clear all warnings before exporting to i7x files.");
+  die();
 }
 
 my $addText = "";
