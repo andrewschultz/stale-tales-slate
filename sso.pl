@@ -46,7 +46,10 @@ my $txtfile = __FILE__;
 $txtfile =~ s/pl$/txt/; # in other words c:\writing\dict\sso.txt
 my $code = __FILE__;
 
+# todo: 4 hashes have any keys in common?
+
 ###################################globals
+my %failClue;
 my %secondDefault;
 my %tableTo;
 my %tableAdd;
@@ -167,6 +170,12 @@ while ($line=<A>)
 	$secondDefault{$hashy[0]} = $hashy[1];
 	next;
   }
+  if ($line =~ /\*/) # e.g. something doesn't work
+  {
+    my @hashy = split(/\*/, $line);
+	$failClue{$hashy[0]} = $hashy[1];
+	next;
+  }
   my @hashy = split(/\t/, $line);
   $hashy[0] = lc($hashy[0]);
   if ($#hashy < 1) { print "Line $. in $txtfile needs a tab.\n"; }
@@ -221,10 +230,20 @@ while ($line = <A>)
   $tableAbbr = $outputChunk;
   $tableAbbr =~ s/^\".*\"([^ \t]*).*/$1/;
   $outputChunk =~ s/(^\".*\")([^ \t]*)(.*)/$1$3/;
-  if ($line =~ /\\.*\\/)
+  if ($line =~ /\\/)
   {
-  $anagramChunk =~ s/.*\\(.*)\\.*/$1/;
-  $outputChunk =~ s/\\//;
+  my $i = 0;
+  my @chunks = split(/\\/, $line);
+  if ($#chunks % 2)
+  {
+    $majorWarnLine = $. if (!$majorWarnLine);
+	$unusedString .= $line;
+	chomp($line);
+    print "$line wrong # of backslashes";
+	next;
+  }
+  my @c2 = grep { $i++ % 2} @chunks;
+  $outputChunk = join(" ", @c2);
   }
   else
   {
@@ -237,6 +256,15 @@ while ($line = <A>)
     $unusedString .= $line; next;
   }
   if (!$tableAbbr) { $unusedString .= $line; next; }
+  if (defined($failClue{$tableAbbr}))
+  {
+    print "WARNING $tableAbbr doesn't work, but it has clue $failClue{$tableAbbr}, line $.\n" if $warnings <= $maxWarnShow;
+	print "Reached maximum, only showing major errors\n" if $warnings == $maxWarnShow;
+	$warn{$tableAbbr}++;
+	$warnings++;
+	$warnLine = $. if (!$warnLine);
+	$unusedString .= $line; next;
+  }
   if (!defined($tableTo{$tableAbbr}))
   {
     print "WARNING $tableAbbr after $outputChunk doesn't map anywhere, line $.\n" if $warnings <= $maxWarnShow;
@@ -438,7 +466,7 @@ sub checkAnagram
 	  # print "Sub-anagram $tempAna\n";
 	  return 0 if checkAnagram($tempAna, 1) == 0;
 	}
-    # todo: give false ending pointers just in case
+    # todo: multiple backslashes
     if ($_[0] =~ /\[(p|x|px)\]/) { return 0; }
 	if ($_[1] == -1) { return -1; }
 	$wob++;
