@@ -50,7 +50,7 @@ my $code = __FILE__;
 my %secondDefault;
 my %tableTo;
 my %tableAdd;
-my $warnings;
+my $warnings = 0;
 #added before
 
 my %regex;
@@ -72,6 +72,7 @@ my $showCrib = 0;
 my $dieOnWarnings = 0;
 my $fullDebug = 0;
 my $writeAdded = 0;
+my $maxWarnShow = 25;
 #added before
 
 my $unsorted = 0;
@@ -92,6 +93,8 @@ my $useTestFile = 1; # mostly covered by copyBack but we can check
 while ($count <= $#ARGV)
 {
   my $arg = lc($ARGV[$count]);
+  my $arg2 = defined($ARGV[$count+1]) ? $ARGV[$count+1] : "";
+
   for ($arg)
   {
   /^[0-9]/ && do { doAnagrams($ARGV[0]); };
@@ -104,6 +107,7 @@ while ($count <= $#ARGV)
   /^-?f$/ && do { $copyBack = 1; $count++; next; };
   /^-?n$/ && do { $numbers = 1; $count++; next; };
   /^-?dw(l)$/ && do { $dieOnWarnings = 1 + ($arg =~ /l/); $count++; next; };
+  /^-?mw$/ && do { $maxWarnShow = $arg2; $count++; next; };
   /^-?s$/ && do { $statsOpen = 1; $count++; next; };
   /^-?te$/ && do { $useTestFile = 1; $readIn = $test; $copyBack = 0; $count++; next; };
   /^-?m$/ && do { $moveToHeader = 1; $count++; next; };
@@ -203,6 +207,7 @@ while ($line = <A>)
   {
     print "WARNING bad quotes in line $., $line";
 	$warnings++;
+	print "Reached maximum, only showing major errors\n" if $warnings == $maxWarnShow;
 	$majorWarnLine = $. if (!$majorWarnLine);
 	$unusedString .= $line; next;
   }
@@ -214,7 +219,8 @@ while ($line = <A>)
   if (!$tableAbbr) { $unusedString .= $line; next; }
   if (!defined($tableTo{$tableAbbr}))
   {
-    print "WARNING $tableAbbr after $quoteBit doesn't map anywhere, line $.\n";
+    print "WARNING $tableAbbr after $quoteBit doesn't map anywhere, line $.\n" if $warnings <= $maxWarnShow;
+	print "Reached maximum, only showing major errors\n" if $warnings == $maxWarnShow;
 	$warn{$tableAbbr}++;
 	$warnings++;
 	$warnLine = $. if (!$warnLine);
@@ -222,7 +228,7 @@ while ($line = <A>)
   }
   if (($quoteBit !~ /\t/) && defined($secondDefault{$tableTo{$tableAbbr}}))
   {
-    print "Adding $secondDefault{$tableTo{$tableAbbr}} to $quoteBit which needs 2nd entry\n";
+    print "Adding default at line $.: $secondDefault{$tableTo{$tableAbbr}} to $quoteBit which needs 2nd entry--no need to change in source\n";
     $quoteBit .= "\t$secondDefault{$tableTo{$tableAbbr}}";
   }
   $tableAdd{$tableTo{$tableAbbr}} .= "$quoteBit\n";
@@ -232,6 +238,8 @@ while ($line = <A>)
 $warnLine = $majorWarnLine if ($majorWarnLine);
 
 my $x;
+
+print "$warnings total warnings\n" if $warnings;
 
 if ($dieOnWarnings && $warnings)
 {
