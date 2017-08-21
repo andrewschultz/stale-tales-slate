@@ -77,6 +77,7 @@ my $fullDebug = 0;
 my $writeAdded = 0;
 my $maxWarnShow = 25;
 my $showAdd = 0;
+my $postProcess = 0;
 #added before
 
 my $unsorted = 0;
@@ -109,6 +110,7 @@ while ($count <= $#ARGV)
   /^-?e?r$/ && do { `$txtfile`; exit(); }; # forcing options first
   /^-?d$/ && do { $copyBack = 0; $count++; next; };
   /^-?f$/ && do { $copyBack = 1; $count++; next; };
+  /^-?p$/ && do { $postProcess = 1; $count++; next; };
   /^-?n$/ && do { $numbers = 1; $count++; next; };
   /^-?sa$/ && do { $showAdd = 1; $count++; next; };
   /^-?dw(l)$/ && do { $dieOnWarnings = 1 + ($arg =~ /l/); $count++; next; };
@@ -392,6 +394,12 @@ if ($numbers)
   close(B);
 }
 
+if ($postProcess)
+{
+  system("tsh.pl -b");
+  system("weed.pl -2 -ib 24");
+}
+
 if ($statsOpen) { `$stat`; }
 
 if (!$copyBack) { print "Did not copy tosort2.txt back to tosort.txt.\n"; }
@@ -600,6 +608,7 @@ Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sortin
 -dw dies on warnings e.g. an invalid has at the end of quoted text
 -mw is maximum warnings
 -sa is show default column add details
+-p post processes
 SPECIFIC USAGE:
 dns is good for doing the stats etc
 c is good for testing
