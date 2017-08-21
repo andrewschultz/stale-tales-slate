@@ -293,6 +293,8 @@ Say WHASSUP to get in their good graces.
 Well, until you get close to the end.
 And not into the volt maze. You have to go there yourself.
 >>NOWT TOWN/VOLT MAZE
+?Why can't I enter the maze yet?
+You need to get a few points and figure out what's going on.
 ?Do I need to go through the volt maze? How many times?
 No. You need to figure a word or phrase. There are two. The easy and hard way.
 The maze entry zany meter should give some clues.
@@ -305,11 +307,13 @@ WONT.
 ?What's the hard way?
 This is a tricky one, but there are a lot of clues.
 Touching the walls or reading E-Z Ol' Av will give a clue.
-Scanning the fellows at the end helps, too. There are three. When you scan the first two with cheats on, a new one will appear next time through.
+Scanning the fellows in the Unwary Runway helps, too. There are three. When you scan the first two with cheats on, a new one will appear next time through.
 There should be some clues about Yiddish language or phrases.
 You can say MAZEL TOV at any time.
 ?Is there any advantage to the hard way?
 You get an extra point, if you're interested in that sort of thing.
+?I took the hard way but still lost a point from the maximum. What gives?
+You scanned a fellow in the Unwary Runway for an additional clue.
 >>PHAT PATH
 ?How do I deal with the hogs?
 You can annoy them or get their keys.
@@ -1561,7 +1565,7 @@ In old versions, you used to get killed by the haunter, but I found that to be t
 ...saying HORSE at the shore?
 ...saying EOL or ELO by Leo?
 ...saying SNOG when you hear the song in FiefCo Office?
-...saying SPINE around the pines? There's another one, too.
+...saying SPINE around the pines? There's another one, too. It's more colorful. You'll figure it out, but that's part of the fun.
 ...looking in the source code for the rest? ("table of anayux")
 ?Is Casper Spacer "anyone"?
 He's a lame parody of a pastiche of great writers, but nobody in particular.

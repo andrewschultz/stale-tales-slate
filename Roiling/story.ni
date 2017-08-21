@@ -120,7 +120,7 @@ Troves is a region. regtab of Troves is table of troves nudges. regana of Troves
 
 Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 39. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter and pulling lever]
 
-Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 35. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't]
+Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 36. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints]
 
 Towers is a region. regtab of Towers is table of towers nudges. regana of towers is table of towers anagrams. max-score of towers is 48. min-score of towers is 25.
 [Necessary points:
@@ -14406,6 +14406,10 @@ carry out shooting:
 		say "Shooting hoops is only a figurative expression." instead;
 	if noun is Leo and Rand is off-stage:
 		say "He backpedals out of range, looking a bit scared. Perhaps you can find a better target to shoot, later." instead;
+	if noun is zany meter:
+		say "That would just be destructive. The zany meter is there to help you." instead;
+	if noun is maze walls:
+		say "Too sturdy. There must be a better way for them to tumble down." instead;
 	if noun is Rand or noun is Leo:
 		if noun is fightin:
 			say "That'd just make him madder." instead;
@@ -14455,7 +14459,9 @@ a-text of ether is "RRYRY". b-text of ether is "RRYRY". parse-text of ether is "
 
 section maze entry zany meter
 
-the maze entry zany meter is scenery in Grey Gyre. "It's like one of those things you hit with a carnival hammer, but you don't have any hammer. Bunched at the bottom are three bummer options.[paragraph break]0: be too scared to enter the maze[line break]0:run through the maze[line break]0:run through the maze again[line break]1: ignore and reject Nowt Town[line break]2: (written in red) congratulate yourself for solving the E-Z Ol' Av(TM) Volt Maze."
+the maze entry zany meter is scenery in Grey Gyre. "It's like one of those things you hit with a carnival hammer, but you don't have any hammer. Bunched at the bottom are three bummer options.[paragraph break]0: be too scared to enter the maze[line break]0:run through the maze[line break]0:run through the maze again[line break]1: ignore and reject Nowt Town[line break]2: (written in red) congratulate yourself for solving the E-Z Ol' Av(TM) Volt Maze.[line break]3: (written in red again) congratulate yourself for solving the E-Z Ol' Av(TM) Volt Maze WITHOUT EVEN GOING THROUGH IT OR ASKING FOR HINTS. "
+
+understand "enemy tzar" and "tzar enemy" as a mistake ("You hear a rumbling. Then Elvira appears from the maze! 'Oh, dear, this will be easy,' she says. And it is.[paragraph break][uurrgg]") when location of player is grey gyre and maze entry is in grey gyre.
 
 chapter lamb
 
@@ -14481,6 +14487,8 @@ check going east in Grey Gyre:
 ether-try is a truth state that varies.
 
 check going north in Grey Gyre:
+	if cur-score of presto < 3:
+		say "You don't fully have your bearings here yet. You're not up to walking through a maze. Perhaps you need to figure how to deal with things before entering the maze." instead;
 	if ether is in lalaland:
 		if phat path is unvisited:
 			say "You and Rickey and Leo stride forward confidently but run into some even tougher customers.";
@@ -14516,10 +14524,14 @@ instead of entering volt maze:
 after fliptoing maze walls:
 	poss-d;
 	shuffle-nowt-town;
+	unless l-m is cscanned or l-m is ncscanned:
+		poss-d;
 	continue the action;
 
 after fliptoing volt maze:
 	min-up;
+	unless l-m is cscanned or l-m is ncscanned:
+		min-up;
 	shuffle-nowt-town;
 	continue the action;
 
@@ -26882,6 +26894,7 @@ troves	"saying SNOG when you hear the song in Very Top?"
 troves	"REDRAW by the reward drawer?"
 troves	"STUB or BUTS by the tubs?"
 presto	"PRESTO:"
+presto	"ENEMY TZAR around the maze entry in the Grey Gyre?"
 presto	"ELO or EOL by Leo?"
 presto	"ASSWHUP or WHUPASS when Leo and Rand are commiserating?"
 presto	"SPAG or A GPS by the gasp-gaps in Burnt Brunt?"
@@ -27377,6 +27390,10 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]you could've shouted BLAM at the lamb.";
 		if phooeyed is false:
 			say "[2dmiss of cur-reg]you could've gotten a style point for saying PHOOEY instead of POOH.";
+		if maze-points < 2:
+			say "[2dmiss of cur-reg]you could've said MAZEL TOV to get past the maze.";
+		else if maze-points is 2:
+			say "[2dmiss of cur-reg]you missed a point for scanning a guy in Nowt Town."
 		if rom sticks are off-stage:
 			say "[2dmiss of cur-reg]the trim socks could've become ROM STICKS.";
 		if t-key is reflexive:
