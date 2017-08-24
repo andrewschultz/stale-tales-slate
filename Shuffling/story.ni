@@ -1388,8 +1388,8 @@ grinder	"[if livers are off-stage]You need to put meats in the grinder[else]You'
 red ring	--	grinder
 blades	--	grinder
 elegy	"[if shotgun is off-stage]The elegy, if read correctly, can give you an idea of what the noughts can become[else]The elegy was a hint for the shotgun[end if]."
-gy	--	gy2
-gy2	"[if Enclosure is unvisited]The men going through have certain things in common. If you can imitate them, you can get through, too[else]You don't need anything more from the line of no life[end if]."
+gy	--	line of no life
+line of no life	"[if Enclosure is unvisited]The men going through have certain things in common. If you can imitate them, you can get through, too[else]You don't need anything more from the line of no life[end if]."
 banshee	"[one of]You don't need to get rid of the banshee to solve the forest, but you can put it even more in the past. [plus][or]What's a name for something that was? [plus][or]HAS-BEEN. With dash, space or no space. [minus][cycling]"
 cavern	"You don't have to do anything with the cavern."
 spread	"[one of]The SPREAD can become something. Well, by magic. If you fiddle with it, it becomes something else. [plus][or]You can't quite cut the spread as-is, but maybe you could transform it into something less intimidating? [plus][or]You can figure out what the word is from there. [plus][or]The SPREAD becomes DRAPES. [minus][cycling]"
@@ -1603,7 +1603,7 @@ carry out forest-hinting:
 	if Enclosure is unvisited:
 		if coe-clue is false:
 			now coe-clue is true;
-			try objhinting gy2 instead;
+			try objhinting line of no life instead;
 		if player has beard and shades are part of beard and nose is part of beard:
 			all-say "You've got what you need for the next bit[if player wears beard]. You are even wearing it[else]. You should just WEAR it, now[end if]. Then go through the turnstile." instead;
 		if nose is off-stage:
@@ -6147,20 +6147,32 @@ instead of doing something with gy:
 
 Include (-
 	has transparent animate
--) when defining gy2.
+-) when defining line of no life.
 
-gy2 are plural-named and privately-named scenery in Self-ID Fields. printed name of gy2 is "bearded men". "They're a fine ol['] line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you."
+a thing called line of no life are plural-named and privately-named scenery in Self-ID Fields. printed name of line of no life is "bearded men". "They're a fine ol['] line of no life, you guess. Their faces are different, but they seem the same, and they take no notice of you."
 
-understand "bearded/ men/guys/figures" and "line of no life" and "line/life/undead" as gy2.
+after doing something with line of no life:
+	set the pronoun it to line of no life;
+	set the pronoun him to line of no life;
+	continue the action;
+
+after doing something with gy:
+	set the pronoun it to line of no life;
+	set the pronoun him to line of no life;
+	continue the action;
+
+understand "bearded/ men/guys/figures" and "undead" as line of no life.
 
 understand "nile" as a mistake ("Wrong river for the underworld.") when player is in self-id fields.
 
 understand "file" as a mistake ("It looks like you can just cut in line. No need to stand.") when player is in self-id fields.
 
-instead of doing something other than scaning or objhinting gy2:
+understand "olefin" as a mistake ("Organic chemistry involves shuffling things around a lot, too, but ... the line of no life is not organic.") when player is in self-id fields.
+
+instead of doing something with line of no life:
 	if action is procedural:
 		continue the action;
-	say "The line of no life is too incorporeal to interact with.";
+	say "The line of no life is too incorporeal to interact with[if collapsed old places is unvisited], but maybe you can imitate it partially to go north[end if].";
 
 turnstile is scenery in Self-ID Fields. "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing. The top reads TO THE LUPINE LINEUP."
 
@@ -11680,7 +11692,7 @@ faeries	"[if fairy-worthy is false]'You must bring a powerful flower up! For our
 goat	"The goat got here by magic, but it isn't. Don't fluster the restful."
 gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The [if getaway is visible]getaway[else]gateway[end if]! General advice! No time to scold clods asking about--whatever you just mumbled about.'[or]Nat Egam pauses. 'There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the gateway[if getaway is visible] once you change it. It's not too hard, for seven letters, but I can't tell you[end if]. You'll learn by doing.'[stopping]"
 gy	"The men passing through seem in a hurry."
-gy2	"You could never get everyone's attention at once."
+line of no life	"You could never get everyone's attention at once."
 liches	"They are too busy moaning to each other."
 masses	"You can't think of any small talk. Not that you're trying hard to."
 nerds	"[one of]'Hm, should we even talk to an outsider about that?'[paragraph break]'Well, if they found their way in, they can't be THAT dumb!'[paragraph break]'Well, they'll have to find the right thing to ASK NERDS like us about if they want us to stop talking about them like they's not here.'[paragraph break]'Maybe they's a lateral thinker. Who knows several ways to get through things.'[paragraph break]'GROAN! Nice Ignorance.'[paragraph break][one of]They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip[or]They seem to be having fun feeling smarter than you, which is actually kind of good, as maybe the discussions will make more sense this time around[stopping].[paragraph break]'If they doen't know what to ask nerds about, they deserve ED'S SNARK!' Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.[or]More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.[or]Laugh-tons onslaught as you haven't figured what to ask nerds.[or]They form a grin ring, but you close your eyes a bit. As you do, you are hit with a book[book-in-nerds]![or]A hundred-nerd DUH follow your latest ask-nerds attempt.[or]'Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!'[or]An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.[or]The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.[or]Apparently you haven't seen the light for what to ask nerds about. 'We can wait here a thousand years!' one laughs. They debate on what's worse, dumb people in power or out.[or]One nerd tells you you should be sent to the red planet of SKASDREN for asking so many nagging questions.[or]One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.[or]A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.[or]One nerd jokingly refers you to DR. KASSEN.[or]'[']K, Ren's sad,' one nerd remarks, red-faced.[or]One nerd dumps out his shoe. 'Erks! Sand!' He looks red-faced at such a public display.[or]Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.[cycling]"
@@ -13055,7 +13067,7 @@ carry out following:
 	if noun is above-sign or noun is passage:
 		say "You duck inside the passage.";
 		try going inside instead;
-	if noun is gy or noun is gy2:
+	if noun is gy or noun is line of no life:
 		try going north instead;
 	if noun is riot or noun is protest:
 		say "They aren't convincing enough to make you hate yourself." instead;
