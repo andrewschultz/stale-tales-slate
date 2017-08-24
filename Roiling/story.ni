@@ -9191,7 +9191,7 @@ to say wont-maze:
 	if cur-score of presto is 1:
 		say "Why not take care of the big things first? And what better way to start than with an emphatic word? You remember when younger how you could say WON'T. And it works, here, too. The maze dissolved, leaving an ether to the north";
 		continue the action;
-	say "'While it's not quite formally an interjection, you remember how many interjections are bowdlerizations or shortenings of other word phrases. It's worth a try. The Internet itself has been responsible for a lot more sensible interjections than that. So, you yell, 'WON'T!' The maze melts and collapses.";
+	say "While it's not quite formally an interjection, you remember how many interjections are bowdlerizations or shortenings of other word phrases. It's worth a try. The Internet itself has been responsible for a lot more sensible interjections than that. So, you yell, 'WON'T!' The maze melts and collapses.";
 	say "[line break]Perhaps you won't get full style points, but so what? It feels good to dispel a maze with one short word"
 
 to say trout-tut:
@@ -13911,6 +13911,9 @@ book Browse Bowers
 
 Browse Bowers is an innie room in Troves. "It's very look-don't-touch here. In fact, for someone so recently poor as yourself, you'd feel guilty walking around and looking. So there's not much to do except stare at a brochure just lying around. But oh, what a brochure!".
 
+understand "bowser" as a mistake ("This game is pretty old school, but it has enough obstacles.") when player is in Browse Bowers.
+
+
 chapter dour tan rotunda
 
 the dour tan rotunda is scenery in Browse Bowers. "It looks sad and neglected. It might've been really big before the Browse Bowers, bigger and slicker, came along--say, before Version 4 of this game."
@@ -14457,6 +14460,15 @@ check entering ether:
 
 a-text of ether is "RRYRY". b-text of ether is "RRYRY". parse-text of ether is "x[sp]x[sp]-[sp]x[sp]-". ether is cheat-spoilable.
 
+before fliptoing:
+	if noun is maze walls:
+		if cur-score of presto < 3:
+			say "You're not messing around! You see the best way to destroy the maze, and you're going for it.[line break]";
+			continue the action;
+	if noun is maze walls or noun is n-t-air:
+		if Nowt Town is unvisited:
+			say "No point actually going through the maze when you can destroy it.[line break]";
+
 section maze entry zany meter
 
 the maze entry zany meter is scenery in Grey Gyre. "It's like one of those things you hit with a carnival hammer, but you don't have any hammer. Bunched at the bottom are three bummer options.[paragraph break]0: be too scared to enter the maze[line break]0:run through the maze[line break]0:run through the maze again[line break]1: ignore and reject Nowt Town[line break]2: (written in red) congratulate yourself for solving the E-Z Ol' Av(TM) Volt Maze.[line break]3: (written in red again) congratulate yourself for solving the E-Z Ol' Av(TM) Volt Maze WITHOUT EVEN GOING THROUGH IT OR ASKING FOR HINTS. "
@@ -14489,10 +14501,6 @@ ether-try is a truth state that varies.
 check going north in Grey Gyre:
 	if cur-score of presto < 3:
 		say "You don't fully have your bearings here yet. You're not up to walking through a maze. Perhaps you need to figure how to deal with things before entering the maze." instead;
-	if ether is in lalaland:
-		if phat path is unvisited:
-			say "You and Rickey and Leo stride forward confidently but run into some even tougher customers.";
-		continue the action;
 	if the room north of Grey Gyre is Phat Path:
 		if ether is visible:
 			say "[one of]You walk forward. That dangerous looking ether? It[if ether-try is true]'s still hiding[else] hid[end if] some dangerous looking people.[paragraph break]'AMBUSH!' / 'Ah, bums!'[paragraph break]You are pushed roughly back to where you came[if Leo is visible]. Leo and Rand mutter that if you point out where those people are, they'll do the business[else]. 'Intruder? Dire runt!' You could use a meaty matey or two[end if][or]Leo and Rand might help you win the fight, but you'll need some way to find the people in the ether [if Leo is not visible]and some henchmen to tackle them[end if][stopping].";
@@ -14500,7 +14508,6 @@ check going north in Grey Gyre:
 		if Phat Path is not visited:
 			if dart is not in popgun or player does not have popgun:
 				say "[one of]You march forward confidently. Your new pals are better fighters than you, but not enough to win the fight. You all are pushed back[or]You need some additional firepower[stopping]." instead;
-		if Phat Path is not visited:
 			say "Between your pointing out the hidden enemies, your new friends['] strength, and your pop-gun, you get something like a jump on your mysterious assailants. They run away. You can't find the dart, but you doubt you'll need it.";
 			now dart is in lalaland;
 
@@ -14521,17 +14528,24 @@ instead of scaning plaque:
 instead of entering volt maze:
 	try going north.
 
-after fliptoing maze walls:
+maze-points is a number that varies. maze-points is 0.
+
+after fliptoing n-t-air:
 	poss-d;
 	shuffle-nowt-town;
 	unless l-m is cscanned or l-m is ncscanned:
 		poss-d;
+	now maze-points is 1;
 	continue the action;
 
-after fliptoing volt maze:
+after fliptoing maze walls:
+	increment the score;
 	min-up;
+	now maze-points is 2;
 	unless l-m is cscanned or l-m is ncscanned:
 		min-up;
+		increment maze-points;
+		increment the score;
 	shuffle-nowt-town;
 	continue the action;
 
@@ -20607,7 +20621,10 @@ chapter Lost Lots
 
 Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is just a barren area, without even a slot. A gadflies['] gasfield surrounds you every way except back north."
 
-the gadflies' gasfield is scenery in Lost Lots.
+the gadflies' gasfield is scenery in Lost Lots. "You can't 100% see the gasfield, since it's hazy. But it's there, and it blocks you."
+
+check going nowhere in Lost Lots:
+	say "Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?" instead;
 
 understand "slot" as a mistake ("If you made it, you might fall in the slot and never get out.") when player is in Lost Lots.
 
@@ -27393,7 +27410,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 		if maze-points < 2:
 			say "[2dmiss of cur-reg]you could've said MAZEL TOV to get past the maze.";
 		else if maze-points is 2:
-			say "[2dmiss of cur-reg]you missed a point for scanning a guy in Nowt Town."
+			say "[2dmiss of cur-reg]you missed a point for scanning a guy in Nowt Town.";
 		if rom sticks are off-stage:
 			say "[2dmiss of cur-reg]the trim socks could've become ROM STICKS.";
 		if t-key is reflexive:
