@@ -78,6 +78,7 @@ my $writeAdded = 0;
 my $maxWarnShow = 25;
 my $showAdd = 0;
 my $postProcess = 0;
+my $openUndone = 0;
 #added before
 
 my $unsorted = 0;
@@ -109,6 +110,8 @@ while ($count <= $#ARGV)
   /^-?o$/ && do { outputLast(); exit(); };
   /^-?e?r$/ && do { `$txtfile`; exit(); }; # forcing options first
   /^-?d$/ && do { $copyBack = 0; $count++; next; };
+  /^-?o1$/ && do { openThis(0); exit(); };
+  /^-?ol$/ && do { openThis(1); exit(); };
   /^-?f$/ && do { $copyBack = 1; $count++; next; };
   /^-?p$/ && do { $postProcess = 1; $count++; next; };
   /^-?n$/ && do { $numbers = 1; $count++; next; };
@@ -591,6 +594,25 @@ sub doAnagrams
   die();
 }
 
+sub openThis
+{
+  my $lineToOpen = 0;
+  open(A, $orig) || die ("Uh oh... $orig didn't open. That's bad.");
+  while ($a = <A>)
+  {
+    if ($a =~ /^\".*\"($| |\t)/)
+	{
+	  $lineToOpen = $.;
+	  last if !$_[0];
+	}
+  }
+  close(A);
+
+  die("Yay, all done!") if !$lineToOpen;
+  print "Opening line $lineToOpen.\n";
+  np($orig, $lineToOpen);
+}
+
 sub usage
 {
 print<<EOT;
@@ -603,6 +625,7 @@ Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sortin
 -d is demo mode. The file doesn't change.
 -e edits tosort.txt, -ec edits source code, -er/r edits suffix-to-table file
 -f is force copy.
+-o1/ol opens 1st or last quoted undone
 -n adds a line of numbers to the stats file.
 -s opens the stats after.
 -dw dies on warnings e.g. an invalid has at the end of quoted text
