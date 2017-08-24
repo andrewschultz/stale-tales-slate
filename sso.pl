@@ -106,12 +106,13 @@ while ($count <= $#ARGV)
   /^[0-9]/ && do { doAnagrams($ARGV[0]); };
   /\?/ && do { usage(); exit(); };
   /^-?e$/ && do { `$orig`; exit(); };
-  /^-?ec$/ && do { np($code); exit(); };
+  /^-?(c|ce|ec)$/ && do { np($code); exit(); };
   /^-?o$/ && do { outputLast(); exit(); };
   /^-?e?r$/ && do { `$txtfile`; exit(); }; # forcing options first
   /^-?d$/ && do { $copyBack = 0; $count++; next; };
-  /^-?o1$/ && do { openThis(0); exit(); };
-  /^-?ol$/ && do { openThis(1); exit(); };
+  /^-?o[0-9]+$/ && do { $arg =~ s/^-?o//; openThis($arg, 0); exit(); };
+  /^-?a[0-9]+$/ && do { $arg =~ s/^-?a//; openThis(0, $arg); exit(); };
+  /^-?ol$/ && do { openThis(-1); exit(); };
   /^-?f$/ && do { $copyBack = 1; $count++; next; };
   /^-?p$/ && do { $postProcess = 1; $count++; next; };
   /^-?n$/ && do { $numbers = 1; $count++; next; };
@@ -597,16 +598,27 @@ sub doAnagrams
 sub openThis
 {
   my $lineToOpen = 0;
+  my $foundSoFar = 0;
+  my $totalDone = 0;
   open(A, $orig) || die ("Uh oh... $orig didn't open. That's bad.");
   while ($a = <A>)
   {
     if ($a =~ /^\".*\"($| |\t)/)
 	{
+	  $foundSoFar++;
+	  next if $_[0] <= $foundSoFar && !$_[1];
+	  next if $_[1] && ($lineToOpen || $_[1] > $.);
 	  $lineToOpen = $.;
-	  last if !$_[0];
+	  print "Passing $....\n";
 	}
+	elsif ($a =~ /^\"/)
+	{
+	  $totalDone++;
+    }
   }
   close(A);
+
+  print "$foundSoFar total undone, $totalDone total done.\n";
 
   die("Yay, all done!") if !$lineToOpen;
   print "Opening line $lineToOpen.\n";
