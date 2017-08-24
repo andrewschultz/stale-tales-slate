@@ -11,6 +11,7 @@ use warnings;
 
 ####################constants
 my $fileName = "story.ni";
+my $preFile = "C:\\games\\inform\\roiling.inform\\Source\\tosort.txt";
 my $outFileName = "c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/temp.i7x";
 my $s = "shuffling";
 my $r = "roiling";
@@ -19,6 +20,7 @@ my $r = "roiling";
 my $dontcopy = 0;
 my $verbose = 0;
 my $seriouslyTesting = 0;
+my $readPre = 0;
 
 ###################variables
 my $dupes = 0;
@@ -30,6 +32,8 @@ my $short;
 my $quoteWarn;
 my $ignoreArticles = 0;
 my $deletedBytes = 0;
+my %isDone;
+my %table;
 
 ####alphSource/Sort TheTable
 my $thisTable;
@@ -50,6 +54,7 @@ while ($count <= $#ARGV)
 	/^-?st$/ && do { $seriouslyTesting = 1; $count++; next; };
 	/^-?o$/ && do { $outFileName = "$b"; $count += 2; next; };
 	/^-?v$/ && do { $verbose = 1; $count++; next; };
+	/^-?p$/ && do { $readPre = 1; $count++; next; };
 	/^-?f$/ && do { $fileName = "$b"; if ($fileName !~ /\.ni/) { $fileName .= ".ni"; } $count += 2; next; };
 	usage();
   }
@@ -81,6 +86,26 @@ for my $mydir (@dirs)
   if ($alfed{$mydir}) { print "Duplicate directory $mydir\n."; } else { alphSource($mydir); $alfed{lc($mydir)} = 1; }
 }
 
+if ($readPre)
+{
+  print"Checking processing file $preFile\n";
+  my $temp;
+  my $temp2;
+  open(A, $preFile) || die("No $preFile");
+  while ($a = <A>)
+  {
+    next if ($a !~ /^[\"a-z]/i);
+
+    $temp = lch($a); chomp($temp);
+	$temp2 = $temp; $temp2 =~ s/'//g;
+    if ($isDone{$temp2})
+	{
+	  print "To-Write file has duplicate at line $. ($isDone{$temp2}): $a\n";
+	}
+  }
+  die($.);
+  close(A);
+}
 #This is the big subfunction
 
 sub alphSource
@@ -241,8 +266,6 @@ sub sortTheTable
   my $lastDupTable = "";
   my @c;
   my @ary2;
-  my %isDone;
-  my %table;
   my $addDupe;
   my $ch = chr(0xe2);
   my $num;
@@ -281,10 +304,12 @@ sub sortTheTable
 	  if ($thisTable ne $lastDupTable) { $dupeString .= "****TABLE $thisTable\n"; $lastDupTable = $thisTable; }
 	  $dupes++;
 	  push (@errLines, $lines2);
-	  if ($lines2 - $isDone{$temp2} == 1) { $addDupe = "$temp ($lines2-$short) is an immediate duplicate($table{$temp2}). Weeding out.\n"; $deletedBytes += length($ary2[$_]); $ary2[$_] = ""; }
+	  my $idt = $isDone{$temp2};
+	  $idt =~ s/-.*//;
+	  if ($lines2 - $idt == 1) { $addDupe = "$temp ($lines2-$short) is an immediate duplicate($table{$temp2}). Weeding out.\n"; $deletedBytes += length($ary2[$_]); $ary2[$_] = ""; }
 	  else
 	  {
-      $addDupe = "$temp ($lines2-$short) is duplicated from line $isDone{$temp2} table $table{$temp2}.\n";
+      $addDupe = "$temp ($lines2-$short) is duplicated from line $isDone{$temp2} $table{$temp2}.\n";
 	  }
 	  $dupeString .= $addDupe;
     }
@@ -351,6 +376,7 @@ USAGE for TSH.PL:
 -b both (default unless story.ni in PWD)
 -r roiling
 -s shuffling
+-p pre-file reading
 -f file name
 -v verbose (show what tables sorted)
 -x don't copy over
