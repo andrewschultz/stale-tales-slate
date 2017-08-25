@@ -26,7 +26,7 @@ for $match (@matches)
 for $curFile (@files)
 {
   $localFound = 0;
-  pokeSource($curFile);
+  pokeSource($curFile, $match);
 }
 }
 
@@ -34,14 +34,13 @@ if (!$found) { print "$match doesn't have any matches!\n"; }
 
 sub pokeSource
 {
-
 open(A, "$_[0]") || die ("No $_[0]");
 
 while ($a = <A>)
 {
   if ($a !~ /[a-z]/i) { next; }
   chomp($a);
-  if (lineMatch($match, $a)) { print "$a\n"; }
+  if (lineMatch($_[1], $a)) { print "$a\n"; }
 }
 
 close(A);

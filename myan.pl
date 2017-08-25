@@ -47,7 +47,10 @@ while ($count <= $#ARGV)
   /^-?np$/ && do { $printTimer = 0; $count++; next; };
   /^-?p$/ && do { $printTimer = 1; $count++; next; };
   /^-?f$/ && do { $toFile = 1; $count++; next; };
+  /^-?nf$/ && do { $toFile = 1; $count++; next; };
   /^-?r$/ && do { my @mma = split(/,/, $b); $minWords = $mma[0]; $maxWords = $mma[1]; $count++; next; };
+   /^-?m[0-9]$/ && do { $maxWords = $a; $maxWords =~ s/^-?m//; $count++; next; };
+   /^-?[0-9]$/ && do { $maxWords = $a; $maxWords =~ s/^-?//; $count++; next; };
    /^-?m$/ && do { $maxWords = $b; $count += 2; next; };
    /^-?mm$/ && do { $minWords = $maxWords = $b; $count += 2; next; };
    /^[a-z]/ && do { if ($cmdToAn) { die("2 possible words, bailing.\n"); } else { $cmdToAn = $a; $count++; next; } };
@@ -137,8 +140,8 @@ if ($toFile)
   {
     if ($checkAfter)
 	{
-	  my $searchIt = `anin.pl $myBase`;
-      print C "\n$searchIt";
+	  # my $searchIt = `anin.pl $myBase`;
+      # print C "\n$searchIt";
     }
 	else
 	{
@@ -148,8 +151,8 @@ if ($toFile)
     print C "\n=================$myBase\n";
   }
 
-close(C);
 }
+close(C);
 
 if ($printTimer) { $af = time() - $b4; printf("\nTook %.3f seconds.\n", $af); }
 }

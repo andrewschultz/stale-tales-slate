@@ -7357,6 +7357,8 @@ lyre-dest is a truth state that varies.
 check singing:
 	if player is in hops shop:
 		try fliptoing gins sign instead;
+	if mrlp is oyster and gins sign is in lalaland:
+		say "You remember your last sang-snag." instead;
 	if player is in peek keep:
 		say "No, this is a quieter place than the Posh Hops Shop." instead;
 	if Ed Riley is visible:
