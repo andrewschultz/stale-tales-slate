@@ -14,6 +14,7 @@ use strict;
 use warnings;
 use i7;
 
+use File::Compare;
 use File::Copy qw(copy);
 use Math::Prime::Util "gcd";
 use Win32::Clipboard;
@@ -72,11 +73,14 @@ my %punc;
 my %quotes;
 my %dupes;
 
+my $unquotedToDump = 5;
+
 ##################################options
 my $showCrib        = 0;
 my $dieOnWarnings   = 0;
 my $fullDebug       = 0;
 my $writeAdded      = 0;
+my $rawOnly         = 0;
 my $maxWarnShow     = 25;
 my $showAdd         = 0;
 my $postProcess     = 0;
@@ -114,15 +118,30 @@ while ( $count <= $#ARGV ) {
       $count++;
       next;
     };
-    /^-?uq$/        && do { dumpUnquoted(); exit(); };
-    /^-?e$/         && do { `$orig`;        exit(); };
-    /^-?(c|ce|ec)$/ && do { np($code);      exit(); };
-    /^-?o$/         && do { outputLast();   exit(); };
-    /^-?e?r$/       && do { `$txtfile`;     exit(); };   # forcing options first
+    /^-?u[dq]?[0-9]*$/ && do {
+      my $uq = $arg;
+      $uq =~ s/.*u.//;
+      $unquotedToDump = $uq if $uq =~ /^[0-9]+$/;
+      dumpUnquoted($unquotedToDump);
+      exit();
+    };
+    /^-?e$/         && do { `$orig`;    exit(); };
+    /^-?(c|ce|ec)$/ && do { np($code);  exit(); };
+    /^-?e?r$/       && do { `$txtfile`; exit(); };    # forcing options first
     /^-?d$/ && do { $copyBack = 0; $count++; next; };
-    /^-?o[0-9]+$/ && do { $arg =~ s/^-?o//; openThis( $arg, 0 );    exit(); };
-    /^-?a[0-9]+$/ && do { $arg =~ s/^-?a//; openThis( 0,    $arg ); exit(); };
-    /^-?ol$/      && do { openThis(-1);     exit(); };
+    /^-?o(f)?[0-9]+$/ && do {
+      my $temp = $arg =~ /f/;
+      $arg =~ s/^-?o(f)?//;
+      openThis( $arg, 0, $temp );
+      exit();
+    };
+    /^-?a[0-9]+$/ && do {
+      my $temp = $arg =~ /f/;
+      $arg =~ s/^-?a(f)?//;
+      openThis( 0, $arg, $temp );
+      exit();
+    };
+    /^-?ol$/ && do { openThis(-1); exit(); };
     /^-?f$/  && do { $copyBack    = 1; $count++; next; };
     /^-?p$/  && do { $postProcess = 1; $count++; next; };
     /^-?n$/  && do { $numbers     = 1; $count++; next; };
@@ -140,8 +159,13 @@ while ( $count <= $#ARGV ) {
     };
     /^-?m$/  && do { $moveToHeader = 1; $count++; next; };
     /^-?fd$/ && do { $fullDebug    = 1; $count++; next; };
-    /^-?wa(l)$/
-      && do { $writeAdded = 1 + ( $arg =~ /l/ ); $count++; next; };
+    /^-?wa[lo]*$/
+      && do {
+      $writeAdded = 1 + ( $arg =~ /l/ );
+      $rawOnly = ( $arg =~ /o/ );
+      $count++;
+      next;
+      };
     /^-?cr$/ && do { $compareRoil = 1; $count++; next; };    #testing
     /^-?cs$/ && do { $compareShuf = 1; $count++; next; };    #testing
     /^-?cb$/
@@ -210,7 +234,8 @@ while ( $line = <A> ) {
   $hashy[0] = lc( $hashy[0] );
   if ( $#hashy < 1 ) { print "Line $. in $txtfile needs a tab.\n"; }
   for ( 1 .. $#hashy ) {
-    die("$hashy[$_] defined at line $lump{$hashy[$_]}, redefined at line $.")
+    die(
+      "$hashy[$_] already defined at line $lump{$hashy[$_]} in $txtfile: $line")
       if ( $lump{ $hashy[$_] } );
     $lump{ $hashy[$_] } = $.;
 
@@ -242,6 +267,7 @@ my $warnLine      = 0;
 my $majorWarnLine = 0;
 my $addSecondCol  = 0;
 my $anagramLine   = 0;
+my $x;
 
 OUTER:
 while ( $line = <A> ) {
@@ -324,8 +350,6 @@ while ( $line = <A> ) {
 
 $warnLine = $majorWarnLine if ($majorWarnLine);
 
-my $x;
-
 print "$warnings total warnings.\n" if $warnings;
 
 print "$addSecondCol default second columns added.\n"
@@ -367,6 +391,10 @@ if ($writeAdded) {
   print B $addText;
   close(B);
   `$raw` if ( $writeAdded == 2 );
+}
+
+if ($rawOnly) {
+  die("Remove -o flag from -wa(l) to disable only-raw feature.");
 }
 
 print "$warnings warnings.\n" if $warnings;
@@ -616,10 +644,24 @@ sub openThis {
   my $lineToOpen = 0;
   my $foundSoFar = 0;
   my $totalDone  = 0;
+  my $numQuotes  = 0;
+  my $line;
+  my $x;
+
   $_[0] = 1 if ( $_[0] == 0 && $_[1] == 0 );
+
   open( A, $orig ) || die("Uh oh... $orig didn't open. That's bad.");
-  while ( $a = <A> ) {
-    if ( $a =~ /^\".*\"($| |\t)/ ) {
+  while ( $line = <A> ) {
+    if ( $line !~ /^#/ ) {
+      $x = lc($line);
+      $x =~ s/[^a-z]//gi;
+      print "Duplicate line $. ($dupes{$x}) in raw file.\n" if ( $dupes{$x} );
+      $dupes{$x} = $.;
+    }
+    if ( $line =~ /^\".*\"($| |\t)/ ) {
+      $numQuotes = () = $line =~ /"/g;
+      print "WARNING line $. has the wrong number of quotes, $numQuotes.\n"
+        if $numQuotes != 2;
       $foundSoFar++;
       next if $_[0] < $foundSoFar && !$_[1];
       next if $_[1] && ( $lineToOpen || $_[1] > $. );
@@ -628,7 +670,7 @@ sub openThis {
         if $_[0] > $foundSoFar && !$_[1];
       $lineToOpen = $.;
     }
-    elsif ( $a =~ /^\"/ ) {
+    elsif ( $line =~ /^\"/ ) {
       $totalDone++;
     }
   }
@@ -640,7 +682,7 @@ sub openThis {
 
   print "$foundSoFar total undone, $totalDone total done.\n";
 
-  die("Yay, all done!") if !$lineToOpen;
+  die("Yay, all done!") if !$lineToOpen && !$_[2];
   print "Opening line $lineToOpen.\n";
   np( $orig, $lineToOpen );
 }
@@ -679,17 +721,18 @@ sub clipboardRearrange {
 sub dumpUnquoted {
   open( A,  $orig );
   open( A2, ">$orig.bak" );
-  open( B,  ">$dump" );
-  my $maxTries = 5;
+  open( B,  ">>$dump" );
+  my $maxTries = $_[0];
   my $tries    = 0;
   my $length;
+  my $bak = "$orig.bak";
 
   my @temp;
   my $procString;
+  my $squash;
 
   while ( $a = <A> ) {
-    if ( ( $a =~ /^[a-z]/i ) && ( $tries < $maxTries ) ) {
-      print B "====================$a";
+    if ( ( $a =~ /^[a-z]/i ) && ( $tries < $maxTries ) && ($maxTries) ) {
       chomp($a);
       my @temp = split( / /, $a );
       if ( $#temp > 1 ) {
@@ -702,9 +745,19 @@ sub dumpUnquoted {
         }
       }
       else {
-        $procString;
+        $procString = $a;
       }
+      $procString = lc($procString);
+      $squash     = $procString;
+      $squash =~ s/ //g;
       $tries++;
+      print B "====================$a/$procString/$squash\n";
+      print "Processing $procString"
+        . ( ( $squash ne $procString ) ? "(squashed to $squash)" : "" )
+        . ", #$tries at line $....\n";
+      print B `anan.pl $squash`;
+      print B `myan.pl 3 $squash`;
+      print B `gr $procString`;
     }
     else {
       print A2 $a;
@@ -712,6 +765,13 @@ sub dumpUnquoted {
   }
   close(A);
   close(B);
+  close(A2);
+  if ( compare( $orig, "$bak" ) ) {
+    print "Recopying over...";
+    copy( "$bak", $orig )
+      || die("Something went wrong. Keeping $bak.");
+    unlink "$bak";
+  }
 }
 
 sub usage {
@@ -737,6 +797,7 @@ Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sortin
 SPECIFIC USAGE:
 dns is good for doing the stats etc
 c is good for testing
+wa is writeadded, l = launch, o = only
 EOT
   exit;
 }
