@@ -55,6 +55,7 @@ my %failClue;
 my %secondDefault;
 my %tableTo;
 my %tableAdd;
+my %tableAdd2;
 my $warnings = 0;
 
 #added before
@@ -81,6 +82,7 @@ my $dieOnWarnings   = 0;
 my $fullDebug       = 0;
 my $writeAdded      = 0;
 my $rawOnly         = 0;
+my $postPuncProc    = 0;
 my $maxWarnShow     = 25;
 my $showAdd         = 0;
 my $postProcess     = 0;
@@ -159,10 +161,11 @@ while ( $count <= $#ARGV ) {
     };
     /^-?m$/  && do { $moveToHeader = 1; $count++; next; };
     /^-?fd$/ && do { $fullDebug    = 1; $count++; next; };
-    /^-?wa[lo]*$/
+    /^-?wa[lop]*$/
       && do {
-      $writeAdded = 1 + ( $arg =~ /l/ );
-      $rawOnly = ( $arg =~ /o/ );
+      $writeAdded   = 1 + ( $arg =~ /l/ );
+      $rawOnly      = ( $arg =~ /o/ );
+      $postPuncProc = ( $arg =~ /p/ );
       $count++;
       next;
       };
@@ -343,7 +346,8 @@ while ( $line = <A> ) {
     $outputChunk .= "\t$secondDefault{$tableTo{$tableAbbr}}";
     $addSecondCol++;
   }
-  $tableAdd{ $tableTo{$tableAbbr} } .= "$outputChunk\n";
+  $tableAdd{ $tableTo{$tableAbbr} }  .= "$outputChunk\n";
+  $tableAdd2{ $tableTo{$tableAbbr} } .= "$outputChunk ($.)\n";
 
   #print "$idx vs $#x\n";
 }
@@ -381,7 +385,7 @@ if ( $dieOnWarnings && $anagramLine ) {
 my $addText = "";
 
 for ( sort keys %tableAdd ) {
-  $addText .= "$_\n$tableAdd{$_}\n";
+  $addText .= "$_\n$tableAdd2{$_}\n";
 }
 
 print $addText if ($fullDebug);
@@ -392,6 +396,8 @@ if ($writeAdded) {
   close(B);
   `$raw` if ( $writeAdded == 2 );
 }
+
+print `punc.pl alt sts` if $postPuncProc;
 
 if ($rawOnly) {
   die("Remove -o flag from -wa(l) to disable only-raw feature.");
