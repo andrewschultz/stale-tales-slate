@@ -28,6 +28,7 @@ my $mod  = "$roil\\tosort2.txt";
 my $raw  = "$roil\\tosort-conv.txt";
 my $test = "$roil\\sso-test.txt";
 my $stat = "$roil\\sso-stat.txt";
+my $dump = "$roil\\sso-dump.txt";
 
 my $readIn = $orig;
 
@@ -113,10 +114,11 @@ while ( $count <= $#ARGV ) {
       $count++;
       next;
     };
-    /^-?e$/         && do { `$orig`;      exit(); };
-    /^-?(c|ce|ec)$/ && do { np($code);    exit(); };
-    /^-?o$/         && do { outputLast(); exit(); };
-    /^-?e?r$/       && do { `$txtfile`;   exit(); };    # forcing options first
+    /^-?uq$/        && do { dumpUnquoted(); exit(); };
+    /^-?e$/         && do { `$orig`;        exit(); };
+    /^-?(c|ce|ec)$/ && do { np($code);      exit(); };
+    /^-?o$/         && do { outputLast();   exit(); };
+    /^-?e?r$/       && do { `$txtfile`;     exit(); };   # forcing options first
     /^-?d$/ && do { $copyBack = 0; $count++; next; };
     /^-?o[0-9]+$/ && do { $arg =~ s/^-?o//; openThis( $arg, 0 );    exit(); };
     /^-?a[0-9]+$/ && do { $arg =~ s/^-?a//; openThis( 0,    $arg ); exit(); };
@@ -162,8 +164,7 @@ while ( $count <= $#ARGV ) {
 }
 
 if ( ( $readIn eq $test ) && ( $copyBack == 1 ) ) {
-  die(
-    "Can't/won't copy back when the file to process is the test file $test" );
+  die("Can't/won't copy back when the file to process is the test file $test");
 }
 
 dupget("$rr");
@@ -209,7 +210,7 @@ while ( $line = <A> ) {
   $hashy[0] = lc( $hashy[0] );
   if ( $#hashy < 1 ) { print "Line $. in $txtfile needs a tab.\n"; }
   for ( 1 .. $#hashy ) {
-    die( "$hashy[$_] defined at line $lump{$hashy[$_]}, redefined at line $." )
+    die("$hashy[$_] defined at line $lump{$hashy[$_]}, redefined at line $.")
       if ( $lump{ $hashy[$_] } );
     $lump{ $hashy[$_] } = $.;
 
@@ -217,8 +218,7 @@ while ( $line = <A> ) {
     if ( $hashy[$_] =~ /^xx/i ) {
       $hashy[$_] =~ s/^xx//i;
       $tableTo{ $hashy[$_] } = $hashy[0];
-      die(
-        "$hashy[$_] defined at line $lump{$hashy[$_]}, redefined at line $." )
+      die("$hashy[$_] defined at line $lump{$hashy[$_]}, redefined at line $.")
         if ( $lump{ $hashy[$_] } );
       $lump{ $hashy[$_] } = $.;
     }
@@ -676,6 +676,44 @@ sub clipboardRearrange {
   system("start https://titlecase.com") if $launchTitleCase;
 }
 
+sub dumpUnquoted {
+  open( A,  $orig );
+  open( A2, ">$orig.bak" );
+  open( B,  ">$dump" );
+  my $maxTries = 5;
+  my $tries    = 0;
+  my $length;
+
+  my @temp;
+  my $procString;
+
+  while ( $a = <A> ) {
+    if ( ( $a =~ /^[a-z]/i ) && ( $tries < $maxTries ) ) {
+      print B "====================$a";
+      chomp($a);
+      my @temp = split( / /, $a );
+      if ( $#temp > 1 ) {
+        $length = 0;
+        for (@temp) {
+          if ( length($_) > $length ) {
+            $length     = length($_);
+            $procString = $_;
+          }
+        }
+      }
+      else {
+        $procString;
+      }
+      $tries++;
+    }
+    else {
+      print A2 $a;
+    }
+  }
+  close(A);
+  close(B);
+}
+
 sub usage {
   print <<EOT;
 SSO roughly sorts out anagrams into categories: biopics, regular books, movies, shouty ads, and ALL CAPS entries.
@@ -695,6 +733,7 @@ Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sortin
 -mw is maximum warnings
 -sa is show default column add details
 -p post processes
+-uq dump unquoted
 SPECIFIC USAGE:
 dns is good for doing the stats etc
 c is good for testing
