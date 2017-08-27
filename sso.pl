@@ -34,14 +34,14 @@ my $dump = "$roil\\sso-dump.txt";
 my $readIn = $orig;
 
 ########################uncomment below for testing
-my $rrf = "Roiling Random Text.i7x";
-my $srf = "Shuffling Random Text.i7x";
+my $rrshort = "Roiling Random Text.i7x";
+my $srshort = "Shuffling Random Text.i7x";
 
-my $rr = "$inc\\$rrf";
-my $sr = "$inc\\$srf";
+my $rr = "$inc\\$rrshort";
+my $sr = "$inc\\$srshort";
 
-my $rtemp = "$roil\\$rrf";
-my $stemp = "$roil\\$srf";
+my $rtemp = "$roil\\$rrshort";
+my $stemp = "$roil\\$srshort";
 
 ##########################txtfile is the list of regexes after the 2nd quote
 my $txtfile = __FILE__;
@@ -127,6 +127,7 @@ while ( $count <= $#ARGV ) {
       dumpUnquoted($unquotedToDump);
       exit();
     };
+    /^-?=$/ && do { openThis( -2, 0, 1 ); exit(); };
     /^-?e$/         && do { `$orig`;    exit(); };
     /^-?(c|ce|ec)$/ && do { np($code);  exit(); };
     /^-?e?r$/       && do { `$txtfile`; exit(); };    # forcing options first
@@ -301,7 +302,8 @@ while ( $line = <A> ) {
       next;
     }
     my @c2 = grep { $i++ % 2 } @chunks;
-    $outputChunk = join( " ", @c2 );
+    $outputChunk =~ s/\\//g;
+    $anagramChunk = join( " ", @c2 );
   }
   else {
     $anagramChunk = $outputChunk;
@@ -411,7 +413,13 @@ moveOver( $rr, $rtemp );
 moveOver( $sr, $stemp );
 
 if ( scalar keys %tableAdd > 1 ) {
-  die( "Oops, not everything to files: " . join( ", ", sort keys %tableAdd ) );
+  die( "Oops, not everything added to files: "
+      . join( ", ", sort keys %tableAdd ) );
+}
+
+if ($copyBack) {
+  copy( $rtemp, $rr ) if ( compare( $rr, $rtemp ) );
+  copy( $stemp, $sr ) if ( compare( $sr, $stemp ) );
 }
 
 open( B, ">$mod" );
@@ -467,7 +475,7 @@ else {
   my $aroi = meaningful($orig);
   my $a2   = meaningful($mod);
   if ( ( $aroi == $a2 ) || ($moveToHeader) ) {
-    print "Copying back over.\n";
+    print "Copying back over, $mod to $orig.\n";
     copy $mod, $orig;
   }
   else { print "Mismatch of meaningful lines: $aroi to $a2.\n"; }
@@ -596,6 +604,7 @@ sub wordsonly {
 sub moveOver {
   open( A, "$_[0]" );
   open( B, ">$_[1]" );
+  binmode(B);
 
   my $line;
   my $tabname;
@@ -658,10 +667,17 @@ sub openThis {
 
   open( A, $orig ) || die("Uh oh... $orig didn't open. That's bad.");
   while ( $line = <A> ) {
+    if ( $_[0] eq -2 ) {
+      if ( $line =~ /^[a-z]/i ) {
+        $lineToOpen = $.;
+        last;
+      }
+    }
     if ( $line !~ /^#/ ) {
       $x = lc($line);
       $x =~ s/[^a-z]//gi;
-      print "Duplicate line $. ($dupes{$x}) in raw file.\n" if ( $dupes{$x} );
+      print "Duplicate line $. ($dupes{$x}) in raw file: $x.\n"
+        if ( $dupes{$x} );
       $dupes{$x} = $.;
     }
     if ( $line =~ /^\".*\"($| |\t)/ ) {
@@ -686,7 +702,7 @@ sub openThis {
 "Oh hey you overestimated the task left: $foundSoFar vs $_[0]. That's probably good.\n"
     if $foundSoFar < $_[0];
 
-  print "$foundSoFar total undone, $totalDone total done.\n";
+  print "$foundSoFar total undone, $totalDone total done.\n" if $totalDone;
 
   die("Yay, all done!") if !$lineToOpen && !$_[2];
   print "Opening line $lineToOpen.\n";
@@ -764,6 +780,11 @@ sub dumpUnquoted {
       print B `anan.pl $squash`;
       print B `myan.pl 3 $squash`;
       print B `gr $procString`;
+
+      if ( $a =~ /\+/ ) {
+        print B `anan.pl s$squash`;
+        print B `myan.pl 3 s$squash`;
+      }
     }
     else {
       print A2 $a;
@@ -790,7 +811,7 @@ Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sortin
 -c is compare post-run
 -d is demo mode. The file doesn't change.
 -e edits tosort.txt, -ec edits source code, -er/r edits suffix-to-table file
--f is force copy.
+-f is force copy. It is the opposite of demo mode.
 -o1/ol opens 1st or last quoted undone
 -n adds a line of numbers to the stats file.
 -s opens the stats after.

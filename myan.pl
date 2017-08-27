@@ -24,7 +24,7 @@ my $myBase     = "";
 my $cmdToAn    = "";
 my $minWords   = 2;
 my $maxWords   = 2;
-my $maxAn      = 5000;
+my $maxAn      = 1000;
 my $count      = 0;
 my $printTimer = 1;
 my $hashy;
