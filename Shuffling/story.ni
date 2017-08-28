@@ -6172,7 +6172,7 @@ understand "olefin" as a mistake ("Organic chemistry involves shuffling things a
 instead of doing something with line of no life:
 	if action is procedural:
 		continue the action;
-	say "The line of no life is too incorporeal to interact with[if collapsed old places is unvisited], but maybe you can imitate it partially to go north[end if].";
+	say "The line of no life is too incorporeal to interact with[if cruel ones' enclosure is unvisited], but maybe you can imitate it partially to go north[end if].";
 
 turnstile is scenery in Self-ID Fields. "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing. The top reads TO THE LUPINE LINEUP."
 

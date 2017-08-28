@@ -420,6 +420,8 @@ if ( scalar keys %tableAdd > 1 ) {
 if ($copyBack) {
   copy( $rtemp, $rr ) if ( compare( $rr, $rtemp ) );
   copy( $stemp, $sr ) if ( compare( $sr, $stemp ) );
+  print "Copying back and running tsh.\n";
+  print `tsh.pl b`;
 }
 
 open( B, ">$mod" );
