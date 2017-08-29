@@ -253,7 +253,7 @@ use MAX_ACTIONS of 290.
 
 use MAX_VERBS of 380.
 
-use MAX_VERBSPACE of 4200.
+use MAX_VERBSPACE of 4500.
 
 use MAX_SYMBOLS of 33000.
 
