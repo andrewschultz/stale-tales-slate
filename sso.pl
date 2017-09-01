@@ -822,11 +822,12 @@ Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sortin
 -mw is maximum warnings
 -sa is show default column add details
 -p post processes
--uq dump unquoted
+-u(dq)(#) dump unquoted
 SPECIFIC USAGE:
 dns is good for doing the stats etc
 c is good for testing
-wa is writeadded, l = launch, o = only
+wa is writeadded, l = launch, o = only. WALPO = general test before
+uq 20 is good for a day's work to check
 EOT
   exit;
 }
