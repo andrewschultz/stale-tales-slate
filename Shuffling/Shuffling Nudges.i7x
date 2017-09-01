@@ -271,6 +271,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "shoe"	335714951	--	--	got-shoes rule	"But you're wearing the shoes. That might cause problems."
 "shoes"	431988917	--	--	got-shoes rule	"But you're wearing the shoes. That might cause problems."
 "room"	298104110	--	--	rm-or-moor rule	"You almost feel something picking you up and pulling you somewhere else[if moor is visited and player is in roomroom]--you got here and can figure how to get back[else if moor is unvisited]--there are only so many ways to figure a new place[else]--you've been there and back, though, so you should know what to do[end if]."
+"mire"	322197911	Moor	--	--	"You can't change the rime-mire. You probably don't need to go wandering off, anyway. There's enough to do here."
 "woefulpat"	682291796	--	pat	--	"[woe-all]."
 "woeful"	495528001	--	Woeful Pat	--	"[woe-all]."
 "afwul"	295557133	--	pat	--	"[woe-all]."

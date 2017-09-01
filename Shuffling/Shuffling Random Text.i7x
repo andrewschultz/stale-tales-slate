@@ -2805,7 +2805,7 @@ blurb
 "Snap, shut, push, ants!"
 "Sneider! Sir, need nereids?"
 "Snipe path. Ashpit-pen. It happens."
-"Snort as no stars['] [a-word] torn."
+"Snort as no stars['] *** torn."
 "The snow, she won't show, ent."
 "So, a fee of ease? See, oaf..."
 "So brew webs or bowers!"

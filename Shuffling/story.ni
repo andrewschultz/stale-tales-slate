@@ -7882,7 +7882,13 @@ instead of doing something with the hallway:
 
 chapter moor
 
-Moor is a room in Sortie. description of moor is "You're on a moor. Woods all around don't look inviting. In fact, they'd leave you feeling sort of trapped, without your powers to reverse up out of here[if anapest is in moor][one of][or]. You hear bad poetry[stopping][end if]."
+Moor is a room in Sortie. description of moor is "You're on a moor. The rime-mire all around leaves you feeling a bit trapped, even though you know you could go back the way you came[if anapest is in moor][one of][or]. You hear bad poetry[stopping][end if]."
+
+the rime mire is scenery in moor. "The moor you're on has stablee enough footing, but the rime mire seems much more treacherous."
+
+understand "emir" as a mistake ("You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.") when player is in mire
+
+understand "rime-mire" as rime mire.
 
 m2 is privately-named proper-named scenery in moor. rgtext of m2 is "[rc][gc][gc][rc]". lgth of m2 is 4. gpos of m2 is 4. rpos of m2 is 1. cert-text of m2 is "-[ast]O[ast]O[d1]". rect-text of m2 is "R[d1][d1][ast]M".
 
@@ -8062,7 +8068,7 @@ instead of doing something with anapest:
 	say "The beat is drilled in your head: da da DA da da DA da da DA (repeated. I'll spare you the words, but...)"
 
 instead of going nowhere in moor:
-	say "[one of]You'd probably get lost in the forest around. There're no paths[or]You get the feeling walking won't do much good, here[stopping]. But nothing's stopping you from leaving the way you came."
+	say "The rime-mire all round is too dangerous. But. But nothing's stopping you from leaving the way you came."
 
 the peasant is a man. "A peasant is here[if peasant has hay], carrying some hay over his shoulder[end if]."
 
@@ -10302,6 +10308,8 @@ report going east in Rived Drive:
 	continue the action;
 
 Potshot Hotspot is east of Rived Drive. Hotspot is in Resort.
+
+understand "spotter" as a mistake ("No, you see [']em, you just need a better way to disperse [']em.") when player is in hotspot and potters are not in lalaland.
 
 understand "brb" as a mistake ("You don't know him that well. No riffing on his initials!") when player is in hotspot and red bull burdell is in hotspot.
 

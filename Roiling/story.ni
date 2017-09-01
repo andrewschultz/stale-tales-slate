@@ -14859,14 +14859,14 @@ check burning:
 		say "It's nowhere near greasy enough." instead;
 	if noun is storage:
 		say "It's meant to be nearly indestructible." instead;
-	say "You're a ropy pyro." instead;
+	say "You're a ropy pyro. There's no igniter tiering nearby." instead;
 
 to say way-tow:
 	if Mislit Limits is unvisited:
 		say "way ";
 
 instead of burning the dumpster:
-	say "That would be a dumpster fire of an idea. Plus the burnt brunt is bornt enough already."
+	say "That would be a dumpster fire of an idea. Plus the burnt brunt is burnt enough already."
 
 instead of entering dumpster:
 	say "It's potentially too toxic to enter, what with the permadust and spumed tar and other dreamt-ups inside."
