@@ -589,7 +589,7 @@ ASPIRE!
 The bottle of Pernod is a bit of a hint.
 Notice whom it's from in red.
 PONDER.
->>FIEFCO OFFICE
+>>UPSCALE CAPSULE
 ?The guy I deposed is bugging me!
 What can you do to concentrate on your REGION? Your tan ivy vanity title provides some hints. As does the banging on the door.
 IGNORE him.
@@ -1564,7 +1564,7 @@ In old versions, you used to get killed by the haunter, but I found that to be t
 ...saying TARD to get the dart? (don't say this word in real life. It's not nice.)
 ...saying HORSE at the shore?
 ...saying EOL or ELO by Leo?
-...saying SNOG when you hear the song in FiefCo Office?
+...saying SNOG when you hear the song in the Upscale Capsule?
 ...saying SPINE around the pines? There's another one, too. It's more colorful. You'll figure it out, but that's part of the fun.
 ...looking in the source code for the rest? ("table of anayux")
 ?Is Casper Spacer "anyone"?

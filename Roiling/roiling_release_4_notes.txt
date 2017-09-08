@@ -45,6 +45,7 @@ Store W:
 
 Store V:
 --there are now two more rooms in the sequence
+--FiefCo Office is renamed Upscale Capsule
 
 Store T:
 --the macks' idiocy in Store T is now refactored to be drawn from seven pods (7/8 letters with or without repeating letters, 9, 10, and 12--which has one item,) much like the warriors in Store W. You still only need to figure only three, but I think this is less overwhelming

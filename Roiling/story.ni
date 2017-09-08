@@ -3674,7 +3674,7 @@ table of end-flips
 thisflip	thatflip	warned-yet	my-prog	pointwarn
 USB	USB	false	presto-left rule	"That will win, but there's still a bit you could do in the shack[if lamb is in gyre]. Also, you missed what to do with the lamb, but it's too late[end if]."
 thor	new beet	false	degen-false rule	"You should never see this, because the only LLP was in the Mesa."
-troend1	troend2	false	troves-left rule	"You tidied your office up pretty well, but you could do a bit more."
+troend1	troend2	false	troves-left rule	"You tidied your upscale capsule up pretty well, but you could do a bit more."
 d2	d2	false	oyster-left rule	"This is the winning command, but you may be able to backtrack to see some other bits."
 curst palace	curst palace	false	towers-left rule	"This will knock down the palace, but you still have that flowerpot you got from Daltho."
 Elvira	Elvira	false	otters-left rule	"You could've cleaned up business with [to-clean-otters]."
@@ -5429,8 +5429,8 @@ check scaning location of the player (this is the location scan rule):
 	if location of player is Drain Nadir:
 		if diapers are reflexive:
 			say "Whoah, yeah, you're pretty bummed here! Well, not quite bummed enough to avoid pointing the settler at anything specific. There's the diapers, the picture of the sad pier, a spider..." instead;
-	if location of player is FiefCo Office:
-		if noise is in office:
+	if location of player is Upscale Capsule:
+		if noise is in Upscale Capsule:
 			say "The settler seems to pulse with the noise's volume.";
 			try scaning noise instead;
 		if salt is not visible:
@@ -6115,14 +6115,14 @@ carry out troves-hinting:
 			else:
 				try objhinting prai instead;
 		try objhinting Pernod instead;
-	if location of player is FiefCo Office:
-		if noise is in office:
+	if location of player is Upscale Capsule:
+		if noise is in Upscale Capsule:
 			try objhinting vanity instead;
-		if stream is reflexive and lobster is in office:
+		if stream is reflexive and lobster is in Upscale Capsule:
 			if lobster-first is true:
 				try objhinting lobster instead;
 			try objhinting stream instead;
-		if salt is in office:
+		if salt is in Upscale Capsule:
 			try objhinting salt instead;
 		if song is reflexive:
 			if song-first is true:
@@ -6900,7 +6900,7 @@ Drain Nadir	"You need to look at something that would change your mood."
 Boredom Bedroom	"You need to look at something that would inspire you to move, instead."
 Browse Bowers	"You are definitely going places, but you aren't going places by actually WALKING. Perhaps if you meditate on that brochure."
 Econ Cone	"That could lead to ransom manors."
-FiefCo Office	"You're at the very top. You don't really want to change that without really good motivation."
+Upscale Capsule	"You're at the very top. You don't really want to change that without really good motivation."
 Burnt Brunt	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
 Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches."
 Austerer Treasure	"The treasure room has no secret passages--so you can only go back east."
@@ -7376,7 +7376,7 @@ check singing:
 		if cheat-on is true and gins sign is escanned:
 			say "Knowing what you know, singing shouldn't work. You sing a song of frustration when you realize you'd need to GISN with what the settler says, here." instead;
 		say "You sing the nicest song you remember about goodness and virtue. After sickening yourself into the bargain with no transport arriving, you notice the sign may've been vandalized, and plus sing/sign was a bit too easy." instead;
-	if location of player is FiefCo Office:
+	if location of player is Upscale Capsule:
 		say "You can't quite mimic the singer, but maybe you could tweak his singer-ness. You can't move to artists['] straits with your job. You're more suing than 'I sung' now." instead;
 	if mrlp is troves:
 		say "No hippy trippy blues song about being poor here, if you please. And you will--you're not in power, yet." instead;
@@ -7750,8 +7750,8 @@ before listening (this is the you can hear stuff some places rule):
 		say "Merciful quiet, for the moment." instead;
 	if player is in shack:
 		say "Classic techno music from the Baleets: 'Be Stale.'" instead;
-	if player is in FiefCo Office:
-		say "[if noise is in office]You can't help but hear the knocking. Which prevents you working on your big new REGION[else if salt is in lalaland][one of]You listen closely to 'I'd Cede.' But you see red at the memory of Eddie C.[']s followup, a vapid rehash, I Ceded[or]Oh man, that part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy[cycling][else]. White noise, it is on. Whee[end if]." instead;
+	if player is in Upscale Capsule:
+		say "[if noise is in Upscale Capsule]You can't help but hear the knocking. Which prevents you working on your big new REGION[else if salt is in lalaland][one of]You listen closely to 'I'd Cede.' But you see red at the memory of Eddie C.[']s followup, a vapid rehash, I Ceded[or]Oh man, that part that gets your eyes watery is up next[or]The song's chorus. Five notes. C, D, E, D, E... 'I...' just right to get your eyes red. There's just a little more[or]Three notes: E, C, E, '...did.' It gets you. You know your eyes are red now. Boy[cycling][else]. White noise, it is on. Whee[end if]." instead;
 	say "The air! Hear it! Silent." instead;
 
 chapter smelling
@@ -7782,7 +7782,7 @@ before smelling (this is the you can smell some stuff some places rule):
 		say "Eew-gas sewage. Skint-stink." instead;
 	if player is in Drain Nadir:
 		say "Ew--mild mildew. A mustier semi-rut." instead;
-	if player is in Browse Bowers or player is in Econ Cone or player is in FiefCo Office:
+	if player is in Browse Bowers or player is in Econ Cone or player is in Upscale Capsule:
 		say "Perfumed. Dump-free." instead;
 	if mrlp is presto: [presto]
 		say "[if cur-score of presto is 0]Things turn to ash in your nose[else]You don't smell anything that'd make you say what you've needed to say in this area, which is a good thing[end if]." instead;
@@ -7858,7 +7858,7 @@ before sleeping:
 		say "You don't have time to dream of titanium golf clubs or overpriced alcohol or all the things you should have been dreaming about all these years. Slacker." instead;
 	if player is in Browse Bowers or player is in Econ Cone:
 		say "In a public place? Worse, in an upscale public place? How shocking!" instead;
-	if player is in FiefCo Office:
+	if player is in Upscale Capsule:
 		say "You got here by doing nothing while conscious, not doing nothing while unconscious." instead;
 	if mrlp is troves:
 		say "Nonsense! Spoiloplis is no place for sleepers. Unless they are really energetic about why they need sleep. Maybe you can sleep somewhere else. But not now." instead;
@@ -8919,7 +8919,7 @@ ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	"You learn to deal with glob
 brochure	brochure	false	503231922	econ cone	"desire"	"desire"	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
 prai	prai	false	438050501	--	"aspire"	"aspire"	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 rivets	rivets	false	564671562	--	"strive"	"strive"	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if prai is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
-pernod	pernod	false	458885045	FiefCo Office	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through!"
+pernod	pernod	false	458885045	Upscale Capsule	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through!"
 lager	lager	false	301731271	--	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 noise	noise	false	433982545	--	"ignore"	"ignore"	"'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."
 salt	song	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! You see there was a playbill under the salt."
@@ -9311,7 +9311,7 @@ check fliptoing old giant:
 		say "You don't need or want another round of that." instead;
 
 to say xtra-help:
-	if lager is in Boredom Bedroom and divorces is in office:
+	if lager is in Boredom Bedroom and divorces is in Upscale Capsule:
 		continue the action;
 	if lager is in lalaland and divorces is in lalaland:
 		say ". Your songs aren't just soulful, though. They're built on your experience with alcohol and media abuse and glorifying consumerism, from the lager and DIVORCES. They do society good";
@@ -9339,7 +9339,7 @@ to say remap-or-unset:
 		say "You brave the electrical underpinnings of the perma-amper to create an ampish mishap";
 
 to say troend:
-	say "Something about the song reminds you of that townhome in your hometown. O glum mogul! [iced-reigns]. Writing songs is your sort of doing nothing. Fortunately, you're skilled enough in the art of doing nothing to make the switch fairly quickly. Once you have irreversibly adjusted your quit note quotient and signed a short-week worksheet, you reenact gloom you remembered in this conglomerate. Is life I, Self, I? Lies, if...[paragraph break]Your condensed rise to the top of this business business makes you efficient writing songs too. [twiddle of table of songs you could write and 4]. The satirical edge you didn't mean to put in is a big hit in Spoiloplis and beyond. Your songs fully restore the spirit of a common man and shred the oligarchs['] rash logic[xtra-help]. And no censorship will enrich sops.[paragraph break]Exhausted, you realize you have no way home. But you meet a fellow called Tristan, startin['] a company called Tin Star Transit. You pay with stolen knick-knacks from your office. The ride's low frills but extremely fast--to the Strip of Profits. So ends your paydirt day trip: poverty to the very top, IOU phear to euphoria."
+	say "Something about the song reminds you of that townhome in your hometown. O glum mogul! [iced-reigns]. Writing songs is your sort of doing nothing. Fortunately, you're skilled enough in the art of doing nothing to make the switch fairly quickly. Once you have irreversibly adjusted your quit note quotient and signed a short-week worksheet, you reenact gloom you remembered in this conglomerate. Is life I, Self, I? Lies, if...[paragraph break]Your condensed rise to the top of this business business makes you efficient writing songs too. [twiddle of table of songs you could write and 4]. The satirical edge you didn't mean to put in is a big hit in Spoiloplis and beyond. Your songs fully restore the spirit of a common man and shred the oligarchs['] rash logic[xtra-help]. And no censorship will enrich sops.[paragraph break]Exhausted, you realize you have no way home. But you meet a fellow called Tristan, startin['] a company called Tin Star Transit. You pay with stolen knick-knacks from your upscale capsule. The ride's low frills but extremely fast--to the Strip of Profits. So ends your paydirt day trip: poverty to the very top, IOU phear to euphoria."
 
 to say iced-reigns:
 	if word number 1 in the player's command is "decide":
@@ -14087,13 +14087,13 @@ a-text of card is "RYRRYR". b-text of card is "RYRRYR". parse-text is "x[sp]o[sp
 to say trev:
 	say "Trevis Vister[one of], Ph.D in Life Success[or][stopping]";
 
-book FiefCo Office
+book Upscale Capsule
 
-FiefCo Office is an innie room in Troves. "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your desk to the plasm lamps above, to the inspirational picture of a stream, your office conforms to the opulent/no let-up deco-code. Including the double-plus-secure door out[if song is visible].[paragraph break]Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes, still[else]. A shaker of salt sits on the vanity, too[end if]."
+Upscale Capsule is an innie room in Troves. "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your desk to the plasm lamps above, to the inspirational picture of a stream, this FiefCo Office conforms to the opulent/no let-up deco-code. Including the double-plus-secure door out[if song is visible].[paragraph break]Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes, still[else]. A shaker of salt sits on the vanity, too[end if]."
 
 section order the flips
 
-check fliptoing when player is in FiefCo Office and noise is in FiefCo Office (this is the order Office flips rule): [note that this trumps check fliptoing song]
+check fliptoing when player is in Upscale Capsule and noise is in Upscale Capsule (this is the order Upscale Capsule flips rule): [note that this trumps check fliptoing song]
 	if noun is song:
 		say "First things first: you need to outlast that noise.";
 		preef salt;
@@ -14103,11 +14103,11 @@ check fliptoing when player is in FiefCo Office and noise is in FiefCo Office (t
 		preef noun;
 		do nothing instead;
 
-chapter silly office scenery
+chapter silly Upscale Capsule scenery
 
 section nerf fern
 
-The nerf fern is useless scenery in FiefCo Office.
+The nerf fern is useless scenery in Upscale Capsule.
 
 description of nerf fern is "It saves time, since you don't have to water it. But you can't see how it gives any new ideas."
 
@@ -14118,7 +14118,7 @@ instead of doing something with the nerf fern:
 
 section lamps
 
-the plasm lamps are plural-named scenery in FiefCo Office. "They start to inspire a Psalm, until you remember you're a busy [guy] with a job to do."
+the plasm lamps are plural-named scenery in Upscale Capsule. "They start to inspire a Psalm, until you remember you're a busy [guy] with a job to do."
 
 to say guy:
 	say "[if player is female]wo[end if]man";
@@ -14128,42 +14128,42 @@ instead of taking lamps:
 
 section secure door
 
-the secure door is scenery in FiefCo Office. "It isn't even to be thought about."
+the secure door is scenery in Upscale Capsule. "It isn't even to be thought about."
 
 instead of doing something with the secure door:
 	if current action is opening:
-		say "[if noise is in office]And let that person in? No[else]You have too much to do. No sneaking out[end if]!" instead;
+		say "[if noise is in Upscale Capsule]And let that person in? No[else]You have too much to do. No sneaking out[end if]!" instead;
 	if action is procedural:
 		continue the action;
 	say "You don't even want to think about that door with all you have to do."
 
 chapter desk, checklist and vanity
 
-the big important desk is scenery in FiefCo Office. "Made of nice to notice eco-tin, it has a Desk-Sked (more popular and efficient than the [randbla]) on it that you could read all day."
+the big important desk is scenery in Upscale Capsule. "Made of nice to notice eco-tin, it has a Desk-Sked (more popular and efficient than the [randbla]) on it that you could read all day."
 
-the Desk Sked is scenery in FiefCo Office. printed name of Desk Sked is "Desk-Sked". understand "desk-sked" as desk sked
+the Desk Sked is scenery in Upscale Capsule. printed name of Desk Sked is "Desk-Sked". understand "desk-sked" as desk sked
 
 does the player mean doing something with the big important desk: it is very likely.
 
 description of Desk Sked is "You browse some steno-notes on your Desk-Sked: [randbla]"
 
-check going east in FiefCo Office:
+check going east in Upscale Capsule:
 	say "You couldn't just run out on your company and your responsibilities like that! You would engage to leave a note or something first. And, of course, you would need to mentally prepare yourself to[if salt is visible]. And you'd need to have proved yourself. You haven't, yet[otherwise]. I guess you could leave now, if you did the right thing, first[end if]." instead;
 
-the tan ivy vanity is auxiliary scenery in FiefCo Office. "[one of]It's utterly useless and tacky. I mean, ivy is either green or, if it's dying, brown. [or][stopping][if noise is in office]There's lots of red text:[paragraph break][fixed letter spacing]  GOREN I. REGNIO[line break]Ergnio-Onregi Region[r][paragraph break]So that's who you took over from. You sense you need to...marginalize Goren's memory somehow.[else]It's now engraved CEO FOR US? OF COURSE![end if]"
+the tan ivy vanity is auxiliary scenery in Upscale Capsule. "[one of]It's utterly useless and tacky. I mean, ivy is either green or, if it's dying, brown. [or][stopping][if noise is in Upscale Capsule]There's lots of red text:[paragraph break][fixed letter spacing]  GOREN I. REGNIO[line break]Ergnio-Onregi Region[r][paragraph break]So that's who you took over from. You sense you need to...marginalize Goren's memory somehow.[else]It's now engraved CEO FOR US? OF COURSE![end if]"
 
 instead of opening vanity:
 	say "It's not a case sort of vanity. It's just a useless sort of vanity.";
 
 instead of scaning vanity:
 	say "You scan around the vanity for clues.";
-	if noise is in office:
+	if noise is in Upscale Capsule:
 		say "You note the noise and that you can read the vanity[if vanity is examined] again[end if].";
 		try scaning noise instead;
-	if lobster is in office and stream is reflexive:
+	if lobster is in Upscale Capsule and stream is reflexive:
 		say "Your settler picks up a signal when it moves to the lobster.";
 		try scaning lobster instead;
-	if salt is in office:
+	if salt is in Upscale Capsule:
 		say "Your settler picks up a signal when it moves to the salt.";
 		try scaning salt instead;
 	if playbill is visible:
@@ -14173,11 +14173,11 @@ instead of scaning vanity:
 
 chapter the noise (IGNORE)
 
-every turn while player is in FiefCo Office (this is the region-knock rule):
-	if noise is in office:
+every turn while player is in Upscale Capsule (this is the region-knock rule):
+	if noise is in Upscale Capsule:
 		say "[one of]'Er...go in?' cries a voice not worth your attention[or]You hear the voice cry '[one of]Erin! Go[or]Go, Erin[cycling]!' which makes you see red. YOU'RE in charge here[or]Your 'visitor' seems to be plotting...he says 'One: rig...' but you tune the rest out, seeing red[or]'No! I...erg!' your adversary rages[in random order].[paragraph break]If only you could tune that out!";
 
-the noise is vanishing scenery in FiefCo Office. "It's noise from the person you locked out."
+the noise is vanishing scenery in Upscale Capsule. "It's noise from the person you locked out."
 
 a-text of noise is "YRRYRY". b-text of noise is "YRRYRY". parse-text of noise is "-[sp]x[sp]x[sp]-[sp]x[sp]-".
 
@@ -14193,7 +14193,7 @@ instead of doing something with the noise:
 
 chapter DIVORCES magazine
 
-DIVORCES Magazine is vanishing LLPish scenery in FiefCo Office. "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla]"
+DIVORCES Magazine is vanishing LLPish scenery in Upscale Capsule. "[one of]Its motto: 'A hipper, happier paper. Hi!' You note all sorts of lurid articles and features about depravity in high society and its 'wonderful' fashion, too. One[or]Another 'worldly' article[stopping] is [randbla]"
 
 a-text of divorces is "RYRRYRYR". b-text of divorces is "PGRRYRGR". parse-text of divorces is "d[sp]i[sp]x[sp]x[sp]o[sp]x[sp]e[sp]x".
 
@@ -14210,7 +14210,7 @@ chapter how to last (1 of 2)
 
 section lobster
 
-an extra fancy lobster meal is in FiefCo Office. description is "Oh, man, it looks awesome. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if stream is reflexed]--though you are feeling confident enough, having dealt with the stream[end if].". fancy lobster meal is vanishing. initial appearance of lobster meal is "A meal's on the desk. Lobster! You may or may not have the confidence to eat it."
+an extra fancy lobster meal is in Upscale Capsule. description is "Oh, man, it looks awesome. You wonder if you really deserve to eat it. If you built yourself up the right way, I'm sure you could chow down[if stream is reflexed]--though you are feeling confident enough, having dealt with the stream[end if].". fancy lobster meal is vanishing. initial appearance of lobster meal is "A meal's on the desk. Lobster! You may or may not have the confidence to eat it."
 
 a-text of lobster is "RYRRRYR". b-text of lobster is "RGRPPGP". parse-text of lobster is "x[sp]o[sp]x[sp]s[sp]t[sp]e[sp]r". lobster is parse-spoilable.
 
@@ -14226,7 +14226,7 @@ instead of taking lobster meal:
 
 section stream painting
 
-The painting of the stream is reflexive scenery in FiefCo Office. "It's labeled as PRACTICAL RELAXATION FOR TODAY'S LEADERS. The stream is about all there is to it. It shimmers based on how you stare at it[if stream is not reflexed and lobster is in lalaland]. You doubt you need to do anything with it, since you had that delicious lobster, but then, it might be one more overachievement[end if]."
+The painting of the stream is reflexive scenery in Upscale Capsule. "It's labeled as PRACTICAL RELAXATION FOR TODAY'S LEADERS. The stream is about all there is to it. It shimmers based on how you stare at it[if stream is not reflexed and lobster is in lalaland]. You doubt you need to do anything with it, since you had that delicious lobster, but then, it might be one more overachievement[end if]."
 
 a-text of stream is "RYRRYR". b-text of stream is "RYRRYR". parse-text of stream is "x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -14249,7 +14249,7 @@ instead of doing something to the salt:
 		say "The salt is there for ornamental and inspirational purposes. Plus, there's nothing here to eat[if lobster is visible], except the lobster, which doesn't need it[end if]." instead;
 	say "Your mind stalls at what to do with the salt, or how to ignore it."
 
-the St Al Salt is scenery in FiefCo Office. printed name of salt is "St. Al Salt".
+the St Al Salt is scenery in Upscale Capsule. printed name of salt is "St. Al Salt".
 
 understand "shaker" and "salt shaker" and "shaker of salt" as St Al Salt
 
@@ -14264,7 +14264,7 @@ understand "lsat" as a mistake ("Oh dear. Is a standardized lawyers['] aptitude 
 chapter final action 1 of 2
 
 check fliptoing song:
-	if lobster is in office and stream is reflexive:
+	if lobster is in Upscale Capsule and stream is reflexive:
 		say "Man. That seems right. But you haven't improved yourself enough to last, yet.";
 		preef salt;
 		do nothing instead;
@@ -14280,7 +14280,7 @@ Eddie's song is reflexive scenery. "Eddie C. warbles on."
 
 a-text of eddie's song is "RYRYRY". b-text of eddie's song is "RYPYPG". parse-text is "x[sp]e[sp]x[sp]i[sp]x[sp]e". eddie's song is parse-spoilable.
 
-understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when player is in FiefCo Office and playbill is in FiefCo office.
+understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when player is in Upscale Capsule and playbill is in Upscale Capsule.
 
 instead of examining song:
 	try listening instead;
@@ -14304,9 +14304,9 @@ instead of doing something with eddie's song:
 		continue the action;
 	say "You can just listen to Eddie's song for evocative details and stuff."
 
-understand "signer" as a mistake ("No. Your eyes redden as you remember you are already a signer. The singer makes you want to do something else.") when player is in FiefCo Office and playbill is in FiefCo office.
+understand "signer" as a mistake ("No. Your eyes redden as you remember you are already a signer. The singer makes you want to do something else.") when player is in Upscale Capsule and playbill is in Upscale Capsule.
 
-understand "resign" as a mistake ("Wrong place for that. If you must, QUIT instead.") when player is not in FiefCo Office.
+understand "resign" as a mistake ("Wrong place for that. If you must, QUIT instead.") when player is not in Upscale Capsule.
 
 understand "reigns" as a mistake ("You try to convince yourself it totally reigns here, but the singer pushes you towards giving up your responsibility.") when song is visible.
 
@@ -26245,8 +26245,8 @@ brochure	"[one of]It is no sin to want a better place to RESIDE.[plus][or]Do not
 prai	"[one of]What do the rivets say? PRAISE. It should motivate you![plus][or][if rivets are reflexed]You already got what to do with the rivets, so the settler will be more merciful to you[else]The settler gives a mess because PRAISE and RIVETS go to different words, but the question mark is a clue in its own way[end if].[plus][or]How to want more without wanting more?[plus][or]You need to ASPIRE.[minus][cycling]"	--	"ASPIRE"
 rivets	"[one of]Those rivets stand out.[plus][or][if prai is reflexed]You already figured what to do with what they say, so the settler is a bit easier on you[else]Because they say PRAISE, the settler is picking up two solutions[end if].[plus][or]The praise [i]rivets...[r] and should make you want more.[plus][or]You want to want more without just plain wanting more.[plus][or]STRIVE.[minus][cycling]"	--	"STRIVE"
 statue	--	rivets
-secure door	"Useful for keeping people out[if noise is in office], though the vanity may provide more hints what (not) to do[end if]."
-plasm lamps	"Useful for working late at the office but not for solving silly word puzzles."
+secure door	"Useful for keeping people out[if noise is in Upscale Capsule], though the vanity may provide more hints what (not) to do[end if]."
+plasm lamps	"Useful for working late at the Upscale Capsule but not for solving silly word puzzles."
 Desk Sked	"Useful for organizing tasks much tricker than playing dumb computer games."
 big important desk	"Just part of the scenery."
 lager	"[one of]The Large Regal Lager [if player is in boredom bedroom]here [end if]in Boredom Bedroom serves a purpose, but not a critical one.[plus][or]You are upset at the lager. You can make a moral statement by looking at it funny.[plus][or]GLARE at the lager.[minus][cycling]"	--	"GLARE"
@@ -27098,7 +27098,7 @@ examp
 "Dr. Yow is male/female, and people's insults for Mr. or Ms. Yow are different."
 "Trying to run through the ego drains."
 "[bold type](troves)[r] Reading DEAL."
-"When entering the FiefCo Office."
+"When entering the Upscale Capsule."
 "[bold type](otters)[r] KISSing, EXAMINEing the macks, talking/dispelling/attacking or leaving while they're in the Frontage."
 "KISSing Gretta or taking to her with the macks around."
 "Elvira calls you (Ach,) Mr. Charm or Ms. Arch-Charms."
@@ -27269,7 +27269,7 @@ rule for showing alternate routes:
 	if troves is solved:
 		say "[eqls]TROVES[line break]";
 		say "[2da]you could've [if derived is true]DERIVE[else]RECALLe[end if]d to figure the cellar's location, too.";
-		say "[2da]you could've [if decide-win is true]DECIDE[else]RESIGNe[end if]d in FiefCo Office, too.";
+		say "[2da]you could've [if decide-win is true]DECIDE[else]RESIGNe[end if]d in the Upscale Capsule, too.";
 	if presto is solved:
 		if phooeyed is true:
 			say "[eqls]PRESTO[line break][2da]you could've said POOH instead of PHOOEY, which would've meant one less point.";
@@ -27399,7 +27399,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]you could've tried to ASPIRE for praise by the statue of Trevis Vister.";
 		if stream is reflexive:
 			say "[2dmiss of cur-reg]you could've tried to MASTER the stream photograph.";
-		if lobster is in FiefCo Office:
+		if lobster is in Upscale Capsule:
 			say "[2dmiss of cur-reg]you could've tried to BOLSTER yourself to deserve lobster.";
 		if DIVORCES is not in lalaland:
 			say "[2dmiss of cur-reg]you could've tried to DISCOVER something about DIVORCES magazine.";
@@ -27652,8 +27652,8 @@ index map with clipper cripple mapped east of ripe pier.
 
 [start troves]
 
-index map with fiefco office mapped north of cruelest lectures.
-index map with loather rathole mapped west of fiefco office.
+index map with Upscale Capsule mapped north of cruelest lectures.
+index map with loather rathole mapped west of Upscale Capsule.
 index map with bustle sublet mapped west of loather rathole.
 index map with boarded roadbed mapped north of bustle sublet.
 index map with drain nadir mapped north of boarded roadbed.
@@ -28012,7 +28012,7 @@ chapter randtext
 
 [* this tests all possibilities of random text, by region. Generic possibilities are included in rand-i.]
 
-test twi with "lamp/x shelf/db/open door/1/4/4/4/4/4/lamp/x trash/g/g/g/g/g/g/g/g/d/staple/stapler/put staple in stapler/ts/troves/in/x pa/gonear office/ignore/bolster/last/resign/otwin/deeply/quickly/w/e/w/e/w/e/w/7/play whistle"
+test twi with "lamp/x shelf/db/open door/1/4/4/4/4/4/lamp/x trash/g/g/g/g/g/g/g/g/d/staple/stapler/put staple in stapler/ts/troves/in/x pa/gonear upscale capsule/ignore/bolster/last/resign/otwin/deeply/quickly/w/e/w/e/w/e/w/7/play whistle"
 
 test rand-i with "cap 3/x bookshelf/g/g/g/g/g/g/attack it/g/g/g/lamp/open door/1/1/1/1/1/1/1/1/2/lamp/x art/g/g/g/g/g/g/g/g/hint/n/y/g/g/g/n/g/g/g/shit/g/g/g/x ads/g/g/g/listen/g/g/g/basement/d/satchel/x settler/in/flier/2/2/1/1/1/1/1/1/8/8/8/10/10/staple/stapler/staple wall/z/z/z/z/////in"
 
