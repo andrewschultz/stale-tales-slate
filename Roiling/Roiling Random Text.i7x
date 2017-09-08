@@ -2024,7 +2024,7 @@ blurb
 book manor
 
 table of ad slogans [xxm1]
-blurb	blare	[random sad ads: the blare field designates whether you have an exclamation point at the end]
+blurb	blare [random sad ads: the blare field designates whether you have an exclamation point at the end]
 "[d-t] Saffo Fast Food"	false
 "[if player is male]Aaron Colt[else]Lora Acton[end if]'s Root Canals"	false [p]
 "[if player is male]Alec Pino[else]Loni Cape[end if]'s Special on Pecan Oils!"	true [p]
@@ -4715,7 +4715,7 @@ blurb	fave
 "The Goon on the Go[r], by Theo Ong"	false
 "Here Trots the Sorter[r], by Ester Hort"	true
 "Hero, Get There: GO[r], by Thor Gee"	true
-"Hero, Ply, Be Hyperbole[r], by [if player is male]Lee Brophy[else]Beryl Hope[end if]"
+"Hero, Ply, Be Hyperbole[r], by [if player is male]Lee Brophy[else]Beryl Hope[end if]"	true
 "Hero Tasks? Ask Others[r], by [if player is male]Theo Krass[else]Kathe Ross[end if]"	false
 "Hero Tent Not There[r], by Rene Toth-Etherton"	false
 "Hog, Urge a Rough Age[r], by Rea Gough"	false
@@ -11886,7 +11886,7 @@ blurb	prio
 "Duper-Oath Up the Road: Proud Hate[r], by [if player is male]Pedro Haut[else]Hope Dutra[end if]" []
 "A Duty? Ay, Tut, Ya Dud[r], by Tad Yu"
 "Duty: Solve, Study, Love[r], by Stuey Vold"
-"A Dweeb Be Awed[r], by Bea Dew & Deb Wea"
+"A Dweeb: Wee, Bad[r], by Bea Dew & Deb Wea"
 "E-Czar Craze[r], by Z. C. Rea"
 "E-Divas I Saved[r], by Sad Evi Davies"
 "E-Z In Zine[r], by Inez Enzi"
@@ -33778,7 +33778,6 @@ blurb
 "Hedge Manor Garden Home" []
 "High-Set Heights"
 "Hope Sunset Penthouses"
-"A Hut, Haut"
 "I-Add-Play-Daily Pad"
 "I-Arrive Riviera"
 "I, Empress Premises"
@@ -33905,7 +33904,6 @@ blurb
 "Truco Court" []
 "Ultra-Fine Fruit Lane" []
 "Un-Bore-Bourne" []
-"Upscale Capsule"
 "Vibeway Bay View"
 "Villa Valli"
 "Warm Mawr"
@@ -33975,7 +33973,7 @@ blurb
 "Beat Them? That Be Me[r], by [if player is male]Matt Heeb[else]Bette Ham[end if]"
 "Bed-Weak? Be Waked[r], by Kade Web"
 "Being First: Fringe Bits[r], by Brigit Fens"
-"Belay No Baloney[r], by [if player is male]Al Boyne[else]Bea Lyon[end if]"	true
+"Belay No Baloney[r], by [if player is male]Al Boyne[else]Bea Lyon[end if]"
 "A Bench Gig? Big Change[r], by Gabe Ching"
 "Bent, Rote? On, Better[r], by [if player is male]Brett Eno[else]Rene Bott[end if]"
 "Best-Dug Budgets[r], by Deb Gust"

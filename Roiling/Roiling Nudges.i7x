@@ -290,6 +290,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bottle"	480611466	--	pernod	--	"It's not just any bottle, but a bottle of [unless label is in lalaland]Pernod[else]N-E-Prod[end if]."
 "label"	256040510	--	label	--	"It's not the label but what's on it."
 "noise"	412333006	--	noise	--	"Hmm, no, focusing so directly on the noise to block it out is counterproductive."
+"upscale"	485659083	Upscale Capsule	--	--	"[locname]."
+"office"	319186909	Upscale Capsule	--	--	"[locname]."
+"fief"	225828747	Upscale Capsule	--	--	"[locname-part]."
 "ignore"	433982545	--	--	ignore-ignored rule	"Now that you've ignored the distraction, you want to forget it."
 "divorce"	479674829	--	DIVORCES	--	"If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel."
 "magazine"	465726572	--	DIVORCES	--	"It's not just any magazine. It's DIVORCES!"
@@ -297,14 +300,12 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "lamps"	297816735	--	plasm lamps	--	"You need that light for late-night work sessions."
 "picture"	566810127	--	stream	--	"It's not just any old picture. There's a stream."
 "shaker"	401807173	--	salt	--	"It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit."
-"fern"	308552316	fiefco	--	--	"The fern is mentally, if not physically, unmalleable."
-"sked"	298042342	fiefco	--	--	"The checklist was built to be especially stable and singular of purpose. So, nothing happens."
+"fern"	308552316	Upscale Capsule	--	--	"The fern is mentally, if not physically, unmalleable."
+"sked"	298042342	Upscale Capsule	--	--	"The checklist was built to be especially stable and singular of purpose. So, nothing happens."
 "divorces"	575948795	--	--	divorces-gone rule	"No! Not another second thinking about that rubbish."
 "song"	272133753	--	song	--	"It's the song name--[i]I'd Cede[r]."
 "eddie"	342663242	--	song	--	"It's the song name--[i]I'd Cede[r]."
 "playbill"	430866297	--	playbill	--	"You fold and look at the playbill many different ways before figuring it's probably the writing on it that matters."
-"office"	319186909	fiefco	--	--	"[locname]."
-"fief"	225828747	fiefco	--	--	"[locname-part]."
 "poverty"	701582538	--	--	degen-true rule	"There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details."
 "trove"	497757327	--	--	degen-true rule	"[not-the-reg]."
 "storev"	594031293	--	--	degen-true rule	"[not-the-reg]."
@@ -316,7 +317,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "entry"	507506690	--	plaque	--	"[mz-chg]."
 "mazeentry"	824545388	--	plaque	--	"[mz-chg]."
 "bigl"	149825292	nowt town	--	--	"The big L may be some sort of clue, but you can't do anything with it."
-"mazeltov"		655479952	--	--	maze-gone rule	"The volt maze is gone. Re-forming it would not be fun."
+"mazeltov"	655479952	--	--	maze-gone rule	"The volt maze is gone. Re-forming it would not be fun."
 "ether"	481328338	--	--	ether-gone rule	"The ether is gone. You can just go [if phat path is visited]back [end if]north."
 "mazeroom"	615142808	--	--	in-mazeroom rule	"[if player is in Nowt Town]This is just the entry. You may want to tackle the whole maze[else]You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle[end if]."
 "dreidl"	353994775	Unwary Runway	--	--	"You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22."
@@ -520,11 +521,12 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "debris"	393844718	--	crate	--	"You can't learn much from the debris. You're pretty sure it's from a crate."
 "fragments"	606798973	--	fragments	--	"[crate-frag]."
 "fragment"	510525007	--	fragments	--	"[crate-frag]."
-"shut"	341772090	plains	--	--	"[if uaah is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the door[end if]."
+"shut"	341772090	plains	--	--	"[if Shadier Airshed is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the door[end if]."
 "inthere"	595228692	plains	--	--	"You don't need to mess with the message on the rude door."
 "bonk"	214612168	--	knob	--	"That isn't quite the right way to hit the knob."
-"ahut"	247685942	uaah	--	--	"[locname]." [UH AT A HUT / AT, UH, A HUT]
-"hut"	245498124	uaah	--	--	"[locname-part]."
+"airshed"	414895930	Shadier Airshed	--	--	"some text"[SHADIER AIRSHED]
+"ahut"	247685942	Shadier Airshed	--	--	"[locname]."
+"hut"	245498124	Shadier Airshed	--	--	"[locname-part]."
 "ubt"	226634730	--	tubs	--	"Clear ALL the tubs!"
 "bust"	322908696	--	tubs	--	"That didn't make anything go boom."
 "drop"	262171428	--	prod	--	"You're juggling what to do with the prod, here."
@@ -1419,12 +1421,12 @@ to say scrapery:
 	say "If you brought down the skyscraper like that somehow, mass panic would ensue. Destroy it from within";
 
 this is the ignore-ignored rule:
-	if player is in fiefco and noise is in lalaland:
+	if player is in Upscale Capsule and noise is in lalaland:
 		the rule succeeds;
 	the rule fails;
 
 this is the divorces-gone rule:
-	if player is in fiefco and divorces is in lalaland:
+	if player is in Upscale Capsule and divorces is in lalaland:
 		the rule succeeds;
 	the rule fails;
 

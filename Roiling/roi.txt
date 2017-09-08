@@ -4,8 +4,11 @@ out=roiling-invisiclues.htm
 >General
 ?Does the male/female option have any practical difference?
 Well, one. It changes one guardian in one area. It also changes the names/genders of some people you'll meet or hear of.
-Spoilers ahead.
-The tarred trader, Dr. Yow, the smart kid, and the person on a droll dollar change names.
+Spoilers ahead, but not really.
+Dr. Yow's gender is the same as yours.
+The tarred trader is Red Rat Art Erd or Dr. Tera Darter.
+The smart kid is Dirk Stam or Kim Darst.
+The person on A Droll Dollar is Lord Al Ollard or Dr. Lola Ollard.
 The south exit from the Coastline, in Store W, features either Lois the Hostile or the Hostile-Is-He Lot.
 The Deal Seer west of the Strait is Lars Eede or Elsa Erde.
 There may be an embarrassing bug where a female NPC is referred to as male, but I hope not. I searched pretty thoroughly, I guess/think. If you find one, I'll fix it and give you credit.
@@ -1137,7 +1140,7 @@ What is the location's name?
 PLAINS.
 You can do something with that. It's a bit slangy, but...
 ...you can SPLAIN your goals and dreams and wishes.
->>(UH, AT/AT, UH) A HUT
+>>SHADIER AIRSHED
 ?What do I do with the tubs?
 Maybe there is something inside.
 You need to break them open.
@@ -1162,6 +1165,19 @@ Two things. First, it can release the haunter...
 ...if you UNEARTH.
 Second, once you have the ruby...
 ...you can BURY it.
+?How do I bring a plane in?
+Well, you need to manipulate the panel.
+You need to uncover it first.
+There was a panel in Shuffling Around.
+How did you get it?
+By folding a paper plane.
+I didn't want to reuse an anagram, so...
+...there is no plane. I just needed an anagram for a believably big area, for the items.
+?How do I operate the plane?
+You can't operate the buttons, but...
+I bet a nuts bot could.
+You could make it respect you if you told it tut, snob...
+...And if there actually was a nuts bot in the game. Or, well, buttons. Or a plane.
 >>ACHERS' ARCHES
 ?Do the arches hide anything?
 Yes. Examining's not enough.
