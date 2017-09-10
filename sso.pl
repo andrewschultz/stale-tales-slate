@@ -277,6 +277,15 @@ OUTER:
 while ( $line = <A> ) {
   if ( $line !~ /^\"/ ) { $unusedString .= $line; next; }
   $quo = () = $line =~ /"/g;
+  if ( ( $quo == 0 ) && ( $line =~ /[\[\]]/ ) ) {
+    print "WARNING bracketed text without proper # of quotes in line $., $line";
+    $warnings++;
+    print "Reached maximum, only showing major errors\n"
+      if $warnings == $maxWarnShow;
+    $majorWarnLine = $. if ( !$majorWarnLine );
+    $unusedString .= $line;
+    next;
+  }
   if ( $quo != 2 ) {
     print "WARNING bad quotes in line $., $line";
     $warnings++;
