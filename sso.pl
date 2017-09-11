@@ -120,11 +120,12 @@ while ( $count <= $#ARGV ) {
       $count++;
       next;
     };
-    /^-?u[dq]?[0-9]*$/ && do {
-      my $uq = $arg;
-      $uq =~ s/.*u.//;
+    /^-?u([dq])?l?[0-9]*$/ && do {
+      next if $arg2 eq "";
+      my $uq = $arg2;
+      $uq =~ s/.*u([a-z])?//;
       $unquotedToDump = $uq if $uq =~ /^[0-9]+$/;
-      dumpUnquoted($unquotedToDump);
+      dumpUnquoted( $unquotedToDump, $arg =~ /l/ );
       exit();
     };
     /^-?=$/ && do { openThis( -2, 0, 1 ); exit(); };
@@ -781,7 +782,8 @@ sub dumpUnquoted {
         $procString = $a;
       }
       $procString = lc($procString);
-      $squash     = $procString;
+      $procString =~ s/[,\.!]//g;
+      $squash = $procString;
       $squash =~ s/ //g;
       $tries++;
       print B "====================$a/$procString/$squash\n";
@@ -810,6 +812,7 @@ sub dumpUnquoted {
       || die("Something went wrong. Keeping $bak.");
     unlink "$bak";
   }
+  `$raw` if $_[1];
 }
 
 sub usage {
@@ -831,12 +834,12 @@ Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sortin
 -mw is maximum warnings
 -sa is show default column add details
 -p post processes
--u(dq)(#) dump unquoted
+-u(dq)(l)(#) dump unquoted, l = launch, d/q = any flags
 SPECIFIC USAGE:
 dns is good for doing the stats etc
 c is good for testing
 wa is writeadded, l = launch, o = only. WALPO = general test before
-uq 20 is good for a day's work to check
+uql 20 is good for a day's work to check
 EOT
   exit;
 }
