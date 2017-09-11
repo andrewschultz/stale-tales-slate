@@ -1346,10 +1346,10 @@ carry out gotoing:
 	if noun is shunned:
 		if noun is Lean Lane:
 			say "Now you've visited the much-nicer Handsome Sand Home, you can't find your way back to Lean Lane, and there really wasn't anything there." instead;
-		if noun is Scum Ant Sanctum:
+		if noun is Dourest Detours:
 			say "You got rid of the ant. Nothing more to do there." instead;
 		say "That's off-limits." instead;
-	if location of player is scum ant sanctum:
+	if location of player is Dourest Detours:
 		say "Aw, c'mon, the ant should be no problem." instead;
 	if duck is in location of player and duck is friendly: [TOWERS]
 		say "(The duck follows, with quick-nag quacking, though you're walking pretty fast.)";
@@ -5227,7 +5227,7 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 		if player is in Horned Hedron and walleyes are in lalaland and o-t is in Horned Hedron:
 			now noun is o-t;
 			continue the action;
-		if player is in scum ant sanctum:
+		if player is in Dourest Detours:
 			now noun is ant;
 			continue the action;
 		if player is in tenfold:
@@ -6221,7 +6221,7 @@ to decide which thing is oyster-item:
 	if player is in old places:
 		if player has digger and player has ruby:
 			decide on ruby;
-	if player is in Scum Ant Sanctum:
+	if player is in Dourest Detours:
 		decide on ant;
 	if location of player is Den Loft:
 		if yapper is in loft:
@@ -10467,6 +10467,8 @@ book carven cavern
 
 Carven Cavern is an innie room in Means Manse. "This is an oddly carved cavern[plaster-plates][curtain-desc]. You probably don't want to go back outside.";
 
+understand "craven" as a mistake ("Ok, it's pretty craven as anagrams go, but you need to find a way through, no matter what its name is.") when player is in Carven Cavern.
+
 to say plaster-plates:
 	say ". ";
 	if plates are in cavern and plaster is in cavern:
@@ -11305,7 +11307,7 @@ definition: a thing (called candi) is bluable:
 	if player is in econ cone:
 		if rivets are reflexive and candi is prai, no; [otherwise we double-print]
 	if candi is tunes, no; [oyster specific]
-	if player is in scum ant sanctum and candi is ant, yes;
+	if player is in Dourest Detours and candi is ant, yes;
 	if candi is haunter and player is in anger range and candi is off-stage, decide no; [visibility issues here. We "see" the haunter but can't see it with bluables]
 	if candi is crate and player is in lapsin' plains:
 		if c2 is in lapsin' plains, yes;
@@ -17966,7 +17968,7 @@ to say arch-here:
 	say "[if player is in arches]here[else]Achers['] Arches[end if]"
 
 after examining general gleaner when player is in end den and gleaner is reflexed:
-	check-sanctum;
+	check-detours;
 	continue the action;
 
 a-text of gleaner is "YRRYRRY". b-text of gleaner is "YRR??RY". parse-text of gleaner is "-[sp]x[sp]x[sp]?[sp]?[sp]x[sp]-".
@@ -18130,6 +18132,8 @@ check fliptoing trout (this is the no teaching while fighting rule) :
 
 book sanctum
 
+Dourest Detours is an innie room in oyster. "It's a bit disorienting here, but your lance helps you feel rousted from just a true sod and glad you've suffered no redouts."
+
 the ant is a flippable animal. "An oddly colored ant is here! It seems more threatening than anything, but your lance seems to hold it at bay.". description of ant is "If you look at it one way, it's a light brown--no, that's not it--but another way, it's a bright red, a simulacrum of the legendary Tar Rat Art. You're glad you have that lance to do something simple to fend it off, or maybe even run it off."
 
 check taking ant:
@@ -18137,9 +18141,9 @@ check taking ant:
 
 a-text of ant is "RYR". b-text of ant is "RYR". parse-text of ant is "x[sp]a[sp]x". ant is any-spoilable.
 
-understand "nat" as a mistake ("You don't need to name the ant. It's not a pet.") when player is in Scum Ant Sanctum.
+understand "nat" as a mistake ("You don't need to name the ant. It's not a pet.") when player is in Dourest Detours.
 
-Scum Ant Sanctum is an innie room in oyster. "Um, scant."
+understand "atn" as a mistake ("You've already got the ant's attention. You'll need to take care of it, now.") when player is in Dourest Detours.
 
 chapter taning
 
@@ -18151,7 +18155,7 @@ understand "tan [something]" as taning.
 understand "tan" as taning.
 
 rule for supplying a missing noun when taning:
-	if location of player is scum ant sanctum:
+	if location of player is Dourest Detours:
 		now noun is ant;
 
 does the player mean taning the ant: it is very likely;
@@ -18163,7 +18167,7 @@ carry out taning:
 	min-and;
 	now ant is in lalaland;
 	now lance is in lalaland;
-	now scum ant sanctum is shunned;
+	now Dourest Detours is shunned;
 	now player is in Tenfold Teflon'd Den Loft instead;
 
 book Den Loft
@@ -18933,17 +18937,17 @@ check entering a-p:
 	if walleyes are in Horned Hedron:
 		say "Not with those walleyes waiting and watching." instead;
 	if find-base is true:
-		check-sanctum instead;
+		check-detours instead;
 	else:
 		say "You try to make your way through the Horned Hedron, but you eventually wind up in an[one of][or]other (?)[run paragraph on][stopping] end den.";
 		move player to End Den instead;
 
-to check-sanctum:
+to check-detours:
 	if player has lance:
 		say "You use your gleaner to [one of][or]re[stopping]trace the path to the Den Loft. Halfway through, your lance begins to glow as you pass a small passage. Explore?";
 		if the player yes-consents:
-			now ant is in Scum Ant Sanctum;
-			now player is in Scum Ant Sanctum;
+			now ant is in Dourest Detours;
+			now player is in Dourest Detours;
 		otherwise:
 			say "Ok, no nook.";
 			now player is in Den Loft;
@@ -21056,6 +21060,8 @@ instead of taking crocus:
 	say "It's been through enough [if flowerpot is reflexive]bad times[else]upheaval[end if]."
 
 the succor crocus is an LLPish flippable thing in mislit limits. "A succor crocus lies here, full of livid colors that don't make you happier."
+
+understand "occurs" as a mistake ("You need to make something occur.") when player is in mislit limits or player has succor crocus.
 
 description of crocus is "[if flowerpot is reflexive]From what you know, the brighter a succor crocus is, the less it works. Right now, it's far too bright, and it's close to dying[else]Looking much better now[end if]."
 
@@ -26057,7 +26063,7 @@ raft	"Now you're on the raft, you need to find a way to use the oars." [start OY
 knob	"The knob's been dealt with."
 heaps	"I can't give any artistic advice. They're--good enough, I guess. Better than before."
 lance	"I can't give you details on how to fight, but now your lance is clean, you'll be able to use it when need be."
-gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figure what to do with it[else if sanctum is visited or tenfold is visited]The gleaner's not particularly valuable to you any more. But maybe it could be to someone else[end if]."
+gleaner	"[if gleaner is unexamined]You just need to examine the gleaner to figure what to do with it[else if dourest detours is visited or tenfold is visited]The gleaner's not particularly valuable to you any more. But maybe it could be to someone else[end if]."
 lever	"The lever was designed not to give extra points for pulling it too much."	[end OYSTER]
 turbos	"You fixed the turbos. Now maybe try the blaster." [start TOWERS]
 blaster	"You fixed the blaster. Now maybe try the turbos."
@@ -27443,10 +27449,10 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]you could've tried to SWEAT to remove the waste.";
 		else if lance is not cleaned:
 			say "[2dmiss of cur-reg]you could've tried to CLEAN the lance.";
-		else if Scum Ant Sanctum is visited and ant is not in lalaland:
+		else if Dourest Detours is visited and ant is not in lalaland:
 			say "[2dmiss of cur-reg]you could've tried to TAN the ant.";
 		else if ant is not in lalaland:
-			say "[2dmiss of cur-reg]you passed by the side-quest to TAN the ant in the scum ant sanctum.";
+			say "[2dmiss of cur-reg]you passed by the side-quest to TAN the ant in the Dourest Detours.";
 		if bogus-plains is in lapsin' plains:
 			say "[2dmiss of cur-reg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 	now cur-reg is towers;
@@ -27685,8 +27691,8 @@ index map with achers' arches mapped north of posh hops shop.
 index map with handsome sand home mapped east of lapsin' plains.
 index map with lean lane mapped east of handsome sand home.
 index map with tenfold mapped north of horned hedron.
-index map with scum ant sanctum mapped east of tenfold.
-index map with end den mapped east of scum ant sanctum.
+index map with Dourest Detours mapped east of tenfold.
+index map with end den mapped east of Dourest Detours.
 index map with UAAH mapped east of end den.
 
 [start otters]

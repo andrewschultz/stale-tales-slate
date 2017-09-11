@@ -1206,11 +1206,21 @@ Better yet, PATROL.
 Of course, you need the walleyes gone.
 >>END DEN
 ?Is this where I want to be?
-No. You need an item to scry.
-Do you have the two pearls?
-They make a general gleaner.
-It's not big enough to see clearly.
+No. You need an item to scry, and you'll go somewhere else, instead.
+Do you have a pearl yet?
+There's more than one.
+Once you get two, they make a general gleaner.
+It's not big enough to see into clearly.
 ENLARGE it.
+>>DOUREST DETOURS
+?I skipped over this! Is it a fake clue?
+No, you need something from the Shadier Airshed.
+The lance. If you have it, the game will alert you.
+?What do I do with the ant?
+It should be easy. There are only five possibilities.
+You need to attack it.
+To TAN it.
+Once you do, you go to the loft-den.
 >>TENFOLD TEFLON'D LOFT-DEN
 ?Stupid papery yapper!
 He wants to be bribed, but use a different word, maybe?

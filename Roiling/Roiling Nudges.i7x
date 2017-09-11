@@ -550,9 +550,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "places"	380553276	collapsed	--	--	"[locname-part]."
 "bury"	331207767	--	ruby	--	"That's not quite it. You file that idea six feet under."
 "end"	217742706	end den	--	--	"[locname]." [END DEN]
-"scumant"	458665855	scum ant sanctum	--	--	"[locname]." [SCUM ANT SANCTUM]
-"scum"	284460511	scum ant sanctum	--	--	"The ant may be scum, but, well, it's DEFINITELY an ant."
-"ant"	174205344	scum ant sanctum	--	--	"That's close. Something brutal and direct."
+"dourest"	613001369	dourest detours	--	--	"[locname]." [DOUREST DETOURS]
+"ant"	174205344	dourest detours	--	--	"That's close. Something brutal and direct."
 "tenfold"	475534036	tenfold	--	--	"[locname]." [DEN LOFT]
 "loft"	257791330	tenfold	--	--	"[locname-part]."
 "den"	217742706	tenfold	--	--	"[locname-part]."
