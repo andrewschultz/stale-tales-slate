@@ -6185,17 +6185,17 @@ to decide which thing is oyster-item:
 	if player is in Lean Lane:
 		if eeks are visible:
 			decide on eeks;
-	if player is in uaah:
-		if tubs are in uaah:
+	if player is in Shadier Airshed:
+		if tubs are in Shadier Airshed:
 			decide on tubs;
 		if prod is visible:
 			decide on prod;
 		if aunt-tuna-cross is false or wipes are not in sand home: [hint the side quest ONLY IF you can still get the wipes]
-			if waste is in uaah:
+			if waste is in Shadier Airshed:
 				decide on waste;
-			if lance is not cleaned and lance is in uaah:
+			if lance is not cleaned and lance is in Shadier Airshed:
 				decide on lance;
-			if heaps are reflexive and heaps are in uaah:
+			if heaps are reflexive and heaps are in Shadier Airshed:
 				decide on heaps;
 	if player is in sand home:
 		if tea tray is visible:
@@ -6649,7 +6649,7 @@ after reading a command:
 					reject the player's command;
 				say "You already took care of [go-region of portdest entry].";
 				reject the player's command;
-	if the player is in uaah and digger is off-stage:
+	if the player is in Shadier Airshed and digger is off-stage:
 		if the player's command includes "shovel":
 			say "Hmm. No shovel yet. Or anything like it. Maybe you'll find one, though.";
 			reject the player's command;
@@ -7162,7 +7162,7 @@ check climbing (this is the generic silly climbing reject rule):
 	if noun is mount: [start presto]
 		say "It seems as if the peaks speak with a sticky, icy tsk. You start to num considering going unto'm." instead;
 	if noun is crate: [start OYSTER]
-		say "This isn't a shooter or survival game. Plus the crates are too broken to lead anywhere. [if uaah is visited]The door, on the other hand...[else]You already got through the door, anyway.[end if]" instead;
+		say "This isn't a shooter or survival game. Plus the crates are too broken to lead anywhere. [if Shadier Airshed is visited]The door, on the other hand...[else]You already got through the door, anyway.[end if]" instead;
 	if noun is huts: [end OYSTER]
 		say "They're too tall. No good handholds. The rude door is the only way in." instead;
 	if noun is gaol: [towers]
@@ -8416,7 +8416,7 @@ understand the command "credits" as something new.
 understand "credits" as creditsing.
 
 carry out creditsing:
-	say "I must direct credit to my testers for finding bugs and making sure this game was not mega (redacted).Thanks to Heartless Zombie (David White) for his hash code and suggestions, which removed many technical barriers.[paragraph break]More generally, thanks to people involved with Inform 7. Sparser parsers couldn't have hacked this game.[paragraph break]More personally, thanks to my testers who beat my Beta. They are, in first-name alphabetical order: David White, Jason Ermer, Kevin Jackson-Mead, Paul Lee, Peter Butter, Melvin Rangasamy, and Wade Clarke. Robert DeFord provided moral support and proofread game documents.[paragraph break]Potsy typos and possibly a tyro's story are not their fault.[paragraph break]Out of the blue help post-release came from Toby Ott, who went through the game several times, and David Welbourn, whose walkthrough at www.plover.net/~davidw/sol/r/roili13.html inspired many bug, hint and user-friendliness fixes. Hanon Ondricek helped with user-friendliness issues and found the wonderful name Dawn Churlzest, Streever helped with a Heisenbug and lots of release 2/3 stuff, and Marshal Winter found cool stuff. For release 3, Elizabeth McDonald, Joel Webster, Lydia QQ. Dames, Sean M. Shore and Steven Watson provided testing too, and Matt Weiner noted a debug-text bug that helped me overhaul under the hood stuff.[paragraph break]Jason Lautzenheiser did some code review for release 4.[paragraph break]Thanks to Hanon Ondricek for finding the Electric Slide font and to Wade Clarke for consulting on the new release 3 cover art. If you hate the main idea, that's on me, but they helped me bring it out as best I could.[paragraph break]Thanks to the organizers of IFComp 2012 and Spring Thing 2013, Stephen Granade and Greg Boettcher. Thanks to Greg for checking up on me when I forgot to confirm my entry fee payment.[paragraph break]Thanks to bitbucket for posting a project that let me organize bugs privately and github for letting me organize post-comp releases. If you want to write something, just having a place to write down issues is fabulous.[paragraph break]You can see the current project status at [my-repo]." instead;
+	say "I must direct credit to my testers for finding bugs and making sure this game was not mega (redacted).Thanks to Heartless Zombie (David White) for his hash code and suggestions, which removed many technical barriers.[paragraph break]More generally, thanks to people involved with Inform 7. Sparser parsers couldn't have hacked this game.[paragraph break]More personally, thanks to my testers who beat my Beta. They are, in first-name alphabetical order: David White, Jason Ermer, Kevin Jackson-Mead, Paul Lee, Peter Butter, Melvin Rangasamy, and Wade Clarke. Robert DeFord provided moral support and proofread game documents.[paragraph break]Potsy typos and possibly a tyro's story are not their fault.[paragraph break]Out of the blue help post-release came from Toby Ott, who went through the game several times, and David Welbourn, whose walkthrough at www.plover.net/~davidw/sol/r/roili13.html inspired many bug, hint and user-friendliness fixes. Hanon Ondricek helped with user-friendliness issues and found the wonderful name Dawn Churlzest, Streever helped with a Heisenbug and lots of release 2/3 stuff, and Marshal Winter found cool stuff. For release 3, Elizabeth McDonald, Joel Webster, Lydia Q. Dames, Sean M. Shore and Steven Watson provided testing too, and Matt Weiner noted a debug-text bug that helped me overhaul under the hood stuff.[paragraph break]Jason Lautzenheiser did some code review for release 4.[paragraph break]Thanks to Hanon Ondricek for finding the Electric Slide font and to Wade Clarke for consulting on the new release 3 cover art. If you hate the main idea, that's on me, but they helped me bring it out as best I could.[paragraph break]Thanks to the organizers of IFComp 2012 and Spring Thing 2013, Stephen Granade and Greg Boettcher. Thanks to Greg for checking up on me when I forgot to confirm my entry fee payment.[paragraph break]Thanks to bitbucket for posting a project that let me organize bugs privately and github for letting me organize post-comp releases. If you want to write something, just having a place to write down issues is fabulous.[paragraph break]You can see the current project status at [my-repo]." instead;
 
 chapter abouting
 
@@ -9478,12 +9478,12 @@ after fliptoing a-p:
 	continue the action;
 
 after fliptoing lance:
-	now heaps are in uaah;
+	now heaps are in Shadier Airshed;
 	now waste is in lalaland;
 	continue the action;
 
 after fliptoing prod:
-	now waste is in uaah;
+	now waste is in Shadier Airshed;
 	continue the action;
 
 after fliptoing ltb:
@@ -15305,7 +15305,7 @@ check fliptoing boing mechanism (this is the take popgun to fix it rule) :
 
 book Phat Path
 
-Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Harm's Marsh to the west. [if lawl wall is in Phat Path]There's also a big wall here, blocking the way north. It's got keys hanging from it[otherwise]There's not much left with the wall gone, except for a sign to the north and a shack beyond that[end if]. You can retreat south, too, of course."
+Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [if lawl wall is in Phat Path]There's also a big wall here, blocking the way north. It's got keys hanging from it[otherwise]There's not much left with the wall gone, except for a sign to the north and a shack beyond that[end if]. You can retreat south, too, of course."
 
 understand "ptah" as a mistake ("[if hogs are in phat path]If we were in ancient Egypt, I'd allow that, but we aren't, so I can't.[else]No Egyptian deity comes to your rescue. Or needs to.[end if]") when player is in phat path.
 
@@ -15323,12 +15323,12 @@ Saps' Pass is amusing scenery in Phat Path. Saps' Pass is undesc.
 instead of doing something with Saps' Pass:
 	say "Saps['] Pass is not to be trod, man. It's a mordant, dormant mtn road. It may lead to No-Goal Lagoon, anyway." instead;
 
-Harm's Marsh is scenery in Phat Path. "You swear you can see the toxic fumes seeping from it. It's too dangerous to explore[swan-puma]."
+Deil's Slide is scenery in Phat Path. "You swear you can see the toxic fumes seeping from it. It's too dangerous to explore[swan-puma]."
 
-check taking Harm's Marsh:
-	say "The marsh is more likely to take YOU." instead;
+check taking Deil's Slide:
+	say "The Deil's Slide is more likely to take YOU." instead;
 
-check entering harm's marsh:
+check entering Deil's Slide:
 	try going west instead;
 
 the priv-shack is privately-named proper-named scenery. "[if shack is visited]It looks just as you left it[else]The shack looks cozy and inviting[end if].". printed name of priv-shack is "the shack"
@@ -15348,7 +15348,7 @@ instead of doing something with priv-shack:
 	say "Not much to do but enter the shack by going north." instead;
 
 check going west in Phat Path:
-	say "Harm's Marsh would make quick work of even [if Leo is in dirge ridge]your old friends [end if]Leo and Rand[swan-puma], with or without a goop-pogo[exwall]." instead;
+	say "The Deil's Slide would make quick work of even [if Leo is in dirge ridge]your old friends [end if]Leo and Rand[swan-puma], with or without a goop-pogo[exwall]." instead;
 
 to say exwall:
 	if shack is visited:
@@ -15395,7 +15395,7 @@ the hogs are reflexive plural-named people. description is "They're as big as Le
 
 after printing the locale description for Phat Path when Phat Path is unvisited:
 	say "Shouldn't be much of a problem to get the keys and...oh no! you hear...[wfak][paragraph break]";
-	say "A PHT! Suddenly three hogs, all Rand and Leo's size, block your way. One just up and takes your popgun, smashes it, laughs, and even rips off your star and throws it into Harm's Marsh. It then goes to guard the keys, the big jerk. What to do?";
+	say "A PHT! Suddenly three hogs, all Rand and Leo's size, block your way. One just up and takes your popgun, smashes it, laughs, and even rips off your star and crumples before going to guard the keys, the big jerk. What to do?";
 	now hogs are in Phat Path;
 	now decorative star is in lalaland;
 	now popgun is in lalaland;
@@ -17187,7 +17187,7 @@ carry out spilling:
 		say "You don't have one for everyone, and there's too many everyone, anyway. You'll need to outsmart the walleyes." instead;
 	if oi is the player:
 		say "You spill out a pill, cautiously, but nothing happens. Maybe you're done here. You replace the pill. It wasn't on the ground that long." instead;
-	if player is in uaah:
+	if player is in Shadier Airshed:
 		if oi is waste or oi is heaps or oi is lance:
 			say "That might be a bit dirty, and you wonder if it's really worth it to use the pills on beautification (fourth wall note: this will only help with an optional side quest). Go ahead anyway?";
 			if the player direct-consents:
@@ -17702,7 +17702,7 @@ carry out unearthing:
 		preef pre-haun;
 		the rule succeeds;
 	if player does not have rigged digger:
-		say "You need something to dig here[if uaah is visited]. Maybe something from a hut you visited[else]. You haven't found a place with that something, yet. Still, hooray for thinking ahead[end if].";
+		say "You need something to dig here[if Shadier Airshed is visited]. Maybe something from a hut you visited[else]. You haven't found a place with that something, yet. Still, hooray for thinking ahead[end if].";
 		preef pre-haun;
 		the rule succeeds;
 	if noun is haunter:
@@ -17864,7 +17864,7 @@ check going inside when player is in Lapsin' plains:
 		say "Those skis block the door pretty handily." instead;
 	if knob is not reflexed:
 		say "'NOPE, PEON!' the rude door booms, somehow. The knob seems stuck." instead;
-	if uaah is unvisited:
+	if Shadier Airshed is unvisited:
 		say "You ignore a dour 'Redo?' as you walk in.[paragraph break]But you have a new problem. You need a hut in the circle of huts. But how to identify it? Disturbing a resident could be troublesome. They are in all shapes and sizes. Hmm, a hut, a hut...[wfak][paragraph break]Wait! Maybe it's this one, or...[wfak][paragraph break]That one! A hut shaped like Utah! Of course! You'd recognize that rectangle with a rectangle bitten out of one corner anywhere. You feel slightly...haut.";
 	else:
 		say "You go back into a hut shaped like Utah."
@@ -18552,7 +18552,7 @@ description of rude door is "[if location of player is Lapsin' plains]You make o
 [line break]  'IN THERE?'
 [line break]...NEITHER!!![variable letter spacing][otherwise]This side of the door says TRY, O TYRO[end if].";
 
-understand "troy" and "tory" as a mistake ("'NOPE! THAT'S NOT MY NAME! AND WHY DO YOU CARE ANYWAY?' yells the rude door. At least you didn't break its spirit.") when uaah is visited and the rude door is visible.
+understand "troy" and "tory" as a mistake ("'NOPE! THAT'S NOT MY NAME! AND WHY DO YOU CARE ANYWAY?' yells the rude door. At least you didn't break its spirit.") when Shadier Airshed is visited and the rude door is visible.
 
 the knob is part of the rude door. the knob is flippable and reflexive. description of knob is "It's just a doorknob, though you can imagine it saying 'Noob! Dork!' You'd just love to give it a good effective smack."
 
@@ -18619,13 +18619,16 @@ to say mr-miss:
 to say heepy:
 	say "[if waste is visible]waste lying around, though you probably don't need to expend the physical effort to clean it unless you want to be [mr-miss] Perfect[else if heaps are reflexive]ugly looking heaps, though you may not care about aesthetics[else]the heaps you beautified[end if]"
 
-uaah is inside of Lapsin' Plains. uaah is a privately-named room in Oyster. uaah is innie. printed name of uaah is "[one of]Uh, at[or]At, uh,[in random order] a Hut". "[if digger is not off-stage]There was more than you expected in this hut[else]Man, there's not a lot that's useful here[end if][if heaps are visible or waste is visible]. You see [heepy][end if]. You can only go back outside."
+Shadier Airshed is inside of Lapsin' Plains. It is in Oyster. it is innie. "[one of]Man! This hut was much bigger than you expected. It's so big, you probably could store a plane in here. Not that it would be useful or desirable to drag one in[or]You're [uaah]. A big one[stopping]. [if digger is not off-stage]You squint through the relative lack of light and notice some random stuff[else]Looks like you got most of the useful stuff from here[end if][if heaps are visible or waste is visible]. You see [heepy][end if]. You can only go back outside."
 
-understand "hut" as uaah.
+understand "hut" as Shadier Airshed.
 
-understand "auth" as a mistake ("Sorry! I'm too busy to cameo in my own game at the moment.") when player is in uaah.
+to say uaah:
+	say "[one of]uh, at[or]at, uh,[in random order] a hut".
 
-understand "utah" as a mistake ("The hut only looks like Utah. However, I bet Adenville is nice. Or it would be, if it existed. Man, I loved those Great Brain books.") when player is in uaah.
+understand "auth" as a mistake ("Sorry! I'm too busy to cameo in my own game at the moment.") when player is in Shadier Airshed.
+
+understand "utah" as a mistake ("The hut only looks like Utah. However, I bet Adenville is nice. Or it would be, if it existed. Man, I loved those Great Brain books.") when player is in Shadier Airshed.
 
 understand "sweat [text]" as a mistake ("Don't sweat the extra words. Just sweat.") when waste is visible
 
@@ -18643,7 +18646,7 @@ check dropping prod:
 		say "That's not the right way to abuse the prod to open it." instead;
 	try fliptoing rigged digger instead; [eg flipping the prod to the digger]
 
-the tubs are a plural-named thing in uaah. "Tubs lie here--two glued together by their tops--and perhaps there's something inside."
+the tubs are a plural-named thing in Shadier Airshed. "Tubs lie here--two glued together by their tops--and perhaps there's something inside."
 
 check taking tubs:
 	say "Way too bulky. But actually not as heavy as you thought." instead;
@@ -18748,7 +18751,7 @@ carry out busting:
 
 after fliptoing waste (this is the tubs give prod and waste rule):
 	now player has prod;
-	now heaps are in uaah;
+	now heaps are in Shadier Airshed;
 	continue the action;
 
 book Achers' Arches
@@ -18844,7 +18847,7 @@ carry out burying:
 	if player does not have rigged digger:
 		if player has prod:
 			say "Your prod from a hut should be able to bury stuff if you tinker right. Jar it the right way." instead;
-		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin' Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if uaah are unvisited]. Maybe there's something behind that rude door[else]. Maybe you missed something in a hut[end if][stopping]." instead;
+		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin' Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if Shadier Airshed is unvisited]. Maybe there's something behind that rude door[else]. Maybe you missed something in a hut[end if][stopping]." instead;
 	if ruby is in lalaland:
 		say "You half forgot where you dug the ruby. You're not sure if you want it back." instead;
 	if player does not have ruby:
@@ -24841,7 +24844,7 @@ greedy-person is a person that varies.
 
 Red Rat Art Erd is a person. "[gree-app]."
 
-Dr Tera Darter is a female person. "[gree-app]."
+Dr Tera Darter is a female person. "[gree-app].". printed name of Dr Tera Darter is "Dr. Tera Darter".
 
 the chum of dr tera darter is red rat art erd.
 
@@ -25979,7 +25982,7 @@ check objhinting old giant:
 	say "[bug-report]" instead;
 
 to say in-hovels:
-	say "[if player has lance]--wait, you already solved the wipes[else if player is in uaah and lance is off-stage] that might be buried under here[else if player is in uaah] like that lance, with the right verb[else] in a dingier area than this[end if]";
+	say "[if player has lance]--wait, you already solved the wipes[else if player is in Shadier Airshed and lance is off-stage] that might be buried under here[else if player is in Shadier Airshed] like that lance, with the right verb[else] in a dingier area than this[end if]";
 
 to say up-to-l3:
 	unless droll dollar is off-stage:
@@ -26303,7 +26306,7 @@ lawl wall	"[one of]The wall can't be changed on its own.[plus][or]But the keys o
 hogs	"[one of]The hogs find it funny you can't get the keys.[plus][or]If you expressed your disappointment, the hogs might get overconfident.[plus][or]GOSH.[minus][cycling]"	--	"GOSH"
 keys	"[one of]You really want the keys, and there's no way to pretend you don't.[plus][or]Maybe you can pretend, sort of, and annoy the hogs.[plus][or]SYKE.[minus][cycling]"	--	"SYKE"
 mount um-not	"Mount Um-Not is just scenery."
-harm's marsh	"Harm's Marsh is just scenery."
+deil's slide	"Deil's Slide is just scenery."
 serial number	"[one of]The numbers can mean something else.[plus][or]Convert them to where they are in the alphabet.[plus][or]This is an alternate solution to grinding it out with the Settler.[plus][or]BINGO.[minus][cycling]"
 futon	"[if slept is true]You won't need to sleep on the futon again.[else][one of]The futon has patterns of tiresome--figuratively and literally--peels on it.[plus][or]The futon will be useful to sleep on when you need to.[minus][cycling][end if]"	--	"SLEEP on the futon"
 speel	"[one of]You're too tired to read the speel.[plus][or]You can't make any logic leeps in your current condition.[plus][or]Best to SLEEP.[minus][cycling]"	--	"SLEEP"
@@ -27439,7 +27442,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]you could've tried to SCAN the cans.";
 		if dent is not in lalaland:
 			say "[2dmiss of cur-reg]you could've stopped to TEND the dent in Aunt Tuna's reward drawer.";
-		if heaps are reflexive and heaps are in uaah:
+		if heaps are reflexive and heaps are in Shadier Airshed:
 			say "[2dmiss of cur-reg]you could've stopped to SHAPE the heaps to beautify the hut.";
 		if lever is not reflexed:
 			say "[2dmiss of cur-reg]you could've stopped to REVEL before flipping the LEVER.";
@@ -27693,7 +27696,7 @@ index map with lean lane mapped east of handsome sand home.
 index map with tenfold mapped north of horned hedron.
 index map with Dourest Detours mapped east of tenfold.
 index map with end den mapped east of Dourest Detours.
-index map with UAAH mapped east of end den.
+index map with Shadier Airshed mapped east of end den.
 
 [start otters]
 

@@ -400,8 +400,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "clump"	323466343	--	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
 "saps"	276201709	phat path	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to go [if shack is visited]back [end if]north, here."
 "mount"	415551063	phat path	--	--	"Mount Um, Not silently disposes of your attempts to manipulate it."
-"harms"	285143039	phat path	--	--	"[h-ma]."
-"marh"	188869073	phat path	--	--	"[h-ma]."
+"deil"	247641883	phat path	--	--	"[d-sli]."
+"deils"	343915849	phat path	--	--	"[d-sli]."
 "hog"	144234578	phat path	--	--	"You need to deal with all the hogs."
 "key"	303098539	--	keys	--	"You aren't sure which key would work, so you need a plan to get them all."
 "entry"	507506690	phat path	--	--	"[if leo is visible]No way you'll be able to meddle with the Entry from outside[else]the Entry doesn't need disabling, since you're the only person that can enter[end if]."
@@ -1562,8 +1562,8 @@ this is the enemy-lines rule:
 		the rule succeeds;
 	the rule fails;
 
-to say h-ma:
-	say "Despite being dangerous to walk into, Harm's Marsh serves an important ecological purpose I can't explain here. So, best not to meddle";
+to say d-sli:
+	say "Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle";
 
 to say slab-score:
 	if slab-pts < 10: [prevent rollover]

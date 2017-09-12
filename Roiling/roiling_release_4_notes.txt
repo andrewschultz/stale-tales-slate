@@ -29,10 +29,11 @@ Store H:
 --there's now the augural arugula that provides a clue if you GURU.
 
 Store P:
---the volt maze now has a name: Nowt Town. This gives you an easy way through, but the original way is still viable and gets you an extra point.
+--the volt maze now has a name: Nowt Town. This gives you an easy way through, but the original way is still viable and gets you an extra point. The final room of the maze also has a different name.
 
 Store U:
 --the scenery in the Same Mesa is now better-named
+--the Sun-Spared Underpass is still that, only the official name is Harms Marsh, full of Sheol Holes
 
 Store W:
 --a few more clues for the Lone Duck
@@ -49,6 +50,12 @@ Store V:
 
 Store T:
 --the macks' idiocy in Store T is now refactored to be drawn from seven pods (7/8 letters with or without repeating letters, 9, 10, and 12--which has one item,) much like the warriors in Store W. You still only need to figure only three, but I think this is less overwhelming
+
+Store Y:
+--three rooms are renamed
+  --Scum Ant Sanctum is Dourest Detours.
+  --Collapsed Old Places is now Rascal Craals. Well, until you figure a way to destroy the Craals.
+  --Uh at a Hut is now the Shadier Airshed, which makes it easier to fit all those items in there.
 
 Meta-stuff:
 --introductory region is renamed
