@@ -230,7 +230,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "cleric"	349947767	cleric circle	--	--	"[locname]."
 "idle"	247641883	idle deli	--	--	"[locname]."
 "adobe"	243794498	adobe abode	--	--	"[locname]."
-"underpass"	684374025	underpass	--	--	"[locname]."
+"marsh"	285143039	--	--	--	--	"[locname]."
+"underpass"	684374025	underpass	--	--	"[locname-part]."
+"sheol"	389528790	myrm	--	--	"[sheol-c]."
+"hole"	293254824	myrm	--	--	"[sheol-c]."
 "sun"	270287281	underpass	--	--	"[locname-part]."
 "spared"	414086744	underpass	--	--	"[locname-part]."
 "pyrites"	661331953	--	pyrites	--	"[py-glow]."
@@ -1389,6 +1392,9 @@ to say btn-by:
 
 to say pier-sign:
 	say "That may not help you through the mist. Maybe read the sign instead"
+
+to say sheol-c:
+	say "You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice may help"
 
 to say py-glow:
 	say "The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol['] No-Gal Logan"

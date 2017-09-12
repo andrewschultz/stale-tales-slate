@@ -1401,7 +1401,7 @@ rm	rmprog	regs	why-not
 --	1	means manse	"The Means Manse was surrounded, and you escaped. Bad idea to turn back."
 carven cavern	2	--	[means manse]
 --	1	routes	"[if progval of location of player is 4]Not from the boat, you aren't. You're much closer to your goal right now[else]The crowd would be sad to see you return, unsuccessful. And you can't, anyway[end if]."
-underpass	2	--	"You already muddled your way out of there. [if progval of location of player is 2]There's gotta be a way to get through da mist[else]And onto the boat, which must go somewhere[end if]!"
+Harms Marsh	2	--	"You already muddled your way out of there. [if progval of location of player is 2]There's gotta be a way to get through da mist[else]And onto the boat, which must go somewhere[end if]!"
 ripe pier	3	--	"You have no idea how to turn the cripple clipper around, and you don't want to."
 cripple clipper	4	-- [routes]
 posh hops shop	1	--	"The trolls would not welcome you back[if progval of location of player > 2], and it'd take too long to get there[end if]."
@@ -5157,8 +5157,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 			now noun is lecturer;
 			continue the action;
 	else if mrlp is routes:
-		if location is Sun-Spared Underpass:
-			if darkness is in sun-spared underpass:
+		if location is Harms Marsh:
+			if darkness is in Harms Marsh:
 				now noun is darkness;
 				continue the action;
 		if player is in mesa:
@@ -5997,7 +5997,7 @@ carry out routes-hinting:
 			try objhinting huge thing instead;
 		all-say "[if spoilit is true]The spoon points[else]You should go[end if] outside to the commotion.";
 		now spoilit is false instead;
-	if the-b is in Same Mesa and Sun-Spared Underpass is unvisited:
+	if the-b is in Same Mesa and Harms Marsh is unvisited:
 		try objhinting the-b instead;	[end global stuff]
 	if location of player is Same Mesa:
 		if cleric circle is unvisited:
@@ -6036,7 +6036,7 @@ carry out routes-hinting:
 			try objhinting pipe soot instead;
 		all-say "[if spoilit is true]The spoon points you out of[else]You're done here in[end if] Oscar's.";
 		now spoilit is false instead;
-	if location of player is Sun-Spared Underpass:
+	if location of player is Harms Marsh:
 		if darkness is visible:
 			try objhinting darkness instead;
 		if narrow cracks are visible:
@@ -6897,7 +6897,7 @@ highest heights	"You can go back IN to the study, though you don't need to, or y
 Strip of Profits	"Why run off for fun? See [if number of visible portals is 0]what one of those stores can become[else]what's in one of those portals[end if] instead." [means manse]
 Cruelest Lectures	"The trumped-up charges and the teleological lectures have totally conked your sense of direction. You can, however, TRY to go outside."
 Ripe Pier	"You've lost all sense of direction here, but you need to figure how to get on that boat." [routes]
-Sun-Spared Underpass	"Far into A rift? No. You can't [if darkness is visible]see far enough to [end if]rely on directions, here[if darkness is visible]. You just need to find No-Gal Logan[end if]."
+Harms Marsh	"Far into a rift? No. You can't [if darkness is visible]see far enough to [end if]rely on directions, here[if darkness is visible]. You just need to find No-Gal Logan[end if]."
 Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel on below.[else]Drowning ails or roils a sailor.[end if]"
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms."
 Adobe Abode	"This do be a one-room place. You can really only go outside."
@@ -8599,7 +8599,7 @@ a thing can be warpable. a thing is usually not warpable.
 
 table of warps [this gives the text for which portal leads to which area, and what starting location]
 por	reg	lloc	go-text
-routes-x	Routes	Same Mesa	"[one of]The route turns a bit, then begins branching. You are no longer sure what direction you are going in, and you always vaguely tried to take the center one, but it's no use. You wind up crossing a red line, and you find there is no way back. 'No curse cure, son!' booms a voice[if player is female] sadly ignorant of your gender[end if].[paragraph break]After walking on for a bit, you find yourself somewhere that might be populated. Well, there are buildings around[or][if Sun-Spared Underpass is visited]Somehow, the routes lead you underground[otherwise]It's easier to get lost the way you need to the second time[end if][stopping].[line break]"
+routes-x	Routes	Same Mesa	"[one of]The route turns a bit, then begins branching. You are no longer sure what direction you are going in, and you always vaguely tried to take the center one, but it's no use. You wind up crossing a red line, and you find there is no way back. 'No curse cure, son!' booms a voice[if player is female] sadly ignorant of your gender[end if].[paragraph break]After walking on for a bit, you find yourself somewhere that might be populated. Well, there are buildings around[or][if Harms Marsh is visited]Somehow, the routes lead you underground[otherwise]It's easier to get lost the way you need to the second time[end if][stopping].[line break]"
 troves-x	Troves	Loather Rathole	"[one of][if tokers are in Strip of Profits]'Materialism is like a TRAP, MAN! Wait, no, man, it's LITERALLY...'[paragraph break][end if]A protean neo-trap! A blingo-goblin sargent grabs you as you reach for the argents and garnets! Of course the trove was too overt. You shake him off and run. The sarge rages and gears--you hit the, er, gas. When you look up, you are in a girdled griddle of a city. And not any city. That most successful of cities: Spoiloplis! Where people go from poverty--to the very top. Cars--outrageous rogue autos--scar arcs, spraying water on you and knocking you from the curb as you reach for a demi-dime.[wfak][paragraph break]'Insurer Inurers! Darn you and your...' you hear someone yell from the back seat. They get out. 'Dawdler! Waddler!' You cringe, waiting for a lecture, but instead you only feel a slight thud on your chest. 'Toughen up! Enough put.' They re-enter the car, which speeds off.[paragraph break]You look down to a copy of [i]Pa, Egg, Pea[r] by Peg A. Page--a success manual of parsable parables.[or]You think positively as you walk back through the troves, and what do you know, you wind up where you used to be.[stopping][line break]"
 e-s	Presto	Grey Gyre	"[one of]Shoof! Foosh! Your trip through the, er, spot visits Old Warpy itself, the center of the Yorpwald teleportation network! [if curst crust is off-stage]You somehow manage to grab an unappetizing hunk of bread--some curst crust--as you are blown off your feet. [get-crust][end if] Poof! Foop! Danglin['], then landing. With a plomf, maybe a flomp.[or]You hurtle through again, managing to land on your feet this time.[stopping]"
 oyster-x	Oyster	Posh Hops Shop	"[one of]You walk into a bar full of seafood people. Err, sea people. Everyone seems worried about a seaside disease[or]You return to the sea people's area[stopping]."
@@ -8900,7 +8900,7 @@ pipe soot	pipe soot	true	683820011	--	"opposite"	"opposite"	"You inch to the oth
 seed pit	mushrooms	true	602484096	--	"despite"	"despite"	"You ignore Pat's 'pits go to pigs' and 'yon pit, no pity' warnings and the sign. 'You can't...'[paragraph break]But you do. It's yucky and squishy, but it's not the seediest seed site ever. You hold your nose enough to find some mushrooms which you can take, leaving the mere pit emptier."
 Rude 'N Nuder	runed book	true	408172316	--	"under"	"under"	"You can't take the giant waving the, um, literature around. You jump off and duck under the bench. Disgusted that nobody will listen any more, he throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal...a runed book! Well, this could be useful."
 huge thing	the-b	false	250266429	--	"from"	"from"	"The huge thing form above turns into a huge thing FROM above. You watch a blot bloat as it gets closer. You notice it is shaped like a bean and duck. You don't hear the thud.[paragraph break]'Mesa's a mess!' you hear people screaming. 'Intact? It can't...'"
-the-b	the-b	false	485518766	Sun-Spared Underpass	"beneath"	"beneath"	"You push the bean and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. As you do, the drama armada cheers you... 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear the bean roll back into place..."
+the-b	the-b	false	485518766	Harms Marsh	"beneath"	"beneath"	"You push the bean and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. As you do, the drama armada cheers you... 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear the bean roll back into place..."
 darkness	narrow cracks	false	375930018	--	"until"	"until"	"The one preposition gives you confidence you will find No-Gal Logan. The dirt and walls don't exactly start glowing, but you can notice things better. Like a few narrow cracks. You're not sure which way to go, though. You can really notice things, now."
 narrow cracks	un-road	false	356906602	--	"around"	"around"	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
 un-road	cracks you followed	false	231861444	ripe pier	"along"	"along"	"You go along the path you found. With almost no lag, you find yourself at a pier by an underground lake."
@@ -9429,7 +9429,7 @@ check taking stripey pyrites:
 	say "Take a hint from them, where they may lead you." instead;
 
 after fliptoing un-road:
-	now stripey pyrites are in underpass;
+	now stripey pyrites are in Harms Marsh;
 	continue the action;
 
 to say get-censer:
@@ -13384,19 +13384,25 @@ a-text of seed pit is "RYRRYRY". b-text of seed pit is "RGRRYRY". parse-text of 
 instead of entering seed pit:
 	say "[if mushrooms are off-stage]Pat holds you back, warning 'best SPEED IT away from there!' You see red at the odd-sounding admonition.[otherwise]You already got something from there.[end if]"
 
-book Sun-Spared Underpass
+book Harms Marsh
 
-Sun-Spared Underpass is an innie room in Routes.
+Harms Marsh is an innie room in Routes.
 
-after printing the locale description for Sun-Spared Underpass when Sun-Spared Underpass is unvisited:
+after printing the locale description for Harms Marsh when Harms Marsh is unvisited:
 	if worst ad is not in lalaland:
 		poss-d;
 
-description of Sun-Spared Underpass is "[if darkness is visible]This room was always unlit... but things don't always have to be in the past...[else if un-road is in underpass]Now you've found the un-road to get to No-Gal Logan, how to navigate it?[else]Now, you need to find No-Gal Logan. You need to find a good unroad...because roads and inroads will loop back.[end if]"
+description of Harms Marsh is "You are in a Harms Marsh, which you know to be full of sheol-holes, so tricky to find even in full light. [if darkness is visible]And this area seems like it was always unlit... but things don't always have to be in the past...[else if un-road is in Harms Marsh]Now you've found the un-road to get to No-Gal Logan, how to navigate it?[else]Now, you need to find No-Gal Logan. You need to find a good unroad...because roads and inroads will loop back.[end if]"
+
+section Sheol Holes
+
+the Sheol Holes are plural-named scenery in Harms Marsh. "You can't nail down where they are, but you do know you need to be careful."
+
+understand "hole" and "sheol hole" as sheol holes when player is in harms marsh.
 
 chapter darkness
 
-the darkness is scenery in Sun-Spared Underpass. "It is better to create light and move forward than cast about in the darkness."
+the darkness is scenery in Harms Marsh. "It is better to create light and move forward than cast about in the darkness."
 
 a-text of darkness is "YRRYR". b-text of darkness is "GPRGR". parse-text of darkness is "u[sp]n[sp]x[sp]i[sp]x". darkness is cheat-spoilable.
 
@@ -13436,14 +13442,14 @@ a-text of un-road is "YRYRR". b-text of un-road is "YRYRR". parse-text of un-roa
 
 understand "unroad" as un-road.
 
-understand "around" as a mistake("You can't see anything around, yet. It's too unlit, here.[preefsay of narrow cracks]") when darkness is visible and player is in Sun-Spared Underpass.
+understand "around" as a mistake("You can't see anything around, yet. It's too unlit, here.[preefsay of narrow cracks]") when darkness is visible and player is in Harms Marsh.
 
-understand "along" as a mistake ("[if underpass is unvisited]You aren't far enough along to, err, look along[else]There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking[end if].[preefsay of un-road]") when told-of-logan.
+understand "along" as a mistake ("[if Harms Marsh is unvisited]You aren't far enough along to, err, look along[else]There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking[end if].[preefsay of un-road]") when told-of-logan.
 
 to decide whether told-of-logan:
 	if mrlp is not routes, decide no;
 	if huge thing form is off-stage, decide no;
-	if un-road is in sun-spared underpass, decide no;
+	if un-road is in Harms Marsh, decide no;
 	decide yes;
 
 book Ripe Pier
@@ -15832,7 +15838,12 @@ after fliptoing scratch paper:
 		now rom sticks are in lalaland;
 	continue the action;
 
-check going in shack (this is the maybe lock player in rule):
+before gotoing in Hacks' Shack:
+	consider the shack-south rule;
+		if the rule failed:
+			do nothing instead;
+
+check going in Hacks' Shack (this is the maybe lock player in rule): [check going in shack]
 	if noun is outside:
 		try going south instead;
 	if noun is not south:
@@ -26234,6 +26245,7 @@ warning sign	"The warning sign clues how to get into the seed pit."
 huge thing	"[one of]The huge thing form may be what was needed.[plus][or]But it's a thing form above.[plus][or]Does that sentence 'huge thing form' read wrong? Or feel funny? It should.[plus][or]A thing FROM above will have landed.[plus][or]So, yeah, type FROM to bring the thing down.[minus][cycling]"	--	"FROM"
 drama armada	"They're just there to watch, or help you once you figure where to look, by THE BEAN."
 the-b	"[one of]The Bean has given you a place to go or look--or, rather, a not-quite-direction.[plus][or]The ground feels a little shakier since the bean landed, but not enough to go straight down.[plus][or]PUSHing the Bean seems useless.[plus][or]You can go BENEATH the bean.[minus][cycling]"	--	"BENEATH"
+sheol holes	"They're just there as an agent to make you find the right way out. Oh, Sheol is the Old Testament name for Hell, if you were wondering. TMYK!"
 darkness	"[one of]'Unlit...' is a clue. What would the magic preposition be to make light?[plus][or]How to say this area was unlit, but now it is?[plus][or]UNTIL.[minus][cycling]"	--	"UNTIL"
 narrow cracks	"[one of]You need to search for No-Gal Logan. But you need to find an un-road.[plus][or]Directions won't help on the un-road, but maybe you can go...or look...[plus][or]AROUND.[minus][cycling]"	--	"AROUND"
 un-road	"[one of]You're halfway to finding No-Gal Logan. You've already been AROUND.[plus][or]How do we go down a path? Or follow it? Within the rules of the Routes area?[plus][or]We go ALONG it.[minus][cycling]"	--	"ALONG"
@@ -27663,8 +27675,8 @@ index map with same mesa mapped west of strip of profits.
 index map with idle deli mapped north of same mesa.
 index map with cleric circle mapped west of idle deli.
 index map with adobe abode mapped south of cleric circle.
-index map with sun-spared underpass mapped south of adobe abode.
-index map with ripe pier mapped east of sun-spared underpass.
+index map with Harms Marsh mapped south of adobe abode.
+index map with ripe pier mapped east of Harms Marsh.
 index map with clipper cripple mapped east of ripe pier.
 
 [start troves]
@@ -27716,7 +27728,7 @@ index map with Shaven Havens mapped south of Ned's Dens.
 
 [start presto]
 
-index map with Hacks' Shack mapped south of Underpass.
+index map with Hacks' Shack mapped south of Harms Marsh.
 index map with Austerer Treasure mapped south of Phat Path.
 index map with r44 mapped west of Hacks' Shack.
 
