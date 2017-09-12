@@ -1316,18 +1316,21 @@ carry out gotoing:
 		if volt maze is in lalaland:
 			say "You don't want to, and can't, go back to or through the volt maze you solved." instead;
 		say "You'll have to walk through Nowt Town and the Volt Maze[if noun is Unwary Runway], from L to V[end if]. Or, well, just solve it." instead;
-	if noun is dirge ridge and mrlp is presto: [PRESTO]
-		if Leo is dismissed:
-			post-wall-brunt;
-			do nothing instead;
-	if player is in shack:
-		consider the shack-south rule;
-		unless the rule succeeded:
-			do nothing instead;
-	if Leo is in location of player and Leo is eager:
-		say "(Leo and Rand following.)";
-		move Leo to noun;
-		move Rand to noun;
+	if mrlp is presto: [PRESTO]
+		if noun is saps' pass and phat path is visited:
+			say "Saps['] Pass is sort of the Phat Path, now." instead;
+		if noun is dirge ridge:
+			if Leo is dismissed:
+				post-wall-brunt;
+				do nothing instead;
+		if player is in shack:
+			consider the shack-south rule;
+			unless the rule succeeded:
+				do nothing instead;
+		if Leo is in location of player and Leo is eager:
+			say "(Leo and Rand following.)";
+			move Leo to noun;
+			move Rand to noun; [?? you have a problem if you goto when you've almost solved things]
 	if player is in fighter freight: [OYSTER, generic message not enough]
 		say "If only it was that easy. Well, I hope it's not [i]too[r] hard to figure the right action." instead;
 	d "From [progval of location of player] to [progval of noun].";
@@ -2306,7 +2309,7 @@ plebe	Leo	"You tell the plebe Leo might push him aside, but no dice. Maybe a bru
 plebe	Rand	"You tell the plebe Rand might push him aside, but no dice. Maybe a brutish word, not brute force."
 Rand	yak	"[pal-yak]" [chum=Leo]
 Rand	plebe	"[no-plebe]"
-Leo	hogs	"[if phat path is unvisited]You haven't seen any hogs yet.[else if lawl wall is in lalaland]'Dat was fun. You was clever.'[else]'If only you was our size, we could just take [']em. But you ain't. No offense. Maybe you can out-clever [']em like you did us.'[end if]"
+Leo	hogs	"[if Saps' Pass is unvisited]You haven't seen any hogs yet.[else if lawl wall is in lalaland]'Dat was fun. You was clever.'[else]'If only you was our size, we could just take [']em. But you ain't. No offense. Maybe you can out-clever [']em like you did us.'[end if]"
 Rand	Leo	"[if Rand is washed up and Leo is washed up]We're washed up, boss. We could use a nice word.[else if Rand is fightin]This is no time for conversation![else]He flashes a thumbs-up at his friend.[end if]"
 Leo	Rand	"[if Rand is washed up and Leo is washed up]We're washed up, boss. We could use a nice word.[else if Leo is fightin]This is no time for conversation![else]He flashes a thumbs-up at his friend.[end if]"
 Leo	Elvira	"'I guess she's good but I'm not smart enough to know why.'"
@@ -5871,12 +5874,13 @@ carry out presto-hinting:
 				if dart is not in popgun or boing is reflexive or Leo is not in gyre:
 					all-say "The ether turns your stomach too much to eat the crust. It's dangerous. You need to plan a way through." instead;
 			try objhinting ether instead;
+	if player is in Grey Gyre or player is in Burnt Brunt:
 		if hacks' shack is unvisited:
 			if spoilit is false:
-				all-say "You're all done here, so you maybe should [if phat path is unvisited]go north[else if hogs are in phat path]go see about getting past the lawl wall in the Phat Path[else if shack is unvisited]find a way in the shack[else]mess around in the shack[end if]." instead;
+				all-say "You're all done here, so you maybe should [if saps' pass is unvisited]go north[else if hogs are in saps' pass]go see about getting past the lawl wall [hereish of Saps' Pass][else if shack is unvisited]find a way in the shack[else]mess around in the shack[end if]." instead;
+	if player is in Saps' Pass:
+		try objhinting lawl wall instead;
 	if player is in phat path:
-		if lawl wall is visible:
-			try objhinting lawl wall instead;
 		if shack is unvisited:
 			if smart people sign is visible and shack is unvisited:
 				if Leo is visible:
@@ -5963,6 +5967,10 @@ to say maze-solve:
 
 to say wash-up:
 	say "[one of]Rand and Leo are a bit upset you beat them, but you can fix that.[no line break][plus][or]They think they're washups.[no line break][plus][or]What could show the washups you meant no harm?[no line break][plus][or]You can talk to the washups for clues of something nice to say.[no line break][plus][or]They're not interested in stuff. Not perfect grammar here, but they're not exactly grammar cops...[no line break][plus][or]Say WHASSUP.[no line break][minus][cycling]"
+
+to say hereish of (rm - a room):
+	say "[if player is in rm]here[else][rm][end if]
+
 
 book routes-hinting
 
@@ -9517,13 +9525,12 @@ after fliptoing post (this is the cleanup after the post/thief rule) :
 
 after fliptoing (this is the one-of-two and min-up-plus rule):
 	if noun is keys or noun is hogs:
+		now Mount Um-Not is in Phat Path;
+		now Deil's Slide is in Phat Path;
+		now grey gyre is mapped south of Phat Path;
+		now Phat Path is mapped north of grey gyre;
 		say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]A warning sign lies beyond where the wall was.";
-		now keys are in lalaland;
-		now lawl wall is in lalaland;
-		now hawt thaw is in phat path;
-		now hogs are in lalaland;
-		now priv-shack is in phat path;
-		move smart people sign to phat path;
+		move player to Phat Path;
 		continue the action;
 	if noun is prai or noun is rivets:
 		if prai is reflexed and rivets are reflexed:
@@ -15303,27 +15310,25 @@ check fliptoing boing mechanism (this is the take popgun to fix it rule) :
 		say "(taking the popgun first while you mess with the boing mechanism)[paragraph break]";
 		now player has popgun;
 
-book Phat Path
+book Saps' Pass
 
-Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [if lawl wall is in Phat Path]There's also a big wall here, blocking the way north. It's got keys hanging from it[otherwise]There's not much left with the wall gone, except for a sign to the north and a shack beyond that[end if]. You can retreat south, too, of course."
+Saps' Pass is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. There's also a big wall here, blocking the way north. Feels like it's taunting you--must be a lawl wall. It's got keys hanging from it. You can retreat south, too, of course."
 
-understand "ptah" as a mistake ("[if hogs are in phat path]If we were in ancient Egypt, I'd allow that, but we aren't, so I can't.[else]No Egyptian deity comes to your rescue. Or needs to.[end if]") when player is in phat path.
+understand "spas" as a mistake ("If it were that easy to change Saps['] Pass, it wouldn't be much of a puzzle. You'd still need to get the keys from the hogs, anyway.") when player is in saps' pass.
 
-check going south in phat path:
-	if hogs are in phat path:
-		say "The hogs snicker as you walk away.";
+understand "psas" as a mistake ("Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!") when player is in saps' pass.
 
-Mount Um-Not is scenery in Phat Path. understand "mount/um/not" as Mount Um-Not. "It's as huge and unwelcoming as Cupid's Cuspid isn't. You remember hearing Saps['] Pass, with all its pitfalls, cuts through it."
+check going south in saps' pass:
+	say "The hogs snicker as you walk away.";
+
+Mount Um-Not is scenery in Saps' Pass. understand "mount/um/not" as Mount Um-Not. "It's as huge and unwelcoming as Cupid's Cuspid isn't." [climb it ??]
 
 check taking um-not:
 	say "Stronger adventurers than you couldn't take Mount Um-Not." instead;
 
-Saps' Pass is amusing scenery in Phat Path. Saps' Pass is undesc.
+[	say "Saps['] Pass is not to be trod, man. It's a mordant, dormant mtn road. It may lead to No-Goal Lagoon, anyway." instead; ?? ]
 
-instead of doing something with Saps' Pass:
-	say "Saps['] Pass is not to be trod, man. It's a mordant, dormant mtn road. It may lead to No-Goal Lagoon, anyway." instead;
-
-Deil's Slide is scenery in Phat Path. "You swear you can see the toxic fumes seeping from it. It's too dangerous to explore[swan-puma]."
+Deil's Slide is scenery in Saps' Pass. "You swear you can see the toxic fumes seeping from it. It's too dangerous to explore[swan-puma]."
 
 check taking Deil's Slide:
 	say "The Deil's Slide is more likely to take YOU." instead;
@@ -15331,7 +15336,13 @@ check taking Deil's Slide:
 check entering Deil's Slide:
 	try going west instead;
 
-the priv-shack is privately-named proper-named scenery. "[if shack is visited]It looks just as you left it[else]The shack looks cozy and inviting[end if].". printed name of priv-shack is "the shack"
+book Phat Path
+
+Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [if lawl wall is in Phat Path][otherwise]There's not much left with the wall gone, except for a sign to the north and a shack beyond that[end if][if hawt thaw is in phat path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
+
+understand "ptah" as a mistake ("[if hogs are in phat path]If we were in ancient Egypt, I'd allow that, but we aren't, so I can't.[else]No Egyptian deity comes to your rescue. Or needs to.[end if]") when player is in phat path.
+
+the priv-shack is privately-named proper-named scenery in Phat Path. "[if shack is visited]It looks just as you left it[else]The shack looks cozy and inviting[end if].". printed name of priv-shack is "the shack"
 
 understand "shack" as priv-shack when player is in phat path.
 
@@ -15347,25 +15358,21 @@ instead of doing something with priv-shack:
 		continue the action instead;
 	say "Not much to do but enter the shack by going north." instead;
 
-check going west in Phat Path:
-	say "The Deil's Slide would make quick work of even [if Leo is in dirge ridge]your old friends [end if]Leo and Rand[swan-puma], with or without a goop-pogo[exwall]." instead;
-
-to say exwall:
-	if shack is visited:
-		say ". The shack seems to be where it's ultimately at, anyway";
-	else:
-		say ". The [unless wall is in phat]ex-[end if]wall north is an easier proposition";
+check going west:
+	if player is in Saps' Pass or player is in Phat Path:
+		say "The Deil's Slide would make quick work of even [if Leo is in dirge ridge]your old friends [end if]Leo and Rand[swan-puma], with or without a goop-pogo[exwall]." instead;
 
 to say swan-puma:
 	say "[one of], with or without the fabled Sawn Swan (whose victims emit tearful NAWs) and Ampu-Puma (whose victims plaintively cry 'Um, PA') or even the LMAO-loam which lures unwary travelers to their death[or][stopping]";
 
 check going east in Phat Path:
-	say "[if Leo is visible]Leo and Rand don't have the endurance to climb Mount Um, Not. Neither do you[else]You don't want to climb Mount Um, Not[end if][exwall]." instead;
+	if player is in Saps' Pass or player is in Phat Path:
+		say "[if Leo is visible]Leo and Rand don't have the endurance to climb Mount Um, Not. Neither do you[else]You don't want to climb Mount Um, Not[end if]. The rest of your journey lies north." instead;
 
 Check going inside in Phat Path:
 	Try going north instead;
 
-the smart people sign is scenery. description of smart people sign is "'ALERT! ALTER nothing in here if not technically inclined. You OUGHT not to abuse LOG ONS.' Hm, weird that logons has a space."
+the smart people sign is scenery in Phat Path. description of smart people sign is "'ALERT! ALTER nothing in here if not technically inclined. You OUGHT not to abuse LOG ONS.' Hm, weird that logons has a space."
 
 check taking smart people sign:
 	say "Removing the warning won't make the warning any less valid." instead;
@@ -15515,7 +15522,8 @@ carry out chewing:
 	if noun is gum:
 		say "The gum looks like it tastes like clay." instead;
 	try eating noun instead;
-	the rule succeeds.
+
+book Phat Path
 
 book Hacks' Shack
 
