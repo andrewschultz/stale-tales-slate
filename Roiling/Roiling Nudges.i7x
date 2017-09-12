@@ -548,9 +548,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "patrol"	400254014	--	a-p	--	"The portal can't be changed for the better."
 "walleye"	595721739	--	walleyes	--	"Just tacking one walleye won't change the crowd. They're past redemption, anyway."
 "walleyes"	691995705	--	walleyes	--	"The walleyes are a bad crowd, past redemption."
-"collapsed"	529748781	old places	--	--	"[locname]." [COLLAPSED OLD PLACES]
-"old"	149195505	collapsed	--	--	"[locname-part]."
-"places"	380553276	collapsed	--	--	"[locname-part]."
+"craals"	258792829	Rascal Craals	--	--	"[locname]." [RASCAL CRAALS]
+"craal"	258792829	Rascal Craals	--	--	"[locname]."
+"wire"
 "bury"	331207767	--	ruby	--	"That's not quite it. You file that idea six feet under."
 "end"	217742706	end den	--	--	"[locname]." [END DEN]
 "dourest"	613001369	dourest detours	--	--	"[locname]." [DOUREST DETOURS]

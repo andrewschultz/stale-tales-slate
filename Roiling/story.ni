@@ -1584,7 +1584,7 @@ persuasion rule for asking Trout to try doing something:
 	say "[if trout is reflexed]You've helped him enough--he needs time to absorb your lessons[else if trout is in range]He doesn't need orders--he needs help[else]You may need to show, not tell, him what to do[end if].";
 	persuasion fails;
 
-persuasion rule for asking haunter to try gotoing collapsed old places:
+persuasion rule for asking haunter to try gotoing Rascal Craals:
 	try objasking haunter about ruby instead;
 
 persuasion rule for asking haunter to try gotothinging ruby:
@@ -1836,7 +1836,7 @@ check objasking it about (This is the check for object information rule):
 	if noun is haunter and second noun is ruby:
 		if haunter is reflexive:
 			say "You need to get the haunter to trust you, first." instead;
-		if player is not in collapsed:
+		if player is not in Rascal Craals:
 			say "It acts all ghostly and asks you to take it where the ruby might be.[paragraph break]You describe the path to take to get to the ruby, neglecting why you know--fortunately, the haunter doesn't seem to care.";
 			if player is in anger range:
 				try going west;
@@ -6226,7 +6226,7 @@ to decide which thing is oyster-item:
 			decide on walleyes;
 		if o-t is in Horned Hedron:
 			decide on o-t;
-	if player is in old places:
+	if player is in Rascal Craals:
 		if player has digger and player has ruby:
 			decide on ruby;
 	if player is in Dourest Detours:
@@ -6252,9 +6252,9 @@ carry out oyster-hinting:
 			all-say "You need to go [if handsome sand home is visited]back to the handsome sand home[else]east of Anger Range[end if] for a small gift.";
 	else if player is in anger range and eeks are in lean lane:
 		all-say "You may want to visit the trout to the east.";
-	else if player is in collapsed and player does not have the digger:
+	else if player is in Rascal Craals and player does not have the digger:
 		all-say "You don't have everything you need. You'll want to do some digging here. But you have nothing to dig with, yet.";
-	else if location of player is Collapsed Old Places and ruby is off-stage:
+	else if location of player is Rascal Craals and ruby is off-stage:
 		all-say "This would be a good place to bury something, but you're not sure what.";
 	else if location of player is End Den:
 		all-say "[one of]You're at a dead end, here. Exiting and re-entering won't do much good. You need some sort of talisman to guide you through.[or][if player has gleaner]You should really examine the gleaner[else if player has pearl]You should find the other half of the pearl.[else]There are two fragments that can combine to form what you need. The arches and handsome sand home contain them.[end if][cycling]";
@@ -6629,7 +6629,7 @@ after reading a command:
 				if rude 'n nuder is visible:
 					say "Truncating to one word.";
 					change the text of the player's command to "under";
-	if player is in collapsed and ruby is in lalaland:
+	if player is in Rascal Craals and ruby is in lalaland:
 		if the player's command includes "ruby":
 			say "Don't worry about the ruby any more[if haunter is in lalaland], or the haunter[else]. It's someone else's worry. Or someTHING's[end if].";
 			reject the player's command;
@@ -6918,7 +6918,7 @@ Lean Lane	"You can only go back west, or you would risk running into a mesh crab
 Handsome Sand Home	"Though you are a guest, probably best not to go poking around. You can go back west."
 Lapsin' Plains	"You can only go back south, or[if door-sux is false], once you defeat the door,[end if] inside."
 Achers' Arches	"You can only go north to the Horned Hedron[if sardine is in arches], once the sardine is gone,[end if] or east back to Anger Range."
-Horned Hedron	"The main exit is south, though [if collapsed old places is visited]you can go back west to the collapsed old places[else]an area west is in disrepair[end if]. You can also go IN to the [if a-p is visible]portal[else]ol['] trap once you disarm it[end if][if walleyes are visible], though you probably don't need the walleyes watching you try[end if]."
+Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if a-p is visible]portal[else]ol['] trap once you disarm it[end if][if walleyes are visible], though you probably don't need the walleyes watching you try[end if]."
 Tenfold	"While you can go back outside, you can just finish things here[unless-max]."
 Loftier Trefoil	"[if rodney is visible]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to go out[end if]." [towers]
 Topside Deposit	"The badlands are too dangerous any way but[if scope copse is visited] back[end if] north[if Ray Eck is visible], and Ray Eck's in the way right now[end if]."
@@ -7808,7 +7808,7 @@ before smelling (this is the you can smell some stuff some places rule):
 		say "A rued odor from the rude door." instead;
 	if aunt tuna is visible:
 		say "Antiseptic spice taint." instead;
-	if player is in collapsed:
+	if player is in Rascal Craals:
 		say "This situation only stinks in general, not literally." instead;
 	if player is in Den Loft:
 		say "Old heat. Loathed hot lead." instead;
@@ -17159,7 +17159,7 @@ carry out spilling:
 	if location of haunter is location of player:
 		if haunter is reflexed:
 			say "[one of]The haunter-sausage points at the pills and wags its finger at you. It is beyond the help of medication. Perhaps it was killed off by medication and you were extra rude to remind it[or]You don't need the haunter-sausage's anti-drug message again[stopping]." instead;
-	if player is in collapsed old places:
+	if player is in Rascal Craals:
 		if ruby is off-stage or digger is off-stage:
 			say "A solitary pill tries to burrow into the ground but fails. Hm. Maybe you should come back later if you need to hide something." instead;
 	if player is in End Den:
@@ -17200,7 +17200,7 @@ carry out spilling:
 		if digger is off-stage:
 			say "A single pill jumps out, tries to burrow in the ground, and pops back in the jar. Looks like you need to dig somehow for the haunter, but you don't have an instrument." instead;
 		if pre-haun is in anger range:
-			if thin hint is not in collapsed old places:
+			if thin hint is not in Rascal Craals:
 				say "A single pill jumps out and you could swear it yelped before jumping back in the bottle. Maybe you need to prepare before digging up whatever's under Anger Range." instead;
 	if player is in Horned Hedron and walleyes are in Horned Hedron: [walleyes can't really be flipped. You need to go through the sausage.]
 		say "You don't have one for everyone, and there's too many everyone, anyway. You'll need to outsmart the walleyes." instead;
@@ -17657,8 +17657,8 @@ carry out spikeing:
 chapter unearthing
 
 rule for supplying a missing noun when unearthing:
-	if player is in collapsed:
-		if thin hint is in collapsed:
+	if player is in Rascal Craals:
+		if thin hint is in Rascal Craals:
 			now noun is thin hint;
 		else:
 			now noun is location;
@@ -17707,7 +17707,7 @@ before doing something with ruby when ruby is in lalaland:
 carry out unearthing:
 	if mrlp is not oyster:
 		say "[reject]";
-	if player is in collapsed old places:
+	if player is in Rascal Craals:
 		if noun is location:
 			say "You haven't buried anything, and you're not aware of treasure here. Plus, if you dig too long without knowing what to look for, you might attract attention." instead;
 		if noun is ruby:
@@ -17774,11 +17774,13 @@ every turn (this is the track haunter rule):
 			if location of player is Horned Hedron and walleyes are in Horned Hedron:
 				say "[line break]The walleyes spout yea-wells. Their toothy cackling becomes toothy clacking as the haunter hovers over you protectively.";
 				the rule succeeds;
-			if location of player is Old Places:
-				say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if o-t is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].";
+			if location of player is Rascal Craals:
+				say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if o-t is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].[paragraph break]The haunter did a lot of damage. You go back east to the Hedron before several craals collapse.";
+				wfak;
 				now walleyes are in lalaland;
 				now haunter is in lalaland;
 				now thin hint is in lalaland;
+				move player to Horned Hedron;
 				reg-inc;
 				the rule succeeds;
 		else if haunter is visible:
@@ -18698,13 +18700,13 @@ to say dig-purpose:
 	if ruby is in lalaland:
 		say "You managed to bury the ruby. On to the next bit.";
 		continue the action;
-	if player is in old places and hint is in old places:
+	if player is in Rascal Craals and hint is in Rascal Craals:
 		say "Now you've buried the ruby, you could maybe show what you've found. No point undoing what you did";
 		continue the action;
 	say "You need to dig to some purpose";
 	if player is in anger range and haunter is off-stage:
 		say ", like uncovering the haunter";
-	else if player is in collapsed old places and player has ruby:
+	else if player is in Rascal Craals and player has ruby:
 		say ", maybe to hide something here to frame the walleyes";
 	else:
 		say ", though maybe somewhere else";
@@ -18875,15 +18877,19 @@ carry out burying:
 		say "That would reunite the haunter with the ruby, but you might be a prime suspect for taking it. Maybe you can use the haunter to take out an enemy." instead;
 	if player is in Horned Hedron:
 		say "The walleyes would find the ruby and take it, and you'd be out--but maybe you could frame them for its theft by burying the ruby somewhere near." instead;
-	if player is not in Collapsed Old Places:
+	if player is not in Rascal Craals:
 		say "You don't need to sock away wealth. You have enough. But that ruby--you've heard of it before. Maybe this is not the right place. If you want to hide the ruby, hide it somewhere hidden." instead;
-	now ruby is in collapsed old places; [necessary for flipping to work]
+	now ruby is in Rascal Craals; [necessary for flipping to work]
 	try fliptoing thin hint;
 	the rule succeeds;
 
 book Horned Hedron
 
-Horned Hedron is north of Achers' Arches. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here[if o-t is in Horned Hedron]. An ol['] trap[else]. A portal[end if] leads into the Horned Hedron proper[if o-t is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. Collapsed old places lie west."
+Horned Hedron is north of Achers' Arches. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here[if o-t is in Horned Hedron]. An ol['] trap[else]. A portal[end if] leads into the Horned Hedron proper[if o-t is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. Rascal Craals lie west."
+
+check going west when player is in Horned Hedron:
+	if haunter is in lalaland:
+		say "Collapsed old places are that way. No need to go back." instead;
 
 thug-tell is a truth state that varies.
 
@@ -19003,9 +19009,9 @@ carry out patroling:
 	say "You pace around for a bit, but nothing happens. Maybe this isn't quite the place to look[if o-t is in lalaland]--it already worked in the Horned Hedron, and once is enough[end if]." instead;
 	the rule succeeds;
 
-book Collapsed Old Places
+book Rascal Craals
 
-Collapsed Old Places is west of Horned Hedron. "There's not much to see here[if haunter is in lalaland], after that episode with the haunter[else if ruby is not in lalaland]. This would be a good place to hide something, because nobody who fears for their life would want to go here[else]. You [one of]still [or][stopping]see the thin hint you marked in the ground with your rigged digger[end if].". Collapsed Old Places is in Oyster. Collapsed Old Places is innie.
+Rascal Craals is west of Horned Hedron. "The rascal craals, where the Hedron workers live, are lined up nice and scalar[if ruby is not in lalaland]. This would be a good place to hide something, because nobody who fears for their life would want to go here[else]. You [one of]still [or][stopping]see the thin hint you marked in the ground with your rigged digger[end if].". Rascal Craals is in Oyster. Rascal Craals is innie.
 
 the thin hint is scenery. "The thin hint marks where you buried the ruby. You will be able to find it if you leave and come back."
 
@@ -26414,7 +26420,7 @@ tea tray	"[one of]Tea looks tasty. And easy to dispose of.[plus][or]You can EAT 
 trout	"[if trout is in range]You can't help the trout fight, but you can deal with the carps--or pikes.[else if trout is reflexive][one of]Aunt Tuna wants you to show her trout what you did.[plus][or]You can't attack anyone in someone's home.[plus][or]You can TUTOR the trout.[minus][cycling][else]You've helped the trout all you can.[end if]"
 reward drawer	"[if wrap is off-stage]You need to please Aunt Tuna to get what's in the drawer[else]You got what's in the drawer[end if]."
 cans	"[one of]You can get rid of them for a last lousy point.[plus][or]If you've been using the settler, you really should know this verb.[plus][or]SCAN the cans.[minus][cycling]"
-ruby	"[one of]The ruby is useful.[plus][or]The ruby is the haunter's. The haunter is someone stole the ruby.[plus][or]You don't want to be caught with the ruby, but maybe if you can frame someone or some other people...[plus][or]You can BURY the ruby in the Collapsed Old Places[if rigged digger is off-stage], though you need something to bury it with[end if].[minus][cycling]"
+ruby	"[one of]The ruby is useful.[plus][or]The ruby is the haunter's. The haunter is someone stole the ruby.[plus][or]You don't want to be caught with the ruby, but maybe if you can frame someone or some other people...[plus][or]You can BURY the ruby in the Rascal Craals[if rigged digger is off-stage], though you need something to bury it with[end if].[minus][cycling]"
 wrap	"[if warp-try is true][one of]You know the verb but not where to warp the wrap.[plus][or]Where could you annoy someone with the wrap? Someone with sensitive ears?[plus][or]The sandier sardine in Achers['] Arches will run if you warp the wrap near him.[minus][cycling][else][one of]So what's the verb to pop the wrap?[plus][or]Twenty-four choices. Six if you scan it. One if you cheat.[plus][or]You need to WARP the wrap.[plus][or]But you can't warp the wrap any old place. It might be fun and useful to annoy somefish.[plus][or]Who has sensitive hearing the wrap would annoy?[plus][or]WARP the wrap by the sardine.[minus][cycling]"
 rude door	"[one of]The rude door has several puzzles.[plus][or]You need to dispose of the door's knob.[plus][or]You need to get rid of the skis on the door.[plus][or]The crate you keep getting hit with is a pain, too.[plus][or]See each sub-part for individual clues.[cycling]"
 shut huts	--	rude door
@@ -26426,7 +26432,7 @@ h-h	"The Horned Hedron is where you need to go [if Horned Hedron is visited]back
 a-s	"[if a-s is reflexive][one of]Why might the arches be guarded?[plus][or]There's something in them.[plus][or]X ARCHES doesn't quite work. Something more thorough?[plus][or]SEARCH ARCHES.[minus][cycling][else]Nothing else in the arches.[end if]"
 pre-haun	"[one of]You need to summon the haunter, but you need a reason.[plus][or]You need to bury a treasure first to have it go chase something.[plus][or]The rigged digger should give you a hint.[minus][cycling]"
 haunter	"[if haunter is reflexed][one of]Now you've gained its trust, you will want to show the haunter something.[plus][or]Like where you buried that ruby.[minus][cycling][else][one of]What do you do with a sausage?[plus][or]To calm it down?[plus][or]The settler can help here.[plus][or]You can ASSUAGE the sausage.[minus][cycling][end if]"
-walleyes	"[one of]The walleyes won't let you explore the Horned Hedron. You need to get rid of them.[plus][or]If you talk to the walleyes, they'll mention how you'd need to be a big scary ghost or something.[plus][or]You need a ghost to come along for the ride to scare the walleyes.[plus][or]Hide something the ghost wants in Collapsed Old Places.[minus][cycling]"
+walleyes	"[one of]The walleyes won't let you explore the Horned Hedron. You need to get rid of them.[plus][or]If you talk to the walleyes, they'll mention how you'd need to be a big scary ghost or something.[plus][or]You need a ghost to come along for the ride to scare the walleyes.[plus][or]Hide something the ghost wants in Rascal Craals.[minus][cycling]"
 o-t	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or]You need to cover the area to disable the ol['] trap, but not with spies watching you. The haunter can take care of them.[plus][or]Once the haunter's scared everyone away, what's an action to scour for a switch for the ol['] trap?[plus][or]PATROL.[cycling]"
 a-p	"[one of]You can just enter the portal.[plus][or]You won't know where to go through the portal without a gleaner.[plus][or]Find the two pearl pieces, by the arches and from Aunt Tuna's gift.[plus][or]The gleaner can't tell you how to use the portal til it's bigger.[plus][or]ENLARGE the gleaner to make the portal work for you.[cycling]"
 scrawl	"[one of]The haunter is beneath here. You may need to recover it.[plus][or]What do you often do with the undead?[plus][or]ETAHN RU is the haunter's name, and it is NEAR HUT.[plus][or]You should be able to UNEARTH it, once you have the proper equipment.[plus][or]You'll also need to have a reason to do so, or something to show it.[minus][cycling]"

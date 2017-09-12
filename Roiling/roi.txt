@@ -1192,18 +1192,22 @@ Now you can SEARCH.
 They're not scared of much.
 The ghost might scare them.
 If the ghost passed by them to find a ruby, they'd be scared.
->>COLLAPSED OLD PLACES
-?What can I do here?
-This is a good place to hide stuff.
-Like the ruby.
-BURY the RUBY.
-Then dig the haunter up and lead it by.
 ?How do I disable the ol' trap?
 It would be nice as a portal.
 You must be able to disable it somewhere.
 Look around.
 Better yet, PATROL.
 Of course, you need the walleyes gone.
+>>RASCAL CRAALS
+?What is a craal?
+It's a place of living.
+?What can I do here?
+This is a good place to hide stuff.
+Like the ruby.
+BURY the RUBY.
+Then dig the haunter up and lead it by.
+?I can't visit the craals after doing something. Is this okay?
+Yes. The craals served their purpose.
 >>END DEN
 ?Is this where I want to be?
 No. You need an item to scry, and you'll go somewhere else, instead.
