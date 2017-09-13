@@ -75,7 +75,15 @@ while ( $count <= $#ARGV ) {
     /-?\?/ && do { usage(); $count++; next; };
     /^[a-z]/i && do {
       if ( length($a) == 1 ) { die("Won't process 1-word string."); }
-      $fullStr = $a;
+      if ( $a =~ /=/ ) {
+        my @temp = split( /=/, $a );
+        die("Only 1 =") if $#temp > 1;
+        $fullStr = $temp[0];
+        $suffix  = $temp[1];
+      }
+      else {
+        $fullStr = $a;
+      }
       $count++;
       next;
     };
@@ -293,15 +301,17 @@ sub seeLeft {
 
 sub usage {
   print <<EOT;
-ti.pl big = Big Ernest Steinberg
+ti.pl big = gives results like Big Ernest Steinberg
 -e opens the scratch file
 -d allow duplicates
 -f switch lasts and firsts files
--m big = Ernest 'Big' Steinberg
+-m big = middle name e.g. Ernest 'Big' Steinberg
 -p period after text
 -pc print commands
 -r reverses too
 -w sees what is left
+/(string) lets you add a suffix to all matchable names.
+  Alternately ti.pl big=boss also gives "Ernest 'Big' Steinberg"boss for sso.pl
 EOT
   exit;
 }
