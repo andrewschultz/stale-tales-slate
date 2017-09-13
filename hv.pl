@@ -296,18 +296,22 @@ sub lookFor {
   while ( $line = <A> ) {
     $lineCount++;
     if ( $line =~ /^table of/i ) {
-      $currentTable = "($line)";
+      $currentTable = "($line";
       chomp($currentTable);
+      $currentTable = "$currentTable)";
+      next;
     }
-    if ( ( $line !~ /^[a-z]/ ) || ( $line =~ /\t/ ) ) {
-      if ( $currentTable ne " scrapwork" ) { $currentTable = ""; }
+    if ( ( $line !~ /^\"?[a-z]/ ) || ( $line !~ /\t/ ) ) {
+      if ( $currentTable ne " scrapwork" && ( $line !~ /^this-cmd/ ) ) {
+        $currentTable = "";
+      }
     }
     if ( $line =~ /$hash/ ) {
       if ( ($myRegion) && ( $line !~ /$myRegion/ ) ) {
         print "REGION-IGNORING\n$line";
       }
       else {
-        if ( !$foundyet ) { print "Found in $_[1]$currentTable:\n"; }
+        if ( !$foundyet ) { print "Found in $_[1] $currentTable:\n"; }
         print "($lineCount) $line";
         $foundyet = 1;
         $anyFound = 1;

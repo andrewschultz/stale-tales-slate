@@ -550,7 +550,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "walleyes"	691995705	--	walleyes	--	"The walleyes are a bad crowd, past redemption."
 "craals"	258792829	Rascal Craals	--	--	"[locname]." [RASCAL CRAALS]
 "craal"	258792829	Rascal Craals	--	--	"[locname]."
-"wire"
+"wire"	366057531	Rascal Craals	--	--	"The wire weir is sort of protecting you, here."
 "bury"	331207767	--	ruby	--	"That's not quite it. You file that idea six feet under."
 "end"	217742706	end den	--	--	"[locname]." [END DEN]
 "dourest"	613001369	dourest detours	--	--	"[locname]." [DOUREST DETOURS]

@@ -6919,6 +6919,7 @@ Handsome Sand Home	"Though you are a guest, probably best not to go poking aroun
 Lapsin' Plains	"You can only go back south, or[if door-sux is false], once you defeat the door,[end if] inside."
 Achers' Arches	"You can only go north to the Horned Hedron[if sardine is in arches], once the sardine is gone,[end if] or east back to Anger Range."
 Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if a-p is visible]portal[else]ol['] trap once you disarm it[end if][if walleyes are visible], though you probably don't need the walleyes watching you try[end if]."
+Rascal Craals	"The wire weir blocks you from going any way but back east."
 Tenfold	"While you can go back outside, you can just finish things here[unless-max]."
 Loftier Trefoil	"[if rodney is visible]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to go out[end if]." [towers]
 Topside Deposit	"The badlands are too dangerous any way but[if scope copse is visited] back[end if] north[if Ray Eck is visible], and Ray Eck's in the way right now[end if]."
@@ -19011,7 +19012,7 @@ carry out patroling:
 
 book Rascal Craals
 
-Rascal Craals is west of Horned Hedron. "The rascal craals, where the Hedron workers live, are lined up nice and scalar[if ruby is not in lalaland]. This would be a good place to hide something, because nobody who fears for their life would want to go here[else]. You [one of]still [or][stopping]see the thin hint you marked in the ground with your rigged digger[end if].". Rascal Craals is in Oyster. Rascal Craals is innie.
+Rascal Craals is west of Horned Hedron. "The rascal craals, where the Hedron workers live, are lined up nice and scalar[if ruby is not in lalaland]. This would be a good place to hide something, because nobody who fears for their life would want to go here[else]. You [one of]still [or][stopping]see the thin hint you marked in the ground with your rigged digger[end if]. A wire weir blocks all ways out except back east.". Rascal Craals is in Oyster. Rascal Craals is innie.
 
 the thin hint is scenery. "The thin hint marks where you buried the ruby. You will be able to find it if you leave and come back."
 
@@ -19025,6 +19026,10 @@ before doing something with thin hint:
 	if current action is taking:
 		say "You don't need to take a hint you yourself dropped." instead;
 	say "There's nothing to do with that hint except point it out to someone else, later." instead;
+
+section wire weir
+
+The wire weir is scenery in Rascal Craals. "It's there to prevent you from falling into somewhere much more dangerous.
 
 book End Den
 
@@ -26436,6 +26441,7 @@ walleyes	"[one of]The walleyes won't let you explore the Horned Hedron. You need
 o-t	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or]You need to cover the area to disable the ol['] trap, but not with spies watching you. The haunter can take care of them.[plus][or]Once the haunter's scared everyone away, what's an action to scour for a switch for the ol['] trap?[plus][or]PATROL.[cycling]"
 a-p	"[one of]You can just enter the portal.[plus][or]You won't know where to go through the portal without a gleaner.[plus][or]Find the two pearl pieces, by the arches and from Aunt Tuna's gift.[plus][or]The gleaner can't tell you how to use the portal til it's bigger.[plus][or]ENLARGE the gleaner to make the portal work for you.[cycling]"
 scrawl	"[one of]The haunter is beneath here. You may need to recover it.[plus][or]What do you often do with the undead?[plus][or]ETAHN RU is the haunter's name, and it is NEAR HUT.[plus][or]You should be able to UNEARTH it, once you have the proper equipment.[plus][or]You'll also need to have a reason to do so, or something to show it.[minus][cycling]"
+wire weir	"It's just there to provide a boundary in the Rascal Craals."
 thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The haunter[if haunter is off-stage], once you find it, [end if]will be glad to see what is under the thin hint.[minus][cycling]"
 paler pearl	"[if tea tray is not in lalaland][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the handsome sand home.[plus][or][a-t-check][plus][or]EAT TEA.[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Arches.[plus][or]How would you comb through the arches?[plus][or]SEARCH.[minus][cycling][end if]"
 gleaner	"[one of]The gleaner may help you with the last bit, but it is too small.[plus][or]What could you do to make the GLEANER bigger?[plus][or]The settler gives you where the vowels are.[plus][or]ENLARGE the gleaner.[minus][cycling]"
