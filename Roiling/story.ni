@@ -118,7 +118,7 @@ Routes is a region. regtab of Routes is table of routes nudges. regana of Routes
 
 Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 21. min-score of Troves is 15. [Pa Egg Pea, lager, lobster/stream, bee, astute statue, DIVORCES]
 
-Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 39. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter and pulling lever]
+Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 39. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter.]
 
 Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 36. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints]
 
@@ -18198,7 +18198,7 @@ Tenfold Teflon'd Den Loft is an innie room in Oyster. "[one of]You're at the cen
 lev-pull is a truth state that varies.
 
 instead of doing something with lever:
-	if current action is pushing or current action is pulling or current action is taking:
+	if current action is pushing or current action is pulling or current action is taking: [check pulling lever/check pushing lever]
 		say "[if lever is reflexed]It's not fun enough to tinker with, any more.[else]Nothing happens, but you're still just excited to find it. Maybe you can do something superfluous to show that![end if]";
 	if action is procedural:
 		continue the action;

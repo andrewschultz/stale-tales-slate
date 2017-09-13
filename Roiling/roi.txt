@@ -317,13 +317,14 @@ You can say MAZEL TOV at any time.
 You get an extra point, if you're interested in that sort of thing.
 ?I took the hard way but still lost a point from the maximum. What gives?
 You scanned a fellow in the Unwary Runway for an additional clue.
->>PHAT PATH
+>>SAPS' PASS
 ?How do I deal with the hogs?
 You can annoy them or get their keys.
 The hogs look up for heavy duty swears, and they'll probably be annoyed by mild expressions.
 You can pretend you don't really want the keys by saying SYKE...
 ...or you can bug the hogs by saying GOSH.
 Either way, the hogs get mad at you, tire themselves out chasing you, and leave the keys open for Rand and Leo.
+>>PHAT PATH
 ?What's the smart people's sign for?
 Leo and Rand are nice, but they don't belong in the shack. But they have a hard time leaving.
 So do you, surprisingly. But the sign has ALERT, LOGONS and OUGHT.
@@ -332,8 +333,8 @@ TOUGH...
 ...LATER...
 ...SO LONG.
 ?Is the hawt thaw significant?
-Not strictly.
-It's really weird, though.
+Not strictly. It's not necessary to complete the game.
+It's really weird, though. It barely makes any sense at all!
 If you take a good hard look at it, you may want to say WHAT.
 >>HACKS' SHACK
 ?There's a lot to do here! What's my ultimate goal?
@@ -404,6 +405,9 @@ PUT KEYBOARD ON SLAB.
 You can try to run things now, but you run into a case sensitivity error.
 PUT CAPS LOCK KEY IN KEYBOARD.
 You still have more to do, but this is a start.
+?Why am I trapped in here?
+You're far enough along, you don't need to go outside to solve the Presto Area.
+You may be cut off from getting maximum points (for instance, if you didn't help the lamb), but I wanted to ensure the player they were close to the end.
 ?What's the TBA key?
 TBA is not just TBA.
 It's a TAB key. It helps with programming and formatting, but it's not critical.
@@ -484,14 +488,17 @@ It's holding pipe soot! But you can't just up and steal it.
 It's on the other side of Oscar.
 Position yourself OPPOSITE, and you can take it behind your back without him looking.
 >>BELOWGROUND
->>>SUN-SPARED UNDERPASS
+>>>HARMS MARSH
+?What do I do with the sheol-holes?
+Not fall into them.
+Directions don't help, so you need to be more circumspect.
 ?Help! It's almost too dark to see!
 This is a three-part puzzle.
 You have no light, and your lamp was broken a long time ago.
 You can say it was dark and <i>unlit</i>, before...
 ...I mean, UNTIL.
 ?Where do I go? How do I find a trail?
-You need to NAG OL' NO-GAL LOGAN. There's an UN-ROAD you need to use to get there.
+Remember, you were told you need to NAG OL' NO-GAL LOGAN. There's an UN-ROAD you need to use to get there.
 So, first, you need to look AROUND.
 You're on your way to finding him, now.
 Then, you need to go ALONG.
@@ -630,7 +637,7 @@ He describes them with anagramming adjectives.
 Once they're gone, you can send him YONDER.
 Or you can make him DRONEY and his followers will get bored.
 >>>RODNEY'S GOONS
-?Wow! That's a lot, listed below.
+?How do I get rid of the goons? And why are so many listed? I only see six.
 Six of twenty-five are randomly chosen. Well, randomly chosen, one from each subgroup, so that randomness doesn't make things too hard or too easy. There are no clues below, just the groups I picked warriors from.
 Geno, Shane, Tyson, Wade.
 Edwin, Eldon, Floyd, Royce.
@@ -643,7 +650,7 @@ Andrew has a particularly silly description.
 Roaming freely in his territory...
 ...until SNARED
 ?Andrew
-A careless looking fellow.
+A careless looking fellow. Needs some direction.
 WARNED
 ?Archie
 Free of pain.
@@ -713,7 +720,7 @@ RECREANT.
 Many emotions...
 ...unless he's STONY.
 ?Wade
-Confident and poised.
+Confident and poised, but sensible enough to know if he might be overmatched.
 Til he's AWED.
 >>TOPSIDE DEPOSIT
 ?What can I do with the flowerpot?
@@ -722,7 +729,7 @@ Nothing, until near the end.
 You can put them in the toaster, and it will give you the ability to XRAY something for a hint.
 ?What's the toaster for?
 It's a rosetta toaster.
-Put bready products, like the strudel, in the toaster, and you can see through stuff to what it should be.
+Put bready products, like the tarts, in the toaster, and you can see through stuff to what it should be.
 Including the final puzzle.
 Budget as you need to.
 ?Is there any functional difference between the pastries I find? And how many are there?
@@ -940,35 +947,34 @@ The turbos and blaster are broken.
 You need to fix one, preferably both.
 The turbos can be more ROBUST.
 The blaster can be STABLER.
-But wait! There's one more optional thing!
-It looks WEIRDER inside. The wires are all over the place.
-Make it REWIRED, which isn't a replacement for ROBUST or STABLER, but it helps the kid think more clearly.
 ?Is the weirder red wire good/bad for anything?
 It's not critical to the game.
+It doesn't replace fixing the turbos or blaster.
 But it is a Last Lousy Point.
 It can be reorganized...
 ...or REWIRED.
 >>RAWEST WATERS
 ?Help! Which shore?
-Northern, Eastern and Northeastern.
+Northern, Eastern and Northeast(ern).
 The settler gives seven letters.
 What can be done to get closer to the eastern shore?
 Make it NEAREST.
 ?Hey! I never saw this location. What gives? Is this a fake clue?
-You skip over Rawest Waters if you fix a bot-boat completely. If you'd only half-fixed them, you'd have landed here. The puzzle is about as easy as the other two.
+You skip over Rawest Waters if you fix a bot-boat completely. If you'd only half-fixed them, you'd have landed here. The puzzle is about as easy as the other two, so I figured it'd be neat to have two ways through.
 >>LEAK LAKE
 ?What does Elk Akela want?
 Akela is waiting for Kala Keel, obviously.
 AKA Kelle.
 If you're very careful and you've already solved Store P, you can hook back to a hidden path under Harm's Marsh and Mount Um-Not to reveal a rare secret.
 It's so rare, it's not even in the game, because there's no way to get to Leak Lake. Leak Lake is just a backdrop.
-Yeah, I had to write in a joke clue.
+Yeah, I had to write in a joke clue. Right after one people might think was a joke, just for extra misdirection.
 >>MISLIT LIMITS
 ?What can I do about the pester'n serpent?
 You don't need to get rid of it, strictly. Unless you want maximum points.
 Can't make it so it REPENTS. That's a verb.
 You can't make it go away.
-But you can make it just PRESENT.
+But you can neutralize it.
+It'll be calmer if it's just PRESENT.
 ?What's with the crocus?
 It's not fully necessary, either. You can't touch it when it's so bright and radioactive looking.
 If you read the flowerpot, you may note a hint.
@@ -1217,13 +1223,15 @@ Once you get two, they make a general gleaner.
 It's not big enough to see into clearly.
 ENLARGE it.
 >>DOUREST DETOURS
-?I skipped over this! Is it a fake clue?
-No, you need something from the Shadier Airshed.
+?I skipped over this! Is it a fake room or clue?
+No, it's a small side quest.
+You need something from the Shadier Airshed.
 The lance. If you have it, the game will alert you.
 ?What do I do with the ant?
 It should be easy. There are only five possibilities.
-You need to attack it.
-To TAN it.
+You need to attack it a certain way.
+There are only five possibilities for ANT.
+You need to TAN it.
 Once you do, you go to the loft-den.
 >>TENFOLD TEFLON'D LOFT-DEN
 ?Stupid papery yapper!

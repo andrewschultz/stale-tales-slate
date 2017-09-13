@@ -6651,7 +6651,7 @@ to check-score (a - indexed text):
 
 chapter Ghouls' Slough
 
-Ghouls' Slough is inside of Enclosure. "This is as ethereal as its inhabitants, whom you cannot see or hear. You're not sure where the marsh starts and the lake ends[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or][stopping].". Slough is in Forest.
+Ghouls' Slough is inside of Enclosure. "This is as ethereal as its inhabitants, whom you cannot see or hear. You're not sure where the marsh starts and the lake ends[one of]. You think you hear a dog bark in this dark bog, then feel like a dorkbag[or]You feel ... ugh, SOL[or][stopping].". Slough is in Forest.
 
 the dog is amusing scenery in slough. dog is an undesc. instead of doing something with the dog when dog is visible:
 	say "Where was it? Where is it? Eegh. You don't REALLY want to think about it."
