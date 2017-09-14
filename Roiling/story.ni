@@ -3557,7 +3557,7 @@ check taking scenery:
 		say "Nothing here is valuable enough. You need to leave it all behind!" instead;
 	if location of player is Econ Cone:
 		say "Oh, you'll TAKE Spoilopolis, all of it. But you can't lug THAT around." instead;
-	if location of player is fiefco:
+	if location of player is Upscale Capsule:
 		say "You don't need to take that. Just take inspiration from it." instead;
 	say "You don't need to take any of the scenery here. Or, well, anywhere. Unless you change it to something else first." instead;
 
@@ -5969,7 +5969,7 @@ to say wash-up:
 	say "[one of]Rand and Leo are a bit upset you beat them, but you can fix that.[no line break][plus][or]They think they're washups.[no line break][plus][or]What could show the washups you meant no harm?[no line break][plus][or]You can talk to the washups for clues of something nice to say.[no line break][plus][or]They're not interested in stuff. Not perfect grammar here, but they're not exactly grammar cops...[no line break][plus][or]Say WHASSUP.[no line break][minus][cycling]"
 
 to say hereish of (rm - a room):
-	say "[if player is in rm]here[else][rm][end if]
+	say "[if player is in rm]here[else][rm][end if]"
 
 
 book routes-hinting
@@ -15367,7 +15367,7 @@ instead of doing something with priv-shack:
 
 check going west:
 	if player is in Saps' Pass or player is in Phat Path:
-		say "The Deil's Slide would make quick work of even [if Leo is in dirge ridge]your old friends [end if]Leo and Rand[swan-puma], with or without a goop-pogo[exwall]." instead;
+		say "The Deil's Slide would make quick work of even [if Leo is in dirge ridge]your old friends [end if]Leo and Rand[swan-puma], with or without a goop-pogo." instead;
 
 to say swan-puma:
 	say "[one of], with or without the fabled Sawn Swan (whose victims emit tearful NAWs) and Ampu-Puma (whose victims plaintively cry 'Um, PA') or even the LMAO-loam which lures unwary travelers to their death[or][stopping]";
@@ -15841,8 +15841,8 @@ after fliptoing scratch paper:
 
 before gotoing in Hacks' Shack:
 	consider the shack-south rule;
-		if the rule failed:
-			do nothing instead;
+	if the rule failed:
+		do nothing instead;
 
 check going in Hacks' Shack (this is the maybe lock player in rule): [check going in shack]
 	if noun is outside:
@@ -17776,8 +17776,7 @@ every turn (this is the track haunter rule):
 				say "[line break]The walleyes spout yea-wells. Their toothy cackling becomes toothy clacking as the haunter hovers over you protectively.";
 				the rule succeeds;
 			if location of player is Rascal Craals:
-				say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if o-t is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].[paragraph break]The haunter did a lot of damage. You go back east to the Hedron before several craals collapse.";
-				wfak;
+				say "[line break]The haunter sees the thin hint! It gestures as if you should dig. You do. With the ruby, the haunter becomes a wholer howler. 'Scaring me?' you hear to the east, then, after the haunter flies...SCREAMING. 'Run! A - the - a hunter!'[paragraph break]You can probably enter the ol['] trap back in the Horned Hedron now. [if o-t is prefigured]It'll be easier to PATROL with the walleyes gone[else]Well, once you find where to disarm it[end if].[paragraph break]The haunter did a lot of damage. You go back east to the Hedron before several craals collapse.[wfak]";
 				now walleyes are in lalaland;
 				now haunter is in lalaland;
 				now thin hint is in lalaland;
@@ -19029,7 +19028,7 @@ before doing something with thin hint:
 
 section wire weir
 
-The wire weir is scenery in Rascal Craals. "It's there to prevent you from falling into somewhere much more dangerous.
+The wire weir is scenery in Rascal Craals. "It's there to prevent you from falling into somewhere much more dangerous."
 
 book End Den
 
@@ -24883,8 +24882,6 @@ to say greedy-s:
 
 to say trader-clue:
 	say "[one of][greedy-s] [if player has storage]was[else]is[end if] just there to barter for the storage. You need something of value[if player has coin or player has coins], more value than a coin or two[end if].[plus][or][if player has dollar]That dollar would make [greedy-s] happy[else if number of fruits in lalaland < 12]Curtis's third gift, after [12 - number of fruits in lalaland in words] more fruits, will be handy[else]You can go back to Curtis for an item that will please [greedy-s][end if].[minus][cycling]"
-
-the printed name of Dr Tera is "Dr. Tera Darter".
 
 to say gree-app:
 	say "[one of]Oh my goodness! A tarred trader is here. But if you look closely--yes, it's [greedy-person]! Who performed all sorts of 'cutting-edge' financial transactions, but Elvira managed to get [him-her] bailed out because [he-she] was being interesting and creative, or something. Some people tarred [him-her], and, well, [he-she] deserved it[or][greedy-person], the tarred trader, is still slumped here. [he-she-c] probably got kicked out [if clearing is unvisited]from somewhere more reputable[else]of the Clangier Clearing[end if][stopping][if storage box is in scape space]--[he-she]'s sort of holding out a box labeled So-Great Storage[end if][if guava is off-stage], and [he-she] is only partially hiding a sign[end if]"
