@@ -58,6 +58,8 @@ my %tableAdd;
 my %tableAdd2;
 my $warnings = 0;
 
+my %lump;
+
 #added before
 
 my %regex;
@@ -146,6 +148,7 @@ while ( $count <= $#ARGV ) {
       exit();
     };
     /^-?ol$/ && do { openThis(-1); exit(); };
+    /^-?q$/ && do { readMapFile(); quickCheck($arg2); exit(); };
     /^-?f$/  && do { $copyBack    = 1; $count++; next; };
     /^-?p$/  && do { $postProcess = 1; $count++; next; };
     /^-?n$/  && do { $numbers     = 1; $count++; next; };
@@ -200,63 +203,8 @@ dupget("$rr");
 dupget("$sr");
 
 print "Read mapping file...\n";
-####################################open the mapping file
-open( A, $txtfile ) || die();
 
-my %lump;
-
-while ( $line = <A> ) {
-  if ( $line =~ /^;/ ) { last; }
-  if ( $line =~ /^#/ ) { next; }
-  if ( ( $line =~ /^!/ ) ) {
-    print $line if ($showCrib);
-    next;
-  }
-  chomp($line);
-  if ( $line eq "" ) {
-    print "Blank line $.\n";
-    next;
-  }
-  if ( $line =~ /~/ )    # e.g. table=FALSE
-  {
-    my @hashy = split( /~/, $line );
-    die("$hashy[0] defined at line $lump{$hashy[0]}, redefined at line $.")
-      if ( $lump{ $hashy[0] } );
-    $lump{ $hashy[0] }          = $.;
-    $secondDefault{ $hashy[0] } = $hashy[1];
-    next;
-  }
-  if ( $line =~ /\*/ )    # e.g. something doesn't work
-  {
-    my @hashy = split( /\*/, $line );
-    die("$hashy[0] defined at line $lump{$hashy[0]}, redefined at line $.")
-      if ( $lump{ $hashy[0] } );
-    $lump{ $hashy[0] }     = $.;
-    $failClue{ $hashy[0] } = $hashy[1];
-    next;
-  }
-  my @hashy = split( /\t/, $line );
-  $hashy[0] = lc( $hashy[0] );
-  if ( $#hashy < 1 ) { print "Line $. in $txtfile needs a tab.\n"; }
-  for ( 1 .. $#hashy ) {
-    die(
-      "$hashy[$_] already defined at line $lump{$hashy[$_]} in $txtfile: $line")
-      if ( $lump{ $hashy[$_] } );
-    $lump{ $hashy[$_] } = $.;
-
-    $tableTo{ $hashy[$_] } = $hashy[0];
-    if ( $hashy[$_] =~ /^xx/i ) {
-      $hashy[$_] =~ s/^xx//i;
-      $tableTo{ $hashy[$_] } = $hashy[0];
-      die("$hashy[$_] defined at line $lump{$hashy[$_]}, redefined at line $.")
-        if ( $lump{ $hashy[$_] } );
-      $lump{ $hashy[$_] } = $.;
-    }
-  }
-
-}
-
-close(A);
+readMapFile();
 
 open( A, $readIn ) || die();
 
@@ -815,6 +763,78 @@ sub dumpUnquoted {
   `$raw` if $_[1];
 }
 
+sub quickCheck {
+  print "Quick checking matches for $_[0]:\n" . ( "=" x 50 ) . "\n";
+  my $gotOne = 0;
+  for my $x ( sort keys %tableTo ) {
+    if ( $x =~ /$_[0]/ ) {
+      $gotOne = 1;
+      print "$_[0] =~ $x for $tableTo{$x}\n";
+    }
+  }
+  die("No matches") if !$gotOne;
+  exit();
+}
+
+sub readMapFile {
+####################################open the mapping file
+  open( A, $txtfile ) || die();
+
+  while ( $line = <A> ) {
+    if ( $line =~ /^;/ ) { last; }
+    if ( $line =~ /^#/ ) { next; }
+    if ( ( $line =~ /^!/ ) ) {
+      print $line if ($showCrib);
+      next;
+    }
+    chomp($line);
+    if ( $line eq "" ) {
+      print "Blank line $.\n";
+      next;
+    }
+    if ( $line =~ /~/ )    # e.g. table=FALSE
+    {
+      my @hashy = split( /~/, $line );
+      die("$hashy[0] defined at line $lump{$hashy[0]}, redefined at line $.")
+        if ( $lump{ $hashy[0] } );
+      $lump{ $hashy[0] }          = $.;
+      $secondDefault{ $hashy[0] } = $hashy[1];
+      next;
+    }
+    if ( $line =~ /\*/ )    # e.g. something doesn't work
+    {
+      my @hashy = split( /\*/, $line );
+      die("$hashy[0] defined at line $lump{$hashy[0]}, redefined at line $.")
+        if ( $lump{ $hashy[0] } );
+      $lump{ $hashy[0] }     = $.;
+      $failClue{ $hashy[0] } = $hashy[1];
+      next;
+    }
+    my @hashy = split( /\t/, $line );
+    $hashy[0] = lc( $hashy[0] );
+    if ( $#hashy < 1 ) { print "Line $. in $txtfile needs a tab.\n"; }
+    for ( 1 .. $#hashy ) {
+      die(
+"$hashy[$_] already defined at line $lump{$hashy[$_]} in $txtfile: $line"
+      ) if ( $lump{ $hashy[$_] } );
+      $lump{ $hashy[$_] } = $.;
+
+      $tableTo{ $hashy[$_] } = $hashy[0];
+      if ( $hashy[$_] =~ /^xx/i ) {
+        $hashy[$_] =~ s/^xx//i;
+        $tableTo{ $hashy[$_] } = $hashy[0];
+        die(
+          "$hashy[$_] defined at line $lump{$hashy[$_]}, redefined at line $.")
+          if ( $lump{ $hashy[$_] } );
+        $lump{ $hashy[$_] } = $.;
+      }
+    }
+
+  }
+
+  close(A);
+}
+
 sub usage {
   print <<EOT;
 SSO roughly sorts out anagrams into categories: biopics, regular books, movies, shouty ads, and ALL CAPS entries.
@@ -834,6 +854,7 @@ Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sortin
 -mw is maximum warnings
 -sa is show default column add details
 -p post processes
+-q quick checks for a pattern for a character
 -u(dq)(l)(#) dump unquoted, l = launch, d/q = any flags
 SPECIFIC USAGE:
 dns is good for doing the stats etc
