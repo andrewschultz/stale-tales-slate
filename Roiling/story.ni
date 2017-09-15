@@ -118,7 +118,7 @@ Routes is a region. regtab of Routes is table of routes nudges. regana of Routes
 
 Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 21. min-score of Troves is 15. [Pa Egg Pea, lager, lobster/stream, bee, astute statue, DIVORCES]
 
-Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 39. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter.]
+Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 40. min-score of oyster is 29. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter.]
 
 Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 36. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints]
 
@@ -1565,16 +1565,16 @@ persuasion rule for asking pikes to try doing something:
 	say "Ordering them around won't help. Take action!";
 	persuasion fails;
 
-persuasion rule for asking rude door to try doing something:
+persuasion rule for asking span pans to try doing something:
 	say "[make-open].";
 	persuasion fails;
 
-persuasion rule for asking rude door to try doing something:
+persuasion rule for asking span pans to try doing something:
 	say "[make-open].";
 	persuasion fails;
 
 to say make-open:
-	say "[if door-sux is true]It's already doing what you want, but not happily[else]You need to act cleverly to make it less obstreperous[end if]";
+	say "They don't respond to speech but action";
 
 persuasion rule for asking Aunt Tuna to try doing something:
 	say "Hard to tell her what to do.";
@@ -4640,7 +4640,7 @@ does the player mean ansobjing the side door when Gunter is off-stage: it is ver
 check ansobjing:
 	if noun is a person:
 		say "Try to ASK a person about something instead." instead;
-	if noun is side door or noun is rude door or noun is secure door:
+	if noun is side door or noun is span pans or noun is secure door:
 		try opening noun instead;
 	say "That's not something animate." instead;
 
@@ -5197,8 +5197,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 		if player is in fighter freight:
 			now noun is pale plea;
 			continue the action;
-		if player is in lapsin' plains:
-			if crate are in lapsin' plains and crate is reflexive:
+		if player is in Lapsin' Plains:
+			if crate are in Lapsin' Plains and crate is reflexive:
 				now noun is crate;
 				continue the action;
 			else if c2 is reflexive:
@@ -5516,6 +5516,7 @@ perma-amper	true	true	false	false	"It's a perma-amper, so that might account for
 pale plea	false	true	false	true	"[if cheat-on is false]You check both ways, and it's still RYYR[else]Well, five letters is easier than four[end if]."
 general gleaner	true	false	false	false	"The pattern blinks green-red and yellow-purple."
 bogus-plains	false	true	false	false	"Your settler appears to register this all across the plains."
+span pans	true	true	false	false	"There are two entries you don't understand, but--the span pans might actually make things kind of easy, there."
 Ray Eck	false	true	false	false	"Ray Eck begins babbling about how interesting the settler looks, almost as interesting as his keycar. Maybe you could ASK him about the keycar, if he's still stumping you." [towers]
 bluster butlers	true	true	false	false	"Hmm, no vowels nailed down in cheat mode. Maybe if you do a big of legwork to figure where they should be, some extra stuff will fall out."
 dandier arid den	true	true	false	false	"Well. That's two things you can't figure to start, but maybe you can, if you think about it."
@@ -6181,12 +6182,12 @@ to decide which thing is oyster-item:
 			decide on haunter;
 	if haunter is reflexed and location of player is location of haunter:
 		decide on haunter;
-	if player is in lapsin' plains:
-		if c2 is in lapsin' plains:
+	if player is in Lapsin' Plains:
+		if c2 is in Lapsin' Plains:
 			decide on c2;
 		if crate is reflexive:
 			decide on crate;
-		if skis are in lapsin' plains:
+		if skis are in Lapsin' Plains:
 			decide on skis;
 		if knob is reflexive:
 			decide on knob;
@@ -7051,7 +7052,6 @@ lamb	"Meanie. There's a better way to help it flee home."
 walls	"Brute force is ineffective. As well as all the swears you use with the brute force. You need to wipe out the whole volt maze, not just these walls."
 hogs	"If you were as strong as Rand and Leo, maybe. But you're not. Maybe you can out-think them."
 trolls	"'I'd beat...' you think, before you realize you've been BAITED. You think bouncers, one scrub. That cools you down." [START oyster]
-brief message	"Better than attacking the messenger. Probably because you aren't going to FIND the messenger."
 urn	"Your irrational anger turns to irrational greed when you get close enough to smack it."
 boats	"Sabot? Batso!"
 raft	"Yes, the stupid oars don't seem to move themselves, but that's no reason to get upset! Think!"
@@ -7060,7 +7060,7 @@ pikes	"That sounds so--brutal. And nonspecific."
 trout	"This game's kind of topsy turvy, but not like THAT."
 knob	"[if knob is reflexed]It's been hit already[else]Yes, but how?[end if]"
 skis	"You give them a whack, and it hurts much more than it should. You wonder if love, not hate, is the answer."
-rude door	"[if door-sux is true]The door is miserable enough for having to let you through.[else]Well...maybe not the WHOLE door...[end if]"
+span pans	"Well, you need to do something to the pans."
 yapper	"I dunno. Not without scissors you don't. That yapper looks pretty tough. He could take out a rock-man or two, you bet."
 ant	"You poke at the ant, which keeps it at bay. You need something more simple, violent and direct."
 Ray Eck	"Not even his cousin, Kim Eck, deserves that." [START towers]
@@ -7173,7 +7173,7 @@ check climbing (this is the generic silly climbing reject rule):
 	if noun is crate: [start OYSTER]
 		say "This isn't a shooter or survival game. Plus the crates are too broken to lead anywhere. [if Shadier Airshed is visited]The door, on the other hand...[else]You already got through the door, anyway.[end if]" instead;
 	if noun is huts: [end OYSTER]
-		say "They're too tall. No good handholds. The rude door is the only way in." instead;
+		say "They're too tall. No good handholds. The span pans guide the only way in." instead;
 	if noun is gaol: [towers]
 		say "Too tall. Anyway, if it were climbable, the subsector wouldn't be the obscurest, now." instead;
 	if noun is prison: [end TOWERS]
@@ -7479,7 +7479,7 @@ understand "knock" as knocking.
 understand "knock [text]" as a mistake ("Just KNOCK instead.");
 
 carry out knocking:
-	if player is in lapsin' plains or player is in study:
+	if player is in Lapsin' Plains or player is in study:
 		if urgent Gunter is off-stage and stuff-found is 3:
 			say "Knock knock! / Who's there? / An adventurer who should probably just OPEN the door instead." instead;
 		say "A hollow CONKK, but nothing more. You may need to try other actions here." instead;
@@ -7805,8 +7805,6 @@ before smelling (this is the you can smell some stuff some places rule):
 		say "Say, spare sea spray." instead;
 	if player is in Achers' Arches:
 		say "Sea rind." instead;
-	if rude door is visible:
-		say "A rued odor from the rude door." instead;
 	if aunt tuna is visible:
 		say "Antiseptic spice taint." instead;
 	if player is in Rascal Craals:
@@ -8998,7 +8996,8 @@ c2	c2	false	337433333	--	"trace"	"trace" or "trace crate"	"Based on where you go
 crate	crate	false	337433333	--	"react"	"react" or "react to crate"	"This time you're ready. You turn around and know when to look when the crate is about to hit you. You knock it down in mid-air and, in a fit of rage, fling it back into the tall weeds and hit the en-pris sniper. You hear an expression of anger, then scurrying. You won't need to recast the crates."
 skis	skis	false	290473956	--	"kiss"	"kiss"	"As you kiss them, they pull up--and dissolve."
 knob	knob	false	214612168	--	"bonk"	"bonk"	"BONK! You hit the knob just right."
-bogus-plains	bogus-plains	false	347641936	--	"splain"	"splain"	"[if door-sux is true]You brag, to nobody and everyone in particular, how you SHOWED that door. It's in no shape to argue[else if bonkies is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the rude door how you'll get by anyway. It's short on detail, but it sounds impressive[end if]. You feel better after this, now you bragged a bit."
+pans	pans	false	248835251	--	"snap"	"snap"	"You snap and, lo and behold, the pans detach and clank and fall over and melt into the ground."
+bogus-plains	bogus-plains	false	347641936	--	"splain"	"splain"	"[if door-sux is true]You brag, to nobody and everyone in particular, how you SHOWED that door. It's in no shape to argue[else if bonkies is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the span pans how you'll get by anyway. It's short on detail, but it sounds impressive[end if]. You feel better after this, now you bragged a bit."
 trout	trout	false	471002223	--	"tutor"	"tutor trout/tortu" or "tutor"	"[trout-tut]."
 wipes	wipes	true	458473653	--	"swipe"	"swipe"	"You swipe the wipes before Aunt Tuna notices. You can't see anything here that's dingy enough to use them--or use them the right way--on. Maybe something somewhere less well-kept."
 bubble wrap	ruby	false	276912353	--	"warp"	"warp"	"You warp the bubble wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"
@@ -11317,8 +11316,8 @@ definition: a thing (called candi) is bluable:
 	if candi is tunes, no; [oyster specific]
 	if player is in Dourest Detours and candi is ant, yes;
 	if candi is haunter and player is in anger range and candi is off-stage, decide no; [visibility issues here. We "see" the haunter but can't see it with bluables]
-	if candi is crate and player is in lapsin' plains:
-		if c2 is in lapsin' plains, yes;
+	if candi is crate and player is in Lapsin' Plains:
+		if c2 is in Lapsin' Plains, yes;
 	if candi is elmer, no; [otters specific]
 	if player is in gates stage and gate-level is 2: [others specific]
 		if candi is perp-priv or candi is searcher or candi is viewer, no;
@@ -16508,7 +16507,7 @@ a direction can be viable.
 definition: a direction (called dir) is viable:
 	if player is in phat path and dir is north:
 		decide no;
-	if player is in lapsin' plains and dir is inside and door-sux is false:
+	if player is in Lapsin' Plains and dir is inside and door-sux is false:
 		decide no;
 	if player is in frontage and atmo-moat is in frontage and dir is west:
 		decide no;
@@ -17856,17 +17855,12 @@ carry out traceing:
 		say "You already did that. If you retrace, you might get lost at a terrace." instead;
 	try fliptoing c2 instead;
 
-after fliptoing when player is in lapsin' plains: [everything except "splain"]
-	if noun is c2 or noun is crate or noun is skis or noun is knob:
-		check-rude-door;
-	continue the action;
-
 check scaning crate:
-	if c2 is in lapsin' plains:
+	if c2 is in Lapsin' Plains:
 		try scaning c2 instead;
 
 check fliptoing crate:
-	if c2 is in lapsin' plains:
+	if c2 is in Lapsin' Plains:
 		say "That's a good idea, but you're not sure HOW to react. You need a bit of data, first.";
 		preef crate;
 		the rule succeeds;
@@ -17875,16 +17869,16 @@ understand "odor" as a mistake ("[if Gunter is off-stage]You'd stink as a host, 
 
 understand "rood" as a mistake ("[if Gunter is off-stage]No need to surprise a guest like that. Just open the door[else]It'd be your own crucifix if you let the shouty youths outside in[end if].") when side door is visible.
 
-check opening rude door:
+check opening span pans:
 	try going inside instead;
 
-check going inside when player is in Lapsin' plains:
+check going inside when player is in Lapsin' Plains:
 	if crate is reflexive:
 		say "As you go for the door, you [one of]feel[or]remember[stopping] something hitting you in the [one of]back[or]head[or]leg[or]kidney[or]foot[or]patookus[or]appendix[in random order]. It's not particularly harmful, but it's distracting enough that you won't be able to [if knob is reflexive]smack the door around the right way[else]get through the door[end if] until you reckon about that conker." instead;
 	if skis are visible:
 		say "Those skis block the door pretty handily." instead;
 	if knob is not reflexed:
-		say "'NOPE, PEON!' the rude door booms, somehow. The knob seems stuck." instead;
+		say "The knob seems stuck--and attached to the pans." instead;
 	if Shadier Airshed is unvisited:
 		say "You ignore a dour 'Redo?' as you walk in.[paragraph break]But you have a new problem. You need a hut in the circle of huts. But how to identify it? Disturbing a resident could be troublesome. They are in all shapes and sizes. Hmm, a hut, a hut...[wfak][paragraph break]Wait! Maybe it's this one, or...[wfak][paragraph break]That one! A hut shaped like Utah! Of course! You'd recognize that rectangle with a rectangle bitten out of one corner anywhere. You feel slightly...haut.";
 	else:
@@ -18443,13 +18437,13 @@ carry out cleaning:
 	now wipes are in lalaland;
 	min-and instead;
 
-book Lapsin' plains
+book Lapsin' Plains
 
-Lapsin' Plains is north of anger range. Lapsin' plains is in oyster. "[if rude door is visible]A rude door guards some shut huts here[else]Huts lie thus here[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]."
+Lapsin' Plains is north of anger range. Lapsin' Plains is in oyster. "[if span pans visible]span pans guard your way into huts[else]Huts lie thus here[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]."
 
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin' Plains
 
-c2 is vanishing privately-named scenery in lapsin' plains. c2 is undesc. printed name of c2 is "wherever the crate is coming from"
+c2 is vanishing privately-named scenery in Lapsin' Plains. c2 is undesc. printed name of c2 is "wherever the crate is coming from"
 
 a-text of c2 is "RRYRY". b-text of c2 is "RPGRG". parse-text of c2 is "x[sp]r[sp]a[sp][sp]e". c2 is parse-spoilable.
 
@@ -18460,7 +18454,7 @@ instead of doing something with the crate:
 		say "You don't need to fiddle randomly with the debris." instead;
 	continue the action;
 
-does the player mean opening the rude door: it is likely.
+does the player mean opening the span pans: it is likely.
 
 the crate is reflexive scenery in Lapsin' Plains. "[if crate is reflexed]You can only see fragments of what it was, and they're not worth paying attention to[else]You can't see the crate but you know it, or one just like it, is about to be thrown at you. Crates are a dime a dozen for any bad guys, so that could go on for a while[end if]."
 
@@ -18472,22 +18466,22 @@ understand "brides" as a mistake ("No, no time to think about romance, now.") wh
 
 understand "thus" as a mistake ("Your inactive word does nothing to the huts[if door-sux is false]. Perhaps you can do something to the door[else]. But you don't need to do any more, since you can walk in[end if].") when shut huts are visible.
 
-the shut huts are plural-named scenery in Lapsin' plains. "They're shaped like a big ol['] upended tush.". understand "tush" and "hut" as shut huts.
+the shut huts are plural-named scenery in Lapsin' Plains. "They're shaped like a big ol['] upended tush.". understand "tush" and "hut" as shut huts.
 
 check taking shut huts:
 	try entering shut huts instead;
 
 instead of entering huts:
-	try opening rude door instead;
+	try opening span pans instead;
 
-after printing the locale description for Lapsin' plains when Lapsin' plains is unvisited:
+after printing the locale description for Lapsin' Plains when Lapsin' Plains is unvisited:
 	say "You hear splintering and notice a crate that fell near you. Someone or something doesn't like you here.";
-	now fragments are in lapsin' plains;
+	now fragments are in Lapsin' Plains;
 
 instead of cutting denim:
 	try attacking denim;
 
-the skis are a plural-named flippable thing in Lapsin' plains. the skis are fixed in place. "Skis criss-cross over the door, blocking you from entry."
+the skis are a plural-named flippable thing in Lapsin' Plains. the skis are fixed in place. "Skis criss-cross over the door, blocking you from entry."
 
 a-text of skis is "RYRR". b-text of skis is "RYRP". parse-text of skis is "x[sp]i[sp]x[sp]s". skis is cheat-spoilable.
 
@@ -18505,7 +18499,7 @@ to say ski-la:
 	if skis are in lalaland:
 		say ", and you already nailed that";
 
-description of skis is "They're [one of]SISK brand (of course) and[or][stopping] criss-cross over the rude door. You won't make it through without getting rid of them."
+description of skis is "They're [one of]SISK brand (of course) and[or][stopping] criss-cross over the span pans. You won't make it through without getting rid of them."
 
 the skis are vanishing.
 
@@ -18524,58 +18518,56 @@ understand "embrace [text]" and "embrace" as a mistake ("Hug? Ugh. Guh.")
 
 chapter splaining
 
-bogus-plains is privately-named LLPish reflexive scenery in lapsin' plains. understand "plains" as bogus-plains when player is in lapsin' plains and debug-state is true. bogus-plains is undesc. printed name is "all around the plains"
+bogus-plains is privately-named LLPish reflexive scenery in Lapsin' Plains. understand "plains" as bogus-plains when player is in Lapsin' Plains and debug-state is true. bogus-plains is undesc. printed name is "all around the plains"
 
 a-text of bogus-plains is "RRRYYR". b-text of bogus-plains is "RRRY??". parse-text of bogus-plains is "x[sp]x[sp]x[sp]a[sp]?[sp]?".
 
 chapter bonking
 
-to check-rude-door:
-	if door-sux is false:
-		if skis are not visible:
-			if crate is reflexed:
-				if crate is reflexed:
-					if knob is reflexed:
-						say "Your last act seems to have broken the door's will to block you. It emits a rude odor, rued briefly, and it creaks open with a hinge-neigh and grumpy 'Open door? Done poor.' You're all 'Postpone? Stop? Nope.'";
-						now door-sux is true;
-
 door-sux is a truth state that varies.
 
-the rude door is a thing in Lapsin' plains. "You see a door leading [if player is in lapsin' plains]in[else]out[end if]. A rude message is written above a knob on the door."
+the span pans are plural-named vanishing scenery in Lapsin' Plains. "You see a door leading [if player is in Lapsin' Plains]in[else]out[end if]. [if skis are in plains and knob is in plains]Skis and a knob hold the pans together[else if skis are in plains]Skis criscross over the pans[else]A knob still holds the pans together[else]You got rid of the knob and skis, but the pans are still in the way[end if]."
 
-the rude door is fixed in place.
+to say pan-block:
+	if knob is in lapsin' plains and skis are in lapsin' plains:
+		say "[one of]skis and knob[or]knob and skis[at random]";
+	else if knob is in lapsin' plains:
+		say "knob";
+	else:
+		say "skis"
 
-understand "odor" as a mistake ("The door kind of stinks as a semi-living entity, and anyway, the reverse of this puzzle happened last game.") when rude door is visible.
+check fliptoing span pans:
+	if crate is not in lalaland:
+		say "You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.";
+		preef span pans;
+		the rule succeeds;
+	if knob is in lapsin' plains or skis are in lapsin' plains:
+		say "The pans rumble a bit but are held together by the [pan-block]. You'll need to unblock the pans for that to work.";
+		preef span pans;
+		the rule succeeds;
 
-understand "rood" as a mistake ("The door's already rood. I mean rude. Try seeing what's around it, instead.") when rude door is visible.
+a-text of span pans is "RRYR". b-text of span pans is "?R?R". parse-text of span is "?[sp]?[sp]?[sp]p". span pans are cheat-spoilable.
 
-understand "rued" as a mistake ("You can't have rued the door until you've got beyond it. Try seeing what's around it, instead.") when rude door is visible.
+understand "pan" and "snap pan" as span pans when player is in Lapsin' Plains and span pans are in Lapsin' Plains.
 
-instead of taking rude door:
-	say "It's obnoxious but not THAT unhinged."
+after doing something with span pans:
+	set the pronoun it to span pans;
 
-instead of entering rude door:
-	try opening rude door instead;
+understand "naps" as a mistake ("You need action, here! Maybe not an exhausting one, but some action.") when span pans are visible.
 
-understand "pone" as a mistake ("The message is corny, but the door's a piece of cake [if knob is not reflexed]once you figure[else]since you figured[end if] what to do with the knob.") when rude door is visible
+instead of taking span pans:
+	say "Much too heavy."
 
-the brief message is part of the rude door. brief message is undesc and useless.
+instead of entering span pans:
+	try opening span pans instead;
 
-instead of doing something to the brief message:
-	if action is procedural, continue the action;
-	say "You can't really do much with the message other than analyze it.";
+understand "pone" as a mistake ("The message is corny, but the door's a piece of cake [if knob is not reflexed]once you figure[else]since you figured[end if] what to do with the knob.") when span pans are visible
 
-instead of examining message:
-	try examining rude door instead;
+description of span pans is "They're squarish, so you can't scootch under them. But there are a bunch of messages, all probably just to distract you: 'HI, ENTER? IN THERE? NEITHER!' / 'OPEN? NOPE!' / 'TRY, O TYRO!'[paragraph break]You're probably better off just focusing on the pans.";
 
-description of rude door is "[if location of player is Lapsin' plains]You make out the words[fixed letter spacing][line break]
-[line break]  'HI, ENTER?'
-[line break]  'IN THERE?'
-[line break]...NEITHER!!![variable letter spacing][otherwise]This side of the door says TRY, O TYRO[end if].";
+understand "troy" and "tory" as a mistake ("Apparently, the span pans don't have a name.") when player is in Lapsin' Plains and span pans are in Lapsin' Plains.
 
-understand "troy" and "tory" as a mistake ("'NOPE! THAT'S NOT MY NAME! AND WHY DO YOU CARE ANYWAY?' yells the rude door. At least you didn't break its spirit.") when Shadier Airshed is visited and the rude door is visible.
-
-the knob is part of the rude door. the knob is flippable and reflexive. description of knob is "It's just a doorknob, though you can imagine it saying 'Noob! Dork!' You'd just love to give it a good effective smack."
+the knob is scenery in Lapsin' Plains. the knob is flippable and vanishing. description of knob is "It's just a doorknob, though you can imagine it saying 'Noob! Dork!' You'd just love to give it a good effective smack."
 
 understand "doorknob" as knob.
 
@@ -18583,14 +18575,27 @@ a-text of knob is "RYRR". b-text of knob is "RYRR". parse-text of knob is "x[sp]
 
 does the player mean bonking the knob: it is very likely.
 
-check scaning rude door:
-	if knob is reflexed and skis are visible:
-		say "The door doesn't show anything by itself, but the skis do.";
-		try scaning skis instead;
-	if knob is reflexive and skis are in lalaland:
-		say "The door doesn't show anything by itself, but the knob does.";
-		try scaning knob instead;
-	say "The door reveals nothing." instead;
+check scaning span pans:
+	if knob is in lalaland and skis are in lalaland, continue the action;
+	say "The settler gives weird readouts depending on if you go over [if knob is in Lapsin' Plains and skis are in Lapsin' Plains]the knob, skis or pans[else if knob is in lapsin' plains]the knob or pans[else]the skis or pans[end if], but when you focus on the skis, this is what you get:[paragraph break]";
+
+chapter snaping
+
+snaping is an action applying to nothing.
+
+understand the command "snap" as something new.
+
+understand "snap" as snaping.
+
+carry out snaping:
+	if player is in lapsin' plains:
+		if span pans are in lalaland:
+			say "Yeah, it feels like it was a snap, now." instead;
+		try fliptoing snap pans instead;
+	say "This isn't the time or place to snap. With your fingers or with your brain.";
+	the rule succeeds;
+
+chapter bonk
 
 bonking is an action applying to one thing.
 
@@ -18598,10 +18603,10 @@ understand the command "bonk [something]" as something new.
 
 understand "bonk [something]" as bonking.
 
-bonkies is a truth state that varies;
+bonkies is a truth state that varies.
 
 carry out bonking:
-	if location of player is not Lapsin' plains:
+	if location of player is not Lapsin' Plains:
 		say "[reject]" instead;
 	if noun is door:
 		say "I'll assume you meant the knob instead...";
@@ -18628,7 +18633,7 @@ fragments are plural-named scenery. "Rotten brown fragments. Annoying and gross,
 instead of taking the fragments:
 	say "Eww. You would rather trace where they came from."
 
-check opening the rude door:
+check opening the span pans:
 	if knob is reflexive:
 		say "It's jammed and there's no key. Or keyhole under the knob[one of]. And no, there's no mat to look under anywhere for a key. Just FYI[or][stopping]." instead;
 
@@ -18868,7 +18873,7 @@ carry out burying:
 	if player does not have rigged digger:
 		if player has prod:
 			say "Your prod from a hut should be able to bury stuff if you tinker right. Jar it the right way." instead;
-		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin' Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if Shadier Airshed is unvisited]. Maybe there's something behind that rude door[else]. Maybe you missed something in a hut[end if][stopping]." instead;
+		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin' Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if Shadier Airshed is unvisited]. Maybe there's something behind the span pans[else]. Maybe you missed something in a hut[end if][stopping]." instead;
 	if ruby is in lalaland:
 		say "You half forgot where you dug the ruby. You're not sure if you want it back." instead;
 	if player does not have ruby:
@@ -20469,8 +20474,8 @@ check unlocking:
 		say "It doesn't seem to have a key or anything. But whatever's inside it might." instead;
 	if noun is side door:
 		say "[if Gunter is off-stage]Just open it instead[else]With what's outside? Bad idea[end if]." instead;
-	if noun is rude door:
-		say "Sticking a key in the rude door would annoy it further." instead;
+	if noun is span pans:
+		say "There's no keyhole in the span pans." instead;
 	if noun is prison ropins:
 		say "[if duck is returned]You already did[else]Yes. There should be a way to open it...but you haven't found a key, or anything like it, anywhere[end if]." instead;
 	say "You don't have anything resembling a key, and that doesn't seem to need to be unlocked." instead;
@@ -25703,8 +25708,8 @@ before objhinting for the first time:
 	if hintcand is the location, decide no;
 	if hintcand is the diorama or hintcand is part of the diorama: [if hintcand is out of play?]
 		decide no;
-[	if hintcand is rude door or hintcand is knob:		[Bad Coding. if hintcand is enclosed by a thing: now R1 is map region of location of a thing that encloses hintcand;]
-		if rude door is visible:
+[	if hintcand is span pans or hintcand is knob:		[Bad Coding. if hintcand is enclosed by a thing: now R1 is map region of location of a thing that encloses hintcand;]
+		if span pans is visible:
 			decide yes;
 		decide no;]
 	let R1 be map region of location of hintcand;
@@ -26424,8 +26429,8 @@ reward drawer	"[if wrap is off-stage]You need to please Aunt Tuna to get what's 
 cans	"[one of]You can get rid of them for a last lousy point.[plus][or]If you've been using the settler, you really should know this verb.[plus][or]SCAN the cans.[minus][cycling]"
 ruby	"[one of]The ruby is useful.[plus][or]The ruby is the haunter's. The haunter is someone stole the ruby.[plus][or]You don't want to be caught with the ruby, but maybe if you can frame someone or some other people...[plus][or]You can BURY the ruby in the Rascal Craals[if rigged digger is off-stage], though you need something to bury it with[end if].[minus][cycling]"
 wrap	"[if warp-try is true][one of]You know the verb but not where to warp the wrap.[plus][or]Where could you annoy someone with the wrap? Someone with sensitive ears?[plus][or]The sandier sardine in Achers['] Arches will run if you warp the wrap near him.[minus][cycling][else][one of]So what's the verb to pop the wrap?[plus][or]Twenty-four choices. Six if you scan it. One if you cheat.[plus][or]You need to WARP the wrap.[plus][or]But you can't warp the wrap any old place. It might be fun and useful to annoy somefish.[plus][or]Who has sensitive hearing the wrap would annoy?[plus][or]WARP the wrap by the sardine.[minus][cycling]"
-rude door	"[one of]The rude door has several puzzles.[plus][or]You need to dispose of the door's knob.[plus][or]You need to get rid of the skis on the door.[plus][or]The crate you keep getting hit with is a pain, too.[plus][or]See each sub-part for individual clues.[cycling]"
-shut huts	--	rude door
+span pans	"[one of]The span pans are a five-part puzzle. You may guess the final step, which consists of dissolving the pans.[plus][or]You need to dispose of the knob.[plus][or]You need to get rid of the skis.[plus][or]The crate you keep getting hit with is a pain, too.[plus][or]See each sub-part for individual clues or, if you need help with the pans, see below.[plus][or]You can SNAP.[cycling]"
+shut huts	--	span pans
 tubs	"[one of]The tubs seem tough to crack.[plus][or]You could blast the tubs, or crush them, ...[plus][or]...or BUST them.[cycling]"
 prod	"[one of]The prod seems like it should be more than it is, but you can't figure how to operate it.[plus][or]Operating the prod is probably simple and dumb, but something you do by accident.[plus][or]To operate the prod, you need a simple standard action this game doesn't usually let you do.[plus][or]DROP the prod.[minus][cycling]"
 rigged digger	"[one of]The rigged digger is used to dig ground.[plus][or]The digger can get what's in the plain.[plus][or]How would you summon the HAUNTER?[plus][or]You can UNEARTH it.[cycling]"
@@ -27385,9 +27390,9 @@ to say d-then:
 		say "DERAIL then ";
 	if lev-pull is false:
 		say "pull the lever then ";
-
+[?? need to spill pills vs span pans]
 to say how-pills-used:
-	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is rude door]BONK the knob[else if cheated-guy is a-s]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over the river[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is o-t]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is pre-haun]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is heaps]SHAPE the heaps[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
+	say "[2da]instead of using the pills, you could've tried to [if cheated-guy is prod]DROP the prod[else if cheated-guy is eeks]SEEK the eeks[else if cheated-guy is yapper]PREPAY the yapper[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is wrap]WARP the wrap[else if cheated-guy is c2]TRACE the crate[else if cheated-guy is crate]REACT to the next crate[else if cheated-guy is ant]TAN the ant[else if cheated-guy is waste]SWEAT over the waste[else if cheated-guy is knob]BONK the knob[else if cheated-guy is skis]KISS the skis[else if cheated-guy is knob]BONK the knob[else if cheated-guy is span pans]SNAP at the pans[else if cheated-guy is a-s]SEARCH the arches[else if cheated-guy is gleaner]ENLARGE the gleaner[else if cheated-guy is urn]RUN from the urn[else if cheated-guy is pale plea]LEAP after the pale plea[else if cheated-guy is trolls]STROLL after [remaining-actions of 0][else if cheated-guy is carps]SCRAP or SPIKE the carps/pikes[else if cheated-guy is clam]CALM the clam[else if cheated-guy is boats]BOAST to get over the river[else if cheated-guy is sardine]WARP the wrap around the sardine[else if cheated-guy is trout]TUTOR the trout[else if cheated-guy is tubs]BUST the tubs[else if cheated-guy is ruby]BURY the ruby[else if cheated-guy is o-t]PATROL for the portal[else if cheated-guy is dialer]DERAIL with the dialer[else if cheated-guy is d2]REDIAL the dialer[else if cheated-guy is pre-haun]UNEARTH the haunter[else if cheated-guy is haunter]ASSUAGE the sausage[else if cheated-guy is heaps]SHAPE the heaps[else if cheated-guy is lance]CLEAN the lance[else]...oops, I left something out for [the cheated-guy]. Sorry[end if]"
 
 a region can be tickedoff. a region is usually not tickedoff.
 
@@ -27485,7 +27490,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 			say "[2dmiss of cur-reg]you could've tried to TAN the ant.";
 		else if ant is not in lalaland:
 			say "[2dmiss of cur-reg]you passed by the side-quest to TAN the ant in the Dourest Detours.";
-		if bogus-plains is in lapsin' plains:
+		if bogus-plains is in Lapsin' Plains:
 			say "[2dmiss of cur-reg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 	now cur-reg is towers;
 	if Towers is solved:
@@ -27720,7 +27725,7 @@ index map with olde lode mapped east of posh hops shop.
 index map with hero's shore mapped east of olde lode.
 index map with fighter freight mapped east of hero's shore.
 index map with achers' arches mapped north of posh hops shop.
-index map with handsome sand home mapped east of lapsin' plains.
+index map with handsome sand home mapped east of Lapsin' Plains.
 index map with lean lane mapped east of handsome sand home.
 index map with tenfold mapped north of horned hedron.
 index map with Dourest Detours mapped east of tenfold.
