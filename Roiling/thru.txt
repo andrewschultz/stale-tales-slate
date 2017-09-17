@@ -35,7 +35,7 @@ You can also access the new area(s) that appeared in releases 2 and 3 by playing
 
 I recommend that you search for the section you want to visit--this document is divided that way. It's a bit of a spoiler what the sections are. For now, I would say you can search for
 
-ROMAN MANOR
+MEANS MANSE
 STORE H
 STORE P
 STORE T
@@ -46,7 +46,7 @@ STORE Y
 
 Also, I don't cover Last Lousy Points in any section. These are hintable in-game but I also ROT13'd them at the end. Also, for release 3, I wrote up some metrics of how big areas are. They should be included in metrics.htm.
 
-The ROMAN MANOR has three ways through. I'll list them all.
+The MEANS MANSE has three ways through. I'll list them all.
 
 You need to do semi-constructive things so that Gunter bugs you and you have a chance to see the game's mechanics. There are a lot of things you can do, like try to figure something or look at your notepad. Seven, to be precise.
 
@@ -359,6 +359,8 @@ What is going on here? You can't go in any direction. They don't make sense. And
 
 The Worst Ad is a Last Lousy Point. It's not necessary, so I won't spoil it here. You probably will guess it, since there are only so many words it can be, based on the words you use here.
 
+The church sign says DIE SIN or SIN DIE. And going IN doesn't work.
+
 > INSIDE
 
 > X LIST
@@ -382,8 +384,6 @@ Duck his elbow.
 Rude 'N Nuder?
 
 > UNDER
-
-The church sign says DIE SIN or SIN DIE. And going IN doesn't work.
 
 How to get into Pat's?
 
@@ -418,7 +418,7 @@ How do you get the crowd to help you where to go next, around the bean?
 
 > BENEATH
 
-This cavern is unlit.
+The Harms Marsh is unlit.
 
 > UNTIL
 
@@ -700,15 +700,12 @@ But you want to be a good guest. The food isn't bad.
 
 At any time here in the plains you can just sound off for a LLP.
 
-The skis are blocking the door.
+The skis are blocking the span pans. The knob is jammed.
 
 > KISS SKIS
-
-The knob is jammed.
-
 > BONK KNOB
 
-You keep getting hit by a crate.
+Oh no! You keep getting hit by a crate.
 
 > TRACE
 > REACT
@@ -716,6 +713,10 @@ You keep getting hit by a crate.
 Ah, that'll do it.
 
 > BONK KNOB
+
+Okay, now to deal with the span pans.
+
+> SNAP
 
 > IN
 
@@ -1827,27 +1828,28 @@ OR IS IT? Well, there is still Demo Dome Mode, which isn't an adventure but more
 
 There is not much to do in the DEMO DOME MODE other than to examine everything. The game keeps track of how much you have left to examine in any one room and nags you if you leave before examining everything fully.
 
-Known Comp vs Post-comp walkthrough differences
+Known Comp vs Post-comp walkthrough differences (this is largely for puzzles and does not cover changing location names, which are documented in the release notes)
 
 General: Trizbort map included with release 3. Last Lousy Points at very end, in ROT13.
 
-1 MANOR:
+1 MANSE/MANOR:
   * release 2: the chimney is now available for escape. Gunter's options are different. Elmo's are too. Elmo is moved, as are the plaster and plates. Elmo has a tutorial.
   * release 3: Gunter does not stop by until you examine a few things. So you have more time to activate the two new areas, and you also can figure what you're supposed to be doing. Plus you are forced to talk to Gunter for an overview, but you can skip the rest. You can also freely flip diorama things but nothing else, but flipping something that should create an exit brings Gunter closer. Elmo's tutorial is tuned up.
+  * release 4: MANOR is now MANSE.
 2 OYSTER:
   * release 1 (deprecated) : you DESTROY Oyster D at the end and can pull the lever if you want. No yapper.
   * release 2: you can now do something with the sign in the initial area, and there's a new verb for you to get out, which relies on people there and not the bar name. Also, you need to get 3 of 5 verbs. The sign in the shore is gone, but the raft is visible and has a two-part solution with oars. You no longer need to ARRIVE--there's a better verb since there are boats. The portal moved from the plains to the hideout. You no longer need to SHAPE the heaps--the tubs, instead. The papery yapper is not present to bribe. The pills are now available to skip a puzzle. There is a side area to put an item to frame the walleyes less implausibly. There is also a side quest that starts in the Fishbowl and ends just before the final location, which is named differently. It involves wipes, waste, a lance, an ant and, optionally, the heaps, re-purposed. You also get killed a lot less by the haunter. The game gives a warning.
   * release 3: it's now 3 of 6 verbs to learn in the Hops Shop (renamed in release 2) though 2 relate to the jukebox, along with an LLP in the Handsome Sand Home (ex-fishbowl) (dent) and in the plains (general) with a LLP in the Lean Lane. You also have another puzzle and location if you get on the boats (LEAP).
-  * release 4: you now don't use the lever at all. You replace the pins. You can SPIN or SNIP them.
-
+  * release 4: you now don't use the lever at all. You replace the pins. You can SPIN or SNIP them. The rude door was replaced by span-pans, which you need to SNAP at to get past.
 3 PRESTO:
  * release 1 (deprecated) : Rickey is in Dirge Ridge instead of Rand.
  * release 2: Lawl Wall replaces Horned Hedron with more sensible puzzle. You now need to summon a SUB or BUS at the end. Rand was Rickey. The Lawl Wall was not there. Many places are renamed.
  * release 3: some causality is fixed in this release. It may have more to do with the hints than the actual puzzles, but that should be clearer, now. The escaroles allow an alternative path to bring the yak over. You no longer have to read the textbook.
+ * release 4: the HAWT THAW is now zappable.
 4 TOWERS:
  * release 2: guardians are moved around, with the ingrates (more appropriate for the right word) replacing the yapper, who is optioned to the Oyster's final room where he makes more sense. The nebula now guards items in the topside. You must also get rid of both the prefect (swaps with pirates) and the deacons so the kid appears. The bonker is new as well. The sweatier wait-seer replaces the thug and clues the right word better. Many guardians are moved around. You could skip certain things with the kid before, like giving him the Gizmo, but you can't now.
  * release 3: the tavern was moved to the start, to give you a clearer idea what to do and give more of a storyline. You need to dispel three of six random guardians before Rodney goes, not 2 of 4, Daltho has his own room, and DYING is switched back from a solution to what it is. The nebula now guards Daltho's own room. You go back there instead of to the tavern. Andrew, Archie, Barney, Bredo, Dewey, Goldy, Marcel, Marlon (I didn't find the relatively simple code to override "normal,") Royce and Wade are also not present in the comp release. Most were in release 2 as well, though I'm too lazy to research which. RIP the slobb-blobs. The snider diners and natives are new, with greedy Ed Yerg replacing the greedy gnome. The atheists and yacker are new, too, with the serpent replacing the nebula. The yurts are now a last lousy point. Curst Palace now has a name--Castle Apcur.
- * release 4: the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. You also need to make the kid stop fidgeting before talking about Dr. Yow. The old puzzle (TENTATIVE) is now an LLP. The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better. The nameless salesmen were also moved to ambient scenery in the Clangier Clearing, in Others. The rewired robot is gone, replaced by the butlers, but it serves as an LLP. Also, the stinger now replaces the bonker.
+ * release 4: the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. You also need to make the kid stop fidgeting before talking about Dr. Yow. The old puzzle (TENTATIVE) is now an LLP. The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better. The nameless salesmen were also moved to ambient scenery in the Clangier Clearing, in Others. The rewired robot is gone, replaced by the butlers, but it serves as an LLP elsewhere--sort of. Also, the stinger now defends the subsector after you've disposed of the bonker.
  5 TROVES
  * release 2: you now have a new action near the end in addition to dealing with the singer. Eddie C was not in release 1. The lager was also moved from the Very Top/Office. DIVORCES did not appear in release 1.
  * release 3: you had only one way to find the cellar (the direct way) in release 2. Now you have another. LLP with the book the guy gives you at the start. It's renamed, with an author, Peg A. Page. There's now a different puzzle to enter the skyscraper (PERNOD vs STEW)
@@ -1910,9 +1912,9 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
 
 METRICS
 
-The game has point totals for each region, but how do they compare in size? I decided to take a look at how many words you needed to type in for the various anagrams. I likely made some niggling arithmetic errors here, so if you can correct them, I'd be happy. Big picture comments still stand, I think, and this is largely for curiosity. I didn't account for using a hint item to reduce the minimum.
+The game has point totals for each region, but how do they compare in size? I decided to take a look at how many letters you needed to type in for the various anagrams. Despite running a script that counted keystrokes in walkthroughs, I likely made some niggling arithmetic errors here, so if you can correct them, I'd be happy. Big picture comments still stand, I think, and this is largely for curiosity. I also didn't account for using a hint item to reduce the minimum.
 
-I think that this isn't fully accurate since complexity varies as perhaps (letters ^ 2) or something. So a sum is not so useful. But this gives a bit extra to look at. If you're very interested, a heat map should be attached with this release.
+I think that this overview of complexity isn't fully accurate since complexity likely varies more as (letters ^ 2) or something. So a sum is not so useful. But this gives a bit extra to look at. If you're very interested, a heat map should be attached with this release. WMET.HTM is the file name, for "write metrics."
 
 Manor has a minimum of 40 and a maximum of 67. Hit the basement and ignore the giant pin for the minimum score.
 
@@ -1922,13 +1924,13 @@ Store V has a minimum of 82 and a maximum of 119. The five Last Lousy Points acc
 
 Store U has a minimum of 107 and a maximum of 114. The last lousy point gives you seven letters. The alternate ways through have words of the same length. It's debatable here whether U is harder than V. U clearly has fewer choices for words. V may be a bit tougher to clear completely, though.
 
-Store P has a minimum of 136 and a maximum of 164. You can save a letter with the right good-bye to Leo and Rand. The lamb, TBA, and ROM sticks go, too. You can save 15 moves with the crust (volt maze, washups.) This has a moderate amount of points, but many solutions are relatively short. Again, the actual words are restricted as in Store U.
+Store P has a minimum of 132 and a maximum of 168. You can save a letter with the right good-bye to Leo and Rand. The lamb, TBA, and ROM sticks go, too. You can save 15 moves with the crust (volt maze, washups.) This has a moderate amount of points, but many solutions are relatively short. Again, the actual words are restricted as in Store U.
 
-Store Y has a minimum of 125 and a maximum of 178. Many solutions are short words. The five-command side quest is a big one. You can actually spill the pills right away to "lose" 8 more letters.  You can add a few letters with the right bar actions, crossing the river the two-step way, and several LLPs.
+Store Y has a minimum of 136 and a maximum of 187. Many solutions are short words. The five-command side quest is a big one. You can actually spill the pills right away to "lose" 8 more letters.  You can add a few letters with the right bar actions, crossing the river the two-step way, and several LLPs.
 
-Store W has a minimum of 155+ and a maximum of 277++. Both the "H" and "I" paths through the guardians are 36 letters. You can save keystrokes, too. Fussier vs. unlocked. The tavern may take an extra keystroke or two since one group of enemies has 4 or 5 letters, and another has 7 or 8. That is why I put plusses in the totals. The warriors are randomly determined at the start of the game, so you can't undo to get easier ones. You can skip a lot, like three of the warriors, the strudel, the denim and other LLPs and, of course, five central guardians and two outlying ones. But even at a minimum, W has you solve more letters than some store maximums. Combined with a big map, you can see why this is the toughest region.
+Store W has a minimum of 159-161 and a maximum of 297-299, subjected to some randomness. Both the "H" and "I" paths through the guardians are 36 letters. You can save keystrokes, too. Fussier vs. unlocked. The tavern may take an extra keystroke or two since one group of enemies has 4 or 5 letters, and another has 7 or 8. That makes for the estimates in the totals. The warriors are randomly determined at the start of the game, so you can't undo to get easier ones. You can skip a lot, like three of the warriors, the strudel, the denim and other LLPs and, of course, five central guardians and two outlying ones. But even at a minimum, W has you solve more letters than some store maximums. Combined with a big map, you can see why this is the toughest region.
 
-Store T has a minimum of 153 and a maximum of 200. The bran barn forces more letters, and you can LLP Elmer and Merle, two animals, and the cinders. Also, you can pick the long options for the men (19) vs the minimum (16) or decide whether to pick the long option for the imp (16). The macks also can swing from 22 to 31. Also, this range is not fully representative of the difficulty, since you can deduct a lot of points for when letters end in LY. That drops it to 129 to 176.
+Store T has a minimum of 153 and a maximum of 200. The bran barn forces you to use several more letters, and you can LLP Elmer and Merle, two animals, and the cinders. Also, you can pick the long options for the men (19) vs the minimum (16) or decide whether to pick the long option for the imp (16). The macks also can swing from 22 to 31. There's randomness with the adverbs given but not their length. Also, this range is not fully representative of the difficulty, since you can deduct a lot of points for when letters end in LY. That drops it to 129 to 176.
 
 Store H has a minimum of 160 and a maximum of 321. But its theme is easy enough, I think, that it shouldn't be too tough.
 
@@ -1936,18 +1938,19 @@ LAST LOUSY POINTS
 
 Note that I'm not really going to address cases like finding 3/3 things when you only need 2/3 or, in OTHERS, where you can avoid flipping a lot of fruits. Or all the guardians in Towers, where you can leave seven alone. Those should be in the walkthrough, because they can all potentially help you solve the game. These are stand-alone points which are utterly unnecessary to solving things and, in fact, can't really help you go forward. Often they will seem superfluous or even slightly hidden.
 
-Hints are in ROT13.
+Hints are in ROT13. If you aren't sure what ROT13 is, it can be translated at ROT13.com.
 
 STORES:
 
-FBEORG from Store B.
+FBEORG from Store B. Note that the side trip to Cruelest Lectures means 3 extra points, but doing so gives you a hint item.
 
 PRESTO:
 
 OYNZ scares the lamb. But only enough to send it safely home!
 
- JUNG gets rid of the hawt thaw. (Neat ROT13, eh?)
-The trim socks become EBZ FGVPXF--no space needed. The escaroles become PNFFREBYR.
+JUNG gets rid of the hawt thaw. (Neat ROT13, eh?)
+
+The trim socks become EBZ FGVPXF--no space needed. The last letter is optional, too. The escaroles become PNFFREBYR. This allows an alternate way through.
 
 ROUTES:
 
@@ -1956,10 +1959,10 @@ Go GBJNEQF the worst ad.
 TROVES:
 
 TNCR at Simple Impels by Peg A. Page.
-TYNER at the lager
+TYNER at the lager (again, interesting ROT13.)
 QVFPBIRE something about Divorces magazine. There actually is a magazine named this LLP, and it's pretty well-known. Or it was. It's much less fluffy than Divorces.
 
-Note that troves has a lot of 1-of-2 puzzles, where you may or may not skip to the next area after getting one of them. These are listed in the walkthrough.
+Note that troves has a lot of 1-of-2 puzzles, where you may or may not skip to the next area after getting one of them, and you may or may not be able to solve both. These are listed in the walkthrough.
 
 TOWERS:
 
@@ -1992,4 +1995,4 @@ Side quest:
 FJVCR wipes, FJRNG (over waste,) PYRNA lance, FUNCR heaps (not necessary for the quest but not available without it,) GNA ant.
 
 OTHERS:
-Don't use the arugula to GURU any item successfully.
+Don't use the arugula to "guru" any item successfully.

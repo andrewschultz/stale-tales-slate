@@ -465,9 +465,9 @@ use ALLOC_CHUNK_SIZE of 36000.
 
 use MAX_VERBSPACE of 10240.
 
-use MAX_ACTIONS of 625.
+use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 640.
+use MAX_VERBS of 660.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -9013,7 +9013,7 @@ haunter	haunter	false	462435186	--	"assuage"	"assuage"	"'How sad, shadow,' you e
 lever	lever	false	501914680	--	"revel"	"revel"	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
 gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."
 yapper	yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' He motions you to slip him the gleaner behind your back. Then he goes off to find such a judge, presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"
-pins	d2	false	291640279	--
+pins	d2	false	291640279	--	"spin"	"spin" or "spin pins"	"You fiddle with the pins, and bang! Something works."[??]
 d2	d2	false	335153504	Strip of Profits	"redial"	"redial"	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range. Between Aunt Tuna, the sardine, and even the reluctant trolls--a story.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold. Now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
 dialer	dialer	false	335153504	--	"derail"	"derail"	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!'Then a pause. Then Elvira's voice.[paragraph break]'HEY! Oh! It's the boys from the horned hedron! This IS just one of your pranks, isn't it?' her voice turns less saccharine. 'You wouldn't do that again, would you? Well, I could send you more...supplies...now, I'll pretend this didn't happen!' As her voice crackles off, pins spring up to shield the dialer from further operation.";
 
@@ -9529,6 +9529,7 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 		now Deil's Slide is in Phat Path;
 		now grey gyre is mapped south of Phat Path;
 		now Phat Path is mapped north of grey gyre;
+		if hawt thaw is in Saps' Pass, now hawt thaw is in Phat Path;
 		say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]A warning sign lies beyond where the wall was.";
 		move player to Phat Path;
 		continue the action;
@@ -15492,7 +15493,7 @@ understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, b
 
 chapter hawt thaw
 
-the clump of hawt thaw is LLPish vanishing scenery. "It doesn't make much immediate sense, and it's probably not critically important to your quest. It's not in the way. But maybe thinking about it right will widen your horizons a bit."
+the clump of hawt thaw is LLPish vanishing scenery in Saps' Pass. "It doesn't make much immediate sense, and it's probably not critically important to your quest. It's not in the way. But maybe thinking about it right will widen your horizons a bit."
 
 a-text of hawt thaw is "RRYR". b-text of hawt thaw is "R???". parse-text of hawt thaw is "?[sp]?[sp]?[sp]?". hawt thaw is parse-spoilable.
 
@@ -17011,7 +17012,7 @@ to annoy-trolls:
 	else if silly-acts is 2:
 		say "'Job perks: bop jerks.' say the trolls. The patrons have formed a half-circle around you now.";
 	else:
-		say "The trolls and patrons have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out.";
+		say "The trolls and patrons have almost completely surrounded you, but they are so shocked, even waiting for an explanation, they won't jump at you yet. Best play it cool and find a way out[if trolls are prefigured]--now's a good time to STROLL[end if].";
 
 after fliptoing when player is in Posh Hops Shop:
 	if noun is not trolls:
@@ -18289,7 +18290,9 @@ chapter pins
 
 some pins are scenery. "The pins cover the dialer. There's probably more than one way to get rid of them, but right now, they're blocking you from using it again. Or, in other words, from...wait for it...[paragraph break]PS'in."
 
-understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when player is in Horned Hedron and pins are in Horned Hedron.
+understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when player is in Tenfold Teflon'd Den Loft and pins are in Tenfold Teflon'd Den Loft.
+
+understand "snip" and "snip pins" as a mistake ("You don't have anything with a small enough blade to cut the pins. But that has to be close.") when player is in Tenfold Teflon'd Den Loft and pins are in Tenfold Teflon'd Den Loft.
 
 instead of doing something with pins:
 	if current action is dropping:
@@ -18299,6 +18302,32 @@ instead of doing something with pins:
 	if action is procedural:
 		continue the action;
 	say "You need to get the pins out of the way, but don't worry, it's pretty simple." instead;
+
+a-text of pins is "RRYR". b-text of pins is "RRYR". parse-text of pins is "x[sp]x[sp]I[sp]x".
+
+chapter sniping
+
+sniping is an action applying to one thing.
+
+understand the command "snip" as something new.
+
+understand "snip [something]" as sniping.
+
+carry out sniping:
+	if noun is pins, say "You don't have anything with a small enough blade to cut the pins. But that has to be close." instead;
+	say "There's no scissors or anything in this game. Sorry." instead;
+
+chapter spining
+
+spining is an action applying to one thing.
+
+understand the command "spin" as something new.
+
+understand "spin [something]" as spining.
+
+carry out spining:
+	if noun is pins, try fliptoing noun instead;
+	say "You need to spin letters around, but spinning things around isn't useful except maybe in one special case[if pins are in lalaland]. Which you found[end if]." instead;
 
 chapter redialing
 
@@ -18489,11 +18518,13 @@ check fliptoing skis:
 	if c2 is reflexive:
 		say "[one of]As you reach to kiss the skis, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again[or]You don't need to be hit with another crate[stopping].";
 		preef skis;
-		now bonkies is true instead;
+		now bonkies is true;
+		the rule succeeds;
 	if crate is reflexive:
-		say "[if bonkies is true]You would, but you would probably get hit with the crate. You need to anticipate, somehow. Trace was the first step with the crate[else]You flinch, a second too late. You can trace the crate, but you can't -- use your reflexes. But that seems right[end if].";
+		say "[if bonkies is true]You would, but you would probably get hit with the crate. You need to anticipate, somehow[else]You flinch, a second too late, from a crate thrown at you. You can trace the crate, but you can't -- use your reflexes. But that seems right[end if].";
 		preef skis;
-		now bonkies is true instead;
+		now bonkies is true;
+		the rule succeeds;
 
 to say ski-la:
 	if skis are in lalaland:
@@ -18537,7 +18568,7 @@ to say pan-block:
 		say "skis"
 
 check fliptoing span pans:
-	if crate is not in lalaland:
+	if crate is reflexive:
 		say "You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.";
 		preef span pans;
 		the rule succeeds;
