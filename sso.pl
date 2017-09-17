@@ -733,16 +733,18 @@ sub dumpUnquoted {
       $procString =~ s/[,\.!]//g;
       $squash = $procString;
       $squash =~ s/ //g;
+      $squash =~ s/\+//;
       $tries++;
       print B "====================$a/$procString/$squash\n";
       print "Processing $procString"
-        . ( ( $squash ne $procString ) ? "(squashed to $squash)" : "" )
+        . ( ( $squash ne $procString ) ? " (squashed to $squash)" : "" )
         . ", #$tries at line $....\n";
       print B `anan.pl $squash`;
       print B `myan.pl 3 $squash`;
       print B `gr $procString`;
 
       if ( $a =~ /\+/ ) {
+        print "Processing $procString (modified to ${squash}s)...\n";
         print B `anan.pl s$squash`;
         print B `myan.pl 3 s$squash`;
       }
@@ -760,7 +762,7 @@ sub dumpUnquoted {
       || die("Something went wrong. Keeping $bak.");
     unlink "$bak";
   }
-  `$raw` if $_[1];
+  `$dump` if $_[1];
 }
 
 sub quickCheck {
