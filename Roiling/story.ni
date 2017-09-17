@@ -18439,7 +18439,7 @@ carry out cleaning:
 
 book Lapsin' Plains
 
-Lapsin' Plains is north of anger range. Lapsin' Plains is in oyster. "[if span pans visible]span pans guard your way into huts[else]Huts lie thus here[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]."
+Lapsin' Plains is north of anger range. Lapsin' Plains is in oyster. "[if span pans are visible]span pans guard your way into huts[else]Huts lie thus here[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]."
 
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin' Plains
 
@@ -18526,7 +18526,7 @@ chapter bonking
 
 door-sux is a truth state that varies.
 
-the span pans are plural-named vanishing scenery in Lapsin' Plains. "You see a door leading [if player is in Lapsin' Plains]in[else]out[end if]. [if skis are in plains and knob is in plains]Skis and a knob hold the pans together[else if skis are in plains]Skis criscross over the pans[else]A knob still holds the pans together[else]You got rid of the knob and skis, but the pans are still in the way[end if]."
+the span pans are plural-named vanishing scenery in Lapsin' Plains. "They're squarish, so you can't scootch under them. But there are a bunch of messages, all probably just to distract you: 'HI, ENTER? IN THERE? NEITHER!' / 'OPEN? NOPE!' / 'TRY, O TYRO!'[paragraph break]You're probably better off just focusing on the pans.[paragraph break][if skis are in plains and knob is in plains]Skis and a knob hold the pans together[else if skis are in plains]Skis criscross over the pans[else]A knob still holds the pans together[else]You got rid of the knob and skis, but the pans are still in the way[end if]."
 
 to say pan-block:
 	if knob is in lapsin' plains and skis are in lapsin' plains:
@@ -18563,8 +18563,6 @@ instead of entering span pans:
 
 understand "pone" as a mistake ("The message is corny, but the door's a piece of cake [if knob is not reflexed]once you figure[else]since you figured[end if] what to do with the knob.") when span pans are visible
 
-description of span pans is "They're squarish, so you can't scootch under them. But there are a bunch of messages, all probably just to distract you: 'HI, ENTER? IN THERE? NEITHER!' / 'OPEN? NOPE!' / 'TRY, O TYRO!'[paragraph break]You're probably better off just focusing on the pans.";
-
 understand "troy" and "tory" as a mistake ("Apparently, the span pans don't have a name.") when player is in Lapsin' Plains and span pans are in Lapsin' Plains.
 
 the knob is scenery in Lapsin' Plains. the knob is flippable and vanishing. description of knob is "It's just a doorknob, though you can imagine it saying 'Noob! Dork!' You'd just love to give it a good effective smack."
@@ -18591,7 +18589,7 @@ carry out snaping:
 	if player is in lapsin' plains:
 		if span pans are in lalaland:
 			say "Yeah, it feels like it was a snap, now." instead;
-		try fliptoing snap pans instead;
+		try fliptoing span pans instead;
 	say "This isn't the time or place to snap. With your fingers or with your brain.";
 	the rule succeeds;
 

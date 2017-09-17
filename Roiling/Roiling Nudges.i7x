@@ -512,21 +512,15 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "pearl"	350597528	--	paler pearl	--	"The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit..."
 "plain"	251367970	plains	--	--	"[if bogus-plains is reflexed]You had your say.[else]'I...plan,' you think, then in a fit of confidence, 'I...PLANS!'[end if]" [LAPSIN PLAINS]
 "trace"	337433333	--	--	crates-menace rule	"[if crate is reflexed]Yes, one more thing to do with the crate--you know where they're from, and you know what to do. Instinctively[else]That won't quite help you figure where the crate is coming from[end if]."
-"rude"	339264808	--	rude door	--	"It's not the rudeness[knob-skis]."
-"door"	255058046	--	rude door	--	"It's not the doorness[knob-skis]."
-"rudedoor"	594322854	--	rude door	--	"It's not the whole[knob-skis]."
-"brief"	303056559	--	rude door	--	"[prob-ov]."
-"message"	547022823	--	rude door	--	"[prob-ov]."
-"inthere"	595228692	--	rude door	--	"The words on the door don't change. They are just a generic taunt."
+"inthere"	595228692	--	span pans	--	"The words on the pans don't change. They are just a generic taunt."
 "isk"	194199990	--	skis	--	"But you need to remove both skis."
-"open"	352532153	plains	--	--	"[if door-sux is true]You already opened the door[else]The words 'Nope, peon!' sear into your brain. Perhaps it's a bit more complicated[end if]."
+"open"	352532153	--	span pans	--	"The words on the pans don't change. They are just a generic taunt."
 "doorknob"	469670214	--	knob	--	"It's just a knob. Which thankfully cuts down the possibilities."
 "acters"	433707299	lapsin' plains	--	--	"Hmm, no, it[if crate is reflexed] was[else]'s[end if] only one crate at a time..."
 "debris"	393844718	--	crate	--	"You can't learn much from the debris. You're pretty sure it's from a crate."
 "fragments"	606798973	--	fragments	--	"[crate-frag]."
 "fragment"	510525007	--	fragments	--	"[crate-frag]."
 "shut"	341772090	plains	--	--	"[if Shadier Airshed is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the door[end if]."
-"inthere"	595228692	plains	--	--	"You don't need to mess with the message on the rude door."
 "bonk"	214612168	--	knob	--	"That isn't quite the right way to hit the knob."
 "airshed"	414895930	Shadier Airshed	--	--	"some text"[SHADIER AIRSHED]
 "ahut"	247685942	Shadier Airshed	--	--	"[locname]."
@@ -1644,7 +1638,7 @@ to say knob-skis:
 	say " of the door. More [if knob is reflexive and skis are in plains]the knob and skis are impeding you[else if skis are in plains]the skis are blocking the door[else if knob is reflexive]that knob is stuck[else]isn't needed, as you managed to navigate the knob and skis[end if]";
 
 to say prob-ov:
-	say "You are probably over-thinking it. There's a more direct way to tackle the rude door"
+	say "You are probably over-thinking it. There's a more direct way to tackle the span pans"
 
 to say crate-frag:
 	say "[if crate is reflexed]Not worth messing with the fragments any more[else]They're fragments of a crate--this may or may not help[end if]"
