@@ -1843,7 +1843,7 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
   * release 4: you now don't use the lever at all. You replace the pins. You can SPIN or SNIP them. The rude door was replaced by span-pans, which you need to SNAP at to get past.
 3 PRESTO:
  * release 1 (deprecated) : Rickey is in Dirge Ridge instead of Rand.
- * release 2: Lawl Wall replaces Horned Hedron with more sensible puzzle. You now need to summon a SUB or BUS at the end. Rand was Rickey. The Lawl Wall was not there. Many places are renamed.
+ * release 2: Lawl Wall replaces Horned Hedron (moved to Oyster) with more sensible puzzle. You now need to summon a SUB or BUS at the end. Rand was Rickey. The Lawl Wall was not there. Many places are renamed.
  * release 3: some causality is fixed in this release. It may have more to do with the hints than the actual puzzles, but that should be clearer, now. The escaroles allow an alternative path to bring the yak over. You no longer have to read the textbook.
  * release 4: the HAWT THAW is now zappable.
 4 TOWERS:

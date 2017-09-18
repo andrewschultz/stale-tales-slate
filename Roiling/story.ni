@@ -4760,7 +4760,7 @@ carry out requesting the score:
 		else:
 			if mrlp is not solved and possibles is true:
 				if min-score of mrlp < poss-score of mrlp:
-					say ". Lowest score to solve is [min-score of mrlp]. Maximum score available is [poss-score of mrlp]";
+					say "[lomax of mrlp]";
 				else:
 					say ". There are no secrets left to find here, so the score to win is [min-score of mrlp] points[if poss-score of mrlp is not max-score of mrlp]--you missed some extra stuff you can't go back for[end if]";
 		say ".[line break]";
@@ -4769,7 +4769,7 @@ carry out requesting the score:
 	repeat with QQ running through regions:
 		if number of visited rooms in QQ > 0:
 			if mrlp is not QQ and QQ is not solved:
-				say "You have scored [cur-score of QQ] out of [max-score of QQ] total points for the (unsolved[if QQ is stores] hub[end if]) [QQ] region.";
+				say "You have scored [cur-score of QQ] out of [max-score of QQ] total points for the (unsolved[if QQ is stores] hub[end if]) [QQ] region[lomax of QQ].";
 	if there is a solved region:
 		let temp be 0;
 		say "[line break]Won now:";
@@ -4783,6 +4783,9 @@ carry out requesting the score:
 		eval-fruits;
 		check-guru;
 	the rule succeeds;
+
+to say lomax of (re - a region):
+	say ". Lowest score to solve is [min-score of re]. Maximum score available is [poss-score of re]"
 
 to check-guru:
 	if did-guru is false and cur-score of others is 41:
@@ -6917,7 +6920,7 @@ Marines Seminar	"The camo-coma fields are just obvious enough to anyone paying a
 Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]."
 Lean Lane	"You can only go back west, or you would risk running into a mesh crab chambers or a crab crib full of bric-a-brac." [oyster]
 Handsome Sand Home	"Though you are a guest, probably best not to go poking around. You can go back west."
-Lapsin' Plains	"You can only go back south, or[if door-sux is false], once you defeat the door,[end if] inside."
+Lapsin' Plains	"You can only go back south, or[if span pans are in Lapsin' Plains], once the span pans are neutralized,[end if] inside."
 Achers' Arches	"You can only go north to the Horned Hedron[if sardine is in arches], once the sardine is gone,[end if] or east back to Anger Range."
 Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if a-p is visible]portal[else]ol['] trap once you disarm it[end if][if walleyes are visible], though you probably don't need the walleyes watching you try[end if]."
 Rascal Craals	"The wire weir blocks you from going any way but back east."
@@ -8995,9 +8998,9 @@ pre-haun	pre-haun	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	"A
 c2	c2	false	337433333	--	"trace"	"trace" or "trace crate"	"Based on where you got hit and how fast it hit you, you throw some grass up in the air or something, note how the wood landed, and figure where it came from! But you see no crates-caster. They'll probably chuck something at you when you're not looking, and you'll probably need to use your instincts. (P.S. don't worry, it's not a centaur either, so you can't untrace. You can't trace up and capture it either.)"
 crate	crate	false	337433333	--	"react"	"react" or "react to crate"	"This time you're ready. You turn around and know when to look when the crate is about to hit you. You knock it down in mid-air and, in a fit of rage, fling it back into the tall weeds and hit the en-pris sniper. You hear an expression of anger, then scurrying. You won't need to recast the crates."
 skis	skis	false	290473956	--	"kiss"	"kiss"	"As you kiss them, they pull up--and dissolve."
-knob	knob	false	214612168	--	"bonk"	"bonk"	"BONK! You hit the knob just right."
+knob	knob	false	214612168	--	"bonk"	"bonk"	"BONK! You hit the knob just right. It rolls off...well, somewhere." [?? check for knob/skis if it's all gone]
 pans	pans	false	248835251	--	"snap"	"snap"	"You snap and, lo and behold, the pans detach and clank and fall over and melt into the ground."
-bogus-plains	bogus-plains	false	347641936	--	"splain"	"splain"	"[if door-sux is true]You brag, to nobody and everyone in particular, how you SHOWED that door. It's in no shape to argue[else if bonkies is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the span pans how you'll get by anyway. It's short on detail, but it sounds impressive[end if]. You feel better after this, now you bragged a bit."
+bogus-plains	bogus-plains	false	347641936	--	"splain"	"splain"	"[if span pans are in Lapsin' Plains]You brag, to nobody and everyone in particular, how you SHOWED that door. It's in no shape to argue[else if bonkies is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the span pans how you'll get by anyway. It's short on detail, but it sounds impressive[end if]. You feel better after this, now you bragged a bit."
 trout	trout	false	471002223	--	"tutor"	"tutor trout/tortu" or "tutor"	"[trout-tut]."
 wipes	wipes	true	458473653	--	"swipe"	"swipe"	"You swipe the wipes before Aunt Tuna notices. You can't see anything here that's dingy enough to use them--or use them the right way--on. Maybe something somewhere less well-kept."
 bubble wrap	ruby	false	276912353	--	"warp"	"warp"	"You warp the bubble wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"
@@ -9013,7 +9016,7 @@ haunter	haunter	false	462435186	--	"assuage"	"assuage"	"'How sad, shadow,' you e
 lever	lever	false	501914680	--	"revel"	"revel"	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
 gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."
 yapper	yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' He motions you to slip him the gleaner behind your back. Then he goes off to find such a judge, presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"
-pins	d2	false	291640279	--	"spin"	"spin" or "spin pins"	"You fiddle with the pins, and bang! Something works."[??]
+pins	pins	false	291640279	--	"spin"	"spin" or "spin pins"	"You fiddle with the pins, and bang! Something works."[??]
 d2	d2	false	335153504	Strip of Profits	"redial"	"redial"	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range. Between Aunt Tuna, the sardine, and even the reluctant trolls--a story.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold. Now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
 dialer	dialer	false	335153504	--	"derail"	"derail"	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!'Then a pause. Then Elvira's voice.[paragraph break]'HEY! Oh! It's the boys from the horned hedron! This IS just one of your pranks, isn't it?' her voice turns less saccharine. 'You wouldn't do that again, would you? Well, I could send you more...supplies...now, I'll pretend this didn't happen!' As her voice crackles off, pins spring up to shield the dialer from further operation.";
 
@@ -16508,7 +16511,7 @@ a direction can be viable.
 definition: a direction (called dir) is viable:
 	if player is in phat path and dir is north:
 		decide no;
-	if player is in Lapsin' Plains and dir is inside and door-sux is false:
+	if player is in Lapsin' Plains and dir is inside and span pans are in Lapsin' Plains:
 		decide no;
 	if player is in frontage and atmo-moat is in frontage and dir is west:
 		decide no;
@@ -17802,6 +17805,7 @@ check fliptoing dialer:
 
 after fliptoing dialer:
 	now d2 is in tenfold;
+	now pins are in tenfold;
 	continue the action;
 
 chapter assuageing
@@ -17878,10 +17882,12 @@ check going inside when player is in Lapsin' Plains:
 		say "As you go for the door, you [one of]feel[or]remember[stopping] something hitting you in the [one of]back[or]head[or]leg[or]kidney[or]foot[or]patookus[or]appendix[in random order]. It's not particularly harmful, but it's distracting enough that you won't be able to [if knob is reflexive]smack the door around the right way[else]get through the door[end if] until you reckon about that conker." instead;
 	if skis are visible:
 		say "Those skis block the door pretty handily." instead;
-	if knob is not reflexed:
+	if knob is not in lalaland:
 		say "The knob seems stuck--and attached to the pans." instead;
+	if span pans are in Lapsin' Plains:
+		say "The span pans still block your way, but it should be a piece of cake to get by them. No that's not quite it." instead;
 	if Shadier Airshed is unvisited:
-		say "You ignore a dour 'Redo?' as you walk in.[paragraph break]But you have a new problem. You need a hut in the circle of huts. But how to identify it? Disturbing a resident could be troublesome. They are in all shapes and sizes. Hmm, a hut, a hut...[wfak][paragraph break]Wait! Maybe it's this one, or...[wfak][paragraph break]That one! A hut shaped like Utah! Of course! You'd recognize that rectangle with a rectangle bitten out of one corner anywhere. You feel slightly...haut.";
+		say "You've made it past the pans but have a new problem. You need a hut in the circle of huts. But how to identify it? Disturbing a resident could be troublesome. They are in all shapes and sizes. Hmm, a hut, a hut...[wfak][paragraph break]Wait! Maybe it's this one, or...[wfak][paragraph break]That one! A hut shaped like Utah! Of course! You'd recognize that rectangle with a rectangle bitten out of one corner anywhere. You feel slightly...haut.";
 	else:
 		say "You go back into a hut shaped like Utah."
 
@@ -18194,7 +18200,7 @@ lev-pull is a truth state that varies.
 
 instead of doing something with lever:
 	if current action is pushing or current action is pulling or current action is taking: [check pulling lever/check pushing lever]
-		say "[if lever is reflexed]It's not fun enough to tinker with, any more.[else]Nothing happens, but you're still just excited to find it. Maybe you can do something superfluous to show that![end if]";
+		say "[if lever is reflexed]It's not fun enough to tinker with, any more.[else]Nothing happens, but you're still just excited to find it. Maybe you can do something superfluous to show that![end if]" instead;
 	if action is procedural:
 		continue the action;
 	say "You're not sure what you can do with the lever, really[if lever is reflexed], and it doesn't seem as fun any more anyway." instead;
@@ -18203,10 +18209,11 @@ check going outside in Den Loft:
 	if lev-pull is true:
 		say "You can't leave now. You're so close. The lever doesn't seem to work any more, but the dialer...maybe..." instead;
 
-the papery yapper is a person in Den Loft. "A papery yapper, full of sharp edges that would bleed you to death, blocks access to the dialer. He is wearing a stupid paper necklace."
+the papery yapper is a vanishing person in Den Loft. "A papery yapper, full of sharp edges that would bleed you to death, blocks access to the dialer. He is wearing a stupid paper necklace."
 
 after fliptoing yapper (this is the A Briber is You rule):
 	now gleaner is in lalaland;
+	now lever is in tenfold teflon'd den loft;
 	continue the action;
 
 a-text of papery yapper is "RRYRYO". b-text of papery yapper is "?RY?Y?". parse-text of yapper is "?[sp]x[sp]-[sp]?[sp]-[sp]?".
@@ -18290,17 +18297,19 @@ chapter pins
 
 some pins are scenery. "The pins cover the dialer. There's probably more than one way to get rid of them, but right now, they're blocking you from using it again. Or, in other words, from...wait for it...[paragraph break]PS'in."
 
+after fliptoing pins:
+	now d2 is in den loft;
+	continue the action;
+
 understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when player is in Tenfold Teflon'd Den Loft and pins are in Tenfold Teflon'd Den Loft.
 
 understand "snip" and "snip pins" as a mistake ("You don't have anything with a small enough blade to cut the pins. But that has to be close.") when player is in Tenfold Teflon'd Den Loft and pins are in Tenfold Teflon'd Den Loft.
 
 instead of doing something with pins:
-	if current action is dropping:
-		say "Only twenty-four combinations. Two work. The pin(s) will drop." instead;
-	if current action is taking:
-		say "They'd poke you nastily. Give you nips and all." instead;
-	if action is procedural:
-		continue the action;
+	if current action is sniping or current action is spining, continue the action;
+	if current action is dropping, say "Only twenty-four combinations. Two work. The pin(s) will drop." instead;
+	if current action is taking, say "They'd poke you nastily. Give you nips and all." instead;
+	if action is procedural, continue the action;
 	say "You need to get the pins out of the way, but don't worry, it's pretty simple." instead;
 
 a-text of pins is "RRYR". b-text of pins is "RRYR". parse-text of pins is "x[sp]x[sp]I[sp]x".
@@ -18324,6 +18333,8 @@ spining is an action applying to one thing.
 understand the command "spin" as something new.
 
 understand "spin [something]" as spining.
+
+does the player mean spining the pins: it is very likely.
 
 carry out spining:
 	if noun is pins, try fliptoing noun instead;
@@ -18462,15 +18473,15 @@ carry out cleaning:
 	now lance is cleaned;
 	now lance is unfigured;
 	now player has lance;
-	say "The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes kind of biodegraded in the process, but that is one less thing to carry.";
+	say "The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes kind of biodegraded in the process, which is kind of nasty, but that is one less thing to carry.";
 	now wipes are in lalaland;
 	min-and instead;
 
 book Lapsin' Plains
 
-Lapsin' Plains is north of anger range. Lapsin' Plains is in oyster. "[if span pans are visible]span pans guard your way into huts[else]Huts lie thus here[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]."
+Lapsin' Plains is north of anger range. Lapsin' Plains is in oyster. "[if span pans are visible]span pans guard your way into huts[else]Huts lie thus here, and you can go inside[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]."
 
-understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin' Plains
+understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin' Plains.
 
 c2 is vanishing privately-named scenery in Lapsin' Plains. c2 is undesc. printed name of c2 is "wherever the crate is coming from"
 
@@ -18493,7 +18504,7 @@ understand "debris" and "crates" as crate.
 
 understand "brides" as a mistake ("No, no time to think about romance, now.") when crate is visible.
 
-understand "thus" as a mistake ("Your inactive word does nothing to the huts[if door-sux is false]. Perhaps you can do something to the door[else]. But you don't need to do any more, since you can walk in[end if].") when shut huts are visible.
+understand "thus" as a mistake ("Your inactive word does nothing to the huts[if span pans are in Lapsin' Plains]. Perhaps you can do something to the door[else]. But you don't need to do any more, since you can walk in[end if].") when shut huts are visible.
 
 the shut huts are plural-named scenery in Lapsin' Plains. "They're shaped like a big ol['] upended tush.". understand "tush" and "hut" as shut huts.
 
@@ -18555,8 +18566,6 @@ a-text of bogus-plains is "RRRYYR". b-text of bogus-plains is "RRRY??". parse-te
 
 chapter bonking
 
-door-sux is a truth state that varies.
-
 the span pans are plural-named vanishing scenery in Lapsin' Plains. "They're squarish, so you can't scootch under them. But there are a bunch of messages, all probably just to distract you: 'HI, ENTER? IN THERE? NEITHER!' / 'OPEN? NOPE!' / 'TRY, O TYRO!'[paragraph break]You're probably better off just focusing on the pans.[paragraph break][if skis are in plains and knob is in plains]Skis and a knob hold the pans together[else if skis are in plains]Skis criscross over the pans[else]A knob still holds the pans together[else]You got rid of the knob and skis, but the pans are still in the way[end if]."
 
 to say pan-block:
@@ -18574,6 +18583,12 @@ check fliptoing span pans:
 		the rule succeeds;
 	if knob is in lapsin' plains or skis are in lapsin' plains:
 		say "The pans rumble a bit but are held together by the [pan-block]. You'll need to unblock the pans for that to work.";
+		preef span pans;
+		the rule succeeds;
+
+check fliptoing span pans:
+	if knob is in plains or skis are in plains:
+		say "The pans wobble, but the [pan-block] still hold[if skis are not in plains]s[end if] them together.";
 		preef span pans;
 		the rule succeeds;
 
@@ -18596,7 +18611,7 @@ understand "pone" as a mistake ("The message is corny, but the door's a piece of
 
 understand "troy" and "tory" as a mistake ("Apparently, the span pans don't have a name.") when player is in Lapsin' Plains and span pans are in Lapsin' Plains.
 
-the knob is scenery in Lapsin' Plains. the knob is flippable and vanishing. description of knob is "It's just a doorknob, though you can imagine it saying 'Noob! Dork!' You'd just love to give it a good effective smack."
+the knob is vanishing scenery in Lapsin' Plains. the knob is flippable and vanishing. description of knob is "It's just a doorknob, though you can imagine it saying 'Noob! Dork!' You'd just love to give it a good effective smack."
 
 understand "doorknob" as knob.
 
@@ -18763,7 +18778,7 @@ instead of taking heaps:
 
 a-text of waste is "RRYYR". b-text of waste is "RRYYR". parse-text of waste is "x[sp]x[sp]-[sp]-[sp]x". waste is cheat-spoilable.
 
-the lance is an LLPish reflexive thing. description of lance is "[if lance is cleaned]Clean and ready for righteous smiting[else]Too grimy and dirty[end if].". "A lance lies here, too dirty and gross to pick up."
+the clean lance is an LLPish reflexive thing. description of lance is "[if lance is cleaned]Clean and ready for righteous smiting[else]Too grimy and dirty[end if].". "A lance lies here, too dirty and gross to pick up."
 
 the lance can be cleaned. the lance is not cleaned.
 
@@ -18899,10 +18914,6 @@ description of ruby is "[one of]See ruby, rub eyes. [or][stopping]You feel heat 
 carry out burying:
 	if noun is not ruby:
 		say "That's not something worth BURYing." instead;
-	if player does not have rigged digger:
-		if player has prod:
-			say "Your prod from a hut should be able to bury stuff if you tinker right. Jar it the right way." instead;
-		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin' Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if Shadier Airshed is unvisited]. Maybe there's something behind the span pans[else]. Maybe you missed something in a hut[end if][stopping]." instead;
 	if ruby is in lalaland:
 		say "You half forgot where you dug the ruby. You're not sure if you want it back." instead;
 	if player does not have ruby:
@@ -18916,6 +18927,12 @@ carry out burying:
 	now ruby is in Rascal Craals; [necessary for flipping to work]
 	try fliptoing thin hint;
 	the rule succeeds;
+
+check fliptoing thin hint:
+	if player does not have rigged digger:
+		if player has prod:
+			say "Your prod from a hut should be able to bury stuff if you tinker right. Jar it the right way." instead;
+		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin' Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if Shadier Airshed is unvisited]. Maybe there's something behind the span pans[else]. Maybe you missed something in a hut[end if][stopping]." instead;
 
 book Horned Hedron
 
@@ -23273,7 +23290,7 @@ After printing the name of a hintpastry (called the curfood) while taking invent
 	say " [if curfood is heated](heated)[else](cold)[end if]";
 
 to say set-det:
-	say "[unless player has purse]: [end if]Cheat/teach mode is [on-off of cheat-on], [if list-headache is false]and [end if]idlers['] slider is [on-off of whether or not slider is switched on][slider-detail]";
+	say "[unless player has purse]: [end if]Cheat/teach mode is [on-off of cheat-on], [if list-headache is false]and t[else]T[end if]he idlers['] slider is [on-off of whether or not slider is switched on][slider-detail]";
 
 to say slider-detail:
 	if list-headache is false:
