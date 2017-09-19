@@ -39,11 +39,11 @@ $ary{"x"} = 112768081;
 $ary{"y"} = 122359252;
 $ary{"z"} = 122969618;
 
-my @revHashOrd = sort { $ary{$b} <=> $ary{$a} } keys %ary;
-my $foundSomething;
-my $tryDetail  = 0;
-my $maxLetters = 6;
-my $duh        = 0;
+my @revHashOrd     = sort { $ary{$b} <=> $ary{$a} } keys %ary;
+my $foundSomething = 0;
+my $tryDetail      = 0;
+my $maxLetters     = 6;
+my $showEveryX     = 1000000;
 
 # default is to do both. There's little good reason just to do one, but just in case...
 
@@ -53,7 +53,11 @@ my $reg;
 
 my $byLength = 0;
 
-my $count = 0;
+# variables
+
+my $gotAnyBad      = 0;
+my $showEveryCount = 0;
+my $count          = 0;
 
 while ( $count <= $#ARGV ) {
   my $arg = lc( $ARGV[$count] );
@@ -81,18 +85,22 @@ my @shufflingArray =
   ( "Intro", "Stores", "Forest", "Sortie", "Metros", "Resort" );
 
 if ($doShuf) {
+  $gotAnyBad = 0;
   for $reg (@shufflingArray) {
     hashVer( "shuffling", 0, 1, "table of $reg nudges", 5, "nudges" );
 
     # hashVer("shuffling", 3, 6, "table of $reg anagrams", 0, "");
   }
+  print "No errors for Shuffling Around.\n" if !$gotAnyBad;
 }
 if ($doRoil) {
+  $gotAnyBad = 0;
   for $reg (@roilingArray) {
     hashVer( "roiling", 0, 1, "table of $reg nudges", 5, "nudges" );
 
     # hashVer("roiling", 3, 6, "table of $reg anagrams", 0, "");
   }
+  print "No errors for A Roiling Original.\n" if !$gotAnyBad;
 }
 
 sub hashVer {
@@ -126,6 +134,7 @@ sub hashVer {
       $hashVal = $idx[ $_[2] ];
 
       if ( $txtHash != $hashVal ) {
+        $gotAnyBad = 1;
         my $dif = $hashVal - $txtHash;
         my $errMsg =
 "At line $. of $file: $idx[$_[1]] has hash of $hashVal, should have $txtHash, ";
@@ -200,8 +209,11 @@ sub detailSearch {
     $foundSomething = "$_[0]$_" if ( $_[1] eq $ary{$_} );
     return $foundSomething if $foundSomething;
 
-    # $duh = $duh + 1;
-    # print("$_[0]$_ $_[1] ($duh)\n") if $duh % 1000000 == 0;
+    if ($showEveryX) {
+      $showEveryCount = $showEveryCount + 1;
+      print("$_[0]$_ $_[1] ($showEveryCount)\n")
+        if $showEveryCount % 1000000 == 0;
+    }
     detailSearch( "$_[0]$_", $_[1] - $ary{$_} ) if $_[1] - $ary{$_} > 0;
   }
   return "";
@@ -222,8 +234,11 @@ sub byLengthNum {
   return if length( $_[0] ) > $maxLetters;
   for (@revHashOrd) {
 
-    # $duh = $duh + 1;
-    # print("$_[0]$_ $_[1] ($duh)\n") if $duh % 1000000 == 0;
+    if ($showEveryX) {
+      $showEveryCount = $showEveryCount + 1;
+      print("$_[0]$_ $_[1] ($showEveryCount)\n")
+        if $showEveryCount % 1000000 == 0;
+    }
     $foundSomething = "$_[0]$_" if ( $_[1] eq $ary{$_} );
     return $foundSomething if $foundSomething;
   }
