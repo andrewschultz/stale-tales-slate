@@ -39,20 +39,36 @@ $ary{"x"} = 112768081;
 $ary{"y"} = 122359252;
 $ary{"z"} = 122969618;
 
+my @revHashOrd = sort { $ary{$b} <=> $ary{$a} } keys %ary;
+my $foundSomething;
+my $tryDetail  = 0;
+my $maxLetters = 6;
+my $duh        = 0;
+
 # default is to do both. There's little good reason just to do one, but just in case...
 
 my $doShuf = 1;
 my $doRoil = 1;
 my $reg;
 
+my $byLength = 0;
+
 my $count = 0;
 
 while ( $count <= $#ARGV ) {
   my $arg = lc( $ARGV[$count] );
-  $doShuf  = 0 if ( $arg eq "roi" );
-  $doRoil  = 0 if ( $arg eq "sa" );
-  $verbose = 1 if ( $arg eq "v" );
-  $verbose = 0 if ( $arg eq "b" );
+  $arg =~ s/^-//;
+  $doShuf    = 0 if ( $arg eq "roi" );
+  $doRoil    = 0 if ( $arg eq "sa" );
+  $verbose   = 1 if ( $arg eq "v" );
+  $verbose   = 0 if ( $arg eq "b" );
+  $tryDetail = 1 if ( $arg eq "td" );
+  $byLength  = 1 if ( $arg eq "bl" );
+  if ( $arg eq "m" ) {
+    $maxLetters = $arg;
+    $maxLetters =~ s/.*m//;
+    die("Max letters must be a number!") if ( $maxLetters !~ /^[0-9]+/ );
+  }
   $count++;
 }
 
@@ -84,6 +100,7 @@ sub hashVer {
 "c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/$_[0] $_[5].i7x";
   if ( $_[5] eq "" ) { $file = "c:/games/inform/$_[0].inform/source/story.ni"; }
   open( A, "$file" ) || die("Can't open $file.");
+  print "Reading $file for $_[3]\n" if $verbose;
   my $inTable   = 0;
   my $goof      = 0;
   my $everTable = 0;
@@ -111,7 +128,24 @@ sub hashVer {
       if ( $txtHash != $hashVal ) {
         my $dif = $hashVal - $txtHash;
         my $errMsg =
-"$idx[$_[1]] has hash of $idx[$_[2]] but should have $txtHash instead, a difference of $dif at line $. of $file.";
+"At line $. of $file: $idx[$_[1]] has hash of $hashVal, should have $txtHash, ";
+        my $temp = quickDif($dif);
+        if ($temp) {
+          $errMsg .= "$temp letter adjustment";
+        }
+        elsif ( !$tryDetail ) {
+          $errMsg .= "try -td for more detail, -bl for by length";
+        }
+        else {
+          $foundSomething = "";
+          my $b4 = time();
+          $byLength
+            ? detailSearch( "", $hashVal )
+            : byLengthNum( "", $hashVal );
+          $errMsg .= "detailed search gives "
+            . ( $foundSomething ? $foundSomething : "nothing I could find" );
+          $errMsg .= "(took " . ( time() - $b4 ) . " seconds)";
+        }
         print "$errMsg\n";
         @msgs = ( @msgs, $errMsg );
         $goof = 1;
@@ -129,6 +163,50 @@ sub hashVer {
     if $verbose || $goof > 0;
 }
 
+sub quickDif {
+  my $a1;
+  my $a2;
+  my $a3;
+  my $a4;
+  my $dif = abs( $_[0] );
+  for ( 'a' .. 'z' ) {
+    return $_ if ( $dif == $ary{$_} );
+  }
+
+  for $a1 ( 'a' .. 'z' ) {
+    for $a2 ( 'a' .. 'z' ) {
+      return "$a1-$a2" if $ary{$a2} - $ary{$a1} == $dif;
+    }
+  }
+
+  for $a1 ( 'a' .. 'z' ) {
+    for $a2 ( 'a' .. 'z' ) {
+      for $a3 ( 'a' .. 'z' ) {
+        return "$a1$a2-$a3" if $ary{$a3} - $ary{$a2} - $ary{$a1} == $dif;
+        for $a4 ( 'a' .. 'z' ) {
+          return "$a1$a2-$a3$a4"
+            if $ary{$a4} + $ary{$a3} - $ary{$a2} - $ary{$a1} == $dif;
+        }
+      }
+    }
+  }
+  return "";
+}
+
+# string, then number
+sub detailSearch {
+  return if length( $_[0] ) > $maxLetters;
+  for (@revHashOrd) {
+    $foundSomething = "$_[0]$_" if ( $_[1] eq $ary{$_} );
+    return $foundSomething if $foundSomething;
+
+    # $duh = $duh + 1;
+    # print("$_[0]$_ $_[1] ($duh)\n") if $duh % 1000000 == 0;
+    detailSearch( "$_[0]$_", $_[1] - $ary{$_} ) if $_[1] - $ary{$_} > 0;
+  }
+  return "";
+}
+
 sub myHash {
   my @let = split( //, lc( $_[0] ) );
   my $total = 0;
@@ -137,4 +215,20 @@ sub myHash {
     $total += defined( $ary{$_} ) ? $ary{$_} : 0;
   }
   return $total;
+}
+
+# string, then number
+sub byLengthNum {
+  return if length( $_[0] ) > $maxLetters;
+  for (@revHashOrd) {
+
+    # $duh = $duh + 1;
+    # print("$_[0]$_ $_[1] ($duh)\n") if $duh % 1000000 == 0;
+    $foundSomething = "$_[0]$_" if ( $_[1] eq $ary{$_} );
+    return $foundSomething if $foundSomething;
+  }
+  for (@revHashOrd) {
+    byLengthNum( "$_[0]$_", $_[1] - $ary{$_} ) if $_[1] > $ary{$_};
+  }
+  return "";
 }
