@@ -478,7 +478,7 @@ to say reject:
 				now last-hash is hashkey entry;
 				continue the action;
 	now num-in-row is 0;
-	if regnud of mrlp is hash-found:
+	if regtab of mrlp is hash-found:
 		continue the action;
 	if table of general nudges is hash-found:
 		continue the action;
@@ -3027,19 +3027,19 @@ a region has a number called poss-score. the poss-score of a region is usually z
 
 a region has a number called cur-score. the cur-score of a region is usually zero.
 
-a region has a table name called regnud. a region has a table name called regana.
+a region has a table name called regtab. a region has a table name called regana.
 
-Intro is a region. max-score of Intro is 7. min-score of Intro is 4. regnud of Intro is table of intro nudges. regana of Intro is table of intro anagrams.
+Intro is a region. max-score of Intro is 7. min-score of Intro is 4. regtab of Intro is table of intro nudges. regana of Intro is table of intro anagrams.
 
-Stores is a region. max-score of Stores is 6. min-score of Stores is 4. regnud of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams.
+Stores is a region. max-score of Stores is 6. min-score of Stores is 4. regtab of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams.
 
-Forest is a region. min-score of Forest is 15. max-score of Forest is 16. regnud of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams.
+Forest is a region. min-score of Forest is 15. max-score of Forest is 16. regtab of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams.
 
-Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regnud of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams.
+Sortie is a region. min-score of Sortie is 25. max-score of Sortie is 27. regtab of Sortie is table of Sortie nudges. regana of Sortie is table of Sortie anagrams.
 
-Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regnud of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams.
+Metros is a region. min-score of Metros is 17. max-score of Metros is 18. regtab of Metros is table of Metros nudges. regana of Metros is table of Metros anagrams.
 
-Resort is a region. min-score of Resort is 10. max-score of Resort is 14. regnud of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams.
+Resort is a region. min-score of Resort is 10. max-score of Resort is 14. regtab of Resort is table of Resort nudges. regana of Resort is table of Resort anagrams.
 
 book fliptoing
 

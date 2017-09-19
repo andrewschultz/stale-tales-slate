@@ -73,6 +73,8 @@ include Bypass Disambiguation by Climbing Stars.
 
 include Large Game Speedup by Andrew Plotkin.
 
+include STS tests by Andrew Schultz.
+
 the story headline is "(or ailing) Squeeal! A Sequel!"
 
 the story description is "Dear, Lo! Ordeal reload!"
@@ -8854,7 +8856,7 @@ chapter the tables themselves by region
 
 table of Means Manse anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
-palm	lamp	true	201542769	--	"lamp"	"lamp" or "get lamp"	"Lamp. Palm. Yup. Using your old powers, you change the palm into a lamp, which gives off light. You go all Jason Scott on it, and just like that, bam, it's in your inventory.[paragraph break]You blink and look around and stare at your diorama. You remember how [gtmn] gave it to you for one day you might need warm-ups, to get back in the groove. With unusual examples and anything. In case you had a different divining tool than the tagged gadget[if latches are off-stage]. Oh! And he gave you something else! Those--useless latches! They might be good for something. You remember the lump from sleeping on the chair--yup, there they are[end if].[paragraph break]Oh, there's that 'dope' op-ed Gunter threw at you, too[preefies]."
+palm	lamp	true	201542769	--	"lamp"	"lamp" or "get lamp"	"Lamp. Palm. Yup. Using your old powers, you change the palm into a lamp, which gives off light. You go all Jason Scott on it, and just like that, bam, it's in your inventory.[paragraph break]Oh, there's that 'dope' op-ed Gunter threw at you, too.[paragraph break]You blink and look around and stare at your diorama. You remember how [gtmn] gave it to you for one day you might need warm-ups, to get back in the groove. With unusual examples and anything. In case you had a different divining tool than the tagged gadget[if latches are off-stage].[paragraph break]Oh! And he gave you something else! Those--useless latches! They might be good for something. You remember the lump from sleeping on the chair--yup, there they are[end if].[preefies]."
 latches	satchel	true	439479634	--	"satchel"	"satchel"	"The locks start fiddling with themselves--and each other--and slowly, a satchel emerges from the mess[new-thing]."
 giant pin	abstract painting	false	447164205	--	"painting"	"painting"	"The giant pin's edges become sharper and, before you know it, it's reformed to a portrait hanging on the wall. Whatever stuck the pin to the wall still works on the painting, which may not be High Art, but it's worth a look."
 pavement	event map	false	682523494	--	"event map"	"event map" or "eventmap"	"The pavement unfolds into a small map which, you remember, describes your first trip through Yorpwald."
@@ -9993,7 +9995,7 @@ instead of searching t-b:
 
 understand "best name" and "bestname" as a mistake ("Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)")
 
-description of t-b is "You count them. One, two, ..., ten. Exactly ten beams lined up together, unpainted and uncovered. What could they be hiding?"
+description of t-b is "You count them. One, two, ..., ten. Exactly ten beams lined up together, unpainted and uncovered. [b]Ten beams[r]. What could they be hiding?"
 
 chapter tables
 
@@ -12065,7 +12067,7 @@ description of Store E is "It's bolted up but seems to be advertising a stereo s
 
 chapter store f, i mean, forest
 
-the forest is useless scenery in Strip of Profits. understand "store f" and "store/f" as forest when player is in strip of profits. "It's not really Store F any more. It's been preserved--a foster forest. But new stores have sprouted up around it since last game."
+the forest is useless scenery in Strip of Profits. understand "store f" and "store/f" as forest when player is in strip of profits. "It's not really Store F any more. It's been preserved--a foster forest. But new stores have sprouted up around it since last game. Or, more accurately, at the other end of the alphabet."
 
 instead of entering forest:
 	say "[t-trap]."
@@ -12121,7 +12123,7 @@ check entering hoster:
 
 chapter store i
 
-the sortie is useless scenery in Strip of Profits. understand "store i" and "store/i" as sortie when player is in strip of profits. "The sortie leads to the erstwhile Lord Ablemiser's territory, which you were able to neutralize your first time through. You think he still likes you--but you've no time to verify that."
+the sortie is useless scenery in Strip of Profits. understand "store i" and "store/i" as sortie when player is in strip of profits. "The sortie leads to the erstwhile Lord Ablemiser's territory, which you were able to neutralize your first time through. You think he still likes you--but you've no time to verify that. You'll want to fix the other stores."
 
 instead of entering sortie:
 	say "[t-trap]."
@@ -16705,7 +16707,7 @@ last-loc of Oyster is Posh Hops Shop.
 
 book Posh Hops Shop
 
-Posh Hops Shop is an innie room in oyster. "This toastin['] station isn't a dive bar I'd brave. Gulpers splurge on Trance Nectar and recant later. Crabs ignore carbs, forgetting what caused them to get sauced. A sign is posted here."
+Posh Hops Shop is an innie room in oyster. "This toastin['] station isn't a dive bar I'd brave. Gulpers splurge on Trance Nectar and recant later. Crabs ignore carbs, forgetting what caused them to get sauced. A sign is posted here[if tunes are in hops shop], tunes you'd do ANYTHING to get rid of emit from a jukebox[end if][if tumblers are in hops shop], stumbler tumblers lie within reach[end if], and trolls block the way out."
 
 after choosing notable locale objects when player is in posh hops shop:
 	set the locale priority of patrons to 0;
@@ -16774,7 +16776,7 @@ check taking tunes:
 
 a-text of tunes is "YRRYR". b-text of tunes is "YRRGR". parse-text of tunes is "u[sp]x[sp]x[sp]e[sp]x". tunes is cheat-spoilable.
 
-The jukebox is a uncluing thing in Posh Hops Shop. It is fixed in place. "[if tunes are reflexed or perma-amper is reflexed]The jukebox is finally silent, but the patrons aren't.[else]A jukebox blasts tunes that make you gulp and plug your ears and want to do something, anything, to get rid of the tunes.[end if]"
+The jukebox is uncluing scenery in Posh Hops Shop. It is fixed in place. "[if tunes are reflexed or perma-amper is reflexed]The jukebox is finally silent, but the patrons aren't.[else]It has the usual bunch of song buttons and probably a perma-amper inside to make sure the terrible tunes it's spewing are loud and continuous. You notice writing on the side.[end if]"
 
 understand "unset" as a mistake ("[if tunes are reflexive]You've no clue how to start. Perhaps the jukebox has instructions[else]You already took care of the jukebox tunes[end if].") when jukebox is visible.
 
@@ -16786,8 +16788,6 @@ before scaning jukebox:
 		try scaning tunes instead;
 	else:
 		say "The jukebox gives nothing with the tunes gone." instead;
-
-description of jukebox is "It only accepts Joke Bux, of which you and your purse have none[if tunes are reflexed]. It's no longer spewing terrible tunes[otherwise]. It's spewing terrible tunes[end if]. It has the usual bunch of song buttons and probably a perma-amper inside to make sure they're not quiet. You notice writing on the side."
 
 the perma-amper is part of the jukebox. understand "perma/amper" as perma-amper.
 
@@ -16954,12 +16954,12 @@ understand "unset [something]" as unseting.
 does the player mean unseting tunes: it is very likely.
 
 carry out unseting:
+	if tunes are in lalaland:
+		say "You already dealt with the tunes[if unset-not-remap is false] when you mucked up the perma-amper[end if]." instead;
 	if noun is tunes:
 		try fliptoing tunes instead;
 	if noun is jukebox:
 		say "The jukebox--or the tunes?" instead;
-	if tunes are in lalaland:
-		say "You already dealt with the tunes[if unset-not-remap is false] when you mucked up the perma-amper[end if]." instead;
 	say "That doesn't quite make sense here." instead;
 
 chapter scrapeing
@@ -17885,7 +17885,7 @@ check going inside when player is in Lapsin' Plains:
 	if knob is not in lalaland:
 		say "The knob seems stuck--and attached to the pans." instead;
 	if span pans are in Lapsin' Plains:
-		say "The span pans still block your way, but it should be a piece of cake to get by them. No that's not quite it." instead;
+		say "The span pans still block your way, but it should be a breeze to get by them. No that's not quite it. A cinch? No..." instead;
 	if Shadier Airshed is unvisited:
 		say "You've made it past the pans but have a new problem. You need a hut in the circle of huts. But how to identify it? Disturbing a resident could be troublesome. They are in all shapes and sizes. Hmm, a hut, a hut...[wfak][paragraph break]Wait! Maybe it's this one, or...[wfak][paragraph break]That one! A hut shaped like Utah! Of course! You'd recognize that rectangle with a rectangle bitten out of one corner anywhere. You feel slightly...haut.";
 	else:
@@ -24769,9 +24769,13 @@ book Filed Field
 
 chapter where it is, and scenery
 
-Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Foliage cause foilage all directions except east. [if b-w are visible]Barriers west block you. [end if][if pipe panel fence is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries. [end if][if b-r is visible]A buried raft lies here, too. [end if][if pipe panel fence is in lalaland and briar screen is in lalaland and b-w is in lalaland and rapt figure is in lalaland and b-r is in lalaland]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others.
+Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if b-w are visible]Barriers west block you. [end if][if pipe panel fence is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries. [end if][if b-r is visible]A buried raft lies here, too. [end if][if pipe panel fence is in lalaland and briar screen is in lalaland and b-w is in lalaland and rapt figure is in lalaland and b-r is in lalaland]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others.
 
-the foliage is useless scenery in filed field. "It'll still block you going anywhere but back east, even with the more man-made obstacles gone."
+the ego fail foliage is useless scenery in filed field. "It'll still block you going anywhere but back east, even with the more man-made obstacles gone."
+
+printed name of ego fail foliage is "ego-fail foliage"
+
+understand "foilage" and "foilage foliage" as ego fail foliage.
 
 understand "fidel" as a mistake ("A thin voice howls 'I fled!'") when player is in Filed Field.
 
