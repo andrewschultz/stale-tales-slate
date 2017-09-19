@@ -30,6 +30,51 @@ carry out bkling:
 		say "--[QQ][line break]";
 	the rule succeeds;
 
+chapter nuling - not for release
+
+nuling is an action out of world.
+
+understand the command "nul" as something new.
+
+understand "nul" as nuling.
+
+carry out nuling:
+	ply-table regtab of mrlp;
+	the rule succeeds;
+
+chapter gnling - not for release
+
+gnling is an action out of world.
+
+understand the command "gnl" as something new.
+
+understand "gnl" as gnling.
+
+carry out gnling:
+	ply-table table of general nudges;
+	the rule succeeds;
+
+to ply-table (tn - a table name):
+	let last-rule be false;
+	repeat through tn:
+		if there is a this-room entry:
+			if this-room entry is location of player:
+				say "[if last-rule is true][line break][end if](room) [this-cmd entry] [hashval entry] is a valid hash try.";
+				now last-rule is false;
+				next;
+		if there is a this-item entry:
+			if this-item entry is visible:
+				say "[if last-rule is true][line break][end if](item) [this-cmd entry] [hashval entry] is a valid hash try.";
+				now last-rule is false;
+				next;
+		if there is a this-rule entry:
+			consider the this-rule entry;
+			if the rule succeeded:
+				say "[if last-rule is true][line break][end if](rule) [this-cmd entry] [hashval entry] is a valid hash try.[run paragraph on]";
+				now last-rule is true;
+				next;
+	if last-rule is true, say "[line break]";
+
 STS tests ends here.
 
 ---- DOCUMENTATION ----

@@ -972,6 +972,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bluer"	390468463	--	tekno-token	--	"That doesn't really describe the Tekno-Token." [this is put below because the ruble should trump the tekno-token]
 "designs"	487883186	--	singed design	--	"The design doesn't need changing. It's what the design's on."
 "foliage"	362267787	--	foliage	--	"Alas, the foliage also blocks your magical powers and not just your explorations, but [if number of flippable things in filed field > 0]there's plenty else to work at[else]no big deal. You took care of everything else[end if] here." [filed field]
+"fail"	127509399	Filed Field	--	--	"There's no way to chop the foliage down, but you don't need to."
+"ego"	234758388	Filed Field	--	--	"There's no way to chop the foliage down, but you don't need to."
 "barriers"	545651053	--	b-w	--	"The barriers['] westness is important."
 "barber"	337479343	--	barber sickle	--	"[whole-item]."
 "sickle"	394825523	--	barber sickle	--	"[whole-item]."

@@ -7,7 +7,7 @@ volume nudges
 book nudge tables
 
 table of Intro nudges
-this-cmd	hashval	this-rm	this-item	this-rule	this-clue
+this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "busiest"	591981617	subsite	--	--	"[loc-rej]."
 "noentry"	650766775	subsite	--	--	"You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter..."	[intro nudges]
 "slim"	259155804	subsite	--	--	"[name-list]."
@@ -45,7 +45,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "intro"	376686752	--	--	degen-true rule	"[reg-rej]."
 
 table of Stores nudges
-this-cmd	hashval	this-rm	this-item	this-rule	this-clue
+this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "malls"	270164615	trips strip	--	--	"[say-which]."
 "mall"	173890649	trips strip	--	--	"[say-which]."
 "lots"	327550400	trips strip	--	--	"You can manipulate each individual store."
@@ -140,7 +140,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "subwaymap"	600009451	--	store m	--	"[no-store-m]."
 
 table of Forest nudges
-this-cmd	hashval	this-rm	this-item	this-rule	this-clue
+this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "conifer"	446903324	--	--	first-two-forest rule	"[no-con]."	[forest nudges]
 "conifers"	543177290	--	--	first-two-forest rule	"[no-con]."
 "rambling"	370319574	--	rambling shout	--	"[guider-content]."
@@ -218,7 +218,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "forest"	513381369	--	--	degen-true rule	"[reg-rej]."
 
 table of Sortie nudges
-this-cmd	hashval	this-rm	this-item	this-rule	this-clue
+this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "sortie"	531859319	--	--	degen-true rule	"[reg-rej]."	[sortie nudges]
 "centrifuge"	741172383	--	--	b4-cent rule	"[loc-rej]."
 "frenetic"	603466874	--	--	b4-cent rule	"[loc-rej]."
@@ -330,7 +330,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "papers"	474523614	--	--	got-plane rule	"It's a plane, now, for sure."
 
 table of Metros nudges
-this-cmd	hashval	this-rm	this-item	this-rule	this-clue
+this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "metros"	550941626	--	--	degen-true rule	"[reg-rej]."
 "metro"	454667660	--	--	degen-true rule	"[reg-rej]."
 "undesired"	698274326	underside	--	--	"[loc-rej]."
@@ -459,7 +459,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "resin"	423304232	--	--	resin-lala rule	"The dust is dust now."
 
 table of Resort nudges
-this-cmd	hashval	this-rm	this-item	this-rule	this-clue
+this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "resort"	572190276	--	--	degen-true rule	"[reg-rej]."
 "astral"	342897262	Astral Altars	--	--	"[loc-rej]."
 "altar"	246623296	Astral Altars	--	--	"[loc-rej]."
@@ -512,7 +512,7 @@ this-cmd	hashval	this-rm	this-item	this-rule	this-clue
 "toaster"	592164309	Means Manse	--	--	"[ennui]."
 
 table of general nudges
-this-cmd	hashval	this-rm	this-item	this-rule	this-clue
+this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "aprep"	378249648	--	prep paper	--	"[no-2]."
 "papers"	474523614	--	prep paper	--	"[no-2]."
 "prep"	376061830	--	prep paper	--	"[no-2]."

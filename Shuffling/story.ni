@@ -251,7 +251,7 @@ use MAX_NUM_STATIC_STRINGS of 21000.
 
 use MAX_ACTIONS of 290.
 
-use MAX_VERBS of 380.
+use MAX_VERBS of 390.
 
 use MAX_VERBSPACE of 4500.
 
@@ -261,7 +261,7 @@ use MAX_PROP_TABLE_SIZE of 240000.
 
 section compiler adjust constant section - not for release
 
-use MAX_VERBS of 390.
+use MAX_VERBS of 400.
 
 section about the player
 
@@ -450,8 +450,8 @@ to decide whether (nt - a table name) is hash-found:
 				if the rule succeeded:
 					say "[this-clue entry][line break]";
 					decide yes;
-			if there is a this-rm entry:
-				if location of player is this-rm entry:
+			if there is a this-room entry:
+				if location of player is this-room entry:
 					say "[this-clue entry][line break]";
 					decide yes;
 			if there is a this-item entry:
@@ -13691,6 +13691,8 @@ index map with lalaland mapped east of The Nick.
 index map with bullpen mapped east of lalaland.
 
 volume beta testing - not for release
+
+include STS tests by Andrew Schultz.
 
 [With my new script, this never needs the "not for release" twiddled]
 

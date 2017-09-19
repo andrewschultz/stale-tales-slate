@@ -73,8 +73,6 @@ include Bypass Disambiguation by Climbing Stars.
 
 include Large Game Speedup by Andrew Plotkin.
 
-include STS tests by Andrew Schultz.
-
 the story headline is "(or ailing) Squeeal! A Sequel!"
 
 the story description is "Dear, Lo! Ordeal reload!"
@@ -27805,6 +27803,8 @@ index map with sparse spares mapped south of peek keep.
 index map with lalaland mapped east of lost lots.
 
 volume beta testing - not for release
+
+include STS tests by Andrew Schultz.
 
 section instructions
 
