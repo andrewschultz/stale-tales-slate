@@ -55,14 +55,14 @@ You need to do semi-constructive things so that Gunter bugs you and you have a c
 > GET NOTEPAD
 > X ADS
 
-Though a quicker way is
+May be the most natural way, though a quicker way is
 
 > LAMP
 > X ADS
 
 > OPEN DOOR
 > 1
-(None of the other things are important, but they add color, if you want them.)
+(None of the other options are important, but they add color and clues, if you want them.)
 
 > 5
 
@@ -80,7 +80,7 @@ And there's something in the latches! The teariest treatise from Old Man Almond 
 
 (This can be done later. But if you put it off, you can't exit the manor until you figure it out.)
 
-The giant pin is a last lousy point. It is probably harder than the three ways out it clues. I'll save it for the end.
+The giant pin is a last lousy point. It is probably harder than the three ways out, which it clues. I'll save it and other LLPs for the end.
 
 Now to get out of your study. There are three ways. First, the tables.
 
@@ -151,11 +151,11 @@ Now, Elmo's complaints may be funny, or they may not. Let's skip them for now.
 
 (ALT) >2
 
-So now you're in the carven cavern. Plates stuck in plaster. It seems wrong but doesn't. The plates are squarish, with metal half way around ... sort of like a...
+So now you're in the carven cavern. There are plates on a plaster psalter. The plates are squarish, with metal half way around ... sort of like a...
 
 > STAPLE
 
-What goes with a staple?
+What goes with a staple? Well, you can remake the psalter.
 
 > STAPLER
 

@@ -1099,13 +1099,18 @@ SCAN the cans.
 ?No one's here but I hear something.
 They're EEKS.
 Try to SEEK them.
->>HANDSOME SAND HOME
+>>HELOTS' HOSTEL
+?What is a helot?
+A serf or slave.
+In this case, it's used to show Tortu the Trout is from modest means, which probably contributes to his being bullied.
+This was the Handsome Sand Home until release 4. ##regignore
 ?What does Aunt Tuna want me to do?
 She informs you her nephew the trout's name is Tortu. He hates bullies.
 He needs to be taught.
 You can TUTOR him.
-Then you get what's in the reward drawer.
+Then you get what's in the raw red drawer.
 ?What do I do with the tea?
+It's not the sort of tea you can drink, and with five anagram possibilities, you can use process of elimination, here.
 You EAT it.
 The paler pearl is useful later.
 ?Are the wipes usable/takeable?
@@ -1165,7 +1170,7 @@ They're lumped inartistically.
 This is a last lousy point.
 SHAPE the heaps.
 ?What do I do with a dirty lance?
-You need the wipes from Handsome Sand Home.
+You need the wipes fromthe Helots' Hostel.
 Then you can CLEAN the lance.
 ?What do I do with the rigged digger?
 Two things. First, it can release the haunter...
@@ -1194,12 +1199,15 @@ He hates noises.
 You need something that makes noises.
 Here's where you WARP the bubble wrap.
 Now you can SEARCH.
+?What's the Handsome Sand Home for? ##regignore
+To add plausibility for the game blocking you from going west or south.
 >>HORNED HEDRON
 ?How do I get rid of the weaselly walleyes?
 They're not scared of much.
 The ghost might scare them.
 If the ghost passed by them to find a ruby, they'd be scared.
 ?How do I disable the ol' trap?
+Well, first, you need to get rid of the walleyes.
 It would be nice as a portal.
 You must be able to disable it somewhere.
 Look around.
@@ -1208,6 +1216,7 @@ Of course, you need the walleyes gone.
 >>RASCAL CRAALS
 ?What is a craal?
 It's a place of living.
+Not a super fancy one, but it sure sounds exotic!
 ?What can I do here?
 This is a good place to hide stuff.
 Like the ruby.

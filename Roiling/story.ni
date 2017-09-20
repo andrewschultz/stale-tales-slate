@@ -1348,7 +1348,7 @@ carry out gotoing:
 		say "There's no way back. You deserve a reason why, so this is a minor bug." instead;
 	if noun is shunned:
 		if noun is Lean Lane:
-			say "Now you've visited the much-nicer Handsome Sand Home, you can't find your way back to Lean Lane, and there really wasn't anything there." instead;
+			say "Now you've visited the Helots' Hostel, you don't want to hang around Lean Lane more than you need to." instead;
 		if noun is Dourest Detours:
 			say "You got rid of the ant. Nothing more to do there." instead;
 		say "That's off-limits." instead;
@@ -6202,14 +6202,14 @@ to decide which thing is oyster-item:
 			decide on tubs;
 		if prod is visible:
 			decide on prod;
-		if aunt-tuna-cross is false or wipes are not in sand home: [hint the side quest ONLY IF you can still get the wipes]
+		if aunt-tuna-cross is false or wipes are not in Helots' Hostel: [hint the side quest ONLY IF you can still get the wipes]
 			if waste is in Shadier Airshed:
 				decide on waste;
 			if lance is not cleaned and lance is in Shadier Airshed:
 				decide on lance;
 			if heaps are reflexive and heaps are in Shadier Airshed:
 				decide on heaps;
-	if player is in sand home:
+	if player is in Helots' Hostel:
 		if tea tray is visible:
 			decide on tea tray;
 		if trout is reflexive:
@@ -6253,7 +6253,7 @@ carry out oyster-hinting:
 		all-say "You need to show the haunter where the ruby is buried, now.";
 	else if player is in Arches:
 		if bubble wrap is off-stage:
-			all-say "You need to go [if handsome sand home is visited]back to the handsome sand home[else]east of Anger Range[end if] for a small gift.";
+			all-say "You need to go [if Helots' Hostel is visited]back to the Helots' Hostel[else]east of Anger Range[end if] for a small gift.";
 	else if player is in anger range and eeks are in lean lane:
 		all-say "You may want to visit the trout to the east.";
 	else if player is in Rascal Craals and player does not have the digger:
@@ -6261,7 +6261,7 @@ carry out oyster-hinting:
 	else if location of player is Rascal Craals and ruby is off-stage:
 		all-say "This would be a good place to bury something, but you're not sure what.";
 	else if location of player is End Den:
-		all-say "[one of]You're at a dead end, here. Exiting and re-entering won't do much good. You need some sort of talisman to guide you through.[or][if player has gleaner]You should really examine the gleaner[else if player has pearl]You should find the other half of the pearl.[else]There are two fragments that can combine to form what you need. The arches and handsome sand home contain them.[end if][cycling]";
+		all-say "[one of]You're at a dead end, here. Exiting and re-entering won't do much good. You need some sort of talisman to guide you through.[or][if player has gleaner]You should really examine the gleaner[else if player has pearl]You should find the other half of the pearl.[else]There are two fragments that can combine to form what you need. The arches and Helots' Hostel contain them.[end if][cycling]";
 	else:
 		all-say "I can't find anything to try to do right now. Maybe hint a specific thing instead.";
 	the rule succeeds;
@@ -6717,7 +6717,7 @@ this is the trailing-a rule:
 		if the player's command exactly matches the text "a rec":
 			say "You've done nothing to deserve a rec yet. You need to think for yourself. Maybe you can become someone who give a rec, one day.";
 			the rule succeeds;
-	else if location of player is handsome sand home:
+	else if location of player is Helots' Hostel:
 		if the player's command exactly matches the text "a nut":
 			say "That's not nice. You are a guest.";
 			the rule succeeds;
@@ -6919,7 +6919,7 @@ Austerer Treasure	"The treasure room has no secret passages--so you can only go 
 Marines Seminar	"The camo-coma fields are just obvious enough to anyone paying attention, for legal reasons. Plus, either you are awake enough to see them, or you get too tired to walk into the center. West is the only way out."
 Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]."
 Lean Lane	"You can only go back west, or you would risk running into a mesh crab chambers or a crab crib full of bric-a-brac." [oyster]
-Handsome Sand Home	"Though you are a guest, probably best not to go poking around. You can go back west."
+Helots' Hostel	"Though you are a guest, probably best not to go poking around. You can go back west."
 Lapsin' Plains	"You can only go back south, or[if span pans are in Lapsin' Plains], once the span pans are neutralized,[end if] inside."
 Achers' Arches	"You can only go north to the Horned Hedron[if sardine is in arches], once the sardine is gone,[end if] or east back to Anger Range."
 Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if a-p is visible]portal[else]ol['] trap once you disarm it[end if][if walleyes are visible], though you probably don't need the walleyes watching you try[end if]."
@@ -7234,7 +7234,7 @@ check eating fretful truffle:
 	now spoilit is false instead;
 
 rule for supplying a missing noun when eating:
-	if player is in sand home and tea tray is in sand home:
+	if player is in Helots' Hostel and tea tray is in Helots' Hostel:
 		now the noun is the tea tray;
 
 check eating (this is the try to eat a hint tart rule) :
@@ -7298,8 +7298,8 @@ check buying:
 			say "You have nothing [greedy-person] wants." instead;
 	if player has tekno-token:
 		say "This isn't a place of commerce." instead;
-	if player is in sand home:
-		if wipes are in sand home:
+	if player is in Helots' Hostel:
+		if wipes are in Helots' Hostel:
 			say "You can't pay for the wipes, but maybe you don't need to." instead;
 	say "There's nothing to buy, and there's nothing to buy it with[if player has ruby]. The ruby's kind of priceless[else if player has pearl]. The pearl isn't really tradeable[end if]." instead;
 
@@ -7985,7 +7985,7 @@ instead of swearing obscenely:
 		if hogs are visible:
 			say "The hogs snicker at HOW you said that swear. They're the sort that get fazed by lame swears." instead;
 		say "No, that's too strong for here. You've been doing quite well with the tame stuff." instead;
-	if player is in sand home:
+	if player is in Helots' Hostel:
 		say "You don't want Aunt Tuna to perform a tsk task." instead;
 	if location of player is cleric circle:
 		if curse-warned is false:
@@ -9006,7 +9006,7 @@ wipes	wipes	true	458473653	--	"swipe"	"swipe"	"You swipe the wipes before Aunt T
 bubble wrap	ruby	false	276912353	--	"warp"	"warp"	"You warp the bubble wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"
 a-s	a-s	false	367879580	--	"search"	"search"	"'Reach, acher,' you say, stretching a bit more to find something interesting."
 o-t	a-p	false	400254014	--	"patrol"	"patrol"	"You zigzag meticulously back and forth searching for a switch to change the ol['] trap into something safer. You keep the rigged digger ahead as a sort of minesweeper. You hear a sound of slid lids from the ground--and the ol['] trap. It's a portal now."
-eeks	eeks	false	404819362	Handsome Sand Home	"seek"	"seek"	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the reward drawer. You also notice some wipes on the drawer."
+eeks	eeks	false	404819362	Helots' Hostel	"seek"	"seek"	"You seek the source of the eeks. Your cryings scrying lead to a woman who must be Aunt Tuna. Weeps sweep as she puts nurse-runes on your trout friend's bruises. He points excitedly to you when he sees you. She bemoans the Same Ten Meanest and asks if you will help poor Tortu not get bullied. She has food for you. And, if you do a good job, the raw red drawer. You also notice some wipes on the drawer."
 tubs	waste	false	322908696	--	"bust"	"bust"	"As if you've a tub tabu, you expend BTUs as you bust the tubs, eliminating any buts about your strength. Inside the broken tubs, you'd think there'd be a shovel, but it's a corroded decor rod--nah, it's more of a prod, really.[paragraph break]Waste also now lies where the tubs were. You probably don't need to clean it up unless you want to be an extra-good citizen. That prod is puzzling, though. It looks like it could fold out, if you poke it right."
 prod	digger	true	262171428	--	"drop"	"drop"	"It rattles as you drop it. You try every which way. Heavy end first, light end first, sideways, at an angle--then POW! It opens. It's a properly rigged digger, now. You can't really call it a prod. But you can, and do, pick it up."
 waste	lance	false	437312684	--	"sweat"	"sweat"	"You make real effort to clean up the waste. And you do! You pile them into heaps, in the process finding a very dirty lance. It's a bit too dirty to take."
@@ -17174,12 +17174,12 @@ carry out spilling:
 		unless the player yes-consents:
 			do nothing instead;
 		say "Okay.";
-	if player is in sand home:
+	if player is in Helots' Hostel:
 		if bubble wrap is off-stage:
 			if produce-redo-cup is false:
 				if dent-tend is false:
 					poss-d; [can't fix dent again]
-				if wipes are in sand home:
+				if wipes are in Helots' Hostel:
 					decrease poss-score of oyster by 4; [swipe sweat clean shape (not part of the quest but not doable without it) tan]
 			now player has wrap;
 			say "You spill the pills. 'That is some way to repay the nice meal I gave you! You will not get to see what is in that drawer and not just because you barely did anything for poor Tortu!' clucks Aunt Tuna. 'I will thank you to leave immediately.'[paragraph break]You do, but soon after, Tortu hands you a pack of bubble wrap[if tea is not in lalaland] and something from the tea tray, too--a paler pearl[end if]. 'Man! That's the funniest mad my aunt has been in a while! I guess she is nice and all but sometimes I sort of want to rebel don't know how. Anyway, once you left, she kept muttering how she wanted to get rid of this bubble wrap to somebody. So I snuck it for you.'";
@@ -17790,7 +17790,7 @@ every turn (this is the track haunter rule):
 [of such extreme action that you may wind up using extra nouns at your own risk]
 
 after fliptoing carps:
-	now trout is in sand home;
+	now trout is in Helots' Hostel;
 	now carps are in lalaland;
 	now pikes are in lalaland;
 	now scrawl is in anger range;
@@ -17943,9 +17943,9 @@ instead of doing something to eeks:
 
 the eeks are vanishing scenery in Lean Lane.
 
-Handsome Sand Home is an innie room in Oyster. "You're in a rather nicely kept up home. A raw red reward drawer leans against one wall[wipes-too]. You may leave to the west--anywhere else is probably a bit too private."
+Helots' Hostel is an innie room in Oyster. "You're in a dingy but comfortable residence. A raw red [if trout is reflexed]reward[else]warder[end if] drawer leans against one wall[wipes-too]. You may leave to the west--anywhere else is probably a bit too private."
 
-Aunt Tuna is a female person in Sand Home. description is "Grayin['], grainy. 'Staring at people you barely know! Where are your manners?'". "Aunt Tuna putters around here, nodding and clucking and shaking her head. Well, as much as a fish can[if tea tray is visible]. She occasionally motions to the tea tray she laid out for you[end if]."
+Aunt Tuna is a female person in Helots' Hostel. description is "Grayin['], grainy. 'Staring at people you barely know! Where are your manners?'". "Aunt Tuna putters around here, nodding and clucking and shaking her head. Well, as much as a fish can[if tea tray is visible]. She occasionally motions to the tea tray she laid out for you[end if]."
 
 does the player mean eating the tea tray: it is very likely;
 
@@ -17955,7 +17955,7 @@ understand "aet" as a mistake ("Oh, this region won't go into extra time unless 
 
 understand "eta" as a mistake ("ETA's one move later now that you went fishing for this anagram.") when tea tray is visible.
 
-The tea tray is edible flippable scenery in Handsome Sand Home. description is "Arty, with tea on it. The meal, not the drink[one of]. And no beak-bake in it[or][stopping]. But why stare at it? That's not what food is for."
+The tea tray is edible flippable scenery in Helots' Hostel. description is "Arty, with tea on it. The meal, not the drink[one of]. And no beak-bake in it[or][stopping]. But why stare at it? That's not what food is for."
 
 a-text of tea tray is "YYR". b-text of tea tray is "YYR". parse-text of tea is "e[sp]a[sp]t". tea tray is parse-spoilable.
 
@@ -18006,8 +18006,8 @@ after fliptoing eeks:
 
 to bowl-to-home:
 	now Lean Lane is shunned;
-	change the east exit of anger range to handsome sand home;
-	change the west exit of handsome sand home to anger range;
+	change the east exit of anger range to Helots' Hostel;
+	change the west exit of Helots' Hostel to anger range;
 
 chapter enlargeing
 
@@ -18353,15 +18353,15 @@ check fliptoing d2:
 book bubble wrap and drawer
 
 check fliptoing bubble wrap:
-	if player is in handsome sand home:
+	if player is in Helots' Hostel:
 		if trout is reflexive:
 			say "'You have things backward. You haven't done enough yet to deserve a reward,' clucks Aunt Tuna with the staidest distaste. 'Show me you won't restack rackets with some other poor innocent!'" instead;
 
-the dent is part of the raw red reward drawer. the dent is LLPish and flippable. description is "It'd probably take the right sort of futzing to get rid of."
+the dent is part of the raw red drawer. the dent is LLPish and flippable. description is "It'd probably take the right sort of futzing to get rid of."
 
 a-text of dent is "RYRR". b-text of dent is "RGPR". parse-text of dent is "t[sp]e[sp]n[sp]d". dent is parse-spoilable.
 
-some wipes are plural-named and auxiliary and reflexive. the wipes are on the raw red reward drawer.
+some wipes are plural-named and auxiliary and reflexive. the wipes are on the raw red drawer.
 
 description of wipes is "I-SPEW wipes is written in red on them."
 
@@ -18370,7 +18370,7 @@ a-text of wipes is "RRYRY". b-text of wipes is "RRYRY". parse-text of wipes is "
 check taking the wipes:
 	say "Aunt Tuna asks 'Really, what COULD you want with those.' She nods at you, and you pull your hand back. Maybe if you were quicker, you could take them." instead;
 
-instead of doing something with the reward drawer:
+instead of doing something with the raw red drawer:
 	if action is procedural:
 		continue the action;
 	else:
@@ -18378,12 +18378,18 @@ instead of doing something with the reward drawer:
 
 understand "redraw" as a mistake ("Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.") when drawer is visible.
 
-the raw red reward drawer is scenery in handsome sand home. the reward drawer is a supporter.
+the raw red drawer is scenery in Helots' Hostel. the raw red drawer is a supporter.
 
-check putting on reward drawer:
+understand "raw/-- red/-- warder drawer" as raw red drawer when trout is reflexive.
+understand "raw/-- red/-- reward drawer" as raw red drawer when trout is reflexed.
+
+to say rew-war:
+	say "[if raw red drawer is reflexive]warder[else]reward[end if]"
+
+check putting on raw red drawer:
 	say "No. Aunt Tuna keeps her place tidy." instead;
 
-description of reward drawer is "It's, well, raw and red[if dent is part of reward drawer], with a visible dent[end if][if trout is reflexive]. Aunt Tuna nods and points to Tortu as you look at it, indicating you could get what's in there if you help him[end if]."
+description of raw red drawer is "It's, well, raw and red[if dent is part of raw red drawer], with a visible dent[end if][if trout is reflexive]. Aunt Tuna nods and points to Tortu as you look at it, indicating you could get what's in there if you help him[end if]."
 
 check opening the drawer:
 	if bubble wrap is not off-stage:
@@ -18409,7 +18415,7 @@ carry out tending:
 	if noun is not dent:
 		say "You're not sure how to tend that." instead;
 	if dent-tend is false:
-		say "You fiddle with the dent, joggling the reward drawer from side to side, then--wham! Something inside knocks the dent back out, and the drawer is in perfect order again. Aunt Tuna is pleased, and Tortu is impressed.";
+		say "You fiddle with the dent, joggling the [rew-war] drawer from side to side, then--wham! Something inside knocks the dent back out, and the drawer is in perfect order again. Aunt Tuna is pleased, and Tortu is impressed.";
 		reg-inc;
 		min-up;
 		now dent-tend is true;
@@ -18824,7 +18830,18 @@ after fliptoing waste (this is the tubs give prod and waste rule):
 
 book Achers' Arches
 
-Achers' Arches is a room in oyster. Achers' Arches is west of anger range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if a-s is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are lots of hidden places you could ambush someone from[end if][if a-s is reflexive and sardine is in lalaland] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is in lalaland], as well as north [hedron-if-v][end if]."
+Achers' Arches is a room in oyster. Achers' Arches is west of anger range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if a-s is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are lots of hidden places you could ambush someone from[end if][if a-s is reflexive and sardine is in lalaland] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is in lalaland], as well as north [hedron-if-v][end if]. A handsome sand home blocks the way south and west."
+
+check going in Achers' Arches:
+	if noun is west or noun is south:
+		say "The handsome sand home isn't where it's at. The Horned Hedron to the north looks more adventurous." instead;
+
+the handsome sand home is scenery in Achers' Arches. "It's definitely not mean-shod. But you probaby don't want to disturb a private residence."
+
+instead of doing something with handsome sand home:
+	if action is procedural, continue the action;
+	if current action is entering, try going south instead;
+	say "There's not much to do with the handsome sand home." instead;
 
 to say hedron-if-v:
 	if Horned Hedron is visited:
@@ -26356,11 +26373,13 @@ curst crust	"[one of]You'll say something reflexive if you eat the crust.[plus][
 volt maze	"[maze-solve]."	--	"MAZEL TOV"
 big l	"The big L tells you what letter the maze starts on."
 big-let	"The big letters tell you that the maze goes from L to [if Unwary Runway is visited]some later letter[else]V[end if]."
-l-m	"You can scan Lev for hints. He's not much for conversation."	--	"MAZEL TOV"
-m-l	"You can scan Lev for hints. He's not much for conversation."	--	"MAZEL TOV"
-Tom Alvez	"You can scan Tom for hints. He's not much for conversation."	--	"MAZEL TOV"
+l-m	"You can scan Lev for hints to the 'hard' maze solution. He's not much for conversation."	--	"MAZEL TOV"
+m-l	"You can scan Lev for hints to the 'hard' maze solution. He's not much for conversation."	--	"MAZEL TOV"
+Tom Alvez	"You can scan Tom for hints to the 'hard' maze solution. He's not much for conversation."	--	"MAZEL TOV"
+riddle dreidl	"The dreidl is just there to push you back through the maze."
 plaque	"[maze-solve]."
 lamb	"[one of]The lamb is petrified with fear, but maybe the right fear would get it going again.[plus][or]What sort of noise can you make to get it going?[plus][or]BLAM.[minus][cycling]"	--	"BLAM"
+zany meter	"The zany meter is just there to hint how to solve the maze for minimum or maximum points."
 onyx censer	"[one of]The censer's black and green and really retro.[plus][or]The censer may remind you of what people used to play text adventures on a long time ago.[plus][or]It can become a SCREEN.[minus][cycling]"	--	"make a SCREEN"
 dart	"[one of]The dart is stuck in the dumpster, and taking it doesn't work.[plus][or]Frustrating, eh?[plus][or]What's a good word of frustration?[plus][or]Four letters.[plus][or]DRAT.[minus][cycling]"	--	"DRAT"
 dumpster	"[if dart is not in dumpster]You got the dart you needed from the dumpster. Hooray![else][one of]You can't reach into the dumpster without a little extra something.[plus][or]The right word might help you get the dart.[plus][or]What to say to get the dart?[plus][or]DRAT.[minus][cycling]"
@@ -26464,7 +26483,7 @@ crate	"[if crate is reflexive][one of]You can't figure where the debris is comin
 fragments	--	crate
 bogus-plains	"[one of]You can talk about how great you are, to all who would hear.[plus][or]What can you do in the lapsin['] plains?[plus][or]SPLAIN.[minus][cycling]"
 waste	"[one of]The waste puzzle is optional. [plus][or][one of]The waste is hard to move. It requires effort.[plus][or]Taking the waste is out, but you can sift through it the right way.[plus][or]SWEAT.[minus][cycling][stopping]"
-lance	"[one of]The lance is optional. [plus][or][minus][cycling][if player has lance and lance is reflexed]You can use the lance to defeat an optional monster near the end.[else if player does not have wipes][one of]You need an item to make the lance less dirty.[plus][or]The wipes in the handsome sand home can do that.[plus][or]You should be able to get the wipes unless you used the pills on Aunt Tuna.[minus][cycling][else][one of]The lance is too dirty.[plus][or]What can you do to an item that is too dirty?[plus][or]CLEAN the lance.[minus][cycling]"
+lance	"[one of]The lance is optional. [plus][or][minus][cycling][if player has lance and lance is reflexed]You can use the lance to defeat an optional monster near the end.[else if player does not have wipes][one of]You need an item to make the lance less dirty.[plus][or]The wipes in the Helots' Hostel can do that.[plus][or]You should be able to get the wipes unless you used the pills on Aunt Tuna.[minus][cycling][else][one of]The lance is too dirty.[plus][or]What can you do to an item that is too dirty?[plus][or]CLEAN the lance.[minus][cycling]"
 heaps	"[one of]The heaps are malleable, but they might be a pain to search.[plus][or]If you SHAPE the heaps, you get a Keep Yorpwald Beautiful Last Lousy Point.[minus][cycling]"
 eeks	"[one of]There's a noise coming from somewhere. Maybe it's a clue where that trout went.[plus][or]They are EEKS. That leaves twelve choices.[plus][or]Two, if you use the settler.[plus][or]SEEK.[minus][cycling]"
 eeks	"[one of]There's a noise coming from somewhere. Maybe it's a clue where that trout went.[or]They are EEKS. That leaves twelve choices.[or]Two, if you use the settler.[or]SEEK.[cycling]"
@@ -26473,7 +26492,7 @@ dent	"[one of]The dent can be dealt with if you know how to futz with it, but it
 wipes	"[one of]The wipes are part of an optional puzzle. [plus][or][minus][cycling][if player has wipes]The wipes can be used to tidy up an item[in-hovels].[else][one of]You can't just plain take the wipes. You are not fast enough.[plus][or]What's a quicker action than TAKE, to get the wipes?[plus][or]SWIPE the wipes.[minus][cycling]"
 tea tray	"[one of]Tea looks tasty. And easy to dispose of.[plus][or]You can EAT the tea.[minus][cycling]"
 trout	"[if trout is in range]You can't help the trout fight, but you can deal with the carps--or pikes.[else if trout is reflexive][one of]Aunt Tuna wants you to show her trout what you did.[plus][or]You can't attack anyone in someone's home.[plus][or]You can TUTOR the trout.[minus][cycling][else]You've helped the trout all you can.[end if]"
-reward drawer	"[if wrap is off-stage]You need to please Aunt Tuna to get what's in the drawer[else]You got what's in the drawer[end if]."
+raw red drawer	"[if wrap is off-stage]You need to please Aunt Tuna to get what's in the drawer[else]You got what's in the drawer[end if]."
 cans	"[one of]You can get rid of them for a last lousy point.[plus][or]If you've been using the settler, you really should know this verb.[plus][or]SCAN the cans.[minus][cycling]"
 ruby	"[one of]The ruby is useful.[plus][or]The ruby is the haunter's. The haunter is someone stole the ruby.[plus][or]You don't want to be caught with the ruby, but maybe if you can frame someone or some other people...[plus][or]You can BURY the ruby in the Rascal Craals[if rigged digger is off-stage], though you need something to bury it with[end if].[minus][cycling]"
 wrap	"[if warp-try is true][one of]You know the verb but not where to warp the wrap.[plus][or]Where could you annoy someone with the wrap? Someone with sensitive ears?[plus][or]The sandier sardine in Achers['] Arches will run if you warp the wrap near him.[minus][cycling][else][one of]So what's the verb to pop the wrap?[plus][or]Twenty-four choices. Six if you scan it. One if you cheat.[plus][or]You need to WARP the wrap.[plus][or]But you can't warp the wrap any old place. It might be fun and useful to annoy somefish.[plus][or]Who has sensitive hearing the wrap would annoy?[plus][or]WARP the wrap by the sardine.[minus][cycling]"
@@ -26485,6 +26504,7 @@ rigged digger	"[one of]The rigged digger is used to dig ground.[plus][or]The dig
 sardine	"[if bubble wrap is off-stage]To scare the guard away, you need an item from the fish bowl. Go there.[else if bubble wrap is not in lalaland][one of]The sandier sardine seems to have problems with his ears.[plus][or]Have anything that might make noise?[plus][or]The bubble wrap.[plus][or]WARP the wrap.[minus][cycling][else]You shouldn't need hints for the sardine now.[end if]"
 h-h	"The Horned Hedron is where you need to go [if Horned Hedron is visited]back[else]next[end if] to infiltrate the Lout Base."
 a-s	"[if a-s is reflexive][one of]Why might the arches be guarded?[plus][or]There's something in them.[plus][or]X ARCHES doesn't quite work. Something more thorough?[plus][or]SEARCH ARCHES.[minus][cycling][else]Nothing else in the arches.[end if]"
+handsome sand home	"It's just scenery."
 pre-haun	"[one of]You need to summon the haunter, but you need a reason.[plus][or]You need to bury a treasure first to have it go chase something.[plus][or]The rigged digger should give you a hint.[minus][cycling]"
 haunter	"[if haunter is reflexed][one of]Now you've gained its trust, you will want to show the haunter something.[plus][or]Like where you buried that ruby.[minus][cycling][else][one of]What do you do with a sausage?[plus][or]To calm it down?[plus][or]The settler can help here.[plus][or]You can ASSUAGE the sausage.[minus][cycling][end if]"
 walleyes	"[one of]The walleyes won't let you explore the Horned Hedron. You need to get rid of them.[plus][or]If you talk to the walleyes, they'll mention how you'd need to be a big scary ghost or something.[plus][or]You need a ghost to come along for the ride to scare the walleyes.[plus][or]Hide something the ghost wants in Rascal Craals.[minus][cycling]"
@@ -26493,7 +26513,7 @@ a-p	"[one of]You can just enter the portal.[plus][or]You won't know where to go 
 scrawl	"[one of]The haunter is beneath here. You may need to recover it.[plus][or]What do you often do with the undead?[plus][or]ETAHN RU is the haunter's name, and it is NEAR HUT.[plus][or]You should be able to UNEARTH it, once you have the proper equipment.[plus][or]You'll also need to have a reason to do so, or something to show it.[minus][cycling]"
 wire weir	"It's just there to provide a boundary in the Rascal Craals."
 thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The haunter[if haunter is off-stage], once you find it, [end if]will be glad to see what is under the thin hint.[minus][cycling]"
-paler pearl	"[if tea tray is not in lalaland][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the handsome sand home.[plus][or][a-t-check][plus][or]EAT TEA.[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Arches.[plus][or]How would you comb through the arches?[plus][or]SEARCH.[minus][cycling][end if]"
+paler pearl	"[if tea tray is not in lalaland][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Helots' Hostel.[plus][or][a-t-check][plus][or]EAT TEA.[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Arches.[plus][or]How would you comb through the arches?[plus][or]SEARCH.[minus][cycling][end if]"
 gleaner	"[one of]The gleaner may help you with the last bit, but it is too small.[plus][or]What could you do to make the GLEANER bigger?[plus][or]The settler gives you where the vowels are.[plus][or]ENLARGE the gleaner.[minus][cycling]"
 ant	"[one of]You can't outright attack the ant. You poke at it ineffectually. Something more brutish, but simple.[plus][or]TAN the ant.[minus][cycling]"
 yapper	"[one of]The settler on cheat mode gives confusing readings here because PAPERY and YAPPER clash.[plus][or]So if you use the settler, you may note that five of the letters are right. But maybe you want to solve this the old-fashioned way.[plus][or]He seems to be asking for a bribe and not asking for one at the same time. He needs to be compensated before he lets you do anything.[plus][or]If you give the yapper an item, he indicates he could be bribed...if it were valuable. He likes the pearl.[plus][or]You can just PREPAY the yapper.[minus][cycling]"
@@ -26809,7 +26829,7 @@ to say once-now:
 	say "[if keyboard is on slab and disk is in hard drive]now[else]once[end if]"
 
 to say a-t-check:
-	say "[if sand home is visited]Why not be polite and accept Aunt Tuna's meal?[else]You need to follow the eeks and then accept that person's hospitality.[end if]";
+	say "[if Helots' Hostel is visited]Why not be polite and accept Aunt Tuna's meal?[else]You need to follow the eeks and then accept that person's hospitality.[end if]";
 
 chapter talky tests - not for release
 
@@ -27001,7 +27021,7 @@ troves	"ALED when you have the note from Dale?"
 troves	"PERSIA when by the statue saying PRAISE?"
 troves	"LSAT or ALTS around the salt?"
 troves	"saying SNOG when you hear the song in Very Top?"
-troves	"REDRAW by the reward drawer?"
+troves	"REDRAW by the raw red drawer?"
 troves	"STUB or BUTS by the tubs?"
 presto	"PRESTO:"
 presto	"ENEMY TZAR around the maze entry in the Grey Gyre?"
@@ -27523,12 +27543,12 @@ rule for showing what the player missed: [there may be a way to do things withou
 		if cans are not in lalaland:
 			say "[2dmiss of cur-reg]you could've tried to SCAN the cans.";
 		if dent is not in lalaland:
-			say "[2dmiss of cur-reg]you could've stopped to TEND the dent in Aunt Tuna's reward drawer.";
+			say "[2dmiss of cur-reg]you could've stopped to TEND the dent in Aunt Tuna's raw red drawer.";
 		if heaps are reflexive and heaps are in Shadier Airshed:
 			say "[2dmiss of cur-reg]you could've stopped to SHAPE the heaps to beautify the hut.";
 		if lever is not reflexed:
 			say "[2dmiss of cur-reg]you could've stopped to REVEL before flipping the LEVER.";
-		if wipes are on reward drawer:
+		if wipes are on raw red drawer:
 			say "[2dmiss of cur-reg]you could've tried to SWIPE the wipes at Aunt Tuna's to start a side quest.";
 		else if waste is not in lalaland:
 			say "[2dmiss of cur-reg]you could've tried to SWEAT to remove the waste.";
@@ -27773,8 +27793,8 @@ index map with olde lode mapped east of posh hops shop.
 index map with hero's shore mapped east of olde lode.
 index map with fighter freight mapped east of hero's shore.
 index map with achers' arches mapped north of posh hops shop.
-index map with handsome sand home mapped east of Lapsin' Plains.
-index map with lean lane mapped east of handsome sand home.
+index map with Helots' Hostel mapped east of Lapsin' Plains.
+index map with lean lane mapped east of Helots' Hostel.
 index map with tenfold mapped north of horned hedron.
 index map with Dourest Detours mapped east of tenfold.
 index map with end den mapped east of Dourest Detours.

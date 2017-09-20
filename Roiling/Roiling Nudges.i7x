@@ -497,9 +497,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "can"	90100911	--	cans	--	"Getting rid of one can would still leave a mess. Maybe you can deal with them all."
 "cans"	186374877	--	cans	--	"You glance at your settler, wondering what to do with the cans. Maybe you've overlooked something obvious."
 "eek"	308545396	--	eeks	--	"You try to eke out an eek, but you only have one data point, and that's not enough."
-"handsome"	491914519	handsome sand home	--	--	"[locname]." [HANDSOME SAND HOME]
-"home"	303516138	sand home	--	--	"[locname-part]."
-"sand"	188398381	sand home	--	--	"[locname-part]."
+"helots"	492638808	helots' hostel	--	--	"[locname]." [HELOTS' HOSTEL]
+"helot"	396364842	helots' hostel	--	--	"[locname]."
 "reward"	429605395	--	drawer	--	"[if wrap is off-stage]Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout[else]There's nothing else in the drawer and no way to get in by yourself[end if]."
 "bubble"	341982470	--	bubble wrap	--	"It's just wrap, really."
 "bubblewrap"	618894823	--	bubble wrap	--	"It's just wrap, really."

@@ -549,14 +549,13 @@ this is the insult-over-girls rule:
 	the rule fails;
 
 this is the ohai-tuna rule:
-	if player is in sand home:
+	if player is in helots' hostel:
 		the rule succeeds;
 	the rule fails;
 
 this is the gossip-over-chatter rule:
-	if location of player is not handsome sand home:
+	if location of player is not helots' hostel:
 		the rule fails;
-	d "In sand home.";
 	if go-with-first of table of tuna gossip and table of aunt tuna chatter:
 		the rule succeeds;
 	the rule fails;

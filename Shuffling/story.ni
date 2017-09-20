@@ -1453,6 +1453,7 @@ oils	"[if soil is in lalaland][one of]The OILS can be a couple things, but you m
 lois	"Lois is the provider of oils."
 crashing archings	"Lois caused that, to help you not look backwards."
 roadblock	"[one of]The roadblock seems misplaced, almost inviting you to enter. [plus][or]It's also cut 5/9 of the way down. [plus][or]What's an entryway? A DOOR. [plus][or]That leaves the word BLACK. [plus][or]It's a BLACK DOOR! [minus][cycling]"
+rime mire	"The rime mire is just there to block you from leaving the moor."
 bright red graffiti	"The graffiti helps you figure what the roadblock is."
 hoots button	"[one of]The hoots button isn't up to much. [plus][or]You don't hoot with a missile... [plus][or]...you SHOOT. [minus][cycling]"
 trees button	"[one of]The trees button isn't much help launching a missile. [plus][or]You don't want that missile going just anywhere. [plus][or]STEER BUTTON. [minus][cycling]"
