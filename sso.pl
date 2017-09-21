@@ -113,6 +113,7 @@ while ( $count <= $#ARGV ) {
   my $arg2 = defined( $ARGV[ $count + 1 ] ) ? $ARGV[ $count + 1 ] : "";
 
   for ($arg) {
+    /^\+/ && do { addString( $ARGV[0] ); exit(); };
     /^[0-9]/ && do { doAnagrams( $ARGV[0] ); };
     /\?/ && do { usage(); exit(); };
     /^-?cl[nx]*$/ && do {
@@ -837,6 +838,28 @@ sub readMapFile {
   close(A);
 }
 
+sub addString {
+  my $temp = $_[0];
+  my $bkup = "$orig.bak";
+  my $line;
+  my $last;
+
+  $temp =~ s/^\+//;
+  $temp =~ s/-/ /g;
+
+  open( A, "$orig" )  || die("Can't open $orig");
+  open( B, ">$bkup" ) || die("Can't write to backup");
+  while ( $line = <A> ) {
+    $last = $line;
+    print B $line;
+  }
+  print B "\n" if ( $last !~ /\n/ );
+  print B "$temp\n";
+  close(B);
+  close(A);
+  copy( $bkup, $orig ) if compare( $bkup, $orig );
+}
+
 sub usage {
   print <<EOT;
 SSO roughly sorts out anagrams into categories: biopics, regular books, movies, shouty ads, and ALL CAPS entries.
@@ -844,6 +867,7 @@ You can also specify the store area at the end of the quotes. X means the name l
 
 Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sorting within is by word then letter length.
 
++ adds string to tosort.txt (- = space)
 -c is compare post-run
 -d is demo mode. The file doesn't change.
 -e edits tosort.txt, -ec edits source code, -er/r edits suffix-to-table file
