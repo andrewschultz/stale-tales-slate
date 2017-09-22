@@ -17,6 +17,7 @@ use i7;
 use File::Compare;
 use File::Copy qw(copy);
 use Math::Prime::Util "gcd";
+use Win32;
 use Win32::Clipboard;
 
 ####################################constants
@@ -82,6 +83,7 @@ my $unquotedToDump = 5;
 my $showCrib        = 0;
 my $dieOnWarnings   = 0;
 my $fullDebug       = 0;
+my $popupOnEmpty    = 0;
 my $writeAdded      = 0;
 my $rawOnly         = 0;
 my $postPuncProc    = 0;
@@ -167,6 +169,7 @@ while ( $count <= $#ARGV ) {
     };
     /^-?m$/  && do { $moveToHeader = 1; $count++; next; };
     /^-?fd$/ && do { $fullDebug    = 1; $count++; next; };
+    /^-?pu$/ && do { $popupOnEmpty = 1; $count++; next; };
     /^-?wa[lop]*$/
       && do {
       $writeAdded   = 1 + ( $arg =~ /l/ );
@@ -713,6 +716,7 @@ sub dumpUnquoted {
   my @temp;
   my $procString;
   my $squash;
+  my $spawnPopup = 0;
 
   while ( $a = <A> ) {
     if ( ( $a =~ /^[a-z]/i ) && ( $tries < $maxTries ) && ($maxTries) ) {
@@ -751,6 +755,13 @@ sub dumpUnquoted {
       }
     }
     else {
+      if ( $popupOnEmpty
+        && $maxTries
+        && ( $tries == $maxTries )
+        && ( $a =~ /^[a-z]/i ) )
+      {
+        $spawnPopup = 1;
+      }
       print A2 $a;
     }
   }
@@ -764,6 +775,9 @@ sub dumpUnquoted {
     unlink "$bak";
   }
   `$dump` if $_[1];
+  Win32::MsgBox( "Look for other files with stray text, if they're there.",
+    0, "SSO.PL raw text file is emptied" )
+    if ($spawnPopup);
 }
 
 sub quickCheck {
@@ -875,6 +889,7 @@ Sorted always remain on top, non-sorted on bottom, so ctrl-home/end work. Sortin
 -o1/ol opens 1st or last quoted undone
 -n adds a line of numbers to the stats file.
 -s opens the stats after.
+-pu gives a popup if the sorting file has removed all its unevaluated text
 -dw dies on warnings e.g. an invalid has at the end of quoted text
 -^ converts title case
 -mw is maximum warnings
