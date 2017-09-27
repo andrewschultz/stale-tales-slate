@@ -901,7 +901,7 @@ SPECIFIC USAGE:
 dns is good for doing the stats etc
 c is good for testing
 wa is writeadded, l = launch, o = only. WALPO = general test before
-uql 20 is good for a day's work to check
+pu uql 20 is good for a day's work to check
 EOT
   exit;
 }

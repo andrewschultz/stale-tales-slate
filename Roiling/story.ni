@@ -9612,7 +9612,7 @@ the player is in Dusty Study.
 
 a rich chair is useless scenery in Dusty Study. "You thought you preferred a recliner but this is real. Nicer. It guards against cushionless slouchiness. Its backrest is shaped like brackets, and it's from Art Beck's. Small things can get stuck in it, or even lost[if pedanto-notepad is on chair]. Like your pedanto-notepad, just sitting on it[end if][if latches are off-stage]. In fact, it seems a bit lumpy now[end if]."
 
-the sad ads are plural-named scenery in Dusty Study. "[one of]The ads aren't sad because they're drab but rather because so many people fall for them. And they're not even magically possessed. This is the price of prosperity, and yet... One[or]Another[stopping] ad [hawk-blare]."
+the sad ads are plural-named scenery. "[one of]The ads aren't sad because they're drab but rather because so many people fall for them. And they're not even magically possessed. This is the price of prosperity, and yet... One[or]Another[stopping] ad [hawk-blare]."
 
 this-ad is a number that varies. this-ad is usually 0.
 
@@ -10044,8 +10044,9 @@ check going in study:
 		if pedanto-notepad is on a rich chair:
 			if need-line-break is true:
 				say "[line break]";
-			say "You[if need-line-break is true] also[end if] swipe your pedanto-notepad, since it was so helpful your first time shuffling around in the Forest and Sortie and Metros your first time through Yorpwald.";
+			say "You[if need-line-break is true] also[end if] swipe your pedanto-notepad, since it was so helpful your first time shuffling around in the Forest and Sortie and Metros your first time through Yorpwald. It uncovers some sad ads, the sort which have sadly pervaded Yorpwald recently.";
 			now player has pedanto-notepad;
+			now sad ads are in dusty study;
 
 chapter Urgent Gunter
 
@@ -10362,7 +10363,8 @@ rule for supplying a missing noun when entering:
 	if player is in Largely All-Grey Gallery:
 		now the noun is the evac-cave.
 
-Largely All-Grey Gallery is a stairy innie privately-named room in Means Manse. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. It stands regally, for all that. [one of]There's an evac-cave that could help you sneak out of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of means manse < max-score of means manse], though if you're a completist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
+[x current room]
+Largely All-Grey Gallery is a stairy innie room in Means Manse. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. It stands regally, for all that. [one of]There's an evac-cave that could help you sneak out of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of means manse < max-score of means manse], though if you're a completist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
 
 understand "sitar" as a mistake ("[if stair is visible]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Largely All-Grey Gallery.
 
@@ -10478,7 +10480,11 @@ book carven cavern
 
 Carven Cavern is an innie room in Means Manse. "This is an oddly carved cavern[plaster-plates][curtain-desc]. You probably don't want to go back outside.";
 
-understand "craven" as a mistake ("Ok, it's pretty craven as anagrams go, but you need to find a way through, no matter what its name is.") when player is in Carven Cavern.
+understand "craven" as a mistake ("Ok, the carven cavern [b]IS[r] pretty craven as anagrams go, but you need to find a way through, no matter what its name is.") when player is in Carven Cavern.
+
+after fliptoing plaster psalter:
+	now act-ruin curtain is in carven cavern;
+	continue the action;
 
 to say plaster-plates:
 	say ". ";
@@ -10495,7 +10501,7 @@ to say curtain-desc:
 	say ". ";
 	if curtain is in lalaland:
 		say "The curtain no longer blocks passage in";
-	else:
+	else if curtain is in carven cavern:
 		say "[if curtain-know is true]The Act-Ruin Curtain[else]A curtain may be covering up a passage[end if]"
 
 understand "trainer" as a mistake ("You're on your own. Perhaps you'd be better off [if plaster is in cavern]scanning the plaster and [end if]twiddling the [if staple is visible]staple[else]plates[end if] to get on with things.") when player is in cavern
@@ -10504,7 +10510,7 @@ check exiting in cavern:
 	if paperwall is in lalaland:
 		say "Exiting the cavern, entering the passage, the same thing.";
 		try going inside instead;
-	say "You probably want to go in." instead;
+	say "It's much safer to go in, not out, here." instead;
 
 check going nowhere in cavern (this is the cavern check rule):
 	say "The only way to make progress is inward, through that [if paperwall is visible]paper[else if paperwall is not visible]ex-[end if]wall.";
@@ -26404,7 +26410,7 @@ lawl wall	"[one of]The wall can't be changed on its own.[plus][or]But the keys o
 hogs	"[one of]The hogs find it funny you can't get the keys.[plus][or]If you expressed your disappointment, the hogs might get overconfident.[plus][or]GOSH.[minus][cycling]"	--	"GOSH"
 keys	"[one of]You really want the keys, and there's no way to pretend you don't.[plus][or]Maybe you can pretend, sort of, and annoy the hogs.[plus][or]SYKE.[minus][cycling]"	--	"SYKE"
 mount um-not	"Mount Um-Not is just scenery."
-hawt thaw	"[one of]You can do something with the hawt thaw, but it's not critical to the game.[plus][or]
+hawt thaw	"[one of]You can do something with the hawt thaw, but it's not critical to the game.[plus][or]You may wonder how or why the heck it exits.[plus][or]Saying WHAT makes it disappear.[minus][cycling]"
 deil's slide	"Deil's Slide is just scenery."
 serial number	"[one of]The numbers can mean something else.[plus][or]Convert them to where they are in the alphabet.[plus][or]This is an alternate solution to grinding it out with the Settler.[plus][or]BINGO.[minus][cycling]"
 futon	"[if slept is true]You won't need to sleep on the futon again.[else][one of]The futon has patterns of tiresome--figuratively and literally--peels on it.[plus][or]The futon will be useful to sleep on when you need to.[minus][cycling][end if]"	--	"SLEEP on the futon"
