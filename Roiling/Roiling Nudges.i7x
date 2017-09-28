@@ -62,9 +62,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "satchel"	439479634	--	satchel	--	"You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too."
 "satchel"	439479634	--	latches	--	"Hm, that's not it, but it must be something relatively simple. Maybe rereading the treatise would help things fall out."
 "terrain"	517651905	--	plaster	--	"Hm...it probably isn't that easy. The plaster and [if plates are visible]plates[else]staple[end if] are probably part of your training."
-"paperwall"	595999917	--	paperwall	--	"[papwall]."
-"paper"	378249648	--	paperwall	--	"[papwall]."
-"wall"	217750269	--	paperwall	--	"[papwall]."
 "high"	152157146	--	high sign	--	"[hisin]."
 "highsign"	394931168	--	high sign	--	"[hisin]."
 "sign"	242774022	--	high sign	--	"[hisin]."
@@ -1246,8 +1243,8 @@ this is the stable-visible rule:
 		the rule succeeds;
 	the rule fails;
 
-to say papwall:
-	say "The paperwall is unmoved. Maybe the stuff [if plaster is in lalaland and plates are in lalaland]that came from it[else if plaster is in Cavern and plates are in Cavern]in the wall[else]in and out of the wall[end if]  could help you more, here";
+to say curtain-block:
+	say "The act-ruin currtain is unmoved. Maybe the stuff that blocked it could help you more, here";
 
 to say hisin:
 	say "The high sign is a clue. Bad idea to change it"

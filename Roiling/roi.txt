@@ -115,10 +115,10 @@ If you did something with the plates, it'll be a bit easier to know what to do w
 The settler gives you three letters.
 What does a staple (plates) go in?
 The plaster becomes a STAPLER.
-?Stupid paperwall!
-It's not quite wallpaper, and you can't peel it back.
+?Stupid act-ruin curtain! How can I get rid of it?
+Well, it looks like lined paper, with the holes and the lines.
 You can hook it back through the holes in the upper left.
-PUT STAPLE IN STAPLER.STAPLE PAPERWALL.
+PUT STAPLE IN STAPLER.STAPLE CURTAIN.
 >The Settler
 >>Basic Use
 ?Can anyone in-game help me?

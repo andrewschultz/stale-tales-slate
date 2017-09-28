@@ -5680,8 +5680,8 @@ carry out means-hinting:
 			try objhinting plates instead;
 		if plaster is in cavern:
 			try objhinting plaster instead;
-		if peeling paperwall is visible:
-			try objhinting paperwall instead;
+		if act-ruin curtain is visible:
+			try objhinting act-ruin curtain instead;
 		if player has latches:
 			try objhinting latches instead;
 	all-say "Nothing left to do here. You should be able to get going to the next part."
@@ -7041,7 +7041,7 @@ table of attack-specific
 target	nohit
 yourself	"Surly foe: yourself? Lose fury!"
 plaster	"There's too much of it, and it's too hardened." [start Means Manse]
-paperwall	"It's still too thick, even though some of the plastter is peeled away."
+act-ruin curtain	"It's still too thick, even though some of the plaster is peeled away."
 Elmo	"[if rifle is visible]Elmo kind of has the upper hand here[else]No, he's here to help[end if]."
 drama armada	"That'd be a silly way to die." [START routes]
 Brother Horbert	"Yorpwald's already got a St. Lip-Split."
@@ -7188,6 +7188,8 @@ check climbing (this is the generic silly climbing reject rule):
 chapter dropping
 
 instead of dropping a quest-item: say "You need to keep it--it's a reagent for Brother Horbert."
+
+[?? dropping multiple items]
 
 check dropping something:
 	if player is in treasure and hoop is in treasure:
@@ -7608,7 +7610,7 @@ chapter touching
 check touching:
 	if noun is lamb:
 		say "It's a bit too scared. Too scared to flee where it needs to go." instead;
-	if noun is plaster or noun is paperwall:
+	if noun is plaster or noun is act-ruin curtain:
 		say "Seems a bit hollow but not enough to bust through." instead;
 
 chapter listening
@@ -8872,7 +8874,7 @@ niche	chimney	false	484428752	--	"chimney"	"chimney"	"The square saying MY NICHE
 t-b	t-b	false	608585586	--	"basement"	"basement"	"[if Largely All-Grey Gallery is visited]You diligently set about making sure you've got all the points for this area[else]Now you remember why there were ten beams[end if]. Of course, the ten beams lead [b]down[r] to the basement."
 tables	tables	false	401610655	--	"stable"	"stable"	"The tables make a weird splatching noise. The writing coalesces and seems to consume the wall, and you can now walk inside to see the stable you never really wanted[dust-b]."
 plates	staple	true	464657709	--	"staple"	"staple"	"The plates [if plaster is visible]fall with a clatter from the plaster[otherwise]schlurp together[end if], and a large staple forms from their edges. You take it, so you don't step on it later or anything."
-plaster	stapler	true	549981512	--	"stapler"	"stapler"	"As paper appears behind, a stapler falls out. You take it[if plates are visible] as the formerly stuck plates fall[end if]. The paperwall behind looks lined but seems solid enough."
+plaster	stapler	true	549981512	--	"stapler"	"stapler"	"As paper appears behind, a stapler falls out. You take it[if plates are visible] as the formerly stuck plates fall[end if]. The act-ruin curtain behind looks lined but seems solid enough."
 rifle	rifle	false	338451493	--	"flier"	"flier"	"Duh! Snap![paragraph break]After a 'Hands Up!' and SHUP! the rifle jumps out of Elmo's hands. Turns out it was loaded, and it did have a bullet with your name on it, because it becomes a loaded propaganda flier with your name on it.[paragraph break]Elmo lowers his voice. 'Okay, we gotta play it safe here. They maybe should've figured I was a mole. Name and all. But I have stuff to tell you.'[paragraph break]Lo, a guide! Dialogue!"
 
 table of stores anagrams
@@ -10396,8 +10398,6 @@ the stair is a backdrop. "It leads [if player is in Largely All-Grey Gallery]up[
 
 does the player mean climbing the stair: it is very likely.
 
-understand "wallpaper" as a mistake ("You try the word-flip, to check--sadly, it doesn't work. Maybe there is another way to remove the paperwall.") when paperwall is visible
-
 understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All-Grey Gallery and t-b are in dusty study.
 
 after printing the locale description for Largely All-Grey Gallery when Largely All-Grey Gallery is unvisited:
@@ -10507,14 +10507,14 @@ to say curtain-desc:
 understand "trainer" as a mistake ("You're on your own. Perhaps you'd be better off [if plaster is in cavern]scanning the plaster and [end if]twiddling the [if staple is visible]staple[else]plates[end if] to get on with things.") when player is in cavern
 
 check exiting in cavern:
-	if paperwall is in lalaland:
+	if act-ruin curtain is in lalaland:
 		say "Exiting the cavern, entering the passage, the same thing.";
 		try going inside instead;
 	say "It's much safer to go in, not out, here." instead;
 
 check going nowhere in cavern (this is the cavern check rule):
-	say "The only way to make progress is inward, through that [if paperwall is visible]paper[else if paperwall is not visible]ex-[end if]wall.";
-	if paperwall is in lalaland:
+	say "The only way to make progress is inward, through that [if act-ruin curtain is in lalaland]ex-[end if]curtain.";
+	if act-ruin curtain is in lalaland:
 		say "[line break]Go through?";
 		if the player direct-consents:
 			try going inside instead;
@@ -10526,7 +10526,7 @@ check going inside in cavern:
 	if act-ruin curtain is in cavern:
 		now curtain-know is true;
 		say "As you touch the curtain, it immediately drains you of your will to enter it. You realize it must be a ACT-RUIN CURTAIN. You'll have to disable it somehow without touching it" instead;
-	say "You walk through the former paperwall--and through an obscure part of Old Warpy. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
+	say "You walk through the former act-ruin curtain--and through an obscure part of Old Warpy. You hear a voice: 'You! Find! Unify! Do!' Is it [gtmn]? Perhaps it is. It's only when you totally lose your sense of direction that you see a way out. It's the Trips Strip, er, Strip of Profits. Which looks the same and different. You look at your treatise one last time--it can't help you any more, but you put it deep in your super purse for sentimental value, for later.";
 	now satchel is in lalaland;
 	now teariest treatise is in lalaland;
 	solve-region Means Manse;
@@ -10557,7 +10557,7 @@ check opening stapler:
 	if player has staple:
 		say "I'm going to assume you mean opening the stapler to put the staple in.";
 		try inserting staple into stapler instead;
-	if paperwall is in lalaland:
+	if act-ruin curtain is in lalaland:
 		say "You've probably done enough with your stapler, here." instead;
 	say "You don't have anything to put in the stapler." instead;
 
@@ -10578,34 +10578,30 @@ curtain-know is a truth state that varies.
 
 the act-ruin curtain is scenery. "It looks flimsy enough[if curtain-know is true], but you know if you touch it, you'll freeze up again[end if]."
 
-understand "wall" and "walls" as paperwall when player is in cavern and paperwall is in cavern.
-
 to say could-staple:
 	say "You need the right tool to do so. You probably need one that could get a grip on some paper[if player carries stapler]. Maybe you could use the stapler to STAPLE the wall[stapload][end if]";
 
-instead of opening the paperwall:
+instead of opening the act-ruin curtain:
 	say "[could-staple].";
 
 to say stapload:
 	say "[if staple is in stapler]especially since[else]once[end if] it's loaded";
 
-instead of taking paperwall:
-	try pulling paperwall instead.
+instead of taking act-ruin curtain:
+	try pulling act-ruin curtain instead.
 
-instead of pulling the paperwall:
+instead of pulling the act-ruin curtain:
 	say "[could-staple].";
 
-the vertical stripe is part of the peeling paperwall. description of vertical stripe is "Not very dark, but off to the left, creating a sort of margin.".
+the vertical stripe is part of the act-ruin curtainn. description of vertical stripe is "Not very dark, but off to the left, creating a sort of margin.".
 
-the horizontal stripes are part of the peeling paperwall. description of horizontal stripes is "Bluish, and there are about thirty."
+the horizontal stripes are part of the act-ruin curtain. description of horizontal stripes is "Bluish, and there are about thirty."
 
-the small holes are part of the paperwall. description is "They look like some sort of weird lock or something.". understand "hole" as small holes.
-
-understand "paper/wall/wallpaper" as paperwall.
+the small holes are part of the act-ruin curtain. description is "They look like some sort of weird lock or something.". understand "hole" as small holes.
 
 after fliptoing stapler:
-	if peeling paperwall is not in cavern:
-		now peeling paperwall is in cavern;
+	if act-ruin curtain is not in cavern:
+		now act-ruin curtain is in cavern;
 	continue the action;
 
 chapter pastel plates
@@ -10642,11 +10638,11 @@ understand the command "staple [something]" as something new.
 
 understand "staple [something]" as stapleing.
 
-does the player mean stapleing the paperwall: it is very likely.
+does the player mean stapleing the act-ruin curtain: it is very likely.
 
 rule for supplying a missing noun when stapleing:
-	if paperwall is visible:
-		now noun is paperwall.
+	if act-ruin curtain is visible:
+		now noun is act-ruin curtain.
 
 carry out stapleing:
 	if player does not have stapler:
@@ -10657,10 +10653,10 @@ carry out stapleing:
 		if staple is not in stapler:
 			say "[reject]" instead;
 	if noun is holes:
-		try stapleing paperwall instead;
+		try stapleing act-ruin curtain instead;
 	if noun is treatise:
 		say "It's only one piece of paper. It doesn't need stapling." instead;
-	if noun is not paperwall:
+	if noun is not act-ruin curtain:
 		say "That doesn't need stapling." instead;
 	If noun is the player:
 		say "I can't imagine where you want to staple yourself, and I don't want to know." instead;
@@ -10668,8 +10664,8 @@ carry out stapleing:
 		say "[reject]";
 	if staple is not visible:
 		say "You can't staple with that stapler until you have a staple." instead;
-	say "You staple the paperwall. The staple is the right strength to cut in all the layers, grab them at once, and peel them back. The paperwall snaps back, slamming like a door and melting into the wall--and taking the stapler with it. You can't repaper, but [if latches are visible]with those latches, you may[else]you won't[end if] need to prepare to go [b]in[r] to further adventure!";
-	now paperwall is in lalaland;
+	say "You staple the act-ruin curtain. The staple is the right strength to cut in all the layers, grab them at once, and peel them back. The act-ruin curtain snaps back, slamming like a door and melting into the wall--and taking the stapler with it. You can't repaper, but [if latches are visible]with those latches, you may[else]you won't[end if] need to prepare to go [b]in[r] to further adventure!";
+	now act-ruin curtain is in lalaland;
 	now staple is in lalaland;
 	now stapler is in lalaland;
 	reg-inc;
@@ -11131,13 +11127,13 @@ instead of doing something to the logo:
 		continue the action;
 	say "The logo's just there to say what it is. And maybe as a hint to examine.";
 
-check scaning (this is the scan settler and paperwall parts rule):
+check scaning (this is the scan settler and act-ruin curtain parts rule):
 	if noun is part of the settler:
 		say "Impossible. It's part of the settler." instead;
 	if noun is small holes:
 		say "They register nothing. Perhaps there's some sort of key-thing that fits in them." instead;
-	if noun is paperwall or noun is part of paperwall:
-		say "The paperwall registers nothing. Perhaps you need to find a way to unlock the small holes in the paperwall[if staple is off-stage]. You don't have anything that makes holes, yet[else]. Hmm, you have something that could make a small hole[end if]." instead;
+	if noun is act-ruin curtain or noun is part of act-ruin curtain:
+		say "The act-ruin curtain registers nothing. Perhaps you need to find a way to unlock the small holes in the act-ruin curtain[if staple is off-stage]. You don't have anything that makes holes, yet[else]. Hmm, you have something that could make a small hole[end if]." instead;
 
 the stubborn switch is part of the settler. description is "It doesn't seem to budge easily--maybe that's because it gives some unusually good hints."
 
@@ -13163,9 +13159,10 @@ to say not-upb:
 	say "Not the most upbeat music, but then, you aren't here for art critiques"
 
 instead of doing something with scenery when player is in cleric circle:
+	if noun is pews or noun is lament mantle or noun is list o toils or noun is red writing, continue the action;
 	if the action is procedural:
 		continue the action;
-	say "The music is there just to provide oppressive atmosphere."
+	say "The music is there just to provide spiritual atmosphere."
 
 section pews
 
@@ -16533,7 +16530,7 @@ definition: a direction (called dir) is viable:
 		decide yes; [these are fringe cases. Again, you can enter certain places etc. once traps are removed]
 	if player is in Largely All-Grey Gallery and dir is inside:
 		decide yes;
-	if player is in cavern and dir is inside and paperwall is in lalaland:
+	if player is in cavern and dir is inside and act-ruin curtain is in lalaland:
 		decide yes;
 	decide no;
 
@@ -26228,9 +26225,9 @@ brass crag	"[dio-part]."
 bookshelf	"I'd like to think that the bookshelf gives local flavor to the game, but it doesn't offer any hints."
 niche	"[one of]'My niche' above the diorama leads upwards.[plus][or]What is a household accoutrement that leads up? If you use the settler, you may know what the last letter is.[plus][or]'My niche' can be a chimney.[minus][cycling]"
 closest closets	"You can ENTER the closets to get back to the study or go from the study to the Heights."
-vertical stripe	--	paperwall
-horizontal stripes	--	paperwall
-small holes	--	paperwall
+vertical stripe	--	act-ruin curtain
+horizontal stripes	--	act-ruin curtain
+small holes	--	act-ruin curtain
 pen	"Not much you can do with a pen other than write."
 palm	"[one of]Well, you need a light source, but a palm [b]absorbs[r] light.[plus][or]It wouldn't be bright to stumble into the palm...[plus][or]...but changing the palm would be.[plus][or]If you wait around, you get some hints of what to do with the palm. Note the purposefully bad spelling.[or]One four-letter shuffling of PALM is indicated. Hopefully.[or]You can change the palm to a LAMP by just saying so.[minus][cycling]"
 lamp	"The lamp will last as long as you need it to."
@@ -26258,7 +26255,7 @@ plaster	"[one of]Plaster generally covers up holes. You need to bust through tha
 plates	"[one of]The plates are embedded, but they have a metal rim. Well, sort of.[plus][or]The plates are also square, with metal half-square rings.[plus][or]They become a STAPLE.[minus][cycling]"
 staple	"[one of]What does a staple go in?[plus][or][if plaster is visible]Something the plaster can change into.[else]The stapler.[end if][plus][or]PUT STAPLE IN STAPLER.[minus][cycling]"
 stapler	"[one of]What goes in a stapler?[plus][or][if plates is visible]Something the plates can change into.[else]The staple.[end if][plus][or]PUT STAPLE IN STAPLER.[minus][cycling]"
-paperwall	"[one of]What does the paperwall--with its design--remind you of?[plus][or]The paperwall's meant to look like lined paper. The holes in the upper corner look like they were made by a stapler.[plus][or][if plaster is visible or plates are visible]You've got some work to do before you can do any stapling[else]You've got what you need to staple the wall and peel it back[end if].[plus][or]STAPLE PAPERWALL[if staple is not in stapler] once you've put everything together[end if].[minus][cycling]"
+act-ruin curtain	"[one of]What does the act-ruin curtain--with its design--remind you of?[plus][or]The act-ruin curtain is meant to look like lined paper. The sort of essay paper you might procrastinate for a class. Hence why it stops you from acting. The holes in the upper corner look like they were made by a stapler.[plus][or][if plaster is visible or plates are visible]You've got some work to do before you can do any stapling[else]You've got what you need to staple the curtain and peel it back[end if].[plus][or]STAPLE CURTAIN[if staple is not in stapler] once you've put everything together[end if].[minus][cycling]"
 rifle	"[one of]The rifle's more powerful than words. OR IS IT.[plus][or]The rifle makes you wonder if you're on a wanted poster or something.[plus][or]The rifle can become a much more harmless FLIER.[minus][cycling]"
 Curtis	"[if moss cap is off-stage][one of]Curtis will help you if you get him enough fruits. Actually, just four.[plus][or]Look around a bit and look at the scenery. A few things have just a few letters. The rest are an exercise.[plus][or]He is good at delegating but not conversation.[minus][cycling][else if player has moss cap]You won't get more than the moss cap from him. Now, what to do with it?[else]Curtis [up-to-l3].[end if]"
 Mole Elmo	"Mole Elmo's not a very enthusiastic captor. It's as if he wants you to do something to the rifle."

@@ -159,10 +159,10 @@ What goes with a staple? Well, you can remake the psalter.
 
 > STAPLER
 
-The paperwall looks like lined paper, so you can just...
+The act-ruin curtain looks like lined paper, so you can just...
 
 > PUT STAPLE IN STAPLER
-> STAPLE PAPERWALL
+> STAPLE CURTAIN
 
 > IN
 
