@@ -12258,7 +12258,7 @@ chapter store r
 
 Store R is a useless sto in Strip of Profits. understand "store/ 18/eighteen" as Store R when player is in Strip of Profits.
 
-description of Store R is "It could lead back to your resort, to your Means Manse. But you would not be welcome or safe there."
+description of Store R is "It could lead back to the (not really) resort from your first time, to your Means Manse. But that would be backtracking, and you would not be welcome or safe there."
 
 understand "resort" as a mistake ("You can't go back to the Means Manse. Well, you can, but it's a bad idea.") when player is in strip of profits.
 
@@ -12496,7 +12496,7 @@ instead of doing something to the seats:
 
 section passage
 
-the passage is scenery in lectures. "The passage that leads to Studio E seems unguarded. Maybe you could sneak in there."
+the passage is scenery in lectures. "[if e-revealed is true]You don't want to go back. You already got the YYRRGRG clue[else]The passage that leads to Studio E seems unguarded. Maybe you could sneak in there[end if]."
 
 instead of scaning passage:
 	if e-revealed is true:
@@ -12606,7 +12606,7 @@ understand "seam" as a mistake ("You can't find any crack in the Same Mesa that 
 
 understand "ames" as a mistake ("Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys from rival Big Twelve schools might say. But you can't just up and leave.") when player is in same mesa.
 
-Same Mesa is a room in Routes. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the cleric circle[else]A cleric circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's a dingy dwelling with lairage regalia[end if], and [if deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with adsorbing signage[end if].[paragraph break]Finally, [if old giant is in lalaland]that bench the giant sat on still lies here[else if old giant is visible]the giant's bench[else]there's a bench, which is rather big, so it must be a giant's[end if]."
+Same Mesa is a room in Routes. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the cleric circle[else]A cleric circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's a dingy dwelling with lairage regalia[end if], and [if deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if old giant is in lalaland]that bench the giant sat on still lies here[else if old giant is visible]the giant's bench[else]there's a bench, which is rather big, so it must be a giant's[end if]."
 
 check going in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
 	if old giant is visible:

@@ -55,25 +55,29 @@ carry out gnling:
 	the rule succeeds;
 
 to ply-table (tn - a table name):
-	let last-rule be false;
+	say "Here are nudges from [tn]"
+	let in-room be false;
 	repeat through tn:
 		if there is a this-room entry:
 			if this-room entry is location of player:
-				say "[if last-rule is true][line break][end if](room) [this-cmd entry] [hashval entry] is a valid hash try.";
+				now in-room is true;
+				say ".[line break](room [this-cmd entry]) [this-cmd entry] [hashval entry] is a valid hash try";
 				now last-rule is false;
 				next;
 		if there is a this-item entry:
 			if this-item entry is visible:
-				say "[if last-rule is true][line break][end if](item) [this-cmd entry] [hashval entry] is a valid hash try.";
+				say ".[line break](item [this-item entry]) [this-cmd entry] [hashval entry] is a valid hash try";
 				now last-rule is false;
 				next;
 		if there is a this-rule entry:
 			consider the this-rule entry;
 			if the rule succeeded:
-				say "[if last-rule is true][line break][end if](rule) [this-cmd entry] [hashval entry] is a valid hash try.[run paragraph on]";
+				say ".[line break](rule [this-rule entry]) [this-cmd entry] [hashval entry] is a valid hash try";
 				now last-rule is true;
 				next;
-	if last-rule is true, say "[line break]";
+		if in-room is true:
+			say ".[line break](NOT VALID) [this-cmd entry] [hashval entry] is in this room but not valid";
+	say "."
 
 STS tests ends here.
 
