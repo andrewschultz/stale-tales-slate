@@ -118,6 +118,8 @@ my $found        = 0;
 
 if ( $#ARGV == -1 ) { usage(); exit; }
 
+my @toHash = ();
+
 for my $idx ( 0 .. $#ARGV ) {
   my $this = lc( $ARGV[$idx] );
   for ($this) {
@@ -165,6 +167,15 @@ for my $idx ( 0 .. $#ARGV ) {
       next;
     };
   }
+  push( @toHash, $this );
+}
+
+for my $this (@toHash) {
+  my $force = 0;
+  if ( $this =~ /\+/ ) {
+    $this =~ s/\+//g;
+    $force = 1;
+  }
 
   $tabString = "$rm\t--\t--";
 
@@ -199,12 +210,15 @@ for my $idx ( 0 .. $#ARGV ) {
     if ($doRoil) { lookBoth( $hash, "roiling" ); }
     if ($doLoc) { lookFor( $hash, "c:\\writing\\dict\\hv.txt" ); }
 
-    if ( ($printIfThere) || ( $anyFound == 0 ) ) {
+    if ( ($printIfThere) || ( $anyFound == 0 ) || $force ) {
       print "Adding $hword to raw hash file.\n";
       print B "\"$hword\"\t$hash\t$tabString\t\"some text\"\n";
       $worthOpening = 1;
     }
-    else { print "Instance found in file, not printing externally. Use -p.\n"; }
+    else {
+      print
+"Instance of *$this* found in file, not printing externally. Use -p or add a + to the string to force it into the hash file.\n";
+    }
     $anyFound = 0;
   }
 
@@ -291,7 +305,7 @@ sub lookBoth    #save some code looking for source and side file
 sub lookFor {
   open( A, "$_[1]" ) || die("Can't open $_[1].\n");
   $line = 0;
-  if ( $_[1] =~ /hv/ ) { $currentTable = " scrapwork"; }
+  if ( $_[1] =~ /hv/ ) { $currentTable = "scrapwork"; }
 
   my $lineCount = 0;
   my $foundyet  = 0;
@@ -304,7 +318,7 @@ sub lookFor {
       next;
     }
     if ( ( $line !~ /^\"?[a-z]/ ) || ( $line !~ /\t/ ) ) {
-      if ( $currentTable ne " scrapwork" && ( $line !~ /^this-cmd/ ) ) {
+      if ( $currentTable ne "scrapwork" && ( $line !~ /^this-cmd/ ) ) {
         $currentTable = "";
       }
     }
