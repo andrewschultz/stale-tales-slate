@@ -200,10 +200,12 @@ for my $idx ( 0 .. $#ARGV ) {
     if ($doLoc) { lookFor( $hash, "c:\\writing\\dict\\hv.txt" ); }
 
     if ( ($printIfThere) || ( $anyFound == 0 ) ) {
+      print "Adding $hword to raw hash file.\n";
       print B "\"$hword\"\t$hash\t$tabString\t\"some text\"\n";
       $worthOpening = 1;
     }
     else { print "Instance found in file, not printing externally. Use -p.\n"; }
+    $anyFound = 0;
   }
 
 }
