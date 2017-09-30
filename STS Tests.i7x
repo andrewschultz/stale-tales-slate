@@ -55,25 +55,22 @@ carry out gnling:
 	the rule succeeds;
 
 to ply-table (tn - a table name):
-	say "Here are nudges from [tn]"
+	say "Here are nudges from [tn]";
 	let in-room be false;
 	repeat through tn:
 		if there is a this-room entry:
 			if this-room entry is location of player:
 				now in-room is true;
 				say ".[line break](room [this-cmd entry]) [this-cmd entry] [hashval entry] is a valid hash try";
-				now last-rule is false;
 				next;
 		if there is a this-item entry:
 			if this-item entry is visible:
 				say ".[line break](item [this-item entry]) [this-cmd entry] [hashval entry] is a valid hash try";
-				now last-rule is false;
 				next;
 		if there is a this-rule entry:
 			consider the this-rule entry;
 			if the rule succeeded:
 				say ".[line break](rule [this-rule entry]) [this-cmd entry] [hashval entry] is a valid hash try";
-				now last-rule is true;
 				next;
 		if in-room is true:
 			say ".[line break](NOT VALID) [this-cmd entry] [hashval entry] is in this room but not valid";

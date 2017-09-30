@@ -3552,7 +3552,7 @@ check taking scenery:
 	if location of player is cleric circle:
 		say "That'd be kind of sinful and disruptive." instead;
 	if location of player is idle deli:
-		say "The [noun] is part of the scenery." instead;
+		say "The [noun] is part of the ambiance, for better or worse." instead;
 	if location of player is Drain Nadir:
 		say "Nothing here is valuable enough. You need to leave it all behind!" instead;
 	if location of player is Econ Cone:
@@ -4345,7 +4345,7 @@ lairage regalia	"You twist your mind a bit, but no, there's probably only one wa
 adsorbing signboard	"No, you don't see any other way around the signboard to enter. You don't need one, either."
 old giant	"[if old giant is visible]It wouldn't be wise to argue against the giant[else if old giant is in lalaland]You had your conversation for the day[else][bug-report][end if]."
 bench	"[if old giant is in lalaland][giant-over][else]You leaned on the bench right. Time to get on it[end if]."
-bench-end	"[if old giant is in lalaland][giant-over][else]You got on the bench right. Time to start ducking[end if]."
+bench-end	"[if old giant is in lalaland][giant-over][else if nuder is in mesa]Maybe deal with that book, now[else]You got on the bench right. Time to start ducking[end if]."
 giant's elbow	"[if old giant is in lalaland][giant-over][else]You don't need to avoid the giant's elbow any more[end if]."
 runed book	"You don't need to do anything fancy with the runed book."
 pipe soot	"Brother Horbert probably knows what to do with that."
@@ -8905,7 +8905,7 @@ seed pit	mushrooms	true	602484096	--	"despite"	"despite"	"You ignore Pat's 'pits
 Rude 'N Nuder	runed book	true	408172316	--	"under"	"under"	"You can't take the giant waving the, um, literature around. You jump off and duck under the bench. Disgusted that nobody will listen any more, he throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal...a runed book! Well, this could be useful."
 huge thing	the-b	false	250266429	--	"from"	"from"	"The huge thing form above turns into a huge thing FROM above. You watch a blot bloat as it gets closer. You notice it is shaped like a bean and duck. You don't hear the thud.[paragraph break]'Mesa's a mess!' you hear people screaming. 'Intact? It can't...'"
 the-b	the-b	false	485518766	Harms Marsh	"beneath"	"beneath"	"You push the bean and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. As you do, the drama armada cheers you... 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear the bean roll back into place..."
-darkness	narrow cracks	false	375930018	--	"until"	"until"	"The one preposition gives you confidence you will find No-Gal Logan. The dirt and walls don't exactly start glowing, but you can notice things better. Like a few narrow cracks. You're not sure which way to go, though. You can really notice things, now."
+darkness	narrow cracks	false	375930018	--	"until"	"until"	"The one preposition gives you confidence you will find No-Gal Logan. The marsh doesn't exactly start glowing, but you can notice things better. Like a few narrow cracks. You're not sure which way to go, though. You can really notice things, now."
 narrow cracks	un-road	false	356906602	--	"around"	"around"	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
 un-road	cracks you followed	false	231861444	ripe pier	"along"	"along"	"You go along the path you found. With almost no lag, you find yourself at a pier by an underground lake."
 da mist	da mist	false	331668890	Cripple Clipper	"amidst"	"amidst"	"You plan how to look through the mist--how wide it is, where walkways seem to protrude, and how to avoid a long walk off a short pier--until you feel safe entering it. [logan-hi]"
@@ -10877,7 +10877,7 @@ carry out gridxing:
 			say "You're pretty sure you don't need to deal with the [reg-match entry], any more. Still, you re-read the description and take time to feel pleased with what you fixed." instead;
 	say "[reg-blurb entry][line break]";
 	if there is a reg-match entry and mrlp is reg-match entry:
-		say "[if cur-score of mrlp is 0]Hm. Maybe you'll figure out what do do, and how[else]Hm. The hints make a bit more sense, now[end if].";
+		say "[line break][if cur-score of mrlp is 0]Hm. Maybe you'll figure out what do do, and how[else]Hm. The hints make a good deal of sense, now you've done a bit here[end if].";
 	the rule succeeds;
 
 check examining the Gird Grid:
@@ -13323,7 +13323,7 @@ oscar-annoy is a truth state that varies. oscar-annoy is usually false.
 
 chapter pipe soot
 
-some pipe soot is a reflexive singular-named quest-item in Adobe Abode.
+some pipe soot is a reflexive singular-named quest-item in Adobe Abode. the indefinite article of pipe soot is "some".
 
 check taking the pipe soot when soot is in adobe:
 	say "Oscar snaps at you. 'Hey! Whoa! No stealing! Even worthless stuff!'[paragraph break]Maybe if you could position yourself so he can't see you taking it." instead;
