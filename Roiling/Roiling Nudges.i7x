@@ -62,9 +62,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "satchel"	439479634	--	satchel	--	"You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too."
 "satchel"	439479634	--	latches	--	"Hm, that's not it, but it must be something relatively simple. Maybe rereading the treatise would help things fall out."
 "terrain"	517651905	--	plaster	--	"Hm...it probably isn't that easy. The plaster and [if plates are visible]plates[else]staple[end if] are probably part of your training."
-"paperwall"	595999917	--	paperwall	--	"[curtain-block]."
-"paper"	378249648	--	paperwall	--	"[curtain-block]."
-"wall"	217750269	--	paperwall	--	"[curtain-block]."
 "high"	152157146	--	high sign	--	"[hisin]."
 "highsign"	394931168	--	high sign	--	"[hisin]."
 "sign"	242774022	--	high sign	--	"[hisin]."
@@ -163,7 +160,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "giantold"	400993397	--	old giant	--	"[cant-giant]."
 "giant"	251797892	--	old giant	--	"[cant-giant]."
 "grouchy"	476029025	--	old giant	--	"[cant-giant]."
-"tirade"	384449683	--	--	old giant	"[if bench-end is reflexive]There's more than one tirade[else]You've sort of dealt with the tirades, but there's still more than one, and you need another way to deal[end if]."
+"tirade"	384449683	--	old giant	--	"[if bench-end is reflexive]There's more than one tirade[else]You've sort of dealt with the tirades, but there's still more than one, and you need another way to deal[end if]."
 "bench"	271420406	--	bench	--	"The bench is too sturdy. You can't do anything with it, but you may be able to do something with or around it."
 "die"	193828044	mesa	--	--	"[die-sin]."
 "sin"	210174320	mesa	--	--	"[die-sin]."
@@ -269,15 +266,17 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "asidewalk"	509159436	Bustle Sublet	--	--	"[sidewalk-oops]."
 "askew"	387135844	Bustle Sublet	--	--	"[sidewalk-oops]."
 "sidewalk"	506971618	Bustle Sublet	--	--	"[sidewalk-oops]."
+"sob"	189045448	--	sob ever verbose	--	"No, you'll want to zone out the whole verbose distraction."
+"veer"	448100841	--	sob ever verbose	--	"No, you'll want to zone out the whole verbose distraction."
 "laid"	122023592	Bustle Sublet	--	--	"[sidewalk-oops]."
-"babbling"	257758428	--	babblings	--	"[bab-v]."
-"babblings"	354032394	--	babblings	--	"[bab-v]."
 "stop"	355202520	--	stop post	--	"[if stop post is reflexive]You're not seeing[else]You already saw[end if] the right way to see the stop post, here."
 "roadbed"	350147390	Boarded Roadbed	--	--	"[locname]."
 "live"	333777614	--	what-a-bee	--	"The bee's description isn't important. It's how you see the bee that matters."
 "bee"	274031123	--	what-a-bee	--	"But it's not just any bee. It's a[if bee's head is reflexive and what-a-bee is reflexive]n[end if] [what-a-bee][if bee's head is reflexed and what-a-bee is reflexed]! Though, really, you've already given it the business.[else]![end if]"
 "picture"	566810127	Drain Nadir	--	--	"It's not just any old picture. It's of a sad pier."
 "spider"	456891772	--	diapers	--	"The diapers, the sad pier--the spider only fits in as *a* spider."
+"sad"	119490873	Drain Nadir	--	--	"It's a sad pier."
+"pier"	339588717	Drain Nadir	--	--	"It's a sad pier."
 "bedroom"	465358213	Boredom Bedroom	--	--	"[locname]."
 "glare"	301731271	--	--	glaring-futile rule	"You stare into space some more but get distracted."
 "bower"	413836167	--	browse bowers	--	"[locname]."
@@ -1407,9 +1406,6 @@ to say p-hole:
 to say ei2pg:
 	say "It's good to be on anagramming terms with the book's title, but [if Pa Egg Pea is reflexive]maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle[else]your session soaking in the book's 'knowledge' was 'useful' enough[end if]"
 
-to say bab-v:
-	say "Babbling's babbling, but what stinks is, it's just so VERBOSE. Well, it doesn't stink that VERBOSE has fewer anagrams than babbling(s), settler or no, so that's something";
-
 this is the glaring-futile rule:
 	if player is in Boredom Bedroom and lager is in lalaland:
 		the rule succeeds;
@@ -1441,7 +1437,7 @@ to say sidewalk-oops:
 	say "You can't make the sidewalk crumble any more, and you probably don't want to"
 
 this is the lot-observed rule:
-	if player is in Bustle Sublet and babblings are in lalaland:
+	if player is in Bustle Sublet and sob ever verbose is in lalaland:
 		the rule succeeds;
 	the rule fails;
 

@@ -2730,6 +2730,8 @@ carry out reading:
 		if there is a what-read entry:
 			say "[what-read entry][line break]" instead;
 		try reading alt-read entry instead;
+	if noun is large regal lager:
+		try examining rubbish story instead;
 	if noun is drinks stand:
 		try examining blurbs instead;
 	try examining noun instead;
@@ -2774,7 +2776,7 @@ sitar	"Oh, right. You bought it from Trisa Israt." [means manse]
 rifle	"It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle."
 pastel plates	"EPSTAL is written as an author's signature."
 Store H	"'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'" [stores]
-ltb	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple."	[troves]
+ltb	"You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: 'What a spaz! [if player is female]She[else]He[end if] needs to learn to, like...!' They always acted as if it was so simple.[paragraph break]However, there must be some simple way to focus and move on."	[troves]
 DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
 card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned Orp.[cycling]"
 playbill	"[one of]S. Negri and N. Regis are the band. And there's a promotions company to read about, too[or]Isnerg promotions[cycling]."
@@ -4018,7 +4020,7 @@ new beet	"The new beet seems to spin slightly away from Thor for a second."
 Pa Egg Pea	"You stare blankly at [i]Pa, Egg, Pea[r], but you're not quite doing it right." [START troves]
 cold	"You think you feel less cold for a second. But you need to make it last."
 heat	"Meh. Maybe you're closer than you think to motivation. How to make that matter?"
-babblings	"The babblings remain verbose--mixing up subjects and making you consider things you hadn't before."
+sob ever verbose	"The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around."
 stop post	"You feel silly a bit. You can't let a simple stop post stop you!"
 ltb	"You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways."
 bee's head	"The bee shakes its head, trying to make sense of the slightly disordered magic it felt from you."
@@ -4361,7 +4363,7 @@ New Beet	--
 Pa Egg Pea	"You probably did what you could. Or not-did." [troves]
 heat	"Don't need to overheat, or overhate."
 fretful truffle	"Caring and all its offshoots only go so far."
-babblings	"You observe that further observation would be redundant."
+sob ever verbose	"You observe that further observation would be redundant."
 stop post	"You don't need to P.S. tweaking the post."
 bee's head	"Too much fiddling with reason is unreasonable."
 what-a-bee	"The bee's already taken enough of your in-my-heartitude."
@@ -4718,7 +4720,7 @@ to say lhs:
 		continue the action;
 	say "Poverty";
 	let QQQ be the number of visited rooms in Troves;
-	repeat with QQQQ running from 1 to 6:
+	repeat with QQQQ running from 1 to number of rooms in Troves:
 		say "[if QQQQ is QQQ]*[else]-[end if]";
 	say "Very Top (Troves, [location of player])"
 
@@ -5179,8 +5181,8 @@ rule for supplying a missing noun while scaning or sying or sning or sbing (this
 				now noun is heat;
 			continue the action;
 		if player is in Bustle Sublet:
-			if verbose babblings are in Bustle Sublet:
-				now noun is verbose babblings;
+			if sob ever verbose is in Bustle Sublet:
+				now noun is sob ever verbose;
 				continue the action;
 			if stop post is reflexive:
 				now noun is stop post;
@@ -6906,11 +6908,11 @@ Cripple Clipper	"[if noun is inside or noun is down]Locked ol['] deck. No bowel 
 Idle Deli	"Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms."
 Adobe Abode	"This do be a one-room place. You can really only go outside."
 Loather Rathole	"[if cold is reflexive]You're too cold. While haste heats, the new random direction would offer no more [i]heat[r] than here.[else]You've got to race after that guy, but you wonder if it really matters.[end if]" [troves]
-Bustle Sublet	"[if noun is down]Yes, the cellar is down, but you can't remember WHERE the passage down to the cellar is.[else if post is reflexed]You haven't figured a way to get to the cellar, man. Running away won't help.[else]You can't run from this big fight now that you've traced the robber![end if]"
-Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where the cellar must be."
-Drain Nadir	"You need to look at something that would change your mood."
+Bustle Sublet	"The action's here. You [if what-a-bee is in sublet]can't run away from the bee. You need to work around it[else]still have a lot to look for[end if]."
+Boarded Roadbed	"A voice says 'Bad! Redo!' when you try to drift away from where the cellar must be. Besides, you might wind up in ruts: Rustin['] Ruin St."
+Drain Nadir	"You're so low, you can picture yourself slipping on a rind or dinar. You need to build yourself up here, somehow."
 Boredom Bedroom	"You need to look at something that would inspire you to move, instead."
-Browse Bowers	"You are definitely going places, but you aren't going places by actually WALKING. Perhaps if you meditate on that brochure."
+Browse Bowers	"You are definitely going places, but the only place you'd get walking from here is the Save-Aves. Not ritzy enough! Maybe you should focus on that brochure."
 Econ Cone	"That could lead to ransom manors."
 Upscale Capsule	"You're at the very top. You don't really want to change that without really good motivation."
 Burnt Brunt	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
@@ -6980,7 +6982,9 @@ does the player mean doing something with location of the player: it is unlikely
 
 instead of doing something with the location of the player:
 	if current action is examining, continue the action;
-	say "You may need to change your location at some time, but you never need to do anything with it in a command."
+	say "You may need to change your location at some time, but you never need to do anything with it in a command.";
+
+[?? take all takes the location of the player too]
 
 xrooming is an action applying to one visible thing.
 
@@ -7204,12 +7208,10 @@ chapter eating
 
 understand the command "eat" as something new.
 understand "eat [something]" as eating.
-
-Procedural rule while eating something: ignore the carrying requirements rule.
-
+[
 procedural rule while eating: [taking before eating]
 	if noun is lamb or noun is tea tray or noun is clam or noun is oyster-x or noun is b-b or noun is lobster or noun is clear catsup or noun is deli rye:
-		ignore the carrying requirements rule.
+		ignore the carrying requirements rule.]
 
 check eating (this is the general eating rule):
 	if noun is a hintpastry:
@@ -7708,11 +7710,12 @@ before listening (this is the you can hear stuff some places rule):
 		if dusty study is not lit:
 			say "Nobody's going to whisper a hint to you in the dark." instead;
 		say "[if Gunter is in lalaland][randbla][else]Nothing, except... (knock, knock, knock.)[end if]" instead;
-	if babblings are visible: [troves]
-		try examining babblings instead;
-	if player is in Bustle Sublet:
+	if sob ever verbose is visible: [troves]
+		try examining sob ever verbose instead;
+	if player is in Boarded Roadbed:
 		unless what-a-bee is reflexive and bee's head is reflexive:
 			say "Someone helping someone else find their way around. 'How to get there? [one of]I'd veer...'[or]Eve, rid...'[or]Vie, Red!'[in random order][run paragraph on] You see red a bit at getting no direct help, yourself." instead;
+		say "The bee keeps buzzing, disrupting your thoughts. You'll need to deal with it.";
 	if player is in rathole or player is in Bustle Sublet:
 		say "[if talk-quiet is false]You shut off the random gritty dialogue with HUSH[else]Actually, you can't help but hear gritty dialogue[end if]." instead;
 	if player is in browse bowers or player is in econ cone:
@@ -8905,7 +8908,7 @@ seed pit	mushrooms	true	602484096	--	"despite"	"despite"	"You ignore Pat's 'pits
 Rude 'N Nuder	runed book	true	408172316	--	"under"	"under"	"You can't take the giant waving the, um, literature around. You jump off and duck under the bench. Disgusted that nobody will listen any more, he throws Rude [']N Nuder in the air. The slip-on cover rips! It falls away to reveal...a runed book! Well, this could be useful."
 huge thing	the-b	false	250266429	--	"from"	"from"	"The huge thing form above turns into a huge thing FROM above. You watch a blot bloat as it gets closer. You notice it is shaped like a bean and duck. You don't hear the thud.[paragraph break]'Mesa's a mess!' you hear people screaming. 'Intact? It can't...'"
 the-b	the-b	false	485518766	Harms Marsh	"beneath"	"beneath"	"You push the bean and grunt theatrically, and they take the cue. Yes, there's a big hole you can go down. As you do, the drama armada cheers you... 'Go down now, dog!' ... 'So true, sure to set our ouster...' It's a scented descent, which feels right. It had better be. You hear the bean roll back into place..."
-darkness	narrow cracks	false	375930018	--	"until"	"until"	"The one preposition gives you confidence you will find No-Gal Logan. The marsh doesn't exactly start glowing, but you can notice things better. Like a few narrow cracks. You're not sure which way to go, though. You can really notice things, now."
+darkness	narrow cracks	false	375930018	--	"until"	"until"	"The one preposition gives you confidence you will find No-Gal Logan. The marsh doesn't exactly start glowing, but you can notice things better. Like a few narrow cracks. You're not sure which way to go, though. Compass directions are still out."
 narrow cracks	un-road	false	356906602	--	"around"	"around"	"With more light, you find...yes, an un-road! Lit by stripey, spritey pyrites you'd have missed otherwise."
 un-road	cracks you followed	false	231861444	ripe pier	"along"	"along"	"You go along the path you found. With almost no lag, you find yourself at a pier by an underground lake."
 da mist	da mist	false	331668890	Cripple Clipper	"amidst"	"amidst"	"You plan how to look through the mist--how wide it is, where walkways seem to protrude, and how to avoid a long walk off a short pier--until you feel safe entering it. [logan-hi]"
@@ -8920,19 +8923,19 @@ the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
 Pa Egg Pea	Pa Egg Pea	false	244059588	--	"gape"	"gape"	"You empty your mind to let the advice in Pa, Egg, Pea sink in. It--makes sense, if you don't think too hard. [eicond]."
 cold	heat	false	270386244	--	"hate"	"hate"	"You feel a rife fire in your heart. [paragraph break]'How neat! Hate won heat now!' you think to yourself.[paragraph break]You manage to stay toasty but you lose focus as you switch too soon from thoughts of goin['] cold to gold coin. A bogeyman takes your moneybag![purse-gone] Your thoughts are really racing now. Racing so fast you can probably do the wrong thing several times before you get it right.[paragraph break]You may need that practice, because right now you don't want your money back as much as you should."
 heat	truffle	true	234323315	Bustle Sublet	"care"	"care"	"You feel a gust, or tugs, in your guts. And hey! This caring really works! You ignore aches during this chase and track the robber to...well, he can't have ducked out in plain sight. You thought you heard a door slam, just out of view. Emotion has gotten you this far. In fact, it has even led you to a fretful truffle, which you pick up.[wfak][paragraph break]But you will need to be more analytical to move on."
-stop post	stop post	false	355202520	--	"spot"	"spot"	"There he is! You don't let on you've spotted him, but you walk near, notice him jump, and yell the magic words.[paragraph break]'Setup, stupe!' Wop! Pow! Pop! Wow! An upset! Your smackings are apt food for a footpad. He drops your purse--[i]though at that moment you realize the self-reliance you gained is better than any money.[r] Still, during all this feeling good about yourself, you let him get away. 'You won't find me in the cellar!' he yells. By then, a large bee has buzzed in and it makes you forget where the cellar entrance is."
-babblings	babblings	false	637146289	--	"observe"	"observe"	"Cads. Clues. Cul-de-sacs. Once you really pay attention, you see how observing them detachedly gets you closer to what you really want. You're in the zone, now. Something may or may not be moving by the stop post. Time to hone your observing."
+sob ever verbose	sob ever verbose	false	637146289	--	"observe"	"observe"	"Cads. Clues. Cul-de-sacs. Once you really pay attention, you see how observing them detachedly gets you closer to what you really want. You're in the zone, now. Something may or may not be moving by the stop post. Time to hone your observing."
+stop post	stop post	false	355202520	Boarded Roadbed	"spot"	"spot"	"A clue where to go next! You follow it to somewhere more desolate, and there's the thief!  You don't let on you've spotted [him-her], but you walk near, notice [him-her] jump, and yell the magic words.[paragraph break]'Setup, stupe!' Wop! Pow! Pop! Wow! An upset! Your smackings are apt food for a footpad. [he-she-c] drops your purse--[i]though at that moment you realize the self-reliance you gained is better than any money.[r] Still, during all this feeling good about yourself, you let [him-her] get away. 'You won't find me in the cellar!' [he-she] yells before disappearing. You start to follow, but a bee jumps in the way, and you forget where the cellar is..."
 bee's head	bee's head	false	454851781	--	"reason"	"reason"	"You recognize that small bumblebees flying don't make any sense. Then, therefore, neither should a much bigger one, due to the scaling paradox. The bee lets out a snore from the reason[if what-a-bee is reflexed]. You've already disposed of the bee emotionally, but hey, you might as well be sure of things[otherwise]. You can probably get by the vile bee (it's no longer really an evil bee,) although it may be possible to marginalize it even more[end if]."
-what-a-bee	what-a-bee	false	607808737	--	"believe"	"believe"	"You remind yourself bees smell fear, so you decide to believe that the bee will not harm you[if bee's head is reflexed]. On top of your reasoning it can't, you render it out of commission emotionally and factually[otherwise]. You can probably get by the bee, although it may be possible to marginalize it even more[end if]."
-cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	"[rec-der]"
-cellar door	cellar door	false	514122776	Drain Nadir	"derive"	"derive"	"[rec-der]"
+what-a-bee	what-a-bee	false	607808737	--	"believe"	"believe"	"You remind yourself bees smell fear, so you decide to believe that the bee will not harm you[if bee's head is reflexed]. On top of your reasoning it can't, you render it out of commission emotionally and factually[otherwise]. You can probably get by the bee, although it may be possible to marginalize it even more[end if]. You also believe, that much more, that you can find your way out of here."
+cellar door	cellar door	false	341950993	Drain Nadir	"recall"	"recall"	"[rec-der]."
+cellar door	cellar door	false	514122776	Drain Nadir	"derive"	"derive"	"[rec-der]."
 diapers	diapers	false	459079590	Boredom Bedroom	"despair"	"despair"	"You get all 'Shame has me/Limpy my lip' and scream 'A sod's so sad!' and reflect on how you've moiled into demolition, and you remember that hitting rock bottom is the first step. I can't describe your bed cries over a dwelt-on letdown as you gasp at gaps in your [one of]samey, seamy[or]empty, tempy[at random] life and the chasm to stomach.[paragraph break]You move from Ow, Hell to Oh, Well, groaning mood to a good morning, ruined to inured. You realize you have a day job (joy, bad)--empty but not tempy--as a fiche chief with ISBN bins, no longer bullied by BILL DUE, and yet... after some furnace care fun, you find a copy of LEAD, the first big motivational book in Yorpwald. You don't have time to worry whether positive thinking found it. You have too much positive thinking to do."
+lager	lager	false	301731271	--	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 ltb	ltb	false	204836855	Browse Bowers	"deal"	"deal"	"You learn to deal with globalization, your own self-hate, your false conscience, memories of EVICTION NOTICE IV, a second-grade bully, and so forth. Even the blankest blankets seem to have a quilty quality, now.[paragraph break]'NO STAYIN['] ON IN A STY!' you yell. Decaf-faced, you leave your unmade apt., full of up and at em and move-it motive! Mo['] nice income ahead! You pass saps on your way..."
 brochure	brochure	false	503231922	econ cone	"desire"	"desire"	"You remember how when you were a kid you just wanted money. And people--people who believe you deserve said things--to show it off to! And a nice subtle sublet full of bustle where they won't get stolen! No win without ownin[']![paragraph break]You make plans for a mortgage on a nice place in Heirsshire. There's a bunch of twaddle about balloon mortgages and reverse derivatives and interest rates, but you'll let the eggheads take care of this. You need to find a job that'll pay for that place now. And affords for fads. No more thingola loathing."
 prai	prai	false	438050501	--	"aspire"	"aspire"	"You remember how when you were a kid you just wanted money. Well, now you recognize the importance of money AND power! You make grand plans for a great fiscal empire, full of power-broking, rainmaking and all those other terms you didn't understand as a kid[if rivets are reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 rivets	rivets	false	564671562	--	"strive"	"strive"	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if prai is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 pernod	pernod	false	458885045	Upscale Capsule	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through!"
-lager	lager	false	301731271	--	"glare"	"glare"	"You glare at the cursed alcohol, contemplating its effects on so many leaders and would-be leaders and the economy in general when drinkers don't take as productive jobs as they should. Thar's Trash.[paragraph break]You know now it will cause you to lose willpower, despite your recent fit of despair. Not for you are the glugster's struggles against scarlet clarets, his tab habits.[paragraph break]You obviously care about the working man and his productivity and, eventually, his income and savings. How the false down-home humility in beer commercials is worse than beer's physical effects. After an impeccable moment of silence for the productivity lost to the cursed drink, you leave the bedroom just long to pour the hurtful booze down a trash disposal. You formulate a new anti-drug campaign (Sexual? Ale sux! Prohib? Hip, bro!) but realize you are not important enough to carry it out. [i]But you will be one day[r].[paragraph break]Man, that was so Heratio ALGER!"
 noise	noise	false	433982545	--	"ignore"	"ignore"	"'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."
 salt	song	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! You see there was a playbill under the salt."
 stream	stream	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP."
@@ -9538,15 +9541,18 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 		say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]A warning sign lies beyond where the wall was.";
 		move player to Phat Path;
 		continue the action;
-	if noun is prai or noun is rivets:
+	else if noun is prai or noun is rivets:
 		if prai is reflexed and rivets are reflexed:
 			say "Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going.";
 			min-up;
-	if noun is lobster or noun is stream:
+		continue the action;
+	else if noun is lobster or noun is stream:
 		if stream is reflexed and lobster is in lalaland:
 			say "You feel your arch-greed recharged.";
 			min-up;
-	if noun is LLPish or noun is claire's scalier: [bleah. Denim isn't reflexive. Neither is giant pin]
+		continue the action;
+	else if noun is LLPish or noun is claire's scalier: [bleah. Denim isn't reflexive. Neither is giant pin]
+		d "General LLPish min-up.";
 		min-up;
 	continue the action;
 
@@ -10593,7 +10599,7 @@ instead of taking act-ruin curtain:
 instead of pulling the act-ruin curtain:
 	say "[could-staple].";
 
-the vertical stripe is part of the act-ruin curtainn. description of vertical stripe is "Not very dark, but off to the left, creating a sort of margin.".
+the vertical stripe is part of the act-ruin curtain. description of vertical stripe is "Not very dark, but off to the left, creating a sort of margin.".
 
 the horizontal stripes are part of the act-ruin curtain. description of horizontal stripes is "Bluish, and there are about thirty."
 
@@ -13668,7 +13674,7 @@ a-text of heat is "RYRY". b-text of heat is "RGRG". parse-text of heat is "[sp]x
 
 book Bustle Sublet
 
-Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs. Someone seedy owns this area, [randbla]. This messhole with its sidewalk laid askew is almost as bad as being homeless...[paragraph break][if babblings are visible]Except for a stop post that seems to be distracting your attention. Verbose babblings are in the air[else]The stop post is still there, but you can deal[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]."
+Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs. Someone seedy owns this area, [randbla]. This messhole with its sidewalk laid askew is almost as bad as being homeless...[paragraph break][if sob ever verbose is visible]Except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, but you can deal[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]."
 
 chapter useless scenery
 
@@ -13693,62 +13699,57 @@ instead of doing something with rustin ruts:
 		continue the action;
 	say "[more-pos].";
 
-chapter babblings
+chapter sob ever verbose
 
-understand "obverse" as a mistake ("You can't just make things obverse by wanting them to be. [i]But if change comes within, perhaps things are closer to obverse than you think[r].") when babblings are visible.
+understand "obverse" as a mistake ("You can't just make things obverse by wanting them to be. [i]But if change comes within, perhaps things are closer to obverse than you think[r].") when sob ever verbose is visible.
 
-understand "redive" as a mistake ("Close, but you need to figure out where to re-dive back into the cellar.") when player is in Bustle Sublet and babblings are in lalaland
+understand "redive" as a mistake ("Close, but you need to figure out where to re-dive back into the cellar.") when player is in Bustle Sublet and sob ever verbose is in lalaland
 
 bab-lis is a truth state that varies.
 
-the verbose babblings are vanishing plural-named scenery in Bustle Sublet. "[listen-careful]."
+the sob ever verbose is vanishing scenery in Bustle Sublet. "The sob ever verbose just rattles on and on. A sad, stupid, winding story about [one of]how Erv be SO[or]poor, poor Eve Bors[or]that Bev Oser[or]shifty Bo Evers[in random order], which makes you feel bad you don't feel bad enough about it. After a few minutes of this, you're seeing red."
 
-after doing something with babblings:
-	if babblings are not in lalaland:
-		set the pronoun it to babblings;
+after doing something with sob ever verbose:
+	if sob ever verbose is not in lalaland:
+		set the pronoun it to sob ever verbose;
 	continue the action;
 
-check taking babblings:
+check taking sob ever verbose:
 	say "You have as much cold as you can take." instead;
 
-a-text of verbose is "YRRYRRY". b-text of verbose is "YRRYRRG". parse-text of verbose is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]e".
+a-text of sob ever verbose is "YRRYRRY". b-text of sob ever verbose is "YRR?RR?". parse-text of sob ever verbose is "-[sp]x[sp]x[sp]?[sp]x[sp]x[sp]?".
 
-to say listen-careful:
-	if bab-lis is true:
-		say "You don't really want to see Eve's Bro or Bo Evers. The thought makes you see red. You feel you should pay attention to more important, big-picture things";
-	else:
-		say "The voices by the sidewalk don't seem to be about anything that could help. [i]Unless they are, and you might feel silly these people knew more than you did without knowing. [r]Listen more carefully?";
-		if the player direct-consents:
-			say "'Aw man! We're going to see [erv] The people running by are all wearing red--with some yellow thrown in. Tacky";
-			now bab-lis is true;
-		else:
-			say "Ok";
+verbose-sob-check is a truth state that varies.
 
-to say erv:
-	say "[one of]Eve's Bro serve Bo! Bo Evers!'[or]Erv be so...'[cycling]";
+check examining sob ever verbose:
+	if verbose-sob-check is false:
+		now verbose-sob-check is true;
+		say "You wonder if the sob ever verbose might reveal TOO much information. Maybe if you figured what to do, you'd feel obliged to it. Listen closer anyway?";
+		if the player yes-consents, continue the action;
+		say "OK. This nag won't appear next time." instead;
 
 chapter stop post
 
-The stop post is reflexive scenery in Bustle Sublet. "[if babblings are reflexive]You're so distracted by it, you can't stop and see the big picture. It blocks out all but the babblings round--it's really big and verbose and you could look at it a while without seeing anything meaningful. You can't even remember what you just read. As if you'd lost the ability to.[else if post is reflexive]Its opts. aren't exactly tops. Apparently, though, it is made of recycled pots.[else if bee's head is reflexive]You notice an ad in red proclaiming O. Asner as Nero.[else]An ad in red for L. Clear cleaning[one of], with directions below to [one of]Evans Ave N/S[or]Weave Ave E/W[in random order][or][stopping].[end if]"
+The stop post is reflexive scenery in Bustle Sublet. "[if sob ever verbose is reflexive]You're so distracted by it, you can't stop and see the big picture. It blocks out all but the sob ever verbose--you could look at it a while without seeing anything meaningful. You can't even remember what you just read. As if you'd lost the ability to.[else if post is reflexive]Its opts. aren't exactly tops. Apparently, though, it is made of recycled pots.[else if bee's head is reflexive]You notice an ad in red proclaiming O. Asner as Nero.[else]An ad in red for L. Clear cleaning[one of], with directions below to [one of]Evans Ave N/S[or]Weave Ave E/W[in random order][or][stopping].[end if]"
 
 check scaning post:
-	if babblings are reflexive:
-		try scaning babblings instead;
+	if sob ever verbose is reflexive:
+		try scaning sob ever verbose instead;
 	if post is reflexed:
 		say "You've dealt with the post." instead;
 
-check examining stop post when babblings are in Bustle Sublet:
-	say "You try to, but you get a headache. Everyone here's too [i]verbose. [r]You need to find what to do make them less verbose. Or seem that way." instead;
+check examining stop post when sob ever verbose is in Bustle Sublet:
+	say "The sob ever verbose distracts you from getting a good look at the post. You need to find a way to step back and ignore ambient noise." instead;
 
 check taking stop post:
 	say "The post is firmly in place." instead;
 
 check scaning stop post:
-	if babblings are visible:
-		try scaning babblings instead;
+	if sob ever verbose is visible:
+		try scaning sob ever verbose instead;
 
 check fliptoing stop post:
-	if babblings are visible:
+	if sob ever verbose is visible:
 		say "That should work, but you--your eyes are wandering now. You're not taking it all in. The post--and some voices you hear--are too verbose.";
 		preef stop post;
 		do nothing instead;
@@ -13762,7 +13763,7 @@ every turn when player is in Boarded Roadbed:
 
 book Boarded Roadbed
 
-Boarded Roadbed is a room in Troves. "It's odd...bare... But you know the cellar must be around somewhere. [if what-a-bee is in roadbed]With the bee around ,y[else]Y[end if]ou can't quite remember..."
+Boarded Roadbed is a room in Troves. "It's odd...bare... But you know the cellar must be around somewhere. You can't quite remember where, but you can work backwards to find it, without distractions."
 
 chapter THE BEE and 2 solutions
 
@@ -13770,11 +13771,9 @@ section bee proper (believe)
 
 the what-a-bee is a reflexive privately-named thing in Boarded Roadbed. printed name of what-a-bee is "[if bee's head is reflexive and what-a-bee is reflexive]evil bee[else if bee's head is reflexed and what-a-bee is reflexed]live bee[otherwise]vile bee[end if]"
 
-a-text of what-a-bee is "RYRYYRY". b-text of what-a-bee is "[if bee's head is reflexed]RYPYYRG[else]RYRYYRG[end if]". parse-text is "[if bee's head is reflexed]x[sp]-[sp]l[sp]-[sp]-[sp]x[sp]e[else]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]e[end if]"
+initial appearance of what-a-bee is "The [what-a-bee] floats here[if bee's head is reflexive], emitting a snore[else], silent[end if]."
 
-check fliptoing what-a-bee:
-	if verbose is reflexive:
-		say "You haven't paid enough attention to know what to spot." instead;
+a-text of what-a-bee is "RYRYYRY". b-text of what-a-bee is "[if bee's head is reflexed]RYPYYRG[else]RYRYYRG[end if]". parse-text is "[if bee's head is reflexed]x[sp]-[sp]l[sp]-[sp]-[sp]x[sp]e[else]x[sp]-[sp]x[sp]-[sp]-[sp]x[sp]e[end if]"
 
 check taking what-a-bee:
 	say "I'll be stingy. Better me than the bee, eh?" instead;
@@ -13815,8 +13814,11 @@ after fliptoing what-a-bee:
 	if bee's head is reflexed:
 		min-up;
 	else:
-		say "Now that the bee's buzzing less, you can hear people giving directions, and maybe you can listen in. Or concentrate on the cellar.";
+		say "[bee-buzz-less].";
 	continue the action;
+
+to say bee-buzz-less:
+	say "Now that the bee's buzzing less, you can hear people giving directions, and maybe you can listen in. Or concentrate on the cellar"
 
 section bee's head (reason)
 
@@ -13831,7 +13833,7 @@ after fliptoing bee's head:
 	if what-a-bee is reflexed:
 		min-up;
 	else:
-		say "Now that the bee's buzzing less, you can hear people giving directions, and maybe you can listen in. Or concentrate on the cellar.";
+		say "[bee-buzz-less].";
 	continue the action;
 
 chapter cellar door (after bee dispatched)
@@ -13894,7 +13896,7 @@ understand "broomed" as a mistake ("You are not rich and consequential enough to
 
 chapter ltb
 
-ltb is a privately-named vanishing thing. "A copy of LEAD[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here.". description of ltb is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.". printed name of ltb is "LEAD". [ ltb = lead the book]
+ltb is a privately-named vanishing thing in Boredom Bedroom. "A copy of LEAD[one of], the bestseller Pa, Egg, Pea dethroned,[or][stopping] lies here.". description of ltb is "It's by Dale Elda and Leda Adle, with both the last names in red. You skim it, noting the exploits of [randbla], but it doesn't soak in, yet. You aren't in the right frame of mind. Just from the cover, and the authors['] names, you bet the writing is kind of forced.[paragraph break]Perhaps it will give you an idea how to focus and move on, though.". printed name of ltb is "LEAD". [ ltb = lead the book]
 
 a-text of ltb is "RYYR". b-text of ltb is "???R". parse-text of ltb is "x[sp]e[sp]a[sp]x". ltb is parse-spoilable.
 
@@ -13911,7 +13913,10 @@ chapter lager
 
 The can of Large Regal Lager is a vanishing LLPish thing in Boredom Bedroom. description is "It has a picture of someone smiling as he chugs a can of Large Regal Lager--the LARGE being black and above the red Regal Lager below. A warning on the can says that important people drinking too many of these is as bad for the economy as people with nothing better to do not drinking enough. Also there's a rubbish story about how the beer is brewed."
 
-the rubbish story is part of the Regal Lager. the rubbish story is cluey and auxiliary. description is "[one of]It's in red and about how Ergal Agler brewed the first batch long ago. It kills almost as many brain cells as you drinking it[or]Your eyes gloss over all but the red ERGAL AGLER[stopping]."
+check opening Large Regal Lager:
+	try drinking Large Regal Lager instead;
+
+the rubbish story is part of the Large Regal Lager. the rubbish story is cluey and auxiliary. description is "[one of]The story on the lager is in red and about how Ergal Agler brewed the first batch long ago. I'll spare the details, but it kills almost as many brain cells as if you'd drunk it[or]Your eyes gloss over all but the red ERGAL AGLER[stopping]."
 
 a-text of rubbish story is "RRYRY". b-text of rubbish story is "RRYRY". parse-text of rubbish story is "x[sp]L[sp]-[sp]x[sp]-".
 
@@ -13959,7 +13964,7 @@ understand "eiders" as a mistake ("But what would ducks DO in the big city? They
 
 book Econ Cone
 
-Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the perky crass skyscraper in the center forms the top of the skyline, which is itself a cone. It's quieter here than the lot or rathole. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]You have lost all sense of direction, mainly because that statue nearby looks so important! [if rivets is reflexive and prai is reflexive]Maybe it will help you motivate yourself even more[else if rivets is reflexive or prai is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]That statue taught you all it could, so maybe you can move on--or in--to the skyscraper[end if]."
+Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've reached the recent center of the econ-cone, thus called because the perky crass skyscraper in the center forms the top of the skyline, which is itself a cone. It's quieter here than the lot or rathole. Less rusty din, more industry (it's un-dry. Sturdyin['].)[paragraph break]Your sense of direction is still borked, mainly because that statue nearby looks so important! [if rivets is reflexive and prai is reflexive]Maybe it will help you motivate yourself even more[else if rivets is reflexive or prai is reflexive]Now you're super-motivated, maybe you need to have the right sort of think[else]However, it's taught you all it could, so maybe you can move on--or in--to the skyscraper[end if]."
 
 understand "econ-cone" as Econ Cone.
 
@@ -13998,7 +14003,7 @@ check scaning skyscraper:
 
 chapter astute statue
 
-The astute statue is uncluing scenery in Econ Cone. "[one of]The statue is, of course, of [trev]. It's thirty feet tall and a decent likeness, except it's a shocking red, so nobody can miss it, and he has a full head of hair instead of that ridiculous comb-over. Also, his arm is around air, because when this statue was initially commissioned, his third wife demanded to be part of it. She was removed when he remarried, replaced by his fourth wife, who divorced him when she was portrayed as shorter than he was.[or][trev] is unchanged, himself, just waiting for you to want to be like him.[stopping][paragraph break]Rivets lie at the bottom of the statue in some sort of pattern[one of]. It is not a statue of limitations, for sure[or][stopping]."
+The astute statue is uncluing scenery in Econ Cone. "[one of]The statue is, of course, of [trev] and built by Su Tate. It's thirty feet tall and a decent likeness, except it's a shocking red, so nobody can miss it, and he has a full head of hair instead of that ridiculous comb-over. Also, his arm is around air, because when this statue was initially commissioned, his third wife demanded to be part of it. She was removed when he remarried, replaced by his fourth wife, who divorced him when she was portrayed as shorter than he was.[or][trev] is unchanged, himself, just waiting for you to want to be like him.[stopping][paragraph break]Rivets lie at the bottom of the statue in some sort of pattern[one of]. It is not a statue of limitations, for sure[or][stopping]."
 
 Include (-
 	has transparent talkable
@@ -14130,6 +14135,8 @@ chapter silly Upscale Capsule scenery
 section nerf fern
 
 The nerf fern is useless scenery in Upscale Capsule.
+
+understand "fren" as a mistake ("That's not the right way to make friends. You have to, like, impress actual people.") when player is in upscale capsule.
 
 description of nerf fern is "It saves time, since you don't have to water it. But you can't see how it gives any new ideas."
 
@@ -16570,7 +16577,7 @@ big-let is a privately-named backdrop. big-let is in r10,r00,r01,r02,r12,r22,r32
 
 the maze walls are a reflexive plural-named uncluing useless backdrop. the walls are in grey gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, nowt town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
 
-n-t-air is a reflexive plural-named privately-named backdrop. n-t-air is in grey gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, nowt town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
+n-t-air is a reflexive plural-named privately-named backdrop. description is "[bug-report]". n-t-air is in grey gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, nowt town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
 
 a-text of walls is "RYRYRRYR". b-text of walls is "RYRYRRYR". parse-text of walls is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -27198,7 +27205,8 @@ examp
 "Double dipping on sorbet in Store B."
 "[bold type](routes)[r] Cursing in Cleric Circle."
 "Going a direction in Same Mesa."
-"[bold type](troves)[r] Reading LEAD, or saying ACRE."
+"[bold type](troves)[r] catching the thief."
+"Reading LEAD, or saying ACRE."
 "[bold type](presto)[r] The plebe stops you or lets you by with different text."
 "[bold type](oyster)[r] The win-text for the OYSTER region."
 "Shoer Osher changes gender too."
@@ -29485,13 +29493,6 @@ carry out talling:
 
 take-it is a truth state that varies.
 
-The can't take what's fixed in place rule is not listed in the check taking rulebook.
-The can't take scenery rule is not listed in the check taking rulebook.
-
-The exclude scenery from take all rule is not listed in the for deciding whether all includes rulebook.
-The exclude fixed in place things from take all rule is not listed in the for deciding whether all includes rulebook.
-The exclude people from take all rule is not listed in the for deciding whether all includes rulebook.
-
 check taking:
 	if take-it is true:
 		if noun is scenery:
@@ -29500,6 +29501,13 @@ check taking:
 			say "[noun]: Fixed in place." instead;
 		if noun is a person:
 			say "[noun]: Person." instead;
+
+The can't take what's fixed in place rule is not listed in the check taking rulebook.
+The can't take scenery rule is not listed in the check taking rulebook.
+
+The exclude scenery from take all rule is not listed in the for deciding whether all includes rulebook.
+The exclude fixed in place things from take all rule is not listed in the for deciding whether all includes rulebook.
+The exclude people from take all rule is not listed in the for deciding whether all includes rulebook.
 
 Rule for deciding whether all includes scenery:
 	if take-it is true, rule succeeds;
