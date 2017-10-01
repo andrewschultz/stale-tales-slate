@@ -7208,10 +7208,10 @@ chapter eating
 
 understand the command "eat" as something new.
 understand "eat [something]" as eating.
-[
+
 procedural rule while eating: [taking before eating]
 	if noun is lamb or noun is tea tray or noun is clam or noun is oyster-x or noun is b-b or noun is lobster or noun is clear catsup or noun is deli rye:
-		ignore the carrying requirements rule.]
+		ignore the carrying requirements rule.
 
 check eating (this is the general eating rule):
 	if noun is a hintpastry:
@@ -13969,8 +13969,7 @@ Econ Cone is a room in Troves. printed name of econ cone is "Econ-Cone". "You've
 understand "econ-cone" as Econ Cone.
 
 check going inside in Econ Cone:
-	say "You can't just walk in[if statue is reflexed or rivets are reflexed] even with your desire at its level[end if]! You need the right sort of thinking." instead;
-	try going west instead;
+	say "You can't just walk in[if statue is reflexed or rivets are reflexed] even with your desire at its level[end if]! You need the right sort of thinking. You have not achieved it yet. Your eyes turn [if astute statue is examined]back [end if]to the astute statue." instead;
 
 understand "once" as a mistake ("Yes! You only need a chance! Once! To get inside! [if rivets is reflexive and prai is reflexive]You are almost enthused enough[else]You're enthused enough, but you need to strategize[end if].") when player is in Econ Cone.
 
@@ -13990,9 +13989,6 @@ after fliptoing skyscraper:
 check fliptoing skyscraper:
 	if prai is reflexive and rivets are reflexive: [stri is false and asp is false:]
 		say "You sit and ponder for a bit. But it is just general complaining. The whole mish-mosh about people approximately as unfortunate as you. No wish for [i]praise rivets[r] you enough for you to ponder positively." instead;
-
-instead of entering skyscraper:
-	say "You try to go enter, but your brute force approach attracts nobody. You are filled with desire to move up in the world, but perhaps not the thoughtfulness, yet.";
 
 check scaning skyscraper:
 	if pernod is off-stage:

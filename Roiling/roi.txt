@@ -543,10 +543,9 @@ GAPE at it.
 >>BUSTLE SUBLET
 ?What's the stop post for?
 It can't turn into POTS or TOPS. Or expand your OPTS.
-It will help you SPOT. But you need to get rid of things verbose.
-?What do I do to make things less/more verbose?
-Zone it out. What is obverse?
-This is a seven letter word, but it requires just switching two letters.
+It will help you SPOT. But you need to get rid of the sob ever verbose.
+?What do I do to ignore/dispel the sob ever verbose?
+You can listen to it for clues. Lots of reds.
 OBSERVE.
 >>BOARDED ROADBED
 ?This stupid evil bee is so near!
@@ -560,7 +559,7 @@ REASON that it cannot possibly exist.
 ?That took time! I can't find the cellar!
 You'll never remember.
 You can't become a caller.
-But you can RECALL. There's another solution, too.
+But you can RECALL. There's another solution, too. You can listen.
 I'd veer...ever I'd--a way to figure where it was?
 DERIVE.
 >>DRAIN NADIR
@@ -841,7 +840,7 @@ Unless, or until, they're RUSTY.
 >>OUTER ROUTE
 ?What's the campiest campsite for?
 To hold the rapier repair.
-It was the name of a room, but it was a bit too obvious.
+Campiest campsite was the name of a room, but it was a bit too obvious. Or implement a full campsite. But I didn't want to remove it completely.
 ?What's the rapier repair for?
 Fixing worn down swordy things.
 You may've found one behind the weeds in the Treading Gradient.

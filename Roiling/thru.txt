@@ -1,28 +1,28 @@
 Hello there! Welcome to the sequel to Shuffling Around! I hope you're just reading this due to a lack of time, or curiosity about a point you may have missed, and not due to frustration.
 
-Whether you just want to make sure you missed a silly gag, you're stuck on a specific section, welcome, and I hope this walkthrough helps without spoiling too much! I wanted to try to weave the story in without making it too big, so you didn't feel like you were just typing commands, or maybe you could see one last hint before revealing the answer.
+Whether you just want to make sure you missed a silly gag, or you're stuck on a specific section, welcome I hope this walkthrough helps without spoiling too much! I wanted to try to weave the story in without making it too big, so you didn't feel like you were just typing commands, or maybe you could see one last hint before revealing the answer.
 
-If you're wondering about how to figure things out, logic.htm will do a better job.
+If you're wondering about how to figure things out, especially when the settler pops up question marks, logic.htm will do a better job. (TLDR: question marks usually help you, if you think about them right!)
 
 I've semi-hidden some Last Lousy Points to give you one more chance, but they are at the very end. You can cut and paste text to ROT13.com for those.
 
-If you're really worried about spoilers, you may want the HTML version, which has expandable InvisiClues. It may not be as up-to-date as this. It should be in the bundle with this file and the game file.
+If you're a bit more worried about spoilers, you may want the HTML version, which has expandable InvisiClues. These should both have similar content, and they should be in the bundle with this file and the game file.
 
 If you're the technical type, you can use the command
 
-type roil-thru.txt | grep "^>" | sed "s/^>//g"
+type roil-thru.txt | grep -iE "^>" | sed "s/^>//g"
 
 To delete my comments and have a list of commands you can cut and paste. You can also replace ^[^>].* with nothing and \r\n\r\n with \r\n if you have a text editor that accepts regular expression replacement. This will zap everything without a > to start, then lump the lines together.
 
-This will ignore alternate solutions and last lousy points, which are sort of clued in the walkthrough.
+The above method will ignore alternate solutions and last lousy points, which are sort of clued in the walkthrough.
 
-Also, using periods between commands is possible, but only for directions. The "special" commands for this game cause the Inform parser a lot of problems. My programming found no way to correct this.
+Also, using periods between commands is possible, but only for directions. The "special" commands for this game cause the Inform parser a lot of problems. My programming found no way to correct this, and it was fixed in a later version of Inform, too late for me to port my project over.
 
-Any comments on this game, or transcripts, can go to blurglecruncheon@gmail.com. I know there's stuff I missed and stuff I don't know I missed--and hopefully it is not too much. But any help from a transcript is appreciated, for matters subjective or objective. My pre- and post- comp testers found a lot of stuff, but that sometimes just reveals other hidden problems.
+Any comments on this game, or transcripts, can go to blurglecruncheon@gmail.com. While I've tested to tackle the big stuff, bugs slip through--and hopefully they are not too much. But any help from a transcript is appreciated, for matters subjective or objective. My pre- and post- comp testers found a lot of stuff, but that sometimes just reveals other hidden problems.
 
-Conversely you can also report issues at https://github.com/andrewschultz/stale-tales-slate/ and they don't have to be professional or anything. I'd appreciate typos/stylistic stuff being lumped together, but other than that, individual bugs--or feature requests--that aren't obviously similar can be chopped up.
+Conversely you can also report issues at https://github.com/andrewschultz/stale-tales-slate/ and they don't have to be in any professional format or anything. I'd appreciate typos/stylistic stuff being lumped together, but other than that, individual bugs--or feature requests--that aren't obviously similar can be chopped up.
 
-This walkthrough is for versions 3 and up of the game. I recommend this over both version 2 and the comp release, as the puzzles and cluing make much more sense. Major differences in the walkthrough are labeled at the end. Version 4 has minor changes, and NPCs may be named differently. Some are female. But the abstract puzzles have mostly not changed, except where I thought I found one clearly more sensible.
+This walkthrough is for version 4 of the game, which I recommend, as the puzzles and cluing make much more sense, and the hints are more detailed. Major differences in the walkthrough are labeled at the end. Version 4's main changes are different room names, and NPCs may be named differently. Some are female if you are. But the abstract puzzles have mostly not changed, except where I thought I found one clearly more sensible.
 
 For those who played the comp version and want to see the new area(s) at the end, you can skip to that area to see the command to start the game with before you chat with Gunter. The implication being, the knocker's come back to snivel his way into your good graces.
 
@@ -511,12 +511,12 @@ Oh no! Hate blinded you to your wallet getting stolen! But you can't race becaus
 
 > CARE
 
-Well, there are only two words in the description. You need to find something. Examining anything specific doesn't work. If you wait around, the game claims there is nothing obverse. Or that you may need to look for something obverse.
+There's the stop post, but you can't inspect it with the sob ever verbose distracting you.
 
 > OBSERVE
 > SPOT
 
-Oh no! An evil bee, so near! You only need to turn it into a vile bee. Do both and it's a live bee. So either of the two below will work. They are polar opposites but both equally valuable to positive thinking, you see. Using both gets you an extra point, so why not?
+This helps you move on a bit to the Boarded Roadbed, but oh no! An evil bee, so near! You only need to turn it into a vile bee. Do both and it's a live bee. So either of the two below will work. They are polar opposites but both equally valuable to positive thinking, you see. Using both gets you an extra point, so why not?
 
 > REASON
 > BELIEVE
@@ -524,32 +524,33 @@ Oh no! An evil bee, so near! You only need to turn it into a vile bee. Do both a
 Now you need to get in the cellar. You saw how the thief got there, but you can't remember.
 
 You can not-quite-remember the cellar, or listen to "I'd Veer":
+
 > RECALL
 or
 (ALT) > DERIVE
 
-So after either of these you're in Boredom Bedroom.
+So after either of these you're in the Drain Nadir.
 
-You've hit rock bottom, and you need to bring yourself up. You may be able to figure what to do with the lager, but it's a Last Lousy Point.
+You've hit rock bottom, and you need to bring yourself up.
 
 > DESPAIR
 
-You believe you can lead, but you can't. That book by Dale Elda and Leda Adle may help.
+Boredom Bedroom! You may be able to figure what to do with the lager, but it's a Last Lousy Point. The main thing is, you believe you can lead, but you can't. That book by Dale Elda and Leda Adle may help.
 
 > DEAL
 
-You need somewhere to reside.
+From the Browse Bowers, you need somewhere to reside.
 
 > DESIRE
 
-You want to go west, but it's for people who want to be better. People whom PRAISE RIVETS, as the statue of Trevis Vister says.
+In the Econ-Cone, you need to enter the skyscraper. But it's for people who want to be better. People whom PRAISE RIVETS, as the statue of Trevis Vister says.
 
 > ASPIRE
 or
 > STRIVE
 (or both, for a bonus point!)
 
-Hm, that Pernod is tempting. But you can't enter the skyscraper with your current sales pitch.
+Hm, that Pernod dropped in the fray is tempting. But you can't enter the skyscraper with your current sales pitch.
 
 > PONDER
 
@@ -640,7 +641,7 @@ Still, it looks like you need to get rid of the trolls to start. They're there t
 > INSET
 
 (Note: these are the other possibilities. Don't go in for 4, or the trolls will get you. Well, unless you want to see the randomized death messages.)
-(ALT) > UNSET/REMAP (they destroy the tunes/perma-amper, so they are mutually exclusive)
+(ALT) > UNSET/REMAP (each of these destroys the tunes/perma-amper, so they are mutually exclusive)
 (ALT) > SCRAPE
 
 Note that you don't need to provide an object with these verbs, or any of the verbs you need to win this area. Yes, this section means active verbs. It's a(nother) guess-the-verb section!
@@ -678,7 +679,7 @@ Lots of violence in Anger Range. First things first. Protect that trout! Two way
 
 > E
 
-The eeks are loud. Someone's upset the trout is hurt! (And yes, the cans are a last lousy point.)
+The eeks are loud. Someone's upset the trout is hurt! (And yes, the cans are a last lousy point. I bet you can guess, though if you leave without changing them, you can't come back.)
 
 > SEEK
 
@@ -686,7 +687,7 @@ Teach the trout to not get beaten up later.
 
 > TUTOR
 
-Now Aunt Tuna is happy. Reward in the drawer! You can also fix the dent for a last lousy point.
+Now Aunt Tuna is happy. Reward in the drawer! You can also fix the dent for a last lousy point. Again, it's not a hard one, I hope. I think.
 
 You can get the wipes if you want. They lead to a side quest I will detail at the end.
 
@@ -694,11 +695,13 @@ But you want to be a good guest. The food isn't bad.
 
 > EAT TEA
 
+You will find the other half of the paler pearl later.
+
 > W
 
 > N
 
-At any time here in the plains you can just sound off for a LLP.
+At any time here in the plains you can just sound off for a LLP based on the location name. There are a few silly guesses, too.
 
 The skis are blocking the span pans. The knob is jammed.
 
@@ -712,6 +715,7 @@ Oh no! You keep getting hit by a crate.
 
 Ah, that'll do it.
 
+> KISS SKIS
 > BONK KNOB
 
 Okay, now to deal with the span pans.
@@ -724,7 +728,9 @@ The tubs are probably hiding something.
 
 > BUST
 
-The prod needs something simple to jar and open it.
+The prod needs something simple to jar and open it. It's a command that's generally pointless in the game, except now.
+
+>DROP
 
 You can do part of the side quest here to find a shiny weapon. Or just go out. Let's go west of the plains.
 
@@ -742,22 +748,22 @@ Did you examine the arches? How about examining more thoroughly?
 
 > SEARCH ARCHES
 
-The two paler pearls fit to become a general gleaner...which is too small to read.
+The two paler pearls fit to become a general gleaner...which is too small to read. Fortunately, that's only temporary!
 
 > ENLARGE
 > X GLEANER
 
 > N
 
-People are watching you and not watching you. Maybe you can frame them.
+The weaselly walleyes are watching you and not watching you. Maybe you can frame them.
 
 > W
 
-Ah, here's a good hiding place.
+Ah, the Rascal Craals. Imagine if someone or something found the ruby here. They'd know who to suspect, amirite?
 
 > BURY
 
-With the ruby buried, you can summon the ghost, now.
+With the ruby buried, you can summon the ghost in Anger Range, now.
 
 > E
 > S
@@ -767,7 +773,7 @@ Okay, you need to dig up the spirit...
 
 > UNEARTH
 
-What's this? He's a sausage? Well, there's only one way to calm him down.
+What's this? It's a sausage? Well, there's only one way to calm it down.
 
 > ASSUAGE
 
@@ -775,7 +781,9 @@ What's this? He's a sausage? Well, there's only one way to calm him down.
 > N
 > W
 
-...and show him where the ruby was! You framed the weaselly walleyes. The ghost scares them away.
+...this shows it where the ruby was! You framed the weaselly walleyes. The ghost scares them away.
+
+You shouldn't need to go...
 
 > E
 
@@ -791,7 +799,7 @@ You can probably figure what to do with the ant, if you're doing the side quest.
 
 The lever can be used. Or, rather, not used. For a bonus point. But here is what you really want to do, in the Loft/Den.
 
-The papery yapper is adamant you can't bribe him--as such...
+The papery yapper is adamant you can't bribe it--as such...
 
 > PREPAY
 
@@ -807,7 +815,7 @@ Or SNIP them, even if you aren't carrying a sharp object.
 
 > REDIAL
 
-This doesn't get you through the side quest, which is detailed in the appendix.
+This solves the oyster but doesn't get you through the side quest, which is detailed in the appendix.
 
 
 
@@ -868,13 +876,7 @@ You can eat the curst crust for a clue in the next zone. The crust will make you
 
 > ENTER SPOT
 
-That lamb is too scared to move. Or not scared enough. It is a last lousy point but not a hard one.
-
-The volt maze is not worth going through manually. But if you do, you meet a guy named Lev Matzo, then Matzo Lev, then Tom Alvez. The maze also goes from L to V. It also has a brand name, and touching the walls makes you see red. The scanner may be necessary, too, though altogether you have enough clues for...
-
-> MAZELTOV
-
-Space or no space! You can't deal with what replaced the maze yet (note if you go north you get in a fight,) but let's worry about that later.
+That lamb is too scared to move. Or not scared enough. It is a last lousy point but not a hard one. The maze has two solutions: a cheap short one and a cheap long one.
 
 Can't get over the hump to the west?
 
@@ -915,6 +917,16 @@ That wasn't too bad! But they might be good in another fight. Be nice to them, n
 > N
 > N
 
+The volt maze is not worth going through manually. You can solve it just reading the zany meter and seeing the maze's name. Or, just notice the name of the rooms and say to yourself, I really don't want to go through!
+
+> WONT
+
+But if you want full points and want to look through the maze, you meet a guy named Lev Matzo, then Matzo Lev, then Tom Alvez. The maze also goes from L to V. It also has a brand name, and touching the walls makes you see red. The scanner may be necessary, too, though altogether you have enough clues for...
+
+(ALT) > MAZELTOV
+
+Space or no space! You can't deal with what replaced the maze yet (note if you go north you get in a fight,) but let's worry about that later.
+
 If you try going north, you still get smoked. Even if you know what to do with the ether. Your leadership skills--and some items--may help later. Get rid of the plebe.
 
 > BLEEP
@@ -933,11 +945,13 @@ Hmm, fight to the north through ether.
 
 > N
 
-Oh no! The hogs! And the keys! Fake them out with...
+Oh no! Saps' Pass looks tricky. The hogs! And the keys! Fake them out with...
 
 > SYKE
 or
 (ALT) > GOSH
+
+Now Saps' Pass is the Phat Path.
 
 Both work equally well. But now you need to ditch Rand and Leo, who want to visit the shack. Three ways--choose two.
 
@@ -946,15 +960,15 @@ Both work equally well. But now you need to ditch Rand and Leo, who want to visi
 or
 (ALT) > TOUGH
 
-Oh, you can deal with that hawt thaw if you want, too, but it's a last lousy point. It was an extremely badly clued puzzle in version 1, so it's a sort of inside joke. You probably know what to do.
+Oh, you can deal with that hawt thaw if you want, too, but it's a last lousy point. It was an extremely badly clued puzzle in version 1, so it's a sort of inside joke with myself, but I doubt it's too opaque. You probably know what to do.
 
 > N
 
-Read the schematic catechism a few times if you want--I sort of generated a lot of doctor names from a script. And some of the longer anagrams were fun. Originally, it was part of the puzzle to fix up the computer, but things didn't quite work right.
+Read the schematic catechism a few times if you want--I sort of generated a lot of doctor names from a script. And some of the longer anagrams were fun. Originally, it was part of the puzzle to fix up the computer, but things didn't quite work right. So now it's just a silly prop to hold more anagrams.
 
-The trim socks are a last lousy point. This one is not meant to be easy.
+The trim socks are a last lousy point. This one is not meant to be easy, but if you know about computer hardware, maybe it is.
 
-The clock sap can be cleaned up.
+The clock sap can and should be cleaned up.
 
 > CAPS LOCK
 
@@ -1025,7 +1039,7 @@ Okay, how to get out of here? The UBS must be really universal. Because it can a
 > SUB (or...)
 (ALT) > BUS
 
-(As with the hogs, neither gives extra points. Though you can undo and try the other for different text.)
+(As with the hogs, neither option is better than the other. Though you can undo and try the other for slightly different text.)
 
 
 
@@ -1080,9 +1094,9 @@ STORE W has the most puzzles, with some of the longest words, but a ton of them 
 > TOWERS
 > ENTER TOWERS
 
-Now, a clue is what the towers inspired. Adjectives. You've got a bunch of guys to deal with here in the Trefoil. Seven, to be exact, though you only need to get rid of four. Rodney's babble should give you a clue as to what to do.
+Now, a clue is what the towers inspired. Adjectives. You've got a bunch of guys to deal with here in the Trefoil. Seven, to be exact, though you only need to get rid of four, including Rodney. Rodney's babble should give you a clue as to what to do.
 
-Since Rodney is the leader, you can't get rid of him until two or fewer others are left. You get no penalty for leaving someone, and you get no reward for clearing everything. The enemies appear at random, and they are chosen from pods of five or so to ensure that they're not randomly too long or too short overall. I've listed them in alphabetical order, by warrior.
+Since Rodney is the leader, you can't get rid of him until two or fewer others are left. You get no penalty for leaving someone, and you get no reward for clearing everything beyond just points. The enemies appear at random, and they are chosen from pods of five or so to ensure that they're not randomly too long or too short overall. I've listed them in alphabetical order, by warrior.
 
 Andres
 > SNARED
@@ -1242,15 +1256,15 @@ Oh no! But a stinger takes its place! And it's active! There must be something i
 
 > E
 
-Dr. Yow is imprisoned and can't talk until he's
+Dr. Yow is imprisoned and can't talk until you make the good Doctor ...
 
 > WORDY
 
-You'll need his voice for later.
+You'll need Dr. Yow's voice for later.
 
 > PUSH RETAPE
 
-But he can also be something else.
+But Dr. Yow can also be something else.
 
 > W
 
@@ -1258,7 +1272,7 @@ But he can also be something else.
 
 > N
 
-The atheists can talk nice and slow and patiently, until you agree with them.
+The atheists can talk nice and slow and patiently, until you disrupt them a bit.
 
 > HASTIEST
 
@@ -1266,7 +1280,7 @@ The small kid will help you later.
 
 > W
 
-The Sweatier Wait-Seer does not get tired until he's...
+The Sweatier Wait-Seer does not get tired until you force it...
 
 > WEARIEST
 
@@ -1290,7 +1304,7 @@ or, if you're mean,
 
 (ALT) > MARDIER
 
-(Choosing one over the other has no effect on gameplay.)
+(As with the natives, choosing one over the other has no effect on gameplay.)
 
 To the west is another pastry, but to the north is someone--well, something--important.
 
@@ -1298,7 +1312,7 @@ To the west is another pastry, but to the north is someone--well, something--imp
 
 > PUSH REPEAT
 
-The duck hears Dr. Yow's voice and trusts him.
+The duck hears Dr. Yow's voice, and that establishes trust.
 
 (Note: you can GO TO somewhere if you want to shave off a few turns. In this case, GO TO SUBSECTOR or GO TO YOW or even GT YOW. So let's do that now. It's easier than S.S.S.E.E.E etc.)
 
@@ -1306,9 +1320,9 @@ The duck hears Dr. Yow's voice and trusts him.
 
 The fissure can be messed with, and so can the (locked) gate.
 
-> UNLOCKED works, because the lone duck is an anagram and you know it's Dr. Yow's.
+> UNLOCKED works, because the lone duck is an anagram, and you know it's Dr. Yow's.
 
-> FUSSIER makes the duck poke at the fissure and unlock it, too.
+> FUSSIER makes the duck curious enough to poke at the fissure and unlock it, too.
 
 (Note that, strictly, GT COPSE doesn't save keystrokes here. Btu you may find it more convenient.)
 
@@ -1319,7 +1333,7 @@ The fissure can be messed with, and so can the (locked) gate.
 
 > PUT DAGGER IN REPAIR
 
-(GT KID is possible here)
+(GT KID is possible instead of the below moves, too.)
 
 > E
 > E
@@ -1335,7 +1349,7 @@ Help the kid not fidget.
 
 (There are other ways to do this, but this is the most straightforward...I think.)
 
-The kid's having trouble concentrating. He's tentative. LLP time.
+The kid's still having a little trouble concentrating, but nothing big. Tentative. LLP time!
 
 Now for something to listen to that's interesting.
 
@@ -1541,7 +1555,7 @@ Okay, back to the main line.
 
 > N
 
-The imp needs to be provoked. There are three ways, based on his description. You only need two. Again, let's be lazy with keystrokes.
+The imp needs to be provoked. There are three ways, based on his description. You only need two, and they're all functinally equivalent. Again, let's be lazy with keystrokes.
 
 > ANGRILY
 
@@ -1577,7 +1591,7 @@ You may notice one of your medals has changed now.
 
 > S
 
-You need to get by the shrewin' whiners. Three ways to do that. But you only need two.
+You need to get by the shrewin' whiners. Three ways to do that. But, as above, any pair works the same.
 
 > LOATHINGLY
 > TERSELY
@@ -1600,6 +1614,8 @@ Nails, thrones, pines, corona. You actually only need three of these, but I hope
 You don't need to change the fourth non-animal, but why not.
 
 > RACOON
+
+(Two c's works, too.)
 
 You may notice the other of your medals changing as you summon these animals.
 
@@ -1851,8 +1867,9 @@ General: Trizbort map included with release 3. Last Lousy Points at very end, in
  * release 3: the tavern was moved to the start, to give you a clearer idea what to do and give more of a storyline. You need to dispel three of six random guardians before Rodney goes, not 2 of 4, Daltho has his own room, and DYING is switched back from a solution to what it is. The nebula now guards Daltho's own room. You go back there instead of to the tavern. Andrew, Archie, Barney, Bredo, Dewey, Goldy, Marcel, Marlon (I didn't find the relatively simple code to override "normal,") Royce and Wade are also not present in the comp release. Most were in release 2 as well, though I'm too lazy to research which. RIP the slobb-blobs. The snider diners and natives are new, with greedy Ed Yerg replacing the greedy gnome. The atheists and yacker are new, too, with the serpent replacing the nebula. The yurts are now a last lousy point. Curst Palace now has a name--Castle Apcur.
  * release 4: the jetskis are gone, replaced by a bot boat, and you now ENTER BOAT to get where you need. You also need to make the kid stop fidgeting before talking about Dr. Yow. The old puzzle (TENTATIVE) is now an LLP. The deacons are also replaced by a gender-specific guardian that clues the necessary letter collection better. The nameless salesmen were also moved to ambient scenery in the Clangier Clearing, in Others. The rewired robot is gone, replaced by the butlers, but it serves as an LLP elsewhere--sort of. Also, the stinger now defends the subsector after you've disposed of the bonker.
  5 TROVES
- * release 2: you now have a new action near the end in addition to dealing with the singer. Eddie C was not in release 1. The lager was also moved from the Very Top/Office. DIVORCES did not appear in release 1.
+ * release 2: you now have a new possible action at the end in addition to dealing with the singer. Eddie C was not in release 1. The lager was also moved from the Very Top/Office. DIVORCES did not appear in release 1.
  * release 3: you had only one way to find the cellar (the direct way) in release 2. Now you have another. LLP with the book the guy gives you at the start. It's renamed, with an author, Peg A. Page. There's now a different puzzle to enter the skyscraper (PERNOD vs STEW)
+ * release 4: the verbose babblings became a sob ever verbose, to make it clearer what to do. Two rooms were added.
 6 OTTERS
  * release 2: cinders now give a LLP or a hint. Merle and Elmer now clue a different LLP and clue it a bit better. You can now talk to Elvira, which is more just repartee before the final fight, but it does mean one more move.
  * release 3: the whistle shouldn't sound like it yelped. I repositioned the moat so it offered an additional, though trivial, barrier. Damsel became Gretta, and she added a dialogue. There's now a moat, which shouldn't be hard to ditch. You need to say QUICKLY before entering.
