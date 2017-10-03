@@ -2780,7 +2780,7 @@ ltb	"You can't get settled. Everything seems too general or too specific, and as
 DIVORCES	"All sorts of articles that make you see red. This one's about [one of]Rod's Vice[or]Rev. Disco[or]VeriDocs[or]someone who Scored IV[in random order],"
 card	"[one of]A message: Derp on, Epdorn![or]The message is from Dr. Peno & Ned Orp.[cycling]"
 playbill	"[one of]S. Negri and N. Regis are the band. And there's a promotions company to read about, too[or]Isnerg promotions[cycling]."
-volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz and Zemo Valt were the main architects. [cycling] You can read it again to see the [one of]architects[or]company, again[cycling]." [presto]
+volt maze	"[one of]The writing says EZ-Ol[']-Av['] (TM) Volt Maze. [or]Olav Metz and Zemo Valt were the main architects. [or]It was built by Olav Metz and Zemo Valt of EZ-Ol[']-Av[']. [cycling] You can read it again to see the [one of]architects[or]company[or]architects and company[stopping]." [presto]
 drab yoke	"It is, apparently, an OAK DERBY drab yoke, from the small red print."
 jar of pills	--	ps	[oyster]
 stein	"The stein reads TIENS in red, trying to be foreign and exotic, maybe."
@@ -8958,7 +8958,7 @@ wzup	wzup	false	526524588	--	"whassup"	"whassup"	"'Pshaw, us?'[paragraph break]T
 ye hoop	censer	true	267453412	--	"pooh"	"pooh"	"[get-censer]."
 ye hoop	censer	true	517618773	--	"phooey"	"phooey"	"[get-censer]."
 n-t-air	n-t-air	false	354304876	--	"wont"	"wont" or "won't"	"[wont-maze]."
-maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	"You decide to congratulate yourself [if l-m is off-stage and m-l is off-stage]before you get[else]despite not getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, [paragraph break]You hear someone [if nowt town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if l-m is escanned]saying you should not have had to scan that nice man to figure the puzzle, asking for any due dayenu.[else if m-l is escanned]saying you should not have had to scan those nice men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if plaque is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
+maze walls	maze walls	false	655479952	--	"mazeltov"	"mazeltov" or "mazel tov"	"You decide to congratulate yourself [if l-m is off-stage and m-l is off-stage]before you get[else]despite not getting[end if] through the maze. Amazingly, it works! You black out, however, as the maze crumbles, and in a particularly silly dream, you hear someone [if nowt town is unvisited]moaning you didn't even explore the maze someone worked so hard to build.[else if l-m is escanned]saying you should not have had to scan that nice man to figure the puzzle, asking for any due dayenu.[else if m-l is escanned]saying you should not have had to scan those nice men to figure the puzzle, asking for any due dayenu.[else if Unwary Runway is unvisited]chiding you for not making it to the end.[else if r10 is unvisited]saying you barely even started.[else if zany meter is unexamined]wondering how you KNEW.[else]saying THEY'D never been that clever, THEY'D have to go through the maze.[end if] When you regain your feet, you notice ether to the north where Nowt Town was."
 ether	ether	false	481328338	--	"there"	"there"	"Rand and Leo look at you as you whisper. 'Er...the three... the mist, it's them!' [paragraph break]'Disturb! Bust! Rid! Wallop all.' POW! 'Headshot, hotheads!' Rand and Leo, busier, bruise, calling a routing grunt 'Oi!', then 'Imma Maim!' / 'Oof, foo!' an assailant cries after a so-fit fist-o-foist. 'Yeehaw! Yeah, we...' / 'Ok, dem's smoked.' interrupts [l-r]. Whammo! How MMA!"
 keys	keys	false	399372505	--	"syke"	"syke"	"There's nothing more annoying that pretending like you want something, then saying 'Syke!' Or just saying syke, period. The clincher is when you change up with 'Yikes, I...syke!' All the hogs run after you, but you're fast enough to evade them. Once they're exhausted, Rand and Leo grab the keys. You play keep-away until the hogs can't move from exhaustion. 'Dat was clever, boss.' says [l-r].[paragraph break]'Yup,' you say. 'Syke-illogical warfare.' The wall collapses with an 'Aw, LOL. Allow...ow...all!'"
 hogs	hogs	false	240508544	--	"gosh"	"gosh"	"You pretend like you're giving up, and there's no way the hogs can beat you. You wink at Rand and Leo as they gang up on you as you make one last obvious effort--BAM! POW! The wall collapses with an 'Aw, LOL. Allow all...ow!'"
@@ -9248,7 +9248,7 @@ to poss-d:
 	decrement poss-score of mrlp;
 
 to min-up:
-	d "Adding a min point for this flip.";
+	d "Adding a min point but not an extra point for this flip.";
 	increment min-score of mrlp;
 
 to min-and:
@@ -9538,7 +9538,7 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 		now grey gyre is mapped south of Phat Path;
 		now Phat Path is mapped north of grey gyre;
 		if hawt thaw is in Saps' Pass, now hawt thaw is in Phat Path;
-		say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]A warning sign lies beyond where the wall was.";
+		say "You unlock the lawl-wall with the keys that fell from it, and suddenly you see the funny side of your journey so far. The wall and keys crumble. The hogs slink off in despair at a job failed.[paragraph break]A warning sign lies beyond where the wall was. You give a 'PHT!' as you wind up at...";
 		move player to Phat Path;
 		continue the action;
 	else if noun is prai or noun is rivets:
@@ -10903,7 +10903,7 @@ check examining the Gird Grid:
 			say "You're pretty sure you don't need to deal with the [reg-match entry], any more. Still, you re-read the description and take time to feel pleased with what you fixed." instead;
 	say "[reg-blurb entry][line break]";
 	if there is a reg-match entry and mrlp is reg-match entry:
-		say "[if cur-score of mrlp is 0]Hm. Maybe you'll figure out what do do, and how[else]Hm. The hints make a bit more sense, now[end if].";
+		say "[line break][if cur-score of mrlp is 0]Hm. Maybe you'll figure out what do do, and how[else]Hm. The hints make a bit more sense, now[end if].";
 	the rule succeeds;
 
 table of griddiness
@@ -14478,7 +14478,7 @@ to decide whether (int - a thing) is interjective: [this is for hinting in prest
 
 book Grey Gyre
 
-Grey Gyre is a room in Presto. "It's still kind of windy here, but nothing dangerous, and the ground is just an unappetizing grey all around[if hump is visible], mostly level except for a hump to the west[end if]. It's calmer but burnt to the south, and you see a way east, too[if hump is not visible], in addition to the path west the hump doesn't block any more[end if][if volt maze is in Grey Gyre]. You see a path to what looks like a maze to the north, with a plaque by it[else if ether is visible]. The maze entrance north has been replaced by ether[otherwise]. With the ether cleared, you can go north[end if]."
+Grey Gyre is a room in Presto. "It's windy here, but nothing dangerous, and the ground is just an unappetizing grey all around. It's calmer but burnt to the south, and you see a way east, too[if hump is not visible], as well as west over the hump you cleared[end if][if volt maze is in Grey Gyre]. You see a path to what looks like a maze to the north--a maze entry zany meter is nearby, too[else if ether is visible]. The maze entrance north has been replaced by ether[otherwise]. With the ether cleared, you can go north[end if][if hump is in gyre].[paragraph break]A hump to the west looks much more intimidating than it should be[end if]."
 
 the ether is vanishing scenery. "It's trickier to see through than moist-o-mist. [if ether-try is true]Those three bums who did the business on you must be hiding, still[else]Anyone or anything could be waiting[end if]."
 
@@ -14498,9 +14498,12 @@ before fliptoing:
 
 section maze entry zany meter
 
-the maze entry zany meter is scenery in Grey Gyre. "It's like one of those things you hit with a carnival hammer, but you don't have any hammer. Bunched at the bottom are three bummer options.[paragraph break]0: be too scared to enter the maze[line break]0:run through the maze[line break]0:run through the maze again[line break]1: ignore and reject Nowt Town[line break]2: (written in red) congratulate yourself for solving the E-Z Ol' Av(TM) Volt Maze.[line break]3: (written in red again) congratulate yourself for solving the E-Z Ol' Av(TM) Volt Maze WITHOUT EVEN GOING THROUGH IT OR ASKING FOR HINTS. "
+the maze entry zany meter is scenery in Grey Gyre. "It's like one of those things you hit with a carnival hammer, but you don't have any hammer. Bunched at the bottom are three bummer options for, presumably, the zaniest way to solve the maze.[paragraph break]0: be too scared to enter the maze[line break]0: run through the maze[line break]0: run through the maze again[line break]1: ignore and reject Nowt Town[line break]2: (written in red) congratulate yourself for solving the E-Z Ol['] Av(TM) Volt Maze.[line break]3: (written in red again) congratulate yourself for solving the E-Z Ol' Av(TM) Volt Maze WITHOUT EVEN GOING THROUGH IT OR ASKING FOR HINTS. "
 
 understand "enemy tzar" and "tzar enemy" as a mistake ("You hear a rumbling. Then Elvira appears from the maze! 'Oh, dear, this will be easy,' she says. And it is.[paragraph break][uurrgg]") when location of player is grey gyre and maze entry is in grey gyre.
+
+instead of scaning zany meter:
+	try scaning volt maze instead;
 
 chapter lamb
 
@@ -14528,15 +14531,11 @@ ether-try is a truth state that varies.
 check going north in Grey Gyre:
 	if cur-score of presto < 3:
 		say "You don't fully have your bearings here yet. You're not up to walking through a maze. Perhaps you need to figure how to deal with things before entering the maze." instead;
-	if the room north of Grey Gyre is Phat Path:
-		if ether is visible:
-			say "[one of]You walk forward. That dangerous looking ether? It[if ether-try is true]'s still hiding[else] hid[end if] some dangerous looking people.[paragraph break]'AMBUSH!' / 'Ah, bums!'[paragraph break]You are pushed roughly back to where you came[if Leo is visible]. Leo and Rand mutter that if you point out where those people are, they'll do the business[else]. 'Intruder? Dire runt!' You could use a meaty matey or two[end if][or]Leo and Rand might help you win the fight, but you'll need some way to find the people in the ether [if Leo is not visible]and some henchmen to tackle them[end if][stopping].";
-			now ether-try is true instead;
-		if Phat Path is not visited:
-			if dart is not in popgun or player does not have popgun:
-				say "[one of]You march forward confidently. Your new pals are better fighters than you, but not enough to win the fight. You all are pushed back[or]You need some additional firepower[stopping]." instead;
-			say "Between your pointing out the hidden enemies, your new friends['] strength, and your pop-gun, you get something like a jump on your mysterious assailants. They run away. You can't find the dart, but you doubt you'll need it.";
-			now dart is in lalaland;
+	if ether is in grey gyre:
+		say "[one of]You walk forward. That dangerous looking ether? It[if ether-try is true]'s still hiding[else] hid[end if] some dangerous looking people.[paragraph break]'AMBUSH!' / 'Ah, bums!'[paragraph break]You are pushed roughly back to where you came[if Leo is visible]. Leo and Rand mutter that if you point out where those people are, they'll do the business[else]. 'Intruder? Dire runt!' You could use a meaty matey or two[end if][or]Leo and Rand might help you win the fight, but you'll need some way to find the people in the ether [if Leo is not visible]and some henchmen to tackle them[end if][stopping].";
+		now ether-try is true instead;
+	if Saps' Pass is not visited:
+		say "You stride confidently north with your two friends. You can tackle anyone!";
 
 section dart
 
@@ -14548,9 +14547,6 @@ the volt maze is vanishing scenery in Grey Gyre. "At the start of the path is ti
 understand "maze/ entry" as volt maze when player is in Gyre.
 
 a-text of volt maze is "RYRYRRYR". b-text of volt maze is "RYRYRRYR". parse-text of volt maze is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
-
-instead of scaning plaque:
-	try scaning volt maze instead;
 
 instead of entering volt maze:
 	try going north.
@@ -14566,14 +14562,13 @@ after fliptoing n-t-air:
 	continue the action;
 
 after fliptoing maze walls:
-	increment the score;
-	min-up;
+	min-and;
 	now maze-points is 2;
 	unless l-m is cscanned or l-m is ncscanned:
-		min-up;
+		min-and;
 		increment maze-points;
-		increment the score;
 	shuffle-nowt-town;
+	increment the score;
 	continue the action;
 
 to shuffle-nowt-town:
@@ -14633,14 +14628,21 @@ check fliptoing ether:
 	if popgun does not contain dart:
 		say "Leo and Rand charge in. It's two-on-three, though, since your popgun doesn't have any ammunition[if boing is reflexive] and isn't even working[end if]. You all walk back, on-ho changed to oh-no. Leo and Rand shake off their bruises.";
 		preef ether instead;
+
+after fliptoing ether:
 	now dart is in gyre;
 	now dart is in lalaland;
+	now saps' pass is mapped north of grey gyre;
+	now grey gyre is mapped south of saps' pass;
+	continue the action;
 
 book Burnt Brunt
 
 Burnt Brunt is a room in Presto. "You see gasp-gaps to the west an a mad dam east, though north-south is unimpeded. And there's a dumpster here, too."
 
 understand "spag" as a mistake ("You don't have time to read text-adventuring magazines right now. You're too busy living them.") when player is in burnt brunt.
+
+understand "gpa" and "gpas" as a mistake ("You're not being graded here. I mean, you are getting a score, but this isn't school or anything.") when player is in burnt brunt.
 
 leaf-clue is a truth state that varies.
 
@@ -15119,7 +15121,7 @@ understand "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're o
 
 understand "whassup" as a mistake ("You probably want to TALK to people instead. Well, most of the time.") when wzup is not visible.
 
-the wzup is a privately-named reflexive thing. Leo carries the wzup. description of wzup is "bug".
+the wzup is privately-named scenery in Dirge Ridge. description of wzup is "bug".
 
 a-text of wzup is "RRYRRYR". b-text of wzup is "PRYRRYR". parse-text of wzup is "w[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -15129,6 +15131,7 @@ check fliptoing wzup:
 	if Leo is eager:
 		say "You've already got their attention. You wouldn't want to get caught in an endless cycle of whassups. You'd probably need to drink a lot of cheap beer to recover from that." instead;
 	if Leo is washed up and Rand is washed up:
+		d "They're ready to be pals!";
 		now Leo is eager;
 		now Rand is eager;
 		continue the action;
@@ -15277,7 +15280,7 @@ a-text of popgun is "RYRRY". b-text of popgun is "PYRRY". parse-text of popgun i
 understand "PG-on-up pop/ gun/" as popgun.
 
 report taking popgun:
-	say "You're not one for violence, but the gun doesn't look super-high-powered. On the other hand, it's not G-rated, so it's minimally effective. Snagged.";
+	say "You take the gun and look it over. You're not one for violence, but the gun doesn't look lethal. But since it's PG- and not G-rated, it can't be totally useless.";
 	the rule succeeds;
 
 description of PG-on-up popgun is "It's cheap plastic but probably packs a punch with the right ammo--but if it were G? No, pup[if boing is reflexed]. Its boing mechanism is fixed, now[otherwise]. You notice its boing mechanism is broken. It may take a eureka moment to figure out how to fix this spoilt pistol[end if][if dart is in popgun]. Loaded, too, with that dart![end if]. You notice a serial number."
@@ -15398,8 +15401,6 @@ check scaning smart people sign:
 
 understand "alter" as a mistake ("Vandalism! For shame!") when smart people sign is visible.
 
-Grey Gyre is south of Phat Path.
-
 the lawl wall is vanishing scenery in Phat Path.
 
 check taking lawl wall:
@@ -15414,11 +15415,11 @@ the keys are part of the lawl wall. the keys are reflexive. description is "You'
 
 a-text of keys is "RORY". b-text of keys is "RORY". parse-text of keys is "x[sp]y[sp]x[sp]e". keys is any-spoilable.
 
-the hogs are reflexive plural-named people. description is "They're as big as Leo and Rand but meaner. Plus there are three of them. They look a little smarter, too--but maybe you can use reverse psychology to get under their skin or sneak those keys on the wall.". "Hogs are stretched against the lawl wall, in no hurry to try to get by. They look like tough customers, too tough for the sort of words that got you here. OR ARE THEY."
+the hogs are reflexive plural-named people in Saps' Pass. description is "They're as big as Leo and Rand but meaner. Plus there are three of them. They look a little smarter, too--but maybe you can use reverse psychology to get under their skin or sneak those keys on the wall.". "Hogs are stretched against the lawl wall, in no hurry to try to get by. They look like tough customers, too tough for the sort of words that got you here. OR ARE THEY."
 
-after printing the locale description for Phat Path when Phat Path is unvisited:
+after printing the locale description for Saps' Pass when Saps' Pass is unvisited:
 	say "Shouldn't be much of a problem to get the keys and...oh no! you hear...[wfak][paragraph break]";
-	say "A PHT! Suddenly three hogs, all Rand and Leo's size, block your way. One just up and takes your popgun, smashes it, laughs, and even rips off your star and crumples before going to guard the keys, the big jerk. What to do?";
+	say "A 'PSS!' Suddenly three hogs, all Rand and Leo's size, block your way. One just up and takes your popgun, smashes it, laughs, and even rips off your star and crumples before going to guard the keys, the big jerk. What to do?";
 	now hogs are in Phat Path;
 	now decorative star is in lalaland;
 	now popgun is in lalaland;
@@ -16551,15 +16552,7 @@ after printing the locale description for r22 when voltzap is false and voltwarn
 the description of mazeroom is "You're in a maze room with no distinguishing features[exits-lead].";
 
 check going to nowt town when player was in Grey Gyre:
-	say "[one of]You hope the maze isn't too big. Then you hope there's a quick way around it--[if plaque is examined]the plaque seems to indicate there might be[else]but you feel an odd sense of guilt, as if ancestors lamented that you can't even take time to stop and read a simple plaque[end if][or]You re-enter, not knowing whether to feel bad you're [if Unwary Runway is visited]trying[else]not even patient enough[end if] to brute-force things and run through the maze or bad you want an easy way through[if voltzap is false and Unwary Runway is visited] or too scared to touch any walls[end if][if Unwary Runway is visited and plaque is unexamined] or too hasty to even read that plaque this time around[end if][stopping]."
-
-the plaque is scenery in Grey Gyre. "VOLT MAZE[paragraph break]DESIGNED BY E-Z OL['] AV (TM).[paragraph break]Oy, this maze is meshuggenah--those without the chutzpah to congratulate themselves before entering it have no hope![paragraph break]The first two lines are in red."
-
-instead of taking the plaque:
-	say "It might be better to take the plaque's advice.";
-
-instead of scaning plaque:
-	say "Maybe reading between the lines of the Volt Maze plaque would help.";
+	say "[one of]You hope the maze isn't too big. Then you hope there's a quick way around it--[if zany meter is examined]the zany meter seems to indicate there might be[else]maybe the zany meter has advice[end if][or]You re-enter, not knowing whether to feel bad you're [if Unwary Runway is visited]trying[else]not even patient enough[end if] to brute-force things and run through the maze or bad you want an easy way through[if voltzap is false and Unwary Runway is visited] or too scared to touch any walls[end if][if Unwary Runway is visited and zany meter is unexamined] or too hasty to even read that zany meter this time around[end if][stopping]."
 
 Nowt Town is north of Grey Gyre. Nowt Town is in Presto. "You can exit back south or hit the maze proper to the west. A big L is tiled into the floor here[if m-l is in lalaland]. Nothing really seems to have changed about the maze several times through, and you may flip if you have to go through the L-to-V maze again[end if]."
 
@@ -16577,17 +16570,17 @@ n-t-air is a reflexive plural-named privately-named backdrop. description is "[b
 
 a-text of walls is "RYRYRRYR". b-text of walls is "RYRYRRYR". parse-text of walls is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
-check fliptoing walls:
+check fliptoing maze walls:
 	if player is not in Grey Gyre:
 		say "You figure it would be a very good idea to move out of the maze before saying that, in case you wind up vanishing along with the maze. So you head back outside as you came. This thinking ahead will be one more thing to congratulate yourself about, at any rate.";
 		move player to Grey Gyre, without printing a room description;
 
-description of walls is "This is a volt maze, but they don't seem juiced enough to zap you good. Running into them might be a useful lesson in character building. Or an outright clue."
+description of maze walls is "[if player is in grey gyre]Up north[else]This[end if] is a volt maze, but they don't seem juiced enough to zap you good. Running into them might be a useful lesson in character building. Or an outright clue."
 
 understand "lawls" and "lawl" as a mistake ("You try to laugh at the walls, but [if cur-score of presto is 0]such actions don't seem to work here[else]that Internet neologism is a hybrid action and interjection and thus fails[end if].") when walls are visible.
 
 instead of touching walls:
-	say "[one of]You feel a[or]The same[stopping] small electric jolt[one of][or], again[stopping]."
+	say "[if player is in grey gyre]Nothing. Maybe it's the inside of the walls, in the maze, that is charged[else][one of]You feel a[or]The same[stopping] small electric jolt[one of][or], again[stopping][end if]."
 
 description of big-let is "It's a letter[if r10 is visited]. Much like back to the L you saw at the beginning[else]. Maybe there are others later along[end if]."
 
@@ -26377,12 +26370,12 @@ Eddie's Song	"[one of]Eddie C, I'd Cede. Listening once helps you see red.[plus]
 playbill	"[one of]Hm, the playbill mentions no song. Just the singer.[plus][or]More people hint what to do if you READ the playbill. Lots in red.[plus][or]You want to give up and move on after reading.[plus][or]You've got no time to negotiate a severance package. You're a busy adventurer! You can just RESIGN.[minus][cycling]"	--	"RESIGN"	[end TROVES hinting]
 curst crust	"[one of]You'll say something reflexive if you eat the crust.[plus][or][if Grey Gyre is unvisited]The crust is useful in the PRESTO region.[else]Eating it gives you a hint what to say.[end if][minus][cycling]"	[start PRESTO hinting]
 volt maze	"[maze-solve]."	--	"MAZEL TOV"
+zany meter	"[maze-solve]."
 big l	"The big L tells you what letter the maze starts on."
 big-let	"The big letters tell you that the maze goes from L to [if Unwary Runway is visited]some later letter[else]V[end if]."
 l-m	"You can scan Lev for hints. He's not much for conversation."	--	"MAZEL TOV"
 m-l	"You can scan Lev for hints. He's not much for conversation."	--	"MAZEL TOV"
 Tom Alvez	"You can scan Tom for hints. He's not much for conversation."	--	"MAZEL TOV"
-plaque	"[maze-solve]."
 lamb	"[one of]The lamb is petrified with fear, but maybe the right fear would get it going again.[plus][or]What sort of noise can you make to get it going?[plus][or]BLAM.[minus][cycling]"	--	"BLAM"
 onyx censer	"[one of]The censer's black and green and really retro.[plus][or]The censer may remind you of what people used to play text adventures on a long time ago.[plus][or]It can become a SCREEN.[minus][cycling]"	--	"make a SCREEN"
 dart	"[one of]The dart is stuck in the dumpster, and taking it doesn't work.[plus][or]Frustrating, eh?[plus][or]What's a good word of frustration?[plus][or]Four letters.[plus][or]DRAT.[minus][cycling]"	--	"DRAT"

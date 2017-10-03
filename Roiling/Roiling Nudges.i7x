@@ -318,9 +318,10 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 table of presto nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "crust"	408819179	--	curst crust	--	"You should eat your food, not play with it. Yes, even if it's only MARGINALLY food."
-"plaque"	454785149	--	plaque	--	"[mz-chg]."
-"entry"	507506690	--	plaque	--	"[mz-chg]."
-"mazeentry"	824545388	--	plaque	--	"[mz-chg]."
+"entry"	507506690	--	zany meter	--	"[mz-chg]."
+"mazeentry"	824545388	--	zany meter	--	"[mz-chg]."
+"zany"	316424196	--	zany meter	--	"[mz-chg]."
+"meter"	508121192	--	zany meter	--	"[mz-chg]."
 "bigl"	149825292	nowt town	--	--	"The big L may be some sort of clue, but you can't do anything with it."
 "mazeltov"	655479952	--	--	maze-gone rule	"The volt maze is gone. Re-forming it would not be fun."
 "ether"	481328338	--	--	ether-gone rule	"The ether is gone. You can just go [if phat path is visited]back [end if]north."
@@ -341,8 +342,11 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "amad"	89479878	brunt	--	--	"[no-scen]."
 "themad"	355490486	brunt	--	--	"[no-scen]."
 "gasp"	212527445	burnt brunt	--	--	"You try, but fail, to make something out of nothing."
+"gpa"	116253479	Burnt Brunt	--	--	"You try, but fail, to make something out of nothing."
 "adumpster"	686377722	burnt brunt	--	--	"Not even you can make that icky stuff in the dumpster worthwhile[if dart is not in dumpster], and besides, you got the dart anyway[else if dumpster is unexamined], but maybe there's something useful inside[else], but maybe you could reach for the dart[end if]."
 "dumpster"	684189904	burnt brunt	--	--	"The dumpster and red stump are both pretty sturdy[if dart is in dumpster and star is in brunt], but maybe you could pull out what's in them[else if dart is in dumpster], but you might be able to get what's in the dumpster[else if star is in brunt], but maybe you could pull the star from the stump[else], but you got something from both of them, anyway[end if]."
+"spumed"	495756083	burnt brunt	--	--	"[spumed-no]."
+"tar"	190621639	burnt brunt	--	--	"[spumed-no]."
 "bigm"	160086606	r10	--	--	"[just-letter]."
 "bign"	164918961	r00	--	--	"[just-letter]."
 "bigo"	170364030	r01	--	--	"[just-letter]."
@@ -1452,7 +1456,7 @@ this is the in-mazeroom rule:
 	the rule fails;
 
 to say mz-chg:
-	say "It's the maze you need to change, not the plaque"
+	say "It's the maze you need to change, not the zany meter"
 
 this is the maze-gone rule:
 	if player is in gyre and maze is in lalaland:
@@ -1472,6 +1476,9 @@ to say is-boing:
 
 to say no-scen:
 	say "Here in the Brunt, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster";
+
+to say spumed-no:
+	say "The spumed tar does nothing[if star is in brunt or dart is in brunt]. Maybe focus on something else[end if]."
 
 to say just-letter:
 	say "It's just one letter in the maze. You may want to focus on the whole volt maze"
