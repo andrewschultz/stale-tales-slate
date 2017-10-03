@@ -485,6 +485,8 @@ section compiler non-syntax section - not for release
 
 use MAX_VERBS of 650.
 
+use SYMBOLS_CHUNK_SIZE of 16000.
+
 section debug on - not for release
 
 [needs to be near the top--well, could place it before all other when play begins rules]
@@ -9009,9 +9011,9 @@ pre-haun	pre-haun	false	529723362	--	"unearth"	"unearth" or "unearth haunter"	"A
 c2	c2	false	337433333	--	"trace"	"trace" or "trace crate"	"Based on where you got hit and how fast it hit you, you throw some grass up in the air or something, note how the wood landed, and figure where it came from! But you see no crates-caster. They'll probably chuck something at you when you're not looking, and you'll probably need to use your instincts. (P.S. don't worry, it's not a centaur either, so you can't untrace. You can't trace up and capture it either.)"
 crate	crate	false	337433333	--	"react"	"react" or "react to crate"	"This time you're ready. You turn around and know when to look when the crate is about to hit you. You knock it down in mid-air and, in a fit of rage, fling it back into the tall weeds and hit the en-pris sniper. You hear an expression of anger, then scurrying. You won't need to recast the crates."
 skis	skis	false	290473956	--	"kiss"	"kiss"	"As you kiss them, they pull up--and dissolve."
-knob	knob	false	214612168	--	"bonk"	"bonk"	"BONK! You hit the knob just right. It rolls off...well, somewhere." [?? check for knob/skis if it's all gone]
+knob	knob	false	214612168	--	"bonk"	"bonk"	"BONK! You hit the knob just right. It falls from between the pans and rolls off...well, somewhere." [?? check for knob/skis if it's all gone]
 pans	pans	false	248835251	--	"snap"	"snap"	"You snap and, lo and behold, the pans detach and clank and fall over and melt into the ground."
-bogus-plains	bogus-plains	false	347641936	--	"splain"	"splain"	"[if span pans are in Lapsin' Plains]You brag, to nobody and everyone in particular, how you SHOWED that door. It's in no shape to argue[else if bonkies is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the span pans how you'll get by anyway. It's short on detail, but it sounds impressive[end if]. You feel better after this, now you bragged a bit."
+bogus-plains	bogus-plains	false	347641936	--	"splain"	"splain"	"[if span pans are in Lapsin' Plains]You brag, to nobody and everyone in particular, how you SHOWED those pans[else if bonkies is true and crate is reflexive]You yell to whoever's throwing those crates, you'll figure them out[else]You explain to the span pans how you'll get by anyway. It's short on detail, but it sounds impressive[end if]. You feel better after this, now you bragged a bit."
 trout	trout	false	471002223	--	"tutor"	"tutor trout/tortu" or "tutor"	"[trout-tut]."
 wipes	wipes	true	458473653	--	"swipe"	"swipe"	"You swipe the wipes before Aunt Tuna notices. You can't see anything here that's dingy enough to use them--or use them the right way--on. Maybe something somewhere less well-kept."
 bubble wrap	ruby	false	276912353	--	"warp"	"warp"	"You warp the bubble wrap around, and it pops as it reaches its breaking point. Most sardines despise aridness but this sardine hates noise. He runs off, probably to some read-ins.[paragraph break]It's pretty exciting you can go north now and all, but it's even more exciting to find something valuable inside the remains of the wrap: a ruby!"
@@ -9029,7 +9031,7 @@ gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	"Rustle. Result: luster! 
 yapper	yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' He motions you to slip him the gleaner behind your back. Then he goes off to find such a judge, presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"
 pins	pins	false	291640279	--	"spin"	"spin" or "spin pins"	"You fiddle with the pins, and bang! Something works."[??]
 d2	d2	false	335153504	Strip of Profits	"redial"	"redial"	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range. Between Aunt Tuna, the sardine, and even the reluctant trolls--a story.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold. Now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
-dialer	dialer	false	335153504	--	"derail"	"derail"	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!'Then a pause. Then Elvira's voice.[paragraph break]'HEY! Oh! It's the boys from the horned hedron! This IS just one of your pranks, isn't it?' her voice turns less saccharine. 'You wouldn't do that again, would you? Well, I could send you more...supplies...now, I'll pretend this didn't happen!' As her voice crackles off, pins spring up to shield the dialer from further operation.";
+dialer	dialer	false	335153504	--	"derail"	"derail"	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!' Then a pause. Then Elvira's voice.[paragraph break]'HEY! Oh! It's the boys from the horned hedron! This IS just one of your pranks, isn't it?' her voice turns less saccharine. 'You wouldn't do that again, would you? Well, I could send you more...supplies...now, I'll pretend this didn't happen!' As her voice crackles off, pins spring up to shield the dialer from further operation.";
 
 table of towers anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
@@ -17566,7 +17568,7 @@ to say rub-wr:
 	say "[if player has ruby]ruby[else]wrap[end if]";
 
 check going south in Anger Range:
-	say "You don't want to go back, over that river, to the Posh Hops Shop." instead;
+	say "You don't want to go back over that river. Your goal must be here." instead;
 
 the scrawl is scenery. "[if carps are visible][reject][else]All in red:[paragraph break]Etahn Ru. Near-Hut Haunter.[end if]"
 
@@ -17689,7 +17691,7 @@ understand the command "unearth" as something new.
 
 understand "unearth [something]" as unearthing.
 
-the pre-haun is privately-named proper-named vanishing scenery in anger range. printed name of pre-haun is "the haunter in Anger Range". description of pre-haun is "You can't see it, but you can feel it."
+the pre-haun is privately-named proper-named vanishing scenery. printed name of pre-haun is "the haunter in Anger Range". description of pre-haun is "You can't see it, but you can feel it."
 
 a-text of pre-haun is "YRYYRRR". b-text of pre-haun is "YRYYRRR". parse-text of pre-haun is "-[sp]x[sp]-[sp]-[sp]x[sp]x[sp]x".
 
@@ -17720,7 +17722,7 @@ before doing something with pre-haun:
 before doing something with ruby when ruby is in lalaland:
 	if current action is unearthing or current action is objhinting:
 		continue the action;
-	if current action is objasking about:
+	if current action is objasking about or current action is objasking generically:
 		continue the action;
 	say "You must forget about the ruby." instead;
 
@@ -17812,6 +17814,7 @@ after fliptoing carps:
 	now carps are in lalaland;
 	now pikes are in lalaland;
 	now scrawl is in anger range;
+	now pre-haun is in anger range;
 	continue the action;
 
 check fliptoing dialer:
@@ -17857,9 +17860,9 @@ carry out assuageing:
 
 chapter traceing
 
-understand "caret" as a mistake ("You need[if crate is reflexed]ed[end if] to shift letters and not sixes, here.") when crate is visible.
+understand "caret" as a mistake ("You need[if crate is reflexed]ed[end if] to shift letters and not sixes, here.") when crate is visible or c2 is visible.
 
-understand "cater" as a mistake ("No use catering to an enemy you can't see. Besides, the crate is too smashed to cater something.") when crate is visible.
+understand "cater" as a mistake ("No use catering to an enemy you can't see. Besides, the crate is too smashed to cater something.") when crate is visible or c2 is visible.
 
 traceing is an action applying to one thing.
 
@@ -18294,7 +18297,7 @@ a-text of dialer is "RYRYYR". b-text of dialer is "[if dialer is reflexive]PYRYY
 instead of taking or attacking dialer:
 	say "That would only sabotage communications here. You need to sabotage the supplier."
 
-The lever is reflexive LLPish scenery in Den Loft. "You're quite glad you found it, even if you're not sure how or why to pull it, yet."
+The lever is reflexive LLPish scenery. "You're quite glad you found it, even if you're not sure how or why to pull it, yet." [it's moved here after the yapper is gone]
 
 a-text of lever is "RYRYR". b-text of lever is "RGPGR". parse-text of lever is "x[sp]e[sp]v[sp]e[sp]x". lever is parse-spoilable.
 
@@ -18311,7 +18314,7 @@ chapter pins
 
 [?? if player has pills then reg-inc]
 
-some pins are scenery. "The pins cover the dialer. There's probably more than one way to get rid of them, but right now, they're blocking you from using it again. Or, in other words, from...wait for it...[paragraph break]PS'in."
+some pins are reflexive plural-named scenery. "The pins cover the dialer. There's probably more than one way to get rid of them, but right now, they're blocking you from using it again. Or, in other words, from...wait for it...[paragraph break]PS'in."
 
 after fliptoing pins:
 	now d2 is in den loft;
@@ -18339,7 +18342,8 @@ understand the command "snip" as something new.
 understand "snip [something]" as sniping.
 
 carry out sniping:
-	if noun is pins, say "You don't have anything with a small enough blade to cut the pins. But that has to be close." instead;
+	if pins are reflexed, say "You've dealt with the pins. Now to mess with the dialer, again." instead;
+	if noun is pins, say "You don't have anything with a small enough blade to cut the pins. And even then, they'd still be in the way of operating the dial again. But that has to be close to what you need to do." instead;
 	say "There's no scissors or anything in this game. Sorry." instead;
 
 chapter spining
@@ -18365,8 +18369,8 @@ a-text of d2 is "RYRYYR". b-text of d2 is "RYRYYR". parse-text of d2 is "x[sp]-[
 understand "redial" as a mistake ("[if yapper is visible]You can't even [i]dial[r] with the yapper around[else if dialer is reflexive]Maybe in a bit, but you haven't even dialed yet[else]Maybe in a bit, but the pins are in the way at the moment[end if].") when pins are in Horned Hedron and player is in tenfold.
 
 check fliptoing d2:
-	if lev-pull is false:
-		say "Hm. Nothing happened. You may need to reset things, here." instead;
+	if pins are reflexive:
+		say "Hm. Nothing happened. You may need to reset things, here, with the pins in the dialer. It can't be too hard..." instead;
 
 book bubble wrap and drawer
 
@@ -18495,13 +18499,16 @@ carry out cleaning:
 	now lance is cleaned;
 	now lance is unfigured;
 	now player has lance;
-	say "The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes kind of biodegraded in the process, which is kind of nasty, but that is one less thing to carry.";
+	say "The lance becomes much less grungy as you swipe the wipes across it. You can actually pick it up, now. So you do. But it's obviously a very righteous lance. Only to be used against an enemy of great annoyance. It won't help against multiple opponents, either, but at least it is collapsible, so it fits easily in your purse.[paragraph break]The wipes biodegraded kind of nastily in the process, but that is one less thing to carry.";
 	now wipes are in lalaland;
 	min-and instead;
 
 book Lapsin' Plains
 
-Lapsin' Plains is north of anger range. Lapsin' Plains is in oyster. "[if span pans are visible]span pans guard your way into huts[else]Huts lie thus here, and you can go inside[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]."
+to say knob-link:
+	say "[if knob is in plains], linked by a knob,[end if]"
+
+Lapsin' Plains is north of anger range. Lapsin' Plains is in oyster. "[if span pans are visible]Span pans[knob-link] guard your way into Shut huts[else]Shut huts lie thus here, and you can go inside[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]."
 
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin' Plains.
 
@@ -18543,7 +18550,7 @@ after printing the locale description for Lapsin' Plains when Lapsin' Plains is 
 instead of cutting denim:
 	try attacking denim;
 
-the skis are a plural-named flippable thing in Lapsin' Plains. the skis are fixed in place. "Skis criss-cross over the door, blocking you from entry."
+the skis are a plural-named flippable thing in Lapsin' Plains. the skis are fixed in place. "Skis criss-cross over the pans, blocking you from entry."
 
 a-text of skis is "RYRR". b-text of skis is "RYRP". parse-text of skis is "x[sp]i[sp]x[sp]s". skis is cheat-spoilable.
 
@@ -18802,6 +18809,8 @@ a-text of waste is "RRYYR". b-text of waste is "RRYYR". parse-text of waste is "
 
 the clean lance is an LLPish reflexive thing. description of lance is "[if lance is cleaned]Clean and ready for righteous smiting[else]Too grimy and dirty[end if].". "A lance lies here, too dirty and gross to pick up."
 
+printed name of lance is "[if lance is cleaned]clean [end if]lance"
+
 the lance can be cleaned. the lance is not cleaned.
 
 a-text of lance is "RRYYR". b-text of lance is "RRYYR". parse-text of lance is "x[sp]x[sp]-[sp]-[sp]x".
@@ -18848,7 +18857,7 @@ after fliptoing waste (this is the tubs give prod and waste rule):
 
 book Achers' Arches
 
-Achers' Arches is a room in oyster. Achers' Arches is west of anger range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if a-s is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are lots of hidden places you could ambush someone from[end if][if a-s is reflexive and sardine is in lalaland] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is in lalaland], as well as north [hedron-if-v][end if]. A handsome sand home blocks the way south and west."
+Achers' Arches is a room in oyster. Achers' Arches is west of anger range. "Arches lead north to [if Horned Hedron is unvisited]what could be [end if]the Horned Hedron[if a-s is reflexed], but you already searched them[else]. They could maybe also be called Chaser Arches since there are lots of hidden places you could ambush someone from[end if][if a-s is reflexive and sardine is in lalaland] or hide yourself, or things[end if].[paragraph break]You can go back east to Anger Range, too[if sardine is in lalaland], as well as north[hedron-if-v][end if]. A handsome sand home blocks the way south and west."
 
 check going in Achers' Arches:
 	if noun is west or noun is south:
@@ -18863,7 +18872,7 @@ instead of doing something with handsome sand home:
 
 to say hedron-if-v:
 	if Horned Hedron is visited:
-		say "to the Horned Hedron"
+		say " to the Horned Hedron"
 
 h-h is privately-named scenery in Achers' Arches. "You can only see the arches leading into the Horned Hedron.". understand "horned/hedron" and "horned hedron" as h-h. printed name of h-h is "the Horned Hedron".
 
@@ -18969,7 +18978,7 @@ check fliptoing thin hint:
 
 book Horned Hedron
 
-Horned Hedron is north of Achers' Arches. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here[if o-t is in Horned Hedron]. An ol['] trap[else]. A portal[end if] leads into the Horned Hedron proper[if o-t is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. Rascal Craals lie west."
+Horned Hedron is north of Achers' Arches. Horned Hedron is in Oyster. Horned Hedron is innie. "[one of]Nothing to see here. It's an ominous nothing to see here, like a flower store or a restaurant that never has customers or even running water. [stopping]There're also some theses sheets tacked here[if o-t is in Horned Hedron]. An ol['] trap[else]. A portal[end if] leads into the Horned Hedron proper[if o-t is in Horned Hedron]. You probably can't just walk in, but all the same, there must be some way to disarm it[end if]. [if walleyes are in lalaland]Collapsed old places[else]Rascal craals[end if] lie west."
 
 check going west when player is in Horned Hedron:
 	if haunter is in lalaland:
