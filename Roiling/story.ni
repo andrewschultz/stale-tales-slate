@@ -5448,7 +5448,7 @@ check scaning location of the player (this is the location scan rule):
 	if location of player is hacks' shack and compiled code is visible: [start presto]
 		say "As you contemplate further how to budge the code, your wave your settler at it.";
 		try scaning compiled code instead;
-	if wzup is visible and wzup is reflexive:
+	if wzup is visible:
 		try scaning wzup instead;
 	if volt maze is visible:
 		try scaning volt maze instead;
@@ -6848,7 +6848,7 @@ Rule for printing a parser error when the latest parser error is the only unders
 	if number of words in the player's command > 1:
 		say "I understood the first word, but you may have thrown on too many words[if number of words in the player's command is 2]. So just '[word number 1 in the player's command]' should work[end if].";
 	else:
-		say "This should not have happened. You wrote in a valid verb, or try, but the game didn't accept it. Sorry about that.";
+		say "You wrote in a valid verb, or try, but the game didn't accept it, or maybe you can use the word in a different place. Sorry about that.";
 	the rule succeeds;
 
 pardons is a truth state that varies.
@@ -6917,7 +6917,7 @@ Econ Cone	"That could lead to ransom manors."
 Upscale Capsule	"You're at the very top. You don't really want to change that without really good motivation."
 Burnt Brunt	"East or west would be an alpinist tailspin ('CHARGE! Eh, crag.') Try north or south, instead." [presto]
 Dirge Ridge	"The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches."
-Austerer Treasure	"The treasure room has no secret passages--so you can only go back east."
+Austerer Treasure	"The treasure room has no secret passages, so you can only go back east."
 Marines Seminar	"The camo-coma fields are just obvious enough to anyone paying attention, for legal reasons. Plus, either you are awake enough to see them, or you get too tired to walk into the center. West is the only way out."
 Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]."
 Lean Lane	"You can only go back west, or you would risk running into a mesh crab chambers or a crab crib full of bric-a-brac." [oyster]
@@ -8771,7 +8771,13 @@ carry out fliptoing:
 					min-up;
 				else if number of supporting stos < 4:
 					min-up;
-			if the-to entry is not in lalaland or the-to entry is satchel:
+			if the-from entry is maze walls:
+				if the-from entry is maze walls:
+					unless l-m is cscanned or l-m is ncscanned:
+						increment the score;
+						increment cur-score of mrlp;
+					two-up; [this is kind of a bad hack--two-up checks the score for increases, hence no min-up in the unless above]
+			else if the-to entry is not in lalaland or the-to entry is satchel: [more than one point here]
 				if the-from entry is boats and raft is reflexed:
 					do nothing;	[a bailout not to add a point if you FART then BOAST]
 				else if the-from entry is coins and the-to entry is s-i:
@@ -9248,11 +9254,11 @@ to poss-d:
 	decrement poss-score of mrlp;
 
 to min-up:
-	d "Adding a min point but not an extra point for this flip.";
+	d "min-up codepath--point likely added in carry out fliptoing rule.";
 	increment min-score of mrlp;
 
 to min-and:
-	d "Adding a point and min point for this flip.";
+	d "min-and codepath -- forcing point and min point adding. Should be used for odd non-flip points.";
 	increment min-score of mrlp;
 	reg-inc;
 
@@ -9535,6 +9541,8 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 	if noun is keys or noun is hogs:
 		now Mount Um-Not is in Phat Path;
 		now Deil's Slide is in Phat Path;
+		now Leo is in Phat Path;
+		now Rand is in Phat Path;
 		now grey gyre is mapped south of Phat Path;
 		now Phat Path is mapped north of grey gyre;
 		if hawt thaw is in Saps' Pass, now hawt thaw is in Phat Path;
@@ -14378,7 +14386,10 @@ every turn when mrlp is presto and Rand is eager (this is the Leo-Rand lackey ru
 	otherwise:
 		if location of player is adjacent to location of Leo:
 			if Leo is not dismissed:
-				say "Leo and Rand lug after[one of], grateful[or], no fear glut[or], no flat urge[stopping].";
+				if location of player is saps' pass and location of hogs is saps' pass:
+					say "Leo and Rand follow, but they're not quite as big as the hogs. You may have to be sneaky, here.";
+				else:
+					say "Leo and Rand lug after[one of], grateful[or], no fear glut[or], no flat urge[stopping].";
 				move Leo to location of player;
 				move Rand to location of player;
 
@@ -14478,7 +14489,13 @@ to decide whether (int - a thing) is interjective: [this is for hinting in prest
 
 book Grey Gyre
 
-Grey Gyre is a room in Presto. "It's windy here, but nothing dangerous, and the ground is just an unappetizing grey all around. It's calmer but burnt to the south, and you see a way east, too[if hump is not visible], as well as west over the hump you cleared[end if][if volt maze is in Grey Gyre]. You see a path to what looks like a maze to the north--a maze entry zany meter is nearby, too[else if ether is visible]. The maze entrance north has been replaced by ether[otherwise]. With the ether cleared, you can go north[end if][if hump is in gyre].[paragraph break]A hump to the west looks much more intimidating than it should be[end if]."
+Grey Gyre is a room in Presto. "It's windy here, but nothing dangerous, and the ground is just an unappetizing grey all around. It's calmer but burnt to the south, and you see a way east, too[if hump is not visible], as well as west over the hump you cleared[end if][if volt maze is in Grey Gyre]. You see a path to what looks like a maze to the north--a maze entry zany meter is nearby, too. [else if ether is visible]The maze entrance north has been replaced by ether[otherwise][ether-check]ou can go north[end if][if hump is in gyre].[paragraph break]A hump to the west looks much more intimidating than it should be[end if]."
+
+to say ether-check:
+	if saps' pass is visited:
+		say "With the ether cleared, y";
+	else:
+		say "Y"
 
 the ether is vanishing scenery. "It's trickier to see through than moist-o-mist. [if ether-try is true]Those three bums who did the business on you must be hiding, still[else]Anyone or anything could be waiting[end if]."
 
@@ -14562,13 +14579,12 @@ after fliptoing n-t-air:
 	continue the action;
 
 after fliptoing maze walls:
-	min-and;
+	min-up;
 	now maze-points is 2;
 	unless l-m is cscanned or l-m is ncscanned:
-		min-and;
+		min-up;
 		increment maze-points;
 	shuffle-nowt-town;
-	increment the score;
 	continue the action;
 
 to shuffle-nowt-town:
@@ -15121,7 +15137,7 @@ understand "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're o
 
 understand "whassup" as a mistake ("You probably want to TALK to people instead. Well, most of the time.") when wzup is not visible.
 
-the wzup is privately-named scenery in Dirge Ridge. description of wzup is "bug".
+the wzup is privately-named vanishing scenery in Dirge Ridge. description of wzup is "bug".
 
 a-text of wzup is "RRYRRYR". b-text of wzup is "PRYRRYR". parse-text of wzup is "w[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -15131,7 +15147,6 @@ check fliptoing wzup:
 	if Leo is eager:
 		say "You've already got their attention. You wouldn't want to get caught in an endless cycle of whassups. You'd probably need to drink a lot of cheap beer to recover from that." instead;
 	if Leo is washed up and Rand is washed up:
-		d "They're ready to be pals!";
 		now Leo is eager;
 		now Rand is eager;
 		continue the action;
@@ -15244,15 +15259,19 @@ a-text of hump is "YRRR". b-text of hump is "YRRR". parse-text of hump is "u[sp]
 
 book Marines Seminar
 
-Marines Seminar is in presto. Marines Seminar is east of Grey Gyre. "The seminar must be on break now, because [if popgun is in seminar]nothing besides a popgun[else]not much[end if] remains. Coma-Camo forcefields surround you evvery way except back west. You can't see them very well, but they're nore there just to deter you."
+Marines Seminar is in presto. Marines Seminar is east of Grey Gyre. "The seminar must be on break now, because [if popgun is in seminar]nothing besides a popgun[else]not much[end if] remains. Camo-Coma forcefields surround you every way except back west. You can't see them very well, but then, you'll feel them if you run into them."
 
 after printing the locale description for seminar when seminar is unvisited:
 	say "You hear a loud voice yell 'REISMAN! Snare [']im!' / 'Mean, sir!' Uh oh. That plebe might be in trouble. But it's nice to know his name. You resolve to do what you can to give him amnesty, when you can, once Elvira's out of the way.";
 	continue the action;
 
-the camo-coma force field are scenery in seminar. they are undesc.
+the camo coma force fields are plural-named scenery in seminar. they are undesc.
 
-instead of doing something with camo-coma:
+understand "camo-coma" and "force field" and "field" as camo coma force fields.
+
+printed name of camo coma force fields is "camo-coma force fields".
+
+instead of doing something with camo coma:
 	say "You can't do anything with the forcefields. The controls are probably far from here."
 
 The PG-on-up popgun is a container in Marines Seminar.
@@ -15401,7 +15420,7 @@ check scaning smart people sign:
 
 understand "alter" as a mistake ("Vandalism! For shame!") when smart people sign is visible.
 
-the lawl wall is vanishing scenery in Phat Path.
+the lawl wall is vanishing scenery in Saps' Pass.
 
 check taking lawl wall:
 	say "You'll need to take the keys, somehow." instead;
@@ -15418,9 +15437,8 @@ a-text of keys is "RORY". b-text of keys is "RORY". parse-text of keys is "x[sp]
 the hogs are reflexive plural-named people in Saps' Pass. description is "They're as big as Leo and Rand but meaner. Plus there are three of them. They look a little smarter, too--but maybe you can use reverse psychology to get under their skin or sneak those keys on the wall.". "Hogs are stretched against the lawl wall, in no hurry to try to get by. They look like tough customers, too tough for the sort of words that got you here. OR ARE THEY."
 
 after printing the locale description for Saps' Pass when Saps' Pass is unvisited:
-	say "Shouldn't be much of a problem to get the keys and...oh no! you hear...[wfak][paragraph break]";
+	say "Shouldn't be much of a problem to get the keys and...oh no! you hear...[wfak][line break]";
 	say "A 'PSS!' Suddenly three hogs, all Rand and Leo's size, block your way. One just up and takes your popgun, smashes it, laughs, and even rips off your star and crumples before going to guard the keys, the big jerk. What to do?";
-	now hogs are in Phat Path;
 	now decorative star is in lalaland;
 	now popgun is in lalaland;
 
@@ -16360,7 +16378,8 @@ check fliptoing scratch paper:
 		say "Good idea, but tough to program without a keyboard.";
 		preef scratch paper instead;
 	if keyboard is not on slab:
-		say "You probably want to put the keyboard on the slab first." instead;
+		say "Good idea, but first, you probably want to put the keyboard on the slab.";
+		preef scratch paper instead;
 	if caps lock is not part of the keyboard:
 		say "[one of]You try but get EXCESSIVE UPPERCASE ERROR. Even converting the code in all upper case, you'd also have to refer to lower-case include files and so forth. You try other work-arounds, like the shift key, but the computer holds all the chips, somehow. (Sorry.) You must be close to a successful compile[or]You need to get rid of that uppercase to successfully compile your code[stopping].";
 		preef scratch paper instead;
@@ -16568,7 +16587,7 @@ the maze walls are a reflexive plural-named uncluing useless backdrop. the walls
 
 n-t-air is a reflexive plural-named privately-named backdrop. description is "[bug-report]". n-t-air is in grey gyre, r00, r01, r02, r03, r04, r10, r11, r12, r13, r14, nowt town, r21, r22, r23, Unwary Runway, r30, r31, r32, r33, r34, r40, r41, r42, r43, and r44.
 
-a-text of walls is "RYRYRRYR". b-text of walls is "RYRYRRYR". parse-text of walls is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
+a-text of maze walls is "RYRYRRYR". b-text of maze walls is "RYRYRRYR". parse-text of maze walls is "x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
 check fliptoing maze walls:
 	if player is not in Grey Gyre:
@@ -23350,7 +23369,7 @@ instead of taking inventory:
 	list the contents of the player, with newlines, indented, including contents, with extra indentation, listing marked items only;
 	if number of worn things > 0:
 		say "You are also wearing [a list of worn things].";
-	if location of player is location of skid:
+	if location of player is location of skid and bored yak is not in lalaland:
 		say "[line break]There's also that skid you can push around[if number of things on skid > 0]. It holds [the list of things on skid][end if].";
 	if mrlp is otters and power-back is false:
 		say "[line break]You also DON'T have your full powers. You'll need to fix that before hitting the bulwark to the west.";
@@ -26393,7 +26412,7 @@ wzup	"[wash-up]"	--	"WHASSUP"
 vile veil	"The vile veil is just a cheapo to explain why you can only go back north in Dirge Ridge."
 popgun	"[if dart is in popgun]The popgun's locked and loaded.[else if boing is reflexed]You can just put the dart in the popgun.[else]The popgun is broken. More precisely, its boing mechanism is broken.[end if]"
 boing mechanism	"[one of]So, the mechanism doesn't go BOING.[plus][or]A eureka moment could change the boing mechanism's brokenness.[plus][or]Or, if you notice the mechanism's serial number...[plus][or]BINGO.[minus][cycling]"	--	"BINGO"
-camo-coma	"The camo-coma is just a barrier to prevent you going any way but west from the seminar."
+camo coma	"The camo-coma is just a barrier to prevent you going any way but west from the seminar."
 smart people sign	"[one of]The sign indicates Rand and Leo don't belong in the shack. But if you've tried going north, you know they'll want to try[if rebuked is true], and they've been persistent, so maybe you need another way to say things[end if].[plus][or]It's time to [if rebuked is true]find another way to [end if]say good-bye to Rand and Leo, but you can't be all 'Obey, Dog.'[plus][or]Maybe the sign can help you say [if rebuked is true]one more thing[else]what[end if] you need to, to ditch Rand and Leo?[plus][or][sl-t-l].[minus][cycling]"	--	"[if entry 1 of byebyes is log ons]SO LONG[else if entry 1 of byebyes is alert]LATER[else]TOUGH[end if]"
 alert letters	"[one of]The sign indicates you may want to get rid of Rand and Leo, who are not very smart.[plus][or]Say LATER.[minus][cycling]"
 log ons letters	"[one of]The sign indicates you may want to get rid of Rand and Leo, who are not very smart.[plus][or]Say SO LONG.[minus][cycling]"

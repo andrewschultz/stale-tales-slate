@@ -333,6 +333,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "force"	333002970	marines seminar	--	--	"[ca-co]."
 "forcefield"	607159749	marines seminar	--	--	"[ca-co]."
 "field"	274156779	marines seminar	--	--	"[ca-co]."
+"forcefields"	703433715	marines seminar	--	--	"[ca-co]."
+"fields"	370430745	marines seminar	--	--	"[ca-co]."
 "serial"	410398381	--	popgun	--	"[is-boing]."
 "number"	469637285	--	popgun	--	"[is-boing]."
 "stump"	450030903	--	stump	--	"[if star is reflexed]The stump just sits there, stumpy[else]The stump doesn't move, but the star seems to rattle a bit[end if]."
