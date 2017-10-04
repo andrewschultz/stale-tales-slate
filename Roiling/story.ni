@@ -150,7 +150,7 @@ Towers is a region. regtab of Towers is table of towers nudges. regana of towers
 1 for giving Ed the flowerpot NON-ANAGRAM
 3 for dying crocus/serpent/ed yerg]
 
-Otters is an unsolved region. regtab of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 29. min-score of otters is 23. [2 for the extra conjunction pair, 1 for dissing Elmer/Merle, 2 for all animals in both N and S animal regions, 1 for cinders]
+Otters is an unsolved region. regtab of Otters is table of otters nudges. regana of Otters is table of otters anagrams. max-score of otters is 30. min-score of otters is 24. [2 for the extra conjunction pair, 1 for dissing Elmer/Merle, 2 for all animals in both N and S animal regions, 1 for cinders]
 
 Others is an unsolved region. regtab of Others is table of others nudges. regana of Others is table of others anagrams. max-score of Others is 42. min-score of others is 25. [only need 20 fruits, compass, icons, sonic, passport x 2. Best score is # of fruits + compass + icons/sonic + passport x 2 +1 for not using arugula. FRUI checks what fruit is where.]
 
@@ -6941,6 +6941,7 @@ Obscurest Subsector	"If you could go any way other than back west, the subsector
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
 Alcoves	"You sway to the side, not ready to face the menace to the west." [otters]
 Loop Pool	"The pool is wide and long. You can only go back south."
+Perverse Preserve	"[one of]You try going that way, but your mind gets foggy. You may not be able to see it, but you know the tell-tale signs of a DISRUPT-STUPID'R force field. Looks like you can only go back north[or]The disrupt-stupid'r field isn't worth risking[stopping][dsknow]."
 Reclusion Inclosure	"Even without the raw-bulk bulwark that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
 Rustic Citrus	"[unless player has compass]You try to go north by not going north, but everywhere's a border, arbored[else if swell wells are unvisited]That's not north, according to your compass[else]You can only go back north to the wells[end if]." [others]
 filed field	"[if b-w are visible and noun is west]The barriers west block you. Maybe you can get rid of them.[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east.[end if]"
@@ -8700,10 +8701,11 @@ check fliptoing (this is the portal palm and reflexive flip rule):
 			try entering noun instead;
 		if noun is reflexive or noun is vanishing:
 			continue the action;
-		choose row with the-to of noun in regana of mrlp;
-		if the-from entry is reflexed:
-			print-the-from the-from entry;
-			the rule succeeds;
+		if noun is a the-to in regana of mrlp:
+			choose row with the-to of noun in regana of mrlp;
+			if the-from entry is reflexed:
+				print-the-from the-from entry;
+				the rule succeeds;
 		try examining noun instead;
 	if noun is t-b or noun is tables or noun is palm or noun is giant pin or noun is niche:
 		if Gunter is not in lalaland:
@@ -9542,7 +9544,7 @@ after fliptoing raptor:
 	now hydra is in lalaland;
 	now Merle is in lalaland;
 	now Elmer is in lalaland;
-	if Merle is flippable:
+	if Merle is reflexed:
 		poss-d;
 	reg-inc;
 	continue the action;
@@ -22783,7 +22785,7 @@ the medals are a reflexive wearable plural-named thing.
 understand "iq/lucky medal/medals" and "iq/lucky" as medals.
 
 after printing the name of medals while taking inventory:
-	say " ([if nounsolve < 3 and adjsolve < 3]very tarnished[else if nounsolve >= 3 and adjsolve >= 3]polished[else]somewhat tarnished[end if])";
+	say " ([if nounsolve + adjsolve is 0]extremely tarnished[else if nounsolve + adjsolve < 2]very tarnished[else if nounsolve < 3 and adjsolve < 3]seriously tarnished[else if nounsolve >= 3 and adjsolve >= 3]polished[else]somewhat tarnished[end if])";
 
 description of the medals is "They're roped together. [medal-summary]."
 
@@ -23531,15 +23533,30 @@ a-text of ram3 is "RYYRRYRRRO". b-text of ram3 is "RYYRRYRRRO". parse-text of ra
 
 book perverse preserve
 
+Perverse Preserve is south of Rote Moan Anteroom. Perverse Preserve is a room in Otters. "[pre-desc]"
+
 to say pre-desc:
 	if number of animals in perverse preserve is 1:
-		say "Weird. This fenced off area seems like a living area, but you don't see any animals. You think. And no pea to change to an ape.[no line break]";
+		say "[if know-disrupt is true]The DISRUPT-R-STUPIDR blocks you going anywhere except back north. Y[else]This clearing seems unbounded, but y[end if]ou don't see any animals. You think. And no pea to change to an ape.[no line break]";
 		continue the action;
 	else:
-		say "You rescued [if nounsolve is 4]all the[else if nounsolve is 1]one of the[else]a few[end if] animals here, but it's still eerie.[no line break]";
+		say "You rescued [if nounsolve is 4]all the[else if nounsolve is 1]one of the[else]a few[end if] animals here, but it's still eerie[if know-disrupt is true], even without the DISRUPT-R-STUPIDR blocking every way except back north[else]. You can go back north[end if].[no line break]";
 		continue the action;
 
-Perverse Preserve is south of Rote Moan Anteroom. Perverse Preserve is a room in Otters. "[pre-desc]"
+chapter disrupt r stupidr
+
+to say dsknow:
+	now know-disrupt is true;
+
+know-disrupt is a truth state that varies.
+
+the disrupt r stupidr is scenery in Perverse Preserve. "You can't see it, but you've heard about the effects of prolonged exposure."
+
+instead of doing something with disrupt r stupidr:
+	if action is procedural, continue the action;
+	say "You can't do anything about the DISRUPT R STUPIDR field. But you don't need to go beyond it."
+
+chapter corona and racoon
 
 A corona is a thing. the corona is fixed in place. description is "It's almost like a pair of dark scavenger's eyes. You can't locate its original light source--you try to cut it off, but you can't.". "A corona of light scurries about on the floor. It may have an extra c around its edge."
 
@@ -23551,6 +23568,8 @@ a-l-t is part of the racoon. a-l-t is undesc and amusing. printed name of a-l-t 
 
 instead of doing something with a-l-t:
 	say "The racoon's tail is beautiful and eerie, but useless as far as you can tell, so it's not worth bothering with."
+
+chapter thrones and hornets
 
 the thrones are plural-named things. the thrones are fixed in place.
 
@@ -23667,13 +23686,15 @@ every turn when parrot is visible (this is the parrot-chat rule):
 	if location of player is alcoves:
 		say "The parrot hides out of sight of Elmer and Merle, eyeing them fearfully.";
 	else if location of player is wire deck:
-		if owl is in lalaland and number of visible reflexive animals is 0:
+		let vra be number of visible reflexive animals;
+		if owl is in lalaland and vra is 0:
 			say "'Awwk! Happy animals! They might do something for you some day, adventurer!'";
 			continue the action;
-		say "The parrot notes the [list of reflexive animals] [if number of visible reflexive animals > 1]don't[else]doesn't[end if] look happy.";
+		if vra > 0:
+			say "The parrot notes the [list of reflexive animals] [if number of visible reflexive animals > 1]don't[else]doesn't[end if] look happy.";
 	else if location of player is wire deck:
-		if number of visible animals is 6:
-			say "The parrot flies around all the animals.";
+		if number of visible animals >= 5:
+			say "The parrot flies happily among all the animals.";
 		else:
 			say "The parrot pokes at the [list of nonreflexive things in preserve][if number of nonreflexive things in preserve > 1] in turn[end if].";
 
@@ -27625,6 +27646,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if bogus-plains is in Lapsin' Plains:
 			say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 	else if myreg is Towers:
+		let xxx be Ray Eck;
 		if number of guardians not in lalaland > 0:
 			repeat with gua running through guardians not in lalaland:
 				if player is male:
@@ -28060,13 +28082,13 @@ carry out a5ing:
 	now player has pedanto-notepad;
 	move player to Strip of Profits;
 	now suppress-score is true;
-	if store k is in Strip of Profits, try fliptoing store k;
-	if store n is in Strip of Profits, try fliptoing store n;
-	if store p is in Strip of Profits, try fliptoing store p;
-	if store u is in Strip of Profits, try fliptoing store u;
-	if store v is in Strip of Profits, try fliptoing store v;
-	if store w is in Strip of Profits, try fliptoing store w;
-	if store y is in Strip of Profits, try fliptoing store y;
+	if store k is in Strip of Profits, try fliptoing tokers;
+	if store n is in Strip of Profits, try fliptoing nestor;
+	if store p is in Strip of Profits, try fliptoing e-s;
+	if store u is in Strip of Profits, try fliptoing routes-x;
+	if store v is in Strip of Profits, try fliptoing troves-x;
+	if store w is in Strip of Profits, try fliptoing towers-x;
+	if store y is in Strip of Profits, try fliptoing oyster-x;
 	try fliptoing otters-x;
 	now e-s is in lalaland;
 	now routes-x is in lalaland;
