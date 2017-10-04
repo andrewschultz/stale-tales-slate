@@ -19,7 +19,7 @@ table of megachatter (continued) [this is organized by region then by alphabet, 
 mytab	eturn	curidx	maxidx	go-ahead	whichreg	descr	prefix	suffix	lasties	maxbeforepause	done-once	init-order	table-size	reps
 table of random books	false	0	30	read-books rule	Means Manse	"All the books in your bookshelf"	"[i]"	"[r]"	"your own aborted autobiography. You're embarrassed by what's there and how little is there. It was buried at the back.[paragraph break]Whew, that's everything. The only thing less exciting than re-reading all the titles would be to stare at a computer screen for a few hours."	--	--	--	--	1 [p]
 table of ad slogans	true	0	30	blurby rule	Means Manse	"All the ads in the Dope Op-Ed"	--	""	"HANKER! HARKEN! And with that general ad, it's back to the start."
-table of mob chants	false	0	30	mob-chanting rule	Means Manse	"Mob chants (LISTEN post-Gunter in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"They finish fishin[']."
+table of mob chants	false	0	30	mob-chanting rule	Means Manse	"Mob chants (LISTEN post-Gunter in manor)"	"[one of]Shouty youths. Long-[a-word] slogans. [or]Bam-o! A mob! [stopping]"	"[pre-lb]"	"'Accursed cue-cards!' you hear. They're silent a bit, probably getting ready to re-start."
 table of idiotic lecture points	true	0	15	lecture-point rule	stores	"Cruelest Lectures advice[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	" [ted-die]"	"The lecturer flips back to the start of his keystone keynotes, resuming his ol['] mongo monolog.[pre-brk]"	20
 table of overdone movies	true	0	15	name-movie rule	stores	"Cruelest Lectures movies[if tokers are off-stage or nestor is off-stage] (STORE N/STORE K mini-puzzle)[else if lectures is unvisited] (way high highway in Strip of Profits)[end if]"	"The lecturer "	""	"The lecturer reminds the crowd [i]Dosing Doings[r] remains the universal classic.[pre-brk]"	20
 table of sicko movies	false	0	50	movie-over-ad rule	stores	"Store C videos (parental advisory)"	"You peruse the movies: "	""	--	--	false	0	0	5
@@ -8771,7 +8771,6 @@ blurb
 "'And shout thousand daunts, ho!'"
 "'Astoundingly sludgy nation!'"
 "'BS! Low blows!'"
-"The chants pause. 'Accursed cue-cards!'" [x]
 "'Cur, to court!'"
 "'Dictator! Acrid tot!'"
 "'Diluted luddite!'"
@@ -39471,7 +39470,7 @@ blurb
 "being ruthless like Levelin['] Neville" [x]
 "being sweatier but cleaner than Grody Gordy" [x]
 "being team players like Nobler LeBron" [x]
-"craving the big time big city unlike Ozark Ozkar."
+"craving the big time big city unlike Ozark Ozkar"
 "deserving a sterling write-up from Plyin['] Pliny"
 "doing far better than Dreg Gerd" [x]
 "emulating Clasher Charles" [x]

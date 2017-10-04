@@ -467,7 +467,7 @@ use MAX_VERBSPACE of 10240.
 
 use MAX_ACTIONS of 635.
 
-use MAX_VERBS of 660.
+use MAX_VERBS of 650.
 
 Use MAX_INDIV_PROP_TABLE_SIZE of 100000.
 
@@ -483,7 +483,7 @@ section compiler non-syntax section - not for release
 
 [there shouldn't be much difference but it's worth checking just because]
 
-use MAX_VERBS of 650.
+use MAX_VERBS of 660.
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -7033,7 +7033,7 @@ instead of attacking: [this takes responses for general types. The table below i
 		choose row with target of noun in table of attack-specific;
 		say "[nohit entry][line break]" instead;
 	if player has lance:
-		say "Wrong enemy for the lance." instead;
+		say "[if noun is a person]Wrong enemy for the lance[else]." instead;
 	if noun is a guardian:
 		say "You need to see into [the noun]'s nature instead[if player has dagger]--that dagger would just make things murder[end if]." instead;
 	say "[randbla][line break]" instead;
@@ -7196,6 +7196,11 @@ chapter dropping
 instead of dropping a quest-item: say "You need to keep it--it's a reagent for Brother Horbert."
 
 [?? dropping multiple items]
+
+drop-try is a truth state that varies.
+
+before dropping something:
+	now drop-try is true;
 
 check dropping something:
 	if player is in treasure and hoop is in treasure:
@@ -7734,6 +7739,8 @@ before listening (this is the you can hear stuff some places rule):
 		say "Aunt Tuna is humming something tuneless as she goes about her business." instead;
 	if location of player is Posh Hops Shop:
 		say "[if tunes are reflexed]Silence. Awkward silence. An occasional cough.[otherwise]The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too.[end if]" instead;
+	if player is in den loft and dialer is in den loft:
+		say "[if pins are in den loft]The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it[else]You hear a hum from the dialer[end if]." instead;
 	if the-b is visible: [routes]
 		say "[one of]You hear people crying 'The Bean has landed!'[or]'If the bean was a hat, our hero would be a HAT-BEEN.' You see red at the pun.[or]'Ban THEE then, [a-b]!' cries someone.[or]'How do we pull him/her/it without?' / 'Uh, tow it?'[stopping]" instead;
 	if player is in cleric circle:
@@ -9029,9 +9036,9 @@ haunter	haunter	false	462435186	--	"assuage"	"assuage"	"'How sad, shadow,' you e
 lever	lever	false	501914680	--	"revel"	"revel"	"Yeah. Why not feel good about yourself before figuring everything out? You know, run up the score a bit. You've earned it."
 gleaner	gleaner	false	498444888	--	"enlarge"	"enlarge"	"Rustle. Result: luster! After some intercut tincture, the gleaner is bigger and clearer."
 yapper	yapper	false	500608900	--	"prepay"	"prepay" or "prepay the/ papery/ yapper"	"'Oh! Prepaying is totally different from a bribe. I'm sure I can prepay a judge myself to verify that.' He motions you to slip him the gleaner behind your back. Then he goes off to find such a judge, presumably.[paragraph break]Behind the yapper is a cool looking lever. You're not sure it does anything, but man, it's neat to see!"
-pins	pins	false	291640279	--	"spin"	"spin" or "spin pins"	"You fiddle with the pins, and bang! Something works."[??]
+pins	pins	false	291640279	--	"spin"	"spin" or "spin pins"	"You fiddle with the pins, and click! There you go. The pins retract, and the dialer begins to hum again."[??]
 d2	d2	false	335153504	Strip of Profits	"redial"	"redial"	"Beep boop, etc. A charge zaps from the dialer. Then, you hear Elvira screeching, 'WHAT?! HOW DARE YOU! I AM SENDING A CHARGE THROUGH THE LINE YOU WON'T BELIEVE!' A few sirens blare. 'Relays slayer activated.' booms a voice. A noise like an enraged angered grenade. An arson sonar. 'Intruder! Run!' / 'Tired...' you think. Luckily, you find an evac-cave that lets you out safely. You decide to beat feet to the Anger Range. Between Aunt Tuna, the sardine, and even the reluctant trolls--a story.[paragraph break]Casper Spacer himself shakes your hand. 'No hunter! On the run! None hurt!' He had gotten enough gritty writing from when the Horned Hedron still exerted its hold. Now he has a story about--well, someone like you, with fewer faults, but more a tragic hero. He calls for his adventurer friend Red Gil. 'Get this hero[if player is female]ine[end if] a glider girdle!' You learn it easily. Casper is even more impressed. You fly back to the Strip of Profits."
-dialer	dialer	false	335153504	--	"derail"	"derail"	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!' Then a pause. Then Elvira's voice.[paragraph break]'HEY! Oh! It's the boys from the horned hedron! This IS just one of your pranks, isn't it?' her voice turns less saccharine. 'You wouldn't do that again, would you? Well, I could send you more...supplies...now, I'll pretend this didn't happen!' As her voice crackles off, pins spring up to shield the dialer from further operation.";
+dialer	dialer	false	335153504	--	"derail"	"derail"	"You hear a buzzer re-buzz. 'Goal: Vet Voltage!' Then a pause. Then Elvira's voice.[paragraph break]'HEY! Oh! It's the boys from the horned hedron! This IS just one of your pranks, isn't it?' her voice turns less saccharine. 'You wouldn't do that again, would you? Well, I could send you more...supplies...now, I'll pretend this didn't happen!' As her voice crackles off, pins spring up to shield the dialer from further operation, and the dialer quits humming. It doesn't look broken, but you guess you'll need to do something about those pins.";
 
 table of towers anagrams
 the-from	the-to	taked	hashkey	roomjump	right-word	right-cmd (topic)	the-msg
@@ -11468,6 +11475,10 @@ instead of opening the pedanto-notepad:
 
 instead of searching the pedanto-notepad:
 	say "You can just type PAD to get all the subjects, or PAD (SUBJECT) for a specific one."
+
+after printing the name of the pedanto-notepad while taking inventory:
+	if pedanto-notepad is examined:
+		say "(PAD to use[if number of prerfigured things > 0] or PAD FLIPS/PF for solutions you figured in advance[end if])";
 
 instead of dropping the pedanto-notepad:
 	say "One problem with owning a pedanto-notepad is that you are wracked with silly reasons to keep it, even if you have the big-picture stuff covered. Sorry about that.";
@@ -14491,7 +14502,7 @@ to decide whether (int - a thing) is interjective: [this is for hinting in prest
 
 book Grey Gyre
 
-Grey Gyre is a room in Presto. "It's windy here, but nothing dangerous, and the ground is just an unappetizing grey all around. It's calmer but burnt to the south, and you see a way east, too[if hump is not visible], as well as west over the hump you cleared[end if][if volt maze is in Grey Gyre]. You see a path to what looks like a maze to the north--a maze entry zany meter is nearby, too. [else if ether is visible]The maze entrance north has been replaced by ether[otherwise][ether-check]ou can go north[end if][if hump is in gyre].[paragraph break]A hump to the west looks much more intimidating than it should be[end if]."
+Grey Gyre is a room in Presto. "It's windy here, but nothing dangerous, and the place is just an unappetizing grey all around. It's calmer but burnt to the south, and you see a way east, too[if hump is not visible], as well as west over the hump you cleared[end if][if volt maze is in Grey Gyre]. You see a path to what looks like a maze to the north--a maze entry zany meter is nearby, too. [else if ether is visible]The maze entrance north has been replaced by ether[otherwise][ether-check]ou can go north[end if][if hump is in gyre].[paragraph break]A hump to the west looks much more intimidating than it should be[end if]."
 
 to say ether-check:
 	if saps' pass is visited:
@@ -18731,7 +18742,7 @@ understand "utah" as a mistake ("The hut only looks like Utah. However, I bet Ad
 
 understand "sweat [text]" as a mistake ("Don't sweat the extra words. Just sweat.") when waste is visible
 
-the prod is a thing. description is "It's a corroded decor-rod--nah, just a prod. But it's rather thick and not uniformly smooth. It reminds you of one of those umbrellas you can't open up until you figure how by accident. One of those deals that are both really easy and not easy at all at the same time. You might even have to do something you discounted much earlier."
+the prod is a thing. description is "It's a corroded decor-rod--nah, just a prod. But it's rather thick and not uniformly smooth. It reminds you of one of those umbrellas you can't open up until you figure how by accident. One of those deals that are both really easy and not easy at all at the same time.[paragraph break]So you'll probably have to do something that'll feel obvious once you did it[if drop-try is true], something I already said wasn't usually useful[end if]."
 
 does the player mean dropping the prod: it is very likely.
 
@@ -18973,7 +18984,7 @@ carry out burying:
 check fliptoing thin hint:
 	if player does not have rigged digger:
 		if player has prod:
-			say "Your prod from a hut should be able to bury stuff if you tinker right. Jar it the right way." instead;
+			say "Your prod from the Shadier Airshed should be able to bury stuff if you tinker right. Jar it the right way." instead;
 		say "Nothing to bury anything with. Well, there's your fingers, but that'd take too long[one of][or][if Lapsin' Plains are unvisited]. Maybe you can explore north of Anger Range to find something[else if Shadier Airshed is unvisited]. Maybe there's something behind the span pans[else]. Maybe you missed something in a hut[end if][stopping]." instead;
 
 book Horned Hedron
@@ -19768,16 +19779,16 @@ check examining spec-o-scope:
 
 description of spec-o-scope is "You look into the scope and see:[paragraph break][fixed letter spacing]
 [line break]  !       *
-[line break]  [bloorg of admirer]~~~~~~
-[line break]+[bloorg of ingrates].[bloorg of wait-seer].[bloorg of atheists].~ +
-[line break]  [bloorg of iPrune] [bloorg of grailman] [if player is male][bloorg of hostile-is-he lot][else][bloorg of lois the hostile][end if]~
-[line break]  .[bloorg of butlers].[bloorg of reed's ale].~
-[line break]  [bloorg of muscly] [bloorg of man covered in inapt paint] [bloorg of ego drains]~
-[line break]![bloorg of pirates].[bloorg of diners].[bloorg of arid den].[bloorg of bonker]!
-[line break]  [bloorg of Ray Eck]   [bloorg of natives]
+[line break]  [xdash of admirer]~~~~~~
+[line break]+[xdash of ingrates].[xdash of wait-seer].[xdash of atheists].~ +
+[line break]  [xdash of iPrune] [xdash of grailman] [if player is male][xdash of hostile-is-he lot][else][xdash of lois the hostile][end if]~
+[line break]  .[xdash of butlers].[if player is male][xdash of lars eede][else][xdash of else erde].~
+[line break]  [xdash of muscly] [xdash of man covered in inapt paint] [xdash of ego drains]~
+[line break]![xdash of pirates].[xdash of diners].[xdash of arid den].[xdash of bonker]!
+[line break]  [xdash of Ray Eck]   [xdash of natives]
 [line break]  !   +[variable letter spacing][paragraph break]| = passage, x = no passage, . = location, ! = important, + = treasure."
 
-to say bloorg of (gg - a guardian):
+to say xdash of (gg - a guardian):
 	if gg is in lalaland:
 		say "[if guadir of gg is west or guadir of gg is east]-[else]|[end if]";
 	else:
@@ -21860,6 +21871,20 @@ to reposition-guardians:
 				now guy entry is in location of player;
 				if there is an aux entry:
 					now aux entry is in location of player;
+
+chapter warwaring - not for release
+
+warwaring is an action applying to nothing.
+
+understand the command "warwar" as something new.
+
+understand "warwar" as warwaring when player is in Trefoil.
+
+carry out warwaring:
+	repeat with Q running through not leaderly warriors in Trefoil:
+		try fliptoing Q;
+	try fliptoing Rodney;
+	the rule succeeds;
 
 chapter warriors
 
@@ -29500,12 +29525,8 @@ understand the command "tall" as something new.
 understand "tall" as talling.
 
 carry out talling:
-	if take-it is false:
-		say "Now you can take all the things.";
-		now take-it is true;
-	else:
-		say "Now you can't take all the things.";
-		now take-it is false;
+	say "Now you can[if take-it is true]'t[end if] take all the things.";
+	now take-it is whether or not take-it is false;
 	the rule succeeds;
 
 take-it is a truth state that varies.
@@ -29527,16 +29548,16 @@ The exclude fixed in place things from take all rule is not listed in the for de
 The exclude people from take all rule is not listed in the for deciding whether all includes rulebook.
 
 Rule for deciding whether all includes scenery:
-	if take-it is true, rule succeeds;
-	the rule fails;
+	if take-it is true, it does; [?? the rule fails]
+	it does not;
 
 Rule for deciding whether all includes people while taking:
-	if take-it is true, rule succeeds;
-	the rule fails;
+	if take-it is true, it does;
+	it does not;
 
 Rule for deciding whether all includes fixed in place things while taking:
-	if take-it is true, rule succeeds;
-	the rule fails;
+	if take-it is true, yes;
+	it does not;
 
 chapter rfxing
 
