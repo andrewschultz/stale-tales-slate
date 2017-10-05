@@ -3327,7 +3327,7 @@ the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey
 store b	sorbet	"sorbet"	--	"The store collapses into a greyish sorbet which is surprisingly tasteful. So tasteful, you eat it all at once and throw away the cup it came in. In a trash can behind one of the stores you can't change. Which? It's not worth remembering."	false	505285378	[start trips anagrams]
 store f	forest-x	"forest"	"store f"	"The greens and browns of Store F coagulate and pull apart into an actual forest."	false	513381369
 store i	sortie-x	"sortie"	"store i"	"The store rumbles, destroying the portraits of famous Tories (enjoy this, if you wish) and revealing the small sortie down[trap-check]. A stairway down remains, but that's about it."	false	531859319
-store m	metros-x	"metros"	"store m"	"The store rumbles, with the collections of small-scale cities disappearing. You see an escalator leading--well, somewhere populated."	false	550941626
+store m	metros-x	"metros/metro"	"store m"	"The store rumbles, with the collections of small-scale cities disappearing. You see an escalator leading--well, somewhere populated."	false	550941626
 store r	r-p	"resort"	"store r"	"Store R rumbles and reforms into something far posher. A huge resort! 'I know what you're looking at!' calls some random well-wisher. 'The Means Manse! You've earned it! For defeating Red Bull Burdell!'[paragraph break]Before you reply you haven't, he's already run behind store G, yelling 'Go! Rest!'"	false	572190276
 cabinet	nice bat	"nice bat" or "be actin"	"cabinet"	"The cabinet seems to expand like an amoeba, then, POP! It becomes a rather large bat, which jumps up and down excitedly. It's clearly grateful it has become active, alive--more than just something to store things in."	false	384428789	[end trips strip anagrams]
 
@@ -3394,14 +3394,14 @@ the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey
 tiles	teleporter	"islet"	"tiles"	"The tiles crumble and shift around and spread across the floor of the altars! The stile blossoms into a tree. The ground turns softer under you"	false	425996778	--	false	Isle
 rock	cork	"cork"	"rock"	"The rock grows a few holes and immediately becomes lighter. You can probably pick it up easily now. You do."	true	231615143
 swing	wings	"wings"	"swing"	"The old swing's ropes defray and the seat somehow transmogrifies. You see a pair of wings. They don't look like they'll last too long, but they're better than nothing. You take them."	true	350708795
-sprig	grips	"grips"	"sprig"	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
-spore	ropes	"ropes"	"spore"	"The spore grows more quickly than you could imagine, into a couple of long ropes tied together. You wind one around your waist[tool-clue]."	true	465222414
+sprig	grips	"grips/grip"	"sprig"	"The fragile sprig pops into a pair of suction grips, which you take[tool-clue]."	true	340656276
+spore	ropes	"ropes/rope"	"spore"	"The spore grows more quickly than you could imagine, into a couple of long ropes tied together. You wind one around your waist[tool-clue]."	true	465222414
 poles	slope	"slope"	"poles"	"The poles rumble and slide. You run away, fearing they come crashing down on you--but when they stop, you're a bit disappointed to see they're still at a forty-five degree angle."	false	433712450
-tool shed	toeholds	"toeholds" or "toe holds"	"toolshed" or "tool shed"	"That'll do it! The tool shed crumbles, leaving only the small outcroppings--which somehow fly into the [holds-1].They're plentiful and stable. You could probably climb up now[if poles are visible] if the poles weren't so vertical[end if][ropes-grips-lying]."	false	588020474
+tool shed	toeholds	"toeholds/toehold" or "toe holds/hold"	"toolshed" or "tool shed"	"That'll do it! The tool shed crumbles, leaving only the small outcroppings--which somehow fly into the [holds-1].They're plentiful and stable. You could probably climb up now[if poles are visible] if the poles weren't so vertical[end if][ropes-grips-lying]."	false	588020474
 riot	protest	"trio"	"riot"	"Your word seems to have no effect. But that's just because the least enthusiastic people in the back leave first. Others follow--one of them even drops some chain links. And soon, just three people remain. The most energetic and dedicated, of course, but altering that triangle can't be too hard. While it's still a protest, they don't seem fully into it."	false	307779244
-protest	potters	"potters"	"protest" or "riot"	"The trio grows even more lethargic. A fellow in a smock mocks the whole charade before throwing the smock in a corner. He talks with his two friends[if kilns are visible]. Shortly, they see the kilns nearby. They go to work happily[else]. They still aren't happy, though. They'd sort of like something to do that'll help them forget their protesting phase[end if]."	false	671442450
+protest	potters	"potters/potter"	"protest" or "riot"	"The trio grows even more lethargic. A fellow in a smock mocks the whole charade before throwing the smock in a corner. He talks with his two friends[if kilns are visible]. Shortly, they see the kilns nearby. They go to work happily[else]. They still aren't happy, though. They'd sort of like something to do that'll help them forget their protesting phase[end if]."	false	671442450
 links	china	"china"	"china"	"The chain, or part of it, bursts into fine china, which rolls away from you. 'Hi, can...?' [if potters are visible]The potters take it immediately--'Hm! Not our thing, but very nice! If only we had something to make pottery with!' [else if protest is visible]The protesters pocket the china interestedly, saying they won't be bribed, but they did seem artsy enough to appreciate the design. [else if riot is visible]The crowd immediately tramples the china, then blames you for causing them to. [end if]Maybe you can do something with the links, instead."	false	172376056
-links	kilns	"kilns"	"links"	"The links burst and swell into luxury kilns[if potters are visible]. 'Ohmigod! Him! Good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Sir, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[else]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337
+links	kilns	"kilns/kiln"	"links"	"The links burst and swell into luxury kilns[if potters are visible]. 'Ohmigod! Him! Good!' yells one of the potters. 'This is the Mark 9000 brand with wheels underneath for easy mobility! Sir, I--I don't know why we ever protested you! We really must've had nothing better to do! Hm, the clay's scaly, but that's not your fault!'[else]. The yelling's loud as ever but increasingly directed at the kilns and not you. The protest seems distracted.[end if]"	false	316921337
 
 chapter say commands from anagrams
 
@@ -7675,6 +7675,11 @@ before taking hay:
 section hoses-shoes
 
 a pair of hoses are a plural-named thing. "[one of]A familiar pair of hoses lies by the cask. The guards must have forgotten them while, err, celebrating[or]That pair of hoses is still lying around[stopping].". rgtext of hoses is "[rcn][rc][rc][gc][gc]". gpos of hoses is 3. rpos of hoses is 5. lgth of hoses is 5. cert-text of hoses is "-[d1][d1][ast]E[ast]S". rect-text of hoses is "S[d1][d1][d1][ast]S".
+
+understand "shoe" as a mistake ("You need more than one shoe.") when player is in roomroom and hoses are in roomroom.
+
+instead of taking hoses:
+	say "They're too unwieldy, but maybe if they transformed into something else..."
 
 after doing something with hoses:
 	set the pronoun it to hoses;
