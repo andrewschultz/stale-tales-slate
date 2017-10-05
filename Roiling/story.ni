@@ -332,6 +332,8 @@ the specification of a hintpastry is "A hintpastry, when heated, lets you see ho
 
 a fruit is a kind of thing. description of a fruit is "[if the item described is plural-named]They're[else]It's[end if] not heinously bruised or rotting, or anything, so Curtis probably won't mind it."
 
+a fruit has a room called frroom.
+
 after doing something with a fruit (this is the limes can sensibly be it or them rule) :
 	set the pronoun it to the noun;
 	continue the action;
@@ -8851,9 +8853,10 @@ The look around once light available rule is not listed in the for printing the 
 
 after fliptoing when player is in rustic citrus (this is the Curtis pleased rule):
 	if cur-score of Others > 3 and moss cap is off-stage:
-		say "You've done so well, Curtis explains there may be something north and gives you a moss cap to help you know which direction that is. After all, moss grows on the north side of trees...[paragraph break]You don't want to seem ungrateful, but you still point out that caps are to be worn on a head, killing any sense of direction.[paragraph break]Curtis points out that north is usually up in most reasonable maps, and if you can sit there and make fruit out of nothing, you can probably take the logic from there.[paragraph break]Awkward silence ensues, and Curtis sits down, exhausted from delegating. You ask Curtis about possible landmarks and such, but he's busy with new business ideas.[paragraph break]Hmm. Probably some of this garbage could be turned to more fruit, if you were the sort of person who wanted to do everything, but you'd rather help yourself right now.";
+		say "You've done so well, Curtis explains there may be something north and gives you a moss cap to help you know which direction that is. After all, moss grows on the north side of trees...[paragraph break]You don't want to seem ungrateful, but you still point out that caps are to be worn on one's head, making it hard to look and gain any sense of direction.[paragraph break]Curtis responds that, well, you were smart enough to get started, you'll figure things out. And if you can sit there and make fruit out of nothing, you can probably take the logic from there.[paragraph break]Awkward silence ensues, and Curtis sits down, exhausted from delegating. You ask Curtis about possible landmarks and such, but he's busy with new business ideas.[paragraph break]Hmm. Probably some of this garbage could be turned to more fruit, if you were the sort of person who wanted to do everything, but you'd rather help yourself right now.";
 		now all carried fruits are in lalaland;
-		now player has moss cap instead;
+		now player has moss cap;
+		continue the action;
 	if cur-score of others > 3:
 		coin-eval;
 	continue the action;
@@ -8871,11 +8874,24 @@ after fliptoing when player is in stores (this is the reunite gang rule) :
 			say "The lackers and slacker pull a tarp apart and pull out a dime bag made big and spark a tinderbox-bred toxin for tokins['] stokin[']. 'A drug to drag out!' They offer a stupor sprout to spur Proust, and even an opiate oatpie, but you decline. They explain excitedly to you that this stuff is SO good, it's literally a like passage to a new world for certain people. You might even be able to enter the like smoke if you're way out enough.";
 	continue the action;
 
-after fliptoing a fruit (this is the fruit cue rule):
+after fliptoing (this is the fruit cue rule):
+	unless noun is a fruit, continue the action;
+	let another-break be false;
 	let ncf be number of carried fruits;
 	if ncf > 5 and remainder after dividing ncf by 3 is 0:
 		say "You can carry all those fruits in your super purse, but they might get mushed. Maybe you should unload what you have on Curtis[if player has droll dollar], even if he might not give you any more goodies[end if].";
+		now another-break is true;
+	let frr be frroom of noun;
+	repeat with myf running through fruits:
+		if frr is frroom of myf:
+			unless player has myf or myf is in lalaland:
+				d "[myf] still to do.";
+				continue the action;
+	if another-break is true, say "[line break]";
+	say "You look around and don't see much else to do with the fruits here. Maybe it's time to look around elsewhere.";
 	continue the action;
+
+the fruit cue rule is listed after the check minimum fruits and score rule in the after rules.
 
 book anagram tables
 
@@ -18374,8 +18390,7 @@ check taking the wipes:
 
 instead of doing something with the raw red drawer:
 	if action is procedural, continue the action;
-	else:
-		say "'Disturb? I'd burst!' says Aunt Tuna[if dent is visible], as she mentions that DENT is ugly enough[end if].";
+	say "'Disturb? I'd burst!' says Aunt Tuna[if dent is visible], as she mentions that DENT is ugly enough[end if].";
 
 understand "redraw" as a mistake ("Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.") when drawer is visible.
 
@@ -23864,7 +23879,9 @@ to check-fruit-min:
 description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you see which way is north[else]and you don't know which way is which[end if].[paragraph break]A sign on an abandoned drinks stand says RUSTIC CITRUS and, well, it's pretty rustic even if nothing much is growing[if spear is visible]--I don't think the spear stuck in the ground counts[end if][if mad train is visible], and a mad train lies glaring at the lack of track ahead[end if]. [if lumps are visible]The ground's covered with lumps, too. [end if][if pagers are visible]You hear pagers beeping all around as well. [end if][if slime is visible]You also have trouble not looking at some slime oozing off to the side. [end if][if videotape is in citrus]That videotape collection you uncovered from the drinks stand lies here, too. [end if]"
 
 understand "broader" as a mistake ("Rustic Citrus is secluded enough.") when player is in Rustic Citrus.
-understand "broader" as a mistake ("Rustic Citrus doesn't make for great living quarters.") when player is in Rustic Citrus.
+
+understand "boarder" as a mistake ("Rustic Citrus doesn't make for great living quarters.") when player is in Rustic Citrus.
+
 a border arbored is scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored"
 
 instead of doing something with a border arbored:
@@ -24067,7 +24084,7 @@ to coin-eval:
 		if number of carried fruits > 4:
 			say "Curtis goes to take your bounty but backs off on seeing how much there is. 'I, old as...' He snaps his fingers. 'A solid load is laid, so! Lo, aids! Oi, lads!' he booms, and a couple assistants carry away your haul[one of]. 'Do sail!' he exhorts you[or][stopping].";
 		else:
-			say "Curtis relieves you of your burden[if number of carried fruits > 1]s[end if] you found[one of]. He thanks you but is curt[or][stopping].";
+			say "Curtis relieves you of the burden[if number of carried fruits > 1]s[end if] you found[one of]. He thanks you but is curt[or][stopping].";
 		repeat with fru running through carried fruits:
 			now fru is in lalaland;
 	if curtis-level > temp:
@@ -24233,7 +24250,7 @@ chapter persimmon
 
 the persimmon is a fruit.
 
-the videotape collection is scenery. description is "A bunch of weird films in this collection. One title, in red, is [one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order]."
+the videotape collection is scenery. description is "A bunch of weird films in this collection. One title, in red, is [i][one of]Mr. Pinsome[or]One Ms. Prim[or]Moni's Perm[or]Nope, Mr. Sim[in random order][r]."
 
 a-text of videotape is "RYRRYRRYR". b-text of videotape is "RYRRYRRYR". parse-text is "x[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]n".
 
@@ -24987,6 +25004,17 @@ understand "barriers west/w/" and "barriers west" as b-w.
 
 a-text of b-w is "RRRYRRYRRYYR". b-text of b-w is "RRPYRRYRRYYR". parse-text of b-w is "x[sp]x[sp]r[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]x".
 
+chapter barber sickle
+
+the barber sickle is a flippable vanishing thing in filed field. description is "It's the color of some sort of dark juice, similar in texture to the pryer bars.". "A barber sickle lies here, not sharp but very dark."
+
+a-text of barber sickle is "RRYRRRYRRYYR". b-text of barber sickle is "PRYRRRYRRYYR". parse-text of barber sickle is "b[sp]x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]x".
+
+check taking barber sickle:
+	say "You don't need weapons in this game. Or a haircut." instead;
+
+The basket of blackberries is a fruit. description is "It's from Bickerers['] Lab, wherever that is."
+
 book Scape Space
 
 Scape Space is an innie room in Others. Scape Space is below Swell Wells.
@@ -25102,18 +25130,15 @@ to say gree-desc:
 
 instead of doing something to greedy-person:
 	if action is procedural, continue the action;
-	otherwise:
-		if player has storage:
-			say "You don't want to deal with [greedy-s] any more than you have to." instead;
-		say "[greedy-s] shrugs, then does the 'let's swap' hand gesture. Hmm, what could you give [him-her] to get that so-great storage?"
+	if player has storage:
+		say "You don't want to deal with [greedy-s] any more than you have to." instead;
+	say "[greedy-s] shrugs, then does the 'let's swap' hand gesture. Hmm, what could you give [him-her] to get that so-great storage?"
 
 check opening slot:
 	say "It will fit if you give it the right thing." instead;
 
 check closing slot:
 	say "It needs to be open--or how will you pass the gate?" instead;
-
-The basket of blackberries is a fruit. description is "It's from Bickerers['] Lab, wherever that is."
 
 the ENGARO orange is a reflexive fruit in Scape Space. "An orange lies here next to the tarred trader. It looks like you could read the orange to find its brand name."
 
@@ -25143,12 +25168,48 @@ carry out gonearing:
 instead of dropping the orange:
 	say "But you worked so hard to get it!"
 
-the barber sickle is a flippable vanishing thing in filed field. description is "It's the color of some sort of dark juice, similar in texture to the pryer bars.". "A barber sickle lies here, not sharp but very dark."
+chapter fruits by room
 
-a-text of barber sickle is "RRYRRRYRRYYR". b-text of barber sickle is "PRYRRRYRRYYR". parse-text of barber sickle is "b[sp]x[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]x".
+frroom of grapes is rustic citrus.
+frroom of maraschino is rustic citrus.
+frroom of pears is rustic citrus.
+frroom of plums is rustic citrus.
+frroom of limes is rustic citrus.
+frroom of tamarind is rustic citrus.
+frroom of blueberries is rustic citrus.
+frroom of cantaloupe is rustic citrus.
+frroom of persimmon is rustic citrus.
+frroom of pomegranate is rustic citrus.
 
-check taking barber sickle:
-	say "You don't need weapons in this game. Or a haircut." instead;
+frroom of coconuts is swell wells.
+frroom of tangerines is swell wells.
+frroom of mulberries is swell wells.
+frroom of gooseberry is swell wells.
+frroom of apricot is swell wells.
+frroom of apples is swell wells.
+
+frroom of lemons is clangier clearing.
+frroom of melon is clangier clearing.
+frroom of nectarine is clangier clearing.
+frroom of quince is clangier clearing.
+frroom of overpriced peach is clangier clearing.
+frroom of mango is clangier clearing.
+frroom of kumquat is clangier clearing.
+frroom of papayas is clangier clearing.
+
+frroom of breadfruit is Filed Field.
+frroom of watermelon is Filed Field.
+frroom of cranberries is Filed Field.
+frroom of grapefruit is Filed Field.
+frroom of pineapple is Filed Field.
+frroom of raspberry is Filed Field.
+frroom of strawberries is Filed Field.
+frroom of basket of blackberries is Filed Field.
+
+frroom of ENGARO orange is Scape Space.
+frroom of guava is Scape Space.
+frroom of rhubarb is Scape Space.
+frroom of small yellow banana is Scape Space.
 
 volume demo dome
 
@@ -26709,7 +26770,7 @@ macks	--	Gretta
 Ed Riley	"[one of]A steward won't let you go eastward--but he is too emphatically denying he is a YIELDER.[plus][or]The settler logically knocks this one out, but also consider his booming voice. You want the opposite of that.[plus][or]REEDILY.[minus][cycling]"	--	"Ed can speak REEDILY"
 deli rye	"Ed Riley won't share, but the rye can share a hint with you if you scan it."
 yield sign	"The yield sign symbolizes Ed Riley isn't THAT in control of things. Oh, and it can share a hint with you if you scan it."
-sly imp	"[one of][if one-imp-down]You need to take the imp down another peg[else]The imp certainly does things three different ways[end if].[plus][or]You may need [if one-imp-down]yet [end if]another adverb.[plus][or][if one-imp-down]Take it out for good by making him[else]It can be made to[end if] move less gracefully and more [rand-to-go].[minus][cycling]"	--	"[rand-to-go]"
+sly imp	"[one of][if one-imp-down]You need to take the imp down another peg[else]The imp certainly does things three different ways[end if].[plus][or]You may need [if one-imp-down]yet [end if]another adverb.[plus][or][if one-imp-down]Take it out for good by making it[else]It can be made to[end if] move less gracefully and more [rand-to-go].[minus][cycling]"	--	"[rand-to-go]"
 whiners	"[one of][if one-whine-down]They've lost a bit of steam, but they need to lose a bit more[else]The whiners have a lot of energy and exercise it many different ways[end if].[plus][or]You can soften them up a bit[if one-whine-down] more[end if].[plus][or]They'll [if one-whine-down]give up on[else]be less interested in[end if] annoying you if they start acting more [rand-to-go].[minus][cycling]"	--	"[rand-to-go]"
 Mr Lee	"[loop-pool-already][if ghoul hat is not in lalaland]Try to help Mr. Lee with that ghoul hat. Or ask hints about the hat.[else if p-2 is in bran barn]Try to get rid of that painting of Rev. Howe. Or ask hints about it.[else]You've helped Mr. Lee all you can."
 ghoul hat	"[loop-pool-already][one of]Mr. Lee's 'Hola, Thug' greeting is not very nice. He sees red and doesn't trust you.[plus][or]Mr. Lee's upset with you. But one word, useless on its own, can turn it around.[plus][or]The first one had better be a good one.[plus][or]No L-Y, so no adverb.[plus][or]ALTHOUGH.[minus][cycling]"	--	"you can say ALTHOUGH"

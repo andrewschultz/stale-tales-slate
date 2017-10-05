@@ -823,7 +823,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "rye"	335489164	--	deli rye	--	"[del-ry]."
 "lied"	247641883	--	deli rye	--	"[del-ry]."
 "sandwich"	397613884	--	deli rye	--	"[del-ry]."
-"simply"	462981015	--	sly imp	--	"It's acting simply, but he can't be gotten rid of that simply. At least, nothing happens when you try. Maybe you need to consider more specific ways he's moving."
+"simply"	462981015	--	sly imp	--	"It's acting simply, but it can't be gotten rid of that simply. At least, nothing happens when you try. Maybe you need to consider more specific ways it's moving."
 "sly"	272447057	--	sly imp	--	"[imp-sly]."
 "imp"	190533958	--	sly imp	--	"[imp-sly]."
 "whiner"	472247338	anteroom	--	--	"[whiney]."

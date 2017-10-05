@@ -1555,7 +1555,7 @@ Okay, back to the main line.
 
 > N
 
-The imp needs to be provoked. There are three ways, based on his description. You only need two, and they're all functinally equivalent. Again, let's be lazy with keystrokes.
+The imp needs to be provoked. There are three ways, based on its description. You only need two, and they're all functinally equivalent. Again, let's save a couple keystrokes.
 
 > ANGRILY
 
