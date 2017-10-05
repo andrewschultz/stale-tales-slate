@@ -1035,10 +1035,13 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "wells"	439642526	swell wells	--	--	"[locname]."
 "field"	274156779	filed field	--	--	"[locname]."
 "clearing"	434637210	clangier	--	--	"[locname]."
-"rustic"	453812025	rustic citrus	--	--	"[locname]."
+"rustic"	453812025	rustic citrus	--	--	"You can't change this clearing or Curtis, but you don't need to."
+"border"	412254286	rustic citrus	--	--	"[border-arbor]."
+"arbored"	414442104	rustic citrus	--	--	"[border-arbor]."
 "space"	326739437	scape space	--	--	"[locname]."
 "gates"	361977613	gates stage	--	--	"[no-gate]."
 "gate"	265703647	gates stage	--	--	"[no-gate]."
+"roping"	387642395	Gates Stage	--	--	"You don't need to grapple with the roping, and you don't need the roping to grapple with you."
 "other"	427874806	--	--	degen-true rule	"[not-the-reg]."
 "storeh"	524148772	--	--	degen-true rule	"[not-the-reg]."
 
@@ -2009,6 +2012,9 @@ to say slot-no:
 		say "Nothing close to anagramming LOST is on the box right now. You may need to use something entirely different to get the slot to appear";
 	else:
 		say "After all that work getting it to appear, you don't want to make the lost slot vanish"
+
+to say border-arbor:
+	say "Bad idea to ruin such life-giving scenery[if swell wells is unvisited], but maybe you can gain a sense of direction[end if]"
 
 to say no-gate:
 	say "The gate needs to be unlocked some other way"

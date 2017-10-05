@@ -483,7 +483,7 @@ section compiler non-syntax section - not for release
 
 [there shouldn't be much difference but it's worth checking just because]
 
-use MAX_VERBS of 660.
+use MAX_VERBS of 670.
 
 use SYMBOLS_CHUNK_SIZE of 16000.
 
@@ -6947,6 +6947,7 @@ Rustic Citrus	"With a border, arbored, all around, one direction seems as good a
 filed field	"[if b-w are visible and noun is west]The barriers west block you. Maybe you can get rid of them.[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east.[end if]"
 Scape Space	"The scape space is pretty sparse. No spare rooms, restrooms, anything. You can only go back up."
 Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."
+Gates Stage	"You don't want to know how effective the gropin['] roping is. The gates are more interesting, anyway."
 
 to say if-fence:
 	say "[if pipe panel fence is visible]the pipe panel fence too[else]even without the fence[end if]"
@@ -7192,6 +7193,10 @@ check climbing (this is the generic silly climbing reject rule):
 		say "It's actually a decent jungle gym, but you're not here to putz around." instead;
 	if noun is bulwark: [otters]
 		say "Elvira is in the bulwark, not on top of it." instead;
+	if noun is wire weir:
+		say "It's a long way down, and it'd take you away from your quest." instead;
+	if noun is gropin' roping: [others]:
+		say "It's a long way down, and you probably want to get north somehow, anyway." instead;
 	say "You don't need to climb over much of anything in this game. Though in some spots, you may go up or down, or possibly IN." instead;
 
 chapter dropping
@@ -8701,9 +8706,8 @@ check fliptoing (this is the portal palm and reflexive flip rule):
 			try entering noun instead;
 		if noun is reflexive or noun is vanishing:
 			continue the action;
-		if noun is a the-to in regana of mrlp:
-			choose row with the-to of noun in regana of mrlp;
-			if the-from entry is reflexed:
+		repeat through regana of mrlp:
+			if noun is the-to entry and the-from entry is reflexed:
 				print-the-from the-from entry;
 				the rule succeeds;
 		try examining noun instead;
@@ -8870,7 +8874,7 @@ after fliptoing when player is in stores (this is the reunite gang rule) :
 	continue the action;
 
 after fliptoing a fruit (this is the fruit cue rule):
-	let ncf be number of carried fruits
+	let ncf be number of carried fruits;
 	if ncf > 5 and remainder after dividing ncf by 3 is 0:
 		say "You can carry all those fruits in your super purse, but they might get mushed. Maybe you should unload what you have on Curtis[if player has droll dollar], even if he might not give you any more goodies[end if].";
 	continue the action;
@@ -23915,6 +23919,8 @@ to check-fruit-min:
 
 description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you see which way is north[else]and you don't know which way is which[end if].[paragraph break]A sign on an abandoned drinks stand says RUSTIC CITRUS and, well, it's pretty rustic even if nothing much is growing[if spear is visible]--I don't think the spear stuck in the ground counts[end if][if mad train is visible], and a mad train lies glaring at the lack of track ahead[end if]. [if lumps are visible]The ground's covered with lumps, too. [end if][if pagers are visible]You hear pagers beeping all around as well. [end if][if slime is visible]You also have trouble not looking at some slime oozing off to the side. [end if][if videotape is in citrus]That videotape collection you uncovered from the drinks stand lies here, too. [end if]"
 
+understand "broader" as a mistake ("Rustic Citrus is secluded enough.") when player is in Rustic Citrus.
+understand "broader" as a mistake ("Rustic Citrus doesn't make for great living quarters.") when player is in Rustic Citrus.
 a border arbored is scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored"
 
 instead of doing something with a border arbored:
@@ -24431,40 +24437,51 @@ the apples are plural-named fruit.
 
 book gates stage
 
-Gates Stage is north of Swell Wells. "Important-looking gates lead to the north. They don't look strictly locked, but you probably need some sort of ID--or confidence--to get by them. Behind them you see [if arena is examined]the Admit-Us Stadium[else]a near arena[end if]."
+Gates Stage is north of Swell Wells. "Gropin['] roping prevents you from going west or east. The swell wells are back south, and important-looking gates, [if halt lath is in gates stage]barred by a halt lath[else]open now[end if], lead to the north. They don't look strictly locked, but you probably need some sort of ID--or confidence--to get by them. Behind them you see [if arena is examined]the Admit-Us Stadium[else]a near arena[end if].". Gates Stage is in Others.
+
+after looking in gates stage (this is the retract halt lath rule):
+	if halt lath is in gates stage and player has popstar's passport:
+		say "Your popstar's passport beeps quickly. The halt lath rises and retracts into the gates to the north.";
+		now halt lath is in lalaland;
+	continue the action;
 
 understand "saget" as a mistake ("You don't need to be part of Yorpwald's Funniest Home Videos right now.") when player is in gates stage.
-
-Gates Stage is in Others.
-
-A near arena is scenery in Gates Stage. "[one of]It looks familiar--wait--it's Yorpwald's famous, enormous Admit-Us Stadium! What's more, you hear a hubbub that means some event must be going on[or]The Admit-Us Stadium stands behind the gate, a hubbub still indicating that something important must be going on[stopping]."
-
-understand "stadium/admit" and "admit us" as arena when arena is examined.
 
 check going inside in gates stage:
 	try going north instead;
 
-check entering gs:
-	try going north instead;
+section a near arena
 
-does the player mean entering gs: it is likely;
+A near arena is scenery in Gates Stage. "[one of]It looks familiar--wait--it's Yorpwald's famous, enormous Admit-Us Stadium! What's more, you hear a hubbub that means some event must be going on[or]The Admit-Us Stadium stands behind the gate, a hubbub still indicating that something important must be going on[stopping]."
+
+understand "stadium/admit" and "admit us" as arena when arena is examined.
 
 instead of doing something with a near arena:
 	if action is procedural:
 		continue the action;
 	say "You can't do much but look at the arena."
 
-gs are privately-named scenery in Gates Stage. printed name of gs is "gates". "They're [if player has passport]open for easy entry north[else]closed by a halt lath[end if]."
+section gs = gates
+
+check entering gs:
+	try going north instead;
+
+does the player mean entering gs: it is likely;
+
+gs are privately-named scenery in Gates Stage. printed name of gs is "gates". "They're [if halt lath is in gates stage]open for easy entry north[else]closed by a halt lath[end if]."
 
 check taking gs:
 	say "No way you could move the gates." instead;
 
 understand "gate" as gs.
 
+section halt lath
+
 the halt lath is part of the gs. the halt lath is undesc.
 
 instead of doing something with the halt lath:
-	say "[if player has passport]You don't need to do anything with the halt lath[else]The halt lath looks sturdy and won't be budging[end if].";
+	if action is procedural, continue the action;
+	say "The halt lath looks sturdy and won't budge physically.";
 
 understand "gates" as gs.
 
@@ -24480,6 +24497,18 @@ instead of opening gs:
 instead of giving something to gs:
 	say "The gates seem to have a sensor that can detect if you have ID[if player has passport]. You know, that passport should be enough[end if]."
 
+section gropin' roping
+
+the gropin' roping is scenery in Gates Stage. "The gropin['] roping guards you from going west or east."
+
+instead of doing something with the halt lath:
+	if action is procedural, continue the action;
+	say "You don't want to tangle with the gropin['] roping, because it will probably tangle with you, back.";
+
+understand "poring" as a mistake ("You ponder the gropin['] roping for a bit. You decide it isn't as worth thinking about as the arena to the north.") when player is in gates stage.
+
+section check for PERP
+
 perp-check is a truth state that varies.
 
 to say two-of-three:
@@ -24492,6 +24521,8 @@ perp-priv is cheat-spoilable.
 a-text of perp-priv is "RRYR". b-text of perp-priv is "PRYP". parse-text of perp-priv is "P[sp]R[sp]E[sp]P".
 
 understand "perp-priv" as perp-priv when debug-state is true.
+
+chapter big endgame check
 
 check going north in Gates Stage:
 	if player does not have passport:
@@ -24659,6 +24690,7 @@ check inserting into lost slot:
 	now storage box is in lalaland;
 	now s-i is in lalaland;
 	now player has popstar's passport;
+	consider the retract halt lath rule;
 	the rule succeeds;
 
 the popstar's passport is an uncluing thing. description is "It's got a picture inside, of you. And surprisingly, it's flattering and realistic and electronic! With an artifact this rare, you feel [if viewer is reflexed or searcher is reflexed]full of[else]near to[end if] stardom most rad. It's interactive, too--there's a little viewer on the right and a searcher on the left, and once you really learn how to use it, maybe the passport can be a minder, too. Written on the bottom is some nonsense about how it's not enough to have the passport to improve quality of life--you need to use it, too."
@@ -24690,7 +24722,7 @@ instead of doing something to the searcher:
 		continue the action;
 	try examining the searcher instead;
 
-chapter getting through the gates
+chapter passport stuff
 
 to decide which number is gate-level:
 	let A be 0;
@@ -24725,7 +24757,7 @@ after fliptoing when player has passport (this is the part-of-passport rule):
 
 book Admit-Us Stadium
 
-Admit-Us Stadium is north of gates stage. Admit-Us Stadium is privately-named. "You've reached the Admit-Us Stadium, but you shouldn't be seeing this text."
+Admit-Us Stadium is north of gates stage. Admit-Us Stadium is privately-named. "You've reached the Admit-Us Stadium, but you shouldn't be seeing this text, because it is not part of the game."
 
 book Clangier Clearing
 
@@ -26872,6 +26904,7 @@ Lord Al	"[ollard-hint]"
 Dr Lola	"[ollard-hint]"
 tekno-token	"The tekno-token is currency to help you buy stuff after haggling in the Clangier Clearing."
 lost slot	"[if player has s-i]You need to put the sonic icons in the slot to open the So-Great Storage[else if s-i are in lalaland]You've used the slot already[else]You need to reform the coins Curtis gave you to put something in the lost slot[end if]."
+halt lath	"[one of]You need another item to retract the halt lath.[plus][or][if player has so-great storage]You need to put something in the So-Great Storage[else]You may need to bargain in the Scape Space below the Swell Wells[end if].[minus][cycling]"
 passport	"The passport will get you through the gates in the Gates Stage, but you need to study it to enter the Admit-Us Stadium safely. The viewer and searcher can help, as can the message if you go north and fail."
 a near arena	"You can't change the [if near arena is examined]arena[else]Admit-Us Stadium[end if], but you can enter it  via the gates."
 viewer	"[one of]You can't seem to focus on the viewer. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the viewer.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]REVIEW the viewer, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"
