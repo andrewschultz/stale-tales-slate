@@ -2803,7 +2803,7 @@ welt-proof flowerpot	"GYDIN['], >> 'Y/N, dig?'"
 p-2	"One barely legible bit reads [one of]Eeh, Row V![or]Veer How?[or]Rev. Howe[or]Whereov[in random order]."	[otters]
 whistle	"[if player does not have whistle]You strain your eyes to see that [end if]Ed Plye, apparently, made the whistle."
 drinks stand	--	blurbs	[others]
-riot cap	"It's red and [one of]made of I-TRAP-CO material[or]designed and shaped by CAPTOR-I, whoever they are[in random order]"	--
+riot cap	"It's red and [one of]made of I-TRAP-CO material[or]designed and shaped by CAPTOR-I, whoever they are[in random order]."	--
 mad train	"DR. NIMATA."
 mean trowel	"It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt."
 orange	"It's stamped with the word ENGARO in red."
@@ -6943,10 +6943,10 @@ Alcoves	"You sway to the side, not ready to face the menace to the west." [otter
 Loop Pool	"The pool is wide and long. You can only go back south."
 Perverse Preserve	"[one of]You try going that way, but your mind gets foggy. You may not be able to see it, but you know the tell-tale signs of a DISRUPT-STUPID'R force field. Looks like you can only go back north[or]The disrupt-stupid'r field isn't worth risking[stopping][dsknow]."
 Reclusion Inclosure	"Even without the raw-bulk bulwark that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
-Rustic Citrus	"[unless player has compass]You try to go north by not going north, but everywhere's a border, arbored[else if swell wells are unvisited]That's not north, according to your compass[else]You can only go back north to the wells[end if]." [others]
+Rustic Citrus	"With a border, arbored, all around, one direction seems as good as any other. Maybe you need to [if player has moss cap]tinker with the moss cap[else]help Curtis a bit more[end if]." [others]
 filed field	"[if b-w are visible and noun is west]The barriers west block you. Maybe you can get rid of them.[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east.[end if]"
 Scape Space	"The scape space is pretty sparse. No spare rooms, restrooms, anything. You can only go back up."
-Clangier Clearing	"The nameless salesmen constantly coming and going stop you from going any way but back west. You don't really notice them until you have to leave, but they leave you with a feeling of lameness."
+Clangier Clearing	"You don't need anything in the superstore. You might get lost, anyway."
 
 to say if-fence:
 	say "[if pipe panel fence is visible]the pipe panel fence too[else]even without the fence[end if]"
@@ -8870,7 +8870,8 @@ after fliptoing when player is in stores (this is the reunite gang rule) :
 	continue the action;
 
 after fliptoing a fruit (this is the fruit cue rule):
-	if number of carried fruits > 5:
+	let ncf be number of carried fruits
+	if ncf > 5 and remainder after dividing ncf by 3 is 0:
 		say "You can carry all those fruits in your super purse, but they might get mushed. Maybe you should unload what you have on Curtis[if player has droll dollar], even if he might not give you any more goodies[end if].";
 	continue the action;
 
@@ -23912,7 +23913,12 @@ to check-fruit-min:
 	if fruits-flipped > 20:
 		min-up;
 
-description of Rustic Citrus is "A sign on an abandoned drinks stand says RUSTIC CITRUS and, well, it's pretty rustic even if nothing much is growing[if spear is visible]--I don't think the spear stuck in the ground counts[end if][if mad train is visible], and a mad train lies glaring at the lack of track ahead[end if]. [if lumps are visible]The ground's covered with lumps, too. [end if][if pagers are visible]You hear pagers beeping all around as well. [end if][if slime is visible]You also have trouble not looking at some slime oozing off to the side. [end if][if videotape is in citrus]That videotape collection you uncovered from the drinks stand lies here, too. [end if]"
+description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you see which way is north[else]and you don't know which way is which[end if].[paragraph break]A sign on an abandoned drinks stand says RUSTIC CITRUS and, well, it's pretty rustic even if nothing much is growing[if spear is visible]--I don't think the spear stuck in the ground counts[end if][if mad train is visible], and a mad train lies glaring at the lack of track ahead[end if]. [if lumps are visible]The ground's covered with lumps, too. [end if][if pagers are visible]You hear pagers beeping all around as well. [end if][if slime is visible]You also have trouble not looking at some slime oozing off to the side. [end if][if videotape is in citrus]That videotape collection you uncovered from the drinks stand lies here, too. [end if]"
+
+a border arbored is scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored"
+
+instead of doing something with a border arbored:
+	if action is procedural, continue the action;
 
 chapter augural arugula
 
@@ -24213,8 +24219,7 @@ instead of doing something with the needle:
 a-text of moss cap is "RYRRYRR". b-text of moss cap is "RGRRYRR". parse-text of moss cap is "x[sp]o[sp]x[sp]x[sp]a[sp]x[sp]x".
 
 check going north in Rustic Citrus:
-	if moss cap is off-stage:
-		say "[one of]Rats! You've no clue which direction is north. Maybe if you help Curtis, he'll give you pointers. But he's quite a businessman.[or]You still have no sense of direction.[stopping]" instead;
+	if moss cap is off-stage, try going south instead;
 	if player has moss cap:
 		say "The moss cap isn't helping your sense of direction as much as it should. Well, not in its present form." instead;
 	now others is unspoiled;
@@ -24744,7 +24749,7 @@ check entering superstore:
 	try going east instead;
 
 before talking to nameless salesmen:
-	say "You have nothing to say to the salesmen." instead;
+	say "You feel, well, lameness at having nothing to say to the salesmen. Don't worry, they're not important." instead;
 
 understand "lameness" as a mistake ("No need to judge the nameless salesmen. We can't all be heroes.") when player is in clangier clearing.
 
@@ -24900,7 +24905,7 @@ book Filed Field
 
 chapter where it is, and scenery
 
-Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if b-w are visible]Barriers west block you. [end if][if pipe panel fence is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries. [end if][if b-r is visible]A buried raft lies here, too. [end if][if pipe panel fence is in lalaland and briar screen is in lalaland and b-w is in lalaland and rapt figure is in lalaland and b-r is in lalaland]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others.
+Filed Field is west of Swell Wells. "I'd call this a mowed meadow or a purest pasture, but that'd be cheating. Ego-fail foliage cause foilage all directions except east. [if b-w are visible]Barriers west block you a bit extra. [end if][if pipe panel fence is visible]A fence--the kind they call pipe panel--is here. [end if][if rapt figure is visible]A rapt figure towers here. [end if][if briar screen is visible]You can also see a briar screen, and you hear barren cries. [end if][if b-r is visible]A buried raft lies here, too. [end if][if pipe panel fence is in lalaland and briar screen is in lalaland and b-w is in lalaland and rapt figure is in lalaland and b-r is in lalaland]You've gotten rid of all the really obtrusive scenery here--good job![else][end if]". Filed Field is in Others.
 
 the ego fail foliage is useless scenery in filed field. "It'll still block you going anywhere but back east, even with the more man-made obstacles gone."
 
@@ -24917,7 +24922,7 @@ the b-r is scenery in Filed Field. "It's jammed into the ground. You can't take 
 a-text of b-r is "RRYYRRRYYR". b-text of b-r is "PRYYRRPYYP". parse-text of b-r is "b[sp]x[sp]-[sp]-[sp]x[sp]x[sp]r[sp]-[sp]-[sp]t".
 
 check taking b-r:
-	say "It's stuck in there. Maybe you can make it something smaller." instead;
+	say "You imagine a toad called work squatting on you as you do this. Maybe you should try to change the buried raft, instead." instead;
 
 the breadfruit is a fruit. description is "It doesn't look doughy at all. Too bad Philip Larkin's ghost isn't around, or you could show him what one looks like. That'd be a cultural experience!"
 
@@ -25008,7 +25013,7 @@ printed name of b-w is "the barriers west"
 check taking b-w:
 	say "Too heavy, and there's nothing west, anyway." instead;
 
-understand "barriers/ west/w/" as b-w.
+understand "barriers west/w/" and "barriers west" as b-w.
 
 a-text of b-w is "RRRYRRYRRYYR". b-text of b-w is "RRPYRRYRRYYR". parse-text of b-w is "x[sp]x[sp]r[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]-[sp]x".
 
