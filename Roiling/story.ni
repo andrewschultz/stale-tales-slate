@@ -6929,7 +6929,7 @@ Helots' Hostel	"Though you are a guest, probably best not to go poking around. Y
 Lapsin' Plains	"You can only go back south, or[if span pans are in Lapsin' Plains], once the span pans are neutralized,[end if] inside."
 Achers' Arches	"You can only go north to the Horned Hedron[if sardine is in arches], once the sardine is gone,[end if] or east back to Anger Range."
 Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if a-p is visible]portal[else]ol['] trap once you disarm it[end if][if walleyes are visible], though you probably don't need the walleyes watching you try[end if]."
-Rascal Craals	"The wire weir blocks you from going any way but back east."
+Rascal Craals	"The round bay boundary blocks you from going any way but back east."
 Tenfold	"While you can go back outside, you can just finish things here[unless-max]."
 Loftier Trefoil	"[if rodney is visible]One look from Rodney, and you stay put[else]Taverns are generally meant to make you forget compass directions, among other things. You probably just want to go out[end if]." [towers]
 Topside Deposit	"The badlands are too dangerous any way but[if scope copse is visited] back[end if] north[if Ray Eck is visible], and Ray Eck's in the way right now[end if]."
@@ -19122,7 +19122,17 @@ carry out patroling:
 
 book Rascal Craals
 
-Rascal Craals is west of Horned Hedron. "The rascal craals, where the Hedron workers live, are lined up nice and scalar[if ruby is not in lalaland]. This would be a good place to hide something, because nobody who fears for their life would want to go here[else]. You [one of]still [or][stopping]see the thin hint you marked in the ground with your rigged digger[end if]. A wire weir blocks all ways out except back east.". Rascal Craals is in Oyster. Rascal Craals is innie.
+Rascal Craals is west of Horned Hedron. "The rascal craals, where the Hedron workers live, are lined up nice and scalar[if ruby is not in lalaland]. This would be a good place to hide something, because nobody who fears for their life would want to go here[else]. You [one of]still [or][stopping]see the thin hint you marked in the ground with your rigged digger[end if]. A round bay boundary blocks all ways out except back east.". Rascal Craals is in Oyster. Rascal Craals is innie.
+
+section round bay boundary
+
+the round bay boundary is scenery in rascal craals. "It's pretty scenic, and it's also big enough to keeping you from going any way except back east."
+
+instead of doing something with round bay boundary:
+	if action is procedural, continue the action;
+	say "The boundary is nice to look at, but you don't have to do anything with it.";
+
+section thin hint
 
 the thin hint is scenery. "The thin hint marks where you buried the ruby. You will be able to find it if you leave and come back."
 
@@ -19131,15 +19141,10 @@ after fliptoing thin hint:
 	continue the action;
 
 before doing something with thin hint:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is taking:
 		say "You don't need to take a hint you yourself dropped." instead;
 	say "There's nothing to do with that hint except point it out to someone else, later." instead;
-
-section wire weir
-
-The wire weir is scenery in Rascal Craals. "It's there to prevent you from falling into somewhere much more dangerous."
 
 book End Den
 
@@ -23279,7 +23284,20 @@ check going north in Anger Pit:
 		now try-fail-pit-north is true;
 		say "[one of]You hear a dangerous hooting as you go north. You run from a bunch of owls before they can carve at you with their beaks, but boy, they were quick, and it was close. You don't want to risk it again[or]Those owls are too much for you[stopping], with your powers drained." instead;
 
+book wickeder wire deck
+
 Wickeder Wire Deck is north of Tapering Anger Pit. Wickeder Wire Deck is a room in Otters. "Since it's been redone, there're no deer. Exotics coexist here[if adjsolve is 4], so many you think Gee, Fur Refuge[end if]. You can go back south."
+
+section wire weir
+
+The wire weir is scenery in Wickeder Wire Deck. "It's there to prevent you from falling into somewhere much more dangerous."
+
+instead of doing something with wire weir:
+	if the action is procedural, continue the action;
+	if current action is climbing, say "You would probably fall if you managed to climb over." instead;
+	say "The wire weir is there to keep you from going anywhere but back south. No need to mess with it."
+
+chapter ocelots
 
 the ocelots are plural-named reflexive neuter animals. description is "[if ocelots are reflexive]They glance nervously back, as if they've done something wrong[otherwise]They glance back at you, give you a finger-point you're not cool enough to give back, then ignore you in the nicest possible way[end if].". "Ocelots are making gestures here that you'd look silly making[if ocelots are reflexive]. They do, too, with their stupid sunglasses[else]. But they don't, thanks to your help[end if]."
 
@@ -23302,6 +23320,8 @@ understand "sunglasses/glasses/shades" as Look-Kool when ocelots wear Look-Kool.
 
 a-text of ocelots is "RYYRYRR". b-text of ocelots is "RYYPYRR". parse-text of ocelots is "x[sp]-[sp]-[sp]l[sp]-[sp]x[sp]x". ocelots is cheat-spoilable.
 
+chapter leopard
+
 The leopard is a reflexive neuter animal. "A leopard is here--[if leopard is reflexive]its colorings make it look like it is wearing a tacky (mostly) burnt orange jumpsuit, and it seems paw-tied, too[else]it looks more camoflagued since you changed it[end if]."
 
 understand "ape lord" and "apelord" as a mistake ("You [if leopard is reflexed]already changed the leopard[else]can't change what the leopard is, but you need to release it from its captivity[end if].") when player is in deck.
@@ -23314,6 +23334,8 @@ description of leopard is "He's got those jumpsuit markings and appears to be [i
 
 the jumpsuit is part of the leopard. description is "The leopard looks back at you as if sorry for some inexplicable things it did, as if hoping it's served his time.". understand "markings" as jumpsuit.
 
+chapter badger
+
 The badger is a reflexive neuter animal. description is "[if badger is reflexed]He looks dumber with those clothes, but you aren't about to tell him[otherwise]Despite having all that fur, he seems embarrassed with his body[end if].". "[if badger is reflexed]A garbed badger stands around confidently here[otherwise]A badger covers his naughty bits that were buried under his fur anyway[end if]."
 
 a-text of badger is "RYRRYR". b-text of badger is "RGRRGR". parse-text of badger is "x[sp]a[sp]x[sp]x[sp]e[sp]x".
@@ -23321,6 +23343,8 @@ a-text of badger is "RYRRYR". b-text of badger is "RGRRGR". parse-text of badger
 understand "barged" as a mistake ("You don't want the badger to have barged into you. Clothed or not.") when player is in Deck.
 
 understand "b grade" and "bgrade" as a mistake ("The badger [if badger is reflexive]already[else]no longer[end if] feels second-rate, so [if badger is reflexive]you need another way to help it[else]it needs no more help[end if].") when player is in Deck.
+
+chapter satyr
 
 the satyr is a reflexive male animal. description is "[if satyr is reflexed]He looks like he's dreaming of a poem or something, but he doesn't want to be disturbed[else]He looks preoccupied and mistrustful. His eyes stray.[end if].". "A satyr strides here, [if satyr is reflexed]dreaming of a better Yorpwald[else]looking out for himself[end if]."
 
@@ -26602,7 +26626,7 @@ walleyes	"[one of]The walleyes won't let you explore the Horned Hedron. You need
 o-t	"[one of]The ol['] trap must have a disarming switch somewhere.[plus][or]You need to cover the area to disable the ol['] trap, but not with spies watching you. The haunter can take care of them.[plus][or]Once the haunter's scared everyone away, what's an action to scour for a switch for the ol['] trap?[plus][or]PATROL.[cycling]"
 a-p	"[one of]You can just enter the portal.[plus][or]You won't know where to go through the portal without a gleaner.[plus][or]Find the two pearl pieces, by the arches and from Aunt Tuna's gift.[plus][or]The gleaner can't tell you how to use the portal til it's bigger.[plus][or]ENLARGE the gleaner to make the portal work for you.[cycling]"
 scrawl	"[one of]The haunter is beneath here. You may need to recover it.[plus][or]What do you often do with the undead?[plus][or]ETAHN RU is the haunter's name, and it is NEAR HUT.[plus][or]You should be able to UNEARTH it, once you have the proper equipment.[plus][or]You'll also need to have a reason to do so, or something to show it.[minus][cycling]"
-wire weir	"It's just there to provide a boundary in the Rascal Craals."
+round bay boundary	"It's just there to provide a boundary in the Rascal Craals."
 thin hint	"[one of]The thin hint will remind you where you hid the ruby.[plus][or]The thin hint will also show someone else where you hid the ruby. So bring someone back.[plus][or]The haunter[if haunter is off-stage], once you find it, [end if]will be glad to see what is under the thin hint.[minus][cycling]"
 paler pearl	"[if tea tray is not in lalaland][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Helots' Hostel.[plus][or][a-t-check][plus][or]EAT TEA.[minus][cycling][else][one of]So, you have one half of the pearl, but you want the other.[plus][or]The other pearl-half is in the Achers['] Arches.[plus][or]How would you comb through the arches?[plus][or]SEARCH.[minus][cycling][end if]"
 gleaner	"[one of]The gleaner may help you with the last bit, but it is too small.[plus][or]What could you do to make the GLEANER bigger?[plus][or]The settler gives you where the vowels are.[plus][or]ENLARGE the gleaner.[minus][cycling]"
@@ -26731,11 +26755,13 @@ satyr	"[one of]The satyr seems set on blood and guts, fighting for the sake of i
 badger	"[one of]The badger is embarrassed to be naked.[plus][or]How could it be clothed?[plus][or]Or GARBED?[minus][cycling]"	--	"you can make the badger GARBED"
 leopard	"[one of]The leopard is orangish and jumpsuited, with its paws bound together by some invisible handcuffs.[plus][or]Like the leopard's in jail. Well, it sort of is.[plus][or]But the leopard's been well behaved. Can you get them out early?[plus][or]Yup. If they're PAROLED.[minus][cycling]"	--	"you can make the leopard PAROLED"
 ocelots	"[one of]Those clip on shades aren't very suave on the ocelots.[plus][or]You're not going to find any shades for the ocelots.[plus][or]But you can make the ocelots cooler.[plus][or]Or, better, make the ocelots the COOLEST.[minus][cycling]"	--	"you can make the ocelots COOLEST"
+wire weir	"It's just there to provide a boundary in the Wickeder Wire Deck."
 raptor	"[one of]You only have one move to tackle the raptor.[plus][or]Its roars are worse than the squawking below.[plus][or]Make the raptor a PARROT. This hints what else to do here.[minus][cycling]"	--	"you can make the raptor a PARROT"
 nails	"[one of]They're arranged in a circular pattern, spiraling out.[plus][or]What's an animal whose shell is like that?[plus][or]A SNAIL.[minus][cycling]"	--	"you can make a SNAIL"
 pines	"[one of]They're shaped like a long bird's bill or something.[plus][or]If you listen, you hear bickering.[plus][or]SNIPE.[minus][cycling]"	--	"you can make a SNIPE"
 corona	"[one of]Black and whitish, easy to hide in the dark.[plus][or]RACOON.[minus][cycling]"	--	"you can make a RACOON"
 thrones	"[one of]Sit on them and they'll sting you.[plus][or]What animals sting?[plus][or]HORNETS.[minus][cycling]"	--	"you can make HORNETS"
+disrupt r stupidr	"It's just there to block you from going any other way except back north."
 Elmer	--	Merle
 Merle	"[if parrot is in alcoves]You can't change Elmer or Merle directly, but you may want to mess with the parrot[else]You can't really deal with Elmer and Merle until you have an ally[end if]. [if merle is reflexed][one of]You can, however, make Elmer and Merle change for a Last Lousy Point.[plus][or]What is the opposite of on-the-sly?[plus][or]Elmer and Merle can be made to speak HONESTLY.[minus][cycling][else]You can just enjoy their random squabbles as you figure what the parrot needs to do or become.[end if]"	--	"Elmer and Merle can speak HONESTLY"
 snail	"The snail will help you when the time comes."

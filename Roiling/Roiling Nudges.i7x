@@ -552,7 +552,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "walleyes"	691995705	--	walleyes	--	"The walleyes are a bad crowd, past redemption."
 "craals"	258792829	Rascal Craals	--	--	"[locname]." [RASCAL CRAALS]
 "craal"	162518863	Rascal Craals	--	--	"[locname]."
-"wire"	366057531	Rascal Craals	--	--	"The wire weir is sort of protecting you, here."
 "bury"	331207767	--	ruby	--	"That's not quite it. You file that idea six feet under."
 "end"	217742706	end den	--	--	"[locname]." [END DEN]
 "dourest"	613001369	dourest detours	--	--	"[locname]." [DOUREST DETOURS]
@@ -904,8 +903,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "pool"	283984952	loop pool	--	--	"[locname]."
 "barn"	174838034	bran barn	--	--	"[locname]."
 "wiredeck"	586831492	wickeder wire deck	--	--	"[locname]."
-"wire"	366057531	wire deck	--	--	"[locname-part]."
-"deck"	220773961	wire deck	--	--	"[locname-part]."
+"wire"	366057531	wickeder wire deck	--	--	"The wire weir is sort of protecting you, here."
+"deck"	220773961	wickeder wire deck	--	--	"[locname-part]."
 "tapering"	546393763	Tapering Anger Pit	--	--	"[locname]."
 "anger"	316824940	Tapering Anger Pit	--	imp-here rule	"[locname-part]."
 "pit"	229568823	Tapering Anger Pit	--	imp-here rule	"[locname-part]."
@@ -917,6 +916,8 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "near"	284225238	Anteroom	--	callos-gone rule	"[locname-part]."
 "moot"	315890325	Anteroom	--	callos-gone rule	"[locname-part]."
 "preserve"	838970678	perverse preserve	--	--	"[locname]."
+"disrupt"	537301488	perverse preserve	--	--	"You can never fight stupid. You don't need to, here."
+"stupid"	451977685	perverse preserve	--	--	"You can never fight stupid. You don't need to, here."
 "otter"	493702525	--	--	degen-true rule	"[not-the-reg]."
 "storet"	589976491	--	--	degen-true rule	"[not-the-reg]."
 
