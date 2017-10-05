@@ -3209,8 +3209,7 @@ before doing something when Elmo is visible:
 			continue the action;
 		if current action is going:
 			say "Back in the Means Manse won't help, and Elmo won't let you by." instead;
-		if action is procedural:
-			continue the action;
+		if action is procedural, continue the action;
 		if word number 1 in the player's command is "talk" or word number 1 in the player's command is "ask" or word number 1 in the player's command is "say" or word number 1 in the player's command is "tell":
 			say "You aren't brave enough to say 'Disarm, mad sir!'" instead;
 		say "You can't do much with Elmo around." instead;
@@ -3227,8 +3226,7 @@ before doing something when player is in Reclusion Inclosure and current quip is
 		say "You'd feel rude playing that whistle during a conversation, even one with Elvira." instead;
 	if current action is fliptoing:
 		say "You'll have to finish this chat first." instead;
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if action is blathery:
 		say "Elvira's not going to give you any useful information." instead;
 	if current action is not talking to Elvira and current action is not QBC responding with:
@@ -9416,8 +9414,7 @@ after fliptoing hump:
 	continue the action;
 
 instead of doing something with satchel when player has satchel:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You've gotten the settler from the satchel, and you don't need to do more." instead;
 
 to say eicond:
@@ -9672,8 +9669,7 @@ instead of taking sad ads:
 	say "They aren't actual coupons, only ads, so they're not worth taking. You can examine them if you like."
 
 instead of doing something with the sad ads:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is taking:
 		continue the action;
 	say "There's not much to do with the ads other than reading them.";
@@ -9699,8 +9695,7 @@ carry out examining rich chair:
 	ignore the examine supporters rule.
 
 instead of doing something with chair:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is pushing or current action is pulling or current action is climbing:
 		if niche is visible:
 			say "You don't need to climb the chair--at least, not until you find a way up through the ceiling." instead;
@@ -10255,8 +10250,7 @@ understand "ceiling" as niche.
 a-text of niche is "RRYRRYO". b-text of niche is "RRYRRYO". parse-text of niche is "x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]y".
 
 instead of doing something with niche:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "It's--well, it's not close enough to do much with.";
 
 the chimney is scenery. "It's where your niche was. You can probably put your chair on the bed, then climb the chair to reach it. I won't even make you spell out the details. Just go [b]up[r]."
@@ -10414,8 +10408,7 @@ the evac-cave is scenery in Largely All-Grey Gallery. "It's a bit small, but you
 understand "evac/cave" as evac-cave.
 
 instead of doing something with evac-cave:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is entering:
 		try going inside instead;
 	say "You probably just want to enter the cave or go IN.";
@@ -10476,8 +10469,7 @@ check going down in stable:
 	move player to Largely All-Grey Gallery instead;
 
 instead of doing something with stair:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "Can't do much but go up or down a stair." instead;
 
 check going up in Largely All-Grey Gallery:
@@ -11158,8 +11150,7 @@ check examining logo:
 	the rule succeeds;
 
 instead of doing something to the logo:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "The logo's just there to say what it is. And maybe as a hint to examine.";
 
 check scaning (this is the scan settler and act-ruin curtain parts rule):
@@ -12357,8 +12348,7 @@ section roads
 the roads are part of store u. description is "When you stare just right, the red roads reform to 'Sure to set our...'"
 
 instead of doing something with roads:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "The roads are inside the store. You can really only examine them." instead;
 
 a-text of roads is "RYYRYR". b-text of roads is "RYYRYR". parse-text of roads is "x[sp]-[sp]-[sp]x[sp]-[sp]x".
@@ -12451,8 +12441,7 @@ understand "mmm/mm" as megaton magneto montage when player is in Strip of Profit
 instead of doing something with the megaton magneto montage:
 	if current action is scaning:
 		say "Your settler registers nothing. It looks too dense to change. Besides, it's got information on the stores, and you wouldn't want to lose that." instead;
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "The magneto-montage's not good for much besides looking at. But it's a useful guide.";
 
 description of megaton magneto montage is "It's a sort of directory of all the stores[one of]. You read it through, but you can gloss through it for interesting bits (or even call it LM,) later[or]. You gloss through for what interests you[stopping].[paragraph break][b]CLOSED ON YORPDAY (that's today)[r]: A, D, E, G, J, L, O, Q, S, X, Z[if store b is reflexive][line break][b]FREE SAMPLES: B[r][end if][if store c is not examined][line break][b]NO PRUDES, USED !!!!: C[r][end if][line break][b]DON'T BOTHER UNLESS YOU'VE NOTHING, I MEAN NOTHING, TO DO[r]: H[one of][line break][b]OF HISTORICAL SIGNIFICANCE[r]: F/Forest, I/Sortie, M/Metros, R/Resort[or][stopping][if store k is in strip or store k is in strip][line break][b]CONDEMNED[r]: K, N[line break][end if][b]NOT ELVIRA-APPROVED. ENTER AT OWN RISK[r]: P, U, V, W, Y[if store t is in profits][line break][b]ELVIRA SAYS KEEP EXTRA DOUBLE OUT[r]: T[paragraph break][engrav-note]."
@@ -12525,8 +12514,7 @@ the seats are useless plural-named scenery in lectures. "'If you'd gotten here e
 instead of doing something to the seats:
 	if current action is scaning:
 		say "You consider scanning them, but it'd freak out the audience. Or Ian. Or the lecturer." instead;
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	try examining seats instead;
 
 section passage
@@ -12593,8 +12581,7 @@ instead of doing something with idg:
 		otherwise:
 			say "Ian looks hurt, then blames it on the lack of attention span from the drugs you've been taking. That cheers him up." instead;
 	otherwise:
-		if action is procedural:
-			continue the action;
+		if action is procedural, continue the action;
 		say "Before you can do anything, Ian points at the heartfelt reflections he shared on you. Or at you. But not just plain with you. He's so much bigger than you, it distracts you from whatever you meant to do.";
 
 section reflections
@@ -13354,8 +13341,7 @@ instead of doing something with ashtray:
 			now noun is pipe soot;
 			say "Only the pipe soot does anything to the settler, so you focus on that.[paragraph break]";
 			continue the action;
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You can't do much with the ashtray besides be all 'Artsy, ha!' or 'Ay, trash.'";
 
 oscar-annoy is a truth state that varies. oscar-annoy is usually false.
@@ -13375,8 +13361,7 @@ instead of eating pipe soot:
 	say "Well, it doesn't SMELL that bad, but...umm, no."
 
 instead of doing something to the runed book:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "Best not try anything fancy. You probably want to get that book back to [if list o toils is examined]Brother Horbert[else]someone who can use it properly[end if].";
 
 understand "under" as a mistake ("Wrong preposition.") when the-b is visible
@@ -13469,8 +13454,7 @@ section cracks you followed
 the cracks you followed are useless scenery. "They led you here on the road--no, near the un-road to near No-Gal Logan."
 
 instead of doing something with the cracks you followed:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "There's not too much to do with them, now they've led you here."
 
 chapter un-road
@@ -13478,8 +13462,7 @@ chapter un-road
 the un-road is scenery. "The un-road must lead to No-Gal Logan. But how to follow it?"
 
 instead of doing something with un-road:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "The un-road leads somewhere, you think. But how to follow it to No-Gal Logan?";
 
 understand "trail" as un-road.
@@ -13532,8 +13515,7 @@ instead of entering mist:
 	say "Part of you admits it will be tricky to figure out. Maybe if you entered the right way, with a good plan...or a bad..."
 
 instead of doing something to mist:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is taking:
 		say "Mistake. Ha ha ha." instead;
 	try examining noun instead;
@@ -13547,8 +13529,7 @@ chapter no-gal's boat
 No-Gal's Boat is scenery in Ripe Pier. "You can barely see it, but you can't hear No-Gal Logan calling you."
 
 instead of doing something with no-gal's boat:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "Just poking it won't help you get there. You need to find a way to it."
 
 before going inside in Ripe Pier:
@@ -13719,8 +13700,7 @@ to say more-pos:
 	say "You may want to pay attention to something more positive and alive"
 
 instead of doing something with a sidewalk laid askew:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "[more-pos].";
 
 section ruts
@@ -13728,8 +13708,7 @@ section ruts
 the rustin ruts are useless scenery in Bustle Sublet. printed name of ruts is "rustin['] ruts". understand "rustin ruin" and "rustin/ruin" as ruts. "If you stare too long, you may get in a rut yourself."
 
 instead of doing something with rustin ruts:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "[more-pos].";
 
 chapter sob ever verbose
@@ -14063,8 +14042,7 @@ before scaning rivets (this is the switch to praise rule):
 		try scaning prai instead;
 
 instead of doing something with rivets:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is taking:
 		say "Petty theft is not big thinking! You'd do better to take a message from the rivets.[paragraph break]Plus, you don't have the right tool." instead;
 
@@ -14191,8 +14169,7 @@ the secure door is scenery in Upscale Capsule. "It isn't even to be thought abou
 instead of doing something with the secure door:
 	if current action is opening:
 		say "[if noise is in Upscale Capsule]And let that person in? No[else]You have too much to do. No sneaking out[end if]!" instead;
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You don't even want to think about that door with all you have to do."
 
 chapter desk, checklist and vanity
@@ -14244,8 +14221,7 @@ after fliptoing noise:
 	continue the action;
 
 instead of doing something with the noise:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is objasking about or current action is asking about:
 		say "You don't want to step down from a strong negotiating point."
 
@@ -14258,8 +14234,7 @@ a-text of divorces is "RYRRYRYR". b-text of divorces is "PGRRYRGR". parse-text o
 instead of doing something to DIVORCES:
 	if current action is taking:
 		say "No. It's best read briefly, if at all." instead;
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "DIVORCES is mostly for reading, mostly, unless you have an insight otherwise." instead;
 
 understand "maters" and "tamers" as a mistake ("Such people would be beneath your delegational abilities.") when stream is visible.
@@ -14353,13 +14328,11 @@ check scaning playbill for the first time:
 	say "You see only six lights, which means it's probably the text on the playbill.";
 
 instead of doing something with playbill:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You can just examine or read the playbill, but that's about it."
 
 instead of doing something with eddie's song:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You can just listen to Eddie's song for evocative details and stuff."
 
 understand "signer" as a mistake ("No. Your eyes redden as you remember you are already a signer. The singer makes you want to do something else.") when player is in Upscale Capsule and playbill is in Upscale Capsule.
@@ -14703,8 +14676,7 @@ check taking dam:
 	say "You take in the dam's beauty for a moment." instead;
 
 instead of doing something to mad dam:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	try examining mad dam instead;
 
 Burnt Brunt is south of Grey Gyre.
@@ -14714,8 +14686,7 @@ some gasp gaps are useless plural-named scenery in burnt brunt. "You can't see m
 understand "gasp-gaps" as gasp gaps.
 
 instead of doing something to gaps:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	try examining gaps instead;
 
 The bored yak is a neuter animal in Burnt Brunt. "[one of]A yak languishes here. It looks bored, and that drab yoke around it doesn't help[or]The bored yak with the drab yoke is still hanging around[stopping]."
@@ -14948,8 +14919,7 @@ some permadust is irrelevant scenery in burnt brunt. "It's settled nicely in the
 some spumed tar is irrelevant scenery in burnt brunt. "It's settled nicely in the dumpster, blending with the permadust."
 
 instead of doing something with an irrelevant thing:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	repeat through table of irrelevance:
 		if noun is irr entry:
 			say "[irrtext entry]";
@@ -15417,8 +15387,7 @@ instead of doing something with priv-shack:
 		try going north instead;
 	if current action is attacking:
 		say "Whack the shack? Back!" instead;
-	if action is procedural:
-		continue the action instead;
+	if action is procedural, continue the action;
 	say "Not much to do but enter the shack by going north." instead;
 
 check going west:
@@ -15648,8 +15617,7 @@ understand "pop" as a mistake ("It's certainly not pop. Which you couldn't do mu
 understand "soda" as a mistake ("Don't be a sod. It's cola. It has to be.") when dirty looking cola is visible.
 
 Instead of doing something with the fizzy cola:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "Now that the fizzy cola's in the mug, you will ration it as you need to."
 
 the bottle of dirty looking cola is a thing. description is "It's Café Fine Caffeine cola, and it's almost empty. In place of nutritional information, you read the following:[paragraph break]O-CAL!!! Soda -> A sod. Pop !-> O.P.P."
@@ -15828,8 +15796,7 @@ check scaning computer screen:
 		try scaning compiled code instead;
 
 instead of doing something with the compiled code:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You can really only examine it--or--what do you do with code that won't budge or be dug?" instead;
 
 check restarting the game when player is in shack:
@@ -16086,8 +16053,7 @@ understand "diver" as a mistake ("It's you that'll need to dive into some code."
 the golden dongle is part of the hard drive. description of golden dongle is "The golden dongle looks powerful and important. Computers in Yorpwald don't have one unless they're really important. It can do stuff like dual-op upload, whatever that is, but even better, it's more universal than a USB port, and you can attach all sorts of things to it."
 
 instead of doing something with dongle:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is taking:
 		say "You need the dongle to connect the hard drive to other computer parts." instead;
 	say "You don't need to do anything fancy with the dongle."
@@ -16108,8 +16074,7 @@ check scaning USB:
 			say "Good sport!" instead;
 
 instead of doing something with usb:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is taking:
 		say "Well, you don't need to take it in THAT sense." instead;
 	say "No need to do anything fancy with the USB. Well, anything fancy other than using your fancy powers. Really, anything fancy with them. It's only three letters." instead;
@@ -16427,8 +16392,7 @@ check fliptoing scratch paper:
 the speel is auxiliary scenery. "The jargon's a bit beyond you. Maybe if your mind were fully sharp, you'd know what to do."
 
 instead of doing something with the speel:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "It's just plain computer text.";
 
 a-text of speel is "RRYYR". b-text of speel is "PRGGR". parse-text of speel is "s[sp]x[sp]e[sp]e[sp]x". speel is cheat-spoilable.
@@ -16837,8 +16801,7 @@ the perma-amper is auxiliary. description is "It's--well, I'm not big on electro
 a-text of perma-amper is "RYRYR.". b-text of perma-amper is "R?RYR". parse-text is "x[sp]-[sp]m[sp]a[sp]x". perma-amper is cheat-spoilable.
 
 instead of doing something with the perma-amper:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is remaping:
 		continue the action;
 	say "You really aren't sure of the right way to fiddle with it. Maybe there is one.";
@@ -17410,8 +17373,7 @@ instead of entering canoe:
 	say "It's too narrow. How stupid of the designer. Plus it has no oars. Maybe the raft or boats can get you across.";
 
 instead of doing something with fish:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "Not much you can do with the fish."
 
 a-text of canoe is "YRYYR". b-text of canoe is "YRYYR". parse-text of canoe is "-[sp]x[sp]-[sp]-[sp]x".
@@ -17443,8 +17405,7 @@ the raft is scenery.
 a-text of raft is "RYRR". b-text of raft is "RGRP". parse-text of raft is "x[sp]a[sp]x[sp]t". raft is parse-spoilable.
 
 instead of doing something with boats:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is sobating:
 		continue the action;
 	say "You're too far away from the boats to do anything to them. Or have them do something to you.";
@@ -17561,8 +17522,7 @@ check scaning when player is in freight:
 		try scaning plea instead;
 
 instead of doing something with pale plea:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You can't do much besides listen to the plea." instead;
 
 chapter leaping
@@ -18243,8 +18203,7 @@ lev-pull is a truth state that varies.
 instead of doing something with lever:
 	if current action is pushing or current action is pulling or current action is taking: [check pulling lever/check pushing lever]
 		say "[if lever is reflexed]It's not fun enough to tinker with, any more.[else]Nothing happens, but you're still just excited to find it. Maybe you can do something superfluous to show that![end if]" instead;
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You're not sure what you can do with the lever, really[if lever is reflexed], and it doesn't seem as fun any more anyway." instead;
 
 check going outside in Den Loft:
@@ -18265,8 +18224,7 @@ the stupid paper necklace is a cluey thing. description is "It's red and is cut 
 the papery yapper wears the stupid paper necklace.
 
 instead of doing something with stupid paper necklace:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "The necklace isn't worth meddling with beyond maybe giving an odd clue."
 
 description of papery yapper is "He looks precisely folded, but also shifty, like he could be bribed. But you probably can't just bribe him directly."
@@ -18304,8 +18262,7 @@ description of dialer is "It's a big intimidating important looking thing. You p
 the jumble is part of the dialer. description is "[if dialer is reflexive]DIALER[else]DERAIL[end if] seems to indicate its current task."
 
 instead of doing something with jumble:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "The lettering looks like it can be shifted around to things you can do."
 
 check scaning jumble:
@@ -18416,8 +18373,7 @@ check taking the wipes:
 	say "Aunt Tuna asks 'Really, what COULD you want with those.' She nods at you, and you pull your hand back. Maybe if you were quicker, you could take them." instead;
 
 instead of doing something with the raw red drawer:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	else:
 		say "'Disturb? I'd burst!' says Aunt Tuna[if dent is visible], as she mentions that DENT is ugly enough[end if].";
 
@@ -19835,8 +19791,7 @@ understand "yaws" and "sway-ways" as sway ways.
 instead of doing something with sway ways:
 	if current action is entering:
 		try going west instead;
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You have no idea how to fix the sway-ways to make them less unsafe, but you don't need to."
 
 section Campiest Campsite
@@ -20410,8 +20365,7 @@ Shaven Havens is north of Anemic Cinema. Shaven Havens is in Towers. "This place
 the savager ravages are scenery in Shaven Havens. "They're pretty forbidding. Trust me, you don't want to go any way but back south."
 
 instead of doing something with savager ravages:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You don't want to mess with the savager ravages." instead;
 
 havens-visit is a truth state that varies.
@@ -20765,8 +20719,7 @@ the Maturation Natatorium is a backdrop. the Maturation Natatorium is in actionl
 instead of doing something with Maturation Natatorium:
 	if current action is entering and player is in Salted Deltas:
 		say "[if atheists are in lalaland]No need to disturb [relig-mf] now you're past[else]You're worried the atheists might give you a working over, verbal or physical might have you strung up for sacrilege. So HOSTILE[end if]." instead;
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is entering:
 		say "It doesn't look very fun, whether or not you'd be pestered by atheists." instead;
 	say "There's nothing much to do with the maturation natatorium. It's just a gaudy structure.";
@@ -20780,8 +20733,7 @@ instead of doing something with Thearchy Hatchery:
 		if player is in strati strait:
 			say "[if the-hostile are in lalaland]No need to disturb [relig-mf] now you're past[else]You're worried [relig-mf] might have you strung up for sacrilege. So HOSTILE[end if]." instead;
 		say "That would probably be sacrilegious. You'd get a good scolding, I'm sure." instead;
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "There's nothing much to do with the Hatchery. It's just a gaudy structure.";
 
 description of Thearchy Hatchery is "It's a pretty impressive structure, with a note 'RIP once-sad deacons: aced, son (just before release 4).' Hmm[if the-hostile is visible]. You'd think [relig-mf] would belong there, but maybe they are trying to preach to whatever masses drop by[end if]."
@@ -20849,13 +20801,11 @@ southwestern shore is scenery in rawest waters. "You can barely see it--the kid 
 northern shore is scenery in rawest waters. "You can barely see it--it's as far as the eastern shore--but it seems darker and more foreboding.". northern shore is undesc.
 
 instead of doing something with the southwestern shore:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "No way to get back to the southwestern shore, really."
 
 instead of doing something with the northern shore:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "It's too far to swim or do much more than magick."
 
 understand "earnest" as a mistake ("The shore wants to get physically closer to you now. You can feel it. But that doesn't do any good. You feel like you made progress, though.") when player is in rawest.
@@ -21312,8 +21262,7 @@ check fliptoing curst palace when player is not in mislit limits:
 	the rule fails;
 
 instead of doing something with the curst palace when player is not in mislit limits:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "The palace is too far away to interact. You need to get closer, and even then, you can probably only examine or scan it. Or say the right word to restore it.";
 
 a-text of curst palace is "[cpset of false]". b-text of curst palace is "[cpset of true]". parse-text of curst palace is "[cpp]".
@@ -21561,8 +21510,7 @@ description of Nerd-Aid is "You can't make out what flavor the Nerd-Aid should b
 instead of doing something with the nerd-aid:
 	if current action is taking or current action is eating or current action is drinking:
 		say "You'd need to buy it, and you've no money, and it's pretty much glorified sugar-water anyway." instead;
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "The Nerd-Aid is not worth doing anything with. To, maybe, but not with.";
 
 section Treading Gradient
@@ -22353,8 +22301,7 @@ instead of doing something with the forces fresco:
 the laminas are useless scenery in alcoves. "Disturbing, really. They depict bizarre mutants designed for warfare, for keeping people down. They're signed, unsurprisingly, VELASCO.". understand "animals/lamina/animal" as laminas.
 
 instead of doing something with laminas:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "The laminas are just part of the whole bad-guy ambiance.";
 
 check going east in alcoves:
@@ -22450,8 +22397,7 @@ the deli rye is an edible auxiliary thing. description is "It looks delicious en
 a-text of deli rye is "RYYRYRO". b-text of deli rye is "RGYRYRO". parse-text of deli rye is "x[sp]e[sp]-[sp]x[sp]-[sp]l[sp]y". deli rye is cheat-spoilable.
 
 instead of doing something with Ed Riley:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is taking:
 		continue the action;
 	if current action is objasking about or current action is asking about:
@@ -23843,15 +23789,13 @@ Elvira wears the Ultimate Mutilate-It Amulet.
 the mutilate-it amulet is amusing. description is "It's very bare except for the words 'Um...a title?' on it."
 
 instead of doing something with the mutilate-it amulet:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "Hm, best not to try anything. It can't zap you if you don't mess with it."
 
 The phrase shaper phaser is an amusing thing. Elvira carries the phaser. description of phaser is "It's curvy and futuristic and gives her the grained endearing to look more like a seraph than an amused medusa."
 
 instead of doing something with the phaser:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You heard rumors. But you did not believe it was true. She can just say something, hit someone with it, and make you forget what you were doing. Even if the amulet doesn't work on you." instead;
 
 check talking to Elvira when current quip is final-quip:
@@ -24167,8 +24111,7 @@ to say coin-per-d:
 	say "[he-she-c] looks stereotypically bloated, hypocritical and plutocratic, though some people find that sort of thing valuable."
 
 instead of doing something with coin-person:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "Doing anything with or too such a horrid counterfeit coin wouldn't be very satisfying or productive. Probably best to get this off your hands for any profit at all.";
 
 to say ollard-hint:
@@ -24307,8 +24250,7 @@ does the player mean doing something with rampage note when rampage note is visi
 description of magenta rope is "Oddly colored. It's got a yellowish tinge."
 
 instead of doing something with megaton pear:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "It's--well, maybe not a megaton, but it sure is heavy. And certainly inedible. Maybe it can be changed to a real fruit."
 
 instead of doing something with rampage note:
@@ -24419,8 +24361,7 @@ a-text of riot cap is "YRRYRYR". b-text of riot cap is "YRRYPYR". parse-text of 
 the apricot is a fruit. "It's a regular apricot. Nothing special."
 
 instead of doing something with riot cap:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You wouldn't want to make the riot cap parotic--you can't imagine violence ahead."
 
 chapter apples
@@ -24457,8 +24398,7 @@ A near arena is scenery in Gates Stage. "[one of]It looks familiar--wait--it's Y
 understand "stadium/admit" and "admit us" as arena when arena is examined.
 
 instead of doing something with a near arena:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You can't do much but look at the arena."
 
 section gs = gates
@@ -24709,8 +24649,7 @@ the viewer is part of the passport. the viewer is reflexive. description is "[if
 a-text of viewer is "RYRYYR". b-text of viewer is "RYRYGR". parse-text of viewer is "x[sp]-[sp]x[sp]-[sp]e[sp]x".
 
 instead of doing something to the viewer:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	try examining the viewer instead;
 
 the searcher is part of the passport. the searcher is reflexive. description is "[if viewer is reflexive]You poke around at the searcher but aren't focused enough. You're convinced it should be good for you, and you can learn from it, but you are having too much fun messing around.[else]You've gotten what you can from it. Through the gates![end if]"
@@ -24718,8 +24657,7 @@ the searcher is part of the passport. the searcher is reflexive. description is 
 a-text of searcher is "RYRYYRRR". b-text of searcher is "RGRYYRRR". parse-text of searcher is "x[sp]e[sp]x[sp]-[sp]-[sp]x[sp]x[sp]x".
 
 instead of doing something to the searcher:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	try examining the searcher instead;
 
 chapter passport stuff
@@ -25163,8 +25101,7 @@ to say gree-desc:
 	say "Tarred literally and figuratively, [he-she] gives off an 'I'm sly. Slimy.' air. Grease agrees with [him-her]"
 
 instead of doing something to greedy-person:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	otherwise:
 		if player has storage:
 			say "You don't want to deal with [greedy-s] any more than you have to." instead;

@@ -4937,8 +4937,7 @@ does the player mean switching on the gadget: it is likely.
 the pit is part of the tagged gadget. pit is undesc.
 
 instead of doing something with the pit:
-	if action is procedural::
-		continue the action;
+	if action is procedural, continue the action;
 	say "You don't need to fiddle with the pit--just examine the tip."
 
 instead of examining pit:
@@ -4947,8 +4946,7 @@ instead of examining pit:
 the tip is part of the tagged gadget.
 
 instead of doing something with the tip:
-	if action is procedural::
-		continue the action;
+	if action is procedural, continue the action;
 	say "The tip's just there to examine, so you know the gadget's setting."
 
 the block setting it to rule is not listed in any rulebook.
@@ -4976,8 +4974,7 @@ the handle is part of the tagged gadget. description of handle is "Just wide eno
 instead of doing something with the handle:
 	if the current action is attacking:
 		say "You couldn't hold the gadget, then." instead;
-	if action is procedural::
-		continue the action;
+	if action is procedural, continue the action;
 	say "The handle is about what it seems to be. Don't worry about it too much."
 
 sg-warn is a truth state that varies.
@@ -5164,8 +5161,7 @@ instead of doing something with the blue lube:
 		continue the action;
 	if the current action is taking:
 		say "[if lube-asked is false]It probably belongs in the PHAIL phial, until you determine otherwise[else]You wouldn't be able to GLEAN or ANGLE then[end if].";
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "The lube's really only good for staring at."
 
 last-lube-turn is a number that varies. last-lube-turn is usually -5.
@@ -6171,8 +6167,7 @@ understand "file" as a mistake ("It looks like you can just cut in line. No need
 understand "olefin" as a mistake ("Organic chemistry involves shuffling things around a lot, too, but ... the line of no life is not organic.") when player is in self-id fields.
 
 instead of doing something with line of no life:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "The line of no life is too incorporeal to interact with[if cruel ones' enclosure is unvisited], but maybe you can imitate it partially to go north[end if].";
 
 turnstile is scenery in Self-ID Fields. "It's one of those full-height deals, so you won't be able to jump it. It doesn't look quite vicious enough to grind you backwards with its teeth, but still, it's shiny and imposing. The top reads TO THE LUPINE LINEUP."
@@ -6249,13 +6244,11 @@ instead of putting on canister:
 understand "blender" as grinder.
 
 instead of doing something with the red ring:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "It's not that important, but it had to be SOME color. You probably want to do stuff with the canister and not the grinder.";
 
 instead of doing something with the grinder:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "The grinder's too sharp to touch.";
 
 instead of entering canister:
@@ -6949,8 +6942,7 @@ The Nick is a room in Sortie. "You're locked in this arty suite of austerity by 
 t-n is privately-named proper-named scenery in the nick. "The nick is all around.". printed name of t-n is "the nick". understand "nick" as t-n. the rgtext of t-n is "[rc][rc][rc][rc][rc][rc][rc]". the lgth of t-n is 7. gpos of t-n is 7. rpos of t-n is 4. the cert-text of t-n is "-[d1][d1][d1][d1][d1][d1]". the rect-text of t-n is "K[d1][d1][d1][d1][d1][ast]N".
 
 instead of doing something with t-n:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 
 section how to get here
 
@@ -7372,8 +7364,7 @@ the manila animal is undesc. it is part of the obligatory fridge. understand "la
 the manila animal is amusing.
 
 instead of doing something with the manila animal:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You've half-destroyed a store already, but you draw the line at aesthetically altering a fridge."
 
 instead of examining the manila animal:
@@ -8064,8 +8055,7 @@ instead of doing something with anapest:
 		continue the action;
 	if the current action is listening:
 		continue the action;
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "The beat is drilled in your head: da da DA da da DA da da DA (repeated. I'll spare you the words, but...)"
 
 instead of going nowhere in moor:
@@ -8512,8 +8502,7 @@ does the player mean doing something with can of beer:
 instead of doing something with the can of beer:
 	if current action is drinking:
 		say "Yuck. The beer's name may be even truer now than when some poor sap bought it." instead;
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You don't really want to get close to it." instead;
 
 does the player mean doing something with the love letter when the love letter is visible: it is very likely.
@@ -8523,8 +8512,7 @@ the soggy love letter is auxiliary scenery. description of soggy love letter is 
 understand "dear inga" and "dear/inga" and "soggy note" as soggy love letter when soggy love letter is visible.
 
 instead of doing something with the soggy letter:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You don't really want to get close to it." instead;
 
 the arena dig flier is auxiliary scenery. lgth of dig flier is 8. gpos of dig flier is 8. rpos of dig flier is 1. rgtext of dig flier is "[rcn][rc][rc][rc][rc][rc][gc][rc]". cert-text of arena dig flier is "-[d1][d1][d1][d1][d1][ast]I[d1]". rect-text of arena dig flier is "G[d1][d1][d1][d1][d1][d1][ast]A". description of arena dig flier is "The flier seems like an invitation to an ARENA DIG--perhaps an arena that never got built, or a shindig in some arena. A reading makes you see red."
@@ -8532,8 +8520,7 @@ the arena dig flier is auxiliary scenery. lgth of dig flier is 8. gpos of dig fl
 the arena dig flier is fixed in place.
 
 instead of doing something with the arena dig flier:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You don't really want to get close to it." instead;
 
 a gardenia is a flower.
@@ -9149,8 +9136,7 @@ after doing something with wands:
 description of wands is "[one of]You lean over to peer at the wands and realize the faeries are watching you stare. You feel embarrassed[or]You've got enough magic for one person. You don't need more[stopping]."
 
 instead of doing something with the wands:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "The wands are the faeries[']. Best not meddle.";
 
 to say he-be:
@@ -9998,8 +9984,7 @@ section siren-resin
 the siren is scenery in Bassy Abyss. rgtext of siren is "[rcn][rc][rc][rc][gc]". rpos of siren is 5. gpos of siren is 3. lgth of siren is 5. cert-text of siren is "-[d1][d1][d1][ast]N". rect-text of siren is "R[d1][d1][d1][ast]N".
 
 instead of doing something with the siren:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is xmxing or current action is attacking:
 		continue the action;
 	if siren is not visible:
@@ -10039,8 +10024,7 @@ the stile is scenery in Astral Altars. "It's reddish. A stile usually provides p
 gpos of stile is 3. rpos of stile is 2. lgth of stile is 5. the rgtext of stile is "[rc][rc][gc][gc][rc]". the lgth of stile is 5. cert-text of stile is "-[d1][d1][d1][d1]". rect-text of stile is "I[d1][d1][d1][ast]T".
 
 instead of doing something with scenery in Altars:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "You probably need to do something with, or to, the stile and tiles."
 
 understand "slite" as a mistake ("That's bad spelling, and it won't shrink your problems.") when player is in Astral Altars.
@@ -10073,8 +10057,7 @@ the sand is useless scenery in Isle.
 description of the sand is "It's not worth digging through[if cork is visible or wings are visible]. You've got something useful, anyway[else]. Maybe the stuff lying around is worthwhile[end if]."
 
 instead of doing something with the sand:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "No use searching for anything like DNAs or a handset in the sand. Isles have sand, so I sort of had to put it here."
 
 the tree is useless scenery in Isle.
@@ -10463,8 +10446,7 @@ section cutlery
 the cruelty cutlery is useless scenery. "It's built for cruel looks, not practicality. But it looks impressive. Like, +2 or +3. Not that numbers are your thing, more words. Or that you want to look too closely. Red Bull Burdell has a firm grip on it."
 
 instead of doing something other than examining cutlery:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is taking:
 		say "No, Red Bull Burdell's not letting go.";
 	try examining cutlery instead.
@@ -10588,8 +10570,7 @@ the spire is amusing scenery in Means Manse. "It makes you calm and relaxed enou
 the toaster is amusing scenery in Means Manse. description of toaster is "It's just a stupid harmless luxury, here for a last bit of cheap wordplay."
 
 instead of doing something with the toaster:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "No more fiddling. You just want to sit back and let stuff sink in."
 
 before going in Means Manse (this is the clue final verb rule):
@@ -11385,8 +11366,7 @@ description of new land is "You'll have to go there to see it all."
 instead of doing something with new land:
 	if current action is entering:
 		try entering the getaway instead;
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	say "Go through the gate to learn more about it."
 
 understand "gate" as getaway when getaway is visible.
@@ -11849,8 +11829,7 @@ the drapes are plural-named scenery.
 understand "cloth" as drapes when drapes are visible.
 
 instead of doing something with the drapes:
-	if action is procedural:
-		continue the action;
+	if action is procedural, continue the action;
 	if current action is cutwithing or current action is unfolding:
 		continue the action;
 	say "This isn't some living room. (Sorry.) Those drapes are thick and oppressive. You'll need something sharp to cut through them."
