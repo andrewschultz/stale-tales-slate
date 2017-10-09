@@ -186,6 +186,14 @@ for my $this (@toHash) {
   #findHash($this, "", $ary{"e"}); print "\n"; next; }
 
   my @these = split( /,/, $this );
+  my $temp;
+  for $temp (@these) {
+    if ( $temp =~ /\/$/ )    # plural syntax
+    {
+      $temp =~ s/\/$//;
+      push( @these, "${temp}s" );
+    }
+  }
 
   if ( @these > -1 ) { print "Checking CSV of list.\n"; }
 
