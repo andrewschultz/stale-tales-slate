@@ -1500,7 +1500,7 @@ dry cake	"[one of]The dry cake isn't useful as-is, but it's part of something th
 red optical beam	"[if keycard-put is true]You already figured how to swipe the keycard[else]You will need to swipe ID to get past the beam and the metallic door[end if]."
 antlers	"[one of]The antlers are gaudy, and it'd be nice to get rid of them, but you don't have to. [plus][or]The condo owner seems to own the antlers. Maybe you could fix that. [plus][or]Make the antlers RENTALS. [minus][cycling]"
 driveway	"The driveway leads to the condo[if cake is not in condo], where you're not welcome[end if]."
-alley-sc	"[if words are in alley]You need to capture the words in the alley[else if tomato is in alley]There's something worth taking in the alley[else]You've done all you need to in the alley[end if]."
+library	"[if words are in Bile Libe]You need to capture the words in Bile Libe[else if tomato is in Bile Libe]There's something worth taking in the alley[else]You've done all you need to in the alley[end if]."
 deadbeat	"[if dry cake is in condo]The deadbeat would like you to take a stand against the condo before you take anything of value. So you should go north.[else if emitter is ungnatted]You can give the emitter to the deadbeat for a refilll.[else]The deadbeat is useless to you now."
 keycard	"[if brocade is in flowers]You need to change the brocade to put it on the keycard.[else][one of]The keycard's a bit bare as is. But the brocade you have could liven it up. [plus][or]What's white with lots of black lines and a few numbers below? [plus][or]That'd be a BARCODE. [plus][or]You'll need to PUT BARCODE ON KEYCARD. [minus][cycling][end if]"
 brocade	"[one of]The brocade isn't really magic, but it can become technological magic. [plus][or]What else is white and black? [plus][or]You can make a BAR CODE, no space necessay. [minus][cycling]"
@@ -1510,13 +1510,13 @@ merchandise	"You only need the heaths or begonias."
 heaths	"[one of]You can change the heaths into something that can hold something you can change the words into[if player has tagged gadget]. The tagged gadget turns up all reds, but it can't detect letter shifts[end if]. [plus][or]Make a SHEATH. [minus][cycling]"
 stems	"The stems clue what the heaths can be."
 begonias	"[one of]Two words on the gadget. Something that holds something. [plus][or]Also, one word is related to sound. [plus][or]Create a NOISE BAG. [minus][cycling]"
-noise bag	"[if player is in alley and words are in alley]OPEN the noise bag to get the words.[else if words are in alley]The noise bag, if opened, can contain sounds.[else if player is in abyss and beast is in abyss]You can OPEN the noise bag to defeat the beast.[else if player is in abyss]The words in the noise bag can't match up to the beats, but they could, to something physical.[else]You don't need to open the noise bag yet.[end if]"
+noise bag	"[if player is in Bile Libe and words are in Bile Libe]OPEN the noise bag to get the words.[else if words are in Bile Libe]The noise bag, if opened, can contain sounds.[else if player is in abyss and beast is in abyss]You can OPEN the noise bag to defeat the beast.[else if player is in abyss]The words in the noise bag can't match up to the beats, but they could, to something physical.[else]You don't need to open the noise bag yet.[end if]"
 words	"[if player is in abyss]This is the place to change the words[else if begonias are in flowers and heaths are in flowers]What you do with the words depends on what reward you get from the fairies[else if heaths are in flowers]Since you got the heaths, you can change the words right away[else]With the begonias, you can't change the words until the end of your adventure[end if]."
 sword	"[if beast is visible and siren is not visible]Attack the beast[else if beast is visible]You need a better grip on the sword[else if sheath contains sword]You should draw the sword around the source of the noise[else]The sword can't be used, yet. You can't go waving it in the city[end if]."
 soundproofed walls	"Not useful for you but for the nerds, so they can think."
 faeries	"The faeries want a flower. [if player has gardenia]You have one in your inventory[else]Maybe you can clean up some place in the city to get one[end if]."
 scratchings	"They indicate the brocade [if brocade is in elf row's flowers]is[else]was[end if] free."
-sheath	"[if player is in alley and words are in alley][one of]What fits in a sheath? [plus][or]Make a SWORD. [minus][cycling][else if words are in alley]You need to find something to put in the sheath. Try the alley.[else if player is not in abyss]You've got no good place to use the sword.[else]You can TAKE SWORD once you're ready.[end if]"
+sheath	"[if player is in Bile Libe and words are in Bile Libe][one of]What fits in a sheath? [plus][or]Make a SWORD. [minus][cycling][else if words are in Bile Libe]You need to find something to put in the sheath. Try the Bile Libe.[else if player is not in abyss]You've got no good place to use the sword.[else]You can TAKE SWORD once you're ready.[end if]"
 controls	"The controls need to fit into a recess[if neon pig is in lalaland], maybe like the one behind the pig[else], but you haven't seen or created any yet[end if]."
 instructions	"Just a little something to make it plausible to muddle with the controls."
 red glowing cursive script	"Provides a clue what the neon pig should become."
@@ -1687,8 +1687,8 @@ carry out metros-hinting:
 			try objhinting drainage instead;
 		if elf row's flowers is not visited:
 			all-say "Since you've got the gardenia, you can and should visit the flower shop east of the red camp." instead;
-		if alley is not visited:
-			all-say "You can go west from the camp to an alley." instead;
+		if bile libe is not visited:
+			all-say "You can go west from the camp to a library." instead;
 		if dry cake is in condo:
 			all-say "You should try going [if condo is visited]back north to the condo[else]north[end if]. There are several places to visit and people to deal with." instead;
 		if Anti-Cool Location is not visited:
@@ -1709,7 +1709,7 @@ carry out metros-hinting:
 				try objhinting dry cake instead;
 			all-say "You will need to get by that door. You should find items lying around in the camp and the flower shop." instead;
 		if nerds-unwelcome is true:
-			all-say "You are pretty much done here. You've annoyed the nerds. [if heaths are in flowers and begonias are in flowers]Maybe check out the flower shop northeast[else if words are visible or sword is visible]You can maybe check the terminal to the south[else]Maybe check out the alley[end if]." instead;
+			all-say "You are pretty much done here. You've annoyed the nerds. [if heaths are in flowers and begonias are in flowers]Maybe check out the flower shop northeast[else if words are visible or sword is visible]You can maybe check the terminal to the south[else]Maybe check out the Bile Libe[end if]." instead;
 		all-say "You've unlocked the way east here. You shouldn't need to do any more." instead;
 	if player is in cramped red camp:
 		if dry cake is in condo:
@@ -1729,14 +1729,14 @@ carry out metros-hinting:
 		if heaths are in flowers and begonias are in flowers:
 			all-say "Take a flower. Either flower." instead;
 		if player has sheath or player has noise bag:
-			all-say "You've transformed your flower[if words are not in alley], and you've gotten the words from the alley. So you're done here[else], but you need to use your new item in the alley[end if]." instead;
+			all-say "You've transformed your flower[if words are not in Bile Libe], and you've gotten the words from the Bile Libe. So you're done here[else], but you need to use your new item in the Bile Libe[end if]." instead;
 		all-say "Take a flower. Either flower." instead;
-	if player is in alley:
-		if motto is in alley:
+	if player is in Bile Libe:
+		if motto is in Bile Libe:
 			try objhinting motto instead;
 		if fairy-worthy is false:
 			all-say "You need something from the flower shop to do any more here." instead;
-		if words are not in alley:
+		if words are not in Bile Libe:
 			all-say "You've done what you need here." instead;
 		if player has heaths:
 			try objhinting heaths instead;
@@ -1771,7 +1771,7 @@ carry out metros-hinting:
 			try objhinting lost corn instead;
 		if controls are not in op:
 			try objhinting op instead;
-		all-say "You're done here. You can just go east [if tulip is in anti-cool]once you've got light[else if words are in alley]once you have a weapon[else]for the final confrontation[end if]." instead;
+		all-say "You're done here. You can just go east [if tulip is in anti-cool]once you've got light[else if words are in Bile Libe]once you have a weapon[else]for the final confrontation[end if]." instead;
 	if location of player is Bassy Abyss:
 		if stickyhanded is false:
 			try objhinting siren instead;
@@ -2732,7 +2732,7 @@ definition: a thing (called cand) is angleable:
 	if cand is anapest, decide no;
 	if cand is beats, decide no;
 	if cand is words:
-		if player is not in alley and player is not in abyss, decide no;
+		if player is not in Bile Libe and player is not in abyss, decide no;
 	if cand is cabinet and player is in notices section, decide no;
 	if cand is poem and cand is not folded, decide no;
 	if cand is r2, decide no;
@@ -3374,7 +3374,7 @@ table of Metros anagrams
 the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey	dubdip	vanish	to-room
 drainage	gardenia	"gardenia"	"drainage" or "aged rain" or "arena dig" or "dear inga"	"In a fit of ecological, aesthetic magic-slinging, you transform the drainage and all the flotsam inside it into a much prettier gardenia. The whole underside is still pretty dingy, but hey, free flower. You take it."	true	385034693
 clover	Velcro	"Velcro"	"clover"	"Pop! The clover expands and grows scratchier and darker. It is now a long strip of Velcro. The leaves appear to have expanded into something resembling mittens[if player does not have Velcro]. You pick them up[end if]."	true	467466733
-Motto	tomato	"tomato"	"motto" or "a motto"	"The motto--that is, both words and paper--curls up and bundles into a small sphere, and you almost [if motto is in alley]hesitate to pick it up[else]drop it[end if]. Amazingly, it's not icky-soft or anything, and it doesn't smell TOO bad."	true	421188161
+Motto	tomato	"tomato"	"motto" or "a motto"	"The motto--that is, both words and paper--curls up and bundles into a small sphere, and you almost [if motto is in Bile Libe]hesitate to pick it up[else]drop it[end if]. Amazingly, it's not icky-soft or anything, and it doesn't smell TOO bad."	true	421188161
 lost corn	controls	"controls"	"lost corn"	"The different-colored kernels only flatten out as the lost corn collapses into a circuit board. The controls you possess--for whatever--seem powerful[if deadbeat is visible]. 'Whoah! DUDE!' moans the deadbeat, half staggering to his feet before he collapses from the effort[end if]."	true	575139873
 heaths	sheath	"sheath"	"heaths"	"The heath grows, tangles around itself, and lumps into a sheath. It's too bulky to carry, so you wear it."	true	403942509
 begonias	noise bag	"noise bag"	"begonias"	"The begonias twirl and create a bag. One with weird triangular spikes on the inside. You exclaim surprise at it--the bag whooshes every time you say something."	true	465539431
@@ -4628,7 +4628,7 @@ carry out xmxing:
 		say "Your vision swirls, and you see a kitchen.";
 		ditch-saltine instead;
 	if noun is the location:
-		if player is in alley and words are in alley:
+		if player is in Bile Libe and words are in Bile Libe:
 			say "You stare at where the words may be coming from.";
 			try xmxing words instead;
 		if player is in the moor:
@@ -8561,32 +8561,14 @@ a gardenia is a flower.
 
 description of gardenia is "It's white, and it's just one flower instead of the whole bush. But it's the only one you've seen in the city proper[if elf row's flowers are visited], and people or humanoids who go in for this sort of thing might value it[end if]."
 
-chapter alley
+chapter Bile Libe
 
-there is a room called A Yell Alley. it is in Metros. "This dead-end alley is littered with [if words are visible]words, which almost drown out the intense beats heard elsewhere in the city, and [end if]garbage. Only way out is back east."
+there is a room called Bile Libe. it is in Metros. "This isn't a very good library. It's been ransacked[if words are visible], and words buzz about enough to drown out the intense beats heard elsewhere in the city. The only way out is back east."
 
-garbage is useless scenery in alley. "The garbage smell would make a bear gag--stink bug, gunk bits, etc."
-
-the stink bug is useless scenery in alley. "[bug-report]"
-
-understand "gunk/ bits/" as stink bug.
-
-instead of doing something with the stink bug:
-	if the current action is eating:
-		say "Um, no." instead;
-	say "Not important[one of]. Just here for local flavor. Not very palatable flavor, but flavor nonetheless[or][stopping]."
-
-understand "trash" as garbage.
-
-instead of taking garbage: say "Don't know what you'd hope to take from it--a stink bug? Gunk bits? Plus you'd feel like a beggar[if player wears Velcro]--and it might gunk up your Velcro mittens[end if]."
-
-instead of smelling garbage:
-	try examining garbage;
-
-check going nowhere in alley:
+check going nowhere in Bile Libe:
 	say "Only way out's back east." instead;
 
-some words are a thing in alley. rgtext of words is "[rcn][rc][rc][rc][rc]". gpos of words is 5. rpos of words is 4. lgth of words is 5. cert-text of words is "-[d1][d1][d1][d1]". rect-text of words is "S[d1][d1][d1][ast]D".
+some words are a thing in Bile Libe. rgtext of words is "[rcn][rc][rc][rc][rc]". gpos of words is 5. rpos of words is 4. lgth of words is 5. cert-text of words is "-[d1][d1][d1][d1]". rect-text of words is "S[d1][d1][d1][ast]D".
 
 description of words is "They're not visible[if words are in bag], but you can feel them pulsing against the bag[else], but they certainly sound angry. Sharp. Pointed. Lethal.[end if]."
 
@@ -8608,7 +8590,7 @@ check taking sword:
 	now player has sword instead;
 
 check fliptoing sword:
-	if player is in alley:
+	if player is in Bile Libe:
 		if player does not have sheath:
 			if player has noise bag:
 				say "The words become nastier for a second, forming into a sword. It heads for the noise bag but sees reverses directions and pops back into words. It was the wrong shape for the bag, anyway. Maybe the bag could hold the words, though, being a noise bag.";
@@ -8622,8 +8604,8 @@ check fliptoing sword:
 		say "[if player has noise bag]The time's not right, yet. There's no threat near you[else]You can't go carrying a sword about the city. You don't need to attract attention[end if]." instead;
 
 check opening noise bag:
-	if player is in alley:
-		if words are in alley and player has noise bag:
+	if player is in Bile Libe:
+		if words are in Bile Libe and player has noise bag:
 			now words are in noise bag;
 			say "You open the bag, and you feel the waves and sounds of the words swirling into the bag. You close it." instead;
 	if words are in bag:
@@ -8653,36 +8635,22 @@ check opening noise bag:
 for printing a locale paragraph about the words:
 	set the locale priority of the words to 0.
 
-the words are scenery in alley.
+the words are scenery in Bile Libe.
 
 the sword is a thing.
 
 section motto-tomato
 
-A motto is a thing in alley. "A motto is here. It's on a placard, which would be wholly unnoticeable and useless among all the garbage but for how [i]bad[r] a motto it is."
+A motto is a thing in Bile Libe. "A motto lies here, the only thing close to literature. On initial inspection, it doesn't seem like a very good motto, since A MOTTO in big bold letter takes up half of the plaque, but it's better than nothing."
 
-understand "placard" and "writing" as motto when motto is visible.
-
-instead of putting on garbage:
-	if noun is garbage:
-		say "I'm sure the garbage would feel insulted." instead;
-	say "You're a hero, not a garbage man!";
-
-instead of inserting into garbage:
-	if noun is garbage:
-		say "I'm sure the garbage would feel insulted." instead;
-	say "You're a hero, not a garbage man!";
+understand "plaque" as motto when player is in bile libe.
 
 rgtext of motto is "[rcn][rc][rc][rc][gc][gc]". lgth of motto is 6. gpos of motto is 4. rpos of motto is 6. cert-text of motto is "-[d1][d1][d1][ast]T[ast]O". rect-text of motto is "T[d1][d1][d1][d1][ast]O".
 
-description of the motto is "[ex-placard]It's labeled A MOTTO, and somehow, someone named Too-Apt Pa Otto has managed to make a hash of grammar, logic, math, science and basic human decency in sixty letters. Sixty-four if it were spelled correctly.[paragraph break]I'd tell you what it said, but you-the-person would be the worse for it. It's like Monty Python's funniest joke in the world that way. Even considering it makes you feel worried you'll forget simple stupid stuff, like what's a fruit and what's a vegetable."
-
-to say ex-placard:
-	if the player's command matches the text "placard":
-		say "[one of][i][bracket]Fourth wall note: it's not really, primarily, a placard. People seeing it probably think more, 'Hey! A motto!' than 'Hey! A placard!'[close bracket][r][paragraph break][or][stopping]"
+description of the motto is "It's labeled A MOTTO, and somehow, someone named Too-Apt Pa Otto has managed to make a hash of grammar, logic, math, science and basic human decency in sixty letters. Sixty-four if it were spelled correctly.[paragraph break]I'd tell you what it said, but you-the-person would be the worse for it. It's like Monty Python's funniest joke in the world that way. Even considering it makes you feel worried you'll forget simple stupid stuff, like what's a fruit and what's a vegetable."
 
 after taking the motto:
-	say "You manage take the motto without taking it to heart.";
+	say "You manage take the motto without taking it to heart. Whew! That was close.";
 
 instead of eating motto:
 	say "I hope you're not dumb enough to swallow that. Figuratively or literally.";
@@ -8696,7 +8664,7 @@ instead of eating tomato:
 
 chapter Cramped Red Camp
 
-Cramped Red Camp is east of alley. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. You are quickly excluded from this once-mum commune, since you seem actually busy. An alley lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in red condo].[paragraph break]A driveway with a yard view leads north[else].[paragraph break]The cordoned red condo you're not welcome back at is to the north[end if]. You hear painful music.". Red Camp is in Metros. Red Camp is north of Underside.
+Cramped Red Camp is east of Bile Libe. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. You are quickly excluded from this once-mum commune, since you seem actually busy. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in red condo].[paragraph break]A driveway with a yard view leads north[else].[paragraph break]The cordoned red condo you're not welcome back at is to the north[end if]. You hear painful music.". Red Camp is in Metros. Red Camp is north of Underside.
 
 forest-warn is a truth state that varies.
 sortie-warn is a truth state that varies.
@@ -8800,7 +8768,7 @@ description of deadbeat-shirt is "The DEAD BEAT DEADBEAT text is as teleological
 
 the posh shop is amusing scenery in cramped red camp. "It's apparently called ELF ROW'S FLOWERS with a sub-slogan: 'Go floral or go fall!'"
 
-the alley-sc is scenery in cramped red camp. "The alley looks a bit seedy but not that dangerous.". understand "alley" as alley-sc.
+the library is scenery in cramped red camp. "Libraries aren't supposed to be beautiful, but man, this one looks ugly!".
 
 the barrier is useless scenery in cramped red camp. "[if dry cake is in red condo]It doesn't look electrical[else]You could sneak back under, but you'd get chased[end if]."
 
@@ -8811,7 +8779,7 @@ check going north in Cramped Red Camp:
 check going nowhere in cramped red camp:
 	if noun is up or noun is down:
 		continue the action;
-	say "There're condos north[if dry cake is not off-stage], which you were booted out of[end if], an alley west, a flower shop east, and a seedier area south." instead;
+	say "There're condos north[if dry cake is not off-stage], which you were booted out of[end if], an library west, a flower shop east, and a seedier area south." instead;
 
 the fuzzy clover is a thing in Cramped Red Camp. "A small clover is growing here.". rgtext of clover is "[rcn][rc][rc][rc][rc][rc]". lgth of clover is 6. gpos of clover is 4. rpos of clover is 3. cert-text of clover is "-[d1][d1][d1][d1][d1]". rect-text of clover is "V[d1][d1][d1][d1][ast]O".
 
@@ -9089,7 +9057,7 @@ understand "key/ card/" as keycard.
 description of keycard is "It's plain and metallic[if barcode is part of the keycard], with a barcode that might help with optical scanners[else], and the only thing that indicates it's a keycard is small text saying FOR AUTHORIZED ACCESS ONLY[end if]."
 
 check putting barcode on keycard:
-	say "You peel the barcode, slap it on the keycard, and it is a perfect fit! Also, you stuff the adhesive backing in your pocket, where you forget about it until you can find a proper garbage can. You haven't seen any in this city yet[if player is in alley], and you don't want to add to the garbage piles here[end if].";
+	say "You peel the barcode, slap it on the keycard, and it is a perfect fit! Also, you stuff the adhesive backing in your pocket, where you forget about it until you can find a proper garbage can. You haven't seen any in this city yet[if player is in Bile Libe], and you don't want to add to the garbage piles here[end if].";
 	now adhesive backing is in lalaland;
 	now barcode is part of the keycard instead;
 
@@ -9499,8 +9467,8 @@ check switching on the termite emitter:
 		say "This place has seen enough abuse. Maybe find one that hasn't?" instead;
 	if location is red camp:
 		say "That'd be kind of cruel." instead;
-	if location is alley:
-		say "The termites are the wrong sort of pest for the alley." instead;
+	if location is Bile Libe:
+		say "The termites are the wrong sort of pest for the Bile Libe." instead;
 	if location is elf row's flowers:
 		say "Trust me. You don't want to know what the faeries would do back to you." instead;
 	if location is Anti-Cool Location:
@@ -12475,8 +12443,6 @@ check smelling in Dry Yard:
 check smelling the toga:
 	say "Woo. Stinky. You can't quite identify which animal, being a city slicker." instead;
 
-does the player mean smelling the garbage: it is likely.
-
 instead of entering mattress:
 	try sleeping instead;
 
@@ -12530,8 +12496,6 @@ carry out smelling:
 		say "Okay, it doesn't PHYSICALLY stink." instead;
 	if noun is Hotel:
 		say "You've smelled worse, but the night thing's [if night thing is not visible]lingering stench is [end if]pretty bad." instead;
-	if noun is alley:
-		try smelling garbage instead;
 	if noun is slough:
 		say "I suppose it's a smell of nearby evil or something." instead;
 	if noun is frost forts:
@@ -12570,7 +12534,7 @@ check listening:
 		otherwise:
 			say "The beats are gone, replaced with a beast's roaring[if siren is visible], which clashes nastily with the siren[end if]." instead;
 	if mrlp is metros:
-		if player is in alley:
+		if player is in Bile Libe:
 			if words are visible:
 				if player has heaths:
 					say "'That's just words. Shift them to a weapon, and you'll have something!'" instead;
@@ -12580,7 +12544,7 @@ check listening:
 					if words are not in bag:
 						say "'Put a bag over it!' you hear." instead;
 					otherwise:
-						say "The semi-sheltered alley offers some respite from the beats, especially with the words gone. But not enough." instead;
+						say "The semi-sheltered Bile Libe offers some respite from the beats, especially with the words gone. But not enough." instead;
 				say "The words drown out the beats for the moment. They're sharp words, attacking words, hard to shield yourself from, but they're local enough they can't be twisted." instead;
 		if player is in red camp:
 			try examining music instead;
@@ -14609,10 +14573,10 @@ to unsolve-metros:
 	now begonias are not flipped-yet;
 	now noise bag is off-stage;
 	now fairy-worthy is false;
-	now words are in alley;	[alley]
+	now words are in Bile Libe;	[Bile Libe]
 	now words are not flipped-yet;
 	now sword is off-stage;
-	now motto is in alley;
+	now motto is in Bile Libe;
 	now motto is not flipped-yet;
 	now tomato is off-stage;
 	now tulip is in Anti-Cool Location;	[special place]
