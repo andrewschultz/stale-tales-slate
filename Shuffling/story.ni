@@ -1389,7 +1389,6 @@ elegy	"[if shotgun is off-stage]The elegy, if read correctly, can give you an id
 gy	--	line of no life
 line of no life	"[if Enclosure is unvisited]The men going through have certain things in common. If you can imitate them, you can get through, too[else]You don't need anything more from the line of no life[end if]."
 banshee	"[one of]You don't need to get rid of the banshee to solve the forest, but you can put it even more in the past. [plus][or]What's a name for something that was? [plus][or]HAS-BEEN. With dash, space or no space. [minus][cycling]"
-cavern	"You don't have to do anything with the cavern."
 spread	"[one of]The SPREAD can become something. Well, by magic. If you fiddle with it, it becomes something else. [plus][or]You can't quite cut the spread as-is, but maybe you could transform it into something less intimidating? [plus][or]You can figure out what the word is from there. [plus][or]The SPREAD becomes DRAPES. [minus][cycling]"
 red asp	"[one of]The red asp is too dangerous to fight, but remember, it started as a SPREAD, also red. [plus][or]Attacking the asp gives another clue, since you turn all red. [plus][or] The asp doesn't leave you feeling very homey. [plus][or]The red asp can become DRAPES. [minus][cycling]"
 drapes	"[if player does not have sliver]You need something that can cut the drapes[else]CUT the drapes with the sliver[end if]."
@@ -3338,7 +3337,7 @@ bread	beard	"beard"	"bread"	"[process-sandwich]The bread seems to grow a fuzzy d
 sliver	silver	"silver"	"silver"	"The sliver changes and grows even more metallic. It becomes a row of six bullets, tied together like plastic twist-off toys, but obviously more lethal."	true	515375383
 livers	sliver	"sliver"	"livers"	"The livers narrow a bit and become more pointy at the end. They are a nice long sliver now[if player does not have sliver], which you pick up[end if]."	true	515375383
 liches	chisel	"chisel"	"liches"	"'Dissolve, vile sods!' you cry for effect. You hear a spectral clapster![paragraph break]As the final shade heads to Hades--sad, eh?--a chisel clatters behind. The chisel doesn't seem to vibrate scarily or anything, so you take it. You're also less distracted now and notice a spread on the north wall--it seems to pulse a bit, as if it could change to something dangerous."	true	379174644
-banshee	has-been	"hasbeen" or "has been" or "has-been"	"banshee"	"The banshee quits moaning and starts screaming as it's sucked in by some dimensional gate opened by a spectral clapster. He is in--not a better place, but a better suited place. Where the fates feast. As not just a has-been but a has-has-been, his moaning will be more appropriate punishment for the souls who have done much worse than he has."	false	478682714
+banshee	has-been	"hasbeen" or "has been" or "has-been"	"banshee"	"The banshee quits moaning and starts screaming as it's sucked in by some dimensional gate opened by a spectral clapster. A gate to--not a better place, but a better suited place. Where the fates feast. As not just a has-been but a has-has-been, its moaning will be more appropriate punishment for the souls who have done much worse than it did."	false	478682714
 red asp	drapes	"drapes"	"red asp"	"Shazam! The red asp crumbles into some far less evil looking drapes. They're still too thick to walk through."	false	414086744
 spread	drapes	"drapes"	"spread"	"The spread briefly turns into a red asp that jumps at you before collapsing into thicker, but less wide, drapes. You won't be able to just walk through them."	false	414086744 [must be 2nd else you get a problem with 2 points]
 Spam	maps	"maps"	"spam"	"[process-sandwich]With a sickening SCHLURP, the [spam] curdles and flattens to form several maps."	true	244002896
@@ -6099,7 +6098,7 @@ check going in sf:
 	say "Hm. You don't have any reason to believe anything interesting's that direction. Except maybe bad interesting, like [one of]having a snake sneak[or]a fauns snafu[or]a stag or gators[or]a stoat making toast of you[or]slickest stickles[at random] or something." instead;
 	the rule succeeds;
 
-description of sf is "You recognize no trees: a sprucy cyprus, or even forensic conifers, and no clear signs of clearings. But [vis-hint]."
+description of sf is "You recognize no trees: a sprucy cyprus, or even forensic conifers, and no clear sign of clearings. But [vis-hint]."
 
 to say vis-hint:
 	say "[if stew is visible or teas are visible]there's a[nuthers] smell[else if shout is visible]you hear a shout[else if thorn is visible]a thorn sticks up here[else]there should be something, but there isn't. BUG[end if]"
@@ -6488,8 +6487,8 @@ check taking a glopmeat:
 		say "You shouldn't put your fingers near the blades." instead;
 	if noun is stuck:
 		say "It's stuck, well, frozen to the wall[if player does not have chisel]. And you can't change that. Well, not with what you've got[end if][if player has chisel][chiz-chiz][end if].";
-		now noun is not stuck;
 		if player has chisel:
+			now noun is not stuck;
 			now player has noun;
 		do nothing instead;
 
@@ -6618,7 +6617,7 @@ chapter Cruel Ones' Enclosure
 
 There is a room called Cruel Ones' Enclosure. It is in Forest.
 
-Enclosure is north of Self-ID Fields. "A creepy acre, yep[if liches are in Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Enclosure]. A red asp guards the way north[else if spread is in Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Enclosure]. Nothing seems to block the way north now[end if][if banshee is visible]. A banshee also wails about his former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields."
+Enclosure is north of Self-ID Fields. "A creepy acre, yep[if liches are in Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Enclosure]. A red asp guards the way north[else if spread is in Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Enclosure]. Nothing seems to block the way north now[end if][if banshee is visible]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields."
 
 to say d-s:
 	say "[if drapes are visible]drapes make[else if red asp is visible]red asp makes[else]spread makes[end if]";
@@ -6628,20 +6627,13 @@ understand "spared" as a mistake ("That is too passive, to ask to be spared.") w
 check going nowhere in Enclosure:
 	say "There seems to be nothing, or worse than nothing, that way." instead;
 
-cavern is scenery in Enclosure.
-
-description of cavern is "[if liches are visible]You try to crane your neck around the liches, but they move to block you from even LOOKING. Tough crowd[else]You don't know where it leads[end if]."
-
-instead of entering cavern:
-	try going north.
-
 Include (-
 	has transparent animate
 -) when defining banshee.
 
 the banshee is scenery in Enclosure. rgtext of banshee is "[rcn][rc][rc][rc][rc][gc][rc]". lgth of banshee is 7. gpos of banshee is 5. rpos of banshee is 3. cert-text of banshee is "-[ast]A[d1][d1][d1][ast]E[d1]". rect-text of banshee is "H[d1][d1][d1][d1][d1][ast]N".
 
-description of banshee is "You can't see him, but you can hear him."
+description of banshee is "You can hear but not see it."
 
 the has-been is useless scenery. the has-been is undesc. understand "has been" and "hasbeen" as has-been.
 
@@ -11230,7 +11222,7 @@ carry out scaning:
 	now scanned-g is true;
 	if noun is banshee:
 		if liches are visible:
-			say "The banshee's annoying but not as obstructive as the liches. In fact, you can't tell where he is." instead;
+			say "The banshee's annoying but not as obstructive as the liches. In fact, you can't tell where it is." instead;
 	if noun is tulip and nerds are visible:
 		say "[one of]One of the nerds demands to see your gadget. They poke around at it, babble about the sorr of capacitors and resistors needed to get the thing working, convince you they know more about it than you do, and hand it back[or]'Insanity is doing the same thing over and over again and expecting to get different results!' one of them says. Stiff high-fives follow all around.[or]You hear exasperated sighs.[stopping]." instead;
 	if noun is faeries:
@@ -11973,6 +11965,8 @@ part nose-ones
 
 the ones are a plural-named thing in the bucket. the ones are flippable. rgtext of ones is "[rcn][rc][rc][rc]". lgth of ones is 4. gpos of ones is 2. rpos of ones is 3. cert-text of ones is "-[d1][d1][d1]". rect-text of ones is "N[d1][d1][ast]E".
 
+understand "eon" and "eons" as a mistake ("No, you can't afford to wait that long.") when player has nose or location of player is location of ones.
+
 understand "1s" and "one" as ones.
 
 check taking the ones:
@@ -12070,9 +12064,9 @@ description of liches is "They seem to be moaning about being reduced to a tool 
 
 check listening when player is in Enclosure:
 	if liches are visible:
-		say "The liches are whining about their former lives. 'Tried to...I rotted...' One was a sculpted abstract art worth far less than his fees, one cheated others for any amount of money he felt, and one was an obsessive bodybuilder. All forgot about their spiritual life[if banshee is visible]. They almost drown out the banshee's screams[end if]." instead;
+		say "The liches are whining about their former lives. 'Tried to...I rotted...' One was a sculpted abstract artist worth far less than its fees, one cheated others for any amount of money it felt like, and one was an obsessive bodybuilder. All forgot about their spiritual life[if banshee is visible]. They almost drown out the banshee's screams[end if]." instead;
 	if banshee is visible:
-		say "The banshee is still moaning. It'd be nice to get rid of him, but he doesn't seem threatening." instead;
+		say "The banshee is still moaning. Not threateningly, but annoyingly. Be nice to get rid of it, if you could." instead;
 
 The chisel is a thing. it is not fixed in place.
 

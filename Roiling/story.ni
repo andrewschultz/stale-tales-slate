@@ -17582,6 +17582,8 @@ the carps are plural-named nasty vanishing people in Anger Range. "They are snee
 
 understand "craps" as a mistake ("You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.") when player is in anger range and carps are in anger range.
 
+understand "scarp" as a mistake ("Don't flee! Help the poor trout.") when player is in anger range and carps are in anger range.
+
 description of carps is "They are sneering and teasing the poor trout. You're bigger than them, by two feet."
 
 a-text of carps is "RRRYR". b-text of carps is "RRPYR". parse-text of carps is "x[sp]x[sp]r[sp]a[sp]x". carps are cheat-spoilable.

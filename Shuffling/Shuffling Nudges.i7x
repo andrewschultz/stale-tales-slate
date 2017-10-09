@@ -166,12 +166,14 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "tacks"	273510565	sorted trodes	--	--	"[tack-heap]."
 "tack"	177236599	sorted trodes	--	--	"[tack-heap]."
 "notes"	470450178	sorted trodes	--	--	"The notes are just for reading."
+"note"	374176212	sorted trodes	--	--	"The notes are just for reading."
 "muzzle"	596740144	--	shotgun	--	"You don't want to mess the muzzle up. You can fire bullets through it, and that's good enough."
 "stick"	316315593	trodes	--	--	"[vand-art]."
 "figure"	422343163	trodes	--	--	"[vand-art]."
 "figures"	518617129	trodes	--	--	"[vand-art]."
 "zeros"	506726073	--	noughts	--	"They're noughts, not zeros."
 "zeroes"	634532182	--	noughts	--	"They're noughts, not zeroes."
+"eon"	271066194	--	ones	--	"They're ones, not a one."
 "naught"	349193152	--	noughts	--	"[nau-zer-enuf]."
 "naughts"	445467118	--	noughts	--	"[nau-zer-enuf]."
 "nought"	421357911	--	noughts	--	"There's more than one nought."
@@ -194,7 +196,6 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "chickenliver"	789034527	--	chicken liver	--	"[bothlivers]."
 "cowliver"	620394352	--	cow liver	--	"[bothlivers]."
 "cow"	201292935	--	cow liver	--	"[bothlivers]."
-"cavern"	410395643	--	cavern	--	"Worry about the liches in front first."
 "cloth"	287564318	--	--	spread-drapes rule	"No, the material of the [if spread is visible]spread[else]drapes[end if] isn't important, here."
 "doorway"	487539889	--	doorway	--	"You can just go through. You don't want it to change any more, really."
 "cylinder"	543238031	--	silver	--	"It's the shape it should be. You don't need to make a key, or a charm."
@@ -675,7 +676,7 @@ to say forest-no:
 	say "Your compass feels extra jumbled, but--well, you must be close"
 
 to say no-un:
-	say "You can't do much to change the undead. You're not THAT powerful. Maybe specific undead";
+	say "You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later";
 
 to say in-sort of (q - a thing):
 	say "[if q is in lalaland]You already got [the q] from there[else]It doesn't rattle, but [the q] seem to[end if]"
