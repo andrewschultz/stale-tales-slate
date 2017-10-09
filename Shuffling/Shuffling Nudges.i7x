@@ -48,6 +48,10 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 
 table of Stores nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
+"trips"	411166592	trips strip	--	--	"[loc-rej]."
+"tepid"	378404021	trips strip	--	--	"[tid]."
+"tepidicon"	585662537	trips strip	--	--	"[tid]."
+"icon"	207258516	trips strip	--	--	"[tid]."
 "malls"	270164615	trips strip	--	--	"[say-which]."
 "mall"	173890649	trips strip	--	--	"[say-which]."
 "lots"	327550400	trips strip	--	--	"You can manipulate each individual store."
@@ -128,7 +132,6 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "marquee"	596710416	trips strip	--	--	"You don't need to change the marquee[unless sorbet is in lalaland], but maybe it'd be fun to see what's inside[else] now that you figured what it means[end if]."
 "stairs"	428162417	--	sortie-x	--	"No way. That's how you get to the sortie."
 "escalator"	564061533	--	metros-x	--	"No way. It's your way down to the metros."
-"trips"	411166592	trips strip	--	--	"[loc-rej]."
 "roadsign"	425667309	--	store f	--	"[road-sign]."
 "road"	182893287	--	store f	--	"[road-sign]."
 "sign"	242774022	--	store f	--	"[road-sign]."
@@ -632,6 +635,9 @@ this is the degen-true rule:
 	the rule succeeds;
 
 section store nudges
+
+to say tid:
+	say "The depiction is there as a hint, not as a puzzle";
 
 to say say-which:
 	say "You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X"

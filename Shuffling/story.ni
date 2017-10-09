@@ -1312,7 +1312,7 @@ prep paper	"The prep paper gives hints you'll cross off as you finger things."
 broad board	"The broad board's advice is very useful[if gateman is off-stage], especially to summon help[else], even now that you've summoned help[end if]."
 mega ant	"The mega ant is blocking the gateway, but it's an odd shade of red. That's a hint, from the broad board, of what you need to do, or summon."
 saltine	"Eating the saltine will give you one hint."
-pavement	"The pavement will give you some hints what to do in the 'next' area (arbitrarily determined at first.)" [start STORES]
+tepid icon depiction	"The tepid icon depiction will give you some hints what to do in the remaining area(s)." [start STORES]
 wooden sign	"Just a semantic note to try STOREA and not SHOPA."
 go rest flier	"Just general encouragement. Store G isn't relevant to the game."
 storeall	"Try hinting a single store instead."
@@ -3016,7 +3016,7 @@ book region division
 to decide what region is mrlp:
 	decide on map region of location of player.
 
-a region can be unsolved, bypassed or solved. a region is usually unsolved.
+a region can be unsolved, unsolvable, bypassed or solved. a region is usually unsolved.
 
 a region has a number called max-score. the max-score of a region is usually zero.
 
@@ -3030,7 +3030,7 @@ a region has a table name called regtab. a region has a table name called regana
 
 Intro is a region. max-score of Intro is 7. min-score of Intro is 4. regtab of Intro is table of intro nudges. regana of Intro is table of intro anagrams.
 
-Stores is a region. max-score of Stores is 6. min-score of Stores is 4. regtab of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams.
+Stores is an unsolvable region. max-score of Stores is 6. min-score of Stores is 4. regtab of Stores is table of Stores nudges. regana of Stores is table of Stores anagrams.
 
 Forest is a region. min-score of Forest is 15. max-score of Forest is 16. regtab of Forest is table of Forest nudges. regana of Forest is table of Forest anagrams.
 
@@ -3752,6 +3752,7 @@ when play begins (this is the don't use any other besides status window when pla
 	now left hand status line is "[location of player] ([mrlp])[last-scan-thing]";
 	now right hand status line is "[cur-score of mrlp]/[if possibles is true][poss-range][else][max-score of mrlp][end if][if Trips Strip is visited] [bracket][number of solved regions][close bracket][end if]";
 	set the pronoun it to the above-sign;
+	sort the table of iconmaps in random order;
 
 last-was-cert is a truth state that varies.
 scan-to-header is a truth state that varies.
@@ -4276,14 +4277,7 @@ check going inside in Dry Yard:
 
 chapter thickest thickets
 
-Thickest Thickets is a room in Intro. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. Snarled darnels block off passage in [if goat is in thickets]almost all directions, but you can go IN[else]all directions[end if][if darn-flip is false]. They make you mad for some weird reason, but it's probably not REALLY important[end if]."
-
-darn-flip is a truth state that varies.
-
-after fliptoing darnels:
-	now darn-flip is true;
-	min-up;
-	continue the action;
+Thickest Thickets is a room in Intro. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. Snarled darnels block off passage in [if goat is in thickets]almost all directions, but you can go IN[else]all directions[end if][if darn-slan is false]. They make you mad for some weird reason, but it's probably not REALLY important[end if]."
 
 check going nowhere in thickest thickets:
 	say "[one of]You hit a snag, and the [if toga is visible]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in thickets] (you can go IN--there are no specific directions here)[end if][if darn-slan is false]. You suppress an insult that would maybe only make sense if the darnels were sentient[end if]." instead;
@@ -5397,7 +5391,7 @@ chapter Trips Strip
 
 [yeah, redundancy but...]
 
-Trips Strip is a room. "You see what was once a bunch of small malls. Most lots appear vacant or dilapidated[if storeall are examined][exc-which][end if]."
+Trips Strip is a room. "You see what was once a bunch of small malls. Most lots appear vacant or dilapidated[if storeall are examined][exc-which][end if]. A tepid icon depiction is drawn out near various stores."
 
 Trips Strip is in Stores. last-loc of Stores is Trips Strip.
 
@@ -5441,17 +5435,61 @@ to say exc-which:
 		say "[if sofar is nvs], and [else if sofar > 1], [end if]R";
 		now sofar is 1;
 
-pavement is scenery in trips strip. "It's not just a pavement but an event map. [event-map]."
+section tepid icon depiction
 
-to say event-map:
-	if forest is unsolved:
-		say "You see yourself walking past innumerable trees, wearing a disguise through a turnstile, and finally creating some sort of explosion somewhere very cold";
-	else if sortie is unsolved:
-		say "You see yourself making food, entering a sacred area behind a secret passage, and creating some sort of fireworks that seem to land on a castle without harming it";
-	else if metros is unsolved:
-		say "You see yourself picking up several hours and taking a light source into a very deep place underground. You seem to have a hand over one ear in each picture.";
-	otherwise:
-		say "You see yourself hopping from one island to another, climbing a plateau, and dispersing an angry crowd before quaking in fear."
+the tepid icon depiction is scenery in trips strip. "It's not high art, but you [if regions-to-clue is 1]look at the remaining one[else]pick one of the [regions-to-clue in words] at random[end if].[line break][icon-depict]."
+
+to decide which number is regions-to-clue:
+	let temp be 0;
+	if forest is unsolved, increment temp;
+	if metros is unsolved, increment temp;
+	if sortie is unsolved, increment temp;
+	if temp < 2, decide on 1; [then R appears]
+	decide on temp;
+
+table of iconmaps
+icon-rule	icon-text
+forest-unsolved rule	"Near Store F, you see yourself walking past innumerable trees, wearing a disguise through a turnstile, and finally creating some sort of explosion somewhere very cold"
+sortie-unsolved rule	"Near Store I, you see yourself making food, entering a sacred area behind a secret passage, and creating some sort of fireworks that seem to land on a castle without harming it"
+metros-unsolved rule	"Near Store M, you see yourself picking up several hours and taking a light source into a very deep place underground. You seem to have a hand over one ear in each picture"
+resort-ready rule	"Near Store R, you see yourself hopping from one island to another, climbing a plateau, and dispersing an angry crowd before quaking in fear"
+
+this is the forest-unsolved rule:
+	if forest is unsolved, the rule succeeds;
+	the rule fails;
+
+this is the sortie-unsolved rule:
+	if sortie is unsolved, the rule succeeds;
+	the rule fails;
+
+this is the metros-unsolved rule:
+	if metros is unsolved, the rule succeeds;
+	the rule fails;
+
+this is the resort-ready rule:
+	if metros is unsolved or sortie is unsolved or forest is unsolved, the rule succeeds;
+	the rule fails;
+
+icon-index is a number that varies. icon-index is 1.
+
+to say icon-depict:
+	let got-one be false;
+	let current-icon be icon-index;
+	let cycled be false;
+	while cycled is false or icon-index is not current-icon:
+		choose row current-icon in table of iconmaps;
+		consider the icon-rule entry;
+		increment current-icon;
+		if current-icon > number of rows in table of iconmaps:
+			now current-icon is 1;
+			now cycled is true; [this is just to make sure there's no infinite loop]
+		if the rule succeeded:
+			say "[icon-text entry]";
+			now icon-index is current-icon;
+			the rule succeeds;
+	say "You see nothing. You should see something, but you don't.";
+
+section direction redirection
 
 check going down in trips strip:
 	if metros is solved and sortie is solved:
@@ -5747,7 +5785,7 @@ check examining roadsign:
 
 Store G is a sto. understand "store/ 7/seven" as store g.
 
-description of store g is "A flier stapled to the front of the door says [if you-can-advance]REST?! GO![else]GO REST![end if]. There's nothing else interesting about the store, though."
+description of store g is "A flier stapled to the front of the door says [unless you-can-advance]REST?! GO![else]GO REST![end if]. There's nothing else interesting about the store, though."
 
 the go rest flier is scenery in trips strip. go rest flier is undesc.
 
