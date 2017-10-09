@@ -32,7 +32,9 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "darnels"	455342132	--	darnels	--	"[darnels-inst]."
 "notices"	534448609	notices section	--	--	"[loc-rej]."
 "borda"	201312192	notices section	--	--	"The broad board is just there to read."
-"scrawlings"	607313806	notices section	--	--	"Those scrawlings are there to help you. Plus, ten letters, so early? Whew."
+"newland"	450586644	notices section	--	--	"You will have to change the new land one item at a time."
+"tmi"	212178017	notices section	--	--	"The TMIs are there to help you."
+"tmis"	308451983	notices section	--	--	"The TMIs are there to help you."
 "warpy"	399271605	notices section	--	--	"[no-warpy]."
 "old"	149195505	notices section	--	--	"[no-warpy]."
 "doll"	203009344	notices section	--	--	"[stat-at]."
@@ -609,7 +611,7 @@ to say com-chor:
 	say "It's a pretty complex chord[if cur-score of intro is 3]. But you don't seem to need to deal with it[else]. Maybe you can work with something simpler[end if]"
 
 to say loc-rej:
-	say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. [if player has gadget]Your gadget would probably start acting up then, anyway[else if player is in notices]There's a hint device here that'll help, then[else if gadget is off-stage]You'll find a hint device for that soon enough[end if]"
+	say "You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside[if player has gadget]. Your gadget would probably start acting up then, anyway[else if player is in notices]. There's a hint device here that'll help, then[else if gadget is off-stage]. You'll find a hint device for that soon enough[end if]"
 
 to say darnels-inst:
 	if darn-slan is true:

@@ -1281,7 +1281,6 @@ bolt	"[one of]You don't have any key, but that bolt is stopping the door from op
 blot	"The blot is a clue what the bulge could become. It's not useful by itself."
 bugle	"You should PLAY the bugle."
 yard-door	"You can just ENTER the door[if bugle-played is false and bolt is visible] once you figure how to open it[end if]."
-uberthorn	"[if goat is off-stage]Too tangly. Maybe that toga is easier to deal with[else]You got the goat to make a hole in it. Just go IN now[end if]."
 toga	"[one of]The toga can become something else, though it's a bit trickier than the blot to bolt, or bulge to bugle.[plus][or][or]What could the toga become that might eat through the darnels?[plus][or]The toga can become a GOAT. [minus][cycling]"
 toga-writing	--	toga
 shrub	"The shrub and brush clue[unless goat is off-stage]d[end if] you to what you need[unless goat is off-stage]ed[end if] to do with the toga."
@@ -1311,7 +1310,6 @@ getaway gateway	"You can enter it[if gateman is off-stage] with assistance from 
 new land	"You can find out once you enter the gateway."
 prep paper	"The prep paper gives hints you'll cross off as you finger things."
 broad board	"The broad board's advice is very useful[if gateman is off-stage], especially to summon help[else], even now that you've summoned help[end if]."
-scrawlings	--	broad board
 mega ant	"The mega ant is blocking the gateway, but it's an odd shade of red. That's a hint, from the broad board, of what you need to do, or summon."
 saltine	"Eating the saltine will give you one hint."
 pavement	"The pavement will give you some hints what to do in the 'next' area (arbitrarily determined at first.)" [start STORES]
@@ -3317,7 +3315,7 @@ the-from	the-to	exact-text (topic)	text-back (topic)	from-msg	force-take	hashkey
 bulge	bugle	"bugle"	"bulge"	"The ovular shape on the door rumbles then falls off. You see that extra bit is a horn--yes, you've definitely found a bugle[if blot is visible]. It's untainted by the blot which spread to the door--and is still there[else]. Maybe, if you can't figure the bolt, the bugle can do the trick[end if]."	true	337744362	--	--	nowhere
 odor	yard-door	"door"	"odor"	"The odor becomes thick and choking, then a wood you've never smelled before but know it's wood. The odor swirls into a door, with a bolt sticking out into an unseen lock, and a bulge out front.[paragraph break]Wow! Neat! You didn't know you had it in you, and you're still not sure how or why. But you're pretty sure you need to get through that door."	false	255058046	[start intro anagrams]
 bolt	blot	"blot"	"bolt"	"The bolt retracts, and slowly a blot spreads over the door, which swings in and out[if bugle-played is true] just as when you played the bugle[else]. You can probably enter now[end if]."	false	249695339	"You don't want to re-lock the door."
-toga	goat	"goat"	"toga"	"The dingy toga shudders. It seems to rip, make legs, and twist around, like one of those balloon animals you were never good at. All this twisting has left him with an appetite, and he walks over to the delicious thickets and brambles.[paragraph break]He finds a relatively weak spot in the thickets and goes at it. Enough branches make way so that you could make it through if you crouch. Exhausted, he turns around three times and falls asleep.[paragraph break]Man! You actually made something living, this time. And you can even go IN through the darnels, now too[if darn-slan is true]--the ones you slandered nicely. You really took full advantage of this first bit[else], which you could maybe trash right if you think about it. Or you could just move on[end if]."	false	212250115	"The goat seems content enough as-is."
+toga	goat	"goat"	"toga"	"The dingy toga shudders. It seems to rip, make legs, and twist around, like one of those balloon animals you were never good at. And it becomes a goat. All this twisting has left the goat with an appetite, so it walks over to the delicious thickets and brambles.[paragraph break]It finds a relatively weak spot in the thickets and chomps away. Enough branches make way so that you could make it through if you crouch. Exhausted, the goat turns around three times and falls asleep.[paragraph break]Man! You actually made something living, this time. And you can even go IN through the darnels, now too[if darn-slan is true]--the ones you slandered nicely. You really took full advantage of this first bit[else], which you could maybe trash right if you think about it. Or you could just move on[end if]."	false	212250115	"The goat seems content enough as-is."
 nametag	gateman	"gateman" or "gate man"	"nametag"	"Whoah! The nametag pulses and pops in directions you didn't think something that flat could. You hear a gish, then a sigh. A tall, grouchy old man in sober robes so aged you almost say 'Egad' cries 'The eyes! They see!' He grumbles how he shoulda been a portal king in the parking lot, he's such a talking pro. 'Rote scan. Ancestor? No traces.' Then he notices you. 'You--well, you brought me back. Yorpwald's been shuffled. Almost f-flushed. I'm Nat Egam, Tan Mage. See, this isn't some RPG where you can ask everyone on the way for help. I'm pretty much it[if attics are not off-stage]. Oh, nice job fixing the static, too. There'll be worse noise later, but you'll deal with that whenever[end if].'[paragraph break]'Er, oh...or, eh...'[paragraph break]'Brilliant! You're a natural!'"	false	400874126	--	true
 static	attics	"attics" or "attic"	--	"[check-plur]The static cuts off and seems to grow opaque. Then it forms into a small box with a cupola, pyramid, and other shapes. They fit with a click on top of the doll house[if gateman is visible]. Nat Egam golf-claps. 'Good work, though there's worse noise later[what-about-gate].'[else]. Too bad nobody was around to see it![end if]"	false	368680251	--	true
 attics	static	"static"	--	"You undo your artistic work for perhaps more practical considerations like learning how to use the new toys from the cabinet."	false	368680251	--	true
@@ -4278,16 +4276,17 @@ check going inside in Dry Yard:
 
 chapter thickest thickets
 
-Thickest Thickets is a room in Intro. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. Snarled darnels block off passage in [if goat is in thickets]almost all directions, but you can go IN[else]all directions[end if]."
+Thickest Thickets is a room in Intro. "The door you dropped through plumped you right in a dense, prickly garden[one of]. You look around but can't see it any more[or][stopping]. Snarled darnels block off passage in [if goat is in thickets]almost all directions, but you can go IN[else]all directions[end if][if darn-flip is false]. They make you mad for some weird reason, but it's probably not REALLY important[end if]."
 
-the uberthorn is privately-named scenery in Thickest Thickets. "The thickets are plenty and thick-set (sorry,) a plant-kingdom comb-over with prickles all up and down it. You can't tell where it starts or ends, but no way you'll sneak through it without getting cut up pushing it aside to go, well, whatever way it's blocking you from going.". understand "ube" as uberthorn when player is in thickets.
+darn-flip is a truth state that varies.
 
 after fliptoing darnels:
+	now darn-flip is true;
 	min-up;
 	continue the action;
 
 check going nowhere in thickest thickets:
-	say "[one of]You hit a snag, and the [if toga is visible]toga[else]passage inside[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if darn-slan is false]. You suppress an insult that would maybe only make sense if the darnels were sentient[end if]." instead;
+	say "[one of]You hit a snag, and the [if toga is visible]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in thickets] (you can go IN--there are no specific directions here)[end if][if darn-slan is false]. You suppress an insult that would maybe only make sense if the darnels were sentient[end if]." instead;
 
 carry out fliptoing goat:
 	if player has toga:
@@ -4312,7 +4311,8 @@ check wearing the toga:
 
 understand "thickets/thickest" and "thickest thickets" as darnels when player is in thickets.
 
-the snarled darnels are plural-named scenery in Thickest Thickets. "Well, they're tangled enough, you'd probably get hurt going through them."
+the snarled darnels are plural-named scenery in Thickest Thickets. "The thickets/snarled darnels are plenty and thick-set (sorry,) a plant-kingdom comb-over with prickles all up and down it. You can't tell where it starts or ends, but [if toga is in lalaland]the goat did chomp out a way INSIDE[else]no way you'll sneak through it without getting cut up pushing it aside to go, well, whatever way it's blocking you from going[end if].".
+
 
 understand "sandler" as a mistake ("I award you zero points for that anagramming try, and may God have mercy on your soul[if darn-slan is false]. Okay, actually, you're close to one point[else] for trying to sneak another point[end if].") when player is in Thickest Thickets.
 
@@ -4320,7 +4320,7 @@ understand "landers" as a mistake ("There will be better hints than a manners ad
 
 the rgtext of snarled darnels is "[rcn][rc][rc][rc][rc][rc][rc]". the lgth of darnels is 5. gpos of darnels is 7. rpos of darnels is 3. cert-text of darnels is "[set-bug]". rect-text of darnels is "[set-bug]".
 
-the goat is an animal. "The goat is half-sleeping here. He's probably best left that way."
+the goat is an animal. "The goat is half-sleeping here. It's probably best left that way."
 
 understand "animal" as goat when goat is visible.
 
@@ -4370,10 +4370,14 @@ carry out slandering:
 
 chapter Notices Section
 
-Notices Section is a room in Intro. "[one of]You're not sure what to do here, and there's no welcoming committee. But there's a broad board with various scrawlings[or]The broad board has some scrawlings you [if broad board is unexamined]haven't read yet[else]figure will be useful[end if][stopping]."
+Notices Section is a room in Intro. "[one of]You're not sure what to do here, and there's no welcoming committee. But there's a broad board SMIT with TMIs[or]The broad board is SMIT with TMIs you [if broad board is unexamined]haven't read yet[else]figure will be useful[end if][stopping]."
+
+understand "tmi/tmis" as broad board when player is in notices section.
+
+understand "mist" as a mistake ("No, those TMIs on the broad board are useful.") when player is in notices section.
 
 instead of taking gateman:
-	say "'Gateman, get a man, very clever. But thing is, you'll be working with things, not ideas or actions."
+	say "'Gateman, get a man, very clever. But thing is, you'll be working with things, not ideas or actions.'"
 
 to say get-a-man:
 	if notices section is unvisited:
@@ -4403,12 +4407,7 @@ check going nowhere in Notices Section:
 
 section broad board
 
-the scrawlings are part of the broad board. the scrawlings are undesc.
-
-instead of examining the scrawlings:
-	try examining the broad board;
-
-the broad board is scenery in notices section."[one of]Welcome to YORPWALD![paragraph break]OUR NEED:[paragraph break]Of, well, fellow (sorry, ladies--dictionary's fault, not ours) willing to turn self into humiliating identification to aid adventurers in rescuing our fair land. Must have strength or magic touch to raise big metal gate. Benefits include unlimited complaining to rescuer/prospective hero. Obligations include explaining situation to rescuer/prospective hero. Risks include hero getting stuck on requisite four- then three-letter word combination to release you.[paragraph break][2dn]fellow named Terry to allow quick way for temporarily stuck adventurers to RETRY and return to Trips Strip.[paragraph break]You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.[board-note][or][2dn]quester request: text adventurer with savoir-savior to save shuffled Yorpwald from being fflushed. High chance of real fun, flaneur, low chance of funeral. No crudities like diuretics needed! Also, nothing above eight letters.[line break][2dn]Canny Nancy or Brian Brain preferred to Manly Lyman or Army Mary. Skill kills![line break][2dn]Scrabble, MasterMind, and/or Boggle expertise a plus. Simple on-the-game training provi... oh! Hi! You're here. Futz with the static if you want[if nametag is visible]. Nametag: it grants starting. You can't just walk into the gateway--and not like you can find [first custom style]a tan gem[end if]. But you won't have to go to [first custom style]Mt. Egana (Mt. Agena?) [r]I forget! [paragraph break]Also, the color red is all wrong, if you see too much of it. So look out for red.[stopping]"
+the broad board is scenery in notices section."[one of]Welcome to YORPWALD![paragraph break]OUR NEEDS ENDURE SO![paragraph break]--Person willing to turn self into humiliating identification to aid adventurers in rescuing our fair land. Must have strength or magic touch to raise big metal gate. Benefits include unlimited complaining to rescuer/prospective hero. Obligations include explaining situation to rescuer/prospective hero. Risks include hero getting stuck on requisite four- then three-letter word combination to release you.[line break][2dn]fellow named Terry to allow quick way for temporarily stuck adventurers to RETRY and return to Trips Strip.[paragraph break]You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.[board-note][or][2dn]quester request: text adventurer with savoir-savior to save shuffled Yorpwald from being fflushed. High chance of real fun, flaneur, low chance of funeral. No crudities like diuretics needed! Also, nothing above eight letters.[line break][2dn]Canny Nancy or Brian Brain preferred to Manly Lyman or Army Mary. Skill kills![line break][2dn]Scrabble, MasterMind, and/or Boggle expertise a plus. Simple on-the-game training provi... oh! Hi! You're here. Futz with the static if you want[if nametag is visible]. Nametag: it grants starting. You can't just walk into the gateway--and not like you can find [first custom style]a tan gem[r][end if]. But you won't have to go to [first custom style]Mt. Egana (Mt. Agena?) [r]I forget! [paragraph break]Also, the color red is all wrong, if you see too much of it. So look out for red.[stopping]"
 
 to say board-note:
 	pad-rec-q "board";
@@ -10157,6 +10156,8 @@ Rived Drive is a room in Resort.
 does the player mean climbing the poles: it is likely.
 does the player mean climbing the slope: it is likely.
 
+understand "verdi" as a mistake ("You don't need a musical score for this adventure.") when player is in Rived Drive.
+
 understand "loot" as a mistake ("You don't have time for treasure with Red Bull Burdell waiting.") when player is in Rived Drive and tool shed is in Rived Drive.
 
 check going nowhere in Rived Drive:
@@ -11787,12 +11788,14 @@ check talktoing:
 		try asking noun about "mumblety-peg" instead;
 	if noun is the player:
 		try asking player about "mumbletypeg" instead;
+	if noun is masses:
+		say "They seem preoccupied with themselves." instead;
 	if noun is not a person:
-		say "This place doesn't have that sort of magic." instead;
+		say "This place doesn't have that sort of magic. Best talk to people, or at least human-type things." instead;
 	if noun is nerds:
 		say "You engage in small talk, and they start showing off weird knowledge, as if they're prodding you to ASK about something. Hm, what to ASK NERDS about.";
 	else:
-		say "You engage in small talk, which peters out. Perhaps you should ASK about something, instead.";
+		say "You aren't sure what to ask, so the conversation isn't very incisive. Perhaps you should ASK about something, instead.";
 	try asking noun about "mumbletypeg" instead;
 
 tell-warn is a truth state that varies.

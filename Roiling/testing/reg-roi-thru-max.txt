@@ -380,6 +380,10 @@ Score in a scenario: 1 out of 33 total points in the current region, Presto. Low
 
 >umph
 Your score has just gone up by one point
+
+>score
+Score in a scenario: 2 out of 33 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 33.
+
 >phooey
 Your score has just gone up by two points
 >score
