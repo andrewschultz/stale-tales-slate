@@ -166,13 +166,26 @@ for my $idx ( 0 .. $#ARGV ) {
         "TEMPLATE string hashval region room? whatseen? rule? gametext:\n";
       next;
     };
+    if ( $this =~ /[a-z]\+[a-z]/ ) {
+      my @these = split( /\+/, $this );
+      my $i;
+      my $j;
+      for $i ( 0 .. $#these ) {
+        push( @toHash, $these[$i] );
+        for $j ( $i + 1 .. $#these ) {
+          push( @toHash, join( '', @these[ $i .. $j ] ) );
+        }
+      }
+    }
+    else {
+      push( @toHash, $this );
+    }
   }
-  push( @toHash, $this );
 }
 
 for my $this (@toHash) {
   my $force = 0;
-  if ( $this =~ /\+/ ) {
+  if ( $this =~ /\+$/ || ( $this =~ /^\+/ ) ) {
     $this =~ s/\+//g;
     $force = 1;
   }
