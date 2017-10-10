@@ -3830,12 +3830,7 @@ check taking inventory:
 	say "Item time! [run paragraph on]";
 
 after printing the name of the emitter while taking inventory:
-	if emitter is angstgnatted:
-		say " (full of angst gnats)";
-	else if condo-evac is false:
-		say " (full, you, uh, think)";
-	otherwise:
-		say " (nothing inside)";
+	say " ([if emitter is angstgnatted]full of angst gnats[else if condo-evac is false]full. Uh, you think[else]nothing inside[end if])";
 
 after taking inventory:
 	if stickyhanded is true and player is in abyss:
@@ -8547,7 +8542,7 @@ description of gardenia is "It's white, and it's just one flower instead of the 
 
 chapter Bile Libe
 
-there is a room called Bile Libe. it is in Metros. "This isn't a very good library. It's been ransacked[if words are visible], and words buzz about enough to drown out the intense beats heard elsewhere in the city. The only way out is back east."
+there is a room called Bile Libe. it is in Metros. "This isn't a very good library. It's gross and slimy and cramped[if words are visible], and words buzz about enough to drown out the intense beats heard elsewhere in the city. The only way out is back east."
 
 check going nowhere in Bile Libe:
 	say "Only way out's back east." instead;
@@ -8648,7 +8643,7 @@ instead of eating tomato:
 
 chapter Cramped Red Camp
 
-Cramped Red Camp is east of Bile Libe. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. You are quickly excluded from this once-mum commune, since you seem actually busy. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in red condo].[paragraph break]A driveway with a yard view leads north[else].[paragraph break]The cordoned red condo you're not welcome back at is to the north[end if]. You hear painful music.". Red Camp is in Metros. Red Camp is north of Underside.
+Cramped Red Camp is east of Bile Libe. "Here in this cross between a platform and farm plot lie the shocking red tents of the terminally un- and under-employed. [if dry cake is in red condo]You are quickly excluded from this once-mum commune, since you seem actually busy[else]Despite your heroics in the condo, people aren't THAT interested in you[end if]. A library lies to the west, a posh shop is to the east, and back south is where you started from[if dry cake is in red condo].[paragraph break]A driveway with a yard view leads north[else].[paragraph break]The cordoned red condo you're not welcome back at is to the north[end if]. You hear painful music.". Red Camp is in Metros. Red Camp is north of Underside.
 
 forest-warn is a truth state that varies.
 sortie-warn is a truth state that varies.
@@ -9040,6 +9035,9 @@ understand "key/ card/" as keycard.
 
 description of keycard is "It's plain and metallic[if barcode is part of the keycard], with a barcode that might help with optical scanners[else], and the only thing that indicates it's a keycard is small text saying FOR AUTHORIZED ACCESS ONLY[end if]."
 
+check putting keycard on barcode:
+	try putting barcode on keycard instead;
+
 check putting barcode on keycard:
 	say "You peel the barcode, slap it on the keycard, and it is a perfect fit! Also, you stuff the adhesive backing in your pocket, where you forget about it until you can find a proper garbage can. You haven't seen any in this city yet[if player is in Bile Libe], and you don't want to add to the garbage piles here[end if].";
 	now adhesive backing is in lalaland;
@@ -9245,7 +9243,7 @@ check taking:
 to say greedy-greedy:
 	say "The faeries cry 'We already gave you one clump of flowers for your one flower! So unfair, sour naif!'";
 
-the brocade is a thing in Elf Row's Flowers. "A small piece of brocade is discarded away from the merchandise. You see scratchings above it.". rgtext of brocade is "[gcn][rc][rc][gc][rc][gc][gc]". lgth of brocade is 7. gpos of brocade is 1. rpos of brocade is 7. cert-text of brocade is "B[d1][d1][ast]C[d1][ast]D[ast]E". rect-text of brocade is "B[d1][d1][d1][d1][d1][ast]E".
+the brocade is a thing in Elf Row's Flowers. "A small piece of brocade is discarded away from the merchandise below the counter. You see scratchings above it.". rgtext of brocade is "[gcn][rc][rc][gc][rc][gc][gc]". lgth of brocade is 7. gpos of brocade is 1. rpos of brocade is 7. cert-text of brocade is "B[d1][d1][ast]C[d1][ast]D[ast]E". rect-text of brocade is "B[d1][d1][d1][d1][d1][ast]E".
 
 the merchandise is scenery in elf row's flowers. "All sorts of flower-related semi-magical stuff spans the store. You wouldn't know what to do with any of it, [if begonias are not in elf row's flowers and heaths are not in elf row's flowers]but you've got something for your troubles[else if fairy-worthy is true]but you can probably take the heaths or begonias[else]but maybe if you help the faeries, they'll give you something[end if]."
 
@@ -9567,7 +9565,7 @@ to say want-wanted:
 
 understand "senser" as sensor.
 
-the priv-camp is a backdrop. the priv-camp is in underside and cramped red camp. understand "camp" as priv-camp.
+the priv-camp is a privately-named backdrop. the priv-camp is in underside and cramped red camp. understand "camp" as priv-camp.
 
 description of priv-camp is "It's pretty dirty and meager[if red camp is visited], as you already saw[else], but maybe you'll get help there[end if]."
 
