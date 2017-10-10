@@ -5675,7 +5675,7 @@ carry out means-hinting:
 		if pram is visible:
 			try objhinting pram instead;
 		all-say "[bug-report]" instead;
-	if location of player is stable:
+	if location of player is Farming Framing:
 		if sitar is visible:
 			try objhinting the sitar instead;
 		if stair is visible:
@@ -6832,7 +6832,7 @@ Rule for printing a parser error when the latest parser error is the can't see a
 			say "Hmm. It's not useful in its present state. You think back to how you changed that toga into a goat just by saying 'goat.' Maybe you can do something like that, again." instead;
 		say "You can't see much of anything here, and if you stumble around, that [i]palm[r] might poke your eye out." instead;
 	if the player's command matches the regular expression "^go":
-		say "That isn't a recognized way to go. You can GO TO (room, person or thing you visited), or you can use old-fashioned text adventure directions. For instance, [if tables are in lalaland]GO IN or IN or GO TO STABLE[else if t-b are in lalaland]GO DOWN or GO TO GALLERY[else]GO TO STUDY or GO UP/IN/DOWN[end if]." instead;
+		say "That isn't a recognized way to go. You can GO TO (room, person or thing you visited), or you can use old-fashioned text adventure directions. For instance, [if tables are in lalaland]GO IN or IN or GO TO FRAMING[else if t-b are in lalaland]GO DOWN or GO TO GALLERY[else]GO TO STUDY or GO UP/IN/DOWN[end if]." instead;
 	if the player has the rigged digger:
 		if the player's command includes "prod":
 			say "It's a digger, now." instead;
@@ -6902,7 +6902,7 @@ check going nowhere (this is the spam can't go that way rule) :
 table of nowheres [tnw]
 theloc	thereject
 Largely All-Grey Gallery	"You can probably go back up, or you can go in if you're ready to face what's beyond."
-stable	"No time for mooching around Means Manse. You probably need to take [if sitar is visible]a[else]that[end if] secret passage in, or down."
+Farming Framing	"No time for mooching around Means Manse. You probably need to take [if sitar is visible]a[else]that[end if] secret passage in, or down."
 highest heights	"You can go back IN to the study, though you don't need to, or you could try [if ramp is visible]to get the pram out of the way[else]going DOWN the ramp[end if]."
 Strip of Profits	"Why run off for fun? See [if number of visible portals is 0]what one of those stores can become[else]what's in one of those portals[end if] instead." [means manse]
 Cruelest Lectures	"The trumped-up charges and the teleological lectures have totally conked your sense of direction. You can, however, TRY to go outside."
@@ -7173,7 +7173,7 @@ check climbing (this is the generic silly climbing reject rule):
 	if noun is ramp: [start Means Manse]
 		try going down instead;
 	if noun is stair:
-		if player is in stable:
+		if player is in Farming Framing:
 			move player to Largely All-Grey Gallery instead;
 		else:
 			move player to study instead;
@@ -7782,7 +7782,7 @@ before listening (this is the you can hear stuff some places rule):
 		say "You think you hear him saying something mean, and you're upset you might've, and you're upset he didn't. He's just being too subtle right now for you to think clearly." instead;
 	if player is in Inclosure:
 		say "Elvira's laughter still seems to echo, with a creator reactor in the distance, and an occasional shrike shriek, and an ominous BEWARE: WAR BEE." instead;
-	if player is in stable or player is in Largely All-Grey Gallery:
+	if player is in Farming Framing or player is in Largely All-Grey Gallery:
 		say "Merciful quiet, for the moment." instead;
 	if player is in shack:
 		say "Classic techno music from the Baleets: 'Be Stale.'" instead;
@@ -7802,7 +7802,7 @@ before smelling (this is the you can smell some stuff some places rule):
 			say "Seawater scents from Store Y." instead;
 		if roved is true and hoster is visible:
 			say "A mix of nice smells from the hoster where Store H was." instead;
-	if player is in stable:
+	if player is in Farming Framing:
 		say "Thankfully, you cleaned the tables before flipping them, so you smell no table scrap." instead;
 	if lecturer is visible:
 		say "It smells depressingly antiseptic here." instead;
@@ -9877,7 +9877,7 @@ after fliptoing ramp (this is the check ramp min-up rule) :
 	continue the action;
 
 after fliptoing stair (this is the check sitar min-up and exits rule) :
-	now Largely All-Grey Gallery is mapped below stable;
+	now Largely All-Grey Gallery is mapped below Farming Framing;
 	if the room below study is nothing:
 		now study is mapped above Largely All-Grey Gallery;
 	if t-b is in lalaland:
@@ -10016,7 +10016,7 @@ understand "letter" as treatise.
 
 a-text of latches is "RYRRRYR". b-text of latches is "RGPPPGR". parse-text of latches is "[bug-report]".
 
-the satchel is a thing. description is "You doubt it holds anything else in its folds.". "The satchel you managed to conjure lies useless on the [if player is in stable]ground[else]floor[end if]."
+the satchel is a thing. description is "You doubt it holds anything else in its folds.". "The satchel you managed to conjure lies useless on the [if player is in Farming Framing]ground[else]floor[end if]."
 
 check inserting into the satchel:
 	ignore the can't insert what's not held rule;
@@ -10051,9 +10051,9 @@ check taking tables:
 	say "The tables are written on the wall." instead;
 
 after fliptoing tables:
-	now study is mapped inside stable;
-	now study is mapped outside stable;
-	now stable is mapped inside study;
+	now study is mapped inside Farming Framing;
+	now study is mapped outside Farming Framing;
+	now Farming Framing is mapped inside study;
 	continue the action;
 
 after fliptoing t-b:
@@ -10468,7 +10468,7 @@ check going down in dusty study:
 	if t-b are in dusty study:
 		say "Ouch! You smack into a bunch of beams. Ten[if study is not lit]. It might've hurt less if you'd found a light source[end if]." instead;
 
-check going in stable:
+check going in Farming Framing:
 	if noun is inside or noun is outside:
 		if backcheck is false:
 			now backcheck is true;
@@ -10479,7 +10479,7 @@ check going in stable:
 				say "Ok, probably best to [if pram is not in lalaland]find a way out. Clean out that pram, maybe[else]see about that ramp[end if]." instead;
 
 
-check going down in stable:
+check going down in Farming Framing:
 	if stair is not visible:
 		say "There should be a way down. That sitar could trans-substantiate or be reincarnated as something more useful." instead;
 	move player to Largely All-Grey Gallery instead;
@@ -10960,13 +10960,11 @@ num-ascii	uc-ascii	reg-match	reg-blurb
 --	77	--	"You daydream back to solving Store M. Salad days!"
 --	82	--	"You daydream back to solving Store R and defeating Red Bull Burdell. Salad days!"
 
-book stable
+book Farming Framing
 
-Stable is a stairy innie room in Means Manse. "You never actually used this stable to, say, let a foal named Olaf loaf, and you couldn't think of anything else to do with it[if stair is visible]. The stair you made leads down[end if]. But despite disuse, it is blest with privacy and not falling apart[if tables are in lalaland]. You can go IN or OUT back to the study--it doesn't matter which[end if].";
+Farming Framing is a stairy innie room in Means Manse. "Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[if stair is visible]. The stair you made leads down[end if]. But despite disuse, it is blest with privacy and not falling apart[if tables are in lalaland]. You can go IN or OUT back to the study--it doesn't matter which[end if].";
 
-printed name of stable is "A Blest Stable"
-
-the sitar is a vanishing thing in stable. "A sitar, from your kitschy phase, sits here[one of]. You were wondering where it went[or][stopping]."
+the sitar is a vanishing thing in Farming Framing. "A sitar, from your kitschy phase, sits here[one of]. You were wondering where it went[or][stopping]."
 
 a-text of sitar is "RRYYR". b-text of sitar is "PRYYP". parse-text of sitar is "s[sp]t[sp]a[sp]i[sp]r". sitar is parse-spoilable.
 
@@ -10974,7 +10972,7 @@ description of sitar is "It possesses a one-is-many-ness about it that can lead 
 
 backcheck is a truth state that varies.
 
-check going outside in stable:
+check going outside in Farming Framing:
 	if backcheck is true:
 		now backcheck is false;
 		say "You don't really need to go back inside unless you're unsure of how your powers work[if satchel is off-stage]. You haven't figured what to do with the latches, and maybe their 'right' form will give you clues[end if]. Plus, the sitar [if sitar is visible]has an odd thereness about it[else]became a nice stair to the basement[end if].[paragraph break]Still, go back to the study anyway?";
@@ -11023,7 +11021,7 @@ check entering closets:
 				now player is in dusty study instead;
 			else:
 				say "Ok, probably best to find a way out." instead;
-	else if player is in stable:
+	else if player is in Farming Framing:
 		say "[if tables are in study]You go back through the closets to your study[else]Woo! You save the effort of walking through where the tables are[end if].";
 	now player is in study instead;
 
@@ -27635,8 +27633,8 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you could've made the ten beams into a BASEMENT.";
 		if tables are in dusty study:
 			say "[2dmiss of myreg]you could've made the tables into a STABLE to unlock an alternate way/puzzle to the basement/gallery.";
-		else if sitar is in stable:
-			say "[2dmiss of myreg]you could've changed the [if stable is visited]sitar in the stable/[end if]stria in the gallery into a STAIR.";
+		else if sitar is in Farming Framing:
+			say "[2dmiss of myreg]you could've changed the [if Farming Framing is visited]sitar in the Farming Framing/[end if]stria in the gallery into a STAIR.";
 		if niche is in dusty study:
 			say "[2dmiss of myreg]you could've changed 'my niche' into a CHIMNEY.";
 		else if pram is in heights:
@@ -27915,7 +27913,7 @@ volume mapping
 [start regular]
 
 index map with highest heights mapped east of dusty study.
-index map with stable mapped west of dusty study.
+index map with Farming Framing mapped west of dusty study.
 index map with gallery mapped north of dusty study.
 index map with carven cavern mapped north of gallery.
 

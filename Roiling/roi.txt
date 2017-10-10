@@ -73,10 +73,12 @@ There are only twenty-three possibilities.
 In fact, with the settler on cheat mode, there is only one. Without it, there are four.
 But wait! Your dusty study doesn't need a sofa...
 ...which is okay since there are no oafs, anyway. However, if you wish to play a game with oafs in it, my IFComp 2014 game Ugly Oafs has lots of them!
->>A BLEST STABLE
+>>FARMING FRAMING
 ?What's the sitar for?
 It could be sitars...
 Or rather STAIR or stairs.
+?Can I build the stable/framing back up again?
+No.
 >>HIGHEST HEIGHTS
 ?What is this pram doing?
 It gives you a slow sinking feeling.
