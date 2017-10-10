@@ -2203,12 +2203,16 @@ understand "x [any room]" as xrooming.
 understand "examine [any room]" as xrooming.
 
 check examining location of player (this is the fake the scenery rule) :
-	if noun is astral altars:
-		say "The altars are probably mostly for showcasing the tiles and stile." instead;
-	say "X/EXAMINE (ROOM) is usually equivalent to LOOK in Shuffling Around. Sometimes it will describe scenery for you, but it doesn't have critical information.";
 	try looking instead;
 
+room-look-warn is a truth state that varies.
+
 check xrooming:
+	if room-look-warn is false:
+		say "X/EXAMINE (ROOM) is usually equivalent to LOOK in Shuffling Around. Sometimes it will describe scenery for you, but it doesn't have critical information.";
+		now room-look-warn is true;
+	if noun is astral altars:
+		say "The altars are probably mostly for showcasing the tiles and stile." instead;
 	if noun is location of player:
 		try looking instead; [shouldn't happen but just in case]
 	say "[if noun is visited]You've been there, but you can't see that far[x-room-n][else]Sorry, I understood the verb, but I didn't understand the noun[end if].";
@@ -2225,6 +2229,9 @@ understand "throw [something preferably held] at [something]" as throwing it at.
 chapter exiting
 
 definition: a direction (called myd) is viable:
+	if myd is east and location of player is isle:
+		if player has wings or player has cork:
+			decide yes;
 	if the room myd of location of player is nowhere, decide no;
 	decide yes;
 
@@ -3100,6 +3107,7 @@ after fliptoing (this is the set pronouns rule) :
 	continue the action;
 
 after fliptoing (this is the when to increase min points after flip rule): [static is taken care of in carry out fliptoing--since you can reflip, it gets tricky]
+	d "[noun].";
 	if noun is nice bat: [STORES]
 		min-up;
 	if noun is grits or noun is pancake: [SORTIE]
@@ -3119,7 +3127,7 @@ after fliptoing (this is the when to increase min points after flip rule): [stat
 		if spore is in lalaland:
 			min-up;
 	if noun is grips or noun is ropes:
-		if toeholds are in Rived Drive:
+		if toeholds are not off-stage:
 			min-up;
 	skip upcoming rulebook break;
 	continue the action;
