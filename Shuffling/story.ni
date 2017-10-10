@@ -1166,7 +1166,7 @@ definition: a thing (called hthing) is deregioned:
 
 definition: a thing (called hintcand) is hintrelevant:
 	if mrlp is sortie:
-		if hintcand is Mean Old Mondale-Doleman, decide yes;
+		if hintcand is Mean Old Mondale Doleman, decide yes;
 	if hintcand is off-stage, decide no;
 	if hintcand is in lalaland, decide no;
 	if hintcand is in bullpen, decide yes;
@@ -2191,30 +2191,10 @@ check touching:
 
 chapter examining
 
-before deciding the scope of the player (this is the silent scope rule) :
-	place the location of the player in scope;
-	continue the action;
-
-Include (-
-Replace DB_Rule;
--) before "Rulebooks.i6t".
-
-Include (-
-[ DB_Rule R N blocked;
-	if (R==0 || R==(+ the silent scope rule +)) return;
-	print "[Rule ~", (RulePrintingRule) R, "~ ";
-	#ifdef NUMBERED_RULES; print "(", N, ") "; #endif;
-	if (blocked == false) "applies.]";
-	print "does not apply (wrong ", (address) blocked, ").]^";
-];
--) after "Rulebooks.i6t".
-
 does the player mean doing something with location of the player: it is unlikely.
 
 instead of doing something with the location of the player (this is the location is too general rule) :
-	if current action is examining, continue the action;
-	if location of player is astral altars:
-		say "The altars aren't as important as what's on them." instead;
+	if current action is examining or current action is xrooming, continue the action;
 	say "You may need to change your location at some time, but you never need to do anything with it in a command."
 
 xrooming is an action applying to one visible thing.
@@ -2230,11 +2210,8 @@ check examining location of player (this is the fake the scenery rule) :
 
 check xrooming:
 	if noun is location of player:
-		try examining location of player instead; [shouldn't happen but just in case]
-	if noun is visited:
-		say "You've been there, but you can't see that far[x-room-n].";
-	else:
-		say "You haven't gotten there yet, and you can't see that far[x-room-n].";
+		try looking instead; [shouldn't happen but just in case]
+	say "[if noun is visited]You've been there, but you can't see that far[x-room-n][else]Sorry, I understood the verb, but I didn't understand the noun[end if].";
 
 to say x-room-n:
 	say "[one of]. X ROOM is really just the same as LOOK for the room you're in, and you don't need to look ahead or behind[or][stopping]"
@@ -6816,11 +6793,13 @@ to say dial-hints:
 
 section for Mondale-Doleman to be referenced everywhere
 
-Mean Old Mondale-Doleman is privately-named scenery in Centrifuge. it is undesc.
+Mean Old Mondale Doleman is a backdrop in sortie. description is "BUG.".
 
-understand "mondale/doleman" as mondale-doleman.
-understand "mean/-- old/-- mondale/doleman" as mondale-doleman.
-understand "mean/-- old/-- mondale doleman" as mondale-doleman.
+printed name of Doleman is "Mean Old Mondale-Doleman".
+
+instead of doing something with mondale doleman:
+	if current action is objhinting, continue the action;
+	say "Mondale-Doleman is out there, you know. But thinking about what he's done won't help you solve things."
 
 section a lid
 
@@ -7084,7 +7063,7 @@ for printing a locale paragraph about an ingredient (called xyzyx) when player i
 		say "[if number of visible pregredients is 0]You've gotten rid of the kitschy stuff, and there's some food left:[else]So far, you've rustled up[end if] [a list of ingredients in kitchen].[paragraph break]";
 		now all ingredients are mentioned;
 
-check taking an ingredient:
+check taking an ingredient: [?? put steak on saltine before/after on tortilla]
 	if noun is part of the tortilla:
 		say "No need to undo your efforts." instead;
 	say "It belongs in the kitchen. You don't want to get it dirty if you go adventure elsewhere." instead;
@@ -7221,12 +7200,15 @@ instead of eating the tortilla:
 	-- otherwise:
 		say "[bug-report]";
 
-check putting something on an ingredient:
+check putting something on an ingredient (this is the funnel kitchen activity to ingredients rule):
+	ignore the can't put what's not held rule;
 	if noun is second noun:
 		say "Less playing with food, more wordplay." instead;
 	if noun is part of the tortilla and second noun is not part of the tortilla:
 		say "(Switching the two)";
 		try putting second noun on noun instead;
+	if noun is saltine:
+		say "Ugh. The saltine is for clues, not cuisine." instead;
 	if noun is not an ingredient:
 		say "That wouldn't taste very good." instead;
 	if noun is tortilla and second noun is pregredient:
@@ -7237,7 +7219,7 @@ check putting something on an ingredient:
 	if second noun is part of the tortilla:
 		try putting noun on tortilla instead;
 	if second noun is not tortilla:
-		say "That's not the best ingredient to make a base for a dish--maybe something more bready." instead;
+		say "Neither of those is the best ingredient to make a base for a dish--maybe something more bready." instead;
 
 check eating an ingredient:
 	if ingredient is part of the tortilla:
@@ -7367,7 +7349,7 @@ check opening large packet:
 
 description of HOTSAUCE is "[if hotsauce is part of tortilla]It certainly gives the taco color[else]It's some disturbing mix of reddish shades of orange-red. The ungrammatical HOTSAUCE on the packet blocks out any list of ingredients, which is probably for the best[end if]."
 
-understand "hot/ sauce/" as HOTSAUCE when HOTSAUCE is visible.
+understand "hot sauce" and "hot/sauce" as HOTSAUCE when player has HOTSAUCE or HOTSAUCE is in location of player.
 
 instead of eating HOTSAUCE:
 	say "If you really want to do this, you are obviously too wild and crazy for text adventures.";
@@ -7467,7 +7449,7 @@ after fliptoing when player is in kitchen (this is the clue taco rule) :
 		if fridge-open is false:
 			say "You also note the [if noun is grits]cake pan[else]grist[end if] in there. ";
 			now fridge-open is true;
-		say "Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is in lalaland or taco is visible]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of visible ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what the [noun] can become, so maybe you can make some other food or ingredients[end if].";
+		say "Bam! A[one of][or]nother[stopping] nice, plain dish. You [if taco is in lalaland or taco is visible]figure that's less tasty than the taco, but you're still pleased with your culinary skills[else if number of visible ingredients > 1]feel a boost of confidence. Now, to those other ingredients, or things that can become ingredients[else]can't see what else the [noun] can become, so maybe you can make some other food or ingredients[end if].";
 	continue the action;
 
 chapter ROOM
@@ -7912,7 +7894,7 @@ Moor is a room in Sortie. description of moor is "You're on a moor. The rime-mir
 
 the rime mire is scenery in moor. "The moor you're on has stablee enough footing, but the rime mire seems much more treacherous."
 
-understand "emir" as a mistake ("You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.") when player is in mire
+understand "emir" as a mistake ("You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.") when player is in moor
 
 understand "rime-mire" as rime mire.
 
@@ -7953,8 +7935,6 @@ to say reset-goof:
 		now reset-already is true;
 	else:
 		say "Resetting twice won't get you anywhere. You need a new direction to change the TREES"
-
-the woods are useless scenery in moor. "They're forbidding--both for travel and for changing them into something else."
 
 Woeful Pat is a person in the moor. initial appearance of Woeful Pat is "Woeful Pat, the awful poet, [one of]sees he has an audience and administers a dose of his odes. It'd be almost enough to make you reverse back to the room, but you've already dealt with the Nick[or]is well into a ballad. It's all bad[stopping]."
 
@@ -8007,6 +7987,10 @@ the roadblock is a thing in the moor. "A roadblock that isn't actually blocking 
 understand "block" as roadblock when roadblock is visible.
 
 the road is useless scenery in moor. "[if roadblock is visible]You'd expect to see a road, what with the roadblock, but you don't[else]Removing the roadblock did not make a road appear. But hey, free black door[end if]."
+
+instead of doing something with road:
+	if action is procedural, continue the action;
+	say "Though there [if roadblock is in moor]is[else]was[end if] a roadblock, there is no road."
 
 instead of climbing roadblock:
 	say "There's no path behind it. Some roadblock, eh? It might be better reincarnated as something else."

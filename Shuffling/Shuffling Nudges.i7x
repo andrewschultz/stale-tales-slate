@@ -237,7 +237,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "sixteen"	681664637	--	--	nick-visit rule	"You don't need to re-stop the centrifuge."
 "kitchen"	454037543	--	--	kitch-visit rule	"You can just walk to the kitchen, there's no need to revisit the nick, and there's no third location."
 "aroundden"	574649308	--	--	af-cent rule	"[loc-rej]."
-"graffiti"	366236825	the nick	--	--	"The graffiti's etched in. It's here to help, anyway."
+"graffiti"	366236825	the nick	--	--	"The graffiti's etched in solidly. But it seems like a decent clue, if you just want to read it."
 "greta"	351027450	the nick	--	--	"The grate remains impassive."
 "nick"	185839117	the nick	--	--	"Maybe there is a way out of the nick. Not of nick, but the nick. It's probably too much to think yourself in K.C."
 "kitchen"	454037543	kitchen	--	--	"[if moor is unvisited]Nothing happens. Well, you didn't really want to go back to the nick, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room[else]There's no room between the nick and kitchen. You already found a better way out, anyway[end if]."
