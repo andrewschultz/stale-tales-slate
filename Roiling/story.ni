@@ -2457,7 +2457,7 @@ Ed Yerg	crocus	"[if ed yerg is reflexive]'I don't think much of unprofitable thi
 Ed Yerg	flowerpot	"[if ed yerg is reflexive]'Worthless, with or without a flower in it.'[else]'From Daltho, eh? Very nice.'[end if]"
 Ed Yerg	Old Hat Daltho	"[if ed yerg is reflexive]'Hmph. Never did cash in on his talents as much as he should have.'[else if flowerpot is reflexive]'Thank you for passing his wonderful gift on to me.'[else]'I miss him. I'd like any sign from him.'[end if]" [end TOWERS]
 Ed Riley	Elvira	"'She got me this job here! It's not REAL close to where she is, but hey. She's gotten lots of people jobs, telling others what they can't do. It's a lot more fun than I thought it would be.'" [start OTTERS]
-macks	Elvira	"'She would be too good for us. She deserves to have time by herself in the bulwark to the east.'"
+macks	Elvira	"'She would be too good for us. She deserves to have time by herself in the Edictal Citadel to the east.'"
 eels	Elvira	"'The eels crackle and light up menacingly at the sound of her name.'"
 Le Mer	Elvira	"'She must be defeated[if eels are reflexed]. You can lead the troops to do so[end if].'"
 Mr Lee	Elvira	"'She must be defeated[if p-2 is in lalaland]. You must be the one to lead us[else if ghoul hat is in lalaland]. You might be that person. Just one more sign[else]. If you are not with her, show me a sign[end if].'"
@@ -3066,7 +3066,7 @@ section gretta
 gre-go-warn is a truth state that varies.
 
 to say gre-other:
-	say "[if gre-what-quip is mowered]Remember[else]I didn't tell you[end if] her army can't leave the bulwark...yet. And she won't. [if gre-east-quip is mowered]You may need help from other than people[else]The animals I told you about--they could do something[end if]";
+	say "[if gre-what-quip is mowered]Remember[else]I didn't tell you[end if] her army can't leave the Edictal Citadel...yet. And she won't. [if gre-east-quip is mowered]You may need help from other than people[else]The animals I told you about--they could do something[end if]";
 
 to say note-gretta:
 	unless gretta-quip is mowered:
@@ -4976,7 +4976,7 @@ when play begins (this is the basic initialization rule):
 			now introtoo entry is false;
 	repeat through table of init-points:
 		now doneyet entry is false;
-	move bulwark backdrop to all ominous rooms;
+	move Edictal Citadel backdrop to all ominous rooms;
 	move the curst palace backdrop to all towery rooms;
 	add-errs means manse;
 	let convo-holes be false;
@@ -6942,7 +6942,7 @@ Shaven Havens	"Any direction but back east might drive you too far from the pala
 Alcoves	"You sway to the side, not ready to face the menace to the west." [otters]
 Loop Pool	"The pool is wide and long. You can only go back south."
 Perverse Preserve	"[one of]You try going that way, but your mind gets foggy. You may not be able to see it, but you know the tell-tale signs of a DISRUPT-STUPID'R force field. Looks like you can only go back north[or]The disrupt-stupid'r field isn't worth risking[stopping][dsknow]."
-Reclusion Inclosure	"Even without the raw-bulk bulwark that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
+Reclusion Inclosure	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
 Rustic Citrus	"With a border, arbored, all around, one direction seems as good as any other. Maybe you need to [if player has moss cap]tinker with the moss cap[else]help Curtis a bit more[end if]." [others]
 filed field	"[if b-w are visible and noun is west]The barriers west block you. Maybe you can get rid of them.[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east.[end if]"
 Scape Space	"The scape space is pretty sparse. No spare rooms, restrooms, anything. You can only go back up."
@@ -7191,8 +7191,8 @@ check climbing (this is the generic silly climbing reject rule):
 		say "Too tall. Anyway, if it were climbable, the subsector wouldn't be the obscurest, now." instead;
 	if noun is prison: [end TOWERS]
 		say "It's actually a decent jungle gym, but you're not here to putz around." instead;
-	if noun is bulwark: [otters]
-		say "Elvira is in the bulwark, not on top of it." instead;
+	if noun is Edictal Citadel: [otters]
+		say "Elvira is in the Edictal Citadel, not on top of it." instead;
 	if noun is wire weir:
 		say "It's a long way down, and it'd take you away from your quest." instead;
 	if noun is gropin' roping: [others]:
@@ -22583,7 +22583,7 @@ carry out whistleing:
 
 book Frontage
 
-frontage is west of Bleary Barley. frontage is a room in Otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. A raw-bulk bulwark is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in frontage]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]."
+frontage is west of Bleary Barley. frontage is a room in Otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. Elvira's Edictal Citadel is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in frontage]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]."
 
 printed name of frontage is "[if Gretta is in frontage]Gent-Fora Frontage[else]Frat-Gone Frontage[end if]"
 
@@ -22619,11 +22619,13 @@ after printing the locale description for frontage when frontage is unvisited:
 		the rule succeeds;
 	say "[line break]But whatever they call themselves, you know macks['] M.O. Jump from subject to subject, to seem 'exciting,' and capitalize on when people give the benefit of the doubt. Still, there's always a hole in their 'impressive' stories--and even if you realize it a few turns later, you can drain their perseverance."
 
-the raw bulk bulwark is a backdrop in frontage. "It takes up a huge chunk of space to the west."
+the Edictal Citadel is a backdrop in frontage. "It takes up a huge chunk of space to the west."
 
-instead of doing something with the raw bulk bulwark:
+understand "dialect" as a mistake ("No, a particular accent or odd word won't destroy the Edictal Citadel. Elvira checked off on all that.") when location of player is ominous.
+
+instead of doing something with the Edictal Citadel:
 	unless the action is procedural:
-		say "[if player is in alcoves or player is in Inclosure]Being inside the bulwark, you can't do much TO it[else]Not much to do with the bulwark but look at it and realize it must be protected for a reason[end if]." instead;
+		say "[if player is in alcoves or player is in Inclosure]Being inside the Edictal Citadel, you can't do much TO it[else]Not much to do with the Edictal Citadel but look at it and realize it must be protected for a reason[end if]." instead;
 	continue the action;
 
 the sad elm is useless scenery in frontage. description is "It was probably sad before the macks came along, but it's not really important."
@@ -22686,7 +22688,7 @@ prompt	response	enabled
 table of quip texts (continued) [tqt-gr]
 quip	quiptext
 gre-macks-quip	"She introduces herself as Gretta. 'I was just trying to explain what Elvira's about, why to fight her. They started telling me they were all socially conscious--then they started hitting on me.' It's true--Elvira's brand of 'magic without magic,' which places excitement over boring honesty, has been captured in the horrid [i]OK, Be Hot: The Book[r], by Beth Koo and Theo Bok. It mentions anyone can learn its techniques--sadly, that's the truest part of the book by far.[paragraph break]You let slip it's the sort of word twisting that you can't and won't do. She pauses, then realizes how you managed to disrupt the macks without doing anything. You're that Shuffling Around person, with those powers. 'Hmm, I guess Elvira hates you even more than she hates me. I mean, she actually said I was almost as bad as you, to my face.'" [start GRETTA text]
-gre-elv-quip	"'Elvira backstabbed me. [']A nice gal? An ICE gal!['] Being called a gal was bad enough. But she used to rent the bulwark from me. Then SHATTER-THREATS somehow let her not pay rent in the name of national security. Then own it. It's hard to get ONE person to go up there, much less many. I found out she's--well, [i]augmenting[r] animals.'"
+gre-elv-quip	"'Elvira backstabbed me. [']A nice gal? An ICE gal!['] Being called a gal was bad enough. But she used to rent the Edictal Citadel from me. Then SHATTER-THREATS somehow let her not pay rent in the name of national security. Then own it. It's hard to get ONE person to go up there, much less many. I found out she's--well, [i]augmenting[r] animals.'"
 gre-what-quip	"'You can't rely on people coming together. They're either too scared to resist, or too eager to kiss up. But animals might be willing to help. She's still training the ones she made.' Gretta looks nervously around."
 gre-north-quip	"'Maybe you will figure how to help the eels to the north and their spirit, Le Mer. They're suspicious of people, though, after Elvira failed to recruit them.'"
 gre-south-quip	"'Mr. Lee is ready to blame his failed crops on anyone. Elvira's got him convinced it's not her, but if you help him, he could be swayed back. Plus, he's a farmer, so, more animals.'"
@@ -22712,7 +22714,7 @@ after quipping when qbc_litany is the table of Gretta comments:
 		enact gre-go-quip;
 	else if current quip is gre-elv-quip or current quip is gre-what-quip:
 		if gre-elv-quip is mowered or gre-what-quip is mowered: [this seems a bit odd, but marking a quip as mowered doesn't happen til the "after quipping" which fires afterwards]
-			say "'Not everyone here loves Elvira. Some are willing to help, if they're just treated right. I can tell you who, or what's, where.' Gretta looks around, worried the macks will narc her out to Elvira, even though none of them headed west to the bulwark, but you can probably grill her for quick information.[paragraph break]";
+			say "'Not everyone here loves Elvira. Some are willing to help, if they're just treated right. I can tell you who, or what's, where.' Gretta looks around, worried the macks will narc her out to Elvira, even though none of them headed west to the Edictal Citadel, but you can probably grill her for quick information.[paragraph break]";
 			enact gre-north-quip;
 			enact gre-east-quip;
 			enact gre-south-quip;
@@ -22830,7 +22832,7 @@ after fliptoing a mack-idea:
 	otherwise if macked-out is 2:
 		say "Gretta nods, able to reject the worst of the macks['] bragging, but she still listens, likely out of cognitive dissonance. Strike two for the macks.";
 	otherwise:
-		say "Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the bulwark in the first place. But you can't ask that straight out.";
+		say "Suddenly, Gretta realizes zeal is, er, SLEAZIER. 'The balls! All the BS!'[paragraph break]Their preludes repulsed, they shuffle off all 'Man hater mantra, eh? Yum, so mousy. A dim maid. Hotness she's not!' as a beastly last 'bye,' to a beer hall, label her only worth trifling flirting. Their lustin['] becomes insult, but you look steely, as if saying 'Lest Ye!' Even to the heckling lech-king.[paragraph break]Gretta Garett-Tatger thanks you for saving her. She shuffles her feet a bit, unsure whether to leave or stay. She must have had a reason to hang around the Edictal Citadel in the first place. But you can't ask that straight out.";
 		now hold-it-up is true;
 		now macks are in lalaland;
 		now all mack-ideas are in lalaland;
@@ -23100,7 +23102,7 @@ check fliptoing Mr Lee:
 
 check fliptoing p-2:
 	if Mr Lee wears ghoul hat:
-		say "Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first[if alcoves is not visited], and, perhaps, proof of what is in the bulwark[end if].";
+		say "Mr. Lee pulls on his ghoul hat, as if he wants to believe you, but his brain is half being controlled by something. You may need another word, first[if alcoves is not visited], and, perhaps, proof of what is in the Edictal Citadel[end if].";
 		preef p-2 instead;
 
 chapter loop pool
@@ -23417,7 +23419,7 @@ instead of taking inventory:
 	if location of player is location of skid and bored yak is not in lalaland:
 		say "[line break]There's also that skid you can push around[if number of things on skid > 0]. It holds [the list of things on skid][end if].";
 	if mrlp is otters and power-back is false:
-		say "[line break]You also DON'T have your full powers. You'll need to fix that before hitting the bulwark to the west.";
+		say "[line break]You also DON'T have your full powers. You'll need to fix that before hitting the Edictal Citadel to the west.";
 	if player has compass:
 		say "[line break]You also have a compass to tell direction.";
 	if can-guru is true:
@@ -25973,7 +25975,7 @@ definition: a thing (called hintcand) is hintrelevant:
 		if mrlp is routes:
 			decide yes;
 		decide no;
-	if hintcand is bulwark:
+	if hintcand is Edictal Citadel:
 		if mrlp is otters and frontage is visited:
 			decide yes;
 		decide no;
@@ -26810,7 +26812,7 @@ medals	"[if nounsolve < 3 or adjsolve < 3][medal-help].[else][one of]The medals 
 jumpsuit	--	leopard
 SlopInc	"They aren't the hippest, are they? Change the ocelots to make them cooler."
 Look-Kool	"You can't do much but admire them."
-bulwark	"The bulwark is where Elvira's hiding out. You need to get [if Inclosure is visited]in[else]back[end if] there and be prepared."
+Edictal Citadel	"The Edictal Citadel is where Elvira's hiding out. You need to get [if Inclosure is visited]in[else]back[end if] there and be prepared."
 weltish whistle	"[if whistle is reflexed]PLAY it by Elvira to win.[else][one of]The whistle can summon animals when you need to, but you haven't had the practice yet.[plus][or]That'll be a big fight, though, so you need to prepare earlier.[plus][or]Examining the whistle gives a clue--who made it, etc. So does playing it, as if someone yelped[plus][or]You need to play it DEEPLY.[minus][cycling][end if]"	--	"you can play the whistle DEEPLY"
 hydra	"[if parrot is off-stage]You'd need to be pretty big to defeat the hydra. Or have a pretty big ally. But you haven't found one, yet.[else][one of]If only you had a bigger animal as an ally, to beat the hydra.[plus][or]One that almost attacked you.[plus][or]Remember what the parrot was?[plus][or]The parrot was a RAPTOR.[plus][or]Don't summon the raptor before the alcoves.[minus][cycling][end if]"
 Elvira	"[if current quip is final-quip]Just PLAY THE WHISTLE to defeat her.[else if nounsolve is 0 and adjsolve is 0]You'll need animal allies to face Elvira, the charismatic conversationalist.[else if nounsolve < 3 or adjsolve < 3]You'll need more animal allies to face Elvira, the charismatic conversationalist.[else][one of]You have enough animals to overwhelm--and ignore the charms of--Elvira, the charismatic conversationalist.[plus][or]First, you need to BLOW THE WHISTLE to summon them.[plus][or]You have one more thing that can help.[plus][or]Remember how you helped Gretta?[plus][or]The medals can make you--and your allies--go QUICKLY.[minus][cycling][end if]" [end otters hinting]	--	"you can just PLAY THE WHISTLE"

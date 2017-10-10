@@ -777,7 +777,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "lyier"	434295849	--	Ed Riley	--	"Ed's full name, please!"
 "reedi"	406957956	--	Ed Riley	--	"[adj-needs-ly]."
 "reedy"	484324362	--	Ed Riley	--	"[adj-needs-li]."
-"bulwark"	425718123	--	bulwark	--	"The whole bulwark? No, you [if power-back is false]couldn't do much with it at full strength[else]can't do much[end if]. [if Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if power-back is false] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to, well, a bulwark."
+"citadel"	371945304	--	Edictal Citadel	--	"The whole bulwark? No, you [if power-back is false]couldn't do much with it at full strength[else]can't do much[end if]. [if Inclosure is visited]You need to tackle Elvira in there[else]Maybe you can surprise Elvira in there[end if], with help[if power-back is false] and your powers back[end if]. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel."
 "bossy"	407678666	--	t-bossily	--	"[adj-needs-li]."
 "bossi"	330312260	--	t-bossily	--	"[adj-needs-ly]."
 "nasti"	315472156	--	t-nastily	--	"[adj-needs-ly]."
