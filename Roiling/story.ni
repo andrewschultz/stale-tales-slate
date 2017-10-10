@@ -10150,7 +10150,7 @@ prompt	response	enabled
 "Pouter troupe?"	pouter-quip	0
 "Lighten the mood with a joke"	pun-quip	0
 "Er, ahem, hear me"	ahem-quip	0
-"One Beg: begone!"	leave-quip	0
+"One Beg: begone! Scat, phony sycophant!"	leave-quip	0
 
 table of quip texts (continued) [tqt-gu]
 quip	quiptext
@@ -25399,6 +25399,8 @@ when play begins (this is the seed novella rule) :
 chapter Hows Show
 
 Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "You see two walls here with snatches of code written all over them[if nuf-hows-examined]: the owl decal code wall and the allow-lots-tools wall[end if]. They may be too technical, but maybe you can get a general feel for the silly tricks that went into A Roiling Original. You can go back south."
+
+understand "coed" as a mistake ("Yes, everyone is welcome in the Demo Dome.") when player is in hows show.
 
 after printing the locale description for Hows Show when Hows Show is unvisited:
 	ital-say "NOTE: the whos-show is already under CREDITS.";
