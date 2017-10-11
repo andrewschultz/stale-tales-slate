@@ -6871,14 +6871,14 @@ book regular important verb tweaks
 
 chapter going
 
-check going nowhere (this is the towers-mis-go rule):
+check going nowhere (this is the towers-mis-go rule): [?? inside in Mislit Limits]
 	if mrlp is towers:
 		if noun is inside or noun is outside:
 			say "You can't go in, here." instead;
-	if cliff is visible:
-		say "The cliff is in the way. There's no way to climb it--the scope in the copse [if spec-o-scope is unexamined]may point where you need to go[else]didn't indicate you needed to[end if]." instead;
-	if shoals are visible:
-		say "Even if you were a swim swami, you'd wind up aslosh on the shoals." instead;
+		if cliff is visible:
+			say "The cliff is in the way. There's no way to climb it--the scope in the copse [if spec-o-scope is unexamined]may point where you need to go[else]didn't indicate you needed to[end if]." instead;
+		if shoals are visible:
+			say "Even if you were a swim swami, you'd wind up aslosh on the shoals." instead;
 
 upwarned is a truth state that varies.
 
@@ -6926,7 +6926,7 @@ Marines Seminar	"The camo-coma fields are just obvious enough to anyone paying a
 Posh Hops Shop	"[if noun is not outside]You just got here, so direction means nothing. So you can only really go out, but those trolls will just coax you back inside. Unless you can out-cool them[else if silly-acts is 3]You try to make a dash, but you're not smooth enough. The trolls hold you back and ask you to explain yourself[else if silly-acts is 2]You start a bit too herky-jerky towards the exit. 'Forego, goofer,' says one of the trolls. 'You too good for this place?' Nonchalance is required here[else if silly-acts is 1]The trolls glare at you--they know you've been disruptive--but they've seen worse and are still blocking the way out[else if silly-acts is 0]The trolls are blocking you from going out. You'll have to exit the Posh Hops Shop more smoothly[else]BUG--you annoyed people too much. You should've gotten killed. Please let me know how you did this[end if]."
 Lean Lane	"You can only go back west, or you would risk running into a mesh crab chambers or a crab crib full of bric-a-brac." [oyster]
 Helots' Hostel	"Though you are a guest, probably best not to go poking around. You can go back west."
-Lapsin' Plains	"You can only go back south, or[if span pans are in Lapsin' Plains], once the span pans are neutralized,[end if] inside."
+Lapsin' Plains	"With the trap tarp on most all sides, you can only go back south, or[if span pans are in Lapsin' Plains], once the span pans are neutralized,[end if] inside."
 Achers' Arches	"You can only go north to the Horned Hedron[if sardine is in arches], once the sardine is gone,[end if] or east back to Anger Range."
 Horned Hedron	"The main exit is south, though [if Rascal Craals is visited]you can go back west to the Rascal Craals[else]an area west is in disrepair[end if]. You can also go IN to the [if a-p is visible]portal[else]ol['] trap once you disarm it[end if][if walleyes are visible], though you probably don't need the walleyes watching you try[end if]."
 Rascal Craals	"The round bay boundary blocks you from going any way but back east."
@@ -18502,7 +18502,17 @@ book Lapsin' Plains
 to say knob-link:
 	say "[if knob is in plains], linked by a knob,[end if]"
 
-Lapsin' Plains is north of anger range. Lapsin' Plains is in oyster. "[if span pans are visible]Span pans[knob-link] guard your way into Shut huts[else]Shut huts lie thus here, and you can go inside[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]."
+Lapsin' Plains is north of anger range. Lapsin' Plains is in oyster. "Boy, it's desolate here! [if span pans are visible]Span pans[knob-link] guard your way into Shut huts[else]Shut huts lie thus here, and you can go inside[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]. A tarp part covers every direction except back south and inside to the huts."
+
+the tarp part is scenery in Lapsin' Plains. "Maybe it's holding the plains together, but crossing it would be inadvisable. You can guess why."
+
+understand "prat" as a mistake ("Yes, whoever[if crate is reflexed or crate is in lalaland]was[else]'s[end if] lobbing crates isn't very nice, but name calling's no good.") when player is in lapsin' plains.
+
+understand "trap" as a mistake("Yes, the tarp part is almost surely a trap, but identifying it as such doesn't help.") when player is in lapsin' plains
+
+instead of doing something with the tarp part:
+	if action is procedural, continue the action;
+	say "The trap part may actually be keeping the lapsin['] plains from further erosion. You don't need to meddle with it."
 
 understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin' Plains.
 
@@ -18513,9 +18523,8 @@ a-text of c2 is "RRYRY". b-text of c2 is "RPGRG". parse-text of c2 is "x[sp]r[sp
 understand "lapins" as a mistake ("Cute bunnies can make any game better, but having to deal with French as well would drive me crazy.") when player is in Lapsin' Plains
 
 instead of doing something with the crate:
-	unless action is procedural:
-		say "You don't need to fiddle randomly with the debris." instead;
-	continue the action;
+	if action is procedural, continue the action;
+	say "You don't need to fiddle randomly with the debris." instead;
 
 does the player mean opening the span pans: it is likely.
 
