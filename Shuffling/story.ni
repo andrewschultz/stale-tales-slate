@@ -1406,6 +1406,8 @@ bumps	"The bumps clue what the vowels can become."
 dial	"[if centrifuge-stopped is true]You've dealt with the dial.[else][one of]You'll get hints for turning the dial wrong, but the EXITS at right angles are a clue. [plus][or]You need to figure what the right directions are. [plus][or]If you've tried going diagonally, that doesn't work, leaving four possibilities. [plus][or]You can also just think of a number with X in it, with seven letters. [plus][or]Binary search works, too, but the next clue shows how you can get things in one move. [plus][or]The right number is SIXTEEN. [minus][cycling][end if]"	[START SORTIE]
 ufcex	--	dial
 cfuge	--	dial
+Mean Old Mondale Doleman	"You don't need to do anything directly to Mondale Doleman to get through the sortie."
+lid	"The (a) lid is just there to keep the dial from turning."
 grate	"[one of]There's no gateman to help with the grate. [plus][or]You're feeling very hungry. You wish you could go somewhere to eat, or even make something to eat.  [plus][or]The tagged gadget gives a reading without you examining anything. [plus][or]This room becomes a KITCHEN. [minus][cycling]"
 cell graffiti	"Its redness will help with how to leave the nick."
 branding	--	cell graffiti
@@ -1559,6 +1561,7 @@ kilns	"[if potters are off-stage]They need people to operate them--perhaps the o
 Burdell	"[one of]Red Bull Burdell does like yelling GET OUT. [plus][or]And changing stuff won't help you here. [plus][or]So maybe you need to change what he says? [plus][or]The gadget [if player has gadget]would be[else]was[end if] marginal help with six reds. [plus][or]He has but one weakness, blah blah blah... [plus][or]TUG TOE. [minus][cycling]"
 toe	--	Red Bull Burdell
 crass scars	"Helps make Red Bull Burdell more intimidating. I hope."
+ransom manors	"They are there for scenery."
 cutlery	--	crass scars
 thirst	--	crass scars
 [toh end]
@@ -2195,7 +2198,7 @@ chapter examining
 does the player mean doing something with location of the player: it is unlikely.
 
 instead of doing something with the location of the player (this is the location is too general rule) :
-	if current action is examining or current action is xrooming, continue the action;
+	if current action is examining or current action is xrooming or current action is scaning, continue the action;
 	say "You may need to change your location at some time, but you never need to do anything with it in a command."
 
 xrooming is an action applying to one visible thing.
@@ -6952,7 +6955,7 @@ chapter The Nick
 
 The Nick is a room in Sortie. "You're locked in this arty suite of austerity by a great grate. It's a more forbidding version of the gateway in the Notices Section. You doubt even Nat Egam could magic it open. There appears to be no standard way out. It has no accommodations, not even unsoft futons. This is a saner snare than the centrifuge, but it doesn't look like you'll drug a guard or reveal a lever to escape. At least there is some graffiti[if player has gadget][beepity-nick][end if]."
 
-t-n is privately-named proper-named scenery in the nick. "The nick is all around.". printed name of t-n is "the nick". understand "nick" as t-n. the rgtext of t-n is "[rc][rc][rc][rc][rc][rc][rc]". the lgth of t-n is 7. gpos of t-n is 7. rpos of t-n is 4. the cert-text of t-n is "-[d1][d1][d1][d1][d1][d1]". the rect-text of t-n is "K[d1][d1][d1][d1][d1][ast]N".
+t-n is privately-named proper-named scenery in the nick. "The nick is all around.". printed name of t-n is "the nick". understand "nick" as t-n. the rgtext of t-n is "[rc][rc][rc][rc][rc][rc][rc]". the lgth of t-n is 7. gpos of t-n is 7. rpos of t-n is 4. the cert-text of t-n is "-[d1][d1][d1][d1][d1][d1]". the rect-text of t-n is "K[d1][d1][d1][d1][d1][ast]N". t-n is abstract.
 
 instead of doing something with t-n:
 	if action is procedural, continue the action;
@@ -7897,7 +7900,7 @@ chapter moor
 
 Moor is a room in Sortie. description of moor is "You're on a moor. The rime-mire all around leaves you feeling a bit trapped, even though you know you could go back the way you came[if anapest is in moor][one of][or]. You hear bad poetry[stopping][end if]."
 
-the rime mire is scenery in moor. "The moor you're on has stablee enough footing, but the rime mire seems much more treacherous."
+the rime mire is scenery in moor. "The moor you're on has stable enough footing, but the rime mire seems much more treacherous."
 
 understand "emir" as a mistake ("You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.") when player is in moor
 
@@ -7905,7 +7908,7 @@ understand "rime-mire" as rime mire.
 
 m2 is privately-named proper-named scenery in moor. rgtext of m2 is "[rc][gc][gc][rc]". lgth of m2 is 4. gpos of m2 is 4. rpos of m2 is 1. cert-text of m2 is "-[ast]O[ast]O[d1]". rect-text of m2 is "R[d1][d1][ast]M".
 
-printed name of m2 is "the moor". m2 is undesc.
+printed name of m2 is "the moor". m2 is undesc. m2 is abstract.
 
 room-flip is a truth state that varies.
 
@@ -8082,7 +8085,7 @@ instead of doing something with anapest:
 	say "The beat is drilled in your head: da da DA da da DA da da DA (repeated. I'll spare you the words, but...)"
 
 instead of going nowhere in moor:
-	say "The rime-mire all round is too dangerous. But. But nothing's stopping you from leaving the way you came."
+	say "The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came."
 
 the peasant is a man. "A peasant is here[if peasant has hay], carrying some hay over his shoulder[end if]."
 
@@ -10635,7 +10638,7 @@ Bullpen is a privately-named room in LLL. "This is the bullpen. You should not s
 
 understand "bullpen" as bullpen when debug-state is true.
 
-teleporter is privately-named scenery in Bullpen. description is "this is just to signify that flipping an item makes a jump."
+teleporter is privately-named scenery in Bullpen. description is "this is just to signify that flipping an item makes a jump.". it is abstract.
 
 book error checking
 
@@ -11188,7 +11191,7 @@ carry out scaning:
 	if noun is faeries:
 		say "You sense that would be a breach of some magical etiquette you don't understand." instead;
 	if noun is jail cell graffiti or noun is grate:
-		say "You see nothing new other than scanning the air.";
+		say "You see nothing new other than the latent colors registering.";
 		try scaning location of player instead;
 	if noun is night thing:
 		say "No way you're getting close enough." instead;
