@@ -55,6 +55,8 @@ include Roiling Random Text by Andrew Schultz.
 
 include Roiling Nudges by Andrew Schultz.
 
+include Roiling Mistakes by Andrew Schultz.
+
 include Reactable Quips by Michael Martin.
 
 include Quip-based Conversation by Michael Martin. [his extensions must be listed in this order]
@@ -941,7 +943,6 @@ to save-present-input: (-
 	else usual_grammar_after = 0;
 -)
 
-
 chapter pronoun setting
 
 [This allows us to refer to a plural noun as it/them. Thanks to Climbingstars!]
@@ -1152,7 +1153,6 @@ when play begins (this is the intro-hashes rule):
 				if there is no hashkey entry or hashkey entry is 0:
 					now hashkey entry is the hash of the printed name of the-from entry;
 					d "full name [the printed name of the-from entry] ~ [the-to entry]. Hash = [hashkey entry].[line break]";
-
 
 chapter undo allows
 
@@ -3895,9 +3895,7 @@ to add-errs (reg - a region):
 				continue the action;
 				d "[this-cmd entry] has a hashval entry of [hashval entry].[line break]";
 
-understand "walkthrough" or "walkthru" as a mistake ("You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.");
 
-understand "use [text]" as a mistake ("The verb USE is a bit too nonspecific for the parser. You can SWITCH things, or OPEN doors[if player has settler], or SCAN with the settler[end if][if player has whistle], or PLAY the whistle[end if]. You should also be able to EXAMINE something you want to use, and the game should hint a verb.")
 
 to recover-items:
 	d "ITEMS: [item-list of mrlp]";
@@ -4273,9 +4271,7 @@ ana-repeats is a number that varies.
 
 cur-help-item is a thing that varies. cur-help-item is usually yourself.
 
-understand "wander" as a mistake ("A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead[if cur-score of towers is 1], like you changed [random warrior in lalaland][end if].") when Andrew is visible.
 
-understand "warden" as a mistake ("Andrew doesn't look like he has the leadership qualities necessary to become to main warden over Rodney.") when Andrew is visible.
 
 to say spec-help of (itm - a thing):
 	if rq is active:
@@ -4624,7 +4620,6 @@ to say mb-ss-ped:
 		say "maybe with SS, ";
 	if player has pedanto-notepad:
 		say "maybe looking again through your pedanto-notepad for general tips, ";
-
 
 last-hash is a number that varies.
 
@@ -5982,7 +5977,6 @@ to say wash-up:
 
 to say hereish of (rm - a room):
 	say "[if player is in rm]here[else][rm][end if]"
-
 
 book routes-hinting
 
@@ -7500,7 +7494,6 @@ understand the command "knock" as something new.
 
 understand "knock" as knocking.
 
-understand "knock [text]" as a mistake ("Just KNOCK instead.");
 
 carry out knocking:
 	if player is in Lapsin' Plains or player is in study:
@@ -8092,7 +8085,6 @@ understand the command "c/t/cheat/teach" as something new.
 
 understand "c" and "t" and "cheat" and "teach" as cting.
 
-understand "cheat on/off" and "teach on/off" as a mistake ("Just type c/t or cheat/teach to toggle. Note: settler is currently in [unless cheat-on is true]non-[end if]cheat mode.") when player has settler.
 
 carry out cting:
 	if settler is not visible:
@@ -9325,11 +9317,7 @@ to say rodney-ditch:
 		say ". The remaining warrior[if vw > 1]s[end if] even ask[if vw is 1]s[end if] if you can work your magic to make [if vw > 1]them better people[else]him a better person[end if]. After a surprisingly illuminating speech that avoids the major self-help catch-phrase, you make an excellent case for self-improvement coming from within, and not worrying about being perfect, or getting a perfect score. It goes over well, and [list of warriors in Loftier Trefoil] thank you profusely before going on [if vw > 1]their ways[else]his way[end if]";
 
 
-understand "resent" as a mistake ("But how could you make Ernest [i]feel[r] so he'd resent his position?") when Ernest is visible.
 
-understand "enters" as a mistake ("You'll need a few exits, here, really.") when Ernest is visible.
-
-understand "lauren" as a mistake ("You briefly remember a random acquaintance. If your name actually is Lauren, you savor the awkward and neat feeling of the first other Lauren you meant. Life is like that.") when neural pulses are visible.
 
 to say read-canflip:
 	say "[one of]. Reading the notice [if notice is examined]again[else]briefly[end if], you see that things won't be this flexible out in the real world[or][stopping]";
@@ -9788,7 +9776,6 @@ the giant pin is an LLPish thing in Dusty Study. "A giant pin (bowling) hangs on
 instead of pushing or pulling giant pin:
 	say "It won't budge. It's too thin to hide a way out, too.";
 
-understand "nip" as a mistake ("Maybe if it weren't a giant pin. Well, giant enough to hide a wall safe.")
 
 a-text of giant pin is "RYYRRYRR". b-text of giant pin is "RYYPPYRR". parse-text of giant pin is "x[sp]-[sp]-[sp]n[sp]t[sp]-[sp]x[sp]x".
 
@@ -9808,7 +9795,6 @@ propaganda is a kind of thing. propaganda is usually amusing.
 
 the dope op-ed is propaganda. "That 'dope' op-ed Gunter threw at you landed here. It's a lot longer than your usual op-ed, probably terribly overwritten, but possible to enjoy if you like that sort of thing.". description is "The dope op-ed is broken into several pages. It's by Elvira, and it's apparently tackling you on your own ground. The pages are labeled nitro-intro, questin['] inquest, MoneyCo and Economy, Shatter-Threats, [if player is male]I Trash His Art[else]Her Arts Er Trash[end if], and By Li'l Billy."
 
-understand "pedo" as a mistake ("[one of]Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her 'clever' games[or]Don't dwell on it. It's lies[stopping].") when player is in study and op-ed is in study.
 
 the Nitro Intro page is propaganda. it is part of the dope op-ed. the printed name of nitro intro is "Nitro-Intro page". understand "nitro-intro" and "nitro-intro page" as nitro intro page.
 
@@ -9967,7 +9953,6 @@ a-text of palm is "RYRR". b-text of palm is "RGRR". parse-text of palm is "[bug-
 
 The lamp is a lit thing. description is "It's red-framed, with a slightly off-center (to the left) light that flickers from yellowish to greenish--which seems slightly more illuminating--and back[if settler is not visible]. Odd colors. You haven't seen anything like them[else]. Hmm. where've you just seen colors like that, now[end if]."
 
-understand "palm" as a mistake ("Maybe you could, but you will need the light. You won't need the landscaping.") when lamp is visible
 
 check switching on lamp:
 	say "It already is. It will last as long as you need it." instead;
@@ -9985,7 +9970,6 @@ instead of opening the latches:
 		now player has treatise;
 	say "You can't figure how to open them. The latches are a Gordian knot, and you probably mix up where to start or end, but maybe the red paper has more information on what to do.";
 
-understand "chalets" as a mistake ("You don't need a safe home, right now. You need adventure[if latches are visible]. Oh, and you don't have to switch that many letters, either[end if].") when latches are visible or satchel is visible.
 
 to trea-check:
 	if treatise is not visible:
@@ -10034,14 +10018,12 @@ instead of taking t-b:
 
 The t-b are privately-named plural-named vanishing scenery in Dusty Study. understand "ten beams" and "ten" and "beams" as t-b. the printed name of t-b is "ten beams".
 
-understand "net" as a mistake ("But the net would still block you.") when player is in study and t-b are in study.
 
 a-text of t-b is "RYRYRYRR". b-text of t-b is "RYRYRYRR". parse-text of t-b is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x".
 
 instead of searching t-b:
 	say "Nothing. And you checked all ten beams.";
 
-understand "best name" and "bestname" as a mistake ("Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)")
 
 description of t-b is "You count them. One, two, ..., ten. Exactly ten beams lined up together, unpainted and uncovered. [b]Ten beams[r]. What could they be hiding?"
 
@@ -10402,9 +10384,7 @@ after scaning (this is the init-scan rule) :
 
 book Largely All-Grey Gallery
 
-understand "basement [text]" and "[text] basement [text]" and "[text] basement" as a mistake ("You can just [if t-b are visible]change the ten beams by saying BASEMENT[else]go down to go to the basement[end if].") when player is in dusty study and latches are not off-stage.
 
-understand "[text] stable [text]" and "stable [text]" and "[text] stable" as a mistake ("You can just [if t-b are visible]change the tables by saying STABLE[else]go IN to go to the stable[end if].") when player is in dusty study and latches are not off-stage.
 
 gallery-been is a truth state that varies.
 
@@ -10415,11 +10395,9 @@ rule for supplying a missing noun when entering:
 [x current room]
 Largely All-Grey Gallery is a stairy innie room in Means Manse. "This is a nondescript place good for hiding out. It's only largely all-grey because all the shades (don't worry, nowhere near 50) leave you dizzy, plus it's as dusty as your study, so that's sort of non-grey here. It stands regally, for all that. [one of]There's an evac-cave that could help you sneak out of the Means Manse[or]You can enter the evac-cave here[stopping][if min-score of means manse < max-score of means manse], though if you're a completist, you may want to poke around the study and such first[else], since you've twiddled everything[end if][if stria are visible]. Stria glisten on the ceiling[end if]. [one of]There's a diorama hanging here, identical to the one in the study, too[or]That diorama's here, too[stopping].";
 
-understand "sitar" as a mistake ("[if stair is visible]Surely a stair is more handy right now[else]You don't need music right now. A way to get around would be better[end if].") when player is in Largely All-Grey Gallery.
 
 diorama is in dusty study and Largely All-Grey Gallery.
 
-understand "mole" as a mistake ("You can't change Elmo into an animal. Your powers don't work that way. [if rifle is in lalaland]He already seems to be[else]But maybe he is[end if] a different sort of mole.") when Elmo is visible.
 
 the evac-cave is scenery in Largely All-Grey Gallery. "It's a bit small, but you can enter it, or go inside."
 
@@ -10435,7 +10413,6 @@ the stria are plural-named vanishing LLPish scenery in Largely All-Grey Gallery.
 
 a-text of stria is "RRYYR". b-text of stria is "PPYGR". parse-text of stria is "s[sp]t[sp]a[sp]i[sp]r". stria is parse-spoilable.
 
-understand "astir" as a mistake ("[if stair is visible]You don't need to do any more with the stair[else]You need to change that to something else, then it'll be astir[end if].") when stair is visible or stria is visible or sitar is visible.
 
 check taking stria:
 	say "Too high up." instead;
@@ -10444,7 +10421,6 @@ the stair is a backdrop. "It leads [if player is in Largely All-Grey Gallery]up[
 
 does the player mean climbing the stair: it is very likely.
 
-understand "basement" as a mistake ("Well, if you want points for that, you'll need to go back to the study.") when player is in Largely All-Grey Gallery and t-b are in dusty study.
 
 after printing the locale description for Largely All-Grey Gallery when Largely All-Grey Gallery is unvisited:
 	if do-i-chat is false:
@@ -10479,7 +10455,6 @@ check going in Farming Framing:
 				now player is in dusty study instead;
 			else:
 				say "Ok, probably best to [if pram is not in lalaland]find a way out. Clean out that pram, maybe[else]see about that ramp[end if]." instead;
-
 
 check going down in Farming Framing:
 	if stair is not visible:
@@ -10525,7 +10500,6 @@ book carven cavern
 
 Carven Cavern is an innie room in Means Manse. "This is an oddly carved cavern[plaster-plates][curtain-desc]. You probably don't want to go back outside.";
 
-understand "craven" as a mistake ("Ok, the carven cavern [b]IS[r] pretty craven as anagrams go, but you need to find a way through, no matter what its name is.") when player is in Carven Cavern.
 
 after fliptoing plaster psalter:
 	now act-ruin curtain is in carven cavern;
@@ -10549,7 +10523,6 @@ to say curtain-desc:
 	else if curtain is in carven cavern:
 		say "[if curtain-know is true]The Act-Ruin Curtain[else]A curtain may be covering up a passage[end if]"
 
-understand "trainer" as a mistake ("You're on your own. Perhaps you'd be better off [if plaster is in cavern]scanning the plaster and [end if]twiddling the [if staple is visible]staple[else]plates[end if] to get on with things.") when player is in cavern
 
 check exiting in cavern:
 	if act-ruin curtain is in lalaland:
@@ -10653,9 +10626,7 @@ chapter pastel plates
 
 the palest pastel plates are plural-named scenery in carven cavern. description of plates is "They're...a bit squarish. Odd. And they're  cracked and useless and appear to be squarish, but each has metallic trim around its edge and even some red writing[if plaster is in cavern]. The plates seem like they belong with the plaster[end if].".
 
-understand "petals" as a mistake ("That's already been done, and quite well, by Alan Garner in The Owl Service. If you haven't read his Brisingamen books, you should! They're not too long and very entertaining.") when plates are visible or staple is visible.
 
-understand "pleats" as a mistake ("You are a text adventurer, not a fashion designer.") when plates are visible or staple is visible.
 
 instead of taking plates:
 	if plaster is visible:
@@ -10748,9 +10719,7 @@ after doing something with rifle:
 		say "It's a rifle, not a gun. This may or may not help.";
 	continue the action;
 
-understand "filer" as a mistake ("You can't just give Elmo a desk job. Though maybe some paperwork would help.") when rifle is visible.
 
-understand "lifer" as a mistake ("You start to educate Elmo about the penalties for murder, but he gestures at you like you've almost guessed a Charades clue or something.") when rifle is visible.
 
 check fliptoing when rifle is visible and player is in Largely All-Grey Gallery:
 	if noun is not rifle:
@@ -11077,7 +11046,6 @@ the space capes are part of the super purse. the space capes are useless and plu
 instead of doing something other than examining space capes:
 	say "The capes work--no need to futz with them or to wonder how they work.";
 
-understand "paces" as a mistake ("The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.") when space capes are visible.
 
 pursins is a truth state that varies.
 
@@ -11487,7 +11455,6 @@ report taking pedanto-notepad:
 
 understand "book" as pedanto-notepad when player is not in shack.
 
-understand "consult [text]" as a mistake ("You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.") when pedanto-notepad is visible.
 
 instead of opening the pedanto-notepad:
 	say "You can just type PAD to get all the subjects, or PAD (SUBJECT) for a specific one."
@@ -11598,7 +11565,6 @@ to say verb-list:
 	verbsplain "go to";
 	verbsplain "rove over";
 	verbsplain "retry";
-
 
 to say opts-list:
 	verbsplain "access";
@@ -11974,13 +11940,11 @@ instead of entering a sto:
 check taking a sto:
 	say "You can't take that, [if noun is flippable]but you can maybe change it and enter it[else]and you can't do much else, either." instead;
 
-understand "follow [text]" as a mistake ("This game doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.") [for ROUTES]
 
 book Strip of Profits
 
 Strip of Profits is a room in Stores. "[if roved is true]Well, those stores you took care of are gone, and so is the megaton magneto-montage. [h-or-others].[else]Most of the twenty-six stores from your first time here remain, though you're not here to shop[which-stores].[paragraph break]A megaton magneto-montage[i-u] stands here.[end if]"
 
-understand "sportif" as a mistake ("You can argue whether the strip is already sportif, but nonetheless, that would be a superficial change compared to fixing what's behind the stores.") when player is in strip of profits.
 
 understand "trips/profit" as strip of profits when debug-state is true.
 
@@ -12125,13 +12089,9 @@ chapter store g
 
 Store G is a useless sto in Strip of Profits. understand "store/ 7/seven" as Store G when player is in Strip of Profits.
 
-understand "ergots" as a mistake ("You're trying to rescue the people of Yorpwald, not give them fungus infections.") when Store G is visible.
 
-understand "gorest" and "go rest" as a mistake ("Store G is too busy to allow that these days.") when Store G is visible.
 
-understand "gots er" as a mistake ("And what would you do with Store G, when you take it?") when Store G is visible.
 
-understand "storge" as a mistake ("[one of]You have a momentary vision of an apocryphal eighth book in the Harry Potter series sitting by a pillar, but it passes[or]Stop trying to make Pillar of Storge happen[stopping].") when Store G is visible.
 
 chapter store h
 
@@ -12139,7 +12099,6 @@ Store H is a sto in Strip of Profits. understand "store/ 8/eight" as Store H whe
 
 description of Store H is "Store H appears broken-down. It sprawls a bit but is not particularly tall. A warning in bright red says:[paragraph break]'All who enter here risk exclusion. Closed for having a truly frightening HOSTER. Trespassers will be, er, shot. - E. S. Roth'"
 
-understand "tosher" as a mistake ("[if store h is in strip]Insults will get you nowhere. You see red at thinking such a word[else]The hoster does look a bit weird, but you need to enter it, not change it[end if].") when player is in strip of profits
 
 a-text of store h is "YRRYRR". b-text of store h is "YPRYRR". parse-text of store h is "-[sp]t[sp]x[sp]-[sp]x[sp]x".
 
@@ -12147,9 +12106,7 @@ check scaning store h:
 	if otters is not solved:
 		say "The settler gives a weird noise, as if it doesn't want to scan this store--yet." instead;
 
-understand "throes" as a mistake ("No, you are not in your last throes. Neither is Yorpwald. [if otters is solved]Try thinking of a more common word[else]Try looking at the other end of the alphabet[end if].") when Store H is visible or hoster is visible.
 
-understand "hoster" as a mistake ("That was sort of a given from the warning on Store H[if Store H is unexamined], as you note E. S. Roth's signature[end if], and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?") when Store H is visible.
 
 the hoster is a not lumpable not maingame portal. "That stupid hoster is here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than save Yorpwald, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. It might be worse if it had a cavity, but it's pretty bad. You're not sure you want to know where it leads."
 
@@ -12186,7 +12143,6 @@ a-text of Store K is "RYRYRR". b-text of Store K is "RYRYRR". parse-text of stor
 
 description of Store K is "[one of]A peculiar smell of smoke and incense seeps from Store K, but that's probably not the BIG reason this place went downhill. 'Hey! stop violating our privacy, Dude, or we will maybe, like, insult you next time![or]'Dude! We're trying to REST, OK?' someone looks briefly at you through bloodshot eyes.[or]Someone with bloodshot red eyes begins blasting the truly awful music of K. T. Rose.[or]You wonder how they can rest okay while listening to the music of K. T. Rose.[stopping]"
 
-understand "stroke" as a mistake ("You need a stroke of genius, but that's all wrong. You are left seeing red a bit. But this puzzle probably isn't worth risking your health over.") when player is in strip and smoke cloud is off-stage.
 
 section smoke cloud
 
@@ -12254,7 +12210,6 @@ rule for printing a locale paragraph about nestor:
 		do nothing instead;
 	continue the action;
 
-understand "stoner" as a mistake ("[if nestor is visible]Being a stoner isn't treason. Use his real name.[else][one of]'Hey, man! Don't depersonalize me! Or I'll throw something at you!' You hear from inside Store N.[or]'Like, don't do it again, dude, or I will literally totally throw these empty bottles at you.'[or]The door to Store N opens, and two bottles whizz in your direction but nowhere close. They're bright red, and they appear to be lotions or something[move-toners].[or]You've teased him enough. You should have enough clues to figure his name now, anyway.[stopping][end if]") when player is in Strip of Profits
 
 to say move-toners:
 	now toners are in strip of profits.
@@ -12272,13 +12227,11 @@ chapter store p
 
 Store P is a sto in Strip of Profits. understand "store/ 16/sixteen" as Store P when player is in Strip of Profits.
 
-understand "repost" as a mistake ("That's not what you need to do with [if store p is visible]store P--you even see red trying to figure HOW you would[else]the, er, spot[end if].") when store p is visible or e-s is visible
 
 description of Store P is "There's a big poster in the window of this average-sized store."
 
 a-text of Store P is "RRYRRY". b-text of Store P is "RRYRRY". parse-text of store p is "x[sp]x[sp]-[sp]x[sp]x[sp]-".
 
-understand "pteros" as a mistake ("[if store p is in strip or e-s is in strip]You don't need to face any predators[else]They're in the past, and so are Store P and the Presto region[end if].") when player is in strip of profits.
 
 the e-s is a proper-named portal. diffic of e-s is 5. the go-region of e-s is Presto. the printed name of e-s is "an, er, spot". description is "It's hecka swirly. You're sure it goes somewhere the speech is louder and so forth.". initial appearance of e-s is "The, er, spot created when you said PRESTO swirls here."
 
@@ -12302,7 +12255,6 @@ Store R is a useless sto in Strip of Profits. understand "store/ 18/eighteen" as
 
 description of Store R is "It could lead back to the (not really) resort from your first time, to your Means Manse. But that would be backtracking, and you would not be welcome or safe there."
 
-understand "resort" as a mistake ("You can't go back to the Means Manse. Well, you can, but it's a bad idea.") when player is in strip of profits.
 
 chapter store s
 
@@ -12314,7 +12266,6 @@ chapter store t
 
 Store T is a sto in Strip of Profits. understand "store/ 20/twenty" as Store T when player is in Strip of Profits.
 
-understand "tortes" as a mistake ("There's no time for food! Especially fatty, non-brain food[if topside is visited]! Besides, the towers had plenty of food. There was your chance[end if]!")
 
 a-text of Store T is "YRRYRR". b-text of Store T is "YPRYRR". parse-text of store t is "-[sp]t[sp]x[sp]-[sp]x[sp]x".
 
@@ -12328,7 +12279,6 @@ after examining otters-x:
 	try examining engravings;
 	now f-o-b is in strip of profits;
 
-understand "barely" as a mistake ("You [one of][or]still [stopping]aren't close enough for such a weak word to affect the barley. But that seems right[one of] and worth writing in your notepad[or][stopping].[preefsay-nol of b-b]") when f-o-b is visible.
 
 rule for printing a locale paragraph about otters-x:
 	say "Statues of twin otters wait here, facing each other--it's all blurry behind them.";
@@ -12351,9 +12301,7 @@ chapter store u
 
 Store U is a sto in Strip of Profits. understand "store/ 21/twentyone" as Store U when player is in Strip of Profits.
 
-understand "ouster" as a mistake ("It's your job to be the ouster in Store u, but how to get there?") when Store U is visible or routes-x are visible.
 
-understand "sureto" or "sure to" as a mistake ("You'll be sure to figure it out sooner or later. You see red a bit at not quite being there yet.") when Store U is visible or routes-x are visible.
 
 a-text of Store U is "RYYRYR". b-text of Store U is "RYYRGR". parse-text of store u is "x[sp]-[sp]-[sp]x[sp]e[sp]x".
 
@@ -12416,7 +12364,6 @@ check entering ivory tower:
 	say "You try to enter the ivory tower, but they keep shifting around, and you find yourself walking between them.";
 	try entering towers-x instead;
 
-understand "restow" as a mistake ("[if store w is visible]Store W glows red as you try this[else if towers are visible]The towers glow red as you try this[else]You did what you could in store W and the towers[end if].") when player is in strip of profits
 
 chapter store x
 
@@ -12437,9 +12384,7 @@ instead of doing something with the shells:
 
 the oyster-x is a privately-named portal. diffic of oyster-x is 6. the printed name of oyster-x is "a huge oyster". understand "oyster" as oyster-x. the go-region of oyster-x is Oyster. "The oyster that was Store Y is open. You could definitely fit in.". description of oyster-x is "It's not particularly tall, but its width suggests there's a lot to do there."
 
-understand "toyers" as a mistake ("You see red at the possibility people might mess with your mind in whatever's behind store Y--especially after noting the TOYERS with the red line through in the window.") when store y is visible.
 
-understand "troyes" as a mistake ("Store Y does not lead to France.") when store y is visible.
 
 instead of eating oyster-x:
 	say "In Soviet Yorpwald, oyster eat you. Plus, it's all shell, no slime."
@@ -12582,7 +12527,6 @@ idg is a privately-named person in Cruelest Lectures. printed name of idg is "Ia
 
 understand "ian" and "drug guardian" and "guardian" as idg.
 
-understand "ani" and "nia" as a mistake ("Ian's had a big life change, but that might be too big for him!") when player is in Cruelest Lectures.
 
 instead of doing something with idg:
 	if current action is scaning or current action is sbing:
@@ -12640,9 +12584,7 @@ check objasking brother horbert about a quest-item:
 
 book Same Mesa
 
-understand "seam" as a mistake ("You can't find any crack in the Same Mesa that you could follow[if the-b is visible], except maybe under the bean. Wait, not quite UNDER[end if].") when player is in same mesa.
 
-understand "ames" as a mistake ("Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys from rival Big Twelve schools might say. But you can't just up and leave.") when player is in same mesa.
 
 Same Mesa is a room in Routes. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the cleric circle[else]A cleric circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's a dingy dwelling with lairage regalia[end if], and [if deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if old giant is in lalaland]that bench the giant sat on still lies here[else if old giant is visible]the giant's bench[else]there's a bench, which is rather big, so it must be a giant's[end if]."
 
@@ -12744,13 +12686,11 @@ check scaning old giant (this is the scan other parts of giant instead rule):
 		say "The settler only registers when it's pointed at Rude [']N Nuder.";
 		try scaning nuder instead;
 
-understand "satired" as a mistake ("Bad idea to poke fun at someone that much bigger than you.") when player is in mesa and old giant is visible.
 
 section giant's elbow
 
 the giant's elbow is part of the grouchy old giant. description is "Well, thankfully, only one is flailing. Both would be extra tough to dodge. [if elbow is reflexed]But you have the hang of it now[else]Still, there's almost a pattern to it, and maybe there's a safe spot[end if]."
 
-understand "bowel" and "bowels" as a mistake ("The giant's spouting enough verbal diarrhea, so, just... no.[paragraph break]Also, you don't need to go THAT far down.") when old giant is visible and elbow is reflexive
 
 the elbow is reflexive.
 
@@ -12765,7 +12705,6 @@ instead of doing something to elbow:
 to say flail:
 	say "[if elbow is reflexive] and flailing each elbow all about[end if]"
 
-understand "below" as a mistake ("Nice try, but wrong preposition for the situation.") when below-is-wrong.
 
 to decide whether below-is-wrong:
 	if player is in same mesa and runed book is in same mesa:
@@ -12778,9 +12717,7 @@ chapter tirades
 
 tirades are scenery. "They're not very good tirades[if nuder is visible], but they're all about Rude [']N Nuder[else if bench-end is reflexed], and you're more concerned about the giant's elbow[else], but maybe you could position yourself better to listen to them[end if]."
 
-understand "staider" as a mistake ("[if bench-end is reflexed]You already did your best with the tirades[else]Not only directions but mind games fail to work here[end if]. The giant will complain if he wants to.") when old giant is visible.
 
-understand "tardies" as a mistake ("You can't tell the giant off for being late.") when old giant is visible.
 
 check scaning tirades:
 	if bench-end is reflexive:
@@ -12793,7 +12730,6 @@ check scaning tirades:
 
 chapter poison stripe
 
-understand "preposition" and "prepositions" as a mistake ("Yes, but WHICH prepositions?") when player is in same mesa.
 
 the poison stripe is scenery in Same Mesa.
 
@@ -12823,7 +12759,6 @@ chapter rs (private routes)
 
 rs are privately-named scenery in Same Mesa. understand "routes" as rs. printed name of rs is "routes". "Staring at them makes you lose your sense of direction even further."
 
-understand "ouster" as a mistake ("You're the ouster here, trying to get by the routes.") when mrlp is routes.
 
 instead of doing something with rs:
 	if action is procedural, continue the action;
@@ -12874,7 +12809,6 @@ after scaning scripture picturers:
 		otherwise:
 			say "Well, if you feel like it later, the sign or whoever put it there will forgive you."
 
-understand "indies" as a mistake ("You don't need to worry about art, here.") when scripture picturers is visible.
 
 to say dssd:
 	say "[if sign-other is false]SIN DIE (in black)[else]DIE SIN (in red)[end if]"
@@ -12950,13 +12884,9 @@ understand "sign/board" and "adsorbing sign/board" as signboard.
 
 understand "pat's/pats" as the grubby restaurant.
 
-understand "taps" as a mistake ("You have no bugle. Well, not in this game.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "spat" as a mistake ("Picking a fight--or spitting--is uncouth.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "psat" as a mistake ("You have enough word juggling now. You don't need a standardized test, too.") when player is in Same Mesa or player is in Idle Deli.
 
-understand "ptas" as a mistake ("Concerned parents won't be able to help you here.") when player is in Same Mesa or player is in Idle Deli.
 
 a-text of grubby restaurant is "RYRR". b-text of grubby restaurant is "PGRR". parse-text of grubby restaurant is "p[sp]a[sp]x[sp]x". it is parse-spoilable.
 
@@ -13024,7 +12954,6 @@ Rude 'N Nuder is a thing.
 
 description of Rude 'N Nuder is "You aren't able to see the inside, and that's probably a good thing. People do tend to get worked up a bit more than they should about this sort of 'work,' whether extolling freedom of speech or saying how tasteless it is."
 
-understand "under" as a mistake ("[if grouchy old giant is visible]You can't hide from the giant like that, right now[else]There's nobody to hide from, though you could fit under the bench[end if].") when player is in mesa and Rude 'N Nuder is not visible.
 
 instead of doing something to Rude 'N Nuder:
 	if action is procedural, continue the action;
@@ -13074,9 +13003,7 @@ check taking huge thing:
 check going when huge thing is visible:
 	say "That huge thing is distracting you. Maybe you can deal with it now." instead;
 
-understand "gnash" as a mistake ("You gnash your teeth a bit thinking about how threatening the form is. It is probably going to fall some time. Maybe you can get it over with.") when huge thing is visible.
 
-understand "night" as a mistake ("The thing can't block out THAT much of the sky. You've got the wrong word.") when thing form is visible.
 
 a-text of thing form is "RRYR". b-text of thing form is "PRYP". parse-text of thing form is "f[sp]r[sp]o[sp]m". thing form is cheat-spoilable.
 
@@ -13107,9 +13034,7 @@ check going when the-b is visible:
 		say "Maybe there is something below, or something. But you can't prove it." instead;
 	say "The drama armada won't let you go anywhere with the bean present." instead;
 
-understand "bane" as a mistake("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--the bean is about to fall on you![paragraph break][uurrgg]") when player is in mesa and armada is in mesa.
 
-understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when runed book is visible or elbow is visible.
 
 section a drama armada
 
@@ -13171,7 +13096,6 @@ chapter snoop spoon
 
 the snoop spoon is a thing. description is "The spoon looks pretty normal despite the powers Brother Horbert claims it has."
 
-understand "noops" as a mistake ("The snoop spoon isn't as complicated as assembly language.") when player has snoop spoon.
 
 snoop-warn is a truth state that varies.
 
@@ -13272,7 +13196,6 @@ chapter lament mantle
 
 the lament mantle is useless scenery in Cleric Circle. "[one of]It's full of regrets. Regrets Rev. Ali and his hangers-on have that people do certain things, and regrets those people will have that they did them[or]Another interdict[stopping]. [pious1][randbla][one of], full of tarnished sin-hatred and obliged god-bile for your sinner inners[or][stopping]. [one of]Their creeds-screed contains[or]Another no-heart rant, e-oh:[stopping] [pious1][randbla]"
 
-understand "man let" and "let man" as a mistake ("Your heart is in the right place, but telling the mantle to cool it won't do much good.") when player is in cleric circle.
 
 check examining lament mantle for the first time:
 	say "Just a small check-off: there's some religious stuff in here, poking fun at hot button issues. This might be annoying, and I don't want do do that. Do you wish to go ahead?";
@@ -13320,13 +13243,11 @@ to say list-o-toils-text:
 		say "[paragraph break]Brother Horbert mumbles something about how if they had any reagents left around here, they'd have used them, but they don't.[no line break]";
 		now read-list is true;
 
-understand "opposite" as a mistake ("Hm. The list doesn't seem to be what you need to stand opposite from. It doesn't seem offensive enough") when list o toils is visible.
 
 book Adobe Abode
 
 Adobe Abode is an innie room in Routes. "A dilapidated residence with a trashy ashtray[if pipe soot is in abode], which could use some emptying[end if]. The only exit is out to the Mesa.";
 
-understand "orcas" as a mistake ("But the whales would be beached. [if list o toils is unexamined]Oscar doesn't seem to need change[else if pipe soot is in abode]Besides, it's the pipe soot you want[else]Besides, you got the pipe soot[end if].") when player is in adobe abode.
 
 after choosing notable locale objects when player is in adobe abode:
 	set the locale priority of pipe soot to 0;
@@ -13380,7 +13301,6 @@ instead of doing something to the runed book:
 	if action is procedural, continue the action;
 	say "Best not try anything fancy. You probably want to get that book back to [if list o toils is examined]Brother Horbert[else]someone who can use it properly[end if].";
 
-understand "under" as a mistake ("Wrong preposition.") when the-b is visible
 
 book Idle Deli
 
@@ -13388,15 +13308,10 @@ Idle Deli is an innie room in Routes. "This restaurant has no customers, and tha
 
 Pat is a person in Idle Deli. description is "He looks beaten down from the lack of business.". "[one of]'Lint? Use utensil. Fix store for exits...' mumbles some poor soul. 'Oh! A customer!'[or]Pat is still plodding here.[stopping]"
 
-understand "tap pat" and "tap" as a mistake ("You have Pat's attention, already[if seed pit is reflexive], and he's not letting you in that seed pit without argument[end if].") when player is in idle deli.
 
-understand "pat pat" and "pat" as a mistake ("Pat doesn't need consolation for his lost business.") when player is in idle deli.
 
-understand "pta" as a mistake ("You don't need to attend any school board meetings.") when player is in idle deli.
 
-understand "atp" as a mistake ("No need for biochemistry, here.") when player is in idle deli.
 
-understand "apt" as a mistake ("Actually, Pat's advice may not be apt[if seed pit is reflexive]. Look to the seed pit[end if].") when player is in idle deli.
 
 check exiting in Idle Deli:
 	say "You leave Pat's idle deli.";
@@ -13487,9 +13402,7 @@ a-text of un-road is "YRYRR". b-text of un-road is "YRYRR". parse-text of un-roa
 
 understand "unroad" as un-road.
 
-understand "around" as a mistake("You can't see anything around, yet. It's too unlit, here.[preefsay of narrow cracks]") when darkness is visible and player is in Harms Marsh.
 
-understand "along" as a mistake ("[if Harms Marsh is unvisited]You aren't far enough along to, err, look along[else]There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking[end if].[preefsay of un-road]") when told-of-logan.
 
 to decide whether told-of-logan:
 	if mrlp is not routes, decide no;
@@ -13501,9 +13414,7 @@ book Ripe Pier
 
 Ripe Pier is a room in Routes. "You see mist on this pier where a brighter rig berth should be. You don't know if you can go any farther without help. There's a sign before the mist. You wonder what you can yell to get on a ship, or find the right way to one."
 
-understand "hips" as a mistake ("Unfortunately, nothing can become hoorays. So that doesn't help.") when player is in ripe pier.
 
-understand "pish" as a mistake ("Pretending you don't want to get on the ship won't help you get on the ship.") when player is in ripe pier.
 
 chapter two ways out
 
@@ -13511,7 +13422,6 @@ section pier sign
 
 the pier sign is vanishing scenery in ripe pier. "You can't see much of the actual pier, but you can smell it. Thankfully, the pier sign offers some advice. 'Ripe pier! Boat rides past a RAD BOA! Disclaimer. Da mist: SAD, TIM? IT'S MAD.'[paragraph break]Hmm. The all caps words are in red. There may be more than one way to get by."
 
-understand "abroad" as a mistake ("You can't go abroad til you get--well, you can figure it out.") when mist is visible.
 
 check taking pier sign:
 	say "Take its advice instead." instead;
@@ -13642,7 +13552,6 @@ book Loather Rathole
 
 Loather Rathole is a room in Troves. "Under the stinky tin sky, [if heat is visible]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[otherwise]you feel nothing but bone-chilling poverty here. [i]Heat[r]. It's what you need. All you can think of[end if]. Of course, there are plenty of potholes about.". last-loc of troves is Loather Rathole.
 
-understand "real hot" as a mistake ("You need[if cold is in lalaland]ed[end if] a strong concrete emotion to get hot.") when player is in rathole.
 
 check looking in Loather Rathole for the first time:
 	now the player has Pa Egg Pea.
@@ -13686,15 +13595,10 @@ a-text of cold is "RYRY". b-text of cold is "PYRY". parse-text of cold is " h[sp
 check taking cold:
 	say "You have as much cold as you can take." instead;
 
-understand "clod" as a mistake ("Hey! No beating yourself up. You'll do it wrong.") when player is in Loather Rathole.
 
-understand "care" as a mistake ("You find yourself boohooing over mumbo-jumbo about how the socioeconomic system must be even more unfair to people without your powers. How unproductive to care about THAT.") when heat is not visible and mrlp is troves.
 
-understand "race" as a mistake ("Races scare you without the proper motivation from inside.") when player is in Loather Rathole and cold is visible.
 
-understand "acre" as a mistake ("That farm-[if player is male]boy[else]girl[end if] terminology won't help show you give a darn in the big city.") when player is in Loather Rathole and cold is not visible.
 
-understand "hate" as a mistake ("You don't want to get burnt up with hate[if heat is visible], and that won't get back your super purse like racing after that guy[end if].") when cold is not visible.
 
 chapter heat
 
@@ -13729,9 +13633,7 @@ instead of doing something with rustin ruts:
 
 chapter sob ever verbose
 
-understand "obverse" as a mistake ("You can't just make things obverse by wanting them to be. [i]But if change comes within, perhaps things are closer to obverse than you think[r].") when sob ever verbose is visible.
 
-understand "redive" as a mistake ("Close, but you need to figure out where to re-dive back into the cellar.") when player is in Bustle Sublet and sob ever verbose is in lalaland
 
 bab-lis is a truth state that varies.
 
@@ -13899,10 +13801,8 @@ Drain Nadir is a room in Troves. "You notice trappings of spiritual and material
 
 chapter adeiprs
 
-understand "praised" as a mistake ("You would like to be, but you can't just want others to. Change comes from within.") when player is in Drain Nadir.
 
 [?? small clue later with statue]
-understand "aspired" as a mistake ("Now is not the time to fret on past dreams.") when player is in Drain Nadir.
 
 the picture of a sad pier is auxiliary scenery in Drain Nadir. "It is a warding drawing of what not to wallow in: solitude so dilute in an old suite. According to [i]Pa, Egg, Pea[r], if it were not marked as such, it should be illegal."
 
@@ -13920,7 +13820,6 @@ book boredom bedroom
 
 Boredom Bedroom is an innie room in Troves. "This is no bro-dome--it leaves you feeling all me, BROOD. Not much of a dump, um, pad. Well, it beats Get-a-Cot Cottage, or Drag-Grad."
 
-understand "broomed" as a mistake ("You are not rich and consequential enough to snap your fingers and watch your own mess get cleaned up. Yet.") when player is in Boredom Bedroom.
 
 chapter ltb
 
@@ -13932,7 +13831,6 @@ understand "copy" and "book" and "lead" as ltb when player is in Boredom Bedroom
 
 does the player mean doing something with ltb when the player is in Boredom Bedroom: it is likely.
 
-understand "aled" as a mistake ("Getting drunk will not solve your problems[if lager is in Boredom Bedroom]. And that lager would taste awful, anyway[else]. Especially when there's nothing here to get drunk with[end if]. You see red at yourself for such thoughts.") when player is in Boredom Bedroom
 
 instead of taking the ltb:
 	say "You already have one motivational book. Perhaps you need to find the right way to soak up LEAD's essence."
@@ -13948,7 +13846,6 @@ the rubbish story is part of the Large Regal Lager. the rubbish story is cluey a
 
 a-text of rubbish story is "RRYRY". b-text of rubbish story is "RRYRY". parse-text of rubbish story is "x[sp]L[sp]-[sp]x[sp]-".
 
-understand "alger" as a mistake ("What would an Alger hero DO to such foul spirits as the lager, though?") when player is in Boredom Bedroom and lager is in Boredom Bedroom
 
 instead of scaning rubbish story:
 	try scaning Large Regal Lager instead;
@@ -13968,8 +13865,6 @@ book Browse Bowers
 
 Browse Bowers is an innie room in Troves. "It's very look-don't-touch here. In fact, for someone so recently poor as yourself, you'd feel guilty walking around and looking. So there's not much to do except stare at a brochure just lying around. But oh, what a brochure!".
 
-understand "bowser" as a mistake ("This game is pretty old school, but it has enough obstacles.") when player is in Browse Bowers.
-
 
 chapter dour tan rotunda
 
@@ -13988,7 +13883,6 @@ a-text of brochure is "RYRYRY". b-text of brochure is "R???RG". parse-text of br
 instead of taking brochure:
 	say "No. What would the next person here read?"
 
-understand "eiders" as a mistake ("But what would ducks DO in the big city? They have no ambition. They don't crave...") when brochure is visible
 
 book Econ Cone
 
@@ -13999,7 +13893,6 @@ understand "econ-cone" as Econ Cone.
 check going inside in Econ Cone:
 	say "You can't just walk in[if statue is reflexed or rivets are reflexed] even with your desire at its level[end if]! You need the right sort of thinking. You have not achieved it yet. Your eyes turn [if astute statue is examined]back [end if]to the astute statue." instead;
 
-understand "once" as a mistake ("Yes! You only need a chance! Once! To get inside! [if rivets is reflexive and prai is reflexive]You are almost enthused enough[else]You're enthused enough, but you need to strategize[end if].") when player is in Econ Cone.
 
 chapter skyline and scenery
 
@@ -14070,7 +13963,6 @@ check scaning statue:
 
 a-text of rivets is "RRRYRY". b-text of rivets is "[if prai is reflexed]RRRYRY[else]?RR?R?[end if]". parse-text of rivets is "[if prai is reflexed]x[sp]x[sp]x[sp]i[sp]x[sp]e[else]?[sp]x[sp]x[sp]?[sp]x[sp]?[end if]".
 
-understand "persia" as a mistake ("You redden at the thought of mystical lands that aren't relevant to the here and now.") when player is in Econ Cone.
 
 after fliptoing prai:
 	if rivets are reflexive, now rivets are llpish;
@@ -14159,7 +14051,6 @@ section nerf fern
 
 The nerf fern is useless scenery in Upscale Capsule.
 
-understand "fren" as a mistake ("That's not the right way to make friends. You have to, like, impress actual people.") when player is in upscale capsule.
 
 description of nerf fern is "It saves time, since you don't have to water it. But you can't see how it gives any new ideas."
 
@@ -14253,7 +14144,6 @@ instead of doing something to DIVORCES:
 	if action is procedural, continue the action;
 	say "DIVORCES is mostly for reading, mostly, unless you have an insight otherwise." instead;
 
-understand "maters" and "tamers" as a mistake ("Such people would be beneath your delegational abilities.") when stream is visible.
 
 chapter how to last (1 of 2)
 
@@ -14306,9 +14196,7 @@ description of salt is "St. Al Salt is, from what you are reading, engineered to
 
 a-text of salt is "RYRR". b-text of salt is "R?R?". parse-text of salt is "x[sp]a[sp]x[sp]t". salt is parse-spoilable.
 
-understand "slat" as a mistake ("You're not in the window making business.") when salt is visible
 
-understand "lsat" as a mistake ("Oh dear. Is a standardized lawyers['] aptitude test really less tedious than this? Well, I guess both have a lot of logic chopping. Ouch.") when salt is visible
 
 chapter final action 1 of 2
 
@@ -14329,7 +14217,6 @@ Eddie's song is reflexive scenery. "Eddie C. warbles on."
 
 a-text of eddie's song is "RYRYRY". b-text of eddie's song is "RYPYPG". parse-text is "x[sp]e[sp]x[sp]i[sp]x[sp]e". eddie's song is parse-spoilable.
 
-understand "snog" as a mistake ("You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.") when player is in Upscale Capsule and playbill is in Upscale Capsule.
 
 instead of examining song:
 	try listening instead;
@@ -14351,11 +14238,8 @@ instead of doing something with eddie's song:
 	if action is procedural, continue the action;
 	say "You can just listen to Eddie's song for evocative details and stuff."
 
-understand "signer" as a mistake ("No. Your eyes redden as you remember you are already a signer. The singer makes you want to do something else.") when player is in Upscale Capsule and playbill is in Upscale Capsule.
 
-understand "resign" as a mistake ("Wrong place for that. If you must, QUIT instead.") when player is not in Upscale Capsule.
 
-understand "reigns" as a mistake ("You try to convince yourself it totally reigns here, but the singer pushes you towards giving up your responsibility.") when song is visible.
 
 section troend1 and troend2 dummy variables to flip
 
@@ -14440,7 +14324,6 @@ understand "shoot [something]" as shooting.
 
 understand the command "fire [something]" as something new.
 
-understand "fire [text]" as a mistake ("SHOOT something with the gun instead.") when player has popgun.
 
 carry out shooting:
 	if player does not have popgun:
@@ -14482,7 +14365,6 @@ carry out shooting:
 	say "Less shooting, more soothing. You'll be prepared when there is a fight." instead;
 	the rule succeeds;
 
-understand "shoot [text] with [text]" as a mistake ("Just say what you want to shoot.")
 
 chapter pouring
 
@@ -14531,7 +14413,6 @@ section maze entry zany meter
 
 the maze entry zany meter is scenery in Grey Gyre. "It's like one of those things you hit with a carnival hammer, but you don't have any hammer. Bunched at the bottom are three bummer options for, presumably, the zaniest way to solve the maze.[paragraph break]0: be too scared to enter the maze[line break]0: run through the maze[line break]0: run through the maze again[line break]1: ignore and reject Nowt Town[line break]2: (written in red) congratulate yourself for solving the E-Z Ol['] Av(TM) Volt Maze.[line break]3: (written in red again) congratulate yourself for solving the E-Z Ol' Av(TM) Volt Maze WITHOUT EVEN GOING THROUGH IT OR ASKING FOR HINTS. "
 
-understand "enemy tzar" and "tzar enemy" as a mistake ("You hear a rumbling. Then Elvira appears from the maze! 'Oh, dear, this will be easy,' she says. And it is.[paragraph break][uurrgg]") when location of player is grey gyre and maze entry is in grey gyre.
 
 instead of scaning zany meter:
 	try scaning volt maze instead;
@@ -14543,7 +14424,6 @@ The lamb is a vanishing LLPish animal in Grey Gyre. "A poor lost lamb seems stuc
 check taking lamb:
 	say "It's not a bit lamb, but it wouldn't fit in your super purse." instead;
 
-understand "balm" as a mistake ("Giving the lamb balm might be an option, if there was any in the game, but turning it into balm would be out of line. And it wouldn't scare the lamb home.") when lamb is visible
 
 a-text of lamb is "RRYR". b-text of lamb is "RRYR". parse-text of lamb is "x[sp]x[sp]a[sp]x". lamb is cheat-spoilable.
 
@@ -14569,7 +14449,6 @@ check going north in Grey Gyre:
 		say "You stride confidently north with your two friends. You can tackle anyone!";
 
 section dart
-
 
 section volt maze path
 
@@ -14646,7 +14525,6 @@ check fliptoing plebe:
 		preef plebe;
 		the rule succeeds;
 
-understand "bleep" as a mistake ("I don't know what you said, but it's vulgar, I'm sure. Doesn't faze ME, though.") when plebe is not visible and mrlp is presto
 
 check fliptoing ether:
 	if Leo is not in Grey Gyre:
@@ -14670,9 +14548,7 @@ book Burnt Brunt
 
 Burnt Brunt is a room in Presto. "You see gasp-gaps to the west an a mad dam east, though north-south is unimpeded. And there's a dumpster here, too."
 
-understand "spag" as a mistake ("You don't have time to read text-adventuring magazines right now. You're too busy living them.") when player is in burnt brunt.
 
-understand "gpa" and "gpas" as a mistake ("You're not being graded here. I mean, you are getting a score, but this isn't school or anything.") when player is in burnt brunt.
 
 leaf-clue is a truth state that varies.
 
@@ -14682,9 +14558,7 @@ after printing the locale description for burnt brunt when leaf-clue is false:
 		now leaf-clue is true;
 		continue the action;
 
-understand "mad" as a mistake ("How can you feel mad, looking at such a beautiful work of nature?") when player is in Burnt Brunt.
 
-understand "cafe" as a mistake ("You don't need caffeine or food here.") when player is in Burnt Brunt.
 
 a mad dam is useless scenery in Burnt Brunt. "The mad dam pours water on itself. The waterfall's flaws alter as you watch, though you can't do much with it. Beautiful in its own way."
 
@@ -14714,11 +14588,8 @@ after doing something with the bored yak:
 
 a-text of bored yak is "RYORYYRR". b-text of bored yak is "RYORYYRR". parse-text of bored yak is "x[sp]-[sp]y[sp]x[sp]-[sp]-[sp]x[sp]x".
 
-understand "okey" as a mistake ("You try to make things okey (sic) but you aren't enough of a bard to.") when yoke is visible.
 
-understand "kay" as a mistake ("You try to nag the yak with a 'kay?' but without the 'mm' it's just not Lumberghian enough to work.") when yak is visible.
 
-understand "kya" as a mistake ("The yak is unimpressed with your karate noises.") when yak is visible.
 
 check giving to yak:
 	if noun is leaf:
@@ -14969,7 +14840,6 @@ a-text of dart is "RRYR". b-text of dart is "PRYP". parse-text of dart is "d[sp]
 check taking the dart when dart is in dumpster:
 	say "You grunt and stretch, but you can't quite reach the dart. You [if cur-score of presto is 0]may not have found how to get things done here[else]probably didn't grunt the right thing[end if]. Maybe you'll unexpectedly get it if you get disgusted the right way." instead;
 
-understand "tard" as a mistake ("[if Rand is visible]You pause before saying/thinking that, especially with Rand and Leo around. They may've heard that, before. [end if][one of]Self-pity that harsh--especially a potential slur--isn't the way to get the dart. This game doesn't want to be THAT sort of juvenile.[paragraph break]You see red at your slight indiscretion[or]Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possbilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.[paragraph break]You don't feel dumb after doing this, so there's no need to use that word again[stopping].") when player is in brunt and dart is in dumpster.
 
 section throwing
 
@@ -15009,11 +14879,8 @@ the red stump is scenery in burnt brunt. "It's [if star is in stump]cracked wher
 
 a-text of decorative star is "RYRR". b-text of decorative star is "RYRR". parse-text of star is "x[sp]a[sp]x[sp]x". star is cheat-spoilable.
 
-understand "tars" as a mistake ("That'd make the star stickier--or reduce it to awful glop.") when star is in Burnt Brunt.
 
-understand "tsar" and "arts" as a mistake ("Being an arts tsar won't help. You need a word that shows anger.") when star is in Burnt Brunt.
 
-understand "srat" as a mistake ("The Self-Referential Aptitude Test is an interesting puzzle, but you have enough on your mind, right now.") when star is in Burnt Brunt.
 
 description of decorative star is "It's not some paper gold star from Mrs. Crabtree's third grade class. It's actual dull metal. Shows you are a tsar of some sort of arts."
 
@@ -15023,7 +14890,6 @@ instead of doing something to decorative star when star is in Burnt Brunt:
 	if action is procedural, continue the action;
 	say "Straightforward taking won't work, and neither will other manipulation. You wonder what sort of magic might get it out.";
 
-understand "rats" as a mistake ("[if star is in lalaland]You miss that star of yours[else]") when star is not visible.
 
 after fliptoing star:
 	now player wears decorative star;
@@ -15036,7 +14902,6 @@ book Dirge Ridge
 
 Dirge Ridge is a room in Presto. Dirge Ridge is south of Burnt Brunt. "A vile veil covers any way except back north."
 
-understand "evil" as a mistake ("No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you[if leo is fightin or rand is fightin], or that guy chasing you. That'd be mean[end if].") when player is in ridge.
 
 the vile veil is scenery in Dirge Ridge. it is undesc.
 
@@ -15076,13 +14941,10 @@ to say l-r:
 to say lrp:
 	say "[if a random chance of 1 in 2 succeeds]Leo and Rand[else]Rand and Leo[end if]"
 
-understand "elo" as a mistake ("Somehow, you doubt Leo has a chess rating. Or enjoys any music other than heavy metal.") when Leo is visible.
 
-understand "eol" as a mistake ("Somehow, you doubt Leo is into computers.") when Leo is visible.
 
 Rand is a fightin bruisin reflexive person. description is "Rand is Leo's mirror image, loutish and muscular and taller than you[if Rand is washed up]. He seems upset[else if rand is fightin]. He looks over-focused, like he can be suckered by a feint, but nothing TOO subtle[end if]."
 
-understand "leonard" and "renaldo" and "leandro" and "rolande" as a mistake ("That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You [if rand is fightin]just need to outsmart them[else]wouldn't want that, now they're your friends[end if].") when Rand is visible.
 
 a-text of Leo is "YRY". b-text of Leo is "YRY". parse-text of leo is "o[sp]l[sp]e". leo is any-spoilable.
 
@@ -15142,11 +15004,8 @@ to say lrblab:
 
 chapter whassuping
 
-understand "asswhup" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And you'll need to move on from them, but not with violence.[else if Leo is washed up or Rand is washed up]You don't exactly have a physical advantage here.[otherwise]No chance.[end if]") when wzup is visible
 
-understand "whupass" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And you'll need to move on from them, but not with violence.[else if Leo is washed up or Rand is washed up]It's time for something more cordial than whupass. Besides, you have no can to put said hypothetical whupass in, and you won't find one. Not even in the dumpster.[otherwise]Leo and Rand won't give you the time to look in the dumpster for a spare can to put it in.[end if]") when wzup is visible
 
-understand "whassup" as a mistake ("You probably want to TALK to people instead. Well, most of the time.") when wzup is not visible.
 
 the wzup is privately-named vanishing scenery in Dirge Ridge. description of wzup is "bug".
 
@@ -15171,15 +15030,12 @@ check asking about "whassup":
 	if noun is Leo or noun is Rand:
 		try fliptoing wzup instead;
 
-understand "whasup" and "whasups" as a mistake ("That feels almost right, but you remember that that word has 2 s's in a row.") when player is in dirge ridge and Leo is washed up.
 
 book Austerer Treasure
 
 Austerer Treasure is an innie room in presto. Austerer Treasure is west of Grey Gyre. "[if ye hoop is visible]This room's pretty barren. I mean, a lot of treasure rooms generally get looted of unicorns['] coin urns and all before text adventurers without weapons make it there, but man. All that remains is an ancient-looking hoop about nine feet up labeled YE HOOP.[paragraph break]Looking at how it's out of reach sort of makes you want to give up, or maybe just pretend to give up and maybe something'll turn up[else]You've completely looted this place[end if]."
 
-understand "ooph" and "phoo" as a mistake ("That sounds almost like the sort of grunt that would help you reach the hoop, but it doesn't quite work.") when player is in austerer treasure and hoop is in austerer treasure.
 
-understand "pheyoo" as a mistake ("But nothing really smells in here. Perhaps you need something more straightforward and universal.") when player is in Austerer Treasure and ye hoop is in austerer treasure.
 
 Ye Hoop is vanishing scenery in Austerer Treasure. Ye Hoop is proper-named. "It's a hoop rather high up. 'Yo, hope,' you think to yourself, imagining it would totally crumble and reveal a treasure if you could grab it. But then you think 'Ooh, yep,' seeing how high it is."
 
@@ -15291,11 +15147,9 @@ after printing the name of the popgun while taking inventory:
 	say " ([if dart is in popgun]loaded with the dart[else]unloaded[end if])";
 	omit contents in listing;
 
-understand "oppugn [text]" and "oppugn" as a mistake ("You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.") when popgun is visible.
 
 understand "PG-on-up/ pop/ gun/" as popgun.
 
-understand "nobig" and "no big" as a mistake ("[if boing is reflexed]Hey, now, that's just humblebragging[else]Overconfidence is sort of the way, here. But it needs to be backed up with an idea[end if].") when popgun is visible.
 
 rule for printing room description details of the PG-on-up popgun:
 	if number of things in popgun is 0:
@@ -15363,9 +15217,7 @@ book Saps' Pass
 
 Saps' Pass is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. There's also a big wall here, blocking the way north. Feels like it's taunting you--must be a lawl wall. It's got keys hanging from it. You can retreat south, too, of course."
 
-understand "spas" as a mistake ("If it were that easy to change Saps['] Pass, it wouldn't be much of a puzzle. You'd still need to get the keys from the hogs, anyway.") when player is in saps' pass.
 
-understand "psas" as a mistake ("Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!") when player is in saps' pass.
 
 check going south in saps' pass:
 	say "The hogs snicker as you walk away.";
@@ -15389,7 +15241,6 @@ book Phat Path
 
 Phat Path is a room in Presto. "This path cuts between two lethally beautiful areas, for a dope combination of safety and aesthetics.[paragraph break]Mount Um-Not blocks you to the east, with Deil's Slide to the west. [if lawl wall is in Phat Path][otherwise]There's not much left with the wall gone, except for a sign to the north and a shack beyond that[end if][if hawt thaw is in phat path]. There's also an odd clump of Hawt Thaw off to the side[end if]. You can retreat south, too, of course."
 
-understand "ptah" as a mistake ("[if hogs are in phat path]If we were in ancient Egypt, I'd allow that, but we aren't, so I can't.[else]No Egyptian deity comes to your rescue. Or needs to.[end if]") when player is in phat path.
 
 the priv-shack is privately-named proper-named scenery in Phat Path. "[if shack is visited]It looks just as you left it[else]The shack looks cozy and inviting[end if].". printed name of priv-shack is "the shack"
 
@@ -15428,7 +15279,6 @@ check taking smart people sign:
 check scaning smart people sign:
 	say "It's all over the place. Maybe you should focus on specific letters. The ones in CAPS seem like a start.";
 
-understand "alter" as a mistake ("Vandalism! For shame!") when smart people sign is visible.
 
 the lawl wall is vanishing scenery in Saps' Pass.
 
@@ -15525,9 +15375,7 @@ to say increm:
 		now log ons letters are reflexed;
 		now ought letters are reflexed;
 
-understand "so long" and "solong" and "tough" and "later" as a mistake ("'But we ain't ready to go yet, boss!'") when lawl wall is in phat path and Leo is eager.
 
-understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, before you can slog on.") when player is in Phat Path and lawl wall is in lalaland and Leo is in Phat Path.
 
 chapter hawt thaw
 
@@ -15624,13 +15472,10 @@ instead of taking coal:
 
 a-text of coal is "RYRY". b-text of coal is "PGRY". parse-text of coal is "c[sp]o[sp]l[sp]a". coal is cheat-spoilable.
 
-understand "alco" as a mistake ("Alcohol doesn't work as well as caffeine in this situation.") when coal is visible or fizzy cola is visible or bottle of cola is visible.
 
 the fizzy cola is a singular-named thing. description is "The mug it's in seems to make it is more than usual, too. Cool.". the indefinite article of fizzy cola is "some"
 
-understand "pop" as a mistake ("It's certainly not pop. Which you couldn't do much with, except get down with OPP, and this isn't that sort of game.") when dirty looking cola is visible.
 
-understand "soda" as a mistake ("Don't be a sod. It's cola. It has to be.") when dirty looking cola is visible.
 
 Instead of doing something with the fizzy cola:
 	if action is procedural, continue the action;
@@ -16063,8 +15908,6 @@ does the player mean doing something with hard drive: it is likely;
 instead of opening drive:
 	say "You don't need to. You can just put the sort of stuff that goes in disk drives in the drive.";
 
-understand "rived" as a mistake ("You don't need to do that sort of hacking.") when hard drive is visible.
-understand "diver" as a mistake ("It's you that'll need to dive into some code.") when hard drive is visible.
 
 the golden dongle is part of the hard drive. description of golden dongle is "The golden dongle looks powerful and important. Computers in Yorpwald don't have one unless they're really important. It can do stuff like dual-op upload, whatever that is, but even better, it's more universal than a USB port, and you can attach all sorts of things to it."
 
@@ -16264,7 +16107,6 @@ carry out rebooting:
 		say "There's nothing to reboot here." instead;
 	try pushing blue button instead;
 
-
 chapter clock sap
 
 some clock sap is scenery in Hacks' Shack. description is "WHAT IS THIS, you think to yourself as you inspect the clock sap closer. You wonder how THE CLOCK ISN'T DRAINED since it's dripping at a pretty constant rate. CONFUSING!"
@@ -16272,9 +16114,7 @@ some clock sap is scenery in Hacks' Shack. description is "WHAT IS THIS, you thi
 check taking clock sap:
 	say "The sap is too sticky." instead;
 
-understand "spa" as a mistake ("Operating machinery in water is dangerous. Or, if the spa was all sap, just plain gross.") when clock sap is visible
 
-understand "asp" as a mistake ("A deadly snake would just make the situation...stickier.") when clock sap is visible
 
 a-text of clock sap is "RYRRRYRR". b-text of clock sap is "PYRRRYRR". parse-text of clock sap is "c[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]x".
 
@@ -16282,9 +16122,7 @@ understand "puddle" as clock sap.
 
 a disk is a thing. description is "This disk is plain, chunky and 3 1/4' square. Small print indicates the disk contains not only a powerful compression algorithm that allows portability but also critical system repair programs that only run on startup."
 
-understand "idks" as a mistake ("You'll need to figure stuff out with the [if disk is visible]disk[else]skid[end if], but right now, yeah, you're all 'I don't know.'") when skid is visible or disk is visible.
 
-understand "kids" as a mistake ("Kids don't need to listen to the words you've used so far! They wouldn't help with [if disk is visible]programming[else]pushing the skid[end if], anyway[one of].[paragraph break]However, you do take a second to reflect that nobody told you you're doing this for the kids, so that's a plus[or][stopping].") when skid is visible or disk is visible.
 
 a-text of disk is "RRYR". b-text of disk is "RRYR". parse-text of disk is "x[sp]x[sp]i[sp]x". disk is cheat-spoilable.
 
@@ -16315,7 +16153,6 @@ understand "tba key" and "tba/key" as t-key when t-key is reflexive.
 
 understand "tab key" and "tab/key" as t-key when t-key is reflexed.
 
-understand "bat" as a mistake ("You don't want to take a bat to the keyboard. Or have a bat swoop and take it. Trust me.") when keyboard is visible;
 
 The schematic catechism is a thing. it is on the labs slab.
 
@@ -16580,7 +16417,6 @@ Nowt Town is north of Grey Gyre. Nowt Town is in Presto. "You can exit back sout
 
 the big l is scenery in nowt town. "It's a decent enough example of an L[if r00 is unvisited]. Maybe there are other letters in the maze[end if].". understand "letter" and "letter l" as big l when player is in nowt town.
 
-understand "glib" as a mistake ("You'll need to be glib with something like g-lib later. If you get through this maze. In fact, maybe being glib might be easier than walking through.") when player is in nowt town.
 
 [is a mazeroom/a mazeroom is usually in presto]
 
@@ -16599,7 +16435,6 @@ check fliptoing maze walls:
 
 description of maze walls is "[if player is in grey gyre]Up north[else]This[end if] is a volt maze, but they don't seem juiced enough to zap you good. Running into them might be a useful lesson in character building. Or an outright clue."
 
-understand "lawls" and "lawl" as a mistake ("You try to laugh at the walls, but [if cur-score of presto is 0]such actions don't seem to work here[else]that Internet neologism is a hybrid action and interjection and thus fails[end if].") when walls are visible.
 
 instead of touching walls:
 	say "[if player is in grey gyre]Nothing. Maybe it's the inside of the walls, in the maze, that is charged[else][one of]You feel a[or]The same[stopping] small electric jolt[one of][or], again[stopping][end if]."
@@ -16625,7 +16460,6 @@ r10 is a privately-named mazeroom in Presto. r10 is west of nowt-town-p. "A big 
 
 r00 is a privately-named mazeroom in Presto. it is west of r10. "A big N is tiled into the floor here[exits-lead]."
 
-understand "bing" as a mistake ("[if boing is reflexed]You already did that, and with 25% more word power, too[else]You come to four-fifths of a revelation, but it's not about this maze, sadly[end if].") when player is in r00.
 
 r01 is a privately-named mazeroom in Presto. it is north of r00. "A big O is tiled into the floor here[exits-lead]."
 
@@ -16643,7 +16477,6 @@ r31 is a privately-named mazeroom in Presto. it is east of r21.
 
 r22 is a privately-named mazeroom in Presto. it is east of r12. "A big R is tiled into the floor here[exits-lead]."
 
-understand "brig" as a mistake ("There, there. This maze is much less hard to get out of than a prison.") when player is in r22.
 
 r32 is a privately-named mazeroom in Presto. it is east of r22. "A big S is tiled into the floor here[exits-lead]."
 
@@ -16719,7 +16552,6 @@ after scaning when player is in Unwary Runway (this is the new random guy in vol
 			say "That didn't show anything new. Maybe cheat mode would be better.";
 	continue the action;
 
-
 volume oyster
 
 last-loc of Oyster is Posh Hops Shop.
@@ -16771,9 +16603,7 @@ the tines are plural-named reflexive scenery in Posh Hops Shop. "They look perfe
 check taking tines:
 	say "[if stein is in lalaland]You destroyed them already[else]Wrong way to vandalize things, here[end if]." instead;
 
-understand "insert" as a mistake ("Almost, with the stein, there.") when stein is visible.
 
-understand "insert [something]" as a mistake ("Almost, but with the stein, there.") when stein is visible.
 
 a-text of tines is "YRRYR". b-text of tines is "YRRGR". parse-text of tines is "i[sp]x[sp]x[sp]e[sp]x". tines is cheat-spoilable.
 
@@ -16797,7 +16627,6 @@ a-text of tunes is "YRRYR". b-text of tunes is "YRRGR". parse-text of tunes is "
 
 The jukebox is uncluing scenery in Posh Hops Shop. It is fixed in place. "[if tunes are reflexed or perma-amper is reflexed]The jukebox is finally silent, but the patrons aren't.[else]It has the usual bunch of song buttons and probably a perma-amper inside to make sure the terrible tunes it's spewing are loud and continuous. You notice writing on the side.[end if]"
 
-understand "unset" as a mistake ("[if tunes are reflexive]You've no clue how to start. Perhaps the jukebox has instructions[else]You already took care of the jukebox tunes[end if].") when jukebox is visible.
 
 a-text of tumblers is "RRYR". b-text of tumblers is "RRYR". parse-text of tumblers is "x[sp]x[sp]i[sp]x". tumblers are cheat-spoilable.
 
@@ -16959,7 +16788,6 @@ carry out inseting:
 			try fliptoing tines instead;
 	say "You can't really inset that--you might be better off inserting it." instead;
 
-understand "inset [text]" as a mistake ("[if the number of words in the player's command > 3]You may want to INSERT x in Y instead[else]You may not be using an object in the game, and you may wish to inseRt, instead[end if].")
 
 chapter unseting
 
@@ -17020,9 +16848,7 @@ chapter inseting
 
 silly-acts is a number that varies.
 
-understand "pacers" as a mistake ("Casper's writing is multifaceted, but he wrote a story opposed to cars and car races and stuff.") when casper is visible
 
-understand "parsec" as a mistake ("Casper doesn't take too kindly to sci-fi terminology. He writes rough and tumble nature-y stuff.") when casper is visible
 
 strolled is a truth state that varies.
 
@@ -17074,7 +16900,6 @@ to check-silly-death:
 	get-dead;
 	follow the shutdown rules;
 
-understand "stroll [text]" and "stroll" as a mistake ("No, you can't just stroll back into the Posh Hops shop, and you can just plain walk anywhere else.") when mrlp is oyster and player is not in Posh Hops Shop
 
 chapter spilling
 
@@ -17392,7 +17217,6 @@ instead of doing something with fish:
 
 a-text of canoe is "YRYYR". b-text of canoe is "YRYYR". parse-text of canoe is "-[sp]x[sp]-[sp]-[sp]x".
 
-understand "ocean" as a mistake ("As you seek to change the canoe, you hear a rush of water[if canoe is unexamined], quickly examine the canoe,[end if] and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.[paragraph break][uurrgg]") when location of player is Hero's shore.
 
 Shoer Osher is scenery in Hero's Shore. "Everyone knows the story of Shoer Osher and [if player is male]his[else]her[end if] rise to fame from humble farm life, and everyone knows it's sort of fake, but nobody can say much. The statue itself improves Osher's looks and muscle tone. It's quite frankly creepy enough, making you wonder if perhaps you should be looking in the river instead for ways to cross it."
 
@@ -17426,16 +17250,13 @@ instead of doing something with boats:
 
 description of boats is "They're boats, not shippish, and too dense to swim through[if player is on raft]. Probably even to raft through[else][end if][if clam is in lalaland]. You can hear loud voices from the boats[end if]."
 
-understand "horse" as a mistake ("A horse can't cross water! You obviously did not play enough Oregon Trail in elementary school. There are plenty of craft to help you across.") when player is in Hero's shore
 
-understand "hoser" as a mistake ("Saying that does not help you take off to the north.") when player is in Hero's shore
 
 a river is scenery in Hero's shore. "Boats pass on the river. A raft is also docked to it. You probably need to cross it, but you can't expect a groupie pirogue to show up."
 
 check taking river:
 	say "The river drips through your fingers." instead;
 
-understand "arrive" as a mistake ("Easier said than done. Perhaps a river craft could help you across. Like the raft. Or the boats.") when player is in Hero's shore.
 
 instead of entering river:
 	say "You dip a toe in but are overwhelmed by some schmaltzy philosopher asking, how does one enter a river, and can one truly cross a river, and why does one cross a river.[paragraph break]The answer is probably something stupid, passive, and impractical. You need a way across that'll avoid all those boats. Or at least their potentially lethal undersides."
@@ -17450,7 +17271,6 @@ the raft is an enterable reflexive supporter in Hero's shore. the raft is fixed 
 instead of taking raft:
 	say "You probably want to ENTER or CLIMB or GET ON the raft. It's too big to take, physically.";
 
-understand "frat" as a mistake ("A frat would just sink into the river, creating more problems. Plus fratboys probably aren't big on wordgames.") when player is in Hero's shore;
 
 instead of pushing raft:
 	say "It would crash into a boat if you tried to cross the standard way." instead;
@@ -17470,7 +17290,6 @@ pushing oars is futiling. pulling oars is futiling.
 instead of futiling:
 	say "[if player is not on raft]They're too far away--you'll need to get on the raft[else]They are not just interlocking but locked in[end if]."
 
-understand "rosa" as a mistake ("Alas, no Lady of the Lake appears to help you. Her name, if she exists, is probably too hard to guess for this game.") when oars are visible.
 
 the interlocking oars are reflexive.
 
@@ -17485,7 +17304,6 @@ check fliptoing oars:
 	if player is not on raft:
 		say "That'd leave the raft behind you. Get on it first." instead;
 
-understand "fart" as a mistake ("[if b-r is visible]This raft isn't as receptive as the one in Anger Range[else if mrlp is oyster and anger range is visited]Gag ass-gas[else]You feel slightly dafter, having farted to no good purpose[end if].") when player is not in Hero's shore.
 
 check fliptoing raft:
 	if player is not on raft and raft is reflexive:
@@ -17493,7 +17311,6 @@ check fliptoing raft:
 		preef raft;
 		the rule succeeds;
 
-understand "boast" as a mistake ("Batso.") when player is not in shore.
 
 chapter sobating (joke reject verb)
 
@@ -17556,7 +17373,6 @@ book Anger Range
 
 Anger Range is a room in Oyster. "This place [if haunter is in lalaland]no longer [end if]manages to n-rage you, [if haunter is in lalaland]and the area seems to have calmed down[else if carps are visible]as well as the fish who live here[otherwise]and you sense there may be something else angré in the area. Some sort of scrawl sears the ground near the center, which feels unusually boiling[hau-clue][end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping]."
 
-understand "renga" as a mistake ("Now is not the time for poetry.") when player is in Anger Range.
 
 to say hau-clue:
 	say "[if ruby is in lalaland and haunter is off-stage], even more than before you buried the ruby[end if]";
@@ -17578,9 +17394,7 @@ understand "fish" and "bullies" as carps when carps-pref is true.
 
 the carps are plural-named nasty vanishing people in Anger Range. "They are sneering and teasing the poor trout."
 
-understand "craps" as a mistake ("You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.") when player is in anger range and carps are in anger range.
 
-understand "scarp" as a mistake ("Don't flee! Help the poor trout.") when player is in anger range and carps are in anger range.
 
 description of carps is "They are sneering and teasing the poor trout. You're bigger than them, by two feet."
 
@@ -17610,7 +17424,6 @@ the chum of the pikes is the carps.
 
 understand "fish" and "bullies" as pikes when carps-pref is false.
 
-understand "kepis" as a mistake ("If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.") when pikes are in anger range and player is in anger range.
 
 a-text of pikes is "RRYRY". b-text of pikes is "RRYRY". parse-text of pikes is "x[sp]x[sp]-[sp]x[sp]-".
 
@@ -17859,9 +17672,7 @@ carry out assuageing:
 
 chapter traceing
 
-understand "caret" as a mistake ("You need[if crate is reflexed]ed[end if] to shift letters and not sixes, here.") when crate is visible or c2 is visible.
 
-understand "cater" as a mistake ("No use catering to an enemy you can't see. Besides, the crate is too smashed to cater something.") when crate is visible or c2 is visible.
 
 traceing is an action applying to one thing.
 
@@ -17888,9 +17699,7 @@ check fliptoing crate:
 		preef crate;
 		the rule succeeds;
 
-understand "odor" as a mistake ("[if Gunter is off-stage]You'd stink as a host, trying that[else]The smell would gag you before the shouty youths[end if].") when side door is visible.
 
-understand "rood" as a mistake ("[if Gunter is off-stage]No need to surprise a guest like that. Just open the door[else]It'd be your own crucifix if you let the shouty youths outside in[end if].") when side door is visible.
 
 check opening span pans:
 	try going inside instead;
@@ -17942,9 +17751,6 @@ check scaning the cans (this is the bonus point rule) :
 	the rule fails;
 
 
-understand "neal" as a mistake ("You aren't looking for anyone named Neal. Unless the trout is named Neal. (Spoiler: he's not.) Maybe you should figure how to find the eeks.") when player is in Lean Lane.
-
-understand "elan" as a mistake ("Lean Lane will never be pretty, even [if cans are visible]if those cans disappeared[else]with those cans gone[end if]. You're looking for someone. Or maybe you should be listening.") when player is in Lean Lane.
 
 to say wipes-too:
 	if wipes are on drawer:
@@ -17969,11 +17775,8 @@ Aunt Tuna is a female person in Helots' Hostel. description is "Grayin['], grain
 
 does the player mean eating the tea tray: it is very likely;
 
-understand "ate" as a mistake ("You're getting ahead of yourself here.") when tea tray is visible.
 
-understand "aet" as a mistake ("Oh, this region won't go into extra time unless you want to do the side quest.") when tea tray is visible
 
-understand "eta" as a mistake ("ETA's one move later now that you went fishing for this anagram.") when tea tray is visible.
 
 The tea tray is edible flippable scenery in Helots' Hostel. description is "Arty, with tea on it. The meal, not the drink[one of]. And no beak-bake in it[or][stopping]. But why stare at it? That's not what food is for."
 
@@ -18093,7 +17896,6 @@ a-text of wrap is "RYRR". b-text of wrap is "PYRP". parse-text of wrap is "w[sp]
 
 description of wrap is "It's about two feet in diameter, all twisted up and thick enough to be covering something. But you don't have time to pop each bubble individually."
 
-understand "wrap [text]" as a mistake ("The bubble wrap is already covering something.") when wrap is visible.
 
 chapter warping
 
@@ -18181,9 +17983,7 @@ check taking ant:
 
 a-text of ant is "RYR". b-text of ant is "RYR". parse-text of ant is "x[sp]a[sp]x". ant is any-spoilable.
 
-understand "nat" as a mistake ("You don't need to name the ant. It's not a pet.") when player is in Dourest Detours.
 
-understand "atn" as a mistake ("You've already got the ant's attention. You'll need to take care of it, now.") when player is in Dourest Detours.
 
 chapter taning
 
@@ -18316,9 +18116,7 @@ after fliptoing pins:
 	now d2 is in den loft;
 	continue the action;
 
-understand "nips" as a mistake ("You see red at the thought of voluntarily pricking yourself with pins.") when player is in Tenfold Teflon'd Den Loft and pins are in Tenfold Teflon'd Den Loft.
 
-understand "snip" and "snip pins" as a mistake ("You don't have anything with a small enough blade to cut the pins. But that has to be close.") when player is in Tenfold Teflon'd Den Loft and pins are in Tenfold Teflon'd Den Loft.
 
 instead of doing something with pins:
 	if current action is sniping or current action is spining, continue the action;
@@ -18362,7 +18160,6 @@ the d2 is privately-named unscannable reflexive scenery. d2 is undesc. printed n
 
 a-text of d2 is "RYRYYR". b-text of d2 is "RYRYYR". parse-text of d2 is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
 
-understand "redial" as a mistake ("[if yapper is visible]You can't even [i]dial[r] with the yapper around[else if dialer is reflexive]Maybe in a bit, but you haven't even dialed yet[else]Maybe in a bit, but the pins are in the way at the moment[end if].") when pins are in Horned Hedron and player is in tenfold.
 
 check fliptoing d2:
 	if pins are reflexive:
@@ -18392,7 +18189,6 @@ instead of doing something with the raw red drawer:
 	if action is procedural, continue the action;
 	say "'Disturb? I'd burst!' says Aunt Tuna[if dent is visible], as she mentions that DENT is ugly enough[end if].";
 
-understand "redraw" as a mistake ("Graphics? In a text adventure? Sacrilege! You deserve no prize for that! Plus Aunt Tuna hates vandalism.") when drawer is visible.
 
 the raw red drawer is scenery in Helots' Hostel. the raw red drawer is a supporter.
 
@@ -18506,21 +18302,17 @@ Lapsin' Plains is north of anger range. Lapsin' Plains is in oyster. "Boy, it's 
 
 the tarp part is bounding scenery in Lapsin' Plains. "Maybe it's holding the plains together, but crossing it would be inadvisable. You can guess why."
 
-understand "prat" as a mistake ("Yes, whoever[if crate is reflexed or crate is in lalaland]was[else]'s[end if] lobbing crates isn't very nice, but name calling's no good.") when player is in lapsin' plains.
 
-understand "trap" as a mistake("Yes, the tarp part is almost surely a trap, but identifying it as such doesn't help.") when player is in lapsin' plains
 
 instead of doing something with the tarp part:
 	if action is procedural, continue the action;
 	say "The trap part may actually be keeping the lapsin['] plains from further erosion. You don't need to meddle with it."
 
-understand "palins" as a mistake ("Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.") when player is in Lapsin' Plains.
 
 c2 is vanishing privately-named scenery in Lapsin' Plains. c2 is undesc. printed name of c2 is "wherever the crate is coming from"
 
 a-text of c2 is "RRYRY". b-text of c2 is "RPGRG". parse-text of c2 is "x[sp]r[sp]a[sp][sp]e". c2 is parse-spoilable.
 
-understand "lapins" as a mistake ("Cute bunnies can make any game better, but having to deal with French as well would drive me crazy.") when player is in Lapsin' Plains
 
 instead of doing something with the crate:
 	if action is procedural, continue the action;
@@ -18534,9 +18326,7 @@ a-text of crate is "RYYRR". b-text of crate is "RYGRR". parse-text of crate is "
 
 understand "debris" and "crates" as crate.
 
-understand "brides" as a mistake ("No, no time to think about romance, now.") when crate is visible.
 
-understand "thus" as a mistake ("Your inactive word does nothing to the huts[if span pans are in Lapsin' Plains]. Perhaps you can do something to the door[else]. But you don't need to do any more, since you can walk in[end if].") when shut huts are visible.
 
 the shut huts are plural-named scenery in Lapsin' Plains. "They're shaped like a big ol['] upended tush.". understand "tush" and "hut" as shut huts.
 
@@ -18584,11 +18374,9 @@ section huging
 
 understand the command "hug" as something new.
 
-understand "hug [text]" and "hug" as a mistake ("Hug? Ugh. Guh.")
 
 understand the command "embrace" as something new.
 
-understand "embrace [text]" and "embrace" as a mistake ("Hug? Ugh. Guh.")
 
 chapter splaining
 
@@ -18631,7 +18419,6 @@ understand "pan" and "snap pan" as span pans when player is in Lapsin' Plains an
 after doing something with span pans:
 	set the pronoun it to span pans;
 
-understand "naps" as a mistake ("You need action, here! Maybe not an exhausting one, but some action.") when span pans are visible.
 
 instead of taking span pans:
 	say "Much too heavy."
@@ -18639,9 +18426,7 @@ instead of taking span pans:
 instead of entering span pans:
 	try opening span pans instead;
 
-understand "pone" as a mistake ("The message is corny, but the door's a piece of cake [if knob is not reflexed]once you figure[else]since you figured[end if] what to do with the knob.") when span pans are visible
 
-understand "troy" and "tory" as a mistake ("Apparently, the span pans don't have a name.") when player is in Lapsin' Plains and span pans are in Lapsin' Plains.
 
 the knob is vanishing scenery in Lapsin' Plains. the knob is flippable and vanishing. description of knob is "It's just a doorknob, though you can imagine it saying 'Noob! Dork!' You'd just love to give it a good effective smack."
 
@@ -18728,11 +18513,8 @@ understand "hut" as Shadier Airshed.
 to say uaah:
 	say "[one of]uh, at[or]at, uh,[in random order] a hut".
 
-understand "auth" as a mistake ("Sorry! I'm too busy to cameo in my own game at the moment.") when player is in Shadier Airshed.
 
-understand "utah" as a mistake ("The hut only looks like Utah. However, I bet Adenville is nice. Or it would be, if it existed. Man, I loved those Great Brain books.") when player is in Shadier Airshed.
 
-understand "sweat [text]" as a mistake ("Don't sweat the extra words. Just sweat.") when waste is visible
 
 the prod is a thing. description is "It's a corroded decor-rod--nah, just a prod. But it's rather thick and not uniformly smooth. It reminds you of one of those umbrellas you can't open up until you figure how by accident. One of those deals that are both really easy and not easy at all at the same time.[paragraph break]So you'll probably have to do something that'll feel obvious once you did it[if drop-try is true], something I already said wasn't usually useful[end if]."
 
@@ -18760,9 +18542,7 @@ instead of touching tubs:
 
 a-text of tubs is "RYRR". b-text of tubs is "RGRR". parse-text of tubs is "x[sp]u[sp]x[sp]x". tubs is cheat-spoilable.
 
-understand "stub" as a mistake ("You tap the tubs lightly with your toe. Then you tap them enough to hurt. Not even a thin crack appears, but your toe turns a bit red. Or feels like it did.") when tubs are visible.
 
-understand "buts" as a mistake ("You talk yourself out of any idea there is something inside the tubs, and you discourage yourself from believing you have the strength anyway. You are not fooling yourself.") when tubs are visible.
 
 the heaps are reflexive plural-named LLPish scenery. "[if heaps are reflexed]You have beautified them. Yay, you.[else]They are just a mess. You're not obligated to beautify Yorpwald, but maybe something could be done to them.[end if]"
 
@@ -18770,9 +18550,7 @@ a-text of heaps is "RRYRY". b-text of heaps is "RRGPY". parse-text of heaps is "
 
 the rigged digger is a thing. description is "It is, unsurprisingly, a product of Shovel Hovels. It looks suited to its advertised purpose.". understand "shovel" as digger.
 
-understand "bury [text]" as a mistake ("Nothing worth burying.") when player has digger and ruby is off-stage.
 
-understand "dig" and "dig [text]" as a mistake ("[dig-purpose].") when player has digger.
 
 to say dig-purpose:
 	if haunter is in lalaland and ruby is in lalaland:
@@ -19051,9 +18829,7 @@ a-text of a-p is "RYRRYR". b-text of a-p is "RYPPYR". parse-text of a-p is "p[sp
 
 understand "portal" as a-p.
 
-understand "part trap" and "part" as a mistake ("The ol['] trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.") when o-t is visible.
 
-understand "tarp" as a mistake ("Nothing happens. You wonder if part of the ol['] trap is that an ol['] tarp will fall on you and suffocate you, if you walk in there.") when o-t is visible.
 
 check entering a-p:
 	if ruby is not in lalaland:
@@ -19135,7 +18911,6 @@ book End Den
 
 End Den is an innie room in Oyster. "You look around, but this probably isn't where you're supposed to be. You can probably go back out[if player has gleaner]. Or maybe you have something that could get you to the right place[end if]."
 
-understand "ned" as a mistake ("That was my name in the first game.") when player is in end den.
 
 check exiting in End Den:
 	say "You find your way back to the Horned Hedron entrance.";
@@ -19210,7 +18985,6 @@ rule for supplying a missing noun when xraying:
 	say "I'm going to force you to be specific about what to x-ray, since this is a quasi-cheat.";
 	reject the player's command;
 
-understand "xray" and "x-ray" as a mistake ("You don't have x-ray vision right now.") when xrayvision is false.
 
 to say if-duck:
 	if duck is not visible:
@@ -19690,9 +19464,7 @@ a-text of keycar is "RRYYRO". b-text of keycar is "RRYYRO". parse-text of keycar
 
 inside of Topside Deposit is nowhere.
 
-understand "dopiest" as a mistake ("You sense that Ray Eck [if ray eck is in Topside Deposit]is[else]was[end if] one of the easier people to deal with, here, but you don't want to overstate it.") when player is in topside.
 
-understand "posited" as a mistake ("You formulate a proof that the place you are in does actually exist.") when player is in topside.
 
 check going north in Topside Deposit:
 	if player does not have Rosetta Toaster and ray eck is not visible:
@@ -19704,7 +19476,6 @@ section toaster
 
 The Rosetta Toaster is a container. It is in Topside Deposit. "A Rosetta Toaster rotates here[if start tarts are in Topside Deposit], with a pack of start tarts nearby[end if]."
 
-understand "retoast" and "retoast [text]" as a mistake ("You can just TOAST or EAT a pastry once you have it.") when toaster is visible.
 
 check scaning toaster:
 	say "[one of]The toaster looks like a pretty good diagnostic item as-is, and it doesn't need an upgrade, so you're not disappointed when nothing pops up[or]Still nothing. The toaster probably doesn't need an upgrade[stopping]." instead;
@@ -19754,7 +19525,6 @@ the Owers'-Bin Brownies are a plural-named LLPish hintpastry. description of Bro
 
 understand "brownie" as brownies.
 
-understand "worse" as a mistake ("The brownies don't need to taste any worse.") when player has Brownies.
 
 a-text of yurts is "RYRRO". b-text of yurts is "RGRPO". parse-text of yurts is "x[sp]u[sp]x[sp]t[sp]y". yurts are cheat-spoilable.
 
@@ -19770,9 +19540,7 @@ instead of taking spec-o-scope:
 instead of searching spec-o-scope:
 	try examining spec-o-scope;
 
-understand "copes" as a mistake ("You find it easier to cope, here, with the spec-o-scope to guide you, but you need to move on.") when player is in scope copse.
 
-understand "pecos" as a mistake ("This game ain't a dadgum Western.") when player is in scope copse.
 
 before examining spec-o-scope for the first time:
 	say "A telescope! Place to see!"
@@ -19829,7 +19597,6 @@ A rapier repair machine is in Outer Route. "A shiny machine labeled RAPIER REPAI
 instead of taking rapier repair:
 	say "Heavens, no! It fits in TOO well with the campiest campsite! Plus, it's at best impractical and at worst impossible to take. [if dagger is in lalaland]Plus you already used it[else]Better to carry something that'd fit into IT[end if]."
 
-understand "pairer" as a mistake ("[if gizmo is off-stage]You don't need duplicates of anything here. Besides, the machine looks complex enough. It will probably reject or accept what it needs to[else]You don't need to repurpose the repair machine. It's done enough for you[end if].")
 
 the I ZOMG Gizmo is a thing. description is "[one of]Whew. I'm buffaloed on this one. Somebody who knows how to build things would probably understand how to activate, much less use, the [randbla] or [randbla]. Hey, if I understood, I would be writing stuff far less silly than this game[or]You find yourself baffled by the [giz-part][stopping]."
 
@@ -19926,7 +19693,6 @@ book Anemic Cinema
 
 Anemic Cinema is north of Baldest Blasted Saltbed. "Well, you're not [i]in[r] the cinema. It's off to the side[if ingrates are visible]. Something smells to the west, too[end if][tow-dirs].". Anemic Cinema is in Towers.
 
-understand "ice man" and "iceman" as a mistake ("The iceman cometh, and your life passeth.[paragraph break][uurrgg]") when player is in anemic cinema.
 
 after printing the locale description for Anemic Cinema when Anemic Cinema is unvisited:
 	say "The ingrates grumble about how their territory is useless, and that's really not their fault. Maybe you don't really need to get rid of them.[paragraph break]";
@@ -19952,7 +19718,6 @@ Treading Gradient is north of Unblest Sunbelt and east of Baldest Blasted Saltbe
 to say we-g:
 	say "weeds swaying, despite no wind,"
 
-understand "swede" as a mistake ("That might make the weeds FROM Scandinavia, but it wouldn't SEND them there[if man covered is in Treading Gradient]. The man who is not Flemish shakes his head, sure you're one of those people too concerned about nationalities[end if].") when player is in Treading Gradient and weeds are in Treading Gradient.
 
 every turn when player is in Treading Gradient and weeds are in Treading Gradient and player was in Treading Gradient:
 	say "The weeds [one of][or]continue to [stopping]sway freely and menacingly[one of]. Perhaps you can get rid of them, since they're not actual people blocking passage[or], but they can't be THAT tough[stopping].";
@@ -19970,7 +19735,6 @@ the denim is LLPish vanishing scenery in Treading Gradient. the indefinite artic
 check taking denim:
 	say "You can't get a good grip on the denim to pull it." instead;
 
-understand "i mend" as a mistake ("You're more interested in doing the opposite--seeing what's behind.") when denim is in Treading Gradient and player is in Treading Gradient.
 
 a-text of denim is "RYRYR". b-text of denim is "RYPYR". parse-text of denim is "x[sp]-[sp]n[sp]-[sp]x". denim is cheat-spoilable.
 
@@ -20151,9 +19915,7 @@ Salted Deltas is north of Treading Gradient and east of Anemic Cinema. "Leak Lak
 
 s-d are useless scenery in salted deltas. understand "salted/ deltas" as s-d. printed name of s-d is "salted deltas".
 
-understand "slated" as a mistake ("You're not sure what the salted deltas could be slated for. You're not here for geological research, anyway[vis-guar].") when player is in Salted Deltas.
 
-understand "lasted" as a mistake ("The salted deltas have already lasted since well before you were born, and that's a verb, anyway[vis-guar].") when player is in Salted Deltas.
 
 to say vis-guar:
 	if number of guardians in salted deltas > 0:
@@ -20225,7 +19987,6 @@ the weirder red wire is LLPish and vanishing.
 
 a-text of weirder red wire is "RYRYRYR". b-text of weirder red wire is "RGRYR*R". parse-text of weirder red wire is "x[sp]e[sp]x[sp]-[sp]x[sp]*[sp]x".
 
-understand "were rid" as a mistake ("No, you can't just yank the red wire out.") when player is in actionless coastlines and weirder red wire is in actionless coastlines.
 
 check scaning bot boat (this is the scan boat components and not boat rule):
 	[showme whether or not blaster is reflexive;
@@ -20379,7 +20140,6 @@ after fliptoing atheists:
 	kid-appears;
 	continue the action;
 
-understand "cleats" as a mistake ("The castle is run-down and unromantic enough. Changing it to cleats would be even worse.") when mrlp is towers.
 
 book important side rooms
 
@@ -20441,9 +20201,7 @@ after printing the locale description for Obscurest Subsector when subsector-vis
 	now subsector-visit is true;
 	continue the action;
 
-understand "locked" as a mistake ("[if Dr Yow is in prison ropins]No, the opposite...[else]You don't need to fiddle with the lock now.[end if]") when player is in Obscurest Subsector.
 
-understand "delock" as a mistake ("[if Dr Yow is in prison ropins]No, this is the wrong area for pure action[else]Unlocked worked better, here[end if].") when player is in Obscurest Subsector.
 
 after choosing notable locale objects when player is in Obscurest Subsector:
 	set locale priority of prison ropins to 0;
@@ -20472,11 +20230,8 @@ instead of going inside in Obscurest Subsector:
 
 a-text of prison ropins is "YRRYRRYR". b-text of prison ropins is "YRRYRRYR". parse-text is "-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
-understand "unlocked" as a mistake ("There's nothing here to unlock. [if Obscurest Subsector is visited]Though you've been to the subsector with the prison ropins[else]Maybe someone's imprisoned somewhere[end if][if duck is not friendly]. And besides, the duck doesn't seem cooperative, yet[end if][if duck is not prefigured]. Still, that's an idea[end if].[preefsay of duck]") when duck is visible and prison ropins is not visible.
 
-understand "goal" as a mistake ("You fantasize briefly about being a sports star instead of a text adventurer[if Dr Yow is in ropins]. But it changes nothing. You look at the poor figure in the gaol[else]. You've done a good job rescuing Dr. Yow, but you still feel far from your main goal[end if].") when player is in Obscurest Subsector.
 
-understand "olga" as a mistake ("Even if the goal could become a person, they'd be kind of wooden.") when player is in Obscurest Subsector.
 
 description of ropins is "[if duck is returned]It's open now, not that you want to enter.[else]The gaol advertises itself as the involuntary home of one Dr. Yow.[end if]"
 
@@ -20624,7 +20379,6 @@ a-text of Dr Yow is "RYRRO". b-text of Dr Yow is "RYRRO". parse-text of Dr Yow i
 
 understand "doctor/doc yow" and "doctor/doc" as Dr Yow.
 
-understand "dowry" as a mistake ("Dr. Yow is an intellectual. [he-she-c] needs a [if duck is returned]willing pupil[else]breakout[end if], not material things or romance.") when Dr Yow is visible.
 
 Dr Yow can be rowdy, wordy or calm. Dr Yow is calm.
 
@@ -20774,7 +20528,6 @@ the gadflies' gasfield is bounding scenery in Lost Lots. "You can't 100% see the
 check going nowhere in Lost Lots:
 	say "Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?" instead;
 
-understand "slot" as a mistake ("If you made it, you might fall in the slot and never get out.") when player is in Lost Lots.
 
 check opening a hintpastry:
 	say "You can just try to [if player has toaster]TOAST or [end if]EAT that if you want." instead;
@@ -20833,7 +20586,6 @@ instead of doing something with the northern shore:
 	if action is procedural, continue the action;
 	say "It's too far to swim or do much more than magick."
 
-understand "earnest" as a mistake ("The shore wants to get physically closer to you now. You can feel it. But that doesn't do any good. You feel like you made progress, though.") when player is in rawest.
 
 does the player mean doing something with eastern shore: it is very likely.
 
@@ -20854,7 +20606,6 @@ instead of doing something with spray:
 		continue the action;
 	say "You need to worry about getting out of the spray."
 
-understand "prays" as a mistake ("Too late to be a prayers sprayer.") when player is in rawest.
 
 chapter a bot boat
 
@@ -21105,7 +20856,6 @@ check entering leak lake:
 		try entering bot boat instead;
 	say "Go out, eh? Too huge!" instead;
 
-understand "kale" as a mistake ("More kale? Dear, did I ask for more kale? Anyway, once you turned the whole lake into kale, the kale would have no water to survive and not-rot and avoid smelling worse.") when leak lake is visible.
 
 the shoals aslosh are a useless plural-named backdrop. they are in salted deltas, Actionless Coastlines, Strati Strait. "They make you say 'Ah! Loss!' (or Oh! Lass! if you're feeling romantic.) And, of course, if you focus on one, you see halos."
 
@@ -21117,7 +20867,6 @@ Ed Yerg is an LLPish person in Solo Den. description is "[if ed is reflexive]Des
 
 a-text of ed yerg is "RRYYRO". b-text of ed yerg is "RRYGRO". parse-text of ed yerg is "x[sp]x[sp]e[sp]y[sp]e[sp]x". ed yerg is cheat-spoilable.
 
-understand "gyre" as a mistake ("Ed doesn't deserve THAT for his past sins. Plus, you'd get sucked in.") when player is in solo den.
 
 check going east in solo den (this is the force give flowerpot rule):
 	if player has flowerpot and flowerpot contains crocus and Ed Yerg is reflexed:
@@ -21201,7 +20950,6 @@ instead of taking crocus:
 
 the succor crocus is an LLPish flippable thing in mislit limits. "A succor crocus lies here, full of livid colors that don't make you happier."
 
-understand "occurs" as a mistake ("You need to make something occur.") when player is in mislit limits or player has succor crocus.
 
 description of crocus is "[if flowerpot is reflexive]From what you know, the brighter a succor crocus is, the less it works. Right now, it's far too bright, and it's close to dying[else]Looking much better now[end if]."
 
@@ -21257,7 +21005,6 @@ after fliptoing Curst Palace (this is the overall Towers LLP rule):
 
 towers-min-flag is a truth state that varies;
 
-understand "crust" as a mistake ("It probably needs less crust, not more. The whole curst palace.") when mrlp is towers and player is not in Loftier Trefoil.
 
 understand "castle apcur" and "castle/apcur" as the curst palace.
 
@@ -21360,9 +21107,7 @@ rule for supplying a missing second noun when showing:
 	if pester'n serpent is visible:
 		now second noun is pester'n serpent.
 
-understand "repents" as a mistake ("The serpent remains kinda chaotic evil looking, and not just because it can't understand English. You see red at using a verb and not an adjective.") when serpent is visible.
 
-understand "respent" as a mistake ("You're not sure if the serpent's ever been spent, so you can't quite make it re-spent. You feel you have to be close, though.") when serpent is visible.
 
 a-text of pester'n serpent is "RRYRYRR". b-text of pester'n serpent is "?RYRY??". parse-text of serpent is "x[sp]x[sp]e[sp]x[sp]e[sp]n[sp]t".
 
@@ -21412,7 +21157,6 @@ section scope copse
 
 the bluster butlers are a plural-named neuter purple guardian. understand "bluster butler" and "butler" as bluster butlers. "Bluster butlers, masters of direct intimidation, guard the way [psgdir of bluster butlers]."
 
-understand "bustler" as a mistake ("The butlers are plural, and anyway, they're bustling plenty as-is.") when player is in Scope Copse and butlers are in Scope Copse.
 
 description of bluster butlers is "Bluster butlers are known for handling undesirables roughly. Their employers (or alma mater) are sewn into what they're wearing: [i]Trebul's[r]."
 
@@ -21422,7 +21166,6 @@ The muscly hulk is a red guardian. "A muscly hulk flexes as it guards the way [p
 
 description of muscly hulk is "He's certainly muscly. He looks relatively light on his toes for his size, too."
 
-understand "scumly" as a mistake ("Creative, but borderline ungrammatical moral judgments won't help you get on with things. They're awkward, careless, unwieldy, lumbering...hmmph.") when muscly hulk is visible.
 
 a-text of muscly is "RRYRRO". b-text of muscly is "RRYRRB". parse-text of muscly is "x[sp]x[sp]u[sp]x[sp]x[sp]y".
 
@@ -21462,7 +21205,6 @@ The ingrates are plural-named LLPish white guardians. "Ingrates whining about an
 
 understand "ingrate" as ingrates.
 
-understand "granites" and "granite" as a mistake ("They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't til they're gone.") when ingrates are visible.
 
 description of ingrates is "They're spouting some of the [i]angriest[r] ranting you've heard, though it doesn't make you see red right away. And yet, angriest is so close to whining."
 
@@ -21483,7 +21225,6 @@ understand "wait/ seer" as wait-seer.
 
 description of sweatier wait-seer is "He is sweatier than anyone else you have run across here. But as-is, he has more than enough energy to beat you up. He mutters 'I...we...stare,' turning red, as you look at him."
 
-understand "sweat" and "waste" and "waste ire" as a mistake ("You waste sweat and ire thinking what to do.") when sweatier wait-seer is visible.
 
 a-text of wait-seer is "RYYRYYRR". b-text of wait-seer is "?YYRY?RR". parse-text of wait-seer is "?[sp]-[sp]-[sp]x[sp]-[sp]?[sp]x[sp]x".
 
@@ -21493,7 +21234,6 @@ The man covered in inapt paint is a blue guardian. "A man to the [psgdir of inap
 
 description is "He has, in inapt paint on his chest, FLEMISH. He cries out 'I'm not Flemish! Nothing against [']em! It's just not me!'"
 
-understand "tap in" and "tapin" as a mistake ("You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.") when man covered is visible.
 
 understand "mel fish" and "mel/fish" as man covered in inapt paint.
 
@@ -22076,13 +21816,9 @@ when play begins (this is the distribute warriors rule) :
 
 [This pulls 1 guy from each wargroup. As of release 3 there are 26 distinct guys with 5.65 letters on average--the shuffling was previously totally random but now it's weighted down to ~5.61 with a more uniform distribution. You are sure to get 2 6's, 2 5's, a 7-8 and a 4-5.]
 
-understand "wendi" and "widen" as a mistake ("Now that would be too embarrassing. Maybe you could embarrass him a little, though.") when player is in Loftier Trefoil and Edwin is in Loftier Trefoil.
 
-understand "new id" as a mistake ("You need to make sure Edwin's new ID is something negative.") when player is in Loftier Trefoil and Edwin is in Loftier Trefoil.
 
-understand "recalm" and "recalm marcel" as a mistake ("Right idea, but it might work better in [if cur-score of oyster > 0]the oyster[else]another area[end if].") when player is in Loftier Trefoil and marcel is in Loftier Trefoil.
 
-understand "radly" as a mistake ("Boo! That's too subtle for here. Maybe you could make Daryl look different so he feels less radly about himself.") when player is in Loftier Trefoil and Daryl is in Loftier Trefoil.
 
 volume otters
 
@@ -22187,7 +21923,6 @@ Include (-
 	has transparent talkable
 -) when defining cinders.
 
-understand "increds" as a mistake ("You marvel at the possible power of the cinders and even see red at the thought of giving them up.") when player has cinders or location of cinders is location of player
 
 description of cinders is "You feel a wave of power as you [if player has cinders]finger through[else]get close to[end if] them. Nothing dangerous, but power to see how to do something, if you think right. But also power to believe you can do it all on your own."
 
@@ -22354,7 +22089,6 @@ rule for printing a locale paragraph about Elmer:
 	now Merle is mentioned;
 	now Elmer is mentioned;
 
-understand "drobe" as a mistake ("That's pretty much their whole drobe. You're not here to talk fashion, anyway.") when Merle is visible.
 
 description of Elmer is "He wears sober robes. His mouth smiles on the left and frowns on the right."
 
@@ -22379,7 +22113,6 @@ Bleary Barley is a room in Otters. "[if b-b is reflexive]Bleary Barley blocks yo
 check going east in Bleary Barley when b-b is reflexed:
 	say "The barley is a bit too thick that way[if ed riley is in Bleary Barley]--it almost looks more like marsh plants than barley[end if]." instead;
 
-understand "yer" as a mistake ("Yup! It's Ed's!") when player is in bleary barley and ed riley is in bleary barley.
 
 [glow red as you want to get rid of them]
 
@@ -22409,7 +22142,6 @@ instead of taking b-b:
 
 Ed Riley is a vanishing man. description is "'You won't get past Ed Riley, yielder!' he booms. For all this bluster, you get the feeling his loud voice hides an insecurity.". "Ed Riley acts as a steward here to keep you eastward. He is carrying an ER, YIELD sign and a loaf of deli rye."
 
-understand "reedy" as a mistake ("No, the adverb.") when player is in barley and ed riley is in barley.
 
 check taking ed riley:
 	say "Ed Riley raises up on his toes and booms 'I'm no YIELDER!'" instead;
@@ -22437,9 +22169,7 @@ the Er Yield sign is an auxiliary thing. Ed Riley carries the yield sign.
 
 a-text of er yield is "RYYRYRO". b-text of er yield is "RYYRYPO". parse-text of er yield is "x[sp]-[sp]-[sp]x[sp]-[sp]l[sp]y".
 
-understand "idle" as a mistake ("Ed Riley looks pleased he's pressured you into laziness.") when player is in barley and Ed Riley is in barley.
 
-understand "lied" as a mistake ("You can't think of anything to lie about that would sucker Ed Riley. You try to tell him the people who gave him this 'job' lied but realize he doesn't know who you are.") when player is in barley and Ed Riley is in barley.
 
 the description of the er yield sign is "'Spiffy, huh? I was told I could wipe off the 'er' for the first person I scared into not passing me for good.'"
 
@@ -22631,7 +22361,6 @@ after printing the locale description for frontage when frontage is unvisited:
 
 the Edictal Citadel is a backdrop in frontage. "It takes up a huge chunk of space to the west."
 
-understand "dialect" as a mistake ("No, a particular accent or odd word won't destroy the Edictal Citadel. Elvira checked off on all that.") when location of player is ominous.
 
 instead of doing something with the Edictal Citadel:
 	unless the action is procedural:
@@ -23104,7 +22833,6 @@ understand "painting" and "rev howe" and "rev/howe" as p-2 when player is in bra
 
 a-text of p-2 is "RYRYRYR". b-text of p-2 is "RYRYRYR". parse-text of p-2 is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]x".
 
-understand "whoever" as a mistake ("Actually, Mr. Lee is wondering whoever you might be. Tweak things, and you'll convince him.") when player is in bran barn and p-2 is in bran barn.
 
 check fliptoing Mr Lee:
 	if alcoves is not visited:
@@ -23122,7 +22850,6 @@ Loop Pool is a room in Otters. Loop Pool is north of frontage. "A pool encases a
 after choosing notable locale objects when player is in loop pool:
 	set the locale priority of Le Mer to 0;
 
-understand "polo" as a mistake ("No time for games! [if eels are in lalaland]Even with the eels rescued/on your side[else if power-back is false]You don't have your powers back, anyway. It's what's IN the water you want to change[else]Even with your powers back[end if].") when player is in Loop Pool
 
 Le Mer is a person in loop pool. description is "You can't locate where, exactly, Le Mer is."
 
@@ -23140,9 +22867,7 @@ Instead of doing something with the sea cube:
 
 the eels are a plural-named reflexive person in the sea cube. description of eels is "[if eels are reflexive]They seem listless, as if they need a reason to do something[else]Swimming calmly and undistractedly[end if].". "Eels [if eels are reflexive]squirm around waiting for your directive[else]swim contentedly here[end if]."
 
-understand "slee" as a mistake ("The eels aren't what needs to be reduced to rubble, here.") when eels are visible.
 
-understand "lees" as a mistake ("The eels would be insulted to be referred to as dregs.") when eels are visible.
 
 a-text of eels is "YRRY". b-text of eels is "GRRY". parse-text of eels is "e[sp]x[sp]x[sp]e". eels are cheat-spoilable.
 
@@ -23211,11 +22936,8 @@ understand "inert gap" and "inert/gap" as anger pit when sly imp is in lalaland.
 
 The sly imp is a flippable neuter person in Anger Pit. "A sly imp simply zooms about [if imp1 is reflexive]rangily [end if]guarding the way north[if imp2 is reflexive], with a butlery air[end if][if imp3 is reflexive], showing legendary patience[end if] that allows vaster averts[if power-back is true]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "It looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as it can, or keep you just mad enough not to think how to get rid of it.[paragraph break]It seems to have several tricks, but that may just mean several ways to get at it."
 
-understand "pti" as a mistake ("You can't go fast enough to interrupt the imp, much less apologize for doing so.") when player is in tapering anger pit and imp is in tapering anger pit.
 
-understand "pga" as a mistake ("No golfers appear.") when player is in tapering anger pit and imp is not in tapering anger pit.
 
-understand "gpa" as a mistake ("You don't need to worry about grades now.") when player is in tapering anger pit and imp is not in tapering anger pit.
 
 after doing something with imp:
 	set the pronoun him to the imp;
@@ -23225,7 +22947,6 @@ after doing something with imp:
 check taking imp:
 	say "Simply much too fast." instead;
 
-understand "green lady" as a mistake ("You remember reading about the Green Lady in the Silver Chair, where she started nice and started acting furiously--no, that's not the word, not quite, it doesn't fit with Legendary. But it must be something like that.") when imp3 is reflexive and sly imp is visible.
 
 a-text of sly imp is "BUG". b-text of sly imp is "BUG". parse-text is "BUG".
 
@@ -23243,9 +22964,7 @@ a-text of imp2 is "RRYRYRO". b-text of imp2 is "PRYRGRB". parse-text of imp2 is 
 
 a-text of imp3 is "YRRYRYRRO". b-text of imp3 is "YRRYRYRRB". parse-text of imp3 is "-[sp]x[sp]x[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y".
 
-understand "simply" as a mistake ("It's already simply annoying, so that has no effect. Maybe you can alter how it does things another way.") when sly imp is visible
 
-understand "implys" as a mistake ("You will have to be subtle here, but you'll want to work on actions, instead.") when sly imp is visible
 
 try-fail-pit-north is a truth state that varies.
 try-fail-anteroom-south is a truth state that varies.
@@ -23302,9 +23021,7 @@ chapter leopard
 
 The leopard is a reflexive neuter animal. "A leopard is here--[if leopard is reflexive]its colorings make it look like it is wearing a tacky (mostly) burnt orange jumpsuit, and it seems paw-tied, too[else]it looks more camoflagued since you changed it[end if]."
 
-understand "ape lord" and "apelord" as a mistake ("You [if leopard is reflexed]already changed the leopard[else]can't change what the leopard is, but you need to release it from its captivity[end if].") when player is in deck.
 
-understand "preload" and "pre-load" and "pre load" as a mistake ("The leopard is plenty powerful as-is, [if leopard is reflexed]and it's already on your side[else]but you need to get it on your side[end if].") when player is in deck.
 
 a-text of leopard is "RYRYRYR". b-text of leopard is "RYRYRYP". parse-text of leopard is "x[sp]-[sp]x[sp]-[sp]x[sp]-[sp]d".
 
@@ -23318,9 +23035,7 @@ The badger is a reflexive neuter animal. description is "[if badger is reflexed]
 
 a-text of badger is "RYRRYR". b-text of badger is "RGRRGR". parse-text of badger is "x[sp]a[sp]x[sp]x[sp]e[sp]x".
 
-understand "barged" as a mistake ("You don't want the badger to have barged into you. Clothed or not.") when player is in Deck.
 
-understand "b grade" and "bgrade" as a mistake ("The badger [if badger is reflexive]already[else]no longer[end if] feels second-rate, so [if badger is reflexive]you need another way to help it[else]it needs no more help[end if].") when player is in Deck.
 
 chapter satyr
 
@@ -23328,13 +23043,9 @@ the satyr is a reflexive male animal. description is "[if satyr is reflexed]He l
 
 a-text of satyr is "YRRRO". b-text of satyr is "YRPRO". parse-text of satyr is "a[sp]x[sp]t[sp]x[sp]y". satyr is cheat-spoilable.
 
-understand "stary" as a mistake ("What good would the satyr be, staring all the time?") when satyr is visible.
 
-understand "stray" as a mistake ("No, you [if satyr is reflexive]can get[else]already got[end if] him on your side.") when satyr is visible.
 
-understand "trays" as a mistake ("You can't transform something living into something dead. Besides, you don't need something that be trays. (Sorry.)") when satyr is visible.
 
-understand "ratsy" as a mistake ("You don't want a rat on your side. Or someone who says rats too much.") when satyr is visible.
 
 the owls are plural-named terse vanishing animals in Wire Deck. description of owls is "Their big owly eyes follow you.". "[one of]You hear hooting and a flapping of wings. You've probably triggered some sort of trap. You look up to see owls swooping. You can duck the first blow, and you maybe have time to look at your settler, but they're too speedy en masse[or]All those animals are nice, but the owls about to dive-bomb you here mean you'll need to think fast. I think[stopping]."
 
@@ -23345,7 +23056,6 @@ after fliptoing owls:
 	now leopard is in wire deck;
 	continue the action;
 
-understand "lows" as a mistake ("Actually, you'd like the owls NOT to reach lows like you are. Or not to get there before you can avoid them.") when owls are visible.
 
 a-text of owls is "RRYR". b-text of owls is "RRYR". parse-text of owls is "x[sp]x[sp]o[sp]x". owls are cheat-spoilable.
 
@@ -23579,9 +23289,7 @@ understand "throne" as thrones.
 
 description of thrones is "They're made out of, not metal, but locusts. Well, not quite that."
 
-understand "hornet" as a mistake ("The thrones are plural. Besides, just one hornet--what could it do?") when thrones are visible.
 
-understand "shorten" as a mistake ("[if thrones are visible]Well--not shorten, but break it down...you see red from the effort[else]They're more likely to shorten you with a few stings[end if].") when thrones are visible or hornets are visible.
 
 a-text of thrones is "RYRRYRR". b-text of thrones is "RYPRYRP". parse-text of thrones is "x[sp]-[sp]r[sp]x[sp]-[sp]x[sp]s".
 
@@ -23608,15 +23316,12 @@ the snipe is a neuter animal. description is "It has a long needle-like bill.". 
 
 a-text of pines is "RRYRY". b-text of pines is "RRYRY". parse-text of pines is "x[sp]x[sp]-[sp]x[sp]-".
 
-understand "penis" as a mistake ("[one of]Huh huh huh, Beavis. That was cool[or]Dammit, Beavis. You like have a game to solve[stopping].") when pines are visible or snipe is visible
 
-understand "spine" as a mistake ("You don't need to grow a spine. You've gotten this far.") when player is in perverse preserve.
 
 chapter nails and snail
 
 Some nails are plural-named things. "Some nails are lying all over the floor here."
 
-understand "slain" and "as nil" as a mistake ("[if nails are visible]The nails are already dead as a doornail[else]You're trying to SAVE the animals, actually[end if].") when player is in preserve
 
 description of nails is "They're in a spiral. Odd."
 
@@ -23700,7 +23405,6 @@ every turn when parrot is visible (this is the parrot-chat rule):
 		else:
 			say "The parrot pokes at the [list of nonreflexive things in preserve][if number of nonreflexive things in preserve > 1] in turn[end if].";
 
-
 a-text of raptor is "RYRRYR". b-text of raptor is "RGRRGR". parse-text of raptor is "x[sp]a[sp]x[sp]x[sp]o[sp]x".
 
 a-text of parrot is "RYRRYR". b-text of parrot is "RGRRGR". parse-text of parrot is "x[sp]a[sp]x[sp]x[sp]o[sp]x".
@@ -23744,11 +23448,8 @@ after printing the locale description for Inclosure when Inclosure is unvisited:
 
 Reclusion Inclosure is an innie room in Otters. Reclusion Inclosure is west of Alcoves. "You feel as slowed here as you did on entering the barley field. Vast vats emit sour moisture over a prey pyre. The room is cluttered with a stocked stockade, a torpid tripod (slowing you down,) and entrances to a warpish warship and becharm-chamber. That nacht-chant could be coming from any of them, or maybe even the enerve-veneer present all around. You can leave to the east."
 
-understand "nicer soul" as a mistake ("[one of]'O, nice slur!' Elvira counters. 'Cruel is ON!' Dang! She's come prepared with defense of her own too. I guess finding the redemption in all of us isn't the way to go, here[or]You don't want to hear 'Cruel is on!' again[stopping].") when player is in inclosure.
 
-understand "rule scion" as a mistake ("Elvira smirks and shakes her head in disbelief. 'I was expecting you to give up, but...no, you're not getting a post in my secret police for that. I mean, if I ever established any.' She quickly makes sure nobody will remember hearing her slip-up.[uurrgg]") when player is in inclosure.
 
-understand "coins lure" as a mistake ("[one of]Elvira momentarily sniffs. 'Money? Where? Mmm, I'll find it after beating this little dorkling up.'[or]Elvira's lust for power has eclipsed her lust for money. You should probably try to destroy her.[stopping]") when player is in inclosure.
 
 the torpid tripod is amusing scenery in Inclosure. tripod is an undesc.
 
@@ -23768,13 +23469,9 @@ the becharm chamber is amusing scenery in Inclosure. chamber is an undesc.
 instead of doing something with the becharm chamber:
 	say "It's too far away to do anything with. For your purposes, it's just one more bit of evil scenery."
 
-understand "aliver" as a mistake ("[if player is in inclosure]For whatever reason, you decide to give Elvira even more power. This time, you don't have the time or guts to reject her phaser.[uurrgg][else]You don't want to risk anything that would make Elvira more powerful.[end if]")
 
-understand "drop it" as a mistake ("For whatever reason, you just decide to give up. Elvira cackles. 'I knew you'd see it my way.' You wind up apologizing on national TV for getting too big for your anagramming britches and accepting a general brainwashing to boot. It's not that bad, only because, well, um, it just isn't. You're thrown in a jail, which can't be anagrammed, but it's for your own good. You're cool with that.[uurrgg]") when player is in Inclosure.
 
-understand "prod it" as a mistake ("You prod curiously at the machinery, and soon, Elvira realizes you don't have anything up your sleeve, and you won't be able to retreat in time. The purple pulper and the rest of her army subdue you easily.[uurrgg]") when player is in Inclosure.
 
-understand "sherpa" as a mistake ("You don't need someone to help you climb. You need help fighting Elvira.") when player is in Inclosure.
 
 the nacht chant is amusing scenery in Inclosure. chant is undesc.
 
@@ -23870,7 +23567,6 @@ citrus-score is a number that varies. non-citrus-score is a number that varies.
 
 book Rustic Citrus
 
-understand "sell" and "sell [text]" as a mistake ("You are paving the way for commerce, not interacting.") when player is in citrus or player is in clearing.
 
 Rustic Citrus is a room in Others. last-loc of Others is Rustic Citrus.
 
@@ -23890,9 +23586,7 @@ to check-fruit-min:
 
 description of Rustic Citrus is "A border, arbored, surrounds you on all sides, [if player has compass]but you see which way is north[else]and you don't know which way is which[end if].[paragraph break]A sign on an abandoned drinks stand says RUSTIC CITRUS and, well, it's pretty rustic even if nothing much is growing[if spear is visible]--I don't think the spear stuck in the ground counts[end if][if mad train is visible], and a mad train lies glaring at the lack of track ahead[end if]. [if lumps are visible]The ground's covered with lumps, too. [end if][if pagers are visible]You hear pagers beeping all around as well. [end if][if slime is visible]You also have trouble not looking at some slime oozing off to the side. [end if][if videotape is in citrus]That videotape collection you uncovered from the drinks stand lies here, too. [end if]"
 
-understand "broader" as a mistake ("Rustic Citrus is secluded enough.") when player is in Rustic Citrus.
 
-understand "boarder" as a mistake ("Rustic Citrus doesn't make for great living quarters.") when player is in Rustic Citrus.
 
 a border arbored is scenery in Rustic Citrus. printed name of a border arbored is "a border, arbored"
 
@@ -23993,9 +23687,7 @@ to say mami:
 	else:
 		say "[if player is in citrus]Named It[else]AND TIME,[end if] Mrs. Master Mind";
 
-understand "gapers" as a mistake ("Really, you don't need people all [mami] over changing those pagers into anything else. That's not your style.") when player is in rustic citrus and pagers are in rustic citrus.
 
-understand "gasper" as a mistake ("Not as healthy as fruit, to be sure!") when player is in rustic citrus and pagers are in rustic citrus.
 
 instead of taking pagers:
 	say "As much as you'd like to bash them, there's another way to shut them up."
@@ -24022,9 +23714,6 @@ chapter pears
 
 A spear is scenery in Rustic Citrus. description of spear is "It'd make a powerful weapon, but you couldn't hold anything else. Plus, this isn't that sort of game."
 
-understand "rapes" and "rape" as a mistake ("[one of]Some things, you can't joke about. So please, don't try that again.[or][cutoff][stopping]") when spear is visible.
-understand "reaps" as a mistake ("No, not verbs. Well, not here by Curtis.") when spear is visible.
-understand "spare" as a mistake ("No, not adjectives. Well, not here by Curtis.") when spear is visible.
 
 to say cutoff:
 	stop game abruptly;
@@ -24044,7 +23733,6 @@ a-text of lumps is "RRYRR". b-text of lumps is "RRYRP". parse-text of lumps is "
 
 the plums are a plural-named fruit.
 
-understand "slump" as a mistake ("Don't get exhausted! This area should be a bit of a break! I hope.") when player is in rustic and lumps are in rustic.
 
 chapter slime
 
@@ -24057,9 +23745,7 @@ instead of taking slime:
 
 some limes are a plural-named fruit.
 
-understand "smile" as a mistake ("[if limes are visible]You are thrilled to have gotten those limes, yes.[else if slime is visible]You smile at the slime. It can't be that hard to figure what to do.[otherwise][reject][run paragraph on][end if]") when player is in rustic and slime is in rustic.
 
-understand "miles" as a mistake ("You don't want miles and miles of slime.") when player is in rustic and slime is in rustic.
 
 chapter tamarind
 
@@ -24128,7 +23814,6 @@ chapter dollar
 
 a droll dollar is a thing. description is "It has a picture of some gangster--wait, it's [coin-person]--lighting a cigar with a dollar remarkably similar to it--on which is a gangster lighting a cigar, and so forth[one of]. LOL, rad, you think, though the joke wears off[or][stopping]."
 
-understand "allo" as a mistake ("Lola says nothing back.") when player has dollar and player is female.
 
 coin-person is a thing that varies.
 
@@ -24377,7 +24062,6 @@ the gooseberry is a fruit.
 
 the lost slot is a thing. description of lost slot is "It's soft to the touch, as if it could change its shape for the right item."
 
-understand "lots" as a mistake ("You only need the one slot.") when lost slot is visible.
 
 the silly shirt is a thing in Swell Wells. "A silly shirt lies here."
 
@@ -24415,7 +24099,6 @@ after looking in gates stage (this is the retract halt lath rule):
 		now halt lath is in lalaland;
 	continue the action;
 
-understand "saget" as a mistake ("You don't need to be part of Yorpwald's Funniest Home Videos right now.") when player is in gates stage.
 
 check going inside in gates stage:
 	try going north instead;
@@ -24474,7 +24157,6 @@ instead of doing something with the halt lath:
 	if action is procedural, continue the action;
 	say "You don't want to tangle with the gropin['] roping, because it will probably tangle with you, back.";
 
-understand "poring" as a mistake ("You ponder the gropin['] roping for a bit. You decide it isn't as worth thinking about as the arena to the north.") when player is in gates stage.
 
 section check for PERP
 
@@ -24620,7 +24302,6 @@ a-text of coins is "????R". b-text of coins is "?????". parse-text of coins is "
 
 a-text of icons is "RYRYR". b-text of icons is "RYRYR". parse-text of icons is "-[sp]x[sp]-[sp]x[sp]x".
 
-understand "scion" as a mistake ("Money, or something like it, should not be the guide of you.") when player has s-i or player has coins or player has s-c or player has icons.
 
 the s-c are privately-named plural-named things. description of s-c is "The coins vibrate from the sound they make. They looks even more omen-y than money.". understand "sonic/ coins" as s-c. printed name of s-c is "sonic coins".
 
@@ -24634,7 +24315,6 @@ understand "icon" and "sonic icon" as s-i when player has s-i.
 
 sonicing is an action applying to nothing.
 
-understand "sonic" as a mistake ("Maybe if you had more than one [if player has coin]coin[else]icon[end if].") when player has coin or player has icon.
 
 to slot-appear:
 	if lost slot is not part of storage box:
@@ -24750,7 +24430,6 @@ check entering superstore:
 before talking to nameless salesmen:
 	say "You feel, well, lameness at having nothing to say to the salesmen. Don't worry, they're not important." instead;
 
-understand "lameness" as a mistake ("No need to judge the nameless salesmen. We can't all be heroes.") when player is in clangier clearing.
 
 Include (-
 	has transparent talkable
@@ -24768,11 +24447,9 @@ for writing a paragraph about a fruit (called froo) in Clangier Clearing:
 	now melon is mentioned;
 	now nectarine is mentioned;
 
-understand "cigar" as a mistake ("That'd be out of place among fresh fruits. Plus, whether or not Len deserves a cigar, he doesn't deserve to be turned into one.") when player is in clearing.
 
 a mango is a fruit.
 
-understand "mango" as a mistake ("That's the fruit you need to find. You see red wondering where or how?") when player is in clearing and mango is off-stage.
 
 clearing-fruits is a number that varies.
 
@@ -24794,13 +24471,9 @@ the printed name of l-o-p is "the list of prices".
 
 a-text of l-o-p is "RRYRYR". b-text of l-o-p is "RPGRGP". parse-text of l-o-p is "x[sp]r[sp]i[sp]x[sp]e[sp]s". l-o-p is parse-spoilable.
 
-understand "spicer" as a mistake ("You don't need to summon someone who deals in spices, or (dated political joke) general falsehoods.") when l-o-p is visible.
 
-understand "precis" as a mistake ("It's already a precis, of sorts. Less highfalutin['] words will work better here.") when l-o-p is visible.
 
-understand "silt" as a mistake ("Dirty way to slash prices.") when l-o-p is visible.
 
-understand "slit" as a mistake ("Dirty way to slash prices.") when l-o-p is visible.
 
 the kumquat is a fruit. description is "Weird and orange and oblong."
 
@@ -24886,13 +24559,9 @@ the pre-mang is privately-named scenery in Clangier Clearing. pre-mang is undesc
 
 a-text of pre-mang is "YRYRR". b-text of pre-mang is "YRYRR". parse-text is "-[sp]x[sp]-[sp]x[sp]x".
 
-understand "among" as a mistake ("Maybe if there were mango trees around.") when mrlp is routes.
 
-understand "go man" as a mistake ("That's the right idea but the wrong sorts of words.") when player is in clearing and mango is off-stage.
 
-understand "nag mo" as a mistake ("[one of]You get all red faced asking people how to trade for a mango, and asking, and asking[or]That'd just get you red-faced again[stopping].") when player is in clearing and mango is off-stage.
 
-understand "an omg" as a mistake ("Lashing out that way leaves you feeling you must be close to the right way to get a mango.") when player is in clearing and mango is off-stage.
 
 before fliptoing mango:
 	if player does not have tekno-token:
@@ -24912,7 +24581,6 @@ printed name of ego fail foliage is "ego-fail foliage"
 
 understand "foilage" and "foilage foliage" as ego fail foliage.
 
-understand "fidel" as a mistake ("A thin voice howls 'I fled!'") when player is in Filed Field.
 
 chapter breadfruit (Ohai Philip Larkin!)
 
@@ -25044,7 +24712,6 @@ description of Scape Space is "This well-hidden area may be a raft of criminal a
 
 an-a is a privately-named thing in Scape Space. printed name of the an-a is "An a". "An a is here, waiting for you to take it. Well, take it the right way.". description of an-a is "Greenish, then golden, then a nasty dark brown.". understand "the/an a" and "a" as an-a.
 
-understand "banana" as a mistake ("Hm, that's the fruit you want, but which letter to grab? And how?") when an-a is in scape space and player is in scape space.
 
 the pugnacious plant is a thing in Scape Space. "A pugnacious plant looms here, just waiting for you to do something with it."
 
@@ -25090,11 +24757,8 @@ to say gree-app:
 understand "tarred trader" and "tarred/trader" as Red Rat when player is male.
 understand "tarred trader" and "tarred/trader" as Dr Tera when player is female.
 
-understand "retard" as a mistake ("You can picture people like [greedy-person] calling you, or people [he-she] 'provided financial services to,' that, but two wrongs don't make a right. Besides, if anything, [he-she] was being too clever.") when player is in scape space
 
-understand "red rat" as a mistake ("Dr. Tera Darter is nowhere NEAR that left-wing. Okay, she's probably big on government corruption, but--namecalling isn't the way to go, here.") when player is in scape space and greedy-person is Dr Tera
 
-understand "darter" as a mistake ("Art Erd has nowhere to run[if storage box is in scape space], and you don't know if you want him taking that storage box with him[end if].") when player is in scape space and greedy-person is Art Erd
 
 rule for printing a locale paragraph about greedy-person:
 	if storage box is in scape space:
@@ -25156,7 +24820,6 @@ the ENGARO orange is a reflexive fruit in Scape Space. "An orange lies here next
 
 description of ENGARO is "Well, it's orange. And it's branded, so you can READ it to see what lovely company produced it."
 
-understand "gorean" as a mistake ("This game isn't about that sort of stuff. Not that there's anything wrong with that.") when orange is visible.
 
 a-text of ENGARO orange is "RY*RYYR". b-text of ENGARO is "RY*RYYR". parse-text is "x[sp]-[sp]x[sp]-[sp]-[sp]x".
 
@@ -25327,7 +24990,6 @@ section novella
 
 The novella is an exhibit in Evoc-Cove. "A novella is here. You can READ it without taking it.". description is "It's called Venal Ol['] Novella, by Evan Oll. That's probably a pseudonym. It's got a hundred pages, which you can examine by READ (number)[lowest-unread]. You can also speed-read with [i]rr[r]."
 
-understand "neva" and "lol" as a mistake ("Yeah, the novel is pretty unbelievable, but it's not there to be profound.") when player is in evoc-cove.
 
 check taking novella:
 	say "Don't take the art." instead;
@@ -25421,7 +25083,6 @@ chapter Hows Show
 
 Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "You see two walls here with snatches of code written all over them[if nuf-hows-examined]: the owl decal code wall and the allow-lots-tools wall[end if]. They may be too technical, but maybe you can get a general feel for the silly tricks that went into A Roiling Original. You can go back south."
 
-understand "coed" as a mistake ("Yes, everyone is welcome in the Demo Dome.") when player is in hows show.
 
 after printing the locale description for Hows Show when Hows Show is unvisited:
 	ital-say "NOTE: the whos-show is already under CREDITS.";
@@ -25542,7 +25203,6 @@ chapter Ned's Dens
 
 Ned's Dens is west of Peek Keep. Ned's Dens is in Demo Dome. "You feel a hush here, as if you're seeing something personal and private. Like that Chic Loner Chronicle. You can go back east."
 
-understand "send" as a mistake ("Maybe in another game, you could do that, if you walked around right. But not this one.") when player is in ned's dens.
 
 The Chic Loner Chronicle is an exhibit in Ned's Dens. description is "[one of]The Chronicle has a list of silly things the author thought of while writing this game. The first one[or]Another thought[stopping] reads: [one-chron]".
 
@@ -25564,7 +25224,6 @@ chapter Sparse Spares
 
 Sparse Spares is below Peek Keep. Sparse Spares is in Demo Dome. "All sorts of weird tools and paraphernalia that couldn't fit into the game proper lie here, likely impulse purchases from Bulk-Klub. You can go back up."
 
-understand "spears" as a mistake ("There's nothing you need a weapon to fight against.") when player is in sparse spares.
 
 the parcels clasper is a thing in Sparse Spares. description is "Oh, man! It's handy for picking stuff up and moving it around. It looks a bit odd, but boy, if you look for a minute, THAT's how it works."
 
@@ -29028,7 +28687,6 @@ chapter tuting
 
 [* TUT allows you to see Elmo and alter the scannedness of everything. 1 = no more scans and 2 = all scans. Should change to 0 for no scans, 1=ncscan, 2=cscan, 3=allscan]
 
-understand "tut" as a mistake ("tut 1 = tutorial with nothing scanned, tut 2 = with all scanned.")
 
 tuting is an action applying to one number.
 
