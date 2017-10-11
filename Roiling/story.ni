@@ -182,7 +182,7 @@ a thing can be warpable. a thing is usually not warpable.
 
 a thing can be LLPish. a thing is usually not LLPish.
 
-a thing can be universal, useless, cluey, amusing, abstract or practical. a thing is usually practical.
+a thing can be universal, useless, cluey, amusing, abstract, practical, or bounding. a thing is usually practical.
 
 a thing can be flippable, auxiliary or uncluing or clue-used. a thing is usually uncluing.
 
@@ -333,6 +333,8 @@ the specification of a hintpastry is "A hintpastry, when heated, lets you see ho
 a fruit is a kind of thing. description of a fruit is "[if the item described is plural-named]They're[else]It's[end if] not heinously bruised or rotting, or anything, so Curtis probably won't mind it."
 
 a fruit has a room called frroom.
+
+a fruit can be hintable. a fruit is usually hintable.
 
 after doing something with a fruit (this is the limes can sensibly be it or them rule) :
 	set the pronoun it to the noun;
@@ -14001,7 +14003,7 @@ understand "once" as a mistake ("Yes! You only need a chance! Once! To get insid
 
 chapter skyline and scenery
 
-the skyline is scenery in Econ Cone. understand "cone" as skyline when player is in Econ Cone. the skyline is undesc.
+the skyline is useless scenery in Econ Cone. understand "cone" as skyline when player is in Econ Cone. the skyline is undesc.
 
 instead of doing something with the skyline:
 	say "The most interesting part of the skyline is the perky crass skyscraper! You feel pulled to it. The rest is...well, okay for other people, but not you.";
@@ -16180,9 +16182,7 @@ check opening a badbook:
 check closing a badbook:
 	say "It is, but you can try READing it." instead;
 
-a badbook is a kind of thing.
-a badbook has text called theme.
-a badbook has text called author.
+a badbook is a kind of thing. a badbook has text called theme. a badbook has text called author. a badbook is usually cluey.
 
 does the player mean doing something with a badbook when player is in shack: it is likely.
 
@@ -18504,7 +18504,7 @@ to say knob-link:
 
 Lapsin' Plains is north of anger range. Lapsin' Plains is in oyster. "Boy, it's desolate here! [if span pans are visible]Span pans[knob-link] guard your way into Shut huts[else]Shut huts lie thus here, and you can go inside[end if][if fragments are visible]. You see debris from a crate[end if][if bogus-plains is reflexive], and you have this weird urge to say something, even with nobody around[end if]. A tarp part covers every direction except back south and inside to the huts."
 
-the tarp part is scenery in Lapsin' Plains. "Maybe it's holding the plains together, but crossing it would be inadvisable. You can guess why."
+the tarp part is bounding scenery in Lapsin' Plains. "Maybe it's holding the plains together, but crossing it would be inadvisable. You can guess why."
 
 understand "prat" as a mistake ("Yes, whoever[if crate is reflexed or crate is in lalaland]was[else]'s[end if] lobbing crates isn't very nice, but name calling's no good.") when player is in lapsin' plains.
 
@@ -19404,9 +19404,7 @@ after examining spec-o-scope (this is the specoscope draw rule):
 to draw-my-loc:
 	let myx be 0;
 	let myy be 0;
-	d "1.";
 	draw-towers-map;
-	d "2.";
 	repeat through table of towers-locs:
 		d "[my-loc entry].";
 		if location of player is my-loc entry:
@@ -19808,7 +19806,7 @@ Outer Route is west of Scope Copse. Outer Route is in Towers. "It's a bit outre 
 
 section sway ways
 
-sway ways are plural-named scenery in Outer Route. "Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security. But then they probably lead back to even more dangerous parts of the badlands, anyway."
+sway ways are plural-named bounding scenery in Outer Route. "Just looking at the yaws makes your head swim. They're meant to be tricky to walk on without the proper ways through. An extra level of security. But then they probably lead back to even more dangerous parts of the badlands, anyway."
 
 understand "yaws" and "sway-ways" as sway ways.
 
@@ -20188,6 +20186,9 @@ to say kid-first:
 
 a smart kid is a reflexive person. "[kid-full] smiles [if smart kid is reflexive]nervously[else]happily[end if] at you, lost in technical abstract thought."
 
+check objhinting smart kid:
+	if player is in subsector and smart kid is in subsector, try objhinting atblock instead;
+
 before objasking smart kid about when smart kid is reflexive:
 	kid-fid instead;
 
@@ -20349,13 +20350,13 @@ to decide which guardian is the-hostile:
 	if player is male, decide on hostile-is-he lot;
 	decide on lois the hostile;
 
-Strati Strait is north of Danger Garden and east of Treading Gradient. "Clouds above (strati) give this strait a feeling of reflective gloom. Leak Lake spans to the east, too far to cross. A Thearchy Hatchery[if the-hostile is in lalaland], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Strati Strait is in Towers.
+Strati Strait is north of Danger Garden and east of Treading Gradient. "Coulds Clouds above (strati) give this strait a feeling of reflective gloom. Leak Lake spans to the east, too far to cross. A Thearchy Hatchery[if the-hostile is in lalaland], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Strati Strait is in Towers.
 
-the could clouds are scenery in Strati Strait. "The strati are definitely could-clouds, full of possibility. Just looking at them feels like you have artist traits."
+the coulds clouds are useless scenery in Strati Strait. "The strati are definitely coulds-clouds, full of possibility. Just looking at them feels like you have artist traits."
 
-understand "strati" as could clouds when player is in strati strait.
+understand "strati" as coulds clouds when player is in strati strait.
 
-instead of doing something with could clouds:
+instead of doing something with coulds clouds:
 	if action is procedural, continue the action;
 	say "The clouds are too far away to do anything other than look at. They won't help you solve anything. They're just there.";
 
@@ -20768,7 +20769,7 @@ chapter Lost Lots
 
 Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is just a barren area, without even a slot. A gadflies['] gasfield surrounds you every way except back north."
 
-the gadflies' gasfield is scenery in Lost Lots. "You can't 100% see the gasfield, since it's hazy. But it's there, and it blocks you."
+the gadflies' gasfield is bounding scenery in Lost Lots. "You can't 100% see the gasfield, since it's hazy. But it's there, and it blocks you."
 
 check going nowhere in Lost Lots:
 	say "Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?" instead;
@@ -22933,7 +22934,7 @@ a mack-idea is a kind of undesc. a mack-idea is usually privately-named. a mack-
 rule for deciding whether all includes mack-ideas:
 	it does not.
 
-a mack-idea has a number called mack-prio. mack-prio of a mack-idea is usually 0.
+a mack-idea has a number called mack-prio. mack-prio of a mack-idea is usually 0. a mack-idea is usually abstract.
 
 a mack-idea can be ment. a mack-idea is usually not ment. a mack-idea can be passed-on. a mack-idea is usually not passed-on.
 
@@ -25179,6 +25180,17 @@ carry out gonearing:
 instead of dropping the orange:
 	say "But you worked so hard to get it!"
 
+chapter fruits by hintability
+
+maraschino is not hintable. pears are not hintable. plums are not hintable. limes are not hintable.
+tamarind is not hintable. blueberries are not hintable. cantaloupe is not hintable. persimmon is not hintable.
+pomegranate is not hintable. coconuts are not hintable. tangerines are not hintable. mulberries are not hintable.
+gooseberry is not hintable. apricot is not hintable. apples are not hintable. mango is not hintable.
+kumquat is not hintable. papayas are not hintable. breadfruit is not hintable. watermelon is not hintable.
+cranberries are not hintable. grapefruit is not hintable. raspberry is not hintable. strawberries are not hintable.
+blackberries are not hintable. guava is not hintable. rhubarb is not hintable. banana is not hintable.
+grapes are not hintable. pineapple is not hintable.
+
 chapter fruits by room
 
 frroom of grapes is rustic citrus.
@@ -25974,6 +25986,9 @@ definition: a thing (called hintcand) is hintrelevant:
 			if actionless coastlines is visited or Strati Strait is visited:
 				decide yes;
 		decide no;
+	if hintcand is n-t-air:
+		if mrlp is presto and zany meter is in grey gyre, decide yes;
+		decide no;
 	if hintcand is curst palace:
 		if mrlp is towers:
 			decide yes;
@@ -25995,7 +26010,9 @@ definition: a thing (called hintcand) is hintrelevant:
 			if salted deltas is visited or Actionless Coastlines is visited or Strati Strait is visited:
 				decide yes;
 		decide no;
+	d "[hintcand] before.";
 	let R1 be map region of location of hintcand;
+	d "[hintcand] after.";
 	let R2 be mrlp;
 	if R1 is R2:
 		[d "[hintcand] [location of hintcand] vs [R2].";]
@@ -26062,8 +26079,11 @@ carry out objhinting (this is the pick object to hint rule) :
 	now cur-item is noun;
 	if spoilit is false:
 		d "[noun] hinting.";
+	if noun is bounding, say "That's there just to provide barriers in various directions, and for local flavor." instead;
 	if noun is a room:
 		say "You need to hint things in a location, not a location. Also, you can just type HINT for the current puzzle to look at." instead;
+	if noun is a fruit and player has noun, say "[frootz]" instead;
+	if noun is a badbook, say "[if yak is in lalaland][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]" instead;
 	if noun is the player:
 		all-say "[if cur-score of Means Manse < 3]You have, or had, a special power you may remember from Shuffling Around. If you haven't figured it, hopefully, you soon will, from looking around[else]You're as good looking as ever! I can't tell you how to be a better you than you already are[end if]." instead;
 	if noun is a fruit and player has noun:
@@ -26298,6 +26318,8 @@ to say medal-help:
 	else:
 		say "You've done work in the wire deck and preserve, but not enough"
 
+[ropins	"[one of]The prison ropins are locked.[plus][or]What could change that?[plus][or]Or make the ropins UNLOCKED? There's an NPC.[plus][or]The Lone Duck could make the gaol unlocked.[cycling]"]
+
 table of dont-need-hints [tdnh]
 hint-entry	advice-entry
 Pa Egg Pea	"Pa, Egg, Pea can't help you any more. Well, it never did, except to get a last lousy point." [start TROVES]
@@ -26360,14 +26382,6 @@ Urgent Gunter	"You can pump him for information if you want."
 peephole	"The peephole's for looking through."
 notice	"For reading."
 question mark	"[bug-report]"
-op-ed	"[op-ed-silly]."
-nitro intro	"[op-ed-silly]."
-moneyco	"[op-ed-silly]."
-questin' inquest	"[op-ed-silly]."
-shatter-threats page	"[op-ed-silly]."
-I Trash His Art	"[op-ed-silly]."
-Her Arts Er Trash	"[op-ed-silly]."
-By Li'l Billy	"[op-ed-silly]."
 colorful logo	"The logo provides hints as to the mechanics of the settler. You may want to try examining it with teach/cheat mode on or off."
 switch	"The switch shows you what needs to be changed if you SWITCH SETTLER."
 decal	"[one of]The Y's on the decal are orange. This seems like a clue.[plus][or]Orange is red and yellow.[plus][or]Y is the only letter of the alphabet that is...[plus][or]...a consonant and a vowel![minus][cycling]"
@@ -26383,7 +26397,6 @@ farm plot	"[dio-part]."
 event map	"[dio-part]."
 steel pad	"[dio-part]."
 brass crag	"[dio-part]."
-bookshelf	"I'd like to think that the bookshelf gives local flavor to the game, but it doesn't offer any hints."
 niche	"[one of]'My niche' above the diorama leads upwards.[plus][or]What is a household accoutrement that leads up? If you use the settler, you may know what the last letter is.[plus][or]'My niche' can be a chimney.[minus][cycling]"
 closest closets	"You can ENTER the closets to get back to the study or go from the study to the Heights."
 vertical stripe	--	act-ruin curtain
@@ -26412,6 +26425,7 @@ equals sign	"[one of]The equals sign is useful if you don't want things to be to
 teariest treatise	"[one of]The treatise describes how to use the settler.[plus][or]The treatise cuts off near the end, but the first paragraph gives enough hints.[plus][or]The treatise provides information on what to change the latches to, as well as what's beyond.[minus][cycling]"
 super purse	"[one of]The super purse can't be changed, but it's there to circumvent some common adventuring tropes.[plus][or]The purse is a bit of a catch-all, so your huge inventory seems reasonable. It hides what you don't need nicely, and it shows what you do.[minus][cycling]"
 evac-cave	"The evac-cave is your way out[if Elmo is visible] once you get rid of Elmo[end if]."
+Gird Grid	"The Gird Grid has information on the various stores to explore."
 plaster	"[one of]Plaster generally covers up holes. You need to bust through that plaster.[plus][or]If you used the settler, you might notice it, uh, settles a lot about the plaster.[plus][or]The plaster becomes a STAPLER.[minus][cycling]"
 plates	"[one of]The plates are embedded, but they have a metal rim. Well, sort of.[plus][or]The plates are also square, with metal half-square rings.[plus][or]They become a STAPLE.[minus][cycling]"
 staple	"[one of]What does a staple go in?[plus][or][if plaster is visible]Something the plaster can change into.[else]The stapler.[end if][plus][or]PUT STAPLE IN STAPLER.[minus][cycling]"
@@ -26460,7 +26474,6 @@ poison stripe	"[one of]The poison stripe's name is a clue to what to do here.[pl
 bench	"[one of]The bench-end indicates the bench is A GIANT'S. You probably can't touch it wrong.[plus][or]Touching the bench does nothing. How to cover more of it?[plus][or]Lean AGAINST.[minus][cycling]"	--	"AGAINST"	[start ROUTES hinting]
 scripture picturers	"[one of]Going in to the church is not so easy. Simply saying IN isn't churchy enough.[plus][or]You need to be a little more flowery to enter the church. Is there any clue?[plus][or]DIE SIN becomes something new.[plus][or]You can kick the sign to change it to SIN DIE for another clue.[plus][or]INSIDE.[minus][cycling]"	--	"INSIDE"
 cler-scen	--	scripture picturers
-cler-scen	--	scripture picturers
 Brother Horbert	"He'll mix the reagents once you get them."
 summary	"It's there for background: why you're doing what you're doing. Oh, about Mum Ray, I can't tell you. It's too sad/confidential/unbelievable."
 snoop spoon	"Examine the snoop spoon for a hint when you need it."
@@ -26473,11 +26486,11 @@ lairage regalia	"[one of]You can't walk into Oscar's as normal. It moves to the 
 dingy dwelling	--	lairage regalia
 grouchy old giant	"[if old giant is off-stage]The giant is not in view yet. You need to examine the list-o-toils in the church[else if old giant is in lalaland]You're done with him[else]BUG. You should be directed to the bench or bench part you need to figure, now[end if]."
 bench-end	"[one of]The giant seems to want you to listen to his tirades.[plus][or]This is a bit tricky--but the letters settler may help quite a bit. You know where the T is, and three consonants in a row aren't common.[plus][or]ASTRIDE.[minus][cycling]"	--	"ASTRIDE"
+tirades	--	bench-end
 giant's elbow	"[if elbow is reflexive][one of]Having trouble ducking the giant's elbow there, eh?[plus][or]The giant swings his elbow sort of high...[plus][or]...so you should be BELOW it.[minus][cycling][else]You dealt with the giant's elbow.[end if]"	--	"BELOW"
-Rude 'N Nuder	"[one of]Rude [']N Nuder is being waved about, just over your head.[plus][or]How to duck something that's over?[plus][or]Go UNDER.[minus][cycling]"	--	"UNDER"
+Rude 'N Nuder	"[one of]The contents of Rude [']N Nuder are probably worse than the giant's ranting. But again, you need to avoid his flailing entirely. You need to duck something that's over.[or]On cheat mode, Rude [']N Nuder scans oddly and gives you the solution.[plus][or]You need to go UNDER.[cycling]"	--	"UNDER"
 Oscar	"Oscar has little to say, [if runed book is in Adobe Abode]but the pipe soot is something you may need[else]and you got the pipe soot[end if]."
 Pat	"Pat has little to say, other than to discourage you from the seed pit, [if seed pit is reflexed]but you got through there[else]so you need to enter it despite Pat's objections[end if]."
-Rude 'N Nuder	"[one of]The contents of Rude [']N Nuder are probably worse than the giant's ranting. But again, you need to avoid his flailing entirely.[or]You've listened enough to the giant. He's gone around the bend. You need to seek shelter.[plus][or]On cheat mode, Rude [']N Nuder scans oddly and gives you the solution.[plus][or]You need to go UNDER.[cycling]"	--	"UNDER"
 runed book	"The runed book is part of the spiers['] potion that will help let people see directions again[if circle is unvisited]. But you need to get into the cleric circle first[end if]."
 a trashy ashtray	--	pipe soot
 pipe soot	"[if pipe soot is not in adobe abode]You got the pipe soot.[else][one of]You can't just walk over to the ashtray and get the pipe soot. Oscar wants you facing him.[plus][or]How can you face someone and be far away?[plus][or]Be completely OPPOSITE.[minus][cycling]"	--	"OPPOSITE"
@@ -26513,6 +26526,7 @@ sad pier	"[one of]The objects in the Drain Nadir should give you a clue what to 
 diapers	"[one of]One page after saying you don't want to make any big mistakes, there's a bit about how you may need to hit rock bottom before finding your way back up[plus][or]There's lots of mumbo-jumbo about observing sentimental objects until you get sick of them, but please be sure to forget them once they've served their purpose[plus][or]DESPAIR is a last option that is hard to come back from. Except when coming back from it slingshots you past people who can't even despair[minus][cycling]."	--	"DESPAIR"
 ltb	"[one of]Feelings of despair are okay. Working through them can help you learn to lead. Unless they don't. Then you deserve more despair[plus][or]If you can't DEAL, you'll never make it[minus][cycling]."	--	"DEAL"
 brochure	"[one of]It is no sin to want a better place to RESIDE.[plus][or]Do not get too hippy-trippy on yourself. Without material DESIRE, nobody would want or build anything.[minus][cycling]"	--	"DESIRE"
+dour tan rotunda	"It's what the Browse Bowers used to be called."
 prai	"[one of]What do the rivets say? PRAISE. It should motivate you![plus][or][if rivets are reflexed]You already got what to do with the rivets, so the settler will be more merciful to you[else]The settler gives a mess because PRAISE and RIVETS go to different words, but the question mark is a clue in its own way[end if].[plus][or]How to want more without wanting more?[plus][or]You need to ASPIRE.[minus][cycling]"	--	"ASPIRE"
 rivets	"[one of]Those rivets stand out.[plus][or][if prai is reflexed]You already figured what to do with what they say, so the settler is a bit easier on you[else]Because they say PRAISE, the settler is picking up two solutions[end if].[plus][or]The praise [i]rivets...[r] and should make you want more.[plus][or]You want to want more without just plain wanting more.[plus][or]STRIVE.[minus][cycling]"	--	"STRIVE"
 statue	--	rivets
@@ -26535,7 +26549,8 @@ Eddie's Song	"[one of]Eddie C, I'd Cede. Listening once helps you see red.[plus]
 playbill	"[one of]Hm, the playbill mentions no song. Just the singer.[plus][or]More people hint what to do if you READ the playbill. Lots in red.[plus][or]You want to give up and move on after reading.[plus][or]You've got no time to negotiate a severance package. You're a busy adventurer! You can just RESIGN.[minus][cycling]"	--	"RESIGN"	[end TROVES hinting]
 curst crust	"[one of]You'll say something reflexive if you eat the crust.[plus][or][if Grey Gyre is unvisited]The crust is useful in the PRESTO region.[else]Eating it gives you a hint what to say.[end if][minus][cycling]"	[start PRESTO hinting]
 volt maze	"[maze-solve]."	--	"MAZEL TOV"
-zany meter	"[maze-solve]."
+zany meter	--	volt maze
+n-t-air	--	volt maze
 big l	"The big L tells you what letter the maze starts on."
 big-let	"The big letters tell you that the maze goes from L to [if Unwary Runway is visited]some later letter[else]V[end if]."
 l-m	"You can scan Lev for hints. He's not much for conversation."	--	"MAZEL TOV"
@@ -26591,18 +26606,12 @@ dirty looking cola	"[one of]The cola is great for drinking (without knowing it) 
 fizzy cola	"Cola is great for drinking (without knowing it) during a long programming session."
 scratch paper	"[if signature is reflexed]Useless now.[else][one of]The signature and the scratch paper are clues to what to do.[plus][or]You can scan them both in cheat mode to figure where the vowels go.[plus][or]Or you can think of a computer term to get a program up and running.[plus][or]You need to COMPILE.[minus][cycling][end if]"	--	"learn to COMPILE from the scratch paper"
 scratchings	"[one of]They give a clue what the drab yoke will be.[plus][or]Have you seen any apparatus with the numbers 1234567890 at the top, in order?[plus][or]One that is by you right now?[plus][or]They clue that the drab yoke can be a keyboard. But yaks aren't very magic, and this one's resisting in some odd animal fashion. So you need to deal with the yak.[minus][cycling]"
-broke day	"Broke Day offers a clue as to what the drab yoke becomes."
 drab yoke	"[if yak is not in lalaland]The yak won't let you have it. You need to make the yak inattentive.[else][one of]Whatever the drab yoke should be is probably some sort of piece of computer equipment, too. Given the end puzzle.[plus][or]The settler will tell you where the Y should go. You can also figure where the O goes, on cheat mode, and two consonants fall, too.[plus][or]But the scratchings make it obvious what the yoke should be.[plus][or]Numbers on the top, letters below it, punctuation to the side.[plus][or]KEYBOARD.[minus][cycling]"	--	"make a KEYBOARD"
 compiled code	"[one of]The compiled code works but has problems.[plus][or]You need to make the code BUDGE.[plus][or]The code still has bugs to fish out.[plus][or]Therefore, you need to DEBUG.[minus][cycling]"	--	"to DEBUG the compiled code"
 slab	"You [if cpuready]already[else]can[end if] put things on the slab to build a computer."
 USB	"[one of]The USB is pretty universal. It can become either of two things.[plus][or]The USB can become transport out of here.[plus][or]SUB or BUS.[minus][cycling]"	--	"make a BUS or USB"
-bottle of dirty looking cola	"[one of]There's not enough of the cola in the bottle for a big programming session.[plus][or]What could make the cola refill?[plus][or][if gum is in lalaland]The mug[else]The gum is never-ending, chewable, and can also be twisted around into something else. I mean, not just physically, but with words. There are five choices[end if].[plus][or]Now you've got the cola and a better receptacle, POUR COLA IN MUG.[minus][cycling]"
 caps lock	"[if caps lock is part of the keyboard]The caps lock is where it should be.[else][one of]What does a caps lock work with?[plus][or]A keyboard.[plus][or][kboard-blah].[plus][or]Put the caps lock in the keyboard.[minus][cycling]"
 yak	"[if shack is unvisited][yak-worry].[else if yak is not on skid][one of]The yak won't give up what's on its drab yoke. You need to tempt the yak onto the skid.[plus][or]What is a good way to tempt an animal?[plus][or]Food. PUT LEAF ON SKID after you pushed it.[minus][cycling][else if skid is not in shack]Push or pull the skid back to the shack.[else][one of]Now you need to find some way to make the yak just plain sleepy.[plus][or]Find any boring items?[plus][or]The catechism. Or the bad book that anagrams the keyboard.[plus][or]SHOW BAD BOOK TO YAK.[minus][cycling][end if]"
-Broke Day	"[if yak is in lalaland][my-bad] is no longer useful, with the yak gone.[else][one of][my-bad] is just a very boring and stupid book, and if you read it, you find yourself unable to stop mumbling the text.[plus][or]If you mumble [my-bad]'s text, you find yourself droning and drowsing off. Do you know anyone/anything that could use a rest?[plus][or]The bored yak nips at you if you fiddle with the drab yoke. You may notice that they also anagram [my-bad]'s title.[plus][or]Perhaps you could put the yak to sleep by READing [my-bad].[minus][cycling]"
-Dear Koby	--	Broke Day
-Bred Okay	--	Broke Day
-eBay Dork	--	Broke Day
 catechism	"[if yak is in lalaland]With the yak dispatched, the catechism is only good for random anagrams. Or for being a prop to help you semi-plausibly learn how to program.[else][one of]The catechism is just for entertainment, but reading it may clue something,[plus][or]It is less painful and boring than [my-bad].[plus][or]You may wish to try reading [my-bad] instead. Maybe it will bore the right person to sleep, or something.[minus][cycling]"
 blue button	"[if rebooted is true]You don't need to push the blue button again.[else][one of]The blue button says 'To be or...'[plus][or]What can 'To be or' on the blue button rejumble to?[plus][or]What is something you should try when any computer is acting strange?[plus][or]The settler kind of kills the 'to be or' puzzle.[plus][or]You need to REBOOT.[minus][cycling][end if]"	--	"REBOOT with the blue button"
 orange button	"[one of]'Not to be' means it's a shutdown button.[plus][or]The orange button is too bent to push.[plus][or]The orange button is not necessary.[minus][cycling]"
@@ -26613,8 +26622,7 @@ coal	"[one of]Coal. Cheap, dirty energy for machines.[plus][or]The coal can beco
 hard drive	"[h-d][line break]"
 priv-shack	"[if player is in shack]You need to build a computer here[else]It's just scenery when you're in the Phat Path. But you can enter by going north[end if]."
 golden dongle	"The golden dongle is just there to make it plausible to hook the hard drive to other hardware."
-computer screen	"[if shack is unvisited]You haven't found anything to attach it to.[else if computer screen is not on slab]You need to attach the screen to the drive.[else]The screen's where it needs to be.[end if]"
-labs slab	"You can put stuff on the slab, and that acts like attaching it to the hard drive." [end presto hinting]
+computer screen	"[if shack is unvisited]You haven't found anything to attach it to.[else if computer screen is not on slab]You need to attach the screen to the drive.[else]The screen's where it needs to be.[end if]" [end presto hinting]
 trolls	"[one of]The trolls are there to keep people in. You can't beat them up.[plus][or]You need to distract the trolls, preferably by annoying other patrons.[plus][or]The tunes, the stein and Casper are all part of the bar[dh-true].[minus][cycling]"	[start OYSTER hinting]
 stumbler tumblers	"[one of]The stumbler tumblers say TIPS.[plus][or]How to turn off the machine is written on the machine. Except the right action is rubbed off.[plus][or]Tips for getting rid of songs that are the pits...[plus][or]SPIT on the machine.[minus][cycling]"
 song buttons	--	tunes
@@ -26642,14 +26650,14 @@ carps	"[one of]You're bigger than they are, and your arms have more reach. You c
 pikes	"[one of]They, or the carps, can be beaten. It doesn't make any difference whom you attack.[plus][or]The pikes require a slightly odd verb. You can brawl, tussle, or...[plus][or]SPIKE the pikes.[minus][cycling]"
 skis	"[one of]The skis are blocking the door.[plus][or]They can't be moved by force.[plus][or]You need to KISS the skis.[minus][cycling]"
 knob	"[if crate is reflexive]You need to deal with a crate first, but the knob will be easier.[else][one of]The knob won't budge. It doesn't seem to have a lock.[plus][or]You need to do something with it.[plus][or]BONK the knob.[minus][cycling][end if]"
-crate	"[if crate is reflexive][one of]You can't figure where the debris is coming from.[plus][or]It's debris of a CRATE.[plus][or]You want to TRACE it.[minus][cycling][else if crate is reflexive][one of]Someone has an unending supply of crates.[plus][or]You can't seem to find the time to open the door, still.[plus][or]The crate still requires you to do one more thing.[plus][or]REACT.[minus][cycling][else]Nothing more to do with the crates."
+crate	"[if crate is reflexive][one of]You can't figure where the debris is coming from.[plus][or]It's debris of a CRATE.[plus][or]You want to TRACE it.[minus][cycling][else if c2 is reflexive][one of]Someone has an unending supply of crates.[plus][or]You can't seem to find the time to open the door, still.[plus][or]The crate still requires you to do one more thing.[plus][or]REACT.[minus][cycling][else]Nothing more to do with the crates."
+c2	--	crate
 fragments	--	crate
 bogus-plains	"[one of]You can talk about how great you are, to all who would hear.[plus][or]What can you do in the lapsin['] plains?[plus][or]SPLAIN.[minus][cycling]"
 waste	"[one of]The waste puzzle is optional. [plus][or][one of]The waste is hard to move. It requires effort.[plus][or]Taking the waste is out, but you can sift through it the right way.[plus][or]SWEAT.[minus][cycling][stopping]"
 lance	"[one of]The lance is optional. [plus][or][minus][cycling][if player has lance and lance is reflexed]You can use the lance to defeat an optional monster near the end.[else if player does not have wipes][one of]You need an item to make the lance less dirty.[plus][or]The wipes in the Helots' Hostel can do that.[plus][or]You should be able to get the wipes unless you used the pills on Aunt Tuna.[minus][cycling][else][one of]The lance is too dirty.[plus][or]What can you do to an item that is too dirty?[plus][or]CLEAN the lance.[minus][cycling]"
 heaps	"[one of]The heaps are malleable, but they might be a pain to search.[plus][or]If you SHAPE the heaps, you get a Keep Yorpwald Beautiful Last Lousy Point.[minus][cycling]"
 eeks	"[one of]There's a noise coming from somewhere. Maybe it's a clue where that trout went.[plus][or]They are EEKS. That leaves twelve choices.[plus][or]Two, if you use the settler.[plus][or]SEEK.[minus][cycling]"
-eeks	"[one of]There's a noise coming from somewhere. Maybe it's a clue where that trout went.[or]They are EEKS. That leaves twelve choices.[or]Two, if you use the settler.[or]SEEK.[cycling]"
 aunt tuna	"Aunt Tuna is useful for talking to. She has good information[if tea tray is not in lalaland]. Her food is also edible[end if]."
 dent	"[one of]The dent can be dealt with if you know how to futz with it, but it's a last lousy point.[plus][or]No, not futz, another four-letter word.[plus][or]You need to TEND the dent.[minus][cycling]"	--
 wipes	"[one of]The wipes are part of an optional puzzle. [plus][or][minus][cycling][if player has wipes]The wipes can be used to tidy up an item[in-hovels].[else][one of]You can't just plain take the wipes. You are not fast enough.[plus][or]What's a quicker action than TAKE, to get the wipes?[plus][or]SWIPE the wipes.[minus][cycling]"
@@ -26687,7 +26695,8 @@ lever	"[if lever is reflexed][one of]Aren't you happy to have found the lever?[p
 d2	--	dialer
 dialer	"[one of]The dialer is dangerous and destructive. But it's also flexible.[plus][or][if dialer is reflexive]You already found[else]You may see[end if] the dialer can REDIAL, but what else can you have it do?[plus][or][unless d2 is reflexed]DERAIL. [else]Here's what's left: [end if][if lev-pull is false]PULL LEVER. [end if]REDIAL.[minus][cycling]"	[end OYSTER hinting]
 Rosetta Toaster	"[one of]You can use it to gain hints, but you need to clear the serpent to take it.[plus][or]Just put the food in the toaster and then XRAY anyone blocking your path.[minus][cycling]" [begin towers hinting]
-strudel	"[if strudel is not reflexed][one of]You can get the strudel without dispelling the serpent.[plus][or]Or you can do so afterwards.[plus][or]The sort of words you use here are (spoiler)...[plus][or]...adjectives. So how can you get the strudel without alerting the snake?[plus][or]The strudel can be RUSTLED.[plus][or]That's food you can put in the toaster.[minus][cycling][else]The strudel is food you can put in the toaster.[end if]"
+strudel	"[if strudel is not reflexed][one of]The strudel is, or was in a sled rut.[plus][or]Taking the strudel gets no points, but you can implicitly take, or steal, it. Even if you already have it.[plus][or]The strudel can be RUSTLED.[plus][or]You can put it in the toaster after just taking it, too.[minus][cycling][else]The strudel is food you can put in the toaster.[end if]"
+sled rut	--	strudel
 Éclairs	"The éclairs are food you can put in the toaster."
 solve-a-loaves	"The solve-a-loaves are food you can put in the toaster."
 start tarts	"The tarts are food you can put in the toaster."
@@ -26697,7 +26706,7 @@ old ice	"[if old ice is reflexed]You made the old ice coiled, already.[else][one
 denim	"[one of]The denim can't quite be cut through by something like a dagger.[or]You won't find anything sharp enough to cut the denim.[or]You can, however, cheat to strip the denim away.[or]The denim can be MINED.[cycling]"
 pester'n serpent	"[one of]Until the serpent can be described differently, you won't move it.[plus][or]It's annoying, but if you could just make it THERE...[plus][or]From pester'n to PRESENT.[minus][cycling]"
 Snider Diners	"[one of]The snider diners have dry wit! They don't want to be interrupted.[plus][or]Physically assaulting the diners is out of the question, but maybe you can rain on their dinner.[plus][or]Literally. You can make the diners RINSED.[minus][cycling]"
-Ed Yerg	"[one of]He's trying to shake you down, and there's something artificial about his youthful looks. How could you fix both things?[plus][or]Don't worry, you won't be making him old. But you can change his hair color.[plus][or]Maybe if it were GREYED, he could scam it.[minus][cycling]"
+Ed Yerg	"[if ed yerg is reflexive][one of]Ed Yerg seems to be, well, GREEDY.[plus][or]But he looks suspiciously old despite his hair.[plus][or]Make him GREYED.[minus][cycling][else if player has flowerpot][one of]Ed may still want something, but little of what you have interests him.[plus][or]The succor crocus may help him feel better about himself.[plus][or]Give it to him[if-cro].[minus][cycling]"
 iPrune	"[one of]The iPrune is decidedly UNRIPE, and yet it's still too big for you.[plus][or]Any way to make the veggie/fruit smaller?[plus][or]Maybe PUNIER?[minus][cycling]"
 neural pulses	"[one of]They are both neural and pulses.[plus][or]You can't see them, but you know they're there, and they're slight negatives.[plus][or]If the pulses were all in your mind, or something more positive, it'd be nice.[plus][or]Make them UNREAL. Or PLUSES.[minus][cycling]"
 muscly hulk	"[one of]Muscly is nice, but if you could tangle him up...[plus][or]Maybe if he weren't so coordinated?[plus][or]CLUMSY.[minus][cycling]"
@@ -26705,12 +26714,15 @@ bluster butlers	"[one of]The bluster butlers are a bit too noisy. Maybe you coul
 sweatier wait-seer	"[one of]The wait-seer is certainly SWEATIER than you.[plus][or]He doesn't seem to be getting tired, the wait-seer.[plus][or]So changing the wait-seer to someone who is, or gets, tired, could work.[plus][or]WEARIEST.[minus][cycling]"
 ingrates	"[one of]The ingrates are the ANGRIEST you've ever seen.[plus][or]They're too mad to let you pass. The ingrates are not going to stop complaining, but maybe they could complain more passively.[plus][or]What if the ingrates became ANGSTIER?[minus][cycling]"
 lois the hostile	"[one of]Boy, for being potentially religious, [the the-hostile] sure is HOSTILE. But they shouldn't be. God is love in most religions.[plus][or]Maybe helping [relig-mf] could help you.[plus][or]Make [relig-mf] the HOLIEST you've seen.[minus][cycling]"
+hostile-is-he lot	--	lois the hostile
 Ray Eck	"[one of]Ray Eck and his car are in tip-top shape, but maybe you can change that.[plus][or][minus][cycling]"
 keycar	--	Ray Eck
 alarming grailman	"[one of]It's ALARMING how above-average the grailman is, and how he won't settle for second-rate.[plus][or]How could you knock him down to average or below-average?[plus][or]Make him MARGINAL.[minus][cycling]"
 pirates	"[one of]The pirates are very sun-burnt, and they like it that way.[plus][or]The pirates make fun of your own pale skin.[plus][or]Why not make the pirates PASTIER?[minus][cycling]"
 smart kid	"[if obscurest subsector is unvisited][kid-full]'s not important right now.[else if Dr Yow is in prison ropins][kid-full] makes stuff. You'll want to hook [him-her] up with Dr. Yow--release Dr. Yow.[else if kid is lonely][one of][kid-first] wants someone who can help [him-her] make stuff.[plus][or]Who might do that?[plus][or]Dr. Yow. ASK KID ABOUT DOCTOR.[minus][cycling][else if kid is reflexive and kid is in Obscurest Subsector][one of][kid-first] is TENTATIVE around Dr. Yow and can't figure [his-her] lectures.[plus][or]You need to make [him-her] ATTENTIVE.[minus][cycling][else if kid does not have gizmo]You need to give [kid-first] something to build with. A tool.[else][kid-first]'s bot boat is more important.[end if]"
 Reed's Ale	"[one of]The RELEASED poem is awful, isn't it?[plus][or]The zip-lock bag is a bit of a clue.[plus][or]RESEALED.[minus][cycling]"
+Lars Eede	--	Reed's Ale
+Elsa Erde	--	Reed's Ale
 ego drains	"[one of]They're organised, but perhaps if they were hyperbole, they wouldn't be as effective.[plus][or]How could you make them over-the-top?[plus][or]Say, GRANDIOSE?[minus][cycling]"
 admirer	"[one of]She needs someone to be attached to.[plus][or]Why stop at just engaged?[plus][or]MARRIED.[minus][cycling]"
 natives	"[one of]They babble about how they can't be suckered, and so forth, and yet they're almost too good for this place.[plus][or]You can do two things to the natives.[plus][or]The natives can become VAINEST, or NAIVEST.[minus][cycling]"
@@ -26733,10 +26745,12 @@ ID Tag	"[if Obscurest Subsector is unvisited]Hm, you need to find Dr. Yow, the n
 fissure	"[one of]The fissure can, surprisingly, become animated.[plus][or]Make the fissure FUSSIER.[plus][or]But you need something that will fuss back at the fissure. Like a free animal or something.[minus][cycling]"
 ropins	"The prison ropins can't be opened with a key. Or a word with C-E-E-F-N. You need to find another way to free Dr. Yow."
 log gaol	"It's just there to block you from going anywhere else."
-ropins	"[one of]The prison ropins are locked.[plus][or]What could change that?[plus][or]Or make the ropins UNLOCKED? There's an NPC.[plus][or]The Lone Duck could make the gaol unlocked.[cycling]"
+atblock	"[one of][kid-first] can do a bit better, but this LLP is not critical for the game.[plus][or][kid-first] is tentative. Not able to focus.[plus][or]Or pay full attention.[plus][or]Make [kid-first] ATTENTIVE.[minus][cycling]"
 lone duck	"[one of]You need to bring it back to its owner.[plus][or]In the Obscurest Subsector.[plus][or]It won't follow you, though.[plus][or]If you have the Raves Saver, you can record Dr. Yow while [he-she]'s wordy.[plus][or]This will make the duck follow back to Dr. Yow.[plus][or]The duck can open the lock.[plus][or]How? It is a lone duck.[plus][or]The lone duck can make the gaol UNLOCKED.[minus][cycling]"
+savager ravages	"The ravages make sure you have to go back to the main area."
 rapier repair	"[one of]The rapier repair machine looks like it could use something.[plus][or]Have you seen anything that looks like a rapier and needs repair?[plus][or]That ragged dagger[if player does not have ragged dagger] you left in the Treading Gradient[end if].[plus][or]Put the dagger in the machine.[plus][or]The gizmo may help the kid build something.[minus][cycling]"
 Thearchy Hatchery	"The Thearchy Hatchery is just sort of there, for a clue. You don't need to do anything with it."
+Maturation Natatorium	"The maturation natatorium is just sort of there, for a clue. You don't need to do anything with it."
 bot boat	"Two parts of a bot boat are broken. The blaster and turbos."
 blaster	"[one of]The blaster isn't quite as solid as it could be.[plus][or]Maybe you could make the blaster STABLER?[minus][cycling]"
 turbos	"[one of]The turbos aren't quite as solid as they could be.[plus][or]Maybe you could make the turbos ROBUST?[minus][cycling]"
@@ -26774,7 +26788,6 @@ Wade	"[one of]Wade seems very confident, unintimidated.[plus][or]He can be AWED.
 succor crocus	"[if flowerpot is reflexive][one of]The crocus looks like it is--well, dying. He just needs a little healthy color back, not a ton.[plus][or]Or he could lose the livid color he has.[plus][or]From DYING to...[plus][or]...DINGY.[minus][cycling][else][one of]You can give the crocus to someone.[plus][or][give-croc].[minus][cycling][end if]"
 flowerpot	--	succor crocus
 Old Hat Daltho	"[if crocus is not in lalaland]The succor crocus Daltho gave you may be of some use.[else]You've taken care of Old Hat Daltho's gift.[end if]"
-Ed Yerg	"[if ed yerg is reflexive][one of]Ed Yerg seems to be, well, GREEDY.[plus][or]But he looks suspiciously old despite his hair.[plus][or]Make him GREYED.[minus][cycling][else if player has flowerpot][one of]Ed may still want something, but little of what you have interests him.[plus][or]The succor crocus may help him feel better about himself.[plus][or]Give it to him[if-cro].[minus][cycling]"
 Curst Palace	"[one of]The Curst Palace is eleven letters, and the settler doesn't help much.[plus][or]Ed Yerg might, [yerg-ok].[plus][or]You seem to need a superlative to restore the palace.[plus][or]Make the palace wonderful again.[plus][or]Or, SPECTACULAR.[minus][cycling]" [end towers hinting]
 b-b	"[one of]Hm, to get rid of the bleary barley, you can only use weak words.[plus][or]What are some of the weakest words in the English language?[plus][or]What also hasn't been covered in other areas?[plus][or]Adverbs.[plus][or]This gets you the last two letters, probably. LY.[plus][or]The barley is BARELY there.[minus][cycling]"	--	"the barley can appear BARELY"	[start otters hinting]
 cinders	"[one of]The cinders can be used for two things.[plus][or]You can take them and use them to hint through one thing with one passive verb.[plus][or]You can DISCERN (no nouns,) but that won't get you full points.[plus][or]You can get rid of the cinders--not by dropping them.[plus][or]RESCIND.[minus][cycling]"
@@ -26804,7 +26817,7 @@ badger	"[one of]The badger is embarrassed to be naked.[plus][or]How could it be 
 leopard	"[one of]The leopard is orangish and jumpsuited, with its paws bound together by some invisible handcuffs.[plus][or]Like the leopard's in jail. Well, it sort of is.[plus][or]But the leopard's been well behaved. Can you get them out early?[plus][or]Yup. If they're PAROLED.[minus][cycling]"	--	"you can make the leopard PAROLED"
 ocelots	"[one of]Those clip on shades aren't very suave on the ocelots.[plus][or]You're not going to find any shades for the ocelots.[plus][or]But you can make the ocelots cooler.[plus][or]Or, better, make the ocelots the COOLEST.[minus][cycling]"	--	"you can make the ocelots COOLEST"
 wire weir	"It's just there to provide a boundary in the Wickeder Wire Deck."
-raptor	"[one of]You only have one move to tackle the raptor.[plus][or]Its roars are worse than the squawking below.[plus][or]Make the raptor a PARROT. This hints what else to do here.[minus][cycling]"	--	"you can make the raptor a PARROT"
+raptor	"[one of]You need to be quick here. The raptor can be changed to something much less vicious.[plus][or]The raptor has rather odd bright coloring, doesn't it? Like a tropical bird?[plus][or]Make the raptor a PARROT.[minus][cycling]"	--	"you can make the raptor a PARROT"
 nails	"[one of]They're arranged in a circular pattern, spiraling out.[plus][or]What's an animal whose shell is like that?[plus][or]A SNAIL.[minus][cycling]"	--	"you can make a SNAIL"
 pines	"[one of]They're shaped like a long bird's bill or something.[plus][or]If you listen, you hear bickering.[plus][or]SNIPE.[minus][cycling]"	--	"you can make a SNIPE"
 corona	"[one of]Black and whitish, easy to hide in the dark.[plus][or]RACOON.[minus][cycling]"	--	"you can make a RACOON"
@@ -26812,9 +26825,9 @@ thrones	"[one of]Sit on them and they'll sting you.[plus][or]What animals sting?
 disrupt r stupidr	"It's just there to block you from going any other way except back north."
 Elmer	--	Merle
 Merle	"[if parrot is in alcoves]You can't change Elmer or Merle directly, but you may want to mess with the parrot[else]You can't really deal with Elmer and Merle until you have an ally[end if]. [if merle is reflexed][one of]You can, however, make Elmer and Merle change for a Last Lousy Point.[plus][or]What is the opposite of on-the-sly?[plus][or]Elmer and Merle can be made to speak HONESTLY.[minus][cycling][else]You can just enjoy their random squabbles as you figure what the parrot needs to do or become.[end if]"	--	"Elmer and Merle can speak HONESTLY"
+forces fresco	"It's just there to give ambience."
 snail	"The snail will help you when the time comes."
 snipe	"The snipe will help you when the time comes."
-raptor	"[one of]The raptor can be changed to something much less vicious.[plus][or]The raptor has rather odd bright coloring doesn't it? Like a tropical bird?[plus][or]Make the raptor a PARROT.[minus][cycling]"	--	"you can make the raptor a PARROT"
 hornets	"It will help you when the time comes."
 racoon	"It will help you when the time comes."
 parrot	"[one of]The parrot is scared of Merle and Elmer, as they're a lot bigger.[plus][or]Maybe if the parrot got bigger. Wait, it was![plus][or]You can change it back to a RAPTOR to help you get past another fearsome beast.[minus][cycling]"	--	"you can re-make a RAPTOR"
@@ -26827,6 +26840,7 @@ Edictal Citadel	"The Edictal Citadel is where Elvira's hiding out. You need to g
 weltish whistle	"[if whistle is reflexed]PLAY it by Elvira to win.[else][one of]The whistle can summon animals when you need to, but you haven't had the practice yet.[plus][or]That'll be a big fight, though, so you need to prepare earlier.[plus][or]Examining the whistle gives a clue--who made it, etc. So does playing it, as if someone yelped[plus][or]You need to play it DEEPLY.[minus][cycling][end if]"	--	"you can play the whistle DEEPLY"
 hydra	"[if parrot is off-stage]You'd need to be pretty big to defeat the hydra. Or have a pretty big ally. But you haven't found one, yet.[else][one of]If only you had a bigger animal as an ally, to beat the hydra.[plus][or]One that almost attacked you.[plus][or]Remember what the parrot was?[plus][or]The parrot was a RAPTOR.[plus][or]Don't summon the raptor before the alcoves.[minus][cycling][end if]"
 Elvira	"[if current quip is final-quip]Just PLAY THE WHISTLE to defeat her.[else if nounsolve is 0 and adjsolve is 0]You'll need animal allies to face Elvira, the charismatic conversationalist.[else if nounsolve < 3 or adjsolve < 3]You'll need more animal allies to face Elvira, the charismatic conversationalist.[else][one of]You have enough animals to overwhelm--and ignore the charms of--Elvira, the charismatic conversationalist.[plus][or]First, you need to BLOW THE WHISTLE to summon them.[plus][or]You have one more thing that can help.[plus][or]Remember how you helped Gretta?[plus][or]The medals can make you--and your allies--go QUICKLY.[minus][cycling][end if]" [end otters hinting]	--	"you can just PLAY THE WHISTLE"
+a border arbored	"It's just there to establish you can't walk any which way."
 harmonicas	"[one of]If you try to play them, your playing is the pits, and the game stems you.[or]What's a fruit that has pits and a stem?[or]A cherry, but this is a much brighter red than usual.[or]MARASCHINO.[cycling]"
 slime	"[one of]Hmm, the slime is green and knobbly and smells a bit like dishwashing detergent.[or]What can green dishwashing detergent smell like?[or]LIMES.[cycling]"
 spear	"[one of]The spear is particularly out of place in Rustic Citrus.[plus][or]The settler can clue the vowels for the spear.[plus][or]The spear's an odd light greenish. Hmm.[plus][or]The spear becomes PEARS.[minus][cycling]."
@@ -26873,32 +26887,10 @@ an-a	"[one of]You need to take an a the right way.[plus][or]An a, not the a--and
 orange	"[if player has orange][frootz][else][one of]You can't just take the orange directly.[plus][or]You probably need to get closer to it slowly.[plus][or]GO NEAR to get the orange.[minus][cycling]"
 pugnacious plant	"[one of]Burr, bah, you say if you examine/attack it.[plus][or]It seems to be making a weird mumbling.[plus][or]RHUBARB.[minus][cycling]"
 reserved sign	"[one of]RESERVED for a DESERVER.[plus][or]The settler makes the sign pretty clear.[plus][or]However, if you take or examine the sign, you're told it's the opposite of an invitation to take it.[plus][or]How do you make the sign the opposite of what it is?[plus][or]REVERSED.[minus][cycling]"
-pears	"[frootz]" [you already have these fruits and they don't appear before you solve them, so no need to hint]
-tamarind	--	pears
-plums	--	pears
-limes	--	pears
-grapes	--	pears
-pineapple	--	pears
-grapefruit	--	pears
-apples	--	pears
-kumquat	--	pears
-raspberry	--	pears
-strawberries	--	pears
-cantaloupe	--	pears
-blueberries	--	pears
-blackberries	--	pears
-yellow banana	--	pears
-maraschino	--	pears
-mango	--	pears
-cranberries	--	pears
-pomegranate	--	pears
-guava	--	pears
-apricot	--	pears
-rhubarb	--	pears
-gooseberry	--	pears
-persimmon	--	pears
-papayas	--	pears
-breadfruit	--	pears
+augural arugula	"The augural arugula will help you GURU something."
+miser ruble	"[one of]It's purplish.[plus][or]And to think that a change could happen on such-and-such street.[plus][or]MULBERRIES.[minus][cycling]"
+streperous superstore	"It's just there as a device to block further exploration."
+nameless salesmen	"They used to be a puzzle in towers, and I didn't have the heart to get rid of them entirely, but fortunately they fit in the Clangier Clearing. They're not terribly useful."
 singed design	"The singed design gives you a clue what the [if player has coin]coin[else if player has coins]coins[else if player has icon]icon[else if player has icons]icons[else if player has s-c]sonic coins[end if] can become." [begin very endgame item hints]
 coin	"[one of]You ultimately need another coin, but perhaps it can be converted to something of intrinsic worth.[plus][or]Make the coin an ICON. Once you get another coin, you will make ICONS automatically.[minus][cycling]"
 coins	"[one of]There are two things to do with the coins.[plus][or]The coins can become another thing, or they can change in quality.[plus][or]The thing coins can become is ICONS.[plus][or]The coins can also become SONIC.[minus][cycling]"
@@ -26918,8 +26910,10 @@ lost slot	"[if player has s-i]You need to put the sonic icons in the slot to ope
 halt lath	"[one of]You need another item to retract the halt lath.[plus][or][if player has so-great storage]You need to put something in the So-Great Storage[else]You may need to bargain in the Scape Space below the Swell Wells[end if].[minus][cycling]"
 passport	"The passport will get you through the gates in the Gates Stage, but you need to study it to enter the Admit-Us Stadium safely. The viewer and searcher can help, as can the message if you go north and fail."
 a near arena	"You can't change the [if near arena is examined]arena[else]Admit-Us Stadium[end if], but you can enter it  via the gates."
+gropin' roping	"It's just there to establish you can't walk any which way."
 viewer	"[one of]You can't seem to focus on the viewer. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the viewer.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]REVIEW the viewer, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"
 searcher	"[one of]You can't seem to focus on the searcher. Each time you see it is as the first unless you look at it the right way.[plus][or]There are two solutions. One is to see what to do with the searcher.[plus][or]The other is to see how not to be called a perp if you try to go north.[plus][or]RESEARCH the searcher, or...[plus][or]...PREP [if perp-check is false](after going north) [end if]so you are not a perp.[minus][cycling]"	[end others hinting]
+perp-priv	"[one of]'PERP!' It catches you off-guard.[plus][or]You can PREP.[minus][cycling]" [?? what if all 3]
 Great Grate	"The Great Grate is immovable." [start demo dome hinting, though there's really not much]
 chic loner chronicle	"[dome-blab]"
 shiest thesis	"[dome-blab]"
@@ -26932,7 +26926,6 @@ dustpan	"[dome-blab]"
 scalp-it	"[dome-blab]"
 placer	"[dome-blab]"
 duster	"[dome-blab]"
-halt lath	"[dome-blab]"
 novella	"You can read the novella from pages 1 to 100."
 entry sign	"[dome-blab]"
 Spy Dial Display	"[dome-blab]"
@@ -26940,7 +26933,12 @@ Shall Halls	"[dome-blab]"
 owl decal Code Wall	"[dome-blab]"
 written walls	"[dome-blab]"
 allow lots tools wall	"[dome-blab]"
+design deigns	"[dome-blab]"
+flashed ad shelf	"[dome-blab]"
 larded ladder	"[dome-blab]"
+talks stalk	"[dome-blab]"
+spec space	"[dome-blab]"
+parcels clasper	"[dome-blab]"
 
 to say need-refurb:
 	say "need refurbishing. Maybe in the ";
@@ -28730,15 +28728,24 @@ understand "hintall" as hintalling.
 
 carry out hintalling:
 	let mycount be 0;
+	let times-found be 0;
+	let should-find be true;
 	repeat with VTH running through all things:
-		unless VTH is useless or VTH is amusing or VTH is cluey or VTH is abstract:
-			if there is a hint-entry of VTH in the table of hintobjs:
-				do nothing;
-			else:
+		now should-find is true;
+		now times-found is 0;
+		if vth is a fruit and vth is not hintable, now should-find is false;
+		if VTH is useless or VTH is amusing or VTH is cluey or VTH is abstract or VTH is bounding, now should-find is false;
+		repeat through table of hintobjs:
+			if hint-entry entry is VTH, increment times-found;
+		if should-find is true:
+			if times-found is not 1:
 				increment mycount;
-				say "Need [VTH] ([mycount]).";
+				say "[if times-found is 0]Need[else]Too many[end if] [VTH] in table of hintobjs ([mycount]).";
+		else if times-found > 0:
+			increment mycount;
+			say "Need to delete [VTH] from table of hintobjs ([mycount]).";
 	if mycount is 0:
-		say "Everything that needs to be hinted is! Yay!";
+		say "Everything that needs to be hinted is, and everything that doesn't, isn't! Yay!";
 	the rule succeeds;
 
 section so hintall works ok
