@@ -12,10 +12,20 @@ from collections import defaultdict
 from itertools import permutations
 
 import re
+import sys
+
+write_to_file = False
+
+if len(sys.argv) > 1:
+    if sys.argv[1] == 'w':
+        write_to_file = True
+        print('Writing files with errors')
 
 nudge_files = {}
 
 nudge_files['table of otters nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-otters.txt"
+nudge_files['table of oyster nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-oyster.txt"
+nudge_files['table of presto nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-presto.txt"
 
 cmd_tries = defaultdict(dict)
 got_nudges = defaultdict(dict)
@@ -65,6 +75,7 @@ def int_wo_space(i):
 def poke_nudge_files(gm):
     count = 0
     nudge_comment = False
+    nudge_add = defaultdict(str)
     cmd_lines = defaultdict(str)
     print("poking", q)
     with open(nudge_files[q]) as file:
@@ -75,7 +86,9 @@ def poke_nudge_files(gm):
                 alfl = alf(re.sub('>', '', ll))
                 cmd_lines[alfl] = cmd_lines[alfl] + ' ' + str(count)
                 # print(alfl, cmd_lines[alfl])
-            if re.search('#( )?nudge for ', ll):
+            if re.search('##( )?nudge for ', ll):
+                pass
+            elif re.search('#( )?nudge for ', ll):
                 if nudge_comment:
                     print("Uh oh duplicate nudge comments at line", count)
                 nudge_comment = True
@@ -92,14 +105,38 @@ def poke_nudge_files(gm):
     count2 = 0
     for j in cmd_lines.keys():
         cmd_lines[j] = re.sub("^ *", "", cmd_lines[j])
-    for j in sorted(got_nudges[gm].keys(), key=lambda x: int_wo_space(cmd_lines[alf(x)])):
+    for j in sorted(got_nudges[gm].keys(), key=lambda x: (int_wo_space(cmd_lines[alf(x)]), x)):
         if got_nudges[gm][j] == False:
+            for x in cmd_lines[alf(j)].split(' '):
+                nudge_add[x] = nudge_add[x] + ' ' + j
             count2 = count2 + 1
-            if max_errs > 0 and count2 >= max_errs:
+            if max_errs > 0 and count2 > max_errs:
                 continue
             print ("({:4d}) {:s} need #nudge for {:14s} suggestions = {:s}".format(count2, short, j, cmd_lines[alf(j)] if cmd_lines[alf(j)] != '' else 'unavailable'))
-    if count2 >= max_errs:
+    if count2 > max_errs:
         print("Only listed", max_errs, 'of', count2)
+    for y in nudge_add.keys():
+        nudge_add[y] = re.sub("^ ", "", nudge_add[y])
+    if count2 == 0:
+        print("Yay, no errors for", gm)
+        return
+    out_nudge = re.sub("reg-", "prereg-", nudge_files[q], 0, re.IGNORECASE)
+    if out_nudge == nudge_files[q]:
+        print("Uh oh, ", out_nudge, '=', nudge_files[q])
+        return
+    if write_to_file and count2 > 0: # just in case this goes outside count2==0 above
+        print("Writing to", out_nudge)
+        fout = open(out_nudge, "w")
+        count = 0
+        with open(nudge_files[q]) as file:
+            for line in file:
+                count = count + 1
+                if nudge_add[str(count)]:
+                    my_ary = nudge_add[str(count)].split(' ')
+                    for x in my_ary:
+                        fout.write("##nudge for " + x + "\n")
+                fout.write(line)
+        fout.close()
     return
 
 d = [ 'shuffling', 'roiling' ]
@@ -108,7 +145,7 @@ e = [ 'c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/%s nudg
 for gm in e:
     pre_process(gm)
 
-max_errs = 20
+max_errs = 50
 
 for q in nudge_files.keys():
     poke_nudge_files(q)
