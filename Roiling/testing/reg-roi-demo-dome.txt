@@ -31,6 +31,10 @@ Peek Keep
 >demo dome mode
 Peek Keep
 
+#nudge for peek
+>pkee
+You don't need to flip anything here, really. Certainly not a room.
+
 >x me
 You look just fine.
 
@@ -51,29 +55,36 @@ Are you sure you want to leave before looking at everything?
 >blather
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 
+#nudge for greta
 >gerta
 It was tested to make sure even you couldn't magic it open.
 
+#nudge for sgni
 >igns
 No need to mess with the helpful sign.
 
+#nudge for unfold
 >unfold
 No need to mess with the helpful sign.
 
+#nudge for memoir
 >memoir
 No need to mess with the helpful sign.
 
 >x entry
 UNFOLD OLD FUN, MEMOIR: I'M MORE.
 
+#nudge for ertyn
 >etrny
 No need to mess with the helpful sign.
 
+#nudge for display
 >dipslay
 !You won't figure the code
 
 >x grate
 
+#nudge for shall
 >shlal
 You can't get near the shall halls, although you still have the nonmagical ability to change the future. Well, some day you will.
 
@@ -86,40 +97,53 @@ The dial is out of reach.
 >turn dial off
 The dial is out of reach.
 
+#nudge for demo
 >edom
 Museums are designed to be impassive and impermeable, for the most part. This is full of exhibits--your questing days are over.
 
+#dupnudge for display
 >dipslay
 You won't figure the code. There isn't one. Muahaha.
 
+#nudge for spy
 >spy
 You won't figure the code. There isn't one. Muahaha.
 
+#nudge for dial
 >dial
 You won't figure the code. There isn't one. Muahaha.
 
+#nudge for shefl
 >flesh
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for flashed
 >flashed
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for design
 >edgins
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for deign
 >edgin
-This is a museum! No messing with the exhibits, please. Or trying to.
->talks
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
->stalk
-This is a museum! No messing with the exhibits, please. Or trying to.
+#nudge for talks
+>talsk
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for talk
+>takl
+This is a museum! Messing with the exhibits would be very bad form.
+
+#nudge for spce
 >spec
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for speca
 >space
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
 >in
 Intel Inlet
@@ -145,12 +169,15 @@ Final part
 >n
 You can only go outside here.
 
+#nudge for intel
 >eltin
 You don't need to flip anything here, really. Certainly not a room.
 
+#nudge for calendar
 >careladn
 These are documents of historical records! Revisionism is so Elvira.
 
+#nudge for thesis
 >thessi
 These are documents of historical records! Revisionism is so Elvira.
 
@@ -159,34 +186,58 @@ These are documents of historical records! Revisionism is so Elvira.
 >n
 Hows Show
 
+#nudge for hows
+>hosw
+You don't need to flip anything here, really. Certainly not a room.
+
 >x wall
 Which do you mean, the owl-decal code wall or the allow-lots-tools wall?
 
 >bluh
 
+#nudge for sllaw
 >sllaw
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for wall
 >wall
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for owl
 >owl
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for decal
 >decal
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for codewall
+>codewlal
+This is a museum! Messing with the exhibits would be very bad form.
+
+#nudge for codewalls
+>codewlals
+This is a museum! Messing with the exhibits would be very bad form.
+
+#nudge for coed
+>cedo
+This is a museum! Messing with the exhibits would be very bad form.
+
+#nudge for allow
 >allow
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for ltso
 >lots
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for tools
 >tools
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for allowlots
 >allowlots
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
 >x code wall
 >g
@@ -230,6 +281,7 @@ You can only go south here.
 >w
 Ned's Dens
 
+##nudge for neds
 >send
 Maybe in another game, you could do that, if you walked around right. But not this one.
 
@@ -252,15 +304,19 @@ Another thought reads: Finally, I'm just grateful I had so much fun exploring so
 
 That's the end of the Chronicle. You can read it again, if you want.
 
+#nudge for icch
 >icch
 You can't change the book's writing. Well, you could, I guess. But this is a museum!
 
+#nudge for ernol
 >ernol
 You can't change the book's writing. Well, you could, I guess. But this is a museum!
 
+#nudge for chicloner
 >chronicle
 You can't change the book's writing. Well, you could, I guess. But this is a museum!
 
+#nudge for neds
 >edns
 You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one!
 
@@ -270,7 +326,21 @@ You suddenly feel a desire to play an entirely different Andrew Schultz game. Bu
 Evoc-Cove
 A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want.
 
+#nudge for novella
+>novelal
+You can't change the book's writing. Well, you could, I guess. But this is a museum
+
+#nudge for neva
+>neav
+You can't change the book's writing. Well, you could, I guess. But this is a museum
+
+#nudge for lol
+>llo
+You can't change the book's writing. Well, you could, I guess. But this is a museum
+
 >neva
+Yeah, the novel is pretty unbelievable, but it's not there to be profound.
+
 >lol
 Yeah, the novel is pretty unbelievable, but it's not there to be profound.
 
@@ -314,6 +384,7 @@ PAGE 97:
 PAGE 100:
 Well, that's all. Hooray for speed-reading.
 
+#nudge for evoc
 >evco
 You don't need to flip anything here, really. Certainly not a room.
 
@@ -324,39 +395,59 @@ Sparse Spares
 >spears
 There's nothing you need a weapon to fight against.
 
+#nudge for trifle
 >tifler
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for placer
 >palcer
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for scalper
 >palcers
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for rudest
 >rudest
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for dustpan
 >dupstan
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for ladder
 >lardde
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for scalpit
 >sclipat
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for btol
 >blto
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for case
 >scea
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for boltcase
 >boltcaes
-This is a museum! No messing with the exhibits, please. Or trying to.
+This is a museum! Messing with the exhibits would be very bad form.
 
+#nudge for best
+>bets
+This is a museum! Messing with the exhibits would be very bad form.
+
+#nudge for calo
+>calo
+This is a museum! Messing with the exhibits would be very bad form.
+
+#nudge for sparse
 >spresa
 You don't need to flip anything here, really. Certainly not a room.
 
+#nudge for bulk
 >ublk
 Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that.
 

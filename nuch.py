@@ -17,6 +17,8 @@ import sys
 write_to_file = False
 flag_double_comments = False
 
+err_string = ""
+
 if len(sys.argv) > 1:
     if sys.argv[1] == 'w':
         write_to_file = True
@@ -54,7 +56,7 @@ def pre_process(sts):
         for line in file:
             if re.search("table of .* nudges", line):
                 current_table = sts + '-' + re.sub("nudges.*", "nudges", line.strip().lower())
-                print("Current table now", current_table)
+                # print("Current table now", current_table)
                 count = count + 1
                 continue
             count = count + 1
@@ -94,14 +96,15 @@ def poke_nudge_files(gm):
     nudge_comment = False
     nudge_add = defaultdict(str)
     cmd_lines = defaultdict(str)
-    print("poking", q)
-    with open(nudge_files[q]) as file:
+    print("Poking", tn)
+    short_file = re.sub(".*[\\\/]", "", nudge_files[gm])
+    with open(nudge_files[gm]) as file:
         for line in file:
             count = count + 1
             ll = line.strip().lower()
             if line.startswith('>') and not nudge_comment:
                 alfl = alf(re.sub('>', '', ll))
-                cmd_lines[alfl] = cmd_lines[alfl] + ' ' + str(count)
+                cmd_lines[alfl] = cmd_lines[alfl] + ' ' + str(count-1)
                 # print(alfl, cmd_lines[alfl])
             if re.search('##( )?nudge (for|of) ', ll):
                 if flag_double_comments:
@@ -116,7 +119,7 @@ def poke_nudge_files(gm):
                         print("Duplicate nudge comment line", ll, 'line', count, 'duplicates', got_nudges[gm][ll])
                     got_nudges[gm][ll] = count
                 else:
-                    print("Faulty nudge line", count, ':', ll)
+                    print("Unmatched #NUDGE FOR in", short_file, "line", count, ':', ll)
             else:
                 nudge_comment = False
     short = re.sub(".*[\\\/]", "", nudge_files[q])
@@ -131,8 +134,9 @@ def poke_nudge_files(gm):
             if max_errs > 0 and count2 > max_errs:
                 continue
             print ("({:4d}) {:s} need #nudge for {:14s} suggestions = {:s}".format(count2, short, j, cmd_lines[alf(j)] if cmd_lines[alf(j)] != '' else 'unavailable'))
-    if count2 > max_errs:
-        print("Only listed", max_errs, 'of', count2)
+    global err_string
+    if count2 > 0:
+        err_string = "%s\n%s/%s had %d total errors." % (err_string, tn, short_file, count2)
     for y in nudge_add.keys():
         nudge_add[y] = re.sub("^ ", "", nudge_add[y])
     if count2 == 0:
@@ -167,4 +171,6 @@ max_errs = 50
 for q in nudge_files.keys():
     poke_nudge_files(q)
 
+if err_string != "":
+    print("Error summary:", err_string)
 #dupnudge should be implemented (?)
