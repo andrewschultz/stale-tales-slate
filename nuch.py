@@ -15,11 +15,15 @@ import re
 import sys
 
 write_to_file = False
+flag_double_comments = False
 
 if len(sys.argv) > 1:
     if sys.argv[1] == 'w':
         write_to_file = True
         print('Writing files with errors')
+    if sys.argv[1] == 'd':
+        flag_double_comments = True
+        print('Flagging double comments')
 
 nudge_files = {}
 
@@ -87,7 +91,8 @@ def poke_nudge_files(gm):
                 cmd_lines[alfl] = cmd_lines[alfl] + ' ' + str(count)
                 # print(alfl, cmd_lines[alfl])
             if re.search('##( )?nudge for ', ll):
-                pass
+                if flag_double_comments:
+                    print("Line", count, "has a double comment.")
             elif re.search('#( )?nudge for ', ll):
                 if nudge_comment:
                     print("Uh oh duplicate nudge comments at line", count)
