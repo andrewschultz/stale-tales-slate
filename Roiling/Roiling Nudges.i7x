@@ -516,7 +516,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "wipe"	362199687	--	wipes	--	"It'd be easier to [if player has wipes]use them all[else]steal all the wipes[end if] at once. Pulling them out and so forth--tiring."
 "pearl"	350597528	--	paler pearl	--	"The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit..."
 "plain"	251367970	plains	--	--	"[if bogus-plains is reflexed]You had your say.[else]'I...plan,' you think, then in a fit of confidence, 'I...PLANS!'[end if]" [LAPSIN PLAINS]
-"trace"	337433333	--	--	crates-menace rule	"[if crate is reflexed]Yes, one more thing to do with the crate--you know where they're from, and you know what to do. Instinctively[else]That won't quite help you figure where the crate is coming from[end if]."
 "inthere"	595228692	--	span pans	--	"The words on the pans don't change. They are just a generic taunt."
 "isk"	194199990	--	skis	--	"But you need to remove both skis."
 "open"	352532153	--	span pans	--	"The words on the pans don't change. They are just a generic taunt."
@@ -526,10 +525,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "fragments"	606798973	--	fragments	--	"[crate-frag]."
 "fragment"	510525007	--	fragments	--	"[crate-frag]."
 "shut"	341772090	plains	--	--	"[if Shadier Airshed is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the door[end if]."
+"hut"	245498124	plains	--	--	"[if Shadier Airshed is visited]You found the hut you needed to[else]The huts are too secure, but maybe you can go by the door[end if]."
 "bonk"	214612168	--	knob	--	"That isn't quite the right way to hit the knob."
 "airshed"	414895930	Shadier Airshed	--	--	"some text"[SHADIER AIRSHED]
-"ahut"	247685942	Shadier Airshed	--	--	"[locname]."
-"hut"	245498124	Shadier Airshed	--	--	"[locname-part]."
 "heap"	248742185	--	heaps	--	"[if heaps are reflexed]You don't need or want to futz with one heap to make things super-extra-perfect.[else]Change ALL the heaps![end if]"
 "ubt"	226634730	--	tubs	--	"Clear ALL the tubs!"
 "bust"	322908696	--	tubs	--	"That didn't make anything go boom."
@@ -546,7 +544,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "theses"	588552467	--	theses sheets	--	"The hedron's spirit will remain intact even if you meddle there. You must go into its heart."
 "these"	492278501	--	theses sheets	--	"It'd be fun to rip up even one, but it'd be worse if you got caught. Take down the hedron, instead."
 "tarp"	272087598	--	o-t	--	"You think of changing the trap--maybe even a tarp! But maybe the trap IS a tarp that enfolds you. Scary. No, thinking of it as an ol['] trap would make it less intimidating."
-"patrol"	400254014	--	a-p	--	"The portal can't be changed for the better."
+"patrol"	400254014	--	a-p	--	"The portal can't be changed for the better. It already goes where you want."
 "walleye"	595721739	--	walleyes	--	"Just tacking one walleye won't change the crowd. They're past redemption, anyway."
 "walleyes"	691995705	--	walleyes	--	"The walleyes are a bad crowd, past redemption."
 "craals"	258792829	Rascal Craals	--	--	"[locname]." [RASCAL CRAALS]
@@ -554,6 +552,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bury"	331207767	--	ruby	--	"That's not quite it. You file that idea six feet under."
 "end"	217742706	end den	--	--	"[locname]." [END DEN]
 "dourest"	613001369	dourest detours	--	--	"[locname]." [DOUREST DETOURS]
+"detour"	613001369	dourest detours	--	--	"[locname]."
 "ant"	174205344	dourest detours	--	--	"That's close. Something brutal and direct."
 "tenfold"	475534036	tenfold	--	--	"[locname]." [DEN LOFT]
 "loft"	257791330	tenfold	--	--	"[locname-part]."
