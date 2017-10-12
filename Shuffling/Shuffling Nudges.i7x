@@ -464,6 +464,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "resort"	572190276	--	--	degen-true rule	"[reg-rej]."
 "astral"	342897262	Astral Altars	--	--	"[loc-rej]."
 "altar"	246623296	Astral Altars	--	--	"[loc-rej]."
+"tile"	329722812	Astral Altars	--	--	"No, all the tiles."
 "leis"	322886760	Isle	--	--	"[loc-rej]."
 "lie"	226612794	Isle	--	--	"[loc-rej]."
 "sand"	188398381	Isle	--	--	"[the-sand]."

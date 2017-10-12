@@ -104,7 +104,7 @@ def poke_nudge_files(gm):
             ll = line.strip().lower()
             if line.startswith('>') and not nudge_comment:
                 alfl = alf(re.sub('>', '', ll))
-                cmd_lines[alfl] = cmd_lines[alfl] + ' ' + str(count-1)
+                cmd_lines[alfl] = cmd_lines[alfl] + ' ' + str(count)
                 # print(alfl, cmd_lines[alfl])
             if re.search('##( )?nudge (for|of) ', ll):
                 if flag_double_comments:
@@ -133,7 +133,8 @@ def poke_nudge_files(gm):
             count2 = count2 + 1
             if max_errs > 0 and count2 > max_errs:
                 continue
-            print ("({:4d}) {:s} need #nudge for {:14s} suggestions = {:s}".format(count2, short, j, cmd_lines[alf(j)] if cmd_lines[alf(j)] != '' else 'unavailable'))
+            c2 = ' '.join([str(int(a) - 1) for a in cmd_lines[alf(j)].split(' ')]) if cmd_lines[alf(j)] != '' else 'unavailable'
+            print ("({:4d}) {:s} need #nudge for {:14s} suggestions = {:s}".format(count2, short, j, c2))
     global err_string
     if count2 > 0:
         err_string = "%s\n%s/%s had %d total errors." % (err_string, tn, short_file, count2)

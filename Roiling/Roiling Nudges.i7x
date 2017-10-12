@@ -2027,7 +2027,7 @@ to say dome-rm:
 	say "You don't need to flip anything here, really. Certainly not a room"
 
 to say its-a-museum:
-	say "This is a museum! No messing with the exhibits, please. Or trying to";
+	say "This is a museum! This is a museum! Messing with the exhibits would be very bad form";
 
 to say these-docs:
 	say "These are documents of historical records! Revisionism is so Elvira";
