@@ -27,16 +27,17 @@ if len(sys.argv) > 1:
 
 nudge_files = {}
 
-#nudge_files['table of otters nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-otters.txt"
-#nudge_files['table of oyster nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-oyster.txt"
-#nudge_files['table of presto nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-presto.txt"
-#nudge_files['table of towers nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-towers.txt"
-#nudge_files['table of troves nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-troves.txt"
-#nudge_files['table of routes nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-routes.txt"
-#nudge_files['table of others nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-others.txt"
-#nudge_files['table of demo dome nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-demo-dome.txt"
-nudge_files['table of means manse nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-means-manse.txt"
-nudge_files['table of general aro nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-general-nudges.txt"
+with open("c:/writing/scripts/nuch.txt") as file:
+    for line in file:
+        if line.startswith(';'):
+            break
+        if line.startswith("#"):
+            continue
+        lary = line.strip().lower().split('\t')
+        if len(lary) < 3:
+            print("Badly formed line", line, 'has', len(lary), 'tab columns, should have 3')
+            exit()
+        nudge_files[lary[1] + '-' + lary[0]] = "c:/games/inform/%s.inform/source/%s" % (lary[1], lary[2])
 
 cmd_tries = defaultdict(dict)
 got_nudges = defaultdict(dict)
@@ -44,14 +45,16 @@ got_nudges = defaultdict(dict)
 def alf(x):
     return ''.join(sorted(x))
 
-def pre_process(gm):
+def pre_process(sts):
+    gm =  'c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/%s nudges.i7x' % sts
     count = 0
     dupes = 0
     test_match_up = defaultdict(int)
     with open(gm) as file:
         for line in file:
             if re.search("table of .* nudges", line):
-                current_table = re.sub("nudges.*", "nudges", line.strip().lower())
+                current_table = sts + '-' + re.sub("nudges.*", "nudges", line.strip().lower())
+                print("Current table now", current_table)
                 count = count + 1
                 continue
             count = count + 1
@@ -86,6 +89,7 @@ def int_wo_space(i):
     return int(re.sub(" .*", "", i))
 
 def poke_nudge_files(gm):
+    tn = re.sub(".*table of", "table of", gm)
     count = 0
     nudge_comment = False
     nudge_add = defaultdict(str)
@@ -154,9 +158,8 @@ def poke_nudge_files(gm):
     return
 
 d = [ 'shuffling', 'roiling' ]
-e = [ 'c:/program files (x86)/inform 7/inform7/extensions/andrew schultz/%s nudges.i7x' % g for g in d]
 
-for gm in e:
+for gm in d:
     pre_process(gm)
 
 max_errs = 50
