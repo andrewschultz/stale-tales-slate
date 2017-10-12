@@ -11,6 +11,10 @@
 
 * weird stuff
 
+#nudge for manse
+>manes
+Trying to change the current region you're in would be risky, or useless, or maybe both
+
 >aliver
 You don't want to risk anything that would make Elvira more powerful.
 
@@ -133,6 +137,7 @@ You don't need to, and can't, do anything drastic to the walls when inside. That
 >echat
 Aw, man, a third option for the settler wouldn't be fair. Trust me, it's powerful enough as-is.
 
+#nudge for sign
 >ings
 You don't need to mess around with the sign on the settler, or any sign, except maybe one place, which you'll know when you see it.
 
@@ -265,9 +270,23 @@ You don't have any special tricks with RETRYing. Just do so if you're in a store
 
 * cluing and such
 
+#nudge for door
+>droo
+No. The door's all that protects you from the outside world.
+
+#nudge for side
+>sied
+No. The door's all that protects you from the outside world.
+
+#nudge for sidedoor
+>sieddroo
+No. The door's all that protects you from the outside world.
+
+#nudge for rove
 >ervo
 That's not a way to sneak around and avoid any future knock at the door
 
+#nudge for study
 >udsty
 You don't need to riff on any location names to win the game
 
@@ -275,6 +294,7 @@ You don't need to riff on any location names to win the game
 >x bookshelf
 
 #rove over anagram while G knocks
+#dupnudge for rove
 >ervo
 That's not a way to sneak around and avoid the knock at the door.
 
@@ -282,46 +302,60 @@ That's not a way to sneak around and avoid the knock at the door.
 >1
 >5
 
+#nudge for dark
 >dark
 You punch your fist as you realize DARK has no anagrams...right into the palm
+
+#nudge for darkness
 >darksens
 Oh no, not again. Concentrate on the palm
 
+#nudge for palm
 >palm
 You think you feel the palm shake a bit, but nothing terribly magical happens.
 
 >lamp
 
+#nudge for bowling
 >bowling
 It's more that it's a giant pin and not, like, a safety pin
+#nudge for bowlingpin
 >bowlingpin
 It's more that it's a giant pin and not, like, a safety pin
 
+#nudge for niche
 >echin
 It's not any old niche. It's your niche. And by your niche, I mean you see it as "my niche."
 
+#nudge for books
 >bskoo
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
 
+#nudge for book
 >bkoo
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
 
+#nudge for shelf
 >shelf
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
 
+#nudge for bookshelf
 >bkooshelf
 The bookshelf is too massively immovable. If you could magick it, all those books would probably create an avalanche, anyway.
 
+#nudge for beams
 >beams
 Not even one of the beams rattles. You count them up again--there are ten.
+
+#nudge for ten
 >ten
 You change neither the number nor the makeup of the ten beams.
 
->morna
-Trying to change the current region you're in would be risky, or useless, or maybe both
-
+#nudge for pin
 >npi
 It's one big giant pin.
+
+#nudge for giant
 >ignat
 It's one big giant pin.
 
@@ -332,14 +366,22 @@ It's one big giant pin.
 >painting
 goes better
 
+#nudge for abstract
 >abstratc
 That is probably overthinking the painting's abstract-ness. It's really just good for examining.
 
 >basement
+
+#nudge for tenbeams
+>bamesent
+You probably just want to go DOWN to the basement
+
 >d
 
+>gonear study
+#dupnudge for tenbeams
 >bamesent
-You don't need to riff on any location names to win the game
+You probably just want to go DOWN to the gallery
 
 >mete
 >snab
@@ -349,22 +391,25 @@ You should never need to riff on part of a location name
 >u
 >d
 
->same
->bent
-
 >stair
 >u
 
+#nudge for table
 >table
 A bleat: "tableS!"
 
->belts
->bastle
+>stable
+>in
+#nudge for framing
+>framign
+You don't need to riff on any location names to win the game
 
 >in
+#nudge for peephole
 >pepehole
 You don't need to change it. It was tough enough to create.
 
+#nudge for latch
 >ltcha
 Not one latch. All of them.
 
@@ -373,78 +418,108 @@ You think you feel static through the latches. But they remain the same. Maybe t
 
 >satchel
 
+#nudge for satchel
 >letchas
 You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too.
 
+#nudge for ceiling
 >ceiling
 You wouldn't want to collapse the whole ceiling, but maybe the MY NICHE words could be changed.
 
 >chimney
 [Your score has just gone up by one point.]
 
+#dupnudge for ceiling
 >cieling
 You already built the chimney. If the ceiling caved, you'd be buried.
 
+#nudge for chair
 >chira
 The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing.
 
+#nudge for rich
 >chir
 The chair may be an unnecessary luxury, but you shouldn't feel bad about that.
 
+#nudge for nitro
 >nitro
 !Elvira's
 
+#nudge for oped
 >oped
 You're not going to change Elvira's opinion. Better to change Yorpwald.
 
+#nudge for opedoped
+>opedoped
+You're not going to change this--deed
+
 >x dope
 
+#dupnudge for nitro
 >nitro
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 
+#nudge for questin
 >questin
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 
+#nudge for moneyco
 >moneyco
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 
+#nudge for shatter
 >shatter
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 
+#nudge for billy
 >billy
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 
+#nudge for itrash
 >itrash
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
+
+#nudge for herarts
 >herarts
 !You try and twist
 >gs
+
+#dupnudge for itrash
 >itrash
 !You try and twist
+
+#dupnudge for herarts
 >herarts
 You try and twist
 >gs
 
+#nudge for subpoena
 >beansoup
 Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting.
 
+#dupnudge for palm
 >pmla
 If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
 
+#nudge for gape
 >gpea
 You feel like you physically want to crumple up the page, but you just stare blankly at it.
 
 >u
 
+#nudge for highest
 >hightes
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
+#nudge for height
 >highte
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
+#nudge for closets
 >clostes
 The closets are there to warp space a bit. You don't need to mess with them.
 
+#nudge for closet
 >closte
 The closets are there to warp space a bit. You don't need to mess with them.
 
@@ -453,12 +528,27 @@ The pram creaks back and forth slightly.
 
 >d
 
+#nudge for gallery
+>galleyr
+You don't need to riff on any location names to win the game
+
+#nudge for all
+>lal
+You should never need to riff on part of a location name
+
+#nudge for grey
+>>grye
+You should never need to riff on part of a location name
+
+#nudge for notice
 >noitce
 You can flip everything on the diorama except the notice.
 
+#nudge for diorama
 >dioraam
 Old Man Almond assured you you couldn't change it by accident when he gave it to you. The stuff hanging from it, though...
 
+#nudge for reading
 >erdaing
 You don't have time for literary criticism.
 
@@ -469,9 +559,12 @@ You probably just want to go DOWN to the basement.
 You probably just want to go UP the chimney.
 
 >stable
+
+#nudge for stable
 >stabel
 You probably just want to go IN to the stable.
 
+#nudge for sad
 >dsa
 The ads have probably gone through enough word-twisting.
 
@@ -479,6 +572,7 @@ The ads have probably gone through enough word-twisting.
 >ramp
 >d
 
+#nudge for evac
 >ceva
 The evac-cave is your way out. It'd be a bad idea to change it.
 
@@ -487,6 +581,7 @@ You look at your settler and realize you haven't really EXAMINED it.
 >x settler
 >enter cave
 
+#nudge for elmo
 >olem
 Changing Elmo won't work. It's his rifle.
 
@@ -495,28 +590,36 @@ Changing Elmo won't work. It's his rifle.
 >z
 >z
 >z
+
+#nudge for high
 >high
 The high sign is a clue. Bad idea to change it.
 
 >sign
 The high sign is a clue. Bad idea to change it.
 
+#nudge for highsign
 >highsign
 The high sign is a clue. Bad idea to change it.
 
+#nudge for arifle
 >arfile
 Just the rifle, well, not THE rifle, or JUST, rifle, but RIFLE.
 
+#nudge for hostage
 >hetsago
 It's not you that needs changing but the rifle.
 
+#nudge for gun
 >ugn
 It's not a gun but a rifle. And a gnu would be a gnu-sance anyway.
 
+#nudge for flier
 >flier
 >3
 >y
 
+#nudge for cavern
 >ecvarn
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
@@ -532,11 +635,15 @@ The plates shine slightly and rattle.
 >elptasr
 The plaster crackles and shines slightly.
 
+#nudge for terrain
 >terrain
 Hm...it probably isn't that easy. The plaster and
 
+#nudge for tapler
 >tapler
 What you need is singular, but you sense it's all the plaster that matters.
+
+#nudge for plate
 >taple
 You have no idea which plate to focus on, so maybe you should focus on the plates.
 

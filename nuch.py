@@ -27,9 +27,15 @@ if len(sys.argv) > 1:
 
 nudge_files = {}
 
-nudge_files['table of otters nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-otters.txt"
-nudge_files['table of oyster nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-oyster.txt"
-nudge_files['table of presto nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-presto.txt"
+#nudge_files['table of otters nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-otters.txt"
+#nudge_files['table of oyster nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-oyster.txt"
+#nudge_files['table of presto nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-presto.txt"
+#nudge_files['table of towers nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-towers.txt"
+#nudge_files['table of troves nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-troves.txt"
+#nudge_files['table of routes nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-routes.txt"
+#nudge_files['table of others nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-others.txt"
+#nudge_files['table of demo dome nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-demo-dome.txt"
+nudge_files['table of means manse nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-means-manse.txt"
 
 cmd_tries = defaultdict(dict)
 got_nudges = defaultdict(dict)
@@ -51,6 +57,8 @@ def pre_process(gm):
             if re.search("\"\t[0-9]", line):
                 l = re.sub("\t.*", "", line.strip().lower())
                 l = re.sub("\"", "", l)
+                if ' ' in l:
+                    print("WARNING line", count, "has space in the word-key.")
                 cmd_tries[current_table][l] = count
                 got_nudges[current_table][l] = False
                 if test_match_up[l]:
@@ -90,14 +98,14 @@ def poke_nudge_files(gm):
                 alfl = alf(re.sub('>', '', ll))
                 cmd_lines[alfl] = cmd_lines[alfl] + ' ' + str(count)
                 # print(alfl, cmd_lines[alfl])
-            if re.search('##( )?nudge for ', ll):
+            if re.search('##( )?nudge (for|of) ', ll):
                 if flag_double_comments:
                     print("Line", count, "has a double comment.")
-            elif re.search('#( )?nudge for ', ll):
+            elif re.search('#( )?nudge (for|of) ', ll):
                 if nudge_comment:
                     print("Uh oh duplicate nudge comments at line", count)
                 nudge_comment = True
-                ll = re.sub("#( )?nudge for ", "", ll)
+                ll = re.sub("#( )?nudge (for|of) ", "", ll)
                 if ll in got_nudges[gm].keys():
                     if got_nudges[gm][ll] == True:
                         print("Duplicate nudge comment line", count, ll)

@@ -496,7 +496,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "clay"	197366494	--	--	hotspot-no-kilns rule	"No, the clay is a clue to what the [if riot is visible]protest[else]trio[end if] really wants to do."
 "three"	481328338	--	--	riot-gone rule	"The trio remains unmoved. Perhaps you can [if potters are in hotspot]get the potters something to work with[else]give the protest more constructive aims[end if]?"
 "chainlinks"	489297393	--	chain links	--	"You're overthinking it. Or you hope you are. It's both a chain, and links."
-"tug toe"	546084231	--	red bull burdell	--	"Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said."
+"tugtoe"	546084231	--	red bull burdell	--	"Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said."
 "red"	234159001	--	red bull burdell	--	"Burdell's laugh echoes. 'You think you can change ME?!'"
 "bull"	231152390	--	red bull burdell	--	"Burdell's laugh echoes. 'You think you can change ME?!'"
 "burdell"	465311391	--	red bull burdell	--	"Burdell's laugh echoes. 'You think you can change ME?!'"
