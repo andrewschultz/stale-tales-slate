@@ -27,6 +27,7 @@ You're sure the lecture to the east will be about trying versus doing. Ugh. Mayb
 >try
 You're sure the lecture to the east will be about trying versus doing. Ugh.
 
+#mistake test for saltmine
 >saltmine
 Oh, a new job wouldn't be THAT dreary. But what if there is something else?
 
@@ -76,6 +77,7 @@ Your score has just gone up by one point.
 The door is probably the way out. Best not change it into something else.
 
 #xc
+#mistake retest for rood
 >rood
 You already changed the odor, and this game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
@@ -106,9 +108,11 @@ Use is a bit too general for this game's parser to understand. You can SWITCH so
 >in
 Thickest Thickets
 
+#mistake test for believe
 >believe
 Yes, but what do you believe you can do?
 
+#mistake test for gato
 >gato
 Nice try, but wrong language. Another animal would be more likely to eat through the thickets.
 
@@ -643,12 +647,19 @@ Your score has just gone up by one point.
 Best not to get too crazy with food preparation.
 
 #xc
+#mistake test for keats
 >keats
 This is wordplay, not poetry. But the skate does glow red.
+
+#mistake test for stake
 >stake
 A stake would have no use here. So that might be a miskate. Err...
+
+#mistake test for takes
 >takes
 You do a take, then a double take, at how odd this all is.
+
+#mistake test for teaks
 >teaks
 Hm. An indoor forest. That would be neat to see. But this is a kitchen.
 
@@ -662,8 +673,10 @@ Your score has just gone up by one point.
 Best not to get too crazy with food preparation.
 
 #xc
+#mistake test for pears
 >pears
 I think you have the wrong food group. The spearman is cheesy. Plus, he wouldn't be a spearman without his spear.
+#mistake test for limes
 >limes
 I think you have the wrong food group. Besides, it wouldn't be nice to wipe the spearman's smile off.
 
@@ -832,6 +845,7 @@ Instead of trading, use GIVE X to Y.
 Your score has just gone up by one point.
 
 #xc
+#mistake test for yah
 >yah
 You're glad you've got the hay, but you're not excited, and you can't fake it.
 
@@ -1737,6 +1751,7 @@ That's what's causing the riot, and it's up to you to quiet the rioters--well, t
 Your score has just gone up by one point.
 
 #xc
+#mistake text for brb
 >brb
 You don't know him that well. No riffing on his initials!
 
@@ -1744,13 +1759,15 @@ You don't know him that well. No riffing on his initials!
 >tug toe
 Your score has just gone up by one point.
 
+#xc
+#mistake test for sex it
 >sex it
 Quit screwing around and focus on yourself. NO, not like THAT. Geez
 
 >e
 Roman Manor
 
-#xc
+#mistake retest for sex it
 >sex it
 You're not even up for THAT, now. You just want to BE.
 

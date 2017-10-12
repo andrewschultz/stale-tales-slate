@@ -36,6 +36,7 @@ nudge_files = {}
 #nudge_files['table of others nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-others.txt"
 #nudge_files['table of demo dome nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-demo-dome.txt"
 nudge_files['table of means manse nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-means-manse.txt"
+nudge_files['table of general aro nudges'] = "c:\\games\\inform\\roiling.inform\\Source\\reg-roi-general-nudges.txt"
 
 cmd_tries = defaultdict(dict)
 got_nudges = defaultdict(dict)
@@ -107,9 +108,9 @@ def poke_nudge_files(gm):
                 nudge_comment = True
                 ll = re.sub("#( )?nudge (for|of) ", "", ll)
                 if ll in got_nudges[gm].keys():
-                    if got_nudges[gm][ll] == True:
-                        print("Duplicate nudge comment line", count, ll)
-                    got_nudges[gm][ll] = True
+                    if got_nudges[gm][ll] > 0:
+                        print("Duplicate nudge comment line", ll, 'line', count, 'duplicates', got_nudges[gm][ll])
+                    got_nudges[gm][ll] = count
                 else:
                     print("Faulty nudge line", count, ':', ll)
             else:
@@ -119,7 +120,7 @@ def poke_nudge_files(gm):
     for j in cmd_lines.keys():
         cmd_lines[j] = re.sub("^ *", "", cmd_lines[j])
     for j in sorted(got_nudges[gm].keys(), key=lambda x: (int_wo_space(cmd_lines[alf(x)]), x)):
-        if got_nudges[gm][j] == False:
+        if got_nudges[gm][j] == 0:
             for x in cmd_lines[alf(j)].split(' '):
                 nudge_add[x] = nudge_add[x] + ' ' + j
             count2 = count2 + 1

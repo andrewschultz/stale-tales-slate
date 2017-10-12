@@ -1,9 +1,10 @@
 ###############################
 #
-#reg-roi-manor-misc.txt
+#reg-roi-means-manse-nudges.txt
 #
 #regression test for trying ways through roman manor
 #also includes general tries at magic or whatever
+#with region specific nudges
 #
 
 ** game: /home/andrew/prt/debug-roiling.ulx
@@ -15,15 +16,6 @@
 >manes
 Trying to change the current region you're in would be risky, or useless, or maybe both
 
->aliver
-You don't want to risk anything that would make Elvira more powerful.
-
->alvire
-Changing Elvira is impossible, and you certainly don't want to summon her.
-
->yalpdrow
-You can't just unjumble Yorpwald with just one word. You need to deal with individual things.
-
 #done before you see the space capes
 >spaec
 Meta-commands don't have any easter eggs, sadly.
@@ -31,242 +23,6 @@ Meta-commands don't have any easter eggs, sadly.
 >purloin settler
 >purloin purse
 >purloin treatise
-
->ettlers
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
-
->kram
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
-
->recodde
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
-
->deviser
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
-
->backside
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
-
->decal
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
-
->button
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
-
->receptor
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
-
->receptors
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
-
->outptu
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
-
->displya
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
-
->quales
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
-
->gool
-You won't gain anything trying to magic the settler, or parts of it, about. It's got all the technical tools you need, though.
-
->ronth
-This game almost never requires you to mess with cardinal directions.
-
->suoth
-This game almost never requires you to mess with cardinal directions.
-
->ewst
-This game almost never requires you to mess with cardinal directions.
-
->esta
-This game almost never requires you to mess with cardinal directions.
-
->donw
-This game doesn't usually require you to mess with directions you can go.
-
->southwets
-This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
-
->northwets
-This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
-
->northeats
-This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
-
->southeats
-This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
-
->gagdet
-That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures.
-
->xyyzz
-A hollow voice booms, "Lo! Of..."
-
->pluhg
-A hollow voice booms, "Lo! Of..."
-
->plovre
-A hollow voice booms, "Lo! Of..."
-
->iths
-You're not fooling ME. Shame on you!
-
->kcuf
-You're not fooling ME. Shame on you!
-
->mand
-You're not fooling ME. Shame on you!
-
->lleh
-You're not fooling ME. Shame on you!
-
->parc
-You're not fooling ME. Shame on you!
-
->hcek
-You're not fooling ME. Shame on you!
-
->llaw
-You don't need to, and can't, do anything drastic to the walls when inside. That'd be kind of dangerous, anyway.
-
->llaws
-You don't need to, and can't, do anything drastic to the walls when inside. That'd be kind of dangerous, anyway.
-
->echat
-Aw, man, a third option for the settler wouldn't be fair. Trust me, it's powerful enough as-is.
-
-#nudge for sign
->ings
-You don't need to mess around with the sign on the settler, or any sign, except maybe one place, which you'll know when you see it.
-
->idlers
-You can just switch the slider if you want to manipulate it.
-
->pruse
-The purse is just fine as it is.
-
->aspec
-You don't want to mess with the space-capes. They work.
-
->treaties
-The treatise was there as help to discover the satchel. It has only sentimental value, now.
-
->purloin gird grid
->drig
-The grid already contains pretty much everything Elmo was able to find out.
-
->writign
-Red writing is a just clue of what to change.
-
->redwritign
-Red writing is a just clue of what to change.
-
->erd
-Red writing is a just clue of what to change.
-
->ryter
-!You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.
-
->warning
-You can't change warnings. Warnings are there to protect you. Even offer hints if you read them.
-
->pedanto
-You don't need to change the pedanto-notepad, except maybe by filling it up with ideas. But to do that, you need to take it, first. And you do.
-
->pedanto
-!But to do that
-
->cusser
-You're not fooling ME. Shame on you!
-
->obther
-You're not fooling ME. Shame on you!
-
->astarbd
-You're not fooling ME. Shame on you!
-
->abstract elmo to lalaland
-
->pesar
-There's no in-between for the PARSE and SPARE commands for the settler.
-
->ervb
-There's no secret verb or verbs to find trying that.
-
->ervbs
-There's no secret verb or verbs to find trying that.
-
->knith
-Whenever you just try to too hard to think, things always get jumbled.
-
->cores
-There's no way to scramble your score. And scoring another point won't help you solve things, anyway.
-
->opss
-You can't jumble the possible scores any other way.
-
->istlen
-Trying to change how you listen gives no intels.
-
->abotu
-The "about" section has no easter eggs.
-
->credti
-The "credits" section has no easter eggs.
-
->credtis
-The "credits" section has no easter eggs.
-
->histoyr
-The "history" section has no easter eggs.
-
->huhs
-Meta-commands don't have any easter eggs, sadly.
-
->spacenos
-Meta-commands don't have any easter eggs, sadly
-
->spacoen
-Meta-commands don't have any easter eggs, sadly.
-
->spaces
-Meta-commands don't have any easter eggs, sadly.
-
->sno
-Meta-commands don't have any easter eggs, sadly.
-
->hitn
-Meta-commands don't have any easter eggs, sadly.
-
->hitns
-Meta-commands don't have any easter eggs, sadly.
-
->accses
-Meta-commands don't have any easter eggs, sadly.
-
->extis
-Meta-commands don't have any easter eggs, sadly.
-
->exti
-Meta-commands don't have any easter eggs, sadly.
-
->opst
-Meta-commands don't have any easter eggs, sadly
-
->optiosn
-Meta-commands don't have any easter eggs, sadly
-
->versino
-Meta-commands don't have any easter eggs, sadly
-
->semithong
-Instead of messing with SOMETHING, maybe you can examine what the something is on.
-
->ts
->ryter
-You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.
 
 * cluing and such
 
@@ -595,6 +351,7 @@ Changing Elmo won't work. It's his rifle.
 >high
 The high sign is a clue. Bad idea to change it.
 
+#nudge for sign
 >sign
 The high sign is a clue. Bad idea to change it.
 

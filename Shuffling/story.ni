@@ -483,7 +483,7 @@ to say reject:
 	now num-in-row is 0;
 	if regtab of mrlp is hash-found:
 		continue the action;
-	if table of general nudges is hash-found:
+	if table of general sa nudges is hash-found:
 		continue the action;
 	say "[verb-cue]."
 

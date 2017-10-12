@@ -1102,9 +1102,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "sparse"	489331621	sparse spares	--	--	"[dome-rm]."
 "intel"	398630320	intel inlet	--	--	"[dome-rm]."
 
-table of general nudges
+table of general aro nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
-"Elvira"	421289235	--	--	elvira-here rule	"Changing Elvira is impossible, [if player is in Inclosure]even now you've resisted her first attack[else]and you certainly don't want to summon her[end if]." [start GENERAL STUFF]
+"elvira"	421289235	--	--	elvira-here rule	"Changing Elvira is impossible, [if player is in Inclosure]even now you've resisted her first attack[else]and you certainly don't want to summon her[end if]." [start GENERAL STUFF]
 "yorpwald"	548467110	--	--	degen-true rule	"You can't just unjumble Yorpwald with just one word. You need to deal with individual things."
 "settler"	697243862	--	settler	--	"[no-set]."
 "mark"	204519952	--	settler	--	"[no-set]."

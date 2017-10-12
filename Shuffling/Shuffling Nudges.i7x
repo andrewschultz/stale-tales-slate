@@ -512,7 +512,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "spire"	435862683	Means Manse	--	--	"[ennui]."
 "toaster"	592164309	Means Manse	--	--	"[ennui]."
 
-table of general nudges
+table of general sa nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "aprep"	378249648	--	prep paper	--	"[no-2]."
 "papesr"	474523614	--	prep paper	--	"[no-2]."
@@ -900,8 +900,7 @@ to say ennui:
 to say if-rifle:
 	say "The flier has helpful information it'd be better to act on than change"
 
-section general nudges
-
+section general sa nudges
 
 to say chem-bad:
 	say "Bad idea to mess with chemical compounds you don't understand"

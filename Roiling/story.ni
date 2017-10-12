@@ -4573,7 +4573,7 @@ to say reject:
 				continue the action;
 	if regtab of mrlp is hash-found:
 		continue the action;
-	if table of general nudges is hash-found:
+	if table of general aro nudges is hash-found:
 		continue the action;
 	if player has settler and settler-try is false:
 		if the player's command includes "settler":

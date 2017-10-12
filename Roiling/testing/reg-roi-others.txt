@@ -12,8 +12,11 @@
 >gonear rustic citrus
 >poss
 
+#nudge for storeh
 >streho
 Trying to change the current region you're in would be risky, or useless, or maybe both.
+
+#nudge for other
 >oreth
 Trying to change the current region you're in would be risky, or useless, or maybe both.
 
@@ -230,6 +233,7 @@ Take on a token
 >ancienter
 >solemn
 >len,mo
+##nudge for among
 >among
 >papayas
 >w
@@ -299,18 +303,22 @@ sonic icons
 >e
 >cheap
 Your score has just gone up by one point
+##nudge for among
 >among
 Your score has just gone up by one point
 >papayas
 Your score has just gone up by one point
 
+##nudge for price
 >priec
 Hm, no, the pattern of prices
 >cripes
 Your score has just gone up by one point
+##nudge for price
 >priec
 No, you already took care of stuff
 
+##nudge for kumquat
 >kumquta
 Just return the fruit to Curtis. No need for another change.
 
@@ -419,6 +427,7 @@ Your score has just gone up by one point
 >undo
 >research
 Your score has just gone up by one point
+##nudge for review
 >review
 Your score has just gone up by one point
 
@@ -480,36 +489,47 @@ You Did Great
 
 >gonear rustic citrus
 
+##nudge for rustic
 >rucsit
 You don't need to riff
 
+##nudge for plum
 >pulm
 Well, you don't technically need plurals for this, but you're on the right track
 
+##nudge for pear
+##nudge for pera
 >prea
 Well, you don't technically need plurals for this, but you're on the right track
 
 >pears
 
+##nudge for pager
 >agper
 Well, you don't technically need plurals for this, but you're on the right track
 
+##nudge for harmonica
 >harmonica
 The harmonicas seem stuck together, so you probably have to deal with both of them.
 
+##nudge for drinksstand
 >drinksstand
 Nothing happens. Maybe just examine it.
 
+##nudge for drinks
 >drinks
 Nothing happens. Maybe just examine it.
 
 >x stand
+##nudge for stand
 >stadn
 Nothing happens. You found enough inside it, anyway.
 
+##nudge for abandoned
 >abandoned
 Nothing happens. You found enough inside it, anyway.
 
+##nudge for lime
 >elim
 Well, you don't technically need plurals for this, but you're on the right track
 
@@ -517,82 +537,110 @@ Well, you don't technically need plurals for this, but you're on the right track
 >grapes
 >limes
 
+##nudge for moss
 >msso
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for cap
+##nudge for cpa
 >pca
 Nothing happens. Perhaps it's the whole item that's important.
 
 >compass
+##nudge for needle
 >needel
 The needle is working fine. No need to meddle.
 
+##nudge for megaton
 >megaton
 No, the whole thing. You see several...similar...items here right now.
 
+##nudge for pear
+##nudge for pera
 >pear
 No, the whole thing. You see several...similar...items here right now.
 
+##nudge for mopeage
 >mopeage
 No, the whole thing. You see several...similar...items here right now.
 
+##nudge for rant
 >rant
 No, the whole thing. You see several...similar...items here right now.
 
+##nudge for magenta
 >magenta
 No, the whole thing. You see several...similar...items here right now.
 
+##nudge for roep
 >rope
 No, the whole thing. You see several...similar...items here right now.
 
+##nudge for rampage
 >rampage
 No, the whole thing. You see several...similar...items here right now.
 
+##nudge for note
 >note
 No, the whole thing. You see several...similar...items here right now.
 
+##nudge for dam
 >amd
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for train
 >intra
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for peanut
 >peatun
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for cola
 >calo
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for videotape
 >videotape
 No, it's not just any videotape collection. It's those awful titles.
 
+##nudge for collection
 >collection
 No, it's not just any videotape collection. It's those awful titles.
 
+##nudge for videotape
 >videotape
 No, it's not just any videotape collection. It's those awful titles.
 
+##nudge for collection
 >collection
 No, it's not just any videotape collection. It's those awful titles.
 
+##nudge for videotapes
 >videotapes
 No, it's not just any videotape collection. It's those awful titles.
 
+##nudge for video
 >video
 No, it's not just any videotape collection. It's those awful titles.
 
+##nudge for videos
 >videos
 No, it's not just any videotape collection. It's those awful titles.
 
+##nudge for taep
 >tape
 No, it's not just any videotape collection. It's those awful titles.
 
+##nudge for tapes
 >tapes
 No, it's not just any videotape collection. It's those awful titles.
 
+##nudge for blurbs
 >bulbrs
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for eerie
 >eriee
 Nothing happens. Perhaps it's the whole item that's important.
 
@@ -602,24 +650,30 @@ Nothing happens. Perhaps it's the whole item that's important.
 >cantaloupe
 >persimmon
 
+##nudge for tekno
 >tenok
 There's enough credit on the token. Don't get greedy.
 
 >n
 Swell Wells
 
+##nudge for stucco
 >stucoc
 Stucco? No. ScoutCon, the message... (You see red recognizing what you should be chasing).
 
+##nudge for well
 >wlle
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
+##nudge for wells
 >swlle
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
+##nudge for silly
 >silyl
 Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle.
 
+##nudge for sillyshirt
 >silylshirt
 Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle.
 
@@ -629,36 +683,49 @@ That's not something you can say, do or see here. For a general list of verbs, t
 >arcipto
 Nothing happens. Your magic skills feel like the pits for a second.
 
+##nudge for shirt
 >trish
 Hm. There are a lot of silly shirts out there. Maybe the message is what you need to tackle.
 
+##nudge for riot
 >orti
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for cap
+##nudge for cpa
 >pca
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for miser
 >mersi
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for bluer
+##nudge for ruble
 >ublre
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for sorer
 >srreo
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for bogey
 >begyo
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for green
 >grene
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for stain
 >sinta
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for tangerine
 >tangerien
 The green stain could make just one fruit, but why not think bigger? It could become many.
 
+##nudge for tangerine
 >tangerine
 >gooseberry
 >mulberries
@@ -670,24 +737,31 @@ The green stain could make just one fruit, but why not think bigger? It could be
 >n
 Gates Stage
 
+##nudge for gates
 >gesta
 The gate needs to be unlocked some other way.
 
+##nudge for gate
 >geta
 The gate needs to be unlocked some other way.
 
+##nudge for halt
 >ltha
 The halt lath remains firm. Maybe you actually need some old-fashioned key-in-lock action.
 
+##nudge for arena
 >arean
 As you concentrate, you realize it's not just any arena, but the Admit-Us Stadium! Changing the stadium with (presumably) people in it would cause great harm. Maybe you should try to sneak in, instead.
 
+##nudge for nera
 >nera
 Changing the stadium with (presumably) people in it would cause great harm. Maybe you should try to sneak in, instead.
 
+##nudge for stadium
 >stadimu
 Changing the stadium with (presumably) people in it would cause great harm. Maybe you should try to sneak in, instead.
 
+##nudge for admit
 >amdit
 Changing the stadium with (presumably) people in it would cause great harm. Maybe you should try to sneak in, instead.
 
@@ -695,63 +769,83 @@ Changing the stadium with (presumably) people in it would cause great harm. Mayb
 >w
 Filed Field
 
+##nudge for fidle
 >edlif
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
+##nudge for pryerbar
 >pryerbar
 No, it's both pryer bars
 
+##nudge for pryer
 >pryer
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for bars
 >bars
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for drupelet
 >drupelet
 No, it's the whole pryer bars.
 
+##nudge for drupelets
 >drupelets
 No, it's the whole pryer bars
 
+##nudge for briar
 >brira
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for briars
 >barris
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for screen
 >crenes
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for buried
 >budrie
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for raft
 >rfat
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for barber
 >barbre
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for sickle
 >sickel
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for barriers
 >barriesr
 The barriers' westness is important.
 
+##nudge for foliage
 >foliaeg
 Alas, the foliage also blocks your magical powers and not just your explorations, but there's plenty else to work at here.
 
+##nudge for rapt
 >rapt
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for figure
 >fugire
 Nothing happens. Perhaps it's the whole item that's important.
 
+##nudge for utensil
 >utsenil
 The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. IT seems worth changing more than the spoon.
 
+##nudge for spono
 >spono
 The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. IT seems worth changing more than the spoon.
 
+##nudge for jagged
 >jaggde
 The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. IT seems worth changing more than the spoon.
 
@@ -759,39 +853,48 @@ The rapt figure almost seems to glare at you--or maybe its smile seems a little 
 >e
 Clangier Clearing
 
+##nudge for clearing
 >clegnira
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
+##nudge for len
 >eln
 Len Craig doesn't change, and even if you messed with his full name, he wouldn't.
 
+##nudge for craig
 >criga
 Len Craig doesn't change, and even if you messed with his full name, he wouldn't.
 
+##nudge for overpriced
 >overpriced
 That's over-thinking it. It's just a peach.
 
 >abstract melon to ll
 
+##nudge for lemon
 >elmon
 You can't focus on just one of the lemons, but you don't need to.
 
 >abstract melon to clearing
 
 >abstract lemons to ll
+##nudge for lemon
 >elmon
 Hm, there must be a better melon than that, but how to ask Len, now.
 
 >abstract lemons to clearing
 
+##nudge for auction
 >uctiona
 You're probably over-thinking it--just pay attention to what it says, instead.
 
+##nudge for banner
 >abnner
 You're probably over-thinking it--just pay attention to what it says, instead.
 
 >solemn
 >mo, len
+##nudge for among
 >among
 >papayas
 >ancienter
@@ -801,9 +904,12 @@ You're probably over-thinking it--just pay attention to what it says, instead.
 >s
 some sort of dollar
 
+##nudge for bluer
+##nudge for ruble
 >ubler
 That doesn't really describe the Tekno-Token
 
+##nudge for icon
 >icno
 Hmm. You could probably do something with just one coin, or you could do something with all of them.
 
@@ -811,15 +917,19 @@ Hmm. You could probably do something with just one coin, or you could do somethi
 >d
 Scape Space
 
+##nudge for space
 >sceap
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
+##nudge for banana
 >abnana
 The A shines for a split-second.
 
+##nudge for droll
 >dllor
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
 
+##nudge for dollar
 >dllora
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
 
@@ -830,50 +940,63 @@ The orange seems a bit closer for a bit.
 >oraneg
 Just return the fruit to Curtis. No need for another change.
 
+##nudge for plant
 >pantl
 You may want to listen to what the plant has to say, or what it makes you say.
 
+##nudge for red
 >red
 first-name basis
 
+##nudge for art
 >rat
 first-name basis
 
+##nudge for drol
 >drol
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
 
 >gs
 female
 
+##nudge for lola
 >allo
 Lola
 
+##nudge for lola
 >alol
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
 
+##nudge for tera
 >tera
 first-name basis
 
+##nudge for trader
 >drtear
 Dr. Tera is tarred real good. That's the point of tarring. But she might trade that storage box
 
 >give dollar
 
+##nudge for storage
 >strogea
 You might break what is in the storage.
 
+##nudge for great
 >grtea
 You might break what is in the storage. Then it would be neither great nor so great.
 
+##nudge for pugnacious
 >pugnaciosu
 You may want to listen to what the plant has to say, or what it makes you say.
 
+##nudge for designs
 >desigsn
 The design doesn't need changing. It's what the design's on.
 
 >icons
 >sonic
 
+##nudge for lots
 >ltso
 After all that work getting it to appear, you don't want to make the lost slot vanish.
 
@@ -881,12 +1004,15 @@ After all that work getting it to appear, you don't want to make the lost slot v
 
 >put icons in slot
 
+##nudge for popstar
 >popstra
 You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star.
 
+##nudge for passport
 >passpotr
 The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the
 
+##nudge for review
 >reviwe
 That's not the way to learn from the viewer--it's probably not that complicated. You hope.
 
@@ -900,6 +1026,7 @@ That's not the way to learn from the searcher--it's probably not that complicate
 It hurt to be called a perp. But maybe you can figure a way to think of it right. That wasn't quite it.
 
 >research
+##nudge for review
 >review
 
 >n
