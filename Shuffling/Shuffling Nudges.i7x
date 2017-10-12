@@ -178,8 +178,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "naughts"	445467118	--	noughts	--	"[nau-zer-enuf]."
 "nought"	421357911	--	noughts	--	"There's more than one nought."
 "turnstile"	788443914	--	turnstile	--	"You don't need to do anything with the turnstile except get through it."
-"sandwich"	397613884	--	sandwich	--	"It would be easier to just pick it apart."
-"canister"	547607653	--	grinder	--	"The canister is too solid[if canister is broken], despite being broken[end if]."
+"sandwich"	397613884	--	sandwich	--	"It would be easier to just pick it apart physically, without anything fancy."
+"canister"	547607653	--	grinder	--	"The canister [if canister is not broken]is too solid[else]has suffered enough abuse. No need to break it further[end if]."
 "grinder"	465982860	--	grinder	--	"The grinder is too solid."
 "grin"	231823859	--	grinder	--	"The ring does not bend."
 "hams"	199819236	--	canister	--	"You think 'Hm, as...' but don't know what to do. Maybe that is just writing, and [if canister is broken]in any case, you broke the canister, anyway[else]you just put stuff in the canister[end if]."
@@ -218,8 +218,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "enclosure"	758395303	Enclosure	--	--	"[loc-rej]."
 "slough"	399428190	slough	--	--	"[loc-rej]."
 "frost"	385575260	frost	--	--	"[loc-rej]."
-"forest"	513381369	sf	--	--	"[loc-rej]."
-"forets"	513381369	rf	--	--	"[loc-rej]."
+"forest"	513381369	--	--	sf-or-rf rule	"[loc-rej]."
 "rest"	412513896	rf	--	--	"[loc-rej]."
 "fortes"	513381369	--	--	degen-true rule	"[reg-rej]."
 
@@ -724,6 +723,10 @@ section sortie nudges
 this is the no-d rule:
 	if player is in trodes or player is in fields or player is in s-e-d:
 		the rule succeeds;
+	the rule fails;
+
+this is the sf-or-rf rule:
+	if player is in sf or player is in rf, the rule succeeds;
 	the rule fails;
 
 this is the cent-spin rule:

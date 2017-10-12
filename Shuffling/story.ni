@@ -4341,7 +4341,6 @@ Notices Section is a room in Intro. "[one of]You're not sure what to do here, an
 
 understand "tmi/tmis" as broad board when player is in notices section.
 
-
 instead of taking gateman:
 	say "'Gateman, get a man, very clever. But thing is, you'll be working with things, not ideas or actions.'"
 

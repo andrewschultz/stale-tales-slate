@@ -117,6 +117,8 @@ understand "file" as a mistake ("It looks like you can just cut in line. No need
 
 understand "olefin" as a mistake ("Organic chemistry involves shuffling things around a lot, too, but ... the line of no life is not organic.") when player is in self-id fields.
 
+understand "lien" as a mistake ("If they owe something, that's their business. It's too late to change that now.") when player is in self-id fields.
+
 chapter stored er dots
 
 understand "grin" as a mistake ("You [if canister is broken]smirk at the grinder you trashed[else]smile confidently. You'll figure how to use the grinder[end if].") when player is in s-e-d.

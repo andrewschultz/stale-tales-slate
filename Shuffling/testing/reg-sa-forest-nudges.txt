@@ -9,160 +9,258 @@
 * first-guider-test
 
 >ts
+
 >forest
 
 >sr ne
 >in
+
+#nudge for conifer
 >conifre
 No conifers appear. Maybe you can just use your senses, and it's easier than that.
+
+#nudge for conifers
 >conifesr
 No conifers appear. Maybe you can just use your senses, and it's easier than that.
+
+#nudge for forest
 >forets
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 
+#nudge for north
 >norht
 Your compass feels extra jumbled, but--well, you must be close.
 
 >n
+
+#dupnudge for forest
 >forets
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
+
+#nudge for rest
 >rets
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 
+#nudge for eat
 >eta
 Your compass feels extra jumbled, but--well, you must be close. Anyway, it doesn't smell like just one tea.
+
+##nudge for north
 >norht
 Your compass feels extra jumbled, but--well, you must be close.
->eats
-Your compass feels extra jumbled, but--well, you must be close.
->aroam
-No, that's not the essence of the thing.
+
+#nudge for east
 >eats
 Your compass feels extra jumbled, but--well, you must be close.
 
+#nudge for aroma
+>aroam
+No, that's not the essence of the thing.
+
+#nudge for leaves
 >leavse
 You have no time to play with leaves.
 
 >e
 Self-ID Fields
+
+#nudge for selfid
 >selfdi
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
+
+#nudge for fortes
 >forets
 You don't want to change a region drastically while you're in it.
 
 * other-guider-test
 
 >ts
+
 >forest
 >sr sw
 >in
 
+#nudge for rambling
 >ramblign
 No, that's not the essence of the thing.
+
+#nudge for south
 >souht
 Your compass feels extra jumbled, but--well, you must be close.
 >s
+
+#nudge for whiff
 >whffi
 No, that's not the essence of the thing.
+
+#nudge for west
 >wets
 Your compass feels extra jumbled, but--well, you must be close.
+
 >w
 Self-ID Fields
 
+#nudge for undead
 >undeda
 You can't do much to change the undead. You're not THAT powerful. Maybe specific undead.
+
+#nudge for undeads
 >undeasd
 You can't do much to change the undead. You're not THAT powerful. Maybe specific undead.
 
 >e
 Sorted Trodes
+
+#nudge for storde
 >storde
 You didn't need to do anything to store D in the strip, and you don't now--it'd be weird if store D fit in store F, anyway.
 
+#nudge for shell
 >shlle
 It doesn't rattle, but the dashes seem to.
+
+#nudge for bucket
 >buckte
 It doesn't rattle, but the ones seem to.
+
+#nudge for bubble
 >bubbel
 It doesn't rattle, but the noughts seem to.
+
+#nudge for elegy
 >eleyg
 The elegy doesn't need to be twisted any more.
+
+#nudge for tacks
 >tacsk
 No need to try to turn the stack into a heap. Ho ho ho.
+
+#nudge for tack
 >takc
 No need to try to turn the stack into a heap. Ho ho ho.
+
+#nudge for notes
 >notse
 The notes are just for reading.
+
+#nudge for note
+>noet
+The notes are just for reading.
+
+#nudge for stick
 >stikc
 Don't vandalize the art, man.
+
+#nudge for figure
 >figuer
 Don't vandalize the art, man.
+#nudge for figures
 >figurse
 Don't vandalize the art, man.
 
 #noughts/shotgun testing
 
->naughst
-The naughts, err, noughts seem zero-y enough to contain an o.
->naughst
-The naughts, err, noughts seem zero-y enough to contain an o.
+#nudge for zeros
 >zerso
 They're noughts, not zeros.
+
+#nudge for zeroes
 >zerose
 They're noughts, not zeroes.
+
+#nudge for naught
 >naugth
 The naughts, err, noughts seem zero-y enough to contain an o.
+
+#nudge for naughts
 >naughst
 The naughts, err, noughts seem zero-y enough to contain an o.
+
+#nudge for nought
 >nougth
 There's more than one nought.
 >shotgun
 by one point
+
+#nudge for muzzle
 >muzzel
 You don't want to mess the muzzle up. You can fire bullets through it, and that's good enough.
 
 >shades
 by one point
+
+#nudge for eon
+>noe
+They're ones, not a one.
+
 >nose
 by one point
 
 >w
 
+#nudge for turnstile
 >turnstiel
 You don't need to do anything with the turnstile except get through it.
 
 >lien
+If they owe something, that's their business. It's too late to change that now.
+
+#nudge for line
+>lein
 They're dead and not interfering with you.
+
+#nudge for life
 >lief
 They're dead and not interfering with you.
+
+#nudge for lineof
 >linefo
 They're dead and not interfering with you.
 
 >w
 Stored, er, Dots
 
+#dupnudge for storde
 >storde
 You didn't need to do anything to store D in the strip, and you don't now--it'd be weird if store D fit in store F, anyway.
 
+#nudge for sandwich
 >sandwihc
-It would be easier to just pick it apart.
+It would be easier to just pick it apart physically, without anything fancy.
+
+#nudge for canister
 >canistre
 The canister is too solid.
+
+#nudge for grinder
 >grindre
 The grinder is too solid.
+
+#nudge for grin
 >grni
 The ring does not bend.
+
+#nudge for hams
 >hasm
 You think "Hm, as..." but don't know what to do. Maybe that is just writing, and you just put stuff in the canister.
 
+#nudge for bleads
 >bleasd
 The blades, buried in the grinder, remain lifeless.
+
+#nudge for shelf
 >shefl
 The shelf is frozen that way. Ba dum bum.
+
+#nudge for dots
 >dost
 The dots are really just ice. And you don't need ice or water.
+
+#nudge for meat
 >meta
 You'll need to be more specific about the meat to poke at.
+
+#nudge for meats
 >meast
 You'll need to be more specific about the meat to poke at.
 
@@ -172,14 +270,23 @@ by one point
 >maps
 by one point
 
+#nudge for liver
 >livre
 The one liver seems inactive by itself.
+
+#nudge for chicken
 >chickne
 The one liver seems inactive by itself.
+
+#nudge for chickenliver
 >echickenlivr
 The one liver seems inactive by itself.
+
+#nudge for cowliver
 >cowlivre
 The one liver seems inactive by itself.
+
+#nudge for cow
 >cwo
 The one liver seems inactive by itself.
 
@@ -190,10 +297,16 @@ The one liver seems inactive by itself.
 >e
 >n
 Cruel Ones' Enclosure
+
+#nudge for cruel
 >crule
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
+
+#nudge for ones
 >onse
 Don't get that nose bent out of shape.
+
+#nudge for enclosure
 >enclosuer
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
 
@@ -206,24 +319,29 @@ Worry about the liches in front first.
 >peel liver
 >peel liver
 >put chicken in canister
+
+#dupnudge for liver
 >livre
 C'mon, you have it half right, don't futz with the remaining liver
 >put cow in canister
 
+#dupnudge for canister
 >canistre
-The canister is too solid, despite being broken.
+The canister has suffered enough abuse. No need to break it further.
 
 >sliver
 >e
 >n
 >hasbeen
 
+#nudge for cloth
 >cloht
 No, the material of the spread isn't important, here.
 
 >drapes
 by one point
 
+#dupnudge for cloth
 >cloht
 No, the material of the drapes isn't important, here.
 
@@ -231,11 +349,13 @@ No, the material of the drapes isn't important, here.
 >silver
 by one point
 
+#nudge for cylinder
 >cylindre
 It's the shape it should be. You don't need to make a key, or a charm.
 
 >put silver in shotgun
 
+#nudge for doorway
 >doorwya
 You can just go through. You don't want it to change any more, really.
 
@@ -247,40 +367,65 @@ You can just go through. You don't want it to change any more, really.
 
 >n
 
+#nudge for slough
 >slouhg
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
+
+#nudge for marsh
 >marhs
 The marsh and lake are symptoms of--whatever evil is beyond here.
+
+#nudge for lake
 >laek
 The marsh and lake are symptoms of--whatever evil is beyond here.
 
 >x maps
 >n
 >frost forts
+
+#nudge for frost
 >frots
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside. Your gadget would probably start acting up then, anyway.
+
+#nudge for snow
 >snwo
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
+
+#nudge for icecap
 >icecpa
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
+
+#nudge for bumps
 >bumsp
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
+
+#nudge for sleet
 >slete
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 
+#nudge for capital
 >capitla
 You need to deal with all the capitals. And they're specific letters.
+
+#nudge for capitals
 >capitasl
 They aren't just any capitals. They're specific letters.
 >wolves
+
+#nudge for werewolves
 >werewolvse
 They won't be changed with magic. Thankfully, you've got something more direct.
+
+#nudge for lupine
 >lupien
 They are the lupine lineup from your notes, but for your purpose, they're wolves.
 
+#nudge for iced
 >icde
 The scenery here's mostly frozen that way. Ha ha ha.
 !Except those vowels
+
+#nudge for ice
 >iec
 The scenery here's mostly frozen that way. Ha ha ha.
 !Except those vowels
