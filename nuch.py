@@ -93,6 +93,8 @@ def int_wo_space(i):
 def poke_nudge_files(gm):
     tn = re.sub(".*table of", "table of", gm)
     count = 0
+    count2 = 0
+    count3 = 0
     nudge_comment = False
     nudge_add = defaultdict(str)
     cmd_lines = defaultdict(str)
@@ -116,6 +118,8 @@ def poke_nudge_files(gm):
                 ll = re.sub("#( )?nudge (for|of) ", "", ll)
                 if ll in got_nudges[gm].keys():
                     if got_nudges[gm][ll] > 0:
+                        count2 = count2 + 1
+                        count3 = count3 + 1
                         print("Duplicate nudge comment line", ll, 'line', count, 'duplicates', got_nudges[gm][ll])
                     got_nudges[gm][ll] = count
                 else:
@@ -123,7 +127,6 @@ def poke_nudge_files(gm):
             else:
                 nudge_comment = False
     short = re.sub(".*[\\\/]", "", nudge_files[q])
-    count2 = 0
     for j in cmd_lines.keys():
         cmd_lines[j] = re.sub("^ *", "", cmd_lines[j])
     for j in sorted(got_nudges[gm].keys(), key=lambda x: (int_wo_space(cmd_lines[alf(x)]), x)):
@@ -131,13 +134,14 @@ def poke_nudge_files(gm):
             for x in cmd_lines[alf(j)].split(' '):
                 nudge_add[x] = nudge_add[x] + ' ' + j
             count2 = count2 + 1
+            count3 = count3 + len(cmd_lines[alf(j)].split(' '))
             if max_errs > 0 and count2 > max_errs:
                 continue
             c2 = ' '.join([str(int(a) - 1) for a in cmd_lines[alf(j)].split(' ')]) if cmd_lines[alf(j)] != '' else 'unavailable'
             print ("({:4d}) {:s} need #nudge for {:14s} suggestions = {:s}".format(count2, short, j, c2))
     global err_string
     if count2 > 0:
-        err_string = "%s\n%s/%s had %d total errors." % (err_string, tn, short_file, count2)
+        err_string = "%s\n%s/%s had %d total errors, %d comments." % (err_string, tn, short_file, count2, count3)
     for y in nudge_add.keys():
         nudge_add[y] = re.sub("^ ", "", nudge_add[y])
     if count2 == 0:

@@ -240,7 +240,6 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "greta"	351027450	the nick	--	--	"The grate remains impassive."
 "nick"	185839117	the nick	--	--	"Maybe there is a way out of the nick. Not of nick, but the nick. It's probably too much to think yourself in K.C."
 "kitchne"	454037543	kitchen	--	--	"[if moor is unvisited]Nothing happens. Well, you didn't really want to go back to the nick, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room[else]There's no room between the nick and kitchen. You already found a better way out, anyway[end if]."
-"kitcehn"	454037543	kitchen	--	--	"[loc-rej]."
 "okrapot"	473725930	kitchen	--	--	"Aigh! It's a catchy tune, but really, it won't help you figure anything out."
 "fridge"	338266445	kitchen	--	--	"The fridge is just a fridge."
 "obligatory"	611511337	kitchen	--	--	"The fridge will always be what it is. Generally what is or was inside is more interesting, anyway."
