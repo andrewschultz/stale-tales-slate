@@ -4573,7 +4573,7 @@ to say reject:
 				continue the action;
 	if regtab of mrlp is hash-found:
 		continue the action;
-	if table of general aro nudges is hash-found:
+	if table of general nudges is hash-found:
 		continue the action;
 	if player has settler and settler-try is false:
 		if the player's command includes "settler":
@@ -6932,7 +6932,7 @@ Topside Deposit	"The badlands are too dangerous any way but[if scope copse is vi
 Outer Route	"The sway-ways are not reliable. You probably just want to go back east."
 Coastlines	"You can't get across Leak Lake without some sort of craft[if bot boat is visible], like the boat, which [kid-first] will let you enter[end if]."
 Nude Dune	"Unorg'd ground is every way except back east."
-Lost Lots	"Best to back out of this outback to the north. The gadflies['] gasfield would wreak havoc with your sense of direction or, worse, you."
+Lost Lots	"Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?"
 Obscurest Subsector	"If you could go any way other than back west, the subsector wouldn't be obscurest, now."
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
 Alcoves	"You sway to the side, not ready to face the menace to the west." [otters]
@@ -12883,10 +12883,6 @@ the adsorbing signboard is reflexive scenery in Same Mesa. "[b][ast]Pat's[ast][r
 understand "sign/board" and "adsorbing sign/board" as signboard.
 
 understand "pat's/pats" as the grubby restaurant.
-
-
-
-
 
 a-text of grubby restaurant is "RYRR". b-text of grubby restaurant is "PGRR". parse-text of grubby restaurant is "p[sp]a[sp]x[sp]x". it is parse-spoilable.
 
@@ -19580,7 +19576,7 @@ understand "yaws" and "sway-ways" as sway ways.
 
 instead of doing something with sway ways:
 	if current action is entering:
-		try going west instead;
+		try going west instead; [west is arbitrary here. Any direction gives the same message.]
 	if action is procedural, continue the action;
 	say "You have no idea how to fix the sway-ways to make them less unsafe, but you don't need to."
 
@@ -20524,10 +20520,6 @@ chapter Lost Lots
 Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is just a barren area, without even a slot. A gadflies['] gasfield surrounds you every way except back north."
 
 the gadflies' gasfield is bounding scenery in Lost Lots. "You can't 100% see the gasfield, since it's hazy. But it's there, and it blocks you."
-
-check going nowhere in Lost Lots:
-	say "Any exit through the gasfield--especially without die flags (and there are none in the game) to guard you--would be false, dig?" instead;
-
 
 check opening a hintpastry:
 	say "You can just try to [if player has toaster]TOAST or [end if]EAT that if you want." instead;

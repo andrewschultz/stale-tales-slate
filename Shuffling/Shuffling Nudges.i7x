@@ -21,7 +21,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "yrd"	228712144	Dry Yard	--	--	"[loc-rej]."
 "improbable"	570855914	Dry Yard	--	--	"You do some calculations--then you think, if things are this hard early on, MAN. It's got to be simpler."
 "breeze"	610130653	--	odor	--	"[nope-odor]."
-"smell"	395782906	--	odor	--	"[nope-odor]."
+"smlel"	395782906	--	odor	--	"[nope-odor]."
 "musical"	385455014	--	yard-door	--	"[com-chor]."
 "chord"	236993353	--	yard-door	--	"[com-chor]."
 "horn"	265866187	--	bugle	--	"No, the bugle is a bugle, not just a horn. It's been changed enough."
@@ -511,7 +511,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "spire"	435862683	Means Manse	--	--	"[ennui]."
 "toaster"	592164309	Means Manse	--	--	"[ennui]."
 
-table of general sa nudges
+table of general nudges
 this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "aprep"	378249648	--	prep paper	--	"[no-2]."
 "papesr"	474523614	--	prep paper	--	"[no-2]."
@@ -543,9 +543,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "point"	372828908	--	--	know-point rule	"There's no secret cheat between NO TIP and OPT IN."
 "parse"	393057655	--	--	can-i-parse rule	"There's no inbetween for the PARSE and SPARE commands for the gadget."
 "angle"	285314976	--	phail phial	--	"There's nothing between ANGLE and GLEAN that you can do with the blue lube."
-"terry"	523922985	--	--	past-strip rule	"You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no."
 "yorpwald"	548467110	--	--	past-intro rule	"[if player is in notices section][no-warpy][else]You'll need to change Yorpwald one anagram at a time[end if]."
-"retry"	523922985	--	--	can-retry rule	"You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no."
+"retry"	523922985	--	--	past-strip rule	"Being able to RETRY is good enough. You don't want to do anything too weird. It could backfire."
 "notepad"	478859078	--	--	degen-true rule	"[what-for]."
 "dope"	304653734	--	--	degen-true rule	"[what-for]."
 "tan"	174205344	--	--	degen-true rule	"[what-for]."
@@ -569,7 +568,7 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "lelh"	272716086	--	--	degen-true rule	"[cussy]!"
 "parc"	187983165	--	--	degen-true rule	"[cussy]!"
 "heck"	237027171	--	--	degen-true rule	"[cussy]!"
-"sllemell"	395782906	--	--	degen-true rule	"Your sense of smell doesn't change."
+"smell"	395782906	--	--	degen-true rule	"Your sense of smell doesn't change."
 "writing"	487861496	--	--	degen-true rule	"You don't need to do anything with writing besides EXAMINE or READ it for possible hints."
 "pockets"	554947392	--	--	degen-true rule	"[no-pock]."
 "pocket"	458673426	--	--	degen-true rule	"[no-pock]."

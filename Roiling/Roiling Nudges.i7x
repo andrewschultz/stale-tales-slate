@@ -109,7 +109,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "ivytower"	773044198	--	towers-x	--	"[towers-made]."
 "ivorytower"	932720578	--	towers-x	--	"[towers-made]."
 "tower"	498527280	--	towers-x	--	"[towers-made]."
-"darin"	222441064	--	otters-x	--	"Darin and Randi, the otters, don't move. You feel a nadir, a drain, even trying to manipulate them."
 "otter"	493702525	--	otters-x	--	"You can't divide and conquer, and the otters won't let you by unless you're, well, ready."
 "spot"	355202520	--	e-s	--	"You can't, er, stop the, er, spot. Best to go in."
 "engraving"	570489816	--	engravings	--	"The engraving is meant to be read. You can modify it with other actions."
@@ -1099,7 +1098,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "sparse"	489331621	sparse spares	--	--	"[dome-rm]."
 "intel"	398630320	intel inlet	--	--	"[dome-rm]."
 
-table of general aro nudges
+table of general nudges
 this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "elvira"	421289235	--	--	elvira-here rule	"Changing Elvira is impossible, [if player is in Inclosure]even now you've resisted her first attack[else]and you certainly don't want to summon her[end if]." [start GENERAL STUFF]
 "yorpwald"	548467110	--	--	degen-true rule	"You can't just unjumble Yorpwald with just one word. You need to deal with individual things."

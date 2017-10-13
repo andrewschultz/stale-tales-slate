@@ -267,6 +267,8 @@ understand "stent" as a mistake ("Medical procedures aren't necessary here. The 
 
 understand "smitten" as a mistake ("No matter how hard you try to convince yourself they[are-were] useful, you're not smitten with them. They're just ugly. But they could stick really good on the right surface.") when player has Velcro.
 
+understand "tang/tangs" as a mistake ("How the angst gnats taste doesn't matter.") when emitter is angsty.
+
 chapter cordoned red condo
 
 understand "stalker" as a mistake ("Hm. If the talkers became a stalker, the only person to stalk would be you. You can't change who they are inside, but maybe you can give them a fright.") when player is in condo and talkers are in condo.
