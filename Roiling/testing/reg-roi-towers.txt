@@ -159,6 +159,7 @@ up by one point
 >seed 5
 >gonear trefoil
 
+#nudge for trefoil
 >trefoli
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
@@ -368,7 +369,11 @@ Perhaps you can free the man covered in inapt paint from nationality and to indi
 >s
 The Reed's Ale man fidgets with his costume, unsure if he wants to take it off or put it on.
 >abstract reed's ale to lalaland
+
+#nudge for denim
 >mined
+You scrape at the denim fragments and wonder if there is any magic in dem. Well, not the way you thought it, apparently.
+
 >sewed
 
 #sunbelt enemies, oops, enemy
@@ -414,54 +419,83 @@ Boy! Lois sure could use some down-home kindness.
 >gonear trefoil
 >purloin settler
 
+#nudge for bland
 >bladn
 The badlands can't be changed on their own. They must be trekked through.
+
+#nudge for asd
 >sda
 The badlands can't be changed on their own. They must be trekked through.
+
+#nudge for badlands
 >badlansd
 The badlands can't be changed on their own. They must be trekked through.
 
->curst
+#nudge for curst
+>curts
 It's not just that it's curst, it's a PALACE, too.
 
->palace
+#nudge for palace
+>palaec
 It's not just that it's a palace, it's CURST, too.
 
->castle
+#nudge for castle
+>castel
 Not just any castle. Castle Apcur.
 
->apcur
+#nudge for apcur
+>apcru
 Not, like, swamp Apcur or hut Apcur. Castle Apcur.
 
+#nudge for lake
 >leka
 You can't see Leak Lake from here, and you couldn't do anything with it, anyway.
 
+#nudge for warrior
 >warriro
 One at a time. Each has his own weakness
+
+#nudge for warriors
 >warriosr
 One at a time. Each has his own weakness
 
 >wined
 by one point
+
+#dupnudge for warrior
 >warriro
 You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time
+
 >bleak
 by one point
+
+#dupnudge for warrior
 >warriro
 You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time
 >tenser
+
+#dupnudge for warrior
 >warriro
 You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time
+
 >cricked
+
+#dupnudge for warrior
 >warriro
 You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time
 >snared
+
+#dupnudge for warrior
 >warriro
 You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time
 >bleak
+
+#dupnudge for warrior
 >warriro
 You've already dealt with one individual warrior--it can't be bad to tackle the others one at a time
 >gone
+
+#dupnudge for warrior
 >warriro
 There's only one warrior left, and his name is Rodney.
 >rodney
@@ -471,75 +505,104 @@ by one point
 
 Topside Deposit
 
+#nudge for deposit
 >deposti
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
+#nudge for flowerpot
 >flowerpto
 The flowerpot is just fine--you haven't found anything to put in it yet.
+
+#nudge for flower
 >flowre
 The flowerpot is just fine--you haven't found anything to put in it yet.
+#nudge for pot
 >pto
 The flowerpot is just fine--you haven't found anything to put in it yet.
+
+#nudge for proof
 >profo
 The flowerpot is just fine--you haven't found anything to put in it yet.
+
+#nudge for welt
 >wetl
 The flowerpot is just fine--you haven't found anything to put in it yet.
+
+#nudge for oldhat
 >oldhta
 You don't have time to think about, or change, Old Hat Daltho. You haven't yet found his friend he sent the gift to, anyway.
 
+#nudge for rya
 >ary
 You can't do much with either part of Ray's name. Plus he has that keycar.
 
+#nudge for eck
 >cke
 You can't do much with either part of Ray's name. Plus he has that keycar.
 
 >creaky
 by one point
 
+#nudge for toaster
 >toastre
 It's a pretty sturdy toaster, a useful appliance as-is. Nothing you do or think seems to change it.
 
 >get tarts
 
+#nudge for start
 >statr
 The pastry is for eating, not for changing.
 
+#nudge for tart
 >tatr
 Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
 
 >n
 Scope Copse
 
+#nudge for copse
 >spoce
 The copse and the scope are both fine as-is, though maybe you can do something about the yurts.
 
+#nudge for spec
 >spce
 The copse and the scope are both fine as-is, though maybe you can do something about the yurts.
 
 >rutys
 The yurts sway slightly. They may not be guarding much, but maybe you could do for them.
 
+#nudge for yurt
 >ruty
 There's more than one yurt there.
 
 >rusty
 The yurts grow tarnished and crumble. Behind them, you see and take some "nutrition" as cheap as the yurts that held it: Owers'-Bin Brownies! The snack of choice for people who prefer quantity over quality!
 
+#dupnudge for spec
 >spec
 The copse and the scope are both fine as-is.
 
+#nudge for pastry
 >patrys
 You need to be specific about which pastry--or you would, if any could be changed. All you can do with a pastry is eat it, once it's warmed.
 
+#nudge for owers
 >owers
 The pastry is for eating, not for changing. It might be more edible if you heated it up, though.
+
+#nudge for bin
 >bin
 The pastry is for eating, not for changing. It might be more edible if you heated it up, though.
+
+#nudge for brownies
 >brownies
 The pastry is for eating, not for changing. It might be more edible if you heated it up, though.
+
+#nudge for brownie
 >brownie
 Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
 
+#nudge for butler
 >butlre
 You need to deal with all the butlers. Not just one.
 
@@ -549,6 +612,8 @@ Your score has just gone up by one point.
 >w
 The diners smack their lips, and you think you hear the zhk of silverware.
 Campiest Campsite
+
+#nudge for campiest
 >campsiet
 Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
 
@@ -559,30 +624,38 @@ Yes, it's fun to mess with leaves, but distracting.
 >deda
 Yes, it's fun to mess with leaves, but distracting.
 
+#nudge for repair
 >rapire
 The machine is complicated enough. You probably just need to figure what to put in it.
+
+#nudge for machine
 >machien
 The machine is complicated enough. You probably just need to figure what to put in it.
+
+#nudge for shiny
 >shiyn
 The machine is complicated enough. You probably just need to figure what to put in it.
 
->camp
+#nudge for camp
+>capm
 Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
 
->site
-Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
-
->campsiet
+#nudge for site
+>siet
 Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
 
 >e
+#nudge for hulk
 >hukl
 You make some helpless-sounding noises, trying to form a sensible word. The hulk looks slightly annoyed, but completely--and rightfully--unworried. As Daltho said, four letters would be too simple.
+
+#nudge for musclyhulk
 >musclyhukl
 You wrack your brain but quickly get the sense you're over-thinking how to ju-jitsu the hulk's strength.
 
 >clumsy
 
+#nudge for diner
 >dinre
 There's more than one diner blocking you.
 
@@ -591,23 +664,29 @@ There's more than one diner blocking you.
 >n
 Baldest Blasted Saltbed
 
+#nudge for baldest
 >baldets
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
+#nudge for cliff
 >clfif
 The cliff remains motionless. Perhaps it's useful, after all, to block off some ways to go. This area looks big enough.
 
+#nudge for pirate
 >piraet
 Changing just one pirate would not, you sense, do much. It might even ostracize him among his peers. Perhaps there's a way to deal with the lot of them. By adding an s.
 
+#nudge for old
 >old
 No, all the old ice.
 
+#nudge for ice
 >ice
 No, all the old ice.
 
 >coiled
 
+#nudge for prune
 >pruen
 It's officially an iPrune, not a prune.
 
@@ -619,18 +698,24 @@ by one point
 >n
 Anemic Cinema
 
+#nudge for cinema
 >cineam
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
+#nudge for theater
 >thearet
 You don't need to go looking for screens to stare at right now. You have a world to save.
 
+#nudge for wait
 >wati
 The wait-seer shrugs patiently, unfazed you did not understand his full being. It is probably your inconvenience and not his.
+
+#nudge for seer
 >sere
 The wait-seer shrugs patiently, unfazed you did not understand his full being. It is probably your inconvenience and not his.
 >weariest
 
+#nudge for ingrate
 >ingraet
 There's more than one ingrate blocking you.
 
@@ -645,12 +730,19 @@ Changing the direction or the composition of the trail won't do anything.
 >trali
 Changing the direction or the composition of the trail won't do anything.
 
+#nudge for roeut
 >outer
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+
+#nudge for solve
 >solev
 The pastry is for eating, not for changing. It might be more edible if you heated it up, though.
+
+#nudge for loaves
 >loavse
 The pastry is for eating, not for changing. It might be more edible if you heated it up, though.
+
+#nudge for loaf
 >lofa
 Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
 >ditr
@@ -660,12 +752,17 @@ Changing the direction or the composition of the trail won't do anything.
 
 >e
 
+#nudge for rampant
 >rampatn
 No, just an admirer, really.
 
+#nudge for womantrap
 >womantrpa
 That's not something
+
 >gs
+
+#dupnudge for womantrap
 >womantrpa
 No, just an admirer, really.
 >gs
@@ -679,18 +776,27 @@ by one point
 >n
 
 Shaven Havens
+#nudge for shaven
 >shavne
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+
+#nudge for haven
 >havne
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
+#nudge for idtag
 >idtga
 ID tag: dig at it? Gad.
+
+#nudge for duck
 >dukc
 It's not just any duck. It's a LONE duck.
 
+#nudge for unlocked
 >unlockde
 The lone duck looks around for something to do but can't find anything. Well, not here. And not like that.
+
+#nudge for lone
 >loen
 It's not just any lone animal. It's a lone DUCK.
 
@@ -698,21 +804,31 @@ It's not just any lone animal. It's a lone DUCK.
 >e
 Salted Deltas
 
+#nudge for salted
 >saltde
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+
+#nudge for delta
 >delat
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
+#nudge for shoals
 >shoasl
 That might cause some bizarre erosion and risk dumping YOU in Leak Lake.
+
+#nudge for shoal
 >shola
 That might cause some bizarre erosion and risk dumping YOU in Leak Lake.
 
+#nudge for atheist
 >atheits
 Changing only one atheist would only help you so long. The rest would restore their companion's (lack of) faith shortly.
 
+#nudge for liam
 >lima
 His full name, Liam Garn.
+
+#nudge for garn
 >ganr
 His full name, Liam Garn.
 
@@ -720,40 +836,59 @@ His full name, Liam Garn.
 >s
 
 Savager Ravages
+
+#nudge for ravages
 >ravagse
 This is a weird place, being at the crossroads, but better to get rid of the weeds.
 
+#nudge for weed
 >wede
 Gumming up one weed wouldn't get the others.
 
 >sewed
 
+#dupnudge for ravages
 >ravagse
 This is a weird place, being at the crossroads, but better to tackle a guardian.
 
 >denmi
 The denim bends and warps, but you hear no tearing noise.
+
 >mined
 
+#nudge for eclair
 >eclair
 Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
 
+#nudge for scalier
 >eclairs
 The pastry is for eating, not for changing. It might be more edible if you heated it up, though.
 
+#nudge for retape
 >retaep
 The raves saver has limited functionality, alas.
+
+#nudge for buttosn
 >buttosn
 The raves saver's minimal capabilities are enough...just...
+
+#nudge for buttno
 >buttno
 The raves saver's minimal capabilities are enough...just...
+
+#nudge for save
 >saev
 The saver is hopelessly no-frills. It'll never be anything better. But maybe you could revisit its brand name to make it look nicer. Not that looks matter.
 
+#nudge for saver
 >savre
 The saver is hopelessly no-frills. It'll never be anything better. But maybe you could revisit its brand name to make it look nicer. Not that looks matter.
+
+#nudge for recorder
 >recordre
 The saver is hopelessly no-frills. It'll never be anything better. But maybe you could revisit its brand name to make it look nicer. Not that looks matter.
+
+#nudge for tape
 >taep
 The saver is hopelessly no-frills. It'll never be anything better. But maybe you could revisit its brand name to make it look nicer. Not that looks matter.
 
@@ -764,12 +899,19 @@ by one point
 >playre
 The raves saver is as glitzed-up as it'll get.
 
+#nudge for reeds
 >reesd
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+
+#nudge for rede
 >rede
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+
+#nudge for ale
 >ael
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+
+#nudge for reedale
 >reedael
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 
@@ -784,37 +926,50 @@ by one point
 You concentrate, and suddenly the man figures how to unzip himself. He runs off, looking a little more dignified.
 by one point
 
+#nudge for dagger
 >daggre
 You feel no energy from the dagger. Perhaps it needs to be repaired mechanically.
 
+#nudge for tapin
 >tapni
 It won't be such a tap-in to nip at, sadly. Daltho's advice comes back: nobody will be easier than Rodney.
 
-
 >himself
 
+#nudge for ravage
 >ravaeg
 This is a weird place, being at the crossroads, but better to mess around elsewhere.
 
 >s
 Unblest Sunbelt
 
+#nudge for casn
 >casn
 Concentrate on the Nerd-Aid. In the dandier arid den.
+
+#nudge for nerd
 >nedr
 Concentrate on the Nerd-Aid. In the dandier arid den.
+
+#nudge for aid
 >adi
 Concentrate on the Nerd-Aid. In the dandier arid den.
+
+#nudge for wears
 >weasr
 You suppress a swear as the sales pitch wears on you.
+
+#nudge for bottles
 >bottlse
 They're not just bottles! They're bottles of NERD-AID!
 
 >drained
 
+#nudge for unblest
 >unblets
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
+#nudge for neuralpulses
 >neuralpulsse
 Man, biochemistry's way complex. Complex isomers and such are worse than anagrams! You may be more successful breaking the neural pulses down into components.
 
@@ -825,17 +980,27 @@ by one point
 
 Danger Garden
 
+#nudge for gander
 >gandre
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
+#nudge for organized
 >organizde
 Nothing seems to happen. Then you remember organized can be spelled with an s and not a z.
+
+#nudge for ego
 >eog
 Until you see the ego-drains themselves as organised, you probably won't see how to get past them.
+
+#nudge for drains
 >draisn
 Until you see the ego-drains themselves as organised, you probably won't see how to get past them. Plus, if they were boring old drains, you could just step around them.
+
+#nudge for egodrain
 >egodrani
 Until you see the ego-drains themselves as organised, you probably won't see how to get past them.
+
+#nudge for drain
 >drani
 Until you see the ego-drains themselves as organised, you probably won't see how to get past them. Plus, if it was a boring old drain, you could just step around.
 
@@ -848,9 +1013,11 @@ That's not something you can say, do or see here. For a general list of verbs, t
 >broken
 by one point
 
+#nudge for geese
 >geees
 The geese are fine as they are. They're just there for scenery, and stuff.
 
+#nudge for native
 >natiev
 You'll need to deal with more than one native to make your way south.
 
@@ -862,18 +1029,24 @@ Your score has just gone up by one point.
 
 >s
 Lost Lots
+
+#nudge for lot
 >tol
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
+#nudge for lost
 >tols
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
+#nudge for sled
 >sled
 Work on the whole sled rut.
 
+#nudge for rut
 >rut
 Work on the whole sled rut.
 
+##nudge for strudel
 >rustled
 by one point
 
@@ -895,25 +1068,39 @@ The shrine is kind of sacred, and regardless of what you think of the Hostile-Is
 >hastiest
 by one point
 
+#nudge for actionless
 >actionless
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+
+#nudge for coastline
 >coastlien
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 >dirk stma
 The kid looks at you curiously. You probably don't need to change his name or intelligence.
+
+#nudge for smart
 >smatr
 Dirk looks at you curiously. You probably don't need to change his name or intelligence.
+
+#nudge for kid
 >kdi
 Dirk looks at you curiously. You probably don't need to change his name or intelligence.
 
+#nudge for dirk
 >dikr
 Dirk looks at you curiously. You probably don't need to change his name or intelligence.
+
+#nudge for stam
 >stma
 Dirk looks at you curiously. You probably don't need to change his name or intelligence.
 
 >gs
+
+#nudge for kim
 >kmi
 Kim looks at you curiously. You probably don't need to change her name or intelligence.
+
+#nudge for darst
 >darts
 Kim looks at you curiously. You probably don't need to change her name or intelligence.
 >gs
@@ -926,32 +1113,54 @@ Obscurest Subsector
 >fissuer
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control, and you wonder who or what could tinker with it
 
+#nudge for obscurest
 >obscurets
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
+#nudge for gol
 >glo
 The gaol is too sturdy to defeated by a three-word combination. Or a four-word one.
+
+#nudge for gaol
 >galo
 The gaol is too much. It's built to resist you, and unlike the curst palace far away, it was never built to be something nicer.
+
+#nudge for loggaol
 >loggalo
 Nah, you're pretty sure you're overthinking things now. You may want to open the prison.
+
+#nudge for jail
 >jali
 It's not just any jail--but prison ropins.
+
+#nudge for ropin
 >ropni
 The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open.
+
+#nudge for ropins
 >ropisn
 The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open.
+
+#nudge for locked
 >lockde
 Nothing needs to be locked here, certainly not the gaol which already is.
+
+#nudge for yow
 >ywo
 He's a doctor! Have some respect when you try to scramble him up.
+
+#nudge for doctor
 >doctro
 That is too formal. Plus, Dr. Yow worked hard for a Ph.D., and changing that would be kind of mean.
+
+#nudge for wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--but he can't break out of his shell.
 
 >wordy
 >push retape
+
+#dupnudge for wordy
 >woryd
 Dr. Yow seems to ponder something for a second but then shakes his head--maybe there's one more way for him to be, to talk.
 
@@ -962,28 +1171,36 @@ Dr. Yow seems to ponder something for a second but then shakes his head--maybe t
 >fissuer
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control, but the duck seems to be poking at it
 
+##nudge for ropin
 >ropni
 The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open.
+##nudge for ropins
 >ropisn
 The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open.
 
+##nudge for unlocked
 >unlocked
 by one point
 
 >fissuer
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
+##nudge for gol
 >glo
 You opened the gaol, and there's not much else to do with it
 
+##nudge for locked
 >lockde
 Nothing needs to be locked here, certainly not the gaol which you unlocked.
 
+##nudge for ropin
 >ropni
 No need to mess with the ropins any more
+##nudge for ropins
 >ropisn
 No need to mess with the ropins any more
 
+##nudge for duck
 >dukc
 It's not just any duck. But it's served its purpose.
 
@@ -997,6 +1214,7 @@ It's not just any duck. But it's served its purpose.
 >s
 >e
 
+#nudge for tentative
 >tentatiev
 Dirk seems a little more focused, but he could maybe do even better.
 
@@ -1006,6 +1224,7 @@ by one point
 >rowdy
 by one point
 
+#dupnudge for tentative
 >attentive
 not something you
 
@@ -1016,34 +1235,48 @@ by one point
 
 >gt coastlines
 
+#nudge for gizmo
 >gizom
 It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better.
+
+#nudge for zomg
 >zogm
 It's so technically detailed, you worry you might break it by thinking at it wrong. So you don't. A more science-ly type might be able to deal with it better.
 
 >give gizmo to kid
 
+#nudge for turbo
 >turob
 You need to deal with both turbos.
+
+#nudge for bot
 >bto
 Hmm. It might be better to fix parts of the boat--the turbos and blaster.
+
+#nudge for baot
 >bota
 Hmm. It might be better to fix parts of the boat--the turbos and blaster.
+
+#nudge for boatbot
 >boatbto
 Hmm. It might be better to fix parts of the boat--the turbos and blaster.
 
 >robust
+
+#dupnudge for baot
 >bota
 You fixed the turbos, so maybe you can tackle the blaster
 
 >undo
 >undo
 >stabler
+##nudge for baot
 >bota
 You fixed the blaster, so maybe you can tackle the turbos
 >blastre
 The blaster is working. Best not tinker.
 >robust
+##nudge for baot
 >bota
 You fixed what you can of the boat
 >undo
@@ -1060,23 +1293,39 @@ WRONG
 
 Rawest Waters
 
+#nudge for northern
 >northenr
 The northern shore does not waver. Maybe try the eastern shore.
+
+#nudge for shore
 >shoer
 You need to focus on one specific shore.
+
+#nudge for shores
 >shorse
 You need to focus on one shore.
+
+#nudge for north
 >norht
 Hmm. Concentrate on a shore--northern or eastern--not a direction.
+
+#nudge for east
 >eats
 Hmm. Concentrate on a shore--northern or eastern--not a direction.
+
+#nudge for southwest
 >southwets
 This game doesn't require you to mess with diagonal directions, so maybe you should consider the other shores.
 .
+#nudge for waster
 >wastre
 Ew. Rats. You do feel like a waster, doing something with the waters. Perhaps the northern--or eastern--shore can work better.
+
+#nudge for spray
 >sprya
 The spray will still drown you if you don't figure a way to move somewhere.
+
+#nudge for water
 >watre
 The water is too elemental and generic to change. Plus the badlands are dry enough. How to get closer to a shore?
 
@@ -1084,58 +1333,81 @@ The water is too elemental and generic to change. Plus the badlands are dry enou
 
 Mislit Limits
 
+#nudge for mislit
 >mislti
 It's not this location you need to change, but Castle Apcur, the Curst Palace right by you.
 
+#nudge for occurs
 >occusr
 You realize you can't change the crocus to something, but you can change its condition--it's dying.
 
+#nudge for pester
 >pestre
 The serpent doesn't just pester, it's pester'n.
 
+#nudge for present
 >present
 
+#dupnudge for badlands
 >badlands
 You're beyond the badlands now.
 
+#dupnudge for flowerpot
 >flowerpto
 The flowerpot itself is just fine--maybe something around here could go in it.
 
 >dingy
 
+#nudge for occurs
 >occusr
 The crocus is OK as-is. In fact, it could make a nice gift for someone who could appreciate it.
 
+#nudge for flowerpot
 >flowerpto
 The flowerpot itself is just fine--and so is the crocus in it.
 
 >w
 Lone Sod Solo Den
+
+#nudge for noodles
 >noodlse
 It's not this location you need to change, but Castle Apcur, the Curst Palace nearby.
+
+#nudge for solo
 >sool
 You should never need to riff on part of a location name
+
+#nudge for odl
 >odl
 You should never need to riff on part of a location name
+
+#nudge for one
 >oen
 You should never need to riff on part of a location name
+
+#nudge for dne
 >dne
 You should never need to riff on part of a location name
+
+#nudge for ones
 >onse
 You should never need to riff on part of a location name
 
+#dupnudge for oldhat
 >oldhta
 You don't have time to think about, or change, Old Hat Daltho. His friend is still unreceptive, though.
 
 >greyed
 by one point
 
+#dupnudge for oldhat
 >oldhta
 You don't have time to think about, or change, Old Hat Daltho. You've found and made his friend a bit happier, but maybe you can do even more.
 
 >give flowerpot to ed yerg
 by one point
 
+#dupnudge for oldhat
 >oldhta
 You don't have time to think about, or change, Old Hat Daltho. You got his present to his friend.
 
@@ -1151,40 +1423,67 @@ You don't have time to think about, or change, Old Hat Daltho. You got his prese
 >purloin talc spa cure
 >abstract accurst leap to limits
 
+#nudge for accurst
 >accurts
 Nah, that's just garbage. It's the curst palace you need to focus on.
+
+#nudge for leap
 >lepa
 Nah, that's just garbage. It's the curst palace you need to focus on.
+
+#nudge for clear
 >clera
 Nah, that's just garbage. It's the curst palace you need to focus on.
+
+#nudge for catsup
 >catspu
 Nah, that's just garbage. It's the curst palace you need to focus on.
+
+#nudge for pest
 >pets
 Nah, that's just garbage. It's the curst palace you need to focus on.
+
+#nudge for accrual
 >accrula
 Nah, that's just garbage. It's the curst palace you need to focus on.
+
+#nudge for cactus
 >cactsu
 Nah, that's just garbage. It's the curst palace you need to focus on.
+
+#nudge for pealr
 >pealr
 Nah, that's just garbage. It's the curst palace you need to focus on.
+
+#nudge for capsule
 >capsuel
 Nah, that's just garbage. It's the curst palace you need to focus on.
+
+#nudge for cart
 >catr
 Nah, that's just garbage. It's the curst palace you need to focus on.
+##nudge for accu
 >acuc
 Nah, that's just garbage. It's the curst palace you need to focus on.
+##nudge for plaster
 >plastre
 Nah, that's just garbage. It's the curst palace you need to focus on.
+##nudge for last
 >lats
 Nah, that's just garbage. It's the curst palace you need to focus on.
+##nudge for race
 >raec
 Nah, that's just garbage. It's the curst palace you need to focus on.
+##nudge for cup
 >cpu
 Nah, that's just garbage. It's the curst palace you need to focus on.
+##nudge for talc
 >tacl
 Nah, that's just garbage. It's the curst palace you need to focus on.
+##nudge for aps
 >sap
 Nah, that's just garbage. It's the curst palace you need to focus on.
+##nudge for cure
 >cuer
 Nah, that's just garbage. It's the curst palace you need to focus on.
 

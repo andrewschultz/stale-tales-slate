@@ -362,15 +362,19 @@ There are only six possibilities. Leo's not too bright, and he can figure it out
 
 >ole
 
+#nudge for leonard
 >lorenda
-You don't need to face double the strength.
+You don't need to face double the strength
+
+#nudge for darn
+>dran
+Use the settler. This is a, err, regional word.
 
 >darn
-##nudge for leonadr
-##nudge for leonard
-##nudge for leorand
+
+#dupnudge for leonard
 >lorenda
-They want to be together, but that's a bit much. Try fixing what they're complaining about, calming their fears.
+You need to concentrate on them being washups. Combining them would mean they couldn't have a friend
 
 #nudge for whasup
 >whasup
@@ -381,9 +385,6 @@ You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
 
 >whassup
 
-##nudge for leonadr
-##nudge for leonard
-##nudge for leorand
 >lorenda
 You don't need to combine them physically, but their physical strengths combined could be a help.
 
@@ -514,9 +515,7 @@ You pass through all ten reshufflings of Saps' Pass, then feel like a bit of a s
 >ytner
 No way you'll be able to meddle with the Entry from outside.
 
-##nudge for leonadr
-##nudge for leonard
-##nudge for leorand
+#dupnudge for leonard
 >leonadr
 You've probably faced the greatest physical threat you need. You need to take leave of them, now.
 
@@ -719,10 +718,6 @@ C'est pas sap. C'est du CLOCK SAP.
 
 >s
 
-#nudge for shack
->shcka
-You'll need to re-enter the shack to take care of things here.
-
 >n
 
 >caps lock
@@ -760,13 +755,16 @@ DEBUG INFO: Trying to flip futon.
 
 The fount turns into a futon, which is better off not wet. There's rest, eh? you think, looking at it, though you're not really tired yet.
 
+#nudge for boredyak
 >bekaydor
 The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing.
 !That seems like a
 
+#dupnudge for boredyak
 >keyboard
 The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing. That seems like a
 
+#dupnudge for boredyak
 >keyboard
 You need to find something less awful that could make a keyboard. That book would probably arrange the letters worse than QWERTY.
 
@@ -925,11 +923,11 @@ The code won't BUDGE.
 >cedo
 The code won't BUDGE.
 
-##nudge for debug
+#nudge for debug
 >ebdug
 Hmm. Compiled code is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That MUST be what's happening here.
 
-##nudge for debug
+#dupnudge for debug
 >debug
 The process of debugging is going to take a while. You will need some sort of energy. That bottle of cola just won't be enough for the task ahead.
 [You add the information to your pedanto-notepad under FLIPS.]
@@ -947,7 +945,6 @@ Now that the fizzy cola's in the mug, you will ration it as you need to.
 >dneglo
 It's built to be sturdy. You don't want to mess with it.
 
-##nudge for debug
 >debug
 
 >bsu
