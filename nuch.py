@@ -84,6 +84,8 @@ def pre_process(sts):
                 # print(l)
     if dupes == 0:
         print("WOO no conflicts for", gm + "!")
+    else:
+        print(dupes, 'conflicts for', gm)
 
 def int_wo_space(i):
     if re.search("[a-z]", i) or not re.search("[0-9]", i):
@@ -124,6 +126,8 @@ def poke_nudge_files(gm):
                     got_nudges[gm][ll] = count
                 else:
                     print("Unmatched #NUDGE FOR in", short_file, "line", count, ':', ll)
+                    count2 = count2 + 1
+                    count3 = count3 + 1
             else:
                 nudge_comment = False
     short = re.sub(".*[\\\/]", "", nudge_files[q])

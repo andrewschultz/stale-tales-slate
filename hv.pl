@@ -232,7 +232,7 @@ for my $this (@toHash) {
     if ($doLoc) { lookFor( $hash, "c:\\writing\\dict\\hv.txt" ); }
 
     if ( ($printIfThere) || ( $anyFound == 0 ) || $force ) {
-      print "Adding $hword to raw hash file.\n";
+      print "Adding $hword ($hash) to raw hash file.\n";
       print B "\"$hword\"\t$hash\t$tabString\t\"some text\"\n";
       $worthOpening = 1;
     }
