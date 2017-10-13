@@ -9,37 +9,57 @@
 * metros-random-nudge
 
 #let's test random things that it's tricky to do with a straight walkthrough
+#thanks for the lovely test commands, Inform!
 
 >gonear terminal
 >abstract arena dig to terminal
+
+#nudge for arena
 >arean
 The invite's for an ARENA DIG.
+
+#nudge for dig
 >dgi
 The invite's for an ARENA DIG.
 
 >rifle
 Shooting things up is not the answer
+
+#nudge for fleir
 >rifel
 The flier has helpful information it'd be better to act on than change.
 
 >abstract soggy love to terminal
+
+#nudge for soggy
 >sogyg
 It's just garbage.
+
+#nudge for noet
 >noet
 It's just garbage.
+
+#nudge for letter
 >lettre
 It's just garbage. The writing inside, too.
 
 >abstract can of beer to terminal
+
+#nudge for canofbeer
 >canofbere
 The beer is just garbage, not even organic like the drainage. But its name is interesting.
+
+#nudge for beer
 >bere
 It's just garbage.
 
 >purloin noise bag
 
+#nudge for noise
 >noies
 Even if you could do anything, that'd rip the noise bag open.
+
+#nudge for bag
 >bga
 Even if you could do anything, that'd rip the noise bag open.
 
@@ -49,42 +69,69 @@ Even if you could do anything, that'd rip the noise bag open.
 
 >gonear underside
 
+#nudge for undesired
 >undesirde
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
+#nudge for metros
 >mersto
 You don't want to change a region drastically while you're in it.
+
+#nudge for metro
 >merto
 You don't want to change a region drastically while you're in it.
 
+#nudge for metallic
 >metallci
 No way. That thing's sturdy. The people in there know their stuff.
 
+#nudge for drawign
 >drawign
 You can't change the drawing, and that won't make its warnings any less relevant.
+
+#nudge for optical
 >opticla
 Changing the beam is way out of your league.
+
+#nudge for beam
 >bema
 Changing the beam is way out of your league.
+
+#nudge for escalatro
 >escalatro
 No way. It's your way up from the metros. Once you fix things.
 
+#nudge for special
+>specila
+That's not the way to get to the special place. You need special ID
+
+#nudge for building
 >buildign
 You can't change the hotel,
+
 >gardenia
 by one point
+
+#nudge for theol
 >hotle
 You can't change the hotel,
+
+#nudge for sensor
 >sensro
 You don't have the skill to hack the sensor electronically.
+
+#nudge for door
 >doro
 It can't be that easy to change. Maybe some random door in the wilderness.
 
+#dupnudge for theol
 >theol
 You can't change the hotel, but you could have a look around.
 
 >w
 >e
+
+#dupnudge for theol
 >theol
 You can't change the hotel, but you could have another look around.
 
@@ -93,21 +140,25 @@ You can't change the hotel, but you could have another look around.
 #skipping the camp right now to get the tomato from the alley
 
 >w
-A Yell Alley
+Bile Libe
 
->placadr
-It's just junk. As itself, and for your quest. But maybe what's written on it can help.
-
->garbaeg
-Worry about repurposing garbage after you saved Yorpwald, maybe.
-
->ylle
-You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
->yllea
+#nudge for bile
+>ible
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
+#nudge for librayr
+>librayr
+You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+
+#nudge for motto
 >motot
 It's labeled A MOTTO. So you probably have to respect the creative license, such as it is, of whoever wrote it.
+
+#nudge for plaque
+>plaqeu
+It's more, it's A MOTTO.
+
+#nudge for potaot
 >potaot
 The author twisted words enough. Perhaps you could concentrate on the motto.
 
@@ -130,93 +181,149 @@ Ugh. Too messy. Mentally and physically.
 >w
 The Ol' Hotel
 
+#nudge for thelo
 >helot
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
+#nudge for thing
 >thign
 The night thing is twisted beyond redemption.
 
+#nudge for potato
 >potaot
 The night thing would probably still be big and terrifying even if it changed its form. You need to find a way to get rid of it.
 
+#nudge for lucre
 >lucer
 You're a wordplayer, not a doctor, sadly. But that ulcer was the night thing's own fault, anyway.
 
+#nudge for bottel
 >bottel
 It doesn't bend, but maybe it's a clue what the night thing likes to eat.
+
+#nudge for ketchup
 >ketchpu
 It doesn't bend, but maybe it's a clue what the night thing likes to eat.
+
+#nudge for catsup
 >catsup
 You think of how to make the ketchup slightly classier. It doesn't bend, but maybe it's a clue what the night thing likes to eat.
+
+#nudge for mattress
 >mattrses
 Nothing to change the mattress to, even if you could move the night thing off.
 
 >throw tomato at thing
 
+#nudge for bump
 >bupm
 Just search the bump instead.
 
+#dupnudge for mattress
 >mattrses
 Nothing to change the mattress to, but something might be inside it.
 >x mattress
+
+#dupnudge for mattress
 >mattrsse
 Nothing to change the mattress to, and you already looted it
 
 >x mattress
 
+#nudge for emitter
 >emittre
 Whatever icky stuff is/was in there might come out. Eww.
 
 >e
 
+#dupnudge for theol
 >theol
 You can't change the hotel, and you got rid of the night thing, anyway.
 
 >n
 Cramped Red Camp
 
+#nudge for camp
 >capm
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
+
+#nudge for library
+>library
+could use renovation
+
+#nudge for cramped
 >crampde
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
+#nudge for redtents
 >redtenst
 Not nice. It's the only home the deadbeats have.
+
+#nudge for driveway
 >drivewya
 You should probably just walk in and see what's there.
+
+#nudge for yadr
 >yadr
 You should probably just walk in and see what's there.
+
+#nudge for view
 >viwe
 You should probably just walk in and see what's there.
+
+#nudge for threads
 >threasd
 He hasn't let the MAN change his clothes, and he won't let you.
+
+#nudge for thread
 >threda
 He hasn't let the MAN change his clothes, and he won't let you.
+
+#nudge for harps
 >harsp
 The harps are kind of annoying, but they've got nothing on the beats.
 
+#nudge for lost
 >ltso
 It's not just that it's lost, it's CORN.
 !Perhaps you can
+
+#nudge for corn
 >conr
 It's not just that it's corn, it's LOST too.
 !Perhaps you can
 
+#nudge for tent
+>tetn
+As anti-personal property as the deadbeats are, that'd still annoy them.
+
+#nudge for tents
 >tenst
 As anti-personal property as the deadbeats are, that'd still annoy them.
+
+#nudge for deadbeat
 >deadbeta
 He may mumble about change, but he's amazingly resistant to change, himself.
+#nudge for dead
 >deda
 He may mumble about change, but he's amazingly resistant to change, himself.
+#nudge for beat
 >beta
 He may mumble about change, but he's amazingly resistant to change, himself.
 
+#nudge for buttosn
 >buttosn
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
+
+#nudge for yellow
 >yellwo
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
+
+#nudge for kernels
 >kernesl
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
+
+#nudge for kernel
 >kernle
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
 
@@ -229,26 +336,41 @@ The dead beat deadbeat might not beat you dead
 >n
 Cordoned Red Condo
 
+#nudge for cordoned
 >cordonde
 You won't need to do anything to the whole room unless you are trapped in a room.
+#nudge for condo
 >conod
 You won't need to do anything to the whole room unless you are trapped in a room.
 
+#nudge for rental
 >rentla
 One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers.
 
+#nudge for candelabra
 >candelabar
 Interior decorating is not your strength.
+
+#nudge for carpets
 >carpest
 Interior decorating is not your strength.
+
+#nudge for carpet
 >carpte
 Interior decorating is not your strength.
+
+#nudge for talkers
 >talkesr
 You can't change who they are. They probably can't, either. It's sad.
+
+#nudge for talker
 >talkre
 You can't change who they are. They probably can't, either. It's sad.
+
+#nudge for caek
 >caek
 It isn't just any cake. It's dry cake.
+#nudge for dry
 >dyr
 It isn't just any cake. It's dry cake.
 
@@ -256,76 +378,107 @@ It isn't just any cake. It's dry cake.
 >get dry cake
 >s
 
+##nudge for lost
 >ltso
 It's not just that it's lost, it's CORN. Perhaps you can ask the deadbeat about the lost corn for more help.
+##nudge for corn
 >conr
 It's not just that it's corn, it's LOST too. Perhaps you can ask the deadbeat about the lost corn for more help.
 
 >controls
 by one point
 
+#nudge for control
 >contrlo
 You've already changed the lost corn into the controls, and you don't need to do more.
 
 >keycard
 by one point
 
+#nudge for leavse
 >leavse
 It's the whole clover you need to change.
 
+#nudge for fuzzy
 >fuzyz
 The fuzziness seems to be part of the clover. It might be, even if you're able to change the clover.
 
 >velcro
 by one point
+
+#nudge for string
 >strign
 No need to mess with the string joining the velcro mittens.
 
+#nudge for glove
 >gloev
 The mittens are as comfortable as they're going to be.
+
+#nudge for gloves
 >glovse
 The mittens are as comfortable as they're going to be.
+
+#nudge for mitten
 >mittne
 The mittens are as comfortable as they're going to be.
+
+#nudge for mittens
 >mittesn
 The mittens are as comfortable as they're going to be.
 
 >e
 Elf Row's Flowers
+
+#nudge for elfrows
 >elfrosw
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
+#nudge for flower
 >elfrwo
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
+#nudge for heath
 >heaht
 Probably best not to do stuff to even one heath while the faeries have them
+
+#nudge for begonia
 >begonai
 Probably best not to do stuff to even one begonia while the faeries have them.
 
+#nudge for fairies
 >fairise
 They could CERTAINLY out-magic you back, and give a little extra for your misspelling, even if anagramming could have an effect on them.
+
+#nudge for fairy
 >faiyr
 The rest would mangle you back worse.
+
+#nudge for faery
 >faeyr
 The rest would mangle you back worse.
 
+#nudge for stems
 >stesm
 Deal with the whole flower, not just the stems.
 
+#nudge for trounce
 >trounec
 You don't need to do anything to the counter, and it's probably protected by a spell, anyway.
 
+#nudge for faeries
 >faerise
 They could CERTAINLY out-magic you back, even if anagramming could have an effect on them.
 
 >give gardenia to faeries
 >take heaths
+
+#dupnudge for heath
 >heaht
 They are multiple heaths--so you should try to change just one.
 
 >sheath
 
+#nudge for scratchings
 >scratchgins
 They're not important--the brocade probably is, though.
 
@@ -333,6 +486,8 @@ They're not important--the brocade probably is, though.
 
 >w
 >w
+
+#nudge for word
 >odrw
 You'd need to do something to all the words.
 
@@ -344,9 +499,13 @@ by one point
 >barcode
 >put barcode on keycard
 >give emitter to deadbeat
+
+#nudge for ganst
 >ganst
 You don't get rid of angst with just a word.
 >s
+
+#nudge for beats
 >ebtas
 The beats shift up for a second.
 
@@ -361,6 +520,11 @@ The door is open. So you just walk east instead.
 Anti-Cool Location
 
 >w
+
+#dupnudge for special
+>specila
+You don't need to perform any tricks, now you've gotten to the Anti-Cool Location
+
 >z
 >e
 Anti-Cool Location
@@ -370,76 +534,138 @@ Anti-Cool Location
 >e
 Anti-Cool Location
 
+#nudge for anticool
 >anticolo
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
+#dupnudge for beats
 >beats
 The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here.
 
+#nudge for tulip
 >uptil
 The nerds would gang up on you and take it back, if anything worked, which it won't.
+
+#nudge for nerd
 >nedr
 The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds.
+
+#nudge for nerds
 >nersd
 The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds.
+
+#nudge for dorks
 >dorsk
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
+
+#nudge for geeks
 >geesk
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
 
+#nudge for dork
 >dokr
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
+
+#nudge for geek
 >geke
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
+
+#nudge for asknerds
 >asknersd
 The nerds look at you, then remark they can't decipher THAT. But maybe if you rearranged things a bit...
+
+#nudge for asknerd
 >asknedr
 "You can ask us all!" one nerd blurts. "We can pool our collective knowledge in a data cloud and stuff or something!"
 
 >ask nerds about darkness
 
+#dupnudge for metallic
 >metallci
 No way. That thing's sturdy. Those nerds know their stuff.
 
 >s
 Elm Train Terminal
 
+#nudge for tramline
 >tramline
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
+#dupnudge for tulip
 >uptil
 It's handy as is. It gives light. You can't ask for much more.
 
+#nudge for lairs
 >laisr
 You need to fix the rails electronically.
+
+#nudge for lair
 >lari
 You need to fix the rails electronically.
+
+#nudge for track
 >trakc
 You need to fix the rails electronically.
+
+#nudge for tracks
 >tracsk
 You need to fix the rails electronically.
+
+#nudge for psa
 >aps
 Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road.
+
+#nudge for pass
 >apss
 Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road.
+
+#nudge for art
 >art
 There aren't many ways to look at THIS art, and none are constructive, you sense.
 
+#nudge for faded
 >fadde
 The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
+
+#nudge for fad
+>adf
+The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
+
+#nudge for deda
+>edad
+The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
+
+#nudge for fadedad
 >fadedda
 The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
 
+#nudge for none
 >noen
 It's not just that it's neon, it's that it's a pig.
+
+#nudge for pgi
 >pgi
 It's not just that it's a pig, it's that it's neon.
 
 >opening
+
+#nudge for recess
 >recses
 You've already made nothing out of something, and instead of reversing that, you may need to put something in the opening.
+
 >u
+
+#nudge for irwin
+>iinrw
+You don't want to mess with the wirin that way
+
 >put controls in opening
+
+#dupnudge for irwin
+>iinrw
+You don't want to mess with the wirin any further
+
+#dupnudge for recess
 >recses
 You've already made nothing out of something, and instead of reversing that, you did what you needed.
 
@@ -448,18 +674,23 @@ You've already made nothing out of something, and instead of reversing that, you
 
 Bassy Abyss
 
+#nudge for bassy
 >bassy
 You won't need to do anything to the whole room unless you are trapped in a room. Or it is just a room, and you need to get outside.
 
+#nudge for beta
 >ebta
 This racket isn't just one beat.
 
+#nudge for resin
 >resin
+The dust is dust now.
 
 >beast
 
 >take sword
 
+#nudge for hilt
 >ilth
 The hilt serves a purpose, and besides, there's not much to change it to.
 
