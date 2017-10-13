@@ -9,125 +9,193 @@
 
 * dirtest-general-intro
 
+#nudge for notepad
 >notepda
 You mess around with all the possibilities for a bit
+
+#nudge for dope
 >doep
 You mess around with all the possibilities for a bit
+
+#nudge for tan
 >tna
 You mess around with all the possibilities for a bit
+
+#nudge for toad
 >toda
 If you changed the pen,
+
+#nudge for pen
 >enp
 If you changed the pen,
 
+
+#nudge for northwest
 >northwets
 This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief.
+
+#nudge for northeast
 >northeats
 This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief.
+
+#nudge for southwest
 >southwets
 This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief.
+
+#nudge for southeast
 >southeats
 This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief.
 
+
+#nudge for down
 >donw
 This game usually doesn't require you to mess with cardinal directions
+
+#nudge for norht
 >norht
 This game usually doesn't require you to mess with cardinal directions
+
+#nudge for souht
 >souht
 This game usually doesn't require you to mess with cardinal directions
+
+#nudge for eats
 >eats
 This game usually doesn't require you to mess with cardinal directions
+
+#nudge for wets
 >wets
 This game usually doesn't require you to mess with cardinal directions
 
+#nudge for xyyzz
 >xyyzz
 A hollow voice booms
+
+#nudge for plugh
 >gluph
 A hollow voice booms
+
+#nudge for plover
 >provel
 A hollow voice booms
 
+
+#nudge for iths
 >itsh
 You're not fooling ME.
+
+#nudge for kcuf
 >kcuf
 You're not fooling ME.
+
+#nudge for mand
 >mand
 You're not fooling ME.
+
+#nudge for lelh
 >lelh
 You're not fooling ME.
+
+#nudge for parc
 >parc
 You're not fooling ME.
+
+#nudge for heck
 >hekc
 You're not fooling ME.
 
+#nudge for smell
 >smlle
 Your sense of smell doesn't change
 
+#nudge for writing
 >writign
 You don't need to do anything with writing besides EXAMINE or READ it for possible hints.
+
+#nudge for pockets
 >pockest
 You don't need to mess with your pockets
+
+#nudge for pocket
 >pockte
 You don't need to mess with your pockets
 
-
+#nudge for jump
 >jmpu
 impressively uncoordinated
 
+#nudge for verb
 >vebr
 There's no secret verb or verbs to find trying that
 
+#nudge for verbs
 >versb
 There's no secret verb or verbs to find trying that
 
+#nudge for think
 >thikn
 things always get jumbled
 
+#nudge for score
 >scoer
 There's no way to scramble your score
 
+#nudge for about
 >abotu
 "about" section, but I'm flattered you looked for it
 
+#nudge for credits
 >credist
 "credits" section, but I'm flattered you looked for it
 
+#nudge for credit
 >credti
 "credits" section, but I'm flattered you looked for it
 
+#nudge for sites
 >sitse
 Meta-commands don't have any easter eggs, sadly
 
+#nudge for tech
 >tehc
 Meta-commands don't have any easter eggs, sadly
 
 >son
 This option means nothing until you have acquired the gadget.
 
+#nudge for spaceon
 >psaceon
 Meta-commands don't have any easter eggs, sadly
 
+#nudge for spaceson
 >psaceson
 Meta-commands don't have any easter eggs, sadly
 
+#nudge for spaces
 >psaces
 Meta-commands don't have any easter eggs, sadly
 
+#nudge for space
 >psace
 Meta-commands don't have any easter eggs, sadly
 
+#nudge for access
 >accses
 Meta-commands don't have any easter eggs, sadly
 
+#nudge for opts
 >opst
 Meta-commands don't have any easter eggs, sadly
 
+#nudge for options
 >optiosn
 Meta-commands don't have any easter eggs, sadly
 
+#nudge for version
 >versino
 Meta-commands don't have any easter eggs, sadly
 
+#nudge for something
 >somethign
 Instead of messing with SOMETHING
 
@@ -137,68 +205,109 @@ Instead of messing with SOMETHING
 
 >purloin gadget
 
+#nudge for son
 >sno
 Meta-commands don't have any easter eggs, sadly
 
 >opt in
+
+#nudge for point
 >ption
-no secret cheat between NO TIP
+There's no secret cheat between NO TIP and OPT IN.
 
+#nudge for parse
 >pares
-no inbetween for the PARSE
+There's no inbetween for the PARSE and SPARE commands for the gadget.
 
+#nudge for tightknot
 >tightknto
 It's a bit too thick to mess with. Both because of the consonants, and, well...you don't need to remove the knot, anyway.
+
+#nudge for tight
 >tigth
 It's a bit too thick to mess with. Both because of the consonants, and, well...you don't need to remove the knot, anyway.
 
+#nudge for knot
+>nkot
+It's a bit too thick to mess with. Both because of the consonants, and, well...you don't need to remove the knot, anyway.
+
+#nudge for tagged
 >taggde
 Bad idea to mess with electronics you don't understand.
 
+#nudge for lemon
 >lemno
 That's just an example, for CERTIFY.
+
+#nudge for paste
 >paset
 That's just an example, for RECTIFY.
 
+#nudge for arrow
 >arrwo
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
+
+#nudge for hows
 >hosw
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
+
+#nudge for blurb
 >blubr
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
+
+#nudge for tag
 >tga
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
+
+#nudge for screen
 >screne
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
+
+#nudge for buttno
 >buttno
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
+
+#nudge for handle
 >handel
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
+
+#nudge for example
 >exampel
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
+
+#nudge for examples
 >examplse
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
 
+
+#nudge for certify
 >certiyf
 There's no extra setting besides CERTIFY and RECTIFY.
+
+#nudge for secure
 >secuer
 There's no extra setting besides SECURE, and you can't do anything besides RECUSE once you SECURE.
 
+#nudge for tip
 >tpi
 You can just switch the gadget instead.
 
 # phail phial testing
 
 >purloin phail phial
+
 >angel
 You've got enough practical help. You don't need anything supernatural.
 
+#nudge for angle
 >anleg
 There's nothing between ANGLE and GLEAN that you can do with the blue lube.
 
+#nudge for phail
 >phila
 Bad idea to mess with chemical compounds you don't understand
 
+#nudge for blue
 >bleu
 Bad idea to mess with chemical compounds you don't understand
 
@@ -206,21 +315,29 @@ Bad idea to mess with chemical compounds you don't understand
 
 >purloin prep paper
 
+#nudge for aprep
 >aprpe
 You can't really second-guess the help on the prep paper.
+
+#nudge for papesr
 >papesr
 You can't really second-guess the help on the prep paper.
+
+#nudge for prep
 >prpe
 You can't really second-guess the help on the prep paper.
+
+#nudge for sheet
 >shete
 You can't really second-guess the help on the prep paper.
+
+#nudge for firm
 >fimr
 FIMR is just a mnemonic for the places
 
-#
-# tinfoil testing
-
 >purloin tinfoil
+
+#nudge for tinfoil
 >tinfoli
 You can't change paranoid ramblings.
 
@@ -228,37 +345,50 @@ You can't change paranoid ramblings.
 
 >gonear notices
 
+#nudge for yorpwald
 >yorpwadl
 You can't change Old Warpy. You have to just trust it
+
+>purloin saltine
+
+#nudge for salient
+>saltein
+The saltine's there to help you. Changing it might work against you.
 
 >terry
 !RETRY
 
 >gonear trips strip
 
+#nudge for retry
+>rerty
+Being able to RETRY is good enough. You don't want to do anything too weird. It could backfire.
+
 >certify store f
 
->pitno
-There's no secret cheat between NO TIP and OPT IN.
-
->pares
-There's no inbetween for the PARSE and SPARE commands for the gadget.
-
+#dupnudge for yorpwald
 >yorpwadl
 You'll need to change Yorpwald one anagram at a time.
 
 >terry
 Nothing happens. Perhaps this is where you'd be sent back to once you're able to look around.
 
+##nudge for firm
 >fimr
 FIMR is just a mnemonic for the stores you need to explore, somehow.
 
 >forest
 >in
 
+##nudge for terry
+##nudge for retry
 >ryter
 You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no.
 
+##nudge for terry
+##nudge for retry
 >retry
+##nudge for terry
+##nudge for retry
 >ryter
 You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no.
