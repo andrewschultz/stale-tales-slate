@@ -11,290 +11,407 @@
 
 >ts
 
+#nudge for trips
+>trips
+You won't need to do anything to the whole room unless you are trapped in a room.
+
+#nudge for tepid
+>etpid
+The depiction is there as a hint, not as a puzzle
+
+#nudge for tepidicon
+>etpidicon
+The depiction is there as a hint, not as a puzzle
+
+#nudge for icon
+>cion
+The depiction is there as a hint, not as a puzzle
+
+#nudge for masll
 >llams
 You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X
 
+#nudge for mall
 >llam
 You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X
 
+#nudge for lots
 >ltso
 You can manipulate each individual store.
 
+#nudge for lot
 >lto
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lota
 >lota
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotb
 >lotb
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotc
 >lotc
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotd
 >lotd
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lote
 >lote
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotf
 >lotf
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotg
 >lotg
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for loth
 >loth
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for loti
 >loti
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotj
 >lotj
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotk
 >lotk
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotl
 >lotl
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotm
 >lotm
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotn
 >lotn
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for loto
 >loto
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotp
 >lotp
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotq
 >lotq
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotr
 >lotr
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lott
 >lott
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotu
 >lotu
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotv
 >lotv
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotw
 >lotw
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotx
 >lotx
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for loty
 >loty
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for lotz
 >lotz
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for malla
 >malla
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallb
 >mallb
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallc
 >mallc
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for malld
 >malld
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for malle
 >malle
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallf
 >mallf
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallg
 >mallg
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallh
 >mallh
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for malli
 >malli
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallj
 >mallj
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallk
 >mallk
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for malll
 >malll
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallm
 >mallm
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for malln
 >malln
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallo
 >mallo
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallp
 >mallp
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallq
 >mallq
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallr
 >mallr
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for malls
 >malsl
 You'll need to pick out a store to work with. Mall or Malls is too unspecific. Also, changing Mall A to a Llama or whichever doesn't work--it's store X.
 
+#nudge for mallt
 >mallt
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallu
 >mallu
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallv
 >mallv
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallw
 >mallw
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallx
 >mallx
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mally
 >mally
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for mallz
 >mallz
 You need to manipulate each store as a store, not a mall or a lot
 
+#nudge for storea
 >storea
 Nothing happens. You'd think that store could be a good candidate to change, but it isn't.
 
+#nudge for storec
 >storec
 Nothing happens. You'd think that store could be a good candidate to change, but it isn't.
 
+#nudge for stored
 >stored
 Nothing happens. You'd think that store could be a good candidate to change, but it isn't.
 
+#nudge for storee
 >storee
 Nothing happens. You'd think that store could be a good candidate to change, but it isn't.
 
+#nudge for storeg
 >storeg
 Nothing happens. You'd think that store could be a good candidate to change, but it isn't.
 
+#nudge for storeh
 >storeh
 Nothing happens. You'd think that store could be a good candidate to change, but it isn't.
 
+#nudge for storen
 >storen
 Nothing happens. You'd think that store could be a good candidate to change, but it isn't.
 
+#nudge for storep
 >storep
 Nothing happens. Maybe if Yorpwald were in even more danger, it would.
 
+#nudge for storeu
 >storeu
 Nothing happens. Maybe if Yorpwald were in even more danger, it would.
 
+#nudge for storev
 >storev
 Nothing happens. Maybe if Yorpwald were in even more danger, it would.
 
+#nudge for storew
 >storew
 Nothing happens. Maybe if Yorpwald were in even more danger, it would.
 
+#nudge for storey
 >storey
 Nothing happens. Maybe if Yorpwald were in even more danger, it would.
 
+#nudge for stores
 >storse
 Nothing happens. You'd think that store could be a good candidate to change, but it isn't.
 
+#nudge for storej
 >storej
 Nothing happens. The store remains impassive and dark.
 
+#nudge for storek
 >storek
 Nothing happens. The store remains impassive and dark.
 
+#nudge for storex
 >storex
 Nothing happens. The store remains impassive and dark.
 
+#nudge for storez
 >storez
 Nothing happens. The store remains impassive and dark.
 
+#nudge for marquee
 >marqeeu
 You don't need to change the marquee, but maybe it'd be fun to see what's inside.
 
 >sorbet
 by one point
 
+#dupnudge for marquee
 >marqeeu
 You don't need to change the marquee now that you figured what it means.
 
->trips
-You won't need to do anything to the whole room unless you are trapped in a room.
-
+#nudge for storet
 >storet
 Nothing happens. Maybe if Yorpwald were in even more danger, it would.
 
+#nudge for storel
 >storel
 You search for a magic word but feel, er, lost.
 
+#nudge for storeo
 >storeo
 Nothing happens. You consider going through the other 358 possibilities, but that'd be so rote.
 
+#nudge for storeq
 >storeq
 Nothing happens. You didn't really expect it to since, hey, no u with the q.
 
+#nudge for roadsign
 >roadsing
 Hmm...you get the feeling the store itself holds more adventure.
+
+#nudge for road
 >roda
 Hmm...you get the feeling the store itself holds more adventure.
+
+#nudge for sign
 >sgin
 Hmm...you get the feeling the store itself holds more adventure.
 
 >forest
+
+#dupnudge for roadsign
 >roadsign
 !Hmm...
 
+#nudge for subway
 >subwya
 No, it's a map of something behind Store M, it looks like.
 
+#nudge for subwaymap
 >subwaympa
 No, it's a map of something behind Store M, it looks like.
 
+#nudge for winston
 >winstno
 There's no way to change them, or their legacy. They're all dead now.
+
+#nudge for churchill
 >churchlli
 There's no way to change them, or their legacy. They're all dead now.
+
+#nudge for benjamin
 >benjamni
 There's no way to change them, or their legacy. They're all dead now.
+
+#nudge for disraeli
 >disraeil
 There's no way to change them, or their legacy. They're all dead now.
+
+#nudge for margaret
 >margarte
 There's no way to change them, or their legacy. They're all dead now.
+
+#nudge for thatcher
 >thatchre
 There's no way to change them, or their legacy. They're all dead now.
 
 >sortie
+
+#nudge for stairs
 >staisr
 No way. That's how you get to the sortie.
+
+#dupnudge for thatcher
 >thatchre
 !There's no way to change them, or their legacy. They're all dead now.
 
 >metros
+
+#nudge for escalator
 >escalatro
 No way. It's your way down to the metros.
-
-#this is not STORES stuff but the 2 flier items that didn't fit anywhere else
 
 >rifle
 Shooting things up is not the answer.
 
+#nudge for flier
 >rifel
 The flier's just there to tell you if you're done or not.
+
