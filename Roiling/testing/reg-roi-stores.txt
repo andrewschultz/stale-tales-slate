@@ -13,53 +13,83 @@
 
 >ts
 
+#nudge for storea
 >storea
 Nothing happens. You'd think that store would be a good candidate to change, but it isn't
+
+#nudge for storec
 >storec
 Nothing happens. You'd think that store would be a good candidate to change, but it isn't
+
+#nudge for stored
 >stored
 Nothing happens. You'd think that store would be a good candidate to change, but it isn't
+
+#nudge for storee
 >storee
 Nothing happens. You'd think that store would be a good candidate to change, but it isn't
+
+#nudge for storeg
 >storeg
 Nothing happens. You'd think that store would be a good candidate to change, but it isn't
+
+#nudge for stores
 >stores
 Nothing happens. You'd think that store would be a good candidate to change, but it isn't
 
+
+#nudge for storef
 >storef
 That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures!
+
+#nudge for storei
 >storei
 That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures!
+
+#nudge for storem
 >storem
 That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures!
 
+#nudge for storej
 >storej
 Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway
+
+#nudge for storex
 >storex
 Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway
+
+#nudge for storez
 >storez
 Nothing happens. The store remains impassive and dark. It doesn't look worth meddling with, anyway
 
+#nudge for windows
 >wowdins
 Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new.
+
+#nudge for window
 >wowdin
 Sadly, trying to change the windows wouldn't actually change the stores enough to find somewhere new.
 
 >ethros
 Store H looks totally different for a second.
 
+#nudge for shells
 >shells
 The shells don't move. Perhaps they are just a clue.
 
+#nudge for shell
 >shlel
 The shells don't move. Perhaps they are just a clue.
 
+#nudge for store
 >estro
 You'll want to focus on a specific store.
 
+#nudge for montage
 >egmaton
 It's probably counterproductive to change--it's more an information booth.
 
+#nudge for storel
 >olster
 You search for a magic word but feel, er, lost.
 
@@ -68,6 +98,7 @@ An odd sweet smell from Store K, for a second.
 
 >tokers
 
+#nudge for toker
 >treko
 They already lost one of their collective, man. It'd be a bummer
 
@@ -77,65 +108,94 @@ They are who they are. You should maybe try to get their friend back.
 >routes
 >troves
 
+#nudge for route
 >utreo
 You don't need to do anything with an individual route. Just go in.
 
+#nudge for trove
 >otver
 No need to focus on a specific trove. Just enter or take the troves.
 
 >otvers
 You've got an entry. No need to seal it up.
 
+#nudge for storeo
 >sooter
 Nothing happens. You consider going through the other 358 possibilities, but that'd be so rote.
 
+#nudge for storeq
 >sqerto
 Nothing happens. You didn't really expect it to since, hey, no u with the q.
 
+#nudge for storer
 >strore
 Store R led back to your manor last game. It won't go anywhere new, and you don't need or want to go back, right now. You wouldn't be safe there.
 
+#nudge for someone
 >someoen
+Nothing happens. You probably need to worry about the stores and/or what they become, instead.
+
+#nudge for nouned
 >nouned
+Nothing happens. You probably need to worry about the stores and/or what they become, instead.
+
+#nudge for ivy
+viy
+!What the towers are made of is not important
 
 >towers
 
+#dupnudge for ivy
 >ivy
 What the towers are made of is not important. Just that they're big, and there's a quest behind them
+
+#nudge for ivory
 >ivory
 What the towers are made of is not important. Just that they're big, and there's a quest behind them
+
+#nudge for ivytower
 >ivytower
 What the towers are made of is not important. Just that they're big, and there's a quest behind them
+#nudge for ivorytower
 >ivorytower
 What the towers are made of is not important. Just that they're big, and there's a quest behind them
+
+#nudge for tower
 >tower
 What the towers are made of is not important. Just that they're big, and there's a quest behind them
 
 >otters
->irdan
-Darin and Randi, the otters, don't move. You feel a nadir, a drain, even trying to manipulate them.
 
+#nudge for otter
 >otter
 You can't divide and conquer, and the otters won't let you by unless you're, well, ready.
 
 >presto
+
+#nudge for spot
 >spto
 You can't, er, stop the, er, spot. Best to go in.
 
+#nudge for engraving
 >engravign
 The engraving is meant to be read. You can modify it with other actions.
 
+#nudge for engravings
 >engravinsg
 You can only change the enrgavings by working through the other stores.
 
 >purloin patcher
+#nudge for patcher
 >ptacher
 The patcher doesn't need to be changed. It does the changing if you point it.
 
 >x otters
+
+#nudge for field
 >ifdel
 You're not near enough to the barley to affect it. You need to ENTER through the otters
 
+#nudge for barley
 >belray
 You're not near enough to the barley to affect it. You need to ENTER through the otters.
 
@@ -143,47 +203,73 @@ You're not near enough to the barley to affect it. You need to ENTER through the
 You're not near enough to the barley to affect it. You need to ENTER through the otters. Still, that seems right, if you get there.
 
 >nestor
+
+#nudge for smoke
 >smeko
 It's just smoke. You can't control it. Heck, governments more powerful than you can't control it, and they've been trying. But you can maybe enter it.
+
+#nudge for cloud
 >cludo
 It's just smoke. You can't control it. Heck, governments more powerful than you can't control it, and they've been trying. But you can maybe enter it.
+
+#nudge for smokecloud
 >smekocludo
 It's just smoke. You can't control it. Heck, governments more powerful than you can't control it, and they've been trying. But you can maybe enter it.
 
+#nudge for strip
 >strip
 You don't need to riff on any location names to win the game
+
+#nudge for profit
 >profit
 You don't need to riff on any location names to win the game
+
+#nudge for profits
 >profits
 You don't need to riff on any location names to win the game
 
 >enter cloud
 Cruelest Lectures
 
+#nudge for highway
 >highwya
 You can't see the way high highway any more, and you'd rather deal with the lecturer. Tedious.
 
+#nudge for seats
 >estas
 That might cause a bit too much commotion. Maybe you can just get rid of the lecturer, pay attention to your feelings, and maybe even Ian.
 
+#nudge for example
 >exampel
 The lecturer is unchangeable in his views, but maybe he is physically moveable.
+
+#nudge for lecture
 >lectuer
 The lecturer is unchangeable in his views, but maybe he is physically moveable.
+
+#nudge for lectures
 >lectuers
 The lecturer is unchangeable in his views, but maybe he is physically moveable.
+
 >nia
 Ian's had a big life change
+
 >ani
 Ian's had a big life change
+
+#nudge for ian
 >ina
 Ian is unchangeable, but maybe he is moveable.
 
+#nudge for guardian
 >guardina
 Ian is unchangeable, but maybe he is moveable.
 
+#nudge for heartfelt
 >heartfetl
 You're probably overthinking it. The I-USED-TO examples are just plain tedious.
+
+#nudge for reflections
 >reflectiosn
 You're probably overthinking it. The I-USED-TO examples are just plain tedious.
 
