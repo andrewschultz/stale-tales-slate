@@ -133,7 +133,7 @@ def poke_nudge_files(gm):
     short = re.sub(".*[\\\/]", "", nudge_files[q])
     for j in cmd_lines.keys():
         cmd_lines[j] = re.sub("^ *", "", cmd_lines[j])
-    for j in sorted(got_nudges[gm].keys(), key=lambda x: (int_wo_space(cmd_lines[alf(x)]), x)):
+    for j in sorted(got_nudges[gm].keys(), key=lambda x: (int_wo_space(cmd_lines[alf(x)]), cmd_tries[gm][x], x)):
         if got_nudges[gm][j] == 0:
             for x in cmd_lines[alf(j)].split(' '):
                 nudge_add[x] = nudge_add[x] + ' ' + j
@@ -141,7 +141,7 @@ def poke_nudge_files(gm):
             count3 = count3 + len(cmd_lines[alf(j)].split(' '))
             if max_errs > 0 and count2 > max_errs:
                 continue
-            c2 = ' '.join([str(int(a) - 1) for a in cmd_lines[alf(j)].split(' ')]) if cmd_lines[alf(j)] != '' else 'unavailable'
+            c2 = ' '.join([str(int(a) - 1) for a in cmd_lines[alf(j)].split(' ')]) if cmd_lines[alf(j)] != '' else 'Nudge file line ' + str(cmd_tries[gm][j])
             print ("({:4d}) {:s} need #nudge for {:14s} suggestions = {:s}".format(count2, short, j, c2))
     global err_string
     if count2 > 0:

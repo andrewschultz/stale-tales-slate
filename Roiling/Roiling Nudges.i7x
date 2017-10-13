@@ -256,8 +256,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "cold"	168201090	--	cold	--	"Negative thinking! You don't need to focus on the cold but how to get rid of it. To generate heat."
 "bustle"	504528644	Bustle Sublet	--	--	"[locname]."
 "messhole"	677684018	Bustle Sublet	--	--	"A messhole is a messhole. You need to concentrate on thinking your way out."
-"boorboro"	504895724	Bustle Sublet	--	--	"[boor-grub]."
-"grubburg"	482896434	Bustle Sublet	--	--	"[boor-grub]."
 "boor"	252447862	Bustle Sublet	--	--	"[boor-grub]."
 "grub"	241448217	Bustle Sublet	--	--	"[boor-grub]."
 "observe"	637146289	--	--	lot-observed rule	"You're already observing by reflex now. No need to tweak things."
@@ -271,6 +269,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "roadbed"	350147390	Boarded Roadbed	--	--	"[locname]."
 "live"	333777614	--	what-a-bee	--	"The bee's description isn't important. It's how you see the bee that matters."
 "bee"	274031123	--	what-a-bee	--	"But it's not just any bee. It's a[if bee's head is reflexive and what-a-bee is reflexive]n[end if] [what-a-bee][if bee's head is reflexed and what-a-bee is reflexed]! Though, really, you've already given it the business.[else]![end if]"
+"nadir"	222441064	Drain Nadir	--	--	"[locname]."
 "pictuer"	566810127	Drain Nadir	--	--	"It's not just any old picture. It's of a sad pier."
 "spider"	456891772	--	diapers	--	"The diapers, the sad pier--the spider only fits in as *a* spider."
 "sda"	119490873	Drain Nadir	--	--	"It's a sad pier."
@@ -301,6 +300,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "magazine"	465726572	--	DIVORCES	--	"It's not just any magazine. It's DIVORCES!"
 "vanity"	448722262	--	tan ivy vanity	--	"[if noise is in lalaland]You really don't need to rearrange the vanity[else if vanity is unexamined]You don't need to deal with it as much as the person outside--but maybe examining will give you a clue[else]You may want to deal with the person outside, instead of this, but examining it may've helped a bit[end if]."
 "lamps"	297816735	--	plasm lamps	--	"You need that light for late-night work sessions."
+"lamp"	201542769	--	plasm lamps	--	"You already did something with a lamp, and you don't need to do anything with the plasm lamps."
 "picteur"	566810127	--	stream	--	"It's not just any old picture. There's a stream."
 "shaker"	401807173	--	salt	--	"It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit."
 "fern"	308552316	Upscale Capsule	--	--	"The fern is mentally, if not physically, unmalleable."
@@ -358,10 +358,9 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "bigu"	201117260	r23	--	--	"[just-letter]."
 "bigv"	203176273	Unwary Runway	--	--	"[just-letter]."
 "whasup"	430250622	--	--	Rand-sad rule	"Maybe something like that'd work with just one washup. But there are two."
-"leonard"	433420743	--	--	Rand-sad rule	"They want to be together, but that's a bit much. Try fixing what they're complaining about, calming their fears."
 "popgun"	443897512	--	popgun	--	"[boing-clue]."
 "spoilt"	454009205	--	popgun	--	"[boing-clue]."
-"leonadr"	433420743	--	Rand	--	"[if lawl wall is in lalaland]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups[else]You don't need to face double the strength[end if]."
+"leonard"	433420743	--	Rand	--	"[if lawl wall is in lalaland]You've probably faced the greatest physical threat you need. You need to take leave of them, now[else if Rand is eager]You don't need to combine them physically, but their physical strengths combined could be a help[else if Rand is washed up]You need to concentrate on them being washups. Combining them would mean they couldn't have a friend[else]You don't need to face double the strength[end if]."
 "sgin"	242774022	--	smart people sign	--	"Look at what's on the sign."
 "rebuff"	389684416	shack	--	--	"The rebuff-buffer is too technical for you, but even if it weren't, removing its protection would be unwise."
 "magnetic"	462684739	shack	--	--	"The magnetic magic-net is too technical for you, but even if it weren't, removing its protection would be unwise."
@@ -404,7 +403,6 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "fountain"	494078978	--	fount	--	"It's too small to be a fountain--really, just a fount."
 "ole"	255972525	--	--	Leo-mad rule	"There are only six possibilities. Leo's not too bright, and he can figure it out."
 "darn"	177448218	--	--	Rand-mad rule	"Use the settler. This is a, err, regional word."
-"leorand"	433420743	--	Rand	--	"[if Rand is fightin]You don't need to create a monster[else]Leo and Rand look similar, but combining them would mean they couldn't have a friend[end if]."
 "lawl"	217750269	--	lawl wall	--	"It's too expansive for you to use any mental energy on."
 "clump"	323466343	--	hawt thaw	--	"No, it's not just any clump, but hawt thaw."
 "saps"	276201709	phat path	--	--	"You pass through all ten reshufflings of Saps['] Pass, then feel like a bit of a sap, yourself. You pretty clearly need to go [if shack is visited]back [end if]north, here."
@@ -633,7 +631,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "solve"	459411311	--	solve-a-loaves	--	"[eat-pastry]."
 "loaves"	461599129	--	solve-a-loaves	--	"[eat-pastry]."
 "loaf"	156869130	--	solve-a-loaves	--	"[not-singular-hp]."
-"desert"	561349094	Nude Dune	--	--	"Can't change the desert behind th dunes."
+"desert"	561349094	Nude Dune	--	--	"Can't change the desert behind the dunes."
 "shaven"	439622520	shaven havens	--	--	"[towersloc]." [SHAVEN HAVENS 1 4]
 "haven"	343348554	shaven havens	--	--	"[towersloc]."
 "lone"	324880033	--	lone duck	--	"It's not just any lone animal. It's a lone DUCK."
@@ -656,14 +654,14 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "denim"	326810705	--	denim	--	"You scrape at the denim fragments and wonder if there is any magic in dem. Well, not the way you thought it, apparently."
 "liam"	165069656	--	grailman	--	"[grail-name]."
 "garn"	189018831	--	grailman	--	"[grail-name]."
+"lars"	237599426	--	reed's ale	--	"[reed-name]."
+"eede"	404447416	--	reed's ale	--	"[reed-name]."
+"elsa"	280081732	--	reed's ale	--	"[reed-name]."
+"erde"	361965110	--	reed's ale	--	"[reed-name]."
 "reeds"	458239076	--	reed's ale	--	"[reed-ale]."
 "reed"	361965110	--	reed's ale	--	"[reed-ale]."
 "ale"	183807766	--	reed's ale	--	"[reed-ale]."
 "reedale"	545772876	--	reed's ale	--	"[reed-ale]."
-"lars"	237599426	--	reed's ale	--	"[reed-ale]."
-"eede"	404447416	--	reed's ale	--	"[reed-ale]."
-"elsa"	280081732	--	reed's ale	--	"[reed-ale]."
-"rede"	361965110	--	reed's ale	--	"[reed-ale]."
 "sere"	437209987	--	reed's ale	--	"[reed-ale]."
 "deal"	204836855	--	reed's ale	--	"[reed-ale]."
 "save"	333432713	--	raves saver	--	"[no-fril]."
@@ -1716,6 +1714,9 @@ to say wait-see:
 to say no-fril:
 	say "The saver is hopelessly no-frills. It'll never be anything better. But [if saver is reflexed]you made it look a bit nicer[else if saver is attempted]you might've been onto something looking at its brand name[else]maybe you could revisit its brand name to make it look nicer[end if]. Not that looks matter"
 
+to say reed-name:
+	say "No, [el-la-f]'s full name. With Reed's Ale."
+
 to say reed-ale:
 	say "Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale"
 
@@ -1805,7 +1806,7 @@ this is the serpent-hiding rule:
 	the rule fails.
 
 to say ftf:
-	say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life."
+	say "The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life"
 
 to say flow-fine:
 	say "The flowerpot [if crocus is visible]itself [end if]is just fine--[if limits are unvisited]you haven't found anything to put in it yet[else if flowerpot is reflexed]and so is the crocus in it[else]maybe something around here could go in it[end if]"

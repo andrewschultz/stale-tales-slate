@@ -159,10 +159,6 @@ up by one point
 >seed 5
 >gonear trefoil
 
-#nudge for trefoil
->trefoli
-It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
-
 >recreatn
 Terrance shakes his head, but a glare from Rodney sets him straight--for now.
 >recreant
@@ -239,7 +235,20 @@ Lars takes another swig from the bottle of Reed's Ale. "Glad that wasn't me."
 >himself
 >e
 
-Ole Shrine Shoreline
+Strati Strait
+
+#nudge for strati
+>strita
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+
+#nudge for could
+>coudl
+You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form
+
+#nudge for coulds
+>coudls
+You can't manipulate the clouds, and you don't need to. It's really more fun to watch them pass by and change form
+
 #must test both male and female bad guys here
 
 >grandiose
@@ -419,6 +428,18 @@ Boy! Lois sure could use some down-home kindness.
 >gonear trefoil
 >purloin settler
 
+#nudge for trefoil
+>trefoli
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+
+#nudge for storew
+>tsorew
+Trying to change the current region you're in would be risky, or useless, or maybe both
+
+#nudge for torew
+>otrew
+Trying to change the current region you're in would be risky, or useless, or maybe both
+
 #nudge for bland
 >bladn
 The badlands can't be changed on their own. They must be trekked through.
@@ -508,6 +529,18 @@ Topside Deposit
 #nudge for deposit
 >deposti
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+
+#nudge for frontier
+>frontire
+The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life.
+
+#nudge for fire
+>ifre
+The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life.
+
+#nudge for torn
+>otrn
+The fire-torn frontier has been changed enough. Maybe if you change the curst palace, it and other parts of the Badlands will come back to life.
 
 #nudge for flowerpot
 >flowerpto
@@ -611,11 +644,19 @@ Your score has just gone up by one point.
 
 >w
 The diners smack their lips, and you think you hear the zhk of silverware.
-Campiest Campsite
+Outer Route
+
+#nudge for roeut
+>oreut
+It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
 #nudge for campiest
 >campsiet
 Gosh! The campsite's about as swell as can be, as is. No need to rearrange anything!
+
+#nudge for sway
+>sawy
+You don't need to change the sway-ways. They are dangerous enough, and they don't lead anywhere useful
 
 >leavse
 Yes, it's fun to mess with leaves, but distracting.
@@ -723,16 +764,16 @@ There's more than one ingrate blocking you.
 by one point
 
 >w
-Outer Route
+Nude Dune
 
->ditr
-Changing the direction or the composition of the trail won't do anything.
->trali
-Changing the direction or the composition of the trail won't do anything.
 
-#nudge for roeut
->outer
+#nudge for dune
+>duen
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
+
+#nudge for desert
+>desetr
+Can't change the desert behind the dunes.
 
 #nudge for solve
 >solev
@@ -784,6 +825,14 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 >havne
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
+#nudge for ravages
+>ravagse
+The ravages are chaotic enough. Changing them is a fight you'd lose
+
+#nudge for ravage
+>ravaeg
+The ravages are chaotic enough. Changing them is a fight you'd lose
+
 #nudge for idtag
 >idtga
 ID tag: dig at it? Gad.
@@ -834,11 +883,11 @@ His full name, Liam Garn.
 
 >marginal
 >s
+Treading Gradient
 
-Savager Ravages
 
-#nudge for ravages
->ravagse
+#nudge for gradient
+>gradietn
 This is a weird place, being at the crossroads, but better to get rid of the weeds.
 
 #nudge for weed
@@ -847,8 +896,8 @@ Gumming up one weed wouldn't get the others.
 
 >sewed
 
-#dupnudge for ravages
->ravagse
+#dupnudge for gradietn
+>gradietn
 This is a weird place, being at the crossroads, but better to tackle a guardian.
 
 >denmi
@@ -899,11 +948,27 @@ by one point
 >playre
 The raves saver is as glitzed-up as it'll get.
 
+#nudge for lars
+>lasr
+No, Lars Eede's full name. With Reed's Ale.
+
+#nudge for eede
+>eeed
+No, Lars Eede's full name. With Reed's Ale.
+
+#nudge for elsa
+>elas
+No, Else Erde's full name. With Reed's Ale.
+
+#nudge for erde
+>edre
+No, Elsa Erde's full name. With Reed's Ale.
+
 #nudge for reeds
 >reesd
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 
-#nudge for rede
+#nudge for reed
 >rede
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 
@@ -913,6 +978,14 @@ Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 
 #nudge for reedale
 >reedael
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+
+#nudge for deal
+>edal
+Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
+
+#nudge for sere
+>rees
 Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale.
 
 >costuem
@@ -935,10 +1008,6 @@ You feel no energy from the dagger. Perhaps it needs to be repaired mechanically
 It won't be such a tap-in to nip at, sadly. Daltho's advice comes back: nobody will be easier than Rodney.
 
 >himself
-
-#nudge for ravage
->ravaeg
-This is a weird place, being at the crossroads, but better to mess around elsewhere.
 
 >s
 Unblest Sunbelt
@@ -1038,6 +1107,18 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 >tols
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 
+#nudge for gadflie
+>agdflie
+You can't change the gadflies. There are too many.
+
+#nudge for gadfly
+>agdfly
+You can't change the gadflies. There are too many.
+
+#nudge for gasfield
+>agsfield
+You can't change the gadflies. There are too many.
+
 #nudge for sled
 >sled
 Work on the whole sled rut.
@@ -1046,9 +1127,16 @@ Work on the whole sled rut.
 >rut
 Work on the whole sled rut.
 
-##nudge for strudel
+#nudge for strudel
+>strueld
+The pastry is for eating, not for changing
+
 >rustled
 by one point
+
+#dupnudge for strudel
+>strueld
+The pastry is for eating, not for changing
 
 >n
 Gander Garden
@@ -1064,6 +1152,15 @@ The shrine is kind of sacred, and regardless of what you think of the Hostile-Is
 
 >holiest
 >n
+Actionless Coastlines
+
+#nudge for maturation
+>amturation
+The natatorium can't be changed. You need to save all your energy for the Curst Palace, anyway
+
+#nudge for thearchy
+>thearcyh
+The hatchery can't be changed. You need to save all your energy for the Curst Palace, anyway
 
 >hastiest
 by one point
@@ -1077,6 +1174,10 @@ It's not this location you need to change, but Castle Apcur, the Curst Palace ac
 It's not this location you need to change, but Castle Apcur, the Curst Palace across Leak Lake.
 >dirk stma
 The kid looks at you curiously. You probably don't need to change his name or intelligence.
+
+#nudge for dirkstam
+>smartkid
+Dirk looks at you curiously. You probably don't need to change his name or intelligence.
 
 #nudge for smart
 >smatr
@@ -1171,14 +1272,6 @@ Dr. Yow seems to ponder something for a second but then shakes his head--maybe t
 >fissuer
 Bizarre animal noises continue to emanate from the fissure. It is beyond your control, but the duck seems to be poking at it
 
-##nudge for ropin
->ropni
-The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open.
-##nudge for ropins
->ropisn
-The prison ropins are built for...wait for it...no rips. You'll have to focus on a part that might open.
-
-##nudge for unlocked
 >unlocked
 by one point
 
@@ -1228,7 +1321,7 @@ by one point
 >attentive
 not something you
 
->gt campsite
+>gt outer route
 
 >put dagger in rapier repair
 by one point
@@ -1282,9 +1375,17 @@ You fixed what you can of the boat
 >undo
 >undo
 
+#nudge for wire
+>iwre
+The wires are okay. They're just organized WEIRDER.
+
+#nudge for wires
+>iwres
+The wires are okay. They're just organized WEIRDER.
+
 >weirdre
 WRONG
->weirder
+>rewired
 WRONG
 >weirdre
 WRONG
@@ -1358,11 +1459,11 @@ The flowerpot itself is just fine--maybe something around here could go in it.
 
 >dingy
 
-#nudge for occurs
+#dupnudge for occurs
 >occusr
 The crocus is OK as-is. In fact, it could make a nice gift for someone who could appreciate it.
 
-#nudge for flowerpot
+#dupnudge for flowerpot
 >flowerpto
 The flowerpot itself is just fine--and so is the crocus in it.
 
@@ -1462,28 +1563,36 @@ Nah, that's just garbage. It's the curst palace you need to focus on.
 #nudge for cart
 >catr
 Nah, that's just garbage. It's the curst palace you need to focus on.
-##nudge for accu
+
+#nudge for accu
 >acuc
 Nah, that's just garbage. It's the curst palace you need to focus on.
-##nudge for plaster
+
+#nudge for plaster
 >plastre
 Nah, that's just garbage. It's the curst palace you need to focus on.
-##nudge for last
+
+#nudge for last
 >lats
 Nah, that's just garbage. It's the curst palace you need to focus on.
-##nudge for race
+
+#nudge for race
 >raec
 Nah, that's just garbage. It's the curst palace you need to focus on.
-##nudge for cup
+
+#nudge for cup
 >cpu
 Nah, that's just garbage. It's the curst palace you need to focus on.
-##nudge for talc
+
+#nudge for talc
 >tacl
 Nah, that's just garbage. It's the curst palace you need to focus on.
-##nudge for aps
+
+#nudge for aps
 >sap
 Nah, that's just garbage. It's the curst palace you need to focus on.
-##nudge for cure
+
+#nudge for cure
 >cuer
 Nah, that's just garbage. It's the curst palace you need to focus on.
 
