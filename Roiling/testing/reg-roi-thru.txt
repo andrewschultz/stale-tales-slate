@@ -2830,6 +2830,18 @@ Your score has just gone up by one point
 >angriyl
 The imp's already been compromised that way.
 
+#mistake test for pti
+>pti
+You can't go fast enough to interrupt the imp, much less apologize for doing so.
+
+#mistake test for pga
+>pga
+!No golfers appear.
+
+#mistake test for gpa
+>gpa
+!You don't need to worry about grades now.
+
 >undo
 >undo
 >bruteyl
@@ -2841,6 +2853,18 @@ The imp's already been compromised that way.
 >angrily
 Your score has just gone up by one point
 The sly imp lets out a curse. It's completely failed to keep its cool. It leaves, confidence shattered. You can go past now.
+
+#mistake retest for pti
+>pti
+!You can't go fast enough to interrupt the imp, much less apologize for doing so.
+
+#mistake retest for pga
+>pga
+No golfers appear.
+
+#mistake retest for gpa
+>gpa
+You don't need to worry about grades now.
 
 >n
 Wickeder Wire Deck
@@ -2863,18 +2887,26 @@ No need to tweak the ocelots again. They're fine as is.
 >x medals
 The smaller, extremely oxidized, says IQ. The larger, very tarnished, says LUCKY.
 
+#mistake test for ape lord/apelord
 >ape lord
 You can't change what the leopard is, but you need to release it from its captivity.
+
+#mistake test for preload/pre-load/pre load
 >preload
 The leopard is plenty powerful as-is, but you need to get it on your side.
+
 >parolde
 The leopard almost seems to un-cuff its hands.
 >paroled
 Your score has just gone up by one point
 >parolde
 No need to tweak the leopard again. It's fine as is.
+
+#mistake retest for ape lord/apelord
 >apelord
 You already changed the leopard.
+
+#mistake retest for preload/pre-load/pre load
 >pre load
 The leopard is plenty powerful as-is, and it's already on your side.
 
@@ -2905,6 +2937,8 @@ The smaller, extremely oxidized, says IQ. The larger, barely tarnished, says LUC
 
 >barged
 You don't want the badger to have barged into you. Clothed or not.
+
+#mistake test for b grade/bgrade
 >b grade
 The badger already feels second-rate, so you need another way to help it.
 >garbde
@@ -2914,6 +2948,7 @@ Adding a min point
 Your score has just gone up by one point
 >garbde
 No need to tweak the badger again. It's fine as is.
+#mistake test for b grade/bgrade
 >bgrade
 The badger no longer feels second-rate, so it needs no more help.
 
@@ -2963,14 +2998,20 @@ Your score has just gone up by one point
 >parrto
 The parrot can be changed back into a raptor, but not into anything new.
 
+#mistake test for slain/as nil
+>slain
+[if nails are visible]The nails are already dead as a doornail[else]You're trying to SAVE the animals, actually[end if].
+
 >snali
 One of the nails seems to bend a bit.
 >slain
 The nails are already dead as a doornail
 >snail
 Your score has just gone up by one point
+
+#mistake retest for slain/as nil
 >as nil
-You're trying to SAVE the animals, actually.
+[if nails are visible]The nails are already dead as a doornail[else]You're trying to SAVE the animals, actually[end if].
 >snali
 No need to tweak the snail again. It's fine as is.
 
@@ -3127,6 +3168,14 @@ Yeah. Maybe later. If you want to help him, you can ROVE OVER from your dusty st
 
 >z
 
+#mistake test for boarder
+>boarder
+Rustic Citrus doesn't make for great living quarters.
+
+#mistake test for broader
+>broader
+Rustic Citrus is secluded enough.
+
 >maraschion
 The harmonicas whistle, as if something happened.
 >maraschino
@@ -3187,8 +3236,14 @@ That's not something
 No, not verbs. Well, not here by Curtis.
 >spare
 No, not adjectives. Well, not here by Curtis.
+
+#mistake test for rapes/rape
 >rapes
 Some things, you can't joke about. So please, don't try that again.
+>undo
+>rape
+Some things, you can't joke about. So please, don't try that again.
+
 >peasr
 The spear stays as-is. But it can't be that hard to change.
 >pear
@@ -3388,6 +3443,20 @@ Money, or something like it, should not be the guide of you.
 >e
 Clangier Clearing
 
+#mistake test for sell/sell [text]
+>sell
+You are paving the way for commerce, not interacting.
+>sell zozimus
+You are paving the way for commerce, not interacting.
+
+#mistake test for lameness
+>lameness
+No need to judge the nameless salesmen. We can't all be heroes.
+
+#mistake test for spicer
+>spicer
+You don't need to summon someone who deals in spices, or (dated political joke) general falsehoods.
+
 >sell stuff
 You are paving the way for commerce, not interacting
 >sell
@@ -3537,6 +3606,14 @@ You only need the one slot.
 >u
 >n
 Gates Stage
+
+#mistake test for saget
+>saget
+You don't need to be part of Yorpwald's Funniest Home Videos right now.
+
+#mistake test for poring
+>poring
+You ponder the gropin['] roping for a bit. You decide it isn't as worth thinking about as the arena to the north.
 
 >knock gates
 Just KNOCK instead.

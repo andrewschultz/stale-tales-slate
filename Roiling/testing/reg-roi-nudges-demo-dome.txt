@@ -223,6 +223,10 @@ This is a museum! Messing with the exhibits would be very bad form.
 >cedo
 This is a museum! Messing with the exhibits would be very bad form.
 
+#mistake test for coed
+>coed
+Yes, everyone is welcome in the Demo Dome.
+
 #nudge for allow
 >allow
 This is a museum! Messing with the exhibits would be very bad form.
@@ -281,8 +285,13 @@ You can only go south here.
 >w
 Ned's Dens
 
-##nudge for neds
+#mistake test for send
 >send
+Maybe in another game, you could do that, if you walked around right. But not this one.
+
+
+##nudge for neds
+>sedn
 Maybe in another game, you could do that, if you walked around right. But not this one.
 
 >read chronicle
@@ -330,6 +339,11 @@ A welcoming place full of feeling and peace and weird new ideas that it's just g
 >novelal
 You can't change the book's writing. Well, you could, I guess. But this is a museum
 
+>neva
+Yeah, the novel is pretty unbelievable, but it's not there to be profound.
+>lol
+Yeah, the novel is pretty unbelievable, but it's not there to be profound.
+
 #nudge for neva
 >neav
 You can't change the book's writing. Well, you could, I guess. But this is a museum
@@ -337,12 +351,6 @@ You can't change the book's writing. Well, you could, I guess. But this is a mus
 #nudge for lol
 >llo
 You can't change the book's writing. Well, you could, I guess. But this is a museum
-
->neva
-Yeah, the novel is pretty unbelievable, but it's not there to be profound.
-
->lol
-Yeah, the novel is pretty unbelievable, but it's not there to be profound.
 
 >rr
 PAGE 1:
@@ -392,6 +400,9 @@ You don't need to flip anything here, really. Certainly not a room.
 >d
 Sparse Spares
 
+>gonear sparse spares
+
+#mistake test for spears
 >spears
 There's nothing you need a weapon to fight against.
 

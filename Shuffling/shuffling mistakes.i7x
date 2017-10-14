@@ -49,6 +49,7 @@ chapter dry yard
 
 understand "dray" as a mistake ("You don't have enough possessions to need a cart. You probably need somewhere to go, instead.") when player is in Dry Yard.
 
+[def=yard-door]
 understand "rood" as a mistake ("[if yard-door is visible]You already changed the odor, and t[else]T[end if]his game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.") when player is in dry yard.
 
 chapter thickest thickets
@@ -96,8 +97,6 @@ understand "doters" as a mistake ("You don't need people oohing and ahing at you
 understand "steam" as a mistake ("[if canister is broken]You've already done enough with the meats[else]Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam[end if].") when player is in s-e-d.
 
 book store f
-
-understand "rifle" as a mistake ("Shooting things up is not the answer.") when got-flier.
 
 understand "fire [something] at [something]" as a mistake ("You can either FIRE the gun, or you can SHOOT the whatever you want.") when player has shotgun
 
@@ -207,6 +206,8 @@ understand "tillers" as a mistake ("You aren't going to sea in this game.") when
 
 chapter MOOR
 
+understand "rifle" as a mistake ("Shooting things up is not the answer.") when got-flier.
+
 understand "tap" and "tap [text]" as a mistake ("'Ah! You are TAPping your feet to my anapest beat!'[paragraph break](You may want to PUSH something instead.)") when woeful pat is visible.
 
 understand "emir" as a mistake ("You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.") when player is in moor
@@ -221,7 +222,7 @@ understand "trade" and "trade [text]" as a mistake ("Instead of trading, use GIV
 
 understand "sooth" as a mistake ("Close...what you need to do will sooth, in a bit.") when shoot button is visible or hoots button is visible.
 
-understand "otohs" as a mistake ("On the other hand, you might need something more aggressive.") when shoot button is visible or hoots button is visible.
+understand "otohs" as a mistake ("You start fruitlessly double- and triple- thinking whether you should change [if shoot button is visible]back to [end if]the hoots button.") when shoot button is visible or hoots button is visible.
 
 understand "black rood" and "rood" and "blackrood" as a mistake ("Hm, no, keep religion out of it[if black door is visible]--you have what you need[end if].") when roadblock is visible or black door is visible.
 
@@ -259,6 +260,7 @@ understand "snores" as a mistake ("Any noise would be better than the beats, but
 
 understand "senors" as a mistake ("The senors you [want-wanted] are behind the door.") when player is in underside.
 
+[def=nerd door w]
 understand "odor" and "rood" as a mistake ("That door's reinforced. [if Anti-Cool Location is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.") when player is in underside.
 
 chapter cramped red camp
@@ -267,7 +269,7 @@ understand "stent" as a mistake ("Medical procedures aren't necessary here. The 
 
 understand "smitten" as a mistake ("No matter how hard you try to convince yourself they[are-were] useful, you're not smitten with them. They're just ugly. But they could stick really good on the right surface.") when player has Velcro.
 
-understand "tang/tangs" as a mistake ("How the angst gnats taste doesn't matter.") when emitter is angsty.
+understand "tang" and "tangs" as a mistake ("How the angst gnats taste doesn't matter.") when emitter is angstgnatted.
 
 chapter cordoned red condo
 
@@ -305,6 +307,7 @@ understand "lira" as a mistake ("But you're nowhere near Turkey or Lebanon or Sy
 
 chapter anti-cool location
 
+[def=nerd door e]
 understand "odor" and "rood" as a mistake ("It would stink to be you if you did that. The nerds outnumber you and would crucify you.") when player is in Anti-Cool Location.
 
 chapter bassy abyss
@@ -325,7 +328,7 @@ understand "slite" as a mistake ("That's bad spelling, and it won't shrink your 
 
 chapter Leis Isle
 
-understand "lies" and "lie" as a mistake ("[lei-lala]'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is") when player is in isle and leis are in isle.
+understand "lies" and "lie" as a mistake ("'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made [if leis are in lalaland]have dissolved[else]dissolve[end if]. You see the isle for what it is[lei-lala]") when player is in isle and leis are in isle.
 
 chapter rived drive
 
@@ -351,7 +354,9 @@ understand "slink" as a mistake ("[if red bull burdell is visible]You couldn't s
 
 understand "i rot" as a mistake ("Don't give up! Perhaps there are only four or fewer rioters with their heart really in it.") when player is in hotspot and riot is in hotspot.
 
-understand "ether" as a mistake ("They're not bad people. But even bad people don't deserve to vanish like that! [if kilns are visible]Maybe they can get a purpose, able to use those kilns[else]Give them something constructive to do[end if].") when protest is visible.
+understand "ether" as a mistake ("They're not bad people. But even bad people don't deserve to vanish like that! [if kilns are visible]Maybe they can get a purpose, able to use those kilns[else]Give them something constructive to do[end if].") when player is in hotspot and protest is in hotspot.
+
+understand "lacy" as a mistake ("No, the clay is a clue to what the protest really wants to do.") when player is in hotspot and protest is in hotspot.
 
 understand "roister" as a mistake ("That's what's causing the riot, and it's up to you to quiet the rioters--well, the riot.") when protest is visible.
 
