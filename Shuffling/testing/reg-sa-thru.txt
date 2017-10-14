@@ -15,8 +15,11 @@
 >score
 a nervy every
 
+#mistake test for no entry
 >no entry
 Hm, interesting. You wonder if anything is REALLY stopping you from entering.
+
+#mistake test for try
 >try
 You're sure the lecture to the east will be about trying versus doing. Ugh. Maybe the sign means something different.
 
@@ -24,31 +27,49 @@ You're sure the lecture to the east will be about trying versus doing. Ugh. Mayb
 >x sign
 
 #xc
+#mistake retest for try
 >try
 You're sure the lecture to the east will be about trying versus doing. Ugh.
 
-#mistake test for saltmine
+#mistake test for salt mine/saltmine
 >saltmine
 Oh, a new job wouldn't be THAT dreary. But what if there is something else?
+>salt mine
+Oh, a new job wouldn't be THAT dreary. But what if there is something else?
 
+#mistake test for scan
 >scan
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+#mistake test for scan [text]
 >scan xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
+#mistake test for c
 >c
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+#mistake test for c [text]
 >c xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
+#mistake test for r
 >r
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+#mistake test for r [text]
 >r xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
+#mistake test for cr
 >cr
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
+#mistake test for cr [text]
 >cr xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+
+#mistake test for rc
 >rc
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
+#mistake test for rc [text]
 >rc xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 
@@ -56,15 +77,19 @@ That's not something you can say, do or see here. For a list of common verbs, ty
 A Dry Yard
 
 #xc
+#mistake retest for try
 >try
 That's more sensible than the five alternatives, but it's not concrete enough.
 
+#mistake retest for no entry
 >no entry
 You solved that puzzle already. Onward!
 
+#mistake test for dray
 >dray
 You don't have enough possessions to need a cart. You probably need somewhere to go, instead.
 
+#mistake test for yard-door
 >rood
 This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
@@ -77,7 +102,7 @@ Your score has just gone up by one point.
 The door is probably the way out. Best not change it into something else.
 
 #xc
-#mistake retest for rood
+#mistake retest for yard-door
 >rood
 You already changed the odor, and this game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
@@ -102,6 +127,7 @@ Your score has just gone up by one point.
 The bugle emits a sad "don't change me back" noise.
 
 #xc
+#mistake test for use [text]
 >use bugle
 Use is a bit too general for this game's parser to understand. You can SWITCH something, or PUT something IN/ON something, or even ATTACH something to something. You can PUSH a button or OPEN something, as well. Specific items should clue you what to do if you EXAMINE them.
 
@@ -128,9 +154,11 @@ The goat seems content enough as-is.
 >score
 You haven't solved any regions yet. You have the rank of reduced deducer.
 
+#mistake test for sandler
 >sandler
 I award you zero points for that anagramming try, and may God have mercy on your soul. Okay, actually, you're close to one point.
 
+#mistake test for landers
 >landers
 There will be better hints than a manners advice column once you move on, though the darnels make you see red for a bit.
 
@@ -142,9 +170,11 @@ Your score has just gone up by one point.
 You already messed with the darnels.
 
 #xc
+#mistake retest for landers
 >landers
 There will be better hints than a manners advice column once you move on.
 
+#mistake retest for sandler
 >sandler
 I award you zero points for that anagramming try, and may God have mercy on your soul for trying to sneak another point.
 
@@ -156,6 +186,7 @@ You haven't solved any regions yet. You have the rank of stunted student.
 >get phial
 
 #xc
+#mistake test for bactine
 >bactine
 The cabinet bit you, but there was no lasting damage.
 
@@ -168,9 +199,13 @@ Your score has just gone up by one point.
 Hm, you can't think of anything to do with the attics but change them back.
 
 #xc
+#mistake test for magnet/a magnet
 >magnet
 A magnet is two words--but "a" doesn't fully count.
+>a magnet
+A magnet is two words--but "a" doesn't fully count.
 
+#mistake test for get a man
 >get a man
 Very good. Very close. But here's a meta-nag: what kind of man? What would he work with?
 
@@ -182,11 +217,16 @@ Your score has just gone up by one point.
 >gatemna
 Don't scramble the gateman. He's here to help.
 
+#mistake test for mist
+>mist
+No, those TMIs on the broad board are useful.
+
 #xc
 >score
 7 out of 7
 stunted student
 
+#mistake test for remove [something] from [something]
 >remove gadget from cabinet
 To keep things simple, I recommend TAKE as a synonym. REMOVE is also okay, but it defaults to carried or worn items, and I know no way around that.
 
@@ -203,32 +243,47 @@ beeps once
 >ask about gadget
 Powerful. Not as a weapon.
 
+#mistake test for almond
+>almond
+'Don't try anything too nutty!' booms Nat Egam.
+
+#mistake test for angel
+>angel
+You've got enough practical help. You don't need anything supernatural.
+
 >in
 Trips Strip
 
 * _trips
 
+#mistake test for lost
 >lost
 No, you need to find your way through individual stores.
 
+#mistake test for strobe
 >strobe
 You're briefly assaulted by the colors of every single colored Starburst and Skittles you remember chewing. You suspect Store B may have better refreshment to add.
 
+#mistake test for presto
 >presto
 Your magic is not advanced enough to change store p! Well, not this game!
 
 >pf
 store p -> PRESTO in A Roiling Original
 
+#mistake test for routes
 >routes
 Hm, that seems right, but it doesn't work this game!
 
+#mistake test for troves
 >troves
 Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.
 
+#mistake test for towers
 >towers
 That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.
 
+#mistake test for oyster
 >oyster
 Nice try, but that's next game!
 
@@ -272,9 +327,11 @@ Rest of Forest
 >aest
 Your compass feels extra jumbled, but--well, you must be close.
 
+#mistake test for seat
 >seat
 You need the opposite of a seat, here. But at the same time, you're also very close.
 
+#mistake test for sate
 >sate
 There's nothing around you have to sate, thankfully.
 
@@ -282,11 +339,21 @@ There's nothing around you have to sate, thankfully.
 Self-ID Fields
 by one point
 
+#mistake test for nile
 >nile
 Wrong river for the underworld.
 
+#mistake test for file
 >file
 It looks like you can just cut in line. No need to stand.
+
+#mistake test for lien
+>lien
+If they owe something, that's their business. It's too late to change that now.
+
+#mistake test for olefin
+>olefin
+Organic chemistry involves shuffling things around a lot, too, but ... the line of no life is not organic.
 
 >score
 2 out of 16
@@ -294,14 +361,23 @@ It looks like you can just cut in line. No need to stand.
 >e
 Sorted Trodes
 
+#mistake test for tones
 >tones
 You aren't sure you need a booming voice telling you what you can EXAMINE.
 
+#mistake test for destro
 >destro
 It's going to get evil enough even without a high-ranking COBRA officer.
 
+#mistake test for doters
 >doters
 You don't need people oohing and ahing at your skill.
+
+#mistake test for eon/eons
+>eon
+No, you can't afford to wait that long.
+>eons
+No, you can't afford to wait that long.
 
 >noes
 The ones rattle a bit. Maybe you can sense out what they should be.
@@ -321,9 +397,11 @@ Your score has just gone up by one point.
 Anything you do to bend the shades might break them.
 
 #xc
+#mistake test for gat
 >gat
 Hey! Guns are dangerous! It won't be that easy to get one. Besides, changing the tag will break the tagged gadget.
 
+#mistake test for gunshot
 >gunshot
 You need something more tangible than that. Something that could make a gunshot, perhaps
 
@@ -336,12 +414,15 @@ Your score has just gone up by one point.
 >shotgnu
 Anything you do might violate firearm safety rules, or something.
 
+#mistake test for gunshot
 >gunshot
 You need to SHOOT the gun, but you don't have a bullet yet.
 
+#mistake test for gat
 >gat
 Hey! Guns are dangerous! It wasn't that easy to get one. Besides, changing the tag will break the tagged gadget.
 
+#mistake test for gnu
 >gnu
 Shotgun: gnu? Tosh!
 
@@ -358,6 +439,7 @@ bread from the Spam
 >eat spam
 spasm
 
+#mistake test for amps
 >amps
 You are trying to save a magic world, not start a garage band. Besides, there's too much noise behind store M anyway.
 
@@ -370,6 +452,7 @@ Your score has just gone up by one point.
 The maps are probably right, you hope. No need to change them.
 
 #xc
+#mistake test for bared
 >bared
 It's kind of cold a lot of places here. Keep your clothes on.
 
@@ -393,17 +476,26 @@ You've made a full disguise now!
 Your score has just gone up by one point.
 Cruel Ones' Enclosure
 
+#mistake test for lucre
 >lucre
 If there were any treasure here, it'd probably do something terrible to you once you took it.
+#mistake test for cluer
 >cluer
 This place is too stark to offer clues--well, maybe it'd offer WRONG clues.
 
+#mistake test for padres
 >padres
 Bringing holy men down here would probably kill them.
+
+#mistake test for rasped
 >rasped
 The spread makes a raspy noise, but you probably need to think up something more concrete. Not, like, cement concrete.
+
+#mistake test for spader
 >spader
 James Spader is pretty cool, but he can't help with supernatural stuff. Okay, maybe he could, but I couldn't afford the appearance fee.
+
+#mistake test for parsed
 >parsed
 You can just read the spread instead. The messages here aren't cryptic enough to be parsed.
 
@@ -434,15 +526,20 @@ Cr-r-r-r-k.
 Cr-r-r-r-k.
 
 #xc
+#mistake test for fire [something] at [something]
 >fire shotgun at grinder
 You can either FIRE the gun, or you can SHOOT the whatever you want.
 
->shoot grinder with shotgun
+#mistake test for shoot [something] with [something]
+>shoot shotgun at grinder
 You can either FIRE the gun, or you can SHOOT the whatever you want. No need for a second noun.
 
+
+#mistake test for grin
 >grin
 You smile confidently. You'll figure how to use the grinder.
 
+#mistake test for steam
 >steam
 Very good try. But you need to change the meats into something else entirely. Something you can handle and use. Plus, too cold for steam.
 
@@ -453,9 +550,11 @@ LIVERS.
 Your score has just gone up by one point.
 
 #xc
+#mistake test for steam
 >steam
 You've already done enough with the meats.
 
+#mistake test for grin
 >grin
 You smirk at the grinder you trashed.
 
@@ -486,6 +585,7 @@ Your score has just gone up by one point.
 red asp!
 
 #xc
+#mistake test for spared
 >spared
 That is too passive, to ask to be spared.
 
@@ -515,12 +615,14 @@ Your score has just gone up by one point.
 Hard to beat silver. It's what it should be.
 
 #xc
+#mistake test for gunshot
 >gunshot
 You need to SHOOT the gun, but you need to load it first.
 
 >put silver in shotgun
 
 #xc
+#mistake test for gunshot
 >gunshot
 You need to SHOOT the gun.
 
@@ -528,9 +630,11 @@ You need to SHOOT the gun.
 Ghouls' Slough
 
 #xc
+#mistake test for god
 >god
 You want to tempt the supernatural in somewhere this hellish? Phew.
 
+#mistake test for gob
 >gob
 The bog expands into a big ol' gob and sucks you down. Congratulations, there aren't many ways to die in this game, but you found one. Fortunately, you can undo this.
 UNDO
@@ -549,9 +653,11 @@ Your score has just gone up by one point.
 You don't need magic. You have a weapon.
 
 #xc
+#mistake test for steel
 >steel
 You'd be crushed if the sleet turned to steel.
 
+#mistake test for unpile
 >unpile
 They'd be much less dangerous left in a pile. Maybe you have something that can do that!
 
@@ -572,11 +678,12 @@ Centrifuge
 >score
 0 out of 27 total points
 
+#mistake test for a lid
 >a lid
 Changing the dial would leave you stuck.
 
+#mistake test for turn [text]
 >turn x
-
 You can probably TURN the dial to a number, e.g. 99
 
 #xc
@@ -594,6 +701,7 @@ Your score has just gone up by one point.
 That's not something you can say, do or see here.
 
 #xc
+#mistake retest for turn [text]
 >turn x
 You can probably just SWITCH something with two text settings
 
@@ -605,6 +713,7 @@ The Nick
 The Nick
 
 #xc
+#mistake test for thicken
 >thicken
 You might rather thin-nen to slip through the bars, but you can't.
 
@@ -627,6 +736,10 @@ You feel a slight psychic push-pull coming from the bottle of CATHOUSE perfume. 
 Your score has just gone up by one point.
 >hotsauec
 Best not to get too crazy with food preparation.
+
+#mistake test for littoral
+>littoral
+How frustrating! A shoreline doesn't appear. You're still stuck in here, but you know there's another way out.
 
 #xc
 >tortilal
@@ -727,6 +840,7 @@ Best not to get too crazy with food preparation.
 >s
 A Round Den, Unadorned
 
+#mistake test for a lid
 >a lid
 You don't need to deal with the dial, now.
 
@@ -745,6 +859,7 @@ The straw remains motionless.
 >score
 12 out of 27
 
+#mistake test for mope
 >mope
 You mope, but you imagine no poem.
 
@@ -754,6 +869,10 @@ You feel a slight psychic push-pull coming from all around. Keep at it.
 
 >moor
 You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.
+
+#mistake test for shoe
+>shoe
+You need more than one shoe.
 
 #xc
 >shose
@@ -781,6 +900,7 @@ You doubt the sack/cask has a triple purpose.
 
 >get sack
 
+#mistake test for cato
 >cato
 You don't need to know your classics, here.
 
@@ -797,14 +917,26 @@ No need for fashion tweaks.
 Your score has just gone up by one point.
 Moor
 
+#mistake test for rifle
+>rifle
+Shooting things up is not the answer.
+
+#mistake test for emir
+>emir
+You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.
+
 #xc
 >moro
 The moor sways a bit. You do some brief mental calculation. There's no third place between them.
 You feel a slight psychic push-pull coming from all around. Keep at it.
 
+#mistake test for tap/tap [text]
 >tap
-"Ah! You are TAPping your feet to my anapest beat!"
+'Ah! You are TAPping your feet to my anapest beat!'[paragraph break](You may want to PUSH something instead.)
+>tap [text]
+'Ah! You are TAPping your feet to my anapest beat!'[paragraph break](You may want to PUSH something instead.)
 
+#mistake test for mope
 >mope
 Woeful Pat can't decide if you're mocking him or trying to outdo him. But he is sure you're not listening carefully enough to his poem, so he coughs briefly to get your attention.
 
@@ -828,17 +960,22 @@ Your score has just gone up by one point.
 >blackdoro
 The black door just sits there.
 
-#xc
+#mistake test for black rood/rood/blackrood
 >black rood
-Hm, no, keep religion out of it--you have what you need.
+Hm, no, keep religion out of it[if black door is visible]--you have what you need[end if].
+>rood
+Hm, no, keep religion out of it[if black door is visible]--you have what you need[end if].
+>blackrood
+Hm, no, keep religion out of it[if black door is visible]--you have what you need[end if].
 
+#mistake test for yah
 >yah
 It's not nice to make fun of the peasant for having hay he doesn't want
 
->trade straw to peasant
+#mistake test for trade/trade [text]
+>trade
 Instead of trading, use GIVE X to Y.
-
->trade straw
+>trade [text]
 Instead of trading, use GIVE X to Y.
 
 >give straw to peasant
@@ -852,9 +989,11 @@ You're glad you've got the hay, but you're not excited, and you can't fake it.
 >x poetry
 lots of smilies
 
+#mistake test for similes
 >similes
 more forced than the smilies
 
+#mistake test for mope
 >mope
 You try, but the smilies on the poem prevent you.
 
@@ -867,9 +1006,11 @@ Your score has just gone up by one point.
 The missile emits an almost giggly sound but doesn't actually change.
 
 #xc
+#mistake test for mope
 >mope
 You mope, but it doesn't change the poem. Or even give you an idea for one.
 
+#mistake test for similes
 >similes
 You can't create something abstract from something concrete. Or plutonium. Or whatever that missile's made of.
 
@@ -877,6 +1018,7 @@ You can't create something abstract from something concrete. Or plutonium. Or wh
 >i
 folded paper plane
 
+#mistake test for nepal
 >nepal
 Whoah! Teleporting there would be too cold even with that coat on. Plus, you have no mountain climbing gear.
 
@@ -891,9 +1033,17 @@ The panel bleeps a "stop that" sort of warning.
 #xc
 >room
 
+#small detour for mistake conditional text
+>w
+#mistake retest for littoral
+>littoral
+How frustrating! A shoreline doesn't appear. You're still stuck in here, but maybe there's another way out.
+>e
+
 >n
 Stiller Trellis
 
+#mistake test for tillers
 >tillers
 You aren't going to sea in this game.
 
@@ -916,28 +1066,39 @@ Sacred Cedars
 >cask
 The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright.
 
+#mistake test for lois
 >lois
 Lois will not pour the oils in the cask for you, but she is not stopping you.
 
 >sack
 #xc
+#mistake test for lois
 >lois
 You suddenly feel discontent at your container of choice.
 
+#mistake test for ecards/e-cards
 >ecards
 Even if those were physical things, they'd be--well, less than religious. You don't need to change the cedars.
+>e-cards
+Even if those were physical things, they'd be--well, less than religious. You don't need to change the cedars.
+
+#mistake test for cadres
 >cadres
 You must do this on your own.
 
+#mistake test for potus
 >potus
 This is hopefully an apolitical game, and I don't even want to get into whether the current POTUS would help or hurt in this situation, or whether they even belong in such a holy place.
 
+#mistake test for pray
 >pray
 It's been so long, you only mouth a "Yarp!"
 
+#mistake test for sever
 >sever
 Violence or vandalism in such a holy place? For shame.
 
+#mistake test for serve
 >serve
 You must serve by going forth on your mission of warlikeness and love.
 
@@ -948,6 +1109,7 @@ Changing Lois is highly unlikely, and you should possess the oils before doing a
 >fill cask
 Gainly laying
 
+#mistake test for lois
 >lois
 Lois is silent. You figure what to pour, where
 
@@ -970,6 +1132,7 @@ Your score has just gone up by one point.
 The soil is right as-is, but maybe something can go on it.
 
 #xc
+#mistake test for lois
 >lois
 Lois may not hear you out here, and she may only give marginal hints in the cedars.
 
@@ -982,6 +1145,7 @@ Gainly laying
 SO NOW HALLS SHALL SWOON
 
 #xc
+#mistake test for lois
 >lois
 You feel guilt at asking Lois for more
 
@@ -994,6 +1158,7 @@ Crashing Archings
 >hallwya
 You already have a passage east. Don't close it.
 
+#mistake test for lois
 >lois
 Lois may not hear you out here--she has left you to your own devices, but you must be close
 
@@ -1021,10 +1186,14 @@ RESULT WITH LUSTER
 >put panel on silo
 
 #xc
+#mistake test for terse
 >terse
 All five wrong.
 
+#mistake test for reset/reset button
 >reset
+Unfortunately, it's not QUITE as easy as just pushing a reset button
+>reset button
 Unfortunately, it's not QUITE as easy as just pushing a reset button
 
 >stere
@@ -1037,8 +1206,13 @@ Your score has just gone up by one point.
 No, the steer button HAS to be right.
 
 #xc
+#mistake test for terse
 >terse
 Already good.
+
+#mistake test for otohs
+>otohs
+You start fruitlessly double- and triple- thinking whether you should change the hoots button
 
 >shoto
 You suppress a few minor swears as you realize that can't be right.
@@ -1049,7 +1223,12 @@ Your score has just gone up by one point.
 >shoto
 No, the shoot button HAS to be right.
 
+#mistake test for otohs
+>otohs
+You start fruitlessly double- and triple- thinking whether you should change back to the hoots button
+
 #xc
+#mistake test for sooth
 >sooth
 Close...what you need to do will sooth, in a bit.
 
@@ -1138,7 +1317,46 @@ Your score has just gone up by one point.
 >s
 
 >s
-Elm Train Terminal
+Tramline Terminal
+
+#mistake test for lair/lairs
+>lair
+That might work, if the rail did not lead to a lair already.
+>lairs
+That might work, if the rail did not lead to a lair already.
+
+#mistake test for liar/liars
+>liar
+The number of liars the rails would create would be shocking.
+>liars
+The number of liars the rails would create would be shocking.
+
+#mistake test for gip
+>gip
+Yeah, whoever bought it probably did get gipped, but that doesn't help get rid of it.
+
+#mistake test for none
+>none
+Bummer! You'd think that worked to get rid of the pig, but that's probably too abstract a noun. Probably have to deal with the whole neon pig.
+
+#mistake test for sap/saps
+>sap
+The PSA is sappy, but it's not literally sappy. And sticky stuff won't get you up the wall.
+>saps
+The PSA is sappy, but it's not literally sappy. And sticky stuff won't get you up the wall.
+
+#mistake test for asp/asps
+>asp
+That's just what you need, a snake chasing you with everything else going on.
+>asps
+That's just what you need, a snake chasing you with everything else going on.
+
+#mistake test for spa/spas
+>spa
+You haven't earned a break yet.
+>spas
+You haven't earned a break yet.
+
 
 >u
 (on the fuzzy looking wall)
@@ -1198,22 +1416,37 @@ Your score has just gone up by one point.
 The velcro remains tangled.
 
 #xc
+#mistake test for smitten
 >smitten
 No matter how hard you try to convince yourself they're useful, you're not smitten with them. They're just ugly. But they could stick really good on the right surface.
 
 >s
 Undesired Underside
 
+#mistake test for baste/baste beats/baste beast
+>baste
+I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
+>baste beats
+I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
+>baste beast
+I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
+
+#mistake test for snores
 >snores
 Any noise would be better than the beats, but without the sensor, you're probably not getting by the door.
+
+#mistake test for senors
 >senors
 The senors you want to see are behind the door.
 
 >w
 The Ol' Hotel
 
+#mistake test for lucre
 >lucre
 Ugg. You're not sure what kind of lucre you need, but maybe something that hasn't been in the night thing. Even something the night thing was sitting on.
+
+#mistake test for cluer
 >cluer
 Hmm. Well, if you were able to throw something in the ulcer, maybe it would wedge in there. Something that would disagree with the thing.
 
@@ -1245,6 +1478,7 @@ Your score has just gone up by one point.
 Nothing at all seems to happen this time. You've probably done what you can.
 
 #xc
+#mistake test for stalker
 >stalker
 Hm. If the talkers became a stalker, the only person to stalk would be you. You can't change who they are inside, but maybe you can give them a fright.
 
@@ -1263,11 +1497,18 @@ Your score has just gone up by one point.
 The controls stay as they are.
 
 #xc
+#mistake test for stent
 >stent
 Medical procedures aren't necessary here. The noise is too distracting anyway.
 
 >e
 Elf Row's Flowers
+
+#mistake test for trounce/trounce counter
+>trounce
+The faeries have very magic and very demoralizing anti-vandalism spells.
+>trounce counter
+The faeries have very magic and very demoralizing anti-vandalism spells.
 
 >give gardenia to faeries
 Powerful pure flow
@@ -1296,12 +1537,14 @@ The keycard remains stiff. Looks like it's as it should be.
 >w
 >s
 
+#mistake test for bates
 >bates
 You don't need to deal with a knife-wielding psycho so near a hotel, which is close enough to a motel.
 
 >s
 Elm Train Terminal
 
+#mistake test for bates
 >bates
 You don't need to deal with a knife-wielding psycho on top of all this.
 
@@ -1311,9 +1554,12 @@ The PSA is sappy, but it's not literally sappy. And sticky stuff won't get you u
 That's just what you need, a snake chasing you with everything else going on.
 >spa
 You haven't earned a break yet.
+
+#mistake test for pass
 >pass
 You take a pass on etiquette advice. You need results right now!
 
+#mistake test for tar
 >tar
 That'd be neat, make the wall sticky so you could climb and deal with that stupid pig...but you might get stuck to it, too. Need something clingy but less gooey.
 
@@ -1332,12 +1578,17 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 #xc
+#mistake test for rat
 >rat
 No, you don't need a rat chasing you around.
+
 >lair
 That might work, if the rail did not lead to a lair already.
+
 >liar
 The number of liars the rails would create would be shocking.
+
+#mistake test for lira
 >lira
 But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which don't use lira any more anyway. Plus, you don't need money.
 
@@ -1389,10 +1640,19 @@ Man, I've done enough work today
 
 >s
 
+#mistake test for nerd door w
+>odor
+That door's reinforced. [if Anti-Cool Location is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.
+>rood
+That door's reinforced. [if Anti-Cool Location is visited]The nerds[else]Whoever's behind there[end if] made sure it was protected against all sorts of crazy things.
+
 >e
 Your score has just gone up by one point.
 
+#mistake test for nerd door e
 >odor
+It would stink to be you if you did that. The nerds outnumber you and would crucify you.
+>rood
 It would stink to be you if you did that. The nerds outnumber you and would crucify you.
 
 >ask nerds about darkness
@@ -1405,10 +1665,15 @@ That door's reinforced. The nerds made sure it was protected against all sorts o
 Bassy Abyss
 
 #xc
+#mistake test for reins
 >reins
 Horsing around like that won't hold back the beats. You need to get a grip another way, but you're on the right track.
+
+#mistake test for risen
 >risen
 You don't need the siren's volume or the beats' volume to have risen. Oh, no.
+
+#mistake test for rinse
 >rinse
 No water source. You can do better than short-circuiting the siren with water, though
 
@@ -1419,6 +1684,8 @@ You feel a slight psychic push-pull coming from the siren. Keep at it.
 Your score has just gone up by one point.
 >resni
 The dust is dust now.
+
+#mistake test for rinse
 >rinse
 Time for that after you sure-handedly slay the final enemy, here.
 
@@ -1460,6 +1727,12 @@ Dude! So you
 Man, I've done enough work today
 #double lines
 
+#mistake test for tang/tangs
+>tang
+How the angst gnats taste doesn't matter.
+>tangs
+How the angst gnats taste doesn't matter.
+
 >s
 >e
 Your score has just gone up by one point.
@@ -1494,6 +1767,7 @@ Trips Strip
 Your score has just gone up by one point.
 
 #xc
+#mistake test for gab
 >gab
 That's not a powerful enough noise to fight the beats.
 
@@ -1652,20 +1926,33 @@ Your score has just gone up by one point.
 
 #xc
 >enter resort
-Tiles
+Astral Altars
+
+#mistake test for lites
 >lites
 Light isn't the problem here. It's not having anywhere to go.
+
+#mistake test for slite
+>slite
+That's bad spelling, so bad it makes me see red, and it won't help you move on.
 
 #xc
 >islet
 Your score has just gone up by one point.
-Islet
+
+Leis Isle
+
+#mistake test for lies/lie
+>lies
+'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made dissolve. You see the isle for what it is
+>lie
+'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made have dissolved. You see the isle for what it is
+
 
 #xc
+#mistake test for lites
 >lites
 Light isn't the problem here. It's getting off the islet
->slite
-That's bad spelling, and it won't shrink your problems.
 
 #xc
 >score
@@ -1680,13 +1967,18 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >e
-An Odd Low Woodland
+Rived Drive
+
+#mistake test for verdi
+>verdi
+You don't need a musical score for this adventure.
 
 #xc
 >slope
 Your score has just gone up by one point.
 
 #xc
+#mistake test for prigs
 >prigs
 Grumbling about prigs, or showing those prigs, won't help now. You should probably make the sprig into something useful instead.
 
@@ -1694,13 +1986,19 @@ Grumbling about prigs, or showing those prigs, won't help now. You should probab
 Your score has just gone up by one point.
 
 #xc
+#mistake test for prigs
 >prigs
 Grumbling about prigs, or showing those prigs, won't help now. You should probably use the grips to climb instead.
+
+#mistake test for pores
+>pores
+Almost. But you don't need to create holes.
 
 >ropes
 Your score has just gone up by one point.
 
 #xc
+#mistake test for loot
 >loot
 You don't have time for treasure with Red Bull Burdell waiting.
 
@@ -1708,26 +2006,44 @@ You don't have time for treasure with Red Bull Burdell waiting.
 Your score has just gone up by two points.
 
 #xc
+#mistake test for prose
 >prose
 There's not much of that left in this game, and talking won't help you up the slope.
+
+#mistake test for pores
 >pores
 No, you had it.
+
+#mistake test for poser
 >poser
 You mutter a small epithet at where Red Bull Burdell could be. No, he's not around, but he must be near.
 
 >e
 Potshot Hotspot
 
+#mistake test for spotter
+>spotter
+No, you see [']em, you just need a better way to disperse [']em.
+
+#mistake test for i rot
+>i rot
+Don't give up! Perhaps there are only four or fewer rioters with their heart really in it.
+
+#mistake test for lacy
 >lacy
 No, the clay is a clue to what the protest really wants to do.
 
 >trio
 Your score has just gone up by one point.
 
+#mistake retest for irot
+
 #xc
+#mistake retest for lacy
 >lacy
 No, the clay is a clue to what the trio really wants to do.
 
+#mistake test for achin
 >achin
 You don't have the ability to dish out an achin', but you see red from wanting to do so.
 
@@ -1735,6 +2051,7 @@ You don't have the ability to dish out an achin', but you see red from wanting t
 Your score has just gone up by one point.
 
 #xc
+#mistake test for slink
 >slink
 Too many people are watching for you to slink away
 
@@ -1742,8 +2059,11 @@ Too many people are watching for you to slink away
 Your score has just gone up by one point.
 
 #xc
+#mistake test for ether
 >ether
 They're not bad people. But even bad people don't deserve to vanish like that! Maybe they can get a purpose, able to use those kilns.
+
+#mistake test for roister
 >roister
 That's what's causing the riot, and it's up to you to quiet the rioters--well, the riot.
 
@@ -1751,7 +2071,8 @@ That's what's causing the riot, and it's up to you to quiet the rioters--well, t
 Your score has just gone up by one point.
 
 #xc
-#mistake text for brb
+
+#mistake test for brb
 >brb
 You don't know him that well. No riffing on his initials!
 
@@ -1765,7 +2086,23 @@ Your score has just gone up by one point.
 Quit screwing around and focus on yourself. NO, not like THAT. Geez
 
 >e
-Roman Manor
+Means Manse
+
+#mistake test for blamer
+>blamer
+No, we know who's to blame. He's done with. Time to move on.
+
+#mistake test for amen/name
+>amen
+Use the plural, here.
+>name
+Use the plural, here.
+
+#mistake test for mensa/name
+>mensa
+No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey wass not particularly relevant.[paragraph break]Even if they wouldn't, well, the Means Manse is for you and you alone.
+>name
+No, you couldn't put up with a MENSA meeting just now. Perhaps they would explain how they would've done things quicker, or how your journey wass not particularly relevant.[paragraph break]Even if they wouldn't, well, the Means Manse is for you and you alone.
 
 #mistake retest for sex it
 >sex it
