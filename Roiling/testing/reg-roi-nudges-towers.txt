@@ -13,12 +13,16 @@
 >seed 1
 >gonear trefoil
 
+#mistake test for new id
 >new id
 You need to make sure Edwin's new ID is something negative.
+
+#mistake test for wendi/widen
 >wendi
 Now that would be too embarrassing. Maybe you could embarrass him a little, though.
 >widen
 Now that would be too embarrassing. Maybe you could embarrass him a little, though.
+
 >winde
 Edwin shakes his head, but a glare from Rodney sets him straight--for now.
 >wined
@@ -28,10 +32,15 @@ Blake shakes his head, but a glare from Rodney sets him straight--for now.
 >bleak
 up by one point
 
->tensre
-Ernest shakes his head, but a glare from Rodney sets him straight--for now.
+#mistake test for resent
 >resent
 But how could you make Ernest feel so he'd resent his position?
+#mistake test for enters
+>enters
+You'll need a few exits, here, really.
+
+>tensre
+Ernest shakes his head, but a glare from Rodney sets him straight--for now.
 >tenser
 up by one point
 
@@ -69,18 +78,24 @@ Bredo shakes his head, but a glare from Rodney sets him straight--for now.
 >bored
 up by one point
 
+#mistake test for recalm/recalm marcel
 >recalm
 Right idea, but it might work better in another area.
+>recalm marcel
+Right idea, but it might work better in another area.
+
 >calmre
 Marcel shakes his head, but a glare from Rodney sets him straight--for now.
 >calmer
 up by one point
 
-#2 extra mistakes
+#mistake test for wander
 >wander
-A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead.
+A glare from Rodney snaps Andrew back from gazing outside. Perhaps you'll have to change Andrew's beliefs, or something, instead[if cur-score of towers is 1], like you changed [random warrior in lalaland][end if].
+#mistake test for warden
 >warden
 Andrew doesn't look like he has the leadership qualities necessary to become to main warden over Rodney.
+
 >warnde
 Andrew shakes his head, but a glare from Rodney sets him straight--for now.
 >warned
@@ -105,8 +120,10 @@ Goldy shakes his head, but a glare from Rodney sets him straight--for now.
 >godly
 up by one point
 
+#mistake test for radly
 >radly
 Boo! That's too subtle for here. Maybe you could make Daryl look different so he feels less radly about himself.
+
 >laryd
 Daryl shakes his head, but a glare from Rodney sets him straight--for now.
 >lardy
@@ -589,6 +606,12 @@ The pastry is for eating, not for changing.
 #nudge for tart
 >tatr
 Neither the singular nor the plural version of a pastry can change it. They're for helping you with other things, anyway.
+
+#mistake test for xray/x-ray
+>xray
+You don't have x-ray vision right now.
+>x-ray
+You don't have x-ray vision right now.
 
 >n
 Scope Copse

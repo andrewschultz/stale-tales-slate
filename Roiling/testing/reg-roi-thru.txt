@@ -2188,6 +2188,14 @@ Your score has just gone up by one point
 >creayk
 That's not something
 
+>take all
+
+#mistake test for retoast/retoast [text]
+>retoast
+You can just TOAST or EAT a pastry once you have it.
+>retoast zozimus
+You can just TOAST or EAT a pastry once you have it.
+
 >n
 Scope Copse
 
@@ -2216,6 +2224,10 @@ The diners glare at you, then look up at the sky, slightly worried.
 Your score has just gone up by one point
 >rinsde
 That's not something
+
+#mistake test for bustler
+>bustler
+The butlers are plural, and anyway, they're bustling plenty as-is.
 
 >subtlre
 The robot almost looked a bit odd there for a moment.
@@ -2261,6 +2273,14 @@ That's not something
 >n
 Anemic Cinema
 
+#mistake test for ice man/iceman
+>ice man
+The iceman cometh, and your life passeth.
+>undo
+>iceman
+The iceman cometh, and your life passeth.
+>undo
+
 >mardier
 Your score has just gone up by one point
 >undo
@@ -2271,10 +2291,14 @@ Your score has just gone up by one point
 >marride
 That's not something
 
+#mistake test for sweat/waste/waste ire
 >sweat
+You waste sweat and ire thinking what to do.
+>waste
 You waste sweat and ire thinking what to do.
 >waste ire
 You waste sweat and ire thinking what to do.
+
 >weariets
 The wait-seer looks bored and distracted for a second.
 >weariest
@@ -2282,10 +2306,12 @@ Your score has just gone up by one point
 >weariets
 That's not something
 
+#mistake test for granites/granite
 >granites
 They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't til they're gone.
 >granite
 They're already stonewalling you from going west. You're not sure you need to, but if you do, you won't til they're gone.
+
 >angstire
 The ingrates seem to wonder if it's worth complaining to you for a moment. You get the feeling that they may start off angriest, but if you could bend their mood, they might lose their willpower and give up.
 >angstier
@@ -2344,8 +2370,12 @@ That's not something
 >swede
 That might make the weeds FROM Scandinavia, but it wouldn't SEND them there. The man who is not Flemish shakes his head, sure you're one of those people too concerned about nationalities.
 
+#mistake test for tap in/tapin
 >tap in
 You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.
+>tapin
+You don't have time for soccer/football, and unfortunately, it's not a five-letter solution. Perhaps you should read what the paint says.
+
 >himsefl
 The man picks at his paint, as if he could almost peel it off.
 >himself
@@ -2632,6 +2662,10 @@ Your score has just gone up by one point
 >dinyg
 You've got something nice in the flowerpot. Better not mess with it.
 
+#mistake test for occurs
+>occurs
+You need to make something occur.
+
 >spectaculra
 Hmm...no rumbling from the curst palace. Big words have all sorts of possibilities.
 
@@ -2691,9 +2725,14 @@ Your score has just gone up by one point
 >bareyl
 You've dealt with the barley. You can move around a lot more, now.
 
+#mistake test for dialect
+>dialect
+No, a particular accent or odd word won't destroy the Edictal Citadel. Elvira checked off on all that.
+
 >score
 1 out of 29
 
+#mistake test for increds
 >increds
 You marvel at the possible power of the cinders and even see red at the thought of giving them up.
 
@@ -2703,6 +2742,10 @@ No, the adverb.
 Ed Riley looks pleased he's pressured you into laziness.
 >lied
 You can't think of anything to lie about that would sucker Ed Riley. You try to tell him the people who gave him this "job" lied but realize he doesn't know who you are.
+
+#mistake test for yer
+>yer
+Yup! It's Ed's!
 
 >reediyl
 Ed Riley looks askance at his deli rye, as if it had some bad aftertaste.
