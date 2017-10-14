@@ -24031,7 +24031,7 @@ check inserting into lost slot:
 		say "The box splutters for a while but eventually rejects the [noun]. Still, you must be close to having the right thing." instead;
 	if noun is not s-i:
 		say "That doesn't fit." instead;
-	say "As perform the toll-toss, you think you hear tots['] LOLs. The box opens up, dissolving to reveal a popstar's passport.";
+	say "As you perform the toll-toss, you think you hear tots['] LOLs. The box opens up, dissolving to reveal a popstar's passport.";
 	now storage box is in lalaland;
 	now s-i is in lalaland;
 	now player has popstar's passport;

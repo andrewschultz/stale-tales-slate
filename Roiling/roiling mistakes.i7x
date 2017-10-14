@@ -122,6 +122,7 @@ book routes
 
 understand "among" as a mistake ("Maybe if there were mango trees around.") when mrlp is routes.
 
+[def=ouster-in-routes]
 understand "ouster" as a mistake ("You're the ouster here, trying to get by the routes.") when mrlp is routes.
 
 understand "follow [text]" as a mistake ("This game doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.") [for ROUTES]
@@ -166,6 +167,7 @@ understand "beneath" as a mistake ("Nice try, but wrong preposition for the situ
 
 understand "noops" as a mistake ("The snoop spoon isn't as complicated as assembly language.") when player has snoop spoon.
 
+[def=under-generic]
 understand "under" as a mistake ("Wrong preposition.") when player is in mesa and the-b is in mesa.
 
 chapter cleric circle
@@ -218,7 +220,7 @@ understand "race" as a mistake ("Races scare you without the proper motivation f
 
 understand "acre" as a mistake ("That farm-[if player is male]boy[else]girl[end if] terminology won't help show you give a darn in the big city.") when player is in Loather Rathole and cold is not visible.
 
-understand "hate" as a mistake ("You don't want to get burnt up with hate[if heat is visible], and that won't get back your super purse like racing after that guy[end if].") when cold is not visible.
+understand "hate" as a mistake ("You don't want to get burnt up with hate[if heat is visible], and that won't get back your super purse like racing after that guy[end if].") when cold is not visible and player does not have super purse.
 
 chapter Boarded Roadbed
 
@@ -232,7 +234,7 @@ chapter Drain Nadir
 
 understand "praised" as a mistake ("You would like to be, but you can't just want others to. Change comes from within.") when player is in Drain Nadir.
 
-understand "aspired" as a mistake ("Now is not the time to fret on past dreams.") when player is in Drain Nadir.
+understand "aspired" as a mistake ("Now is not the time to fret solely on past dreams. Fret on the hopeless present and future as well!") when player is in Drain Nadir.
 
 chapter Boredom Bedroom
 
@@ -396,6 +398,7 @@ chapter posh hops shop
 
 understand "insert" as a mistake ("Almost, with the stein, there.") when stein is in hops shop and player is in hops shop.
 
+[def=insert stein]
 understand "insert [something]" as a mistake ("Almost, but with the stein, there.") when stein is in hops shop and player is in hops shop.
 
 understand "unset" as a mistake ("[if tunes are reflexive]You've no clue how to start. Perhaps the jukebox has instructions[else]You already took care of the jukebox tunes[end if].") when jukebox is in hops shop and player is in hops shop.
@@ -782,9 +785,7 @@ understand "spicer" as a mistake ("You don't need to summon someone who deals in
 
 understand "precis" as a mistake ("It's already a precis, of sorts. Less highfalutin['] words will work better here.") when player is in clearing.
 
-understand "silt" as a mistake ("Dirty way to slash prices.") when player is in clearing.
-
-understand "slit" as a mistake ("Dirty way to slash prices.") when player is in clearing.
+understand "silt" and "slit" as a mistake ("Dirty way to slash prices.") when player is in clearing.
 
 understand "go man" as a mistake ("That's the right idea but the wrong sorts of words.") when player is in clearing and mango is off-stage.
 
