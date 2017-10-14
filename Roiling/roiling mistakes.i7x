@@ -318,7 +318,7 @@ understand "elo" as a mistake ("Somehow, you doubt Leo has a chess rating. Or en
 
 understand "eol" as a mistake ("Somehow, you doubt Leo is into computers.") when Leo is visible.
 
-understand "leonard" and "renaldo" and "leandro" and "rolande" as a mistake ("That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You [if rand is fightin]just need to outsmart them[else]wouldn't want that, now they're your friends[end if].") when Rand is visible.
+understand "leonard" and "renaldo" and "leandro" and "rolande" as a mistake ("That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You [if rand is fightin]just need to outsmart them[else if leo is washed up]need to find a way to cheer them up[else]wouldn't want that, now they're your friends[end if].") when Rand is visible.
 
 understand "asswhup" as a mistake ("[if Leo is eager and Rand is eager]They're on your side. And you'll need to move on from them, but not with violence.[else if Leo is washed up or Rand is washed up]You don't exactly have a physical advantage here.[otherwise]No chance.[end if]") when wzup is visible
 
@@ -344,7 +344,7 @@ chapter nowt town
 
 understand "glib" as a mistake ("You'll need to be glib with something like g-lib later. If you get through this maze. In fact, maybe being glib might be easier than walking through.") when player is in nowt town.
 
-understand "lawls" and "lawl" as a mistake ("You try to laugh at the walls, but [if cur-score of presto is 0]such actions don't seem to work here[else]that Internet neologism is a hybrid action and interjection and thus fails[end if].") when maze walls are visible.
+understand "lawls" and "lawl" as a mistake ("You try to laugh at the walls, but [if cur-score of presto is 0]such actions don't quite seem to work here[else]then that just might get rid of them and not the electricity restricting your journey through Nowt Town[end if].") when maze walls are visible.
 
 chapter room 3 of maze
 
@@ -367,8 +367,6 @@ understand "ptah" as a mistake ("[if hogs are in phat path]If we were in ancient
 understand "slog on" as a mistake ("You need Leo and Rand to go away, for now, before you can slog on.") when player is in Phat Path and lawl wall is in lalaland and Leo is in Phat Path.
 
 understand "alter" as a mistake ("Vandalism! For shame!") when smart people sign is visible.
-
-understand "so long" and "solong" and "tough" and "later" as a mistake ("'But we ain't ready to go yet, boss!'") when lawl wall is in saps' pass and Leo is eager.
 
 chapter hacks' shack
 
@@ -470,7 +468,7 @@ understand "lapins" as a mistake ("Cute bunnies can make any game better, but ha
 
 understand "brides" as a mistake ("No, no time to think about romance, now.") when crate is visible.
 
-understand "naps" as a mistake ("You need action, here! Maybe not an exhausting one, but some action.") when span pans are visible.
+understand "naps" as a mistake ("You need action, here! Maybe nothing too exhausting, but some action nonetheless.") when span pans are visible.
 
 understand "pone" as a mistake ("The message is corny, but the door's a piece of cake [if knob is not reflexed]once you figure[else]since you figured[end if] what to do with the knob.") when span pans are in lapsin' plains and player is in lapsin' plains.
 

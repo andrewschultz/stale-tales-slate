@@ -9,10 +9,28 @@
 
 * _manor
 
->walkthrough
+#mistake test for basement
+>gonear largely gallery
+>basement
+Well, if you want points for that, you'll need to go back to the study.
+>gonear dusty study
+#!above is a cheap cheat test to pick off an obscure mistake
+
+#mistake test for walkthrough or walkthru
+>walkthrough or walkthru
 You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.
->walkthru
-You can HINT an individual thing or ask for a general HINT. There is also a walkthrough.txt that should've come with the game. It should be linked to at IFDB or somewhere.
+
+#mistake test for use [text]
+>use zozimus
+The verb USE is a bit too nonspecific for the parser. You can SWITCH things, or OPEN doors[if player has settler], or SCAN with the settler[end if][if player has whistle], or PLAY the whistle[end if]. You should also be able to EXAMINE something you want to use, and the game should hint a verb.
+
+#mistake test for knock [text]
+>knock zozimus
+Just KNOCK instead.
+
+#mistake test for tut
+>tut
+tut 1 = tutorial with nothing scanned, tut 2 = with all scanned.
 
 >hint xyz
 You've come across nothing like that, yet. Or perhaps it is way in the past by now.
@@ -20,7 +38,20 @@ You've come across nothing like that, yet. Or perhaps it is way in the past by n
 >x chair
 You thought you preferred
 
->consult stuff
+#mistake test for hug [text]/hug
+>hug zozimus
+Hug? Ugh. Guh.
+>hug
+Hug? Ugh. Guh.
+
+#mistake test for embrace [text]/embrace
+>embrace zozimus
+Hug? Ugh. Guh.
+>embrace
+Hug? Ugh. Guh.
+
+#mistake test for consult [text]
+>consult zozimus
 You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
 
 >think
@@ -57,9 +88,11 @@ Bangish bashing
 >pad red
 Bangish bashing
 
+#mistake test for odor
 >odor
 You'd stink as a host, trying that.
 
+#mistake test for rood
 >rood
 No need to surprise a guest like that. Just open the door.
 
@@ -77,11 +110,15 @@ You think you feel the palm shake a bit, but nothing terribly magical happens.
 Your score has just gone up by one point
 >lapm
 If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
+
+#mistake test for palm
 >palm
 Maybe you could, but you will need the light. You won't need the landscaping.
 
+#mistake test for pedo
 >pedo
 Yep. It's probably part of Elvira's reject-and-retreat, insinuating something without proving it. One of her "clever" games.
+#mistake test for pedo
 >pedo
 Don't dwell on it. It's lies.
 
@@ -91,19 +128,42 @@ The ten beams creak slightly. Maybe not all of them. But a few.
 >basement it
 >stable it
 
+#mistake test for net
 >net
 But the net would still block you.
+
+#mistake test for best name/bestname
 >best name
 Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)
+>bestname
+Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)
+
+#mistake test for basement [text]/[text] basement [text]/[text] basement
+>basement zozimus
+You can just [if t-b are visible]change the ten beams by saying BASEMENT[else]go down to go to the basement[end if].
+>zozimus basement zozimus
+You can just [if t-b are visible]change the ten beams by saying BASEMENT[else]go down to go to the basement[end if].
+>zozimus basement
+You can just [if t-b are visible]change the ten beams by saying BASEMENT[else]go down to go to the basement[end if].
+
 >basement
 Now you remember why there were ten beams. Of course, the ten beams lead down to the basement.
 Your score has just gone up by two points
 >basemetn
 You probably just want to go DOWN to the basement.
 
+#mistake test for [text] stable [text]/stable [text]/[text] stable
+>zozimus stable zozimus
+You can just [if t-b are visible]change the tables by saying STABLE[else]go IN to go to the stable[end if].
+>stable zozimus
+You can just [if t-b are visible]change the tables by saying STABLE[else]go IN to go to the stable[end if].
+>zozimus stable
+You can just [if t-b are visible]change the tables by saying STABLE[else]go IN to go to the stable[end if].
 
+#mistake test for nip
 >nip
 Maybe if it weren't a giant pin. Well, giant enough to hide a wall safe.
+
 >paintign
 The pin wobbles.
 >painting
@@ -126,12 +186,15 @@ DEBUG INFO: Adding a min point
 You probably just want to go UP the chimney.
 
 >in
-A Blest Stable
+Farming Framing
 
 >stari
 You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you think, seeing red.
+
+#mistake test for astir
 >astir
 You need to change that to something else, then it'll be astir.
+
 >stair
 DEBUG INFO: Adding a min point
 >astir
@@ -152,11 +215,12 @@ DEBUG INFO: Adding a min point
 The ramp is useful now. Best keep it.
 
 >d
-Meet-Bans Basement
+Largely All-Grey Gallery
 
 >in
 You fumble nervously
 
+#mistake test for chalets
 >chalets
 You don't need a safe home, right now. You need adventure. Oh, and you don't have to switch that many letters, either.
 
@@ -172,6 +236,16 @@ all the secrets here
 >satchle
 You don't need to do anything more to the satchel--and if it became latches or something else, the settler would probably get messed up, too.
 
+>cheat on
+Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat mode.
+>cheat off
+Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat mode.
+>teach on
+Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat mode.
+>teach off
+Just type c/t or cheat/teach to toggle. Note: settler is currently in non-cheat mode.
+
+#mistake test for paces
 >paces
 The space capes are already abstract and bizarre enough. They work, and you probably don't want to change them.
 
@@ -187,17 +261,23 @@ haven't really EXAMINED it
 >in
 Hands up!
 
+#mistake test for filer
 >filer
 You can't just give Elmo a desk job. Though maybe some paperwork would help.
+#mistake test for lifer
 >lifer
 You start to educate Elmo about the penalties for murder, but he gestures at you like you've almost guessed a Charades clue or something.
 
 >flire
 Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at you.
+
+#mistake test for mole
 >mole
 You can't change Elmo into an animal. Your powers don't work that way. But maybe he is a different sort of mole.
 >flier
 Your score has just gone up
+
+#mistake test for mole
 >mole
 You can't change Elmo into an animal. Your powers don't work that way. He already seems to be a different sort of mole.
 >flire
@@ -226,14 +306,23 @@ Better to pump Elmo for information.
 >3
 Carven Cavern
 
+#mistake test for craven
+>craven
+Ok, the carven cavern [b]IS[r] pretty craven as anagrams go, but you need to find a way through, no matter what its name is.
+
+#mistake test for trainer
 >trainer
 You're on your own. Perhaps you'd be better off scanning the plaster and twiddling the plates to get on with things.
 
+#mistake test for petals
 >petals
 That's already been done, and quite well, by Alan Garner in The Owl Service. If you haven't read his Brisingamen books, you should! They're not too long and very entertaining.
 
+#mistake test for pastel
 >pastel
 The plates are more metallic. Plus, you are a text adventurer, not an interior decorator.
+
+#mistake test for pleats
 >pleats
 You are a text adventurer, not a fashion designer.
 
@@ -271,6 +360,10 @@ Won now: Roman Manor (13/13).
 
 * _stores
 
+#mistake test for sportif
+>sportif
+You can argue whether the strip is already sportif, but nonetheless, that would be a superficial change compared to fixing what's behind the stores.
+
 >sorbte
 The smell from Store B becomes fruitier and more delicious.
 >sorbet
@@ -279,37 +372,58 @@ DEBUG INFO: Adding a min point
 >sorbte
 You're a hero and all, but only one sample per day. Just think of the field day Elvira'd have if she found out!
 
+#mistake test for ergots
 >ergots
 You're trying to rescue the people of Yorpwald, not give them fungus infections.
+
+#mistake test for gorest/go rest
+>gorest
+Store G is too busy to allow that these days.
 >go rest
 Store G is too busy to allow that these days.
+
+#mistake test for gots er
 >gots er
 And what would you do with Store G, when you take it?
+
+#mistake test for storge
 >storge
 You have a momentary vision of an apocryphal eighth book in the Harry Potter series sitting by a pillar, but it passes.
 >storge
 Stop trying to make Pillar of Storge happen.
 
+#mistake test for tosher
 >tosher
 Insults will get you nowhere. You see red at thinking such a word
 
+#mistake test for throes
 >throes
 No, you are not in your last throes. Neither is Yorpwald. Try looking at the other end of the alphabet.
 
+#mistake test for hoster
 >hoster
 That was sort of a given from the warning on Store H, as you note E. S. Roth's signature, and it is all in red. So none of those letters are in place. Hmm, what's a place/person that's been isolated?
 
+#mistake test for resort
 >resort
 You can't go back to the Roman Manor. Well, you can, but it's a bad idea.
+
+#mistake test for tortes
 >tortes
 There's no time for food! Especially fatty, non-brain food!
 
+#mistake test for repost
 >repost
 That's not what you need to do with store P--you even see red trying to figure HOW you would.
+
+#mistake test for pteros
 >pteros
 You don't need to face any predators.
+
+#mistake test for presot
 >presot
 You hear old forgotten magic words which seem like they might almost apply if they were in the right order.
+
 >presto
 Your score has just gone up by one point
 >presot
@@ -323,13 +437,21 @@ Your score has just gone up by one point
 You've got an entry. No need to seal it up.
 
 >x otters
+
+#mistake test for barely
 >barely
 You aren't close enough for such a weak word to affect the barley. But that seems right and worth writing in your notepad.
+
 >depref
 
+#mistake test for ouster
 >ouster
 It's your job to be the ouster in Store u, but how to get there?
+
+#mistake test for sureto or sure to
 >sureto
+You'll be sure to figure it out sooner or later. You see red a bit at not quite being there yet.
+>sure to
 You'll be sure to figure it out sooner or later. You see red a bit at not quite being there yet.
 
 >routse
@@ -346,6 +468,7 @@ Your score has just gone up by one point
 >trovse
 You've got an entry. No need to seal it up.
 
+#mistake test for restow
 >restow
 Store W glows red as you try this.
 
@@ -356,8 +479,11 @@ Your score has just gone up by one point
 >towesr
 You've got an entry. No need to seal it up.
 
+#mistake test for toyers
 >toyers
 You see red at the possibility people might mess with your mind in whatever's behind store Y--especially after noting the TOYERS with the red line through in the window.
+
+#mistake test for troyes
 >troyes
 Store Y does not lead to France.
 
@@ -381,6 +507,7 @@ You think about entering, but you remember Elmo saying it wasn't critical to sav
 >othesr
 You've got an entry. No need to seal it up.
 
+#mistake test for stroke
 >stroke
 You need a stroke of genius, but that's all wrong. You are left seeing red a bit. But this puzzle probably isn't worth risking your health over.
 
@@ -395,6 +522,7 @@ They are who they are. You should maybe try to get their friend back.
 >nestro
 "Dude, you like must be close!" you hear from Store N.
 
+#mistake test for stoner
 >stoner
 "Hey, man! Don't depersonalize me! Or I'll throw something at you!" You hear from inside Store N.
 >stoner
@@ -417,7 +545,9 @@ They are who they are.
 
 >enter smoke
 
+#mistake test for ani/nia
 >ani
+Ian's had a big life change, but that might be too big for him!
 >nia
 Ian's had a big life change, but that might be too big for him!
 
@@ -434,11 +564,20 @@ Score in a scenario: 11 out of 11 total points in the current region, Stores.
 
 * _routes
 
+#mistake test for preposition/prepositions
+>preposition
+Yes, but WHICH prepositions?
+>prepositions
+Yes, but WHICH prepositions?
+
 >score
 0 out of 18 total points in the current region, Routes
 
+#mistake test for ames
 >ames
 Ames, Iowa is less nowhere than here for sure, regardless what some wiseguys from rival Big Twelve schools might say. But you can't just up and leave.
+
+#mistake test for seam
 >seam
 You can't find any crack in the Same Mesa that you could follow.
 
@@ -465,6 +604,13 @@ Yes, but WHICH prepositions?
 You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not EXACTLY like that.
 >inside
 Your score has just gone up by one point
+Cleric Circle
+
+#mistake test for man let/let man
+>man let
+Your heart is in the right place, but telling the mantle to cool it won't do much good.
+>let man
+Your heart is in the right place, but telling the mantle to cool it won't do much good.
 
 >x toils
 Precise recipes
@@ -496,10 +642,15 @@ Your score has just gone up by one point
 
 Idle Deli
 
+
+#mistake test for tap pat/tap
 >tap pat
 You have Pat's attention, already, and he's not letting you in that seed pit without argument.
 
+#mistake test for pat pat/pat
 >pat pat
+Pat doesn't need consolation for his lost business.
+>pat
 Pat doesn't need consolation for his lost business.
 
 >pta
@@ -519,6 +670,10 @@ The seed pit seems to bubble slightly.
 Your score has just gone up by one point
 >despiet
 That'd be a double negative, to re-enter. Your argument would be so won, it's lost.
+
+#mistake retest for tap pat/tap
+>tap
+You have Pat's attention, already
 
 >out
 >acrsso
@@ -561,12 +716,16 @@ You leaned on the bench right. Time to get on it.
 You can't hide from the giant like that, right now.
 >satired
 Bad idea to poke fun at someone that much bigger than you.
+
+#mistake test for bowel/bowels
 >bowel
+The giant's spouting enough verbal diarrhea, so, just... no.
+Also, you don't need to go THAT far down.
+>bowels
 The giant's spouting enough verbal diarrhea, so, just... no.
 Also, you don't need to go THAT far down.
 >below
 You're already below, but if you were close enough to listen, that could work.
-
 
 >staider
 Not only directions but mind games fail to work here. The giant will complain if he wants to.
@@ -621,6 +780,7 @@ You fill yourself with the same fear as the drama armada feels. It's really easy
 or UNDO
 >undo
 
+#mistake test for follow [text]
 >follow bean
 This game doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.
 
@@ -870,12 +1030,20 @@ Getting drunk will not solve your problems. Especially when there's nothing here
 You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
 >deal
 Your score has just gone up by one point
-Dour Tan Rotunda
+
+Browse Bowers
+
+#mistake test for bowser
+>bowser
+This game is pretty old school, but it has enough obstacles.
+
 >dela
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
+#mistake test for eiders
 >eiders
 But what would ducks DO in the big city? They have no ambition. They don't crave...
+
 >desier
 Your longing increases...but not enough.
 >desire
@@ -921,10 +1089,15 @@ You're striving too hard, now.
 >pondre
 The bottle of Pernod seems to rattle and spin slightly.
 >ponder
-FiefCo Office
+Upscale Capsule
 If only you could tune that out!
+
 >pondre
 That's not something you can say, do or see here.
+
+#mistake test for fren
+>fren
+That's not the right way to make friends. You have to, like, impress actual people.
 
 #make sure knocking occurs first thing
 
@@ -964,8 +1137,13 @@ Your score has just gone up by one point
 >lats
 You've lasted long enough. There are new things to look at, now.
 
+#mistake test for snog
 >snog
 You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.
+
+#mistake test for signer
+>signer
+No. Your eyes redden as you remember you are already a signer. The singer makes you want to do something else.
 
 >reigns
 You try to convince yourself it totally reigns here, but the singer pushes you towards giving up your responsibility.
@@ -976,12 +1154,15 @@ Your score has just gone up by one point
 Strip of Profits
 
 >undo
->mastre
-That's not quite the way to focus on the stream.
+
+#mistake test for maters/tamers
 >maters
 Such people would be beneath your delegational abilities.
 >tamers
 Such people would be beneath your delegational abilities.
+
+>mastre
+That's not quite the way to focus on the stream.
 >master
 Your score has just gone up by one point
 Adding a min point
@@ -1002,6 +1183,16 @@ Troves (21/21)
 >l
 Grey Gyre
 
+#mistake test for enemy tzar/tzar enemy
+>enemy tzar
+You hear a rumbling. Then Elvira appears from the maze! 'Oh, dear, this will be easy,' she says. And it is.
+>tzar enemy
+You hear a rumbling. Then Elvira appears from the maze! 'Oh, dear, this will be easy,' she says. And it is.
+
+#mistake test for lawls/lawl
+>lawls
+You try to laugh at the walls, but such actions don't quite seem to work here.
+
 >balm
 Giving the lamb balm might be an option, if there was any in the game, but turning it into balm would be out of line. And it wouldn't scare the lamb home.
 >blma
@@ -1020,6 +1211,16 @@ Austerer Treasure
 
 >bleep
 I don't know what you said, but it's vulgar, I'm sure. Doesn't faze ME, though.
+
+#mistake test for ooph/phoo
+>ooph
+That sounds almost like the sort of grunt that would help you reach the hoop, but it doesn't quite work.
+>phoo
+That sounds almost like the sort of grunt that would help you reach the hoop, but it doesn't quite work.
+
+#mistake test for pheyoo
+>pheyoo
+But nothing really smells in here. Perhaps you need something more straightforward and universal.
 
 >poho
 The hoop dips a bit as if to taunt you.
@@ -1045,40 +1246,68 @@ That's not something
 >s
 Burnt Brunt
 
+#mistake test for gpa/gpas
+>gpa
+You're not being graded here. I mean, you are getting a score, but this isn't school or anything.
+>gpas
+You're not being graded here. I mean, you are getting a score, but this isn't school or anything.
+
+#mistake test for spag
 >spag
 You don't have time to read text-adventuring magazines right now. You're too busy living them.
 
+#mistake test for a gps
 >a gps
 A GPS might point you to the gasp-gaps, but it wouldn't help you survive them. It wouldn't even help you if I forgot to list an exit elsewhere, which totally only happened in the first release and is fixed everywhere now, I hope.
 
+#mistake test for mad
 >mad
 How can you feel mad, looking at such a beautiful work of nature?
 
+#mistake test for cafe
 >cafe
 You don't need caffeine or food here.
 
+#mistake test for okey
 >okey
 You try to make things okey (sic) but you aren't enough of a bard to.
+
+#mistake test for kay
 >kay
 You try to nag the yak with a "kay?" but without the "mm" it's just not Lumberghian enough to work.
 
+#mistake test for kya
 >kya
 The yak is unimpressed with your karate noises.
 
->tars
-That'd make the star stickier--or reduce it to awful glop.
+#mistake test for tsar/arts
 >tsar
 Being an arts tsar won't help. You need a word that shows anger.
 >arts
 Being an arts tsar won't help. You need a word that shows anger.
+
+#mistake test for tars
+>tars
+That'd make the star stickier--or reduce it to awful glop.
+
+#mistake test for srat
 >srat
 The Self-Referential Aptitude Test is an interesting puzzle, but you have enough on your mind, right now.
+
 >rast
 The star seems to wiggle a bit, but not enough to pull it out.
 >rats
 Your score has just gone up by one point
 >rast
 No need for additional arts.
+
+#mistake test for tard
+>tard
+Self-pity that harsh--especially a potential slur--isn't the way to get the dart. This game doesn't want to be THAT sort of juvenile.
+You see red at your slight indiscretion
+>tard
+Instead of using that word again, you think back to what seeing red after thinking it MEANT. You need a four-letter word, but T, A, R and D are in the wrong place. You take the time to write out all 24 possbilities, noting only nine remaining ones are valid. And that's before you use the settler. You also remember some mumbo-jumbo about the inclusion-exclusion principle, and how a random configuration of N items in a set has about a 1-1/e chance of having none right.
+You don't feel dumb after doing this, so there's no need to use that word again.
 
 >drta
 The dart seems a bit closer, but...dang! Not quite.
@@ -1098,8 +1327,16 @@ That's not something
 >e
 Marines Seminar
 
+#mistake test for nobig/no big
 >nobig
 Overconfidence is sort of the way, here. But it needs to be backed up with an idea.
+
+# we are cheating again a bit here to cover an odd mistake message
+>gonear r00
+
+#mistake test for bing
+>bing
+You already did that, and with 25% more word power, too
 
 >binog
 You try something that doesn't quite work, but now you're that much closer to an a-ha moment.
@@ -1108,15 +1345,42 @@ Your score has just gone up by one point
 >binog
 You can't force another revelation, but you don't need to.
 
+#mistake test for bing
+>bing
+You come to four-fifths of a revelation, but it's not about this maze, sadly.
+
+#again, cheating to flag an obscure mistake
+>gonear r22
+#mistake test for brig
+>brig
+There, there. This maze is much less hard to get out of than a prison.
+
+#back to normal service
+>gonear marines seminar
+
+#mistake retest for nobig/no big
 >no big
 Hey, now, that's just humblebragging.
 
->oppugn a
+#mistake test for oppugn [text]/oppugn
+>oppugn zozimus
 You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.
 >oppugn
 You question the popgun a bit, mentally, but it's all you've got. It really should come in handy somewhere. Every other weird thing you've found has.
 
 >w
+
+>n
+
+#mistake retest for lawl/lawls
+>lawl
+You try to laugh at the walls, but then that just might get rid of them and not the electricity restricting your journey through Nowt Town.
+
+#mistake test for glib
+>glib
+You'll need to be glib with something like g-lib later. If you get through this maze. In fact, maybe being glib might be easier than walking through.
+
+>s
 
 >mazeltvo
 The volt maze crackles with increased energy, almost ready to break down.
@@ -1144,7 +1408,8 @@ Your score has just gone up by one point
 >oel
 Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
 
->rolande
+#mistake test for leonard/renaldo/leandro/rolande
+>leonard
 That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You just need to outsmart them.
 
 >danr
@@ -1154,9 +1419,17 @@ Your score has just gone up by one point
 >danr
 Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
 
+#mistake test for evil
 >evil
 No, you're trying to get RID of the evil, here. Plus, you don't need to encourage the veil to come after you.
 
+#mistake retest for leonard/renaldo/leandro/rolande
+>renaldo
+#mistake retest for leonard/renaldo/leandro/rolande
+>leandro
+That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo and Rand their individuality, and also, the giant paradox might kick in, which would hurt them. You need to find a way to cheer them up.
+
+#mistake test for whasup/whasups
 >whasup
 That feels almost right, but you remember that that word has 2 s's in a row.
 >whasups
@@ -1187,6 +1460,15 @@ That'd be some crazy Voltron stuff beyond your magic powers. It would deny Leo a
 >n
 >n
 >load gun with dart
+
+#mistake test for fire [text]
+>fire zozimus
+SHOOT something with the gun instead.
+
+#mistake test for shoot [text] with [text]
+>shoot zozimus with zozimus
+Just say what you want to shoot.
+
 >theer
 The ether pulses, but you still can't see through it.
 >there
@@ -1200,18 +1482,29 @@ The ether is gone. You can just go back north.
 
 
 >n
-Phat Path
+Saps' Pass
 
 ##bingo *2 = no line break
-#different message for making it to the phat path 1st time?
+##?different message for making it to the phat path 1st time?
 
->ptah
-If we were in ancient Egypt, I'd allow that, but we aren't, so I can't.
+#mistake test for spas
+>spas
+If it were that easy to change Saps['] Pass, it wouldn't be much of a puzzle. You'd still need to get the keys from the hogs, anyway.
+
+#mistake test for psas
+>psas
+Getting rid of bullies will help you go north! Also, persistence will help you reach your goals. TMYK!
 
 >syek
 The hogs snicker a bit, but they seem a little nervous, too.
 >syke
 Your score has just gone up by one point
+Phat Path
+
+#mistake test for ptah
+>ptah
+If we were in ancient Egypt, I'd allow that, but we aren't, so I can't.
+
 >syek
 That's not something you
 
@@ -1221,8 +1514,10 @@ That's not something you
 The hogs snicker a bit, but they seem a little nervous, too.
 >gosh
 Your score has just gone up by one point
+Phat Path
 >gohs
 That's not something you
+
 
 >ptah
 No Egyptian deity comes to your rescue.
@@ -1553,8 +1848,15 @@ The sign mainly just disallowed singing.
 
 ###############################second point
 
+#mistake test for insert [something]
 >insert
 Almost, with the stein, there.
+
+#mistake test for inset [text]
+>inset zozimus into zozimus
+You may want to INSERT x in Y instead
+>inset zozimus
+You may not be using an object in the game, and you may wish to inseRt, instead.
 
 >insert stein
 Almost, with the stein, there.
@@ -1584,8 +1886,16 @@ UNDO
 >strllo
 No, you were right before, there. You just need some help to make that magic word in your notepad work, now. Or maybe you don't!
 
->stroll xxx
-The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
+#mistake test for stroll [text]/stroll
+>stroll zozimus
+No, you can't just stroll back into the Posh Hops shop, and you can just plain walk anywhere else.
+>stroll
+No, you can't just stroll back into the Posh Hops shop, and you can just plain walk anywhere else.
+# The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
+
+>stroll x
+WRONG
+>undo
 
 >stroll
 Olde Lode
@@ -1652,7 +1962,6 @@ Anger Range
 >lepa
 That's not something you
 
-
 >undo
 >undo
 >undo
@@ -1687,8 +1996,19 @@ That's not something
 >boast
 Batso.
 
+#mistake test for renga
+>renga
+Now is not the time for poetry.
+
+#mistake test for scarp
+>scarp
+Don't flee! Help the poor trout.
+
+#mistake test for craps
 >craps
 You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.
+
+#mistake test for kepis
 >kepis
 If only it were that easy, to have a basket to harvest fish! But this area is about ACTION. You need to take the fight to the pikes.
 
@@ -1795,6 +2115,18 @@ That's not something worth BURYing.
 >n
 Lapsin' Plains
 
+#mistake test for naps
+>naps
+You need action, here! Maybe nothing too exhausting, but some action nonetheless.
+
+#mistake test for prat
+>prat
+Yes, whoever[if crate is reflexed or crate is in lalaland]was[else]'s[end if] lobbing crates isn't very nice, but name calling's no good.
+
+#mistake test for trap
+>trap
+Yes, the tarp part is almost surely a trap, but identifying it as such doesn't help.
+
 >palins
 Michael and Sarah are both funny enough on their own. I really couldn't do them justice in this game.
 >lapins
@@ -1828,12 +2160,12 @@ Your score has just gone up by one point
 >reatc
 Besides identifying it as a rect, you can't do much else with the crate.
 
->odor
-The door kind of stinks as a semi-living entity, and anyway, the reverse of this puzzle happened last game.
->rood
-The door's already rood. I mean rude. Try seeing what's around it, instead.
->rued
-You can't have rued the door until you've got beyond it. Try seeing what's around it, instead.
+#mistake test for troy/tory
+>troy
+Apparently, the span pans don't have a name.
+>tory
+Apparently, the span pans don't have a name.
+
 >pone
 The message is corny, but the door's a piece of cake once you figure what to do with the knob.
 >thus
@@ -1892,7 +2224,8 @@ You managed to get a digger from a prod, and that's good enough.
 >dig
 You need to dig to some purpose, though maybe somewhere else
 
->sweat it up
+#mistake test for sweat [text]
+>sweat zozimus
 Don't sweat the extra words. Just sweat.
 
 >sweta
@@ -1923,14 +2256,17 @@ The lance is still itself--and you probably did enough cleaning it.
 
 >out
 
->troy
+>oryt
 "NOPE! THAT'S NOT MY NAME! AND WHY DO YOU CARE ANYWAY?" yells the rude door. At least you didn't break its spirit.
->tory
+>oyrt
 "NOPE! THAT'S NOT MY NAME! AND WHY DO YOU CARE ANYWAY?" yells the rude door. At least you didn't break its spirit.
 
 >s
 
+#mistake test for dig/dig [text]
 >dig
+You need to dig to some purpose, like uncovering the haunter--and not just dig.
+>dig zozimus
 You need to dig to some purpose, like uncovering the haunter--and not just dig.
 
 >w
@@ -1938,7 +2274,8 @@ Arches
 
 ##>warp wrap
 
->wrap stuff
+#mistake test for wrap [text]
+>wrap zozimus
 The bubble wrap is already covering something.
 
 >wapr
@@ -1974,7 +2311,14 @@ Hedron
 You need to dig to some purpose, though maybe somewhere else--and not just dig.
 
 >w
-Collapsed Old Places
+Rascals' Craals
+
+#mistake test for bury [text]
+>abstract ruby to anger range
+>bury zozimus
+Nothing worth burying.
+>purloin ruby
+# I cheated above here to test the mistake text.
 
 >dig
 You need to dig to some purpose, maybe to hide something here to frame the walleyes--and not just dig.
@@ -2027,10 +2371,11 @@ You're finished with the digger
 >tarp
 Nothing happens. You wonder if part of the ol' trap is that an ol' tarp will fall on you and suffocate you, if you walk in there.
 
+#mistake test for part trap/part
 >part trap
-The ol' trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.
+The ol['] trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.
 >part
-The ol' trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.
+The ol['] trap is too wily, and stuck in the north wall, for that. You may want to look for a way to diffuse it.
 
 >tarp
 Nothing happens. You wonder if part of the ol' trap is that an ol' tarp will fall on you and suffocate you, if you walk in there.
@@ -2055,7 +2400,11 @@ That was my name in the first game.
 It's already been made bigger. Not much more you can do with it.
 
 >in
-Scum Ant Sanctum
+Dourest Detours
+
+#mistake test for atn
+>atn
+You've already got the ant's attention. You'll need to take care of it, now.
 
 ##>tan ant
 >nat
@@ -2086,6 +2435,21 @@ Your score has just gone up by one point
 min point
 >revle
 You riff on your previous celebrations, but it doesn't feel as cool.
+
+#mistake test for nips
+>nips
+You see red at the thought of voluntarily pricking yourself with pins.
+
+#mistake test for snip/snip pins
+>snip
+You don't have anything with a small enough blade to cut the pins. But that has to be close.
+>snip pins
+You don't have anything with a small enough blade to cut the pins. But that has to be close.
+
+>spin
+Your score has just gone up by one point
+>undo
+>spin pins
 
 >redial
 Maybe in a bit, but you haven't even dialed yet
@@ -3614,8 +3978,10 @@ Your score has just gone up by one point.
 >nabaan
 Just return the fruit to Curtis. No need for another change.
 
+#mistake test for gorean
 >gorean
 This game isn't about that sort of stuff. Not that there's anything wrong with that.
+
 >gonera
 The orange seems a bit closer for a bit.
 >go near
@@ -3642,6 +4008,7 @@ Just return the fruit to Curtis. No need for another change.
 
 >give dollar
 
+#mistake test for lots
 >lots
 You only need the one slot.
 
