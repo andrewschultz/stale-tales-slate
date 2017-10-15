@@ -115,8 +115,8 @@ while ( $count <= $#ARGV ) {
   my $arg2 = defined( $ARGV[ $count + 1 ] ) ? $ARGV[ $count + 1 ] : "";
 
   for ($arg) {
-    /^\+/ && do { addString( $ARGV[0] ); exit(); };
-    /^[0-9]/ && do { doAnagrams( $ARGV[0] ); };
+    /^\+/ && do { addString($arg); exit(); };
+    /^[0-9]/ && do { doAnagrams($arg); };
     /\?/ && do { usage(); exit(); };
     /^-?cl[nx]*$/ && do {
       clipboardRearrange();
@@ -194,7 +194,7 @@ while ( $count <= $#ARGV ) {
       $count++;
       next;
     };
-    print "Invalid parameter: $ARGV[0]\n===============\n";
+    print "Invalid parameter: $arg\n===============\n";
     usage();
   }
 }
@@ -601,21 +601,22 @@ sub moveOver {
 sub doAnagrams {
   my $str;
   my $str2;
-  my $endYet = 0;
-  my $count  = 0;
+  my $count = 0;
 
   open( A, $orig );
   while ( $a = <A> ) {
-    if ( ( !$endYet ) && ( $a =~ /^[a-z]/i ) ) { $endYet = 1; }
-    if ( !$endYet ) { next; }
-    $str = lc($a);
-    chomp($str);
-    $str2 = $str;
-    $str2 =~ s/ //g;
-    print "gr $str\nanan.pl $str2\nmyan.pl $str2";
-    $count++;
-    if ( $count >= $_[0] ) { last; }
+    if ( $a =~ /^[a-z]/i ) {
+      $str = lc($a);
+      chomp($str);
+      $str2 = $str;
+      $str2 =~ s/ //g;
+      print "gr $str\nanan.pl $str2\nmyan.pl $str2\n";
+      $count++;
+      if ( $count >= $_[0] ) { last; }
+    }
   }
+  close(A);
+  if ( $count < $_[0] ) { print "Only got $count of $_[0].\n"; }
   die();
 }
 
@@ -719,7 +720,8 @@ sub dumpUnquoted {
   my $spawnPopup = 0;
 
   while ( $a = <A> ) {
-    if ( ( $a =~ /^[a-z]/i ) && ( $tries < $maxTries ) && ($maxTries) ) {
+    $tries++ if ( $a =~ /^[a-z]/i );
+    if ( ( $a =~ /^[a-z]/i ) && ( $tries <= $maxTries ) && ($maxTries) ) {
       chomp($a);
       my @temp = split( / /, $a );
       if ( $#temp > 1 ) {
@@ -739,7 +741,6 @@ sub dumpUnquoted {
       $squash = $procString;
       $squash =~ s/ //g;
       $squash =~ s/\+//;
-      $tries++;
       print B "====================$a/$procString/$squash\n";
       print "Processing $procString"
         . ( ( $squash ne $procString ) ? " (squashed to $squash)" : "" )
@@ -755,19 +756,15 @@ sub dumpUnquoted {
       }
     }
     else {
-      if ( $popupOnEmpty
-        && $maxTries
-        && ( $tries == $maxTries )
-        && ( $a =~ /^[a-z]/i ) )
-      {
-        $spawnPopup = 1;
-      }
       print A2 $a;
     }
   }
   close(A);
   close(B);
   close(A2);
+  $spawnPopup = $popupOnEmpty && $maxTries && ( $tries < $maxTries ) && $tries;
+  print "popup $popupOnEmpty maxtries $maxTries tries $tries\n";
+
   if ( compare( $orig, "$bak" ) ) {
     print "Recopying over...";
     copy( "$bak", $orig )
