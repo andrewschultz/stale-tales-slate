@@ -264,7 +264,7 @@ use MAX_PROP_TABLE_SIZE of 240000.
 
 section compiler adjust constant section - not for release
 
-use MAX_VERBS of 400.
+use MAX_VERBS of 410.
 
 section about the player
 
@@ -1982,6 +1982,7 @@ before exiting:
 
 chapter don't get a rifle
 
+
 to decide whether got-flier:
 	if player is in trips strip, decide yes;
 	if location of player is location of arena dig, decide yes;
@@ -2318,6 +2319,8 @@ chapter fireing
 fireing is an action applying to one thing.
 
 understand the command "fire [something]" as something new.
+
+
 
 understand "fire [something]" as fireing.
 
@@ -3850,6 +3853,7 @@ chapter Busiest Subsite
 
 Busiest Subsite is a room in Intro. "This is the ritziest hotel you'll ever stay in. Terraces are west, a banner hangs over an auditorium entry to the east, and the elevator you came from is to the south. North's got an ominous name list tacked on by it.[paragraph break]There's a sign over an odd side passage the bustling, babbling masses seem to be ignoring."
 
+
 last-loc of Intro is Busiest Subsite.
 
 grims is a truth state that varies.
@@ -4074,6 +4078,7 @@ chapter A Dry Yard
 
 There is a room called A Dry Yard. It is in intro.
 
+
 instead of exiting in Dry Yard:
 	if thorn is visible:
 		say "It looks like there's a passage beyond that thorn, but you'll need to get rid of it, first.";
@@ -4111,6 +4116,7 @@ The gateman is a person. "Nat Egam, the tan mage/gateman, is grousing around her
 understand "nat/egam" and "nat egam" and "tan/mage" and "tan mage" and "gate man" as the gateman.
 
 understand "old man" and "man" as gateman when player is in notices section and gateman is in notices section.
+
 
 after fliptoing gateman:
 	set the pronoun him to gateman;
@@ -4276,6 +4282,8 @@ check wearing the toga:
 understand "thickets/thickest" and "thickest thickets" as darnels when player is in thickets.
 
 the snarled darnels are plural-named scenery in Thickest Thickets. "The thickets/snarled darnels are plenty and thick-set (sorry,) a plant-kingdom comb-over with prickles all up and down it. You can't tell where it starts or ends, but [if toga is in lalaland]the goat did chomp out a way INSIDE[else]no way you'll sneak through it without getting cut up pushing it aside to go, well, whatever way it's blocking you from going[end if].".
+
+
 
 the rgtext of snarled darnels is "[rcn][rc][rc][rc][rc][rc][rc]". the lgth of darnels is 5. gpos of darnels is 7. rpos of darnels is 3. cert-text of darnels is "[set-bug]". rect-text of darnels is "[set-bug]".
 
@@ -5104,6 +5112,7 @@ check taking phial:
 			now cabinet-bit-me is true;
 			say "Ow! The cabinet bites you as you try to take the phial. It didn't break your skin, so you don't need bactine[if gateman is in notices section][one of]. Nat Egam coughs, as if he might be able to help you[or][stopping][else if gateman is off-stage]. Maybe you could use someone to help you understand the cabinet[end if]." instead;
 
+
 instead of opening the phail phial:
 	say "The blue lube would leak out."
 
@@ -5192,6 +5201,7 @@ to intro-marcos:
 		now marcos-trumped is true;
 
 chapter gleaning
+
 
 gleaning is an action out of world.
 
@@ -5603,6 +5613,7 @@ to say ment-not-phys:
 
 storeall is plural-named privately-named scenery in trips strip. understand "all/stores/lots/mall/malls/strip" and "small malls" as storeall. printed name of storeall is "all the stores".
 
+
 instead of entering storeall:
 	say "They're all closed, and even if they weren't you'd have to pick a specific one.";
 
@@ -5699,6 +5710,7 @@ description of store a is "You can't imagine anything as rote as calling itself 
 Store B is a sto. understand "store/ 2/two" as store b.
 
 description of store b is "It seems to catch a rainbow every now and then, and you smell fruits you can't discern. It looks nowhere near as, well, lively as stores F, I or M, but maybe it holds a small treat."
+
 
 rgtext of store b is "[gcn][rc][rc][rc][gc][rc]". lgth of store b is 6. gpos of store b is 1. rpos of store b is 2. cert-text of store b is "S[d1][d1][d1][ast]E[d1]". rect-text of store b is "S[d1][d1][d1][d1][ast]T".
 
@@ -5807,6 +5819,7 @@ description of store p is "[gd]A poster covers the entire window. It's turned aw
 
 the poster is part of store p. the poster is amusing. description of poster is "Wait! There is some writing, if you look closely.[paragraph break]'This poster intentionally left blank until next game.'"
 
+
 to say fake-clue of (myst - a sto):
 	say "[paragraph break]";
 	preef myst;
@@ -5856,11 +5869,14 @@ Store U is a sto. understand "store/ 21/twentyone" as store u.
 
 description of store u is "[gd]The floor looks like some sort of cross-country map."
 
+
 Store V is a sto. understand "store/ 22/twentytwo" as store v.
 
 description of store v is "[gd][one of]You see people voting glumly and you think you hear them whisper it doesn't matter. Their votes go in the stove anyway. But politics wasn't in your job description. There are, apparently, more basic needs than that right now. Plus it's pervy to vote pry[or]Voters...but there's nothing to vote ON, yet[stopping]."
 
+
 Store W is a sto. understand "store/ 23/twentythree" as store w.
+
 
 description of store w is "You see replicas of two tall, narrow buildings."
 
@@ -5869,6 +5885,7 @@ Store X is a sto. understand "store/ 24/twentyfour" as store x.
 description of store x is "[na]"
 
 Store Y is a sto. understand "store/ 25/twentyfive" as store y. rgtext of store y is "[rcn][rc][rc][rc][gc][rc]".
+
 
 description of store y is "[gd]However, the store seems filled with water. There's a slimy bit and a small glistening sphere."
 
@@ -6072,6 +6089,8 @@ a thorn is a guider. godir of thorn is north. description of thorn is "You won't
 
 an aroma of teas is a guider. godir of aroma of teas is east. description of teas is "You're not refined enough to know which teas. It's kind of a combination of them, a new direction in olfactory sense.". the rgtext of teas is "[rc][rc][rc][rc]". the lgth of teas is 4. gpos of teas is 2. rpos of teas is 1. cert-text of teas is "-[d1][d1][d1]". rect-text of teas is "E[d1][d1][ast]T".
 
+
+
 understand "smell" as aroma of teas when aroma of teas is in location of player.
 
 understand "tea" as aroma of teas.
@@ -6136,6 +6155,9 @@ after doing something with gy:
 
 understand "bearded/ men/guys/figures" and "undead" as line of no life.
 
+
+
+
 instead of doing something with line of no life:
 	if action is procedural, continue the action;
 	say "The line of no life is too incorporeal to interact with[if cruel ones' enclosure is unvisited], but maybe you can imitate it partially to go north[end if].";
@@ -6167,6 +6189,8 @@ to say nosey:
 
 chapter Storing Area
 
+
+
 s-e-d is west of Self-ID Fields. s-e-d is in Forest. s-e-d is privately-named. printed name of s-e-d is "Stored, er, Dots". understand "stored/ er/ dots" as s-e-d.
 
 check going nowhere in s-e-d:
@@ -6188,6 +6212,7 @@ instead of taking the canister:
 the red ring is part of the canister. description of red ring is "It's on top of the canister."
 
 the grinder is part of the canister. description of grinder is "It's got a pair of sabled blades that rotate opposite to each other when activated[if livers are not off-stage]. But you broke it[end if]."
+
 
 instead of inserting into grinder:
 	try inserting noun into canister;
@@ -6415,8 +6440,8 @@ check taking a glopmeat:
 		say "You shouldn't put your fingers near the blades." instead;
 	if noun is stuck:
 		say "It's stuck, well, frozen to the wall[if player does not have chisel]. And you can't change that. Well, not with what you've got[end if][if player has chisel][chiz-chiz][end if].";
+		now noun is not stuck;
 		if player has chisel:
-			now noun is not stuck;
 			now player has noun;
 		do nothing instead;
 
@@ -6471,6 +6496,7 @@ instead of doing something with the stack of tacks:
 
 Instead of taking the notes stone:
 	say "it seems to be glued to the tacks stack. Anyway, you probably only need it for its information."
+
 
 description of notes stone is "'[i]Attention, word-boy/girl/woman/man! You may think letters are the basic building blocks of everything, but the computer age has shown it's 1[']s and 0[']s! We don't stow twos here! You won't find simpler piles, Mr.! Or a simpler pile, Mrs.![r]'"
 
@@ -6548,6 +6574,7 @@ Enclosure is north of Self-ID Fields. "A creepy acre, yep[if liches are in Enclo
 to say d-s:
 	say "[if drapes are visible]drapes make[else if red asp is visible]red asp makes[else]spread makes[end if]";
 
+
 check going nowhere in Enclosure:
 	say "There seems to be nothing, or worse than nothing, that way." instead;
 
@@ -6603,7 +6630,9 @@ Ghouls' Slough is inside of Enclosure. "This is as ethereal as its inhabitants, 
 the dog is amusing scenery in slough. dog is an undesc. instead of doing something with the dog when dog is visible:
 	say "Where was it? Where is it? Eegh. You don't REALLY want to think about it."
 
+
 the bog is amusing scenery in slough. bog is an undesc.
+
 
 to say end-it:
 	end the story;
@@ -6631,12 +6660,14 @@ Frost Forts is a room in Forest. "Now's snow. Sown Snow OWNS. It'd take a chimer
  after printing the locale description for forts when forts is unvisited:
 	set the pronoun them to vowels;
 
+
 the ipecac icecap is amusing scenery in frost forts. "Yechier, icy, here."
 
 instead of doing something with icecap:
 	say "It's just there for ambiance."
 
 the sleet is useless scenery in frost forts. "It's painful, almost like steel, when it hits you, but since it's rain mixed with snow, it means you won't freeze...right away."
+
 
 the iced dice are plural-named amusing scenery in frost forts. "Each side seems to have a big skull-and-crossbones on it. Their fare is fear, with no warm café hidden in any face. Just don't think of them as ice caps, capisce?"
 
@@ -6706,6 +6737,7 @@ understand "round/den" and "round den" and "unadorned" as Centrifuge when centri
 
 The dial is in Centrifuge. The dial has a number called numset. The numset of the dial is 0. the dial is fixed in place. the dial is flippable.
 
+
 the ufcex are privately-named plural-named scenery in Centrifuge. understand "exits" and "angle" as ufcex when player is in Centrifuge. "[ufcex-descrip]."
 
 to say ufcex-descrip:
@@ -6760,6 +6792,7 @@ understand the command "switch [something] to [number]" as something new.
 understand "switch [something] to [number]" as dialsetting it to.
 
 understand the command "turn [something] to [number]" as something new.
+
 
 understand "turn [something] to [number]" as dialsetting it to.
 
@@ -7011,6 +7044,8 @@ after printing the locale description for kitchen when kitchen is unvisited:
 	say "Boy. That time in the nick left you hungry. And in need of warmth. Maybe you can get a two-for-one here in the kitchen.";
 	continue the action;
 
+
+
 does the player mean putting an ingredient on the tortilla: it is very likely.
 
 description of Kitchen is "This is a kitchen, though it's a bit bare, except for the obligatory fridge. South is the centrifuge room and east is [if Trellis is unvisited]somewhere less hectic[else]the room with the trellis[end if]."
@@ -7060,6 +7095,7 @@ to say loo-la:
 		say "Ok.[no line break]";
 
 the tortilla is an ingredient. understand "taco" as tortilla.
+
 
 to say tort-desc:
 	say "tortilla";
@@ -7616,6 +7652,7 @@ section hoses-shoes
 
 a pair of hoses are a plural-named thing. "[one of]A familiar pair of hoses lies by the cask. The guards must have forgotten them while, err, celebrating[or]That pair of hoses is still lying around[stopping].". rgtext of hoses is "[rcn][rc][rc][gc][gc]". gpos of hoses is 3. rpos of hoses is 5. lgth of hoses is 5. cert-text of hoses is "-[d1][d1][ast]E[ast]S". rect-text of hoses is "S[d1][d1][d1][ast]S".
 
+
 instead of taking hoses:
 	say "They're too unwieldy, but maybe if they transformed into something else..."
 
@@ -7740,6 +7777,7 @@ Stiller Trellis is east of Kitchen and north of roomroom. "[if trel-priv is in l
 
 understand "haywall" and "hay wall" as scraped wall when scraped wall is hayfilled.
 
+
 trel-priv is privately-named scenery in Trellis. printed name of trel-priv is "the trellis". understand "trellis" as trel-priv.
 
 understand "decoration" as trel-priv.
@@ -7819,6 +7857,7 @@ Moor is a room in Sortie. description of moor is "You're on a moor. The rime-mir
 
 the rime mire is scenery in moor. "The moor you're on has stable enough footing, but the rime mire seems much more treacherous."
 
+
 understand "rime-mire" as rime mire.
 
 m2 is privately-named proper-named scenery in moor. rgtext of m2 is "[rc][gc][gc][rc]". lgth of m2 is 4. gpos of m2 is 4. rpos of m2 is 1. cert-text of m2 is "-[ast]O[ast]O[d1]". rect-text of m2 is "R[d1][d1][ast]M".
@@ -7843,6 +7882,8 @@ after choosing notable locale objects when player is in moor:
 		set the locale priority of the black door to 9;
 	if Pat is in moor:
 		set the locale priority of Woeful Pat to 8;
+
+
 
 reset-already is a truth state that varies.
 
@@ -8007,6 +8048,7 @@ before doing something with the hay when peasant has hay:
 
 some hay is a singular-named thing.
 
+
 indefinite article of some hay is "some".
 
 description of hay is "It's hay, hey? Well...there's enough to stuff something pretty substantial."
@@ -8025,6 +8067,7 @@ description of peasant is "He can't help glancing at the hay he is carrying, fro
 
 check giving sack to peasant:
 	say "No, wait, you might still need that, after. But you could maybe give him something inside[if number of things in sack is 0], once you have something there[end if]." instead;
+
 
 check giving cask to peasant:
 	say "No, wait, you might need that. But you could maybe give him something inside." instead;
@@ -8090,6 +8133,7 @@ the hoots button is a thing. description is "It's on the right, and it's labeled
 rgtext of hoots button is "[rcn][rc][gc][rc][rc]". lgth of hoots button is 5. gpos of hoots button is 5. rpos of hoots button is 4. cert-text of hoots is "-[d1][ast]O[d1][d1]". rect-text of hoots is "S[d1][d1][d1][ast]T".
 
 the shoot button is a thing. description is "It's on the right, and it's labeled SHOOT.".
+
 
 the trees button is a thing. description is "It's on the left, and it's labeled TREES."
 
@@ -8281,6 +8325,9 @@ chapter Sacred Cedars
 
 Sacred Cedars is east of Trellis. "You are in a room with thick entwined cedars as walls. On one, a spout pouts, waiting for a stoup. You can go back west to the stiller trellis. Oddly, you feel no reason to be scared. You see drawings and holy verse on the walls.". Cedars is in Sortie.
 
+
+
+
 to say what-to-ask-lois:
 	if player is not in cedars:
 		say "Lois may not hear you out here[if caskfillings is 2]--she has left you to your own devices, but you must be close[else], and she may only give marginal hints in the cedars[end if]";
@@ -8337,6 +8384,7 @@ the sc are privately-named plural-named scenery in sacred cedars. printed name o
 description of sc is "They look nice and even smell nice. A holy verse is carved on one."
 
 the spout is scenery in sacred cedars. description of spout is "It can be used to FILL the appropriate receptacle here.";
+
 
 check switching on spout:
 	if player has cask:
@@ -8597,6 +8645,7 @@ the yard view is useless scenery in cramped red camp. "You can't see much of it 
 the tents are useless scenery in red camp. understand "commune" as tents.
 
 description of tents is "Decorated with a corny crayon-a-crony."
+
 
 instead of doing something with the tents:
 	say "Probably a long-hair halo ring in the tents. Less helpful than the deadbeat."
@@ -9073,6 +9122,7 @@ understand "begonia" as begonias.
 
 the noise bag is an openable closed transparent container. understand "noisebag" as noise bag.
 
+
 instead of wearing bag:
 	say "Oh, come on, you're not doing that badly. Figuring the begonias was pretty clever, really[if words are not in bag]--you just haven't found what to put in the bag, yet!";
 
@@ -9163,6 +9213,7 @@ scratchings are plural-named scenery in Elf Row's Flowers.
 description of scratchings is "FREE TO [if fairy-worthy is true]FREEDOM FIGHTERS[else]FREELOADERS[end if]."
 
 the counter is useless scenery in Elf Row's Flowers.
+
 
 description of counter is "It divides you from the faeries. It doesn't divide them from you, though, since they can fly[if brocade is in elf row's flowers]. There's a brocade here, under some scratchings[else]."
 
@@ -9274,6 +9325,8 @@ instead of giving something to the night thing:
 	say "It's roaring too much. It seems upset about something, and you look unlikely to help.";
 
 the cruel ulcer is part of the night thing. description of cruel ulcer is "It's nasty and yellowed and an indication maybe scaring people in the hotel is more stressful than you think. You wonder how food goes down there."
+
+
 
 the ketchup bottle is a thing in Hotel. "A ketchup bottle lies here, torn apart--and you have a prime suspect in the Night Thing that [if night thing is visible]is roaring nearby[else]was here[end if]."
 
@@ -9732,6 +9785,8 @@ lgth of neon pig is 7. gpos of neon pig is 3. rpos of neon pig is 7. rgtext of n
 
 the op is proper-named privately-named scenery container. understand "opening/recess" as op. the printed name of op is "the opening"
 
+
+
 procedural rule while examining op: ignore the examine containers rule.
 
 description of op is "[if controls are in op]The opening isn't really an opening any more, what with the controls fitting in nicely[else if player is on fuzzy looking wall]You can see that the opening isn't just a blank area, though it doesn't lead anywhere much. Once you got rid of that neon pig, there are still all kinds of receptacles and such that could be attached to something electrical. If you READ, you might be able to see what[else]You look back up at the opening you made. Seems something belongs in there[end if]."
@@ -9746,6 +9801,7 @@ instead of taking tracks:
 
 instead of putting something on tracks:
 	say "Good way to get electrocuted. You'll need to find some place to switch them off before you get near them.";
+
 
 after examining tracks:
 	set pronoun it to noun;
@@ -9812,6 +9868,9 @@ after printing the locale description for abyss when abyss is unvisited:
 	set the pronoun it to siren;
 	continue the action;
 
+
+
+
 every turn when player is in Abyss:
 	if siren was visible:
 		if siren is visible:
@@ -9848,6 +9907,7 @@ Include (-
 	has transparent animate
 -) when defining beast.
 
+
 section siren-resin
 
 the siren is scenery in Bassy Abyss. rgtext of siren is "[rcn][rc][rc][rc][gc]". rpos of siren is 5. gpos of siren is 3. lgth of siren is 5. cert-text of siren is "-[d1][d1][d1][ast]N". rect-text of siren is "R[d1][d1][d1][ast]N".
@@ -9882,6 +9942,7 @@ understand "altar" as Astral Altars when Astral Altars is visited.
 check going nowhere in astral altars:
 	say "As you step away from the altars, a weird barrier blocks you. It's very tarsal." instead;
 
+
 tiles are plural-named flippable scenery in Astral Altars. "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one."
 
 gpos of tiles is 2. rpos of tiles is 1. lgth of tiles is 5. the rgtext of tiles is "[rc][rc][gc][gc][rc]". the lgth of tiles is 5. cert-text of tiles is "-[d1][ast]L[ast]E[d1]". rect-text of tiles is "I[d1][d1][d1][ast]T".
@@ -9893,6 +9954,7 @@ gpos of stile is 3. rpos of stile is 2. lgth of stile is 5. the rgtext of stile 
 instead of doing something with scenery in Altars:
 	if action is procedural, continue the action;
 	say "You probably need to do something with, or to, the stile and tiles."
+
 
 chapter Isle
 
@@ -9906,6 +9968,7 @@ understand "lies isle" as isle when leis are not in isle.
 does the player mean doing something with the leis: it is likely.
 
 the leis are scenery in isle. "Looking at them, you half forget you came through Store R to beat Red Bull Burdell."
+
 
 to say lei-lala:
 	now leis are in lalaland;
@@ -10014,6 +10077,8 @@ Rived Drive is a room in Resort.
 
 does the player mean climbing the poles: it is likely.
 does the player mean climbing the slope: it is likely.
+
+
 
 check going nowhere in Rived Drive:
 	say "You'd probably get lost that way. Besides, the vague commotion to the east, past the rising [p-s] seems worth seeing." instead;
@@ -10154,6 +10219,9 @@ report going east in Rived Drive:
 
 Potshot Hotspot is east of Rived Drive. Hotspot is in Resort.
 
+
+
+
 description of Potshot Hotspot is "An arid, trod dirt road. East is siesta, with a bunch of ransom manors.[paragraph break][if riot is visible][one of]Oh dear. A horde. Uprisers--surprise--protesting YOU! A full-blown riot[or]There's a riot going on here! A bunch of people seem to be protesting...you, accusing you of things you'd never be brave enough to do[cycling][else if protest is visible]Three can still be a protest as well as a crowd, apparently. They're blocking your way east[else if potters are visible]The potters aren't just pottering around[pottiness][else if red bull burdell is visible]Red Bull Burdell is here, looking down at you[else]It's nice and peaceful here, but it's not quite home[end if].";
 
 after printing the locale description for hotspot when hotspot is unvisited:
@@ -10218,6 +10286,7 @@ section riot
 
 the riot is plural-named scenery in Potshot Hotspot. lgth of riot is 4. gpos of riot is 4. rpos of riot is 3. rgtext of riot is "[rcn][rc][rc][rc]". cert-text of riot is "-[d1][d1][d1]". rect-text of riot is "T[d1][d1][ast]O".
 
+
 instead of taking riot:
 	say "You couldn't even 'take' a few of them.";
 
@@ -10236,9 +10305,11 @@ lgth of protest is 7. gpos of protest is 1. rpos of protest is 6. rgtext of prot
 
 understand "trio" as protest when riot is not visible and tall trio is not visible.
 
+
 understand "protest/three/protesters/crowd/uprisers/horde/rioters" and "rabble" and "mob" as protest when protest is visible.
 
 understand "protest" and "protesters" and "crowd" and "uprisers" and "horde" and "rioters" and "rabble" and "mob" as riot when riot is visible.
+
 
 Include (-
 	has transparent animate
@@ -10349,6 +10420,7 @@ description of chain links is "A bunch of ovular links hooked together. Out of t
 
 understand "chains" as chain links when chain links are visible.
 
+
 instead of taking chain links:
 	say "[one of]Get chain = cheating.[paragraph break]Seriously, though. You'd still be outnumbered. They need something to do with their hands[or]Maybe you could change the links, instead[stopping]."
 
@@ -10406,6 +10478,7 @@ check scaning final-exits:
 
 the final-exits are flippable privately-named plural-named scenery in Means Manse. "They are tempting you to adventure, but you'd rather be than do."
 
+
 understand "exits" as final-exits when player is in Means Manse.
 
 the marble is amusing  scenery in Means Manse. "It makes you calm and relaxed enough to sit back and do nothing with a purpose."
@@ -10421,9 +10494,12 @@ instead of doing something with the toaster:
 before going in Means Manse (this is the clue final verb rule):
 	say "[one of]You suddenly have ye taxin['] any-exit anxiety. Like you're in the middle of an exitstential crisis.[or]I best sit, be, you think.[or]Sit, ex-adventurer.[or]Where would you go? Texis, perhaps[or]Seeing exits just makes you want to...[or]Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! Maybe you're overthinking[stopping]." instead;
 
+
+
 section existing
 
 [the final verb, of course]
+
 
 existing is an action applying to nothing.
 
@@ -10497,6 +10573,9 @@ part understanding mistakes
 
 section intro
 
+
+
+
 to say blurby:
 	if location of player is notices section:
 		say "A magnet is two words--but 'a' doesn't fully count. It wouldn't be strong enough to pull the gate--you need someone to help you, not something, as the broad board says. You see red as you straing to think what or who the nametag should be. Maybe you've got it all wrong, but maybe that's a help.[run paragraph on]";
@@ -10506,15 +10585,59 @@ to say blurby:
 		continue the action;
 	say "[reject][run paragraph on]";
 
+
+
 section forest
+
+
+
+
+
+
+
 
 section metros
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 section resort
+
+
+
+
 
 section sortie
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 section other stuff
+
+
 
 part parser errors
 
@@ -10829,6 +10952,7 @@ definition: a thing (called x) is takeable:
 
 chapter gating
 
+
 chapter scaning
 
 does the player mean rectifying the location: it is very likely;
@@ -10850,6 +10974,7 @@ understand the command "scan [something]" as something new.
 
 understand "scan [something]" as scaning.
 understand "scan" as scaning.
+
 
 does the player mean scaning the player:
 	if notices section is visited:
@@ -11628,6 +11753,7 @@ the shotgun is a container. understand "shot/ gun" as shotgun when shotgun is vi
 
 the shotgun can be loaded. the shotgun is not loaded.
 
+
 description of shotgun is "It's pretty dingy but still intimidating, and it's stamped NO THUGS in red. For whatever reason, it's six-barreled at the muzzle end[if shotgun is not loaded]. Not loaded, though[else]. It's loaded[end if]."
 
 the muzzle is part of the shotgun. description of muzzle is "Six-barreled. Weird."
@@ -11657,10 +11783,12 @@ part nose-ones
 
 the ones are a plural-named thing in the bucket. the ones are flippable. rgtext of ones is "[rcn][rc][rc][rc]". lgth of ones is 4. gpos of ones is 2. rpos of ones is 3. cert-text of ones is "-[d1][d1][d1]". rect-text of ones is "N[d1][d1][ast]E".
 
+
 understand "1s" and "one" as ones.
 
 check taking the ones:
 	say "Too many of them. They'd spill all over." instead;
+
 
 the nose is a disguise-piece. the elevation of the nose is 1.
 
@@ -11685,6 +11813,7 @@ before taking a disguise-piece:
 		say "No, why break up what you built?" instead;
 
 the beard is a disguise-piece. the beard is edible. the elevation of the beard is 0.
+
 
 the printed name of the beard is "[beard-desc]".
 
@@ -12824,6 +12953,7 @@ carry out playing:
 		say "Nothing further happens." instead;
 	the rule succeeds;
 
+
 chapter lifting
 
 lifting is an action applying to one thing.
@@ -12947,6 +13077,7 @@ to decide whether plane-or-panel:
 	if panel is enclosed by location of the player:
 		decide yes;
 	decide no;
+
 
 the wires are part of the panel.
 

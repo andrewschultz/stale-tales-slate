@@ -291,7 +291,7 @@ while ( $line = <A> ) {
   }
   if ( !defined( $tableTo{$tableAbbr} ) ) {
     print
-      "WARNING $tableAbbr after $outputChunk doesn't map anywhere, line $.\n"
+"WARNING $tableAbbr after $outputChunk doesn't map anywhere (check $txtfile), line $.\n"
       if $warnings <= $maxWarnShow;
     print "Reached maximum, only showing major errors\n"
       if $warnings == $maxWarnShow;
@@ -434,7 +434,9 @@ if ($postProcess) {
 
 if ($statsOpen) { `$stat`; }
 
-if ( !$copyBack ) { print "Did not copy tosort2.txt back to tosort.txt.\n"; }
+if ( !$copyBack ) {
+  print "Did not copy tosort2.txt back to tosort.txt. Set -f to do this.\n";
+}
 else {
   my $aroi = meaningful($orig);
   my $a2   = meaningful($mod);
@@ -898,7 +900,9 @@ SPECIFIC USAGE:
 dns is good for doing the stats etc
 c is good for testing
 wa is writeadded, l = launch, o = only. WALPO = general test before
+=============popular use
 pu uql 20 is good for a day's work to check
+sso.pl wa f = process sorted/sortable anagrams
 EOT
   exit;
 }

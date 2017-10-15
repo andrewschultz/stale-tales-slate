@@ -343,6 +343,7 @@ blurb
 "DeRoy Yoder"
 "Derrick Dricker"
 "Derril Ridler"
+"Derron Norder"
 "Derwin Widner"
 "DeSharn Dashner"
 "DeVere Veeder"
@@ -1287,6 +1288,7 @@ blurb
 "Tressa Sastre"
 "Trina Tarin"
 "Trish Hirst"
+"Tucker Tureck"
 "Tula Ault"
 "Tyrel Tyler"
 "Tyrone Torney"
@@ -1413,6 +1415,7 @@ blurb
 "A Cry-Oft Factory"
 "Cutlers['] Cluster"
 "Damp Sick Kids['] Camp"
+"Dare-Skip Parkside"
 "Dark Space Creak Pads"
 "the deathless slate shed"
 "Demon Pit Piedmont"
@@ -1612,7 +1615,7 @@ blurb
 "Yon Pit Pointy"
 
 book sortie
- 
+
 table of poem codas [xxi]
 blurb
 "****ed Men, Add Mad End." [x]
@@ -1667,6 +1670,7 @@ blurb
 "Anger the green hat, her agent, then rage."
 "Anti-rot or taint: no trait to train in Tarot."
 "Antipodes as pointed, painted so."
+"Any edicts, syndicate? A city ends!"
 "Apnea Paean."
 "Apologize? Lo, I zap ego!"
 "Arced Cedar Cadre."
@@ -2155,6 +2159,7 @@ blurb
 "Her foci's his force of riches or chiefs."
 "Her gut urgeth the rug."
 "Her symbiotic biochemistry: yo, besmirch it! Omit icy herbs!"
+"Heraclitus, he curtails achier lust. Hail, truces!"
 "Herald not, other land older than Thorndale!"
 "Here I am. Ah, me, ire: aim here!"
 "Here's to Thor, see? So there!"
@@ -2825,6 +2830,7 @@ blurb
 "So, Nancy. Scan yon canyons."
 "So, nerd drones snored."
 "So pretty trope sty! Poets try!"
+"So, pry, soppy, sorry prosy pyros!"
 "So rarefy rosy fear for years."
 "So, runt, rust on."
 "So snow swoons."
@@ -3697,6 +3703,7 @@ blurb
 "'Do-Blacker Ad-Blocker Lab Rocked!'"
 "'Do patches! Code paths!' / 'Patched, so!'"
 "'Do stab ad-bots! Bad? Sot!'"
+"'Docs in no disc? Cons! I'd...'"
 "'Dog, coils! Disc logo!' / '[']S cool. Dig.'"
 "'Don't open that malig-Gmail!'" [x]
 "'Dope build! Double dip!'"
@@ -4179,6 +4186,7 @@ blurb
 "'Dull! BAM, Bull mad!'"
 "'Dump the THUMPED!'"
 "'Dumpiest Stump, Die!'"
+"A dweeb! Be awed!"
 "'Evasion so naive!'"
 "'Fade until in default, failed nut!'"
 "'Fail now, low naif wan foil!'"
