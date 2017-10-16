@@ -16,19 +16,52 @@ carry out scling:
 		say "--[QQ][line break]";
 	the rule succeeds;
 
-chapter bkling - not for release
+chapter etuing
 
-bkling is an action out of world.
+cmdtype is a number that varies.
 
-understand the command "bkl" as something new.
+etuing is an action applying to one number.
 
-understand "bkl" as bkling.
+understand the command "etu" as something new.
 
-carry out bkling:
-	say "List of scenery:[line break]";
-	repeat with QQ running through visible backdrops:
-		say "--[QQ][line break]";
+understand "etu [number]" as etuing.
+
+understand "etu" as etu0ing.
+
+etu0ing is an action out of world.
+
+carry out etu0ing:
+	try etuing 0 instead;
+
+carry out etuing:
+	let nu be number understood;
+	if nu is -1:
+		repeat through table of cmds:
+			say "[testnum entry]: [testact entry].";
+		the rule succeeds;
+	if nu < 0 or nu > number of rows in table of cmds, say "Need 1-[number of rows in table of cmds]. Try -1 to see the whole list. Currently [cur-act]." instead;
+	if nu is 0, say "Resetting." instead;
+	now cmdtype is number understood;
+	say "Now [cur-act] every turn.";
 	the rule succeeds;
+
+to say cur-act:
+	if cmdtype is 0:
+		say "nothing";
+		continue the action;
+	choose row cmdtype in table of cmds;
+	say "[testact entry]"
+
+table of cmds
+testnum	testact
+1	smelling
+2	listening
+
+every turn when cmdtype > 0:
+	choose row cmdtype in table of cmds;
+	say "======Carrying out [testact entry].";
+	try the testact entry;
+	continue the action;
 
 chapter nuling - not for release
 
