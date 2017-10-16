@@ -3084,10 +3084,10 @@ carry out fliptoing (this is the main flipping rule) :
 	the rule succeeds;
 
 after fliptoing (this is the set pronouns rule) :
-	if noun is teleporter:
+[	if noun is teleporter:
 		set the pronoun it to location of player;
-		continue the action;
-	if noun is beast:
+		continue the action;]
+	if noun is beast or noun is wolves:
 		set the pronoun him to noun;
 		set the pronoun her to noun;
 		continue the action;
@@ -3222,6 +3222,7 @@ after fliptoing resin:
 
 after fliptoing sorbet:
 	now sorbet is in lalaland;
+	min-up;
 	continue the action;
 
 check fliptoing silver:
@@ -3835,8 +3836,8 @@ definition: a thing (called itm) is regspecial:
 check taking inventory:
 	if the first thing held by the player is nothing:
 		say "Not very 'in.'" instead;
-	say "Regspecial [list of regspecial enclosed by player].";
-	say "Warpable [list of warpable things enclosed by player].";
+[	say "Regspecial [list of regspecial enclosed by player].";
+	say "Warpable [list of warpable things enclosed by player].";]
 	say "Item time! [run paragraph on]";
 	if mrlp is intro or mrlp is stores, continue the action;
 	if the number of regspecial things enclosed by the player is 0:
@@ -4003,7 +4004,7 @@ check going inside in Busiest Subsite:
 	now player is in Dry Yard instead;
 
 instead of thinking:
-	say "Yes, I hope this game makes you do a little of this, but nothing painful."
+	say "Yes, I hope this game makes you do a little of this, but nothing painful[one of] (if you need hints, HINT will work better, or HINT (OBJECT)[or][stopping]."
 
 check dropping magenta nametag:
 	if player is in subsite:
@@ -5362,6 +5363,9 @@ chapter Trips Strip
 
 Trips Strip is a room. "You see what was once a bunch of small malls. Most lots appear vacant or dilapidated[if storeall are examined][exc-which][end if]. A tepid icon depiction is drawn out near various stores."
 
+after choosing notable locale objects when player is in Trips Strip (this is the show cabinet last rule):
+	if cabinet is in Trips strip, set the locale priority of cabinet to 9;
+
 Trips Strip is in Stores. last-loc of Stores is Trips Strip.
 
 sto-all is a truth state that varies.
@@ -6107,6 +6111,13 @@ chapter Self-ID Fields
 
 Self-ID Fields is a room in Forest. "You feel a breeze from the west, and there's a plainer passage east. A line of no life passes through a turnstile at regular intervals in a silent rut to the north."
 
+after looking in Self-ID Fields:
+	set the pronoun it to gy;
+	set the pronoun him to gy;
+	set the pronoun her to gy;
+	set the pronoun them to gy2;
+	continue the action;
+
 check going inside in Self-ID Fields:
 	try going north instead;
 
@@ -6554,6 +6565,14 @@ There is a room called Cruel Ones' Enclosure. It is in Forest.
 
 Enclosure is north of Self-ID Fields. "A creepy acre, yep[if liches are in Enclosure]. Liches block your way north[one of]. Drat! You were hoping for a ghost, whom you could zap to goths, and then if they had any spunk, you'd show them up as punks[or][stopping][end if][if drapes are in Enclosure]. Along one wall you see drapes fluttering. They're too thick to walk through[else if red asp is in Enclosure]. A red asp guards the way north[else if spread is in Enclosure]. A spread blocking the way north flutters in some breeze you cannot feel[else if liches are not in Enclosure]. Nothing seems to block the way north now[end if][if banshee is visible]. A banshee also wails about its former life, and it'd be nice to deep-six (well, seven, since it's got seven letters,) but not necessary[else][end if]. You can go back south to the fields."
 
+after looking in Enclosure:
+	if banshee is in enclosure:
+		set the pronoun it to banshee;
+		set the pronoun him to banshee;
+		set the pronoun her to banshee;
+	if liches are in enclosure:
+		set the pronoun them to liches;
+
 to say d-s:
 	say "[if drapes are visible]drapes make[else if red asp is visible]red asp makes[else]spread makes[end if]";
 
@@ -6715,7 +6734,7 @@ understand "round/den" and "round den" and "unadorned" as Centrifuge when centri
 
 The dial is in Centrifuge. The dial has a number called numset. The numset of the dial is 0. the dial is fixed in place. the dial is flippable.
 
-the ufcex are privately-named plural-named scenery in Centrifuge. understand "exits" and "angle" as ufcex when player is in Centrifuge. "[ufcex-descrip]."
+the ufcex are privately-named plural-named scenery in Centrifuge. understand "exits" and "angle" as ufcex when player is in Centrifuge. "[ufcex-descrip].". printed name of ufcex is "exits".
 
 to say ufcex-descrip:
 	if numset of dial is 16:
@@ -6890,7 +6909,7 @@ check looking in Centrifuge:
 
 chapter The Nick
 
-The Nick is a room in Sortie. "You're locked in this arty suite of austerity by a great grate. It's a more forbidding version of the gateway in the Notices Section. You doubt even Nat Egam could magic it open. There appears to be no standard way out. It has no accommodations, not even unsoft futons. This is a saner snare than the centrifuge, but it doesn't look like you'll drug a guard or reveal a lever to escape. At least there is some graffiti[if player has gadget][beepity-nick][end if]."
+A room called The Nick is in Sortie. "You're locked in this arty suite of austerity by a great grate. It's a more forbidding version of the gateway in the Notices Section. You doubt even Nat Egam could magic it open. There appears to be no standard way out. It has no accommodations, not even unsoft futons. This is a saner snare than the centrifuge, but it doesn't look like you'll drug a guard or reveal a lever to escape. At least there is some graffiti[if player has gadget][beepity-nick][end if]."
 
 t-n is privately-named proper-named scenery in the nick. "The nick is all around.". printed name of t-n is "the nick". understand "nick" as t-n. the rgtext of t-n is "[rc][rc][rc][rc][rc][rc][rc]". the lgth of t-n is 7. gpos of t-n is 7. rpos of t-n is 4. the cert-text of t-n is "-[d1][d1][d1][d1][d1][d1]". the rect-text of t-n is "K[d1][d1][d1][d1][d1][ast]N". t-n is abstract.
 
@@ -6919,13 +6938,12 @@ section what to do here
 
 to say beepity-nick:
 	say ".[paragraph break]Your gadget seems to shake a bit";
+	set the pronoun it to gadget;
 
 after looking in kitchen for the first time:
 	say "You notice some warts on your face. Stress causes them, you know, and between the centrifuge and the nick, you've had a bit lately.";
 	now warts are part of the player;
 	now startmod5 is the remainder after dividing (turn count + 4) by 5;
-
-printed name of The Nick is "The Nick".
 
 The great grate is scenery in The Nick.
 
@@ -6938,7 +6956,7 @@ check opening great grate:
 
 understand "gate" as great grate when grate is visible.
 
-some jail cell graffiti is scenery in The Nick. description of jail cell graffiti is "In red crayon: [first custom style][one of]N. THICKE-HECKTIN was here.[or]Chetnik was here.[or]Think, C.E.![or]Hecknit was here.[in random order][r]"
+some jail cell graffiti is scenery in The Nick. description of jail cell graffiti is "[one of]There are a few things. Here is the first.[paragraph break][or][stopping]In red crayon: [first custom style][one of]N. THICKE-HECKTIN was here.[or]Chetnik was here.[or]Think, C.E.![or]Hecknit was here.[in random order][r]"
 
 instead of taking the jail cell graffiti:
 	say "Maybe you can take a hint from it."
@@ -7268,7 +7286,7 @@ check taking off the coat:
 		say "Too cold." instead;
 	if moor is visited:
 		say "Nah, you may need to go there." instead;
-	say "It's not making you sweaty. Maybe there'll be a place you need it. [if roomroom is unvisited or Trellis is unvisited]You haven't been everywhere here, yet[else if moor is unvisited]Maybe there's a way out you haven't found--a simple one[end if]." instead;
+	say "It's not making you sweaty. Maybe there'll be a place you need it[if roomroom is unvisited or Trellis is unvisited]. You haven't been everywhere here, yet[else if r2 is prefigured]. Like the moor that was too cold before[else if moor is unvisited]. Maybe there's a way out you haven't found--a simple one[end if]." instead;
 
 the bottle of CATHOUSE perfume is a pregredient. "A bottle of CATHOUSE perfume is here.". rgtext of CATHOUSE is "[rcn][rc][gc][rc][rc][gc][rc][gc]". lgth of cathouse is 8. gpos of cathouse is 4. rpos of cathouse is 8. cert-text of cathouse is "-[d1][ast]T[d1][d1][ast]U[d1][ast]E". rect-text of cathouse is "H[d1][d1][d1][d1][d1][d1][ast]E".
 
@@ -7615,6 +7633,7 @@ check inserting hay into:
 	now hay is part of the scraped wall;
 	now scraped wall is hayfilled;
 	reg-inc;
+	set the pronoun it to scraped wall;
 	say "Hey, well, the wall is made of hay now. Anyhow, I hope you know what you're doing." instead;
 
 before taking hay:
@@ -8289,6 +8308,10 @@ to say door-clue:
 chapter Sacred Cedars
 
 Sacred Cedars is east of Trellis. "You are in a room with thick entwined cedars as walls. On one, a spout pouts, waiting for a stoup. You can go back west to the stiller trellis. Oddly, you feel no reason to be scared. You see drawings and holy verse on the walls.". Cedars is in Sortie.
+
+after looking in sacred cedars:
+	set the pronoun them to verse;
+	continue the action;
 
 to say what-to-ask-lois:
 	if player is not in cedars:
@@ -10466,7 +10489,7 @@ carry out existing:
 
 book lll
 
-LLL is a region. Lalaland is in LLL. [LLL is only a region for backdrops.]
+LLL is an unsolvable region. Lalaland is in LLL. [LLL is only a region for backdrops.]
 
 chapter lalaland
 
@@ -11906,6 +11929,7 @@ check inserting it into (this is the forest-insert rule):
 		if second noun is shotgun:
 			say "The silver fits in well. You hear some melodramatic nonsense in your head about a dreamer rearmed. More practically, you're ready for a firefight.";
 			now shotgun is loaded;
+			set pronoun it to shotgun;
 			now silver is in lalaland instead;
 	if second noun is shotgun:
 		if shotgun is loaded:
@@ -12127,6 +12151,7 @@ check putting it on(this is the disguise-piece creation rule):
 		if nose is part of beard and shades are part of beard:
 			say "[line break]You've made a full disguise now!";
 			now beard is wearable;
+			set the pronoun it to the beard;
 		otherwise:
 			do nothing;
 		the rule succeeds;
