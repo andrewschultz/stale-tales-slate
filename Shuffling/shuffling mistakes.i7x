@@ -330,7 +330,7 @@ understand "slite" as a mistake ("That's bad spelling, and it won't shrink your 
 
 chapter Leis Isle
 
-understand "lies" and "lie" as a mistake ("'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made [if leis are in lalaland]have dissolved[else]dissolve[end if]. You see the isle for what it is[lei-lala]") when player is in isle and leis are in isle.
+understand "lies" and "lie" as a mistake ("'Lies! LIES! LIES!!!!' you cry. Who could've put those leis there to make you lazy and content? Lessie Li? Lee Silis? Les Iseli? Elise Lis? Lise Seil? Ilse Elis? Eli Siles? All of them? Whoever they are, the leis they made [if leis are in lalaland]have dissolved[else]dissolve[end if]. You see the isle for what it is[lei-lala].") when player is in isle and leis are in isle.
 
 chapter rived drive
 

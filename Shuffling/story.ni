@@ -3083,6 +3083,10 @@ carry out fliptoing (this is the main flipping rule) :
 		say "Something went wrong here. It should not have, but it did. [bug-report]";
 	the rule succeeds;
 
+after fliptoing rentals:
+	now rentals are in lalaland;
+	continue the action;
+
 after fliptoing (this is the set pronouns rule) :
 [	if noun is teleporter:
 		set the pronoun it to location of player;
@@ -3091,6 +3095,7 @@ after fliptoing (this is the set pronouns rule) :
 		set the pronoun him to noun;
 		set the pronoun her to noun;
 		continue the action;
+	if noun is rentals, now noun is in lalaland;
 	if noun is visible:
 		if noun is plural-named:
 			set the pronoun them to noun;
@@ -3851,6 +3856,7 @@ check taking inventory:
 	now all warpable things enclosed by player are marked for listing;
 	say "Your general tools include:[line break]";
 	list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
+	if number of things worn by player > 0, say "You are also wearing [list of things worn by player].";
 	the rule succeeds;
 
 after printing the name of the emitter while taking inventory:
@@ -5364,6 +5370,9 @@ chapter Trips Strip
 Trips Strip is a room. "You see what was once a bunch of small malls. Most lots appear vacant or dilapidated[if storeall are examined][exc-which][end if]. A tepid icon depiction is drawn out near various stores."
 
 after choosing notable locale objects when player is in Trips Strip (this is the show cabinet last rule):
+	if forest-x is in Trips strip, set the locale priority of forest-x to 6;
+	if sortie-x is in Trips strip, set the locale priority of sortie-x to 7;
+	if metros-x is in Trips strip, set the locale priority of metros-x to 8;
 	if cabinet is in Trips strip, set the locale priority of cabinet to 9;
 
 Trips Strip is in Stores. last-loc of Stores is Trips Strip.
@@ -8310,7 +8319,8 @@ chapter Sacred Cedars
 Sacred Cedars is east of Trellis. "You are in a room with thick entwined cedars as walls. On one, a spout pouts, waiting for a stoup. You can go back west to the stiller trellis. Oddly, you feel no reason to be scared. You see drawings and holy verse on the walls.". Cedars is in Sortie.
 
 after looking in sacred cedars:
-	set the pronoun them to verse;
+	set the pronoun them to drawings;
+	set the pronoun it to holy verse;
 	continue the action;
 
 to say what-to-ask-lois:
@@ -8838,8 +8848,13 @@ check going outside in cordoned red condo:
 
 the talkers are plural-named amusing scenery in cordoned red condo. understand "talker" as talkers.
 
+after looking in condo:
+	if talkers are in condo, set the pronoun them to talkers;
+	continue the action;
+
 after doing something with talkers:
 	set the pronoun it to talkers;
+	set the pronoun them to talkers;
 	continue the action;
 
 Include (-
@@ -8948,7 +8963,7 @@ check going south in Cordoned Red Condo:
 		if player does not have dry cake and player does not have keycard:
 			say "A caveat before you vacate: some loot here may be a tool later. [run paragraph on]";
 			try taking the dry cake;
-		say "You migrate, ragtime music in your head. From the south, some camped folks decamp for har-hars and rah-rahs. 'Roaches scare! Ho!'[paragraph break]You're the camp's scamp now, so to speak. Why, the deadbeat has promoted you from The Man to Dude. I bet you could even take that corn now!";
+		say "You migrate, ragtime music in your head. From the south, some camped folks decamp for har-hars and rah-rahs. 'Roaches scare! Ho!'[paragraph break]You're the camp's scamp now, so to speak. Why, the deadbeat has promoted you from The (Wo)Man to Dude. I bet you could even take that corn now!";
 		now condo-barred is true;
 
 report taking the dry cake:
@@ -9284,7 +9299,11 @@ There is a room called The Ol' Hotel.
 
 Hotel is west of Undesired Underside. "What would a beaten-down city be without an ol['] hotel? Both have seen better days. Still hard not to loathe a hotel in this state. Everything's boarded up. The only way out is east.". Hotel is in Metros.
 
-The Night Thing is a person in Hotel. "A scary Night Thing is here, sitting on some sort of mattress."
+The Night Thing is a neuter person in Hotel. "A scary Night Thing is here, sitting on some sort of mattress."
+
+after doing something with the night thing:
+	set the pronoun her to night thing;
+	continue the action;
 
 does the player mean throwing the tomato at the night thing: it is likely
 
@@ -9418,6 +9437,7 @@ description of smartest mattress is "The Smartest Mattress doesn't have a one-pa
 
 to say get-the-bump:
 	say ". The bump in the mattress is obvious enough that you have to take another look. You find a small machine labeled, apparently, a termite emitter, and you take it";
+	set the pronoun it to termite emitter;
 	now bump is in lalaland;
 	now player has the emitter;
 
@@ -9584,6 +9604,7 @@ check opening the metallic door:
 	if keycard-put is true:
 		say "You use the keycard to open the door again.";
 		try putting keycard on sensor instead;
+	set the pronoun it to metallic door
 	if location of player is undesired and keycard is off-stage:
 		say "You hear braying laughter behind the door. 'Hey! Some unintellectual's trying to get in. Like we'd make it a piece of cake for them to.' Then someone else admonishes the speaker for ending a sentence with a preposition." instead;
 	say "The metallic door's got no handle. It's probably operated by the sensor[if player has keycard], which might open if you put something like your keycard on it[else], but you don't seem to have anything to activate it[end if]." instead;
@@ -10311,6 +10332,7 @@ to hello-bull:
 	say "[wfak][line break]'Armed with a dream, I forged my RESPECT SCEPTER--an alum-maul--went from Da Prominent to Predominant! Once, you rodents snorted.'[paragraph break]Moving from angered to enraged, he puts his battle tablet in a back pocket and pulls out his cruelty cutlery forged of [i]iron noir[r].[paragraph break]'I will not waste sweat. GET OUT!!!! My ideal time? IMMEDIATELY! Nuance is nuisance!'[paragraph break]Bad time to maunder unarmed.[line break][wfak]";
 	now Red Bull Burdell is in Potshot Hotspot;
 	set the pronoun him to Red Bull Burdell;
+	set the pronoun it to cruelty cutlery;
 	now potters are in lalaland;
 	now kilns are in lalaland;
 	now cutlery is in hotspot;
@@ -10428,7 +10450,7 @@ carry out tuging:
 
 chapter Means Manse
 
-Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The darned [i]exits[r] are all around, making you worry about what was, or if you'll have more to do, but you just want to do less than nothing[if player has gadget]. Your gadget rattles for hopefully the last time[end if].". Means Manse is in Resort.
+Means Manse is east of Potshot Hotspot. "Your new home. Um, yo, here. Now. I could ramble about the marble, praise a spire, or sanction what it contains, but really--you sense one last hurdle hurled in your way to happiness.[paragraph break]The darned [i]exits[r] are all around, making you worry about if you'll have more to do, but hopefully you can just sit and do less than nothing--around the manse, or ignoring said exits[if player has gadget][one of]. Your gadget rattles for hopefully the last time[or][stopping][end if].". Means Manse is in Resort.
 
 check going outside in Means Manse:
 	say "You just want to get settled into the Means Manse. Maybe there's a way to BE, without having something to do with the exits just yet." instead;
@@ -12289,12 +12311,10 @@ check listening:
 					otherwise:
 						say "The semi-sheltered Bile Libe offers some respite from the beats, especially with the words gone. But not enough." instead;
 				say "The words drown out the beats for the moment. They're sharp words, attacking words, hard to shield yourself from, but they're local enough they can't be twisted." instead;
-		if player is in red camp:
-			try examining music instead;
-		if night thing is visible:
-			say "The groans from the Night Thing's organs are blocking out the usual thumping. For now." instead;
-		if player is in cordoned red condo:
-			say "The conversation changes subject rapidly and randomly." instead;
+		if player is in red camp, try examining music instead;
+		if night thing is visible, say "The groans from the Night Thing's organs are blocking out the usual thumping. For now." instead;
+		if player is in cordoned red condo, say "The conversation changes subject rapidly and randomly." instead;
+		if player is in elf row's flowers, say "The faeries have managed to block out the beats here, which is nice." instead;
 		say "[one of]Acoustics so caustic.[or]Phoniest hip tones.[or]Fatal a-flat.[or]Thumping's SUMPTHING.[or]Ouch! Hearin['] Hernia.[in random order]" instead;
 	if player is in Busiest Subsite:
 		say "[one of][thissy].[or]'That lecture'll fix your helpless spells, eh?' someone walking by asks.[or]'A resume masseur!' someone exclaims.[or]'Boy, I need to re-care about my career,' someone actually says with a straight face.[or]'Tell yourself I'M PRE PRIME!'[cycling]" instead;
