@@ -3827,10 +3827,30 @@ check taking scenery:
 
 section inventory stubs
 
+definition: a thing (called itm) is regspecial:
+	if itm is warpable, decide no;
+	if itm is part of the phail phial or itm is part of the gadget or itm is part of the dope tan notepad or itm is part of the show hows tag or itm is pockets, decide no;
+	decide yes;
+
 check taking inventory:
 	if the first thing held by the player is nothing:
 		say "Not very 'in.'" instead;
+	say "Regspecial [list of regspecial enclosed by player].";
+	say "Warpable [list of warpable things enclosed by player].";
 	say "Item time! [run paragraph on]";
+	if mrlp is intro or mrlp is stores, continue the action;
+	if the number of regspecial things enclosed by the player is 0:
+		say "You have nothing from this region in particular.";
+	else:
+		now all things enclosed by player are unmarked for listing;
+		now all regspecial things carried by player are marked for listing;
+		say "In this region you have found:[line break]";
+		list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
+	now all things enclosed by player are unmarked for listing;
+	now all warpable things enclosed by player are marked for listing;
+	say "Your general tools include:[line break]";
+	list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
+	the rule succeeds;
 
 after printing the name of the emitter while taking inventory:
 	say " ([if emitter is angstgnatted]full of angst gnats[else if condo-evac is false]full. Uh, you think[else]nothing inside[end if])";
@@ -6037,8 +6057,7 @@ to say vis-hint:
 	say "[if stew is visible or teas are visible]there's a[nuthers] smell[else if shout is visible]you hear a shout[else if thorn is visible]a thorn sticks up[else]there should be something, but there isn't. BUG[end if]"
 
 to say nuthers:
-	unless stew is off-stage or teas are off-stage:
-		say "nother";
+	if player is in rf, say "[if stew is in sf or teas are in sf]nother[end if]"
 
 section guiders
 
