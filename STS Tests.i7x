@@ -1,6 +1,6 @@
 Version 1/170918 of STS tests by Andrew Schultz begins here.
 
-"Does nothing much yet"
+"Tracks various testing commands that can be used by Shuffling Around or A Roiling Original"
 
 chapter scling - not for release
 
@@ -33,14 +33,26 @@ etu0ing is an action out of world.
 carry out etu0ing:
 	try etuing 0 instead;
 
+maxtestnum is a number that varies.
+
+when play begins (this is the calculate maxtestnum rule):
+	say "Calculating the max test number.";
+	now maxtestnum is 1;
+	let power be 1;
+	while power <= number of rows in table of cmds:
+		now maxtestnum is maxtestnum * 2;
+		increment power;
+	decrement maxtestnum;
+
 carry out etuing:
 	let nu be number understood;
 	if nu is -1:
+		let power be 1;
 		repeat through table of cmds:
-			say "[testnum entry]: [testact entry].";
+			say "[power]: [testact entry].";
+			now power is power * 2;
 		the rule succeeds;
-	choose row (number of rows in table of cmds) in table of cmds;
-	if nu < 0 or nu >= testnum entry * 2, say "Need 1-[testnum entry * 2 - 1]. Try -1 to see the whole list. Currently the test command each turn list is [cur-act]." instead;
+	if nu < 0 or nu > maxtestnum, say "Need 1-[maxtestnum]. Try -1 to see the whole list. Currently the test command each turn list is [cur-act]." instead;
 	now cmdtype is number understood;
 	if nu is 0, say "Resetting." instead;
 	say "Now [cur-act] every turn.";
@@ -59,18 +71,18 @@ to say cur-act:
 			if gotyet is true, say ", ";
 			now gotyet is true;
 			say "[testact entry]";
-			now power is power * 2;
 			if cmdtemp is 0, continue the action;
+		now power is power * 2;
 
 table of cmds
-testnum	testact
-1	smelling
-2	listening
-4	hinting
-8	tkalling
-16	taking inventory
-32	requesting the pronoun meanings
-64	thinking
+testact
+smelling
+listening
+hinting
+tkalling
+taking inventory
+requesting the pronoun meanings
+thinking
 
 every turn when cmdtype > 0 (this is the testrun rule):
 	let cmdtemp be cmdtype;
