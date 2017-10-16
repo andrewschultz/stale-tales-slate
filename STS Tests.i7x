@@ -39,9 +39,10 @@ carry out etuing:
 		repeat through table of cmds:
 			say "[testnum entry]: [testact entry].";
 		the rule succeeds;
-	if nu < 0 or nu > number of rows in table of cmds, say "Need 1-[number of rows in table of cmds]. Try -1 to see the whole list. Currently [cur-act]." instead;
-	if nu is 0, say "Resetting." instead;
+	choose row (number of rows in table of cmds) in table of cmds;
+	if nu < 0 or nu >= testnum entry * 2, say "Need 1-[testnum entry * 2 - 1]. Try -1 to see the whole list. Currently the test command each turn list is [cur-act]." instead;
 	now cmdtype is number understood;
+	if nu is 0, say "Resetting." instead;
 	say "Now [cur-act] every turn.";
 	the rule succeeds;
 
@@ -49,20 +50,38 @@ to say cur-act:
 	if cmdtype is 0:
 		say "nothing";
 		continue the action;
-	choose row cmdtype in table of cmds;
-	say "[testact entry]"
+	let power be 1;
+	let gotyet be false;
+	let cmdtemp be cmdtype;
+	repeat through table of cmds:
+		if the remainder after dividing cmdtemp by (power * 2) is power:
+			now cmdtemp is cmdtemp - power;
+			if gotyet is true, say ", ";
+			now gotyet is true;
+			say "[testact entry]";
+			now power is power * 2;
+			if cmdtemp is 0, continue the action;
 
 table of cmds
 testnum	testact
 1	smelling
 2	listening
-3	hinting
-4	tkalling
+4	hinting
+8	tkalling
+16	taking inventory
+32	requesting the pronoun meanings
+64	thinking
 
 every turn when cmdtype > 0 (this is the testrun rule):
-	choose row cmdtype in table of cmds;
-	say "======Carrying out [testact entry]======";
-	try the testact entry;
+	let cmdtemp be cmdtype;
+	let power be 1;
+	repeat through table of cmds:
+		if the remainder after dividing cmdtemp by (power * 2) is power:
+			say "======Carrying out [testact entry]======";
+			try the testact entry;
+			now cmdtemp is cmdtemp - power;
+		now power is power * 2;
+		if cmdtemp is 0, continue the action;
 	continue the action;
 
 after fliptoing (this is the redo cmd on debug rule):
