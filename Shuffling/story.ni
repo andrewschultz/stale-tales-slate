@@ -736,10 +736,10 @@ chat-rand is a truth state that varies.
 
 talk-quiet is a truth state that varies.
 
-every turn  (this is the process random dialogue rule):
+every turn (this is the process random dialogue rule):
 	if current action is mainhelping:
 		do nothing instead;
-	if current action is helping:
+	if current action is hinting:
 		do nothing instead;
 	if current action is fliptoing:
 		do nothing instead;
@@ -1002,15 +1002,15 @@ to commend (y - a region):
 		the rule succeeds;
 	now y is solved;
 
-chapter helping
+chapter hinting
 
-helping is an action applying to nothing.
+hinting is an action applying to nothing.
 
 mainhelping is an action applying to nothing.
 
 understand the command "hint/hints" as something new.
 
-understand "hint" and "hints" as helping.
+understand "hint" and "hints" as hinting.
 
 hintsoff is a truth state that varies. hintsoff is usually false.
 
@@ -1023,7 +1023,7 @@ to say minus:
 to say plus:
 	say "[one of](+) [italic type][bracket]NOTE: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.[close bracket][r][or](+)[stopping]";
 
-carry out helping:
+carry out hinting:
 	if location of player is busiest subsite:
 		say "You're not in the area where the magic happens, yet. The cardinal directions, including the boring lecture east, are out." instead;
 	if meaningful-hint is false:
@@ -1034,8 +1034,6 @@ carry out helping:
 			continue the action;
 		otherwise:
 			say "Her cheats sachet tempts you, even trying to scathe as you remain chaste. [hintblah]" instead;
-
-carry out helping:
 	if hintfull is false:
 		try mainhelping;
 	otherwise:
@@ -1945,7 +1943,7 @@ carry out sortie-hinting:
 	all-say "Oops. I did not account for this hint. This is a [bug-report], and you'll need to see the walkthrough.";
 	the rule succeeds;
 
-check helping:
+check hinting:
 	if hintfull is true:
 		say "Ignoring hint nag due to hint-every-move debug flag set. Only testers should see this. [bug-report] in final release." instead;
 
@@ -4229,12 +4227,6 @@ check entering yard-door:
 		poss-d;
 	now player is in Thickest Thickets instead;
 
-check smelling in Dry Yard:
-	if yard-door is not in Dry Yard:
-		say "It's an odor of new places and adventure and puzzles and how to get there. It tempts you--wouldn't it be nice if there was something more physical to provide passage than, well, just an odor?[paragraph break]You repress a four-letter word. Well, if things are that simple, it's probably a [i]nicer[r] four-letter word." instead;
-	otherwise:
-		say "The door is of some odd wood you don't recognize." instead;
-
 instead of taking odor:
 	say "Impossible."
 
@@ -5477,9 +5469,6 @@ check going nowhere in trips strip:
 
 cool-index is a number that varies.
 
-check smelling in Trips Strip:
-	say "There's a mixture of smells coming from the shops. You could probably go up to one and examine it." instead;
-
 the wooden sign is scenery in the Trips Strip. description of wooden sign is "'A store is not a shop.' Beneath is scribbled 'hopes, chops, hoops, well, that's it.' ... no other words, anyway.'"
 
 instead of taking the wooden sign:
@@ -6045,7 +6034,7 @@ check going in sf:
 description of sf is "You recognize no trees: a sprucy cyprus, or even forensic conifers, and no clear sign of clearings. But [vis-hint]."
 
 to say vis-hint:
-	say "[if stew is visible or teas are visible]there's a[nuthers] smell[else if shout is visible]you hear a shout[else if thorn is visible]a thorn sticks up here[else]there should be something, but there isn't. BUG[end if]"
+	say "[if stew is visible or teas are visible]there's a[nuthers] smell[else if shout is visible]you hear a shout[else if thorn is visible]a thorn sticks up[else]there should be something, but there isn't. BUG[end if]"
 
 to say nuthers:
 	unless stew is off-stage or teas are off-stage:
@@ -6308,6 +6297,7 @@ instead of opening sandwich:
 	say "You [if player does not have the sandwich]take the sandwich and [end if]peel the bread from the Spam.";
 	now player has bread;
 	now sandwich is in lalaland;
+	set the pronoun it to the Spam;
 	now player has the Spam;
 
 instead of eating sandwich:
@@ -6444,7 +6434,7 @@ instead of eating livers:
 instead of eating Spam:
 	say "The thought of eating Spams gives you a spasm. Eww."
 
-the livers are things. description of livers is "Amalgamated well enough that you can't recognize which parts were cow and chicken. You suspect they're an upgrade from the individual livers but need to find out how.". lgth of livers is 6. gpos of livers is 6. rpos of livers is 5. rgtext of livers is "[rcn][rc][rc][rc][rc][rc]". cert-text of livers is "-[d1][d1][d1][d1][d1]". rect-text of livers is "S[d1][d1][d1][d1][ast]R".
+the livers are plural-named things. description of livers is "Amalgamated well enough that you can't recognize which parts were cow and chicken. You suspect they're an upgrade from the individual livers but need to find out how.". lgth of livers is 6. gpos of livers is 6. rpos of livers is 5. rgtext of livers is "[rcn][rc][rc][rc][rc][rc]". cert-text of livers is "-[d1][d1][d1][d1][d1]". rect-text of livers is "S[d1][d1][d1][d1][ast]R".
 
 understand "glop" and "glob" as livers.
 
@@ -11273,7 +11263,7 @@ to say about-lube:
 	if player has the phial:
 		say "'Good, good, you got the phial. Remember to ANGLE to see into things or GLEAN to see around as need be.'";
 	otherwise:
-		say "'[if lube-asked is true and player does not have lube]You can just take it. [else if cabinet-bit-me is true]Cabinet not letting you have it, eh? [end if][one of]The phial with the lube can grease your way to a solution.' He coughs. 'Sorry.'[paragraph break][or][stopping]'If you ANGLE the lube just right so it reflects a light source, you can see what you can change. If you GLEAN, you see what you should be doing. How your story unfolds[if lube-asked is false].' He walks over to the cabinet, pats it, and says a few words. 'You can take the phial now.'[else].' So you do.[end if]";
+		say "'[if lube-asked is true and player does not have lube]You can just take it. [else if cabinet-bit-me is true]Cabinet not letting you have it, eh? [end if][one of]The phial with the lube can grease your way to a solution.' He coughs. 'Sorry.'[paragraph break][or][stopping]'If you ANGLE the lube just right so it reflects a light source, you can see what you can change. If you GLEAN, you see what you should be doing. How your story unfolds[if lube-asked is false].' He walks over to the cabinet, pats it, and says a few words. 'You can take the phial now.' So you do.[else].'[end if]";
 	now player has phial;
 	pad-rec-lump "lube";
 	pad-rec-lump "angle";
@@ -11965,13 +11955,13 @@ understand "door" as doorway when doorway is visible.
 description of doorway is "It's pretty imposing. That spread, and those drapes, were huge. And what's behind--well, you can't see much, and it'd be nice to have some sort of guide."
 
 instead of opening doorway:
-	try going north;
+	try going inside;
 
 instead of entering doorway:
-	try going north;
+	try going inside;
 
-instead of going inside in Enclosure:
-	try going north;
+instead of going north in Enclosure:
+	try going inside;
 
 part scoring
 
@@ -12151,16 +12141,6 @@ the block smelling rule is not listed in any rulebook.
 before smelling the player:
 	say "As good-smelling as ever. You remembered your deodorant this morning. Yay, you." instead;
 
-check smelling in Trips Strip:
-	say "There's a mixture of smells coming from the shops. You could probably go up to one and examine it." instead;
-
-check smelling in Dry Yard:
-	if noun is not toga and toga is visible:
-		say "Something here smells vaguely like a barn." instead;
-
-check smelling the toga:
-	say "Woo. Stinky. You can't quite identify which animal, being a city slicker." instead;
-
 instead of entering mattress:
 	try sleeping instead;
 
@@ -12172,6 +12152,7 @@ carry out smelling:
 			say "Still got that planty smell, though it's more the touch that's important." instead;
 		otherwise:
 			say "It's too close to the ground, and the smell doesn't matter." instead;
+	if noun is toga, say "Woo. Stinky. You can't quite identify which animal, being a city slicker." instead;
 	if noun is cask:
 		if cask is closed:
 			say "Faintly alcoholic. Might be honey, too. Not very strong, though." instead;
@@ -12217,16 +12198,16 @@ carry out smelling:
 	if noun is slough:
 		say "I suppose it's a smell of nearby evil or something." instead;
 	if noun is frost forts:
-		say "Decayin[']. Cyanide. Nice day!" instead;
-	if location is kitchen:
-		say "The smell of delicious fried comfort foods. You'll probably not want to make anything too nutritious here." instead;
-	if location of player is cedars:
-		say "Still strong and pleasant. Better than ample maple or an a-ok oak. Those cedars.";
+		say "Decayin[']. Cyanide. Nice day? Nay, ICED." instead;
+	if location of player is dry yard:
+		say "[if yard-door is not in Dry Yard]It's an odor of new places and adventure and puzzles and how to get there. It tempts you--wouldn't it be nice if there was something more physical to provide passage than, well, just an odor?[paragraph break]You repress a four-letter word. Well, if things are that simple, it's probably a [i]nicer[r] four-letter word[else]The door is of some odd wood you don't recognize[end if]." instead;
+	if location of player is trips strip, say "There's a mixture of smells coming from the shops. You could probably go up to one and examine it." instead;
+	if location is kitchen, say "The smell of delicious fried comfort foods. You'll probably not want to make anything too nutritious here." instead;
+	if location of player is cedars, say "Still strong and pleasant. Better than ample maple or an a-ok oak. Those cedars." instead;
+	if location of player is thickest thickets, say "[if goat is in thickets]You smell the goat a bit[else]Very green and nature-ish[end if]." instead;
 	if player is in sf or player is in rf:
-		if stew is visible:
-			say "You catch a whiff of stew. What kind, you're not sure." instead;
-		if teas is visible:
-			say "You catch a whiff of teas. What kind, you're not sure." instead;
+		if stew is visible, say "You catch a whiff of stew. What kind, you're not sure." instead;
+		if teas is visible, say "You catch a whiff of teas. What kind, you're not sure." instead;
 	say "Nothing unusual." instead;
 
 part listening
