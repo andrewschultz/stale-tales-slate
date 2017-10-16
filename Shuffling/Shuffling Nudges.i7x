@@ -576,7 +576,8 @@ this-cmd	hashval	this-room	this-item	this-rule	this-clue
 "verb"	338713637	--	--	degen-true rule	"[no-special-verb]."
 "verbs"	434987603	--	--	degen-true rule	"[no-special-verb]."
 "think"	307225849	--	--	degen-true rule	"Whenever you just try to too hard to think, things always get jumbled."
-"score"	402762040	--	--	degen-true rule	"There's no way to scramble your score. And scoring another point won't help you solve things, anyway."
+"score"	402762040	--	--	degen-true rule	"[no-scram]."
+"scores"	499036006	--	--	degen-true rule	"[no-scram]."
 "about"	303175125	--	--	degen-true rule	"There's no special addition to the 'about' section, but I'm flattered you looked for it."
 "credits"	497541416	--	--	degen-true rule	"[no-cred-spec]."
 "credit"	401267450	--	--	degen-true rule	"[no-cred-spec]."
@@ -883,7 +884,7 @@ to say the-sand:
 
 to say simple-riot:
 	say "Perhaps it's best to keep it simple and cut down the riot"
-	
+
 this is the hotspot-no-kilns rule:
 	if player is in hotspot:
 		if kilns are not in hotspot:
@@ -930,7 +931,7 @@ this is the past-intro rule:
 	if notices section is visited:
 		the rule succeeds;
 	the rule fails;
-	
+
 this is the can-retry rule:
 	if trips strip is visited:
 		the rule succeeds;
@@ -970,6 +971,9 @@ to say no-pock:
 
 to say no-special-verb:
 	say "There's no secret verb or verbs to find trying that"
+
+to say no-scram:
+	say "There's no way to scramble your score. And scoring another point won't help you solve things, anyway"
 
 to say no-cred-spec:
 	say "There's no special addition to the 'credits' section, but I'm flattered you looked for it"

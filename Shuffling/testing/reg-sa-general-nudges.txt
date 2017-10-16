@@ -140,6 +140,10 @@ things always get jumbled
 >scoer
 There's no way to scramble your score
 
+#nudge for scores
+>scoers
+There's no way to scramble your score
+
 #nudge for about
 >abotu
 "about" section, but I'm flattered you looked for it

@@ -924,6 +924,8 @@ rule for showing what the player missed:
 		say "You got all the points! Well done! You are definitely ready for the extra challenge of [i]A Roiling Original[r].";
 	else:
 		say "You did very well to get through the game. So you deserve to see [if missed-points > 1]all [end if]the Last Lousy Point[if missed-points > 1]s[end if] you missed.";
+	if blot is off-stage, say "[2da of intro]you could've changed the bolt into a BLOT.";
+	if bugle is off-stage, say "[2da of intro]you could've changed the bulge into a BUGLE.";
 	if darn-slan is false:
 		say "[2da of intro]you could've tried to SLANDER the darnels.";
 	if attics are off-stage:
@@ -951,7 +953,7 @@ rule for showing what the player missed:
 	if tool shed is in Rived Drive:
 		say "[2da of resort]the tool shed in the Rived Drive was changeable to TOEHOLDS.";
 	if china is off-stage:
-		say "[2da of resort]the chain links could've become china. [i][bracket]Note: you need to change it to china before making the kilns.[close bracket][r][line break]";
+		say "[2da of resort]the chain links could've become china. [i][bracket]Note: to get this point, you need to change the links to china before making the kilns.[close bracket][r][line break]";
 	now sect-missed is false;
 	if forest is solved:
 		if has-been is off-stage:
@@ -967,6 +969,7 @@ rule for showing what the player missed:
 		say "[line break]Also, while the other regions are linear, the Metros has five paths based on the flowers you choose and how you get the tulip.";
 		say "[2dn]the [if begonias are in elf row's flowers]begonias could've made a noise bag[else]heaths could've made a sheath[end if].";
 		say "[2dn]the other ways to get the tulip are to [alt-sols].";
+	say "[line break]Finally, there were three ways to solve the final puzzle. You chose [if end-path is 0]EXIST[else if end-path is 1]NAMES[else]AMENS[end if], but [one of]there are two other ways to win. Type MISSED again to see them[or]you could also try [if end-path is 0]NAMES/AMENS[else if end-path is 1]EXIST/AMENS[else]EXIST/NAMES[end if][stopping]."
 
 to say toolwood:
 	say "[if tool shed is in Rived Drive]. Though you got the tougher tool shed[end if]"
@@ -6124,7 +6127,7 @@ after looking in Self-ID Fields:
 	set the pronoun it to gy;
 	set the pronoun him to gy;
 	set the pronoun her to gy;
-	set the pronoun them to gy2;
+	set the pronoun them to line of no life;
 	continue the action;
 
 check going inside in Self-ID Fields:
@@ -9604,7 +9607,7 @@ check opening the metallic door:
 	if keycard-put is true:
 		say "You use the keycard to open the door again.";
 		try putting keycard on sensor instead;
-	set the pronoun it to metallic door
+	set the pronoun it to metallic door;
 	if location of player is undesired and keycard is off-stage:
 		say "You hear braying laughter behind the door. 'Hey! Some unintellectual's trying to get in. Like we'd make it a piece of cake for them to.' Then someone else admonishes the speaker for ending a sentence with a preposition." instead;
 	say "The metallic door's got no handle. It's probably operated by the sensor[if player has keycard], which might open if you put something like your keycard on it[else], but you don't seem to have anything to activate it[end if]." instead;
@@ -10487,15 +10490,20 @@ understand "exist" as existing.
 understand "amens" as existing.
 understand "names" as existing.
 
+end-path is a number that varies.
+
 carry out existing:
 	if player is in Means Manse:
 		if word number 1 in the player's command is "exist":
 			say "You kick back and enjoy yourself. That is all that's left to do. ";
+			now end-path is 0;
 		else if word number 1 in the player's command is "names":
-			say "You can't help yourself, but it's fun to give names to the places in the Means Manse. It makes you feel more at home. There's the Dusty Study, and that can be the Largely All-Grey Gallery. That's A Blest Stable, and the Highest Heights may be a bit hackneyed, but...still, a fun place.";
+			say "You can't help yourself, but it's fun to give names to the places in the Means Manse. It makes you feel more at home. There's the Dusty Study, and that can be the Largely All-Grey Gallery. That's the Farming Framing, and the Highest Heights may be a bit hackneyed, too, but... it's YOUR place, to do as you want with, and it sounds pretty good for now.";
+			now end-path is 1;
 		else:
 			say "You give a few quiet amens to your accomplishments. Perhaps you didn't solve any great philosophical problems, buy hey, you did pretty well. ";
-		say "It's time to become an adventurer emeritus. Perhaps one day you will resume it, but for now, the allures of your laurels are too great. Doing without the outwith, you begin your being binge, a pure-wit write-up of the happiest epitaphs to your vaunted, er, adventure. Where IS that notepad?";
+			now end-path is 2;
+		say "[line break]It's time to become an adventurer emeritus. Perhaps one day you will resume it, but for now, the allures of your laurels are too great. Doing without the outwith, you begin your being binge, a pure-wit write-up of the happiest epitaphs to your vaunted, er, adventure. Where IS that notepad?";
 		say "[wfak][line break]I...what? End a pad with a deadpan: GIVE A HANG? DANG, I HAVE! TREMENDOUS = ME (ENDS TOUR).";
 		reg-inc;
 		now resort is solved;
@@ -12060,6 +12068,8 @@ my-rank
 to say decide-rank:
 	choose row player-rank in table of ranks;
 	say "[my-rank entry]";
+
+understand "scores" as requesting the score.
 
 check requesting the score for the first time:
 	say "Tips on points: worthless as Pintos. But since you asked..."
@@ -13765,6 +13775,10 @@ carry out tsing:
 	now player has the saltine;
 	now player has the phial;
 	now intro is solved;
+	if a random chance of 1 in 2 succeeds: [this is a silly randomization for what you could've solved at A Dry Yard]
+		move bugle to lalaland;
+	else:
+		move bolt to lalaland;
 	say "I gave you the gadget and paper and saltine, regardless of what you already had.";
 	the rule succeeds;
 
