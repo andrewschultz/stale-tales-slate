@@ -56,12 +56,27 @@ table of cmds
 testnum	testact
 1	smelling
 2	listening
+3	hinting
+4	tkalling
 
-every turn when cmdtype > 0:
+every turn when cmdtype > 0 (this is the testrun rule):
 	choose row cmdtype in table of cmds;
-	say "======Carrying out [testact entry].";
+	say "======Carrying out [testact entry]======";
 	try the testact entry;
 	continue the action;
+
+after fliptoing (this is the redo cmd on debug rule):
+	if cmdtype > 0:
+		consider the testrun rule;
+	continue the action;
+
+tkalling is an action applying to nothing.
+
+carry out tkalling:
+	if location of player is not visited:
+		repeat with Q running through all visible things not held by player:
+			say "[Q]";
+			try taking Q;
 
 chapter nuling - not for release
 

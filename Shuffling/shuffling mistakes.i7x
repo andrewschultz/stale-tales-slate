@@ -72,6 +72,8 @@ understand "bactine" as a mistake ("The cabinet bit you, but there was no lastin
 
 understand "angel" as a mistake ("You've got enough practical help. You don't need anything supernatural.") when phial is visible.
 
+understand "beatnic" as a mistake ("The cabinet deserves a better fate than THAT.") when cabinet is in location of player.
+
 book stores
 
 chapter trips strip
