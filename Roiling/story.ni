@@ -560,7 +560,10 @@ when play begins (this is the screenread gender swears and precursor rule) :
 		choose-male;
 
 to choose-female:
-	now the player is female;
+	now the player is female; [begin intro changes]
+	now i trash his art is off-stage;
+	now er trash is part of the dope op-ed;
+	now Pat is female;
 	now the admirer is male;
 	now smart kid is female;
 	now Dr Yow is female;
@@ -570,8 +573,6 @@ to choose-female:
 	now Red Rat is off-stage;
 	now Dr Tera is in scape space;
 	now greedy-person is Dr Tera;
-	now i trash his art is off-stage;
-	now er trash is part of the dope op-ed;
 	if hostile-is-he lot is not in lalaland:
 		now hostile-is-he lot is off-stage;
 	now Elsa Erde has Reed's Ale;
@@ -579,24 +580,25 @@ to choose-female:
 		now Lars Eede is off-stage;
 
 to choose-male:
-	now lois the hostile is off-stage;
-	now the player is male;
-	now the admirer is female;
-	now smart kid is male;
-	now Lord Al is part of droll dollar;
-	now coin-person is Lord Al;
-	now Dr Lola is off-stage;
-	now Dr Yow is male;
-	now Red Rat is in scape space;
-	now Dr Tera is off-stage;
-	now greedy-person is Red Rat;
+	now the player is male; [begin intro changes]
 	now i trash his art is part of the dope op-ed;
 	now er trash is off-stage;
+	now Pat is male; [begin routes changes]
+	now lois the hostile is off-stage; [begin towers changes]
 	if lois the hostile is not in lalaland:
 		now lois the hostile is off-stage;
 	now Lars Eede has Reed's Ale;
 	if Elsa Erde is not in lalaland:
 		now Elsa Erde is off-stage;
+	now the admirer is female;
+	now smart kid is male;
+	now Dr Yow is male;
+	now Lord Al is part of droll dollar; [begin others changes]
+	now coin-person is Lord Al;
+	now Dr Lola is off-stage;
+	now Red Rat is in scape space;
+	now Dr Tera is off-stage;
+	now greedy-person is Red Rat;
 
 after fliptoing reed's ale:
 	now lars eede is in lalaland;
@@ -2288,14 +2290,14 @@ oscar	ashtray	"[if player has pipe soot]Best not to call attention to your thiev
 oscar	pipe soot	"[if player has pipe soot]You don't need to mention you have it.[else]'Potpourri. Don't think you can just take it with me looking.'[end if]"
 oscar	pat	"'I went there once. That SEED PIT...ugh.'"
 oscar	old giant	"'Keeps my home less quiet, I'm sure!'"
-oscar	Brother Horbert	"'He means well, but he can't really HELP us.'"
+oscar	Brother Horbert	"'[bh-mw].'"
 oscar	Elvira	"'Hmph. Glad she's kept away from ME, so far.'"
 oscar	oscar	"Oscar grumbles. 'I'm ME, you know?'"
 pat	pat	"'Still holding on to the Idle Deli here.'"
 pat	seed pit	"'[if mushrooms are off-stage]It scares[else]Well, it didn't scare YOU, but it'll still scare[end if] customers. It was nicer before the Poison Stripe, but I can't afford to remove it.'" [end routes]
 pat	oscar	"'Him and his filthy pipe. Not welcome here.'"
 pat	old giant	"'Probably not good for business.'"
-pat	Brother Horbert	"'He means well, but he can't really HELP us.'"
+pat	Brother Horbert	"'Brother Horbert means well, but he's too unfocused to DO anything by himself.'"
 pat	Elvira	"'Business is bad enough. I don't need trouble with her.'"
 plebe	Elvira	"[one of]The plebe looks distinctly uncomfortable but nods. Perhaps they don't agree with Elvira, but their job is to serve and protect, blah blah, especially when intimidated by authority. Hey. Maybe you could be that authority[or]You don't need to ask them again. They, like any good plebe, are intimidated by authority[stopping]." [start PRESTO]
 plebe	Leo	"You tell the plebe Leo might push him aside, but no dice. Maybe a brutish word, not brute force."
@@ -2487,6 +2489,9 @@ len craig	curtis	"[one of]'Nice fella, lots of ideas about agriculture, but no b
 len craig	tekno-token	"[if tekno-token is off-stage]'We accept tekno-tokens, yes.'[else][one of]He inspects the token and says it's valid[or]If you ask again, Len might question its validity[stopping].[end if]"
 len craig	elvira	"'Less said, the better.'"
 len craig	Art Erd	"Len snorts and shakes his head. 'What a weasel.'" [end OTHERS]
+
+to say bh-mw:
+	say "Brother Horbert means well, but he's too unfocused to DO anything by himself"
 
 to say at-elvira:
 	say " at the name. You quickly give assurance where you stand"
@@ -10024,6 +10029,7 @@ check opening side door:
 		say "[if peephole is examined]Urgent Gunter charges in[else]It's Urgent Gunter[end if], full of sensible bileness. 'Pallid li'l pad! Stodgy sty, dog! Elvira wants to see you. About your powers. Me and my pouter troupe agree. Me, best messenger in all of Yorpwald. Hey, if you've done nothing wrong--and it seems like you've done NOTHING since all that shuffling around--you have nothing to hide.'";
 		now urgent Gunter is in Dusty Study;
 		set the pronoun him to Urgent Gunter;
+		set the pronoun her to Elvira;
 		pad-del "rove over";
 		try talking to urgent Gunter instead;
 	say "A rallies sallier? With snipers pressin[']? Better not." instead;
@@ -12632,6 +12638,13 @@ book Same Mesa
 
 Same Mesa is a room in Routes. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the cleric circle[else]A cleric circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's a dingy dwelling with lairage regalia[end if], and [if deli is visited]you can go back past to Pat's[else]a grubby restaurant advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if old giant is in lalaland]that bench the giant sat on still lies here[else if old giant is visible]the giant's bench[else]there's a bench, which is rather big, so it must be a giant's[end if]."
 
+after looking in same mesa:
+	if old giant is in same mesa:
+		it-him-her old giant;
+	else if the-bean is not in same mesa:
+		set the pronoun it to bench;
+	continue the action;
+
 check going in Same Mesa (this is the pin the player to the Mesa puzzles rule) :
 	if old giant is visible:
 		say "Even without the giant's unavoidable tirades, your head is spinning too much for directions." instead;
@@ -13040,7 +13053,8 @@ chapter THE BEAN
 
 after fliptoing the-b:
 	if drama armada is off-stage:
-		now drama armada is in Same Mesa instead;
+		now drama armada is in Same Mesa;
+		set the pronoun them to drama armada;
 	continue the action;
 
 the-b is a privately-named vanishing thing. printed name of the-b is "THE BEAN". "Oh, great. A bean landed on the Same Mesa. It's utterly enormous and forbidding. [i]The bean[r] has filled a drama armada surrounding it with b...unspeakable fear.". description of the-b is "It's not just any bean. It's stamped THE BEAN in all-red letters. In case you were wondering if it was an egg or something, I guess.". the-b is fixed in place.
@@ -13326,9 +13340,15 @@ instead of doing something to the runed book:
 
 book Idle Deli
 
-Idle Deli is an innie room in Routes. "This restaurant has no customers, and that's no surprise, what with the seed pit in the back ruining the ambiance--not even pie crust pictures by Stu Price. It's seedy, even without the warning sign, but at least ants be absent. You can go out back to the mesa."
+Idle Deli is an innie room in Routes. "This restaurant has no customers, and that's no surprise, what with the seed pit in the back ruining the ambiance--not even pie crust pictures by Stu Price. It's seedy, even without the warning sign, but at least ants be absent. You can go back out to the outback, err, the Same Mesa."
 
-Pat is a person in Idle Deli. description is "He looks beaten down from the lack of business.". "[one of]'Lint? Use utensil. Fix store for exits...' mumbles some poor soul. 'Oh! A customer!'[or]Pat is still plodding here.[stopping]"
+after looking in idle deli:
+	set the pronoun him to pat;
+	set the pronoun her to pat;
+	set the pronoun it to pat;
+	continue the action;
+
+Pat is a person in Idle Deli. description is "Pat looks beaten down from the lack of business.". "[one of]'Lint? Use utensil. Fix store for exits...' mumbles some poor soul, presumably Pat. 'Oh! A customer!'[or]Pat is still plodding here.[stopping]"
 
 check exiting in Idle Deli:
 	say "You leave Pat's idle deli.";
@@ -13367,9 +13387,15 @@ book Harms Marsh
 
 Harms Marsh is an innie room in Routes.
 
+after looking in harms marsh:
+	set the pronoun them to sheol holes;
+	set the pronoun it to sheol holes;
+	continue the action;
+
 after printing the locale description for Harms Marsh when Harms Marsh is unvisited:
 	if worst ad is not in lalaland:
 		poss-d;
+	continue the action;
 
 description of Harms Marsh is "You are in a Harms Marsh, which you know to be full of sheol-holes, so tricky to find even in full light. [if darkness is visible]And this area seems like it was always unlit... but things don't always have to be in the past...[else if un-road is in Harms Marsh]Now you've found the un-road to get to No-Gal Logan, how to navigate it?[else]Now, you need to find No-Gal Logan. You need to find a good unroad...because roads and inroads will loop back.[end if]"
 
@@ -13429,6 +13455,10 @@ book Ripe Pier
 
 Ripe Pier is a room in Routes. "You see mist on this pier where a brighter rig berth should be. You don't know if you can go any farther without help. There's a sign before the mist. You wonder what you can yell to get on a ship, or find the right way to one."
 
+after looking in ripe pier:
+	set the pronoun it to pier sign;
+	continue the action;
+
 chapter two ways out
 
 section pier sign
@@ -13477,6 +13507,11 @@ book Cripple Clipper
 
 Cripple Clipper is a room in Routes. "You see a free reef ahead and to each side. You aren't much of a sailor, [if hit win button is visible]and the hit win button didn't even do everything[else]but maybe you can somehow hit win on the ship controls[end if]."
 
+after looking in cripple clipper:
+	set the pronoun it to ship controls;
+	set the pronoun them to ship controls;
+	continue the action;
+
 chapter controls
 
 the ship controls are reflexive scenery in Cripple Clipper. "They're on-deck, but conked. [one of]I rag a rig, you note. [or][stopping]You've no clue how to [if ship controls are reflexive]find where Ben hid the Hit Win button[else]operate them[end if]."
@@ -13499,7 +13534,10 @@ the free reef is scenery in Cripple Clipper. the free reef is undesc.
 instead of doing something with the free reef:
 	if current action is scaning:
 		say "You may want to pick a reef--Thor or the new beet. They're too far apart to scan both at once." instead;
-	say "You can't do much but look from here. The one free reef has Thor, looking for a hug. The other has a new beet that seems to have been wet recently--it is still dripping. They are rather close together, and it will be a squeeze to get by, but you probably know what to do by now. You may want to concentrate on one reef, Thor or the beet."
+	set the pronoun it to new beet;
+	set the pronoun him to thor;
+	set the pronoun them to free reef;
+	say "You can't do much but look from here. The one free reef has Thor, looking for a hug. The other has a new beet that seems to have been wet recently--it is still dripping. They are rather close together, and it will be a squeeze to get by, but you probably know what to do by now. You may want to concentrate on one reef, Thor or the beet.";
 
 chapter thor
 
@@ -25862,7 +25900,7 @@ Pat	"Pat has little to say, other than to discourage you from the seed pit, [if 
 runed book	"The runed book is part of the spiers['] potion that will help let people see directions again[if circle is unvisited]. But you need to get into the cleric circle first[end if]."
 a trashy ashtray	--	pipe soot
 pipe soot	"[if pipe soot is not in adobe abode]You got the pipe soot.[else][one of]You can't just walk over to the ashtray and get the pipe soot. Oscar wants you facing him.[plus][or]How can you face someone and be far away?[plus][or]Be completely OPPOSITE.[minus][cycling]"	--	"OPPOSITE"
-seed pit	"[one of]Pat's not going to let you have the mushrooms you probably need from the seed pit.[plus][or]However, Pat mentions a lot are worthless. The seed pit is too dangerous. You need to say something to ignore the seed pit warning.[plus][or]Tell him you'll go in DESPITE the warnings.[minus][cycling]"	--	"DESPITE"
+seed pit	"[one of]Pat's not going to let you have the mushrooms you probably need from the seed pit.[plus][or]However, Pat mentions a lot are worthless. The seed pit is too dangerous. You need to say something to ignore the seed pit warning.[plus][or]Tell Pat you'll go in DESPITE the warnings.[minus][cycling]"	--	"DESPITE"
 mushrooms	"The mushrooms are part of the spiers['] potion that will help let people see directions again[if circle is unvisited]. But you need to get into the cleric circle first[end if]."
 warning sign	"The warning sign clues how to get into the seed pit."
 huge thing	"[one of]The huge thing form may be what was needed.[plus][or]But it's a thing form above.[plus][or]Does that sentence 'huge thing form' read wrong? Or feel funny? It should.[plus][or]A thing FROM above will have landed.[plus][or]So, yeah, type FROM to bring the thing down.[minus][cycling]"	--	"FROM"

@@ -127,7 +127,7 @@ understand "ouster" as a mistake ("You're the ouster here, trying to get by the 
 
 understand "follow [text]" as a mistake ("This game doesn't allow the FOLLOW verb--you should ENTER a road or something if you need to.") [for ROUTES]
 
-book unsorted
+chapter same mesa
 
 understand "seam" as a mistake ("You can't find any crack in the Same Mesa that you could follow[if the-b is visible], except maybe under the bean. Wait, not quite UNDER[end if].") when player is in same mesa.
 
@@ -161,7 +161,7 @@ understand "gnash" as a mistake ("You gnash your teeth a bit thinking about how 
 
 understand "night" as a mistake ("The thing can't block out THAT much of the sky. You've got the wrong word.") when thing form is visible.
 
-understand "bane" as a mistake("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--the bean is about to fall on you![paragraph break][uurrgg]") when player is in mesa and armada is in mesa.
+understand "bane" as a mistake("You fill yourself with the same fear as the drama armada feels. It's really easy to do! You add to the screaming so that it reaches a tipping point. You're so into the act, you don't notice that--the bean is about to roll over on you! And out pops some of Elvira's new stank tanks! They roll over the Same Mesa, and you.[paragraph break][uurrgg]") when player is in mesa and armada is in mesa.
 
 understand "beneath" as a mistake ("Nice try, but wrong preposition for the situation.") when runed book is visible or elbow is visible.
 
