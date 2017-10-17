@@ -20694,36 +20694,19 @@ no-pastries is a truth state that varies.
 
 to towers-min-adj: [this is when you leave the mainland]
 	wipe-towers-map;
-	let und be number of guardians not in lalaland;
-	d "Left [und] guardians.";
-	if denim is in Scope Copse:
-		d "Left denim.";
-		increment und;
-	if old ice are not in lalaland:
-		d "Left old ice.";
-		increment und;
-	if pulses are not in lalaland:
-		d "Left pulses.";
-		increment und;
-	now poss-score of towers is cur-score of towers;
-	if turbos are reflexed and blaster is reflexed:
-		do nothing;
-	else:
-		increment poss-score of towers;
+	d "Left [number of guardians not in lalaland] guardians.";
+	if denim is in Scope Copse, d "Left denim.";
+	if old ice is not in lalaland, d "Left old ice.";
+	if pulses are not in lalaland, d "Left pulses.";
+	now poss-score of towers is cur-score of towers + 5; [dingy, present, spectacular, greyed, give flowerpot]
+	now min-score of towers is cur-score of towers + 1; [spectacular]
+	unless turbos are reflexed and blaster is reflexed:
+		increment poss-score of towers; [we get another point for Rawest Waters]
+		min-up;
 	if used-ray is false:
-		if number of carried hintpastries > 0:
-			increment poss-score of towers;
-		else:
-			now no-pastries is true; [this means if you leave without any heated hint pastries you can't possibly cheat with the castle]
-	now poss-score of towers is cur-score of towers + 5; [dingy, spectacular, greyed, give flowerpot]
-	if used-ray is false and no-pastries is false:
 		increment poss-score of towers;
-	now min-score of towers is cur-score of towers + 1; [4 warriors, spectacular]
-	if turbos are reflexive or blaster is reflexive: [rawest waters]
-		increment poss-score of towers;
-		increment min-score of towers;
-	if player has strudel and strudel is reflexive:
-		increment poss-score of towers;
+		if number of carried hintpastries is 0, min-up; [no way to cheat if we have no hintpastries]
+	if player has strudel and strudel is reflexive, increment poss-score of towers; [we can still make it RUSTLED]
 
 to say mrmamu:
 	say "[if player is female]Ma'am[else]Mister[end if]";
@@ -24375,7 +24358,7 @@ check fliptoing when player is in clearing and player does not have tekno-token:
 Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "A streperous superstore blocks any exit except back west.[paragraph break]You notice a list of prices and another banner saying AUCTION CAUTION.[paragraph break]Nameless salesmen employ all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow."
 
 after looking in clangier clearing:
-	set the pronoun them to nameless salesman;
+	set the pronoun them to nameless salesmen;
 	continue the action;
 
 the nameless salesmen are scenery in clangier clearing. "The nameless salesmen are, well, nondescript but numerous. They ignore you, and none seems as interesting as Len Craig."
@@ -24877,7 +24860,7 @@ For printing a locale paragraph about a thing (called the item)	(this is the don
 	if the item is an exhibit, set the locale priority of the item to 0;
 	continue the activity.
 
-Peek Keep is a room in Demo Dome. "Exhibits lie west, north and east, and even inside. The way down looks disused. The exit is south. A great grate blocks passage abovebut there seems to be a lot behind it. A flashed ad shelf also continually changes what it's showing.[paragraph break]The entry sign here welcomes you[esi].";
+Peek Keep is a room in Demo Dome. "Exhibits lie west, north and east, and even inside. The way down looks disused. The exit is south. A great grate blocks passage abovebut there seems to be a lot behind it. A flashed ad shelf also continually changes what it's showing.[paragraph break]The entry sign here welcomes you[esi-pro].";
 
 to say esi-pro:
 	set the pronoun it to entry sign;
@@ -27254,9 +27237,9 @@ to say 2dmiss of (cr2 - a region):
 miss-room is a room that varies.
 
 to say 2drm of (rr - a room):
-	if miss-room is rr, continue the action;
+	unless miss-room is rr, say "====[rr]====";
 	now miss-room is rr;
-	say "====[rr]===="
+	say "[2dmiss of map region of rr]";
 
 anything-missed is a truth state that varies.
 
@@ -27280,58 +27263,54 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you could've changed the ten beams in the study to a BASEMENT.";
 	else if myreg is routes:
 		if worst ad is in same mesa:
-			say "[2dmiss of myreg]you could've tried to go TOWARDS the worst ad.";
+			say "[2dmiss of myreg]you could've tried to go TOWARDS the worst ad in the Same Mesa.";
 	else if myreg is troves:
 		if Pa Egg Pea is reflexive:
 			say "[2dmiss of myreg]you could've tried to GAPE at Pa, Egg, Pea, by Peg A. Page.";
 		if what-a-bee is reflexive:
-			say "[2dmiss of myreg]you could've tried to BELIEVE you could get past the evil bee, too.";
+			say "[2drm of boarded roadbed]you could've tried to BELIEVE you could get past the evil bee, too.";
 		if bee's head is reflexive:
-			say "[2dmiss of myreg]you could've tried to REASON your way past the (so-near) bee, too.";
+			say "[2drm of boarded roadbed]you could've tried to REASON your way past the (so-near) bee, too.";
 		if lager is not in lalaland:
-			say "[2dmiss of myreg]you could've tried to GLARE at the Lager.";
+			say "[2drm of boredom bedroom]you could've tried to GLARE at the Lager.";
 		if rivets are reflexive:
-			say "[2dmiss of myreg]you could've tried to STRIVE by the statue of Trevis Vister.";
+			say "[2drm of econ cone]you could've tried to STRIVE by the statue of Trevis Vister.";
 		if prai is reflexive:
-			say "[2dmiss of myreg]you could've tried to ASPIRE for praise by the statue of Trevis Vister.";
+			say "[2drm of econ cone]you could've tried to ASPIRE for praise by the statue of Trevis Vister.";
 		if stream is reflexive:
-			say "[2dmiss of myreg]you could've tried to MASTER the stream photograph.";
+			say "[2drm of upscale capsule]you could've tried to MASTER the stream photograph.";
 		if lobster is in Upscale Capsule:
-			say "[2dmiss of myreg]you could've tried to BOLSTER yourself to deserve lobster.";
+			say "[2drm of upscale capsule]you could've tried to BOLSTER yourself to deserve lobster.";
 		if DIVORCES is not in lalaland:
-			say "[2dmiss of myreg]you could've tried to DISCOVER something about DIVORCES magazine.";
+			say "[2drm of upscale capsule]you could've tried to DISCOVER something about DIVORCES magazine.";
 	else if myreg is presto:
 		if lamb is in Grey Gyre:
-			say "[2dmiss of myreg]you could've shouted BLAM at the lamb.";
-		if phooeyed is false:
-			say "[2dmiss of myreg]you could've gotten a style point for saying PHOOEY instead of POOH.";
+			say "[2drm of Grey Gyre]you could've shouted BLAM at the lamb.";
 		if maze-points < 2:
-			say "[2dmiss of myreg]you could've said MAZEL TOV to get past the maze.";
+			say "[2drm of Grey Gyre]you could've said MAZEL TOV to get past the maze.";
 		else if maze-points is 2:
-			say "[2dmiss of myreg]you missed a point for scanning a guy in Nowt Town.";
+			say "[2drm of Grey Gyre]you missed a point for scanning a guy in Nowt Town.";
+		if phooeyed is false:
+			say "[2drm of Austerer Treasure]you could've gotten a style point for saying PHOOEY instead of POOH.";
 		if hawt thaw is in phat path:
-			say "[2dmiss of myreg]you could've said WHAT to the Hawt Thaw.";
+			say "[2drm of Phat Path]you could've said WHAT to the Hawt Thaw.";
 		if rom sticks are off-stage:
-			say "[2dmiss of myreg]the trim socks could've become ROM STICKS.";
+			say "[2drm of Hacks' Shack]the trim socks could've become ROM STICKS.";
 		if t-key is reflexive:
-			say "[2dmiss of myreg]you could've made the TBA key a TAB key.";
+			say "[2drm of Hacks' Shack]you could've made the TBA key a TAB key.";
 		if casserole is off-stage:
-			say "[2dmiss of myreg]you could've made the escaroles a CASSEROLE.";
+			say "[2drm of Hacks' Shack]you could've made the escaroles a CASSEROLE.";
 	else if myreg is oyster:
 		if you-used-pills is true:
 			say "[how-pills-used].";
 		if number of entries in shop-hint-items > 2:
 			say "[2dmiss of myreg][remaining-actions of 2].";
-		else if oars are reflexive:
-			say "[2dmiss of myreg]you could've used the oars to SOAR.";
 		if cans are not in lalaland:
 			say "[2dmiss of myreg]you could've tried to SCAN the cans.";
 		if dent is not in lalaland:
 			say "[2dmiss of myreg]you could've stopped to TEND the dent in Aunt Tuna's raw red drawer.";
 		if heaps are reflexive and heaps are in Shadier Airshed:
 			say "[2dmiss of myreg]you could've stopped to SHAPE the heaps to beautify the hut.";
-		if lever is not reflexed:
-			say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";
 		if wipes are on raw red drawer:
 			say "[2dmiss of myreg]you could've tried to SWIPE the wipes at Aunt Tuna's to start a side quest.";
 		else if waste is not in lalaland:
@@ -27344,6 +27323,8 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you passed by the side-quest to TAN the ant in the Dourest Detours.";
 		if bogus-plains is in Lapsin' Plains:
 			say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
+		if lever is not reflexed:
+			say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";
 	else if myreg is Towers:
 		let xxx be Ray Eck;
 		if number of guardians not in lalaland > 0:
@@ -27412,80 +27393,80 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 				say "[2dmiss of myreg]you could've changed the [A] to be [right-adj of A].";
 	else if myreg is others:
 		if spear is not in lalaland:
-			say "[2dmiss of myreg]the spear could've become pears.";
+			say "[2drm of Rustic Citrus]the spear could've become pears.";
 		if lumps are not in lalaland:
-			say "[2dmiss of myreg]the lumps could've become plums.";
+			say "[2drm of Rustic Citrus]the lumps could've become plums.";
 		if mad train is not in lalaland:
-			say "[2dmiss of myreg]the mad train could've become a tamarind.";
+			say "[2drm of Rustic Citrus]the mad train could've become a tamarind.";
 		if harmonicas are not in lalaland:
-			say "[2dmiss of myreg]the harmonicas could've become maraschino cherries.";
+			say "[2drm of Rustic Citrus]the harmonicas could've become maraschino cherries.";
 		if grapes are not in lalaland:
-			say "[2dmiss of myreg]the pagers could've become grapes.";
+			say "[2drm of Rustic Citrus]the pagers could've become grapes.";
 		if drinks stand is unexamined:
-			say "[2dmiss of myreg]you could've examined the drinks stand to find more pre-fruits.";
+			say "[2drm of Rustic Citrus]you could've examined the drinks stand to find more pre-fruits.";
 		else:
 			if eerie blurbs are not in lalaland:
-				say "[2dmiss of myreg]the eerie blurbs could've become BLUEBERRIES.";
+				say "[2drm of Rustic Citrus]the eerie blurbs could've become BLUEBERRIES.";
 			if slime is not in lalaland:
-				say "[2dmiss of myreg]the slime could've become LIMES.";
+				say "[2drm of Rustic Citrus]the slime could've become LIMES.";
 			if peanut cola is not in lalaland:
-				say "[2dmiss of myreg]the peanut cola could've become a CANTALOUPE.";
+				say "[2drm of Rustic Citrus]the peanut cola could've become a CANTALOUPE.";
 			if mopeage rant is not in lalaland:
-				say "[2dmiss of myreg]the mopeage rant et al could've become a POMEGRANATE.";
+				say "[2drm of Rustic Citrus]the mopeage rant et al could've become a POMEGRANATE.";
 			if videotape collection is not in lalaland:
 				say "The videotape collection's movies could've become a PERSIMMON.";
 		if apples are not in lalaland: [swell wells]
-			say "[2dmiss of myreg]the ESP PAL shirt could've become APPLES.";
+			say "[2drm of Swell Wells]the ESP PAL shirt could've become APPLES.";
 		if green stain is not in lalaland:
-			say "[2dmiss of myreg]you could've made the green stain TANGERINES.";
+			say "[2drm of Swell Wells]you could've made the green stain TANGERINES.";
 		if miser ruble is not in lalaland:
-			say "[2dmiss of myreg]the miser ruble could've become MULBERRIES.";
+			say "[2drm of Swell Wells]the miser ruble could've become MULBERRIES.";
 		if riot cap is not in lalaland:
-			say "[2dmiss of myreg]the riot cap could've become an APRICOT.";
+			say "[2drm of Swell Wells]the riot cap could've become an APRICOT.";
 		if sorer bogey is not in lalaland:
-			say "[2dmiss of myreg]the sorer bogey could've become a GOOSEBERRY.";
+			say "[2drm of Swell Wells]the sorer bogey could've become a GOOSEBERRY.";
 		if stucco is not in lalaland:
-			say "[2dmiss of myreg]the message on stucco could've become COCONUTS.";
+			say "[2drm of Swell Wells]the message on stucco could've become COCONUTS.";
 		if rapt figure is not in lalaland: [filed field]
-			say "[2dmiss of myreg]the rapt figure could've become a GRAPEFRUIT.";
+			say "[2drm of Filed Field]the rapt figure could've become a GRAPEFRUIT.";
 		if pipe panel fence is not in lalaland:
-			say "[2dmiss of myreg]the pipe panel fence could've become a PINEAPPLE.";
+			say "[2drm of Filed Field]the pipe panel fence could've become a PINEAPPLE.";
 		if b-w are not in lalaland:
-			say "[2dmiss of myreg]the barriers west could've become STRAWBERRIES.";
+			say "[2drm of Filed Field]the barriers west could've become STRAWBERRIES.";
 		if briar screen is not in lalaland:
-			say "[2dmiss of myreg]the briar screen could've become CRANBERRIES.";
+			say "[2drm of Filed Field]the briar screen could've become CRANBERRIES.";
 		if b-r is not in lalaland:
-			say "[2dmiss of myreg]the buried raft could've become BREADFRUIT.";
+			say "[2drm of Filed Field]the buried raft could've become BREADFRUIT.";
 		if pryer bars are not in lalaland:
-			say "[2dmiss of myreg]the pryer bars could've become a RASPBERRY.";
+			say "[2drm of Filed Field]the pryer bars could've become a RASPBERRY.";
 		if barber sickle is not in lalaland:
-			say "[2dmiss of myreg]the barber sickle could've become BLACKBERRIES.";
+			say "[2drm of Filed Field]the barber sickle could've become BLACKBERRIES.";
 		if mean trowel is not in lalaland:
-			say "[2dmiss of myreg]the briar screen could've become a WATERMELON.";
+			say "[2drm of Filed Field]the briar screen could've become a WATERMELON.";
 		if lemons are not in lalaland: [clearing]
-			say "[2dmiss of myreg]you could've looked SOLEMN to get lemons.";
+			say "[2drm of Clangier Clearing]you could've looked SOLEMN to get lemons.";
 		if melon is not in lalaland:
-			say "[2dmiss of myreg]you could've said MO LEN or LEN MO to get a melon.";
+			say "[2drm of Clangier Clearing]you could've said MO LEN or LEN MO to get a melon.";
 		if papayas are not in lalaland:
-			say "[2dmiss of myreg]you could've gotten PAPAYAS from the 'Pay ASAP' Auction Caution.";
+			say "[2drm of Clangier Clearing]you could've gotten PAPAYAS from the 'Pay ASAP' Auction Caution.";
 		if mango is not in lalaland:
-			say "[2dmiss of myreg]you could've listened to the 'go, man' voice to go AMONG the clearing.";
+			say "[2drm of Clangier Clearing]you could've listened to the 'go, man' voice to go AMONG the clearing.";
 		if peach is not in lalaland:
-			say "[2dmiss of myreg]you could've gotten the peach CHEAP.";
+			say "[2drm of Clangier Clearing]you could've gotten the peach CHEAP.";
 		if l-o-p is not reflexed:
-			say "[2dmiss of myreg]you could've said CRIPES at the prices.";
+			say "[2drm of Clangier Clearing]you could've said CRIPES at the prices.";
 		if quince is not in lalaland:
-			say "[2dmiss of myreg]you could've said the quince costs CINQUE.";
+			say "[2drm of Clangier Clearing]you could've said the quince costs CINQUE.";
 		if nectarine is not in lalaland:
-			say "[2dmiss of myreg]you could've made the nectarine ANCIENTER.";
-		if orange is not in lalaland: [mr ice]
-			say "[2dmiss of myreg]you could've tried to GO NEAR to get the orange in the Scape Space.";
+			say "[2drm of Clangier Clearing]you could've made the nectarine ANCIENTER.";
+		if orange is not in lalaland: [scape space]
+			say "[2drm of Scape Space]you could've tried to GO NEAR to get the orange.";
 		if banana is not in lalaland:
-			say "[2dmiss of myreg]you could've tried to NAB AN A for a banana in the Scape Space.";
+			say "[2drm of Scape Space]you could've tried to NAB AN A for a banana.";
 		if pugnacious plant is not in lalaland:
-			say "[2dmiss of myreg]you could've made the plant in the Scape Space RHUBARB.";
+			say "[2drm of Scape Space]you could've made the pugnacious plant RHUBARB.";
 		if reserved sign is not in lalaland:
-			say "[2dmiss of myreg]you could've made the reserved sign in the Scape Space REVERSED.";
+			say "[2drm of Scape Space]you could've made the reserved sign REVERSED.";
 		if did-guru is true:
 			say "[2da]going a-la-guru from the arugula lost you a final point.";
 	else if myreg is demo dome:
@@ -27506,7 +27487,7 @@ rule for showing what the player missed: [there may be a way to do things withou
 	if number of bypassed regions > 0:
 		say "[2da]Next time, you can maybe try the [list of bypassed regions] region[if number of bypassed regions > 1]s[end if]." instead;
 	if anything-missed is false:
-		say "CONGRATULATIONS, YOU FOUND EVERYTHING is written on it, with confetti drawn all around, too[one of][or]. It just doesn't get old, looking at it. Hey, you deserve to feel good[stopping].";
+		say "[line break]CONGRATULATIONS, YOU FOUND EVERYTHING is written on it, with confetti drawn all around, too[one of][or]. It just doesn't get old, looking at it. Hey, you deserve to feel good[stopping].";
 
 book epilogue transition
 
