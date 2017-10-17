@@ -3645,6 +3645,11 @@ to see-about-patcher:
 	if number of solved regions > 2 and chapter patcher is off-stage:
 		say "You think, with a gay woot, 'Yow, got a way to go.' But then a voice -- 'Goal's a slog? Covert vector!' You look over and notice something behind the megaton magneto-montage. Something that wasn't there before. It's...a chapter patcher.";
 		now chapter patcher is in Strip of Profits;
+		change the pronoun it to chapter patcher;
+
+after looking in strip of profits:
+	if number of visible portals is 0, set the pronoun it to megaton magneto-montage;
+	continue the action;
 
 definition: a region (called reg) is kayoed:
 	if reg is spoiled or reg is bypassed or reg is shortcircuited:
@@ -7645,6 +7650,8 @@ chapter push and pull to
 
 Understand "pull [something] [direction]" or "pull [something] to [direction]" as pushing it to.
 
+yak-sol is a number that varies.
+
 check pushing the skid to (this is the yak-oof rule):
 	if yak is in lalaland:
 		if player is in hacks' shack:
@@ -7658,6 +7665,7 @@ check pushing the skid to (this is the yak-oof rule):
 	if yak is on skid and location of player is phat path and second noun is north:
 		say "The yoke doesn't quite fit through the door. It does, however, snap off and the yak looks freer, aliver, almost happy. It decides it's had enough of the leaf and, with a nod, walks off to a yak realm, perhaps in search of more malarkey. Maybe [if lamb is in lalaland]near the lamb you rescued[else]somewhere near the poor lamb's home[end if].";
 		now yak is in lalaland;
+		now yak-sol is 1;
 		reg-inc;
 		pad-del "Leo and Rand";
 		now skid is in hacks' shack;
@@ -14355,6 +14363,7 @@ every turn when mrlp is presto and Rand is eager (this is the Leo-Rand lackey ru
 					say "Leo and Rand lug after[one of], grateful[or], no fear glut[or], no flat urge[stopping].";
 				move Leo to location of player;
 				move Rand to location of player;
+				move wzup to location of player;
 
 chapter loading
 
@@ -14450,6 +14459,8 @@ book Grey Gyre
 
 Grey Gyre is a room in Presto. "It's windy here, but nothing dangerous, and the place is just an unappetizing grey all around. It's calmer but burnt to the south, and you see a way east, too[if hump is not visible], as well as west over the hump you cleared[end if][if volt maze is in Grey Gyre]. You see a path to what looks like a maze to the north--a maze entry zany meter is nearby, too. [else if ether is visible]The maze entrance north has been replaced by ether[otherwise][ether-check]ou can go north[end if][if hump is in gyre].[paragraph break]A hump to the west looks much more intimidating than it should be[end if]."
 
+does the player mean doing something with the volt maze when the player is in grey gyre: it is very likely.
+
 to say ether-check:
 	if saps' pass is visited:
 		say "With the ether cleared, y";
@@ -14481,14 +14492,14 @@ instead of scaning zany meter:
 
 chapter lamb
 
-The lamb is a vanishing LLPish animal in Grey Gyre. "A poor lost lamb seems stuck here, too frightened to move."
+The lamb is a vanishing LLPish female animal in Grey Gyre. "A poor lost lamb seems stuck here. She's too frightened to move."
 
 check taking lamb:
 	say "It's not a bit lamb, but it wouldn't fit in your super purse." instead;
 
 a-text of lamb is "RRYR". b-text of lamb is "RRYR". parse-text of lamb is "x[sp]x[sp]a[sp]x". lamb is cheat-spoilable.
 
-description is "Cute and adorable and so terrified at being away from home it's petrified with fear. Maybe you could scare it home."
+description is "Cute and adorable and so terrified at being away from home she's petrified with fear. Maybe you could scare her home."
 
 check inserting something into mechanism:
 	say "(You mean, loading it next to the mechanism)[line break]";
@@ -14504,7 +14515,8 @@ check going north in Grey Gyre:
 	if cur-score of presto < 3:
 		say "You don't fully have your bearings here yet. You're not up to walking through a maze. Perhaps you need to figure how to deal with things before entering the maze." instead;
 	if ether is in grey gyre:
-		say "[one of]You walk forward. That dangerous looking ether? It[if ether-try is true]'s still hiding[else] hid[end if] some dangerous looking people.[paragraph break]'AMBUSH!' / 'Ah, bums!'[paragraph break]You are pushed roughly back to where you came[if Leo is visible]. Leo and Rand mutter that if you point out where those people are, they'll do the business[else]. 'Intruder? Dire runt!' You could use a meaty matey or two[end if][or]Leo and Rand might help you win the fight, but you'll need some way to find the people in the ether [if Leo is not visible]and some henchmen to tackle them[end if][stopping].";
+		say "[one of]You walk forward. That dangerous looking ether? It[if ether-try is true]'s still hiding[else] hid[end if] some dangerous ACTING people.[paragraph break]'AMBUSH!' / 'Ah, bums!'[paragraph break]You are pushed roughly back to where you came[if Leo is visible]. Leo and Rand mutter that if you point out where those people are, they'll do the business[else]. 'Intruder? Dire runt!' You could use a meaty matey or two[end if][or]Leo and Rand might help you win the fight, but you'll need some way to find the people in the ether [if Leo is not visible]and some henchmen to tackle them[end if][stopping].";
+		set the pronoun it to ether instead;
 		now ether-try is true instead;
 	if Saps' Pass is not visited:
 		say "You stride confidently north with your two friends. You can tackle anyone!";
@@ -14725,6 +14737,7 @@ before giving a badbook to yak:
 		now yak-badbook is true;
 		say "[one of]The yak doesn't trust you with something that doesn't look quite enough like food. Maybe you if you gained the yak's trust, first, it might...[or]Still, the yak doesn't trust you enough to eat what was THAT part of a tree. Yet.[stopping]" instead;
 	say "The yak gazes blankly at the book. Then, it ignores the leaf for a second. It begins to munch on the book, for a change of pace. But the actual paper is as indigestible as the words. Some deep animal intuition makes it shudder. It almost pounds its head on the skid--and snap! The safety on the drab yoke calls it to crack and fall off. The yak, dazed, walks away. You pick up the drab yoke--it's not that heavy.";
+	now yak-sol is 2;
 	now yoke is in location of player;
 	now player has drab yoke;
 	now yak is in lalaland;
@@ -14756,6 +14769,7 @@ to post-wall-brunt:
 			say "You offer Leo and Rand the casserole in exchange for pushing the skid north. 'Fuel? Us? Useful!' It's a great workout for them, and though they're a bit careless pulling the skid into the shack, it breaks a safety catch on the drab yoke, which falls to the ground. The yak blinks, nods at all three of you, and runs off. The casserole replenishes vital carbohydrates or something for Leo and Rand. They ask to keep the dish, which is fine with you. The shack's messy enough.";
 			reg-inc;
 			now yak is in lalaland;
+			now yak-sol is 3;
 			now skid is in shack;
 			now drab yoke is in shack;
 			now casserole is in lalaland;
@@ -14952,6 +14966,10 @@ Dirge Ridge is a room in Presto. Dirge Ridge is south of Burnt Brunt. "A vile ve
 
 the vile veil is scenery in Dirge Ridge. it is undesc.
 
+after looking in dirge ridge:
+	set the pronoun it to vile veil;
+	continue the action;
+
 instead of doing something with vile veil:
 	say "The veil's oppressive to even think about, but it also protects you from falling off. You don't need to do anything with it."
 
@@ -14965,6 +14983,7 @@ check going to Dirge Ridge for the first time:
 after fliptoing a fightin person:
 	if noun is Leo:
 		now Rand is in dirge ridge;
+		set the pronoun him to Rand;
 	now noun is washed up;
 	continue the action;
 
@@ -15048,7 +15067,7 @@ to say lrblab:
 
 chapter whassuping
 
-the wzup is privately-named vanishing scenery in Dirge Ridge. description of wzup is "bug".
+the wzup is privately-named vanishing scenery in Dirge Ridge. printed name of wzup is "Leo and Rand". description of wzup is "bug".
 
 a-text of wzup is "RRYRRYR". b-text of wzup is "PRYRRYR". parse-text of wzup is "w[sp]x[sp]-[sp]x[sp]x[sp]-[sp]x".
 
@@ -15074,6 +15093,10 @@ check asking about "whassup":
 book Austerer Treasure
 
 Austerer Treasure is an innie room in presto. Austerer Treasure is west of Grey Gyre. "[if ye hoop is visible]This room's pretty barren. I mean, a lot of treasure rooms generally get looted of unicorns['] coin urns and all before text adventurers without weapons make it there, but man. All that remains is an ancient-looking hoop about nine feet up labeled YE HOOP.[paragraph break]Looking at how it's out of reach sort of makes you want to give up, or maybe just pretend to give up and maybe something'll turn up[else]You've completely looted this place[end if]."
+
+after looking in austerer treasure:
+	if ye hoop is in austerer treasure, set the pronoun it to ye hoop;
+	continue the action;
 
 Ye Hoop is vanishing scenery in Austerer Treasure. Ye Hoop is proper-named. "It's a hoop rather high up. 'Yo, hope,' you think to yourself, imagining it would totally crumble and reveal a treasure if you could grab it. But then you think 'Ooh, yep,' seeing how high it is."
 
@@ -15200,7 +15223,7 @@ a-text of popgun is "RYRRY". b-text of popgun is "PYRRY". parse-text of popgun i
 understand "PG-on-up pop/ gun/" as popgun.
 
 report taking popgun:
-	say "You take the gun and look it over. You're not one for violence, but the gun doesn't look lethal. But since it's PG- and not G-rated, it can't be totally useless.";
+	say "You take the gun and look it over. You're not one for violence, but the gun doesn't look lethal. But since it's PG- and not G-rated, it can't be totally useless. It could stun an opponent, with the right ammo.";
 	the rule succeeds;
 
 description of PG-on-up popgun is "It's cheap plastic but probably packs a punch with the right ammo--but if it were G? No, pup[if boing is reflexed]. Its boing mechanism is fixed, now[otherwise]. You notice its boing mechanism is broken. It may take a eureka moment to figure out how to fix this spoilt pistol[end if][if dart is in popgun]. Loaded, too, with that dart![end if]. You notice a serial number."
@@ -15240,9 +15263,14 @@ check inserting it into (this is the dart-popgun rule):
 	if noun is not dart and second noun is popgun:
 		say "That's not the right shaped ammo for the popgun." instead;
 	if noun is dart and second noun is popgun:
+		if dart is in popgun, say "It already is!" instead;
 		ignore the can't insert into what's not a container rule;
 
 chapter bingoing
+
+after fliptoing boing mechanism:
+	set the pronoun it to popgun;
+	continue the action;
 
 check fliptoing boing mechanism (this is the take popgun to fix it rule) :
 	if player does not have the PG-on-up popgun and popgun is visible:
@@ -15322,11 +15350,11 @@ instead of touching lawl wall:
 
 description of lawl wall is "A spams-spasm of bad jokes, and I'd tell you a few, but it'd be a bigger time sink than playing games where you point and click instead of just sensibly typing. It seems to be laughing at your lack of progress. You can see keys on the wall."
 
-the keys are part of the lawl wall. the keys are reflexive. description is "You're pretty sure the keys open the lawl wall, since the hogs are keeping an eye on them, but you can't be sure."
+some keys are part of the lawl wall. the keys are vanishing and plural-named. description is "You're pretty sure the keys open the lawl wall, since the hogs are keeping an eye on them, but you can't be sure."
 
 a-text of keys is "RORY". b-text of keys is "RORY". parse-text of keys is "x[sp]y[sp]x[sp]e". keys is any-spoilable.
 
-the hogs are reflexive plural-named people in Saps' Pass. description is "They're as big as Leo and Rand but meaner. Plus there are three of them. They look a little smarter, too--but maybe you can use reverse psychology to get under their skin or sneak those keys on the wall.". "Hogs are stretched against the lawl wall, in no hurry to try to get by. They look like tough customers, too tough for the sort of words that got you here. OR ARE THEY."
+the hogs are vanishing plural-named people in Saps' Pass. description is "They're as big as Leo and Rand but meaner. Plus there are three of them. They look a little smarter, too--but maybe you can use reverse psychology to get under their skin or sneak those keys on the wall.". "Hogs are stretched against the lawl wall, in no hurry to try to get by. They look like tough customers, too tough for the sort of words that got you here. OR ARE THEY."
 
 after printing the locale description for Saps' Pass when Saps' Pass is unvisited:
 	say "Shouldn't be much of a problem to get the keys and...oh no! you hear...[wfak][line break]";
@@ -15370,6 +15398,7 @@ does the player mean doing something with entry 1 of byebyes:
 after fliptoing when player is in phat path (this is the update byebyes rule) :
 	if noun is part of the smart people sign:
 		remove noun from byebyes, if present;
+		set the pronoun it to smart people sign;
 	continue the action;
 
 the log ons letters are a plural-named reflexive thing. the log ons letters are part of the smart people sign. description is "They're bolded, IN CAPS and slightly raised."
@@ -15771,19 +15800,23 @@ after printing the locale description for hacks' shack (this is the auto-screen 
 			if player has screen:
 				say "You decide to put the screen you just made on the labs slab so you don't have to lug it around any more.";
 				now screen is on labs slab;
-	check-lamb-min;
+	check-trivial-presto-llp;
 	continue the action;
 
 lamb-discounted is a truth state that varies.
 
-to check-lamb-min:
+to check-trivial-presto-llp:
 	if lamb-discounted is true:
 		continue the action;
 	if player has censer or player has screen:
 		if yak is in lalaland and player is in hacks' shack:
-			if lamb is in gyre:
-				poss-d;
-				now lamb-discounted is true;
+			if keyboard is in hacks' shack or keyboard is on slab:
+				if lamb is in gyre:
+					poss-d;
+					now lamb-discounted is true;
+				if hawt thaw is in phat path:
+					poss-d;
+					now thaw-discounted is true;
 	continue the action;
 
 this is the shack-south rule:
@@ -15969,7 +16002,7 @@ to say sub-bus:
 	if the player's command includes "sub":
 		now issub is true;
 	now crust is in lalaland;
-	say "You hear music by Verdi. '[if issub is true]Diver[else]Drive[end if] time!' intones the mechanical [if issub is true]sub[else]bus[end if] your USB turned into. Man, it really is universal. The pilot is...one of the nerds from the Anti-Cool Location way back in the metros! He welcomes you in. 'Navig-Gavin. Nice work.' / 'I know.' / 'Rec.' This SecuriCruise is not a Dire Ride (a ton...)' but you fall asleep before you can hear the rest. Wham, doer! Homeward";
+	say "You hear music by Verdi. '[if issub is true]Diver[else]Drive[end if] time!' intones the mechanical [if issub is true]sub[else]bus[end if] your USB turned into. Man, it really is universal. The [if issub is true]pilot[else]driver[end if] is...one of the nerds from the Anti-Cool Location way back in the metros! He welcomes you in. 'Navig-Gavin. Nice work.' / 'I know.' / 'Rec.' This SecuriCruise is not a Dire Ride (a ton...)' but you fall asleep before you can hear the rest. Wham, doer! Homeward";
 
 does the player mean doing something with the hard drive: it is unlikely.
 
@@ -16007,6 +16040,7 @@ check pushing small blue button:
 	now small blue button is unfigured;
 	now small blue button is reflexed;
 	say "The button changes into a REBOOT button, which you press[if player has rom sticks]--though first those ROM sticks will put your PPC on PCP to code in CPP and avoid PCRam Cramp[end if]. The disk drive hums for a while, the computer screen lights up with a fractal shaped like a flatcar, and after a stallin['] install (and several booster-reboots,) the code you saw before reappears on the screen.";
+	set the pronoun it to computer screen;
 	if player has rom sticks:
 		now rom sticks are in lalaland;
 	reg-inc;
@@ -16316,7 +16350,7 @@ check fliptoing keyboard when yak is visible:
 
 after fliptoing keyboard:
 	now leaf is in lalaland;
-	check-lamb-min;
+	check-trivial-presto-llp;
 	continue the action;
 
 the piece of scratch paper is a reflexive thing in hacks' shack.
@@ -26995,6 +27029,7 @@ rule for showing alternate routes:
 		if phooeyed is true:
 			say "[eqls]PRESTO[line break][2da]you could've said POOH instead of PHOOEY, which would've meant one less point.";
 		say "[eqls]there were other possible bad books in the shack. They are: [list of off-stage badbooks].";
+		say "[eqls]there were two other ways to get the drab yoke from the bored yak: [presto-3 of yak-sol].";
 	if oyster is solved:
 		say "[eqls]OYSTER[line break]";
 		if pill-warned is false:
@@ -27023,6 +27058,11 @@ rule for showing alternate routes:
 	if others is solved:
 		say "[eqls]OTHERS[line break]";
 		say "[2da]you only needed two ways to work the passport. The other was to [if viewer is reflexive]REVIEW the viewer[else if searcher is reflexive]RESEARCH the searcher[else]PREP after you are called a perp[end if]."
+
+to say presto-3 of (n - a number):
+	if n is not 1, say "pushing the skid to the shack with the yak on it";
+	if n is not 2, say "[if n is not 1] and [end if]giving the yak a bad book to eat";
+	if n is not 3, say " and pushing the skid to Dirge Ridge when you [if escaroles are in hacks shack]change the escaroles to a casserole[else]have the casserole[end if]";
 
 to say how-macks:
 	let got-yet be false;
@@ -27128,14 +27168,14 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you could've said MAZEL TOV to get past the maze.";
 		else if maze-points is 2:
 			say "[2dmiss of myreg]you missed a point for scanning a guy in Nowt Town.";
+		if hawt thaw is in phat path:
+			say "[2dmiss of myreg]you could've said WHAT to the Hawt Thaw.";
 		if rom sticks are off-stage:
 			say "[2dmiss of myreg]the trim socks could've become ROM STICKS.";
 		if t-key is reflexive:
 			say "[2dmiss of myreg]you could've made the TBA key a TAB key.";
 		if casserole is off-stage:
 			say "[2dmiss of myreg]you could've made the escaroles a CASSEROLE.";
-		else if casserole is not in lalaland:
-			say "[2dmiss of myreg]you could've gone south from Burnt Brunt to invite Leo and Rand, once the yak was on the skid.";
 	else if myreg is oyster:
 		if you-used-pills is true:
 			say "[how-pills-used].";
