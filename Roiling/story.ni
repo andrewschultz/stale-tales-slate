@@ -8857,14 +8857,15 @@ carry out fliptoing:
 			if location of player is preserve:
 				if the-to entry is not parrot and the-from entry is not parrot:
 					increment nounsolve;
-			if the-to entry is singular-named:
-				set pronoun it to the-to entry;
-			if the-to entry is plural-named:
-				set pronoun them to the-to entry;
-			if the-to entry provides the property male and the-to entry is male:
-				set the pronoun him to the-to entry;
-			if the-to entry provides the property female and the-to entry is female:
-				set the pronoun her to the-to entry;
+			unless the-from entry is vanishing and the-to entry is the-from entry:
+				if the-to entry is singular-named:
+					set pronoun it to the-to entry;
+				if the-to entry is plural-named:
+					set pronoun them to the-to entry;
+				if the-to entry provides the property male and the-to entry is male:
+					set the pronoun him to the-to entry;
+				if the-to entry provides the property female and the-to entry is female:
+					set the pronoun her to the-to entry;
 			if pill-use is true:
 				pill-list the-from entry;
 			else if suppress-score is false:
@@ -9063,7 +9064,7 @@ prai	prai	false	438050501	--	"aspire"	"aspire"	"You remember how when you were a
 rivets	rivets	false	564671562	--	"strive"	"strive"	"You make up your mind to strive. You strive to strive even more. You strive to make others strive. You feel twice as useful as you did a minute ago. You feel all, BAM! MBA[if prai is reflexed]. Boy, you feel extra well rounded now. You want money and power for lots of different reasons![else].[end if]"
 pernod	pernod	false	458885045	Upscale Capsule	"ponder"	"ponder"	"You realize it's not just enough to have ambition. You look into yourself a bit, and you have all the answers. Well, enough so that people will believe you long enough to get power. Good enough. You focus your sob story about how the guy who just got canned? Well, he almost ran you over, and you learned from him, and you have more to learn--it's easy stuff. But perhaps it's easy because you thought it through!"
 noise	noise	false	433982545	--	"ignore"	"ignore"	"'Enraged times. Disagreement denigrates me,' you think, as he calls you a stony nasty-o before saying 'Er, goin['].' He will run about, a burnout. You leave the failed afield, his offense seen off in this office ice-off. His density cost his destiny. Legit to let it go. 'Delays: SLAYED!' you remark. 'NO IMPOSTOR PROMOTIONS!'[paragraph break]Wow! Emptying your mind was easy once you put your mind to it! Your vanity changes in tribute."
-salt	song	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! You see there was a playbill under the salt."
+salt	playbill	false	255385641	--	"last"	"last"	"You start lastin['] like Stalin. Til you ARE worth your salt, sure all stats are up to par. You've stayed steady so efficiently that it doesn't seem much time has elapsed since your career started. Your company becomes Kings at staking takings. And lastin['] like Stalin busses in business, and you re-last [']til it's staler. You're in charge of more than a region now. At which point you realize you'd better get rid of the salt, which causes hypertension in a job like yours. You kick it under your desk and forget about it.[paragraph break]Then, oh, man! You see there was a playbill under the salt."
 stream	stream	false	478776867	--	"master"	"master"	"You realize the picture's not just some odd ole doodle. You critique it. 'Matters I mistreat, artist? Me?' / 'Master it.' It's tamer, the whole business. You cross breed boss creeds and master [if song is visible]further [end if]the concepts needed to succeed. Ah! Less hassle! You will now achieve zones so Zen as you improve more, VIP."
 lobster	lobster	false	559099217	--	"bolster"	"bolster"	"You bolster your will [if song is visible]further [end if]to believe you deserve great food like lobster, not just today, but any day. After all, the cost of the lobster is probably less a percent of YOUR income than your underlings['] food is of theirs."
 DIVORCES	DIVORCES	false	575948795	--	"discover"	"discover"	"On perusing DIVORCES with a [if divorces is examined]more [end if]critical eye, you gain insight. These people are not better than you! Just more exciting and better at wasting others['] time! But this is what the media focuses on. Perhaps it is because less productive people deserve it, or perhaps it is to sucker people who might otherwise think for themselves. That's not your business. DIVORCES is not for you! You pitch it and re-focus."
@@ -9664,8 +9665,9 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 		continue the action;
 	else if noun is prai or noun is rivets:
 		if prai is reflexed and rivets are reflexed:
-			say "Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going.";
+			say "Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going. You look back at the Pernod.";
 			min-up;
+			set the pronoun it to pernod.
 		continue the action;
 	else if noun is lobster or noun is stream:
 		if stream is reflexed and lobster is in lalaland:
@@ -12641,7 +12643,7 @@ Same Mesa is a room in Routes. "Routes lead in all directions here, but they see
 after looking in same mesa:
 	if old giant is in same mesa:
 		it-him-her old giant;
-	else if the-bean is not in same mesa:
+	else if the-b is not in same mesa:
 		set the pronoun it to bench;
 	continue the action;
 
@@ -13602,6 +13604,12 @@ book Loather Rathole
 
 Loather Rathole is a room in Troves. "Under the stinky tin sky, [if heat is visible]you feel the heat out on the street, but more importantly, you're feeling the loss of your super purse. You just aren't motivated to [i]race[r] after the robber and get that money back, though[otherwise]you feel nothing but bone-chilling poverty here. [i]Heat[r]. It's what you need. All you can think of[end if]. Of course, there are plenty of potholes about.". last-loc of troves is Loather Rathole.
 
+after looking in loather rathole:
+	set the pronoun it to cold;
+	if heat is in loather rathole, set the pronoun it to heat;
+	set the pronoun them to potholes;
+	continue the action;
+
 check looking in Loather Rathole for the first time:
 	now the player has Pa Egg Pea.
 
@@ -13654,6 +13662,10 @@ book Bustle Sublet
 
 Bustle Sublet is a room in Troves. "A hopeless passe hole close to the Boorboro and Grubburg suburbs. Someone seedy owns this area, [randbla]. This messhole with its sidewalk laid askew is almost as bad as being homeless...[paragraph break][if sob ever verbose is visible]Except for a stop post, and a sob ever verbose sails through the air[else]The stop post is still there, but you can deal[end if]. [if stop post is reflexive]You'll need to look around to find what to do[else]You [one of]can't see the entrance to the cellar anywhere. Perhaps you'll have to use your mind a bit[or]still can't make out the cellar entrance, yet--perhaps you could try to look back on the cellar or listen for clues[stopping][end if]."
 
+after looking in bustle sublet:
+	set the pronoun it to sob ever verbose;
+	continue the action;
+
 chapter useless scenery
 
 section sidewalk
@@ -13684,6 +13696,8 @@ the sob ever verbose is vanishing scenery in Bustle Sublet. "The sob ever verbos
 after doing something with sob ever verbose:
 	if sob ever verbose is not in lalaland:
 		set the pronoun it to sob ever verbose;
+	else:
+		set the pronoun it to stop post;
 	continue the action;
 
 check taking sob ever verbose:
@@ -13742,6 +13756,11 @@ chapter THE BEE and 2 solutions
 section bee proper (believe)
 
 the what-a-bee is a reflexive privately-named thing in Boarded Roadbed. printed name of what-a-bee is "[if bee's head is reflexive and what-a-bee is reflexive]evil bee[else if bee's head is reflexed and what-a-bee is reflexed]live bee[otherwise]vile bee[end if]"
+
+after looking in boarded roadbed:
+	set the pronoun it to evil bee;
+	set the pronoun her to evil bee;
+	continue the action;
 
 initial appearance of what-a-bee is "The [what-a-bee] floats here[if bee's head is reflexive], emitting a snore[else], silent[end if]."
 
@@ -13878,6 +13897,10 @@ chapter lager
 
 The can of Large Regal Lager is a vanishing LLPish thing in Boredom Bedroom. description is "It has a picture of someone smiling as he chugs a can of Large Regal Lager--the LARGE being black and above the red Regal Lager below. A warning on the can says that important people drinking too many of these is as bad for the economy as people with nothing better to do not drinking enough. Also there's a rubbish story about how the beer is brewed."
 
+after fliptoing lager:
+	set the pronoun it to ltb;
+	continue the action;
+
 check opening Large Regal Lager:
 	try drinking Large Regal Lager instead;
 
@@ -13901,7 +13924,12 @@ instead of taking lager:
 
 book Browse Bowers
 
-Browse Bowers is an innie room in Troves. "It's very look-don't-touch here. In fact, for someone so recently poor as yourself, you'd feel guilty walking around and looking. So there's not much to do except stare at a brochure just lying around. But oh, what a brochure!".
+Browse Bowers is an innie room in Troves. "It's very look-don't-touch here, like that dour tan rotunda off to the side. In fact, for someone so recently poor as yourself, you'd feel guilty walking around and looking. So there's not much to do except stare at a brochure just lying around. But oh, what a brochure!".
+
+after fliptoing ltd:
+	set the pronoun it to brochure;
+	set the pronoun them to browse bowers;
+	continue the action;
 
 chapter dour tan rotunda
 
@@ -13928,6 +13956,12 @@ understand "econ-cone" as Econ Cone.
 
 check going inside in Econ Cone:
 	say "You can't just walk in[if statue is reflexed or rivets are reflexed] even with your desire at its level[end if]! You need the right sort of thinking. You have not achieved it yet. Your eyes turn [if astute statue is examined]back [end if]to the astute statue." instead;
+
+after looking in econ cone:
+	set the pronoun it to astute statue;
+	set the pronoun him to astute statue;
+	if pernod is in econ cone, set pronoun it to pernod;
+	continue the action;
 
 chapter skyline and scenery
 
@@ -14023,6 +14057,7 @@ after fliptoing when location of player is Econ Cone (this is the Pernod appears
 		if pernod is off-stage:
 			say "Your concentration is broken by shattering glass! When you turn around, you notice the person who originally gave you the Peg A. Page book. He has been escorted out by security. They hand him a bottle. There's an argument, he smashes the bottle, and he runs away. Perhaps this is your chance, to take his place now that he has burned out!";
 			now pernod is in Econ Cone;
+			set the pronoun it to pernod;
 	continue the action;
 
 after fliptoing pernod:
@@ -14065,7 +14100,11 @@ to say trev:
 
 book Upscale Capsule
 
-Upscale Capsule is an innie room in Troves. "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your desk to the plasm lamps above, to the inspirational picture of a stream, this FiefCo Office conforms to the opulent/no let-up deco-code. Including the double-plus-secure door out[if song is visible].[paragraph break]Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes, still[else]. A shaker of salt sits on the vanity, too[end if]."
+Upscale Capsule is an innie room in Troves. "From the nerf fern to the tan ivy vanity[if divorces is visible],[else] and[end if] Desk-Sked[if divorces is visible], and DIVORCES magazine[end if] on your desk to the plasm lamps above, to the inspirational picture of a stream, this FiefCo Office conforms to the opulent/no let-up deco-code. Including the double-plus-secure door out[if song is visible].[paragraph break]Eddie C.[']s song[one of][or], I'd Cede,[cycling] echoes, still, and the playbill is on the desk, too[else]. A shaker of salt sits on the vanity, too[end if]."
+
+after looking in Upscale Capsule:
+	if noise is in Upscale Capsule, set the pronoun it to noise;
+	continue the action;
 
 section order the flips
 
@@ -14230,15 +14269,15 @@ a-text of salt is "RYRR". b-text of salt is "R?R?". parse-text of salt is "x[sp]
 
 chapter final action 1 of 2
 
-check fliptoing song:
+check fliptoing playbill:
 	if lobster is in Upscale Capsule and stream is reflexive:
 		say "Man. That seems right. But you haven't improved yourself enough to last, yet.";
 		preef salt;
 		do nothing instead;
 
-after fliptoing song:
+after fliptoing playbill:
 	say "You're besieged by art, in fact! What's...what's that sound? It's that song! By Eddie C.!";
-	now playbill is in Upscale Capsule;
+	now song is in Upscale Capsule;
 	continue the action;
 
 section Eddie's Song
