@@ -1261,8 +1261,16 @@ rule for supplying a missing noun while gotoing:
 	say "That's not something in the game, yet.";
 	reject the player's command;
 
-does the player mean gotoing a room in mrlp: it is likely.
-does the player mean gotoing a visited room in mrlp: it is very likely.
+does the player mean gotoing a kinda-nearby room: it is likely.
+does the player mean gotoing a really-nearby room: it is very likely.
+
+definition: a room (called myr) is kinda-nearby:
+	if myr is in mrlp, yes;
+	no;
+
+definition: a room (called myr) is really-nearby:
+	if myr is in mrlp and myr is visited and myr is not shunned, yes;
+	no;
 
 carry out gotoing:
 	d "Trying location [noun].";
@@ -6872,28 +6880,8 @@ chapter inventory
 
 definition: a thing (called itm) is regspecial:
 	if itm is warpable, decide no;
+	if itm is compass, decide no; [well, it IS regionally special, but it's mentioned at the end of the inventory]
 	decide yes;
-
-check taking inventory:
-	if the first thing held by the player is nothing:
-		say "Not very 'in.'" instead;
-	if mrlp is means manse or mrlp is stores or mrlp is demo dome:
-		continue the action;
-	say "DEBUG: Warpable [list of warpable things enclosed by player].";
-	say "Item time! [run paragraph on]";
-	if the number of regspecial things enclosed by the player is 0:
-		say "You have nothing from this region in particular.";
-	else:
-		now all things enclosed by player are unmarked for listing;
-		now all regspecial things carried by player are marked for listing;
-		say "In this region you have found:[line break]";
-		list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
-	now all things enclosed by player are unmarked for listing;
-	now all warpable things enclosed by player are marked for listing;
-	say "Your general tools include:[line break]";
-	list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
-	if number of things worn by player > 0, say "You are also wearing [list of things worn by player].";
-	the rule succeeds;
 
 After printing the name of the letters settler while taking inventory:
 	say "[set-det]";
@@ -6925,6 +6913,7 @@ after printing the name of the stapler while taking inventory:
 before listing contents while taking inventory: group hintpastries together
 
 instead of taking inventory:
+	say "DEBUG: Warpable [list of warpable things enclosed by player].";
 	if mrlp is troves:
 		if truffle is off-stage and purse-stolen is false:
 			say "Boy! this is a seedy area. You're worried you might get robbed of what you have.[line break]";
@@ -6939,23 +6928,37 @@ instead of taking inventory:
 	if player has settler and player has super purse:
 		say "You're carrying your letters settler, to help with hints. [set-det].[line break]";
 		now settler is unmarked for listing;
-	say "[if purse-stolen is true and mrlp is troves]In your hands, because you lost your super purse:[else if player has super purse]In your super purse:[else]Item time:[end if][line break]";
+	say "Item time:[line break]";
 	if number of things enclosed by the player is 0:
 		say "Nothing." instead;
-	now compass is unmarked for listing;
+	if the number of regspecial things enclosed by the player is 0:
+		say "You have nothing from this region in particular.";
+	else:
+		now all things enclosed by player are unmarked for listing;
+		now all regspecial things carried by player are marked for listing;
+		say "In this region you have found:[line break]";
+		list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
+	now all things enclosed by player are unmarked for listing;
+	now all warpable things enclosed by player are marked for listing;
+	say "Your general tools include:[line break]";
+	list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
 	if player has super purse:
 		now super purse is unmarked for listing;
 	list the contents of the player, with newlines, indented, including contents, with extra indentation, listing marked items only;
 	if number of worn things > 0:
 		say "You are also wearing [a list of worn things].";
-	if location of player is location of skid and bored yak is not in lalaland:
-		say "[line break]There's also that skid you can push around[if number of things on skid > 0]. It holds [the list of things on skid][end if].";
-	if mrlp is otters and power-back is false:
-		say "[line break]You also DON'T have your full powers. You'll need to fix that before hitting the Edictal Citadel to the west.";
-	if player has compass:
-		say "[line break]You also have a compass to tell direction.";
-	if can-guru is true:
-		say "[line break]You still have the aftertaste of the arugula, to GURU people."
+	if location of player is location of skid and bored yak is not in lalaland, say "[line break]There's also that skid you can push around[if number of things on skid > 0]. It holds [the list of things on skid][end if].";
+	if mrlp is otters and power-back is false, say "[line break]You also DON'T have your full powers. You'll need to fix that before hitting the Edictal Citadel to the west.";
+	if player has compass, say "[line break]You also have a compass to tell direction."; [start OTHERS special stuff]
+	if can-guru is true, say "[line break]You still have the aftertaste of the arugula, to GURU people.";
+
+check taking inventory:
+	if the first thing held by the player is nothing:
+		say "Not very 'in.'" instead;
+	if mrlp is means manse or mrlp is stores or mrlp is demo dome:
+		continue the action;
+	if number of things worn by player > 0, say "You are also wearing [list of things worn by player].";
+	the rule succeeds;
 
 after taking inventory when mrlp is others:
 	eval-fruits;
@@ -16786,7 +16789,7 @@ a-text of stein is "YRRYR". b-text of stein is "YRRYR". parse-text of stein is "
 
 description of stein is "It's undoubtedly from the Set-In-Nites corporation, mostly black but with red writing[one of]. You mentally compare it to the tines, and you reckon if you inserted it, it'd be 20% too big[or][stopping]."
 
-shop-hint-items is a list of thing variable. shop-hint-items is { stein, stumbler tumblers, recaps, gins sign, tunes }.
+shop-hint-items is a list of thing variable. shop-hint-items is { tines, stumbler tumblers, recaps, gins sign, tunes }.
 
 chapter min up rule
 
@@ -18017,7 +18020,7 @@ to say tray-sez:
 
 after fliptoing (this is the oyster min score annoying details rule):
 	if noun is trolls and player does not have pills, min-up;
-	if noun is trout and player has pills, min-up;
+	if noun is trout and player has pills and jar-empty is false, min-up;
 	continue the action;
 
 tuna-first is a truth state that varies.
@@ -18055,6 +18058,16 @@ check fliptoing trout (this is the no teaching while fighting rule) :
 book sanctum
 
 Dourest Detours is an innie room in oyster. "It's a bit disorienting here, but your lance helps you feel rousted from just a true sod and glad you've suffered no redouts."
+
+detours-warn is a truth state that varies.
+
+check going outside in detours:
+	if detours-warn is false:
+		now detours-warn is true;
+		say "This shouldn't be hard. It's an easy extra point to kill the, well, ant. But if you exit again, I'll let you move on." instead;
+	say "You chicken out! Or, well, maybe you just want to get on with it.";
+	poss-d;
+	move player to Den Loft instead;
 
 after looking in dourest detours:
 	it-him-her the ant;
@@ -27153,7 +27166,7 @@ rule for showing alternate routes:
 		say "[eqls]OYSTER[line break]";
 		if pill-warned is false:
 			say "[2da]you didn't need to do anything with the pills in the Posh Hops Shop, but you could've tried to SPILL them to bypass a puzzle.";
-		say "[2da][remaining-actions of 2] would also have annoyed Posh Hops Shop patrons[if tunes are reflexed], and you could've also tried to[remap-unset][end if].";
+		say "[2da][remaining-actions of 2] would also have annoyed Posh Hops Shop patrons.";
 		if boats are in shore:
 			say "[2da]you could've tried to BOAST to get the boats['] attention, then LEAP.";
 		else:
@@ -27200,16 +27213,11 @@ showing what the player missed is an activity.
 
 to say remaining-actions of (fd - a number): [remaining actions minus FD]
 	let poshact be a list of text;
-	if tumblers are not in lalaland:
-		add "SPIT" to poshact;
-	if stein is not in lalaland:
-		add "INSET" to poshact;
-	if capers is not in lalaland:
-		add "SCRAPE" to poshact;
-	if gins sign is not reflexed:
-		add "SING" to poshact;
-	if tunes are reflexed:
-		add "UNSET/REMAP" to poshact;
+	if tumblers are not in lalaland, add "SPIT" to poshact;
+	if tines are not reflexed, add "INSET" to poshact;
+	if capers is not in lalaland, add "SCRAPE" to poshact;
+	if gins sign is not reflexed, add "SING" to poshact;
+	if tunes are not reflexed, add "UNSET/REMAP" to poshact;
 	sort poshact in random order;
 	if fd > 0:
 		while number of entries in poshact > fd:
@@ -27307,8 +27315,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if you-used-pills is true:
 			say "[how-pills-used].";
 		if number of entries in shop-hint-items > 2:
-			d "[number of entries in shop-hint-items] [shop-hint-items].";
-			say "[2dmiss of myreg][remaining-actions of 2].";
+			say "[2dmiss of myreg]Other ways to annoy the trolls: [remaining-actions of 2].";
 		if cans are not in lalaland:
 			say "[2dmiss of myreg]you could've tried to SCAN the cans.";
 		if dent is not in lalaland:
