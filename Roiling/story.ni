@@ -6520,6 +6520,8 @@ volume parser tricks and errors
 
 book reading the command
 
+dash-nag is a truth state that varies.
+
 after reading a command:
 	let XX be indexed text;
 	now block-north is false; [?! remove if fixed later. N during Z.Z.Z.Z is annoying]
@@ -6529,6 +6531,9 @@ after reading a command:
 		if the player's command includes "scanner":
 			say "(Fourth wall dumb joke: the letters settler isn't a scanner made for canners. It's for text adventurers.)";
 			now scan-nag is true;
+	if dash-nag is false and the player's command includes "-":
+		say "(NOTE: you never need to use a dash)";
+		now dash-nag is true;
 	if XX matches the regular expression "^(say|think|shout|speak|yell) ":
 		if say-warn is false:
 			say "If you want to say or think a magic word, you can just type it. So instead of SAY XYZZY, you can use the command XYZZY.[paragraph break]You can ASK someone ABOUT something, if you want to talk to them. So this game will snip SAY/THINK/SHOUT/SPEAK/YELL from the start of all future commands and reject this one.";
@@ -8853,6 +8858,11 @@ to pill-list (pilly - a thing):
 		say "[pill-do entry]";
 	guy-cheat pilly;
 
+definition: a thing (called th) is pronoun-settable:
+	if th is a guardian, no;
+	if tn is vanishing, no;
+	yes;
+
 carry out fliptoing:
 	repeat through regana of mrlp:
 		if noun is the-to entry and the-from entry is cromulent:
@@ -8865,7 +8875,7 @@ carry out fliptoing:
 			if location of player is preserve:
 				if the-to entry is not parrot and the-from entry is not parrot:
 					increment nounsolve;
-			unless the-from entry is vanishing and the-to entry is the-from entry:
+			if the-from entry is pronoun-settable and the-from entry is not the-to entry:
 				if the-to entry is singular-named:
 					set pronoun it to the-to entry;
 				if the-to entry is plural-named:
@@ -8913,7 +8923,7 @@ carry out fliptoing:
 			if there is a roomjump entry:
 				if roomjump entry is Strip of Profits:
 					solve-region the map region of the location of the player;
-					continue the action;
+					the rule succeeds;
 				move player to roomjump entry;
 				consider the show blues rule; [for debugging]
 				consider the process random dialogue rule;
@@ -9174,7 +9184,7 @@ weeds	ragged dagger	true	480850046	--	"sewed"	"sewed"	"The weeds tangle together
 raves saver	raves saver	false	472956780	--	"pearly"	"pearly"	"The saver shines a bit, then goes back to being a bit less dingy than it is now. The 'replay player' text disappears, too. Hooray for aesthetics!"
 bluster butlers	bluster butlers	false	589852447	--	"subtler"	"subtler"	"The butlers quiet down a bit. Then they sniff at you. No, you do not deserve to go west. But you're not really even good enough for their time at all! They mutter how they're more high class than this, and they should be guarding a mansion and not some silly ... well, they aren't even going to bother to tell you. They glide off in search of more gainful employment."
 iPrune	iPrune	false	513602032	--	"punier"	"punier"	"Instead of being worried about how much the iPrune would block you when full-grown, you wonder about if it were the size of a normal banana. It works. The iPrune kicks you ineffectually as you walk past, then runs and hides in embarrassment."
-arid den	arid den	false	371276262	--	"drained"	"drained"	"You focus, hoping the arid den will lose energy. Justfor effect, you yell 'I'm a busy adventurer!' you shout. 'I don't have time for this! But I do things the right way!' You're still surprised as the Nerd-Aid bottles seem to dry up inside, and the arid den's lights dim, until it collapses into itself and underground."
+arid den	arid den	false	371276262	--	"drained"	"drained"	"You focus, hoping the arid den will lose energy. Just for effect, you yell 'I'm a busy adventurer!' you shout. 'I don't have time for this! But I do things the right way!' You're still surprised as the Nerd-Aid bottles seem to dry up inside, and the arid den's lights dim, until it collapses into itself and underground."
 strudel	strudel	false	592462631	--	"rustled"	"rustled"	"You manage to take the strudel without obviously reaching for it[if player is in lost lots]. The sled rut vanishes as you do[end if]. This makes no practical difference but makes you feel smoother. Go, you."
 an admirer	an admirer	false	430738621	--	"married"	"married" or "mardier"	"[response-based]. You're slapped sidearm for having misread them, but you're spared spouse opuses."
 natives	natives	false	550443085	--	"naivest"	"vainest" or "naivest"	"[vain-naiv]. Now that the natives have moved on, you can go south."
@@ -9188,7 +9198,7 @@ hostile-is-he lot	hostile-is-he lot	false	537631654	--	"holiest"	"holiest"	"The 
 ray eck	ray eck	false	409615745	--	"creaky"	"creaky"	"You hear a squeak from the keycar, then Ray Eck cringing and grabbing his leg. He spends some time complaining about various aches (don't worry, they're psychosomatic) and then about how he'd been ripped off purchasing stuff like the keycar before. Worried the keycar will sputter and die out here, he guides it home."
 pirates	pirates	false	541160519	--	"pastier"	"pastier"	"You watch as their skin tones lighten a few shades. Even when they blush at their lost perceived virility, that doesn't make it back. Worse, they have no fake spray-tan in their suitcase. They curse and realize they've stayed far away from the coast too long, mumbling about a secret cove you won't find (trust me, you won't[if actionless coastlines is visited], even though you've been up there[else] even when you get up there[end if].) Well, except one who decides to become a priest."
 old ice	old ice	false	341000045	--	"coiled"	"coiled"	"The docile old ice bends, cracks, and whirs as it becomes something far more artistic than you could've made with your bare hands. They inspire real awe now, like the Isle Crag Glaciers. You haven't fixed up the palace, but you've made some nice scenery here."
-denim	Éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the Treading Gradient is, well, , ravaged enough. You take the éclairs."
+denim	Éclairs	true	326810705	--	"mined"	"mined"	"You hear zzk-zzh noises as the denim is cut away. In a huge old dug hole, you see a pack of éclairs in the hole under them--probably still eatable, given their general shelf-life--and then you fill the hole in, because the Treading Gradient is, well, ravaged enough. You take the éclairs."
 fissure	fissure	false	582291393	--	"fussier"	"fussier"	"The fissure begins babbling and yelling at the duck. The duck, annoyed, walks over and pecks at it, inserting its bill and--CLICK. The fence slides inward, along with the fissure, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 prison ropins	prison ropins	false	522953692	--	"unlocked"	"unlocked"	"The duck sees you fiddling with the ropins. The fissure makes a few odd clicks and vanishes. The duck walks over and you realize if it fits the bill just so--and it does! Yup. It fits. Pins spin. The prison clinks and retracts, and out comes Dr. Yow. [he-she-c] thanks you briefly and awkwardly. The duck rushes to Dr. Yow's side. It won't be following you any more."
 smart kid	smart kid	false	356052660	--	"gifted"	"gifted"	"[kid-full] calms down a bit. 'Man! My mind is clearer now! Did you...? Well, if you did or didn't, I'm still, wow.' [he-she-c] asks you, 'Could you give me help building a bot-boat?' You shake your head. 'Do you know anyone?'[paragraph break]Hmm, not any of the guardians blocking your way, but maybe you could get someone to show [kid-full] how to. Then maybe you could cross Leak Lake and get closer to the Curst Palace."
@@ -18074,7 +18084,7 @@ carry out taning:
 
 book Den Loft
 
-Tenfold Teflon'd Den Loft is an innie room in Oyster. "[one of]You're at the center of what's really a nice mob combine, all things considered. I mean, the mob isn't nice, but it's obviously a spendy spy den. It's unclear if it's above or below ground, it's so well protected a city-fail facility. [or][stopping]You can exit or go out to leave this place, though it's probably better just to find a way to mess up the whole Horned Hedron.[paragraph break]A huge dialer takes up the bulk of the wall--it seems to have settings to tell it what to do, then a lever to pull."
+Tenfold Teflon'd Den Loft is an innie room in Oyster. "[one of]You're at the center of what's really a nice mob combine, all things considered. I mean, the mob isn't nice, but it's obviously a spendy spy den. It's unclear if it's above or below ground, it's so well protected a city-fail facility. [or][stopping]You can exit or go out to leave this place, though it's probably better just to find a way to mess up the whole Horned Hedron.[paragraph break]A huge dialer takes up the bulk of the wall--it seems to have settings to tell it what to do[if yapper is not in den loft], then a lever to pull[end if]."
 
 lev-pull is a truth state that varies.
 
@@ -18088,7 +18098,11 @@ check going outside in Den Loft:
 	if lev-pull is true:
 		say "You can't leave now. You're so close. The lever doesn't seem to work any more, but the dialer...maybe..." instead;
 
-the papery yapper is a vanishing person in Den Loft. "A papery yapper, full of sharp edges that would bleed you to death, blocks access to the dialer. He is wearing a stupid paper necklace."
+the papery yapper is a vanishing neuter person in Den Loft. "A papery yapper, full of sharp edges that would bleed you to death, blocks access to the dialer. He is wearing a stupid paper necklace."
+
+after looking in den loft:
+	if yapper is in den loft, it-him-her yapper;
+	continue the action;
 
 after fliptoing yapper (this is the A Briber is You rule):
 	now gleaner is in lalaland;
@@ -19222,7 +19236,6 @@ to draw-my-loc:
 	let myy be 0;
 	draw-towers-map;
 	repeat through table of towers-locs:
-		d "[my-loc entry].";
 		if location of player is my-loc entry:
 			change current foreground-color to (R 0 G 0 B 0);
 			now myx is tow-x-start + (tow-delta * my-x entry) - 2;
@@ -19318,6 +19331,7 @@ for writing a paragraph about a guardian (called gua):
 	let so-far be 0;
 	repeat with myg running through not prevseen guardians in location of player:
 		if so-far > 0, say "[line break]";
+		guar-pro myg;
 		say "[if so-far is 0]Oh, look[else if so-far is 1][line break]But there's more[else if so-far is 2][line break]And that's not all[else][line break]Man, it's busier than it should be here[end if]! [initial appearance of myg]";
 		increment so-far;
 		now myg is mentioned;
@@ -19327,6 +19341,7 @@ for writing a paragraph about a guardian (called gua):
 		say "You can [if number of prevseen guardians is 0]also [end if]still see ";
 		repeat with myg running through prevseen guardians in location of player:
 			increment guasofar;
+			guar-pro myg;
 			say "[the myg] blocking passage [if gualoc of myg is location of player][guadir of myg][otherwise][opposite of guadir of myg][end if]";
 			if guasofar < psg - 1:
 				say ", ";
@@ -19336,6 +19351,11 @@ for writing a paragraph about a guardian (called gua):
 	now all guardians in location of player are prevseen;
 	now all guardians in location of player are mentioned;
 	continue the action;
+
+to guar-pro (g - a person):
+	if g is neuter, set the pronoun it to g;
+	if g is female, set the pronoun her to g;
+	if g is plural-named, set the pronoun them to g;
 
 guardians-seen is a number that varies.
 
@@ -19351,7 +19371,7 @@ after printing the locale description when mrlp is towers (this is the castle ne
 		if adude is clueneedy and any-reveal is false:
 			now adude is not clueneedy;
 			now any-reveal is true;
-			say "[kloozorz corresponding to a guy of adude in table of guard-org][paragraph break]";
+			say "[line break][kloozorz corresponding to a guy of adude in table of guard-org][paragraph break]";
 	if rm is unvisited and rm is a towloc listed in the table of towercomments:
 		choose row with towloc of rm in table of towercomments;
 		if there is a towquo entry:
@@ -19444,6 +19464,15 @@ check going outside:
 book Loftier Trefoil
 
 Loftier Trefoil is an innie room in Towers. "This opt-outs['] outpost is slightly classier than servant taverns. Still, you can't afford to stay, and you can't leave it with Rodney around. It has other rooms, but since this isn't an RPG, the cellar below and rooms upstairs are off-limits.".
+
+after looking in loftier trefoil:
+	set the pronoun him to rodney;
+	set the pronoun them to w-p;
+	continue the action;
+
+w-p is privately-named plural-named scenery in loftier trefoil. printed name of w-p is "warriors".
+
+instead of doing something with w-p, say "Deal with the warriors individually."
 
 after printing the locale description for Loftier trefoil when Loftier trefoil is unvisited:
 	say "The ambience here makes you think 'Lo, I fret.'";
@@ -19586,7 +19615,7 @@ check examining spec-o-scope:
 		say "An area three rooms square. A river, maybe a lake, borders it on the north and east. About [number of accessible rooms in words] area[if number of accessible rooms is not 1]s are[else] is[end if] open in the center, with [number of sideview rooms in words] open off to the side. In particular, the highlighted area just north of the north shore is [unless admirer is in lalaland]un[end if]available, another just west is [unless ingrates are in lalaland]un[end if]available, a particularly important location east of the east shore seems [unless bonker is in lalaland]un[end if]available, and just south of it, an area looks [unless natives are in lalaland]un[end if]available. It also appears the area just west of you is highlighted, there's something northeast of the water.";
 
 description of spec-o-scope is "You look into the scope and see:[paragraph break][fixed letter spacing]
-[line break]  !       *
+[line break]  !      *
 [line break]  [pc of admirer]~~~~~~
 [line break]+[pc of ingrates].[pc of wait-seer].[pc of atheists].~ +
 [line break]  [pc of iPrune] [pc of grailman] [if player is male][pc of hostile-is-he lot][else][pc of lois the hostile][end if]~
@@ -19659,6 +19688,7 @@ check inserting into rapier repair machine:
 	say "The dagger is sucked into the machine, which gets raspier as it repairs. A couple minutes of proclaiming itself 'the sharpener that resharpens,' and a final wheezing choke later, you open it. Instead of a riper rapier, or a clever cleaver, it's a gizmo--bearing the label of the famed novelty company I ZOMG.";
 	now player has the I ZOMG Gizmo;
 	now ragged dagger is in lalaland;
+	set the pronoun it to I ZOMG Gizmo;
 	reg-inc instead;
 
 chapter repairing
@@ -20139,9 +20169,9 @@ to decide which guardian is the-hostile:
 	if player is male, decide on hostile-is-he lot;
 	decide on lois the hostile;
 
-Strati Strait is north of Danger Garden and east of Treading Gradient. "Coulds Clouds above (strati) give this strait a feeling of reflective gloom. Leak Lake spans to the east, too far to cross. A Thearchy Hatchery[if the-hostile is in lalaland], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Strati Strait is in Towers.
+Strati Strait is north of Danger Garden and east of Treading Gradient. "Coulds-Clouds above (strati) give this strait a feeling of reflective gloom. Leak Lake spans to the east, too far to cross. A Thearchy Hatchery[if the-hostile is in lalaland], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". Strati Strait is in Towers.
 
-the coulds clouds are useless scenery in Strati Strait. "The strati are definitely coulds-clouds, full of possibility. Just looking at them feels like you have artist traits."
+the coulds clouds are useless scenery in Strati Strait. "The strati are definitely coulds-clouds, full of possibility. Just looking at them feels like you have artist traits.". understand "coulds-clouds" as coulds clouds.
 
 understand "strati" as coulds clouds when player is in strati strait.
 
@@ -20150,15 +20180,16 @@ instead of doing something with coulds clouds:
 	say "The clouds are too far away to do anything other than look at. They won't help you solve anything. They're just there.";
 
 to kid-appears:
-	if kid is off-stage:
+	if smart kid is off-stage:
 		if atheists are in lalaland and the-hostile are in lalaland:
-			now kid is in actionless coastlines;
+			now smart kid is in actionless coastlines;
 			if player is in actionless coastlines:
 				say "Some kid comes into view from a dark mist with the atheists and [relig-mf] gone, [what-kid-does].";
+				guar-pro smart kid;
 			else:
 				say "You hear a kid yell, 'Yay! They're all gone!' to the [if player is in Strati Strait]north[else]east[end if].";
 		else:
-			say "You hear [if the-hostile are not in lalaland]voices[else]a voice[end if] yell [one of]'Sadly no, nosy lad[or]a bizarrely accented 'Abort, o brat[in random order]!' to someone you can't see.";
+			say "You hear [if the-hostile are not in lalaland]voices[else]a voice[end if] yell [one of]'[if player is female]Nay, slog, nosy gal[else]Sadly no, nosy lad[end if][or]a bizarrely accented 'Abort, o brat[in random order]!' to someone you can't see.";
 
 after fliptoing the-hostile:
 	kid-appears;
@@ -20544,6 +20575,9 @@ chapter Lost Lots
 
 Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I guess those annoying natives were right. [or][stopping]This is just a barren area, without even a slot. A gadflies['] gasfield surrounds you every way except back north."
 
+after looking in lost lots:
+	if strudel is carried by player or strudel is in lalaland, set the pronoun it to gasfield;
+	continue the action;
 the gadflies' gasfield is bounding scenery in Lost Lots. "You can't 100% see the gasfield, since it's hazy. But it's there, and it blocks you."
 
 check opening a hintpastry:
@@ -21264,7 +21298,7 @@ a-text of man covered in inapt paint is "RYRRYRR". b-text of man covered in inap
 
 understand "flemish/painted" and "flemish/painted man" as man covered in inapt paint.
 
-The dandier arid den is a blue guardian. "A dandier arid den rests [psgdir of arid den], too wide to cross. It may not be manned, but those things have security like crazy."
+The dandier arid den is a blue neuter guardian. "A dandier arid den rests [psgdir of arid den], too wide to cross. It may not be manned, but those things have security like crazy."
 
 a-text of arid den is "RRYYRYR". b-text of arid den is "??YYRGR". parse-text of arid den is "?[sp]?[sp]-[sp]-[sp]x[sp]e[sp]x".
 
@@ -21297,7 +21331,7 @@ Lars Eede is a guardian. a-text of Lars Eede is "RYRYYRYR". b-text of Lars Eede 
 
 description of Lars Eede is "He's carrying that bottle of Reed's Ale but seems awfully jittery."
 
-Elsa Erde is a guardian. a-text of Elsa Erde is "RYRYYRYR". b-text of Elsa Erde is "RYRYYRYR". parse-text of Elsa Erde is "x[sp]-[sp]x[sp]e[sp]-[sp]x[sp]-[sp]x". "[deal-seer]". Elsa Erde is female.
+Elsa Erde is a guardian. a-text of Elsa Erde is "RYRYYRYR". b-text of Elsa Erde is "RYRYYRYR". parse-text of Elsa Erde is "x[sp]-[sp]x[sp]e[sp]-[sp]x[sp]-[sp]x". "[deal-seer].". Elsa Erde is female.
 
 description of Elsa Erde is "She's carrying that bottle of Reed's Ale but seems awfully jittery."
 
@@ -21571,8 +21605,10 @@ check going (this is the guardian reposition before rule):
 				if QQ is not in lalaland:
 					now QQ is passtried;
 					if loc entry is location and blockdir entry is noun:
+						if blockdir entry is neuter, set the pronoun it to blockdir entry;
 						say "You're blocked going [noun] by [unless QQ is proper-named]the [end if][QQ]. [blokzorz entry][line break]" instead;
 					if loc entry is not location and blockdir entry is opposite of noun:
+						if blockdir entry is neuter, set the pronoun it to blockdir entry;
 						say "You're blocked going [noun] by [unless QQ is proper-named]the [end if][QQ]. [blokzorz entry][line break]" instead;
 		if number of taunty guardians > 0:
 			let QQ be a random taunty guardian;
