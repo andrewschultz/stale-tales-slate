@@ -3088,6 +3088,8 @@ to say biop of (ts - a truth state):
 	say "BUG no biopic found";
 
 to say check-started-yet:
+	set pronoun it to medals;
+	set pronoun them to medals;
 	let prefigs be 0;
 	let southfigs be 0;
 	if p-2 is prefigured:
@@ -8860,7 +8862,7 @@ to pill-list (pilly - a thing):
 
 definition: a thing (called th) is pronoun-settable:
 	if th is a guardian, no;
-	if tn is vanishing, no;
+	if th is vanishing, no;
 	yes;
 
 carry out fliptoing:
@@ -9660,13 +9662,18 @@ after fliptoing raptor:
 	now hydra is in lalaland;
 	now Merle is in lalaland;
 	now Elmer is in lalaland;
-	if Merle is reflexed:
+	if Merle is reflexive:
 		poss-d;
 	reg-inc;
 	continue the action;
 
 after fliptoing post (this is the cleanup after the post/thief rule) :
 	now purse-stolen is false;
+	continue the action;
+
+after fliptoing (this is the silly edge case pronouns rule):
+	if noun is imp1 or noun is imp2 or noun is imp3, set the pronoun it to sly imp;
+	if noun is ram1 or noun is ram2 or noun is ram3, set the pronoun it to whiners;
 	continue the action;
 
 after fliptoing (this is the one-of-two and min-up-plus rule):
@@ -18248,7 +18255,7 @@ check fliptoing bubble wrap:
 the dent is part of the raw red drawer. the dent is LLPish and flippable. description is "It'd probably take the right sort of futzing to get rid of."
 
 after fliptoing dent:
-	set the pronoun it to reward drawer;
+	set the pronoun it to raw red drawer;
 	continue the action;
 
 a-text of dent is "RYRR". b-text of dent is "RGPR". parse-text of dent is "t[sp]e[sp]n[sp]d". dent is parse-spoilable.
@@ -19326,7 +19333,7 @@ Mislit Limits	4	0
 book basic guardian work
 
 for writing a paragraph about a guardian (called gua):
-	if gua is ray eck:
+	if gua is ray eck or gua is reed's ale:
 		continue the action;
 	let so-far be 0;
 	repeat with myg running through not prevseen guardians in location of player:
@@ -19371,7 +19378,7 @@ after printing the locale description when mrlp is towers (this is the castle ne
 		if adude is clueneedy and any-reveal is false:
 			now adude is not clueneedy;
 			now any-reveal is true;
-			say "[line break][kloozorz corresponding to a guy of adude in table of guard-org][paragraph break]";
+			say "[kloozorz corresponding to a guy of adude in table of guard-org][paragraph break]";
 	if rm is unvisited and rm is a towloc listed in the table of towercomments:
 		choose row with towloc of rm in table of towercomments;
 		if there is a towquo entry:
@@ -20578,6 +20585,7 @@ Lost Lots is south of Danger Garden. Lost Lost is in Towers. "[one of]Well, I gu
 after looking in lost lots:
 	if strudel is carried by player or strudel is in lalaland, set the pronoun it to gasfield;
 	continue the action;
+
 the gadflies' gasfield is bounding scenery in Lost Lots. "You can't 100% see the gasfield, since it's hazy. But it's there, and it blocks you."
 
 check opening a hintpastry:
@@ -21242,7 +21250,7 @@ a-text of pirates is "RYRRYYR". b-text of pirates is "PYRRYGR". parse-text of pi
 
 section anemic cinema
 
-The ingrates are plural-named LLPish white guardians. "Ingrates whining about any old thing block the way [psgdir of ingrates]."
+The ingrates are plural-named white guardians. "Ingrates whining about any old thing block the way [psgdir of ingrates]."
 
 understand "ingrate" as ingrates.
 
@@ -21361,7 +21369,7 @@ description of organised ego drains is "You recognize the ego drains as odd spir
 
 a-text of organised is "RRYRRYYRY". b-text of organised is "RRYRRYYRY". parse-text of organised is "x[sp]?[sp]-[sp]x[sp]x[sp]i[sp]-[sp]x[sp]-".
 
-some natives are a plural-named white LLPish guardian. indefinite article of natives is "several". "Some natives block your way [psgdir of natives], though you don't really see anything interesting there."
+some natives are a plural-named white guardian. indefinite article of natives is "several". "Some natives block your way [psgdir of natives], though you don't really see anything interesting there."
 
 understand "native" as natives.
 
@@ -22163,6 +22171,11 @@ check going in Bleary Barley:
 
 b-b is privately-named proper-named reflexive scenery in Bleary Barley. the printed name of b-b is "the bleary barley". understand "bleary/barley" and "barley" as b-b. "[if b-b is reflexed]Not so impressive now--it might be a mirage, but it looks like the barley to the east is on water, and thicker-yellow on top. It reminds you of a marsh[otherwise]It ranges expansively--but the weird thing is, it hasn't flowered. Very bleary though[end if]."
 
+after fliptoing b-b:
+	set the pronoun them to cinders;
+	set the pronoun him to Ed Riley;
+	continue the action;
+
 does the player mean gotothinging b-b:
 	if mrlp is otters:
 		it is very likely;
@@ -22354,6 +22367,12 @@ carry out whistleing:
 book Frontage
 
 frontage is west of Bleary Barley. frontage is a room in Otters. "This crossroad is [if Gretta is visible]thickly populated with men talking loudly and 'excitingly,' trying to impress [one of]one woman[or]Gretta Garett-Tatger[stopping][else]empty now you dispersed the macks[end if]. Elvira's Edictal Citadel is to the west[if alcoves is unvisited], too big to hide nothing[else if Inclosure is unvisited], with much more than the alcoves you've seen[end if][if atmo-moat is in frontage]. A moat blocks entry right now[end if]. You can go, more safely, back east or [if loop pool is visited or bran barn is visited]re-[end if]check what's north or south[if power-back is true], not that you need to[end if]."
+
+after looking in frontage:
+	if macks are in frontage:
+		set the pronoun them to macks;
+		set the pronoun her to gretta;
+	continue the action;
 
 printed name of frontage is "[if Gretta is in frontage]Gent-Fora Frontage[else]Frat-Gone Frontage[end if]"
 
@@ -22880,7 +22899,14 @@ after choosing notable locale objects when player is in loop pool:
 
 Le Mer is a person in loop pool. description is "You can't locate where, exactly, Le Mer is."
 
-the sea cube is a transparent vanishing container in loop pool. description is "You see eels in the cube.". "Eels float inside a sea cube here, just across the loop pool.".
+the sea cube is a transparent vanishing container in loop pool. description is "You see eels in the cube.". "Eels float inside a sea cube here, just across the loop pool[eels-them].".
+
+to say eels-them:
+	set the pronoun them to eels;
+
+after fliptoing sea cube:
+	set the pronoun them to eels;
+	continue the action;
 
 check examining sea cube:
 	ignore the examine containers rule;
@@ -22960,6 +22986,10 @@ Tapering Anger Pit is an innie room in Otters. Tapering Anger Pit is north of Bl
 understand "inert gap" and "inert/gap" as anger pit when sly imp is in lalaland.
 
 The sly imp is a flippable neuter person in Anger Pit. "A sly imp simply zooms about [if imp1 is reflexive]rangily [end if]guarding the way north[if imp2 is reflexive], with a butlery air[end if][if imp3 is reflexive], showing legendary patience[end if] that allows vaster averts[if power-back is true]. But for all that, you think you could've taken the imp even before you regained your full powers[end if].". description of sly imp is "It looks back at you with an entirely tiny leer, planning how to keep one step ahead of you as effortlessly as it can, or keep you just mad enough not to think how to get rid of it.[paragraph break]It seems to have several tricks, but that may just mean several ways to get at it."
+
+after looking in tapering anger pit:
+	if sly imp is in tapering anger pit, it-him-her sly imp;
+	continue the action;
 
 after doing something with imp:
 	set the pronoun him to the imp;
@@ -23179,15 +23209,15 @@ section dummy scenery
 
 [3 dummy sceneries. Loathingly, stoically, tersely]
 
-ram1 is privately-named unscannable reflexive ssno scenery in Anteroom. ram1 is undesc. printed name of ram1 is "the men's shouting".
+ram1 is privately-named unscannable reflexive ssno scenery in Anteroom. ram1 is undesc. printed name of ram1 is "the whiners['] shrewin[']".
 
 a-text of ram1 is "RRYYRYRRO". b-text of ram1 is "RRYYRYRRB". parse-text of ram1 is "x[sp]x[sp]-[sp]-[sp]x[sp]-[sp]x[sp]x[sp]y".
 
-ram2 is privately-named unscannable reflexive ssno scenery in Anteroom. ram2 is undesc. printed name of ram2 is "the men's shouting".
+ram2 is privately-named unscannable reflexive ssno scenery in Anteroom. ram2 is undesc. printed name of ram2 is "the whiners['] shrewin[']".
 
 a-text of ram2 is "RYRRYRO". b-text of ram2 is "RGRRYPO". parse-text of ram2 is "x[sp]e[sp]x[sp]x[sp]e[sp]l[sp]y". ram2 is cheat-spoilable.
 
-ram3 is privately-named unscannable reflexive ssno scenery in Anteroom. ram3 is undesc. printed name of ram3 is "the men's shouting".
+ram3 is privately-named unscannable reflexive ssno scenery in Anteroom. ram3 is undesc. printed name of ram3 is "the whiners['] shrewin[']".
 
 a-text of ram3 is "RYYRRYRRRO". b-text of ram3 is "RYYRRYRRRO". parse-text of ram3 is "x[sp]-[sp]-[sp]x[sp]x[sp]-[sp]x[sp]x[sp]x[sp]y".
 
@@ -23718,23 +23748,29 @@ to coin-eval:
 				say "[line break][blabber entry][line break]";
 				if get-token entry is 1:
 					now player has tekno-token;
+					set the pronoun it to tekno-token;
 				if get-coin entry is 1:
 					now player has coin;
+					set the pronoun it to coin;
 				if get-coins entry is 1:
 					if player has icon:
 						now icon is in lalaland;
 						now player has icons;
 						now singed design is part of the icons;
 						say "[line break]You fiddle with the coin you got, and now it's an icon, too. So now you have icons!";
+						set the pronoun them to icons;
 					else if player has coin:
 						now coin is in lalaland;
 						now player has coins;
 						now singed design is part of the coins;
+						set the pronoun them to coins;
 					else:
 						now player has coins;
 						now singed design is part of the coins;
+						set the pronoun them to coins;
 				if get-dollar entry is 1:
 					now player has droll dollar;
+					set the pronoun it to droll dollar;
 				continue the action;
 
 chapter dollar
@@ -24338,6 +24374,10 @@ check fliptoing when player is in clearing and player does not have tekno-token:
 
 Clangier Clearing is east of Swell Wells. Clangier Clearing is in Others. "A streperous superstore blocks any exit except back west.[paragraph break]You notice a list of prices and another banner saying AUCTION CAUTION.[paragraph break]Nameless salesmen employ all sorts of speech tricks and gesturing to haggle here. Maybe if you LISTEN, you might get in the flow."
 
+after looking in clangier clearing:
+	set the pronoun them to nameless salesman;
+	continue the action;
+
 the nameless salesmen are scenery in clangier clearing. "The nameless salesmen are, well, nondescript but numerous. They ignore you, and none seems as interesting as Len Craig."
 
 the streperous superstore is scenery in Clangier Clearing. "It's big and intimidating and you would probably get lost there. It's one of Elvira's biggest inventions, and though she's gone, you can't just go blowing it up. Not with people inside, and employed by it."
@@ -24837,7 +24877,10 @@ For printing a locale paragraph about a thing (called the item)	(this is the don
 	if the item is an exhibit, set the locale priority of the item to 0;
 	continue the activity.
 
-Peek Keep is a room in Demo Dome. "Exhibits lie west, north and east, and even inside. The way down looks disused. The exit is south. A great grate blocks passage abovebut there seems to be a lot behind it. A flashed ad shelf also continually changes what it's showing.[paragraph break]The entry sign here welcomes you.";
+Peek Keep is a room in Demo Dome. "Exhibits lie west, north and east, and even inside. The way down looks disused. The exit is south. A great grate blocks passage abovebut there seems to be a lot behind it. A flashed ad shelf also continually changes what it's showing.[paragraph break]The entry sign here welcomes you[esi].";
+
+to say esi-pro:
+	set the pronoun it to entry sign;
 
 instead of turning the dial:
 	say "The dial is out of reach."
@@ -24857,7 +24900,7 @@ check going south in peek keep:
 		say "You take a break[unex-left] and get back to, well, running Yorpwald. The museum was about the right size. Not too small, but not too big to waste taxpayers['] money.";
 		end the story;
 	else:
-		say "Are you sure you want to leave before [if number of unnoted exhibits is 0]exhaustively [end if]looking at everything? You can type SCORE to see what you still haven't done.";
+		say "Are you sure you want to leave before [if number of unnoted exhibits is 0]exhaustively [end if]looking at everything? You can type [b]SCORE[r] or [b]THINK[r] to see what you still haven't done.";
 		if the player direct-consents:
 			say "It's--yes, you've sort of lived it, already. You're just too busy for frivolity[if number of unnoted exhibits is 0]. You've had a look at everything, just not in total detail[end if].";
 			end the story saying "Epilogue's Up! Lie, Ego";
@@ -24875,16 +24918,20 @@ check going up in peek keep:
 
 table of xibits
 exhib	orwt
-owl decal code wall	5
-allow lots tools wall	5
-Chic Loner Chronicle	5
-Calendar	5
-Novella	15
+owl decal code wall	10
+allow lots tools wall	10
+Chic Loner Chronicle	10
+Calendar	10
+Novella	20
 Flashed Ad Shelf	1
+shiest thesis	10
 
 chapter Evoc-Cove
 
-Evoc-Cove is east of peek keep. Evoc-Cove is in Demo Dome. "A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella is propped up against the wall by some invisible force. You can go back west if you want."
+Evoc-Cove is east of peek keep. Evoc-Cove is in Demo Dome. "A welcoming place full of feeling and peace and weird new ideas that it's just good to know are there. A novella[nov-pro] is propped up against the wall by some invisible force. You can go back west if you want."
+
+to say nov-pro:
+	set the pronoun it to novella;
 
 check going in evoc-cove:
 	if noun is east or noun is north or noun is south:
@@ -25074,7 +25121,10 @@ after examining allow lots tools wall:
 
 chapter Intel Inlet
 
-Intel Inlet is inside of Peek Keep. Intel Inlet is in Demo Dome. "You feel a fourth wall closing in on bugs and features here. A CareLand Calendar is on the wall, as is a shiest thesis--whoever wrote it is probably half embarrassed of what's on there."
+Intel Inlet is inside of Peek Keep. Intel Inlet is in Demo Dome. "You feel a fourth wall closing in on bugs and features here. A CareLand Calendar is on the wall, as is a shiest thesis[the-pro]--whoever wrote it is probably half embarrassed of what's on there."
+
+to say the-pro:
+	set the pronoun it to shiest thesis;
 
 The shiest thesis is an exhibit in intel inlet. description is "It's a list of embarrassing mistakes you really shouldn't feel so embarrassed about. At first you're all, eh, this...but it's more than that. You resolve to feel less bad about your own mistakes, reading all the things the author let slip in a release, or just in general, while making this project. He's obviously still a little embarrassed about it all.".
 
@@ -25103,7 +25153,10 @@ to say part-one-thru:
 
 chapter Ned's Dens
 
-Ned's Dens is west of Peek Keep. Ned's Dens is in Demo Dome. "You feel a hush here, as if you're seeing something personal and private. Like that Chic Loner Chronicle. You can go back east."
+Ned's Dens is west of Peek Keep. Ned's Dens is in Demo Dome. "You feel a hush here, as if you're seeing something personal and private. Like that Chic Loner Chronicle[clc-pro]. You can go back east."
+
+to say clc-pro:
+	set the pronoun it to chic loner chronicle;
 
 The Chic Loner Chronicle is an exhibit in Ned's Dens. description is "[one of]The Chronicle has a list of silly things the author thought of while writing this game. The first one[or]Another thought[stopping] reads: [one-chron]".
 
@@ -25202,7 +25255,7 @@ instead of doing something with Talks Stalk:
 
 section Flashed Ad Shelf
 
-The Flashed Ad Shelf is an exhibit in Peek Keep. description is "There is a rotating ad saying visit sunny Threediopolis and Fourdiopolis--well, the edges are sunny. It then changes to tout following the adventures of Alec Smart through the Problems Compound and, eventually, Slicker City."
+The Flashed Ad Shelf is an exhibit in Peek Keep. description is "There is a rotating ad saying visit sunny Threediopolis and Fourdiopolis--well, the edges are sunny. It then changes to tout following the adventures of Alec Smart through the Problems Compound and, eventually, Slicker City, then to Matt Doerr working through Kingston and Inville, and finally to someone walking around on a cube in a cavern."
 
 instead of doing something with flashed ad shelf:
 	if the action is procedural:
@@ -27198,9 +27251,17 @@ to say 2dmiss of (cr2 - a region):
 	now anything-missed is true;
 	say "[2dg of cr2]";
 
+miss-room is a room that varies.
+
+to say 2drm of (rr - a room):
+	if miss-room is rr, continue the action;
+	now miss-room is rr;
+	say "====[rr]===="
+
 anything-missed is a truth state that varies.
 
 to show-miss (myreg - a region) and (needsolve - a truth state):
+	now miss-room is lalaland;
 	if needsolve is true and myreg is not solved, continue the action;
 	if myreg is means manse:
 		if giant pin is in dusty study:
@@ -27337,9 +27398,9 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you could've tried to DISCERN the cinders or even RESCIND them.";
 		else if rescind-cinders is false:
 			say "[2dmiss of myreg]you could've tried to RESCIND the cinders.";
-		if eels are not in lalaland:
+		if eels are not reflexed:
 			say "[2dmiss of myreg]you could've [if sea cube is not in lalaland]said BECAUSE to dissolve the sea cube, then [end if]said ELSE to gain the eels['] trust.";
-		if p-2 is not reflexed:
+		if p-2 is not in lalaland:
 			say "[2dmiss of myreg]you could've [if ghoul hat is not in lalaland]said ALTHOUGH to dissolve the ghoul hat, then [end if]said HOWEVER to gain Mr. Lee's trust.";
 		if Merle is reflexive:
 			say "[2dmiss of myreg]you could've been all 'HONESTLY?' at Merle and Elmer.";
@@ -27577,7 +27638,7 @@ section instructions
 [* this is a simple list of instructions cluing a5 hintvis and ts]
 
 when play begins:
-	say "Here is a list of Beta Testing commands that will facilitate passage through:[paragraph break]--[b]a5[r] moves you to the Strip of Profits, solving all but Otters.[line break]--hintvis hints everything visible[line break]--[b]ts[r] jumps you to the Strip of Profits, with the patcher etc.[line break]--[b]blaa[r] talks about a generic subject.[line break]--[b]misses[r] shows what optional things you've missed in the region.";
+	say "Here is a list of Beta Testing commands that will facilitate passage through:[paragraph break]--[b]a5[r] moves you to the Strip of Profits, solving all but Otters.[line break]--[b]hintvis[r] hints everything visible[line break]--[b]ts[r] jumps you to the Strip of Profits, with the patcher etc.[line break]--[b]blaa[r] talks about a generic subject.[line break]--[b]misses[r] shows what optional things you've missed in the region.";
 
 book cheatage
 
@@ -27733,6 +27794,11 @@ carry out a5ing:
 	now troves-x is in lalaland;
 	now towers-x is in lalaland;
 	now oyster-x is in lalaland;
+	now troves is solved;
+	now routes is solved;
+	now oyster is solved;
+	now presto is solved;
+	now towers is solved;
 	now suppress-score is false;
 	say "Beeep. All pre-Otters areas (fake)-solved. You may now proceed to OTTERS. I also gave you the settler and purse and notepad, in case.";
 	consider the notify score changes rule;
