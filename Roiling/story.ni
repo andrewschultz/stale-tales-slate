@@ -6913,7 +6913,12 @@ after printing the name of the stapler while taking inventory:
 before listing contents while taking inventory: group hintpastries together
 
 instead of taking inventory:
-	say "DEBUG: Warpable [list of warpable things enclosed by player].";
+	say "Item time![paragraph break]";
+	if debug-state is true:
+		say "DEBUG: Warpable [list of warpable things carried by player].";
+		say "DEBUG: REGSPECIAL C [list of regspecial things carried by player]";
+		say "DEBUG: REGSPECIAL H [list of regspecial things held by player]";
+		say "DEBUG: REGSPECIAL E [list of regspecial things enclosed by player]";
 	if mrlp is troves:
 		if truffle is off-stage and purse-stolen is false:
 			say "Boy! this is a seedy area. You're worried you might get robbed of what you have.[line break]";
@@ -6928,7 +6933,6 @@ instead of taking inventory:
 	if player has settler and player has super purse:
 		say "You're carrying your letters settler, to help with hints. [set-det].[line break]";
 		now settler is unmarked for listing;
-	say "Item time:[line break]";
 	if number of things enclosed by the player is 0:
 		say "Nothing." instead;
 	if the number of regspecial things enclosed by the player is 0:
@@ -6941,10 +6945,11 @@ instead of taking inventory:
 	now all things enclosed by player are unmarked for listing;
 	now all warpable things enclosed by player are marked for listing;
 	say "Your general tools include:[line break]";
-	list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
 	if player has super purse:
 		now super purse is unmarked for listing;
-	list the contents of the player, with newlines, indented, including contents, with extra indentation, listing marked items only;
+	if player has letters settler:
+		now letters settler is unmarked for listing;
+	list the contents of the player, with newlines, indented, with extra indentation, listing marked items only;
 	if number of worn things > 0:
 		say "You are also wearing [a list of worn things].";
 	if location of player is location of skid and bored yak is not in lalaland, say "[line break]There's also that skid you can push around[if number of things on skid > 0]. It holds [the list of things on skid][end if].";
@@ -13134,6 +13139,9 @@ after looking in Cleric Circle:
 		now Brother Horbert is in lalaland;
 		pad-del "reagents";
 		now huge thing form above is in Same Mesa;
+		if worst ad is not in lalaland:
+			poss-d;
+	continue the action;
 
 after printing the locale description for Cleric Circle when Cleric Circle is unvisited (this is the reveal snoop spoon rule):
 	say "(press any key)[wfak][paragraph break]";
@@ -13425,11 +13433,6 @@ after looking in harms marsh:
 	set the pronoun it to sheol holes;
 	continue the action;
 
-after printing the locale description for Harms Marsh when Harms Marsh is unvisited:
-	if worst ad is not in lalaland:
-		poss-d;
-	continue the action;
-
 description of Harms Marsh is "You are in a Harms Marsh, which you know to be full of sheol-holes, so tricky to find even in full light. [if darkness is visible]And this area seems like it was always unlit... but things don't always have to be in the past...[else if un-road is in Harms Marsh]Now you've found the un-road to get to No-Gal Logan, how to navigate it?[else]Now, you need to find No-Gal Logan. You need to find a good unroad...because roads and inroads will loop back.[end if]"
 
 section Sheol Holes
@@ -13614,6 +13617,8 @@ before going down in troves:
 chapter Pa Egg Pea (book)
 
 Pa Egg Pea is a proper-named reflexive LLPish thing. printed name of Pa Egg Pea is "Pa, Egg, Pea"
+
+after printing the name of Pa Egg Pea while taking inventory, say " ([if pa egg pea is reflexive]un[else]grokked[end if])";
 
 does the player mean doing something with pa egg pea when mrlp is troves: it is likely.
 does the player mean doing something with ltb when mrlp is troves: it is very likely.
@@ -27248,9 +27253,10 @@ to say 2dmiss of (cr2 - a region):
 miss-room is a room that varies.
 
 to say 2drm of (rr - a room):
-	say "[2dmiss of map region of rr]";
+	say "[2dg of map region of rr]";
 	unless miss-room is rr, say "====[b][rr][r]====[line break]";
 	now miss-room is rr;
+	say "[2da]";
 
 anything-missed is a truth state that varies.
 
