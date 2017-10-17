@@ -3645,10 +3645,10 @@ to see-about-patcher:
 	if number of solved regions > 2 and chapter patcher is off-stage:
 		say "You think, with a gay woot, 'Yow, got a way to go.' But then a voice -- 'Goal's a slog? Covert vector!' You look over and notice something behind the megaton magneto-montage. Something that wasn't there before. It's...a chapter patcher.";
 		now chapter patcher is in Strip of Profits;
-		change the pronoun it to chapter patcher;
+		set the pronoun it to chapter patcher;
 
 after looking in strip of profits:
-	if number of visible portals is 0, set the pronoun it to megaton magneto-montage;
+	if number of visible portals is 0, set the pronoun it to megaton magneto montage;
 	continue the action;
 
 definition: a region (called reg) is kayoed:
@@ -9675,7 +9675,7 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 		if prai is reflexed and rivets are reflexed:
 			say "Your willpower is at 200%! But it doesn't do any good without introspection, being sure YOU deserve to get going. You look back at the Pernod.";
 			min-up;
-			set the pronoun it to pernod.
+			set the pronoun it to pernod;
 		continue the action;
 	else if noun is lobster or noun is stream:
 		if stream is reflexed and lobster is in lalaland:
@@ -13766,8 +13766,8 @@ section bee proper (believe)
 the what-a-bee is a reflexive privately-named thing in Boarded Roadbed. printed name of what-a-bee is "[if bee's head is reflexive and what-a-bee is reflexive]evil bee[else if bee's head is reflexed and what-a-bee is reflexed]live bee[otherwise]vile bee[end if]"
 
 after looking in boarded roadbed:
-	set the pronoun it to evil bee;
-	set the pronoun her to evil bee;
+	set the pronoun it to what-a-bee;
+	set the pronoun her to what-a-bee;
 	continue the action;
 
 initial appearance of what-a-bee is "The [what-a-bee] floats here[if bee's head is reflexive], emitting a snore[else], silent[end if]."
@@ -13934,7 +13934,7 @@ book Browse Bowers
 
 Browse Bowers is an innie room in Troves. "It's very look-don't-touch here, like that dour tan rotunda off to the side. In fact, for someone so recently poor as yourself, you'd feel guilty walking around and looking. So there's not much to do except stare at a brochure just lying around. But oh, what a brochure!".
 
-after fliptoing ltd:
+after fliptoing ltb:
 	set the pronoun it to brochure;
 	set the pronoun them to browse bowers;
 	continue the action;
@@ -15803,20 +15803,20 @@ after printing the locale description for hacks' shack (this is the auto-screen 
 	check-trivial-presto-llp;
 	continue the action;
 
-lamb-discounted is a truth state that varies.
+pt-discounted is a truth state that varies.
 
 to check-trivial-presto-llp:
-	if lamb-discounted is true:
+	if pt-discounted is true:
 		continue the action;
 	if player has censer or player has screen:
 		if yak is in lalaland and player is in hacks' shack:
 			if keyboard is in hacks' shack or keyboard is on slab:
 				if lamb is in gyre:
 					poss-d;
-					now lamb-discounted is true;
+					now pt-discounted is true;
 				if hawt thaw is in phat path:
 					poss-d;
-					now thaw-discounted is true;
+					now pt-discounted is true;
 	continue the action;
 
 this is the shack-south rule:
@@ -17181,10 +17181,15 @@ Olde Lode is a room in Oyster. "You've reached what was probably an old mining p
 check going nowhere in olde lode:
 	say "[if clam is visible]The clam cuts you off. It's faster than you. You need to help it relax[else]You try and walk off, but the urn draws you back[end if]." instead;
 
+after looking in olde lode:
+	if clam is in olde lode, set the pronoun it to clam;
+	continue the action;
+
 the clam is a vanishing animal in Olde Lode. initial appearance of clam is "A clam snaps here, unwilling to let you pass.". description is "Full of chargin['] Chagrin! It's not letting you near the river."
 
 after fliptoing clam:
 	now urn is in olde lode;
+	set the pronoun it to urn;
 	continue the action;
 
 instead of eating clam:
@@ -17248,6 +17253,11 @@ understand "run [direction]" as going.
 book Hero's Shore
 
 Hero's Shore is a room in Oyster. "A super cult sculpture of Shoer Osher sits on this side of a river. One you can just begird or bridge. Boats block the whole river, and there's a raft docked here. A canoe too!"
+
+after looking in hero's shore:
+	set the pronoun them to boats;
+	set the pronoun it to raft;
+	continue the action;
 
 the canoe is scenery in Hero's shore. "The canoe is all red and has a fish carved into it. The fish seems to be trying to cut...a tree?!"
 
@@ -17374,6 +17384,10 @@ book Fighter Freight
 
 Fighter Freight is a room in Oyster. "You're near the edge of a fighter freight. You're half-paralyzed with fear. With or without that pale plea echoing from below."
 
+after looking in fighter freight:
+	set the pronoun it to pale plea;
+	continue the action;
+
 some scary crays are plural-named terse people in Fighter Freight. "Scary crays hover here, on the verge of attacking.". description is "They don't have any weapons, but they are staring intently at you, ready to take you down."
 
 understand "scary/ cray" as crays.
@@ -17412,6 +17426,11 @@ carry out leaping:
 book Anger Range
 
 Anger Range is a room in Oyster. "This place [if haunter is in lalaland]no longer [end if]manages to n-rage you, [if haunter is in lalaland]and the area seems to have calmed down[else if carps are visible]as well as the fish who live here[otherwise]and you sense there may be something else angré in the area. Some sort of scrawl sears the ground near the center, which feels unusually boiling[hau-clue][end if][if player has ruby or player has wrap]. You feel a pin nip from your [rub-wr] as you walk across[end if]. You see plains to the north, and you can go west or east, too[one of]. You think back to someone annoying named Regan[or][stopping]."
+
+after looking in anger range:
+	if trout is in anger range, set the pronoun it to trout;
+	if pikes are in anger range, set the pronoun it to pikes;
+	continue the action;
 
 to say hau-clue:
 	say "[if ruby is in lalaland and haunter is off-stage], even more than before you buried the ruby[end if]";
@@ -17611,6 +17630,9 @@ carry out unearthing:
 	say "[line break]A haunter's underneath--[']n unearthed! You're almost unhearted. It's--a weird [b]sausage[r]. You scry a cry as scary...'My lost ruby!'";
 	reg-inc;
 	now haunter is in anger range;
+	set the pronoun it to haunter;
+	set the pronoun him to haunter;
+	set the pronoun her to haunter;
 	now scrawl is in lalaland;
 	the rule succeeds;
 
@@ -17765,6 +17787,11 @@ book Lean Lane
 
 Lean Lane is a room in oyster. Lean Lane is east of Anger Range. "Somewhere, you may find your friend. But he ran too fast. You could go back west if you want, or you can try to find him.[paragraph break]You do hear something, though[if cans are visible], and the ground is littered with cans[end if]."
 
+after looking in lean lane:
+	set the pronoun them to eeks;
+	if cans are in lean lane, set the pronoun them to cans;
+	continue the action;
+
 scan-cans is a truth state that varies.
 
 the cans are vanishing flippable LLPish scenery in Lean Lane. "The cans are all icky and sticky and--eww. It'd take something weird to counter the chemical reaction that made--whatever's non-biodegradable in there."
@@ -17800,6 +17827,11 @@ instead of doing something to eeks:
 the eeks are vanishing scenery in Lean Lane.
 
 Helots' Hostel is an innie room in Oyster. "You're in a dingy but comfortable residence. A raw red [if trout is reflexed]reward[else]warder[end if] drawer leans against one wall[wipes-too]. You may leave to the west--anywhere else is probably a bit too private."
+
+after looking in helots' hostel:
+	if tea tray is in hostel, set the pronoun it to tea tray;
+	if wipes are in hostel, set the pronoun them to wipes;
+	continue the action;
 
 Aunt Tuna is a female person in Helots' Hostel. description is "Grayin['], grainy. 'Staring at people you barely know! Where are your manners?'". "Aunt Tuna putters around here, nodding and clucking and shaking her head. Well, as much as a fish can[if tea tray is visible]. She occasionally motions to the tea tray she laid out for you[end if]."
 
@@ -17989,9 +18021,11 @@ to pearl-check:
 	if player has paler pearl:
 		say "The two halves of the paler pearl seem to fit together. You can see something in there, but you're not sure what. It's quite simply not big enough. It's scratched over so the words GENERAL GLEANER engulf it.";
 		now player has general gleaner;
+		set the pronoun it to general gleaner;
 		now paler pearl is off-stage;
 	otherwise:
 		say "The pearl seems only half a sphere. Maybe the other half is elsewhere.";
+		set the pronoun it to paler pearl;
 		now player has paler pearl;
 
 check fliptoing trout (this is the no teaching while fighting rule) :
@@ -18001,6 +18035,10 @@ check fliptoing trout (this is the no teaching while fighting rule) :
 book sanctum
 
 Dourest Detours is an innie room in oyster. "It's a bit disorienting here, but your lance helps you feel rousted from just a true sod and glad you've suffered no redouts."
+
+after looking in dourest detours:
+	it-him-her the ant;
+	continue the action;
 
 the ant is a flippable animal. "An oddly colored ant is here! It seems more threatening than anything, but your lance seems to hold it at bay.". description of ant is "If you look at it one way, it's a light brown--no, that's not it--but another way, it's a bright red, a simulacrum of the legendary Tar Rat Art. You're glad you have that lance to do something simple to fend it off, or maybe even run it off."
 
@@ -18194,6 +18232,10 @@ check fliptoing bubble wrap:
 			say "'You have things backward. You haven't done enough yet to deserve a reward,' clucks Aunt Tuna with the staidest distaste. 'Show me you won't restack rackets with some other poor innocent!'" instead;
 
 the dent is part of the raw red drawer. the dent is LLPish and flippable. description is "It'd probably take the right sort of futzing to get rid of."
+
+after fliptoing dent:
+	set the pronoun it to reward drawer;
+	continue the action;
 
 a-text of dent is "RYRR". b-text of dent is "RGPR". parse-text of dent is "t[sp]e[sp]n[sp]d". dent is parse-spoilable.
 
@@ -18636,6 +18678,8 @@ carry out busting:
 after fliptoing waste (this is the tubs give prod and waste rule):
 	now player has prod;
 	now heaps are in Shadier Airshed;
+	set the pronoun them to heaps;
+	set the pronoun it to prod;
 	continue the action;
 
 book Achers' Arches
@@ -27062,7 +27106,7 @@ rule for showing alternate routes:
 to say presto-3 of (n - a number):
 	if n is not 1, say "pushing the skid to the shack with the yak on it";
 	if n is not 2, say "[if n is not 1] and [end if]giving the yak a bad book to eat";
-	if n is not 3, say " and pushing the skid to Dirge Ridge when you [if escaroles are in hacks shack]change the escaroles to a casserole[else]have the casserole[end if]";
+	if n is not 3, say " and pushing the skid to Dirge Ridge when you [if escaroles are in hacks' shack]change the escaroles to a casserole[else]have the casserole[end if]";
 
 to say how-macks:
 	let got-yet be false;
