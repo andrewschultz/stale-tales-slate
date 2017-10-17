@@ -120,7 +120,7 @@ Routes is a region. regtab of Routes is table of routes nudges. regana of Routes
 
 Troves is a region. regtab of Troves is table of troves nudges. regana of Troves is table of troves anagrams. max-score of Troves is 21. min-score of Troves is 15. [Pa Egg Pea, lager, lobster/stream, bee, astute statue, DIVORCES]
 
-Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 40. min-score of oyster is 29. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, SPLAIN in the plains, 2 at start if use pills ASAP. Non-anagram is chasing bad guys with haunter.]
+Oyster is a region. regtab of Oyster is table of oyster nudges. regana of Oyster is table of oyster anagrams. max-score of oyster is 40. min-score of oyster is 28. [scan cans = 1, revel/lever=1, shape heaps, waste/lance/wipes/ant subquest=5, tend dent, SPLAIN in the plains, up to 3 at start if don't use pills ASAP. There's also 1 extra given for not using the pills on Tortu. Non-anagram is chasing bad guys with haunter.]
 
 Presto is a region. regtab of Presto is table of presto nudges. regana of Presto is table of presto anagrams. max-score of presto is 36. min-score of presto is 28. [hawt thaw, rom stick, lamb, tab, casserole, +1 point for Phooey, +1 point for Mazel Tov vs Won't, +1 point for avoiding hints]
 
@@ -1260,6 +1260,9 @@ understand "gt [any room]" as gotoing.
 rule for supplying a missing noun while gotoing:
 	say "That's not something in the game, yet.";
 	reject the player's command;
+
+does the player mean gotoing a room in mrlp: it is likely.
+does the player mean gotoing a visited room in mrlp: it is very likely.
 
 carry out gotoing:
 	d "Trying location [noun].";
@@ -16974,7 +16977,7 @@ printed name of jar of pills is "jr. jar of pills". the indefinite article of ja
 
 after printing the name of the jar of pills while taking inventory:
 	if jar-empty is true:
-		say "(empty)";
+		say " (empty)";
 
 Rule for clarifying the parser's choice of pills: do nothing.
 
@@ -18012,9 +18015,9 @@ instead of eating tea tray:
 to say tray-sez:
 	say "[if trout is reflexive]hints you've got enough nourishment to help Tortu stand up to the bullies as you did[else]thanks you for doing so much. She can't imagine anything more you could do for Tortu[end if]";
 
-after fliptoing trout:
-	if player has pills:
-		min-up;
+after fliptoing (this is the oyster min score annoying details rule):
+	if noun is trolls and player does not have pills, min-up;
+	if noun is trout and player has pills, min-up;
 	continue the action;
 
 tuna-first is a truth state that varies.
@@ -27237,9 +27240,9 @@ to say 2dmiss of (cr2 - a region):
 miss-room is a room that varies.
 
 to say 2drm of (rr - a room):
-	unless miss-room is rr, say "====[rr]====";
-	now miss-room is rr;
 	say "[2dmiss of map region of rr]";
+	unless miss-room is rr, say "====[b][rr][r]====[line break]";
+	now miss-room is rr;
 
 anything-missed is a truth state that varies.
 
@@ -27304,6 +27307,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 		if you-used-pills is true:
 			say "[how-pills-used].";
 		if number of entries in shop-hint-items > 2:
+			d "[number of entries in shop-hint-items] [shop-hint-items].";
 			say "[2dmiss of myreg][remaining-actions of 2].";
 		if cans are not in lalaland:
 			say "[2dmiss of myreg]you could've tried to SCAN the cans.";
@@ -27321,7 +27325,7 @@ to show-miss (myreg - a region) and (needsolve - a truth state):
 			say "[2dmiss of myreg]you could've tried to TAN the ant.";
 		else if ant is not in lalaland:
 			say "[2dmiss of myreg]you passed by the side-quest to TAN the ant in the Dourest Detours.";
-		if bogus-plains is in Lapsin' Plains:
+		if bogus-plains are reflexed:
 			say "[2dmiss of myreg]you missed a chance to SPLAIN in the plains, at any time during the door-open puzzle.";
 		if lever is not reflexed:
 			say "[2dmiss of myreg]you could've stopped to REVEL before flipping the LEVER.";
