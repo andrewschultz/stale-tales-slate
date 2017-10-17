@@ -435,6 +435,17 @@ check examining the player when mrlp is troves:
 	say "[one of]You look into your thoughts, feelings and beliefs. You realize they cannot possibly be as pertinent as whatever Peg A. Page has to say. So you defer to her knowledge[or]Your thoughts lead back to the good book[stopping].[line break]";
 	try examining Pa Egg Pea instead;
 
+chapter miscellaneous neat includes
+
+wfak-yet is a truth state that varies.
+
+to say wfak: [this is so I can skip through PRESS ANY KEY while testing]
+	if debug-state is false:
+		if wfak-yet is false:
+			ital-say "when the game pauses without a cursor, it means you need to press any key to continue. This warning will not appear again.";
+			now wfak-yet is true;
+		wait for any key;
+
 section graphic files
 
 figure graflogo-1 is the file "letters-settler-1.png"
@@ -1206,33 +1217,7 @@ rule for deciding whether to allow undo:
 		else if undo-code is 10:
 			ital-say "the 'you died' message is random--but there are [number of rows in table of death messages]. So if you're hunting them, it may be more efficient to win to see them all.";
 
-chapter inventory
-
-after taking inventory when mrlp is others:
-	eval-fruits;
-	continue the action;
-
-to eval-fruits:
-	if moss cap is off-stage:
-		continue the action;
-	if player has droll dollar:
-		say "You can't expect anything more from Curtis.";
-		continue the action;
-	let next-goal be (curtis-level + 2) * 4;
-	let fruits-got be number of fruits in lalaland + number of held fruits;
-	if fruits-got >= next-goal:
-		say "You may want to go see Curtis for a new reward. Or you can keep getting new fruits.";
-	else:
-		say "You need [next-goal - fruits-got in words] more fruit[if next-goal - fruits-got > 1]s[end if] to get something new from Curtis.";
-
-wfak-yet is a truth state that varies.
-
-to say wfak: [this is so I can skip through PRESS ANY KEY while testing]
-	if debug-state is false:
-		if wfak-yet is false:
-			ital-say "when the game pauses without a cursor, it means you need to press any key to continue. This warning will not appear again.";
-			now wfak-yet is true;
-		wait for any key;
+chapter warp stuff
 
 when play begins (this is the region initialization rule):
 	repeat through table of warps:
@@ -6861,6 +6846,114 @@ volume regular verb tweaks and irregular verbs
 
 book regular important verb tweaks
 
+chapter taking inventory
+
+chapter inventory
+
+definition: a thing (called itm) is regspecial:
+	if itm is warpable, decide no;
+	decide yes;
+
+check taking inventory:
+	if the first thing held by the player is nothing:
+		say "Not very 'in.'" instead;
+	if mrlp is means manse or mrlp is stores or mrlp is demo dome:
+		continue the action;
+	say "DEBUG: Warpable [list of warpable things enclosed by player].";
+	say "Item time! [run paragraph on]";
+	if the number of regspecial things enclosed by the player is 0:
+		say "You have nothing from this region in particular.";
+	else:
+		now all things enclosed by player are unmarked for listing;
+		now all regspecial things carried by player are marked for listing;
+		say "In this region you have found:[line break]";
+		list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
+	now all things enclosed by player are unmarked for listing;
+	now all warpable things enclosed by player are marked for listing;
+	say "Your general tools include:[line break]";
+	list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
+	if number of things worn by player > 0, say "You are also wearing [list of things worn by player].";
+	the rule succeeds;
+
+After printing the name of the letters settler while taking inventory:
+	say "[set-det]";
+
+After printing the name of a hintpastry (called the curfood) while taking inventory:
+	say " [if curfood is heated](heated)[else](cold)[end if]";
+
+to say set-det:
+	say "[unless player has purse]: [end if]Cheat/teach mode is [on-off of cheat-on], [if list-headache is false]and t[else]T[end if]he idlers['] slider is [on-off of whether or not slider is switched on][slider-detail]";
+
+to say slider-detail:
+	if list-headache is false:
+		continue the action;
+	if headaches is 0:
+		say ", and you can't put up with the slider's beeps any more";
+	else:
+		say ", and you can put up with its beepings [headaches in words] more time[if headaches > 1]s[end if]"
+
+After printing the name of the satchel while taking inventory:
+	say " (somewhere in the purse)";
+
+after printing the name of the stapler while taking inventory:
+	if staple is in the stapler:
+		say " (with a staple in it)";
+		now staple is mentioned;
+	else:
+		say " (empty)";
+
+before listing contents while taking inventory: group hintpastries together
+
+instead of taking inventory:
+	if mrlp is troves:
+		if truffle is off-stage and purse-stolen is false:
+			say "Boy! this is a seedy area. You're worried you might get robbed of what you have.[line break]";
+		if purse-stolen is true:
+			say "All you have is [i]Pa, Egg, Pea[r] and your pedanto-notepad and your settler[if player has fretful truffle] and that fretful truffle[end if]. You still need to get your super purse back." instead;
+	if number of things carried by the player is 0:
+		say "Just your powers, at the moment. Nothing tangible." instead;
+	now all things carried by the player are marked for listing;
+	if player has lamp and player has super purse:
+		say "You're carrying a lamp, for light.[paragraph break]";
+		now lamp is unmarked for listing; [lamp can fit in purse but isn't useful there]
+	if player has settler and player has super purse:
+		say "You're carrying your letters settler, to help with hints. [set-det].[line break]";
+		now settler is unmarked for listing;
+	say "[if purse-stolen is true and mrlp is troves]In your hands, because you lost your super purse:[else if player has super purse]In your super purse:[else]Item time:[end if][line break]";
+	if number of things enclosed by the player is 0:
+		say "Nothing." instead;
+	now compass is unmarked for listing;
+	if player has super purse:
+		now super purse is unmarked for listing;
+	list the contents of the player, with newlines, indented, including contents, with extra indentation, listing marked items only;
+	if number of worn things > 0:
+		say "You are also wearing [a list of worn things].";
+	if location of player is location of skid and bored yak is not in lalaland:
+		say "[line break]There's also that skid you can push around[if number of things on skid > 0]. It holds [the list of things on skid][end if].";
+	if mrlp is otters and power-back is false:
+		say "[line break]You also DON'T have your full powers. You'll need to fix that before hitting the Edictal Citadel to the west.";
+	if player has compass:
+		say "[line break]You also have a compass to tell direction.";
+	if can-guru is true:
+		say "[line break]You still have the aftertaste of the arugula, to GURU people."
+
+after taking inventory when mrlp is others:
+	eval-fruits;
+	continue the action;
+
+to eval-fruits:
+	if moss cap is off-stage:
+		continue the action;
+	if player has droll dollar:
+		say "You can't expect anything more from Curtis.";
+		continue the action;
+	let next-goal be (curtis-level + 2) * 4;
+	let fruits-got be number of fruits in lalaland + number of held fruits;
+	if fruits-got >= next-goal:
+		say "You may want to go see Curtis for a new reward. Or you can keep getting new fruits.";
+	else:
+		say "You need [next-goal - fruits-got in words] more fruit[if next-goal - fruits-got > 1]s[end if] to get something new from Curtis.";
+
 chapter going
 
 check going nowhere (this is the towers-mis-go rule): [?? inside in Mislit Limits]
@@ -6958,7 +7051,7 @@ book regular trivial verb tweaks
 
 chapter examining
 
-before deciding the scope of the player (this is the silent scope rule) :
+[before deciding the scope of the player (this is the silent scope rule) :
 	place the location of the player in scope;
 	continue the action;
 
@@ -6973,8 +7066,8 @@ Include (-
 	#ifdef NUMBERED_RULES; print "(", N, ") "; #endif;
 	if (blocked == false) "applies.]";
 	print "does not apply (wrong ", (address) blocked, ").]^";
-];
--) after "Rulebooks.i6t".
+;
+-) after "Rulebooks.i6t".]
 
 does the player mean doing something with location of the player: it is unlikely.
 
@@ -8772,7 +8865,7 @@ carry out fliptoing:
 			else if suppress-score is false:
 				say "[the-msg entry][line break]";
 			if mrlp is stores:
-				if the-from entry is Store T:
+				if the-from entry is Store T or the-from entry is lecturer: [you need to get rid of the lecturer to leave Cruelest Lecturers, so no min-up]
 					do nothing;
 				else if the-from entry is bedruggled or the-from entry is Store H:
 					min-up;
@@ -9581,6 +9674,7 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 
 after fliptoing tokers:
 	now smoke cloud is in Strip of Profits;
+	set the pronoun her to tokers;
 	continue the action;
 
 after fliptoing skid:
@@ -9856,11 +9950,13 @@ after fliptoing ramp (this is the check ramp min-up rule) :
 after fliptoing stair (this is the check sitar min-up and exits rule) :
 	now Largely All-Grey Gallery is mapped below Farming Framing;
 	if the room below study is nothing:
-		now study is mapped above Largely All-Grey Gallery;
+		now Farming Framing is mapped above Largely All-Grey Gallery;
 	if t-b is in lalaland:
 		min-up;
 	else if niche is in lalaland and pram is in lalaland:
 		min-up; [check if passage is made via beams or chimney->pram]
+	now stria is in lalaland;
+	now sitar is in lalaland;
 	move stair backdrop to all stairy rooms;
 	continue the action;
 
@@ -9927,6 +10023,7 @@ check opening side door:
 	if urgent Gunter is off-stage:
 		say "[if peephole is examined]Urgent Gunter charges in[else]It's Urgent Gunter[end if], full of sensible bileness. 'Pallid li'l pad! Stodgy sty, dog! Elvira wants to see you. About your powers. Me and my pouter troupe agree. Me, best messenger in all of Yorpwald. Hey, if you've done nothing wrong--and it seems like you've done NOTHING since all that shuffling around--you have nothing to hide.'";
 		now urgent Gunter is in Dusty Study;
+		set the pronoun him to Urgent Gunter;
 		pad-del "rove over";
 		try talking to urgent Gunter instead;
 	say "A rallies sallier? With snipers pressin[']? Better not." instead;
@@ -10477,29 +10574,17 @@ check going inside in Largely All-Grey Gallery:
 
 book carven cavern
 
-Carven Cavern is an innie room in Means Manse. "This is an oddly carved cavern[plaster-plates][curtain-desc]. You probably don't want to go back outside.";
+Carven Cavern is an innie room in Means Manse. "This is an oddly carved cavern. [if plates are in cavern and plaster is in cavern]Palest pastel plates sit on a plaster psalter[else if plates are in cavern]Palest pastel plates lie here[else if plaster is in cavern]The plaster psalter still remains[else]It's bare now you got rid of the psalter and plates[end if]. [if curtain is in lalaland]The curtain no longer blocks passage in[else if curtain-know is true]The Act-Ruin Curtain[else]A curtain may be covering up a passage[end if]. You probably don't want to go back outside."
+
+after looking in carven cavern (this is the pronouns for cavern rule):
+	if palest pastel plates are in carven cavern, set the pronoun them to palest pastel plates;
+	if plaster psalter is in carven cavern, set the pronoun it to plaster psalter;
+	if act-ruin curtain is in carven cavern, set the pronoun it to act-ruin curtain;
+	continue the action;
 
 after fliptoing plaster psalter:
 	now act-ruin curtain is in carven cavern;
 	continue the action;
-
-to say plaster-plates:
-	say ". ";
-	if plates are in cavern and plaster is in cavern:
-		say "Palest pastel plates sit on a plaster psalter";
-	else if plates are in cavern:
-		say "Palest pastel plates lie here";
-	else if plaster is in cavern:
-		say "The plaster psalter still remains";
-	else:
-		say "It's bare now you got rid of the psalter and plates";
-
-to say curtain-desc:
-	say ". ";
-	if curtain is in lalaland:
-		say "The curtain no longer blocks passage in";
-	else if curtain is in carven cavern:
-		say "[if curtain-know is true]The Act-Ruin Curtain[else]A curtain may be covering up a passage[end if]"
 
 check exiting in cavern:
 	if act-ruin curtain is in lalaland:
@@ -10571,7 +10656,10 @@ check touching curtain:
 
 curtain-know is a truth state that varies.
 
-the act-ruin curtain is scenery. "It looks flimsy enough[if curtain-know is true], but you know if you touch it, you'll freeze up again[end if]."
+the act-ruin curtain is scenery. "It looks flimsy enough, but [if curtain-know is true]you know if you touch it, you'll freeze up again[else]closer inspection reveals it to be an ACT-RUIN CURTAIN, which causes people to procrastinate tasks big and small, enjoyable[curt-kno] or not[end if]. It's lined, like a sheet of notebook paper, and you probably can't pull it away with your bare hands."
+
+to say curt-kno:
+	now curtain-know is true;
 
 to say could-staple:
 	say "You need the right tool to do so. You probably need one that could get a grip on some paper[if player carries stapler]. Maybe you could use the stapler to STAPLE the wall[stapload][end if]";
@@ -10580,7 +10668,7 @@ instead of opening the act-ruin curtain:
 	say "[could-staple].";
 
 to say stapload:
-	say "[if staple is in stapler]especially since[else]once[end if] it's loaded";
+	say ", [if staple is in stapler]especially since[else]once[end if] it's loaded";
 
 instead of taking act-ruin curtain:
 	try pulling act-ruin curtain instead.
@@ -10906,7 +10994,7 @@ num-ascii	uc-ascii	reg-match	reg-blurb
 
 book Farming Framing
 
-Farming Framing is a stairy innie room in Means Manse. "Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[if stair is visible]. The stair you made leads down[end if]. But despite disuse, it is blest with privacy and not falling apart[if tables are in lalaland]. You can go IN or OUT back to the study--it doesn't matter which[end if].";
+Farming Framing is a stairy innie room in Means Manse. "Well, this was supposed to be a stable, but it never got fully built. You never actually used this stable to, say, let a foal named Olaf loaf. But you always meant to[if stair is visible]. The stair you made leads [b]DOWN[r][end if][if tables are in lalaland]. You can go [b]IN[r] or [b]OUT[r] back to the study--it doesn't matter which[end if].";
 
 the sitar is a vanishing thing in Farming Framing. "A sitar, from your kitschy phase, sits here[one of]. You were wondering where it went[or][stopping]."
 
@@ -12070,7 +12158,16 @@ check scaning store h:
 	if otters is not solved:
 		say "The settler gives a weird noise, as if it doesn't want to scan this store--yet." instead;
 
-the hoster is a not lumpable not maingame portal. "That stupid hoster is here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than save Yorpwald, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. It might be worse if it had a cavity, but it's pretty bad. You're not sure you want to know where it leads."
+after fliptoing hoster:
+	it-him-her hoster;
+	continue the action;
+
+to it-him-her (x - a thing):
+	set the pronoun it to x;
+	set the pronoun her to x;
+	set the pronoun him to x;
+
+the hoster is a not lumpable not maingame portal. "That stupid hoster is here where Store H was. [if roved is true]Since[else]If[end if] you have nothing better to do than save Yorpwald, it's worth a shot.". description is "It's a truly terrifying open, smiling mouth, being far too welcoming. It might be worse if it had a cavity, but it's pretty bad. You're not sure you want to know where it leads.". diffic of hoster is 9.
 
 understand "mouth" as hoster.
 
@@ -12227,7 +12324,7 @@ a-text of Store T is "YRRYRR". b-text of Store T is "YPRYRR". parse-text of stor
 
 description of Store T is "Store T is average-sized, but it seems to repel you. Its window is really lovely stained-glass--it's a depiction of a family of sea animals. There's an engraving below it."
 
-otters-x are a privately-named plural-named not lumpable portal. printed name of otters-x is "the twin otters". understand "twin otters" as otters-x.
+otters-x are a privately-named plural-named not lumpable portal. printed name of otters-x is "the twin otters". understand "twin otters" as otters-x. diffic of otters-x is 8.
 
 description of otters-x is "You see a field of barley beyond them. There's also something below their names, and it reads:"
 
@@ -19173,7 +19270,6 @@ chapter outsideing
 outside-warned is a truth state that varies.
 
 after fliptoing lecturer (this is the disable the macks slightly too rule) :
-	min-up;
 	now reflections are in lalaland;
 	increase headaches by 10;
 	now lectures is shunned;
@@ -22805,68 +22901,6 @@ every turn (this is the raptor kills you rule):
 			get-dead;
 		else:
 			ital-say "You'll get a mulligan for instantaneous actions like examining, but you may want to deal with that raptor, or flee.";
-
-After printing the name of the letters settler while taking inventory:
-	say "[set-det]";
-
-After printing the name of a hintpastry (called the curfood) while taking inventory:
-	say " [if curfood is heated](heated)[else](cold)[end if]";
-
-to say set-det:
-	say "[unless player has purse]: [end if]Cheat/teach mode is [on-off of cheat-on], [if list-headache is false]and t[else]T[end if]he idlers['] slider is [on-off of whether or not slider is switched on][slider-detail]";
-
-to say slider-detail:
-	if list-headache is false:
-		continue the action;
-	if headaches is 0:
-		say ", and you can't put up with the slider's beeps any more";
-	else:
-		say ", and you can put up with its beepings [headaches in words] more time[if headaches > 1]s[end if]"
-
-After printing the name of the satchel while taking inventory:
-	say " (somewhere in the purse)";
-
-after printing the name of the stapler while taking inventory:
-	if staple is in the stapler:
-		say " (with a staple in it)";
-		now staple is mentioned;
-	else:
-		say " (empty)";
-
-before listing contents while taking inventory: group hintpastries together
-
-instead of taking inventory:
-	if mrlp is troves:
-		if truffle is off-stage and purse-stolen is false:
-			say "Boy! this is a seedy area. You're worried you might get robbed of what you have.[line break]";
-		if purse-stolen is true:
-			say "All you have is [i]Pa, Egg, Pea[r] and your pedanto-notepad and your settler[if player has fretful truffle] and that fretful truffle[end if]. You still need to get your super purse back." instead;
-	if number of things carried by the player is 0:
-		say "Just your powers, at the moment. Nothing tangible." instead;
-	now all things carried by the player are marked for listing;
-	if player has lamp and player has super purse:
-		say "You're carrying a lamp, for light.[paragraph break]";
-		now lamp is unmarked for listing; [lamp can fit in purse but isn't useful there]
-	if player has settler and player has super purse:
-		say "You're carrying your letters settler, to help with hints. [set-det].[line break]";
-		now settler is unmarked for listing;
-	say "[if purse-stolen is true and mrlp is troves]In your hands, because you lost your super purse:[else if player has super purse]In your super purse:[else]Item time:[end if][line break]";
-	if number of things enclosed by the player is 0:
-		say "Nothing." instead;
-	now compass is unmarked for listing;
-	if player has super purse:
-		now super purse is unmarked for listing;
-	list the contents of the player, with newlines, indented, including contents, with extra indentation, listing marked items only;
-	if number of worn things > 0:
-		say "You are also wearing [a list of worn things].";
-	if location of player is location of skid and bored yak is not in lalaland:
-		say "[line break]There's also that skid you can push around[if number of things on skid > 0]. It holds [the list of things on skid][end if].";
-	if mrlp is otters and power-back is false:
-		say "[line break]You also DON'T have your full powers. You'll need to fix that before hitting the Edictal Citadel to the west.";
-	if player has compass:
-		say "[line break]You also have a compass to tell direction.";
-	if can-guru is true:
-		say "[line break]You still have the aftertaste of the arugula, to GURU people."
 
 silence-tally is a number that varies.
 

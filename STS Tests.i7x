@@ -89,7 +89,7 @@ every turn when cmdtype > 0 (this is the testrun rule):
 	let power be 1;
 	repeat through table of cmds:
 		if the remainder after dividing cmdtemp by (power * 2) is power:
-			say "======Carrying out [testact entry]======";
+			say "[bold type]======Carrying out [testact entry]======[roman type]";
 			try the testact entry;
 			now cmdtemp is cmdtemp - power;
 		now power is power * 2;
