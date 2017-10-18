@@ -65,8 +65,9 @@ Store Y:
 --there is a different thing to do near the end. Not a hard one, but a different one. It involves pins.
 
 Meta-stuff:
---introductory region is renamed
---metrics HTML file updated with new solution
---tweaks to the Trizbort map
+--introductory region is renamed.
+--metrics HTML file updated with new solution.
+--tweaks to the Trizbort map.
+--you now have a command (commands) to start at the Strip of Profits or before the final Store T areas.
 
 Demo Dome Mode is now much more robust, too.

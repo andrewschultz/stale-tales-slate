@@ -3875,13 +3875,14 @@ check entering a portal:
 	else:
 		d "Can't try recovering items yet.";
 		add-errs grn;
+	now portal-entered-yet is true;
 	if grn is towers and last-loc of grn is not trefoil: [it's possible but not likely you can cheat your way past with constant retries otherwise]
 		d "REPO!";
 		move player to last-loc of grn, without printing a room description;
 		if can-see-map:
 			draw-towers-map;
 		reposition-guardians;
-		try looking instead;
+		try looking;
 	else:
 		move player to last-loc of grn;
 	if try-recover is true:
@@ -6653,7 +6654,7 @@ after reading a command:
 			if word number 1 in the player's command is "[lastcmd entry]":
 				if storedest entry is visible or portdest entry is visible:
 					if storedest entry is store t:
-						say "Sorry. I can't let you do that. But if you want to go back to the Dusty Study and ROVE OVER, that will work.";
+						say "Sorry. I can't let you do that. But if you want to go back to the Dusty Study and [b]ROVE OVER[r], that will work.";
 						reject the player's command;
 					if old-rel entry > 0:
 						say "The [go-region of portdest entry] region for this final command may've changed since you last played, which is probably release [old-rel entry][if old-rel entry > 1] or earlier[end if]. Go ahead?";
@@ -6912,6 +6913,8 @@ after printing the name of the stapler while taking inventory:
 
 before listing contents while taking inventory: group hintpastries together
 
+show-tools is a truth state that varies.
+
 instead of taking inventory:
 	say "Item time![paragraph break]";
 	if debug-state is true:
@@ -6944,12 +6947,16 @@ instead of taking inventory:
 		list the contents of the player, with newlines, indented, including contents, giving inventory information, with extra indentation, listing marked items only;
 	now all things enclosed by player are unmarked for listing;
 	now all warpable things enclosed by player are marked for listing;
-	say "Your general tools include:[line break]";
-	if player has super purse:
-		now super purse is unmarked for listing;
-	if player has letters settler:
-		now letters settler is unmarked for listing;
-	list the contents of the player, with newlines, indented, with extra indentation, listing marked items only;
+	if show-tools is true:
+		if player has super purse:
+			now super purse is unmarked for listing;
+			say "Other things in your super purse";
+		else:
+			say "Your general tools";
+		say " include (toggle with IV):[line break]";
+		if player has letters settler:
+			now letters settler is unmarked for listing;
+		list the contents of the player, with newlines, indented, with extra indentation, listing marked items only;
 	if number of worn things > 0:
 		say "You are also wearing [a list of worn things].";
 	if location of player is location of skid and bored yak is not in lalaland, say "[line break]There's also that skid you can push around[if number of things on skid > 0]. It holds [the list of things on skid][end if].";
@@ -10003,6 +10010,49 @@ after fliptoing stair (this is the check sitar min-up and exits rule) :
 	move stair backdrop to all stairy rooms;
 	continue the action;
 
+chapter denial
+
+denialing is an action applying to nothing.
+
+understand the command "leadin denial" and "lead in denial" as something new.
+
+understand "leadin denial" and "lead in denial" as leadindenialing.
+
+denial is a truth state that varies.
+
+carry out leadindenialing:
+	if denial is true, say "You already did." instead;
+	if player is not in dusty study, say "You need to do this at the start." instead;
+	if Gunter is not off-stage, say "You need to reset the game to before when Gunter knocks at the door." instead;
+	if okay-thats-it > 0, say "No--wait, you were just having a flashback.[paragraph break]";
+	say "Warping space and time, you move back to the Trips Strip...";
+	get-cool-stuff;
+	now denial is true;
+	the rule succeeds;
+
+denialing is an action applying to nothing.
+
+understand the command "leadin denial nailed" and "lead in denial nailed" as something new.
+
+understand "leadin denial nailed" and "lead in denial nailed" as leadindenialnaileding.
+
+portal-entered-yet is a truth state that varies.
+
+carry out leadindenialing:
+	if player is in strip of profits:
+		if denial is true and store t is in lalaland, say "You already did." instead;
+		if denial is true:
+			say "BOOM! Store T shatters.";
+			now Store T is in lalaland;
+			now otters-x is in Strip of Profits;
+		if portal-entered-yet is true, say "You already entered a portal, so you'll need to reset the game to clear out everything  before Otters." instead;
+	if player is not in dusty study, say "You need to do this at the start--well, you can LEAD IN DENIAL before, but it's easier to do at the start." instead;
+	repeat with ZT running through needed regions:
+		if ZT is not otters, now ZT is bypassed;
+	repeat with ZT running through patchable things:
+		now ZT is in lalaland;
+	get-cool-stuff;
+
 chapter roveovering
 
 roveovering is an action applying to nothing.
@@ -10015,13 +10065,12 @@ roved is a truth state that varies.
 
 carry out roveovering:
 	[d "[number of fruits] fruits: [list of fruits]. [list of backdrops] = backdrops.[line break]";]
-	if roved is true:
-		say "You already did." instead;
-	if player is not in dusty study:
-		say "You're not sure where to." instead;
+	if roved is true, say "You already did." instead;
+	if player is not in dusty study, say "You're not sure where to." instead;
 	if Gunter is not off-stage:
 		say "It's not that easy. Maybe once you've returned [if player is in study]back here [end if]to your Dusty Study, you can sneak out a more usual passage. But you need to fix things in Yorpwald, first. Or restart the game." instead;
-	say "Oh man. That's right. Those adventures--the routes, the troves--and Curtis. Elmo told you to ROVE OVER. Better than Gunter's [one of]cringy-crying[or]slimey-smiley[or]bubbly-blubby[in random order] plea peal, a big tear rate about Elvira...mumbling 'Sad I said a dis.' No, you don't want a CHANCE to be suckered [if stuff-found < 3]if he comes knocking[else]by opening that door[end if]. You slip out a secret passage. Shouldn't need a last atlas for this, but...don't slow down LOTS. You eat a carbo-carob cobra for the long journey[unless player has purse and player has settler and player has pedanto-notepad] and check you have your settler and notepad and super purse[end if].";
+	if okay-thats-it > 0, say "No--wait, you were just having a flashback.[paragraph break]";
+	say "Oh man. That's right. Those adventures--the routes, the troves--and Curtis. Elmo told you to [b]ROVE OVER[r]. Better than Gunter's [one of]cringy-crying[or]slimey-smiley[or]bubbly-blubby[in random order] plea peal, a big tear rate about Elvira...mumbling 'Sad I said a dis.' No, you don't want a CHANCE to be suckered [if stuff-found < 3]if he comes knocking[else]by opening that door[end if]. You slip out a secret passage. Shouldn't need a last atlas for this, but...don't slow down LOTS. You eat a carbo-carob cobra for the long journey[unless player has purse and player has settler and player has pedanto-notepad] and check you have your settler and notepad and super purse[end if].";
 	now roved is true;
 	now first-good-scan is true;
 	now kind-of-cool is true;
@@ -10033,10 +10082,13 @@ carry out roveovering:
 	now Store K is in lalaland;
 	now Store N is in lalaland;
 	now magneto is in lalaland;
+	get-cool-stuff;
+	the rule succeeds;
+
+to get-cool-stuff:
 	now player has super purse;
 	now player has letters settler;
 	now player has pedanto-notepad;
-	the rule succeeds;
 
 chapter side door
 
@@ -11740,7 +11792,7 @@ topic (topic)	known	blurb	short	verify	fixed-region	readyet	introtoo
 "hit/ win/ button/" or "ben/ hid"	false	"Ben hid a HIT WIN button somewhere. Where?"	"hit win button"	false	routes
 "scenery"	false	"Ed Yerg told you to look for [the entry clue-index in nextclue]."	"scenery"	false	towers
 "flips" or "flip" or "pf"	false	"[what-can-flip]"	"flips"	false
-"rove" or "over" or "rove over"	false	"You can just ROVE OVER to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
+"rove" or "over" or "rove over"	false	"You can just [b]ROVE OVER[r] to where Curtis is. Though he is less important than Elvira."	"rove over"	false	--
 "talking"	false	"[if number of terse-warned hintrelevant people > 0]You got nothing from [list of terse-warned hintrelevant people][else]Nobody nearby seems useless...YET[end if]."	"talking"	false	--
 "badlands" or "bland/sad badlands" or "bland sad badlands"	false	"Old Hat Daltho told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned [if Obscurest Subsector is unvisited]Dr. Yow, whom you haven't found yet, and how [end if]the flowerpot was for a friend called Ed."	"badlands"	true	towers
 "guru"	false	"You can GURU something [if arugula is in lalaland]now you've eaten[else]after eating[end if] the augural arugula."	"guru"	true	others
@@ -22308,18 +22360,23 @@ carry out playing:
 			now otters is solved;
 			now last-solved-region is otters;
 			first-status;
-			say "Elmo and Gretta are waiting for you back at the Means Manse with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you ROVE OVER and help him. If you need a break, no problem, but maybe you might want a little more adventure?";
+			say "Elmo and Gretta are waiting for you back at the Means Manse with I knew you could do it, etc. But they're wondering--there's a fellow who might need a little help in peacetime. Maybe you could [b]ROVE OVER[r] and help him. If you need a break, no problem, but maybe you might want a little more adventure?";
 			unless the player direct-consents:
-				say "Yeah. Maybe later. If you want to help him, you can ROVE OVER from your dusty study next time someone knocks. Or you can just UNDO at the next command.";
+				say "Yeah. Maybe later. If you want to help him, you can [b]ROVE OVER[r] from your Dusty Study next time someone knocks. Or you can just UNDO at the next command.";
+				note-denial;
 				end the story finally saying "A MONSTER ROTS. AMEN.";
 				follow the shutdown rules instead;
-			say "Yeah. You've got nothing pressing back at the Means Manse. But it's probably a good idea to keep the settler and notepad. The whistle and medals will go to a museum, or something.[paragraph break]The animals escort you to the strip of profits.";
+			say "Yeah. You've got nothing pressing back at the Means Manse. But it's probably a good idea to keep the settler and notepad. The whistle and medals will go to a museum, or something.[paragraph break]The animals escort you to the Strip of Profits.";
+			note-denial;
 			clean-for-roving;
 			continue the action;
 		else:
 			say "You don't need to call anyone in this area." instead;
 	say "That doesn't seem like a toy or an instrument." instead;
 	the rule succeeds;
+
+to note-denial:
+	ital-say "also, LEAD IN/LEADIN DENIAL sends you to the Strip of Profits, and LEAD IN/LEADIN DENIAL NAILED sends you there with Otters available.";
 
 to say lee-or-eels:
 	say "[wfak]";
@@ -25038,7 +25095,7 @@ chapter Hows Show
 Hows Show is north of Peek Keep. Hows Show is in Demo Dome. "You see two walls here with snatches of code written all over them[if nuf-hows-examined]: the owl decal code wall and the allow-lots-tools wall[end if]. They may be too technical, but maybe you can get a general feel for the silly tricks that went into A Roiling Original. You can go back south."
 
 after printing the locale description for Hows Show when Hows Show is unvisited:
-	ital-say "NOTE: the whos-show is already under CREDITS.";
+	ital-say "the whos-show is already under CREDITS.";
 	continue the action;
 
 to decide whether nuf-hows-examined:
@@ -26053,7 +26110,7 @@ Mole Elmo	"Mole Elmo's not a very enthusiastic captor. It's as if he wants you t
 high sign	"[one of]3, 4, 1, 2, 5. What do those numbers mean?[plus][or]The rifle has five letters, so that is a clue.[plus][or]Letter 3, letter 4, letter 1, letter 2, letter 5.[plus][or]3-4-1-2-5 of rifle.[plus][or]Elmo is cluing the rifle can become a FLIER.[minus][cycling]"	[end MEANS MANSE hints]
 sad ads	"Err, mostly anagrams that couldn't fit into puzzles. I hope you find them amusing."
 Store B	"[one of]Store B contains some sort of mystery food, but people seem too lazy to figure it out.[plus][or]The two names provide red-clues, but you can also tell from the smells from Store B.[plus][or]SORBET.[minus][cycling]"
-Store H	"[one of]If you haven't solved the game proper, you won't be able to get into Store H.[plus][or]Store H appears radically different from the rest of the store. It's probably where stuff that doesn't fit in goes.[plus][or]ES Roth mentions that you can't face the hoster or call it directly.[plus][or]What's a word for stuff sluffed off to the side?[plus][or]OTHERS. If you want the quick way through, you will need to restart the game.[plus][or]You need to ROVE OVER when you are in the Means Manse.[minus][cycling]"
+Store H	"[one of]If you haven't solved the game proper, you won't be able to get into Store H.[plus][or]Store H appears radically different from the rest of the store. It's probably where stuff that doesn't fit in goes.[plus][or]ES Roth mentions that you can't face the hoster or call it directly.[plus][or]What's a word for stuff sluffed off to the side?[plus][or]OTHERS. If you want the quick way through, you will need to restart the game.[plus][or]You need to [b]ROVE OVER[r] when you are in the Means Manse.[minus][cycling]"
 Store K	"[one of]Store K is not critical, because it's a bit of American slang.[plus][or]What is the suspicious smelling smoke?[plus][or]The smoke is marijuana, but STONER doesn't quite work on Store N.[plus][or]The residents of Store K want to REST, OK? That hint knocks out the vowels with the settler.[plus][or]Also, they yell don't have a STROKE![plus][or]You can also assume they are plural, so S is last.[plus][or]They are TOKERS.[minus][cycling]"
 Store N	"[one of]Looks like there's a guy in Store N. You need to figure his name.[plus][or]Items fall out of Store N if you keep poking or examining.[plus][or]The toners/Sterno give a lot of clues.[plus][or]The mythology and Tintin clue may tip you off.[plus][or]NESTOR is his name.[minus][cycling]"
 Store P	"[one of]You seem to need a magic word, and the tropes poster plus Store P give you a few hints.[plus][or]In particular, you see two blinking colors, which means the first two letters are P/T O/R.[plus][or]But the second must be a consonant. Also, TROPES means you know where the vowels are.[plus][or]Process of elimination gives PRESTO.[minus][cycling]"
@@ -27540,7 +27597,7 @@ final question wording	only if victorious	topic	final response rule	final respon
 
 This is the epilogue rule:
 	fully resume the story;
-	say "You decide, why not ROVE OVER?";
+	say "You decide, why not [b]ROVE OVER[r]?";
 	clean-for-roving;
 
 volume mapping
