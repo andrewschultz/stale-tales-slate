@@ -600,11 +600,6 @@ to choose-male:
 	now Dr Tera is off-stage;
 	now greedy-person is Red Rat;
 
-after fliptoing reed's ale:
-	now lars eede is in lalaland;
-	now elsa erde is in lalaland;
-	continue the action;
-
 after fliptoing the-hostile (this is the holiest for testing purposes rule) :
 	now lois the hostile is in lalaland;
 	now hostile-is-he lot is in lalaland;
@@ -6911,17 +6906,19 @@ after printing the name of the stapler while taking inventory:
 	else:
 		say " (empty)";
 
-before listing contents while taking inventory: group hintpastries together
+before listing contents while taking inventory: group hintpastries together giving articles.
 
-show-tools is a truth state that varies.
+show-tools is a truth state that varies. show-tools is true.
+
+after printing the name of raves saver while taking inventory: say " ([if raves saver is reflexive]dull[else]shinier now[end if])"
 
 instead of taking inventory:
 	say "Item time![paragraph break]";
 	if debug-state is true:
 		say "DEBUG: Warpable [list of warpable things carried by player].";
-		say "DEBUG: REGSPECIAL C [list of regspecial things carried by player]";
-		say "DEBUG: REGSPECIAL H [list of regspecial things held by player]";
-		say "DEBUG: REGSPECIAL E [list of regspecial things enclosed by player]";
+		say "DEBUG: REGSPECIAL C [list of regspecial things carried by player].";
+		say "DEBUG: REGSPECIAL H [list of regspecial things held by player].";
+		say "DEBUG: REGSPECIAL E [list of regspecial things enclosed by player].";
 	if mrlp is troves:
 		if truffle is off-stage and purse-stolen is false:
 			say "Boy! this is a seedy area. You're worried you might get robbed of what you have.[line break]";
@@ -6957,8 +6954,10 @@ instead of taking inventory:
 		if player has letters settler:
 			now letters settler is unmarked for listing;
 		list the contents of the player, with newlines, indented, with extra indentation, listing marked items only;
+	else:
+		say "Your general tools are hidden. IV will turn them back on.";
 	if number of worn things > 0:
-		say "You are also wearing [a list of worn things].";
+		say "[line break]You are also wearing [a list of worn things].";
 	if location of player is location of skid and bored yak is not in lalaland, say "[line break]There's also that skid you can push around[if number of things on skid > 0]. It holds [the list of things on skid][end if].";
 	if mrlp is otters and power-back is false, say "[line break]You also DON'T have your full powers. You'll need to fix that before hitting the Edictal Citadel to the west.";
 	if player has compass, say "[line break]You also have a compass to tell direction."; [start OTHERS special stuff]
@@ -6988,6 +6987,19 @@ to eval-fruits:
 		say "You may want to go see Curtis for a new reward. Or you can keep getting new fruits.";
 	else:
 		say "You need [next-goal - fruits-got in words] more fruit[if next-goal - fruits-got > 1]s[end if] to get something new from Curtis.";
+
+section iving
+
+iving is an action out of world.
+
+understand the command "iv" as something new.
+
+understand "iv" as iving.
+
+carry out iving:
+	now show-tools is whether or not show-tools is false;
+	say "Now I(INVENTORY) [if show-tools is true]show[else]hide[end if]s your general tools.";
+	the rule succeeds;
 
 chapter going
 
@@ -7107,7 +7119,7 @@ Include (-
 does the player mean doing something with location of the player: it is unlikely.
 
 instead of doing something with the location of the player:
-	if current action is examining, continue the action;
+	if current action is examining or current action is gotoing, continue the action;
 	say "You may need to change your location at some time, but you never need to do anything with it in a command.";
 
 [?? take all takes the location of the player too]
@@ -10016,11 +10028,11 @@ denialing is an action applying to nothing.
 
 understand the command "leadin denial" and "lead in denial" as something new.
 
-understand "leadin denial" and "lead in denial" as leadindenialing.
+understand "leadin denial" and "lead in denial" as denialing.
 
 denial is a truth state that varies.
 
-carry out leadindenialing:
+carry out denialing:
 	if denial is true, say "You already did." instead;
 	if player is not in dusty study, say "You need to do this at the start." instead;
 	if Gunter is not off-stage, say "You need to reset the game to before when Gunter knocks at the door." instead;
@@ -10030,15 +10042,15 @@ carry out leadindenialing:
 	now denial is true;
 	the rule succeeds;
 
-denialing is an action applying to nothing.
+denialnaileding is an action applying to nothing.
 
 understand the command "leadin denial nailed" and "lead in denial nailed" as something new.
 
-understand "leadin denial nailed" and "lead in denial nailed" as leadindenialnaileding.
+understand "leadin denial nailed" and "lead in denial nailed" as denialnaileding.
 
 portal-entered-yet is a truth state that varies.
 
-carry out leadindenialing:
+carry out denialnaileding:
 	if player is in strip of profits:
 		if denial is true and store t is in lalaland, say "You already did." instead;
 		if denial is true:
@@ -19311,7 +19323,7 @@ after examining spec-o-scope (this is the specoscope draw rule):
 	draw-my-loc;
 	continue the action;
 
-to draw-my-loc:
+to draw-my-loc: [this draws a black square in your current location]
 	let myx be 0;
 	let myy be 0;
 	draw-towers-map;
@@ -19412,7 +19424,7 @@ for writing a paragraph about a guardian (called gua):
 	repeat with myg running through not prevseen guardians in location of player:
 		if so-far > 0, say "[line break]";
 		guar-pro myg;
-		say "[if so-far is 0]Oh, look[else if so-far is 1][line break]But there's more[else if so-far is 2][line break]And that's not all[else][line break]Man, it's busier than it should be here[end if]! [initial appearance of myg]";
+		say "[if so-far is 0]Oh, look[else if so-far is 1][line break]But there's more[else if so-far is 2][line break]And that's not all[else][line break]Man, it's busier than it should be here[end if]! [initial appearance of myg][line break]";
 		increment so-far;
 		now myg is mentioned;
 	let psg be number of prevseen guardians in location of player;
@@ -19668,7 +19680,7 @@ understand "yurt" as yurts.
 check taking yurts:
 	say "They're too strongly built to even flake a piece off." instead;
 
-the Owers'-Bin Brownies are a plural-named LLPish hintpastry. description of Brownies is "These cheap brownies don't look too appetizing. However, nobody wanted to eat them until it was re-advertised as food that helps you think your way out of your problems, because it definitely can't be served at parties. Nobody much still wants to eat them, because doing so is now an admission you have, well, problems."
+some Owers'-Bin Brownies are a plural-named LLPish hintpastry. description of Brownies is "These cheap brownies don't look too appetizing. However, nobody wanted to eat them until it was re-advertised as food that helps you think your way out of your problems, because it definitely can't be served at parties. Nobody much still wants to eat them, because doing so is now an admission you have, well, problems."
 
 understand "brownie" as brownies.
 
@@ -20668,6 +20680,8 @@ section strudel
 
 the strudel is a LLPish reflexive hintpastry in Lost Lots. "Some strudel sits here in a sled rut[one of]. Whoever lost it probably forgot it[or][stopping].". description is "It reminds you of stuff stolen from parents' cabinets during sleepovers--wouldn't ordinarily taste great, but stolen? A bit better. You notice the letters [i]Certified Nutritious by Dr. Eltus[r] stamped on it, in red. Magically, it doesn't look dirty from having spent time on the ground."
 
+understand "rustle" and "rustle strudel" as a mistake ("Wrong type of word, and you're missing a d.") when strudel is reflexive and strudel is visible
+
 a-text of strudel is "RYRRRYR". b-text of strudel is "RYRRRGR". parse-text of strudel is "x[sp]u[sp]x[sp]x[sp]x[sp]e[sp]x".
 
 check scaning strudel:
@@ -20686,7 +20700,7 @@ chapter Nude Dune
 
 Nude Dune is west of Anemic Cinema. Nude Dune is in Towers. "A nude dune spans north, west and south. It's pretty neutral-naturel. But going any way other than east might take you far away from the Curst Palace anyway."
 
-the solve-a-loaves are an edible plural-named hintpastry in Nude Dune. "Some solve-a-loaves have been left here.". description is "They are not huge loaves and could probably fit in a small oven[if player has toaster], like your toaster[end if]. Solve-a-Loaves is an actual brand here in Yorpwald, fortified with brain enriching nutrients."
+some solve-a-loaves are an edible plural-named hintpastry in Nude Dune. "Some solve-a-loaves have been left here.". description is "They are not huge loaves and could probably fit in a small oven[if player has toaster], like your toaster[end if]. Solve-a-Loaves is an actual brand here in Yorpwald, fortified with brain enriching nutrients."
 
 understand "loaves" and "loaf" as solve-a-loaves.
 
@@ -21469,8 +21483,8 @@ an admirer	Anemic Cinema	north	"Your admirer, a rampant [if player is female](ow
 wait-seer	Anemic Cinema	east	"The wait-seer doesn't break a second sweat as he convinces you you don't need to go past him. There are ways around him, and perhaps you don't need to visit what is behind him to fulfill this quest. He seems not at all tired by his lecture, or by whatever mind-fu he pulled on you while just sitting there."	"Boy! You'd get tired with the wait-seer's life. Maybe he could, too."
 man covered	Unblest Sunbelt	north	"The man grabs you and whines about who he is, who he's been made to be, who he can't be, and ends with 'I'm flesh!' You back off until he lets go."	"Perhaps you can free the man covered in inapt paint from nationality and to individuality."
 arid den	Unblest Sunbelt	east	"There must be some sort of anti-trespassing device. 'No passing without trying a sample! It's good for you! And worth the money!' Of which you have none. Rats."	"The arid den won't evaporate, but maybe you can get rid of it another way."
-Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free him from his capitalist or drinking urges."	--	reed's ale
-Elsa Erde	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free him from his capitalist or drinking urges."	--	reed's ale
+Lars Eede	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Lars from his capitalist or drinking urges."	--	reed's ale
+Elsa Erde	Treading Gradient	east	"'I'm a deal seer, and I'm obliged to make deals with people before they go on their way.'"	"Maybe you can free Elsa from her capitalist or drinking urges."	--	reed's ale
 grailman	Treading Gradient	north	"The grailman, with well-above-average skills for your average passage-blocker, gets in front of you. You're not going that way with him there."	"You haven't met many grailmen, but this one is good enough, for now."
 Ray Eck	Topside Deposit	north	"The yacker controls his keycar so it runs over your foot. You briefly wonder if he has a twin named Kim."	"The yacker introduces himself as Ray Eck, grateful there's someone out here who doesn't mind talking."	"Ray Eck's keycar can't go that far, so you manage to escape."	keycar
 ego drains	Danger Garden	north	"'[one of]NO, SIR! EGAD[or]NO, EGAD, SIR[or]SIR, EGAD, NO[at random]!' you seem to hear as you try to walk through a mist that turns red. [if player is female]You lack the confidence even to mention you are female, so they're wrong like that, at least. [end if]You also get this idea in your mind--why bother going that way? It's coherent and not over-the-top, [one of]why not to visit that SAD REGION[or]that you could get there some other way, DIG, REASON[or]that you're lucky you got no EAR DOSING[or]capped with a motto, DOERS GAIN[in random order]. So few words, so much seeing red."	"Part of you wonders if you should play up the ego drains, but the other part says they're obstructive enough."
@@ -21484,8 +21498,11 @@ hostile-is-he lot	Strati Strait	north	"They mention you [one of]should know bett
 chapter guardian taunt tables
 
 after fliptoing reed's ale:
+	now lars eede is in lalaland;
+	now elsa erde is in lalaland;
 	consider the guardian taunt rule;
-	consider the track guardian progress rule;
+	if player is male, shuffle-guardians lars eede;
+	if player is female, shuffle-guardians elsa erde;
 	continue the action;
 
 after fliptoing a guardian (this is the guardian taunt rule) :
@@ -21533,7 +21550,7 @@ lois the hostile	"Lois the Hostile mumbles passive-aggressively that the wages o
 hostile-is-he lot	"The Hostile-is-He Lot mumble passive-aggressively that the wages of sin is, well, THAT."
 ingrates	"The ingrates complain there aren't enough of them to take over the space you opened before worrying they're next."
 admirer	"Your admirer claps far too fervently at your accomplishment."
-wait-seer	"The wait-seer cooly puts up a hand and mumbles some Hakuna Matata nonsense."
+wait-seer	"The wait-seer coolly puts up a hand and mumbles some Hakuna Matata nonsense."
 atheists	"The atheists mention meditation is all well and good, but the sweatier wait-seer's flaw was bringing an invisible cloud being into it."
 
 to say n-s-rav:
@@ -21563,14 +21580,17 @@ a room can be tower-accessible. a room is usually not tower-accessible.
 a room can be accessible, sideview, mightaswell or inaccessible. a room is usually inaccessible.
 
 after fliptoing a guardian (this is the track guardian progress rule):
+	shuffle-guardians noun;
+
+to shuffle-guardians (goner - a guardian):
 	let G be up;
 	let MR be Topside Deposit;
-	if noun is ingrates:
+	if goner is ingrates:
 		now MR is Nude Dune;
-	else if noun is natives:
+	else if goner is natives:
 		now MR is lost lots;
 	else:
-		choose row with guy of noun in table of guard-org;
+		choose row with guy of goner in table of guard-org;
 		now room blockdir entry of loc entry is tower-accessible;
 		now loc entry is tower-accessible;
 		if location of player is loc entry:
@@ -21578,18 +21598,18 @@ after fliptoing a guardian (this is the track guardian progress rule):
 		else:
 			now G is opposite of blockdir entry;
 		now  MR is the room G of location of player;
-	now noun is prodded;
-	if noun is ray eck:
+	now goner is prodded;
+	if goner is ray eck:
 		now topside is accessible;
 		now copse is accessible;
 		continue the action;
-	if noun is white: [white guardians are optional]
+	if goner is white: [white guardians are optional]
 		now MR is mightaswell;
 		min-up;
 		if can-see-map:
 			draw-my-loc;
 		continue the action;
-	if noun is purple: [purple guardians must be dispelled]
+	if goner is purple: [purple guardians must be dispelled]
 		if MR is actionless coastlines or player is in actionless coastlines:
 			now MR is accessible;
 		else:
@@ -21612,7 +21632,7 @@ after fliptoing a guardian (this is the track guardian progress rule):
 		draw-my-loc;
 	let RG be number of red guardians not in lalaland;
 	let BG be number of blue guardians not in lalaland;
-	d "Reds now [RG], blues now [BG]. [noun] = [if noun is red]red[else if noun is blue]blue[else if noun is white]white[else]purple[end if], gua-before = [gua-before], gua-after = [gua-to-clear].";
+	d "Reds now [RG], blues now [BG]. [goner] = [if goner is red]red[else if goner is blue]blue[else if goner is white]white[else]purple[end if], gua-before = [gua-before], gua-after = [gua-to-clear].";
 	if number of visible guardians > 0:
 		now mr-hinty is a random visible guardian;
 	else if scope copse is visited:
