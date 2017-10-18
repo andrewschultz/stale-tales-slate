@@ -249,7 +249,7 @@ a guardian has a room called gualoc.
 
 a guardian has a direction called guadir.
 
-a guardian can be blue, red, white or purple. a guardian is usually purple. [blue guardians are one minimal path. red are another. white = unnecessary, purple = necessary. Color blends!]
+a guardian can be grey, blue, red, white or purple. a guardian is usually purple. [blue guardians are one minimal path. red are another. white = unnecessary, purple = necessary. Color blends! Also, grey is for Lars Eede/Elsa Erde.]
 
 check objasking a guardian about a guardian (this is the guardian general chat rule):
 	if noun is serpent:
@@ -559,40 +559,42 @@ when play begins (this is the screenread gender swears and precursor rule) :
 	else: [force certain values]
 		choose-male;
 
+to general-gender-towers:
+	if hostile-is-he lot is not in lalaland and lois the hostile is not in lalaland:
+		now hostile-is-he lot is off-stage;
+		now lois the hostile is off-stage;
+	if lars eede is not in lalaland and elsa erde is not in lalaland:
+		now lars eede is off-stage;
+		now elsa erde is off-stage;
+	if mrlp is towers, reposition-guardians;
+
 to choose-female:
 	now the player is female; [begin intro changes]
 	now i trash his art is off-stage;
 	now er trash is part of the dope op-ed;
-	now Pat is female;
-	now the admirer is male;
+	now Pat is female; [begin routes changes]
+	now the admirer is male; [begin towers changes]
+	general-gender-towers;
 	now smart kid is female;
 	now Dr Yow is female;
-	now Dr Lola is part of droll dollar;
+	now Elsa Erde has Reed's Ale;
+	now Dr Lola is part of droll dollar; [begin others changes]
 	now coin-person is Dr Lola;
 	now Lord Al is off-stage;
 	now Red Rat is off-stage;
 	now Dr Tera is in scape space;
 	now greedy-person is Dr Tera;
-	if hostile-is-he lot is not in lalaland:
-		now hostile-is-he lot is off-stage;
-	now Elsa Erde has Reed's Ale;
-	if Lars Eede is not in lalaland:
-		now Lars Eede is off-stage;
 
 to choose-male:
 	now the player is male; [begin intro changes]
 	now i trash his art is part of the dope op-ed;
 	now er trash is off-stage;
 	now Pat is male; [begin routes changes]
-	now lois the hostile is off-stage; [begin towers changes]
-	if lois the hostile is not in lalaland:
-		now lois the hostile is off-stage;
-	now Lars Eede has Reed's Ale;
-	if Elsa Erde is not in lalaland:
-		now Elsa Erde is off-stage;
-	now the admirer is female;
+	now the admirer is female; [begin towers changes]
+	general-gender-towers;
 	now smart kid is male;
 	now Dr Yow is male;
+	now Lars Eede has Reed's Ale;
 	now Lord Al is part of droll dollar; [begin others changes]
 	now coin-person is Lord Al;
 	now Dr Lola is off-stage;
@@ -6914,11 +6916,11 @@ after printing the name of raves saver while taking inventory: say " ([if raves 
 
 instead of taking inventory:
 	say "Item time![paragraph break]";
-	if debug-state is true:
+[	if debug-state is true:
 		say "DEBUG: Warpable [list of warpable things carried by player].";
 		say "DEBUG: REGSPECIAL C [list of regspecial things carried by player].";
 		say "DEBUG: REGSPECIAL H [list of regspecial things held by player].";
-		say "DEBUG: REGSPECIAL E [list of regspecial things enclosed by player].";
+		say "DEBUG: REGSPECIAL E [list of regspecial things enclosed by player].";]
 	if mrlp is troves:
 		if truffle is off-stage and purse-stolen is false:
 			say "Boy! this is a seedy area. You're worried you might get robbed of what you have.[line break]";
@@ -6933,10 +6935,10 @@ instead of taking inventory:
 	if player has settler and player has super purse:
 		say "You're carrying your letters settler, to help with hints. [set-det].[line break]";
 		now settler is unmarked for listing;
-	if number of things enclosed by the player is 0:
+	if number of things carried by the player is 0:
 		say "Nothing." instead;
-	if the number of regspecial things enclosed by the player is 0:
-		say "You have nothing from this region in particular.";
+	if the number of regspecial things carried by the player is 0:
+		say "You are carrying nothing from this region in particular.";
 	else:
 		now all things enclosed by player are unmarked for listing;
 		now all regspecial things carried by player are marked for listing;
@@ -19424,9 +19426,10 @@ for writing a paragraph about a guardian (called gua):
 	repeat with myg running through not prevseen guardians in location of player:
 		if so-far > 0, say "[line break]";
 		guar-pro myg;
-		say "[if so-far is 0]Oh, look[else if so-far is 1][line break]But there's more[else if so-far is 2][line break]And that's not all[else][line break]Man, it's busier than it should be here[end if]! [initial appearance of myg][line break]";
+		say "[if so-far is 0]Oh, look[else if so-far is 1][line break]But there's more[else if so-far is 2][line break]And that's not all[else][line break]Man, it's busier than it should be here[end if]! [initial appearance of myg]";
 		increment so-far;
 		now myg is mentioned;
+	if so-far > 0, say "[line break]";
 	let psg be number of prevseen guardians in location of player;
 	let guasofar be 0;
 	if psg > 0:
@@ -21610,12 +21613,12 @@ to shuffle-guardians (goner - a guardian):
 			draw-my-loc;
 		continue the action;
 	if goner is purple: [purple guardians must be dispelled]
+		if goner is bonker, continue the action;
 		if MR is actionless coastlines or player is in actionless coastlines:
 			now MR is accessible;
 		else:
 			now MR is sideview;
-		if can-see-map:
-			draw-my-loc;
+		if can-see-map, draw-my-loc;
 		continue the action;
 	if MR is accessible:
 		say "You [if room G of location of player is visited]notice somewhere [G] you already went to, so it'll be a little easier to get around[else]calculate you found a new path to an area you haven't seen yet[end if].";
