@@ -5713,13 +5713,13 @@ carry out others-hinting:
 	if player has s-i and player has storage:
 		all-say "You probably want to put the icons in the storage." instead;
 	if player has s-c, try objhinting s-c instead;
-	if player has icon, try objhinting icon instead;
 	if player has icons, try objhinting icons instead;
 	if player has coin, try objhinting coin instead;
 	if player has coins, try objhinting coins instead;
 	if curtis-level < 4:
 		let levdelt be (fruits-flipped / 4) - curtis-level;
-		if levdelt > 0, say "You can go back to Curtis for [if player has coin or player has icon or player has coins or player has icons or player has s-c or player has s-i]another[else]a[end if] reward[if levdelt > 1]. More than one, in fact[end if][if fruits-flipped >= 20]. You've gotten all the fruits you need[end if]." instead;
+		say "Flipped [fruits-flipped] Level [curtis-level] delta [levdelt].";
+		if levdelt > 1, say "You can go back to Curtis for [if player has coin or player has icon or player has coins or player has icons or player has s-c or player has s-i]another[else]a[end if] reward[if levdelt > 2]. More than one, in fact[end if][if fruits-flipped >= 20]. You've gotten all the fruits you need[end if]." instead;
 	if player is in gates stage:
 		if passport is off-stage:
 			all-say "You need ID to get past the gate. There are no government agencies, so maybe you can get one illicitly." instead;
@@ -5743,16 +5743,13 @@ carry out others-hinting:
 		all-say "[if scape space is unvisited]Try going down from the Swell Wells[else]You will find ID inside the So-Great Storage in the Scape Space[end if]." instead;
 	if player is in Swell Wells:
 		hintlistproc wells-hintables;
-		if the rule succeeded:
-			the rule succeeds;
+		if the rule succeeded, the rule succeeds;
 	if player is in filed field:
 		hintlistproc field-hintables;
-		if the rule succeeded:
-			the rule succeeds;
+		if the rule succeeded, the rule succeeds;
 	if player is in clangier clearing:
 		hintlistproc clearing-hintables;
-		if the rule succeeded:
-			the rule succeeds;
+		if the rule succeeded, the rule succeeds;
 	if player is in Scape Space:
 		if droll dollar is off-stage:
 			hintlistproc scapespace-hintables;
@@ -5761,10 +5758,11 @@ carry out others-hinting:
 					now box-down-road is true;
 					ital-say "you'll eventually want that storage box down the road.";
 				the rule succeeds;
-		if storage box is in Scape Space:
-			if player has droll dollar:
-				try objhinting storage box instead;
-	all-say "Nothing specific [if player is in scape space or player is in rustic citrus]left [end if]to do here[if curtis-level < 3], though you may need to give Curtis some more fruits which you an HINT individually[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if][if fruits-left > 0]. There are [fruits-left in words] fruits you can still pick off here[else if player is not in gates stage]. You've cleared all the fruits here[end if]."
+		if storage box is in Scape Space and player has droll dollar, try objhinting storage box instead;
+	all-say "Nothing specific [if player is in scape space or player is in rustic citrus]left [end if]to do here[if curtis-level < 3], though you may need to give Curtis some more fruits which you can HINT individually[else if player has dollar], though you will want to trade that dollar[else if player has storage], though you need to open the storage[else if player has passport], but perhaps the passport will get you through the gates[end if][if fruits-left > 0]. There [fruits-to-clear] you can still pick off here[else if player is not in gates stage]. There are no more fruits to scrounge up here[end if]."
+
+to say fruits-to-clear:
+	say "[if fruits-left is 1]is[else]are[end if] [fruits-left in words] fruit[if fruits-left > 1]s[end if]"
 
 to decide which number is fruits-left:
 	let temp be 0;
@@ -5782,11 +5780,13 @@ section random hinting
 
 rustic-easy-items is a list of things variable. rustic-easy-items is { lumps, spear, pagers, slime }.
 
-wells-hintables is a list of things variable. wells-hintables is { green stain, riot cap, silly shirt, sorer bogey, stucco }.
+rustic-hard-items is a list of things variable. rustic-hard-items is { mad train, videotape, harmonicas, peanut cola, eerie blurbs, magenta rope }
 
-field-hintables is a list of things variable. field-hintables is { b-r, b-w, barber sickle, mean trowel, pipe panel fence, pryer bars, rapt figure, briar screen }.
+wells-hintables is a list of things variable. wells-hintables is { riot cap, silly shirt, stucco, sorer bogey, green stain, miser ruble }.
 
-clearing-hintables is a list of things variable. clearing-hintables is { auction caution, l-o-p, lemons, melon, nectarine, peach, pre-mang, quince }.
+field-hintables is a list of things variable. field-hintables is { pryer bars, pipe panel fence, b-r, b-w, barber sickle, mean trowel, rapt figure, barren cries }.
+
+clearing-hintables is a list of things variable. clearing-hintables is { melon, peach, pre-mang, quince, l-o-p, lemons, auction caution, nectarine }.
 
 scapespace-hintables is a list of things variable. scapespace-hintables is { an-a, orange, pugnacious plant, reserved sign }
 
@@ -6938,7 +6938,7 @@ instead of taking inventory:
 	if number of things carried by the player is 0:
 		say "Nothing." instead;
 	if the number of regspecial things carried by the player is 0:
-		say "[line break]You are carrying nothing from this region in particular.[line break]";
+		say "[line break]You are carrying nothing from this region in particular.[paragraph break]";
 	else:
 		now all things enclosed by player are unmarked for listing;
 		now all regspecial things carried by player are marked for listing;
@@ -6963,7 +6963,7 @@ instead of taking inventory:
 	if location of player is location of skid and bored yak is not in lalaland, say "[line break]There's also that skid you can push around[if number of things on skid > 0]. It holds [the list of things on skid][end if].";
 	if mrlp is otters and power-back is false, say "[line break]You also DON'T have your full powers. You'll need to fix that before hitting the Edictal Citadel to the west.";
 	if player has compass, say "[line break]You also have a compass to tell direction."; [start OTHERS special stuff]
-	if can-guru is true, say "[line break]You still have the aftertaste of the arugula, to GURU people.";
+	if can-guru is true, say "[line break]You still have the aftertaste of the arugula, to GURU things you could make fruits from.";
 
 check taking inventory:
 	if the first thing held by the player is nothing:
@@ -7075,7 +7075,7 @@ Obscurest Subsector	"If you could go any way other than back west, the subsector
 Shaven Havens	"Any direction but back east might drive you too far from the palace."
 Alcoves	"You sway to the side, not ready to face the menace to the west." [otters]
 Loop Pool	"The pool is wide and long. You can only go back south."
-Perverse Preserve	"[one of]You try going that way, but your mind gets foggy. You may not be able to see it, but you know the tell-tale signs of a DISRUPT-STUPID'R force field. Looks like you can only go back north[or]The disrupt-stupid'r field isn't worth risking[stopping][dsknow]."
+Perverse Preserve	"[one of]You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS RESTRICT field. It is even more unbearable for animals as for homans. Looks like you can only go back north[or]The CRITTERS RESTRICT field isn't worth risking[stopping][dsknow]."
 Reclusion Inclosure	"Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east."
 Rustic Citrus	"With a border, arbored, all around, one direction seems as good as any other. Maybe you need to [if player has moss cap]tinker with the moss cap[else]help Curtis a bit more[end if]." [others]
 filed field	"[if b-w are visible and noun is west]The barriers west block you. Maybe you can get rid of them.[else]With all the foilage foliage and [if-fence], the only way to say I fled is to go back east.[end if]"
@@ -23315,24 +23315,24 @@ Perverse Preserve is south of Rote Moan Anteroom. Perverse Preserve is a room in
 
 to say pre-desc:
 	if number of animals in perverse preserve is 1:
-		say "[if know-disrupt is true]The DISRUPT-R-STUPIDR blocks you going anywhere except back north. Y[else]This clearing seems unbounded, but y[end if]ou don't see any animals. You think. And no pea to change to an ape.[no line break]";
+		say "[if know-restrict is true]The CRITTERS RESTRICT blocks you going anywhere except back north. Y[else]This clearing seems unbounded, but y[end if]ou don't see any animals. You think. And no pea to change to an ape.[no line break]";
 		continue the action;
 	else:
-		say "You rescued [if nounsolve is 4]all the[else if nounsolve is 1]one of the[else]a few[end if] animals here, but it's still eerie[if know-disrupt is true], even without the DISRUPT-R-STUPIDR blocking every way except back north[else]. You can go back north[end if].[no line break]";
+		say "You rescued [if nounsolve is 4]all the[else if nounsolve is 1]one of the[else]a few[end if] animals here, but it's still eerie[if know-restrict is true], even without the CRITTERS RESTRICT blocking every way except back north[else]. You can go back north[end if].[no line break]";
 		continue the action;
 
-chapter disrupt r stupidr
+chapter critters restrict
 
 to say dsknow:
-	now know-disrupt is true;
+	now know-restrict is true;
 
-know-disrupt is a truth state that varies.
+know-restrict is a truth state that varies.
 
-the disrupt r stupidr is scenery in Perverse Preserve. "You can't see it, but you've heard about the effects of prolonged exposure."
+the critters restrict is scenery in Perverse Preserve. "You can't see it, but it doesn't just restrict critters. It restricts you, too."
 
-instead of doing something with disrupt r stupidr:
+instead of doing something with critters restrict:
 	if action is procedural, continue the action;
-	say "You can't do anything about the DISRUPT R STUPIDR field. But you don't need to go beyond it."
+	say "You can't do anything about the CRITTERS RESTRICT field. But you don't need to go beyond it."
 
 chapter corona and racoon
 
@@ -23746,19 +23746,6 @@ instead of examining pagers:
 
 grapes are a plural-named fruit.
 
-chapter maraschino
-
-the harmonicas are a plural-named thing in rustic citrus. "Two harmonicas, rusted together, are here."
-
-description of harmonicas is "They're an off-red, unlike your usual visions in the game. Their condition is the pits. They look like a...how do you spell it? Anachorism?"
-
-instead of taking harmonicas:
-	say "They're too rusty.";
-
-a-text of harmonicas is "RYRYRRRYRY". b-text of harmonicas is "RGPYRRRYRY". parse-text of harmonicas is "x[sp]a[sp]r[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]-".
-
-the maraschino cherry is a fruit.
-
 chapter pears
 
 A spear is scenery in Rustic Citrus. description of spear is "It'd make a powerful weapon, but you couldn't hold anything else. Plus, this isn't that sort of game."
@@ -23783,7 +23770,7 @@ the plums are a plural-named fruit.
 
 chapter slime
 
-some slime is singular-named scenery. "It's green, like most slime. But it smells nicer than most slime and is even a bit bumpy."
+some slime is singular-named scenery in Rustic Citrus. "It's green, like most slime. But it smells nicer than most slime and is even a bit bumpy."
 
 a-text of slime is "RYRYR". b-text of slime is "RYRYR".parse-text of slime is "x[sp]-[sp]x[sp]-[sp]x".
 
@@ -23791,6 +23778,19 @@ instead of taking slime:
 	say "Eww. Not in that form you won't."
 
 some limes are a plural-named fruit.
+
+chapter maraschino
+
+the harmonicas are a plural-named thing in rustic citrus. "Two harmonicas, rusted together, are here."
+
+description of harmonicas is "They're an off-red, unlike your usual visions in the game. Their condition is the pits. They look like a...how do you spell it? Anachorism?"
+
+instead of taking harmonicas:
+	say "They're too rusty.";
+
+a-text of harmonicas is "RYRYRRRYRY". b-text of harmonicas is "RGPYRRRYRY". parse-text of harmonicas is "x[sp]a[sp]r[sp]-[sp]x[sp]x[sp]x[sp]-[sp]x[sp]-".
+
+the maraschino cherry is a fruit.
 
 chapter tamarind
 
@@ -23947,9 +23947,6 @@ check taking drinks stand:
 the citrus sign is part of the abandoned drinks stand. description is "It says CURTIS['] (sic) RUSTIC CITRUS.". the citrus sign is useless.
 
 after examining abandoned drinks stand (this is the three fruits in drinks stand rule) : [all 3 conditions should be all true or all false, but just in case...]
-	if slime is off-stage:
-		say "Eww. You also brushed against some slime while looking around.";
-		now slime is in Rustic Citrus;
 	if peanut cola is off-stage:
 		now peanut cola is in rustic citrus;
 	if magenta rope is off-stage:
@@ -24273,7 +24270,7 @@ does the player mean doing something with icons when icons are off-stage: it is 
 does the player mean doing something with coin when coin is off-stage: it is likely.
 does the player mean doing something with icon when icon is off-stage: it is likely.
 
-the coin is a thing. description is "The coin really looks more omen-y than money. Perhaps its value is only symbolic, and it could help you with the stuff money can't buy. There's a singed design on it, which is signed."
+a coin is a thing. description is "The coin really looks more omen-y than money. Perhaps its value is only symbolic, and it could help you with the stuff money can't buy. There's a singed design on it, which is signed."
 
 a thing can be final-puz. a thing is usually not final-puz.
 
@@ -24294,7 +24291,7 @@ a-text of coin is "YRYR". b-text of coin is "YRYP". parse-text of coin is "i[sp]
 
 an icon is a thing. description is "The icon is designed to be too interesting to pitch but not important looking enough to be currency. There's a singed design on it, which is signed."
 
-the coins are plural-named things. description is "The coins really look more omen-y than money. Perhaps their value is only symbolic, and they could help you with the stuff money can't buy. There's a singed design on them, which is signed."
+some coins are plural-named things. description is "The coins really look more omen-y than money. Perhaps their value is only symbolic, and they could help you with the stuff money can't buy. There's a singed design on them, which is signed."
 
 the singed design is part of the coin. description is "The singed design is some sort of amalgamation of musical notes and instruments intertwined. You can't read who wrote it, but it makes the coin look more artsy than commercial."
 
@@ -26523,7 +26520,7 @@ nails	"[one of]The nails are arranged in a circular pattern, spiraling out.[plus
 pines	"[one of]The pines are shaped like a long bird's bill or something.[plus][or]If you listen, you hear bickering.[plus][or]SNIPE.[minus][cycling]"	--	"you can make a SNIPE"
 corona	"[one of]The corona is black and whitish, easy to hide in the dark.[plus][or]RACOON.[minus][cycling]"	--	"you can make a RACOON"
 thrones	"[one of]Sit on the thrones and they'll sting you.[plus][or]What animals sting?[plus][or]HORNETS.[minus][cycling]"	--	"you can make HORNETS"
-disrupt r stupidr	"It's just there to block you from going any other way except back north."
+CRITTERS RESTRICT	"It's just there to block you from going any other way except back north."
 Elmer	--	Merle
 Merle	"[if parrot is in alcoves]You can't change Elmer or Merle directly, but you may want to mess with the parrot[else]You can't really deal with Elmer and Merle until you have an ally[end if]. [if merle is reflexed][one of]You can, however, make Elmer and Merle change for a Last Lousy Point.[plus][or]What is the opposite of on-the-sly?[plus][or]Elmer and Merle can be made to speak HONESTLY.[minus][cycling][else]You can just enjoy their random squabbles as you figure what the parrot needs to do or become.[end if]"	--	"Elmer and Merle can speak HONESTLY"
 forces fresco	"It's just there to give ambience."
@@ -27725,18 +27722,6 @@ book cheatage
 
 [* this book lets the beta-tester skip over boring bits ]
 
-chapter missesing
-
-missesing is an action out of world.
-
-understand the command "misses" as something new.
-
-understand "misses" as missesing.
-
-carry out missesing:
-	show-miss mrlp and false;
-	the rule succeeds;
-
 chapter greting
 
 [* this lets you skip over the macks]
@@ -28800,15 +28785,31 @@ carry out fruiing:
 	let fruhid be 0;
 	let fruhere be 0;
 	repeat with fru running through fruits:
-		say "[fru]: [if fru is off-stage]off-stage[else if fru is in lalaland]DONE[else]in OTHERS[end if]. Frroom = [frroom of fru].";
+		let frr be frroom of fru;
+		say "[fru]: [if fru is off-stage]off-stage[else if fru is in lalaland]DONE[else]in OTHERS[end if]. From room = [frr].";
 		if fru is in lalaland:
 			increment frusolv;
 		else if fru is off-stage:
 			increment fruhid;
 		else:
 			increment fruhere;
+		let rev-itm be rev-item of fru;
+		if frr is rustic citrus:
+			if rev-itm is listed in rustic-hard-items or rev-itm is listed in rustic-easy-items, next;
+			say "[rev-itm] not in [rustic-hard-items] or [rustic-easy-items].";
+			next;
+		if frr is swell wells and rev-itm is listed in wells-hintables, next;
+		if frr is clangier clearing and rev-itm is listed in clearing-hintables, next;
+		if frr is filed field and rev-itm is listed in field-hintables, next;
+		if frr is scape space and rev-itm is listed in scapespace-hintables, next;
+		say "[fru], in [frr], does not have [rev-itm] in a hint list. It doesn't need one, but it'd be nice to have one.";
 	say "[number of fruits] total fruits. [frusolv] to Curtis, [fruhid] not here yet, [fruhere] in the area.";
 	the rule succeeds;
+
+to decide which thing is rev-item of (f - a fruit):
+	repeat through table of others anagrams:
+		if the-to entry is f, decide on the-from entry;
+	decide on nothing;
 
 chapter scaming
 
@@ -29239,12 +29240,48 @@ understand the command "missed" as something new.
 understand "missed" as misseding.
 
 carry out misseding:
+	say "[miss-types].";
 	now mrlp is solved;
 	carry out the showing what the player missed activity;
 	now mrlp is unsolved;
 	if player is in strip of profits:
 		carry out the showing alternate routes activity;
 	the rule succeeds;
+
+chapter missesing
+
+[* MISSES shows what all areas missed]
+
+missesing is an action out of world.
+
+understand the command "misses" as something new.
+
+understand "misses" as missesing.
+
+carry out missesing:
+	say "[miss-types].";
+	show-miss mrlp and false;
+	the rule succeeds;
+
+chapter missalt
+
+[* MISSALT shows alternate routes]
+
+missalting is an action out of world.
+
+understand the command "missalt" as something new.
+
+understand "missalt" as missalting.
+
+carry out missalting:
+	say "[miss-types].";
+	carry out the showing alternate routes activity;
+	the rule succeeds;
+
+to say miss-types:
+	say "MISSED = all regions['] misses.";
+	say "MISSES = this region's misses.";
+	say "MISSALT = show alternate routes.";
 
 chapter elving
 
