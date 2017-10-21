@@ -115,7 +115,7 @@ this-cmd	hashval	this-room	this-item	this-rule (rule)	this-clue
 "engravings"	666763782	--	engravings	--	"You can only change the enrgavings by working through the other stores."
 "patcher"	456181591	--	patcher	--	"The patcher doesn't need to be changed. It does the changing if you point it."
 "field"	274156779	--	f-o-b	--	"[not-at-barley]."
-"barley"	409909726	--	f-o-b	--	"[not-at-barley].[barley-check]"
+"barley"	409909726	--	f-o-b	--	"[not-at-barley][barley-check]."
 "smoke"	415440983	--	smoke cloud	--	"[just-smoke]."
 "cloud"	273306897	--	smoke cloud	--	"[just-smoke]."
 "smokecloud"	688747880	--	smoke cloud	--	"[just-smoke]."
@@ -1297,7 +1297,7 @@ to say not-at-barley:
 to say barley-check:
 	if the player's command includes "barley":
 		if b-b is not prefigured:
-			say " Still, that seems right, if you get there.";
+			say ". Still, that seems right, if you get there";
 			preef b-b;
 			continue the action;
 
@@ -1313,7 +1313,7 @@ to say ian-un:
 section routes nudges
 
 to say hfre:
-	say "You're probably overthinking it. The I-USED-TO examples are just plain tedious."
+	say "You're probably overthinking it. The I-USED-TO examples are just plain tedious"
 
 to say name-worry:
 	say "Perhaps it's better to focus on the proper names instead. Simpler, too";
@@ -1322,7 +1322,7 @@ to say picturer-change:
 	say "It's more likely that scripture can change you[if picturers are reflexive], or help you see something a bit simpler to say[else], and it already has, whether or not you believe[end if]";
 
 to say board-change:
-	say "It's what's on the board you need[if signboard is reflexed]ed[end if] to fix."
+	say "It's what's on the board you need[if signboard is reflexed]ed[end if] to fix"
 
 to say follow-the-list:
 	say "Maybe you can use your powers to get what's on the list, but you don't need to use them on it";
@@ -1360,7 +1360,7 @@ to say rev-sum:
 	say "That document is the stone truth! It doesn't need revisionism or embellishment"
 
 to say no-poi:
-	say "The [if player is in mesa]poison stripe[else]oopsin['] priest[end if] can't be changed that easily. You'll have to search around for better ways to poke at things."
+	say "The [if player is in mesa]poison stripe[else]oopsin['] priest[end if] can't be changed that easily. You'll have to search around for better ways to poke at things"
 
 this is the first-two rule:
 	if player is in same mesa:
@@ -1436,7 +1436,7 @@ this is the divorces-gone rule:
 
 to say ruts-pull:
 	say "The ruts will pull you down if you look too far into them"
-	
+
 to say sidewalk-oops:
 	say "You can't make the sidewalk crumble any more, and you probably don't want to"
 
@@ -1478,7 +1478,7 @@ to say no-scen:
 	say "Here in the Brunt, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than that dumpster";
 
 to say spumed-no:
-	say "The spumed tar does nothing[if star is in brunt or dart is in brunt]. Maybe focus on something else[end if]."
+	say "The spumed tar does nothing[if star is in brunt or dart is in brunt]. Maybe focus on something else[end if]"
 
 to say just-letter:
 	say "It's just one letter in the maze. You may want to focus on the whole volt maze"
@@ -1615,7 +1615,7 @@ to say dest-esc:
 
 to say raft-is:
 	say "No, best concentrate on what the raft is"
-	
+
 to say sculpt:
 	say "That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for"
 
@@ -1714,7 +1714,7 @@ to say no-fril:
 	say "The saver is hopelessly no-frills. It'll never be anything better. But [if saver is reflexed]you made it look a bit nicer[else if saver is attempted]you might've been onto something looking at its brand name[else]maybe you could revisit its brand name to make it look nicer[end if]. Not that looks matter"
 
 to say reed-name:
-	say "No, [el-la-f]'s full name. With Reed's Ale."
+	say "No, [el-la-f]'s full name. With Reed's Ale"
 
 to say reed-ale:
 	say "Not just Reed's, or Ale, or Reed, or Reed Ale. Reed's Ale"
@@ -1870,7 +1870,7 @@ this is the frontage-before rule:
 	the rule fails;
 
 to say both-medals:
-	say "No, it's a combination of what's on both medals."
+	say "No, it's a combination of what's on both medals"
 
 to say cube-whole:
 	say "The sea cube is unmoved. You may need to concentrate on the whole thing";

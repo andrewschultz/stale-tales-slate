@@ -55,6 +55,7 @@ carry out etuing:
 	if nu < 0 or nu > maxtestnum, say "Need 1-[maxtestnum]. Try -1 to see the whole list. Currently the test command each turn list is [cur-act]." instead;
 	now cmdtype is number understood;
 	if nu is 0, say "Resetting." instead;
+	if remainder after dividing number understood by 8 > 4, now have-objhinted is true; [not perfect code--should check which entry is hinting]
 	say "Now [cur-act] every turn.";
 	the rule succeeds;
 

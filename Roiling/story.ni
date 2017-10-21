@@ -6493,7 +6493,7 @@ carry out otters-hinting:
 	else if player is in loop pool or player is in bran barn:
 		all-say "You recovered your powers, so there's nothing more to do here.";
 	else if player is in Anger Pit:
-		all-say "The path north is cleared[if number of reflexive animals in wire deck <= 1], and you've taken care of the wire deck, so you can probably retreat[else][tho-work][end if].";
+		all-say "The path north is cleared[if number of flippable animals in wire deck <= 1], and you've taken care of the wire deck, so you can probably retreat[else][tho-work][end if].";
 	else if player is in Anteroom:
 		all-say "The path south is cleared[if number of animals in preserve >= 3], and you've taken care of the preserve, so you can probably retreat[else][tho-work][end if].";
 	else if player is in wickeder wire deck or player is in perverse preserve:
@@ -6938,7 +6938,7 @@ instead of taking inventory:
 	if number of things carried by the player is 0:
 		say "Nothing." instead;
 	if the number of regspecial things carried by the player is 0:
-		say "You are carrying nothing from this region in particular.";
+		say "[line break]You are carrying nothing from this region in particular.[line break]";
 	else:
 		now all things enclosed by player are unmarked for listing;
 		now all regspecial things carried by player are marked for listing;
@@ -9732,7 +9732,7 @@ after fliptoing (this is the one-of-two and min-up-plus rule):
 			min-up;
 		continue the action;
 	else if noun is LLPish or noun is claire's scalier: [bleah. Denim isn't reflexive. Neither is giant pin]
-		d "General LLPish min-up.";
+		d "General LLPish min-up for [noun].";
 		min-up;
 	continue the action;
 
@@ -10100,6 +10100,7 @@ carry out roveovering:
 	the rule succeeds;
 
 to get-cool-stuff:
+	now player has gird grid;
 	now player has super purse;
 	now player has letters settler;
 	now player has pedanto-notepad;
@@ -23242,7 +23243,6 @@ after fliptoing an animal:
 			say "The LUCKY medal you're wearing clanks against the IQ medal. It looks a bit clearer, now.";
 		else if temp is 3:
 			say "The [list of visible reflexed animals] all look over at you, point and give you a thumbs-up. They glance over at the [list of visible reflexive animals] and shrug a bit, as if it can come along if it wants to. Your LUCKY medal looks very shiny now.";
-			now random visible reflexive animal is LLPish;
 		else if temp is 4:
 			d "[the list of visible reflexed animals]. You get a min-up.";
 			min-up;
@@ -25551,7 +25551,7 @@ check objhinting when absolutely-no-hints is true:
 
 the force hint blocking rule is listed first in the check hinting rulebook.
 
-carry out hinting for the first time:
+check hinting:
 	if have-objhinted is false:
 		if player is not in Inclosure:
 			if hint-to-file is false and hint-to-display is false:
@@ -27854,9 +27854,7 @@ carry out a5ing:
 		if MI is not warpable:
 			now MI is in lalaland;
 			now lreg of MI is mrlp;
-	now player has settler;
-	now player has purse;
-	now player has pedanto-notepad;
+	get-cool-stuff;
 	move player to Strip of Profits;
 	now suppress-score is true;
 	if store k is in Strip of Profits, try fliptoing tokers;
