@@ -1029,8 +1029,8 @@ to say plus:
 carry out hinting:
 	if location of player is busiest subsite:
 		say "You're not in the area where the magic happens, yet. The cardinal directions, including the boring lecture east, are out." instead;
-	if meaningful-hint is false:
-		now meaningful-hint is true;
+	if have-objhinted is false:
+		now have-objhinted is true;
 		say "You call out for the Magic Hint Fairy. 'Please! Please!'[paragraph break]All you hear in return is 'Asleep! Asleep!'[paragraph break]You pause. You've heard she may be a hi-rent hinter, maybe even a cruel cluer--not that she can spirit you to the cheaters['] hectares--but even a thin hint could probably make you enjoy your journey less if you rely on her too much.[paragraph break]Do you really want to poke her now?";
 		if player direct-consents:
 			say "You see by the look on her face she's thinking 'Spiel or Spoiler?' But the look on your face shows you're ready to take the Perilous trip to Spoiler U with an idea aide. You won't spit on tips. [hintblah]";
@@ -1950,7 +1950,7 @@ check hinting:
 	if hintfull is true:
 		say "Ignoring hint nag due to hint-every-move debug flag set. Only testers should see this. [bug-report] in final release." instead;
 
-meaningful-hint is a truth state that varies.
+have-objhinted is a truth state that varies.
 
 to say hintblah:
 	say "(To resist the temptation of summoning the Hint Fairy later, you can use the HINTS OFF command to disable hints until you restart.)";
@@ -9931,12 +9931,12 @@ book resort
 
 chapter Astral Altars
 
-Astral Altars is a room in Resort. "Well, maybe you won't find your vacation spot right away. Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]. You also think you hear something."
+Astral Altars is a room in Resort. "Well, maybe you won't find your vacation spot right away. It's not an ugly place, but it's not especially fun. Perhaps if it were covered, it would be a shiner shrine.[paragraph break]Two altars lie here: one holds tiles, and one holds a stile. They both look equally important[if roomroom is visited and kitchen is visited]. It's more spacious than that room or the kitchen, but STILL[end if]. You also think you hear something."
 
 understand "altar" as Astral Altars when Astral Altars is visited.
 
 check going nowhere in astral altars:
-	say "As you step away from the altars, a weird barrier blocks you. It's very tarsal." instead;
+	say "As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'LEAVE NOT THE SHINER SHRINE ON FOOT!'" instead;
 
 tiles are plural-named flippable scenery in Astral Altars. "They're all sorts of weird shapes, but the colors are what you find curious. Light brown where you are, in a twenty foot radius, with blue around them. There's a lot of brown beyond that. Maybe if you focus and READ them, you could see more details in da tiles. Yeah, sorry for that one."
 

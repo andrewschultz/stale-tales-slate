@@ -35,11 +35,15 @@ carry out etu0ing:
 
 maxtestnum is a number that varies.
 
-when play begins (this is the calculate maxtestnum rule):
+hint-divide is a number that varies.
+
+when play begins (this is the calculate maxtestnum and hintnum rule):
 	say "Calculating the max test number.";
 	now maxtestnum is 1;
 	let power be 1;
 	while power <= number of rows in table of cmds:
+		choose row power in table of cmds;
+		if testact entry is hinting, now hint-divide is maxtestnum;
 		now maxtestnum is maxtestnum * 2;
 		increment power;
 	decrement maxtestnum;
@@ -55,7 +59,7 @@ carry out etuing:
 	if nu < 0 or nu > maxtestnum, say "Need 1-[maxtestnum]. Try -1 to see the whole list. Currently the test command each turn list is [cur-act]." instead;
 	now cmdtype is number understood;
 	if nu is 0, say "Resetting." instead;
-	if remainder after dividing number understood by 8 >= 4, now have-objhinted is true; [not perfect code--should check which entry is hinting]
+	if hint-divide > 0 and remainder after dividing number understood by (hint-divide * 2) >= hint-divide, now have-objhinted is true;
 	say "Now [cur-act] every turn.";
 	the rule succeeds;
 
