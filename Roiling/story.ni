@@ -22630,7 +22630,9 @@ the medals are a reflexive wearable plural-named thing.
 understand "iq/lucky medal/medals" and "iq/lucky" as medals.
 
 after printing the name of medals while taking inventory:
-	say " ([if nounsolve + adjsolve is 0]extremely tarnished[else if nounsolve + adjsolve < 2]very tarnished[else if nounsolve < 3 and adjsolve < 3]seriously tarnished[else if nounsolve >= 3 and adjsolve >= 3]polished[else]somewhat tarnished[end if])";
+	say "([if nounsolve is adjsolve]both [entry (adjsolve + 1) in medalings][else if nounsolve < adjsolve][entry (adjsolve + 1) in medalings] and [entry (adjsolve + 1) in medalings][else][entry (adjsolve + 1) in medalings] and [entry (adjsolve + 1) in medalings][end if])";
+
+medalings is a list of text variable. medalings is { "crusted over", "grimy", "dull", "shiny", "gleaming" }
 
 description of the medals is "They're roped together. [medal-summary]."
 
@@ -25553,6 +25555,7 @@ the force hint blocking rule is listed first in the check hinting rulebook.
 
 check hinting:
 	if have-objhinted is false:
+		now have-objhinted is true;
 		if player is not in Inclosure:
 			if hint-to-file is false and hint-to-display is false:
 				say "You're not sure whom to call. There are so many choices! [twiddle of table of help companies and 3] Well, one of those must be right. Because in front of you is a rare help elph! He smiles and waits. 'Er, clues, recluse?' Silence. 'No hint? Nothin[']?'[paragraph break]'Helpless spells, eh? On so soon?'[paragraph break]'Yup. In-game enigma. Tried. Tired. I caved. Advice?'[paragraph break]He acknowledges your pure re-up and presents you with an option potion from his luckiest clue kits. 'Spoils be possible.' Do you accept it?";
